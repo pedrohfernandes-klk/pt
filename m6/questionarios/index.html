@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="pt-PT"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Questionários M6 · Poesia Realista · EPI</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#fff;color:#000;font:17px/1.5 Arial,Helvetica,sans-serif}
+main{max-width:44rem;margin:0 auto;background:#fff;min-height:100vh;padding:1.2rem 1.1rem 4rem}
+header{border-bottom:3px solid #000;padding-bottom:.8rem;margin-bottom:1rem}
+.marca{font:900 .8rem "Arial Black",Arial;letter-spacing:.12em;text-transform:uppercase}
+.abrir .estado{font:900 .68rem "Arial Black",Arial;text-transform:uppercase;letter-spacing:.1em;border:2px solid #000;padding:.15rem .35rem;white-space:nowrap}
+h1{font:900 1.8rem/1.05 "Arial Black",Arial,sans-serif;margin:.3rem 0}
+h2{font:900 1.2rem "Arial Black",Arial,sans-serif;margin:1rem 0 .6rem}
+ul{list-style:none;padding:0;margin:0}
+.abrir{width:100%;display:flex;gap:.8rem;align-items:center;text-align:left;background:#fff;color:#000;border:0;border-top:2px solid #000;padding:.9rem .2rem;font:inherit;cursor:pointer}
+.abrir .n{font:900 1.1rem "Arial Black",Arial;min-width:1.6rem}.abrir .t{flex:1;font-weight:700}.abrir .estado{font-size:1.1rem}
+button.p{font:700 1rem Arial;padding:.75rem 1.1rem;border:2px solid #000;background:#000;color:#fff;cursor:pointer;margin:.5rem .4rem 0 0}
+button.s{background:#fff;color:#000}
+input[type=text]{font:inherit;padding:.6rem;border:1px solid #999;width:100%;max-width:16rem;text-transform:uppercase}
+.q{border-top:2px solid #000;padding:.9rem 0}
+.q p{margin:0 0 .5rem;font-weight:700}
+.op{display:flex;gap:.5rem;align-items:flex-start;padding:.3rem 0;font-weight:400}
+.op input{margin-top:.35rem}
+.certo{color:#1b6e2d}.errado{color:#b00020}
+.exp{font-size:.9rem;border-left:8px solid #000;padding:.4rem .6rem;margin-top:.4rem}
+.aviso{border:2px solid #000;padding:.7rem .8rem;margin:.8rem 0;font-size:.95rem}
+.resultado{font:900 1.3rem "Arial Black",Arial;margin:1rem 0}
+[hidden]{display:none!important}
+:focus-visible{outline:3px solid #1f5fbf;outline-offset:2px}
+</style></head><body><main>
+<header><div class="marca">Escola Profissional de Imagem · Português · 2.º ano</div><h1>Questionários rápidos<br>Módulo 6 · Poesia Realista</h1><div class="marca">Para praticar · escolhe e responde</div></header>
+
+<section id="indice">
+<div class="aviso">Escolhe um questionário e responde. Podes repeti-los as vezes que quiseres: servem para treinar.</div>
+<ul><li><button class="abrir" data-i="0"><span class="n">1</span><span class="t">Antero de Quental</span><span class="estado" id="estado-0">fechado</span></button></li><li><button class="abrir" data-i="1"><span class="n">2</span><span class="t">Cesário Verde</span><span class="estado" id="estado-1">fechado</span></button></li><li><button class="abrir" data-i="2"><span class="n">3</span><span class="t">Sensações e recursos</span><span class="estado" id="estado-2">fechado</span></button></li><li><button class="abrir" data-i="3"><span class="n">4</span><span class="t">Orações</span><span class="estado" id="estado-3">fechado</span></button></li><li><button class="abrir" data-i="4"><span class="n">5</span><span class="t">Realismo e Geração de 70</span><span class="estado" id="estado-4">fechado</span></button></li></ul>
+</section>
+
+<section id="quiz" hidden>
+<h2 id="titulo-q"></h2>
+<form id="form"></form>
+<div><button class="p" id="corrigir">Corrigir</button><button class="p s" id="repetir" hidden>Repetir</button><button class="p s" id="voltar-2">Voltar à lista</button></div>
+<div class="resultado" id="resultado" hidden></div>
+</section>
+</main>
+<script>
+(function(){
+"use strict";
+var ID="M6", D=[{"t":"Antero de Quental","q":[["Antero participou nas…",["Conferências do Casino (1871)","Cortes de Coimbra","Invasões Francesas","Conferências de Paris"],0,"Geração de 70."],["A Questão Coimbrã (1865) começou com o texto de Antero…",["«Bom Senso e Bom Gosto»","«Os Maias»","«O Palácio da Ventura»","«Mensagem»"],0,"Contra Castilho e o ultrarromantismo."],["A poesia de Antero exprime sobretudo…",["angústia e busca do sentido da vida","alegria do campo","humor","narrativa de viagens"],0,"Poesia metafísica."],["Em «O Palácio da Ventura», dentro do palácio o sujeito encontra…",["festa e luz","silêncio e escuridão","a amada","um tesouro"],1,"«Silêncio e escuridão — e nada mais!»"],["«O Palácio da Ventura» é um…",["soneto","romance","conto","sermão"],0,"Soneto."],["Os Sonetos Completos de Antero foram publicados em…",["1886","1901","1850","1934"],0,"1886."]]},{"t":"Cesário Verde","q":[["«O Sentimento dum Ocidental» foi escrito para…",["o tricentenário da morte de Camões (1880)","o centenário de Eça","o 25 de Abril","a morte de Antero"],0,"Homenagem a Camões."],["O poema começa…",["ao anoitecer, nas ruas de Lisboa","de manhã, no campo","no mar alto","numa igreja"],0,"«Nas nossas ruas, ao anoitecer»."],["O sujeito poético é um…",["observador que deambula pela cidade","marinheiro","rei","pastor"],0,"Deambulação."],["Na poesia de Cesário, a cidade surge muitas vezes…",["opressiva, em contraste com o campo","sempre alegre","sem pessoas","como paraíso"],0,"Oposição cidade/campo."],["As quatro partes do poema são…",["Avé-Marias, Noite Fechada, Ao Gás, Horas Mortas","Manhã, Tarde, Noite, Madrugada","Terra, Mar, Céu, Fogo","Brasão, Mar, Encoberto, Nevoeiro"],0,"Percurso do fim da tarde à madrugada."],["O Livro de Cesário Verde foi publicado…",["depois da morte do poeta, pelo amigo Silva Pinto","pelo próprio, em vida","por Eça de Queirós","pela Presença"],0,"Publicação póstuma, 1887."]]},{"t":"Sensações e recursos","q":[["«o bulício» remete para uma sensação…",["auditiva","olfativa","tátil","gustativa"],0,"Ruído, agitação."],["«a maresia» remete para uma sensação…",["olfativa","visual","auditiva","tátil"],0,"Cheiro do mar."],["A sinestesia é…",["a mistura de sensações diferentes","uma rima pobre","uma pergunta retórica","um exagero"],0,"Ex.: «cor que se ouve»."],["A hipálage é…",["atribuir a um nome uma qualidade que pertence a outro","repetir um som","comparar com «como»","enumerar"],0,"Ex.: «o cigarro pensativo»."],["A enumeração é…",["uma sequência de elementos","uma oposição","um diminutivo","uma rima"],0,"Ex.: «as sombras, o bulício, o Tejo, a maresia»."],["O realismo em poesia valoriza…",["a observação concreta do quotidiano","o sonho e a fantasia apenas","os deuses antigos","as batalhas"],0,"Poesia do real."]]},{"t":"Orações","q":[["«Há tal melancolia que me apetece sofrer.» «que me apetece sofrer» é…",["subordinada adverbial consecutiva","relativa","causal","final"],0,"«tal… que»."],["«Quando anoitece, a cidade muda.»",["temporal","causal","condicional","final"],0,"«quando»."],["«Embora cansado, o poeta continuou.»",["concessiva","causal","comparativa","consecutiva"],0,"«embora»."],["«A rua que atravessei estava escura.» «que atravessei» é…",["relativa restritiva","completiva","causal","coordenada"],0,"Restringe «a rua»."],["«Sei que a cidade dorme.» «que a cidade dorme» é…",["substantiva completiva","relativa","temporal","final"],0,"Complemento direto de «sei»."],["«Como estava frio, fechou a janela.»",["causal","comparativa","temporal","final"],0,"«como» = porque."]]},{"t":"Realismo e Geração de 70","q":[["A Geração de 70 inclui…",["Antero, Eça e outros intelectuais","Camões e Vieira","Pessoa e Sá-Carneiro","Gil Vicente e Fernão Lopes"],0,"Renovação cultural."],["O Realismo propõe…",["observar e criticar a sociedade","fugir para o sonho","imitar os trovadores","celebrar reis"],0,"Arte como análise do real."],["O Naturalismo acrescenta a ideia de que…",["o meio e a hereditariedade determinam as pessoas","tudo é sonho","Deus decide tudo","o passado é perfeito"],0,"Determinismo."],["As Conferências do Casino foram…",["proibidas pelo governo","um sucesso sem polémica","no século XVI","em Paris"],0,"Foram interrompidas por ordem do governo."],["O ultrarromantismo era criticado por…",["sentimentalismo excessivo e artificial","ser demasiado científico","falar de política","usar prosa"],0,"Excesso de sentimento."],["Verdadeiro ou falso: Cesário Verde é um poeta do quotidiano urbano.",["Verdadeiro","Falso"],0,"Lisboa é o seu grande tema."]]}], CHAVE="epi-pt-quiz-"+ID, $=function(s){return document.querySelector(s)}, atual=-1;
+var abertos={}; try{abertos=JSON.parse(localStorage.getItem(CHAVE)||"{}")}catch(e){}
+function guardar(){try{localStorage.setItem(CHAVE,JSON.stringify(abertos))}catch(e){}}
+function mostrar(qual){["indice","quiz"].forEach(function(s){$("#"+s).hidden=(s!==qual)});window.scrollTo(0,0)}
+function estados(){D.forEach(function(z,i){var e=$("#estado-"+i);var r=abertos[i];e.textContent=(typeof r==="number")?r+"/"+z.q.length:z.q.length+" perguntas"})}
+function abrirQuiz(i){atual=i;var z=D[i];$("#titulo-q").textContent=(i+1)+". "+z.t;var f=$("#form");f.innerHTML="";z.q.forEach(function(q,k){var d=document.createElement("div");d.className="q";var p=document.createElement("p");p.textContent=(k+1)+". "+q[0];d.appendChild(p);q[1].forEach(function(o,j){var l=document.createElement("label");l.className="op";var r=document.createElement("input");r.type="radio";r.name="q"+k;r.value=j;l.appendChild(r);l.appendChild(document.createTextNode(" "+o));d.appendChild(l)});var ex=document.createElement("div");ex.className="exp";ex.hidden=true;d.appendChild(ex);f.appendChild(d)});$("#resultado").hidden=true;$("#repetir").hidden=true;$("#corrigir").hidden=false;mostrar("quiz")}
+document.querySelectorAll(".abrir").forEach(function(b){b.addEventListener("click",function(){abrirQuiz(+b.dataset.i)})});
+$("#voltar-2").addEventListener("click",function(e){e.preventDefault();estados();mostrar("indice")});
+$("#corrigir").addEventListener("click",function(e){e.preventDefault();var z=D[atual],certas=0;document.querySelectorAll("#form .q").forEach(function(d,k){var m=d.querySelector("input:checked"),q=z.q[k],ex=d.querySelector(".exp");var ok=m&&+m.value===q[2];if(ok)certas++;ex.hidden=false;ex.className="exp "+(ok?"certo":"errado");ex.textContent=(ok?"Certo. ":"Resposta certa: "+q[1][q[2]]+". ")+q[3];d.querySelectorAll("input").forEach(function(r){r.disabled=true})});$("#resultado").textContent=certas+" / "+z.q.length;$("#resultado").hidden=false;$("#corrigir").hidden=true;$("#repetir").hidden=false;abertos[atual]=Math.max(typeof abertos[atual]==="number"?abertos[atual]:0,certas);guardar()});
+$("#repetir").addEventListener("click",function(e){e.preventDefault();abrirQuiz(atual)});
+estados();
+})();
+</script></body></html>

@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="pt-PT"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Questionários M2 · Teatro Vicentino · EPI</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#fff;color:#000;font:17px/1.5 Arial,Helvetica,sans-serif}
+main{max-width:44rem;margin:0 auto;background:#fff;min-height:100vh;padding:1.2rem 1.1rem 4rem}
+header{border-bottom:3px solid #000;padding-bottom:.8rem;margin-bottom:1rem}
+.marca{font:900 .8rem "Arial Black",Arial;letter-spacing:.12em;text-transform:uppercase}
+.abrir .estado{font:900 .68rem "Arial Black",Arial;text-transform:uppercase;letter-spacing:.1em;border:2px solid #000;padding:.15rem .35rem;white-space:nowrap}
+h1{font:900 1.8rem/1.05 "Arial Black",Arial,sans-serif;margin:.3rem 0}
+h2{font:900 1.2rem "Arial Black",Arial,sans-serif;margin:1rem 0 .6rem}
+ul{list-style:none;padding:0;margin:0}
+.abrir{width:100%;display:flex;gap:.8rem;align-items:center;text-align:left;background:#fff;color:#000;border:0;border-top:2px solid #000;padding:.9rem .2rem;font:inherit;cursor:pointer}
+.abrir .n{font:900 1.1rem "Arial Black",Arial;min-width:1.6rem}.abrir .t{flex:1;font-weight:700}.abrir .estado{font-size:1.1rem}
+button.p{font:700 1rem Arial;padding:.75rem 1.1rem;border:2px solid #000;background:#000;color:#fff;cursor:pointer;margin:.5rem .4rem 0 0}
+button.s{background:#fff;color:#000}
+input[type=text]{font:inherit;padding:.6rem;border:1px solid #999;width:100%;max-width:16rem;text-transform:uppercase}
+.q{border-top:2px solid #000;padding:.9rem 0}
+.q p{margin:0 0 .5rem;font-weight:700}
+.op{display:flex;gap:.5rem;align-items:flex-start;padding:.3rem 0;font-weight:400}
+.op input{margin-top:.35rem}
+.certo{color:#1b6e2d}.errado{color:#b00020}
+.exp{font-size:.9rem;border-left:8px solid #000;padding:.4rem .6rem;margin-top:.4rem}
+.aviso{border:2px solid #000;padding:.7rem .8rem;margin:.8rem 0;font-size:.95rem}
+.resultado{font:900 1.3rem "Arial Black",Arial;margin:1rem 0}
+[hidden]{display:none!important}
+:focus-visible{outline:3px solid #1f5fbf;outline-offset:2px}
+</style></head><body><main>
+<header><div class="marca">Escola Profissional de Imagem · Português · 1.º ano</div><h1>Questionários rápidos<br>Módulo 2 · Teatro Vicentino</h1><div class="marca">Para praticar · escolhe e responde</div></header>
+
+<section id="indice">
+<div class="aviso">Escolhe um questionário e responde. Podes repeti-los as vezes que quiseres: servem para treinar.</div>
+<ul><li><button class="abrir" data-i="0"><span class="n">1</span><span class="t">Gil Vicente e a farsa</span><span class="estado" id="estado-0">fechado</span></button></li><li><button class="abrir" data-i="1"><span class="n">2</span><span class="t">As personagens da Farsa</span><span class="estado" id="estado-1">fechado</span></button></li><li><button class="abrir" data-i="2"><span class="n">3</span><span class="t">O cómico</span><span class="estado" id="estado-2">fechado</span></button></li><li><button class="abrir" data-i="3"><span class="n">4</span><span class="t">Formação de palavras</span><span class="estado" id="estado-3">fechado</span></button></li><li><button class="abrir" data-i="4"><span class="n">5</span><span class="t">Variação do português</span><span class="estado" id="estado-4">fechado</span></button></li></ul>
+</section>
+
+<section id="quiz" hidden>
+<h2 id="titulo-q"></h2>
+<form id="form"></form>
+<div><button class="p" id="corrigir">Corrigir</button><button class="p s" id="repetir" hidden>Repetir</button><button class="p s" id="voltar-2">Voltar à lista</button></div>
+<div class="resultado" id="resultado" hidden></div>
+</section>
+</main>
+<script>
+(function(){
+"use strict";
+var ID="M2", D=[{"t":"Gil Vicente e a farsa","q":[["Gil Vicente é considerado…",["o fundador do teatro português","o primeiro romancista português","um poeta trovador","um cronista"],0,"É o grande fundador do teatro em Portugal."],["Uma farsa é…",["uma peça cómica curta que satiriza costumes","uma tragédia em cinco atos","um poema épico","uma crónica histórica"],0,"Farsa: comédia breve de crítica de costumes."],["A Farsa de Inês Pereira desenvolve o provérbio…",["«Quem espera sempre alcança»","«Mais quero asno que me leve que cavalo que me derrube»","«Mais vale só que mal acompanhada»","«Casa roubada, trancas à porta»"],1,"É o mote da peça, indicado na rubrica inicial."],["No início da peça, Inês está…",["no campo a trabalhar","em casa, a fazer lavores, aborrecida","na igreja","numa festa"],1,"«Renego deste lavrar…»"],["A crítica de Gil Vicente dirige-se sobretudo…",["aos vícios de vários grupos sociais","só ao rei","só aos camponeses","aos animais"],0,"Sátira de tipos sociais."],["Verdadeiro ou falso: as personagens de Gil Vicente são muitas vezes tipos sociais.",["Verdadeiro","Falso"],0,"Representam grupos (o escudeiro, o lavrador, a alcoviteira…)."]]},{"t":"As personagens da Farsa","q":[["Pêro Marques é…",["um escudeiro elegante","um lavrador rico e simples","um judeu casamenteiro","um ermitão"],1,"O pretendente rústico, o «asno»."],["O Escudeiro representa…",["a aparência e a vaidade da pequena nobreza","a honestidade do povo","a Igreja","a sabedoria"],0,"Promete muito e oprime Inês."],["Lianor Vaz é…",["a mãe de Inês","uma alcoviteira que traz propostas de casamento","uma freira","a criada do Escudeiro"],1,"Alcoviteira: arranja casamentos."],["Latão e Vidal são…",["dois escudeiros","dois judeus casamenteiros","dois lavradores","dois ermitões"],1,"Trazem o Escudeiro a Inês."],["O que procura Inês no primeiro casamento?",["Segurança e riqueza","Um marido discreto, que saiba cantar e falar bem","Um marido velho","Ficar em casa da mãe"],1,"Prefere a aparência e as boas maneiras."],["No fim, Inês…",["fica sozinha","casa com Pêro Marques e engana-o","entra num convento","volta para o Escudeiro"],1,"Viúva, casa com o «asno» que a leva."]]},{"t":"O cómico","q":[["O cómico de linguagem nasce…",["da forma de falar das personagens","das situações ridículas","dos defeitos de carácter","do cenário"],0,"Ex.: a fala rústica de Pêro Marques."],["O cómico de situação nasce…",["do vocabulário","de acontecimentos ou cenas ridículas","da rima","da música"],1,"Ex.: Pêro Marques leva Inês às costas."],["O cómico de carácter nasce…",["dos traços exagerados de uma personagem","dos erros de ortografia","do tempo da ação","da luz"],0,"Ex.: a vaidade do Escudeiro."],["Pêro Marques a carregar Inês às costas é sobretudo cómico de…",["linguagem","situação","carácter","nenhum"],1,"A cena é ridícula em si."],["A ironia da Farsa está em que…",["Inês consegue, com o «asno», a liberdade que não teve com o «cavalo»","o Escudeiro se torna bom marido","Inês nunca casa","a mãe decide tudo"],0,"O mote cumpre-se de forma irónica."],["Verdadeiro ou falso: o riso, em Gil Vicente, serve para criticar.",["Verdadeiro","Falso"],0,"A farsa ri de tipos sociais (o Escudeiro, Pêro Marques) para mostrar os seus defeitos."]]},{"t":"Formação de palavras","q":[["«infeliz» formou-se por…",["sufixação","prefixação","composição","parassíntese"],1,"in- + feliz."],["«felicidade» formou-se por…",["sufixação","prefixação","composição","truncação"],0,"feliz + -idade."],["«entristecer» formou-se por…",["parassíntese","prefixação só","sufixação só","composição"],0,"en- + triste + -ecer, ao mesmo tempo."],["«o voo» (de voar) formou-se por…",["derivação não afixal","composição","prefixação","sigla"],0,"Nome formado a partir do verbo, sem afixo."],["«guarda-chuva» é…",["composição morfossintática","composição morfológica","derivação","amálgama"],0,"Junta duas palavras («guarda» + «chuva») numa só unidade. O hífen sozinho não prova nada: «disse-lhe» também o tem e não é palavra composta."],["«hidroelétrico» é…",["composição morfológica","composição morfossintática","sufixação","truncação"],0,"Radicais ligados (hidro + elétrico)."]]},{"t":"Variação do português","q":[["«comboio» (Portugal) e «trem» (Brasil) mostram variação…",["geográfica","histórica","social","situacional"],0,"Variantes de países diferentes."],["A mesma pessoa falar de forma diferente com amigos e numa entrevista é variação…",["geográfica","situacional (registo)","histórica","etimológica"],1,"Registo formal e informal."],["O galego-português das cantigas mostra variação…",["histórica","social","geográfica","situacional"],0,"A língua muda com o tempo."],["O português é língua oficial em…",["só Portugal e Brasil","vários países de quatro continentes","só na Europa","só em África"],1,"Portugal, Brasil, Angola, Moçambique, Cabo Verde, Guiné-Bissau, São Tomé e Príncipe, Timor-Leste, Guiné Equatorial."],["Na Farsa, a fala de Pêro Marques distingue-se por…",["marcas de um falar rústico","ser em latim","ser em castelhano","ser em verso livre"],0,"Variação social e regional."],["«autocarro» (PT) corresponde no Brasil a…",["ônibus","bonde","trem","metrô"],0,"Variação geográfica do léxico."]]}], CHAVE="epi-pt-quiz-"+ID, $=function(s){return document.querySelector(s)}, atual=-1;
+var abertos={}; try{abertos=JSON.parse(localStorage.getItem(CHAVE)||"{}")}catch(e){}
+function guardar(){try{localStorage.setItem(CHAVE,JSON.stringify(abertos))}catch(e){}}
+function mostrar(qual){["indice","quiz"].forEach(function(s){$("#"+s).hidden=(s!==qual)});window.scrollTo(0,0)}
+function estados(){D.forEach(function(z,i){var e=$("#estado-"+i);var r=abertos[i];e.textContent=(typeof r==="number")?r+"/"+z.q.length:z.q.length+" perguntas"})}
+function abrirQuiz(i){atual=i;var z=D[i];$("#titulo-q").textContent=(i+1)+". "+z.t;var f=$("#form");f.innerHTML="";z.q.forEach(function(q,k){var d=document.createElement("div");d.className="q";var p=document.createElement("p");p.textContent=(k+1)+". "+q[0];d.appendChild(p);q[1].forEach(function(o,j){var l=document.createElement("label");l.className="op";var r=document.createElement("input");r.type="radio";r.name="q"+k;r.value=j;l.appendChild(r);l.appendChild(document.createTextNode(" "+o));d.appendChild(l)});var ex=document.createElement("div");ex.className="exp";ex.hidden=true;d.appendChild(ex);f.appendChild(d)});$("#resultado").hidden=true;$("#repetir").hidden=true;$("#corrigir").hidden=false;mostrar("quiz")}
+document.querySelectorAll(".abrir").forEach(function(b){b.addEventListener("click",function(){abrirQuiz(+b.dataset.i)})});
+$("#voltar-2").addEventListener("click",function(e){e.preventDefault();estados();mostrar("indice")});
+$("#corrigir").addEventListener("click",function(e){e.preventDefault();var z=D[atual],certas=0;document.querySelectorAll("#form .q").forEach(function(d,k){var m=d.querySelector("input:checked"),q=z.q[k],ex=d.querySelector(".exp");var ok=m&&+m.value===q[2];if(ok)certas++;ex.hidden=false;ex.className="exp "+(ok?"certo":"errado");ex.textContent=(ok?"Certo. ":"Resposta certa: "+q[1][q[2]]+". ")+q[3];d.querySelectorAll("input").forEach(function(r){r.disabled=true})});$("#resultado").textContent=certas+" / "+z.q.length;$("#resultado").hidden=false;$("#corrigir").hidden=true;$("#repetir").hidden=false;abertos[atual]=Math.max(typeof abertos[atual]==="number"?abertos[atual]:0,certas);guardar()});
+$("#repetir").addEventListener("click",function(e){e.preventDefault();abrirQuiz(atual)});
+estados();
+})();
+</script></body></html>

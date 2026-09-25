@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="pt-PT"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Questionários M3 · Lírica e Épica Camoniana · EPI</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#fff;color:#000;font:17px/1.5 Arial,Helvetica,sans-serif}
+main{max-width:44rem;margin:0 auto;background:#fff;min-height:100vh;padding:1.2rem 1.1rem 4rem}
+header{border-bottom:3px solid #000;padding-bottom:.8rem;margin-bottom:1rem}
+.marca{font:900 .8rem "Arial Black",Arial;letter-spacing:.12em;text-transform:uppercase}
+.abrir .estado{font:900 .68rem "Arial Black",Arial;text-transform:uppercase;letter-spacing:.1em;border:2px solid #000;padding:.15rem .35rem;white-space:nowrap}
+h1{font:900 1.8rem/1.05 "Arial Black",Arial,sans-serif;margin:.3rem 0}
+h2{font:900 1.2rem "Arial Black",Arial,sans-serif;margin:1rem 0 .6rem}
+ul{list-style:none;padding:0;margin:0}
+.abrir{width:100%;display:flex;gap:.8rem;align-items:center;text-align:left;background:#fff;color:#000;border:0;border-top:2px solid #000;padding:.9rem .2rem;font:inherit;cursor:pointer}
+.abrir .n{font:900 1.1rem "Arial Black",Arial;min-width:1.6rem}.abrir .t{flex:1;font-weight:700}.abrir .estado{font-size:1.1rem}
+button.p{font:700 1rem Arial;padding:.75rem 1.1rem;border:2px solid #000;background:#000;color:#fff;cursor:pointer;margin:.5rem .4rem 0 0}
+button.s{background:#fff;color:#000}
+input[type=text]{font:inherit;padding:.6rem;border:1px solid #999;width:100%;max-width:16rem;text-transform:uppercase}
+.q{border-top:2px solid #000;padding:.9rem 0}
+.q p{margin:0 0 .5rem;font-weight:700}
+.op{display:flex;gap:.5rem;align-items:flex-start;padding:.3rem 0;font-weight:400}
+.op input{margin-top:.35rem}
+.certo{color:#1b6e2d}.errado{color:#b00020}
+.exp{font-size:.9rem;border-left:8px solid #000;padding:.4rem .6rem;margin-top:.4rem}
+.aviso{border:2px solid #000;padding:.7rem .8rem;margin:.8rem 0;font-size:.95rem}
+.resultado{font:900 1.3rem "Arial Black",Arial;margin:1rem 0}
+[hidden]{display:none!important}
+:focus-visible{outline:3px solid #1f5fbf;outline-offset:2px}
+</style></head><body><main>
+<header><div class="marca">Escola Profissional de Imagem · Português · 1.º ano</div><h1>Questionários rápidos<br>Módulo 3 · Lírica e Épica Camoniana</h1><div class="marca">Para praticar · escolhe e responde</div></header>
+
+<section id="indice">
+<div class="aviso">Escolhe um questionário e responde. Podes repeti-los as vezes que quiseres: servem para treinar.</div>
+<ul><li><button class="abrir" data-i="0"><span class="n">1</span><span class="t">Medida velha e medida nova</span><span class="estado" id="estado-0">fechado</span></button></li><li><button class="abrir" data-i="1"><span class="n">2</span><span class="t">Temas da lírica</span><span class="estado" id="estado-1">fechado</span></button></li><li><button class="abrir" data-i="2"><span class="n">3</span><span class="t">Os Lusíadas</span><span class="estado" id="estado-2">fechado</span></button></li><li><button class="abrir" data-i="3"><span class="n">4</span><span class="t">Valor modal</span><span class="estado" id="estado-3">fechado</span></button></li><li><button class="abrir" data-i="4"><span class="n">5</span><span class="t">Étimo e palavras irmãs</span><span class="estado" id="estado-4">fechado</span></button></li><li><button class="abrir" data-i="5"><span class="n">6</span><span class="t">Documentário e cartoon</span><span class="estado" id="estado-5">fechado</span></button></li></ul>
+</section>
+
+<section id="quiz" hidden>
+<h2 id="titulo-q"></h2>
+<form id="form"></form>
+<div><button class="p" id="corrigir">Corrigir</button><button class="p s" id="repetir" hidden>Repetir</button><button class="p s" id="voltar-2">Voltar à lista</button></div>
+<div class="resultado" id="resultado" hidden></div>
+</section>
+</main>
+<script>
+(function(){
+"use strict";
+var ID="M3", D=[{"t":"Medida velha e medida nova","q":[["A redondilha maior tem…",["5 sílabas métricas","7 sílabas métricas","10 sílabas métricas","12 sílabas métricas"],1,"Redondilha maior: 7; menor: 5."],["A «medida nova» usa sobretudo o verso…",["decassílabo","redondilho","alexandrino","livre"],0,"Decassílabo, vindo de Itália."],["Um soneto tem…",["14 versos: duas quadras e dois tercetos","12 versos","16 versos em quatro quadras","8 versos"],0,"Forma fixa de 14 versos."],["A medida nova foi influenciada por…",["Petrarca e a poesia italiana","os trovadores galegos","Fernão Lopes","Gil Vicente"],0,"Influência petrarquista."],["«Endechas a Bárbara escrava» está escrita em…",["medida velha (redondilha)","decassílabos","prosa","verso livre"],0,"Redondilha menor."],["«Mudam-se os tempos, mudam-se as vontades» é…",["um soneto","uma redondilha","uma canção épica","uma écloga"],0,"Soneto."]]},{"t":"Temas da lírica","q":[["«Todo o mundo é composto de mudança» exprime o tema…",["da mudança e do desconcerto","da natureza alegre","da pátria","da religião"],0,"Soneto «Mudam-se os tempos…»."],["O «desconcerto do mundo» é…",["a ideia de que o mundo não segue uma ordem justa","uma música desafinada","a guerra","o fim do mundo"],0,"Os bons sofrem e os maus prosperam."],["Na representação petrarquista, a amada é…",["idealizada: bela, pura, inacessível","descrita com defeitos","sempre uma camponesa","uma deusa grega"],0,"Beleza física e espiritual idealizada."],["Em «Endechas a Bárbara escrava», a amada é…",["uma mulher escrava, de pele escura, afastada do padrão petrarquista","uma rainha","a Virgem Maria","uma pastora loira"],0,"Rompe com o modelo de beleza da época."],["A antítese é…",["a aproximação de ideias opostas","a repetição de um som","uma pergunta sem resposta","a comparação com «como»"],0,"Ex.: «verde manto» / «neve fria»."],["Em «Amor é fogo que arde sem se ver», o recurso central é…",["o paradoxo","a aliteração","a enumeração","a hipálage"],0,"Afirma o contraditório do amor."]]},{"t":"Os Lusíadas","q":[["Os Lusíadas foram publicados em…",["1500","1572","1580","1640"],1,"1572."],["Os Lusíadas têm…",["5 cantos","10 cantos","12 cantos","24 cantos"],1,"Dez cantos."],["Cada estância tem…",["oito versos decassilábicos (oitava rima)","quatro versos","catorze versos","versos livres"],0,"Oitava rima: ABABABCC."],["As partes da epopeia são…",["Proposição, Invocação, Dedicatória e Narração","Introdução, Desenvolvimento e Conclusão","Exórdio e Peroração","Prólogo e Epílogo"],0,"Estrutura interna."],["O herói d'Os Lusíadas é…",["só Vasco da Gama","o povo português (herói coletivo)","D. Sebastião","Adamastor"],1,"Herói coletivo."],["Nas reflexões do Poeta, Camões critica, por exemplo,…",["a cobiça e o desprezo pelas letras","o mar","os deuses gregos","os marinheiros por serem corajosos"],0,"Ex.: canto X — «no gosto da cobiça e na rudeza»."]]},{"t":"Valor modal","q":[["«Talvez chova amanhã.»",["epistémico (probabilidade)","deôntico (obrigação)","apreciativo","deôntico (permissão)"],0,"Grau de certeza."],["«Tens de entregar o texto.»",["deôntico (obrigação)","epistémico","apreciativo","nenhum"],0,"Obrigação."],["«Podes sair mais cedo.» (autorização)",["deôntico (permissão)","epistémico (probabilidade)","apreciativo","assertivo"],0,"Permissão."],["«Felizmente, o poema chegou até nós.»",["apreciativo","deôntico","epistémico","nenhum"],0,"Avaliação de quem fala."],["«Certamente Camões conheceu Petrarca.»",["epistémico (certeza)","deôntico","apreciativo","permissão"],0,"Certeza."],["«Deves ler o soneto duas vezes.» (conselho/obrigação)",["deôntico","epistémico","apreciativo","nenhum"],0,"Valor deôntico."]]},{"t":"Étimo e palavras irmãs","q":[["«cheio» e «pleno» vêm ambos do latim…",["plenum","clavem","palatium","sanum"],0,"Palavras divergentes: uma popular, outra erudita."],["«chave» e «clave» vêm de…",["clavem","plenum","cattum","solem"],0,"Via popular e via erudita."],["«paço» e «palácio» vêm de…",["palatium","passum","pacem","patrem"],0,"Divergentes."],["Palavras de origem popular…",["sofreram mais transformações fonéticas","entraram tarde na língua, quase sem mudar","vêm sempre do grego","não têm étimo"],0,"Evoluíram na boca do povo."],["Palavras eruditas…",["foram tiradas do latim mais tarde, por via culta, e mudaram pouco","são sempre de gíria","vêm do árabe","são estrangeirismos ingleses"],0,"Via culta."],["O étimo de uma palavra é…",["a palavra de onde ela vem","o seu antónimo","a sua classe","o seu plural"],0,"Origem."]]},{"t":"Documentário e cartoon","q":[["Um documentário é…",["um filme de não ficção sobre a realidade, com um ponto de vista","um filme de ficção científica","um anúncio","um videoclipe"],0,"Não ficção com olhar de autor."],["No documentário, importa perguntar…",["que realidade mostra e de que ponto de vista","qual é o ator principal","quanto custou","quem compôs a música"],0,"Finalidade e ponto de vista."],["O cartoon usa sobretudo…",["humor, ironia e síntese visual para criticar","textos longos","fotografias sem legenda","gráficos de dados"],0,"Crítica condensada."],["Numa apreciação crítica deve haver…",["descrição do objeto e juízo fundamentado","só a opinião «gostei»","só o resumo","só a biografia do autor"],0,"Critérios e argumentos."],["A ironia consiste em…",["dizer o contrário do que se quer dar a entender","repetir palavras","exagerar sempre","usar rimas"],0,"Sentido contrário."],["Verdadeiro ou falso: um cartoon pode dispensar palavras.",["Verdadeiro","Falso"],0,"A imagem pode bastar."]]}], CHAVE="epi-pt-quiz-"+ID, $=function(s){return document.querySelector(s)}, atual=-1;
+var abertos={}; try{abertos=JSON.parse(localStorage.getItem(CHAVE)||"{}")}catch(e){}
+function guardar(){try{localStorage.setItem(CHAVE,JSON.stringify(abertos))}catch(e){}}
+function mostrar(qual){["indice","quiz"].forEach(function(s){$("#"+s).hidden=(s!==qual)});window.scrollTo(0,0)}
+function estados(){D.forEach(function(z,i){var e=$("#estado-"+i);var r=abertos[i];e.textContent=(typeof r==="number")?r+"/"+z.q.length:z.q.length+" perguntas"})}
+function abrirQuiz(i){atual=i;var z=D[i];$("#titulo-q").textContent=(i+1)+". "+z.t;var f=$("#form");f.innerHTML="";z.q.forEach(function(q,k){var d=document.createElement("div");d.className="q";var p=document.createElement("p");p.textContent=(k+1)+". "+q[0];d.appendChild(p);q[1].forEach(function(o,j){var l=document.createElement("label");l.className="op";var r=document.createElement("input");r.type="radio";r.name="q"+k;r.value=j;l.appendChild(r);l.appendChild(document.createTextNode(" "+o));d.appendChild(l)});var ex=document.createElement("div");ex.className="exp";ex.hidden=true;d.appendChild(ex);f.appendChild(d)});$("#resultado").hidden=true;$("#repetir").hidden=true;$("#corrigir").hidden=false;mostrar("quiz")}
+document.querySelectorAll(".abrir").forEach(function(b){b.addEventListener("click",function(){abrirQuiz(+b.dataset.i)})});
+$("#voltar-2").addEventListener("click",function(e){e.preventDefault();estados();mostrar("indice")});
+$("#corrigir").addEventListener("click",function(e){e.preventDefault();var z=D[atual],certas=0;document.querySelectorAll("#form .q").forEach(function(d,k){var m=d.querySelector("input:checked"),q=z.q[k],ex=d.querySelector(".exp");var ok=m&&+m.value===q[2];if(ok)certas++;ex.hidden=false;ex.className="exp "+(ok?"certo":"errado");ex.textContent=(ok?"Certo. ":"Resposta certa: "+q[1][q[2]]+". ")+q[3];d.querySelectorAll("input").forEach(function(r){r.disabled=true})});$("#resultado").textContent=certas+" / "+z.q.length;$("#resultado").hidden=false;$("#corrigir").hidden=true;$("#repetir").hidden=false;abertos[atual]=Math.max(typeof abertos[atual]==="number"?abertos[atual]:0,certas);guardar()});
+$("#repetir").addEventListener("click",function(e){e.preventDefault();abrirQuiz(atual)});
+estados();
+})();
+</script></body></html>

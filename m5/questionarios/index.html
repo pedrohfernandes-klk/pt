@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="pt-PT"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Questionários M5 · Narrativa do Séc. XIX · EPI</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#fff;color:#000;font:17px/1.5 Arial,Helvetica,sans-serif}
+main{max-width:44rem;margin:0 auto;background:#fff;min-height:100vh;padding:1.2rem 1.1rem 4rem}
+header{border-bottom:3px solid #000;padding-bottom:.8rem;margin-bottom:1rem}
+.marca{font:900 .8rem "Arial Black",Arial;letter-spacing:.12em;text-transform:uppercase}
+.abrir .estado{font:900 .68rem "Arial Black",Arial;text-transform:uppercase;letter-spacing:.1em;border:2px solid #000;padding:.15rem .35rem;white-space:nowrap}
+h1{font:900 1.8rem/1.05 "Arial Black",Arial,sans-serif;margin:.3rem 0}
+h2{font:900 1.2rem "Arial Black",Arial,sans-serif;margin:1rem 0 .6rem}
+ul{list-style:none;padding:0;margin:0}
+.abrir{width:100%;display:flex;gap:.8rem;align-items:center;text-align:left;background:#fff;color:#000;border:0;border-top:2px solid #000;padding:.9rem .2rem;font:inherit;cursor:pointer}
+.abrir .n{font:900 1.1rem "Arial Black",Arial;min-width:1.6rem}.abrir .t{flex:1;font-weight:700}.abrir .estado{font-size:1.1rem}
+button.p{font:700 1rem Arial;padding:.75rem 1.1rem;border:2px solid #000;background:#000;color:#fff;cursor:pointer;margin:.5rem .4rem 0 0}
+button.s{background:#fff;color:#000}
+input[type=text]{font:inherit;padding:.6rem;border:1px solid #999;width:100%;max-width:16rem;text-transform:uppercase}
+.q{border-top:2px solid #000;padding:.9rem 0}
+.q p{margin:0 0 .5rem;font-weight:700}
+.op{display:flex;gap:.5rem;align-items:flex-start;padding:.3rem 0;font-weight:400}
+.op input{margin-top:.35rem}
+.certo{color:#1b6e2d}.errado{color:#b00020}
+.exp{font-size:.9rem;border-left:8px solid #000;padding:.4rem .6rem;margin-top:.4rem}
+.aviso{border:2px solid #000;padding:.7rem .8rem;margin:.8rem 0;font-size:.95rem}
+.resultado{font:900 1.3rem "Arial Black",Arial;margin:1rem 0}
+[hidden]{display:none!important}
+:focus-visible{outline:3px solid #1f5fbf;outline-offset:2px}
+</style></head><body><main>
+<header><div class="marca">Escola Profissional de Imagem · Português · 2.º ano</div><h1>Questionários rápidos<br>Módulo 5 · Narrativa do Séc. XIX</h1><div class="marca">Para praticar · escolhe e responde</div></header>
+
+<section id="indice">
+<div class="aviso">Escolhe um questionário e responde. Podes repeti-los as vezes que quiseres: servem para treinar.</div>
+<ul><li><button class="abrir" data-i="0"><span class="n">1</span><span class="t">Amor de Perdição</span><span class="estado" id="estado-0">fechado</span></button></li><li><button class="abrir" data-i="1"><span class="n">2</span><span class="t">Os Maias</span><span class="estado" id="estado-1">fechado</span></button></li><li><button class="abrir" data-i="2"><span class="n">3</span><span class="t">A crónica de costumes</span><span class="estado" id="estado-2">fechado</span></button></li><li><button class="abrir" data-i="3"><span class="n">4</span><span class="t">Funções sintáticas</span><span class="estado" id="estado-3">fechado</span></button></li><li><button class="abrir" data-i="4"><span class="n">5</span><span class="t">Discurso direto, indireto e indireto livre</span><span class="estado" id="estado-4">fechado</span></button></li></ul>
+</section>
+
+<section id="quiz" hidden>
+<h2 id="titulo-q"></h2>
+<form id="form"></form>
+<div><button class="p" id="corrigir">Corrigir</button><button class="p s" id="repetir" hidden>Repetir</button><button class="p s" id="voltar-2">Voltar à lista</button></div>
+<div class="resultado" id="resultado" hidden></div>
+</section>
+</main>
+<script>
+(function(){
+"use strict";
+var ID="M5", D=[{"t":"Amor de Perdição","q":[["Camilo escreveu Amor de Perdição…",["na Cadeia da Relação do Porto","em Paris","no Brasil","em Coimbra"],0,"Preso, em 1861; publicado em 1862."],["Simão e Teresa pertencem a…",["famílias rivais","famílias amigas","à mesma família","famílias pobres"],0,"Botelhos e Albuquerques."],["Mariana é…",["filha do ferrador João da Cruz, que ama Simão em silêncio","irmã de Teresa","mãe de Simão","uma freira"],0,"Amor abnegado."],["Simão é condenado a…",["degredo na Índia","prisão perpétua em Lisboa","exílio em Espanha","trabalhos forçados no Brasil"],0,"Morre no navio."],["Teresa morre…",["no convento","no navio","em casa do pai","na prisão"],0,"Convento de Monchique."],["O narrador diz que Simão era…",["seu tio","seu filho","um desconhecido","uma personagem inventada sem ligação"],0,"Simão Botelho foi tio paterno de Camilo."]]},{"t":"Os Maias","q":[["Os Maias foram publicados em…",["1862","1888","1910","1934"],1,"1888."],["O subtítulo é…",["«Episódios da Vida Romântica»","«Cenas da Vida de Província»","«Memórias de um Doido»","«Crónica de Lisboa»"],0,"Episódios da Vida Romântica."],["O Ramalhete é…",["a casa dos Maias em Lisboa","um jornal","uma quinta no Douro","um hotel"],0,"Casa da família."],["Carlos da Maia é…",["médico","advogado","militar","jornalista"],0,"Formado em Medicina."],["Maria Eduarda revela-se…",["irmã de Carlos","prima de Ega","filha de Afonso","mulher de Dâmaso"],0,"O incesto provoca a tragédia."],["João da Ega é…",["o grande amigo de Carlos","o avô","o criado","um político"],0,"Amigo e companheiro."],["Afonso da Maia é…",["o avô de Carlos","o pai de Carlos","um tio","um médico"],0,"Avô e educador."],["«Falhámos a vida» exprime…",["o fracasso de uma geração","uma vitória","um casamento feliz","o sucesso profissional"],0,"Balanço final desencantado."]]},{"t":"A crónica de costumes","q":[["No Jantar do Hotel Central discute-se…",["literatura e crítica (ultrarromantismo vs. naturalismo)","futebol","a guerra","religião"],0,"Alencar contra Ega."],["As corridas de cavalos mostram…",["o provincianismo e a imitação do estrangeiro","o progresso do país","a riqueza do povo","o gosto pelo campo"],0,"Lisboa quer parecer Paris ou Londres."],["O jantar em casa dos Gouvarinho critica…",["a mediocridade da política e da elite","a vida rural","os estudantes","os pescadores"],0,"Conde de Gouvarinho, político vazio."],["O episódio dos jornais critica…",["a corrupção e a falta de rigor do jornalismo","a censura do governo","a poesia","os padres"],0,"Jornalismo venal."],["O sarau do Teatro da Trindade critica…",["a cultura oca e retórica","a música clássica","o teatro vicentino","a ciência"],0,"Discursos e poesia ultrarromântica."],["Estes episódios servem para…",["retratar a sociedade lisboeta","contar a infância de Afonso","descrever a Índia","fazer publicidade"],0,"Crónica de costumes."]]},{"t":"Funções sintáticas","q":[["«Carlos amou Maria Eduarda.» «Maria Eduarda» é…",["complemento direto","sujeito","complemento indireto","predicativo"],0,"Complemento direto."],["«Ega escreveu a Carlos.» «a Carlos» é…",["complemento indireto","complemento direto","sujeito","modificador"],0,"Substituível por «lhe»."],["«Simão parecia abatido.» «abatido» é…",["predicativo do sujeito","complemento direto","modificador","sujeito"],0,"Verbo copulativo."],["«Mariana vivia em Viseu.» «em Viseu» é…",["complemento oblíquo","modificador","complemento direto","sujeito"],0,"Exigido pelo verbo «viver» neste sentido."],["«À noite, Simão velava.» «À noite» é…",["modificador do grupo verbal","complemento oblíquo","sujeito","predicativo"],0,"Não é exigido pelo verbo."],["«Consideravam-no um herói.» «um herói» é…",["predicativo do complemento direto","complemento direto","predicativo do sujeito","vocativo"],0,"Caracteriza o complemento direto («o»)."]]},{"t":"Discurso direto, indireto e indireto livre","q":[["«— Vou partir — disse Simão.» é discurso…",["direto","indireto","indireto livre","nenhum"],0,"Reprodução das palavras, com travessão."],["«Simão disse que ia partir.» é discurso…",["indireto","direto","indireto livre","monólogo"],0,"Integrado com «que»."],["«Carlos parou. Que fazer agora? Partir?» é discurso…",["indireto livre","direto","indireto","dramático"],0,"Pensamento da personagem na voz do narrador, sem verbo introdutor."],["Um narrador relata dias depois, longe do lugar. Nesse relato, «amanhã» passa a…",["«no dia seguinte»","«ontem»","«hoje»","«agora»"],0,"Os deíticos ajustam-se à situação de quem relata: aqui, outro dia e outro lugar."],["No mesmo relato, feito noutro lugar, «aqui» passa a…",["«ali»","«cá»","«onde»","«hoje»"],0,"Se quem relata estivesse no mesmo sítio, «cá» também serviria: os deíticos dependem da situação."],["O discurso indireto livre é típico…",["do romance realista, como Os Maias","das cantigas de amigo","dos sermões","das crónicas medievais"],0,"Eça usa-o com frequência."]]}], CHAVE="epi-pt-quiz-"+ID, $=function(s){return document.querySelector(s)}, atual=-1;
+var abertos={}; try{abertos=JSON.parse(localStorage.getItem(CHAVE)||"{}")}catch(e){}
+function guardar(){try{localStorage.setItem(CHAVE,JSON.stringify(abertos))}catch(e){}}
+function mostrar(qual){["indice","quiz"].forEach(function(s){$("#"+s).hidden=(s!==qual)});window.scrollTo(0,0)}
+function estados(){D.forEach(function(z,i){var e=$("#estado-"+i);var r=abertos[i];e.textContent=(typeof r==="number")?r+"/"+z.q.length:z.q.length+" perguntas"})}
+function abrirQuiz(i){atual=i;var z=D[i];$("#titulo-q").textContent=(i+1)+". "+z.t;var f=$("#form");f.innerHTML="";z.q.forEach(function(q,k){var d=document.createElement("div");d.className="q";var p=document.createElement("p");p.textContent=(k+1)+". "+q[0];d.appendChild(p);q[1].forEach(function(o,j){var l=document.createElement("label");l.className="op";var r=document.createElement("input");r.type="radio";r.name="q"+k;r.value=j;l.appendChild(r);l.appendChild(document.createTextNode(" "+o));d.appendChild(l)});var ex=document.createElement("div");ex.className="exp";ex.hidden=true;d.appendChild(ex);f.appendChild(d)});$("#resultado").hidden=true;$("#repetir").hidden=true;$("#corrigir").hidden=false;mostrar("quiz")}
+document.querySelectorAll(".abrir").forEach(function(b){b.addEventListener("click",function(){abrirQuiz(+b.dataset.i)})});
+$("#voltar-2").addEventListener("click",function(e){e.preventDefault();estados();mostrar("indice")});
+$("#corrigir").addEventListener("click",function(e){e.preventDefault();var z=D[atual],certas=0;document.querySelectorAll("#form .q").forEach(function(d,k){var m=d.querySelector("input:checked"),q=z.q[k],ex=d.querySelector(".exp");var ok=m&&+m.value===q[2];if(ok)certas++;ex.hidden=false;ex.className="exp "+(ok?"certo":"errado");ex.textContent=(ok?"Certo. ":"Resposta certa: "+q[1][q[2]]+". ")+q[3];d.querySelectorAll("input").forEach(function(r){r.disabled=true})});$("#resultado").textContent=certas+" / "+z.q.length;$("#resultado").hidden=false;$("#corrigir").hidden=true;$("#repetir").hidden=false;abertos[atual]=Math.max(typeof abertos[atual]==="number"?abertos[atual]:0,certas);guardar()});
+$("#repetir").addEventListener("click",function(e){e.preventDefault();abrirQuiz(atual)});
+estados();
+})();
+</script></body></html>

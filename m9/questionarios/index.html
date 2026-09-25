@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="pt-PT"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Questionários M9 · Romance Saramaguiano · EPI</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#fff;color:#000;font:17px/1.5 Arial,Helvetica,sans-serif}
+main{max-width:44rem;margin:0 auto;background:#fff;min-height:100vh;padding:1.2rem 1.1rem 4rem}
+header{border-bottom:3px solid #000;padding-bottom:.8rem;margin-bottom:1rem}
+.marca{font:900 .8rem "Arial Black",Arial;letter-spacing:.12em;text-transform:uppercase}
+.abrir .estado{font:900 .68rem "Arial Black",Arial;text-transform:uppercase;letter-spacing:.1em;border:2px solid #000;padding:.15rem .35rem;white-space:nowrap}
+h1{font:900 1.8rem/1.05 "Arial Black",Arial,sans-serif;margin:.3rem 0}
+h2{font:900 1.2rem "Arial Black",Arial,sans-serif;margin:1rem 0 .6rem}
+ul{list-style:none;padding:0;margin:0}
+.abrir{width:100%;display:flex;gap:.8rem;align-items:center;text-align:left;background:#fff;color:#000;border:0;border-top:2px solid #000;padding:.9rem .2rem;font:inherit;cursor:pointer}
+.abrir .n{font:900 1.1rem "Arial Black",Arial;min-width:1.6rem}.abrir .t{flex:1;font-weight:700}.abrir .estado{font-size:1.1rem}
+button.p{font:700 1rem Arial;padding:.75rem 1.1rem;border:2px solid #000;background:#000;color:#fff;cursor:pointer;margin:.5rem .4rem 0 0}
+button.s{background:#fff;color:#000}
+input[type=text]{font:inherit;padding:.6rem;border:1px solid #999;width:100%;max-width:16rem;text-transform:uppercase}
+.q{border-top:2px solid #000;padding:.9rem 0}
+.q p{margin:0 0 .5rem;font-weight:700}
+.op{display:flex;gap:.5rem;align-items:flex-start;padding:.3rem 0;font-weight:400}
+.op input{margin-top:.35rem}
+.certo{color:#1b6e2d}.errado{color:#b00020}
+.exp{font-size:.9rem;border-left:8px solid #000;padding:.4rem .6rem;margin-top:.4rem}
+.aviso{border:2px solid #000;padding:.7rem .8rem;margin:.8rem 0;font-size:.95rem}
+.resultado{font:900 1.3rem "Arial Black",Arial;margin:1rem 0}
+[hidden]{display:none!important}
+:focus-visible{outline:3px solid #1f5fbf;outline-offset:2px}
+</style></head><body><main>
+<header><div class="marca">Escola Profissional de Imagem · Português · 3.º ano</div><h1>Questionários rápidos<br>Módulo 9 · Romance Saramaguiano</h1><div class="marca">Para praticar · escolhe e responde</div></header>
+
+<section id="indice">
+<div class="aviso">Escolhe um questionário e responde. Podes repeti-los as vezes que quiseres: servem para treinar.</div>
+<ul><li><button class="abrir" data-i="0"><span class="n">1</span><span class="t">Memorial do Convento: a história</span><span class="estado" id="estado-0">fechado</span></button></li><li><button class="abrir" data-i="1"><span class="n">2</span><span class="t">Crítica e sentido</span><span class="estado" id="estado-1">fechado</span></button></li><li><button class="abrir" data-i="2"><span class="n">3</span><span class="t">O estilo de Saramago</span><span class="estado" id="estado-2">fechado</span></button></li><li><button class="abrir" data-i="3"><span class="n">4</span><span class="t">Discurso no discurso</span><span class="estado" id="estado-3">fechado</span></button></li><li><button class="abrir" data-i="4"><span class="n">5</span><span class="t">Coerência e coesão</span><span class="estado" id="estado-4">fechado</span></button></li></ul>
+</section>
+
+<section id="quiz" hidden>
+<h2 id="titulo-q"></h2>
+<form id="form"></form>
+<div><button class="p" id="corrigir">Corrigir</button><button class="p s" id="repetir" hidden>Repetir</button><button class="p s" id="voltar-2">Voltar à lista</button></div>
+<div class="resultado" id="resultado" hidden></div>
+</section>
+</main>
+<script>
+(function(){
+"use strict";
+var ID="M9", D=[{"t":"Memorial do Convento: a história","q":[["Memorial do Convento foi publicado em…",["1982","1998","1970","2005"],0,"1982."],["O convento de Mafra nasce de uma promessa de D. João V…",["se tivesse um herdeiro","se ganhasse uma guerra","se encontrasse ouro","se chovesse"],0,"Promessa pelo nascimento de descendência."],["Baltasar Sete-Sóis é…",["um soldado que perdeu a mão esquerda na guerra","um padre","um músico italiano","o rei"],0,"Maneta, veterano."],["Blimunda Sete-Luas tem o poder de…",["ver o interior das pessoas quando está em jejum","voar","adivinhar o futuro","falar com animais"],0,"Vê por dentro."],["A passarola é construída pelo…",["Padre Bartolomeu Lourenço de Gusmão","Padre António Vieira","Marquês de Pombal","rei"],0,"Com Baltasar e Blimunda."],["A passarola voa graças a…",["vontades humanas recolhidas por Blimunda","carvão","vento do mar","magia do rei"],0,"Vontades guardadas em esferas."],["Domenico Scarlatti é…",["um músico que se junta ao grupo","o arquiteto do convento","um inquisidor","o bispo"],0,"Músico italiano na corte."],["Baltasar morre…",["num auto de fé da Inquisição","na guerra","no convento","de velhice"],0,"Blimunda encontra-o na fogueira."]]},{"t":"Crítica e sentido","q":[["A construção do convento mostra…",["o sacrifício de milhares de trabalhadores pela vaidade do rei","a riqueza do povo","um projeto popular","a vontade dos operários"],0,"Crítica ao poder."],["A Inquisição surge como…",["instrumento de repressão e medo","uma escola","um hospital","uma festa"],0,"Autos de fé."],["O ouro que paga a obra vinha sobretudo…",["do Brasil","da Índia","de Espanha","de Inglaterra"],0,"Ouro do Brasil, séc. XVIII."],["O romance dá voz…",["aos anónimos que a História oficial esquece","só aos reis","só aos padres","a ninguém"],0,"«Quem construiu?»"],["A passarola simboliza…",["o sonho, a liberdade e o conhecimento","o poder do rei","a guerra","o dinheiro"],0,"O voo contra a opressão."],["O amor de Baltasar e Blimunda é…",["livre, fora das convenções","um casamento de conveniência","proibido pelo rei","inexistente"],0,"Amor verdadeiro e igual."]]},{"t":"O estilo de Saramago","q":[["Nos diálogos, Saramago usa sobretudo…",["vírgulas e maiúsculas, sem travessões","travessões e aspas","só dois-pontos","parágrafos novos para cada fala"],0,"Marca as vozes com vírgula e maiúscula."],["O narrador do Memorial é…",["omnisciente e interventivo, com comentários e ironia","uma personagem jovem","neutro e silencioso","o rei"],0,"Comenta e dialoga com o leitor."],["A ironia do narrador serve para…",["criticar o poder e a Igreja","elogiar o rei","descrever paisagens","fazer publicidade"],0,"Crítica."],["As frases longas de Saramago aproximam a escrita…",["da oralidade, do contar em voz alta","da poesia trovadoresca","dos jornais","das mensagens curtas"],0,"Ritmo oral."],["Saramago recebeu o Prémio Nobel da Literatura em…",["1998","1982","2010","1974"],0,"1998."],["Intertextualidade é…",["a relação de um texto com outros textos","o índice de um livro","a capa","o resumo"],0,"Diálogo entre obras."]]},{"t":"Discurso no discurso","q":[["Frase inventada, à maneira de Saramago: «Disse Blimunda, Vou contigo». Com pontuação convencional fica:",["Disse Blimunda: — Vou contigo.","Disse Blimunda que vou contigo.","Disse Blimunda, vou contigo?","Blimunda vou contigo disse"],0,"Dois-pontos e travessão."],["Em discurso indireto: «Baltasar disse: — Amanhã partimos.»",["Baltasar disse que no dia seguinte partiam.","Baltasar disse que amanhã partimos.","Baltasar disse: partiam.","Baltasar partiu amanhã."],0,"Mudam tempo verbal e deixis."],["Um verbo introdutor do discurso é, por exemplo,…",["«perguntou»","«casa»","«rapidamente»","«mas»"],0,"dizer, perguntar, responder…"],["Um narrador relata, de fora, a fala de outra pessoa. Nesse relato, o «eu» de quem falou passa a…",["3.ª pessoa","1.ª pessoa do plural","2.ª pessoa","fica igual sempre"],0,"É esta a situação mais comum. Se fosse a própria pessoa a relatar-se manteria a 1.ª; se falasse com o interlocutor, podia usar a 2.ª."],["O discurso direto reproduz…",["as palavras tal como foram ditas","um resumo do narrador","só pensamentos","só descrições"],0,"Fidelidade à fala."],["Em Saramago, a maiúscula a meio da frase pode indicar…",["o início da fala de outra personagem","um erro","um nome de lugar sempre","o fim do capítulo"],0,"Marca da mudança de voz."]]},{"t":"Coerência e coesão","q":[["«Portanto» tem valor…",["conclusivo","adversativo","temporal","causal"],0,"Conclusão."],["«Contudo» tem valor…",["adversativo","conclusivo","aditivo","explicativo"],0,"Oposição."],["«Além disso» tem valor…",["aditivo","adversativo","conclusivo","concessivo"],0,"Acrescenta."],["«Os trabalhadores chegaram a Mafra. Ali ficaram anos.» «Ali» é…",["anáfora (coesão referencial)","catáfora","conector","elipse"],0,"Retoma «Mafra»."],["Usar «o rei», «D. João V», «o monarca» para a mesma pessoa é coesão…",["lexical","temporal","interfrásica","nenhuma"],0,"Substituição lexical."],["A coerência de um texto depende…",["da continuidade de sentido e da ausência de contradições","do tamanho das frases","do número de vírgulas","da letra"],0,"Sentido global."]]}], CHAVE="epi-pt-quiz-"+ID, $=function(s){return document.querySelector(s)}, atual=-1;
+var abertos={}; try{abertos=JSON.parse(localStorage.getItem(CHAVE)||"{}")}catch(e){}
+function guardar(){try{localStorage.setItem(CHAVE,JSON.stringify(abertos))}catch(e){}}
+function mostrar(qual){["indice","quiz"].forEach(function(s){$("#"+s).hidden=(s!==qual)});window.scrollTo(0,0)}
+function estados(){D.forEach(function(z,i){var e=$("#estado-"+i);var r=abertos[i];e.textContent=(typeof r==="number")?r+"/"+z.q.length:z.q.length+" perguntas"})}
+function abrirQuiz(i){atual=i;var z=D[i];$("#titulo-q").textContent=(i+1)+". "+z.t;var f=$("#form");f.innerHTML="";z.q.forEach(function(q,k){var d=document.createElement("div");d.className="q";var p=document.createElement("p");p.textContent=(k+1)+". "+q[0];d.appendChild(p);q[1].forEach(function(o,j){var l=document.createElement("label");l.className="op";var r=document.createElement("input");r.type="radio";r.name="q"+k;r.value=j;l.appendChild(r);l.appendChild(document.createTextNode(" "+o));d.appendChild(l)});var ex=document.createElement("div");ex.className="exp";ex.hidden=true;d.appendChild(ex);f.appendChild(d)});$("#resultado").hidden=true;$("#repetir").hidden=true;$("#corrigir").hidden=false;mostrar("quiz")}
+document.querySelectorAll(".abrir").forEach(function(b){b.addEventListener("click",function(){abrirQuiz(+b.dataset.i)})});
+$("#voltar-2").addEventListener("click",function(e){e.preventDefault();estados();mostrar("indice")});
+$("#corrigir").addEventListener("click",function(e){e.preventDefault();var z=D[atual],certas=0;document.querySelectorAll("#form .q").forEach(function(d,k){var m=d.querySelector("input:checked"),q=z.q[k],ex=d.querySelector(".exp");var ok=m&&+m.value===q[2];if(ok)certas++;ex.hidden=false;ex.className="exp "+(ok?"certo":"errado");ex.textContent=(ok?"Certo. ":"Resposta certa: "+q[1][q[2]]+". ")+q[3];d.querySelectorAll("input").forEach(function(r){r.disabled=true})});$("#resultado").textContent=certas+" / "+z.q.length;$("#resultado").hidden=false;$("#corrigir").hidden=true;$("#repetir").hidden=false;abertos[atual]=Math.max(typeof abertos[atual]==="number"?abertos[atual]:0,certas);guardar()});
+$("#repetir").addEventListener("click",function(e){e.preventDefault();abrirQuiz(atual)});
+estados();
+})();
+</script></body></html>
