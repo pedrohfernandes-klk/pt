@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ler a fundo · Tabacaria</title>
+<style>
+:root{--fundo:#f4f3ee;--papel:#ffffff;--tinta:#161616;--suave:#5c5a55;--linha:#dcd9d0;--acento:#557a24;--acento-claro:#e6eed9;--aviso:#8a4b12}
+@media (prefers-color-scheme:dark){:root{--fundo:#111210;--papel:#1b1c19;--tinta:#ecebe5;--suave:#a6a49c;--linha:#34352f;--acento:#9fcb5e;--acento-claro:#2a3320;--aviso:#e0a060}}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--fundo);color:var(--tinta)}
+body{font:16px/1.5 Arial,Helvetica,sans-serif}
+.topo{position:sticky;top:0;z-index:5;background:var(--fundo);border-bottom:1px solid var(--linha);padding:10px 16px 8px}
+.topo .linha1{display:flex;justify-content:space-between;align-items:baseline;gap:8px;max-width:640px;margin:auto}
+.marca{font:900 13px/1 "Arial Black",Arial,sans-serif;letter-spacing:.4px}
+.tempo{font-size:13px;color:var(--suave);font-variant-numeric:tabular-nums}
+.barra{max-width:640px;margin:8px auto 0;display:grid;grid-template-columns:repeat(5,1fr);gap:4px}
+.barra span{height:4px;border-radius:2px;background:var(--linha)}
+.barra span.feito{background:var(--acento)}
+main{max-width:640px;margin:auto;padding:18px 16px 40px}
+h1{font:900 34px/1.02 "Arial Black",Arial,sans-serif;margin:0 0 6px;letter-spacing:-.5px}
+h1 span{color:var(--acento)}
+h2{font:900 22px/1.15 "Arial Black",Arial,sans-serif;margin:0 0 4px}
+.rot{font-size:12px;text-transform:uppercase;letter-spacing:.8px;color:var(--suave);margin:0 0 6px}
+p{margin:0 0 12px}
+.verso{background:var(--papel);border-left:4px solid var(--acento);padding:12px 14px;margin:0 0 6px;font-size:17px;line-height:1.55;border-radius:0 6px 6px 0}
+.fonte{font-size:12px;color:var(--suave);margin:0 0 16px}
+.pergunta{font-weight:700;margin:14px 0 8px}
+.opcoes{display:flex;flex-direction:column;gap:8px}
+button{font:inherit}
+.op{text-align:left;background:var(--papel);color:var(--tinta);border:1.5px solid var(--linha);border-radius:10px;padding:12px 14px;min-height:48px;cursor:pointer}
+.op[aria-pressed=true]{border-color:var(--acento);background:var(--acento-claro)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{background:var(--papel);color:var(--tinta);border:1.5px solid var(--linha);border-radius:999px;padding:9px 14px;min-height:44px;cursor:pointer}
+.chip[aria-pressed=true]{border-color:var(--acento);background:var(--acento-claro)}
+.retorno{margin:10px 0 0;padding:12px 14px;border-radius:8px;background:var(--papel);border:1px solid var(--linha);font-size:15px}
+.retorno b{color:var(--acento)}
+.retorno.cuidado b{color:var(--aviso)}
+.deslizar{margin:10px 0 4px}
+.deslizar input{width:100%;accent-color:var(--acento);height:32px}
+.extremos{display:flex;justify-content:space-between;font-size:13px;color:var(--suave)}
+textarea{width:100%;min-height:84px;font:inherit;padding:10px 12px;border-radius:8px;border:1.5px solid var(--linha);background:var(--papel);color:var(--tinta);resize:vertical}
+.cartoes{display:grid;gap:8px}
+.cartao{text-align:left;background:var(--papel);color:var(--tinta);border:1.5px solid var(--linha);border-radius:10px;padding:12px 14px;cursor:pointer}
+.cartao small{display:block;color:var(--suave);font-size:12px;text-transform:uppercase;letter-spacing:.6px;margin-bottom:2px}
+.cartao[aria-pressed=true]{border-color:var(--acento);background:var(--acento-claro)}
+.nav{display:flex;justify-content:space-between;gap:10px;margin-top:22px}
+.btn{flex:1;min-height:50px;border-radius:10px;border:0;background:var(--tinta);color:var(--fundo);font-weight:700;cursor:pointer}
+.btn.sec{background:transparent;color:var(--tinta);border:1.5px solid var(--linha)}
+.btn[disabled]{opacity:.35;cursor:default}
+.resumo{background:var(--papel);border:1.5px solid var(--acento);border-radius:12px;padding:14px 16px}
+.resumo dt{font-size:12px;text-transform:uppercase;letter-spacing:.6px;color:var(--suave);margin-top:10px}
+.resumo dd{margin:2px 0 0}
+details{margin-top:18px;font-size:13px;color:var(--suave)}
+details a{color:var(--acento)}
+.tocar{border-bottom:2px dotted var(--acento);cursor:pointer;background:none;border-top:0;border-left:0;border-right:0;color:inherit;padding:0;font:inherit;text-align:left}
+[hidden]{display:none!important}
+button:focus-visible,textarea:focus-visible,input:focus-visible{outline:3px solid var(--acento);outline-offset:2px}
+@media (prefers-reduced-motion:no-preference){.passo{animation:entra .25s ease-out}@keyframes entra{from{opacity:.4;transform:translateY(6px)}to{opacity:1;transform:none}}}
+</style>
+</head>
+<body>
+<div class="topo">
+  <div class="linha1"><span class="marca">Ler a fundo · 5 min · M7</span><span class="tempo" id="tempo" aria-live="off">0:00</span></div>
+  <div class="barra" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
+</div>
+<main>
+
+<section class="passo" data-passo="1">
+  <p class="rot">1 de 5 · Janelas</p>
+  <h1>Tabaca<span>ria</span></h1>
+  <p>Álvaro de Campos escreveu este poema a 15 de janeiro de 1928. Começa num quarto, à janela.</p>
+  <div class="verso">Janelas do meu quarto,<br>Do meu quarto de <button class="tocar" id="milhoes" aria-expanded="false">um dos milhões do mundo que ninguém sabe quem é</button><br>(E se soubessem quem é, o que saberiam?),<br>Dais para o mistério de uma rua cruzada constantemente por gente,</div>
+  <p class="fonte">Toca na parte sublinhada.</p>
+  <div class="retorno" id="nota-milhoes" hidden>Um entre milhões, sem nome para os outros. Hoje, numa rede com milhões de perfis, isto ainda te parece estranho?</div>
+  <p class="pergunta">O que vê quem está nesta janela? Escolhe tudo o que te parecer certo.</p>
+  <div class="chips" id="p1" role="group" aria-label="Opções">
+    <button class="chip" aria-pressed="false" data-v="gente">gente a passar</button>
+    <button class="chip" aria-pressed="false" data-v="misterio">um mistério</button>
+    <button class="chip" aria-pressed="false" data-v="si">a si próprio</button>
+    <button class="chip" aria-pressed="false" data-v="nada">nada de especial</button>
+  </div>
+  <div class="retorno" id="r1" hidden></div>
+</section>
+
+<section class="passo" data-passo="2" hidden>
+  <p class="rot">2 de 5 · Dois reais</p>
+  <h2>Por fora e por dentro</h2>
+  <div class="verso">Estou hoje dividido entre a lealdade que devo<br>À Tabacaria do outro lado da rua, como coisa real por fora,<br>E à sensação de que tudo é sonho, como coisa real por dentro.</div>
+  <p class="pergunta">E tu, hoje, estás mais de que lado?</p>
+  <div class="deslizar"><input type="range" id="lado" min="0" max="100" value="50" aria-label="Entre a rua real e o sonho"></div>
+  <div class="extremos"><span>a rua, a Tabacaria</span><span>o sonho, por dentro</span></div>
+  <p class="pergunta">Que recurso liga «real por fora» e «real por dentro»?</p>
+  <div class="opcoes" id="p2">
+    <button class="op" aria-pressed="false" data-v="antitese">Antítese: dois opostos lado a lado</button>
+    <button class="op" aria-pressed="false" data-v="onomatopeia">Onomatopeia</button>
+    <button class="op" aria-pressed="false" data-v="hiperbole">Hipérbole</button>
+  </div>
+  <div class="retorno" id="r2" hidden></div>
+</section>
+
+<section class="passo" data-passo="3" hidden>
+  <p class="rot">3 de 5 · O Esteves</p>
+  <h2>Quem é o Esteves?</h2>
+  <div class="verso">O homem saiu da Tabacaria (metendo troco na algibeira das calças?).<br>Ah, conheço-o: é o Esteves sem metafísica.<br>(O Dono da Tabacaria chegou à porta.)<br>Como por um instinto divino o Esteves voltou-se e viu-me.<br>Acenou-me adeus gritei-lhe Adeus ó Esteves!, e o universo<br>Reconstruiu-se-me sem ideal nem esperança, e o Dono da Tabacaria sorriu.</div>
+  <p class="fonte">Final do poema.</p>
+  <p class="pergunta">Escolhe a leitura que defenderias. Cada uma tem uma resposta do texto.</p>
+  <div class="opcoes" id="p3">
+    <button class="op" aria-pressed="false" data-v="comum">Um homem comum, que vive sem grandes perguntas</button>
+    <button class="op" aria-pressed="false" data-v="contrario">O contrário do poeta</button>
+    <button class="op" aria-pressed="false" data-v="amigo">Um grande amigo do poeta</button>
+    <button class="op" aria-pressed="false" data-v="dono">O Dono da Tabacaria</button>
+  </div>
+  <div class="retorno" id="r3" hidden></div>
+</section>
+
+<section class="passo" data-passo="4" hidden>
+  <p class="rot">4 de 5 · Ligações</p>
+  <h2>Onde já vimos esta janela?</h2>
+  <p>Escolhe uma ligação e compara-a com a «Tabacaria».</p>
+  <div class="cartoes" id="p4">
+    <button class="cartao" aria-pressed="false" data-v="cesario"><small>11.º ano · Lisboa, século XIX</small>Cesário Verde, «O Sentimento dum Ocidental»: «Nas nossas ruas, ao anoitecer, / Há tal soturnidade, há tal melancolia»</button>
+    <button class="cartao" aria-pressed="false" data-v="caeiro"><small>12.º ano · outro heterónimo</small>Alberto Caeiro: «O meu olhar é nítido como um girassol.» Caeiro vê sem pensar; Campos, à janela, não para de pensar.</button>
+    <button class="cartao" aria-pressed="false" data-v="hitchcock"><small>Cinema · Estados Unidos, 1954</small><i>Janela Indiscreta</i>, de Alfred Hitchcock: um fotógrafo com a perna partida observa os vizinhos pela janela do apartamento.</button>
+    <button class="cartao" aria-pressed="false" data-v="flaneur"><small>Ideia · França, século XIX</small>O <i>flâneur</i>: quem anda pela cidade a observar; Walter Benjamin estudou-o a partir da poesia de Baudelaire.</button>
+  </div>
+  <p class="pergunta" id="q4" hidden>Em que se parece com a «Tabacaria»? E em que é diferente?</p>
+  <textarea id="t4" hidden placeholder="Parece-se porque… · É diferente porque…" aria-label="Comparação"></textarea>
+</section>
+
+<section class="passo" data-passo="5" hidden>
+  <p class="rot">5 de 5 · Um dos milhões</p>
+  <h2>E tu, da tua janela?</h2>
+  <p>O poeta sente-se «um dos milhões do mundo que ninguém sabe quem é». O Esteves, pelo menos, acenou.</p>
+  <p class="pergunta">Uma coisa pequena que podes fazer esta semana para que alguém da tua rua, da tua turma ou da tua cidade deixe de ser «ninguém».</p>
+  <textarea id="t5" placeholder="Esta semana vou…" aria-label="Compromisso"></textarea>
+  <div id="resumo" class="resumo" hidden>
+    <h2>A minha leitura</h2>
+    <dl>
+      <dt>Da janela, vejo</dt><dd id="s1">—</dd>
+      <dt>Hoje estou mais do lado</dt><dd id="s2">—</dd>
+      <dt>O Esteves, para mim, é</dt><dd id="s3">—</dd>
+      <dt>A minha ligação</dt><dd id="s4">—</dd>
+      <dt>Esta semana</dt><dd id="s5">—</dd>
+    </dl>
+    <div class="nav"><button class="btn sec" id="copiar" type="button">Copiar</button></div>
+    <p class="fonte" style="margin-top:10px">Se o professor pedir, fotografa este cartão ou cola o texto na tarefa do Teams.</p>
+  </div>
+</section>
+
+<div class="nav">
+  <button class="btn sec" id="voltar" type="button" disabled>Voltar</button>
+  <button class="btn" id="seguir" type="button">Seguinte</button>
+</div>
+
+<details>
+  <summary>Fontes e ligações</summary>
+  <p>Álvaro de Campos, «Tabacaria» (15-1-1928; 1.ª publ. <i>Presença</i>, n.º 39, Coimbra, 1933), in <i>Poesias de Álvaro de Campos</i>, Lisboa, Ática, 1944 · <a href="http://arquivopessoa.net/textos/163" target="_blank" rel="noopener">Arquivo Pessoa</a></p>
+  <p>Cesário Verde, «O Sentimento dum Ocidental», in <i>O Livro de Cesário Verde</i> · <a href="https://www.gutenberg.org/ebooks/8698" target="_blank" rel="noopener">Project Gutenberg</a></p>
+  <p>Alberto Caeiro, <i>O Guardador de Rebanhos</i>, II · <a href="http://arquivopessoa.net/textos/1463" target="_blank" rel="noopener">Arquivo Pessoa</a></p>
+  <p>Wikipédia: <a href="https://pt.wikipedia.org/wiki/Janela_Indiscreta" target="_blank" rel="noopener">Janela Indiscreta</a> · <a href="https://pt.wikipedia.org/wiki/Fl%C3%A2neur" target="_blank" rel="noopener">Flâneur</a> · <a href="https://pt.wikipedia.org/wiki/%C3%81lvaro_de_Campos" target="_blank" rel="noopener">Álvaro de Campos</a></p>
+  <p>Fotografia da primeira publicação: <a href="https://commons.wikimedia.org/w/index.php?curid=76078695" target="_blank" rel="noopener">«Tabacaria» na Presença, n.º 39 (Wikimedia Commons, CC BY-SA 4.0)</a></p>
+</details>
+</main>
+
+<script>
+(function(){
+  var CHAVE="epi-pt-ler-a-fundo-tabacaria";
+  var est={passo:1,p1:[],lado:50,p2:"",p3:"",p4:"",t4:"",t5:""};
+  try{var g=JSON.parse(localStorage.getItem(CHAVE)||"null");if(g)est=Object.assign(est,g)}catch(e){}
+  function guardar(){try{localStorage.setItem(CHAVE,JSON.stringify(est))}catch(e){}}
+  var $=function(s){return document.querySelector(s)};
+  var passos=[].slice.call(document.querySelectorAll(".passo"));
+  var inicio=Date.now();
+  setInterval(function(){var s=Math.floor((Date.now()-inicio)/1000);$("#tempo").textContent=Math.floor(s/60)+":"+String(s%60).padStart(2,"0")},1000);
+
+  var RET1={gente:"«uma rua cruzada constantemente por gente»",misterio:"«o mistério de uma rua»",si:"quem olha pensa em si: «um dos milhões do mundo que ninguém sabe quem é»",nada:"o poema não diz «nada»: diz «mistério». Olha outra vez."};
+  var RET2={antitese:["<b>Sim.</b> «real por fora» / «real por dentro»: a mesma palavra, lados opostos. E repara no paralelismo dos dois versos, isto é, a mesma estrutura repetida."],onomatopeia:["<b>Não.</b> Onomatopeia imita sons (como o «r-r-r-r» da «Ode Triunfal»). Aqui há dois opostos: antítese.","cuidado"],hiperbole:["<b>Não.</b> Não há exagero; há dois opostos lado a lado: antítese.","cuidado"]};
+  var RET3={comum:["<b>Defensável.</b> O texto diz «o Esteves sem metafísica»: alguém que não se perde em perguntas sobre o sentido de tudo."],contrario:["<b>Defensável.</b> O poeta está «dividido» e cheio de pensamentos; o Esteves compra tabaco, mete o troco no bolso e acena. Dois modos de estar no mundo."],amigo:["<b>Cuidado com o que o texto não diz.</b> O poeta diz «conheço-o», mas não diz que é amigo. Ler bem é também não inventar.","cuidado"],dono:["<b>Não.</b> O texto distingue-os: «O homem saiu da Tabacaria» e, logo a seguir, «O Dono da Tabacaria chegou à porta».","cuidado"]};
+  var NOMES4={cesario:"Cesário Verde",caeiro:"Alberto Caeiro",hitchcock:"Janela Indiscreta (Hitchcock)",flaneur:"o flâneur"};
+
+  function marca(grupo,v,multi){
+    [].forEach.call(grupo.querySelectorAll("button"),function(b){
+      if(multi){ if(b.dataset.v===v) b.setAttribute("aria-pressed",b.getAttribute("aria-pressed")==="true"?"false":"true"); }
+      else b.setAttribute("aria-pressed",b.dataset.v===v?"true":"false");
+    });
+  }
+  function retorno(el,par){el.hidden=false;el.className="retorno"+(par[1]?" "+par[1]:"");el.innerHTML=par[0]}
+
+  $("#milhoes").onclick=function(){var n=$("#nota-milhoes");n.hidden=!n.hidden;this.setAttribute("aria-expanded",String(!n.hidden))};
+  $("#p1").onclick=function(e){var b=e.target.closest("button");if(!b)return;marca(this,b.dataset.v,true);
+    est.p1=[].slice.call(this.querySelectorAll("[aria-pressed=true]")).map(function(x){return x.dataset.v});
+    var r=$("#r1");if(!est.p1.length){r.hidden=true}else{r.hidden=false;r.className="retorno"+(est.p1.indexOf("nada")>=0?" cuidado":"");r.innerHTML="<b>No texto:</b> "+est.p1.map(function(v){return RET1[v]}).join(" · ")}
+    guardar();atualizar()};
+  $("#lado").oninput=function(){est.lado=+this.value;guardar()};
+  $("#p2").onclick=function(e){var b=e.target.closest("button");if(!b)return;marca(this,b.dataset.v);est.p2=b.dataset.v;retorno($("#r2"),RET2[est.p2]);guardar();atualizar()};
+  $("#p3").onclick=function(e){var b=e.target.closest("button");if(!b)return;marca(this,b.dataset.v);est.p3=b.dataset.v;retorno($("#r3"),RET3[est.p3]);guardar();atualizar()};
+  $("#p4").onclick=function(e){var b=e.target.closest("button");if(!b)return;marca(this,b.dataset.v);est.p4=b.dataset.v;$("#q4").hidden=false;$("#t4").hidden=false;$("#t4").focus();guardar();atualizar()};
+  $("#t4").oninput=function(){est.t4=this.value;guardar();atualizar()};
+  $("#t5").oninput=function(){est.t5=this.value;guardar();atualizar()};
+
+  function pronto(n){return n===1?est.p1.length>0:n===2?!!est.p2:n===3?!!est.p3:n===4?(!!est.p4&&est.t4.trim().length>3):n===5?est.t5.trim().length>3:true}
+  function atualizar(){
+    passos.forEach(function(s){s.hidden=+s.dataset.passo!==est.passo});
+    [].forEach.call(document.querySelectorAll(".barra span"),function(s,i){s.className=i<est.passo?"feito":""});
+    $("#voltar").disabled=est.passo===1;
+    var ult=est.passo===5;
+    $("#seguir").textContent=ult?"Ver a minha leitura":"Seguinte";
+    $("#seguir").disabled=!pronto(est.passo);
+    if(ult&&!$("#resumo").hidden)preencher();
+  }
+  function lado(){return est.lado<40?"da rua e da Tabacaria":est.lado>60?"do sonho, por dentro":"dividido, como o poeta"}
+  function preencher(){
+    $("#s1").textContent=est.p1.map(function(v){return {gente:"gente a passar",misterio:"um mistério",si:"a mim próprio",nada:"nada de especial"}[v]}).join(", ")||"—";
+    $("#s2").textContent=lado();
+    $("#s3").textContent={comum:"um homem comum, sem metafísica",contrario:"o contrário do poeta",amigo:"um amigo (mas o texto não o diz)",dono:"o Dono da Tabacaria (mas o texto distingue-os)"}[est.p3]||"—";
+    $("#s4").textContent=est.p4?NOMES4[est.p4]+": "+est.t4:"—";
+    $("#s5").textContent=est.t5||"—";
+  }
+  $("#seguir").onclick=function(){
+    if(est.passo<5){est.passo++;guardar();atualizar();window.scrollTo(0,0)}
+    else{$("#resumo").hidden=false;preencher();$("#resumo").scrollIntoView({behavior:"smooth"})}
+  };
+  $("#voltar").onclick=function(){if(est.passo>1){est.passo--;guardar();atualizar();window.scrollTo(0,0)}};
+  $("#copiar").onclick=function(){
+    var txt="Ler a fundo · Tabacaria\n"+[].map.call(document.querySelectorAll(".resumo dt"),function(dt){return dt.textContent+": "+dt.nextElementSibling.textContent}).join("\n");
+    var b=this;if(navigator.clipboard){navigator.clipboard.writeText(txt).then(function(){b.textContent="Copiado"})}
+  };
+
+  // repor estado guardado
+  est.p1.forEach(function(v){var b=document.querySelector('#p1 [data-v="'+v+'"]');if(b)b.setAttribute("aria-pressed","true")});
+  if(est.p1.length)$("#p1").onclick({target:{closest:function(){return null}}});
+  $("#lado").value=est.lado;
+  if(est.p2){marca($("#p2"),est.p2);retorno($("#r2"),RET2[est.p2])}
+  if(est.p3){marca($("#p3"),est.p3);retorno($("#r3"),RET3[est.p3])}
+  if(est.p4){marca($("#p4"),est.p4);$("#q4").hidden=false;$("#t4").hidden=false}
+  $("#t4").value=est.t4;$("#t5").value=est.t5;
+  if(est.p1.length){var r=$("#r1");r.hidden=false;r.className="retorno"+(est.p1.indexOf("nada")>=0?" cuidado":"");r.innerHTML="<b>No texto:</b> "+est.p1.map(function(v){return RET1[v]}).join(" · ")}
+  atualizar();
+})();
+</script>
+</body>
+</html>
