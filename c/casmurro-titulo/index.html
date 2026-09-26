@@ -158,7 +158,7 @@ function final(){
    if(P.tipo==="ordenar"&&r&&r.verificado)v=r.certos+" de "+P.itens.length+" no sítio";
    if(P.tipo==="deslizar"&&r!=null)v=(r<40?P.esquerda:r>60?P.direita:"a meio")+" ("+r+")";
    return v?"<dt>"+esc(P.rot)+"</dt><dd>"+esc(v)+"</dd>":""}).join("");
- palco.innerHTML='<div class="emblema"><div class="m">'+(q>=0.8?"★":q>=0.5?"◆":"●")+'</div><h2>'+esc(em[1])+'</h2><p>'+esc(em[2])+'</p><div class="pontos">'+t+" / "+MAX+'</div></div><p class="rot">O meu cartão</p><div class="caixa"><dl class="res">'+linhas+'</dl></div><div class="nav"><button class="btn sec" id="copiar" type="button">Copiar</button><button class="btn sec" id="repetir" type="button">Repetir</button></div><p class="nota">Se o professor pedir, fotografa este cartão ou cola o texto na tarefa do Teams.</p>';
+ palco.innerHTML='<div class="emblema"><div class="m">'+(q>=0.8?"★":q>=0.5?"◆":"●")+'</div><h2>'+esc(em[1])+'</h2><p>'+esc(em[2])+'</p><div class="pontos">'+t+" / "+MAX+'</div></div><p class="rot">O meu cartão</p><div class="caixa"><dl class="res">'+linhas+'</dl></div><div class="nav"><button class="btn sec" id="copiar" type="button">Copiar</button><button class="btn sec" id="repetir" type="button">Repetir</button></div><p class="nota">Se o docente pedir, fotografa este cartão ou cola o texto na tarefa do Teams.</p>';
  $("#copiar").onclick=function(){var txt=E.titulo+" · "+t+"/"+MAX+" · "+em[1]+"\n"+[].map.call(document.querySelectorAll("dl.res dt"),function(dt){return dt.textContent+": "+dt.nextElementSibling.textContent}).join("\n");var b=this;if(navigator.clipboard)navigator.clipboard.writeText(txt).then(function(){b.textContent="Copiado"})};
  $("#repetir").onclick=function(){est={i:0,r:{},p:{},fim:false};guardar();t0=Date.now();mostra()};
  atualiza();
