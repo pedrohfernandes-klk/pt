@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="pt-PT"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ler a fundo · Em que século estamos nós?</title>
+<style>
+:root{--fundo:#fff;--papel:#fff;--tinta:#000;--linha:#000;--suave:#000}
+@media (prefers-color-scheme:dark){:root{--fundo:#000;--papel:#000;--tinta:#fff;--linha:#fff;--suave:#fff}}
+*{box-sizing:border-box}html,body{margin:0;background:var(--fundo);color:var(--tinta)}
+body{font:16px/1.5 Arial,Helvetica,sans-serif}
+.topo{position:sticky;top:0;z-index:5;background:var(--fundo);border-bottom:3px solid var(--linha);padding:10px 16px 8px}
+.l1{display:flex;justify-content:space-between;align-items:baseline;gap:8px;max-width:640px;margin:auto}
+.marca{font:900 11.5px/1.2 "Arial Black",Arial,sans-serif;text-transform:uppercase;letter-spacing:1px}
+.estado{font:900 13px/1 "Arial Black",Arial,sans-serif;font-variant-numeric:tabular-nums;white-space:nowrap}
+.barra{max-width:640px;margin:8px auto 0;display:flex;gap:3px}
+.barra span{flex:1;height:7px;border:1.5px solid var(--linha);background:var(--fundo)}
+.barra span.f{background:var(--tinta)}
+main{max-width:640px;margin:auto;padding:18px 16px 40px}
+h1{font:900 32px/1 "Arial Black",Arial,sans-serif;margin:0 0 4px;text-transform:uppercase;letter-spacing:-.4px}
+.sub{font-size:12.5px;text-transform:uppercase;letter-spacing:1px;margin:0 0 16px}
+.rot{font:900 12px/1 "Arial Black",Arial,sans-serif;text-transform:uppercase;letter-spacing:1px;background:var(--tinta);color:var(--fundo);display:inline-block;padding:4px 7px;margin:20px 0 8px}
+.perg{font-weight:700;font-size:17px;margin:8px 0 12px}
+p{margin:0 0 10px}
+.caixa{background:var(--papel);border:2px solid var(--linha);padding:12px 14px}
+.nota{font-size:12.5px;border-top:1.5px solid var(--linha);padding-top:6px;margin-top:10px}
+a.ligar{display:block;text-align:center;text-decoration:none;background:var(--tinta);color:var(--fundo);padding:14px;margin:10px 0;font-weight:700;text-transform:uppercase;letter-spacing:.6px}
+.col{display:flex;flex-direction:column;gap:8px}.chips{display:flex;flex-wrap:wrap;gap:8px}
+button{font:inherit}
+.op,.cartao{text-align:left;background:var(--papel);color:var(--tinta);border:2px solid var(--linha);padding:12px 14px;min-height:48px;cursor:pointer}
+.pares{display:grid;grid-template-columns:1fr 1fr;gap:8px}.pares .col{gap:6px}.pares .op{font-size:14px;padding:8px 10px}.chip{background:var(--papel);color:var(--tinta);border:2px solid var(--linha);padding:10px 14px;min-height:44px;cursor:pointer}
+[aria-pressed=true]{background:var(--tinta)!important;color:var(--fundo)!important}
+.cartao small{display:block;font-size:11.5px;text-transform:uppercase;letter-spacing:.8px;font-weight:700}
+.ret{margin-top:12px;padding:11px 13px;border:2px solid var(--linha);border-left:12px solid var(--linha);font-size:15px}
+.ret.cuidado{border-left-style:double;border-left-width:14px}
+.palavra{font:900 11.5px/1 "Arial Black",Arial,sans-serif;text-transform:uppercase;letter-spacing:1px;display:block;margin-bottom:4px}
+.img{width:100%;border:2px solid var(--linha);display:block}
+.credito{font-size:11.5px;margin:4px 0 0}
+.contagem{font:900 40px/1 "Arial Black",Arial,sans-serif;text-align:center;margin:8px 0}
+.escondida{aspect-ratio:4/3;display:grid;place-items:center;border:2px dashed var(--linha);text-transform:uppercase;letter-spacing:1px;font-size:13px}
+textarea,input[type=text]{width:100%;font:inherit;padding:10px 12px;border:2px solid var(--linha);background:var(--papel);color:var(--tinta)}
+textarea{min-height:90px;resize:vertical}
+.contador{font-size:13px;text-align:right;margin-top:4px;font-variant-numeric:tabular-nums}
+.contador.ok{font-weight:700}.contador.mau{font-style:italic}
+.campo{margin-bottom:10px}.campo label{display:block;font-size:12.5px;text-transform:uppercase;letter-spacing:.8px;margin-bottom:4px}
+input[type=range]{width:100%;accent-color:var(--tinta);height:32px}
+.extremos{display:flex;justify-content:space-between;font-size:12.5px;text-transform:uppercase;letter-spacing:.6px}
+.nav{display:flex;gap:10px;margin-top:24px}
+.btn{flex:1;min-height:50px;border:2px solid var(--tinta);background:var(--tinta);color:var(--fundo);font-weight:700;text-transform:uppercase;letter-spacing:.6px;cursor:pointer}
+.btn.sec{background:var(--fundo);color:var(--tinta)}
+.btn[disabled]{opacity:.3;cursor:default}
+.mini{min-height:44px;flex:none;padding:0 16px}
+.emblema{text-align:center;background:var(--papel);border:4px solid var(--linha);padding:18px 14px}
+.emblema .m{font-size:44px;line-height:1}
+.emblema h2{font:900 22px/1.1 "Arial Black",Arial,sans-serif;text-transform:uppercase;margin:6px 0 2px}
+.pontos{font:900 34px/1 "Arial Black",Arial,sans-serif}
+dl.res dt{font:900 11.5px/1 "Arial Black",Arial,sans-serif;text-transform:uppercase;letter-spacing:.8px;margin-top:12px}dl.res dd{margin:3px 0 0}
+details{margin-top:24px;font-size:13px;border-top:2px solid var(--linha);padding-top:8px}
+details summary{font-weight:700;text-transform:uppercase;letter-spacing:.8px;cursor:pointer}
+details a{color:var(--tinta)}
+.nivel{display:flex;align-items:baseline;gap:10px;background:var(--tinta);color:var(--fundo);padding:10px 13px;margin:4px 0 14px}
+.nivel .etiqueta{font:900 11px/1 "Arial Black",Arial,sans-serif;text-transform:uppercase;letter-spacing:1px;white-space:nowrap}
+.nivel b{font-size:15px}
+[hidden]{display:none!important}
+button:focus-visible,textarea:focus-visible,input:focus-visible,a:focus-visible{outline:3px solid var(--tinta);outline-offset:2px}
+@media (prefers-color-scheme:dark){button:focus-visible,textarea:focus-visible,input:focus-visible,a:focus-visible{outline-color:var(--tinta)}}
+@media (prefers-reduced-motion:no-preference){#palco>*{animation:e .22s ease-out}@keyframes e{from{opacity:.4;transform:translateY(5px)}to{opacity:1;transform:none}}}
+</style></head><body>
+<div class="topo"><div class="l1"><span class="marca">Ler a fundo · 5 min · Amor de Perdição</span><span class="estado"><b id="pts">0</b> pts · <span id="tempo">0:00</span></span></div><div class="barra" id="barra"></div></div>
+<main>
+<h1>Em que século estamos nós?</h1><p class="sub">Camilo Castelo Branco, Amor de Perdição, 1862 · cap. I</p>
+<div id="palco"></div>
+<div class="nav"><button class="btn sec" id="voltar" type="button">Voltar</button><button class="btn" id="seguir" type="button">Seguinte</button></div>
+<details><summary>Fontes e créditos</summary><p><a href="https://www.gutenberg.org/ebooks/16425" target="_blank" rel="noopener">Camilo Castelo Branco, Amor de Perdição (Project Gutenberg n.º 16425)</a></p><p>Materiais de Português · EPI 2026/2027 · as respostas ficam guardadas só neste telemóvel.</p></details>
+</main>
+<script>
+(function(){
+var E={"pasta":"Ler-a-fundo","ficheiro":"Camilo-Em-Que-Seculo.html","id":"camilo-seculo","cor":"#2f2f2f","corEscura":"#bdbdbd","marca":"Ler a fundo · 5 min · Amor de Perdição","titulo":"Em que século estamos nós?","subtitulo":"Camilo Castelo Branco, Amor de Perdição, 1862 · cap. I","niveis":["Ler o que está lá","Ler nas entrelinhas","Fazer com o que leste"],"emblemas":[[0.8,"Leitor de ironias","Ouviste a luneta de D. Rita e o sorriso do narrador."],[0.5,"Bom começo","Já vês a corte a chegar à província. Repara em quem se ri de quem."],[0,"A entrar no romance","Relê as falas em voz alta: a de D. Rita tem sempre uma segunda intenção."]],"passos":[{"nivel":1,"tipo":"leitura","rot":"Ler","html":"<p>O pai de Simão:</p><p><i>Domingos Botelho devia ter uma vocação qualquer; e tinha: era excellente flautista; foi a primeira flauta do seu tempo; e a tocar flauta se sustentou dois annos em Coimbra, durante os quaes seu pae lhe suspendeu as mesadas, porque os rendimentos da casa não bastavam a livrar outro filho de um crime de morte.</i></p><p>A mãe, dama da corte, chega a Vila Real:</p><p><i>D. Rita, avistando o prestito das liteiras, ajustou ao olho direito a sua grande luneta de oiro, e disse:<br>— Ó Menezes, aquillo que é?!<br>— São os nossos amigos e parentes que veem esperar-nos.<br>— Em que seculo estamos nós n'esta montanha? — tornou a dama do paço.<br>— Em que seculo?! o seculo tanto é dezoito aqui como em Lisboa.<br>— Ah! sim? Cuidei que o tempo parára aqui no seculo doze.<br>O marido achou que devia rir-se do chiste, que o não lisonjeára grandemente.</i></p><p class=\"nota\"><b>prestito</b> — cortejo · <b>liteiras</b> — cadeiras cobertas levadas por homens ou animais · <b>dama do paço</b> — senhora da corte · <b>chiste</b> — piada</p>","links":[["Ler o romance inteiro no Project Gutenberg","https://www.gutenberg.org/ebooks/16425"]]},{"nivel":1,"tipo":"unica","rot":"A luneta","pergunta":"D. Rita «ajustou ao olho direito a sua grande luneta de oiro» antes de perguntar o que é aquilo. O que diz o gesto?","opcoes":[["Olha a família do marido de longe e de cima, como uma curiosidade","certo","A luneta de ouro é a corte a examinar a província."],["Vê mal","cuidado","Pode ver mal, mas o narrador escolheu dizer «de oiro» e «grande»."],["Está comovida","cuidado","Nada na cena é comoção: é inspeção."]]},{"nivel":1,"tipo":"classificar","rot":"Quem diz","pergunta":"Quem diz cada frase?","categorias":["D. Rita","Domingos Botelho (Menezes)","O narrador"],"itens":[["Cuidei que o tempo parára aqui no seculo doze.",0],["o seculo tanto é dezoito aqui como em Lisboa.",1],["devia ter uma vocação qualquer; e tinha",2],["Ó Menezes, aquillo que é?!",0]],"retorno":"D. Rita ataca, o marido defende sem convicção, o narrador ri-se dos dois."},{"nivel":2,"tipo":"unica","rot":"A vocação","pergunta":"«Domingos Botelho devia ter uma vocação qualquer; e tinha: era excellente flautista.» Onde está a ironia?","opcoes":[["O narrador anuncia uma vocação a sério e entrega uma flauta","certo","O ponto e vírgula e os dois pontos preparam a queda: a única coisa que ele sabia fazer."],["Tocar flauta é uma grande vocação","cuidado","Para um fidalgo juiz, o narrador acha que não; por isso o diz assim."],["Não há ironia: é um elogio","cuidado","Um elogio que vem depois de «extremamente feio» e «alcançadissimo de intelligencia» não é um elogio."]]},{"nivel":2,"tipo":"julgar","rot":"Passa ou não passa","pergunta":"Quatro leituras de um colega. Quais têm prova no texto?","casos":[["D. Rita despreza a província.",true,"Passa: «seculo doze», a luneta, o chiste."],["Domingos Botelho ri-se de gosto.",false,"Não passa: «achou que devia rir-se», e o chiste «não o lisonjeára»."],["O narrador admira Domingos Botelho.",false,"Não passa: «feio», «alcançadissimo de intelligencia», «brocas»."],["A família de Domingos é da nobreza antiga.",true,"Passa: as liteiras com brasão, a «velha nobreza» que veio no tempo de D. Dinis."]],"retorno":"Prova é uma frase do texto: sem frase, é palpite."},{"nivel":3,"tipo":"texto","rot":"Pela luneta","pergunta":"Descreve a chegada a Vila Real em duas frases, como um criado a veria: um pormenor do texto em cada. Até 30 palavras.","minPalavras":8,"maxPalavras":30,"placeholder":"Vi a senhora … Depois …"}],"fontes":[["Camilo Castelo Branco, Amor de Perdição (Project Gutenberg n.º 16425)","https://www.gutenberg.org/ebooks/16425"]],"imagemData":""};
+var CH="epi-pt-"+E.id;
+var est={i:0,r:{},p:{},fim:false};try{var g=JSON.parse(localStorage.getItem(CH)||"null");if(g)est=g}catch(e){}
+function guardar(){try{localStorage.setItem(CH,JSON.stringify(est))}catch(e){}}
+var $=function(s){return document.querySelector(s)};var palco=$("#palco");var t0=Date.now();
+setInterval(function(){var s=Math.floor((Date.now()-t0)/1000);$("#tempo").textContent=Math.floor(s/60)+":"+String(s%60).padStart(2,"0")},1000);
+var N=E.passos.length;
+$("#barra").innerHTML=E.passos.map(function(){return"<span></span>"}).join("")+"<span></span>";
+function palavras(t){return (t||"").trim().split(/\s+/).filter(Boolean).length}
+function max(P){switch(P.tipo){case"unica":return 10;case"multi":return P.opcoes.reduce(function(a,o){return a+Math.max(0,o[1])},0);case"memoria":return 10*P.elementos.filter(function(x){return x[1]}).length;case"detalhes":return 5*P.campos.length;case"texto":return 10+(P.maxPalavras||P.exatoPalavras?10:0);case"cartoes":return 10;case"deslizar":return 5;case"ordenar":return 10;case"lacuna":return 10;case"classificar":return 10;case"riscar":return 10;case"par":return 10;case"julgar":return 10;default:return 0}}
+var MAX=E.passos.reduce(function(a,P){return a+max(P)},0);
+function total(){var s=0;for(var k in est.p)s+=est.p[k];return s}
+function atualiza(){ $("#pts").textContent=total();
+ [].forEach.call(document.querySelectorAll("#barra span"),function(s,k){s.className=k<=est.i?"f":""});
+ $("#voltar").disabled=est.i===0;
+ if(est.i>=N){$("#seguir").hidden=true;return}$("#seguir").hidden=false;
+ $("#seguir").textContent=est.i===N-1?"Terminar":"Seguinte";$("#seguir").disabled=!pronto(est.i);guardar()}
+function pronto(k){var P=E.passos[k],r=est.r[k];switch(P.tipo){case"leitura":return true;case"unica":return r!=null;case"multi":return r&&r.length>0;case"memoria":return r&&r.verificado;case"detalhes":return r&&P.campos.every(function(_,j){return (r[j]||"").trim().length>1});case"texto":return palavras(r)>=(P.minPalavras||1);case"cartoes":return r&&r.c!=null&&(r.t||"").trim().length>3;case"deslizar":return true;case"ordenar":return r&&r.verificado;case"lacuna":return r&&r.verificado;case"classificar":return r&&r.verificado;case"riscar":return r&&r.verificado;case"par":return r&&r.verificado;case"julgar":return r&&r.verificado}}
+function esc(s){return String(s==null?"":s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+function imagem(){return E.imagemData?'<img class="img" alt="'+esc(E.titulo)+'" src="'+E.imagemData+'"><p class="credito">'+esc(E.credito)+'</p>':""}
+var temporizador=null;
+function nivelDe(k){return E.passos[k].nivel||0}
+function abreNivel(k){ // primeiro passo de um nível: mostra o cartão de nível
+ return nivelDe(k)>0 && (k===0 || nivelDe(k-1)!==nivelDe(k))}
+function mostra(){ clearInterval(temporizador); var k=est.i;
+ if(k>=N){return final()}
+ var P=E.passos[k],r=est.r[k],h="";
+ if(abreNivel(k)){var nomes=E.niveis||[];var nm=nomes[P.nivel-1]||("Nível "+P.nivel);
+  h+='<div class="nivel"><span class="etiqueta">Nível '+P.nivel+' de '+(E.niveis?E.niveis.length:P.nivel)+'</span><b>'+esc(nm)+'</b></div>'}
+ h+='<p class="rot">'+(k+1)+" de "+N+" · "+esc(P.rot)+"</p>";
+ if(P.tipo==="leitura"){h+='<div class="caixa">'+P.html+(P.links||[]).map(function(l){return'<a class="ligar" href="'+esc(l[1])+'" target="_blank" rel="noopener">'+esc(l[0])+" ↗</a>"}).join("")+(P.nota?'<p class="nota">'+esc(P.nota)+"</p>":"")+"</div>"+(E.imagemData?imagem():"")}
+ if(P.tipo==="unica"){h+='<p class="perg">'+esc(P.pergunta)+'</p><div class="col">'+P.opcoes.map(function(o,j){return'<button class="op" data-j="'+j+'" aria-pressed="'+(r===j)+'">'+esc(o[0])+"</button>"}).join("")+"</div>"+(r!=null?'<div class="ret '+(P.opcoes[r][1]==="cuidado"?"cuidado":"")+'"><b class="palavra">'+(P.opcoes[r][1]==="cuidado"?"Atenção":"Certo")+'</b> '+P.opcoes[r][2]+"</div>":"")}
+ if(P.tipo==="multi"){r=r||[];h+='<p class="perg">'+esc(P.pergunta)+'</p><div class="chips">'+P.opcoes.map(function(o,j){return'<button class="chip" data-j="'+j+'" aria-pressed="'+(r.indexOf(j)>=0)+'">'+esc(o[0])+"</button>"}).join("")+"</div>"+(r.length?'<div class="ret">'+r.map(function(j){return"<b>"+esc(P.opcoes[j][0])+":</b> "+esc(P.opcoes[j][2])}).join("<br>")+"</div>":"")}
+ if(P.tipo==="memoria"){r=r||{};
+   if(!r.visto){h+='<p class="perg">'+esc(P.pergunta)+'</p><div class="contagem" id="cont">'+P.segundos+"</div>"+imagem()+'<div class="nav"><button class="btn sec mini" id="jaVi" type="button">Já vi</button></div>'}
+   else{h+='<p class="perg">O que estava na imagem? Toca em tudo o que viste.</p>'+(r.verificado?imagem():'<div class="escondida">imagem escondida</div>')+'<div class="chips" style="margin-top:10px">'+P.elementos.map(function(el,j){var sel=(r.sel||[]).indexOf(j)>=0;var marca="";if(r.verificado)marca=el[1]?(sel?" ✓":" (estava lá)"):(sel?" ✗":"");return'<button class="chip" data-j="'+j+'" aria-pressed="'+sel+'" '+(r.verificado?"disabled":"")+">"+esc(el[0])+marca+"</button>"}).join("")+"</div>"+(r.verificado?'<div class="ret">Acertaste '+r.certos+" de "+P.elementos.filter(function(x){return x[1]}).length+(r.errados?" · "+r.errados+" que não estavam":"")+".</div>":'<div class="nav"><button class="btn mini" id="verificar" type="button">Verificar</button></div>')}}
+ if(P.tipo==="detalhes"){r=r||[];h+=imagem()+'<p class="perg">'+esc(P.pergunta)+"</p>"+P.campos.map(function(c,j){return'<div class="campo"><label for="c'+j+'">'+esc(c)+'</label><input type="text" id="c'+j+'" data-j="'+j+'" value="'+esc(r[j]||"")+'"></div>'}).join("")}
+ if(P.tipo==="texto"){h+=(E.imagemData?imagem():"")+'<p class="perg">'+esc(P.pergunta)+'</p><textarea id="tx" placeholder="'+esc(P.placeholder||"")+'">'+esc(r||"")+'</textarea><div class="contador" id="cn"></div>'}
+ if(P.tipo==="cartoes"){r=r||{};h+='<p class="perg">'+esc(P.pergunta)+'</p><div class="col">'+P.cartoes.map(function(c,j){return'<button class="cartao" data-j="'+j+'" aria-pressed="'+(r.c===j)+'"><small>'+esc(c[0])+"</small>"+esc(c[1])+"</button>"}).join("")+'</div><textarea id="tx" style="margin-top:10px" placeholder="Parece-se porque…">'+esc(r.t||"")+"</textarea>"}
+ if(P.tipo==="julgar"){r=r||{esc:{}};h+='<p class="perg">'+esc(P.pergunta)+'</p>'+P.casos.map(function(c,i){var e=r.esc[i];return'<div class="caixa"><p>'+esc(c[0])+'</p><div class="chips"><button class="chip" data-v="'+i+'" data-j="1" aria-pressed="'+(e===1)+'" '+(r.verificado?"disabled":"")+'>Passa</button><button class="chip" data-v="'+i+'" data-j="0" aria-pressed="'+(e===0)+'" '+(r.verificado?"disabled":"")+'>Não passa</button></div>'+(r.verificado?'<p class="nota">'+(e===(c[1]?1:0)?"✓ ":"✗ ")+esc(c[2])+'</p>':"")+'</div>'}).join("")+(r.verificado?'<div class="ret"><b class="palavra">'+r.certos+' de '+P.casos.length+' juízos certos</b> '+esc(P.retorno||"")+'</div>':(Object.keys(r.esc).length===P.casos.length?'<div class="nav"><button class="btn sec mini" id="verificar" type="button">Verificar</button></div>':""))}
+ if(P.tipo==="par"){r=r||{lig:{},sel:null};var nP=P.pares.length,ordD=P.pares.map(function(_,i){return i}).sort(function(a,b){return((a*5+2)%nP)-((b*5+2)%nP)||a-b});if(ordD[0]===0)ordD.push(ordD.shift());h+='<p class="perg">'+esc(P.pergunta)+'</p><p class="nota">Toca num da esquerda e depois no seu par da direita.</p><div class="pares"><div class="col">'+P.pares.map(function(p,i){var lig=r.lig[i];return'<button class="op" data-e="'+i+'" aria-pressed="'+(r.sel===i||lig!=null)+'" '+(r.verificado?"disabled":"")+'>'+(lig!=null?"<b>"+(ordD.indexOf(lig)+1)+".</b> ":"")+esc(p[0])+(r.verificado?(lig===i?" ✓":" ✗"):"")+'</button>'}).join("")+'</div><div class="col">'+ordD.map(function(j,k){var usado=Object.keys(r.lig).some(function(e){return r.lig[e]===j});return'<button class="op" data-d="'+j+'" aria-pressed="'+usado+'" '+(r.verificado||r.sel==null?"disabled":"")+'><b>'+(k+1)+'.</b> '+esc(P.pares[j][1])+'</button>'}).join("")+'</div></div>'+(r.verificado?'<div class="ret"><b class="palavra">'+r.certos+' de '+nP+' pares certos</b> '+esc(P.retorno||"")+'</div>':(Object.keys(r.lig).length===nP?'<div class="nav"><button class="btn sec mini" id="verificar" type="button">Verificar</button></div>':""))}
+ if(P.tipo==="riscar"){r=r||{fora:[]};var pals=P.frase.split(" ");var ficam=pals.length-r.fora.length;h+='<p class="perg">'+esc(P.pergunta)+'</p><p class="nota">Toca nas palavras que cortas. Objetivo: '+P.limite+' palavras ou menos.</p><div class="chips">'+pals.map(function(w,j){var f=r.fora.indexOf(j)>=0;return'<button class="chip" data-j="'+j+'" aria-pressed="'+f+'" '+(r.verificado?"disabled":"")+'>'+(f?"<s>"+esc(w)+"</s>":esc(w))+'</button>'}).join("")+'</div><div class="contador '+(ficam<=P.limite?"ok":"")+'">ficam '+ficam+' palavras</div>'+(r.verificado?'<div class="ret"><b class="palavra">'+(r.faltam.length?"Cortaste de mais":"Cabe, e diz o mesmo")+'</b> '+(r.faltam.length?"Sem «"+esc(r.faltam.join("», «"))+"» a frase perde quem faz o quê. ":"")+'Um corte possível: «'+esc(P.modelo)+'» '+esc(P.retorno||"")+'</div>':(ficam<=P.limite?'<div class="nav"><button class="btn sec mini" id="verificar" type="button">Verificar</button></div>':""))}
+ if(P.tipo==="classificar"){r=r||{esc:{}};h+='<p class="perg">'+esc(P.pergunta)+'</p>'+P.itens.map(function(it,ii){var e=r.esc[ii];var marca=r.verificado?(e===it[1]?" ✓":" → "+P.categorias[it[1]]):"";return'<div class="caixa"><p><b>'+esc(it[0])+'</b>'+esc(marca)+'</p><div class="chips">'+P.categorias.map(function(c,j){return'<button class="chip" data-v="'+ii+'" data-j="'+j+'" aria-pressed="'+(e===j)+'" '+(r.verificado?"disabled":"")+'>'+esc(c)+'</button>'}).join("")+'</div></div>'}).join("")+(r.verificado?'<div class="ret"><b class="palavra">'+r.certos+' de '+P.itens.length+' certas</b> '+esc(P.retorno||"")+'</div>':(Object.keys(r.esc).length===P.itens.length?'<div class="nav"><button class="btn sec mini" id="verificar" type="button">Verificar</button></div>':""))}
+ if(P.tipo==="lacuna"){r=r||{esc:{}};h+='<p class="perg">'+esc(P.pergunta)+'</p><div class="caixa">'+P.versos.map(function(v,vi){if(!v.opcoes)return'<p>'+esc(v.antes)+'</p>';var e=r.esc[vi],n_=v.opcoes.length;var ordm=v.opcoes.map(function(_,i){return(i+vi+1)%n_});var palavra=e==null?"______":v.opcoes[e];var marca=r.verificado?(e===0?" ✓":" → «"+v.opcoes[0]+"»"):"";return'<p>'+esc(v.antes)+'<b>'+esc(palavra)+'</b>'+esc(v.depois||"")+esc(marca)+'</p><div class="chips">'+ordm.map(function(j){return'<button class="chip" data-v="'+vi+'" data-j="'+j+'" aria-pressed="'+(e===j)+'" '+(r.verificado?"disabled":"")+'>'+esc(v.opcoes[j])+'</button>'}).join("")+'</div>'}).join("")+'</div>'+(r.verificado?'<div class="ret"><b class="palavra">'+r.certos+' de '+r.total+' como o poeta</b> '+esc(P.retorno||"")+'</div>':(Object.keys(r.esc).length===P.versos.filter(function(v){return v.opcoes}).length?'<div class="nav"><button class="btn sec mini" id="verificar" type="button">Verificar</button></div>':""))}
+ if(P.tipo==="ordenar"){r=r||{ord:[]};var n_=P.itens.length,ordm=P.itens.map(function(_,i){return i}).sort(function(a,b){return((a*7+3)%n_)-((b*7+3)%n_)||a-b});if(ordm[0]===0)ordm.push(ordm.shift());h+='<p class="perg">'+esc(P.pergunta)+'</p><p class="nota">Toca pela ordem certa. Tocar outra vez tira o número.</p><div class="col">'+ordm.map(function(j){var pos=r.ord.indexOf(j);var marca=r.verificado?(pos===j?" ✓":" → "+(j+1)+".º"):"";return'<button class="op" data-j="'+j+'" aria-pressed="'+(pos>=0)+'" '+(r.verificado?"disabled":"")+'>'+(pos>=0?"<b>"+(pos+1)+".</b> ":"")+esc(P.itens[j])+marca+"</button>"}).join("")+"</div>"+(r.verificado?'<div class="ret"><b class="palavra">'+r.certos+" de "+P.itens.length+' no sítio</b> '+esc(P.retorno||"")+"</div>":(r.ord.length===P.itens.length?'<div class="nav"><button class="btn sec mini" id="verificar" type="button">Verificar</button></div>':""))}
+ if(P.tipo==="deslizar"){h+=imagem()+'<p class="perg">'+esc(P.pergunta)+'</p><input type="range" id="rg" min="0" max="100" value="'+(r==null?50:r)+'"><div class="extremos"><span>'+esc(P.esquerda)+"</span><span>"+esc(P.direita)+"</span></div>"}
+ palco.innerHTML=h; liga(P,k); atualiza(); window.scrollTo(0,0);
+}
+function liga(P,k){
+ if(P.tipo==="unica")palco.querySelectorAll(".op").forEach(function(b){b.onclick=function(){var j=+b.dataset.j;est.r[k]=j;est.p[k]=P.opcoes[j][1]==="cuidado"?0:10;mostra()}});
+ if(P.tipo==="multi")palco.querySelectorAll(".chip").forEach(function(b){b.onclick=function(){var r=est.r[k]||[],j=+b.dataset.j,i=r.indexOf(j);if(i>=0)r.splice(i,1);else r.push(j);est.r[k]=r;est.p[k]=r.reduce(function(a,j){return a+Math.max(0,P.opcoes[j][1])},0);mostra()}});
+ if(P.tipo==="memoria"){var r=est.r[k]||{};
+   if(!r.visto){var s=P.segundos;var fim=function(){clearInterval(temporizador);est.r[k]={visto:true,sel:[]};mostra()};temporizador=setInterval(function(){s--;var c=$("#cont");if(c)c.textContent=s;if(s<=0)fim()},1000);$("#jaVi").onclick=fim}
+   else if(!r.verificado){palco.querySelectorAll(".chip").forEach(function(b){b.onclick=function(){var j=+b.dataset.j,i=r.sel.indexOf(j);if(i>=0)r.sel.splice(i,1);else r.sel.push(j);b.setAttribute("aria-pressed",String(i<0))}});
+     $("#verificar").onclick=function(){r.certos=r.sel.filter(function(j){return P.elementos[j][1]}).length;r.errados=r.sel.length-r.certos;r.verificado=true;est.r[k]=r;est.p[k]=Math.max(0,10*r.certos-5*r.errados);mostra()}}}
+ if(P.tipo==="detalhes")palco.querySelectorAll("input").forEach(function(inp){inp.oninput=function(){var r=est.r[k]||[];r[+inp.dataset.j]=inp.value;est.r[k]=r;est.p[k]=5*r.filter(function(v){return (v||"").trim().length>1}).length;atualiza()}});
+ if(P.tipo==="texto"){var tx=$("#tx"),cn=$("#cn");var f=function(){var n=palavras(tx.value);est.r[k]=tx.value;var pts=n>=(P.minPalavras||1)?10:0;var msg=n+" palavra"+(n===1?"":"s");var cls="";
+   if(P.exatoPalavras){if(n===P.exatoPalavras){pts+=10;msg+=" · exatamente "+P.exatoPalavras+"! +10";cls="ok"}else{msg+=" · objetivo: "+P.exatoPalavras;cls=n>P.exatoPalavras?"mau":""}}
+   else if(P.maxPalavras){if(n>=(P.minPalavras||1)&&n<=P.maxPalavras){pts+=10;msg+=" · dentro do limite +10";cls="ok"}else if(n>P.maxPalavras){msg+=" · máximo "+P.maxPalavras;cls="mau"}}
+   cn.textContent=msg;cn.className="contador "+cls;est.p[k]=pts;atualiza()};tx.oninput=f;f()}
+ if(P.tipo==="cartoes"){palco.querySelectorAll(".cartao").forEach(function(b){b.onclick=function(){var r=est.r[k]||{};r.c=+b.dataset.j;est.r[k]=r;[].forEach.call(palco.querySelectorAll(".cartao"),function(x){x.setAttribute("aria-pressed",String(x===b))});$("#tx").focus();pc();atualiza()}});var pc=function(){var r=est.r[k]||{};est.p[k]=(r.c!=null&&(r.t||"").trim().length>3)?10:0};$("#tx").oninput=function(){var r=est.r[k]||{};r.t=this.value;est.r[k]=r;pc();atualiza()}}
+ if(P.tipo==="julgar"){var rj=est.r[k]||{esc:{}};est.r[k]=rj;if(!rj.verificado){palco.querySelectorAll(".chip").forEach(function(b){b.onclick=function(){rj.esc[b.dataset.v]=+b.dataset.j;mostra()}});var vj=$("#verificar");if(vj)vj.onclick=function(){rj.certos=P.casos.filter(function(c,i){return rj.esc[i]===(c[1]?1:0)}).length;rj.verificado=true;est.p[k]=Math.round(10*rj.certos/P.casos.length);mostra()}}}
+ if(P.tipo==="par"){var rp=est.r[k]||{lig:{},sel:null};est.r[k]=rp;if(!rp.verificado){palco.querySelectorAll("[data-e]").forEach(function(b){b.onclick=function(){var e=+b.dataset.e;if(rp.lig[e]!=null){delete rp.lig[e];rp.sel=null}else rp.sel=(rp.sel===e?null:e);mostra()}});palco.querySelectorAll("[data-d]").forEach(function(b){b.onclick=function(){if(rp.sel==null)return;var d=+b.dataset.d;for(var e in rp.lig)if(rp.lig[e]===d)delete rp.lig[e];rp.lig[rp.sel]=d;rp.sel=null;mostra()}});var vp=$("#verificar");if(vp)vp.onclick=function(){rp.certos=P.pares.filter(function(_,i){return rp.lig[i]===i}).length;rp.verificado=true;est.p[k]=Math.round(10*rp.certos/P.pares.length);mostra()}}}
+ if(P.tipo==="riscar"){var rr=est.r[k]||{fora:[]};est.r[k]=rr;if(!rr.verificado){palco.querySelectorAll(".chip").forEach(function(b){b.onclick=function(){var j=+b.dataset.j,i=rr.fora.indexOf(j);if(i>=0)rr.fora.splice(i,1);else rr.fora.push(j);mostra()}});var vr=$("#verificar");if(vr)vr.onclick=function(){var pals=P.frase.split(" ");var limpa=function(w){return w.toLowerCase().replace(/[.,;:!?]/g,"")};var ficou=pals.filter(function(_,j){return rr.fora.indexOf(j)<0});var conj=ficou.map(limpa);rr.faltam=P.essenciais.filter(function(e){return conj.indexOf(e.toLowerCase())<0});rr.frase=ficou.join(" ");rr.verificado=true;est.p[k]=rr.faltam.length?5:10;mostra()}}}
+ if(P.tipo==="classificar"){var rc=est.r[k]||{esc:{}};est.r[k]=rc;if(!rc.verificado){palco.querySelectorAll(".chip").forEach(function(b){b.onclick=function(){rc.esc[b.dataset.v]=+b.dataset.j;mostra()}});var vc=$("#verificar");if(vc)vc.onclick=function(){rc.certos=P.itens.filter(function(it,i){return rc.esc[i]===it[1]}).length;rc.verificado=true;est.p[k]=Math.round(10*rc.certos/P.itens.length);mostra()}}}
+ if(P.tipo==="lacuna"){var rl=est.r[k]||{esc:{}};est.r[k]=rl;if(!rl.verificado){palco.querySelectorAll(".chip").forEach(function(b){b.onclick=function(){rl.esc[b.dataset.v]=+b.dataset.j;mostra()}});var vl=$("#verificar");if(vl)vl.onclick=function(){var gs=P.versos.map(function(v,i){return v.opcoes?i:-1}).filter(function(i){return i>=0});rl.total=gs.length;rl.certos=gs.filter(function(i){return rl.esc[i]===0}).length;rl.verificado=true;est.p[k]=Math.round(10*rl.certos/rl.total);mostra()}}}
+ if(P.tipo==="ordenar"){var ro=est.r[k]||{ord:[]};est.r[k]=ro;if(!ro.verificado){palco.querySelectorAll(".op").forEach(function(b){b.onclick=function(){var j=+b.dataset.j,i=ro.ord.indexOf(j);if(i>=0)ro.ord.splice(i,1);else ro.ord.push(j);mostra()}});var vb=$("#verificar");if(vb)vb.onclick=function(){ro.certos=ro.ord.filter(function(j,p){return j===p}).length;ro.verificado=true;est.p[k]=Math.round(10*ro.certos/P.itens.length);mostra()}}}
+ if(P.tipo==="deslizar"){var rg=$("#rg");est.p[k]=5;if(est.r[k]==null)est.r[k]=50;rg.oninput=function(){est.r[k]=+rg.value;guardar()}}
+}
+function final(){
+ var t=total(),q=MAX?t/MAX:0,em=E.emblemas.find(function(x){return q>=x[0]});
+ var linhas=E.passos.map(function(P,k){var r=est.r[k],v="";
+   if(P.tipo==="unica"&&r!=null)v=P.opcoes[r][0];
+   if(P.tipo==="multi"&&r)v=r.map(function(j){return P.opcoes[j][0]}).join(", ");
+   if(P.tipo==="memoria"&&r&&r.verificado)v=r.certos+" certos, "+r.errados+" a mais";
+   if(P.tipo==="detalhes"&&r)v=P.campos.map(function(c,j){return c+" "+(r[j]||"")}).join(" · ");
+   if(P.tipo==="texto")v=r||"";
+   if(P.tipo==="cartoes"&&r&&r.c!=null)v=P.cartoes[r.c][0]+": "+(r.t||"");
+   if(P.tipo==="julgar"&&r&&r.verificado)v=r.certos+" de "+P.casos.length+" juízos certos";
+   if(P.tipo==="par"&&r&&r.verificado)v=r.certos+" de "+P.pares.length+" pares certos";
+   if(P.tipo==="riscar"&&r&&r.verificado)v=r.frase;
+   if(P.tipo==="classificar"&&r&&r.verificado)v=r.certos+" de "+P.itens.length+" certas";
+   if(P.tipo==="lacuna"&&r&&r.verificado)v=r.certos+" de "+r.total+" como o poeta";
+   if(P.tipo==="ordenar"&&r&&r.verificado)v=r.certos+" de "+P.itens.length+" no sítio";
+   if(P.tipo==="deslizar"&&r!=null)v=(r<40?P.esquerda:r>60?P.direita:"a meio")+" ("+r+")";
+   return v?"<dt>"+esc(P.rot)+"</dt><dd>"+esc(v)+"</dd>":""}).join("");
+ palco.innerHTML='<div class="emblema"><div class="m">'+(q>=0.8?"★":q>=0.5?"◆":"●")+'</div><h2>'+esc(em[1])+'</h2><p>'+esc(em[2])+'</p><div class="pontos">'+t+" / "+MAX+'</div></div><p class="rot">O meu cartão</p><div class="caixa"><dl class="res">'+linhas+'</dl></div><div class="nav"><button class="btn sec" id="copiar" type="button">Copiar</button><button class="btn sec" id="repetir" type="button">Repetir</button></div><p class="nota">Se o professor pedir, fotografa este cartão ou cola o texto na tarefa do Teams.</p>';
+ $("#copiar").onclick=function(){var txt=E.titulo+" · "+t+"/"+MAX+" · "+em[1]+"\n"+[].map.call(document.querySelectorAll("dl.res dt"),function(dt){return dt.textContent+": "+dt.nextElementSibling.textContent}).join("\n");var b=this;if(navigator.clipboard)navigator.clipboard.writeText(txt).then(function(){b.textContent="Copiado"})};
+ $("#repetir").onclick=function(){est={i:0,r:{},p:{},fim:false};guardar();t0=Date.now();mostra()};
+ atualiza();
+}
+$("#seguir").onclick=function(){if(est.i<N){est.i++;mostra()}};
+$("#voltar").onclick=function(){if(est.i>0){est.i--;mostra()}};
+mostra();
+})();
+</script></body></html>
