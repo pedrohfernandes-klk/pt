@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Um verso, um objeto: Casa Fernando Pessoa</title>
+<style>:root{--fundo:#f4f3ee;--papel:#ffffff;--tinta:#161616;--suave:#5c5a55;--linha:#dcd9d0;--acento:#557a24;--acento-claro:#e6eed9;--aviso:#8a4b12}
+@media (prefers-color-scheme:dark){:root{--fundo:#111210;--papel:#1b1c19;--tinta:#ecebe5;--suave:#a6a49c;--linha:#34352f;--acento:#9fcb5e;--acento-claro:#2a3320;--aviso:#e0a060}}
+*{box-sizing:border-box}html,body{margin:0;background:var(--fundo);color:var(--tinta)}body{font:16px/1.5 Arial,Helvetica,sans-serif;overflow-x:hidden}
+.topo{position:sticky;top:0;z-index:5;background:var(--fundo);border-bottom:1px solid var(--linha);padding:10px 16px 0}
+.topo .l1{display:flex;justify-content:space-between;align-items:baseline;gap:8px;max-width:640px;margin:auto}
+.marca{font:900 13px/1 "Arial Black",Arial,sans-serif;letter-spacing:.4px}.conta{font-size:13px;color:var(--suave);font-variant-numeric:tabular-nums}
+.abas{max-width:640px;margin:8px auto 0;display:grid;grid-template-columns:repeat(3,1fr);gap:0}
+.aba{background:none;border:0;border-bottom:3px solid transparent;color:var(--suave);font:700 15px/1 Arial,sans-serif;padding:12px 4px;min-height:48px;cursor:pointer}
+.aba[aria-selected=true]{color:var(--tinta);border-bottom-color:var(--acento)}
+main{max-width:640px;margin:auto;padding:18px 16px 96px}
+h1{font:900 34px/1.02 "Arial Black",Arial,sans-serif;margin:0 0 6px;letter-spacing:-.5px;overflow-wrap:anywhere}
+h2{font:900 22px/1.15 "Arial Black",Arial,sans-serif;margin:0 0 6px}
+.rot{font-size:12px;text-transform:uppercase;letter-spacing:.8px;color:var(--suave);margin:0 0 6px}p{margin:0 0 12px}
+.cx{background:var(--papel);border:1px solid var(--linha);border-radius:10px;padding:14px;margin:0 0 14px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 12px}
+.chip{background:var(--papel);color:var(--tinta);border:1.5px solid var(--linha);border-radius:999px;padding:9px 14px;min-height:44px;font:inherit;cursor:pointer}
+.chip[aria-pressed=true]{border-color:var(--acento);background:var(--acento-claro)}
+.grelha{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:0 0 14px}
+.cap{text-align:left;background:var(--papel);color:var(--tinta);border:1.5px solid var(--linha);border-radius:12px;padding:12px;min-height:84px;font:inherit;cursor:pointer}
+.cap b{display:block;font:900 17px/1.1 "Arial Black",Arial,sans-serif;margin:0 0 4px}.cap span{font-size:13px;color:var(--suave)}
+label{display:block;font-weight:700;margin:12px 0 6px}
+textarea,input[type=text]{width:100%;font:inherit;padding:10px 12px;border-radius:8px;border:1.5px solid var(--linha);background:var(--papel);color:var(--tinta)}
+textarea{min-height:96px;resize:vertical}textarea.grande{min-height:220px}
+.btn{display:inline-block;background:var(--tinta);color:var(--fundo);border:0;border-radius:10px;padding:13px 18px;min-height:48px;font:700 16px/1 Arial,sans-serif;cursor:pointer}
+.btn.sec{background:none;color:var(--tinta);border:1.5px solid var(--linha)}.btn[disabled]{opacity:.4}
+.fila{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 0}
+.nota{background:var(--papel);border-left:4px solid var(--acento);border-radius:0 8px 8px 0;padding:10px 12px;margin:0 0 8px;overflow-wrap:anywhere}
+.nota small{display:block;color:var(--suave);font-size:12px;text-transform:uppercase;letter-spacing:.6px}
+.nota button{float:right;background:none;border:0;color:var(--suave);font:inherit;min-width:44px;min-height:44px;margin:-8px -8px 0 0;cursor:pointer}
+.medidor{height:8px;border-radius:4px;background:var(--linha);overflow:hidden;margin:6px 0 4px}.medidor i{display:block;height:100%;width:0;background:var(--aviso)}.medidor i.bom{background:var(--acento)}
+.lista{list-style:none;margin:0 0 12px;padding:0}.lista li{display:flex;gap:10px;align-items:flex-start;padding:8px 0;border-bottom:1px solid var(--linha)}
+.lista input{width:22px;height:22px;margin:2px 0 0;accent-color:var(--acento);flex:none}
+.pequeno{font-size:13px;color:var(--suave)}
+dialog{border:0;border-radius:14px;padding:16px;width:min(92vw,520px);background:var(--fundo);color:var(--tinta)}dialog::backdrop{background:rgba(0,0,0,.6)}
+#sala{position:fixed;inset:0;z-index:20;background:#000;color:#fff;display:none;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:24px}
+#sala.on{display:flex}#sala h2{font-size:30px;color:#fff}#sala p{color:#bbb;max-width:320px}
+#sala button{margin-top:28px;background:none;border:1.5px solid #555;color:#aaa;border-radius:999px;padding:14px 22px;min-height:52px;font:inherit}
+#aviso{position:fixed;left:16px;right:16px;bottom:16px;z-index:30;background:var(--tinta);color:var(--fundo);padding:12px 14px;border-radius:10px;text-align:center;display:none}
+@media (prefers-reduced-motion:no-preference){.medidor i{transition:width .2s}}</style>
+</head>
+<body>
+<header class="topo">
+  <div class="l1"><span class="marca">Caderno de visita, 3.º ano</span><span class="conta" id="conta">0 notas</span></div>
+  <div class="abas" role="tablist">
+    <button class="aba" role="tab" id="aba-antes" data-f="antes">Antes</button>
+    <button class="aba" role="tab" id="aba-durante" data-f="durante">Durante</button>
+    <button class="aba" role="tab" id="aba-depois" data-f="depois">Depois</button>
+  </div>
+</header>
+<main>
+<section id="antes" role="tabpanel" hidden>
+  <p class="rot">5 de novembro, 14h</p>
+  <h1>Um verso, um objeto</h1>
+  <p>Casa Fernando Pessoa</p>
+  <div class="cx"><h2>Antes de entrar</h2><p>Vais sair daqui com material para um objeto teu: vídeo, som, imagem ou texto. O objeto parte de versos e não os ilustra à letra.</p>
+    <p><b>Que objeto te apetece fazer?</b></p>
+    <div class="chips" id="escolhas"><button class="chip" aria-pressed="false">Vídeo</button><button class="chip" aria-pressed="false">Som</button><button class="chip" aria-pressed="false">Imagem</button><button class="chip" aria-pressed="false">Texto</button></div>
+    <label for="aberta">De que poema de Pessoa, lido na aula, te lembras melhor? Escreve um verso de cor.</label><textarea id="aberta" data-k="aberta"></textarea>
+  </div>
+  <div class="cx"><p><b>Como funciona</b></p><p>Tomas notas curtas durante a visita. No fim, usas as notas para escrever e copias o texto para a tarefa do Teams.</p><p class="pequeno">O que escreves fica só neste telemóvel. Não fotografes nem graves pessoas.</p></div>
+  <div class="cx"><p><b>Não foste à visita?</b></p><p>Parte de versos lidos na aula e do Arquivo Pessoa em linha. Faz o mesmo trabalho com os mesmos critérios.</p><p class="pequeno">Usa este caderno na mesma: as notas tomam-se onde estiveres.</p></div>
+  <button class="btn" data-ir="durante">Estou pronto</button>
+</section>
+<section id="durante" role="tabpanel" hidden>
+  <p class="rot">Durante a visita</p>
+  <h2>Toca e escreve</h2>
+  
+  <div class="grelha"><button class="cap" data-t="verso" data-n="Um verso" data-d="Copia-o como está e diz onde o leste."><b>Um verso</b><span>Copia-o como está e diz onde o leste.</span></button><button class="cap" data-t="objeto" data-n="Um objeto" data-d="Uma coisa que viste e o que te fez pensar."><b>Um objeto</b><span>Uma coisa que viste e o que te fez pensar.</span></button><button class="cap" data-t="pormenor" data-n="Um pormenor" data-d="O que quase ninguém repara."><b>Um pormenor</b><span>O que quase ninguém repara.</span></button><button class="cap" data-t="ideia" data-n="Uma ideia" data-d="O que podias fazer com isto."><b>Uma ideia</b><span>O que podias fazer com isto.</span></button></div>
+  
+  <h2 style="margin-top:22px">As tuas notas</h2>
+  <div id="notas"></div>
+  <p class="pequeno" id="vazio">Ainda não tens notas. Três chegam para começar; seis dão-te por onde escolher.</p>
+</section>
+<section id="depois" role="tabpanel" hidden>
+  <p class="rot">Dia Fernando Pessoa</p>
+  <h2>Do material ao objeto</h2>
+  <ol><li>Escreve três propostas diferentes.</li><li>Escolhe uma e diz porquê.</li><li>Escreve a memória descritiva.</li></ol>
+  <div class="cx"><p><b>Notas para usar</b></p><p class="pequeno">Toca numa nota para a pores no texto.</p><div id="usar"></div></div>
+  <label for="c-propostas">Três propostas</label><textarea id="c-propostas" data-k="propostas" class="" placeholder="Uma por linha. Cada uma parte de um verso."></textarea>
+  <label for="c-escolha">A escolha</label><textarea id="c-escolha" data-k="escolha" class="" placeholder="Qual fica, qual abandonas e porquê."></textarea>
+  <label for="c-texto">Memória descritiva</label><textarea id="c-texto" data-k="texto" class="grande" placeholder="Diz o que fizeste e que decisões tomaste."></textarea><div class="medidor"><i id="barra"></i></div><p class="pequeno" id="palavras">0 palavras. Objetivo: 150 a 200.</p>
+  <h2 style="margin-top:18px">Verificar</h2>
+  <ul class="lista" id="verificar"><li><input type="checkbox" id="v0"><label for="v0" style="margin:0;font-weight:400">Cada verso tem a referência.</label></li><li><input type="checkbox" id="v1"><label for="v1" style="margin:0;font-weight:400">O objeto não ilustra o verso à letra.</label></li><li><input type="checkbox" id="v2"><label for="v2" style="margin:0;font-weight:400">Escrevi três propostas antes de escolher.</label></li><li><input type="checkbox" id="v3"><label for="v3" style="margin:0;font-weight:400">Registei o que abandonei.</label></li><li><input type="checkbox" id="v4"><label for="v4" style="margin:0;font-weight:400">Contei: 150 a 200 palavras.</label></li></ul>
+  <div class="fila"><button class="btn" id="copiar">Copiar para o Teams</button><button class="btn sec" id="partilhar" hidden>Partilhar</button><button class="btn sec" id="guardar">Guardar ficheiro</button></div>
+  <p class="pequeno" style="margin-top:14px">Cola o texto na tarefa do Teams e entrega lá. Este caderno não envia nada.</p>
+  <p style="margin-top:26px"><button class="btn sec" id="apagar">Apagar tudo e recomeçar</button></p>
+</section>
+</main>
+<dialog id="dlg"><p class="rot" id="dlg-rot"></p><h2 id="dlg-tit"></h2><p class="pequeno" id="dlg-dica"></p><textarea id="dlg-txt"></textarea><div class="fila"><button class="btn" id="dlg-ok">Guardar nota</button><button class="btn sec" id="dlg-voz" hidden>Ditar</button><button class="btn sec" id="dlg-nao">Fechar</button></div></dialog>
+
+<div id="aviso" role="status"></div>
+<script>
+(function(){
+var CHAVE="visita-visita-casa-fernando-pessoa",DIA="2026-11-05",MIN=150,MAX=200,TAREFA="Dia Fernando Pessoa",TITULO="Um verso, um objeto: Casa Fernando Pessoa";
+var E={notas:[],campos:{},escolha:"",feito:[],fase:""};
+try{var g=JSON.parse(localStorage.getItem(CHAVE)||"null");if(g)E=Object.assign(E,g)}catch(x){}
+function guardar(){try{localStorage.setItem(CHAVE,JSON.stringify(E))}catch(x){}}
+function $(s){return document.querySelector(s)}function $$(s){return Array.prototype.slice.call(document.querySelectorAll(s))}
+function avisar(t){var a=$("#aviso");a.textContent=t;a.style.display="block";clearTimeout(avisar.t);avisar.t=setTimeout(function(){a.style.display="none"},2200)}
+function hoje(){var d=new Date();return d.getFullYear()+"-"+("0"+(d.getMonth()+1)).slice(-2)+"-"+("0"+d.getDate()).slice(-2)}
+function fase(f){E.fase=f;guardar();["antes","durante","depois"].forEach(function(x){$("#"+x).hidden=x!==f;$("#aba-"+x).setAttribute("aria-selected",x===f?"true":"false")});if(f==="depois")usar();window.scrollTo(0,0)}
+function hora(t){var d=new Date(t);return ("0"+d.getHours()).slice(-2)+":"+("0"+d.getMinutes()).slice(-2)}
+function limpo(s){return String(s).replace(/[&<>]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;"}[c]})}
+function pintar(){
+  $("#conta").textContent=E.notas.length+(E.notas.length===1?" nota":" notas");
+  $("#vazio").hidden=E.notas.length>0;
+  $("#notas").innerHTML=E.notas.slice().reverse().map(function(n){return '<div class="nota"><button data-x="'+n.id+'" aria-label="Apagar esta nota">apagar</button><small>'+limpo(n.nome)+(n.paragem?", "+limpo(n.paragem):"")+", "+hora(n.t)+'</small>'+limpo(n.texto)+'</div>'}).join("");
+}
+function usar(){
+  $("#usar").innerHTML=E.notas.length?E.notas.map(function(n){return '<button class="chip" data-u="'+n.id+'" style="border-radius:10px;text-align:left;display:block;width:100%;margin:0 0 6px"><small class="pequeno">'+limpo(n.nome)+(n.paragem?", "+limpo(n.paragem):"")+'</small><br>'+limpo(n.texto)+'</button>'}).join(""):'<p class="pequeno">Sem notas. Podes escrever na mesma.</p>';
+}
+function contar(){
+  var t=$("#c-texto");if(!t)return;var n=(t.value.trim().match(/\S+/g)||[]).length,b=$("#barra");
+  b.style.width=Math.min(100,Math.round(n/MAX*100))+"%";b.className=n>=MIN&&n<=MAX?"bom":"";
+  $("#palavras").textContent=n+(n===1?" palavra. ":" palavras. ")+(n<MIN?"Faltam "+(MIN-n)+".":n>MAX?"Tens "+(n-MAX)+" a mais.":"Está dentro do limite.");
+}
+function relatorio(){
+  var l=[TITULO,TAREFA,""];
+  $$("#depois textarea").forEach(function(t){var r=document.querySelector('label[for="'+t.id+'"]');if(t.value.trim()){l.push(r.textContent.toUpperCase());l.push(t.value.trim());l.push("")}});
+  if(E.notas.length){l.push("NOTAS DA VISITA");E.notas.forEach(function(n){l.push("- "+n.nome+(n.paragem?" ("+n.paragem+")":"")+", "+hora(n.t)+": "+n.texto)})}
+  return l.join("\n");
+}
+// abas e botões
+$$(".aba").forEach(function(b){b.onclick=function(){fase(b.dataset.f)}});
+$$("[data-ir]").forEach(function(b){b.onclick=function(){fase(b.dataset.ir)}});
+$$("#escolhas .chip").forEach(function(c){if(c.textContent===E.escolha)c.setAttribute("aria-pressed","true");c.onclick=function(){$$("#escolhas .chip").forEach(function(o){o.setAttribute("aria-pressed","false")});c.setAttribute("aria-pressed","true");E.escolha=c.textContent;guardar()}});
+$$("[data-k]").forEach(function(t){t.value=E.campos[t.dataset.k]||"";t.oninput=function(){E.campos[t.dataset.k]=t.value;guardar();if(t.id==="c-texto")contar()}});
+$$("#verificar input").forEach(function(c,i){c.checked=E.feito.indexOf(i)>=0;c.onchange=function(){E.feito=$$("#verificar input").map(function(x,j){return x.checked?j:-1}).filter(function(j){return j>=0});guardar()}});
+// notas
+var dlg=$("#dlg"),atual=null;
+$$(".cap").forEach(function(b){b.onclick=function(){atual=b;$("#dlg-rot").textContent="Nota";$("#dlg-tit").textContent=b.dataset.n;$("#dlg-dica").textContent=b.dataset.d;$("#dlg-txt").value="";if(dlg.showModal)dlg.showModal();else dlg.setAttribute("open","");$("#dlg-txt").focus()}});
+function fechar(){if(dlg.close)dlg.close();else dlg.removeAttribute("open")}
+$("#dlg-nao").onclick=fechar;
+$("#dlg-ok").onclick=function(){var v=$("#dlg-txt").value.trim();if(!v){avisar("Escreve primeiro.");return}var p=$("#paragem");E.notas.push({id:Date.now(),t:Date.now(),tipo:atual.dataset.t,nome:atual.dataset.n,paragem:p?p.value.trim():"",texto:v});guardar();pintar();fechar();avisar("Nota guardada.")};
+$("#notas").onclick=function(ev){var x=ev.target.dataset.x;if(!x)return;if(!confirm("Apagar esta nota?"))return;E.notas=E.notas.filter(function(n){return String(n.id)!==x});guardar();pintar()};
+$("#usar").onclick=function(ev){var b=ev.target.closest("[data-u]");if(!b)return;var n=E.notas.filter(function(n){return String(n.id)===b.dataset.u})[0],t=$("#c-texto");t.value=(t.value?t.value.replace(/\s+$/,"")+" ":"")+n.texto;t.oninput();t.focus();avisar("Nota posta no texto.")};
+// ditado, só onde o telemóvel o permite
+var Rec=window.SpeechRecognition||window.webkitSpeechRecognition;
+if(Rec){var v=$("#dlg-voz");v.hidden=false;v.onclick=function(){try{var r=new Rec();r.lang="pt-PT";r.onresult=function(ev){var t=$("#dlg-txt");t.value=(t.value?t.value+" ":"")+ev.results[0][0].transcript};r.onerror=function(){avisar("Não consegui ouvir.")};r.start();avisar("A ouvir…")}catch(x){avisar("Ditado indisponível.")}}}
+// sala às escuras
+var sala=$("#sala");if(sala){$("#entrar").onclick=function(){sala.classList.add("on")};var s=$("#sair"),tm;function larga(){clearTimeout(tm)}
+  s.onpointerdown=function(){tm=setTimeout(function(){sala.classList.remove("on")},3000)};s.onpointerup=larga;s.onpointerleave=larga;s.onpointercancel=larga}
+// entregar
+function copiar(){var t=relatorio();if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(t).then(function(){avisar("Copiado. Cola na tarefa do Teams.")},function(){velho(t)});else velho(t)}
+function velho(t){var a=document.createElement("textarea");a.value=t;document.body.appendChild(a);a.select();try{document.execCommand("copy");avisar("Copiado. Cola na tarefa do Teams.")}catch(x){avisar("Seleciona o texto e copia à mão.")}document.body.removeChild(a)}
+$("#copiar").onclick=copiar;
+if(navigator.share){var p=$("#partilhar");p.hidden=false;p.onclick=function(){navigator.share({title:TITULO,text:relatorio()}).catch(function(){})}}
+$("#guardar").onclick=function(){var a=document.createElement("a");a.href=URL.createObjectURL(new Blob([relatorio()],{type:"text/plain;charset=utf-8"}));a.download=CHAVE+".txt";document.body.appendChild(a);a.click();document.body.removeChild(a)};
+$("#apagar").onclick=function(){if(!confirm("Apagar as notas e os textos deste caderno?"))return;try{localStorage.removeItem(CHAVE)}catch(x){}location.reload()};
+pintar();contar();fase(E.fase||(hoje()<DIA?"antes":hoje()===DIA?"durante":"depois"));
+})();
+</script>
+</body>
+</html>
