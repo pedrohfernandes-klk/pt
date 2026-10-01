@@ -153,7 +153,7 @@ $("#copiar").onclick=copiar;
 if(navigator.share){var p=$("#partilhar");p.hidden=false;p.onclick=function(){navigator.share({title:TITULO,text:relatorio()}).catch(function(){})}}
 $("#guardar").onclick=function(){var a=document.createElement("a");a.href=URL.createObjectURL(new Blob([relatorio()],{type:"text/plain;charset=utf-8"}));a.download=CHAVE+".txt";document.body.appendChild(a);a.click();document.body.removeChild(a)};
 $("#apagar").onclick=function(){if(!confirm("Apagar as notas e os textos deste caderno?"))return;try{localStorage.removeItem(CHAVE)}catch(x){}location.reload()};
-pintar();contar();fase(E.fase||(hoje()<DIA?"antes":hoje()===DIA?"durante":"depois"));
+pintar();contar();fase(E.fase||(!DIA?"antes":hoje()<DIA?"antes":hoje()===DIA?"durante":"depois"));
 })();
 </script>
 </body>
