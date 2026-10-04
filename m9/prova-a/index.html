@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="pt-PT"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Prova rápida M9-A: Romance Saramaguiano</title>
+<style>*{box-sizing:border-box}body{margin:0;background:#fff;color:#000;font:17px/1.5 Arial,Helvetica,sans-serif}
+main{max-width:44rem;margin:0 auto;min-height:100vh;padding:1.2rem 1.1rem 4rem}
+header{border-bottom:3px solid #000;padding-bottom:.8rem;margin-bottom:1rem;display:flex;justify-content:space-between;gap:1rem;align-items:flex-end}
+.marca{font:900 .8rem "Arial Black",Arial;letter-spacing:.12em;text-transform:uppercase}
+h1{font:900 1.7rem/1.05 "Arial Black",Arial,sans-serif;margin:.3rem 0}
+h2{font:900 1.2rem "Arial Black",Arial,sans-serif;margin:1rem 0 .6rem}
+.relogio{font:900 1.1rem "Arial Black",Arial;white-space:nowrap}
+label.c{display:block;font-weight:700;margin:.8rem 0 .3rem}
+input[type=text],select{font:inherit;padding:.6rem;border:2px solid #000;width:100%;max-width:22rem;background:#fff}
+button.p{font:700 1rem Arial;padding:.75rem 1.1rem;border:2px solid #000;background:#000;color:#fff;cursor:pointer;margin:.5rem .4rem 0 0;min-height:48px}
+button.s{background:#fff;color:#000}
+.q{border-top:2px solid #000;padding:.9rem 0}.q p{margin:0 0 .5rem;font-weight:700}
+.op{display:flex;gap:.6rem;align-items:flex-start;padding:.35rem 0;font-weight:400;cursor:pointer}.op input{margin-top:.4rem;width:20px;height:20px}
+.certo{color:#1b6e2d}.errado{color:#b00020}
+.exp{font-size:.92rem;border-left:8px solid #000;padding:.4rem .6rem;margin-top:.4rem}
+.aviso{border:2px solid #000;padding:.7rem .8rem;margin:.8rem 0;font-size:.95rem}
+.nota{font:900 2.6rem "Arial Black",Arial;margin:.4rem 0}
+.codigo{font:.85rem/1.4 Consolas,"Courier New",monospace;word-break:break-all;border:2px solid #000;padding:.6rem;background:#f4f4f4;margin:.5rem 0}
+.barra{height:10px;background:#ddd;margin:.3rem 0 1rem}.barra i{display:block;height:100%;background:#000;width:0}
+[hidden]{display:none!important}:focus-visible{outline:3px solid #1f5fbf;outline-offset:2px}
+@media print{button,.codigo{display:none}}</style></head><body><main>
+<header><div><div class="marca">Escola Profissional de Imagem · Português · 3.º ano</div><h1>Prova rápida A<br>Módulo 9: Romance Saramaguiano</h1><div class="marca">10 perguntas · 5 a 10 min</div></div><div class="relogio" id="relogio">0 min 00 s</div></header>
+
+<section id="entrada">
+<div class="aviso">Dez perguntas, uma resposta cada. Responde sem consultar. No fim vês a tua nota e um código: copia-o para a tarefa do Teams ou mostra-o ao docente. As três provas do módulo valem 10 % da nota, pela média; conta a primeira tentativa.</div>
+<label class="c" for="nome">O teu nome (como está na pauta)</label><input type="text" id="nome" autocomplete="off">
+<label class="c" for="turma">Turma</label><select id="turma"><option value="">escolhe</option><option>PTM 26</option><option>MM 26</option><option>DCG 25</option><option>PTM 25</option><option>DCG 24</option><option>PTM 24 B</option><option>VI 24</option><option>outra</option></select>
+<p><button class="p" id="comecar">Começar</button></p>
+<p id="anterior" hidden class="aviso"></p>
+</section>
+
+<section id="prova" hidden>
+<div class="barra"><i id="progresso"></i></div>
+<form id="form"></form>
+<p><button class="p" id="entregar">Entregar</button></p>
+</section>
+
+<section id="fim" hidden>
+<h2>Resultado</h2>
+<div class="nota" id="nota"></div>
+<p id="resumo"></p>
+<h2>Código para o docente</h2>
+<p>Copia este código e cola-o na tarefa do Teams, ou mostra o ecrã ao docente. Só o docente o consegue ler.</p>
+<div class="codigo" id="codigo"></div>
+<p><button class="p" id="copiar">Copiar o código</button><button class="p s" id="partilhar" hidden>Partilhar</button><button class="p s" id="ver">Ver a correção</button><button class="p s" id="repetir">Repetir a prova</button></p>
+<form id="correcao" hidden></form>
+</section>
+</main>
+<script>
+(function(){
+"use strict";
+var ID="M9-A", D=[["Memorial do Convento foi publicado em…",["1982","1998","1970","2005"],"1982."],["Domenico Scarlatti é…",["um músico que se junta ao grupo","o arquiteto do convento","um inquisidor","o bispo"],"Músico italiano na corte."],["A passarola simboliza…",["o sonho, a liberdade e o conhecimento","o poder do rei","a guerra","o dinheiro"],"O voo contra a opressão."],["Saramago recebeu o Prémio Nobel da Literatura em…",["1998","1982","2010","1974"],"1998."],["O discurso direto reproduz…",["as palavras tal como foram ditas","um resumo do narrador","só pensamentos","só descrições"],"Fidelidade à fala."],["Usar «o rei», «D. João V», «o monarca» para a mesma pessoa é coesão…",["lexical","temporal","interfrásica","nenhuma"],"Substituição lexical."],["A primeira pedra da basílica de Mafra foi lançada em…",["1717","1755","1640","1982"],"17 de novembro de 1717."],["«Forte como um boi» (exemplo escrito para este questionário) é uma…",["comparação","metáfora","ironia","enumeração"],"Tem «como»."],["Refutar é…",["responder ao argumento do outro lado","repetir a própria tese","mudar de assunto","levantar a voz"],"Ouvir primeiro, responder depois."],["«Todas as manhãs o capataz fazia a chamada.»",["habitual","iterativo","perfetivo","genérico"],"É costume."]], K="KVhGdDUUEF0tIcvZgPzpl53AsqYq", CHAVE="terra-firme-2026-pt-epi-cais-do-sodre", GUARDA="epi-pt-prova-"+ID, $=function(s){return document.querySelector(s)};
+
+function bytes(s){return new TextEncoder().encode(s)}
+function texto(b){return new TextDecoder().decode(b)}
+function xor(b){var k=bytes(CHAVE),o=new Uint8Array(b.length);for(var i=0;i<b.length;i++){o[i]=b[i]^k[(i*7+3)%k.length]^((i*13)&255)}return o}
+function b64(b){var s="";for(var i=0;i<b.length;i++)s+=String.fromCharCode(b[i]);return btoa(s).replace(/\+/g,"-").replace(/\//g,"_").replace(/=+$/,"")}
+function unb64(s){s=s.replace(/-/g,"+").replace(/_/g,"/");while(s.length%4)s+="=";var t=atob(s),o=new Uint8Array(t.length);for(var i=0;i<t.length;i++)o[i]=t.charCodeAt(i);return o}
+function soma(b){var s=7;for(var i=0;i<b.length;i++)s=(s*31+b[i])%99991;return s}
+function codificar(obj){var b=bytes(JSON.stringify(obj));return "EPI1."+b64(xor(b))+"."+soma(b).toString(36)}
+function descodificar(c){c=String(c).trim();var p=c.split(".");if(p.length!==3||p[0]!=="EPI1")throw new Error("não é um código de prova");var b=xor(unb64(p[1]));if(soma(b).toString(36)!==p[2])throw new Error("código alterado ou incompleto");return JSON.parse(texto(b))}
+var certas=JSON.parse(texto(xor(unb64(K))));
+var ESTADO={}; try{ESTADO=JSON.parse(localStorage.getItem(GUARDA)||"{}")}catch(e){}
+var inicio=0,tempo=null,ordem=[];
+function semente(s){var h=2166136261;for(var i=0;i<s.length;i++){h^=s.charCodeAt(i);h=Math.imul(h,16777619)}return h>>>0}
+function baralhar(n,s){var a=[];for(var i=0;i<n;i++)a.push(i);var x=s||1;for(var i=n-1;i>0;i--){x=(x*1103515245+12345)&2147483647;var j=x%(i+1);var t=a[i];a[i]=a[j];a[j]=t}return a}
+function relogio(){var m=Math.floor((Date.now()-inicio)/1000);$("#relogio").textContent=Math.floor(m/60)+" min "+("0"+(m%60)).slice(-2)+" s"}
+function mostrar(q){["entrada","prova","fim"].forEach(function(s){$("#"+s).hidden=(s!==q)});window.scrollTo(0,0)}
+function monta(){var f=$("#form");f.innerHTML="";ordem.forEach(function(i,k){var q=D[i],d=document.createElement("div");d.className="q";d.dataset.i=i;var p=document.createElement("p");p.textContent=(k+1)+". "+q[0];d.appendChild(p);q[1].forEach(function(o,j){var l=document.createElement("label");l.className="op";var r=document.createElement("input");r.type="radio";r.name="q"+i;r.value=j;r.onchange=progresso;l.appendChild(r);l.appendChild(document.createTextNode(o));d.appendChild(l)});f.appendChild(d)})}
+function progresso(){var n=0;D.forEach(function(_,i){if($("input[name=q"+i+"]:checked"))n++});$("#progresso").style.width=Math.round(n/D.length*100)+"%"}
+if(ESTADO.nome){$("#nome").value=ESTADO.nome;$("#turma").value=ESTADO.turma||"";if(ESTADO.codigo){$("#anterior").hidden=false;$("#anterior").textContent="Já fizeste esta prova neste telemóvel ("+ESTADO.tentativas+" vez"+(ESTADO.tentativas>1?"es":"")+"). Podes repetir: o código diz quantas vezes foi."}}
+$("#comecar").onclick=function(){var n=$("#nome").value.trim(),t=$("#turma").value;if(!n||!t){alert("Escreve o nome e escolhe a turma.");return}ESTADO.nome=n;ESTADO.turma=t;ordem=baralhar(D.length,semente(n+"|"+t+"|"+ID));monta();inicio=Date.now();tempo=setInterval(relogio,1000);mostrar("prova")};
+$("#entregar").onclick=function(){var r=[],falta=0;D.forEach(function(_,i){var c=$("input[name=q"+i+"]:checked");if(!c)falta++;r.push(c?Number(c.value):-1)});if(falta&&!confirm("Tens "+falta+" pergunta"+(falta>1?"s":"")+" sem resposta. Entregar assim?"))return;clearInterval(tempo);var seg=Math.round((Date.now()-inicio)/1000),cert=0;r.forEach(function(v,i){if(v===certas[i])cert++});ESTADO.tentativas=(ESTADO.tentativas||0)+1;var obj={v:1,p:ID,n:ESTADO.nome,t:ESTADO.turma,d:new Date().toISOString().slice(0,16),s:seg,k:ESTADO.tentativas,r:r,c:cert,q:D.length};ESTADO.codigo=codificar(obj);ESTADO.ultimo=obj;try{localStorage.setItem(GUARDA,JSON.stringify(ESTADO))}catch(e){}
+  $("#nota").textContent=cert+" em "+D.length+" · "+Math.round(cert/D.length*200)+" pontos";$("#resumo").textContent=ESTADO.nome+", "+ESTADO.turma+". Tempo: "+Math.floor(seg/60)+" min "+(seg%60)+" s.";$("#codigo").textContent=ESTADO.codigo;
+  var c=$("#correcao");c.innerHTML="";c.hidden=true;ordem.forEach(function(i,k){var q=D[i],d=document.createElement("div");d.className="q";var p=document.createElement("p");p.textContent=(k+1)+". "+q[0];d.appendChild(p);q[1].forEach(function(o,j){var l=document.createElement("div");l.className="op "+(j===certas[i]?"certo":(j===r[i]?"errado":""));l.textContent=(j===certas[i]?"✓ ":(j===r[i]?"✗ ":"· "))+o;d.appendChild(l)});if(q[2]){var x=document.createElement("div");x.className="exp";x.textContent=q[2];d.appendChild(x)}c.appendChild(d)});mostrar("fim")};
+$("#ver").onclick=function(){$("#correcao").hidden=!$("#correcao").hidden};
+$("#copiar").onclick=function(){var t=$("#codigo").textContent;if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(t).then(function(){alert("Copiado. Cola na tarefa do Teams.")},function(){prompt("Copia o código:",t)});else prompt("Copia o código:",t)};
+if(navigator.share){$("#partilhar").hidden=false;$("#partilhar").onclick=function(){navigator.share({title:"Prova rápida "+ID,text:$("#codigo").textContent}).catch(function(){})}}
+$("#repetir").onclick=function(){if(confirm("Repetir a prova? O código novo dirá que é a tentativa "+((ESTADO.tentativas||0)+1)+".")){$("#relogio").textContent="0 min 00 s";mostrar("entrada")}};
+window.__testarTelemovel=function(){var larg=document.documentElement.scrollWidth<=window.innerWidth;return Promise.resolve({ok:larg,asserts:{carregou:true,semTransbordo:larg},erros:larg?[]:["transborda"]})};
+})();
+</script></body></main></html>
