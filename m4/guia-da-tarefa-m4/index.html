@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="pt-PT"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Guia da tarefa: Módulo 4</title><style>:root{--fundo:#f4f3ee;--papel:#fff;--tinta:#161616;--suave:#5c5a55;--linha:#dcd9d0;--acento:#557a24;--acento-claro:#e6eed9;--aviso:#8a4b12}
+@media (prefers-color-scheme:dark){:root{--fundo:#111210;--papel:#1b1c19;--tinta:#ecebe5;--suave:#a6a49c;--linha:#34352f;--acento:#9fcb5e;--acento-claro:#2a3320;--aviso:#e0a060}}
+*{box-sizing:border-box}html,body{margin:0;background:var(--fundo);color:var(--tinta)}body{font:16px/1.5 Arial,Helvetica,sans-serif;overflow-x:hidden}
+.topo{position:sticky;top:0;z-index:5;background:var(--fundo);border-bottom:1px solid var(--linha);padding:10px 16px}
+.topo .l1{display:flex;justify-content:space-between;align-items:baseline;gap:8px;max-width:640px;margin:auto}
+.marca{font:900 13px/1 "Arial Black",Arial,sans-serif;letter-spacing:.4px}.relogio{font:900 18px/1 "Arial Black",Arial,sans-serif;font-variant-numeric:tabular-nums}
+main{max-width:640px;margin:auto;padding:18px 16px 96px}
+h1{font:900 30px/1.05 "Arial Black",Arial,sans-serif;margin:0 0 6px;overflow-wrap:anywhere}h2{font:900 20px/1.15 "Arial Black",Arial,sans-serif;margin:0 0 6px}
+.rot{font-size:12px;text-transform:uppercase;letter-spacing:.8px;color:var(--suave);margin:0 0 6px}p{margin:0 0 12px}
+.cx{background:var(--papel);border:1px solid var(--linha);border-radius:10px;padding:14px;margin:0 0 14px}
+.tarefa{display:block;width:100%;text-align:left;background:var(--papel);color:var(--tinta);border:1.5px solid var(--linha);border-radius:12px;padding:14px;margin:0 0 10px;font:inherit;cursor:pointer}
+.tarefa b{display:block;font:900 17px/1.15 "Arial Black",Arial,sans-serif;margin:0 0 4px}.tarefa span{font-size:13px;color:var(--suave)}
+.bloco{display:flex;gap:10px;align-items:center;background:var(--papel);border:1.5px solid var(--linha);border-radius:12px;padding:12px;margin:0 0 8px}
+.bloco.ativo{border-color:var(--acento);background:var(--acento-claro)}.bloco.feito{opacity:.55}
+.bloco .n{font:900 22px/1 "Arial Black",Arial,sans-serif;min-width:34px}.bloco .t{flex:1}.bloco .t b{display:block}.bloco .t span{font-size:13px;color:var(--suave)}
+.btn{display:inline-block;background:var(--tinta);color:var(--fundo);border:0;border-radius:10px;padding:13px 18px;min-height:48px;font:700 16px/1 Arial,sans-serif;cursor:pointer}.btn.sec{background:none;color:var(--tinta);border:1.5px solid var(--linha)}
+.fila{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 0}
+ol,ul{margin:0 0 12px 20px;padding:0}li{margin:0 0 6px}
+.lista{list-style:none;margin:0 0 12px;padding:0}.lista li{display:flex;gap:10px;align-items:flex-start;padding:8px 0;border-bottom:1px solid var(--linha)}.lista input{width:22px;height:22px;margin:2px 0 0;accent-color:var(--acento);flex:none}
+label.c{display:block;font-weight:700;margin:12px 0 6px}textarea{width:100%;min-height:110px;font:inherit;padding:10px 12px;border-radius:8px;border:1.5px solid var(--linha);background:var(--papel);color:var(--tinta);resize:vertical}
+.niveis{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin:4px 0 10px}.niveis button{font:700 14px/1 Arial;min-height:44px;border:1.5px solid var(--linha);border-radius:8px;background:var(--papel);color:var(--tinta);cursor:pointer}.niveis button[aria-pressed=true]{border-color:var(--acento);background:var(--acento-claro)}
+.pequeno{font-size:13px;color:var(--suave)}.regra{border-left:4px solid var(--aviso);padding:8px 12px;background:var(--papel);border-radius:0 8px 8px 0;margin:0 0 12px}
+#aviso{position:fixed;left:16px;right:16px;bottom:16px;z-index:30;background:var(--tinta);color:var(--fundo);padding:12px 14px;border-radius:10px;text-align:center;display:none}</style></head><body>
+<header class="topo"><div class="l1"><span class="marca">Guia da tarefa, 2.º ano</span><span class="relogio" id="relogio">15:00</span></div></header>
+<main>
+<section id="escolha">
+<p class="rot">Módulo 4: Literatura Barroca e Romântica</p><h1>Guia da tarefa</h1>
+<p>Uma aula inteira para trabalhares na tarefa, ao teu ritmo e com um plano. Escolhe a tarefa de hoje.</p>
+<button class="tarefa" data-n="1"><b>1. Jogo da turma: o Sermão de Santo António e Frei Luís de Sousa</b><span>em grupo de 2 ou 3; duas aulas</span></button>
+<button class="tarefa" data-n="2"><b>2. Discurso no Bunker</b><span>individual; uma aula</span></button>
+<button class="tarefa" data-n="3"><b>3. Apreciação crítica de Frei Luís de Sousa no teatro</b><span>individual; uma aula</span></button>
+<div class="cx"><p><b>Como funciona</b></p><p>Três blocos de tempo com relógio. No fim, verificas o trabalho com a lista da rubrica, dás-te um nível em cada parâmetro e copias tudo para a tarefa do Teams. O que escreves fica só neste telemóvel.</p></div>
+</section>
+<section id="rota" hidden>
+<p class="rot" id="r-quem"></p><h2 id="r-titulo"></h2>
+<div class="cx"><p><b>O que vais fazer</b></p><ol id="r-passos"></ol><p><b>O que entregas:</b> <span id="r-entrega"></span></p><p class="pequeno" id="r-alt"></p></div>
+<div class="regra"><b>Três antes de mim.</b> Antes de chamares o docente: 1) relê o enunciado; 2) vê a rubrica; 3) pergunta ao teu par de trabalho. Só depois levantas o braço.</div>
+<h2>Os blocos de hoje</h2>
+<div id="blocos"><div class="bloco" data-i="0"><div class="n">1</div><div class="t"><b>Plano, 15 min</b><span>Lê o guia, escolhe por onde começas, escreve as três coisas que vais fazer.</span></div><button class="btn sec" data-ir="0">Começar</button></div><div class="bloco" data-i="1"><div class="n">2</div><div class="t"><b>Fazer, 55 min</b><span>Trabalho a sério. Se encravares, regra dos três antes de mim.</span></div><button class="btn sec" data-ir="1">Começar</button></div><div class="bloco" data-i="2"><div class="n">3</div><div class="t"><b>Rever e entregar, 20 min</b><span>Lista da rubrica, autoavaliação, copiar para o Teams.</span></div><button class="btn sec" data-ir="2">Começar</button></div></div>
+<label class="c" for="plano">As três coisas que vou fazer hoje</label><textarea id="plano" data-k="plano" placeholder="1. … 2. … 3. …"></textarea>
+<label class="c" for="notas">Notas de trabalho</label><textarea id="notas" data-k="notas" placeholder="O que decidi, o que ficou por fazer, a dúvida que tive."></textarea>
+<h2>Verificar antes de entregar</h2>
+<ul class="lista" id="r-verificar"></ul>
+<h2>Autoavaliação</h2>
+<p class="pequeno">Em cada parâmetro, toca no nível que achas que tens. 4 é o melhor. Escreve uma linha a dizer porquê.</p>
+<div id="r-auto"></div>
+<div class="fila"><button class="btn" id="copiar">Copiar para o Teams</button><button class="btn sec" id="partilhar" hidden>Partilhar</button><button class="btn sec" id="voltar">Outra tarefa</button></div>
+<p class="pequeno" style="margin-top:14px">Cola na tarefa do Teams junto com o trabalho. O docente vê o teu plano, as notas, a lista e a autoavaliação.</p>
+</section>
+</main>
+<div id="aviso" role="status"></div>
+<script>
+(function(){
+var M="M4",BLOCOS=[[15,"Plano","Lê o guia, escolhe por onde começas, escreve as três coisas que vais fazer."],[55,"Fazer","Trabalho a sério. Se encravares, regra dos três antes de mim."],[20,"Rever e entregar","Lista da rubrica, autoavaliação, copiar para o Teams."]],T=[{"n":1,"titulo":"Jogo da turma: o Sermão de Santo António e Frei Luís de Sousa","quem":"em grupo de 2 ou 3","grupo":true,"passos":["Com o teu grupo, cria um jogo ou um questionário sobre o Sermão de Santo António e Frei Luís de Sousa: 8 a 12 perguntas ou desafios, em dois níveis de dificuldade, cada um com a resposta certa e a fonte (página ou verso).","Escolhe a ferramenta: a Fábrica de jogos, o Kahoot ou outra, desde que a turma entre só com um PIN ou uma ligação, sem conta.","Conduz o jogo na aula, em 15 minutos no máximo: explica as regras num minuto; todos respondem a todas as perguntas; jogo limpo, sem visar colegas.","No fim, regista o resultado da turma e faz a ficha técnica e a autoavaliação do grupo na página «Balanço do módulo»."],"entrega":"As perguntas com resposta e fonte, a ligação ou o código do jogo, o resultado da turma, a ficha técnica (quem fez o quê) e a autoavaliação. Uma entrega por grupo.","alternativa":"","rubrica":[{"nome":"Perguntas e fontes","niveis":["8 a 12 perguntas ou desafios sobre a matéria do módulo, em dois níveis, cada um com resposta certa e fonte (página ou verso)","perguntas certas; faltam fontes ou os níveis não se distinguem","perguntas vagas ou fora da matéria; várias sem fonte","menos de metade, ou sem respostas"],"pontos":[80,56,32,8]},{"nome":"Condução","niveis":["regras explicadas num minuto; 15 minutos cumpridos; todos respondem a todas as perguntas; jogo limpo","um desvio: tempo, regras ou alguém de fora","a turma não participa toda, ou o tempo passa muito","não conduz, ou visa colegas"],"pontos":[60,42,24,6]},{"nome":"Registo e autoavaliação","niveis":["resultado da turma registado, ficha técnica com o que fez cada um e autoavaliação com razões","registo completo; autoavaliação sem razões","falta o resultado ou a ficha técnica","sem registo"],"pontos":[60,42,24,6]}]},{"n":2,"titulo":"Discurso no Bunker","quem":"individual","grupo":false,"passos":["Escreve um discurso de dois minutos que defenda uma regra para o grupo. Diz a regra numa frase.","Dá dois argumentos, cada um com um exemplo.","Responde à objeção mais forte e fecha com um apelo.","Diz o discurso ao grupo, que vota."],"entrega":"O texto do discurso, tal como o disseste.","alternativa":"","rubrica":[{"nome":"Tese e argumentos","niveis":["uma regra numa frase; dois argumentos, cada um com exemplo","regra clara; um argumento sem exemplo","regra vaga, ou argumentos que não a provam","sem regra ou sem argumentos"],"pontos":[67,47,27,7]},{"nome":"Objeção e apelo","niveis":["responde à objeção mais forte e fecha com um apelo coerente com a regra","responde a uma objeção fraca, ou o apelo repete a regra","objeção sem resposta","sem objeção nem apelo"],"pontos":[67,47,27,7]},{"nome":"Voz, tempo e escuta","niveis":["dois minutos; olha o grupo; ouve os outros e responde sem humilhar","um desvio de tempo ou de olhar","lê o papel, ou interrompe","não fala, ou desrespeita o grupo"],"pontos":[66,46,26,7]}]},{"n":3,"titulo":"Apreciação crítica de Frei Luís de Sousa no teatro","quem":"individual","grupo":false,"passos":["No teatro, toma notas de uma cena: interpretação, espaço, luz, som.","Escreve uma apreciação crítica do espetáculo: descreve só o que comentas e julga com critérios.","Compara uma cena vista com a mesma cena lida: indica o ato e a cena e cita o texto.","Conta as palavras: 180 a 240."],"entrega":"O texto da apreciação crítica.","alternativa":"Se faltaste à ida ao teatro, escreve a apreciação crítica de uma cena do Ato I lida em voz alta na aula: compara o que ouviste com o que leste em silêncio, com os mesmos critérios.","rubrica":[{"nome":"Descrição e juízo","niveis":["identifica o espetáculo, descreve só o que comenta (interpretação, espaço, luz, som) e julga com critérios","descreve mais do que julga","juízo sem descrição, ou sem critérios","resumo da história, ou opinião solta"],"pontos":[67,47,27,7]},{"nome":"Do texto ao palco","niveis":["compara uma cena vista com a mesma cena lida, com ato e cena indicados e uma citação","compara sem citar","fala só do texto, ou só do palco","não há comparação"],"pontos":[67,47,27,7]},{"nome":"Língua e género","niveis":["registo formal, modalização apreciativa, 180 a 240 palavras","pequenos desvios de registo ou de limite","registo misto, ou limite falhado","erros que impedem a leitura"],"pontos":[66,46,26,7]}]}],CH="rota-"+M,$=function(s){return document.querySelector(s)},$$=function(s){return Array.prototype.slice.call(document.querySelectorAll(s))};
+var ESTADO={};try{ESTADO=JSON.parse(localStorage.getItem(CH)||"{}")}catch(x){}
+function guardar(){try{localStorage.setItem(CH,JSON.stringify(ESTADO))}catch(x){}}
+function avisar(t){var a=$("#aviso");a.textContent=t;a.style.display="block";clearTimeout(avisar.t);avisar.t=setTimeout(function(){a.style.display="none"},2200)}
+var atual=null,tm=null,fim=0,bloco=-1;
+function fmt(s){s=Math.max(0,Math.round(s));return Math.floor(s/60)+":"+("0"+(s%60)).slice(-2)}
+function tique(){var r=(fim-Date.now())/1000;$("#relogio").textContent=fmt(r);if(r<=0){clearInterval(tm);tm=null;avisar("Bloco terminado. Passa ao seguinte.");$$(".bloco")[bloco].classList.add("feito");$$(".bloco")[bloco].classList.remove("ativo")}}
+function comecar(i){if(tm)clearInterval(tm);bloco=i;fim=Date.now()+BLOCOS[i][0]*60000;$$(".bloco").forEach(function(b,k){b.classList.toggle("ativo",k===i);if(k<i)b.classList.add("feito")});tique();tm=setInterval(tique,1000)}
+function d(){return ESTADO[atual.n]=ESTADO[atual.n]||{campos:{},feito:[],auto:{}}}
+function abrir(n){atual=T.filter(function(t){return t.n===n})[0];var D=d();
+  $("#r-quem").textContent="Tarefa "+atual.n+", "+atual.quem;$("#r-titulo").textContent=atual.titulo;$("#r-passos").innerHTML=atual.passos.map(function(p){return "<li>"+esc(p)+"</li>"}).join("");$("#r-entrega").textContent=atual.entrega;$("#r-alt").textContent=atual.alternativa?"Se faltaste à visita: "+atual.alternativa:"";
+  $$("[data-k]").forEach(function(t){t.value=D.campos[t.dataset.k]||""});
+  $("#r-verificar").innerHTML=atual.rubrica.map(function(p,i){return '<li><input type="checkbox" id="v'+i+'"'+(D.feito.indexOf(i)>=0?" checked":"")+'><label for="v'+i+'" style="margin:0;font-weight:400"><b>'+esc(p.nome)+':</b> '+esc(p.niveis[0])+'.</label></li>'}).join("");
+  $("#r-auto").innerHTML=atual.rubrica.map(function(p,i){var a=D.auto[i]||{};return '<p style="margin:10px 0 4px"><b>'+esc(p.nome)+'</b> <span class="pequeno">('+p.pontos[0]+' pontos no nível 4)</span></p><div class="niveis" data-p="'+i+'">'+[4,3,2,1].map(function(n){return '<button aria-pressed="'+(a.n===n?"true":"false")+'" data-n="'+n+'">'+n+'</button>'}).join("")+'</div><textarea data-auto="'+i+'" placeholder="Porquê, numa linha." style="min-height:56px">'+esc(a.j||"")+'</textarea>'}).join("");
+  $("#escolha").hidden=true;$("#rota").hidden=false;window.scrollTo(0,0)}
+function esc(s){return String(s).replace(/[&<>]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;"}[c]})}
+$$(".tarefa").forEach(function(b){b.onclick=function(){abrir(Number(b.dataset.n))}});
+$$("[data-ir]").forEach(function(b){b.onclick=function(){comecar(Number(b.dataset.ir))}});
+document.addEventListener("input",function(ev){var t=ev.target;if(!atual)return;if(t.dataset.k){d().campos[t.dataset.k]=t.value;guardar()}if(t.dataset.auto!=null){var a=d().auto;a[t.dataset.auto]=a[t.dataset.auto]||{};a[t.dataset.auto].j=t.value;guardar()}});
+document.addEventListener("change",function(ev){if(ev.target.closest("#r-verificar")){d().feito=$$("#r-verificar input").map(function(x,j){return x.checked?j:-1}).filter(function(j){return j>=0});guardar()}});
+document.addEventListener("click",function(ev){var b=ev.target.closest(".niveis button");if(!b||!atual)return;var p=b.parentNode.dataset.p;b.parentNode.querySelectorAll("button").forEach(function(x){x.setAttribute("aria-pressed","false")});b.setAttribute("aria-pressed","true");var a=d().auto;a[p]=a[p]||{};a[p].n=Number(b.dataset.n);guardar()});
+function texto(){var D=d(),l=["ROTA DA TAREFA · Módulo "+M.slice(1)+" · Tarefa "+atual.n+": "+atual.titulo,"",
+  "PLANO",D.campos.plano||"(sem plano)","","NOTAS DE TRABALHO",D.campos.notas||"(sem notas)","","VERIFICAÇÃO"];
+  atual.rubrica.forEach(function(p,i){l.push((D.feito.indexOf(i)>=0?"[x] ":"[ ] ")+p.nome)});l.push("","AUTOAVALIAÇÃO");
+  atual.rubrica.forEach(function(p,i){var a=D.auto[i]||{};l.push(p.nome+": nível "+(a.n||"-")+(a.j?" · "+a.j:""))});return l.join("\n")}
+$("#copiar").onclick=function(){var t=texto();if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(t).then(function(){avisar("Copiado. Cola na tarefa do Teams.")},function(){prompt("Copia:",t)});else prompt("Copia:",t)};
+if(navigator.share){$("#partilhar").hidden=false;$("#partilhar").onclick=function(){navigator.share({title:"Guia da tarefa",text:texto()}).catch(function(){})}}
+$("#voltar").onclick=function(){$("#rota").hidden=true;$("#escolha").hidden=false;if(tm){clearInterval(tm);tm=null}$("#relogio").textContent=fmt(BLOCOS[0][0]*60)};
+window.__testarTelemovel=function(){var larg=document.documentElement.scrollWidth<=window.innerWidth;return Promise.resolve({ok:larg,asserts:{carregou:true,semTransbordo:larg},erros:larg?[]:["transborda"]})};
+})();
+</script></body></html>

@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="pt-PT"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Fábrica de jogos</title><style>:root{--fundo:#f4f3ee;--papel:#fff;--tinta:#161616;--suave:#5c5a55;--linha:#dcd9d0;--acento:#557a24;--acento-claro:#e6eed9;--aviso:#8a4b12}
+@media (prefers-color-scheme:dark){:root{--fundo:#111210;--papel:#1b1c19;--tinta:#ecebe5;--suave:#a6a49c;--linha:#34352f;--acento:#9fcb5e;--acento-claro:#2a3320;--aviso:#e0a060}}
+*{box-sizing:border-box}html,body{margin:0;background:var(--fundo);color:var(--tinta)}body{font:16px/1.5 Arial,Helvetica,sans-serif;overflow-x:hidden}
+.topo{position:sticky;top:0;z-index:5;background:var(--fundo);border-bottom:1px solid var(--linha);padding:10px 16px}.topo .l1{display:flex;justify-content:space-between;align-items:baseline;gap:8px;max-width:760px;margin:auto}
+.marca{font:900 13px/1 "Arial Black",Arial,sans-serif;letter-spacing:.4px}.relogio{font:900 18px/1 "Arial Black",Arial,sans-serif;font-variant-numeric:tabular-nums}
+main{max-width:760px;margin:auto;padding:18px 16px 96px}h1{font:900 30px/1.05 "Arial Black",Arial,sans-serif;margin:0 0 6px}h2{font:900 20px/1.15 "Arial Black",Arial,sans-serif;margin:0 0 6px}
+.rot{font-size:12px;text-transform:uppercase;letter-spacing:.8px;color:var(--suave);margin:0 0 6px}p{margin:0 0 12px}
+.cx{background:var(--papel);border:1px solid var(--linha);border-radius:10px;padding:14px;margin:0 0 14px}
+label.c{display:block;font-weight:700;margin:10px 0 4px}input[type=text],textarea,select{width:100%;font:inherit;padding:9px 12px;border-radius:8px;border:1.5px solid var(--linha);background:var(--papel);color:var(--tinta)}textarea{min-height:64px;resize:vertical}
+.btn{display:inline-block;background:var(--tinta);color:var(--fundo);border:0;border-radius:10px;padding:12px 16px;min-height:48px;font:700 16px/1 Arial,sans-serif;cursor:pointer}.btn.sec{background:none;color:var(--tinta);border:1.5px solid var(--linha)}.btn.peq{min-height:40px;padding:8px 12px;font-size:14px}
+.fila{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 0}
+.perg{border:1.5px solid var(--linha);border-radius:12px;padding:12px;margin:0 0 10px;background:var(--papel)}.perg .cab{display:flex;justify-content:space-between;gap:8px;align-items:center;margin:0 0 6px}.perg .cab b{font:900 15px "Arial Black",Arial,sans-serif}
+.op{display:flex;gap:8px;align-items:center;margin:4px 0}.op input[type=radio]{width:20px;height:20px}.pequeno{font-size:13px;color:var(--suave)}
+.regra{border-left:4px solid var(--aviso);padding:8px 12px;background:var(--papel);border-radius:0 8px 8px 0;margin:0 0 12px}
+.lig{font:13px/1.4 Consolas,"Courier New",monospace;word-break:break-all;border:1.5px solid var(--linha);padding:8px;border-radius:8px;background:var(--papel)}
+/* condução */
+#jogo{position:fixed;inset:0;z-index:20;background:#000;color:#fff;display:none;flex-direction:column;padding:4vh 5vw;font-size:calc(16px + 1vw)}#jogo.on{display:flex}
+#jogo .cab{display:flex;justify-content:space-between;align-items:center;font:900 calc(14px + .6vw) "Arial Black",Arial,sans-serif;color:#bbb}
+#jogo .pergunta{flex:1;display:flex;flex-direction:column;justify-content:center}#jogo .texto{font:900 calc(22px + 2.2vw)/1.15 "Arial Black",Arial,sans-serif;margin:0 0 3vh;overflow-wrap:anywhere}
+#jogo .opcoes{display:grid;grid-template-columns:1fr 1fr;gap:1.2vh 1.2vw}#jogo .opcoes div{border:3px solid #444;border-radius:14px;padding:1.4vh 1.4vw;font-size:calc(16px + 1.1vw)}#jogo .opcoes div.certa{border-color:#9fcb5e;background:#1f2e12}
+#jogo .resposta{display:none;border:3px solid #9fcb5e;border-radius:14px;padding:1.4vh 1.4vw;font-size:calc(16px + 1.1vw)}#jogo.revelado .resposta{display:block}#jogo .fonte{color:#9fcb5e;font-size:calc(12px + .6vw)}
+#jogo .equipas{display:flex;flex-wrap:wrap;gap:1vw;margin:2vh 0 0}#jogo .equipas div{border:2px solid #444;border-radius:12px;padding:1vh 1.2vw;font-size:calc(14px + .8vw)}#jogo .equipas b{font:900 calc(18px + 1.2vw) "Arial Black",Arial,sans-serif;display:block}
+#jogo .equipas button{background:#222;color:#fff;border:1px solid #666;border-radius:8px;min-width:44px;min-height:44px;font:700 18px Arial;cursor:pointer;margin:4px 2px 0 0}
+#jogo .botoes{display:flex;flex-wrap:wrap;gap:1vw;margin:2vh 0 0}#jogo .botoes button{background:#fff;color:#000;border:0;border-radius:12px;padding:1.4vh 1.8vw;font:700 calc(15px + .8vw) Arial;min-height:48px;cursor:pointer}#jogo .botoes button.sec{background:#222;color:#fff;border:1px solid #666}
+#jogo .cron{font-variant-numeric:tabular-nums}#jogo .cron.fim{color:#e0a060}
+#aviso{position:fixed;left:16px;right:16px;bottom:16px;z-index:30;background:var(--tinta);color:var(--fundo);padding:12px 14px;border-radius:10px;text-align:center;display:none}</style></head><body>
+<header class="topo"><div class="l1"><span class="marca">Fábrica de jogos</span><span class="pequeno" id="estado-topo"></span></div></header>
+<main>
+<section id="inicio">
+<p class="rot">Jogo da turma</p><h1>Fábrica de jogos</h1>
+<p>O teu grupo escreve as perguntas; a página faz o jogo e ajuda a conduzi-lo no projetor. Tudo fica neste telemóvel; a ligação leva o jogo para onde for preciso.</p>
+<div class="regra"><b>Regras fixas.</b> 8 a 12 perguntas ou desafios, em dois níveis (nível 1 vale 1 ponto, nível 2 vale 2). Todos respondem a todas. Quinze minutos no máximo. Jogo limpo: nada sobre colegas.</div>
+<div class="cx"><label class="c" for="titulo">Título do jogo</label><input type="text" id="titulo" placeholder="Por exemplo: Quem disse este verso?"><label class="c" for="grupo">Grupo (nomes)</label><input type="text" id="grupo" placeholder="Os nomes de quem fez o jogo"><label class="c" for="modulo">Módulo</label><select id="modulo"><option value="">escolhe</option><option>Módulo 1</option><option>Módulo 2</option><option>Módulo 3</option><option>Módulo 4</option><option>Módulo 5</option><option>Módulo 6</option><option>Módulo 7</option><option>Módulo 8</option><option>Módulo 9</option></select></div>
+<h2>Perguntas</h2>
+<div id="perguntas"></div>
+<div class="fila"><button class="btn sec" id="nova-mc">Nova pergunta com opções</button><button class="btn sec" id="nova-ab">Novo desafio aberto</button></div>
+<h2 style="margin-top:22px">Conduzir e entregar</h2>
+<div class="cx"><p>Equipas: a turma joga em equipas pequenas (ou cada um por si). Escreve os nomes das equipas, separados por vírgulas.</p><input type="text" id="equipas" placeholder="Azul, Verde, Amarela, Vermelha"><p class="pequeno" style="margin:6px 0 0">Para projetar: abre esta página no computador da sala com a ligação abaixo, ou liga o telemóvel ao projetor.</p></div>
+<div class="fila"><button class="btn" id="conduzir">Conduzir o jogo</button><button class="btn sec" id="ligacao">Criar ligação</button><button class="btn sec" id="exportar">Copiar perguntas (texto)</button><button class="btn sec" id="apagar">Apagar tudo</button></div>
+<div id="lig-caixa" hidden style="margin-top:12px"><p class="pequeno">Ligação do jogo (copia-a para a tarefa do Teams e para quem vai projetar):</p><div class="lig" id="lig"></div><div class="fila"><button class="btn peq" id="copiar-lig">Copiar ligação</button><button class="btn peq sec" id="partilhar-lig" hidden>Partilhar</button></div></div>
+</section>
+</main>
+<div id="jogo"><div class="cab"><span id="j-titulo"></span><span class="cron" id="j-cron">15:00</span></div>
+<div class="pergunta"><div class="rot" id="j-n" style="color:#bbb"></div><div class="texto" id="j-texto"></div><div class="opcoes" id="j-opcoes"></div><div class="resposta"><span id="j-resp"></span><div class="fonte" id="j-fonte"></div></div></div>
+<div class="equipas" id="j-equipas"></div>
+<div class="botoes"><button id="j-rev">Revelar</button><button id="j-seg">Seguinte</button><button class="sec" id="j-sair">Terminar</button></div></div>
+<div id="aviso" role="status"></div>
+<script>
+(function(){
+var CH="fabrica-de-jogos",$=function(s){return document.querySelector(s)},$$=function(s){return Array.prototype.slice.call(document.querySelectorAll(s))};
+var J={titulo:"",grupo:"",modulo:"",equipas:"",p:[]};
+function b64(s){return btoa(unescape(encodeURIComponent(s))).replace(/\+/g,"-").replace(/\//g,"_").replace(/=+$/,"")}
+function unb64(s){s=s.replace(/-/g,"+").replace(/_/g,"/");while(s.length%4)s+="=";return decodeURIComponent(escape(atob(s)))}
+if(location.hash.length>2){try{J=JSON.parse(unb64(location.hash.slice(1)));avisar("Jogo carregado da ligação.")}catch(x){}}
+else{try{J=Object.assign(J,JSON.parse(localStorage.getItem(CH)||"{}"))}catch(x){}}
+function guardar(){try{localStorage.setItem(CH,JSON.stringify(J))}catch(x){}$("#estado-topo").textContent=J.p.length+" pergunta"+(J.p.length===1?"":"s")}
+function avisar(t){var a=$("#aviso");a.textContent=t;a.style.display="block";clearTimeout(avisar.t);avisar.t=setTimeout(function(){a.style.display="none"},2400)}
+function esc(s){return String(s||"").replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+function pintar(){$("#titulo").value=J.titulo||"";$("#grupo").value=J.grupo||"";$("#modulo").value=J.modulo||"";$("#equipas").value=J.equipas||"";
+  $("#perguntas").innerHTML=J.p.map(function(q,i){return '<div class="perg" data-i="'+i+'"><div class="cab"><b>'+(i+1)+'. '+(q.t==="mc"?"Pergunta com opções":"Desafio aberto")+'</b><span><label class="pequeno">Nível <select data-k="n"><option value="1"'+(q.n==1?" selected":"")+'>1</option><option value="2"'+(q.n==2?" selected":"")+'>2</option></select></label> <button class="btn peq sec" data-x="'+i+'">Apagar</button></span></div>'
+    +'<textarea data-k="q" placeholder="A pergunta ou o desafio">'+esc(q.q)+'</textarea>'
+    +(q.t==="mc"?[0,1,2,3].map(function(j){return '<div class="op"><input type="radio" name="c'+i+'" value="'+j+'"'+(q.c==j?" checked":"")+' title="certa"><input type="text" data-k="o'+j+'" placeholder="Opção '+(j+1)+'" value="'+esc(q.o[j]||"")+'"></div>'}).join("")+'<p class="pequeno" style="margin:4px 0 0">Marca o círculo da opção certa.</p>'
+    :'<input type="text" data-k="r" placeholder="A resposta certa (o que a turma tem de dizer ou escrever)" value="'+esc(q.r||"")+'">')
+    +'<input type="text" data-k="f" placeholder="Fonte: página, verso ou capítulo" value="'+esc(q.f||"")+'" style="margin-top:6px"></div>'}).join("")||'<p class="pequeno">Ainda sem perguntas. Começa por uma.</p>';guardar()}
+$("#nova-mc").onclick=function(){J.p.push({t:"mc",n:J.p.length<5?1:2,q:"",o:["","","",""],c:0,f:""});pintar();window.scrollTo(0,document.body.scrollHeight-900)};
+$("#nova-ab").onclick=function(){J.p.push({t:"ab",n:J.p.length<5?1:2,q:"",r:"",f:""});pintar()};
+document.addEventListener("input",function(ev){var t=ev.target;if(t.id==="titulo")J.titulo=t.value;else if(t.id==="grupo")J.grupo=t.value;else if(t.id==="equipas")J.equipas=t.value;else{var d=t.closest(".perg");if(!d)return;var q=J.p[d.dataset.i],k=t.dataset.k;if(!k)return;if(k[0]==="o"&&k.length===2)q.o[Number(k[1])]=t.value;else q[k]=k==="n"?Number(t.value):t.value}guardar()});
+document.addEventListener("change",function(ev){var t=ev.target;if(t.id==="modulo"){J.modulo=t.value;guardar()}if(t.type==="radio"){var d=t.closest(".perg");J.p[d.dataset.i].c=Number(t.value);guardar()}if(t.dataset&&t.dataset.k==="n"){var d2=t.closest(".perg");J.p[d2.dataset.i].n=Number(t.value);guardar()}});
+document.addEventListener("click",function(ev){var b=ev.target.closest("[data-x]");if(b&&confirm("Apagar esta pergunta?")){J.p.splice(Number(b.dataset.x),1);pintar()}});
+$("#apagar").onclick=function(){if(confirm("Apagar o jogo todo deste telemóvel?")){J={titulo:"",grupo:"",modulo:"",equipas:"",p:[]};localStorage.removeItem(CH);location.hash="";pintar()}};
+function texto(){var l=[(J.titulo||"Jogo da turma")+(J.modulo?" · "+J.modulo:""),"Grupo: "+(J.grupo||""),""];J.p.forEach(function(q,i){l.push((i+1)+". [nível "+q.n+"] "+q.q);if(q.t==="mc"){q.o.forEach(function(o,j){l.push("   "+(j===q.c?"* ":"  ")+String.fromCharCode(65+j)+") "+o)})}else l.push("   Resposta: "+(q.r||""));l.push("   Fonte: "+(q.f||""));l.push("")});return l.join("\n")}
+$("#exportar").onclick=function(){var t=texto();if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(t).then(function(){avisar("Perguntas copiadas. Serve para o Teams ou para outra aplicação.")},function(){prompt("Copia:",t)});else prompt("Copia:",t)};
+$("#ligacao").onclick=function(){var u=location.origin+location.pathname+"#"+b64(JSON.stringify(J));$("#lig").textContent=u;$("#lig-caixa").hidden=false;if(navigator.share){$("#partilhar-lig").hidden=false;$("#partilhar-lig").onclick=function(){navigator.share({title:J.titulo||"Jogo da turma",url:u}).catch(function(){})}}};
+$("#copiar-lig").onclick=function(){var u=$("#lig").textContent;if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(u).then(function(){avisar("Ligação copiada.")},function(){prompt("Copia:",u)});else prompt("Copia:",u)};
+// condução
+var G={i:-1,pontos:{},fim:0,tm:null};
+function cron(){var r=Math.max(0,Math.round((G.fim-Date.now())/1000));var c=$("#j-cron");c.textContent=Math.floor(r/60)+":"+("0"+(r%60)).slice(-2);if(r<=0){c.classList.add("fim");c.textContent="15:00 passados"}}
+function equipas(){return (J.equipas||"").split(",").map(function(s){return s.trim()}).filter(Boolean)}
+function mostrarP(){var q=J.p[G.i],j=$("#jogo");j.classList.remove("revelado");$("#j-n").textContent="Pergunta "+(G.i+1)+" de "+J.p.length+" · nível "+q.n+" · "+q.n+" ponto"+(q.n>1?"s":"");$("#j-texto").textContent=q.q;
+  $("#j-opcoes").innerHTML=q.t==="mc"?q.o.map(function(o,k){return '<div data-k="'+k+'">'+String.fromCharCode(65+k)+") "+esc(o)+"</div>"}).join(""):"";$("#j-resp").textContent=q.t==="mc"?"Certa: "+String.fromCharCode(65+q.c)+") "+q.o[q.c]:"Resposta: "+(q.r||"");$("#j-fonte").textContent=q.f?"Fonte: "+q.f:"";
+  $("#j-seg").textContent=G.i<J.p.length-1?"Seguinte":"Resultado"}
+function pintarEq(){$("#j-equipas").innerHTML=equipas().map(function(e){return '<div><b>'+esc(e)+'</b>'+(G.pontos[e]||0)+' pontos<br><button data-e="'+esc(e)+'" data-d="1">+'+(J.p[G.i]?J.p[G.i].n:1)+'</button><button data-e="'+esc(e)+'" data-d="-1">−1</button></div>'}).join("")}
+$("#conduzir").onclick=function(){if(J.p.length<1){avisar("Escreve as perguntas primeiro.");return}if(J.p.some(function(q){return !q.q})){avisar("Há perguntas sem texto.");return}G={i:0,pontos:{},fim:Date.now()+15*60000,tm:setInterval(cron,1000)};$("#jogo").classList.add("on");mostrarP();pintarEq();cron()};
+$("#j-rev").onclick=function(){var j=$("#jogo");j.classList.add("revelado");var q=J.p[G.i];if(q.t==="mc")$$("#j-opcoes div").forEach(function(d){d.classList.toggle("certa",Number(d.dataset.k)===q.c)})};
+$("#j-seg").onclick=function(){if(G.i<J.p.length-1){G.i++;mostrarP();pintarEq()}else{var r=equipas().map(function(e){return [e,G.pontos[e]||0]}).sort(function(a,b){return b[1]-a[1]});$("#j-n").textContent="Fim do jogo";$("#j-texto").textContent=r.length?r.map(function(x,i){return (i+1)+".º "+x[0]+": "+x[1]}).join(" · "):"Obrigado a todos.";$("#j-opcoes").innerHTML="";$("#jogo").classList.remove("revelado");$("#j-seg").textContent="Fim";J.resultado=r.map(function(x){return x[0]+" "+x[1]}).join(", ")+" · "+new Date().toLocaleDateString("pt-PT");guardar()}};
+$("#j-equipas").addEventListener("click",function(ev){var b=ev.target.closest("button[data-e]");if(!b)return;var e=b.dataset.e;G.pontos[e]=(G.pontos[e]||0)+(b.dataset.d==="1"?(J.p[G.i]?J.p[G.i].n:1):-1);pintarEq()});
+$("#j-sair").onclick=function(){if(G.tm)clearInterval(G.tm);$("#jogo").classList.remove("on");if(J.resultado)avisar("Resultado guardado: "+J.resultado)};
+document.addEventListener("keydown",function(ev){if(!$("#jogo").classList.contains("on"))return;if(ev.key===" "||ev.key==="ArrowRight"){ev.preventDefault();($("#jogo").classList.contains("revelado")?$("#j-seg"):$("#j-rev")).click()}if(ev.key==="Escape")$("#j-sair").click()});
+pintar();
+window.__testarTelemovel=function(){var larg=document.documentElement.scrollWidth<=window.innerWidth;return Promise.resolve({ok:larg,asserts:{carregou:true,semTransbordo:larg},erros:larg?[]:["transborda"]})};
+})();
+</script></body></html>
