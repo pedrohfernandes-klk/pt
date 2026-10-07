@@ -1,0 +1,80 @@
+<!doctype html><html lang="pt-PT"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Lição M8-F11: Caderno de campo</title><style>:root{--tinta:#000;--papel:#fff;--suave:#444;--fundo:#f3f2ee}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--papel);color:var(--tinta);font:17px/1.5 Arial,Helvetica,sans-serif}
+main{max-width:1180px;margin:0 auto;padding:0 16px 80px}
+.topo{border-bottom:4px solid var(--tinta);padding:14px 0 10px}
+.marca{font:700 .72rem/1.2 Arial;letter-spacing:.14em;text-transform:uppercase}
+h1{font:900 1.75rem/1.05 "Arial Black",Arial,sans-serif;margin:.3rem 0 .4rem;text-transform:uppercase}
+.parati{font-size:1.05rem;margin:.2rem 0 .6rem}
+nav.ligas{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 0}
+nav.ligas a{font:700 .76rem Arial;letter-spacing:.04em;text-transform:uppercase;border:2px solid var(--tinta);padding:5px 9px;text-decoration:none;color:var(--tinta)}
+nav.ligas a.cheio{background:var(--tinta);color:var(--papel)}
+.fig{margin:14px 0 6px}.fig img{display:block;max-width:100%;max-height:320px;width:auto;border:2px solid var(--tinta)}.fig figcaption{font-size:.8rem;color:var(--suave);margin-top:5px}
+.cols{display:block}
+@media (min-width:960px){.cols{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:28px;align-items:start}.col-texto{position:sticky;top:0;max-height:100vh;overflow:auto;padding-right:6px}}
+h2{font:900 1rem "Arial Black",Arial,sans-serif;background:var(--tinta);color:var(--papel);padding:6px 10px;margin:22px 0 10px;text-transform:uppercase;letter-spacing:.03em}
+h3{font:900 .95rem "Arial Black",Arial,sans-serif;margin:16px 0 6px;text-transform:uppercase}
+.essencial{border:3px solid var(--tinta);padding:10px 14px;margin:14px 0}
+.essencial ol{margin:0;padding-left:1.3rem}.essencial li{margin:0 0 6px;font-size:1.02rem}
+.texto{border:2px solid var(--tinta);padding:12px 14px;margin:12px 0}
+.texto .tit{font:900 1rem "Arial Black",Arial,sans-serif;margin:0 0 8px}
+.texto .v{margin:0;padding:0;white-space:pre-wrap;font:600 1rem/1.5 Arial}
+.texto .v .n{display:inline-block;width:2.1em;color:var(--suave);font-size:.72em;font-weight:400;text-align:right;padding-right:.6em}
+.texto p.pr{margin:0 0 8px}
+.gl{font-size:.9rem;border-top:1px solid var(--tinta);margin-top:10px;padding-top:6px}
+.fonte{font-size:.82rem;color:var(--suave);margin:6px 0 0}
+.caixa{background:var(--fundo);border-left:6px solid var(--tinta);padding:8px 12px;margin:10px 0}
+.caixa h3{margin:0 0 4px;font-size:.85rem}
+.caixa p{margin:0 0 6px}
+details{border:2px solid var(--tinta);margin:8px 0;padding:0}
+summary{cursor:pointer;font:700 .95rem Arial;padding:8px 10px;list-style:none;display:flex;gap:8px;align-items:center}
+summary::before{content:"+";font:900 1.1rem "Arial Black",Arial;width:1.2rem}
+details[open]>summary::before{content:"–"}
+details>div{padding:0 12px 10px;border-top:1px solid var(--tinta)}
+.perg{margin:14px 0 6px;font-weight:700}
+.passo{margin:4px 0 4px 1.2rem;font-size:.95rem}
+ol.passos{margin:4px 0;padding-left:1.4rem}ol.passos li{margin:0 0 4px;font-size:.95rem}
+table{border-collapse:collapse;width:100%;margin:6px 0;font-size:.92rem;table-layout:fixed}th,td{border:1px solid var(--tinta);padding:5px 7px;vertical-align:top;text-align:left;overflow-wrap:anywhere;word-break:break-word}.rol{overflow-x:auto;max-width:100%}th{background:var(--tinta);color:var(--papel);font-size:.78rem;text-transform:uppercase;letter-spacing:.06em}
+.folha{border:2px dashed var(--tinta);padding:10px 12px;margin:10px 0}
+.folha .rot{font:700 .72rem Arial;letter-spacing:.12em;text-transform:uppercase;margin:0 0 4px}
+ul.lista{margin:4px 0;padding-left:1.3rem}ul.lista li{margin:0 0 4px}
+.pares{display:grid;grid-template-columns:1fr 1fr;gap:6px 14px;font-size:.95rem}
+.exercicio iframe{width:100%;height:74vh;min-height:520px;border:3px solid var(--tinta);background:#fff}
+.exercicio .alt{font-size:.88rem;margin:6px 0 0}
+button{font:700 .95rem Arial;padding:10px 14px;border:2px solid var(--tinta);background:var(--tinta);color:var(--papel);cursor:pointer;margin:8px 8px 0 0}
+button.sec{background:var(--papel);color:var(--tinta)}
+button[aria-pressed="true"]{background:var(--papel);color:var(--tinta)}
+.estado{font:700 .78rem Arial;letter-spacing:.08em;text-transform:uppercase;margin:6px 0 0}
+.duvidas ul{margin:0;padding-left:1.3rem}
+.prox{display:flex;justify-content:space-between;gap:10px;margin:26px 0 0;flex-wrap:wrap}
+.prox a{font:700 .9rem Arial;border:2px solid var(--tinta);padding:10px 12px;text-decoration:none;color:var(--tinta)}
+.rodape{margin-top:26px;border-top:2px solid var(--tinta);padding-top:8px;font-size:.8rem;color:var(--suave)}
+#aviso{position:fixed;left:50%;bottom:16px;transform:translateX(-50%);background:var(--tinta);color:var(--papel);padding:8px 14px;font:700 .85rem Arial;display:none;z-index:9}
+@media (prefers-color-scheme:dark){:root{--tinta:#ecebe5;--papel:#121210;--suave:#b3b1aa;--fundo:#1d1d1a}.exercicio iframe{background:#121210}}
+@media print{.exercicio,nav.ligas,button,.prox{display:none!important}.cols{display:block}}
+[hidden]{display:none!important}</style></head><body><main>
+<header class="topo"><div class="marca">Português · 3.º ano · Módulo 8 · Lição M8-F11 · unidade 2, O que cabe num conto</div><h1>Caderno de campo_</h1><p class="parati">Vais a um lugar e levas um lápis em vez do telemóvel. O que trouxeres de lá é matéria-prima de escrita.</p>
+<nav class="ligas"><a class="cheio" href="https://pedrohfernandes-klk.github.io/pt/m8/#m8-f11">Percurso</a><a href="https://pedrohfernandes-klk.github.io/pt/m8/infografia-mapa-do-modulo/">Mapa do módulo</a><a href="https://pedrohfernandes-klk.github.io/pt/m8/licao-m8-f08/">Lição anterior</a><a href="https://pedrohfernandes-klk.github.io/pt/m8/licao-m8-f09/">Lição seguinte</a></nav></header>
+<div class="cols">
+<section class="col-texto"><div class="essencial"><h2 style="margin:0 0 8px">O essencial</h2><ol><li>Visita de estudo a um lugar ligado à poesia ou ao conto do século XX, com lápis em vez de telemóvel; local e data a confirmar com o docente.</li><li>Registas três pormenores visuais, dois sons, um objeto que contaria uma história, uma frase ouvida ou lida com a fonte e uma pergunta que ficou.</li><li>Aprendes a transformar um objeto observado na primeira frase de um conto e a ligar o lugar a um poema ou a um conto do módulo.</li></ol></div><div class="caixa"><h3>O que vais aprender</h3><p>Observar um lugar ligado à poesia ou ao conto do séc. XX e transformar observações em matéria de escrita.</p></div></section>
+<section class="col-licao">
+<h2>Como se lê</h2>
+<div class="caixa"><h3>Antes</h3><p>Local: ______________________ · Data: ____/____/______. Ligação ao módulo: ______________________. Durante a visita, <b>telemóvel guardado</b>: esta folha e um lápis. <span class="sub">Horários e condições: confirmar na semana da visita.</span></p></div><p class="perg">Observa como quem escreve.</p><p class="passo"><i>Pensa em cada célula; depois abre a solução e compara.</i></p><div class="rol"><table><tr><th>Registo</th><th>O que observei</th></tr><tr><td>Três pormenores visuais</td><td></td></tr><tr><td>Dois sons</td><td></td></tr><tr><td>Um objeto que contaria uma história</td><td></td></tr><tr><td>Uma frase ouvida ou lida (com fonte)</td><td></td></tr><tr><td>Uma pergunta que ficou</td><td></td></tr></table></div><details><summary>A solução</summary><div><div class="rol"><table><tr><th>Registo</th><th>O que observei</th></tr><tr><td>—</td><td>Registos concretos e sensoriais, com fonte das frases.</td></tr></table></div></div></details><h3>Depois da visita</h3><p class="perg">1. Transforma o objeto que registaste na primeira frase de um conto.</p><details><summary>Um exemplo</summary><div><p>Um modelo com outro objeto (uma cadeira vazia num museu): «A cadeira estava ali para o guarda, mas o guarda nunca se sentava, e foi por isso que reparei nela.» Pormenor concreto e uma tensão. Agora com o teu objeto.</p></div></details><details><summary>Confere a tua resposta</summary><div><p>Frase de abertura com tensão e pormenor concreto.</p></div></details><p class="perg">2. Que poema ou conto do módulo se ligaria a este lugar? Justifica.</p><p class="passo"><i>Começa assim:</i> Este lugar liga-se a «______», porque ______ (um pormenor do lugar e um verso ou passo do texto)</p><details><summary>Confere a tua resposta</summary><div><p>Ligação fundamentada.</p></div></details><h3>Para pensares sozinho</h3><ul class="lista"><li>Se estivesse a olhar para um ecrã, o que teria perdido?</li></ul>
+
+<h2 id="exercicio">Agora, o exercício</h2>
+<div class="caixa"><h3>Sem exercício no telemóvel</h3><p>Esta lição cumpre-se na oficina, com o Guia da tarefa, ou no caderno. Marca-a como lida quando a tiveres percorrido.</p></div>
+<button id="lida" aria-pressed="false">Li a lição</button><span class="estado" id="estado"></span>
+<div class="duvidas"><h2>Se ficaste com dúvidas</h2><ul><li>Volta a «O essencial» e lê outra vez o texto em voz alta, devagar.</li><li>Abre «Como se lê» na pergunta onde paraste: os passos e o exemplo são o caminho.</li><li>Guarda a dúvida para a aula: pergunta ao docente ou escreve-a nas três linhas do fim da unidade, no percurso.</li></ul></div>
+<div class="prox"><a href="https://pedrohfernandes-klk.github.io/pt/m8/licao-m8-f08/">← Lição anterior</a><a href="https://pedrohfernandes-klk.github.io/pt/m8/licao-m8-f09/">Lição seguinte →</a></div>
+</section></div>
+<p class="rodape">EPI, Escola Profissional de Imagem · Português 2026/2027 · Lição M8-F11, Caderno de campo · Fontes: As tuas observações na visita. O que marcas fica só neste aparelho.</p>
+<div id="aviso" role="status"></div></main>
+<script>
+(function(){"use strict";var K="licao-m8-f11",b=document.getElementById("lida"),s=document.getElementById("estado");
+function ler(){try{return JSON.parse(localStorage.getItem(K)||"null")}catch(x){return null}}
+function pinta(){var g=ler();b.setAttribute("aria-pressed",g&&g.lida?"true":"false");b.textContent=g&&g.lida?"Lição lida":"Li a lição";s.textContent=g&&g.lida?"marcada neste aparelho":""}
+function marca(v){try{localStorage.setItem(K,JSON.stringify({lida:v,t:Date.now()}))}catch(x){}pinta()}
+b.onclick=function(){marca(!(ler()||{}).lida)};
+var ex=document.getElementById("exercicio");if(ex&&"IntersectionObserver" in window){new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting&&!(ler()||{}).lida){marca(true);var a=document.getElementById("aviso");a.textContent="Lição marcada como lida";a.style.display="block";setTimeout(function(){a.style.display="none"},2000)}})},{threshold:.6}).observe(ex)}
+pinta()})();
+</script></body></html>

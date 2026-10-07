@@ -1,0 +1,105 @@
+<!doctype html><html lang="pt-PT"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Lição M3-F02: O kit e o mapa</title><style>:root{--tinta:#000;--papel:#fff;--suave:#444;--fundo:#f3f2ee}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--papel);color:var(--tinta);font:17px/1.5 Arial,Helvetica,sans-serif}
+main{max-width:1180px;margin:0 auto;padding:0 16px 80px}
+.topo{border-bottom:4px solid var(--tinta);padding:14px 0 10px}
+.marca{font:700 .72rem/1.2 Arial;letter-spacing:.14em;text-transform:uppercase}
+h1{font:900 1.75rem/1.05 "Arial Black",Arial,sans-serif;margin:.3rem 0 .4rem;text-transform:uppercase}
+.parati{font-size:1.05rem;margin:.2rem 0 .6rem}
+nav.ligas{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 0}
+nav.ligas a{font:700 .76rem Arial;letter-spacing:.04em;text-transform:uppercase;border:2px solid var(--tinta);padding:5px 9px;text-decoration:none;color:var(--tinta)}
+nav.ligas a.cheio{background:var(--tinta);color:var(--papel)}
+.fig{margin:14px 0 6px}.fig img{display:block;max-width:100%;max-height:320px;width:auto;border:2px solid var(--tinta)}.fig figcaption{font-size:.8rem;color:var(--suave);margin-top:5px}
+.cols{display:block}
+@media (min-width:960px){.cols{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:28px;align-items:start}.col-texto{position:sticky;top:0;max-height:100vh;overflow:auto;padding-right:6px}}
+h2{font:900 1rem "Arial Black",Arial,sans-serif;background:var(--tinta);color:var(--papel);padding:6px 10px;margin:22px 0 10px;text-transform:uppercase;letter-spacing:.03em}
+h3{font:900 .95rem "Arial Black",Arial,sans-serif;margin:16px 0 6px;text-transform:uppercase}
+.essencial{border:3px solid var(--tinta);padding:10px 14px;margin:14px 0}
+.essencial ol{margin:0;padding-left:1.3rem}.essencial li{margin:0 0 6px;font-size:1.02rem}
+.texto{border:2px solid var(--tinta);padding:12px 14px;margin:12px 0}
+.texto .tit{font:900 1rem "Arial Black",Arial,sans-serif;margin:0 0 8px}
+.texto .v{margin:0;padding:0;white-space:pre-wrap;font:600 1rem/1.5 Arial}
+.texto .v .n{display:inline-block;width:2.1em;color:var(--suave);font-size:.72em;font-weight:400;text-align:right;padding-right:.6em}
+.texto p.pr{margin:0 0 8px}
+.gl{font-size:.9rem;border-top:1px solid var(--tinta);margin-top:10px;padding-top:6px}
+.fonte{font-size:.82rem;color:var(--suave);margin:6px 0 0}
+.caixa{background:var(--fundo);border-left:6px solid var(--tinta);padding:8px 12px;margin:10px 0}
+.caixa h3{margin:0 0 4px;font-size:.85rem}
+.caixa p{margin:0 0 6px}
+details{border:2px solid var(--tinta);margin:8px 0;padding:0}
+summary{cursor:pointer;font:700 .95rem Arial;padding:8px 10px;list-style:none;display:flex;gap:8px;align-items:center}
+summary::before{content:"+";font:900 1.1rem "Arial Black",Arial;width:1.2rem}
+details[open]>summary::before{content:"–"}
+details>div{padding:0 12px 10px;border-top:1px solid var(--tinta)}
+.perg{margin:14px 0 6px;font-weight:700}
+.passo{margin:4px 0 4px 1.2rem;font-size:.95rem}
+ol.passos{margin:4px 0;padding-left:1.4rem}ol.passos li{margin:0 0 4px;font-size:.95rem}
+table{border-collapse:collapse;width:100%;margin:6px 0;font-size:.92rem;table-layout:fixed}th,td{border:1px solid var(--tinta);padding:5px 7px;vertical-align:top;text-align:left;overflow-wrap:anywhere;word-break:break-word}.rol{overflow-x:auto;max-width:100%}th{background:var(--tinta);color:var(--papel);font-size:.78rem;text-transform:uppercase;letter-spacing:.06em}
+.folha{border:2px dashed var(--tinta);padding:10px 12px;margin:10px 0}
+.folha .rot{font:700 .72rem Arial;letter-spacing:.12em;text-transform:uppercase;margin:0 0 4px}
+ul.lista{margin:4px 0;padding-left:1.3rem}ul.lista li{margin:0 0 4px}
+.pares{display:grid;grid-template-columns:1fr 1fr;gap:6px 14px;font-size:.95rem}
+.exercicio iframe{width:100%;height:74vh;min-height:520px;border:3px solid var(--tinta);background:#fff}
+.exercicio .alt{font-size:.88rem;margin:6px 0 0}
+button{font:700 .95rem Arial;padding:10px 14px;border:2px solid var(--tinta);background:var(--tinta);color:var(--papel);cursor:pointer;margin:8px 8px 0 0}
+button.sec{background:var(--papel);color:var(--tinta)}
+button[aria-pressed="true"]{background:var(--papel);color:var(--tinta)}
+.estado{font:700 .78rem Arial;letter-spacing:.08em;text-transform:uppercase;margin:6px 0 0}
+.duvidas ul{margin:0;padding-left:1.3rem}
+.prox{display:flex;justify-content:space-between;gap:10px;margin:26px 0 0;flex-wrap:wrap}
+.prox a{font:700 .9rem Arial;border:2px solid var(--tinta);padding:10px 12px;text-decoration:none;color:var(--tinta)}
+.rodape{margin-top:26px;border-top:2px solid var(--tinta);padding-top:8px;font-size:.8rem;color:var(--suave)}
+#aviso{position:fixed;left:50%;bottom:16px;transform:translateX(-50%);background:var(--tinta);color:var(--papel);padding:8px 14px;font:700 .85rem Arial;display:none;z-index:9}
+@media (prefers-color-scheme:dark){:root{--tinta:#ecebe5;--papel:#121210;--suave:#b3b1aa;--fundo:#1d1d1a}.exercicio iframe{background:#121210}}
+@media print{.exercicio,nav.ligas,button,.prox{display:none!important}.cols{display:block}}
+[hidden]{display:none!important}</style></head><body><main>
+<header class="topo"><div class="marca">Português · 1.º ano · Módulo 3 · Lição M3-F02 · unidade 1, Quem conta a viagem</div><h1>O kit e o mapa_</h1><p class="parati">Em 1498 os portugueses chegaram à Índia. Quem já lá vivia não foi descoberto por ninguém. Vais pôr as duas versões lado a lado.</p>
+<nav class="ligas"><a class="cheio" href="https://pedrohfernandes-klk.github.io/pt/m3/#m3-f02">Percurso</a><a href="https://pedrohfernandes-klk.github.io/pt/m3/infografia-mapa-do-modulo/">Mapa do módulo</a><a href="https://pedrohfernandes-klk.github.io/pt/m3/licao-m3-f03/">Lição seguinte</a></nav></header>
+<div class="cols">
+<section class="col-texto"><div class="essencial"><h2 style="margin:0 0 8px">O essencial</h2><ol><li>Em 1498 os portugueses chegaram à Índia; Patrícia Lino, poeta nascida no Porto em 1990, publicou em 2020 um Kit que pergunta quem conta essa história.</li><li>A Proposição de Os Lusíadas (I, 1 a 3) canta «os barões assinalados»; o Kit, com objetos inventados e ironia, mostra quem fica sem nome nem voz.</li><li>Ficas a distinguir facto, juízo, interpretação e opinião, e a contar 1498 pela voz de quem já vivia em Calecute.</li></ol></div><div class="texto" id="texto-0"><p class="tit">A narrativa tradicional: a Proposição (I, 1 a 3)</p><p class="v"><span class="n"></span>As armas e os barões assinalados,
+<span class="n"></span>Que da ocidental praia Lusitana,
+<span class="n"></span>Por mares nunca de antes navegados,
+<span class="n"></span>Passaram ainda além da Taprobana,
+<span class="n">5</span>Em perigos e guerras esforçados,
+<span class="n"></span>Mais do que prometia a força humana,
+<span class="n"></span>E entre gente remota edificaram
+<span class="n"></span>Novo Reino, que tanto sublimaram;
+
+<span class="n"></span>E também as memórias gloriosas
+<span class="n">10</span>Daqueles Reis, que foram dilatando
+<span class="n"></span>A Fé, o Império, e as terras viciosas
+<span class="n"></span>De África e de Ásia andaram devastando;
+<span class="n"></span>E aqueles, que por obras valerosas
+<span class="n"></span>Se vão da lei da morte libertando;
+<span class="n">15</span>Cantando espalharei por toda parte,
+<span class="n"></span>Se a tanto me ajudar o engenho e arte.
+
+<span class="n"></span>Cessem do sábio Grego e do Troiano
+<span class="n"></span>As navegações grandes que fizeram;
+<span class="n"></span>Cale-se de Alexandro e de Trajano
+<span class="n">20</span>A fama das vitórias que tiveram;
+<span class="n"></span>Que eu canto o peito ilustre Lusitano,
+<span class="n"></span>A quem Neptuno e Marte obedeceram:
+<span class="n"></span>Cesse tudo o que a Musa antígua canta,
+<span class="n"></span>Que outro valor mais alto se alevanta.</p><p class="gl"><b>Vocabulário:</b> <b>barões assinalados</b>, homens notáveis; <b>Taprobana</b>, o Ceilão, hoje Sri Lanka; <b>sublimaram</b>, engrandeceram; <b>dilatando</b>, alargando; <b>viciosas</b>, corrompidas (na visão do poeta); <b>lei da morte</b>, o esquecimento; <b>o sábio Grego</b>, Ulisses; <b>o Troiano</b>, Eneias; <b>Alexandro</b>, Alexandre Magno; <b>antígua</b>, antiga; <b>se alevanta</b>, se levanta</p><p class="fonte">Luís de Camões, Os Lusíadas (1572), I, 1 a 3 (grafia modernizada).</p></div></section>
+<section class="col-licao">
+<h2>Como se lê</h2>
+<div class="caixa"><h3>Como ler</h3><p>O livro de Patrícia Lino mistura objetos, imagens e textos para questionar a forma como se contam as Descobertas. <b>Não se transcreve aqui</b>: os excertos leem-se no livro ou na cópia autorizada da aula. Nesta ficha registas citações curtas com página. Pergunta de fundo: <b>quem conta, e quem fica de fora?</b></p><p>Excerto(s): p. ____ a ____.</p></div><div class="caixa"><h3>Seis objetos do Kit</h3><p>O livro é um catálogo de objetos inventados, com imagem e instruções, para quem não consegue largar a ideia de império. Seis deles, para começar a conversa (lê os textos inteiros no livro ou na cópia da aula):</p><ul><li><b>Frasquinho de Mar Português:</b> uma caravela num frasco de vidro, para inalar; as instruções pedem que, ao exalar, se façam sons sibilantes «como os que se encontra na palavra imposição, sacrifício, massificação, cinismo, cobiça, execução ou zombaria».</li><li><b>A Colónia:</b> a versão colonial portuguesa do Monopólio; o jogador avança quantas casas quiser e, ao parar, grita «É MEU!».</li><li><b>História Docinha:</b> um pacote de açúcar para adoçar a conversa sobre a colonização, recomendado para «situações de grande constrangimento, exaltação ou nervosismo».</li><li><b>Disco Riscado Lusitanístico:</b> um disco com seis faixas que se repetem, como «QUANDO PORTUGAL DESCOBRIU O MUNDO...» e «O QUE FIZEMOS NÃO FOI ASSIM TÃO MAU!».</li><li><b>Remendo Imperial Personalizado:</b> um remendo com a frase «O império dos homens», aplicado a ferro de engomar pela mulher, mãe ou irmã.</li><li><b>Sebastiana:</b> «uma máquina de fazer nevoeiro que propicia as condições atmosféricas ideais para o reaparecimento de Dom Sebastião».</li></ul><p>Para cada objeto, responde a duas perguntas: de que é que ele se ri, e o que é que fica à vista depois do riso.</p></div><div class="caixa"><h3>As quatro horas</h3><p>Primeira hora: os excertos do Kit, lidos na aula, com citações curtas e página. Segunda: a Proposição de Os Lusíadas (em baixo) e o quadro das duas versões. Terceira: as afirmações a classificar e os três verbos. Quarta: o texto «1498 contado de outro lado». O que ficar por acabar vai para casa; a ficha «Objetos com duas histórias» começa a seguir.</p></div><p class="perg">Preenche o quadro com as duas versões da mesma história: a Proposição de um lado, o Kit do outro.</p><p class="passo"><i>Pensa em cada célula; depois abre a solução e compara.</i></p><div class="rol"><table><tr><th></th><th>Narrativa tradicional das Descobertas</th><th>O que o Kit mostra ou pergunta</th></tr><tr><td>Protagonistas</td><td></td><td></td></tr><tr><td>Palavras usadas («descobrir», «civilizar»…)</td><td></td><td></td></tr><tr><td>Quem não tem voz</td><td></td><td></td></tr><tr><td>Tom</td><td></td><td></td></tr></table></div><details><summary>A solução</summary><div><div class="rol"><table><tr><th></th><th>Narrativa tradicional das Descobertas</th><th>O que o Kit mostra ou pergunta</th></tr><tr><td>Protagonistas</td><td>«Os barões assinalados», os reis que foram «dilatando / A Fé, o Império»; Neptuno e Marte a obedecer-lhes</td><td>Quem já vivia na Índia e em África: sem nome nem voz na Proposição; o Kit dá-lhes lugar</td></tr><tr><td>Palavras usadas</td><td>«edificaram / Novo Reino», «dilatando», «devastando» (dito como glória), «sublimaram»</td><td>«chegar», «conquistar»; a pergunta: quem chamou «descoberta» ao que aconteceu?</td></tr><tr><td>Quem não tem voz</td><td>As «terras viciosas / De África e de Ásia» e a «gente remota»: lugares e gente sem fala</td><td>Os objetos e as imagens do Kit falam por quem o poema cala</td></tr><tr><td>Tom</td><td>Celebração: «outro valor mais alto se alevanta»</td><td>Ironia, pergunta, inventário</td></tr></table></div></div></details><p class="perg">Facto, inferência, interpretação ou opinião? Decide para cada frase.</p><p class="passo">1. Os navegadores portugueses chegaram à Índia por mar em 1498.</p><details><summary>Confere</summary><div><p>Facto histórico.</p></div></details><p class="passo">2. «Descobrir» é a palavra certa para o que aconteceu.</p><details><summary>Confere</summary><div><p>Juízo discutível: para quem já lá vivia, não houve descoberta.</p></div></details><p class="passo">3. O Kit usa a ironia para criticar.</p><details><summary>Confere</summary><div><p>Interpretação a provar com o excerto.</p></div></details><p class="passo">4. Devíamos deixar de estudar Os Lusíadas.</p><details><summary>Confere</summary><div><p>Opinião.</p></div></details><div class="folha"><p class="rot">Para fazer no caderno, na aula</p><h3 style="margin-top:0">Três palavras para 1498</h3><p>Propõe três verbos alternativos a «descobrir» para contar a chegada à Índia. Escolhe o que é mais rigoroso e explica o que muda.</p><ul class="lista"><li>Um verbo</li><li>Outro, diferente</li><li>Um terceiro</li></ul><p class="passo"><i>Regra:</i> sem insultos nem anacronismos</p><details><summary>Um exemplo</summary><div><p>Um verbo feito, para veres o modelo: «chegar»: os portugueses chegaram à Índia; diz o que aconteceu do lado de quem viajou, sem decidir o que foi para quem já lá estava. Os teus três são outros.</p></div></details></div><div class="folha"><p class="rot">Escrita: no caderno, na aula ou na oficina</p><p><b>1498 contado de outro lado.</b> Em 120 a 150 palavras, conta a chegada das naus a Calecute pela voz de alguém que já lá vivia: o que viu, o que ouviu, o que não percebeu. Sem tomar partido: uma cena, não um julgamento.</p><ol class="passos"><li>Primeira frase: quem fala (um mercador, uma criança, um pescador) e onde está quando vê as velas.</li><li>Três coisas concretas: uma vista, um som, uma palavra que não entendeu.</li><li>Última frase: o que essa pessoa pensa que vai acontecer a seguir; ela não sabe o que tu sabes.</li></ol><p class="passo"><i>Como é avaliado:</i> Voz coerente com o lugar (Calecute, 1498), pormenores concretos, sem juízo explícito sobre «descoberta»; 120–150 palavras; é o par da Proposição: quem conta, e quem fica de fora.</p></div><h3>Confere</h3><ul class="lista"><li>☐ Disse quem fala e onde está.</li><li>☐ Há uma coisa vista, um som e uma palavra que a personagem não entendeu.</li><li>☐ A personagem não sabe o que eu sei.</li><li>☐ Não julguei: contei uma cena.</li><li>☐ Contei: 120 a 150 palavras.</li></ul><h3>Para pensares sozinho</h3><ul class="lista"><li>A leitura crítica tirou-me a vontade de ler a epopeia ou deu-me outra forma de a ler?</li></ul>
+
+<h2 id="exercicio">Agora, o exercício</h2>
+<div class="caixa"><h3>Sem exercício no telemóvel</h3><p>Esta lição cumpre-se na oficina, com o Guia da tarefa, ou no caderno. Marca-a como lida quando a tiveres percorrido.</p></div>
+<button id="lida" aria-pressed="false">Li a lição</button><span class="estado" id="estado"></span>
+<div class="duvidas"><h2>Se ficaste com dúvidas</h2><ul><li>Volta a «O essencial» e lê outra vez o texto em voz alta, devagar.</li><li>Abre «Como se lê» na pergunta onde paraste: os passos e o exemplo são o caminho.</li><li>Guarda a dúvida para a aula: pergunta ao docente ou escreve-a nas três linhas do fim da unidade, no percurso.</li></ul></div>
+<div class="prox"><span></span><a href="https://pedrohfernandes-klk.github.io/pt/m3/licao-m3-f03/">Lição seguinte →</a></div>
+</section></div>
+<p class="rodape">EPI, Escola Profissional de Imagem · Português 2026/2027 · Lição M3-F02, O kit e o mapa · Fontes: Patrícia Lino, O Kit de Sobrevivência do Descobridor Português no Mundo Anticolonial (excertos no manual ou fornecidos pelo docente); Luís de Camões, Os Lusíadas (1572), I, 1 a 3. O que marcas fica só neste aparelho.</p>
+<div id="aviso" role="status"></div></main>
+<script>
+(function(){"use strict";var K="licao-m3-f02",b=document.getElementById("lida"),s=document.getElementById("estado");
+function ler(){try{return JSON.parse(localStorage.getItem(K)||"null")}catch(x){return null}}
+function pinta(){var g=ler();b.setAttribute("aria-pressed",g&&g.lida?"true":"false");b.textContent=g&&g.lida?"Lição lida":"Li a lição";s.textContent=g&&g.lida?"marcada neste aparelho":""}
+function marca(v){try{localStorage.setItem(K,JSON.stringify({lida:v,t:Date.now()}))}catch(x){}pinta()}
+b.onclick=function(){marca(!(ler()||{}).lida)};
+var ex=document.getElementById("exercicio");if(ex&&"IntersectionObserver" in window){new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting&&!(ler()||{}).lida){marca(true);var a=document.getElementById("aviso");a.textContent="Lição marcada como lida";a.style.display="block";setTimeout(function(){a.style.display="none"},2000)}})},{threshold:.6}).observe(ex)}
+pinta()})();
+</script></body></html>
