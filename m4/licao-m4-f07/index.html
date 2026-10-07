@@ -1,0 +1,79 @@
+<!doctype html><html lang="pt-PT"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Lição M4-F07: Ilumino a minha casa</title><style>:root{--tinta:#000;--papel:#fff;--suave:#444;--fundo:#f3f2ee}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--papel);color:var(--tinta);font:17px/1.5 Arial,Helvetica,sans-serif}
+main{max-width:1180px;margin:0 auto;padding:0 16px 80px}
+.topo{border-bottom:4px solid var(--tinta);padding:14px 0 10px}
+.marca{font:700 .72rem/1.2 Arial;letter-spacing:.14em;text-transform:uppercase}
+h1{font:900 1.75rem/1.05 "Arial Black",Arial,sans-serif;margin:.3rem 0 .4rem;text-transform:uppercase}
+.parati{font-size:1.05rem;margin:.2rem 0 .6rem}
+nav.ligas{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 0}
+nav.ligas a{font:700 .76rem Arial;letter-spacing:.04em;text-transform:uppercase;border:2px solid var(--tinta);padding:5px 9px;text-decoration:none;color:var(--tinta)}
+nav.ligas a.cheio{background:var(--tinta);color:var(--papel)}
+.cols{display:block}
+@media (min-width:960px){.cols{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:28px;align-items:start}.col-texto{position:sticky;top:0;max-height:100vh;overflow:auto;padding-right:6px}}
+h2{font:900 1rem "Arial Black",Arial,sans-serif;background:var(--tinta);color:var(--papel);padding:6px 10px;margin:22px 0 10px;text-transform:uppercase;letter-spacing:.03em}
+h3{font:900 .95rem "Arial Black",Arial,sans-serif;margin:16px 0 6px;text-transform:uppercase}
+.essencial{border:3px solid var(--tinta);padding:10px 14px;margin:14px 0}
+.essencial ol{margin:0;padding-left:1.3rem}.essencial li{margin:0 0 6px;font-size:1.02rem}
+.texto{border:2px solid var(--tinta);padding:12px 14px;margin:12px 0}
+.texto .tit{font:900 1rem "Arial Black",Arial,sans-serif;margin:0 0 8px}
+.texto .v{margin:0;padding:0;white-space:pre-wrap;font:600 1rem/1.5 Arial}
+.texto .v .n{display:inline-block;width:2.1em;color:var(--suave);font-size:.72em;font-weight:400;text-align:right;padding-right:.6em}
+.texto p.pr{margin:0 0 8px}
+.gl{font-size:.9rem;border-top:1px solid var(--tinta);margin-top:10px;padding-top:6px}
+.fonte{font-size:.82rem;color:var(--suave);margin:6px 0 0}
+.caixa{background:var(--fundo);border-left:6px solid var(--tinta);padding:8px 12px;margin:10px 0}
+.caixa h3{margin:0 0 4px;font-size:.85rem}
+.caixa p{margin:0 0 6px}
+details{border:2px solid var(--tinta);margin:8px 0;padding:0}
+summary{cursor:pointer;font:700 .95rem Arial;padding:8px 10px;list-style:none;display:flex;gap:8px;align-items:center}
+summary::before{content:"+";font:900 1.1rem "Arial Black",Arial;width:1.2rem}
+details[open]>summary::before{content:"–"}
+details>div{padding:0 12px 10px;border-top:1px solid var(--tinta)}
+.perg{margin:14px 0 6px;font-weight:700}
+.passo{margin:4px 0 4px 1.2rem;font-size:.95rem}
+ol.passos{margin:4px 0;padding-left:1.4rem}ol.passos li{margin:0 0 4px;font-size:.95rem}
+table{border-collapse:collapse;width:100%;margin:6px 0;font-size:.92rem}th,td{border:1px solid var(--tinta);padding:5px 7px;vertical-align:top;text-align:left}th{background:var(--tinta);color:var(--papel);font-size:.78rem;text-transform:uppercase;letter-spacing:.06em}
+.folha{border:2px dashed var(--tinta);padding:10px 12px;margin:10px 0}
+.folha .rot{font:700 .72rem Arial;letter-spacing:.12em;text-transform:uppercase;margin:0 0 4px}
+ul.lista{margin:4px 0;padding-left:1.3rem}ul.lista li{margin:0 0 4px}
+.pares{display:grid;grid-template-columns:1fr 1fr;gap:6px 14px;font-size:.95rem}
+.exercicio iframe{width:100%;height:74vh;min-height:520px;border:3px solid var(--tinta);background:#fff}
+.exercicio .alt{font-size:.88rem;margin:6px 0 0}
+button{font:700 .95rem Arial;padding:10px 14px;border:2px solid var(--tinta);background:var(--tinta);color:var(--papel);cursor:pointer;margin:8px 8px 0 0}
+button.sec{background:var(--papel);color:var(--tinta)}
+button[aria-pressed="true"]{background:var(--papel);color:var(--tinta)}
+.estado{font:700 .78rem Arial;letter-spacing:.08em;text-transform:uppercase;margin:6px 0 0}
+.duvidas ul{margin:0;padding-left:1.3rem}
+.prox{display:flex;justify-content:space-between;gap:10px;margin:26px 0 0;flex-wrap:wrap}
+.prox a{font:700 .9rem Arial;border:2px solid var(--tinta);padding:10px 12px;text-decoration:none;color:var(--tinta)}
+.rodape{margin-top:26px;border-top:2px solid var(--tinta);padding-top:8px;font-size:.8rem;color:var(--suave)}
+#aviso{position:fixed;left:50%;bottom:16px;transform:translateX(-50%);background:var(--tinta);color:var(--papel);padding:8px 14px;font:700 .85rem Arial;display:none;z-index:9}
+@media (prefers-color-scheme:dark){:root{--tinta:#ecebe5;--papel:#121210;--suave:#b3b1aa;--fundo:#1d1d1a}.exercicio iframe{background:#121210}}
+@media print{.exercicio,nav.ligas,button,.prox{display:none!important}.cols{display:block}}
+[hidden]{display:none!important}</style></head><body><main>
+<header class="topo"><div class="marca">Português · 2.º ano · Módulo 4 · Lição M4-F07 · unidade 2, Ninguém</div><h1>Ilumino a minha casa_</h1><p class="parati">Os governadores de Castela querem instalar-se em casa de Manuel de Sousa Coutinho. Ele pega numa tocha e diz que vai iluminá-la para os receber.</p>
+<nav class="ligas"><a class="cheio" href="https://pedrohfernandes-klk.github.io/pt/m4/#m4-f07">Percurso</a><a href="https://pedrohfernandes-klk.github.io/pt/m4/infografia-mapa-do-modulo/">Mapa do módulo</a><a href="https://pedrohfernandes-klk.github.io/pt/m4/licao-m4-f10/">Lição anterior</a><a href="https://pedrohfernandes-klk.github.io/pt/m4/licao-m4-f20/">Lição seguinte</a></nav></header>
+<div class="cols">
+<section class="col-texto"><div class="essencial"><h2 style="margin:0 0 8px">O essencial</h2><ol><li>Frei Luís de Sousa, de Almeida Garrett (estreia em 1843, publicação em 1844), é um drama em três atos; Madalena casou com Manuel de Sousa Coutinho depois de o primeiro marido, D. João de Portugal, desaparecer em Alcácer Quibir.</li><li>No fim do ato I, os governadores de Castela querem instalar-se na casa de Manuel; ele pega numa tocha e «ilumina» a casa: incendeia-a.</li><li>As didascálias (as indicações entre parênteses) dizem quem entra, o que faz e com que tom: lê-as antes das falas.</li></ol></div><div class="texto" id="texto-0"><p class="tit">Ato I, cenas XI–XII</p><p class="pr"><b>[1]</b> MANUEL — Meu pai morreu desastrosamente caindo sobre a sua própria espada; quem sabe se eu morrerei nas chamas ateadas por minhas mãos? Seja. Mas fique-se aprendendo em Portugal como um homem de honra e coração, por mais poderosa que seja a tirania, sempre lhe pode resistir, em perdendo o amor a coisas tão vis e precárias como são esses haveres que duas faíscas destroem num momento… como é esta vida miserável que um sopro pode apagar em menos tempo ainda! (Arrebata duas tochas das mãos dos criados, corre à porta da esquerda, atira com uma para dentro: e vê-se atear logo uma labareda imensa. Vai ao fundo, atira a outra tocha; e sucede o mesmo. Ouve-se alarido de fora.)</p><p class="pr"><b>[2]</b> […]</p><p class="pr"><b>[3]</b> MADALENA — Que fazes?… que fizeste? — Que é isto, oh meu Deus!</p><p class="pr"><b>[4]</b> MANUEL, tranquilamente — Ilumino a minha casa para receber os muito poderosos e excelentes senhores governadores destes reinos. Suas excelências podem vir quando quiserem.</p><p class="pr"><b>[5]</b> MADALENA — Meu Deus, meu Deus!… Ai, e o retrato de meu marido!… Salvem-me aquele retrato.</p><p class="pr"><b>[6]</b> (Miranda e outro criado vão para tirar o painel; uma coluna de fogo salta nas tapeçarias e os afugenta.)</p><p class="pr"><b>[7]</b> MANUEL — Parti, parti. As matérias inflamáveis que eu tinha disposto vão-se ateando com espantosa velocidade. Fugi.</p><p class="gl"><b>Vocabulário:</b> <b>didascália</b>, indicação cénica, entre parênteses; <b>haveres</b>, bens, riqueza; <b>atear</b>, acender; <b>alarido</b>, gritaria; <b>painel</b>, aqui, o retrato</p><p class="fonte">Almeida Garrett, Frei Luís de Sousa (1844), ortografia atualizada.</p></div></section>
+<section class="col-licao">
+<h2>Como se lê</h2>
+<div class="caixa"><h3>Onde estamos na peça</h3><p><b>Frei Luís de Sousa</b>, de Almeida Garrett, estreou em 1843 e foi publicado em 1844. É um drama em três atos. D. Madalena de Vilhena casou com Manuel de Sousa Coutinho depois de o primeiro marido, D. João de Portugal, ter desaparecido na batalha de Alcácer-Quibir. Vivem com a filha, Maria, e com o velho escudeiro Telmo. No fim do ato I, os governadores do reino (ao serviço de Castela) querem instalar-se no palácio de Manuel.</p></div><h3>Analisar</h3><p class="perg">1. Que informação dá a didascália [1] que as falas não dão? Porque é importante no palco?</p><details><summary>Como se lê</summary><div><ol class="passos"><li>Diz o que Manuel faz, passo a passo, segundo a didascália (as tochas, a porta, o fundo).</li><li>Explica o que o público veria sem ouvir uma palavra, e porque «Ilumino a minha casa» só se entende depois.</li></ol></div></details><details><summary>Confere a tua resposta</summary><div><p>A ação e o ritmo: Manuel arrebata as tochas, corre, lança fogo; vê-se a labareda. Sem ela, «Ilumino a minha casa» não se entenderia.</p></div></details><p class="perg">2. Explica a ironia de «Ilumino a minha casa para receber…» dito «tranquilamente».</p><p class="passo"><i>Começa assim:</i> Manuel diz que ______________________, mas o que está a fazer é ______________________; dizê-lo «tranquilamente» torna o gesto ______</p><details><summary>Confere a tua resposta</summary><div><p>Diz que ilumina para receber com honra, mas está a incendiar a casa para não a entregar: cortesia aparente, recusa real; a calma torna o gesto mais desafiador.</p></div></details><p class="perg">3. Manuel fala primeiro do pai e da própria morte. Que ideia de honra defende antes de pegar nas tochas? Cita a expressão que a resume.</p><details><summary>Como se lê</summary><div><ol class="passos"><li>Procura na fala de Manuel o que um «homem de honra e coração» pode sempre fazer.</li><li>Diz de que é que ele está disposto a abrir mão («haveres», a «vida miserável») e porquê.</li></ol></div></details><details><summary>Confere a tua resposta</summary><div><p>Um homem de honra pode sempre resistir à tirania, se deixar de amar coisas «vis e precárias» como os bens e a própria vida: «por mais poderosa que seja a tirania, sempre lhe pode resistir».</p></div></details><p class="perg">4. «o retrato de meu marido»: de que retrato se trata, e porque pode este pormenor preparar o resto da peça?</p><details><summary>Confere a tua resposta</summary><div><p>É o retrato de Manuel de Sousa Coutinho, o marido atual, que arde. Prepara o tema dos retratos, da identidade e do passado que regressa (o retrato de D. João, no ato II).</p></div></details><div class="folha"><p class="rot">Para fazer na folha A4, na aula</p><h3 style="margin-top:0">Julgar o gesto</h3><p>O incêndio é patriotismo, orgulho ou imprudência? Escreve um juízo de três posições diferentes: Manuel, Madalena, um governador.</p><ul class="lista"><li>Manuel</li><li>Madalena</li><li>Um governador</li></ul><p class="passo"><i>Regra:</i> cada juízo em 2 frases, com uma palavra do texto</p><details><summary>Um exemplo</summary><div><p>Um juízo feito, na voz de um criado, para veres o modelo: «O senhor chamou-lhe iluminar a casa. Eu chamo-lhe deitar fogo ao teto que me abrigava.» Duas frases, uma palavra do texto, uma posição clara. Os teus são de Manuel, Madalena e um governador.</p></div></details></div><h3>Para pensares sozinho</h3><ul class="lista"><li>Com que posição comecei? Qual das outras me obrigou a pensar mais?</li></ul>
+
+<h2 id="exercicio">Agora, o exercício</h2>
+<div class="exercicio"><p><b>Ilumino a minha casa</b>: Almeida Garrett, Frei Luís de Sousa, 1844 · ato I. Cinco minutos; o resultado fica guardado e o percurso marca o passo.</p><iframe src="https://pedrohfernandes-klk.github.io/pt/m4/garrett-fogo/" title="Ilumino a minha casa" loading="lazy"></iframe><p class="alt"><a href="https://pedrohfernandes-klk.github.io/pt/m4/garrett-fogo/">Abrir o exercício numa página só</a></p></div>
+<button id="lida" aria-pressed="false">Li a lição</button><span class="estado" id="estado"></span>
+<div class="duvidas"><h2>Se ficaste com dúvidas</h2><ul><li>Volta a «O essencial» e lê outra vez o texto em voz alta, devagar.</li><li>Abre «Como se lê» na pergunta onde paraste: os passos e o exemplo são o caminho.</li><li>Guarda a dúvida para a aula: pergunta ao docente ou escreve-a nas três linhas do fim da unidade, no percurso.</li></ul></div>
+<div class="prox"><a href="https://pedrohfernandes-klk.github.io/pt/m4/licao-m4-f10/">← Lição anterior</a><a href="https://pedrohfernandes-klk.github.io/pt/m4/licao-m4-f20/">Lição seguinte →</a></div>
+</section></div>
+<p class="rodape">EPI, Escola Profissional de Imagem · Português 2026/2027 · Lição M4-F07, Ilumino a minha casa · Fontes: Almeida Garrett, Frei Luís de Sousa (1844), ortografia atualizada, ato I, cenas XI e XII; Wikipédia, «Frei Luís de Sousa (peça teatral)». O que marcas fica só neste aparelho.</p>
+<div id="aviso" role="status"></div></main>
+<script>
+(function(){"use strict";var K="licao-m4-f07",b=document.getElementById("lida"),s=document.getElementById("estado");
+function ler(){try{return JSON.parse(localStorage.getItem(K)||"null")}catch(x){return null}}
+function pinta(){var g=ler();b.setAttribute("aria-pressed",g&&g.lida?"true":"false");b.textContent=g&&g.lida?"Lição lida":"Li a lição";s.textContent=g&&g.lida?"marcada neste aparelho":""}
+function marca(v){try{localStorage.setItem(K,JSON.stringify({lida:v,t:Date.now()}))}catch(x){}pinta()}
+b.onclick=function(){marca(!(ler()||{}).lida)};
+var ex=document.getElementById("exercicio");if(ex&&"IntersectionObserver" in window){new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting&&!(ler()||{}).lida){marca(true);var a=document.getElementById("aviso");a.textContent="Lição marcada como lida";a.style.display="block";setTimeout(function(){a.style.display="none"},2000)}})},{threshold:.6}).observe(ex)}
+pinta()})();
+</script></body></html>

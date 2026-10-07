@@ -1,0 +1,81 @@
+<!doctype html><html lang="pt-PT"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Lição M4-F01: Pregar a quem não ouve</title><style>:root{--tinta:#000;--papel:#fff;--suave:#444;--fundo:#f3f2ee}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--papel);color:var(--tinta);font:17px/1.5 Arial,Helvetica,sans-serif}
+main{max-width:1180px;margin:0 auto;padding:0 16px 80px}
+.topo{border-bottom:4px solid var(--tinta);padding:14px 0 10px}
+.marca{font:700 .72rem/1.2 Arial;letter-spacing:.14em;text-transform:uppercase}
+h1{font:900 1.75rem/1.05 "Arial Black",Arial,sans-serif;margin:.3rem 0 .4rem;text-transform:uppercase}
+.parati{font-size:1.05rem;margin:.2rem 0 .6rem}
+nav.ligas{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 0}
+nav.ligas a{font:700 .76rem Arial;letter-spacing:.04em;text-transform:uppercase;border:2px solid var(--tinta);padding:5px 9px;text-decoration:none;color:var(--tinta)}
+nav.ligas a.cheio{background:var(--tinta);color:var(--papel)}
+.cols{display:block}
+@media (min-width:960px){.cols{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:28px;align-items:start}.col-texto{position:sticky;top:0;max-height:100vh;overflow:auto;padding-right:6px}}
+h2{font:900 1rem "Arial Black",Arial,sans-serif;background:var(--tinta);color:var(--papel);padding:6px 10px;margin:22px 0 10px;text-transform:uppercase;letter-spacing:.03em}
+h3{font:900 .95rem "Arial Black",Arial,sans-serif;margin:16px 0 6px;text-transform:uppercase}
+.essencial{border:3px solid var(--tinta);padding:10px 14px;margin:14px 0}
+.essencial ol{margin:0;padding-left:1.3rem}.essencial li{margin:0 0 6px;font-size:1.02rem}
+.texto{border:2px solid var(--tinta);padding:12px 14px;margin:12px 0}
+.texto .tit{font:900 1rem "Arial Black",Arial,sans-serif;margin:0 0 8px}
+.texto .v{margin:0;padding:0;white-space:pre-wrap;font:600 1rem/1.5 Arial}
+.texto .v .n{display:inline-block;width:2.1em;color:var(--suave);font-size:.72em;font-weight:400;text-align:right;padding-right:.6em}
+.texto p.pr{margin:0 0 8px}
+.gl{font-size:.9rem;border-top:1px solid var(--tinta);margin-top:10px;padding-top:6px}
+.fonte{font-size:.82rem;color:var(--suave);margin:6px 0 0}
+.caixa{background:var(--fundo);border-left:6px solid var(--tinta);padding:8px 12px;margin:10px 0}
+.caixa h3{margin:0 0 4px;font-size:.85rem}
+.caixa p{margin:0 0 6px}
+details{border:2px solid var(--tinta);margin:8px 0;padding:0}
+summary{cursor:pointer;font:700 .95rem Arial;padding:8px 10px;list-style:none;display:flex;gap:8px;align-items:center}
+summary::before{content:"+";font:900 1.1rem "Arial Black",Arial;width:1.2rem}
+details[open]>summary::before{content:"–"}
+details>div{padding:0 12px 10px;border-top:1px solid var(--tinta)}
+.perg{margin:14px 0 6px;font-weight:700}
+.passo{margin:4px 0 4px 1.2rem;font-size:.95rem}
+ol.passos{margin:4px 0;padding-left:1.4rem}ol.passos li{margin:0 0 4px;font-size:.95rem}
+table{border-collapse:collapse;width:100%;margin:6px 0;font-size:.92rem}th,td{border:1px solid var(--tinta);padding:5px 7px;vertical-align:top;text-align:left}th{background:var(--tinta);color:var(--papel);font-size:.78rem;text-transform:uppercase;letter-spacing:.06em}
+.folha{border:2px dashed var(--tinta);padding:10px 12px;margin:10px 0}
+.folha .rot{font:700 .72rem Arial;letter-spacing:.12em;text-transform:uppercase;margin:0 0 4px}
+ul.lista{margin:4px 0;padding-left:1.3rem}ul.lista li{margin:0 0 4px}
+.pares{display:grid;grid-template-columns:1fr 1fr;gap:6px 14px;font-size:.95rem}
+.exercicio iframe{width:100%;height:74vh;min-height:520px;border:3px solid var(--tinta);background:#fff}
+.exercicio .alt{font-size:.88rem;margin:6px 0 0}
+button{font:700 .95rem Arial;padding:10px 14px;border:2px solid var(--tinta);background:var(--tinta);color:var(--papel);cursor:pointer;margin:8px 8px 0 0}
+button.sec{background:var(--papel);color:var(--tinta)}
+button[aria-pressed="true"]{background:var(--papel);color:var(--tinta)}
+.estado{font:700 .78rem Arial;letter-spacing:.08em;text-transform:uppercase;margin:6px 0 0}
+.duvidas ul{margin:0;padding-left:1.3rem}
+.prox{display:flex;justify-content:space-between;gap:10px;margin:26px 0 0;flex-wrap:wrap}
+.prox a{font:700 .9rem Arial;border:2px solid var(--tinta);padding:10px 12px;text-decoration:none;color:var(--tinta)}
+.rodape{margin-top:26px;border-top:2px solid var(--tinta);padding-top:8px;font-size:.8rem;color:var(--suave)}
+#aviso{position:fixed;left:50%;bottom:16px;transform:translateX(-50%);background:var(--tinta);color:var(--papel);padding:8px 14px;font:700 .85rem Arial;display:none;z-index:9}
+@media (prefers-color-scheme:dark){:root{--tinta:#ecebe5;--papel:#121210;--suave:#b3b1aa;--fundo:#1d1d1a}.exercicio iframe{background:#121210}}
+@media print{.exercicio,nav.ligas,button,.prox{display:none!important}.cols{display:block}}
+[hidden]{display:none!important}</style></head><body><main>
+<header class="topo"><div class="marca">Português · 2.º ano · Módulo 4 · Lição M4-F01 · unidade 1, Pregar aos peixes</div><h1>Pregar a quem não ouve_</h1><p class="parati">Em 1654, um pregador vai à praia falar com os peixes. Não está a brincar — e três dias depois embarca às escondidas para Lisboa.</p>
+<nav class="ligas"><a class="cheio" href="https://pedrohfernandes-klk.github.io/pt/m4/#m4-f01">Percurso</a><a href="https://pedrohfernandes-klk.github.io/pt/m4/infografia-mapa-do-modulo/">Mapa do módulo</a><a href="https://pedrohfernandes-klk.github.io/pt/m4/licao-m4-f02/">Lição seguinte</a></nav></header>
+<div class="cols">
+<section class="col-texto"><div class="essencial"><h2 style="margin:0 0 8px">O essencial</h2><ol><li>António Vieira (Lisboa, 1608; Bahia, 1697), jesuíta, pregou o Sermão de Santo António em São Luís do Maranhão a 13 de junho de 1654, três dias antes de embarcar para Lisboa a defender os indígenas.</li><li>Prega aos peixes porque os homens não o querem ouvir: os colonos escravizavam os índios e a Igreja local não os travava.</li><li>Um sermão tem partes: o exórdio (o começo, com o conceito predicável), o desenvolvimento (louvores e repreensões) e a peroração (o fecho).</li></ol></div><div class="texto" id="texto-0"><p class="tit">Cap. I: porque se vai à praia</p><p class="pr"><b>[1]</b> Pregava Santo António em Itália na cidade de Arimino, contra os hereges, que nela eram muitos; e como erros de entendimento são dificultosos de arrancar, não só não fazia fruto o Santo, mas chegou o povo a se levantar contra ele, e faltou pouco, para que lhe não tirassem a vida. Que faria neste caso o ânimo generoso do grande António? Sacudiria o pó dos sapatos, como Cristo aconselha em outro lugar? Mas António com os pés descalços não podia fazer esta protestação; e uns pés, a que se não pegou nada da terra, não tinham que sacudir. Que faria logo? Retirar-se-ia? Calar-se-ia? Dissimularia? Daria tempo ao tempo? Isso ensinaria porventura a prudência, ou a covardia humana; mas o zelo da glória divina, que ardia naquele peito, não se rendeu a semelhantes partidos. Pois que fez? Mudou somente o púlpito e o auditório, mas não desistiu da doutrina. Deixa as praças, vai-se às praias; deixa a terra, e vai-se ao mar, e começa a dizer a altas vozes:</p><p class="pr"><b>[2]</b> «Já que me não querem ouvir os homens, ouçam-me os peixes». Oh! maravilhas do Altíssimo! Oh! poderes do que criou o mar, e a terra! Começam a ferver as ondas, começam a concorrer os peixes, os grandes, os maiores, os pequenos, e postos todos por sua ordem com as cabeças de fora da água, António pregava, e eles ouviam.</p><p class="gl"><b>Vocabulário:</b> <b>Arimino</b>, Rimini, cidade de Itália; <b>hereges</b>, os que se afastam da doutrina da Igreja; <b>sacudir o pó dos sapatos</b>, gesto bíblico de quem se vai embora de quem não o ouve; <b>protestação</b>, declaração pública; <b>partidos</b>, aqui, soluções, saídas; <b>concorrer</b>, acorrer, juntar-se</p><p class="fonte">Padre António Vieira, Sermão de Santo António (1654), ortografia atualizada, cap. I. Vieira conta o que fez Santo António em Rimini, e é isso que ele próprio vai fazer em São Luís.</p></div></section>
+<section class="col-licao">
+<h2>Como se lê</h2>
+<div class="caixa"><h3>Quem foi Vieira</h3><p><b>António Vieira</b> nasceu em Lisboa a 6 de fevereiro de 1608 e morreu em Salvador da Bahia a 18 de julho de 1697. Chegou à Bahia em criança e entrou na Companhia de Jesus em 1623. Deixou mais de 200 sermões e 700 cartas; defendeu a liberdade dos povos indígenas e criticou a perseguição aos cristãos-novos. A Inquisição prendeu-o entre 1665 e 1667; depois obteve em Roma a proteção do papa.</p>
+<p>O biógrafo João Lúcio de Azevedo dividiu a sua vida em seis períodos: <b>o religioso</b> (1608–1640), <b>o político</b> (1641–1650), <b>o missionário</b> (1651–1661), <b>o vidente</b> (1662–1668), <b>o revoltado</b> (1669–1680) e <b>o vencido</b> (1681–1697).</p>
+<p>O <b>Sermão de Santo António</b> foi pregado em 1654, em São Luís do Maranhão, pouco antes de Vieira partir para Lisboa a defender os indígenas. A eloquência tinha três objetivos: <b>ensinar</b> (docere), <b>deleitar</b> (delectare) e <b>comover</b> (movere). Estrutura: <b>exórdio</b> (cap. I), <b>louvores</b> aos peixes (caps. II–III), <b>repreensões</b> (caps. IV–V) e <b>peroração</b> (cap. VI).</p></div><p class="perg">Em que período da vida de Vieira, segundo Azevedo, cabe cada facto? Escreve o nome do período e as datas que o provam.</p><p class="passo"><i>Pensa em cada célula; depois abre a solução e compara.</i></p><table><tr><th>Facto</th><th>Período</th><th>As datas que o provam</th></tr><tr><td>Sermão de Santo António (1654)</td><td></td><td></td></tr><tr><td>Prisão pela Inquisição (1665–1667)</td><td></td><td></td></tr><tr><td>Proteção papal em Roma (a partir de 1669)</td><td></td><td></td></tr><tr><td>Morte na Bahia (1697)</td><td></td><td></td></tr></table><details><summary>A solução</summary><div><table><tr><th>Facto</th><th>Período</th><th>As datas que o provam</th></tr><tr><td>Sermão, 1654</td><td>o missionário</td><td>1651–1661</td></tr><tr><td>Prisão, 1665–1667</td><td>o vidente</td><td>1662–1668</td></tr><tr><td>Roma, 1669</td><td>o revoltado</td><td>1669–1680</td></tr><tr><td>Morte, 1697</td><td>o vencido</td><td>1681–1697</td></tr></table></div></details><h3>Avaliar</h3><p class="perg">1. Os nomes dos períodos («o vidente», «o vencido») são factos ou interpretações do biógrafo? Justifica e diz o que ganham e o que perdem.</p><p class="passo"><i>Começa assim:</i> Os nomes dos períodos são ______________________, porque ______________________</p><details><summary>Como se lê</summary><div><ol class="passos"><li>Decide: facto ou interpretação? Compara com as datas, que são factos.</li><li>Prova com um período: escolhe um nome e diz, pela caixa, o que aconteceu nesses anos.</li><li>Fecha com o que o nome ajuda a ver e com o que pode esconder.</li></ol></div></details><details><summary>Confere a tua resposta</summary><div><p>Interpretações: as datas são factos, os nomes resumem uma leitura da vida (ex.: «o vencido», 1681–1697, são os anos depois da prisão e da perda de influência). Ganham clareza e memória; perdem nuance e podem impor uma narrativa.</p></div></details><p class="perg">2. <b>O que faz falta saber.</b> Lê o contexto por baixo. Que duas coisas desta situação são decisivas para perceber a quem se dirige o sermão? Diz porquê, e onde as confirmarias.</p><details><summary>Como se lê</summary><div><ol class="passos"><li>Escolhe duas coisas do contexto: quem trabalhava para quem, quem contestava, o que Vieira ia pedir ao rei.</li><li>Para cada uma, uma frase: porque muda a maneira de ler um sermão pregado a peixes.</li><li>Fecha com onde as confirmarias: enciclopédia com referências, edição anotada do sermão, história do Brasil colonial.</li></ol></div></details><details><summary>Confere a tua resposta</summary><div><p>Por exemplo: os colonos escravizavam os indígenas e opunham-se aos jesuítas (o público do sermão é quem manda na cidade, não os peixes); Vieira partia três dias depois para pedir leis ao rei (o sermão é um ato político, uma despedida que acusa). Fontes: enciclopédia com referências, edição anotada dos Sermões, historiografia do Brasil colonial.</p></div></details><div class="folha"><p class="rot">Para fazer na folha A4, na aula</p><h3 style="margin-top:0">Porquê aos peixes?</h3><p>Avança três explicações diferentes para Vieira pregar aos peixes em vez de aos homens. Depois ordena-as da mais à menos sustentada pelo texto e pelo contexto.</p><ul class="lista"><li>Uma explicação</li><li>Outra, de outra natureza</li><li>A mais arriscada</li></ul><p class="passo"><i>Regra:</i> cada explicação indica uma prova (texto ou contexto)</p><details><summary>Um exemplo</summary><div><p>Uma explicação com prova, para veres o modelo: «Os homens não ouvem. É o próprio Vieira que o diz: ‘Já que me não querem ouvir os homens, ouçam-me os peixes’ [2].» As tuas três têm de ser diferentes desta e entre si.</p></div></details></div><h3>Para pensares sozinho</h3><ul class="lista"><li>Que explicação eliminei primeiro? Continuo a achar que era a mais fraca?</li></ul>
+
+<h2 id="exercicio">Agora, o exercício</h2>
+<div class="exercicio"><p><b>Ouçam-me os peixes</b>: Padre António Vieira, 1654 · cap. I. Cinco minutos; o resultado fica guardado e o percurso marca o passo.</p><iframe src="https://pedrohfernandes-klk.github.io/pt/m4/vieira-praia/" title="Ouçam-me os peixes" loading="lazy"></iframe><p class="alt"><a href="https://pedrohfernandes-klk.github.io/pt/m4/vieira-praia/">Abrir o exercício numa página só</a></p></div>
+<button id="lida" aria-pressed="false">Li a lição</button><span class="estado" id="estado"></span>
+<div class="duvidas"><h2>Se ficaste com dúvidas</h2><ul><li>Volta a «O essencial» e lê outra vez o texto em voz alta, devagar.</li><li>Abre «Como se lê» na pergunta onde paraste: os passos e o exemplo são o caminho.</li><li>Guarda a dúvida para a aula: pergunta ao docente ou escreve-a nas três linhas do fim da unidade, no percurso.</li></ul></div>
+<div class="prox"><span></span><a href="https://pedrohfernandes-klk.github.io/pt/m4/licao-m4-f02/">Lição seguinte →</a></div>
+</section></div>
+<p class="rodape">EPI, Escola Profissional de Imagem · Português 2026/2027 · Lição M4-F01, Pregar a quem não ouve · Fontes: Padre António Vieira, Sermão de Santo António (1654), ortografia atualizada, cap. I; Wikipédia, «Padre António Vieira» e «Sermão de Santo António aos Peixes»; João Lúcio de Azevedo, periodização da vida de Vieira. O que marcas fica só neste aparelho.</p>
+<div id="aviso" role="status"></div></main>
+<script>
+(function(){"use strict";var K="licao-m4-f01",b=document.getElementById("lida"),s=document.getElementById("estado");
+function ler(){try{return JSON.parse(localStorage.getItem(K)||"null")}catch(x){return null}}
+function pinta(){var g=ler();b.setAttribute("aria-pressed",g&&g.lida?"true":"false");b.textContent=g&&g.lida?"Lição lida":"Li a lição";s.textContent=g&&g.lida?"marcada neste aparelho":""}
+function marca(v){try{localStorage.setItem(K,JSON.stringify({lida:v,t:Date.now()}))}catch(x){}pinta()}
+b.onclick=function(){marca(!(ler()||{}).lida)};
+var ex=document.getElementById("exercicio");if(ex&&"IntersectionObserver" in window){new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting&&!(ler()||{}).lida){marca(true);var a=document.getElementById("aviso");a.textContent="Lição marcada como lida";a.style.display="block";setTimeout(function(){a.style.display="none"},2000)}})},{threshold:.6}).observe(ex)}
+pinta()})();
+</script></body></html>

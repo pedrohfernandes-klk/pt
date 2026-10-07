@@ -1,0 +1,105 @@
+<!doctype html><html lang="pt-PT"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Lição M7-F14: Não sei se é sonho, se realidade</title><style>:root{--tinta:#000;--papel:#fff;--suave:#444;--fundo:#f3f2ee}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--papel);color:var(--tinta);font:17px/1.5 Arial,Helvetica,sans-serif}
+main{max-width:1180px;margin:0 auto;padding:0 16px 80px}
+.topo{border-bottom:4px solid var(--tinta);padding:14px 0 10px}
+.marca{font:700 .72rem/1.2 Arial;letter-spacing:.14em;text-transform:uppercase}
+h1{font:900 1.75rem/1.05 "Arial Black",Arial,sans-serif;margin:.3rem 0 .4rem;text-transform:uppercase}
+.parati{font-size:1.05rem;margin:.2rem 0 .6rem}
+nav.ligas{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 0}
+nav.ligas a{font:700 .76rem Arial;letter-spacing:.04em;text-transform:uppercase;border:2px solid var(--tinta);padding:5px 9px;text-decoration:none;color:var(--tinta)}
+nav.ligas a.cheio{background:var(--tinta);color:var(--papel)}
+.cols{display:block}
+@media (min-width:960px){.cols{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:28px;align-items:start}.col-texto{position:sticky;top:0;max-height:100vh;overflow:auto;padding-right:6px}}
+h2{font:900 1rem "Arial Black",Arial,sans-serif;background:var(--tinta);color:var(--papel);padding:6px 10px;margin:22px 0 10px;text-transform:uppercase;letter-spacing:.03em}
+h3{font:900 .95rem "Arial Black",Arial,sans-serif;margin:16px 0 6px;text-transform:uppercase}
+.essencial{border:3px solid var(--tinta);padding:10px 14px;margin:14px 0}
+.essencial ol{margin:0;padding-left:1.3rem}.essencial li{margin:0 0 6px;font-size:1.02rem}
+.texto{border:2px solid var(--tinta);padding:12px 14px;margin:12px 0}
+.texto .tit{font:900 1rem "Arial Black",Arial,sans-serif;margin:0 0 8px}
+.texto .v{margin:0;padding:0;white-space:pre-wrap;font:600 1rem/1.5 Arial}
+.texto .v .n{display:inline-block;width:2.1em;color:var(--suave);font-size:.72em;font-weight:400;text-align:right;padding-right:.6em}
+.texto p.pr{margin:0 0 8px}
+.gl{font-size:.9rem;border-top:1px solid var(--tinta);margin-top:10px;padding-top:6px}
+.fonte{font-size:.82rem;color:var(--suave);margin:6px 0 0}
+.caixa{background:var(--fundo);border-left:6px solid var(--tinta);padding:8px 12px;margin:10px 0}
+.caixa h3{margin:0 0 4px;font-size:.85rem}
+.caixa p{margin:0 0 6px}
+details{border:2px solid var(--tinta);margin:8px 0;padding:0}
+summary{cursor:pointer;font:700 .95rem Arial;padding:8px 10px;list-style:none;display:flex;gap:8px;align-items:center}
+summary::before{content:"+";font:900 1.1rem "Arial Black",Arial;width:1.2rem}
+details[open]>summary::before{content:"–"}
+details>div{padding:0 12px 10px;border-top:1px solid var(--tinta)}
+.perg{margin:14px 0 6px;font-weight:700}
+.passo{margin:4px 0 4px 1.2rem;font-size:.95rem}
+ol.passos{margin:4px 0;padding-left:1.4rem}ol.passos li{margin:0 0 4px;font-size:.95rem}
+table{border-collapse:collapse;width:100%;margin:6px 0;font-size:.92rem}th,td{border:1px solid var(--tinta);padding:5px 7px;vertical-align:top;text-align:left}th{background:var(--tinta);color:var(--papel);font-size:.78rem;text-transform:uppercase;letter-spacing:.06em}
+.folha{border:2px dashed var(--tinta);padding:10px 12px;margin:10px 0}
+.folha .rot{font:700 .72rem Arial;letter-spacing:.12em;text-transform:uppercase;margin:0 0 4px}
+ul.lista{margin:4px 0;padding-left:1.3rem}ul.lista li{margin:0 0 4px}
+.pares{display:grid;grid-template-columns:1fr 1fr;gap:6px 14px;font-size:.95rem}
+.exercicio iframe{width:100%;height:74vh;min-height:520px;border:3px solid var(--tinta);background:#fff}
+.exercicio .alt{font-size:.88rem;margin:6px 0 0}
+button{font:700 .95rem Arial;padding:10px 14px;border:2px solid var(--tinta);background:var(--tinta);color:var(--papel);cursor:pointer;margin:8px 8px 0 0}
+button.sec{background:var(--papel);color:var(--tinta)}
+button[aria-pressed="true"]{background:var(--papel);color:var(--tinta)}
+.estado{font:700 .78rem Arial;letter-spacing:.08em;text-transform:uppercase;margin:6px 0 0}
+.duvidas ul{margin:0;padding-left:1.3rem}
+.prox{display:flex;justify-content:space-between;gap:10px;margin:26px 0 0;flex-wrap:wrap}
+.prox a{font:700 .9rem Arial;border:2px solid var(--tinta);padding:10px 12px;text-decoration:none;color:var(--tinta)}
+.rodape{margin-top:26px;border-top:2px solid var(--tinta);padding-top:8px;font-size:.8rem;color:var(--suave)}
+#aviso{position:fixed;left:50%;bottom:16px;transform:translateX(-50%);background:var(--tinta);color:var(--papel);padding:8px 14px;font:700 .85rem Arial;display:none;z-index:9}
+@media (prefers-color-scheme:dark){:root{--tinta:#ecebe5;--papel:#121210;--suave:#b3b1aa;--fundo:#1d1d1a}.exercicio iframe{background:#121210}}
+@media print{.exercicio,nav.ligas,button,.prox{display:none!important}.cols{display:block}}
+[hidden]{display:none!important}</style></head><body><main>
+<header class="topo"><div class="marca">Português · 3.º ano · Módulo 7 · Lição M7-F14 · unidade 1, O fingidor</div><h1>Não sei se é sonho, se realidade_</h1><p class="parati">Há uma ilha no extremo sul onde a vida é jovem e o amor sorri. O poema vai lá, olha bem, e volta para trás.</p>
+<nav class="ligas"><a class="cheio" href="https://pedrohfernandes-klk.github.io/pt/m7/#m7-f14">Percurso</a><a href="https://pedrohfernandes-klk.github.io/pt/m7/infografia-mapa-do-modulo/">Mapa do módulo</a><a href="https://pedrohfernandes-klk.github.io/pt/m7/licao-m7-f13/">Lição anterior</a><a href="https://pedrohfernandes-klk.github.io/pt/m7/licao-m7-f15/">Lição seguinte</a></nav></header>
+<div class="cols">
+<section class="col-texto"><div class="essencial"><h2 style="margin:0 0 8px">O essencial</h2><ol><li>Há uma ilha no extremo sul onde «a vida é jovem e o amor sorri»; o poema vai lá, olha bem, e volta para trás.</li><li>Só de pensar a ilha, ela desvirtua-se: «nesta terra também, também o mal não cessa».</li><li>A conclusão é «É em nós que é tudo»: o bem não está num lugar, está dentro de cada um; defende ou ataca esta tese.</li></ol></div><div class="texto" id="texto-0"><p class="tit">Fernando Pessoa, «Não sei se é sonho, se realidade»</p><p class="v"><span class="n"></span>Não sei se é sonho, se realidade,
+<span class="n"></span>Se uma mistura de sonho e vida,
+<span class="n"></span>Aquela terra de suavidade
+<span class="n"></span>Que na ilha extrema do sul se olvida.
+<span class="n">5</span>É a que ansiamos. Ali, ali
+<span class="n"></span>A vida é jovem e o amor sorri
+
+<span class="n"></span>Talvez palmares inexistentes,
+<span class="n"></span>Áleas longínquas sem poder ser,
+<span class="n"></span>Sombra ou sossego dêem aos crentes
+<span class="n">10</span>De que essa terra se pode ter
+<span class="n"></span>Felizes, nós? Ali, talvez, talvez,
+<span class="n"></span>Naquela terra, daquela vez,
+
+<span class="n"></span>Mas já sonhada se desvirtua,
+<span class="n"></span>Só de pensá-la cansou pensar;
+<span class="n">15</span>Sob os palmares, à luz da lua,
+<span class="n"></span>Sente-se o frio de haver luar
+<span class="n"></span>Ah, nesta terra também, também
+<span class="n"></span>O mal não cessa, não dura o bem.
+
+<span class="n"></span>Não é com ilhas do fim do mundo,
+<span class="n">20</span>Nem com palmares de sonho ou não,
+<span class="n"></span>Que cura a alma seu mal profundo,
+<span class="n"></span>Que o bem nos entra no coração.
+<span class="n"></span>É em nós que é tudo. É ali, ali,
+<span class="n"></span>Que a vida é jovem e o amor sorri.</p><p class="gl"><b>Vocabulário:</b> <b>se olvida</b>, se esquece; <b>áleas</b>, alamedas, caminhos com árvores; <b>desvirtua</b>, perde o valor; <b>«dêem»</b>, grafia da edição</p><p class="fonte">Fernando Pessoa (20-8-1933) · Poesias, Ática, 1942 · Arquivo Pessoa</p></div></section>
+<section class="col-licao">
+<h2>Como se lê</h2>
+<p class="perg">Segue o raciocínio do poema, estrofe a estrofe.</p><p class="passo"><i>Pensa em cada célula; depois abre a solução e compara.</i></p><table><tr><th>Estrofe</th><th>O que afirma</th><th>Palavra ou expressão-chave</th></tr><tr><td>1</td><td></td><td></td></tr><tr><td>2</td><td></td><td></td></tr><tr><td>3</td><td></td><td></td></tr><tr><td>4</td><td></td><td></td></tr></table><details><summary>A solução</summary><div><table><tr><th>Estrofe</th><th>O que afirma</th><th>Palavra ou expressão-chave</th></tr><tr><td>1</td><td>Existe (em sonho) uma terra ideal onde a vida é jovem</td><td>«Ali, ali»</td></tr><tr><td>2</td><td>Dúvida: essa felicidade pode ter-se?</td><td>«talvez, talvez»</td></tr><tr><td>3</td><td>O sonho, ao ser pensado, perde valor; também lá o mal continua</td><td>«Só de pensá-la cansou pensar»</td></tr><tr><td>4</td><td>A felicidade não está num lugar: está em nós</td><td>«É em nós que é tudo»</td></tr></table></div></details><h3>Analisar</h3><p class="perg">1. Compara o último verso com o 6.º. O que se repete e o que mudou de sentido?</p><p class="passo"><i>Começa assim:</i> Repete-se «______________________»; mas no 6.º verso «ali» era ______, e no último «ali» é ______</p><details><summary>Confere a tua resposta</summary><div><p>Repete-se «a vida é jovem e o amor sorri» e «ali, ali»; mas «ali» já não é a ilha, é o interior do sujeito («É em nós que é tudo»).</p></div></details><p class="perg">2. «Sente-se o frio de haver luar»: porque surpreende esta imagem? Liga-a à dor de pensar.</p><details><summary>Como se lê</summary><div><ol class="passos"><li>Diz o que se espera de um luar num poema (beleza, sonho) e o que o verso lhe faz (frio).</li><li>Procura na mesma estrofe o verso que explica de onde vem o frio: «Só de pensá-la cansou pensar».</li><li>Fecha com a ideia pessoana: pensar o sonho estraga-o.</li></ol></div></details><details><summary>Confere a tua resposta</summary><div><p>O luar, imagem de beleza, torna-se frio: basta pensar o sonho para o estragar («Só de pensá-la cansou pensar»).</p></div></details><p class="perg">Facto, inferência, interpretação ou opinião? Decide para cada frase.</p><p class="passo">1. O poema foi escrito a 20 de agosto de 1933.</p><details><summary>Confere</summary><div><p>Facto (data no Arquivo Pessoa).</p></div></details><p class="passo">2. O sujeito deixa de acreditar na ilha.</p><details><summary>Confere</summary><div><p>Inferência a partir das estrofes 3 e 4.</p></div></details><p class="passo">3. O poema defende que a felicidade depende de nós.</p><details><summary>Confere</summary><div><p>Interpretação sustentável («É em nós que é tudo»).</p></div></details><p class="passo">4. Esta conclusão é otimista.</p><details><summary>Confere</summary><div><p>Opinião (também se pode ler como desencanto: não há lugar feliz).</p></div></details><div class="folha"><p class="rot">Escrita: na folha A4, na aula ou na oficina</p><p><b>Decidir e defender.</b> «É em nós que é tudo.» Concordas? 100–120 palavras, com um argumento do poema, um exemplo do presente e a objeção mais forte.</p><ol class="passos"><li>Primeira frase: concordo, discordo, ou concordo em parte, e porquê numa palavra.</li><li>O argumento do poema (um verso da 4.ª estrofe) e um exemplo atual, sem nomes: alguém que mudou de lugar.</li><li>A objeção mais forte («Mas há coisas que não dependem de nós: …») e a tua resposta.</li></ol><p class="passo"><i>Como é avaliado:</i> Tese clara; argumento textual; exemplo sem visar pessoas; objeção reconhecida (há condições exteriores que pesam: saúde, pobreza, guerra).</p></div><h3>Confere</h3><ul class="lista"><li>☐ Disse se concordo na primeira frase.</li><li>☐ Usei um verso da quarta estrofe.</li><li>☐ O meu exemplo não tem nomes.</li><li>☐ Respondi à objeção mais forte.</li><li>☐ Contei: 100 a 120 palavras.</li></ul><h3>Para pensares sozinho</h3><ul class="lista"><li>A objeção que escrevi fez-me mudar a tese ou só a matizar?</li></ul>
+
+<h2 id="exercicio">Agora, o exercício</h2>
+<div class="exercicio"><p><b>A ilha do sul</b>: Fernando Pessoa, 1933. Cinco minutos; o resultado fica guardado e o percurso marca o passo.</p><iframe src="https://pedrohfernandes-klk.github.io/pt/m7/pessoa-ilha/" title="A ilha do sul" loading="lazy"></iframe><p class="alt"><a href="https://pedrohfernandes-klk.github.io/pt/m7/pessoa-ilha/">Abrir o exercício numa página só</a></p></div>
+<button id="lida" aria-pressed="false">Li a lição</button><span class="estado" id="estado"></span>
+<div class="duvidas"><h2>Se ficaste com dúvidas</h2><ul><li>Volta a «O essencial» e lê outra vez o texto em voz alta, devagar.</li><li>Abre «Como se lê» na pergunta onde paraste: os passos e o exemplo são o caminho.</li><li>Guarda a dúvida para a aula: pergunta ao docente ou escreve-a nas três linhas do fim da unidade, no percurso.</li></ul></div>
+<div class="prox"><a href="https://pedrohfernandes-klk.github.io/pt/m7/licao-m7-f13/">← Lição anterior</a><a href="https://pedrohfernandes-klk.github.io/pt/m7/licao-m7-f15/">Lição seguinte →</a></div>
+</section></div>
+<p class="rodape">EPI, Escola Profissional de Imagem · Português 2026/2027 · Lição M7-F14, Não sei se é sonho, se realidade · Fontes: Arquivo Pessoa (20-8-1933; Poesias, Ática, 1942). O que marcas fica só neste aparelho.</p>
+<div id="aviso" role="status"></div></main>
+<script>
+(function(){"use strict";var K="licao-m7-f14",b=document.getElementById("lida"),s=document.getElementById("estado");
+function ler(){try{return JSON.parse(localStorage.getItem(K)||"null")}catch(x){return null}}
+function pinta(){var g=ler();b.setAttribute("aria-pressed",g&&g.lida?"true":"false");b.textContent=g&&g.lida?"Lição lida":"Li a lição";s.textContent=g&&g.lida?"marcada neste aparelho":""}
+function marca(v){try{localStorage.setItem(K,JSON.stringify({lida:v,t:Date.now()}))}catch(x){}pinta()}
+b.onclick=function(){marca(!(ler()||{}).lida)};
+var ex=document.getElementById("exercicio");if(ex&&"IntersectionObserver" in window){new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting&&!(ler()||{}).lida){marca(true);var a=document.getElementById("aviso");a.textContent="Lição marcada como lida";a.style.display="block";setTimeout(function(){a.style.display="none"},2000)}})},{threshold:.6}).observe(ex)}
+pinta()})();
+</script></body></html>

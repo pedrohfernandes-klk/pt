@@ -1,0 +1,106 @@
+<!doctype html><html lang="pt-PT"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Lição M7-F09: É a hora!</title><style>:root{--tinta:#000;--papel:#fff;--suave:#444;--fundo:#f3f2ee}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--papel);color:var(--tinta);font:17px/1.5 Arial,Helvetica,sans-serif}
+main{max-width:1180px;margin:0 auto;padding:0 16px 80px}
+.topo{border-bottom:4px solid var(--tinta);padding:14px 0 10px}
+.marca{font:700 .72rem/1.2 Arial;letter-spacing:.14em;text-transform:uppercase}
+h1{font:900 1.75rem/1.05 "Arial Black",Arial,sans-serif;margin:.3rem 0 .4rem;text-transform:uppercase}
+.parati{font-size:1.05rem;margin:.2rem 0 .6rem}
+nav.ligas{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 0}
+nav.ligas a{font:700 .76rem Arial;letter-spacing:.04em;text-transform:uppercase;border:2px solid var(--tinta);padding:5px 9px;text-decoration:none;color:var(--tinta)}
+nav.ligas a.cheio{background:var(--tinta);color:var(--papel)}
+.cols{display:block}
+@media (min-width:960px){.cols{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:28px;align-items:start}.col-texto{position:sticky;top:0;max-height:100vh;overflow:auto;padding-right:6px}}
+h2{font:900 1rem "Arial Black",Arial,sans-serif;background:var(--tinta);color:var(--papel);padding:6px 10px;margin:22px 0 10px;text-transform:uppercase;letter-spacing:.03em}
+h3{font:900 .95rem "Arial Black",Arial,sans-serif;margin:16px 0 6px;text-transform:uppercase}
+.essencial{border:3px solid var(--tinta);padding:10px 14px;margin:14px 0}
+.essencial ol{margin:0;padding-left:1.3rem}.essencial li{margin:0 0 6px;font-size:1.02rem}
+.texto{border:2px solid var(--tinta);padding:12px 14px;margin:12px 0}
+.texto .tit{font:900 1rem "Arial Black",Arial,sans-serif;margin:0 0 8px}
+.texto .v{margin:0;padding:0;white-space:pre-wrap;font:600 1rem/1.5 Arial}
+.texto .v .n{display:inline-block;width:2.1em;color:var(--suave);font-size:.72em;font-weight:400;text-align:right;padding-right:.6em}
+.texto p.pr{margin:0 0 8px}
+.gl{font-size:.9rem;border-top:1px solid var(--tinta);margin-top:10px;padding-top:6px}
+.fonte{font-size:.82rem;color:var(--suave);margin:6px 0 0}
+.caixa{background:var(--fundo);border-left:6px solid var(--tinta);padding:8px 12px;margin:10px 0}
+.caixa h3{margin:0 0 4px;font-size:.85rem}
+.caixa p{margin:0 0 6px}
+details{border:2px solid var(--tinta);margin:8px 0;padding:0}
+summary{cursor:pointer;font:700 .95rem Arial;padding:8px 10px;list-style:none;display:flex;gap:8px;align-items:center}
+summary::before{content:"+";font:900 1.1rem "Arial Black",Arial;width:1.2rem}
+details[open]>summary::before{content:"–"}
+details>div{padding:0 12px 10px;border-top:1px solid var(--tinta)}
+.perg{margin:14px 0 6px;font-weight:700}
+.passo{margin:4px 0 4px 1.2rem;font-size:.95rem}
+ol.passos{margin:4px 0;padding-left:1.4rem}ol.passos li{margin:0 0 4px;font-size:.95rem}
+table{border-collapse:collapse;width:100%;margin:6px 0;font-size:.92rem}th,td{border:1px solid var(--tinta);padding:5px 7px;vertical-align:top;text-align:left}th{background:var(--tinta);color:var(--papel);font-size:.78rem;text-transform:uppercase;letter-spacing:.06em}
+.folha{border:2px dashed var(--tinta);padding:10px 12px;margin:10px 0}
+.folha .rot{font:700 .72rem Arial;letter-spacing:.12em;text-transform:uppercase;margin:0 0 4px}
+ul.lista{margin:4px 0;padding-left:1.3rem}ul.lista li{margin:0 0 4px}
+.pares{display:grid;grid-template-columns:1fr 1fr;gap:6px 14px;font-size:.95rem}
+.exercicio iframe{width:100%;height:74vh;min-height:520px;border:3px solid var(--tinta);background:#fff}
+.exercicio .alt{font-size:.88rem;margin:6px 0 0}
+button{font:700 .95rem Arial;padding:10px 14px;border:2px solid var(--tinta);background:var(--tinta);color:var(--papel);cursor:pointer;margin:8px 8px 0 0}
+button.sec{background:var(--papel);color:var(--tinta)}
+button[aria-pressed="true"]{background:var(--papel);color:var(--tinta)}
+.estado{font:700 .78rem Arial;letter-spacing:.08em;text-transform:uppercase;margin:6px 0 0}
+.duvidas ul{margin:0;padding-left:1.3rem}
+.prox{display:flex;justify-content:space-between;gap:10px;margin:26px 0 0;flex-wrap:wrap}
+.prox a{font:700 .9rem Arial;border:2px solid var(--tinta);padding:10px 12px;text-decoration:none;color:var(--tinta)}
+.rodape{margin-top:26px;border-top:2px solid var(--tinta);padding-top:8px;font-size:.8rem;color:var(--suave)}
+#aviso{position:fixed;left:50%;bottom:16px;transform:translateX(-50%);background:var(--tinta);color:var(--papel);padding:8px 14px;font:700 .85rem Arial;display:none;z-index:9}
+@media (prefers-color-scheme:dark){:root{--tinta:#ecebe5;--papel:#121210;--suave:#b3b1aa;--fundo:#1d1d1a}.exercicio iframe{background:#121210}}
+@media print{.exercicio,nav.ligas,button,.prox{display:none!important}.cols{display:block}}
+[hidden]{display:none!important}</style></head><body><main>
+<header class="topo"><div class="marca">Português · 3.º ano · Módulo 7 · Lição M7-F09 · unidade 5, Nevoeiro</div><h1>É a hora!_</h1><p class="parati">Um rei desapareceu no deserto e um país inteiro ficou à espera dele durante séculos. Pessoa acha que ainda vale a pena esperar.</p>
+<nav class="ligas"><a class="cheio" href="https://pedrohfernandes-klk.github.io/pt/m7/#m7-f09">Percurso</a><a href="https://pedrohfernandes-klk.github.io/pt/m7/infografia-mapa-do-modulo/">Mapa do módulo</a><a href="https://pedrohfernandes-klk.github.io/pt/m7/licao-m7-f08/">Lição anterior</a><a href="https://pedrohfernandes-klk.github.io/pt/m7/licao-m7-f10/">Lição seguinte</a></nav></header>
+<div class="cols">
+<section class="col-texto"><div class="essencial"><h2 style="margin:0 0 8px">O essencial</h2><ol><li>D. Sebastião desapareceu em Alcácer Quibir a 4 de agosto de 1578; como o corpo não foi reconhecido, nasceu a crença de que havia de voltar: o sebastianismo.</li><li>Em «D. Sebastião» e em «Nevoeiro», Pessoa faz do rei desaparecido o símbolo do que falta cumprir-se em Portugal: «É a hora!».</li><li>A mesma espera aparece em Frei Luís de Sousa, que leste no 2.º ano: lá era tragédia, aqui é mito.</li></ol></div><div class="texto" id="texto-0"><p class="tit">A — «D. Sebastião, Rei de Portugal»</p><p class="v"><span class="n"></span>Louco, sim, louco, porque quis grandeza
+<span class="n"></span>Qual a Sorte a não dá.
+<span class="n"></span>Não coube em mim minha certeza;
+<span class="n"></span>Por isso onde o areal está
+<span class="n">5</span>Ficou meu ser que houve, não o que há.
+
+<span class="n"></span>Minha loucura, outros que me a tomem
+<span class="n"></span>Com o que nela ia.
+<span class="n"></span>Sem a loucura que é o homem
+<span class="n"></span>Mais que a besta sadia,
+<span class="n">10</span>Cadáver adiado que procria?</p><p class="fonte">Mensagem (20-2-1933) · Arquivo Pessoa</p></div><div class="texto" id="texto-1"><p class="tit">B — «Nevoeiro»</p><p class="v"><span class="n"></span>Nem rei nem lei, nem paz nem guerra,
+<span class="n"></span>Define com perfil e ser
+<span class="n"></span>Este fulgor baço da terra
+<span class="n"></span>Que é Portugal a entristecer —
+<span class="n">5</span>Brilho sem luz e sem arder
+<span class="n"></span>Como o que o fogo-fátuo encerra.
+
+<span class="n"></span>Ninguém sabe que coisa quer.
+<span class="n"></span>Ninguém conhece que alma tem,
+<span class="n"></span>Nem o que é mal nem o que é bem.
+<span class="n">10</span>(Que ânsia distante perto chora?)
+<span class="n"></span>Tudo é incerto e derradeiro.
+<span class="n"></span>Tudo é disperso, nada é inteiro.
+<span class="n"></span>Ó Portugal, hoje és nevoeiro...
+
+<span class="n"></span>É a hora!
+
+<span class="n">15</span>Valete, Fratres.</p><p class="gl"><b>Vocabulário:</b> <b>areal</b>, o campo de batalha no Norte de África; <b>fulgor baço</b>, brilho sem força; <b>fogo-fátuo</b>, chama fraca que aparece sobre terrenos pantanosos; <b>derradeiro</b>, último; <b>Valete</b>, Fratres, latim: pesquisa o sentido e indica a fonte</p><p class="fonte">Mensagem, III. O Encoberto (10-12-1928) · Arquivo Pessoa</p></div></section>
+<section class="col-licao">
+<h2>Como se lê</h2>
+<div class="caixa"><h3>Recorda</h3><p><b>D. Sebastião</b>, rei de Portugal, desapareceu na batalha de Alcácer Quibir, no Norte de África, a 4 de agosto de 1578. Como o corpo não foi reconhecido por todos, nasceu a crença de que havia de voltar: é o <b>sebastianismo</b>. Em Frei Luís de Sousa, que leste no 2.º ano, é dessa batalha que regressa D. João de Portugal.</p></div><h3>Analisar e relacionar</h3><p class="perg">1. Em A, quem fala? Que valor dá D. Sebastião à «loucura»?</p><p class="passo"><i>Começa assim:</i> Fala ______, na ______ pessoa. A «loucura» é ______; sem ela, o homem é «______»</p><details><summary>Confere a tua resposta</summary><div><p>O próprio rei, na 1.ª pessoa. A loucura é a grandeza, o sonho que distingue o homem da «besta sadia»; sem ela o homem é «cadáver adiado que procria».</p></div></details><p class="perg">2. Em B, a primeira estrofe diz o que Portugal é «hoje». Copia três expressões que o descrevam e diz o que têm em comum.</p><details><summary>Como se lê</summary><div><ol class="passos"><li>Procura as expressões de brilho fraco (fulgor baço, brilho sem luz, fogo-fátuo).</li><li>Diz o que têm em comum: luz que não aquece, que não ilumina.</li><li>Liga ao último verso da estrofe seguinte: nevoeiro.</li></ol></div></details><details><summary>Confere a tua resposta</summary><div><p>«fulgor baço», «Brilho sem luz e sem arder», «fogo-fátuo», «Nem rei nem lei, nem paz nem guerra»: um país sem definição, sem energia, sem forma; por isso «nevoeiro».</p></div></details><p class="perg">3. Em Frei Luís de Sousa, o regresso de D. João de Portugal, desaparecido em Alcácer Quibir, destrói uma família. Em Mensagem, o regresso esperado é outro. Compara os dois sentidos do regresso.</p><details><summary>Como se lê</summary><div><ol class="passos"><li>Diz o que regressa em Garrett e o que isso faz à família de Madalena.</li><li>Diz o que regressa em Pessoa («É a hora!») e a quem: um país inteiro no nevoeiro.</li><li>Fecha com a diferença: um regresso que destrói, um regresso que se espera para renascer.</li></ol></div></details><details><summary>Confere a tua resposta</summary><div><p>Garrett: o passado que regressa é destruição (tragédia doméstica). Pessoa: o regresso (sebastianismo) é símbolo de renascimento espiritual («É a hora!»).</p></div></details><div class="folha"><p class="rot">Para fazer na folha A4, na aula</p><h3 style="margin-top:0">Proposta para o Dia Pessoa</h3><p>Concebe três propostas para apresentar «Nevoeiro» no Dia Pessoa (performance, instalação, vídeo, som…). Decide uma e prepara a defesa de 1 minuto.</p><ul class="lista"><li>Uma proposta</li><li>Outra, noutra linguagem</li><li>A mais arriscada</li></ul><p class="passo"><i>Regra:</i> cada proposta usa pelo menos dois versos e cabe numa sala de aula</p><details><summary>Um exemplo</summary><div><p>Uma proposta feita, para veres o modelo: «Som: a sala às escuras, uma voz a dizer ‘Nem rei nem lei…’ cada vez mais baixo, até só se ouvir ‘É a hora!’ dito pela turma inteira.» Cabe numa sala. As tuas três são noutras linguagens.</p></div></details></div><h3>Para pensares sozinho</h3><ul class="lista"><li>Que pergunta me assusta mais? Como lhe responderia?</li></ul>
+
+<h2 id="exercicio">Agora, o exercício</h2>
+<div class="exercicio"><p><b>Nevoeiro</b>: Fernando Pessoa, Mensagem, 1934. Cinco minutos; o resultado fica guardado e o percurso marca o passo.</p><iframe src="https://pedrohfernandes-klk.github.io/pt/m7/mensagem-nevoeiro/" title="Nevoeiro" loading="lazy"></iframe><p class="alt"><a href="https://pedrohfernandes-klk.github.io/pt/m7/mensagem-nevoeiro/">Abrir o exercício numa página só</a></p></div>
+<button id="lida" aria-pressed="false">Li a lição</button><span class="estado" id="estado"></span>
+<div class="duvidas"><h2>Se ficaste com dúvidas</h2><ul><li>Volta a «O essencial» e lê outra vez o texto em voz alta, devagar.</li><li>Abre «Como se lê» na pergunta onde paraste: os passos e o exemplo são o caminho.</li><li>Guarda a dúvida para a aula: pergunta ao docente ou escreve-a nas três linhas do fim da unidade, no percurso.</li></ul></div>
+<div class="prox"><a href="https://pedrohfernandes-klk.github.io/pt/m7/licao-m7-f08/">← Lição anterior</a><a href="https://pedrohfernandes-klk.github.io/pt/m7/licao-m7-f10/">Lição seguinte →</a></div>
+</section></div>
+<p class="rodape">EPI, Escola Profissional de Imagem · Português 2026/2027 · Lição M7-F09, É a hora! · Fontes: Fernando Pessoa, Mensagem · Arquivo Pessoa; Garrett, Frei Luís de Sousa. O que marcas fica só neste aparelho.</p>
+<div id="aviso" role="status"></div></main>
+<script>
+(function(){"use strict";var K="licao-m7-f09",b=document.getElementById("lida"),s=document.getElementById("estado");
+function ler(){try{return JSON.parse(localStorage.getItem(K)||"null")}catch(x){return null}}
+function pinta(){var g=ler();b.setAttribute("aria-pressed",g&&g.lida?"true":"false");b.textContent=g&&g.lida?"Lição lida":"Li a lição";s.textContent=g&&g.lida?"marcada neste aparelho":""}
+function marca(v){try{localStorage.setItem(K,JSON.stringify({lida:v,t:Date.now()}))}catch(x){}pinta()}
+b.onclick=function(){marca(!(ler()||{}).lida)};
+var ex=document.getElementById("exercicio");if(ex&&"IntersectionObserver" in window){new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting&&!(ler()||{}).lida){marca(true);var a=document.getElementById("aviso");a.textContent="Lição marcada como lida";a.style.display="block";setTimeout(function(){a.style.display="none"},2000)}})},{threshold:.6}).observe(ex)}
+pinta()})();
+</script></body></html>

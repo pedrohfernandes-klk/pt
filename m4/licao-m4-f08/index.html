@@ -1,0 +1,79 @@
+<!doctype html><html lang="pt-PT"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Lição M4-F08: «Ninguém»</title><style>:root{--tinta:#000;--papel:#fff;--suave:#444;--fundo:#f3f2ee}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--papel);color:var(--tinta);font:17px/1.5 Arial,Helvetica,sans-serif}
+main{max-width:1180px;margin:0 auto;padding:0 16px 80px}
+.topo{border-bottom:4px solid var(--tinta);padding:14px 0 10px}
+.marca{font:700 .72rem/1.2 Arial;letter-spacing:.14em;text-transform:uppercase}
+h1{font:900 1.75rem/1.05 "Arial Black",Arial,sans-serif;margin:.3rem 0 .4rem;text-transform:uppercase}
+.parati{font-size:1.05rem;margin:.2rem 0 .6rem}
+nav.ligas{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 0}
+nav.ligas a{font:700 .76rem Arial;letter-spacing:.04em;text-transform:uppercase;border:2px solid var(--tinta);padding:5px 9px;text-decoration:none;color:var(--tinta)}
+nav.ligas a.cheio{background:var(--tinta);color:var(--papel)}
+.cols{display:block}
+@media (min-width:960px){.cols{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:28px;align-items:start}.col-texto{position:sticky;top:0;max-height:100vh;overflow:auto;padding-right:6px}}
+h2{font:900 1rem "Arial Black",Arial,sans-serif;background:var(--tinta);color:var(--papel);padding:6px 10px;margin:22px 0 10px;text-transform:uppercase;letter-spacing:.03em}
+h3{font:900 .95rem "Arial Black",Arial,sans-serif;margin:16px 0 6px;text-transform:uppercase}
+.essencial{border:3px solid var(--tinta);padding:10px 14px;margin:14px 0}
+.essencial ol{margin:0;padding-left:1.3rem}.essencial li{margin:0 0 6px;font-size:1.02rem}
+.texto{border:2px solid var(--tinta);padding:12px 14px;margin:12px 0}
+.texto .tit{font:900 1rem "Arial Black",Arial,sans-serif;margin:0 0 8px}
+.texto .v{margin:0;padding:0;white-space:pre-wrap;font:600 1rem/1.5 Arial}
+.texto .v .n{display:inline-block;width:2.1em;color:var(--suave);font-size:.72em;font-weight:400;text-align:right;padding-right:.6em}
+.texto p.pr{margin:0 0 8px}
+.gl{font-size:.9rem;border-top:1px solid var(--tinta);margin-top:10px;padding-top:6px}
+.fonte{font-size:.82rem;color:var(--suave);margin:6px 0 0}
+.caixa{background:var(--fundo);border-left:6px solid var(--tinta);padding:8px 12px;margin:10px 0}
+.caixa h3{margin:0 0 4px;font-size:.85rem}
+.caixa p{margin:0 0 6px}
+details{border:2px solid var(--tinta);margin:8px 0;padding:0}
+summary{cursor:pointer;font:700 .95rem Arial;padding:8px 10px;list-style:none;display:flex;gap:8px;align-items:center}
+summary::before{content:"+";font:900 1.1rem "Arial Black",Arial;width:1.2rem}
+details[open]>summary::before{content:"–"}
+details>div{padding:0 12px 10px;border-top:1px solid var(--tinta)}
+.perg{margin:14px 0 6px;font-weight:700}
+.passo{margin:4px 0 4px 1.2rem;font-size:.95rem}
+ol.passos{margin:4px 0;padding-left:1.4rem}ol.passos li{margin:0 0 4px;font-size:.95rem}
+table{border-collapse:collapse;width:100%;margin:6px 0;font-size:.92rem}th,td{border:1px solid var(--tinta);padding:5px 7px;vertical-align:top;text-align:left}th{background:var(--tinta);color:var(--papel);font-size:.78rem;text-transform:uppercase;letter-spacing:.06em}
+.folha{border:2px dashed var(--tinta);padding:10px 12px;margin:10px 0}
+.folha .rot{font:700 .72rem Arial;letter-spacing:.12em;text-transform:uppercase;margin:0 0 4px}
+ul.lista{margin:4px 0;padding-left:1.3rem}ul.lista li{margin:0 0 4px}
+.pares{display:grid;grid-template-columns:1fr 1fr;gap:6px 14px;font-size:.95rem}
+.exercicio iframe{width:100%;height:74vh;min-height:520px;border:3px solid var(--tinta);background:#fff}
+.exercicio .alt{font-size:.88rem;margin:6px 0 0}
+button{font:700 .95rem Arial;padding:10px 14px;border:2px solid var(--tinta);background:var(--tinta);color:var(--papel);cursor:pointer;margin:8px 8px 0 0}
+button.sec{background:var(--papel);color:var(--tinta)}
+button[aria-pressed="true"]{background:var(--papel);color:var(--tinta)}
+.estado{font:700 .78rem Arial;letter-spacing:.08em;text-transform:uppercase;margin:6px 0 0}
+.duvidas ul{margin:0;padding-left:1.3rem}
+.prox{display:flex;justify-content:space-between;gap:10px;margin:26px 0 0;flex-wrap:wrap}
+.prox a{font:700 .9rem Arial;border:2px solid var(--tinta);padding:10px 12px;text-decoration:none;color:var(--tinta)}
+.rodape{margin-top:26px;border-top:2px solid var(--tinta);padding-top:8px;font-size:.8rem;color:var(--suave)}
+#aviso{position:fixed;left:50%;bottom:16px;transform:translateX(-50%);background:var(--tinta);color:var(--papel);padding:8px 14px;font:700 .85rem Arial;display:none;z-index:9}
+@media (prefers-color-scheme:dark){:root{--tinta:#ecebe5;--papel:#121210;--suave:#b3b1aa;--fundo:#1d1d1a}.exercicio iframe{background:#121210}}
+@media print{.exercicio,nav.ligas,button,.prox{display:none!important}.cols{display:block}}
+[hidden]{display:none!important}</style></head><body><main>
+<header class="topo"><div class="marca">Português · 2.º ano · Módulo 4 · Lição M4-F08 · unidade 2, Ninguém</div><h1>«Ninguém»_</h1><p class="parati">Um peregrino chega vinte anos depois de Alcácer-Quibir. Perguntam-lhe quem é. Ele aponta para um retrato e responde uma palavra só.</p>
+<nav class="ligas"><a class="cheio" href="https://pedrohfernandes-klk.github.io/pt/m4/#m4-f08">Percurso</a><a href="https://pedrohfernandes-klk.github.io/pt/m4/infografia-mapa-do-modulo/">Mapa do módulo</a><a href="https://pedrohfernandes-klk.github.io/pt/m4/licao-m4-f20/">Lição anterior</a><a href="https://pedrohfernandes-klk.github.io/pt/m4/licao-m4-f09/">Lição seguinte</a></nav></header>
+<div class="cols">
+<section class="col-texto"><div class="essencial"><h2 style="margin:0 0 8px">O essencial</h2><ol><li>Vinte anos depois de Alcácer Quibir, um Romeiro chega à casa; perguntam-lhe quem é e ele aponta para o retrato de D. João e diz «Ninguém».</li><li>É a revelação da tragédia: o primeiro marido está vivo, o casamento de Madalena não vale e Maria perde o nome.</li><li>Os deíticos («este», «aqui», «agora», «eu», «tu») só se entendem na situação: no teatro, apontam para o que está em cena.</li></ol></div><div class="texto" id="texto-0"><p class="tit">Ato II, cena I: o retrato</p><p class="pr"><b>[1]</b> MARIA — Oh! mas é verdade… vinde cá: (Leva-o diante dos três retratos que estão no fundo; e apontando para o de D. João) de quem é este retrato aqui, Telmo?</p><p class="pr"><b>[2]</b> TELMO, olha, e vira a cara de repente — Esse é… há de ser… é um da família, destes senhores da casa de Vimioso que aqui estão tantos.</p><p class="pr"><b>[3]</b> MARIA, ameaçando-o com o dedo — Tu não dizes a verdade, Telmo.</p><p class="pr"><b>[4]</b> TELMO, quase ofendido — Eu nunca menti, senhora D. Maria de Noronha.</p><p class="pr"><b>[5]</b> MARIA — Mas não diz a verdade toda o senhor Telmo Pais; que é quase o mesmo.</p><p class="fonte">Almeida Garrett, Frei Luís de Sousa (1844), ortografia atualizada, ato II, cena I.</p></div><div class="texto" id="texto-1"><p class="tit">Ato II, cenas XIV–XV: o Romeiro</p><p class="pr"><b>[1]</b> MADALENA — Português?… cativo da batalha de?…<br>ROMEIRO — De Alcácer-Quibir.<br>MADALENA, espavorida — Meu Deus, meu Deus! Que se não abre a terra debaixo dos meus pés?…</p><p class="pr"><b>[2]</b> […]</p><p class="pr"><b>[3]</b> JORGE — Procurai nestes retratos, e dizei-me se algum deles pode ser. · ROMEIRO, sem procurar, e apontando logo para o retrato de D. João — É aquele.</p><p class="pr"><b>[4]</b> […]</p><p class="pr"><b>[5]</b> MADALENA, com um grito espantoso — Minha filha, minha filha, minha filha!… (em tom cavo e profundo) Estou… estás… perdidas, desonradas… infames! (Com outro grito do coração) Oh minha filha, minha filha!… (Foge espavorida e neste gritar.)</p><p class="pr"><b>[6]</b> […]</p><p class="pr"><b>[7]</b> JORGE — Romeiro, romeiro! quem és tu?</p><p class="pr"><b>[8]</b> ROMEIRO, apontando com o bordão para o retrato de D. João de Portugal — Ninguém.</p><p class="pr"><b>[9]</b> (Frei Jorge cai prostrado no chão, com os braços estendidos, diante da tribuna. O pano desce lentamente.)</p><p class="gl"><b>Vocabulário:</b> <b>Vimioso</b>, família nobre; <b>espavorida</b>, aterrorizada; <b>romeiro</b>, peregrino; <b>cavo</b>, oco, profundo; <b>bordão</b>, cajado; <b>tribuna</b>, aqui, o lugar elevado onde estão os retratos</p><p class="fonte">Almeida Garrett, Frei Luís de Sousa (1844), ortografia atualizada, ato II, cenas XIV e XV.</p></div></section>
+<section class="col-licao">
+<h2>Como se lê</h2>
+<p class="perg">Classifica cada deítico e diz a que se refere.</p><p class="passo"><i>Pensa em cada célula; depois abre a solução e compara.</i></p><table><tr><th>Deítico</th><th>Tipo (pessoal, espacial, temporal)</th><th>Referente</th></tr><tr><td>«este retrato aqui»</td><td></td><td></td></tr><tr><td>«Tu não dizes»</td><td></td><td></td></tr><tr><td>«É aquele»</td><td></td><td></td></tr><tr><td>«meus pés»</td><td></td><td></td></tr></table><details><summary>A solução</summary><div><table><tr><th>Deítico</th><th>Tipo (pessoal, espacial, temporal)</th><th>Referente</th></tr><tr><td>este … aqui</td><td>espacial</td><td>o retrato perto de Maria (D. João)</td></tr><tr><td>Tu</td><td>pessoal</td><td>Telmo</td></tr><tr><td>aquele</td><td>espacial</td><td>o retrato de D. João, mais afastado</td></tr><tr><td>meus</td><td>pessoal</td><td>Madalena</td></tr></table></div></details><h3>Analisar</h3><p class="perg">1. «não diz a verdade toda… que é quase o mesmo»: que distinção faz Maria entre mentir e não dizer a verdade toda? Avalia se tem razão.</p><details><summary>Como se lê</summary><div><ol class="passos"><li>Diz o que Telmo faz (não mente, mas cala uma parte) e o que Maria acha disso.</li><li>Dá um exemplo teu de uma omissão que protege e de uma que engana.</li><li>Decide se Maria tem razão neste caso, e porquê.</li></ol></div></details><details><summary>Confere a tua resposta</summary><div><p>Telmo não mente, mas omite. Maria considera a omissão quase uma mentira. Avaliação aberta, fundamentada: há omissões que protegem, outras que enganam.</p></div></details><p class="perg">2. Madalena grita «perdidas, desonradas… infames» antes de o Romeiro dizer quem é. O que percebeu ela, e porque é que a filha vem primeiro no grito?</p><p class="passo"><i>Começa assim:</i> Madalena percebeu que ______________________; grita primeiro pela filha porque ______</p><details><summary>Confere a tua resposta</summary><div><p>Percebeu que o primeiro marido está vivo: o segundo casamento não vale, e a filha passa a ser tida por ilegítima. Grita pela filha porque é ela quem perde o nome e a honra.</p></div></details><div class="folha"><p class="rot">Para fazer na folha A4, na aula</p><h3 style="margin-top:0">Outra resposta que não «Ninguém»</h3><p>Escreve três respostas alternativas do Romeiro a «quem és tu?». Depois compara-as com «Ninguém» e explica porque é que Garrett escolheu esta (ou defende que uma tua é melhor).</p><ul class="lista"><li>Uma resposta</li><li>Outra, noutro tom</li><li>Só um gesto</li></ul><p class="passo"><i>Regra:</i> máximo 4 palavras ou uma didascália</p><details><summary>Um exemplo</summary><div><p>Uma alternativa feita, para veres o modelo: «ROMEIRO, tirando o chapéu — O dono desta casa.» Quatro palavras e uma didascália. Repara no que diz e no que «Ninguém» diz que esta não diz.</p></div></details></div><h3>Para pensares sozinho</h3><ul class="lista"><li>A minha melhor alternativa perdeu para «Ninguém»? Em quê?</li></ul>
+
+<h2 id="exercicio">Agora, o exercício</h2>
+<div class="exercicio"><p><b>Ninguém</b>: Almeida Garrett, Frei Luís de Sousa, 1843 · ato II, cenas XIV e XV. Cinco minutos; o resultado fica guardado e o percurso marca o passo.</p><iframe src="https://pedrohfernandes-klk.github.io/pt/m4/frei-luis-ninguem/" title="Ninguém" loading="lazy"></iframe><p class="alt"><a href="https://pedrohfernandes-klk.github.io/pt/m4/frei-luis-ninguem/">Abrir o exercício numa página só</a></p><p class="alt">Mais um exercício desta lição: <a href="https://pedrohfernandes-klk.github.io/pt/m4/frei-luis-ramos/">E se o Romeiro dissesse o nome?</a>.</p><p class="alt">Mais um exercício desta lição: <a href="https://pedrohfernandes-klk.github.io/pt/m4/gram-deiticos/">Aqui, agora, eu</a>.</p></div>
+<button id="lida" aria-pressed="false">Li a lição</button><span class="estado" id="estado"></span>
+<div class="duvidas"><h2>Se ficaste com dúvidas</h2><ul><li>Volta a «O essencial» e lê outra vez o texto em voz alta, devagar.</li><li>Abre «Como se lê» na pergunta onde paraste: os passos e o exemplo são o caminho.</li><li>Guarda a dúvida para a aula: pergunta ao docente ou escreve-a nas três linhas do fim da unidade, no percurso.</li></ul></div>
+<div class="prox"><a href="https://pedrohfernandes-klk.github.io/pt/m4/licao-m4-f20/">← Lição anterior</a><a href="https://pedrohfernandes-klk.github.io/pt/m4/licao-m4-f09/">Lição seguinte →</a></div>
+</section></div>
+<p class="rodape">EPI, Escola Profissional de Imagem · Português 2026/2027 · Lição M4-F08, «Ninguém» · Fontes: Almeida Garrett, Frei Luís de Sousa (1844), ortografia atualizada, ato II, cenas I, XIV e XV. O que marcas fica só neste aparelho.</p>
+<div id="aviso" role="status"></div></main>
+<script>
+(function(){"use strict";var K="licao-m4-f08",b=document.getElementById("lida"),s=document.getElementById("estado");
+function ler(){try{return JSON.parse(localStorage.getItem(K)||"null")}catch(x){return null}}
+function pinta(){var g=ler();b.setAttribute("aria-pressed",g&&g.lida?"true":"false");b.textContent=g&&g.lida?"Lição lida":"Li a lição";s.textContent=g&&g.lida?"marcada neste aparelho":""}
+function marca(v){try{localStorage.setItem(K,JSON.stringify({lida:v,t:Date.now()}))}catch(x){}pinta()}
+b.onclick=function(){marca(!(ler()||{}).lida)};
+var ex=document.getElementById("exercicio");if(ex&&"IntersectionObserver" in window){new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting&&!(ler()||{}).lida){marca(true);var a=document.getElementById("aviso");a.textContent="Lição marcada como lida";a.style.display="block";setTimeout(function(){a.style.display="none"},2000)}})},{threshold:.6}).observe(ex)}
+pinta()})();
+</script></body></html>

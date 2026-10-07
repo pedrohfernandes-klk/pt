@@ -1,0 +1,80 @@
+<!doctype html><html lang="pt-PT"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Lição M4-F06: Dizer é fazer</title><style>:root{--tinta:#000;--papel:#fff;--suave:#444;--fundo:#f3f2ee}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--papel);color:var(--tinta);font:17px/1.5 Arial,Helvetica,sans-serif}
+main{max-width:1180px;margin:0 auto;padding:0 16px 80px}
+.topo{border-bottom:4px solid var(--tinta);padding:14px 0 10px}
+.marca{font:700 .72rem/1.2 Arial;letter-spacing:.14em;text-transform:uppercase}
+h1{font:900 1.75rem/1.05 "Arial Black",Arial,sans-serif;margin:.3rem 0 .4rem;text-transform:uppercase}
+.parati{font-size:1.05rem;margin:.2rem 0 .6rem}
+nav.ligas{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 0}
+nav.ligas a{font:700 .76rem Arial;letter-spacing:.04em;text-transform:uppercase;border:2px solid var(--tinta);padding:5px 9px;text-decoration:none;color:var(--tinta)}
+nav.ligas a.cheio{background:var(--tinta);color:var(--papel)}
+.cols{display:block}
+@media (min-width:960px){.cols{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:28px;align-items:start}.col-texto{position:sticky;top:0;max-height:100vh;overflow:auto;padding-right:6px}}
+h2{font:900 1rem "Arial Black",Arial,sans-serif;background:var(--tinta);color:var(--papel);padding:6px 10px;margin:22px 0 10px;text-transform:uppercase;letter-spacing:.03em}
+h3{font:900 .95rem "Arial Black",Arial,sans-serif;margin:16px 0 6px;text-transform:uppercase}
+.essencial{border:3px solid var(--tinta);padding:10px 14px;margin:14px 0}
+.essencial ol{margin:0;padding-left:1.3rem}.essencial li{margin:0 0 6px;font-size:1.02rem}
+.texto{border:2px solid var(--tinta);padding:12px 14px;margin:12px 0}
+.texto .tit{font:900 1rem "Arial Black",Arial,sans-serif;margin:0 0 8px}
+.texto .v{margin:0;padding:0;white-space:pre-wrap;font:600 1rem/1.5 Arial}
+.texto .v .n{display:inline-block;width:2.1em;color:var(--suave);font-size:.72em;font-weight:400;text-align:right;padding-right:.6em}
+.texto p.pr{margin:0 0 8px}
+.gl{font-size:.9rem;border-top:1px solid var(--tinta);margin-top:10px;padding-top:6px}
+.fonte{font-size:.82rem;color:var(--suave);margin:6px 0 0}
+.caixa{background:var(--fundo);border-left:6px solid var(--tinta);padding:8px 12px;margin:10px 0}
+.caixa h3{margin:0 0 4px;font-size:.85rem}
+.caixa p{margin:0 0 6px}
+details{border:2px solid var(--tinta);margin:8px 0;padding:0}
+summary{cursor:pointer;font:700 .95rem Arial;padding:8px 10px;list-style:none;display:flex;gap:8px;align-items:center}
+summary::before{content:"+";font:900 1.1rem "Arial Black",Arial;width:1.2rem}
+details[open]>summary::before{content:"–"}
+details>div{padding:0 12px 10px;border-top:1px solid var(--tinta)}
+.perg{margin:14px 0 6px;font-weight:700}
+.passo{margin:4px 0 4px 1.2rem;font-size:.95rem}
+ol.passos{margin:4px 0;padding-left:1.4rem}ol.passos li{margin:0 0 4px;font-size:.95rem}
+table{border-collapse:collapse;width:100%;margin:6px 0;font-size:.92rem}th,td{border:1px solid var(--tinta);padding:5px 7px;vertical-align:top;text-align:left}th{background:var(--tinta);color:var(--papel);font-size:.78rem;text-transform:uppercase;letter-spacing:.06em}
+.folha{border:2px dashed var(--tinta);padding:10px 12px;margin:10px 0}
+.folha .rot{font:700 .72rem Arial;letter-spacing:.12em;text-transform:uppercase;margin:0 0 4px}
+ul.lista{margin:4px 0;padding-left:1.3rem}ul.lista li{margin:0 0 4px}
+.pares{display:grid;grid-template-columns:1fr 1fr;gap:6px 14px;font-size:.95rem}
+.exercicio iframe{width:100%;height:74vh;min-height:520px;border:3px solid var(--tinta);background:#fff}
+.exercicio .alt{font-size:.88rem;margin:6px 0 0}
+button{font:700 .95rem Arial;padding:10px 14px;border:2px solid var(--tinta);background:var(--tinta);color:var(--papel);cursor:pointer;margin:8px 8px 0 0}
+button.sec{background:var(--papel);color:var(--tinta)}
+button[aria-pressed="true"]{background:var(--papel);color:var(--tinta)}
+.estado{font:700 .78rem Arial;letter-spacing:.08em;text-transform:uppercase;margin:6px 0 0}
+.duvidas ul{margin:0;padding-left:1.3rem}
+.prox{display:flex;justify-content:space-between;gap:10px;margin:26px 0 0;flex-wrap:wrap}
+.prox a{font:700 .9rem Arial;border:2px solid var(--tinta);padding:10px 12px;text-decoration:none;color:var(--tinta)}
+.rodape{margin-top:26px;border-top:2px solid var(--tinta);padding-top:8px;font-size:.8rem;color:var(--suave)}
+#aviso{position:fixed;left:50%;bottom:16px;transform:translateX(-50%);background:var(--tinta);color:var(--papel);padding:8px 14px;font:700 .85rem Arial;display:none;z-index:9}
+@media (prefers-color-scheme:dark){:root{--tinta:#ecebe5;--papel:#121210;--suave:#b3b1aa;--fundo:#1d1d1a}.exercicio iframe{background:#121210}}
+@media print{.exercicio,nav.ligas,button,.prox{display:none!important}.cols{display:block}}
+[hidden]{display:none!important}</style></head><body><main>
+<header class="topo"><div class="marca">Português · 2.º ano · Módulo 4 · Lição M4-F06 · unidade 1, Pregar aos peixes</div><h1>Dizer é fazer_</h1><p class="parati">«Olhai, peixes.» Não é uma descrição: é uma ordem. Há frases que fazem coisas só por serem ditas.</p>
+<nav class="ligas"><a class="cheio" href="https://pedrohfernandes-klk.github.io/pt/m4/#m4-f06">Percurso</a><a href="https://pedrohfernandes-klk.github.io/pt/m4/infografia-mapa-do-modulo/">Mapa do módulo</a><a href="https://pedrohfernandes-klk.github.io/pt/m4/licao-m4-f04/">Lição anterior</a><a href="https://pedrohfernandes-klk.github.io/pt/m4/licao-m4-f15/">Lição seguinte</a></nav></header>
+<div class="cols">
+<section class="col-texto"><div class="essencial"><h2 style="margin:0 0 8px">O essencial</h2><ol><li>Um ato de fala é o que se faz ao dizer: afirmar (assertivo), levar o outro a agir (diretivo), comprometer-se (compromissivo), exprimir um estado (expressivo), mudar o mundo com a palavra (declarativo).</li><li>«Olhai, peixes» não descreve: é uma ordem, um ato diretivo; «os grandes comem os pequenos» é assertivo.</li><li>A modalidade marca na frase a certeza, a possibilidade, a obrigação ou a vontade de quem fala.</li></ol></div><div class="caixa"><h3>O que vais aprender</h3><p>Classificar atos de fala e valores modais; transformar enunciados e avaliar o efeito no auditório.</p></div></section>
+<section class="col-licao">
+<h2>Como se lê</h2>
+<div class="caixa"><h3>Atos de fala e modalidade</h3><p><b>Atos de fala:</b> <b>assertivo</b> (afirma: «os grandes comem os pequenos»); <b>diretivo</b> (leva o outro a agir: «Olhai, peixes»); <b>compromissivo</b> (compromete quem fala: «Prometo voltar amanhã»); <b>expressivo</b> (exprime um estado: «Oh que boa doutrina era esta…»); <b>declarativo</b> (muda a realidade ao ser dito por quem tem autoridade: «Declaro aberta a sessão»).</p>
+<p><b>Modalidade:</b> <b>epistémica</b> (grau de certeza: «talvez», «certamente») · <b>deôntica</b> (obrigação ou permissão: «deves», «podes») · <b>apreciativa</b> (juízo de valor: «infelizmente», «Grande escândalo»).</p></div><p class="perg">Classifica o ato de fala e, quando existir, o valor modal.</p><p class="passo"><i>Pensa em cada célula; depois abre a solução e compara.</i></p><table><tr><th>Enunciado</th><th>Ato de fala</th><th>Modalidade</th></tr><tr><td>«Olhai, peixes, lá do mar para a terra.»</td><td></td><td></td></tr><tr><td>«Não só vos comeis uns aos outros, mas os grandes comem os pequenos.»</td><td></td><td></td></tr><tr><td>«Dizei-me, voadores, não vos fez Deus peixes?»</td><td></td><td></td></tr><tr><td>«Oh que boa doutrina era esta para a terra, se eu não pregara para o mar!»</td><td></td><td></td></tr><tr><td>«Grande escândalo é este.»</td><td></td><td></td></tr><tr><td>«Talvez os peixes ouçam melhor do que os homens.» (frase construída)</td><td></td><td></td></tr><tr><td>«Os pregadores devem pregar a verdadeira doutrina.» (frase construída)</td><td></td><td></td></tr></table><details><summary>A solução</summary><div><table><tr><th>Enunciado</th><th>Ato de fala</th><th>Modalidade</th></tr><tr><td>Olhai, peixes…</td><td>diretivo</td><td>—</td></tr><tr><td>os grandes comem os pequenos</td><td>assertivo</td><td>—</td></tr><tr><td>Dizei-me, voadores…</td><td>diretivo (pedido de resposta; pergunta retórica)</td><td>—</td></tr><tr><td>Oh que boa doutrina…</td><td>expressivo</td><td>apreciativa</td></tr><tr><td>Grande escândalo é este.</td><td>assertivo</td><td>apreciativa</td></tr><tr><td>Talvez os peixes…</td><td>assertivo</td><td>epistémica (probabilidade)</td></tr><tr><td>Os pregadores devem…</td><td>assertivo</td><td>deôntica (obrigação)</td></tr></table></div></details><h3>Transformar e avaliar</h3><p class="perg">1. Transforma «Olhai, peixes, lá do mar para a terra» num ato assertivo e num expressivo, mantendo o conteúdo.</p><p class="passo"><i>Começa assim:</i> Assertivo: «Os peixes ______________________.» Expressivo: «______________________!»</p><details><summary>Confere a tua resposta</summary><div><p>Assertivo: «Os peixes olham do mar para a terra.» Expressivo: «Quem me dera que os peixes olhassem para a terra!»</p></div></details><p class="perg">2. <b>Avalia:</b> qual das três versões (a original e as tuas duas) tem mais efeito sobre um auditório? Justifica com um critério.</p><details><summary>Como se lê</summary><div><ol class="passos"><li>Escolhe um critério e escreve-o: «a que obriga o auditório a agir», «a que cria mais emoção».</li><li>Aplica-o às três versões, uma frase cada.</li><li>Decide e diz porquê, com o critério.</li></ol></div></details><details><summary>Confere a tua resposta</summary><div><p>Em regra, o diretivo com apóstrofe: obriga o auditório a agir e a olhar. Aceitar outra escolha bem justificada (o expressivo cria emoção).</p></div></details><h3>Para pensares sozinho</h3><ul class="lista"><li>Onde é que eu, esta semana, usei um ato diretivo disfarçado de pergunta?</li></ul>
+
+<h2 id="exercicio">Agora, o exercício</h2>
+<div class="exercicio"><p><b>Dizer é fazer</b>: Atos de fala no Sermão de Santo António e em Frei Luís de Sousa. Cinco minutos; o resultado fica guardado e o percurso marca o passo.</p><iframe src="https://pedrohfernandes-klk.github.io/pt/m4/gram-atos-fala/" title="Dizer é fazer" loading="lazy"></iframe><p class="alt"><a href="https://pedrohfernandes-klk.github.io/pt/m4/gram-atos-fala/">Abrir o exercício numa página só</a></p></div>
+<button id="lida" aria-pressed="false">Li a lição</button><span class="estado" id="estado"></span>
+<div class="duvidas"><h2>Se ficaste com dúvidas</h2><ul><li>Volta a «O essencial» e lê outra vez o texto em voz alta, devagar.</li><li>Abre «Como se lê» na pergunta onde paraste: os passos e o exemplo são o caminho.</li><li>Guarda a dúvida para a aula: pergunta ao docente ou escreve-a nas três linhas do fim da unidade, no percurso.</li></ul></div>
+<div class="prox"><a href="https://pedrohfernandes-klk.github.io/pt/m4/licao-m4-f04/">← Lição anterior</a><a href="https://pedrohfernandes-klk.github.io/pt/m4/licao-m4-f15/">Lição seguinte →</a></div>
+</section></div>
+<p class="rodape">EPI, Escola Profissional de Imagem · Português 2026/2027 · Lição M4-F06, Dizer é fazer · Fontes: Padre António Vieira, Sermão de Santo António (1654), ortografia atualizada, caps. II, IV, V e VI. O que marcas fica só neste aparelho.</p>
+<div id="aviso" role="status"></div></main>
+<script>
+(function(){"use strict";var K="licao-m4-f06",b=document.getElementById("lida"),s=document.getElementById("estado");
+function ler(){try{return JSON.parse(localStorage.getItem(K)||"null")}catch(x){return null}}
+function pinta(){var g=ler();b.setAttribute("aria-pressed",g&&g.lida?"true":"false");b.textContent=g&&g.lida?"Lição lida":"Li a lição";s.textContent=g&&g.lida?"marcada neste aparelho":""}
+function marca(v){try{localStorage.setItem(K,JSON.stringify({lida:v,t:Date.now()}))}catch(x){}pinta()}
+b.onclick=function(){marca(!(ler()||{}).lida)};
+var ex=document.getElementById("exercicio");if(ex&&"IntersectionObserver" in window){new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting&&!(ler()||{}).lida){marca(true);var a=document.getElementById("aviso");a.textContent="Lição marcada como lida";a.style.display="block";setTimeout(function(){a.style.display="none"},2000)}})},{threshold:.6}).observe(ex)}
+pinta()})();
+</script></body></html>

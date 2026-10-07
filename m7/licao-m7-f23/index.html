@@ -1,0 +1,92 @@
+<!doctype html><html lang="pt-PT"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Lição M7-F23: O pouco que duramos</title><style>:root{--tinta:#000;--papel:#fff;--suave:#444;--fundo:#f3f2ee}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--papel);color:var(--tinta);font:17px/1.5 Arial,Helvetica,sans-serif}
+main{max-width:1180px;margin:0 auto;padding:0 16px 80px}
+.topo{border-bottom:4px solid var(--tinta);padding:14px 0 10px}
+.marca{font:700 .72rem/1.2 Arial;letter-spacing:.14em;text-transform:uppercase}
+h1{font:900 1.75rem/1.05 "Arial Black",Arial,sans-serif;margin:.3rem 0 .4rem;text-transform:uppercase}
+.parati{font-size:1.05rem;margin:.2rem 0 .6rem}
+nav.ligas{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 0}
+nav.ligas a{font:700 .76rem Arial;letter-spacing:.04em;text-transform:uppercase;border:2px solid var(--tinta);padding:5px 9px;text-decoration:none;color:var(--tinta)}
+nav.ligas a.cheio{background:var(--tinta);color:var(--papel)}
+.cols{display:block}
+@media (min-width:960px){.cols{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:28px;align-items:start}.col-texto{position:sticky;top:0;max-height:100vh;overflow:auto;padding-right:6px}}
+h2{font:900 1rem "Arial Black",Arial,sans-serif;background:var(--tinta);color:var(--papel);padding:6px 10px;margin:22px 0 10px;text-transform:uppercase;letter-spacing:.03em}
+h3{font:900 .95rem "Arial Black",Arial,sans-serif;margin:16px 0 6px;text-transform:uppercase}
+.essencial{border:3px solid var(--tinta);padding:10px 14px;margin:14px 0}
+.essencial ol{margin:0;padding-left:1.3rem}.essencial li{margin:0 0 6px;font-size:1.02rem}
+.texto{border:2px solid var(--tinta);padding:12px 14px;margin:12px 0}
+.texto .tit{font:900 1rem "Arial Black",Arial,sans-serif;margin:0 0 8px}
+.texto .v{margin:0;padding:0;white-space:pre-wrap;font:600 1rem/1.5 Arial}
+.texto .v .n{display:inline-block;width:2.1em;color:var(--suave);font-size:.72em;font-weight:400;text-align:right;padding-right:.6em}
+.texto p.pr{margin:0 0 8px}
+.gl{font-size:.9rem;border-top:1px solid var(--tinta);margin-top:10px;padding-top:6px}
+.fonte{font-size:.82rem;color:var(--suave);margin:6px 0 0}
+.caixa{background:var(--fundo);border-left:6px solid var(--tinta);padding:8px 12px;margin:10px 0}
+.caixa h3{margin:0 0 4px;font-size:.85rem}
+.caixa p{margin:0 0 6px}
+details{border:2px solid var(--tinta);margin:8px 0;padding:0}
+summary{cursor:pointer;font:700 .95rem Arial;padding:8px 10px;list-style:none;display:flex;gap:8px;align-items:center}
+summary::before{content:"+";font:900 1.1rem "Arial Black",Arial;width:1.2rem}
+details[open]>summary::before{content:"–"}
+details>div{padding:0 12px 10px;border-top:1px solid var(--tinta)}
+.perg{margin:14px 0 6px;font-weight:700}
+.passo{margin:4px 0 4px 1.2rem;font-size:.95rem}
+ol.passos{margin:4px 0;padding-left:1.4rem}ol.passos li{margin:0 0 4px;font-size:.95rem}
+table{border-collapse:collapse;width:100%;margin:6px 0;font-size:.92rem}th,td{border:1px solid var(--tinta);padding:5px 7px;vertical-align:top;text-align:left}th{background:var(--tinta);color:var(--papel);font-size:.78rem;text-transform:uppercase;letter-spacing:.06em}
+.folha{border:2px dashed var(--tinta);padding:10px 12px;margin:10px 0}
+.folha .rot{font:700 .72rem Arial;letter-spacing:.12em;text-transform:uppercase;margin:0 0 4px}
+ul.lista{margin:4px 0;padding-left:1.3rem}ul.lista li{margin:0 0 4px}
+.pares{display:grid;grid-template-columns:1fr 1fr;gap:6px 14px;font-size:.95rem}
+.exercicio iframe{width:100%;height:74vh;min-height:520px;border:3px solid var(--tinta);background:#fff}
+.exercicio .alt{font-size:.88rem;margin:6px 0 0}
+button{font:700 .95rem Arial;padding:10px 14px;border:2px solid var(--tinta);background:var(--tinta);color:var(--papel);cursor:pointer;margin:8px 8px 0 0}
+button.sec{background:var(--papel);color:var(--tinta)}
+button[aria-pressed="true"]{background:var(--papel);color:var(--tinta)}
+.estado{font:700 .78rem Arial;letter-spacing:.08em;text-transform:uppercase;margin:6px 0 0}
+.duvidas ul{margin:0;padding-left:1.3rem}
+.prox{display:flex;justify-content:space-between;gap:10px;margin:26px 0 0;flex-wrap:wrap}
+.prox a{font:700 .9rem Arial;border:2px solid var(--tinta);padding:10px 12px;text-decoration:none;color:var(--tinta)}
+.rodape{margin-top:26px;border-top:2px solid var(--tinta);padding-top:8px;font-size:.8rem;color:var(--suave)}
+#aviso{position:fixed;left:50%;bottom:16px;transform:translateX(-50%);background:var(--tinta);color:var(--papel);padding:8px 14px;font:700 .85rem Arial;display:none;z-index:9}
+@media (prefers-color-scheme:dark){:root{--tinta:#ecebe5;--papel:#121210;--suave:#b3b1aa;--fundo:#1d1d1a}.exercicio iframe{background:#121210}}
+@media print{.exercicio,nav.ligas,button,.prox{display:none!important}.cols{display:block}}
+[hidden]{display:none!important}</style></head><body><main>
+<header class="topo"><div class="marca">Português · 3.º ano · Módulo 7 · Lição M7-F23 · unidade 3, Sereno</div><h1>O pouco que duramos_</h1><p class="parati">Há rosas que nascem de manhã e morrem à noite. Para elas, a luz é eterna. Reis propõe a Lídia que vivam assim.</p>
+<nav class="ligas"><a class="cheio" href="https://pedrohfernandes-klk.github.io/pt/m7/#m7-f23">Percurso</a><a href="https://pedrohfernandes-klk.github.io/pt/m7/infografia-mapa-do-modulo/">Mapa do módulo</a><a href="https://pedrohfernandes-klk.github.io/pt/m7/licao-m7-f05/">Lição anterior</a><a href="https://pedrohfernandes-klk.github.io/pt/m7/licao-m7-f07/">Lição seguinte</a></nav></header>
+<div class="cols">
+<section class="col-texto"><div class="essencial"><h2 style="margin:0 0 8px">O essencial</h2><ol><li>Há rosas que nascem de manhã e morrem à noite; para elas a luz é eterna. Reis propõe a Lídia que vivam assim.</li><li>Epicurismo: a tranquilidade com prazeres simples, sem excessos, sem temer a morte; estoicismo: dominar as paixões e aceitar a ordem do mundo.</li><li>A consciência da morte não leva ao desespero: leva a encenar a vida com medida.</li></ol></div><div class="texto" id="texto-0"><p class="tit">Ricardo Reis, «As rosas amo dos jardins de Adónis»</p><p class="v"><span class="n"></span>As rosas amo dos jardins de Adónis,
+<span class="n"></span>Essas volucres amo, Lídia, rosas,
+<span class="n"></span>Que em o dia em que nascem,
+<span class="n"></span>Em esse dia morrem.
+
+<span class="n">5</span>A luz para elas é eterna, porque
+<span class="n"></span>Nascem nascido já o Sol, e acabam
+<span class="n"></span>Antes que Apolo deixe
+<span class="n"></span>O seu curso visível.
+
+<span class="n"></span>Assim façamos nossa vida um dia,
+<span class="n">10</span>Inscientes, Lídia, voluntariamente
+<span class="n"></span>Que há noite antes e após
+<span class="n"></span>O pouco que duramos.</p><p class="gl"><b>Vocabulário:</b> <b>Adónis</b>, figura da mitologia grega; <b>volucres</b>, passageiras, que duram pouco; <b>Apolo</b>, aqui, o Sol; <b>inscientes</b>, que não sabem</p><p class="fonte">Ricardo Reis (11-7-1914) · Odes de Ricardo Reis, Ática, 1946 · 1.ª publ. Athena, n.º 1, Lisboa, outubro de 1924 · Arquivo Pessoa</p></div></section>
+<section class="col-licao">
+<h2>Como se lê</h2>
+<div class="caixa"><h3>Recorda</h3><p><b>Ode</b>: poema de tom elevado, em estrofes regulares; Reis segue o modelo do poeta latino Horácio. <b>Epicurismo</b>: procurar a tranquilidade com prazeres simples, sem excessos, e sem temer a morte. <b>Estoicismo</b>: dominar as paixões e aceitar a ordem do mundo, incluindo a morte. <b>Carpe diem</b>: expressão latina que manda aproveitar o dia de hoje. Na ficha «À beira do rio» viste esta maneira de viver; aqui dás-lhe nome. <span class="sub">Fonte: Wikipédia, «Ricardo Reis».</span></p></div><p class="perg">Segue a ode nas suas três estrofes.</p><p class="passo"><i>Pensa em cada célula; depois abre a solução e compara.</i></p><table><tr><th>Estrofe</th><th>O que diz</th><th>Palavra ou expressão-chave</th></tr><tr><td>1</td><td></td><td></td></tr><tr><td>2</td><td></td><td></td></tr><tr><td>3</td><td></td><td></td></tr></table><details><summary>A solução</summary><div><table><tr><th>Estrofe</th><th>O que diz</th><th>Palavra ou expressão-chave</th></tr><tr><td>1</td><td>O sujeito diz a Lídia que ama as rosas que nascem e morrem no mesmo dia</td><td>«Em esse dia morrem»</td></tr><tr><td>2</td><td>Para essas rosas a luz é eterna, porque nunca veem a noite</td><td>«eterna»</td></tr><tr><td>3</td><td>Propõe que os dois vivam assim: um dia só, sem querer saber da noite</td><td>«O pouco que duramos»</td></tr></table></div></details><h3>Ler o que está lá</h3><p class="perg">1. Explica porque é que, para as rosas, a luz é «eterna», se elas duram um dia.</p><p class="passo"><i>Começa assim:</i> As rosas nascem ______ e acabam ______. Como nunca veem ______, para elas a luz ______</p><details><summary>Confere a tua resposta</summary><div><p>Nascem já com o Sol nascido e acabam antes de ele se pôr: nunca conhecem a noite. Para quem só vive de dia, o dia é tudo o que existe; «eterna» é a luz vista por dentro de uma vida curta.</p></div></details><p class="perg">2. «Inscientes, Lídia, voluntariamente». Diz o que há de estranho em escolher não saber e o que isso revela sobre o sujeito.</p><details><summary>Como se lê</summary><div><ol class="passos"><li>Diz o que é preciso saber para decidir não saber.</li><li>Diz o que ele sabe, e o verso que o prova.</li><li>Conclui: ele esquece a morte, ou encena que a esquece?</li></ol></div></details><details><summary>Confere a tua resposta</summary><div><p>Para escolher ignorar a noite é preciso conhecê-la: o sujeito sabe «Que há noite antes e após». Não é inocência, é decisão: uma encenação da inconsciência, feita por quem tem plena consciência da morte.</p></div></details><p class="perg">3. Compara a imagem do tempo nesta ode com a da ode «Vem sentar-te comigo, Lídia, à beira do rio».</p><details><summary>Como se lê</summary><div><ol class="passos"><li>Diz a imagem de cada uma: o rio, a rosa.</li><li>Diz o que cada imagem faz ao tempo: corre; dura um dia.</li><li>Diz o que as duas pedem a Lídia.</li></ol></div></details><details><summary>Confere a tua resposta</summary><div><p>Lá, o rio que passa e não volta; aqui, a rosa que dura um dia. As duas dizem que a vida é breve e pedem o mesmo: aceitar, viver com calma o pouco que há, sem paixões que perturbem.</p></div></details><p class="perg">4. Dá nome à proposta da terceira estrofe: epicurismo, estoicismo, ou os dois? Justifica com o texto e com a caixa «Recorda».</p><p class="passo"><i>Começa assim:</i> É ______, porque ______ («______»)</p><details><summary>Confere a tua resposta</summary><div><p>Os dois. Epicurismo: aproveitar o dia, sem temer a morte («façamos nossa vida um dia»). Estoicismo: aceitar a ordem das coisas («Que há noite antes e após»). Aceitar só um, bem justificado.</p></div></details><p class="perg">Facto, inferência, interpretação ou opinião? Decide para cada frase.</p><p class="passo">1. A ode tem a data de 11 de julho de 1914.</p><details><summary>Confere</summary><div><p>Facto (data no Arquivo Pessoa).</p></div></details><p class="passo">2. As rosas do poema duram um dia.</p><details><summary>Confere</summary><div><p>Facto do texto.</p></div></details><p class="passo">3. Reis tem medo de morrer.</p><details><summary>Confere</summary><div><p>Inferência discutível: o poema nunca o diz; diz que há noite e propõe não olhar para ela.</p></div></details><p class="passo">4. Viver sem pensar na morte é a melhor maneira de viver.</p><details><summary>Confere</summary><div><p>Opinião: é a tese que vais discutir.</p></div></details><div class="folha"><p class="rot">Para fazer na folha A4, na aula</p><h3 style="margin-top:0">Três coisas que duram um dia</h3><p>Escolhe três coisas do teu curso ou da cidade que duram um dia ou menos. Escreve, para cada uma, dois versos à maneira de Reis. Escolhe os que melhor dizem «o pouco que duramos».</p><ul class="lista"><li>No curso</li><li>Na cidade</li><li>Em casa</li></ul><p class="passo"><i>Regra:</i> dois versos cada; sem exclamações; uma inversão da ordem das palavras</p><details><summary>Um exemplo</summary><div><p>Dois versos feitos, para veres o modelo (um cenário): «O cenário amo, Lídia, que se monta / De manhã, e à noite se desfaz.» Ordem das palavras trocada, um nome chamado, nenhuma exclamação. Os teus são outros.</p></div></details></div><div class="folha"><p class="rot">Escrita: na folha A4, na aula ou na oficina</p><p><b>Decidir e defender.</b> Viver «inscientes, voluntariamente» é sabedoria ou fuga? Responde em 100 a 120 palavras, com dois versos da ode e a objeção mais forte.</p><ol class="passos"><li>Primeira frase: a tua decisão.</li><li>Um verso para o que se ganha e outro para o que se perde.</li><li>A objeção mais forte e a tua resposta, em duas frases.</li></ol><p class="passo"><i>Como é avaliado:</i> Tese clara; dois versos exatos; objeção reconhecida (quem esquece a noite não se prepara para ela; quem só pensa nela não vive o dia); 100 a 120 palavras.</p></div><h3>Confere</h3><ul class="lista"><li>☐ Decidi na primeira frase.</li><li>☐ Citei dois versos, tal como estão na ode.</li><li>☐ Respondi à objeção mais forte.</li><li>☐ Contei: 100 a 120 palavras.</li></ul><h3>Para pensares sozinho</h3><ul class="lista"><li>Que coisa minha dura pouco e eu trato como se durasse sempre?</li></ul>
+
+<h2 id="exercicio">Agora, o exercício</h2>
+<div class="exercicio"><p><b>À beira do rio</b>: Ricardo Reis, 1914. Cinco minutos; o resultado fica guardado e o percurso marca o passo.</p><iframe src="https://pedrohfernandes-klk.github.io/pt/m7/reis-lidia/" title="À beira do rio" loading="lazy"></iframe><p class="alt"><a href="https://pedrohfernandes-klk.github.io/pt/m7/reis-lidia/">Abrir o exercício numa página só</a></p></div>
+<button id="lida" aria-pressed="false">Li a lição</button><span class="estado" id="estado"></span>
+<div class="duvidas"><h2>Se ficaste com dúvidas</h2><ul><li>Volta a «O essencial» e lê outra vez o texto em voz alta, devagar.</li><li>Abre «Como se lê» na pergunta onde paraste: os passos e o exemplo são o caminho.</li><li>Guarda a dúvida para a aula: pergunta ao docente ou escreve-a nas três linhas do fim da unidade, no percurso.</li></ul></div>
+<div class="prox"><a href="https://pedrohfernandes-klk.github.io/pt/m7/licao-m7-f05/">← Lição anterior</a><a href="https://pedrohfernandes-klk.github.io/pt/m7/licao-m7-f07/">Lição seguinte →</a></div>
+</section></div>
+<p class="rodape">EPI, Escola Profissional de Imagem · Português 2026/2027 · Lição M7-F23, O pouco que duramos · Fontes: Ricardo Reis, «As rosas amo dos jardins de Adónis» (11-7-1914) · Odes de Ricardo Reis, Ática, 1946 · Arquivo Pessoa; Wikipédia, «Ricardo Reis». O que marcas fica só neste aparelho.</p>
+<div id="aviso" role="status"></div></main>
+<script>
+(function(){"use strict";var K="licao-m7-f23",b=document.getElementById("lida"),s=document.getElementById("estado");
+function ler(){try{return JSON.parse(localStorage.getItem(K)||"null")}catch(x){return null}}
+function pinta(){var g=ler();b.setAttribute("aria-pressed",g&&g.lida?"true":"false");b.textContent=g&&g.lida?"Lição lida":"Li a lição";s.textContent=g&&g.lida?"marcada neste aparelho":""}
+function marca(v){try{localStorage.setItem(K,JSON.stringify({lida:v,t:Date.now()}))}catch(x){}pinta()}
+b.onclick=function(){marca(!(ler()||{}).lida)};
+var ex=document.getElementById("exercicio");if(ex&&"IntersectionObserver" in window){new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting&&!(ler()||{}).lida){marca(true);var a=document.getElementById("aviso");a.textContent="Lição marcada como lida";a.style.display="block";setTimeout(function(){a.style.display="none"},2000)}})},{threshold:.6}).observe(ex)}
+pinta()})();
+</script></body></html>
