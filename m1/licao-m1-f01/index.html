@@ -1,0 +1,82 @@
+<!doctype html><html lang="pt-PT"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Lição M1-F01: A língua que se canta</title><style>:root{--tinta:#000;--papel:#fff;--suave:#444;--fundo:#f3f2ee}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--papel);color:var(--tinta);font:17px/1.5 Arial,Helvetica,sans-serif}
+main{max-width:1180px;margin:0 auto;padding:0 16px 80px}
+.topo{border-bottom:4px solid var(--tinta);padding:14px 0 10px}
+.marca{font:700 .72rem/1.2 Arial;letter-spacing:.14em;text-transform:uppercase}
+h1{font:900 1.75rem/1.05 "Arial Black",Arial,sans-serif;margin:.3rem 0 .4rem;text-transform:uppercase}
+.parati{font-size:1.05rem;margin:.2rem 0 .6rem}
+nav.ligas{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 0}
+nav.ligas a{font:700 .76rem Arial;letter-spacing:.04em;text-transform:uppercase;border:2px solid var(--tinta);padding:5px 9px;text-decoration:none;color:var(--tinta)}
+nav.ligas a.cheio{background:var(--tinta);color:var(--papel)}
+.cols{display:block}
+@media (min-width:960px){.cols{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:28px;align-items:start}.col-texto{position:sticky;top:0;max-height:100vh;overflow:auto;padding-right:6px}}
+h2{font:900 1rem "Arial Black",Arial,sans-serif;background:var(--tinta);color:var(--papel);padding:6px 10px;margin:22px 0 10px;text-transform:uppercase;letter-spacing:.03em}
+h3{font:900 .95rem "Arial Black",Arial,sans-serif;margin:16px 0 6px;text-transform:uppercase}
+.essencial{border:3px solid var(--tinta);padding:10px 14px;margin:14px 0}
+.essencial ol{margin:0;padding-left:1.3rem}.essencial li{margin:0 0 6px;font-size:1.02rem}
+.texto{border:2px solid var(--tinta);padding:12px 14px;margin:12px 0}
+.texto .tit{font:900 1rem "Arial Black",Arial,sans-serif;margin:0 0 8px}
+.texto .v{margin:0;padding:0;white-space:pre-wrap;font:600 1rem/1.5 Arial}
+.texto .v .n{display:inline-block;width:2.1em;color:var(--suave);font-size:.72em;font-weight:400;text-align:right;padding-right:.6em}
+.texto p.pr{margin:0 0 8px}
+.gl{font-size:.9rem;border-top:1px solid var(--tinta);margin-top:10px;padding-top:6px}
+.fonte{font-size:.82rem;color:var(--suave);margin:6px 0 0}
+.caixa{background:var(--fundo);border-left:6px solid var(--tinta);padding:8px 12px;margin:10px 0}
+.caixa h3{margin:0 0 4px;font-size:.85rem}
+.caixa p{margin:0 0 6px}
+details{border:2px solid var(--tinta);margin:8px 0;padding:0}
+summary{cursor:pointer;font:700 .95rem Arial;padding:8px 10px;list-style:none;display:flex;gap:8px;align-items:center}
+summary::before{content:"+";font:900 1.1rem "Arial Black",Arial;width:1.2rem}
+details[open]>summary::before{content:"–"}
+details>div{padding:0 12px 10px;border-top:1px solid var(--tinta)}
+.perg{margin:14px 0 6px;font-weight:700}
+.passo{margin:4px 0 4px 1.2rem;font-size:.95rem}
+ol.passos{margin:4px 0;padding-left:1.4rem}ol.passos li{margin:0 0 4px;font-size:.95rem}
+table{border-collapse:collapse;width:100%;margin:6px 0;font-size:.92rem}th,td{border:1px solid var(--tinta);padding:5px 7px;vertical-align:top;text-align:left}th{background:var(--tinta);color:var(--papel);font-size:.78rem;text-transform:uppercase;letter-spacing:.06em}
+.folha{border:2px dashed var(--tinta);padding:10px 12px;margin:10px 0}
+.folha .rot{font:700 .72rem Arial;letter-spacing:.12em;text-transform:uppercase;margin:0 0 4px}
+ul.lista{margin:4px 0;padding-left:1.3rem}ul.lista li{margin:0 0 4px}
+.pares{display:grid;grid-template-columns:1fr 1fr;gap:6px 14px;font-size:.95rem}
+.exercicio iframe{width:100%;height:74vh;min-height:520px;border:3px solid var(--tinta);background:#fff}
+.exercicio .alt{font-size:.88rem;margin:6px 0 0}
+button{font:700 .95rem Arial;padding:10px 14px;border:2px solid var(--tinta);background:var(--tinta);color:var(--papel);cursor:pointer;margin:8px 8px 0 0}
+button.sec{background:var(--papel);color:var(--tinta)}
+button[aria-pressed="true"]{background:var(--papel);color:var(--tinta)}
+.estado{font:700 .78rem Arial;letter-spacing:.08em;text-transform:uppercase;margin:6px 0 0}
+.duvidas ul{margin:0;padding-left:1.3rem}
+.prox{display:flex;justify-content:space-between;gap:10px;margin:26px 0 0;flex-wrap:wrap}
+.prox a{font:700 .9rem Arial;border:2px solid var(--tinta);padding:10px 12px;text-decoration:none;color:var(--tinta)}
+.rodape{margin-top:26px;border-top:2px solid var(--tinta);padding-top:8px;font-size:.8rem;color:var(--suave)}
+#aviso{position:fixed;left:50%;bottom:16px;transform:translateX(-50%);background:var(--tinta);color:var(--papel);padding:8px 14px;font:700 .85rem Arial;display:none;z-index:9}
+@media (prefers-color-scheme:dark){:root{--tinta:#ecebe5;--papel:#121210;--suave:#b3b1aa;--fundo:#1d1d1a}.exercicio iframe{background:#121210}}
+@media print{.exercicio,nav.ligas,button,.prox{display:none!important}.cols{display:block}}
+[hidden]{display:none!important}</style></head><body><main>
+<header class="topo"><div class="marca">Português · 1.º ano · Módulo 1 · Lição M1-F01 · unidade 1, A ermida cercada</div><h1>A língua que se canta_</h1><p class="parati">Mil e seiscentas cantigas chegaram até nós. A música, quase toda, perdeu-se. O que é que isso nos rouba?</p>
+<nav class="ligas"><a class="cheio" href="https://pedrohfernandes-klk.github.io/pt/m1/#m1-f01">Percurso</a><a href="https://pedrohfernandes-klk.github.io/pt/m1/infografia-mapa-do-modulo/">Mapa do módulo</a><a href="https://pedrohfernandes-klk.github.io/pt/m1/licao-m1-f02/">Lição seguinte</a></nav></header>
+<div class="cols">
+<section class="col-texto"><div class="essencial"><h2 style="margin:0 0 8px">O essencial</h2><ol><li>Entre os séculos XIII e XIV, trovadores e jograis compuseram em galego-português cerca de 1680 cantigas, guardadas em três cancioneiros.</li><li>Era poesia para ser cantada; da música quase nada chegou até nós, só dois pergaminhos.</li><li>Três géneros: a cantiga de amigo (fala uma rapariga), a cantiga de amor (fala o trovador à senhora) e o escárnio e maldizer (troça).</li></ol></div><div class="caixa"><h3>O que vais aprender</h3><p>Situar a poesia trovadoresca e formular hipóteses sobre o que se perdeu e o que chegou até nós.</p></div></section>
+<section class="col-licao">
+<h2>Como se lê</h2>
+<div class="caixa"><h3>Ler</h3><p>Sobretudo nos séculos XIII e XIV, trovadores e jograis compuseram em <b>galego-português</b> cerca de 1680 cantigas profanas, de perto de 187 autores. Chegaram até nós em três grandes <b>cancioneiros</b> (coletâneas manuscritas): o da Ajuda, o da Biblioteca Nacional e o da Vaticana.</p>
+<p>Era poesia para ser <b>cantada</b>. Da música quase nada sobreviveu: só dois pergaminhos guardam melodias, o <b>Pergaminho Vindel</b> (cantigas de Martim Codax) e o <b>Pergaminho Sharrer</b> (cantigas de D. Dinis).</p>
+<p>O <b>trovador</b> era um poeta de origem nobre, que criava o texto e a música; o <b>jogral</b>, de origem humilde, era pago para cantar e tocar; o <b>segrel</b>, da pequena nobreza, interpretava as suas próprias composições.</p>
+<p>A <b>Arte de Trovar</b>, pequeno tratado anónimo que abre o Cancioneiro da Biblioteca Nacional e chegou incompleto, define os géneros e as regras desta poesia. No reinado de <b>D. Dinis</b> (1279–1325), rei e trovador com 137 cantigas conhecidas, o português passou a ser usado nos documentos régios em vez do latim (as fontes indicam 1290 ou 1296).</p></div><h3>Compreender</h3><p class="perg">1. Distingue trovador, jogral e segrel.</p><p class="passo"><i>Começa assim:</i> O trovador era ______________________; o jogral ______________________; o segrel ______</p><details><summary>Confere a tua resposta</summary><div><p>Trovador: poeta de origem nobre que criava texto e música. Jogral: de origem humilde, pago para cantar e tocar. Segrel: da pequena nobreza, interpretava as suas composições.</p></div></details><p class="perg">2. O que é a Arte de Trovar e porque é importante para nós?</p><details><summary>Como se lê</summary><div><ol class="passos"><li>Diz o que é (que tipo de texto, onde está, como chegou).</li><li>Diz para que nos serve hoje: quem a escreveu vivia no tempo das cantigas.</li></ol></div></details><details><summary>Confere a tua resposta</summary><div><p>Tratado anónimo e incompleto que abre o Cancioneiro da Biblioteca Nacional; define os géneros e as regras. É uma teoria da poesia escrita na própria época.</p></div></details><p class="perg">3. <b>Hipóteses.</b> Da música das cantigas quase nada chegou até nós. Formula duas hipóteses diferentes sobre o que isso nos impede de perceber quando as lemos hoje.</p><details><summary>Um exemplo</summary><div><p>Uma hipótese feita, para veres o modelo: «Sem a música não sabemos se o refrão era gritado ou murmurado, e isso muda o que a rapariga sente.» As tuas duas têm de ser sobre coisas diferentes desta (o ritmo, as vozes, o público…).</p></div></details><details><summary>Confere a tua resposta</summary><div><p>Respostas plurais, desde que fundamentadas: o ritmo e a repetição cantada do refrão; o tom (alegre, triste); a divisão das vozes; o efeito em público. Valorizar hipóteses realmente diferentes.</p></div></details><p class="perg">Preenche a lápis o que já sabes de cada género; nas fichas 3, 4 e 13 corriges a caneta.</p><p class="passo"><i>Pensa em cada célula; depois abre a solução e compara.</i></p><table><tr><th></th><th>Cantiga de amigo</th><th>Cantiga de amor</th><th>Escárnio e maldizer</th></tr><tr><td>Quem fala</td><td></td><td></td><td></td></tr><tr><td>A quem se dirige</td><td></td><td></td><td></td></tr><tr><td>Espaço mais frequente</td><td></td><td></td><td></td></tr><tr><td>Tema</td><td></td><td></td><td></td></tr><tr><td>Marcas de forma</td><td></td><td></td><td></td></tr></table><details><summary>A solução</summary><div><table><tr><th></th><th>Cantiga de amigo</th><th>Cantiga de amor</th><th>Escárnio e maldizer</th></tr><tr><td>Quem fala</td><td>Voz feminina (a donzela), criada pelo trovador</td><td>Voz masculina (o trovador)</td><td>O trovador, em tom satírico</td></tr><tr><td>A quem</td><td>Ao amigo ausente, à mãe, às amigas ou à natureza confidente</td><td>À «senhor», a dama a quem serve</td><td>A alguém ou a um costume que critica</td></tr><tr><td>Espaço</td><td>Sobretudo natural (mar, fontes, flores) ou doméstico</td><td>Sobretudo cortês</td><td>Vida social, corte, costumes</td></tr><tr><td>Tema</td><td>Saudade, espera, alegria ou tristeza de amor</td><td>Louvor da senhora e «coita» (sofrimento de amor); vassalagem amorosa</td><td>Troça velada (escárnio) ou ataque direto (maldizer)</td></tr><tr><td>Forma</td><td>Paralelismo, refrão, leixa-pren</td><td>Influência provençal; com refrão ou sem refrão (cantiga de mestria)</td><td>Ironia, duplo sentido («palavras cobertas») ou insulto direto</td></tr></table></div></details><h3>Para pensares sozinho</h3><ul class="lista"><li>Das três palavras antigas (fremosa, atendendo, coita), qual é que ainda faria falta hoje? Porquê?</li></ul><div class="caixa"><h3>Ponte com o teu curso</h3><p><b>Som e Música:</b> na base da FCSH, a cantiga n.º 1308 tem versões musicais com a melodia do Pergaminho Vindel. O que acrescenta a música ao refrão?</p></div>
+<h2>Para ir mais fundo</h2><details><summary>Três palavras para levar</summary><div><div class="caixa"><p><b>fremosa</b>, formosa; <b>atendendo</b>, esperando; <b>coita</b>, sofrimento de amor. Vais usá-las no fim da ficha e voltar a encontrá-las nas cantigas.</p></div></div></details><details><summary>Troca de palavras</summary><div><div class="folha"><p class="rot">Para fazer na folha A4, na aula</p><p>Escreve três versos diferentes, cada um com uma palavra das cantigas («fremosa», «atendendo», «coita») e uma palavra do teu dia que um trovador não conheceria.</p><ul class="lista"><li>Com «fremosa»</li><li>Com «atendendo»</li><li>Com «coita»</li></ul><p class="passo"><i>Regra:</i> máximo 10 palavras por verso; a palavra antiga mantém o sentido que tinha</p><details><summary>Um exemplo</summary><div><p>Um verso feito, para veres o modelo: «Fremosa fica a paragem quando o autocarro se vai» («fremosa» continua a querer dizer formosa; «autocarro» é a palavra que o trovador não conhecia). Os teus três usam as três palavras, uma em cada.</p></div></details></div></div></details>
+<h2 id="exercicio">Agora, o exercício</h2>
+<div class="exercicio"><p><b>Cancioneiro da Ajuda</b>: Iluminura, fólio 21r. Cinco minutos; o resultado fica guardado e o percurso marca o passo.</p><iframe src="https://pedrohfernandes-klk.github.io/pt/m1/olhar-ajuda/" title="Cancioneiro da Ajuda" loading="lazy"></iframe><p class="alt"><a href="https://pedrohfernandes-klk.github.io/pt/m1/olhar-ajuda/">Abrir o exercício numa página só</a></p></div>
+<button id="lida" aria-pressed="false">Li a lição</button><span class="estado" id="estado"></span>
+<div class="duvidas"><h2>Se ficaste com dúvidas</h2><ul><li>Volta a «O essencial» e lê outra vez o texto em voz alta, devagar.</li><li>Abre «Como se lê» na pergunta onde paraste: os passos e o exemplo são o caminho.</li><li>Guarda a dúvida para a aula: pergunta ao docente ou escreve-a nas três linhas do fim da unidade, no percurso.</li></ul></div>
+<div class="prox"><span></span><a href="https://pedrohfernandes-klk.github.io/pt/m1/licao-m1-f02/">Lição seguinte →</a></div>
+</section></div>
+<p class="rodape">EPI, Escola Profissional de Imagem · Português 2026/2027 · Lição M1-F01, A língua que se canta · Fontes: FCSH, «Sobre as cantigas» e «Arte de Trovar»; Wikipédia, «Trovador», «Dinis I de Portugal», «Cancioneiro da Biblioteca Nacional»; Ciberdúvidas, «Oitocentos anos de língua portuguesa». O que marcas fica só neste aparelho.</p>
+<div id="aviso" role="status"></div></main>
+<script>
+(function(){"use strict";var K="licao-m1-f01",b=document.getElementById("lida"),s=document.getElementById("estado");
+function ler(){try{return JSON.parse(localStorage.getItem(K)||"null")}catch(x){return null}}
+function pinta(){var g=ler();b.setAttribute("aria-pressed",g&&g.lida?"true":"false");b.textContent=g&&g.lida?"Lição lida":"Li a lição";s.textContent=g&&g.lida?"marcada neste aparelho":""}
+function marca(v){try{localStorage.setItem(K,JSON.stringify({lida:v,t:Date.now()}))}catch(x){}pinta()}
+b.onclick=function(){marca(!(ler()||{}).lida)};
+var ex=document.getElementById("exercicio");if(ex&&"IntersectionObserver" in window){new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting&&!(ler()||{}).lida){marca(true);var a=document.getElementById("aviso");a.textContent="Lição marcada como lida";a.style.display="block";setTimeout(function(){a.style.display="none"},2000)}})},{threshold:.6}).observe(ex)}
+pinta()})();
+</script></body></html>

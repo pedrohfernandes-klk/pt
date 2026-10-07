@@ -1,0 +1,158 @@
+<!doctype html><html lang="pt-PT"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Lição M1-F04: Louvar e troçar</title><style>:root{--tinta:#000;--papel:#fff;--suave:#444;--fundo:#f3f2ee}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--papel);color:var(--tinta);font:17px/1.5 Arial,Helvetica,sans-serif}
+main{max-width:1180px;margin:0 auto;padding:0 16px 80px}
+.topo{border-bottom:4px solid var(--tinta);padding:14px 0 10px}
+.marca{font:700 .72rem/1.2 Arial;letter-spacing:.14em;text-transform:uppercase}
+h1{font:900 1.75rem/1.05 "Arial Black",Arial,sans-serif;margin:.3rem 0 .4rem;text-transform:uppercase}
+.parati{font-size:1.05rem;margin:.2rem 0 .6rem}
+nav.ligas{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 0}
+nav.ligas a{font:700 .76rem Arial;letter-spacing:.04em;text-transform:uppercase;border:2px solid var(--tinta);padding:5px 9px;text-decoration:none;color:var(--tinta)}
+nav.ligas a.cheio{background:var(--tinta);color:var(--papel)}
+.cols{display:block}
+@media (min-width:960px){.cols{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:28px;align-items:start}.col-texto{position:sticky;top:0;max-height:100vh;overflow:auto;padding-right:6px}}
+h2{font:900 1rem "Arial Black",Arial,sans-serif;background:var(--tinta);color:var(--papel);padding:6px 10px;margin:22px 0 10px;text-transform:uppercase;letter-spacing:.03em}
+h3{font:900 .95rem "Arial Black",Arial,sans-serif;margin:16px 0 6px;text-transform:uppercase}
+.essencial{border:3px solid var(--tinta);padding:10px 14px;margin:14px 0}
+.essencial ol{margin:0;padding-left:1.3rem}.essencial li{margin:0 0 6px;font-size:1.02rem}
+.texto{border:2px solid var(--tinta);padding:12px 14px;margin:12px 0}
+.texto .tit{font:900 1rem "Arial Black",Arial,sans-serif;margin:0 0 8px}
+.texto .v{margin:0;padding:0;white-space:pre-wrap;font:600 1rem/1.5 Arial}
+.texto .v .n{display:inline-block;width:2.1em;color:var(--suave);font-size:.72em;font-weight:400;text-align:right;padding-right:.6em}
+.texto p.pr{margin:0 0 8px}
+.gl{font-size:.9rem;border-top:1px solid var(--tinta);margin-top:10px;padding-top:6px}
+.fonte{font-size:.82rem;color:var(--suave);margin:6px 0 0}
+.caixa{background:var(--fundo);border-left:6px solid var(--tinta);padding:8px 12px;margin:10px 0}
+.caixa h3{margin:0 0 4px;font-size:.85rem}
+.caixa p{margin:0 0 6px}
+details{border:2px solid var(--tinta);margin:8px 0;padding:0}
+summary{cursor:pointer;font:700 .95rem Arial;padding:8px 10px;list-style:none;display:flex;gap:8px;align-items:center}
+summary::before{content:"+";font:900 1.1rem "Arial Black",Arial;width:1.2rem}
+details[open]>summary::before{content:"–"}
+details>div{padding:0 12px 10px;border-top:1px solid var(--tinta)}
+.perg{margin:14px 0 6px;font-weight:700}
+.passo{margin:4px 0 4px 1.2rem;font-size:.95rem}
+ol.passos{margin:4px 0;padding-left:1.4rem}ol.passos li{margin:0 0 4px;font-size:.95rem}
+table{border-collapse:collapse;width:100%;margin:6px 0;font-size:.92rem}th,td{border:1px solid var(--tinta);padding:5px 7px;vertical-align:top;text-align:left}th{background:var(--tinta);color:var(--papel);font-size:.78rem;text-transform:uppercase;letter-spacing:.06em}
+.folha{border:2px dashed var(--tinta);padding:10px 12px;margin:10px 0}
+.folha .rot{font:700 .72rem Arial;letter-spacing:.12em;text-transform:uppercase;margin:0 0 4px}
+ul.lista{margin:4px 0;padding-left:1.3rem}ul.lista li{margin:0 0 4px}
+.pares{display:grid;grid-template-columns:1fr 1fr;gap:6px 14px;font-size:.95rem}
+.exercicio iframe{width:100%;height:74vh;min-height:520px;border:3px solid var(--tinta);background:#fff}
+.exercicio .alt{font-size:.88rem;margin:6px 0 0}
+button{font:700 .95rem Arial;padding:10px 14px;border:2px solid var(--tinta);background:var(--tinta);color:var(--papel);cursor:pointer;margin:8px 8px 0 0}
+button.sec{background:var(--papel);color:var(--tinta)}
+button[aria-pressed="true"]{background:var(--papel);color:var(--tinta)}
+.estado{font:700 .78rem Arial;letter-spacing:.08em;text-transform:uppercase;margin:6px 0 0}
+.duvidas ul{margin:0;padding-left:1.3rem}
+.prox{display:flex;justify-content:space-between;gap:10px;margin:26px 0 0;flex-wrap:wrap}
+.prox a{font:700 .9rem Arial;border:2px solid var(--tinta);padding:10px 12px;text-decoration:none;color:var(--tinta)}
+.rodape{margin-top:26px;border-top:2px solid var(--tinta);padding-top:8px;font-size:.8rem;color:var(--suave)}
+#aviso{position:fixed;left:50%;bottom:16px;transform:translateX(-50%);background:var(--tinta);color:var(--papel);padding:8px 14px;font:700 .85rem Arial;display:none;z-index:9}
+@media (prefers-color-scheme:dark){:root{--tinta:#ecebe5;--papel:#121210;--suave:#b3b1aa;--fundo:#1d1d1a}.exercicio iframe{background:#121210}}
+@media print{.exercicio,nav.ligas,button,.prox{display:none!important}.cols{display:block}}
+[hidden]{display:none!important}</style></head><body><main>
+<header class="topo"><div class="marca">Português · 1.º ano · Módulo 1 · Lição M1-F04 · unidade 2, Coita e escárnio</div><h1>Louvar e troçar_</h1><p class="parati">Um rei elogia a sua senhora. Um trovador «elogia» uma dona feia. Onde acaba o louvor e começa a troça?</p>
+<nav class="ligas"><a class="cheio" href="https://pedrohfernandes-klk.github.io/pt/m1/#m1-f04">Percurso</a><a href="https://pedrohfernandes-klk.github.io/pt/m1/infografia-mapa-do-modulo/">Mapa do módulo</a><a href="https://pedrohfernandes-klk.github.io/pt/m1/licao-m1-f05/">Lição anterior</a><a href="https://pedrohfernandes-klk.github.io/pt/m1/licao-m1-f06/">Lição seguinte</a></nav></header>
+<div class="cols">
+<section class="col-texto"><div class="essencial"><h2 style="margin:0 0 8px">O essencial</h2><ol><li>A cantiga de amor louva a senhora à maneira dos provençais: o trovador serve-a, sofre a coita e diz que ela não tem igual.</li><li>A cantiga de escárnio finge louvar para troçar, com palavras cobertas e duplo sentido; a de maldizer diz mal abertamente, como explica a Arte de Trovar.</li><li>Em «Ai dona fea», Guilhade usa a forma do elogio para dizer o contrário: a paródia é a chave.</li></ol></div><div class="texto" id="texto-0"><p class="tit">A — D. Dinis, «Quer'eu em maneira de proençal»</p><p class="v"><span class="n"></span>Quer'eu em maneira de proençal
+<span class="n"></span>fazer agora um cantar d'amor
+<span class="n"></span>e querrei muit'i loar mia senhor
+<span class="n"></span>a que prez nem fremosura nom fal,
+<span class="n">5</span>nem bondade; e mais vos direi en:
+<span class="n"></span>tanto a fez Deus comprida de bem
+<span class="n"></span>que mais que todas las do mundo val.
+
+<span class="n"></span>Ca mia senhor quiso Deus fazer tal,
+<span class="n"></span>quando a fez, que a fez sabedor
+<span class="n">10</span>de todo bem e de mui gram valor,
+<span class="n"></span>e com tod'est[o] é mui comunal
+<span class="n"></span>ali u deve; er deu-lhi bom sem
+<span class="n"></span>e des i nom lhi fez pouco de bem
+<span class="n"></span>quando nom quis que lh'outra foss'igual.
+
+<span class="n">15</span>Ca em mia senhor nunca Deus pôs mal,
+<span class="n"></span>mais pôs i prez e beldad'e loor
+<span class="n"></span>e falar mui bem e riir melhor
+<span class="n"></span>que outra molher; des i é leal
+<span class="n"></span>muit'; e por esto nom sei hoj'eu quem
+<span class="n">20</span>possa compridamente no seu bem
+<span class="n"></span>falar, ca nom há, tra'lo seu bem, al.</p><p class="gl"><b>Vocabulário:</b> <b>em maneira de proençal</b>, à maneira dos trovadores da Provença; <b>loar</b>, louvar; <b>mia senhor</b>, a minha senhora; <b>prez</b>, valor, mérito; <b>nom fal</b>, não falta; <b>comprida de bem</b>, cheia de qualidades; <b>val</b>, vale; <b>quiso</b>, quis; <b>sabedor</b>, conhecedora; <b>comunal</b>, simples, acessível; <b>ali u deve</b>, onde convém; <b>er deu-lhi bom sem</b>, e deu-lhe bom juízo; <b>des i</b>, além disso; <b>beldade</b>, beleza; <b>loor</b>, louvor; <b>riir</b>, rir; <b>compridamente</b>, completamente; <b>tra'lo seu bem</b>, al, para além do seu bem, outra coisa</p><p class="fonte">D. Dinis · Cantigas Medievais Galego-Portuguesas (FCSH), cantiga 544 (cantiga de amor de mestria: sem refrão; «bem» é a palavra-rima do 6.º verso de cada estrofe)</p></div><div class="texto" id="texto-1"><p class="tit">B — João Garcia de Guilhade, «Ai dona fea, fostes-vos queixar»</p><p class="v"><span class="n"></span>Ai dona fea, fostes-vos queixar
+<span class="n"></span>que vos nunca louv'en[o] meu cantar;
+<span class="n"></span>mais ora quero fazer um cantar
+<span class="n"></span>em que vos loarei todavia;
+<span class="n">5</span>e vedes como vos quero loar:
+<span class="n"></span>dona fea, velha e sandia!
+
+<span class="n"></span>Dona fea, se Deus mi perdom,
+<span class="n"></span>pois havedes [a]tam gram coraçom
+<span class="n"></span>que vos eu loe, em esta razom
+<span class="n">10</span>vos quero já loar todavia;
+<span class="n"></span>e vedes qual será a loaçom:
+<span class="n"></span>dona fea, velha e sandia!
+
+<span class="n"></span>Dona fea, nunca vos eu loei
+<span class="n"></span>em meu trobar, pero muito trobei;
+<span class="n">15</span>mais ora já um bom cantar farei
+<span class="n"></span>em que vos loarei todavia;
+<span class="n"></span>e direi-vos como vos loarei:
+<span class="n"></span>dona fea, velha e sandia!</p><p class="gl"><b>Vocabulário:</b> <b>fea</b>, feia; <b>mais ora</b>, mas agora; <b>sandia</b>, louca; <b>coraçom</b>, coração; <b>loaçom</b>, louvor; <b>pero</b>, embora; <b>trobei</b>, trovei</p><p class="fonte">João Garcia de Guilhade · Cantigas Medievais Galego-Portuguesas (FCSH), cantiga 1520 (escárnio e maldizer, com refrão)</p></div><div class="texto" id="texto-2"><p class="tit">C — Guilhade e o seu jogral Lourenço, «Lourenço jograr, hás mui gram sabor»</p><p class="v"><span class="n"></span>— Lourenço jograr, hás mui gram sabor
+<span class="n"></span>de citolares, ar queres cantar,
+<span class="n"></span>des i ar filhas-te log'a trobar
+<span class="n"></span>e teens-t'ora já por trobador;
+<span class="n">5</span>e por tod'esto ũa rem ti direi:
+<span class="n"></span>Deus me confonda, se hoj'eu i sei
+<span class="n"></span>destes mesteres qual fazes melhor!
+
+<span class="n"></span>— Joam Garcia, sõo sabedor
+<span class="n"></span>de meus mesteres sempre deantar,
+<span class="n">10</span>e vós andades por mi os desloar;
+<span class="n"></span>pero nom sodes tam desloador
+<span class="n"></span>que, com verdade, possades dizer
+<span class="n"></span>que meus mesteres nom sei bem fazer;
+<span class="n"></span>mais vós nom sodes i conhocedor.
+
+<span class="n">15</span>— Lourenço, vejo-t'agora queixar:
+<span class="n"></span>pola verdade que quero dizer,
+<span class="n"></span>metes-me já por de mal conhocer,
+<span class="n"></span>mais en nom quero tigo pelejar;
+<span class="n"></span>e teus mesteres conhocer-tos-ei,
+<span class="n">20</span>e dos mesteres verdade direi:
+<span class="n"></span>ess'é que foi com os lobos arar.
+
+<span class="n"></span>— Joam Garcia, no vosso trobar
+<span class="n"></span>acharedes muito que correger;
+<span class="n"></span>e leixade mi, que sei bem fazer
+<span class="n">25</span>estes mesteres que fui começar;
+<span class="n"></span>ca no vosso trobar sei-m'eu com'é:
+<span class="n"></span>i há de correger, per bõa fé,
+<span class="n"></span>mais que nos meus, em que m'ides travar.
+
+<span class="n"></span>— Vês, Lourenç[o], ora m'assanharei,
+<span class="n">30</span>pois mal i entenças, e tod'o farei
+<span class="n"></span>o citolom na cabeça quebrar.
+
+<span class="n"></span>— Joam Garcia, se Deus mi perdom,
+<span class="n"></span>mui gram verdade dig'eu na tençom;
+<span class="n"></span>e vós fazed'o que vos semelhar.</p><p class="gl"><b>Vocabulário:</b> <b>jograr</b>, jogral; <b>hás mui gram sabor</b>, gostas muito; <b>citolar</b>, tocar cítola; <b>ar</b>, também; <b>des i</b>, depois; <b>filhas-te a</b>, pões-te a; <b>teens-t'ora</b>, tens-te agora; <b>ũa rem</b>, uma coisa; <b>Deus me confonda</b>, Deus me castigue; <b>mesteres</b>, ofícios; <b>deantar</b>, levar avante; <b>desloar</b>, desprezar; <b>conhocedor</b>, entendido; <b>pelejar</b>, brigar; <b>foi com os lobos arar</b>, deu em nada (expressão proverbial); <b>correger</b>, corrigir; <b>travar</b>, censurar; <b>assanhar-me</b>, zangar-me; <b>entenças</b>, respondes na tenção; <b>citolom</b>, cítola; <b>semelhar</b>, parecer</p><p class="fonte">João Garcia de Guilhade e Lourenço · Cantigas Medievais Galego-Portuguesas (FCSH), cantiga 1527 (tenção: as vozes alternam; as duas últimas estrofes são as findas)</p></div></section>
+<section class="col-licao">
+<h2>Como se lê</h2>
+<div class="caixa"><h3>Recorda: o que diz a Arte de Trovar</h3><p>O tratado que abre o Cancioneiro da Biblioteca Nacional separa os dois géneros da troça. <b>Escárnio</b> (cap. V): «Cantigas d'escarneo som aquelas que os trobadores fazem querendo dizer mal d'alguém em elas, e dizem-lho per palavras cobertas que hajam dous entendimentos […].» <b>Maldizer</b> (cap. VI): «Cantigas de maldizer som aquela[s] que fazem os trobadores […] descobertamente […].» Coberto ou descoberto: é essa a fronteira.</p></div><div class="caixa"><h3>Recorda</h3><p><b>Hipérbole</b>: exagero que engrandece ou diminui. <b>Ironia</b>: dizer uma coisa para dar a entender a contrária. <b>Paródia</b>: imitar um texto ou um género para fazer rir ou para criticar. <b>Cantiga de amor</b>: fala um homem, que louva a «senhor» e se queixa da coita.</p></div><h3>Ler e comparar</h3><p class="perg">1. Em A, identifica a hipérbole do último verso e o seu efeito. O que revela «em maneira de proençal»?</p><details><summary>Como se lê</summary><div><ol class="passos"><li>Copia o último verso e diz o que nele é exagero (com quem é a senhora comparada?).</li><li>Diz o que esse exagero faz ao louvor.</li><li>«Em maneira de proençal»: vê no vocabulário de onde vinha a moda.</li></ol></div></details><details><summary>Confere a tua resposta</summary><div><p>«que mais que todas las do mundo val»: louvor absoluto. «em maneira de proençal»: influência dos trovadores da Provença.</p></div></details><p class="perg">2. Porque se pode dizer que B faz a paródia de uma cantiga como A? Dá duas provas.</p><p class="passo"><i>Começa assim:</i> B imita o gesto do louvor quando diz «______________________», mas termina em «______________________»: usa as palavras da cantiga de amor para ______</p><details><summary>Confere a tua resposta</summary><div><p>Usa o vocabulário e o gesto do louvor cortês («loar», «cantar», «vedes como vos quero loar») para dizer o contrário: «dona fea, velha e sandia!».</p></div></details><p class="perg">3. Crítica velada (escárnio) ou direta (maldizer)? Usa a Arte de Trovar para decidir, defende uma posição e apresenta a objeção mais forte contra ela.</p><details><summary>Como se lê</summary><div><ol class="passos"><li>Escolhe: escárnio («palavras cobertas», dois entendimentos) ou maldizer («descobertamente»).</li><li>Prova com o refrão ou com o jogo de «loar».</li><li>Escreve a objeção do outro lado («Mas…») e responde-lhe.</li></ol></div></details><details><summary>Confere a tua resposta</summary><div><p>Ambas as posições são defensáveis: insulto direto no refrão (maldizer, «descobertamente») vs. jogo irónico com «loar» e ausência de nome (escárnio, «palavras cobertas»). A FCSH arruma estas cantigas no conjunto «escárnio e maldizer». Valorizar a objeção.</p></div></details><p class="perg">4. Em C, o trovador e o jogral discutem. O que está em causa, e como acaba a discussão?</p><details><summary>Como se lê</summary><div><ol class="passos"><li>Copia o que Guilhade acusa Lourenço de querer ser (v. 4) e o que Lourenço responde (vv. 8–9).</li><li>Diz de que lado está a razão, segundo cada um, e quem tem o poder (lê a primeira finda).</li><li>Fecha com o que isto mostra sobre trovador e jogral (ficha 1).</li></ol></div></details><details><summary>Confere a tua resposta</summary><div><p>Guilhade troça de Lourenço por tocar, cantar e agora querer ser trovador («teens-t'ora já por trobador»); Lourenço responde que sabe fazer os seus ofícios e que o trovar de Guilhade também tem que corrigir. Acaba com a ameaça de partir a cítola na cabeça do jogral (o amo manda) e Lourenço a manter o que disse. Mostra a hierarquia trovador/jogral e a disputa sobre quem se pode chamar trovador.</p></div></details><div class="folha"><p class="rot">Para fazer na folha A4, na aula</p><h3 style="margin-top:0">Escárnio sem ferir</h3><p>Propõe três alvos para uma cantiga de escárnio que louva ironicamente um <b>objeto ou hábito</b>. Escolhe o que permite mais «palavras cobertas» e escreve quatro versos com refrão.</p><ul class="lista"><li>Um objeto</li><li>Um hábito</li><li>O que ninguém escolheria</li></ul><p class="passo"><i>Regra:</i> nunca uma pessoa; pelo menos uma palavra com dois sentidos</p><details><summary>Um exemplo</summary><div><p>Um alvo feito, para veres o modelo: o carregador do telemóvel que só aparece quando já não faz falta («fiel como um carregador: chega sempre quando a bateria morreu»). É um objeto, tem duplo sentido («fiel») e não fere ninguém.</p></div></details></div><div class="caixa"><h3>Volta à ficha 1</h3><p>Corrige a caneta as colunas «Cantiga de amor» e «Escárnio e maldizer» do quadro dos géneros, com A e B como prova.</p></div><h3>Para pensares sozinho</h3><ul class="lista"><li>Onde fica, na minha cantiga, a fronteira entre troçar e ferir?</li></ul>
+
+<h2 id="exercicio">Agora, o exercício</h2>
+<div class="exercicio"><p><b>Louvar e troçar</b>: D. Dinis e João Garcia de Guilhade, séc. XIII. Cinco minutos; o resultado fica guardado e o percurso marca o passo.</p><iframe src="https://pedrohfernandes-klk.github.io/pt/m1/guilhade-dona-fea/" title="Louvar e troçar" loading="lazy"></iframe><p class="alt"><a href="https://pedrohfernandes-klk.github.io/pt/m1/guilhade-dona-fea/">Abrir o exercício numa página só</a></p></div>
+<button id="lida" aria-pressed="false">Li a lição</button><span class="estado" id="estado"></span>
+<div class="duvidas"><h2>Se ficaste com dúvidas</h2><ul><li>Volta a «O essencial» e lê outra vez o texto em voz alta, devagar.</li><li>Abre «Como se lê» na pergunta onde paraste: os passos e o exemplo são o caminho.</li><li>Guarda a dúvida para a aula: pergunta ao docente ou escreve-a nas três linhas do fim da unidade, no percurso.</li></ul></div>
+<div class="prox"><a href="https://pedrohfernandes-klk.github.io/pt/m1/licao-m1-f05/">← Lição anterior</a><a href="https://pedrohfernandes-klk.github.io/pt/m1/licao-m1-f06/">Lição seguinte →</a></div>
+</section></div>
+<p class="rodape">EPI, Escola Profissional de Imagem · Português 2026/2027 · Lição M1-F04, Louvar e troçar · Fontes: Cantigas Medievais Galego-Portuguesas (FCSH), n.º 544, n.º 1520 e n.º 1527; Arte de Trovar, caps. V e VI (edição FCSH). O que marcas fica só neste aparelho.</p>
+<div id="aviso" role="status"></div></main>
+<script>
+(function(){"use strict";var K="licao-m1-f04",b=document.getElementById("lida"),s=document.getElementById("estado");
+function ler(){try{return JSON.parse(localStorage.getItem(K)||"null")}catch(x){return null}}
+function pinta(){var g=ler();b.setAttribute("aria-pressed",g&&g.lida?"true":"false");b.textContent=g&&g.lida?"Lição lida":"Li a lição";s.textContent=g&&g.lida?"marcada neste aparelho":""}
+function marca(v){try{localStorage.setItem(K,JSON.stringify({lida:v,t:Date.now()}))}catch(x){}pinta()}
+b.onclick=function(){marca(!(ler()||{}).lida)};
+var ex=document.getElementById("exercicio");if(ex&&"IntersectionObserver" in window){new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting&&!(ler()||{}).lida){marca(true);var a=document.getElementById("aviso");a.textContent="Lição marcada como lida";a.style.display="block";setTimeout(function(){a.style.display="none"},2000)}})},{threshold:.6}).observe(ex)}
+pinta()})();
+</script></body></html>

@@ -1,0 +1,101 @@
+<!doctype html><html lang="pt-PT"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Lição M1-F02: Cercada pelas ondas</title><style>:root{--tinta:#000;--papel:#fff;--suave:#444;--fundo:#f3f2ee}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--papel);color:var(--tinta);font:17px/1.5 Arial,Helvetica,sans-serif}
+main{max-width:1180px;margin:0 auto;padding:0 16px 80px}
+.topo{border-bottom:4px solid var(--tinta);padding:14px 0 10px}
+.marca{font:700 .72rem/1.2 Arial;letter-spacing:.14em;text-transform:uppercase}
+h1{font:900 1.75rem/1.05 "Arial Black",Arial,sans-serif;margin:.3rem 0 .4rem;text-transform:uppercase}
+.parati{font-size:1.05rem;margin:.2rem 0 .6rem}
+nav.ligas{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 0}
+nav.ligas a{font:700 .76rem Arial;letter-spacing:.04em;text-transform:uppercase;border:2px solid var(--tinta);padding:5px 9px;text-decoration:none;color:var(--tinta)}
+nav.ligas a.cheio{background:var(--tinta);color:var(--papel)}
+.cols{display:block}
+@media (min-width:960px){.cols{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:28px;align-items:start}.col-texto{position:sticky;top:0;max-height:100vh;overflow:auto;padding-right:6px}}
+h2{font:900 1rem "Arial Black",Arial,sans-serif;background:var(--tinta);color:var(--papel);padding:6px 10px;margin:22px 0 10px;text-transform:uppercase;letter-spacing:.03em}
+h3{font:900 .95rem "Arial Black",Arial,sans-serif;margin:16px 0 6px;text-transform:uppercase}
+.essencial{border:3px solid var(--tinta);padding:10px 14px;margin:14px 0}
+.essencial ol{margin:0;padding-left:1.3rem}.essencial li{margin:0 0 6px;font-size:1.02rem}
+.texto{border:2px solid var(--tinta);padding:12px 14px;margin:12px 0}
+.texto .tit{font:900 1rem "Arial Black",Arial,sans-serif;margin:0 0 8px}
+.texto .v{margin:0;padding:0;white-space:pre-wrap;font:600 1rem/1.5 Arial}
+.texto .v .n{display:inline-block;width:2.1em;color:var(--suave);font-size:.72em;font-weight:400;text-align:right;padding-right:.6em}
+.texto p.pr{margin:0 0 8px}
+.gl{font-size:.9rem;border-top:1px solid var(--tinta);margin-top:10px;padding-top:6px}
+.fonte{font-size:.82rem;color:var(--suave);margin:6px 0 0}
+.caixa{background:var(--fundo);border-left:6px solid var(--tinta);padding:8px 12px;margin:10px 0}
+.caixa h3{margin:0 0 4px;font-size:.85rem}
+.caixa p{margin:0 0 6px}
+details{border:2px solid var(--tinta);margin:8px 0;padding:0}
+summary{cursor:pointer;font:700 .95rem Arial;padding:8px 10px;list-style:none;display:flex;gap:8px;align-items:center}
+summary::before{content:"+";font:900 1.1rem "Arial Black",Arial;width:1.2rem}
+details[open]>summary::before{content:"–"}
+details>div{padding:0 12px 10px;border-top:1px solid var(--tinta)}
+.perg{margin:14px 0 6px;font-weight:700}
+.passo{margin:4px 0 4px 1.2rem;font-size:.95rem}
+ol.passos{margin:4px 0;padding-left:1.4rem}ol.passos li{margin:0 0 4px;font-size:.95rem}
+table{border-collapse:collapse;width:100%;margin:6px 0;font-size:.92rem}th,td{border:1px solid var(--tinta);padding:5px 7px;vertical-align:top;text-align:left}th{background:var(--tinta);color:var(--papel);font-size:.78rem;text-transform:uppercase;letter-spacing:.06em}
+.folha{border:2px dashed var(--tinta);padding:10px 12px;margin:10px 0}
+.folha .rot{font:700 .72rem Arial;letter-spacing:.12em;text-transform:uppercase;margin:0 0 4px}
+ul.lista{margin:4px 0;padding-left:1.3rem}ul.lista li{margin:0 0 4px}
+.pares{display:grid;grid-template-columns:1fr 1fr;gap:6px 14px;font-size:.95rem}
+.exercicio iframe{width:100%;height:74vh;min-height:520px;border:3px solid var(--tinta);background:#fff}
+.exercicio .alt{font-size:.88rem;margin:6px 0 0}
+button{font:700 .95rem Arial;padding:10px 14px;border:2px solid var(--tinta);background:var(--tinta);color:var(--papel);cursor:pointer;margin:8px 8px 0 0}
+button.sec{background:var(--papel);color:var(--tinta)}
+button[aria-pressed="true"]{background:var(--papel);color:var(--tinta)}
+.estado{font:700 .78rem Arial;letter-spacing:.08em;text-transform:uppercase;margin:6px 0 0}
+.duvidas ul{margin:0;padding-left:1.3rem}
+.prox{display:flex;justify-content:space-between;gap:10px;margin:26px 0 0;flex-wrap:wrap}
+.prox a{font:700 .9rem Arial;border:2px solid var(--tinta);padding:10px 12px;text-decoration:none;color:var(--tinta)}
+.rodape{margin-top:26px;border-top:2px solid var(--tinta);padding-top:8px;font-size:.8rem;color:var(--suave)}
+#aviso{position:fixed;left:50%;bottom:16px;transform:translateX(-50%);background:var(--tinta);color:var(--papel);padding:8px 14px;font:700 .85rem Arial;display:none;z-index:9}
+@media (prefers-color-scheme:dark){:root{--tinta:#ecebe5;--papel:#121210;--suave:#b3b1aa;--fundo:#1d1d1a}.exercicio iframe{background:#121210}}
+@media print{.exercicio,nav.ligas,button,.prox{display:none!important}.cols{display:block}}
+[hidden]{display:none!important}</style></head><body><main>
+<header class="topo"><div class="marca">Português · 1.º ano · Módulo 1 · Lição M1-F02 · unidade 1, A ermida cercada</div><h1>Cercada pelas ondas_</h1><p class="parati">Uma rapariga sozinha numa ermida, e o mar a subir. Ninguém vem.</p>
+<nav class="ligas"><a class="cheio" href="https://pedrohfernandes-klk.github.io/pt/m1/#m1-f02">Percurso</a><a href="https://pedrohfernandes-klk.github.io/pt/m1/infografia-mapa-do-modulo/">Mapa do módulo</a><a href="https://pedrohfernandes-klk.github.io/pt/m1/licao-m1-f01/">Lição anterior</a><a href="https://pedrohfernandes-klk.github.io/pt/m1/licao-m1-f05/">Lição seguinte</a></nav></header>
+<div class="cols">
+<section class="col-texto"><div class="essencial"><h2 style="margin:0 0 8px">O essencial</h2><ol><li>Na cantiga de amigo fala uma rapariga, embora o autor seja um homem; aqui está sozinha numa ermida à beira-mar, à espera do amigo.</li><li>As ondas sobem e cercam-na: a natureza não é confidente, é ameaça; ela não tem barqueiro nem sabe remar.</li><li>A repetição faz a cantiga: o refrão, o paralelismo (estrofes aos pares) e o leixa-pren (um verso que passa para a estrofe seguinte).</li></ol></div><div class="texto" id="texto-0"><p class="tit">Mendinho, «Sedia-m'eu na ermida de Sam Simion»</p><p class="v"><span class="n"></span>Sedia-m'eu na ermida de Sam Simion
+<span class="n"></span>e cercarom-mi as ondas, que grandes som!
+<span class="n"></span>Eu atendendo meu amig', eu a[tendendo].
+
+<span class="n"></span>Estando na ermida ant'o altar
+<span class="n">5</span>[e] cercarom-mi as ondas grandes do mar.
+<span class="n"></span>Eu atendendo meu amig', eu a[tendendo].
+
+<span class="n"></span>E cercarom-mi as ondas, que grandes som!
+<span class="n"></span>Nom hei [eu i] barqueiro nem remador.
+<span class="n"></span>Eu atendendo meu amig', eu a[tendendo].
+
+<span class="n">10</span>E cercarom-mi [as] ondas do alto mar;
+<span class="n"></span>nom hei [eu i] barqueiro nem sei remar.
+<span class="n"></span>Eu atendendo meu amig', eu a[tendendo].
+
+<span class="n"></span>Nom hei [eu] i barqueiro nem remador
+<span class="n"></span>[e] morrerei fremosa no mar maior.
+<span class="n">15</span>Eu atendendo meu amig', eu a[tendendo].
+
+<span class="n"></span>Nom hei [eu i] barqueiro nem sei remar
+<span class="n"></span>e morrerei fremosa no alto mar.
+<span class="n"></span>Eu atendendo meu amig', eu a[tendendo].</p><p class="gl"><b>Vocabulário:</b> <b>sedia-m'eu</b>, estava eu (sentada); <b>cercarom-mi</b>, cercaram-me; <b>que grandes som!</b>, que grandes são!; <b>atendendo</b>, esperando; <b>nom hei i</b>, não tenho ali; <b>fremosa</b>, formosa</p><p class="fonte">Mendinho, séc. XIII · Cantigas Medievais Galego-Portuguesas (FCSH). Os parênteses retos marcam palavras acrescentadas pelos editores.</p></div></section>
+<section class="col-licao">
+<h2>Como se lê</h2>
+<div class="caixa"><h3>Recorda</h3><p><b>Refrão</b>: o verso que se repete no fim de cada estrofe. <b>Paralelismo</b>: duas estrofes seguidas dizem quase o mesmo, com uma ou duas palavras trocadas. <b>Natureza confidente</b>: nas cantigas de amigo, a donzela fala com o mar, as flores ou as aves como se fossem amigas.</p></div><h3>Ler com atenção</h3><p class="perg">1. Transcreve o refrão e explica o que revela sobre a donzela.</p><p class="passo"><i>Começa assim:</i> O refrão é «______________________». Repete-se em todas as estrofes, mesmo quando ______, o que mostra que ela ______</p><details><summary>Confere a tua resposta</summary><div><p>«Eu atendendo meu amig', eu a[tendendo]»: espera insistente, repetida mesmo perante o perigo; ansiedade e fidelidade.</p></div></details><p class="perg">2. Compara os versos 1 e 4 e os versos 2 e 5. O que se repete e o que muda? Como se chama este processo?</p><details><summary>Como se lê</summary><div><ol class="passos"><li>Copia os dois pares de versos lado a lado.</li><li>Sublinha o que é igual e rodeia o que muda (uma ou duas palavras).</li><li>Dá o nome ao processo: paralelismo.</li></ol></div></details><details><summary>Confere a tua resposta</summary><div><p>Repete-se a ideia com palavras diferentes («Sam Simion»/«ant'o altar»; «que grandes som!»/«grandes do mar»): paralelismo.</p></div></details><p class="perg">3. Aqui a natureza é confidente ou ameaça? Justifica com uma expressão.</p><p class="passo"><i>Começa assim:</i> Aqui a natureza é ______, porque «______________________».</p><details><summary>Confere a tua resposta</summary><div><p>Ameaça: «cercarom-mi as ondas», «ondas do alto mar».</p></div></details><div class="folha"><p class="rot">Para fazer na folha A4, na aula</p><h3 style="margin-top:0">Três finais incompatíveis</h3><p>«e morrerei fremosa no mar maior» (v. 14). Escreve três leituras deste verso que não possam ser verdadeiras ao mesmo tempo.</p><ul class="lista"><li>Leitura literal</li><li>Leitura que a contradiz</li><li>A que ninguém na sala daria</li></ul><p class="passo"><i>Regra:</i> cada leitura cita uma palavra do texto</p><details><summary>Um exemplo</summary><div><p>Uma leitura feita, para veres o modelo: «Ela vai mesmo morrer: as ondas cercam-na e ‘nom hei barqueiro’, não há quem a salve.» Se esta é a literal, as tuas outras duas têm de a contradizer, e cada uma cita uma palavra do texto.</p></div></details></div><div class="folha"><p class="rot">Desafio, na folha A4</p><h3 style="margin-top:0">Mudar de voz</h3><p>Agora fala o <b>amigo</b>, longe. Quatro versos em paralelismo, com um refrão que responda ao dela. Usa pelo menos duas palavras da cantiga. Um começo feito, para veres o modelo: «Cercarom-mi as serras, que altas som! / Eu atendendo mia amiga, eu atendendo.» O teu continua noutro lugar.</p></div><h3>Para pensares sozinho</h3><ul class="lista"><li>Que leitura do verso 14 abandonei, e porquê?</li></ul>
+
+<h2 id="exercicio">Agora, o exercício</h2>
+<div class="exercicio"><p><b>Cercada pelas ondas</b>: Mendinho, séc. XIII. Cinco minutos; o resultado fica guardado e o percurso marca o passo.</p><iframe src="https://pedrohfernandes-klk.github.io/pt/m1/mendinho-ermida/" title="Cercada pelas ondas" loading="lazy"></iframe><p class="alt"><a href="https://pedrohfernandes-klk.github.io/pt/m1/mendinho-ermida/">Abrir o exercício numa página só</a></p></div>
+<button id="lida" aria-pressed="false">Li a lição</button><span class="estado" id="estado"></span>
+<div class="duvidas"><h2>Se ficaste com dúvidas</h2><ul><li>Volta a «O essencial» e lê outra vez o texto em voz alta, devagar.</li><li>Abre «Como se lê» na pergunta onde paraste: os passos e o exemplo são o caminho.</li><li>Guarda a dúvida para a aula: pergunta ao docente ou escreve-a nas três linhas do fim da unidade, no percurso.</li></ul></div>
+<div class="prox"><a href="https://pedrohfernandes-klk.github.io/pt/m1/licao-m1-f01/">← Lição anterior</a><a href="https://pedrohfernandes-klk.github.io/pt/m1/licao-m1-f05/">Lição seguinte →</a></div>
+</section></div>
+<p class="rodape">EPI, Escola Profissional de Imagem · Português 2026/2027 · Lição M1-F02, Cercada pelas ondas · Fontes: Cantigas Medievais Galego-Portuguesas (FCSH), Mendinho, «Sedia-m'eu na ermida de Sam Simion». O que marcas fica só neste aparelho.</p>
+<div id="aviso" role="status"></div></main>
+<script>
+(function(){"use strict";var K="licao-m1-f02",b=document.getElementById("lida"),s=document.getElementById("estado");
+function ler(){try{return JSON.parse(localStorage.getItem(K)||"null")}catch(x){return null}}
+function pinta(){var g=ler();b.setAttribute("aria-pressed",g&&g.lida?"true":"false");b.textContent=g&&g.lida?"Lição lida":"Li a lição";s.textContent=g&&g.lida?"marcada neste aparelho":""}
+function marca(v){try{localStorage.setItem(K,JSON.stringify({lida:v,t:Date.now()}))}catch(x){}pinta()}
+b.onclick=function(){marca(!(ler()||{}).lida)};
+var ex=document.getElementById("exercicio");if(ex&&"IntersectionObserver" in window){new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting&&!(ler()||{}).lida){marca(true);var a=document.getElementById("aviso");a.textContent="Lição marcada como lida";a.style.display="block";setTimeout(function(){a.style.display="none"},2000)}})},{threshold:.6}).observe(ex)}
+pinta()})();
+</script></body></html>

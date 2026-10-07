@@ -1,0 +1,84 @@
+<!doctype html><html lang="pt-PT"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Lição M1-F05: Luna, lua: o que caiu pelo caminho</title><style>:root{--tinta:#000;--papel:#fff;--suave:#444;--fundo:#f3f2ee}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--papel);color:var(--tinta);font:17px/1.5 Arial,Helvetica,sans-serif}
+main{max-width:1180px;margin:0 auto;padding:0 16px 80px}
+.topo{border-bottom:4px solid var(--tinta);padding:14px 0 10px}
+.marca{font:700 .72rem/1.2 Arial;letter-spacing:.14em;text-transform:uppercase}
+h1{font:900 1.75rem/1.05 "Arial Black",Arial,sans-serif;margin:.3rem 0 .4rem;text-transform:uppercase}
+.parati{font-size:1.05rem;margin:.2rem 0 .6rem}
+nav.ligas{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 0}
+nav.ligas a{font:700 .76rem Arial;letter-spacing:.04em;text-transform:uppercase;border:2px solid var(--tinta);padding:5px 9px;text-decoration:none;color:var(--tinta)}
+nav.ligas a.cheio{background:var(--tinta);color:var(--papel)}
+.cols{display:block}
+@media (min-width:960px){.cols{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:28px;align-items:start}.col-texto{position:sticky;top:0;max-height:100vh;overflow:auto;padding-right:6px}}
+h2{font:900 1rem "Arial Black",Arial,sans-serif;background:var(--tinta);color:var(--papel);padding:6px 10px;margin:22px 0 10px;text-transform:uppercase;letter-spacing:.03em}
+h3{font:900 .95rem "Arial Black",Arial,sans-serif;margin:16px 0 6px;text-transform:uppercase}
+.essencial{border:3px solid var(--tinta);padding:10px 14px;margin:14px 0}
+.essencial ol{margin:0;padding-left:1.3rem}.essencial li{margin:0 0 6px;font-size:1.02rem}
+.texto{border:2px solid var(--tinta);padding:12px 14px;margin:12px 0}
+.texto .tit{font:900 1rem "Arial Black",Arial,sans-serif;margin:0 0 8px}
+.texto .v{margin:0;padding:0;white-space:pre-wrap;font:600 1rem/1.5 Arial}
+.texto .v .n{display:inline-block;width:2.1em;color:var(--suave);font-size:.72em;font-weight:400;text-align:right;padding-right:.6em}
+.texto p.pr{margin:0 0 8px}
+.gl{font-size:.9rem;border-top:1px solid var(--tinta);margin-top:10px;padding-top:6px}
+.fonte{font-size:.82rem;color:var(--suave);margin:6px 0 0}
+.caixa{background:var(--fundo);border-left:6px solid var(--tinta);padding:8px 12px;margin:10px 0}
+.caixa h3{margin:0 0 4px;font-size:.85rem}
+.caixa p{margin:0 0 6px}
+details{border:2px solid var(--tinta);margin:8px 0;padding:0}
+summary{cursor:pointer;font:700 .95rem Arial;padding:8px 10px;list-style:none;display:flex;gap:8px;align-items:center}
+summary::before{content:"+";font:900 1.1rem "Arial Black",Arial;width:1.2rem}
+details[open]>summary::before{content:"–"}
+details>div{padding:0 12px 10px;border-top:1px solid var(--tinta)}
+.perg{margin:14px 0 6px;font-weight:700}
+.passo{margin:4px 0 4px 1.2rem;font-size:.95rem}
+ol.passos{margin:4px 0;padding-left:1.4rem}ol.passos li{margin:0 0 4px;font-size:.95rem}
+table{border-collapse:collapse;width:100%;margin:6px 0;font-size:.92rem}th,td{border:1px solid var(--tinta);padding:5px 7px;vertical-align:top;text-align:left}th{background:var(--tinta);color:var(--papel);font-size:.78rem;text-transform:uppercase;letter-spacing:.06em}
+.folha{border:2px dashed var(--tinta);padding:10px 12px;margin:10px 0}
+.folha .rot{font:700 .72rem Arial;letter-spacing:.12em;text-transform:uppercase;margin:0 0 4px}
+ul.lista{margin:4px 0;padding-left:1.3rem}ul.lista li{margin:0 0 4px}
+.pares{display:grid;grid-template-columns:1fr 1fr;gap:6px 14px;font-size:.95rem}
+.exercicio iframe{width:100%;height:74vh;min-height:520px;border:3px solid var(--tinta);background:#fff}
+.exercicio .alt{font-size:.88rem;margin:6px 0 0}
+button{font:700 .95rem Arial;padding:10px 14px;border:2px solid var(--tinta);background:var(--tinta);color:var(--papel);cursor:pointer;margin:8px 8px 0 0}
+button.sec{background:var(--papel);color:var(--tinta)}
+button[aria-pressed="true"]{background:var(--papel);color:var(--tinta)}
+.estado{font:700 .78rem Arial;letter-spacing:.08em;text-transform:uppercase;margin:6px 0 0}
+.duvidas ul{margin:0;padding-left:1.3rem}
+.prox{display:flex;justify-content:space-between;gap:10px;margin:26px 0 0;flex-wrap:wrap}
+.prox a{font:700 .9rem Arial;border:2px solid var(--tinta);padding:10px 12px;text-decoration:none;color:var(--tinta)}
+.rodape{margin-top:26px;border-top:2px solid var(--tinta);padding-top:8px;font-size:.8rem;color:var(--suave)}
+#aviso{position:fixed;left:50%;bottom:16px;transform:translateX(-50%);background:var(--tinta);color:var(--papel);padding:8px 14px;font:700 .85rem Arial;display:none;z-index:9}
+@media (prefers-color-scheme:dark){:root{--tinta:#ecebe5;--papel:#121210;--suave:#b3b1aa;--fundo:#1d1d1a}.exercicio iframe{background:#121210}}
+@media print{.exercicio,nav.ligas,button,.prox{display:none!important}.cols{display:block}}
+[hidden]{display:none!important}</style></head><body><main>
+<header class="topo"><div class="marca">Português · 1.º ano · Módulo 1 · Lição M1-F05 · unidade 1, A ermida cercada</div><h1>Luna, lua: o que caiu pelo caminho_</h1><p class="parati">Entre luna e lua caiu uma letra. Entre o latim e o português caíram séculos — e há regras para isso.</p>
+<nav class="ligas"><a class="cheio" href="https://pedrohfernandes-klk.github.io/pt/m1/#m1-f05">Percurso</a><a href="https://pedrohfernandes-klk.github.io/pt/m1/infografia-mapa-do-modulo/">Mapa do módulo</a><a href="https://pedrohfernandes-klk.github.io/pt/m1/licao-m1-f02/">Lição anterior</a><a href="https://pedrohfernandes-klk.github.io/pt/m1/licao-m1-f04/">Lição seguinte</a></nav></header>
+<div class="cols">
+<section class="col-texto"><div class="essencial"><h2 style="margin:0 0 8px">O essencial</h2><ol><li>O português vem do latim falado, e os sons mudaram por processos regulares ao longo de séculos.</li><li>Os principais: queda de sons (síncope, apócope), sonorização (o c passou a g em «amicum» &gt; «amigo»), vocalização («nocte» &gt; «noite»), metátese (troca de lugar), nasalização, assimilação.</li><li>Saber o processo deixa-te explicar palavras novas e perceber as formas antigas das cantigas.</li></ol></div><div class="caixa"><h3>O que vais aprender</h3><p>Identificar processos fonológicos e aplicá-los a casos novos, formulando hipóteses.</p></div></section>
+<section class="col-licao">
+<h2>Como se lê</h2>
+<div class="caixa"><h3>Para consultares: dez processos</h3><p class="mini">Estes processos mudam <b>sons</b>. Escrevem-se com letras porque é assim que vemos as palavras, mas o que muda é o som que cada letra representa.</p><table class="quadro"><tr><th style="width:22%">Processo</th><th>O que acontece</th><th style="width:22%">Processo</th><th>O que acontece</th></tr>
+<tr><td><b>Prótese</b></td><td>acrescenta-se um som no início</td><td><b>Aférese</b></td><td>cai um som no início</td></tr>
+<tr><td><b>Epêntese</b></td><td>acrescenta-se um som no meio</td><td><b>Síncope</b></td><td>cai um som no meio</td></tr>
+<tr><td><b>Paragoge</b></td><td>acrescenta-se um som no fim</td><td><b>Apócope</b></td><td>cai um som no fim</td></tr>
+<tr><td><b>Metátese</b></td><td>sons trocam de lugar</td><td><b>Sonorização</b></td><td>um som consonântico surdo passa a sonoro: /p/→/b/, /t/→/d/, /k/→/g/ (na escrita, p&gt;b, t&gt;d, c&gt;g)</td></tr>
+<tr><td><b>Palatalização</b></td><td>um som passa a palatal (ex.: ch, lh, nh)</td><td><b>Assimilação</b></td><td>um som fica igual ou parecido com o vizinho</td></tr></table></div><p class="perg">Identifica o processo (ou os processos) em cada evolução.</p><p class="passo"><i>Pensa em cada célula; depois abre a solução e compara.</i></p><table><tr><th>Latim</th><th>Português</th><th>Processo(s)</th></tr><tr><td>luna</td><td>lua</td><td></td></tr><tr><td>mare</td><td>mar</td><td></td></tr><tr><td>ante</td><td>antes</td><td></td></tr><tr><td>acume</td><td>gume</td><td></td></tr><tr><td>semper</td><td>sempre</td><td></td></tr><tr><td>stella</td><td>estrela</td><td></td></tr><tr><td>ipsum</td><td>isso</td><td></td></tr><tr><td>amicum</td><td>amigo</td><td></td></tr></table><details><summary>A solução</summary><div><table><tr><th>Latim</th><th>Português</th><th>Processo(s)</th></tr><tr><td>luna</td><td>lua</td><td>síncope (cai o n)</td></tr><tr><td>mare</td><td>mar</td><td>apócope (cai o e)</td></tr><tr><td>ante</td><td>antes</td><td>paragoge (junta-se o s)</td></tr><tr><td>acume</td><td>gume</td><td>aférese (cai o a) e sonorização (c > g)</td></tr><tr><td>semper</td><td>sempre</td><td>metátese (er > re)</td></tr><tr><td>stella</td><td>estrela</td><td>prótese (e- inicial) e epêntese (r)</td></tr><tr><td>ipsum</td><td>isso</td><td>assimilação (ps > ss); cai o -m</td></tr><tr><td>amicum</td><td>amigo</td><td>sonorização (c > g); cai o -m</td></tr></table></div></details><h3>Casos novos</h3><p class="perg">1. plenum > chẽo > cheio. O que indica o til em «chẽo»? Que processos explicam as duas mudanças?</p><details><summary>Como se lê</summary><div><ol class="passos"><li>Compara «plenum» com «chẽo»: que som caiu no meio, e que marca ficou no lugar dele (o til)?</li><li>Compara «pl» com «ch»: procura na tabela o processo que faz um som passar a palatal.</li><li>Compara «chẽo» com «cheio»: o que se juntou?</li></ol></div></details><details><summary>Confere a tua resposta</summary><div><p>O til marca a nasalidade que ficou quando caiu o n (síncope); pl > ch é palatalização; depois perde-se a nasalidade e acrescenta-se o i (epêntese).</p></div></details><p class="perg">2. <b>Hipótese.</b> O latim «lupum» deu «lobo». Sem consultar nada, propõe que processos ocorreram. Depois confirma no dicionário e corrige a tua hipótese, riscando.</p><p class="passo"><i>Começa assim:</i> Hipótese: de «lupum» a «lobo» houve ______________________ (p > b) e ______________________. Depois de consultar: ______</p><details><summary>Confere a tua resposta</summary><div><p>Sonorização (p > b), queda do -m final, u > o. Valorizar a correção visível da hipótese.</p></div></details><p class="perg">3. Um colega diz: «o português é latim mal falado». Avalia a afirmação usando dois exemplos desta ficha.</p><details><summary>Como se lê</summary><div><ol class="passos"><li>Escolhe dois exemplos do quadro em que o mesmo processo se repete (por exemplo, duas sonorizações).</li><li>Diz o que essa repetição prova: se muda sempre da mesma maneira, é regra ou é erro?</li><li>Responde ao colega numa frase, com os dois exemplos.</li></ol></div></details><details><summary>Confere a tua resposta</summary><div><p>Avaliação fundamentada: as mudanças são regulares (os mesmos processos repetem-se), não erros; toda a língua muda. Distinguir opinião de explicação.</p></div></details><div class="folha"><p class="rot">Desafio, na folha A4</p><h3 style="margin-top:0">Detetive de etimologias</h3><p>Três palavras do teu curso (imagem, luz, som, cena…) no Dicionário Priberam. Escolhe a que tem a história mais surpreendente e explica-a, em três linhas, a um colega de outro curso.</p></div><h3>Para pensares sozinho</h3><ul class="lista"><li>Que processo ainda confundo? Com que exemplo o vou lembrar?</li></ul>
+
+<h2 id="exercicio">Agora, o exercício</h2>
+<div class="exercicio"><p><b>Luna, lua</b>: Processos fonológicos nas palavras das cantigas. Cinco minutos; o resultado fica guardado e o percurso marca o passo.</p><iframe src="https://pedrohfernandes-klk.github.io/pt/m1/gram-fonologia/" title="Luna, lua" loading="lazy"></iframe><p class="alt"><a href="https://pedrohfernandes-klk.github.io/pt/m1/gram-fonologia/">Abrir o exercício numa página só</a></p></div>
+<button id="lida" aria-pressed="false">Li a lição</button><span class="estado" id="estado"></span>
+<div class="duvidas"><h2>Se ficaste com dúvidas</h2><ul><li>Volta a «O essencial» e lê outra vez o texto em voz alta, devagar.</li><li>Abre «Como se lê» na pergunta onde paraste: os passos e o exemplo são o caminho.</li><li>Guarda a dúvida para a aula: pergunta ao docente ou escreve-a nas três linhas do fim da unidade, no percurso.</li></ul></div>
+<div class="prox"><a href="https://pedrohfernandes-klk.github.io/pt/m1/licao-m1-f02/">← Lição anterior</a><a href="https://pedrohfernandes-klk.github.io/pt/m1/licao-m1-f04/">Lição seguinte →</a></div>
+</section></div>
+<p class="rodape">EPI, Escola Profissional de Imagem · Português 2026/2027 · Lição M1-F05, Luna, lua: o que caiu pelo caminho · Fontes: Dicionário Priberam (etimologias). O que marcas fica só neste aparelho.</p>
+<div id="aviso" role="status"></div></main>
+<script>
+(function(){"use strict";var K="licao-m1-f05",b=document.getElementById("lida"),s=document.getElementById("estado");
+function ler(){try{return JSON.parse(localStorage.getItem(K)||"null")}catch(x){return null}}
+function pinta(){var g=ler();b.setAttribute("aria-pressed",g&&g.lida?"true":"false");b.textContent=g&&g.lida?"Lição lida":"Li a lição";s.textContent=g&&g.lida?"marcada neste aparelho":""}
+function marca(v){try{localStorage.setItem(K,JSON.stringify({lida:v,t:Date.now()}))}catch(x){}pinta()}
+b.onclick=function(){marca(!(ler()||{}).lida)};
+var ex=document.getElementById("exercicio");if(ex&&"IntersectionObserver" in window){new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting&&!(ler()||{}).lida){marca(true);var a=document.getElementById("aviso");a.textContent="Lição marcada como lida";a.style.display="block";setTimeout(function(){a.style.display="none"},2000)}})},{threshold:.6}).observe(ex)}
+pinta()})();
+</script></body></html>

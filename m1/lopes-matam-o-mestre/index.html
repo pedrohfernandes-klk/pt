@@ -96,7 +96,7 @@ var temporizador=null;
 function nivelDe(k){return E.passos[k].nivel||0}
 function abreNivel(k){ // primeiro passo de um nível: mostra o cartão de nível
  return nivelDe(k)>0 && (k===0 || nivelDe(k-1)!==nivelDe(k))}
-function mostra(){ clearInterval(temporizador); var k=est.i;
+function mostra(){ clearInterval(temporizador); var k=est.i; est.n=N; if(est.i>=N&&!est.fim){est.fim=true;guardar()}
  if(k>=N){return final()}
  var P=E.passos[k],r=est.r[k],h="";
  if(abreNivel(k)){var nomes=E.niveis||[];var nm=nomes[P.nivel-1]||("Nível "+P.nivel);
