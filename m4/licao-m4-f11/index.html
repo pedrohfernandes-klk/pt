@@ -9,6 +9,7 @@ h1{font:900 1.75rem/1.05 "Arial Black",Arial,sans-serif;margin:.3rem 0 .4rem;tex
 nav.ligas{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 0}
 nav.ligas a{font:700 .76rem Arial;letter-spacing:.04em;text-transform:uppercase;border:2px solid var(--tinta);padding:5px 9px;text-decoration:none;color:var(--tinta)}
 nav.ligas a.cheio{background:var(--tinta);color:var(--papel)}
+.fig{margin:14px 0 6px}.fig img{display:block;max-width:100%;max-height:320px;width:auto;border:2px solid var(--tinta)}.fig figcaption{font-size:.8rem;color:var(--suave);margin-top:5px}
 .cols{display:block}
 @media (min-width:960px){.cols{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:28px;align-items:start}.col-texto{position:sticky;top:0;max-height:100vh;overflow:auto;padding-right:6px}}
 h2{font:900 1rem "Arial Black",Arial,sans-serif;background:var(--tinta);color:var(--papel);padding:6px 10px;margin:22px 0 10px;text-transform:uppercase;letter-spacing:.03em}
@@ -33,7 +34,7 @@ details>div{padding:0 12px 10px;border-top:1px solid var(--tinta)}
 .perg{margin:14px 0 6px;font-weight:700}
 .passo{margin:4px 0 4px 1.2rem;font-size:.95rem}
 ol.passos{margin:4px 0;padding-left:1.4rem}ol.passos li{margin:0 0 4px;font-size:.95rem}
-table{border-collapse:collapse;width:100%;margin:6px 0;font-size:.92rem}th,td{border:1px solid var(--tinta);padding:5px 7px;vertical-align:top;text-align:left}th{background:var(--tinta);color:var(--papel);font-size:.78rem;text-transform:uppercase;letter-spacing:.06em}
+table{border-collapse:collapse;width:100%;margin:6px 0;font-size:.92rem;table-layout:fixed}th,td{border:1px solid var(--tinta);padding:5px 7px;vertical-align:top;text-align:left;overflow-wrap:anywhere;word-break:break-word}.rol{overflow-x:auto;max-width:100%}th{background:var(--tinta);color:var(--papel);font-size:.78rem;text-transform:uppercase;letter-spacing:.06em}
 .folha{border:2px dashed var(--tinta);padding:10px 12px;margin:10px 0}
 .folha .rot{font:700 .72rem Arial;letter-spacing:.12em;text-transform:uppercase;margin:0 0 4px}
 ul.lista{margin:4px 0;padding-left:1.3rem}ul.lista li{margin:0 0 4px}
