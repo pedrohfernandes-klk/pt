@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="pt-PT"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Ler a fundo · No tempo da flor</title>
+<title>Ler a fundo · No tempo da flor</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 <style>
 :root{--fundo:#fff;--papel:#fff;--tinta:#000;--linha:#000;--suave:#000}
 @media (prefers-color-scheme:dark){:root{--fundo:#000;--papel:#000;--tinta:#fff;--linha:#fff;--suave:#fff}}
@@ -62,6 +62,19 @@ details a{color:var(--tinta)}
 button:focus-visible,textarea:focus-visible,input:focus-visible,a:focus-visible{outline:3px solid var(--tinta);outline-offset:2px}
 @media (prefers-color-scheme:dark){button:focus-visible,textarea:focus-visible,input:focus-visible,a:focus-visible{outline-color:var(--tinta)}}
 @media (prefers-reduced-motion:no-preference){#palco>*{animation:e .22s ease-out}@keyframes e{from{opacity:.4;transform:translateY(5px)}to{opacity:1;transform:none}}}
+
+:root{--creme:#f5ebd7;--vermelho:#c8232c;--marinho:#1d3557;--menta:#7fcbb0;--cartaz:"Bebas Neue","Arial Narrow","Arial Black",Arial,sans-serif}
+@media (prefers-color-scheme:dark){:root{--creme:#2b261d;--vermelho:#e4555c;--marinho:#2b4a7a;--menta:#5fc8a8}}
+h1{font-family:var(--cartaz);font-weight:400;letter-spacing:.03em;font-size:38px;padding-bottom:6px}
+h1::after{content:"";display:block;width:56px;height:5px;background:var(--vermelho);margin-top:6px}
+.rot{background:var(--marinho);color:var(--creme);font-family:var(--cartaz);font-weight:400;font-size:15px;letter-spacing:.08em}
+.barra span.f{background:var(--menta)}
+.btn,a.ligar{background:var(--vermelho);border-color:var(--vermelho);color:#fff}
+.btn.sec{background:var(--papel);color:var(--tinta);border-color:var(--linha)}
+[aria-pressed=true]{background:var(--marinho)!important;color:var(--creme)!important}
+.contagem,.estado{font-family:var(--cartaz);font-weight:400;letter-spacing:.04em}
+.contagem{font-size:48px;color:var(--vermelho)}
+.ret{border-left-color:var(--marinho)}
 </style></head><body>
 <div class="topo"><div class="l1"><span class="marca">Ler a fundo · 5 min · M1 cantigas</span><span class="estado"><b id="pts">0</b> pts · <span id="tempo">0:00</span></span></div><div class="barra" id="barra"></div></div>
 <main>
