@@ -87,33 +87,26 @@ select.ok{border-color:var(--certo,#1b7f3b);background:var(--certo-fundo,#e2f3e8
 .jogo .fim{text-align:center;padding:10px}.jogo .fim .grande{font:900 2.2rem "Arial Black",Arial;margin:4px 0}.jogo .fim .xp{font:900 1rem "Arial Black",Arial;color:var(--certo,#1b7f3b)}
 .jogo .emblema{display:inline-block;width:64px;height:64px;border-radius:50%;border:3px solid var(--tinta);object-fit:cover;margin:6px}
 
-:root{--creme:#f5ebd7;--vermelho:#c8232c;--marinho:#1d3557;--menta:#7fcbb0;--menta-escura:#1f7a5c;--certo:#1f7a5c;--errado:#c8232c;--certo-fundo:#dff3ea;--errado-fundo:#fbe5e3;--cartaz:"Bebas Neue","Arial Narrow","Arial Black",Arial,sans-serif}
-@media (prefers-color-scheme:dark){:root{--creme:#2b261d;--vermelho:#e4555c;--marinho:#2b4a7a;--menta:#5fc8a8;--menta-escura:#7fd9bb;--certo:#7fd9bb;--errado:#e4555c;--certo-fundo:#163d30;--errado-fundo:#4a1f1f}}
+:root{--vermelho:#c8232c;--certo:#1b7f3b;--errado:#c8232c;--certo-fundo:#e2f3e8;--errado-fundo:#fbe5e3;--cartaz:"Bebas Neue","Arial Narrow","Arial Black",Arial,sans-serif}
+@media (prefers-color-scheme:dark){:root{--vermelho:#e4555c;--certo:#7fd9bb;--errado:#e4555c;--certo-fundo:#163d30;--errado-fundo:#4a1f1f}}
 h1{font-family:var(--cartaz);font-weight:400;letter-spacing:.02em;font-size:2.4rem;position:relative;padding-bottom:.35rem}
 h1::after{content:"";display:block;width:56px;height:5px;background:var(--vermelho);margin-top:.3rem}
-h2,.unidade h2{background:var(--marinho);color:var(--creme);font-family:var(--cartaz);font-weight:400;letter-spacing:.06em;font-size:1.25rem}
-.unidade h2 .ok{border-color:var(--creme)}
+h2,.unidade h2{font-family:var(--cartaz);font-weight:400;letter-spacing:.06em;font-size:1.25rem}
 h3{font-family:var(--cartaz);font-weight:400;letter-spacing:.05em;font-size:1.15rem}
 button,.jogo .acoes button{background:var(--vermelho);border-color:var(--vermelho);color:#fff}
 button.sec{background:var(--papel);color:var(--tinta);border-color:var(--tinta)}
-nav.ligas a.cheio{background:var(--marinho);border-color:var(--marinho);color:var(--creme)}
-.chip.feito{background:var(--menta);border-color:var(--menta);color:#10261d}
-.barra b,.jogo .barra i.ok{background:var(--menta)}
-.nivel{background:var(--creme);border-color:var(--marinho)}
 .nivel .n1{font-family:var(--cartaz);font-weight:400;font-size:1.35rem;letter-spacing:.04em}
 .nivel .n1 b{font-family:var(--cartaz);font-weight:400;color:var(--vermelho)}
-.nivel .barra{background:var(--papel);border-color:var(--marinho)}.nivel .barra b{background:var(--menta);transition:width .6s ease}
-.emblemas img{border:3px solid var(--creme);outline:2px solid var(--vermelho);box-shadow:0 0 0 1px var(--creme)}
+.nivel .barra b{transition:width .6s ease}
+.emblemas img{outline:2px solid var(--vermelho);outline-offset:2px}
 .emblemas img.ganho{animation:ganho .6s ease-out}
-.jogo .topo-j{color:var(--marinho)}.jogo .topo-j .seq{color:var(--menta-escura)}
 .jogo .barra i.atual{background:var(--vermelho)}
 .jogo .cartao{animation:entrar .35s ease-out}
-.jogo .fim .grande{font-family:var(--cartaz);font-weight:400;font-size:3rem;color:var(--marinho)}.jogo .fim .xp{color:var(--menta-escura)}
-.jogo .emblema{border-color:var(--creme);outline:2px solid var(--vermelho)}
-ol.passos .n{font-family:var(--cartaz);font-weight:400;font-size:1.6rem;color:var(--marinho)}
-.atividades .ativ{border:2px solid var(--marinho)}
-.atividades .ativ .rot{background:var(--marinho);color:var(--creme);font-family:var(--cartaz);font-weight:400;letter-spacing:.06em}
-.atividades .ativ.feita .rot{background:var(--menta);color:#10261d}
+.jogo .fim .grande{font-family:var(--cartaz);font-weight:400;font-size:3rem}.jogo .fim .xp{color:var(--vermelho)}
+.jogo .emblema{outline:2px solid var(--vermelho);outline-offset:2px}
+ol.passos .n{font-family:var(--cartaz);font-weight:400;font-size:1.6rem;color:var(--vermelho)}
+.atividades .ativ .rot{font-family:var(--cartaz);font-weight:400;letter-spacing:.06em;font-size:.95rem}
+.atividades .ativ.feita .rot{background:var(--vermelho)}
 @keyframes entrar{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
 @keyframes ganho{0%{transform:scale(.6);opacity:0}70%{transform:scale(1.12)}100%{transform:scale(1);opacity:1}}
 @media (prefers-reduced-motion:reduce){.jogo .cartao,.emblemas img.ganho{animation:none}.nivel .barra b{transition:none}}
