@@ -18,7 +18,9 @@ h3{font:900 .95rem "Arial Black",Arial,sans-serif;margin:16px 0 6px;text-transfo
 .essencial ol{margin:0;padding-left:1.3rem}.essencial li{margin:0 0 6px;font-size:1.02rem}
 .texto{border:2px solid var(--tinta);padding:12px 14px;margin:12px 0}
 .texto .tit{font:900 1rem "Arial Black",Arial,sans-serif;margin:0 0 8px}
-.texto .v{margin:0;padding:0;white-space:pre-wrap;font:600 1rem/1.5 Arial}
+.texto .v{margin:0;padding:0;white-space:pre-wrap;font:400 1.08rem/1.55 Georgia,"Times New Roman",serif}
+.pergU{margin:.1rem 0 .4rem;font-size:1.15rem;line-height:1.3}
+.texto .pr{font-family:Georgia,"Times New Roman",serif;font-size:1.06rem;line-height:1.55}
 .texto .v .n{display:inline-block;width:2.1em;color:var(--suave);font-size:.72em;font-weight:400;text-align:right;padding-right:.6em}
 .texto p.pr{margin:0 0 8px}
 .gl{font-size:.9rem;border-top:1px solid var(--tinta);margin-top:10px;padding-top:6px}
@@ -114,8 +116,25 @@ ol.passos .n{font-family:var(--cartaz);font-weight:400;font-size:1.6rem}
 @keyframes entrar{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
 @keyframes ganho{0%{transform:scale(.6);opacity:0}70%{transform:scale(1.12)}100%{transform:scale(1);opacity:1}}
 @media (prefers-reduced-motion:reduce){.jogo .cartao,.emblemas img.ganho{animation:none}.nivel .barra b{transition:none}}
+/* 10/10/2026: os princípios do Mapa do módulo no percurso e nas lições: a palavra do módulo em marca de água, o número grande ao
+   lado do título de cartaz, a faixa de números, a serifa itálica nas perguntas das unidades */
+:root{--serif:Georgia,"Times New Roman",serif;--agua:#ebebeb}
+@media (prefers-color-scheme:dark){:root{--agua:#222220}}
+.topo{position:relative;overflow:hidden}.topo>*{position:relative;z-index:1}
+.agua{position:absolute;right:-6px;top:0;font:400 6.2rem/.9 var(--cartaz);color:var(--agua);text-transform:uppercase;letter-spacing:.04em;z-index:0;pointer-events:none}
+.cabm{display:flex;align-items:flex-end;gap:10px;margin:.3rem 0 .4rem;position:relative}.cabm .n{font:400 5rem/.78 var(--cartaz);flex:none}
+.cabm>.n,.cabm>h1{position:relative;z-index:1}.cabm .agua{top:auto;bottom:-4px}
+.cabm h1{font-size:2.3rem;line-height:.95;margin:0;padding:0;text-transform:none;letter-spacing:.02em}.cabm h1::after{display:none}
+.serif{font-family:var(--serif);font-style:italic}
+.numeros{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--tinta);border-bottom:1px solid var(--tinta);margin:10px 0 0}
+.numeros div{padding:8px 8px 8px 0}.numeros b{display:block;font:400 2rem/.9 var(--cartaz)}.numeros small{display:block;font-size:.64rem;line-height:1.2;letter-spacing:.08em;text-transform:uppercase;color:var(--suave);margin-top:3px}
+.unidade h2 .un{font-family:var(--cartaz);font-weight:400;font-size:2.1rem;line-height:.8;margin-right:6px;vertical-align:-.1em}
+.unidade .perg{font-family:var(--serif);font-style:italic;font-size:1.15rem;line-height:1.3}
+.fim p i{font-family:var(--serif);font-size:1.1rem}
+ol.passos .n{font-size:2rem}
 </style></head><body><main>
-<header class="topo"><div class="marca">Português · 2.º ano · Módulo 5 · Lição M5-F15 · unidade 2, O Ramalhete</div><h1>Dois modos de perder a vida_</h1><p class="parati">Simão perde-a de uma vez, por amor. Carlos perde-a aos poucos, sem dar por isso. Tudo o que leste no módulo, numa folha.</p>
+<header class="topo"><div class="marca">Português · 2.º ano · Módulo 5 · Lição M5-F15 · unidade 2, O Ramalhete</div><div class="cabm"><span class="agua">herança</span><span class="n">12</span><h1>Dois modos de perder a vida</h1></div><p class="parati">Simão perde-a de uma vez, por amor. Carlos perde-a aos poucos, sem dar por isso. Tudo o que leste no módulo, numa folha.</p><p class="pergU serif">Falha-se a vida, ou deixa-se falhar?</p>
+<div class="numeros"><div><b>12</b><small>de 13 passos do percurso</small></div><div><b>10</b><small>itens para responder</small></div><div><b>2</b><small>atividades de cinco minutos</small></div></div>
 <nav class="ligas"><a class="cheio" href="https://pedrohfernandes-klk.github.io/pt/m5/#m5-f15">Percurso</a><a href="https://pedrohfernandes-klk.github.io/pt/m5/mapa-do-modulo-m5/">Mapa do módulo</a><a href="https://pedrohfernandes-klk.github.io/pt/m5/licao-m5-f13/">Lição anterior</a></nav>
 <p class="estado" id="estado" aria-live="polite"></p></header>
 <div class="cols">
@@ -200,7 +219,7 @@ pintar();window.addEventListener("focus",pintar);document.addEventListener("visi
 </script>
 <script>
 (function(){"use strict";
-var K="licao-m5-f15",IT=[],FB=["Romantismo: o amor-paixão vale mais do que a vida; Realismo: a ironia desmonta a paixão.","Camilo: casas, conventos, cadeia; Eça: Ramalhete, Hotel Central, Sintra; espaço íntimo contra espaço social.","Camilo mata os três amantes; Eça deixa Afonso morto e dois amigos a fazer contas à vida.","Modificador do grupo verbal: indica modo e não é selecionado pelo verbo; corta-se e a frase aguenta-se.","Indireto livre: a voz de Ega infiltra-se na narração, sem «disse» nem travessão.","Falso: cria estrutura circular; o romance abre e fecha com o mesmo espaço, agravado.","De uma vez e aos poucos: «Dezoito annos!… degradado da patria» contra «Nada mais inoffensivo, mais nullo».","Camilo em 1803 e 1807; Eça em 1875 e dez anos depois."],TOTAL=8;
+var K="licao-m5-f15",IT=[],FB=["Romantismo: o amor-paixão vale mais do que a vida; Realismo: a ironia desmonta a paixão.","Camilo: casas, conventos, cadeia; Eça: Ramalhete, Hotel Central, Sintra; espaço íntimo contra espaço social.","Camilo mata os três amantes; Eça deixa Afonso morto e dois amigos a fazer contas à vida.","Modificador do grupo verbal: indica modo e não é selecionado pelo verbo; corta-se e a frase aguenta-se.","Indireto livre: a voz de Ega infiltra-se na narração, sem «disse» nem travessão.","Falso: cria estrutura circular; o romance abre e fecha com o mesmo espaço, agravado.","De uma vez e aos poucos: «Dezoito annos!… degradado da patria» contra «Nada mais inoffensivo, mais nullo».","Camilo em 1803 e 1807; Eça em 1875 e dez anos depois."],TOTAL=10;
 var $=function(s,r){return (r||document).querySelector(s)},$$=function(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))};
 function ls(k){try{return JSON.parse(localStorage.getItem(k)||"null")}catch(x){return null}}
 var st=ls(K)||{};if(!st.tentativas)st.tentativas=0;
