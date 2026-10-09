@@ -110,6 +110,32 @@ ol.passos .n{font-family:var(--cartaz);font-weight:400;font-size:1.6rem;color:va
 @keyframes entrar{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
 @keyframes ganho{0%{transform:scale(.6);opacity:0}70%{transform:scale(1.12)}100%{transform:scale(1);opacity:1}}
 @media (prefers-reduced-motion:reduce){.jogo .cartao,.emblemas img.ganho{animation:none}.nivel .barra b{transition:none}}
+
+.jogo{border:0;padding:0;margin:10px 0;background:transparent}
+.jogo .topo-j{margin:0 0 6px;align-items:baseline;font-size:.8rem}
+.jogo .barra{gap:0;height:6px;margin:0 0 14px;border:0;background:var(--fundo)}.jogo .barra i{border:0;border-right:1px solid var(--papel);height:6px}.jogo .barra i:last-child{border-right:0}.jogo .barra i.atual{background:var(--vermelho,#c8232c)}
+.jogo .cartao{background:var(--fundo);border:0;padding:18px 16px 14px;min-height:340px;display:flex;flex-direction:column}
+.jogo .q{font-size:1.2rem;line-height:1.35;margin:0 0 14px}
+.jogo .ops{gap:8px}
+.jogo button.op{min-height:48px;display:flex;align-items:center;gap:10px;padding:10px 12px;border:2px solid var(--tinta);background:var(--papel);line-height:1.3;text-align:left}
+.jogo button.op::before{content:"";display:inline-block;width:1.1rem;flex:none;font-weight:900;text-align:center}
+.jogo button.op.bom{background:var(--certo-fundo,#e2f3e8);border-color:var(--certo,#1b7f3b);color:var(--tinta)}.jogo button.op.bom::before{content:"✓";color:var(--certo,#1b7f3b)}
+.jogo button.op.mau{background:var(--errado-fundo,#fbe5e3);border-color:var(--errado,#c8232c);color:var(--tinta);text-decoration:none;opacity:1}.jogo button.op.mau::before{content:"✗";color:var(--errado,#c8232c)}
+.jogo button.op.escolhida{outline:3px solid var(--vermelho,#c8232c);outline-offset:1px}
+.jogo .pal{min-height:40px;display:inline-flex;align-items:center;border:2px solid var(--tinta);background:var(--papel)}.jogo .pal[aria-pressed=true]{background:var(--tinta);color:var(--papel)}
+.jogo .pal.bom{background:var(--certo-fundo,#e2f3e8);border-color:var(--certo,#1b7f3b);color:var(--tinta)}.jogo .pal.bom::before{content:"✓ ";color:var(--certo,#1b7f3b);font-weight:900}
+.jogo .pal.mau{background:var(--errado-fundo,#fbe5e3);border-color:var(--errado,#c8232c);color:var(--tinta)}.jogo .pal.mau::before{content:"✗ ";color:var(--errado,#c8232c);font-weight:900}
+.jogo .pal.falta{outline:3px dashed var(--certo,#1b7f3b);outline-offset:1px}
+.jogo select,.jogo input[type=text]{min-height:40px;border:2px solid var(--tinta);background:var(--papel)}
+.jogo select.ok,.jogo input.ok{background:var(--certo-fundo,#e2f3e8);border-color:var(--certo,#1b7f3b)}.jogo select.mau,.jogo input.mau{background:var(--errado-fundo,#fbe5e3);border-color:var(--errado,#c8232c)}
+.jogo .ordem .num{border-color:var(--tinta)}.jogo .pares{gap:8px}.jogo .pares .col{gap:8px}
+.jogo .f{margin:12px 0 0;border-top:0;border-left:4px solid var(--tinta);padding:8px 12px;background:var(--papel);font-size:.95rem;color:var(--tinta)}
+.jogo .f.ok{border-left-color:var(--certo,#1b7f3b)}.jogo .f.ok::before{content:"✓ ";color:var(--certo,#1b7f3b);font-weight:900}
+.jogo .f.mau{border-left-color:var(--errado,#c8232c)}.jogo .f.mau::before{content:"✗ ";color:var(--errado,#c8232c);font-weight:900}
+.jogo .f.meio{border-left-color:var(--suave);color:var(--suave)}.jogo .f.meio::before{content:""}
+.jogo .acoes{margin-top:auto;padding-top:16px;justify-content:flex-end}
+.jogo .fim{min-height:0;justify-content:center;align-items:center}.jogo .fim .grande{margin:2px 0}
+@media (max-width:480px){.jogo .cartao{min-height:380px;padding:16px 12px 12px}.jogo .q{font-size:1.1rem}}
 </style></head><body><main>
 <header class="topo"><div class="marca">Português · 1.º ano · Módulo 1 · Lição M1-F10 · unidade 3, A multidão na rua</div><h1>Estar lá_</h1><p class="parati">Escolhe uma figura histórica e um momento decisivo — e põe o leitor lá, como Fernão Lopes.</p>
 <nav class="ligas"><a class="cheio" href="https://pedrohfernandes-klk.github.io/pt/m1/#m1-f10">Percurso</a><a href="https://pedrohfernandes-klk.github.io/pt/m1/infografia-mapa-do-modulo/">Mapa do módulo</a><a href="https://pedrohfernandes-klk.github.io/pt/m1/licao-m1-f15/">Lição anterior</a><a href="https://pedrohfernandes-klk.github.io/pt/m1/licao-m1-f11/">Lição seguinte</a></nav>
