@@ -73,6 +73,8 @@ select.ok{border-color:var(--certo,#1b7f3b);background:var(--certo-fundo,#e2f3e8
 .jogo{margin:10px 0}
 .jogo .topo{display:flex;align-items:center;gap:10px;margin:0 0 12px}.jogo .barra{flex:1;display:flex;gap:0;height:6px;background:var(--fundo)}.jogo .barra i{flex:1;height:6px;border-right:1px solid var(--papel)}.jogo .barra i:last-child{border-right:0}.jogo .barra i.ok{background:var(--certo,#1b7f3b)}.jogo .barra i.mau{background:var(--errado,#b3261e)}.jogo .barra i.atual{background:var(--tinta)}
 .jogo .pts{font:700 .78rem Arial;letter-spacing:.06em;white-space:nowrap;color:var(--suave)}
+.jogo .num{font:400 1.6rem/1 var(--cartaz,"Arial Black",Arial);flex:none}.jogo .num small{font:700 .7rem Arial;color:var(--suave);margin-left:2px}
+.jogo .cit{font-family:Georgia,"Times New Roman",serif;font-style:italic;font-size:1.05em}
 .jogo .cartao{background:var(--fundo);padding:18px 16px 14px;min-height:340px;display:flex;flex-direction:column;position:relative}
 .jogo .q{font-size:1.2rem;line-height:1.35;margin:0 0 14px;animation:entrar .3s ease-out both;cursor:default;-webkit-user-select:none;user-select:none}
 .jogo .pista{font-size:.92rem;border-left:4px solid var(--tinta);padding:6px 10px;margin:0 0 12px;background:var(--papel);animation:entrar .25s ease-out both}
@@ -220,7 +222,7 @@ ol.passos .n{font-size:2rem}
 window.EPIJogo=(function(){"use strict";
 var $=function(s,r){return (r||document).querySelector(s)},$$=function(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))};
 function esc(s){return String(s==null?"":s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
-function it(s){return esc(s).replace(/_([^_\n]{1,60})_/g,"<i>$1</i>")}
+function it(s){return esc(s).replace(/_([^_\n]{1,60})_/g,"<i>$1</i>").replace(/«([^«»<>]{25,}?)»/g,'«<span class="cit">$1</span>»')}
 function colar(h){return h.replace(/(<select[^>]*>[\s\S]*?<\/select>)([,.;:!?»)]+)/g,'<span class="nb">$1$2</span>')}
 function norm(s){return String(s||"").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"").replace(/[^a-z0-9' ]/g,"").trim()}
 function ler(k){try{return JSON.parse(localStorage.getItem(k)||"null")}catch(x){return null}}
@@ -230,7 +232,7 @@ function pistaPara(x,pistas){if(!pistas||!pistas.length)return null;var q=norm((
 function montar(cfg){
  var el=cfg.el,TODOS=cfg.itens,IT=TODOS,K=cfg.chave,i=0,certas=0,seq=0,melhorSeq=0,xp=0,hist=[],estado={},errados=[],soErrados=false;
  var st=ler(K)||{};st.tentativas=st.tentativas||0;
- function topo(){return '<div class="topo"><div class="barra">'+IT.map(function(_,k){return '<i class="'+(hist[k]===true?"ok":hist[k]===false?"mau":k===i?"atual":"")+'"></i>'}).join("")+'</div><span class="pts">'+xp+' pontos</span></div>'}
+ function topo(){return '<div class="topo"><span class="num">'+(i+1)+'<small>/'+IT.length+'</small></span><div class="barra">'+IT.map(function(_,k){return '<i class="'+(hist[k]===true?"ok":hist[k]===false?"mau":k===i?"atual":"")+'"></i>'}).join("")+'</div><span class="pts">'+xp+' pontos</span></div>'}
  function corpo(x){
   if(x.t==="escolha"){estado.ord=baralhar(x.o.map(function(_,j){return j}));return '<p class="q">'+it(x.p)+'</p><div class="ops">'+estado.ord.map(function(j){return '<button class="op" type="button" data-j="'+j+'">'+it(x.o[j])+'</button>'}).join("")+'</div>'}
   if(x.t==="vf")return '<p class="q">'+it(x.p)+'</p><div class="ops"><button class="op" type="button" data-j="1">Verdadeiro</button><button class="op" type="button" data-j="0">Falso</button></div>';

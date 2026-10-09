@@ -90,10 +90,21 @@ h1::after{content:"";display:block;width:56px;height:5px;background:var(--tinta)
 .nav{justify-content:flex-end}
 ul.caderno{margin:0 0 10px 18px;padding:0}ul.caderno li{margin:0 0 4px}
 .caixa{background:var(--fundo)}
+/* 10/10/2026: os princípios do Mapa do módulo nos exercícios: marca de água, faixa de números, cartaz no nível e nos pontos,
+   serifa itálica nas citações longas */
+:root{--serif:Georgia,"Times New Roman",serif;--agua:#ebebeb}@media (prefers-color-scheme:dark){:root{--agua:#222220}}
+.cabe{position:relative;overflow:hidden;margin:0 0 6px}.cabe .agua{position:absolute;right:-6px;top:0;font:400 5.4rem/.9 var(--cartaz);color:var(--agua);text-transform:uppercase;letter-spacing:.04em;z-index:0;pointer-events:none}
+.cabe h1,.cabe .sub{position:relative;z-index:1}.cabe h1{font-size:40px;margin-top:8px}.cabe .sub{margin-bottom:8px}
+.numeros{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--tinta);border-bottom:1px solid var(--tinta);margin:0 0 4px}
+.numeros div{padding:8px 8px 8px 0}.numeros b{display:block;font:400 2rem/.9 var(--cartaz)}.numeros small{display:block;font-size:.64rem;line-height:1.2;letter-spacing:.08em;text-transform:uppercase;margin-top:3px}
+.cit{font-family:var(--serif);font-style:italic;font-size:1.05em}
+.nivel b{font-family:var(--cartaz);font-weight:400;font-size:1.5rem;letter-spacing:.03em;line-height:1}
+.emblema h2,.pontos{font-family:var(--cartaz);font-weight:400}.pontos{font-size:3rem}.emblema h2{font-size:1.9rem;letter-spacing:.03em}
 </style></head><body>
 <div class="topo"><div class="l1"><span class="marca">Olhar · 5 min · M7 heterónimos</span><span class="estado"><b id="pts">0</b> pts · <span id="tempo">0:00</span></span></div><div class="barra" id="barra"></div></div>
 <main>
-<h1>Pessoa, 1914</h1><p class="sub">Fotografia</p>
+<div class="cabe"><span class="agua">fingir</span><h1>Pessoa, 1914</h1><p class="sub">Fotografia</p></div>
+<div class="numeros"><div><b>5</b><small>passos</small></div><div><b>5</b><small>minutos</small></div><div><b>M7</b><small>módulo</small></div></div>
 <div id="palco"></div>
 <div class="nav"><button class="btn sec" id="voltar" type="button">Voltar</button><button class="btn" id="seguir" type="button">Seguinte</button></div>
 <details><summary>Fontes e créditos</summary><p>Imagem: <a href="https://commons.wikimedia.org/w/index.php?curid=56775462" target="_blank" rel="noopener">Fernando Pessoa, fotografia de 1914 · domínio público · Wikimedia Commons</a></p><p><a href="https://commons.wikimedia.org/w/index.php?curid=56775462" target="_blank" rel="noopener">Wikimedia Commons: Fernando Pessoa, 1914</a></p><p><a href="http://arquivopessoa.net/textos/3007" target="_blank" rel="noopener">Arquivo Pessoa: carta a Adolfo Casais Monteiro (13-1-1935)</a></p><p>Materiais de Português · EPI 2026/2027 · as respostas ficam guardadas só neste telemóvel.</p></details>
@@ -150,7 +161,7 @@ function mostra(){ clearInterval(temporizador); var k=est.i; est.n=N; if(est.i>=
  if(P.tipo==="lacuna"){r=r||{esc:{}};h+='<p class="perg">'+esc(P.pergunta)+'</p><div class="caixa">'+P.versos.map(function(v,vi){if(!v.opcoes)return'<p>'+esc(v.antes)+'</p>';var e=r.esc[vi],n_=v.opcoes.length;var ordm=v.opcoes.map(function(_,i){return(i+vi+1)%n_});var palavra=e==null?"______":v.opcoes[e];var marca=r.verificado?(e===0?" ✓":" → «"+v.opcoes[0]+"»"):"";return'<p>'+esc(v.antes)+'<b>'+esc(palavra)+'</b>'+esc(v.depois||"")+esc(marca)+'</p><div class="chips">'+ordm.map(function(j){return'<button class="chip'+(r.verificado?(j===0?" certo":e===j?" errado":""):"")+'" data-v="'+vi+'" data-j="'+j+'" aria-pressed="'+(e===j)+'" '+(r.verificado?"disabled":"")+'>'+esc(v.opcoes[j])+'</button>'}).join("")+'</div>'}).join("")+'</div>'+(r.verificado?'<div class="ret"><b class="palavra">'+r.certos+' de '+r.total+' como o poeta</b> '+esc(P.retorno||"")+'</div>':(Object.keys(r.esc).length===P.versos.filter(function(v){return v.opcoes}).length?'<div class="nav"><button class="btn sec mini" id="verificar" type="button">Confere</button></div>':""))}
  if(P.tipo==="ordenar"){r=r||{ord:[]};var n_=P.itens.length,ordm=P.itens.map(function(_,i){return i}).sort(function(a,b){return((a*7+3)%n_)-((b*7+3)%n_)||a-b});if(ordm[0]===0)ordm.push(ordm.shift());h+='<p class="perg">'+esc(P.pergunta)+'</p><p class="nota">Toca pela ordem certa. Tocar outra vez tira o número.</p><div class="col">'+ordm.map(function(j){var pos=r.ord.indexOf(j);var marca=r.verificado?(pos===j?" ✓":" → "+(j+1)+".º"):"";return'<button class="op'+(r.verificado?(pos===j?" certo":" errado"):"")+'" data-j="'+j+'" aria-pressed="'+(pos>=0)+'" '+(r.verificado?"disabled":"")+'>'+(pos>=0?"<b>"+(pos+1)+".</b> ":"")+it(P.itens[j])+marca+"</button>"}).join("")+"</div>"+(r.verificado?'<div class="ret"><b class="palavra">'+r.certos+" de "+P.itens.length+' no sítio</b> '+it(P.retorno||"")+"</div>":(r.ord.length===P.itens.length?'<div class="nav"><button class="btn sec mini" id="verificar" type="button">Confere</button></div>':""))}
  if(P.tipo==="deslizar"){h+=imagem()+'<p class="perg">'+esc(P.pergunta)+'</p><input type="range" id="rg" min="0" max="100" value="'+(r==null?50:r)+'"><div class="extremos"><span>'+esc(P.esquerda)+"</span><span>"+esc(P.direita)+"</span></div>"}
- palco.innerHTML=h; liga(P,k); atualiza(); window.scrollTo(0,0);
+ palco.innerHTML=h; Array.prototype.slice.call(palco.querySelectorAll(".perg, .caixa p, .caixa li")).forEach(function(el){if(el.querySelector("select,input,button,textarea,a"))return;el.innerHTML=el.innerHTML.replace(/«([^«»<>]{25,}?)»/g,'«<span class="cit">$1</span>»')}); liga(P,k); atualiza(); window.scrollTo(0,0);
 }
 var abertas={}; // imagens temporizadas que o aluno mandou mostrar (08/10/2026: a contagem só começa com o toque)
 function liga(P,k){
