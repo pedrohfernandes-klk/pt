@@ -3,7 +3,7 @@
 main{max-width:46rem;margin:0 auto;padding:0 14px 72px}
 .topo{border-bottom:4px solid var(--tinta);padding:14px 0 10px;position:relative;overflow:hidden}
 .agua{position:absolute;right:-6px;top:0;font:400 6.2rem/.9 var(--cartaz);color:var(--agua);text-transform:uppercase;letter-spacing:.04em;z-index:0;pointer-events:none}
-.topo>*{position:relative;z-index:1}
+.topo>*{position:relative;z-index:1}.agua{animation:deriva 50s ease-in-out infinite alternate}@keyframes deriva{from{transform:translateX(0)}to{transform:translateX(-18px)}}@media (prefers-reduced-motion:reduce){.agua{animation:none}}
 .marca{font:700 .7rem/1.2 Arial;letter-spacing:.16em;text-transform:uppercase}
 .cabm{display:flex;align-items:flex-end;gap:10px;margin:.3rem 0 .5rem}.cabm .n{font:400 5.6rem/.78 var(--cartaz);flex:none}
 h1{font:400 2.35rem/.95 var(--cartaz);margin:0 0 .15rem;letter-spacing:.02em}

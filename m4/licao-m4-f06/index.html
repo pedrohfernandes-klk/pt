@@ -73,7 +73,31 @@ button.sec{background:var(--papel);color:var(--tinta)}
 .jogo .pts{font:700 .78rem Arial;letter-spacing:.06em;white-space:nowrap;color:var(--suave)}
 .jogo .num{font:400 1.6rem/1 var(--cartaz,"Arial Black",Arial);flex:none}.jogo .num small{font:700 .7rem Arial;color:var(--suave);margin-left:2px}
 .jogo .cit{font-family:Georgia,"Times New Roman",serif;font-style:italic;font-size:1.05em}
-.jogo .cartao{background:var(--fundo);padding:18px 16px 14px;min-height:340px;display:flex;flex-direction:column;position:relative}
+.jogo .cartao{background:var(--papel);border:2px solid var(--tinta);padding:14px 16px 14px;height:min(72vh,640px);overflow:auto;display:flex;flex-direction:column;position:relative}
+.jogo .cartao.papel{background:var(--fundo)}
+.jogo .rot{font:900 .68rem Arial;letter-spacing:.12em;text-transform:uppercase;display:inline-block;align-self:flex-start;padding:3px 7px;margin:0 0 10px;border:2px solid var(--tinta);color:var(--tinta);background:var(--papel)}
+.jogo .rot.atual{background:var(--vermelho,#c8232c);border-color:var(--vermelho,#c8232c);color:#fff}.jogo .rot.feito{background:var(--mostarda,#d9a520);border-color:var(--mostarda,#d9a520);color:#000}
+.jogo .tit{font:900 1rem/1.2 "Arial Black",Arial;margin:0 0 8px}
+.jogo .ler{font-family:var(--serif,Georgia,serif);font-size:1.08rem;line-height:1.55}.jogo .ler p{margin:0 0 10px}.jogo .ler .v{white-space:pre-wrap;margin:0 0 10px}.jogo .ler .v .n{display:inline-block;width:2.1em;color:var(--suave);font:400 .72em Arial;text-align:right;padding-right:.6em}
+.jogo .ler ol{margin:0;padding-left:1.3rem}.jogo .ler li{margin:0 0 8px}.jogo .ler .gl{font:400 .9rem/1.45 Arial;border-top:1px solid var(--tinta);margin-top:10px;padding-top:6px}.jogo .ler .fonte{font:400 .82rem Arial;color:var(--suave);margin:6px 0 0}
+.jogo .ler .abre{font-size:1.25rem;line-height:1.4}.jogo .ler .levar{font-size:1.45rem;line-height:1.3;font-style:italic;margin:6px 0 10px}.jogo .ler .pergU{font-style:italic;color:var(--suave)}
+.jogo .ler .fig{margin:0 0 12px}.jogo .ler .fig img{display:block;max-width:100%;max-height:260px;width:auto;border:2px solid var(--tinta)}.jogo .ler .fig figcaption{font:400 .78rem Arial;color:var(--suave);margin-top:4px}
+.jogo .ler h3{font:900 .85rem "Arial Black",Arial;margin:10px 0 4px;text-transform:uppercase}
+.jogo .cartao.lampejo-ok{animation:lampejoOk 2s ease-out forwards}.jogo .cartao.lampejo-mau{animation:lampejoMau 2s ease-out forwards}.jogo .cartao.lampejo-meio{animation:lampejoMeio 2s ease-out forwards}
+@keyframes lampejoOk{0%{box-shadow:0 0 0 6px var(--certo,#1b7f3b);background-color:var(--certo-fundo,#e2f3e8)}100%{box-shadow:0 0 0 6px transparent;background-color:var(--papel)}}
+@keyframes lampejoMau{0%{box-shadow:0 0 0 6px var(--errado,#c8232c);background-color:var(--errado-fundo,#fbe5e3)}100%{box-shadow:0 0 0 6px transparent;background-color:var(--papel)}}
+@keyframes lampejoMeio{0%{box-shadow:0 0 0 6px var(--mostarda,#d9a520)}100%{box-shadow:0 0 0 6px transparent}}
+/* surpresas com movimento (11/10/2026) */
+.jogo .cartao{animation:cartaoEntra .28s ease-out both}@keyframes cartaoEntra{from{opacity:0;transform:translateY(14px) scale(.985)}to{opacity:1;transform:none}}
+.jogo .ler .fig{overflow:hidden}.jogo .ler .fig img{animation:kenburns 16s ease-out forwards;transform-origin:50% 40%}@keyframes kenburns{from{transform:scale(1)}to{transform:scale(1.1)}}
+.jogo .cartao.escuro{background:var(--tinta);color:var(--papel);border-color:var(--tinta)}.jogo .cartao.escuro .rot{background:var(--mostarda,#d9a520);border-color:var(--mostarda,#d9a520);color:#000}.jogo .cartao.escuro .rot.atual{background:var(--vermelho,#c8232c);border-color:var(--vermelho,#c8232c);color:#fff}
+.jogo .cartao.escuro .levar{font-size:1.75rem;line-height:1.25;margin:14px 0 10px;clip-path:inset(0 100% 0 0);animation:revelar 1.4s cubic-bezier(.2,.7,.2,1) .25s forwards}@keyframes revelar{to{clip-path:inset(0 0 0 0)}}
+.jogo .cartao.escuro .acoes{background:var(--tinta)}.jogo .cartao.escuro .acoes button{background:var(--papel);color:var(--tinta);border-color:var(--papel)}
+.jogo .fim{overflow:hidden}.jogo .fim::before{content:"";position:absolute;left:0;top:0;height:8px;width:0;background:var(--mostarda,#d9a520);animation:varrer 1s ease-out .2s forwards}@keyframes varrer{to{width:100%}}
+.jogo .emblema{animation:carimbo .6s cubic-bezier(.2,1.4,.4,1) .9s both}@keyframes carimbo{0%{transform:scale(1.8) rotate(-10deg);opacity:0}60%{transform:scale(.95) rotate(2deg);opacity:1}100%{transform:scale(1) rotate(0);opacity:1}}
+.jogo button.op.bom::before{animation:pop .4s cubic-bezier(.2,1.6,.4,1)}@keyframes pop{0%{transform:scale(.3)}100%{transform:scale(1)}}
+.jogo .barra i.atual{animation:pulsa 1.6s ease-in-out infinite}@keyframes pulsa{0%,100%{opacity:1}50%{opacity:.4}}
+.jogo .barra i.ler{background:var(--papel);box-shadow:inset 0 0 0 1px var(--tinta)}.jogo .barra i.ok{background:var(--mostarda,#d9a520)}.jogo .barra i.atual{background:var(--vermelho,#c8232c)}
 .jogo .q{font-size:1.2rem;line-height:1.35;margin:0 0 14px;animation:entrar .3s ease-out both;cursor:default;-webkit-user-select:none;user-select:none}
 .jogo .pista{font-size:.92rem;border-left:4px solid var(--tinta);padding:6px 10px;margin:0 0 12px;background:var(--papel);animation:entrar .25s ease-out both}
 .jogo .ops{display:flex;flex-direction:column;gap:8px}
@@ -90,13 +114,13 @@ button.sec{background:var(--papel);color:var(--tinta)}
 .jogo .ordem .op{align-items:flex-start}.jogo .ordem .num{display:inline-block;min-width:1.5rem;height:1.5rem;line-height:1.5rem;text-align:center;border:2px solid currentColor;border-radius:50%;font:900 .85rem "Arial Black",Arial;flex:none}
 .jogo .dica{font-size:.85rem;color:var(--suave);margin:0 0 8px}
 .jogo .f{margin:8px 0 0;font-size:.95rem;padding:6px 0 0 1.4rem;color:var(--tinta)}.jogo .f.ok::before{content:"✓ ";color:var(--certo,#1b7f3b);font-weight:900}.jogo .f.mau::before{content:"✗ ";color:var(--errado,#b3261e);font-weight:900}.jogo .f.meio::before{content:"◐ ";color:var(--suave);font-weight:900}
-.jogo .acoes{display:flex;justify-content:flex-end;gap:8px;margin-top:auto;padding-top:16px}.jogo .acoes button{font:700 .95rem Arial;padding:10px 16px;border:2px solid var(--tinta);background:var(--tinta);color:var(--papel);cursor:pointer;margin:0}.jogo .acoes button.sec{background:var(--papel);color:var(--tinta)}
+.jogo .acoes{display:flex;justify-content:flex-end;gap:8px;margin-top:auto;padding-top:12px;position:sticky;bottom:-14px;background:inherit;padding-bottom:2px}.jogo .acoes button{font:700 .95rem Arial;padding:10px 16px;border:2px solid var(--tinta);background:var(--tinta);color:var(--papel);cursor:pointer;margin:0}.jogo .acoes button.sec{background:var(--papel);color:var(--tinta)}
 .jogo .fim{text-align:center;padding:10px;min-height:0;justify-content:center;align-items:center}.jogo .fim .grande{font:900 2.4rem "Arial Black",Arial;margin:2px 0}.jogo .fim .xp{font:700 .95rem Arial;color:var(--suave);margin:0 0 8px}
 .jogo .aprendeste{text-align:left;margin:12px 0 0;padding:0;list-style:none;width:100%}.jogo .aprendeste li{border-top:1px solid var(--tinta);padding:8px 0;font-size:.92rem}.jogo .aprendeste li b{display:block;margin:0 0 2px}
 .jogo .emblema{display:inline-block;width:64px;height:64px;border-radius:50%;border:3px solid var(--tinta);object-fit:cover;margin:6px}
 @keyframes entrar{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:none}}
-@media (prefers-reduced-motion:reduce){.jogo .q,.jogo button.op,.jogo .inline,.jogo .palavras,.jogo .pista{animation:none}}
-@media (max-width:480px){.jogo .cartao{min-height:380px;padding:16px 12px 12px}.jogo .q{font-size:1.1rem}}
+@media (prefers-reduced-motion:reduce){.jogo .q,.jogo button.op,.jogo .inline,.jogo .palavras,.jogo .pista,.jogo .cartao,.jogo .ler .fig img,.jogo .emblema,.jogo .barra i.atual,.jogo button.op.bom::before,.jogo .fim::before{animation:none}.jogo .cartao.escuro .levar{clip-path:none;animation:none}.jogo .fim::before{width:100%}}
+@media (max-width:480px){.jogo .cartao{height:min(74vh,640px);padding:12px 12px 10px}.jogo .q{font-size:1.1rem}}
 
 :root{--vermelho:#c8232c;--mostarda:#d9a520;--certo:#1b7f3b;--errado:#c8232c;--certo-fundo:#e2f3e8;--errado-fundo:#fbe5e3;--cartaz:"Bebas Neue","Arial Narrow","Arial Black",Arial,sans-serif}
 @media (prefers-color-scheme:dark){:root{--vermelho:#e4555c;--mostarda:#e0b23a;--certo:#7fd9bb;--errado:#e4555c;--certo-fundo:#163d30;--errado-fundo:#4a1f1f}}
@@ -126,6 +150,8 @@ ol.passos .n{font-family:var(--cartaz);font-weight:400;font-size:1.6rem}
 .agua{position:absolute;right:-6px;top:0;font:400 6.2rem/.9 var(--cartaz);color:var(--agua);text-transform:uppercase;letter-spacing:.04em;z-index:0;pointer-events:none}
 .cabm{display:flex;align-items:flex-end;gap:10px;margin:.3rem 0 .4rem;position:relative}.cabm .n{font:400 5rem/.78 var(--cartaz);flex:none}
 .cabm>.n,.cabm>h1{position:relative;z-index:1}.cabm .agua{top:auto;bottom:-6px;font-size:5.6rem}.topo>.cabm{z-index:0}
+.agua{animation:deriva 50s ease-in-out infinite alternate}@keyframes deriva{from{transform:translateX(0)}to{transform:translateX(-18px)}}
+@media (prefers-reduced-motion:reduce){.agua{animation:none}}
 .cabm h1{font-size:2.3rem;line-height:.95;margin:0;padding:0;text-transform:none;letter-spacing:.02em}.cabm h1::after{display:none}
 .serif{font-family:var(--serif);font-style:italic}
 .numeros{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--tinta);border-bottom:1px solid var(--tinta);margin:10px 0 0}
@@ -160,18 +186,22 @@ ol.passos .n{font-size:2rem}
 window.EPIJogo=(function(){"use strict";
 var $=function(s,r){return (r||document).querySelector(s)},$$=function(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))};
 function esc(s){return String(s==null?"":s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
-function it(s){return esc(s).replace(/_([^_\n]{1,60})_/g,"<i>$1</i>").replace(/«([^«»<>]{25,}?)»/g,'«<span class="cit">$1</span>»')}
+function it(s){return esc(s).replace(/[*]{2}([^*]{1,80})[*]{2}/g,"<b>$1</b>").replace(/_([^_\n]{1,60})_/g,"<i>$1</i>").replace(/«([^«»<>]{25,}?)»/g,'«<span class="cit">$1</span>»')}
 function colar(h){return h.replace(/(<select[^>]*>[\s\S]*?<\/select>)([,.;:!?»)]+)/g,'<span class="nb">$1$2</span>')}
 function norm(s){return String(s||"").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"").replace(/[^a-z0-9' ]/g,"").trim()}
 function ler(k){try{return JSON.parse(localStorage.getItem(k)||"null")}catch(x){return null}}
 function gravar(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(x){}}
 function baralhar(a){a=a.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1)),t=a[i];a[i]=a[j];a[j]=t}return a}
 function pistaPara(x,pistas){if(!pistas||!pistas.length)return null;var q=norm((x.p||"")+" "+(x.frase||"")).split(" ").filter(function(w){return w.length>3});var melhor=null,m=-1;pistas.forEach(function(p){var n=0,pw=norm(p).split(" ");q.forEach(function(w){if(pw.indexOf(w)>=0)n++});if(n>m){m=n;melhor=p}});return melhor}
+var ROT={escolha:"Escolhe",vf:"Verdadeiro ou falso",completar:"Completa",escrever:"Escreve",sublinhar:"Toca nas palavras",ordenar:"Ordena",versos:"Ordena os versos",emparelhar:"Liga os pares"};
+function rotulo(x){return x.rot||ROT[x.t]||"Faz"}
+function fb(x){var f=it(x.f||"");var r=x.t==="escolha"?x.o[x.c]:x.t==="escrever"?(x.resp||[])[0]:null;if(r){var rr=it(String(r));if(rr&&f.indexOf(rr)>=0&&f.indexOf("<b>")<0)f=f.split(rr).join("<b>"+rr+"</b>")}return f}
 function montar(cfg){
  var el=cfg.el,TODOS=cfg.itens,IT=TODOS,K=cfg.chave,i=0,certas=0,seq=0,melhorSeq=0,xp=0,hist=[],estado={},errados=[],soErrados=false;
- var st=ler(K)||{};st.tentativas=st.tentativas||0;
- function topo(){return '<div class="topo"><span class="num">'+(i+1)+'<small>/'+IT.length+'</small></span><div class="barra">'+IT.map(function(_,k){return '<i class="'+(hist[k]===true?"ok":hist[k]===false?"mau":k===i?"atual":"")+'"></i>'}).join("")+'</div><span class="pts">'+xp+' pontos</span></div>'}
+ var st=ler(K)||{};st.tentativas=st.tentativas||0;var nFazer=function(){return IT.filter(function(x){return x.t!=="ler"}).length};
+ function topo(){return '<div class="topo"><span class="num">'+(i+1)+'<small>/'+IT.length+'</small></span><div class="barra">'+IT.map(function(x,k){return '<i class="'+(hist[k]===true||hist[k]==="ler"?"ok":hist[k]===false?"mau":k===i?"atual":"")+(x.t==="ler"?" ler":"")+'"></i>'}).join("")+'</div><span class="pts">'+xp+' pontos</span></div>'}
  function corpo(x){
+  if(x.t==="ler")return (x.titulo?'<p class="tit">'+esc(x.titulo)+'</p>':'')+'<div class="ler">'+(x.html||"")+'</div><div class="acoes"><button type="button" data-seguinte>'+(i+1<IT.length?"Seguinte":"Ver o resultado")+'</button></div>';
   if(x.t==="escolha"){estado.ord=baralhar(x.o.map(function(_,j){return j}));return '<p class="q">'+it(x.p)+'</p><div class="ops">'+estado.ord.map(function(j){return '<button class="op" type="button" data-j="'+j+'">'+it(x.o[j])+'</button>'}).join("")+'</div>'}
   if(x.t==="vf")return '<p class="q">'+it(x.p)+'</p><div class="ops"><button class="op" type="button" data-j="1">Verdadeiro</button><button class="op" type="button" data-j="0">Falso</button></div>';
   if(x.t==="completar"){var k=0;var f=it(x.frase).replace(/\[(\d)\]/g,function(_,n){var L=x.lacunas[Number(n)-1];var kk=k++;var ord=baralhar(L.o.map(function(_,j){return j}));return '<select data-k="'+kk+'"><option value="">escolhe</option>'+ord.map(function(j){return '<option value="'+j+'">'+esc(L.o[j]).replace(/_/g,"")+'</option>'}).join("")+'</select>'});return '<p class="q">'+it(x.p||"Completa a frase:")+'</p><p class="inline">'+colar(f)+'</p>'}
@@ -180,11 +210,11 @@ function montar(cfg){
   if(x.t==="ordenar"||x.t==="versos"){var L2=x.t==="ordenar"?x.passos:x.linhas;estado.ord=baralhar(L2.map(function(_,j){return j}));estado.seq=[];return '<p class="q">'+it(x.p)+'</p><p class="dica">Toca pela ordem certa; tocar outra vez tira o número.</p><div class="ops ordem">'+estado.ord.map(function(j){return '<button class="op" type="button" data-j="'+j+'"><span class="num"></span><span>'+it(L2[j])+'</span></button>'}).join("")+'</div>'}
   if(x.t==="emparelhar"){estado.lig={};estado.e=null;estado.ordD=baralhar(x.pares.map(function(_,j){return j}));return '<p class="q">'+it(x.p)+'</p><p class="dica">Toca num da esquerda e depois no seu par.</p><div class="pares"><div class="col ops">'+x.pares.map(function(p,j){return '<button class="op" type="button" data-e="'+j+'">'+it(p[0])+'</button>'}).join("")+'</div><div class="col ops">'+estado.ordD.map(function(j){return '<button class="op" type="button" data-d="'+j+'">'+it(x.pares[j][1])+'</button>'}).join("")+'</div></div>'}
   return '<p class="q">'+esc(x.p||"")+'</p>'}
- function mostrar(){var x=IT[i];estado={};el.innerHTML='<div class="jogo">'+topo()+'<div class="cartao">'+corpo(x)+'<p class="f" hidden></p></div></div>';ligar(x);pista(x)}
+ function mostrar(){var x=IT[i];estado={};el.innerHTML='<div class="jogo">'+topo()+'<div class="cartao'+(x.t==="ler"?" papel":"")+(x.escuro?" escuro":"")+'"><p class="rot atual">'+esc(rotulo(x))+'</p>'+corpo(x)+'<p class="f" hidden></p></div></div>';if(x.t==="ler"){$("[data-seguinte]",el).onclick=function(){hist[i]="ler";var r=$(".rot",el);if(r){r.classList.remove("atual");r.classList.add("feito")}i++;if(i<IT.length)mostrar();else fim()};$(".cartao",el).scrollTop=0;return}ligar(x);pista(x)}
  function pista(x){var q=$(".q",el),p=pistaPara(x,cfg.pistas);if(!q||!p)return;var t=null,dada=false;var mostra=function(){if(dada||estado.fechado)return;dada=true;xp=Math.max(0,xp-5);$(".pts",el).textContent=xp+" pontos";var d=document.createElement("p");d.className="pista";d.innerHTML="Pista: "+it(p)+" <small>(menos cinco pontos)</small>";q.insertAdjacentElement("afterend",d)};
   q.addEventListener("pointerdown",function(){t=setTimeout(mostra,650)});["pointerup","pointerleave","pointercancel"].forEach(function(ev){q.addEventListener(ev,function(){clearTimeout(t)})});q.title="Mantém o dedo na pergunta para veres uma pista"}
- function fecha(ok,onde,parcial){var c=$(".cartao",el),f=$(".f",el);estado.fechado=true;hist[i]=ok;if(ok){certas++;seq++;melhorSeq=Math.max(melhorSeq,seq);xp+=10+(seq>=3?5:0)}else{seq=0;errados.push(IT[i])}
-  $(".pts",el).textContent=xp+" pontos";f.hidden=false;f.className="f "+(ok?"ok":parcial?"meio":"mau");f.innerHTML=it(ok?"Certo. ":parcial?"Em parte. ":"Não. ")+it(IT[i].f||"");if(onde&&onde.parentNode)onde.insertAdjacentElement("afterend",f);
+ function fecha(ok,onde,parcial){var c=$(".cartao",el),f=$(".f",el);estado.fechado=true;hist[i]=ok;c.classList.add(ok?"lampejo-ok":parcial?"lampejo-meio":"lampejo-mau");var r=$(".rot",el);if(r){r.classList.remove("atual");r.classList.add("feito")}if(ok){certas++;seq++;melhorSeq=Math.max(melhorSeq,seq);xp+=10+(seq>=3?5:0)}else{seq=0;errados.push(IT[i])}
+  $(".pts",el).textContent=xp+" pontos";f.hidden=false;f.className="f "+(ok?"ok":parcial?"meio":"mau");f.innerHTML=it(ok?"Certo. ":parcial?"Em parte. ":"Não. ")+fb(IT[i]);if(onde&&onde.parentNode)onde.insertAdjacentElement("afterend",f);
   $$("button.op,select,input,.pal",el).forEach(function(b){b.disabled=true});var a=$(".acoes",el);if(!a){a=document.createElement("div");a.className="acoes";c.appendChild(a)}a.hidden=false;a.innerHTML='<button type="button" data-seguinte>'+(i+1<IT.length?"Seguinte":"Ver o resultado")+'</button>';$("[data-seguinte]",el).onclick=function(){i++;if(i<IT.length)mostrar();else fim()};$("[data-seguinte]",el).focus();var at=$(".barra i.atual",el);if(at)at.className=ok?"ok":"mau"}
  function ligar(x){
   if(x.t==="escolha")$$("button.op",el).forEach(function(b){b.onclick=function(){var j=+b.dataset.j,ok=j===Number(x.c);b.classList.add(ok?"bom":"mau");$$("button.op",el).forEach(function(o){if(+o.dataset.j===Number(x.c))o.classList.add("bom")});fecha(ok,b)}});
@@ -197,11 +227,12 @@ function montar(cfg){
    $$("[data-e]",el).forEach(function(b){b.onclick=function(){var e=+b.dataset.e;if(estado.lig[e]!=null){delete estado.lig[e]}estado.e=estado.e===e?null:e;pinta()}});
    $$("[data-d]",el).forEach(function(b){b.onclick=function(){if(estado.e==null)return;var d=+b.dataset.d;for(var e in estado.lig)if(estado.lig[e]===d)delete estado.lig[e];estado.lig[estado.e]=d;estado.e=null;pinta();if(Object.keys(estado.lig).length===x.pares.length){var cert=0;x.pares.forEach(function(_,e2){if(estado.lig[e2]===e2)cert++});$$("[data-e]",el).forEach(function(o){var e3=+o.dataset.e;o.classList.remove("bom","escolhida");o.classList.add(estado.lig[e3]===e3?"bom":"mau")});$$("[data-d]",el).forEach(function(o){o.classList.remove("bom")});fecha(cert===x.pares.length,$(".pares",el),cert>0)}}})}}
  function aprendeste(){if(!errados.length)return "";return '<ul class="aprendeste">'+errados.slice(0,6).map(function(x){return '<li><b>'+it(x.p||x.frase||"")+'</b>'+it(x.f||"")+'</li>'}).join("")+'</ul>'}
- function fim(){if(!soErrados){st.tentativas++;st.certas=certas;st.total=IT.length;st.melhor=Math.max(st.melhor||0,certas);st.xp=Math.max(st.xp||0,xp);st.seq=Math.max(st.seq||0,melhorSeq);st.lida=true;st.t=Date.now();gravar(K,st)}
-  el.innerHTML='<div class="jogo"><div class="cartao fim"><p class="grande">'+certas+' de '+IT.length+'</p><p class="xp">'+xp+' pontos'+(melhorSeq>=3?' · '+melhorSeq+' seguidas':'')+(st.melhor>certas&&!soErrados?' · o teu melhor continua a ser '+st.melhor:'')+'</p><p>'+(certas===IT.length?"Tudo certo.":errados.length?"O que aprendeste: relê antes de sair.":"")+'</p>'+aprendeste()+(cfg.emblema&&!soErrados&&certas>=Math.ceil(IT.length*0.75)?'<img class="emblema" src="'+cfg.emblema+'" alt="Selo">':'')+'<div class="acoes" style="justify-content:center">'+(errados.length?'<button type="button" class="sec" data-errados>Só os que errei</button>':'')+'<button type="button" data-repetir>Outra vez</button></div></div></div>';
+ function fim(){if(!soErrados){st.tentativas++;st.certas=certas;st.total=nFazer();st.melhor=Math.max(st.melhor||0,certas);st.xp=Math.max(st.xp||0,xp);st.seq=Math.max(st.seq||0,melhorSeq);st.lida=true;st.t=Date.now();gravar(K,st)}
+  el.innerHTML='<div class="jogo"><div class="cartao fim"><p class="grande">'+certas+' de '+nFazer()+'</p><p class="xp">'+xp+' pontos'+(melhorSeq>=3?' · '+melhorSeq+' seguidas':'')+(st.melhor>certas&&!soErrados?' · o teu melhor continua a ser '+st.melhor:'')+'</p><p>'+(certas===nFazer()?"Tudo certo.":errados.length?"O que aprendeste: relê antes de sair.":"")+'</p>'+aprendeste()+(cfg.emblema&&!soErrados&&certas>=Math.ceil(nFazer()*0.75)?'<img class="emblema" src="'+cfg.emblema+'" alt="Selo">':'')+'<div class="acoes" style="justify-content:center">'+(errados.length?'<button type="button" class="sec" data-errados>Só os que errei</button>':'')+'<button type="button" data-repetir>Outra vez</button></div></div></div>';
+  var g=$(".grande",el);if(g&&window.requestAnimationFrame){var alvo=certas,tot=nFazer(),t0=null;var passo=function(ts){if(!t0)t0=ts;var p=Math.min(1,(ts-t0)/900);g.textContent=Math.round(alvo*p)+" de "+tot;if(p<1)requestAnimationFrame(passo)};requestAnimationFrame(passo)}
   var E=errados.slice();$("[data-repetir]",el).onclick=function(){IT=TODOS;soErrados=false;reiniciar()};var be=$("[data-errados]",el);if(be)be.onclick=function(){IT=E;soErrados=true;reiniciar()};if(cfg.fim&&!soErrados)cfg.fim(st)}
  function reiniciar(){i=0;certas=0;seq=0;melhorSeq=0;xp=0;hist=[];errados=[];mostrar()}
- if(st.lida&&cfg.mostrarAnterior!==false){el.innerHTML='<div class="jogo"><div class="cartao fim"><p class="grande">'+(st.melhor||0)+' de '+IT.length+'</p><p>Já respondeste a esta lição ('+st.tentativas+' vez'+(st.tentativas===1?"":"es")+'). O melhor fica guardado.</p><div class="acoes" style="justify-content:center"><button type="button" data-repetir>Outra vez</button></div></div></div>';$("[data-repetir]",el).onclick=function(){mostrar()}}
+ if(st.lida&&cfg.mostrarAnterior!==false){el.innerHTML='<div class="jogo"><div class="cartao fim"><p class="grande">'+(st.melhor||0)+' de '+nFazer()+'</p><p>Já respondeste a esta lição ('+st.tentativas+' vez'+(st.tentativas===1?"":"es")+'). O melhor fica guardado.</p><div class="acoes" style="justify-content:center"><button type="button" data-repetir>Outra vez</button></div></div></div>';$("[data-repetir]",el).onclick=function(){mostrar()}}
  else mostrar();
  return {reiniciar:reiniciar}}
 return {montar:montar,ler:ler,baralhar:baralhar}})();
