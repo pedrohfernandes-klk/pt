@@ -345,7 +345,8 @@ function abreFolha(P,k){if(!C)return;var ret=palco.querySelector(".ret");if(!ret
  else if(r.certos!=null){var tot=P.tipo==="julgar"?P.casos.length:P.tipo==="par"?P.pares.length:P.tipo==="classificar"?P.itens.length:P.tipo==="ordenar"?P.itens.length:(r.total||1);st=r.certos===tot?"ok":r.certos>0?"meio":"mau"}
  var h=ret.innerHTML;if(pal)h=h.replace(pal.outerHTML,"");C.folha.abrir({estado:st,titulo:tit||(st==="ok"?"Certo":st==="meio"?"Em parte":"Não"),html:h,focar:false});
  var fin=document.querySelector(".casca-folha .c-folha-in");if(fin){fin.appendChild(bS);bS.hidden=false;bS.disabled=!pronto(k);bS.className="c-prim c-vai"}
- var cx=palco.querySelector("#rec");if(cx&&fin){cx.className="c-sec";fin.insertBefore(cx,bS)}}
+ // os outros botões do rodapé («Recomeçar a história», «Outra vez»…) sobem com a faixa: por baixo dela ficavam escondidos
+ if(fin&&ACOES)[].slice.call(ACOES.querySelectorAll("button")).forEach(function(b){if(b!==bV&&b!==bS&&!b.hidden){b.className="c-sec";fin.insertBefore(b,bS)}})}
 function seguir(){if(est.i<N){est.i++;mostra()}}
 var abertas={}; // imagens temporizadas que o aluno mandou mostrar (08/10/2026: a contagem só começa com o toque)
 function liga(P,k){
