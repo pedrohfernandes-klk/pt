@@ -682,8 +682,8 @@ function pintarDesafio(){var el=$("#desafio"),p=sel||farol()||ORDEM.filter(funct
  var img=D.IMG&&D.IMG[p]?'<figure class="d-moldura ia-moldura" aria-hidden="true"><img class="d-img ia-fundo" src="'+D.IMG[p]+'" alt="" width="1600" height="1067" loading="lazy" decoding="async"><figcaption class="ia-cred">'+esc(D.CRED_IA)+'</figcaption></figure>':'';
  var corpo;
  if(t==="feito")corpo='<p class="d-feito">'+esc(NOME[p])+' '+conq(p)+'. Carimbo no passaporte.</p><div class="d-acao"><button type="button" class="c-sec" data-rever>Rever '+esc(oP(p))+' em seis perguntas</button></div>';
- else if(t==="revisao")corpo='<p class="d-tit">Revisão para conquistar '+esc(oP(p))+'</p><p class="d-txt">Seis perguntas sobre as '+n+' pessoas que já conheces, sem cartões: com cinco certas, '+esc(oP(p))+' fica '+conq(p)+'.</p><div class="d-acao"><button type="button" class="c-prim c-vai" data-comecar>Começar a revisão →</button></div>';
- else corpo='<p class="d-tit">'+esc(tituloMissao(L))+'</p><ol class="d-casas" aria-label="As pessoas desta missão">'+L.map(function(f){return '<li>'+f.simb+'<span>'+esc(conhecida(f.id)?f.nome:(D.AREA[f.area]||f.area))+'</span></li>'}).join("")+'</ol><ol class="d-passos" aria-label="Os passos da missão">'+passosMissao(p,L).map(function(s){return '<li>'+esc(s)+'</li>'}).join("")+'</ol><div class="d-acao"><button type="button" class="c-prim c-vai" data-comecar>Começar →</button></div>';
+ else if(t==="revisao")corpo='<p class="d-tit">Revisão para conquistar '+esc(oP(p))+'</p><p class="d-txt">Seis perguntas sobre as '+n+' pessoas que já conheces, sem cartões: com cinco certas, '+esc(oP(p))+' fica '+conq(p)+'.</p><div class="d-acao"><button type="button" class="c-prim c-vai" data-comecar>Começar a revisão</button></div>';
+ else corpo='<p class="d-tit">'+esc(tituloMissao(L))+'</p><ol class="d-casas" aria-label="As pessoas desta missão">'+L.map(function(f){return '<li>'+f.simb+'<span>'+esc(conhecida(f.id)?f.nome:(D.AREA[f.area]||f.area))+'</span></li>'}).join("")+'</ol><ol class="d-passos" aria-label="Os passos da missão">'+passosMissao(p,L).map(function(s){return '<li>'+esc(s)+'</li>'}).join("")+'</ol><div class="d-acao"><button type="button" class="c-prim c-vai" data-comecar>Começar</button></div>';
  var hojeHTML='<p class="d-hoje">Hoje: '+hoje+(hoje===1?" missão feita":" missões feitas")+'. '+(hoje>=3?"Chega por hoje; se quiseres, continua.":"Três por dia chegam para ires longe.")+'</p>';
  el.classList.toggle("d-fim",t==="feito");
  el.innerHTML=cab+pais+img+corpo+hojeHTML;
@@ -745,7 +745,9 @@ function itensMissao(p,primeiro){var L=pessoasMissao(p,primeiro),Q=[];if(L.lengt
  var qt=qTempo(L);if(qt)Q.push(qt);
  var qo=qOnde(p,L);if(qo){if(qo.t==="mapa")Q.push(cartaoLugar(p));Q.push(qo)}
  var PP=pontesDe(p,L);if(PP.length){var P=umDe(PP);Q.push(cartaoPonte(P));Q.push(qPonteDe(P))}
- Q.push(cartaoParaTi(L));return Q}
+ Q.push(cartaoParaTi(L));return comOrdem(Q)}
+// a ordem das perguntas é a dos passos anunciados (decisão de 12/10): cada pergunta no seu grupo, para o motor não as baralhar
+function comOrdem(Q){Q.forEach(function(x,i){if(x.t!=="ler")x.g="p"+i});return Q}
 // a revisão: seis perguntas sobre as pessoas do país, sem cartões; as erradas primeiro
 function trio(fs,f){var o=[f];porErro(fs.filter(function(x){return x.id!==f.id})).forEach(function(x){if(o.length<3)o.push(x)});return o}
 function itensRevisao(p){var fs=porErro(figsDe(p)),n=fs.length,Q=[],ix=function(i){return fs[i%n]};
@@ -753,7 +755,7 @@ function itensRevisao(p){var fs=porErro(figsDe(p)),n=fs.length,Q=[],ix=function(
  Q.push(qFalsa(ix(3),trio(fs,ix(3))));var fj=fs.filter(function(f){return f.fj&&f.fj.length});if(fj.length)Q.push(qFJ(fj[0]));
  var E=fs.filter(function(f){return f.evento}),T=[];E.forEach(function(f){if(T.length<3&&T.every(function(g){return g.evento.ano!==f.evento.ano}))T.push(f)});var qt=qTempo(T);if(qt)Q.push(qt);
  if(Q.length<6){var qo=qOnde(p,fs.slice(0,6));if(qo&&qo.t!=="mapa")Q.push(qo)}if(Q.length<6){var f4=ix(4);if(f4.atn.length)Q.push(qObjetos(f4,trio(fs,f4)))}
- return Q.slice(0,6)}
+ return comOrdem(Q.slice(0,6))}
 function perguntas(p,k){return (k==="revisao"?itensRevisao(p):itensMissao(p)).filter(function(x){return x.t!=="ler"})}
 // só para os testes de desenvolvimento (?teste=1): os itens de uma ronda, sem a abrir
 if(/[?&]teste=1/.test(location.search))window.__atlas={perguntas:perguntas,itens:function(p,k,f){return k==="revisao"?itensRevisao(p):itensMissao(p,f)},estado:function(){return ST}};
