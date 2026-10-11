@@ -50,7 +50,18 @@ ul.lista{margin:4px 0;padding-left:1.3rem}ul.lista li{margin:0 0 4px}
 .cz-veu .cz-cartaz{width:100%;max-width:520px;margin:0;animation:czSobe .35s cubic-bezier(.2,.8,.2,1) both;max-height:calc(100dvh - 32px);overflow:auto}
 @keyframes czSobe{from{transform:translateY(24px);opacity:0}}
 @media (min-width:700px){.cz-veu{align-items:center}.cz-cartaz .cz-tit{font-size:3.8rem}}
-@media (prefers-reduced-motion:reduce){.cz-cartaz::after,.cz-veu .cz-cartaz{animation:none}.cz-cartaz::after{opacity:0}}
+@media (prefers-reduced-motion:reduce){.cz-cartaz::after,.cz-veu .cz-cartaz{animation:none}.cz-cartaz::after{opacity:0}}.dupla{margin:0 0 var(--d2,20px)}.dupla-svg{width:100%;max-width:520px;max-height:min(36vh,280px);max-height:min(36dvh,280px);display:block;margin:0 auto}
+.dupla-svg *{fill:none;stroke:var(--tinta,#000);stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}.dupla-svg .ag{stroke-width:1.4}
+.dupla-svg .pl-pa,.dupla-svg .pl-po{opacity:.55;transition:opacity .35s}
+.dupla:has(input[value=pa]:checked) .pl-pa,.dupla:has(input[value=po]:checked) .pl-po,.dupla:has(input[value=ambos]:checked) .pl-pa,.dupla:has(input[value=ambos]:checked) .pl-po{opacity:1}
+.dupla:has(input[value=pa]:checked) .pl-po,.dupla:has(input[value=po]:checked) .pl-pa{opacity:.12}
+.dupla figcaption{font:1.02rem/1.55 Georgia,"Times New Roman",serif;margin:var(--d1,8px) 0 0}.dupla-v{display:block}.dupla-ac{display:block;margin:6px 0 0;font:700 .8rem Arial;letter-spacing:.06em;text-transform:uppercase}
+.dupla label{cursor:pointer;border-bottom:2px dotted var(--tinta,#000);padding:2px 0;-webkit-tap-highlight-color:transparent}
+.dupla input{position:absolute;opacity:0;width:1px;height:1px;margin:0}
+.dupla:has(.dp-pa input:checked) .dp-pa,.dupla:has(.dp-po input:checked) .dp-po,.dupla:has(.dp-ambos input:checked) label{border-bottom:3px solid var(--tinta,#000)}
+.dupla label:has(input:focus-visible){outline:3px solid var(--vermelho,#c8232c);outline-offset:2px}
+.dupla small{display:block;font:.78rem/1.3 Arial;color:var(--suave,#444);margin:8px 0 0}
+@media (prefers-reduced-motion:reduce){.dupla-svg .pl-pa,.dupla-svg .pl-po{transition:none}}
 :root{--col:min(680px,100%);--d1:8px;--d2:20px;--d3:40px;--c-cinza:#d6d4ce}
 @media (prefers-color-scheme:dark){:root{--c-cinza:#3d3c38}}
 html.com-casca,html.com-casca body{height:100%;overflow:hidden;overscroll-behavior:none}
