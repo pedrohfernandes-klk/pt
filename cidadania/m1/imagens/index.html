@@ -28,6 +28,9 @@ a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,s
 .c-sec{background:none;color:var(--tinta,#000);border:0;padding:0 6px;font-weight:400;text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:1px}
 .c-sec.c-seta{text-decoration:none;font-size:1.25rem;min-width:44px;padding:0}
 .c-prim[data-seguinte]::after,.c-prim[data-confirmar]::after,.c-prim.c-vai::after{content:"→"}
+.so-ecra.imprimir{margin:0 0 var(--d1)}.so-ecra.imprimir button{display:inline-flex;align-items:center;min-height:44px;padding:0 16px;font:700 .95rem var(--sans);color:var(--tinta);background:transparent;border:1.5px solid var(--tinta);border-radius:999px;cursor:pointer}.so-ecra.imprimir button:hover{background:var(--tinta);color:var(--papel,#fff)}
+@page{size:A4;margin:1.5cm 1.6cm}
+@media print{body{background:#fff;color:#000}.migalhas,.so-ecra,script,.materiais,nav,.nota{display:none!important}.pg{max-width:none;padding:0}.p-cab{padding-top:0}a{color:#000;text-decoration:none}h2,h3{break-after:avoid}table,figure,.termo,.rev,li,.c{break-inside:avoid}img{max-width:100%;filter:grayscale(1)}}
 .pg h2{font:400 1.45rem/1 var(--cartaz);letter-spacing:.03em;margin:var(--d3) 0 var(--d1);padding:0 0 6px;border-bottom:1px solid var(--tinta)}
 .pg h3{font:700 .8rem/1.2 var(--sans);letter-spacing:.1em;text-transform:uppercase;margin:var(--d2) 0 var(--d1)}
 .pg p,.pg li{font-family:var(--serif);font-size:1.02rem;line-height:1.55}.pg p{margin:0 0 8px;max-width:62ch}

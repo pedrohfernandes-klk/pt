@@ -70,11 +70,11 @@ h2.sec-t{font:700 .72rem/1.2 var(--sans);letter-spacing:.12em;text-transform:upp
 @media (max-width:420px){.mod>a.mod-a{grid-template-columns:52px 1fr;gap:2px 12px;padding:14px 14px 12px}.mod .mod-sim{width:52px;height:52px}.mod .mod-sim .simbolo{width:32px;height:32px}.mod .cont{margin-left:78px;margin-right:14px}}
 /* o portal (15/10/2026): três portas grandes, uma por sítio */
 .portal{display:grid;gap:var(--d1);margin:var(--d2) 0 0}
-.porta-p{display:grid;grid-template-columns:56px 1fr;gap:2px 16px;align-items:start;padding:18px 18px 16px;color:var(--tinta);text-decoration:none;min-height:120px}
+.porta-p{display:grid;grid-template-columns:56px minmax(0,1fr);gap:2px 16px;align-items:start;padding:18px 18px 16px;color:var(--tinta);text-decoration:none;min-height:120px;min-width:0}.porta-p>span{min-width:0;overflow-wrap:anywhere}@media (max-width:420px){.porta-p .porta-n{font-size:1.55rem}}
 .porta-p .porta-sim{grid-row:span 3;width:56px;height:56px;border:1.5px solid var(--tinta);border-radius:50%;display:flex;align-items:center;justify-content:center}.porta-p .porta-sim .simbolo{width:34px;height:34px}
 .porta-p .porta-n{font:400 1.9rem/1 var(--cartaz);letter-spacing:.02em}.porta-p .porta-f{font:italic 1rem/1.4 var(--serif);color:var(--suave);margin-top:4px}.porta-p .porta-x{font:700 .7rem/1.2 var(--sans);letter-spacing:.1em;text-transform:uppercase;color:var(--suave);margin-top:8px}
 .porta-p:hover .porta-n{text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:4px}
-@media (min-width:900px){.portal{grid-template-columns:repeat(3,1fr)}.portal .porta-p{grid-template-columns:1fr}.porta-p .porta-sim{grid-row:auto;margin-bottom:10px}}
+@media (min-width:900px){.portal{grid-template-columns:repeat(3,1fr)}.portal .porta-p{grid-template-columns:minmax(0,1fr)}.porta-p .porta-sim{grid-row:auto;margin-bottom:10px}}
 /* página inicial: os três anos em cartões grandes (módulos com símbolo e progresso), depois os percursos extra, mais pequenos */
 .raiz{max-width:1112px}.portal-pg{max-width:1112px}
 .anos-g{display:grid;gap:var(--d1)}
