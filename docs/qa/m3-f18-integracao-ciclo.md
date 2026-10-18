@@ -13,7 +13,7 @@ Base local do PR: `c607ba2075bdcfb49d8cb6c8109328c95aead94e`. Escopo verificado:
 
 Hashes e resultados individuais: `outputs/m3-f18-cycle-static.json` no workspace de trabalho.
 
-## PENDENTE: navegador do candidato exato
+## Roteiro do navegador (resultados registados abaixo)
 
 **Atividade 4, cartão 7, `epopeia-4`.** Enunciado: «Porque aparece a partida num canto posterior ao começo da navegação?»
 
@@ -40,6 +40,6 @@ Na cópia exata da integração, 17 cartões percorridos duas vezes por teclado:
 A conclusão apareceu como 1 de 8 passos na unidade. A entrada mostrou M3 com 1 de 12 lições e propôs continuar em F13, lição 7 de 12. Isto confirma gravação, leitura e articulação do novo identificador. Permanecem complementares: leitor de ecrã real, telemóvel físico, todas as variantes de resposta e condições adversas de rede/armazenamento. Não houve merge ou publicação deste ciclo.
 
 
-## Limite do envio remoto
+## Sincronização final e autorização
 
-O mapa corrigido foi testado na cópia local, mas ainda não foi enviado ao GitHub: a revisão automática não conseguiu analisar o ficheiro grande por limite de entrada. O conector não executou a ação. A autenticação do Git local também falhou. Este PR inclui as restantes correções; o mapa remoto continua pendente e isso bloqueia a integração/publicação da nova lição. Não confundir os testes locais do conjunto completo com o estado remoto parcial.
+Em 18-10-2026, após autorização expressa de integração/publicação e renovação das operações, a correção do mapa foi enviada pelo conector: commit 44711b31c4bb9e869108f014aac67f2e5749e02b, blob 7fbb810060e0028bda86aa8721ab4755f39afbc0. O conteúdo coincide com o mapa local do conjunto já testado. A tentativa Git não modificou a branch; a sincronização foi concluída pelo conector. A divergência crítica entre mapa local e remoto fica resolvida. As verificações complementares acima continuam não executadas; não se declara certificação integral.
