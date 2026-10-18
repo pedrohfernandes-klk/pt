@@ -1,0 +1,59 @@
+/* M3-F18 only: preserve the shared lesson styles and navigation. */
+.f18-editorial .jogo .tit.cartaz {
+  max-width: 17ch;
+  margin-bottom: 24px;
+  padding-right: 0;
+  font-family: "Arial Black", Arial, sans-serif;
+  font-size: clamp(2rem, 4.5vw, 3rem);
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -.035em;
+}
+.f18-editorial .f18-abertura {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 144px;
+  gap: 24px;
+  align-items: start;
+}
+.f18-editorial .f18-intro { min-width: 0; }
+.f18-editorial .f18-intro p:first-child { margin-top: 0; }
+.f18-editorial .f18-fonte {
+  margin: 0;
+  padding-top: 12px;
+  border-top: 4px solid #a74f35;
+}
+.f18-editorial .f18-fonte > a { display: block; }
+.f18-editorial .f18-fonte img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--tinta);
+}
+.f18-editorial .f18-fonte figcaption {
+  margin-top: 10px;
+  font: .76rem/1.45 Arial, sans-serif;
+  color: var(--suave);
+}
+.f18-editorial .f18-fonte figcaption a {
+  display: block;
+  margin-top: 8px;
+  color: inherit;
+  text-underline-offset: 3px;
+}
+.f18-editorial .f18-fonte a:focus-visible {
+  outline: 3px solid currentColor;
+  outline-offset: 4px;
+}
+@media (max-width: 540px) {
+  .f18-editorial .jogo .tit.cartaz { margin-bottom: 20px; }
+  .f18-editorial .f18-abertura { grid-template-columns: 1fr; gap: 16px; }
+  .f18-editorial .f18-fonte {
+    display: grid;
+    grid-template-columns: 88px minmax(0, 1fr);
+    gap: 14px;
+  }
+  .f18-editorial .f18-fonte figcaption { margin-top: 0; }
+}
+@media (forced-colors: active) {
+  .f18-editorial .f18-fonte { border-color: CanvasText; }
+}
