@@ -1,0 +1,619 @@
+{
+  "module_counts": [
+    12,
+    8,
+    11,
+    15,
+    11,
+    9,
+    17,
+    10,
+    7
+  ],
+  "total": 100,
+  "inline_scripts_checked": 702,
+  "errors": [],
+  "lessons": [
+    {
+      "path": "m1/licao-m1-f01/index.html",
+      "title": "Li\u00e7\u00e3o M1-F01: A l\u00edngua que se canta",
+      "bytes": 225701,
+      "sha256": "a4d768f5535655964ecb44cbbfd7d7f03a454e025d3d2438c00f2099cf1a8a59"
+    },
+    {
+      "path": "m1/licao-m1-f02/index.html",
+      "title": "Li\u00e7\u00e3o M1-F02: Cercada pelas ondas",
+      "bytes": 239351,
+      "sha256": "31db2a4e12bd54d476588a1f4bfc1630b529701da6e314d8a5516948fb6f9b8f"
+    },
+    {
+      "path": "m1/licao-m1-f04/index.html",
+      "title": "Li\u00e7\u00e3o M1-F04: Louvar e tro\u00e7ar",
+      "bytes": 260679,
+      "sha256": "609e2654e53af9855052438a83c4f0cf9ac5bb9b2fb70e9bba9472ef23e18549"
+    },
+    {
+      "path": "m1/licao-m1-f05/index.html",
+      "title": "Li\u00e7\u00e3o M1-F05: Luna, lua: o que caiu pelo caminho",
+      "bytes": 265896,
+      "sha256": "679a8856673376930c18adb01753f2e16039415ca8ce5fbf9a88b4d1c370be64"
+    },
+    {
+      "path": "m1/licao-m1-f06/index.html",
+      "title": "Li\u00e7\u00e3o M1-F06: \u00abMatam o Mestre!\u00bb",
+      "bytes": 224413,
+      "sha256": "8e377290e90279b6620745e9556aed19ac1ac7809b350ae60e54af3265e18854"
+    },
+    {
+      "path": "m1/licao-m1-f07/index.html",
+      "title": "Li\u00e7\u00e3o M1-F07: Lisboa cercada",
+      "bytes": 263404,
+      "sha256": "d93ca60ddc330aceb7d4a7fffb794efc9bf3d2266f80e7cae6d4999b6a426b6a"
+    },
+    {
+      "path": "m1/licao-m1-f08/index.html",
+      "title": "Li\u00e7\u00e3o M1-F08: Quem completa quem?",
+      "bytes": 263572,
+      "sha256": "457a8e8c956cab8ff8fe98eaf947421339816611e8230d1b4fcc2dfd90719d23"
+    },
+    {
+      "path": "m1/licao-m1-f10/index.html",
+      "title": "Li\u00e7\u00e3o M1-F10: Estar l\u00e1",
+      "bytes": 259395,
+      "sha256": "271a020193d1ea663f78f4c3bfddc045b064cf8367a65b16abd145006f18750a"
+    },
+    {
+      "path": "m1/licao-m1-f11/index.html",
+      "title": "Li\u00e7\u00e3o M1-F11: Ondas, gritos e gr\u00e3os de trigo",
+      "bytes": 260946,
+      "sha256": "1f8244bdc6fd054cecbfa7ce10d26683fb51bd589f182e70336f7db73783ea2d"
+    },
+    {
+      "path": "m1/licao-m1-f15/index.html",
+      "title": "Li\u00e7\u00e3o M1-F15: E, mas, portanto",
+      "bytes": 218035,
+      "sha256": "641b8a3dec79561a8be5804f895d64e8c5379459476002b49806ad15e1c7d143"
+    },
+    {
+      "path": "m1/licao-m1-f19/index.html",
+      "title": "Li\u00e7\u00e3o M1-F19: As cantigas lado a lado",
+      "bytes": 355562,
+      "sha256": "756cb0ab6904b245253c919f3788d0c577c89662d95c88f291d814206d901959"
+    },
+    {
+      "path": "m1/licao-m1-f20/index.html",
+      "title": "Li\u00e7\u00e3o M1-F20: Entrar na cena",
+      "bytes": 351626,
+      "sha256": "9cfe3bf6f1ae294c2c5e1f255616c774561991b1d78c6a23186cf55fc58d985b"
+    },
+    {
+      "path": "m2/licao-m2-f01/index.html",
+      "title": "Li\u00e7\u00e3o M2-F01: Deram-lhe um prov\u00e9rbio",
+      "bytes": 389101,
+      "sha256": "14d07b19a3988c901a8f21c75b9f18e0718343ee201b96c0f01df4ba188b263f"
+    },
+    {
+      "path": "m2/licao-m2-f02/index.html",
+      "title": "Li\u00e7\u00e3o M2-F02: In\u00eas, como panela sem asa",
+      "bytes": 327508,
+      "sha256": "43417c62206c8047c393978ecea10515c1a69164f7bbde92878b7b221a948ed3"
+    },
+    {
+      "path": "m2/licao-m2-f06/index.html",
+      "title": "Li\u00e7\u00e3o M2-F06: Quero asno que me leve",
+      "bytes": 292602,
+      "sha256": "583b731b845377fc7a3f4457833b0c6281e2b6baf07f9c7578d9de978ee03934"
+    },
+    {
+      "path": "m2/licao-m2-f07/index.html",
+      "title": "Li\u00e7\u00e3o M2-F07: Ora\u00e7\u00f5es em cena",
+      "bytes": 267870,
+      "sha256": "141c85a07a48114976d5c2bb5eaf2fdc46be55e9ca638f11d2e8f35900a71564"
+    },
+    {
+      "path": "m2/licao-m2-f08/index.html",
+      "title": "Li\u00e7\u00e3o M2-F08: Quem \u00e9, afinal, In\u00eas Pereira?",
+      "bytes": 316635,
+      "sha256": "f815702594b8757e387b71731e446de4dbcd9903e3b72deff5b3b35db4a13d9c"
+    },
+    {
+      "path": "m2/licao-m2-f09/index.html",
+      "title": "Li\u00e7\u00e3o M2-F09: Asno ou cavalo, hoje",
+      "bytes": 267193,
+      "sha256": "7bacf92c8c24fe82b35ad7f86b40fd9d1c3e272270f1d70629a5695b937a0e3e"
+    },
+    {
+      "path": "m2/licao-m2-f10/index.html",
+      "title": "Li\u00e7\u00e3o M2-F10: Da p\u00e1gina ao palco",
+      "bytes": 386004,
+      "sha256": "891e861c5a92332a6a6c40d2fc7c97658e7ed6d5f50977029a967d529ca52fa4"
+    },
+    {
+      "path": "m2/licao-m2-f11/index.html",
+      "title": "Li\u00e7\u00e3o M2-F11: O que a farsa ensinou",
+      "bytes": 273437,
+      "sha256": "f9e99db1709120a3a1acadf8e31cbef47a953dc21506e2e54f4db569084845b0"
+    },
+    {
+      "path": "m3/licao-m3-f02/index.html",
+      "title": "Li\u00e7\u00e3o M3-F02: Duas vers\u00f5es de 1498",
+      "bytes": 407220,
+      "sha256": "c06e83a63d9aec50213d878cf217ac75b0ccf38bcda80f057fba7aad11c41ca7"
+    },
+    {
+      "path": "m3/licao-m3-f03/index.html",
+      "title": "Li\u00e7\u00e3o M3-F03: Jer\u00f3nimos: ler um edif\u00edcio",
+      "bytes": 407367,
+      "sha256": "6b4791fc4725d723420c0f8d37afeb3557354451cf36f6f47ad5e3e1d128f919"
+    },
+    {
+      "path": "m3/licao-m3-f04/index.html",
+      "title": "Li\u00e7\u00e3o M3-F04: Objetos com duas hist\u00f3rias",
+      "bytes": 224039,
+      "sha256": "741afbed1980e76cf6c6881340a2ae3fb4ceab2f2154beda86b810991bceb5f0"
+    },
+    {
+      "path": "m3/licao-m3-f05/index.html",
+      "title": "Li\u00e7\u00e3o M3-F05: Leonor e o perdig\u00e3o",
+      "bytes": 277095,
+      "sha256": "c5f0aeee32d8636c527efcb3e1bdd94f8dd1f286aee4231313881038e4eba03a"
+    },
+    {
+      "path": "m3/licao-m3-f09/index.html",
+      "title": "Li\u00e7\u00e3o M3-F09: Uma alma gentil, um \u00abn\u00e3o sei qu\u00ea\u00bb",
+      "bytes": 404947,
+      "sha256": "e080090ed719898b6b3f241b95aaa837ea37e4252b4944f41e20a307d03da940"
+    },
+    {
+      "path": "m3/licao-m3-f10/index.html",
+      "title": "Li\u00e7\u00e3o M3-F10: Quem \u00e9 a Musa?",
+      "bytes": 260242,
+      "sha256": "73aab070cef46ceff4c6e298f7d349d610ac438e81910b3914217642efc04599"
+    },
+    {
+      "path": "m3/licao-m3-f11/index.html",
+      "title": "Li\u00e7\u00e3o M3-F11: Uma l\u00edngua, muitos pa\u00edses",
+      "bytes": 280732,
+      "sha256": "600369c81377ea6c4e6d12f79386a422a182fe6a32f702d4b3dc0fb37d9a73d7"
+    },
+    {
+      "path": "m3/licao-m3-f13/index.html",
+      "title": "Li\u00e7\u00e3o M3-F13: Um bicho da terra t\u00e3o pequeno",
+      "bytes": 266595,
+      "sha256": "2a1c0b7f43dba883d1b1a94afed645e9e3021cfe35040566275272e091a80554"
+    },
+    {
+      "path": "m3/licao-m3-f15/index.html",
+      "title": "Li\u00e7\u00e3o M3-F15: Poder, dever, querer",
+      "bytes": 350361,
+      "sha256": "3212922a8a1687f7abfe7253401b72a0291935b819daf83aee3ab67994d7db0d"
+    },
+    {
+      "path": "m3/licao-m3-f16/index.html",
+      "title": "Li\u00e7\u00e3o M3-F16: Quem disse este verso?",
+      "bytes": 255124,
+      "sha256": "c5ec8ed949fa095f67864e0027a9785f7407f2f84014324dfabf0d84bdd7fb9c"
+    },
+    {
+      "path": "m3/licao-m3-f17/index.html",
+      "title": "Li\u00e7\u00e3o M3-F17: Celebrar e criticar no mesmo poema",
+      "bytes": 347431,
+      "sha256": "ac402b6a1e8c776b3b28b3ef178518dbff302c2411bc52631b9b4ee68a7e4de0"
+    },
+    {
+      "path": "m4/licao-m4-f01/index.html",
+      "title": "Li\u00e7\u00e3o M4-F01: Pregar a quem n\u00e3o ouve",
+      "bytes": 291387,
+      "sha256": "c98cb416c3e95bf717f81167d40d430100d0aedb28129a40a867c3844c8e05ec"
+    },
+    {
+      "path": "m4/licao-m4-f02/index.html",
+      "title": "Li\u00e7\u00e3o M4-F02: O sal e a terra",
+      "bytes": 214555,
+      "sha256": "c348a5883fe7fd0ffbc9a7d87a0bb67276075f53b2ccecfc32ead7a7d55faeb1"
+    },
+    {
+      "path": "m4/licao-m4-f04/index.html",
+      "title": "Li\u00e7\u00e3o M4-F04: Os grandes comem os pequenos",
+      "bytes": 286665,
+      "sha256": "dec19781620733e733af680d8f62d7bc0681868b674ec216c4f4c533e6274c84"
+    },
+    {
+      "path": "m4/licao-m4-f06/index.html",
+      "title": "Li\u00e7\u00e3o M4-F06: Dizer \u00e9 fazer",
+      "bytes": 285923,
+      "sha256": "3bdf308e8a30b0fd778e17d49c6a7463f3c57b1a7309f323000fbe0656cb1971"
+    },
+    {
+      "path": "m4/licao-m4-f07/index.html",
+      "title": "Li\u00e7\u00e3o M4-F07: Ilumino a minha casa",
+      "bytes": 209884,
+      "sha256": "8d0e979688e2042f1b818ca79e35f96e0232597edbefc54d56f93fc5f59aee4e"
+    },
+    {
+      "path": "m4/licao-m4-f08/index.html",
+      "title": "Li\u00e7\u00e3o M4-F08: \u00abNingu\u00e9m\u00bb",
+      "bytes": 226695,
+      "sha256": "1b12ec47e9c22443c3f4f4344a3401eaa548159775678b89ab7fe38eb34eca12"
+    },
+    {
+      "path": "m4/licao-m4-f09/index.html",
+      "title": "Li\u00e7\u00e3o M4-F09: O nome que se perde",
+      "bytes": 269067,
+      "sha256": "2f3027949b4874bd36ebdc1c28e4ba3048047aac3fddf1e0d18ed141dde7187b"
+    },
+    {
+      "path": "m4/licao-m4-f10/index.html",
+      "title": "Li\u00e7\u00e3o M4-F10: Um peixe, um v\u00edcio",
+      "bytes": 279923,
+      "sha256": "464f2dacb7dbd861df7affd82ab3c1ff9c1cf10da3ec6e6401a33f6c2a542e62"
+    },
+    {
+      "path": "m4/licao-m4-f11/index.html",
+      "title": "Li\u00e7\u00e3o M4-F11: A palavra contra o poder",
+      "bytes": 229922,
+      "sha256": "91d5ce9f69ec71ad388916a8d5421071159f5112b8d3536cf5a83c4bd383feba"
+    },
+    {
+      "path": "m4/licao-m4-f14/index.html",
+      "title": "Li\u00e7\u00e3o M4-F14: Trinta dias no abrigo",
+      "bytes": 274936,
+      "sha256": "05f9a08736e7594dda04754115d720d80bb555426f26f3589e0b5bcb56b1718a"
+    },
+    {
+      "path": "m4/licao-m4-f15/index.html",
+      "title": "Li\u00e7\u00e3o M4-F15: O que prende um texto",
+      "bytes": 214887,
+      "sha256": "9bad2f79d8f43b3f9fd8e5996a1ea9b26ab56088a05749a0a99dbb33642ebe18"
+    },
+    {
+      "path": "m4/licao-m4-f20/index.html",
+      "title": "Li\u00e7\u00e3o M4-F20: O que s\u00f3 se v\u00ea em palco",
+      "bytes": 205871,
+      "sha256": "678bc845f786851f8134c8fff63572618a078fadfa0ef1e8822b4cbef1131d2b"
+    },
+    {
+      "path": "m4/licao-m4-f25/index.html",
+      "title": "Li\u00e7\u00e3o M4-F25: Os peixes e os homens",
+      "bytes": 306685,
+      "sha256": "1d6b32c4acc384fbb59426a746d99f199625191a5ecaf91baf679c3bd707c6cb"
+    },
+    {
+      "path": "m4/licao-m4-f26/index.html",
+      "title": "Li\u00e7\u00e3o M4-F26: Quem sabe o qu\u00ea?",
+      "bytes": 290684,
+      "sha256": "c9db0aed9f031acc968ce2f114872d1c59ecbae0b0892c892b4bfd7462c19c61"
+    },
+    {
+      "path": "m4/licao-m4-f27/index.html",
+      "title": "Li\u00e7\u00e3o M4-F27: Uma ideia precisa de uma prova",
+      "bytes": 262424,
+      "sha256": "76b640697033d1fdfe42c4b39eade6ec3a64f72bfd045c1727285a5f40c6016f"
+    },
+    {
+      "path": "m5/licao-m5-f02/index.html",
+      "title": "Li\u00e7\u00e3o M5-F02: Folheando os livros da cadeia",
+      "bytes": 236913,
+      "sha256": "6793eabe48b3313be577ffc4f671dbad84a100436e66b721bf868df8c3b6eb7a"
+    },
+    {
+      "path": "m5/licao-m5-f04/index.html",
+      "title": "Li\u00e7\u00e3o M5-F04: A viol\u00eancia de um pai \u00e9 sempre amor",
+      "bytes": 267813,
+      "sha256": "801450db4ad4fdb16249d57e5c2f069c5ce1cd47d3495e2f041028b9ca992f4b"
+    },
+    {
+      "path": "m5/licao-m5-f07/index.html",
+      "title": "Li\u00e7\u00e3o M5-F07: Quem faz o qu\u00ea a quem",
+      "bytes": 291794,
+      "sha256": "63fb3bb94698b8c4fc0a0f1130b3ae3ae3c4861fe0a1f636139aa9b9220a3844"
+    },
+    {
+      "path": "m5/licao-m5-f08/index.html",
+      "title": "Li\u00e7\u00e3o M5-F08: Responder no alto mar",
+      "bytes": 260524,
+      "sha256": "e979b46ef9672092529c85f7c297333d0536fcde53e4b1a131350e18fda54541"
+    },
+    {
+      "path": "m5/licao-m5-f09/index.html",
+      "title": "Li\u00e7\u00e3o M5-F09: Os lugares de Camilo",
+      "bytes": 224390,
+      "sha256": "400a209650e46e0559a210c2ad661421a7c5d3912775b90402fb187d28dc9bb8"
+    },
+    {
+      "path": "m5/licao-m5-f10/index.html",
+      "title": "Li\u00e7\u00e3o M5-F10: Sombrio casar\u00e3o",
+      "bytes": 338655,
+      "sha256": "332a414ec532d15d5f122cd4b0b83cadd8e7746b6ac12e38003959b43cf08bc6"
+    },
+    {
+      "path": "m5/licao-m5-f11/index.html",
+      "title": "Li\u00e7\u00e3o M5-F11: Jantar no Hotel Central",
+      "bytes": 279416,
+      "sha256": "92ecc400666b1a221c28f98b552751dd79851711f9c7dc58bf21aca2c46b72b8"
+    },
+    {
+      "path": "m5/licao-m5-f12/index.html",
+      "title": "Li\u00e7\u00e3o M5-F12: A voz que se infiltra",
+      "bytes": 304193,
+      "sha256": "3fd7644cc48e2527a7db10980a6633ef970732f1902a6ab910fb9d29e56a7dab"
+    },
+    {
+      "path": "m5/licao-m5-f13/index.html",
+      "title": "Li\u00e7\u00e3o M5-F13: Falh\u00e1mos a vida, menino!",
+      "bytes": 333514,
+      "sha256": "b0b73d6f7d356655149878f015d9b358baa87b653beb5dc436829b03ae0ed72e"
+    },
+    {
+      "path": "m5/licao-m5-f14/index.html",
+      "title": "Li\u00e7\u00e3o M5-F14: Do livro ao ecr\u00e3",
+      "bytes": 312639,
+      "sha256": "d898cfd7c4eae494e8a3cc2e69113ddee33af69609e887a36df66c6ba324d2c7"
+    },
+    {
+      "path": "m5/licao-m5-f15/index.html",
+      "title": "Li\u00e7\u00e3o M5-F15: Dois modos de perder a vida",
+      "bytes": 271764,
+      "sha256": "b71628eb3c188b35444aa5fc3d549238f79419d55427611d028b1b9cd3a07eeb"
+    },
+    {
+      "path": "m6/licao-m6-f01/index.html",
+      "title": "Li\u00e7\u00e3o M6-F01: O cavaleiro que encontra o nada",
+      "bytes": 291848,
+      "sha256": "60d0ba9694fef5b0c10a2f80c72eab7be6775c70614f465c1ade657b4591ee82"
+    },
+    {
+      "path": "m6/licao-m6-f02/index.html",
+      "title": "Li\u00e7\u00e3o M6-F02: Da procura ao descanso",
+      "bytes": 262651,
+      "sha256": "3a0e6f91a013c0fe047ec0ce59064866764d5aafaea6d95ff8a590846cb43f95"
+    },
+    {
+      "path": "m6/licao-m6-f04/index.html",
+      "title": "Li\u00e7\u00e3o M6-F04: Como se ligam as ora\u00e7\u00f5es",
+      "bytes": 259110,
+      "sha256": "57f657cd3b90cf3d5c014f90a253703ba3b78ac727b937b074e973ae3f9fb42d"
+    },
+    {
+      "path": "m6/licao-m6-f05/index.html",
+      "title": "Li\u00e7\u00e3o M6-F05: Palavras com passado",
+      "bytes": 303716,
+      "sha256": "9b621c9edebb45a2a3c72fc3aa24bda2efde7042cd1796c5e35d555cef389729"
+    },
+    {
+      "path": "m6/licao-m6-f06/index.html",
+      "title": "Li\u00e7\u00e3o M6-F06: \u00abAve-Marias\u00bb",
+      "bytes": 297555,
+      "sha256": "90c358a4d3e422e46c36c1e7207b548d39028104ea67ed59f39c30bc29a25a06"
+    },
+    {
+      "path": "m6/licao-m6-f07/index.html",
+      "title": "Li\u00e7\u00e3o M6-F07: Da \u00abNoite Fechada\u00bb \u00e0s \u00abHoras Mortas\u00bb",
+      "bytes": 277411,
+      "sha256": "18c869e0cd54279d599ce8c8acb7db0a97d291b7f0020cc444e9a8b35a2f2481"
+    },
+    {
+      "path": "m6/licao-m6-f08/index.html",
+      "title": "Li\u00e7\u00e3o M6-F08: Ces\u00e1rio nos dias de hoje",
+      "bytes": 257818,
+      "sha256": "c70d73d3f9944eae913218a2e81c7ea0b7faed936ff497a26d4165e4cf60b034"
+    },
+    {
+      "path": "m6/licao-m6-f09/index.html",
+      "title": "Li\u00e7\u00e3o M6-F09: Fora do mundo, dentro da cidade",
+      "bytes": 256892,
+      "sha256": "ad1243a7e4cdcd54c27d491012bf88d4e50197e67261f52cf0afddf1e95aeae0"
+    },
+    {
+      "path": "m6/licao-m6-f11/index.html",
+      "title": "Li\u00e7\u00e3o M6-F11: Quem conta a vida de um poeta",
+      "bytes": 291703,
+      "sha256": "075ae97e5f7f173f1e711d6433112ac309f06a6e1cc6cc0566481710a8e98f14"
+    },
+    {
+      "path": "m7/licao-m7-f01/index.html",
+      "title": "Li\u00e7\u00e3o M7-F01: Quantos somos?",
+      "bytes": 236411,
+      "sha256": "28d33ea8b0a81ad5450183ef43eda7d2caeb8a877869fc641b99833eb5757fff"
+    },
+    {
+      "path": "m7/licao-m7-f02/index.html",
+      "title": "Li\u00e7\u00e3o M7-F02: O poeta \u00e9 um fingidor",
+      "bytes": 362821,
+      "sha256": "e67bffcad622a4d4b52b56300d812d6fa3050a5c9c9a740aa339b7537596df23"
+    },
+    {
+      "path": "m7/licao-m7-f04/index.html",
+      "title": "Li\u00e7\u00e3o M7-F04: Pensar \u00e9 estar doente dos olhos",
+      "bytes": 222923,
+      "sha256": "770a9f03963899f2db28df4c2dfacbd0748a4f56cee50c5947a621822e3db49f"
+    },
+    {
+      "path": "m7/licao-m7-f05/index.html",
+      "title": "Li\u00e7\u00e3o M7-F05: \u00c0 beira do rio",
+      "bytes": 241192,
+      "sha256": "1e88ab4632495077564d57b41766e09654e77ebb3613de1476499bfa86791e1b"
+    },
+    {
+      "path": "m7/licao-m7-f06/index.html",
+      "title": "Li\u00e7\u00e3o M7-F06: Da f\u00e1brica \u00e0 \u00abTabacaria\u00bb",
+      "bytes": 276654,
+      "sha256": "399b852eb5221abe36911989d1c9315f298c50188753eb7e5555f434aeeb8938"
+    },
+    {
+      "path": "m7/licao-m7-f07/index.html",
+      "title": "Li\u00e7\u00e3o M7-F07: Como se soubesse a verdade",
+      "bytes": 239646,
+      "sha256": "0d59d9b4ac9d1fefa1d5fba3e444aa291e703b31982ba3146e4018bc7c0c008b"
+    },
+    {
+      "path": "m7/licao-m7-f08/index.html",
+      "title": "Li\u00e7\u00e3o M7-F08: Deus quer, o homem sonha, a obra nasce",
+      "bytes": 214677,
+      "sha256": "2760b5bfc9ca6cb1b2d4762d3aa39e2a44fa88a8eca8ff0c2cabaf4e593105a4"
+    },
+    {
+      "path": "m7/licao-m7-f09/index.html",
+      "title": "Li\u00e7\u00e3o M7-F09: \u00c9 a hora!",
+      "bytes": 288817,
+      "sha256": "f0097e3d3941cd6bc82df8d8ae85240f36737012e6cb6c241d97a6bd0fa82708"
+    },
+    {
+      "path": "m7/licao-m7-f10/index.html",
+      "title": "Li\u00e7\u00e3o M7-F10: Defender o projeto",
+      "bytes": 334960,
+      "sha256": "64db2f326b15d1dd307eaae989446f8ccc23cd57c068815725ba21dba6bd8e91"
+    },
+    {
+      "path": "m7/licao-m7-f11/index.html",
+      "title": "Li\u00e7\u00e3o M7-F11: Quantas vozes cabem num homem",
+      "bytes": 327263,
+      "sha256": "f87c5291fbd2e19b25402b71621497ed1c661a6aef6064542835b0a6deda3890"
+    },
+    {
+      "path": "m7/licao-m7-f13/index.html",
+      "title": "Li\u00e7\u00e3o M7-F13: \u00abEla canta, pobre ceifeira\u00bb",
+      "bytes": 335008,
+      "sha256": "f393a905a7701caeaa264f8a962100f0f527579991a41745ad4b341ad8ab96a0"
+    },
+    {
+      "path": "m7/licao-m7-f14/index.html",
+      "title": "Li\u00e7\u00e3o M7-F14: \u00abN\u00e3o sei se \u00e9 sonho, se realidade\u00bb",
+      "bytes": 352746,
+      "sha256": "96c951f16ce95cabf859367aae4976df0759ae00cbd6a188a417a31d4a8243d7"
+    },
+    {
+      "path": "m7/licao-m7-f15/index.html",
+      "title": "Li\u00e7\u00e3o M7-F15: A inf\u00e2ncia que n\u00e3o tive",
+      "bytes": 298317,
+      "sha256": "bf478f698ad4df13cd2857273f2c6a124455204026fc62afafc9d438dd20e5f8"
+    },
+    {
+      "path": "m7/licao-m7-f23/index.html",
+      "title": "Li\u00e7\u00e3o M7-F23: O pouco que duramos",
+      "bytes": 405623,
+      "sha256": "6af9b5841b3121dd032d5a64d96a2e9da14e2410dee3392beeb7644c24258101"
+    },
+    {
+      "path": "m7/licao-m7-f34/index.html",
+      "title": "Li\u00e7\u00e3o M7-F34: \u00abChuva Obl\u00edqua\u00bb",
+      "bytes": 181853,
+      "sha256": "d4c797d1ca8e2a69fd2ba431310b14b3782feceaa5ad2684d3a30295b275ff44"
+    },
+    {
+      "path": "m7/licao-m7-f35/index.html",
+      "title": "Li\u00e7\u00e3o M7-F35: O rio e o olhar",
+      "bytes": 276343,
+      "sha256": "ab368f3498bac4edd52c5fbb2698aeef5c0fa168534d04266fec14f5d7dee305"
+    },
+    {
+      "path": "m7/licao-m7-f36/index.html",
+      "title": "Li\u00e7\u00e3o M7-F36: Nada, mas todos os sonhos",
+      "bytes": 360880,
+      "sha256": "5bdfe271563b9f0b6d3a55a087994eb1d792cfc56deb97b33d6827fa1788e508"
+    },
+    {
+      "path": "m8/licao-m8-f01/index.html",
+      "title": "Li\u00e7\u00e3o M8-F01: Tr\u00eas vozes, um s\u00e9culo",
+      "bytes": 245878,
+      "sha256": "b970d2122acb867d9059796660a59add2428967351926e738139136bf7a8e5c1"
+    },
+    {
+      "path": "m8/licao-m8-f03/index.html",
+      "title": "Li\u00e7\u00e3o M8-F03: Jorge de Sena, poeta testemunha",
+      "bytes": 240570,
+      "sha256": "f907bf1311909a1e2b7191946d2c693d97533265f91de9388e4ac54a6c57bd49"
+    },
+    {
+      "path": "m8/licao-m8-f04/index.html",
+      "title": "Li\u00e7\u00e3o M8-F04: Eug\u00e9nio de Andrade: a palavra essencial",
+      "bytes": 237863,
+      "sha256": "3c57815f13db834740ee04b8860c553e9599c51c109055ac76b2984c70d20232"
+    },
+    {
+      "path": "m8/licao-m8-f05/index.html",
+      "title": "Li\u00e7\u00e3o M8-F05: Ana Lu\u00edsa Amaral: reescrever a tradi\u00e7\u00e3o",
+      "bytes": 236890,
+      "sha256": "6d9406f10a5e5d965c4b1a709820d59bfa774a59d1170d460079e95d34db5cf2"
+    },
+    {
+      "path": "m8/licao-m8-f06/index.html",
+      "title": "Li\u00e7\u00e3o M8-F06: Verbos que duram, palavras que apontam",
+      "bytes": 239897,
+      "sha256": "a8099d4fa41b25059cd6c036ebc0ad164abfc9bfebf8310ee167cd3b99e79992"
+    },
+    {
+      "path": "m8/licao-m8-f08/index.html",
+      "title": "Li\u00e7\u00e3o M8-F08: \u00abGeorge\u00bb, uma mulher em tr\u00eas idades",
+      "bytes": 266710,
+      "sha256": "be8cbe12b4947c92a426754db711a1c58851fb14afdd66edf71d92b686feb6a5"
+    },
+    {
+      "path": "m8/licao-m8-f09/index.html",
+      "title": "Li\u00e7\u00e3o M8-F09: Tr\u00eas imagens ao acaso",
+      "bytes": 226214,
+      "sha256": "e7855a9c89469d13344f24664b7a55ce72746756cf44a048843678830f6c95cf"
+    },
+    {
+      "path": "m8/licao-m8-f10/index.html",
+      "title": "Li\u00e7\u00e3o M8-F10: Poema com pintura ou \u00e1lbum",
+      "bytes": 238275,
+      "sha256": "086f3449ee83b5024d1b7cf2cd6c762170b8d569cb684b03684f32342b80255d"
+    },
+    {
+      "path": "m8/licao-m8-f11/index.html",
+      "title": "Li\u00e7\u00e3o M8-F11: Caderno de campo",
+      "bytes": 284339,
+      "sha256": "0fb421e3e88f0d7c8625e1f1c1c978158f07332c148cf01b068482ffca8203e5"
+    },
+    {
+      "path": "m8/licao-m8-f12/index.html",
+      "title": "Li\u00e7\u00e3o M8-F12: Sugerir em vez de explicar",
+      "bytes": 266062,
+      "sha256": "be59523ffd2fda9b3e47eb7a4acf0d14e91d21d105a15a06825e9709f57c91f9"
+    },
+    {
+      "path": "m9/licao-m9-f01/index.html",
+      "title": "Li\u00e7\u00e3o M9-F01: Um convento, uma promessa",
+      "bytes": 264735,
+      "sha256": "83bb5564670a1bf630a3394f91e17f0194ef1f0e14e0e9e66807790533ecbdb8"
+    },
+    {
+      "path": "m9/licao-m9-f02/index.html",
+      "title": "Li\u00e7\u00e3o M9-F02: Ver e n\u00e3o ver",
+      "bytes": 330230,
+      "sha256": "7c91bce3ff16a9c498d0264a5e563dca9ecc0910f7c9b2b869108cdaa6a40c80"
+    },
+    {
+      "path": "m9/licao-m9-f03/index.html",
+      "title": "Li\u00e7\u00e3o M9-F03: A voz que conta",
+      "bytes": 303453,
+      "sha256": "fd80789999abd5fcef3c0f4401ae3da14e7273d4b3180e3e7d3d7f9c57f4537c"
+    },
+    {
+      "path": "m9/licao-m9-f04/index.html",
+      "title": "Li\u00e7\u00e3o M9-F04: Uma visita \u00e0 Casa dos Bicos",
+      "bytes": 308083,
+      "sha256": "55be70e1cd556046abd47cec458e51827ac865740d85e667caf226e6458cca47"
+    },
+    {
+      "path": "m9/licao-m9-f05/index.html",
+      "title": "Li\u00e7\u00e3o M9-F05: Os que carregaram a pedra",
+      "bytes": 491942,
+      "sha256": "7056f7271d4b08e74120845ba592685ae040e2fb2b08c8ab9670b38b8dfeb359"
+    },
+    {
+      "path": "m9/licao-m9-f07/index.html",
+      "title": "Li\u00e7\u00e3o M9-F07: Tr\u00eas anos numa resposta",
+      "bytes": 308219,
+      "sha256": "5a2a77b3145cb7b0b9ff2bdc9f804bfa003e5b2ac716e94f51ad9ba25fee6ea0"
+    },
+    {
+      "path": "m9/licao-m9-f10/index.html",
+      "title": "Li\u00e7\u00e3o M9-F10: De quem \u00e9 uma obra?",
+      "bytes": 228608,
+      "sha256": "c99d362ba2934a0e5b74964dc72a024ade24b2fd9cfdc29bb58a9d30ecd03df6"
+    }
+  ]
+}
+
