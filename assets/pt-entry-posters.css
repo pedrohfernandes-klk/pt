@@ -1,0 +1,17 @@
+/* Home only: three year posters, preserving module controls and progress. */
+body[data-site="pt"] .raiz .pt-entry-lead{font:400 1.05rem/1.5 Arial,Helvetica,sans-serif;max-width:40rem;margin:0;color:var(--suave)}
+.raiz .ano-c{--entry-paper:#eee8da;--entry-ink:#171715;--entry-accent:#a3472e;--tinta:var(--entry-ink);--suave:var(--entry-ink);--c-cinza:#b3ad9f;background:var(--entry-paper);color:var(--entry-ink);border-top:4px solid var(--entry-ink);padding-top:0}
+.raiz .ano-c[data-ano="11"]{--entry-paper:#e2ebeb;--entry-ink:#172d36;--entry-accent:#365f70;--c-cinza:#b0bfc2}
+.raiz .ano-c[data-ano="12"]{--entry-paper:#202420;--entry-ink:#f4f1e8;--entry-accent:#e0b23a;--c-cinza:#6d756d}
+.raiz .ano-c .ano-tit{display:grid;grid-template-columns:minmax(0,1fr) 62px;column-gap:12px;row-gap:12px;min-height:204px;padding:20px 18px;align-content:start;align-items:start;color:var(--entry-ink)}
+.raiz .ano-c .ano-tit b{font:700 .85rem/1.3 Arial,Helvetica,sans-serif;letter-spacing:.06em;grid-column:1;text-transform:uppercase}
+.raiz .ano-c .ano-tit .ano-art{grid-column:2;grid-row:1/4;align-self:center;color:var(--entry-accent);font:700 3.4rem/1 Georgia,serif;letter-spacing:-.1em;text-transform:none;text-align:center;pointer-events:none}
+.raiz .ano-c .ano-tit .ano-pergunta{grid-column:1;font:800 1.65rem/1.05 Arial,Helvetica,sans-serif;letter-spacing:-.035em;overflow-wrap:normal}
+.raiz .ano-c .ano-tit>span:last-child{grid-column:1;font:700 .7rem/1.4 Arial,Helvetica,sans-serif;text-align:left;letter-spacing:.04em;margin-top:4px;color:var(--entry-ink)}
+.raiz .ano-c .ano-tit:hover .ano-pergunta,.raiz .ano-c .ano-tit:focus-visible .ano-pergunta{text-decoration:underline;text-underline-offset:4px}
+.raiz .ano-c a,.raiz .ano-c .sim{color:var(--entry-ink)}
+.raiz .ano-c .ano-tit:focus-visible,.raiz .ano-c ul a:focus-visible,.raiz .ano-c .cont:focus-visible{outline:3px solid var(--entry-accent);outline-offset:3px}
+.raiz .ano-c .cont{color:var(--entry-ink)}
+@media(min-width:900px){.raiz .ano-c .ano-tit{min-height:224px}}
+@media(max-width:899px){.raiz .ano-c .ano-tit{min-height:0;grid-template-columns:minmax(0,1fr) 70px}.raiz .ano-c .ano-tit .ano-pergunta{font-size:1.8rem}.raiz .ano-c .ano-tit .ano-art{font-size:3.7rem}}
+@media(forced-colors:active){.raiz .ano-c{--entry-paper:Canvas;--entry-ink:CanvasText;--entry-accent:LinkText;--c-cinza:CanvasText}.raiz .ano-c a:focus-visible{outline-color:Highlight}}
