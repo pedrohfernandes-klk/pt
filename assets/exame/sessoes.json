@@ -1,0 +1,3100 @@
+{
+  "version": 1,
+  "referenceYear": 2026,
+  "sessions": [
+    {
+      "id": "s01",
+      "order": 1,
+      "durationMinutes": 45,
+      "title": "Cantigas: comparar sem confundir",
+      "group": "10.º ano",
+      "module": "M1",
+      "tags": [
+        "voz poética",
+        "comparação",
+        "evidência",
+        "cantigas"
+      ],
+      "focus": "Voz e natureza na lírica medieval",
+      "source": {
+        "title": "Cantigas: comparar sem confundir",
+        "author": "Poesia trovadoresca",
+        "excerpt": "Ondas do mar de Vigo, se vistes meu amigo ? e ai Deus, se verrá cedo ? Vocabulário: amigo , o namorado; verrá , virá; cedo , em breve Martim Codax, séc. XIII, Cantigas Medievais Galego-Portuguesas (FCSH), cantiga 1308 (cantiga de amigo; primeira estrofe). A cantiga inteira lê-se na lição «Ondas do mar de Vigo».\n\nQuer'eu em maneira de proençal fazer agora um cantar d'amor e querrei muit'i loar mia senhor a que prez nem fremosura nom fal , nem bondade; e mais vos direi en : tanto a fez Deus comprida de bem que mais que todas las do mundo val . Vocabulário: em maneira de proençal , à maneira dos trovadores da Provença; querrei , quererei; loar , louvar; mia senhor , a minha senhora; prez , valor, mérito; fremosura , formosura, beleza; nom fal , não falta; direi en , direi disso; comprida de bem , cheia de qualidades; val , vale D. Dinis, Cantigas Medievais Galego-Portuguesas (FCSH), cantiga 544 (cantiga de amor; primeira estrofe). A cantiga inteira lê-se na lição «Louvar e troçar».",
+        "context": "Abre a leitura de apoio, lê o recorte indicado e identifica duas marcas relevantes antes de responder. O texto de origem mantém-se na ficha; esta sessão organiza o treino a partir dele.",
+        "url": "/pt/m1/licao-m1-f19/",
+        "note": "Recorte de leitura já utilizado no módulo. Consulta a ficha para o texto, a localização e as fontes completas."
+      },
+      "resources": [],
+      "warmup": [
+        {
+          "id": "s01-q1",
+          "q": "Mendinho (lição «Cercada pelas ondas»): «cercarom-mi as ondas». Codax: «se vistes meu amigo?». Que papel tem o mar em cada uma?",
+          "options": [
+            "Em Mendinho ameaça e cerca; em Codax ouve a pergunta, como confidente",
+            "Nas duas traz notícias do amigo",
+            "Nas duas afoga a rapariga",
+            "Em Codax ameaça; em Mendinho consola",
+            "Nas duas é só paisagem, sem papel nenhum"
+          ],
+          "answer": 0,
+          "feedback": "Em Codax, o mar ouve: é a quem se pergunta. Em Mendinho, o mar cerca. A mesma espera do amigo, dois mares.",
+          "recycledFrom": "/pt/m1/licao-m1-f19/"
+        },
+        {
+          "id": "s01-q2",
+          "q": "Em «se vistes meu amigo?», quem pergunta é Martim Codax, a falar da sua amada.",
+          "options": [
+            "Verdadeiro",
+            "Falso"
+          ],
+          "answer": 1,
+          "feedback": "Falso: autor e voz não se confundem. Codax escreve; quem pergunta às ondas é uma rapariga à espera do «amigo».",
+          "recycledFrom": "/pt/m1/licao-m1-f19/"
+        },
+        {
+          "id": "s01-q3",
+          "q": "Em «e mais vos direi en», que marca evidencia a interpelação de um destinatário?",
+          "options": [
+            "O pronome «vos».",
+            "A referência a uma paisagem.",
+            "Uma indicação cénica."
+          ],
+          "answer": 0,
+          "feedback": "«Vos» marca a segunda pessoa: a voz dirige-se a alguém. A identificação do destinatário exige depois o contexto da cantiga."
+        }
+      ],
+      "writing": {
+        "minutes": 15,
+        "title": "Construir uma resposta fundamentada",
+        "prompt": "Compara a função do mar em duas cantigas que estudaste. Explica o estado de espírito de cada voz e apoia a comparação em duas referências breves.",
+        "instructions": [
+          "Lê o pedido e define o eixo da resposta antes de escrever.",
+          "Seleciona duas referências ou exemplos e explica o que demonstram.",
+          "Reserva os últimos dois minutos para reler e corrigir."
+        ],
+        "target": "80–120 palavras",
+        "criteria": [
+          "Respondi ao pedido: voz e natureza na lírica medieval.",
+          "Usei referências pertinentes e expliquei a sua relação com a interpretação.",
+          "Organizei as ideias com ligações e referentes claros.",
+          "Revi construção frásica, pontuação e ortografia."
+        ]
+      },
+      "correction": {
+        "model": "A mesma paisagem pode cumprir funções distintas. Em Ondas do mar de Vigo, a voz dirige às ondas uma pergunta sobre o amigo. Na cantiga de Mendinho, a água que sobe cerca a jovem e transforma a espera numa ameaça. A comparação não se limita a dizer que ambas falam de amor: mostra como a interpelação e a situação espacial constroem experiências diferentes da ausência.",
+        "steps": [
+          {
+            "label": "Cumprir o pedido",
+            "detail": "Confere se a resposta realiza a operação pedida nesta sessão: voz e natureza na lírica medieval."
+          },
+          {
+            "label": "Mostrar como se chega à interpretação",
+            "detail": "Localiza a relação entre cada referência e a ideia que ela sustenta. Uma resposta diferente da proposta pode ser válida se for coerente e fundamentada."
+          },
+          {
+            "label": "Rever a expressão",
+            "detail": "Escolhe uma frase e melhora a precisão de um referente, de um conector ou de uma construção. Explica o efeito da mudança."
+          }
+        ],
+        "pitfalls": [
+          "Substituir a análise por um rótulo sem demonstração.",
+          "Apresentar exemplos que não se relacionam com o pedido.",
+          "Copiar a proposta sem rever a primeira versão."
+        ],
+        "check": {
+          "id": "s01-check",
+          "q": "Depois da revisão: Mendinho (lição «Cercada pelas ondas»): «cercarom-mi as ondas». Codax: «se vistes meu amigo?». Que papel tem o mar em cada uma?",
+          "options": [
+            "Em Mendinho ameaça e cerca; em Codax ouve a pergunta, como confidente",
+            "Nas duas traz notícias do amigo",
+            "Nas duas afoga a rapariga",
+            "Em Codax ameaça; em Mendinho consola",
+            "Nas duas é só paisagem, sem papel nenhum"
+          ],
+          "answer": 0,
+          "feedback": "Em Codax, o mar ouve: é a quem se pergunta. Em Mendinho, o mar cerca. A mesma espera do amigo, dois mares.",
+          "recycledFrom": "/pt/m1/licao-m1-f19/"
+        },
+        "kind": "Orientação de correção"
+      },
+      "exit": "Reescreve uma frase da tua resposta para melhorar a relação entre uma ideia e a sua prova. Regista a alteração e o motivo.",
+      "alternatives": []
+    },
+    {
+      "id": "s02",
+      "order": 2,
+      "durationMinutes": 45,
+      "title": "Fernão Lopes: uma multidão em ação",
+      "group": "10.º ano",
+      "module": "M1",
+      "tags": [
+        "crónica",
+        "personagem coletiva",
+        "verbos",
+        "narração"
+      ],
+      "focus": "Ler o movimento coletivo na crónica",
+      "source": {
+        "title": "Fernão Lopes: uma multidão em ação",
+        "author": "Fernão Lopes",
+        "excerpt": "[1] O pajem do Mestre, que estava à porta, como lhe disseram que fosse pela vila, segundo já era percebido , começou d'ir rijamente e ao galope […], dizendo a altas vozes, bradando pela rua: «Matam o Mestre! Matam o Mestre nos paços da rainha! Acorrei ao Mestre, que o matam!» [2] Soaram as vozes do arruído pela cidade, ouvindo todos bradar que matavam o Mestre, e […] se moveram todos com mão armada, correndo à pressa para hu diziam que se esto fazia, pera lhe dar vida e escusar morte. [3] A gente começou de se ajuntar a ele, e era tanta que era estranha cousa de ver; não cabiam pelas ruas principais e atravessavam lugares escusos , desejando cada um de ser o primeiro […]. Vocabulário: percebido , combinado; rijamente , com força, depressa; bradando , gritando; arruído , barulho, alvoroço; hu , onde; esto , isto; pera , para; escusar , evitar; ajuntar , juntar; estranha cousa , coisa espantosa; escusos , afastados, escondidos Fernão Lopes, _Crónica de D. João I_ (edição de 1897), cap. XII (cap. 11 na numeração habitual), grafia atualizada; cortes marcados com […].\n\n[1] Ordenou o Mestre com as gentes da cidade, que fosse repartida a guarda dos muros pelos fidalgos e cidadãos […], e em cada uma quadrilha havia um sino pera repicar , quando tal cousa viesse, e como cada um ouvia o sino da sua quadrilha, logo todos direitamente corriam pera lá. Vocabulário: quadrilha , grupo encarregado de um troço da muralha; repicar , tocar; tal cousa , um ataque; direitamente , diretamente Fernão Lopes, _Crónica de D. João I_ (edição de 1897), cap. CXVI (cap. 115 na numeração habitual), grafia atualizada.",
+        "context": "Abre a leitura de apoio, lê o recorte indicado e identifica duas marcas relevantes antes de responder. O texto de origem mantém-se na ficha; esta sessão organiza o treino a partir dele.",
+        "url": "/pt/m1/licao-m1-f20/",
+        "note": "Recorte de leitura já utilizado no módulo. Consulta a ficha para o texto, a localização e as fontes completas."
+      },
+      "resources": [],
+      "warmup": [
+        {
+          "id": "s02-q1",
+          "q": "Como o pajem grita «Matam o Mestre!», fica provado que o Mestre estava a ser morto.",
+          "options": [
+            "Verdadeiro",
+            "Falso"
+          ],
+          "answer": 1,
+          "feedback": "Falso: o grito é a afirmação de uma personagem, e combinada. Produz a reação; não confirma o que anuncia.",
+          "recycledFrom": "/pt/m1/licao-m1-f20/"
+        },
+        {
+          "id": "s02-q2",
+          "q": "«pera lhe dar vida e escusar morte»: que inferência sobre a gente da cidade tem mais apoio?",
+          "options": [
+            "Acredita no grito e corre para salvar o Mestre",
+            "Conhece pessoalmente o Mestre, um a um",
+            "Corre para fugir da cidade",
+            "Sabe que o grito era combinado",
+            "Quer castigar o pajem pelo alarme"
+          ],
+          "answer": 0,
+          "feedback": "Dar vida, evitar a morte: o objetivo dito apoia a inferência. A cidade age como se o perigo fosse certo.",
+          "recycledFrom": "/pt/m1/licao-m1-f20/"
+        },
+        {
+          "id": "s02-q3",
+          "q": "«Ordenou o Mestre com as gentes da cidade»: o que mostra o «com» sobre a defesa?",
+          "options": [
+            "O Mestre decide junto com a cidade, não sozinho",
+            "O Mestre manda e a cidade só obedece",
+            "A cidade decide sem o Mestre",
+            "Os nobres ficam de fora da guarda",
+            "A cidade foge com o Mestre"
+          ],
+          "answer": 0,
+          "feedback": "«Ordenou o Mestre com as gentes»: a defesa é combinada com o povo, e a guarda repartida por fidalgos e cidadãos.",
+          "recycledFrom": "/pt/m1/licao-m1-f20/"
+        }
+      ],
+      "writing": {
+        "minutes": 15,
+        "title": "Construir uma resposta fundamentada",
+        "prompt": "Explica como uma sequência de ações transforma a população numa personagem coletiva. Relaciona duas escolhas narrativas com o efeito produzido no leitor.",
+        "instructions": [
+          "Lê o pedido e define o eixo da resposta antes de escrever.",
+          "Seleciona duas referências ou exemplos e explica o que demonstram.",
+          "Reserva os últimos dois minutos para reler e corrigir."
+        ],
+        "target": "80–120 palavras",
+        "criteria": [
+          "Respondi ao pedido: ler o movimento coletivo na crónica.",
+          "Usei referências pertinentes e expliquei a sua relação com a interpretação.",
+          "Organizei as ideias com ligações e referentes claros.",
+          "Revi construção frásica, pontuação e ortografia."
+        ]
+      },
+      "correction": {
+        "model": "A multidão deixa de ser mero cenário quando age, reage e comunica. A sucessão de verbos acelera o episódio; as vozes que circulam aproximam o leitor da agitação. Uma resposta fundamentada relaciona essas marcas com o protagonismo coletivo, em vez de apresentar uma lista de características de Fernão Lopes. As referências escolhidas devem pertencer ao excerto em análise.",
+        "steps": [
+          {
+            "label": "Cumprir o pedido",
+            "detail": "Confere se a resposta realiza a operação pedida nesta sessão: ler o movimento coletivo na crónica."
+          },
+          {
+            "label": "Mostrar como se chega à interpretação",
+            "detail": "Localiza a relação entre cada referência e a ideia que ela sustenta. Uma resposta diferente da proposta pode ser válida se for coerente e fundamentada."
+          },
+          {
+            "label": "Rever a expressão",
+            "detail": "Escolhe uma frase e melhora a precisão de um referente, de um conector ou de uma construção. Explica o efeito da mudança."
+          }
+        ],
+        "pitfalls": [
+          "Substituir a análise por um rótulo sem demonstração.",
+          "Apresentar exemplos que não se relacionam com o pedido.",
+          "Copiar a proposta sem rever a primeira versão."
+        ],
+        "check": {
+          "id": "s02-check",
+          "q": "Depois da revisão: Como o pajem grita «Matam o Mestre!», fica provado que o Mestre estava a ser morto.",
+          "options": [
+            "Verdadeiro",
+            "Falso"
+          ],
+          "answer": 1,
+          "feedback": "Falso: o grito é a afirmação de uma personagem, e combinada. Produz a reação; não confirma o que anuncia.",
+          "recycledFrom": "/pt/m1/licao-m1-f20/"
+        },
+        "kind": "Orientação de correção"
+      },
+      "exit": "Reescreve uma frase da tua resposta para melhorar a relação entre uma ideia e a sua prova. Regista a alteração e o motivo.",
+      "alternatives": []
+    },
+    {
+      "id": "s03",
+      "order": 3,
+      "durationMinutes": 45,
+      "title": "Gil Vicente: desejo, escolha e sátira",
+      "group": "10.º ano",
+      "module": "M2",
+      "tags": [
+        "teatro",
+        "sátira",
+        "fala",
+        "ação"
+      ],
+      "focus": "Interpretar o conflito na Farsa de Inês Pereira",
+      "source": {
+        "title": "Gil Vicente: desejo, escolha e sátira",
+        "author": "Gil Vicente",
+        "excerpt": "",
+        "context": "Abre a leitura de apoio, lê o recorte indicado e identifica duas marcas relevantes antes de responder. O texto de origem mantém-se na ficha; esta sessão organiza o treino a partir dele.",
+        "url": "/pt/m2/licao-m2-f08/",
+        "note": "Materiais existentes reciclados; os recortes e as fontes estão identificados na ficha de apoio."
+      },
+      "resources": [],
+      "warmup": [
+        {
+          "id": "s03-q1",
+          "q": "«Coitada, assi hei-de estar / Encerrada nesta casa» prova…",
+          "options": [
+            "a escolha calculada de Inês, no fim",
+            "o desejo de liberdade de Inês, no início",
+            "a opinião da Mãe sobre a preguiça de Inês",
+            "a mudança de Inês depois das janelas pregadas"
+          ],
+          "answer": 1,
+          "feedback": "Inês, sozinha a lavrar, queixa-se do encerramento: é a prova do desejo de liberdade, no início.",
+          "recycledFrom": "/pt/m2/licao-m2-f08/"
+        },
+        {
+          "id": "s03-q2",
+          "q": "«Quero asno que me leve, / E não cavalo folão»: quem fala e quando?",
+          "options": [
+            "Inês, viúva, ao escolher Pêro Marques",
+            "Inês, solteira, ao recusar Pêro Marques",
+            "Lianor Vaz, ao propor Pêro Marques",
+            "Inês, casada, ao pedir a Pêro que a leve"
+          ],
+          "answer": 0,
+          "feedback": "Inês, já viúva e sozinha em cena, decide a frio: a citação prova a escolha calculada.",
+          "recycledFrom": "/pt/m2/licao-m2-f08/"
+        },
+        {
+          "id": "s03-q3",
+          "q": "O provérbio «mais quero asno que me leve que cavalo que me derrube» orienta a farsa. Que leitura evita reduzir a peça a uma simples moral?",
+          "options": [
+            "Relacionar o provérbio com as escolhas de Inês e os seus efeitos cómicos.",
+            "Aplicar o provérbio apenas ao comportamento dos animais.",
+            "Supor que todas as personagens defendem a mesma ideia."
+          ],
+          "answer": 0,
+          "feedback": "A sátira constrói-se nas ações e nos contrastes. O provérbio é um eixo de leitura, não substitui a análise da peça."
+        }
+      ],
+      "writing": {
+        "minutes": 15,
+        "title": "Construir uma resposta fundamentada",
+        "prompt": "Defende uma interpretação da mudança de Inês entre as duas escolhas de casamento. Analisa uma fala e uma ação, distinguindo a perspetiva da personagem do efeito satírico.",
+        "instructions": [
+          "Lê o pedido e define o eixo da resposta antes de escrever.",
+          "Seleciona duas referências ou exemplos e explica o que demonstram.",
+          "Reserva os últimos dois minutos para reler e corrigir."
+        ],
+        "target": "80–120 palavras",
+        "criteria": [
+          "Respondi ao pedido: interpretar o conflito na Farsa de Inês Pereira.",
+          "Usei referências pertinentes e expliquei a sua relação com a interpretação.",
+          "Organizei as ideias com ligações e referentes claros.",
+          "Revi construção frásica, pontuação e ortografia."
+        ]
+      },
+      "correction": {
+        "model": "A mudança de Inês pode ser lida como uma aprendizagem pragmática: depois do casamento que restringe a sua liberdade, procura uma relação em que conserve margem de ação. A interpretação exige mostrar o contraste entre as escolhas com sinais da peça. Não basta reduzir Inês a uma qualidade moral. Também importa perceber como o desfecho convoca o provérbio e expõe interesses que as falas procuram disfarçar.",
+        "steps": [
+          {
+            "label": "Cumprir o pedido",
+            "detail": "Confere se a resposta realiza a operação pedida nesta sessão: interpretar o conflito na farsa de inês pereira."
+          },
+          {
+            "label": "Mostrar como se chega à interpretação",
+            "detail": "Localiza a relação entre cada referência e a ideia que ela sustenta. Uma resposta diferente da proposta pode ser válida se for coerente e fundamentada."
+          },
+          {
+            "label": "Rever a expressão",
+            "detail": "Escolhe uma frase e melhora a precisão de um referente, de um conector ou de uma construção. Explica o efeito da mudança."
+          }
+        ],
+        "pitfalls": [
+          "Substituir a análise por um rótulo sem demonstração.",
+          "Apresentar exemplos que não se relacionam com o pedido.",
+          "Copiar a proposta sem rever a primeira versão."
+        ],
+        "check": {
+          "id": "s03-check",
+          "q": "Depois da revisão: «Coitada, assi hei-de estar / Encerrada nesta casa» prova…",
+          "options": [
+            "a escolha calculada de Inês, no fim",
+            "o desejo de liberdade de Inês, no início",
+            "a opinião da Mãe sobre a preguiça de Inês",
+            "a mudança de Inês depois das janelas pregadas"
+          ],
+          "answer": 1,
+          "feedback": "Inês, sozinha a lavrar, queixa-se do encerramento: é a prova do desejo de liberdade, no início.",
+          "recycledFrom": "/pt/m2/licao-m2-f08/"
+        },
+        "kind": "Orientação de correção"
+      },
+      "exit": "Reescreve uma frase da tua resposta para melhorar a relação entre uma ideia e a sua prova. Regista a alteração e o motivo.",
+      "alternatives": [
+        {
+          "label": "Auto da Feira",
+          "instruction": "Seleciona uma fala e uma ação de uma cena estudada. Explica o alvo da crítica e o efeito satírico; substitui a comparação entre os casamentos pela análise dos valores em confronto.",
+          "url": "https://www.dge.mec.pt/aprendizagens-essenciais-ensino-secundario"
+        }
+      ]
+    },
+    {
+      "id": "s04",
+      "order": 4,
+      "durationMinutes": 45,
+      "title": "Camões lírico: o que a forma faz sentir",
+      "group": "10.º ano",
+      "module": "M3",
+      "tags": [
+        "soneto",
+        "redondilha",
+        "recursos expressivos",
+        "comparação"
+      ],
+      "focus": "Relacionar construção formal e experiência amorosa",
+      "source": {
+        "title": "Camões lírico: o que a forma faz sentir",
+        "author": "Luís de Camões",
+        "excerpt": "Alma minha gentil , que te partiste Tão cedo desta vida descontente, Repousa lá no céu eternamente, E viva eu cá na terra sempre triste. Se lá no assento etéreo , onde subiste, Memória desta vida se consente , Não te esqueças daquele amor ardente Que já nos olhos meus tão puro viste. E se vires que pode merecer-te Alguma cousa a dor que me ficou Da mágoa, sem remédio, de perder-te,\n\nRoga a Deus, que teus anos encurtou, Que tão cedo de cá me leve a ver-te, Quão cedo de meus olhos te levou. Vocabulário: gentil , nobre; assento etéreo , céu; se consente , é permitida; roga , pede Luís de Camões, _Rhythmas_ (1595), soneto XIII (grafia modernizada).",
+        "context": "Abre a leitura de apoio, lê o recorte indicado e identifica duas marcas relevantes antes de responder. O texto de origem mantém-se na ficha; esta sessão organiza o treino a partir dele.",
+        "url": "/pt/m3/licao-m3-f09/",
+        "note": "Recorte de leitura já utilizado no módulo. Consulta a ficha para o texto, a localização e as fontes completas."
+      },
+      "resources": [
+        {
+          "label": "Ler redondilhas: Leonor e o perdigão",
+          "url": "/pt/m3/licao-m3-f05/"
+        }
+      ],
+      "warmup": [
+        {
+          "id": "s04-q1",
+          "q": "Em «Alma minha gentil», «gentil» significa, neste contexto…",
+          "options": [
+            "Nobre, elevada.",
+            "Apenas educada numa conversa.",
+            "Jovem e despreocupada."
+          ],
+          "answer": 0,
+          "feedback": "O adjetivo valoriza a pessoa evocada e participa na sua idealização; deve ser lido no contexto elegíaco."
+        },
+        {
+          "id": "s04-q2",
+          "q": "«Tão cedo desta vida descontente»: quem partiu descontente da vida?",
+          "options": [
+            "A amada, que morreu cedo",
+            "O sujeito, que ficou na terra",
+            "Deus, que a levou",
+            "O Amor, que o persegue"
+          ],
+          "answer": 0,
+          "feedback": "A amada: a alma gentil partiu cedo e descontente desta vida.",
+          "recycledFrom": "/pt/m3/licao-m3-f09/"
+        },
+        {
+          "id": "s04-q3",
+          "q": "«Que tão cedo de cá me leve a ver-te, / Quão cedo de meus olhos te levou»: que recurso é?",
+          "options": [
+            "Paralelismo",
+            "Apóstrofe",
+            "Hipérbole",
+            "Metáfora",
+            "Anáfora"
+          ],
+          "answer": 0,
+          "feedback": "Paralelismo: a mesma construção em dois versos; pede morrer tão depressa como ela.",
+          "recycledFrom": "/pt/m3/licao-m3-f09/"
+        }
+      ],
+      "writing": {
+        "minutes": 15,
+        "title": "Construir uma resposta fundamentada",
+        "prompt": "Seleciona um soneto e uma redondilha estudados. Num parágrafo comparativo, explica uma aproximação temática e uma diferença no modo de representar a experiência.",
+        "instructions": [
+          "Lê o pedido e define o eixo da resposta antes de escrever.",
+          "Seleciona duas referências ou exemplos e explica o que demonstram.",
+          "Reserva os últimos dois minutos para reler e corrigir."
+        ],
+        "target": "80–120 palavras",
+        "criteria": [
+          "Respondi ao pedido: relacionar construção formal e experiência amorosa.",
+          "Usei referências pertinentes e expliquei a sua relação com a interpretação.",
+          "Organizei as ideias com ligações e referentes claros.",
+          "Revi construção frásica, pontuação e ortografia."
+        ]
+      },
+      "correction": {
+        "model": "A aproximação temática não elimina a diferença entre as vozes. Uma resposta pode partir da perda ou do desejo comum aos textos e depois analisar o que o ritmo, a imagem ou o contraste acrescentam em cada um. Identificar soneto e redondilha situa as formas, mas não explica, por si só, o seu efeito. A comparação deve regressar às palavras escolhidas, evitando atribuir ao autor todos os sentimentos do sujeito poético.",
+        "steps": [
+          {
+            "label": "Cumprir o pedido",
+            "detail": "Confere se a resposta realiza a operação pedida nesta sessão: relacionar construção formal e experiência amorosa."
+          },
+          {
+            "label": "Mostrar como se chega à interpretação",
+            "detail": "Localiza a relação entre cada referência e a ideia que ela sustenta. Uma resposta diferente da proposta pode ser válida se for coerente e fundamentada."
+          },
+          {
+            "label": "Rever a expressão",
+            "detail": "Escolhe uma frase e melhora a precisão de um referente, de um conector ou de uma construção. Explica o efeito da mudança."
+          }
+        ],
+        "pitfalls": [
+          "Substituir a análise por um rótulo sem demonstração.",
+          "Apresentar exemplos que não se relacionam com o pedido.",
+          "Copiar a proposta sem rever a primeira versão."
+        ],
+        "check": {
+          "id": "s04-check",
+          "q": "Depois da revisão: Em «Alma minha gentil», «gentil» significa, neste contexto…",
+          "options": [
+            "Nobre, elevada.",
+            "Apenas educada numa conversa.",
+            "Jovem e despreocupada."
+          ],
+          "answer": 0,
+          "feedback": "O adjetivo valoriza a pessoa evocada e participa na sua idealização; deve ser lido no contexto elegíaco."
+        },
+        "kind": "Orientação de correção"
+      },
+      "exit": "Reescreve uma frase da tua resposta para melhorar a relação entre uma ideia e a sua prova. Regista a alteração e o motivo.",
+      "alternatives": []
+    },
+    {
+      "id": "s05",
+      "order": 5,
+      "durationMinutes": 45,
+      "title": "Os Lusíadas: celebrar e interrogar",
+      "group": "10.º ano",
+      "module": "M3",
+      "tags": [
+        "epopeia",
+        "planos narrativos",
+        "reflexões",
+        "argumentação"
+      ],
+      "focus": "Explicar o sentido de uma reflexão do Poeta",
+      "source": {
+        "title": "Os Lusíadas: celebrar e interrogar",
+        "author": "Luís de Camões",
+        "excerpt": "No mar tanta tormenta, e tanto dano, Tantas vezes a morte apercebida ! Na terra tanta guerra, tanto engano, Tanta necessidade avorrecida ! Onde pode acolher-se um fraco humano, Onde terá segura a curta vida, Que não se arme, e se indigne o Céu sereno Contra um bicho da terra tão pequeno? Vocabulário: apercebida , preparada, à espreita; avorrecida , detestável Luís de Camões, _Os Lusíadas_ (1572), I, 106.\n\nNas naus estar se deixa vagaroso , Até ver o que o tempo lhe descobre: Que não se fia já do cobiçoso Regedor corrompido e pouco nobre. Veja agora o juízo curioso Quanto no rico, assim como no pobre, Pode o vil interesse e sede inimiga Do dinheiro, que a tudo nos obriga.",
+        "context": "Abre a leitura de apoio, lê o recorte indicado e identifica duas marcas relevantes antes de responder. O texto de origem mantém-se na ficha; esta sessão organiza o treino a partir dele.",
+        "url": "/pt/m3/licao-m3-f13/",
+        "note": "Recorte de leitura já utilizado no módulo. Consulta a ficha para o texto, a localização e as fontes completas."
+      },
+      "resources": [],
+      "warmup": [
+        {
+          "id": "s05-q1",
+          "q": "«No mar tanta tormenta» e «Na terra tanta guerra»: que recurso opõe os dois versos?",
+          "options": [
+            "Antítese mar/terra",
+            "Metáfora do bicho",
+            "Apóstrofe ao Céu",
+            "Gradação",
+            "Personificação"
+          ],
+          "answer": 0,
+          "feedback": "Antítese mar/terra: dois espaços, o mesmo medo; e a anáfora «tanta/tanto» acumula.",
+          "recycledFrom": "/pt/m3/licao-m3-f13/"
+        },
+        {
+          "id": "s05-q2",
+          "q": "«Onde pode acolher-se um fraco humano, / Onde terá segura a curta vida»: que tipo de frase é?",
+          "options": [
+            "Interrogação retórica",
+            "Exclamação",
+            "Declarativa em gradação",
+            "Imperativo",
+            "Apóstrofe"
+          ],
+          "answer": 0,
+          "feedback": "Interrogação retórica: pergunta que não espera resposta.",
+          "recycledFrom": "/pt/m3/licao-m3-f13/"
+        },
+        {
+          "id": "s05-q3",
+          "q": "«Do dinheiro, que a tudo nos obriga»: o que diz o verso do dinheiro?",
+          "options": [
+            "Que nos obriga a tudo, ricos e pobres",
+            "Que só obriga os pobres",
+            "Que só obriga os reis",
+            "Que liberta quem o tem"
+          ],
+          "answer": 0,
+          "feedback": "A tudo, no rico como no pobre: a «sede inimiga» do dinheiro obriga toda a gente.",
+          "recycledFrom": "/pt/m3/licao-m3-f13/"
+        }
+      ],
+      "writing": {
+        "minutes": 15,
+        "title": "Construir uma resposta fundamentada",
+        "prompt": "Mostra como uma reflexão do Poeta articula o relato da viagem com uma preocupação humana ou cívica. Analisa duas marcas do excerto e o efeito da mudança de perspetiva.",
+        "instructions": [
+          "Lê o pedido e define o eixo da resposta antes de escrever.",
+          "Seleciona duas referências ou exemplos e explica o que demonstram.",
+          "Reserva os últimos dois minutos para reler e corrigir."
+        ],
+        "target": "80–120 palavras",
+        "criteria": [
+          "Respondi ao pedido: explicar o sentido de uma reflexão do Poeta.",
+          "Usei referências pertinentes e expliquei a sua relação com a interpretação.",
+          "Organizei as ideias com ligações e referentes claros.",
+          "Revi construção frásica, pontuação e ortografia."
+        ]
+      },
+      "correction": {
+        "model": "A reflexão interrompe a ação para considerar o seu alcance. A voz que comenta pode interrogar a fragilidade humana, a ambição ou as condições do reconhecimento. Uma resposta deve identificar a preocupação efetivamente presente no excerto, explicar como uma imagem ou uma oposição a torna visível e relacionar esse comentário com o plano da viagem. Não é necessário transformar toda a reflexão numa condenação dos descobrimentos.",
+        "steps": [
+          {
+            "label": "Cumprir o pedido",
+            "detail": "Confere se a resposta realiza a operação pedida nesta sessão: explicar o sentido de uma reflexão do poeta."
+          },
+          {
+            "label": "Mostrar como se chega à interpretação",
+            "detail": "Localiza a relação entre cada referência e a ideia que ela sustenta. Uma resposta diferente da proposta pode ser válida se for coerente e fundamentada."
+          },
+          {
+            "label": "Rever a expressão",
+            "detail": "Escolhe uma frase e melhora a precisão de um referente, de um conector ou de uma construção. Explica o efeito da mudança."
+          }
+        ],
+        "pitfalls": [
+          "Substituir a análise por um rótulo sem demonstração.",
+          "Apresentar exemplos que não se relacionam com o pedido.",
+          "Copiar a proposta sem rever a primeira versão."
+        ],
+        "check": {
+          "id": "s05-check",
+          "q": "Depois da revisão: «No mar tanta tormenta» e «Na terra tanta guerra»: que recurso opõe os dois versos?",
+          "options": [
+            "Antítese mar/terra",
+            "Metáfora do bicho",
+            "Apóstrofe ao Céu",
+            "Gradação",
+            "Personificação"
+          ],
+          "answer": 0,
+          "feedback": "Antítese mar/terra: dois espaços, o mesmo medo; e a anáfora «tanta/tanto» acumula.",
+          "recycledFrom": "/pt/m3/licao-m3-f13/"
+        },
+        "kind": "Orientação de correção"
+      },
+      "exit": "Reescreve uma frase da tua resposta para melhorar a relação entre uma ideia e a sua prova. Regista a alteração e o motivo.",
+      "alternatives": []
+    },
+    {
+      "id": "s06",
+      "order": 6,
+      "durationMinutes": 45,
+      "title": "Vieira: os peixes são o argumento",
+      "group": "11.º ano",
+      "module": "M4",
+      "tags": [
+        "sermão",
+        "alegoria",
+        "persuasão",
+        "recursos expressivos"
+      ],
+      "focus": "Explicar a crítica e a estratégia de persuasão",
+      "source": {
+        "title": "Vieira: os peixes são o argumento",
+        "author": "Padre António Vieira",
+        "excerpt": "[1] Ou é porque o sal não salga, e os pregadores não pregam a verdadeira doutrina ; ou porque a terra se não deixa salgar, e os ouvintes, sendo verdadeira a doutrina que lhes dão, a não querem receber. [2] Enfim, que havemos de pregar hoje aos peixes? Nunca pior auditório . Ao menos têm os peixes duas boas qualidades de ouvintes: ouvem e não falam. [3] Uma é louvar o bem, outra repreender o mal: louvar o bem para o conservar e repreender o mal para preservar dele . Vocabulário: o sal , os pregadores (Cristo chamou aos apóstolos «o sal da terra»); a terra , os ouvintes; doutrina , ensino; auditório , quem ouve; preservar dele , guardar do mal Padre António Vieira, _Sermão de Santo António_ (1654), ortografia atualizada, caps. I e II.\n\n[1] É possível que, sendo vós uns peixinhos tão pequenos, haveis de ser as roncas do mar? [2] Pegadores chamam-se estes de que agora falo, e com grande propriedade, porque, sendo pequenos, não só se chegam a outros maiores, mas de tal sorte se lhes pegam aos costados , que nunca os desferram . […] e assim lhes sustenta o peso e mais a fome. [3] Dizei-me, voadores , não vos fez Deus peixes? Pois porque vos quereis ser aves? […] ao voador mata-o a vaidade de voar, e a sua isca é o vento.",
+        "context": "Abre a leitura de apoio, lê o recorte indicado e identifica duas marcas relevantes antes de responder. O texto de origem mantém-se na ficha; esta sessão organiza o treino a partir dele.",
+        "url": "/pt/m4/licao-m4-f25/",
+        "note": "Recorte de leitura já utilizado no módulo. Consulta a ficha para o texto, a localização e as fontes completas."
+      },
+      "resources": [],
+      "warmup": [
+        {
+          "id": "s06-q1",
+          "q": "Na alegoria do sal, quem pode falhar?",
+          "options": [
+            "Os pregadores (o sal) ou os ouvintes (a terra): pode falhar a pregação ou a receção",
+            "Só os ouvintes: o sal nunca falha",
+            "Ninguém: sal e terra são só comida e chão"
+          ],
+          "answer": 0,
+          "feedback": "As duas responsabilidades: «o sal não salga» (os pregadores) ou «a terra se não deixa salgar» (os ouvintes). O texto nomeia os dois.",
+          "recycledFrom": "/pt/m4/licao-m4-f25/"
+        },
+        {
+          "id": "s06-q2",
+          "q": "Louvar os peixes por ouvirem calados é também uma crítica aos homens.",
+          "options": [
+            "Verdadeiro",
+            "Falso"
+          ],
+          "answer": 0,
+          "feedback": "Verdadeiro: o contraste faz a qualidade dos peixes corrigir os homens, que falam e não ouvem. «Nunca pior auditório» é irónico.",
+          "recycledFrom": "/pt/m4/licao-m4-f25/"
+        },
+        {
+          "id": "s06-q3",
+          "q": "«Haveis de ser as roncas do mar?»: que contraste faz a censura?",
+          "options": [
+            "Pequenos e barulhentos: a fanfarronice de quem faz mais ruído do que vale",
+            "Grandes e calados: a preguiça",
+            "Pequenos e calados: a timidez"
+          ],
+          "answer": 0,
+          "feedback": "Pequenez contra ruído: a pergunta retórica já contém o juízo. Não se quer medir o som; censura-se o fanfarrão.",
+          "recycledFrom": "/pt/m4/licao-m4-f25/"
+        }
+      ],
+      "writing": {
+        "minutes": 15,
+        "title": "Construir uma resposta fundamentada",
+        "prompt": "Explica a função argumentativa de um louvor ou de uma repreensão aos peixes. Liga uma característica do animal à conduta humana visada e analisa um recurso de persuasão.",
+        "instructions": [
+          "Lê o pedido e define o eixo da resposta antes de escrever.",
+          "Seleciona duas referências ou exemplos e explica o que demonstram.",
+          "Reserva os últimos dois minutos para reler e corrigir."
+        ],
+        "target": "80–120 palavras",
+        "criteria": [
+          "Respondi ao pedido: explicar a crítica e a estratégia de persuasão.",
+          "Usei referências pertinentes e expliquei a sua relação com a interpretação.",
+          "Organizei as ideias com ligações e referentes claros.",
+          "Revi construção frásica, pontuação e ortografia."
+        ]
+      },
+      "correction": {
+        "model": "O exemplo do peixe ganha sentido na passagem para a conduta humana. O pregador não apresenta apenas uma descrição zoológica: seleciona características para tornar a crítica reconhecível e persuasiva. A resposta deve explicitar essa relação e analisar como a interpelação, a oposição ou a gradação orientam o auditório. Nomear um recurso expressivo sem explicar a sua função deixa a interpretação incompleta.",
+        "steps": [
+          {
+            "label": "Cumprir o pedido",
+            "detail": "Confere se a resposta realiza a operação pedida nesta sessão: explicar a crítica e a estratégia de persuasão."
+          },
+          {
+            "label": "Mostrar como se chega à interpretação",
+            "detail": "Localiza a relação entre cada referência e a ideia que ela sustenta. Uma resposta diferente da proposta pode ser válida se for coerente e fundamentada."
+          },
+          {
+            "label": "Rever a expressão",
+            "detail": "Escolhe uma frase e melhora a precisão de um referente, de um conector ou de uma construção. Explica o efeito da mudança."
+          }
+        ],
+        "pitfalls": [
+          "Substituir a análise por um rótulo sem demonstração.",
+          "Apresentar exemplos que não se relacionam com o pedido.",
+          "Copiar a proposta sem rever a primeira versão."
+        ],
+        "check": {
+          "id": "s06-check",
+          "q": "Depois da revisão: Na alegoria do sal, quem pode falhar?",
+          "options": [
+            "Os pregadores (o sal) ou os ouvintes (a terra): pode falhar a pregação ou a receção",
+            "Só os ouvintes: o sal nunca falha",
+            "Ninguém: sal e terra são só comida e chão"
+          ],
+          "answer": 0,
+          "feedback": "As duas responsabilidades: «o sal não salga» (os pregadores) ou «a terra se não deixa salgar» (os ouvintes). O texto nomeia os dois.",
+          "recycledFrom": "/pt/m4/licao-m4-f25/"
+        },
+        "kind": "Orientação de correção"
+      },
+      "exit": "Reescreve uma frase da tua resposta para melhorar a relação entre uma ideia e a sua prova. Regista a alteração e o motivo.",
+      "alternatives": []
+    },
+    {
+      "id": "s07",
+      "order": 7,
+      "durationMinutes": 45,
+      "title": "Frei Luís de Sousa: o que a cena revela",
+      "group": "11.º ano",
+      "module": "M4",
+      "tags": [
+        "drama",
+        "didascália",
+        "reconhecimento",
+        "tensão"
+      ],
+      "focus": "Relacionar informação, reconhecimento e efeito dramático",
+      "source": {
+        "title": "Frei Luís de Sousa: o que a cena revela",
+        "author": "Almeida Garrett",
+        "excerpt": "[1] ( Arrebata duas tochas das mãos dos criados, corre à porta da esquerda, atira com uma para dentro: e vê-se atear logo uma labareda imensa. Vai ao fundo, atira a outra tocha; e sucede o mesmo. Ouve-se alarido de fora.) [2] MADALENA — Que fazes?… que fizeste? Que é isto, oh meu Deus! [3] MANUEL, tranquilamente — Ilumino a minha casa para receber os muito poderosos e excelentes senhores governadores destes reinos. Suas excelências podem vir quando quiserem. Vocabulário: arrebata , agarra à força; atear , acender; alarido , gritaria; governadores , os que governam Portugal em nome do rei de Castela; didascália , indicação de cena entre parênteses Almeida Garrett, _Frei Luís de Sousa_ (1844), ortografia atualizada, ato I, cenas XI e XII.\n\n[1] MARIA — Oh! mas é verdade… vinde cá : (Leva-o diante dos três retratos que estão no fundo; e apontando para o de D. João ) de quem é este retrato aqui, Telmo? [2] TELMO, olha, e vira a cara de repente — Esse é… há de ser… é um da família, destes senhores da casa de Vimioso que aqui estão tantos. [3] MARIA, ameaçando-o com o dedo — Tu não dizes a verdade, Telmo.",
+        "context": "Abre a leitura de apoio, lê o recorte indicado e identifica duas marcas relevantes antes de responder. O texto de origem mantém-se na ficha; esta sessão organiza o treino a partir dele.",
+        "url": "/pt/m4/licao-m4-f26/",
+        "note": "Recorte de leitura já utilizado no módulo. Consulta a ficha para o texto, a localização e as fontes completas."
+      },
+      "resources": [],
+      "warmup": [
+        {
+          "id": "s07-q1",
+          "q": "Manuel de Sousa incendeia o palácio. O que acrescenta uma didascália que mostra tochas e labaredas?",
+          "options": [
+            "Torna visível a ação e orienta a sua realização em cena.",
+            "É uma fala que Madalena deve dizer.",
+            "Prova, por si só, que todas as personagens conheciam o plano."
+          ],
+          "answer": 0,
+          "feedback": "A didascália orienta a representação. A informação que cada personagem possui tem de ser verificada nas falas e ações."
+        },
+        {
+          "id": "s07-q2",
+          "q": "Porque é irónica a fala «Ilumino a minha casa para receber os senhores governadores»?",
+          "options": [
+            "Anuncia uma receção e, na ação, destrói a casa para a não ceder",
+            "Manuel não sabe que a casa está a arder",
+            "Os governadores pediram que a casa ardesse"
+          ],
+          "answer": 0,
+          "feedback": "Hospitalidade nas palavras, recusa no gesto: a fórmula de receção descreve um incêndio. «Tranquilamente» reforça o desafio.",
+          "recycledFrom": "/pt/m4/licao-m4-f26/"
+        },
+        {
+          "id": "s07-q3",
+          "q": "Madalena sabia do plano de Manuel antes de ver o fogo.",
+          "options": [
+            "Verdadeiro",
+            "Falso"
+          ],
+          "answer": 1,
+          "feedback": "Falso: «Que fazes?… que fizeste?» mostra que não sabia. O público viu as tochas antes dela.",
+          "recycledFrom": "/pt/m4/licao-m4-f26/"
+        }
+      ],
+      "writing": {
+        "minutes": 15,
+        "title": "Construir uma resposta fundamentada",
+        "prompt": "Analisa a diferença entre o que uma personagem sabe e aquilo que o público pode perceber numa cena estudada. Explica o efeito de uma fala e de uma indicação cénica.",
+        "instructions": [
+          "Lê o pedido e define o eixo da resposta antes de escrever.",
+          "Seleciona duas referências ou exemplos e explica o que demonstram.",
+          "Reserva os últimos dois minutos para reler e corrigir."
+        ],
+        "target": "80–120 palavras",
+        "criteria": [
+          "Respondi ao pedido: relacionar informação, reconhecimento e efeito dramático.",
+          "Usei referências pertinentes e expliquei a sua relação com a interpretação.",
+          "Organizei as ideias com ligações e referentes claros.",
+          "Revi construção frásica, pontuação e ortografia."
+        ]
+      },
+      "correction": {
+        "model": "Uma cena produz tensão quando as personagens interpretam sinais de maneiras diferentes. O público pode antecipar uma ameaça que uma personagem ainda não reconhece. A resposta deve situar a cena, selecionar uma fala e uma indicação cénica e explicar como ambas fazem avançar o conflito. O conhecimento do desfecho ajuda a interpretar, mas não autoriza acrescentar à personagem, naquele momento, informações que ainda não possui.",
+        "steps": [
+          {
+            "label": "Cumprir o pedido",
+            "detail": "Confere se a resposta realiza a operação pedida nesta sessão: relacionar informação, reconhecimento e efeito dramático."
+          },
+          {
+            "label": "Mostrar como se chega à interpretação",
+            "detail": "Localiza a relação entre cada referência e a ideia que ela sustenta. Uma resposta diferente da proposta pode ser válida se for coerente e fundamentada."
+          },
+          {
+            "label": "Rever a expressão",
+            "detail": "Escolhe uma frase e melhora a precisão de um referente, de um conector ou de uma construção. Explica o efeito da mudança."
+          }
+        ],
+        "pitfalls": [
+          "Substituir a análise por um rótulo sem demonstração.",
+          "Apresentar exemplos que não se relacionam com o pedido.",
+          "Copiar a proposta sem rever a primeira versão."
+        ],
+        "check": {
+          "id": "s07-check",
+          "q": "Depois da revisão: Manuel de Sousa incendeia o palácio. O que acrescenta uma didascália que mostra tochas e labaredas?",
+          "options": [
+            "Torna visível a ação e orienta a sua realização em cena.",
+            "É uma fala que Madalena deve dizer.",
+            "Prova, por si só, que todas as personagens conheciam o plano."
+          ],
+          "answer": 0,
+          "feedback": "A didascália orienta a representação. A informação que cada personagem possui tem de ser verificada nas falas e ações."
+        },
+        "kind": "Orientação de correção"
+      },
+      "exit": "Reescreve uma frase da tua resposta para melhorar a relação entre uma ideia e a sua prova. Regista a alteração e o motivo.",
+      "alternatives": []
+    },
+    {
+      "id": "s08",
+      "order": 8,
+      "durationMinutes": 45,
+      "title": "Prosa romântica: paixão e condicionamento",
+      "group": "11.º ano",
+      "module": "M5",
+      "tags": [
+        "romantismo",
+        "narrador",
+        "conflito",
+        "causalidade"
+      ],
+      "focus": "Relacionar escolhas individuais e regras sociais",
+      "source": {
+        "title": "Prosa romântica: paixão e condicionamento",
+        "author": "Camilo Castelo Branco",
+        "excerpt": "[1] Folheando os livros de antigos assentamentos , no cartorio das cadêas da Relação do Porto, li, no das entradas dos presos desde 1803 a 1805, a folhas 232 , o seguinte: [2] Simão Antonio Botelho, que assim disse chamar-se, ser solteiro, e estudante na Universidade de Coimbra, natural da cidade de Lisboa, e assistente na occasião de sua prisão na cidade de Vizeu, idade de dezoito annos, filho de Domingos José Correia Botelho e de D. Rita Preciosa Caldeirão Castello-Branco, estatura ordinaria, cara redonda, olhos castanhos, cabello e barba preta, vestido com jaqueta de baetão azul, collête de fustão pintado e calça de panno pedrez . E fiz este assento, que assignei. [3] Filippe Moreira Dias .\n\n[4] Á margem esquerda d'este assento está escripto: Foi para a India em 17 de Março de 1807 . [5] Não será fiar demasiadamente na sensibilidade do leitor, se cuido que o degredo de um moço de dezoito annos lhe havia de fazer dó. [6] Dezoito annos! O arrebol dourado e escarlate da manhã da vida! As louçanias do coração que ainda não sonha em fructos, e todo se embalsama no perfume das flôres! Dezoito annos! O amor d'aquella idade! A passagem do seio da familia, dos braços de mãe, dos beijos das irmãs para as caricias mais dôces da virgem, que se lhe abre ao lado como flôr da mesma sazão e dos mesmos aromas, e á mesma hora da vida! Dezoito annos!... E degradado da patria, do amor, e da familia! Nunca mais o ceo de Portugal, nem liberdade, nem irmãos, nem mãe, nem rehabilitação, nem dignidade, nem um amigo!... É triste!",
+        "context": "Abre a leitura de apoio, lê o recorte indicado e identifica duas marcas relevantes antes de responder. O texto de origem mantém-se na ficha; esta sessão organiza o treino a partir dele.",
+        "url": "/pt/m5/licao-m5-f02/",
+        "note": "Recorte de leitura já utilizado no módulo. Consulta a ficha para o texto, a localização e as fontes completas."
+      },
+      "resources": [],
+      "warmup": [
+        {
+          "id": "s08-q1",
+          "q": "«natural da cidade de Lisboa, e assistente na occasião de sua prisão na cidade de Vizeu»: o que diz?",
+          "options": [
+            "Nasceu em Lisboa e vivia em Viseu",
+            "Nasceu em Viseu e vivia em Coimbra",
+            "Nasceu no Porto e vivia em Lisboa",
+            "Nasceu em Coimbra e vivia no Porto"
+          ],
+          "answer": 0,
+          "feedback": "Natural de Lisboa, assistente em Viseu: «assistente» é residente; a prisão foi em Viseu.",
+          "recycledFrom": "/pt/m5/licao-m5-f02/"
+        },
+        {
+          "id": "s08-q2",
+          "q": "A nota sobre a ida para a Índia está escrita no fim do assento, depois da assinatura.",
+          "options": [
+            "Verdadeiro",
+            "Falso"
+          ],
+          "answer": 1,
+          "feedback": "Falso: está «á margem esquerda d'este assento», escrita depois, à parte; o assento acaba na assinatura.",
+          "recycledFrom": "/pt/m5/licao-m5-f02/"
+        },
+        {
+          "id": "s08-q3",
+          "q": "«o degredo de um moço de dezoito annos lhe havia de fazer dó»: que reação espera o narrador?",
+          "options": [
+            "Dó pelo rapaz degredado",
+            "Dúvida sobre a verdade do documento",
+            "Riso pela roupa de Simão",
+            "Condenação do crime de Simão"
+          ],
+          "answer": 0,
+          "feedback": "Dó: o narrador aposta na sensibilidade de quem lê antes de contar uma linha da história.",
+          "recycledFrom": "/pt/m5/licao-m5-f02/"
+        }
+      ],
+      "writing": {
+        "minutes": 15,
+        "title": "Construir uma resposta fundamentada",
+        "prompt": "A partir de Amor de Perdição, mostra como uma escolha individual é condicionada por relações familiares ou convenções sociais. Distingue explicar uma ação de a justificar.",
+        "instructions": [
+          "Lê o pedido e define o eixo da resposta antes de escrever.",
+          "Seleciona duas referências ou exemplos e explica o que demonstram.",
+          "Reserva os últimos dois minutos para reler e corrigir."
+        ],
+        "target": "80–120 palavras",
+        "criteria": [
+          "Respondi ao pedido: relacionar escolhas individuais e regras sociais.",
+          "Usei referências pertinentes e expliquei a sua relação com a interpretação.",
+          "Organizei as ideias com ligações e referentes claros.",
+          "Revi construção frásica, pontuação e ortografia."
+        ]
+      },
+      "correction": {
+        "model": "Uma decisão pode ser pessoal e, ao mesmo tempo, surgir num campo de pressões. O conflito amoroso articula desejos, rivalidades familiares e consequências das ações. Explicar esse condicionamento não significa desculpar toda a violência nem retirar responsabilidade às personagens. A resposta ganha rigor ao analisar um episódio concreto e ao distinguir o que o narrador apresenta da avaliação que o leitor constrói.",
+        "steps": [
+          {
+            "label": "Cumprir o pedido",
+            "detail": "Confere se a resposta realiza a operação pedida nesta sessão: relacionar escolhas individuais e regras sociais."
+          },
+          {
+            "label": "Mostrar como se chega à interpretação",
+            "detail": "Localiza a relação entre cada referência e a ideia que ela sustenta. Uma resposta diferente da proposta pode ser válida se for coerente e fundamentada."
+          },
+          {
+            "label": "Rever a expressão",
+            "detail": "Escolhe uma frase e melhora a precisão de um referente, de um conector ou de uma construção. Explica o efeito da mudança."
+          }
+        ],
+        "pitfalls": [
+          "Substituir a análise por um rótulo sem demonstração.",
+          "Apresentar exemplos que não se relacionam com o pedido.",
+          "Copiar a proposta sem rever a primeira versão."
+        ],
+        "check": {
+          "id": "s08-check",
+          "q": "Depois da revisão: «natural da cidade de Lisboa, e assistente na occasião de sua prisão na cidade de Vizeu»: o que diz?",
+          "options": [
+            "Nasceu em Lisboa e vivia em Viseu",
+            "Nasceu em Viseu e vivia em Coimbra",
+            "Nasceu no Porto e vivia em Lisboa",
+            "Nasceu em Coimbra e vivia no Porto"
+          ],
+          "answer": 0,
+          "feedback": "Natural de Lisboa, assistente em Viseu: «assistente» é residente; a prisão foi em Viseu.",
+          "recycledFrom": "/pt/m5/licao-m5-f02/"
+        },
+        "kind": "Orientação de correção"
+      },
+      "exit": "Reescreve uma frase da tua resposta para melhorar a relação entre uma ideia e a sua prova. Regista a alteração e o motivo.",
+      "alternatives": [
+        {
+          "label": "Viagens na Minha Terra",
+          "instruction": "Analisa uma passagem estudada, distinguindo o comentário do narrador do episódio narrado. Explica a relação entre experiência individual e reflexão sobre a sociedade.",
+          "url": "https://www.dge.mec.pt/aprendizagens-essenciais-ensino-secundario"
+        },
+        {
+          "label": "A Abóbada",
+          "instruction": "Analisa uma decisão de uma personagem e os valores que a sustentam. Relaciona a ação individual com o contexto histórico e com a construção narrativa.",
+          "url": "https://www.dge.mec.pt/aprendizagens-essenciais-ensino-secundario"
+        }
+      ]
+    },
+    {
+      "id": "s09",
+      "order": 9,
+      "durationMinutes": 45,
+      "title": "Eça: ver a crítica nos pormenores",
+      "group": "11.º ano",
+      "module": "M5",
+      "tags": [
+        "realismo",
+        "espaço",
+        "ironia",
+        "descrição"
+      ],
+      "focus": "Passar da descrição à interpretação crítica",
+      "source": {
+        "title": "Eça: ver a crítica nos pormenores",
+        "author": "Eça de Queirós",
+        "excerpt": "[1] A casa que os Maias vieram habitar em Lisboa, no outono de 1875, era conhecida na visinhança da rua de S. Francisco de Paula, e em todo o bairro das Janellas Verdes, pela casa do Ramalhete ou simplesmente o Ramalhete . Apesar d'este fresco nome de vivenda campestre, o Ramalhete , sombrio casarão de paredes severas, com um renque de estreitas varandas de ferro no primeiro andar, e por cima uma timida fila de janellinhas abrigadas á beira do telhado, tinha o aspecto tristonho de Residencia Ecclesiastica que competia a uma edificação do reinado da sr.^a D. Maria I: com uma sineta e com uma cruz no topo assimilhar-se-hia a um Collegio de Jesuitas. O nome de Ramalhete provinha de certo d'um revestimento quadrado de azulejos fazendo painel no logar heraldico do Escudo d'Armas , que nunca chegara a ser collocado, e representando um grande ramo de girasoes atado por uma fita onde se distinguiam letras e numeros d'uma data. [2] Longos annos o Ramalhete permanecera deshabitado, com teias d'aranha pelas grades dos postigos terreos , e cobrindo-se de tons de ruina. Em 1858 Monsenhor Buccarini, Nuncio de S. Santidade, visitara-o com idéa d'installar lá a Nunciatura, seduzido pela gravidade clerical do edificio e pela paz dormente do bairro: e o interior do casarão agradara-lhe tambem, com a sua disposição apalaçada , os tectos apainelados , as paredes cobertas de frescos onde já desmaiavam as rosas das grinaldas e as faces dos Cupidinhos. Mas Monsenhor, com os seus habitos de rico prelado romano, necessitava na sua vivenda os arvoredos e as agoas d'um jardim de luxo: e o Ramalhete possuia apenas, ao fundo d'um terraço de tijolo, um pobre quintal inculto, abandonado ás hervas bravas, com um cypreste, um cedro, uma cascatasinha secca, um tanque entulhado, e uma estatua de marmore (onde Monsenhor reconheceu logo Venus Citherêa ) ennegrecendo a um canto na lenta humidade das ramagens silvestres. Além d'isso, a renda que pedio o velho Villaça, procurador dos Maias, pareceu tão exagerada a Monsenhor, que lhe perguntou sorrindo se ainda julgava a Egreja nos tempos de Leão X . Villaça respondeu — que tambem a nobreza não estava nos tempos do sr. D. João V. E o Ramalhete […]",
+        "context": "Abre a leitura de apoio, lê o recorte indicado e identifica duas marcas relevantes antes de responder. O texto de origem mantém-se na ficha; esta sessão organiza o treino a partir dele.",
+        "url": "/pt/m5/licao-m5-f10/",
+        "note": "Recorte de leitura já utilizado no módulo. Consulta a ficha para o texto, a localização e as fontes completas."
+      },
+      "resources": [],
+      "warmup": [
+        {
+          "id": "s09-q1",
+          "q": "De onde vem o nome «Ramalhete»?",
+          "options": [
+            "De um painel de azulejos com um ramo de girassóis",
+            "De um brasão de armas no topo da casa",
+            "De um quintal com cipreste e cedro",
+            "De uma cruz e uma sineta no telhado"
+          ],
+          "answer": 0,
+          "feedback": "Azulejos com «um grande ramo de girasoes», no lugar do brasão «que nunca chegara a ser collocado».",
+          "recycledFrom": "/pt/m5/licao-m5-f10/"
+        },
+        {
+          "id": "s09-q2",
+          "q": "Apesar do nome fresco, o Ramalhete tem o aspeto tristonho de uma casa de padres.",
+          "options": [
+            "Verdadeiro",
+            "Falso"
+          ],
+          "answer": 0,
+          "feedback": "Verdadeiro: «sombrio casarão de paredes severas», com «o aspecto tristonho de Residencia Ecclesiastica»; o nome é fresco, a casa não.",
+          "recycledFrom": "/pt/m5/licao-m5-f10/"
+        },
+        {
+          "id": "s09-q3",
+          "q": "O quintal do Ramalhete é um jardim de luxo, com arvoredos e águas, como o Núncio queria.",
+          "options": [
+            "Verdadeiro",
+            "Falso"
+          ],
+          "answer": 1,
+          "feedback": "Falso: «um pobre quintal inculto», com cipreste, cascata seca, tanque entulhado e Vénus a enegrecer.",
+          "recycledFrom": "/pt/m5/licao-m5-f10/"
+        }
+      ],
+      "writing": {
+        "minutes": 15,
+        "title": "Construir uma resposta fundamentada",
+        "prompt": "Analisa dois pormenores de um espaço ou de uma cena de Os Maias. Explica como contribuem para caracterizar uma personagem ou para construir uma visão crítica da sociedade.",
+        "instructions": [
+          "Lê o pedido e define o eixo da resposta antes de escrever.",
+          "Seleciona duas referências ou exemplos e explica o que demonstram.",
+          "Reserva os últimos dois minutos para reler e corrigir."
+        ],
+        "target": "80–120 palavras",
+        "criteria": [
+          "Respondi ao pedido: passar da descrição à interpretação crítica.",
+          "Usei referências pertinentes e expliquei a sua relação com a interpretação.",
+          "Organizei as ideias com ligações e referentes claros.",
+          "Revi construção frásica, pontuação e ortografia."
+        ]
+      },
+      "correction": {
+        "model": "A descrição seleciona sinais e organiza um ponto de vista. Um objeto, um qualificativo ou uma oposição podem sugerir valores e contradições que ultrapassam a aparência do espaço. A resposta deve citar dois pormenores e mostrar o percurso entre observação e interpretação. Dizer apenas que o lugar simboliza decadência substitui a análise por uma conclusão que ainda precisa de ser demonstrada.",
+        "steps": [
+          {
+            "label": "Cumprir o pedido",
+            "detail": "Confere se a resposta realiza a operação pedida nesta sessão: passar da descrição à interpretação crítica."
+          },
+          {
+            "label": "Mostrar como se chega à interpretação",
+            "detail": "Localiza a relação entre cada referência e a ideia que ela sustenta. Uma resposta diferente da proposta pode ser válida se for coerente e fundamentada."
+          },
+          {
+            "label": "Rever a expressão",
+            "detail": "Escolhe uma frase e melhora a precisão de um referente, de um conector ou de uma construção. Explica o efeito da mudança."
+          }
+        ],
+        "pitfalls": [
+          "Substituir a análise por um rótulo sem demonstração.",
+          "Apresentar exemplos que não se relacionam com o pedido.",
+          "Copiar a proposta sem rever a primeira versão."
+        ],
+        "check": {
+          "id": "s09-check",
+          "q": "Depois da revisão: De onde vem o nome «Ramalhete»?",
+          "options": [
+            "De um painel de azulejos com um ramo de girassóis",
+            "De um brasão de armas no topo da casa",
+            "De um quintal com cipreste e cedro",
+            "De uma cruz e uma sineta no telhado"
+          ],
+          "answer": 0,
+          "feedback": "Azulejos com «um grande ramo de girasoes», no lugar do brasão «que nunca chegara a ser collocado».",
+          "recycledFrom": "/pt/m5/licao-m5-f10/"
+        },
+        "kind": "Orientação de correção"
+      },
+      "exit": "Reescreve uma frase da tua resposta para melhorar a relação entre uma ideia e a sua prova. Regista a alteração e o motivo.",
+      "alternatives": [
+        {
+          "label": "A Ilustre Casa de Ramires",
+          "instruction": "Seleciona dois pormenores de uma cena estudada e explica como constroem a caracterização ou uma visão crítica. Distingue narração, juízo da personagem e leitura do narrador.",
+          "url": "https://www.dge.mec.pt/aprendizagens-essenciais-ensino-secundario"
+        }
+      ]
+    },
+    {
+      "id": "s10",
+      "order": 10,
+      "durationMinutes": 45,
+      "title": "Antero: procurar, negar, descansar",
+      "group": "11.º ano",
+      "module": "M6",
+      "tags": [
+        "soneto",
+        "interrogação",
+        "oposição",
+        "movimento do poema"
+      ],
+      "focus": "Reconhecer o movimento do pensamento no soneto",
+      "source": {
+        "title": "Antero: procurar, negar, descansar",
+        "author": "Antero de Quental",
+        "excerpt": "Sonho que sou um cavalleiro andante . Por desertos, por sóes, por noite escura, Paladino do amor, busco anhelante O palacio encantado da Ventura ! Mas já desmaio, exhausto e vacillante. Quebrada a espada já, rota a armadura... E eis que subito o avisto, fulgurante Na sua pompa e aerea formosura! Com grandes golpes bato á porta e brado: Eu sou o Vagabundo, o Desherdado... Abri-vos, portas d'ouro, ante meus ais!\n\nAbrem-se as portas d'ouro, com fragor ... Mas dentro encontro só, cheio de dor, Silencio e escuridão — e nada mais! Vocabulário: cavalleiro andante , cavaleiro que vagueia em busca de aventuras; paladino , defensor; anhelante , ansioso; Ventura , felicidade; rota , partida, desfeita; fragor , estrondo Antero de Quental, _Os Sonetos Completos_ (1886) · grafia da edição (v. 6 corrigido: «rota»; o _e-book_ lê «roda»).",
+        "context": "Abre a leitura de apoio, lê o recorte indicado e identifica duas marcas relevantes antes de responder. O texto de origem mantém-se na ficha; esta sessão organiza o treino a partir dele.",
+        "url": "/pt/m6/licao-m6-f01/",
+        "note": "Recorte de leitura já utilizado no módulo. Consulta a ficha para o texto, a localização e as fontes completas."
+      },
+      "resources": [],
+      "warmup": [
+        {
+          "id": "s10-q1",
+          "q": "Quem fala em «O Palacio da Ventura» e o que se sonha?",
+          "options": [
+            "O sujeito, que se sonha um cavaleiro andante",
+            "O sujeito, que se lembra de um cavaleiro antigo",
+            "O sujeito, que vê um cavaleiro passar à porta",
+            "O sujeito, que acorda um cavaleiro adormecido"
+          ],
+          "answer": 0,
+          "feedback": "«Sonho que sou um cavalleiro andante» (v. 1): o sujeito sonha-se o próprio cavaleiro, não o vê de fora.",
+          "recycledFrom": "/pt/m6/licao-m6-f01/"
+        },
+        {
+          "id": "s10-q2",
+          "q": "A primeira quadra termina com «O palacio encantado da Ventura!».",
+          "options": [
+            "Verdadeiro",
+            "Falso"
+          ],
+          "answer": 0,
+          "feedback": "Verdadeiro: a primeira quadra fecha no alvo da busca, «O palacio encantado da Ventura!».",
+          "recycledFrom": "/pt/m6/licao-m6-f01/"
+        },
+        {
+          "id": "s10-q3",
+          "q": "«E eis que subito o avisto, fulgurante»: o que avista o cavaleiro?",
+          "options": [
+            "O palácio, na sua pompa e aérea formosura",
+            "A Ventura, à janela do palácio",
+            "A espada, quebrada no chão",
+            "O deserto, ao cair da noite"
+          ],
+          "answer": 0,
+          "feedback": "Avista o palácio, «Na sua pompa e aerea formosura»: a promessa de luz antes do vazio.",
+          "recycledFrom": "/pt/m6/licao-m6-f01/"
+        }
+      ],
+      "writing": {
+        "minutes": 15,
+        "title": "Construir uma resposta fundamentada",
+        "prompt": "Explica a transformação de uma procura ao longo de um soneto de Antero. Relaciona a situação inicial, uma mudança de orientação e o valor do final.",
+        "instructions": [
+          "Lê o pedido e define o eixo da resposta antes de escrever.",
+          "Seleciona duas referências ou exemplos e explica o que demonstram.",
+          "Reserva os últimos dois minutos para reler e corrigir."
+        ],
+        "target": "80–120 palavras",
+        "criteria": [
+          "Respondi ao pedido: reconhecer o movimento do pensamento no soneto.",
+          "Usei referências pertinentes e expliquei a sua relação com a interpretação.",
+          "Organizei as ideias com ligações e referentes claros.",
+          "Revi construção frásica, pontuação e ortografia."
+        ]
+      },
+      "correction": {
+        "model": "O pensamento do poema constrói-se num percurso. A expectativa inicial pode ser confrontada com uma descoberta que a altera ou destrói. A análise deve seguir esse movimento, mostrando como uma oposição ou uma imagem marca a mudança. O final não deve ser resumido por uma etiqueta como pessimismo: importa explicar aquilo a que a voz chega e a relação dessa conclusão com o caminho anterior.",
+        "steps": [
+          {
+            "label": "Cumprir o pedido",
+            "detail": "Confere se a resposta realiza a operação pedida nesta sessão: reconhecer o movimento do pensamento no soneto."
+          },
+          {
+            "label": "Mostrar como se chega à interpretação",
+            "detail": "Localiza a relação entre cada referência e a ideia que ela sustenta. Uma resposta diferente da proposta pode ser válida se for coerente e fundamentada."
+          },
+          {
+            "label": "Rever a expressão",
+            "detail": "Escolhe uma frase e melhora a precisão de um referente, de um conector ou de uma construção. Explica o efeito da mudança."
+          }
+        ],
+        "pitfalls": [
+          "Substituir a análise por um rótulo sem demonstração.",
+          "Apresentar exemplos que não se relacionam com o pedido.",
+          "Copiar a proposta sem rever a primeira versão."
+        ],
+        "check": {
+          "id": "s10-check",
+          "q": "Depois da revisão: Quem fala em «O Palacio da Ventura» e o que se sonha?",
+          "options": [
+            "O sujeito, que se sonha um cavaleiro andante",
+            "O sujeito, que se lembra de um cavaleiro antigo",
+            "O sujeito, que vê um cavaleiro passar à porta",
+            "O sujeito, que acorda um cavaleiro adormecido"
+          ],
+          "answer": 0,
+          "feedback": "«Sonho que sou um cavalleiro andante» (v. 1): o sujeito sonha-se o próprio cavaleiro, não o vê de fora.",
+          "recycledFrom": "/pt/m6/licao-m6-f01/"
+        },
+        "kind": "Orientação de correção"
+      },
+      "exit": "Reescreve uma frase da tua resposta para melhorar a relação entre uma ideia e a sua prova. Regista a alteração e o motivo.",
+      "alternatives": []
+    },
+    {
+      "id": "s11",
+      "order": 11,
+      "durationMinutes": 45,
+      "title": "Cesário: uma cidade em transformação",
+      "group": "11.º ano",
+      "module": "M6",
+      "tags": [
+        "cidade",
+        "sensações",
+        "contraste",
+        "crítica social"
+      ],
+      "focus": "Relacionar perceção, percurso e crítica social",
+      "source": {
+        "title": "Cesário: uma cidade em transformação",
+        "author": "Cesário Verde",
+        "excerpt": "Toca-se as grades, nas cadeias. Som Que mortifica e deixa umas loucuras mansas! O aljube , em que hoje estão velhinhas e creanças, Bem raramente encerra uma mulher de «dom» ! E eu desconfio, até, de um aneurisma Tão morbido me sinto, ao accender das luzes; Á vista das prisões, da velha sé, das cruzes, Chora-me o coração que se enche e que se abysma . A espaços, illuminam-se os andares, E as tascas, os cafés, as tendas, os estancos Alastram em lençol os seus reflexos brancos; E a lua lembra o circo e os jogos malabares.\n\nDuas egrejas, n'um saudoso largo, Lançam a nodoa negra e funebre do clero: N'ellas esfumo um ermo inquisidor severo, Assim que pela Historia eu me aventuro e alargo. Na parte que abateu no terremoto, Muram-se as construcções rectas, eguaes, crescidas; Affrontam-me, no resto, as ingremes subidas, E os sinos d'um tanger monastico e devoto. Mas, n'um recinto publico e vulgar, Com bancos de namoro e exiguas pimenteiras, Bronzeo, monumental, de proporções guerreiras, Um épico d'outr'ora ascende, n'um pilar!",
+        "context": "Abre a leitura de apoio, lê o recorte indicado e identifica duas marcas relevantes antes de responder. O texto de origem mantém-se na ficha; esta sessão organiza o treino a partir dele.",
+        "url": "/pt/m6/licao-m6-f07/",
+        "note": "Recorte de leitura já utilizado no módulo. Consulta a ficha para o texto, a localização e as fontes completas."
+      },
+      "resources": [],
+      "warmup": [
+        {
+          "id": "s11-q1",
+          "q": "Como abre «Noite Fechada» e que imagem dá da cidade?",
+          "options": [
+            "Com as grades das cadeias: uma cidade prisão",
+            "Com os sinos da sé: uma cidade devota",
+            "Com as montras dos ourives: uma cidade elegante",
+            "Com as tascas e os cafés: uma cidade iluminada"
+          ],
+          "answer": 0,
+          "feedback": "«Toca-se as grades, nas cadeias»: a noite fecha-se e a cidade ganha grades.",
+          "recycledFrom": "/pt/m6/licao-m6-f07/"
+        },
+        {
+          "id": "s11-q2",
+          "q": "«Um épico d'outr'ora ascende, n'um pilar!»: quem é este épico?",
+          "options": [
+            "A estátua de Camões, em bronze",
+            "Um soldado de cavalaria",
+            "Um inquisidor severo",
+            "Um forjador de proporções guerreiras"
+          ],
+          "answer": 0,
+          "feedback": "O «épico d'outr'ora» é a estátua de Camões, «Bronzeo, monumental», segundo o glossário.",
+          "recycledFrom": "/pt/m6/licao-m6-f07/"
+        },
+        {
+          "id": "s11-q3",
+          "q": "Em «Um cheiro salutar e honesto a pão no forno», «honesto» é…",
+          "options": [
+            "Qualidade moral atribuída a uma sensação",
+            "Duas ideias opostas postas lado a lado",
+            "Figura que vale por um grupo inteiro",
+            "Mistura de passado e presente"
+          ],
+          "answer": 0,
+          "feedback": "Hipálage (ou sinestesia): transfiguração do real e valorização do trabalho honesto.",
+          "recycledFrom": "/pt/m6/licao-m6-f07/"
+        }
+      ],
+      "writing": {
+        "minutes": 15,
+        "title": "Construir uma resposta fundamentada",
+        "prompt": "Explica como uma passagem de O Sentimento dum Ocidental transforma uma observação urbana numa reflexão. Analisa uma sensação e um contraste social ou temporal.",
+        "instructions": [
+          "Lê o pedido e define o eixo da resposta antes de escrever.",
+          "Seleciona duas referências ou exemplos e explica o que demonstram.",
+          "Reserva os últimos dois minutos para reler e corrigir."
+        ],
+        "target": "80–120 palavras",
+        "criteria": [
+          "Respondi ao pedido: relacionar perceção, percurso e crítica social.",
+          "Usei referências pertinentes e expliquei a sua relação com a interpretação.",
+          "Organizei as ideias com ligações e referentes claros.",
+          "Revi construção frásica, pontuação e ortografia."
+        ]
+      },
+      "correction": {
+        "model": "O percurso pela cidade é também um movimento de perceção. Sensações concretas aproximam o leitor dos espaços, enquanto contrastes entre figuras, tempos ou condições de vida abrem uma reflexão. A resposta deve mostrar como se passa daquilo que é visto para o seu significado. Uma enumeração de cheiros e cores, sem interpretação, não esclarece a visão crítica nem a inquietação da voz poética.",
+        "steps": [
+          {
+            "label": "Cumprir o pedido",
+            "detail": "Confere se a resposta realiza a operação pedida nesta sessão: relacionar perceção, percurso e crítica social."
+          },
+          {
+            "label": "Mostrar como se chega à interpretação",
+            "detail": "Localiza a relação entre cada referência e a ideia que ela sustenta. Uma resposta diferente da proposta pode ser válida se for coerente e fundamentada."
+          },
+          {
+            "label": "Rever a expressão",
+            "detail": "Escolhe uma frase e melhora a precisão de um referente, de um conector ou de uma construção. Explica o efeito da mudança."
+          }
+        ],
+        "pitfalls": [
+          "Substituir a análise por um rótulo sem demonstração.",
+          "Apresentar exemplos que não se relacionam com o pedido.",
+          "Copiar a proposta sem rever a primeira versão."
+        ],
+        "check": {
+          "id": "s11-check",
+          "q": "Depois da revisão: Como abre «Noite Fechada» e que imagem dá da cidade?",
+          "options": [
+            "Com as grades das cadeias: uma cidade prisão",
+            "Com os sinos da sé: uma cidade devota",
+            "Com as montras dos ourives: uma cidade elegante",
+            "Com as tascas e os cafés: uma cidade iluminada"
+          ],
+          "answer": 0,
+          "feedback": "«Toca-se as grades, nas cadeias»: a noite fecha-se e a cidade ganha grades.",
+          "recycledFrom": "/pt/m6/licao-m6-f07/"
+        },
+        "kind": "Orientação de correção"
+      },
+      "exit": "Reescreve uma frase da tua resposta para melhorar a relação entre uma ideia e a sua prova. Regista a alteração e o motivo.",
+      "alternatives": []
+    },
+    {
+      "id": "s12",
+      "order": 12,
+      "durationMinutes": 45,
+      "title": "Pessoa: sentir e construir o poema",
+      "group": "12.º ano",
+      "module": "M7",
+      "tags": [
+        "ortónimo",
+        "fingimento",
+        "arte poética",
+        "leitor"
+      ],
+      "focus": "Distinguir experiência, representação e leitura",
+      "source": {
+        "title": "Pessoa: sentir e construir o poema",
+        "author": "Fernando Pessoa",
+        "excerpt": "O poeta é um fingidor Finge tão completamente Que chega a fingir que é dor A dor que deveras sente. E os que lêem o que escreve, Na dor lida sentem bem, Não as duas que ele teve, Mas só a que eles não têm. E assim nas calhas de roda Gira, a entreter a razão, Esse comboio de corda Que se chama coração. Vocabulário: deveras , realmente; calhas , carris Fernando Pessoa · 1.ª publ. _Presença_, n.º 36, Coimbra, novembro de 1932 · _Poesias_, Ática, 1942 · Arquivo Pessoa · grafia da edição («lêem»)\n\nPor isso escrevo em meio Do que não está ao pé, Livre do meu enleio , Sério do que não é. Sentir? Sinta quem lê! Vocabulário: enleio , confusão, embaraço Fernando Pessoa · 1.ª publ. _Presença_, n.º 38, Coimbra, abril de 1933 · Arquivo Pessoa",
+        "context": "Abre a leitura de apoio, lê o recorte indicado e identifica duas marcas relevantes antes de responder. O texto de origem mantém-se na ficha; esta sessão organiza o treino a partir dele.",
+        "url": "/pt/m7/licao-m7-f02/",
+        "note": "Recorte de leitura já utilizado no módulo. Consulta a ficha para o texto, a localização e as fontes completas."
+      },
+      "resources": [],
+      "warmup": [
+        {
+          "id": "s12-q1",
+          "q": "Em «Autopsicografia», o que finge o poeta?",
+          "options": [
+            "Que não sente dor nenhuma",
+            "Que a dor é de quem lê",
+            "Que é dor a dor que deveras sente",
+            "Que a razão não tem coração"
+          ],
+          "answer": 2,
+          "feedback": "«Que chega a fingir que é dor / A dor que deveras sente»: finge uma dor que é verdadeira.",
+          "recycledFrom": "/pt/m7/licao-m7-f02/"
+        },
+        {
+          "id": "s12-q2",
+          "q": "Que palavra de «Autopsicografia» quer dizer «realmente»?",
+          "options": [
+            "deveras",
+            "completamente",
+            "assim",
+            "sério"
+          ],
+          "answer": 0,
+          "feedback": "Deveras, realmente: a dor que o poeta deveras sente é a dor real.",
+          "recycledFrom": "/pt/m7/licao-m7-f02/"
+        },
+        {
+          "id": "s12-q3",
+          "q": "«E os que lêem o que escreve»: quem são?",
+          "options": [
+            "Os leitores do poema",
+            "Os outros poetas",
+            "Os que fingem a dor",
+            "Os que sentem deveras"
+          ],
+          "answer": 0,
+          "feedback": "Os leitores: a segunda estrofe passa do poeta para quem lê o que ele escreve.",
+          "recycledFrom": "/pt/m7/licao-m7-f02/"
+        }
+      ],
+      "writing": {
+        "minutes": 15,
+        "title": "Construir uma resposta fundamentada",
+        "prompt": "Explica a relação entre sentir e fingir num poema do ortónimo. Mostra como o poema representa a criação e o papel do leitor, evitando confundir fingimento com mentira.",
+        "instructions": [
+          "Lê o pedido e define o eixo da resposta antes de escrever.",
+          "Seleciona duas referências ou exemplos e explica o que demonstram.",
+          "Reserva os últimos dois minutos para reler e corrigir."
+        ],
+        "target": "80–120 palavras",
+        "criteria": [
+          "Respondi ao pedido: distinguir experiência, representação e leitura.",
+          "Usei referências pertinentes e expliquei a sua relação com a interpretação.",
+          "Organizei as ideias com ligações e referentes claros.",
+          "Revi construção frásica, pontuação e ortografia."
+        ]
+      },
+      "correction": {
+        "model": "O fingimento poético transforma a experiência em construção verbal. Não se limita a reproduzir uma emoção nem equivale a uma mentira sobre os factos. A resposta deve explicar a relação entre a experiência, a forma que o poema lhe dá e o efeito no leitor. Uma referência breve ao texto precisa de ser comentada: é esse comentário que permite distinguir o conceito de um uso quotidiano da palavra fingir.",
+        "steps": [
+          {
+            "label": "Cumprir o pedido",
+            "detail": "Confere se a resposta realiza a operação pedida nesta sessão: distinguir experiência, representação e leitura."
+          },
+          {
+            "label": "Mostrar como se chega à interpretação",
+            "detail": "Localiza a relação entre cada referência e a ideia que ela sustenta. Uma resposta diferente da proposta pode ser válida se for coerente e fundamentada."
+          },
+          {
+            "label": "Rever a expressão",
+            "detail": "Escolhe uma frase e melhora a precisão de um referente, de um conector ou de uma construção. Explica o efeito da mudança."
+          }
+        ],
+        "pitfalls": [
+          "Substituir a análise por um rótulo sem demonstração.",
+          "Apresentar exemplos que não se relacionam com o pedido.",
+          "Copiar a proposta sem rever a primeira versão."
+        ],
+        "check": {
+          "id": "s12-check",
+          "q": "Depois da revisão: Em «Autopsicografia», o que finge o poeta?",
+          "options": [
+            "Que não sente dor nenhuma",
+            "Que a dor é de quem lê",
+            "Que é dor a dor que deveras sente",
+            "Que a razão não tem coração"
+          ],
+          "answer": 2,
+          "feedback": "«Que chega a fingir que é dor / A dor que deveras sente»: finge uma dor que é verdadeira.",
+          "recycledFrom": "/pt/m7/licao-m7-f02/"
+        },
+        "kind": "Orientação de correção"
+      },
+      "exit": "Reescreve uma frase da tua resposta para melhorar a relação entre uma ideia e a sua prova. Regista a alteração e o motivo.",
+      "alternatives": []
+    },
+    {
+      "id": "s13",
+      "order": 13,
+      "durationMinutes": 45,
+      "title": "Caeiro: o rio e a medida do olhar",
+      "group": "12.º ano",
+      "module": "M7",
+      "tags": [
+        "heterónimos",
+        "sensação",
+        "comparação",
+        "conhecimento"
+      ],
+      "focus": "Relacionar pensamento, sensação e presença",
+      "source": {
+        "title": "Caeiro: o rio e a medida do olhar",
+        "author": "Alberto Caeiro",
+        "excerpt": "O Tejo é mais belo que o rio que corre pela minha aldeia, Mas o Tejo não é mais belo que o rio que corre pela minha aldeia Porque o Tejo não é o rio que corre pela minha aldeia. O Tejo tem grandes navios E navega nele ainda, Para aqueles que veem em tudo o que lá não está, A memória das naus .\n\nO Tejo desce de Espanha E o Tejo entra no mar em Portugal. Toda a gente sabe isso. Mas poucos sabem qual é o rio da minha aldeia E para onde ele vai E donde ele vem. E por isso, porque pertence a menos gente, É mais livre e maior o rio da minha aldeia.",
+        "context": "Abre a leitura de apoio, lê o recorte indicado e identifica duas marcas relevantes antes de responder. O texto de origem mantém-se na ficha; esta sessão organiza o treino a partir dele.",
+        "url": "/pt/m7/licao-m7-f35/",
+        "note": "Recorte de leitura já utilizado no módulo. Consulta a ficha para o texto, a localização e as fontes completas."
+      },
+      "resources": [],
+      "warmup": [
+        {
+          "id": "s13-q1",
+          "q": "O Tejo é mais belo e, logo a seguir, não é. Como pode o sujeito dizer as duas coisas?",
+          "options": [
+            "Passa da grandeza reconhecida do Tejo à relação singular com o rio da sua aldeia: muda o critério",
+            "Deixa de saber qual dos rios é o Tejo",
+            "Os dois rios são fisicamente iguais"
+          ],
+          "answer": 0,
+          "feedback": "«Porque o Tejo não é o rio que corre pela minha aldeia»: o critério muda, da fama para a relação. Não há dúvida sobre os rios nem igualdade entre eles.",
+          "recycledFrom": "/pt/m7/licao-m7-f35/"
+        },
+        {
+          "id": "s13-q2",
+          "q": "«Para aqueles que veem em tudo o que lá não está»: quem vê as naus no Tejo?",
+          "options": [
+            "Os que acrescentam ao rio uma memória histórica; o sujeito distancia-se deles",
+            "Toda a gente, porque as naus ainda lá navegam",
+            "Só o sujeito, que é o único que sabe história"
+          ],
+          "answer": 0,
+          "feedback": "A associação do Tejo às naus é atribuída a «aqueles»: o sujeito separa o seu olhar do deles. A memória não é um navio visível.",
+          "recycledFrom": "/pt/m7/licao-m7-f35/"
+        },
+        {
+          "id": "s13-q3",
+          "q": "Que palavra do poema designa os navios antigos das viagens marítimas?",
+          "options": [
+            "naus",
+            "navios",
+            "fortuna",
+            "mundo"
+          ],
+          "answer": 0,
+          "feedback": "Naus: os navios das viagens; «a memória das naus» é a história posta no rio por quem olha.",
+          "recycledFrom": "/pt/m7/licao-m7-f35/"
+        }
+      ],
+      "writing": {
+        "minutes": 15,
+        "title": "Construir uma resposta fundamentada",
+        "prompt": "Analisa o modo como uma comparação entre rios define uma forma de conhecer o mundo. Relaciona a proximidade da experiência com a recusa de significados acrescentados.",
+        "instructions": [
+          "Lê o pedido e define o eixo da resposta antes de escrever.",
+          "Seleciona duas referências ou exemplos e explica o que demonstram.",
+          "Reserva os últimos dois minutos para reler e corrigir."
+        ],
+        "target": "80–120 palavras",
+        "criteria": [
+          "Respondi ao pedido: relacionar pensamento, sensação e presença.",
+          "Usei referências pertinentes e expliquei a sua relação com a interpretação.",
+          "Organizei as ideias com ligações e referentes claros.",
+          "Revi construção frásica, pontuação e ortografia."
+        ]
+      },
+      "correction": {
+        "model": "A comparação desloca a atenção da grandeza consagrada para a relação imediata com aquilo que se vê. O rio conhecido de perto vale pela experiência que permite, não por um significado que lhe seja imposto. A resposta deve explicar esse deslocamento através de duas marcas do poema. Afirmar que Caeiro não pensa, sem analisar a posição que a voz constrói, transforma uma proposta poética numa simplificação.",
+        "steps": [
+          {
+            "label": "Cumprir o pedido",
+            "detail": "Confere se a resposta realiza a operação pedida nesta sessão: relacionar pensamento, sensação e presença."
+          },
+          {
+            "label": "Mostrar como se chega à interpretação",
+            "detail": "Localiza a relação entre cada referência e a ideia que ela sustenta. Uma resposta diferente da proposta pode ser válida se for coerente e fundamentada."
+          },
+          {
+            "label": "Rever a expressão",
+            "detail": "Escolhe uma frase e melhora a precisão de um referente, de um conector ou de uma construção. Explica o efeito da mudança."
+          }
+        ],
+        "pitfalls": [
+          "Substituir a análise por um rótulo sem demonstração.",
+          "Apresentar exemplos que não se relacionam com o pedido.",
+          "Copiar a proposta sem rever a primeira versão."
+        ],
+        "check": {
+          "id": "s13-check",
+          "q": "Depois da revisão: O Tejo é mais belo e, logo a seguir, não é. Como pode o sujeito dizer as duas coisas?",
+          "options": [
+            "Passa da grandeza reconhecida do Tejo à relação singular com o rio da sua aldeia: muda o critério",
+            "Deixa de saber qual dos rios é o Tejo",
+            "Os dois rios são fisicamente iguais"
+          ],
+          "answer": 0,
+          "feedback": "«Porque o Tejo não é o rio que corre pela minha aldeia»: o critério muda, da fama para a relação. Não há dúvida sobre os rios nem igualdade entre eles.",
+          "recycledFrom": "/pt/m7/licao-m7-f35/"
+        },
+        "kind": "Orientação de correção"
+      },
+      "exit": "Reescreve uma frase da tua resposta para melhorar a relação entre uma ideia e a sua prova. Regista a alteração e o motivo.",
+      "alternatives": []
+    },
+    {
+      "id": "s14",
+      "order": 14,
+      "durationMinutes": 45,
+      "title": "Reis: a disciplina do instante",
+      "group": "12.º ano",
+      "module": "M7",
+      "tags": [
+        "heterónimos",
+        "tempo",
+        "imperativo",
+        "atitude"
+      ],
+      "focus": "Distinguir aceitação, consciência e escolha",
+      "source": {
+        "title": "Reis: a disciplina do instante",
+        "author": "Ricardo Reis",
+        "excerpt": "As rosas amo dos jardins de Adónis , Essas volucres amo, Lídia, rosas, Que em o dia em que nascem, Em esse dia morrem. A luz para elas é eterna, porque Nascem nascido já o Sol, e acabam Antes que Apolo deixe O seu curso visível. Assim façamos nossa vida um dia, Inscientes , Lídia, voluntariamente Que há noite antes e após O pouco que duramos. Vocabulário: Adónis , figura da mitologia grega; volucres , passageiras, que duram pouco; Apolo , aqui, o Sol; inscientes , que não sabem Ricardo Reis (11-7-1914) · _Odes de Ricardo Reis_, Ática, 1946 · 1.ª publ. _Athena_, n.º 1, Lisboa, outubro de 1924 · Arquivo Pessoa",
+        "context": "Abre a leitura de apoio, lê o recorte indicado e identifica duas marcas relevantes antes de responder. O texto de origem mantém-se na ficha; esta sessão organiza o treino a partir dele.",
+        "url": "/pt/m7/licao-m7-f23/",
+        "note": "Recorte de leitura já utilizado no módulo. Consulta a ficha para o texto, a localização e as fontes completas."
+      },
+      "resources": [],
+      "warmup": [
+        {
+          "id": "s14-q1",
+          "q": "«Volucres», em «Essas volucres amo, Lídia, rosas», quer dizer…",
+          "options": [
+            "passageiras, que duram pouco",
+            "vermelhas, que brilham muito",
+            "perfumadas, que atraem aves",
+            "antigas, que vêm de longe"
+          ],
+          "answer": 0,
+          "feedback": "Volucres: passageiras, que duram pouco; é por isso que Reis as ama.",
+          "recycledFrom": "/pt/m7/licao-m7-f23/"
+        },
+        {
+          "id": "s14-q2",
+          "q": "As rosas do poema duram um dia.",
+          "options": [
+            "Verdadeiro",
+            "Falso"
+          ],
+          "answer": 0,
+          "feedback": "Verdadeiro: «Que em o dia em que nascem, / Em esse dia morrem»: é um facto do texto.",
+          "recycledFrom": "/pt/m7/licao-m7-f23/"
+        },
+        {
+          "id": "s14-q3",
+          "q": "«Antes que Apolo deixe / O seu curso visível»: quem é Apolo, aqui?",
+          "options": [
+            "O Sol",
+            "Adónis",
+            "Lídia",
+            "A noite"
+          ],
+          "answer": 0,
+          "feedback": "Apolo é aqui o Sol: as rosas acabam antes de ele se pôr.",
+          "recycledFrom": "/pt/m7/licao-m7-f23/"
+        }
+      ],
+      "writing": {
+        "minutes": 15,
+        "title": "Construir uma resposta fundamentada",
+        "prompt": "Explica a atitude da voz perante a brevidade da vida num poema de Ricardo Reis. Relaciona uma imagem com uma recomendação ou uma forma verbal significativa.",
+        "instructions": [
+          "Lê o pedido e define o eixo da resposta antes de escrever.",
+          "Seleciona duas referências ou exemplos e explica o que demonstram.",
+          "Reserva os últimos dois minutos para reler e corrigir."
+        ],
+        "target": "80–120 palavras",
+        "criteria": [
+          "Respondi ao pedido: distinguir aceitação, consciência e escolha.",
+          "Usei referências pertinentes e expliquei a sua relação com a interpretação.",
+          "Organizei as ideias com ligações e referentes claros.",
+          "Revi construção frásica, pontuação e ortografia."
+        ]
+      },
+      "correction": {
+        "model": "A consciência da passagem do tempo pode sustentar uma escolha de contenção. A voz procura uma forma de viver o presente sem pretender dominar o destino. A resposta deve mostrar como uma imagem e uma orientação ao destinatário constroem essa atitude. Não basta chamar-lhe indiferença: importa distinguir a ausência de reflexão de uma disciplina que decorre precisamente da consciência do limite.",
+        "steps": [
+          {
+            "label": "Cumprir o pedido",
+            "detail": "Confere se a resposta realiza a operação pedida nesta sessão: distinguir aceitação, consciência e escolha."
+          },
+          {
+            "label": "Mostrar como se chega à interpretação",
+            "detail": "Localiza a relação entre cada referência e a ideia que ela sustenta. Uma resposta diferente da proposta pode ser válida se for coerente e fundamentada."
+          },
+          {
+            "label": "Rever a expressão",
+            "detail": "Escolhe uma frase e melhora a precisão de um referente, de um conector ou de uma construção. Explica o efeito da mudança."
+          }
+        ],
+        "pitfalls": [
+          "Substituir a análise por um rótulo sem demonstração.",
+          "Apresentar exemplos que não se relacionam com o pedido.",
+          "Copiar a proposta sem rever a primeira versão."
+        ],
+        "check": {
+          "id": "s14-check",
+          "q": "Depois da revisão: «Volucres», em «Essas volucres amo, Lídia, rosas», quer dizer…",
+          "options": [
+            "passageiras, que duram pouco",
+            "vermelhas, que brilham muito",
+            "perfumadas, que atraem aves",
+            "antigas, que vêm de longe"
+          ],
+          "answer": 0,
+          "feedback": "Volucres: passageiras, que duram pouco; é por isso que Reis as ama.",
+          "recycledFrom": "/pt/m7/licao-m7-f23/"
+        },
+        "kind": "Orientação de correção"
+      },
+      "exit": "Reescreve uma frase da tua resposta para melhorar a relação entre uma ideia e a sua prova. Regista a alteração e o motivo.",
+      "alternatives": []
+    },
+    {
+      "id": "s15",
+      "order": 15,
+      "durationMinutes": 45,
+      "title": "Campos: desejo e desencontro",
+      "group": "12.º ano",
+      "module": "M7",
+      "tags": [
+        "heterónimos",
+        "contradição",
+        "interior e exterior",
+        "hipérbole"
+      ],
+      "focus": "Explicar uma tensão sem apagar contradições",
+      "source": {
+        "title": "Campos: desejo e desencontro",
+        "author": "Álvaro de Campos",
+        "excerpt": "Não sou nada. Nunca serei nada. Não posso querer ser nada. À parte isso , tenho em mim todos os sonhos do mundo. Vocabulário: à parte isso , fora isso, tirando isso Álvaro de Campos, «Tabacaria» (1928), vv. 1 a 4, Arquivo Pessoa.\n\n(Come chocolates, pequena; Come chocolates! Olha que não há mais metafísica no mundo senão chocolates. Olha que as religiões todas não ensinam mais que a confeitaria . Come, pequena suja, come! Pudesse eu comer chocolates com a mesma verdade com que comes! Mas eu penso e, ao tirar o papel de prata, que é de folhas de estanho , Deito tudo para o chão, como tenho deitado a vida.) Vocabulário: metafísica , a reflexão sobre o que as coisas são, para lá do que se vê; confeitaria , a arte de fazer doces; folhas de estanho , o metal de que é feito o «papel de prata» Álvaro de Campos, «Tabacaria» (1928), Arquivo Pessoa; os parênteses são do poema.",
+        "context": "Abre a leitura de apoio, lê o recorte indicado e identifica duas marcas relevantes antes de responder. O texto de origem mantém-se na ficha; esta sessão organiza o treino a partir dele.",
+        "url": "/pt/m7/licao-m7-f36/",
+        "note": "Recorte de leitura já utilizado no módulo. Consulta a ficha para o texto, a localização e as fontes completas."
+      },
+      "resources": [],
+      "warmup": [
+        {
+          "id": "s15-q1",
+          "q": "Como progride a negação nos três primeiros versos?",
+          "options": [
+            "Do presente ao futuro e, depois, à própria possibilidade de querer ser",
+            "Da dúvida à certeza de que realizará os sonhos",
+            "Repete a mesma ideia sem mudar nada"
+          ],
+          "answer": 0,
+          "feedback": "Três alcances: o que é, o que será, o que pode querer ser. Repete «nada», mas os verbos alargam a negação.",
+          "recycledFrom": "/pt/m7/licao-m7-f36/"
+        },
+        {
+          "id": "s15-q2",
+          "q": "«À parte isso, tenho em mim todos os sonhos do mundo»: que relação tem com os três versos anteriores?",
+          "options": [
+            "Opõe à autonegação a amplitude do sonho interior, e deixa as duas em tensão",
+            "Anula a negação: o sujeito já alcançou tudo",
+            "É um assunto à parte, sem relação"
+          ],
+          "answer": 0,
+          "feedback": "«Tenho em mim», não «realizei»: a plenitude é interior. Não ser nada e ter todos os sonhos ficam lado a lado.",
+          "recycledFrom": "/pt/m7/licao-m7-f36/"
+        },
+        {
+          "id": "s15-q3",
+          "q": "«Não há mais metafísica no mundo senão chocolates»: o que diz a voz à pequena?",
+          "options": [
+            "Que comer com verdade vale mais do que todas as reflexões e religiões",
+            "Que a pequena devia estudar filosofia",
+            "Que os chocolates fazem mal"
+          ],
+          "answer": 0,
+          "feedback": "A experiência imediata posta acima da metafísica e das religiões: é o que a voz inveja na pequena.",
+          "recycledFrom": "/pt/m7/licao-m7-f36/"
+        }
+      ],
+      "writing": {
+        "minutes": 15,
+        "title": "Construir uma resposta fundamentada",
+        "prompt": "Mostra como uma passagem de Tabacaria articula a negação de si e o desejo de possibilidades. Analisa duas marcas da linguagem e a relação com o mundo exterior.",
+        "instructions": [
+          "Lê o pedido e define o eixo da resposta antes de escrever.",
+          "Seleciona duas referências ou exemplos e explica o que demonstram.",
+          "Reserva os últimos dois minutos para reler e corrigir."
+        ],
+        "target": "80–120 palavras",
+        "criteria": [
+          "Respondi ao pedido: explicar uma tensão sem apagar contradições.",
+          "Usei referências pertinentes e expliquei a sua relação com a interpretação.",
+          "Organizei as ideias com ligações e referentes claros.",
+          "Revi construção frásica, pontuação e ortografia."
+        ]
+      },
+      "correction": {
+        "model": "A voz pode negar o próprio valor e, simultaneamente, desejar todas as possibilidades. Essa tensão não deve ser resolvida como se uma afirmação anulasse simplesmente a outra. A resposta precisa de explicar a força da negação, o alcance do desejo e a relação com aquilo que a voz observa. O comentário às formas de expressão dá consistência a uma leitura que, de outro modo, se limitaria a repetir o tema da crise.",
+        "steps": [
+          {
+            "label": "Cumprir o pedido",
+            "detail": "Confere se a resposta realiza a operação pedida nesta sessão: explicar uma tensão sem apagar contradições."
+          },
+          {
+            "label": "Mostrar como se chega à interpretação",
+            "detail": "Localiza a relação entre cada referência e a ideia que ela sustenta. Uma resposta diferente da proposta pode ser válida se for coerente e fundamentada."
+          },
+          {
+            "label": "Rever a expressão",
+            "detail": "Escolhe uma frase e melhora a precisão de um referente, de um conector ou de uma construção. Explica o efeito da mudança."
+          }
+        ],
+        "pitfalls": [
+          "Substituir a análise por um rótulo sem demonstração.",
+          "Apresentar exemplos que não se relacionam com o pedido.",
+          "Copiar a proposta sem rever a primeira versão."
+        ],
+        "check": {
+          "id": "s15-check",
+          "q": "Depois da revisão: Como progride a negação nos três primeiros versos?",
+          "options": [
+            "Do presente ao futuro e, depois, à própria possibilidade de querer ser",
+            "Da dúvida à certeza de que realizará os sonhos",
+            "Repete a mesma ideia sem mudar nada"
+          ],
+          "answer": 0,
+          "feedback": "Três alcances: o que é, o que será, o que pode querer ser. Repete «nada», mas os verbos alargam a negação.",
+          "recycledFrom": "/pt/m7/licao-m7-f36/"
+        },
+        "kind": "Orientação de correção"
+      },
+      "exit": "Reescreve uma frase da tua resposta para melhorar a relação entre uma ideia e a sua prova. Regista a alteração e o motivo.",
+      "alternatives": []
+    },
+    {
+      "id": "s16",
+      "order": 16,
+      "durationMinutes": 45,
+      "title": "Mensagem: mito, história e apelo",
+      "group": "12.º ano",
+      "module": "M7",
+      "tags": [
+        "Mensagem",
+        "símbolo",
+        "mito",
+        "história"
+      ],
+      "focus": "Relacionar símbolo e construção de uma ideia coletiva",
+      "source": {
+        "title": "Mensagem: mito, história e apelo",
+        "author": "Fernando Pessoa",
+        "excerpt": "Deus quer, o homem sonha, a obra nasce. Deus quis que a terra fosse toda uma, Que o mar unisse, já não separasse. Sagrou-te , e foste desvendando a espuma. E a orla branca foi de ilha em continente, Clareou, correndo, até ao fim do mundo, E viu-se a terra inteira, de repente, Surgir, redonda, do azul profundo. Quem te sagrou criou-te português. Do mar e nós em ti nos deu sinal. Cumpriu-se o Mar, e o Império se desfez. Senhor, falta cumprir-se Portugal! Vocabulário: sagrou-te , consagrou-te; orla , margem, espuma na costa _Mensagem_, II. «Mar Português», I · Arquivo Pessoa\n\nÓ mar salgado, quanto do teu sal São lágrimas de Portugal! Por te cruzarmos, quantas mães choraram, Quantos filhos em vão rezaram! Quantas noivas ficaram por casar Para que fosses nosso, ó mar! Valeu a pena? Tudo vale a pena Se a alma não é pequena. Quem quer passar além do Bojador Tem que passar além da dor. Deus ao mar o perigo e o abismo deu, Mas nele é que espelhou o céu. Vocabulário: Bojador , o cabo que durante anos ninguém passou _Mensagem_, II. «Mar Português», X · Arquivo Pessoa",
+        "context": "Abre a leitura de apoio, lê o recorte indicado e identifica duas marcas relevantes antes de responder. O texto de origem mantém-se na ficha; esta sessão organiza o treino a partir dele.",
+        "url": "/pt/m7/licao-m7-f08/",
+        "note": "Recorte de leitura já utilizado no módulo. Consulta a ficha para o texto, a localização e as fontes completas."
+      },
+      "resources": [],
+      "warmup": [
+        {
+          "id": "s16-q1",
+          "q": "Na gradação «Deus quer, o homem sonha, a obra nasce», o que é «a obra nasce»?",
+          "options": [
+            "A vontade divina",
+            "O desejo humano",
+            "A realização",
+            "A dúvida"
+          ],
+          "answer": 2,
+          "feedback": "Deus quer (vontade), o homem sonha (desejo), a obra nasce (realização): projeto divino e humano.",
+          "recycledFrom": "/pt/m7/licao-m7-f08/"
+        },
+        {
+          "id": "s16-q2",
+          "q": "Que palavra de «O Infante» quer dizer «margem, espuma na costa»?",
+          "options": [
+            "orla",
+            "obra",
+            "terra",
+            "ilha"
+          ],
+          "answer": 0,
+          "feedback": "Orla, margem, espuma na costa: «E a orla branca foi de ilha em continente».",
+          "recycledFrom": "/pt/m7/licao-m7-f08/"
+        },
+        {
+          "id": "s16-q3",
+          "q": "Em «Mar Português», as noivas rezaram e os filhos ficaram por casar.",
+          "options": [
+            "Verdadeiro",
+            "Falso"
+          ],
+          "answer": 1,
+          "feedback": "Falso: «Quantos filhos em vão rezaram! / Quantas noivas ficaram por casar».",
+          "recycledFrom": "/pt/m7/licao-m7-f08/"
+        }
+      ],
+      "writing": {
+        "minutes": 15,
+        "title": "Construir uma resposta fundamentada",
+        "prompt": "Explica como um poema de Mensagem transforma uma figura ou um episódio histórico num símbolo. Relaciona essa transformação com a visão de Portugal construída no texto.",
+        "instructions": [
+          "Lê o pedido e define o eixo da resposta antes de escrever.",
+          "Seleciona duas referências ou exemplos e explica o que demonstram.",
+          "Reserva os últimos dois minutos para reler e corrigir."
+        ],
+        "target": "80–120 palavras",
+        "criteria": [
+          "Respondi ao pedido: relacionar símbolo e construção de uma ideia coletiva.",
+          "Usei referências pertinentes e expliquei a sua relação com a interpretação.",
+          "Organizei as ideias com ligações e referentes claros.",
+          "Revi construção frásica, pontuação e ortografia."
+        ]
+      },
+      "correction": {
+        "model": "O poema não funciona como uma cronologia abreviada. A figura histórica pode adquirir um sentido que ultrapassa o episódio e contribui para uma ideia de realização coletiva. A resposta deve identificar o símbolo, fundamentar o seu valor no texto e explicar o efeito da perspetiva assumida. Não é rigoroso atribuir a todos os poemas de Mensagem a mesma atitude, independentemente das palavras do excerto.",
+        "steps": [
+          {
+            "label": "Cumprir o pedido",
+            "detail": "Confere se a resposta realiza a operação pedida nesta sessão: relacionar símbolo e construção de uma ideia coletiva."
+          },
+          {
+            "label": "Mostrar como se chega à interpretação",
+            "detail": "Localiza a relação entre cada referência e a ideia que ela sustenta. Uma resposta diferente da proposta pode ser válida se for coerente e fundamentada."
+          },
+          {
+            "label": "Rever a expressão",
+            "detail": "Escolhe uma frase e melhora a precisão de um referente, de um conector ou de uma construção. Explica o efeito da mudança."
+          }
+        ],
+        "pitfalls": [
+          "Substituir a análise por um rótulo sem demonstração.",
+          "Apresentar exemplos que não se relacionam com o pedido.",
+          "Copiar a proposta sem rever a primeira versão."
+        ],
+        "check": {
+          "id": "s16-check",
+          "q": "Depois da revisão: Na gradação «Deus quer, o homem sonha, a obra nasce», o que é «a obra nasce»?",
+          "options": [
+            "A vontade divina",
+            "O desejo humano",
+            "A realização",
+            "A dúvida"
+          ],
+          "answer": 2,
+          "feedback": "Deus quer (vontade), o homem sonha (desejo), a obra nasce (realização): projeto divino e humano.",
+          "recycledFrom": "/pt/m7/licao-m7-f08/"
+        },
+        "kind": "Orientação de correção"
+      },
+      "exit": "Reescreve uma frase da tua resposta para melhorar a relação entre uma ideia e a sua prova. Regista a alteração e o motivo.",
+      "alternatives": []
+    },
+    {
+      "id": "s17",
+      "order": 17,
+      "durationMinutes": 45,
+      "title": "Poesia contemporânea: três modos de dizer",
+      "group": "12.º ano",
+      "module": "M8",
+      "tags": [
+        "poesia contemporânea",
+        "imagem",
+        "voz",
+        "comparação"
+      ],
+      "focus": "Comparar Jorge de Sena, Eugénio de Andrade e Ana Luísa Amaral",
+      "source": {
+        "title": "Poesia contemporânea: três modos de dizer",
+        "author": "Leitura e atividades do módulo M8",
+        "excerpt": "",
+        "context": "Abre a leitura de apoio, lê o recorte indicado e identifica duas marcas relevantes antes de responder. O texto de origem mantém-se na ficha; esta sessão organiza o treino a partir dele.",
+        "url": "/pt/m8/licao-m8-f01/",
+        "note": "Materiais existentes reciclados; os recortes e as fontes estão identificados na ficha de apoio."
+      },
+      "resources": [
+        {
+          "label": "Jorge de Sena",
+          "url": "/pt/m8/licao-m8-f03/"
+        },
+        {
+          "label": "Eugénio de Andrade",
+          "url": "/pt/m8/licao-m8-f04/"
+        },
+        {
+          "label": "Ana Luísa Amaral",
+          "url": "/pt/m8/licao-m8-f05/"
+        }
+      ],
+      "warmup": [
+        {
+          "id": "s17-q1",
+          "q": "Que comparação entre dois poemas é mais fundamentada?",
+          "options": [
+            "Uma comparação que define um eixo e analisa uma marca de cada texto.",
+            "Uma comparação que enumera apenas datas de nascimento.",
+            "Uma comparação que considera toda a poesia contemporânea igual."
+          ],
+          "answer": 0,
+          "feedback": "O eixo comum permite comparar; as marcas de cada poema permitem reconhecer as diferenças."
+        },
+        {
+          "id": "s17-q2",
+          "q": "Quando um poema reflete sobre o fazer poético, pode ser lido como…",
+          "options": [
+            "Uma arte poética.",
+            "Um documento sem construção literária.",
+            "Uma biografia necessariamente fiel."
+          ],
+          "answer": 0,
+          "feedback": "Uma arte poética interroga ou apresenta modos de criar e compreender poesia. Não se confunde automaticamente com a biografia do autor."
+        },
+        {
+          "id": "s17-q3",
+          "q": "Que pergunta ajuda a estudar a relação entre poesia e mundo?",
+          "options": [
+            "Que realidade é selecionada e como é transformada pela linguagem?",
+            "Quantas palavras tem o apelido do autor?",
+            "Que opinião posso dar sem ler o poema?"
+          ],
+          "answer": 0,
+          "feedback": "Importa analisar o que o poema torna visível e os procedimentos que constroem essa visão."
+        }
+      ],
+      "writing": {
+        "minutes": 15,
+        "title": "Construir uma resposta fundamentada",
+        "prompt": "Seleciona dois poemas estudados de autores diferentes. Compara a relação entre uma experiência humana e uma escolha de linguagem, usando uma referência concreta de cada poema.",
+        "instructions": [
+          "Lê o pedido e define o eixo da resposta antes de escrever.",
+          "Seleciona duas referências ou exemplos e explica o que demonstram.",
+          "Reserva os últimos dois minutos para reler e corrigir."
+        ],
+        "target": "80–120 palavras",
+        "criteria": [
+          "Respondi ao pedido: comparar Jorge de Sena, Eugénio de Andrade e Ana Luísa Amaral.",
+          "Usei referências pertinentes e expliquei a sua relação com a interpretação.",
+          "Organizei as ideias com ligações e referentes claros.",
+          "Revi construção frásica, pontuação e ortografia."
+        ]
+      },
+      "correction": {
+        "model": "A comparação deve partir de um eixo comum e reconhecer diferenças. Uma experiência pode ganhar forma por uma imagem concentrada, por uma voz de testemunho ou pela revisão de uma tradição. O importante é mostrar como isso acontece nos dois poemas escolhidos. As categorias não substituem a leitura: uma resposta fundamentada analisa as palavras e evita transformar cada autor numa fórmula que explicaria todos os seus textos.",
+        "steps": [
+          {
+            "label": "Cumprir o pedido",
+            "detail": "Confere se a resposta realiza a operação pedida nesta sessão: comparar jorge de sena, eugénio de andrade e ana luísa amaral."
+          },
+          {
+            "label": "Mostrar como se chega à interpretação",
+            "detail": "Localiza a relação entre cada referência e a ideia que ela sustenta. Uma resposta diferente da proposta pode ser válida se for coerente e fundamentada."
+          },
+          {
+            "label": "Rever a expressão",
+            "detail": "Escolhe uma frase e melhora a precisão de um referente, de um conector ou de uma construção. Explica o efeito da mudança."
+          }
+        ],
+        "pitfalls": [
+          "Substituir a análise por um rótulo sem demonstração.",
+          "Apresentar exemplos que não se relacionam com o pedido.",
+          "Copiar a proposta sem rever a primeira versão."
+        ],
+        "check": {
+          "id": "s17-check",
+          "q": "Depois da revisão: Que comparação entre dois poemas é mais fundamentada?",
+          "options": [
+            "Uma comparação que define um eixo e analisa uma marca de cada texto.",
+            "Uma comparação que enumera apenas datas de nascimento.",
+            "Uma comparação que considera toda a poesia contemporânea igual."
+          ],
+          "answer": 0,
+          "feedback": "O eixo comum permite comparar; as marcas de cada poema permitem reconhecer as diferenças."
+        },
+        "kind": "Orientação de correção"
+      },
+      "exit": "Reescreve uma frase da tua resposta para melhorar a relação entre uma ideia e a sua prova. Regista a alteração e o motivo.",
+      "alternatives": [
+        {
+          "label": "Outros poetas das Aprendizagens Essenciais",
+          "instruction": "Aplica o eixo comparativo a dois poemas efetivamente estudados. Seleciona autores previstos no teu percurso e mostra diferenças através das palavras dos poemas.",
+          "url": "https://www.dge.mec.pt/aprendizagens-essenciais-ensino-secundario"
+        }
+      ]
+    },
+    {
+      "id": "s18",
+      "order": 18,
+      "durationMinutes": 45,
+      "title": "Conto: o que o texto deixa por dizer",
+      "group": "12.º ano",
+      "module": "M8",
+      "tags": [
+        "conto",
+        "inferência",
+        "omissão",
+        "identidade"
+      ],
+      "focus": "Fundamentar inferências em George",
+      "source": {
+        "title": "Conto: o que o texto deixa por dizer",
+        "author": "Leitura e atividades do módulo M8",
+        "excerpt": "",
+        "context": "Abre a leitura de apoio, lê o recorte indicado e identifica duas marcas relevantes antes de responder. O texto de origem mantém-se na ficha; esta sessão organiza o treino a partir dele.",
+        "url": "/pt/m8/licao-m8-f08/",
+        "note": "Materiais existentes reciclados; os recortes e as fontes estão identificados na ficha de apoio."
+      },
+      "resources": [],
+      "warmup": [
+        {
+          "id": "s18-q1",
+          "q": "O que acontece em «George»?",
+          "options": [
+            "Uma mulher escreve aos filhos sobre o mundo deles",
+            "Uma mulher encontra a jovem que foi e a velha que será",
+            "Uma mulher atravessa o mar e pede paz e pão",
+            "Uma mulher encontra uma chave sem porta"
+          ],
+          "answer": 1,
+          "feedback": "Em «George», uma mulher encontra-se com as outras idades; as outras histórias são de Sena, de Amaral e do resumo-modelo.",
+          "recycledFrom": "/pt/m8/licao-m8-f08/"
+        },
+        {
+          "id": "s18-q2",
+          "q": "Ao interpretar uma omissão num conto, qual é o procedimento mais seguro?",
+          "options": [
+            "Relacionar pistas e admitir o que permanece incerto.",
+            "Inventar o episódio que falta e apresentá-lo como facto.",
+            "Desconsiderar todas as informações implícitas."
+          ],
+          "answer": 0,
+          "feedback": "Inferir exige apoio textual. Uma hipótese plausível não deve ser apresentada como uma informação explícita."
+        },
+        {
+          "id": "s18-q3",
+          "q": "De que livro é «George»?",
+          "options": [
+            "_Seta Despedida_, de 1995",
+            "_Ágora_, de 2019",
+            "_Metamorfoses_, de 1963",
+            "_Novas Cartas Portuguesas_, de 2010"
+          ],
+          "answer": 0,
+          "feedback": "_Seta Despedida_, de 1995; _Ágora_ é de Amaral e _Metamorfoses_ de Sena.",
+          "recycledFrom": "/pt/m8/licao-m8-f08/"
+        }
+      ],
+      "writing": {
+        "minutes": 15,
+        "title": "Construir uma resposta fundamentada",
+        "prompt": "Explica como uma omissão ou uma mudança de perspetiva contribui para representar identidade e passagem do tempo em George. Sustenta a leitura em duas pistas e distingue inferência de invenção.",
+        "instructions": [
+          "Lê o pedido e define o eixo da resposta antes de escrever.",
+          "Seleciona duas referências ou exemplos e explica o que demonstram.",
+          "Reserva os últimos dois minutos para reler e corrigir."
+        ],
+        "target": "80–120 palavras",
+        "criteria": [
+          "Respondi ao pedido: fundamentar inferências em George.",
+          "Usei referências pertinentes e expliquei a sua relação com a interpretação.",
+          "Organizei as ideias com ligações e referentes claros.",
+          "Revi construção frásica, pontuação e ortografia."
+        ]
+      },
+      "correction": {
+        "model": "Uma inferência relaciona sinais que o texto oferece, sem exigir que tudo seja declarado. A aproximação de figuras em diferentes momentos da vida pode produzir uma reflexão sobre identidade, memória e passagem do tempo. A resposta deve identificar a relação efetivamente sustentada pelo conto e comentar duas pistas. O silêncio permite interpretar; não autoriza atribuir às personagens pensamentos ou acontecimentos que o texto não apoia.",
+        "steps": [
+          {
+            "label": "Cumprir o pedido",
+            "detail": "Confere se a resposta realiza a operação pedida nesta sessão: fundamentar inferências em george."
+          },
+          {
+            "label": "Mostrar como se chega à interpretação",
+            "detail": "Localiza a relação entre cada referência e a ideia que ela sustenta. Uma resposta diferente da proposta pode ser válida se for coerente e fundamentada."
+          },
+          {
+            "label": "Rever a expressão",
+            "detail": "Escolhe uma frase e melhora a precisão de um referente, de um conector ou de uma construção. Explica o efeito da mudança."
+          }
+        ],
+        "pitfalls": [
+          "Substituir a análise por um rótulo sem demonstração.",
+          "Apresentar exemplos que não se relacionam com o pedido.",
+          "Copiar a proposta sem rever a primeira versão."
+        ],
+        "check": {
+          "id": "s18-check",
+          "q": "Depois da revisão: O que acontece em «George»?",
+          "options": [
+            "Uma mulher escreve aos filhos sobre o mundo deles",
+            "Uma mulher encontra a jovem que foi e a velha que será",
+            "Uma mulher atravessa o mar e pede paz e pão",
+            "Uma mulher encontra uma chave sem porta"
+          ],
+          "answer": 1,
+          "feedback": "Em «George», uma mulher encontra-se com as outras idades; as outras histórias são de Sena, de Amaral e do resumo-modelo.",
+          "recycledFrom": "/pt/m8/licao-m8-f08/"
+        },
+        "kind": "Orientação de correção"
+      },
+      "exit": "Reescreve uma frase da tua resposta para melhorar a relação entre uma ideia e a sua prova. Regista a alteração e o motivo.",
+      "alternatives": [
+        {
+          "label": "Sempre é uma companhia",
+          "instruction": "Analisa como a representação do quotidiano e uma mudança na relação com o exterior constroem a experiência da personagem; usa duas pistas do conto.",
+          "url": "https://www.dge.mec.pt/aprendizagens-essenciais-ensino-secundario"
+        },
+        {
+          "label": "Famílias desavindas",
+          "instruction": "Analisa o efeito de uma situação recorrente e da perspetiva narrativa na representação do conflito; distingue ironia e simples descrição de acontecimentos.",
+          "url": "https://www.dge.mec.pt/aprendizagens-essenciais-ensino-secundario"
+        }
+      ]
+    },
+    {
+      "id": "s19",
+      "order": 19,
+      "durationMinutes": 45,
+      "title": "Saramago: quem conta e quem faz",
+      "group": "12.º ano",
+      "module": "M9",
+      "tags": [
+        "romance",
+        "narrador",
+        "História",
+        "trabalho"
+      ],
+      "focus": "Distinguir acontecimentos, voz narrativa e visão da História",
+      "source": {
+        "title": "Saramago: quem conta e quem faz",
+        "author": "Leitura e atividades do módulo M9",
+        "excerpt": "",
+        "context": "Abre a leitura de apoio, lê o recorte indicado e identifica duas marcas relevantes antes de responder. O texto de origem mantém-se na ficha; esta sessão organiza o treino a partir dele.",
+        "url": "/pt/m9/licao-m9-f01/",
+        "note": "Materiais existentes reciclados; os recortes e as fontes estão identificados na ficha de apoio."
+      },
+      "resources": [],
+      "warmup": [
+        {
+          "id": "s19-q1",
+          "q": "Em que época se passa a história do _Memorial do Convento_?",
+          "options": [
+            "No início do século XVI",
+            "No início do século XVIII",
+            "No fim do século XX",
+            "No fim do século XVII",
+            "No início do século XIX"
+          ],
+          "answer": 1,
+          "feedback": "Reinado de D. João V e tempo da Inquisição: início do século XVIII; o século XX é o da escrita.",
+          "recycledFrom": "/pt/m9/licao-m9-f01/"
+        },
+        {
+          "id": "s19-q2",
+          "q": "«essa é a medida de hoje, não a da época»: o que mostra este aviso do narrador?",
+          "options": [
+            "Que a voz distingue o seu presente da época dos acontecimentos",
+            "Que o narrador viveu no tempo de D. João V",
+            "Que os alicerces foram mal medidos",
+            "Que a obra de Mafra nunca acabou"
+          ],
+          "answer": 0,
+          "feedback": "Neste comentário sobre as unidades de medida, o «hoje» pertence ao presente de quem narra e é contrastado com a época da construção. Isto situa o tempo da narração relativamente aos acontecimentos; não é, por si só, um recuo ou uma antecipação do enredo. A data de publicação do livro é uma informação diferente.",
+          "recycledFrom": "/pt/m9/licao-m9-f01/"
+        },
+        {
+          "id": "s19-q3",
+          "q": "O que antecipa «do Convento», a segunda parte do título?",
+          "options": [
+            "A construção como centro e como crítica ao poder",
+            "A promessa do rei e o nascimento do filho",
+            "A vida dos frades depois da sagração",
+            "A viagem da pedra de Pêro Pinheiro"
+          ],
+          "answer": 0,
+          "feedback": "«Do Convento» põe a construção no centro, e com ela a crítica ao poder que a mandou fazer.",
+          "recycledFrom": "/pt/m9/licao-m9-f01/"
+        }
+      ],
+      "writing": {
+        "minutes": 15,
+        "title": "Construir uma resposta fundamentada",
+        "prompt": "Explica como uma intervenção do narrador ou uma escolha de representação do trabalho altera a leitura da construção do convento. Analisa duas marcas e a sua relação com uma visão da História.",
+        "instructions": [
+          "Lê o pedido e define o eixo da resposta antes de escrever.",
+          "Seleciona duas referências ou exemplos e explica o que demonstram.",
+          "Reserva os últimos dois minutos para reler e corrigir."
+        ],
+        "target": "80–120 palavras",
+        "criteria": [
+          "Respondi ao pedido: distinguir acontecimentos, voz narrativa e visão da História.",
+          "Usei referências pertinentes e expliquei a sua relação com a interpretação.",
+          "Organizei as ideias com ligações e referentes claros.",
+          "Revi construção frásica, pontuação e ortografia."
+        ]
+      },
+      "correction": {
+        "model": "A construção não é apenas uma decisão régia: envolve trabalho, recursos e vidas que a narrativa torna visíveis. Uma intervenção do narrador pode orientar a atenção para esse contraste e questionar a distribuição do reconhecimento. A resposta deve analisar o efeito das marcas escolhidas, distinguindo a época dos acontecimentos do momento de onde se conta. Não se deve confundir automaticamente narrador com autor real nem comentário com antecipação.",
+        "steps": [
+          {
+            "label": "Cumprir o pedido",
+            "detail": "Confere se a resposta realiza a operação pedida nesta sessão: distinguir acontecimentos, voz narrativa e visão da história."
+          },
+          {
+            "label": "Mostrar como se chega à interpretação",
+            "detail": "Localiza a relação entre cada referência e a ideia que ela sustenta. Uma resposta diferente da proposta pode ser válida se for coerente e fundamentada."
+          },
+          {
+            "label": "Rever a expressão",
+            "detail": "Escolhe uma frase e melhora a precisão de um referente, de um conector ou de uma construção. Explica o efeito da mudança."
+          }
+        ],
+        "pitfalls": [
+          "Substituir a análise por um rótulo sem demonstração.",
+          "Apresentar exemplos que não se relacionam com o pedido.",
+          "Copiar a proposta sem rever a primeira versão."
+        ],
+        "check": {
+          "id": "s19-check",
+          "q": "Depois da revisão: Em que época se passa a história do _Memorial do Convento_?",
+          "options": [
+            "No início do século XVI",
+            "No início do século XVIII",
+            "No fim do século XX",
+            "No fim do século XVII",
+            "No início do século XIX"
+          ],
+          "answer": 1,
+          "feedback": "Reinado de D. João V e tempo da Inquisição: início do século XVIII; o século XX é o da escrita.",
+          "recycledFrom": "/pt/m9/licao-m9-f01/"
+        },
+        "kind": "Orientação de correção"
+      },
+      "exit": "Reescreve uma frase da tua resposta para melhorar a relação entre uma ideia e a sua prova. Regista a alteração e o motivo.",
+      "alternatives": [
+        {
+          "label": "O Ano da Morte de Ricardo Reis",
+          "instruction": "Analisa uma intervenção do narrador ou uma relação entre uma personagem e o contexto histórico. Distingue a informação sobre os acontecimentos da visão que a narrativa constrói.",
+          "url": "https://www.dge.mec.pt/aprendizagens-essenciais-ensino-secundario"
+        }
+      ]
+    },
+    {
+      "id": "s20",
+      "order": 20,
+      "durationMinutes": 45,
+      "title": "Ler informação e escrever uma síntese",
+      "group": "Competências",
+      "module": "M1–M9",
+      "tags": [
+        "leitura",
+        "síntese",
+        "hierarquização",
+        "reformulação"
+      ],
+      "focus": "Selecionar, hierarquizar e reformular informação",
+      "source": {
+        "title": "Informação, acesso e conhecimento",
+        "author": "Texto e proposta produzidos para este treino",
+        "excerpt": "A consulta digital permite encontrar documentos com rapidez e aproximar leitores de obras que antes estavam longe. Contudo, a abundância de resultados cria também dificuldades de seleção. Uma lista extensa pode repetir a mesma origem ou misturar informação verificada e interpretação. A biblioteca ajuda a organizar esse universo: identifica fontes, oferece critérios e apoia quem procura. Estudar exige, por isso, comparar documentos e perceber as relações entre as ideias. Copiar fragmentos para uma pasta não equivale a compreender. A rapidez de acesso é uma vantagem quando é acompanhada pelo tempo necessário para ler, interrogar e reformular. O objetivo não é acumular resultados, mas construir conhecimento que possa ser explicado e usado com responsabilidade.",
+        "context": "Texto de apoio produzido para este treino.",
+        "url": "/pt/m1/licao-m1-f20/",
+        "note": "Material de treino autoral."
+      },
+      "resources": [],
+      "warmup": [
+        {
+          "id": "s20-q1",
+          "q": "Qual deve ser preservado numa síntese?",
+          "options": [
+            "A opinião pessoal do aluno",
+            "A relação entre as ideias centrais",
+            "Todos os exemplos, mesmo secundários"
+          ],
+          "answer": 1,
+          "feedback": "A síntese mantém a informação essencial e as relações que a organizam; não acrescenta uma avaliação pessoal."
+        },
+        {
+          "id": "s20-q2",
+          "q": "Qual destas operações é reformulação?",
+          "options": [
+            "Reescrever a ideia por palavras próprias sem alterar o sentido",
+            "Copiar e retirar as aspas",
+            "Substituir uma palavra e manter toda a frase"
+          ],
+          "answer": 0,
+          "feedback": "Reformular exige compreender a ideia e construir outra expressão para o mesmo sentido, sem disfarçar cópia."
+        },
+        {
+          "id": "s20-q3",
+          "q": "No texto de apoio, que relação se estabelece entre rapidez e estudo?",
+          "options": [
+            "São incompatíveis",
+            "A rapidez dispensa a leitura",
+            "A rapidez é útil, mas não substitui compreender e relacionar"
+          ],
+          "answer": 2,
+          "feedback": "A ideia é uma condição, não uma rejeição do acesso digital: a vantagem precisa de ser acompanhada por leitura crítica."
+        }
+      ],
+      "writing": {
+        "minutes": 15,
+        "title": "Construir uma resposta fundamentada",
+        "prompt": "Escreve uma síntese de 80 a 100 palavras do texto de apoio, preservando as ideias centrais e a relação entre elas. Não acrescentes opiniões nem exemplos teus.",
+        "instructions": [
+          "Identifica o tema, as ideias centrais e a relação entre elas.",
+          "Reformula sem copiar sequências extensas e sem acrescentar opiniões ou exemplos.",
+          "Conta as palavras e verifica a fidelidade ao texto de partida."
+        ],
+        "target": "80–100 palavras",
+        "criteria": [
+          "Preservei as ideias centrais e a relação entre elas.",
+          "Reformulei sem acrescentar comentários pessoais.",
+          "Respeitei as 80–100 palavras.",
+          "Revi coesão, construção frásica, pontuação e ortografia."
+        ]
+      },
+      "correction": {
+        "model": "O acesso digital amplia as possibilidades de consulta, mas exige critérios de seleção. A biblioteca contribui para essa seleção ao organizar fontes e apoiar os leitores. O trabalho com documentos deve incluir comparação, identificação da origem e distinção entre factos e interpretações. Embora a rapidez facilite a pesquisa, não substitui o tempo de compreender e relacionar a informação. Assim, estudar implica transformar o que se encontra em conhecimento organizado, e não apenas reunir resultados ou copiar excertos.",
+        "steps": [
+          {
+            "label": "Cumprir o pedido",
+            "detail": "Confere se a resposta realiza a operação pedida nesta sessão: selecionar, hierarquizar e reformular informação."
+          },
+          {
+            "label": "Mostrar como se chega à interpretação",
+            "detail": "Localiza a relação entre cada referência e a ideia que ela sustenta. Uma resposta diferente da proposta pode ser válida se for coerente e fundamentada."
+          },
+          {
+            "label": "Rever a expressão",
+            "detail": "Escolhe uma frase e melhora a precisão de um referente, de um conector ou de uma construção. Explica o efeito da mudança."
+          }
+        ],
+        "pitfalls": [
+          "Substituir a análise por um rótulo sem demonstração.",
+          "Apresentar exemplos que não se relacionam com o pedido.",
+          "Copiar a proposta sem rever a primeira versão."
+        ],
+        "check": {
+          "id": "s20-check",
+          "q": "Depois da revisão: Qual deve ser preservado numa síntese?",
+          "options": [
+            "A opinião pessoal do aluno",
+            "A relação entre as ideias centrais",
+            "Todos os exemplos, mesmo secundários"
+          ],
+          "answer": 1,
+          "feedback": "A síntese mantém a informação essencial e as relações que a organizam; não acrescenta uma avaliação pessoal."
+        },
+        "kind": "Orientação de correção"
+      },
+      "exit": "Reescreve uma frase da tua resposta para melhorar a relação entre uma ideia e a sua prova. Regista a alteração e o motivo.",
+      "alternatives": []
+    },
+    {
+      "id": "s21",
+      "order": 21,
+      "durationMinutes": 45,
+      "title": "Gramática: funções e relações entre orações",
+      "group": "Competências",
+      "module": "M2 · M5 · M6",
+      "tags": [
+        "gramática",
+        "funções sintáticas",
+        "orações",
+        "causalidade"
+      ],
+      "focus": "Analisar a estrutura antes de escolher uma etiqueta",
+      "source": {
+        "title": "Gramática: funções e relações entre orações",
+        "author": "Texto e proposta produzidos para este treino",
+        "excerpt": "",
+        "context": "Usa uma resposta ou um excerto trabalhado no módulo de apoio. A tarefa desta sessão orienta a aplicação da competência.",
+        "url": "/pt/m6/licao-m6-f04/",
+        "note": "Material de treino autoral."
+      },
+      "resources": [],
+      "warmup": [
+        {
+          "id": "s21-q1",
+          "q": "Em «Os leitores procuram provas», qual é o complemento direto?",
+          "options": [
+            "Os leitores",
+            "procuram",
+            "provas"
+          ],
+          "answer": 2,
+          "feedback": "«Provas» completa o verbo e pode ser retomado por «as»: os leitores procuram-nas."
+        },
+        {
+          "id": "s21-q2",
+          "q": "Em «Revi a resposta porque o referente era ambíguo», que relação introduz «porque»?",
+          "options": [
+            "Causa",
+            "Consequência",
+            "Concessão"
+          ],
+          "answer": 0,
+          "feedback": "A segunda oração apresenta a razão pela qual a resposta foi revista."
+        },
+        {
+          "id": "s21-q3",
+          "q": "Em «O poema que analisámos apresenta um contraste», a relativa permite…",
+          "options": [
+            "apresentar uma hipótese",
+            "identificar o poema de que se fala",
+            "introduzir o tempo da ação"
+          ],
+          "answer": 1,
+          "feedback": "A relativa restringe o referente de «poema»: não se fala de qualquer poema, mas daquele que foi analisado."
+        }
+      ],
+      "writing": {
+        "minutes": 15,
+        "title": "Construir uma resposta fundamentada",
+        "prompt": "Produz um parágrafo de 80 a 110 palavras sobre uma obra estudada. Inclui uma oração subordinada causal e uma relativa; sublinha-as e explica o que cada uma acrescenta ao teu argumento.",
+        "instructions": [
+          "Lê o pedido e define o eixo da resposta antes de escrever.",
+          "Seleciona duas referências ou exemplos e explica o que demonstram.",
+          "Reserva os últimos dois minutos para reler e corrigir."
+        ],
+        "target": "80–110 palavras + identificação e explicação das duas orações",
+        "criteria": [
+          "Respondi ao pedido: analisar a estrutura antes de escolher uma etiqueta.",
+          "Usei referências pertinentes e expliquei a sua relação com a interpretação.",
+          "Organizei as ideias com ligações e referentes claros.",
+          "Revi construção frásica, pontuação e ortografia."
+        ]
+      },
+      "correction": {
+        "model": "Uma relação causal permite apresentar uma razão para uma interpretação; uma relativa pode identificar ou caracterizar um referente. O teste não consiste em inserir conectores ao acaso. Depois de escrever, isola cada oração, verifica a sua dependência e explica a função que desempenha no teu texto. Uma classificação correta deve poder ser justificada pela estrutura e pelo sentido, não apenas pela presença de uma palavra inicial.",
+        "steps": [
+          {
+            "label": "Cumprir o pedido",
+            "detail": "Confere se a resposta realiza a operação pedida nesta sessão: analisar a estrutura antes de escolher uma etiqueta."
+          },
+          {
+            "label": "Mostrar como se chega à interpretação",
+            "detail": "Localiza a relação entre cada referência e a ideia que ela sustenta. Uma resposta diferente da proposta pode ser válida se for coerente e fundamentada."
+          },
+          {
+            "label": "Rever a expressão",
+            "detail": "Escolhe uma frase e melhora a precisão de um referente, de um conector ou de uma construção. Explica o efeito da mudança."
+          }
+        ],
+        "pitfalls": [
+          "Substituir a análise por um rótulo sem demonstração.",
+          "Apresentar exemplos que não se relacionam com o pedido.",
+          "Copiar a proposta sem rever a primeira versão."
+        ],
+        "check": {
+          "id": "s21-check",
+          "q": "Depois da revisão: Em «Os leitores procuram provas», qual é o complemento direto?",
+          "options": [
+            "Os leitores",
+            "procuram",
+            "provas"
+          ],
+          "answer": 2,
+          "feedback": "«Provas» completa o verbo e pode ser retomado por «as»: os leitores procuram-nas."
+        },
+        "kind": "Orientação de correção"
+      },
+      "exit": "Reescreve uma frase da tua resposta para melhorar a relação entre uma ideia e a sua prova. Regista a alteração e o motivo.",
+      "alternatives": []
+    },
+    {
+      "id": "s22",
+      "order": 22,
+      "durationMinutes": 45,
+      "title": "Gramática: ligar, retomar e situar",
+      "group": "Competências",
+      "module": "M3 · M7 · M8",
+      "tags": [
+        "gramática",
+        "coesão",
+        "deixis",
+        "tempos verbais",
+        "modalidade"
+      ],
+      "focus": "Coesão, referência, tempos e modalidade em uso",
+      "source": {
+        "title": "Gramática: ligar, retomar e situar",
+        "author": "Texto e proposta produzidos para este treino",
+        "excerpt": "",
+        "context": "Usa uma resposta ou um excerto trabalhado no módulo de apoio. A tarefa desta sessão orienta a aplicação da competência.",
+        "url": "/pt/m8/licao-m8-f06/",
+        "note": "Material de treino autoral."
+      },
+      "resources": [],
+      "warmup": [
+        {
+          "id": "s22-q1",
+          "q": "Em «Inês viu a mãe quando ela entrou», o que convém rever?",
+          "options": [
+            "A extensão da frase, obrigatoriamente",
+            "A identidade do referente de «ela»",
+            "A presença do verbo «viu»"
+          ],
+          "answer": 1,
+          "feedback": "Sem contexto, «ela» pode remeter para referentes diferentes. A revisão deve explicitar quem entrou."
+        },
+        {
+          "id": "s22-q2",
+          "q": "Que relação exprime «contudo»?",
+          "options": [
+            "Oposição ou restrição à expectativa anterior",
+            "Uma causa necessária",
+            "Uma simples repetição"
+          ],
+          "answer": 0,
+          "feedback": "O conector orienta a leitura para um contraste; deve corresponder à relação efetiva entre as ideias."
+        },
+        {
+          "id": "s22-q3",
+          "q": "Em «Talvez a personagem reconheça o erro», «talvez» apresenta…",
+          "options": [
+            "certeza absoluta",
+            "uma ordem ao leitor",
+            "uma possibilidade"
+          ],
+          "answer": 2,
+          "feedback": "A marca de modalidade indica possibilidade; não transforma a interpretação numa certeza."
+        }
+      ],
+      "writing": {
+        "minutes": 15,
+        "title": "Construir uma resposta fundamentada",
+        "prompt": "Reescreve um parágrafo teu para tornar claros os referentes e as relações entre ideias. Usa uma retoma pronominal inequívoca, um conector adequado e uma forma verbal cujo valor consigas explicar.",
+        "instructions": [
+          "Lê o pedido e define o eixo da resposta antes de escrever.",
+          "Seleciona duas referências ou exemplos e explica o que demonstram.",
+          "Reserva os últimos dois minutos para reler e corrigir."
+        ],
+        "target": "80–120 palavras",
+        "criteria": [
+          "Respondi ao pedido: coesão, referência, tempos e modalidade em uso.",
+          "Usei referências pertinentes e expliquei a sua relação com a interpretação.",
+          "Organizei as ideias com ligações e referentes claros.",
+          "Revi construção frásica, pontuação e ortografia."
+        ]
+      },
+      "correction": {
+        "model": "Rever a coesão não é multiplicar conectores. Uma retoma deve permitir recuperar o antecedente sem ambiguidade; um conector deve exprimir a relação que o argumento precisa. O valor de uma forma verbal depende do contexto em que é usada. A justificação das três escolhas mostra se a revisão melhorou a leitura ou se apenas substituiu palavras. Convém comparar as duas versões e explicar o efeito de cada alteração.",
+        "steps": [
+          {
+            "label": "Cumprir o pedido",
+            "detail": "Confere se a resposta realiza a operação pedida nesta sessão: coesão, referência, tempos e modalidade em uso."
+          },
+          {
+            "label": "Mostrar como se chega à interpretação",
+            "detail": "Localiza a relação entre cada referência e a ideia que ela sustenta. Uma resposta diferente da proposta pode ser válida se for coerente e fundamentada."
+          },
+          {
+            "label": "Rever a expressão",
+            "detail": "Escolhe uma frase e melhora a precisão de um referente, de um conector ou de uma construção. Explica o efeito da mudança."
+          }
+        ],
+        "pitfalls": [
+          "Substituir a análise por um rótulo sem demonstração.",
+          "Apresentar exemplos que não se relacionam com o pedido.",
+          "Copiar a proposta sem rever a primeira versão."
+        ],
+        "check": {
+          "id": "s22-check",
+          "q": "Depois da revisão: Em «Inês viu a mãe quando ela entrou», o que convém rever?",
+          "options": [
+            "A extensão da frase, obrigatoriamente",
+            "A identidade do referente de «ela»",
+            "A presença do verbo «viu»"
+          ],
+          "answer": 1,
+          "feedback": "Sem contexto, «ela» pode remeter para referentes diferentes. A revisão deve explicitar quem entrou."
+        },
+        "kind": "Orientação de correção"
+      },
+      "exit": "Reescreve uma frase da tua resposta para melhorar a relação entre uma ideia e a sua prova. Regista a alteração e o motivo.",
+      "alternatives": []
+    },
+    {
+      "id": "s23",
+      "order": 23,
+      "durationMinutes": 45,
+      "title": "Exposição: explicar com uma linha clara",
+      "group": "Competências",
+      "module": "M1–M9",
+      "tags": [
+        "escrita",
+        "exposição",
+        "plano",
+        "exemplificação"
+      ],
+      "focus": "Organizar conhecimento numa explicação fundamentada",
+      "source": {
+        "title": "Exposição: explicar com uma linha clara",
+        "author": "Texto e proposta produzidos para este treino",
+        "excerpt": "",
+        "context": "Usa uma resposta ou um excerto trabalhado no módulo de apoio. A tarefa desta sessão orienta a aplicação da competência.",
+        "url": "/pt/m4/licao-m4-f27/",
+        "note": "Material de treino autoral."
+      },
+      "resources": [],
+      "warmup": [
+        {
+          "id": "s23-q1",
+          "q": "Qual início delimita melhor uma exposição?",
+          "options": [
+            "Neste texto vou falar de tudo",
+            "Em duas obras, a escolha individual confronta-se com regras familiares distintas",
+            "As obras são importantes e bonitas"
+          ],
+          "answer": 1,
+          "feedback": "O segundo início define um eixo que pode ser explicado com exemplos, em vez de anunciar um tema sem limites."
+        },
+        {
+          "id": "s23-q2",
+          "q": "Depois de um exemplo literário, o que falta normalmente?",
+          "options": [
+            "Explicar a sua relação com a ideia em análise",
+            "Mudar para outra obra sem ligação",
+            "Repetir o título várias vezes"
+          ],
+          "answer": 0,
+          "feedback": "O exemplo só funciona como prova quando se mostra aquilo que permite compreender."
+        },
+        {
+          "id": "s23-q3",
+          "q": "Que conclusão corresponde a uma exposição?",
+          "options": [
+            "Introduzir uma terceira obra sem explicar",
+            "Expressar apenas gosto pessoal",
+            "Retomar a explicação construída e o seu alcance"
+          ],
+          "answer": 2,
+          "feedback": "A conclusão deve resultar do desenvolvimento, não abrir um novo conjunto de questões sem resposta."
+        }
+      ],
+      "writing": {
+        "minutes": 20,
+        "title": "Escrever, reler, melhorar",
+        "prompt": "Escreve um texto expositivo de 200 a 350 palavras sobre a relação entre escolhas individuais e condicionamentos sociais em duas obras estudadas. Define um eixo, explica-o e apoia-o em exemplos pertinentes.",
+        "instructions": [
+          "Lê o pedido e define o eixo da resposta antes de escrever.",
+          "Seleciona duas referências ou exemplos e explica o que demonstram.",
+          "Reserva os últimos dois minutos para reler e corrigir."
+        ],
+        "target": "200–350 palavras",
+        "criteria": [
+          "Respondi ao pedido: organizar conhecimento numa explicação fundamentada.",
+          "Usei referências pertinentes e expliquei a sua relação com a interpretação.",
+          "Organizei as ideias com ligações e referentes claros.",
+          "Revi construção frásica, pontuação e ortografia."
+        ]
+      },
+      "correction": {
+        "model": "Em Farsa de Inês Pereira e em Amor de Perdição, as escolhas individuais confrontam-se com regras sociais e relações familiares. No entanto, os textos representam esse confronto de modos diferentes: a farsa expõe interesses através do cómico, enquanto a narrativa de Camilo desenvolve um conflito de consequências trágicas.\n\nInês procura uma vida que corresponda às suas expectativas e rejeita inicialmente Pêro Marques. A experiência do casamento com o Escudeiro confronta o desejo de distinção com uma limitação concreta da liberdade. A escolha seguinte resulta de uma aprendizagem que o desfecho permite discutir. O provérbio organiza essa comparação, mas a sátira impede que a personagem seja lida como um simples exemplo de virtude.\n\nEm Amor de Perdição, a relação de Simão e Teresa situa-se num contexto de rivalidade familiar e de autoridade sobre as decisões dos mais novos. As pressões sociais não eliminam a responsabilidade individual: as ações das personagens também fazem avançar o conflito e agravam as suas consequências. Explicar os condicionamentos é, por isso, diferente de desculpar automaticamente tudo o que fazem.\n\nAs duas obras tornam visível a distância entre desejar e poder agir. Contudo, a negociação irónica de interesses na farsa e o desenvolvimento trágico da narrativa produzem leituras diferentes dessa distância. Comparar não exige apagar tais diferenças; exige mostrar como cada obra transforma um conflito humano numa construção literária própria.",
+        "steps": [
+          {
+            "label": "Cumprir o pedido",
+            "detail": "Confere se a resposta realiza a operação pedida nesta sessão: organizar conhecimento numa explicação fundamentada."
+          },
+          {
+            "label": "Mostrar como se chega à interpretação",
+            "detail": "Localiza a relação entre cada referência e a ideia que ela sustenta. Uma resposta diferente da proposta pode ser válida se for coerente e fundamentada."
+          },
+          {
+            "label": "Rever a expressão",
+            "detail": "Escolhe uma frase e melhora a precisão de um referente, de um conector ou de uma construção. Explica o efeito da mudança."
+          }
+        ],
+        "pitfalls": [
+          "Substituir a análise por um rótulo sem demonstração.",
+          "Apresentar exemplos que não se relacionam com o pedido.",
+          "Copiar a proposta sem rever a primeira versão."
+        ],
+        "check": {
+          "id": "s23-check",
+          "q": "Depois da revisão: Qual início delimita melhor uma exposição?",
+          "options": [
+            "Neste texto vou falar de tudo",
+            "Em duas obras, a escolha individual confronta-se com regras familiares distintas",
+            "As obras são importantes e bonitas"
+          ],
+          "answer": 1,
+          "feedback": "O segundo início define um eixo que pode ser explicado com exemplos, em vez de anunciar um tema sem limites."
+        },
+        "kind": "Resposta exemplificativa"
+      },
+      "exit": "Reescreve uma frase da tua resposta para melhorar a relação entre uma ideia e a sua prova. Regista a alteração e o motivo.",
+      "alternatives": []
+    },
+    {
+      "id": "s24",
+      "order": 24,
+      "durationMinutes": 45,
+      "title": "Opinião: uma posição que resiste à revisão",
+      "group": "Competências",
+      "module": "M1–M9",
+      "tags": [
+        "escrita",
+        "opinião",
+        "argumentação",
+        "objeção"
+      ],
+      "focus": "Defender uma tese com razões, exemplos e ponderação",
+      "source": {
+        "title": "Opinião: uma posição que resiste à revisão",
+        "author": "Texto e proposta produzidos para este treino",
+        "excerpt": "",
+        "context": "Usa uma resposta ou um excerto trabalhado no módulo de apoio. A tarefa desta sessão orienta a aplicação da competência.",
+        "url": "/pt/m7/licao-m7-f10/",
+        "note": "Material de treino autoral."
+      },
+      "resources": [],
+      "warmup": [
+        {
+          "id": "s24-q1",
+          "q": "Qual destas frases formula uma tese discutível?",
+          "options": [
+            "A informação existe",
+            "Há várias fontes na Internet",
+            "A abundância de informação só favorece a autonomia quando há leitura crítica"
+          ],
+          "answer": 2,
+          "feedback": "Uma tese estabelece uma posição que pode ser defendida, questionada e precisada com argumentos."
+        },
+        {
+          "id": "s24-q2",
+          "q": "Qual é a função de uma objeção bem trabalhada?",
+          "options": [
+            "Tornar mais rigorosa a posição defendida",
+            "Apagar todos os argumentos anteriores",
+            "Trocar de tema para preencher espaço"
+          ],
+          "answer": 0,
+          "feedback": "Considerar uma dificuldade permite delimitar a tese e responder a uma perspetiva diferente."
+        },
+        {
+          "id": "s24-q3",
+          "q": "Qual é o uso mais forte de um exemplo?",
+          "options": [
+            "Citar uma experiência sem explicar a ligação",
+            "Mostrar como uma razão se verifica numa situação concreta",
+            "Apresentar qualquer episódio interessante"
+          ],
+          "answer": 1,
+          "feedback": "O exemplo apoia uma razão. A sua pertinência depende da ligação ao argumento, não apenas de ser apelativo."
+        }
+      ],
+      "writing": {
+        "minutes": 20,
+        "title": "Escrever, reler, melhorar",
+        "prompt": "Escreve um texto de opinião de 200 a 350 palavras sobre esta questão: o acesso a mais informação torna-nos necessariamente mais autónomos? Defende uma posição com dois argumentos, exemplos e consideração de uma objeção.",
+        "instructions": [
+          "Lê o pedido e define o eixo da resposta antes de escrever.",
+          "Seleciona duas referências ou exemplos e explica o que demonstram.",
+          "Reserva os últimos dois minutos para reler e corrigir."
+        ],
+        "target": "200–350 palavras",
+        "criteria": [
+          "Respondi ao pedido: defender uma tese com razões, exemplos e ponderação.",
+          "Usei referências pertinentes e expliquei a sua relação com a interpretação.",
+          "Organizei as ideias com ligações e referentes claros.",
+          "Revi construção frásica, pontuação e ortografia."
+        ]
+      },
+      "correction": {
+        "model": "Ter mais informação não garante, por si só, maior autonomia. As possibilidades de consulta ampliam escolhas, mas a escolha só se torna informada quando compreendemos e avaliamos o que encontramos. Por exemplo, resultados numerosos sobre um tema podem repetir a mesma fonte e dar uma falsa impressão de consenso. Um segundo argumento relaciona autonomia com a capacidade de justificar decisões. Receber recomendações poupa tempo, mas não substitui a pergunta sobre os critérios que as produziram. É verdade que ninguém consegue verificar pessoalmente tudo aquilo que lê. Por isso, confiar em instituições, especialistas e métodos transparentes pode ser uma decisão autónoma, desde que essa confiança seja refletida e revisável. A objeção não elimina a tese: ajuda a precisá-la. Não precisamos de recusar toda a mediação para pensar com autonomia; precisamos de reconhecer as mediações e de saber quando as devemos questionar. A educação para a leitura crítica deve, assim, acompanhar o acesso à informação. Comparar fontes, identificar interesses e admitir a possibilidade de erro são práticas que transformam abundância em conhecimento. A autonomia cresce menos com a quantidade de resultados do que com a qualidade das perguntas que fazemos e com a responsabilidade com que usamos as respostas.",
+        "steps": [
+          {
+            "label": "Cumprir o pedido",
+            "detail": "Confere se a resposta realiza a operação pedida nesta sessão: defender uma tese com razões, exemplos e ponderação."
+          },
+          {
+            "label": "Mostrar como se chega à interpretação",
+            "detail": "Localiza a relação entre cada referência e a ideia que ela sustenta. Uma resposta diferente da proposta pode ser válida se for coerente e fundamentada."
+          },
+          {
+            "label": "Rever a expressão",
+            "detail": "Escolhe uma frase e melhora a precisão de um referente, de um conector ou de uma construção. Explica o efeito da mudança."
+          }
+        ],
+        "pitfalls": [
+          "Substituir a análise por um rótulo sem demonstração.",
+          "Apresentar exemplos que não se relacionam com o pedido.",
+          "Copiar a proposta sem rever a primeira versão."
+        ],
+        "check": {
+          "id": "s24-check",
+          "q": "Depois da revisão: Qual destas frases formula uma tese discutível?",
+          "options": [
+            "A informação existe",
+            "Há várias fontes na Internet",
+            "A abundância de informação só favorece a autonomia quando há leitura crítica"
+          ],
+          "answer": 2,
+          "feedback": "Uma tese estabelece uma posição que pode ser defendida, questionada e precisada com argumentos."
+        },
+        "kind": "Resposta exemplificativa"
+      },
+      "exit": "Reescreve uma frase da tua resposta para melhorar a relação entre uma ideia e a sua prova. Regista a alteração e o motivo.",
+      "alternatives": []
+    },
+    {
+      "id": "s25",
+      "order": 25,
+      "durationMinutes": 45,
+      "title": "Apreciação crítica: julgar mostrando",
+      "group": "Competências",
+      "module": "M1–M9",
+      "tags": [
+        "escrita",
+        "apreciação crítica",
+        "juízo",
+        "análise"
+      ],
+      "focus": "Distinguir gosto, análise e juízo fundamentado",
+      "source": {
+        "title": "Apreciação crítica: julgar mostrando",
+        "author": "Texto e proposta produzidos para este treino",
+        "excerpt": "",
+        "context": "Usa uma resposta ou um excerto trabalhado no módulo de apoio. A tarefa desta sessão orienta a aplicação da competência.",
+        "url": "/pt/m3/licao-m3-f03/",
+        "note": "Material de treino autoral."
+      },
+      "resources": [],
+      "warmup": [
+        {
+          "id": "s25-q1",
+          "q": "O que distingue uma apreciação crítica de um resumo?",
+          "options": [
+            "O tamanho do título",
+            "O juízo fundamentado na análise de características",
+            "A ausência de qualquer referência ao objeto"
+          ],
+          "answer": 1,
+          "feedback": "Uma apreciação seleciona características, analisa-as e sustenta uma avaliação; não se limita a contar o conteúdo."
+        },
+        {
+          "id": "s25-q2",
+          "q": "Como tornar útil a frase «a adaptação simplifica o conflito»?",
+          "options": [
+            "Apontando uma escolha concreta e explicando o seu efeito",
+            "Acrescentando «muito»",
+            "Repetindo que o livro é melhor"
+          ],
+          "answer": 0,
+          "feedback": "A reserva precisa de ser demonstrada num exemplo reconhecível e relacionada com um critério."
+        },
+        {
+          "id": "s25-q3",
+          "q": "Uma reserva numa apreciação crítica…",
+          "options": [
+            "torna o texto necessariamente contraditório",
+            "obriga a rejeitar o objeto",
+            "pode precisar um juízo globalmente favorável"
+          ],
+          "answer": 2,
+          "feedback": "Um juízo pode reconhecer qualidades e limites. O que importa é que a avaliação seja coerente e fundamentada."
+        }
+      ],
+      "writing": {
+        "minutes": 20,
+        "title": "Escrever, reler, melhorar",
+        "prompt": "Produz uma apreciação crítica de 200 a 350 palavras sobre uma obra, adaptação ou objeto cultural que conheças. Apresenta-o brevemente, analisa duas características e fundamenta um juízo, incluindo um limite ou uma reserva.",
+        "instructions": [
+          "Lê o pedido e define o eixo da resposta antes de escrever.",
+          "Seleciona duas referências ou exemplos e explica o que demonstram.",
+          "Reserva os últimos dois minutos para reler e corrigir."
+        ],
+        "target": "200–350 palavras",
+        "criteria": [
+          "Respondi ao pedido: distinguir gosto, análise e juízo fundamentado.",
+          "Usei referências pertinentes e expliquei a sua relação com a interpretação.",
+          "Organizei as ideias com ligações e referentes claros.",
+          "Revi construção frásica, pontuação e ortografia."
+        ]
+      },
+      "correction": {
+        "model": "O cartaz de entrada deste percurso apresenta a preparação de exame como um trabalho que se desenvolve por etapas. O título, a indicação de tempo e o convite para abrir as sessões criam uma hierarquia legível, adequada a quem chega ao site à procura de um ponto de partida.\n\nA dimensão dominante de «45» é uma escolha eficaz: torna concreta uma atividade que poderia parecer extensa e pouco delimitada. A informação sobre escrever, corrigir e guardar o trabalho acrescenta um percurso de ação ao nome do conjunto. Assim, o cartaz não funciona apenas como decoração; ajuda a perceber o que é possível fazer depois do clique.\n\nA cor surge em apontamentos, sem competir com todos os elementos do texto. O contraste e a economia gráfica favorecem uma leitura rápida. Além disso, a ligação ocupa o cartaz, o que facilita o acesso tanto no computador como no telemóvel e evita um botão isolado de pequenas dimensões.\n\nHá, contudo, um limite a considerar. Um cartaz pode orientar a entrada, mas não demonstra, por si só, a qualidade dos materiais. Essa promessa precisa de ser confirmada na clareza dos enunciados, na utilidade das correções e na possibilidade de retomar o estudo.\n\nNo conjunto, a composição é convincente porque associa identidade visual e função. O seu mérito está menos em chamar a atenção a qualquer preço do que em transformar essa atenção numa escolha informada e num acesso simples ao trabalho.",
+        "steps": [
+          {
+            "label": "Cumprir o pedido",
+            "detail": "Confere se a resposta realiza a operação pedida nesta sessão: distinguir gosto, análise e juízo fundamentado."
+          },
+          {
+            "label": "Mostrar como se chega à interpretação",
+            "detail": "Localiza a relação entre cada referência e a ideia que ela sustenta. Uma resposta diferente da proposta pode ser válida se for coerente e fundamentada."
+          },
+          {
+            "label": "Rever a expressão",
+            "detail": "Escolhe uma frase e melhora a precisão de um referente, de um conector ou de uma construção. Explica o efeito da mudança."
+          }
+        ],
+        "pitfalls": [
+          "Substituir a análise por um rótulo sem demonstração.",
+          "Apresentar exemplos que não se relacionam com o pedido.",
+          "Copiar a proposta sem rever a primeira versão."
+        ],
+        "check": {
+          "id": "s25-check",
+          "q": "Depois da revisão: O que distingue uma apreciação crítica de um resumo?",
+          "options": [
+            "O tamanho do título",
+            "O juízo fundamentado na análise de características",
+            "A ausência de qualquer referência ao objeto"
+          ],
+          "answer": 1,
+          "feedback": "Uma apreciação seleciona características, analisa-as e sustenta uma avaliação; não se limita a contar o conteúdo."
+        },
+        "kind": "Resposta exemplificativa"
+      },
+      "exit": "Reescreve uma frase da tua resposta para melhorar a relação entre uma ideia e a sua prova. Regista a alteração e o motivo.",
+      "alternatives": []
+    },
+    {
+      "id": "s26",
+      "order": 26,
+      "durationMinutes": 45,
+      "title": "Oficina final: transformar uma resposta",
+      "group": "Competências",
+      "module": "M1–M9",
+      "tags": [
+        "revisão",
+        "escrita",
+        "autoavaliação",
+        "resposta restrita"
+      ],
+      "focus": "Diagnosticar, reescrever e justificar alterações",
+      "source": {
+        "title": "Oficina final: transformar uma resposta",
+        "author": "Texto e proposta produzidos para este treino",
+        "excerpt": "",
+        "context": "Usa uma resposta ou um excerto trabalhado no módulo de apoio. A tarefa desta sessão orienta a aplicação da competência.",
+        "url": "/pt/m4/licao-m4-f27/",
+        "note": "Material de treino autoral."
+      },
+      "resources": [],
+      "warmup": [
+        {
+          "id": "s26-q1",
+          "q": "Qual deve ser a primeira pergunta ao rever uma resposta?",
+          "options": [
+            "Usei palavras difíceis?",
+            "Respondi ao que foi pedido?",
+            "Preenchi toda a folha?"
+          ],
+          "answer": 1,
+          "feedback": "A revisão começa pela adequação ao pedido e pelo conteúdo. Uma frase correta não compensa uma resposta a outra pergunta."
+        },
+        {
+          "id": "s26-q2",
+          "q": "Qual nota explica uma revisão?",
+          "options": [
+            "Ficou mais bonito",
+            "Mudei algumas palavras",
+            "Explicitei o antecedente para eliminar uma leitura ambígua"
+          ],
+          "answer": 2,
+          "feedback": "A terceira nota identifica a operação e o efeito que produziu na leitura."
+        },
+        {
+          "id": "s26-q3",
+          "q": "Se uma citação não é comentada, o que pode faltar?",
+          "options": [
+            "A relação entre a prova e a interpretação",
+            "Uma segunda cópia da mesma citação",
+            "O nome de mais três autores"
+          ],
+          "answer": 0,
+          "feedback": "A prova textual precisa de ser ligada ao argumento. A simples presença de aspas não demonstra uma interpretação."
+        }
+      ],
+      "writing": {
+        "minutes": 15,
+        "title": "Escrever, reler, melhorar",
+        "prompt": "Retoma uma resposta de uma sessão anterior. Reescreve-a em 100 a 150 palavras, corrigindo uma fragilidade de conteúdo, uma de organização e uma de língua. Acrescenta três notas breves que expliquem as alterações.",
+        "instructions": [
+          "Lê o pedido e define o eixo da resposta antes de escrever.",
+          "Seleciona duas referências ou exemplos e explica o que demonstram.",
+          "Reserva os últimos dois minutos para reler e corrigir."
+        ],
+        "target": "100–150 palavras + três notas de revisão",
+        "criteria": [
+          "Respondi ao pedido: diagnosticar, reescrever e justificar alterações.",
+          "Usei referências pertinentes e expliquei a sua relação com a interpretação.",
+          "Organizei as ideias com ligações e referentes claros.",
+          "Revi construção frásica, pontuação e ortografia."
+        ]
+      },
+      "correction": {
+        "model": "A primeira versão é matéria de trabalho. Uma revisão eficaz começa por identificar se a resposta cumpre o pedido e se as referências utilizadas sustentam a interpretação. Depois, verifica a ordem das ideias e a clareza das relações entre elas. Só então trata de problemas locais, como repetições, referentes ambíguos ou construção frásica. As notas de revisão devem explicar o efeito das alterações: não basta afirmar que a segunda versão ficou melhor.",
+        "steps": [
+          {
+            "label": "Cumprir o pedido",
+            "detail": "Confere se a resposta realiza a operação pedida nesta sessão: diagnosticar, reescrever e justificar alterações."
+          },
+          {
+            "label": "Mostrar como se chega à interpretação",
+            "detail": "Localiza a relação entre cada referência e a ideia que ela sustenta. Uma resposta diferente da proposta pode ser válida se for coerente e fundamentada."
+          },
+          {
+            "label": "Rever a expressão",
+            "detail": "Escolhe uma frase e melhora a precisão de um referente, de um conector ou de uma construção. Explica o efeito da mudança."
+          }
+        ],
+        "pitfalls": [
+          "Substituir a análise por um rótulo sem demonstração.",
+          "Apresentar exemplos que não se relacionam com o pedido.",
+          "Copiar a proposta sem rever a primeira versão."
+        ],
+        "check": {
+          "id": "s26-check",
+          "q": "Depois da revisão: Qual deve ser a primeira pergunta ao rever uma resposta?",
+          "options": [
+            "Usei palavras difíceis?",
+            "Respondi ao que foi pedido?",
+            "Preenchi toda a folha?"
+          ],
+          "answer": 1,
+          "feedback": "A revisão começa pela adequação ao pedido e pelo conteúdo. Uma frase correta não compensa uma resposta a outra pergunta."
+        },
+        "kind": "Orientação de correção"
+      },
+      "exit": "Reescreve uma frase da tua resposta para melhorar a relação entre uma ideia e a sua prova. Regista a alteração e o motivo.",
+      "alternatives": []
+    }
+  ],
+  "sources": [
+    {
+      "label": "Informação-Prova Português 639 · 2026",
+      "url": "https://iave.pt/wp-content/uploads/2025/11/IP-EX-Port639-2026.pdf"
+    },
+    {
+      "label": "Aprendizagens Essenciais · Português 10.º, 11.º e 12.º anos",
+      "url": "https://www.dge.mec.pt/aprendizagens-essenciais-ensino-secundario"
+    }
+  ]
+}
