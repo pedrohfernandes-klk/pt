@@ -15,3 +15,14 @@ body[data-site="pt"] .raiz .pt-entry-lead{font:400 1.05rem/1.5 Arial,Helvetica,s
 @media(min-width:900px){.raiz .ano-c .ano-tit{min-height:224px}}
 @media(max-width:899px){.raiz .ano-c .ano-tit{min-height:0;grid-template-columns:minmax(0,1fr) 70px}.raiz .ano-c .ano-tit .ano-pergunta{font-size:1.8rem}.raiz .ano-c .ano-tit .ano-art{font-size:3.7rem}}
 @media(forced-colors:active){.raiz .ano-c{--entry-paper:Canvas;--entry-ink:CanvasText;--entry-accent:LinkText;--c-cinza:CanvasText}.raiz .ano-c a:focus-visible{outline-color:Highlight}}
+
+/* The original accented letter remains readable and selectable. */
+.raiz .pt-circumflex{position:relative;display:inline-block}
+.raiz .pt-circumflex-ink{position:absolute;inset:0;pointer-events:none;color:#a3472e;clip-path:inset(-.3em -.02em 100% -.02em)}
+.raiz .pt-circumflex-ink::before{content:"ê";font:inherit;letter-spacing:inherit}
+.pt-entry-heading{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:12px 24px;margin-bottom:18px}
+.raiz .pt-entry-heading h2.sec-t{margin:0}
+.site-map-link{display:inline-flex;align-items:center;gap:10px;min-height:44px;font:700 .85rem/1.3 Arial,Helvetica,sans-serif;color:var(--tinta,#171715);text-underline-offset:4px}
+.site-map-link span{color:#a3472e;font-size:1.4rem}
+@media(prefers-color-scheme:dark){.raiz .pt-circumflex-ink,.site-map-link span{color:#e0b23a}}
+@media(forced-colors:active){.raiz .pt-circumflex-ink{display:none}.site-map-link span{color:LinkText}}
