@@ -50,6 +50,7 @@ jobs:
           else
             python tests/browser_m2.py --lessons 06,08,09,10,11,12,13
             python tests/browser_m2_extended.py
+            python tests/browser_m2_complete.py --lessons 06,escolhas,10,riso,08,09,11,12,13
           fi
       - uses: actions/upload-artifact@v4
         if: always()
