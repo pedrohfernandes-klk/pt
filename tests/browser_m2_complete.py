@@ -131,15 +131,16 @@ def traverse(browser, host, id_):
     result_text = page.locator('#baralho .cartao.fim').inner_text()
     assert ('resultado' in result_text.lower() or 'lido até ao fim' in result_text.lower()), \
            f'{id_}: invalid result — {result_text[:250]!r}'
-    state = page.evaluate("""() => Object.entries(localStorage).filter(([k,v])=>{
-      try {let x=JSON.parse(v);return x && x.lida === true && typeof x.t === 'number';}
-      catch(e){return false;}
-    }).map(([k,v])=>({key:k,value:JSON.parse(v)}))""")
-    assert state, f'{id_}: no saved progress'
+    key = ('licao-m2-f' + id_) if id_.isdigit() else ('epi-pt-longos-' + ROUTES[id_])
+    state = page.evaluate("""key => {
+      let value = localStorage.getItem(key);
+      return value ? JSON.parse(value) : null;
+    }""", key)
+    assert state and state.get('lida') and state.get('tentativas', 0) >= 1, \
+           f'{id_}: completion was not saved under {key!r}: {state!r}'
     page.reload(wait_until='domcontentloaded', timeout=30000)
     page.locator('#baralho .cartao').wait_for(timeout=15000)
-    newer = page.evaluate("""key=>JSON.parse(localStorage.getItem(key))""",
-                          state[0]['key'])
+    newer = page.evaluate("""key=>JSON.parse(localStorage.getItem(key))""", key)
     assert newer and newer.get('lida') and newer.get('tentativas', 0) >= 1, \
            f'{id_}: lost saved progress'
     assert not issues, f'{id_}: JS errors after reload: {issues}'
