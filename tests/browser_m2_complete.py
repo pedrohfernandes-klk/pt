@@ -5,6 +5,7 @@ the actual result, reloads, and checks local progress. This does not cover all
 random combinations, external services, Safari, or learning outcomes.
 """
 import argparse
+import json
 from functools import partial
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
@@ -124,9 +125,16 @@ def respond(page):
                          page.locator('#baralho .cartao').inner_text()[:350])
 
 
-def traverse(browser, host, id_):
+def traverse(browser, host, id_, legacy=None):
     ctx = browser.new_context(viewport={'width': 390, 'height': 850},
                               reduced_motion='reduce')
+    if legacy:
+        key = 'licao-m2-f' + id_
+        val = json.dumps(json.dumps(legacy, ensure_ascii=False))
+        ctx.add_init_script(
+            f"try {{ if (!localStorage.getItem({json.dumps(key)})) "
+            f"localStorage.setItem({json.dumps(key)}, {val}); }} catch(e) {{}}"
+        )
     page = ctx.new_page()
     issues = []
     page.on('pageerror', lambda error: issues.append(str(error)))
@@ -137,6 +145,16 @@ def traverse(browser, host, id_):
     assert r and r.ok, f'{id_}: URL failed'
     page.locator('#baralho .cartao').wait_for(timeout=15000)
     assert not issues, f'{id_}: JS error on load: {issues}'
+    if legacy:
+        saved_view = page.locator('#baralho .cartao.fim').inner_text()
+        assert 'Já feita' in saved_view or 'JÁ FEITA' in saved_view, \
+               f'{id_}: previous completion not shown'
+        assert '12 de 12' in saved_view, f'{id_}: previous best score not shown'
+        button = page.locator('.casca [data-c-acoes] [data-repetir]')
+        assert button.count() == 1, f'{id_}: new-attempt action absent'
+        button.click()
+        assert not page.locator('#baralho .cartao.fim').count(), \
+               f'{id_}: new attempt did not start'
     visited = []
     for iteration in range(120):
         if page.locator('#baralho .cartao.fim').count():
@@ -169,6 +187,11 @@ def traverse(browser, host, id_):
     newer = page.evaluate("""key=>JSON.parse(localStorage.getItem(key))""", key)
     assert newer and newer.get('lida') and newer.get('tentativas', 0) >= 1, \
            f'{id_}: lost saved progress'
+    if legacy:
+        assert newer.get('melhor', 0) >= legacy['melhor'], \
+               f'{id_}: historical best score was reduced'
+        assert newer.get('tentativas', 0) > legacy['tentativas'], \
+               f'{id_}: historical attempt count not preserved'
     assert not issues, f'{id_}: JS errors after reload: {issues}'
     ctx.close()
     print(f'PASS full path: {id_}; actions={len(visited)}, '
@@ -179,6 +202,7 @@ def traverse(browser, host, id_):
 def main():
     p = argparse.ArgumentParser()
     p.add_argument('--lessons', required=True)
+    p.add_argument('--legacy-f07', action='store_true')
     args = p.parse_args()
     ids = [x.strip() for x in args.lessons.split(',')]
     assert ids and all(x in ROUTES for x in ids)
@@ -192,6 +216,18 @@ def main():
             total = 0
             for id_ in ids:
                 total += traverse(browser, f'http://127.0.0.1:{server.server_port}', id_)
+            if args.legacy_f07:
+                historical = {
+                    'lida': True, 'tentativas': 3, 'melhor': 12,
+                    'totalMelhor': 12, 'certas': 12, 'total': 12,
+                    'xp': 125, 'seq': 3, 't': 1790000000000
+                }
+                actions = traverse(
+                    browser, f'http://127.0.0.1:{server.server_port}',
+                    '07', legacy=historical
+                )
+                print(f'PASS legacy F07: historical best 12/12 preserved '
+                      f'after {actions} navigation actions')
             browser.close()
     finally:
         server.shutdown()
