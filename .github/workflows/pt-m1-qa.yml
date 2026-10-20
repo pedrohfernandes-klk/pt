@@ -1,0 +1,30 @@
+name: Português M1 — regressão histórica
+on:
+  pull_request:
+    paths:
+      - 'm1/**'
+      - 'tests/test_m1_f01_historical_roles.py'
+      - 'tests/test_m1_m2_transition.py'
+      - '.github/workflows/pt-m1-qa.yml'
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            m1
+            m2
+            tests
+            .github
+          sparse-checkout-cone-mode: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Testar F01 e continuidade entre módulos
+        run: |
+          python -m unittest discover -s tests -p 'test_m1_f01_historical_roles.py' -v
+          python -m unittest discover -s tests -p 'test_m1_m2_transition.py' -v
