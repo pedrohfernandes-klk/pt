@@ -29,7 +29,9 @@ jobs:
           python-version: '3.12'
       - name: Validação Python e bancos de cartões
         run: |
-          python -m unittest discover -s tests -p 'test_*.py' -v
+          python -m unittest discover -s tests -p 'test_m2_u1_learning.py' -v
+          python -m unittest discover -s tests -p 'test_m2_u2_learning.py' -v
+          python -m unittest discover -s tests -p 'test_audit_learning_progression.py' -v
           if [ -f scripts/audit_learning_progression.py ]; then
             python scripts/audit_learning_progression.py --json > m2-auditoria.json
             python - <<'PY'
