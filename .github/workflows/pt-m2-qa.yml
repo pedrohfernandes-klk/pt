@@ -47,7 +47,7 @@ jobs:
         run: |
           if [ -f tests/test_m2_u1_learning.py ]; then
             python tests/browser_m2.py --lessons 01,02,07
-            python tests/browser_m2_complete.py --lessons 01,02,07
+            python tests/browser_m2_complete.py --lessons 01,02,07 --legacy-f07
           else
             python tests/browser_m2.py --lessons 06,08,10,11
           fi
