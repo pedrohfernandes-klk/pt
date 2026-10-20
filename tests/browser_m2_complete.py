@@ -119,6 +119,16 @@ def traverse(browser, host, id_, legacy=None):
     assert r and r.ok, f'{id_}: URL failed'
     page.locator('#baralho .cartao').wait_for(timeout=15000)
     assert not issues, f'{id_}: JS error on load: {issues}'
+    if legacy:
+        saved_view = page.locator('#baralho .cartao.fim').inner_text()
+        assert 'Já feita' in saved_view or 'JÁ FEITA' in saved_view, \
+               f'{id_}: previous completion not shown'
+        assert '12 de 12' in saved_view, f'{id_}: previous best score not shown'
+        button = page.locator('.casca [data-c-acoes] [data-repetir]')
+        assert button.count() == 1, f'{id_}: new-attempt action absent'
+        button.click()
+        assert not page.locator('#baralho .cartao.fim').count(), \
+               f'{id_}: new attempt did not start'
     visited = []
     for iteration in range(120):
         if page.locator('#baralho .cartao.fim').count():
