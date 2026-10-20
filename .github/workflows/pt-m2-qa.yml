@@ -1,9 +1,5 @@
 name: Português M2 — QA de aprendizagem
 on:
-  push:
-    branches:
-      - 'work/pt-arquitetura-aprendizagem-20261020'
-      - 'work/pt-m2-u2-aprendizagem-20261020'
   pull_request:
     paths:
       - 'm2/**'
@@ -51,6 +47,7 @@ jobs:
         run: |
           if [ -f tests/test_m2_u1_learning.py ]; then
             python tests/browser_m2.py --lessons 01,02,07
+            python tests/browser_m2_complete.py --lessons 01,02,07
           else
             python tests/browser_m2.py --lessons 06,08,10,11
           fi
