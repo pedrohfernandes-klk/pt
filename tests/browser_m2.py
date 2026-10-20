@@ -88,8 +88,13 @@ def check_vf(page, card, lesson, index):
     modal = fixture(page, card, f'qa-{lesson}-{index}-vf')
     wrong = 0 if card['v'] else 1
     modal.locator(f'button.op[data-j="{wrong}"]').click()
-    check(card['fe'] in modal.locator('.casca-folha').inner_text(),
-          f'{lesson}/{index}: specific V/F error feedback missing')
+    feedback = modal.locator('.casca-folha').inner_text()
+    if card.get('fe'):
+        check(card['fe'] in feedback,
+              f'{lesson}/{index}: specific V/F error feedback missing')
+    else:
+        check('Não.' in feedback and len(feedback) > 40,
+              f'{lesson}/{index}: V/F correction did not render')
     close_modal(page)
 
 
