@@ -32,6 +32,7 @@ jobs:
           python -m unittest discover -s tests -p test_learning_evidence_m3_m5_m7.py -v
           python -m unittest discover -s tests -p test_m3_f03_perspective.py -v
           python -m unittest discover -s tests -p test_m3_f02_voice.py -v
+          python -m unittest discover -s tests -p test_m3_f09_lyric.py -v
           python -m unittest discover -s tests -p test_m3_lyric_epic_navigation.py -v
       - name: Instalar Chromium
         run: |
