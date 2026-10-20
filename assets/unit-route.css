@@ -1,0 +1,23 @@
+.unidade-pedagogica{margin:2.5rem 0 3.5rem}
+.unidade-pedagogica>.grupo-topo{margin:0 0 1.4rem;padding:0}
+.grupo-topo .grupo-etq{font-size:.75rem;letter-spacing:.08em;text-transform:uppercase}
+.grupo-topo h2{font-size:clamp(1.6rem,4vw,2.1rem);line-height:1.1;margin:.4rem 0 .8rem}
+.grupo-topo .grupo-pergunta{font-family:Georgia,serif;font-style:italic;font-size:1.15rem;line-height:1.45}
+.unit-index{margin:2rem 0;padding:1rem 0;border-top:1px solid;border-bottom:1px solid}
+.unit-index ol{list-style:none;padding:0;display:grid;gap:.8rem}
+.unit-index a{display:flex;align-items:baseline;gap:.7rem}
+.unit-index small{margin-left:auto;white-space:nowrap}
+.unit-retoma,.unit-complements,.unit-previous{margin:1.5rem 0;padding:1rem 0;border-top:1px solid #888}
+.unit-retoma ul,.unit-complements ul{padding-left:1.3rem}
+.unit-retoma p,.unit-complements p{line-height:1.5}
+.unit-complements summary,.unit-previous summary{font-weight:bold;cursor:pointer}
+.unit-complements li{margin:.8rem 0}
+.unit-complements a{color:inherit;text-decoration:underline;text-underline-offset:.15em}
+.sintese-registo{border:0;padding:0;margin:1.2rem 0}
+.sintese-registo legend{font-weight:bold;margin-bottom:.6rem}
+.sintese-registo label{display:block;margin:.6rem 0}
+.sintese-registo button{margin:.6rem .6rem .6rem 0}
+.sintese-notas{border-top:1px solid #888;padding-top:1rem;margin-top:1rem}
+.sintese-notas summary{cursor:pointer}
+.sintese-registo [role="status"]{font-size:.9rem;line-height:1.5}
+@media(max-width:480px){.unit-index a{flex-wrap:wrap}.unit-index small{margin-left:1.5rem}.grupo-topo h2{overflow-wrap:anywhere}}

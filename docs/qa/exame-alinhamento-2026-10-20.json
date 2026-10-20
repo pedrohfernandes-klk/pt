@@ -1,0 +1,450 @@
+[
+  {
+    "session": "s01",
+    "title": "Cantigas: comparar sem confundir",
+    "source": "m1/licao-m1-f19/index.html",
+    "source_sha256": "b4c322641c6ec8041e5ed56bb1f437c0de81dc43421626dffe948845e3041a49",
+    "exact_prompt_matches": [
+      {
+        "question": "s01-q1",
+        "card_index": 3
+      },
+      {
+        "question": "s01-q2",
+        "card_index": 4
+      }
+    ],
+    "review": "Incluído recorte de Mendinho e ligação ao texto completo; distinguida ameaça de morte de morte consumada.",
+    "limits": "Comparação editorial e estrutural; não demonstra cobertura curricular exaustiva nem aprendizagem."
+  },
+  {
+    "session": "s02",
+    "title": "Fernão Lopes: uma multidão em ação",
+    "source": "m1/licao-m1-f20/index.html",
+    "source_sha256": "1d62f8dce60d1a1a2fc6a37ff789763dd72bb07d45ab356d650fa00649dbbf6a",
+    "exact_prompt_matches": [
+      {
+        "question": "s02-q1",
+        "card_index": 5
+      },
+      {
+        "question": "s02-q2",
+        "card_index": 7
+      },
+      {
+        "question": "s02-q3",
+        "card_index": 11
+      }
+    ],
+    "review": "Sem divergência identificada na comparação do pedido, apoio, chave e orientações de correção; preservada.",
+    "limits": "Comparação editorial e estrutural; não demonstra cobertura curricular exaustiva nem aprendizagem."
+  },
+  {
+    "session": "s03",
+    "title": "Gil Vicente: desejo, escolha e sátira",
+    "source": "m2/licao-m2-f08/index.html",
+    "source_sha256": "7ba7960ea304fe080520b4b7980946e8704321989b0d1d728d5a01f1e2c6b687",
+    "exact_prompt_matches": [
+      {
+        "question": "s03-q1",
+        "card_index": 8
+      },
+      {
+        "question": "s03-q2",
+        "card_index": 9
+      }
+    ],
+    "review": "Leituras de apoio localizadas no desejo inicial e no desfecho; interpretação fundamentada sem juízo único.",
+    "limits": "Comparação editorial e estrutural; não demonstra cobertura curricular exaustiva nem aprendizagem."
+  },
+  {
+    "session": "s04",
+    "title": "Camões lírico: o que a forma faz sentir",
+    "source": "m3/licao-m3-f09/index.html",
+    "source_sha256": "3b64cae62d6dacec374a8251b2111b22bda1580393b9d68c6043fc21f7a49b4a",
+    "exact_prompt_matches": [
+      {
+        "question": "s04-q2",
+        "card_index": 4
+      },
+      {
+        "question": "s04-q3",
+        "card_index": 9
+      }
+    ],
+    "review": "Pergunta sobre a apóstrofe substitui formulação ambígua sobre «vida descontente»; ficha e desafio sincronizados.",
+    "limits": "Comparação editorial e estrutural; não demonstra cobertura curricular exaustiva nem aprendizagem."
+  },
+  {
+    "session": "s05",
+    "title": "Os Lusíadas: celebrar e interrogar",
+    "source": "m3/licao-m3-f13/index.html",
+    "source_sha256": "dc071ccbb969a67494d7b06a75259d3b70e994858d4d340d676a77e6a6b7d20b",
+    "exact_prompt_matches": [
+      {
+        "question": "s05-q1",
+        "card_index": 5
+      },
+      {
+        "question": "s05-q2",
+        "card_index": 6
+      },
+      {
+        "question": "s05-q3",
+        "card_index": 11
+      }
+    ],
+    "review": "Sem divergência identificada na comparação do pedido, apoio, chave e orientações de correção; preservada.",
+    "limits": "Comparação editorial e estrutural; não demonstra cobertura curricular exaustiva nem aprendizagem."
+  },
+  {
+    "session": "s06",
+    "title": "Vieira: os peixes são o argumento",
+    "source": "m4/licao-m4-f25/index.html",
+    "source_sha256": "eff57dfab32ccc4715e37fbb36c6dca932bbd144c2bace6fe900559bbd6614d6",
+    "exact_prompt_matches": [
+      {
+        "question": "s06-q1",
+        "card_index": 3
+      },
+      {
+        "question": "s06-q2",
+        "card_index": 5
+      },
+      {
+        "question": "s06-q3",
+        "card_index": 8
+      }
+    ],
+    "review": "Sem divergência identificada na comparação do pedido, apoio, chave e orientações de correção; preservada.",
+    "limits": "Comparação editorial e estrutural; não demonstra cobertura curricular exaustiva nem aprendizagem."
+  },
+  {
+    "session": "s07",
+    "title": "Frei Luís de Sousa: o que a cena revela",
+    "source": "m4/licao-m4-f26/index.html",
+    "source_sha256": "06b78fd31a27a585c048286f39f6e0afd584eefa48bc12c4a63041360b52c0c0",
+    "exact_prompt_matches": [
+      {
+        "question": "s07-q2",
+        "card_index": 4
+      },
+      {
+        "question": "s07-q3",
+        "card_index": 6
+      }
+    ],
+    "review": "Sem divergência identificada na comparação do pedido, apoio, chave e orientações de correção; preservada.",
+    "limits": "Comparação editorial e estrutural; não demonstra cobertura curricular exaustiva nem aprendizagem."
+  },
+  {
+    "session": "s08",
+    "title": "Prosa romântica: paixão e condicionamento",
+    "source": "m5/licao-m5-f02/index.html",
+    "source_sha256": "51934d2cbd168d6a43c8323d1573737e455f75d686c9eebe9c5d2d80446986df",
+    "exact_prompt_matches": [
+      {
+        "question": "s08-q1",
+        "card_index": 5
+      },
+      {
+        "question": "s08-q2",
+        "card_index": 8
+      },
+      {
+        "question": "s08-q3",
+        "card_index": 9
+      }
+    ],
+    "review": "Sem divergência identificada na comparação do pedido, apoio, chave e orientações de correção; preservada.",
+    "limits": "Comparação editorial e estrutural; não demonstra cobertura curricular exaustiva nem aprendizagem."
+  },
+  {
+    "session": "s09",
+    "title": "Eça: ver a crítica nos pormenores",
+    "source": "m5/licao-m5-f10/index.html",
+    "source_sha256": "aaf37b4cb294aea2545f022b6278199374c0a9b5ad61bc4fe1981cf4302c5836",
+    "exact_prompt_matches": [
+      {
+        "question": "s09-q1",
+        "card_index": 6
+      },
+      {
+        "question": "s09-q2",
+        "card_index": 8
+      },
+      {
+        "question": "s09-q3",
+        "card_index": 9
+      }
+    ],
+    "review": "Sem divergência identificada na comparação do pedido, apoio, chave e orientações de correção; preservada.",
+    "limits": "Comparação editorial e estrutural; não demonstra cobertura curricular exaustiva nem aprendizagem."
+  },
+  {
+    "session": "s10",
+    "title": "Antero: procurar, negar, descansar",
+    "source": "m6/licao-m6-f01/index.html",
+    "source_sha256": "f84702297ba4de87e992353b81670394f70d6f5d695e5323901ad60d9745629c",
+    "exact_prompt_matches": [
+      {
+        "question": "s10-q1",
+        "card_index": 4
+      },
+      {
+        "question": "s10-q2",
+        "card_index": 7
+      },
+      {
+        "question": "s10-q3",
+        "card_index": 10
+      }
+    ],
+    "review": "Sem divergência identificada na comparação do pedido, apoio, chave e orientações de correção; preservada.",
+    "limits": "Comparação editorial e estrutural; não demonstra cobertura curricular exaustiva nem aprendizagem."
+  },
+  {
+    "session": "s11",
+    "title": "Cesário: uma cidade em transformação",
+    "source": "m6/licao-m6-f07/index.html",
+    "source_sha256": "6b88a8e65aa4f3fc6748338a720cb6a0abcaed6b972ba7e1069bdd666cb375f1",
+    "exact_prompt_matches": [
+      {
+        "question": "s11-q1",
+        "card_index": 3
+      },
+      {
+        "question": "s11-q2",
+        "card_index": 7
+      },
+      {
+        "question": "s11-q3",
+        "card_index": 14
+      }
+    ],
+    "review": "Feedback distingue hipálage de sinestesia; indicação de onde ler a estrofe da padaria; ficha e desafio sincronizados.",
+    "limits": "Comparação editorial e estrutural; não demonstra cobertura curricular exaustiva nem aprendizagem."
+  },
+  {
+    "session": "s12",
+    "title": "Pessoa: sentir e construir o poema",
+    "source": "m7/licao-m7-f02/index.html",
+    "source_sha256": "9fcc19ff9f1eb66aaa8c12fcdfc652c1460c06531bfab1d01e47c851eaa64d58",
+    "exact_prompt_matches": [
+      {
+        "question": "s12-q1",
+        "card_index": 4
+      },
+      {
+        "question": "s12-q2",
+        "card_index": 5
+      },
+      {
+        "question": "s12-q3",
+        "card_index": 6
+      }
+    ],
+    "review": "Sem divergência identificada na comparação do pedido, apoio, chave e orientações de correção; preservada.",
+    "limits": "Comparação editorial e estrutural; não demonstra cobertura curricular exaustiva nem aprendizagem."
+  },
+  {
+    "session": "s13",
+    "title": "Caeiro: o rio e a medida do olhar",
+    "source": "m7/licao-m7-f35/index.html",
+    "source_sha256": "7fb1e1a062b3eb5381da40806fd9e0db54c25022112702e03f722b28f64ffd0a",
+    "exact_prompt_matches": [
+      {
+        "question": "s13-q1",
+        "card_index": 3
+      },
+      {
+        "question": "s13-q2",
+        "card_index": 5
+      },
+      {
+        "question": "s13-q3",
+        "card_index": 7
+      }
+    ],
+    "review": "Sem divergência identificada na comparação do pedido, apoio, chave e orientações de correção; preservada.",
+    "limits": "Comparação editorial e estrutural; não demonstra cobertura curricular exaustiva nem aprendizagem."
+  },
+  {
+    "session": "s14",
+    "title": "Reis: a disciplina do instante",
+    "source": "m7/licao-m7-f23/index.html",
+    "source_sha256": "433c053c9312e411869f5d518a8640eecbdb7cf1aa87d20969c9065998eea847",
+    "exact_prompt_matches": [
+      {
+        "question": "s14-q1",
+        "card_index": 6
+      },
+      {
+        "question": "s14-q2",
+        "card_index": 7
+      },
+      {
+        "question": "s14-q3",
+        "card_index": 10
+      }
+    ],
+    "review": "Sem divergência identificada na comparação do pedido, apoio, chave e orientações de correção; preservada.",
+    "limits": "Comparação editorial e estrutural; não demonstra cobertura curricular exaustiva nem aprendizagem."
+  },
+  {
+    "session": "s15",
+    "title": "Campos: desejo e desencontro",
+    "source": "m7/licao-m7-f36/index.html",
+    "source_sha256": "fe72117a9998d50bd6517639274caa02a3659f4599ae2c0c9a04ffe73bd1c8d4",
+    "exact_prompt_matches": [
+      {
+        "question": "s15-q1",
+        "card_index": 4
+      },
+      {
+        "question": "s15-q2",
+        "card_index": 5
+      },
+      {
+        "question": "s15-q3",
+        "card_index": 8
+      }
+    ],
+    "review": "Sem divergência identificada na comparação do pedido, apoio, chave e orientações de correção; preservada.",
+    "limits": "Comparação editorial e estrutural; não demonstra cobertura curricular exaustiva nem aprendizagem."
+  },
+  {
+    "session": "s16",
+    "title": "Mensagem: mito, história e apelo",
+    "source": "m7/licao-m7-f08/index.html",
+    "source_sha256": "d904e759d336f3aa6c4f511efe68b63c9d19c5d9fad43e918d80c169e834717b",
+    "exact_prompt_matches": [
+      {
+        "question": "s16-q1",
+        "card_index": 4
+      },
+      {
+        "question": "s16-q2",
+        "card_index": 7
+      },
+      {
+        "question": "s16-q3",
+        "card_index": 12
+      }
+    ],
+    "review": "Sem divergência identificada na comparação do pedido, apoio, chave e orientações de correção; preservada.",
+    "limits": "Comparação editorial e estrutural; não demonstra cobertura curricular exaustiva nem aprendizagem."
+  },
+  {
+    "session": "s17",
+    "title": "Poesia contemporânea: três modos de dizer",
+    "source": "m8/licao-m8-f01/index.html",
+    "source_sha256": "7265d9c1b38ae84acbf68a0ab2de0dcffe111aaa704f136b46ec8779f9e391d2",
+    "exact_prompt_matches": [],
+    "review": "Sem divergência identificada na comparação do pedido, apoio, chave e orientações de correção; preservada.",
+    "limits": "Comparação editorial e estrutural; não demonstra cobertura curricular exaustiva nem aprendizagem."
+  },
+  {
+    "session": "s18",
+    "title": "Conto: o que o texto deixa por dizer",
+    "source": "m8/licao-m8-f08/index.html",
+    "source_sha256": "53b41129e6b6c38870a0c9ede08869eabadbcb9c613493b37503c2dabfe0641c",
+    "exact_prompt_matches": [
+      {
+        "question": "s18-q1",
+        "card_index": 5
+      },
+      {
+        "question": "s18-q3",
+        "card_index": 10
+      }
+    ],
+    "review": "Sem divergência identificada na comparação do pedido, apoio, chave e orientações de correção; preservada.",
+    "limits": "Comparação editorial e estrutural; não demonstra cobertura curricular exaustiva nem aprendizagem."
+  },
+  {
+    "session": "s19",
+    "title": "Saramago: quem conta e quem faz",
+    "source": "m9/licao-m9-f01/index.html",
+    "source_sha256": "ed7b618f1a28184605502a5472619139089f38742545e234afcc160e5aa4e595",
+    "exact_prompt_matches": [
+      {
+        "question": "s19-q1",
+        "card_index": 10
+      },
+      {
+        "question": "s19-q2",
+        "card_index": 13
+      },
+      {
+        "question": "s19-q3",
+        "card_index": 17
+      }
+    ],
+    "review": "Sem divergência identificada na comparação do pedido, apoio, chave e orientações de correção; preservada.",
+    "limits": "Comparação editorial e estrutural; não demonstra cobertura curricular exaustiva nem aprendizagem."
+  },
+  {
+    "session": "s20",
+    "title": "Ler informação e escrever uma síntese",
+    "source": "m1/licao-m1-f20/index.html",
+    "source_sha256": "1d62f8dce60d1a1a2fc6a37ff789763dd72bb07d45ab356d650fa00649dbbf6a",
+    "exact_prompt_matches": [],
+    "review": "Sem divergência identificada na comparação do pedido, apoio, chave e orientações de correção; preservada.",
+    "limits": "Comparação editorial e estrutural; não demonstra cobertura curricular exaustiva nem aprendizagem."
+  },
+  {
+    "session": "s21",
+    "title": "Gramática: funções e relações entre orações",
+    "source": "m6/licao-m6-f04/index.html",
+    "source_sha256": "9cf1479ff7dc639d0623ef7e508e4c2ce8e6b229bd71c73264c212e6806637b7",
+    "exact_prompt_matches": [],
+    "review": "Sem divergência identificada na comparação do pedido, apoio, chave e orientações de correção; preservada.",
+    "limits": "Comparação editorial e estrutural; não demonstra cobertura curricular exaustiva nem aprendizagem."
+  },
+  {
+    "session": "s22",
+    "title": "Gramática: ligar, retomar e situar",
+    "source": "m8/licao-m8-f06/index.html",
+    "source_sha256": "d0a3dda7ccfc2d45bad3108dd60682ca04c6ffc0b1f984af98bca9d1eed135bd",
+    "exact_prompt_matches": [],
+    "review": "Sem divergência identificada na comparação do pedido, apoio, chave e orientações de correção; preservada.",
+    "limits": "Comparação editorial e estrutural; não demonstra cobertura curricular exaustiva nem aprendizagem."
+  },
+  {
+    "session": "s23",
+    "title": "Exposição: explicar com uma linha clara",
+    "source": "m4/licao-m4-f27/index.html",
+    "source_sha256": "9b52fce822463809eb6cfdf1a2716d0120b13ad111daf7d3e6f683421d8030a9",
+    "exact_prompt_matches": [],
+    "review": "Sem divergência identificada na comparação do pedido, apoio, chave e orientações de correção; preservada.",
+    "limits": "Comparação editorial e estrutural; não demonstra cobertura curricular exaustiva nem aprendizagem."
+  },
+  {
+    "session": "s24",
+    "title": "Opinião: uma posição que resiste à revisão",
+    "source": "m7/licao-m7-f10/index.html",
+    "source_sha256": "c994912485f4f1f31c259466e4b2f31b7c85bc2c60787c0617a2b65a03ff5e0f",
+    "exact_prompt_matches": [],
+    "review": "Sem divergência identificada na comparação do pedido, apoio, chave e orientações de correção; preservada.",
+    "limits": "Comparação editorial e estrutural; não demonstra cobertura curricular exaustiva nem aprendizagem."
+  },
+  {
+    "session": "s25",
+    "title": "Apreciação crítica: julgar mostrando",
+    "source": "m3/licao-m3-f03/index.html",
+    "source_sha256": "755135b4eec203f8f77ce618d132fc41f2e0a017e5ff0aa5865a8a0aa5a1960f",
+    "exact_prompt_matches": [],
+    "review": "Sem divergência identificada na comparação do pedido, apoio, chave e orientações de correção; preservada.",
+    "limits": "Comparação editorial e estrutural; não demonstra cobertura curricular exaustiva nem aprendizagem."
+  },
+  {
+    "session": "s26",
+    "title": "Oficina final: transformar uma resposta",
+    "source": "m4/licao-m4-f27/index.html",
+    "source_sha256": "9b52fce822463809eb6cfdf1a2716d0120b13ad111daf7d3e6f683421d8030a9",
+    "exact_prompt_matches": [],
+    "review": "Sem divergência identificada na comparação do pedido, apoio, chave e orientações de correção; preservada.",
+    "limits": "Comparação editorial e estrutural; não demonstra cobertura curricular exaustiva nem aprendizagem."
+  }
+]

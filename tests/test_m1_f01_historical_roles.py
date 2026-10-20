@@ -34,6 +34,15 @@ class HistoricalRoles(unittest.TestCase):
         self.assertIn("categoria de contornos discutidos", text)
         self.assertIn("Alguns jograis também compunham", text)
 
+    def test_music_feedback_does_not_restore_exclusive_social_roles(self):
+        card = cards()[8]
+        self.assertEqual(0, card['c'])
+        self.assertEqual(4, len(card['o']))
+        self.assertIn('rei e trovador', card['f'])
+        for index in (1, 2):
+            self.assertIn('jograis também', card['fe'][index])
+            self.assertNotIn('de origem humilde', card['fe'][index])
+
 
 if __name__ == "__main__":
     unittest.main()
