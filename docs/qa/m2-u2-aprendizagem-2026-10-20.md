@@ -18,22 +18,24 @@ F06 → percurso longo «Inês escolhe duas vezes» → F10 → percurso longo �
 
 Não se criaram cartões, pontos, mecanismos ou novos ecrãs. As quatro fichas revistas mantêm as opções corretas do respetivo motor; onde se alteraram distratores, as respostas certas continuam no mesmo índice. Os feedbacks específicos usam o formato compatível com o motor existente. Foram preservados os textos de todas as outras atividades.
 
-## Validação efetivamente realizada — estado atualizado
+## Validação funcional — execução final
 
-**Inspeção estática:** confronto dos sete bancos CARTOES de M2-U2 com `main`: **152 cartões e 101 atividades**, sem remoções ou reordenações; alterações limitadas a campos editoriais identificados; HTML/JavaScript exterior aos bancos, chaves de progresso, URLs e motores preservados. Controlo de índices de feedback, respostas e correspondência dos nove passos com o manifesto aprovado.
+**Estrutural:** confronto dos sete bancos CARTOES com a versão de base: **152 cartões e 101 atividades**, sem alterações imprevistas fora dos bancos; IDs, URLs, chaves de progresso e motores preservados. Nove passos do manifesto conformes ao índice.
 
-**GitHub Actions / Chromium:** [run 39354626094](https://github.com/pedrohfernandes-klk/pt/actions/runs/39354626094), de 20-10-2026, conclusão **success**:
+**GitHub Actions / Chromium:** [run 39356390392](https://github.com/pedrohfernandes-klk/pt/actions/runs/39356390392), **success** em 20-10-2026:
 
-- **6/6 testes Python** no checkout.
-- **224 verificações de navegador** nas sete lições F06, F08, F09, F10, F11, F12 e F13; larguras de 320, 390 e 1440 px, abertura, navegação inicial e ausência de erros JavaScript nos percursos exercitados. Nos cartões-alvo, respostas incorretas e certas, feedback em opções realmente apresentadas, resultados e progresso local isolado. As escolhas com feedback por objeto indexado de F12/F13 foram exercitadas no motor real.
-- **24 verificações adicionais** nos dois percursos longos «Inês escolhe duas vezes» e «A máquina de rir»: abertura, responsividade, avanço inicial e menu com fecho por Escape.
+- **6/6 testes Python** aprovados.
+- **228 verificações de navegador** nas sete lições F06, F08, F09, F10, F11, F12 e F13, com larguras de 320, 390 e 1440 px. Nos cartões-alvo, verificaram-se opções realmente apresentadas, resposta errada e certa, feedback contextualizado, resultado e progresso isolado.
+- **24 verificações complementares** nos dois percursos longos: abertura, avanço inicial, menu, Escape e responsividade.
+- **Nove percursos completos** através do motor real, sem saltar cartões: F06 **41** ações, «Inês escolhe duas vezes» **50**, F10 **29**, «A máquina de rir» **46**, F08 **27**, F09 **28**, F11 **28**, F12 **23**, F13 **23**; no total, **295 ações** até ao ecrã final. Os resultados guardados foram recuperados após recarregar.
+- Os dois percursos longos incluíram escolhas de posição, abertura de todas as perspetivas, seleção múltipla e associação, além dos formatos normais. Não surgiram erros JavaScript nos percursos exercitados.
 
-Os cartões-alvo foram testados em sobreposições isoladas com o mesmo motor das lições. Não se realizaram percursos completos nem se cobriram todas as combinações da seleção variável. A persistência observada pertence a dados de QA, não a históricos reais preexistentes.
+**Âmbito e limites:** uma tentativa completa por percurso, com seleção normal dos cartões, e testes adicionais isolados para feedback específico. Não foram exploradas exaustivamente todas as variantes aleatórias ou todas as opções de cada ficha, nem dados reais históricos.
 
-## Pendências obrigatórias antes da publicação
+## Verificações adicionais, fora da aprovação Chromium
 
-1. Percursos integrais das nove páginas, desafios de etapa e continuidade entre fichas, incluindo verificação do histórico de progressos anterior às mudanças.
-2. Projeção em aula, teclado/foco nos percursos completos, leitor de ecrã real e Safari/iOS; testes físicos e medição formal de desempenho **ainda não efetuados**.
-3. Observação pedagógica: discutir e justificar interpretações com textos, voz ou caderno, rever uma conclusão e aplicar o procedimento semanas depois. A eficácia e a retenção não se inferem dos acertos automáticos.
+1. **Acessibilidade e ambiente:** Safari/iOS, leitor de ecrã real, ecrãs/dispositivos físicos, zoom elevado, foco ao longo de todas as combinações e projeção em sala — por realizar.
+2. **Regressões com dados anteriores:** confirmar em ambiente controlado a recuperação de estados antigos e os selos/desafios das unidades, além dos progressos locais de QA.
+3. **Aprendizagem:** recolher fundamentações autênticas dos alunos, observar se corrigem hipóteses e medir recuperação posterior e transferência para outro texto; não comprovado pelo navegador.
 
-**Estado: intervenção funcionalmente aprovada nos casos automatizados; certificação integral, acessibilidade e eficácia pedagógica pendentes.** PR #35 continua em rascunho, sem fusão ou publicação.
+**Estado:** validação funcional automatizada de **uma tentativa integral por cada um dos nove percursos aprovada**. Acessibilidade real, históricos antigos e eficácia pedagógica permanecem por validar. PR #35 continua em rascunho, sem fusão ou publicação.
