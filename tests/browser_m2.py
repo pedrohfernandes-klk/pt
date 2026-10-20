@@ -23,8 +23,8 @@ CARD_TESTS = {
     '10': {'choices': [18], 'vf': [9, 12], 'read': [4]},
     '11': {'choices': [15], 'vf': [], 'read': [0, 1]},
     '09': {'choices': [], 'vf': [], 'read': []},
-    '12': {'choices': [], 'vf': [], 'read': []},
-    '13': {'choices': [], 'vf': [], 'read': []},
+    '12': {'choices': [2, 9, 11], 'vf': [], 'read': [13, 14]},
+    '13': {'choices': [4, 9, 10], 'vf': [], 'read': [13, 14]},
 }
 PASS = 0
 
