@@ -45,13 +45,9 @@ jobs:
           python -m playwright install --with-deps chromium
       - name: Navegação e feedback reais
         run: |
-          if [ -f tests/test_m2_u1_learning.py ]; then
-            python tests/browser_m2.py --lessons 01,02,07
-          else
-            python tests/browser_m2.py --lessons 06,08,09,10,11,12,13
-            python tests/browser_m2_extended.py
-            python tests/browser_m2_complete.py --lessons 06,escolhas,10,riso,08,09,11,12,13
-          fi
+          python tests/browser_m2.py --lessons 01,02,07,06,08,09,10,11,12,13
+          python tests/browser_m2_extended.py
+          python tests/browser_m2_complete.py --lessons 01,02,07,06,escolhas,10,riso,08,09,11,12,13 --legacy-f07
       - uses: actions/upload-artifact@v4
         if: always()
         with:
