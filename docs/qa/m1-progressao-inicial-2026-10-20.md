@@ -31,3 +31,14 @@ Data: 20-10-2026. Estado: diagnóstico editorial fundamentado em amostras de car
 
 ## Próxima ação concreta
 Submeter a revisão historiográfica da tipologia de F01 e, caso confirme o risco de categorização excessiva, propor alteração pontual dos cartões 9–10 com regressões. **F08/F07/F20: conservar**, sem acrescentar cartões nesta ronda.
+
+## Intervenção editorial efetuada no ramo (20-10-2026)
+O estudo especializado confirma que a tripartição é uma convenção útil, mas historicamente permeável, e que a posição de «segrel» é discutida. O portal **Cantigas Medievais Galego-Portuguesas** regista Pero da Ponte como exemplo de estatuto social de segrel «algo fluido» e Martim Codax como jogral ou segrel e autor de cantigas. A *Enciclopedia Galega Universal* adverte contra a separação simplista entre trovador compositor e jogral mero intérprete.
+
+**Referências de consulta:**
+- https://cantigas.fcsh.unl.pt/cfautorgp.asp?cdaut=121
+- https://cantigas.fcsh.unl.pt/intervenientemusica.asp?cdaut=92
+- https://cantigas.fcsh.unl.pt/palavra.asp?cdpal=251
+- https://egu.xunta.gal/gl/termo/121485/escola-galego-portuguesa
+
+**Alteração circunscrita à F01:** explicações de leitura, feedback dos cartões 9 e 10 e respetivos enunciados passam a distinguir esquema didático tradicional e descrição histórica universal. Não foram modificadas as respostas, a ordem dos passos nem o motor. Regressão editorial acrescentada em `tests/test_m1_f01_historical_roles.py`. **A execução desse teste e a validação funcional em navegador permanecem por confirmar.**
