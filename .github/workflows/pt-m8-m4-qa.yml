@@ -1,0 +1,35 @@
+name: Português — M8 e M4, inferência e prova
+on:
+  pull_request:
+    paths:
+      - 'm8/**'
+      - 'm4/**'
+      - 'tests/**'
+      - '.github/workflows/pt-m8-m4-qa.yml'
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            m8
+            m4
+            assets
+            tests
+            .github
+          sparse-checkout-cone-mode: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Regressões editoriais
+        run: python -m unittest discover -s tests -p 'test_inferencia_m8_m4.py' -v
+      - name: Instalar Chromium
+        run: |
+          python -m pip install playwright
+          python -m playwright install --with-deps chromium
+      - name: Percorrer as quatro fichas
+        run: python tests/browser_inferencia_m8_m4.py
