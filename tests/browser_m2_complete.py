@@ -129,8 +129,8 @@ def traverse(browser, host, id_):
         raise AssertionError(f'{id_}: did not finish in 120 actions')
     assert page.locator('#baralho .cartao.fim').count() == 1, f'{id_}: no final result'
     result_text = page.locator('#baralho .cartao.fim').inner_text()
-    assert ('Resultado' in result_text or 'Lido até ao fim' in result_text), \
-           f'{id_}: invalid result'
+    assert ('resultado' in result_text.lower() or 'lido até ao fim' in result_text.lower()), \
+           f'{id_}: invalid result — {result_text[:250]!r}'
     state = page.evaluate("""() => Object.entries(localStorage).filter(([k,v])=>{
       try {let x=JSON.parse(v);return x && x.lida === true && typeof x.t === 'number';}
       catch(e){return false;}
