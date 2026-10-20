@@ -26,7 +26,7 @@ class HistoricalRoles(unittest.TestCase):
         self.assertIn("simplificação tradicional", a[10]["f"])
         self.assertIn("segrel", a[10]["f"])
         self.assertIn("fronteiras", a[9]["f"])
-        self.assertIn("Alguns jograis também compunham", a[9]["fe"])
+        self.assertIn("Alguns jograis também criavam cantigas", a[9]["fe"])
 
     def test_historical_context_present_in_reading(self):
         a = cards()
