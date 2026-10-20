@@ -40,19 +40,20 @@ As notas de continuidade não têm temporizador ou pontuação extra. A transfer
 
 **Verificação estrutural:** 9/9 controlos iniciais de dados e comparação com a baseline, sem mudanças imprevistas nos bancos ou motores.
 
-**GitHub Actions / Chromium:** [run 39355932941](https://github.com/pedrohfernandes-klk/pt/actions/runs/39355932941), **success** em 20-10-2026:
+**GitHub Actions / Chromium:** [run 39357131084](https://github.com/pedrohfernandes-klk/pt/actions/runs/39357131084), **success** em 20-10-2026:
 
 - **10/10 testes Python** aprovados.
-- **141 verificações de navegador** nas três lições F01/F02/F07: 320, 390 e 1440 px, navegação, feedback específico após erro, escolha correta, leitura, conclusão e progresso em chave local de QA.
-- **Três percursos completos**, com seleção normal de cartões e interação em todas as etapas apresentadas pelo motor: F01 29 ações, F02 31, F07 26, perfazendo **86 ações de navegação**, com resultado final e recuperação do progresso após recarregar.
-- Foram exercitados formatos de escolha, classificação, associação, lacunas, ordenação e sublinhado. Não surgiram erros JavaScript nestes percursos.
+- **144 verificações de navegador** nas três lições F01/F02/F07: 320, 390 e 1440 px, navegação, feedback específico após erro, escolha correta, leitura, conclusão e progresso em chave local de QA.
+- **Três percursos completos**, com seleção normal de cartões e interação em todas as etapas apresentadas pelo motor: F01 31 ações, F02 33, F07 30, **94 ações de navegação** no total. Os resultados guardados foram recuperados após recarregar.
+- **Regressão adicional de histórico:** F07 iniciou com um histórico sintético que representava três tentativas e melhor classificação **12/12**. O ecrã «Já feita» apresentou a classificação anterior; o botão «Nova tentativa» iniciou novo percurso completo (30 ações), preservou a melhor pontuação e incrementou o número de tentativas. **PASS**. Esta verificação não modifica o progresso dos alunos.
+- Formatos de escolha, classificação, associação, lacunas, ordenação e sublinhado exercitados; sem erros JavaScript nos percursos testados.
 
-**Âmbito real:** uma execução integral por ficha, mais ensaios isolados de feedback em alternativas específicas. Não se verificaram todas as combinações aleatórias nem a migração dos resultados reais já armazenados pelo utilizador.
+**Âmbito:** uma tentativa integral por ficha, uma repetição integral com histórico de QA para F07 e ensaios isolados de feedback por alternativa. Não se verificaram todas as combinações aleatórias possíveis nem os históricos reais dos alunos.
 
 ## Verificações adicionais, fora da aprovação Chromium
 
 1. **Navegadores e acessibilidade:** Safari/iOS, leitores de ecrã reais, dispositivo móvel físico, foco em todos os percursos e utilização efetiva da projeção em sala — por executar.
-2. **Regressões com dados reais:** recuperação de um melhor resultado antigo de F07 após introduzir um novo cartão e os desafios do módulo — por confirmar com fixture de histórico representativa.
+2. **Dados anteriores:** compatibilidade do caso sintético F07 **aprovada**; outros formatos históricos e selos/desafios das etapas do módulo não foram ensaiados integralmente.
 3. **Aprendizagem:** testar compreensão, fundamentação e transferência com respostas autênticas dos alunos, incluindo recuperação posterior — não demonstrado pelos testes automáticos.
 
-**Estado:** validação funcional automatizada integral de uma tentativa por ficha **aprovada**; acessibilidade, variantes adicionais, histórico real e eficácia pedagógica **pendentes**. PR #34 continua em rascunho, sem publicação.
+**Estado:** validação funcional automatizada dos três percursos e preservação de melhor resultado antigo em F07 **aprovadas**; acessibilidade real, variantes adicionais, desafio do módulo e eficácia pedagógica permanecem pendentes. PR #34 continua em rascunho, sem fusão nem publicação.
