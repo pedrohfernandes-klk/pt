@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "unit": "m2-u1",
+  "title": "Entrar na Farsa: palavras, desejos e obstáculos",
+  "question": "Como nasce o conflito de Inês a partir do que deseja?",
+  "status": "Mapa editorial proposto; não altera as fichas nem mede aprendizagem.",
+  "lessons": [
+    {
+      "id": "m2-f01",
+      "path": "m2/licao-m2-f01/index.html",
+      "title": "Deram-lhe um provérbio",
+      "goal": "Distinguir o que diz a rubrica, o que dizem as personagens e o papel do provérbio na construção da farsa.",
+      "evidence": "Indicar uma informação verificável da rubrica e explicar, com referência ao texto, por que o provérbio é o motivo da peça.",
+      "misconception": "Confundir o local da representação em 1523 com o local onde decorre a ação ou confundir rubrica e fala.",
+      "transfer": "Reconhecer, noutro excerto dramático, a diferença entre fala, aparte e indicação cénica.",
+      "next_step": "Levar a distinção entre voz e rubrica para a leitura do monólogo de Inês e da entrada da Mãe."
+    },
+    {
+      "id": "m2-f02",
+      "path": "m2/licao-m2-f02/index.html",
+      "title": "Inês, como panela sem asa",
+      "goal": "Interpretar o desejo de Inês a partir das suas imagens e distinguir a visão da personagem de um facto garantido pelo texto.",
+      "evidence": "Relacionar uma imagem usada por Inês com a sua queixa, citando os versos; confrontar a acusação de preguiça com o que a rubrica efetivamente confirma.",
+      "misconception": "Tratar a opinião da Mãe como descrição objetiva ou reconhecer uma figura de estilo sem explicar o efeito.",
+      "transfer": "Confrontar duas falas contraditórias de personagens diferentes e assinalar o que o texto permite concluir.",
+      "next_step": "Retomar frases da mesma cena para analisar a função dos conectores e a relação entre orações."
+    },
+    {
+      "id": "m2-f07",
+      "path": "m2/licao-m2-f07/index.html",
+      "title": "Orações em cena",
+      "goal": "Reconhecer relações entre orações a partir das falas já lidas, explicando as diferenças de sentido que os conectores criam.",
+      "evidence": "Segmentar uma fala, identificar a relação entre as suas orações e justificar a classificação pelo contexto, não apenas pela palavra isolada.",
+      "misconception": "Supor que um mesmo «que» ou outro conector tem sempre a mesma função, sem atender à estrutura.",
+      "transfer": "Rever uma fala curta, mudando a relação entre orações e explicando o efeito na intenção da personagem.",
+      "next_step": "Recuperar o provérbio inicial ao estudar como as escolhas de Inês transformam a promessa em ação."
+    }
+  ]
+}
