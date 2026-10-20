@@ -19,6 +19,13 @@ class ModuleTransition(unittest.TestCase):
         self.assertEqual("ordenar", a[21]["t"])
         self.assertIn("provas", a[21]["f"])
 
+    def test_narrator_and_author_are_not_equated(self):
+        a = cards('m1', '11')
+        self.assertNotIn('Fala um narrador, Fernão Lopes', a[15]['html'])
+        self.assertIn('narrador construído por Fernão Lopes', a[15]['html'])
+        self.assertIn('Fernão Lopes é o autor', a[16]['f'])
+        self.assertIn('não se confunde', a[16]['f'])
+
     def test_first_theatre_lesson_distinguishes_voice_and_stage_direction(self):
         a = cards("m2", "01")
         self.assertEqual(24, len(a))

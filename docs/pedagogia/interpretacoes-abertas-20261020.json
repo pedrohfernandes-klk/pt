@@ -1,0 +1,35 @@
+{
+  "unscored_cards": [
+    {
+      "module": "m1",
+      "lesson": "02",
+      "index": 19,
+      "former_prompt": "Três leituras do final que não podem ser verdadeiras juntas: liga cada uma à sua prova."
+    },
+    {
+      "module": "m8",
+      "lesson": "12",
+      "index": 10,
+      "former_prompt": "O que têm em comum os três poetas e «George»?"
+    },
+    {
+      "module": "m9",
+      "lesson": "10",
+      "index": 14,
+      "former_prompt": "«Sem o ouro do Brasil, a obra não se fazia.» Como classificas a frase?"
+    },
+    {
+      "module": "m9",
+      "lesson": "10",
+      "index": 15,
+      "former_prompt": "Como se classifica «O narrador do romance está do lado de quem carregou a pedra»?"
+    }
+  ],
+  "objective_feedback": [
+    {
+      "module": "m7",
+      "lesson": "14",
+      "index": 18
+    }
+  ]
+}

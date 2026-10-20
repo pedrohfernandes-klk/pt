@@ -7,20 +7,10 @@ import argparse
 from collections import Counter
 import json
 from pathlib import Path
+from audit_cards import lesson_cards
 
 DEFAULT_ROOT = Path(__file__).resolve().parents[1]
 MANIFEST = 'docs/pedagogia/m2-u1-progressao.json'
-
-
-def lesson_cards(path):
-    source = path.read_text(encoding='utf-8')
-    marker = 'CARTOES='
-    if marker not in source:
-        raise ValueError('CARTOES not found')
-    cards, _ = json.JSONDecoder().raw_decode(source.split(marker, 1)[1].lstrip())
-    if not isinstance(cards, list):
-        raise ValueError('CARTOES is not an array')
-    return cards
 
 
 def audit(root):

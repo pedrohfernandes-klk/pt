@@ -1,0 +1,573 @@
+[
+  {
+    "module": 1,
+    "changed_assessment_scope": true,
+    "units": [
+      {
+        "title": "Vozes da lírica medieval",
+        "question": "Como se dá voz ao desejo, ao elogio e à crítica?",
+        "stages": [
+          "1",
+          "2"
+        ],
+        "number": 1,
+        "lessons": [
+          "m1-f01",
+          "m1-f02",
+          "m1-f05",
+          "m1-f04",
+          "m1-f19"
+        ],
+        "steps": [
+          "m1-f01",
+          "m1-f02",
+          "m1-f05",
+          "m1-f04",
+          "m1-f19",
+          "m1-voz-emprestada"
+        ],
+        "complements": []
+      },
+      {
+        "title": "A cidade na crónica de Fernão Lopes",
+        "question": "Como transforma o cronista uma multidão em protagonista?",
+        "stages": [
+          "3"
+        ],
+        "number": 2,
+        "lessons": [
+          "m1-f06",
+          "m1-f08",
+          "m1-f07",
+          "m1-f20",
+          "m1-f15",
+          "m1-f10",
+          "m1-f11"
+        ],
+        "steps": [
+          "m1-f06",
+          "m1-f08",
+          "m1-f07",
+          "m1-f20",
+          "m1-promessa-do-cronista",
+          "m1-f15",
+          "m1-f10",
+          "m1-f11"
+        ],
+        "complements": []
+      }
+    ]
+  },
+  {
+    "module": 2,
+    "changed_assessment_scope": true,
+    "units": [
+      {
+        "number": 1,
+        "title": "Ler a Farsa: desejos, escolhas e consequências",
+        "question": "Como transformam as escolhas de Inês o seu desejo de liberdade?",
+        "stages": [
+          "1",
+          "2",
+          "3"
+        ],
+        "lessons": [
+          "m2-f01",
+          "m2-f02",
+          "m2-f07",
+          "m2-f06"
+        ],
+        "steps": [
+          "m2-f01",
+          "m2-f02",
+          "m2-f07",
+          "m2-f06"
+        ],
+        "complements": [
+          {
+            "id": "m2-ines-escolhe-duas-vezes",
+            "after": "m2-f06",
+            "purpose": "Reconstruir o que Inês sabia em cada escolha e testar a leitura do provérbio."
+          }
+        ]
+      },
+      {
+        "number": 2,
+        "title": "Interpretar e representar: crítica, cena e atualidade",
+        "question": "Como sustentar uma leitura da Farsa e transformá-la numa proposta de representação?",
+        "stages": [
+          "3",
+          "4"
+        ],
+        "lessons": [
+          "m2-f10",
+          "m2-f08",
+          "m2-f09",
+          "m2-f11"
+        ],
+        "steps": [
+          "m2-f10",
+          "m2-f08",
+          "m2-f09",
+          "m2-f11"
+        ],
+        "complements": [
+          {
+            "id": "m2-f12",
+            "after": "m2-f10",
+            "purpose": "Comparar o uso da cadeira em duas cenas para fundamentar uma escolha de encenação."
+          },
+          {
+            "id": "m2-maquina-de-rir",
+            "after": "m2-f10",
+            "purpose": "Relacionar rubricas, apartes e duplo sentido com o efeito cómico de uma cena."
+          },
+          {
+            "id": "m2-f13",
+            "after": "m2-f08",
+            "purpose": "Confrontar defesa e acusação noutra cena e regressar ao argumento do Escudeiro."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "module": 3,
+    "changed_assessment_scope": true,
+    "units": [
+      {
+        "title": "Camões: o mundo e a voz",
+        "question": "Como se relacionam o contexto de uma obra e as vozes que ela constrói?",
+        "stages": [
+          "1",
+          "2"
+        ],
+        "number": 1,
+        "lessons": [
+          "m3-f02",
+          "m3-f03",
+          "m3-f04",
+          "m3-f05",
+          "m3-f09"
+        ],
+        "steps": [
+          "m3-f02",
+          "m3-f03",
+          "m3-f04",
+          "m3-f05",
+          "m3-f09",
+          "m3-soneto-raciocinio"
+        ],
+        "complements": []
+      },
+      {
+        "title": "Dentro da epopeia: celebrar e questionar",
+        "question": "Como pode a mesma epopeia celebrar a viagem e pôr em causa os seus motivos?",
+        "stages": [
+          "3"
+        ],
+        "number": 2,
+        "lessons": [
+          "m3-f18",
+          "m3-f13",
+          "m3-f15",
+          "m3-f11",
+          "m3-f10",
+          "m3-f16",
+          "m3-f17"
+        ],
+        "steps": [
+          "m3-f18",
+          "m3-f13",
+          "m3-velho-restelo-juri",
+          "m3-f15",
+          "m3-f11",
+          "m3-f10",
+          "m3-f16",
+          "m3-f17"
+        ],
+        "complements": []
+      }
+    ]
+  },
+  {
+    "module": 4,
+    "changed_assessment_scope": false,
+    "units": [
+      {
+        "number": 1,
+        "title": "Pregar aos peixes",
+        "question": "Vale a pena dizer a verdade a quem não a quer ouvir?",
+        "stages": [
+          "1"
+        ],
+        "lessons": [
+          "m4-f01",
+          "m4-f02",
+          "m4-f04",
+          "m4-f25",
+          "m4-f06",
+          "m4-f15",
+          "m4-f10"
+        ],
+        "steps": [
+          "m4-f01",
+          "m4-f02",
+          "m4-f04",
+          "m4-f25",
+          "m4-sermao-tribunal",
+          "m4-f06",
+          "m4-f15",
+          "m4-f10"
+        ],
+        "complements": []
+      },
+      {
+        "number": 2,
+        "title": "O Romeiro diz «Ninguém»",
+        "question": "O que se perde quando se perde o nome?",
+        "stages": [
+          "2"
+        ],
+        "lessons": [
+          "m4-f07",
+          "m4-f20",
+          "m4-f08",
+          "m4-f09",
+          "m4-f26"
+        ],
+        "steps": [
+          "m4-f07",
+          "m4-f20",
+          "m4-f08",
+          "m4-f09",
+          "m4-f26",
+          "m4-frei-luis-quem-sabia"
+        ],
+        "complements": []
+      },
+      {
+        "number": 3,
+        "title": "Trinta dias no abrigo",
+        "question": "Como se defende uma regra em dois minutos?",
+        "stages": [
+          "3"
+        ],
+        "lessons": [
+          "m4-f14",
+          "m4-f27",
+          "m4-f11"
+        ],
+        "steps": [
+          "m4-f14",
+          "m4-f27",
+          "m4-f11"
+        ],
+        "complements": []
+      }
+    ]
+  },
+  {
+    "module": 5,
+    "changed_assessment_scope": false,
+    "units": [
+      {
+        "number": 1,
+        "title": "Um amor contra duas famílias",
+        "question": "Quem decide por quem, quando se ama?",
+        "stages": [
+          "1"
+        ],
+        "lessons": [
+          "m5-f02",
+          "m5-f04",
+          "m5-f07",
+          "m5-f09",
+          "m5-f08"
+        ],
+        "steps": [
+          "m5-f02",
+          "m5-f04",
+          "m5-f07",
+          "m5-f09",
+          "m5-f08",
+          "m5-quem-podia-ter-feito-diferente"
+        ],
+        "complements": []
+      },
+      {
+        "number": 2,
+        "title": "A casa dos Maias",
+        "question": "Falha-se a vida, ou deixa-se falhar?",
+        "stages": [
+          "2"
+        ],
+        "lessons": [
+          "m5-f10",
+          "m5-f11",
+          "m5-f12",
+          "m5-f14",
+          "m5-f13",
+          "m5-f15"
+        ],
+        "steps": [
+          "m5-f10",
+          "m5-f11",
+          "m5-f12",
+          "m5-f14",
+          "m5-f13",
+          "m5-o-pais-ou-eles",
+          "m5-f15"
+        ],
+        "complements": []
+      }
+    ]
+  },
+  {
+    "module": 6,
+    "changed_assessment_scope": false,
+    "units": [
+      {
+        "number": 1,
+        "title": "O ideal e a rua",
+        "question": "Para que serve um ideal que não se alcança?",
+        "stages": [
+          "1"
+        ],
+        "lessons": [
+          "m6-f01",
+          "m6-f02",
+          "m6-f13",
+          "m6-f11",
+          "m6-f06",
+          "m6-f04"
+        ],
+        "steps": [
+          "m6-f01",
+          "m6-f02",
+          "m6-antero-viagem-ao-nada",
+          "m6-f13",
+          "m6-f11",
+          "m6-f06",
+          "m6-f04"
+        ],
+        "complements": []
+      },
+      {
+        "number": 2,
+        "title": "A cidade inteira",
+        "question": "A cidade que Cesário viu ainda é a nossa?",
+        "stages": [
+          "2"
+        ],
+        "lessons": [
+          "m6-f07",
+          "m6-f05",
+          "m6-f08",
+          "m6-f12",
+          "m6-f09"
+        ],
+        "steps": [
+          "m6-f07",
+          "m6-cesario-noite-inteira",
+          "m6-f05",
+          "m6-f08",
+          "m6-f12",
+          "m6-f09"
+        ],
+        "complements": []
+      }
+    ]
+  },
+  {
+    "module": 7,
+    "changed_assessment_scope": true,
+    "units": [
+      {
+        "title": "Pessoa: fingimento, memória e identidade",
+        "question": "Como constrói o poema uma voz que não coincide simplesmente com a vida do autor?",
+        "stages": [
+          "1"
+        ],
+        "number": 1,
+        "lessons": [
+          "m7-f01",
+          "m7-f02",
+          "m7-f13",
+          "m7-f34",
+          "m7-f14",
+          "m7-f15"
+        ],
+        "steps": [
+          "m7-f01",
+          "m7-f02",
+          "m7-fingidor-maquina",
+          "m7-f13",
+          "m7-f34",
+          "m7-f14",
+          "m7-f15"
+        ],
+        "complements": []
+      },
+      {
+        "title": "Heterónimos: modos de ver e de viver",
+        "question": "O que muda quando Caeiro, Reis e Campos olham para o mesmo mundo?",
+        "stages": [
+          "2",
+          "3",
+          "4"
+        ],
+        "number": 2,
+        "lessons": [
+          "m7-f04",
+          "m7-f35",
+          "m7-f05",
+          "m7-f23",
+          "m7-f07",
+          "m7-f06",
+          "m7-f36"
+        ],
+        "steps": [
+          "m7-f04",
+          "m7-f35",
+          "m7-f05",
+          "m7-f23",
+          "m7-f07",
+          "m7-f06",
+          "m7-f36",
+          "m7-quatro-vozes-um-problema"
+        ],
+        "complements": []
+      },
+      {
+        "title": "Mensagem: imaginar o país e confrontar as vozes",
+        "question": "Como transforma a poesia o passado em desejo de futuro?",
+        "stages": [
+          "5"
+        ],
+        "number": 3,
+        "lessons": [
+          "m7-f08",
+          "m7-f09",
+          "m7-f10",
+          "m7-f11"
+        ],
+        "steps": [
+          "m7-f08",
+          "m7-f09",
+          "m7-f10",
+          "m7-f11"
+        ],
+        "complements": []
+      }
+    ]
+  },
+  {
+    "module": 8,
+    "changed_assessment_scope": false,
+    "units": [
+      {
+        "number": 1,
+        "title": "Três vozes, um século",
+        "question": "O que pode um poema que uma notícia não pode?",
+        "stages": [
+          "1"
+        ],
+        "lessons": [
+          "m8-f01",
+          "m8-f03",
+          "m8-f04",
+          "m8-f05",
+          "m8-f06",
+          "m8-f10"
+        ],
+        "steps": [
+          "m8-f01",
+          "m8-f03",
+          "m8-f04",
+          "m8-f05",
+          "m8-poema-testemunha",
+          "m8-f06",
+          "m8-f10"
+        ],
+        "complements": []
+      },
+      {
+        "number": 2,
+        "title": "O que cabe num conto",
+        "question": "O que dirias à pessoa que foste, e o que te diria a pessoa que vais ser?",
+        "stages": [
+          "2"
+        ],
+        "lessons": [
+          "m8-f08",
+          "m8-f11",
+          "m8-f09",
+          "m8-f12"
+        ],
+        "steps": [
+          "m8-f08",
+          "m8-george-tres-idades",
+          "m8-f11",
+          "m8-f09",
+          "m8-f12"
+        ],
+        "complements": []
+      }
+    ]
+  },
+  {
+    "module": 9,
+    "changed_assessment_scope": false,
+    "units": [
+      {
+        "number": 1,
+        "title": "A pedra e o sonho",
+        "question": "De quem é a memória que este livro guarda?",
+        "stages": [
+          "1"
+        ],
+        "lessons": [
+          "m9-f01",
+          "m9-f02",
+          "m9-f11",
+          "m9-f03",
+          "m9-f12"
+        ],
+        "steps": [
+          "m9-f01",
+          "m9-f02",
+          "m9-f11",
+          "m9-f03",
+          "m9-f12",
+          "m9-ver-e-nao-ver"
+        ],
+        "complements": []
+      },
+      {
+        "number": 2,
+        "title": "Quem fala e quem faz a obra",
+        "question": "De quem é uma obra: de quem a manda fazer ou de quem a faz?",
+        "stages": [
+          "2"
+        ],
+        "lessons": [
+          "m9-f04",
+          "m9-f10",
+          "m9-f05",
+          "m9-f13",
+          "m9-f07"
+        ],
+        "steps": [
+          "m9-f04",
+          "m9-f10",
+          "m9-f05",
+          "m9-de-quem-e-o-convento",
+          "m9-f13",
+          "m9-f07"
+        ],
+        "complements": []
+      }
+    ]
+  }
+]

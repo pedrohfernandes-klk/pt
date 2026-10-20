@@ -19,12 +19,17 @@
       "source": {
         "title": "Cantigas: comparar sem confundir",
         "author": "Poesia trovadoresca",
-        "excerpt": "Ondas do mar de Vigo, se vistes meu amigo ? e ai Deus, se verrá cedo ? Vocabulário: amigo , o namorado; verrá , virá; cedo , em breve Martim Codax, séc. XIII, Cantigas Medievais Galego-Portuguesas (FCSH), cantiga 1308 (cantiga de amigo; primeira estrofe). A cantiga inteira lê-se na lição «Ondas do mar de Vigo».\n\nQuer'eu em maneira de proençal fazer agora um cantar d'amor e querrei muit'i loar mia senhor a que prez nem fremosura nom fal , nem bondade; e mais vos direi en : tanto a fez Deus comprida de bem que mais que todas las do mundo val . Vocabulário: em maneira de proençal , à maneira dos trovadores da Provença; querrei , quererei; loar , louvar; mia senhor , a minha senhora; prez , valor, mérito; fremosura , formosura, beleza; nom fal , não falta; direi en , direi disso; comprida de bem , cheia de qualidades; val , vale D. Dinis, Cantigas Medievais Galego-Portuguesas (FCSH), cantiga 544 (cantiga de amor; primeira estrofe). A cantiga inteira lê-se na lição «Louvar e troçar».",
-        "context": "Abre a leitura de apoio, lê o recorte indicado e identifica duas marcas relevantes antes de responder. O texto de origem mantém-se na ficha; esta sessão organiza o treino a partir dele.",
+        "excerpt": "Ondas do mar de Vigo, se vistes meu amigo ? e ai Deus, se verrá cedo ? Vocabulário: amigo , o namorado; verrá , virá; cedo , em breve Martim Codax, séc. XIII, Cantigas Medievais Galego-Portuguesas (FCSH), cantiga 1308 (cantiga de amigo; primeira estrofe). A cantiga inteira lê-se na lição «Ondas do mar de Vigo».\n\nQuer'eu em maneira de proençal fazer agora um cantar d'amor e querrei muit'i loar mia senhor a que prez nem fremosura nom fal , nem bondade; e mais vos direi en : tanto a fez Deus comprida de bem que mais que todas las do mundo val . Vocabulário: em maneira de proençal , à maneira dos trovadores da Provença; querrei , quererei; loar , louvar; mia senhor , a minha senhora; prez , valor, mérito; fremosura , formosura, beleza; nom fal , não falta; direi en , direi disso; comprida de bem , cheia de qualidades; val , vale D. Dinis, Cantigas Medievais Galego-Portuguesas (FCSH), cantiga 544 (cantiga de amor; primeira estrofe). A cantiga inteira lê-se na lição «Louvar e troçar».\n\nMendinho, «Sedia-m’eu na ermida de Sam Simion» (excerto):\nSedia-m’eu na ermida de Sam Simion\ne cercarom-mi as ondas, que grandes som!\nEu atendendo meu amig’, eu a[tendendo].\n\nNom hei [eu] i barqueiro nem remador\n[e] morrerei fremosa no mar maior.\nEu atendendo meu amig’, eu a[tendendo].\n\nMendinho, séc. XIII, Cantigas Medievais Galego-Portuguesas (FCSH); estrofes 1 e 5, com omissão das intermédias. Os parênteses retos assinalam restituições editoriais. «Morrerei» anuncia o perigo; o excerto não narra uma morte consumada.",
+        "context": "Compara Codax com Mendinho para a resposta escrita. O recorte de D. Dinis serve a pergunta sobre «vos». Na ficha de Mendinho, confronta as hipóteses para o final com os indícios do texto.",
         "url": "/pt/m1/licao-m1-f19/",
         "note": "Recorte de leitura já utilizado no módulo. Consulta a ficha para o texto, a localização e as fontes completas."
       },
-      "resources": [],
+      "resources": [
+        {
+          "label": "Mendinho: texto completo e hipóteses para o final",
+          "url": "/pt/m1/licao-m1-f02/"
+        }
+      ],
       "warmup": [
         {
           "id": "s01-q1",
@@ -256,11 +261,20 @@
         "title": "Gil Vicente: desejo, escolha e sátira",
         "author": "Gil Vicente",
         "excerpt": "",
-        "context": "Abre a leitura de apoio, lê o recorte indicado e identifica duas marcas relevantes antes de responder. O texto de origem mantém-se na ficha; esta sessão organiza o treino a partir dele.",
+        "context": "Retoma o desejo inicial e a segunda escolha nas duas leituras de apoio. A ficha principal ajuda a construir a interpretação com citações; uma leitura diferente pode ser defendida se explicar as falas e as ações da peça.",
         "url": "/pt/m2/licao-m2-f08/",
         "note": "Materiais existentes reciclados; os recortes e as fontes estão identificados na ficha de apoio."
       },
-      "resources": [],
+      "resources": [
+        {
+          "label": "Desejo inicial de Inês: monólogo e diálogo com a Mãe",
+          "url": "/pt/m2/licao-m2-f02/"
+        },
+        {
+          "label": "Segunda escolha e desfecho da Farsa",
+          "url": "/pt/m2/licao-m2-f06/"
+        }
+      ],
       "warmup": [
         {
           "id": "s03-q1",
@@ -404,15 +418,14 @@
         },
         {
           "id": "s04-q2",
-          "q": "«Tão cedo desta vida descontente»: quem partiu descontente da vida?",
+          "q": "A quem se dirige a voz em «Alma minha gentil, que te partiste»?",
           "options": [
-            "A amada, que morreu cedo",
-            "O sujeito, que ficou na terra",
-            "Deus, que a levou",
-            "O Amor, que o persegue"
+            "À amada que morreu.",
+            "A Deus, que responde ao sujeito.",
+            "A um leitor nomeado no verso."
           ],
           "answer": 0,
-          "feedback": "A amada: a alma gentil partiu cedo e descontente desta vida.",
+          "feedback": "A apóstrofe «Alma minha gentil» dirige-se à amada ausente pela morte. A voz fala-lhe; não se confunde automaticamente com o autor real.",
           "recycledFrom": "/pt/m3/licao-m3-f09/"
         },
         {
@@ -1222,11 +1235,16 @@
         "title": "Cesário: uma cidade em transformação",
         "author": "Cesário Verde",
         "excerpt": "Toca-se as grades, nas cadeias. Som Que mortifica e deixa umas loucuras mansas! O aljube , em que hoje estão velhinhas e creanças, Bem raramente encerra uma mulher de «dom» ! E eu desconfio, até, de um aneurisma Tão morbido me sinto, ao accender das luzes; Á vista das prisões, da velha sé, das cruzes, Chora-me o coração que se enche e que se abysma . A espaços, illuminam-se os andares, E as tascas, os cafés, as tendas, os estancos Alastram em lençol os seus reflexos brancos; E a lua lembra o circo e os jogos malabares.\n\nDuas egrejas, n'um saudoso largo, Lançam a nodoa negra e funebre do clero: N'ellas esfumo um ermo inquisidor severo, Assim que pela Historia eu me aventuro e alargo. Na parte que abateu no terremoto, Muram-se as construcções rectas, eguaes, crescidas; Affrontam-me, no resto, as ingremes subidas, E os sinos d'um tanger monastico e devoto. Mas, n'um recinto publico e vulgar, Com bancos de namoro e exiguas pimenteiras, Bronzeo, monumental, de proporções guerreiras, Um épico d'outr'ora ascende, n'um pilar!",
-        "context": "Abre a leitura de apoio, lê o recorte indicado e identifica duas marcas relevantes antes de responder. O texto de origem mantém-se na ficha; esta sessão organiza o treino a partir dele.",
+        "context": "O recorte apresenta «Noite Fechada». Para a pergunta sobre «honesto», retoma também a estrofe da padaria em «Ao Gás», na mesma ficha. Na escrita, escolhe uma passagem e localiza as duas marcas que vais analisar.",
         "url": "/pt/m6/licao-m6-f07/",
         "note": "Recorte de leitura já utilizado no módulo. Consulta a ficha para o texto, a localização e as fontes completas."
       },
-      "resources": [],
+      "resources": [
+        {
+          "label": "«Ao Gás»: estrofe da padaria e continuação do percurso",
+          "url": "/pt/m6/licao-m6-f07/"
+        }
+      ],
       "warmup": [
         {
           "id": "s11-q1",
@@ -1264,7 +1282,7 @@
             "Mistura de passado e presente"
           ],
           "answer": 0,
-          "feedback": "Hipálage (ou sinestesia): transfiguração do real e valorização do trabalho honesto.",
+          "feedback": "«Honesto» atribui ao cheiro uma qualidade moral associada a quem produz o pão: é uma hipálage. A expressão não deve ser classificada como sinestesia apenas por associar uma sensação a uma qualidade moral; a sinestesia cruza domínios sensoriais.",
           "recycledFrom": "/pt/m6/licao-m6-f07/"
         }
       ],
