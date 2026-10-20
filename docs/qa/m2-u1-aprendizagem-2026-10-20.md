@@ -36,20 +36,21 @@ As notas de continuidade não têm temporizador ou pontuação extra. A transfer
 - Frases criadas para aplicação claramente marcadas como tal: não se atribuem a Gil Vicente.
 - Não foi alterado o LENTE.
 
-## Validação efetivamente executada
+## Validação efetivamente executada — estado atualizado
 
-**9/9 verificações programáticas de dados**, sobre os ficheiros reais do ramo: contagens; presença de feedback geral nas atividades; três explicações para cada escolha errada nas opções selecionadas; feedback específico de verdadeiro/falso; continuidade entre as fichas; existência de uma única atividade no grupo «transfer»; ausência de enunciados «p» repetidos; compatibilidade dos tipos com o motor; seleção do grupo de transferência nas **1 000 amostras simuladas** do algoritmo (não no navegador).
+**Estrutural:** 9/9 verificações programáticas da revisão original, incluindo contagens, compatibilidade do banco, seleção simulada do grupo de transferência e comparação com a versão de base. Os dados das fichas e os motores de exercícios anteriores foram preservados, exceto os acréscimos identificados.
 
-Além disso, confronto dos arrays com a baseline da main confirmou estabilidade de todas as partes exteriores aos arrays. O motor atribui «data-j» ao índice original da opção quando a apresenta baralhada; o campo «fe» usa esse índice. Essa correspondência permite o feedback específico após baralhamento, mas falta observá-la na interface real.
+**GitHub Actions / Chromium:** execução de 20-10-2026, [run 39354266402](https://github.com/pedrohfernandes-klk/pt/actions/runs/39354266402), conclusão **success**. No checkout do ramo:
 
-O ficheiro tests/test_m2_u1_learning.py acrescenta cinco testes de regressão ao repositório. **Ainda não foi executado por um runner Python no checkout completo**; não confundir a verificação de dados deste lote com a execução da suite nem com um teste de navegador.
+- **10/10** testes Python concluídos, incluindo contratos de continuidade e formato dos cartões.
+- **138 verificações de navegador** sobre M2-F01, F02 e F07, executadas em Chromium, com larguras de 320, 390 e 1440 px; abertura das páginas, ausência de erros JavaScript nos casos testados, navegação inicial, apresentação de erros específicos em opções efetivamente escolhidas, acertos, resultados e persistência de conclusão num identificador de QA isolado.
+- Os testes usaram o motor real das páginas; os cartões editoriais alterados foram exercitados também em sobreposições isoladas com o mesmo motor. Não constituem uma passagem integral por todas as combinações possíveis das fichas.
 
-## Verificações ainda obrigatórias antes de publicar
+## Pendências e critérios para publicação
 
-1. Executar a suite Python, a auditoria geral e a verificação de sintaxe em checkout completo.
-2. Abrir F01, F02 e F07 num navegador real; testar escolha errada e certa, mensagens por alternativa, navegação entre cartões, retoma e leitura final; repetir tentativa com outras opções.
-3. Verificar resposta e regresso no percurso F07, estado após recarregar e se a introdução do cartão afeta o melhor resultado pré-existente; confirmar desafios de M2 intactos.
-4. Inspecionar ecrãs estreitos, projeção, teclado, foco, leitor de ecrã, Safari/iOS e desempenho.
-5. Realizar uma aplicação com alunos: recolher exemplos anonimizados de justificações, confrontar reconhecimento imediato com aplicação posterior e rever distratores que se revelem artificiais ou ambíguos.
+1. Percorrer integralmente cada ficha na sequência e confirmar que a nova atividade F07 não compromete a contagem do melhor resultado anterior nem os desafios do módulo. Os testes confirmam persistência em chave de QA, **não migração de dados reais preexistentes**.
+2. Verificar a projeção, foco/teclado e navegação integral de cada ficha, incluindo situações de erro repetido. A navegação inicial foi exercitada; não se certificou a totalidade do percurso no navegador.
+3. Inspecionar Safari/iOS e pelo menos um leitor de ecrã real; comparar telemóvel físico e zoom sem transbordo. Estes testes **não foram realizados**.
+4. Observar com alunos se justificam interpretações autonomamente, revêm erros e transferem procedimentos para excertos novos. Não há ainda evidência de retenção posterior.
 
-**Não declarar aprendizagem real comprovada:** existe agora um percurso melhor sustentado e observável, mas compreensão, retenção e efeito da intervenção exigem provas em aula.
+**Estado: validação automatizada dos percursos-alvo aprovada; validação integral, acessibilidade real e eficácia pedagógica pendentes.** PR #34 permanece em rascunho, sem fusão/publicação.
