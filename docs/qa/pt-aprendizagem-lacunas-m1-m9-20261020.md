@@ -32,7 +32,7 @@ O M2 é tratado separadamente nas PR #34 (U1) e #35 (U2), ambas com execução a
 
 Alterações apenas nos arrays `CARTOES` de três ficheiros HTML: M3-F17 (cartão 11), M5-F12 (cartão 20), M7-F11 (cartões 5, 9, 20, 21). Conservados número e ordem dos cartões, operações, IDs, URLs, motores, chaves de armazenamento e propriedades não intervencionadas. M5 conserva as mesmas alternativas e índices corretos; M3 altera texto de pares mas não a quantidade nem o sistema de associação.
 
-A verificação estática inicial dos ficheiros foi aprovada no momento da edição. A execução dos cinco testes de regressão e dos cenários Chromium depende do workflow incluído nesta PR; o seu resultado deve ser consultado antes de aprovar. Não foram efetuados testes em Safari/iOS, leitor de ecrã real ou aula com alunos. A retenção e a transferência real exigem observação posterior.
+A verificação estática inicial dos ficheiros foi aprovada no momento da edição. **Validação funcional concluída nos cenários definidos:** [GitHub Actions 39355205973](https://github.com/pedrohfernandes-klk/pt/actions/runs/39355205973) terminou com **success**: cinco testes Python e **56 verificações de Chromium**, que incluem associação de pares, preenchimento de lacunas, leitura explicativa, feedback, conclusão e persistência local de QA, com larguras de 320, 390 e 1440 px. Não foram efetuados testes em Safari/iOS, leitor de ecrã real ou aula com alunos. O percurso integral de cada ficha e a retenção/transferência real não são comprovados por estes cenários.
 
 ## Próxima ronda após testes
 
