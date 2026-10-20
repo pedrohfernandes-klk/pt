@@ -16,11 +16,11 @@ Data: 20-10-2026. Estado: diagnóstico editorial fundamentado em amostras de car
 6. **F20 → F15 → F10 → F11:** coordenação/subordinação e efeito no sentido → produção contextualizada de uma crónica, com distinção entre fonte e fala imaginada → confronto final das estratégias da cantiga e da crónica.
 
 ## Dois focos de auditoria detalhada — não são erros certificados
-### A. F01, cartão 10 (índice zero): ordenação de três ofícios pela origem social
-A formulação «da mais alta para a mais humilde» pode promover uma escala rígida entre trovador, segrel e jogral. Verificar a explicação e a edição histórica efetivamente usada; distinguir estatuto social, função performativa e variação contextual. **Não substituir antes de confirmar o texto integral e fontes**. Preferir uma pergunta que mostre o que a categoria permite e não permite inferir sobre uma cantiga.
+### A. F01, cartões 9–10 (índices zero): estatuto e ofícios
+**Problema editorial observado:** o cartão 9 afirma categoricamente «o trovador é nobre e cria; o jogral, humilde, interpreta por paga» e o cartão 10 transforma trovador, segrel e jogral numa escala social fixa, «da mais alta para a mais humilde». Estas formulações ensinam uma tipologia escolar sem assinalar que se trata de uma generalização histórica e confundem estatuto social e atividade. Não alterar automaticamente a resposta correta: verificar bibliografia medievalística e escolher uma redação que mantenha a distinção funcional sem sugerir fronteiras universais. O cartão 10 requer cuidado especial, pois modificar a ordem imposta altera o mecanismo de correção; melhor substituir a afirmação categórica apenas depois da revisão historiográfica.
 
 ### B. F08 → F07/F20: gramática ao serviço do relato
-F08 já contrapõe grupos com preposição que desempenham funções diferentes, incluindo «O grito do pajem» e «A morte do conde». A ligação a F07/F20 pode ser demonstrada numa tarefa curta de reformulação oral: quem pratica a ação, de quem se fala e como a construção linguística altera o foco. Primeiro verificar se tal operação já existe nos cartões finais; não duplicar uma atividade se estiver coberta.
+**Verificação adicional:** F08, cartões 17–20, já apresenta transferência para frases novas e análise de uma frase do cerco. F20, cartões 18–20, retoma com clareza a distinção entre afirmação, ação, prova e interpretação. Logo, **não há lacuna demonstrada que justifique inserir um exercício digital novo**. Em aula pode pedir-se uma reformulação oral («O pajem gritou» → «O grito do pajem»), contrastando o foco da construção, mas a continuidade central entre gramática e relato já está representada nas fichas.
 
 ## Limites e decisões
 - **Manter F19 como referência**: mar com funções distintas, voz autoral vs voz textual, ironia demonstrada pelo confronto entre promessa e realização.
@@ -30,4 +30,4 @@ F08 já contrapõe grupos com preposição que desempenham funções diferentes,
 - Em sala, a evidência mínima de transferência será uma justificação original com um indício preciso, não apenas um acerto de escolha múltipla.
 
 ## Próxima ação concreta
-Rever integralmente o cartão de classificação F01 e os cartões finais de F08/F07/F20; se surgir erro demonstrado, produzir um diff mínimo numa PR separada com testes. Caso contrário, conservar e passar ao próximo ponto real.
+Submeter a revisão historiográfica da tipologia de F01 e, caso confirme o risco de categorização excessiva, propor alteração pontual dos cartões 9–10 com regressões. **F08/F07/F20: conservar**, sem acrescentar cartões nesta ronda.
