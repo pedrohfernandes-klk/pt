@@ -1,0 +1,99 @@
+{
+  "version": 1,
+  "unit": "m2-u2",
+  "title": "Escolhas, representação e sátira",
+  "question": "Como revelam as escolhas e as falas aquilo que uma personagem procura esconder?",
+  "status": "Mapa editorial da sequência existente; não altera a apresentação nem o progresso dos alunos.",
+  "steps": [
+    {
+      "id": "m2-f06",
+      "type": "lesson",
+      "path": "m2/licao-m2-f06/index.html",
+      "title": "Quero asno que me leve",
+      "goal": "Reler as duas escolhas de Inês e interpretar o desfecho sem confundir o provérbio com uma descrição literal de pessoas.",
+      "evidence": "Confrontar o provérbio inicial com um gesto de Pêro e com as palavras da cantiga final.",
+      "misconception": "Confundir o significado percebido por Pêro com o duplo sentido percebido pelo público.",
+      "next_step": "Examinar como a mudança da página para o palco afeta esse duplo destinatário."
+    },
+    {
+      "id": "m2-ines-escolhe-duas-vezes",
+      "type": "extended",
+      "path": "m2/m2-ines-escolhe-duas-vezes/index.html",
+      "title": "Inês escolhe duas vezes",
+      "goal": "Reconstruir o que Inês sabia e podia decidir em cada escolha.",
+      "evidence": "Separar informação da personagem, consequências posteriores e avaliação retrospetiva.",
+      "misconception": "Julgar a primeira escolha apenas pelo que se sabe no fim.",
+      "next_step": "Observar como uma encenação torna cada opção visível."
+    },
+    {
+      "id": "m2-f10",
+      "type": "lesson",
+      "path": "m2/licao-m2-f10/index.html",
+      "title": "Da página ao palco",
+      "goal": "Observar uma escolha cénica e avaliar o efeito num conflito concreto, distinguindo instruções da tarefa e regras gerais da reportagem.",
+      "evidence": "Indicar uma marcação, voz, gesto, luz ou figurino e explicar a sua consequência na interpretação.",
+      "misconception": "Confundir gosto pessoal ou regras locais da encomenda com características universais de um género textual.",
+      "next_step": "Reutilizar um indício cénico na apreciação crítica de Inês."
+    },
+    {
+      "id": "m2-maquina-de-rir",
+      "type": "extended",
+      "path": "m2/m2-maquina-de-rir/index.html",
+      "title": "A máquina de rir",
+      "goal": "Reconstruir como apartes, tipos sociais, rubricas e duplos sentidos produzem riso.",
+      "evidence": "Identificar a informação que cada personagem e o público têm num momento selecionado.",
+      "misconception": "Tratar a sátira como uma etiqueta sem mecanismo nem destinatário.",
+      "next_step": "Fundamentar uma hipótese sobre a transformação de Inês."
+    },
+    {
+      "id": "m2-f08",
+      "type": "lesson",
+      "path": "m2/licao-m2-f08/index.html",
+      "title": "Quem é, afinal, Inês Pereira?",
+      "goal": "Escrever uma apreciação crítica que explique a evolução e eventuais contradições da personagem.",
+      "evidence": "Relacionar duas passagens de momentos distintos e explicar o que sustentam e o que não permitem concluir.",
+      "misconception": "Apagar a mudança da personagem ou supor que uma frase basta para um retrato definitivo.",
+      "next_step": "Aplicar a distinção entre estrutura e função à recontagem atualizada."
+    },
+    {
+      "id": "m2-f09",
+      "type": "lesson",
+      "path": "m2/licao-m2-f09/index.html",
+      "title": "Asno ou cavalo, hoje",
+      "goal": "Transpor para outro tempo a função dramática das escolhas sem obrigar a manter todos os objetos, nomes e situações.",
+      "evidence": "Justificar um equivalente contemporâneo pela função que desempenha no conflito.",
+      "misconception": "Confundir atualização de superfície com transformação dramatúrgica.",
+      "next_step": "Regressar aos mecanismos da sátira para rever as escolhas de adaptação."
+    },
+    {
+      "id": "m2-f11",
+      "type": "lesson",
+      "path": "m2/licao-m2-f11/index.html",
+      "title": "O que a farsa ensinou",
+      "goal": "Discutir a incidência da sátira sobre comportamentos concretos, distinguindo crítica de culpabilização.",
+      "evidence": "Apresentar pelo menos um indício textual pertinente para cada interpretação escolhida.",
+      "misconception": "Tratar «ninguém é poupado» como resposta automática, sem observar ações, ou desculpar o controlo do Escudeiro por causa de escolhas de Inês.",
+      "next_step": "Comparar o papel de objetos e discursos noutra cena de Gil Vicente."
+    },
+    {
+      "id": "m2-f12",
+      "type": "lesson",
+      "path": "m2/licao-m2-f12/index.html",
+      "title": "Um adereço não é inocente",
+      "goal": "Comparar o funcionamento cénico de objetos semelhantes na Farsa e no Auto da Barca do Inferno.",
+      "evidence": "Relacionar objeto, gesto e fala em cada cena, sem atribuir ao mesmo objeto um significado universal.",
+      "misconception": "Chamar «símbolo» a um objeto sem demonstrar a função que assume na cena.",
+      "next_step": "Passar do indício cénico para a força e os limites de uma defesa verbal."
+    },
+    {
+      "id": "m2-f13",
+      "type": "lesson",
+      "path": "m2/licao-m2-f13/index.html",
+      "title": "A defesa que se denuncia",
+      "goal": "Distinguir defesa e acusação, detetar uma resposta que muda de assunto e comparar estratégias de justificação.",
+      "evidence": "Localizar a acusação e mostrar por que a réplica enfrenta ou não o comportamento criticado.",
+      "misconception": "Confundir participação religiosa, título social ou uma escolha passada com justificação suficiente de dano infligido a outros.",
+      "next_step": "Mobilizar os três procedimentos — observar, fundamentar, comparar — numa resposta autónoma sobre a farsa."
+    }
+  ]
+}

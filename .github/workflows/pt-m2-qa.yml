@@ -1,0 +1,60 @@
+name: Português M2 — QA de aprendizagem
+on:
+  pull_request:
+    paths:
+      - 'm2/**'
+      - 'tests/**'
+      - 'docs/pedagogia/**'
+      - 'scripts/**'
+      - '.github/workflows/pt-m2-qa.yml'
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            m2
+            assets
+            docs
+            scripts
+            tests
+            .github
+          sparse-checkout-cone-mode: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validação Python e bancos de cartões
+        run: |
+          python -m unittest discover -s tests -p 'test_*.py' -v
+          if [ -f scripts/audit_learning_progression.py ]; then
+            python scripts/audit_learning_progression.py --json > m2-auditoria.json
+            python - <<'PY'
+          import json
+          report = json.load(open('m2-auditoria.json'))
+          assert not report['problems'], report['problems']
+          print('Bancos auditados:', report['totals']['lessons_read'])
+          PY
+          fi
+      - name: Instalar navegador de teste
+        run: |
+          python -m pip install playwright
+          python -m playwright install --with-deps chromium
+      - name: Navegação e feedback reais
+        run: |
+          if [ -f tests/test_m2_u1_learning.py ]; then
+            python tests/browser_m2.py --lessons 01,02,07
+          else
+            python tests/browser_m2.py --lessons 06,08,09,10,11,12,13
+            python tests/browser_m2_extended.py
+            python tests/browser_m2_complete.py --lessons 06,escolhas,10,riso,08,09,11,12,13
+          fi
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: qa-m2-auditoria
+          path: m2-auditoria.json
+          if-no-files-found: ignore
