@@ -36,21 +36,23 @@ As notas de continuidade não têm temporizador ou pontuação extra. A transfer
 - Frases criadas para aplicação claramente marcadas como tal: não se atribuem a Gil Vicente.
 - Não foi alterado o LENTE.
 
-## Validação efetivamente executada — estado atualizado
+## Validação funcional — execução final
 
-**Estrutural:** 9/9 verificações programáticas da revisão original, incluindo contagens, compatibilidade do banco, seleção simulada do grupo de transferência e comparação com a versão de base. Os dados das fichas e os motores de exercícios anteriores foram preservados, exceto os acréscimos identificados.
+**Verificação estrutural:** 9/9 controlos iniciais de dados e comparação com a baseline, sem mudanças imprevistas nos bancos ou motores.
 
-**GitHub Actions / Chromium:** execução de 20-10-2026, [run 39354266402](https://github.com/pedrohfernandes-klk/pt/actions/runs/39354266402), conclusão **success**. No checkout do ramo:
+**GitHub Actions / Chromium:** [run 39355932941](https://github.com/pedrohfernandes-klk/pt/actions/runs/39355932941), **success** em 20-10-2026:
 
-- **10/10** testes Python concluídos, incluindo contratos de continuidade e formato dos cartões.
-- **138 verificações de navegador** sobre M2-F01, F02 e F07, executadas em Chromium, com larguras de 320, 390 e 1440 px; abertura das páginas, ausência de erros JavaScript nos casos testados, navegação inicial, apresentação de erros específicos em opções efetivamente escolhidas, acertos, resultados e persistência de conclusão num identificador de QA isolado.
-- Os testes usaram o motor real das páginas; os cartões editoriais alterados foram exercitados também em sobreposições isoladas com o mesmo motor. Não constituem uma passagem integral por todas as combinações possíveis das fichas.
+- **10/10 testes Python** aprovados.
+- **141 verificações de navegador** nas três lições F01/F02/F07: 320, 390 e 1440 px, navegação, feedback específico após erro, escolha correta, leitura, conclusão e progresso em chave local de QA.
+- **Três percursos completos**, com seleção normal de cartões e interação em todas as etapas apresentadas pelo motor: F01 29 ações, F02 31, F07 26, perfazendo **86 ações de navegação**, com resultado final e recuperação do progresso após recarregar.
+- Foram exercitados formatos de escolha, classificação, associação, lacunas, ordenação e sublinhado. Não surgiram erros JavaScript nestes percursos.
 
-## Pendências e critérios para publicação
+**Âmbito real:** uma execução integral por ficha, mais ensaios isolados de feedback em alternativas específicas. Não se verificaram todas as combinações aleatórias nem a migração dos resultados reais já armazenados pelo utilizador.
 
-1. Percorrer integralmente cada ficha na sequência e confirmar que a nova atividade F07 não compromete a contagem do melhor resultado anterior nem os desafios do módulo. Os testes confirmam persistência em chave de QA, **não migração de dados reais preexistentes**.
-2. Verificar a projeção, foco/teclado e navegação integral de cada ficha, incluindo situações de erro repetido. A navegação inicial foi exercitada; não se certificou a totalidade do percurso no navegador.
-3. Inspecionar Safari/iOS e pelo menos um leitor de ecrã real; comparar telemóvel físico e zoom sem transbordo. Estes testes **não foram realizados**.
-4. Observar com alunos se justificam interpretações autonomamente, revêm erros e transferem procedimentos para excertos novos. Não há ainda evidência de retenção posterior.
+## Verificações adicionais, fora da aprovação Chromium
 
-**Estado: validação automatizada dos percursos-alvo aprovada; validação integral, acessibilidade real e eficácia pedagógica pendentes.** PR #34 permanece em rascunho, sem fusão/publicação.
+1. **Navegadores e acessibilidade:** Safari/iOS, leitores de ecrã reais, dispositivo móvel físico, foco em todos os percursos e utilização efetiva da projeção em sala — por executar.
+2. **Regressões com dados reais:** recuperação de um melhor resultado antigo de F07 após introduzir um novo cartão e os desafios do módulo — por confirmar com fixture de histórico representativa.
+3. **Aprendizagem:** testar compreensão, fundamentação e transferência com respostas autênticas dos alunos, incluindo recuperação posterior — não demonstrado pelos testes automáticos.
+
+**Estado:** validação funcional automatizada integral de uma tentativa por ficha **aprovada**; acessibilidade, variantes adicionais, histórico real e eficácia pedagógica **pendentes**. PR #34 continua em rascunho, sem publicação.
