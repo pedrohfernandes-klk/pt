@@ -18,26 +18,22 @@ F06 → percurso longo «Inês escolhe duas vezes» → F10 → percurso longo �
 
 Não se criaram cartões, pontos, mecanismos ou novos ecrãs. As quatro fichas revistas mantêm as opções corretas do respetivo motor; onde se alteraram distratores, as respostas certas continuam no mesmo índice. Os feedbacks específicos usam o formato compatível com o motor existente. Foram preservados os textos de todas as outras atividades.
 
-## Validação efetivamente realizada
+## Validação efetivamente realizada — estado atualizado
 
-**Aprovada a inspeção programática de dados em GitHub**, confrontando os arrays CARTOES da `main` e deste ramo:
+**Inspeção estática:** confronto dos sete bancos CARTOES de M2-U2 com `main`: **152 cartões e 101 atividades**, sem remoções ou reordenações; alterações limitadas a campos editoriais identificados; HTML/JavaScript exterior aos bancos, chaves de progresso, URLs e motores preservados. Controlo de índices de feedback, respostas e correspondência dos nove passos com o manifesto aprovado.
 
-- Sete bancos lidos e comparados, sem alterações fora dos arrays.
-- Contagem anterior e atual idêntica: **152 cartões / 101 atividades**; nenhum cartão adicionado, eliminado ou reordenado.
-- Todos os campos alterados coincidem com a lista de intervenções prevista; campos não visados preservados.
-- Feedback específico confrontado com a posição da opção correta: arrays completos nas intervenções; objetos indexados esparsos de F12/F13 preservados.
-- Questões de verdadeiro/falso e escolhas existentes mantêm os índices/valores corretos.
-- Correspondência integral entre os nove passos do índice do módulo e o manifesto editorial.
-- F09, F12 e F13 idênticas à base quanto a conteúdo.
+**GitHub Actions / Chromium:** [run 39354626094](https://github.com/pedrohfernandes-klk/pt/actions/runs/39354626094), de 20-10-2026, conclusão **success**:
 
-Os seis testes de regressão para futura execução no checkout estão em `tests/test_m2_u2_learning.py`. A inspeção de dados acima não equivale a executar Python ou o navegador; não declarar esses testes como concluídos.
+- **6/6 testes Python** no checkout.
+- **224 verificações de navegador** nas sete lições F06, F08, F09, F10, F11, F12 e F13; larguras de 320, 390 e 1440 px, abertura, navegação inicial e ausência de erros JavaScript nos percursos exercitados. Nos cartões-alvo, respostas incorretas e certas, feedback em opções realmente apresentadas, resultados e progresso local isolado. As escolhas com feedback por objeto indexado de F12/F13 foram exercitadas no motor real.
+- **24 verificações adicionais** nos dois percursos longos «Inês escolhe duas vezes» e «A máquina de rir»: abertura, responsividade, avanço inicial e menu com fecho por Escape.
 
-## Bloqueios à publicação
+Os cartões-alvo foram testados em sobreposições isoladas com o mesmo motor das lições. Não se realizaram percursos completos nem se cobriram todas as combinações da seleção variável. A persistência observada pertence a dados de QA, não a históricos reais preexistentes.
 
-1. Executar `python -m unittest discover -s tests -p test_m2_u2_learning.py` no checkout, juntamente com os auditores globais e validação de sintaxe.
-2. No navegador, completar as quatro fichas e verificar novos feedbacks com escolhas corretas/incorretas, incluindo mistura de opções e tentativas sucessivas.
-3. Confirmar que a seleção variável mantém disponíveis os exercícios relevantes, que o progresso persistente e os desafios da unidade não sofreram regressões.
-4. Testar F06/F08/F10/F11 em 320–390 px, ecrã largo, projeção e teclado, incluindo foco e explicações longas. Leitor de ecrã real e Safari/iOS **não testados**.
-5. Verificar com alunos, por observação ou respostas no papel, se o confronto de provas e a explicação de escolhas cénicas melhoram de facto. A análise automática não permite concluir aprendizagem, transferência duradoura ou retenção.
+## Pendências obrigatórias antes da publicação
 
-**Sem fusão ou publicação** até concluir os testes funcionais críticos. A implementação da Unidade 1 permanece separada na PR #34 para evitar dependências desnecessárias.
+1. Percursos integrais das nove páginas, desafios de etapa e continuidade entre fichas, incluindo verificação do histórico de progressos anterior às mudanças.
+2. Projeção em aula, teclado/foco nos percursos completos, leitor de ecrã real e Safari/iOS; testes físicos e medição formal de desempenho **ainda não efetuados**.
+3. Observação pedagógica: discutir e justificar interpretações com textos, voz ou caderno, rever uma conclusão e aplicar o procedimento semanas depois. A eficácia e a retenção não se inferem dos acertos automáticos.
+
+**Estado: intervenção funcionalmente aprovada nos casos automatizados; certificação integral, acessibilidade e eficácia pedagógica pendentes.** PR #35 continua em rascunho, sem fusão ou publicação.
