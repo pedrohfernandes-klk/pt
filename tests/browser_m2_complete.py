@@ -46,6 +46,32 @@ def respond(page):
         tap(page, '.casca [data-c-acoes] [data-seguinte]', 'reading next')
         return 'reading'
 
+    if page.locator(root + ' [data-tipo-ext="posicao"] [data-ops] button').count():
+        tap(page, root + ' [data-tipo-ext="posicao"] [data-ops] button', 'position')
+        return 'posicao'
+
+    if page.locator(root + ' [data-tipo-ext="posicoes"] [data-ops] button').count():
+        buttons = page.locator(root + ' [data-tipo-ext="posicoes"] [data-ops] button')
+        for j in range(buttons.count()):
+            buttons.nth(j).click()
+        tap(page, '.casca [data-c-acoes] [data-confirmar]', 'compare perspectives')
+        return 'posicoes'
+
+    if page.locator(root + ' [data-tipo-ext="multi"] [data-ops] button').count():
+        buttons = page.locator(root + ' [data-tipo-ext="multi"] [data-ops] button')
+        confirm = page.locator('.casca [data-c-acoes] [data-confirmar]')
+        for j in range(buttons.count()):
+            if confirm.is_enabled():
+                break
+            buttons.nth(j).click()
+        assert confirm.is_enabled(), 'Multiple-choice confirmation never enabled'
+        confirm.click()
+        return 'multi'
+
+    if page.locator(root + ' [data-tipo-ext="imagens"] [data-ops] button').count():
+        tap(page, root + ' [data-tipo-ext="imagens"] [data-ops] button', 'compare images')
+        return 'imagens'
+
     if page.locator(root + ' .inline select').count():
         selects = page.locator(root + ' .inline select')
         count = selects.count()
