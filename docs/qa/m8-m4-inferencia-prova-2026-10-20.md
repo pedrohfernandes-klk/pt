@@ -33,7 +33,11 @@ Confronto programático dos quatro bancos `CARTOES` de `main` com o ramo de trab
 
 Os seis testes de regressão editorial foram adicionados em `tests/test_inferencia_m8_m4.py`. Foi também preparado `tests/browser_inferencia_m8_m4.py`, que deverá exercitar o motor real em Chromium, abrir as quatro fichas em 320/390/1440 píxeis, concluir uma tentativa por ficha, recarregar para verificar o progresso e provocar erros específicos nas escolhas revistas. O GitHub Actions responsável encontra-se em `.github/workflows/pt-m8-m4-qa.yml`.
 
-**Estado de execução:** a aprovação estrutural não significa que os testes Python ou Chromium já tenham sido executados. O relatório deve ser atualizado com o URL, os resultados e a contagem de verificações de uma execução concluída.
+**Estado de execução atualizado:** a validação funcional automatizada terminou com **success** em [GitHub Actions #39387441373](https://github.com/pedrohfernandes-klk/pt/actions/runs/39387441373), a 20-10-2026. Foram aprovados **6/6 testes Python** e **125 verificações de Chromium** em quatro fichas, incluindo carregamento sem erros JavaScript nos cenários exercitados, larguras de 320/390/1440 píxeis, feedback específico associado ao índice de cada opção errada, conclusão de cada ficha e recuperação do progresso local após recarregar.
+
+**Percursos completos:** M8-F08, **29 ações**; M8-F09, **25 ações**; M8-F12, **28 ações**; M4-F27, **28 ações**. Total: **110 ações de navegação**. Os exercícios foram concluídos com o motor das páginas, sem saltar os cartões apresentados nessa tentativa. A suite também exerceu isoladamente as alternativas erradas nas escolhas revistas.
+
+**Limite da aprovação:** uma tentativa integral por ficha e alternativas específicas no motor real, não todas as seleções e formulações possíveis, nem Safari/iOS, leitor de ecrã real, projeção física ou aquisição de competências pelos alunos.
 
 ## Antes de publicar
 
