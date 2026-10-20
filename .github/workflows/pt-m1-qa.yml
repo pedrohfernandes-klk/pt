@@ -32,6 +32,7 @@ jobs:
           python scripts/audit_cards.py
           python scripts/audit_lessons.py
           python scripts/audit_learning_progression.py
+          node tests/jogo-rotacao.cjs
           node tests/exame-catalogo.cjs
           node tests/exame-dossie.cjs
       - name: Instalar Chromium
@@ -47,3 +48,4 @@ jobs:
           python tests/browser_unit_synthesis.py
           python tests/browser_exame_cache.py
           python tests/browser_exame_alignment.py
+          python tests/browser_jogabilidade.py
