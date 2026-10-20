@@ -68,10 +68,10 @@ def respond(page):
             tap(page, root + ' .ordem .soltos button.op', 'order part')
         return 'ordenar/frase/versos'
 
-    if page.locator(root + ' .classes .soltos [data-e]').count():
-        n = page.locator(root + ' .classes .soltos [data-e]').count()
+    if page.locator(root + ' .classes').count() and page.locator(root + ' .soltos [data-e]').count():
+        n = page.locator(root + ' .soltos [data-e]').count()
         for _ in range(n):
-            tap(page, root + ' .classes .soltos [data-e]', 'classifiable')
+            tap(page, root + ' .soltos [data-e]', 'classifiable')
             tap(page, root + ' .classes [data-d="0"]', 'class target')
         return 'classe'
 
