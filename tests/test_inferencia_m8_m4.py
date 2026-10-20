@@ -83,7 +83,7 @@ class EvidenceBasedLearning(unittest.TestCase):
                 'personagem de teatro' in option.lower()
                 for option in item['o']
             ))
-        self.assertIn('sociedade', bank[3]['f'])
+        self.assertIn('exploração', bank[3]['f'])
         self.assertIn('cidade', bank[6]['f'])
         self.assertIn('evasão', bank[12]['f'])
 
