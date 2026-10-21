@@ -1,0 +1,25 @@
+name: Português M4 — comparação fundamentada
+on:
+  pull_request:
+    paths:
+      - 'm4/**'
+      - 'tests/test_m4_f11_comparison.py'
+      - '.github/workflows/pt-m4-f11-qa.yml'
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            m4
+            tests
+          sparse-checkout-cone-mode: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verificar argumentação comparativa F11
+        run: python -m unittest discover -s tests -p 'test_m4_f11_comparison.py' -v
