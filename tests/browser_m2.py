@@ -17,7 +17,7 @@ ROOT = Path(__file__).resolve().parents[1]
 CARD_TESTS = {
     '01': {'choices': [10, 20], 'vf': [], 'read': [23]},
     '02': {'choices': [25], 'vf': [17], 'read': [1, 27]},
-    '07': {'choices': [8, 15, 23], 'vf': [9], 'read': [1, 24]},
+    '07': {'choices': [11, 18, 26], 'vf': [12], 'read': [1, 27]},
     '06': {'choices': [25], 'vf': [], 'read': [33]},
     '08': {'choices': [16], 'vf': [], 'read': [1, 21]},
     '10': {'choices': [18], 'vf': [9, 12], 'read': [4]},

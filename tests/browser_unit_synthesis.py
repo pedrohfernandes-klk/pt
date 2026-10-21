@@ -51,8 +51,13 @@ try:
    ctx,page=new_page(browser,320);page.goto(host+'/'+path+'/',wait_until='networkidle')
    card=lesson_cards(ROOT/path/'index.html')[x['index']]
    page.evaluate('card=>EPIJogo.montar({itens:[card],chave:"qa-open",variar:false})',card)
-   modal=page.locator('.casca.sobreposta');modal.locator('.cartao details summary').click()
-   assert modal.locator('.cartao details').evaluate('el=>el.open')
+   modal=page.locator('.casca.sobreposta');modal.locator('.cartao details summary').first.click()
+   assert modal.locator('.cartao details').first.evaluate('el=>el.open')
+   optional=modal.locator('.retoma-partilhada')
+   if optional.count():
+    optional.locator('summary').focus();optional.locator('summary').press('Enter')
+    assert optional.evaluate('el=>el.open')
+    assert 'A sós' in optional.inner_text()
    assert modal.locator('[data-j]').count()==0
    print('PASS open interpretation',path,x['index'],flush=True);ctx.close()
   browser.close()

@@ -19,12 +19,12 @@ class M2LearningContinuity(unittest.TestCase):
     def test_sequence_and_scope(self):
         route = json.loads((ROOT / 'docs/pedagogia/m2-u1-progressao.json').read_text(encoding='utf-8'))
         self.assertEqual(['m2-f01', 'm2-f02', 'm2-f07'], [l['id'] for l in route['lessons']])
-        self.assertEqual([24, 28, 25], [len(lesson(f)) for f in ('01', '02', '07')])
+        self.assertEqual([24, 28, 28], [len(lesson(f)) for f in ('01', '02', '07')])
         for f in ('01', '02', '07'):
             self.assertTrue(all(x['t'] == 'ler' or x.get('f') for x in lesson(f)))
 
     def test_specific_feedback_per_wrong_option(self):
-        for f, positions in {'01': [10, 20], '02': [25], '07': [8, 15, 23]}.items():
+        for f, positions in {'01': [10, 20], '02': [25], '07': [11, 18, 26]}.items():
             for index in positions:
                 card = lesson(f)[index]
                 with self.subTest(f=f, index=index):
@@ -33,7 +33,7 @@ class M2LearningContinuity(unittest.TestCase):
                     self.assertEqual(len(card['o']), len(card['fe']))
                     self.assertEqual('', card['fe'][card['c']])
                     self.assertTrue(all(text.strip() for i, text in enumerate(card['fe']) if i != card['c']))
-        for f, index in [('02', 17), ('07', 9)]:
+        for f, index in [('02', 17), ('07', 12)]:
             card = lesson(f)[index]
             self.assertEqual('vf', card['t'])
             self.assertIsInstance(card['fe'], str)
