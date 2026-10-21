@@ -24,7 +24,7 @@ try:
     if key=='m6-f04':
      mount([cards[4]]);page.screenshot(path=str(OUT/f'modelo-{width}.png'));summary=page.locator('#baralho summary');summary.focus();summary.press('Enter');assert summary.evaluate('e=>e.parentElement.open');assert 'E eu sigo' in page.locator('#baralho').inner_text();summary.press('Enter')
      mount([cards[19]]);page.locator('#baralho .ops [data-j="0"]').focus();page.locator('#baralho .ops [data-j="0"]').press('Enter');assert 'não estabelece' in page.locator('.casca-folha').inner_text()
-     mount([cards[12]]);page.locator('#baralho select[data-k="0"]').select_option('0');page.locator('#baralho select[data-k="1"]').select_option('1');assert 'antecedente' in page.locator('.casca-folha').inner_text()
+     mount([cards[12]]);page.locator('#baralho select[data-k="0"]').select_option('0');page.locator('#baralho select[data-k="1"]').select_option(page.locator('#baralho select[data-k="1"] option').evaluate_all("opts=>opts.find(o=>o.value!==''&&o.value!=='0').value"));assert 'antecedente' in page.locator('.casca-folha').inner_text()
     assert not errors;results.append({'lesson':key,'width':width,'normal_attempt':True,'full_bank':len(cards),'progress_after_reload':True,'errors':errors});ctx.close()
   browser.close()
 finally:server.shutdown()
