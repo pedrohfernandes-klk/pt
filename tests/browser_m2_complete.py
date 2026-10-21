@@ -47,6 +47,11 @@ def respond(page):
         tap(page, '.casca [data-c-acoes] [data-seguinte]', 'reading next')
         return 'reading'
 
+    if page.locator(root + ' [data-rever-op]').count():
+        page.locator(root + ' [data-rever-op]').first.click()
+        page.locator('.casca [data-rever-confirmar]').click()
+        return 'rever'
+
     if page.locator(root + ' [data-tipo-ext="posicao"] [data-ops] button').count():
         tap(page, root + ' [data-tipo-ext="posicao"] [data-ops] button', 'position')
         return 'posicao'

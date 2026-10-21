@@ -10,7 +10,7 @@ from pathlib import Path
 import sys
 
 ROOT = Path(__file__).resolve().parents[1]
-TYPES = {'ler', 'emparelhar', 'escolha', 'completar', 'vf', 'ordenar', 'frase', 'versos', 'sublinhar', 'calcada'}
+TYPES = {'ler', 'emparelhar', 'escolha', 'completar', 'vf', 'ordenar', 'frase', 'versos', 'sublinhar', 'calcada', 'rever'}
 # Same card engine, with banks moved to explicit external scripts.
 EXTERNAL_BANKS = {
     'm3/licao-m3-f18/index.html': '../../assets/pt-lessons/m3-f18.js',
@@ -50,7 +50,7 @@ def validate_cards(cards):
             errors.append(f'card {number}: unknown type {kind!r}')
         if kind != 'ler' and not (isinstance(card.get('f'), str) and card['f'].strip()):
             errors.append(f'card {number}: missing explanatory feedback field')
-        checks = [card] if kind == 'escolha' else card.get('lacunas', []) if kind == 'completar' else []
+        checks = [card] if kind in ('escolha', 'rever') else card.get('lacunas', []) if kind == 'completar' else []
         if kind == 'completar' and (not isinstance(checks, list) or not checks):
             errors.append(f'card {number}: missing gaps')
             continue
@@ -65,6 +65,12 @@ def validate_cards(cards):
                 errors.append(f'card {number}: duplicate options')
         if isinstance(card.get('fe'), list) and len(card['fe']) != len(card.get('o', [])):
             errors.append(f'card {number}: feedback/options length mismatch')
+        if kind == 'rever':
+            phrase, fragment = card.get('frase'), card.get('trecho')
+            if not isinstance(phrase, str) or not isinstance(fragment, str) or not fragment or phrase.count(fragment) != 1:
+                errors.append(f'card {number}: revision needs one unambiguous fragment')
+            if not isinstance(card.get('apoio'), str) or not card['apoio'].strip():
+                errors.append(f'card {number}: revision needs an evidence passage')
         if kind == 'sublinhar':
             words = str(card.get('frase', '')).split()
             indexes = card.get('certas')
