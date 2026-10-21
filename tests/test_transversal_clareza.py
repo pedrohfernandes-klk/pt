@@ -1,6 +1,5 @@
 from pathlib import Path
 import json,unittest
-from bs4 import BeautifulSoup
 ROOT=Path(__file__).resolve().parents[1]
 def bank(p):return json.JSONDecoder().raw_decode(p.read_text('utf-8').split('CARTOES=',1)[1].lstrip())[0]
 class TransversalClareza(unittest.TestCase):
