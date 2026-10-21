@@ -53,3 +53,4 @@ jobs:
           python tests/browser_ux06_pt.py
           python tests/browser_m7_pilot.py
           python tests/browser_m2_balance.py
+          python tests/browser_revision_activities.py
