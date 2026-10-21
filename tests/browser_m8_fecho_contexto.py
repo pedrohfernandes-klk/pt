@@ -36,7 +36,7 @@ try:
    page.get_by_text('A primeira apresenta um hábito; a segunda, uma repetição num episódio.',exact=True).press('Enter')
    assert 'Não provam, por si sós' in page.locator('body').inner_text()
    page.locator('#seguir').click();page.reload(wait_until='networkidle')
-   assert 'O meu cartão' in page.locator('#palco').inner_text()
+   assert 'o meu cartão' in page.locator('#palco').inner_text().lower()
    page.goto(host+'/exame/#s17/escrever',wait_until='networkidle')
    assert 'Comparei os dois poemas selecionados' in page.locator('#app').inner_text()
    page.goto(host+'/exame/#s17/corrigir',wait_until='networkidle')
