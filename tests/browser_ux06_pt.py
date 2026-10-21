@@ -30,8 +30,8 @@ def main():
      action=page.locator('[data-module-next]');assert action.is_visible();assert 'Começar:' in action.inner_text()
      assert action.bounding_box()['y']<600,(m,width,action.bounding_box())
      assert not page.evaluate('document.documentElement.scrollWidth>innerWidth+2')
-     assert page.locator('.module-context figure.doc').count()==1 and page.locator('.module-progress .passaporte').count()==1
-     assert not page.locator('figure.doc').is_visible()
+     assert page.locator('.module-opening figure.doc').count()==1 and page.locator('.module-progress .passaporte').count()==1
+     assert page.locator('figure.doc').is_visible()
      if m in (1,2):
       OUT.mkdir(parents=True,exist_ok=True);page.screenshot(path=str(OUT/f'm{m}-{width}-depois.png'))
       page.locator('.unidade-pedagogica').first.screenshot(path=str(OUT/f'm{m}-unidade-{width}-depois.png'))
@@ -46,8 +46,8 @@ def main():
       assert int(counts[1])==sum(len(u['lessons']) for u in plan['units'])
       # Same interaction hierarchy in dark mode and enlarged root text.
       page.goto(host+f'/pt/m{m}/',wait_until='networkidle');page.emulate_media(color_scheme='dark')
-      page.locator('.module-context summary').focus();page.locator('.module-context summary').press('Enter');assert page.locator('figure.doc').is_visible()
-      page.locator('.module-context summary').press('Enter');assert not page.locator('figure.doc').is_visible()
+      page.locator('.module-progress summary').focus();page.locator('.module-progress summary').press('Enter');assert page.locator('.passaporte').is_visible()
+      page.locator('.module-progress summary').press('Enter');assert not page.locator('.passaporte').is_visible()
       page.locator('[data-module-next]').focus();assert page.locator('[data-module-next]').evaluate('e=>getComputedStyle(e).outlineStyle')!='none'
       page.evaluate('document.documentElement.style.fontSize="200%"');assert not page.evaluate('document.documentElement.scrollWidth>innerWidth+2'),('root zoom',m,page.evaluate('({scroll:document.documentElement.scrollWidth,client:innerWidth,x:scrollX,large:[...document.querySelectorAll("body *")].filter(e=>e.scrollWidth>e.clientWidth+2).map(e=>({cl:e.className,scroll:e.scrollWidth,client:e.clientWidth})).slice(0,15)})'),page.locator('body *').evaluate_all('(els)=>els.filter(e=>e.getBoundingClientRect().right>innerWidth+2).map(e=>({tag:e.tagName,cl:e.className,w:e.getBoundingClientRect().width,text:(e.innerText||"").slice(0,80)})).slice(0,12)'))
      assert not errors,(m,width,errors)

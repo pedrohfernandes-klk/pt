@@ -56,3 +56,11 @@
 .pt-module nav.migalhas{display:flex;align-items:center;gap:8px;padding-inline:max(14px,calc((100% - 708px)/2))}
 .pt-module nav.migalhas>ol{flex:1;min-width:0;max-width:none;margin:0;padding:10px 0;flex-wrap:wrap}
 .pt-module nav.migalhas>.epi-projection-launcher{margin:0;padding:10px;color:inherit;border-color:currentColor}
+
+/* Opening images remain visible, with their full proportions and sources. */
+.pt-module .module-opening{display:grid;grid-template-columns:minmax(0,1fr) minmax(180px,240px);align-items:start;gap:24px;margin:1.25rem 0 .75rem}
+.pt-module .module-opening .module-entry{margin:0}
+.pt-module .module-opening .doc{margin:0;min-width:0}
+.pt-module .module-opening .doc img{width:auto;height:auto;max-width:100%;max-height:260px}
+.pt-module .module-opening figcaption{font-size:.8rem;line-height:1.45;overflow-wrap:anywhere}
+@media(max-width:600px){.pt-module .module-opening{grid-template-columns:minmax(0,1fr);gap:1rem}.pt-module .module-opening .doc img{max-height:240px}}
