@@ -34,6 +34,13 @@ try:
    assert page.evaluate('Object.keys(JSON.parse(localStorage.getItem("qa-rotacao")).exposicoes).length')==13
    page.evaluate('''() => {const c=api.casca;c.corpo.innerHTML='';EPIJogo.montar({casca:c,itens:[{t:'completar',frase:'A voz [1] o mundo.',lacunas:[{o:['observa','ignora'],c:0}],f:'A ação é observar.'}],chave:'qa-lacuna',variar:false})}''')
    assert page.locator('.casca.sobreposta select[aria-label="Lacuna 1 de 1"]').count()==1, page.locator('select').evaluate_all('(els)=>els.map(el=>el.outerHTML)')
+   page.evaluate('''() => {const c=api.casca;c.corpo.innerHTML='';window.hintPoints=[];EPIJogo.montar({casca:c,itens:[{t:'vf',p:'A primeira afirmação permite observar uma pista.',v:true,f:'A prova sustenta a afirmação.'},{t:'vf',p:'A segunda afirmação permite observar uma pista.',v:true,f:'A prova sustenta a afirmação.'}],pistas:['Procura a prova antes de decidir.'],chave:'qa-ajuda-sem-penalizacao',variar:false,evento:e=>{if(e.t==='resp')hintPoints.push(e.xp)}});c.corpo.querySelector('.jogo-alvo').id='baralho';}''')
+   page.locator('#baralho [data-j="1"]').click()
+   page.locator('.casca [data-c-folha]:visible [data-seguinte]').click()
+   page.locator('.casca [data-pista-ess]').click()
+   assert 'menos cinco pontos' not in page.locator('#baralho .pista').inner_text()
+   page.locator('#baralho [data-j="1"]').click()
+   assert page.evaluate('hintPoints')==[10,20]
    assert not errors,errors
    print('PASS keyboard, repeated completed attempts, coverage and lacuna names',width,flush=True)
    ctx.close()

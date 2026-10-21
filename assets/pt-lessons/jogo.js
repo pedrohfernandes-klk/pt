@@ -99,7 +99,7 @@ function montar(cfg){
   focoCartao()}
  // o botão tocado foi substituído: o foco não cai no BODY, fica no corpo do cartão (teclado e leitores de ecrã começam no cartão novo)
  function focoCartao(){var ae=document.activeElement;if(!ae||ae===document.body){var cc=el.closest?el.closest(".casca-corpo"):null;if(cc)try{cc.focus({preventScroll:true})}catch(e){}}}
- function mostrarPista(p,b){if(estado.fechado||estado.pista)return;estado.pista=true;xp=Math.max(0,xp-5);var q=$(".q",el),d=document.createElement("p");d.className="pista";d.innerHTML="Pista: "+it(p)+" <small>(menos cinco pontos)</small>";if(q)q.insertAdjacentElement("afterend",d);if(b)b.disabled=true}
+ function mostrarPista(p,b){if(estado.fechado||estado.pista)return;estado.pista=true;var q=$(".q",el),d=document.createElement("p");d.className="pista";d.innerHTML="Pista: "+it(p);if(q)q.insertAdjacentElement("afterend",d);if(b)b.disabled=true}
  // o traço verde desenha-se à volta da resposta certa (ronda 6)
  function tracar(b){if(!b||b.querySelector(".tracado"))return;var s=document.createElementNS("http://www.w3.org/2000/svg","svg");s.setAttribute("class","tracado");s.setAttribute("viewBox","0 0 100 100");s.setAttribute("preserveAspectRatio","none");s.setAttribute("aria-hidden","true");s.innerHTML='<rect x="1" y="1" width="98" height="98" rx="1" pathLength="100"/>';b.appendChild(s)}
  // a correção sobe de baixo numa faixa e fica até «Seguinte»; uma cópia fica no cartão para o modo rever
