@@ -34,6 +34,7 @@ jobs:
           python scripts/audit_learning_progression.py
           node tests/jogo-rotacao.cjs
           node tests/m2-f07-migration.cjs
+          node tests/m2-f06-migration.cjs
           node tests/exame-catalogo.cjs
           node tests/exame-dossie.cjs
       - name: Instalar Chromium
@@ -54,3 +55,5 @@ jobs:
           python tests/browser_m7_pilot.py
           python tests/browser_m2_balance.py
           python tests/browser_revision_activities.py
+          python tests/browser_revision_activities.py --lessons 06,11
+          python tests/browser_revision_activities.py --module m7 --lessons 14,15
