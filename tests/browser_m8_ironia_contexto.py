@@ -21,6 +21,8 @@ try:
    finish();page.reload(wait_until='networkidle');page.locator('#baralho .cartao.fim').wait_for()
    def mount(items):page.evaluate("items=>{document.querySelectorAll('.casca').forEach(n=>n.remove());EPIJogo.montar({itens:items,chave:'qa-ironia',variar:false,mostrarAnterior:false});document.querySelector('.jogo-alvo').id='baralho'}",items)
    mount(cards);finish();mount([cards[6]]);assert 'não são versos do poema' in page.locator('#baralho').inner_text();assert not page.evaluate('document.documentElement.scrollWidth>innerWidth+2');page.screenshot(path=str(OUT/f'modelo-{width}.png'),full_page=True)
+   for item in (15,18):
+    mount([cards[item]]);assert "nove e cinquenta" in page.locator("#baralho .cita").inner_text();assert "chegada às onze" in page.locator("#baralho .cita").inner_text();assert not page.evaluate("document.documentElement.scrollWidth>innerWidth+2")
    for wrong in [1,2,3]:
     card={**cards[18],'o':[cards[18]['o'][0],cards[18]['o'][wrong]],'c':0}
     mount([card]);button=page.locator('#baralho .ops [data-j="1"]');button.focus();button.press('Enter');assert 'exclamação, sozinha' in page.locator('.casca-folha').inner_text()
