@@ -48,8 +48,8 @@ class UnitRoutes(unittest.TestCase):
         plan = json.loads(PLAN.read_text('utf-8'))[1]
         first, second = plan['units']
         self.assertEqual(['m2-f01', 'm2-f02', 'm2-f07', 'm2-f06'], first['lessons'])
-        self.assertEqual(['m2-f10', 'm2-f08', 'm2-f09', 'm2-f11'], second['lessons'])
-        self.assertEqual(['m2-f10', 'm2-f10', 'm2-f08'], [x['after'] for x in second['complements']])
+        self.assertEqual(['m2-f11', 'm2-f10', 'm2-f08', 'm2-f09'], second['lessons'])
+        self.assertEqual(['m2-f10', 'm2-f10', 'm2-f11'], [x['after'] for x in second['complements']])
         self.assertEqual(4, sum(len(u['complements']) for u in plan['units']))
         self.assertTrue(all(c['purpose'] for u in plan['units'] for c in u['complements']))
         src = (ROOT / 'm2/index.html').read_text('utf-8')

@@ -100,16 +100,16 @@
           "4"
         ],
         "lessons": [
+          "m2-f11",
           "m2-f10",
           "m2-f08",
-          "m2-f09",
-          "m2-f11"
+          "m2-f09"
         ],
         "steps": [
+          "m2-f11",
           "m2-f10",
           "m2-f08",
-          "m2-f09",
-          "m2-f11"
+          "m2-f09"
         ],
         "complements": [
           {
@@ -124,7 +124,7 @@
           },
           {
             "id": "m2-f13",
-            "after": "m2-f08",
+            "after": "m2-f11",
             "purpose": "Confrontar defesa e acusação noutra cena e regressar ao argumento do Escudeiro."
           }
         ]

@@ -43,7 +43,7 @@ A unidade já contém três fichas (m2-f01, m2-f02, m2-f07). O mapa editorial ve
 | --- | --- | --- | --- |
 | F01, *Deram-lhe um provérbio* | uma rubrica e o provérbio | separar representação, ação, fala e didascália; identificar um indício da encomenda | compreender quem fala e de quem se fala |
 | F02, *Inês, como panela sem asa* | o monólogo e o diálogo com a Mãe | interpretar imagens e conflito sem confundir acusação da Mãe com facto textual | analisar como as falas organizam relações |
-| F07, *Orações em cena* | frases de cenas já lidas | distinguir relações entre orações no contexto e justificar a classificação | ler escolhas e consequências no desenvolvimento da farsa |
+| F07, *Promessas e controlo: orações em cena* | três recortes de Pêro e do Escudeiro, seguidos da análise de frases | distinguir relações entre orações no contexto e justificar a classificação | ler escolhas e consequências no desenvolvimento da farsa |
 
 **Intervenção editorial futura, e não executada neste lote:** incorporar uma pergunta curta de retoma no início de F02 e F07, uma transferência num excerto novo no fim de F07 e feedback específico para distratores plausíveis de F01/F02. Não acrescentar lições por quota; rever primeiro a qualidade e distribuição de tarefas existentes. Preservar desafios, URLs, chaves de progresso, imagens licenciadas e encaminhamentos.
 

@@ -1,0 +1,11 @@
+const fs=require('node:fs'),vm=require('node:vm'),assert=require('node:assert/strict');
+const code=fs.readFileSync('assets/pt-lessons/m2-f07-bank-migration.js','utf8');
+let stored=JSON.stringify({lida:true,melhor:12,totalMelhor:12,tentativas:3,xp:125,t:100,exposicoes:{3:2,8:4,23:1},ult:'23,3,8'});
+const context=vm.createContext({localStorage:{getItem:k=>stored,setItem:(k,v)=>{assert.equal(k,'licao-m2-f07');stored=v}}});
+vm.runInContext(code,context);let result=JSON.parse(stored);
+assert.deepEqual(result.exposicoes,{'6':2,'11':4,'26':1});assert.equal(result.ult,'11,26,6');
+for(const [key,value] of Object.entries({lida:true,melhor:12,totalMelhor:12,tentativas:3,xp:125,t:100}))assert.equal(result[key],value);
+const once=stored;vm.runInContext(code,context);assert.equal(stored,once);
+stored=null;vm.runInContext(code,context);assert.equal(JSON.parse(stored).banco,'m2-f07-20261021');
+stored=JSON.stringify({banco:'m2-f07-20261021',exposicoes:{5:1}});vm.runInContext(code,context);assert.deepEqual(JSON.parse(stored).exposicoes,{'5':1});
+console.log('PASS F07 exposure migration, history preservation, idempotence and fresh attempts');
