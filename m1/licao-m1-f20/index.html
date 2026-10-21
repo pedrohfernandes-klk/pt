@@ -304,9 +304,9 @@ figure:not(.ver-fig) img:not(.sem-amp),img[data-ampliar]{cursor:zoom-in}
 .lp-img img,.mf img,.cavalo,a img,button img{cursor:inherit}
 figure img[tabindex]:focus-visible{outline:3px solid var(--tinta,#000);outline-offset:3px}
 @media (prefers-reduced-motion:reduce){.amp-ov{animation:none}}
-@media print{.amp-ov{display:none}}</style></head><body>
+@media print{.amp-ov{display:none}}</style></head><body data-unit-return="../#unidade-pedagogica-2" data-unit-number="2">
 <div class="casca" data-casca><div class="faixa-pausa casca-faixa" id="faixa-pausa" hidden></div>
-<header class="casca-topo"><a class="c-marca" href="https://pedrohfernandes-klk.github.io/pt/" aria-label="Página inicial (M1)"><svg class="c-casa" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8.2 8 2.6l6 5.6M4 7v7h3v-4h2v4h3V7"/></svg>M1</a><span class="c-num" data-c-num></span><button type="button" class="c-barra" data-c-barra aria-label="Ver os cartões já feitos" disabled><svg viewBox="0 0 1 10" preserveAspectRatio="none" aria-hidden="true"></svg></button><span class="c-modo" data-c-modo hidden></span><button type="button" class="c-ic" data-c-como aria-label="Como se faz" title="Como se faz" hidden><span class="c-roda">?</span></button><button type="button" class="c-ic" data-c-som aria-pressed="false" aria-label="Som" title="Som ligado ou desligado"><span class="c-roda">♪</span></button><button type="button" class="c-ic" data-c-menu aria-label="Menu" aria-expanded="false" title="Menu"><span class="c-tres"></span></button></header>
+<header class="casca-topo"><a class="c-marca" href="../#unidade-pedagogica-2" aria-label="Voltar à unidade 2 do módulo 1"><svg class="c-casa" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8.2 8 2.6l6 5.6M4 7v7h3v-4h2v4h3V7"/></svg>M1</a><span class="c-num" data-c-num></span><button type="button" class="c-barra" data-c-barra aria-label="Ver os cartões já feitos" disabled><svg viewBox="0 0 1 10" preserveAspectRatio="none" aria-hidden="true"></svg></button><span class="c-modo" data-c-modo hidden></span><button type="button" class="c-ic" data-c-como aria-label="Como se faz" title="Como se faz" hidden><span class="c-roda">?</span></button><button type="button" class="c-ic" data-c-som aria-pressed="false" aria-label="Som" title="Som ligado ou desligado"><span class="c-roda">♪</span></button><button type="button" class="c-ic" data-c-menu aria-label="Menu" aria-expanded="false" title="Menu"><span class="c-tres"></span></button></header>
 <h1 class="c-sr">Lição M1-F20: Entrar na cena</h1><main class="casca-corpo" id="casca-corpo" tabindex="-1"><div id="baralho" class="jogo-alvo"></div></main>
 <footer class="casca-acoes" data-c-acoes></footer>
 <section class="casca-folha" data-c-folha role="status" aria-live="polite" hidden></section>
@@ -430,7 +430,7 @@ function tratar(n){if(!n||!n.nodeValue||n.nodeValue.indexOf("_")<0)return;var p=
 function andar(r){if(!r)return;if(r.nodeType===3){tratar(r);return}if(r.nodeType!==1||/^(SCRIPT|STYLE|TEXTAREA)$/.test(r.nodeName))return;var w=document.createTreeWalker(r,NodeFilter.SHOW_TEXT),L=[];for(var n=w.nextNode();n;n=w.nextNode())if(n.nodeValue.indexOf("_")>=0)L.push(n);L.forEach(tratar)}
 function ligar(){andar(document.body);if(window.MutationObserver)new MutationObserver(function(ms){ms.forEach(function(m){if(m.type==="characterData")tratar(m.target);else [].forEach.call(m.addedNodes,andar)})}).observe(document.body,{childList:true,subtree:true,characterData:true})}
 window.EPIItalico={andar:andar};if(document.body)ligar();else document.addEventListener("DOMContentLoaded",ligar)})();
-</script><script src="../../assets/pt-lessons/jogo.js?v=20261020-rotacao-1"></script><script>
+</script><script src="../../assets/pt-lessons/jogo.js?v=20261021-ux06"></script><script>
 window.EPISala=(function(){"use strict";
 var BASE="https://ntfy.sh",PREF="epi-pt-",LOCAL=location.protocol==="file:"||/[?&]local\b/.test(location.search),bc={};
 function topico(cod){return PREF+String(cod||"").toUpperCase()}

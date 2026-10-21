@@ -44,7 +44,7 @@ try:
   page.locator('[data-projection-size="large"]').click()
   assert frame.locator('html').get_attribute('data-projection-size')=='large'
   frame.locator('.casca [data-seguinte]').click()
-  assert frame.locator('script[src*="jogo.js?v=20261020-rotacao-1"]').count()==1
+  assert frame.locator('script[src*="jogo.js?v=20261021-ux06"]').count()==1
   print('PASS classroom projection: lesson, next card and large text',flush=True)
   ctx.close()
   browser.close()

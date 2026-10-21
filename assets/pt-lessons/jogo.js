@@ -22,6 +22,8 @@ function fb(x,j,ok){var f=it(x.f||"");var r=(x.t==="escolha"||x.t==="pistas"||x.
 function montar(cfg){
  // casca «ecrã de aplicação» (11/10/2026): o cartão vive no corpo da casca; sem casca dada, abre-se uma sobreposição (Desafio, Atlas)
  var C=cfg.casca||null;if(!C&&window.EPICasca)C=EPICasca.abrir({marca:cfg.marca||cfg.titulo||"",aoFechar:cfg.aoFechar});var el=cfg.el;if(C){if(!el||!C.corpo.contains(el)){el=document.createElement("div");C.corpo.appendChild(el)}el.classList.add("jogo-alvo")}var ultimaFolha=null;
+ // A page lesson returns to its curricular unit; overlays keep their own context.
+ if(C&&!C.raiz.classList.contains("sobreposta")){var retorno=document.body.getAttribute("data-unit-return"),unidade=document.body.getAttribute("data-unit-number");if(retorno&&unidade){cfg.percurso=retorno;cfg.percursoRotulo="Voltar à unidade "+unidade}}
  var TODOS=cfg.itens,IT=TODOS,K=cfg.chave,i=0,certas=0,seq=0,melhorSeq=0,xp=0,hist=[],estado={},errados=[],soErrados=false,viraProx=false,acesas={},snaps=[],slotFim=null,revendo=false,naFim=false,fimHTML="";
  var st=ler(K)||{};st.tentativas=st.tentativas||0;var jaFeita=!!st.lida;var nFazer=function(){return IT.filter(function(x){return x.t!=="ler"}).length};
  // variação entre tentativas (11/10/2026, ronda 1): em cada tentativa, 10 a 12 cartões de fazer de um baralho maior (um por parte do
