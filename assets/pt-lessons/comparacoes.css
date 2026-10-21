@@ -1,0 +1,4 @@
+/* Comparações sem separador decorativo: dois blocos reais, com leitura sequencial no móvel. */
+.jogo .ler .paralelo.duas-colunas{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.jogo .ler .paralelo.duas-colunas>.lado{min-width:0}
+@media(max-width:600px){.jogo .ler .paralelo.duas-colunas{grid-template-columns:minmax(0,1fr)}.jogo .ler .paralelo.duas-colunas>.lado+.lado{border-top:1px solid currentColor;padding-top:12px}}

@@ -31,3 +31,16 @@ Esta seleção não garante que todos os itens de uma nova tentativa sejam inéd
 ## Validação
 
 Separar quatro níveis de evidência: inventário; funcionamento; revisão pedagógica contextual; observação com alunos. Os testes não demonstram, por si só, aprendizagem ou transferência. A observação deve procurar se o aluno consegue justificar a escolha, corrigir o erro e usar a descoberta num exemplo diferente.
+
+## Beneficiações contínuas — orientação de 21-10-2026
+
+Estes critérios acrescem ao plano em curso; não o substituem. A revisão continua por lacunas verificadas, preservando conteúdos úteis, motores, progresso e identidade visual.
+
+- **Ensinar e consolidar:** antes de avaliar uma operação, explicar o conhecimento necessário e mostrar um exemplo analisado. Retomar depois sem dar imediatamente a resposta, com apoio opcional e aplicação num exemplo diferente. Uma sequência pode recuperar ensino anterior se indicar claramente onde o encontrar; não repetir exposições por rotina.
+- **Clareza do exercício:** explicitar o que observar, o que fazer e como confirmar. Dar o contexto necessário no próprio desafio quando a leitura anterior não está disponível. O feedback deve permitir compreender e corrigir, não apenas saber a classificação.
+- **Lúdico com função:** experimentar mudanças de palavras, ordenar uma sequência com sentido, detetar uma contradição, comparar leituras ou testar uma decisão. A ação deve produzir uma consequência compreensível. Evitar adivinhas, rapidez obrigatória, distratores absurdos e pontos como substituto da aprendizagem.
+- **Fixação com novo esforço:** combinar recuperação breve, revisão do erro e transferência. Rodar exemplos quando houver material e necessidade reais; conservar as dependências entre leitura, modelo e tarefa. Baralhar opções não demonstra consolidação.
+- **Design que ensina:** verificar hierarquia, proximidade entre prova e pergunta, legibilidade das comparações, estados dos controlos e continuidade do percurso. Testar móvel e projeção; manter imagens de abertura visíveis. Corrigir problemas observados sem renovar a estética por rotina.
+- **Vídeo com tarefa:** definir primeiro o que o excerto permite perceber melhor e a ação do aluno antes, durante ou depois. Priorizar uma comparação concreta de voz, gesto, ritmo, imagem ou interpretação; indicar o recorte e a sua função. Confirmar autoria, proveniência, áudio e legendas adequadas. Distinguir consulta de metadados, carregamento do leitor e visionamento efetivo. Leitor por clique, sem reprodução automática, com fecho e alternativa textual que permita realizar a aprendizagem essencial.
+
+Em cada relatório, indicar o que foi ensinado, o que o exercício faz recuperar ou transferir, o papel do design e, se existir vídeo, o benefício e os limites da verificação. Não exigir vídeo ou um formato novo em todas as lições. Não certificar aprendizagem apenas com testes funcionais.

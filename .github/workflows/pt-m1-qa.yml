@@ -52,7 +52,11 @@ jobs:
           python tests/browser_exame_alignment.py
           python tests/browser_jogabilidade.py
           python tests/browser_ux06_pt.py
+          python tests/browser_transversal_clareza.py
+          python tests/browser_m5_adaptacao.py
           python tests/browser_m8_comparacao.py
+          python tests/browser_m6_oracoes.py
+          python tests/browser_m6_recursos.py
           python tests/browser_m6_forma.py
           python tests/browser_m7_pilot.py
           python tests/browser_m2_balance.py
