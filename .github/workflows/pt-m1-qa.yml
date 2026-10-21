@@ -54,6 +54,7 @@ jobs:
           python tests/browser_ux06_pt.py
           python tests/browser_transversal_clareza.py
           python tests/browser_m5_adaptacao.py
+          python tests/browser_m8_ironia_contexto.py
           python tests/browser_m8_caderno_campo.py
           python tests/browser_m8_palavras_escuta.py
           python tests/browser_m8_comparacao.py
