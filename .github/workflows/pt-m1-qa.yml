@@ -56,6 +56,7 @@ jobs:
           python tests/browser_m5_adaptacao.py
           python tests/browser_m8_fecho_contexto.py
           python tests/browser_m8_anafora.py
+          python tests/browser_m8_f12_revisao.py
           python tests/browser_m8_aspeto_contexto.py
           python tests/browser_m8_ironia_contexto.py
           python tests/browser_m8_caderno_campo.py
