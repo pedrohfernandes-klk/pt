@@ -27,6 +27,8 @@ try:
    ctx,page=new_page(browser,width);errors=[]
    page.on('pageerror',lambda e:errors.append(str(e)))
    page.goto(host+'/m4/',wait_until='networkidle')
+   assert page.locator('.cabm .n').inner_text()=='4'
+   assert page.locator('.passos > li .n').all_text_contents()==[str(i) for i in range(1,19)]
    steps=page.locator('[data-unidade="2"] .passos > li')
    assert steps.first.get_attribute('id')=='m4-f28'
    assert steps.nth(1).get_attribute('id')=='m4-f07'
