@@ -1,0 +1,30 @@
+.atlas-entradas{display:flex;flex-wrap:wrap;gap:8px 24px;font:700 1rem/1.4 var(--sans);margin:20px 0}
+.atlas-entradas a{display:inline-flex;align-items:center;min-height:44px;color:var(--tinta);text-underline-offset:5px}
+.atlas-investigar{margin:0 0 40px;border-top:2px solid var(--tinta);padding-top:20px}
+.atlas-investigar h2{font:400 clamp(2rem,5vw,3.2rem)/1.05 var(--cartaz);margin:0 0 12px}
+.atlas-investigacoes{display:grid;gap:12px;margin:20px 0 0}
+.atlas-cartaz{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:12px 20px;text-align:left;padding:20px;background:var(--papel);color:var(--tinta);border:1px solid var(--tinta);border-left:5px solid var(--vermelho);cursor:pointer;font:1rem/1.5 var(--serif)}
+.atlas-cartaz>*{grid-column:1/-1}.atlas-cartaz strong{font:400 clamp(1.8rem,5vw,2.6rem)/1.05 var(--cartaz);max-width:22ch}
+.atlas-cartaz-meta,.atlas-cartaz-acao{font:700 .76rem/1.4 var(--sans);letter-spacing:.08em;text-transform:uppercase}
+.atlas-cartaz-acao{display:flex;justify-content:space-between;border-top:1px solid var(--c-cinza);padding-top:12px}.atlas-cartaz-acao b{color:var(--vermelho);font-size:1.25rem}
+.atlas-cartaz:hover{background:var(--fundo)}.atlas-cartaz:focus-visible,.atlas-pessoa-link:focus-visible,.atlas-investigar-link:focus-visible,.atlas-escolhas button:focus-visible{outline:3px solid var(--vermelho);outline-offset:3px}
+.atlas-pesquisa{display:grid;grid-template-columns:minmax(0,1fr);gap:12px;margin:20px 0}
+.atlas-pesquisa label{display:grid;gap:6px;font:700 .85rem/1.4 var(--sans)}
+.atlas-pesquisa input,.atlas-pesquisa select{width:100%;min-width:0;min-height:48px;padding:10px;border:1px solid var(--tinta);border-radius:0;background:var(--papel);color:var(--tinta);font:1rem/1.4 var(--sans)}
+.atlas-pesquisa button{justify-self:start;border:0;border-bottom:1px solid var(--tinta);background:none;color:var(--tinta);min-height:44px;font:700 .9rem var(--sans);cursor:pointer}
+.atlas-lista-meta{display:block;font:.78rem/1.4 var(--sans);color:var(--suave);margin-top:4px}
+.atlas-country-list li[hidden],.atlas-country-list[hidden]{display:none!important}
+.atlas-memoria{border-top:1px solid var(--c-cinza);margin:40px 0 0;padding:0 0 16px}
+.atlas-memoria>summary{font:700 1rem/1.4 var(--sans);cursor:pointer;padding:16px 0;min-height:48px}
+.atlas-memoria .a-prog{margin:16px 0}.atlas-memoria .desafio{margin-top:16px}
+.folha-c h4{font:700 1rem/1.4 var(--sans);margin:0 0 10px}.atlas-relacoes{display:grid;gap:6px}
+.atlas-pessoa-link,.atlas-investigar-link{background:var(--fundo);color:var(--tinta);border:0;border-left:3px solid var(--mostarda);padding:12px;text-align:left;font:700 1rem/1.4 var(--sans);min-height:48px;cursor:pointer;overflow-wrap:anywhere}
+.atlas-pessoa-link span{display:block;font:.78rem/1.4 var(--sans);color:var(--suave);margin-top:4px}.atlas-investigar-link{display:block;width:100%;margin:6px 0}
+.atlas-escolhas{display:flex;flex-wrap:wrap;gap:6px;margin:12px 0}
+.atlas-escolhas button{padding:10px 12px;min-height:44px;border:1px solid var(--tinta);background:var(--papel);color:var(--tinta);font:700 .85rem/1.3 var(--sans);cursor:pointer}
+.atlas-escolhas button[aria-pressed=true]{background:var(--tinta);color:var(--papel)}
+.folha-c .atlas-pista{border-left:3px solid var(--vermelho);padding:8px 12px;margin:12px 0}
+.atlas-rever summary,.atlas-fontes-perfil>summary{font:700 .9rem/1.4 var(--sans);min-height:44px;padding:10px 0;cursor:pointer}
+.atlas-fontes a{display:block;min-height:44px;overflow-wrap:anywhere}.atlas-fontes-perfil ul.fontes li{margin-bottom:14px}
+@media(min-width:700px){.atlas-pesquisa{grid-template-columns:minmax(0,2fr) minmax(0,1fr);align-items:end}.atlas-pesquisa button{grid-column:1/-1}.folha-c{max-width:680px}.atlas-cartaz{padding:24px}}
+@media print{.atlas-memoria,.atlas-pesquisa{display:none}}
