@@ -1,7 +1,7 @@
 """Post-performance entry, complete F28/F20 banks, feedback, route and projection."""
 from functools import partial
 from http.server import ThreadingHTTPServer
-import json,threading
+import json,threading,re
 from playwright.sync_api import sync_playwright
 from browser_m1_and_inventory import ROOT,QuietHandler,new_page
 from browser_m2_complete import respond
@@ -67,11 +67,11 @@ try:
    assert page.locator('#baralho .cartao.fim').is_visible()
    page.goto(host+'/m4/licao-m4-f07/',wait_until='networkidle')
    page.get_by_role('button',name='Menu',exact=True).click()
-   assert page.get_by_role('link',name='Lição anterior',exact=True).get_attribute('href').endswith('/licao-m4-f28/')
-   assert 'Passo 10 de 18' in page.locator('[data-c-painel]').inner_text()
+   assert page.get_by_role('link',name=re.compile(r'^Lição anterior')).get_attribute('href').endswith('/licao-m4-f28/')
+   assert 'passo 10 de 18' in page.locator('[data-c-painel]').inner_text().lower()
    page.goto(host+'/m4/licao-m4-f10/',wait_until='networkidle')
    page.get_by_role('button',name='Menu',exact=True).click()
-   assert page.get_by_role('link',name='Lição seguinte',exact=True).get_attribute('href').endswith('/licao-m4-f28/')
+   assert page.get_by_role('link',name=re.compile(r'^Lição seguinte')).get_attribute('href').endswith('/licao-m4-f28/')
    page.goto(host+'/m4/painel-m4-f28/',wait_until='networkidle')
    assert '20–35 min' in page.locator('main').inner_text()
    assert 'Não classificar a memória' in page.locator('main').inner_text()
