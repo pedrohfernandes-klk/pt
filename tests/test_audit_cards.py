@@ -14,8 +14,8 @@ class CardAudit(unittest.TestCase):
     def test_current_inventory_and_answers(self):
         result = audit.audit()
         self.assertEqual([], result['errors'])
-        self.assertEqual(108, result['lessons'])
-        self.assertEqual(4, len(result['external_banks']))
+        self.assertEqual(109, result['lessons'])
+        self.assertEqual(5, len(result['external_banks']))
 
     def test_external_banks_have_actual_validated_activities(self):
         for rel in audit.EXTERNAL_BANKS:

@@ -39,7 +39,7 @@ def main():
         with sync_playwright() as pw:
             browser = pw.chromium.launch(headless=True)
             pages = sorted(ROOT.glob('m[1-9]/licao-*/index.html'))
-            assert len(pages) == 108
+            assert len(pages) == 109
             for path in ([] if args.focused_only else pages):
                 for width in (320, 1440):
                     ctx, page = new_page(browser, width)

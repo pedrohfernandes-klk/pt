@@ -12,7 +12,7 @@ import sys
 from urllib.parse import urlsplit, unquote
 
 ROOT = Path(__file__).resolve().parents[1]
-EXPECTED = [12, 10, 12, 15, 11, 11, 17, 10, 10]
+EXPECTED = [12, 10, 12, 16, 11, 11, 17, 10, 10]
 
 class Page(HTMLParser):
     def __init__(self):
