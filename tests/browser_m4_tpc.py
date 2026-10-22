@@ -26,6 +26,10 @@ try:
   for width in (320,1440):
    ctx,page=new_page(browser,width);errors=[]
    page.on('pageerror',lambda e:errors.append(str(e)))
+   page.goto(host+'/',wait_until='networkidle')
+   assert '16 lições' in page.locator('li[data-m="M4"]').inner_text()
+   page.goto(host+'/mapa/',wait_until='networkidle')
+   assert '16 lições' in page.locator('summary').filter(has_text='M4 —').inner_text()
    page.goto(host+'/m4/',wait_until='networkidle')
    assert page.locator('.cabm .n').inner_text()=='4'
    assert page.locator('.passos > li .n').all_text_contents()==[str(i) for i in range(1,19)]
