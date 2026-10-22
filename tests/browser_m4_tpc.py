@@ -48,12 +48,18 @@ try:
    page.locator('summary').filter(has_text='Ajuda: como sustentar').press('Enter')
    assert 'Procura outro detalhe' in page.locator('#baralho').inner_text()
    page.locator('.casca [data-seguinte]').click()
+   # The engine rotates adjacent equivalent activities inside a group.
+   for _ in range(5):
+    if page.locator('#baralho button[data-j="1"]').count():break
+    respond(page)
+   assert 'interpretação sustentada' in page.locator('#baralho').inner_text()
    page.locator('#baralho button[data-j="1"]').press('Enter')
    assert 'Confrontar' not in page.locator('[data-c-folha]').inner_text()
    assert 'hipótese liga' in page.locator('[data-c-folha]').inner_text()
    page.locator('[data-c-folha] [data-seguinte]').click()
+   before=page.locator('#baralho').inner_text()
    page.reload(wait_until='networkidle')
-   assert 'Distingue a origem' in page.locator('#baralho').inner_text()
+   assert page.locator('#baralho').inner_text()==before
    finish(page)
    assert page.evaluate('!!JSON.parse(localStorage.getItem("licao-m4-f28-a1"))')
    page.reload(wait_until='networkidle')
