@@ -44,3 +44,15 @@ Estes critérios acrescem ao plano em curso; não o substituem. A revisão conti
 - **Vídeo com tarefa:** definir primeiro o que o excerto permite perceber melhor e a ação do aluno antes, durante ou depois. Priorizar uma comparação concreta de voz, gesto, ritmo, imagem ou interpretação; indicar o recorte e a sua função. Confirmar autoria, proveniência, áudio e legendas adequadas. Distinguir consulta de metadados, carregamento do leitor e visionamento efetivo. Leitor por clique, sem reprodução automática, com fecho e alternativa textual que permita realizar a aprendizagem essencial.
 
 Em cada relatório, indicar o que foi ensinado, o que o exercício faz recuperar ou transferir, o papel do design e, se existir vídeo, o benefício e os limites da verificação. Não exigir vídeo ou um formato novo em todas as lições. Não certificar aprendizagem apenas com testes funcionais.
+
+## Apresentar quem escreve — orientação de 22-10-2026
+
+Todo o autor mobilizado numa leitura, comparação, exemplo ou recurso complementar deve receber uma apresentação breve no ponto de uso: quem é, um dado relevante e verificável e a ligação concreta à tarefa. Um nome num título ou numa lista não basta. Distinguir autor, intérprete, tradutor, narrador e personagem.
+
+- **Relevância:** escolher um facto que abra uma pergunta sobre a obra; evitar datas sem função, curiosidades desligadas e a biografia como explicação automática de um texto.
+- **Hierarquia:** separar vozes centrais, interlocutores e explorações opcionais. Uma cronologia de três autores deve acompanhar esses percursos; outros autores merecem contexto próprio e acesso claro.
+- **Aprendizagem:** passar da apresentação à observação de um indício, hipótese e confirmação. Não converter contexto opcional em perguntas obrigatórias de memorização.
+- **Proximidade e semelhança:** aproximar a apresentação do nome/obra, usar estrutura breve consistente e aprofundamento expansível com fonte; conservar a atividade e a navegação legíveis no telemóvel e na projeção.
+- **Verificação:** conferir ficha, ajudas, painel docente, desafios e referências relacionadas. Nomes usados apenas como distratores também precisam de função: substituir referências gratuitas por alternativas compreensíveis.
+
+Primeira aplicação: M8-F01, três vozes centrais, Ângelo de Lima no contexto opcional do Atlas e autoria das leituras complementares identificada. A extensão aos restantes módulos é trabalho progressivo; este critério não certifica que todos os nomes do corpus já estejam apresentados.
