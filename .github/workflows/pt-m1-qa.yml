@@ -6,6 +6,8 @@ on:
       - 'assets/pt-lessons/**'
       - 'assets/exame/**'
       - 'exame/**'
+      - 'atlas/**'
+      - 'assets/atlas-explorar.*'
       - 'assets/unit-*.js'
       - 'assets/unit-*.css'
       - 'scripts/audit_*.py'
@@ -32,6 +34,7 @@ jobs:
           python scripts/audit_cards.py
           python scripts/audit_lessons.py
           python scripts/audit_learning_progression.py
+          node --check assets/atlas-explorar.js
           node tests/jogo-rotacao.cjs
           node tests/m2-f07-migration.cjs
           node tests/m2-f06-migration.cjs
@@ -43,6 +46,7 @@ jobs:
           python -m playwright install --with-deps chromium
       - name: Verificar as 108 entradas e os percursos prioritários
         run: |
+          python tests/browser_atlas_exploracao.py
           python tests/browser_m1_and_inventory.py
           python tests/browser_context_feedback.py
           python tests/browser_unit_routes.py
