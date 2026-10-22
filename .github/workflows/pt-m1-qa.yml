@@ -48,6 +48,7 @@ jobs:
           python -m playwright install --with-deps chromium
       - name: Verificar as 109 entradas e os percursos prioritários
         run: |
+          python tests/browser_comparacao_layout.py
           python tests/browser_m4_tpc.py
           python tests/browser_atlas_exploracao.py
           python tests/browser_m1_and_inventory.py
