@@ -1,13 +1,17 @@
 """Open access, useful searches, investigation navigation and preserved game state."""
 from functools import partial
 from http.server import ThreadingHTTPServer
-import json,threading
+import json,threading,re
 from urllib.parse import urlsplit
 from playwright.sync_api import sync_playwright
 from browser_m1_and_inventory import ROOT,QuietHandler,new_page
 
 source=(ROOT/'atlas/index.html').read_text('utf8')
-figures=json.JSONDecoder().raw_decode(source.split('window.ATLAS_DADOS=',1)[1])[0]['FIG']
+base_figures=json.JSONDecoder().raw_decode(source.split('window.ATLAS_DADOS=',1)[1])[0]['FIG']
+editorial=json.JSONDecoder().raw_decode((ROOT/'assets/atlas-editorial.js').read_text('utf8').split('window.ATLAS_EDITORIAL=',1)[1])[0]
+figures=base_figures+editorial['autores']
+assert len(base_figures)==107 and len(figures)==110
+assert set(editorial['propostas'])=={f['id'] for f in base_figures if not f.get('paraTi')},'New proposals must close the exact gap without replacing existing ones'
 server=ThreadingHTTPServer(('127.0.0.1',0),partial(QuietHandler,directory=str(ROOT.parent)))
 threading.Thread(target=server.serve_forever,daemon=True).start()
 host=f'http://127.0.0.1:{server.server_port}/pt'
@@ -23,8 +27,10 @@ try:
    ctx,page=new_page(browser,width);errors=[]
    page.on('pageerror',lambda error:errors.append(str(error)))
    page.goto(host+'/atlas/',wait_until='networkidle')
-   assert page.locator('[data-atlas-resultados]').inner_text()=='107 pessoas encontradas'
+   assert page.locator('[data-atlas-resultados]').inner_text()==f'{len(figures)} pessoas encontradas'
    assert page.locator('#atlas-memoria').get_attribute('open') is None
+   assert '107 pessoas' in page.locator('#atlas-memoria').text_content()
+   assert page.locator('#pessoas-PT li').count()==26
    state=page.evaluate('localStorage.getItem("epi-atlas")')
    search=page.locator('[data-atlas-pesquisa]')
    search.fill('escrevivencia')
@@ -34,7 +40,7 @@ try:
    search.fill('nome-sem-correspondencia')
    assert page.locator('#pessoas-pais li:visible').count()==0
    page.locator('[data-atlas-limpar]').click()
-   assert page.locator('[data-atlas-resultados]').inner_text()=='107 pessoas encontradas'
+   assert page.locator('[data-atlas-resultados]').inner_text()==f'{len(figures)} pessoas encontradas'
    page.locator('[data-atlas-area]').select_option('arquitetura')
    assert page.locator('[data-atlas-resultados]').inner_text()=='1 pessoa encontrada'
    assert 'Siza' in page.locator('#pessoas-pais li:visible').inner_text()
@@ -46,6 +52,9 @@ try:
     page.locator('#pessoas-pais a[href="#figura-'+f['id']+'"]').click()
     dialog=page.get_by_role('dialog')
     assert dialog.locator('h3').inner_text()==f['nome']
+    assert dialog.locator('h4').filter(has_text='Uma ideia para experimentar').count()==1
+    expected=editorial['propostas'].get(f['id'],f.get('paraTi'))
+    assert expected and re.sub(r'_([^_]+)_',r'',expected) in dialog.inner_text()
     assert 'Ainda não conheces esta pessoa' not in dialog.inner_text()
     assert dialog.locator('h4').filter(has_text='Um momento do percurso').count()==1
     dialog.locator('.atlas-fontes-perfil summary').click()
@@ -75,12 +84,16 @@ try:
    page.goto(host+'/atlas/#figura-angelo-de-lima',wait_until='networkidle')
    assert page.get_by_role('dialog').locator('h3').inner_text()=='Ângelo de Lima'
    page.locator('.folha-c .fechar').press('Escape')
+   for f in editorial['autores']:
+    page.goto(host+'/atlas/#figura-'+f['id'],wait_until='networkidle')
+    assert page.get_by_role('dialog').locator('h3').inner_text()==f['nome']
+    page.locator('.folha-c .fechar').press('Escape')
    page.locator('#atlas-memoria>summary').click()
    page.locator('#desafio [data-comecar]').click()
    assert page.locator('.casca.sobreposta').is_visible(),'Legacy game remains available'
    page.get_by_role('button',name='Fechar',exact=True).click()
    assert not errors,errors
-   print(f'PASS Atlas: 107 unlocked profiles, search, investigations, sources, reload and optional game {width}',flush=True)
+   print(f'PASS Atlas: 110 unlocked profiles and individual proposals, search, investigations, sources, reload and optional game {width}',flush=True)
    ctx.close()
   ctx,page=new_page(browser,1440)
   page.goto(host+'/projetar/?pagina=/pt/atlas/',wait_until='networkidle')
