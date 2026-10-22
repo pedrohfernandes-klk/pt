@@ -19,6 +19,8 @@ Não se afirma ter observado a encenação. Mãos imóveis, livro e porta são e
 
 ## Verificação
 
-Testes críticos a fechar no SHA final: auditorias das 109 fichas, regressões existentes e percurso real F28/F20 em Chromium a 320/1440 px, respostas certas/erradas, ajuda por teclado, retoma, painel e projeção grande. Resultados finais registados no PR antes da integração. A existência deste documento não certifica uma execução ainda pendente.
+Testes críticos a fechar no SHA final: auditorias das 109 fichas, regressões existentes e percurso real F28/F20 em Chromium a 320/1440 px, respostas certas/erradas, ajuda por teclado, conclusão guardada, painel e projeção grande. Resultados finais registados no PR antes da integração. A existência deste documento não certifica uma execução ainda pendente.
 
 Complementares: ensaio pedagógico com turma, leitor de ecrã real e Safari não executados; não se afirma uma certificação de aprendizagem nem de acessibilidade.
+
+Comportamento herdado do motor partilhado: a conclusão fica guardada; recarregar antes de terminar reinicia a tentativa. A retoma a meio não está implementada nesta ficha nem foi acrescentada ao motor nesta ronda.

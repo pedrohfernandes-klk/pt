@@ -57,9 +57,10 @@ try:
    assert 'Confrontar' not in page.locator('[data-c-folha]').inner_text()
    assert 'hipótese liga' in page.locator('[data-c-folha]').inner_text()
    page.locator('[data-c-folha] [data-seguinte]').click()
-   before=page.locator('[data-c-num]').inner_text()
+   # Shared engine persists completion, not a half-finished session.
    page.reload(wait_until='networkidle')
-   assert page.locator('[data-c-num]').inner_text()==before
+   assert ''.join(page.locator('[data-c-num]').inner_text().split())=='1/15'
+   assert 'O palco abriu uma pergunta' in page.locator('#baralho').inner_text()
    finish(page)
    assert page.evaluate('!!JSON.parse(localStorage.getItem("licao-m4-f28-a1"))')
    page.reload(wait_until='networkidle')
