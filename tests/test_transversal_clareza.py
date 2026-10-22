@@ -23,7 +23,7 @@ class TransversalClareza(unittest.TestCase):
      if expected in x['o']:matched+=1;self.assertEqual(x['o'][x['c']],expected,(x['_l'],x['p']))
   self.assertGreaterEqual(matched,188)
  def test_teaching_and_language_distinction(self):
-  c=bank(ROOT/'m3/licao-m3-f11/index.html');self.assertEqual(len(c),20);self.assertIn('Excerto didático inventado',c[2]['html']);self.assertIn('Nota fiel e seletiva',c[2]['html']);self.assertIn('O tétum não é uma variedade',c[2]['html']);self.assertFalse(c[11]['v']);self.assertIn('registo',c[16]['p']);self.assertIn('sem voltar ao modelo',c[19]['html'])
+  c=bank(ROOT/'m3/licao-m3-f11/index.html');self.assertEqual(len(c),20);self.assertIn('Exemplo escrito para esta lição',c[2]['html']);self.assertIn('Nota fiel e seletiva',c[2]['html']);self.assertIn('O tétum não é uma variedade',c[2]['html']);self.assertFalse(c[11]['v']);self.assertIn('registo',c[16]['p']);self.assertIn('sem voltar ao modelo',c[19]['html'])
  def test_challenge_does_not_restore_old_examples(self):
   s=(ROOT/'m3/index.html').read_text('utf-8');u=json.JSONDecoder().raw_decode(s.split('var U=',1)[1])[0]
   for unit in u:
