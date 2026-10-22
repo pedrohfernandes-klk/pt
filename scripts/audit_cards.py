@@ -13,6 +13,7 @@ ROOT = Path(__file__).resolve().parents[1]
 TYPES = {'ler', 'emparelhar', 'escolha', 'completar', 'vf', 'ordenar', 'frase', 'versos', 'sublinhar', 'calcada', 'rever'}
 # Same card engine, with banks moved to explicit external scripts.
 EXTERNAL_BANKS = {
+    'm4/licao-m4-f28/index.html': '../recursos/tpc-entrada.js',
     'm3/licao-m3-f18/index.html': '../../assets/pt-lessons/m3-f18.js',
     'm9/licao-m9-f11/index.html': '../recursos/f11.js',
     'm9/licao-m9-f12/index.html': '../recursos/f12.js',
@@ -100,8 +101,8 @@ def audit(root=ROOT):
                 lessons.append({'path': rel, 'definitions': len(cards), 'types': dict(kinds)})
         except (ValueError, OSError) as error:
             errors.append(f'{rel}: {error}')
-    if len(lessons) != 108:
-        errors.append(f'Expected 108 card banks, found {len(lessons)}; review inventory changes explicitly')
+    if len(lessons) != 109:
+        errors.append(f'Expected 109 card banks, found {len(lessons)}; review inventory changes explicitly')
     return {'lessons': len(lessons), 'definitions': sum(counts.values()),
             'external_banks': sorted(EXTERNAL_BANKS),
             'reading': counts['ler'], 'interactive': sum(counts.values()) - counts['ler'],
