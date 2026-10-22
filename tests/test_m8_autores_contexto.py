@@ -28,7 +28,7 @@ class AuthorContext(unittest.TestCase):
    if x.get('_l')=='m8-f01':self.assertNotIn('Ângelo',json.dumps(x,ensure_ascii=False))
  def test_authorship_and_performance_are_explicit(self):
   opening=self.c[0]['html']
-  self.assertIn('Poema de Adília Lopes · leitura de Fernando Alvim',opening)
+  self.assertIn('Poema de Adília Lopes, lido por Fernando Alvim',opening)
   self.assertIn('poeta portuguesa',opening);self.assertIn('Mário Cesariny</b> foi poeta e pintor',opening)
   self.assertIn('Goya é o pintor',opening)
   self.assertIn('Emily Dickinson foi uma poeta norte-americana',self.c[3]['html'])

@@ -25,7 +25,7 @@ try:
    page.goto(host+'/m8/licao-m8-f01/',wait_until='networkidle')
    assert 'Ângelo' not in page.locator('#baralho').inner_text()
    page.locator('summary').filter(has_text='Adília Lopes').click()
-   assert 'Poema de Adília Lopes · leitura de Fernando Alvim' in page.locator('#baralho').inner_text()
+   assert 'Poema de Adília Lopes, lido por Fernando Alvim' in page.locator('#baralho').inner_text()
    assert page.locator('iframe').count()==0
    page.locator('.casca [data-seguinte]').click()
    timeline=page.locator('#baralho .vida')
