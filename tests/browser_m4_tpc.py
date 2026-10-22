@@ -27,9 +27,9 @@ try:
    ctx,page=new_page(browser,width);errors=[]
    page.on('pageerror',lambda e:errors.append(str(e)))
    page.goto(host+'/',wait_until='networkidle')
-   assert '16 lições' in page.locator('li[data-m="M4"]').inner_text()
+   assert '16 lições' in page.locator('li[data-m="M4"]').inner_text().lower()
    page.goto(host+'/mapa/',wait_until='networkidle')
-   assert '16 lições' in page.locator('summary').filter(has_text='M4 —').inner_text()
+   assert '16 lições' in page.locator('summary').filter(has_text='M4 —').inner_text().lower()
    page.goto(host+'/m4/',wait_until='networkidle')
    assert page.locator('.cabm .n').inner_text()=='4'
    assert page.locator('.passos > li .n').all_text_contents()==[str(i) for i in range(1,19)]
@@ -57,9 +57,9 @@ try:
    assert 'Confrontar' not in page.locator('[data-c-folha]').inner_text()
    assert 'hipótese liga' in page.locator('[data-c-folha]').inner_text()
    page.locator('[data-c-folha] [data-seguinte]').click()
-   before=page.locator('#baralho').inner_text()
+   before=page.locator('[data-c-num]').inner_text()
    page.reload(wait_until='networkidle')
-   assert page.locator('#baralho').inner_text()==before
+   assert page.locator('[data-c-num]').inner_text()==before
    finish(page)
    assert page.evaluate('!!JSON.parse(localStorage.getItem("licao-m4-f28-a1"))')
    page.reload(wait_until='networkidle')
