@@ -54,7 +54,7 @@ try:
     assert dialog.locator('h3').inner_text()==f['nome']
     assert dialog.locator('h4').filter(has_text='Uma ideia para experimentar').count()==1
     expected=editorial['propostas'].get(f['id'],f.get('paraTi'))
-    assert expected and re.sub(r'_([^_]+)_',r'',expected) in dialog.inner_text()
+    assert expected and re.sub(r'_([^_]+)_',lambda m: m.group(1),expected) in dialog.inner_text()
     assert 'Ainda não conheces esta pessoa' not in dialog.inner_text()
     assert dialog.locator('h4').filter(has_text='Um momento do percurso').count()==1
     dialog.locator('.atlas-fontes-perfil summary').click()
