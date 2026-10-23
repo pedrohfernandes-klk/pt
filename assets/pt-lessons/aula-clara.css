@@ -80,3 +80,5 @@
 .jogo .ler .cc.cc-andar .cc-caso:not(:has(img)) .cc-cx p{font-size:.95rem;line-height:1.4;margin:0 0 3px}
 .jogo .ler .cc.cc-andar .cc-caso:not(:has(img)) .cc-r{display:none}
 @media print{.jogo .ler .cc .cc-caso{position:static!important}}
+/* as ligações dos cartões na cor do texto (Fase 0, pt#79), também nas lições refeitas, que têm o CSS próprio */
+.jogo .ler a:not([class]),.jogo .depois a:not([class]){color:inherit;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:.18em}
