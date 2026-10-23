@@ -60,3 +60,23 @@
 .jogo .ler .abre-perg{font:700 1.12rem/1.35 Arial,Helvetica,sans-serif;margin:12px 0 0;padding:10px 0 0;border-top:2px solid currentColor}
 .jogo .ler .fig.inteiro img{max-height:min(46vh,420px);max-height:min(46dvh,420px)}
 .jogo .ler .fig.recorte .moldura{width:100%}.jogo .ler .fig.recorte img{width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;max-height:none}
+/* cartão de conceito no modelo de 23/10 (MODELO-CONCEITOS.md): marcas no caso, «Decide» sem pontos, contrastes e frase de bolso */
+.jogo .ler .cc-cx p{margin:0 0 6px;font:1.08rem/1.5 var(--serif,Georgia,serif)}
+.jogo .ler .cc-cx .fonte{font:.8rem/1.4 Arial,Helvetica,sans-serif;color:var(--suave)}
+.jogo .ler .cc [data-c]{transition:background-color .3s ease}
+.jogo .ler .cc [data-c].acesa{background:linear-gradient(transparent 55%,color-mix(in srgb,var(--mostarda,#d9a520) 60%,transparent) 55%);text-decoration:underline;text-decoration-color:var(--mostarda,#d9a520);text-decoration-thickness:2px;text-underline-offset:3px}
+.jogo .ler .cc-q{font:700 1.05rem/1.35 Arial,Helvetica,sans-serif;margin:0 0 8px}
+.jogo .ler .cc-ops{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 8px}
+.jogo .ler .cc-op{min-height:44px;padding:6px 14px;border:2px solid currentColor;background:transparent;color:inherit;font:700 .95rem/1.25 Arial,Helvetica,sans-serif;cursor:pointer;border-radius:4px;text-align:left}
+.jogo .ler .cc-op[aria-pressed="true"]{background:var(--tinta);color:var(--papel)}
+.jogo .ler .cc-op:focus-visible{outline:3px solid var(--mostarda,#d9a520);outline-offset:2px}
+.jogo .ler .cc-resp{font:italic 1rem/1.4 var(--serif,Georgia,serif);margin:0;color:var(--suave)}
+.jogo .ler .cc-nao{margin:0 0 6px}.jogo .ler .cc-nao b{font-family:Arial,Helvetica,sans-serif}
+.jogo .ler .cc-leva{font:italic 1.08rem/1.4 var(--serif,Georgia,serif);margin:4px 0 0;padding:8px 0 0;border-top:1px solid var(--linha,#d6d4ce)}
+.jogo .ler .cc-traco svg{display:block;width:100%;height:auto;max-height:min(22vh,170px);color:var(--tinta);margin:0 0 6px}
+@media print{.jogo .ler .cc [data-c]{background:none;text-decoration:underline}}
+/* o caso fica à vista enquanto os passos se abrem (foco progressivo): cola-se ao topo e encolhe */
+.jogo .ler .cc.cc-andar .cc-caso:not(:has(img)){position:sticky;top:0;z-index:1;background:var(--papel);padding:6px 0 8px;margin:0 0 10px;border-bottom:1px solid var(--linha,#d6d4ce)}
+.jogo .ler .cc.cc-andar .cc-caso:not(:has(img)) .cc-cx p{font-size:.95rem;line-height:1.4;margin:0 0 3px}
+.jogo .ler .cc.cc-andar .cc-caso:not(:has(img)) .cc-r{display:none}
+@media print{.jogo .ler .cc .cc-caso{position:static!important}}
