@@ -19,8 +19,11 @@ class Controls(HTMLParser):
         attrs = dict(attrs)
         if tag == 'button' and 'data-desafio' in attrs:
             self.challenges.append(attrs['data-desafio'])
-        if tag == 'textarea' and 'data-resp' in attrs:
-            self.responses.append(attrs['data-resp'])
+        # 23/10/2026 (plano de melhoria, fase 0): a síntese da unidade deixou de ter caixa de escrita
+        # (textarea data-resp, «Notas no ecrã»); o ponto de fecho de cada unidade é agora o registo
+        # oral / no caderno (fieldset data-sintese). Conta-se esse registo em vez da caixa.
+        if tag == 'fieldset' and 'data-sintese' in attrs:
+            self.responses.append(attrs['data-sintese'])
 
 
 class UnitRoutes(unittest.TestCase):

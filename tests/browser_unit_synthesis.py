@@ -24,7 +24,8 @@ try:
     out=ROOT.parents[1]/'outputs/sintese-interpretacao'
     out.mkdir(parents=True,exist_ok=True)
     box.screenshot(path=str(out/'sintese-oral-320.png'))
-   assert page.locator('[data-resp="1"]').input_value()==''
+   # 23/10/2026 (plano de melhoria, fase 0): a síntese já não tem caixa de notas nem botão «Copiar para o Teams».
+   assert page.locator('[data-fim="1"] textarea, [data-fim="1"] [data-copiar], [data-fim="1"] .sintese-notas').count()==0
    assert page.evaluate('JSON.parse(localStorage.getItem("percurso-M2")).unidades[0].cumprida')
    assert box.locator('[data-sintese-rever]').evaluate('el=>el===document.activeElement')
    page.reload(wait_until='networkidle')
@@ -32,11 +33,10 @@ try:
    page.locator('[data-fim="1"] > summary').click()
    box.locator('[data-sintese-rever]').click()
    assert not page.evaluate('JSON.parse(localStorage.getItem("percurso-M2")).unidades[0].cumprida')
-   page.locator('[data-fim="1"] .sintese-notas summary').click()
-   page.locator('[data-resp="1"]').fill(' '.join(['nota']*85))
+   # 23/10/2026 (plano de melhoria, fase 0): sem notas no ecrã, confirma-se só que o «Ainda estou a rever» persiste.
    page.reload(wait_until='networkidle')
    assert not page.evaluate('JSON.parse(localStorage.getItem("percurso-sintese-M2-u1")).feita')
-   print('PASS empty synthesis, completion, focus, reload, undo and optional notes:',mode,flush=True)
+   print('PASS synthesis without on-screen writing, completion, focus, reload and undo:',mode,flush=True)
    ctx.close()
   ctx,page=new_page(browser,320)
   page.goto(host+'/m2/',wait_until='networkidle')
@@ -44,6 +44,15 @@ try:
   page.reload(wait_until='networkidle')
   assert page.evaluate('JSON.parse(localStorage.getItem("percurso-sintese-M2-u1")).modo')=='anterior'
   print('PASS prior qualifying synthesis migration',flush=True)
+  ctx.close()
+  # 23/10/2026 (plano de melhoria, fase 0): sem a caixa de notas, a migração lê a chave do percurso diretamente;
+  # em M4, M5, M6, M8 e M9 essa chave é «percurso-M<n>-u<n>» (a de resp(n) na página), não «percurso-v2-…».
+  ctx,page=new_page(browser,320)
+  page.goto(host+'/m4/',wait_until='networkidle')
+  page.evaluate("localStorage.removeItem('percurso-sintese-M4-u1-inicializada'); localStorage.setItem('percurso-M4-u1',Array(85).fill('anterior').join(' '))")
+  page.reload(wait_until='networkidle')
+  assert page.evaluate('JSON.parse(localStorage.getItem("percurso-sintese-M4-u1")||"{}").modo')=='anterior'
+  print('PASS prior qualifying synthesis migration (M4 key)',flush=True)
   ctx.close()
   plan=json.loads((ROOT/'docs/pedagogia/interpretacoes-abertas-20261020.json').read_text('utf-8'))
   for x in plan['unscored_cards']:
