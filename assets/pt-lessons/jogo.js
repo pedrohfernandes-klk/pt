@@ -31,7 +31,9 @@ function montar(cfg){
  // mesma em todos os ecrãs (projeção e telemóveis), para a turma falar do mesmo cartão
  var PROJ=/[?&]projetar=1(&|$)/.test(location.search)||document.documentElement.classList.contains("epi-projection");
  var temMais=TODOS.some(function(x){return x&&x.mais})&&TODOS.some(function(x){return x&&!x.mais&&x.t!=="ler"}),emMais=false;if(temMais)cfg.aula=true;
- var st=(PROJ?null:ler(K))||{};st.tentativas=st.tentativas||0;var jaFeita=!!st.lida;var nFazer=function(){return IT.filter(function(x){return x.t!=="ler"}).length};
+ var st=(PROJ?null:ler(K))||{};
+ // 23/10/2026 (decisão 5 do plano de melhoria): uma lição refeita traz cfg.versao; o progresso guardado de outra versão recomeça
+ if(cfg.versao&&st.versao!==cfg.versao)st={versao:cfg.versao};st.tentativas=st.tentativas||0;var jaFeita=!!st.lida;var nFazer=function(){return IT.filter(function(x){return x.t!=="ler"}).length};
  // variação entre tentativas (11/10/2026, ronda 1): em cada tentativa, 10 a 12 cartões de fazer de um baralho maior (um por parte do
  // texto, o de vocabulário, o resto ao acaso, nunca o mesmo conjunto duas vezes seguidas), baralhados dentro de cada parte; na
  // os itens menos apresentados têm prioridade, mantendo grupos e vocabulário;
@@ -78,7 +80,7 @@ function montar(cfg){
  var API=function(){return {el:el,C:C,$:$,$$:$$,estado:estado,fecha:fecha,esc:esc,it:it,cfg:cfg}};
  function tipoExt(x){return window.EPITipos&&EPITipos[x.t]}
  // 23/10/2026: no cartão de abertura, o que se faz hoje, quanto tempo demora e o que se entrega no fim
- function planoAula(a){return '<dl class="aula-plano">'+(a.objetivo?'<dt>Hoje</dt><dd>'+it(a.objetivo)+'</dd>':'')+(a.tempo?'<dt>Tempo</dt><dd>'+it(a.tempo)+'</dd>':'')+(a.entrega?'<dt>No fim</dt><dd>'+it(a.entrega)+'</dd>':'')+'</dl>'}
+ function planoAula(a){if(a.linha)return '<p class="aula-linha"><b>Hoje</b> '+it(a.linha)+'</p>';/* lições refeitas (plano de melhoria): o plano numa linha, o resto no guião */return '<dl class="aula-plano">'+(a.objetivo?'<dt>Hoje</dt><dd>'+it(a.objetivo)+'</dd>':'')+(a.tempo?'<dt>Tempo</dt><dd>'+it(a.tempo)+'</dd>':'')+(a.entrega?'<dt>No fim</dt><dd>'+it(a.entrega)+'</dd>':'')+'</dl>'}
  // 23/10/2026: uma citação que já traz as aspas («…» ou «…».) não leva outras
  function citar(c){c=String(c).trim();return /^«[\s\S]*»[.!?…]?$/.test(c)&&c.indexOf("«",1)<0?it(c):"«"+it(c)+"»"}
  function corpo0(x){
