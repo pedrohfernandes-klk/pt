@@ -37,6 +37,8 @@ try:
    assert steps.first.get_attribute('id')=='m4-f28'
    assert steps.nth(1).get_attribute('id')=='m4-f07'
    steps.first.get_by_role('link').click()
+   # 23/10/2026: espera pelo cartão desenhado (lido logo a seguir ao clique, o #baralho ainda vazio dava falsos erros em máquinas lentas)
+   page.wait_for_url('**/licao-m4-f28/');page.locator('#baralho .cartao').wait_for()
    assert 'Já viste' in page.locator('#baralho').inner_text()
    page.locator('.casca [data-seguinte]').click()
    assert 'Raquel Castro' in page.locator('#baralho').inner_text()

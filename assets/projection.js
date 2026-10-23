@@ -25,4 +25,6 @@ if(matchMedia('(max-width:800px)').matches){shell.classList.add('qr-hidden');qrT
 if(!document.documentElement.requestFullscreen)fullscreen.hidden=true;
 if(window.ResizeObserver)new ResizeObserver(function(){shell.style.setProperty('--toolbar-height',document.querySelector('.projection-toolbar').getBoundingClientRect().height+'px');}).observe(document.querySelector('.projection-toolbar'));
 var wanted=new URL(location.href).searchParams.get('pagina')||'/'+site+'/';navigate(wanted);
+/* 23/10/2026: as setas, PageUp, PageDown e R chegam à lição mesmo com o foco na barra da projeção (depois de mudar a letra ou o ecrã inteiro). */
+document.addEventListener('keydown',function(ev){if(ev.altKey||ev.ctrlKey||ev.metaKey||!/^(ArrowRight|ArrowLeft|PageDown|PageUp|r|R)$/.test(ev.key))return;var tag=ev.target&&ev.target.tagName;if(tag==='INPUT'||tag==='TEXTAREA'||tag==='SELECT')return;try{var doc=frame.contentDocument;if(!doc||!doc.documentElement.classList.contains('com-casca'))return;ev.preventDefault();doc.dispatchEvent(new KeyboardEvent('keydown',{key:ev.key,bubbles:true}));}catch(e){/* Another origin: the lesson keeps its own keys. */}});
 }());
