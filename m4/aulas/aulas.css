@@ -71,6 +71,8 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
  .disc .p{font-size:8.8pt;margin:0 0 1px}
  .papel ul{margin:2px 0 0}
  .fim{margin:0}.fim h2{margin-top:8px}
+ h2.pag2{break-before:page;margin-top:0}
+ body{font-size:9pt}.seq .min{font-size:13pt}.disc .p{font-size:9.6pt}
  a{text-decoration:none}
 }
 .migalhas{background:#000;color:#fff;font:700 14px/1.25 Arial,Helvetica,sans-serif;margin:0;padding:0 16px;position:relative;z-index:1}.migalhas ol{list-style:none;display:flex;flex-wrap:wrap;align-items:center;gap:0 2px;margin:0 auto;padding:0;max-width:680px}.migalhas li{display:flex;align-items:center;margin:0;padding:0}.migalhas li+li::before{content:"›";padding:0 8px 0 6px;opacity:.6;font-weight:400}.migalhas,.migalhas ol,.migalhas li,.migalhas a{border:0;box-shadow:none;background-image:none}.migalhas a{color:#fff;text-decoration:none;display:inline-flex;align-items:center;gap:6px;min-height:44px;padding:0 2px}.migalhas a:hover,.migalhas a:focus-visible{text-decoration:underline;text-underline-offset:3px}.migalhas a:focus-visible{outline:3px solid #fff;outline-offset:2px}.migalhas [aria-current]{font-weight:400;opacity:.85;min-height:44px;display:inline-flex;align-items:center;max-width:62vw;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.mg-casa{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linejoin:round}@media print{.migalhas{display:none}}
