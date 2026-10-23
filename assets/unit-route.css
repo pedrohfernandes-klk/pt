@@ -120,3 +120,7 @@
 .v-ed .extra-cidade{background:transparent;border-top:1px solid #d6d4ce;padding:4px 0 6px}
 .v-ed .extra-cidade a+a{box-shadow:0 -1px 0 #ecebe7}
 .v-ed .unit-complements{border-top-color:#d6d4ce}
+/* V3, M5 e M8 (relatório visual de 23/10/2026): os exercícios longos «Pensar devagar» distinguem-se por semelhança (a cor
+   da palavra do módulo na linha que os anuncia), sem caixa nem ícone; a legenda da capa não fica azul. */
+.v-ed ol.passos li.longo .s{color:#a8432a;font:400 .82rem/1.45 Arial,sans-serif;margin:3px 0 5px}
+.v-ed .module-opening figcaption a{color:inherit}
