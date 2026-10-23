@@ -64,3 +64,16 @@
 .pt-module .module-opening .doc img{width:auto;height:auto;max-width:100%;max-height:260px}
 .pt-module .module-opening figcaption{font-size:.8rem;line-height:1.45;overflow-wrap:anywhere}
 @media(max-width:600px){.pt-module .module-opening{grid-template-columns:minmax(0,1fr);gap:1rem}.pt-module .module-opening .doc img{max-height:240px}}
+/* 23/10/2026 (docente: «o design, sobretudo em pc, está mau»): no computador, a capa do módulo sobe para o lado do título
+   e o botão de começar fica logo a seguir à pergunta do módulo; nada de botão sozinho ao lado de uma imagem alta. */
+@media (min-width:1024px){
+.pt-module main{max-width:60rem}
+.pt-module nav.migalhas{padding-inline:max(14px,calc((100% - 60rem + 28px)/2))}
+.pt-module header.topo{display:grid;grid-template-columns:minmax(0,1fr) 15rem;column-gap:48px;align-items:start}
+.pt-module header.topo>*{grid-column:1}
+.pt-module header.topo .module-opening{display:contents}
+.pt-module header.topo .module-opening .doc{grid-column:2;grid-row:1/span 8;align-self:start;margin:6px 0 0}
+.pt-module header.topo .module-opening .doc img{max-height:360px}
+.pt-module header.topo .module-opening .module-entry{grid-column:1;margin:1.1rem 0 .4rem;max-width:30rem}
+.pt-module header.topo .lead{font-size:1.06rem}
+}
