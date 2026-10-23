@@ -9,8 +9,6 @@
 .sintese-registo legend{font-weight:bold;margin-bottom:.6rem}
 .sintese-registo label{display:block;margin:.6rem 0}
 .sintese-registo button{margin:.6rem .6rem .6rem 0}
-.sintese-notas{border-top:1px solid var(--suave,#666);padding-top:1rem;margin-top:1rem}
-.sintese-notas summary{cursor:pointer}
 .sintese-registo [role="status"]{font-size:.9rem;line-height:1.5}
 .sintese-registo button:disabled{background:var(--fundo,#f3f2ee);color:var(--suave,#444);border:1px solid currentColor;cursor:not-allowed}
 .pt-module :is(a,button,summary,input,textarea):focus-visible{outline:3px solid var(--tinta,#000);outline-offset:3px}

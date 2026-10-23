@@ -15,19 +15,25 @@
     var revise = box.querySelector("[data-sintese-rever]");
     var status = box.querySelector("[data-sintese-estado]");
     var choices = box.querySelectorAll('input[type="radio"]');
-    var note = document.querySelector('[data-resp="' + n + '"]');
+    // 23/10/2026 (plano de melhoria, fase 0): a caixa «Notas no ecrã» saiu da síntese; o texto
+    // escrito antes continua guardado neste aparelho e lê-se diretamente da chave do percurso.
+    // A chave é a mesma que resp(n) lê na página do módulo: «percurso-v2-M1-u» em M1, M2, M3 e M7,
+    // «percurso-M4-u» em M4, M5, M6, M8 e M9; a página indica-a em data-notas.
+    var notesPrefix = script.dataset.notas || ("percurso-v2-" + module + "-u");
+    var note = "";
+    try { note = localStorage.getItem(notesPrefix + n) || ""; }
+    catch (error) { note = ""; }
     // Preserve completion already earned under the previous writing criterion.
-    // New notes never mark a synthesis complete without explicit confirmation.
     try {
       if (!state && !localStorage.getItem(key + "-inicializada")) {
-        if (note && note.value.trim().split(/\s+/).filter(Boolean).length >= 80) {
+        if (note.trim().split(/\s+/).filter(Boolean).length >= 80) {
           var previous = { feita: true, modo: "anterior" };
           localStorage.setItem(key, JSON.stringify(previous));
           state = previous;
         }
         localStorage.setItem(key + "-inicializada", "1");
       }
-    } catch (error) { /* The optional note remains available even without storage. */ }
+    } catch (error) { /* Without storage the synthesis can still be done orally or in the notebook. */ }
     function paint() {
       var done = !!(state && state.feita);
       choices.forEach(function (choice) {

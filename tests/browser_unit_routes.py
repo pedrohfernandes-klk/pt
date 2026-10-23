@@ -31,7 +31,9 @@ def main():
                     page.goto(f'{host}/m{m}/', wait_until='networkidle')
                     assert not errors, (m, errors)
                     assert page.locator('button[data-desafio]').count() == len(plan['units'])
-                    assert page.locator('textarea[data-resp]').count() == len(plan['units'])
+                    # 23/10/2026 (plano de melhoria, fase 0): sem caixa de escrita na síntese; um registo oral / no caderno por unidade.
+                    assert page.locator('fieldset[data-sintese]').count() == len(plan['units'])
+                    assert page.locator('textarea[data-resp], button[data-copiar]').count() == 0
                     assert page.evaluate('document.documentElement.scrollWidth <= innerWidth + 3'), (m, width, 'overflow')
                     for unit in plan['units']:
                         n = unit['number']
@@ -71,7 +73,9 @@ def main():
             assert 'lição feita' in page.locator('#m2-f01 [data-k]').inner_text()
             assert page.evaluate('JSON.parse(localStorage.getItem("licao-m2-f01")).melhor') == 10
             assert page.locator('[data-desafio-estado="1"]').inner_text() == ''
-            assert page.locator('[data-resp="1"]').input_value() == ''
+            # 23/10/2026 (plano de melhoria, fase 0): a resposta antiga não passa para a síntese nova (já não há caixa de notas).
+            assert page.locator('textarea[data-resp]').count() == 0
+            assert not page.evaluate('(JSON.parse(localStorage.getItem("percurso-sintese-M2-u1")||"{}")).feita')
             assert page.evaluate('localStorage.getItem("percurso-M2-u1")').startswith('A minha resposta')
             assert page.locator('[data-passo="m2-f12"],[data-passo="m2-f13"]').count() == 0
             assert page.locator('.unit-complements a[href*="licao-m2-f12"]').count() == 1
@@ -93,14 +97,17 @@ def main():
                 assert saved and saved['total'] == 8 and saved['tentativas'] >= 1, saved
                 page.locator('.casca.sobreposta [data-c-menu]').click()
                 print(f'PASS complete M2 challenge {n}: {action} actions; separate progress saved', flush=True)
+            # 23/10/2026 (plano de melhoria, fase 0): a caixa «Notas no ecrã» saiu; o que persiste é o registo
+            # da síntese (no caderno), e continua a não tocar na resposta da organização anterior.
             page.locator('[data-fim="1"] > summary').click()
-            page.locator('[data-fim="1"] .sintese-notas summary').click()
-            text = ' '.join(['palavra'] * 85)
-            page.locator('[data-resp="1"]').fill(text)
+            box = page.locator('[data-sintese="1"]')
+            box.locator('input[value="caderno"]').check()
+            box.locator('[data-sintese-registar]').click()
             page.reload(wait_until='networkidle')
-            assert page.locator('[data-resp="1"]').input_value() == text
+            saved = page.evaluate('JSON.parse(localStorage.getItem("percurso-sintese-M2-u1"))')
+            assert saved == {'feita': True, 'modo': 'caderno'}, saved
             assert page.evaluate('localStorage.getItem("percurso-M2-u1")').startswith('A minha resposta')
-            print('PASS new unit synthesis persists without overwriting the previous response', flush=True)
+            print('PASS new unit synthesis record persists without overwriting the previous response', flush=True)
             page.goto(f'{host}/m2/#m2-f12', wait_until='networkidle')
             assert page.locator('#m2-f12').is_visible()
             assert page.locator('#m2-f12').evaluate('el=>el.closest("details").open')

@@ -4,13 +4,21 @@ ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/'scripts'))
 from audit_cards import lesson_cards
 class Synthesis(unittest.TestCase):
- def test_optional_notes_and_explicit_completion_all_modules(self):
+ def test_oral_or_notebook_synthesis_and_explicit_completion_all_modules(self):
   for m in range(1,10):
    s=(ROOT/f'm{m}/index.html').read_text('utf-8')
    self.assertIn('&&sinteseFeita(u.n)',s)
    self.assertNotIn('&&palavrasDe(resp(u.n))>=80',s)
-   self.assertEqual(s.count('data-sintese-registar'),s.count('data-resp="'))
-   self.assertIn('Notas no ecrã (opcional)',s)
+   # 23/10/2026 (plano de melhoria, fase 0): a síntese faz-se oralmente ou no caderno; saíram a caixa
+   # «Notas no ecrã (opcional)» e o botão «Copiar para o Teams». O teste deixa de exigir a caixa de notas
+   # e passa a exigir um registo (oral / no caderno) por síntese e nenhum campo de escrita na síntese.
+   self.assertEqual(s.count('data-sintese-registar'),s.count('<details class="fim"'))
+   self.assertEqual(s.count('data-sintese-registar'),s.count('data-sintese="'))
+   self.assertGreater(s.count('data-sintese-registar'),1)
+   self.assertNotIn('data-resp="',s)
+   self.assertNotIn('Notas no ecrã',s)
+   self.assertNotIn('Copiar para o Teams',s)
+   self.assertNotIn('data-copiar',s)
  def test_interpretations_are_open_and_not_in_challenge_pool(self):
   plan=json.loads((ROOT/'docs/pedagogia/interpretacoes-abertas-20261020.json').read_text('utf-8'))
   for x in plan['unscored_cards']:
