@@ -43,7 +43,7 @@ try:
    saw_optional=False
    for _ in range(170):
     if page.locator('#baralho .cartao.fim').count():break
-    if page.locator('#baralho h3').filter(has_text='Jorge de Sena · olhar e responder').count():
+    if page.locator('#baralho h3').filter(has_text='Jorge de Sena: olhar e responder').count():
      page.locator('#baralho summary').filter(has_text='Outra geração').press('Enter')
      assert page.locator('#baralho a[href="../../atlas/#figura-angelo-de-lima"]').is_visible()
      assert 'Não integra as três vozes centrais' in page.locator('#baralho').inner_text()
