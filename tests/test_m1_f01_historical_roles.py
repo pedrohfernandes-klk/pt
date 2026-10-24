@@ -13,20 +13,22 @@ def cards():
 
 
 class HistoricalRoles(unittest.TestCase):
+    # 24/10/2026 (aulas claras M1, decisão do docente de 23/10): a lição foi refeita no molde do M4; os cartões verificados ficam iguais, mudam de propósito a contagem e os índices.
+    # Antes: 22 cartões, vf em [9], ordenar em [10], escolha das melodias em [8]. Agora: 21, [5], [16] e [6].
     def test_original_structure_and_answers(self):
         a = cards()
-        self.assertEqual(22, len(a))
-        self.assertEqual("vf", a[9]["t"])
-        self.assertIs(a[9]["v"], False)
-        self.assertEqual("ordenar", a[10]["t"])
-        self.assertEqual(3, len(a[10]["passos"]))
+        self.assertEqual(21, len(a))
+        self.assertEqual("vf", a[5]["t"])
+        self.assertIs(a[5]["v"], False)
+        self.assertEqual("ordenar", a[16]["t"])
+        self.assertEqual(3, len(a[16]["passos"]))
 
     def test_classification_is_presented_as_a_model(self):
         a = cards()
-        self.assertIn("simplificação tradicional", a[10]["f"])
-        self.assertIn("segrel", a[10]["f"])
-        self.assertIn("fronteiras", a[9]["f"])
-        self.assertIn("Alguns jograis também criavam cantigas", a[9]["fe"])
+        self.assertIn("simplificação tradicional", a[16]["f"])
+        self.assertIn("segrel", a[16]["f"])
+        self.assertIn("fronteiras", a[5]["f"])
+        self.assertIn("Alguns jograis também criavam cantigas", a[5]["fe"])
 
     def test_historical_context_present_in_reading(self):
         a = cards()
@@ -35,7 +37,7 @@ class HistoricalRoles(unittest.TestCase):
         self.assertIn("Alguns jograis também compunham", text)
 
     def test_music_feedback_does_not_restore_exclusive_social_roles(self):
-        card = cards()[8]
+        card = cards()[6]
         self.assertEqual(0, card['c'])
         self.assertEqual(4, len(card['o']))
         self.assertIn('rei e trovador', card['f'])
