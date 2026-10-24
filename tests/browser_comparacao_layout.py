@@ -39,7 +39,8 @@ try:
    for card in lesson_cards(path):
     if 'class="paralelo"' in card.get('html',''):examples.append(card)
   # 24/10/2026, aulas claras do M4: as lições do M4 refeitas têm 3 cartões «Em paralelo» (eram 11); o mínimo passa de 71 para 62
-  assert len(examples)>=62
+  # 24/10/2026, aulas claras do M1: as lições do M1 refeitas têm 3 (eram 7); o mínimo passa de 62 para 59
+  assert len(examples)>=59
   for width in (320,900):
    ctx,page=new_page(browser,width)
    page.goto(host+'/m4/licao-m4-f28/',wait_until='networkidle')

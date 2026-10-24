@@ -18,9 +18,10 @@ def main():
         with sync_playwright() as pw:
             browser = pw.chromium.launch(headless=True)
             for module, lesson, index, keyword in (
-                    ('m1', '11', 15, 'narrador construído'),
-                    ('m1', '11', 16, 'Fernão Lopes é o autor'),
-                    ('m1', '11', 19, 'contexto'),
+                    # 24/10/2026 (aulas claras M1, decisão do docente de 23/10): a lição foi refeita no molde do M4; os cartões verificados ficam iguais, mudam de propósito a contagem e os índices. M1-F11: 15, 16 e 19 passam a 8, 9 e 15.
+                    ('m1', '11', 8, 'narrador construído'),
+                    ('m1', '11', 9, 'Fernão Lopes é o autor'),
+                    ('m1', '11', 15, 'contexto'),
                     ('m8', '03', 14, '1808'),
                     ('m8', '03', 15, 'Goya'),
                     ('m8', '03', 20, 'Goya'),
