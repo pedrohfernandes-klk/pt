@@ -11,7 +11,9 @@ CASES = {
     ('m8', '08'): {'count': 22, 'choices': (8, 13), 'read': (1, 21)},
     ('m8', '09'): {'count': 19, 'choices': (10,), 'vf': (15,)},
     ('m8', '12'): {'count': 22, 'choices': (6,), 'read': (0, 2)},
-    ('m4', '27'): {'count': 22, 'choices': (3, 6, 12)},
+    # 24/10/2026, aulas claras do M4: a lição M4-F27 foi refeita (18 cartões); os três cartões verificados aqui são os mesmos
+    # (c, f, fe iguais; opções encurtadas ao limite de 15 palavras) e passaram dos índices 3, 6 e 12 para 2, 3 e 8
+    ('m4', '27'): {'count': 18, 'choices': (2, 3, 8)},
 }
 
 def cards(module, lesson):
@@ -73,7 +75,7 @@ class EvidenceBasedLearning(unittest.TestCase):
 
     def test_m4_all_distractors_require_contextual_evidence(self):
         bank = cards('m4', '27')
-        for index in (3, 6, 12):
+        for index in (2, 3, 8):  # 24/10/2026: os índices 3, 6 e 12 da lição antiga (ver CASES)
             item = bank[index]
             self.assertEqual(0, item['c'])
             self.assertEqual(3, len(item['o']))
@@ -83,9 +85,9 @@ class EvidenceBasedLearning(unittest.TestCase):
                 'personagem de teatro' in option.lower()
                 for option in item['o']
             ))
-        self.assertIn('exploração', bank[3]['f'])
-        self.assertIn('cidade', bank[6]['f'])
-        self.assertIn('evasão', bank[12]['f'])
+        self.assertIn('exploração', bank[2]['f'])
+        self.assertIn('cidade', bank[3]['f'])
+        self.assertIn('evasão', bank[8]['f'])
 
 if __name__ == '__main__':
     unittest.main()

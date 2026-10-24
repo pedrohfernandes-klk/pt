@@ -56,23 +56,26 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
  main{max-width:none;padding:0}
  .cab{padding:0 0 4px;margin:0 0 6px;border-bottom-width:2px}
  h1{font-size:21pt;margin:0 0 2px}
- h2{font-size:12.5pt;margin:8px 0 3px}
+ h2{font-size:12.5pt;margin:6px 0 2px}
  .rot{font-size:6.6pt;margin:0 0 2px}
  .meta{font-size:8pt}
  .dois{gap:6px}
  .caixa{padding:4px 0 0;border-top-width:1.5px}
- .seq>li{padding:3px 0;margin:0;grid-template-columns:7.4rem 1fr;border-top:.6pt solid #000;break-inside:avoid}
+ .seq>li{padding:2px 0;margin:0;grid-template-columns:7.4rem 1fr;border-top:.6pt solid #000;break-inside:avoid}
  .seq .min{font-size:12pt}
  .seq .min small{display:inline;font-size:6.4pt;letter-spacing:.04em;margin:0 0 0 5px}
  .seq .min small+small{display:block;margin:1px 0 0}
  .seq dl{grid-template-columns:4.6rem 1fr;gap:0 6px}
  .seq dt{font-size:6.4pt;line-height:1.75}
- .disc li{padding:3px 0;margin:0;border-top:.6pt solid #000;break-inside:avoid}
+ .disc li{padding:2px 0;margin:0;border-top:.6pt solid #000;break-inside:avoid}
  .disc .p{font-size:8.8pt;margin:0 0 1px}
  .papel ul{margin:2px 0 0}
  .fim{margin:0}.fim h2{margin-top:8px}
- h2.pag2{break-before:page;margin-top:0}
- body{font-size:9pt}.seq .min{font-size:13pt}.disc .p{font-size:9.6pt}
+ /* 24/10/2026: as aulas refeitas têm a sequência mais longa; em vez de forçar a segunda parte para a página 2 (que deixava a
+    sequência em três páginas), o texto corre pelas duas páginas e cada bloco fica inteiro (break-inside:avoid) */
+ h2.pag2{margin-top:8px;break-after:avoid}
+ .disc,.papel{break-inside:auto}
+ body{font-size:8.4pt;line-height:1.25}.seq .min{font-size:12pt}.disc .p{font-size:8.9pt}
  a{text-decoration:none}
 }
 .migalhas{background:#000;color:#fff;font:700 14px/1.25 Arial,Helvetica,sans-serif;margin:0;padding:0 16px;position:relative;z-index:1}.migalhas ol{list-style:none;display:flex;flex-wrap:wrap;align-items:center;gap:0 2px;margin:0 auto;padding:0;max-width:680px}.migalhas li{display:flex;align-items:center;margin:0;padding:0}.migalhas li+li::before{content:"›";padding:0 8px 0 6px;opacity:.6;font-weight:400}.migalhas,.migalhas ol,.migalhas li,.migalhas a{border:0;box-shadow:none;background-image:none}.migalhas a{color:#fff;text-decoration:none;display:inline-flex;align-items:center;gap:6px;min-height:44px;padding:0 2px}.migalhas a:hover,.migalhas a:focus-visible{text-decoration:underline;text-underline-offset:3px}.migalhas a:focus-visible{outline:3px solid #fff;outline-offset:2px}.migalhas [aria-current]{font-weight:400;opacity:.85;min-height:44px;display:inline-flex;align-items:center;max-width:62vw;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.mg-casa{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linejoin:round}@media print{.migalhas{display:none}}

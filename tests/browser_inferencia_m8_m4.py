@@ -16,7 +16,8 @@ TARGETS = {
     ('m8', '08'): [8, 13],
     ('m8', '09'): [10],
     ('m8', '12'): [6],
-    ('m4', '27'): [3, 6, 12],
+    # 24/10/2026, aulas claras do M4: a lição M4-F27 foi refeita; os mesmos três cartões são agora os 2, 3 e 8
+    ('m4', '27'): [2, 3, 8],
 }
 CHECKS = 0
 
