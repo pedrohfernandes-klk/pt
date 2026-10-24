@@ -10,7 +10,8 @@ source=(ROOT/'atlas/index.html').read_text('utf8')
 base_figures=json.JSONDecoder().raw_decode(source.split('window.ATLAS_DADOS=',1)[1])[0]['FIG']
 editorial=json.JSONDecoder().raw_decode((ROOT/'assets/atlas-editorial.js').read_text('utf8').split('window.ATLAS_EDITORIAL=',1)[1])[0]
 figures=base_figures+editorial['autores']
-assert len(base_figures)==107 and len(figures)==110
+# 25/10/2026: 40 das 47 figuras novas (o docente reteve sete figuras do regime e do poder), daí 147 e 150.
+assert len(base_figures)==147 and len(figures)==150
 assert set(editorial['propostas'])=={f['id'] for f in base_figures if not f.get('paraTi')},'New proposals must close the exact gap without replacing existing ones'
 server=ThreadingHTTPServer(('127.0.0.1',0),partial(QuietHandler,directory=str(ROOT.parent)))
 threading.Thread(target=server.serve_forever,daemon=True).start()
@@ -29,8 +30,8 @@ try:
    page.goto(host+'/atlas/',wait_until='networkidle')
    assert page.locator('[data-atlas-resultados]').inner_text()==f'{len(figures)} pessoas encontradas'
    assert page.locator('#atlas-memoria').get_attribute('open') is None
-   assert '107 pessoas' in page.locator('#atlas-memoria').text_content()
-   assert page.locator('#pessoas-PT li').count()==26
+   assert '147 pessoas' in page.locator('#atlas-memoria').text_content()
+   assert page.locator('#pessoas-PT li').count()==65
    state=page.evaluate('localStorage.getItem("epi-atlas")')
    search=page.locator('[data-atlas-pesquisa]')
    search.fill('escrevivencia')
@@ -93,7 +94,7 @@ try:
    assert page.locator('.casca.sobreposta').is_visible(),'Legacy game remains available'
    page.get_by_role('button',name='Fechar',exact=True).click()
    assert not errors,errors
-   print(f'PASS Atlas: 110 unlocked profiles and individual proposals, search, investigations, sources, reload and optional game {width}',flush=True)
+   print(f'PASS Atlas: 150 unlocked profiles and individual proposals, search, investigations, sources, reload and optional game {width}',flush=True)
    ctx.close()
   ctx,page=new_page(browser,1440)
   page.goto(host+'/projetar/?pagina=/pt/atlas/',wait_until='networkidle')
