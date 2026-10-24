@@ -21,7 +21,9 @@ class TransversalClareza(unittest.TestCase):
      if not c or x['t']!='escolha':continue
      expected=c['o'][c['c']]
      if expected in x['o']:matched+=1;self.assertEqual(x['o'][x['c']],expected,(x['_l'],x['p']))
-  self.assertGreaterEqual(matched,188)
+  # 24/10/2026, aulas claras do M4: as lições do M4 foram refeitas e 27 perguntas do desafio deixaram de ter par com o mesmo
+  # enunciado numa lição (as que têm par continuam a ter de dar a mesma resposta certa); o mínimo passa de 188 para 161
+  self.assertGreaterEqual(matched,161)
  def test_teaching_and_language_distinction(self):
   c=bank(ROOT/'m3/licao-m3-f11/index.html');self.assertEqual(len(c),20);self.assertIn('Exemplo escrito para esta lição',c[2]['html']);self.assertIn('Nota fiel e seletiva',c[2]['html']);self.assertIn('O tétum não é uma variedade',c[2]['html']);self.assertFalse(c[11]['v']);self.assertIn('registo',c[16]['p']);self.assertIn('sem voltar ao modelo',c[19]['html'])
  def test_challenge_does_not_restore_old_examples(self):

@@ -37,6 +37,8 @@ try:
    assert steps.first.get_attribute('id')=='m4-f28'
    assert steps.nth(1).get_attribute('id')=='m4-f07'
    steps.first.get_by_role('link').click()
+   # 23/10/2026: espera pelo cartão desenhado (lido logo a seguir ao clique, o #baralho ainda vazio dava falsos erros em máquinas lentas)
+   page.wait_for_url('**/licao-m4-f28/');page.locator('#baralho .cartao').wait_for()
    assert 'Já viste' in page.locator('#baralho').inner_text()
    page.locator('.casca [data-seguinte]').click()
    assert 'Raquel Castro' in page.locator('#baralho').inner_text()
@@ -88,7 +90,9 @@ try:
    }''',cards)
    finish(page)
    page.goto(host+'/m4/painel-m4-f20/',wait_until='networkidle')
-   for i in (4,5,12,15):
+   # 24/10/2026, aulas claras do M4: a lição F20 foi refeita; os quatro cartões que eram 4, 5, 12 e 15 são agora 11, 12, 15 e 14
+   # e o painel foi refeito a partir da lição nova
+   for i in (11,12,15,14):
     assert page.locator(f'select[data-r-k] option[value="{i}"]').inner_text()==cards[i]['p']
    assert not errors,errors
    ctx.close();print(f'PASS post-TPC F28/F20 normal/full, wrong/correct feedback, keyboard, resume, teacher labels and route {width}',flush=True)

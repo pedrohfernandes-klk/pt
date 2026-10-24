@@ -25,15 +25,26 @@ function montar(cfg){
  // A page lesson returns to its curricular unit; overlays keep their own context.
  if(C&&!C.raiz.classList.contains("sobreposta")){var retorno=document.body.getAttribute("data-unit-return"),unidade=document.body.getAttribute("data-unit-number");if(retorno&&unidade){cfg.percurso=retorno;cfg.percursoRotulo="Voltar à unidade "+unidade}}
  var TODOS=cfg.itens,IT=TODOS,K=cfg.chave,i=0,certas=0,seq=0,melhorSeq=0,xp=0,hist=[],estado={},errados=[],soErrados=false,viraProx=false,acesas={},snaps=[],slotFim=null,revendo=false,naFim=false,fimHTML="";
- var st=ler(K)||{};st.tentativas=st.tentativas||0;var jaFeita=!!st.lida;var nFazer=function(){return IT.filter(function(x){return x.t!=="ler"}).length};
+ // 23/10/2026 (docente, piloto M4): a lição projetada (?projetar=1) é o material da aula: começa sempre do início, não grava,
+ // mostra só o núcleo e tem «Mostrar resposta» e as setas do teclado; os cartões com «mais» ficam fora da aula e vão para
+ // «Para ir mais longe» (opcional, para casa), depois de «A aula acaba aqui»; com núcleo, a ordem dos cartões e das opções é a
+ // mesma em todos os ecrãs (projeção e telemóveis), para a turma falar do mesmo cartão
+ var PROJ=/[?&]projetar=1(&|$)/.test(location.search)||document.documentElement.classList.contains("epi-projection");
+ var temMais=TODOS.some(function(x){return x&&x.mais})&&TODOS.some(function(x){return x&&!x.mais&&x.t!=="ler"}),emMais=false;if(temMais)cfg.aula=true;
+ var st=(PROJ?null:ler(K))||{};
+ // 23/10/2026 (decisão 5 do plano de melhoria): uma lição refeita traz cfg.versao; o progresso guardado de outra versão recomeça
+ if(cfg.versao&&st.versao!==cfg.versao)st={versao:cfg.versao};st.tentativas=st.tentativas||0;var jaFeita=!!st.lida;var nFazer=function(){return IT.filter(function(x){return x.t!=="ler"}).length};
  // variação entre tentativas (11/10/2026, ronda 1): em cada tentativa, 10 a 12 cartões de fazer de um baralho maior (um por parte do
  // texto, o de vocabulário, o resto ao acaso, nunca o mesmo conjunto duas vezes seguidas), baralhados dentro de cada parte; na
  // os itens menos apresentados têm prioridade, mantendo grupos e vocabulário;
  // segunda tentativa a pergunta vem na outra formulação (p2); as escolhas mostram a certa e duas erradas ao acaso de quatro ou cinco
+ var semente=0;function rnd(){semente=(Math.imul(semente,1664525)+1013904223)>>>0;return semente/4294967296}
+ function semear(x){var s=String(K)+":"+TODOS.indexOf(x),h=2166136261;for(var q=0;q<s.length;q++){h^=s.charCodeAt(q);h=Math.imul(h,16777619)>>>0}semente=h}
+ function mist(a){if(!cfg.aula)return baralhar(a);a=a.slice();for(var q=a.length-1;q>0;q--){var j=Math.floor(rnd()*(q+1)),t=a[q];a[q]=a[j];a[j]=t}return a}
  var usarP2=false;
  function perg(x){return (usarP2&&x.p2)?x.p2:x.p}
- function opcoes(o,c){var idx=o.map(function(_,j){return j});if(o.length<=3)return baralhar(idx);var err=baralhar(idx.filter(function(j){return j!==Number(c)})).slice(0,2);return baralhar([Number(c)].concat(err))}
- function deckDe(){var faz=[];TODOS.forEach(function(x,k){if(x.t!=="ler")faz.push(k)});var sel={};
+ function opcoes(o,c){var idx=o.map(function(_,j){return j});if(o.length<=3)return mist(idx);var err=mist(idx.filter(function(j){return j!==Number(c)})).slice(0,2);return mist([Number(c)].concat(err))}
+ function deckDe(){var faz=[];TODOS.forEach(function(x,k){if(x.t!=="ler"&&!(cfg.aula&&x.mais))faz.push(k)});var sel={};
   function visitas(k){var v=(st.exposicoes||{})[k];return typeof v==="number"&&isFinite(v)&&v>=0?v:0}
   function menos(a){return baralhar(a).sort(function(a,b){return visitas(b)-visitas(a)})}
   if(faz.length>12&&cfg.variar!==false){var alvo=Math.min(faz.length,10+Math.floor(Math.random()*3)),grupos={};faz.forEach(function(k){var g=String(TODOS[k].g==null?"fim":TODOS[k].g);(grupos[g]=grupos[g]||[]).push(k)});
@@ -41,8 +52,8 @@ function montar(cfg){
    var resto=menos(faz.filter(function(k){return !sel[k]}));while(Object.keys(sel).length<alvo&&resto.length)sel[resto.pop()]=1;
    var chave=Object.keys(sel).sort().join(",");if(st.ult===chave&&resto.length){var ks=Object.keys(sel).filter(function(k){var g=String(TODOS[k].g==null?"fim":TODOS[k].g);return !TODOS[k].voc&&grupos[g].filter(function(j){return sel[j]}).length>1});if(ks.length){delete sel[ks[Math.floor(Math.random()*ks.length)]];sel[resto[resto.length-1]]=1;chave=Object.keys(sel).sort().join(",")}}st.ult=chave}
   else faz.forEach(function(k){sel[k]=1});
-  var out=[],buf=[],bg=null;function flush(){if(buf.length){baralhar(buf).forEach(function(k){out.push(TODOS[k])});buf=[]}}
-  TODOS.forEach(function(x,k){if(x.t==="ler"){flush();bg=null;out.push(x);return}if(!sel[k])return;var g=String(x.g==null?"fim":x.g);if(g!==bg){flush();bg=g}buf.push(k)});flush();return out}
+  var out=[],buf=[],bg=null;function flush(){if(buf.length){(cfg.aula?buf:baralhar(buf)).forEach(function(k){out.push(TODOS[k])});buf=[]}}
+  TODOS.forEach(function(x,k){if(cfg.aula&&x.mais)return;if(x.t==="ler"){flush();bg=null;out.push(x);return}if(!sel[k])return;var g=String(x.g==null?"fim":x.g);if(g!==bg){flush();bg=g}buf.push(k)});flush();return out}
  function novoBaralho(){IT=deckDe();usarP2=st.tentativas%2===1}
  // «Só os que errei» (ronda 1): os mesmos factos noutra forma: completar vira escolha, sublinhar vira escolha com a citação, os outros trocam para p2
  function variante(x){var y=JSON.parse(JSON.stringify(x));
@@ -54,7 +65,7 @@ function montar(cfg){
  if(!st.lida||cfg.mostrarAnterior===false)novoBaralho();
  var mImg=/<figure class="fig( cor)?"[^>]*>[\s\S]*?src="(data:image[^"]+)"/.exec(((TODOS[0]||{}).html)||""),imagem=cfg.imagem||(mImg?mImg[2]:""),imagemCor=!!(mImg&&mImg[1]);
  function estados(){return IT.map(function(x,k){return hist[k]==="ler"?"ler":hist[k]===true?"ok":hist[k]===false?"mau":""})}
- function topo(ganho){if(!C)return;C.modo(null);C.num(naFim?0:i+1,IT.length);C.barra(estados(),naFim?-1:i,snaps.some(Boolean)?abrirGrelha:null,ganho)}
+ function topo(ganho){if(!C)return;C.modo(emMais?"Para ir mais longe":null);C.num(naFim?0:i+1,IT.length);C.barra(estados(),naFim?-1:i,snaps.some(Boolean)?abrirGrelha:null,ganho)}
  // tocar na barra abre a grelha dos cartões já feitos (ver só para ler)
  function abrirGrelha(){if(!C)return;C.folha.abrir({estado:"",titulo:"Cartões já feitos",html:'<div class="c-grelha">'+IT.map(function(x,k){var cl=hist[k]===true?"ok":hist[k]===false?"mau":"";return '<button type="button" data-ir="'+k+'" class="'+cl+'"'+(snaps[k]&&(naFim||k!==i)?'':' disabled')+' aria-label="Cartão '+(k+1)+'">'+(k+1)+'</button>'}).join("")+'</div>',botao:{t:"Fechar",vai:false,onclick:function(){C.folha.fechar();if(!naFim&&!revendo&&hist[i]!=null&&ultimaFolha)C.folha.abrir(ultimaFolha)}}});$$("[data-ir]",C.raiz).forEach(function(b){b.onclick=function(){C.folha.fechar();rever(+b.dataset.ir)}})}
  function proximo(){if(C)C.folha.fechar();i++;if(i<IT.length)mostrar();else fim()}
@@ -68,17 +79,22 @@ function montar(cfg){
     bancada, fotogramas) vivem como cartões do baralho, com a barra, os pontos e o «Seguinte» de sempre */
  var API=function(){return {el:el,C:C,$:$,$$:$$,estado:estado,fecha:fecha,esc:esc,it:it,cfg:cfg}};
  function tipoExt(x){return window.EPITipos&&EPITipos[x.t]}
+ // 23/10/2026: no cartão de abertura, o que se faz hoje, quanto tempo demora e o que se entrega no fim
+ function planoAula(a){if(a.linha)return '<p class="aula-linha"><b>Hoje</b> '+it(a.linha)+'</p>';/* lições refeitas (plano de melhoria): o plano numa linha, o resto no guião */return '<dl class="aula-plano">'+(a.objetivo?'<dt>Hoje</dt><dd>'+it(a.objetivo)+'</dd>':'')+(a.tempo?'<dt>Tempo</dt><dd>'+it(a.tempo)+'</dd>':'')+(a.entrega?'<dt>No fim</dt><dd>'+it(a.entrega)+'</dd>':'')+'</dl>'}
+ // 23/10/2026: uma citação que já traz as aspas («…» ou «…».) não leva outras
+ function citar(c){c=String(c).trim();return /^«[\s\S]*»[.!?…]?$/.test(c)&&c.indexOf("«",1)<0?it(c):"«"+it(c)+"»"}
  function corpo0(x){
+  if(x.t!=="ler")semear(x);
   if(tipoExt(x))return '<div data-tipo-ext="'+esc(x.t)+'">'+tipoExt(x).html(x,API())+'</div>';
-  if(x.t==="ler")return (x.titulo?'<h2 class="tit'+(x.rot==="Abre"?" cartaz":"")+'">'+esc(x.titulo)+'</h2>':'')+'<div class="ler">'+(x.html||"")+'</div>';
+  if(x.t==="ler")return (x.titulo?'<h2 class="tit'+(x.rot==="Abre"?" cartaz":"")+'">'+esc(x.titulo)+'</h2>':'')+(x.aula?planoAula(x.aula):'')+'<div class="ler">'+(x.html||"")+'</div>';
   if(x.t==="mapa")return '<p class="q">'+it(perg(x))+'</p><div class="mapa-q">'+(x.fig||"")+'<p class="mapa-esc" aria-live="polite">'+(x.rotulo||"Toca num país.")+'</p></div>';
   if(x.t==="escolha"){estado.ord=opcoes(x.o,x.c);return '<p class="q">'+it(perg(x))+'</p><div class="ops">'+estado.ord.map(function(j){return '<button class="op" type="button" data-j="'+j+'"><span class="tx">'+it(x.o[j])+'</span></button>'}).join("")+'</div>'}
   if(x.t==="vf")return '<p class="q">'+it(perg(x))+'</p><div class="ops"><button class="op" type="button" data-j="1">Verdadeiro</button><button class="op" type="button" data-j="0">Falso</button></div>';
   if(x.t==="completar"){var k=0;var f=it(x.frase).replace(/\[(\d)\]/g,function(_,n){var L=x.lacunas[Number(n)-1];var kk=k++;var ord=opcoes(L.o,L.c);return '<select aria-label="Lacuna '+n+' de '+x.lacunas.length+'" data-k="'+kk+'"><option value="">escolhe</option>'+ord.map(function(j){return '<option value="'+j+'">'+esc(L.o[j]).replace(/_/g,"")+'</option>'}).join("")+'</select>'});return '<p class="q">'+it(perg(x)||"Completa a frase:")+'</p><p class="inline">'+colar(f)+'</p>'}
   if(x.t==="sublinhar"){estado.sel=[];return '<p class="q">'+it(perg(x))+'</p><div class="palavras">'+x.frase.split(/\s+/).map(function(w,j){return '<button class="pal" type="button" data-j="'+j+'" style="--k:'+j+'" aria-pressed="false">'+it(w)+'</button>'}).join("")+'</div>'}
-  if(x.t==="frase"){estado.ord=baralhar(x.palavras.map(function(_,j){return j}));estado.seq=[];return '<p class="q">'+it(perg(x))+'</p><p class="dica">Toca nas palavras pela ordem da frase; tocar outra vez tira a palavra.</p><div class="ordem frase"><ol class="linha-ordem" aria-label="A tua frase"></ol><div class="ops soltos">'+estado.ord.map(function(j){return '<button class="op" type="button" data-j="'+j+'"><span>'+esc(x.palavras[j])+'</span></button>'}).join("")+'</div></div>'}
-  if(x.t==="ordenar"||x.t==="versos"){var L2=x.t==="ordenar"?x.passos:x.linhas;estado.ord=baralhar(L2.map(function(_,j){return j}));estado.seq=[];return '<p class="q">'+it(perg(x))+'</p><p class="dica">Toca pela ordem certa: cada um entra na linha; tocar outra vez tira-o.</p><div class="ordem"><ol class="linha-ordem" aria-label="A tua ordem"></ol><p class="soltos-t">Por ordenar</p><div class="ops soltos">'+estado.ord.map(function(j){return '<button class="op" type="button" data-j="'+j+'"><span>'+it(L2[j])+'</span></button>'}).join("")+'</div></div>'}
-  if(x.t==="emparelhar"){estado.lig={};estado.e=null;var vals=[];x.pares.forEach(function(p){if(vals.indexOf(p[1])<0)vals.push(p[1])});estado.vals=vals;estado.ordE=baralhar(x.pares.map(function(_,j){return j}));estado.ordD=baralhar(vals.map(function(_,j){return j}));estado.classe=vals.length<x.pares.length;
+  if(x.t==="frase"){estado.ord=mist(x.palavras.map(function(_,j){return j}));estado.seq=[];return '<p class="q">'+it(perg(x))+'</p><p class="dica">Toca nas palavras pela ordem da frase; tocar outra vez tira a palavra.</p><div class="ordem frase"><ol class="linha-ordem" aria-label="A tua frase"></ol><div class="ops soltos">'+estado.ord.map(function(j){return '<button class="op" type="button" data-j="'+j+'"><span>'+esc(x.palavras[j])+'</span></button>'}).join("")+'</div></div>'}
+  if(x.t==="ordenar"||x.t==="versos"){var L2=x.t==="ordenar"?x.passos:x.linhas;estado.ord=mist(L2.map(function(_,j){return j}));estado.seq=[];return '<p class="q">'+it(perg(x))+'</p><p class="dica">Toca pela ordem certa: cada um entra na linha; tocar outra vez tira-o.</p><div class="ordem"><ol class="linha-ordem" aria-label="A tua ordem"></ol><p class="soltos-t">Por ordenar</p><div class="ops soltos">'+estado.ord.map(function(j){return '<button class="op" type="button" data-j="'+j+'"><span>'+it(L2[j])+'</span></button>'}).join("")+'</div></div>'}
+  if(x.t==="emparelhar"){estado.lig={};estado.e=null;var vals=[];x.pares.forEach(function(p){if(vals.indexOf(p[1])<0)vals.push(p[1])});estado.vals=vals;estado.ordE=mist(x.pares.map(function(_,j){return j}));estado.ordD=mist(vals.map(function(_,j){return j}));estado.classe=vals.length<x.pares.length;
    if(estado.classe)return '<p class="q">'+it(perg(x))+'</p><p class="dica">Toca num cartão e depois na coluna a que pertence.</p><div class="classes'+(vals.length>2?" muitas":"")+'" style="--n:'+vals.length+'">'+estado.ordD.map(function(j){return '<div class="regiao" data-r="'+j+'"><button class="op cab" type="button" data-d="'+j+'"><span class="tx">'+it(vals[j])+'</span></button><div class="dentro"></div></div>'}).join("")+'</div><p class="soltos-t">Por classificar</p><div class="ops soltos">'+estado.ordE.map(function(j){return '<button class="op" type="button" data-e="'+j+'"><span class="tx">'+it(x.pares[j][0])+'</span><span class="lig" aria-hidden="true"></span></button>'}).join("")+'</div>';
    return '<p class="q">'+it(perg(x))+'</p><p class="dica">Toca num da esquerda e depois no seu par, à direita.</p><div class="pares"><div class="col ops esq">'+estado.ordE.map(function(j){return '<button class="op" type="button" data-e="'+j+'"><span class="tx">'+it(x.pares[j][0])+'</span><span class="marca-par" aria-hidden="true"></span></button>'}).join("")+'</div><div class="col ops dir">'+estado.ordD.map(function(j){return '<button class="op" type="button" data-d="'+j+'"><span class="marca-par" aria-hidden="true"></span><span class="tx">'+it(vals[j])+'</span></button>'}).join("")+'</div><svg class="fios" aria-hidden="true"></svg></div>'}
   if(x.t==="pistas"){estado.np=0;estado.pontos=30;estado.ord=opcoes(x.o,x.c);return '<p class="q">'+it(x.p||"Quem sou eu?")+'</p><ol class="pistas">'+x.pistas.map(function(p,k){return '<li'+(k?' hidden':'')+'>'+it(p)+'</li>'}).join("")+'</ol><div class="atrib" hidden>'+(x.simb||"")+'</div><div class="ops">'+estado.ord.map(function(j){return '<button class="op" type="button" data-j="'+j+'"><span class="tx">'+it(x.o[j])+'</span></button>'}).join("")+'</div>'}
@@ -86,13 +102,28 @@ function montar(cfg){
   return '<p class="q">'+esc(x.p||"")+'</p>'}
  // as ações do rodapé (fixo) dependem do tipo de cartão; «←» revê o anterior; a pista é um botão (o toque longo acabou: abria a seleção de texto)
  function voltaBtn(){return i>0&&snaps[i-1]?{t:"←",cls:"seta",esq:true,rotulo:"Ver o cartão anterior",attrs:{"data-volta":""},onclick:function(){if(!snaps[i]&&hist[i]==null&&IT[i].t==="ler")foto();rever(i-1)}}:null}
- function acoesDe(x){if(!C)return;var volta=voltaBtn(),pp=x.t!=="ler"&&x.t!=="pistas"?pistaPara(x,cfg.pistas):null,bp=pp?{t:"Pista",cls:"sec",attrs:{"data-pista-ess":""},onclick:function(ev){mostrarPista(pp,ev.currentTarget)}}:null;
+ function acoesDe(x){if(!C)return;var mostra=PROJ&&x.t!=="ler"&&!tipoExt(x)?{t:"Mostrar resposta",cls:"sec",attrs:{"data-mostrar":""},onclick:function(){revelar(x)}}:null,volta=voltaBtn(),pp=x.t!=="ler"&&x.t!=="pistas"?pistaPara(x,cfg.pistas):null,bp=pp?{t:"Pista",cls:"sec",attrs:{"data-pista-ess":""},onclick:function(ev){mostrarPista(pp,ev.currentTarget)}}:null;
   if(tipoExt(x)){C.acoes([volta].concat(tipoExt(x).acoes?tipoExt(x).acoes(x,API()):[]).filter(Boolean));return}
   if(x.t==="ler")C.acoes([volta,{t:i+1<IT.length?"Seguinte":"Ver o resultado",cls:"prim",attrs:{"data-seguinte":""},onclick:function(){hist[i]="ler";foto();var r=$(".rot",el);if(r){r.classList.remove("atual");r.classList.add("feito")}avancar()}}]);
-  else if(x.t==="sublinhar"||x.t==="mapa"||(x.t==="calcada"&&x.modo==="ritmo"))C.acoes([volta,bp,{t:"Confirmar",cls:"prim",attrs:{"data-confirmar":""},disabled:true}]);
-  else if(x.t==="pistas")C.acoes([volta,{t:"Mais uma pista <small>(passa a valer 20)</small>",cls:"sec",attrs:{"data-pista":""}}]);
-  else C.acoes([volta,bp])}
- function mostrar(){var x=IT[i];estado={};revendo=false;el.innerHTML='<div class="jogo'+(jaFeita?" feita":"")+'"><div class="cartao'+(x.escuro?" escuro":"")+'"><p class="rot atual">'+forma(fase(x))+'<span>'+esc(rotulo(x))+'</span></p>'+(x.cita&&x.t!=="ler"?'<p class="cita">«'+it(x.cita)+'»</p>':"")+corpo(x)+'</div></div>';
+  else if(x.t==="sublinhar"||x.t==="mapa"||(x.t==="calcada"&&x.modo==="ritmo"))C.acoes([volta,bp,mostra,{t:"Confirmar",cls:"prim",attrs:{"data-confirmar":""},disabled:true}]);
+  else if(x.t==="pistas")C.acoes([volta,{t:"Mais uma pista <small>(passa a valer 20)</small>",cls:"sec",attrs:{"data-pista":""}},mostra]);
+  else C.acoes([volta,bp,mostra])}
+ // projeção: a resposta à vista de toda a turma, com a explicação, sem contar pontos
+ function respostaDe(x){var t=x.t;if(t==="escolha"||t==="pistas"||t==="mapa")return it(String(x.o[x.c]));if(t==="vf")return x.v?"Verdadeiro.":"Falso.";
+  if(t==="completar")return it(String(x.frase||"").replace(/\[(\d)\]/g,function(_,n){var L=(x.lacunas||[])[Number(n)-1];return L?"**"+String(L.o[L.c]).replace(/[_*]/g,"")+"**":""}));
+  if(t==="sublinhar"){var w=String(x.frase||"").split(/\s+/);return it((x.certas||[]).map(function(j){return w[Number(j)]}).join(" "))}
+  if(t==="ordenar")return '<ol>'+(x.passos||[]).map(function(p){return '<li>'+it(p)+'</li>'}).join("")+'</ol>';
+  if(t==="versos")return (x.linhas||[]).map(function(l){return it(l)}).join("<br>");
+  if(t==="frase")return it((x.palavras||[]).join(" "));
+  if(t==="emparelhar")return '<ul>'+(x.pares||[]).map(function(p){return '<li>'+it(p[0])+' → '+it(p[1])+'</li>'}).join("")+'</ul>';
+  return ""}
+ function revelar(x){if(estado.fechado)return;estado.fechado=true;hist[i]="ler";
+  $$("button.op",el).forEach(function(b){if((x.t==="escolha"&&+b.dataset.j===Number(x.c))||(x.t==="vf"&&+b.dataset.j===(x.v?1:0))){b.classList.add("bom");tracar(b)}});
+  $$("button.op,select,input,.pal,.pedra",el).forEach(function(b){b.disabled=true});var r=$(".rot",el);if(r){r.classList.remove("atual");r.classList.add("feito")}
+  var h='<div class="resp-proj"><b>Resposta:</b> '+respostaDe(x)+'</div>'+fb(x,null,true),c=$(".cartao",el),fr=document.createElement("div");fr.className="f-rev ok";fr.innerHTML=h;if(c)c.appendChild(fr);
+  ultimaFolha={estado:"ok",titulo:"Resposta",html:h,botao:{t:i+1<IT.length?"Seguinte":"Ver o fim",attrs:{"data-seguinte":""},onclick:function(){proximo()}}};
+  if(C){C.acoes([voltaBtn()]);C.folha.abrir(ultimaFolha)}topo();foto()}
+ function mostrar(){var x=IT[i];estado={};revendo=false;el.innerHTML='<div class="jogo'+(jaFeita?" feita":"")+'"><div class="cartao'+(x.escuro?" escuro":"")+'"><p class="rot atual">'+forma(fase(x))+'<span>'+esc(rotulo(x))+'</span></p>'+(x.cita&&x.t!=="ler"?'<p class="cita">'+citar(x.cita)+'</p>':"")+corpo(x)+'</div></div>';
   if(C){C.folha.fechar();C.rolarTopo();C.como(chaveComo(x))}topo();acoesDe(x);
   var chs=$$(".levar .ch",el);if(chs.length){var lv=$(".levar",el),cur=document.createElement("span");cur.className="cursor";lv.appendChild(cur);if(somOn()&&!reduz())chs.forEach(function(_,k){if(k<200)setTimeout(function(){tocar("tecla")},k*45)})}
   ligarExtras();if(x.t!=="ler")ligar(x);
@@ -161,30 +192,39 @@ function montar(cfg){
     if(window.ResizeObserver&&box)new ResizeObserver(function(){requestAnimationFrame(desenha)}).observe(box)}}}
  function aprendeste(){if(!errados.length)return "";return '<div class="leste"><button type="button" data-aprendeste>O que rever ('+errados.length+')</button><ul class="aprendeste" hidden>'+errados.map(function(x){return '<li><b>'+it(x.p||x.frase||x.verso||"")+'</b>'+it(x.f||"")+'</li>'}).join("")+'</ul></div>'}
  // fim (ronda final): «Lição seguinte» é o botão principal; «Percurso» e «Nova tentativa» em texto ao lado
- function acoesFim(){if(!C)return;var rep={t:"Nova tentativa",cls:"sec",esq:true,attrs:{"data-repetir":""},onclick:function(){soErrados=false;reiniciar()}};
+ function acoesFim(){if(!C)return;var rep={t:"Nova tentativa",cls:"sec",esq:true,attrs:{"data-repetir":""},onclick:function(){soErrados=false;emMais=false;reiniciar()}};
   if(!nFazer())rep=null; /* 15/10/2026: uma aula só de leitura não se «tenta» outra vez */
   if(cfg.seguinte)C.acoes([rep,cfg.percurso?{t:cfg.percursoRotulo||"Percurso",cls:"sec",href:cfg.percurso,attrs:{"data-ao-percurso":""}}:null,{t:cfg.seguinteRotulo||"Lição seguinte",cls:"prim",vai:true,href:cfg.seguinte,attrs:{"data-licao-seguinte":""}}]);
   else C.acoes([rep,cfg.percurso?{t:cfg.voltarRotulo||"Voltar ao percurso",cls:"prim",href:cfg.percurso,attrs:{"data-ao-percurso":""}}:(C.raiz.classList.contains("sobreposta")?{t:"Fechar",cls:"prim",onclick:function(){C.fechar()}}:null)])}
  var conquistou=false;
- function fim(){if(!soErrados){var ex=st.exposicoes&&typeof st.exposicoes==="object"&&!Array.isArray(st.exposicoes)?st.exposicoes:{};IT.forEach(function(x){var k=TODOS.indexOf(x);if(k>=0&&x.t!=="ler"){var v=ex[k];ex[k]=(typeof v==="number"&&isFinite(v)&&v>=0?v:0)+1}});st.exposicoes=ex;st.tentativas++;st.certas=certas;st.total=nFazer();var mAnt=st.melhor||0;if(certas>mAnt||(certas===mAnt&&nFazer()<(st.totalMelhor||1e9)))st.totalMelhor=nFazer();st.melhor=Math.max(st.melhor||0,certas);st.xp=Math.max(st.xp||0,xp);st.seq=Math.max(st.seq||0,melhorSeq);st.lida=true;st.t=Date.now();gravar(K,st)}
-  jaFeita=true;var novoMelhor=!soErrados&&certas>0&&certas>=(st.melhor||0);conquistou=!soErrados&&nFazer()>0&&certas>=Math.ceil(nFazer()*0.8);
+ function fim(){if(emMais){st.mais={feito:true,certas:certas,total:nFazer(),t:Date.now()};if(!PROJ)gravar(K,st)}else if(!soErrados){var ex=st.exposicoes&&typeof st.exposicoes==="object"&&!Array.isArray(st.exposicoes)?st.exposicoes:{};IT.forEach(function(x){var k=TODOS.indexOf(x);if(k>=0&&x.t!=="ler"){var v=ex[k];ex[k]=(typeof v==="number"&&isFinite(v)&&v>=0?v:0)+1}});st.exposicoes=ex;st.tentativas++;st.certas=certas;st.total=nFazer();var mAnt=st.melhor||0;if(certas>mAnt||(certas===mAnt&&nFazer()<(st.totalMelhor||1e9)))st.totalMelhor=nFazer();st.melhor=Math.max(st.melhor||0,certas);st.xp=Math.max(st.xp||0,xp);st.seq=Math.max(st.seq||0,melhorSeq);st.lida=true;st.t=Date.now();if(!PROJ)gravar(K,st)}
+  jaFeita=true;var novoMelhor=!soErrados&&certas>0&&certas>=(st.melhor||0);conquistou=!soErrados&&!emMais&&nFazer()>0&&certas>=Math.ceil(nFazer()*0.8);
   /* 15/10/2026: uma página só de leitura (as aulas do Laboratório) acaba sem resultado nem pontos: «Lido até ao fim» */
-  var soLer=!nFazer();
-  el.innerHTML='<div class="jogo feita"><div class="cartao fim">'+(imagem&&!soErrados?'<img class="fim-img'+(imagemCor?" cor":"")+'" src="'+imagem+'" alt="">':'')+'<p class="rot">'+forma("leva")+'<span>'+(soLer?"Fim":"Resultado")+'</span></p>'+(soLer?'<p class="grande lido">Lido até ao fim.</p>':'<p class="grande">'+((novoMelhor||conquistou)&&cfg.louro?'<span class="louro'+(conquistou?" ganho":"")+'">'+cfg.louro+'</span>':'')+certas+' de '+nFazer()+'</p><p class="xp">'+xp+' pontos'+(melhorSeq>=3?', '+melhorSeq+' seguidas':'')+(st.melhor>certas&&!soErrados?'; o teu melhor continua a ser '+st.melhor:'')+'</p><p class="frase-fim">'+(certas===nFazer()?"Tudo certo.":errados.length?"Relê o que erraste antes de sair.":"")+'</p>')+aprendeste()+(cfg.emblema&&!soErrados&&conquistou?'<img class="emblema" src="'+cfg.emblema+'" alt="Selo">':'')+textoLido()+'<div class="acoes-fim">'+(snaps.length&&!soErrados?'<button type="button" data-rever>Rever desde o início</button>':'')+(errados.length?'<button type="button" data-errados>Só os que errei</button>':'')+'</div>'+(cfg.depois&&!soErrados?'<div class="depois">'+cfg.depois+'</div>':'')+'</div></div>';
+  var soLer=!nFazer(),rotFim=emMais?"Para ir mais longe":cfg.aula&&!soErrados?"A aula acaba aqui":soLer?"Fim":"Resultado";
+  el.innerHTML='<div class="jogo feita"><div class="cartao fim">'+(imagem&&!soErrados?'<img class="fim-img'+(imagemCor?" cor":"")+'" src="'+imagem+'" alt="">':'')+'<p class="rot">'+forma("leva")+'<span>'+rotFim+'</span></p>'+(PROJ&&!emMais?'<p class="grande lido">Fim da lição.</p>':soLer?'<p class="grande lido">Lido até ao fim.</p>':'<p class="grande">'+((novoMelhor||conquistou)&&cfg.louro?'<span class="louro'+(conquistou?" ganho":"")+'">'+cfg.louro+'</span>':'')+certas+' de '+nFazer()+'</p><p class="xp">'+xp+' pontos'+(melhorSeq>=3?', '+melhorSeq+' seguidas':'')+(st.melhor>certas&&!soErrados?'; o teu melhor continua a ser '+st.melhor:'')+'</p><p class="frase-fim">'+(certas===nFazer()?"Tudo certo.":errados.length?"Relê o que erraste antes de sair.":"")+'</p>')+aprendeste()+(cfg.emblema&&!soErrados&&conquistou?'<img class="emblema" src="'+cfg.emblema+'" alt="Selo">':'')+textoLido()+'<div class="acoes-fim">'+(snaps.length&&!soErrados?'<button type="button" data-rever>Rever desde o início</button>':'')+(errados.length?'<button type="button" data-errados>Só os que errei</button>':'')+'</div>'+(temMais&&!soErrados&&!emMais?maisLonge():'')+(cfg.depois&&!soErrados&&!emMais?'<div class="depois">'+cfg.depois+'</div>':'')+'</div></div>';
   naFim=true;fimHTML=el.innerHTML;ligarFim();acoesFim();if(C){C.folha.fechar();C.como(null);C.rolarTopo()}topo(conquistou);
   tocar("fim");if($(".emblema",el))setTimeout(function(){tocar("selo")},900);
-  var g=$(".grande",el);if(g&&!soLer&&window.requestAnimationFrame){var alvo=certas,tot=nFazer(),t0=null;var passo=function(ts){if(!t0)t0=ts;var p=Math.min(1,(ts-t0)/900);g.textContent=Math.round(alvo*p)+" de "+tot;if(p<1)requestAnimationFrame(passo)};requestAnimationFrame(passo)}
-  focoCartao();if(cfg.evento&&!soErrados)try{cfg.evento({t:"fim",i:IT.length-1,xp:xp,certas:certas,n:nFazer()})}catch(x){}if(cfg.fim&&!soErrados)cfg.fim(st)}
+  var g=$(".grande",el);if(g&&!soLer&&!(PROJ&&!emMais)&&window.requestAnimationFrame){var alvo=certas,tot=nFazer(),t0=null;var passo=function(ts){if(!t0)t0=ts;var p=Math.min(1,(ts-t0)/900);g.textContent=Math.round(alvo*p)+" de "+tot;if(p<1)requestAnimationFrame(passo)};requestAnimationFrame(passo)}
+  focoCartao();if(cfg.evento&&!soErrados&&!emMais&&!PROJ)try{cfg.evento({t:"fim",i:IT.length-1,xp:xp,certas:certas,n:nFazer()})}catch(x){}if(cfg.fim&&!soErrados&&!emMais&&!PROJ)cfg.fim(st)}
+ function nMais(){return TODOS.filter(function(x){return x.mais&&x.t!=="ler"}).length}
+ function maisLonge(){var f=st.mais&&st.mais.feito;return '<div class="mais-longe"><p class="ml-t">Para ir mais longe</p><p>Opcional, para casa: '+nMais()+' cartões que aprofundam a lição'+(f?' (já feitos: '+st.mais.certas+' de '+st.mais.total+')':'')+'.</p><button type="button" data-mais>'+(f?'Fazer outra vez':'Começar')+'</button></div>'}
+ // em casa, o excerto do texto (p.pr) volta antes das perguntas «mais» que dependem dele
+ function deckMais(){var out=[],txt=null,usado=false;TODOS.forEach(function(x){if(x.t==="ler"&&!x.mais&&/class="pr[" ]/.test(x.html||"")){txt=x;usado=false;return}if(!x.mais)return;if(x.t!=="ler"&&txt&&!usado){out.push(txt);usado=true}out.push(x)});return out}
+ function irMais(){emMais=true;soErrados=false;IT=deckMais();usarP2=false;reiniciar()}
  /* 12/10/2026: na repetição dos errados, cada pergunta vai precedida do último cartão «ler» que a antecedia no baralho (uma vez só) */
  function comLeitura(E){var lst=[],vistos={};E.forEach(function(x){var k=IT.indexOf(x);for(var j=k-1;j>=0;j--){if(IT[j].t==="ler"){if(!vistos[j]){vistos[j]=1;lst.push(IT[j])}break}}lst.push(variante(x))});return lst}
  function ligarFim(){var E=errados.slice();
   var br=$("[data-rever]",el);if(br)br.onclick=function(){rever(0)};
   var ba=$("[data-aprendeste]",el);if(ba)ba.onclick=function(){var u=ba.nextElementSibling;u.hidden=!u.hidden};
   var bl=$("[data-leste]",el);if(bl)bl.onclick=function(){var d=bl.nextElementSibling;d.hidden=!d.hidden};
-  var be=$("[data-errados]",el);if(be)be.onclick=function(){soErrados=true;IT=comLeitura(E);usarP2=false;reiniciar()};if(window.EPICartaz)try{EPICartaz.montar(el)}catch(x){}
+  var be=$("[data-errados]",el);if(be)be.onclick=function(){soErrados=true;emMais=false;IT=comLeitura(E);usarP2=false;reiniciar()};var bm=$("[data-mais]",el);if(bm)bm.onclick=irMais;if(window.EPICartaz)try{EPICartaz.montar(el)}catch(x){}
   if(cfg.aoDepois)try{cfg.aoDepois(el)}catch(x){}} /* 12/10/2026: aoDepois corre quando o «depois» já está no DOM (antes corria só ao montar) */
- function reiniciar(){ultimaFolha=null;slotFim=null;conquistou=false;if(C)C.folha.fechar();if(!soErrados)novoBaralho();i=0;certas=0;seq=0;melhorSeq=0;xp=0;hist=[];errados=[];acesas={};snaps=[];revendo=false;naFim=false;fimHTML="";mostrar()}
- if(st.lida&&cfg.mostrarAnterior!==false){el.innerHTML='<div class="jogo feita"><div class="cartao fim">'+(imagem?'<img class="fim-img'+(imagemCor?" cor":"")+'" src="'+imagem+'" alt="">':'')+'<p class="rot">'+forma("leva")+'<span>Já feita</span></p><p class="grande">'+(st.melhor||0)+' de '+(st.totalMelhor||Math.max(st.total||0,st.melhor||0)||nFazer())+'</p><p>Já respondeste a esta lição ('+st.tentativas+' vez'+(st.tentativas===1?"":"es")+'). O melhor fica guardado.</p>'+(cfg.depois?'<div class="depois">'+cfg.depois+'</div>':'')+'</div></div>';if(C){C.num(0,0);C.modo(null);C.barra([],-1,null,false);C.como(null);C.acoes([{t:"Nova tentativa",cls:"sec",esq:true,attrs:{"data-repetir":""},onclick:function(){reiniciar()}},cfg.percurso?{t:cfg.percursoRotulo||"Percurso",cls:"sec",href:cfg.percurso,attrs:{"data-ao-percurso":""}}:null,cfg.seguinte?{t:cfg.seguinteRotulo||"Lição seguinte",cls:"prim",vai:true,href:cfg.seguinte}:null])}if(cfg.aoDepois)try{cfg.aoDepois(el)}catch(x){}}
+ function reiniciar(){ultimaFolha=null;slotFim=null;conquistou=false;if(C)C.folha.fechar();if(!soErrados&&!emMais)novoBaralho();i=0;certas=0;seq=0;melhorSeq=0;xp=0;hist=[];errados=[];acesas={};snaps=[];revendo=false;naFim=false;fimHTML="";mostrar()}
+ if(st.lida&&cfg.mostrarAnterior!==false){el.innerHTML='<div class="jogo feita"><div class="cartao fim">'+(imagem?'<img class="fim-img'+(imagemCor?" cor":"")+'" src="'+imagem+'" alt="">':'')+'<p class="rot">'+forma("leva")+'<span>Já feita</span></p><p class="grande">'+(st.melhor||0)+' de '+(st.totalMelhor||Math.max(st.total||0,st.melhor||0)||nFazer())+'</p><p>Já respondeste a esta lição ('+st.tentativas+' vez'+(st.tentativas===1?"":"es")+'). O melhor fica guardado.</p>'+(cfg.depois?'<div class="depois">'+cfg.depois+'</div>':'')+'</div></div>';if(C){C.num(0,0);C.modo(null);C.barra([],-1,null,false);C.como(null);C.acoes([{t:"Nova tentativa",cls:"sec",esq:true,attrs:{"data-repetir":""},onclick:function(){emMais=false;reiniciar()}},temMais?{t:"Para ir mais longe",cls:"sec",attrs:{"data-mais":""},onclick:irMais}:null,cfg.percurso?{t:cfg.percursoRotulo||"Percurso",cls:"sec",href:cfg.percurso,attrs:{"data-ao-percurso":""}}:null,cfg.seguinte?{t:cfg.seguinteRotulo||"Lição seguinte",cls:"prim",vai:true,href:cfg.seguinte}:null])}if(cfg.aoDepois)try{cfg.aoDepois(el)}catch(x){}}
  else mostrar();
+ if(PROJ)document.addEventListener("keydown",function(ev){var tg=ev.target&&ev.target.tagName;if(tg==="SELECT"||tg==="INPUT"||tg==="TEXTAREA"||ev.altKey||ev.ctrlKey||ev.metaKey)return;var R=C?C.raiz:document;
+  if(ev.key==="ArrowRight"||ev.key==="PageDown"){var b=$("[data-c-folha] [data-seguinte]",R)||$("[data-c-acoes] [data-seguinte]",R)||$('[data-rv="seg"]',R);if(b&&!b.disabled){ev.preventDefault();b.click()}}
+  else if(ev.key==="ArrowLeft"||ev.key==="PageUp"){var v=$("[data-volta]",R)||$('[data-rv="ant"]',R);if(v&&!v.disabled){ev.preventDefault();v.click()}}
+  else if(ev.key==="r"||ev.key==="R"){var m=$("[data-mostrar]",R);if(m&&!m.disabled){ev.preventDefault();m.click()}}});
  return {reiniciar:reiniciar,casca:C}}
 return {montar:montar,ler:ler,baralhar:baralhar,tocar:tocar,som:function(v){if(window.EPICasca)return EPICasca.som(v);if(v!==undefined){SOM=!!v;gravar("epi-som",SOM)}return SOM},reduz:reduz}})();

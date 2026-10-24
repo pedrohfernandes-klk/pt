@@ -15,3 +15,13 @@ html.epi-projection{font-size:var(--epi-projection-font-size,22px)!important;}.e
 .epi-projection .d table{font-size:clamp(calc(14px * var(--epi-projection-scale,1)),calc(1.7vw * var(--epi-projection-scale,1)),calc(24px * var(--epi-projection-scale,1)))!important}
 .epi-projection .d.capa .sub{font-size:clamp(calc(12px * var(--epi-projection-scale,1)),calc(1.4vw * var(--epi-projection-scale,1)),calc(18px * var(--epi-projection-scale,1)))!important}
 .epi-projection .d{overflow:auto!important}
+
+/* 23/10/2026: a lição projetada é a aula, ampliada. Coluna mais larga, sem pontos (a projeção não grava) e com «Mostrar resposta» */
+html.epi-projection.com-casca{--col:min(1180px,100%)}
+.epi-projection .casca-folha .c-pts,.epi-projection .jogo .fim .xp,.epi-projection .jogo .fim .frase-fim,.epi-projection .jogo .fim .emblema,.epi-projection .casca-topo [data-c-som]{display:none!important}
+.epi-projection .jogo .aula-plano{font-size:1.15rem!important}
+.epi-projection .jogo .resp-proj{font-size:1.15rem!important;line-height:1.5!important}
+/* 23/10/2026, plano de melhoria: na projeção, a tarefa de observar ao tamanho do corpo e a imagem ou o vídeo até 45 % da altura */
+html.epi-projection .jogo .ler .ex-antes,html.epi-projection .jogo .ler .ex-depois{font-size:1em}
+html.epi-projection .jogo .ler .ju-video{max-height:45vh;aspect-ratio:auto;height:min(45vh,calc((100vw - 64px)*.5625))}
+html.epi-projection .jogo .ler .fig img{max-height:45vh}
