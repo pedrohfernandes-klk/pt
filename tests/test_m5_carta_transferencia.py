@@ -32,6 +32,8 @@ class LetterIntegration(unittest.TestCase):
                          [(c['k'], c['p']) for c in expected])
 
     def test_module_copy_preserves_the_same_answers_and_feedback(self):
+        # The module can show p2 without the lesson's preceding model card.
+        self.assertIn('a tua ausência é um mar sem margem', self.cards[9]['p2'])
         text = (ROOT / 'm5/index.html').read_text(encoding='utf-8')
         units, _ = json.JSONDecoder().raw_decode(re.split(r'var U\s*=', text, 1)[1])
         copies = [c for u in units for c in u['pool'] if c.get('p') == self.cards[9]['p']]
