@@ -35,7 +35,8 @@ class ContextualInterpretation(unittest.TestCase):
         self.assertEqual('dentro de quê', bank[11]['lacunas'][1]['o'][1])
 
     def test_coordination_feedback_requires_context(self):
-        card = cards('m1', '11')[19]
+        # 24/10/2026 (aulas claras M1, decisão do docente de 23/10): a lição foi refeita no molde do M4; os cartões verificados ficam iguais, mudam de propósito a contagem e os índices. O vf do «mas» e do «e» passa do cartão 19 para o 15.
+        card = cards('m1', '11')[15]
         self.assertIs(True, card['v'])
         self.assertIn('contexto', card['f'])
         self.assertNotIn('Quem dá o nome à oração é a conjunção', card['f'])

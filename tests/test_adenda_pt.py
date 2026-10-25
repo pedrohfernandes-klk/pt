@@ -4,7 +4,8 @@ ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT/'scripts'))
 from audit_cards import lesson_cards
 class Adenda(unittest.TestCase):
  def test_shared_retomas_are_optional_unscored_and_allow_individual_work(self):
-  for path,index in [('m1/licao-m1-f02/index.html',19),('m9/licao-m9-f10/index.html',15)]:
+  # 24/10/2026 (aulas claras M1, decisão do docente de 23/10): a lição foi refeita no molde do M4; os cartões verificados ficam iguais, mudam de propósito a contagem e os índices. A retoma partilhada da M1-F02 passa do cartão 19 para o 15.
+  for path,index in [('m1/licao-m1-f02/index.html',15),('m9/licao-m9-f10/index.html',15)]:
    c=lesson_cards(ROOT/path)[index]
    self.assertEqual(c['t'],'ler');self.assertIn('class="retoma-partilhada"',c['html']);self.assertIn('A sós',c['html'])
    self.assertNotIn('<input',c['html']);self.assertNotIn('<textarea',c['html']);self.assertFalse(set(c)&{'c','v','pares','lacunas'})

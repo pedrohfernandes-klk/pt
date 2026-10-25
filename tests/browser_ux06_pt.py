@@ -6,7 +6,8 @@ from playwright.sync_api import sync_playwright
 from browser_m1_and_inventory import QuietHandler,new_page,ROOT
 PLANS=json.loads((ROOT/'docs/pedagogia/percursos-unidades-20261020.json').read_text('utf-8'))
 OUT=ROOT.parents[1]/'outputs/design-pt'
-SEM_PASSAPORTE={4}
+# 24/10/2026 (aulas claras do M1, como o M4 a 23/10): o percurso do M1 passa a lista simples de aulas, sem passaporte
+SEM_PASSAPORTE={1,4}
 
 def main():
  server=ThreadingHTTPServer(('127.0.0.1',0),partial(QuietHandler,directory=str(ROOT.parent)))
@@ -60,7 +61,9 @@ def main():
    ctx,page=new_page(browser,320);page.goto(host+'/pt/m1/',wait_until='networkidle')
    page.evaluate("localStorage.setItem('licao-m1-f01',JSON.stringify({lida:true}));localStorage.setItem('licao-m1-f01-a1',JSON.stringify({lida:true}));localStorage.setItem('epi-pt-olhar-ajuda',JSON.stringify({fim:true}))")
    page.reload(wait_until='networkidle');assert 'Continuar: Cercada pelas ondas' in page.locator('[data-module-next]').inner_text()
-   page.evaluate("localStorage.removeItem('licao-m1-f01-a1')");page.reload(wait_until='networkidle');assert 'Retomar:' in page.locator('[data-module-next]').inner_text()
+   # 24/10/2026 (aulas claras do M1): uma aula está feita ou por fazer; feita = a lição acabada. Tirar a atividade -a1 já não
+   # deixa a aula 1 «começada» (deixa de haver «Retomar:»), e o botão continua na aula 2.
+   page.evaluate("localStorage.removeItem('licao-m1-f01-a1')");page.reload(wait_until='networkidle');assert 'Continuar: Cercada pelas ondas' in page.locator('[data-module-next]').inner_text()
    # Full first unit: go to the pending checkpoint, then to the synthesis.
    plan=PLANS[0];source=(ROOT/'m1/index.html').read_text('utf-8');match=re.search(r'\bU\s*=\s*(\[)',source);units=json.JSONDecoder().raw_decode(source[match.start(1):])[0]
    page.evaluate('''steps=>{for(const p of steps){if(p.licao){localStorage.setItem('licao-'+p.licao,JSON.stringify({lida:true}));localStorage.setItem('licao-'+p.licao+'-a1',JSON.stringify({lida:true}));}for(const id of [...p.exs,...(p.ativ||[]).filter(a=>a!=='ler')])localStorage.setItem('epi-pt-'+id,JSON.stringify({fim:true}));}}''',units[0]['passos'])

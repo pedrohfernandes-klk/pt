@@ -80,10 +80,11 @@ def main():
 
             source = (ROOT / 'm1/licao-m1-f01/index.html').read_text('utf-8')
             bank = json.JSONDecoder().raw_decode(source.split('CARTOES=', 1)[1].lstrip())[0]
-            for index in (3, 4, 8, 9, 10):
+            # 24/10/2026 (aulas claras M1, decisão do docente de 23/10): a lição foi refeita no molde do M4; os cartões verificados ficam iguais, mudam de propósito a contagem e os índices. M1-F01: o conceito fica no 3 e o emparelhar no 4; a escolha das melodias passa de 8 a 6, o vf de 9 a 5 e o ordenar de 10 a 16.
+            for index in (3, 4, 6, 5, 16):
                 for width in (320, 390, 1440):
                     # Repeat both truth values / each choice, including wrong answers.
-                    answers = range(4) if index == 8 else range(2) if index == 9 else (None,)
+                    answers = range(4) if index == 6 else range(2) if index == 5 else (None,)
                     for answer in answers:
                         ctx, page = new_page(browser, width)
                         page.goto(f'{host}/m1/licao-m1-f01/', wait_until='networkidle')
@@ -104,18 +105,18 @@ def main():
                                 # Classification targets use first-seen unique labels.
                                 targets = list(dict.fromkeys(p[1] for p in bank[index]['pares']))
                                 modal.locator(f'button[data-d="{targets.index(target)}"]').click()
-                        elif index == 10:
+                        elif index == 16:
                             for i in range(3):
                                 modal.locator(f'.soltos button[data-j="{i}"]').click()
                         if index != 3:
                             text = modal.locator('.casca-folha').inner_text()
                             assert len(text) > 60, (index, text)
-                            if index == 8:
+                            if index == 6:
                                 assert ('Certo.' in text) == (answer == 0), text
                                 assert 'jograis' in text.lower() or answer in (0, 3), text
-                            if index == 9:
+                            if index == 5:
                                 assert ('Certo.' in text) == (answer == 0), text
-                            if index == 10:
+                            if index == 16:
                                 assert 'Certo.' in text and 'simplificação tradicional' in text, text
                         assert page.evaluate('document.documentElement.scrollWidth <= innerWidth + 3'), (index, width)
                         modal.locator('[data-seguinte]').click()
