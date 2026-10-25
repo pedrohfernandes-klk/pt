@@ -1,8 +1,14 @@
-# M4 — auditoria operacional e proposta não aplicada
+# M4 — auditoria de paridade após integração do PR #80
 
-Referência publicada examinada: af75f7441bb4f28060d5672bb2c199be4ff74654 (25-10-2026). PR concorrente protegido: #80, head7902be396ddddd272a57e9c50450de74987a0a34. Esta entrega não altera lições, painéis, desafios, guiões, projeção ou progresso de M4. O último lote anterior (#91) terminou a regressão geral com sucesso.
+25-10-2026. Main atual verificado: `b72521542aa06c261708e3f6034438f97cdd5723`, após integração do #80 e do Atlas #94. Pages desse main terminou com sucesso. Esta entrega não altera lições, painéis, desafios, guiões, projeção ou progresso de M4.
 
-## Resultado dos painéis
+## Estado atual confirmado
+
+Foi recolhido um snapshot dos treze painéis no SHA indicado, por leitura do GitHub. Os blobs das dezasseis páginas de lição foram comparados com a árvore desse main e coincidem com as páginas locais usadas como fonte dos cartões. O auditor executado no snapshot confirmou **12 bancos/98 seleções alinhados**. F25/F26/F27 continuam sem painel dedicado e F28 é um guião editorial: são quatro situações não certificadas pelo auditor, não defeitos automaticamente demonstrados.
+
+O patch mínimo anexado na primeira versão do #92 foi retirado depois de o #80 integrar as correções. Não reaplicar esse patch: os onze painéis já estão corrigidos no main. O #92 passa a conter só auditor, testes e relatório. O envio desta atualização ainda aguarda disponibilidade da revisão de aprovação; não se declara integrado no GitHub.
+
+## Diagnóstico histórico dos painéis — base af75f744
 
 | Situação | Quantidade |
 |---|---:|
@@ -14,7 +20,7 @@ Referência publicada examinada: af75f7441bb4f28060d5672bb2c199be4ff74654 (25-10
 
 Nos 11 bancos antigos, 192 seleções:52 apontam para índices inválidos,75 para cartões de leitura e65 para perguntas/tipos diferentes. Não há uma seleção alinhada nesses 11 bancos. F20 acrescenta10 seleções alinhadas. A falta de painel dedicado e a existência de um guião editorial não são automaticamente defeitos de navegação: é necessário verificar os acessos anunciados e o papel pretendido.
 
-Os 11 painéis estão todos alterados no PR #80. Comparados os bancos desse PR com as lições atuais, os12 painéis com banco ficam alinhados (98 seleções, incluindo F20). Isto verifica a correspondência de dados, não uma certificação pedagógica de todas as respostas ou do transporte entre aparelhos.
+Os onze painéis foram corrigidos pelo responsável por M1/M4 no PR #80. A comparação depois da integração confirma os doze bancos alinhados (98 seleções, incluindo F20). Os números da tabela e os 192 desencontros acima pertencem à base anterior. Isto verifica correspondência de dados, não certificação pedagógica de todas as respostas nem do transporte entre aparelhos.
 
 ### Reprodução real em F07
 
@@ -22,7 +28,7 @@ O painel publicado usa índices antigos. Em duas páginas locais com `?local=1`,
 
 Numa cópia temporária do painel do PR #80, no mesmo canal local, foi selecionada a pergunta correta. Painel e aluno mostraram o mesmo enunciado; a opção correta, feedback e retorno ao docente foram verificados. A cópia foi removida e não integra esta entrega. Não foram testados todos os98 controlos no navegador, nem ntfy.sh, redes/dispositivos distintos, QR físico, pausas, votação ou acessibilidade por leitor de ecrã.
 
-## Desafios: diagnóstico pedagógico independente
+## Desafios: diagnóstico pedagógico independente, não encerrado pela paridade
 
 Auditoria de leitura em paralelo:170 itens distribuídos pelas16 lições,132 questões atuais. Não há identificador de lição órfão no banco. Só7 enunciados são iguais literalmente; isso não significa que os163 restantes estejam errados. Foram lidos em profundidade F07, F28 e os casos identificados abaixo, não os170 gabaritos de forma exaustiva.
 
@@ -33,7 +39,7 @@ Auditoria de leitura em paralelo:170 itens distribuídos pelas16 lições,132 qu
 - **F15, unidade1 pool[63]:** a inferência de «Portanto os homens falam» depende de um parágrafo que não acompanha a questão. É dependência contextual a rever, não gabarito automaticamente falso.
 - **F26/F27:** lacunas de cobertura das operações de ironia dramática e comparação fundamentada; exigem segundo lote, sem declarar todas as perguntas existentes obsoletas.
 
-Todos estes casos do desafio incidem em `m4/index.html`, também alterado no PR #80. Não foram aplicadas alterações nesse ficheiro.
+Estes casos incidem em `m4/index.html`. Não foram alterados por esta auditoria, nem foi repetida integralmente a revisão pedagógica após o #80. O responsável por M4 deve reconfirmar o desafio atual e tratar os casos em lote próprio. Não os declarar resolvidos só porque os painéis alinham.
 
 ## Entrega técnica de leitura
 
@@ -44,16 +50,16 @@ Reprodução:
     python scripts/audit_teacher_parity.py --modules m4 --output paineis-main.json
     python scripts/audit_teacher_parity.py --modules m4 --panel-ref 7902be396ddddd272a57e9c50450de74987a0a34 --output paineis-pr80.json
 
-Ambos devolvem código1 neste snapshot: no main existem desencontros e quatro situações não certificadas; na proposta subsistem as três páginas sem painel e o painel editorial. O código1 não representa uma falha da implementação do auditor nem uma certificação de que um guião editorial esteja errado.
+Na base histórica, ambos devolviam código 1: no main havia desencontros e quatro situações não certificadas; na proposta subsistiam as três páginas sem painel e o guião editorial. No main posterior ao #80, o primeiro comando continua a devolver 1 só pelas quatro situações não certificadas. O código não significa falha dos testes do auditor nem obrigação de substituir o guião por um painel. Executar o primeiro comando numa base que já inclua o #80; o segundo conserva apenas valor de comparação histórica.
 
-## Proposta concreta e conflito
+## Integração delimitada após coordenação
 
-O ficheiro `m4-paineis-proposta-nao-aplicada-20261025.patch` propõe apenas sincronizar bancos e seletores dos11 painéis, preservando código e estilos de main. **Não está aplicado.** A pré-visualização de navegador testou o painel completo do PR #80; o patch mínimo tem validação estática de aplicação, não certificação de todas as interações.
+O patch `m4-paineis-proposta-nao-aplicada-20261025.patch` foi retirado desta entrega porque a correção já veio pelo #80. Era um artefacto de engenharia, não conteúdo pedagógico. Não criar outra implementação concorrente dos painéis. O #92 integra apenas ferramenta, quatro testes e relatório atualizado.
 
-Antes de aplicar ou abrir outro lote de painéis, coordenar a separação dessas correções do PR #80 ou integrar o lote que as contém. Não criar duas implementações concorrentes. Não equiparar M1 preparado a M7 concluído.
+M1 foi integrado pelo responsável. M7 continua reservado ao Claude; não equiparar a conclusão do M1 à do M7. A cobertura pedagógica dos desafios M4 também permanece com o responsável por M4.
 
-Depois, um lote de desafio limitado pode corrigir a definição, acrescentar cobertura de presságio por substituição editorial justificada, restaurar dois cenários de F28 e alinhar a duração hipotética de F20. Os conteúdos preservados e o efeito de cada substituição têm de ser documentados. Ensaiar as variantes isoladas e uma tentativa normal de oito questões. Não implementar este lote sobre o mesmo ficheiro enquanto o conflito estiver aberto.
+Um lote próprio de desafio pode confirmar/corrigir a definição, cobertura de presságio, cenários de F28 e duração hipotética de F20. Documentar conteúdos preservados e efeito das substituições; ensaiar variantes isoladas e uma tentativa normal de oito questões. Não implementar por esta conversa sobre ficheiros reservados ao Claude.
 
 ## Testes e limites
 
-178 testes Python aprovados, incluindo quatro testes novos do auditor (identidade de resposta/feedback, índices negativos e fora do banco, alvo de leitura, rótulo/tipo desviado, painel ausente/editorial e módulo vazio). Auditor executado em main e com os painéis do PR #80; resultados completos guardados na entrega local. Nenhum ficheiro M4 alterado. A verificação real de sala foi apenas local e apenas F07. Guiões/diapositivos/projeção não foram integralmente certificados. Esta auditoria não resolve nem publica as correções P0: torna o problema, a proposta existente e os limites verificáveis.
+178 testes Python aprovados na branch desta auditoria, incluindo quatro do auditor (identidade de resposta/feedback, índices negativos e fora do banco, alvo de leitura, rótulo/tipo desviado, painel ausente/editorial e módulo vazio). Comparação adicional do snapshot posterior ao #80 executada com 12 bancos/98 seleções alinhados. Resultados completos e identidade do snapshot guardados na entrega local. Nenhum ficheiro M4 alterado por esta entrega. O CI final deve verificar a combinação com o main atual; a suite local anterior não é esse ensaio combinado. A sessão real foi apenas local/F07 antes da integração; não foi repetida em sala pública depois do #80. Guiões/diapositivos/projeção não foram integralmente certificados. O #92 não é uma nova publicação funcional: as correções dos painéis vieram pelo #80 e as pendências pedagógicas continuam separadas.
