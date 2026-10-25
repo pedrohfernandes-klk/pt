@@ -226,6 +226,7 @@ figure img[tabindex]:focus-visible{outline:3px solid var(--tinta,#000);outline-o
 #palco .dil-tarefa p:not(.dil-rubrica){margin:0 0 12px}
 #palco .dil-tarefa .dil-acao{margin:16px 0 0!important;padding-top:14px;border-top:1px solid var(--linha)}
 #palco .dil-leitura+a.ligar{display:block;width:fit-content;max-width:100%;min-height:44px;margin:16px 0 0;padding:10px 0;text-align:left;background:transparent;color:var(--tinta);font:400 .8rem/1.5 Arial,Helvetica,sans-serif;text-transform:none;letter-spacing:0;text-decoration:underline;text-underline-offset:.2em;overflow-wrap:anywhere}
+.dil-feedback-nav{display:flex;align-items:center;gap:12px;flex-wrap:wrap}.casca-folha .dil-feedback-nav .c-prim{width:auto;flex:1;margin-top:0}.dil-feedback-nav .c-seta{flex:none;min-width:44px}
 @media(max-width:600px){#palco .dil-exemplo{grid-template-columns:minmax(0,1fr);gap:8px;padding:18px 0}#palco .dil-exemplo h2{grid-column:1}#palco .dil-exemplo blockquote{font-size:1.12em}#palco .dil-tarefa{padding:16px;margin-top:12px}}
 @media(prefers-color-scheme:dark){#palco .dil-leitura{--dil-acento:#e9b39e;--dil-regiao:#242320}}
 @media print{#palco .dil-exemplo,#palco .dil-tarefa{break-inside:avoid}#palco .dil-leitura{--dil-acento:#000;--dil-regiao:transparent}}
@@ -456,9 +457,9 @@ function abreFolha(P,k){if(!C)return;var ret=palco.querySelector(".ret");if(!ret
  else if(P.tipo==="riscar")st=(r.faltam||[]).length?"meio":"ok";
  else if(r.certos!=null){var tot=P.tipo==="julgar"?P.casos.length:P.tipo==="par"?P.pares.length:P.tipo==="classificar"?P.itens.length:P.tipo==="ordenar"?P.itens.length:(r.total||1);st=r.certos===tot?"ok":r.certos>0?"meio":"mau"}
  var h=ret.innerHTML;if(pal)h=h.replace(pal.outerHTML,"");C.folha.abrir({estado:st,titulo:tit||(st==="ok"?"Certo":st==="meio"?"Em parte":"Não"),html:h,focar:false});
- var fin=document.querySelector(".casca-folha .c-folha-in");if(fin){fin.appendChild(bS);bS.hidden=false;bS.disabled=!pronto(k);bS.className="c-prim c-vai"}
+ var fin=document.querySelector(".casca-folha .c-folha-in"),fn=null;if(fin){fn=document.createElement("div");fn.className="dil-feedback-nav";fin.appendChild(fn);fn.appendChild(bV);fn.appendChild(bS);bS.hidden=false;bS.disabled=!pronto(k);bS.className="c-prim c-vai"}
  // os outros botões do rodapé («Recomeçar a história», «Outra vez»…) sobem com a faixa: por baixo dela ficavam escondidos
- if(fin&&ACOES)[].slice.call(ACOES.querySelectorAll("button")).forEach(function(b){if(b!==bV&&b!==bS&&!b.hidden){b.className="c-sec";fin.insertBefore(b,bS)}})}
+ if(fn&&ACOES)[].slice.call(ACOES.querySelectorAll("button")).forEach(function(b){if(b!==bV&&b!==bS&&!b.hidden){b.className="c-sec";fn.insertBefore(b,bS)}})}
 function seguir(){if(est.i<N){est.i++;mostra()}}
 var abertas={}; // imagens temporizadas que o aluno mandou mostrar (08/10/2026: a contagem só começa com o toque)
 function liga(P,k){
