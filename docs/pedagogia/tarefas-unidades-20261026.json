@@ -1,0 +1,274 @@
+{
+  "reference_date": "2026-10-26",
+  "timing_minutes": {
+    "presentation": 10,
+    "html_preparation": 10,
+    "paper_production": 60,
+    "review_and_submission": 10
+  },
+  "submission": "Photographs of paper work in the Teams assignment created by the teacher at the start of the lesson",
+  "integration": "Separate final task access; preserve existing lesson URLs, content and digital progress",
+  "assessment": "Preserve existing criteria and weights",
+  "consultation": "Always open-resource: students may consult texts, lesson materials and their notes throughout the task",
+  "task_format": "One production or several questions, according to the learning goals; no requirement for a single continuous text",
+  "scope_note": "This is a structural inventory and a list of candidates, not certification that every unit already has a 90-minute task. A short written response or a lexical match is not sufficient evidence.",
+  "units": [
+    {
+      "module": 1,
+      "unit": 1,
+      "title": "Vozes da lírica medieval",
+      "last_step": {
+        "id": "m1-voz-emprestada",
+        "title": "A voz emprestada"
+      },
+      "existing_production_candidates": [],
+      "status": "requires_editorial_review",
+      "task_url": null
+    },
+    {
+      "module": 1,
+      "unit": 2,
+      "title": "A cidade na crónica de Fernão Lopes",
+      "last_step": {
+        "id": "m1-f11",
+        "title": "Ondas, gritos e grãos de trigo"
+      },
+      "existing_production_candidates": [],
+      "status": "requires_editorial_review",
+      "task_url": null
+    },
+    {
+      "module": 2,
+      "unit": 1,
+      "title": "Ler a Farsa: desejos, escolhas e consequências",
+      "last_step": {
+        "id": "m2-f06",
+        "title": "Quero asno que me leve"
+      },
+      "existing_production_candidates": [],
+      "status": "requires_editorial_review",
+      "task_url": null
+    },
+    {
+      "module": 2,
+      "unit": 2,
+      "title": "Interpretar e representar: crítica, cena e atualidade",
+      "last_step": {
+        "id": "m2-f09",
+        "title": "Asno ou cavalo, hoje"
+      },
+      "existing_production_candidates": [
+        "m2-f08",
+        "m2-f09"
+      ],
+      "status": "requires_editorial_review",
+      "task_url": null
+    },
+    {
+      "module": 3,
+      "unit": 1,
+      "title": "Camões: o mundo e a voz",
+      "last_step": {
+        "id": "m3-soneto-raciocinio",
+        "title": "O soneto que acaba numa pergunta"
+      },
+      "existing_production_candidates": [],
+      "status": "requires_editorial_review",
+      "task_url": null
+    },
+    {
+      "module": 3,
+      "unit": 2,
+      "title": "Dentro da epopeia: celebrar e questionar",
+      "last_step": {
+        "id": "m3-f17",
+        "title": "Celebrar e criticar no mesmo poema"
+      },
+      "existing_production_candidates": [],
+      "status": "requires_editorial_review",
+      "task_url": null
+    },
+    {
+      "module": 4,
+      "unit": 1,
+      "title": "Pregar aos peixes",
+      "last_step": {
+        "id": "m4-f10",
+        "title": "Um peixe, um vício"
+      },
+      "existing_production_candidates": [
+        "m4-f10"
+      ],
+      "status": "requires_editorial_review",
+      "task_url": null
+    },
+    {
+      "module": 4,
+      "unit": 2,
+      "title": "O Romeiro diz «Ninguém»",
+      "last_step": {
+        "id": "m4-frei-luis-quem-sabia",
+        "title": "Quem sabia, e quando"
+      },
+      "existing_production_candidates": [
+        "m4-f20"
+      ],
+      "status": "requires_editorial_review",
+      "task_url": null
+    },
+    {
+      "module": 4,
+      "unit": 3,
+      "title": "Trinta dias no abrigo",
+      "last_step": {
+        "id": "m4-f11",
+        "title": "A palavra contra o poder"
+      },
+      "existing_production_candidates": [
+        "m4-f11"
+      ],
+      "status": "pilot",
+      "task_url": "tarefas/m4-u3/"
+    },
+    {
+      "module": 5,
+      "unit": 1,
+      "title": "Um amor contra duas famílias",
+      "last_step": {
+        "id": "m5-quem-podia-ter-feito-diferente",
+        "title": "Quem podia ter feito diferente"
+      },
+      "existing_production_candidates": [
+        "m5-f08"
+      ],
+      "status": "requires_editorial_review",
+      "task_url": null
+    },
+    {
+      "module": 5,
+      "unit": 2,
+      "title": "A casa dos Maias",
+      "last_step": {
+        "id": "m5-f15",
+        "title": "Dois modos de perder a vida"
+      },
+      "existing_production_candidates": [],
+      "status": "requires_editorial_review",
+      "task_url": null
+    },
+    {
+      "module": 6,
+      "unit": 1,
+      "title": "O ideal e a rua",
+      "last_step": {
+        "id": "m6-f04",
+        "title": "Como se ligam as orações"
+      },
+      "existing_production_candidates": [],
+      "status": "requires_editorial_review",
+      "task_url": null
+    },
+    {
+      "module": 6,
+      "unit": 2,
+      "title": "A cidade inteira",
+      "last_step": {
+        "id": "m6-f09",
+        "title": "Fora do mundo, dentro da cidade"
+      },
+      "existing_production_candidates": [
+        "m6-f08"
+      ],
+      "status": "requires_editorial_review",
+      "task_url": null
+    },
+    {
+      "module": 7,
+      "unit": 1,
+      "title": "Pessoa: fingimento, memória e identidade",
+      "last_step": {
+        "id": "m7-f15",
+        "title": "A infância que não tive"
+      },
+      "existing_production_candidates": [],
+      "status": "requires_editorial_review",
+      "task_url": null
+    },
+    {
+      "module": 7,
+      "unit": 2,
+      "title": "Heterónimos: modos de ver e de viver",
+      "last_step": {
+        "id": "m7-quatro-vozes-um-problema",
+        "title": "Quatro vozes, um problema"
+      },
+      "existing_production_candidates": [],
+      "status": "requires_editorial_review",
+      "task_url": null
+    },
+    {
+      "module": 7,
+      "unit": 3,
+      "title": "Mensagem: imaginar o país e confrontar as vozes",
+      "last_step": {
+        "id": "m7-f11",
+        "title": "Quantas vozes cabem num homem"
+      },
+      "existing_production_candidates": [
+        "m7-f10"
+      ],
+      "status": "requires_editorial_review",
+      "task_url": null
+    },
+    {
+      "module": 8,
+      "unit": 1,
+      "title": "Três vozes, um século",
+      "last_step": {
+        "id": "m8-f10",
+        "title": "Poema com pintura ou álbum"
+      },
+      "existing_production_candidates": [
+        "m8-f10"
+      ],
+      "status": "requires_editorial_review",
+      "task_url": null
+    },
+    {
+      "module": 8,
+      "unit": 2,
+      "title": "O que cabe num conto",
+      "last_step": {
+        "id": "m8-f12",
+        "title": "Sugerir em vez de explicar"
+      },
+      "existing_production_candidates": [],
+      "status": "requires_editorial_review",
+      "task_url": null
+    },
+    {
+      "module": 9,
+      "unit": 1,
+      "title": "A pedra e o sonho",
+      "last_step": {
+        "id": "m9-ver-e-nao-ver",
+        "title": "Ver e não ver"
+      },
+      "existing_production_candidates": [],
+      "status": "requires_editorial_review",
+      "task_url": null
+    },
+    {
+      "module": 9,
+      "unit": 2,
+      "title": "Quem fala e quem faz a obra",
+      "last_step": {
+        "id": "m9-f07",
+        "title": "Três anos numa resposta"
+      },
+      "existing_production_candidates": [],
+      "status": "requires_editorial_review",
+      "task_url": null
+    }
+  ]
+}

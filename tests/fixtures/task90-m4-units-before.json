@@ -1,0 +1,78 @@
+{
+  "baseline": "2b74e27e77e2e39e28b31c0987dbdba82a02bec9",
+  "units": [
+    {
+      "number": 1,
+      "title": "Pregar aos peixes",
+      "question": "Vale a pena dizer a verdade a quem não a quer ouvir?",
+      "stages": [
+        "1"
+      ],
+      "lessons": [
+        "m4-f01",
+        "m4-f02",
+        "m4-f04",
+        "m4-f25",
+        "m4-f06",
+        "m4-f15",
+        "m4-f10"
+      ],
+      "steps": [
+        "m4-f01",
+        "m4-f02",
+        "m4-f04",
+        "m4-f25",
+        "m4-sermao-tribunal",
+        "m4-f06",
+        "m4-f15",
+        "m4-f10"
+      ],
+      "complements": []
+    },
+    {
+      "number": 2,
+      "title": "O Romeiro diz «Ninguém»",
+      "question": "O que se perde quando se perde o nome?",
+      "stages": [
+        "2"
+      ],
+      "lessons": [
+        "m4-f28",
+        "m4-f07",
+        "m4-f20",
+        "m4-f08",
+        "m4-f09",
+        "m4-f26"
+      ],
+      "steps": [
+        "m4-f28",
+        "m4-f07",
+        "m4-f20",
+        "m4-f08",
+        "m4-f09",
+        "m4-f26",
+        "m4-frei-luis-quem-sabia"
+      ],
+      "complements": []
+    },
+    {
+      "number": 3,
+      "title": "Trinta dias no abrigo",
+      "question": "Como se defende uma regra em dois minutos?",
+      "stages": [
+        "3"
+      ],
+      "lessons": [
+        "m4-f14",
+        "m4-f27",
+        "m4-f11"
+      ],
+      "steps": [
+        "m4-f14",
+        "m4-f27",
+        "m4-f11"
+      ],
+      "complements": []
+    }
+  ]
+}
