@@ -1,3 +1,13 @@
+# Revisão pedagógica de 26/10/2026
+
+A pedido do docente, a entrada F28 passa do treino genérico de observação para o conflito dramático: passado/presente, relações de Madalena e primeira fala amor/medo. A primeira ação permite experimentar duas falas inventadas sem pontuação; os exemplos genéricos anteriores ficam como apoio opcional. Os dois vídeos continuam a pedido. A didascália original, URLs, 15 cartões, sete atividades, chave de progresso, ordem das fichas e critérios da produção mantêm-se. Guia de 45 minutos alinhado; não se alteram as restantes fichas nem o motor.
+
+Fontes reconfirmadas: sinopse e créditos LU.CA (edição 2026); Garrett no Gutenberg, ato I, cenas I–II, para a fala e relações familiares. A comparação não equipara a situação dos ex-namorados à família de Garrett. A incerteza da memória tem alternativa pelo texto.
+
+Testes e publicação desta revisão são registados no PR do lote e em outputs/m4-tpc-ponte-20261026. A descrição abaixo conserva a decisão inicial para rastreabilidade; os exemplos inventados deixaram de ser o núcleo.
+
+---
+
 # M4 — depois de TPC no LU.CA
 
 ## Decisão editorial

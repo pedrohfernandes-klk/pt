@@ -40,6 +40,11 @@ try:
    # 23/10/2026: espera pelo cartão desenhado (lido logo a seguir ao clique, o #baralho ainda vazio dava falsos erros em máquinas lentas)
    page.wait_for_url('**/licao-m4-f28/');page.locator('#baralho .cartao').wait_for()
    assert 'Já viste' in page.locator('#baralho').inner_text()
+   # 26/10: ação sem pontuação antes da contextualização; as falas são propostas da aula.
+   page.locator('[data-cc-op]').first.press('Enter')
+   assert 'Não há uma escolha certa' in page.locator('#baralho').inner_text()
+   page.locator('[data-cc-mais]').click()
+   assert 'o tom' in page.locator('#baralho').inner_text()
    page.locator('.casca [data-seguinte]').click()
    assert 'Raquel Castro' in page.locator('#baralho').inner_text()
    assert 'Almeida Garrett' in page.locator('#baralho').inner_text()
@@ -54,15 +59,15 @@ try:
    for _ in range(5):
     if page.locator('#baralho button[data-j="1"]').count():break
     respond(page)
-   assert 'interpretação sustentada' in page.locator('#baralho').inner_text()
+   assert 'Que leitura explica melhor a tensão' in page.locator('#baralho').inner_text()
    page.locator('#baralho button[data-j="1"]').press('Enter')
    assert 'Confrontar' not in page.locator('[data-c-folha]').inner_text()
-   assert 'hipótese liga' in page.locator('[data-c-folha]').inner_text()
+   assert 'dentro da mesma experiência' in page.locator('[data-c-folha]').inner_text()
    page.locator('[data-c-folha] [data-seguinte]').click()
    # Shared engine persists completion, not a half-finished session.
    page.reload(wait_until='networkidle')
    assert ''.join(page.locator('[data-c-num]').inner_text().split())=='1/15'
-   assert 'O palco abriu uma pergunta' in page.locator('#baralho').inner_text()
+   assert 'O passado senta-se à mesa' in page.locator('#baralho').inner_text()
    finish(page)
    assert page.evaluate('!!JSON.parse(localStorage.getItem("licao-m4-f28-a1"))')
    page.reload(wait_until='networkidle')
