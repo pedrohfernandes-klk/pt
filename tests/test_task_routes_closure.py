@@ -28,7 +28,7 @@ class TaskRoutes(unittest.TestCase):
     self.assertEqual(old['passos'],new['passos']);self.assertEqual(old['licoes'],new['licoes'])
     self.assertEqual(old['pool_sha256'],hashlib.sha256(json.dumps(new['pool'],sort_keys=True,ensure_ascii=False).encode()).hexdigest())
    for path,digest in before['files'].items():
-    self.assertEqual(digest,hashlib.sha256((ROOT/path).read_bytes()).hexdigest(),path)
+    self.assertEqual(digest,hashlib.sha256((ROOT/path).read_text('utf-8').encode('utf-8')).hexdigest(),path)
  def test_one_classroom_task_per_unit_no_independent_closure_gate(self):
   expected={1:['m1-u1','m1-u2'],4:['m4-u1','m4-u2','m4-u3-discurso'],7:['m7-u1','m7-u2','m7-u3']}
   for m,slugs in expected.items():
@@ -40,6 +40,9 @@ class TaskRoutes(unittest.TestCase):
    self.assertNotIn('TAREFA FINAL',s);self.assertNotIn('sinteseFeita',s)
    self.assertIn('id="arquivo-percurso" hidden',s)
    self.assertIn('unit-task-route.js',s)
+   self.assertNotIn('data-cartaz="percurso"',s)
+   self.assertIn('data-cartaz-archive="percurso"',s)
+   self.assertIn('route-teacher-tools',s)
    self.assertIn('aula de tarefa de 90 minutos',s)
    for slug in slugs:
     self.assertIn('../tarefas/'+slug+'/',p.links)

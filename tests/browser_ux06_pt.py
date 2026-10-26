@@ -7,7 +7,7 @@ from browser_m1_and_inventory import QuietHandler,new_page,ROOT
 PLANS=json.loads((ROOT/'docs/pedagogia/percursos-unidades-20261020.json').read_text('utf-8'))
 OUT=ROOT.parents[1]/'outputs/design-pt'
 # 24/10/2026 (aulas claras do M1, como o M4 a 23/10): o percurso do M1 passa a lista simples de aulas, sem passaporte
-SEM_PASSAPORTE={1,4}
+SEM_PASSAPORTE={1,4,7}
 
 def main():
  server=ThreadingHTTPServer(('127.0.0.1',0),partial(QuietHandler,directory=str(ROOT.parent)))
@@ -29,7 +29,9 @@ def main():
       page.goto(host+'/pt/',wait_until='networkidle');page.locator(f'a[href="m{m}/"],a[href$="/m{m}/"]').first.click();page.wait_for_url(f'**/pt/m{m}/')
      else:page.goto(host+f'/pt/m{m}/',wait_until='networkidle')
      assert page.locator('nav.migalhas').bounding_box()['height']<=64
-     action=page.locator('[data-module-next]');assert action.is_visible();assert 'Começar:' in action.inner_text()
+     action=page.locator('[data-module-next]');assert action.is_visible()
+     assert action.get_attribute('href').endswith('/licao-'+first+'/')
+     assert any(label in action.inner_text() for label in (('Começar:','Continuar:') if m in (1,4,7) else ('Começar:',)))
      assert action.bounding_box()['y']<600,(m,width,action.bounding_box())
      assert not page.evaluate('document.documentElement.scrollWidth>innerWidth+2')
      # 23/10/2026 (decisão do docente, aulas claras): o M4 é o piloto do percurso como lista simples de aulas, sem passaporte, níveis nem pontos
@@ -64,13 +66,23 @@ def main():
    # 24/10/2026 (aulas claras do M1): uma aula está feita ou por fazer; feita = a lição acabada. Tirar a atividade -a1 já não
    # deixa a aula 1 «começada» (deixa de haver «Retomar:»), e o botão continua na aula 2.
    page.evaluate("localStorage.removeItem('licao-m1-f01-a1')");page.reload(wait_until='networkidle');assert 'Continuar: Cercada pelas ondas' in page.locator('[data-module-next]').inner_text()
-   # Full first unit: go to the pending checkpoint, then to the synthesis.
+   # 26/10: finishing reading opens no extra gate. Remaining lessons stay navigable;
+   # the task is its own classroom row and no archive score assesses it.
    plan=PLANS[0];source=(ROOT/'m1/index.html').read_text('utf-8');match=re.search(r'\bU\s*=\s*(\[)',source);units=json.JSONDecoder().raw_decode(source[match.start(1):])[0]
-   page.evaluate('''steps=>{for(const p of steps){if(p.licao){localStorage.setItem('licao-'+p.licao,JSON.stringify({lida:true}));localStorage.setItem('licao-'+p.licao+'-a1',JSON.stringify({lida:true}));}for(const id of [...p.exs,...(p.ativ||[]).filter(a=>a!=='ler')])localStorage.setItem('epi-pt-'+id,JSON.stringify({fim:true}));}}''',units[0]['passos'])
-   page.reload(wait_until='networkidle');assert page.locator('[data-module-next]').get_attribute('href')=='#desafio-unidade-1'
+   page.evaluate("""steps=>{for(const p of steps){if(p.licao){localStorage.setItem('licao-'+p.licao,JSON.stringify({lida:true}));localStorage.setItem('licao-'+p.licao+'-a1',JSON.stringify({lida:true}));}for(const id of [...p.exs,...(p.ativ||[]).filter(a=>a!=='ler')])localStorage.setItem('epi-pt-'+id,JSON.stringify({fim:true}));}}""",units[0]['passos'])
+   page.reload(wait_until='networkidle')
+   expected='./licao-'+plan['units'][1]['lessons'][0]+'/'
+   assert page.locator('[data-module-next]').get_attribute('href')==expected
    page.evaluate("localStorage.setItem('desafio-unidade-v2-M1-u1',JSON.stringify({ganho:true,melhor:8,total:8}))")
-   page.reload(wait_until='networkidle');assert page.locator('[data-module-next]').get_attribute('href')=='#sintese-unidade-1';page.locator('[data-module-next]').click();assert page.locator('[data-fim="1"]').evaluate('e=>e.open')
-   print('PASS resume, outstanding checkpoint and synthesis reveal',flush=True);ctx.close();browser.close()
+   page.reload(wait_until='networkidle')
+   assert page.locator('[data-module-next]').get_attribute('href')==expected
+   assert page.locator('[data-sintese], #cartao, #copiar-cartao').count()==0
+   assert page.locator('button[data-desafio]:visible').count()==0
+   task=page.locator('[data-task-lesson="1"] > a')
+   task.focus();task.press('Enter');page.wait_for_url('**/tarefas/m1-u1/')
+   assert page.locator('[data-task-question]').count()==4
+   assert not page.evaluate('localStorage.getItem("percurso-sintese-M1-u1")')
+   print('PASS resume, navigable task lesson, no independent gate or automatic assessment',flush=True);ctx.close();browser.close()
  finally:server.shutdown()
  OUT.mkdir(parents=True,exist_ok=True);(OUT/'validacao-ux06.json').write_text(json.dumps(results,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 if __name__=='__main__':main()

@@ -59,6 +59,8 @@
   var archive=document.getElementById("arquivo-percurso");
   if(archive&&new URLSearchParams(location.search).get("arquivo")==="1"){
    archive.hidden=false;
+   archive.querySelectorAll("[data-cartaz-archive]").forEach(function(slot){slot.setAttribute("data-cartaz",slot.getAttribute("data-cartaz-archive"));});
+   if(window.EPICartaz)window.EPICartaz.montar(archive);
    var host=archive.querySelector("[data-route-history]");
    if(host){
     var found=false;

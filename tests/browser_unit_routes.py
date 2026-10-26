@@ -8,6 +8,7 @@ import argparse
 from playwright.sync_api import sync_playwright
 from browser_m1_and_inventory import QuietHandler, new_page, ROOT
 from browser_m2_complete import respond
+from browser_task_contract import TASK_MODULES, assert_task_route, visit_task_from_route
 
 PLAN = json.loads((ROOT / 'docs/pedagogia/percursos-unidades-20261020.json').read_text('utf-8'))
 
@@ -30,29 +31,60 @@ def main():
                     page.on('pageerror', lambda error: errors.append(str(error)))
                     page.goto(f'{host}/m{m}/', wait_until='networkidle')
                     assert not errors, (m, errors)
-                    assert page.locator('button[data-desafio]').count() == len(plan['units'])
-                    # 23/10/2026 (plano de melhoria, fase 0): sem caixa de escrita na síntese; um registo oral / no caderno por unidade.
-                    assert page.locator('fieldset[data-sintese]').count() == len(plan['units'])
-                    assert page.locator('textarea[data-resp], button[data-copiar]').count() == 0
-                    assert page.evaluate('document.documentElement.scrollWidth <= innerWidth + 3'), (m, width, 'overflow')
-                    for unit in plan['units']:
-                        n = unit['number']
-                        section = page.locator(f'.unidade[data-u="{n}"]')
-                        assert section.locator('li[data-passo]').count() == len(unit['steps'])
-                        assert section.locator('button[data-desafio]').count() == 1
-                        assert section.locator('ol.passos').evaluate('(list) => Boolean(list.compareDocumentPosition(list.parentElement.querySelector(".desafio")) & Node.DOCUMENT_POSITION_FOLLOWING)')
-                        captured = page.evaluate('''n => {
-                          const original=EPIJogo.montar; let result;
-                          EPIJogo.montar=cfg=>{result={ids:cfg.itens.map(x=>x._l),count:cfg.itens.length,key:cfg.chave}};
-                          document.querySelector('[data-desafio="'+n+'"]').click();
-                          EPIJogo.montar=original; return result;
-                        }''', n)
-                        assert captured['count'] == 8, (m, n, captured)
-                        assert set(unit['lessons']).issubset(captured['ids']), (m, n, captured)
-                    # Open the actual challenge engine, rather than only inspecting config.
-                    page.locator('[data-desafio="1"]').click()
-                    page.locator('.casca.sobreposta .cartao').wait_for()
-                    assert not errors, (m, errors)
+                    if m in TASK_MODULES:
+                        hrefs = assert_task_route(page, m, plan['units'])
+                        for n, href in enumerate(hrefs, 1):
+                            visit_task_from_route(page, m, n, href)
+                        # The former pools are optional archive practice, never unit gates.
+                        page.locator('.route-teacher-tools > summary').click()
+                        page.locator('.route-teacher-tools a[href="?arquivo=1#arquivo-percurso"]').click()
+                        page.wait_for_url('**/?arquivo=1#arquivo-percurso')
+                        assert page.locator('#arquivo-percurso').is_visible()
+                        for unit in plan['units']:
+                            n = unit['number']
+                            captured = page.evaluate("""n => {
+                              const mount=EPIJogo.montar, shuffle=EPIJogo.baralhar;
+                              let result, bank=[];
+                              try {
+                                EPIJogo.baralhar=items=>{bank.push(...items.map(x=>x._l));return shuffle(items)};
+                                EPIJogo.montar=cfg=>{result={ids:cfg.itens.map(x=>x._l),count:cfg.itens.length,key:cfg.chave}};
+                                document.querySelector('[data-desafio="'+n+'"]').click();
+                                return {...result,bank};
+                              } finally {EPIJogo.montar=mount;EPIJogo.baralhar=shuffle;}
+                            }""", n)
+                            assert captured['count'] == 8, (m, n, captured)
+                            assert set(captured['ids']).issubset(unit['lessons']), (m, n, captured)
+                            # Inspect the full preserved input pool, not a probabilistic sample.
+                            assert set(captured['bank']) == set(unit['lessons']), (m, n, captured)
+                            prefix = 'desafio-' if m == 4 else 'desafio-unidade-v2-'
+                            assert captured['key'] == f'{prefix}M{m}-u{n}'
+                        page.locator('[data-desafio="1"]').click()
+                        page.locator('.casca.sobreposta .cartao').wait_for()
+                        assert not errors, (m, errors)
+                    else:
+                        assert page.locator('button[data-desafio]').count() == len(plan['units'])
+                        # 23/10/2026 (plano de melhoria, fase 0): sem caixa de escrita na síntese; um registo oral / no caderno por unidade.
+                        assert page.locator('fieldset[data-sintese]').count() == len(plan['units'])
+                        assert page.locator('textarea[data-resp], button[data-copiar]').count() == 0
+                        assert page.evaluate('document.documentElement.scrollWidth <= innerWidth + 3'), (m, width, 'overflow')
+                        for unit in plan['units']:
+                            n = unit['number']
+                            section = page.locator(f'.unidade[data-u="{n}"]')
+                            assert section.locator('li[data-passo]').count() == len(unit['steps'])
+                            assert section.locator('button[data-desafio]').count() == 1
+                            assert section.locator('ol.passos').evaluate('(list) => Boolean(list.compareDocumentPosition(list.parentElement.querySelector(".desafio")) & Node.DOCUMENT_POSITION_FOLLOWING)')
+                            captured = page.evaluate('''n => {
+                              const original=EPIJogo.montar; let result;
+                              EPIJogo.montar=cfg=>{result={ids:cfg.itens.map(x=>x._l),count:cfg.itens.length,key:cfg.chave}};
+                              document.querySelector('[data-desafio="'+n+'"]').click();
+                              EPIJogo.montar=original; return result;
+                            }''', n)
+                            assert captured['count'] == 8, (m, n, captured)
+                            assert set(unit['lessons']).issubset(captured['ids']), (m, n, captured)
+                        # Open the actual challenge engine, rather than only inspecting config.
+                        page.locator('[data-desafio="1"]').click()
+                        page.locator('.casca.sobreposta .cartao').wait_for()
+                        assert not errors, (m, errors)
                     if m == 2 and width == 1440:
                         page.locator('.casca.sobreposta [data-c-menu]').click()
                         folder = ROOT.parent / 'qa-unit-images'
