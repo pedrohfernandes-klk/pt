@@ -1,6 +1,6 @@
 from pathlib import Path
 from html.parser import HTMLParser
-import json,re,subprocess,sys,unittest
+import json,re,sys,unittest
 
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/'scripts'))
@@ -33,11 +33,12 @@ class TaskNinety(unittest.TestCase):
   start=page.index('id="tarefa-unidade-3"')
   self.assertGreater(start,page.index('id="sintese-unidade-3"'))
   self.assertIn('../tarefas/m4-u3/',page)
-  old=subprocess.check_output(['git','show','origin/main:m4/index.html'],cwd=ROOT).decode('utf-8')
+  # Snapshot explícito da base; funciona também no checkout reduzido da CI.
+  baseline=json.loads((ROOT/'tests/fixtures/task90-m4-units-before.json').read_text('utf-8'))
   def contract(s):
    match=re.search(r'<script[^>]*id="epi-unidades-pedagogicas"[^>]*>(.*?)</script>',s,re.S)
    return json.loads(match[1])
-  self.assertEqual(contract(old),contract(page))
+  self.assertEqual(baseline['units'],contract(page))
 
  def test_preparation_is_short_and_paper_has_the_majority_of_time(self):
   page=(ROOT/'tarefas/m4-u3/index.html').read_text('utf-8')
