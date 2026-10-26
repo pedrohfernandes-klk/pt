@@ -25,6 +25,11 @@ class TaskNinety(unittest.TestCase):
   self.assertIn('../../m4/licao-m4-f11/',page)
   self.assertIn('fotografias legíveis das folhas',page)
   self.assertIn('Teams no início desta aula',page)
+  self.assertIn('Tarefa com consulta',page)
+  self.assertIn('durante toda a tarefa',page)
+  policy=json.loads((ROOT/'docs/pedagogia/tarefas-unidades-20261026.json').read_text('utf-8'))
+  self.assertTrue(policy['consultation'].startswith('Always open-resource'))
+  self.assertIn('several questions',policy['task_format'])
 
  def test_task_is_at_unit_three_end_without_changing_digital_steps(self):
   page=(ROOT/'m4/index.html').read_text('utf-8')

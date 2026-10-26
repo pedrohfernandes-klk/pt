@@ -41,3 +41,6 @@ O inventário operacional está em tarefas-unidades-20261026.json. Só M4-U3 est
 ## Verificação e limites
 
 190 testes Python aprovados; cobertura de aparência em 745 páginas sem pendências. Testes novos verificam o enunciado/critérios originais, posição final em U3, contrato digital inalterado, tempos 10/10/60/10, quatro questões e guiões preservados na boia. Navegador: erro e revisão nas quatro perguntas, uma resposta ativa por grupo, contador sem duplicação; teclado; índice→tarefa; ausência do atalho docente no cabeçalho; oito observações 320/390/768/1440 claro/noite sem transbordo. Projeção conferida nos três tamanhos e QR com destino canónico; boia oculta no material projetado para não cobrir o texto. Conferir o resultado público antes de fechar. Turma, leitor de ecrã externo e projetor físico não executados. Fontes privadas indisponíveis: conservar o novo acesso e a página antes de regenerar.
+
+## Clarificação do docente: consulta e formato
+Todas as tarefas são com consulta dos textos, fichas e apontamentos durante a realização. Podem consistir em várias perguntas, numa produção ou numa combinação adequada aos objetivos; não impor um único texto contínuo como modelo universal. O piloto mantém o enunciado e os critérios existentes e explicita a consulta junto do título. Os próximos lotes aplicarão esta regra. Não se alteram critérios ou pesos.
