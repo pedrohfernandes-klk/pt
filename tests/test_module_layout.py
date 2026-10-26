@@ -27,6 +27,9 @@ class ModuleLayout(unittest.TestCase):
   baseline=json.loads((ROOT/'tests/fixtures/module-layout-before.json').read_text('utf-8'))
   for module in range(1,10):
    source=(ROOT/f'm{module}/index.html').read_text('utf-8-sig')
+   if module==7:
+    # Authorized final task access; placement and destination are tested separately.
+    source=re.sub(r'<aside class="unit-task" id="tarefa-unidade-2".*?</aside>','',source,flags=re.S)
    # The only new text is the label of an optional disclosure.
    content=Content(source.replace('<summary>Explorar ligações opcionais</summary>',''))
    values={'text':content.words,'links':content.links,'images':content.images,'ids':content.ids,
