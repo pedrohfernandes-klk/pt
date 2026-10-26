@@ -202,9 +202,11 @@
         "id": "m7-quatro-vozes-um-problema",
         "title": "Quatro vozes, um problema"
       },
-      "existing_production_candidates": [],
-      "status": "requires_editorial_review",
-      "task_url": null
+      "existing_production_candidates": [
+        "m7/guia-da-tarefa-m7/: task 1"
+      ],
+      "status": "implemented",
+      "task_url": "tarefas/m7-u2/"
     },
     {
       "module": 7,

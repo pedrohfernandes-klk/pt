@@ -1,0 +1,111 @@
+{
+  "baseline": "6bea37b9026a931fa6487615870e7a3a57dcef3e",
+  "task": {
+    "n": 1,
+    "extra": false,
+    "titulo": "Uma ideia de heterónimo",
+    "quem": "individual",
+    "grupo": false,
+    "passos": [
+      "Faz a ficha de identidade: não imites uma pessoa real; dá-lhe uma ideia fixa e uma maneira de falar.",
+      "Escreve o texto na voz dele (um poema, uma carta, uma nota), de 100 a 150 palavras.",
+      "Regista as fontes que consultaste (a carta a Casais Monteiro, as lições dos heterónimos), com data.",
+      "Apresenta-o à turma em dois minutos e lê uma frase dele."
+    ],
+    "entrega": "A ficha de identidade, o texto e a lista das fontes, num só documento.",
+    "alternativa": "",
+    "encomenda": "Cria um heterónimo com identidade, ofício e maneira de escrever, e dá-lhe um texto que não se confunda com os teus.",
+    "produto": "A ficha de identidade (nome, datas, ofício, maneira de ver, maneira de escrever), um texto de 100 a 150 palavras na voz dele e a lista das fontes consultadas, num só documento. Ficheiro: M7_Tarefa1_Heteronimo.docx (ou PDF).",
+    "criterios": [
+      "A ficha de identidade tem ofício, maneira de ver e maneira de escrever, e o heterónimo não é uma pessoa real.",
+      "O texto na voz dele tem 100 a 150 palavras e distingue-se da tua voz.",
+      "Apresentação de dois minutos com uma frase lida; fontes com data."
+    ],
+    "exemplo": {
+      "titulo": "Ficha e início do texto",
+      "texto": "Nome: Augusto Pires. Nascido em Setúbal em 1902, operador de guindaste no porto, lê o jornal de trás para a frente. Maneira de ver: tudo o que sobe desce, e só o que desce interessa. Maneira de escrever: frases curtas, sem adjetivos, com um número em cada parágrafo. Texto: «Hoje levantei catorze contentores. Nenhum sabia para onde ia. Eu também não, mas eu tenho o guindaste e eles não têm nada. À tarde choveu doze minutos. Não escrevo sobre a chuva, escrevo sobre o tempo que ela demora.»",
+      "nota": "Identidade completa e inventada; ideia fixa (o que sobe e desce); a voz é reconhecível e diferente."
+    },
+    "fraco": {
+      "texto": "O meu heterónimo chama-se João e é um rapaz de 17 anos que gosta de futebol e de música. Texto: Gosto muito de jogar à bola com os meus amigos.",
+      "porque": "É o autor com outro nome: sem ofício, sem maneira de ver, sem maneira de escrever."
+    },
+    "rubrica": [
+      {
+        "nome": "Identidade",
+        "niveis": [
+          "ficha completa; ofício, maneira de ver e maneira de escrever batem certo; discorda do autor numa coisa clara",
+          "ficha completa, com um ponto que não bate certo",
+          "só nome e ofício",
+          "sem ficha, ou imita uma pessoa real"
+        ],
+        "pontos": [
+          43,
+          30,
+          17,
+          4
+        ]
+      },
+      {
+        "nome": "Voz",
+        "niveis": [
+          "o texto não se confunde com os do autor: mudam as frases, as palavras ou a pontuação; 100 a 150 palavras",
+          "voz diferente só no vocabulário",
+          "o texto podia ser do autor",
+          "sem texto"
+        ],
+        "pontos": [
+          42,
+          29,
+          17,
+          4
+        ]
+      },
+      {
+        "nome": "Apresentação",
+        "niveis": [
+          "dois minutos; apresenta o heterónimo e lê uma frase dele; responde a uma pergunta",
+          "um desvio de tempo",
+          "lê a ficha do princípio ao fim",
+          "não apresenta"
+        ],
+        "pontos": [
+          42,
+          29,
+          17,
+          4
+        ]
+      },
+      {
+        "nome": "Fontes",
+        "niveis": [
+          "três fontes que discordam, com data, e as diferenças anotadas",
+          "duas fontes",
+          "uma fonte, ou sem data",
+          "sem fontes"
+        ],
+        "pontos": [
+          42,
+          29,
+          17,
+          4
+        ]
+      },
+      {
+        "nome": "Respostas das unidades (percurso)",
+        "niveis": [
+          "todas as respostas das unidades enviadas no prazo, com 80 a 120 palavras, citação do texto e leitura própria",
+          "a maior parte das respostas completas, ou todas com um movimento em falta",
+          "uma resposta completa",
+          "sem respostas"
+        ],
+        "pontos": [
+          31,
+          22,
+          12,
+          3
+        ]
+      }
+    ]
+  }
+}
