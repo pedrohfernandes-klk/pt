@@ -27,10 +27,11 @@ class ModuleLayout(unittest.TestCase):
   baseline=json.loads((ROOT/'tests/fixtures/module-layout-before.json').read_text('utf-8'))
   for module in range(1,10):
    source=(ROOT/f'm{module}/index.html').read_text('utf-8-sig')
-   if module==7:
+   if module==7 and 'task_route_change_20261026' not in baseline:
     # Authorized final task access; placement and destination are tested separately.
     source=re.sub(r'<aside class="unit-task" id="tarefa-unidade-2".*?</aside>','',source,flags=re.S)
-   # The only new text is the label of an optional disclosure.
+   # 26/10: M1/M4/M7 presentation baseline explicitly includes task lessons. Original lesson
+   # content/order/pools are frozen independently by test_task_routes_closure.py.
    content=Content(source.replace('<summary>Explorar ligações opcionais</summary>',''))
    values={'text':content.words,'links':content.links,'images':content.images,'ids':content.ids,
            'scripts':re.findall(r'<script\b.*?</script>',source,re.S)}

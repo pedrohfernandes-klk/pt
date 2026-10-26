@@ -11,7 +11,7 @@ class UnitPlacement(HTMLParser):
  def handle_starttag(self,t,attrs):
   a=dict(attrs)
   if t=='section':self.stack.append(a.get('aria-labelledby',a.get('id')))
-  if t=='aside' and a.get('id')=='tarefa-unidade-3':self.tasks.append(list(self.stack))
+  if t=='li' and a.get('id')=='tarefa-unidade-3':self.tasks.append(list(self.stack))
  def handle_endtag(self,t):
   if t=='section':self.stack.pop()
 
@@ -34,16 +34,21 @@ class TaskNinety(unittest.TestCase):
  def test_task_is_at_unit_three_end_without_changing_digital_steps(self):
   page=(ROOT/'m4/index.html').read_text('utf-8')
   placement=UnitPlacement(page)
-  self.assertEqual(placement.tasks,[['unidade-pedagogica-3']])
+  # 26/10: Discurso is the task lesson; comparison remains available only as support.
+  self.assertEqual(len(placement.tasks),1)
+  self.assertEqual(placement.tasks[0][0],'unidade-pedagogica-3')
   start=page.index('id="tarefa-unidade-3"')
-  self.assertGreater(start,page.index('id="sintese-unidade-3"'))
-  self.assertIn('../tarefas/m4-u3/',page)
+  self.assertGreater(start,page.index('id="m4-f11"'))
+  self.assertNotIn('id="sintese-unidade-3"',page)
+  self.assertIn('../tarefas/m4-u3-discurso/',page)
   # Snapshot explícito da base; funciona também no checkout reduzido da CI.
   baseline=json.loads((ROOT/'tests/fixtures/task90-m4-units-before.json').read_text('utf-8'))
   def contract(s):
    match=re.search(r'<script[^>]*id="epi-unidades-pedagogicas"[^>]*>(.*?)</script>',s,re.S)
    return json.loads(match[1])
-  self.assertEqual(baseline['units'],contract(page))
+  current=contract(page)
+  self.assertTrue(all(u['task']['minutes']==90 and u['task']['evaluation']=='teacher' for u in current))
+  self.assertEqual(baseline['units'],[{k:v for k,v in u.items() if k!='task'} for u in current])
 
  def test_preparation_is_short_and_paper_has_the_majority_of_time(self):
   page=(ROOT/'tarefas/m4-u3/index.html').read_text('utf-8')

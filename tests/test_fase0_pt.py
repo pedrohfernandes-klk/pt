@@ -51,6 +51,14 @@ class Fase0(unittest.TestCase):
         for m in range(1, 10):
             with self.subTest(modulo=m):
                 s = (ROOT / f'm{m}/index.html').read_text('utf-8')
+                # 26/10: closure lessons read historic notes without migrating or evaluating tasks.
+                if m in (1,4,7):
+                    self.assertIn('unit-task-route.js',s)
+                    adapter=(ROOT/'assets/unit-task-route.js').read_text('utf-8')
+                    for key in ('percurso-v2-','percurso-','percurso-sintese-'):
+                        self.assertIn(key,adapter)
+                    self.assertNotIn('localStorage.setItem',adapter)
+                    continue
                 resp = re.search(r'function resp\(n\)\{try\{return localStorage\.getItem\("([^"]*)"\+M\+"-u"\+n\)', s)
                 tag = re.search(r'<script defer src="\.\./assets/unit-synthesis\.js[^"]*" data-module="M(\d)" data-notas="([^"]+)">', s)
                 self.assertTrue(resp and tag)

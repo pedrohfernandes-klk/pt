@@ -11,7 +11,7 @@ class Page(HTMLParser):
  def handle_starttag(self,t,attrs):
   a=dict(attrs)
   if t=='section':self.sections.append(a.get('aria-labelledby',a.get('id')))
-  if t=='aside' and a.get('id')=='tarefa-unidade-2':self.task_sections.append(list(self.sections))
+  if t=='li' and a.get('id')=='tarefa-unidade-2':self.task_sections.append(list(self.sections))
   if t=='a':self.links.append(a.get('href',''))
   if 'id' in a:self.ids.add(a['id'])
  def handle_endtag(self,t):
@@ -31,8 +31,12 @@ class M7Task(unittest.TestCase):
 
  def test_access_is_at_end_of_unit_two_without_changing_steps(self):
   source=(ROOT/'m7/index.html').read_text('utf-8');page=Page(source)
-  self.assertEqual(page.task_sections,[['unidade-pedagogica-2']])
-  self.assertGreater(source.index('id="tarefa-unidade-2"'),source.index('id="sintese-unidade-2"'))
+  # 26/10: the task is the last classroom row inside the unit, not an appended aside.
+  self.assertEqual(len(page.task_sections),1)
+  self.assertEqual(page.task_sections[0][0],'unidade-pedagogica-2')
+  self.assertGreater(source.index('id="tarefa-unidade-2"'),source.index('id="m7-quatro-vozes-um-problema"'))
+  self.assertNotIn('id="sintese-unidade-2"',source)
+  self.assertIn('duas linhas de síntese',(ROOT/'tarefas/m7-u2/index.html').read_text('utf-8'))
   self.assertIn('../tarefas/m7-u2/',page.links)
   self.assertIn('../../tarefas/m7-u2/',(ROOT/'m7/guia-da-tarefa-m7/index.html').read_text('utf-8'))
 

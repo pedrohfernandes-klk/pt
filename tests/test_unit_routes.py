@@ -15,8 +15,11 @@ class Controls(HTMLParser):
         super().__init__()
         self.challenges = []
         self.responses = []
+        self.tasks = []
     def handle_starttag(self, tag, attrs):
         attrs = dict(attrs)
+        if 'data-task-lesson' in attrs:
+            self.tasks.append(attrs['data-task-lesson'])
         if tag == 'button' and 'data-desafio' in attrs:
             self.challenges.append(attrs['data-desafio'])
         # 23/10/2026 (plano de melhoria, fase 0): a síntese da unidade deixou de ter caixa de escrita
@@ -38,7 +41,15 @@ class UnitRoutes(unittest.TestCase):
             numbers = [str(i + 1) for i in range(len(plan['units']))]
             with self.subTest(module=module):
                 self.assertEqual(numbers, ui.challenges)
-                self.assertEqual(numbers, ui.responses)
+                # 26/10: M1/M4/M7 end in a task lesson; old pools remain optional archive.
+                if module in (1, 4, 7):
+                    self.assertEqual(numbers, ui.tasks)
+                    self.assertEqual([], ui.responses)
+                    self.assertIn('id="arquivo-percurso" hidden', src)
+                    self.assertIn('unit-task-route.js', src)
+                else:
+                    self.assertEqual(numbers, ui.responses)
+                    self.assertEqual([], ui.tasks)
                 self.assertEqual(len(numbers), len(data))
                 for unit, config in zip(plan['units'], data):
                     self.assertEqual(unit['lessons'], config['licoes'])
@@ -63,9 +74,16 @@ class UnitRoutes(unittest.TestCase):
     def test_changed_unit_assessments_do_not_inherit_old_stage_badges(self):
         for m in (1, 2, 3, 7):
             text = (ROOT / f'm{m}/index.html').read_text('utf-8')
-            self.assertIn('K0="desafio-unidade-v2-"', text)
-            self.assertIn('"percurso-v2-"+M+"-u"', text)
-            self.assertIn('unit-history.js', text)
+            if m in (1, 7):
+                self.assertIn('unit-task-route.js', text)
+                adapter = (ROOT / 'assets/unit-task-route.js').read_text('utf-8')
+                self.assertIn('desafio-unidade-v2-', adapter)
+                self.assertIn('percurso-v2-', adapter)
+            else:
+                self.assertIn('K0="desafio-unidade-v2-"', text)
+            if m not in (1, 7):
+                self.assertIn('"percurso-v2-"+M+"-u"', text)
+                self.assertIn('unit-history.js', text)
         history = (ROOT / 'assets/unit-history.js').read_text('utf-8')
         self.assertIn('localStorage.getItem("percurso-"', history)
         self.assertNotIn('removeItem', history)
