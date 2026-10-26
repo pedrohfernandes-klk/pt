@@ -1,0 +1,9 @@
+.teacher-access{position:fixed;left:12px;bottom:12px;z-index:1000;display:grid;place-items:center;width:44px;height:44px;background:var(--papel,#fff);color:var(--tinta,#171715);border:1px solid transparent;text-decoration:none}
+.teacher-access:hover,.teacher-access:active,.teacher-access:focus-visible{color:#c44c40;border-color:currentColor}.teacher-access:focus-visible{outline:2px solid currentColor;outline-offset:3px}
+.unit-task{margin:32px 0 8px;padding:24px 0;border-top:3px solid var(--tinta,#171715);font:400 1rem/1.6 Arial,Helvetica,sans-serif}
+.unit-task .task-label{font:700 .85rem/1.5 Arial,sans-serif;letter-spacing:.04em;color:var(--vermelho,#a84939)}
+.unit-task h3{font:700 clamp(1.4rem,2.5vw,1.8rem)/1.2 Arial,sans-serif;letter-spacing:-.02em;margin:8px 0 12px;text-transform:none}
+.unit-task p{max-width:64ch}.unit-task a{display:inline-flex;align-items:center;min-height:48px;padding:10px 0;color:inherit;font-weight:700;text-underline-offset:6px}
+@media print{.teacher-access{display:none}}
+
+html.epi-projection .teacher-access{display:none}
