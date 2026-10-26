@@ -3103,6 +3103,193 @@
       },
       "exit": "Reescreve uma frase da tua resposta para melhorar a relação entre uma ideia e a sua prova. Regista a alteração e o motivo.",
       "alternatives": []
+    },
+    {
+      "id": "s27",
+      "order": 27,
+      "durationMinutes": 45,
+      "title": "Ver, compreender, estudar melhor",
+      "group": "Competências",
+      "module": "M1–M9",
+      "tags": [
+        "vídeo",
+        "compreensão oral",
+        "método de estudo",
+        "revisão"
+      ],
+      "focus": "Compreender uma explicação, experimentar uma estratégia e decidir o que rever.",
+      "source": {
+        "title": "Um método que se pode testar",
+        "author": "Proposta de aplicação produzida para esta sessão",
+        "excerpt": "A Inês reconhece as definições quando as relê. Numa frase nova, hesita na função sintática. O Rui termina depressa uma resposta sobre um poema, mas não explica o que a sua citação demonstra.",
+        "context": "Lê os dois casos. O que permite verificar a aprendizagem de cada aluno?",
+        "url": "/pt/exame/",
+        "note": "Casos fictícios. O vídeo é uma fonte de propostas de estudo, não uma previsão do exame.",
+        "original": true
+      },
+      "resources": [],
+      "warmup": [
+        {
+          "id": "s27-q1",
+          "q": "Reconhecer uma explicação ao relê-la basta para verificar se a sabes aplicar?",
+          "options": [
+            "Sim: reconhecer e aplicar são a mesma coisa.",
+            "Não: é preciso experimentar num exemplo diferente e verificar o raciocínio.",
+            "Sim, desde que a leitura seja rápida."
+          ],
+          "answer": 1,
+          "feedback": "Aplicar num caso diferente ajuda a distinguir a familiaridade com as palavras da compreensão do conteúdo."
+        },
+        {
+          "id": "s27-q2",
+          "q": "Qual registo ajuda mais a decidir o que rever?",
+          "options": [
+            "Estudei muito.",
+            "Português é difícil.",
+            "Identifiquei a função, mas não consegui explicar que elemento seleciona o complemento."
+          ],
+          "answer": 2,
+          "feedback": "O registo concreto permite escolher uma ação de revisão e verificar depois se a dificuldade foi ultrapassada."
+        },
+        {
+          "id": "s27-q3",
+          "q": "Como usar uma proposta de estudo apresentada num vídeo?",
+          "options": [
+            "Experimentá-la, observar o resultado e ajustá-la à dificuldade.",
+            "Cumpri-la sempre, mesmo quando não responde à dificuldade.",
+            "Tomá-la como garantia de resultado."
+          ],
+          "answer": 0,
+          "feedback": "Uma proposta deve ser aplicada e avaliada. A utilidade depende do que precisas de aprender e do resultado do ensaio."
+        }
+      ],
+      "video": {
+        "title": "Masterclass Exame Nacional de Português",
+        "author": "Academia X",
+        "url": "https://www.youtube.com/watch?v=Xzst0nmqtFE",
+        "published": "2026-02-01",
+        "duration": "48:52",
+        "intro": "Trabalha individualmente ou acompanha a projeção. Abre os dois trechos, para nos tempos indicados e responde às perguntas. Podes voltar atrás. Não precisas de ver a masterclass inteira.",
+        "clips": [
+          {
+            "id": "Xzst0nmqtFE",
+            "start": 1638,
+            "end": 1703,
+            "label": "Da explicação à aplicação · 27:18–28:23",
+            "observe": "Identifica as três etapas propostas para estudar um conteúdo."
+          },
+          {
+            "id": "Xzst0nmqtFE",
+            "start": 1744,
+            "end": 1812,
+            "label": "Treinar e ajustar a estratégia · 29:04–30:12",
+            "observe": "Explica o que um ensaio com tempo permite descobrir sobre a tua forma de trabalhar."
+          }
+        ],
+        "fallback": "Uma explicação pode ser seguida de exercícios sobre o conteúdo revisto e, depois, de exercícios que combinem conteúdos. Explicar uma escolha e experimentar um exemplo diferente ajuda a perceber o que já sabes aplicar. Num ensaio com tempo, regista onde hesitaste e o que ficou por fundamentar. Usa esses dados para ajustar a ordem do trabalho e escolher a revisão seguinte.",
+        "note": "Os trechos selecionados tratam de métodos de estudo. Para a estrutura, a duração e as regras da prova, consulta a Informação-Prova da tua época em «Programa e fontes».",
+        "questions": [
+          {
+            "id": "s27-video1",
+            "q": "Que sequência de estudo é proposta no primeiro trecho?",
+            "options": [
+              "Consultar uma explicação, resolver exercícios específicos e depois combinar conteúdos.",
+              "Reler os resumos até os reconhecer, sem resolver exercícios.",
+              "Começar e terminar pela memorização de respostas."
+            ],
+            "answer": 0,
+            "feedback": "A explicação é posta à prova: primeiro num conteúdo delimitado e depois em exercícios que combinam conhecimentos. Reconhecer uma explicação não demonstra, por si só, que a sabes aplicar."
+          },
+          {
+            "id": "s27-video2",
+            "q": "Depois de rever as funções sintáticas, qual ação aplica melhor essa proposta?",
+            "options": [
+              "Copiar novamente todas as definições.",
+              "Identificar funções em frases novas e justificar as escolhas; depois resolver um exercício misto.",
+              "Resolver sempre a mesma frase, olhando para a solução."
+            ],
+            "answer": 1,
+            "feedback": "O exemplo diferente permite verificar a transferência. A justificação mostra o raciocínio; o exercício misto ajuda a escolher o conhecimento pertinente sem a pista do título."
+          },
+          {
+            "id": "s27-video3",
+            "q": "Para que serve resolver um exercício com tempo contado?",
+            "options": [
+              "Para provar que todos devem começar pela mesma parte.",
+              "Para garantir uma classificação.",
+              "Para observar o tempo usado, localizar dificuldades e ajustar a estratégia."
+            ],
+            "answer": 2,
+            "feedback": "O segundo trecho relaciona o treino com a gestão do tempo e a escolha de uma ordem adequada. O resultado do ensaio fornece informação: não garante uma classificação."
+          },
+          {
+            "id": "s27-video4",
+            "q": "Um colega termina depressa, mas não justifica as interpretações. O que deve mudar no próximo ensaio?",
+            "options": [
+              "Reservar tempo para selecionar uma prova textual e explicar a relação com a resposta.",
+              "Tentar escrever ainda mais depressa.",
+              "Substituir as justificações por palavras mais difíceis."
+            ],
+            "answer": 0,
+            "feedback": "Ajustar o método exige atender à dificuldade observada. Neste caso, a prioridade é fundamentar a interpretação, e não apenas reduzir o tempo."
+          }
+        ],
+        "embeddable": false,
+        "playbackNote": "O autor não permite a reprodução deste vídeo noutros sites. Abre cada trecho no YouTube e regressa às perguntas; a alternativa em texto permite fazer a sessão sem sair desta página."
+      },
+      "writing": {
+        "minutes": 15,
+        "title": "Transformar uma dificuldade num plano de trabalho",
+        "target": "100–140 palavras, no conjunto das respostas",
+        "prompt": "Responde em papel às duas perguntas: 1. Para a Inês, propõe uma sequência de estudo que permita passar da definição à aplicação numa frase nova. 2. Para o Rui, propõe uma ação que melhore a fundamentação de uma resposta interpretativa. Em cada resposta, explica como poderás verificar se houve melhoria.",
+        "instructions": [
+          "Consulta os casos e volta aos trechos ou à alternativa em texto quando precisares.",
+          "Distingue a ação a realizar da prova de que essa ação resultou.",
+          "Termina com uma mudança concreta que possas experimentar no teu próprio estudo."
+        ],
+        "criteria": [
+          "Respondi a ambos os casos com propostas diferentes e adequadas.",
+          "Expliquei a relação entre a dificuldade, a ação e a verificação.",
+          "Usei uma ideia dos trechos ou da alternativa em texto, sem a tomar como garantia de resultado.",
+          "Revi a clareza, a pontuação e as repetições."
+        ]
+      },
+      "correction": {
+        "kind": "Orientação de correção",
+        "model": "A Inês pode consultar uma explicação breve e identificar a função sintática numa frase diferente, justificando a resposta. Depois, num exercício que misture funções, verifica se reconhece o que precisa de mobilizar. O Rui pode reler o pedido, selecionar uma passagem pertinente e acrescentar uma frase que explique como essa passagem sustenta a interpretação. A melhoria será visível se a justificação estabelecer essa relação, e não apenas repetir a citação. Em ambos os casos, é útil registar a dificuldade que persiste para escolher a revisão seguinte.",
+        "steps": [
+          {
+            "label": "Diagnosticar",
+            "detail": "A Inês precisa de aplicar; o Rui precisa de fundamentar. Uma proposta diferente é válida se responder à dificuldade do caso."
+          },
+          {
+            "label": "Aplicar e verificar",
+            "detail": "Cada ação deve permitir observar um resultado: uma função justificada ou uma relação explícita entre prova e interpretação."
+          },
+          {
+            "label": "Rever",
+            "detail": "Corta conselhos vagos e indica o que fazer e como saber se resultou."
+          }
+        ],
+        "pitfalls": [
+          "Recomendar apenas mais tempo de estudo.",
+          "Confundir rapidez com qualidade.",
+          "Apresentar um método como garantia de classificação."
+        ],
+        "check": {
+          "id": "s27-check",
+          "q": "Qual alteração torna o conselho «estuda melhor» verificável?",
+          "options": [
+            "Acrescentar «muito melhor».",
+            "Resolver um exemplo novo, justificar a escolha e comparar o raciocínio com a correção.",
+            "Repetir o conselho no fim da resposta."
+          ],
+          "answer": 1,
+          "feedback": "O conselho passa a indicar uma ação e uma forma de verificar o seu resultado."
+        }
+      },
+      "exit": "Regista uma dificuldade concreta e a próxima ação de revisão. Podes juntar fotografias das respostas ao dossiê desta sessão.",
+      "alternatives": []
     }
   ],
   "sources": [

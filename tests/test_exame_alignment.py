@@ -8,6 +8,9 @@ class ExamAlignment(unittest.TestCase):
  def test_recycled_answers_match_current_lessons(self):
   matches=0
   for s in self.sessions:
+   # Authored video case studies have their own comprehension tests; they do not
+   # recycle answers from a lesson bank. Existing recycled sessions stay checked.
+   if s['source'].get('original'):continue
    cards=lesson_cards(ROOT/s['source']['url'].removeprefix('/pt/')/'index.html')
    for q in s['warmup']:
     for c in cards:
