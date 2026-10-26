@@ -14,7 +14,7 @@ def bank(key):return json.JSONDecoder().raw_decode((root/key[:2]/('licao-'+key)/
 try:
  with sync_playwright() as pw:
   browser=pw.chromium.launch(headless=True)
-  for key,index in [('m7-f02',15),('m7-f13',18),('m7-f14',16)]:
+  for key,index in [('m7-f02',15),('m7-f13',18),('m7-f14',16),('m8-f10',2)]:
    for width in [320,1440]:
     ctx,page=new_page(browser,width);errors=[];page.on('pageerror',lambda e:errors.append(str(e)));page.goto(host+'/pt/'+key[:2]+'/licao-'+key+'/',wait_until='networkidle')
     page.evaluate("card=>{document.querySelectorAll('.casca').forEach(n=>n.remove());EPIJogo.montar({itens:[card],chave:'qa-transversal-layout',variar:false});document.querySelector('.jogo-alvo').id='baralho'}",bank(key)[index])
