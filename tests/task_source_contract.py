@@ -47,7 +47,7 @@ def _body_on(source):
 
 
 def _authorized_markup_variants(source, path):
-    """Reverse only three expressly authorized follow-up strings, never content.
+    """Reverse only four expressly authorized follow-up strings, never content.
 
     Keep variants because the independently authored M7 baseline already includes
     some of these markers. A variant must still match the original exact digest.
@@ -60,6 +60,9 @@ def _authorized_markup_variants(source, path):
     ]
     if path == 'tarefas/m1-u1/index.html':
         reversals.append(lambda s: s.replace('Com consulta durante toda a tarefa.', 'Com consulta.'))
+    # 27/10/2026, grelhas /20 (decisão do docente): uma linha com a ligação à grelha da tarefa, em
+    # «Verificar e entregar», escrita por scripts/grelhas_tarefas.py. Só essa linha, literal, é revertida.
+    reversals.append(lambda s: s.replace('<p class="task-grelha"><a href="grelha/">Grelha /20: como é avaliado e autoavaliação</a></p>\n', ''))
     for reversal in reversals:
         variants.update(reversal(item) for item in tuple(variants))
     return variants

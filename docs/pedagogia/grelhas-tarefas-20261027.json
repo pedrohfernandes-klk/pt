@@ -1,0 +1,121 @@
+{
+  "descricao": "Grelhas /20 das tarefas de unidade (27/10/2026, decisão do docente): níveis descritos (0, parcial, máximo) com um exemplo curto inventado por nível e o que custa pontos; autoavaliação antes de entregar; versão de correção com feedback em três partes. Só a grelha /20: os pesos no módulo ficam por confirmar nas fichas oficiais. Piloto: M1. Exemplos escritos para estas grelhas; as citações vêm das lições do M1.",
+  "tarefas": {
+    "m1-u1": {
+      "modulo": "M1",
+      "unidade": 1,
+      "titulo": "Vozes da lírica medieval",
+      "produto": "Três respostas articuladas, à mão, num total de 180 a 250 palavras.",
+      "criterios": [
+        {
+          "nome": "Codax: quem fala, a quem, e o que faz a repetição",
+          "max": 5,
+          "niveis": {
+            "0": ["Não dizes quem fala nem a quem, ou não citas.", "Codax fala do mar e das ondas."],
+            "parcial": ["Dizes quem fala e citas, mas não explicas o que a repetição faz à espera; ou explicas sem citar.", "Fala uma rapariga às ondas: «Ondas do mar de Vigo, / se vistes meu amigo!». A repetição é bonita."],
+            "max": ["Dizes quem fala e a quem, citas e explicas: a pergunta volta porque a resposta não chega, e a repetição faz a espera durar.", "Uma rapariga pergunta às ondas pelo amigo: «Ondas do mar de Vigo, / se vistes meu amigo!». A pergunta repete-se de estrofe em estrofe e ninguém responde: a repetição estica o tempo da espera."]
+          },
+          "custa": ["Citar sem explicar o efeito.", "Confundir o sujeito poético com o trovador.", "Dizer «repete-se muito» sem mostrar onde nem para quê."]
+        },
+        {
+          "nome": "D. Dinis e Guilhade: a diferença sustentada numa passagem de cada um",
+          "max": 4,
+          "niveis": {
+            "0": ["Não comparas, ou a diferença não tem passagem nenhuma.", "Os dois escrevem sobre mulheres."],
+            "parcial": ["Dizes a diferença, mas só sustentas um dos lados, ou citas sem dizer o que a passagem mostra.", "D. Dinis elogia a senhora e Guilhade troça dela: «dona fea, velha e sandia!»."],
+            "max": ["Sustentas a diferença com uma passagem de cada cantiga e explicas: D. Dinis intensifica o louvor; Guilhade promete louvar e desmente a promessa no refrão.", "D. Dinis diz que a senhora «mais que todas las do mundo val»: o louvor sobe. Guilhade anuncia «e vedes como vos quero loar» e entrega «dona fea, velha e sandia!»: o louvor prometido vira troça."]
+          },
+          "custa": ["Comparar autores em vez de passagens.", "Chamar insulto às claras ao que é troça com dois entendimentos, sem o justificar."]
+        },
+        {
+          "nome": "Fonologia: o segmento, o lugar e o nome do processo",
+          "max": 3,
+          "niveis": {
+            "0": ["Não dizes o que cai, ou dás um nome sem relação com o lugar.", "Em mare > mar a palavra fica mais curta."],
+            "parcial": ["Acertas um dos dois casos, ou dizes o segmento sem o lugar.", "Em mare > mar cai o e do fim: apócope. Em malu > mau também é apócope."],
+            "max": ["Nos dois casos dizes o segmento, o lugar e o nome: em mare > mar cai o e do fim (apócope); em malu > mau cai o l do meio (síncope).", "Em mare > mar cai o e no fim da palavra: apócope. Em malu > mau cai o l no meio: síncope. O gesto é o mesmo, cair; o lugar dá o nome."]
+          },
+          "custa": ["Chamar síncope a qualquer palavra que encurta.", "Dizer o nome do processo sem dizer que segmento cai e onde."]
+        },
+        {
+          "nome": "Transferência: a promessa que se repete para criticar a espera",
+          "max": 5,
+          "niveis": {
+            "0": ["Não escreves as duas frases, ou elas não repetem a promessa.", "A aplicação é má e chega tarde."],
+            "parcial": ["Escreves as duas frases com a promessa repetida, mas a ligação a Codax e a Guilhade fica por justificar, ou falta a diferença.", "«Chega já», diz a aplicação. «Chega já», repete ao fim de três dias. É como nas cantigas."],
+            "max": ["As duas frases repetem a promessa e criticam a espera; justificas a ligação a Codax (a espera que dura) e a Guilhade (a promessa desmentida) e dizes uma diferença entre as situações.", "«Chega já», promete a aplicação. «Chega já», repete, e eu à porta. Como em Codax, a repetição faz durar a espera; como em Guilhade, a promessa é desmentida pelo que acontece. A diferença: aqui quem promete é uma empresa, não um amigo nem um trovador."]
+          },
+          "custa": ["Frases que não repetem a promessa.", "Ligar só a um dos trovadores.", "Esquecer a diferença entre as situações."]
+        },
+        {
+          "nome": "Respostas articuladas, extensão e escrita revista",
+          "max": 3,
+          "niveis": {
+            "0": ["Respostas soltas, muito fora dos 180 a 250 palavras, ou sem as duas linhas finais.", "Três listas de palavras sem frases completas."],
+            "parcial": ["As respostas ligam-se mas há erros que a revisão apanhava, ou a extensão foge um pouco, ou o fecho é vago.", "Fecho: «Aprendi muitas coisas sobre as cantigas.»"],
+            "max": ["As três respostas ligam-se, estão dentro da extensão, a escrita foi revista e as duas linhas finais apontam uma passagem.", "Fecho: «Passei a ver se a repetição traz informação nova. Ajudou-me o refrão de Guilhade, que repete o elogio prometido e o desmente.»"]
+          },
+          "custa": ["Erros de concordância e de acentuação que uma releitura apanhava.", "Fecho genérico, sem passagem."]
+        }
+      ]
+    },
+    "m1-u2": {
+      "modulo": "M1",
+      "unidade": 2,
+      "titulo": "Crónica «Estar lá»",
+      "produto": "Crónica de 250 a 300 palavras, com título e fontes no fim. À mão, com consulta.",
+      "criterios": [
+        {
+          "nome": "Momento decisivo e lugar",
+          "max": 4,
+          "niveis": {
+            "0": ["Não se percebe que momento contas nem onde.", "Lisboa é uma cidade com muita história."],
+            "parcial": ["Há um lugar, mas o momento decisivo fica vago, ou o momento existe sem lugar que se veja.", "Na Rua dos Bacalhoeiros aconteceram muitas coisas no tempo de Fernão Lopes."],
+            "max": ["Um momento decisivo, num lugar que se vê, e entras nele logo nas primeiras linhas.", "Na Rua dos Bacalhoeiros, hoje, um homem lava o passeio à mangueira. Em 1384, aqui, ouvia-se o sino da quadrilha."]
+          },
+          "custa": ["Começar pelo resumo histórico em vez do momento.", "Escolher um momento que não decide nada."]
+        },
+        {
+          "nome": "Duas fontes confrontadas e listadas no fim",
+          "max": 5,
+          "niveis": {
+            "0": ["Uma fonte só, ou fontes sem lista no fim.", "Segundo a internet, o cerco foi grande."],
+            "parcial": ["Duas fontes listadas, mas postas lado a lado sem confronto: não dizes onde concordam ou divergem.", "A crónica fala do sino. A enciclopédia fala do cerco."],
+            "max": ["Duas fontes identificadas, confrontadas no texto (o que uma diz e a outra não) e listadas no fim.", "Fernão Lopes conta que cada quadrilha tinha um sino; a enciclopédia dá as datas do cerco, mas não diz a hora a que o sino tocou."]
+          },
+          "custa": ["«Segundo a internet» como fonte.", "Fontes no fim que o texto nunca usa."]
+        },
+        {
+          "nome": "Pormenor, o povo em ação e uma fala marcada",
+          "max": 5,
+          "niveis": {
+            "0": ["Não há pormenor, o povo não age e não há fala.", "As pessoas estavam com medo."],
+            "parcial": ["Há pormenor ou fala, mas o povo fica parado, ou a fala não está marcada como documentada ou imaginada.", "Uma mulher disse: «Vão lá.»"],
+            "max": ["Um pormenor concreto, o povo a agir e uma fala marcada como documentada ou imaginada.", "Uma mulher, à janela, com o cesto do pão: «Vão lá, que eles não entram.» (fala imaginada)"]
+          },
+          "custa": ["O povo como cenário em vez de personagem.", "Fala sem marca de documentada ou imaginada.", "Mudar uma fala documentada para a tornar coloquial."]
+        },
+        {
+          "nome": "Facto, inferência e opinião distintos",
+          "max": 3,
+          "niveis": {
+            "0": ["Inferências e opiniões apresentadas como factos.", "O sino tocou às sete da manhã."],
+            "parcial": ["Marcas uma inferência ou uma opinião, mas há outra que passa por facto.", "Eu acho que tocou de manhã. Toda a gente correu logo."],
+            "max": ["Cada inferência e cada opinião estão marcadas como tuas; os factos vêm das fontes.", "Eu digo que tocou de manhã: é inferência minha, não facto."]
+          },
+          "custa": ["Inventar números, horas ou nomes sem os marcar."]
+        },
+        {
+          "nome": "Extensão, escrita revista e decisão de registo",
+          "max": 3,
+          "niveis": {
+            "0": ["Muito fora dos 250 a 300 palavras, sem título, ou sem a análise de «pra».", "Texto de 120 palavras sem título."],
+            "parcial": ["Extensão certa, mas a análise de «pra» falha o nome ou o lugar, ou há erros que a revisão apanhava.", "Em «pra» cai uma letra no fim: apócope."],
+            "max": ["Extensão e título certos, escrita revista, e justificas o registo: em «pra» cai a vogal do meio (síncope); o relato usa «para» e só uma fala imaginada informal pode usar «pra».", "Em «pra» cai o a do meio de «para»: síncope. Escrevo «para» no relato; «pra» só na fala imaginada do rapaz, porque é informal."]
+          },
+          "custa": ["Contar fontes, revisão e síntese nas 250 a 300 palavras.", "Usar «pra» no relato do cronista."]
+        }
+      ]
+    }
+  }
+}
