@@ -31,8 +31,8 @@ def main():
                             assert link.count() == 1 and link.is_visible()
                             link.focus()
                             assert link.evaluate('e=>e===document.activeElement')
-                        archive.locator('summary').focus()
-                        archive.locator('summary').press('Enter')
+                        archive.locator(':scope > summary').focus()
+                        archive.locator(':scope > summary').press('Enter')
                         assert archive.evaluate('e=>e.open')
                         assert page.evaluate('document.documentElement.scrollWidth <= innerWidth + 3'), path
                     if role == 'mapa-do-modulo':
