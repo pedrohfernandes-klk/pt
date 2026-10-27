@@ -9,11 +9,11 @@
       "scripts": "48bd5eca62cfebeea5441df694b2f3ac239bd15fc29d605aed3d4bde35f21300"
     },
     "2": {
-      "text": "3318e433866128a36b799281d495d3b7e416ae9043b04df5fb2cd09365ef84c1",
-      "links": "ddef9938d110cda940d8d3b987d2091989667d1b780dd3f64729d2118eed2e47",
+      "text": "9711dc03100a6ff6c012ebc9bd039c6a768b48c83b1b19158a5dce2c95c0e972",
+      "links": "fd93420fb25198fa9de9ff7b560d55a1179d68739bffe0cecec8eaa8a2023fc0",
       "images": "15afd8e1ecf95b2033ff3d38511e1eaabdf7cdfbe92755ed3f610ecf46e3cc70",
-      "ids": "ee675efbf40de8b04ebe36ef86d9bb1db497cd5ce1b426d29b04239b63879696",
-      "scripts": "dd0114e49469931a311d666008b714d3420eb9d82ae19b87401f9a8ddb94bb79"
+      "ids": "f824b203624d8b632280b8fba551e3eab34fbcacd117f0edc73e4215ff53f2fc",
+      "scripts": "3522a64cd6ef358fb131ba234c8a58a0dc45d51fa58c68c0b96c55ca93fcbab4"
     },
     "3": {
       "text": "a54b9ba64655ef689fb13e3e924c47f641d16229b78073d48732c08e1176888a",
@@ -66,6 +66,7 @@
     }
   },
   "task_route_change_20261026": "M1/M4/M7: task is a closure lesson; original lesson bytes/order/pools frozen separately in task-route-lesson-content-before.json.",
+  "task_route_change_m2_20261027": "M2: as duas unidades terminam numa aula de tarefa (27/10/2026, passagem do GPT); desafios e ligações passam ao arquivo e saem a síntese separada e o cartão do percurso. O conteúdo, a ordem e as perguntas das lições ficam fixados em task-route-lesson-content-before.json.",
   "authorized_instruction_edits_20261027": {
     "m1": [
       {

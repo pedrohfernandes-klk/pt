@@ -42,7 +42,8 @@ class UnitRoutes(unittest.TestCase):
             with self.subTest(module=module):
                 self.assertEqual(numbers, ui.challenges)
                 # 26/10: M1/M4/M7 end in a task lesson; old pools remain optional archive.
-                if module in (1, 4, 7):
+                # 27/10/2026 (passagem do GPT, tarefas por unidade): o M2 passa ao mesmo modelo, com duas aulas de tarefa.
+                if module in (1, 2, 4, 7):
                     self.assertEqual(numbers, ui.tasks)
                     self.assertEqual([], ui.responses)
                     self.assertIn('id="arquivo-percurso" hidden', src)
@@ -74,14 +75,15 @@ class UnitRoutes(unittest.TestCase):
     def test_changed_unit_assessments_do_not_inherit_old_stage_badges(self):
         for m in (1, 2, 3, 7):
             text = (ROOT / f'm{m}/index.html').read_text('utf-8')
-            if m in (1, 7):
+            # 27/10/2026 (passagem do GPT, tarefas por unidade): o M2 passa ao mesmo modelo, com duas aulas de tarefa.
+            if m in (1, 2, 7):
                 self.assertIn('unit-task-route.js', text)
                 adapter = (ROOT / 'assets/unit-task-route.js').read_text('utf-8')
                 self.assertIn('desafio-unidade-v2-', adapter)
                 self.assertIn('percurso-v2-', adapter)
             else:
                 self.assertIn('K0="desafio-unidade-v2-"', text)
-            if m not in (1, 7):
+            if m not in (1, 2, 7):
                 self.assertIn('"percurso-v2-"+M+"-u"', text)
                 self.assertIn('unit-history.js', text)
         history = (ROOT / 'assets/unit-history.js').read_text('utf-8')

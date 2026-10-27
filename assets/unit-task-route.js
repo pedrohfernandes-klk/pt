@@ -1,4 +1,4 @@
-/* Opt-in routes for M1, M4 and M7: teacher assessment stays in Teams. */
+/* Opt-in routes for M1, M2, M4 and M7: teacher assessment stays in Teams. */
 (function () {
  "use strict";
  function read(key) { try { return JSON.parse(localStorage.getItem(key) || "null"); } catch (_) { return null; } }
@@ -20,7 +20,7 @@
    "desafio-unidade-v2-"+module+"-u"+n];
  }
  function mount(options) {
-  if(!options||!["M1","M4","M7"].includes(options.module))return;
+  if(!options||!["M1","M2","M4","M7"].includes(options.module))return;
   var units=options.units,module=options.module;
   function paint() {
    var next=null;
@@ -65,7 +65,7 @@
    if(host){
     var found=false;
     // Read every historic stage, including those merged when units were reorganised.
-    for(var n=1;n<=Math.max(units.length,module==="M7"?5:module==="M1"?3:units.length);n++){
+    for(var n=1;n<=Math.max(units.length,module==="M7"?5:module==="M2"?4:module==="M1"?3:units.length);n++){
      historicalKeys(module,n).forEach(function(key){
       var value=raw(key);
       if(!value)return;

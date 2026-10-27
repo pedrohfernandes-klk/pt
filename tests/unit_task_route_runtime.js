@@ -18,5 +18,10 @@ for(const unavailable of [false,true]){
  assert.strictEqual(taskChip.textContent,"90 min");assert.deepStrictEqual(writes,[]);
  assert(window.EPIUnitTaskRoute.historicalKeys("M7",5).includes("percurso-sintese-M7-u5"));
  if(!unavailable)assert(window.EPIUnitTaskRoute.lessonDone({exs:["m1-voz"]}));
+ // 27/10/2026 (passagem do GPT, tarefas por unidade): o M2 usa o mesmo percurso, também sem escrever no aparelho.
+ progress.textContent="";
+ window.EPIUnitTaskRoute.mount({module:"M2",units:[{n:1,passos:[{id:"m1-f01",licao:"m1-f01"},{id:"m1-f02",licao:"m1-f02"}]}]});
+ assert(progress.textContent.includes("de 2 lições"));assert.deepStrictEqual(writes,[]);
+ progress.textContent="";window.EPIUnitTaskRoute.mount({module:"M3",units:[{n:1,passos:[]}]});assert.strictEqual(progress.textContent,"");
 }
 console.log("Route runtime OK: storage available/unavailable; no card nodes; no completion writes.");

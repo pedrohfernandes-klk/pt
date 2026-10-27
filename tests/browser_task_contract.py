@@ -3,8 +3,10 @@
 Imported by the existing CI entry points; this file never launches a browser.
 """
 from urllib.parse import urljoin
-TASK_MODULES = {1, 4, 7}
+# 27/10/2026 (passagem do GPT, tarefas por unidade): o M2 passa ao mesmo modelo, com duas aulas de tarefa.
+TASK_MODULES = {1, 2, 4, 7}
 TASK_SLUGS = {1: ['m1-u1', 'm1-u2'],
+              2: ['m2-u1', 'm2-u2'],
               4: ['m4-u1', 'm4-u2', 'm4-u3-discurso'],
               7: ['m7-u1', 'm7-u2', 'm7-u3']}
 

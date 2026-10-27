@@ -44,7 +44,8 @@ class TaskRoutes(unittest.TestCase):
    for path,digest in before['files'].items():
     self.assertEqual(digest,hashlib.sha256(original_lesson_text(path).encode('utf-8')).hexdigest(),path)
  def test_one_classroom_task_per_unit_no_independent_closure_gate(self):
-  expected={1:['m1-u1','m1-u2'],4:['m4-u1','m4-u2','m4-u3-discurso'],7:['m7-u1','m7-u2','m7-u3']}
+  # 27/10/2026 (passagem do GPT, tarefas por unidade): o M2 passa ao mesmo modelo, com duas aulas de tarefa.
+  expected={1:['m1-u1','m1-u2'],2:['m2-u1','m2-u2'],4:['m4-u1','m4-u2','m4-u3-discurso'],7:['m7-u1','m7-u2','m7-u3']}
   for m,slugs in expected.items():
    s=(ROOT/f'm{m}/index.html').read_text('utf-8');p=Route(s)
    self.assertEqual(len(p.ids),len(set(p.ids)))

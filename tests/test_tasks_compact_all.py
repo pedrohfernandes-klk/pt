@@ -1,9 +1,10 @@
-"""Live compact assignments, not archived detailed briefs: eight individual tasks."""
+"""Live compact assignments, not archived detailed briefs: ten individual tasks."""
 from pathlib import Path
 import re, unittest
 from test_task_compact_m7 import Compact
 ROOT=Path(__file__).resolve().parents[1]
-SLUGS=['m1-u1','m1-u2','m4-u1','m4-u2','m4-u3-discurso','m7-u1','m7-u2','m7-u3']
+# 27/10/2026 (passagem do GPT, tarefas por unidade): o M2 passa ao mesmo modelo, com duas aulas de tarefa.
+SLUGS=['m1-u1','m1-u2','m2-u1','m2-u2','m4-u1','m4-u2','m4-u3-discurso','m7-u1','m7-u2','m7-u3']
 class CompactTasks(unittest.TestCase):
  def test_live_concision_optional_recall_and_individual_production(self):
   for slug in SLUGS:
@@ -31,7 +32,7 @@ class CompactTasks(unittest.TestCase):
      self.assertEqual(sum(o['data-correct']=='true' for o in options),1)
      self.assertTrue(all(o.get('data-response') for o in options))
  def test_task_per_unit_in_priority_modules(self):
-  for module,count in [('m1',2),('m4',3),('m7',3)]:
+  for module,count in [('m1',2),('m2',2),('m4',3),('m7',3)]:
    text=(ROOT/module/'index.html').read_text('utf-8')
    self.assertEqual(len(re.findall(r'<li[^>]*data-task-lesson=',text)),count)
 if __name__=='__main__':unittest.main()

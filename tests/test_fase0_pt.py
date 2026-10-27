@@ -52,7 +52,8 @@ class Fase0(unittest.TestCase):
             with self.subTest(modulo=m):
                 s = (ROOT / f'm{m}/index.html').read_text('utf-8')
                 # 26/10: closure lessons read historic notes without migrating or evaluating tasks.
-                if m in (1,4,7):
+                # 27/10/2026 (passagem do GPT, tarefas por unidade): o M2 passa ao mesmo modelo, com duas aulas de tarefa.
+                if m in (1,2,4,7):
                     self.assertIn('unit-task-route.js',s)
                     adapter=(ROOT/'assets/unit-task-route.js').read_text('utf-8')
                     for key in ('percurso-v2-','percurso-','percurso-sintese-'):
