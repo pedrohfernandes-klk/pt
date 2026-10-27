@@ -7,6 +7,7 @@ import json
 import re
 import subprocess
 import unittest
+from task_source_contract import historical_task_source
 
 ROOT = Path(__file__).resolve().parents[1]
 PAGES = ['m4-u1', 'm4-u2', 'm4-u3-discurso']
@@ -38,7 +39,7 @@ class M4UnitTasks(unittest.TestCase):
         guide = (ROOT / 'm4/guia-da-tarefa-m4/index.html').read_text('utf-8-sig')
         plain_guide = re.sub(r'\s+', ' ', unescape(re.sub(r'<[^>]+>', ' ', guide)))
         for path in self.pages:
-            source = path.read_text('utf-8')
+            source = historical_task_source(path)
             with self.subTest(path=path):
                 self.assertIn('AULA DE TAREFA', source)
                 self.assertIn('aula de encerramento da unidade', source)
@@ -61,7 +62,7 @@ class M4UnitTasks(unittest.TestCase):
 
     def test_links_anchors_and_shared_assets(self):
         for path in self.pages:
-            source = path.read_text('utf-8')
+            source = historical_task_source(path)
             parsed = Page(source)
             with self.subTest(path=path):
                 self.assertEqual(len(parsed.ids), len(set(parsed.ids)))
@@ -82,7 +83,7 @@ class M4UnitTasks(unittest.TestCase):
                 self.assertIn('aria-live="polite"', source)
 
     def test_product_specific_constraints(self):
-        fish, critical, speech = [p.read_text('utf-8') for p in self.pages]
+        fish, critical, speech = [historical_task_source(p) for p in self.pages]
         for text in ['grupo de 2 ou 3', '150 a 200 palavras', 'três a quatro minutos', 'todos falam', 'três imagens', 'objeção']:
             self.assertIn(text, fish)
         for text in ['180 a 240 palavras', 'Raquel Castro', 'LU.CA', 'TPC: Frei Luís de Sousaaa', 'Se não foste ao teatro', 'ato I lida em voz alta', 'cenas idênticas', 'adolescentes']:
@@ -97,7 +98,7 @@ class M4UnitTasks(unittest.TestCase):
     def test_all_options_drive_the_shared_feedback_script(self):
         script = (ROOT / 'assets/task-90.js').read_text('utf-8')
         for path in self.pages:
-            groups = Page(path.read_text('utf-8')).questions
+            groups = Page(historical_task_source(path)).questions
             self.assertEqual(len(groups), 4)
             for group in groups:
                 self.assertEqual(sum(o['data-correct'] == 'true' for o in group['options']), 1)

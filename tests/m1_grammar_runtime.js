@@ -34,7 +34,7 @@ for (const file of files) {
     return {getAttribute: k => attributes[k], querySelector: () => feedback,
       querySelectorAll: () => buttons, buttons, feedback};
   });
-  assert.equal(groups.length, 4);
+  assert.equal(groups.length, 2);
   const document = {querySelector: () => status, querySelectorAll: () => groups};
   // No storage or network globals: any unexpected access fails this context.
   vm.runInNewContext(fs.readFileSync(path.join(root, 'assets/task-90.js'), 'utf8'), {document});
@@ -45,15 +45,15 @@ for (const file of files) {
     assert.equal(group.feedback.dataset.answer, 'retry');
     assert.equal(group.feedback.textContent, wrong.getAttribute('data-response'));
     assert.equal(group.feedback.hidden, false);
-    assert.match(status.textContent, new RegExp(`: ${index + 1} de 4`));
+    assert.match(status.textContent, new RegExp(`: ${index + 1} de ${groups.length}`));
     correct.click();
     assert.equal(group.feedback.dataset.answer, 'supported');
     assert.equal(group.feedback.textContent, correct.getAttribute('data-response'));
     assert.equal(correct.getAttribute('aria-pressed'), 'true');
     assert.equal(wrong.getAttribute('aria-pressed'), 'false');
-    assert.match(status.textContent, new RegExp(`: ${index + 1} de 4`));
+    assert.match(status.textContent, new RegExp(`: ${index + 1} de ${groups.length}`));
   });
   groups[0].buttons[0].click();
-  assert.match(status.textContent, /: 4 de 4/);
+  assert.match(status.textContent, /: 2 de 2/);
 }
-console.log(`M1 grammar: ${compiled} inline scripts parsed; 8 MC support/retry/revisit flows passed.`);
+console.log(`M1 grammar: ${compiled} inline scripts parsed; 4 MC support/retry/revisit flows passed.`);

@@ -6,6 +6,7 @@ import re
 import unittest
 
 from test_m1_unit_tasks import TaskPage
+from task_source_contract import historical_task_source, validate_task_source
 
 ROOT = Path(__file__).resolve().parents[1]
 MANIFEST = ROOT / 'tests/fixtures/m1-grammar-pilot-edits-20261027.json'
@@ -42,7 +43,7 @@ class M1GrammarPilot(unittest.TestCase):
 
     def sources(self):
         for path, info in self.manifest['files'].items():
-            after = (ROOT / path).read_text('utf-8')
+            after = historical_task_source(ROOT / path) if path.startswith('tarefas/') else (ROOT / path).read_text('utf-8')
             if path.startswith('tarefas/'):
                 # Compose the independently authorised reader head with this
                 # literal grammar manifest; do not regenerate either snapshot.
@@ -112,30 +113,32 @@ class M1GrammarPilot(unittest.TestCase):
         self.assertNotIn('sempre da mesma maneira.', lesson[21]['html'])
         self.assertIn('só a vogal inserida', legacy((ROOT / 'm1/gram-fonologia/index.html').read_text('utf-8'))['passos'][3]['itens'][3][0])
 
-    def test_four_mc_literary_transfer_and_time_are_preserved(self):
+    def test_real_compact_tasks_keep_grammar_application_and_literary_transfer(self):
         for unit in (1, 2):
-            text = (ROOT / f'tarefas/m1-u{unit}/index.html').read_text('utf-8')
+            text = validate_task_source(ROOT / f'tarefas/m1-u{unit}/index.html')
             parsed = TaskPage(text)
             self.assertEqual(parsed.errors, [])
-            self.assertEqual(len(parsed.questions), 4)
+            self.assertEqual(len(parsed.questions), 2)
             for q in parsed.questions:
                 self.assertEqual(len(q['options']), 3)
                 self.assertEqual(sum(o['data-correct'] == 'true' for o in q['options']), 1)
-            clock = re.search(r'<ol class="task-clock".*?</ol>', text, re.S)[0]
-            self.assertEqual(re.findall(r'<b>(\d+) min</b>', clock), ['10', '10', '60', '10'])
-            self.assertIn('nas mesmas folhas', text)
+            self.assertIn('folhas próprias', text)
             self.assertIn('duas linhas', text)
-        u1 = (ROOT / 'tarefas/m1-u1/index.html').read_text('utf-8')
-        self.assertIn('confronto <i>mare</i>', u1)
-        self.assertIn('Chega já', u1)
-        self.assertIn('liga-a a uma passagem de A e a uma de C', u1)
-        self.assertIn('até dois destes minutos', u1)
-        u2 = (ROOT / 'tarefas/m1-u2/index.html').read_text('utf-8')
-        self.assertIn('três destes quinze minutos', u2)
-        self.assertIn('restantes doze minutos', u2)
-        self.assertIn('Não és obrigado a usar esta fala', u2)
-        self.assertIn('não alteres as palavras de uma fala documentada', u2)
-        self.assertIn('fora da contagem da crónica', u2)
+            self.assertIn('90 min', text)
+            self.assertIn('../../m1/licao-m1-f05/', text)
+            self.assertNotIn('task-clock', text)
+        u1 = validate_task_source(ROOT / 'tarefas/m1-u1/index.html')
+        prompt1 = re.search(r'<section id="produzir".*?</section>', u1, re.S)[0]
+        for token in ('mare', 'malu', 'segmento desaparece', 'onde e com que nome',
+                      'Chega já', 'Codax e Guilhade', 'uma diferença'):
+            self.assertIn(token, prompt1)
+        self.assertIn('Apócope: desaparece a vogal final.', u1)
+        u2 = validate_task_source(ROOT / 'tarefas/m1-u2/index.html')
+        prompt2 = re.search(r'<section id="produzir".*?</section>', u2, re.S)[0]
+        for token in ('pronúncia', 'pra', 'exemplo inventado', 'registo',
+                      'Não alteres uma fala documentada', 'fora da contagem'):
+            self.assertIn(token, prompt2)
+        self.assertIn('Síncope descreve a supressão interior', u2)
 
 
 if __name__ == '__main__':

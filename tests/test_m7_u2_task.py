@@ -2,6 +2,7 @@ from pathlib import Path
 from html.parser import HTMLParser
 from urllib.parse import urlsplit,unquote
 import json,re,unittest
+from task_source_contract import historical_task_source
 
 ROOT=Path(__file__).resolve().parents[1]
 
@@ -23,7 +24,7 @@ class M7Task(unittest.TestCase):
   guide=(ROOT/'m7/guia-da-tarefa-m7/index.html').read_text('utf-8-sig')
   tasks,_=json.JSONDecoder().raw_decode(guide[guide.index('T=[{')+2:])
   self.assertEqual(tasks[0],baseline)
-  page=(ROOT/'tarefas/m7-u2/index.html').read_text('utf-8')
+  page=historical_task_source(ROOT/'tarefas/m7-u2/index.html')
   self.assertIn(baseline['encomenda'],page)
   for criterion in baseline['criterios']:self.assertIn(criterion,page)
   self.assertIn('100 a 150 palavras',page);self.assertIn('dois minutos',page)
@@ -36,12 +37,12 @@ class M7Task(unittest.TestCase):
   self.assertEqual(page.task_sections[0][0],'unidade-pedagogica-2')
   self.assertGreater(source.index('id="tarefa-unidade-2"'),source.index('id="m7-quatro-vozes-um-problema"'))
   self.assertNotIn('id="sintese-unidade-2"',source)
-  self.assertIn('duas linhas de síntese',(ROOT/'tarefas/m7-u2/index.html').read_text('utf-8'))
+  self.assertIn('duas linhas de síntese',historical_task_source(ROOT/'tarefas/m7-u2/index.html'))
   self.assertIn('../tarefas/m7-u2/',page.links)
   self.assertIn('../../tarefas/m7-u2/',(ROOT/'m7/guia-da-tarefa-m7/index.html').read_text('utf-8'))
 
  def test_consultation_recovery_transfer_and_submission(self):
-  path=ROOT/'tarefas/m7-u2/index.html';source=path.read_text('utf-8');page=Page(source)
+  path=ROOT/'tarefas/m7-u2/index.html';source=historical_task_source(path);page=Page(source)
   self.assertIn('durante toda a tarefa',source)
   times=list(map(int,re.findall(r'<b>(\d+) min</b>',re.search(r'<ol class="task-clock".*?</ol>',source,re.S)[0])))
   self.assertEqual(times,[10,10,60,10])

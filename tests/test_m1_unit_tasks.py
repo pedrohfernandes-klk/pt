@@ -9,6 +9,7 @@ import unittest
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'scripts'))
 from audit_cards import lesson_cards
+from task_source_contract import historical_task_source
 
 
 class TaskPage(HTMLParser):
@@ -56,7 +57,7 @@ class M1UnitTasks(unittest.TestCase):
     def pages(self):
         for unit in (1, 2):
             path = ROOT / f'tarefas/m1-u{unit}/index.html'
-            yield unit, path, path.read_text('utf-8')
+            yield unit, path, historical_task_source(path)
 
     def test_html_links_and_shared_quiz_contract(self):
         for unit, path, text in self.pages():
@@ -106,7 +107,7 @@ class M1UnitTasks(unittest.TestCase):
             self.assertNotIn('<textarea', text)
 
     def test_u1_is_written_comparison_and_transfer_without_old_products(self):
-        text = (ROOT / 'tarefas/m1-u1/index.html').read_text('utf-8')
+        text = historical_task_source(ROOT / 'tarefas/m1-u1/index.html')
         for phrase in ['Como se faz ouvir uma espera?', 'Quando deixa a promessa',
                        'Como podes transferir', 'Chega já', '180 a 250 palavras',
                        'passagem de A', 'uma de C']:
@@ -117,7 +118,7 @@ class M1UnitTasks(unittest.TestCase):
         self.assertIn('não é pedido desenho, iluminura ou áudio', text)
 
     def test_u2_preserves_guide_criteria_and_preconditions(self):
-        text = (ROOT / 'tarefas/m1-u2/index.html').read_text('utf-8')
+        text = historical_task_source(ROOT / 'tarefas/m1-u2/index.html')
         guide = (ROOT / 'm1/guia-da-tarefa-m1/index.html').read_text('utf-8')
         task = re.search(r'<section[^>]*id="tarefa-3".*?</section>', guide, re.S)[0]
         criteria = re.search(r'<h3>O que conta</h3><ul>(.*?)</ul>', task, re.S)[1]

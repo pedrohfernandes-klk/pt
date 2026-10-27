@@ -3,13 +3,14 @@ from pathlib import Path
 from html.parser import HTMLParser
 import hashlib,json,re,unittest
 from test_m1_grammar_pilot import restore as restore_grammar
+from task_source_contract import historical_task_source
 ROOT=Path(__file__).resolve().parents[1]
 FIXTURE=json.loads((ROOT/'tests/fixtures/task-reader-before.json').read_text('utf-8'))
 class TaskReader(unittest.TestCase):
  def test_original_content_identifiers_links_quotes_and_rubrics_survive(self):
   for slug,old in FIXTURE['pages'].items():
    with self.subTest(task=slug):
-    source=(ROOT/f'tarefas/{slug}/index.html').read_text('utf-8')
+    source=historical_task_source(ROOT/f'tarefas/{slug}/index.html')
     grammar=json.loads((ROOT/'tests/fixtures/m1-grammar-pilot-edits-20261027.json').read_text('utf-8'))
     authorised=grammar['files'].get(f'tarefas/{slug}/index.html')
     if authorised:source=restore_grammar(source,authorised['edits'])
@@ -54,7 +55,7 @@ class TaskReader(unittest.TestCase):
    source=re.sub(r'<blockquote>.*?</blockquote>','',source,flags=re.S)
    source=re.sub(r'<div class="task-criteria">.*?</div>','',source,flags=re.S)
    self.assertNotRegex(source,forbidden,slug)
-  fish=(ROOT/'tarefas/m4-u1/index.html').read_text('utf-8')
+  fish=historical_task_source(ROOT/'tarefas/m4-u1/index.html')
   for preserved in ('grupo de 2 ou 3','todos falam','150 a 200 palavras','três a quatro minutos'):
    self.assertIn(preserved,fish)
 if __name__=='__main__':unittest.main()

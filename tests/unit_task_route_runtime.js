@@ -13,8 +13,8 @@ for(const unavailable of [false,true]){
  const context={window,document,localStorage,location:{search:""},URLSearchParams};
  vm.runInNewContext(code,context);
  window.EPIUnitTaskRoute.mount({module:"M1",units:[{n:1,passos:[{id:"m1-f01",licao:"m1-f01"},{id:"m1-f02",licao:"m1-f02"}]}]});
- assert(progress.textContent.includes((unavailable?"0":"1")+" de 2 aulas"));
- assert(progress.textContent.includes("avaliação no Teams"));
+ assert(progress.textContent.includes((unavailable?"0":"1")+" de 2 lições"));
+ assert(progress.textContent.includes("tarefa individual com consulta"));
  assert.strictEqual(taskChip.textContent,"90 min");assert.deepStrictEqual(writes,[]);
  assert(window.EPIUnitTaskRoute.historicalKeys("M7",5).includes("percurso-sintese-M7-u5"));
  if(!unavailable)assert(window.EPIUnitTaskRoute.lessonDone({exs:["m1-voz"]}));

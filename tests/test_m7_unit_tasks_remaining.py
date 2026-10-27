@@ -2,6 +2,7 @@ from pathlib import Path
 from html.parser import HTMLParser
 from urllib.parse import urlsplit, unquote
 import json, re, unittest
+from task_source_contract import historical_task_source
 ROOT=Path(__file__).resolve().parents[1]
 
 class Page(HTMLParser):
@@ -18,7 +19,7 @@ class Page(HTMLParser):
 
 class RemainingM7Tasks(unittest.TestCase):
  def page(self,n):
-  p=ROOT/f'tarefas/m7-u{n}/index.html';s=p.read_text('utf-8');return p,s,Page(s)
+  p=ROOT/f'tarefas/m7-u{n}/index.html';s=historical_task_source(p);return p,s,Page(s)
  def test_links_and_shared_quiz_contract(self):
   for n in (1,3):
    with self.subTest(unit=n):

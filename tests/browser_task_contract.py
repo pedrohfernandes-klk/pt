@@ -86,7 +86,8 @@ def assert_task_page(page, before):
     if not compact:
         assert page.locator('.task-clock b').all_text_contents() == ['10 min', '10 min', '60 min', '10 min']
     text = page.locator('main.task-page').text_content()
-    assert 'durante toda a tarefa' in text and 'duas linhas' in text and 'síntese' in text.lower()
+    assert ('consulta' if compact else 'durante toda a tarefa') in text.lower()
+    assert 'duas linhas' in text and 'síntese' in text.lower()
     assert 'Teams' in page.locator('#entregar').text_content()
     # Next/previous and the free index work without answering anything.
     page.locator('[data-task-reader-next]').focus(); page.locator('[data-task-reader-next]').press('Enter')

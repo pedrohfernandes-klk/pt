@@ -40,7 +40,7 @@
      }
     });
     var progress=section.querySelector("[data-prog]");
-    if(progress)progress.textContent=count+" de "+unit.passos.length+" aulas de leitura e preparação feitas · aula de tarefa de 90 min: entrega e avaliação no Teams";
+    if(progress)progress.textContent=count+" de "+unit.passos.length+" lições feitas · tarefa individual com consulta";
     var bar=section.querySelector("[data-barra]");
     if(bar)bar.style.width=Math.round(count/Math.max(1,unit.passos.length)*100)+"%";
     var ok=section.querySelector("[data-ok]");
