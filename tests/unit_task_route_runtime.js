@@ -24,4 +24,10 @@ for(const unavailable of [false,true]){
  assert(progress.textContent.includes("de 2 lições"));assert.deepStrictEqual(writes,[]);
  progress.textContent="";window.EPIUnitTaskRoute.mount({module:"M3",units:[{n:1,passos:[]}]});assert.strictEqual(progress.textContent,"");
 }
+// 27/10/2026: as perguntas do arquivo cobrem todas as lições da unidade (garantia que o M2 já tinha), sem acaso no teste.
+{const ctx={window:{addEventListener(){}},document:{querySelectorAll(){return []},querySelector(){return null},getElementById(){return null},addEventListener(){}},localStorage:{getItem(){return null}},location:{search:""},URLSearchParams,EPIJogo:{baralhar:a=>a.slice()}};
+ vm.runInNewContext(code,ctx);
+ const pool=[...Array(8)].map((_,i)=>({_l:"a",i})).concat([{_l:"b"},{_l:"c"},{_l:"d"},{_l:"b"}]);
+ const got=ctx.window.EPIUnitTaskRoute.pick({licoes:["a","b","c","d"],pool});
+ assert.strictEqual(got.length,8);assert.deepStrictEqual([...new Set(got.map(x=>x._l))].sort(),["a","b","c","d"]);}
 console.log("Route runtime OK: storage available/unavailable; no card nodes; no completion writes.");

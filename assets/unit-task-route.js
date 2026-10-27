@@ -19,6 +19,16 @@
    "percurso-sintese-"+module+"-u"+n,"desafio-"+module+"-u"+n,
    "desafio-unidade-v2-"+module+"-u"+n];
  }
+ // At least one question from each lesson of the unit, then the rest at random (the M2 rule before 27/10).
+ function pick(unit) {
+  var pool=EPIJogo.baralhar(unit.pool.slice()),chosen=[];
+  (unit.licoes||[]).forEach(function(id){
+   var item=pool.find(function(x){return x._l===id&&chosen.indexOf(x)<0;});
+   if(item&&chosen.length<8)chosen.push(item);
+  });
+  pool.forEach(function(x){if(chosen.length<8&&chosen.indexOf(x)<0)chosen.push(x);});
+  return EPIJogo.baralhar(chosen);
+ }
  function mount(options) {
   if(!options||!["M1","M2","M4","M7"].includes(options.module))return;
   var units=options.units,module=options.module;
@@ -88,7 +98,7 @@
     var unit=units.find(function(u){return String(u.n)===button.dataset.desafio;});
     if(!unit||!unit.pool.length||!window.EPIJogo)return;
     var key=challengeKey(module,unit.n);
-    var questions=EPIJogo.baralhar(unit.pool.slice()).slice(0,8);
+    var questions=pick(unit);
     EPIJogo.montar({marca:"Arquivo · Unidade "+unit.n,itens:questions,chave:key,titulo:"Perguntas do arquivo",mostrarAnterior:false,fim:paint});
    });
   });
@@ -96,5 +106,5 @@
   window.addEventListener("focus",paint);window.addEventListener("pageshow",paint);
   document.addEventListener("visibilitychange",function(){if(!document.hidden)paint();});
  }
- window.EPIUnitTaskRoute={mount:mount,lessonDone:lessonDone,historicalKeys:historicalKeys};
+ window.EPIUnitTaskRoute={mount:mount,lessonDone:lessonDone,historicalKeys:historicalKeys,pick:pick};
 })();
