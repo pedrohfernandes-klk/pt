@@ -26,3 +26,7 @@ body[data-site="pt"] .raiz .pt-entry-lead{font:400 1.05rem/1.5 Arial,Helvetica,s
 .site-map-link span{color:#a3472e;font-size:1.4rem}
 @media(prefers-color-scheme:dark){.raiz .pt-circumflex-ink,.site-map-link span{color:#e0b23a}}
 @media(forced-colors:active){.raiz .pt-circumflex-ink{display:none}.site-map-link span{color:LinkText}}
+
+/* A marca usa minúsculas reais: Bebas Neue apresenta-as como capitais. */
+.raiz .p-cab h1{font-family:Arial,Helvetica,sans-serif;font-weight:800;letter-spacing:-.045em;text-transform:none}
+.raiz .pt-circumflex-ink{clip-path:inset(-.3em -.02em 66% -.02em)}
