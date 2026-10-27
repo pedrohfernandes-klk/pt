@@ -1,0 +1,28 @@
+name: Português — apoios legíveis
+on:
+  pull_request:
+    paths:
+      - 'm7/licao-m7-f15/**'
+      - 'assets/pt-lessons/apoios-tabelas.css'
+      - 'tests/*apoios*'
+      - 'tests/fixtures/apoios-*'
+      - '.github/workflows/pt-apoios-qa.yml'
+permissions:
+  contents: read
+jobs:
+  tables:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Confirmar tabela, conteúdo e chaves preservados
+        run: python -m unittest discover -s tests -p 'test_apoios_tabelas.py' -v
+      - name: Instalar Chromium
+        run: |
+          python -m pip install playwright
+          python -m playwright install --with-deps chromium
+      - name: Verificar tabela, revisão e projeção
+        run: python tests/browser_apoios_tabelas.py
