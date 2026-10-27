@@ -27,6 +27,11 @@ class ModuleLayout(unittest.TestCase):
   baseline=json.loads((ROOT/'tests/fixtures/module-layout-before.json').read_text('utf-8'))
   for module in range(1,10):
    source=(ROOT/f'm{module}/index.html').read_text('utf-8-sig')
+   # Exact authorised UX wording only; restore it for the frozen index snapshot.
+   for edit in baseline.get('authorized_instruction_edits_20261027',{}).get(f'm{module}',[]):
+    self.assertEqual(source.count(edit['new']),1)
+    self.assertNotIn(edit['old'],source)
+    source=source.replace(edit['new'],edit['old'])
    if module==7 and 'task_route_change_20261026' not in baseline:
     # Authorized final task access; placement and destination are tested separately.
     source=re.sub(r'<aside class="unit-task" id="tarefa-unidade-2".*?</aside>','',source,flags=re.S)

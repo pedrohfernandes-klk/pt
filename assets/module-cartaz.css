@@ -1,9 +1,7 @@
 /* Índices de módulo: conteúdo, ordem e motores existentes; perfil visual optativo. */
 @media screen{
- /* Mostarda escurecida para texto pequeno; a mostarda Cartaz original fica no tema noturno. */
- body.pt-module-layout{background:var(--papel,#fff);font-size:18px;line-height:1.6;--poster-accent:#806000;--poster-secondary:#a84939}
- :root[data-theme=dark] body.pt-module-layout{--poster-accent:var(--mostarda,#e0b23a);--poster-secondary:#e0876f}
- @media(prefers-color-scheme:dark){:root:not([data-theme=light]) body.pt-module-layout{--poster-accent:var(--mostarda,#e0b23a);--poster-secondary:#e0876f}}
+ body.pt-module-layout{background:var(--papel,#fff);font-size:18px;line-height:1.6;--poster-accent:#a84939}
+ :root[data-theme=dark] body.pt-module-layout{--poster-accent:#de9986}
  body.pt-module-layout>main{max-width:75rem;padding-inline:clamp(16px,2.5vw,32px)}
  body.pt-module-layout header.topo{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(240px,1fr);gap:16px 48px;padding:32px 0 24px;border-bottom:3px solid var(--tinta);align-items:start}
  body.pt-module-layout header.topo>*{grid-column:1;min-width:0}
@@ -17,7 +15,7 @@
  body.pt-module-layout .mod-ambito{font:400 1rem/1.55 Arial,sans-serif;margin:0;color:var(--tinta)}
  body.pt-module-layout header.topo .module-opening{display:contents}
  body.pt-module-layout header.topo .module-opening .module-entry{grid-column:1;margin:12px 0;max-width:none}
- body.pt-module-layout .module-entry>a{background:var(--papel);color:var(--tinta);font-size:1.05rem;border:1px solid var(--tinta);border-left:4px solid var(--poster-secondary);padding:16px;min-height:60px}
+ body.pt-module-layout .module-entry>a{background:var(--papel);color:var(--tinta);font-size:1.05rem;border:1px solid var(--tinta);border-left:4px solid var(--poster-accent);padding:16px;min-height:60px}
  body.pt-module-layout header.topo .module-opening .doc{grid-column:2;grid-row:1/span 6;align-self:stretch;margin:0;padding:12px 0 12px 24px;background:transparent;border:0;position:relative;isolation:isolate}
  body.pt-module-layout header.topo .module-opening .doc img{display:block;width:auto;max-width:100%;height:auto;max-height:300px;object-fit:contain;margin:0 auto 16px}
  body.pt-module-layout .module-opening figcaption{font:400 .9rem/1.55 Arial,sans-serif;color:var(--tinta)}

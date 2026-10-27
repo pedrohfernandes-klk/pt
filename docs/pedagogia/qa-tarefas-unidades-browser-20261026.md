@@ -52,3 +52,14 @@ A CI executará a matriz das oito tarefas com larguras reais de 390 e 1366 px, e
 A revisão visual do pai confirmou o funcionamento das oito tarefas no desktop. A tentativa de reduzir a largura na ferramenta de revisão visual manteve `innerWidth` em 1280 px; por isso não certifica o comportamento mobile. A certificação mobile fica dependente da execução efetiva desta matriz na CI. Nesta frente não foi executado Playwright localmente.
 
 Após este complemento, a suite Python completa passou com 214 testes. A continuidade dos dois rótulos de tarefa foi corrigida por instrução da revisão: M1-U2 «Crónica “Estar lá”» e M4-U1 «Um peixe de hoje», sem alterar os títulos nem os enunciados das lições. Apenas os hashes de texto e scripts dos índices M1/M4 foram ajustados para estes rótulos autorizados; a fixture do conteúdo original das lições mantém-se.
+
+
+## Decisão de27/10: separar a nova direção visual
+
+O utilizador escolheu preto/branco quente, azul-petróleo e mostarda, com
+comparação em M1/M4/M7 e aprovação antes de replicar. A publicação pedagógica
+conserva por isso os dois CSS atuais da produção; a proposta cromática fica
+num piloto separado, sem publicação antecipada. A versão de cache deste lote
+é20261027-tarefas-1. Dois resumos de M1 foram atualizados por manifesto exato,
+sem regenerar hashes de conteúdo: o teste restaura apenas essas duas frases
+para comparar com o snapshot congelado.

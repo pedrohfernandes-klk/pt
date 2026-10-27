@@ -65,5 +65,17 @@
       "scripts": "597c2c1a92fe75e164a2a6b985d6b74cfbedf5892f53982ed54a1f89214dea74"
     }
   },
-  "task_route_change_20261026": "M1/M4/M7: task is a closure lesson; original lesson bytes/order/pools frozen separately in task-route-lesson-content-before.json."
+  "task_route_change_20261026": "M1/M4/M7: task is a closure lesson; original lesson bytes/order/pools frozen separately in task-route-lesson-content-before.json.",
+  "authorized_instruction_edits_20261027": {
+    "m1": [
+      {
+        "old": "De quem é a voz quando uma cantiga diz «eu»? Cinco atos, o desafio e a síntese da unidade 1.",
+        "new": "De quem é a voz quando uma cantiga diz «eu»? Cinco atos para comparar vozes e preparar a tarefa da unidade 1."
+      },
+      {
+        "old": "Cantiga e crónica lado a lado: uma voz sozinha, uma multidão sem nome; desafio e síntese.",
+        "new": "Cantiga e crónica lado a lado: uma voz sozinha, uma multidão sem nome; leitura e fundamentação para a tarefa da unidade 2."
+      }
+    ]
+  }
 }
