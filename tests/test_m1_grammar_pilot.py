@@ -43,6 +43,18 @@ class M1GrammarPilot(unittest.TestCase):
     def sources(self):
         for path, info in self.manifest['files'].items():
             after = (ROOT / path).read_text('utf-8')
+            if path.startswith('tarefas/'):
+                # Compose the independently authorised reader head with this
+                # literal grammar manifest; do not regenerate either snapshot.
+                reader_tags = [
+                    '<link rel="stylesheet" href="../../assets/pt-lessons/lesson.css?v=20261027-task-reader-1">',
+                    '<link rel="stylesheet" href="../../assets/task-reader.css?v=20261027-task-reader-1">',
+                    '<script defer src="../../assets/pt-lessons/casca.js?v=20261027-task-reader-1"></script>',
+                    '<script defer src="../../assets/task-reader.js?v=20261027-task-reader-1"></script>',
+                ]
+                for tag in reader_tags:
+                    self.assertEqual(after.count(tag), 1, path)
+                    after = after.replace(tag, '')
             yield path, info, restore(after, info['edits']), after
 
     def test_exact_authorized_edits_restore_frozen_files_and_heads(self):

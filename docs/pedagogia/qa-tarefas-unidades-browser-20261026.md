@@ -63,3 +63,18 @@ num piloto separado, sem publicação antecipada. A versão de cache deste lote
 é20261027-tarefas-1. Dois resumos de M1 foram atualizados por manifesto exato,
 sem regenerar hashes de conteúdo: o teste restaura apenas essas duas frases
 para comparar com o snapshot congelado.
+
+
+## Decisão final de27/10: conservar a composição e promover mostarda
+
+Depois de ver a comparação, o utilizador preferiu o desenho existente e
+rejeitou a proposta azul-petróleo. A paleta aprovada volta a ser preto/branco,
+texto neutro e mostarda nos pequenos destaques, com terracota secundária
+discreta. Aplicam-se só os dois CSS de acentos já verificados (contrastes
+mínimos5,10:1), preservando as restantes declarações. O vermelho fixo dos
+resumos longos passa para o token neutro do tema, sem cortar texto.
+
+As tarefas passaram entretanto a cartões por pedido expresso, reutilizando
+a casca existente. Há cartões de leitura ou produção longos com deslocação
+interna. O piloto de gramática foi composto com esta alteração através dos
+dois manifestos literais; os snapshots antigos não foram regenerados.

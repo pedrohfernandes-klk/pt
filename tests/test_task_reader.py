@@ -2,6 +2,7 @@
 from pathlib import Path
 from html.parser import HTMLParser
 import hashlib,json,re,unittest
+from test_m1_grammar_pilot import restore as restore_grammar
 ROOT=Path(__file__).resolve().parents[1]
 FIXTURE=json.loads((ROOT/'tests/fixtures/task-reader-before.json').read_text('utf-8'))
 class TaskReader(unittest.TestCase):
@@ -9,6 +10,9 @@ class TaskReader(unittest.TestCase):
   for slug,old in FIXTURE['pages'].items():
    with self.subTest(task=slug):
     source=(ROOT/f'tarefas/{slug}/index.html').read_text('utf-8')
+    grammar=json.loads((ROOT/'tests/fixtures/m1-grammar-pilot-edits-20261027.json').read_text('utf-8'))
+    authorised=grammar['files'].get(f'tarefas/{slug}/index.html')
+    if authorised:source=restore_grammar(source,authorised['edits'])
     body=source.split('<body',1)[1]
     if slug=='m4-u1':
      expected=old['original_body']

@@ -2,8 +2,8 @@
 body.task-reader-active>.teacher-access{z-index:1000}
 .task-reader{--col:min(900px,100%);--d1:10px;--d2:20px}
 .task-reader .casca-corpo{padding-top:12px;padding-bottom:12px}
-.task-reader .task-page{width:100%;max-width:var(--col);margin:0;padding:0}
-.task-reader .task-reader-card{padding:clamp(16px,3vw,28px);background:var(--papel);border:1px solid var(--tinta);min-width:0;overflow-wrap:anywhere}
+.task-reader .task-page{width:100%;max-width:var(--col);margin:0 auto;padding:0}
+.task-reader .task-reader-card{padding:clamp(16px,3vw,28px);background:var(--papel);border:0;min-width:0;overflow-wrap:anywhere}
 .task-reader .task-reader-card>.task-section{margin:0;padding:0;border:0}
 .task-reader .task-reader-card>.task-question{padding:0;border:0}
 .task-reader .task-page header{padding-top:8px}
@@ -19,6 +19,7 @@ body.task-lesson h3{text-transform:none;letter-spacing:normal}
 .task-reader .task-reader-index button[aria-current]{font-weight:700;text-decoration:underline;text-underline-offset:4px}
 .task-reader .task-reader-note{font:400 .9rem/1.5 Arial}
 .task-reader .c-marca{max-width:34vw;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.task-reader .c-barra rect.atual{fill:var(--mostarda)}
 .task-reader .casca-acoes{flex-wrap:wrap}
 .task-reader .casca-acoes button,.task-reader .casca-acoes a{white-space:normal}
 .task-reader .task-page :is(a,button,summary,input):focus-visible,.task-reader .task-reader-index button:focus-visible{outline:3px solid currentColor;outline-offset:3px}

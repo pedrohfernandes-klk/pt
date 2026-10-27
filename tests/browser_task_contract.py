@@ -105,9 +105,15 @@ def assert_task_page(page, before):
     selected = question.locator('button[aria-pressed="true"]').inner_text()
     page.locator('[data-task-reader-support]').focus(); page.locator('[data-task-reader-support]').press('Enter')
     assert page.locator('#apoios').is_visible()
-    detail = page.locator('#apoios details').first
-    detail.locator('summary').focus(); detail.locator('summary').press('Enter')
-    assert detail.evaluate('e=>e.open')
+    details = page.locator('#apoios details')
+    if details.count():
+        detail = details.first
+        detail.locator('summary').focus(); detail.locator('summary').press('Enter')
+        assert detail.evaluate('e=>e.open')
+    else:
+        # M1-U1 keeps the short source texts open together for comparison.
+        assert page.locator('#apoios article').count() >= 3
+        assert page.locator('#apoios blockquote').count() >= 3
     page.locator('[data-task-reader-return]').focus(); page.locator('[data-task-reader-return]').press('Enter')
     assert question.is_visible() and question.locator('button[aria-pressed="true"]').inner_text() == selected
     assert question.locator('[data-task-feedback]').is_visible()
