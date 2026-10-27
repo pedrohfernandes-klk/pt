@@ -27,9 +27,12 @@
  body.pt-module-layout .unit-index{margin:24px 0 32px;border-top:0;padding-top:0}
  body.pt-module-layout .unit-index ol{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:16px;margin:12px 0}
  body.pt-module-layout .unit-index li,body.pt-module-layout .unit-index li+li{border:0;border-top:2px solid var(--tinta);background:transparent}
- body.pt-module-layout .unit-index a{padding:18px 8px;font-size:1.05rem;min-height:76px;align-content:center}
+ /* 27/10/2026: em cartões, o título da unidade fica na sua linha e «N aulas · tarefa 90 min» desce para baixo dele. Com três colunas
+    (número, título, contagem sem quebra), a contagem ocupava a largura do cartão e espremia o título a uma palavra por linha (0 a 28 px). */
+ body.pt-module-layout .unit-index a{grid-template-columns:1.3em minmax(0,1fr);align-items:baseline;row-gap:4px;padding:18px 8px;font-size:1.05rem;min-height:76px;align-content:center}
+ body.pt-module-layout .unit-index span{font-weight:700;line-height:1.3;overflow-wrap:break-word}
  body.pt-module-layout .unit-index :is(small,span){font-family:Arial,Helvetica,sans-serif}
- body.pt-module-layout .unit-index small{font-size:.9rem;color:var(--tinta)}
+ body.pt-module-layout .unit-index small{grid-column:2;white-space:normal;font-size:.9rem;line-height:1.4;color:var(--tinta)}
  body.pt-module-layout .module-support{border-color:var(--cinza);margin:24px 0 40px}
  body.pt-module-layout .unidade-pedagogica{background:transparent;border:0;border-top:3px solid var(--tinta);padding:24px 0;margin:40px 0}
  body.pt-module-layout .grupo-topo h2{font:700 clamp(1.5rem,2.4vw,2rem)/1.2 Arial,Helvetica,sans-serif;letter-spacing:-.02em;text-transform:none}
