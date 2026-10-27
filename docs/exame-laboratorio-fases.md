@@ -51,3 +51,30 @@ Integrar o registo no dossiê, se aprovado; testar migração, exportação e pr
 `node tests/browser_exame_laboratorio.cjs` (Playwright instalado; opcionalmente `PT_BROWSER_CHANNEL=msedge` para usar Edge local).
 
 O teste de navegador cobre as oito combinações, respostas certas/erradas, apoios ocultos/revelados, autoavaliação, impressão sem soluções/dados pessoais, projeção, reinício, temporizador e preservação do catálogo com 27 sessões, a 390 e 1366 px. O workflow de PR também executa os testes existentes de cache e alinhamento das sessões.
+
+## Redesenho «Oficina da palavra» (27/10/2026, para validação)
+
+Decisões do docente (27/10): a identidade fica só no laboratório; fontes livres em ficheiros locais. O nome público continua «Laboratório de respostas».
+
+- **Fontes:** Fraunces (leitura e títulos; eixos de tamanho ótico e peso) e IBM Plex Sans (orientação e ferramentas). Ambas SIL Open Font License 1.1, com a licença ao lado dos ficheiros (`assets/exame/fontes/`). Subconjunto latino com todos os glifos do português, cerca de 194 KB no total. Sem serviço externo; recurso a Georgia e Arial.
+- **Tokens:** só em `body.oficina` (prefixo `--of-`), em claro e escuro. O contraste foi medido: texto ≥ 4,5:1 nos dois temas. O amarelo serve só de fundo, com texto escuro.
+- **Assinatura:**
+  - os quatro verbos do título passam a ser o índice das máquinas (Pensa, Prova, Responde, Revê), com o número de oficina;
+  - o rótulo «Instrução» como recorte;
+  - o traço de anotação.
+- **Quatro máquinas, quatro composições:**
+  - **01:** a instrução é anotada (verbo de comando, objeto, condição) só depois de verificares.
+  - **02:** as linhas do texto são as próprias escolhas, com «Verificar» logo a seguir.
+  - **03:** caderno pautado com margem e relógio.
+  - **04:** a resposta em revisão fica no campo de leitura, com marcas de corretor e conteúdo (C-ED) separado de língua (CL).
+- **Estado:** o relógio é estado de cada exercício. Revelar apoios não o reinicia nem apaga o rascunho. Mudar de máquina ou de texto põe-no em pausa, e a pausa é anunciada. As atualizações são parciais e conservam o foco: ao revelar, o foco vai para o título do apoio.
+- **Projeção:** em 1366×768, o texto, a instrução, as escolhas e «Verificar» cabem no primeiro ecrã. Em 1920×1080, o texto principal fica perto de 30 px. Os campos pessoais continuam ocultos.
+- **Papel:** A4 a preto e branco, com:
+  - cabeçalho com o número da oficina;
+  - linhas com referência;
+  - instrução em caixa;
+  - linhas de escrita que saem sem a opção de imprimir fundos;
+  - origem no fim.
+- **Testes novos** (`tests/browser_exame_laboratorio.cjs`): contraste nos dois temas, relógio e rascunho conservados, pausa ao mudar de máquina, foco, teclado, anotações só depois de verificar, papel e primeiro ecrã da projeção.
+
+Por validar em sala: legibilidade à distância, ritmo dos dois minutos e clareza das anotações.
