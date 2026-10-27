@@ -60,6 +60,9 @@ def open_task_card(page, selector):
     page.locator('[data-c-menu]').focus(); page.locator('[data-c-menu]').press('Enter')
     jump = page.locator(f'[data-task-reader-jump="{index}"]')
     jump.focus(); jump.press('Enter')
+    for detail in target.locator('xpath=ancestor::details').all():
+        if not detail.evaluate('e=>e.open'):
+            detail.locator(':scope > summary').focus(); detail.locator(':scope > summary').press('Enter')
     assert target.is_visible(), selector
     assert page.locator('[data-task-card]:visible').count() == 1
     return target
@@ -71,9 +74,17 @@ def assert_task_page(page, before):
     assert page.locator('[data-task-reader]').count() == 1
     assert page.locator('[data-c-barra] rect').count() == page.locator('[data-task-card]').count()
     assert page.evaluate('(()=>{const ids=[...document.querySelectorAll("[id]")].map(e=>e.id);return ids.length===new Set(ids).size})()')
-    assert page.locator('[data-task-question]').count() == 4
+    compact = page.locator('main[data-task-compact]').count() == 1
+    count = 2 if compact else 4
+    assert page.locator('[data-task-question]').count() == count
+    if compact:
+        assert page.locator('[data-task-card]').count() == 3
+        assert page.locator('.task-clock').count() == 0
+        assert 'Tarefa individual' in page.locator('.task-kicker').first.text_content()
+        assert not page.locator('[data-task-optional-preparation]').evaluate('e=>e.open')
     assert page.locator('textarea, input[type="text"], [data-sintese-registar]').count() == 0
-    assert page.locator('.task-clock b').all_text_contents() == ['10 min', '10 min', '60 min', '10 min']
+    if not compact:
+        assert page.locator('.task-clock b').all_text_contents() == ['10 min', '10 min', '60 min', '10 min']
     text = page.locator('main.task-page').text_content()
     assert 'durante toda a tarefa' in text and 'duas linhas' in text and 'síntese' in text.lower()
     assert 'Teams' in page.locator('#entregar').text_content()
@@ -84,7 +95,7 @@ def assert_task_page(page, before):
     assert page.locator('[data-task-card="0"]').is_visible()
     open_task_card(page, '#entregar')
     assert learning_storage(page) == before
-    for i in range(1, 5):
+    for i in range(1, count + 1):
         question = open_task_card(page, f'[data-task-question="{i}"]')
         options = question.locator('button[data-response]')
         assert options.count() == 3
@@ -99,22 +110,26 @@ def assert_task_page(page, before):
             assert feedback.inner_text() == button.get_attribute('data-response')
             expected = 'supported' if button.get_attribute('data-correct') == 'true' else 'retry'
             assert feedback.get_attribute('data-answer') == expected
-    assert '4 de 4' in page.locator('[data-task-status]').inner_text()
+    assert f'{count} de {count}' in page.locator('[data-task-status]').inner_text()
     # Consultation is close to the question and preserves the selected answer/listeners.
     question = open_task_card(page, '[data-task-question="1"]')
     selected = question.locator('button[aria-pressed="true"]').inner_text()
-    page.locator('[data-task-reader-support]').focus(); page.locator('[data-task-reader-support]').press('Enter')
-    assert page.locator('#apoios').is_visible()
-    details = page.locator('#apoios details')
-    if details.count():
-        detail = details.first
-        detail.locator('summary').focus(); detail.locator('summary').press('Enter')
-        assert detail.evaluate('e=>e.open')
+    if compact:
+        open_task_card(page, '#produzir')
+        open_task_card(page, '[data-task-question="1"]')
     else:
-        # M1-U1 keeps the short source texts open together for comparison.
-        assert page.locator('#apoios article').count() >= 3
-        assert page.locator('#apoios blockquote').count() >= 3
-    page.locator('[data-task-reader-return]').focus(); page.locator('[data-task-reader-return]').press('Enter')
+        page.locator('[data-task-reader-support]').focus(); page.locator('[data-task-reader-support]').press('Enter')
+        assert page.locator('#apoios').is_visible()
+        details = page.locator('#apoios details')
+        if details.count():
+            detail = details.first
+            detail.locator('summary').focus(); detail.locator('summary').press('Enter')
+            assert detail.evaluate('e=>e.open')
+        else:
+            # M1-U1 keeps the short source texts open together for comparison.
+            assert page.locator('#apoios article').count() >= 3
+            assert page.locator('#apoios blockquote').count() >= 3
+        page.locator('[data-task-reader-return]').focus(); page.locator('[data-task-reader-return]').press('Enter')
     assert question.is_visible() and question.locator('button[aria-pressed="true"]').inner_text() == selected
     assert question.locator('[data-task-feedback]').is_visible()
     assert learning_storage(page) == before, 'Consultation must not evaluate or complete the task'
@@ -143,14 +158,11 @@ def assert_reader_navigation(page):
     page.locator('#criterios').wait_for(state='visible')
     # There is one viewport-sized shell; long reading scrolls within its body.
     body = page.locator('.task-reader .casca-corpo')
-    height=page.evaluate('innerHeight')
-    if not body.evaluate('e=>e.scrollHeight>e.clientHeight+2'):
-        page.set_viewport_size({'width':page.evaluate('innerWidth'),'height':500})
-    assert body.evaluate('e=>e.scrollHeight>e.clientHeight+2')
-    assert body.evaluate('e=>{e.scrollTop=e.scrollHeight;return e.scrollTop}') > 0
+    assert body.evaluate('e=>["auto","scroll"].includes(getComputedStyle(e).overflowY)')
+    if body.evaluate('e=>e.scrollHeight>e.clientHeight+2'):
+        assert body.evaluate('e=>{e.scrollTop=e.scrollHeight;return e.scrollTop}') > 0
     assert page.locator('[data-task-reader]').bounding_box()['height'] <= page.evaluate('innerHeight') + 2
     assert page.evaluate('document.documentElement.scrollWidth <= innerWidth + 3')
-    page.set_viewport_size({'width':page.evaluate('innerWidth'),'height':height})
     page.evaluate('window.dispatchEvent(new Event("beforeprint"))')
     page.emulate_media(media='print')
     assert page.locator('[data-task-card]:visible').count() == page.locator('[data-task-card]').count()
@@ -204,7 +216,8 @@ def responsive_task_matrix(browser, host):
                     launcher.click(); page.wait_for_url('**/projetar/**')
                     frame = page.frame_locator('#lesson-frame')
                     frame.locator('[data-task-reader].task-reader-ready').wait_for()
-                    assert frame.locator('[data-task-question]').count() == 4
+                    expected = 2 if frame.locator('[data-task-compact]').count() else 4
+                    assert frame.locator('[data-task-question]').count() == expected
                     assert not errors, (slug, width, scheme, errors)
                     print('PASS responsive task:', slug, 'actual width', width, scheme,
                           'feedback/anchors/buoy/projection', flush=True)
@@ -226,7 +239,12 @@ def fallback_task_pages(browser, host):
             assert page.locator('main.task-page').is_visible()
             for target in ('#preparacao','#apoios','#produzir','#entregar'):
                 assert page.locator(target).is_visible()
-            assert page.locator('[data-task-question]:visible').count() == 4
+            compact = page.locator('main[data-task-compact]').count() == 1
+            if compact:
+                assert page.locator('[data-task-question]:visible').count() == 0
+                optional=page.locator('[data-task-optional-preparation] > summary')
+                optional.focus();optional.press('Enter')
+            assert page.locator('[data-task-question]:visible').count() == (2 if compact else 4)
             button=page.locator('[data-task-question="1"] button[data-response]').first
             button.focus();button.press('Enter')
             assert page.locator('[data-task-question="1"] [data-task-feedback]').inner_text()==button.get_attribute('data-response')

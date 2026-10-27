@@ -4,6 +4,7 @@
  "use strict";
  var page=document.querySelector("main.task-page");
  if(!page||!window.EPICasca||document.querySelector("[data-task-reader]"))return;
+ var compact=page.hasAttribute("data-task-compact");
  var original=Array.from(page.childNodes),parent=page.parentNode,next=page.nextSibling;
  var root=null,controller=null,updatingHash=false,returnQuestion=null,positions=[];
  function move(node,host){positions.push({node:node,parent:node.parentNode,next:node.nextSibling});host.appendChild(node);}
@@ -18,18 +19,18 @@
    nodes.forEach(function(node){move(node,box);});
    cards.push({el:box,label:label,kind:kind||"reading"});return box;
   }
-  var opening=card("A aula de tarefa",[]);
+  var opening=card(compact?"Enunciado":"A aula de tarefa",[]);
   var before=Array.from(page.children);
   before.forEach(function(node){
    if(node===nav||node.tagName==="HEADER"){move(node,opening);return;}
    if(node.matches("[data-task-status]"))return;
    var heading=node.querySelector("h2,h3,summary"),label=heading?heading.textContent.trim():"Outros apoios";
-   if(node.id==="preparacao"){
+   if(!compact&&node.id==="preparacao"){
     card("Preparar · leitura e modelo",[node]);
     questions.forEach(function(question,i){card("Preparar · pergunta "+(i+1),[question],"question");});
-   }else card(label,[node],node.id==="apoios"?"support":node.id==="produzir"?"production":node.id==="entregar"?"delivery":"reading");
+   }else card(compact?(node.id==="apoios"?"Relembrar":node.id==="entregar"?"Verificar":label):label,[node],node.id==="apoios"?"support":node.id==="produzir"?"production":node.id==="entregar"?"delivery":"reading");
   });
-  if(quiz)quiz.hidden=true; // Its original question nodes now have their own cards.
+  if(quiz&&!compact)quiz.hidden=true; // Its original question nodes now have their own cards.
   page.replaceChildren();
   cards.forEach(function(item){page.appendChild(item.el);});
   root=element("div","casca task-reader");root.setAttribute("data-casca","");root.setAttribute("data-task-reader","");
@@ -43,7 +44,7 @@
   menu.setAttribute("aria-label","Abrir o índice da aula");menu.setAttribute("aria-expanded","false");
   top.append(brand,number,bar,mode,menu);
   var body=element("div","casca-corpo");body.tabIndex=-1;body.appendChild(page);
-  if(status){status.classList.add("task-reader-status");move(status,body);}
+  if(status&&!compact){status.classList.add("task-reader-status");move(status,body);}
   var actions=element("footer","casca-acoes");actions.setAttribute("data-c-acoes","");
   var feedback=element("section","casca-folha");feedback.setAttribute("data-c-folha","");feedback.hidden=true;
   var panel=element("div","casca-menu");panel.setAttribute("data-c-painel","");panel.hidden=true;
