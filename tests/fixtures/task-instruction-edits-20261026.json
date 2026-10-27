@@ -1,0 +1,107 @@
+{
+  "base": "65f786c3bfeaaec6ddb754acd81d3bcf44c726af",
+  "content_fixture_base": "7163b6032cf084a76c05da0b236000232dd44522",
+  "normalization": "Read UTF-8 text with universal newline conversion to LF; restore only exact new strings from this manifest in reverse order.",
+  "files": {
+    "m1/licao-m1-f11/index.html": {
+      "base_sha256_lf": "5e91efa7b1b3ec57fa5e7532917f7bdd06dde67ec31f59b5bd58651d9aa8a7c8",
+      "edits": [
+        {
+          "file": "m1/licao-m1-f11/index.html",
+          "location": "Cartão 1 · aula.linha",
+          "old": "90 minutos: reler a cantiga e a crónica, compará-las, ver uma resposta por dentro, fazer o desafio e escrever a síntese.",
+          "new": "90 minutos: reler a cantiga e a crónica, compará-las e analisar uma resposta fundamentada. Preparação para a Tarefa da Unidade 2.",
+          "occurrences": 1
+        },
+        {
+          "file": "m1/licao-m1-f11/index.html",
+          "location": "Cartão 19 · titulo",
+          "old": "A síntese da unidade 2",
+          "new": "Uma resposta fundamentada",
+          "occurrences": 1
+        },
+        {
+          "file": "m1/licao-m1-f11/index.html",
+          "location": "Cartão 19 · orientação antes dos critérios",
+          "old": "Em papel, à mão, para entregar no fim da aula. Nada se escreve no telemóvel.",
+          "new": "Treino com consulta. Recupera a resposta já feita e melhora uma ligação entre ideia e prova. A síntese integra a Tarefa da Unidade 2.",
+          "occurrences": 1
+        }
+      ]
+    },
+    "m4/licao-m4-f10/index.html": {
+      "base_sha256_lf": "518001eea0821923b494b0110b47f2829b3be35a00204c6fc28c7edd3140c260",
+      "edits": [
+        {
+          "file": "m4/licao-m4-f10/index.html",
+          "location": "Cartão 1 · aula.linha",
+          "old": "90 minutos: ler os pegadores, receber a encomenda, escolher o peixe, fazer o desafio, decidir e escrever a síntese.",
+          "new": "90 minutos: ler os pegadores, escolher o peixe e testar uma comparação e uma objeção. Preparação para a Tarefa da Unidade 1.",
+          "occurrences": 1
+        },
+        {
+          "file": "m4/licao-m4-f10/index.html",
+          "location": "Cartão A resposta que entregas · orientação",
+          "old": "Em papel, à mão, sozinho, para entregar no fim da aula. Nada se escreve no telemóvel.",
+          "new": "Com consulta, recupera a resposta já feita e testa a objeção com o texto. Não repitas esta produção para realizar a Tarefa da Unidade 1.",
+          "occurrences": 1
+        },
+        {
+          "file": "m4/licao-m4-f10/index.html",
+          "location": "Cartão Para levar · parágrafo",
+          "old": "Na síntese, a tua posição aguenta-se quando responde a quem discorda com uma passagem das aulas que a prove.",
+          "new": "Na argumentação, a tua posição aguenta-se quando responde a quem discorda com uma passagem das aulas que a prove.",
+          "occurrences": 1
+        },
+        {
+          "file": "m4/licao-m4-f10/index.html",
+          "location": "Cartão Para levar · última frase",
+          "old": "Na síntese: a tua posição, duas passagens de aulas diferentes e uma objeção respondida.",
+          "new": "No treino: posição, prova explicada e resposta a uma objeção. Recupera este modo de fundamentar na Tarefa da Unidade 1.",
+          "occurrences": 1
+        }
+      ]
+    },
+    "m4/licao-m4-f11/index.html": {
+      "base_sha256_lf": "ba1446a0dc259ddc1ceef22286bbc68bb3b093e62abe89c158be9c03d825953e",
+      "edits": [
+        {
+          "file": "m4/licao-m4-f11/index.html",
+          "location": "Cartão 1 · aula.linha",
+          "old": "90 minutos: ler Vieira e Garrett, perceber a peroração, decidir, escrever em papel, desafio e síntese da unidade 3.",
+          "new": "90 minutos: ler Vieira e Garrett, perceber a peroração e comparar maneiras de argumentar. Preparação para a Tarefa da Unidade 3: Discurso no abrigo.",
+          "occurrences": 1
+        },
+        {
+          "file": "m4/licao-m4-f11/index.html",
+          "location": "Cartão 16 · orientação antes dos critérios",
+          "old": "Em papel, à mão, para entregar no fim da escrita. Conta as palavras e escreve o número no fim.",
+          "new": "Treino com consulta. Recupera a resposta já feita e revê uma citação explicada e a objeção, sem nova entrega. O fecho da unidade é a Tarefa da Unidade 3: Discurso no abrigo.",
+          "occurrences": 1
+        }
+      ]
+    }
+  },
+  "teacher_content": {
+    "m1/aulas/aula-06/index.html": {
+      "questions": "e8a6726f7607e673aceefc9a69ff91274bb06cb845a5508c00a1419e36a0aed7",
+      "rubrics": "a54c46e8ff9a83bb890f8a62c32555c85bee2d8adba4631502ceca89ad9dfb23"
+    },
+    "m1/aulas/aula-14/index.html": {
+      "questions": "dd46b0085f4c247565e1e6ff729a152f058973d5cc3f3a80687476cee8c9aee9",
+      "rubrics": "a16a720062d91ffc276a8b3c0499afb3c5e48f0d4ad59a71aefc44dcef2179fa"
+    },
+    "m4/aulas/aula-08/index.html": {
+      "questions": "085befa4e9a8ac6ef9047208ba255cde23495e4d76eec0aecdbf49530475fcf1",
+      "rubrics": "b4b6693bb61c387621674f3072f03289303d4b30b0a4c9b8ad23daac19bec2cb"
+    },
+    "m4/aulas/aula-15/index.html": {
+      "questions": "36608ca3dfaf0e84a33cbab3867890683b6806e29d83638e222f8cf7de50952b",
+      "rubrics": "4e35152030e9721420ceefd9465fb5ce9e08c58bc090ae2502450a692cb11afb"
+    },
+    "m4/aulas/aula-18/index.html": {
+      "questions": "53aaa0a470782d5c26e16901aeb8f1cbaa31deba95a5e9d74c45b125540fc4c8",
+      "rubrics": "437972fc4e7fb67438bc930bd82622b1013c52a33db12a9fbb791c2fe1b9168d"
+    }
+  }
+}

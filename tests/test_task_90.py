@@ -5,6 +5,7 @@ import json,re,sys,unittest
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/'scripts'))
 from audit_cards import lesson_cards
+from test_task_routes_closure import original_lesson_text
 
 class UnitPlacement(HTMLParser):
  def __init__(self,text):super().__init__();self.stack=[];self.tasks=[];self.feed(text)
@@ -17,7 +18,9 @@ class UnitPlacement(HTMLParser):
 
 class TaskNinety(unittest.TestCase):
  def test_existing_prompt_and_assessment_are_preserved(self):
-  old=lesson_cards(ROOT/'m4/licao-m4-f11/index.html')[15]['html']
+  # The original support retains its rubric; F11 only changes the surrounding UX.
+  source=original_lesson_text('m4/licao-m4-f11/index.html')
+  old=json.JSONDecoder().raw_decode(source[source.index('CARTOES=')+len('CARTOES='):])[0][15]['html']
   page=(ROOT/'tarefas/m4-u3/index.html').read_text('utf-8')
   self.assertIn(old.split('<details',1)[0],page)
   criteria=re.search(r'<summary>O que conta</summary><div>(<ol>.*?</ol>)',old,re.S).group(1)
