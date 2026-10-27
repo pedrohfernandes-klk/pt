@@ -43,6 +43,9 @@
   var menu=element("button","c-ic","☰");menu.type="button";menu.setAttribute("data-c-menu","");
   menu.setAttribute("aria-label","Abrir o índice da aula");menu.setAttribute("aria-expanded","false");
   top.append(brand,number,bar,mode,menu);
+  // 27/10/2026: o relógio do aluno fica no enunciado; o tempo que falta acompanha os outros cartões.
+  var clock=page.querySelector("[data-relogio]");
+  if(clock&&clock.relogio){var mini=element("span","relogio-mini");mini.setAttribute("aria-hidden","true");clock.relogio.espelhar(mini);top.insertBefore(mini,menu);}
   var body=element("div","casca-corpo");body.tabIndex=-1;body.appendChild(page);
   if(status&&!compact){status.classList.add("task-reader-status");move(status,body);}
   var actions=element("footer","casca-acoes");actions.setAttribute("data-c-acoes","");

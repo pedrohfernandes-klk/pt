@@ -26,6 +26,9 @@ class CompactTasks(unittest.TestCase):
     self.assertIn(len(links),(2,3))
     self.assertIn('task-reader.js?v=20261027-compact-1',text)
     self.assertIn('task-90.js?v=20261027-compact-1',text)
+    # 27/10/2026 (pedido do docente): relógio do aluno, até 60 min de produção, no enunciado.
+    self.assertIn('data-relogio data-max="60" data-passo="5" data-rotulo="Produção em papel" data-chave="pt-relogio:tarefas/'+slug+':producao"',text)
+    self.assertLess(text.index('assets/relogio.js'),text.index('pt-lessons/casca.js'))
     for i in range(2):
      options=p.options[i*3:i*3+3]
      self.assertEqual(len(options),3)
