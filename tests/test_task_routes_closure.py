@@ -6,15 +6,17 @@ import hashlib,json,re,unittest
 ROOT=Path(__file__).resolve().parents[1]
 FIXTURE=ROOT/'tests/fixtures/task-route-lesson-content-before.json'
 INSTRUCTION_EDITS=ROOT/'tests/fixtures/task-instruction-edits-20261026.json'
+GRAMMAR_EDITS=ROOT/'tests/fixtures/m1-grammar-pilot-edits-20261027.json'
 
 def original_lesson_text(path):
  """Reverse only the explicitly authorized UX strings; retain the frozen LF hash."""
  source=(ROOT/path).read_text('utf-8')
- manifest=json.loads(INSTRUCTION_EDITS.read_text('utf-8'))
- for edit in reversed(manifest['files'].get(path,{}).get('edits',[])):
-  if source.count(edit['new'])!=edit['occurrences']:
-   raise AssertionError(f"Instruction edit no longer matches: {path}: {edit['location']}")
-  source=source.replace(edit['new'],edit['old'])
+ for manifest_path in (GRAMMAR_EDITS,INSTRUCTION_EDITS):
+  manifest=json.loads(manifest_path.read_text('utf-8'))
+  for edit in reversed(manifest['files'].get(path,{}).get('edits',[])):
+   if source.count(edit['new'])!=edit['occurrences']:
+    raise AssertionError(f"Authorized edit no longer matches: {path}: {edit['location']}")
+   source=source.replace(edit['new'],edit['old'])
  return source
 class Route(HTMLParser):
  def __init__(self,s):
