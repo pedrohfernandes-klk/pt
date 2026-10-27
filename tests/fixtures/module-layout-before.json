@@ -2,11 +2,11 @@
   "baseline": "71ee55272e476b08c3bcf24132206f7f9ecf0369",
   "modules": {
     "1": {
-      "text": "bb4de7a141bee3f9e47ae289560632b2ebc9b7447a5df3de7b9ad2439f0fe102",
-      "links": "0c6321537057ef32431e3c9454ac864cfb1f1a52c43c2b38d10e9ae797dd563e",
+      "text": "59040fbde52dd3151254d26302fe67db998e7b4e736041e3bd46bc3dbfe21882",
+      "links": "32ca9f069cf72f5b52565d7db835e4038595943ffa36b772235e6309bcef3cd9",
       "images": "d54a27a637fc802bad785cc895f40d576c2e8f2dff0d2ea788f7e7a177fb039a",
-      "ids": "19ebec1ddd679f5eb4f54973c43e8de08e433b06326be2b1b7b84d95013f17cb",
-      "scripts": "478772a3fd9bb1965e3ecd5d8325e8428f62770b55220f50d00b60b7d7782732"
+      "ids": "6f2e5b43040ae613564401d2b979f1779ba4bb88944399829520455ceba0769b",
+      "scripts": "48bd5eca62cfebeea5441df694b2f3ac239bd15fc29d605aed3d4bde35f21300"
     },
     "2": {
       "text": "3318e433866128a36b799281d495d3b7e416ae9043b04df5fb2cd09365ef84c1",
@@ -23,11 +23,11 @@
       "scripts": "133ec7c429976c8d729fb053a3e32a579b4aa3691389257d9160e0070de33309"
     },
     "4": {
-      "text": "9317174428edb008cc611b1af216befb53808ace1b6ecad51c7ce02b28253c2b",
-      "links": "ee781b0f9d77fee6f4c11c8ee8e6392442fd06299e564686acad057735310d69",
+      "text": "b6b549beed69d9d48d47c1477b19388adb5a81c7c5571770860e0381d8ee7930",
+      "links": "ccf139c6d8c6ba9253af6cb3758c265fd584204c92bcafee97ab99bff708dcb0",
       "images": "b907c7fad7de2fddae2894c8b9e4d51167deea38b80a384fcd949a77a79f4cc4",
-      "ids": "260bf7cd740fad3150810aafac0a457fbaf039e1d6c74b137bc88bd556c71934",
-      "scripts": "f0b10eabac968a37ffc4cfa729db923362963329b3217b11e9e3409345c72820"
+      "ids": "f481508f3c44c1df62e7eb68b0650cf744de5a64dc7349119f7cf8098126450c",
+      "scripts": "73d8be118ec3812119186337910e68e3608abcd3aceedcb8e3ddd24e8b245845"
     },
     "5": {
       "text": "2b140bf5429b9f402ca57573af05abdaa1d6836f557a076302c551da9e118400",
@@ -44,11 +44,11 @@
       "scripts": "1d09f84006b63d179a78ceef3b239c98256ad50215eb7ae031a18ae3ae36f3a9"
     },
     "7": {
-      "text": "008fd5f986172cb6a4d78d93d85f94014dfc0ef2e4f35bdacd421738bd028029",
-      "links": "6d98cb92824977aa46758323e85fa0ef8e397564825f2f6aa3b9e279d0cc70fd",
+      "text": "701a76e190d9eea607f403d0e5397c82e1fd506f07cb61e623b5e984ebaa880a",
+      "links": "2d619d4965d8e1e1e57cae405d6bf00d164a6f3b3ffa81d293ecb49ed2f248cb",
       "images": "2d4e169f5bdbac513f4cf1999153d0d11f709b6f201320fedd61aeb273f10d80",
-      "ids": "83380442daba30fb6e2b2db9abcac4588199a482ec249fcf57b6b6fff1d008bf",
-      "scripts": "c4fa1fe250061c9e147d42e8b0a2477d74834136fc234279ec8e17b876fa8cc9"
+      "ids": "f7d216c83543c5d9c325d96fdac403c3432f05dc2a4f2660bb450111552bda81",
+      "scripts": "9417b8c29f6929771dda860b043ecac8b833d4fb50836aebd36fac73e4131215"
     },
     "8": {
       "text": "7953fa2936f94c14e1b64cd779466289a3da7ad84a5c36cede0bda6dd8b3ce1b",
@@ -64,5 +64,18 @@
       "ids": "e69c600f0da668f2f8752e104e8d4bbb7f2048b965b3beb448aa1da3d115cceb",
       "scripts": "597c2c1a92fe75e164a2a6b985d6b74cfbedf5892f53982ed54a1f89214dea74"
     }
+  },
+  "task_route_change_20261026": "M1/M4/M7: task is a closure lesson; original lesson bytes/order/pools frozen separately in task-route-lesson-content-before.json.",
+  "authorized_instruction_edits_20261027": {
+    "m1": [
+      {
+        "old": "De quem é a voz quando uma cantiga diz «eu»? Cinco atos, o desafio e a síntese da unidade 1.",
+        "new": "De quem é a voz quando uma cantiga diz «eu»? Cinco atos para comparar vozes e preparar a tarefa da unidade 1."
+      },
+      {
+        "old": "Cantiga e crónica lado a lado: uma voz sozinha, uma multidão sem nome; desafio e síntese.",
+        "new": "Cantiga e crónica lado a lado: uma voz sozinha, uma multidão sem nome; leitura e fundamentação para a tarefa da unidade 2."
+      }
+    ]
   }
 }

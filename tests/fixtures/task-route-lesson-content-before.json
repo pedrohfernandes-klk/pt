@@ -1,0 +1,597 @@
+{
+  "1": {
+    "units": [
+      {
+        "n": 1,
+        "passos": [
+          {
+            "id": "m1-f01",
+            "licao": "m1-f01",
+            "exs": [],
+            "ativ": [
+              "ler",
+              "olhar-ajuda"
+            ]
+          },
+          {
+            "id": "m1-f02",
+            "licao": "m1-f02",
+            "exs": [],
+            "ativ": [
+              "ler",
+              "mendinho-ermida"
+            ]
+          },
+          {
+            "id": "m1-f05",
+            "licao": "m1-f05",
+            "exs": [],
+            "ativ": [
+              "ler",
+              "gram-fonologia"
+            ]
+          },
+          {
+            "id": "m1-f04",
+            "licao": "m1-f04",
+            "exs": [],
+            "ativ": [
+              "ler",
+              "guilhade-dona-fea"
+            ]
+          },
+          {
+            "id": "m1-f19",
+            "licao": "m1-f19",
+            "exs": [],
+            "ativ": []
+          },
+          {
+            "id": "m1-voz-emprestada",
+            "licao": null,
+            "exs": [
+              "m1-voz-emprestada"
+            ]
+          }
+        ],
+        "licoes": [
+          "m1-f01",
+          "m1-f02",
+          "m1-f05",
+          "m1-f04",
+          "m1-f19"
+        ],
+        "pool_sha256": "7992fb880f663167aa72925d4f192fc1b4ab71cd03b9f11ebdea690408d7642c"
+      },
+      {
+        "n": 2,
+        "passos": [
+          {
+            "id": "m1-f06",
+            "licao": "m1-f06",
+            "exs": [],
+            "ativ": [
+              "ler",
+              "matam-o-mestre"
+            ]
+          },
+          {
+            "id": "m1-f08",
+            "licao": "m1-f08",
+            "exs": [],
+            "ativ": [
+              "ler",
+              "gram-complementos"
+            ]
+          },
+          {
+            "id": "m1-f07",
+            "licao": "m1-f07",
+            "exs": [],
+            "ativ": [
+              "ler",
+              "lisboa-cercada"
+            ]
+          },
+          {
+            "id": "m1-f20",
+            "licao": "m1-f20",
+            "exs": [],
+            "ativ": []
+          },
+          {
+            "id": "m1-promessa-do-cronista",
+            "licao": null,
+            "exs": [
+              "m1-promessa-do-cronista"
+            ]
+          },
+          {
+            "id": "m1-f15",
+            "licao": "m1-f15",
+            "exs": [],
+            "ativ": [
+              "ler",
+              "gram-coordenadas"
+            ]
+          },
+          {
+            "id": "m1-f10",
+            "licao": "m1-f10",
+            "exs": [],
+            "ativ": [
+              "ler"
+            ]
+          },
+          {
+            "id": "m1-f11",
+            "licao": "m1-f11",
+            "exs": [],
+            "ativ": [
+              "ler",
+              "ondas-vigo"
+            ]
+          }
+        ],
+        "licoes": [
+          "m1-f06",
+          "m1-f08",
+          "m1-f07",
+          "m1-f20",
+          "m1-f15",
+          "m1-f10",
+          "m1-f11"
+        ],
+        "pool_sha256": "eb48a89d09b7278312520c28212bd8a25a0ce5615861f9fe23e8cc322903ae62"
+      }
+    ],
+    "files": {
+      "m1/licao-m1-f01/index.html": "4540600cceafc48d168f3e789b72a4150f213c70f2d866b2e820d99bee8d2f14",
+      "m1/licao-m1-f02/index.html": "4261eae4323d21da495a12787fb1fb378a5b2b3cc8e6f31fe5af291c50a17080",
+      "m1/licao-m1-f04/index.html": "c124e2c19516377ef81642e1821f8bd6198dca9a79f3448a73ab695955b35edb",
+      "m1/licao-m1-f05/index.html": "8e9d66ca05de6c36853795f35d12c1280124737ddaa29635c8bd71eff4c94ce1",
+      "m1/licao-m1-f06/index.html": "381244349da3d95bee8fe5b2580eb5e311055e3f568b1818bc08c4008cfe3ec2",
+      "m1/licao-m1-f07/index.html": "f37cff048a71237d9fa3d0020578df391045c61f66f44859634baae1da67ddd1",
+      "m1/licao-m1-f08/index.html": "618e7e6df2380c0777b6d9be10c87de2b729462abd050eb23318074a03ee2fa6",
+      "m1/licao-m1-f10/index.html": "8e62303e30a5fcbf2e4087cbc747214e538f41f6e14d44f4ed0d62d436ab2014",
+      "m1/licao-m1-f11/index.html": "5e91efa7b1b3ec57fa5e7532917f7bdd06dde67ec31f59b5bd58651d9aa8a7c8",
+      "m1/licao-m1-f15/index.html": "0c63a22cc0b63d0e8160d9a7d490a9aca27fb5fe01b1f51fefe4aab63655beff",
+      "m1/licao-m1-f19/index.html": "d4468b601008e0a7333ffa0416e01198cdb59a20b698b1934e6fd48188fa87d5",
+      "m1/licao-m1-f20/index.html": "f270661909a445f5816bb79b70b11666148d8e6e37f9bb02bd452a82ab879749",
+      "m1/m1-promessa-do-cronista/index.html": "69830657a072f365147bf339b33c67398c59f4c85d4e30e0575d8f18c5808939",
+      "m1/m1-voz-emprestada/index.html": "ee064de105b72168df15a5b2718a740f1a86edd77c565594bdfdb650a5c634d1"
+    }
+  },
+  "4": {
+    "units": [
+      {
+        "n": 1,
+        "passos": [
+          {
+            "id": "m4-f01",
+            "licao": "m4-f01",
+            "exs": [],
+            "ativ": [
+              "ler",
+              "vieira-praia"
+            ]
+          },
+          {
+            "id": "m4-f02",
+            "licao": "m4-f02",
+            "exs": [],
+            "ativ": [
+              "ler",
+              "vieira-sal"
+            ]
+          },
+          {
+            "id": "m4-f04",
+            "licao": "m4-f04",
+            "exs": [],
+            "ativ": [
+              "ler",
+              "vieira-grandes"
+            ]
+          },
+          {
+            "id": "m4-f25",
+            "licao": "m4-f25",
+            "exs": [],
+            "ativ": []
+          },
+          {
+            "id": "m4-sermao-tribunal",
+            "licao": null,
+            "exs": [
+              "m4-sermao-tribunal"
+            ]
+          },
+          {
+            "id": "m4-f06",
+            "licao": "m4-f06",
+            "exs": [],
+            "ativ": [
+              "ler",
+              "gram-atos-fala"
+            ]
+          },
+          {
+            "id": "m4-f15",
+            "licao": "m4-f15",
+            "exs": [],
+            "ativ": [
+              "ler",
+              "gram-coesao"
+            ]
+          },
+          {
+            "id": "m4-f10",
+            "licao": "m4-f10",
+            "exs": [],
+            "ativ": [
+              "ler",
+              "vieira-peixes"
+            ]
+          }
+        ],
+        "licoes": [
+          "m4-f01",
+          "m4-f02",
+          "m4-f04",
+          "m4-f25",
+          "m4-f06",
+          "m4-f15",
+          "m4-f10"
+        ],
+        "pool_sha256": "721e96f4d7901d6552fee8c1692920190a9654556ee458a821d3d56c9c4965d3"
+      },
+      {
+        "n": 2,
+        "passos": [
+          {
+            "id": "m4-f28",
+            "licao": "m4-f28",
+            "exs": [],
+            "ativ": [
+              "ler"
+            ]
+          },
+          {
+            "id": "m4-f07",
+            "licao": "m4-f07",
+            "exs": [],
+            "ativ": [
+              "ler",
+              "garrett-fogo"
+            ]
+          },
+          {
+            "id": "m4-f20",
+            "licao": "m4-f20",
+            "exs": [],
+            "ativ": [
+              "ler"
+            ]
+          },
+          {
+            "id": "m4-f08",
+            "licao": "m4-f08",
+            "exs": [],
+            "ativ": [
+              "ler",
+              "frei-luis-ninguem"
+            ]
+          },
+          {
+            "id": "m4-f09",
+            "licao": "m4-f09",
+            "exs": [],
+            "ativ": [
+              "ler",
+              "garrett-nome"
+            ]
+          },
+          {
+            "id": "m4-f26",
+            "licao": "m4-f26",
+            "exs": [],
+            "ativ": []
+          },
+          {
+            "id": "m4-frei-luis-quem-sabia",
+            "licao": null,
+            "exs": [
+              "m4-frei-luis-quem-sabia"
+            ]
+          }
+        ],
+        "licoes": [
+          "m4-f28",
+          "m4-f07",
+          "m4-f20",
+          "m4-f08",
+          "m4-f09",
+          "m4-f26"
+        ],
+        "pool_sha256": "e7539b2dbbad2623cf17f4107373116e9b077cd71c8799f1bfc2cfcea4f5d755"
+      },
+      {
+        "n": 3,
+        "passos": [
+          {
+            "id": "m4-f14",
+            "licao": "m4-f14",
+            "exs": [],
+            "ativ": [
+              "ler"
+            ]
+          },
+          {
+            "id": "m4-f27",
+            "licao": "m4-f27",
+            "exs": [],
+            "ativ": []
+          },
+          {
+            "id": "m4-f11",
+            "licao": "m4-f11",
+            "exs": [],
+            "ativ": [
+              "ler"
+            ]
+          }
+        ],
+        "licoes": [
+          "m4-f14",
+          "m4-f27",
+          "m4-f11"
+        ],
+        "pool_sha256": "5073cab0aeddc27b4a43f0155bc64c5d26cca2af1e19a3a846bd3850b2f067ad"
+      }
+    ],
+    "files": {
+      "m4/licao-m4-f01/index.html": "d2146eee4148ed75b2d4a30b215bb72c855c52c32f682a18ae05749ef0ceb545",
+      "m4/licao-m4-f02/index.html": "cac0e99e9d8fe635530caeb239643b045500af6f6c511a343f36d3a760bb9ea6",
+      "m4/licao-m4-f04/index.html": "c53827de14880a00d7a5bfdecb0a9056522f90e2165e48c4ea1d86cd5176e565",
+      "m4/licao-m4-f06/index.html": "8343a6dce636c664355917333430c098985bd79c1e3e097ef13b00d3918e5972",
+      "m4/licao-m4-f07/index.html": "225a5941d4d162afaac5aa622f1a0985b8aa510fc76f8157f0732910ad649211",
+      "m4/licao-m4-f08/index.html": "bec063242208e3572b0db6b3e5a8744732c8dd3245e3955a0663d256bb8d1368",
+      "m4/licao-m4-f09/index.html": "17171c24ede5278555f63ac2a105be1758a6aa2104772fefb25082a386489608",
+      "m4/licao-m4-f10/index.html": "518001eea0821923b494b0110b47f2829b3be35a00204c6fc28c7edd3140c260",
+      "m4/licao-m4-f11/index.html": "ba1446a0dc259ddc1ceef22286bbc68bb3b093e62abe89c158be9c03d825953e",
+      "m4/licao-m4-f14/index.html": "aed89eacb68608ac967edb982cb7a59b943a3f87bfca3dbecf9ae773b1ed99c5",
+      "m4/licao-m4-f15/index.html": "dee4d1a7bc7afde5ab425131a9cdc6afd81543b03ee4ce6728719c3d0020c55a",
+      "m4/licao-m4-f20/index.html": "907366cd989a817afb50d50cdb147e02e81091842c079533c8540ce6f44d0113",
+      "m4/licao-m4-f25/index.html": "b15a8df3f7b056fd3613a7dcb281be1b5d6d295af443cd5eae753352bddfad8e",
+      "m4/licao-m4-f26/index.html": "8140304e2fc5ad5a007907678d62750875574eb89678719511f3d46da7857f60",
+      "m4/licao-m4-f27/index.html": "904108d0327e07cfce60bebb29b0e895ae1ffc7662acf7c4645feb5fd12074a8",
+      "m4/licao-m4-f28/index.html": "79a803de454de2a61b2f9b537b3e6edbf024cc0dae3333dce2b6353dda7c9c28",
+      "m4/m4-frei-luis-quem-sabia/index.html": "68f810d58bdf8457b2a0959e891c46417446856772a8b0602c59a8ac0d790d2c",
+      "m4/m4-sermao-tribunal/index.html": "97f46e8be5a44c31f0d7067e9b0c4ea664bd881a62492b465d597033a035eef4"
+    }
+  },
+  "7": {
+    "units": [
+      {
+        "n": 1,
+        "passos": [
+          {
+            "id": "m7-f01",
+            "licao": "m7-f01",
+            "exs": [],
+            "ativ": [
+              "ler",
+              "olhar-pessoa"
+            ]
+          },
+          {
+            "id": "m7-f02",
+            "licao": "m7-f02",
+            "exs": [],
+            "ativ": [
+              "ler",
+              "pessoa-fingir"
+            ]
+          },
+          {
+            "id": "m7-fingidor-maquina",
+            "licao": null,
+            "exs": [
+              "m7-fingidor-maquina"
+            ]
+          },
+          {
+            "id": "m7-f13",
+            "licao": "m7-f13",
+            "exs": [],
+            "ativ": [
+              "ler",
+              "pessoa-ceifeira"
+            ]
+          },
+          {
+            "id": "m7-f34",
+            "licao": "m7-f34",
+            "exs": [],
+            "ativ": [
+              "ler"
+            ]
+          },
+          {
+            "id": "m7-f14",
+            "licao": "m7-f14",
+            "exs": [],
+            "ativ": [
+              "ler",
+              "pessoa-ilha"
+            ]
+          },
+          {
+            "id": "m7-f15",
+            "licao": "m7-f15",
+            "exs": [],
+            "ativ": [
+              "ler",
+              "pessoa-infancia"
+            ]
+          }
+        ],
+        "licoes": [
+          "m7-f01",
+          "m7-f02",
+          "m7-f13",
+          "m7-f34",
+          "m7-f14",
+          "m7-f15"
+        ],
+        "pool_sha256": "c7737e7f55c68eb4546c43680912060435c5e9afc469eae36457aeee1447a7cb"
+      },
+      {
+        "n": 2,
+        "passos": [
+          {
+            "id": "m7-f04",
+            "licao": "m7-f04",
+            "exs": [],
+            "ativ": [
+              "ler",
+              "caeiro-olhar"
+            ]
+          },
+          {
+            "id": "m7-f35",
+            "licao": "m7-f35",
+            "exs": [],
+            "ativ": []
+          },
+          {
+            "id": "m7-f05",
+            "licao": "m7-f05",
+            "exs": [],
+            "ativ": [
+              "ler",
+              "reis-lidia"
+            ]
+          },
+          {
+            "id": "m7-f23",
+            "licao": "m7-f23",
+            "exs": [],
+            "ativ": [
+              "ler",
+              "reis-se-todo"
+            ]
+          },
+          {
+            "id": "m7-f07",
+            "licao": "m7-f07",
+            "exs": [],
+            "ativ": [
+              "ler"
+            ]
+          },
+          {
+            "id": "m7-f06",
+            "licao": "m7-f06",
+            "exs": [],
+            "ativ": [
+              "ler",
+              "campos-aniversario"
+            ]
+          },
+          {
+            "id": "m7-f36",
+            "licao": "m7-f36",
+            "exs": [],
+            "ativ": []
+          },
+          {
+            "id": "m7-quatro-vozes-um-problema",
+            "licao": null,
+            "exs": [
+              "m7-quatro-vozes-um-problema"
+            ]
+          }
+        ],
+        "licoes": [
+          "m7-f04",
+          "m7-f35",
+          "m7-f05",
+          "m7-f23",
+          "m7-f07",
+          "m7-f06",
+          "m7-f36"
+        ],
+        "pool_sha256": "aeeb106a4a3e45e6eec6dfdc6772699ec0d6d72a099ae6da02b2f84cefa0d97e"
+      },
+      {
+        "n": 3,
+        "passos": [
+          {
+            "id": "m7-f08",
+            "licao": "m7-f08",
+            "exs": [],
+            "ativ": [
+              "ler",
+              "mensagem-mostrengo"
+            ]
+          },
+          {
+            "id": "m7-f09",
+            "licao": "m7-f09",
+            "exs": [],
+            "ativ": [
+              "ler",
+              "mensagem-nevoeiro"
+            ]
+          },
+          {
+            "id": "m7-f10",
+            "licao": "m7-f10",
+            "exs": [],
+            "ativ": [
+              "ler"
+            ]
+          },
+          {
+            "id": "m7-f11",
+            "licao": "m7-f11",
+            "exs": [],
+            "ativ": [
+              "ler"
+            ]
+          }
+        ],
+        "licoes": [
+          "m7-f08",
+          "m7-f09",
+          "m7-f10",
+          "m7-f11"
+        ],
+        "pool_sha256": "46c6d7839b35eb32b1a2702961af5582cada03bae5948f14f4f10123e6095ca7"
+      }
+    ],
+    "files": {
+      "m7/licao-m7-f01/index.html": "c5cbe0ce535f15ca51c74e333eea7ceb621bb97c8ddf5d81590286caca7b179d",
+      "m7/licao-m7-f02/index.html": "f0e22f9a72d044932dfdb6480c18565e700dc7e4c0f649e5042993ee50401697",
+      "m7/licao-m7-f04/index.html": "9db0b2f6a5e694c59a89c871a6311b1981ca3bd0c62591f9c9220bc73729ca28",
+      "m7/licao-m7-f05/index.html": "f29e38d8dd8316505f7022c8e32eb35e593e5b091ac6d77678eb104a95cc4c0a",
+      "m7/licao-m7-f06/index.html": "296ea2ff0834d75fcbbe60d0e370121639279d96ac378f88b7f4aff6acc792e3",
+      "m7/licao-m7-f07/index.html": "466f12d015faf2482616dcecf8b0525048dbac9a1cc737ace5d4adc96df5b638",
+      "m7/licao-m7-f08/index.html": "446505c8b10f89a5d5879ff9faa91e212c8f8f41702e9dc22ccaac0d47a2b5f5",
+      "m7/licao-m7-f09/index.html": "2f6bc4bc962fda3e9de9604d8c20e7d88ab084ae20c1756c689fc33941b4a245",
+      "m7/licao-m7-f10/index.html": "b61411fa99e54a8be1dd54710561fb7ccf7d72370619ed80c4c67aecf5ee8ed5",
+      "m7/licao-m7-f11/index.html": "51c09efbfa0b972f5697c93bc6bd8aae01fb1114b95ce0fdf437d5f7b4dbe40b",
+      "m7/licao-m7-f13/index.html": "02e548961c7686c4e3c01c2f809c682407d2908a82897e4adcceab3c876bfe6f",
+      "m7/licao-m7-f14/index.html": "84c948b85e184d0b89feff617d63f930e3f5a4413387787288b093396e22736e",
+      "m7/licao-m7-f15/index.html": "7ff04348f78aa196fbea041d34e0e86dcd4777f4056df1f49a4786c15401c87e",
+      "m7/licao-m7-f23/index.html": "963ca3b03602234f16832f86120fb29eda92e748181e41f750e749555b59bdde",
+      "m7/licao-m7-f34/index.html": "f85003ff4f63bf7206edc90503d29062eedcfabab3e3b5688b3af0783d7f7499",
+      "m7/licao-m7-f35/index.html": "519a4901e4b824bfc8f256aa6b71c3441018c44ef1de813dc43e1eb595221bd0",
+      "m7/licao-m7-f36/index.html": "c141f0637d19c654ec31435983eb21080ce17e55dbb4425a579a11562b3dd297",
+      "m7/m7-fingidor-maquina/index.html": "405c2af867438761730ff68b16c178bf6b9fe7512d9bcd8496768ffdf1996668",
+      "m7/m7-quatro-vozes-um-problema/index.html": "7b8b5ccb96a6d132a6182760f72b18f4fb22c9801a6189c3e5f7951b5f573f01"
+    }
+  }
+}

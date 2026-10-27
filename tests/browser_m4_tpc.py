@@ -32,8 +32,11 @@ try:
    assert '16 lições' in page.locator('summary').filter(has_text='M4 —').inner_text().lower()
    page.goto(host+'/m4/',wait_until='networkidle')
    assert page.locator('.cabm .n').inner_text()=='4'
-   assert page.locator('.passos > li .n').all_text_contents()==[str(i) for i in range(1,19)]
-   steps=page.locator('[data-unidade="2"] .passos > li')
+   # 26/10: original lesson numbering/order remains; task lessons have their own T row.
+   assert page.locator('.passos > li[data-passo] .n').all_text_contents()==[str(i) for i in range(1,19)]
+   assert page.locator('.passos > li[data-task-lesson]').count()==3
+   assert page.locator('[data-task-lesson="3"] > a').get_attribute('href').endswith('/tarefas/m4-u3-discurso/')
+   steps=page.locator('[data-unidade="2"] .passos > li[data-passo]')
    assert steps.first.get_attribute('id')=='m4-f28'
    assert steps.nth(1).get_attribute('id')=='m4-f07'
    steps.first.get_by_role('link').click()

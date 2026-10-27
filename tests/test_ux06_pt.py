@@ -15,7 +15,11 @@ class UX06(unittest.TestCase):
    ids={a['id'] for _,a in tags.nodes if 'id' in a}
    for u in plan['units']:
     self.assertIn('desafio-unidade-'+str(u['number']),ids)
-    self.assertIn('sintese-unidade-'+str(u['number']),ids)
+    # 26/10: M1/M4/M7 use a task lesson instead of a separate synthesis checkpoint.
+    if m in (1,4,7):
+     self.assertIn('tarefa-unidade-'+str(u['number']),ids)
+     self.assertNotIn('sintese-unidade-'+str(u['number']),ids)
+    else:self.assertIn('sintese-unidade-'+str(u['number']),ids)
  def test_map_counts_match_the_route(self):
   for plan in PLANS:
    m=plan['module'];s=(ROOT/f'm{m}/mapa-do-modulo-m{m}/index.html').read_text('utf-8');start=s.index('<div class="numeros">');end=s.index('</header>',start)

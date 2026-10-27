@@ -7,6 +7,14 @@ class Synthesis(unittest.TestCase):
  def test_oral_or_notebook_synthesis_and_explicit_completion_all_modules(self):
   for m in range(1,10):
    s=(ROOT/f'm{m}/index.html').read_text('utf-8')
+   # 26/10: the task is a lesson; synthesis is inside its production time, never a separate gate.
+   if m in (1,4,7):
+    self.assertIn('unit-task-route.js',s)
+    self.assertNotIn('sinteseFeita',s)
+    self.assertNotIn('data-sintese-registar',s)
+    metadata=json.loads(re.search(r'id="epi-unidades-pedagogicas">(.*?)</script>',s,re.S)[1])
+    self.assertTrue(all(u['task']['synthesis']=='integrated' and u['task']['minutes']==90 for u in metadata))
+    continue
    self.assertIn('&&sinteseFeita(u.n)',s)
    self.assertNotIn('&&palavrasDe(resp(u.n))>=80',s)
    # 23/10/2026 (plano de melhoria, fase 0): a síntese faz-se oralmente ou no caderno; saíram a caixa

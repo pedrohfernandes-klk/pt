@@ -1,0 +1,145 @@
+"""Literal authorization, card/progress continuity and actual formative quiz behavior."""
+from pathlib import Path
+import hashlib
+import json
+import re
+import unittest
+
+from test_m1_unit_tasks import TaskPage
+from task_source_contract import historical_task_source, validate_task_source
+
+ROOT = Path(__file__).resolve().parents[1]
+MANIFEST = ROOT / 'tests/fixtures/m1-grammar-pilot-edits-20261027.json'
+
+
+def restore(source, edits):
+    for edit in reversed(edits):
+        if source.count(edit['new']) != edit['occurrences']:
+            raise AssertionError('Literal edit missing or duplicated: ' + edit['location'])
+        source = source.replace(edit['new'], edit['old'])
+    return source
+
+
+def cards(source):
+    start = re.search(r'\bCARTOES\s*=\s*', source).end()
+    return json.JSONDecoder().raw_decode(source[start:])[0]
+
+
+def legacy(source):
+    for match in re.finditer(r'\bvar E\s*=\s*', source):
+        try:
+            data = json.JSONDecoder().raw_decode(source[match.end():])[0]
+        except ValueError:
+            continue
+        if isinstance(data, dict) and 'passos' in data:
+            return data
+    raise AssertionError('Legacy E.passos not found')
+
+
+class M1GrammarPilot(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.manifest = json.loads(MANIFEST.read_text('utf-8'))
+
+    def sources(self):
+        for path, info in self.manifest['files'].items():
+            after = historical_task_source(ROOT / path) if path.startswith('tarefas/') else (ROOT / path).read_text('utf-8')
+            if path.startswith('tarefas/'):
+                # Compose the independently authorised reader head with this
+                # literal grammar manifest; do not regenerate either snapshot.
+                reader_tags = [
+                    '<link rel="stylesheet" href="../../assets/pt-lessons/lesson.css?v=20261027-task-reader-1">',
+                    '<link rel="stylesheet" href="../../assets/task-reader.css?v=20261027-task-reader-1">',
+                    '<script defer src="../../assets/pt-lessons/casca.js?v=20261027-task-reader-1"></script>',
+                    '<script defer src="../../assets/task-reader.js?v=20261027-task-reader-1"></script>',
+                ]
+                for tag in reader_tags:
+                    self.assertEqual(after.count(tag), 1, path)
+                    after = after.replace(tag, '')
+            yield path, info, restore(after, info['edits']), after
+
+    def test_exact_authorized_edits_restore_frozen_files_and_heads(self):
+        expected = {'m1/licao-m1-f05/index.html', 'm1/gram-fonologia/index.html',
+                    'tarefas/m1-u1/index.html', 'tarefas/m1-u2/index.html'}
+        self.assertEqual(set(self.manifest['files']), expected)
+        for path, info, before, after in self.sources():
+            with self.subTest(path=path):
+                self.assertEqual(hashlib.sha256(before.encode()).hexdigest(), info['before_sha256'])
+                self.assertEqual(hashlib.sha256(after.encode()).hexdigest(), info['after_sha256'])
+                self.assertEqual(before.split('</head>')[0], after.split('</head>')[0])
+                forward = before
+                for edit in info['edits']:
+                    self.assertEqual(forward.count(edit['old']), edit['occurrences'])
+                    forward = forward.replace(edit['old'], edit['new'])
+                self.assertEqual(forward, after)
+
+    def test_manifest_rejects_missing_or_duplicated_authorized_text(self):
+        path, info, _, after = next(self.sources())
+        edit = info['edits'][-1]
+        with self.assertRaises(AssertionError):
+            restore(after.replace(edit['new'], '', 1), info['edits'])
+        with self.assertRaises(AssertionError):
+            restore(after + edit['new'], info['edits'])
+
+    def test_all_card_types_order_metadata_and_progress_keys_are_preserved(self):
+        for path, _, before, after in self.sources():
+            if path.startswith('tarefas/'):
+                continue
+            old = cards(before) if 'licao-' in path else legacy(before)['passos']
+            new = cards(after) if 'licao-' in path else legacy(after)['passos']
+            self.assertEqual(len(old), len(new))
+            for previous, current in zip(old, new):
+                for key in ('t', 'tipo', 'rot', 'g', 'conceito', 'mais', 'id', 'indice', 'nivel', 'c'):
+                    self.assertEqual(previous.get(key), current.get(key), (path, key))
+            for pattern in (r'\b(?:K|CH|ID)\s*=\s*"[^"]+"', r'versao:\s*"[^"]+"'):
+                self.assertEqual(re.findall(pattern, before), re.findall(pattern, after))
+            if 'gram-fonologia/' in path:
+                previous, current = legacy(before), legacy(after)
+                for key in set(previous) - {'passos'}:
+                    self.assertEqual(previous[key], current[key], key)
+
+    def test_schema_attempt_and_transfer_select_sounds_not_complete_etymologies(self):
+        for path, _, _, source in self.sources():
+            text = '\n'.join(c.get('html', '') for c in cards(source)) if 'licao-' in path else source
+            for phrase in ('Sons e letras', 'PEP', 'ASA', 'humile', 'humilde', 'amare',
+                           'scribere', 'alevantada', 'não representam necessariamente todas as etapas históricas'):
+                self.assertIn(phrase, text, path)
+            self.assertIn('minedu.gov.cv', text)
+            self.assertIn('estudoautonomo.dge.mec.pt', text)
+        lesson = cards((ROOT / 'm1/licao-m1-f05/index.html').read_text('utf-8'))
+        self.assertIn('Tenta com apoio', lesson[5]['html'])
+        self.assertIn('Experimenta outro caso', lesson[5]['html'])
+        self.assertNotIn('Se fosse erro, cada um errava à sua maneira', lesson[20]['html'])
+        self.assertNotIn('sempre da mesma maneira.', lesson[21]['html'])
+        self.assertIn('só a vogal inserida', legacy((ROOT / 'm1/gram-fonologia/index.html').read_text('utf-8'))['passos'][3]['itens'][3][0])
+
+    def test_real_compact_tasks_keep_grammar_application_and_literary_transfer(self):
+        for unit in (1, 2):
+            text = validate_task_source(ROOT / f'tarefas/m1-u{unit}/index.html')
+            parsed = TaskPage(text)
+            self.assertEqual(parsed.errors, [])
+            self.assertEqual(len(parsed.questions), 2)
+            for q in parsed.questions:
+                self.assertEqual(len(q['options']), 3)
+                self.assertEqual(sum(o['data-correct'] == 'true' for o in q['options']), 1)
+            self.assertIn('folhas próprias', text)
+            self.assertIn('duas linhas', text)
+            self.assertIn('90 min', text)
+            self.assertIn('../../m1/licao-m1-f05/', text)
+            self.assertNotIn('task-clock', text)
+        u1 = validate_task_source(ROOT / 'tarefas/m1-u1/index.html')
+        prompt1 = re.search(r'<section id="produzir".*?</section>', u1, re.S)[0]
+        for token in ('mare', 'malu', 'segmento desaparece', 'onde e com que nome',
+                      'Chega já', 'Codax e Guilhade', 'uma diferença'):
+            self.assertIn(token, prompt1)
+        self.assertIn('Apócope: desaparece a vogal final.', u1)
+        u2 = validate_task_source(ROOT / 'tarefas/m1-u2/index.html')
+        prompt2 = re.search(r'<section id="produzir".*?</section>', u2, re.S)[0]
+        for token in ('pronúncia', 'pra', 'exemplo inventado', 'registo',
+                      'Não alteres uma fala documentada', 'fora da contagem'):
+            self.assertIn(token, prompt2)
+        self.assertIn('Síncope descreve a supressão interior', u2)
+
+
+if __name__ == '__main__':
+    unittest.main()

@@ -1,0 +1,429 @@
+{
+  "base": "68958382",
+  "tu_changes": {
+    "Escolham o vosso comportamento, a abertura e a objeção; não copiem": "Escolhe, com o teu grupo, o comportamento, a abertura e a objeção; não copies",
+    "Descrevam antes um comportamento": "Descreve antes um comportamento",
+    "Escolham um comportamento concreto.": "Escolhe um comportamento concreto.",
+    "Como respondem?": "Como respondes?",
+    "Mostrem a diferença entre as duas situações.": "Mostra a diferença entre as duas situações.",
+    "Procurem os verbos": "Procura os verbos",
+    "Compare a objeção com a prova de Vieira": "Compara a objeção com a prova de Vieira",
+    "Abram só se precisarem de afinar a comparação.": "Abre este apoio apenas se precisares de afinar a comparação.",
+    "Confirmem sujeito, palavras e capítulo": "Confirma sujeito, palavras e capítulo",
+    "Não tratem a explicação do guia": "Não trates a explicação do guia",
+    "Em grupo de 2 ou 3, escolham um peixe das repreensões de Vieira e apresentem-no": "Com o teu grupo de 2 ou 3, escolhe um peixe das repreensões de Vieira e apresenta-o",
+    "Preparem uma apresentação": "Prepara uma apresentação",
+    "Escrevam em papel o guião": "Escreve em papel o guião",
+    "não precisam de o ler": "não precisas de o ler",
+    "Localizem uma citação, expliquem um recurso e respondam a uma objeção": "Localiza uma citação, explica um recurso e responde a uma objeção",
+    "Descrevam o comportamento": "Descreve o comportamento",
+    "Escolham o peixe e um comportamento atual. Copiem uma citação curta com capítulo, nomeiem um recurso e expliquem o efeito. Anotem": "Escolhe o peixe e um comportamento atual com o teu grupo. Copia uma citação curta com capítulo, nomeia um recurso e explica o efeito. Anota",
+    "Escrevam o guião": "Escreve o guião",
+    "Experimentem três aberturas": "Experimenta três aberturas com o teu grupo",
+    "e escolham uma.": "e escolhe uma.",
+    "podem apresentar sem imagens.": "podes apresentar com o teu grupo sem imagens.",
+    "Distribuam a fala por todos, ensaiem três a quatro minutos e registem": "Distribui a fala por todos, ensaia com o teu grupo três a quatro minutos e regista",
+    "Enquanto aguardam a vossa ronda, revejam": "Enquanto aguardas a ronda do teu grupo, revê",
+    "Nesta aula, entregam fotografias": "Nesta aula, entrega fotografias"
+  },
+  "pages": {
+    "m1-u1": {
+      "body_sha256": "34fddfc33bca7d5e3921ed5aa607e998f00b4a14b3b88aa119508ff44838dcea",
+      "criteria": [
+        "<ol><li>Lê com precisão quem fala, a quem e em que situação; distingue a espera, o louvor e a troça sem confundir autor e voz.</li><li>Escolhe provas textuais pertinentes, cita-as com fidelidade e explica como sustentam a interpretação ou a comparação.</li><li>Relaciona repetição, hipérbole ou ironia com efeitos concretos; enfrenta a objeção à repetição e evita classificações sem prova.</li><li>Aplica os recursos à situação proposta e justifica a relação e a diferença entre essa escrita e os excertos lidos.</li><li>Organiza as três respostas com clareza, revê a escrita e inclui a síntese curta sustentada num exemplo.</li></ol>"
+      ],
+      "blockquotes": [
+        "Em B, a voz eleva o valor da senhora: «mais que todas las do mundo val». A comparação com todas as outras mulheres torna o louvor absoluto, em vez de o desmentir.",
+        "Ondas do mar de Vigo,<br>se vistes meu amigo?<br>e ai Deus, se verrá cedo?<br><br>Ondas do mar levado,<br>se vistes meu amado?<br>e ai Deus, se verrá cedo?",
+        "e querrei muit&#x27;i loar mia senhor<br>a que prez nem fremosura nom fal,<br>nem bondade; e mais vos direi en:<br>tanto a fez Deus comprida de bem<br>que mais que todas las do mundo val.",
+        "mais ora quero fazer um cantar<br>em que vos loarei todavia;<br>e vedes como vos quero loar:<br>dona fea, velha e sandia!"
+      ],
+      "ids": [
+        "preparacao",
+        "preparacao-title",
+        "q1",
+        "q2",
+        "q3",
+        "q4",
+        "apoios",
+        "apoios-title",
+        "codax",
+        "dinis",
+        "guilhade",
+        "produzir",
+        "produzir-title",
+        "criterios",
+        "entregar",
+        "entregar-title"
+      ],
+      "hrefs": [
+        "../../assets/task-90.css?v=20261027-tarefas-1",
+        "../../assets/docente-access.css?v=20261026.1",
+        "../../assets/appearance.css?v=20261025-universal-1",
+        "../../",
+        "../../m1/#unidade-pedagogica-1",
+        "#preparacao",
+        "#apoios",
+        "#produzir",
+        "#criterios",
+        "../../m1/licao-m1-f19/",
+        "../../m1/licao-m1-f19/",
+        "../../m1/licao-m1-f19/",
+        "https://pedrohfernandes-klk.github.io/lente/docente/#portugues"
+      ]
+    },
+    "m1-u2": {
+      "body_sha256": "ccef568b3db9ba8a4da9661131ad285e97edac1dbca013c72eacdede13e13246",
+      "criteria": [
+        "<ol><li>Há um momento decisivo, um lugar e duas fontes confrontadas, listadas no fim.</li><li>Lê-se um pormenor, gente em ação e uma fala; o povo aparece como personagem.</li><li>250 a 300 palavras, sem erros; distingue-se facto de opinião.</li></ol>"
+      ],
+      "blockquotes": [
+        "Ao fim da tarde, junto à fonte, três moradores passam os baldes de mão em mão. «Mais um», diz alguém — fala imaginada.",
+        "não cabiam pelas ruas principais e atravessavam lugares escusos",
+        "grandes volumes de livros",
+        "Matam o Mestre!"
+      ],
+      "ids": [
+        "antes",
+        "antes-title",
+        "preparacao",
+        "preparacao-title",
+        "q1",
+        "q2",
+        "q3",
+        "q4",
+        "apoios",
+        "apoios-title",
+        "cronica-multidao",
+        "cronica-fontes",
+        "cronica-falas",
+        "produzir",
+        "produzir-title",
+        "criterios",
+        "entregar",
+        "entregar-title"
+      ],
+      "hrefs": [
+        "../../assets/task-90.css?v=20261027-tarefas-1",
+        "../../assets/docente-access.css?v=20261026.1",
+        "../../assets/appearance.css?v=20261025-universal-1",
+        "../../",
+        "../../m1/#unidade-pedagogica-2",
+        "#preparacao",
+        "#apoios",
+        "#produzir",
+        "#criterios",
+        "../../m1/visita-passeio-fernao-lopes/",
+        "../../m1/licao-m1-f06/",
+        "../../m1/licao-m1-f06/",
+        "../../m1/licao-m1-f10/",
+        "https://pedrohfernandes-klk.github.io/lente/docente/#portugues"
+      ]
+    },
+    "m4-u1": {
+      "body_sha256": "a7ffd68e2bba0272aabd1eff6282e8adc3c3c6ba26f0055be0157a3f07110d7d",
+      "criteria": [
+        "<ol>\n<li>A citação de Vieira está certa e localizada, e o recurso é nomeado e explicado.</li>\n<li>O comportamento de hoje corresponde ao peixe e não visa ninguém; a objeção tem resposta com prova no texto.</li>\n<li>Três a quatro minutos, todos falam, no máximo três imagens com crédito.</li>\n</ol>"
+      ],
+      "blockquotes": [
+        "Os pegadores «nunca os desferram» (cap. V). A insistência em não largar ajuda a distinguir aproveitar o trabalho de outro de colaborar com ele. Na comparação de hoje, precisamos de mostrar essa dependência; a simples proximidade de alguém influente não chega.",
+        "«Pegadores chamam-se estes de que agora falo»",
+        "«Nem todos os que se aproximam dos poderosos são pegadores.»",
+        "«sustenta o peso e mais a fome»"
+      ],
+      "ids": [
+        "preparacao",
+        "prep-title",
+        "q1",
+        "q2",
+        "q3",
+        "q4",
+        "apoios",
+        "support-title",
+        "apoio-1",
+        "apoio-2",
+        "apoio-3",
+        "produzir",
+        "work-title",
+        "criterios",
+        "entregar",
+        "send-title"
+      ],
+      "hrefs": [
+        "../../assets/task-90.css?v=20261027-tarefas-1",
+        "../../assets/docente-access.css?v=20261026.1",
+        "../../assets/appearance.css?v=20261025-universal-1",
+        "../../",
+        "../../m4/#unidade-pedagogica-1",
+        "#preparacao",
+        "#produzir",
+        "#apoios",
+        "#criterios",
+        "../../m4/licao-m4-f25/",
+        "../../m4/licao-m4-f10/",
+        "../../m4/licao-m4-f10/",
+        "../../m4/guia-da-tarefa-m4/",
+        "https://pedrohfernandes-klk.github.io/lente/docente/#portugues"
+      ],
+      "original_body": " data-site=\"pt\" class=\"task-lesson\"><main class=\"task-page\">\n<nav class=\"task-nav\" aria-label=\"Onde estás\"><a href=\"../../\">Português</a><a href=\"../../m4/#unidade-pedagogica-1\">M4 · Unidade 1</a></nav>\n<header><p class=\"task-kicker\">AULA DE TAREFA · M4 · UNIDADE 1 · 90 MINUTOS</p><h1>Um peixe de hoje</h1>\n<p class=\"task-lead\">Um comportamento de hoje, um peixe de Vieira e uma comparação que consegues defender.</p><p>Tarefa com consulta. Podes consultar os textos, as fichas e os teus apontamentos durante toda a tarefa. Abre apenas os apoios de que precisas; não tens de refazer as lições.</p>\n<p>Esta é a aula de encerramento da unidade 1. Recupera o que aprendeste e aplica-o num trabalho novo.</p>\n<ol class=\"task-clock\" aria-label=\"Organização da aula\">\n<li><b>10 min</b><span>Apresentação pelo docente</span></li>\n<li><b>10 min</b><span>Recuperar e experimentar no HTML</span></li>\n<li><b>60 min</b><span>Produzir sobretudo em papel</span></li>\n<li><b>10 min</b><span>Rever e entregar</span></li>\n</ol><nav class=\"task-actions\" aria-label=\"Nesta aula\"><a href=\"#preparacao\">Experimentar →</a><a href=\"#produzir\">Ir para a tarefa →</a><a href=\"#apoios\">Rever uma leitura →</a><a href=\"#criterios\">Consultar os critérios →</a></nav></header>\n<section class=\"task-section\" id=\"preparacao\" aria-labelledby=\"prep-title\"><p class=\"task-kicker\">PREPARAR · 10 MIN</p><h2 id=\"prep-title\">Não basta dar um nome ao peixe</h2><p>Recorda uma leitura, testa uma ligação e usa o feedback para preparar o trabalho. As escolhas podem ser revistas.</p>\n<aside class=\"task-model\" aria-label=\"Modelo parcial\"><h3>Modelo parcial: uma ligação entre texto e comparação</h3><blockquote>Os pegadores «nunca os desferram» (cap. V). A insistência em não largar ajuda a distinguir aproveitar o trabalho de outro de colaborar com ele. Na comparação de hoje, precisamos de mostrar essa dependência; a simples proximidade de alguém influente não chega.</blockquote><p>O exemplo mostra uma citação e a explicação do seu valor. Escolham o vosso comportamento, a abertura e a objeção; não copiem este início como apresentação completa.</p></aside>\n<div class=\"task-quiz\" aria-label=\"Quatro perguntas de preparação\">\n<article class=\"task-question\" data-task-question=\"1\" aria-labelledby=\"q1\"><h3 id=\"q1\">1. Nos pegadores, que pormenor sustenta uma comparação com viver à custa de outro?</h3><div class=\"task-options\">\n<button type=\"button\" aria-pressed=\"false\" data-correct=\"true\" data-response=\"Sim. A permanência da dependência é a prova; explica como aparece também no comportamento escolhido.\">«Nunca os desferram». Eles mantêm-se agarrados e o grande alimenta-os.</button>\n<button type=\"button\" aria-pressed=\"false\" data-correct=\"false\" data-response=\"O tamanho não basta. O excerto condena o modo de agir dos pegadores, não todos os pequenos.\">Todos os peixes pequenos são culpados.</button>\n<button type=\"button\" aria-pressed=\"false\" data-correct=\"false\" data-response=\"Trabalhar com alguém pode ser cooperação. A comparação precisa de mostrar quem se agarra e quem sustenta.\">Qualquer pessoa que trabalhe com outra é um pegador.</button>\n</div><p class=\"task-feedback\" data-task-feedback role=\"status\" aria-live=\"polite\" hidden></p></article>\n<article class=\"task-question\" data-task-question=\"2\" aria-labelledby=\"q2\"><h3 id=\"q2\">2. «Dizei-me, voadores, não vos fez Deus peixes? Pois porque vos quereis ser aves?» O que fazem estas perguntas?</h3><div class=\"task-options\">\n<button type=\"button\" aria-pressed=\"false\" data-correct=\"false\" data-response=\"Vieira não procura informação. As perguntas orientam quem ouve para um juízo sobre a presunção.\">Pedem uma explicação científica das barbatanas.</button>\n<button type=\"button\" aria-pressed=\"false\" data-correct=\"true\" data-response=\"Sim. Dizer o nome do recurso e explicar o efeito cumpre mais do que apenas o identificar.\">São perguntas retóricas: levam quem ouve a reconhecer o contraste entre ser peixe e querer ser ave.</button>\n<button type=\"button\" aria-pressed=\"false\" data-correct=\"false\" data-response=\"O alvo é a presunção. A comparação deve distinguir parecer mais do que se é de querer aprender.\">Provam que querer aprender é sempre um defeito.</button>\n</div><p class=\"task-feedback\" data-task-feedback role=\"status\" aria-live=\"polite\" hidden></p></article>\n<article class=\"task-question\" data-task-question=\"3\" aria-labelledby=\"q3\"><h3 id=\"q3\">3. Que comparação respeita a tarefa?</h3><div class=\"task-options\">\n<button type=\"button\" aria-pressed=\"false\" data-correct=\"false\" data-response=\"Isso identifica uma pessoa. Descrevam antes um comportamento sem nomes ou sinais que permitam reconhecê-la.\">O meu colega é um polvo; todos sabem quem é.</button>\n<button type=\"button\" aria-pressed=\"false\" data-correct=\"false\" data-response=\"A generalização perde o traço que a citação deve provar. Escolham um comportamento concreto.\">Toda a gente é igual aos peixes.</button>\n<button type=\"button\" aria-pressed=\"false\" data-correct=\"true\" data-response=\"Sim. É uma hipótese de comparação, a fundamentar na aparência mansa e na emboscada do excerto.\">Uma campanha que promete ajudar, mas esconde uma armadilha pode lembrar o polvo; temos de mostrar o engano.</button>\n</div><p class=\"task-feedback\" data-task-feedback role=\"status\" aria-live=\"polite\" hidden></p></article>\n<article class=\"task-question\" data-task-question=\"4\" aria-labelledby=\"q4\"><h3 id=\"q4\">4. Alguém objeta: «Aproximar-se de alguém experiente também permite aprender.» Como respondem?</h3><div class=\"task-options\">\n<button type=\"button\" aria-pressed=\"false\" data-correct=\"true\" data-response=\"Sim. A resposta reconhece o limite e sustenta a comparação no texto.\">Distinguir aprender de depender sem contribuir, voltando a «nunca os desferram» e a «sustenta o peso e mais a fome».</button>\n<button type=\"button\" aria-pressed=\"false\" data-correct=\"false\" data-response=\"Atacar a pessoa não responde à objeção. Mostrem a diferença entre as duas situações.\">Dizer que quem discorda não percebe Vieira.</button>\n<button type=\"button\" aria-pressed=\"false\" data-correct=\"false\" data-response=\"A prova permite discutir com rigor. Retirá-la enfraquece a resposta.\">Retirar a citação para ninguém poder discutir.</button>\n</div><p class=\"task-feedback\" data-task-feedback role=\"status\" aria-live=\"polite\" hidden></p></article>\n<p data-task-status role=\"status\">Respostas exploradas: 0 de 4. Podes rever qualquer escolha.</p></div></section>\n<section class=\"task-section\" id=\"apoios\" aria-labelledby=\"support-title\"><p class=\"task-kicker\">CONSULTAR QUANDO FIZER FALTA</p><h2 id=\"support-title\">Voltar a uma passagem</h2><p>Escolhe o apoio que resolve a tua dúvida. Não precisas de repetir todas as fichas: procura o cartão indicado e regressa ao trabalho.</p>\n<details><summary>Rever o traço do peixe</summary><div id=\"apoio-1\"><blockquote>«Pegadores chamam-se estes de que agora falo»</blockquote><p class=\"task-source\">Vieira, Sermão de Santo António, cap. V, ortografia atualizada; M4-F25.</p><p>Procurem os verbos que mostram quem se agarra e quem sustenta. O cartão O polvo (3 de 3) oferece outra escolha.</p><p><a href=\"../../m4/licao-m4-f25/\" target=\"_blank\" rel=\"noopener\">Abrir a ficha · cartão «Três peixes pelo nome (2 de 3)» →</a></p></div></details>\n<details><summary>Rever uma objeção e a resposta</summary><div id=\"apoio-2\"><blockquote>«Nem todos os que se aproximam dos poderosos são pegadores.»</blockquote><p class=\"task-source\">Objeção de um grupo imaginado em M4-F10; não é citação de Vieira.</p><p>Compare a objeção com a prova de Vieira «nunca os desferram». Abram só se precisarem de afinar a comparação.</p><p><a href=\"../../m4/licao-m4-f10/\" target=\"_blank\" rel=\"noopener\">Abrir a ficha · cartão «A turma deita abaixo o pegador?» →</a></p></div></details>\n<details><summary>Confirmar uma citação dos pegadores</summary><div id=\"apoio-3\"><blockquote>«sustenta o peso e mais a fome»</blockquote><p class=\"task-source\">Vieira, Sermão de Santo António, cap. V, ortografia atualizada; M4-F10.</p><p>Confirmem sujeito, palavras e capítulo antes de citar. Não tratem a explicação do guia como palavras de Vieira.</p><p><a href=\"../../m4/licao-m4-f10/\" target=\"_blank\" rel=\"noopener\">Abrir a ficha · cartão «Os pegadores» →</a></p></div></details>\n</section>\n<section class=\"task-section task-brief\" id=\"produzir\" aria-labelledby=\"work-title\"><p class=\"task-kicker\">PRODUZIR · 60 MIN · SOBRETUDO EM PAPEL</p><h2 id=\"work-title\">Um peixe de hoje</h2><div class=\"instruction\"><p>Em grupo de 2 ou 3, escolham um peixe das repreensões de Vieira e apresentem-no como retrato de um comportamento de hoje. Preparem uma apresentação ao vivo de três a quatro minutos, em que todos falam, com no máximo três imagens com crédito. Escrevam em papel o guião de 150 a 200 palavras que a sustenta. O guião apoia a fala: não precisam de o ler integralmente para preencher o tempo. Localizem uma citação, expliquem um recurso e respondam a uma objeção com prova no texto. Descrevam o comportamento sem identificar pessoas reais.</p></div>\n<h3 data-production-minutes=\"10\">1. Escolher e provar · 10 min</h3><p>Escolham o peixe e um comportamento atual. Copiem uma citação curta com capítulo, nomeiem um recurso e expliquem o efeito. Anotem onde a comparação deixa de funcionar.</p>\n<h3 data-production-minutes=\"25\">2. Escrever e experimentar a abertura · 25 min</h3><p>Escrevam o guião de 150 a 200 palavras em papel: abertura, peixe e prova, comportamento atual, objeção e resposta, fecho. Experimentem três aberturas de 20 segundos — pergunta, imagem ou citação — e escolham uma. Até três imagens são um limite, não uma obrigação: podem apresentar sem imagens.</p>\n<h3 data-production-minutes=\"10\">3. Ensaiar com relógio · 10 min</h3><p>Distribuam a fala por todos, ensaiem três a quatro minutos e registem uma alteração feita depois do ensaio. O guião curto é suporte; a explicação oral e a interação completam a apresentação.</p>\n<h3 data-production-minutes=\"15\">4. Apresentar e responder · 15 min</h3><p>Em rondas com dois ou três grupos, cada grupo apresenta durante três a quatro minutos e responde brevemente a uma objeção. O docente organiza e acompanha as rondas. Enquanto aguardam a vossa ronda, revejam a relação entre o comportamento escolhido e a prova do texto.</p>\n<h3 id=\"criterios\">O que conta · critérios do guia</h3><div class=\"task-criteria\"><ol>\n<li>A citação de Vieira está certa e localizada, e o recurso é nomeado e explicado.</li>\n<li>O comportamento de hoje corresponde ao peixe e não visa ninguém; a objeção tem resposta com prova no texto.</li>\n<li>Três a quatro minutos, todos falam, no máximo três imagens com crédito.</li>\n</ol></div><p class=\"task-source\">Origem: <a href=\"../../m4/guia-da-tarefa-m4/\" target=\"_blank\" rel=\"noopener\">Guia da tarefa de M4 · Tarefa 1 · O que conta</a>. Critérios transcritos; mantêm-se as rubricas existentes.</p>\n</section><section class=\"task-section\" id=\"entregar\" aria-labelledby=\"send-title\"><p class=\"task-kicker\">REVER, SINTETIZAR E ENTREGAR · 10 MIN</p><h2 id=\"send-title\">Rever o trabalho e guardar a aprendizagem</h2>\n<h3>Síntese · duas linhas numa folha própria</h3><p>Numa folha própria, escreve duas linhas: o que recuperaste da unidade e uma escolha do teu trabalho que o mostra. Fotografa-a com o trabalho.</p><p>A síntese integra esta aula. Não é preciso escrever outro texto desenvolvido nem voltar a responder às perguntas de preparação.</p><fieldset class=\"task-checklist\"><legend>Antes de entregar</legend>\n<label><input type=\"checkbox\">O guião tem 150 a 200 palavras e a citação está correta e localizada.</label>\n<label><input type=\"checkbox\">A comparação explica o traço do peixe; o recurso tem nome e efeito.</label>\n<label><input type=\"checkbox\">Respondemos à objeção com o texto, sem visar pessoas reais.</label>\n<label><input type=\"checkbox\">Todos falámos; confirmámos três a quatro minutos e até três imagens com crédito.</label>\n<label><input type=\"checkbox\">Fotografámos o guião e o registo do ensaio. Uma pessoa faz a entrega do grupo no Teams.</label>\n<label><input type=\"checkbox\">A folha própria da síntese tem duas linhas: uma aprendizagem recuperada e uma escolha do trabalho que a mostra; fotografei-a com o produto.</label>\n</fieldset><p>Abre a tarefa que o docente criou no Teams no início desta aula. Junta fotografias legíveis das folhas, pela ordem de leitura, e confirma o envio. A data é a indicada pelo docente na aula e no Teams.</p><p>Referência do trabalho: <strong>M4_Tarefa1_Peixe</strong>.</p><p>A referência M4_Tarefa1_Peixe mantém-se. Nesta aula, entregam fotografias do guião em papel; o áudio ou vídeo não é obrigatório. Se existir uma gravação autorizada da apresentação, mantém-se a referência M4_Tarefa1_Peixe.mp4.</p></section></main><a class=\"teacher-access\" href=\"https://pedrohfernandes-klk.github.io/lente/docente/#portugues\" aria-label=\"Guiões e materiais do docente\" title=\"Para o docente\"><svg viewBox=\"0 0 40 40\" width=\"30\" height=\"30\" aria-hidden=\"true\"><circle cx=\"20\" cy=\"20\" r=\"15\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\"/><circle cx=\"20\" cy=\"20\" r=\"8\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\"/><path d=\"m9.5 9.5 5 5m11 11 5 5m-21 0 5-5m11-11 5-5\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"5\"/></svg></a><script defer src=\"../../assets/projection-launcher.js?v=20261019.4\" data-site=\"pt\"></script></body></html>\n"
+    },
+    "m4-u2": {
+      "body_sha256": "6a3299f0180db1c7d57468dda12ef2a3d3acb599abeedb66876172067dedc157",
+      "criteria": [
+        "<ol>\n<li>Descreves só o que comentas, e cada juízo tem um exemplo da cena.</li>\n<li>A cena vista é comparada com a cena lida, com uma citação curta da peça.</li>\n<li>180 a 240 palavras, vocabulário do teatro usado com rigor, sem erros.</li>\n</ol>"
+      ],
+      "blockquotes": [
+        "Garrett escreve «MANUEL, tranquilamente» (ato I, cena XII). A didascália pede calma quando a casa começa a arder. Esta prova permite explicar a ironia da fala seguinte. Para a relacionar com TPC, tenho ainda de escolher um momento de que me recorde e explicar uma aproximação ou uma diferença concreta.",
+        "«MANUEL, tranquilamente»",
+        "«Lembras-te de uma fala de TPC, mas não das palavras exatas.»",
+        "«Esse é… há de ser… é um da família»"
+      ],
+      "ids": [
+        "preparacao",
+        "prep-title",
+        "q1",
+        "q2",
+        "q3",
+        "q4",
+        "apoios",
+        "support-title",
+        "apoio-1",
+        "apoio-2",
+        "apoio-3",
+        "produzir",
+        "work-title",
+        "criterios",
+        "entregar",
+        "send-title"
+      ],
+      "hrefs": [
+        "../../assets/task-90.css?v=20261027-tarefas-1",
+        "../../assets/docente-access.css?v=20261026.1",
+        "../../assets/appearance.css?v=20261025-universal-1",
+        "../../",
+        "../../m4/#unidade-pedagogica-2",
+        "#preparacao",
+        "#produzir",
+        "#apoios",
+        "#criterios",
+        "../../m4/licao-m4-f20/",
+        "../../m4/licao-m4-f20/",
+        "../../m4/licao-m4-f27/",
+        "../../m4/guia-da-tarefa-m4/",
+        "https://pedrohfernandes-klk.github.io/lente/docente/#portugues"
+      ]
+    },
+    "m4-u3-discurso": {
+      "body_sha256": "961ea7e52b62321d71d34a02c4c7eabb0e3b71157ad59fe366517163fca6c04f",
+      "criteria": [
+        "<ol>\n<li>A regra está numa frase no início e há dois argumentos com exemplo.</li>\n<li>A objeção mais forte é respondida e o fim é um apelo, não um resumo.</li>\n<li>Dois minutos, 220 a 280 palavras, sem erros; convence pela razão e pela voz.</li>\n</ol>"
+      ],
+      "blockquotes": [
+        "Proponho que o grupo combine uma hora diária para distribuir as tarefas. Se cada pessoa souber o que lhe cabe, evitamos que duas preparem a mesma refeição enquanto ninguém verifica a água.",
+        "«Comprovemos bem alto o nosso civismo»",
+        "«Sei o que vão dizer: que o silêncio obrigado é uma prisão dentro da prisão.»",
+        "«os grandes comem os pequenos»"
+      ],
+      "ids": [
+        "preparacao",
+        "prep-title",
+        "q1",
+        "q2",
+        "q3",
+        "q4",
+        "apoios",
+        "support-title",
+        "apoio-1",
+        "apoio-2",
+        "apoio-3",
+        "produzir",
+        "work-title",
+        "criterios",
+        "entregar",
+        "send-title"
+      ],
+      "hrefs": [
+        "../../assets/task-90.css?v=20261027-tarefas-1",
+        "../../assets/docente-access.css?v=20261026.1",
+        "../../assets/appearance.css?v=20261025-universal-1",
+        "../../",
+        "../../m4/#unidade-pedagogica-3",
+        "#preparacao",
+        "#produzir",
+        "#apoios",
+        "#criterios",
+        "../../m4/licao-m4-f14/",
+        "../../m4/licao-m4-f14/",
+        "../../m4/licao-m4-f27/",
+        "../m4-u3/",
+        "../../m4/guia-da-tarefa-m4/",
+        "https://pedrohfernandes-klk.github.io/lente/docente/#portugues"
+      ]
+    },
+    "m7-u1": {
+      "body_sha256": "69a311a13c16332fee5e707a1086ed16c0839a17e18f8693db783687b6b6ce3e",
+      "criteria": [
+        "<ol><li>80 a 120 palavras; citação do texto e leitura própria.</li><li>A comparação pedida no fecho de M7-F15 mobiliza uma passagem de cada poema e admite o que continua em dúvida.</li></ol>"
+      ],
+      "blockquotes": [
+        "Se quem fui é enigma,<br>E quem serei visão,<br>Quem sou ao menos sinta<br>Isto no coração.",
+        "Não é com ilhas do fim do mundo,<br>Nem com palmares de sonho ou não,<br>Que cura a alma seu mal profundo,<br>Que o bem nos entra no coração.<br>É em nós que é tudo. É ali, ali,<br>Que a vida é jovem e o amor sorri.",
+        "Se quem fui é enigma,<br>E quem serei visão,<br>Quem sou ao menos sinta<br>Isto no coração.",
+        "Não é com ilhas do fim do mundo,<br>Nem com palmares de sonho ou não,<br>Que cura a alma seu mal profundo,<br>Que o bem nos entra no coração.<br>É em nós que é tudo. É ali, ali,<br>Que a vida é jovem e o amor sorri.",
+        "Ali, talvez, talvez,",
+        "Observa «é» e «sinta»: um verso enuncia uma conclusão; o outro formula um desejo."
+      ],
+      "ids": [
+        "preparacao",
+        "prep-title",
+        "q1",
+        "q2",
+        "q3",
+        "q4",
+        "apoios",
+        "support-title",
+        "apoio-desejo",
+        "apoio-ilha",
+        "apoio-duvida",
+        "apoio-fecho",
+        "produzir",
+        "work-title",
+        "criterios",
+        "entregar",
+        "send-title"
+      ],
+      "hrefs": [
+        "../../assets/task-90.css?v=20261027-tarefas-1",
+        "../../assets/docente-access.css?v=20261026.1",
+        "../../assets/appearance.css?v=20261025-universal-1",
+        "../../",
+        "../../m7/#unidade-pedagogica-1",
+        "#preparacao",
+        "#produzir",
+        "#criterios",
+        "../../m7/licao-m7-f15/",
+        "../../m7/licao-m7-f14/",
+        "#produzir",
+        "../../m7/licao-m7-f15/",
+        "../../m7/licao-m7-f14/",
+        "../../m7/licao-m7-f14/",
+        "../../m7/licao-m7-f15/",
+        "../../m7/guia-da-tarefa-m7/",
+        "https://pedrohfernandes-klk.github.io/lente/docente/#portugues"
+      ]
+    },
+    "m7-u2": {
+      "body_sha256": "8f7cbefe78efd60228d631298e6c991d44e0a8cd70199a328e39643770d97ce3",
+      "criteria": [
+        "<ol>\n<li>A ficha de identidade tem ofício, maneira de ver e maneira de escrever, e o heterónimo não é uma pessoa real.</li>\n<li>O texto na voz dele tem 100 a 150 palavras e distingue-se da tua voz.</li>\n<li>Apresentação de dois minutos com uma frase lida; fontes com data.</li>\n</ol>"
+      ],
+      "blockquotes": [
+        "«Escuta a falha. É por aí que se começa.»",
+        "«Creio no Mundo como num malmequer,<br>Porque o vejo. Mas não penso nele»",
+        "«Mais vale saber passar silenciosamente<br>E sem desassossegos grandes.»",
+        "«Não sou nada.<br>Nunca serei nada.<br>Não posso querer ser nada.<br>À parte isso, tenho em mim todos os sonhos do mundo.»"
+      ],
+      "ids": [
+        "preparacao",
+        "prep-title",
+        "q1",
+        "q2",
+        "q3",
+        "q4",
+        "apoios",
+        "support-title",
+        "rever-caeiro",
+        "rever-reis",
+        "rever-campos",
+        "produzir",
+        "work-title",
+        "criterios",
+        "entregar",
+        "send-title"
+      ],
+      "hrefs": [
+        "../../assets/task-90.css?v=20261027-tarefas-1",
+        "../../assets/docente-access.css?v=20261026.1",
+        "../../assets/appearance.css?v=20261025-universal-1",
+        "../../",
+        "../../m7/#unidade-pedagogica-2",
+        "#preparacao",
+        "#produzir",
+        "#apoios",
+        "#criterios",
+        "#rever-caeiro",
+        "#rever-campos",
+        "../../m7/licao-m7-f07/",
+        "../../m7/licao-m7-f04/",
+        "https://www.casafernandopessoa.pt/pt/cfp/visita/museu/poemas-e-textos-escolhidos/portugues/alberto-caeiro/o-meu-olhar-e-nitido-como-um-girassol-1?eID=",
+        "../../m7/licao-m7-f05/",
+        "https://www.casafernandopessoa.pt/pt/cfp/visita/museu/poemas-e-textos-escolhidos/portugues/ricardo-reis/vem-sentar-te-comigo-lidia-beira-do-rio",
+        "../../m7/licao-m7-f36/",
+        "#rever-caeiro",
+        "#rever-reis",
+        "#rever-campos",
+        "../../m7/guia-da-tarefa-m7/",
+        "../../m7/m7-quatro-vozes-um-problema/",
+        "../../m7/licao-m7-f01/",
+        "https://pedrohfernandes-klk.github.io/lente/docente/#portugues"
+      ]
+    },
+    "m7-u3": {
+      "body_sha256": "2bd4a3d003b263f4ebc48c703607a0532548539a977ad99b417743ade42a2b71",
+      "criteria": [
+        "<ol><li>O objeto comunica uma leitura dos versos sem os ilustrar à letra; o verso tem referência.</li><li>O processo está registado: três propostas, uma escolha, três mudanças, cada uma com a sua razão.</li><li>Memória de 150 a 200 palavras e defesa de três minutos.</li></ol>"
+      ],
+      "blockquotes": [
+        "O poeta é um fingidor<br>Finge tão completamente<br>Que chega a fingir que é dor<br>A dor que deveras sente.",
+        "Cinco pontos, por esta ordem: intenção, versos de partida, decisões formais, abandonos e o que falta. Cada decisão leva um «porque».",
+        "O poeta é um fingidor<br>Finge tão completamente<br>Que chega a fingir que é dor<br>A dor que deveras sente.",
+        "Cinco pontos, por esta ordem: intenção, versos de partida, decisões formais, abandonos e o que falta. Cada decisão leva um «porque».",
+        "O objeto está feito. Agora tens três minutos para explicar porque é que ele é assim e não de outra maneira, e depois vêm as perguntas.",
+        "Cada verso usado leva a referência do Arquivo Pessoa.",
+        "Escreve três propostas diferentes. Escolhe uma e diz porquê."
+      ],
+      "ids": [
+        "antes",
+        "before-title",
+        "preparacao",
+        "prep-title",
+        "q1",
+        "q2",
+        "q3",
+        "q4",
+        "apoios",
+        "support-title",
+        "apoio-verso",
+        "apoio-memoria",
+        "apoio-defesa",
+        "apoio-referencias",
+        "apoio-campo",
+        "produzir",
+        "work-title",
+        "criterios",
+        "entregar",
+        "send-title"
+      ],
+      "hrefs": [
+        "../../assets/task-90.css?v=20261027-tarefas-1",
+        "../../assets/docente-access.css?v=20261026.1",
+        "../../assets/appearance.css?v=20261025-universal-1",
+        "../../",
+        "../../m7/#unidade-pedagogica-3",
+        "#preparacao",
+        "#produzir",
+        "#criterios",
+        "../../m7/licao-m7-f02/",
+        "../../m7/licao-m7-f10/",
+        "#produzir",
+        "../../m7/licao-m7-f02/",
+        "../../m7/licao-m7-f10/",
+        "../../m7/licao-m7-f10/",
+        "../../m7/licao-m7-f10/",
+        "../../m7/visita-casa-fernando-pessoa/",
+        "../../m7/guia-da-tarefa-m7/",
+        "https://pedrohfernandes-klk.github.io/lente/docente/#portugues"
+      ]
+    }
+  }
+}

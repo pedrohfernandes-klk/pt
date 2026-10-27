@@ -5,6 +5,7 @@ from pathlib import Path
 import threading
 from playwright.sync_api import sync_playwright
 from browser_m1_and_inventory import QuietHandler, new_page, ROOT
+from browser_task_contract import TASK_MODULES, TASK_SLUGS
 
 
 def main():
@@ -22,6 +23,18 @@ def main():
                     response = page.goto(f'http://127.0.0.1:{server.server_port}/{path}', wait_until='networkidle')
                     assert response.ok and not errors, (path, errors)
                     assert page.evaluate('document.documentElement.scrollWidth <= innerWidth + 3'), path
+                    if role == 'guia-da-tarefa' and m in TASK_MODULES:
+                        archive = page.locator('#arquivo-producoes')
+                        assert archive.count() == 1 and not archive.evaluate('e=>e.open')
+                        for slug in TASK_SLUGS[m]:
+                            link = page.locator(f'a[href="../../tarefas/{slug}/"]')
+                            assert link.count() == 1 and link.is_visible()
+                            link.focus()
+                            assert link.evaluate('e=>e===document.activeElement')
+                        archive.locator(':scope > summary').focus()
+                        archive.locator(':scope > summary').press('Enter')
+                        assert archive.evaluate('e=>e.open')
+                        assert page.evaluate('document.documentElement.scrollWidth <= innerWidth + 3'), path
                     if role == 'mapa-do-modulo':
                         assert page.locator('#caminho .unidade-pedagogica').count() >= 2
                         assert page.locator('button[onclick="window.print()"]').count() == 1

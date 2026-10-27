@@ -5,19 +5,22 @@ import json,re,sys,unittest
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/'scripts'))
 from audit_cards import lesson_cards
+from test_task_routes_closure import original_lesson_text
 
 class UnitPlacement(HTMLParser):
  def __init__(self,text):super().__init__();self.stack=[];self.tasks=[];self.feed(text)
  def handle_starttag(self,t,attrs):
   a=dict(attrs)
   if t=='section':self.stack.append(a.get('aria-labelledby',a.get('id')))
-  if t=='aside' and a.get('id')=='tarefa-unidade-3':self.tasks.append(list(self.stack))
+  if t=='li' and a.get('id')=='tarefa-unidade-3':self.tasks.append(list(self.stack))
  def handle_endtag(self,t):
   if t=='section':self.stack.pop()
 
 class TaskNinety(unittest.TestCase):
  def test_existing_prompt_and_assessment_are_preserved(self):
-  old=lesson_cards(ROOT/'m4/licao-m4-f11/index.html')[15]['html']
+  # The original support retains its rubric; F11 only changes the surrounding UX.
+  source=original_lesson_text('m4/licao-m4-f11/index.html')
+  old=json.JSONDecoder().raw_decode(source[source.index('CARTOES=')+len('CARTOES='):])[0][15]['html']
   page=(ROOT/'tarefas/m4-u3/index.html').read_text('utf-8')
   self.assertIn(old.split('<details',1)[0],page)
   criteria=re.search(r'<summary>O que conta</summary><div>(<ol>.*?</ol>)',old,re.S).group(1)
@@ -34,16 +37,21 @@ class TaskNinety(unittest.TestCase):
  def test_task_is_at_unit_three_end_without_changing_digital_steps(self):
   page=(ROOT/'m4/index.html').read_text('utf-8')
   placement=UnitPlacement(page)
-  self.assertEqual(placement.tasks,[['unidade-pedagogica-3']])
+  # 26/10: Discurso is the task lesson; comparison remains available only as support.
+  self.assertEqual(len(placement.tasks),1)
+  self.assertEqual(placement.tasks[0][0],'unidade-pedagogica-3')
   start=page.index('id="tarefa-unidade-3"')
-  self.assertGreater(start,page.index('id="sintese-unidade-3"'))
-  self.assertIn('../tarefas/m4-u3/',page)
+  self.assertGreater(start,page.index('id="m4-f11"'))
+  self.assertNotIn('id="sintese-unidade-3"',page)
+  self.assertIn('../tarefas/m4-u3-discurso/',page)
   # Snapshot explícito da base; funciona também no checkout reduzido da CI.
   baseline=json.loads((ROOT/'tests/fixtures/task90-m4-units-before.json').read_text('utf-8'))
   def contract(s):
    match=re.search(r'<script[^>]*id="epi-unidades-pedagogicas"[^>]*>(.*?)</script>',s,re.S)
    return json.loads(match[1])
-  self.assertEqual(baseline['units'],contract(page))
+  current=contract(page)
+  self.assertTrue(all(u['task']['minutes']==90 and u['task']['evaluation']=='teacher' for u in current))
+  self.assertEqual(baseline['units'],[{k:v for k,v in u.items() if k!='task'} for u in current])
 
  def test_preparation_is_short_and_paper_has_the_majority_of_time(self):
   page=(ROOT/'tarefas/m4-u3/index.html').read_text('utf-8')
