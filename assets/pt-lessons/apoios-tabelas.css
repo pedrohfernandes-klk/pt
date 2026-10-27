@@ -1,0 +1,23 @@
+/* Opt-in reading aid: semantic columns on wide screens, complete rows on phones. */
+.jogo .ler .apoio-tabela{width:100%;table-layout:fixed;border-collapse:collapse;margin:1rem 0;font:inherit;color:inherit}
+.jogo .ler .apoio-tabela caption{text-align:left;font:700 .8rem/1.4 Arial,Helvetica,sans-serif;letter-spacing:.04em;text-transform:uppercase;margin-bottom:.6rem;border-left:3px solid var(--mostarda,#d9a520);padding-left:.6em}
+.jogo .ler .apoio-tabela th,.jogo .ler .apoio-tabela td{text-align:left;vertical-align:top;padding:.55em .65em;border:0;border-bottom:1px solid var(--c-cinza,#ccc);overflow-wrap:anywhere}
+.jogo .ler .apoio-tabela thead th{border-bottom:2px solid var(--tinta,#111);background:var(--tinta,#111);color:var(--papel,#fff);font:700 .86em/1.4 Arial,Helvetica,sans-serif}
+.jogo .ler .apoio-tabela thead th:first-child{width:25%}
+.jogo .ler .apoio-tabela tbody th{font:inherit;font-weight:700;text-transform:none;background:transparent;color:inherit}
+@media(max-width:620px){
+ .jogo .ler .apoio-tabela caption{display:block;width:auto}
+ .jogo .ler .apoio-tabela,.jogo .ler .apoio-tabela tbody,.jogo .ler .apoio-tabela tr,.jogo .ler .apoio-tabela tbody th,.jogo .ler .apoio-tabela td{display:block;width:auto}
+ .jogo .ler .apoio-tabela thead{position:absolute;width:1px;height:1px;padding:0;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+ .jogo .ler .apoio-tabela tbody tr{border-top:2px solid currentColor;padding:.7em 0}
+ .jogo .ler .apoio-tabela tbody th,.jogo .ler .apoio-tabela td{border:0;padding:.15em 0}
+ .jogo .ler .apoio-tabela td[data-label]::before{content:attr(data-label) ": ";font:700 .8em/1.4 Arial,Helvetica,sans-serif;color:var(--suave,#444)}
+}
+@media print{
+ .jogo .ler .apoio-tabela{display:table}
+ .jogo .ler .apoio-tabela thead{position:static;display:table-header-group;width:auto;height:auto;clip-path:none;white-space:normal}
+ .jogo .ler .apoio-tabela tbody{display:table-row-group}
+ .jogo .ler .apoio-tabela tr,.jogo .ler .apoio-tabela tbody tr{display:table-row;break-inside:avoid}
+ .jogo .ler .apoio-tabela th,.jogo .ler .apoio-tabela td,.jogo .ler .apoio-tabela tbody th{display:table-cell;padding:.4em .6em;border-bottom:1px solid currentColor}
+ .jogo .ler .apoio-tabela td[data-label]::before{content:none}
+}

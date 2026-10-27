@@ -1,0 +1,23 @@
+{
+  "base_commit": "9b1b9e05740b730ec4484de6e91c460779c6a2cd",
+  "files": {
+    "m7/licao-m7-f15/index.html": {
+      "base_sha256_lf": "7ff04348f78aa196fbea041d34e0e86dcd4777f4056df1f49a4786c15401c87e",
+      "after_sha256_lf": "a3e0ff7b38324a6f7e325162cc23372f226c7dd045af023d1c3e3e6136101b06",
+      "edits": [
+        {
+          "location": "CARTOES[11].html: parágrafo de sete processos convertido em tabela",
+          "old": "\"<div class=\\\"caixa\\\"><h3>Som, imagem e formação de palavras</h3><p>Em «onda de alegria», a onda é imagem da emoção; na frase inventada «O relógio fazia tiquetaque», a palavra imita um som. São operações diferentes.</p></div><div class=\\\"caixa\\\"><h3>Como se formam palavras novas</h3><p><b>Sigla</b>: iniciais lidas letra a letra (PTM). <b>Acrónimo</b>: iniciais lidas como palavra (ONU). <b>Truncação</b>: parte cortada (foto ← fotografia). <b>Amálgama</b>: partes de duas palavras (portunhol ← português + espanhol). <b>Empréstimo</b>: de outra língua (futebol ← <i>football</i>). <b>Extensão semântica</b>: sentido novo (rato, do computador). <b>Onomatopeia</b>: imita um som (tiquetaque).</p></div>\"",
+          "new": "\"<div class=\\\"caixa\\\"><h3>Som, imagem e formação de palavras</h3><p>Em «onda de alegria», a onda é imagem da emoção; na frase inventada «O relógio fazia tiquetaque», a palavra imita um som. São operações diferentes.</p></div><div class=\\\"caixa\\\"><table class=\\\"apoio-tabela\\\" role=\\\"table\\\"><caption>Como se formam palavras novas</caption><thead role=\\\"rowgroup\\\"><tr role=\\\"row\\\"><th scope=\\\"col\\\" role=\\\"columnheader\\\">Conceito</th><th scope=\\\"col\\\" role=\\\"columnheader\\\">Definição</th><th scope=\\\"col\\\" role=\\\"columnheader\\\">Exemplo</th></tr></thead><tbody role=\\\"rowgroup\\\"><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Sigla</th><td role=\\\"cell\\\" data-label=\\\"Definição\\\">Iniciais lidas letra a letra.</td><td role=\\\"cell\\\" data-label=\\\"Exemplo\\\">PTM</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Acrónimo</th><td role=\\\"cell\\\" data-label=\\\"Definição\\\">Iniciais lidas como palavra.</td><td role=\\\"cell\\\" data-label=\\\"Exemplo\\\">ONU</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Truncação</th><td role=\\\"cell\\\" data-label=\\\"Definição\\\">Parte cortada.</td><td role=\\\"cell\\\" data-label=\\\"Exemplo\\\">foto ← fotografia</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Amálgama</th><td role=\\\"cell\\\" data-label=\\\"Definição\\\">Partes de duas palavras.</td><td role=\\\"cell\\\" data-label=\\\"Exemplo\\\">portunhol ← português + espanhol</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Empréstimo</th><td role=\\\"cell\\\" data-label=\\\"Definição\\\">De outra língua.</td><td role=\\\"cell\\\" data-label=\\\"Exemplo\\\">futebol ← <i>football</i></td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Extensão semântica</th><td role=\\\"cell\\\" data-label=\\\"Definição\\\">Sentido novo.</td><td role=\\\"cell\\\" data-label=\\\"Exemplo\\\">rato, do computador</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Onomatopeia</th><td role=\\\"cell\\\" data-label=\\\"Definição\\\">Imita um som.</td><td role=\\\"cell\\\" data-label=\\\"Exemplo\\\">tiquetaque</td></tr></tbody></table></div>\"",
+          "occurrences": 1
+        },
+        {
+          "location": "head: recurso opt-in antes da aparência",
+          "old": "<link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-reading1\">",
+          "new": "<link rel=\"stylesheet\" href=\"../../assets/pt-lessons/apoios-tabelas.css?v=20261027.1\"><link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-reading1\">",
+          "occurrences": 1
+        }
+      ]
+    }
+  }
+}
