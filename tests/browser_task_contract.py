@@ -47,6 +47,12 @@ def visit_task_from_route(page, module, number, expected_href):
     page.locator(f'[data-task-lesson="{number}"] > a').click()
     page.wait_for_url('**/tarefas/' + TASK_SLUGS[module][number - 1] + '/')
     assert page.url == urljoin(route_url, expected_href)
+    assert_task_page(page, before)
+    page.go_back(wait_until='networkidle')
+    assert page.url == route_url
+
+
+def assert_task_page(page, before):
     assert page.locator('.task-question').count() == 4
     assert page.locator('textarea, input[type="text"], [data-sintese-registar]').count() == 0
     assert page.locator('.task-clock b').all_text_contents() == ['10 min', '10 min', '60 min', '10 min']
@@ -74,5 +80,56 @@ def visit_task_from_route(page, module, number, expected_href):
     assert '4 de 4' in page.locator('[data-task-status]').inner_text()
     assert learning_storage(page) == before, 'Formative preparation must not evaluate or complete the task'
     assert page.evaluate('document.documentElement.scrollWidth <= innerWidth + 3')
-    page.go_back(wait_until='networkidle')
-    assert page.url == route_url
+
+
+def responsive_task_matrix(browser, host):
+    """CI-only 8 tasks x 2 real viewports x 2 media schemes; no CSS-regex proxy."""
+    from urllib.parse import urlsplit, parse_qs
+    for width in (390, 1366):
+        for scheme in ('light', 'dark'):
+            for module, slugs in TASK_SLUGS.items():
+                for slug in slugs:
+                    ctx = browser.new_context(viewport={'width': width, 'height': 900},
+                                              color_scheme=scheme, reduced_motion='reduce')
+                    page = ctx.new_page()
+                    page.route('**/fonts.googleapis.com/**', lambda r: r.abort())
+                    page.route('**/fonts.gstatic.com/**', lambda r: r.abort())
+                    # Keep /pt/ in the visible URL so the real projection launcher mounts.
+                    # The fixture server serves the checkout root; strip only this URL prefix.
+                    def local(route):
+                        u = urlsplit(route.request.url)
+                        response = route.fetch(url=host + u.path.removeprefix('/pt') +
+                                               ('?' + u.query if u.query else ''))
+                        route.fulfill(response=response)
+                    page.route(host + '/pt/**', local)
+                    errors = []
+                    page.on('pageerror', lambda e: errors.append(str(e)))
+                    target = '/pt/tarefas/' + slug + '/'
+                    page.goto(host + target, wait_until='networkidle')
+                    assert page.evaluate('innerWidth') == width, (slug, width, page.evaluate('innerWidth'))
+                    assert page.evaluate('matchMedia("(prefers-color-scheme: dark)").matches') == (scheme == 'dark')
+                    before = learning_storage(page)
+                    assert_task_page(page, before)
+                    for anchor in page.locator('.task-actions a[href^="#"]').all():
+                        fragment = anchor.get_attribute('href')
+                        anchor.focus(); anchor.press('Enter')
+                        page.wait_for_function('hash=>location.hash===hash', arg=fragment)
+                        assert page.locator(fragment).count() == 1
+                    buoy = page.locator('.teacher-access')
+                    assert buoy.count() == 1 and buoy.is_visible()
+                    buoy.focus()
+                    assert buoy.evaluate('e=>e===document.activeElement')
+                    assert 'lente/docente/' in buoy.get_attribute('href')
+                    launcher = page.locator('.epi-projection-launcher')
+                    assert launcher.is_visible()
+                    projection_url = launcher.get_attribute('href')
+                    projected = parse_qs(urlsplit(projection_url).query)['pagina'][0]
+                    assert projected.split('#', 1)[0] == target
+                    launcher.click(); page.wait_for_url('**/projetar/**')
+                    frame = page.frame_locator('#lesson-frame')
+                    frame.locator('.task-page').wait_for()
+                    assert frame.locator('[data-task-question]').count() == 4
+                    assert not errors, (slug, width, scheme, errors)
+                    print('PASS responsive task:', slug, 'actual width', width, scheme,
+                          'feedback/anchors/buoy/projection', flush=True)
+                    ctx.close()

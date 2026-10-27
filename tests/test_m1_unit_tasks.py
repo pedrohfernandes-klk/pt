@@ -85,7 +85,7 @@ class M1UnitTasks(unittest.TestCase):
                         ids = page.ids if target == path else TaskPage(target.read_text('utf-8')).ids
                         self.assertIn(unquote(parsed.fragment), ids, href)
                 self.assertIn('../../assets/task-90.js?v=20261026.1', text)
-                self.assertIn('../../assets/task-90.css?v=20261026.1', text)
+                self.assertIn('../../assets/task-90.css?v=20261026-mostarda-1', text)
                 self.assertIn('data-task-status', text)
                 self.assertNotIn('localStorage', text)
                 self.assertNotIn('onclick=', text)

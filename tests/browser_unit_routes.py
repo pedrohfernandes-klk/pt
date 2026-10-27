@@ -8,7 +8,7 @@ import argparse
 from playwright.sync_api import sync_playwright
 from browser_m1_and_inventory import QuietHandler, new_page, ROOT
 from browser_m2_complete import respond
-from browser_task_contract import TASK_MODULES, assert_task_route, visit_task_from_route
+from browser_task_contract import TASK_MODULES, assert_task_route, visit_task_from_route, responsive_task_matrix
 
 PLAN = json.loads((ROOT / 'docs/pedagogia/percursos-unidades-20261020.json').read_text('utf-8'))
 
@@ -92,6 +92,8 @@ def main():
                         page.screenshot(path=str(folder / 'm2-1440.png'), full_page=True)
                     print(f'PASS unit route M{m}; width={width}; checkpoints={len(plan["units"])}', flush=True)
                     ctx.close()
+            if not args.legacy_only:
+                responsive_task_matrix(browser, host)
             ctx, page = new_page(browser, 390)
             page.add_init_script('''localStorage.setItem('percurso-M2-u1','A minha resposta anterior <img src=x>');
               localStorage.setItem('desafio-M2-u1',JSON.stringify({ganho:true,melhor:8,total:8}));

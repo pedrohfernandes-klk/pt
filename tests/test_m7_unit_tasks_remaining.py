@@ -41,7 +41,9 @@ class RemainingM7Tasks(unittest.TestCase):
       self.assertTrue(target.is_file(),href)
       if u.fragment:self.assertIn(f'id="{u.fragment}"',target.read_text('utf-8-sig'))
      elif u.fragment:self.assertIn(u.fragment,page.ids)
-    for asset in ('task-90.js','task-90.css'):self.assertIn('../../assets/'+asset+'?v=20261026.1',page.links)
+    for asset in ('task-90.js','task-90.css'):
+     version='20261026-mostarda-1' if asset.endswith('.css') else '20261026.1'
+     self.assertIn('../../assets/'+asset+'?v='+version,page.links)
     self.assertIn('aria-live="polite"',s)
     for forbidden in ('localStorage','fetch(','<textarea','Tarefa Final','href="#sintese'):
      self.assertNotIn(forbidden,s)

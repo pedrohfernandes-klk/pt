@@ -40,3 +40,15 @@ Foi analisada a sintaxe dos 29 pontos de entrada browser e do novo auxiliar, sem
 Os testes browser serão executados pela plataforma de CI. Esta revisão não apresenta a inspeção de sintaxe como execução dos percursos browser.
 
 A suite Python completa passou: 213 testes. O teste isolado de execução do adaptador também passou. Os cenários de browser novos foram apenas inspecionados e analisados sintaticamente nesta frente, conforme a separação de trabalho com a revisão visual.
+
+## Complemento: paleta e contrato responsivo
+
+A paleta autorizada foi integrada apenas nos dois CSS de módulo e tarefa. As ligações a esses CSS nos nove índices e nas nove páginas de tarefa (incluindo o apoio comparativo antigo) usam a versão de cache `20261026-mostarda-1`. O corpo de cada documento foi comparado antes/depois e mantém-se idêntico nesta atualização. Os scripts e os assets de aparência não mudam.
+
+A fixture de apresentação não precisou de atualização por causa da versão de cache: já compara o texto visível, as ligações de navegação, as imagens, os identificadores e os scripts; as queries de `<link rel="stylesheet">` não fazem parte desses valores. Não se alteraram hashes para fazer passar uma alteração de cores.
+
+A CI executará a matriz das oito tarefas com larguras reais de 390 e 1366 px, em claro e noturno: 32 combinações. O teste exige que `innerWidth` seja exatamente a largura pedida, confirma o esquema em `matchMedia`, exercita todas as opções e respetivo feedback, as âncoras por teclado, a boia e o lançamento real de projeção com a tarefa dentro do iframe. Também verifica a ausência de overflow e de escritas de avaliação automática.
+
+A revisão visual do pai confirmou o funcionamento das oito tarefas no desktop. A tentativa de reduzir a largura na ferramenta de revisão visual manteve `innerWidth` em 1280 px; por isso não certifica o comportamento mobile. A certificação mobile fica dependente da execução efetiva desta matriz na CI. Nesta frente não foi executado Playwright localmente.
+
+Após este complemento, a suite Python completa passou com 214 testes. A continuidade dos dois rótulos de tarefa foi corrigida por instrução da revisão: M1-U2 «Crónica “Estar lá”» e M4-U1 «Um peixe de hoje», sem alterar os títulos nem os enunciados das lições. Apenas os hashes de texto e scripts dos índices M1/M4 foram ajustados para estes rótulos autorizados; a fixture do conteúdo original das lições mantém-se.
