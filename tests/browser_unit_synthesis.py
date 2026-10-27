@@ -64,7 +64,7 @@ try:
    assert page.locator('[data-sintese], [data-sintese-registar], #cartao, #copiar-cartao').count()==0
    assert not page.locator('#arquivo-percurso').is_visible()
    assert page.locator('button[data-desafio]:visible').count()==0
-   assert 'lição feita' in page.locator(f'#m{m}-f01 [data-k]').inner_text()
+   assert page.locator(f'#m{m}-f01 [data-chip]').inner_text() == 'feito'
    page.locator('.route-teacher-tools > summary').click()
    page.locator('.route-teacher-tools a[href="?arquivo=1#arquivo-percurso"]').click()
    page.wait_for_url('**/?arquivo=1#arquivo-percurso')
