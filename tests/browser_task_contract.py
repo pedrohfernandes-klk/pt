@@ -3,8 +3,10 @@
 Imported by the existing CI entry points; this file never launches a browser.
 """
 from urllib.parse import urljoin
-TASK_MODULES = {1, 4, 7}
+# 27/10/2026 (passagem do GPT, tarefas por unidade): o M2 passa ao mesmo modelo, com duas aulas de tarefa.
+TASK_MODULES = {1, 2, 4, 7}
 TASK_SLUGS = {1: ['m1-u1', 'm1-u2'],
+              2: ['m2-u1', 'm2-u2'],
               4: ['m4-u1', 'm4-u2', 'm4-u3-discurso'],
               7: ['m7-u1', 'm7-u2', 'm7-u3']}
 
@@ -75,10 +77,19 @@ def assert_task_page(page, before):
     assert page.locator('[data-c-barra] rect').count() == page.locator('[data-task-card]').count()
     assert page.evaluate('(()=>{const ids=[...document.querySelectorAll("[id]")].map(e=>e.id);return ids.length===new Set(ids).size})()')
     compact = page.locator('main[data-task-compact]').count() == 1
+    # 28/10/2026 (piloto M2, decisão do docente): o formato com escolha tem um cartão de aquecimento
+    # primeiro e duas perguntas, a do aquecimento («aquecer») e uma opcional («1»).
+    choice = page.locator('main[data-task-choice]').count() == 1
     count = 2 if compact else 4
+    question_ids = ['aquecer', '1'] if choice else [str(i) for i in range(1, count + 1)]
     assert page.locator('[data-task-question]').count() == count
+    if choice:
+        assert page.locator('[data-task-card]').count() == 4
+        assert page.locator('[data-task-card="0"] #aquecer').count() == 1
+        assert page.locator('[data-task-card="1"] #produzir').count() == 1
+        assert page.locator('[data-task-theme]').count() == 2
     if compact:
-        assert page.locator('[data-task-card]').count() == 3
+        assert page.locator('[data-task-card]').count() == (4 if choice else 3)
         assert page.locator('.task-clock').count() == 0
         assert 'Tarefa individual' in page.locator('.task-kicker').first.text_content()
         assert not page.locator('[data-task-optional-preparation]').evaluate('e=>e.open')
@@ -96,7 +107,7 @@ def assert_task_page(page, before):
     assert page.locator('[data-task-card="0"]').is_visible()
     open_task_card(page, '#entregar')
     assert learning_storage(page) == before
-    for i in range(1, count + 1):
+    for i in question_ids:
         question = open_task_card(page, f'[data-task-question="{i}"]')
         options = question.locator('button[data-response]')
         assert options.count() == 3
@@ -135,6 +146,27 @@ def assert_task_page(page, before):
     assert question.locator('[data-task-feedback]').is_visible()
     assert learning_storage(page) == before, 'Consultation must not evaluate or complete the task'
     assert page.evaluate('document.documentElement.scrollWidth <= innerWidth + 3')
+    # 28/10/2026 (revisão do PR #124): a barra de topo segue o relógio da produção, também quando o
+    # aquecimento tem o primeiro relógio da página. Iniciar a produção mostra o mesmo tempo no topo.
+    clock = '[data-relogio]:not([data-chave$=":aquecimento"])'
+    if page.locator(clock).count():
+        mini = page.locator('[data-task-reader] .relogio-mini')
+        assert mini.count() == 1 and not mini.is_visible()
+        start = open_task_card(page, clock + ' .relogio-principal')
+        start.focus(); start.press('Enter')
+        assert mini.is_visible() and mini.get_attribute('data-estado') == 'corre'
+        shown = page.evaluate('s=>[document.querySelector(".relogio-mini").textContent,document.querySelector(s+" .relogio-mostrador").textContent]', clock)
+        assert shown[0] == shown[1], shown
+        warm = page.locator('[data-relogio][data-chave$=":aquecimento"] .relogio')
+        if warm.count():
+            assert warm.get_attribute('data-estado') == 'pronto'
+            assert shown[0] != warm.locator('.relogio-mostrador').text_content(), shown
+        page.locator('[data-task-reader-next]').focus(); page.locator('[data-task-reader-next]').press('Enter')
+        assert mini.is_visible(), 'o tempo da produção acompanha os outros cartões'
+        reset = open_task_card(page, clock + ' .relogio-recomecar')
+        reset.focus(); reset.press('Enter')
+        assert not mini.is_visible()
+        open_task_card(page, '[data-task-card="0"]')
 
 
 def assert_reader_navigation(page):
@@ -241,8 +273,10 @@ def fallback_task_pages(browser, host):
             for target in ('#preparacao','#apoios','#produzir','#entregar'):
                 assert page.locator(target).is_visible()
             compact = page.locator('main[data-task-compact]').count() == 1
+            choice = page.locator('main[data-task-choice]').count() == 1
             if compact:
-                assert page.locator('[data-task-question]:visible').count() == 0
+                # 28/10/2026: no formato com escolha, a pergunta do aquecimento está sempre à vista.
+                assert page.locator('[data-task-question]:visible').count() == (1 if choice else 0)
                 optional=page.locator('[data-task-optional-preparation] > summary')
                 optional.focus();optional.press('Enter')
             assert page.locator('[data-task-question]:visible').count() == (2 if compact else 4)

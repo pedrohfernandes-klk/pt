@@ -37,6 +37,21 @@ def _records():
     return records
 
 
+# 27/10/2026 (pedido do docente): o relógio do aluno entra nas aulas de tarefa. Só estas marcas,
+# sempre com a mesma forma, ficam autorizadas por cima dos manifestos literais; o conteúdo não muda.
+TIMER_MARKUP = (
+    re.compile(r'<link rel="stylesheet" href="\.\./\.\./assets/relogio\.css\?v=[0-9a-z.-]+">'),
+    re.compile(r'<script defer src="\.\./\.\./assets/relogio\.js\?v=[0-9a-z.-]+"></script>'),
+    re.compile(r'<div class="task-relogio" data-relogio data-max="[0-9.]+" data-passo="[0-9.]+" data-rotulo="[^"<>]+" data-chave="pt-relogio:tarefas/[a-z0-9-]+:(?:producao|apresentacao)"></div>'),
+)
+
+
+def without_timer(source):
+    for pattern in TIMER_MARKUP:
+        source = pattern.sub('', source)
+    return source
+
+
 def _relative(path):
     path = Path(path)
     return path.relative_to(ROOT).as_posix() if path.is_absolute() else path.as_posix()
@@ -55,6 +70,7 @@ def _authorized_markup_variants(source, path):
     """
     variants = {source}
     reversals = [
+        without_timer,
         lambda s: s.replace('<details data-task-optional-preparation>', '<details>'),
         lambda s: re.sub(r'(<h3 id="criterios">[^<]*</h3>)<ul class="task-criteria">', r'\1<ul>', s),
     ]

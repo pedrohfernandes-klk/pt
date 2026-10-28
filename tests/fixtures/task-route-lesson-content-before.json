@@ -162,6 +162,112 @@
       "m1/m1-voz-emprestada/index.html": "ee064de105b72168df15a5b2718a740f1a86edd77c565594bdfdb650a5c634d1"
     }
   },
+  "2": {
+    "units": [
+      {
+        "n": 1,
+        "passos": [
+          {
+            "id": "m2-f01",
+            "licao": "m2-f01",
+            "exs": [],
+            "ativ": [
+              "ler"
+            ]
+          },
+          {
+            "id": "m2-f02",
+            "licao": "m2-f02",
+            "exs": [],
+            "ativ": [
+              "ler",
+              "ines-panela"
+            ]
+          },
+          {
+            "id": "m2-f07",
+            "licao": "m2-f07",
+            "exs": [],
+            "ativ": [
+              "ler",
+              "gram-oracoes-farsa"
+            ]
+          },
+          {
+            "id": "m2-f06",
+            "licao": "m2-f06",
+            "exs": [],
+            "ativ": [
+              "ler",
+              "ines-escolher"
+            ]
+          }
+        ],
+        "licoes": [
+          "m2-f01",
+          "m2-f02",
+          "m2-f07",
+          "m2-f06"
+        ],
+        "pool_sha256": "b4f6ddc1d63b2469f5c573904f5d6557c2546f3544c59c75253b93fce5ca4e11"
+      },
+      {
+        "n": 2,
+        "passos": [
+          {
+            "id": "m2-f11",
+            "licao": "m2-f11",
+            "exs": [],
+            "ativ": [
+              "ler"
+            ]
+          },
+          {
+            "id": "m2-f10",
+            "licao": "m2-f10",
+            "exs": [],
+            "ativ": [
+              "ler"
+            ]
+          },
+          {
+            "id": "m2-f08",
+            "licao": "m2-f08",
+            "exs": [],
+            "ativ": [
+              "ler"
+            ]
+          },
+          {
+            "id": "m2-f09",
+            "licao": "m2-f09",
+            "exs": [],
+            "ativ": [
+              "ler",
+              "escudeiro-fala"
+            ]
+          }
+        ],
+        "licoes": [
+          "m2-f11",
+          "m2-f10",
+          "m2-f08",
+          "m2-f09"
+        ],
+        "pool_sha256": "6bcf57346d24375f896bceee0452ee98cafd4b1411d3650bca51038a97be691e"
+      }
+    ],
+    "files": {
+      "m2/licao-m2-f01/index.html": "7e4c5e05e258dbdec91d2c91e3576ce77abba97cc510ba75ea6a0d4fb82b7795",
+      "m2/licao-m2-f02/index.html": "78a39a81cbbc9c2d25542423efca848bd4a248ca2f4ed30f67d83c14bc0003d5",
+      "m2/licao-m2-f06/index.html": "3b743b389f55b71ee9852b8ec012aff34aa556a1c1100b8e51a10a7b069f1ed7",
+      "m2/licao-m2-f07/index.html": "8fa4e0efff89e7aa21a114a3f23944664724c87acd262a04e604acb55ac19d56",
+      "m2/licao-m2-f08/index.html": "0066aee46a27e017a3cee639ebb859e1fc5f7ac2e34a51df3b7d40351accd662",
+      "m2/licao-m2-f09/index.html": "09fe70c997c8aa3304b78d048f2abf52be1b065feb7e925407321aceb9526d72",
+      "m2/licao-m2-f10/index.html": "59ad0be2c97550f31b4020159a4fdc405b642ed6635b8390430954e7ea2a7be8",
+      "m2/licao-m2-f11/index.html": "844e54fe9a9730eeae3a29d4c6bd199940f35621f1748d7c0e64daba401ed13b"
+    }
+  },
   "4": {
     "units": [
       {
