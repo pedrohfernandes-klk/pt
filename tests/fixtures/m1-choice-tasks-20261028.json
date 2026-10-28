@@ -1,0 +1,20 @@
+{
+ "base": "16fb4268b7dc7036ee698807513b8fbb1ee26020",
+ "authorization": "28/10/2026 (decisão do docente, PR #122): as aulas de tarefa das unidades 1 e 2 do M1 passam ao formato do piloto do M2 (aquecer, núcleo comum e tema A ou B, relembrar, verificar), com o relógio do aluno e a ligação à grelha /20. Corpo gerado por scripts/tarefas_escolha.py a partir dos dados públicos indicados; o corpo compacto de 27/10 fica guardado no manifesto m1-compact-task-edits-20261027.json.",
+ "files": {
+  "tarefas/m1-u1/index.html": {
+   "data": "docs/pedagogia/tarefas-escolha/m1-u1.json",
+   "data_sha256": "ee1267a95d2c2819d402998d895e4964bd778a91f1f080d5a63b5858b62f5cdc",
+   "replaces_after_body_sha256": "eeae55a492d30f3760d60994d0dbfcf69eb2f90ec4dee32a064abc85081e6b99",
+   "after_body_sha256": "f893d52fcc3befb41284d4e8da46dbe2236a754cab90163d96d6e05d9e53c604",
+   "after_sha256": "b68875a9bd3cb8c6fb632634062271d7d030ae06e3ab0514f66b48b6e6169892"
+  },
+  "tarefas/m1-u2/index.html": {
+   "data": "docs/pedagogia/tarefas-escolha/m1-u2.json",
+   "data_sha256": "d682cc97bc59d3fac8c600058e2265e6fa93192c260761d1e26edf520302adf8",
+   "replaces_after_body_sha256": "6fbb2184d9e9d5533ce863654060469e62d7f2073a572fe0d06cb7b67ef85692",
+   "after_body_sha256": "7479238b1d7f80b22abb6c685d55c7cc4d2eca931a90b73f8f212c6f11e9d3de",
+   "after_sha256": "93e81753437e77d7bbe70d4cf6f0b42242c36d43097c197b932a301e6ed2c987"
+  }
+ }
+}

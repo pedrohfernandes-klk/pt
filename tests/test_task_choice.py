@@ -6,9 +6,21 @@ público ou a sua atualidade, com dossiê de factos com fonte. Relógio do aluno
 from pathlib import Path
 from html.parser import HTMLParser
 from urllib.parse import urlsplit, unquote
-import re, unittest
+import html, json, re, subprocess, sys, unittest
 ROOT = Path(__file__).resolve().parents[1]
-CHOICE = ['m2-u1', 'm2-u2']
+# 28/10/2026 (decisão do docente, PR #122): as duas aulas de tarefa do M1 passam ao formato do piloto do M2,
+# geradas por scripts/tarefas_escolha.py a partir de docs/pedagogia/tarefas-escolha/<slug>.json.
+CHOICE = ['m1-u1', 'm1-u2', 'm2-u1', 'm2-u2']
+# Lições onde estão as passagens do aquecimento, por módulo (a lista do M2 fica como estava).
+# 28/10/2026: no M1, as cantigas de D. Dinis e Guilhade (F04, F19) e o grito do cap. XII (F06).
+WARM_LESSONS = {'m2': ('licao-m2-f02', 'licao-m2-f06', 'licao-m2-f07', 'licao-m2-f11'),
+                'm1': ('licao-m1-f04', 'licao-m1-f06', 'licao-m1-f19')}
+
+
+def flat(path):
+    """Texto de uma página do sítio, sem marcas nem entidades, com os espaços juntos."""
+    source = Path(path).read_text('utf-8')
+    return re.sub(r'\s+', ' ', html.unescape(re.sub(r'<[^>]+>|\\n', ' ', source)))
 
 
 class Page(HTMLParser):
@@ -80,7 +92,7 @@ class ChoiceTasks(unittest.TestCase):
                 facts = re.findall(r'<section class="task-dossier".*?</section>', source, re.S)[0]
                 self.assertGreaterEqual(facts.count('<li>'), 3)
                 self.assertEqual(facts.count('<li>'), facts.count('class="task-fonte"'))
-                lessons = [h for h in p.links if '/m2/licao-' in h]
+                lessons = [h for h in p.links if '/' + slug.split('-')[0] + '/licao-' in h]
                 self.assertGreaterEqual(len(lessons), 4)
                 for href in p.links:
                     url = urlsplit(href)
@@ -90,9 +102,10 @@ class ChoiceTasks(unittest.TestCase):
                     self.assertTrue(target.is_file(), href)
 
     def test_quotes_used_in_the_warmup_exist_in_the_lessons(self):
-        lessons = ' '.join((ROOT / 'm2' / f / 'index.html').read_text('utf-8') for f in ('licao-m2-f02', 'licao-m2-f06', 'licao-m2-f07', 'licao-m2-f11'))
-        flat = re.sub(r'\s+', ' ', re.sub(r'<[^>]+>|\\n', ' ', lessons))
         for slug in CHOICE:
+            module = slug.split('-')[0]
+            lessons = ' '.join((ROOT / module / f / 'index.html').read_text('utf-8') for f in WARM_LESSONS[module])
+            flat = re.sub(r'\s+', ' ', re.sub(r'<[^>]+>|\\n', ' ', lessons))
             source = (ROOT / 'tarefas' / slug / 'index.html').read_text('utf-8')
             warm = source.split('id="aquecer"')[1].split('</section>')[0]
             choices = ' '.join(re.findall(r'</span> (.*?)</button>', warm))
@@ -100,6 +113,51 @@ class ChoiceTasks(unittest.TestCase):
                 for verse in [v.strip() for v in quote.replace('&#x27;', "'").split(' / ')]:
                     with self.subTest(task=slug, verso=verse):
                         self.assertIn(re.sub(r'\s+', ' ', verse), flat)
+
+    def test_dossier_quotes_and_numbers_are_in_the_lesson_they_point_to(self):
+        # 28/10/2026: cada facto do dossiê está escrito na lição para onde aponta. Confere-se cada citação
+        # entre «» e cada número (anos, quantidades) no texto da página ligada pela fonte do facto.
+        for slug in CHOICE:
+            path = ROOT / 'tarefas' / slug / 'index.html'; source = path.read_text('utf-8')
+            dossier = re.findall(r'<section class="task-dossier".*?</section>', source, re.S)[0]
+            facts = re.findall(r'<li>(.*?) <a class="task-fonte" href="([^"]+)"', dossier)
+            self.assertEqual(len(facts), dossier.count('<li>'))
+            for fact, href in facts:
+                target = flat((path.parent / href / 'index.html').resolve())
+                text = html.unescape(re.sub(r'<[^>]+>', '', fact))
+                for piece in re.findall(r'«([^»]+)»', text) + re.findall(r'\b\d{3,4}\b', text):
+                    with self.subTest(task=slug, fonte=href, facto=piece):
+                        self.assertIn(piece, target)
+
+    def test_support_names_are_the_names_in_the_linked_lessons(self):
+        # 28/10/2026: «Relembrar» remete pelos nomes das secções e dos conceitos, entre «», tal como estão na
+        # lição ligada (aspas interiores “ ” = « »). «Para ir mais longe» é o botão do motor das lições.
+        engine = flat(ROOT / 'assets/pt-lessons/jogo.js')
+        for slug in CHOICE:
+            path = ROOT / 'tarefas' / slug / 'index.html'; source = path.read_text('utf-8')
+            support = re.search(r'id="apoios".*?<ul>(.*?)</ul>', source, re.S)[1]
+            items = re.findall(r'<li><a href="([^"]+)">(.*?)</a></li>', support)
+            self.assertGreaterEqual(len(items), 3)
+            for href, text in items:
+                target = flat((path.parent / href / 'index.html').resolve())
+                for name in re.findall(r'«([^»]+)»', text):
+                    name = html.unescape(re.sub(r'<[^>]+>', '', name)).replace('“', '«').replace('”', '»')
+                    with self.subTest(task=slug, licao=href, nome=name):
+                        self.assertTrue(name in target or name in engine, name)
+
+    def test_generated_pages_come_from_public_data_only(self):
+        # 28/10/2026: as tarefas do M1 são geradas por scripts/tarefas_escolha.py; os dados guardam só o que a
+        # página publica (sem grelha nem chave da correção) e o gerador é idempotente.
+        data = sorted((ROOT / 'docs/pedagogia/tarefas-escolha').glob('*.json'))
+        self.assertEqual([p.stem for p in data], ['m1-u1', 'm1-u2'])
+        for p in data:
+            d = json.loads(p.read_text('utf-8'))
+            self.assertFalse({'grelha', 'provas', 'notas_docente', 'chave'} & set(d), p.name)
+            self.assertIn(d['slug'], CHOICE)
+        before = {p: p.read_bytes() for p in (ROOT / 'tarefas').glob('m1-u*/index.html')}
+        subprocess.run([sys.executable, '-B', 'scripts/tarefas_escolha.py'], cwd=ROOT, check=True, capture_output=True)
+        for p, b in before.items():
+            self.assertEqual(b, p.read_bytes(), p)
 
     def test_reader_puts_the_warmup_first(self):
         reader = (ROOT / 'assets/task-reader.js').read_text('utf-8')

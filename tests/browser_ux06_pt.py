@@ -82,7 +82,10 @@ def main():
    task=page.locator('[data-task-lesson="1"] > a')
    task.focus();task.press('Enter');page.wait_for_url('**/tarefas/m1-u1/')
    assert page.locator('[data-task-question]').count()==2
-   assert page.locator('[data-task-card]').count()==3
+   # 28/10/2026 (decisão do docente, PR #122): a tarefa do M1 passa ao formato com escolha, com um cartão de
+   # aquecimento antes do enunciado (aquecer, enunciado, relembrar, verificar).
+   assert page.locator('main[data-task-choice]').count()==1
+   assert page.locator('[data-task-card]').count()==4
    assert not page.locator('[data-task-optional-preparation]').evaluate('e=>e.open')
    assert not page.evaluate('localStorage.getItem("percurso-sintese-M1-u1")')
    print('PASS resume, navigable task lesson, no independent gate or automatic assessment',flush=True);ctx.close();browser.close()

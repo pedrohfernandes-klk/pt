@@ -1,0 +1,140 @@
+{
+ "slug": "m1-u2",
+ "titulo": "Crónica «Estar lá»",
+ "unidade": 2,
+ "aquecer": {
+  "instrucao": "Como transforma Fernão Lopes a cidade numa só figura, quando ela ouve o grito do pajem? Cita uma passagem do cap. XII. Explica o que essa passagem faz ver.",
+  "anatomia": [
+   [
+    "Verbos",
+    "«Cita» e «Explica»: duas operações, por esta ordem. A pergunta inicial diz o que a explicação tem de mostrar: como a cidade passa a ser uma só figura."
+   ],
+   [
+    "Objeto",
+    "o que a passagem faz <b>ver</b> da cidade, e não o que se sabe do Mestre ou do pajem."
+   ],
+   [
+    "Condição",
+    "«quando ela ouve o grito do pajem» e «do cap. XII» (este episódio, não o cerco); «uma passagem» (copiada sem mudar nada, entre aspas)."
+   ]
+  ],
+  "afirmacao": "Afirmação: «A cidade corre para salvar o Mestre.»",
+  "pergunta": "Qual destas passagens prova a afirmação? Escreve a letra e uma razão no papel; depois confirma.",
+  "opcoes": [
+   {
+    "certa": false,
+    "letra": "A",
+    "texto": "O narrador, sobre o pajem: «como lhe disseram que fosse pela vila, segundo já era percebido»",
+    "resposta": "Distração: fala do pajem e do grito combinado. Quem sabe do plano é o leitor; a passagem nada diz do que a cidade faz."
+   },
+   {
+    "certa": true,
+    "letra": "B",
+    "texto": "O narrador, sobre a cidade: «correndo à pressa para hu diziam que se esto fazia, pera lhe dar vida e escusar morte»",
+    "resposta": "Prova: «pera lhe dar vida e escusar morte» diz para que corre a cidade. Daqui podes inferir, com apoio, que acredita no grito: só corre a salvar quem crê no perigo."
+   },
+   {
+    "certa": false,
+    "letra": "C",
+    "texto": "O pajem, pela rua: «Matam o Mestre! Matam o Mestre nos paços da rainha!»",
+    "resposta": "Distração: é o que o pajem grita. Prova que o grito foi dito, não para que corre a cidade, nem que matavam o Mestre."
+   }
+  ]
+ },
+ "lead": "Núcleo: cerca de 40 palavras por resposta. Crónica (A ou B) para uma revista de história para jovens: título e 160 a 200 palavras. Abre dentro de um momento, faz ver com um pormenor, põe o povo a agir, marca a fala («documentada» ou «imaginada») e as tuas inferências e opiniões, confronta duas fontes e lista-as. À mão, com consulta.",
+ "nucleo": [
+  "Como transforma Fernão Lopes a cidade numa só figura, quando ela ouve o grito do pajem? Cita uma passagem do cap. XII. Explica o que essa passagem faz ver.",
+  "Num rascunho inventado, o pajem brada, em fala marcada como documentada: «Matam o Mestre! Vamos pra rua!». Identifica o que não está nos excertos do cap. XII. Em «pra», indica o som que cai, onde e o processo. Justifica onde pode ficar «pra»: relato, fala documentada ou imaginada."
+ ],
+ "temas": [
+  {
+   "letra": "A",
+   "nome": "A língua do cronista",
+   "texto": "Conta por dentro o grito do pajem (cap. XII), o sino da quadrilha (cap. CXVI) ou a fome do cerco (cap. CXLVIII). Usa uma gradação tua e copia letra a letra uma passagem desse capítulo. Segunda fonte: uma imagem do dossiê."
+  },
+  {
+   "letra": "B",
+   "nome": "A crónica e a imagem",
+   "texto": "Começa hoje, num lugar do passeio ou noutro que observaste, e entra no dia do grito ou no cerco. Confronta a crónica com a imagem desse momento: o que uma mostra e a outra cala, e o que a imagem escolhe. Usa dois factos do dossiê."
+  }
+ ],
+ "apoios": [
+  {
+   "href": "../../m1/licao-m1-f06/",
+   "texto": "«Matam o Mestre!»: relê «O grito pela rua (1 de 2)», «A cidade inteira (2 de 2)» e «Muita gente, ou uma só figura?»."
+  },
+  {
+   "href": "../../m1/licao-m1-f10/",
+   "texto": "Estar lá: relê «Um começo, por dentro: onde estás?», «Dois números: qual escreves?» e «Que fala precisa de aviso?». A crónica da aula 13 tinha 250 a 300 palavras; esta tem 160 a 200. No tema A, se o teu plano da aula 13 for do mesmo momento, a segunda fonte dele também serve."
+  },
+  {
+   "href": "../../m1/licao-m1-f05/",
+   "texto": "Luna, lua: relê «Que som caiu, e onde?» e «Quem diz “pra” fala mal?»."
+  },
+  {
+   "href": "../../m1/licao-m1-f07/",
+   "texto": "Lisboa cercada: relê «A. A cidade preparada», «B. A cidade com fome (2 de 2)» e «Podias trocar a ordem do que se comia?»."
+  },
+  {
+   "href": "../../m1/licao-m1-f20/",
+   "texto": "Entrar na cena: relê «Sem a palavra, como sabes que é fome?» e «Marta ou Rui: quem prova o que diz?»."
+  }
+ ],
+ "dossie_titulo": "Dossiê do tema B",
+ "dossie": [
+  {
+   "facto": "Por volta de 1860, quase cinco séculos depois, José de Sousa Azevedo pintou a <i>Morte do conde Andeiro</i>: o conde jaz no chão dos paços da rainha, onde o Mestre acaba de o matar. O pintor não viu a cena: reconstituiu-a, e as espadas, as plumas e a luz são escolha sua.",
+   "href": "../../m1/licao-m1-f06/",
+   "fonte": "Lição «Matam o Mestre!», abertura; em «Para ir mais longe», «Uma pintura de 1860»"
+  },
+  {
+   "facto": "Uma iluminura das <i>Crónicas</i> de Froissart, do século XV, mostra o cerco de Lisboa de 1384: o arraial, com tendas, canhões e homens caídos, e as muralhas; lá dentro, só gente numa praça. Não mostra a fome, nem diz de que caíram os homens.",
+   "href": "../../m1/licao-m1-f07/",
+   "fonte": "Lição «Lisboa cercada»; em «Para ir mais longe», «O arraial de Castela» e «O que a iluminura não mostra»"
+  },
+  {
+   "facto": "O cerco levantou-se a 3 de setembro de 1384, sobretudo pela peste no exército castelhano: quem cerca também sofre.",
+   "href": "../../m1/licao-m1-f07/",
+   "fonte": "Lição «Lisboa cercada»; em «Para ir mais longe», «O arraial de Castela» e «Quem cerca também sofre»"
+  },
+  {
+   "facto": "Fernão Lopes foi guarda-mor da Torre do Tombo, o arquivo onde se guardavam documentos, e D. Duarte encomendou-lhe as crónicas dos reis. Não diz que viu o que conta: no prólogo, diz que viu «grandes volumes de livros» e «públicas escrituras de muitos cartórios».",
+   "href": "../../m1/licao-m1-f06/",
+   "fonte": "Lição «Matam o Mestre!», «Como sabe o cronista o que conta?»; em «Para ir mais longe», «Quem é Fernão Lopes»"
+  },
+  {
+   "facto": "Na crónica, as falas vão em discurso direto, sem marca de documentada ou imaginada; na iluminura, nada separa o sabido do imaginado.",
+   "href": "../../m1/licao-m1-f10/",
+   "fonte": "Lição «Estar lá», «Que fala precisa de aviso?»; em «Para ir mais longe», «Imaginar é enganar?»"
+  }
+ ],
+ "opcional": {
+  "pergunta": "2. Para uma crónica do grito, há quem escreva o título «O grito» e quem escreva «O grito do pajem». Que faz «do pajem» no segundo?",
+  "opcoes": [
+   {
+    "certa": false,
+    "letra": "A",
+    "texto": "Só acrescenta: é modificador, como «de pedra» em «a casa de pedra».",
+    "resposta": "Tira-o e ouve: o grito… de quem? «Grito» vem de «gritar» e fica a pedir; «a casa» fica inteira sem «de pedra»."
+   },
+   {
+    "certa": true,
+    "letra": "B",
+    "texto": "Completa o nome «grito»: é complemento do nome e diz de quem é o grito.",
+    "resposta": "«O pajem gritou», «o grito do pajem»: o nome leva o que ia com o verbo. Cortá-lo também pode ser escolha: «O grito» faz perguntar «de quem?», e a crónica responde."
+   },
+   {
+    "certa": false,
+    "letra": "C",
+    "texto": "É complemento oblíquo, porque começa por uma preposição.",
+    "resposta": "Ter preposição não faz um oblíquo: o oblíquo completa um verbo, e aqui quem fica a pedir é um nome."
+   }
+  ]
+ },
+ "criterios": [
+  "Núcleo: passagem do cap. XII explicada; fala e «pra» analisadas e justificadas.",
+  "Crónica: o que o enunciado pede; A, gradação e passagem copiada; B, o que a imagem escolhe e dois factos.",
+  "160 a 200 palavras, título, uma frase riscada e reescrita."
+ ],
+ "fecho": "Fecha com duas linhas, fora da contagem, como o núcleo e as fontes: que escolha de Fernão Lopes usaste na tua crónica (fazer ver, a multidão como uma só figura, a gradação, a fala em discurso direto)? Aponta a tua frase que a mostra."
+}

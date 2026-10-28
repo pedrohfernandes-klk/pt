@@ -1,0 +1,136 @@
+{
+ "slug": "m1-u1",
+ "titulo": "Vozes da lírica medieval",
+ "unidade": 1,
+ "aquecer": {
+  "instrucao": "Em «Ondas do mar de Vigo», quem fala e a quem? Cita uma repetição e classifica-a. Explica como faz durar a espera. Em <i>mare</i> &gt; mar e <i>malu</i> &gt; mau, identifica o som que cai, onde cai e o processo.",
+  "anatomia": [
+   [
+    "Verbos",
+    "«Cita», «classifica» e «explica»: três operações sobre uma repetição, por esta ordem. Antes, a pergunta pede quem fala e a quem; no fim, «identifica» pede três respostas: o som, o lugar e o processo."
+   ],
+   [
+    "Objeto",
+    "como a repetição faz <b>durar a espera</b>, e não a repetição sozinha; na segunda parte, o <b>som</b> que cai, e não a palavra inteira."
+   ],
+   [
+    "Condição",
+    "«uma repetição» (uma só, citada entre aspas) e «<i>mare</i> &gt; mar e <i>malu</i> &gt; mau» (os dois casos, cada um com o seu lugar e o seu processo)."
+   ]
+  ],
+  "afirmacao": "Afirmação: «Guilhade promete louvar a dona e, logo a seguir, desmente a promessa.»",
+  "pergunta": "Qual destas passagens prova a afirmação? Escreve a letra e uma razão no papel; depois confirma.",
+  "opcoes": [
+   {
+    "certa": false,
+    "letra": "A",
+    "texto": "«Ai dona fea, fostes-vos queixar / que vos nunca louv'en[o] meu cantar»",
+    "resposta": "Distração: é Guilhade, mas antes da promessa. Conta a queixa da dona, que nunca foi louvada: mostra porque ele promete, não a promessa desmentida."
+   },
+   {
+    "certa": true,
+    "letra": "B",
+    "texto": "«e vedes como vos quero loar: / dona fea, velha e sandia!»",
+    "resposta": "Prova: um verso anuncia o louvor e o seguinte entrega o insulto. A promessa é desmentida no lugar exato onde o elogio devia estar."
+   },
+   {
+    "certa": false,
+    "letra": "C",
+    "texto": "«tanto a fez Deus comprida de bem / que mais que todas las do mundo val»",
+    "resposta": "Distração: é D. Dinis, e o exagero engrandece a senhora. Exagerar é dizer o que se pensa, em grande: aqui, a promessa de louvar cumpre-se."
+   }
+  ]
+ },
+ "lead": "À mão, entre 200 e 240 palavras: cerca de 60 por resposta do núcleo e 80 a 120 no tema. Com consulta durante toda a tarefa.",
+ "nucleo": [
+  "Em «Ondas do mar de Vigo», quem fala e a quem? Cita uma repetição e classifica-a. Explica como faz durar a espera. Em <i>mare</i> &gt; mar e <i>malu</i> &gt; mau, identifica o som que cai, onde cai e o processo.",
+  "D. Dinis e Guilhade prometem louvar uma senhora. Em qual se cumpre a promessa? Comprova com uma passagem de cada cantiga, fora da primeira estrofe. Identifica o recurso que, na outra, a desmente."
+ ],
+ "temas": [
+  {
+   "letra": "A",
+   "nome": "A forma de Codax, hoje",
+   "texto": "Uma aplicação promete «Chega já» e adia a entrega. Escreve duas estrofes de três versos à maneira de Codax, com paralelismo e um refrão que repete a promessa. Cita um verso de Codax que imitaste. Identifica o teu verso que desmente a promessa, como em Guilhade. Indica uma diferença entre a tua espera e a da rapariga de Codax."
+  },
+  {
+   "letra": "B",
+   "nome": "A cantiga e o seu público",
+   "texto": "Imagina que a escola recebe um concerto com «Ondas do mar de Vigo» e te pede o cartaz. Descreve a imagem em duas frases. Justifica-a com dois factos do dossiê. Escolhe um verso para o cartaz e explica porquê. Indica o que o cartaz não pode prometer a quem vai ouvir."
+  }
+ ],
+ "apoios": [
+  {
+   "href": "../../m1/licao-m1-f19/",
+   "texto": "As cantigas lado a lado: relê «A. Martim Codax, “Ondas do mar de Vigo”», «B. D. Dinis e C. Guilhade, lado a lado» e o conceito «Um elogio a quem chega tarde?». Para o tema A, no fim da lição, abre «Para ir mais longe» e procura «A forma de “Ondas do mar de Vigo”»."
+  },
+  {
+   "href": "../../m1/licao-m1-f04/",
+   "texto": "Louvar e troçar: relê as cantigas inteiras, «A: D. Dinis, “Quer'eu em maneira de proençal”» (a estrofe 2 está em «Ler mais») e «B: João Garcia de Guilhade, “Ai dona fea, fostes-vos queixar”»."
+  },
+  {
+   "href": "../../m1/licao-m1-f02/",
+   "texto": "Cercada pelas ondas: relê os conceitos «O que fica igual quando o mar sobe?» (refrão), «Que muda da estrofe 1 para a 2?» (paralelismo) e «Que verso passa para a estrofe 3?» (leixa-pren)."
+  },
+  {
+   "href": "../../m1/licao-m1-f05/",
+   "texto": "Luna, lua: o que caiu pelo caminho. Relê o conceito «Que som caiu, e onde?» e, no conceito «Que sons apareceram, e onde?», abre «Um esquema curto e duas tentativas»."
+  }
+ ],
+ "dossie_titulo": "Dossiê do tema B",
+ "dossie": [
+  {
+   "facto": "As cantigas eram para ser cantadas. Quem as levava de sala em sala era quem as sabia de cor: o autor ou o jogral que o servia.",
+   "href": "../../m1/m1-voz-emprestada/",
+   "fonte": "«A voz emprestada» (caso em cinco atos), ato 5: «De boca em boca»"
+  },
+  {
+   "facto": "Chegaram-nos cerca de 1680 cantigas, copiadas à mão em três cancioneiros. A música perdeu-se quase toda: só o Pergaminho Vindel, de Martim Codax, e o Sharrer, de D. Dinis, guardam melodias.",
+   "href": "../../m1/licao-m1-f01/",
+   "fonte": "Lição «A língua que se canta»: abertura e «Chegaram as letras»"
+  },
+  {
+   "facto": "«Ondas do mar de Vigo» chegou com as palavras e a melodia, no Pergaminho Vindel. Os instrumentos, o pergaminho não os indica.",
+   "href": "../../m1/licao-m1-f01/",
+   "fonte": "Lição «A língua que se canta»: «Certeza ou hipótese»"
+  },
+  {
+   "facto": "Em 2017, o Pergaminho Vindel esteve numa vitrina: via-se, não se ouvia.",
+   "href": "../../m1/licao-m1-f01/",
+   "fonte": "Lição «A língua que se canta»: «Sem música, ainda é a cantiga?», em «Para ir mais longe»"
+  },
+  {
+   "facto": "Numa interpretação de hoje, a soprano Anneliina Rif canta «Ondas do mar de Vigo» e toca harpa gótica na igreja medieval de Maaria, em Turku (Finlândia).",
+   "href": "../../m1/licao-m1-f19/",
+   "fonte": "Lição «As cantigas lado a lado»: o texto A, em «Ler mais»"
+  }
+ ],
+ "opcional": {
+  "pergunta": "2. Em <i>amicum</i> &gt; amigo, a palavra de Codax, cai o <i>m</i> do fim; em <i>salire</i> &gt; sair, cai o <i>l</i>. As duas quedas têm o mesmo nome?",
+  "opcoes": [
+   {
+    "certa": false,
+    "letra": "A",
+    "texto": "Sim: síncope, porque as duas palavras ficam mais curtas.",
+    "resposta": "Encurtar não decide o nome. Em amicum, o m cai no fim; em salire, o l cai no meio. O lugar dá o nome."
+   },
+   {
+    "certa": false,
+    "letra": "B",
+    "texto": "Sim: apócope, porque nas duas cai uma consoante.",
+    "resposta": "O nome não vem do tipo de som, vem do lugar: o l de salire está no meio da palavra, e cair no meio é síncope."
+   },
+   {
+    "certa": true,
+    "letra": "C",
+    "texto": "Não: apócope no <i>m</i> de <i>amicum</i>, síncope no <i>l</i> de <i>salire</i>.",
+    "resposta": "Mesmo gesto, cair; lugar diferente, nome diferente. É o critério que o núcleo te pede com mare e malu. Em amigo há ainda outra mudança, o c que passa a g: sonorização."
+   }
+  ]
+ },
+ "criterios": [
+  "Núcleo: voz e destinatário; repetição citada, classificada e explicada; som, lugar e processo; passagens e recurso.",
+  "Tema A: paralelismo, refrão, verso de Codax, verso que desmente e uma diferença. Tema B: imagem, dois factos, verso explicado e o que o cartaz não pode prometer.",
+  "Respostas articuladas, entre 200 e 240 palavras, com escrita revista."
+ ],
+ "fecho": "Fecha com duas linhas, fora da contagem de palavras: o que passaste a verificar quando uma cantiga repete ou promete? Aponta o verso que te ajudou."
+}

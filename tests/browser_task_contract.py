@@ -9,6 +9,9 @@ TASK_SLUGS = {1: ['m1-u1', 'm1-u2'],
               2: ['m2-u1', 'm2-u2'],
               4: ['m4-u1', 'm4-u2', 'm4-u3-discurso'],
               7: ['m7-u1', 'm7-u2', 'm7-u3']}
+# 28/10/2026 (decisão do docente, PR #122): o formato com aquecimento e tema à escolha cobre o M2 (piloto) e o M1.
+# Estas páginas têm de o declarar; nenhuma passa pelo contrato compacto por omissão.
+CHOICE_SLUGS = {'m1-u1', 'm1-u2', 'm2-u1', 'm2-u2'}
 
 def learning_storage(page):
     return page.evaluate("""() => Object.fromEntries(Object.keys(localStorage)
@@ -72,6 +75,9 @@ def open_task_card(page, selector):
 
 def assert_task_page(page, before):
     page.locator('[data-task-reader].task-reader-ready').wait_for()
+    slug = page.url.split('/tarefas/', 1)[1].split('/', 1)[0] if '/tarefas/' in page.url else ''
+    if slug:
+        assert (page.locator('main[data-task-choice]').count() == 1) == (slug in CHOICE_SLUGS), slug
     assert page.locator('[data-task-card]:visible').count() == 1
     assert page.locator('[data-task-reader]').count() == 1
     assert page.locator('[data-c-barra] rect').count() == page.locator('[data-task-card]').count()

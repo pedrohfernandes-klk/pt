@@ -12,6 +12,7 @@ def main():
     try:
         with sync_playwright() as pw:
             browser = pw.chromium.launch(headless=True)
+            # 28/10/2026 (PR #122): as tarefas do M1 entram no formato com escolha (CHOICE_SLUGS em browser_task_contract).
             responsive_task_matrix(browser, f'http://127.0.0.1:{server.server_port}')
             fallback_task_pages(browser, f'http://127.0.0.1:{server.server_port}')
             # 28/10/2026: grelhas /20 sem deslizar na horizontal (320 a 1440 px).
