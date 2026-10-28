@@ -80,7 +80,7 @@
     ]
   },
   "authorized_instruction_edits_20261028": {
-    "nota": "28/10/2026 (PR #122, regra do «papel»): os cartões das aulas de tarefa das unidades 1 e 2 do M1 dizem «trabalho em papel», como os do M2, em vez de «folhas próprias». Só estas duas cadeias, literais.",
+    "nota": "28/10/2026 (PR #122, regra do «papel»): os cartões das aulas de tarefa das unidades 1 e 2 do M1 dizem «trabalho em papel», como os do M2, em vez de «folhas próprias»; e, na revisão do mesmo dia, «Como se cumpre uma unidade» diz «produção em papel», como o M2, em vez de «produção nas tuas folhas». Só estas três cadeias, literais.",
     "m1": [
       {
         "old": "<span class=\"t\">Tarefa da Unidade 1 · Vozes da lírica medieval</span><span class=\"f\">Aula de 90 min com consulta · síntese integrada · folhas próprias e fotografias no Teams.</span>",
@@ -89,6 +89,10 @@
       {
         "old": "<span class=\"t\">Tarefa da Unidade 2 · Crónica «Estar lá»</span><span class=\"f\">Aula de 90 min com consulta · síntese integrada · folhas próprias e fotografias no Teams.</span>",
         "new": "<span class=\"t\">Tarefa da Unidade 2 · Crónica «Estar lá»</span><span class=\"f\">Aula de 90 min com consulta · síntese integrada · trabalho em papel e fotografias no Teams.</span>"
+      },
+      {
+        "old": "Fazes as aulas de leitura e preparação e fechas a unidade na aula de tarefa: produção nas tuas folhas, uma síntese simples integrada e fotografias no Teams. A avaliação é feita pelo docente. A tarefa organiza a produção prevista para a unidade; não exige repetir uma produção já realizada.",
+        "new": "Fazes as aulas de leitura e preparação e fechas a unidade na aula de tarefa: produção em papel, uma síntese simples integrada e fotografias no Teams. A avaliação é feita pelo docente. A tarefa organiza a produção prevista para a unidade; não exige repetir uma produção já realizada."
       }
     ]
   }

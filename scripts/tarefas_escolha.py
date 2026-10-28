@@ -6,7 +6,10 @@ mesma estrutura, classes, relógio e versões ?v= das tarefas do piloto (tarefas
 Se a tarefa tiver grelha /20 em docs/pedagogia/grelhas-tarefas-20261027.json, a ligação à grelha entra antes do
 fecho («Fecha com duas linhas»), igual à que scripts/grelhas_tarefas.py escreve: os dois geradores ficam
 idempotentes e podem correr por qualquer ordem.
-Uso: python3 scripts/tarefas_escolha.py [slug ...]
+28/10/2026 (revisão do PR #122): as letras das opções e dos temas ficam no nome acessível (deixam de estar
+escondidas aos leitores de ecrã, porque as instruções mandam escrevê-las); o fecho diz o que é a síntese; e
+--saida PASTA escreve as páginas noutra raiz, para os testes compararem sem mexer na árvore.
+Uso: python3 scripts/tarefas_escolha.py [--saida PASTA] [slug ...]
 """
 import json
 import sys
@@ -17,7 +20,7 @@ ROOT = Path(__file__).resolve().parents[1]
 DADOS = ROOT / 'docs' / 'pedagogia' / 'tarefas-escolha'
 GRELHAS = ROOT / 'docs' / 'pedagogia' / 'grelhas-tarefas-20261027.json'
 LIGACAO = '<p class="task-grelha"><a href="grelha/">Grelha /20: como é avaliado e autoavaliação</a></p>\n'
-V = '20261028-escolha-1'
+V = '20261028-escolha-2'
 HEAD = '''<!doctype html>
 <html lang="pt-PT" data-appearance-site="pt"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Aula de tarefa · {title} · {MOD}</title>
@@ -39,7 +42,8 @@ def opts(items):
     for correct, label, text, response in items:
         # As explicações vão num atributo e saem como texto (task-90.js usa textContent): sem aspas nem marcas.
         assert '"' not in response and '<' not in response, response
-        out.append(f'<button type="button" aria-pressed="false" data-correct="{"true" if correct else "false"}" data-response="{response}"><span class="task-letter" aria-hidden="true">{label}</span> {text}</button>')
+        # 28/10/2026: a letra fica no nome acessível («A: …»); a máquina 02 manda escrevê-la no papel.
+        out.append(f'<button type="button" aria-pressed="false" data-correct="{"true" if correct else "false"}" data-response="{response}"><span class="task-letter">{label}<span class="sr-only">:</span></span> {text}</button>')
     return '<div class="task-options">' + ''.join(out) + '</div><p class="task-feedback" data-task-feedback role="status" aria-live="polite" hidden></p>'
 
 
@@ -63,7 +67,8 @@ def warmup(slug, instruction, anatomy, claim, qtitle, options):
 
 def header(slug, unit, title, lead, core, themes):
     li = ''.join(f'<li>{x}</li>' for x in core)
-    th = ''.join(f'<article class="task-theme" data-task-theme="{k}" aria-labelledby="tema-{k}"><h3 id="tema-{k}"><span aria-hidden="true">{k}</span> {name}</h3><p>{text}</p></article>' for k, name, text in themes)
+    # 28/10/2026: «Tema A» / «Tema B» no nome acessível; o fecho manda escrever no topo o tema escolhido.
+    th = ''.join(f'<article class="task-theme" data-task-theme="{k}" aria-labelledby="tema-{k}"><h3 id="tema-{k}"><span><span class="sr-only">Tema </span>{k}</span> {name}</h3><p>{text}</p></article>' for k, name, text in themes)
     return f'''<header><p class="task-kicker">Tarefa individual · Unidade {unit} · 90 min</p><h1>{title}</h1>
 <p>{lead}</p>
 <section id="produzir" aria-label="Enunciado">
@@ -90,11 +95,11 @@ def entregar(criteria, close, grelha):
     return f'''<section class="task-section" id="entregar" aria-labelledby="entregar-title"><h2 id="entregar-title">Verificar e entregar</h2>
 <h3 id="criterios">O que conta</h3><ul class="task-criteria">{cr}</ul>
 {LIGACAO if grelha else ''}<p>{close}</p>
-<p>Escreve no topo da tua resposta o tema que escolheste (A ou B). Fotografa o teu trabalho em papel, incluindo a síntese, e entrega as fotografias legíveis no Teams.</p></section>
+<p>Escreve no topo da tua resposta o tema que escolheste (A ou B). Fotografa o teu trabalho em papel, incluindo a síntese (as duas linhas finais), e entrega as fotografias legíveis no Teams.</p></section>
 '''
 
 
-def tarefa(d, com_grelha):
+def tarefa(d, com_grelha, raiz=ROOT):
     slug, unit = d['slug'], d['unidade']
     assert d['fecho'].startswith('Fecha com duas linhas'), slug
     mod = slug.split('-')[0]
@@ -107,13 +112,19 @@ def tarefa(d, com_grelha):
                      d['opcional']['pergunta'], op(d['opcional']['opcoes']))
             + entregar(d['criterios'], d['fecho'], com_grelha)
             + FOOT)
-    p = ROOT / 'tarefas' / slug / 'index.html'
+    p = raiz / 'tarefas' / slug / 'index.html'
+    p.parent.mkdir(parents=True, exist_ok=True)
     if not p.exists() or p.read_text('utf-8') != html:
         p.write_text(html, 'utf-8')
 
 
 def main():
-    pedidos = set(sys.argv[1:])
+    args, raiz = sys.argv[1:], ROOT
+    if '--saida' in args:
+        i = args.index('--saida')
+        raiz = Path(args[i + 1]).resolve()
+        del args[i:i + 2]
+    pedidos = set(args)
     grelhas = json.loads(GRELHAS.read_text('utf-8'))['tarefas']
     feitos = []
     for p in sorted(DADOS.glob('*.json')):
@@ -123,7 +134,7 @@ def main():
         assert not {'grelha', 'provas', 'notas_docente', 'chave'} & set(d), p
         if pedidos and d['slug'] not in pedidos:
             continue
-        tarefa(d, d['slug'] in grelhas)
+        tarefa(d, d['slug'] in grelhas, raiz)
         feitos.append(d['slug'])
     print('Tarefas com escolha: ' + ', '.join(feitos))
 

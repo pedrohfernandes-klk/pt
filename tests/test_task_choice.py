@@ -6,7 +6,7 @@ público ou a sua atualidade, com dossiê de factos com fonte. Relógio do aluno
 from pathlib import Path
 from html.parser import HTMLParser
 from urllib.parse import urlsplit, unquote
-import html, json, re, subprocess, sys, unittest
+import html, json, re, subprocess, sys, tempfile, unittest
 ROOT = Path(__file__).resolve().parents[1]
 # 28/10/2026 (decisão do docente, PR #122): as duas aulas de tarefa do M1 passam ao formato do piloto do M2,
 # geradas por scripts/tarefas_escolha.py a partir de docs/pedagogia/tarefas-escolha/<slug>.json.
@@ -82,8 +82,16 @@ class ChoiceTasks(unittest.TestCase):
                 self.assertIn(f'data-relogio data-max="15" data-passo="1" data-rotulo="Aquecimento" data-chave="pt-relogio:tarefas/{slug}:aquecimento"', source)
                 self.assertIn(f'data-relogio data-max="60" data-passo="5" data-rotulo="Produção em papel" data-chave="pt-relogio:tarefas/{slug}:producao"', source)
                 self.assertLess(source.index('assets/relogio.js'), source.index('pt-lessons/casca.js'))
-                for asset in ('task-choice.css?v=20261028-escolha-1', 'task-reader.js?v=20261028-escolha-1', 'task-90.js?v=20261027-compact-1'):
+                # 28/10/2026 (revisão do PR #122): task-choice.css muda (impressão do aquecimento, letras no nome
+                # acessível) e a versão passa a -2 nas quatro páginas.
+                for asset in ('task-choice.css?v=20261028-escolha-2', 'task-reader.js?v=20261028-escolha-2', 'task-90.js?v=20261027-compact-1'):
                     self.assertIn(asset, source)
+                # 28/10/2026 (revisão do PR #122): as letras das opções e dos temas ficam no nome acessível, porque as
+                # instruções mandam escrevê-las no papel («Escreve a letra», «o tema que escolheste (A ou B)»).
+                self.assertNotIn('aria-hidden="true">A</span>', source)
+                self.assertEqual(len(re.findall(r'<span class="task-letter">[ABC]<span class="sr-only">:</span></span> ', source)), 6)
+                self.assertEqual(len(re.findall(r'<h3 id="tema-([AB])"><span><span class="sr-only">Tema </span>\1</span> ', source)), 2)
+                self.assertIn('incluindo a síntese (as duas linhas finais)', source)
 
     def test_dossier_facts_carry_sources_and_links_exist(self):
         for slug in CHOICE:
@@ -154,10 +162,14 @@ class ChoiceTasks(unittest.TestCase):
             d = json.loads(p.read_text('utf-8'))
             self.assertFalse({'grelha', 'provas', 'notas_docente', 'chave'} & set(d), p.name)
             self.assertIn(d['slug'], CHOICE)
-        before = {p: p.read_bytes() for p in (ROOT / 'tarefas').glob('m1-u*/index.html')}
-        subprocess.run([sys.executable, '-B', 'scripts/tarefas_escolha.py'], cwd=ROOT, check=True, capture_output=True)
-        for p, b in before.items():
-            self.assertEqual(b, p.read_bytes(), p)
+        # 28/10/2026 (revisão do PR #122): gera numa pasta temporária (--saida) e compara byte a byte, sem
+        # reescrever a árvore de quem corre os testes.
+        with tempfile.TemporaryDirectory() as tmp:
+            subprocess.run([sys.executable, '-B', 'scripts/tarefas_escolha.py', '--saida', tmp], cwd=ROOT, check=True, capture_output=True)
+            for p in data:
+                slug = p.stem
+                self.assertEqual((Path(tmp) / 'tarefas' / slug / 'index.html').read_bytes(),
+                                 (ROOT / 'tarefas' / slug / 'index.html').read_bytes(), slug)
 
     def test_reader_puts_the_warmup_first(self):
         reader = (ROOT / 'assets/task-reader.js').read_text('utf-8')

@@ -29,6 +29,7 @@ class ModuleLayout(unittest.TestCase):
    source=(ROOT/f'm{module}/index.html').read_text('utf-8-sig')
    # Exact authorised UX wording only; restore it for the frozen index snapshot.
    # 28/10/2026 (PR #122): mais duas cadeias literais autorizadas no M1 («trabalho em papel» nos cartões das tarefas).
+   # 28/10/2026 (revisão do PR #122): e uma terceira, «produção em papel» em «Como se cumpre uma unidade», como no M2.
    edits=[e for key in ('authorized_instruction_edits_20261028','authorized_instruction_edits_20261027')
           for e in baseline.get(key,{}).get(f'm{module}',[])]
    for edit in edits:

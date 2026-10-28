@@ -4,17 +4,18 @@
  "files": {
   "tarefas/m1-u1/index.html": {
    "data": "docs/pedagogia/tarefas-escolha/m1-u1.json",
-   "data_sha256": "ee1267a95d2c2819d402998d895e4964bd778a91f1f080d5a63b5858b62f5cdc",
+   "data_sha256": "950fdaf4165891336fe438ea42eb25b00505d20ad425d9b95c665c16a0c46fad",
    "replaces_after_body_sha256": "eeae55a492d30f3760d60994d0dbfcf69eb2f90ec4dee32a064abc85081e6b99",
-   "after_body_sha256": "f893d52fcc3befb41284d4e8da46dbe2236a754cab90163d96d6e05d9e53c604",
-   "after_sha256": "b68875a9bd3cb8c6fb632634062271d7d030ae06e3ab0514f66b48b6e6169892"
+   "after_body_sha256": "7784af069bfaa3aa5ffafe8edc2ec4a26800a7d98ca711c891d749cb33793bf3",
+   "after_sha256": "21b173b71ddd918afad5c7c6b64b5a064bc0a1c376be4db0f0a377b1a9ebcfe5"
   },
   "tarefas/m1-u2/index.html": {
    "data": "docs/pedagogia/tarefas-escolha/m1-u2.json",
-   "data_sha256": "d682cc97bc59d3fac8c600058e2265e6fa93192c260761d1e26edf520302adf8",
+   "data_sha256": "be84feb0d47814cca24a3ac6c340df3d3bfcf2b61650d4d12caec15330918204",
    "replaces_after_body_sha256": "6fbb2184d9e9d5533ce863654060469e62d7f2073a572fe0d06cb7b67ef85692",
-   "after_body_sha256": "7479238b1d7f80b22abb6c685d55c7cc4d2eca931a90b73f8f212c6f11e9d3de",
-   "after_sha256": "93e81753437e77d7bbe70d4cf6f0b42242c36d43097c197b932a301e6ed2c987"
+   "after_body_sha256": "6980e21bd26df36d63e42008f357e4ec64aabbf97985c4f488a5b76091a42eb3",
+   "after_sha256": "a367ccd1bfacea885cc6e47bc96226ca57dd0953c6dc7e2cd4cec40f57b6707c"
   }
- }
+ },
+ "revisao_20261028": "28/10/2026 (revisão do PR #122, regra de nunca publicar soluções): o corpo e os dados autorizados mudam de propósito. Unidade 1: a máquina 02 deixa de decidir o núcleo 2; o núcleo 2 pede que se mostre o recurso na passagem; o tema A pede o verso que desmente e a explicação da imitação; «Relembrar» deixa de mandar para os cartões que trazem respostas; a pergunta opcional troca o segundo caso. Unidade 2: a máquina 02 passa ao grito combinado; o lead pede a frase riscada e reescrita, uma operação por frase; a abertura «hoje» do tema B fica opcional; a segunda fonte do tema A passa ao enunciado; «Relembrar» deixa de mandar para os cartões que trazem respostas; o título da pintura segue a lição F06. Nas duas: as letras das opções e dos temas no nome acessível e o fecho diz o que é a síntese. O encadeamento no corpo compacto de 27/10 (replaces_after_body_sha256) não muda."
 }

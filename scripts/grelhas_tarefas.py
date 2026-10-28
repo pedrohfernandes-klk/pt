@@ -9,16 +9,23 @@ Dados em docs/pedagogia/grelhas-tarefas-20261027.json. Para cada tarefa escreve:
 Regra das soluções (28/10/2026): as duas páginas são públicas. Nenhum descritor nem exemplo responde à tarefa:
 os descritores dizem o que se avalia em termos gerais e os exemplos usam outro caso do mesmo tipo. A chave da
 correção não vive nestes dados. A «nota» opcional de cada grelha diz ao aluno de onde vêm os exemplos.
-Idempotente. Uso: python3 scripts/grelhas_tarefas.py
+28/10/2026 (revisão do PR #122): as ligações de volta à tarefa abrem o cartão «Verificar» (../#entregar), de onde
+se chega à grelha; na correção, os três blocos do comentário ficam sob um título h2; e --saida PASTA escreve as
+páginas noutra raiz (a tarefa lê-se dessa raiz ou, se lá não estiver, da árvore), para os testes compararem
+sem mexer na árvore.
+Idempotente. Uso: python3 scripts/grelhas_tarefas.py [--saida PASTA]
 """
 from html import escape as e
 from pathlib import Path
 import json
+import sys
 
 ROOT = Path(__file__).resolve().parents[1]
 DADOS = ROOT / 'docs/pedagogia/grelhas-tarefas-20261027.json'
 LIGACAO = '<p class="task-grelha"><a href="grelha/">Grelha /20: como é avaliado e autoavaliação</a></p>\n'
 ANCORA = '<p>Fecha com duas linhas'
+# 28/10/2026: voltar à tarefa leva ao cartão «Verificar e entregar», onde está a ligação à grelha.
+VOLTAR = '../#entregar'
 # 28/10/2026: cada tabela fica num contentor que desliza sozinho; a página nunca desliza na horizontal (320 a 1440 px).
 REGIAO = 'role="region" aria-label="{}" tabindex="0"'
 
@@ -50,7 +57,7 @@ tr.total th,tr.total td{border-top:2px solid var(--g-tinta);font-weight:700}
 ul{margin:6px 0 0;padding-left:22px}
 .g-auto{margin:36px 0 0;padding:20px;background:var(--g-papel);border:3px solid var(--g-tinta)}
 .g-auto td{height:2.6em}
-.g-fb{display:grid;gap:12px;margin:16px 0 0}.g-fb>div{border:2px solid var(--g-tinta);background:var(--g-papel);padding:10px 14px;min-height:7em}
+.g-fb-t{margin:28px 0 0}.g-fb{display:grid;gap:12px;margin:12px 0 0}.g-fb>div{border:2px solid var(--g-tinta);background:var(--g-papel);padding:10px 14px;min-height:7em}
 .g-fb h3{font:700 .8rem Arial,Helvetica,sans-serif;letter-spacing:.1em;text-transform:uppercase;margin:0 0 4px}
 .g-fb p{font-size:.9rem;color:var(--g-suave);margin:0}
 .nome{display:flex;flex-wrap:wrap;gap:8px 32px;font:700 .9rem Arial,Helvetica,sans-serif;margin:12px 0}
@@ -80,7 +87,7 @@ def intervalo(c):
 
 def pagina_aluno(slug, t):
     m = t['modulo'].lower()
-    corpo = (f'<nav class="g-nav" aria-label="Navegação"><a href="../">← Voltar à tarefa</a><a href="../../../{m}/">Módulo {t["modulo"][1:]}</a>'
+    corpo = (f'<nav class="g-nav" aria-label="Navegação"><a href="{VOLTAR}">← Voltar à tarefa</a><a href="../../../{m}/">Módulo {t["modulo"][1:]}</a>'
              '<button type="button" data-print hidden>Imprimir</button></nav>'
              f'<header><p class="rot">{e(t["modulo"])} · Unidade {t["unidade"]} · Como é avaliado</p><h1>{e(t["titulo"])}</h1>'
              '<p class="lead">20 valores em cinco critérios. Lê antes de começar e volta aqui antes de entregar.</p>'
@@ -104,12 +111,12 @@ def pagina_aluno(slug, t):
     for c in t['criterios']:
         corpo += f'<tr><td>{e(c["nome"])}</td><td class="n">{c["max"]}</td><td></td><td></td></tr>'
     corpo += ('<tr class="total"><th>Total</th><td class="n">20</td><td></td><td></td></tr></tbody></table></div></section>'
-              f'<footer><a href="../">Voltar à tarefa</a><a href="../correcao/">Para o docente: versão de correção</a></footer>')
+              f'<footer><a href="{VOLTAR}">Voltar à tarefa</a><a href="../correcao/">Para o docente: versão de correção</a></footer>')
     return casca(f'Grelha /20: {t["titulo"]}', corpo)
 
 
 def pagina_correcao(slug, t):
-    corpo = ('<nav class="g-nav" aria-label="Navegação"><a href="../grelha/">← Grelha do aluno</a><a href="../">Tarefa</a>'
+    corpo = (f'<nav class="g-nav" aria-label="Navegação"><a href="../grelha/">← Grelha do aluno</a><a href="{VOLTAR}">Tarefa</a>'
              '<button type="button" data-print hidden>Imprimir</button></nav>'
              f'<header><p class="rot">{e(t["modulo"])} · Unidade {t["unidade"]} · Correção</p><h1>{e(t["titulo"])}</h1>'
              '<p class="lead">Franqueza com cuidado: fala do texto, nunca da pessoa; aponta a passagem; diz o que fazer a seguir.</p>'
@@ -118,27 +125,30 @@ def pagina_correcao(slug, t):
     for c in t['criterios']:
         corpo += f'<tr><td>{e(c["nome"])}<br><small>{e(c["niveis"]["max"][0])}</small></td><td class="n">{c["max"]}</td><td></td><td></td><td></td></tr>'
     corpo += ('<tr class="total"><th>Total</th><td class="n">20</td><td></td><td></td><td></td></tr></tbody></table></div>'
-              '<div class="g-fb">'
+              '<h2 class="g-fb-t">Comentário ao aluno</h2><div class="g-fb">'
               '<div><h3>O que funciona</h3><p>Uma coisa concreta, com a passagem.</p></div>'
               '<div><h3>O que te custa pontos</h3><p>O critério e a passagem, sem rodeios.</p></div>'
               '<div><h3>Próximo passo</h3><p>Uma ação que podes fazer já.</p></div>'
               '</div><p class="custa"><b>Diferença entre a tua nota e a minha</b></p><p>Onde nos afastámos mais de um ponto, a razão está nas observações.</p>'
-              '<footer><a href="../grelha/">Grelha do aluno</a><a href="../">Tarefa</a></footer>')
+              f'<footer><a href="../grelha/">Grelha do aluno</a><a href="{VOLTAR}">Tarefa</a></footer>')
     return casca(f'Correção: {t["titulo"]}', corpo)
 
 
 def main():
+    args, raiz = sys.argv[1:], ROOT
+    if '--saida' in args:
+        raiz = Path(args[args.index('--saida') + 1]).resolve()
     dados = json.loads(DADOS.read_text('utf-8'))
     for slug, t in dados['tarefas'].items():
         assert sum(c['max'] for c in t['criterios']) == 20, slug
-        base = ROOT / 'tarefas' / slug
+        base = raiz / 'tarefas' / slug
         for pasta, html in (('grelha', pagina_aluno(slug, t)), ('correcao', pagina_correcao(slug, t))):
             p = base / pasta / 'index.html'
             p.parent.mkdir(parents=True, exist_ok=True)
             if not p.exists() or p.read_text('utf-8') != html:
                 p.write_text(html, 'utf-8')
         tarefa = base / 'index.html'
-        s = tarefa.read_text('utf-8')
+        s = (tarefa if tarefa.exists() else ROOT / 'tarefas' / slug / 'index.html').read_text('utf-8')
         if LIGACAO not in s:
             assert s.count(ANCORA) == 1, slug
             s = s.replace(ANCORA, LIGACAO + ANCORA)

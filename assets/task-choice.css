@@ -22,12 +22,15 @@
 .task-choice-page .task-theme[data-task-theme="A"]{border-top-color:var(--task-accent)}
 .task-choice-page .task-theme[data-task-theme="B"]{border-top-color:var(--task-secondary)}
 .task-choice-page .task-theme h3{display:flex;align-items:baseline;gap:10px;margin:0 0 6px}
-.task-choice-page .task-theme h3 span{display:inline-grid;place-items:center;width:1.8em;height:1.8em;border:2px solid currentColor;font:800 .95rem/1 Arial,Helvetica,sans-serif}
+.task-choice-page .task-theme h3>span{display:inline-grid;place-items:center;width:1.8em;height:1.8em;border:2px solid currentColor;font:800 .95rem/1 Arial,Helvetica,sans-serif}
 .task-choice-page .task-theme p{font-size:1rem;margin:6px 0 10px}
 .task-choice-page .task-dossier{margin:20px 0 4px;padding:12px 16px;border-left:4px solid var(--task-secondary)}
 .task-choice-page .task-dossier h3{margin:0 0 6px}
 .task-choice-page .task-dossier li{margin-bottom:8px}
 .task-choice-page .task-fonte{display:inline-block;font-size:.88rem}
 @media (max-width:700px){.task-choice-page .task-themes{grid-template-columns:1fr}.task-choice-page .task-anatomy div{grid-template-columns:1fr;gap:2px}}
-@media print{.task-choice-page .task-confirm,.task-choice-page .task-machine .task-question{display:none!important}.task-choice-page .task-themes{grid-template-columns:1fr 1fr}}
+/* 28/10/2026 (revisão do PR #122): as letras das opções e dos temas ficam no nome acessível; só o sinal que as separa é escondido. */
+.task-choice-page .sr-only{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+/* 28/10/2026: o aquecimento faz-se em papel; impresso, mostra a pergunta e as três passagens da máquina 02 como lista. Só saem a confirmação, a explicação e o estado. */
+@media print{.task-choice-page .task-confirm,.task-choice-page .task-feedback,.task-choice-page [data-task-status]{display:none!important}.task-choice-page .task-machine .task-question{display:block!important}.task-choice-page .task-options{display:block}.task-choice-page .task-options button{display:block;width:100%;margin:0 0 6px;padding:0;border:0;background:none;color:inherit;font:inherit;text-align:left}.task-choice-page .task-themes{grid-template-columns:1fr 1fr}}
 .task-choice-page .task-warmup-kicker{font:700 .9rem/1.5 Arial,sans-serif;letter-spacing:.04em;color:var(--task-accent);margin:0 0 12px}
