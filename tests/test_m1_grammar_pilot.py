@@ -7,6 +7,7 @@ import unittest
 
 from test_m1_unit_tasks import TaskPage
 from task_source_contract import compact_task_source, historical_task_source, validate_task_source
+from auditoria_20261028 import undo as undo_audit_20261028
 
 ROOT = Path(__file__).resolve().parents[1]
 MANIFEST = ROOT / 'tests/fixtures/m1-grammar-pilot-edits-20261027.json'
@@ -43,7 +44,8 @@ class M1GrammarPilot(unittest.TestCase):
 
     def sources(self):
         for path, info in self.manifest['files'].items():
-            after = historical_task_source(ROOT / path) if path.startswith('tarefas/') else (ROOT / path).read_text('utf-8')
+            # 28/10/2026: a F05 recebeu correções literais da auditoria do M1; desfazem-se antes deste manifesto.
+            after = historical_task_source(ROOT / path) if path.startswith('tarefas/') else undo_audit_20261028(path, (ROOT / path).read_text('utf-8'))
             if path.startswith('tarefas/'):
                 # Compose the independently authorised reader head with this
                 # literal grammar manifest; do not regenerate either snapshot.
