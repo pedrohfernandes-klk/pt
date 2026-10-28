@@ -28,7 +28,10 @@ class ModuleLayout(unittest.TestCase):
   for module in range(1,10):
    source=(ROOT/f'm{module}/index.html').read_text('utf-8-sig')
    # Exact authorised UX wording only; restore it for the frozen index snapshot.
-   for edit in baseline.get('authorized_instruction_edits_20261027',{}).get(f'm{module}',[]):
+   # 28/10/2026 (PR #122): mais duas cadeias literais autorizadas no M1 («trabalho em papel» nos cartões das tarefas).
+   edits=[e for key in ('authorized_instruction_edits_20261028','authorized_instruction_edits_20261027')
+          for e in baseline.get(key,{}).get(f'm{module}',[])]
+   for edit in edits:
     self.assertEqual(source.count(edit['new']),1)
     self.assertNotIn(edit['old'],source)
     source=source.replace(edit['new'],edit['old'])
