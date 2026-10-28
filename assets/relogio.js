@@ -35,6 +35,9 @@
   var limite = el("p", "relogio-max", "até " + minutos(max) + " min");
   cab.append(nome, limite);
   var mostrador = el("output", "relogio-mostrador"); mostrador.id = id + "-tempo"; mostrador.setAttribute("aria-label", "Tempo que falta");
+  // 28/10/2026: o mostrador muda a cada segundo; é um temporizador sem região viva, para não ser lido sem parar.
+  // Os avisos (início, pausas, último minuto, fim) ficam no .relogio-estado, que continua a ser lido.
+  mostrador.setAttribute("role", "timer"); mostrador.setAttribute("aria-live", "off");
   var barra = el("span", "relogio-barra"), enchimento = el("i"); barra.setAttribute("aria-hidden", "true"); barra.appendChild(enchimento);
   var duracao = el("div", "relogio-duracao"), legenda = el("label", "", "Duração"), menos = el("button", "relogio-passo", "−"),
       campo = el("input"), unidade = el("span", "", "min"), mais = el("button", "relogio-passo", "+");

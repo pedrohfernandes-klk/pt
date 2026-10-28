@@ -146,6 +146,27 @@ def assert_task_page(page, before):
     assert question.locator('[data-task-feedback]').is_visible()
     assert learning_storage(page) == before, 'Consultation must not evaluate or complete the task'
     assert page.evaluate('document.documentElement.scrollWidth <= innerWidth + 3')
+    # 28/10/2026 (revisão do PR #124): a barra de topo segue o relógio da produção, também quando o
+    # aquecimento tem o primeiro relógio da página. Iniciar a produção mostra o mesmo tempo no topo.
+    clock = '[data-relogio]:not([data-chave$=":aquecimento"])'
+    if page.locator(clock).count():
+        mini = page.locator('[data-task-reader] .relogio-mini')
+        assert mini.count() == 1 and not mini.is_visible()
+        start = open_task_card(page, clock + ' .relogio-principal')
+        start.focus(); start.press('Enter')
+        assert mini.is_visible() and mini.get_attribute('data-estado') == 'corre'
+        shown = page.evaluate('s=>[document.querySelector(".relogio-mini").textContent,document.querySelector(s+" .relogio-mostrador").textContent]', clock)
+        assert shown[0] == shown[1], shown
+        warm = page.locator('[data-relogio][data-chave$=":aquecimento"] .relogio')
+        if warm.count():
+            assert warm.get_attribute('data-estado') == 'pronto'
+            assert shown[0] != warm.locator('.relogio-mostrador').text_content(), shown
+        page.locator('[data-task-reader-next]').focus(); page.locator('[data-task-reader-next]').press('Enter')
+        assert mini.is_visible(), 'o tempo da produção acompanha os outros cartões'
+        reset = open_task_card(page, clock + ' .relogio-recomecar')
+        reset.focus(); reset.press('Enter')
+        assert not mini.is_visible()
+        open_task_card(page, '[data-task-card="0"]')
 
 
 def assert_reader_navigation(page):

@@ -103,6 +103,19 @@
    });
   });
   paint();
+  // 28/10/2026: a âncora antiga #desafio-unidade-N (fim da lição M2-F09, congelada) aponta para o arquivo escondido;
+  // fora do arquivo, leva à aula de tarefa da mesma unidade, à vista e assinalada.
+  function oldChallengeAnchor() {
+   var match=/^#desafio-unidade-(\d+)$/i.exec(location.hash||"");
+   if(!match)return;
+   var old=document.getElementById("desafio-unidade-"+match[1]),task=document.getElementById("tarefa-unidade-"+match[1]);
+   if(!task||(old&&!old.closest("[hidden]")))return;
+   try{history.replaceState(history.state,"","#tarefa-unidade-"+match[1]);}catch(_){}
+   task.classList.add("aqui");
+   setTimeout(function(){task.scrollIntoView({block:"center"});},50);
+  }
+  oldChallengeAnchor();
+  window.addEventListener("hashchange",oldChallengeAnchor);
   window.addEventListener("focus",paint);window.addEventListener("pageshow",paint);
   document.addEventListener("visibilitychange",function(){if(!document.hidden)paint();});
  }

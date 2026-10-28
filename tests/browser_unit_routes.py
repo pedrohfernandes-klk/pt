@@ -58,6 +58,21 @@ def main():
                             assert set(captured['bank']) == set(unit['lessons']), (m, n, captured)
                             prefix = 'desafio-' if m == 4 else 'desafio-unidade-v2-'
                             assert captured['key'] == f'{prefix}M{m}-u{n}'
+                        # 28/10/2026 (revisão do PR #124): a âncora antiga #desafio-unidade-N (fim da M2-F09,
+                        # congelada) aponta para o arquivo escondido; fora do arquivo leva à aula de tarefa da
+                        # unidade, à vista e assinalada (ao carregar e ao mudar de âncora); no arquivo, ao desafio.
+                        for unit in plan['units']:
+                            n = unit['number']
+                            page.goto(f'{host}/m{m}/#desafio-unidade-{n}', wait_until='networkidle')
+                            page.wait_for_function('n=>location.hash==="#tarefa-unidade-"+n', arg=n)
+                            task = page.locator(f'#tarefa-unidade-{n}')
+                            assert task.is_visible() and task.evaluate('e=>e.classList.contains("aqui")'), (m, n)
+                            page.wait_for_function('n=>{const r=document.getElementById("tarefa-unidade-"+n).getBoundingClientRect();return r.height>0&&r.top>=0&&r.top<innerHeight}', arg=n)
+                            assert not page.locator('#arquivo-percurso').is_visible()
+                        page.goto(f'{host}/m{m}/?arquivo=1#desafio-unidade-1', wait_until='networkidle')
+                        assert page.locator('#desafio-unidade-1').is_visible()
+                        assert page.evaluate('location.hash') == '#desafio-unidade-1'
+                        assert not errors, (m, errors)
                         page.locator('[data-desafio="1"]').click()
                         page.locator('.casca.sobreposta .cartao').wait_for()
                         assert not errors, (m, errors)
