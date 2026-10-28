@@ -184,7 +184,7 @@
   },
   "m1/painel-m1-f04/index.html": {
    "base_sha256_lf": "c821adb60fef2736678b2e9d28f24dd041ef787874289820ac88d3954fb1da16",
-   "after_sha256_lf": "564a1de6fbded507f1f7faebba361a8da608a0cbbed0537050b2cd022fa4ac97",
+   "after_sha256_lf": "ee2468cef133e173b098914a2f65dba6186929416263e03b33ca0f89f358e08e",
    "edits": [
     {
      "location": "cabeçalho: unidade certa",
@@ -195,20 +195,20 @@
     {
      "location": "pedido projetado: itálico em vez de sublinhados",
      "old": "$(\"[data-pedido]\").textContent=t}",
-     "new": "$(\"[data-pedido]\").innerHTML=esc(t).replace(/_([^_]+)_/g,\"<i>$1</i>\")}",
+     "new": "$(\"[data-pedido]\").innerHTML=esc(t).replace(/(^|[^0-9A-Za-zÀ-ÖØ-öø-ÿ_\\/])_([^_\\n<>]{1,100}?)_(?![0-9A-Za-zÀ-ÖØ-öø-ÿ_])/g,\"$1<i>$2</i>\")}",
      "occurrences": 1
     },
     {
      "location": "pistas do Atlas: itálico em vez de sublinhados",
      "old": "return \"<li>\"+esc(p)+\"</li>\"",
-     "new": "return \"<li>\"+esc(p).replace(/_([^_]+)_/g,\"<i>$1</i>\")+\"</li>\"",
+     "new": "return \"<li>\"+esc(p).replace(/(^|[^0-9A-Za-zÀ-ÖØ-öø-ÿ_\\/])_([^_\\n<>]{1,100}?)_(?![0-9A-Za-zÀ-ÖØ-öø-ÿ_])/g,\"$1<i>$2</i>\")+\"</li>\"",
      "occurrences": 1
     }
    ]
   },
   "m1/painel-m1-f06/index.html": {
    "base_sha256_lf": "e997ebdaf4c7b73ac549ade428f9f2d191084f1d9f278eb073a3714d409c2bb2",
-   "after_sha256_lf": "ff084e6ce3e66ffd631a9acb3e03da26a865ad10757bf70f2a97362a74344388",
+   "after_sha256_lf": "41af8eb772dcb60690d9a93675a05a189cf0f48118fcb2eebcf25eceeeac7635",
    "edits": [
     {
      "location": "cabeçalho: o módulo tem duas unidades",
@@ -219,20 +219,20 @@
     {
      "location": "pedido projetado: itálico em vez de sublinhados",
      "old": "$(\"[data-pedido]\").textContent=t}",
-     "new": "$(\"[data-pedido]\").innerHTML=esc(t).replace(/_([^_]+)_/g,\"<i>$1</i>\")}",
+     "new": "$(\"[data-pedido]\").innerHTML=esc(t).replace(/(^|[^0-9A-Za-zÀ-ÖØ-öø-ÿ_\\/])_([^_\\n<>]{1,100}?)_(?![0-9A-Za-zÀ-ÖØ-öø-ÿ_])/g,\"$1<i>$2</i>\")}",
      "occurrences": 1
     },
     {
      "location": "pistas do Atlas: itálico em vez de sublinhados",
      "old": "return \"<li>\"+esc(p)+\"</li>\"",
-     "new": "return \"<li>\"+esc(p).replace(/_([^_]+)_/g,\"<i>$1</i>\")+\"</li>\"",
+     "new": "return \"<li>\"+esc(p).replace(/(^|[^0-9A-Za-zÀ-ÖØ-öø-ÿ_\\/])_([^_\\n<>]{1,100}?)_(?![0-9A-Za-zÀ-ÖØ-öø-ÿ_])/g,\"$1<i>$2</i>\")+\"</li>\"",
      "occurrences": 1
     }
    ]
   },
   "m1/painel-m1-f07/index.html": {
    "base_sha256_lf": "bb2a16a72626e89e4cfada05399487e120f3738aaebdab081b63a1b2a4d9f41c",
-   "after_sha256_lf": "bcf4ae521c2fef879dc3f8f986a0d202d3d16552164397bb93357ea2c2298b13",
+   "after_sha256_lf": "09876db69628be7d62520bd59410e538386d49166cb1c525f4319f1230efc85c",
    "edits": [
     {
      "location": "cabeçalho: o módulo tem duas unidades",
@@ -243,20 +243,20 @@
     {
      "location": "pedido projetado: itálico em vez de sublinhados",
      "old": "$(\"[data-pedido]\").textContent=t}",
-     "new": "$(\"[data-pedido]\").innerHTML=esc(t).replace(/_([^_]+)_/g,\"<i>$1</i>\")}",
+     "new": "$(\"[data-pedido]\").innerHTML=esc(t).replace(/(^|[^0-9A-Za-zÀ-ÖØ-öø-ÿ_\\/])_([^_\\n<>]{1,100}?)_(?![0-9A-Za-zÀ-ÖØ-öø-ÿ_])/g,\"$1<i>$2</i>\")}",
      "occurrences": 1
     },
     {
      "location": "pistas do Atlas: itálico em vez de sublinhados",
      "old": "return \"<li>\"+esc(p)+\"</li>\"",
-     "new": "return \"<li>\"+esc(p).replace(/_([^_]+)_/g,\"<i>$1</i>\")+\"</li>\"",
+     "new": "return \"<li>\"+esc(p).replace(/(^|[^0-9A-Za-zÀ-ÖØ-öø-ÿ_\\/])_([^_\\n<>]{1,100}?)_(?![0-9A-Za-zÀ-ÖØ-öø-ÿ_])/g,\"$1<i>$2</i>\")+\"</li>\"",
      "occurrences": 1
     }
    ]
   },
   "m1/painel-m1-f08/index.html": {
    "base_sha256_lf": "9b81d892df24e787a9fb30deefe59b69a8ef28dad3b3ce8d4a84fbdd5cfee118",
-   "after_sha256_lf": "eefe9c31c74f02905e7e4ffa3238757a6132b38b650af3f7645503fe16f86aba",
+   "after_sha256_lf": "510a821d804a14dacc3d23e856ff2a7e1251ab7b700ea140f768b12592fae2f8",
    "edits": [
     {
      "location": "cabeçalho: o módulo tem duas unidades",
@@ -267,20 +267,20 @@
     {
      "location": "pedido projetado: itálico em vez de sublinhados",
      "old": "$(\"[data-pedido]\").textContent=t}",
-     "new": "$(\"[data-pedido]\").innerHTML=esc(t).replace(/_([^_]+)_/g,\"<i>$1</i>\")}",
+     "new": "$(\"[data-pedido]\").innerHTML=esc(t).replace(/(^|[^0-9A-Za-zÀ-ÖØ-öø-ÿ_\\/])_([^_\\n<>]{1,100}?)_(?![0-9A-Za-zÀ-ÖØ-öø-ÿ_])/g,\"$1<i>$2</i>\")}",
      "occurrences": 1
     },
     {
      "location": "pistas do Atlas: itálico em vez de sublinhados",
      "old": "return \"<li>\"+esc(p)+\"</li>\"",
-     "new": "return \"<li>\"+esc(p).replace(/_([^_]+)_/g,\"<i>$1</i>\")+\"</li>\"",
+     "new": "return \"<li>\"+esc(p).replace(/(^|[^0-9A-Za-zÀ-ÖØ-öø-ÿ_\\/])_([^_\\n<>]{1,100}?)_(?![0-9A-Za-zÀ-ÖØ-öø-ÿ_])/g,\"$1<i>$2</i>\")+\"</li>\"",
      "occurrences": 1
     }
    ]
   },
   "m1/painel-m1-f10/index.html": {
    "base_sha256_lf": "52d8026ccfbcbad444084339986fbe8a6bdbce404067dba852888511890474df",
-   "after_sha256_lf": "12345db6144c1d7f252ad46031d7a4d6aaa43b56791ef327a37c2af49dd61102",
+   "after_sha256_lf": "46fa16909649363bd3ba7f47ab8d8150ca19816931568066713d4ed3654a1319",
    "edits": [
     {
      "location": "cabeçalho: o módulo tem duas unidades",
@@ -291,20 +291,20 @@
     {
      "location": "pedido projetado: itálico em vez de sublinhados",
      "old": "$(\"[data-pedido]\").textContent=t}",
-     "new": "$(\"[data-pedido]\").innerHTML=esc(t).replace(/_([^_]+)_/g,\"<i>$1</i>\")}",
+     "new": "$(\"[data-pedido]\").innerHTML=esc(t).replace(/(^|[^0-9A-Za-zÀ-ÖØ-öø-ÿ_\\/])_([^_\\n<>]{1,100}?)_(?![0-9A-Za-zÀ-ÖØ-öø-ÿ_])/g,\"$1<i>$2</i>\")}",
      "occurrences": 1
     },
     {
      "location": "pistas do Atlas: itálico em vez de sublinhados",
      "old": "return \"<li>\"+esc(p)+\"</li>\"",
-     "new": "return \"<li>\"+esc(p).replace(/_([^_]+)_/g,\"<i>$1</i>\")+\"</li>\"",
+     "new": "return \"<li>\"+esc(p).replace(/(^|[^0-9A-Za-zÀ-ÖØ-öø-ÿ_\\/])_([^_\\n<>]{1,100}?)_(?![0-9A-Za-zÀ-ÖØ-öø-ÿ_])/g,\"$1<i>$2</i>\")+\"</li>\"",
      "occurrences": 1
     }
    ]
   },
   "m1/painel-m1-f11/index.html": {
    "base_sha256_lf": "0c80143c21f4f2dcb415efab450221c6539da037786f9e52f1d8925c1201451d",
-   "after_sha256_lf": "a035bcea1f5080fc94a6d519785ace1e6531caa316996da5e1f0c9b0f9a2dca6",
+   "after_sha256_lf": "2a66b88f59cadac167c843648f8bf72e90cff4d10c94bcdfba3a27b882e6dab6",
    "edits": [
     {
      "location": "cabeçalho: o módulo tem duas unidades",
@@ -315,20 +315,20 @@
     {
      "location": "pedido projetado: itálico em vez de sublinhados",
      "old": "$(\"[data-pedido]\").textContent=t}",
-     "new": "$(\"[data-pedido]\").innerHTML=esc(t).replace(/_([^_]+)_/g,\"<i>$1</i>\")}",
+     "new": "$(\"[data-pedido]\").innerHTML=esc(t).replace(/(^|[^0-9A-Za-zÀ-ÖØ-öø-ÿ_\\/])_([^_\\n<>]{1,100}?)_(?![0-9A-Za-zÀ-ÖØ-öø-ÿ_])/g,\"$1<i>$2</i>\")}",
      "occurrences": 1
     },
     {
      "location": "pistas do Atlas: itálico em vez de sublinhados",
      "old": "return \"<li>\"+esc(p)+\"</li>\"",
-     "new": "return \"<li>\"+esc(p).replace(/_([^_]+)_/g,\"<i>$1</i>\")+\"</li>\"",
+     "new": "return \"<li>\"+esc(p).replace(/(^|[^0-9A-Za-zÀ-ÖØ-öø-ÿ_\\/])_([^_\\n<>]{1,100}?)_(?![0-9A-Za-zÀ-ÖØ-öø-ÿ_])/g,\"$1<i>$2</i>\")+\"</li>\"",
      "occurrences": 1
     }
    ]
   },
   "m1/painel-m1-f15/index.html": {
    "base_sha256_lf": "b88cc4a9ee3f9ad1189e5e5893699563bfcf294e3186b36b34d2c2ace1d422e3",
-   "after_sha256_lf": "0e347126d6e9a9be74342be999c63d06ce9422b09090f05792ae3ea21d6a5610",
+   "after_sha256_lf": "a999639299be13581d058d0f5f74be7b2583f1e3bc015c08f1694cb708b221de",
    "edits": [
     {
      "location": "cabeçalho: o módulo tem duas unidades",
@@ -339,13 +339,13 @@
     {
      "location": "pedido projetado: itálico em vez de sublinhados",
      "old": "$(\"[data-pedido]\").textContent=t}",
-     "new": "$(\"[data-pedido]\").innerHTML=esc(t).replace(/_([^_]+)_/g,\"<i>$1</i>\")}",
+     "new": "$(\"[data-pedido]\").innerHTML=esc(t).replace(/(^|[^0-9A-Za-zÀ-ÖØ-öø-ÿ_\\/])_([^_\\n<>]{1,100}?)_(?![0-9A-Za-zÀ-ÖØ-öø-ÿ_])/g,\"$1<i>$2</i>\")}",
      "occurrences": 1
     },
     {
      "location": "pistas do Atlas: itálico em vez de sublinhados",
      "old": "return \"<li>\"+esc(p)+\"</li>\"",
-     "new": "return \"<li>\"+esc(p).replace(/_([^_]+)_/g,\"<i>$1</i>\")+\"</li>\"",
+     "new": "return \"<li>\"+esc(p).replace(/(^|[^0-9A-Za-zÀ-ÖØ-öø-ÿ_\\/])_([^_\\n<>]{1,100}?)_(?![0-9A-Za-zÀ-ÖØ-öø-ÿ_])/g,\"$1<i>$2</i>\")+\"</li>\"",
      "occurrences": 1
     }
    ]
@@ -441,7 +441,7 @@
   },
   "m1/painel-m1-f01/index.html": {
    "base_sha256_lf": "ac39b2c8dd97e3e030a60ec1082731aba69b0e8c15a8fe3a8e7883e6f1bd3636",
-   "after_sha256_lf": "a454886dbdaf7ffb736b993fed326adc481ae554489ea0bae5d7e802a5d1f792",
+   "after_sha256_lf": "a9c1b762b408c3975cb6fa4f2c0a86c9d8fc7e60db6ef2ead12c9fc362cc6f3e",
    "edits": [
     {
      "location": "relâmpago e dados do painel: igual à lição",
@@ -458,49 +458,37 @@
     {
      "location": "pedido projetado: itálico em vez de sublinhados",
      "old": "$(\"[data-pedido]\").textContent=t}",
-     "new": "$(\"[data-pedido]\").innerHTML=esc(t).replace(/_([^_]+)_/g,\"<i>$1</i>\")}",
+     "new": "$(\"[data-pedido]\").innerHTML=esc(t).replace(/(^|[^0-9A-Za-zÀ-ÖØ-öø-ÿ_\\/])_([^_\\n<>]{1,100}?)_(?![0-9A-Za-zÀ-ÖØ-öø-ÿ_])/g,\"$1<i>$2</i>\")}",
      "occurrences": 1
     },
     {
      "location": "pistas do Atlas: itálico em vez de sublinhados",
      "old": "return \"<li>\"+esc(p)+\"</li>\"",
-     "new": "return \"<li>\"+esc(p).replace(/_([^_]+)_/g,\"<i>$1</i>\")+\"</li>\"",
+     "new": "return \"<li>\"+esc(p).replace(/(^|[^0-9A-Za-zÀ-ÖØ-öø-ÿ_\\/])_([^_\\n<>]{1,100}?)_(?![0-9A-Za-zÀ-ÖØ-öø-ÿ_])/g,\"$1<i>$2</i>\")+\"</li>\"",
      "occurrences": 1
     }
    ]
   },
   "tarefas/m1-u1/index.html": {
    "base_sha256_lf": "21b173b71ddd918afad5c7c6b64b5a064bc0a1c376be4db0f0a377b1a9ebcfe5",
-   "after_sha256_lf": "d9291310d15670e079a6d1d5a82f3cdda0ddf04b5914fb632e24c42fb24da354",
+   "after_sha256_lf": "383059626e062428a22ec569962fc77259c051e5ac4e9cda65dcf9c7b5b97edf",
    "edits": [
     {
      "location": "pergunta opcional única: sem número",
      "old": "<h3 id=\"q1\">2. Em <i>amicum</i>",
      "new": "<h3 id=\"q1\">Em <i>amicum</i>",
      "occurrences": 1
-    },
-    {
-     "location": "pergunta opcional única: contagem",
-     "old": "Respostas exploradas: 0 de 2.",
-     "new": "Respostas exploradas: 0 de 1.",
-     "occurrences": 1
     }
    ]
   },
   "tarefas/m1-u2/index.html": {
    "base_sha256_lf": "a367ccd1bfacea885cc6e47bc96226ca57dd0953c6dc7e2cd4cec40f57b6707c",
-   "after_sha256_lf": "df4af1614586be714e274f7a267bb5ebe30fcdf2bd53234a15d98ebbe4625f22",
+   "after_sha256_lf": "c6e08eb66080a1a0a6a3c755ca39a4e232ef66f7ec7ef791f9998a55b6508e49",
    "edits": [
     {
      "location": "pergunta opcional única: sem número",
      "old": "<h3 id=\"q1\">2. Para uma crónica do grito",
      "new": "<h3 id=\"q1\">Para uma crónica do grito",
-     "occurrences": 1
-    },
-    {
-     "location": "pergunta opcional única: contagem",
-     "old": "Respostas exploradas: 0 de 2.",
-     "new": "Respostas exploradas: 0 de 1.",
      "occurrences": 1
     },
     {
@@ -513,36 +501,24 @@
   },
   "tarefas/m2-u1/index.html": {
    "base_sha256_lf": "b9270d39290692fe11b7730e1624a4e10774f1b738d0f149be02ad0bc01f4da3",
-   "after_sha256_lf": "56d66973a45931c85d634ad76483452fbbb75e2499a4fb15b8a6a270df96532b",
+   "after_sha256_lf": "12dc10f88451f44165405463b3f4083126c7eaf643e314f55a2598a26863955f",
    "edits": [
     {
      "location": "pergunta opcional única: sem número",
      "old": "<h3 id=\"q1\">2. No desfecho, Pêro",
      "new": "<h3 id=\"q1\">No desfecho, Pêro",
      "occurrences": 1
-    },
-    {
-     "location": "pergunta opcional única: contagem",
-     "old": "Respostas exploradas: 0 de 2.",
-     "new": "Respostas exploradas: 0 de 1.",
-     "occurrences": 1
     }
    ]
   },
   "tarefas/m2-u2/index.html": {
    "base_sha256_lf": "94178812cc39c1017390ca2b243198040a385f19f9ecc545ce6beaf209458df3",
-   "after_sha256_lf": "01b3f20a3b0294f559ce0528cd2b2318e94ff3b444627a4c98ed971cdce66c36",
+   "after_sha256_lf": "35c0e7ae79da238634a05d53ecb83495845a4f7d99d19834223222dbafa9532f",
    "edits": [
     {
      "location": "pergunta opcional única: sem número",
      "old": "<h3 id=\"q1\">2. Num anúncio de exemplo",
      "new": "<h3 id=\"q1\">Num anúncio de exemplo",
-     "occurrences": 1
-    },
-    {
-     "location": "pergunta opcional única: contagem",
-     "old": "Respostas exploradas: 0 de 2.",
-     "new": "Respostas exploradas: 0 de 1.",
      "occurrences": 1
     }
    ]
@@ -573,18 +549,6 @@
      "location": "dados do dossiê",
      "old": "«Uma pintura de 1860»",
      "new": "«Uma pintura do século XIX»",
-     "occurrences": 1
-    }
-   ]
-  },
-  "scripts/tarefas_escolha.py": {
-   "base_sha256_lf": "7d16e89f5cb34aa0d696540b1f575c6095f06d865237632edc16c5e6b267d219",
-   "after_sha256_lf": "2d5ea00885147b8647b7624ddfe6af367c525b8e45f57e8efac9f646ad0cff79",
-   "edits": [
-    {
-     "location": "gerador: uma pergunta opcional",
-     "old": "Respostas exploradas: 0 de 2.",
-     "new": "Respostas exploradas: 0 de 1.",
      "occurrences": 1
     }
    ]
@@ -711,7 +675,7 @@
   },
   "m4/licao-m4-f01/index.html": {
    "base_sha256_lf": "d2146eee4148ed75b2d4a30b215bb72c855c52c32f682a18ae05749ef0ceb545",
-   "after_sha256_lf": "e8df91c1bb1998a831edcc3611e5ef3581a28c1fe4a6b26dd7665fb5539b1593",
+   "after_sha256_lf": "7cff1e13ddefe525b8e20b0ad59037e1b87c12b70ac9b6d8ff86d53d2604eb49",
    "edits": [
     {
      "location": "CARTOES[5] ler mais: datas da viagem a Roma e do breve",
@@ -740,7 +704,7 @@
     {
      "location": "CARTOES[7] f: crédito da imagem",
      "old": "vale por quem, em São Luís, quer ser mais do que é.\"",
-     "new": "vale por quem, em São Luís, quer ser mais do que é. Gravura: Allen & Ginter, _Peixe-voador_, cromolitografia, 1889, The Met. Domínio público.\"",
+     "new": "vale por quem, em São Luís, quer ser mais do que é. Cromolitografia: Allen & Ginter, _Peixe-voador_ (série _Fish from American Waters_), 1889, The Met. Domínio público.\"",
      "occurrences": 1
     }
    ]
@@ -1221,7 +1185,7 @@
   },
   "m4/licao-m4-f08/index.html": {
    "base_sha256_lf": "bec063242208e3572b0db6b3e5a8744732c8dd3245e3955a0663d256bb8d1368",
-   "after_sha256_lf": "007475e23ceca9cc4a1c8a3d4698a43069dc11ad490e7864f85e4540f4a30841",
+   "after_sha256_lf": "4c3ec6b40ae774c76ef48dd8ac10525c5a04e30857a1bc2f7cbfe11c21e1b1ed",
    "edits": [
     {
      "location": "CARTOES[0]: vinte e um anos, como na peça",
@@ -1240,6 +1204,12 @@
      "old": "data-s=\\\"vem cá\\\">vinde cá</b>",
      "new": "data-s=\\\"venha cá\\\">vinde cá</b>",
      "occurrences": 1
+    },
+    {
+     "location": "CARTOES[1] vocabulário: a mesma glosa da linha",
+     "old": "<b>vinde cá</b>, vem cá",
+     "new": "<b>vinde cá</b>, venha cá",
+     "occurrences": 1
     }
    ]
   },
@@ -1257,7 +1227,7 @@
   },
   "m4/painel-m4-f20/index.html": {
    "base_sha256_lf": "3eb60acc69913aa181c13d87cfd7dac0802e5cb3c2ec669e0f61783b5fedec25",
-   "after_sha256_lf": "24b442e6c436205f8f5aa7492e884757f39380d37fc45a9290eaa7590215003a",
+   "after_sha256_lf": "772598da821927fb43ae459dc819e184d56892554db2e85facd4210623dcdc82",
    "edits": [
     {
      "location": "relâmpago e dados do painel: igual à lição",
@@ -1274,13 +1244,31 @@
     {
      "location": "pedido projetado: itálico em vez de sublinhados",
      "old": "$(\"[data-pedido]\").textContent=t}",
-     "new": "$(\"[data-pedido]\").innerHTML=esc(t).replace(/_([^_]+)_/g,\"<i>$1</i>\")}",
+     "new": "$(\"[data-pedido]\").innerHTML=esc(t).replace(/(^|[^0-9A-Za-zÀ-ÖØ-öø-ÿ_\\/])_([^_\\n<>]{1,100}?)_(?![0-9A-Za-zÀ-ÖØ-öø-ÿ_])/g,\"$1<i>$2</i>\")}",
      "occurrences": 1
     },
     {
      "location": "pistas do Atlas: itálico em vez de sublinhados",
      "old": "return \"<li>\"+esc(p)+\"</li>\"",
-     "new": "return \"<li>\"+esc(p).replace(/_([^_]+)_/g,\"<i>$1</i>\")+\"</li>\"",
+     "new": "return \"<li>\"+esc(p).replace(/(^|[^0-9A-Za-zÀ-ÖØ-öø-ÿ_\\/])_([^_\\n<>]{1,100}?)_(?![0-9A-Za-zÀ-ÖØ-öø-ÿ_])/g,\"$1<i>$2</i>\")+\"</li>\"",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/aulas/aula-01/index.html": {
+   "base_sha256_lf": "077a9e428faadc9ef71dda6b40e12d041d1ad8709c0f38c117bee9ef0bd6bd45",
+   "after_sha256_lf": "2f4710f782b6729988a601a88a300fef4af15c91067049f0b8e766e7516887ec",
+   "edits": [
+    {
+     "location": "guião: o vídeo saiu da F01",
+     "old": "Os dois rostos, Santo António e Vieira, e o vídeo do Câmara Clara (1 min); depois «De Arimino a São Luís».",
+     "new": "Os dois rostos, Santo António e Vieira; depois «De Arimino a São Luís».",
+     "occurrences": 1
+    },
+    {
+     "location": "guião: o vídeo saiu da F01",
+     "old": "Ver o vídeo com a tarefa do «Antes de ver» e decidir o «Depois de ver».",
+     "new": "Ler o cartão com a tarefa do «Antes de ler» e decidir o «Depois de ler».",
      "occurrences": 1
     }
    ]
@@ -1359,37 +1347,37 @@
   },
   "obras/sermao/index.html": {
    "base_sha256_lf": "d594b591396c0564ddca8044d987e5265fb901b4da5cb1561838cb44dc02725f",
-   "after_sha256_lf": "527ef5752abc5028fd9d74573f14e1b0d8916f16b0827b9b011418d21a2ce659",
+   "after_sha256_lf": "721de44e6ca8825786aebad8ac60fbb8deefdd76ae4b2d6f823c25f9f67a6981",
    "edits": [
     {
      "location": "não há edição de 1654; falta o capítulo VI",
      "old": "Os passos das lições (capítulos I, II, IV e V) seguem uma edição de 1654 em ortografia atualizada.",
-     "new": "Os passos das lições (capítulos I, II, IV, V e VI) seguem o sermão pregado em 1654, em ortografia atualizada; a primeira edição é a dos Sermoens (Lisboa, 1682).",
+     "new": "Os passos das lições (capítulos I, II, IV, V e VI) seguem o texto dos <i>Sermoens</i> (Lisboa, 1682), a primeira edição, em ortografia atualizada; o sermão foi pregado em São Luís do Maranhão em 1654.",
      "occurrences": 1
     }
    ]
   },
   "m1/painel-m1-f02/index.html": {
    "base_sha256_lf": "b4b102368f871697f7f82f66d1cc58c4c69a009291b72a69581ac4e5d0813d60",
-   "after_sha256_lf": "13f0f8d1668d50ea6f937f18043ed54b17b80d7fda2429a501b77550c01d5ab8",
+   "after_sha256_lf": "fe1807cb69579a34bc2dd659b5875c866ee35bfc0d64ac4d7b560c25bdc4f7bd",
    "edits": [
     {
      "location": "pedido projetado: itálico em vez de sublinhados",
      "old": "$(\"[data-pedido]\").textContent=t}",
-     "new": "$(\"[data-pedido]\").innerHTML=esc(t).replace(/_([^_]+)_/g,\"<i>$1</i>\")}",
+     "new": "$(\"[data-pedido]\").innerHTML=esc(t).replace(/(^|[^0-9A-Za-zÀ-ÖØ-öø-ÿ_\\/])_([^_\\n<>]{1,100}?)_(?![0-9A-Za-zÀ-ÖØ-öø-ÿ_])/g,\"$1<i>$2</i>\")}",
      "occurrences": 1
     },
     {
      "location": "pistas do Atlas: itálico em vez de sublinhados",
      "old": "return \"<li>\"+esc(p)+\"</li>\"",
-     "new": "return \"<li>\"+esc(p).replace(/_([^_]+)_/g,\"<i>$1</i>\")+\"</li>\"",
+     "new": "return \"<li>\"+esc(p).replace(/(^|[^0-9A-Za-zÀ-ÖØ-öø-ÿ_\\/])_([^_\\n<>]{1,100}?)_(?![0-9A-Za-zÀ-ÖØ-öø-ÿ_])/g,\"$1<i>$2</i>\")+\"</li>\"",
      "occurrences": 1
     }
    ]
   },
   "m1/painel-m1-f05/index.html": {
    "base_sha256_lf": "3a0982811c4696fdfa4c76ba64baf9b0203d53912db863eebb01dcc9a1dff681",
-   "after_sha256_lf": "f604308afcd1239b8b76030a2fad7da72120c376549cc74b05f817f2efaa53e9",
+   "after_sha256_lf": "efbd469871736c39a22179b2fdf077e4aa768133fc240e5810b514129d71dabe",
    "edits": [
     {
      "location": "relâmpago: opção sem sublinhados em bruto",
@@ -1418,56 +1406,56 @@
     {
      "location": "pedido projetado: itálico em vez de sublinhados",
      "old": "$(\"[data-pedido]\").textContent=t}",
-     "new": "$(\"[data-pedido]\").innerHTML=esc(t).replace(/_([^_]+)_/g,\"<i>$1</i>\")}",
+     "new": "$(\"[data-pedido]\").innerHTML=esc(t).replace(/(^|[^0-9A-Za-zÀ-ÖØ-öø-ÿ_\\/])_([^_\\n<>]{1,100}?)_(?![0-9A-Za-zÀ-ÖØ-öø-ÿ_])/g,\"$1<i>$2</i>\")}",
      "occurrences": 1
     },
     {
      "location": "pistas do Atlas: itálico em vez de sublinhados",
      "old": "return \"<li>\"+esc(p)+\"</li>\"",
-     "new": "return \"<li>\"+esc(p).replace(/_([^_]+)_/g,\"<i>$1</i>\")+\"</li>\"",
+     "new": "return \"<li>\"+esc(p).replace(/(^|[^0-9A-Za-zÀ-ÖØ-öø-ÿ_\\/])_([^_\\n<>]{1,100}?)_(?![0-9A-Za-zÀ-ÖØ-öø-ÿ_])/g,\"$1<i>$2</i>\")+\"</li>\"",
      "occurrences": 1
     }
    ]
   },
   "m4/painel-m4-f01/index.html": {
    "base_sha256_lf": "b1bf2c611f978bff0272eed9564f16203313ca6665afb7957df5a6629a87cb03",
-   "after_sha256_lf": "28f7d114dcf8c2d432a27b83fe19776332a5a1afacd9886c6e3a979bf2fd0c76",
+   "after_sha256_lf": "655f93d632590945904ba3ddf5651482b9408aefad5146f7618f711beb84d817",
    "edits": [
     {
      "location": "pedido projetado: itálico em vez de sublinhados",
      "old": "$(\"[data-pedido]\").textContent=t}",
-     "new": "$(\"[data-pedido]\").innerHTML=esc(t).replace(/_([^_]+)_/g,\"<i>$1</i>\")}",
+     "new": "$(\"[data-pedido]\").innerHTML=esc(t).replace(/(^|[^0-9A-Za-zÀ-ÖØ-öø-ÿ_\\/])_([^_\\n<>]{1,100}?)_(?![0-9A-Za-zÀ-ÖØ-öø-ÿ_])/g,\"$1<i>$2</i>\")}",
      "occurrences": 1
     },
     {
      "location": "pistas do Atlas: itálico em vez de sublinhados",
      "old": "return \"<li>\"+esc(p)+\"</li>\"",
-     "new": "return \"<li>\"+esc(p).replace(/_([^_]+)_/g,\"<i>$1</i>\")+\"</li>\"",
+     "new": "return \"<li>\"+esc(p).replace(/(^|[^0-9A-Za-zÀ-ÖØ-öø-ÿ_\\/])_([^_\\n<>]{1,100}?)_(?![0-9A-Za-zÀ-ÖØ-öø-ÿ_])/g,\"$1<i>$2</i>\")+\"</li>\"",
      "occurrences": 1
     }
    ]
   },
   "m4/painel-m4-f02/index.html": {
    "base_sha256_lf": "66411bbf27b8cad79b39cb3580d0169ed32f51031c31a29372ce0ef02dc53a6c",
-   "after_sha256_lf": "f8ed8011ad2a5bbc805d76a091228bd778076a072bb5e4fd4d3bc1e4653cf251",
+   "after_sha256_lf": "7ec39848f19edb4eea262b52a02860adb3152149952f0fa43fec42ec4fccb872",
    "edits": [
     {
      "location": "pedido projetado: itálico em vez de sublinhados",
      "old": "$(\"[data-pedido]\").textContent=t}",
-     "new": "$(\"[data-pedido]\").innerHTML=esc(t).replace(/_([^_]+)_/g,\"<i>$1</i>\")}",
+     "new": "$(\"[data-pedido]\").innerHTML=esc(t).replace(/(^|[^0-9A-Za-zÀ-ÖØ-öø-ÿ_\\/])_([^_\\n<>]{1,100}?)_(?![0-9A-Za-zÀ-ÖØ-öø-ÿ_])/g,\"$1<i>$2</i>\")}",
      "occurrences": 1
     },
     {
      "location": "pistas do Atlas: itálico em vez de sublinhados",
      "old": "return \"<li>\"+esc(p)+\"</li>\"",
-     "new": "return \"<li>\"+esc(p).replace(/_([^_]+)_/g,\"<i>$1</i>\")+\"</li>\"",
+     "new": "return \"<li>\"+esc(p).replace(/(^|[^0-9A-Za-zÀ-ÖØ-öø-ÿ_\\/])_([^_\\n<>]{1,100}?)_(?![0-9A-Za-zÀ-ÖØ-öø-ÿ_])/g,\"$1<i>$2</i>\")+\"</li>\"",
      "occurrences": 1
     }
    ]
   },
   "m4/painel-m4-f04/index.html": {
    "base_sha256_lf": "fff33a1781b9b0be9de0e8af8c0bded88333d03c04471d7be1b5e9135f8f48be",
-   "after_sha256_lf": "f5c3398f79a749c83a4406995d1ab7cb23633cbd997286ddfc9d89cd79ebdaaa",
+   "after_sha256_lf": "6df394aa8bfc2bbfa6bd3a0e9b311a29b9587f49c8988e4bea30146fa2264dc6",
    "edits": [
     {
      "location": "relâmpago: opção sem sublinhados em bruto",
@@ -1478,20 +1466,20 @@
     {
      "location": "pedido projetado: itálico em vez de sublinhados",
      "old": "$(\"[data-pedido]\").textContent=t}",
-     "new": "$(\"[data-pedido]\").innerHTML=esc(t).replace(/_([^_]+)_/g,\"<i>$1</i>\")}",
+     "new": "$(\"[data-pedido]\").innerHTML=esc(t).replace(/(^|[^0-9A-Za-zÀ-ÖØ-öø-ÿ_\\/])_([^_\\n<>]{1,100}?)_(?![0-9A-Za-zÀ-ÖØ-öø-ÿ_])/g,\"$1<i>$2</i>\")}",
      "occurrences": 1
     },
     {
      "location": "pistas do Atlas: itálico em vez de sublinhados",
      "old": "return \"<li>\"+esc(p)+\"</li>\"",
-     "new": "return \"<li>\"+esc(p).replace(/_([^_]+)_/g,\"<i>$1</i>\")+\"</li>\"",
+     "new": "return \"<li>\"+esc(p).replace(/(^|[^0-9A-Za-zÀ-ÖØ-öø-ÿ_\\/])_([^_\\n<>]{1,100}?)_(?![0-9A-Za-zÀ-ÖØ-öø-ÿ_])/g,\"$1<i>$2</i>\")+\"</li>\"",
      "occurrences": 1
     }
    ]
   },
   "m4/painel-m4-f06/index.html": {
    "base_sha256_lf": "18c8df0c49ac2876786cd7a3f1150e5d30000b7577ed00779df35140089a55a4",
-   "after_sha256_lf": "2a84528e7514e5e01a34c2974b3616777df4a836c8bd2d069bd88c8471426a63",
+   "after_sha256_lf": "f9b45b4b3edf68adadc3653c41e044a5ad388824e7143ddc3d25cc05915290a2",
    "edits": [
     {
      "location": "relâmpago: opção sem sublinhados em bruto",
@@ -1502,139 +1490,139 @@
     {
      "location": "pedido projetado: itálico em vez de sublinhados",
      "old": "$(\"[data-pedido]\").textContent=t}",
-     "new": "$(\"[data-pedido]\").innerHTML=esc(t).replace(/_([^_]+)_/g,\"<i>$1</i>\")}",
+     "new": "$(\"[data-pedido]\").innerHTML=esc(t).replace(/(^|[^0-9A-Za-zÀ-ÖØ-öø-ÿ_\\/])_([^_\\n<>]{1,100}?)_(?![0-9A-Za-zÀ-ÖØ-öø-ÿ_])/g,\"$1<i>$2</i>\")}",
      "occurrences": 1
     },
     {
      "location": "pistas do Atlas: itálico em vez de sublinhados",
      "old": "return \"<li>\"+esc(p)+\"</li>\"",
-     "new": "return \"<li>\"+esc(p).replace(/_([^_]+)_/g,\"<i>$1</i>\")+\"</li>\"",
+     "new": "return \"<li>\"+esc(p).replace(/(^|[^0-9A-Za-zÀ-ÖØ-öø-ÿ_\\/])_([^_\\n<>]{1,100}?)_(?![0-9A-Za-zÀ-ÖØ-öø-ÿ_])/g,\"$1<i>$2</i>\")+\"</li>\"",
      "occurrences": 1
     }
    ]
   },
   "m4/painel-m4-f07/index.html": {
    "base_sha256_lf": "3fa2692a47c3a526fd8e98a658c2c112b56646383a68c2b1fb23e7c4bd16c968",
-   "after_sha256_lf": "16b6d25335705e80bc47f692ab8aea0bbd3c5b2ddc0e0ff6994c6fe5e564b0ec",
+   "after_sha256_lf": "f3b6642ca9014992019bc1e71b09e59d44d8f34499545ea87bd674e7141cbb9f",
    "edits": [
     {
      "location": "pedido projetado: itálico em vez de sublinhados",
      "old": "$(\"[data-pedido]\").textContent=t}",
-     "new": "$(\"[data-pedido]\").innerHTML=esc(t).replace(/_([^_]+)_/g,\"<i>$1</i>\")}",
+     "new": "$(\"[data-pedido]\").innerHTML=esc(t).replace(/(^|[^0-9A-Za-zÀ-ÖØ-öø-ÿ_\\/])_([^_\\n<>]{1,100}?)_(?![0-9A-Za-zÀ-ÖØ-öø-ÿ_])/g,\"$1<i>$2</i>\")}",
      "occurrences": 1
     },
     {
      "location": "pistas do Atlas: itálico em vez de sublinhados",
      "old": "return \"<li>\"+esc(p)+\"</li>\"",
-     "new": "return \"<li>\"+esc(p).replace(/_([^_]+)_/g,\"<i>$1</i>\")+\"</li>\"",
+     "new": "return \"<li>\"+esc(p).replace(/(^|[^0-9A-Za-zÀ-ÖØ-öø-ÿ_\\/])_([^_\\n<>]{1,100}?)_(?![0-9A-Za-zÀ-ÖØ-öø-ÿ_])/g,\"$1<i>$2</i>\")+\"</li>\"",
      "occurrences": 1
     }
    ]
   },
   "m4/painel-m4-f08/index.html": {
    "base_sha256_lf": "350c8d307c5e644e2bbe9fc77aac2d45bd519f9d48642180ffcab3964bc8f171",
-   "after_sha256_lf": "20b01096d223f8dd7e19773890addca20937a23c0d256d0fcbd5b4262cf4ffcf",
+   "after_sha256_lf": "23fbf59cd065cb75ce1a4059b9726cdf8576efd11fa2593e6e08de8c142a9356",
    "edits": [
     {
      "location": "pedido projetado: itálico em vez de sublinhados",
      "old": "$(\"[data-pedido]\").textContent=t}",
-     "new": "$(\"[data-pedido]\").innerHTML=esc(t).replace(/_([^_]+)_/g,\"<i>$1</i>\")}",
+     "new": "$(\"[data-pedido]\").innerHTML=esc(t).replace(/(^|[^0-9A-Za-zÀ-ÖØ-öø-ÿ_\\/])_([^_\\n<>]{1,100}?)_(?![0-9A-Za-zÀ-ÖØ-öø-ÿ_])/g,\"$1<i>$2</i>\")}",
      "occurrences": 1
     },
     {
      "location": "pistas do Atlas: itálico em vez de sublinhados",
      "old": "return \"<li>\"+esc(p)+\"</li>\"",
-     "new": "return \"<li>\"+esc(p).replace(/_([^_]+)_/g,\"<i>$1</i>\")+\"</li>\"",
+     "new": "return \"<li>\"+esc(p).replace(/(^|[^0-9A-Za-zÀ-ÖØ-öø-ÿ_\\/])_([^_\\n<>]{1,100}?)_(?![0-9A-Za-zÀ-ÖØ-öø-ÿ_])/g,\"$1<i>$2</i>\")+\"</li>\"",
      "occurrences": 1
     }
    ]
   },
   "m4/painel-m4-f09/index.html": {
    "base_sha256_lf": "cc50f7a5d2c1a2699fd114b8ff6140343cfab1c122967b1f214943f52379ec81",
-   "after_sha256_lf": "27a3fd64d5f24e208710228bbecee54d50d9e6d60abb975965e8f1a93ca75a0a",
+   "after_sha256_lf": "e1332488f2af31ec1313785e2e37318abf9256b1dca40e15c1be9f3fbd5ee354",
    "edits": [
     {
      "location": "pedido projetado: itálico em vez de sublinhados",
      "old": "$(\"[data-pedido]\").textContent=t}",
-     "new": "$(\"[data-pedido]\").innerHTML=esc(t).replace(/_([^_]+)_/g,\"<i>$1</i>\")}",
+     "new": "$(\"[data-pedido]\").innerHTML=esc(t).replace(/(^|[^0-9A-Za-zÀ-ÖØ-öø-ÿ_\\/])_([^_\\n<>]{1,100}?)_(?![0-9A-Za-zÀ-ÖØ-öø-ÿ_])/g,\"$1<i>$2</i>\")}",
      "occurrences": 1
     },
     {
      "location": "pistas do Atlas: itálico em vez de sublinhados",
      "old": "return \"<li>\"+esc(p)+\"</li>\"",
-     "new": "return \"<li>\"+esc(p).replace(/_([^_]+)_/g,\"<i>$1</i>\")+\"</li>\"",
+     "new": "return \"<li>\"+esc(p).replace(/(^|[^0-9A-Za-zÀ-ÖØ-öø-ÿ_\\/])_([^_\\n<>]{1,100}?)_(?![0-9A-Za-zÀ-ÖØ-öø-ÿ_])/g,\"$1<i>$2</i>\")+\"</li>\"",
      "occurrences": 1
     }
    ]
   },
   "m4/painel-m4-f10/index.html": {
    "base_sha256_lf": "0631ed918127e150cafc2d341d64e887aabcec6d96787f6a09dcb87a4a413d83",
-   "after_sha256_lf": "46411695eddbb39ce0757b11a6f9c3c3ef271c4f0403e46f58ad9b1a421b2904",
+   "after_sha256_lf": "cb92b51315a15e0c36cb841e3a9165c225c3ce689166669b9f4458a9955576e4",
    "edits": [
     {
      "location": "pedido projetado: itálico em vez de sublinhados",
      "old": "$(\"[data-pedido]\").textContent=t}",
-     "new": "$(\"[data-pedido]\").innerHTML=esc(t).replace(/_([^_]+)_/g,\"<i>$1</i>\")}",
+     "new": "$(\"[data-pedido]\").innerHTML=esc(t).replace(/(^|[^0-9A-Za-zÀ-ÖØ-öø-ÿ_\\/])_([^_\\n<>]{1,100}?)_(?![0-9A-Za-zÀ-ÖØ-öø-ÿ_])/g,\"$1<i>$2</i>\")}",
      "occurrences": 1
     },
     {
      "location": "pistas do Atlas: itálico em vez de sublinhados",
      "old": "return \"<li>\"+esc(p)+\"</li>\"",
-     "new": "return \"<li>\"+esc(p).replace(/_([^_]+)_/g,\"<i>$1</i>\")+\"</li>\"",
+     "new": "return \"<li>\"+esc(p).replace(/(^|[^0-9A-Za-zÀ-ÖØ-öø-ÿ_\\/])_([^_\\n<>]{1,100}?)_(?![0-9A-Za-zÀ-ÖØ-öø-ÿ_])/g,\"$1<i>$2</i>\")+\"</li>\"",
      "occurrences": 1
     }
    ]
   },
   "m4/painel-m4-f11/index.html": {
    "base_sha256_lf": "ae86a790194c61136fb5d0bd849b5a0cd21c608c8710af20eeb31c80d4563290",
-   "after_sha256_lf": "7d91e94871b30f7ba5acd82289de3c7570931964824b71dd2941602b23b4dfb9",
+   "after_sha256_lf": "c9eb26c3a001164c7049c2575ad97efa8ca18b913a3cdbcba0a93acc08d4ae03",
    "edits": [
     {
      "location": "pedido projetado: itálico em vez de sublinhados",
      "old": "$(\"[data-pedido]\").textContent=t}",
-     "new": "$(\"[data-pedido]\").innerHTML=esc(t).replace(/_([^_]+)_/g,\"<i>$1</i>\")}",
+     "new": "$(\"[data-pedido]\").innerHTML=esc(t).replace(/(^|[^0-9A-Za-zÀ-ÖØ-öø-ÿ_\\/])_([^_\\n<>]{1,100}?)_(?![0-9A-Za-zÀ-ÖØ-öø-ÿ_])/g,\"$1<i>$2</i>\")}",
      "occurrences": 1
     },
     {
      "location": "pistas do Atlas: itálico em vez de sublinhados",
      "old": "return \"<li>\"+esc(p)+\"</li>\"",
-     "new": "return \"<li>\"+esc(p).replace(/_([^_]+)_/g,\"<i>$1</i>\")+\"</li>\"",
+     "new": "return \"<li>\"+esc(p).replace(/(^|[^0-9A-Za-zÀ-ÖØ-öø-ÿ_\\/])_([^_\\n<>]{1,100}?)_(?![0-9A-Za-zÀ-ÖØ-öø-ÿ_])/g,\"$1<i>$2</i>\")+\"</li>\"",
      "occurrences": 1
     }
    ]
   },
   "m4/painel-m4-f14/index.html": {
    "base_sha256_lf": "0b73e87a1579f324ffa1bc445b1d27cc968ea522162114039dd3bdd9897b634a",
-   "after_sha256_lf": "ac033aaa79ddff9f7e4c96fdffef718f3be93e5852ab2e8780b0e60b26177490",
+   "after_sha256_lf": "6cbbc6742d877ccf84ce83c0401c6cfefd5a0228e4f8c938ff7753c416b02fb5",
    "edits": [
     {
      "location": "pedido projetado: itálico em vez de sublinhados",
      "old": "$(\"[data-pedido]\").textContent=t}",
-     "new": "$(\"[data-pedido]\").innerHTML=esc(t).replace(/_([^_]+)_/g,\"<i>$1</i>\")}",
+     "new": "$(\"[data-pedido]\").innerHTML=esc(t).replace(/(^|[^0-9A-Za-zÀ-ÖØ-öø-ÿ_\\/])_([^_\\n<>]{1,100}?)_(?![0-9A-Za-zÀ-ÖØ-öø-ÿ_])/g,\"$1<i>$2</i>\")}",
      "occurrences": 1
     },
     {
      "location": "pistas do Atlas: itálico em vez de sublinhados",
      "old": "return \"<li>\"+esc(p)+\"</li>\"",
-     "new": "return \"<li>\"+esc(p).replace(/_([^_]+)_/g,\"<i>$1</i>\")+\"</li>\"",
+     "new": "return \"<li>\"+esc(p).replace(/(^|[^0-9A-Za-zÀ-ÖØ-öø-ÿ_\\/])_([^_\\n<>]{1,100}?)_(?![0-9A-Za-zÀ-ÖØ-öø-ÿ_])/g,\"$1<i>$2</i>\")+\"</li>\"",
      "occurrences": 1
     }
    ]
   },
   "m4/painel-m4-f15/index.html": {
    "base_sha256_lf": "8cf2df32c0fc6f3704db5aa5b05bb244e110fbb06d31d724ad13a8ba0b09353c",
-   "after_sha256_lf": "7a2740bc0c55c99ea010700d4025d83d0ba986e95b2cb349b25d77b2a2e0101f",
+   "after_sha256_lf": "64c2ebe3afc81e5654fe1c9f1cf1aa1790623f175ebea8409324377202cf1427",
    "edits": [
     {
      "location": "pedido projetado: itálico em vez de sublinhados",
      "old": "$(\"[data-pedido]\").textContent=t}",
-     "new": "$(\"[data-pedido]\").innerHTML=esc(t).replace(/_([^_]+)_/g,\"<i>$1</i>\")}",
+     "new": "$(\"[data-pedido]\").innerHTML=esc(t).replace(/(^|[^0-9A-Za-zÀ-ÖØ-öø-ÿ_\\/])_([^_\\n<>]{1,100}?)_(?![0-9A-Za-zÀ-ÖØ-öø-ÿ_])/g,\"$1<i>$2</i>\")}",
      "occurrences": 1
     },
     {
      "location": "pistas do Atlas: itálico em vez de sublinhados",
      "old": "return \"<li>\"+esc(p)+\"</li>\"",
-     "new": "return \"<li>\"+esc(p).replace(/_([^_]+)_/g,\"<i>$1</i>\")+\"</li>\"",
+     "new": "return \"<li>\"+esc(p).replace(/(^|[^0-9A-Za-zÀ-ÖØ-öø-ÿ_\\/])_([^_\\n<>]{1,100}?)_(?![0-9A-Za-zÀ-ÖØ-öø-ÿ_])/g,\"$1<i>$2</i>\")+\"</li>\"",
      "occurrences": 1
     }
    ]
