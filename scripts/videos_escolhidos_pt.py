@@ -40,9 +40,9 @@ def bloco(v):
     e = lambda t: re.sub(r'_(.+?)_', r'<i>\1</i>', html.escape(t, quote=True))
     url = 'https://www.youtube.com/watch?v=' + v['yt']
     return ('<div class="yt" data-pv="%s" data-yt="%s" data-titulo="%s"><button type="button" class="yt-abrir" data-yt-abrir>%s</button>'
-            '<p class="yt-cred"><b>Antes de ver:</b> %s</p><p class="yt-cred"><b>No caderno:</b> %s</p>'
+            '<p class="yt-cred"><b>%s:</b> %s</p><p class="yt-cred"><b>No caderno:</b> %s</p>'
             '<p class="yt-cred">%s <a href="%s" target="_blank" rel="noopener">Ver no YouTube</a>.</p></div>') % (
-        html.escape(v['id'], quote=True), v['yt'], html.escape(v['titulo'].replace('_', ''), quote=True), e(v['botao']), e(v['antes']), e(v['caderno']), e(v['credito']), url)
+        html.escape(v['id'], quote=True), v['yt'], html.escape(v['titulo'].replace('_', ''), quote=True), e(v['botao']), 'Antes de ouvir' if v['botao'].startswith('Ouvir:') else 'Antes de ver', e(v['antes']), e(v['caderno']), e(v['credito']), url)
 
 
 def aplicar(s, vs):

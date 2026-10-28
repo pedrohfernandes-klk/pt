@@ -1,33 +1,7 @@
 {
-  "_nota": "Vídeos escolhidos pelo docente na curadoria de 28/10/2026 (ronda 1) e leituras da série «Um Poema por Semana» (RTP2, 2011, lista PL812D32D30E8B1432) escolhidas para o mesmo efeito. Cada vídeo entra no fim de um cartão de leitura que já existe, no componente .yt de assets/pt-lessons/video-youtube.js: os índices dos cartões não mudam, por isso painéis, relâmpagos e progresso ficam iguais. Aplicação: python3 scripts/videos_escolhidos_pt.py (idempotente).",
-  "versao": "20261028-1",
+  "_nota": "Vídeos escolhidos pelo docente na curadoria de 28/10/2026 (ronda 1) e leituras da série «Um Poema por Semana» (RTP2, 2011, lista PL812D32D30E8B1432). Regra de 28/10: um vídeo só entra se tratar diretamente do texto, do autor ou do conceito do cartão e se o aluno perceber logo porque está ali; os que dependiam de uma ponte nossa saíram (ver docs/pedagogia/videos-contexto-20261028.md). Cada vídeo entra no fim de um cartão de leitura que já existe, no componente .yt de assets/pt-lessons/video-youtube.js: os índices dos cartões não mudam (cartoes e indice registam o baralho no momento da inserção). Aplicação: python3 scripts/videos_escolhidos_pt.py (idempotente).",
+  "versao": "20261028-2",
   "videos": [
-    {
-      "id": "m1-f02-literatura",
-      "pagina": "m1/licao-m1-f02/index.html",
-      "cartao": {
-        "rot": "Para levar"
-      },
-      "yt": "4RCFLobfqcw",
-      "botao": "Ver: «What is Literature for?», The School of Life (4 min 52 s, em inglês)",
-      "antes": "Para que serve ler uma cantiga com mais de setecentos anos?",
-      "caderno": "Escolhe uma das cantigas destas duas lições. Que razão do vídeo lhe serve melhor? E que razão tua o vídeo não diz?",
-      "credito": "The School of Life, canal no YouTube, em inglês: se as legendas não aparecerem, liga-as no leitor.",
-      "titulo": "«What is Literature for?», The School of Life (4 min 52 s)"
-    },
-    {
-      "id": "m3-f09-banquete",
-      "pagina": "m3/licao-m3-f09/index.html",
-      "cartao": {
-        "rot": "Para entender"
-      },
-      "yt": "xJBwIIeebho",
-      "botao": "Ver: o _Banquete_ de Platão, aula de Michael Sugrue (48 min, em inglês), no trecho que o docente indicar",
-      "antes": "Amar uma pessoa e amar a ideia que fazes dela é a mesma coisa?",
-      "caderno": "No _Banquete_, Platão descreve o amor como uma subida, do corpo belo à beleza em si. Em que verso de «Alma minha gentil» o amor já não precisa do corpo?",
-      "credito": "Michael Sugrue, «Plato's Symposium: The Dialectic of Reason, Love, and Wisdom», canal Dr. Michael Sugrue, em inglês.",
-      "titulo": "«Plato's Symposium», aula de Michael Sugrue (48 min)"
-    },
     {
       "id": "m3-f17-sa-de-miranda",
       "pagina": "m3/licao-m3-f17/index.html",
@@ -39,33 +13,9 @@
       "antes": "Sá de Miranda foi o primeiro a escrever sonetos em Portugal, antes de Camões.",
       "caderno": "Ouve o soneto e conta as estrofes: quantas quadras, quantos tercetos? Que verso te soa a medida nova, e porquê?",
       "credito": "Inês Jacques, série Um Poema por Semana (RTP2, 2011), canal RTP.",
-      "titulo": "«O sol é grande, caem co'a calma as aves», de Sá de Miranda (2 min)"
-    },
-    {
-      "id": "m6-f01-nobre",
-      "pagina": "m6/licao-m6-f01/index.html",
-      "cartao": {
-        "rot": "Para entender"
-      },
-      "yt": "EAw7RJxQo0E",
-      "botao": "Ouvir: «Na praia lá da Boa Nova, um dia», de António Nobre (2 min)",
-      "antes": "Outro soneto do fim do século XIX, do livro _Só_ (1892), com um castelo em vez de um palácio.",
-      "caderno": "Compara o castelo de Nobre com o palácio do cavaleiro de Antero: quem o constrói, o que lhe acontece, e com que verso acaba cada sonho?",
-      "credito": "Carla Bolito, série Um Poema por Semana (RTP2, 2011), canal RTP.",
-      "titulo": "«Na praia lá da Boa Nova, um dia», de António Nobre (2 min)"
-    },
-    {
-      "id": "m6-f07-hopper",
-      "pagina": "m6/licao-m6-f07/index.html",
-      "cartao": {
-        "titulo": "Reportagem e sonho"
-      },
-      "yt": "rluUMpndKbo",
-      "botao": "Ver: Edward Hopper, The School of Life (7 min, em inglês)",
-      "antes": "Edward Hopper pintou cidades americanas no século XX: ruas à noite, montras acesas, pessoas sozinhas. A ligação a Cesário é nossa, não do vídeo.",
-      "caderno": "Que verso de «Horas Mortas» podia ser um quadro de Hopper? Descreve esse quadro: a luz, o lugar e quem lá está.",
-      "credito": "The School of Life, «ART/ARCHITECTURE - Edward Hopper», canal no YouTube, em inglês.",
-      "titulo": "«Edward Hopper», The School of Life (7 min)"
+      "titulo": "«O sol é grande, caem co'a calma as aves», de Sá de Miranda (2 min)",
+      "cartoes": 21,
+      "indice": 2
     }
   ]
 }

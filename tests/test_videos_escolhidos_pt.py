@@ -23,21 +23,17 @@ class VideosEscolhidosPt(unittest.TestCase):
     def test_indices_e_restantes_cartoes_iguais(self):
         # Os painéis apontam para os cartões pela posição: nenhum cartão entra, sai ou muda de lugar,
         # e o cartão escolhido só ganha o bloco do vídeo no fim.
-        for pagina, vs in ve.verificar(DADOS)[1].items():
-            r = subprocess.run(['git', 'show', 'origin/main:' + pagina], cwd=ROOT, capture_output=True, text=True)
-            if r.returncode:
-                self.skipTest('sem origin/main local')
-            antes = [o for o, _, _ in ve.cartoes(r.stdout)]
-            depois = [o for o, _, _ in ve.cartoes((ROOT / pagina).read_text('utf-8'))]
-            self.assertEqual(len(antes), len(depois), pagina)
-            for a, d in zip(antes, depois):
-                if a == d:
-                    continue
-                self.assertEqual({k: v for k, v in a.items() if k != 'html'}, {k: v for k, v in d.items() if k != 'html'})
-                self.assertTrue(d['html'].startswith(a['html']), pagina)
-                extra = d['html'][len(a['html']):]
-                self.assertTrue(all('data-pv="%s"' % v['id'] in extra for v in vs if ('data-pv="%s"' % v['id']) in d['html']))
-            self.assertEqual(sum(a != d for a, d in zip(antes, depois)), len(vs), pagina)
+        # 28/10/2026: compara com o baralho registado nos dados (cartoes, indice) e já não com origin/main,
+        # que passa a ter os vídeos depois da fusão.
+        for v in DADOS['videos']:
+            itens = [o for o, _, _ in ve.cartoes((ROOT / v['pagina']).read_text('utf-8'))]
+            self.assertEqual(len(itens), v['cartoes'], v['id'])
+            com = [i for i, o in enumerate(itens) if ('data-pv="%s"' % v['id']) in o.get('html', '')]
+            self.assertEqual(com, [v['indice']], v['id'])
+            html = itens[v['indice']]['html']
+            self.assertTrue(html.endswith('</div>') and html.rfind('<div class="yt" data-pv="%s"' % v['id']) > 0, v['id'])
+            (campo, valor), = v['cartao'].items()
+            self.assertEqual(itens[v['indice']].get(campo), valor, v['id'])
 
     def test_leitor_carregado_e_so_ao_toque(self):
         for v in DADOS['videos']:

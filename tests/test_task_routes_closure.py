@@ -8,13 +8,11 @@ FIXTURE=ROOT/'tests/fixtures/task-route-lesson-content-before.json'
 INSTRUCTION_EDITS=ROOT/'tests/fixtures/task-instruction-edits-20261026.json'
 GRAMMAR_EDITS=ROOT/'tests/fixtures/m1-grammar-pilot-edits-20261027.json'
 TABLE_EDITS=ROOT/'tests/fixtures/apoios-tabelas-edits-20261027.json'
-# 28/10/2026: vídeos escolhidos pelo docente, no fim de cartões que já existiam (scripts/videos_escolhidos_pt.py).
-VIDEO_EDITS=ROOT/'tests/fixtures/videos-escolhidos-edits-20261028.json'
 
 def original_lesson_text(path):
  """Reverse only the explicitly authorized UX strings; retain the frozen LF hash."""
  source=(ROOT/path).read_text('utf-8')
- for manifest_path in (VIDEO_EDITS,TABLE_EDITS,GRAMMAR_EDITS,INSTRUCTION_EDITS):
+ for manifest_path in (TABLE_EDITS,GRAMMAR_EDITS,INSTRUCTION_EDITS):
   manifest=json.loads(manifest_path.read_text('utf-8'))
   for edit in reversed(manifest['files'].get(path,{}).get('edits',[])):
    if source.count(edit['new'])!=edit['occurrences']:
