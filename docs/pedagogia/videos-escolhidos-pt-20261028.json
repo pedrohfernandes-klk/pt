@@ -5,7 +5,9 @@
     {
       "id": "m1-f02-literatura",
       "pagina": "m1/licao-m1-f02/index.html",
-      "cartao": {"rot": "Para levar"},
+      "cartao": {
+        "rot": "Para levar"
+      },
       "yt": "4RCFLobfqcw",
       "botao": "Ver: «What is Literature for?», The School of Life (4 min 52 s, em inglês)",
       "antes": "Para que serve ler uma cantiga com mais de setecentos anos?",
@@ -16,7 +18,9 @@
     {
       "id": "m3-f09-banquete",
       "pagina": "m3/licao-m3-f09/index.html",
-      "cartao": {"rot": "Para entender"},
+      "cartao": {
+        "rot": "Para entender"
+      },
       "yt": "xJBwIIeebho",
       "botao": "Ver: o _Banquete_ de Platão, aula de Michael Sugrue (48 min, em inglês), no trecho que o docente indicar",
       "antes": "Amar uma pessoa e amar a ideia que fazes dela é a mesma coisa?",
@@ -27,7 +31,9 @@
     {
       "id": "m3-f17-sa-de-miranda",
       "pagina": "m3/licao-m3-f17/index.html",
-      "cartao": {"titulo": "Medida velha, medida nova"},
+      "cartao": {
+        "titulo": "Medida velha, medida nova"
+      },
       "yt": "ghNkyeanj3k",
       "botao": "Ouvir: «O sol é grande, caem co'a calma as aves», de Sá de Miranda (2 min)",
       "antes": "Sá de Miranda foi o primeiro a escrever sonetos em Portugal, antes de Camões.",
@@ -38,7 +44,9 @@
     {
       "id": "m6-f01-nobre",
       "pagina": "m6/licao-m6-f01/index.html",
-      "cartao": {"rot": "Para entender"},
+      "cartao": {
+        "rot": "Para entender"
+      },
       "yt": "EAw7RJxQo0E",
       "botao": "Ouvir: «Na praia lá da Boa Nova, um dia», de António Nobre (2 min)",
       "antes": "Outro soneto do fim do século XIX, do livro _Só_ (1892), com um castelo em vez de um palácio.",
@@ -49,24 +57,15 @@
     {
       "id": "m6-f07-hopper",
       "pagina": "m6/licao-m6-f07/index.html",
-      "cartao": {"titulo": "Reportagem e sonho"},
+      "cartao": {
+        "titulo": "Reportagem e sonho"
+      },
       "yt": "rluUMpndKbo",
       "botao": "Ver: Edward Hopper, The School of Life (7 min, em inglês)",
       "antes": "Edward Hopper pintou cidades americanas no século XX: ruas à noite, montras acesas, pessoas sozinhas. A ligação a Cesário é nossa, não do vídeo.",
       "caderno": "Que verso de «Horas Mortas» podia ser um quadro de Hopper? Descreve esse quadro: a luz, o lugar e quem lá está.",
       "credito": "The School of Life, «ART/ARCHITECTURE - Edward Hopper», canal no YouTube, em inglês.",
       "titulo": "«Edward Hopper», The School of Life (7 min)"
-    },
-    {
-      "id": "m7-f01-identidade",
-      "pagina": "m7/licao-m7-f01/index.html",
-      "cartao": {"rot": "Para entender"},
-      "yt": "17WiQ_tNld4",
-      "botao": "Ver: «Arguments Against Personal Identity», Crash Course Philosophy #20 (10 min, em inglês)",
-      "antes": "És a mesma pessoa que eras aos dez anos? O que ficou igual?",
-      "caderno": "Caeiro, Reis e Campos são máscaras de Pessoa ou partes dele? Justifica com uma ideia do vídeo e com um traço de um heterónimo.",
-      "credito": "CrashCourse, Crash Course Philosophy #20, canal no YouTube, em inglês.",
-      "titulo": "«Arguments Against Personal Identity», Crash Course Philosophy #20 (10 min)"
     }
   ]
 }

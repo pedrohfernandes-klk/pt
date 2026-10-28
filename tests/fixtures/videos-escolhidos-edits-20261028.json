@@ -11,22 +11,6 @@
      "occurrences": 1
     }
    ]
-  },
-  "m7/licao-m7-f01/index.html": {
-   "edits": [
-    {
-     "location": "cabeça: script do leitor de vídeo",
-     "old": "@media print{.amp-ov{display:none}}</style>",
-     "new": "@media print{.amp-ov{display:none}}</style><script defer src=\"../../assets/pt-lessons/video-youtube.js\"></script>",
-     "occurrences": 1
-    },
-    {
-     "location": "cartão «Para entender»: vídeo 17WiQ_tNld4 no fim",
-     "old": "",
-     "new": "<div class=\\\"yt\\\" data-pv=\\\"m7-f01-identidade\\\" data-yt=\\\"17WiQ_tNld4\\\" data-titulo=\\\"«Arguments Against Personal Identity», Crash Course Philosophy #20 (10 min)\\\"><button type=\\\"button\\\" class=\\\"yt-abrir\\\" data-yt-abrir>Ver: «Arguments Against Personal Identity», Crash Course Philosophy #20 (10 min, em inglês)</button><p class=\\\"yt-cred\\\"><b>Antes de ver:</b> És a mesma pessoa que eras aos dez anos? O que ficou igual?</p><p class=\\\"yt-cred\\\"><b>No caderno:</b> Caeiro, Reis e Campos são máscaras de Pessoa ou partes dele? Justifica com uma ideia do vídeo e com um traço de um heterónimo.</p><p class=\\\"yt-cred\\\">CrashCourse, Crash Course Philosophy #20, canal no YouTube, em inglês. <a href=\\\"https://www.youtube.com/watch?v=17WiQ_tNld4\\\" target=\\\"_blank\\\" rel=\\\"noopener\\\">Ver no YouTube</a>.</p></div>",
-     "occurrences": 1
-    }
-   ]
   }
  }
 }
