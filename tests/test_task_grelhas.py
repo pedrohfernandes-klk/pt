@@ -44,6 +44,9 @@ class Grelhas(unittest.TestCase):
                     self.assertIn(c['nome'].replace('«','&laquo;') if '&laquo;' in aluno else c['nome'],aluno)
                 self.assertEqual(aluno.count('class="g-crit"'),5);self.assertIn('id="autoavaliacao"',aluno)
                 for parte in ('O que funciona','O que te custa pontos','Próximo passo'):self.assertIn(parte,correcao)
+                # 28/10/2026: cada tabela num contentor que desliza sozinho, para a página não deslizar na horizontal no telemóvel.
+                for p in (aluno,correcao):self.assertEqual(p.count('<table'),p.count('<div class="g-tab" role="region"'))
+                self.assertIn('.g-tab{overflow-x:auto',aluno)
                 for p in (aluno,correcao):
                     texto=str(Texto(p));baixo=texto.lower()
                     self.assertNotIn('—',texto)

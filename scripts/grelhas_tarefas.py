@@ -16,6 +16,8 @@ ROOT = Path(__file__).resolve().parents[1]
 DADOS = ROOT / 'docs/pedagogia/grelhas-tarefas-20261027.json'
 LIGACAO = '<p class="task-grelha"><a href="grelha/">Grelha /20: como é avaliado e autoavaliação</a></p>\n'
 ANCORA = '<p>Fecha com duas linhas'
+# 28/10/2026: cada tabela fica num contentor que desliza sozinho; a página nunca desliza na horizontal (320 a 1440 px).
+REGIAO = 'role="region" aria-label="{}" tabindex="0"'
 
 CSS = """:root{--g-tinta:var(--tinta,#161616);--g-papel:var(--papel,#fff);--g-fundo:var(--fundo,#f4f3ee);--g-suave:var(--suave,#5c5a55);--g-linha:var(--linha,#dcd9d0)}
 *{box-sizing:border-box}body{margin:0;background:var(--g-fundo);color:var(--g-tinta);font:17px/1.55 Georgia,'Times New Roman',serif}
@@ -28,6 +30,7 @@ h1{font:700 clamp(1.8rem,5vw,2.6rem)/1.1 Arial,Helvetica,sans-serif;margin:0 0 1
 h2{font:700 1.2rem/1.3 Arial,Helvetica,sans-serif;margin:0 0 12px}
 .lead{font-size:1.15rem;margin:0 0 8px}p{margin:0 0 12px}
 table{width:100%;border-collapse:collapse;background:var(--g-papel);margin:16px 0 8px}
+.g-tab{overflow-x:auto;margin:16px 0 8px}.g-tab>table{margin:0}
 caption{text-align:left;font:700 .75rem Arial,Helvetica,sans-serif;letter-spacing:.12em;text-transform:uppercase;padding:0 0 8px}
 th,td{border:1px solid var(--g-linha);padding:8px 10px;text-align:left;vertical-align:top}
 thead th{font:700 .8rem Arial,Helvetica,sans-serif;border-bottom:2px solid var(--g-tinta)}
@@ -51,11 +54,11 @@ ul{margin:6px 0 0;padding-left:22px}
 .nome span{min-width:12em;border-bottom:1px solid var(--g-tinta);display:inline-block}
 footer{margin-top:36px;padding-top:12px;border-top:2px solid var(--g-tinta);font:700 .85rem Arial,Helvetica,sans-serif;display:flex;flex-wrap:wrap;gap:4px 24px}
 footer a{color:inherit;min-height:44px;display:inline-flex;align-items:center}
-a:focus-visible,button:focus-visible{outline:3px solid currentColor;outline-offset:3px}
-@media(max-width:560px){.g-niveis>div{grid-template-columns:1fr}.g-crit h2{flex-wrap:wrap}.g-crit h2 .max{margin-left:0}}
+a:focus-visible,button:focus-visible,.g-tab:focus-visible{outline:3px solid currentColor;outline-offset:3px}
+@media(max-width:560px){.g-niveis>div{grid-template-columns:1fr}.g-crit h2{flex-wrap:wrap}.g-crit h2 .max{margin-left:0}th,td{padding:6px}td.n,th.n{width:3em;padding:6px 4px}thead th.n{font-size:.8rem}.g-auto{padding:16px 10px}}
 @media(min-width:760px){.g-fb{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @page{size:A4;margin:12mm}
-@media print{body{background:#fff;color:#000;font-size:10.5pt}.g-nav,footer,button{display:none!important}.g-crit,.g-auto{break-inside:avoid}.grelha{padding:0;max-width:none}.g-niveis>div{grid-template-columns:5em minmax(0,1fr)}}
+@media print{body{background:#fff;color:#000;font-size:10.5pt}.g-tab{overflow:visible}.g-nav,footer,button{display:none!important}.g-crit,.g-auto{break-inside:avoid}.grelha{padding:0;max-width:none}.g-niveis>div{grid-template-columns:5em minmax(0,1fr)}}
 """
 
 
@@ -79,10 +82,10 @@ def pagina_aluno(slug, t):
              f'<header><p class="rot">{e(t["modulo"])} · Unidade {t["unidade"]} · Como é avaliado</p><h1>{e(t["titulo"])}</h1>'
              '<p class="lead">20 valores em cinco critérios. Lê antes de começar e volta aqui antes de entregar.</p>'
              f'<p>{e(t["produto"])}</p></header>'
-             '<table class="g-resumo"><caption>Os cinco critérios</caption><thead><tr><th>Critério</th><th class="n">Máximo</th></tr></thead><tbody>')
+             f'<div class="g-tab" {REGIAO.format("Os cinco critérios")}><table class="g-resumo"><caption>Os cinco critérios</caption><thead><tr><th>Critério</th><th class="n">Máximo</th></tr></thead><tbody>')
     for i, c in enumerate(t['criterios'], 1):
         corpo += f'<tr><td><a href="#criterio-{i}">{e(c["nome"])}</a></td><td class="n">{c["max"]}</td></tr>'
-    corpo += '<tr class="total"><th>Total</th><td class="n">20</td></tr></tbody></table>'
+    corpo += '<tr class="total"><th>Total</th><td class="n">20</td></tr></tbody></table></div>'
     for i, c in enumerate(t['criterios'], 1):
         n = c['niveis']
         corpo += (f'<section class="g-crit" id="criterio-{i}"><h2><span class="num">{i}</span><span>{e(c["nome"])}</span><span class="max">máx. {c["max"]}</span></h2><dl class="g-niveis">')
@@ -93,10 +96,10 @@ def pagina_aluno(slug, t):
     corpo += ('<section class="g-auto" id="autoavaliacao"><h2>Antes de entregar: dá-te pontos</h2>'
               '<p>Em papel, critério a critério: escreve o número e a passagem do teu texto que o prova. Entrega esta autoavaliação com as fotografias. '
               'O docente põe a nota dele ao lado da tua e comenta a diferença.</p>'
-              '<table><thead><tr><th>Critério</th><th class="n">Máx.</th><th class="n">Eu</th><th>A passagem que o prova</th></tr></thead><tbody>')
+              f'<div class="g-tab" {REGIAO.format("Autoavaliação")}><table><thead><tr><th>Critério</th><th class="n">Máx.</th><th class="n">Eu</th><th>A passagem que o prova</th></tr></thead><tbody>')
     for c in t['criterios']:
         corpo += f'<tr><td>{e(c["nome"])}</td><td class="n">{c["max"]}</td><td></td><td></td></tr>'
-    corpo += ('<tr class="total"><th>Total</th><td class="n">20</td><td></td><td></td></tr></tbody></table></section>'
+    corpo += ('<tr class="total"><th>Total</th><td class="n">20</td><td></td><td></td></tr></tbody></table></div></section>'
               f'<footer><a href="../">Voltar à tarefa</a><a href="../correcao/">Para o docente: versão de correção</a></footer>')
     return casca(f'Grelha /20: {t["titulo"]}', corpo)
 
@@ -107,10 +110,10 @@ def pagina_correcao(slug, t):
              f'<header><p class="rot">{e(t["modulo"])} · Unidade {t["unidade"]} · Correção</p><h1>{e(t["titulo"])}</h1>'
              '<p class="lead">Franqueza com cuidado: fala do texto, nunca da pessoa; aponta a passagem; diz o que fazer a seguir.</p>'
              '<p class="nome">Aluno <span></span> Turma <span></span> Data <span></span></p></header>'
-             '<table><thead><tr><th>Critério</th><th class="n">Máx.</th><th class="n">Aluno</th><th class="n">Docente</th><th>Observações</th></tr></thead><tbody>')
+             f'<div class="g-tab" {REGIAO.format("Notas por critério")}><table><thead><tr><th>Critério</th><th class="n">Máx.</th><th class="n">Aluno</th><th class="n">Docente</th><th>Observações</th></tr></thead><tbody>')
     for c in t['criterios']:
         corpo += f'<tr><td>{e(c["nome"])}<br><small>{e(c["niveis"]["max"][0])}</small></td><td class="n">{c["max"]}</td><td></td><td></td><td></td></tr>'
-    corpo += ('<tr class="total"><th>Total</th><td class="n">20</td><td></td><td></td><td></td></tr></tbody></table>'
+    corpo += ('<tr class="total"><th>Total</th><td class="n">20</td><td></td><td></td><td></td></tr></tbody></table></div>'
               '<div class="g-fb">'
               '<div><h3>O que funciona</h3><p>Uma coisa concreta, com a passagem.</p></div>'
               '<div><h3>O que te custa pontos</h3><p>O critério e a passagem, sem rodeios.</p></div>'
