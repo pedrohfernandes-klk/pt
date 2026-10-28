@@ -6,6 +6,9 @@ Dados em docs/pedagogia/grelhas-tarefas-20261027.json. Para cada tarefa escreve:
 - tarefas/<slug>/correcao/: a grelha de correção do docente, com a nota do aluno ao lado e o feedback em três
   partes (o que funciona, o que custa pontos, o próximo passo);
 - na tarefa, uma linha em «Verificar e entregar» com a ligação à grelha (marca autorizada nos testes).
+Regra das soluções (28/10/2026): as duas páginas são públicas. Nenhum descritor nem exemplo responde à tarefa:
+os descritores dizem o que se avalia em termos gerais e os exemplos usam outro caso do mesmo tipo. A chave da
+correção não vive nestes dados. A «nota» opcional de cada grelha diz ao aluno de onde vêm os exemplos.
 Idempotente. Uso: python3 scripts/grelhas_tarefas.py
 """
 from html import escape as e
@@ -28,7 +31,7 @@ button{font:700 .85rem Arial,Helvetica,sans-serif;min-height:44px;padding:8px 14
 .rot{font:700 .75rem/1.3 Arial,Helvetica,sans-serif;letter-spacing:.12em;text-transform:uppercase;margin:24px 0 8px}
 h1{font:700 clamp(1.8rem,5vw,2.6rem)/1.1 Arial,Helvetica,sans-serif;margin:0 0 12px;letter-spacing:-.02em}
 h2{font:700 1.2rem/1.3 Arial,Helvetica,sans-serif;margin:0 0 12px}
-.lead{font-size:1.15rem;margin:0 0 8px}p{margin:0 0 12px}
+.lead{font-size:1.15rem;margin:0 0 8px}p{margin:0 0 12px}.g-nota{font-size:.9rem;color:var(--g-suave);border-left:4px solid var(--g-linha);padding-left:12px}
 table{width:100%;border-collapse:collapse;background:var(--g-papel);margin:16px 0 8px}
 .g-tab{overflow-x:auto;margin:16px 0 8px}.g-tab>table{margin:0}
 caption{text-align:left;font:700 .75rem Arial,Helvetica,sans-serif;letter-spacing:.12em;text-transform:uppercase;padding:0 0 8px}
@@ -81,7 +84,8 @@ def pagina_aluno(slug, t):
              '<button type="button" data-print hidden>Imprimir</button></nav>'
              f'<header><p class="rot">{e(t["modulo"])} · Unidade {t["unidade"]} · Como é avaliado</p><h1>{e(t["titulo"])}</h1>'
              '<p class="lead">20 valores em cinco critérios. Lê antes de começar e volta aqui antes de entregar.</p>'
-             f'<p>{e(t["produto"])}</p></header>'
+             f'<p>{e(t["produto"])}</p>'
+             + (f'<p class="g-nota">{e(t["nota"])}</p>' if t.get('nota') else '') + '</header>'
              f'<div class="g-tab" {REGIAO.format("Os cinco critérios")}><table class="g-resumo"><caption>Os cinco critérios</caption><thead><tr><th>Critério</th><th class="n">Máximo</th></tr></thead><tbody>')
     for i, c in enumerate(t['criterios'], 1):
         corpo += f'<tr><td><a href="#criterio-{i}">{e(c["nome"])}</a></td><td class="n">{c["max"]}</td></tr>'

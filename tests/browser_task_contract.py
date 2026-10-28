@@ -298,22 +298,32 @@ def grelha_pages(browser, host):
     """28/10/2026: grelhas /20 (aluno e correção) de 320 a 1440 px sem a página deslizar na horizontal.
 
     Cada tabela fica num contentor que desliza sozinho; a página nunca desliza. Num ecrã largo, nenhuma tabela desliza.
+    28/10/2026 (PR #122): também em modo escuro (texto e fundo seguem a aparência, com contraste) e na impressão
+    (a navegação e os botões não saem no papel e as tabelas cabem na largura da página).
     """
     import json
     from pathlib import Path
     dados = json.loads((Path(__file__).resolve().parents[1] / 'docs/pedagogia/grelhas-tarefas-20261027.json').read_text('utf-8'))
     for slug in dados['tarefas']:
         for pasta in ('grelha', 'correcao'):
-            for width in (320, 390, 768, 1440):
-                ctx = browser.new_context(viewport={'width': width, 'height': 900})
-                page = ctx.new_page()
-                page.route('**/fonts.googleapis.com/**', lambda r: r.abort())
-                page.route('**/fonts.gstatic.com/**', lambda r: r.abort())
-                page.goto(host + '/tarefas/' + slug + '/' + pasta + '/', wait_until='networkidle')
-                assert page.evaluate('innerWidth') == width
-                assert page.locator('table').count() == page.locator('.g-tab[role="region"][tabindex="0"] > table').count() > 0, (slug, pasta)
-                assert page.evaluate('document.documentElement.scrollWidth<=innerWidth'), (slug, pasta, width, page.evaluate('document.documentElement.scrollWidth'))
-                if width >= 768:
-                    assert page.locator('.g-tab').evaluate_all('(els)=>els.every(e=>e.scrollWidth<=e.clientWidth)'), (slug, pasta, width)
-                ctx.close()
-        print('PASS grelha /20 sem deslizar na horizontal:', slug, flush=True)
+            for scheme in ('light', 'dark'):
+                for width in (320, 390, 768, 1440):
+                    ctx = browser.new_context(viewport={'width': width, 'height': 900}, color_scheme=scheme)
+                    page = ctx.new_page()
+                    page.route('**/fonts.googleapis.com/**', lambda r: r.abort())
+                    page.route('**/fonts.gstatic.com/**', lambda r: r.abort())
+                    page.goto(host + '/tarefas/' + slug + '/' + pasta + '/', wait_until='networkidle')
+                    assert page.evaluate('innerWidth') == width
+                    assert page.locator('table').count() == page.locator('.g-tab[role="region"][tabindex="0"] > table').count() > 0, (slug, pasta)
+                    assert page.evaluate('document.documentElement.scrollWidth<=innerWidth'), (slug, pasta, width, page.evaluate('document.documentElement.scrollWidth'))
+                    if width >= 768:
+                        assert page.locator('.g-tab').evaluate_all('(els)=>els.every(e=>e.scrollWidth<=e.clientWidth)'), (slug, pasta, width)
+                    colours = page.evaluate('()=>[getComputedStyle(document.body).color,getComputedStyle(document.body).backgroundColor]')
+                    assert colours[0] != colours[1], (slug, pasta, scheme, colours)
+                    if width == 768:
+                        page.emulate_media(media='print')
+                        assert page.locator('.g-nav').evaluate('e=>getComputedStyle(e).display') == 'none', (slug, pasta)
+                        assert page.locator('table').evaluate_all('(els)=>els.every(e=>e.getBoundingClientRect().right<=document.documentElement.clientWidth+1)'), (slug, pasta, scheme)
+                        page.emulate_media(media='screen')
+                    ctx.close()
+        print('PASS grelha /20 sem deslizar na horizontal, claro e escuro, impressão:', slug, flush=True)
