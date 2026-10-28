@@ -78,3 +78,14 @@ Decisões do docente (27/10): a identidade fica só no laboratório; fontes livr
 - **Testes novos** (`tests/browser_exame_laboratorio.cjs`): contraste nos dois temas, relógio e rascunho conservados, pausa ao mudar de máquina, foco, teclado, anotações só depois de verificar, papel e primeiro ecrã da projeção.
 
 Por validar em sala: legibilidade à distância, ritmo dos dois minutos e clareza das anotações.
+
+## Textos compostos, identidade nas sessões e relógio do aluno (27–28/10/2026)
+
+Pedido do docente (27/10): uma cantiga não pode parecer um relatório; subir um degrau na tipografia, nas cores e na identidade, com princípios de Gestalt, sem perder a matriz.
+
+- **Textos das sessões:** os 15 recortes literários deixam de ser texto achatado. Cada um é reconstruído a partir da lição de onde vem (`source.passages`): versos e estrofes, omissões marcadas com «[…]», parágrafos numerados, falas de teatro com o nome da figura e as didascálias em itálico, palavras explicadas com nota numerada (como no exame nacional) e crédito com os títulos em itálico. Três referências antigas foram corrigidas pelo caminho: a lição da cantiga de Codax («As cantigas lado a lado»), a estância «Nas naus estar se deixa vagaroso» (VIII, 96) e a parte «Noite Fechada» do poema de Cesário. Cada verso e cada parágrafo guarda a referência à linha da lição; `tests/test_exame_textos.py` falha se a lição mudar e o exame ficar desalinhado.
+- **Identidade:** `assets/exame/oficina.css` reúne as fontes (Fraunces e IBM Plex Sans, locais, OFL) e os tokens claros e escuros, comuns ao laboratório e às sessões. Nas sessões, os tokens antigos passam a ler a Oficina; cada fase tem a sua cor (aquecer amarelo, ler azul, escrever óxido, corrigir verde, fechar tinta) e cada ano do catálogo também.
+- **Relógio do aluno** (`assets/relogio.js`, comum às aulas de tarefa): o aluno escolhe a duração até ao máximo; pode pausar duas vezes; depois disso, parar recomeça do início. Sessões: o máximo é o tempo da fase (5, 8, 10 a 20, 7 a 17 e 5 min). Laboratório: um relógio por exercício, com máximos de 1, 2, 2 e 3 min (máquinas 01 a 04, a validar em sala); mudar de máquina com o relógio a contar conta como pausa e é anunciado.
+- **Texto do sítio:** sem «ficha» nem «folha» nas sessões (os dois casos que ficam são citações de Camilo e de Álvaro de Campos).
+
+Por validar em sala: leitura das notas à distância, os máximos do laboratório e a regra das duas pausas.

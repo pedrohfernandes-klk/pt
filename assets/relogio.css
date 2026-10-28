@@ -1,0 +1,55 @@
+/* Relógio do aluno (27/10/2026). Herda as cores da página que o recebe:
+   Oficina (--of-*), Cartaz (--tinta, --acento) ou, sem tokens, a cor do texto. */
+.relogio{
+ --r-tinta:var(--of-tinta,var(--tinta,currentColor));
+ --r-suave:var(--of-suave,var(--suave,#5e5b52));
+ --r-linha:var(--of-linha,var(--cinza,#d6d4ce));
+ --r-acento:var(--of-oxido,var(--acento,#a84939));
+ --r-calmo:var(--of-azul,var(--tinta,#294b63));
+ --r-fundo:var(--of-cartao,var(--papel,transparent));
+ display:grid;grid-template-columns:minmax(0,1fr) auto;grid-template-areas:"cab cab" "tempo tempo" "barra barra" "duracao duracao" "botoes botoes" "pausas pausas" "estado estado";
+ gap:8px 12px;margin:18px 0;padding:14px 16px 12px;border:1px solid var(--r-tinta);border-top-width:4px;border-top-color:var(--r-calmo);
+ background:var(--r-fundo);color:var(--r-tinta);font-family:var(--of-sans,"Plex Oficina","IBM Plex Sans",Arial,Helvetica,sans-serif);max-width:26rem
+}
+.relogio[data-estado="corre"]{border-top-color:var(--r-acento)}
+.relogio[data-estado="fim"]{border-top-color:var(--r-tinta)}
+.relogio-cab{grid-area:cab;display:flex;align-items:baseline;justify-content:space-between;gap:12px}
+.relogio-rotulo{margin:0;font-weight:700;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase}
+.relogio-max{margin:0;font-size:.78rem;color:var(--r-suave)}
+.relogio-mostrador{grid-area:tempo;display:block;font-size:clamp(2.4rem,7vw,3.4rem);font-weight:600;line-height:1;letter-spacing:-.03em;font-variant-numeric:tabular-nums}
+.relogio-barra{grid-area:barra;display:block;height:6px;background:var(--r-linha);overflow:hidden}
+.relogio-barra i{display:block;height:100%;width:100%;background:var(--r-calmo);transition:width .25s linear}
+.relogio[data-estado="corre"] .relogio-barra i{background:var(--r-acento)}
+.relogio-duracao{grid-area:duracao;display:flex;align-items:center;gap:6px;font-size:.88rem}
+.relogio-duracao label{margin-right:auto;font-weight:600}
+.relogio-duracao input{width:4.2em;min-height:40px;padding:4px 6px;border:1px solid var(--r-tinta);background:transparent;color:inherit;font:inherit;font-variant-numeric:tabular-nums;text-align:center}
+.relogio-duracao input:disabled{border-style:dashed;color:var(--r-suave)}
+.relogio .relogio-passo{min-width:40px;min-height:40px;padding:0;border:1px solid var(--r-tinta);background:transparent;color:inherit;font-family:inherit;font-weight:600;font-size:1.1rem;line-height:1;cursor:pointer}
+.relogio-botoes{grid-area:botoes;display:flex;flex-wrap:wrap;gap:8px}
+.relogio .relogio-principal,.relogio .relogio-recomecar{min-height:44px;padding:8px 16px;border:1px solid var(--r-tinta);font-family:inherit;font-weight:600;font-size:.9rem;line-height:1.2;cursor:pointer}
+.relogio .relogio-principal{flex:1 1 auto;background:var(--r-tinta);color:var(--of-papel,var(--papel,#fff))}
+.relogio .relogio-recomecar{background:transparent;color:inherit}
+.relogio button:disabled{cursor:not-allowed;opacity:1;color:var(--r-suave);background:transparent;border-style:dashed}
+.relogio button:focus-visible,.relogio input:focus-visible{outline:3px solid var(--r-acento);outline-offset:2px}
+.relogio-pausas{grid-area:pausas;display:flex;align-items:center;gap:8px;margin:0;font-size:.8rem;color:var(--r-suave)}
+.relogio-pontos{display:inline-flex;gap:5px}
+.relogio-pontos i{width:11px;height:11px;border-radius:50%;background:var(--r-calmo);border:1.5px solid var(--r-calmo)}
+.relogio-pontos i.usada{background:transparent;border-color:var(--r-suave)}
+.relogio[data-pausas="0"] .relogio-pausas{color:var(--r-acento);font-weight:600}
+.relogio-estado{grid-area:estado;margin:0;min-height:1.3em;font-size:.82rem;line-height:1.4}
+.relogio-mini{font:600 .82rem/1 var(--of-sans,"Plex Oficina",Arial,sans-serif);font-variant-numeric:tabular-nums;padding:4px 8px;border:1px solid currentColor;white-space:nowrap}
+.relogio-mini[data-estado="corre"]{color:var(--of-oxido,var(--acento,#a84939))}
+.relogio-mini[data-estado="pronto"]{display:none}
+.projected .relogio,.projetar .relogio{max-width:none}
+.projected .relogio-mostrador,.projetar .relogio-mostrador{font-size:clamp(3rem,9vw,6rem)}
+/* Em colunas estreitas (por exemplo, a coluna de ferramentas do exame), os controlos empilham. */
+.relogio{container:relogio/inline-size}
+@container relogio (max-width:300px){
+ .relogio-cab{flex-direction:column;gap:2px}
+ .relogio-duracao{flex-wrap:wrap}
+ .relogio-duracao label{flex-basis:100%}
+ .relogio-duracao input{flex:1 1 auto}
+ .relogio-botoes{flex-direction:column}
+}
+@media (prefers-reduced-motion:reduce){.relogio-barra i{transition:none}}
+@media print{.relogio,.relogio-mini{display:none!important}}

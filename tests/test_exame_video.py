@@ -56,7 +56,8 @@ class ExamVideo(unittest.TestCase):
         self.assertIn('video-fallback', js)
         self.assertIn('v.embeddable===false', js)
         self.assertIn('Abrir este trecho no YouTube', js)
-        self.assertIn('Controla o ritmo ou acompanha a projeção', js)
+        # 27/10/2026 (pedido do docente): o relógio da fase passa a ser o relógio do aluno (assets/relogio.js).
+        self.assertIn('EPIRelogio.criar(host,{max:duration(session,phase)/60', js)
         css = (ROOT/'assets/exame/exame.css').read_text('utf8')
         self.assertIn('aspect-ratio:16/9',css)
 
