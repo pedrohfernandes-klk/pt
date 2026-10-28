@@ -30,10 +30,11 @@ def check(scope,largura,linhas):
     d=t.evaluate('''t=>{const rows=[...t.querySelectorAll('tr')].slice(1),cs=getComputedStyle;
       return {vis:rows.every(r=>[...r.cells].every(c=>c.getBoundingClientRect().width>0&&c.getBoundingClientRect().height>0)),
        bloco:rows.every(r=>cs(r).display==='block'),
-       rotulos:rows.every(r=>[...r.cells].slice(1).every(c=>cs(c,'::before').content.length>2)),
+       rotulos:rows.every(r=>[...r.cells].slice(1).every(c=>c.dataset.th&&cs(c,'::before').content.includes(c.dataset.th))),
        letra:Math.min(...rows.flatMap(r=>[...r.cells].map(c=>parseFloat(cs(c).fontSize)))),
        cabe:t.scrollWidth<=t.parentElement.clientWidth+2,
        pag:document.documentElement.scrollWidth<=innerWidth+2}}''')
+    # 28/10/2026: a verificação dos rótulos compara o ::before com o data-th da própria célula ('none' também tem mais de 2 letras).
     assert d['vis'] and d['cabe'] and d['pag'],d
     # 27/10/2026: as células desta tabela de apoio medem 14,7 px no telemóvel (a leitura mede 16,8) e crescem na
     # projeção (16,6 a 25,8 px); fica registado no relatório, sem mudar o estilo comum das tabelas «quadro».
