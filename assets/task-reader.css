@@ -34,3 +34,5 @@ body.task-lesson h3{text-transform:none;letter-spacing:normal}
  .task-reader .task-brief{break-before:auto}
  body.task-lesson .task-quiz:not([hidden]){display:block!important}
 }
+/* 27/10/2026: em ecrãs estreitos, o acesso do docente (canto inferior esquerdo) já não tapa «← Anterior». */
+@media(max-width:1000px){body.task-reader-active:has(>.teacher-access) .task-reader .casca-acoes{padding-left:max(64px,env(safe-area-inset-left))}}

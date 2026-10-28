@@ -7,6 +7,13 @@ from browser_m2_complete import respond
 OUT=ROOT.parents[1]/'outputs/m2-coerencia';OUT.mkdir(parents=True,exist_ok=True)
 server=ThreadingHTTPServer(('127.0.0.1',0),partial(QuietHandler,directory=str(ROOT.parent)));threading.Thread(target=server.serve_forever,daemon=True).start();host=f'http://127.0.0.1:{server.server_port}'
 results=[]
+def at_task_2(page):
+ # 28/10/2026: a ligação #desafio-unidade-2 da F09 (congelada) acaba na aula de tarefa da unidade 2, visível e assinalada.
+ page.wait_for_url(re.compile(r'/pt/m2/#(desafio|tarefa)-unidade-2$'));page.wait_for_function('location.hash==="#tarefa-unidade-2"')
+ task=page.locator('#tarefa-unidade-2');assert task.is_visible() and task.evaluate('e=>e.classList.contains("aqui")')
+ assert task.locator('a').first.get_attribute('href').endswith('tarefas/m2-u2/')
+ page.wait_for_function('()=>{const r=document.getElementById("tarefa-unidade-2").getBoundingClientRect();return r.top>=0&&r.top<innerHeight&&r.height>0}')
+ assert not page.locator('#arquivo-percurso').is_visible()
 try:
  with sync_playwright() as pw:
   browser=pw.chromium.launch(headless=True)
@@ -25,7 +32,11 @@ try:
    page.goto(host+'/pt/m2/licao-m2-f06/',wait_until='networkidle')
    for target in ['11','10','08','09']:
     page.locator('[data-c-menu]').first.click();link=page.locator('[data-c-painel] a').filter(has_text=re.compile('^Lição seguinte$')).first;assert link.count()==1;link.click();page.wait_for_url(f'**/licao-m2-f{target}/')
-   page.locator('[data-c-menu]').first.click();page.locator('[data-c-painel] a').filter(has_text=re.compile('^Desafio da unidade 2$')).click();page.wait_for_url('**/m2/#desafio-unidade-2')
+   # 28/10/2026 (revisão do PR #124): antes conferia-se só o URL (**/m2/#desafio-unidade-2), mas esse desafio
+   # está no arquivo escondido. O índice leva à aula de tarefa da unidade 2, à vista, pelo menu e pelo botão final.
+   page.locator('[data-c-menu]').first.click();page.locator('[data-c-painel] a').filter(has_text=re.compile('^Desafio da unidade 2$')).click();at_task_2(page)
+   page.goto(host+'/pt/m2/licao-m2-f09/',wait_until='networkidle');page.evaluate("localStorage.setItem('licao-m2-f09',JSON.stringify({lida:true,melhor:6,totalMelhor:8,total:8,tentativas:1}))");page.reload(wait_until='networkidle')
+   final=page.locator('[data-c-acoes] a').filter(has_text=re.compile('^Lição seguinte'));assert final.count()==1 and final.get_attribute('href')=='../#desafio-unidade-2';final.click();at_task_2(page)
    # The whole revised F07 bank, including readings and every exercise mechanic.
    page.goto(host+'/pt/m2/licao-m2-f07/',wait_until='networkidle')
    cards=json.JSONDecoder().raw_decode((ROOT/'m2/licao-m2-f07/index.html').read_text('utf-8').split('CARTOES=',1)[1].lstrip())[0]

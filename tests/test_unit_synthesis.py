@@ -8,7 +8,8 @@ class Synthesis(unittest.TestCase):
   for m in range(1,10):
    s=(ROOT/f'm{m}/index.html').read_text('utf-8')
    # 26/10: the task is a lesson; synthesis is inside its production time, never a separate gate.
-   if m in (1,4,7):
+   # 27/10/2026 (passagem do GPT, tarefas por unidade): o M2 passa ao mesmo modelo, com duas aulas de tarefa.
+   if m in (1,2,4,7):
     self.assertIn('unit-task-route.js',s)
     self.assertNotIn('sinteseFeita',s)
     self.assertNotIn('data-sintese-registar',s)

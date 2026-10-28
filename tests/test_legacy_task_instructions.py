@@ -53,7 +53,8 @@ class LegacyTaskInstructions(unittest.TestCase):
                 self.assertNotIn(retired,start)
 
     def test_maps_and_portfolios_have_no_extra_closure_gate(self):
-        for module in ['m1','m4','m7']:
+        # 27/10/2026 (passagem do GPT, tarefas por unidade): o M2 passa ao mesmo modelo, com duas aulas de tarefa.
+        for module in ['m1','m2','m4','m7']:
             for slug in [f'mapa-do-modulo-{module}',f'portefolio-do-modulo-{module}']:
                 source=(ROOT/module/slug/'index.html').read_text('utf-8')
                 text=' '.join(' '.join(Text(source).parts).split())

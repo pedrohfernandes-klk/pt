@@ -5,6 +5,9 @@ on:
       - 'tarefas/**'
       - 'assets/task-90.*'
       - 'assets/task-reader.*'
+      - 'assets/task-choice.*'
+      - 'assets/relogio.*'
+      - 'tests/browser_relogio.py'
       - 'assets/unit-task-route.js'
       - 'assets/pt-lessons/casca.js'
       - 'assets/pt-lessons/lesson.css'
@@ -30,6 +33,7 @@ jobs:
           python -m unittest discover -s tests -p 'test_*task*.py' -v
           node --check assets/task-90.js
           node --check assets/task-reader.js
+          node --check assets/relogio.js
           node tests/unit_task_route_runtime.js
       - name: Instalar Chromium
         run: |
@@ -37,3 +41,5 @@ jobs:
           python -m playwright install --with-deps chromium
       - name: Percorrer as oito aulas, nos dois temas e tamanhos
         run: python tests/browser_task_lesson_matrix.py
+      - name: Relógio do aluno (duas pausas, recomeço obrigatório)
+        run: python tests/browser_relogio.py
