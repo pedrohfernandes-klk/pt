@@ -3,12 +3,16 @@
 Imported by the existing CI entry points; this file never launches a browser.
 """
 from urllib.parse import urljoin
+import re
 # 27/10/2026 (passagem do GPT, tarefas por unidade): o M2 passa ao mesmo modelo, com duas aulas de tarefa.
 TASK_MODULES = {1, 2, 4, 7}
 TASK_SLUGS = {1: ['m1-u1', 'm1-u2'],
               2: ['m2-u1', 'm2-u2'],
               4: ['m4-u1', 'm4-u2', 'm4-u3-discurso'],
               7: ['m7-u1', 'm7-u2', 'm7-u3']}
+# 28/10/2026 (decisão do docente, PR #122): o formato com aquecimento e tema à escolha cobre o M2 (piloto) e o M1.
+# Estas páginas têm de o declarar; nenhuma passa pelo contrato compacto por omissão.
+CHOICE_SLUGS = {'m1-u1', 'm1-u2', 'm2-u1', 'm2-u2'}
 
 def learning_storage(page):
     return page.evaluate("""() => Object.fromEntries(Object.keys(localStorage)
@@ -72,6 +76,9 @@ def open_task_card(page, selector):
 
 def assert_task_page(page, before):
     page.locator('[data-task-reader].task-reader-ready').wait_for()
+    slug = page.url.split('/tarefas/', 1)[1].split('/', 1)[0] if '/tarefas/' in page.url else ''
+    if slug:
+        assert (page.locator('main[data-task-choice]').count() == 1) == (slug in CHOICE_SLUGS), slug
     assert page.locator('[data-task-card]:visible').count() == 1
     assert page.locator('[data-task-reader]').count() == 1
     assert page.locator('[data-c-barra] rect').count() == page.locator('[data-task-card]').count()
@@ -88,6 +95,15 @@ def assert_task_page(page, before):
         assert page.locator('[data-task-card="0"] #aquecer').count() == 1
         assert page.locator('[data-task-card="1"] #produzir').count() == 1
         assert page.locator('[data-task-theme]').count() == 2
+        # 28/10/2026 (revisão do PR #122): as letras ficam no nome acessível, porque as instruções mandam escrevê-las
+        # no papel: cada opção do aquecimento começa pela letra e cada tema diz «Tema A» ou «Tema B».
+        warm = page.locator('[data-task-question="aquecer"]')
+        for letter in 'ABC':
+            assert warm.get_by_role('button', name=re.compile('^' + letter + r'\s?: \S')).count() == 1, letter
+        open_task_card(page, '#produzir')
+        for letter in 'AB':
+            assert page.get_by_role('heading', name=re.compile('^Tema ' + letter + ' ')).count() == 1, letter
+        open_task_card(page, '[data-task-card="0"]')
     if compact:
         assert page.locator('[data-task-card]').count() == (4 if choice else 3)
         assert page.locator('.task-clock').count() == 0
@@ -199,6 +215,14 @@ def assert_reader_navigation(page):
     page.evaluate('window.dispatchEvent(new Event("beforeprint"))')
     page.emulate_media(media='print')
     assert page.locator('[data-task-card]:visible').count() == page.locator('[data-task-card]').count()
+    # 28/10/2026 (revisão do PR #122): o aquecimento faz-se em papel; impressa, a máquina 02 mostra a pergunta e as
+    # três passagens. Não saem a explicação da escolha nem o estado das respostas exploradas.
+    if page.locator('main[data-task-choice]').count():
+        question = page.locator('#aquecer [data-task-question="aquecer"]')
+        assert question.is_visible() and question.locator('.task-question-title').is_visible()
+        assert question.locator('button[data-response]:visible').count() == 3
+        assert not page.locator('[data-task-feedback]:visible').count()
+        assert not page.locator('[data-task-status]:visible').count()
     page.emulate_media(media='screen')
     page.evaluate('window.dispatchEvent(new Event("afterprint"))')
     assert page.locator('[data-task-card]:visible').count() == 1
@@ -286,3 +310,59 @@ def fallback_task_pages(browser, host):
             assert page.evaluate('document.documentElement.scrollWidth<=innerWidth+3')
             print('PASS readable fallback with original feedback:',slug,flush=True)
             ctx.close()
+
+
+def grelha_pages(browser, host):
+    """28/10/2026: grelhas /20 (aluno e correção) de 320 a 1440 px sem a página deslizar na horizontal.
+
+    Cada tabela fica num contentor que desliza sozinho; a página nunca desliza. Num ecrã largo, nenhuma tabela desliza.
+    28/10/2026 (PR #122): também em modo escuro (texto e fundo seguem a aparência, com contraste) e na impressão
+    (a navegação e os botões não saem no papel e as tabelas cabem na largura da página).
+    """
+    import json
+    from pathlib import Path
+    dados = json.loads((Path(__file__).resolve().parents[1] / 'docs/pedagogia/grelhas-tarefas-20261027.json').read_text('utf-8'))
+    for slug in dados['tarefas']:
+        # 28/10/2026 (revisão do PR #122): da tarefa à grelha e de volta, o leitor abre o cartão «Verificar» de onde
+        # se partiu, e não o aquecimento. O mesmo a partir da versão de correção.
+        for pasta, texto in (('grelha', 'Voltar à tarefa'), ('correcao', 'Tarefa')):
+            ctx = browser.new_context(viewport={'width': 390, 'height': 900}, reduced_motion='reduce')
+            page = ctx.new_page()
+            page.route('**/fonts.googleapis.com/**', lambda r: r.abort())
+            page.route('**/fonts.gstatic.com/**', lambda r: r.abort())
+            page.goto(host + '/tarefas/' + slug + '/', wait_until='networkidle')
+            page.locator('[data-task-reader].task-reader-ready').wait_for()
+            link = open_task_card(page, 'a[href="grelha/"]')
+            link.click(); page.wait_for_url('**/tarefas/' + slug + '/grelha/')
+            if pasta == 'correcao':
+                page.locator('footer a[href="../correcao/"]').click(); page.wait_for_url('**/tarefas/' + slug + '/correcao/')
+            page.locator('.g-nav a', has_text=texto).click()
+            page.wait_for_url(re.compile('/tarefas/' + slug + '/#entregar$'))
+            page.locator('[data-task-reader].task-reader-ready').wait_for()
+            assert page.locator('#entregar').is_visible(), (slug, pasta)
+            card = page.locator('#entregar').evaluate('e=>+e.closest("[data-task-card]").dataset.taskCard')
+            assert page.evaluate('EPITaskReader.current()') == card, (slug, pasta)
+            assert page.locator('[data-task-card]:visible').count() == 1
+            ctx.close()
+        for pasta in ('grelha', 'correcao'):
+            for scheme in ('light', 'dark'):
+                for width in (320, 390, 768, 1440):
+                    ctx = browser.new_context(viewport={'width': width, 'height': 900}, color_scheme=scheme)
+                    page = ctx.new_page()
+                    page.route('**/fonts.googleapis.com/**', lambda r: r.abort())
+                    page.route('**/fonts.gstatic.com/**', lambda r: r.abort())
+                    page.goto(host + '/tarefas/' + slug + '/' + pasta + '/', wait_until='networkidle')
+                    assert page.evaluate('innerWidth') == width
+                    assert page.locator('table').count() == page.locator('.g-tab[role="region"][tabindex="0"] > table').count() > 0, (slug, pasta)
+                    assert page.evaluate('document.documentElement.scrollWidth<=innerWidth'), (slug, pasta, width, page.evaluate('document.documentElement.scrollWidth'))
+                    if width >= 768:
+                        assert page.locator('.g-tab').evaluate_all('(els)=>els.every(e=>e.scrollWidth<=e.clientWidth)'), (slug, pasta, width)
+                    colours = page.evaluate('()=>[getComputedStyle(document.body).color,getComputedStyle(document.body).backgroundColor]')
+                    assert colours[0] != colours[1], (slug, pasta, scheme, colours)
+                    if width == 768:
+                        page.emulate_media(media='print')
+                        assert page.locator('.g-nav').evaluate('e=>getComputedStyle(e).display') == 'none', (slug, pasta)
+                        assert page.locator('table').evaluate_all('(els)=>els.every(e=>e.getBoundingClientRect().right<=document.documentElement.clientWidth+1)'), (slug, pasta, scheme)
+                        page.emulate_media(media='screen')
+                    ctx.close()
+        print('PASS grelha /20 sem deslizar na horizontal, claro e escuro, impressão:', slug, flush=True)

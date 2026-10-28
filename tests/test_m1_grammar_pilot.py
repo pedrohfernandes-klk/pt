@@ -6,7 +6,7 @@ import re
 import unittest
 
 from test_m1_unit_tasks import TaskPage
-from task_source_contract import historical_task_source, validate_task_source
+from task_source_contract import compact_task_source, historical_task_source, validate_task_source
 
 ROOT = Path(__file__).resolve().parents[1]
 MANIFEST = ROOT / 'tests/fixtures/m1-grammar-pilot-edits-20261027.json'
@@ -114,8 +114,11 @@ class M1GrammarPilot(unittest.TestCase):
         self.assertIn('só a vogal inserida', legacy((ROOT / 'm1/gram-fonologia/index.html').read_text('utf-8'))['passos'][3]['itens'][3][0])
 
     def test_real_compact_tasks_keep_grammar_application_and_literary_transfer(self):
+        # 28/10/2026 (decisão do docente, PR #122): as tarefas do M1 passam ao formato com aquecimento e tema à
+        # escolha. Este contrato de 27/10 passa a ler o retrato compacto autorizado (compact_task_source), depois
+        # de validada a página viva; o teste seguinte confere a aplicação gramatical na página viva.
         for unit in (1, 2):
-            text = validate_task_source(ROOT / f'tarefas/m1-u{unit}/index.html')
+            text = compact_task_source(ROOT / f'tarefas/m1-u{unit}/index.html')
             parsed = TaskPage(text)
             self.assertEqual(parsed.errors, [])
             self.assertEqual(len(parsed.questions), 2)
@@ -127,18 +130,45 @@ class M1GrammarPilot(unittest.TestCase):
             self.assertIn('90 min', text)
             self.assertIn('../../m1/licao-m1-f05/', text)
             self.assertNotIn('task-clock', text)
-        u1 = validate_task_source(ROOT / 'tarefas/m1-u1/index.html')
+        u1 = compact_task_source(ROOT / 'tarefas/m1-u1/index.html')
         prompt1 = re.search(r'<section id="produzir".*?</section>', u1, re.S)[0]
         for token in ('mare', 'malu', 'segmento desaparece', 'onde e com que nome',
                       'Chega já', 'Codax e Guilhade', 'uma diferença'):
             self.assertIn(token, prompt1)
         self.assertIn('Apócope: desaparece a vogal final.', u1)
-        u2 = validate_task_source(ROOT / 'tarefas/m1-u2/index.html')
+        u2 = compact_task_source(ROOT / 'tarefas/m1-u2/index.html')
         prompt2 = re.search(r'<section id="produzir".*?</section>', u2, re.S)[0]
         for token in ('pronúncia', 'pra', 'exemplo inventado', 'registo',
                       'Não alteres uma fala documentada', 'fora da contagem'):
             self.assertIn(token, prompt2)
         self.assertIn('Síncope descreve a supressão interior', u2)
+
+    def test_live_choice_tasks_keep_grammar_in_the_common_core(self):
+        # 28/10/2026 (PR #122): no formato com escolha, a aplicação gramatical breve fica no núcleo comum, que
+        # todos fazem (fonologia com o som, o lugar e o processo), e a transferência literária num dos temas.
+        expected = {1: ('<i>mare</i> &gt; mar', '<i>malu</i> &gt; mau', 'o som que cai, onde cai e o processo',
+                        'Guilhade', 'Chega já', 'Indica uma diferença'),
+                    2: ('«pra»', 'o som que cai, onde e o processo', 'documentada', 'imaginada',
+                        'excertos do cap. XII', 'gradação')}
+        for unit, tokens in expected.items():
+            text = validate_task_source(ROOT / f'tarefas/m1-u{unit}/index.html')
+            parsed = TaskPage(text)
+            self.assertEqual(parsed.errors, [])
+            self.assertEqual([q['key'] for q in parsed.questions], ['aquecer', '1'])
+            for q in parsed.questions:
+                self.assertEqual(len(q['options']), 3)
+                self.assertEqual(sum(o['data-correct'] == 'true' for o in q['options']), 1)
+            prompt = re.search(r'<section id="produzir".*?</section>', text, re.S)[0]
+            core = prompt.split('task-themes')[0]
+            for token in tokens:
+                self.assertIn(token, prompt, (unit, token))
+            for token in tokens[:3]:
+                self.assertIn(token, core, (unit, token))
+            self.assertIn('../../m1/licao-m1-f05/', text)
+            self.assertIn('duas linhas', text)
+            self.assertIn('90 min', text)
+            self.assertNotIn('folhas próprias', text)
+            self.assertIn('trabalho em papel', text)
 
 
 if __name__ == '__main__':
