@@ -5,6 +5,7 @@ on:
       - 'tarefas/**'
       - 'assets/task-90.*'
       - 'assets/task-reader.*'
+      - 'assets/task-choice.*'
       - 'assets/relogio.*'
       - 'tests/browser_relogio.py'
       - 'assets/unit-task-route.js'

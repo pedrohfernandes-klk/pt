@@ -105,6 +105,7 @@
    recomecar: function () { poeAoInicio(); },
    espelhar: function (n) { espelhos.push(n); pinta(); return n; },
    estado: function () { return { duracao: s.dur, resto: resto(), corre: s.corre, iniciado: s.iniciado, pausasUsadas: s.usadas, max: max, min: min }; },
+   atualizar: function () { pinta(); },
    destruir: function () { var k = todos.indexOf(api); if (k >= 0) todos.splice(k, 1); gere(); },
    _pinta: pinta
   };
@@ -114,7 +115,8 @@
 
  function gere() {
   var algum = todos.some(function (r) { return r.estado().corre; });
-  if (algum && !ciclo) ciclo = setInterval(function () { todos.slice().forEach(function (r) { if (!document.body.contains(r.elemento)) r.destruir(); else r._pinta(); }); }, 250);
+  // Um relógio fora da página (por exemplo, numa máquina que não está à vista) guarda o estado e só volta a pintar quando regressa.
+  if (algum && !ciclo) ciclo = setInterval(function () { todos.slice().forEach(function (r) { if (document.documentElement.contains(r.elemento)) r._pinta(); }); }, 250);
   else if (!algum && ciclo) { clearInterval(ciclo); ciclo = null; }
  }
 

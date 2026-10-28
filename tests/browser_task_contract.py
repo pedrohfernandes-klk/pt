@@ -77,10 +77,19 @@ def assert_task_page(page, before):
     assert page.locator('[data-c-barra] rect').count() == page.locator('[data-task-card]').count()
     assert page.evaluate('(()=>{const ids=[...document.querySelectorAll("[id]")].map(e=>e.id);return ids.length===new Set(ids).size})()')
     compact = page.locator('main[data-task-compact]').count() == 1
+    # 28/10/2026 (piloto M2, decisão do docente): o formato com escolha tem um cartão de aquecimento
+    # primeiro e duas perguntas, a do aquecimento («aquecer») e uma opcional («1»).
+    choice = page.locator('main[data-task-choice]').count() == 1
     count = 2 if compact else 4
+    question_ids = ['aquecer', '1'] if choice else [str(i) for i in range(1, count + 1)]
     assert page.locator('[data-task-question]').count() == count
+    if choice:
+        assert page.locator('[data-task-card]').count() == 4
+        assert page.locator('[data-task-card="0"] #aquecer').count() == 1
+        assert page.locator('[data-task-card="1"] #produzir').count() == 1
+        assert page.locator('[data-task-theme]').count() == 2
     if compact:
-        assert page.locator('[data-task-card]').count() == 3
+        assert page.locator('[data-task-card]').count() == (4 if choice else 3)
         assert page.locator('.task-clock').count() == 0
         assert 'Tarefa individual' in page.locator('.task-kicker').first.text_content()
         assert not page.locator('[data-task-optional-preparation]').evaluate('e=>e.open')
@@ -98,7 +107,7 @@ def assert_task_page(page, before):
     assert page.locator('[data-task-card="0"]').is_visible()
     open_task_card(page, '#entregar')
     assert learning_storage(page) == before
-    for i in range(1, count + 1):
+    for i in question_ids:
         question = open_task_card(page, f'[data-task-question="{i}"]')
         options = question.locator('button[data-response]')
         assert options.count() == 3
@@ -243,8 +252,10 @@ def fallback_task_pages(browser, host):
             for target in ('#preparacao','#apoios','#produzir','#entregar'):
                 assert page.locator(target).is_visible()
             compact = page.locator('main[data-task-compact]').count() == 1
+            choice = page.locator('main[data-task-choice]').count() == 1
             if compact:
-                assert page.locator('[data-task-question]:visible').count() == 0
+                # 28/10/2026: no formato com escolha, a pergunta do aquecimento está sempre à vista.
+                assert page.locator('[data-task-question]:visible').count() == (1 if choice else 0)
                 optional=page.locator('[data-task-optional-preparation] > summary')
                 optional.focus();optional.press('Enter')
             assert page.locator('[data-task-question]:visible').count() == (2 if compact else 4)

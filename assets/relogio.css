@@ -42,5 +42,14 @@
 .relogio-mini[data-estado="pronto"]{display:none}
 .projected .relogio,.projetar .relogio{max-width:none}
 .projected .relogio-mostrador,.projetar .relogio-mostrador{font-size:clamp(3rem,9vw,6rem)}
+/* Em colunas estreitas (por exemplo, a coluna de ferramentas do exame), os controlos empilham. */
+.relogio{container:relogio/inline-size}
+@container relogio (max-width:300px){
+ .relogio-cab{flex-direction:column;gap:2px}
+ .relogio-duracao{flex-wrap:wrap}
+ .relogio-duracao label{flex-basis:100%}
+ .relogio-duracao input{flex:1 1 auto}
+ .relogio-botoes{flex-direction:column}
+}
 @media (prefers-reduced-motion:reduce){.relogio-barra i{transition:none}}
 @media print{.relogio,.relogio-mini{display:none!important}}

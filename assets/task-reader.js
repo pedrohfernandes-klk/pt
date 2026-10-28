@@ -28,8 +28,14 @@
    if(!compact&&node.id==="preparacao"){
     card("Preparar · leitura e modelo",[node]);
     questions.forEach(function(question,i){card("Preparar · pergunta "+(i+1),[question],"question");});
-   }else card(compact?(node.id==="apoios"?"Relembrar":node.id==="entregar"?"Verificar":label):label,[node],node.id==="apoios"?"support":node.id==="produzir"?"production":node.id==="entregar"?"delivery":"reading");
+   }else card(compact?(node.id==="aquecer"?"Aquecer":node.id==="apoios"?"Relembrar":node.id==="entregar"?"Verificar":label):label,[node],node.id==="aquecer"?"warmup":node.id==="apoios"?"support":node.id==="produzir"?"production":node.id==="entregar"?"delivery":"reading");
   });
+  // 28/10/2026: nas tarefas com aquecimento, o aquecimento é o primeiro cartão; o enunciado vem a seguir.
+  var warm=cards.findIndex(function(item){return item.kind==="warmup";});
+  if(compact&&warm>0){
+   cards.unshift(cards.splice(warm,1)[0]);
+   cards.forEach(function(item,i){item.el.id="task-card-"+(i+1);item.el.setAttribute("data-task-card",String(i));});
+  }
   if(quiz&&!compact)quiz.hidden=true; // Its original question nodes now have their own cards.
   page.replaceChildren();
   cards.forEach(function(item){page.appendChild(item.el);});
