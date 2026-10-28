@@ -1,0 +1,1643 @@
+{
+ "base_commit": "ffc1a32c8ea452679a0081d1ae65fb2d286c0301",
+ "_nota": "28/10/2026: correções confirmadas pela auditoria das lições, painéis e índices do M1 e do M4 (verificação cética de cada achado). Só texto: regras de escrita (sem «—», «ficha», «folha», «·» em frases), factos e citações, cortes marcados com […], legendas e créditos, numeração e ligações. Ordem, tipos, chaves e respostas certas dos cartões ficam iguais. As três frases apagadas nos guiões das aulas 6 e 11 (sem texto novo) não entram aqui: esses guiões não estão congelados.",
+ "files": {
+  "m1/licao-m1-f05/index.html": {
+   "base_sha256_lf": "5ccf21ab62a3f9349d64409d6fed308801a895a11305b586924fafff0fec791a",
+   "after_sha256_lf": "5fa81c215649e4643b4d01a22d36a27816a515ddcab41dcb0f00a9d4e2b65cb0",
+   "edits": [
+    {
+     "location": "CARTOES[5] esquema: sem travessão",
+     "old": "<strong>Entra — PEP:</strong>",
+     "new": "<strong>Entra (PEP):</strong>",
+     "occurrences": 1
+    },
+    {
+     "location": "CARTOES[5] esquema: sem travessão, «cai» como no resto da lição",
+     "old": "<strong>Desaparece — ASA:</strong>",
+     "new": "<strong>Cai (ASA):</strong>",
+     "occurrences": 1
+    },
+    {
+     "location": "CARTOES[5] esquema: meio, como na grelha",
+     "old": "interior, <strong>epêntese</strong>",
+     "new": "meio, <strong>epêntese</strong>",
+     "occurrences": 1
+    },
+    {
+     "location": "CARTOES[5] esquema: meio, como na grelha",
+     "old": "interior, <strong>síncope</strong>",
+     "new": "meio, <strong>síncope</strong>",
+     "occurrences": 1
+    },
+    {
+     "location": "CARTOES[5] esquema",
+     "old": "lembretes da ordem início/interior/fim.",
+     "new": "lembretes da ordem início, meio e fim.",
+     "occurrences": 1
+    },
+    {
+     "location": "CARTOES[5] conferir a tentativa",
+     "old": "Insere-se [d] no interior: é epêntese.",
+     "new": "Entra [d] no meio: é epêntese.",
+     "occurrences": 1
+    },
+    {
+     "location": "CARTOES[5]: sai a nota de planificação (texto do docente)",
+     "old": "etapas históricas.</p><p>Esta recuperação ocupa quatro minutos da exploração já prevista na aula; não acrescenta uma ficha ou entrega.</p>",
+     "new": "etapas históricas.</p>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m1/m1-voz-emprestada/index.html": {
+   "base_sha256_lf": "ee064de105b72168df15a5b2718a740f1a86edd77c565594bdfdb650a5c634d1",
+   "after_sha256_lf": "d06e93fce23fd5a9388e21c3538f17b60186ae05d83b21a5bc4cada6fce23afa",
+   "edits": [
+    {
+     "location": "legenda da fonte: estrofes mostradas, maiúscula depois de ponto",
+     "old": "«Sedia-m'eu na ermida de Sam Simion», integral. base de dados",
+     "new": "«Sedia-m'eu na ermida de Sam Simion», estrofes 1 e 2. Base de dados",
+     "occurrences": 1
+    },
+    {
+     "location": "legenda da fonte: estrofes mostradas, maiúscula depois de ponto",
+     "old": "«Ondas do mar de Vigo», integral. base de dados",
+     "new": "«Ondas do mar de Vigo», estrofes 1 e 2. Base de dados",
+     "occurrences": 1
+    },
+    {
+     "location": "legenda da fonte: estrofes mostradas, maiúscula depois de ponto",
+     "old": "«Ai flores, ai flores do verde pino», integral. base de dados",
+     "new": "«Ai flores, ai flores do verde pino», estrofe 1. Base de dados",
+     "occurrences": 1
+    },
+    {
+     "location": "legenda da fonte: estrofes mostradas, maiúscula depois de ponto",
+     "old": "«Quer'eu em maneira de proençal», as três estrofes. base de dados",
+     "new": "«Quer'eu em maneira de proençal», estrofe 1. Base de dados",
+     "occurrences": 1
+    },
+    {
+     "location": "legenda da fonte: estrofes mostradas, maiúscula depois de ponto",
+     "old": "«Ai dona fea, fostes-vos queixar», as três estrofes. base de dados",
+     "new": "«Ai dona fea, fostes-vos queixar», estrofe 1. Base de dados",
+     "occurrences": 1
+    },
+    {
+     "location": "legenda da fonte: estrofes mostradas, maiúscula depois de ponto",
+     "old": "cantiga 1527, integral (B 1493, V 1104). base de dados",
+     "new": "cantiga 1527, estrofes 1 e 2 (B 1493, V 1104). Base de dados",
+     "occurrences": 1
+    },
+    {
+     "location": "legenda da fonte: estrofes mostradas, maiúscula depois de ponto",
+     "old": "«Proençaes soem mui bem trobar», integral. base de dados",
+     "new": "«Proençaes soem mui bem trobar», estrofe 1. Base de dados",
+     "occurrences": 1
+    },
+    {
+     "location": "Ato 4: o jogral como na aula 1",
+     "old": "Lourenço, o jogral, o homem pago para cantar e tocar.",
+     "new": "Lourenço, o jogral, profissional que apresenta as cantigas, muitas vezes pago.",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m1/aulas/aula-06/index.html": {
+   "base_sha256_lf": "ab39fd288c7de9bca05a077b2983a732bcb6f188414976c8b85a1f21b3508d3f",
+   "after_sha256_lf": "ecd3dbcdcc701b56509d7195217d083a287307ad37af2378813f4c6f963f5001",
+   "edits": [
+    {
+     "location": "guião: o cartão já diz o que a aula 1 ensina",
+     "old": "Acertar o cartão, que chama ao jogral «o homem pago para cantar e tocar»: pela aula 1, é o profissional que apresenta as cantigas, muitas vezes pago, e alguns também compunham; Lourenço quer ser tido por trovador.",
+     "new": "Lourenço quer ser tido por trovador.",
+     "occurrences": 1
+    },
+    {
+     "location": "guião: fecho na voz do guião",
+     "old": "Guardam-se os apontamentos. Guarda a preparação para a aula de tarefa. Consulta os apoios opcionais de que precisares.",
+     "new": "Guardam-se os apontamentos para a aula de tarefa; os apoios opcionais ficam para consulta.",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m1/aulas/aula-14/index.html": {
+   "base_sha256_lf": "2e1af4987aa60a03ec3a6ef09ec1edddc5dc163991e91d6e2dc15a0c4eeea5d5",
+   "after_sha256_lf": "70f3f96069437cf8e6b42e8a6ded6a6f33441c2b133726e06975eeb565be32d4",
+   "edits": [
+    {
+     "location": "guião: fecho na voz do guião",
+     "old": "Guardam-se os apontamentos. Guarda a preparação para a aula de tarefa. Consulta os apoios opcionais de que precisares.",
+     "new": "Guardam-se os apontamentos para a aula de tarefa; os apoios opcionais ficam para consulta.",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m1/licao-m1-f10/index.html": {
+   "base_sha256_lf": "8e62303e30a5fcbf2e4087cbc747214e538f41f6e14d44f4ed0d62d436ab2014",
+   "after_sha256_lf": "e60512b0cf26b3a13dc73c491457e95f4bf22e5e00e1322ce7c55e29b1e27bcf",
+   "edits": [
+    {
+     "location": "legenda: título da pintura como no resto do módulo",
+     "old": "<i>Morte do conde Andeiro</i>",
+     "new": "<i>Morte do Conde Andeiro</i>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m1/licao-m1-f20/index.html": {
+   "base_sha256_lf": "f270661909a445f5816bb79b70b11666148d8e6e37f9bb02bd452a82ab879749",
+   "after_sha256_lf": "caeb524b0b6c2981e71c29b745ce2399b2c7496f081aedbad3a7ec4dfd3756cb",
+   "edits": [
+    {
+     "location": "legenda: título da pintura como no resto do módulo",
+     "old": "<i>Morte do conde Andeiro</i>",
+     "new": "<i>Morte do Conde Andeiro</i>",
+     "occurrences": 1
+    },
+    {
+     "location": "CARTOES[6] B: corte marcado",
+     "old": "corriam pera lá.</p>",
+     "new": "corriam pera lá […].</p>",
+     "occurrences": 1
+    },
+    {
+     "location": "CARTOES[1] [2]: corte marcado",
+     "old": ">escusar</b> morte.</p>",
+     "new": ">escusar</b> morte. […]</p>",
+     "occurrences": 1
+    },
+    {
+     "location": "CARTOES[6] fonte",
+     "old": "Grafia atualizada; corte marcado com […].",
+     "new": "Grafia atualizada; cortes marcados com […].",
+     "occurrences": 1
+    },
+    {
+     "location": "CARTOES[6] ler mais",
+     "old": "No lugar de […], em B,",
+     "new": "No lugar do primeiro […], em B,",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m1/painel-m1-f04/index.html": {
+   "base_sha256_lf": "c821adb60fef2736678b2e9d28f24dd041ef787874289820ac88d3954fb1da16",
+   "after_sha256_lf": "564a1de6fbded507f1f7faebba361a8da608a0cbbed0537050b2cd022fa4ac97",
+   "edits": [
+    {
+     "location": "cabeçalho: unidade certa",
+     "old": "Lição M1-F04 · unidade 2",
+     "new": "Lição M1-F04 · unidade 1",
+     "occurrences": 1
+    },
+    {
+     "location": "pedido projetado: itálico em vez de sublinhados",
+     "old": "$(\"[data-pedido]\").textContent=t}",
+     "new": "$(\"[data-pedido]\").innerHTML=esc(t).replace(/_([^_]+)_/g,\"<i>$1</i>\")}",
+     "occurrences": 1
+    },
+    {
+     "location": "pistas do Atlas: itálico em vez de sublinhados",
+     "old": "return \"<li>\"+esc(p)+\"</li>\"",
+     "new": "return \"<li>\"+esc(p).replace(/_([^_]+)_/g,\"<i>$1</i>\")+\"</li>\"",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m1/painel-m1-f06/index.html": {
+   "base_sha256_lf": "e997ebdaf4c7b73ac549ade428f9f2d191084f1d9f278eb073a3714d409c2bb2",
+   "after_sha256_lf": "ff084e6ce3e66ffd631a9acb3e03da26a865ad10757bf70f2a97362a74344388",
+   "edits": [
+    {
+     "location": "cabeçalho: o módulo tem duas unidades",
+     "old": "Lição M1-F06 · unidade 3",
+     "new": "Lição M1-F06 · unidade 2",
+     "occurrences": 1
+    },
+    {
+     "location": "pedido projetado: itálico em vez de sublinhados",
+     "old": "$(\"[data-pedido]\").textContent=t}",
+     "new": "$(\"[data-pedido]\").innerHTML=esc(t).replace(/_([^_]+)_/g,\"<i>$1</i>\")}",
+     "occurrences": 1
+    },
+    {
+     "location": "pistas do Atlas: itálico em vez de sublinhados",
+     "old": "return \"<li>\"+esc(p)+\"</li>\"",
+     "new": "return \"<li>\"+esc(p).replace(/_([^_]+)_/g,\"<i>$1</i>\")+\"</li>\"",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m1/painel-m1-f07/index.html": {
+   "base_sha256_lf": "bb2a16a72626e89e4cfada05399487e120f3738aaebdab081b63a1b2a4d9f41c",
+   "after_sha256_lf": "bcf4ae521c2fef879dc3f8f986a0d202d3d16552164397bb93357ea2c2298b13",
+   "edits": [
+    {
+     "location": "cabeçalho: o módulo tem duas unidades",
+     "old": "Lição M1-F07 · unidade 3",
+     "new": "Lição M1-F07 · unidade 2",
+     "occurrences": 1
+    },
+    {
+     "location": "pedido projetado: itálico em vez de sublinhados",
+     "old": "$(\"[data-pedido]\").textContent=t}",
+     "new": "$(\"[data-pedido]\").innerHTML=esc(t).replace(/_([^_]+)_/g,\"<i>$1</i>\")}",
+     "occurrences": 1
+    },
+    {
+     "location": "pistas do Atlas: itálico em vez de sublinhados",
+     "old": "return \"<li>\"+esc(p)+\"</li>\"",
+     "new": "return \"<li>\"+esc(p).replace(/_([^_]+)_/g,\"<i>$1</i>\")+\"</li>\"",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m1/painel-m1-f08/index.html": {
+   "base_sha256_lf": "9b81d892df24e787a9fb30deefe59b69a8ef28dad3b3ce8d4a84fbdd5cfee118",
+   "after_sha256_lf": "eefe9c31c74f02905e7e4ffa3238757a6132b38b650af3f7645503fe16f86aba",
+   "edits": [
+    {
+     "location": "cabeçalho: o módulo tem duas unidades",
+     "old": "Lição M1-F08 · unidade 3",
+     "new": "Lição M1-F08 · unidade 2",
+     "occurrences": 1
+    },
+    {
+     "location": "pedido projetado: itálico em vez de sublinhados",
+     "old": "$(\"[data-pedido]\").textContent=t}",
+     "new": "$(\"[data-pedido]\").innerHTML=esc(t).replace(/_([^_]+)_/g,\"<i>$1</i>\")}",
+     "occurrences": 1
+    },
+    {
+     "location": "pistas do Atlas: itálico em vez de sublinhados",
+     "old": "return \"<li>\"+esc(p)+\"</li>\"",
+     "new": "return \"<li>\"+esc(p).replace(/_([^_]+)_/g,\"<i>$1</i>\")+\"</li>\"",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m1/painel-m1-f10/index.html": {
+   "base_sha256_lf": "52d8026ccfbcbad444084339986fbe8a6bdbce404067dba852888511890474df",
+   "after_sha256_lf": "12345db6144c1d7f252ad46031d7a4d6aaa43b56791ef327a37c2af49dd61102",
+   "edits": [
+    {
+     "location": "cabeçalho: o módulo tem duas unidades",
+     "old": "Lição M1-F10 · unidade 3",
+     "new": "Lição M1-F10 · unidade 2",
+     "occurrences": 1
+    },
+    {
+     "location": "pedido projetado: itálico em vez de sublinhados",
+     "old": "$(\"[data-pedido]\").textContent=t}",
+     "new": "$(\"[data-pedido]\").innerHTML=esc(t).replace(/_([^_]+)_/g,\"<i>$1</i>\")}",
+     "occurrences": 1
+    },
+    {
+     "location": "pistas do Atlas: itálico em vez de sublinhados",
+     "old": "return \"<li>\"+esc(p)+\"</li>\"",
+     "new": "return \"<li>\"+esc(p).replace(/_([^_]+)_/g,\"<i>$1</i>\")+\"</li>\"",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m1/painel-m1-f11/index.html": {
+   "base_sha256_lf": "0c80143c21f4f2dcb415efab450221c6539da037786f9e52f1d8925c1201451d",
+   "after_sha256_lf": "a035bcea1f5080fc94a6d519785ace1e6531caa316996da5e1f0c9b0f9a2dca6",
+   "edits": [
+    {
+     "location": "cabeçalho: o módulo tem duas unidades",
+     "old": "Lição M1-F11 · unidade 3",
+     "new": "Lição M1-F11 · unidade 2",
+     "occurrences": 1
+    },
+    {
+     "location": "pedido projetado: itálico em vez de sublinhados",
+     "old": "$(\"[data-pedido]\").textContent=t}",
+     "new": "$(\"[data-pedido]\").innerHTML=esc(t).replace(/_([^_]+)_/g,\"<i>$1</i>\")}",
+     "occurrences": 1
+    },
+    {
+     "location": "pistas do Atlas: itálico em vez de sublinhados",
+     "old": "return \"<li>\"+esc(p)+\"</li>\"",
+     "new": "return \"<li>\"+esc(p).replace(/_([^_]+)_/g,\"<i>$1</i>\")+\"</li>\"",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m1/painel-m1-f15/index.html": {
+   "base_sha256_lf": "b88cc4a9ee3f9ad1189e5e5893699563bfcf294e3186b36b34d2c2ace1d422e3",
+   "after_sha256_lf": "0e347126d6e9a9be74342be999c63d06ce9422b09090f05792ae3ea21d6a5610",
+   "edits": [
+    {
+     "location": "cabeçalho: o módulo tem duas unidades",
+     "old": "Lição M1-F15 · unidade 3",
+     "new": "Lição M1-F15 · unidade 2",
+     "occurrences": 1
+    },
+    {
+     "location": "pedido projetado: itálico em vez de sublinhados",
+     "old": "$(\"[data-pedido]\").textContent=t}",
+     "new": "$(\"[data-pedido]\").innerHTML=esc(t).replace(/_([^_]+)_/g,\"<i>$1</i>\")}",
+     "occurrences": 1
+    },
+    {
+     "location": "pistas do Atlas: itálico em vez de sublinhados",
+     "old": "return \"<li>\"+esc(p)+\"</li>\"",
+     "new": "return \"<li>\"+esc(p).replace(/_([^_]+)_/g,\"<i>$1</i>\")+\"</li>\"",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m1/licao-m1-f06/index.html": {
+   "base_sha256_lf": "381244349da3d95bee8fe5b2580eb5e311055e3f568b1818bc08c4008cfe3ec2",
+   "after_sha256_lf": "cd08add500c241936f01a8161ac152b7b5baa63d94fa058d77707eaae5cad0e0",
+   "edits": [
+    {
+     "location": "CARTOES[3] [1]: corte marcado",
+     "old": "que o matam!»</p><p class=\\\"pr\\\" data-l=\\\"0-1\\\"><b>[2]</b> Álvaro Pais",
+     "new": "que o matam!» […]</p><p class=\\\"pr\\\" data-l=\\\"0-1\\\"><b>[2]</b> Álvaro Pais",
+     "occurrences": 1
+    },
+    {
+     "location": "CARTOES[10] rot: a pintura é de cerca de 1860",
+     "old": "\"rot\":\"Uma pintura de 1860\"",
+     "new": "\"rot\":\"Uma pintura do século XIX\"",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m1/licao-m1-f07/index.html": {
+   "base_sha256_lf": "f37cff048a71237d9fa3d0020578df391045c61f66f44859634baae1da67ddd1",
+   "after_sha256_lf": "cd3b356b7d2b810cae6c035fcbcdafd915a1c3010a982912845553bca5d8ccc6",
+   "edits": [
+    {
+     "location": "CARTOES[1] [2]: corte marcado",
+     "old": "corriam pera lá.</p>",
+     "new": "corriam pera lá […].</p>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m1/m1-promessa-do-cronista/index.html": {
+   "base_sha256_lf": "69830657a072f365147bf339b33c67398c59f4c85d4e30e0575d8f18c5808939",
+   "after_sha256_lf": "f5172d277453af4072348e8c6b1d2d29e5a3849fa3b82e6aafa84274c0b8e33e",
+   "edits": [
+    {
+     "location": "Ato 3: pergunta sem respostas defensáveis recusadas",
+     "old": "Toca nas duas palavras que te fazem ver a fome sem que o cronista a nomeie.",
+     "new": "Toca na palavra do gesto feito na terra e na palavra que mede o pouco que lá se acha: as duas que fazem ver a fome sem que o cronista a nomeie.",
+     "occurrences": 1
+    },
+    {
+     "location": "Ato 4: como na aula 9",
+     "old": "foi a peste no exército castelhano que levantou o cerco",
+     "new": "foi sobretudo a peste no exército castelhano que levantou o cerco",
+     "occurrences": 1
+    },
+    {
+     "location": "Ato 4: a marca explicada antes da aula 13",
+     "old": "E a fala do pajem não vem marcada como documentada ou imaginada, ao contrário do que a tua crónica do módulo te pede.",
+     "new": "E a fala do pajem não vem marcada como documentada (uma fonte regista-a) ou imaginada (quem escreve cria-a e assinala-a), como te vai pedir a crónica da aula 13.",
+     "occurrences": 1
+    },
+    {
+     "location": "Ato 4: verdadeiro ou falso",
+     "old": "Lopes assinala a fala do pajem como «documentada» ou «imaginada», como a tua crónica do módulo pede.",
+     "new": "Lopes assinala a fala do pajem como «documentada» (uma fonte regista-a) ou «imaginada» (quem escreve cria-a).",
+     "occurrences": 1
+    },
+    {
+     "location": "Ato 4: explicação",
+     "old": "A encomenda da tua crónica pede-te mais do que o cronista deu:",
+     "new": "A crónica da aula 13 vai pedir-te mais do que o cronista deu:",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m1/aulas/aula-11/index.html": {
+   "base_sha256_lf": "f8921325a04d863b376d345b8df62743551b3725552394e9081b76475eb8f7e3",
+   "after_sha256_lf": "002657b28cbead3e6702aabf84e336ab0365ff79c04bcb7edff44b3d38316639",
+   "edits": []
+  },
+  "m1/licao-m1-f01/index.html": {
+   "base_sha256_lf": "4540600cceafc48d168f3e789b72a4150f213c70f2d866b2e820d99bee8d2f14",
+   "after_sha256_lf": "e57b96d9b7e9c4e04eaf07c66208787281e150eec25c8131552ebf54cdc34beb",
+   "edits": [
+    {
+     "location": "CARTOES[16] p: o sentido da ordem",
+     "old": "Ordena as três descrições segundo a escala social tradicional dos manuais (não é uma regra válida para todos os autores).",
+     "new": "Ordena as três descrições segundo a escala social tradicional dos manuais, do estatuto mais alto para o mais baixo (não é uma regra válida para todos os autores).",
+     "occurrences": 1
+    },
+    {
+     "location": "CARTOES[16] p2: o sentido da ordem",
+     "old": "Ordena o esquema tradicional de estatutos, sabendo que os casos históricos nem sempre cabem nele.",
+     "new": "Ordena o esquema tradicional de estatutos, do mais alto para o mais baixo, sabendo que os casos históricos nem sempre cabem nele.",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m1/painel-m1-f01/index.html": {
+   "base_sha256_lf": "ac39b2c8dd97e3e030a60ec1082731aba69b0e8c15a8fe3a8e7883e6f1bd3636",
+   "after_sha256_lf": "a454886dbdaf7ffb736b993fed326adc481ae554489ea0bae5d7e802a5d1f792",
+   "edits": [
+    {
+     "location": "relâmpago e dados do painel: igual à lição",
+     "old": "Ordena as três descrições segundo a escala social tradicional dos manuais (não é uma regra válida para todos os autores).",
+     "new": "Ordena as três descrições segundo a escala social tradicional dos manuais, do estatuto mais alto para o mais baixo (não é uma regra válida para todos os autores).",
+     "occurrences": 2
+    },
+    {
+     "location": "relâmpago: opção sem sublinhados em bruto",
+     "old": "<option value=\"14\">A _Arte de Trovar_ foi escrita no tempo das cantigas. Porque vale tanto para quem as estuda hoje?</option>",
+     "new": "<option value=\"14\">A Arte de Trovar foi escrita no tempo das cantigas. Porque vale tanto para quem as estuda hoje?</option>",
+     "occurrences": 1
+    },
+    {
+     "location": "pedido projetado: itálico em vez de sublinhados",
+     "old": "$(\"[data-pedido]\").textContent=t}",
+     "new": "$(\"[data-pedido]\").innerHTML=esc(t).replace(/_([^_]+)_/g,\"<i>$1</i>\")}",
+     "occurrences": 1
+    },
+    {
+     "location": "pistas do Atlas: itálico em vez de sublinhados",
+     "old": "return \"<li>\"+esc(p)+\"</li>\"",
+     "new": "return \"<li>\"+esc(p).replace(/_([^_]+)_/g,\"<i>$1</i>\")+\"</li>\"",
+     "occurrences": 1
+    }
+   ]
+  },
+  "tarefas/m1-u1/index.html": {
+   "base_sha256_lf": "21b173b71ddd918afad5c7c6b64b5a064bc0a1c376be4db0f0a377b1a9ebcfe5",
+   "after_sha256_lf": "d9291310d15670e079a6d1d5a82f3cdda0ddf04b5914fb632e24c42fb24da354",
+   "edits": [
+    {
+     "location": "pergunta opcional única: sem número",
+     "old": "<h3 id=\"q1\">2. Em <i>amicum</i>",
+     "new": "<h3 id=\"q1\">Em <i>amicum</i>",
+     "occurrences": 1
+    },
+    {
+     "location": "pergunta opcional única: contagem",
+     "old": "Respostas exploradas: 0 de 2.",
+     "new": "Respostas exploradas: 0 de 1.",
+     "occurrences": 1
+    }
+   ]
+  },
+  "tarefas/m1-u2/index.html": {
+   "base_sha256_lf": "a367ccd1bfacea885cc6e47bc96226ca57dd0953c6dc7e2cd4cec40f57b6707c",
+   "after_sha256_lf": "df4af1614586be714e274f7a267bb5ebe30fcdf2bd53234a15d98ebbe4625f22",
+   "edits": [
+    {
+     "location": "pergunta opcional única: sem número",
+     "old": "<h3 id=\"q1\">2. Para uma crónica do grito",
+     "new": "<h3 id=\"q1\">Para uma crónica do grito",
+     "occurrences": 1
+    },
+    {
+     "location": "pergunta opcional única: contagem",
+     "old": "Respostas exploradas: 0 de 2.",
+     "new": "Respostas exploradas: 0 de 1.",
+     "occurrences": 1
+    },
+    {
+     "location": "dossiê: nome do cartão",
+     "old": "«Uma pintura de 1860»",
+     "new": "«Uma pintura do século XIX»",
+     "occurrences": 1
+    }
+   ]
+  },
+  "tarefas/m2-u1/index.html": {
+   "base_sha256_lf": "b9270d39290692fe11b7730e1624a4e10774f1b738d0f149be02ad0bc01f4da3",
+   "after_sha256_lf": "56d66973a45931c85d634ad76483452fbbb75e2499a4fb15b8a6a270df96532b",
+   "edits": [
+    {
+     "location": "pergunta opcional única: sem número",
+     "old": "<h3 id=\"q1\">2. No desfecho, Pêro",
+     "new": "<h3 id=\"q1\">No desfecho, Pêro",
+     "occurrences": 1
+    },
+    {
+     "location": "pergunta opcional única: contagem",
+     "old": "Respostas exploradas: 0 de 2.",
+     "new": "Respostas exploradas: 0 de 1.",
+     "occurrences": 1
+    }
+   ]
+  },
+  "tarefas/m2-u2/index.html": {
+   "base_sha256_lf": "94178812cc39c1017390ca2b243198040a385f19f9ecc545ce6beaf209458df3",
+   "after_sha256_lf": "01b3f20a3b0294f559ce0528cd2b2318e94ff3b444627a4c98ed971cdce66c36",
+   "edits": [
+    {
+     "location": "pergunta opcional única: sem número",
+     "old": "<h3 id=\"q1\">2. Num anúncio de exemplo",
+     "new": "<h3 id=\"q1\">Num anúncio de exemplo",
+     "occurrences": 1
+    },
+    {
+     "location": "pergunta opcional única: contagem",
+     "old": "Respostas exploradas: 0 de 2.",
+     "new": "Respostas exploradas: 0 de 1.",
+     "occurrences": 1
+    }
+   ]
+  },
+  "docs/pedagogia/tarefas-escolha/m1-u1.json": {
+   "base_sha256_lf": "950fdaf4165891336fe438ea42eb25b00505d20ad425d9b95c665c16a0c46fad",
+   "after_sha256_lf": "99bc6d4bed977872aaa822125dfd7528b3fae8f3703e4082d317a5a638a1f7c8",
+   "edits": [
+    {
+     "location": "dados: sem número",
+     "old": "\"pergunta\": \"2. Em <i>amicum</i>",
+     "new": "\"pergunta\": \"Em <i>amicum</i>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "docs/pedagogia/tarefas-escolha/m1-u2.json": {
+   "base_sha256_lf": "be84feb0d47814cca24a3ac6c340df3d3bfcf2b61650d4d12caec15330918204",
+   "after_sha256_lf": "99cf14145778e1abbd86e3087fc0d1a954646d1923c75391c860c5cdbaea27fd",
+   "edits": [
+    {
+     "location": "dados: sem número",
+     "old": "\"pergunta\": \"2. Para uma crónica",
+     "new": "\"pergunta\": \"Para uma crónica",
+     "occurrences": 1
+    },
+    {
+     "location": "dados do dossiê",
+     "old": "«Uma pintura de 1860»",
+     "new": "«Uma pintura do século XIX»",
+     "occurrences": 1
+    }
+   ]
+  },
+  "scripts/tarefas_escolha.py": {
+   "base_sha256_lf": "7d16e89f5cb34aa0d696540b1f575c6095f06d865237632edc16c5e6b267d219",
+   "after_sha256_lf": "2d5ea00885147b8647b7624ddfe6af367c525b8e45f57e8efac9f646ad0cff79",
+   "edits": [
+    {
+     "location": "gerador: uma pergunta opcional",
+     "old": "Respostas exploradas: 0 de 2.",
+     "new": "Respostas exploradas: 0 de 1.",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m1/aulas/aula-01/index.html": {
+   "base_sha256_lf": "448f53472810f79bfc11a2da8029cdab07b07fa99a9dc8c261e1e1159af52571",
+   "after_sha256_lf": "7f5051f7a3f23eb09d0da0f1e0c635da5b984eafb89212086b5f89e793faa7b8",
+   "edits": [
+    {
+     "location": "guião: itálico em vez de sublinhados",
+     "old": "_Arte de Trovar_",
+     "new": "<i>Arte de Trovar</i>",
+     "occurrences": 3
+    }
+   ]
+  },
+  "m1/aulas/aula-12/index.html": {
+   "base_sha256_lf": "27d97abce13d253efbfe3051be7ff69816b21346e8004dc7e4cb9b76935822e4",
+   "after_sha256_lf": "12e594ee66bd6936d0dd9bca38ed61023788ef8784529d7212b67f9d32a02911",
+   "edits": [
+    {
+     "location": "guião: itálico",
+     "old": "(_ca_, porque; _d&#x27;el-rei_, do rei)",
+     "new": "(<i>ca</i>, porque; <i>d&#x27;el-rei</i>, do rei)",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m1/licao-m1-f04/index.html": {
+   "base_sha256_lf": "c124e2c19516377ef81642e1821f8bd6198dca9a79f3448a73ab695955b35edb",
+   "after_sha256_lf": "39a1c008cb9bdaffd51f803a2dafc152737bd9ef9efe84164523bc476864fb62",
+   "edits": [
+    {
+     "location": "CARTOES[13] fe[3]: título em itálico",
+     "old": "A Arte de Trovar não os separa pelo nome do alvo",
+     "new": "A _Arte de Trovar_ não os separa pelo nome do alvo",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m1/licao-m1-f19/index.html": {
+   "base_sha256_lf": "d4468b601008e0a7333ffa0416e01198cdb59a20b698b1934e6fd48188fa87d5",
+   "after_sha256_lf": "62c17230aebf2ba98cf0f736bc3382bdf5459bb29b9333e17c6b6c533b86fe5c",
+   "edits": [
+    {
+     "location": "CARTOES[1]: nome do códice",
+     "old": "no pergaminho Vindel",
+     "new": "no Pergaminho Vindel",
+     "occurrences": 1
+    },
+    {
+     "location": "CARTOES[4] alt: nome do códice",
+     "old": "Pormenor do pergaminho Vindel",
+     "new": "Pormenor do Pergaminho Vindel",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m1/aulas/aula-05/index.html": {
+   "base_sha256_lf": "16b6aeee48668f081c28347b588e90ce564b9c55e0e24d173115948d79619dbb",
+   "after_sha256_lf": "3cfc04ec6adc397406547d10f9b529f991ad7db0da3a79b02e667b4fe986f5f9",
+   "edits": [
+    {
+     "location": "guião: nome do códice",
+     "old": "o pergaminho Vindel numa vitrina",
+     "new": "o Pergaminho Vindel numa vitrina",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m1/licao-m1-f02/index.html": {
+   "base_sha256_lf": "4261eae4323d21da495a12787fb1fb378a5b2b3cc8e6f31fe5af291c50a17080",
+   "after_sha256_lf": "7b607fb59fc103837f9fb8dddc8a0a499ef0838292907416bc60a37f2e4a6c3b",
+   "edits": [
+    {
+     "location": "vídeo: data-titulo sem o nome automático do canal",
+     "old": "cantada pelos DOA, DOA, grupo galego, no canal DOA - Topic;",
+     "new": "cantada pelos DOA, grupo galego;",
+     "occurrences": 1
+    },
+    {
+     "location": "vídeo: data-m sem o nome automático do canal",
+     "old": "data-m=\\\"DOA, grupo galego, no canal DOA - Topic;",
+     "new": "data-m=\\\"DOA, grupo galego;",
+     "occurrences": 1
+    },
+    {
+     "location": "vídeo: legenda sem o nome automático do canal",
+     "old": "ju-m\\\">DOA, grupo galego, no canal DOA - Topic;",
+     "new": "ju-m\\\">DOA, grupo galego;",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m1/aulas/aula-07/index.html": {
+   "base_sha256_lf": "56764a3654a8b70f8f8cbdc19eacb815fa5cb35f34129a4c9082e9ec8c589ddb",
+   "after_sha256_lf": "1891967e6d1d6419c1eb4e75faebcad753b33c73e0513ae91f1456fa5c84e9f6",
+   "edits": [
+    {
+     "location": "guião: nome do cartão",
+     "old": "A pintura de 1860 como fonte",
+     "new": "A pintura do século XIX como fonte",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/licao-m4-f25/index.html": {
+   "base_sha256_lf": "b15a8df3f7b056fd3613a7dcb281be1b5d6d295af443cd5eae753352bddfad8e",
+   "after_sha256_lf": "19fa5a23373642c7b19ebb02b9590bffb1cf14ea4e88304eb9c6699aa6b9bbbd",
+   "edits": [
+    {
+     "location": "CARTOES[6] p2: a variante diz o mesmo que p (v:true)",
+     "old": "\"p2\":\"«Ouvem e não falam» serve só para elogiar os peixes.\"",
+     "new": "\"p2\":\"«Ouvem e não falam» elogia os peixes e, ao mesmo tempo, critica os homens.\"",
+     "occurrences": 1
+    },
+    {
+     "location": "CARTOES[3] fe[1]: não há texto A",
+     "old": "«o sal não salga, e os pregadores não pregam a verdadeira doutrina» (texto A, [1]).",
+     "new": "«o sal não salga, e os pregadores não pregam a verdadeira doutrina» ([1]).",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/licao-m4-f01/index.html": {
+   "base_sha256_lf": "d2146eee4148ed75b2d4a30b215bb72c855c52c32f682a18ae05749ef0ceb545",
+   "after_sha256_lf": "e8df91c1bb1998a831edcc3611e5ef3581a28c1fe4a6b26dd7665fb5539b1593",
+   "edits": [
+    {
+     "location": "CARTOES[5] ler mais: datas da viagem a Roma e do breve",
+     "old": "em 1669 obtém em Roma a proteção do papa.",
+     "new": "em 1669 parte para Roma e, em 1675, regressa com um breve do papa que o isenta da Inquisição portuguesa.",
+     "occurrences": 1
+    },
+    {
+     "location": "CARTOES[8]: sem o vídeo fora de contexto",
+     "old": "<p class=\\\"ex-antes\\\"><b>Antes de ver</b>Repara numa palavra ou numa imagem que o vídeo associa a Vieira.</p>",
+     "new": "<p class=\\\"ex-antes\\\"><b>Antes de ler</b>Repara no que cada um faz quando não o ouvem.</p>",
+     "occurrences": 1
+    },
+    {
+     "location": "CARTOES[8]: sem o vídeo fora de contexto",
+     "old": "<b>Depois de ver</b>Essa palavra ou imagem também serve para Santo António?",
+     "new": "<b>Depois de ler</b>O que muda de Arimino para São Luís, e o que fica igual?",
+     "occurrences": 1
+    },
+    {
+     "location": "CARTOES[8]: sai o vídeo do Câmara Clara, fora de contexto (regra de 28/10)",
+     "old": "muda o auditório, não a doutrina.</p><div class=\\\"ju-video\\\" data-yt=\\\"TqEqQCY35B0\\\" data-titulo=\\\"Vieira no Câmara Clara, RTP, 2008, com Isabel Almeida e José Pedro Paiva\\\" data-t=\\\"Vieira no Câmara Clara\\\" data-m=\\\"RTP, 2008, com Isabel Almeida e José Pedro Paiva\\\" data-dur=\\\"1 min\\\" data-rot=\\\"Ver o vídeo\\\"><p class=\\\"ju-t\\\">Vieira no Câmara Clara</p><p class=\\\"ju-m\\\">RTP, 2008, com Isabel Almeida e José Pedro Paiva</p><button type=\\\"button\\\">Ver o vídeo <span>(1 min)</span></button></div><p class=\\\"ju-yt\\\"><a href=\\\"https://www.youtube.com/watch?v=TqEqQCY35B0\\\" target=\\\"_blank\\\" rel=\\\"noopener\\\">Ver no YouTube</a></p>",
+     "new": "muda o auditório, não a doutrina.</p>",
+     "occurrences": 1
+    },
+    {
+     "location": "CARTOES[7] f: crédito da imagem",
+     "old": "vale por quem, em São Luís, quer ser mais do que é.\"",
+     "new": "vale por quem, em São Luís, quer ser mais do que é. Gravura: Allen & Ginter, _Peixe-voador_, cromolitografia, 1889, The Met. Domínio público.\"",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/recursos/tpc-entrada.js": {
+   "base_sha256_lf": "fc4f5f8fbe2825dd78d4dfefa75577594194dfdc97b0861436c6b26118b2935c",
+   "after_sha256_lf": "6fe893a4958e19f20dde7e13f37484f163228ffd987a7aec87f117548ef55367",
+   "edits": [
+    {
+     "location": "F28 CARTOES[3]: sem travessão",
+     "old": "\"titulo\":\"Feliz — e com medo?\"",
+     "new": "\"titulo\":\"Feliz e com medo?\"",
+     "occurrences": 1
+    },
+    {
+     "location": "F28 CARTOES[14]: sem travessão",
+     "old": "O passado ainda não entrou em cena — e já muda o presente.",
+     "new": "O passado ainda não entrou em cena, e já muda o presente.",
+     "occurrences": 1
+    },
+    {
+     "location": "F28 CARTOES[3]: citação exata de Garrett",
+     "old": "a expressão “não me deixaram gozar” impede",
+     "new": "a expressão “me não deixaram gozar” impede",
+     "occurrences": 1
+    }
+   ]
+  },
+  "tarefas/m4-u1/index.html": {
+   "base_sha256_lf": "a41030e5f8ef4916f5a9388d2dd3886734cdc04cd95b3339ac92ba67045b5202",
+   "after_sha256_lf": "34719ea4581bb4e0db5b49c0aed556d0c90e91d1c7c451cf3fe8c2c86f08144a",
+   "edits": [
+    {
+     "location": "produzir: sem «folhas»",
+     "old": "Com consulta durante toda a tarefa. Produz nas tuas folhas.",
+     "new": "Com consulta durante toda a tarefa. Produz em papel.",
+     "occurrences": 1
+    },
+    {
+     "location": "entregar: sem «folha» nem travessão",
+     "old": "<strong>Síntese na folha:</strong> duas linhas — uma aprendizagem e uma escolha do teu trabalho que a mostra.",
+     "new": "<strong>Síntese em papel:</strong> duas linhas, com uma aprendizagem e uma escolha do teu trabalho que a mostra.",
+     "occurrences": 1
+    },
+    {
+     "location": "sem «·» na frase",
+     "old": "<summary>Experimentar · duas perguntas opcionais</summary>",
+     "new": "<summary>Experimentar: duas perguntas opcionais</summary>",
+     "occurrences": 1
+    },
+    {
+     "location": "abertura: sem «·» na frase",
+     "old": "Guião de 150 a 200 palavras · apresentação individual de 3 a 4 minutos.",
+     "new": "Guião de 150 a 200 palavras e apresentação individual de 3 a 4 minutos.",
+     "occurrences": 1
+    },
+    {
+     "location": "relembrar: sem «·»",
+     "old": "Peixes e vícios · escolher o traço e confirmar a citação.",
+     "new": "Peixes e vícios: escolher o traço e confirmar a citação.",
+     "occurrences": 1
+    },
+    {
+     "location": "relembrar: sem «·»",
+     "old": "Comparação e objeção · distinguir dependência de colaboração.",
+     "new": "Comparação e objeção: distinguir dependência de colaboração.",
+     "occurrences": 1
+    },
+    {
+     "location": "experimentar 2: a resposta certa explica porquê",
+     "old": "data-response=\"Responde à dificuldade com uma prova do texto.\"",
+     "new": "data-response=\"Uma objeção forte ataca a ligação entre o peixe e o comportamento: obriga-te a voltar ao texto para provar a comparação.\"",
+     "occurrences": 1
+    }
+   ]
+  },
+  "tarefas/m4-u2/index.html": {
+   "base_sha256_lf": "6d73ee74298d62c7fdd95ce3d5bedeff08f32333692f8d76e46c77aec76bfd71",
+   "after_sha256_lf": "4f7ac3871f4d2fa12795e2d48b9393e0237d00670616affa4649f996b677e72f",
+   "edits": [
+    {
+     "location": "produzir: sem «folhas»",
+     "old": "Com consulta durante toda a tarefa. Produz nas tuas folhas.",
+     "new": "Com consulta durante toda a tarefa. Produz em papel.",
+     "occurrences": 1
+    },
+    {
+     "location": "entregar: sem «folha» nem travessão",
+     "old": "<strong>Síntese na folha:</strong> duas linhas — uma aprendizagem e uma escolha do teu trabalho que a mostra.",
+     "new": "<strong>Síntese em papel:</strong> duas linhas, com uma aprendizagem e uma escolha do teu trabalho que a mostra.",
+     "occurrences": 1
+    },
+    {
+     "location": "sem «·» na frase",
+     "old": "<summary>Experimentar · duas perguntas opcionais</summary>",
+     "new": "<summary>Experimentar: duas perguntas opcionais</summary>",
+     "occurrences": 1
+    },
+    {
+     "location": "abertura: sem «·» na frase",
+     "old": "Apreciação crítica com título · 180 a 240 palavras.",
+     "new": "Apreciação crítica com título, em 180 a 240 palavras.",
+     "occurrences": 1
+    },
+    {
+     "location": "relembrar: sem «·»",
+     "old": "Texto e encenação · distinguir observação, interpretação e juízo.",
+     "new": "Texto e encenação: distinguir observação, interpretação e juízo.",
+     "occurrences": 1
+    },
+    {
+     "location": "relembrar: a F27 só vem na unidade 3",
+     "old": "<a href=\"../../m4/licao-m4-f27/\" target=\"_blank\" rel=\"noopener\">Ideia, prova e explicação · ligar a citação ao comentário.</a>",
+     "new": "<a href=\"../../m4/m4-frei-luis-quem-sabia/\" target=\"_blank\" rel=\"noopener\">Quem sabia, e quando: ligar a prova à interpretação.</a>",
+     "occurrences": 1
+    },
+    {
+     "location": "relembrar: sem «·»",
+     "old": "Ato I · recuperar uma cena para a alternativa de leitura.",
+     "new": "Ato I: recuperar uma cena para a alternativa de leitura.",
+     "occurrences": 1
+    },
+    {
+     "location": "título como no índice e no guia",
+     "old": "<title>Aula de tarefa · Apreciação crítica de TPC: Frei Luís de Sousaaa · M4</title>",
+     "new": "<title>Aula de tarefa · Apreciação crítica do espetáculo · M4</title>",
+     "occurrences": 1
+    },
+    {
+     "location": "título como no índice e no guia",
+     "old": ">Apreciação crítica de TPC</h1>",
+     "new": ">Apreciação crítica do espetáculo</h1>",
+     "occurrences": 1
+    },
+    {
+     "location": "enunciado: títulos em itálico",
+     "old": "Escreve sobre TPC: Frei Luís de Sousaaa, de Raquel Castro,",
+     "new": "Escreve sobre <i>TPC: Frei Luís de Sousaaa</i>, de Raquel Castro,",
+     "occurrences": 1
+    },
+    {
+     "location": "enunciado: títulos em itálico",
+     "old": "com uma passagem de Frei Luís de Sousa, de Garrett:",
+     "new": "com uma passagem de <i>Frei Luís de Sousa</i>, de Garrett:",
+     "occurrences": 1
+    }
+   ]
+  },
+  "tarefas/m4-u3-discurso/index.html": {
+   "base_sha256_lf": "3bede372bb9f8e043e282ab04673dcc3dea466d1066b0ae81be297f43e693aa6",
+   "after_sha256_lf": "7ed4b7244c99ade47865c747b9746963b104372fee901add9a14b03448e95b56",
+   "edits": [
+    {
+     "location": "produzir: sem «folhas»",
+     "old": "Com consulta durante toda a tarefa. Produz nas tuas folhas.",
+     "new": "Com consulta durante toda a tarefa. Produz em papel.",
+     "occurrences": 1
+    },
+    {
+     "location": "entregar: sem «folha» nem travessão",
+     "old": "<strong>Síntese na folha:</strong> duas linhas — uma aprendizagem e uma escolha do teu trabalho que a mostra.",
+     "new": "<strong>Síntese em papel:</strong> duas linhas, com uma aprendizagem e uma escolha do teu trabalho que a mostra.",
+     "occurrences": 1
+    },
+    {
+     "location": "sem «·» na frase",
+     "old": "<summary>Experimentar · duas perguntas opcionais</summary>",
+     "new": "<summary>Experimentar: duas perguntas opcionais</summary>",
+     "occurrences": 1
+    },
+    {
+     "location": "abertura: sem «·» na frase",
+     "old": "Discurso de 220 a 280 palavras · apresentação individual de 2 minutos.",
+     "new": "Discurso de 220 a 280 palavras e apresentação individual de 2 minutos.",
+     "occurrences": 1
+    },
+    {
+     "location": "relembrar: sem «·»",
+     "old": "Regra, argumentos e apelo · rever as peças do discurso.",
+     "new": "Regra, argumentos e apelo: rever as peças do discurso.",
+     "occurrences": 1
+    },
+    {
+     "location": "relembrar: sem «·»",
+     "old": "Uma ideia precisa de prova · ligar razões e exemplos.",
+     "new": "Uma ideia precisa de prova: ligar razões e exemplos.",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/index.html": {
+   "base_sha256_lf": "7c7883bd8ba9fcc0abe5e44a2c88e96b178ad3310e62fdcdb48f17c0e712c7f0",
+   "after_sha256_lf": "910b4907dac8f695d561fa2994bf9e6455bed3f72b085d872e85c9003a173242",
+   "edits": [
+    {
+     "location": "como no M1: sem «folhas»",
+     "old": "produção nas tuas folhas, uma síntese simples integrada e fotografias no Teams",
+     "new": "produção em papel, uma síntese simples integrada e fotografias no Teams",
+     "occurrences": 1
+    },
+    {
+     "location": "como no M1: sem «folhas»",
+     "old": "síntese integrada · folhas próprias e fotografias no Teams.",
+     "new": "síntese integrada · trabalho em papel e fotografias no Teams.",
+     "occurrences": 3
+    },
+    {
+     "location": "aula 9: a F28 já não tem quadro",
+     "old": "Depois do LU.CA: recordar o espetáculo, ler a primeira didascália e olhar um quadro.",
+     "new": "Depois do LU.CA: recordar o espetáculo, ler a primeira didascália e a primeira fala de Madalena e pô-las em cena.",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m7/index.html": {
+   "base_sha256_lf": "d670c4cc33bca3b5c17ec64e381fc713b4a8ead2ea475d0f16a2e7adf7f45096",
+   "after_sha256_lf": "62011b3ceb4e0363e05ba3ba192746c56c4183a2cbfa9eb22b5582e7143921d0",
+   "edits": [
+    {
+     "location": "como no M1: sem «folhas»",
+     "old": "produção nas tuas folhas, uma síntese simples integrada e fotografias no Teams",
+     "new": "produção em papel, uma síntese simples integrada e fotografias no Teams",
+     "occurrences": 1
+    },
+    {
+     "location": "como no M1: sem «folhas»",
+     "old": "síntese integrada · folhas próprias e fotografias no Teams.",
+     "new": "síntese integrada · trabalho em papel e fotografias no Teams.",
+     "occurrences": 3
+    }
+   ]
+  },
+  "m4/guia-da-tarefa-m4/index.html": {
+   "base_sha256_lf": "dee9bed0bf2316b765e5c1cec128d67f7b4a94776b8ed55e73091ac44e1ccba3",
+   "after_sha256_lf": "017b6b5a9d310db138402a9e23e96709f86bb4f884503b4e80a0c4e2082fa991",
+   "edits": [
+    {
+     "location": "como no M1: sem «folhas»",
+     "old": "Escreves em folhas próprias, fazes",
+     "new": "Escreves em papel, fazes",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m7/guia-da-tarefa-m7/index.html": {
+   "base_sha256_lf": "0833dafb3b0e3eb020320827867ce86035dba3a0859a2064498546f19939cf64",
+   "after_sha256_lf": "5f6171ad94dadd5723f572d37bf1352b9d3be9c6b1bfa9c01300105b1ef6daea",
+   "edits": [
+    {
+     "location": "como no M1: sem «folhas»",
+     "old": "Trabalhas em folhas próprias, fazes",
+     "new": "Trabalhas em papel, fazes",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/mapa-do-modulo-m4/index.html": {
+   "base_sha256_lf": "8926d1ac894d3ea39acf961235da9ba708e458beec3250cd900c9009b1677bc3",
+   "after_sha256_lf": "2bb0db4b050911ced29273e3cbc6ace5500eb53f1622cf23fef36bab29253abd",
+   "edits": [
+    {
+     "location": "como no M1: sem «folha»",
+     "old": "A síntese tem duas linhas numa folha própria:",
+     "new": "A síntese tem duas linhas, no papel do trabalho:",
+     "occurrences": 1
+    },
+    {
+     "location": "ligação à aula de tarefa, não ao arquivo escondido",
+     "old": "<a href=\"../#desafio-1\">Aula de tarefa · 90 min · síntese integrada</a>",
+     "new": "<a href=\"../#tarefa-unidade-1\">Aula de tarefa · 90 min · síntese integrada</a>",
+     "occurrences": 1
+    },
+    {
+     "location": "ligação à aula de tarefa, não ao arquivo escondido",
+     "old": "<a href=\"../#desafio-2\">Aula de tarefa · 90 min · síntese integrada</a>",
+     "new": "<a href=\"../#tarefa-unidade-2\">Aula de tarefa · 90 min · síntese integrada</a>",
+     "occurrences": 1
+    },
+    {
+     "location": "ligação à aula de tarefa, não ao arquivo escondido",
+     "old": "<a href=\"../#desafio-3\">Aula de tarefa · 90 min · síntese integrada</a>",
+     "new": "<a href=\"../#tarefa-unidade-3\">Aula de tarefa · 90 min · síntese integrada</a>",
+     "occurrences": 1
+    },
+    {
+     "location": "Para ver: a lição onde a imagem aparece",
+     "old": "D. João de Portugal (Miguel Ângelo Lupi, 1863). Domínio público. <a href=\"https://pedrohfernandes-klk.github.io/pt/m4/licao-m4-f07/\">Lição M4-F07</a>",
+     "new": "D. João de Portugal (Miguel Ângelo Lupi, 1863). Domínio público. <a href=\"https://pedrohfernandes-klk.github.io/pt/m4/licao-m4-f08/\">Lição M4-F08</a>",
+     "occurrences": 1
+    },
+    {
+     "location": "Para ver: a lição onde a imagem aparece",
+     "old": "lista de personagens da primeira edição (1844). Domínio público. <a href=\"https://pedrohfernandes-klk.github.io/pt/m4/licao-m4-f07/\">Lição M4-F07</a>",
+     "new": "lista de personagens da primeira edição (1844). Domínio público. <a href=\"https://pedrohfernandes-klk.github.io/pt/m4/licao-m4-f08/\">Lição M4-F08</a>",
+     "occurrences": 1
+    },
+    {
+     "location": "Para ver: imagem sem lição",
+     "old": "Almeida Garrett (Pedro Augusto Guglielmi, 1844). Domínio público. <a href=\"https://pedrohfernandes-klk.github.io/pt/m4/licao-m4-f07/\">Lição M4-F07</a>",
+     "new": "Almeida Garrett (Pedro Augusto Guglielmi, 1844). Domínio público.",
+     "occurrences": 1
+    },
+    {
+     "location": "Para ver: a lição onde a imagem aparece",
+     "old": "Cícero denuncia Catilina no Senado (Cesare Maccari, 1889). Domínio público. <a href=\"https://pedrohfernandes-klk.github.io/pt/m4/licao-m4-f14/\">Lição M4-F14</a>",
+     "new": "Cícero denuncia Catilina no Senado (Cesare Maccari, 1889). Domínio público. <a href=\"https://pedrohfernandes-klk.github.io/pt/m4/licao-m4-f10/\">Lição M4-F10</a>",
+     "occurrences": 1
+    },
+    {
+     "location": "Para ver: imagem sem lição",
+     "old": "Cabeça de Demóstenes, mármore, cópia romana (século II d.C., The Met). Domínio público (The Met, Open Access). <a href=\"https://pedrohfernandes-klk.github.io/pt/m4/licao-m4-f14/\">Lição M4-F14</a>",
+     "new": "Cabeça de Demóstenes, mármore, cópia romana (século II d.C., The Met). Domínio público (The Met, Open Access).",
+     "occurrences": 1
+    },
+    {
+     "location": "Para ver: a lição onde a imagem aparece",
+     "old": "D. Sebastião (Cristóvão de Morais, c. 1571-1574, MNAA). Domínio público.",
+     "new": "D. Sebastião (Cristóvão de Morais, c. 1571-1574, MNAA). Domínio público. <a href=\"https://pedrohfernandes-klk.github.io/pt/m4/licao-m4-f26/\">Lição M4-F26</a>",
+     "occurrences": 1
+    },
+    {
+     "location": "cabeçalho: a última unidade é a 3",
+     "old": "e fecha com <span class=\"q\">«O que se perde quando se perde o nome?»</span>",
+     "new": "e fecha com <span class=\"q\">«Como se defende uma regra em dois minutos?»</span>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m7/mapa-do-modulo-m7/index.html": {
+   "base_sha256_lf": "e64a1a6e404ec34fbadf4069b9dc48e47fc12bf63a3690f36c9aca33aed89b17",
+   "after_sha256_lf": "a27f76115964a5c19a6e8e5076ec9f5dfa0540af7c5ac174005b9266d432dfff",
+   "edits": [
+    {
+     "location": "como no M1: sem «folha»",
+     "old": "A síntese tem duas linhas numa folha própria:",
+     "new": "A síntese tem duas linhas, no papel do trabalho:",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/painel-m4-f28/index.html": {
+   "base_sha256_lf": "8692e6217a321b4e99c2cd8e5c995da45938c677065762d52c460a23b071d61e",
+   "after_sha256_lf": "a4189d3f26496cfd72bbc53ca8681f8e588da1397a177127e5bbb4642c05a8e1",
+   "edits": [
+    {
+     "location": "sem «feedback»",
+     "old": "Mantêm-se sete atividades com feedback imediato",
+     "new": "Mantêm-se sete atividades com correção imediata",
+     "occurrences": 1
+    },
+    {
+     "location": "sem «ficha»",
+     "old": "não constitui uma segunda entrega da ficha de 45 minutos.",
+     "new": "não constitui uma segunda entrega da lição de 45 minutos.",
+     "occurrences": 1
+    },
+    {
+     "location": "sem «ficha»",
+     "old": "esta ficha é a entrada de 45 minutos.",
+     "new": "esta lição é a entrada de 45 minutos.",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/aulas/aula-08/index.html": {
+   "base_sha256_lf": "ffcf41121f17868d759f7e17d92f069082deb8466596b8f5a3021608700a447c",
+   "after_sha256_lf": "c7aebb0f6e12c76c9950ece071307a9fb9d3b097be4b1d88c1e81062665d58a6",
+   "edits": [
+    {
+     "location": "sem «ficha»",
+     "old": "Quem precisar consulta a ficha.",
+     "new": "Quem precisar consulta a lição.",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/aulas/aula-15/index.html": {
+   "base_sha256_lf": "63486daaa2bfa5316666fe70a88a57a01b3417e5cedbaee82677ca13aaebd617",
+   "after_sha256_lf": "9adb3327d29fbd1f31e81697d998faa4561295ed9e393367c591e178d897c2a8",
+   "edits": [
+    {
+     "location": "sem «ficha»",
+     "old": "Quem precisar consulta a ficha.",
+     "new": "Quem precisar consulta a lição.",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/aulas/aula-18/index.html": {
+   "base_sha256_lf": "91c8b849c550997ef9f8f5af15d84e646e4c9a2f0378122420d6ec5f4a8d97a5",
+   "after_sha256_lf": "751a99ae23784b50305c48ed7ee767855fd946f4a3353d54918cb924de7844cb",
+   "edits": [
+    {
+     "location": "sem «ficha»",
+     "old": "Quem precisar consulta a ficha.",
+     "new": "Quem precisar consulta a lição.",
+     "occurrences": 1
+    }
+   ]
+  },
+  "tarefas/m4-u3/index.html": {
+   "base_sha256_lf": "fc835166088ff3dbebeffaf8078912dc5934354f11e106f3bb58c58c3c5dd8ea",
+   "after_sha256_lf": "ca672868b9d8c009c098f336cdfcf4e0e9c42fa0532e522255004637016ff1d8",
+   "edits": [
+    {
+     "location": "apoio de comparação: sem «ficha», «folhas» nem «HTML»",
+     "old": "Podes consultar os textos, as fichas e os teus apontamentos",
+     "new": "Podes consultar os textos, as lições e os teus apontamentos",
+     "occurrences": 1
+    },
+    {
+     "location": "apoio de comparação: sem «ficha», «folhas» nem «HTML»",
+     "old": "excerto já trabalhado na ficha M4-F11",
+     "new": "excerto já trabalhado na lição M4-F11",
+     "occurrences": 1
+    },
+    {
+     "location": "apoio de comparação: sem «ficha», «folhas» nem «HTML»",
+     "old": "fala já trabalhada na ficha M4-F11",
+     "new": "fala já trabalhada na lição M4-F11",
+     "occurrences": 1
+    },
+    {
+     "location": "apoio de comparação: sem «ficha», «folhas» nem «HTML»",
+     "old": "Folhas legíveis, entrega confirmada",
+     "new": "Fotografias legíveis, entrega confirmada",
+     "occurrences": 1
+    },
+    {
+     "location": "apoio de comparação: sem «ficha», «folhas» nem «HTML»",
+     "old": "As fotografias mostram as folhas inteiras, nítidas e pela ordem de leitura.",
+     "new": "As fotografias mostram o trabalho inteiro, nítido e pela ordem de leitura.",
+     "occurrences": 1
+    },
+    {
+     "location": "apoio de comparação: sem «ficha», «folhas» nem «HTML»",
+     "old": "Anexa as fotografias legíveis das folhas e confirma a entrega.",
+     "new": "Anexa as fotografias legíveis do trabalho e confirma a entrega.",
+     "occurrences": 1
+    },
+    {
+     "location": "apoio de comparação: sem «ficha», «folhas» nem «HTML»",
+     "old": "Rever a ficha e os textos trabalhados",
+     "new": "Rever a lição e os textos trabalhados",
+     "occurrences": 1
+    },
+    {
+     "location": "apoio de comparação: sem «ficha», «folhas» nem «HTML»",
+     "old": "Leitura e preparação no HTML",
+     "new": "Leitura e preparação na página",
+     "occurrences": 1
+    },
+    {
+     "location": "metadados: é o apoio, não a tarefa",
+     "old": "<title>Tarefa · A palavra contra o poder · M4</title>",
+     "new": "<title>Apoio de comparação · A palavra contra o poder · M4</title>",
+     "occurrences": 1
+    },
+    {
+     "location": "metadados: é o apoio, não a tarefa",
+     "old": "content=\"Tarefa final da unidade 3 de Português M4: preparação breve, produção em papel e revisão numa aula de 90 minutos.\"",
+     "new": "content=\"Apoio de comparação da unidade 3 de Português M4: Vieira e Garrett, em 100 a 140 palavras.\"",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/aulas/index.html": {
+   "base_sha256_lf": "57c6eba056fc596129a76cd5a242c71c5eeab6bc53642753d061522c8111867e",
+   "after_sha256_lf": "8aab7b5df57d43b3d6004dec5265a438b4c49154b7185ce407f37c3a2bf39379",
+   "edits": [
+    {
+     "location": "aula 9: a F28 já não tem quadro",
+     "old": "Depois do LU.CA: recordar o espetáculo, ler a primeira didascália e olhar um quadro.",
+     "new": "Depois do LU.CA: recordar o espetáculo, ler a primeira didascália e a primeira fala de Madalena e pô-las em cena.",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/licao-m4-f08/index.html": {
+   "base_sha256_lf": "bec063242208e3572b0db6b3e5a8744732c8dd3245e3955a0663d256bb8d1368",
+   "after_sha256_lf": "007475e23ceca9cc4a1c8a3d4698a43069dc11ad490e7864f85e4540f4a30841",
+   "edits": [
+    {
+     "location": "CARTOES[0]: vinte e um anos, como na peça",
+     "old": "Vinte anos depois da batalha, um velho peregrino",
+     "new": "Vinte e um anos depois da batalha, um velho peregrino",
+     "occurrences": 1
+    },
+    {
+     "location": "CARTOES[15]: vinte e um anos, como na peça",
+     "old": "Vinte anos depois, a mulher está casada com Manuel",
+     "new": "Vinte e um anos depois da batalha, a mulher está casada com Manuel",
+     "occurrences": 1
+    },
+    {
+     "location": "CARTOES[1]: glosa como na F26 e na F27",
+     "old": "data-s=\\\"vem cá\\\">vinde cá</b>",
+     "new": "data-s=\\\"venha cá\\\">vinde cá</b>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/licao-m4-f20/index.html": {
+   "base_sha256_lf": "907366cd989a817afb50d50cdb147e02e81091842c079533c8540ce6f44d0113",
+   "after_sha256_lf": "bfc72343892ec0f34555a08340ce61efd35ff908f50cb739af385dbab7922548",
+   "edits": [
+    {
+     "location": "CARTOES[15]: uma só resposta defensável",
+     "old": "No exemplo inventado, marca o objeto observado e a ação.",
+     "new": "No exemplo inventado, marca o objeto observado e o que lhe acontece.",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/painel-m4-f20/index.html": {
+   "base_sha256_lf": "3eb60acc69913aa181c13d87cfd7dac0802e5cb3c2ec669e0f61783b5fedec25",
+   "after_sha256_lf": "24b442e6c436205f8f5aa7492e884757f39380d37fc45a9290eaa7590215003a",
+   "edits": [
+    {
+     "location": "relâmpago e dados do painel: igual à lição",
+     "old": "No exemplo inventado, marca o objeto observado e a ação.",
+     "new": "No exemplo inventado, marca o objeto observado e o que lhe acontece.",
+     "occurrences": 2
+    },
+    {
+     "location": "relâmpago: opção sem sublinhados em bruto",
+     "old": "<option value=\"8\">Lembras-te de uma fala de _TPC_, mas não das palavras exatas. Como a usas na apreciação?</option>",
+     "new": "<option value=\"8\">Lembras-te de uma fala de TPC, mas não das palavras exatas. Como a usas na apreciação?</option>",
+     "occurrences": 1
+    },
+    {
+     "location": "pedido projetado: itálico em vez de sublinhados",
+     "old": "$(\"[data-pedido]\").textContent=t}",
+     "new": "$(\"[data-pedido]\").innerHTML=esc(t).replace(/_([^_]+)_/g,\"<i>$1</i>\")}",
+     "occurrences": 1
+    },
+    {
+     "location": "pistas do Atlas: itálico em vez de sublinhados",
+     "old": "return \"<li>\"+esc(p)+\"</li>\"",
+     "new": "return \"<li>\"+esc(p).replace(/_([^_]+)_/g,\"<i>$1</i>\")+\"</li>\"",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/licao-m4-f04/index.html": {
+   "base_sha256_lf": "c53827de14880a00d7a5bfdecb0a9056522f90e2165e48c4ea1d86cd5176e565",
+   "after_sha256_lf": "c82404625372274f622d07dac16b12f37b995c64efcabb0cc20c613015319045",
+   "edits": [
+    {
+     "location": "CARTOES[14] f: crédito da imagem",
+     "old": "Pintura de Umberto Boccioni, 1910.",
+     "new": "Pintura: Umberto Boccioni, _A cidade que sobe_, 1910, MoMA. Domínio público.",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/licao-m4-f11/index.html": {
+   "base_sha256_lf": "9c46e2c0c20be996196e9ce7484ecd14ef6d18be7d10dd78ccb53aa4c98e1b8d",
+   "after_sha256_lf": "ffce07ee31568d9b2af5de6b6d03c95524301c915eb216cd57691477c8aac3cb",
+   "edits": [
+    {
+     "location": "CARTOES[11] f: crédito da imagem",
+     "old": "«O mais forte» julga: opinião.\"",
+     "new": "«O mais forte» julga: opinião. Imagem: _Frei Luiz de Sousa_, primeira edição, 1844. Domínio público.\"",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/licao-m4-f02/index.html": {
+   "base_sha256_lf": "cac0e99e9d8fe635530caeb239643b045500af6f6c511a343f36d3a760bb9ea6",
+   "after_sha256_lf": "9d0d89c28bd0306bb70ee920d03fb38e96afea36db661e5fcb83720f6f391881",
+   "edits": [
+    {
+     "location": "CARTOES[15]: o cartão não tem vídeo",
+     "old": "<b>Depois de ver</b>Vieira culpa só a terra, ou também a si próprio?",
+     "new": "<b>Depois de ler</b>Vieira culpa só a terra, ou também a si próprio?",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/licao-m4-f28/index.html": {
+   "base_sha256_lf": "79a803de454de2a61b2f9b537b3e6edbf024cc0dae3333dce2b6353dda7c9c28",
+   "after_sha256_lf": "bc1d7cd4c827adf8daad51e33f15982a72ccfff1ce546a964b71563f579db24e",
+   "edits": [
+    {
+     "location": "título no formato das outras lições",
+     "old": "<title>O palco abriu uma pergunta · M4-F28 · Português</title>",
+     "new": "<title>Lição M4-F28: O palco abriu uma pergunta</title>",
+     "occurrences": 1
+    },
+    {
+     "location": "cabeçalho no formato das outras lições",
+     "old": "<h1 class=\"c-sr\">M4-F28: O palco abriu uma pergunta</h1>",
+     "new": "<h1 class=\"c-sr\">Lição M4-F28: O palco abriu uma pergunta</h1>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/licao-m4-f26/index.html": {
+   "base_sha256_lf": "8140304e2fc5ad5a007907678d62750875574eb89678719511f3d46da7857f60",
+   "after_sha256_lf": "8ee555ea7b42916c911e03f4962979ed866ad08cf997ca9e4f55004b51df28cb",
+   "edits": [
+    {
+     "location": "CARTOES[12]: grafia do módulo (fora das falas de Garrett)",
+     "old": "Este rei e D. João desapareceram em Alcácer-Quibir.",
+     "new": "Este rei e D. João desapareceram em Alcácer Quibir.",
+     "occurrences": 1
+    },
+    {
+     "location": "CARTOES[10] o[2]: grafia do módulo",
+     "old": "\"Que D. João morreu em Alcácer-Quibir\"",
+     "new": "\"Que D. João morreu em Alcácer Quibir\"",
+     "occurrences": 1
+    }
+   ]
+  },
+  "obras/sermao/index.html": {
+   "base_sha256_lf": "d594b591396c0564ddca8044d987e5265fb901b4da5cb1561838cb44dc02725f",
+   "after_sha256_lf": "527ef5752abc5028fd9d74573f14e1b0d8916f16b0827b9b011418d21a2ce659",
+   "edits": [
+    {
+     "location": "não há edição de 1654; falta o capítulo VI",
+     "old": "Os passos das lições (capítulos I, II, IV e V) seguem uma edição de 1654 em ortografia atualizada.",
+     "new": "Os passos das lições (capítulos I, II, IV, V e VI) seguem o sermão pregado em 1654, em ortografia atualizada; a primeira edição é a dos Sermoens (Lisboa, 1682).",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m1/painel-m1-f02/index.html": {
+   "base_sha256_lf": "b4b102368f871697f7f82f66d1cc58c4c69a009291b72a69581ac4e5d0813d60",
+   "after_sha256_lf": "13f0f8d1668d50ea6f937f18043ed54b17b80d7fda2429a501b77550c01d5ab8",
+   "edits": [
+    {
+     "location": "pedido projetado: itálico em vez de sublinhados",
+     "old": "$(\"[data-pedido]\").textContent=t}",
+     "new": "$(\"[data-pedido]\").innerHTML=esc(t).replace(/_([^_]+)_/g,\"<i>$1</i>\")}",
+     "occurrences": 1
+    },
+    {
+     "location": "pistas do Atlas: itálico em vez de sublinhados",
+     "old": "return \"<li>\"+esc(p)+\"</li>\"",
+     "new": "return \"<li>\"+esc(p).replace(/_([^_]+)_/g,\"<i>$1</i>\")+\"</li>\"",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m1/painel-m1-f05/index.html": {
+   "base_sha256_lf": "3a0982811c4696fdfa4c76ba64baf9b0203d53912db863eebb01dcc9a1dff681",
+   "after_sha256_lf": "f604308afcd1239b8b76030a2fad7da72120c376549cc74b05f817f2efaa53e9",
+   "edits": [
+    {
+     "location": "relâmpago: opção sem sublinhados em bruto",
+     "old": "<option value=\"14\">«inter» &gt; «entre»: que processo explica o lugar do _r_?</option>",
+     "new": "<option value=\"14\">«inter» &gt; «entre»: que processo explica o lugar do r?</option>",
+     "occurrences": 1
+    },
+    {
+     "location": "relâmpago: opção sem sublinhados em bruto",
+     "old": "<option value=\"15\">«persona» &gt; «pessoa»: porque se fala de assimilação no _rs_, e não da queda do _r_?</option>",
+     "new": "<option value=\"15\">«persona» &gt; «pessoa»: porque se fala de assimilação no rs, e não da queda do r?</option>",
+     "occurrences": 1
+    },
+    {
+     "location": "relâmpago: opção sem sublinhados em bruto",
+     "old": "<option value=\"17\">«pluvia» &gt; «chuva»: que processo transformou o _pl_ do início?</option>",
+     "new": "<option value=\"17\">«pluvia» &gt; «chuva»: que processo transformou o pl do início?</option>",
+     "occurrences": 1
+    },
+    {
+     "location": "relâmpago: opção sem sublinhados em bruto",
+     "old": "<option value=\"8\">«rota», em latim, deu «roda»: o que aconteceu ao _t_?</option>",
+     "new": "<option value=\"8\">«rota», em latim, deu «roda»: o que aconteceu ao t?</option>",
+     "occurrences": 1
+    },
+    {
+     "location": "pedido projetado: itálico em vez de sublinhados",
+     "old": "$(\"[data-pedido]\").textContent=t}",
+     "new": "$(\"[data-pedido]\").innerHTML=esc(t).replace(/_([^_]+)_/g,\"<i>$1</i>\")}",
+     "occurrences": 1
+    },
+    {
+     "location": "pistas do Atlas: itálico em vez de sublinhados",
+     "old": "return \"<li>\"+esc(p)+\"</li>\"",
+     "new": "return \"<li>\"+esc(p).replace(/_([^_]+)_/g,\"<i>$1</i>\")+\"</li>\"",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/painel-m4-f01/index.html": {
+   "base_sha256_lf": "b1bf2c611f978bff0272eed9564f16203313ca6665afb7957df5a6629a87cb03",
+   "after_sha256_lf": "28f7d114dcf8c2d432a27b83fe19776332a5a1afacd9886c6e3a979bf2fd0c76",
+   "edits": [
+    {
+     "location": "pedido projetado: itálico em vez de sublinhados",
+     "old": "$(\"[data-pedido]\").textContent=t}",
+     "new": "$(\"[data-pedido]\").innerHTML=esc(t).replace(/_([^_]+)_/g,\"<i>$1</i>\")}",
+     "occurrences": 1
+    },
+    {
+     "location": "pistas do Atlas: itálico em vez de sublinhados",
+     "old": "return \"<li>\"+esc(p)+\"</li>\"",
+     "new": "return \"<li>\"+esc(p).replace(/_([^_]+)_/g,\"<i>$1</i>\")+\"</li>\"",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/painel-m4-f02/index.html": {
+   "base_sha256_lf": "66411bbf27b8cad79b39cb3580d0169ed32f51031c31a29372ce0ef02dc53a6c",
+   "after_sha256_lf": "f8ed8011ad2a5bbc805d76a091228bd778076a072bb5e4fd4d3bc1e4653cf251",
+   "edits": [
+    {
+     "location": "pedido projetado: itálico em vez de sublinhados",
+     "old": "$(\"[data-pedido]\").textContent=t}",
+     "new": "$(\"[data-pedido]\").innerHTML=esc(t).replace(/_([^_]+)_/g,\"<i>$1</i>\")}",
+     "occurrences": 1
+    },
+    {
+     "location": "pistas do Atlas: itálico em vez de sublinhados",
+     "old": "return \"<li>\"+esc(p)+\"</li>\"",
+     "new": "return \"<li>\"+esc(p).replace(/_([^_]+)_/g,\"<i>$1</i>\")+\"</li>\"",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/painel-m4-f04/index.html": {
+   "base_sha256_lf": "fff33a1781b9b0be9de0e8af8c0bded88333d03c04471d7be1b5e9135f8f48be",
+   "after_sha256_lf": "f5c3398f79a749c83a4406995d1ab7cb23633cbd997286ddfc9d89cd79ebdaaa",
+   "edits": [
+    {
+     "location": "relâmpago: opção sem sublinhados em bruto",
+     "old": "<option value=\"14\">Caso imaginário: escreves a legenda desta pintura, _A cidade que sobe_. Qual das legendas tem um trocadilho?</option>",
+     "new": "<option value=\"14\">Caso imaginário: escreves a legenda desta pintura, A cidade que sobe. Qual das legendas tem um trocadilho?</option>",
+     "occurrences": 1
+    },
+    {
+     "location": "pedido projetado: itálico em vez de sublinhados",
+     "old": "$(\"[data-pedido]\").textContent=t}",
+     "new": "$(\"[data-pedido]\").innerHTML=esc(t).replace(/_([^_]+)_/g,\"<i>$1</i>\")}",
+     "occurrences": 1
+    },
+    {
+     "location": "pistas do Atlas: itálico em vez de sublinhados",
+     "old": "return \"<li>\"+esc(p)+\"</li>\"",
+     "new": "return \"<li>\"+esc(p).replace(/_([^_]+)_/g,\"<i>$1</i>\")+\"</li>\"",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/painel-m4-f06/index.html": {
+   "base_sha256_lf": "18c8df0c49ac2876786cd7a3f1150e5d30000b7577ed00779df35140089a55a4",
+   "after_sha256_lf": "2a84528e7514e5e01a34c2974b3616777df4a836c8bd2d069bd88c8471426a63",
+   "edits": [
+    {
+     "location": "relâmpago: opção sem sublinhados em bruto",
+     "old": "<option value=\"7\">Em _Frei Luís de Sousa_, Telmo recorda uma carta de D. João a Madalena. Que ato faz a frase?</option>",
+     "new": "<option value=\"7\">Em Frei Luís de Sousa, Telmo recorda uma carta de D. João a Madalena. Que ato faz a frase?</option>",
+     "occurrences": 1
+    },
+    {
+     "location": "pedido projetado: itálico em vez de sublinhados",
+     "old": "$(\"[data-pedido]\").textContent=t}",
+     "new": "$(\"[data-pedido]\").innerHTML=esc(t).replace(/_([^_]+)_/g,\"<i>$1</i>\")}",
+     "occurrences": 1
+    },
+    {
+     "location": "pistas do Atlas: itálico em vez de sublinhados",
+     "old": "return \"<li>\"+esc(p)+\"</li>\"",
+     "new": "return \"<li>\"+esc(p).replace(/_([^_]+)_/g,\"<i>$1</i>\")+\"</li>\"",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/painel-m4-f07/index.html": {
+   "base_sha256_lf": "3fa2692a47c3a526fd8e98a658c2c112b56646383a68c2b1fb23e7c4bd16c968",
+   "after_sha256_lf": "16b6d25335705e80bc47f692ab8aea0bbd3c5b2ddc0e0ff6994c6fe5e564b0ec",
+   "edits": [
+    {
+     "location": "pedido projetado: itálico em vez de sublinhados",
+     "old": "$(\"[data-pedido]\").textContent=t}",
+     "new": "$(\"[data-pedido]\").innerHTML=esc(t).replace(/_([^_]+)_/g,\"<i>$1</i>\")}",
+     "occurrences": 1
+    },
+    {
+     "location": "pistas do Atlas: itálico em vez de sublinhados",
+     "old": "return \"<li>\"+esc(p)+\"</li>\"",
+     "new": "return \"<li>\"+esc(p).replace(/_([^_]+)_/g,\"<i>$1</i>\")+\"</li>\"",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/painel-m4-f08/index.html": {
+   "base_sha256_lf": "350c8d307c5e644e2bbe9fc77aac2d45bd519f9d48642180ffcab3964bc8f171",
+   "after_sha256_lf": "20b01096d223f8dd7e19773890addca20937a23c0d256d0fcbd5b4262cf4ffcf",
+   "edits": [
+    {
+     "location": "pedido projetado: itálico em vez de sublinhados",
+     "old": "$(\"[data-pedido]\").textContent=t}",
+     "new": "$(\"[data-pedido]\").innerHTML=esc(t).replace(/_([^_]+)_/g,\"<i>$1</i>\")}",
+     "occurrences": 1
+    },
+    {
+     "location": "pistas do Atlas: itálico em vez de sublinhados",
+     "old": "return \"<li>\"+esc(p)+\"</li>\"",
+     "new": "return \"<li>\"+esc(p).replace(/_([^_]+)_/g,\"<i>$1</i>\")+\"</li>\"",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/painel-m4-f09/index.html": {
+   "base_sha256_lf": "cc50f7a5d2c1a2699fd114b8ff6140343cfab1c122967b1f214943f52379ec81",
+   "after_sha256_lf": "27a3fd64d5f24e208710228bbecee54d50d9e6d60abb975965e8f1a93ca75a0a",
+   "edits": [
+    {
+     "location": "pedido projetado: itálico em vez de sublinhados",
+     "old": "$(\"[data-pedido]\").textContent=t}",
+     "new": "$(\"[data-pedido]\").innerHTML=esc(t).replace(/_([^_]+)_/g,\"<i>$1</i>\")}",
+     "occurrences": 1
+    },
+    {
+     "location": "pistas do Atlas: itálico em vez de sublinhados",
+     "old": "return \"<li>\"+esc(p)+\"</li>\"",
+     "new": "return \"<li>\"+esc(p).replace(/_([^_]+)_/g,\"<i>$1</i>\")+\"</li>\"",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/painel-m4-f10/index.html": {
+   "base_sha256_lf": "0631ed918127e150cafc2d341d64e887aabcec6d96787f6a09dcb87a4a413d83",
+   "after_sha256_lf": "46411695eddbb39ce0757b11a6f9c3c3ef271c4f0403e46f58ad9b1a421b2904",
+   "edits": [
+    {
+     "location": "pedido projetado: itálico em vez de sublinhados",
+     "old": "$(\"[data-pedido]\").textContent=t}",
+     "new": "$(\"[data-pedido]\").innerHTML=esc(t).replace(/_([^_]+)_/g,\"<i>$1</i>\")}",
+     "occurrences": 1
+    },
+    {
+     "location": "pistas do Atlas: itálico em vez de sublinhados",
+     "old": "return \"<li>\"+esc(p)+\"</li>\"",
+     "new": "return \"<li>\"+esc(p).replace(/_([^_]+)_/g,\"<i>$1</i>\")+\"</li>\"",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/painel-m4-f11/index.html": {
+   "base_sha256_lf": "ae86a790194c61136fb5d0bd849b5a0cd21c608c8710af20eeb31c80d4563290",
+   "after_sha256_lf": "7d91e94871b30f7ba5acd82289de3c7570931964824b71dd2941602b23b4dfb9",
+   "edits": [
+    {
+     "location": "pedido projetado: itálico em vez de sublinhados",
+     "old": "$(\"[data-pedido]\").textContent=t}",
+     "new": "$(\"[data-pedido]\").innerHTML=esc(t).replace(/_([^_]+)_/g,\"<i>$1</i>\")}",
+     "occurrences": 1
+    },
+    {
+     "location": "pistas do Atlas: itálico em vez de sublinhados",
+     "old": "return \"<li>\"+esc(p)+\"</li>\"",
+     "new": "return \"<li>\"+esc(p).replace(/_([^_]+)_/g,\"<i>$1</i>\")+\"</li>\"",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/painel-m4-f14/index.html": {
+   "base_sha256_lf": "0b73e87a1579f324ffa1bc445b1d27cc968ea522162114039dd3bdd9897b634a",
+   "after_sha256_lf": "ac033aaa79ddff9f7e4c96fdffef718f3be93e5852ab2e8780b0e60b26177490",
+   "edits": [
+    {
+     "location": "pedido projetado: itálico em vez de sublinhados",
+     "old": "$(\"[data-pedido]\").textContent=t}",
+     "new": "$(\"[data-pedido]\").innerHTML=esc(t).replace(/_([^_]+)_/g,\"<i>$1</i>\")}",
+     "occurrences": 1
+    },
+    {
+     "location": "pistas do Atlas: itálico em vez de sublinhados",
+     "old": "return \"<li>\"+esc(p)+\"</li>\"",
+     "new": "return \"<li>\"+esc(p).replace(/_([^_]+)_/g,\"<i>$1</i>\")+\"</li>\"",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/painel-m4-f15/index.html": {
+   "base_sha256_lf": "8cf2df32c0fc6f3704db5aa5b05bb244e110fbb06d31d724ad13a8ba0b09353c",
+   "after_sha256_lf": "7a2740bc0c55c99ea010700d4025d83d0ba986e95b2cb349b25d77b2a2e0101f",
+   "edits": [
+    {
+     "location": "pedido projetado: itálico em vez de sublinhados",
+     "old": "$(\"[data-pedido]\").textContent=t}",
+     "new": "$(\"[data-pedido]\").innerHTML=esc(t).replace(/_([^_]+)_/g,\"<i>$1</i>\")}",
+     "occurrences": 1
+    },
+    {
+     "location": "pistas do Atlas: itálico em vez de sublinhados",
+     "old": "return \"<li>\"+esc(p)+\"</li>\"",
+     "new": "return \"<li>\"+esc(p).replace(/_([^_]+)_/g,\"<i>$1</i>\")+\"</li>\"",
+     "occurrences": 1
+    }
+   ]
+  }
+ }
+}

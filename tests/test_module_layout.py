@@ -2,6 +2,7 @@
 from pathlib import Path
 from html.parser import HTMLParser
 import hashlib,json,re,unittest
+from auditoria_20261028 import undo as undo_audit_20261028
 
 ROOT=Path(__file__).resolve().parents[1]
 
@@ -27,6 +28,8 @@ class ModuleLayout(unittest.TestCase):
   baseline=json.loads((ROOT/'tests/fixtures/module-layout-before.json').read_text('utf-8'))
   for module in range(1,10):
    source=(ROOT/f'm{module}/index.html').read_text('utf-8-sig')
+   # 28/10/2026: «produção em papel» e «trabalho em papel» também no M4 e no M7 (auditoria; manifesto literal).
+   source=undo_audit_20261028(f'm{module}/index.html',source)
    # Exact authorised UX wording only; restore it for the frozen index snapshot.
    # 28/10/2026 (PR #122): mais duas cadeias literais autorizadas no M1 («trabalho em papel» nos cartões das tarefas).
    # 28/10/2026 (revisão do PR #122): e uma terceira, «produção em papel» em «Como se cumpre uma unidade», como no M2.
