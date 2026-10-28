@@ -4,7 +4,7 @@
  "files": {
   "m1/licao-m1-f05/index.html": {
    "base_sha256_lf": "5ccf21ab62a3f9349d64409d6fed308801a895a11305b586924fafff0fec791a",
-   "after_sha256_lf": "5fa81c215649e4643b4d01a22d36a27816a515ddcab41dcb0f00a9d4e2b65cb0",
+   "after_sha256_lf": "de83a26d3dbd427e18caed6623160944e3e60582aca218a235a3199e0f881d84",
    "edits": [
     {
      "location": "CARTOES[5] esquema: sem travessão",
@@ -13,9 +13,9 @@
      "occurrences": 1
     },
     {
-     "location": "CARTOES[5] esquema: sem travessão, «cai» como no resto da lição",
+     "location": "CARTOES[5] esquema: sem travessão («desapareceu», como na tentativa seguinte)",
      "old": "<strong>Desaparece — ASA:</strong>",
-     "new": "<strong>Cai (ASA):</strong>",
+     "new": "<strong>Desaparece (ASA):</strong>",
      "occurrences": 1
     },
     {
