@@ -19,11 +19,14 @@ AUDIT_EDITS_M4_M7=ROOT/'tests/fixtures/auditoria-m4-m7-edits-20261028.json'
 # 28/10/2026: a Sala de aula sai das lições (decisão do docente de 17/10/2026; scripts/desligar_sala.py). É a mudança
 # mais recente: o manifesto dela desfaz-se primeiro, antes das auditorias e de todos os outros.
 SALA_EDITS=ROOT/'tests/fixtures/sala-desligada-edits-20261028.json'
+# 29/10/2026: aquecimentos e unidade 3 do M7 (a F10 reescrita para a tarefa nova; decisões do docente de 29/10). É a
+# camada mais recente: o manifesto dela desfaz-se antes da Sala.
+AQUECIMENTOS_EDITS=ROOT/'tests/fixtures/aquecimentos-m7-edits-20261029.json'
 
 def original_lesson_text(path):
  """Reverse only the explicitly authorized UX strings; retain the frozen LF hash."""
  source=(ROOT/path).read_text('utf-8')
- for manifest_path in (SALA_EDITS,AUDIT_EDITS_M4_M7,AUDIT_EDITS,REIS_EDITS,TABLE_EDITS,GRAMMAR_EDITS,INSTRUCTION_EDITS):
+ for manifest_path in (AQUECIMENTOS_EDITS,SALA_EDITS,AUDIT_EDITS_M4_M7,AUDIT_EDITS,REIS_EDITS,TABLE_EDITS,GRAMMAR_EDITS,INSTRUCTION_EDITS):
   manifest=json.loads(manifest_path.read_text('utf-8'))
   for edit in reversed(manifest['files'].get(path,{}).get('edits',[])):
    if source.count(edit['new'])!=edit['occurrences']:

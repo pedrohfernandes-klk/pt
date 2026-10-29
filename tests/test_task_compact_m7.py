@@ -3,7 +3,7 @@ from pathlib import Path
 from html.parser import HTMLParser
 from urllib.parse import urlsplit,unquote
 import hashlib,json,re,subprocess,unittest
-from task_source_contract import without_timer
+from task_source_contract import without_timer, compact_task_source
 from auditoria_20261028 import undo as undo_audit_20261028
 ROOT=Path(__file__).resolve().parents[1]
 MANIFEST=ROOT/'tests/fixtures/task-compact-m7-before-after.json'
@@ -36,7 +36,10 @@ class CompactM7(unittest.TestCase):
    # 27/10/2026: o relógio do aluno é a única marca acrescentada depois do manifesto.
    # 28/10/2026: as trocas literais da auditoria do M7 (sem «folhas», cartões pelo nome, próclise, título,
    # itálico) desfazem-se antes de comparar com o manifesto compacto.
-   actual=without_timer(undo_audit_20261028(record['path'],(ROOT/record['path']).read_text('utf-8')))
+   # 29/10/2026 (decisão do docente): a U3 passou ao formato com escolha (manifesto sucessor); o seu retrato
+   # compacto lê-se de compact_task_source, depois de a página atual ser validada contra a autorização dela.
+   if record['path']=='tarefas/m7-u3/index.html':actual=without_timer(compact_task_source(record['path']))
+   else:actual=without_timer(undo_audit_20261028(record['path'],(ROOT/record['path']).read_text('utf-8')))
    self.assertEqual(record['after_source'],actual)
    for key in ('before','after'):
     self.assertEqual(hashlib.sha256(record[key+'_source'].encode()).hexdigest(),record[key+'_sha256'])
@@ -45,7 +48,10 @@ class CompactM7(unittest.TestCase):
    self.assertEqual(record['before_source'].count('data-task-question='),4)
  def test_three_card_source_form_concision_optional_feedback_and_links(self):
   for record in self.records():
-   path=ROOT/record['path'];source=path.read_text('utf-8');page=Compact(source)
+   path=ROOT/record['path'];source=path.read_text('utf-8')
+   # 29/10/2026: a U3 saiu do formato compacto; confere-se a forma do retrato compacto que continua autorizado.
+   if record['path']=='tarefas/m7-u3/index.html':source=compact_task_source(record['path'])
+   page=Compact(source)
    with self.subTest(page=path):
     self.assertIn('class="task-page" data-task-compact',source)
     self.assertEqual(page.root,['nav','header','section','section'])

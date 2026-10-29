@@ -9,7 +9,10 @@ ROOT=Path(__file__).resolve().parents[1]
 # 28/10/2026 (decisão do docente, PR #122): as duas tarefas do M1 passam ao formato do piloto do M2 e saem
 # também deste contrato compacto; o contrato delas está em test_task_choice.py e o retrato compacto de 27/10
 # continua autorizado em tests/task_source_contract.py (compact_task_source).
-SLUGS=['m4-u1','m4-u2','m4-u3-discurso','m7-u1','m7-u2','m7-u3']
+# 29/10/2026 (decisão do docente): a tarefa da unidade 3 do M7 passa ao formato com escolha, com o aquecimento em
+# cartões; sai deste contrato compacto (o dela está em test_task_choice.py) e o retrato compacto de 27/10 continua
+# autorizado em tests/task_source_contract.py (compact_task_source).
+SLUGS=['m4-u1','m4-u2','m4-u3-discurso','m7-u1','m7-u2']
 class CompactTasks(unittest.TestCase):
  def test_live_concision_optional_recall_and_individual_production(self):
   for slug in SLUGS:

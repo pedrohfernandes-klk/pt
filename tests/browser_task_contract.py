@@ -12,7 +12,11 @@ TASK_SLUGS = {1: ['m1-u1', 'm1-u2'],
               7: ['m7-u1', 'm7-u2', 'm7-u3']}
 # 28/10/2026 (decisão do docente, PR #122): o formato com aquecimento e tema à escolha cobre o M2 (piloto) e o M1.
 # Estas páginas têm de o declarar; nenhuma passa pelo contrato compacto por omissão.
-CHOICE_SLUGS = {'m1-u1', 'm1-u2', 'm2-u1', 'm2-u2'}
+# 29/10/2026 (decisão do docente): a M7-U3 entra no formato com escolha, com o aquecimento em cartões no lugar das
+# máquinas em papel (#aquecer[data-task-warm="cartoes"]): o cartão «Aquecer» liga à página dos cartões e a única pergunta
+# da tarefa é a opcional («1»).
+CHOICE_SLUGS = {'m1-u1', 'm1-u2', 'm2-u1', 'm2-u2', 'm7-u3'}
+WARM_CARDS = '#aquecer[data-task-warm="cartoes"]'
 
 def learning_storage(page):
     return page.evaluate("""() => Object.fromEntries(Object.keys(localStorage)
@@ -87,8 +91,10 @@ def assert_task_page(page, before):
     # 28/10/2026 (piloto M2, decisão do docente): o formato com escolha tem um cartão de aquecimento
     # primeiro e duas perguntas, a do aquecimento («aquecer») e uma opcional («1»).
     choice = page.locator('main[data-task-choice]').count() == 1
-    count = 2 if compact else 4
-    question_ids = ['aquecer', '1'] if choice else [str(i) for i in range(1, count + 1)]
+    # 29/10/2026: com o aquecimento em cartões não há pergunta «aquecer».
+    cards_warm = page.locator(WARM_CARDS).count() == 1
+    count = (1 if cards_warm else 2) if compact else 4
+    question_ids = (['1'] if cards_warm else ['aquecer', '1']) if choice else [str(i) for i in range(1, count + 1)]
     assert page.locator('[data-task-question]').count() == count
     if choice:
         assert page.locator('[data-task-card]').count() == 4
@@ -97,9 +103,15 @@ def assert_task_page(page, before):
         assert page.locator('[data-task-theme]').count() == 2
         # 28/10/2026 (revisão do PR #122): as letras ficam no nome acessível, porque as instruções mandam escrevê-las
         # no papel: cada opção do aquecimento começa pela letra e cada tema diz «Tema A» ou «Tema B».
-        warm = page.locator('[data-task-question="aquecer"]')
-        for letter in 'ABC':
-            assert warm.get_by_role('button', name=re.compile('^' + letter + r'\s?: \S')).count() == 1, letter
+        if cards_warm:
+            # 29/10/2026: o cartão «Aquecer» e o enunciado levam a ligação em destaque à página dos cartões.
+            assert page.locator('[data-task-card="0"] .task-aquecer a[href="aquecimento/"]').count() == 1
+            assert page.locator('[data-task-card="1"] .task-aquecer a[href="aquecimento/"]').count() == 1
+            assert page.locator('[data-relogio][data-chave$=":aquecimento"][data-max="10"]').count() == 1
+        else:
+            warm = page.locator('[data-task-question="aquecer"]')
+            for letter in 'ABC':
+                assert warm.get_by_role('button', name=re.compile('^' + letter + r'\s?: \S')).count() == 1, letter
         open_task_card(page, '#produzir')
         for letter in 'AB':
             assert page.get_by_role('heading', name=re.compile('^Tema ' + letter + ' ')).count() == 1, letter
@@ -217,7 +229,12 @@ def assert_reader_navigation(page):
     assert page.locator('[data-task-card]:visible').count() == page.locator('[data-task-card]').count()
     # 28/10/2026 (revisão do PR #122): o aquecimento faz-se em papel; impressa, a máquina 02 mostra a pergunta e as
     # três passagens. Não saem a explicação da escolha nem o estado das respostas exploradas.
-    if page.locator('main[data-task-choice]').count():
+    if page.locator('main[data-task-choice]').count() and page.locator(WARM_CARDS).count():
+        # 29/10/2026: com o aquecimento em cartões, o papel leva o cartão «Aquecer» sem a ligação (não se abre no papel).
+        assert page.locator('#aquecer').is_visible() and not page.locator('#aquecer .task-aquecer').is_visible()
+        assert not page.locator('[data-task-feedback]:visible').count()
+        assert not page.locator('[data-task-status]:visible').count()
+    elif page.locator('main[data-task-choice]').count():
         question = page.locator('#aquecer [data-task-question="aquecer"]')
         assert question.is_visible() and question.locator('.task-question-title').is_visible()
         assert question.locator('button[data-response]:visible').count() == 3
@@ -273,7 +290,8 @@ def responsive_task_matrix(browser, host):
                     launcher.click(); page.wait_for_url('**/projetar/**')
                     frame = page.frame_locator('#lesson-frame')
                     frame.locator('[data-task-reader].task-reader-ready').wait_for()
-                    expected = 2 if frame.locator('[data-task-compact]').count() else 4
+                    # 29/10/2026: a M7-U3 (aquecimento em cartões) tem só a pergunta opcional.
+                    expected = (1 if frame.locator(WARM_CARDS).count() else 2) if frame.locator('[data-task-compact]').count() else 4
                     assert frame.locator('[data-task-question]').count() == expected
                     assert not errors, (slug, width, scheme, errors)
                     print('PASS responsive task:', slug, 'actual width', width, scheme,
@@ -298,12 +316,16 @@ def fallback_task_pages(browser, host):
                 assert page.locator(target).is_visible()
             compact = page.locator('main[data-task-compact]').count() == 1
             choice = page.locator('main[data-task-choice]').count() == 1
+            # 29/10/2026: com o aquecimento em cartões, não há pergunta de aquecimento, e a ligação fica à vista.
+            cards_warm = page.locator(WARM_CARDS).count() == 1
+            if cards_warm:
+                assert page.locator('#aquecer .task-aquecer a[href="aquecimento/"]').is_visible()
             if compact:
                 # 28/10/2026: no formato com escolha, a pergunta do aquecimento está sempre à vista.
-                assert page.locator('[data-task-question]:visible').count() == (1 if choice else 0)
+                assert page.locator('[data-task-question]:visible').count() == (1 if choice and not cards_warm else 0)
                 optional=page.locator('[data-task-optional-preparation] > summary')
                 optional.focus();optional.press('Enter')
-            assert page.locator('[data-task-question]:visible').count() == (2 if compact else 4)
+            assert page.locator('[data-task-question]:visible').count() == ((1 if cards_warm else 2) if compact else 4)
             button=page.locator('[data-task-question="1"] button[data-response]').first
             button.focus();button.press('Enter')
             assert page.locator('[data-task-question="1"] [data-task-feedback]').inner_text()==button.get_attribute('data-response')

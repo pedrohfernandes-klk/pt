@@ -10,11 +10,19 @@ import html, json, re, subprocess, sys, tempfile, unittest
 ROOT = Path(__file__).resolve().parents[1]
 # 28/10/2026 (decisão do docente, PR #122): as duas aulas de tarefa do M1 passam ao formato do piloto do M2,
 # geradas por scripts/tarefas_escolha.py a partir de docs/pedagogia/tarefas-escolha/<slug>.json.
-CHOICE = ['m1-u1', 'm1-u2', 'm2-u1', 'm2-u2']
+# 29/10/2026 (decisão do docente): a tarefa da unidade 3 do M7 («Louco, sim: argumentar com os movimentos de Mensagem»)
+# entra no formato com escolha, gerada por scripts/tarefas_escolha.py; o aquecimento é em cartões (CARTOES_NO_AQUECER).
+CHOICE = ['m1-u1', 'm1-u2', 'm2-u1', 'm2-u2', 'm7-u3']
+# 29/10/2026: na M7-U3 os cartões substituem as máquinas em papel, para caber nos 90 minutos: o cartão «Aquecer» liga à
+# página tarefas/m7-u3/aquecimento/ e não há pergunta «aquecer». As citações do baralho conferem-se em
+# tests/test_task_aquecimentos.py, contra as lições indicadas nos dados do aquecimento.
+CARTOES_NO_AQUECER = {'m7-u3'}
 # Lições onde estão as passagens do aquecimento, por módulo (a lista do M2 fica como estava).
 # 28/10/2026: no M1, as cantigas de D. Dinis e Guilhade (F04, F19) e o grito do cap. XII (F06).
 WARM_LESSONS = {'m2': ('licao-m2-f02', 'licao-m2-f06', 'licao-m2-f07', 'licao-m2-f11'),
-                'm1': ('licao-m1-f04', 'licao-m1-f06', 'licao-m1-f19')}
+                'm1': ('licao-m1-f04', 'licao-m1-f06', 'licao-m1-f19'),
+                # 29/10/2026: no M7, as lições da unidade 3 (o aquecimento em papel não tem passagens; fica para o caso).
+                'm7': ('licao-m7-f07', 'licao-m7-f08', 'licao-m7-f09', 'licao-m7-f11')}
 
 
 def flat(path):
@@ -61,25 +69,34 @@ class ChoiceTasks(unittest.TestCase):
                 self.assertIn('data-task-compact data-task-choice', source)
                 self.assertEqual([t for t, _ in p.root], ['nav', 'section', 'header', 'section', 'section'])
                 self.assertEqual([i for _, i in p.root][1:], ['aquecer', None, 'apoios', 'entregar'])
-                self.assertEqual(p.machines, ['1', '2'])
+                cartoes = slug in CARTOES_NO_AQUECER
+                self.assertEqual(p.machines, [] if cartoes else ['1', '2'])
                 self.assertEqual(p.themes, ['A', 'B'])
                 self.assertEqual(len(re.findall(r'<li>', source.split('id="produzir"')[1].split('task-themes')[0])), 2)
-                for token in ('Descobre o que te pedem', 'Prova ou distração?', 'Verbos', 'Objeto', 'Condição', 'Núcleo comum', 'Escolhe um tema',
+                # 29/10/2026: com o aquecimento em cartões, o cartão «Aquecer» e o enunciado ligam à página dos cartões.
+                aquecer = (('Aquecer em cartões', 'data-task-warm="cartoes"', '<p class="task-aquecer"><a href="aquecimento/">') if cartoes
+                           else ('Descobre o que te pedem', 'Prova ou distração?', 'Verbos', 'Objeto', 'Condição'))
+                for token in aquecer + ('Núcleo comum', 'Escolhe um tema',
                               'Dossiê do tema B', 'Tarefa individual', '90 min', 'consulta', 'Teams', 'duas linhas', 'tema que escolheste (A ou B)'):
                     self.assertIn(token, source)
+                if cartoes:
+                    self.assertEqual(source.count('<p class="task-aquecer"><a href="aquecimento/">'), 2)
+                    self.assertTrue((ROOT / 'tarefas' / slug / 'aquecimento' / 'index.html').is_file())
                 for token in ('task-clock', 'em grupo', 'rondas', '10/10/60/10', 'ficha', 'folha', '—', 'professor'):
                     self.assertNotIn(token, source)
                 self.assertEqual(p.criteria, 3)
                 self.assertLessEqual(len(' '.join(p.text['header'] + p.text['criteria']).split()), 300)
                 # Uma pergunta de aquecimento e uma opcional; três opções, uma certa, explicações diferentes.
-                self.assertEqual(p.questions, [('aquecer', False), ('1', True)])
-                for q in ('aquecer', '1'):
+                # 29/10/2026: com o aquecimento em cartões, só a opcional.
+                self.assertEqual(p.questions, [('1', True)] if cartoes else [('aquecer', False), ('1', True)])
+                for q in (('1',) if cartoes else ('aquecer', '1')):
                     opts = [a for k, a in p.options if k == q]
                     self.assertEqual(len(opts), 3)
                     self.assertEqual(sum(a['data-correct'] == 'true' for a in opts), 1)
                     self.assertEqual(len({a['data-response'] for a in opts}), 3)
                 # Relógio do aluno: aquecimento até 15 min, produção até 60 min.
-                self.assertIn(f'data-relogio data-max="15" data-passo="1" data-rotulo="Aquecimento" data-chave="pt-relogio:tarefas/{slug}:aquecimento"', source)
+                # 29/10/2026: com o aquecimento em cartões, até 10 min (os 90 minutos da aula: 10, 5, 60 e 10).
+                self.assertIn(f'data-relogio data-max="{10 if cartoes else 15}" data-passo="1" data-rotulo="Aquecimento" data-chave="pt-relogio:tarefas/{slug}:aquecimento"', source)
                 self.assertIn(f'data-relogio data-max="60" data-passo="5" data-rotulo="Produção em papel" data-chave="pt-relogio:tarefas/{slug}:producao"', source)
                 self.assertLess(source.index('assets/relogio.js'), source.index('pt-lessons/casca.js'))
                 # 28/10/2026 (revisão do PR #122): task-choice.css muda (impressão do aquecimento, letras no nome
@@ -89,7 +106,7 @@ class ChoiceTasks(unittest.TestCase):
                 # 28/10/2026 (revisão do PR #122): as letras das opções e dos temas ficam no nome acessível, porque as
                 # instruções mandam escrevê-las no papel («Escreve a letra», «o tema que escolheste (A ou B)»).
                 self.assertNotIn('aria-hidden="true">A</span>', source)
-                self.assertEqual(len(re.findall(r'<span class="task-letter">[ABC]<span class="sr-only">:</span></span> ', source)), 6)
+                self.assertEqual(len(re.findall(r'<span class="task-letter">[ABC]<span class="sr-only">:</span></span> ', source)), 3 if cartoes else 6)
                 self.assertEqual(len(re.findall(r'<h3 id="tema-([AB])"><span><span class="sr-only">Tema </span>\1</span> ', source)), 2)
                 self.assertIn('incluindo a síntese (as duas linhas finais)', source)
 
@@ -157,7 +174,8 @@ class ChoiceTasks(unittest.TestCase):
         # 28/10/2026: as tarefas do M1 são geradas por scripts/tarefas_escolha.py; os dados guardam só o que a
         # página publica (sem grelha nem chave da correção) e o gerador é idempotente.
         data = sorted((ROOT / 'docs/pedagogia/tarefas-escolha').glob('*.json'))
-        self.assertEqual([p.stem for p in data], ['m1-u1', 'm1-u2'])
+        # 29/10/2026 (decisão do docente): junta-se a M7-U3, gerada pelo mesmo script.
+        self.assertEqual([p.stem for p in data], ['m1-u1', 'm1-u2', 'm7-u3'])
         for p in data:
             d = json.loads(p.read_text('utf-8'))
             self.assertFalse({'grelha', 'provas', 'notas_docente', 'chave'} & set(d), p.name)

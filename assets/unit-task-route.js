@@ -112,7 +112,11 @@
    if(!task||(old&&!old.closest("[hidden]")))return;
    try{history.replaceState(history.state,"","#tarefa-unidade-"+match[1]);}catch(_){}
    task.classList.add("aqui");
-   setTimeout(function(){task.scrollIntoView({block:"center"});},50);
+   // 29/10/2026: o navegador ainda faz o seu próprio salto para a âncora quando a página acaba de carregar, e esse
+   // salto (topo da linha encostado ao topo do ecrã) podia ganhar à centragem. Centra-se outra vez depois do load.
+   var center=function(){task.scrollIntoView({block:"center"});};
+   setTimeout(center,50);
+   if(document.readyState!=="complete")window.addEventListener("load",function(){setTimeout(center,0);},{once:true});
   }
   oldChallengeAnchor();
   window.addEventListener("hashchange",oldChallengeAnchor);

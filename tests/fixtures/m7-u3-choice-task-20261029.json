@@ -1,0 +1,13 @@
+{
+ "base": "0c7f64d47afb84b355ae87b1d1ffccb4dd38d89d",
+ "authorization": "29/10/2026 (decisões do docente de 29/10/2026): a aula de tarefa da unidade 3 do M7 deixa «Um objeto para o Dia Pessoa» e passa à candidata 1, «Louco, sim: argumentar com os movimentos de Mensagem»: texto de opinião de 180 a 220 palavras com os seis movimentos (S, N, R, M, P, C), temas A e B, dossiê do tema B, dois exemplos resolvidos e grelha /20. Formato com escolha do M1, com o aquecimento em cartões (tarefas/m7-u3/aquecimento/) no lugar das máquinas em papel, para caber nos 90 minutos. Corpo gerado por scripts/tarefas_escolha.py a partir dos dados públicos indicados; o corpo compacto de 27/10 fica guardado em task-compact-m7-before-after.json e as trocas de 28/10 nessa página (auditoria-m4-m7-edits-20261028.json) ficam com ele.",
+ "files": {
+  "tarefas/m7-u3/index.html": {
+   "data": "docs/pedagogia/tarefas-escolha/m7-u3.json",
+   "data_sha256": "519ca4cc18a61a48382427a4031e4879570372500253d67eb94194ebbedec00b",
+   "replaces_after_body_sha256": "10a82ca691b1b9e439c2dd0f81214fdabdae34e53355620a87b0c183dafe1b3e",
+   "after_body_sha256": "89340aa9729ce6de10753c4882e89cbbb1b4507e9b53043b603ef10f15d13319",
+   "after_sha256": "4a18cb48398b09fe1dac0b87d2536c208b8c418164bb966df0b8bcb865d91514"
+  }
+ }
+}

@@ -68,13 +68,11 @@ figure img[tabindex]:focus-visible{outline:3px solid var(--tinta,#000);outline-o
   <p class="rot">5 de novembro, 14h</p>
   <h1>Um verso, um objeto</h1>
   <p>Casa Fernando Pessoa</p>
-  <div class="cx"><h2>Antes de entrar</h2><p>Vais sair daqui com material para um objeto teu: vídeo, som, imagem ou texto. O objeto parte de versos e não os ilustra à letra.</p>
-    <p><b>Que objeto te apetece fazer?</b></p>
-    <div class="chips" id="escolhas"><button class="chip" aria-pressed="false">Vídeo</button><button class="chip" aria-pressed="false">Som</button><button class="chip" aria-pressed="false">Imagem</button><button class="chip" aria-pressed="false">Texto</button></div>
+  <div class="cx"><h2>Antes de entrar</h2><p>Este caderno de campo é facultativo e não conta para a nota. Serve para guardares o que vês na Casa: um verso, um objeto, um pormenor, uma ideia.</p>
     <label for="aberta">De que poema de Pessoa, lido na aula, te lembras melhor? Escreve um verso de cor.</label><textarea id="aberta" data-k="aberta"></textarea>
   </div>
-  <div class="cx"><p><b>Como funciona</b></p><p>Tomas notas curtas durante a visita. No fim, usas as notas para escrever e copias o texto para a tarefa do Teams.</p><p class="pequeno">O que escreves fica só neste telemóvel. Não fotografes nem graves pessoas.</p></div>
-  <div class="cx"><p><b>Não foste à visita?</b></p><p>Parte de versos lidos na aula e do Arquivo Pessoa em linha. Faz o mesmo trabalho com os mesmos critérios.</p><p class="pequeno">Usa este caderno na mesma: as notas tomam-se onde estiveres.</p></div>
+  <div class="cx"><p><b>Como funciona</b></p><p>Tomas notas curtas durante a visita. Depois, se quiseres, escreves umas linhas a partir delas. Nada disto é avaliado.</p><p class="pequeno">O que escreves fica só neste telemóvel. Não fotografes nem graves pessoas.</p></div>
+  <div class="cx"><p><b>Não foste à visita?</b></p><p>O caderno serve na mesma: as notas tomam-se onde estiveres, com versos lidos na aula e o Arquivo Pessoa em linha.</p></div>
   <button class="btn" data-ir="durante">Estou pronto</button>
 </section>
 <section id="durante" role="tabpanel" hidden>
@@ -88,17 +86,16 @@ figure img[tabindex]:focus-visible{outline:3px solid var(--tinta,#000);outline-o
   <p class="pequeno" id="vazio">Ainda não tens notas. Três chegam para começar; seis dão-te por onde escolher.</p>
 </section>
 <section id="depois" role="tabpanel" hidden>
-  <p class="rot">Dia Fernando Pessoa</p>
-  <h2>Do material ao objeto</h2>
-  <ol><li>Escreve três propostas diferentes.</li><li>Escolhe uma e diz porquê.</li><li>Escreve a memória descritiva.</li></ol>
+  <p class="rot">Depois da visita</p>
+  <h2>Das notas a umas linhas</h2>
+  <ol><li>Relê as notas e escolhe a que mais te fez pensar.</li><li>Escreve umas linhas sobre ela, com o verso copiado como está.</li><li>Guarda o texto, se o quiseres levar para a aula.</li></ol>
   <div class="cx"><p><b>Notas para usar</b></p><p class="pequeno">Toca numa nota para a pores no texto.</p><div id="usar"></div></div>
-  <label for="c-propostas">Três propostas</label><textarea id="c-propostas" data-k="propostas" class="" placeholder="Uma por linha. Cada uma parte de um verso."></textarea>
-  <label for="c-escolha">A escolha</label><textarea id="c-escolha" data-k="escolha" class="" placeholder="Qual fica, qual abandonas e porquê."></textarea>
-  <label for="c-texto">Memória descritiva</label><textarea id="c-texto" data-k="texto" class="grande" placeholder="Diz o que fizeste e que decisões tomaste."></textarea><div class="medidor"><i id="barra"></i></div><p class="pequeno" id="palavras">0 palavras. Objetivo: 150 a 200.</p>
-  <h2 style="margin-top:18px">Confere</h2>
-  <ul class="lista" id="verificar"><li><input type="checkbox" id="v0"><label for="v0" style="margin:0;font-weight:400">Cada verso tem a referência.</label></li><li><input type="checkbox" id="v1"><label for="v1" style="margin:0;font-weight:400">O objeto não ilustra o verso à letra.</label></li><li><input type="checkbox" id="v2"><label for="v2" style="margin:0;font-weight:400">Escrevi três propostas antes de escolher.</label></li><li><input type="checkbox" id="v3"><label for="v3" style="margin:0;font-weight:400">Registei o que abandonei.</label></li><li><input type="checkbox" id="v4"><label for="v4" style="margin:0;font-weight:400">Contei: 150 a 200 palavras.</label></li></ul>
-  <div class="fila"><button class="btn" id="copiar">Copiar para o Teams</button><button class="btn sec" id="partilhar" hidden>Partilhar</button><button class="btn sec" id="guardar">Guardar ficheiro</button></div>
-  <p class="pequeno" style="margin-top:14px">Cola o texto na tarefa do Teams e entrega lá. Este caderno não envia nada.</p>
+  <label for="c-escolha">A nota que escolhes</label><textarea id="c-escolha" data-k="escolha" class="" placeholder="Copia-a ou resume-a numa linha."></textarea>
+  <label for="c-texto">Umas linhas tuas</label><textarea id="c-texto" data-k="texto" class="grande" placeholder="O que viste, o verso como está, e o que te fez pensar."></textarea><p class="pequeno" id="palavras">0 palavras.</p>
+  <h2 style="margin-top:18px">Antes de guardar</h2>
+  <ul class="lista" id="verificar"><li><input type="checkbox" id="v0"><label for="v0" style="margin:0;font-weight:400">Copiei cada verso como está e disse onde o li.</label></li><li><input type="checkbox" id="v1"><label for="v1" style="margin:0;font-weight:400">Separei o que vi do que pensei.</label></li></ul>
+  <div class="fila"><button class="btn" id="copiar">Copiar o texto</button><button class="btn sec" id="partilhar" hidden>Partilhar</button><button class="btn sec" id="guardar">Guardar ficheiro</button></div>
+  <p class="pequeno" style="margin-top:14px">O texto fica neste telemóvel. Este caderno não envia nada e não conta para a nota.</p>
   <p style="margin-top:26px"><button class="btn sec" id="apagar">Apagar tudo e recomeçar</button></p>
 </section>
 </main>
@@ -107,9 +104,10 @@ figure img[tabindex]:focus-visible{outline:3px solid var(--tinta,#000);outline-o
 <div id="aviso" role="status"></div>
 <script>
 (function(){
-var CHAVE="visita-visita-casa-fernando-pessoa",DIA="2026-11-05",MIN=150,MAX=200,TAREFA="Dia Fernando Pessoa",TITULO="Um verso, um objeto: Casa Fernando Pessoa";
+var CHAVE="visita-visita-casa-fernando-pessoa",DIA="2026-11-05",MIN=0,MAX=200,TAREFA="Caderno de campo facultativo",TITULO="Um verso, um objeto: Casa Fernando Pessoa";
 var E={notas:[],campos:{},escolha:"",feito:[],fase:""};
 try{var g=JSON.parse(localStorage.getItem(CHAVE)||"null");if(g)E=Object.assign(E,g)}catch(x){}
+if(E.caderno!==1){E.feito=[];if(E.campos)delete E.campos.propostas;E.caderno=1}
 function guardar(){try{localStorage.setItem(CHAVE,JSON.stringify(E))}catch(x){}}
 function $(s){return document.querySelector(s)}function $$(s){return Array.prototype.slice.call(document.querySelectorAll(s))}
 function avisar(t){var a=$("#aviso");a.textContent=t;a.style.display="block";clearTimeout(avisar.t);avisar.t=setTimeout(function(){a.style.display="none"},2200)}
@@ -126,9 +124,8 @@ function usar(){
   $("#usar").innerHTML=E.notas.length?E.notas.map(function(n){return '<button class="chip" data-u="'+n.id+'" style="border-radius:10px;text-align:left;display:block;width:100%;margin:0 0 6px"><small class="pequeno">'+limpo(n.nome)+(n.paragem?", "+limpo(n.paragem):"")+'</small><br>'+limpo(n.texto)+'</button>'}).join(""):'<p class="pequeno">Sem notas. Podes escrever na mesma.</p>';
 }
 function contar(){
-  var t=$("#c-texto");if(!t)return;var n=(t.value.trim().match(/\S+/g)||[]).length,b=$("#barra");
-  b.style.width=Math.min(100,Math.round(n/MAX*100))+"%";b.className=n>=MIN&&n<=MAX?"bom":"";
-  $("#palavras").textContent=n+(n===1?" palavra. ":" palavras. ")+(n<MIN?"Faltam "+(MIN-n)+".":n>MAX?"Tens "+(n-MAX)+" a mais.":"Está dentro do limite.");
+  var t=$("#c-texto");if(!t)return;var n=(t.value.trim().match(/\S+/g)||[]).length;
+  $("#palavras").textContent=n+(n===1?" palavra.":" palavras.");
 }
 function relatorio(){
   var l=[TITULO,TAREFA,""];
@@ -157,8 +154,8 @@ if(Rec){var v=$("#dlg-voz");v.hidden=false;v.onclick=function(){try{var r=new Re
 var sala=$("#sala");if(sala){$("#entrar").onclick=function(){sala.classList.add("on")};var s=$("#sair"),tm;function larga(){clearTimeout(tm)}
   s.onpointerdown=function(){tm=setTimeout(function(){sala.classList.remove("on")},3000)};s.onpointerup=larga;s.onpointerleave=larga;s.onpointercancel=larga}
 // entregar
-function copiar(){var t=relatorio();if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(t).then(function(){avisar("Copiado. Cola na tarefa do Teams.")},function(){velho(t)});else velho(t)}
-function velho(t){var a=document.createElement("textarea");a.value=t;document.body.appendChild(a);a.select();try{document.execCommand("copy");avisar("Copiado. Cola na tarefa do Teams.")}catch(x){avisar("Seleciona o texto e copia à mão.")}document.body.removeChild(a)}
+function copiar(){var t=relatorio();if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(t).then(function(){avisar("Copiado.")},function(){velho(t)});else velho(t)}
+function velho(t){var a=document.createElement("textarea");a.value=t;document.body.appendChild(a);a.select();try{document.execCommand("copy");avisar("Copiado.")}catch(x){avisar("Seleciona o texto e copia à mão.")}document.body.removeChild(a)}
 $("#copiar").onclick=copiar;
 if(navigator.share){var p=$("#partilhar");p.hidden=false;p.onclick=function(){navigator.share({title:TITULO,text:relatorio()}).catch(function(){})}}
 $("#guardar").onclick=function(){var a=document.createElement("a");a.href=URL.createObjectURL(new Blob([relatorio()],{type:"text/plain;charset=utf-8"}));a.download=CHAVE+".txt";document.body.appendChild(a);a.click();document.body.removeChild(a)};

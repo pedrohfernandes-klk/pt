@@ -1,0 +1,256 @@
+{
+ "slug": "m7-u1",
+ "modulo": "m7",
+ "unidade": 1,
+ "versao": "2",
+ "momento": "Antes de começar",
+ "titulo": "Afirmar, desejar, continuar em dúvida",
+ "descricao": "Aquecimento em cartões antes da aula de tarefa da unidade 1 do M7: recordar o caminho dos dois poemas, ler a instrução, afirmar, desejar, pedir e duvidar noutros versos, rever uma certeza, comparar bem e mal.",
+ "licoes_das_citacoes": [
+  "m7/licao-m7-f02",
+  "m7/licao-m7-f13",
+  "m7/licao-m7-f14",
+  "m7/licao-m7-f15",
+  "m7/licao-m7-f34",
+  "tarefas/m7-u1"
+ ],
+ "menu": [
+  [
+   "../../../m7/licao-m7-f13/",
+   "Relembrar F13"
+  ],
+  [
+   "../../../m7/licao-m7-f14/",
+   "Relembrar F14"
+  ],
+  [
+   "../../../m7/licao-m7-f15/",
+   "Relembrar F15"
+  ]
+ ],
+ "reservadas": [
+  "É em nós que é tudo",
+  "Quem sou ao menos sinta",
+  "Não é com ilhas do fim do mundo",
+  "Se quem fui é enigma"
+ ],
+ "_nota": "Baralho final da proposta de 29/10/2026 (aquecimento-m7-u1-final.json, com as correções dos três júris), gerado por scripts/aquecimentos.py. «reservadas»: passagens da tarefa que nenhum cartão de fazer usa.",
+ "cartoes": [
+  {
+   "t": "ler",
+   "rot": "Abre",
+   "titulo": "Dois finais para comparar",
+   "html": "<p class=\"abre\"><b>Dois poemas de 1933, dois finais para comparar na aula de tarefa.</b> Este aquecimento não faz a comparação por ti: recorda os dois poemas e treina, com outros versos da unidade, o que a tarefa te vai pedir.</p><div class=\"caixa\"><h3>A instrução da tarefa</h3><p>Compara «É em nós que é tudo» («Não sei se é sonho, se realidade») e «Quem sou ao menos sinta» («Quando as crianças brincam»). Explica o que os finais afirmam ou desejam e o que continua em dúvida. Usa uma passagem de cada poema e apresenta a tua leitura.</p></div><p>Dez a quinze minutos, com consulta. Não conta para a nota.</p>"
+  },
+  {
+   "t": "emparelhar",
+   "g": 1,
+   "p": "Liga cada verso ao momento do seu poema.",
+   "p2": "Ilha do sul ou crianças a brincar? Liga cada verso ao que acontece nele.",
+   "pares": [
+    [
+     "«É a que ansiamos»",
+     "A ilha: o desejo"
+    ],
+    [
+     "«Felizes, nós? Ali, talvez, talvez,»",
+     "A ilha: a dúvida"
+    ],
+    [
+     "«E eu as oiço brincar,»",
+     "As crianças: ouvir"
+    ],
+    [
+     "«Que não tive me vem,»",
+     "As crianças: o que não houve"
+    ]
+   ],
+   "f": "Antes do final, cada poema passa por estes momentos: a ilha desejada e logo posta em dúvida (lição F14), as crianças ouvidas e uma infância que não houve (lição F15). Na tarefa, os versos são os dos finais, e a leitura é tua.",
+   "fe": "Lê o que cada verso faz: «ansiamos» é desejar e «talvez, talvez» duvida, na ilha; «oiço» é ouvir e «Que não tive» fala do que não houve, nas crianças."
+  },
+  {
+   "t": "completar",
+   "g": 2,
+   "p": "Completa o que a instrução te pede.",
+   "p2": "Que operação, que provas e que tamanho pede a tarefa?",
+   "frase": "A tarefa pede-te que [1] os dois finais, com [2], em [3] palavras.",
+   "lacunas": [
+    {
+     "o": [
+      "compares",
+      "resumas",
+      "ilustres"
+     ],
+     "c": 0
+    },
+    {
+     "o": [
+      "uma passagem de cada poema",
+      "os dois poemas inteiros",
+      "uma passagem só, à tua escolha"
+     ],
+     "c": 0
+    },
+    {
+     "o": [
+      "80 a 120",
+      "40 a 60",
+      "150 a 200"
+     ],
+     "c": 0
+    }
+   ],
+   "f": "A instrução abre com **«Compara»** e pede **uma passagem de cada poema**; o terceiro critério fixa **80 a 120 palavras**. E o «o que» de «o que os finais afirmam ou desejam» pede conteúdo: as palavras do verso, não só um rótulo.",
+   "fe": "Volta à instrução: «Compara», «uma passagem de cada poema», «Escreves 80 a 120 palavras». Resumir ou ilustrar não é comparar; um poema inteiro não é uma passagem, e uma só deixa um poema de fora; 40 a 60 fica abaixo do limite e 150 a 200 passa dele."
+  },
+  {
+   "t": "ordenar",
+   "g": 3,
+   "p": "Põe por ordem o plano dos 60 minutos de produção em papel.",
+   "p2": "Cada passo usa o que o anterior produziu. Do primeiro ao último: ordena.",
+   "passos": [
+    "Relês os dois poemas e escolhes uma passagem de cada",
+    "Assinalas, nas passagens escolhidas, as palavras que vais explicar",
+    "Escreves a comparação a partir dessas palavras, com a tua leitura e uma dúvida fundamentada",
+    "Relês o texto escrito, corriges e contas as palavras: entre 80 e 120",
+    "Escreves a síntese de duas linhas e entregas as fotografias no Teams"
+   ],
+   "f": "Cada passo usa o anterior: as palavras saem das passagens, a comparação sai das palavras, conta-se o texto já escrito e a síntese são as duas linhas finais.",
+   "fe": "Não assinalas palavras sem passagens, não escreves sem as palavras, não contas um texto que ainda não existe; a síntese fecha, antes das fotografias."
+  },
+  {
+   "t": "emparelhar",
+   "g": 4,
+   "p": "Liga cada verso ao que a voz faz nele.",
+   "p2": "Afirma, deseja, pede ou duvida? Liga cada verso.",
+   "pares": [
+    [
+     "«Alegra-me ouvir a chuva»",
+     "afirma"
+    ],
+    [
+     "«Ah, poder ser tu, sendo eu!»",
+     "deseja"
+    ],
+    [
+     "«Entrai por mim dentro!»",
+     "pede"
+    ],
+    [
+     "«Não sei quem me sonho...»",
+     "duvida"
+    ]
+   ],
+   "f": "**Afirma**: «Alegra-me», no presente e sem «se» nem «não sei» à volta, declara. **Deseja**: «Ah, poder ser» é vontade, não facto. **Pede**: «Entrai» é um imperativo dirigido a alguém (o céu, o campo, a canção); um desejo não precisa de destinatário. **Duvida**: «Não sei» tira a certeza.",
+   "fe": "Procura a marca e o que a rodeia: um presente que declara, sem «se» nem «não sei»; uma exclamação de vontade; um imperativo dirigido a alguém; uma marca de incerteza."
+  },
+  {
+   "t": "escolha",
+   "g": 5,
+   "p": "«Ela canta, pobre ceifeira» e «Ah, canta, canta sem razão!»: o que muda de um «canta» para o outro?",
+   "p2": "O verbo «canta» está no 1.º verso e abre a 4.ª estrofe, repetido. O que faz a voz em cada caso?",
+   "o": [
+    "No primeiro, a voz diz o que a ceifeira faz; no segundo, pede-lhe que cante. Muda o ato, não a palavra.",
+    "Nada muda: nas duas vezes, a voz afirma que a ceifeira está a cantar.",
+    "No segundo, a voz deixa de ouvir a ceifeira e passa a falar só de si."
+   ],
+   "c": 0,
+   "f": "A forma é a mesma; o contexto muda o ato. «Ela canta» descreve; em «Ah, canta», o «Ah», a exclamação e o «canta» dirigido à ceifeira fazem um **pedido** (lição F13). Lê cada verso com o que está à volta.",
+   "fe": [
+    null,
+    "No segundo há «Ah», há exclamação e a voz fala com a ceifeira: «canta» é um imperativo, um pedido, e não uma descrição.",
+    "A voz continua a ouvi-la e fala-lhe diretamente; a reação ao canto até já vinha de antes, em «Ouvi-la alegra e entristece»."
+   ]
+  },
+  {
+   "t": "rever",
+   "g": 6,
+   "p": "Revê a frase para não dizer mais do que o verso.",
+   "p2": "A frase faz de uma imagem uma certeza. Escolhe a versão que o verso permite.",
+   "apoio": "«Ela canta, pobre ceifeira, / Julgando-se feliz talvez;»",
+   "frase": "A ceifeira é feliz e não pensa.",
+   "trecho": "é feliz e não pensa",
+   "o": [
+    "talvez se julgue feliz, como imagina quem a ouve",
+    "é feliz porque canta e ceifa",
+    "é triste, porque a voz tem viuvez"
+   ],
+   "c": 0,
+   "f": "**«Julgando-se»** e **«talvez»** tiram a certeza: só se pode dizer que quem ouve lhe imagina essa alegria (lição F13). Na tarefa, nenhuma frase tua pode dar como certo o que o verso deixa em hipótese ou em desejo.",
+   "fe": [
+    null,
+    "Continua a ser uma certeza: cantar e ceifar não provam o que ela sente.",
+    "Troca uma certeza por outra: a viuvez é «alegre», e nenhum verso garante o que ela sente."
+   ]
+  },
+  {
+   "t": "vf",
+   "g": 7,
+   "p": "«Ah, poder ser tu, sendo eu!» prova que Fernando Pessoa quis, na vida dele, ser a ceifeira sem deixar de ser quem era.",
+   "p2": "Um verso na 1.ª pessoa, como «Ah, poder ser tu, sendo eu!», é um documento da vida de Pessoa.",
+   "v": false,
+   "f": "Falso: quem diz «eu» é **a voz do poema**; o verso mostra o desejo dessa voz, não um facto da vida do autor. Fingir não é mentir (lição F02), e a infância «Que não tive» também não prova a vida de Pessoa (lição F15).",
+   "fe": "O poema constrói uma voz que ouve e deseja. Para saber o que Pessoa quis na vida seria precisa outra fonte, e um verso não é essa fonte."
+  },
+  {
+   "t": "escolha",
+   "g": 8,
+   "p": "O terceiro critério pede «uma dúvida fundamentada». Qual destas frases sobre «Ela canta, pobre ceifeira» é uma dúvida fundamentada?",
+   "p2": "Que frase diz o que fica por saber na «Ceifeira» e mostra no texto porquê?",
+   "o": [
+    "Fica por saber o que a ceifeira sente: ela nunca fala, e tudo o que lemos vem de quem a ouve, como «Ouvi-la alegra e entristece».",
+    "Tenho dúvidas, porque o poema é difícil e não o percebi bem.",
+    "Fica por saber se a ceifeira é feliz, porque «Canta, e ceifa»."
+   ],
+   "c": 0,
+   "f": "Uma dúvida fundamentada diz **o que fica por saber** e **porquê**, com um indício do texto: aqui, o silêncio da ceifeira e um verso de quem a ouve (lição F13). Na tarefa, a dúvida nasce dos versos.",
+   "fe": [
+    null,
+    "Esta dúvida é sobre a tua leitura, não sobre o poema, e não aponta nenhum verso que a sustente.",
+    "Há um verso, mas não sustenta a dúvida: cantar e ceifar é o que ela faz, não o que sente. Serviria o «talvez», ou o silêncio dela."
+   ]
+  },
+  {
+   "t": "escolha",
+   "g": 9,
+   "p": "Qual destas comparações de «Autopsicografia» e «Ela canta, pobre ceifeira» está completa?",
+   "p2": "Que comparação dos dois poemas tem um ponto comum, uma diferença e uma passagem de cada?",
+   "o": [
+    "Em comum, sentir passa por pensar: «a entreter a razão», «O que em mim sente está pensando». Mas só a «Ceifeira» deseja «poder ser tu, sendo eu».",
+    "Em comum, sentir passa por pensar: «a entreter a razão», «O que em mim sente está pensando». E os dois têm quadras e são do mesmo poeta.",
+    "Pessoa sofria quando escreveu os dois poemas: por isso o fingidor e a ceifeira mostram a dor da vida dele."
+   ],
+   "c": 0,
+   "f": "Completa é a que tem **um ponto comum, com uma passagem de cada poema**, e **uma diferença** com palavras do texto, como no modelo da lição F13. Na tarefa farás o mesmo com outros dois poemas.",
+   "fe": [
+    null,
+    "O ponto comum está provado, mas a segunda frase junta uma semelhança vaga e falta a diferença: comparar é dizer também onde os poemas se afastam.",
+    "Leitura biográfica: os versos constroem vozes e não provam o que Pessoa sentia; a fala de um poema não documenta, sozinha, a biografia (lição F15)."
+   ]
+  },
+  {
+   "t": "escolha",
+   "g": 10,
+   "p": "Uma comparação diz: nos dois poemas a voz não sente nada, porque o poeta «Finge tão completamente» e, na «Ceifeira», «O que em mim sente está pensando», isto é, só pensa. Onde falha?",
+   "p2": "Esta comparação conclui que, nos dois poemas, a voz só pensa e não sente. Qual é o erro?",
+   "o": [
+    "Faz os versos dizer o que não dizem: o poeta finge «A dor que deveras sente», e na «Ceifeira» há algo que sente enquanto pensa.",
+    "Cita poemas a mais: para comparar, bastava uma passagem de «Autopsicografia».",
+    "Não falha: cita «Finge tão completamente» e «O que em mim sente está pensando», uma passagem de cada poema, e isso chega."
+   ],
+   "c": 0,
+   "f": "Citar não chega: a explicação tem de **respeitar o que as palavras dizem**. A dor que o poeta «deveras sente» impede apagar o sentir; «O que em mim sente está pensando» junta sentir e pensar (lição F13). Antes de escreveres «isto é», confirma que o verso o diz.",
+   "fe": [
+    null,
+    "A instrução pede uma passagem de cada poema; o problema não está no número de citações, está no que se diz delas.",
+    "As passagens estão lá, mas a explicação muda-lhes o sentido; o primeiro critério pede que expliques o que sustenta a comparação."
+   ]
+  },
+  {
+   "t": "ler",
+   "rot": "Para levar",
+   "escuro": true,
+   "html": "<p class=\"levar\">Uma voz afirma, deseja, pede ou duvida: a marca está nas palavras e no contexto.</p><p>Agora, com os dois finais da tarefa: uma passagem de cada poema, o que cada voz afirma ou deseja com as palavras do verso (não só um rótulo), o ponto comum e a diferença, e um indício do que continua em dúvida.</p>"
+  }
+ ]
+}

@@ -1,0 +1,118 @@
+{
+ "slug": "m7-u3",
+ "titulo": "Louco, sim: argumentar com os movimentos de <i>Mensagem</i>",
+ "unidade": 3,
+ "aquecer": {
+  "cartoes": "aquecimento/",
+  "minutos": 10,
+  "texto": "Dez minutos de cartões no início da aula: treinam os seis movimentos com outros exemplos e não escrevem a tua opinião. Depois, o docente apresenta a tarefa e começam os 60 minutos de produção.",
+  "ligacao": "Abrir o aquecimento em cartões",
+  "ligacao_enunciado": "Antes de começar: aquecer em cartões, 10 minutos"
+ },
+ "lead": "Um texto de opinião à mão, com 180 a 220 palavras e o número escrito no fim. Individual, com consulta das lições e dos apontamentos.",
+ "nucleo": [
+  "Na primeira frase, escreve a tua tese com uma condição (S). Usa um movimento que dá razão ao outro lado e vira (R ou C) e mais um à tua escolha (N, M ou P). Fecha com uma conclusão que volta à tese sem a copiar. Marca na margem a letra de cada movimento; a conclusão não leva letra.",
+  "Cita um verso exato de <i>Mensagem</i>, entre «», com o poema indicado, e explica-o no contexto. Junta um facto datado das lições, separado do sentido que o poema lhe dá, ou o confronto com Garrett (<i>Frei Luís de Sousa</i>) ou com Reis."
+ ],
+ "temas": [
+  {
+   "letra": "A",
+   "nome": "Valeu a pena?",
+   "texto": "«Valeu a pena? Tudo vale a pena / Se a alma não é pequena.» Concordas, quando o preço de um sonho grande é pago por outros, como as mães, os filhos e as noivas da primeira estrofe?"
+  },
+  {
+   "letra": "B",
+   "nome": "Por quem, ou pelo quê, ainda esperamos?",
+   "texto": "Esperar que alguém volte e resolva dá força a um país ou tira-lha? Usa o dossiê do tema B: o facto que usares tem de ter data (1578, 1933 ou 1934)."
+  }
+ ],
+ "apoios": [
+  {
+   "href": "../../m7/licao-m7-f10/",
+   "texto": "Argumentar com versos (F10): relê «Para entender» (os seis movimentos: S, N, R, M e P, com o verso de cada um; C, com a frase da F07) e «O essencial» (o plano do texto, ponto a ponto)."
+  },
+  {
+   "href": "../../m7/licao-m7-f08/",
+   "texto": "Deus quer, o homem sonha, a obra nasce (F08): relê «O texto, 2 de 2» e «Mito e história»."
+  },
+  {
+   "href": "../../m7/licao-m7-f09/",
+   "texto": "É a hora! (F09): relê «O texto, 1 de 3» e «Dois regressos»."
+  },
+  {
+   "href": "../../m7/licao-m7-f07/",
+   "texto": "Como se soubesse a verdade (F07): relê «“Como se” e “porque”» (a causal) e o cartão da versão com «embora» (a concessiva)."
+  },
+  {
+   "href": "../../m7/licao-m7-f11/",
+   "texto": "Quantas vozes cabem num homem (F11): relê os versos de Reis em «O texto», a «Árvore da frase» (uma causal) e o cartão que ordena uma defesa escrita, até «Objeção e resposta»."
+  }
+ ],
+ "exemplos": [
+  {
+   "titulo": "Descobre o movimento (resolvido)",
+   "html": "<p>Em «Louco, sim, louco, porque quis grandeza» («D. Sebastião, Rei de Portugal», v. 1), o rei aceita a palavra de quem o acusa e muda-lhe o valor numa oração subordinada adverbial causal: a loucura passa a ser o nome de ter querido grandeza. É o movimento R. Não é uma concessiva, que seria com «embora», como ensina a lição F07.</p>"
+  },
+  {
+   "titulo": "O texto inteiro, noutro tema (resolvido)",
+   "html": "<p class=\"task-example-text\"><i>Ensaiar só é perder tempo se o ensaio for sempre igual.</i> [S] <i>Dizem que quem ensaia muito fica artificial. Artificial, sim, artificial, porque escolheu cada pausa em vez de a deixar ao acaso.</i> [R] <i>Ensaiar custa uma tarde; mas é no ensaio que se descobre o que ainda não se sabe dizer.</i> [M] <i>Quem quer falar três minutos sem ler tem de ouvir a própria voz antes da turma.</i> [N] <i>Por isso, desde que cada ensaio mude alguma coisa, ensaiar é o caminho mais curto para falar sem ler.</i></p><p>O verso de <i>Mensagem</i> e o facto datado faltam de propósito: no teu texto, entram depois de [S] ou de [M], e o tema é o A ou o B.</p><p>R e C respondem a quem discorda (uma acusação, uma objeção); M pesa um custo contra um ganho. Por isso, na tarefa, R ou C é o movimento que dá razão ao outro lado, e M conta no segundo grupo.</p>"
+  }
+ ],
+ "dossie_titulo": "Dossiê do tema B",
+ "dossie": [
+  {
+   "facto": "A 4 de agosto de 1578, D. Sebastião desaparece em Alcácer Quibir.",
+   "href": "../../m7/licao-m7-f08/",
+   "fonte": "Lição «Deus quer, o homem sonha, a obra nasce», «Linha de vida»"
+  },
+  {
+   "facto": "Em 1578, o corpo do rei não foi reconhecido por todos.",
+   "href": "../../m7/licao-m7-f09/",
+   "fonte": "Lição «É a hora!», «Abre»"
+  },
+  {
+   "facto": "Em 1578, com o desaparecimento do rei, nasce o sebastianismo, a crença de que voltaria.",
+   "href": "../../m7/licao-m7-f08/",
+   "fonte": "Lição «Deus quer, o homem sonha, a obra nasce», «Linha de vida»"
+  },
+  {
+   "facto": "Em <i>Frei Luís de Sousa</i>, de Garrett, regressa D. João de Portugal, desaparecido em Alcácer Quibir, e o regresso destrói a família de Madalena.",
+   "href": "../../m7/licao-m7-f09/",
+   "fonte": "Lição «É a hora!», «Dois regressos»"
+  },
+  {
+   "facto": "«D. Sebastião, Rei de Portugal» é de 20 de fevereiro de 1933; <i>Mensagem</i> sai em 1934.",
+   "href": "../../m7/licao-m7-f08/",
+   "fonte": "Lição «Deus quer, o homem sonha, a obra nasce», «Linha de vida»"
+  }
+ ],
+ "opcional": {
+  "pergunta": "Qual destas frases tem uma tese com condição (S)?",
+  "opcoes": [
+   {
+    "certa": false,
+    "letra": "A",
+    "texto": "Ler em voz alta ajuda sempre.",
+    "resposta": "Não há condição: «sempre» não diz em que caso a tese é verdade. S pede um «se», um «desde que» ou um «só quando»."
+   },
+   {
+    "certa": true,
+    "letra": "B",
+    "texto": "Ler em voz alta só ajuda quando quem ouve pode interromper.",
+    "resposta": "«só quando» põe a condição: a tese diz em que caso é verdade, e por isso é mais difícil de atacar."
+   },
+   {
+    "certa": false,
+    "letra": "C",
+    "texto": "Há quem leia em voz alta e quem não leia.",
+    "resposta": "Descreve, não defende: não há tese, e por isso também não há condição."
+   }
+  ]
+ },
+ "criterios": [
+  "Tese com condição na primeira frase e conclusão que volta a ela; movimentos marcados na margem, que fazem avançar o argumento.",
+  "Verso de <i>Mensagem</i> exato, com o poema indicado e explicado; facto datado separado do sentido, ou outra voz.",
+  "180 a 220 palavras, conectores certos, texto revisto e as duas linhas."
+ ],
+ "fecho": "Fecha com duas linhas, fora da contagem: que movimento vais voltar a usar, e onde? Aponta o verso ou a frase que to ensinou."
+}
