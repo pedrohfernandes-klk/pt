@@ -26,8 +26,10 @@ class ExamAlignment(unittest.TestCase):
    for ref in [s['source']]+s['resources']:
     self.assertTrue((ROOT/ref['url'].removeprefix('/pt/')/'index.html').is_file(),(s['id'],ref))
   s=self.sessions[0]
-  self.assertIn('Nom hei [eu] i barqueiro nem remador',s['source']['excerpt'])
-  self.assertIn('morte consumada',s['source']['excerpt'])
+  # 27/10/2026: o recorte achatado passou a textos compostos (versos, notas, crédito); ver test_exame_textos.py.
+  mendinho=s['source']['passages'][2]
+  self.assertIn('Nom hei [eu] i barqueiro nem remador',[l for st in mendinho['stanzas'] for l in st])
+  self.assertIn('morte consumada',mendinho['note'])
   self.assertTrue(any('m1-f02' in r['url'] for r in s['resources']))
  def test_interpretation_limits_and_specific_terms(self):
   by={s['id']:s for s in self.sessions}

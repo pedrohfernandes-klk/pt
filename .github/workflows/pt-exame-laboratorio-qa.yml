@@ -5,6 +5,8 @@ on:
       - 'exame/**'
       - 'assets/exame/**'
       - 'tests/*exame*'
+      - 'assets/relogio.*'
+      - 'tests/browser_relogio.py'
       - '.github/workflows/pt-exame-laboratorio-qa.yml'
 permissions:
   contents: read
@@ -23,6 +25,9 @@ jobs:
       - name: Validar JavaScript e regressões do exame
         run: |
           node --check assets/exame/laboratorio.js
+          node --check assets/exame/app.js
+          node --check assets/exame/dossier.js
+          node --check assets/relogio.js
           python -m unittest discover -s tests -p 'test_exame*.py' -v
       - name: Preparar navegador
         run: |
@@ -33,5 +38,7 @@ jobs:
       - name: Testar máquinas e sessões preservadas
         run: |
           node tests/browser_exame_laboratorio.cjs
+          node tests/browser_exame_oficina_revisao.cjs
           python tests/browser_exame_cache.py
           python tests/browser_exame_alignment.py
+          python tests/browser_relogio.py

@@ -28,23 +28,24 @@ async function oficina(browser,host){
  const ctx=await browser.newContext({viewport:{width:1366,height:900}});const page=await ctx.newPage();
  await page.goto(host+'/exame/laboratorio/');await page.evaluate(()=>window.print=()=>{});
  // relógio e rascunho conservados ao revelar apoios; pausa ao mudar de máquina
+ // 27/10/2026: o relógio passa a ser o relógio do aluno (assets/relogio.js): #timer, #clock e #reset dão lugar às classes do componente.
  await page.locator('[data-machine="2"]').click();
  assert.equal(await page.evaluate(()=>document.activeElement.tagName),'H2');
  await page.locator('#answer').fill('Rascunho a conservar');
- await page.locator('#timer').click();await page.waitForTimeout(1300);
+ await page.locator('#exercise .relogio-principal').click();await page.waitForTimeout(1300);
  await page.locator('#reveal').click();
  assert.equal(await page.evaluate(()=>document.activeElement.textContent),'Pista');
  assert.equal(await page.locator('#answer').inputValue(),'Rascunho a conservar');
- assert.notEqual(await page.locator('#clock').innerText(),'02:00');
- assert.equal(await page.locator('#timer').innerText(),'Pausar');
+ assert.notEqual(await page.locator('#exercise .relogio-mostrador').innerText(),'02:00');
+ assert.equal(await page.locator('#exercise .relogio-principal').innerText(),'Pausar');
  await page.locator('[data-machine="0"]').click();await page.waitForTimeout(1300);
  await page.locator('[data-machine="2"]').click();
- const paused=await page.locator('#clock').innerText();await page.waitForTimeout(1300);
- assert.equal(await page.locator('#clock').innerText(),paused);
- assert.equal(await page.locator('#timer').innerText(),'Continuar');
+ const paused=await page.locator('#exercise .relogio-mostrador').innerText();await page.waitForTimeout(1300);
+ assert.equal(await page.locator('#exercise .relogio-mostrador').innerText(),paused);
+ assert.equal(await page.locator('#exercise .relogio-principal').innerText(),'Continuar');
  assert.equal(await page.locator('#answer').inputValue(),'Rascunho a conservar');
  assert(await page.locator('[data-apoio="1"]').isVisible());
- assert.match(await page.locator('#of-aviso').innerText(),/Relógio em pausa/);
+ assert.match(await page.locator('#of-aviso').innerText(),/Relógio em pausa: \d\d:\d\d \(pausa 1 de 2\)/);
  // teclado: a escolha faz-se com Espaço e o foco fica na escolha
  await page.locator('[data-machine="1"]').click();
  await page.locator('[data-answer="3"]').focus();await page.keyboard.press('Space');
@@ -88,7 +89,7 @@ for(let i=0;i<3;i++)await page.locator('#reveal').click();assert(await page.getB
 await page.locator('#projetar').click();if(machine>=2)assert(await page.locator('#answer').isHidden());assert(await page.locator('#fontes').isHidden());await page.locator('#projetar').click();assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));await page.locator('#restart').click();assert(await page.getByRole('heading',{name:'Uma resposta possível',exact:true}).isHidden());
 }}console.log(`PASS 8 exercises at ${width}px: choices, reveal, self-review, print privacy, projection, reset`);
 }
-await page.goto(host+'/exame/laboratorio/?projetar=1');assert.equal(await page.locator('#projetar').getAttribute('aria-pressed'),'true');await page.locator('[data-machine="2"]').click();await page.locator('#timer').click();await page.waitForTimeout(1250);assert.notEqual(await page.locator('#clock').innerText(),'02:00');await page.locator('#reset').click();assert.equal(await page.locator('#clock').innerText(),'02:00');assert(await page.getByRole('heading',{name:'Uma resposta possível',exact:true}).isHidden());
+await page.goto(host+'/exame/laboratorio/?projetar=1');assert.equal(await page.locator('#projetar').getAttribute('aria-pressed'),'true');await page.locator('[data-machine="2"]').click();await page.locator('#exercise .relogio-principal').click();await page.waitForTimeout(1250);assert.notEqual(await page.locator('#exercise .relogio-mostrador').innerText(),'02:00');await page.locator('#exercise .relogio-recomecar').click();assert.equal(await page.locator('#exercise .relogio-mostrador').innerText(),'02:00');assert(await page.getByRole('heading',{name:'Uma resposta possível',exact:true}).isHidden());
 if(process.env.PT_SCREENSHOT){await page.screenshot({path:process.env.PT_SCREENSHOT,fullPage:true});}
 await oficina(browser,host);
 await percurso(browser,host);
