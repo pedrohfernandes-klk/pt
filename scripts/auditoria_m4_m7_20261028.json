@@ -275,9 +275,9 @@
   "ficheiro": "obras/pessoa/index.html",
   "local": "«Ouvir o texto», nota final: as lições já têm leituras",
   "antigo": ">Ainda não temos leituras dos poemas do ortónimo e de Ricardo Reis que as lições leem.</p>",
-  "novo": ">As lições já têm leituras de «Autopsicografia» (em «O poeta é um fingidor»), de «O meu olhar é nítido como um girassol» (em «Pensar é estar doente dos olhos»), de «Para ser grande, sê inteiro» (em «O pouco que duramos») e de «Chuva Oblíqua», VI (em «Chuva Oblíqua»), e uma cena-poema de «Vem sentar-te comigo, Lídia» (em «À beira do rio»).</p>",
+  "novo": ">As lições já têm leituras de «Autopsicografia» (em «O poeta é um fingidor»), de «O meu olhar é nítido como um girassol» (em «Pensar é estar doente dos olhos»), de «Para ser grande, sê inteiro» (em «O pouco que duramos») e de «Chuva Oblíqua», VI (em «Chuva Oblíqua»).</p>",
   "ocorrencias": 1,
-  "achado": "m7#57 (a página da obra nega leituras que as lições têm). revisão de 29/10/2026: faltavam a F23 («Ouvir: «Para ser grande, sê inteiro», na voz de Maria Rueff») e a F34 («Ouvir: «Chuva Oblíqua», VI, na voz de Mário Máximo»), confirmadas nas lições (achado 6 da revisão)."
+  "achado": "m7#57 (a página da obra nega leituras que as lições têm). revisão de 29/10/2026: faltavam a F23 («Ouvir: «Para ser grande, sê inteiro», na voz de Maria Rueff») e a F34 («Ouvir: «Chuva Oblíqua», VI, na voz de Mário Máximo»), confirmadas nas lições (achado 6 da revisão). Verificação de 29/10/2026: sem a cena-poema de «Vem sentar-te comigo, Lídia», porque «Ver em cena», na mesma página, diz que ainda não há representação com origem confirmada."
  },
  {
   "ficheiro": "obras/pessoa/index.html",
@@ -1677,9 +1677,9 @@
   "ficheiro": "m7/licao-m7-f13/index.html",
   "local": "pistas[1] (EPIJogo.montar)",
   "antigo": "o poeta passa a reagir: apóstrofes, exclamações, e «",
-  "novo": "o poeta passa a dirigir-se à ceifeira, com apóstrofes e exclamações, e diz de si: «",
+  "novo": "o poeta passa a dirigir-se à ceifeira, com imperativos e exclamações, e diz de si: «",
   "ocorrencias": 1,
-  "achado": "M7 achado 34 (v.i 38): a reação começa na 3.ª estrofe, como diz a lição (a troca não toca no verso citado, para não colidir com o achado 33, que fica à espera de confirmação). revisão de 29/10/2026: a lista depois dos dois pontos fazia de «O que em mim sente está pensando» uma fala à ceifeira; o verso é a voz a falar de si. O verso citado continua fora da troca."
+  "achado": "M7 achado 34 (v.i 38): a reação começa na 3.ª estrofe, como diz a lição (a troca não toca no verso citado, para não colidir com o achado 33, que fica à espera de confirmação). revisão de 29/10/2026: a lista depois dos dois pontos fazia de «O que em mim sente está pensando» uma fala à ceifeira; o verso é a voz a falar de si. O verso citado continua fora da troca. Verificação de 29/10/2026: a 4.ª estrofe tem imperativos («canta», «Derrama»), não apóstrofes; os vocativos «Ó céu! / Ó campo! Ó canção!» são da 5.ª."
  },
  {
   "ficheiro": "m7/licao-m7-f13/index.html",
@@ -2340,5 +2340,197 @@
   "novo": "Um colega apresenta o roncador.",
   "ocorrencias": 2,
   "achado": "m4 11, revisão de 29/10/2026 (achado 3): depois de o cartão 3 passar a «Individualmente», os casos da lição continuavam a falar de um grupo; a apresentação é individual. O mesmo p que a lição (CARTOES[15].p), nos dados e na opção."
+ },
+ {
+  "ficheiro": "m4/licao-m4-f10/index.html",
+  "local": "CARTOES[14] «Para ir mais longe»: apresentação individual (1)",
+  "antigo": "«Podem ler outra vez a frase",
+  "novo": "«Podes ler outra vez a frase",
+  "ocorrencias": 1,
+  "achado": "verificação de 29/10/2026: o cartão 14 ainda falava a um grupo, como o 6 antes da troca 246"
+ },
+ {
+  "ficheiro": "m4/licao-m4-f10/index.html",
+  "local": "CARTOES[14] «Para ir mais longe»: apresentação individual (2)",
+  "antigo": "«A vossa abertura com a pergunta",
+  "novo": "«A tua abertura com a pergunta",
+  "ocorrencias": 1,
+  "achado": "verificação de 29/10/2026: idem"
+ },
+ {
+  "ficheiro": "m4/licao-m4-f10/index.html",
+  "local": "CARTOES[14] «Para ir mais longe»: apresentação individual (3)",
+  "antigo": "«Quanto tempo ensaiaram antes",
+  "novo": "«Quanto tempo ensaiaste antes",
+  "ocorrencias": 1,
+  "achado": "verificação de 29/10/2026: idem"
+ },
+ {
+  "ficheiro": "m4/index.html",
+  "local": "arquivo, desafio m4-f10: opção certa individual (a chave c=1 não muda)",
+  "antigo": "\"Três a quatro minutos, em grupos de dois ou três\"",
+  "novo": "\"Três a quatro minutos, cada um com o seu peixe\"",
+  "ocorrencias": 1,
+  "achado": "verificação de 29/10/2026: a resposta certa dizia «em grupos de dois ou três», contra a F10 («Individualmente») e o mapa"
+ },
+ {
+  "ficheiro": "m4/index.html",
+  "local": "arquivo, desafio m4-f10: distrator sem «cada um sozinho»",
+  "antigo": "\"Dois minutos, cada um sozinho, e sem imagens\"",
+  "novo": "\"Dois minutos, sem imagens\"",
+  "ocorrencias": 1,
+  "achado": "verificação de 29/10/2026: com a certa individual, o distrator deixa de se distinguir por «sozinho»"
+ },
+ {
+  "ficheiro": "m4/index.html",
+  "local": "arquivo, desafio m4-f10: f",
+  "antigo": "\"f\":\"Grupo de dois ou três, três a quatro minutos, no máximo três imagens ou diapositivos.\"",
+  "novo": "\"f\":\"Individual, três a quatro minutos, no máximo três imagens ou diapositivos.\"",
+  "ocorrencias": 1,
+  "achado": "verificação de 29/10/2026: idem"
+ },
+ {
+  "ficheiro": "m4/index.html",
+  "local": "arquivo, desafio m4-f10: fe[0]",
+  "antigo": "\"A apresentação é de grupo (dois ou três) e pode ter até três imagens; dois minutos é pouco para as quatro partes.\"",
+  "novo": "\"A apresentação pode ter até três imagens, e dois minutos é pouco para as quatro partes.\"",
+  "ocorrencias": 1,
+  "achado": "verificação de 29/10/2026: idem"
+ },
+ {
+  "ficheiro": "m4/index.html",
+  "local": "arquivo, desafio m4-f10: fe[2]",
+  "antigo": "\"Não é a turma inteira: são grupos de dois ou três, com três a quatro minutos e no máximo três imagens.\"",
+  "novo": "\"Não é a turma inteira: cada um apresenta o seu peixe, com três a quatro minutos e no máximo três imagens.\"",
+  "ocorrencias": 1,
+  "achado": "verificação de 29/10/2026: idem"
+ },
+ {
+  "ficheiro": "m4/index.html",
+  "local": "arquivo, desafio m4-f10: fe[3]",
+  "antigo": "\"Cinco minutos passa do tempo, e texto corrido não serve; são três a quatro minutos, em grupos de dois ou três.\"",
+  "novo": "\"Cinco minutos passa do tempo, e texto corrido não serve; são três a quatro minutos, individualmente.\"",
+  "ocorrencias": 1,
+  "achado": "verificação de 29/10/2026: idem"
+ },
+ {
+  "ficheiro": "m4/index.html",
+  "local": "cartões das tarefas de unidade, linha descritiva (span.f)",
+  "antigo": "<span class=\"f\">Aula de 90 min com consulta · síntese integrada · trabalho em papel e fotografias no Teams.</span>",
+  "novo": "<span class=\"f\">Aula de 90 minutos com consulta, síntese integrada, trabalho em papel e fotografias no Teams.</span>",
+  "ocorrencias": 3,
+  "achado": "verificação de 29/10/2026: sem «·» dentro da frase, como a troca 283 no M1"
+ },
+ {
+  "ficheiro": "m7/index.html",
+  "local": "cartões das tarefas de unidade, linha descritiva (span.f)",
+  "antigo": "<span class=\"f\">Aula de 90 min com consulta · síntese integrada · trabalho em papel e fotografias no Teams.</span>",
+  "novo": "<span class=\"f\">Aula de 90 minutos com consulta, síntese integrada, trabalho em papel e fotografias no Teams.</span>",
+  "ocorrencias": 3,
+  "achado": "verificação de 29/10/2026: sem «·» dentro da frase, como a troca 283 no M1"
+ },
+ {
+  "ficheiro": "m4/portefolio-do-modulo-m4/index.html",
+  "local": "tabela, linhas M4_Tarefa: as três tarefas de unidade atuais, individuais, entregues em fotografias",
+  "antigo": "<tr><td><code>M4_Tarefa1</code></td><td>Tarefa 1, «Um peixe de hoje»: a ligação para o produto do grupo (só o responsável carrega o ficheiro) e os teus créditos, assinados: o que fizeste tu.</td></tr><tr><td><code>M4_Tarefa2</code></td><td>Tarefa 2, «Discurso no abrigo»: o produto entregue (ou a ligação) e uma linha: o que fiz, o que corrigi depois da devolução.</td></tr><tr><td><code>M4_Tarefa3</code></td><td>Tarefa 3, «Apreciação crítica de Frei Luís de Sousa no teatro»: o produto entregue (ou a ligação) e uma linha: o que fiz, o que corrigi depois da devolução.</td></tr>",
+  "novo": "<tr><td><code>M4_Tarefa1</code></td><td>Tarefa da unidade 1, «Um peixe de hoje»: fotografias do trabalho e da síntese.</td></tr><tr><td><code>M4_Tarefa2</code></td><td>Tarefa da unidade 2, «Apreciação crítica do espetáculo»: fotografias do trabalho e da síntese.</td></tr><tr><td><code>M4_Tarefa3</code></td><td>Tarefa da unidade 3, «Discurso no abrigo»: fotografias do trabalho e da síntese.</td></tr>",
+  "ocorrencias": 1,
+  "achado": "verificação de 29/10/2026: depois das trocas 274 e 275, o mapa diz tarefa 2 = apreciação e tarefa 3 = discurso, com a tarefa 1 individual; o portefólio continuava com a numeração antiga e o grupo (como a troca 29 no M7)"
+ },
+ {
+  "ficheiro": "m4/portefolio-do-modulo-m4/index.html",
+  "local": "«Quando», depois de cada tarefa: sem trabalhos de grupo",
+  "antigo": "O produto, ou a ligação, e uma linha: o que fiz, o que corrigi depois da devolução. Nos trabalhos de grupo, o responsável carrega o produto; os outros põem a ligação e os créditos próprios.",
+  "novo": "As fotografias do trabalho e da síntese, com o nome que está na lista.",
+  "ocorrencias": 1,
+  "achado": "verificação de 29/10/2026: como a troca 30 no M7"
+ },
+ {
+  "ficheiro": "m7/portefolio-do-modulo-m7/index.html",
+  "local": "«Quando», fim de cada unidade: a síntese da aula de tarefa, como a lista",
+  "antigo": "A resposta à pergunta da unidade (três a cinco linhas, com um exemplo dos textos) e «o que aprendi» (cinco linhas).",
+  "novo": "Recuperas a síntese de duas linhas da aula de tarefa, já fotografada; não escreves outra.",
+  "ocorrencias": 1,
+  "achado": "verificação de 29/10/2026: o bloco pedia uma resposta nova de três a cinco linhas e «o que aprendi», contra as linhas da lista, que mandam recuperar a síntese da aula de tarefa"
+ },
+ {
+  "ficheiro": "m4/portefolio-do-modulo-m4/index.html",
+  "local": "«Quando», fim de cada unidade: a síntese da aula de tarefa, como a lista",
+  "antigo": "A resposta à pergunta da unidade (três a cinco linhas, com um exemplo dos textos) e «o que aprendi» (cinco linhas).",
+  "novo": "Recuperas a síntese de duas linhas da aula de tarefa, já fotografada; não escreves outra.",
+  "ocorrencias": 1,
+  "achado": "verificação de 29/10/2026: a mesma contradição que no portefólio do M7 (a lista do M4 diz «Recupera a síntese da aula de tarefa»)"
+ },
+ {
+  "ficheiro": "tarefas/m7-u3/index.html",
+  "local": "apoios: o cartão da F10 pelo nome",
+  "antigo": "F10 · cartão 2: memória e defesa",
+  "novo": "F10 · «O essencial» e «A entrega»: memória e defesa",
+  "ocorrencias": 1,
+  "achado": "verificação de 29/10/2026: os números dos cartões mudam a cada tentativa; a mesma família do m7#39"
+ },
+ {
+  "ficheiro": "m7/licao-m7-f13/index.html",
+  "local": "CARTOES[21].fe: «Ó céu!» é da 5.ª estrofe e «Entrai por mim dentro!» da 6.ª",
+  "antigo": "A ceifeira nunca fala: na última estrofe quem fala chama",
+  "novo": "A ceifeira nunca fala: nas duas últimas estrofes quem fala chama",
+  "ocorrencias": 1,
+  "achado": "verificação de 29/10/2026: «Ó céu! / Ó campo! Ó canção!» fecha a 5.ª estrofe; só «Entrai por mim dentro!» é da última"
+ },
+ {
+  "ficheiro": "m7/index.html",
+  "local": "arquivo, desafio m7-f11: sem remissão para a «Árvore da frase», que o desafio não mostra",
+  "antigo": "são deuses porquê? (vê a «Árvore da frase»).\"",
+  "novo": "são deuses porquê?\"",
+  "ocorrencias": 1,
+  "achado": "verificação de 29/10/2026: a mesma família das trocas 37 a 47"
+ },
+ {
+  "ficheiro": "m7/index.html",
+  "local": "arquivo, desafio m7-f09: sem remissão para o vocabulário (1)",
+  "antigo": "«Brilho sem luz»). Vê o vocabulário no fim do texto.\"",
+  "novo": "«Brilho sem luz»).\"",
+  "ocorrencias": 1,
+  "achado": "verificação de 29/10/2026: o desafio não mostra o vocabulário"
+ },
+ {
+  "ficheiro": "m7/index.html",
+  "local": "arquivo, desafio m7-f09: sem remissão para o vocabulário (2)",
+  "antigo": "diz o v. 5, é «Brilho sem luz e sem arder». O vocabulário está no fim do texto.\"",
+  "novo": "diz o v. 5, é «Brilho sem luz e sem arder».\"",
+  "ocorrencias": 1,
+  "achado": "verificação de 29/10/2026: idem"
+ },
+ {
+  "ficheiro": "m7/index.html",
+  "local": "arquivo, desafio m7-f23: sem remissão para o vocabulário (1)",
+  "antigo": "é sobre o tempo que as rosas duram (vê o vocabulário no fim do texto).\"",
+  "novo": "é sobre o tempo que as rosas duram.\"",
+  "ocorrencias": 1,
+  "achado": "verificação de 29/10/2026: idem"
+ },
+ {
+  "ficheiro": "m7/index.html",
+  "local": "arquivo, desafio m7-f23: sem remissão para o vocabulário (2)",
+  "antigo": "diz quanto duram as rosas (vê o vocabulário).\"",
+  "novo": "diz quanto duram as rosas.\"",
+  "ocorrencias": 1,
+  "achado": "verificação de 29/10/2026: idem"
+ },
+ {
+  "ficheiro": "m7/index.html",
+  "local": "arquivo, desafio m7-f23: sem remissão para o vocabulário (3)",
+  "antigo": "Adónis é uma figura mitológica (vocabulário);",
+  "novo": "Adónis é uma figura mitológica;",
+  "ocorrencias": 1,
+  "achado": "verificação de 29/10/2026: idem"
+ },
+ {
+  "ficheiro": "m7/index.html",
+  "local": "arquivo: «Vocabulário:» em vez de «Glossário:» nas correções",
+  "antigo": "\"f\":\"Glossário: ",
+  "novo": "\"f\":\"Vocabulário: ",
+  "ocorrencias": 4,
+  "achado": "verificação de 29/10/2026: como as trocas do m7#47 nas lições: o quadro chama-se vocabulário"
  }
 ]

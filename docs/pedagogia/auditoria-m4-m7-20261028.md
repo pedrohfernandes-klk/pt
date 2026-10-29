@@ -65,7 +65,7 @@ As lições, as tarefas e os índices estão congelados por hash. `tests/auditor
 
 Um teste afirmava o texto antigo e muda, com comentário datado: `test_m7_sonho_memoria` exigia a nota «Não é uma reprodução do poema» no Abre da F14; passa a afirmar que o Abre já não tem a figura de «Tabacaria» e mantém o texto de abertura.
 
-Sem a camada nova, 13 testes falham. Com ela, passam os 262.
+Sem a camada nova, 13 testes falham. Com ela, passam os 266 (com `main` fundido, depois do #123 e do #125).
 
 ## O que ficou de fora, e porquê
 
@@ -87,14 +87,14 @@ Sem a camada nova, 13 testes falham. Com ela, passam os 262.
 - m7 5, segunda parte: os nomes `_aula_` nos portefólios dos outros módulos, que os alunos já usam. O portefólio do M4 tem os mesmos problemas, mas sem achado confirmado.
 - «glossário» no arquivo do índice (m7-f02 e m7-f14): obrigaria a uma redação nova.
 - Sem achado confirmado: o «·» nos cartões de tarefa dos índices do M4 e do M7; o fecho dos guiões das aulas 8 e 15 do M4; o itálico de *Painéis de São Vicente* no gancho da F20 do M1.
-- Arquivo do índice do M4: o desafio da F10 «Quanto dura a apresentação e quantos a fazem?» tem como resposta certa «Três a quatro minutos, em grupos de dois ou três». É um desafio arquivado, que não copia nenhum cartão atual, e mudá-lo mudaria a resposta certa sem achado.
+- Arquivo do índice do M4: o desafio da F10 «Quanto dura a apresentação e quantos a fazem?» tinha como resposta certa «Três a quatro minutos, em grupos de dois ou três». Na verificação de 29/10, a mesma opção (c = 1) passou a «Três a quatro minutos, cada um com o seu peixe», e o feedback passou a dizer apresentação individual, como a F10 e o mapa.
 
 **Fora do lote**
 - m7 55 também nos títulos das provas A, B e C e dos questionários do M7. Só se trocou o guia.
 - O mapa do M1 tem as mesmas ligações para `#desafio-N` escondidos (o defeito do m7 40). Fica registado para o M1.
 - m7 27 na variante com um cartão novo: obrigaria a ressincronizar o painel inteiro. Seguiu-se a correção final, sem mudar índices.
 - F15, pistas[2]: o verificador deixou ficar.
-- Binários: os diapositivos das aulas 8, 9, 11 e 16 do M4 (o da aula 8 tem «Um grupo liga o roncador») e `m4/aulas/guioes-m4.pdf` podem repetir o texto antigo. Têm de ser regenerados no repositório das fontes.
+- Binários: os diapositivos das aulas 8, 9, 11 e 16 do M4 (o `aula-08-f10.pdf` tem «Em grupo de dois ou três», «Grupo:» e «Um grupo liga o roncador») e `m4/aulas/guioes-m4.pdf` repetem o texto antigo. No M7, também: as capas de `sessao-04-m7-f14` e `sessao-04-m7-f34` mostram ainda «Tabacaria» na *Presença*; `sessao-09` e `sessao-10-m7-f07` usam ainda «porque não vale a pena» como exemplo de causal; `sessao-13` e `sessao-14-m7-f10` dizem ainda «Hoje fechas a entrega». Têm de ser regenerados no repositório das fontes.
 
 **Rejeitadas**: nenhuma.
 
@@ -117,3 +117,16 @@ O script é idempotente: reconhece as trocas já aplicadas e só aplica as que f
 Esta ordem foi ensaiada numa cópia de trabalho (29/10): a árvore deste lote, com o `desligar_sala.py` do ramo da Sala corrido por cima e os testes dos dois ramos juntos como no ponto 4, dá as 292 trocas como aplicadas, o `desligar_sala.py --verificar` sem nada a mudar e 276 testes unitários a passar (os 262 deste ramo e os 14 da Sala).
 
 **Na ordem inversa não funciona sem trabalho à mão.** Na árvore da Sala (`20ce3ef0`), o `desligar_sala.py` já refez o relâmpago de 15 painéis do M7 a partir das lições antigas (enunciado inteiro, sem «_»), e não volta a mexer em páginas já cortadas. O script aplica as trocas em 45 ficheiros e deixa por resolver os 9 painéis cujo relâmpago este lote corrige (f02, f04, f05, f07, f10, f11, f13, f23 e f34); o relâmpago e o MATERIAL desses painéis teriam de ser refeitos a partir das lições corrigidas.
+
+## Verificação de 29/10 (depois da revisão)
+
+Um verificador independente confirmou as 292 trocas (main com as trocas, aplicadas por ordem, dá o HEAD letra a letra nos 54 ficheiros; painéis iguais às lições; 266 testes unitários; 15 testes de navegador, incluindo `browser_m4_tpc` e `browser_ux06_pt`, que passam também em `main`: a nota anterior que os dava como falhados já em `main` estava errada). Entraram mais 24 trocas:
+- F10 do M4, cartão 14 («Para ir mais longe»): os casos falam a uma pessoa, como o cartão 6.
+- Arquivo do índice do M4, desafio da F10: apresentação individual, com a mesma chave.
+- Portefólio do M4: as três tarefas de unidade atuais, entregues em fotografias, sem trabalho de grupo (o mapa e o portefólio voltam a concordar); e, como no M7, o fim de cada unidade recupera a síntese da aula de tarefa.
+- Índices do M4 e do M7: sem «·» na frase dos cartões das tarefas.
+- Portefólio do M7: o fim de cada unidade recupera a síntese da aula de tarefa, como a lista.
+- Tarefa da unidade 3 do M7: a ligação à F10 diz os cartões pelo nome.
+- F13 do M7: a pista da 4.ª estrofe fala de imperativos (os vocativos «Ó céu! / Ó campo! Ó canção!» são da 5.ª), e o feedback do cartão 21 diz «nas duas últimas estrofes».
+- Arquivo do índice do M7: sem remissões para a «Árvore da frase» e para o vocabulário, que os desafios não mostram; «Vocabulário:» em vez de «Glossário:» nas correções.
+- Página de Pessoa: a nota deixa de citar a cena-poema de «Vem sentar-te comigo, Lídia», porque «Ver em cena», na mesma página, diz que não há representação com origem confirmada.

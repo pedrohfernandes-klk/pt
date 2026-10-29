@@ -1,5 +1,5 @@
 {
- "base_commit": "5b201bc1a231f89ddc6118f03616c28355ffcf03",
+ "base_commit": "40bb62639ea449950ecd3572c205453e753b053a",
  "_nota": "28/10/2026: correções confirmadas pela auditoria do M7 (todos os achados), do resto do M4 (tarefa da unidade 1 individual e em papel, numeração atual das tarefas, «As tarefas do Teams» do mapa, guião da aula 9 reescrito a partir da lição M4-F28 e do painel) e do resto do M1 (itálicos nos guiões, «·» nos cartões de tarefa). Gerado por scripts/aplicar_trocas.py a partir de scripts/auditoria_m4_m7_20261028.json: não se edita à mão. Só texto. Ordem, tipos, chaves e respostas certas dos cartões ficam iguais, salvo onde o achado o pede expressamente: M7-F07 CARTOES[9].certas (e a cópia no arquivo do índice), CARTOES[3].pares[1]; M7-F04 CARTOES[17].pares[2]; M7-F10 CARTOES[6].passos (e a cópia no arquivo do índice) e CARTOES[17].pares; tipo do relâmpago k19 do painel-m7-f02 (o cartão 19 da lição já é «escolha»). Desfaz-se antes do manifesto do #128 (auditoria-m1-m4-edits-20261028.json): o mais recente primeiro. O corte da Sala (scripts/desligar_sala.py) entra depois deste lote, por isso o seu manifesto desfaz-se antes deste.",
  "files": {
   "tarefas/m7-u1/index.html": {
@@ -52,7 +52,7 @@
   },
   "tarefas/m7-u3/index.html": {
    "base_sha256_lf": "d4b4db7aea8656aed398f1051c991336720fa4a8eb42dbf47530a72f27a46592",
-   "after_sha256_lf": "ebd6915963c42ee29b4f4a7d4e5ddc9ab4fd6dac5fce1cac58e61efc0066adb8",
+   "after_sha256_lf": "d2ecc80881bee18935ec66758760891682b91c9951a015228ad05e7ab2badef5",
    "edits": [
     {
      "location": "meta description: sem «folhas»",
@@ -64,6 +64,12 @@
      "location": "«Relembrar», ligação F08: título da obra em itálico",
      "old": ">F08 · Mensagem: sonho e realização</a>",
      "new": ">F08 · <i>Mensagem</i>: sonho e realização</a>",
+     "occurrences": 1
+    },
+    {
+     "location": "apoios: o cartão da F10 pelo nome",
+     "old": "F10 · cartão 2: memória e defesa",
+     "new": "F10 · «O essencial» e «A entrega»: memória e defesa",
      "occurrences": 1
     }
    ]
@@ -172,7 +178,7 @@
   },
   "m7/portefolio-do-modulo-m7/index.html": {
    "base_sha256_lf": "d979bfa7e0c0139e8fe28b82fa7af8cc153e408ec0c5182bb84157d42a037233",
-   "after_sha256_lf": "f86775bcb5e5d2f9acd0feb8139db495feddfff503bd2f72d60c480ca7d445b2",
+   "after_sha256_lf": "9e64dc83c225097960257caad885043f42c869ef574968450ab04b7ef827c351",
    "edits": [
     {
      "location": "tabela, linhas M7_U1/U2/U3_pergunta: «no papel», como no M1",
@@ -209,6 +215,12 @@
      "old": "O produto, ou a ligação, e uma linha: o que fiz, o que corrigi depois da devolução. Nos trabalhos de grupo, o responsável carrega o produto; os outros põem a ligação e os créditos próprios.",
      "new": "As fotografias do trabalho e da síntese, ou a ligação para o objeto, com o nome que está na lista.",
      "occurrences": 1
+    },
+    {
+     "location": "«Quando», fim de cada unidade: a síntese da aula de tarefa, como a lista",
+     "old": "A resposta à pergunta da unidade (três a cinco linhas, com um exemplo dos textos) e «o que aprendi» (cinco linhas).",
+     "new": "Recuperas a síntese de duas linhas da aula de tarefa, já fotografada; não escreves outra.",
+     "occurrences": 1
     }
    ]
   },
@@ -244,12 +256,12 @@
   },
   "obras/pessoa/index.html": {
    "base_sha256_lf": "b2b3128b5088f5e5a47f93b3df4e6fadfebcaf60e3d241f8efee93bb72392a95",
-   "after_sha256_lf": "5bf02a62fae7c82d03927d4831e833c71b1f61aef8e213ee4ecd47a4454a71e0",
+   "after_sha256_lf": "0f53ad59bfa5428c2bac17122c60508ed547fc1edcc3748df8fe99f52c1e166e",
    "edits": [
     {
      "location": "«Ouvir o texto», nota final: as lições já têm leituras",
      "old": ">Ainda não temos leituras dos poemas do ortónimo e de Ricardo Reis que as lições leem.</p>",
-     "new": ">As lições já têm leituras de «Autopsicografia» (em «O poeta é um fingidor»), de «O meu olhar é nítido como um girassol» (em «Pensar é estar doente dos olhos»), de «Para ser grande, sê inteiro» (em «O pouco que duramos») e de «Chuva Oblíqua», VI (em «Chuva Oblíqua»), e uma cena-poema de «Vem sentar-te comigo, Lídia» (em «À beira do rio»).</p>",
+     "new": ">As lições já têm leituras de «Autopsicografia» (em «O poeta é um fingidor»), de «O meu olhar é nítido como um girassol» (em «Pensar é estar doente dos olhos»), de «Para ser grande, sê inteiro» (em «O pouco que duramos») e de «Chuva Oblíqua», VI (em «Chuva Oblíqua»).</p>",
      "occurrences": 1
     },
     {
@@ -262,7 +274,7 @@
   },
   "m7/index.html": {
    "base_sha256_lf": "62011b3ceb4e0363e05ba3ba192746c56c4183a2cbfa9eb22b5582e7143921d0",
-   "after_sha256_lf": "87d13c4d27fbe390abcd02707ccd1f6e2b7ef0d32afaea97942a69ee608c4913",
+   "after_sha256_lf": "a6dbf2c167ff7de5ed960d438fbdbe7fb794424f79bd98e0e5f0eacbeb4cb684",
    "edits": [
     {
      "location": "arquivo, desafio 2, m7-f23 (completar): sem a caixa «Recorda»",
@@ -395,6 +407,54 @@
      "old": "\"f\":\"Posição clara, dois argumentos, um verso copiado com exatidão, uma objeção; 120 a 160 palavras.\"",
      "new": "\"f\":\"Posição clara, dois argumentos, um verso copiado com exatidão, uma objeção e a resposta.\"",
      "occurrences": 1
+    },
+    {
+     "location": "cartões das tarefas de unidade, linha descritiva (span.f)",
+     "old": "<span class=\"f\">Aula de 90 min com consulta · síntese integrada · trabalho em papel e fotografias no Teams.</span>",
+     "new": "<span class=\"f\">Aula de 90 minutos com consulta, síntese integrada, trabalho em papel e fotografias no Teams.</span>",
+     "occurrences": 3
+    },
+    {
+     "location": "arquivo, desafio m7-f11: sem remissão para a «Árvore da frase», que o desafio não mostra",
+     "old": "são deuses porquê? (vê a «Árvore da frase»).\"",
+     "new": "são deuses porquê?\"",
+     "occurrences": 1
+    },
+    {
+     "location": "arquivo, desafio m7-f09: sem remissão para o vocabulário (1)",
+     "old": "«Brilho sem luz»). Vê o vocabulário no fim do texto.\"",
+     "new": "«Brilho sem luz»).\"",
+     "occurrences": 1
+    },
+    {
+     "location": "arquivo, desafio m7-f09: sem remissão para o vocabulário (2)",
+     "old": "diz o v. 5, é «Brilho sem luz e sem arder». O vocabulário está no fim do texto.\"",
+     "new": "diz o v. 5, é «Brilho sem luz e sem arder».\"",
+     "occurrences": 1
+    },
+    {
+     "location": "arquivo, desafio m7-f23: sem remissão para o vocabulário (1)",
+     "old": "é sobre o tempo que as rosas duram (vê o vocabulário no fim do texto).\"",
+     "new": "é sobre o tempo que as rosas duram.\"",
+     "occurrences": 1
+    },
+    {
+     "location": "arquivo, desafio m7-f23: sem remissão para o vocabulário (2)",
+     "old": "diz quanto duram as rosas (vê o vocabulário).\"",
+     "new": "diz quanto duram as rosas.\"",
+     "occurrences": 1
+    },
+    {
+     "location": "arquivo, desafio m7-f23: sem remissão para o vocabulário (3)",
+     "old": "Adónis é uma figura mitológica (vocabulário);",
+     "new": "Adónis é uma figura mitológica;",
+     "occurrences": 1
+    },
+    {
+     "location": "arquivo: «Vocabulário:» em vez de «Glossário:» nas correções",
+     "old": "\"f\":\"Glossário: ",
+     "new": "\"f\":\"Vocabulário: ",
+     "occurrences": 4
     }
    ]
   },
@@ -1432,7 +1492,7 @@
   },
   "m7/licao-m7-f13/index.html": {
    "base_sha256_lf": "02e548961c7686c4e3c01c2f809c682407d2908a82897e4adcceab3c876bfe6f",
-   "after_sha256_lf": "26290f749290e862b0bdb4951c447fda109dd72f05e6cd884c1a995acefd1864",
+   "after_sha256_lf": "ba58546a2d2d4937e198fb247f865779fd2821968ba41bfc43a07c2993f2c486",
    "edits": [
     {
      "location": "CARTOES[7].p2",
@@ -1449,7 +1509,7 @@
     {
      "location": "pistas[1] (EPIJogo.montar)",
      "old": "o poeta passa a reagir: apóstrofes, exclamações, e «",
-     "new": "o poeta passa a dirigir-se à ceifeira, com apóstrofes e exclamações, e diz de si: «",
+     "new": "o poeta passa a dirigir-se à ceifeira, com imperativos e exclamações, e diz de si: «",
      "occurrences": 1
     },
     {
@@ -1462,6 +1522,12 @@
      "location": "CARTOES[8].p: sem dar a resposta da 1.ª lacuna",
      "old": "\"p\":\"Como ajuda a antítese a compreender a reação de quem ouve?\"",
      "new": "\"p\":\"Que recurso há em «Ouvi-la alegra e entristece», e que reação de quem ouve mostra?\"",
+     "occurrences": 1
+    },
+    {
+     "location": "CARTOES[21].fe: «Ó céu!» é da 5.ª estrofe e «Entrai por mim dentro!» da 6.ª",
+     "old": "A ceifeira nunca fala: na última estrofe quem fala chama",
+     "new": "A ceifeira nunca fala: nas duas últimas estrofes quem fala chama",
      "occurrences": 1
     }
    ]
@@ -1642,7 +1708,7 @@
   },
   "m4/licao-m4-f10/index.html": {
    "base_sha256_lf": "39fde2c4e73e158f78d80e9e0553aaebfa990f8d59c294a50a104ef89fd97717",
-   "after_sha256_lf": "39f9523ceeebcc9d29c2dde664baafb6f79dffb39249654f76abca1fb8345a6b",
+   "after_sha256_lf": "e2498a88596559f316b4c229df033681dcb1894913b3a128d214f4423a81d8c7",
    "edits": [
     {
      "location": "CARTOES[3] «A encomenda», 1.º parágrafo",
@@ -1732,6 +1798,24 @@
      "location": "CARTOES[15].p",
      "old": "\"p\":\"Um grupo apresenta o roncador.",
      "new": "\"p\":\"Um colega apresenta o roncador.",
+     "occurrences": 1
+    },
+    {
+     "location": "CARTOES[14] «Para ir mais longe»: apresentação individual (1)",
+     "old": "«Podem ler outra vez a frase",
+     "new": "«Podes ler outra vez a frase",
+     "occurrences": 1
+    },
+    {
+     "location": "CARTOES[14] «Para ir mais longe»: apresentação individual (2)",
+     "old": "«A vossa abertura com a pergunta",
+     "new": "«A tua abertura com a pergunta",
+     "occurrences": 1
+    },
+    {
+     "location": "CARTOES[14] «Para ir mais longe»: apresentação individual (3)",
+     "old": "«Quanto tempo ensaiaram antes",
+     "new": "«Quanto tempo ensaiaste antes",
      "occurrences": 1
     }
    ]
@@ -2075,6 +2159,78 @@
      "old": "Um grupo apresenta o roncador.",
      "new": "Um colega apresenta o roncador.",
      "occurrences": 2
+    }
+   ]
+  },
+  "m4/index.html": {
+   "base_sha256_lf": "910b4907dac8f695d561fa2994bf9e6455bed3f72b085d872e85c9003a173242",
+   "after_sha256_lf": "0af8b4cb644da3a3db471785a5e58c36967f4258e467e26abf7774f134952bf5",
+   "edits": [
+    {
+     "location": "arquivo, desafio m4-f10: opção certa individual (a chave c=1 não muda)",
+     "old": "\"Três a quatro minutos, em grupos de dois ou três\"",
+     "new": "\"Três a quatro minutos, cada um com o seu peixe\"",
+     "occurrences": 1
+    },
+    {
+     "location": "arquivo, desafio m4-f10: distrator sem «cada um sozinho»",
+     "old": "\"Dois minutos, cada um sozinho, e sem imagens\"",
+     "new": "\"Dois minutos, sem imagens\"",
+     "occurrences": 1
+    },
+    {
+     "location": "arquivo, desafio m4-f10: f",
+     "old": "\"f\":\"Grupo de dois ou três, três a quatro minutos, no máximo três imagens ou diapositivos.\"",
+     "new": "\"f\":\"Individual, três a quatro minutos, no máximo três imagens ou diapositivos.\"",
+     "occurrences": 1
+    },
+    {
+     "location": "arquivo, desafio m4-f10: fe[0]",
+     "old": "\"A apresentação é de grupo (dois ou três) e pode ter até três imagens; dois minutos é pouco para as quatro partes.\"",
+     "new": "\"A apresentação pode ter até três imagens, e dois minutos é pouco para as quatro partes.\"",
+     "occurrences": 1
+    },
+    {
+     "location": "arquivo, desafio m4-f10: fe[2]",
+     "old": "\"Não é a turma inteira: são grupos de dois ou três, com três a quatro minutos e no máximo três imagens.\"",
+     "new": "\"Não é a turma inteira: cada um apresenta o seu peixe, com três a quatro minutos e no máximo três imagens.\"",
+     "occurrences": 1
+    },
+    {
+     "location": "arquivo, desafio m4-f10: fe[3]",
+     "old": "\"Cinco minutos passa do tempo, e texto corrido não serve; são três a quatro minutos, em grupos de dois ou três.\"",
+     "new": "\"Cinco minutos passa do tempo, e texto corrido não serve; são três a quatro minutos, individualmente.\"",
+     "occurrences": 1
+    },
+    {
+     "location": "cartões das tarefas de unidade, linha descritiva (span.f)",
+     "old": "<span class=\"f\">Aula de 90 min com consulta · síntese integrada · trabalho em papel e fotografias no Teams.</span>",
+     "new": "<span class=\"f\">Aula de 90 minutos com consulta, síntese integrada, trabalho em papel e fotografias no Teams.</span>",
+     "occurrences": 3
+    }
+   ]
+  },
+  "m4/portefolio-do-modulo-m4/index.html": {
+   "base_sha256_lf": "2e46b403871198a21e9853987d0002ab22042c639092bb6b78a7b9a928aeb5bc",
+   "after_sha256_lf": "da42e45a6857585e6819be06faff6760922a4158378d68cb779688c3e3d2b52d",
+   "edits": [
+    {
+     "location": "tabela, linhas M4_Tarefa: as três tarefas de unidade atuais, individuais, entregues em fotografias",
+     "old": "<tr><td><code>M4_Tarefa1</code></td><td>Tarefa 1, «Um peixe de hoje»: a ligação para o produto do grupo (só o responsável carrega o ficheiro) e os teus créditos, assinados: o que fizeste tu.</td></tr><tr><td><code>M4_Tarefa2</code></td><td>Tarefa 2, «Discurso no abrigo»: o produto entregue (ou a ligação) e uma linha: o que fiz, o que corrigi depois da devolução.</td></tr><tr><td><code>M4_Tarefa3</code></td><td>Tarefa 3, «Apreciação crítica de Frei Luís de Sousa no teatro»: o produto entregue (ou a ligação) e uma linha: o que fiz, o que corrigi depois da devolução.</td></tr>",
+     "new": "<tr><td><code>M4_Tarefa1</code></td><td>Tarefa da unidade 1, «Um peixe de hoje»: fotografias do trabalho e da síntese.</td></tr><tr><td><code>M4_Tarefa2</code></td><td>Tarefa da unidade 2, «Apreciação crítica do espetáculo»: fotografias do trabalho e da síntese.</td></tr><tr><td><code>M4_Tarefa3</code></td><td>Tarefa da unidade 3, «Discurso no abrigo»: fotografias do trabalho e da síntese.</td></tr>",
+     "occurrences": 1
+    },
+    {
+     "location": "«Quando», depois de cada tarefa: sem trabalhos de grupo",
+     "old": "O produto, ou a ligação, e uma linha: o que fiz, o que corrigi depois da devolução. Nos trabalhos de grupo, o responsável carrega o produto; os outros põem a ligação e os créditos próprios.",
+     "new": "As fotografias do trabalho e da síntese, com o nome que está na lista.",
+     "occurrences": 1
+    },
+    {
+     "location": "«Quando», fim de cada unidade: a síntese da aula de tarefa, como a lista",
+     "old": "A resposta à pergunta da unidade (três a cinco linhas, com um exemplo dos textos) e «o que aprendi» (cinco linhas).",
+     "new": "Recuperas a síntese de duas linhas da aula de tarefa, já fotografada; não escreves outra.",
+     "occurrences": 1
     }
    ]
   }
