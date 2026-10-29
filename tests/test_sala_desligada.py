@@ -108,6 +108,9 @@ class SalaDesligada(unittest.TestCase):
         texto = ler('index.html')
         self.assertLess(texto.index(D.LIMPEZA_SCRIPT), texto.index(D.PROGRESSO_INICIO))
         self.assertEqual(texto.index(D.LIMPEZA_SCRIPT) + len(D.LIMPEZA_SCRIPT), texto.index(D.PROGRESSO_INICIO))
+        # 29/10/2026 (revisão do #129): Repor salta as chaves da Sala de um ficheiro de progresso antigo
+        self.assertIn(D.RAIZ_REPOR_NOVO, texto)
+        self.assertNotIn(D.RAIZ_REPOR, texto)
 
     def test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala(self):
         # 28/10/2026 (revisão): as instruções dos painéis com Atlas anunciam a tecla A; entram «Voltar ao início» (I),
@@ -133,6 +136,11 @@ class SalaDesligada(unittest.TestCase):
                 self.tem(D.PAINEL_COMO_NOVO_ATLAS if com_atlas else D.PAINEL_COMO_NOVO, texto, rel)
                 if com_atlas:
                     self.tem(D.PAINEL_ATLAS_JS, texto, rel)
+                    # 29/10/2026 (revisão do #129): a lista do Atlas diz a lição, não o nome da figura
+                    rotulos = re.findall(r'<option value="[^"]+">([^<]*)</option>', re.search(r'<select data-a-id>(.*?)</select>', texto, re.S).group(1))
+                    self.assertTrue(rotulos, rel)
+                    for r in rotulos:
+                        self.assertRegex(r, r'^Quem sou eu\? (\d+ )?\(M\d-F\d+\)$', rel)
                 codigo = codigo_do_painel(texto)
                 for marca in saem:
                     self.nao_tem(marca, codigo, rel)
@@ -175,9 +183,20 @@ class SalaDesligada(unittest.TestCase):
                         self.assertEqual(sorted(m['esq']), sorted(a for a, _ in x['pares']))
                         self.assertEqual(set(m['dir']), {b for _, b in x['pares']})
                         self.assertEqual(len(m['dir']), len(set(m['dir'])))
+                        # 29/10/2026 (revisão do #129): nos pares um a um, nenhum item à esquerda fica na mesma linha
+                        # do seu par (com classes, menos itens à direita, não há linhas lado a lado)
+                        if len(m['dir']) == len(m['esq']) > 1:
+                            par = dict(x['pares'])
+                            alinhados = [a for i, a in enumerate(m['esq']) if par[a] == m['dir'][i]]
+                            self.assertEqual(alinhados, [], 'o projetor mostraria a solução lado a lado')
                     elif t == 'completar':
                         self.assertEqual(m['frase'], x['frase'])
                         self.assertEqual([sorted(o) for o in m['lac']], [sorted(l['o']) for l in x['lacunas']])
+                        # 29/10/2026 (revisão do #129): a citação por cima da frase não traz a palavra que falta
+                        if 'cita' in m:
+                            cita = ' ' + D.so_letras(m['cita']) + ' '
+                            for l in x['lacunas']:
+                                self.assertNotIn(' ' + D.so_letras(l['o'][l['c']]) + ' ', cita)
                     elif t == 'sublinhar':
                         self.assertEqual(m['frase'], x['frase'])
                     else:

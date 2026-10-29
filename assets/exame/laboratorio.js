@@ -52,7 +52,8 @@
   const PART_LABEL = { verbo: 'verbo de comando', objeto: 'objeto', condicao: 'condição' };
   const REVEAL_LABEL = ['Revelar pista', 'Revelar proposta de resposta', 'Revelar critérios de revisão', 'Apoios revelados'];
   const SUPPORT_TITLE = ['Pista', 'Uma resposta possível', 'Autoavaliação · adaptação didática de C-ED e CL'];
-  const TIME = 120;
+  // Relógio do aluno (27/10/2026): máximo por máquina, em minutos; o aluno escolhe a duração, de 30 em 30 s.
+  const MAX_MINUTES = [1, 2, 2, 3];
   const EVIDENCE_NOTES = [
     ['A linha 1 apresenta a medida, mas não mostra a necessidade a que respondeu.', 'A linha 2 liga a ocupação das mesas à falta de um espaço de estudo adequado.', 'A cor da fachada é uma informação verdadeira, mas não explica a necessidade dos alunos.', 'Prolongar a experiência mostra uma decisão da direção; não explica, por si só, as condições de estudo dos alunos.'],
     ['A chegada à escola situa a ação; isoladamente, não demonstra sentimentos em tensão.', 'O contrato é uma evidência relevante da partida. Para explicar a ambivalência, relaciona-o com o sorriso e a demora da despedida na linha 4.', 'A marca reconhecida pode apoiar a ligação à infância; a porta fechada não prova rejeição nem zanga.', 'O sorriso e a demora permitem interpretar o afeto e a dificuldade da despedida. Relaciona-os com a partida anunciada na linha 2.']
@@ -63,9 +64,8 @@
   const notice = document.querySelector('#of-aviso');
   let machine = 0;
   let projection = new URL(location.href).searchParams.get('projetar') === '1';
-  let ticker = null;
 
-  const fresh = () => ({ answer: '', firstDraft: null, reflection: '', criteriaOpen: false, selected: null, checked: [], stage: 0, feedback: false, rest: TIME, end: null });
+  const fresh = () => ({ answer: '', firstDraft: null, reflection: '', criteriaOpen: false, selected: null, checked: [], stage: 0, feedback: false, clock: null });
   const states = TEXTS.map(() => MACHINES.map(fresh));
 
   const esc = v => String(v).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
@@ -74,27 +74,26 @@
   const correctAnswer = () => (machine === 0 ? 0 : machine === 1 ? text().evidence : 1);
   const say = message => { notice.textContent = ''; window.setTimeout(() => { notice.textContent = message; }, 30); };
 
-  /* ---------- relógio: estado do exercício ---------- */
-  const remaining = s => (s.end ? Math.max(0, Math.ceil((s.end - Date.now()) / 1000)) : s.rest);
+  /* ---------- relógio: um por exercício, guardado no seu estado ---------- */
   const clockText = seconds => String(Math.floor(seconds / 60)).padStart(2, '0') + ':' + String(seconds % 60).padStart(2, '0');
-  function pauseClock(s, announce) {
-    if (!s.end) return;
-    s.rest = remaining(s);
-    s.end = null;
-    if (announce) say('Relógio em pausa: ' + clockText(s.rest) + '.');
+  function clockFor(s) {
+    if (!s.clock && window.EPIRelogio) {
+      const box = document.createElement('div');
+      box.className = 'of-relogio-caixa';
+      s.clock = { box, api: window.EPIRelogio.criar(box, { max: MAX_MINUTES[machine], passo: 0.5, rotulo: 'Tempo de treino' }) };
+    }
+    return s.clock;
   }
-  function paintClock() {
-    const s = state(), clock = host.querySelector('#clock'), button = host.querySelector('#timer');
-    if (!clock) return;
-    const seconds = remaining(s);
-    clock.textContent = clockText(seconds);
-    clock.classList.toggle('of-relogio-fim', seconds === 0);
-    if (button) button.textContent = s.end ? 'Pausar' : (s.rest < TIME && s.rest > 0 ? 'Continuar' : 'Iniciar');
-    if (s.end && seconds === 0) { s.rest = 0; s.end = null; say('Terminou o tempo de treino.'); paintClock(); }
+  function placeClock() {
+    const slot = host.querySelector('#relogio-slot'), c = clockFor(state());
+    if (slot && c) { slot.replaceChildren(c.box); c.api.atualizar(); }
   }
-  function startTicker() {
-    window.clearInterval(ticker);
-    ticker = window.setInterval(paintClock, 250);
+  // Sair do exercício com o relógio a contar conta como pausa; sem pausas, o relógio volta ao início.
+  function pauseClock(s) {
+    if (!s.clock || !s.clock.api.estado().corre) return;
+    s.clock.api.pausar();
+    const e = s.clock.api.estado();
+    say(e.iniciado ? 'Relógio em pausa: ' + clockText(e.resto) + ' (pausa ' + e.pausasUsadas + ' de 2).' : 'Usaste as duas pausas: o relógio desta máquina voltou ao início.');
   }
 
   /* ---------- peças de composição ---------- */
@@ -153,7 +152,6 @@
     if (machine === 1) return '<p class="of-pergunta">Escolhe, no texto, a linha que dá apoio mais direto à interpretação pedida. Depois explica oralmente a ligação.</p>';
     if (machine === 2) {
       return '<p class="of-pergunta">Escreve uma resposta breve, em papel ou no campo abaixo. Quatro linhas são uma meta de concisão; o campo não limita a extensão.</p>' +
-        '<div class="lab-actions of-relogio"><div><span class="of-rotulo">Tempo de treino</span><output class="lab-timer" id="clock" aria-label="Tempo restante">' + clockText(remaining(s)) + '</output></div><button id="timer">Iniciar</button><button id="reset">Repor tempo</button></div>' +
         '<div class="personal of-escrita"><button id="criteria-toggle" class="of-discreto" aria-controls="writing-criteria" aria-expanded="' + (s.criteriaOpen || s.stage >= 3) + '">Consultar critérios antes de escrever</button>' +
         (s.firstDraft !== null ? '<section class="of-primeira"><h3>Primeira versão · conservada</h3><p class="of-manuscrito">' + esc(s.firstDraft) + '</p></section>' : '') +
         '<label class="field-label" for="answer">' + (s.firstDraft !== null ? 'Versão revista: melhora a resposta com os critérios' : 'A tua primeira resposta') + '</label><textarea id="answer" class="of-caderno" maxlength="6000" rows="6">' + esc(s.answer) + '</textarea>' +
@@ -184,16 +182,18 @@
     });
     const verify = machine !== 2 ? '<div class="lab-actions"><button id="verify" class="of-primario"' + (s.selected === null ? ' disabled' : '') + '>Verificar escolha</button></div>' : '';
     const feedback = '<div id="feedback" class="lab-feedback" role="status"' + (s.feedback ? '' : ' hidden') + '>' + (s.feedback ? feedbackHTML() : '') + '</div>';
+    // Escolhas (01, 02): o relógio fica depois de verificar; escrita (03, 04): antes da resposta.
+    const slot = '<div class="of-relogio" id="relogio-slot"></div>';
     host.innerHTML =
       '<header class="of-ex-cabeca"><p class="of-ex-num" aria-hidden="true"><span>N.º</span>0' + (machine + 1) + '</p><div><h2 tabindex="-1">' + m.name + '</h2><p class="of-operacao">' + m.operation + '</p></div></header>' +
       '<div class="of-mesa" data-maquina="' + machine + '">' + reading(t, s, machine === 1 ? '<div class="of-resposta">' + verify + feedback + '</div>' : '') +
-      '<section class="of-acao" aria-label="Tarefa">' + instruction(t, machine === 0 && s.feedback) + '<div class="of-resposta">' + responseHTML(t, s) + (machine === 1 ? '' : verify + feedback) +
-      '</div></section></div>' +
+      '<section class="of-acao" aria-label="Tarefa">' + instruction(t, machine === 0 && s.feedback) + (machine >= 2 ? slot : '') + '<div class="of-resposta">' + responseHTML(t, s) + (machine === 1 ? '' : verify + feedback) +
+      '</div>' + (machine < 2 ? slot : '') + '</section></div>' +
       supportsHTML(t, s) + '<nav class="of-percurso" aria-label="Continuar o percurso"><p><span class="of-rotulo">Mesmo texto · quatro operações</span><strong>Etapa ' + (machine + 1) + ' de 4</strong><span class="small">Navegação livre; as etapas não são uma nota.</span></p>' +
       (machine > 0 && machine < 3 ? '<button data-go="' + (machine - 1) + '">← ' + MACHINES[machine - 1].verb + '</button>' : '') +
       '<button class="of-primario" data-go="' + (machine < 3 ? machine + 1 : 2) + '">' + (machine < 3 ? 'Continuar → ' + MACHINES[machine + 1].verb : 'Voltar à minha resposta →') + '</button></nav>';
     bind();
-    paintClock();
+    placeClock();
     if (focus) host.querySelector('h2').focus();
   }
 
@@ -259,6 +259,7 @@
     host.querySelector('#reveal').onclick = reveal;
     host.querySelector('#restart').onclick = () => {
       if ((s.answer.trim() || s.firstDraft !== null || s.reflection.trim()) && !window.confirm('Recomeçar apaga o texto e a revisão desta máquina. Queres continuar?')) return;
+      if (s.clock) s.clock.api.destruir();
       Object.assign(s, fresh());
       render(true);
       say('Máquina recomeçada: escolhas, apoios e relógio repostos.');
@@ -270,21 +271,9 @@
         if (c.checked) s.checked.push(i);
       };
     });
-    const timer = host.querySelector('#timer');
-    if (timer) {
-      timer.onclick = () => {
-        if (s.end) { pauseClock(s, false); }
-        else {
-          if (s.rest === 0) s.rest = TIME;
-          s.end = Date.now() + s.rest * 1000;
-        }
-        paintClock();
-      };
-      host.querySelector('#reset').onclick = () => { s.end = null; s.rest = TIME; paintClock(); };
-    }
   }
 
-  function leave() { pauseClock(state(), true); }
+  function leave() { pauseClock(state()); }
   function go(next) { if (next === machine) return; leave(); machine = next; render(true); }
 
   /* ---------- projeção ---------- */
@@ -297,7 +286,7 @@
 
   select.onchange = () => {
     const previous = states[select.dataset.anterior ? Number(select.dataset.anterior) : 0][machine];
-    pauseClock(previous, true);
+    pauseClock(previous);
     select.dataset.anterior = select.value;
     render(true);
   };
@@ -334,5 +323,4 @@
   document.querySelector('#solucoes').onclick = () => print(true);
 
   render(false);
-  startTicker();
 }());

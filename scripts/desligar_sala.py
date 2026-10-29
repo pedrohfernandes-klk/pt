@@ -124,7 +124,8 @@ MARCAS = ('ntfy', 'EventSource', 'BroadcastChannel', 'EPISala', 'epi-sala', 'epi
 
 
 def sem_limpeza(texto):
-    return texto.replace(LIMPEZA_SCRIPT, '').replace(SALA_LIMPAR_JS, '')
+    # 29/10/2026: o filtro de «Repor» na página inicial nomeia as chaves da Sala para as saltar; como a limpeza, não conta
+    return texto.replace(LIMPEZA_SCRIPT, '').replace(SALA_LIMPAR_JS, '').replace(RAIZ_REPOR_NOVO, RAIZ_REPOR)
 
 
 def marcas(texto):
@@ -298,6 +299,7 @@ PAINEL_ATLAS_VARIANTES = ('esc(p).replace(/_([^_]+)_/g,"<i>$1</i>")', 'esc(p)',
 PAINEL_CSS_NOVO = r'''.material{font:1.3rem/1.35 Arial,Helvetica,sans-serif;color:var(--tinta);margin:0 0 8px}.material .rot{margin:0 0 12px}
 .material .mat-cita{font:italic 1.35rem/1.4 Georgia,"Times New Roman",serif;margin:0 0 14px;padding-left:14px;border-left:4px solid var(--tinta)}
 .material .mat-ver{margin:0 0 14px}.material .mat-ver img{display:block;max-width:100%;max-height:30vh;width:auto;height:auto;border:1px solid var(--tinta)}
+.material .mat-ver svg{display:block;max-width:100%;max-height:30vh;width:auto;height:auto}
 .material .mat-apoio{margin:0 0 10px;color:var(--suave)}.material .mat-frase{font:1.45rem/1.6 Georgia,"Times New Roman",serif;margin:0 0 14px}.material .mat-frase u{text-decoration-thickness:3px;text-underline-offset:5px}
 .material .lac{display:inline-block;min-width:4.5em;border-bottom:3px solid var(--tinta);text-align:center;font:400 1.2rem/1 var(--cartaz);color:var(--suave)}
 .material .mat-lac{margin:0 0 8px}.material .mat-lac b,.material ol li>b{font:400 1.7rem/1 var(--cartaz);min-width:1.6rem;margin-right:10px}
@@ -477,6 +479,25 @@ def baralhado(itens, semente):
     return [itens[j] for j in ordem]
 
 
+def sem_pares_alinhados(esq, dir_, par, semente=''):
+    """29/10/2026 (revisão do #129): com as duas colunas baralhadas à parte, um item podia ficar ao lado do seu par
+    (com a linha «escreve os pares: 1 A, 2 B…» a dar a solução). Só conta quando as colunas têm o mesmo tamanho
+    (pares um a um); com classes (menos itens à direita) não há linhas lado a lado. Primeiro tenta uma rotação da
+    coluna da direita sem nenhum par alinhado; se nenhuma serve (acontece com três pares), usa a ordem dos pares da
+    esquerda rodada 1 a n-1 posições, que nunca alinha nenhum."""
+    if len(dir_) != len(esq) or len(dir_) < 2:
+        return dir_
+    def alinhados(d):
+        return sum(1 for i, a in enumerate(esq) if par.get(a) == d[i])
+    for r in range(len(dir_)):
+        d = dir_[r:] + dir_[:r]
+        if alinhados(d) == 0:
+            return d
+    ordem = [par[a] for a in esq]
+    r = 1 + int(hashlib.sha256(f'{semente}|rodar'.encode('utf-8')).hexdigest(), 16) % (len(ordem) - 1)
+    return ordem[r:] + ordem[:r]
+
+
 def material_de(rel, k, x, semente):
     """O que o telemóvel mostrava no relâmpago (o cartão k da lição), sem a solução: sem c, v, certas nem a ordem certa.
     A correção (f) vai à parte e só aparece quando o tempo acaba."""
@@ -511,7 +532,7 @@ def material_de(rel, k, x, semente):
             if b not in valores:
                 valores.append(b)
         m['esq'] = baralhado([a for a, _ in x['pares']], semente + '-e')
-        m['dir'] = baralhado(valores, semente + '-d')
+        m['dir'] = sem_pares_alinhados(m['esq'], baralhado(valores, semente + '-d'), dict(x['pares']), semente)
     elif t == 'rever':
         if x['trecho'] not in x['frase']:
             raise FormaDesconhecida(f'{rel}: cartão {k} (rever): o trecho não está na frase')
@@ -521,6 +542,13 @@ def material_de(rel, k, x, semente):
     # 28/10/2026 (revisão): quando a citação é a própria frase do exercício (43 cartões), o projetor mostra-a uma vez
     if 'cita' in m and 'frase' in m and so_letras(m['cita']) == so_letras(m['frase']):
         del m['cita']
+    # 29/10/2026 (revisão do #129): num completar, a citação por cima da frase não pode conter a palavra que falta
+    # (29 relâmpagos davam a resposta, por exemplo «Cantando espalharei…» por cima de «Cantando [1]…»)
+    if t == 'completar' and 'cita' in m:
+        cita = ' ' + so_letras(m['cita']) + ' '
+        certas = [so_letras(lac['o'][lac['c']]) for lac in x['lacunas']]
+        if any(c and (' ' + c + ' ') in cita for c in certas):
+            del m['cita']
     return m
 
 
@@ -580,6 +608,32 @@ def relampago_do_painel(rel, texto, ident):
     return antigo, novo, json_js(material), sel_antigo, sel_novo, refeitos
 
 
+def atlas_neutro(rel, texto):
+    """29/10/2026 (revisão do #129): a lista do Atlas, na barra de controlos, mostrava o nome da figura enquanto o
+    projetor pergunta «Quem sou eu?», e a barra continua à vista em ecrã inteiro. As opções passam a dizer só a lição
+    («Quem sou eu? (M3-F09)»); o valor (id da figura) não muda, e o nome continua a aparecer no fim do tempo."""
+    sel = re.search(r'<select data-a-id>(.*?)</select>', texto, re.S)
+    if not sel:
+        raise FormaDesconhecida(f'{rel}: painel com Atlas sem a lista <select data-a-id>')
+    opcoes = re.findall(r'<option value="([^"]+)">([^<]*)</option>', sel.group(1))
+    if ''.join(f'<option value="{v}">{o}</option>' for v, o in opcoes) != sel.group(1) or not opcoes:
+        raise FormaDesconhecida(f'{rel}: a lista do Atlas não está no formato conhecido')
+    licoes = []
+    for v, o in opcoes:
+        m = re.search(r'\((M\d-F\d+)\)\s*$', o)
+        if not m:
+            raise FormaDesconhecida(f'{rel}: opção do Atlas sem lição entre parênteses: {o}')
+        licoes.append(m.group(1))
+    vistos, novas = Counter(licoes), []
+    contagem = Counter()
+    for (v, _), lic in zip(opcoes, licoes):
+        contagem[lic] += 1
+        rot = f'Quem sou eu? {contagem[lic]} ({lic})' if vistos[lic] > 1 else f'Quem sou eu? ({lic})'
+        novas.append(f'<option value="{v}">{rot}</option>')
+    return [('Atlas: as opções da lista dizem a lição, não o nome da figura (a resposta ficava à vista da turma)',
+             '<select data-a-id>' + sel.group(1) + '</select>', '<select data-a-id>' + ''.join(novas) + '</select>')]
+
+
 def trocas_painel(rel, texto):
     pasta = rel.split('/')[1]
     ident = pasta[len('painel-'):]
@@ -593,6 +647,8 @@ def trocas_painel(rel, texto):
         raise FormaDesconhecida(f'{rel}: script do «Quem sou eu?» desconhecido')
     seletor = ([('seletor do relâmpago: os enunciados que ficaram para trás passam aos cartões atuais da lição '
                  f'({refeitos})', sel_antigo, sel_novo)] if refeitos else [])
+    if atlas:
+        seletor += atlas_neutro(rel, texto)
     return seletor + [
         ('CSS: código da sala no cabeçalho; a grelha passa a uma coluna (sem placar)',
          PAINEL_CSS_SALACOD + 'main.grelha{flex:1;display:grid;grid-template-columns:1fr minmax(300px,34%);gap:20px;padding:0 24px 16px}',
@@ -673,8 +729,15 @@ def trocas_mapa(rel, texto):
     return [('a página inteira passa à página curta que leva ao Atlas (com a limpeza)', texto, pagina_mapa())]
 
 
+RAIZ_REPOR = 'Object.keys(d.registos).forEach(function(k){var v=d.registos[k],'
+# 29/10/2026 (revisão do #129): um ficheiro de progresso antigo trazia epi-sala (a alcunha) e painel-sala-*; Repor
+# voltava a gravá-las até ao recarregamento. Agora o ciclo salta-as.
+RAIZ_REPOR_NOVO = 'Object.keys(d.registos).forEach(function(k){if(/^(epi-sala|painel-sala-)/.test(k))return;var v=d.registos[k],'
+
+
 def trocas_raiz(rel, texto):
-    return [('limpeza da Sala antes de exportar ou repor o progresso', PROGRESSO_INICIO, LIMPEZA_SCRIPT + PROGRESSO_INICIO)]
+    return [('limpeza da Sala antes de exportar ou repor o progresso', PROGRESSO_INICIO, LIMPEZA_SCRIPT + PROGRESSO_INICIO),
+            ('Repor o progresso salta as chaves da Sala', RAIZ_REPOR, RAIZ_REPOR_NOVO)]
 
 
 TIPOS = {'licao': trocas_licao, 'painel': trocas_painel, 'indice': trocas_indice, 'atlas': trocas_atlas, 'mapa': trocas_mapa}
@@ -718,11 +781,14 @@ def ler(p):
     return p.read_bytes().decode('utf-8')
 
 
-def commit_atual():
-    try:
-        return subprocess.run(['git', 'rev-parse', 'HEAD'], cwd=ROOT, capture_output=True, text=True, check=True).stdout.strip()
-    except (OSError, subprocess.CalledProcessError):
-        return None
+def commit_base():
+    """O commit de main de onde partem as páginas (origin/main); sem ele, o HEAD."""
+    for ref in ('origin/main', 'HEAD'):
+        try:
+            return subprocess.run(['git', 'rev-parse', ref], cwd=ROOT, capture_output=True, text=True, check=True).stdout.strip()
+        except (OSError, subprocess.CalledProcessError):
+            continue
+    return None
 
 
 def main():
@@ -799,7 +865,8 @@ def main():
             for motivo, rels in grupos.items():
                 print(f'  {motivo}: {len(rels)} página(s): ' + ', '.join(rels[:6]) + (' …' if len(rels) > 6 else ''), file=sys.stderr)
         return 2
-    manifesto = {'base_commit': antigo.get('base_commit') or commit_atual(), '_nota': NOTA,
+    # 29/10/2026: base_commit é o commit de onde partem as páginas (o HEAD em que o script corre por cima de main)
+    manifesto = {'base_commit': (antigo.get('base_commit') if not escrever else None) or commit_base(), '_nota': NOTA,
                  'paginas': {t: sorted(v) for t, v in paginas.items()},
                  'files': {rel: registos[rel] for rel in sorted(registos)}}
     texto_manifesto = json.dumps(manifesto, ensure_ascii=False, indent=1) + '\n'

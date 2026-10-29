@@ -19,10 +19,154 @@
       "source": {
         "title": "Cantigas: comparar sem confundir",
         "author": "Poesia trovadoresca",
-        "excerpt": "Ondas do mar de Vigo, se vistes meu amigo ? e ai Deus, se verrá cedo ? Vocabulário: amigo , o namorado; verrá , virá; cedo , em breve Martim Codax, séc. XIII, Cantigas Medievais Galego-Portuguesas (FCSH), cantiga 1308 (cantiga de amigo; primeira estrofe). A cantiga inteira lê-se na lição «Ondas do mar de Vigo».\n\nQuer'eu em maneira de proençal fazer agora um cantar d'amor e querrei muit'i loar mia senhor a que prez nem fremosura nom fal , nem bondade; e mais vos direi en : tanto a fez Deus comprida de bem que mais que todas las do mundo val . Vocabulário: em maneira de proençal , à maneira dos trovadores da Provença; querrei , quererei; loar , louvar; mia senhor , a minha senhora; prez , valor, mérito; fremosura , formosura, beleza; nom fal , não falta; direi en , direi disso; comprida de bem , cheia de qualidades; val , vale D. Dinis, Cantigas Medievais Galego-Portuguesas (FCSH), cantiga 544 (cantiga de amor; primeira estrofe). A cantiga inteira lê-se na lição «Louvar e troçar».\n\nMendinho, «Sedia-m’eu na ermida de Sam Simion» (excerto):\nSedia-m’eu na ermida de Sam Simion\ne cercarom-mi as ondas, que grandes som!\nEu atendendo meu amig’, eu a[tendendo].\n\nNom hei [eu] i barqueiro nem remador\n[e] morrerei fremosa no mar maior.\nEu atendendo meu amig’, eu a[tendendo].\n\nMendinho, séc. XIII, Cantigas Medievais Galego-Portuguesas (FCSH); estrofes 1 e 5, com omissão das intermédias. Os parênteses retos assinalam restituições editoriais. «Morrerei» anuncia o perigo; o excerto não narra uma morte consumada.",
-        "context": "Compara Codax com Mendinho para a resposta escrita. O recorte de D. Dinis serve a pergunta sobre «vos». Na ficha de Mendinho, confronta as hipóteses para o final com os indícios do texto.",
+        "context": "Compara Codax com Mendinho para a resposta escrita. O recorte de D. Dinis serve a pergunta sobre «vos». Na lição de Mendinho, confronta as hipóteses para o final com os indícios do texto.",
         "url": "/pt/m1/licao-m1-f19/",
-        "note": "Recorte de leitura já utilizado no módulo. Consulta a ficha para o texto, a localização e as fontes completas."
+        "note": "Recorte de leitura já utilizado no módulo. Abre a lição para o texto, a localização e as fontes completas.",
+        "passages": [
+          {
+            "label": "A",
+            "head": "Martim Codax, «Ondas do mar de Vigo»",
+            "form": "verso",
+            "stanzas": [
+              [
+                "Ondas do mar de Vigo,",
+                "se vistes meu {amigo|o namorado}?",
+                "e ai Deus, se {verrá|virá} {cedo|em breve}?"
+              ]
+            ],
+            "credit": "Martim Codax (séc. XIII), cantiga 1308 (cantiga de amigo), _Cantigas Medievais Galego-Portuguesas_ (FCSH/NOVA); primeira estrofe, com a grafia da edição.",
+            "note": "A cantiga inteira está na lição «As cantigas lado a lado».",
+            "link": "/pt/m1/licao-m1-f19/",
+            "refs": [
+              {
+                "url": "/pt/m1/licao-m1-f19/",
+                "card": 1,
+                "l": "0-0"
+              },
+              {
+                "url": "/pt/m1/licao-m1-f19/",
+                "card": 1,
+                "l": "0-1"
+              },
+              {
+                "url": "/pt/m1/licao-m1-f19/",
+                "card": 1,
+                "l": "0-2"
+              }
+            ]
+          },
+          {
+            "label": "B",
+            "head": "D. Dinis, «Quer'eu em maneira de proençal»",
+            "form": "verso",
+            "stanzas": [
+              [
+                "Quer'eu {em maneira de proençal|à maneira dos trovadores da Provença}",
+                "fazer agora um cantar d'amor",
+                "e {querrei|quererei} muit'i {loar|louvar} {mia senhor|a minha senhora}",
+                "a que {prez|valor, mérito} nem {fremosura|formosura, beleza} {nom fal|não falta},",
+                "nem bondade; e mais vos {direi en|direi disso}:",
+                "tanto a fez Deus {comprida de bem|cheia de qualidades}",
+                "que mais que todas las do mundo {val|vale}."
+              ]
+            ],
+            "credit": "D. Dinis, cantiga 544 (cantiga de amor), _Cantigas Medievais Galego-Portuguesas_ (FCSH/NOVA); primeira estrofe.",
+            "note": "A cantiga inteira está na lição «Louvar e troçar».",
+            "link": "/pt/m1/licao-m1-f04/",
+            "refs": [
+              {
+                "url": "/pt/m1/licao-m1-f19/",
+                "card": 6,
+                "l": "1-0"
+              },
+              {
+                "url": "/pt/m1/licao-m1-f19/",
+                "card": 6,
+                "l": "1-1"
+              },
+              {
+                "url": "/pt/m1/licao-m1-f19/",
+                "card": 6,
+                "l": "1-2"
+              },
+              {
+                "url": "/pt/m1/licao-m1-f19/",
+                "card": 6,
+                "l": "1-3"
+              },
+              {
+                "url": "/pt/m1/licao-m1-f19/",
+                "card": 6,
+                "l": "1-4"
+              },
+              {
+                "url": "/pt/m1/licao-m1-f19/",
+                "card": 6,
+                "l": "1-5"
+              },
+              {
+                "url": "/pt/m1/licao-m1-f19/",
+                "card": 6,
+                "l": "1-6"
+              }
+            ]
+          },
+          {
+            "label": "C",
+            "head": "Mendinho, «Sedia-m'eu na ermida de Sam Simion»",
+            "form": "verso",
+            "stanzas": [
+              [
+                "{Sedia-m'eu|estava eu (sentada)} na ermida de Sam Simion",
+                "e {cercarom-mi|cercaram-me} as ondas, {que grandes som!|que grandes são!}",
+                "Eu {atendendo|esperando} meu amig', eu a[tendendo]."
+              ],
+              [
+                "[…]"
+              ],
+              [
+                "Nom hei [eu] i barqueiro nem remador",
+                "[e] morrerei {fremosa|formosa} no mar maior.",
+                "Eu atendendo meu amig', eu a[tendendo]."
+              ]
+            ],
+            "credit": "Mendinho (séc. XIII), cantiga 861, _Cantigas Medievais Galego-Portuguesas_ (FCSH/NOVA); estrofes 1 e 5, com omissão das intermédias.",
+            "note": "Os parênteses retos assinalam restituições editoriais. «Morrerei» anuncia o perigo; o excerto não narra uma morte consumada.",
+            "link": "/pt/m1/licao-m1-f02/",
+            "refs": [
+              {
+                "url": "/pt/m1/licao-m1-f02/",
+                "card": 1,
+                "l": "0-0"
+              },
+              {
+                "url": "/pt/m1/licao-m1-f02/",
+                "card": 1,
+                "l": "0-1"
+              },
+              {
+                "url": "/pt/m1/licao-m1-f02/",
+                "card": 1,
+                "l": "0-2"
+              },
+              {
+                "url": "/pt/m1/licao-m1-f02/",
+                "card": 8,
+                "l": "1-0"
+              },
+              {
+                "url": "/pt/m1/licao-m1-f02/",
+                "card": 8,
+                "l": "1-1"
+              },
+              {
+                "url": "/pt/m1/licao-m1-f02/",
+                "card": 8,
+                "l": "1-2"
+              }
+            ]
+          }
+        ]
       },
       "resources": [
         {
@@ -142,10 +286,67 @@
       "source": {
         "title": "Fernão Lopes: uma multidão em ação",
         "author": "Fernão Lopes",
-        "excerpt": "[1] O pajem do Mestre, que estava à porta, como lhe disseram que fosse pela vila, segundo já era percebido , começou d'ir rijamente e ao galope […], dizendo a altas vozes, bradando pela rua: «Matam o Mestre! Matam o Mestre nos paços da rainha! Acorrei ao Mestre, que o matam!» [2] Soaram as vozes do arruído pela cidade, ouvindo todos bradar que matavam o Mestre, e […] se moveram todos com mão armada, correndo à pressa para hu diziam que se esto fazia, pera lhe dar vida e escusar morte. [3] A gente começou de se ajuntar a ele, e era tanta que era estranha cousa de ver; não cabiam pelas ruas principais e atravessavam lugares escusos , desejando cada um de ser o primeiro […]. Vocabulário: percebido , combinado; rijamente , com força, depressa; bradando , gritando; arruído , barulho, alvoroço; hu , onde; esto , isto; pera , para; escusar , evitar; ajuntar , juntar; estranha cousa , coisa espantosa; escusos , afastados, escondidos Fernão Lopes, _Crónica de D. João I_ (edição de 1897), cap. XII (cap. 11 na numeração habitual), grafia atualizada; cortes marcados com […].\n\n[1] Ordenou o Mestre com as gentes da cidade, que fosse repartida a guarda dos muros pelos fidalgos e cidadãos […], e em cada uma quadrilha havia um sino pera repicar , quando tal cousa viesse, e como cada um ouvia o sino da sua quadrilha, logo todos direitamente corriam pera lá. Vocabulário: quadrilha , grupo encarregado de um troço da muralha; repicar , tocar; tal cousa , um ataque; direitamente , diretamente Fernão Lopes, _Crónica de D. João I_ (edição de 1897), cap. CXVI (cap. 115 na numeração habitual), grafia atualizada.",
-        "context": "Abre a leitura de apoio, lê o recorte indicado e identifica duas marcas relevantes antes de responder. O texto de origem mantém-se na ficha; esta sessão organiza o treino a partir dele.",
+        "context": "Abre a leitura de apoio, lê o recorte indicado e identifica duas marcas relevantes antes de responder. O texto de origem está na lição; esta sessão organiza o treino a partir dele.",
         "url": "/pt/m1/licao-m1-f20/",
-        "note": "Recorte de leitura já utilizado no módulo. Consulta a ficha para o texto, a localização e as fontes completas."
+        "note": "Recorte de leitura já utilizado no módulo. Abre a lição para o texto, a localização e as fontes completas.",
+        "passages": [
+          {
+            "label": "A",
+            "head": "Fernão Lopes, «Matam o Mestre!»",
+            "form": "prosa",
+            "paragraphs": [
+              {
+                "n": "1",
+                "text": "O pajem do Mestre, que estava à porta, como lhe disseram que fosse pela vila, segundo já era {percebido|combinado}, começou d'ir {rijamente|com força, depressa} e ao galope […], dizendo a altas vozes, {bradando|gritando} pela rua: «Matam o Mestre! Matam o Mestre nos paços da rainha! Acorrei ao Mestre, que o matam!»"
+              },
+              {
+                "n": "2",
+                "text": "[…] Soaram as vozes do {arruído|barulho, alvoroço} pela cidade, ouvindo todos bradar que matavam o Mestre, e […] se moveram todos com mão armada, correndo à pressa para {hu|onde} diziam que se {esto|isto} fazia, {pera|para} lhe dar vida e {escusar|evitar} morte. […]"
+              },
+              {
+                "n": "3",
+                "text": "A gente começou de se {ajuntar|juntar} a ele, e era tanta que era {estranha cousa|coisa espantosa} de ver; não cabiam pelas ruas principais e atravessavam lugares {escusos|afastados, escondidos}, desejando cada um de ser o primeiro […]."
+              }
+            ],
+            "credit": "Fernão Lopes, _Crónica de D. João I_ (edição de 1897), cap. XII (cap. 11 na numeração habitual), grafia atualizada; cortes marcados com […].",
+            "refs": [
+              {
+                "url": "/pt/m1/licao-m1-f20/",
+                "card": 1,
+                "l": "0-0"
+              },
+              {
+                "url": "/pt/m1/licao-m1-f20/",
+                "card": 1,
+                "l": "0-1"
+              },
+              {
+                "url": "/pt/m1/licao-m1-f20/",
+                "card": 1,
+                "quote": true
+              }
+            ]
+          },
+          {
+            "label": "B",
+            "head": "Fernão Lopes, a defesa de Lisboa",
+            "form": "prosa",
+            "paragraphs": [
+              {
+                "n": "1",
+                "text": "Ordenou o Mestre com as gentes da cidade, que fosse repartida a guarda dos muros pelos fidalgos e cidadãos […], e em cada uma {quadrilha|grupo encarregado de um troço da muralha} havia um sino pera {repicar|tocar}, quando tal {cousa|coisa} viesse, e como cada um ouvia o sino da sua quadrilha, logo todos {direitamente|diretamente} corriam pera lá […]."
+              }
+            ],
+            "credit": "Fernão Lopes, _Crónica de D. João I_ (edição de 1897), cap. CXVI (cap. 115 na numeração habitual), grafia atualizada.",
+            "refs": [
+              {
+                "url": "/pt/m1/licao-m1-f20/",
+                "card": 6,
+                "l": "1-0"
+              }
+            ]
+          }
+        ]
       },
       "resources": [],
       "warmup": [
@@ -261,9 +462,9 @@
         "title": "Gil Vicente: desejo, escolha e sátira",
         "author": "Gil Vicente",
         "excerpt": "",
-        "context": "Retoma o desejo inicial e a segunda escolha nas duas leituras de apoio. A ficha principal ajuda a construir a interpretação com citações; uma leitura diferente pode ser defendida se explicar as falas e as ações da peça.",
+        "context": "Retoma o desejo inicial e a segunda escolha nas duas leituras de apoio. A lição principal ajuda a construir a interpretação com citações; uma leitura diferente pode ser defendida se explicar as falas e as ações da peça.",
         "url": "/pt/m2/licao-m2-f08/",
-        "note": "Materiais existentes reciclados; os recortes e as fontes estão identificados na ficha de apoio."
+        "note": "Materiais existentes reciclados; os recortes e as fontes estão identificados na leitura de apoio."
       },
       "resources": [
         {
@@ -393,10 +594,112 @@
       "source": {
         "title": "Camões lírico: o que a forma faz sentir",
         "author": "Luís de Camões",
-        "excerpt": "Alma minha gentil , que te partiste Tão cedo desta vida descontente, Repousa lá no céu eternamente, E viva eu cá na terra sempre triste. Se lá no assento etéreo , onde subiste, Memória desta vida se consente , Não te esqueças daquele amor ardente Que já nos olhos meus tão puro viste. E se vires que pode merecer-te Alguma cousa a dor que me ficou Da mágoa, sem remédio, de perder-te,\n\nRoga a Deus, que teus anos encurtou, Que tão cedo de cá me leve a ver-te, Quão cedo de meus olhos te levou. Vocabulário: gentil , nobre; assento etéreo , céu; se consente , é permitida; roga , pede Luís de Camões, _Rhythmas_ (1595), soneto XIII (grafia modernizada).",
-        "context": "Abre a leitura de apoio, lê o recorte indicado e identifica duas marcas relevantes antes de responder. O texto de origem mantém-se na ficha; esta sessão organiza o treino a partir dele.",
+        "context": "Abre a leitura de apoio, lê o recorte indicado e identifica duas marcas relevantes antes de responder. O texto de origem está na lição; esta sessão organiza o treino a partir dele.",
         "url": "/pt/m3/licao-m3-f09/",
-        "note": "Recorte de leitura já utilizado no módulo. Consulta a ficha para o texto, a localização e as fontes completas."
+        "note": "Recorte de leitura já utilizado no módulo. Abre a lição para o texto, a localização e as fontes completas.",
+        "passages": [
+          {
+            "head": "Luís de Camões, «Alma minha gentil, que te partiste»",
+            "form": "verso",
+            "stanzas": [
+              [
+                "Alma minha {gentil|nobre}, que te partiste",
+                "Tão cedo desta vida descontente,",
+                "Repousa lá no céu eternamente,",
+                "E viva eu cá na terra sempre triste."
+              ],
+              [
+                "Se lá no {assento etéreo|céu}, onde subiste,",
+                "Memória desta vida {se consente|é permitida},",
+                "Não te esqueças daquele amor ardente",
+                "Que já nos olhos meus tão puro viste."
+              ],
+              [
+                "E se vires que pode merecer-te",
+                "Alguma cousa a dor que me ficou",
+                "Da mágoa, sem remédio, de perder-te,"
+              ],
+              [
+                "{Roga|pede} a Deus, que teus anos encurtou,",
+                "Que tão cedo de cá me leve a ver-te,",
+                "Quão cedo de meus olhos te levou."
+              ]
+            ],
+            "credit": "Luís de Camões, _Rhythmas_ (1595), soneto XIII (grafia modernizada).",
+            "refs": [
+              {
+                "url": "/pt/m3/licao-m3-f09/",
+                "card": 2,
+                "l": "0-0"
+              },
+              {
+                "url": "/pt/m3/licao-m3-f09/",
+                "card": 2,
+                "l": "0-1"
+              },
+              {
+                "url": "/pt/m3/licao-m3-f09/",
+                "card": 2,
+                "l": "0-2"
+              },
+              {
+                "url": "/pt/m3/licao-m3-f09/",
+                "card": 2,
+                "l": "0-3"
+              },
+              {
+                "url": "/pt/m3/licao-m3-f09/",
+                "card": 2,
+                "l": "0-5"
+              },
+              {
+                "url": "/pt/m3/licao-m3-f09/",
+                "card": 2,
+                "l": "0-6"
+              },
+              {
+                "url": "/pt/m3/licao-m3-f09/",
+                "card": 2,
+                "l": "0-7"
+              },
+              {
+                "url": "/pt/m3/licao-m3-f09/",
+                "card": 2,
+                "l": "0-8"
+              },
+              {
+                "url": "/pt/m3/licao-m3-f09/",
+                "card": 2,
+                "l": "0-10"
+              },
+              {
+                "url": "/pt/m3/licao-m3-f09/",
+                "card": 2,
+                "l": "0-11"
+              },
+              {
+                "url": "/pt/m3/licao-m3-f09/",
+                "card": 2,
+                "l": "0-12"
+              },
+              {
+                "url": "/pt/m3/licao-m3-f09/",
+                "card": 8,
+                "l": "0-14"
+              },
+              {
+                "url": "/pt/m3/licao-m3-f09/",
+                "card": 8,
+                "l": "0-15"
+              },
+              {
+                "url": "/pt/m3/licao-m3-f09/",
+                "card": 8,
+                "l": "0-16"
+              }
+            ]
+          }
+        ]
       },
       "resources": [
         {
@@ -514,10 +817,131 @@
       "source": {
         "title": "Os Lusíadas: celebrar e interrogar",
         "author": "Luís de Camões",
-        "excerpt": "No mar tanta tormenta, e tanto dano, Tantas vezes a morte apercebida ! Na terra tanta guerra, tanto engano, Tanta necessidade avorrecida ! Onde pode acolher-se um fraco humano, Onde terá segura a curta vida, Que não se arme, e se indigne o Céu sereno Contra um bicho da terra tão pequeno? Vocabulário: apercebida , preparada, à espreita; avorrecida , detestável Luís de Camões, _Os Lusíadas_ (1572), I, 106.\n\nNas naus estar se deixa vagaroso , Até ver o que o tempo lhe descobre: Que não se fia já do cobiçoso Regedor corrompido e pouco nobre. Veja agora o juízo curioso Quanto no rico, assim como no pobre, Pode o vil interesse e sede inimiga Do dinheiro, que a tudo nos obriga.",
-        "context": "Abre a leitura de apoio, lê o recorte indicado e identifica duas marcas relevantes antes de responder. O texto de origem mantém-se na ficha; esta sessão organiza o treino a partir dele.",
+        "context": "Abre a leitura de apoio, lê o recorte indicado e identifica duas marcas relevantes antes de responder. O texto de origem está na lição; esta sessão organiza o treino a partir dele.",
         "url": "/pt/m3/licao-m3-f13/",
-        "note": "Recorte de leitura já utilizado no módulo. Consulta a ficha para o texto, a localização e as fontes completas."
+        "note": "Recorte de leitura já utilizado no módulo. Abre a lição para o texto, a localização e as fontes completas.",
+        "passages": [
+          {
+            "label": "A",
+            "head": "Luís de Camões, _Os Lusíadas_, I, 106",
+            "form": "verso",
+            "stanzas": [
+              [
+                "No mar tanta tormenta, e tanto dano,",
+                "Tantas vezes a morte {apercebida|preparada, à espreita}!",
+                "Na terra tanta guerra, tanto engano,",
+                "Tanta necessidade {avorrecida|detestável}!",
+                "Onde pode acolher-se um fraco humano,",
+                "Onde terá segura a curta vida,",
+                "Que não se arme, e se indigne o Céu sereno",
+                "Contra um bicho da terra tão pequeno?"
+              ]
+            ],
+            "credit": "Luís de Camões, _Os Lusíadas_ (1572), I, 106.",
+            "refs": [
+              {
+                "url": "/pt/m3/licao-m3-f13/",
+                "card": 2,
+                "l": "0-0"
+              },
+              {
+                "url": "/pt/m3/licao-m3-f13/",
+                "card": 2,
+                "l": "0-1"
+              },
+              {
+                "url": "/pt/m3/licao-m3-f13/",
+                "card": 2,
+                "l": "0-2"
+              },
+              {
+                "url": "/pt/m3/licao-m3-f13/",
+                "card": 2,
+                "l": "0-3"
+              },
+              {
+                "url": "/pt/m3/licao-m3-f13/",
+                "card": 2,
+                "l": "0-4"
+              },
+              {
+                "url": "/pt/m3/licao-m3-f13/",
+                "card": 2,
+                "l": "0-5"
+              },
+              {
+                "url": "/pt/m3/licao-m3-f13/",
+                "card": 2,
+                "l": "0-6"
+              },
+              {
+                "url": "/pt/m3/licao-m3-f13/",
+                "card": 2,
+                "l": "0-7"
+              }
+            ]
+          },
+          {
+            "label": "B",
+            "head": "Luís de Camões, _Os Lusíadas_, VIII, 96",
+            "form": "verso",
+            "stanzas": [
+              [
+                "Nas naus estar se deixa {vagaroso|sem pressa},",
+                "Até ver o que o tempo lhe descobre:",
+                "Que não se fia já do cobiçoso",
+                "{Regedor|governante (o Catual, que exige subornos ao Gama)} corrompido e pouco nobre.",
+                "Veja agora o {juízo curioso|leitor atento}",
+                "Quanto no rico, assim como no pobre,",
+                "Pode o vil interesse e sede inimiga",
+                "Do dinheiro, que a tudo nos obriga."
+              ]
+            ],
+            "credit": "Luís de Camões, _Os Lusíadas_ (1572), VIII, 96.",
+            "refs": [
+              {
+                "url": "/pt/m3/licao-m3-f13/",
+                "card": 8,
+                "l": "1-0"
+              },
+              {
+                "url": "/pt/m3/licao-m3-f13/",
+                "card": 8,
+                "l": "1-1"
+              },
+              {
+                "url": "/pt/m3/licao-m3-f13/",
+                "card": 8,
+                "l": "1-2"
+              },
+              {
+                "url": "/pt/m3/licao-m3-f13/",
+                "card": 8,
+                "l": "1-3"
+              },
+              {
+                "url": "/pt/m3/licao-m3-f13/",
+                "card": 8,
+                "l": "1-4"
+              },
+              {
+                "url": "/pt/m3/licao-m3-f13/",
+                "card": 8,
+                "l": "1-5"
+              },
+              {
+                "url": "/pt/m3/licao-m3-f13/",
+                "card": 8,
+                "l": "1-6"
+              },
+              {
+                "url": "/pt/m3/licao-m3-f13/",
+                "card": 8,
+                "l": "1-7"
+              }
+            ]
+          }
+        ]
       },
       "resources": [],
       "warmup": [
@@ -637,10 +1061,85 @@
       "source": {
         "title": "Vieira: os peixes são o argumento",
         "author": "Padre António Vieira",
-        "excerpt": "[1] Ou é porque o sal não salga, e os pregadores não pregam a verdadeira doutrina ; ou porque a terra se não deixa salgar, e os ouvintes, sendo verdadeira a doutrina que lhes dão, a não querem receber. [2] Enfim, que havemos de pregar hoje aos peixes? Nunca pior auditório . Ao menos têm os peixes duas boas qualidades de ouvintes: ouvem e não falam. [3] Uma é louvar o bem, outra repreender o mal: louvar o bem para o conservar e repreender o mal para preservar dele . Vocabulário: o sal , os pregadores (Cristo chamou aos apóstolos «o sal da terra»); a terra , os ouvintes; doutrina , ensino; auditório , quem ouve; preservar dele , guardar do mal Padre António Vieira, _Sermão de Santo António_ (1654), ortografia atualizada, caps. I e II.\n\n[1] É possível que, sendo vós uns peixinhos tão pequenos, haveis de ser as roncas do mar? [2] Pegadores chamam-se estes de que agora falo, e com grande propriedade, porque, sendo pequenos, não só se chegam a outros maiores, mas de tal sorte se lhes pegam aos costados , que nunca os desferram . […] e assim lhes sustenta o peso e mais a fome. [3] Dizei-me, voadores , não vos fez Deus peixes? Pois porque vos quereis ser aves? […] ao voador mata-o a vaidade de voar, e a sua isca é o vento.",
-        "context": "Abre a leitura de apoio, lê o recorte indicado e identifica duas marcas relevantes antes de responder. O texto de origem mantém-se na ficha; esta sessão organiza o treino a partir dele.",
+        "context": "Abre a leitura de apoio, lê o recorte indicado e identifica duas marcas relevantes antes de responder. O texto de origem está na lição; esta sessão organiza o treino a partir dele.",
         "url": "/pt/m4/licao-m4-f25/",
-        "note": "Recorte de leitura já utilizado no módulo. Consulta a ficha para o texto, a localização e as fontes completas."
+        "note": "Recorte de leitura já utilizado no módulo. Abre a lição para o texto, a localização e as fontes completas.",
+        "passages": [
+          {
+            "label": "A",
+            "head": "Padre António Vieira, _Sermão de Santo António_, caps. I e II",
+            "form": "prosa",
+            "paragraphs": [
+              {
+                "n": "1",
+                "text": "Ou é porque {o sal|os pregadores: Vieira aplica-lhes a frase de Cristo «Vós sois o sal da terra»} não salga, e os pregadores não pregam a verdadeira {doutrina|ensino}; ou porque {a terra|os ouvintes} se não deixa salgar, e os ouvintes, sendo verdadeira a doutrina que lhes dão, a não querem receber."
+              },
+              {
+                "n": "2",
+                "text": "Enfim, que havemos de pregar hoje aos peixes? Nunca pior {auditório|quem ouve}. Ao menos têm os peixes duas boas qualidades de ouvintes: ouvem e não falam."
+              },
+              {
+                "n": "3",
+                "text": "{Uma|uma das duas propriedades das pregações, como as do sal} é louvar o bem, outra repreender o mal: louvar o bem para o conservar e repreender o mal para {preservar dele|guardar do mal}."
+              }
+            ],
+            "credit": "Padre António Vieira, _Sermão de Santo António_ (1654), caps. I e II, ortografia atualizada.",
+            "refs": [
+              {
+                "url": "/pt/m4/licao-m4-f25/",
+                "card": 1,
+                "l": "0-0"
+              },
+              {
+                "url": "/pt/m4/licao-m4-f25/",
+                "card": 1,
+                "l": "0-1"
+              },
+              {
+                "url": "/pt/m4/licao-m4-f25/",
+                "card": 1,
+                "l": "0-2"
+              }
+            ]
+          },
+          {
+            "label": "B",
+            "head": "Padre António Vieira, _Sermão de Santo António_, cap. V",
+            "form": "prosa",
+            "paragraphs": [
+              {
+                "n": "1",
+                "text": "É possível que, sendo vós uns peixinhos tão pequenos, haveis de ser as {roncas|fanfarrões (roncador é também o nome do peixe)} do mar?"
+              },
+              {
+                "n": "2",
+                "text": "{Pegadores|peixes que se agarram a outros (rémoras)} chamam-se estes de que agora falo, e com grande {propriedade|aqui, acerto: o nome condiz com o que fazem}, porque, sendo pequenos, não só se chegam a outros maiores, mas de tal sorte se lhes pegam aos {costados|lados do corpo}, que nunca os {desferram|largam}. […] e assim lhes {sustenta|quem sustenta é o peixe grande (ficou no corte): carrega-os e ainda os alimenta} o peso e mais a fome."
+              },
+              {
+                "n": "3",
+                "text": "Dizei-me, {voadores|peixes-voadores}, não vos fez Deus peixes? Pois porque vos quereis ser aves? […] ao voador mata-o a vaidade de voar, e a sua {isca|engodo} é o vento."
+              }
+            ],
+            "credit": "Padre António Vieira, _Sermão de Santo António_ (1654), cap. V, ortografia atualizada.",
+            "refs": [
+              {
+                "url": "/pt/m4/licao-m4-f25/",
+                "card": 8,
+                "l": "1-0"
+              },
+              {
+                "url": "/pt/m4/licao-m4-f25/",
+                "card": 8,
+                "l": "1-1"
+              },
+              {
+                "url": "/pt/m4/licao-m4-f25/",
+                "card": 8,
+                "l": "1-2"
+              }
+            ]
+          }
+        ]
       },
       "resources": [],
       "warmup": [
@@ -752,10 +1251,85 @@
       "source": {
         "title": "Frei Luís de Sousa: o que a cena revela",
         "author": "Almeida Garrett",
-        "excerpt": "[1] ( Arrebata duas tochas das mãos dos criados, corre à porta da esquerda, atira com uma para dentro: e vê-se atear logo uma labareda imensa. Vai ao fundo, atira a outra tocha; e sucede o mesmo. Ouve-se alarido de fora.) [2] MADALENA — Que fazes?… que fizeste? Que é isto, oh meu Deus! [3] MANUEL, tranquilamente — Ilumino a minha casa para receber os muito poderosos e excelentes senhores governadores destes reinos. Suas excelências podem vir quando quiserem. Vocabulário: arrebata , agarra à força; atear , acender; alarido , gritaria; governadores , os que governam Portugal em nome do rei de Castela; didascália , indicação de cena entre parênteses Almeida Garrett, _Frei Luís de Sousa_ (1844), ortografia atualizada, ato I, cenas XI e XII.\n\n[1] MARIA — Oh! mas é verdade… vinde cá : (Leva-o diante dos três retratos que estão no fundo; e apontando para o de D. João ) de quem é este retrato aqui, Telmo? [2] TELMO, olha, e vira a cara de repente — Esse é… há de ser… é um da família, destes senhores da casa de Vimioso que aqui estão tantos. [3] MARIA, ameaçando-o com o dedo — Tu não dizes a verdade, Telmo.",
-        "context": "Abre a leitura de apoio, lê o recorte indicado e identifica duas marcas relevantes antes de responder. O texto de origem mantém-se na ficha; esta sessão organiza o treino a partir dele.",
+        "context": "Abre a leitura de apoio, lê o recorte indicado e identifica duas marcas relevantes antes de responder. O texto de origem está na lição; esta sessão organiza o treino a partir dele.",
         "url": "/pt/m4/licao-m4-f26/",
-        "note": "Recorte de leitura já utilizado no módulo. Consulta a ficha para o texto, a localização e as fontes completas."
+        "note": "Recorte de leitura já utilizado no módulo. Abre a lição para o texto, a localização e as fontes completas.",
+        "passages": [
+          {
+            "label": "A",
+            "head": "Almeida Garrett, _Frei Luís de Sousa_, ato I",
+            "form": "cena",
+            "paragraphs": [
+              {
+                "n": "1",
+                "text": "({Arrebata|agarra à força} duas tochas das mãos dos criados, corre à porta da esquerda, atira com uma para dentro: e vê-se {atear|acender} logo uma labareda imensa. Vai ao fundo, atira a outra tocha; e sucede o mesmo. Ouve-se {alarido|gritaria} de fora.)"
+              },
+              {
+                "n": "2",
+                "text": "MADALENA: Que fazes?… que fizeste? Que é isto, oh meu Deus!"
+              },
+              {
+                "n": "3",
+                "text": "MANUEL, tranquilamente: Ilumino a minha casa para receber os muito poderosos e excelentes senhores {governadores|os que governam Portugal em nome do rei de Castela} destes reinos. Suas excelências podem vir quando quiserem."
+              }
+            ],
+            "credit": "Almeida Garrett, _Frei Luís de Sousa_ (1844), ato I, cenas XI e XII, ortografia atualizada.",
+            "refs": [
+              {
+                "url": "/pt/m4/licao-m4-f26/",
+                "card": 1,
+                "l": "0-0"
+              },
+              {
+                "url": "/pt/m4/licao-m4-f26/",
+                "card": 1,
+                "l": "0-1"
+              },
+              {
+                "url": "/pt/m4/licao-m4-f26/",
+                "card": 1,
+                "l": "0-2"
+              }
+            ]
+          },
+          {
+            "label": "B",
+            "head": "Almeida Garrett, _Frei Luís de Sousa_, ato II",
+            "form": "cena",
+            "paragraphs": [
+              {
+                "n": "1",
+                "text": "MARIA: Oh! mas é verdade… {vinde cá|venha cá}: (Leva-o diante dos três retratos que estão no fundo; e apontando para o de {D. João|D. João de Portugal, primeiro marido de Madalena, dado por morto em Alcácer Quibir}) de quem é este retrato aqui, Telmo?"
+              },
+              {
+                "n": "2",
+                "text": "TELMO, olha, e vira a cara de repente: Esse é… há de ser… é um da família, destes senhores da {casa de Vimioso|a família de D. João} que aqui estão tantos."
+              },
+              {
+                "n": "3",
+                "text": "MARIA, ameaçando-o com o dedo: Tu não dizes a verdade, Telmo."
+              }
+            ],
+            "credit": "Almeida Garrett, _Frei Luís de Sousa_ (1844), ato II, cena I, ortografia atualizada.",
+            "refs": [
+              {
+                "url": "/pt/m4/licao-m4-f26/",
+                "card": 12,
+                "l": "2-0"
+              },
+              {
+                "url": "/pt/m4/licao-m4-f26/",
+                "card": 12,
+                "l": "2-1"
+              },
+              {
+                "url": "/pt/m4/licao-m4-f26/",
+                "card": 12,
+                "l": "2-2"
+              }
+            ]
+          }
+        ]
       },
       "resources": [],
       "warmup": [
@@ -865,10 +1439,74 @@
       "source": {
         "title": "Prosa romântica: paixão e condicionamento",
         "author": "Camilo Castelo Branco",
-        "excerpt": "[1] Folheando os livros de antigos assentamentos , no cartorio das cadêas da Relação do Porto, li, no das entradas dos presos desde 1803 a 1805, a folhas 232 , o seguinte: [2] Simão Antonio Botelho, que assim disse chamar-se, ser solteiro, e estudante na Universidade de Coimbra, natural da cidade de Lisboa, e assistente na occasião de sua prisão na cidade de Vizeu, idade de dezoito annos, filho de Domingos José Correia Botelho e de D. Rita Preciosa Caldeirão Castello-Branco, estatura ordinaria, cara redonda, olhos castanhos, cabello e barba preta, vestido com jaqueta de baetão azul, collête de fustão pintado e calça de panno pedrez . E fiz este assento, que assignei. [3] Filippe Moreira Dias .\n\n[4] Á margem esquerda d'este assento está escripto: Foi para a India em 17 de Março de 1807 . [5] Não será fiar demasiadamente na sensibilidade do leitor, se cuido que o degredo de um moço de dezoito annos lhe havia de fazer dó. [6] Dezoito annos! O arrebol dourado e escarlate da manhã da vida! As louçanias do coração que ainda não sonha em fructos, e todo se embalsama no perfume das flôres! Dezoito annos! O amor d'aquella idade! A passagem do seio da familia, dos braços de mãe, dos beijos das irmãs para as caricias mais dôces da virgem, que se lhe abre ao lado como flôr da mesma sazão e dos mesmos aromas, e á mesma hora da vida! Dezoito annos!... E degradado da patria, do amor, e da familia! Nunca mais o ceo de Portugal, nem liberdade, nem irmãos, nem mãe, nem rehabilitação, nem dignidade, nem um amigo!... É triste!",
-        "context": "Abre a leitura de apoio, lê o recorte indicado e identifica duas marcas relevantes antes de responder. O texto de origem mantém-se na ficha; esta sessão organiza o treino a partir dele.",
+        "context": "Abre a leitura de apoio, lê o recorte indicado e identifica duas marcas relevantes antes de responder. O texto de origem está na lição; esta sessão organiza o treino a partir dele.",
         "url": "/pt/m5/licao-m5-f02/",
-        "note": "Recorte de leitura já utilizado no módulo. Consulta a ficha para o texto, a localização e as fontes completas."
+        "note": "Recorte de leitura já utilizado no módulo. Abre a lição para o texto, a localização e as fontes completas.",
+        "passages": [
+          {
+            "head": "Camilo Castelo Branco, _Amor de Perdição_, introdução",
+            "form": "prosa",
+            "paragraphs": [
+              {
+                "n": "1",
+                "text": "Folheando os livros de antigos {assentamentos|registos}, no cartorio das cadêas da Relação do Porto, li, no das entradas dos presos desde 1803 a 1805, {a folhas 232|na página 232}, o seguinte:"
+              },
+              {
+                "n": "2",
+                "text": "_Simão Antonio Botelho, que assim disse chamar-se, ser solteiro, e estudante na Universidade de Coimbra, natural da cidade de Lisboa, e {assistente|residente} na occasião de sua prisão na cidade de Vizeu, idade de dezoito annos, filho de Domingos José Correia Botelho e de D. Rita Preciosa Caldeirão Castello-Branco, estatura ordinaria, cara redonda, olhos castanhos, cabello e barba preta, vestido com jaqueta de {baetão|pano grosso de lã} azul, collête de {fustão|tecido de algodão} pintado e calça de panno {pedrez|com pintas}. E fiz este assento, que assignei._"
+              },
+              {
+                "n": "3",
+                "text": "_Filippe Moreira Dias_."
+              },
+              {
+                "n": "4",
+                "text": "Á margem esquerda d'este assento está escripto: _Foi para a India em 17 de Março de 1807_."
+              },
+              {
+                "n": "5",
+                "text": "Não será fiar demasiadamente na sensibilidade do leitor, se cuido que o degredo de um moço de dezoito annos lhe havia de fazer dó."
+              },
+              {
+                "n": "6",
+                "text": "Dezoito annos! O {arrebol|cor do nascer do sol} dourado e escarlate da manhã da vida! As {louçanias|viço} do coração que ainda não sonha em fructos, e todo se embalsama no perfume das flôres! Dezoito annos! O amor d'aquella idade! A passagem do seio da familia, dos braços de mãe, dos beijos das irmãs para as caricias mais dôces da virgem, que se lhe abre ao lado como flôr da mesma {sazão|estação do ano} e dos mesmos aromas, e á mesma hora da vida! Dezoito annos!... E {degradado|condenado ao degredo (exílio)} da patria, do amor, e da familia! Nunca mais o ceo de Portugal, nem liberdade, nem irmãos, nem mãe, nem rehabilitação, nem dignidade, nem um amigo!... É triste!"
+              }
+            ],
+            "credit": "Camilo Castelo Branco, _Amor de Perdição_ (1862) (grafia da edição).",
+            "refs": [
+              {
+                "url": "/pt/m5/licao-m5-f02/",
+                "card": 3,
+                "l": "0-0"
+              },
+              {
+                "url": "/pt/m5/licao-m5-f02/",
+                "card": 3,
+                "l": "0-1"
+              },
+              {
+                "url": "/pt/m5/licao-m5-f02/",
+                "card": 3,
+                "l": "0-2"
+              },
+              {
+                "url": "/pt/m5/licao-m5-f02/",
+                "card": 7,
+                "l": "0-3"
+              },
+              {
+                "url": "/pt/m5/licao-m5-f02/",
+                "card": 7,
+                "l": "0-4"
+              },
+              {
+                "url": "/pt/m5/licao-m5-f02/",
+                "card": 7,
+                "l": "0-5"
+              }
+            ]
+          }
+        ]
       },
       "resources": [],
       "warmup": [
@@ -994,10 +1632,38 @@
       "source": {
         "title": "Eça: ver a crítica nos pormenores",
         "author": "Eça de Queirós",
-        "excerpt": "[1] A casa que os Maias vieram habitar em Lisboa, no outono de 1875, era conhecida na visinhança da rua de S. Francisco de Paula, e em todo o bairro das Janellas Verdes, pela casa do Ramalhete ou simplesmente o Ramalhete . Apesar d'este fresco nome de vivenda campestre, o Ramalhete , sombrio casarão de paredes severas, com um renque de estreitas varandas de ferro no primeiro andar, e por cima uma timida fila de janellinhas abrigadas á beira do telhado, tinha o aspecto tristonho de Residencia Ecclesiastica que competia a uma edificação do reinado da sr.^a D. Maria I: com uma sineta e com uma cruz no topo assimilhar-se-hia a um Collegio de Jesuitas. O nome de Ramalhete provinha de certo d'um revestimento quadrado de azulejos fazendo painel no logar heraldico do Escudo d'Armas , que nunca chegara a ser collocado, e representando um grande ramo de girasoes atado por uma fita onde se distinguiam letras e numeros d'uma data. [2] Longos annos o Ramalhete permanecera deshabitado, com teias d'aranha pelas grades dos postigos terreos , e cobrindo-se de tons de ruina. Em 1858 Monsenhor Buccarini, Nuncio de S. Santidade, visitara-o com idéa d'installar lá a Nunciatura, seduzido pela gravidade clerical do edificio e pela paz dormente do bairro: e o interior do casarão agradara-lhe tambem, com a sua disposição apalaçada , os tectos apainelados , as paredes cobertas de frescos onde já desmaiavam as rosas das grinaldas e as faces dos Cupidinhos. Mas Monsenhor, com os seus habitos de rico prelado romano, necessitava na sua vivenda os arvoredos e as agoas d'um jardim de luxo: e o Ramalhete possuia apenas, ao fundo d'um terraço de tijolo, um pobre quintal inculto, abandonado ás hervas bravas, com um cypreste, um cedro, uma cascatasinha secca, um tanque entulhado, e uma estatua de marmore (onde Monsenhor reconheceu logo Venus Citherêa ) ennegrecendo a um canto na lenta humidade das ramagens silvestres. Além d'isso, a renda que pedio o velho Villaça, procurador dos Maias, pareceu tão exagerada a Monsenhor, que lhe perguntou sorrindo se ainda julgava a Egreja nos tempos de Leão X . Villaça respondeu — que tambem a nobreza não estava nos tempos do sr. D. João V. E o Ramalhete […]",
-        "context": "Abre a leitura de apoio, lê o recorte indicado e identifica duas marcas relevantes antes de responder. O texto de origem mantém-se na ficha; esta sessão organiza o treino a partir dele.",
+        "context": "Abre a leitura de apoio, lê o recorte indicado e identifica duas marcas relevantes antes de responder. O texto de origem está na lição; esta sessão organiza o treino a partir dele.",
         "url": "/pt/m5/licao-m5-f10/",
-        "note": "Recorte de leitura já utilizado no módulo. Consulta a ficha para o texto, a localização e as fontes completas."
+        "note": "Recorte de leitura já utilizado no módulo. Abre a lição para o texto, a localização e as fontes completas.",
+        "passages": [
+          {
+            "head": "Eça de Queirós, _Os Maias_, cap. I",
+            "form": "prosa",
+            "paragraphs": [
+              {
+                "n": "1",
+                "text": "A casa que os Maias vieram habitar em Lisboa, no outono de 1875, era conhecida na visinhança da rua de S. Francisco de Paula, e em todo o bairro das Janellas Verdes, pela _casa do Ramalhete_ ou simplesmente o _Ramalhete_. Apesar d'este fresco nome de vivenda campestre, o _Ramalhete_, sombrio casarão de paredes severas, com um {renque|fila} de estreitas varandas de ferro no primeiro andar, e por cima uma timida fila de janellinhas abrigadas á beira do telhado, tinha o aspecto tristonho de {Residencia Ecclesiastica|casa de padres} que competia a uma edificação do reinado da {sr.ª|senhora (abreviatura da edição)} D. Maria I: com uma sineta e com uma cruz no topo assimilhar-se-hia a um Collegio de Jesuitas. O nome de Ramalhete provinha de certo d'um revestimento quadrado de azulejos fazendo painel no logar heraldico do {Escudo d'Armas|brasão}, que nunca chegara a ser collocado, e representando um grande ramo de girasoes atado por uma fita onde se distinguiam letras e numeros d'uma data."
+              },
+              {
+                "n": "2",
+                "text": "Longos annos o Ramalhete permanecera deshabitado, com teias d'aranha pelas grades dos {postigos terreos|pequenas janelas ao nível da rua}, e cobrindo-se de tons de ruina. Em 1858 Monsenhor Buccarini, {Nuncio|embaixador do Papa} de S. Santidade, visitara-o com idéa d'installar lá a Nunciatura, seduzido pela gravidade clerical do edificio e pela paz dormente do bairro: e o interior do casarão agradara-lhe tambem, com a sua disposição {apalaçada|de palácio}, os tectos {apainelados|com painéis}, as paredes cobertas de _{frescos|pinturas na parede}_ onde já desmaiavam as rosas das grinaldas e as faces dos Cupidinhos. Mas Monsenhor, com os seus habitos de rico {prelado|alto dignitário da Igreja} romano, necessitava na sua vivenda os arvoredos e as agoas d'um jardim de luxo: e o Ramalhete possuia apenas, ao fundo d'um terraço de tijolo, um pobre quintal inculto, abandonado ás hervas bravas, com um cypreste, um cedro, uma cascatasinha secca, um tanque entulhado, e uma estatua de marmore (onde Monsenhor reconheceu logo {Venus Citherêa|estátua da deusa Vénus}) ennegrecendo a um canto na lenta humidade das ramagens silvestres. Além d'isso, a renda que pedio o velho Villaça, {procurador|administrador} dos Maias, pareceu tão exagerada a Monsenhor, que lhe perguntou sorrindo se ainda julgava a Egreja nos tempos de {Leão X|papa rico do século XVI}. Villaça respondeu — que tambem a nobreza não estava nos tempos do sr. D. João V. E o Ramalhete continuou deshabitado."
+              }
+            ],
+            "credit": "Eça de Queirós, _Os Maias_ (1888), cap. I (grafia da edição).",
+            "refs": [
+              {
+                "url": "/pt/m5/licao-m5-f10/",
+                "card": 3,
+                "l": "0-0"
+              },
+              {
+                "url": "/pt/m5/licao-m5-f10/",
+                "card": 3,
+                "l": "0-1"
+              }
+            ]
+          }
+        ]
       },
       "resources": [],
       "warmup": [
@@ -1116,10 +1782,112 @@
       "source": {
         "title": "Antero: procurar, negar, descansar",
         "author": "Antero de Quental",
-        "excerpt": "Sonho que sou um cavalleiro andante . Por desertos, por sóes, por noite escura, Paladino do amor, busco anhelante O palacio encantado da Ventura ! Mas já desmaio, exhausto e vacillante. Quebrada a espada já, rota a armadura... E eis que subito o avisto, fulgurante Na sua pompa e aerea formosura! Com grandes golpes bato á porta e brado: Eu sou o Vagabundo, o Desherdado... Abri-vos, portas d'ouro, ante meus ais!\n\nAbrem-se as portas d'ouro, com fragor ... Mas dentro encontro só, cheio de dor, Silencio e escuridão — e nada mais! Vocabulário: cavalleiro andante , cavaleiro que vagueia em busca de aventuras; paladino , defensor; anhelante , ansioso; Ventura , felicidade; rota , partida, desfeita; fragor , estrondo Antero de Quental, _Os Sonetos Completos_ (1886) · grafia da edição (v. 6 corrigido: «rota»; o _e-book_ lê «roda»).",
-        "context": "Abre a leitura de apoio, lê o recorte indicado e identifica duas marcas relevantes antes de responder. O texto de origem mantém-se na ficha; esta sessão organiza o treino a partir dele.",
+        "context": "Abre a leitura de apoio, lê o recorte indicado e identifica duas marcas relevantes antes de responder. O texto de origem está na lição; esta sessão organiza o treino a partir dele.",
         "url": "/pt/m6/licao-m6-f01/",
-        "note": "Recorte de leitura já utilizado no módulo. Consulta a ficha para o texto, a localização e as fontes completas."
+        "note": "Recorte de leitura já utilizado no módulo. Abre a lição para o texto, a localização e as fontes completas.",
+        "passages": [
+          {
+            "head": "Antero de Quental, «O Palácio da Ventura»",
+            "form": "verso",
+            "stanzas": [
+              [
+                "Sonho que sou um {cavalleiro andante|cavaleiro que vagueia em busca de aventuras}.",
+                "Por desertos, por sóes, por noite escura,",
+                "{Paladino|defensor} do amor, busco {anhelante|ansioso}",
+                "O palacio encantado da {Ventura|felicidade}!"
+              ],
+              [
+                "Mas já desmaio, exhausto e vacillante.",
+                "Quebrada a espada já, {rota|partida, desfeita} a armadura...",
+                "E eis que subito o avisto, fulgurante",
+                "Na sua pompa e aerea formosura!"
+              ],
+              [
+                "Com grandes golpes bato á porta e brado:",
+                "Eu sou o Vagabundo, o Desherdado...",
+                "Abri-vos, portas d'ouro, ante meus ais!"
+              ],
+              [
+                "Abrem-se as portas d'ouro, com {fragor|estrondo}...",
+                "Mas dentro encontro só, cheio de dor,",
+                "Silencio e escuridão — e nada mais!"
+              ]
+            ],
+            "credit": "Antero de Quental, _Os Sonetos Completos_ (1886) (grafia da edição; v. 6 corrigido: «rota», onde o _e-book_ lê «roda»).",
+            "refs": [
+              {
+                "url": "/pt/m6/licao-m6-f01/",
+                "card": 3,
+                "l": "0-0"
+              },
+              {
+                "url": "/pt/m6/licao-m6-f01/",
+                "card": 3,
+                "l": "0-1"
+              },
+              {
+                "url": "/pt/m6/licao-m6-f01/",
+                "card": 3,
+                "l": "0-2"
+              },
+              {
+                "url": "/pt/m6/licao-m6-f01/",
+                "card": 3,
+                "l": "0-3"
+              },
+              {
+                "url": "/pt/m6/licao-m6-f01/",
+                "card": 3,
+                "l": "0-5"
+              },
+              {
+                "url": "/pt/m6/licao-m6-f01/",
+                "card": 3,
+                "l": "0-6"
+              },
+              {
+                "url": "/pt/m6/licao-m6-f01/",
+                "card": 3,
+                "l": "0-7"
+              },
+              {
+                "url": "/pt/m6/licao-m6-f01/",
+                "card": 3,
+                "l": "0-8"
+              },
+              {
+                "url": "/pt/m6/licao-m6-f01/",
+                "card": 3,
+                "l": "0-10"
+              },
+              {
+                "url": "/pt/m6/licao-m6-f01/",
+                "card": 3,
+                "l": "0-11"
+              },
+              {
+                "url": "/pt/m6/licao-m6-f01/",
+                "card": 3,
+                "l": "0-12"
+              },
+              {
+                "url": "/pt/m6/licao-m6-f01/",
+                "card": 13,
+                "l": "0-14"
+              },
+              {
+                "url": "/pt/m6/licao-m6-f01/",
+                "card": 13,
+                "l": "0-15"
+              },
+              {
+                "url": "/pt/m6/licao-m6-f01/",
+                "card": 13,
+                "l": "0-16"
+              }
+            ]
+          }
+        ]
       },
       "resources": [],
       "warmup": [
@@ -1234,10 +2002,176 @@
       "source": {
         "title": "Cesário: uma cidade em transformação",
         "author": "Cesário Verde",
-        "excerpt": "Toca-se as grades, nas cadeias. Som Que mortifica e deixa umas loucuras mansas! O aljube , em que hoje estão velhinhas e creanças, Bem raramente encerra uma mulher de «dom» ! E eu desconfio, até, de um aneurisma Tão morbido me sinto, ao accender das luzes; Á vista das prisões, da velha sé, das cruzes, Chora-me o coração que se enche e que se abysma . A espaços, illuminam-se os andares, E as tascas, os cafés, as tendas, os estancos Alastram em lençol os seus reflexos brancos; E a lua lembra o circo e os jogos malabares.\n\nDuas egrejas, n'um saudoso largo, Lançam a nodoa negra e funebre do clero: N'ellas esfumo um ermo inquisidor severo, Assim que pela Historia eu me aventuro e alargo. Na parte que abateu no terremoto, Muram-se as construcções rectas, eguaes, crescidas; Affrontam-me, no resto, as ingremes subidas, E os sinos d'um tanger monastico e devoto. Mas, n'um recinto publico e vulgar, Com bancos de namoro e exiguas pimenteiras, Bronzeo, monumental, de proporções guerreiras, Um épico d'outr'ora ascende, n'um pilar!",
-        "context": "O recorte apresenta «Noite Fechada». Para a pergunta sobre «honesto», retoma também a estrofe da padaria em «Ao Gás», na mesma ficha. Na escrita, escolhe uma passagem e localiza as duas marcas que vais analisar.",
+        "context": "O recorte apresenta «Noite Fechada». Para a pergunta sobre «honesto», retoma também a estrofe da padaria em «Ao Gás», na mesma lição. Na escrita, escolhe uma passagem e localiza as duas marcas que vais analisar.",
         "url": "/pt/m6/licao-m6-f07/",
-        "note": "Recorte de leitura já utilizado no módulo. Consulta a ficha para o texto, a localização e as fontes completas."
+        "note": "Recorte de leitura já utilizado no módulo. Abre a lição para o texto, a localização e as fontes completas.",
+        "passages": [
+          {
+            "head": "Cesário Verde, «O Sentimento dum Ocidental», II. «Noite Fechada»",
+            "form": "verso",
+            "stanzas": [
+              [
+                "Toca-se as grades, nas cadeias. Som",
+                "Que {mortifica|atormenta} e deixa umas loucuras mansas!",
+                "O {aljube|prisão}, em que hoje estão velhinhas e creanças,",
+                "Bem raramente encerra uma {mulher de «dom»|senhora de família nobre}!"
+              ],
+              [
+                "E eu desconfio, até, de um {aneurisma|doença do coração}",
+                "Tão morbido me sinto, ao accender das luzes;",
+                "Á vista das prisões, da velha sé, das cruzes,",
+                "Chora-me o coração que se enche e que {se abysma|se afunda}."
+              ],
+              [
+                "A espaços, illuminam-se os andares,",
+                "E as tascas, os cafés, as tendas, os {estancos|tabacarias}",
+                "Alastram em lençol os seus reflexos brancos;",
+                "E a lua lembra o circo e os jogos malabares."
+              ],
+              [
+                "Duas egrejas, n'um saudoso largo,",
+                "Lançam a {nodoa|mancha} negra e funebre do clero:",
+                "N'ellas {esfumo|imagino a desvanecer-se} um {ermo|solitário} inquisidor severo,",
+                "Assim que pela Historia eu me aventuro e alargo."
+              ],
+              [
+                "Na parte que abateu no terremoto,",
+                "Muram-se as construcções rectas, eguaes, crescidas;",
+                "Affrontam-me, no resto, as ingremes subidas,",
+                "E os sinos d'um tanger monastico e devoto."
+              ],
+              [
+                "Mas, n'um recinto publico e vulgar,",
+                "Com bancos de namoro e exiguas pimenteiras,",
+                "Bronzeo, monumental, de proporções guerreiras,",
+                "Um {épico d'outr'ora|a estátua de Camões} ascende, n'um pilar!"
+              ]
+            ],
+            "credit": "Cesário Verde, «O Sentimento dum Ocidental», _O Livro de Cesário Verde_ (1887) (grafia da edição).",
+            "refs": [
+              {
+                "url": "/pt/m6/licao-m6-f07/",
+                "card": 2,
+                "l": "0-0"
+              },
+              {
+                "url": "/pt/m6/licao-m6-f07/",
+                "card": 2,
+                "l": "0-1"
+              },
+              {
+                "url": "/pt/m6/licao-m6-f07/",
+                "card": 2,
+                "l": "0-2"
+              },
+              {
+                "url": "/pt/m6/licao-m6-f07/",
+                "card": 2,
+                "l": "0-3"
+              },
+              {
+                "url": "/pt/m6/licao-m6-f07/",
+                "card": 2,
+                "l": "0-5"
+              },
+              {
+                "url": "/pt/m6/licao-m6-f07/",
+                "card": 2,
+                "l": "0-6"
+              },
+              {
+                "url": "/pt/m6/licao-m6-f07/",
+                "card": 2,
+                "l": "0-7"
+              },
+              {
+                "url": "/pt/m6/licao-m6-f07/",
+                "card": 2,
+                "l": "0-8"
+              },
+              {
+                "url": "/pt/m6/licao-m6-f07/",
+                "card": 2,
+                "l": "0-10"
+              },
+              {
+                "url": "/pt/m6/licao-m6-f07/",
+                "card": 2,
+                "l": "0-11"
+              },
+              {
+                "url": "/pt/m6/licao-m6-f07/",
+                "card": 2,
+                "l": "0-12"
+              },
+              {
+                "url": "/pt/m6/licao-m6-f07/",
+                "card": 2,
+                "l": "0-13"
+              },
+              {
+                "url": "/pt/m6/licao-m6-f07/",
+                "card": 5,
+                "l": "0-15"
+              },
+              {
+                "url": "/pt/m6/licao-m6-f07/",
+                "card": 5,
+                "l": "0-16"
+              },
+              {
+                "url": "/pt/m6/licao-m6-f07/",
+                "card": 5,
+                "l": "0-17"
+              },
+              {
+                "url": "/pt/m6/licao-m6-f07/",
+                "card": 5,
+                "l": "0-18"
+              },
+              {
+                "url": "/pt/m6/licao-m6-f07/",
+                "card": 5,
+                "l": "0-20"
+              },
+              {
+                "url": "/pt/m6/licao-m6-f07/",
+                "card": 5,
+                "l": "0-21"
+              },
+              {
+                "url": "/pt/m6/licao-m6-f07/",
+                "card": 5,
+                "l": "0-22"
+              },
+              {
+                "url": "/pt/m6/licao-m6-f07/",
+                "card": 5,
+                "l": "0-23"
+              },
+              {
+                "url": "/pt/m6/licao-m6-f07/",
+                "card": 5,
+                "l": "0-25"
+              },
+              {
+                "url": "/pt/m6/licao-m6-f07/",
+                "card": 5,
+                "l": "0-26"
+              },
+              {
+                "url": "/pt/m6/licao-m6-f07/",
+                "card": 5,
+                "l": "0-27"
+              },
+              {
+                "url": "/pt/m6/licao-m6-f07/",
+                "card": 5,
+                "l": "0-28"
+              }
+            ]
+          }
+        ]
       },
       "resources": [
         {
@@ -1359,10 +2293,141 @@
       "source": {
         "title": "Pessoa: sentir e construir o poema",
         "author": "Fernando Pessoa",
-        "excerpt": "O poeta é um fingidor Finge tão completamente Que chega a fingir que é dor A dor que deveras sente. E os que lêem o que escreve, Na dor lida sentem bem, Não as duas que ele teve, Mas só a que eles não têm. E assim nas calhas de roda Gira, a entreter a razão, Esse comboio de corda Que se chama coração. Vocabulário: deveras , realmente; calhas , carris Fernando Pessoa · 1.ª publ. _Presença_, n.º 36, Coimbra, novembro de 1932 · _Poesias_, Ática, 1942 · Arquivo Pessoa · grafia da edição («lêem»)\n\nPor isso escrevo em meio Do que não está ao pé, Livre do meu enleio , Sério do que não é. Sentir? Sinta quem lê! Vocabulário: enleio , confusão, embaraço Fernando Pessoa · 1.ª publ. _Presença_, n.º 38, Coimbra, abril de 1933 · Arquivo Pessoa",
-        "context": "Abre a leitura de apoio, lê o recorte indicado e identifica duas marcas relevantes antes de responder. O texto de origem mantém-se na ficha; esta sessão organiza o treino a partir dele.",
+        "context": "Abre a leitura de apoio, lê o recorte indicado e identifica duas marcas relevantes antes de responder. O texto de origem está na lição; esta sessão organiza o treino a partir dele.",
         "url": "/pt/m7/licao-m7-f02/",
-        "note": "Recorte de leitura já utilizado no módulo. Consulta a ficha para o texto, a localização e as fontes completas."
+        "note": "Recorte de leitura já utilizado no módulo. Abre a lição para o texto, a localização e as fontes completas.",
+        "passages": [
+          {
+            "label": "A",
+            "head": "Fernando Pessoa, «Autopsicografia»",
+            "form": "verso",
+            "stanzas": [
+              [
+                "O poeta é um fingidor",
+                "Finge tão completamente",
+                "Que chega a fingir que é dor",
+                "A dor que {deveras|realmente} sente."
+              ],
+              [
+                "E os que lêem o que escreve,",
+                "Na dor lida sentem bem,",
+                "Não as duas que ele teve,",
+                "Mas só a que eles não têm."
+              ],
+              [
+                "E assim nas {calhas|carris} de roda",
+                "Gira, a entreter a razão,",
+                "Esse comboio de corda",
+                "Que se chama coração."
+              ]
+            ],
+            "credit": "Fernando Pessoa, «Autopsicografia», 1.ª publicação na _Presença_, n.º 36, Coimbra, novembro de 1932; _Poesias_, Ática, 1942; Arquivo Pessoa, grafia da edição («lêem»).",
+            "refs": [
+              {
+                "url": "/pt/m7/licao-m7-f02/",
+                "card": 2,
+                "l": "0-0"
+              },
+              {
+                "url": "/pt/m7/licao-m7-f02/",
+                "card": 2,
+                "l": "0-1"
+              },
+              {
+                "url": "/pt/m7/licao-m7-f02/",
+                "card": 2,
+                "l": "0-2"
+              },
+              {
+                "url": "/pt/m7/licao-m7-f02/",
+                "card": 2,
+                "l": "0-3"
+              },
+              {
+                "url": "/pt/m7/licao-m7-f02/",
+                "card": 2,
+                "l": "0-5"
+              },
+              {
+                "url": "/pt/m7/licao-m7-f02/",
+                "card": 2,
+                "l": "0-6"
+              },
+              {
+                "url": "/pt/m7/licao-m7-f02/",
+                "card": 2,
+                "l": "0-7"
+              },
+              {
+                "url": "/pt/m7/licao-m7-f02/",
+                "card": 2,
+                "l": "0-8"
+              },
+              {
+                "url": "/pt/m7/licao-m7-f02/",
+                "card": 2,
+                "l": "0-10"
+              },
+              {
+                "url": "/pt/m7/licao-m7-f02/",
+                "card": 2,
+                "l": "0-11"
+              },
+              {
+                "url": "/pt/m7/licao-m7-f02/",
+                "card": 2,
+                "l": "0-12"
+              },
+              {
+                "url": "/pt/m7/licao-m7-f02/",
+                "card": 2,
+                "l": "0-13"
+              }
+            ]
+          },
+          {
+            "label": "B",
+            "head": "Fernando Pessoa, «Isto»",
+            "form": "verso",
+            "stanzas": [
+              [
+                "Por isso escrevo em meio",
+                "Do que não está ao pé,",
+                "Livre do meu {enleio|confusão, embaraço},",
+                "Sério do que não é.",
+                "Sentir? Sinta quem lê!"
+              ]
+            ],
+            "credit": "Fernando Pessoa, «Isto», 1.ª publicação na _Presença_, n.º 38, Coimbra, abril de 1933; Arquivo Pessoa.",
+            "refs": [
+              {
+                "url": "/pt/m7/licao-m7-f02/",
+                "card": 11,
+                "l": "1-0"
+              },
+              {
+                "url": "/pt/m7/licao-m7-f02/",
+                "card": 11,
+                "l": "1-1"
+              },
+              {
+                "url": "/pt/m7/licao-m7-f02/",
+                "card": 11,
+                "l": "1-2"
+              },
+              {
+                "url": "/pt/m7/licao-m7-f02/",
+                "card": 11,
+                "l": "1-3"
+              },
+              {
+                "url": "/pt/m7/licao-m7-f02/",
+                "card": 11,
+                "l": "1-4"
+              }
+            ]
+          }
+        ]
       },
       "resources": [],
       "warmup": [
@@ -1479,10 +2544,116 @@
       "source": {
         "title": "Caeiro: o rio e a medida do olhar",
         "author": "Alberto Caeiro",
-        "excerpt": "O Tejo é mais belo que o rio que corre pela minha aldeia, Mas o Tejo não é mais belo que o rio que corre pela minha aldeia Porque o Tejo não é o rio que corre pela minha aldeia. O Tejo tem grandes navios E navega nele ainda, Para aqueles que veem em tudo o que lá não está, A memória das naus .\n\nO Tejo desce de Espanha E o Tejo entra no mar em Portugal. Toda a gente sabe isso. Mas poucos sabem qual é o rio da minha aldeia E para onde ele vai E donde ele vem. E por isso, porque pertence a menos gente, É mais livre e maior o rio da minha aldeia.",
-        "context": "Abre a leitura de apoio, lê o recorte indicado e identifica duas marcas relevantes antes de responder. O texto de origem mantém-se na ficha; esta sessão organiza o treino a partir dele.",
+        "context": "Abre a leitura de apoio, lê o recorte indicado e identifica duas marcas relevantes antes de responder. O texto de origem está na lição; esta sessão organiza o treino a partir dele.",
         "url": "/pt/m7/licao-m7-f35/",
-        "note": "Recorte de leitura já utilizado no módulo. Consulta a ficha para o texto, a localização e as fontes completas."
+        "note": "Recorte de leitura já utilizado no módulo. Abre a lição para o texto, a localização e as fontes completas.",
+        "passages": [
+          {
+            "head": "Alberto Caeiro, _O Guardador de Rebanhos_, XX",
+            "form": "verso",
+            "stanzas": [
+              [
+                "O Tejo é mais belo que o rio que corre pela minha aldeia,",
+                "Mas o Tejo não é mais belo que o rio que corre pela minha aldeia",
+                "Porque o Tejo não é o rio que corre pela minha aldeia."
+              ],
+              [
+                "O Tejo tem grandes navios",
+                "E navega nele ainda,",
+                "Para aqueles que veem em tudo o que lá não está,",
+                "A memória das {naus|os navios antigos das viagens marítimas}."
+              ],
+              [
+                "O Tejo desce de Espanha",
+                "E o Tejo entra no mar em Portugal.",
+                "Toda a gente sabe isso.",
+                "Mas poucos sabem qual é o rio da minha aldeia",
+                "E para onde ele vai",
+                "E donde ele vem.",
+                "E por isso, porque pertence a menos gente,",
+                "É mais livre e maior o rio da minha aldeia."
+              ]
+            ],
+            "credit": "Alberto Caeiro, _O Guardador de Rebanhos_, XX (1914; _Athena_, 1925), Arquivo Pessoa, grafia atualizada.",
+            "refs": [
+              {
+                "url": "/pt/m7/licao-m7-f35/",
+                "card": 2,
+                "l": "0-0"
+              },
+              {
+                "url": "/pt/m7/licao-m7-f35/",
+                "card": 2,
+                "l": "0-1"
+              },
+              {
+                "url": "/pt/m7/licao-m7-f35/",
+                "card": 2,
+                "l": "0-2"
+              },
+              {
+                "url": "/pt/m7/licao-m7-f35/",
+                "card": 2,
+                "l": "0-4"
+              },
+              {
+                "url": "/pt/m7/licao-m7-f35/",
+                "card": 2,
+                "l": "0-5"
+              },
+              {
+                "url": "/pt/m7/licao-m7-f35/",
+                "card": 2,
+                "l": "0-6"
+              },
+              {
+                "url": "/pt/m7/licao-m7-f35/",
+                "card": 2,
+                "l": "0-7"
+              },
+              {
+                "url": "/pt/m7/licao-m7-f35/",
+                "card": 8,
+                "l": "0-9"
+              },
+              {
+                "url": "/pt/m7/licao-m7-f35/",
+                "card": 8,
+                "l": "0-10"
+              },
+              {
+                "url": "/pt/m7/licao-m7-f35/",
+                "card": 8,
+                "l": "0-11"
+              },
+              {
+                "url": "/pt/m7/licao-m7-f35/",
+                "card": 8,
+                "l": "0-12"
+              },
+              {
+                "url": "/pt/m7/licao-m7-f35/",
+                "card": 8,
+                "l": "0-13"
+              },
+              {
+                "url": "/pt/m7/licao-m7-f35/",
+                "card": 8,
+                "l": "0-14"
+              },
+              {
+                "url": "/pt/m7/licao-m7-f35/",
+                "card": 8,
+                "l": "0-15"
+              },
+              {
+                "url": "/pt/m7/licao-m7-f35/",
+                "card": 8,
+                "l": "0-16"
+              }
+            ]
+          }
+        ]
       },
       "resources": [],
       "warmup": [
@@ -1596,10 +2767,98 @@
       "source": {
         "title": "Reis: a disciplina do instante",
         "author": "Ricardo Reis",
-        "excerpt": "As rosas amo dos jardins de Adónis , Essas volucres amo, Lídia, rosas, Que em o dia em que nascem, Em esse dia morrem. A luz para elas é eterna, porque Nascem nascido já o Sol, e acabam Antes que Apolo deixe O seu curso visível. Assim façamos nossa vida um dia, Inscientes , Lídia, voluntariamente Que há noite antes e após O pouco que duramos. Vocabulário: Adónis , figura da mitologia grega; volucres , passageiras, que duram pouco; Apolo , aqui, o Sol; inscientes , que não sabem Ricardo Reis (11-7-1914) · _Odes de Ricardo Reis_, Ática, 1946 · 1.ª publ. _Athena_, n.º 1, Lisboa, outubro de 1924 · Arquivo Pessoa",
-        "context": "Abre a leitura de apoio, lê o recorte indicado e identifica duas marcas relevantes antes de responder. O texto de origem mantém-se na ficha; esta sessão organiza o treino a partir dele.",
+        "context": "Abre a leitura de apoio, lê o recorte indicado e identifica duas marcas relevantes antes de responder. O texto de origem está na lição; esta sessão organiza o treino a partir dele.",
         "url": "/pt/m7/licao-m7-f23/",
-        "note": "Recorte de leitura já utilizado no módulo. Consulta a ficha para o texto, a localização e as fontes completas."
+        "note": "Recorte de leitura já utilizado no módulo. Abre a lição para o texto, a localização e as fontes completas.",
+        "passages": [
+          {
+            "head": "Ricardo Reis, «As rosas amo dos jardins de Adónis»",
+            "form": "verso",
+            "stanzas": [
+              [
+                "As rosas amo dos jardins de {Adónis|figura da mitologia grega},",
+                "Essas {volucres|passageiras, que duram pouco} amo, Lídia, rosas,",
+                "Que em o dia em que nascem,",
+                "Em esse dia morrem."
+              ],
+              [
+                "A luz para elas é eterna, porque",
+                "Nascem nascido já o Sol, e acabam",
+                "Antes que {Apolo|aqui, o Sol} deixe",
+                "O seu curso visível."
+              ],
+              [
+                "Assim façamos nossa vida um dia,",
+                "{Inscientes|que não sabem}, Lídia, voluntariamente",
+                "Que há noite antes e após",
+                "O pouco que duramos."
+              ]
+            ],
+            "credit": "Ricardo Reis (11-7-1914); 1.ª publicação na _Athena_, n.º 1, Lisboa, outubro de 1924; _Odes de Ricardo Reis_, Ática, 1946; Arquivo Pessoa.",
+            "refs": [
+              {
+                "url": "/pt/m7/licao-m7-f23/",
+                "card": 4,
+                "l": "0-0"
+              },
+              {
+                "url": "/pt/m7/licao-m7-f23/",
+                "card": 4,
+                "l": "0-1"
+              },
+              {
+                "url": "/pt/m7/licao-m7-f23/",
+                "card": 4,
+                "l": "0-2"
+              },
+              {
+                "url": "/pt/m7/licao-m7-f23/",
+                "card": 4,
+                "l": "0-3"
+              },
+              {
+                "url": "/pt/m7/licao-m7-f23/",
+                "card": 4,
+                "l": "0-5"
+              },
+              {
+                "url": "/pt/m7/licao-m7-f23/",
+                "card": 4,
+                "l": "0-6"
+              },
+              {
+                "url": "/pt/m7/licao-m7-f23/",
+                "card": 4,
+                "l": "0-7"
+              },
+              {
+                "url": "/pt/m7/licao-m7-f23/",
+                "card": 4,
+                "l": "0-8"
+              },
+              {
+                "url": "/pt/m7/licao-m7-f23/",
+                "card": 4,
+                "l": "0-10"
+              },
+              {
+                "url": "/pt/m7/licao-m7-f23/",
+                "card": 4,
+                "l": "0-11"
+              },
+              {
+                "url": "/pt/m7/licao-m7-f23/",
+                "card": 4,
+                "l": "0-12"
+              },
+              {
+                "url": "/pt/m7/licao-m7-f23/",
+                "card": 4,
+                "l": "0-13"
+              }
+            ]
+          }
+        ]
       },
       "resources": [],
       "warmup": [
@@ -1714,10 +2973,107 @@
       "source": {
         "title": "Campos: desejo e desencontro",
         "author": "Álvaro de Campos",
-        "excerpt": "Não sou nada. Nunca serei nada. Não posso querer ser nada. À parte isso , tenho em mim todos os sonhos do mundo. Vocabulário: à parte isso , fora isso, tirando isso Álvaro de Campos, «Tabacaria» (1928), vv. 1 a 4, Arquivo Pessoa.\n\n(Come chocolates, pequena; Come chocolates! Olha que não há mais metafísica no mundo senão chocolates. Olha que as religiões todas não ensinam mais que a confeitaria . Come, pequena suja, come! Pudesse eu comer chocolates com a mesma verdade com que comes! Mas eu penso e, ao tirar o papel de prata, que é de folhas de estanho , Deito tudo para o chão, como tenho deitado a vida.) Vocabulário: metafísica , a reflexão sobre o que as coisas são, para lá do que se vê; confeitaria , a arte de fazer doces; folhas de estanho , o metal de que é feito o «papel de prata» Álvaro de Campos, «Tabacaria» (1928), Arquivo Pessoa; os parênteses são do poema.",
-        "context": "Abre a leitura de apoio, lê o recorte indicado e identifica duas marcas relevantes antes de responder. O texto de origem mantém-se na ficha; esta sessão organiza o treino a partir dele.",
+        "context": "Abre a leitura de apoio, lê o recorte indicado e identifica duas marcas relevantes antes de responder. O texto de origem está na lição; esta sessão organiza o treino a partir dele.",
         "url": "/pt/m7/licao-m7-f36/",
-        "note": "Recorte de leitura já utilizado no módulo. Consulta a ficha para o texto, a localização e as fontes completas."
+        "note": "Recorte de leitura já utilizado no módulo. Abre a lição para o texto, a localização e as fontes completas.",
+        "passages": [
+          {
+            "label": "A",
+            "head": "Álvaro de Campos, «Tabacaria», início",
+            "form": "verso",
+            "stanzas": [
+              [
+                "Não sou nada.",
+                "Nunca serei nada.",
+                "Não posso querer ser nada.",
+                "{À parte isso|fora isso, tirando isso}, tenho em mim todos os sonhos do mundo."
+              ]
+            ],
+            "credit": "Álvaro de Campos, «Tabacaria» (1928), vv. 1 a 4, Arquivo Pessoa.",
+            "refs": [
+              {
+                "url": "/pt/m7/licao-m7-f36/",
+                "card": 2,
+                "l": "0-0"
+              },
+              {
+                "url": "/pt/m7/licao-m7-f36/",
+                "card": 2,
+                "l": "0-1"
+              },
+              {
+                "url": "/pt/m7/licao-m7-f36/",
+                "card": 2,
+                "l": "0-2"
+              },
+              {
+                "url": "/pt/m7/licao-m7-f36/",
+                "card": 2,
+                "l": "0-3"
+              }
+            ]
+          },
+          {
+            "label": "B",
+            "head": "Álvaro de Campos, «Tabacaria», a pequena dos chocolates",
+            "form": "verso",
+            "stanzas": [
+              [
+                "(Come chocolates, pequena;",
+                "Come chocolates!",
+                "Olha que não há mais {metafísica|a reflexão sobre o que as coisas são, para lá do que se vê} no mundo senão chocolates.",
+                "Olha que as religiões todas não ensinam mais que a {confeitaria|a arte de fazer doces}.",
+                "Come, pequena suja, come!",
+                "Pudesse eu comer chocolates com a mesma verdade com que comes!",
+                "Mas eu penso e, ao tirar o papel de prata, que é de {folhas de estanho|o metal de que é feito o «papel de prata»},",
+                "Deito tudo para o chão, como tenho deitado a vida.)"
+              ]
+            ],
+            "credit": "Álvaro de Campos, «Tabacaria» (1928), Arquivo Pessoa; os parênteses são do poema.",
+            "refs": [
+              {
+                "url": "/pt/m7/licao-m7-f36/",
+                "card": 7,
+                "l": "1-0"
+              },
+              {
+                "url": "/pt/m7/licao-m7-f36/",
+                "card": 7,
+                "l": "1-1"
+              },
+              {
+                "url": "/pt/m7/licao-m7-f36/",
+                "card": 7,
+                "l": "1-2"
+              },
+              {
+                "url": "/pt/m7/licao-m7-f36/",
+                "card": 7,
+                "l": "1-3"
+              },
+              {
+                "url": "/pt/m7/licao-m7-f36/",
+                "card": 7,
+                "l": "1-4"
+              },
+              {
+                "url": "/pt/m7/licao-m7-f36/",
+                "card": 7,
+                "l": "1-5"
+              },
+              {
+                "url": "/pt/m7/licao-m7-f36/",
+                "card": 7,
+                "l": "1-6"
+              },
+              {
+                "url": "/pt/m7/licao-m7-f36/",
+                "card": 7,
+                "l": "1-7"
+              }
+            ]
+          }
+        ]
       },
       "resources": [],
       "warmup": [
@@ -1830,10 +3186,185 @@
       "source": {
         "title": "Mensagem: mito, história e apelo",
         "author": "Fernando Pessoa",
-        "excerpt": "Deus quer, o homem sonha, a obra nasce. Deus quis que a terra fosse toda uma, Que o mar unisse, já não separasse. Sagrou-te , e foste desvendando a espuma. E a orla branca foi de ilha em continente, Clareou, correndo, até ao fim do mundo, E viu-se a terra inteira, de repente, Surgir, redonda, do azul profundo. Quem te sagrou criou-te português. Do mar e nós em ti nos deu sinal. Cumpriu-se o Mar, e o Império se desfez. Senhor, falta cumprir-se Portugal! Vocabulário: sagrou-te , consagrou-te; orla , margem, espuma na costa _Mensagem_, II. «Mar Português», I · Arquivo Pessoa\n\nÓ mar salgado, quanto do teu sal São lágrimas de Portugal! Por te cruzarmos, quantas mães choraram, Quantos filhos em vão rezaram! Quantas noivas ficaram por casar Para que fosses nosso, ó mar! Valeu a pena? Tudo vale a pena Se a alma não é pequena. Quem quer passar além do Bojador Tem que passar além da dor. Deus ao mar o perigo e o abismo deu, Mas nele é que espelhou o céu. Vocabulário: Bojador , o cabo que durante anos ninguém passou _Mensagem_, II. «Mar Português», X · Arquivo Pessoa",
-        "context": "Abre a leitura de apoio, lê o recorte indicado e identifica duas marcas relevantes antes de responder. O texto de origem mantém-se na ficha; esta sessão organiza o treino a partir dele.",
+        "context": "Abre a leitura de apoio, lê o recorte indicado e identifica duas marcas relevantes antes de responder. O texto de origem está na lição; esta sessão organiza o treino a partir dele.",
         "url": "/pt/m7/licao-m7-f08/",
-        "note": "Recorte de leitura já utilizado no módulo. Consulta a ficha para o texto, a localização e as fontes completas."
+        "note": "Recorte de leitura já utilizado no módulo. Abre a lição para o texto, a localização e as fontes completas.",
+        "passages": [
+          {
+            "label": "A",
+            "head": "Fernando Pessoa, _Mensagem_, «O Infante»",
+            "form": "verso",
+            "stanzas": [
+              [
+                "Deus quer, o homem sonha, a obra nasce.",
+                "Deus quis que a terra fosse toda uma,",
+                "Que o mar unisse, já não separasse.",
+                "{Sagrou-te|consagrou-te}, e foste desvendando a espuma."
+              ],
+              [
+                "E a {orla|margem, espuma na costa} branca foi de ilha em continente,",
+                "Clareou, correndo, até ao fim do mundo,",
+                "E viu-se a terra inteira, de repente,",
+                "Surgir, redonda, do azul profundo."
+              ],
+              [
+                "Quem te sagrou criou-te português.",
+                "Do mar e nós em ti nos deu sinal.",
+                "Cumpriu-se o Mar, e o Império se desfez.",
+                "Senhor, falta cumprir-se Portugal!"
+              ]
+            ],
+            "credit": "_Mensagem_, II. «Mar Português», I; Arquivo Pessoa.",
+            "refs": [
+              {
+                "url": "/pt/m7/licao-m7-f08/",
+                "card": 3,
+                "l": "0-0"
+              },
+              {
+                "url": "/pt/m7/licao-m7-f08/",
+                "card": 3,
+                "l": "0-1"
+              },
+              {
+                "url": "/pt/m7/licao-m7-f08/",
+                "card": 3,
+                "l": "0-2"
+              },
+              {
+                "url": "/pt/m7/licao-m7-f08/",
+                "card": 3,
+                "l": "0-3"
+              },
+              {
+                "url": "/pt/m7/licao-m7-f08/",
+                "card": 3,
+                "l": "0-5"
+              },
+              {
+                "url": "/pt/m7/licao-m7-f08/",
+                "card": 3,
+                "l": "0-6"
+              },
+              {
+                "url": "/pt/m7/licao-m7-f08/",
+                "card": 3,
+                "l": "0-7"
+              },
+              {
+                "url": "/pt/m7/licao-m7-f08/",
+                "card": 3,
+                "l": "0-8"
+              },
+              {
+                "url": "/pt/m7/licao-m7-f08/",
+                "card": 3,
+                "l": "0-10"
+              },
+              {
+                "url": "/pt/m7/licao-m7-f08/",
+                "card": 3,
+                "l": "0-11"
+              },
+              {
+                "url": "/pt/m7/licao-m7-f08/",
+                "card": 3,
+                "l": "0-12"
+              },
+              {
+                "url": "/pt/m7/licao-m7-f08/",
+                "card": 3,
+                "l": "0-13"
+              }
+            ]
+          },
+          {
+            "label": "B",
+            "head": "Fernando Pessoa, _Mensagem_, «Mar Português»",
+            "form": "verso",
+            "stanzas": [
+              [
+                "Ó mar salgado, quanto do teu sal",
+                "São lágrimas de Portugal!",
+                "Por te cruzarmos, quantas mães choraram,",
+                "Quantos filhos em vão rezaram!",
+                "Quantas noivas ficaram por casar",
+                "Para que fosses nosso, ó mar!"
+              ],
+              [
+                "Valeu a pena? Tudo vale a pena",
+                "Se a alma não é pequena.",
+                "Quem quer passar além do {Bojador|o cabo que durante anos ninguém passou}",
+                "Tem que passar além da dor.",
+                "Deus ao mar o perigo e o abismo deu,",
+                "Mas nele é que espelhou o céu."
+              ]
+            ],
+            "credit": "_Mensagem_, II. «Mar Português», X; Arquivo Pessoa.",
+            "refs": [
+              {
+                "url": "/pt/m7/licao-m7-f08/",
+                "card": 9,
+                "l": "1-0"
+              },
+              {
+                "url": "/pt/m7/licao-m7-f08/",
+                "card": 9,
+                "l": "1-1"
+              },
+              {
+                "url": "/pt/m7/licao-m7-f08/",
+                "card": 9,
+                "l": "1-2"
+              },
+              {
+                "url": "/pt/m7/licao-m7-f08/",
+                "card": 9,
+                "l": "1-3"
+              },
+              {
+                "url": "/pt/m7/licao-m7-f08/",
+                "card": 9,
+                "l": "1-4"
+              },
+              {
+                "url": "/pt/m7/licao-m7-f08/",
+                "card": 9,
+                "l": "1-5"
+              },
+              {
+                "url": "/pt/m7/licao-m7-f08/",
+                "card": 9,
+                "l": "1-7"
+              },
+              {
+                "url": "/pt/m7/licao-m7-f08/",
+                "card": 9,
+                "l": "1-8"
+              },
+              {
+                "url": "/pt/m7/licao-m7-f08/",
+                "card": 9,
+                "l": "1-9"
+              },
+              {
+                "url": "/pt/m7/licao-m7-f08/",
+                "card": 9,
+                "l": "1-10"
+              },
+              {
+                "url": "/pt/m7/licao-m7-f08/",
+                "card": 9,
+                "l": "1-11"
+              },
+              {
+                "url": "/pt/m7/licao-m7-f08/",
+                "card": 9,
+                "l": "1-12"
+              }
+            ]
+          }
+        ]
       },
       "resources": [],
       "warmup": [
@@ -1949,9 +3480,9 @@
         "title": "Poesia contemporânea: três modos de dizer",
         "author": "Leitura e atividades do módulo M8",
         "excerpt": "",
-        "context": "Abre a leitura de apoio, lê o recorte indicado e identifica duas marcas relevantes antes de responder. O texto de origem mantém-se na ficha; esta sessão organiza o treino a partir dele.",
+        "context": "Abre a leitura de apoio, lê o recorte indicado e identifica duas marcas relevantes antes de responder. O texto de origem está na lição; esta sessão organiza o treino a partir dele.",
         "url": "/pt/m8/licao-m8-f01/",
-        "note": "Materiais existentes reciclados; os recortes e as fontes estão identificados na ficha de apoio."
+        "note": "Materiais existentes reciclados; os recortes e as fontes estão identificados na leitura de apoio."
       },
       "resources": [
         {
@@ -2080,9 +3611,9 @@
         "title": "Conto: o que o texto deixa por dizer",
         "author": "Leitura e atividades do módulo M8",
         "excerpt": "",
-        "context": "Abre a leitura de apoio, lê o recorte indicado e identifica duas marcas relevantes antes de responder. O texto de origem mantém-se na ficha; esta sessão organiza o treino a partir dele.",
+        "context": "Abre a leitura de apoio, lê o recorte indicado e identifica duas marcas relevantes antes de responder. O texto de origem está na lição; esta sessão organiza o treino a partir dele.",
         "url": "/pt/m8/licao-m8-f08/",
-        "note": "Materiais existentes reciclados; os recortes e as fontes estão identificados na ficha de apoio."
+        "note": "Materiais existentes reciclados; os recortes e as fontes estão identificados na leitura de apoio."
       },
       "resources": [],
       "warmup": [
@@ -2209,9 +3740,9 @@
         "title": "Saramago: quem conta e quem faz",
         "author": "Leitura e atividades do módulo M9",
         "excerpt": "",
-        "context": "Abre a leitura de apoio, lê o recorte indicado e identifica duas marcas relevantes antes de responder. O texto de origem mantém-se na ficha; esta sessão organiza o treino a partir dele.",
+        "context": "Abre a leitura de apoio, lê o recorte indicado e identifica duas marcas relevantes antes de responder. O texto de origem está na lição; esta sessão organiza o treino a partir dele.",
         "url": "/pt/m9/licao-m9-f01/",
-        "note": "Materiais existentes reciclados; os recortes e as fontes estão identificados na ficha de apoio."
+        "note": "Materiais existentes reciclados; os recortes e as fontes estão identificados na leitura de apoio."
       },
       "resources": [],
       "warmup": [
@@ -3022,7 +4553,7 @@
           "options": [
             "Usei palavras difíceis?",
             "Respondi ao que foi pedido?",
-            "Preenchi toda a folha?"
+            "Escrevi o mais possível?"
           ],
           "answer": 1,
           "feedback": "A revisão começa pela adequação ao pedido e pelo conteúdo. Uma frase correta não compensa uma resposta a outra pergunta."
@@ -3094,7 +4625,7 @@
           "options": [
             "Usei palavras difíceis?",
             "Respondi ao que foi pedido?",
-            "Preenchi toda a folha?"
+            "Escrevi o mais possível?"
           ],
           "answer": 1,
           "feedback": "A revisão começa pela adequação ao pedido e pelo conteúdo. Uma frase correta não compensa uma resposta a outra pergunta."

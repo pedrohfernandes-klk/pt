@@ -1,5 +1,5 @@
 {
- "base_commit": "cce18409181164b0d434e9999444f6c8d785ecfe",
+ "base_commit": "40bb62639ea449950ecd3572c205453e753b053a",
  "_nota": "28/10/2026: a Sala de aula em tempo real sai das páginas publicadas (decisão do docente de 17/10/2026; scripts/desligar_sala.py). Trocas literais pela ordem em que se aplicam; desfazem-se da última para a primeira, antes de todos os outros manifestos. Só entram aqui as páginas cujo conteúdo os testes congelam (task-route-lesson-content-before.json, module-layout-before.json, m1-grammar-pilot e apoios-tabelas); «paginas» lista todas as páginas onde a Sala existia e onde agora corre a limpeza. base_sha256_lf e after_sha256_lf registam o dia do corte e não se voltam a verificar: o script, corrido outra vez, só confirma que estas trocas se desfazem e refazem na página atual.",
  "paginas": {
   "licao": [

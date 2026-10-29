@@ -153,9 +153,20 @@
     if (plain(v)) return '<dl>' + Object.keys(v).map(function (k) { return '<dt>' + escapeHTML(k) + '</dt><dd>' + render(v[k]) + '</dd>'; }).join('') + '</dl>';
     return '<p class="text">' + escapeHTML(v) + '</p>';
   }
+  // Textos compostos (27/10/2026): versos e parágrafos em texto simples, notas e crédito no fim.
+  function readingText(source) {
+    if (!Array.isArray(source.passages)) return source.excerpt;
+    return source.passages.map(function (p) {
+      var notes = [];
+      function plainText(t) { return String(t || '').replace(/\{([^|{}]+)\|([^{}]+)\}/g, function (m, a, b) { notes.push(a + ': ' + b); return a; }).replace(/_([^_]+)_/g, '$1'); }
+      var body = p.form === 'verso' ? (p.stanzas || []).map(function (st) { return st.map(plainText).join('\n'); }).join('\n\n')
+        : (p.paragraphs || []).map(function (q) { return (q.n ? '[' + q.n + '] ' : '') + plainText(q.text); }).join('\n\n');
+      return [(p.label ? 'Texto ' + p.label + '. ' : '') + plainText(p.head), body, notes.length ? 'Vocabulário: ' + notes.join('; ') + '.' : '', plainText(p.credit), p.note || ''].filter(Boolean).join('\n\n');
+    }).join('\n\n');
+  }
   function studyParts(p) {
     var s=p.session, w=s.writing||{}, c=s.correction||{}, source=s.source||{};
-    var reading={'Título':source.title,'Autor ou origem':source.author,'Contexto':source.context,'Leitura':source.excerpt,'Referência':source.url,'Nota':source.note};
+    var reading={'Título':source.title,'Autor ou origem':source.author,'Contexto':source.context,'Leitura':readingText(source),'Referência':source.url,'Nota':source.note};
     var writing={'Tarefa':w.prompt,'Tempo de escrita (minutos)':w.minutes,'Extensão':w.target,'Passos':w.instructions,'Critérios':w.criteria};
     var correction={'Tipo de apoio':c.kind,'Proposta':c.model,'Passos de revisão':Array.isArray(c.steps)?c.steps.map(function(x){return x.label+': '+x.detail;}):[],'O que evitar':c.pitfalls};
     var questions=(Array.isArray(s.warmup)?s.warmup:[]).concat(c.check?[c.check]:[]);

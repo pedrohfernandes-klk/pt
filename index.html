@@ -195,7 +195,7 @@ if(Array.isArray(a)&&Array.isArray(b)){var vis={},r=[];a.concat(b).forEach(funct
 if(typeof a==="number"&&typeof b==="number")return Math.max(a,b);if(a===null||a===undefined||a==="")return b;return b===null||b===undefined||b===""?a:b}
 S.querySelector("[data-pf-repor]").addEventListener("change",function(ev){var f=ev.target.files&&ev.target.files[0];if(!f)return;var r=new FileReader();
 r.onload=function(){try{var d=JSON.parse(String(r.result));if(!d||d.formato!=="epi-progresso"||!d.registos)throw new Error("formato");var n=0,novos=0;
-Object.keys(d.registos).forEach(function(k){var v=d.registos[k],atual=localStorage.getItem(k);if(atual===null){localStorage.setItem(k,v);novos++;n++;return}
+Object.keys(d.registos).forEach(function(k){if(/^(epi-sala|painel-sala-)/.test(k))return;var v=d.registos[k],atual=localStorage.getItem(k);if(atual===null){localStorage.setItem(k,v);novos++;n++;return}
 try{var A=JSON.parse(atual),B=JSON.parse(v);localStorage.setItem(k,JSON.stringify(fundir(A,B)))}catch(x){if(!atual)localStorage.setItem(k,v)}n++});
 contar();diz("Reposto: "+n+" registos ("+novos+" novos). A página vai recarregar.","ok");setTimeout(function(){location.reload()},1400)}
 catch(x){diz("Este ficheiro não é um progresso guardado aqui.","mal")}};r.readAsText(f);ev.target.value=""});
