@@ -1,0 +1,145 @@
+/* «Oficina da palavra» · base comum da área do exame (27/10/2026): laboratório e sessões.
+   Duas famílias livres (SIL OFL 1.1), servidas pelo sítio: Fraunces (leitura e títulos) e IBM Plex Sans
+   (orientação e ferramentas). Tokens com prefixo --of-, em claro e escuro. O amarelo só serve de fundo. */
+@font-face{font-family:"Fraunces Oficina";src:url("fontes/fraunces-latin-normal.woff2") format("woff2");font-weight:100 900;font-style:normal;font-display:swap}
+@font-face{font-family:"Fraunces Oficina";src:url("fontes/fraunces-latin-italic.woff2") format("woff2");font-weight:100 900;font-style:italic;font-display:swap}
+@font-face{font-family:"Plex Oficina";src:url("fontes/ibm-plex-sans-latin-normal.woff2") format("woff2");font-weight:100 700;font-style:normal;font-display:swap}
+
+/* ---------- tokens ---------- */
+body.oficina{
+ --of-papel:#F3F0E7;--of-cartao:#FBF9F3;--of-tinta:#24231F;--of-suave:#5E5B52;
+ --of-linha:#D8D2C2;--of-borda:#7A7466;--of-pauta:#C9D3DA;
+ --of-oxido:#A83D32;--of-azul:#294B63;--of-amarelo:#E4C66A;--of-verde:#2F6B4F;
+ --of-realce:#E9E4D6;--of-sobre-acento:#F3F0E7;
+ --of-serif:"Fraunces Oficina",Georgia,"Times New Roman",serif;
+ --of-sans:"Plex Oficina","IBM Plex Sans",Arial,Helvetica,sans-serif;
+ --of-acento:var(--of-azul);
+ background:var(--of-papel);color:var(--of-tinta);font:400 1rem/1.55 var(--of-sans);
+ -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility
+}
+:root[data-theme="dark"] body.oficina{
+ --of-papel:#1C1B18;--of-cartao:#25241F;--of-tinta:#EDE9DE;--of-suave:#B3AD9F;
+ --of-linha:#3E3B34;--of-borda:#8F897B;--of-pauta:#36424B;
+ --of-oxido:#E58A78;--of-azul:#9CC1DB;--of-amarelo:#E4C66A;--of-verde:#8FD1AE;
+ --of-realce:#2E2C26;--of-sobre-acento:#1C1B18
+}
+@media (prefers-color-scheme:dark){
+ :root:not([data-theme]) body.oficina{
+  --of-papel:#1C1B18;--of-cartao:#25241F;--of-tinta:#EDE9DE;--of-suave:#B3AD9F;
+  --of-linha:#3E3B34;--of-borda:#8F897B;--of-pauta:#36424B;
+  --of-oxido:#E58A78;--of-azul:#9CC1DB;--of-amarelo:#E4C66A;--of-verde:#8FD1AE;
+  --of-realce:#2E2C26;--of-sobre-acento:#1C1B18
+ }
+}
+.of-so-leitor{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap}
+body.oficina{--of-fase:var(--of-tinta);--of-amarelo-fundo:#F6EDC9;--of-azul-fundo:#E1E8EE;--of-verde-fundo:#DCEADF;--of-oxido-fundo:#F2DDD8}
+:root[data-theme="dark"] body.oficina{--of-amarelo-fundo:#3A3420;--of-azul-fundo:#1F2A33;--of-verde-fundo:#1F3329;--of-oxido-fundo:#3B2420}
+@media (prefers-color-scheme:dark){:root:not([data-theme]) body.oficina{--of-amarelo-fundo:#3A3420;--of-azul-fundo:#1F2A33;--of-verde-fundo:#1F3329;--of-oxido-fundo:#3B2420}}
+
+/* ---------- textos compostos (sessões; disponível para o laboratório) ---------- */
+.passagens{display:grid;gap:28px;margin:18px 0 8px}
+.passagem{position:relative;min-width:0;padding:16px 0 0 clamp(14px,4vw,40px);border-top:2px solid var(--of-tinta)}
+.pass-cab{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 14px;margin:0 0 14px}
+.pass-letra{display:inline-block;padding:2px 9px 1px;background:var(--of-azul);color:var(--of-papel);font:600 .72rem/1.5 var(--of-sans);letter-spacing:.14em;text-transform:uppercase}
+.pass-nome{margin:0;font:italic 500 1.12rem/1.35 var(--of-serif);letter-spacing:-.005em;text-wrap:balance}
+.pass-nome i{font-style:normal}
+.pass-verso{font:400 clamp(1.06rem,1.2vw + .8rem,1.2rem)/1.72 var(--of-serif);font-optical-sizing:auto;max-width:42em}
+.pass-verso .estrofe{margin:0 0 .9em}
+.pass-verso .vl{position:relative;display:block;padding-left:1.4em;text-indent:-1.4em}
+.vn{position:absolute;left:calc(-1 * clamp(14px,4vw,40px));width:clamp(10px,3vw,30px);text-indent:0;text-align:right;font:500 .7rem/2.4 var(--of-sans);font-variant-numeric:tabular-nums;color:var(--of-suave)}
+.pass-omissao{margin:0 0 .9em 1.4em;font:400 1rem/1.6 var(--of-serif);color:var(--of-suave)}
+.pass-prosa{font:400 clamp(1.02rem,1vw + .78rem,1.14rem)/1.72 var(--of-serif);font-optical-sizing:auto;max-width:40em}
+.pass-prosa .par{margin:0 0 .85em}
+.par-n{font:600 .74rem/1 var(--of-sans);font-variant-numeric:tabular-nums;color:var(--of-oxido);vertical-align:.12em}
+.pass-cena .fala-quem{font-family:var(--of-sans);font-weight:600;font-size:.82em;letter-spacing:.08em}
+.pass-cena .fala-como,.pass-cena .dida{font-style:italic;color:var(--of-suave)}
+.glosa{text-decoration:underline dotted var(--of-borda);text-decoration-thickness:1px;text-underline-offset:.22em}
+.glosa sup{font:600 .62em/0 var(--of-sans);color:var(--of-oxido);margin-left:1px}
+.notas{display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:4px 24px;margin:4px 0 12px;padding:10px 0 0 1.6em;border-top:1px solid var(--of-linha);font:400 .84rem/1.45 var(--of-sans);color:var(--of-tinta)}
+.notas li{padding-left:2px}.notas li::marker{font-weight:600;color:var(--of-oxido);font-variant-numeric:tabular-nums}
+.nota-t{font:italic 500 .95rem/1.3 var(--of-serif)}
+.pass-credito{margin:0;font:400 .78rem/1.5 var(--of-sans);color:var(--of-suave);max-width:70ch}
+.pass-credito i{font-family:var(--of-serif);font-size:1.06em}
+.pass-nota{margin:6px 0 0;font:400 .82rem/1.5 var(--of-sans);color:var(--of-suave);max-width:70ch}
+
+/* ---------- sessões do exame: os tokens antigos passam a ler a Oficina ---------- */
+:root body.oficina-exame{--paper:var(--of-papel);--ink:var(--of-tinta);--muted:var(--of-suave);--line:var(--of-linha);--accent:var(--of-oxido);--ochre:var(--of-amarelo);--green:var(--of-verde);--error:var(--of-oxido);background:var(--of-papel);color:var(--of-tinta);font:400 1rem/1.6 var(--of-sans)}
+body.oficina-exame[data-fase="aquecer"]{--of-fase:var(--of-amarelo)}
+body.oficina-exame[data-fase="ler"]{--of-fase:var(--of-azul)}
+body.oficina-exame[data-fase="escrever"]{--of-fase:var(--of-oxido)}
+body.oficina-exame[data-fase="corrigir"]{--of-fase:var(--of-verde)}
+body.oficina-exame[data-fase="fechar"]{--of-fase:var(--of-tinta)}
+.oficina-exame :focus-visible{outline-color:var(--of-azul)}
+.oficina-exame button:hover,.oficina-exame .button:hover{background:var(--of-realce)}
+.oficina-exame .primary{background:var(--of-tinta);color:var(--of-papel);border-color:var(--of-tinta)}
+.oficina-exame .primary:hover{background:var(--of-tinta);color:var(--of-papel);box-shadow:inset 0 -4px 0 var(--of-fase)}
+/* 29/10/2026: a ligação de salto lê os tokens em toda a área (sessões e laboratório), também no tema escuro. */
+body.oficina .skip{background:var(--of-cartao);color:var(--of-tinta);border:2px solid var(--of-tinta)}
+/* O botão principal do relógio fica escuro ao passar o rato ou ao tocar (as regras gerais de :hover davam-lhe fundo claro com letra clara). */
+body.oficina .relogio .relogio-principal:hover{background:var(--r-tinta);color:var(--of-papel);box-shadow:inset 0 -4px 0 var(--of-fase,var(--of-oxido))}
+.oficina-exame .wordmark{font-family:var(--of-sans);font-weight:700;letter-spacing:-.03em}
+.oficina-exame .wordmark small{font-family:var(--of-sans)}
+.oficina-exame :is(.hero h1,.session-heading h1,.dossier-heading h1,.coverage h1,.phase-title,.catalogue-group h2,.dossier-entry h2){font-family:var(--of-serif);font-optical-sizing:auto}
+.oficina-exame .hero{border-block-width:3px 1px}
+.oficina-exame .hero h1{font-style:italic;font-weight:600;letter-spacing:-.03em;line-height:.98}
+.oficina-exame .hero .lead,.oficina-exame .session-card p,.oficina-exame .session-heading>p:last-child,.oficina-exame .source .context,.oficina-exame .writing-task,.oficina-exame .model,.oficina-exame .source blockquote{font-family:var(--of-serif)}
+.oficina-exame .clock-art b{font-family:var(--of-serif);font-weight:600;font-style:italic}
+.oficina-exame .clock-art i{background:var(--of-oxido);box-shadow:24px 13px 0 var(--of-amarelo),48px 0 0 var(--of-azul)}
+.oficina-exame .eyebrow{font-family:var(--of-sans);letter-spacing:.14em}
+/* Catálogo: cada ano tem a sua cor (semelhança); o número da sessão lê-se em Plex. */
+.oficina-exame .catalogue-group{--grupo:var(--of-tinta)}
+/* 29/10/2026: a cor vem do ano (data-grupo), não da posição: com o filtro «11.º ano», o grupo continua óxido. */
+.oficina-exame .catalogue-group[data-grupo="0"]{--grupo:var(--of-azul)}
+.oficina-exame .catalogue-group[data-grupo="1"]{--grupo:var(--of-oxido)}
+.oficina-exame .catalogue-group[data-grupo="2"]{--grupo:var(--of-verde)}
+.oficina-exame .catalogue-group h2::before{content:"";display:inline-block;width:.62em;height:.62em;margin-right:.4em;background:var(--grupo);vertical-align:.04em}
+.oficina-exame .session-card{border-top:4px solid var(--grupo,var(--of-tinta))}
+.oficina-exame .session-card .number{color:var(--grupo,var(--of-oxido));font-family:var(--of-sans);font-variant-numeric:tabular-nums;letter-spacing:.06em}
+.oficina-exame .session-card h3{font:600 1.32rem/1.2 var(--of-serif);letter-spacing:-.01em}
+.oficina-exame .session-card .card-meta{font:400 .74rem/1.4 var(--of-sans)}
+/* Fases: número, nome e tempo; a fase atual tem a sua cor (aquecer, ler, escrever, corrigir, fechar). */
+.oficina-exame .phase-nav a{position:relative;padding:10px 6px 8px;border-top:4px solid var(--of-linha);font-family:var(--of-sans)}
+.oficina-exame .phase-nav a[data-fase="aquecer"]{--c:var(--of-amarelo)}
+.oficina-exame .phase-nav a[data-fase="ler"]{--c:var(--of-azul)}
+.oficina-exame .phase-nav a[data-fase="escrever"]{--c:var(--of-oxido)}
+.oficina-exame .phase-nav a[data-fase="corrigir"]{--c:var(--of-verde)}
+.oficina-exame .phase-nav a[data-fase="fechar"]{--c:var(--of-tinta)}
+.oficina-exame .phase-nav a:hover{border-top-color:var(--c)}
+.oficina-exame .phase-nav a[aria-current=step]{border-top-color:var(--c);border-top-width:7px;padding-top:7px;font-weight:700}
+.oficina-exame .fase-n{display:block;font:500 .68rem/1.3 var(--of-sans);font-variant-numeric:tabular-nums;color:var(--of-suave);letter-spacing:.08em}
+.oficina-exame .phase-title{font-size:clamp(1.6rem,3vw,2.1rem);font-weight:600;letter-spacing:-.015em}
+.oficina-exame .phase-title::before{content:"";display:block;width:2.2rem;height:5px;margin-bottom:12px;background:var(--of-fase)}
+.oficina-exame .session-tools{border-left-color:var(--of-linha)}
+.oficina-exame .session-relogio .relogio{margin-top:0}
+/* Leitura, perguntas, escrita e correção */
+.oficina-exame .source{border-block-color:var(--of-linha)}
+.oficina-exame .source>h3{font:600 .76rem/1.4 var(--of-sans);letter-spacing:.14em;text-transform:uppercase;color:var(--of-suave)}
+.oficina-exame .source cite,.oficina-exame .source .note{font:normal .78rem/1.5 var(--of-sans)}
+.oficina-exame .source-textos>cite{display:none}
+.oficina-exame .question h3{font:600 1.04rem/1.45 var(--of-sans)}
+.oficina-exame .choice{border-color:var(--of-borda);font-family:var(--of-sans)}
+.oficina-exame .choice.correct{border-color:var(--of-verde);box-shadow:inset 5px 0 0 var(--of-verde);background:var(--of-verde-fundo)}
+.oficina-exame .choice.incorrect{border-color:var(--of-oxido);box-shadow:inset 5px 0 0 var(--of-oxido);background:var(--of-oxido-fundo)}
+.oficina-exame .choice:disabled{opacity:1;color:var(--of-tinta)}
+.oficina-exame .feedback{padding:10px 14px;border-left:4px solid var(--of-fase);background:var(--of-realce)}
+.oficina-exame .feedback b{color:var(--of-tinta)}
+.oficina-exame .writing-task{font-size:clamp(1.12rem,1vw + .85rem,1.3rem);line-height:1.6;padding-left:16px;border-left:4px solid var(--of-oxido)}
+.oficina-exame .writing-target{font-family:var(--of-sans);color:var(--of-oxido);letter-spacing:.04em}
+.oficina-exame .callout{border-left-color:var(--of-amarelo);background:var(--of-amarelo-fundo);padding:10px 14px}
+.oficina-exame .model{border-block-color:var(--of-linha)}
+.oficina-exame textarea{background:var(--of-cartao);border-color:var(--of-borda);color:var(--of-tinta);font:400 1.02rem/1.65 var(--of-serif)}
+.oficina-exame .filters input,.oficina-exame .filters select{background:var(--of-cartao);border-color:var(--of-borda);color:var(--of-tinta)}
+.oficina-exame .photo img{background:var(--of-cartao)}
+.oficina-exame .notice{background:var(--of-papel);color:var(--of-tinta);box-shadow:4px 4px 0 var(--of-linha)}
+@media print{
+ /* 29/10/2026: no papel, sempre tinta preta sobre branco, mesmo quando o ecrã está no tema escuro (os navegadores não imprimem fundos). */
+ :root:is([data-theme],:not([data-theme])) body.oficina.oficina{--of-papel:#fff;--of-cartao:#fff;--of-tinta:#000;--of-suave:#333;--of-linha:#999;--of-borda:#555;--of-pauta:#bbb;--of-oxido:#000;--of-azul:#000;--of-verde:#000;--of-realce:#fff;--of-sobre-acento:#fff;background:#fff;color:#000}
+ #print-sheet .passagem{border-top:1.5pt solid #000;padding:8pt 0 0 22pt;break-inside:avoid-page}
+ #print-sheet .pass-letra{background:none;color:#000;border:1pt solid #000}
+ #print-sheet .pass-verso,#print-sheet .pass-prosa{font:11pt/1.55 Georgia,serif;max-width:none}
+ #print-sheet .vn{left:-22pt;width:16pt;font:8pt/2.2 Arial,sans-serif;color:#444}
+ #print-sheet .notas{font:9pt/1.4 Arial,sans-serif;border-top:.5pt solid #888}
+ #print-sheet .pass-credito,#print-sheet .pass-nota{font:8.5pt/1.4 Arial,sans-serif;color:#333}
+ #print-sheet .glosa{text-decoration:none}
+}
+@media (min-width:851px){.oficina-exame .session-layout{grid-template-columns:minmax(0,1fr) 250px}.oficina-exame.projected .session-layout{grid-template-columns:minmax(0,1fr) 230px}}
