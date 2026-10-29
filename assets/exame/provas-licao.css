@@ -1,0 +1,55 @@
+/* Provas em cartões (29/10/2026): o que as lições de exame/provas/ juntam a assets/pt-lessons/lesson.css.
+   O texto da prova com a numeração da prova (uma linha impressa por span.ln, número de 5 em 5, recuo de parágrafo),
+   as estrofes, as listas e as tabelas dos critérios, o item de escolha múltipla com (A) a (D) e a ligação para a imagem. */
+.jogo .ler .prova-l{font-family:var(--serif,Georgia,serif);margin:0 0 var(--d1,8px)}
+/* O número ocupa 2,6em × 0,72 ≈ 1,87em; a continuação de uma linha que dá a volta recua 2,9em, mais do que o início de
+   qualquer linha impressa: no telemóvel, vê-se onde acaba uma linha da prova e começa a seguinte. */
+.jogo .ler .prova-l .ln{display:block;padding-left:2.9em;text-indent:-2.9em}
+.jogo .ler .prova-l .ln.par{text-indent:-.9em}
+.jogo .ler .prova-l .n{display:inline-block;width:2.6em;text-indent:0;color:var(--suave);font:400 .72em Arial,Helvetica,sans-serif;text-align:right;padding-right:.7em}
+.jogo .ler .prova-l.estrofe{margin-bottom:.9em}
+.jogo .ler details.mais .prova-l{font-size:.95em}
+.jogo .ler ul.prova-lista{list-style:none;padding-left:1.2em}
+.jogo .ler ul.prova-lista li::before{content:"\2013\00a0";margin-left:-1em}
+.jogo .ler table.cl{table-layout:auto;width:auto;font-size:.8rem}
+.jogo .ler table.cl th,.jogo .ler table.cl td{padding:3px 5px;text-align:center;overflow-wrap:normal;word-break:normal}
+.jogo .ler table.cl td.sombra{background:color-mix(in srgb,var(--tinta,#000) 14%,transparent)}
+/* A tabela de 15 colunas do Grupo III cabe no cartão até 320 px: letra e células mais pequenas e o cabeçalho em duas linhas. */
+@media (max-width:480px){
+ .jogo .ler table.cl{font-size:.66rem}
+ .jogo .ler table.cl th,.jogo .ler table.cl td{padding:2px 2px;min-width:0}
+ .jogo .ler table.cl th{letter-spacing:0;text-transform:none}
+ .jogo .ler table.cl td,.jogo .ler table.cl tr:nth-child(2) th{width:1.5em}
+ .jogo .ler table.cl tr:first-child th:first-child{width:4.6em;white-space:normal}
+ .jogo .ler table.cl tr:first-child th[colspan]{white-space:normal}
+}
+@media (max-width:350px){
+ .jogo .ler table.cl{font-size:.58rem}
+ .jogo .ler table.cl th,.jogo .ler table.cl td{padding:1px 1px}
+ .jogo .ler table.cl tr:first-child th:first-child{width:4.2em}
+}
+/* O que separa as pontuações (leitura nossa da grelha), no cartão do caderno. */
+.jogo .ler p.niveis-t{margin-bottom:4px}
+.jogo .ler ul.niveis{margin:0 0 8px;padding-left:1.1em}
+.jogo .ler ul.niveis li{margin:0 0 4px}
+.jogo .ler p.niveis-cl{font-size:.92em}
+.jogo .ver-fig img.cor{filter:none}
+.jogo .ver-fig img.inteira{object-fit:contain}
+/* Nos cartões oficiais, as citações ficam como na prova (o motor põe as longas em itálico). */
+.jogo .cartao.oficial .cit{font-style:normal;font-family:inherit;font-size:inherit}
+.jogo .ops-item .op{text-align:left}
+.jogo .ops-item button.op{font-weight:400}
+.jogo .ops-item .op .tx{font-weight:400}
+.jogo .ops-item .letra{font-weight:700;margin-right:.2em}
+/* Grupo III: enquanto a imagem não estiver no sítio, a ligação para a página da prova onde ela está. */
+.jogo .ler .prova-imagem{margin:var(--d2,20px) 0;padding:12px 14px;border:2px solid var(--tinta)}
+.jogo .ler .prova-imagem a{font-weight:700}
+.jogo .ver-fig.ver-ligacao{cursor:auto}
+.jogo .ver-fig a.ver-pdf{display:block;padding:10px 12px;border:2px solid var(--tinta);font:700 .95rem/1.35 Arial,Helvetica,sans-serif;color:var(--tinta)}
+/* A 320 px, as etiquetas compridas dos cartões de ligar partem-se dentro do cartão em vez de o alargarem. */
+.jogo .pares .op .tx,.jogo .classes .op .tx,.jogo .soltos .op .tx{overflow-wrap:anywhere;min-width:0}
+@media print{
+ .jogo .ler table.grelha th,.jogo .ler table.cl th{color:#000;background:none;white-space:nowrap;word-break:normal;overflow-wrap:normal;hyphens:none;letter-spacing:0}
+ .jogo .ler table.grelha th[style]{width:auto!important}
+ .jogo .ler details.mais>summary{font-weight:700}
+}

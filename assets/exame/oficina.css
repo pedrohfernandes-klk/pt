@@ -143,3 +143,10 @@ body.oficina .relogio .relogio-principal:hover{background:var(--r-tinta);color:v
  #print-sheet .glosa{text-decoration:none}
 }
 @media (min-width:851px){.oficina-exame .session-layout{grid-template-columns:minmax(0,1fr) 250px}.oficina-exame.projected .session-layout{grid-template-columns:minmax(0,1fr) 230px}}
+/* 29/10/2026: a porta das Provas em cartões no catálogo das sessões (fora dos grupos e dos filtros). */
+.oficina-exame .provas-porta{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:10px 28px;margin:0 0 26px;padding:16px 18px;background:var(--of-cartao);border:1px solid var(--of-linha);border-left:6px solid var(--of-azul)}
+.oficina-exame .provas-porta>div{flex:1 1 28rem;min-width:0}
+.oficina-exame .provas-porta .eyebrow{margin:0 0 6px;color:var(--of-azul)}
+.oficina-exame .provas-porta h2{margin:0 0 6px;font:italic 600 1.4rem/1.15 var(--of-serif);letter-spacing:-.01em}
+.oficina-exame .provas-porta p{margin:0;max-width:70ch;font:400 .98rem/1.55 var(--of-serif)}
+.oficina-exame .provas-porta>a{font:700 .9rem/1.4 var(--of-sans);padding:8px 0}
