@@ -1,0 +1,21 @@
+{
+  "_nota": "Vídeos escolhidos pelo docente na curadoria de 28/10/2026 (ronda 1) e leituras da série «Um Poema por Semana» (RTP2, 2011, lista PL812D32D30E8B1432). Regra de 28/10: um vídeo só entra se tratar diretamente do texto, do autor ou do conceito do cartão e se o aluno perceber logo porque está ali; os que dependiam de uma ponte nossa saíram (ver docs/pedagogia/videos-contexto-20261028.md). Cada vídeo entra no fim de um cartão de leitura que já existe, no componente .yt de assets/pt-lessons/video-youtube.js: os índices dos cartões não mudam (cartoes e indice registam o baralho no momento da inserção). Aplicação: python3 scripts/videos_escolhidos_pt.py (idempotente).",
+  "versao": "20261028-2",
+  "videos": [
+    {
+      "id": "m3-f17-sa-de-miranda",
+      "pagina": "m3/licao-m3-f17/index.html",
+      "cartao": {
+        "titulo": "Medida velha, medida nova"
+      },
+      "yt": "ghNkyeanj3k",
+      "botao": "Ouvir: «O sol é grande, caem co'a calma as aves», de Sá de Miranda (2 min)",
+      "antes": "Sá de Miranda foi o primeiro a escrever sonetos em Portugal, antes de Camões.",
+      "caderno": "Ouve o soneto e conta as estrofes: quantas quadras, quantos tercetos? Que verso te soa a medida nova, e porquê?",
+      "credito": "Inês Jacques, série Um Poema por Semana (RTP2, 2011), canal RTP.",
+      "titulo": "«O sol é grande, caem co'a calma as aves», de Sá de Miranda (2 min)",
+      "cartoes": 21,
+      "indice": 2
+    }
+  ]
+}

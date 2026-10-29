@@ -28,8 +28,14 @@
    if(!compact&&node.id==="preparacao"){
     card("Preparar · leitura e modelo",[node]);
     questions.forEach(function(question,i){card("Preparar · pergunta "+(i+1),[question],"question");});
-   }else card(compact?(node.id==="apoios"?"Relembrar":node.id==="entregar"?"Verificar":label):label,[node],node.id==="apoios"?"support":node.id==="produzir"?"production":node.id==="entregar"?"delivery":"reading");
+   }else card(compact?(node.id==="aquecer"?"Aquecer":node.id==="apoios"?"Relembrar":node.id==="entregar"?"Verificar":label):label,[node],node.id==="aquecer"?"warmup":node.id==="apoios"?"support":node.id==="produzir"?"production":node.id==="entregar"?"delivery":"reading");
   });
+  // 28/10/2026: nas tarefas com aquecimento, o aquecimento é o primeiro cartão; o enunciado vem a seguir.
+  var warm=cards.findIndex(function(item){return item.kind==="warmup";});
+  if(compact&&warm>0){
+   cards.unshift(cards.splice(warm,1)[0]);
+   cards.forEach(function(item,i){item.el.id="task-card-"+(i+1);item.el.setAttribute("data-task-card",String(i));});
+  }
   if(quiz&&!compact)quiz.hidden=true; // Its original question nodes now have their own cards.
   page.replaceChildren();
   cards.forEach(function(item){page.appendChild(item.el);});
@@ -43,6 +49,10 @@
   var menu=element("button","c-ic","☰");menu.type="button";menu.setAttribute("data-c-menu","");
   menu.setAttribute("aria-label","Abrir o índice da aula");menu.setAttribute("aria-expanded","false");
   top.append(brand,number,bar,mode,menu);
+  // 27/10/2026: o relógio do aluno fica no enunciado; o tempo que falta acompanha os outros cartões.
+  // 28/10/2026: com aquecimento, o primeiro relógio é o do aquecimento; a barra de topo segue o da produção.
+  var clock=page.querySelector('[data-relogio]:not([data-chave$=":aquecimento"])')||page.querySelector("[data-relogio]");
+  if(clock&&clock.relogio){var mini=element("span","relogio-mini");mini.setAttribute("aria-hidden","true");clock.relogio.espelhar(mini);top.insertBefore(mini,menu);}
   var body=element("div","casca-corpo");body.tabIndex=-1;body.appendChild(page);
   if(status&&!compact){status.classList.add("task-reader-status");move(status,body);}
   var actions=element("footer","casca-acoes");actions.setAttribute("data-c-acoes","");

@@ -1,0 +1,18 @@
+{
+ "base_commit": "b66f483b6c5c61a05292705aec4ac65ca0443a19",
+ "_nota": "28/10/2026: no cartão «Liga cada ideia à maneira de viver», o par citava meio verso de Reis («façamos nossa vida um dia», sem o «Assim» e sem autor) antes de o aluno ler a ode; em português de hoje soava estranho. O par passa a dizer a ideia, como os outros três; o verso inteiro continua no cartão «Em paralelo» e na ode.",
+ "files": {
+  "m7/licao-m7-f23/index.html": {
+   "base_sha256_lf": "963ca3b03602234f16832f86120fb29eda92e748181e41f750e749555b59bdde",
+   "after_sha256_lf": "d325ca7482cdf41e66c203861d686811729c53df8e22358529ccee31e05716e9",
+   "edits": [
+    {
+     "location": "CARTOES[3].pares[2][0]: ideia em vez de meio verso de Reis",
+     "old": "[\"«façamos nossa vida um dia»\",\"Epicurismo\"]",
+     "new": "[\"Aproveitar o dia, porque a vida é breve\",\"Epicurismo\"]",
+     "occurrences": 1
+    }
+   ]
+  }
+ }
+}

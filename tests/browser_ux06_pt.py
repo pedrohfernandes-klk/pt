@@ -7,7 +7,8 @@ from browser_m1_and_inventory import QuietHandler,new_page,ROOT
 PLANS=json.loads((ROOT/'docs/pedagogia/percursos-unidades-20261020.json').read_text('utf-8'))
 OUT=ROOT.parents[1]/'outputs/design-pt'
 # 24/10/2026 (aulas claras do M1, como o M4 a 23/10): o percurso do M1 passa a lista simples de aulas, sem passaporte
-SEM_PASSAPORTE={1,4,7}
+# 27/10/2026 (passagem do GPT, tarefas por unidade): o M2 passa ao mesmo modelo, com duas aulas de tarefa.
+SEM_PASSAPORTE={1,2,4,7}
 
 def main():
  server=ThreadingHTTPServer(('127.0.0.1',0),partial(QuietHandler,directory=str(ROOT.parent)))
@@ -31,7 +32,7 @@ def main():
      assert page.locator('nav.migalhas').bounding_box()['height']<=64
      action=page.locator('[data-module-next]');assert action.is_visible()
      assert action.get_attribute('href').endswith('/licao-'+first+'/')
-     assert any(label in action.inner_text() for label in (('Começar:','Continuar:') if m in (1,4,7) else ('Começar:',)))
+     assert any(label in action.inner_text() for label in (('Começar:','Continuar:') if m in SEM_PASSAPORTE else ('Começar:',)))
      assert action.bounding_box()['y']<600,(m,width,action.bounding_box())
      assert not page.evaluate('document.documentElement.scrollWidth>innerWidth+2')
      # 23/10/2026 (decisão do docente, aulas claras): o M4 é o piloto do percurso como lista simples de aulas, sem passaporte, níveis nem pontos
@@ -81,7 +82,10 @@ def main():
    task=page.locator('[data-task-lesson="1"] > a')
    task.focus();task.press('Enter');page.wait_for_url('**/tarefas/m1-u1/')
    assert page.locator('[data-task-question]').count()==2
-   assert page.locator('[data-task-card]').count()==3
+   # 28/10/2026 (decisão do docente, PR #122): a tarefa do M1 passa ao formato com escolha, com um cartão de
+   # aquecimento antes do enunciado (aquecer, enunciado, relembrar, verificar).
+   assert page.locator('main[data-task-choice]').count()==1
+   assert page.locator('[data-task-card]').count()==4
    assert not page.locator('[data-task-optional-preparation]').evaluate('e=>e.open')
    assert not page.evaluate('localStorage.getItem("percurso-sintese-M1-u1")')
    print('PASS resume, navigable task lesson, no independent gate or automatic assessment',flush=True);ctx.close();browser.close()

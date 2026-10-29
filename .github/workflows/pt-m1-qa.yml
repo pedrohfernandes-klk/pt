@@ -59,6 +59,7 @@ jobs:
           python tests/browser_exame_cache.py
           python tests/browser_exame_alignment.py
           python tests/browser_jogabilidade.py
+          python tests/browser_tabelas_encomendas.py
           python tests/browser_ux06_pt.py
           python tests/browser_transversal_clareza.py
           python tests/browser_m5_adaptacao.py
@@ -71,11 +72,13 @@ jobs:
           python tests/browser_m8_caderno_campo.py
           python tests/browser_m8_palavras_escuta.py
           python tests/browser_m8_comparacao.py
+          python tests/browser_m8_apoios.py
           python tests/browser_m6_oracoes.py
           python tests/browser_m6_recursos.py
           python tests/browser_m6_forma.py
           python tests/browser_m7_pilot.py
           python tests/browser_m2_balance.py
           python tests/browser_revision_activities.py
+          python tests/browser_paineis_relampago.py
           python tests/browser_revision_activities.py --lessons 06,11
           python tests/browser_revision_activities.py --module m7 --lessons 14,15

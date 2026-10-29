@@ -58,6 +58,21 @@ def main():
                             assert set(captured['bank']) == set(unit['lessons']), (m, n, captured)
                             prefix = 'desafio-' if m == 4 else 'desafio-unidade-v2-'
                             assert captured['key'] == f'{prefix}M{m}-u{n}'
+                        # 28/10/2026 (revisão do PR #124): a âncora antiga #desafio-unidade-N (fim da M2-F09,
+                        # congelada) aponta para o arquivo escondido; fora do arquivo leva à aula de tarefa da
+                        # unidade, à vista e assinalada (ao carregar e ao mudar de âncora); no arquivo, ao desafio.
+                        for unit in plan['units']:
+                            n = unit['number']
+                            page.goto(f'{host}/m{m}/#desafio-unidade-{n}', wait_until='networkidle')
+                            page.wait_for_function('n=>location.hash==="#tarefa-unidade-"+n', arg=n)
+                            task = page.locator(f'#tarefa-unidade-{n}')
+                            assert task.is_visible() and task.evaluate('e=>e.classList.contains("aqui")'), (m, n)
+                            page.wait_for_function('n=>{const r=document.getElementById("tarefa-unidade-"+n).getBoundingClientRect();return r.height>0&&r.top>=0&&r.top<innerHeight}', arg=n)
+                            assert not page.locator('#arquivo-percurso').is_visible()
+                        page.goto(f'{host}/m{m}/?arquivo=1#desafio-unidade-1', wait_until='networkidle')
+                        assert page.locator('#desafio-unidade-1').is_visible()
+                        assert page.evaluate('location.hash') == '#desafio-unidade-1'
+                        assert not errors, (m, errors)
                         page.locator('[data-desafio="1"]').click()
                         page.locator('.casca.sobreposta .cartao').wait_for()
                         assert not errors, (m, errors)
@@ -92,21 +107,23 @@ def main():
                         page.screenshot(path=str(folder / 'm2-1440.png'), full_page=True)
                     print(f'PASS unit route M{m}; width={width}; checkpoints={len(plan["units"])}', flush=True)
                     ctx.close()
+            # 27/10/2026 (passagem do GPT, tarefas por unidade): o M2 passa à aula de tarefa, como M1, M4 e M7.
+            # Os registos anteriores leem-se no arquivo (?arquivo=1), como texto e nunca como HTML; as perguntas
+            # do arquivo continuam a gravar na chave própria; a síntese separada sai e a resposta anterior fica intacta.
             ctx, page = new_page(browser, 390)
             page.add_init_script('''localStorage.setItem('percurso-M2-u1','A minha resposta anterior <img src=x>');
               localStorage.setItem('desafio-M2-u1',JSON.stringify({ganho:true,melhor:8,total:8}));
               localStorage.setItem('licao-m2-f01',JSON.stringify({lida:true,melhor:10,total:12,xp:100}));''')
-            page.goto(f'{host}/m2/', wait_until='networkidle')
-            assert page.locator('.unit-previous').count() == 1
-            page.locator('.unit-previous summary').click()
-            assert '<img src=x>' in page.locator('.unit-previous').inner_text()
-            assert page.locator('.unit-previous img').count() == 0
-            assert 'selo ganho na organização anterior' in page.locator('.unit-previous').inner_text()
+            page.goto(f'{host}/m2/?arquivo=1#arquivo-percurso', wait_until='networkidle')
+            history = page.locator('#arquivo-percurso [data-route-history]')
+            assert page.locator('#arquivo-percurso').is_visible()
+            assert '<img src=x>' in history.inner_text()
+            assert history.locator('img').count() == 0
+            assert 'desafio-M2-u1' in history.inner_text() and '"ganho":true' in history.inner_text()
             assert 'lição feita' in page.locator('#m2-f01 [data-k]').inner_text()
             assert page.evaluate('JSON.parse(localStorage.getItem("licao-m2-f01")).melhor') == 10
-            assert page.locator('[data-desafio-estado="1"]').inner_text() == ''
-            # 23/10/2026 (plano de melhoria, fase 0): a resposta antiga não passa para a síntese nova (já não há caixa de notas).
-            assert page.locator('textarea[data-resp]').count() == 0
+            assert page.locator('[data-desafio-estado="1"]').inner_text() == 'Sem tentativas guardadas neste arquivo.'
+            assert page.locator('textarea[data-resp], [data-sintese]').count() == 0
             assert not page.evaluate('(JSON.parse(localStorage.getItem("percurso-sintese-M2-u1")||"{}")).feita')
             assert page.evaluate('localStorage.getItem("percurso-M2-u1")').startswith('A minha resposta')
             assert page.locator('[data-passo="m2-f12"],[data-passo="m2-f13"]').count() == 0
@@ -115,7 +132,7 @@ def main():
             page.locator('.unit-complements a[href*="licao-m2-f12"]').focus()
             focused = page.evaluate('document.activeElement.outerHTML')
             assert page.evaluate('document.activeElement.getAttribute("href")').endswith('licao-m2-f12/'), focused
-            print('PASS M2 legacy records, separate new assessments, lesson progress and optional links', flush=True)
+            print('PASS M2 legacy records in the archive, lesson progress and optional links', flush=True)
             for n in (1, 2):
                 page.locator(f'[data-desafio="{n}"]').click()
                 page.evaluate('document.querySelector(".casca.sobreposta .jogo-alvo").id="baralho"')
@@ -124,22 +141,16 @@ def main():
                         break
                     respond(page)
                 else:
-                    raise AssertionError('M2 unit challenge did not finish')
+                    raise AssertionError('M2 archive challenge did not finish')
                 saved = page.evaluate('k=>JSON.parse(localStorage.getItem(k))', f'desafio-unidade-v2-M2-u{n}')
                 assert saved and saved['total'] == 8 and saved['tentativas'] >= 1, saved
                 page.locator('.casca.sobreposta [data-c-menu]').click()
-                print(f'PASS complete M2 challenge {n}: {action} actions; separate progress saved', flush=True)
-            # 23/10/2026 (plano de melhoria, fase 0): a caixa «Notas no ecrã» saiu; o que persiste é o registo
-            # da síntese (no caderno), e continua a não tocar na resposta da organização anterior.
-            page.locator('[data-fim="1"] > summary').click()
-            box = page.locator('[data-sintese="1"]')
-            box.locator('input[value="caderno"]').check()
-            box.locator('[data-sintese-registar]').click()
+                print(f'PASS complete M2 archive challenge {n}: {action} actions; separate progress saved', flush=True)
             page.reload(wait_until='networkidle')
-            saved = page.evaluate('JSON.parse(localStorage.getItem("percurso-sintese-M2-u1"))')
-            assert saved == {'feita': True, 'modo': 'caderno'}, saved
+            assert page.evaluate('localStorage.getItem("percurso-sintese-M2-u1")') is None
             assert page.evaluate('localStorage.getItem("percurso-M2-u1")').startswith('A minha resposta')
-            print('PASS new unit synthesis record persists without overwriting the previous response', flush=True)
+            assert page.evaluate('localStorage.getItem("desafio-M2-u1")') == '{"ganho":true,"melhor":8,"total":8}'
+            print('PASS no separate synthesis gate; previous response and challenge records stay untouched', flush=True)
             page.goto(f'{host}/m2/#m2-f12', wait_until='networkidle')
             assert page.locator('#m2-f12').is_visible()
             assert page.locator('#m2-f12').evaluate('el=>el.closest("details").open')
