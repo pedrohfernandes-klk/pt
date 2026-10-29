@@ -1,0 +1,254 @@
+{
+  "descricao": "Grelhas /20 das tarefas de unidade (27/10/2026, decisão do docente): níveis descritos (0, parcial, máximo) com um exemplo curto inventado por nível e o que custa pontos; autoavaliação antes de entregar; versão de correção com feedback em três partes. Só a grelha /20: os pesos no módulo ficam por confirmar nas fichas oficiais. Piloto: M1. 28/10/2026, regra das soluções: as duas páginas são públicas, por isso nenhum descritor nem exemplo responde à tarefa. Os descritores dizem o que se avalia em termos gerais; os exemplos mostram a qualidade com outro caso do mesmo tipo (outra palavra, outra passagem, outra cantiga, outro tema). A chave da correção fica fora do repositório.",
+  "tarefas": {
+    "m1-u1": {
+      "modulo": "M1",
+      "unidade": 1,
+      "titulo": "Vozes da lírica medieval",
+      "produto": "Núcleo comum (duas respostas) e um tema à escolha (A ou B), à mão, entre 200 e 240 palavras, mais duas linhas finais que não contam para as palavras. O aquecimento não conta para a nota.",
+      "nota": "Os exemplos foram escritos para esta grelha com outros casos do mesmo tipo (outras cantigas, outras palavras, outras frases), nunca com as respostas da tarefa. As citações de cantigas vêm das lições do módulo.",
+      "criterios": [
+        {
+          "nome": "Codax: quem fala, a quem e o que faz a repetição",
+          "max": 4,
+          "niveis": {
+            "0": [
+              "Não dizes quem fala nem a quem, ou não citas nenhuma repetição.",
+              "Mendinho fala da ermida."
+            ],
+            "parcial": [
+              "Dizes quem fala e a quem e citas, mas não classificas a repetição ou não explicas o que ela faz à espera.",
+              "Fala a rapariga, sozinha na ermida: «Eu atendendo meu amig', eu a[tendendo]». A repetição é bonita."
+            ],
+            "max": [
+              "Dizes quem fala e a quem, citas uma repetição, classifica-la com o nome certo (refrão, paralelismo ou leixa-pren) e explicas como faz durar a espera.",
+              "Quem escreve é Mendinho; quem diz «eu» é a rapariga que espera, e não fala a ninguém: conta, sozinha na ermida, que o mar a cerca. O refrão, «Eu atendendo meu amig', eu a[tendendo]», volta igual no fim de todas as estrofes: o perigo sobe, o verso fica, e a espera não cede."
+            ]
+          },
+          "custa": [
+            "Confundir a voz que diz «eu» com o trovador que escreve.",
+            "Citar sem explicar o efeito na espera.",
+            "Trocar os nomes das repetições: refrão, paralelismo e leixa-pren não são a mesma coisa."
+          ]
+        },
+        {
+          "nome": "Fonologia: o som que cai, o lugar e o processo",
+          "max": 3,
+          "niveis": {
+            "0": [
+              "Não dizes que som cai, ou dás um processo sem relação com o lugar.",
+              "Em acume > gume a palavra fica mais curta."
+            ],
+            "parcial": [
+              "Acertas um dos dois casos, ou dás o processo sem dizer que som cai e onde.",
+              "Em acume > gume cai o «a» do início: aférese. Alevantada > levantada também fica mais curta."
+            ],
+            "max": [
+              "Nos dois casos dizes o som que cai, o lugar na palavra (início, meio ou fim) e o nome do processo, e o nome bate certo com o lugar.",
+              "Em acume > gume cai o «a» no início da palavra: aférese. Em alevantada > levantada cai também o «a» do início: aférese. O gesto é o mesmo, cair, e o lugar também: por isso o nome é o mesmo."
+            ]
+          },
+          "custa": [
+            "Dar o mesmo nome a todas as quedas, só porque a palavra encurta.",
+            "Dizer o nome do processo sem dizer que som cai e onde."
+          ]
+        },
+        {
+          "nome": "D. Dinis e Guilhade: a promessa, as passagens e o recurso",
+          "max": 4,
+          "niveis": {
+            "0": [
+              "Não dizes em qual das cantigas se cumpre a promessa, ou não citas nenhuma delas.",
+              "Os dois escrevem sobre mulheres."
+            ],
+            "parcial": [
+              "Dizes em qual se cumpre, mas só provas um dos lados, citas a primeira estrofe ou não identificas o recurso que desmente a promessa na outra.",
+              "«Que sopa boa!» é um elogio a sério e «Que rapidez!» não é."
+            ],
+            "max": [
+              "Dizes em qual se cumpre a promessa, provas os dois lados com uma passagem de cada cantiga, fora da primeira estrofe, e identificas pelo nome o recurso que a desmente na outra, mostrando na passagem como o faz.",
+              "Diante de uma sopa boa, «Que sopa boa!» cumpre o elogio: nada o desdiz. Depois de uma hora à espera do autocarro, «Que rapidez!» diz um elogio e a hora de espera mostra o contrário. Dou o nome do recurso e aponto o que se diz, «rapidez», e o que o desmente, a hora à espera."
+            ]
+          },
+          "custa": [
+            "Comparar autores em vez de passagens.",
+            "Dar ao recurso um nome que não corresponde ao que a passagem faz.",
+            "Citar a primeira estrofe, que a tarefa deixa de fora.",
+            "Dar o nome do recurso sem mostrar, na passagem, como funciona."
+          ]
+        },
+        {
+          "nome": "Tema à escolha (A ou B): cinco elementos e a justificação",
+          "max": 6,
+          "niveis": {
+            "0": [
+              "Conta um ponto por elemento cumprido e mais um pela explicação que o tema pede. Aqui, não cumpres nenhum dos cinco elementos do teu tema.",
+              "A (o painel de uma paragem): «O painel mente sempre e eu fico à espera.» B (um concerto com Mendinho): «Fazia um cartaz bonito com o mar.»"
+            ],
+            "parcial": [
+              "Cumpres um a quatro dos cinco elementos, ou cumpres os cinco sem a explicação que o tema pede.",
+              "A: duas estrofes certas e, depois, «É como em Mendinho, porque também espero.» B: «No cartaz, a ilha. Por baixo, “Eu atendendo meu amig', eu a[tendendo]”. Ponho a ilha porque a ermida ficava numa ilha.»"
+            ],
+            "max": [
+              "Cumpres os cinco elementos do teu tema (um ponto cada) e explicas a escolha que o tema pede (mais um ponto). Tema A: paralelismo; refrão que repete a promessa; o teu verso que desmente a promessa; um verso de Codax citado; uma diferença entre a tua espera e a da cantiga de Codax. Explicação: o que imitaste de Codax. Tema B: imagem em duas frases; dois factos do dossiê (contam como dois); um verso escolhido; o que o cartaz não pode prometer. Explicação: porque escolheste esse verso.",
+              "A, com outra promessa e outra cantiga (o painel de uma paragem, à maneira de Mendinho): «Sentada na paragem do bairro, / já passou a chuva da manhã. / Dois minutos, diz o painel.» e «Sentada na paragem da escola, / já passou o vento da tarde. / Dois minutos, diz o painel.» «Imitei “Sedia-m'eu na ermida de Sam Simion”: também começo sentada, à espera, num sítio que digo logo no primeiro verso. O verso “já passou o vento da tarde” desmente o refrão: da manhã à tarde, o painel continua a prometer dois minutos. A diferença: a rapariga de Mendinho não tem barqueiro e não sabe remar, e sair dali já não depende dela; eu posso desistir e ir a pé.» B, com outra cantiga (um concerto com Mendinho): «No cartaz, a ilha de San Simón com a água à volta e, ao centro, uma rapariga sentada, de costas. Por baixo, o refrão “Eu atendendo meu amig', eu a[tendendo]” e o nome dos DOA. A ilha, porque a ermida ficava numa ilha da ria de Vigo; os DOA, porque é este grupo galego que a canta hoje. O refrão, porque é o verso que não muda quando o mar sobe. O cartaz não pode prometer a melodia medieval: desta cantiga, a melodia não chegou até nós, e os DOA cantam uma interpretação de hoje.»"
+            ]
+          },
+          "custa": [
+            "Tema A: estrofes sem paralelismo ou sem refrão; apontar o desmentido fora das tuas estrofes; esquecer a diferença.",
+            "Tema B: usar factos que não estão no dossiê ou que não sustentam a escolha; pôr o verso no cartaz sem explicar porquê; prometer a quem vai ouvir o que as fontes não garantem.",
+            "Nos dois temas: cumprir os elementos sem a explicação que o tema pede."
+          ]
+        },
+        {
+          "nome": "Respostas articuladas, extensão e escrita revista",
+          "max": 3,
+          "niveis": {
+            "0": [
+              "Respostas soltas, ou muito fora das 200 a 240 palavras.",
+              "Três listas de palavras sem frases completas."
+            ],
+            "parcial": [
+              "As respostas ligam-se, mas falha uma ou mais destas: a revisão (erros que uma releitura apanhava), a extensão, o tema no topo ou as duas linhas finais com um verso.",
+              "Fecho: «Aprendi muitas coisas sobre as cantigas.»"
+            ],
+            "max": [
+              "As respostas ligam-se, estão dentro da extensão, o tema escolhido está no topo, a escrita foi revista e as duas linhas finais apontam um verso.",
+              "Fecho: «Passei a ver se uma repetição traz alguma coisa nova. Ajudou-me Mendinho: em “nom hei [eu i] barqueiro nem sei remar”, o fim do verso muda e fecha-se a última saída.»"
+            ]
+          },
+          "custa": [
+            "Erros de concordância e de acentuação que uma releitura apanhava.",
+            "Fecho genérico, sem verso.",
+            "Não escrever no topo o tema escolhido (A ou B)."
+          ]
+        }
+      ]
+    },
+    "m1-u2": {
+      "modulo": "M1",
+      "unidade": 2,
+      "titulo": "Crónica «Estar lá»",
+      "produto": "Núcleo comum (duas respostas de cerca de 40 palavras) e uma crónica à escolha, tema A ou B, de 160 a 200 palavras, com título e fontes no fim. À mão, com consulta. O núcleo, as fontes e o fecho ficam fora da contagem; o aquecimento não conta para a nota.",
+      "nota": "Os exemplos foram escritos para esta grelha com outros casos do mesmo tipo (outra fala, outra imagem, uma manhã na escola), nunca com as respostas da tarefa: são inventados, menos a gravura de D. Dinis, que vem das lições do módulo.",
+      "criterios": [
+        {
+          "nome": "Núcleo 1: a cidade como uma só figura",
+          "max": 3,
+          "niveis": {
+            "0": [
+              "Não há passagem do cap. XII, ou a resposta fala do Mestre ou do pajem e não da cidade.",
+              "O Mestre era muito importante e toda a gente gostava dele."
+            ],
+            "parcial": [
+              "Citas uma passagem exata, mas nomeias uma emoção em vez de dizer o que se vê; ou explicas sem citar; ou citas a voz de uma só personagem.",
+              "Com uma frase inventada: «Ao toque da campainha, a escola inteira levantou-se e correu para o portão.» A escola estava ansiosa."
+            ],
+            "max": [
+              "Uma passagem do cap. XII, copiada letra a letra e entre aspas, e a explicação do que ela faz ver da cidade a agir como uma só figura. O termo «personagem coletiva» não é obrigatório para o máximo.",
+              "Com uma frase inventada: em «Ao toque da campainha, a escola inteira levantou-se e correu para o portão.», o sujeito é um só, «a escola inteira», e os verbos vêm no singular: os alunos deixam de se ver um a um e passam a ser um corpo que se levanta e corre."
+            ]
+          },
+          "custa": [
+            "Dar a voz de uma só personagem como prova da multidão.",
+            "Dizer a emoção («estavam com medo») em vez do que a passagem faz ver.",
+            "Citar uma passagem do cerco: a pergunta pede o cap. XII."
+          ]
+        },
+        {
+          "nome": "Núcleo 2: a fala, a marca e o registo",
+          "max": 3,
+          "niveis": {
+            "0": [
+              "Não apontas a parte da fala que não está nos excertos, não nomeias o processo e não decides onde fica «pra».",
+              "A frase está bem, é assim que se fala na rua."
+            ],
+            "parcial": [
+              "Acertas uma ou duas das três partes: a parte que não está nos excertos do cap. XII, o processo em «pra», o lugar de «pra».",
+              "Outra fala: o jornal da escola cita o diretor, «Bora lá, malta!», e um rascunho escreve, como fala documentada, «Bora lá, malta! Todos ao portão!». Resposta: «“Todos ao portão!” não está no jornal. Em “bora” cai uma letra no fim: apócope.»"
+            ],
+            "max": [
+              "Apontas a parte da fala que não está nos excertos do cap. XII, dizes em «pra» o som que cai, onde cai e o nome do processo, e justificas onde pode ficar «pra» com a diferença entre o relato, a fala documentada e a fala imaginada.",
+              "A mesma fala do jornal da escola: «“Todos ao portão!” não está no jornal, que só regista “Bora lá, malta!”. Em “bora”, de “embora”, cai o som do início, “em”: aférese. Aqui, “bora” fica na fala documentada, porque é a palavra que o jornal regista; no relato, escrevo “vamos embora”; numa fala imaginada, teria de a marcar como imaginada.»"
+            ]
+          },
+          "custa": [
+            "Dar ao processo um nome que não bate certo com o lugar do som que cai.",
+            "Dizer o que está nos excertos sem os confrontar com a fala.",
+            "Justificar o lugar da forma reduzida sem distinguir o relato, a fala documentada e a fala imaginada."
+          ]
+        },
+        {
+          "nome": "Estar lá: começo, pormenor e povo em ação",
+          "max": 5,
+          "niveis": {
+            "0": [
+              "A crónica começa por um resumo ou pela apresentação da figura; não há pormenor que se veja nem povo a agir.",
+              "Esta crónica conta uma manhã muito importante na vida da escola."
+            ],
+            "parcial": [
+              "Há momento e lugar, mas a primeira frase fica à porta; ou o pormenor diz em vez de fazer ver; ou o povo fica parado, como cenário. Pontua 1 a 2 se só um dos três (começo, pormenor, povo) está conseguido; 3 a 4 se falta um.",
+              "À porta da escola havia muita gente e muita pressa. Toda a gente estava nervosa."
+            ],
+            "max": [
+              "A primeira frase põe o leitor num lugar, numa hora e numa ação; um pormenor de som, cor ou movimento faz ver; o povo age, com um gesto seu.",
+              "Outro lugar e outra hora: «Sexta-feira, oito e um quarto, na rua de cima: ouve-se a campainha antes de se ver a escola, e as mochilas desatam a correr, uma, outra, a rua inteira para o portão.»"
+            ]
+          },
+          "custa": [
+            "Começar por «Esta crónica conta…» ou por um resumo do que aconteceu.",
+            "Dizer o sentimento («havia muito medo») em vez de o fazer ver.",
+            "O povo como cenário, sem um gesto seu."
+          ]
+        },
+        {
+          "nome": "Duas fontes confrontadas, e o que é teu marcado",
+          "max": 5,
+          "niveis": {
+            "0": [
+              "Uma fonte só, ou fontes sem lista no fim; falas e inferências inventadas passam por factos.",
+              "Segundo a internet, a escola inteira chegou atrasada e alguém gritou «Socorro!»."
+            ],
+            "parcial": [
+              "Duas fontes listadas, mas lado a lado, sem confronto; ou a fala vai sem marca; ou uma inferência passa por facto. Pontua 1 a 2 se só um dos três (fontes confrontadas, fala marcada, o que é teu marcado) está conseguido; 3 a 4 se falta um.",
+              "O jornal da escola conta a corrida. A fotografia mostra o portão. A campainha tocou às oito e dez."
+            ],
+            "max": [
+              "Duas fontes identificadas, confrontadas no texto (o que uma mostra e a outra não, com a origem de cada versão) e listadas no fim; a fala vai marcada «documentada» ou «imaginada» e não desmente as fontes; inferências e opiniões vêm marcadas como tuas, e cada inferência apoia-se no texto.",
+              "A mesma manhã na escola: «O jornal da escola conta a corrida para o portão; a fotografia da Rita mostra o portão, mas não quem corre. “Esperem por mim!” (fala imaginada). Que muitos chegaram tarde, concluo eu: o jornal conta gente a correr depois da campainha.» No fim: «Fontes: jornal da escola; fotografia da Rita.»"
+            ]
+          },
+          "custa": [
+            "«Segundo a internet» como fonte.",
+            "Escolher uma fonte e calar a outra, ou inventar um meio-termo.",
+            "Uma fala sem marca, ou imaginada contra o que a fonte diz.",
+            "Inventar horas, números ou nomes sem os marcar."
+          ]
+        },
+        {
+          "nome": "O pedido do tema, a extensão e a revisão",
+          "max": 4,
+          "niveis": {
+            "0": [
+              "Falta o pedido do tema (A: a gradação e a passagem copiada da crónica; B: o que a imagem escolhe e dois factos do dossiê), ou a crónica fica muito longe das 160 a 200 palavras, sem título.",
+              "Crónica de 90 palavras, sem título e sem nada do dossiê."
+            ],
+            "parcial": [
+              "O pedido do tema está lá só em parte (A: repetição sem degraus, ou a passagem com palavras mudadas; B: um só facto do dossiê, ou a imagem descrita sem dizer o que nela é escolha), ou há erros que a revisão apanhava. Pontua 1 se faltam dois ou mais elementos do máximo; 2 a 3 se falta um.",
+              "A: «Correu, correu, correu.» B: «A gravura é de 1594 e é muito bonita.»"
+            ],
+            "max": [
+              "A: uma gradação em que cada termo pesa mais e uma passagem do capítulo copiada letra a letra. B: o que na imagem é escolha de quem a fez, dito com dois factos do dossiê. Nos dois, título, 160 a 200 palavras, uma frase riscada e reescrita, à vista, e o fecho de duas linhas.",
+              "A, com outro caso: «Primeiro um aluno, depois uma turma, por fim a escola inteira.» B, com outra imagem, a gravura de D. Dinis: «A gravura de 1594 põe um livro na mão de D. Dinis, rei de 1279 a 1325: foi feita quase três séculos depois dele, e o livro, suponho, é escolha de quem o quis mostrar poeta.»"
+            ]
+          },
+          "custa": [
+            "Contar o núcleo, as fontes ou o fecho nas 160 a 200 palavras da crónica.",
+            "Apagar em vez de riscar: a frase cortada é a prova da revisão.",
+            "Entregar sem o fecho de duas linhas."
+          ]
+        }
+      ]
+    }
+  }
+}

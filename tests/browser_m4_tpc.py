@@ -101,7 +101,8 @@ try:
    # 24/10/2026, aulas claras do M4: a lição F20 foi refeita; os quatro cartões que eram 4, 5, 12 e 15 são agora 11, 12, 15 e 14
    # e o painel foi refeito a partir da lição nova
    for i in (11,12,15,14):
-    assert page.locator(f'select[data-r-k] option[value="{i}"]').inner_text()==cards[i]['p']
+    # 28/10/2026 (auditoria do M4): as opções do relâmpago mostram os títulos sem os sublinhados de itálico em bruto.
+    assert page.locator(f'select[data-r-k] option[value="{i}"]').inner_text()==re.sub(r'_([^_]+)_',r'\1',cards[i]['p'])
    assert not errors,errors
    ctx.close();print(f'PASS post-TPC F28/F20 normal/full, wrong/correct feedback, keyboard, resume, teacher labels and route {width}',flush=True)
   ctx,page=new_page(browser,1440)

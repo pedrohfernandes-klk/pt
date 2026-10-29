@@ -22,7 +22,9 @@ for (const file of files) {
   }
   if (!file.startsWith('tarefas/')) continue;
   const status = {textContent: ''};
-  const groups = [...source.matchAll(/<article class="task-question"([^>]*)>([\s\S]*?)<\/article>/g)].map(match => {
+  // 28/10/2026 (PR #122): no formato com escolha, a pergunta do aquecimento é um <div class="task-question">
+  // dentro da máquina 02 e a opcional continua num <article>; cada grupo vai até ao seu parágrafo de feedback.
+  const groups = [...source.matchAll(/<(?:article|div) class="task-question"([^>]*)>([\s\S]*?data-task-feedback[^>]*>)/g)].map(match => {
     const attributes = attrs(match[1]);
     const feedback = {textContent: '', dataset: {}, hidden: true};
     const buttons = [...match[2].matchAll(/<button\b([^>]*)>/g)].map(button => {

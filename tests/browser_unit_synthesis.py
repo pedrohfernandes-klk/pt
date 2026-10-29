@@ -14,8 +14,10 @@ try:
   browser=pw.chromium.launch(headless=True)
   for mode in ('oral','caderno'):
    ctx,page=new_page(browser,320)
-   page.goto(host+'/m2/',wait_until='networkidle')
-   page.evaluate('''() => { for(const id of ['m2-f01','m2-f02','m2-f07','m2-f06']) {localStorage.setItem('licao-'+id,JSON.stringify({lida:true}));localStorage.setItem('licao-'+id+'-a1',JSON.stringify({lida:true}));} for(const id of ['ines-panela','gram-oracoes-farsa','ines-escolher']) localStorage.setItem('epi-pt-'+id,JSON.stringify({fim:true}));localStorage.setItem('desafio-unidade-v2-M2-u1',JSON.stringify({ganho:true,melhor:8,total:8}));}''')
+   # 27/10/2026 (passagem do GPT, tarefas por unidade): o M2 passou à aula de tarefa, sem síntese separada.
+   # O registo da síntese do modelo anterior continua noutros módulos; verifica-se agora no M3, com a unidade 1 cumprida.
+   page.goto(host+'/m3/',wait_until='networkidle')
+   page.evaluate('''() => { for(const id of ['m3-f02','m3-f03','m3-f04','m3-f05','m3-f09']) {localStorage.setItem('licao-'+id,JSON.stringify({lida:true}));localStorage.setItem('licao-'+id+'-a1',JSON.stringify({lida:true}));} for(const id of ['camoes-leonor','camoes-alma','m3-soneto-raciocinio']) localStorage.setItem('epi-pt-'+id,JSON.stringify({fim:true}));localStorage.setItem('desafio-unidade-v2-M3-u1',JSON.stringify({ganho:true,melhor:8,total:8}));}''')
    page.reload(wait_until='networkidle')
    page.locator('[data-fim="1"] > summary').click()
    box=page.locator('[data-sintese="1"]')
@@ -27,23 +29,23 @@ try:
     box.screenshot(path=str(out/'sintese-oral-320.png'))
    # 23/10/2026 (plano de melhoria, fase 0): a síntese já não tem caixa de notas nem botão «Copiar para o Teams».
    assert page.locator('[data-fim="1"] textarea, [data-fim="1"] [data-copiar], [data-fim="1"] .sintese-notas').count()==0
-   assert page.evaluate('JSON.parse(localStorage.getItem("percurso-M2")).unidades[0].cumprida')
+   assert page.evaluate('JSON.parse(localStorage.getItem("percurso-M3")).unidades[0].cumprida')
    assert box.locator('[data-sintese-rever]').evaluate('el=>el===document.activeElement')
    page.reload(wait_until='networkidle')
-   assert mode in page.evaluate('localStorage.getItem("percurso-sintese-M2-u1")')
+   assert mode in page.evaluate('localStorage.getItem("percurso-sintese-M3-u1")')
    page.locator('[data-fim="1"] > summary').click()
    box.locator('[data-sintese-rever]').click()
-   assert not page.evaluate('JSON.parse(localStorage.getItem("percurso-M2")).unidades[0].cumprida')
+   assert not page.evaluate('JSON.parse(localStorage.getItem("percurso-M3")).unidades[0].cumprida')
    # 23/10/2026 (plano de melhoria, fase 0): sem notas no ecrã, confirma-se só que o «Ainda estou a rever» persiste.
    page.reload(wait_until='networkidle')
-   assert not page.evaluate('JSON.parse(localStorage.getItem("percurso-sintese-M2-u1")).feita')
+   assert not page.evaluate('JSON.parse(localStorage.getItem("percurso-sintese-M3-u1")).feita')
    print('PASS synthesis without on-screen writing, completion, focus, reload and undo:',mode,flush=True)
    ctx.close()
   ctx,page=new_page(browser,320)
-  page.goto(host+'/m2/',wait_until='networkidle')
-  page.evaluate("localStorage.removeItem('percurso-sintese-M2-u1-inicializada'); localStorage.setItem('percurso-v2-M2-u1',JSON.stringify(Array(85).fill('anterior').join(' ')))")
+  page.goto(host+'/m3/',wait_until='networkidle')
+  page.evaluate("localStorage.removeItem('percurso-sintese-M3-u1-inicializada'); localStorage.setItem('percurso-v2-M3-u1',JSON.stringify(Array(85).fill('anterior').join(' ')))")
   page.reload(wait_until='networkidle')
-  assert page.evaluate('JSON.parse(localStorage.getItem("percurso-sintese-M2-u1")).modo')=='anterior'
+  assert page.evaluate('JSON.parse(localStorage.getItem("percurso-sintese-M3-u1")).modo')=='anterior'
   print('PASS prior qualifying synthesis migration',flush=True)
   ctx.close()
   # 26/10: M1/M4/M7 close in the task lesson. Historic notes stay readable,
@@ -58,6 +60,8 @@ try:
             f'desafio-M{m}-u1':json.dumps({'ganho':True,'melhor':8,'total':8}),
             f'licao-m{m}-f01':json.dumps({'lida':True,'melhor':10,'total':12,'xp':100})}
    if m==7:records['percurso-M7-u5']='Registo da antiga etapa cinco'
+   # 27/10/2026: o M2 tinha quatro etapas antes das unidades; a quarta continua legível no arquivo.
+   if m==2:records['percurso-M2-u4']='Registo da antiga etapa quatro'
    page.evaluate('records=>Object.entries(records).forEach(([k,v])=>localStorage.setItem(k,v))',records)
    before=learning_storage(page);page.reload(wait_until='networkidle')
    assert learning_storage(page)==before
@@ -72,6 +76,7 @@ try:
    assert archive.is_visible() and '<img src=x>' in archive.inner_text()
    assert archive.locator('img').count()==0
    if m==7:assert 'antiga etapa cinco' in archive.inner_text()
+   if m==2:assert 'antiga etapa quatro' in archive.inner_text()
    assert learning_storage(page)==before
    assert not errors,(m,errors)
    print('PASS integrated task synthesis; historic keys read without migration or automatic assessment:',m,flush=True)

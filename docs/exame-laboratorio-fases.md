@@ -79,6 +79,20 @@ Decisões do docente (27/10): a identidade fica só no laboratório; fontes livr
 
 Por validar em sala: legibilidade à distância, ritmo dos dois minutos e clareza das anotações.
 
+## Percurso e revisão da própria resposta (28/10/2026, para validação)
+
+Mantém-se a identidade «Oficina da palavra» e o banco de dois textos autorais. Esta intervenção melhora a ligação entre operações e a observação da aprendizagem:
+
+- Navegação anterior/seguinte no mesmo texto; depois de «Sê o corretor», regresso à própria resposta. A indicação de etapa é navegação, não conclusão ou classificação.
+- Na escrita, consulta dos critérios antes de produzir a resposta, sem revelar o modelo nem saltar a sequência dos apoios.
+- Ação explícita para conservar uma primeira versão imutável e trabalhar a revisão; campo para justificar o que mudou e que critério orientou a alteração.
+- Primeira versão, versão revista e reflexão mantidas separadamente por texto, em memória, ao alternar de máquina. Não há persistência após recarga nem integração no dossiê. A interface explica que é necessário copiar o trabalho antes de sair.
+- Textos pessoais ocultos na projeção e excluídos de ambas as impressões; escape de conteúdo mantido. Recomeçar com texto escrito exige confirmação para evitar perda acidental.
+- Feedback específico para cada linha escolhida. Em «O regresso», o contrato é reconhecido como evidência relevante mas incompleta, a relacionar com os gestos da despedida; não é marcado como simplesmente errado.
+- Testes adicionais: percurso ligado, critérios sem modelo, conservação de versões/reflexão, texto tratado como texto, privacidade, cancelamento/confirmação do reinício e composição móvel.
+
+Não foram acrescentados itens oficiais nem notas automáticas. Próxima validação pedagógica: verificar se a segunda versão melhora nos tópicos concretos de C-ED e se o aluno consegue explicar essa melhoria. A expansão do banco deve preservar a identificação da origem e a correspondência com critérios específicos.
+
 ## Textos compostos, identidade nas sessões e relógio do aluno (27–28/10/2026)
 
 Pedido do docente (27/10): uma cantiga não pode parecer um relatório; subir um degrau na tipografia, nas cores e na identidade, com princípios de Gestalt, sem perder a matriz.
@@ -89,3 +103,5 @@ Pedido do docente (27/10): uma cantiga não pode parecer um relatório; subir um
 - **Texto do sítio:** sem «ficha» nem «folha» nas sessões (os dois casos que ficam são citações de Camilo e de Álvaro de Campos).
 
 Por validar em sala: leitura das notas à distância, os máximos do laboratório e a regra das duas pausas.
+
+Ao juntar as duas linhas (29/10/2026), o relógio do aluno passou a servir também o percurso: um relógio por exercício, com os mesmos máximos, e «Recomeçar esta máquina» pede confirmação antes de repor o texto, a revisão e o relógio.

@@ -3,6 +3,7 @@ from pathlib import Path
 from html.parser import HTMLParser
 from urllib.parse import urlsplit,unquote
 import hashlib,json,re,subprocess,unittest
+from task_source_contract import without_timer
 ROOT=Path(__file__).resolve().parents[1]
 MANIFEST=ROOT/'tests/fixtures/task-compact-m7-before-after.json'
 class Compact(HTMLParser):
@@ -31,7 +32,8 @@ class CompactM7(unittest.TestCase):
  def test_literal_manifest_restores_the_exact_previous_pages(self):
   self.assertEqual(len(self.records()),3)
   for record in self.records():
-   actual=(ROOT/record['path']).read_text('utf-8')
+   # 27/10/2026: o relógio do aluno é a única marca acrescentada depois do manifesto.
+   actual=without_timer((ROOT/record['path']).read_text('utf-8'))
    self.assertEqual(record['after_source'],actual)
    for key in ('before','after'):
     self.assertEqual(hashlib.sha256(record[key+'_source'].encode()).hexdigest(),record[key+'_sha256'])

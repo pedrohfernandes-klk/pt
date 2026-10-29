@@ -8,11 +8,15 @@ FIXTURE=ROOT/'tests/fixtures/task-route-lesson-content-before.json'
 INSTRUCTION_EDITS=ROOT/'tests/fixtures/task-instruction-edits-20261026.json'
 GRAMMAR_EDITS=ROOT/'tests/fixtures/m1-grammar-pilot-edits-20261027.json'
 TABLE_EDITS=ROOT/'tests/fixtures/apoios-tabelas-edits-20261027.json'
+# 28/10/2026: M7-F23, o par de Reis no cartão de emparelhar passa a dizer a ideia (pedido do docente).
+REIS_EDITS=ROOT/'tests/fixtures/m7-f23-reis-edits-20261028.json'
+# 28/10/2026: correções confirmadas pela auditoria do M1 e do M4 (texto apenas; desfazem-se antes de todas as outras).
+AUDIT_EDITS=ROOT/'tests/fixtures/auditoria-m1-m4-edits-20261028.json'
 
 def original_lesson_text(path):
  """Reverse only the explicitly authorized UX strings; retain the frozen LF hash."""
  source=(ROOT/path).read_text('utf-8')
- for manifest_path in (TABLE_EDITS,GRAMMAR_EDITS,INSTRUCTION_EDITS):
+ for manifest_path in (AUDIT_EDITS,REIS_EDITS,TABLE_EDITS,GRAMMAR_EDITS,INSTRUCTION_EDITS):
   manifest=json.loads(manifest_path.read_text('utf-8'))
   for edit in reversed(manifest['files'].get(path,{}).get('edits',[])):
    if source.count(edit['new'])!=edit['occurrences']:
@@ -44,7 +48,8 @@ class TaskRoutes(unittest.TestCase):
    for path,digest in before['files'].items():
     self.assertEqual(digest,hashlib.sha256(original_lesson_text(path).encode('utf-8')).hexdigest(),path)
  def test_one_classroom_task_per_unit_no_independent_closure_gate(self):
-  expected={1:['m1-u1','m1-u2'],4:['m4-u1','m4-u2','m4-u3-discurso'],7:['m7-u1','m7-u2','m7-u3']}
+  # 27/10/2026 (passagem do GPT, tarefas por unidade): o M2 passa ao mesmo modelo, com duas aulas de tarefa.
+  expected={1:['m1-u1','m1-u2'],2:['m2-u1','m2-u2'],4:['m4-u1','m4-u2','m4-u3-discurso'],7:['m7-u1','m7-u2','m7-u3']}
   for m,slugs in expected.items():
    s=(ROOT/f'm{m}/index.html').read_text('utf-8');p=Route(s)
    self.assertEqual(len(p.ids),len(set(p.ids)))

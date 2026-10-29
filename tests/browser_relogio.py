@@ -23,6 +23,20 @@ with sync_playwright() as p:
     assert text(page, a + ' .relogio-mostrador') == '60:00'
     assert text(page, a + ' .relogio-max') == 'até 60 min'
     assert page.locator(a + ' .relogio-passo').nth(1).is_disabled(), 'não passa do máximo'
+    # 28/10/2026 (revisão do PR #124): o mostrador muda a cada segundo e deixa de ser região viva
+    # (era um <output>, com papel status, polite e atómico); os avisos continuam no .relogio-estado.
+    # Confere-se na árvore de acessibilidade completa do Chromium.
+    cdp = page.context.new_cdp_session(page)
+
+    def ax_nodes(*selectors):
+        root = cdp.send('DOM.getDocument', {'depth': 0})['root']['nodeId']
+        backend = [cdp.send('DOM.describeNode', {'nodeId': cdp.send('DOM.querySelector', {'nodeId': root, 'selector': s})['nodeId']})['node']['backendNodeId'] for s in selectors]
+        tree = {n.get('backendDOMNodeId'): n for n in cdp.send('Accessibility.getFullAXTree')['nodes']}
+        return [(tree[b]['role']['value'], {p['name']: p['value'].get('value') for p in tree[b].get('properties', [])}) for b in backend]
+
+    (role, props), (role_estado, props_estado) = ax_nodes(a + ' .relogio-mostrador', a + ' .relogio-estado')
+    assert role == 'timer' and props.get('live') in (None, 'off'), (role, props)
+    assert role_estado == 'status' and props_estado.get('live') == 'polite', (role_estado, props_estado)
     page.locator(a + ' .relogio-passo').nth(0).click()
     assert text(page, a + ' .relogio-mostrador') == '55:00'
     page.fill(a + ' input', '200'); page.locator(a + ' input').dispatch_event('change')
@@ -34,6 +48,10 @@ with sync_playwright() as p:
     assert main.inner_text() == 'Iniciar' and page.locator(a + ' .relogio-recomecar').is_disabled()
     main.click(); page.clock.run_for(3000)
     assert text(page, a + ' .relogio-mostrador') == '19:57'
+    # 28/10/2026: também a contar, o tempo não é anunciado; o aviso de início está no estado.
+    (role, props), (_, props_estado) = ax_nodes(a + ' .relogio-mostrador', a + ' .relogio-estado')
+    assert role == 'timer' and props.get('live') in (None, 'off'), (role, props)
+    assert props_estado.get('live') == 'polite' and 'Relógio a contar' in text(page, a + ' .relogio-estado')
     assert page.locator(a + ' input').is_disabled(), 'a duração fixa-se ao iniciar'
     assert main.inner_text() == 'Pausar'
     main.click()
@@ -75,4 +93,4 @@ with sync_playwright() as p:
     page.evaluate("() => { window.c = EPIRelogio.criar(document.body.appendChild(document.createElement('div')), {max: 3, chave: 'x'}); }")
     assert page.evaluate('c.estado().duracao') == 180
     browser.close()
-print('PASS relógio: máximo e passo, início, duas pausas, recomeço obrigatório, fim, persistência, pausa externa, espelho, sem armazenamento')
+print('PASS relógio: máximo e passo, início, duas pausas, recomeço obrigatório, fim, persistência, pausa externa, espelho, sem armazenamento, mostrador sem região viva')

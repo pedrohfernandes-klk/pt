@@ -54,6 +54,10 @@
   const SUPPORT_TITLE = ['Pista', 'Uma resposta possível', 'Autoavaliação · adaptação didática de C-ED e CL'];
   // Relógio do aluno (27/10/2026): máximo por máquina, em minutos; o aluno escolhe a duração, de 30 em 30 s.
   const MAX_MINUTES = [1, 2, 2, 3];
+  const EVIDENCE_NOTES = [
+    ['A linha 1 apresenta a medida, mas não mostra a necessidade a que respondeu.', 'A linha 2 liga a ocupação das mesas à falta de um espaço de estudo adequado.', 'A cor da fachada é uma informação verdadeira, mas não explica a necessidade dos alunos.', 'Prolongar a experiência mostra uma decisão da direção; não explica, por si só, as condições de estudo dos alunos.'],
+    ['A chegada à escola situa a ação; isoladamente, não demonstra sentimentos em tensão.', 'O contrato é uma evidência relevante da partida. Para explicar a ambivalência, relaciona-o com o sorriso e a demora da despedida na linha 4.', 'A marca reconhecida pode apoiar a ligação à infância; a porta fechada não prova rejeição nem zanga.', 'O sorriso e a demora permitem interpretar o afeto e a dificuldade da despedida. Relaciona-os com a partida anunciada na linha 2.']
+  ];
 
   const host = document.querySelector('#exercise');
   const select = document.querySelector('#texto');
@@ -61,7 +65,7 @@
   let machine = 0;
   let projection = new URL(location.href).searchParams.get('projetar') === '1';
 
-  const fresh = () => ({ answer: '', selected: null, checked: [], stage: 0, feedback: false, clock: null });
+  const fresh = () => ({ answer: '', firstDraft: null, reflection: '', criteriaOpen: false, selected: null, checked: [], stage: 0, feedback: false, clock: null });
   const states = TEXTS.map(() => MACHINES.map(fresh));
 
   const esc = v => String(v).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
@@ -137,9 +141,10 @@
     const t = text(), s = state();
     if (s.selected === null) return '';
     const right = s.selected === correctAnswer();
-    const head = '<p class="of-veredito"><span class="of-sinal" aria-hidden="true">' + (right ? '✓' : '↺') + '</span>' + (right ? 'Escolha adequada. ' : 'Revê a escolha. ') + '</p>';
+    const partial = machine === 1 && Number(select.value) === 1 && s.selected === 1;
+    const head = '<p class="of-veredito"><span class="of-sinal" aria-hidden="true">' + (right ? '✓' : '↺') + '</span>' + (partial ? 'Evidência relevante, mas incompleta. ' : right ? 'Escolha adequada. ' : 'Revê a escolha. ') + '</p>';
     if (machine === 0) return head + '<p>O verbo exige explicar: relaciona os elementos pedidos e fundamenta a interpretação. Não basta localizar informação.</p><p class="of-nota-instrucao">A instrução ficou anotada: verbo de comando, objeto e condição.</p>';
-    if (machine === 1) return head + '<p>' + esc(t.why) + '</p>';
+    if (machine === 1) return head + '<p>' + esc(EVIDENCE_NOTES[Number(select.value)][s.selected]) + '</p><p class="small">' + esc(t.why) + '</p>';
     return head + '<p>' + esc(t.review) + '</p><dl class="of-eixos"><div><dt>Conteúdo · C-ED</dt><dd>' + esc(t.reviewCED) + '</dd></div><div><dt>Língua · CL</dt><dd>' + esc(t.reviewCL) + '</dd></div></dl>';
   }
   function responseHTML(t, s) {
@@ -147,9 +152,13 @@
     if (machine === 1) return '<p class="of-pergunta">Escolhe, no texto, a linha que dá apoio mais direto à interpretação pedida. Depois explica oralmente a ligação.</p>';
     if (machine === 2) {
       return '<p class="of-pergunta">Escreve uma resposta breve, em papel ou no campo abaixo. Quatro linhas são uma meta de concisão; o campo não limita a extensão.</p>' +
-        '<label class="field-label personal" for="answer">A tua resposta · fica apenas nesta página enquanto estiver aberta</label><textarea id="answer" class="of-caderno" maxlength="6000" rows="6">' + esc(s.answer) + '</textarea>' +
+        '<div class="personal of-escrita"><button id="criteria-toggle" class="of-discreto" aria-controls="writing-criteria" aria-expanded="' + (s.criteriaOpen || s.stage >= 3) + '">Consultar critérios antes de escrever</button>' +
+        (s.firstDraft !== null ? '<section class="of-primeira"><h3>Primeira versão · conservada</h3><p class="of-manuscrito">' + esc(s.firstDraft) + '</p></section>' : '') +
+        '<label class="field-label" for="answer">' + (s.firstDraft !== null ? 'Versão revista · melhora a resposta com os critérios' : 'A tua primeira resposta') + '</label><textarea id="answer" class="of-caderno" maxlength="6000" rows="6">' + esc(s.answer) + '</textarea>' +
+        (s.firstDraft === null ? '<button id="keep-draft" class="of-primario"' + (!s.answer.trim() ? ' disabled' : '') + '>Conservar primeira versão e rever</button>' : '<label class="field-label" for="reflection">O que mudei e porquê? Identifica o critério que orientou a revisão.</label><textarea id="reflection" maxlength="2000" rows="3">' + esc(s.reflection) + '</textarea>') +
+        '<p class="small">O texto fica apenas nesta página enquanto estiver aberta. Copia-o antes de sair.</p></div>' +
         '<p class="small personal">Não há classificação automática. Compara a tua resposta com os critérios e revê-a.</p>' +
-        '<section class="of-revisao" data-apoio-local="3"' + (s.stage < 3 ? ' hidden' : '') + '><h3 tabindex="-1">' + SUPPORT_TITLE[2] + '</h3><p>Assinala apenas o que consegues demonstrar na tua resposta; reescreve o que falta. Esta lista não produz uma nota de exame.</p>' + checksHTML(t, s) + '<a href="#fontes">Consultar a fundamentação oficial</a></section>';
+        '<section id="writing-criteria" class="of-revisao" data-apoio-local="3"' + (s.stage < 3 && !s.criteriaOpen ? ' hidden' : '') + '><h3 tabindex="-1">' + SUPPORT_TITLE[2] + '</h3><p>Assinala apenas o que consegues demonstrar na tua resposta; reescreve o que falta. Esta lista não produz uma nota de exame.</p>' + checksHTML(t, s) + '<a href="#fontes">Consultar a fundamentação oficial</a></section>';
     }
     return '<p class="of-pergunta">Avalia a resposta em revisão antes de consultar o comentário.</p>' +
       choicesHTML(['Cumpre o pedido e fundamenta a interpretação.', 'Precisa de revisão do conteúdo e da fundamentação.'], s) +
@@ -180,7 +189,9 @@
       '<div class="of-mesa" data-maquina="' + machine + '">' + reading(t, s, machine === 1 ? '<div class="of-resposta">' + verify + feedback + '</div>' : '') +
       '<section class="of-acao" aria-label="Tarefa">' + instruction(t, machine === 0 && s.feedback) + (machine >= 2 ? slot : '') + '<div class="of-resposta">' + responseHTML(t, s) + (machine === 1 ? '' : verify + feedback) +
       '</div>' + (machine < 2 ? slot : '') + '</section></div>' +
-      supportsHTML(t, s);
+      supportsHTML(t, s) + '<nav class="of-percurso" aria-label="Continuar o percurso"><p><span class="of-rotulo">Mesmo texto · quatro operações</span><strong>Etapa ' + (machine + 1) + ' de 4</strong><span class="small">Navegação livre; as etapas não são uma nota.</span></p>' +
+      (machine > 0 && machine < 3 ? '<button data-go="' + (machine - 1) + '">← ' + MACHINES[machine - 1].verb + '</button>' : '') +
+      '<button class="of-primario" data-go="' + (machine < 3 ? machine + 1 : 2) + '">' + (machine < 3 ? 'Continuar → ' + MACHINES[machine + 1].verb : 'Voltar à minha resposta →') + '</button></nav>';
     bind();
     placeClock();
     if (focus) host.querySelector('h2').focus();
@@ -206,7 +217,7 @@
     f.innerHTML = feedbackHTML();
     f.hidden = false;
     const chosen = host.querySelector('[data-answer="' + s.selected + '"]');
-    if (chosen) chosen.classList.add(s.selected === correctAnswer() ? 'correct' : 'incorrect');
+    if (chosen && !(machine === 1 && Number(select.value) === 1 && s.selected === 1)) chosen.classList.add(s.selected === correctAnswer() ? 'correct' : 'incorrect');
     if (machine === 0) host.querySelector('#of-pedido-texto').innerHTML = promptHTML(t, true);
     if (machine === 3) host.querySelector('#of-prova').innerHTML = weakHTML(t, true);
   }
@@ -221,6 +232,8 @@
     host.querySelectorAll('.of-passo').forEach((p, i) => p.classList.toggle('feito', s.stage > i));
     host.querySelector('#of-passos-texto').textContent = s.stage + ' de 3 apoios revelados';
     if (s.stage === 3) { button.disabled = true; }
+    const criteriaToggle = host.querySelector('#criteria-toggle');
+    if (criteriaToggle && s.stage === 3) criteriaToggle.setAttribute('aria-expanded', 'true');
     target.querySelector('h3').focus();
   }
 
@@ -228,11 +241,24 @@
     const s = state();
     host.querySelectorAll('[data-answer]').forEach(b => { b.onclick = () => { s.selected = Number(b.dataset.answer); updateSelection(); }; });
     const answer = host.querySelector('#answer');
-    if (answer) answer.oninput = () => { s.answer = answer.value; };
+    if (answer) answer.oninput = () => { s.answer = answer.value; const keep = host.querySelector('#keep-draft'); if (keep) keep.disabled = !s.answer.trim(); };
+    const keep = host.querySelector('#keep-draft');
+    if (keep) keep.onclick = () => { if (!s.answer.trim()) return; s.firstDraft = s.answer; render(false); host.querySelector('#answer').focus(); say('Primeira versão conservada. Podes rever a resposta sem a apagar.'); };
+    const reflection = host.querySelector('#reflection');
+    if (reflection) reflection.oninput = () => { s.reflection = reflection.value; };
+    const criteriaToggle = host.querySelector('#criteria-toggle');
+    if (criteriaToggle) criteriaToggle.onclick = () => {
+      s.criteriaOpen = true;
+      host.querySelector('#writing-criteria').hidden = false;
+      criteriaToggle.setAttribute('aria-expanded', 'true');
+      host.querySelector('#writing-criteria h3').focus();
+    };
+    host.querySelectorAll('[data-go]').forEach(b => { b.onclick = () => go(Number(b.dataset.go)); });
     const verify = host.querySelector('#verify');
     if (verify) verify.onclick = showFeedback;
     host.querySelector('#reveal').onclick = reveal;
     host.querySelector('#restart').onclick = () => {
+      if ((s.answer.trim() || s.firstDraft !== null || s.reflection.trim()) && !window.confirm('Recomeçar apaga o texto e a revisão desta máquina. Queres continuar?')) return;
       if (s.clock) s.clock.api.destruir();
       Object.assign(s, fresh());
       render(true);
@@ -248,6 +274,7 @@
   }
 
   function leave() { pauseClock(state()); }
+  function go(next) { if (next === machine) return; leave(); machine = next; render(true); }
 
   /* ---------- projeção ---------- */
   function project() {
@@ -268,9 +295,7 @@
     b.onclick = () => {
       const next = Number(b.dataset.machine);
       if (next === machine) return;
-      leave();
-      machine = next;
-      render(true);
+      go(next);
     };
   });
 

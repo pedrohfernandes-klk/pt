@@ -79,7 +79,7 @@ async function oficina(browser,host){
  console.log('PASS timer and draft kept on reveal, pause on switch, focus, keyboard, annotations after checking, paper, projection first screen');
 }
 async function run(){await new Promise(r=>server.listen(0,'127.0.0.1',r));let browser;
-try{browser=await chromium.launch({headless:true,...(process.env.PT_BROWSER_CHANNEL?{channel:process.env.PT_BROWSER_CHANNEL}:{})});const page=await browser.newPage();const errors=[];page.on('pageerror',e=>errors.push(e.message));const host=`http://127.0.0.1:${server.address().port}`;
+try{browser=await chromium.launch({headless:true,...(process.env.PT_BROWSER_CHANNEL?{channel:process.env.PT_BROWSER_CHANNEL}:{})});const page=await browser.newPage();const errors=[];page.on('pageerror',e=>errors.push(e.message));page.on('dialog',d=>d.accept());const host=`http://127.0.0.1:${server.address().port}`;
 for(const width of [390,1366]){await page.setViewportSize({width,height:900});await page.goto(host+'/exame/laboratorio/');await page.evaluate(()=>window.print=()=>{});
 for(const text of ['0','1']){await page.locator('#texto').selectOption(text);
 for(let machine=0;machine<4;machine++){await page.locator(`[data-machine="${machine}"]`).click();assert(await page.getByRole('heading',{name:'Uma resposta possível',exact:true}).isHidden());
@@ -92,7 +92,45 @@ await page.locator('#projetar').click();if(machine>=2)assert(await page.locator(
 await page.goto(host+'/exame/laboratorio/?projetar=1');assert.equal(await page.locator('#projetar').getAttribute('aria-pressed'),'true');await page.locator('[data-machine="2"]').click();await page.locator('#exercise .relogio-principal').click();await page.waitForTimeout(1250);assert.notEqual(await page.locator('#exercise .relogio-mostrador').innerText(),'02:00');await page.locator('#exercise .relogio-recomecar').click();assert.equal(await page.locator('#exercise .relogio-mostrador').innerText(),'02:00');assert(await page.getByRole('heading',{name:'Uma resposta possível',exact:true}).isHidden());
 if(process.env.PT_SCREENSHOT){await page.screenshot({path:process.env.PT_SCREENSHOT,fullPage:true});}
 await oficina(browser,host);
+await percurso(browser,host);
 await page.goto(host+'/exame/');await page.locator('.session-card').first().waitFor();assert.equal(await page.locator('.session-card').count(),27);assert.equal(await page.locator('a[href="laboratorio/"]').count(),1);
 assert.deepEqual(errors,[]);console.log('PASS timer, direct projection link, preserved 27-session catalogue, no browser errors');
 }finally{if(browser)await browser.close();await new Promise(r=>server.close(r));}}
 run().catch(e=>{console.error(e);process.exitCode=1;});
+
+async function percurso(browser,host){
+ const page=await browser.newPage({viewport:{width:1366,height:900}});const errors=[];page.on('pageerror',e=>errors.push(e.message));
+ await page.goto(host+'/exame/laboratorio/');await page.evaluate(()=>window.print=()=>{});
+ await page.locator('.of-percurso [data-go="1"]').click();
+ assert.equal(await page.locator('[aria-current="step"]').getAttribute('data-machine'),'1');
+ await page.locator('#texto').selectOption('1');await page.locator('[data-answer="1"]').click();await page.locator('#verify').click();
+ assert.match(await page.locator('#feedback').innerText(),/Evidência relevante, mas incompleta/);
+ assert(!await page.locator('[data-answer="1"]').evaluate(e=>e.classList.contains('incorrect')));
+ await page.locator('.of-percurso [data-go="2"]').click();
+ assert(await page.locator('#keep-draft').isDisabled());await page.locator('#criteria-toggle').click();
+ assert(await page.locator('#writing-criteria').isVisible());assert(await page.getByRole('heading',{name:'Uma resposta possível',exact:true}).isHidden());
+ assert.equal(await page.locator('#criteria-toggle').getAttribute('aria-expanded'),'true');
+ await page.locator('#answer').fill('Primeira versão privada <b>não é HTML</b>');await page.locator('#keep-draft').click();
+ assert.equal(await page.locator('.of-manuscrito').innerText(),'Primeira versão privada <b>não é HTML</b>');assert.equal(await page.locator('.of-manuscrito b').count(),0);
+ await page.locator('#answer').fill('Versão revista privada: afeto e dificuldade de despedida.');await page.locator('#reflection').fill('Relacionei o contrato com os gestos finais.');
+ await page.locator('.of-percurso [data-go="3"]').click();await page.locator('.of-percurso [data-go="2"]').click();
+ assert.match(await page.locator('#answer').inputValue(),/^Versão revista privada/);assert.match(await page.locator('.of-manuscrito').innerText(),/^Primeira versão privada/);
+ assert.equal(await page.locator('#reflection').inputValue(),'Relacionei o contrato com os gestos finais.');
+ await page.locator('#papel').click();assert(!/privada|Relacionei o contrato/.test(await page.locator('#print-sheet').innerText()));
+ await page.locator('#projetar').click();assert(await page.locator('.of-primeira').isHidden());assert(await page.locator('#reflection').isHidden());
+ await page.locator('#projetar').click();await page.locator('#solucoes').click();assert(!/privada|Relacionei o contrato/.test(await page.locator('#print-sheet').innerText()));
+ page.once('dialog',d=>d.dismiss());await page.locator('#restart').click();assert.match(await page.locator('#answer').inputValue(),/^Versão revista privada/);
+ page.once('dialog',d=>d.accept());await page.locator('#restart').click();assert.equal(await page.locator('#answer').inputValue(),'');assert.equal(await page.locator('.of-primeira').count(),0);
+ await page.setViewportSize({width:390,height:844});await page.locator('#answer').fill('Resposta móvel');await page.locator('#keep-draft').click();
+ assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
+ if(process.env.PT_SCREENSHOT){
+  page.once('dialog',d=>d.accept());await page.locator('#restart').click();
+  await page.setViewportSize({width:1366,height:900});
+  await page.locator('#answer').fill('Leonor sente saudades quando regressa à escola.');await page.locator('#keep-draft').click();
+  await page.locator('#answer').fill('Leonor manifesta afeto pela escola da infância, visível no sorriso ao reconhecer a sua marca. A demora em afastar a mão sugere dificuldade na despedida, em contraste com a partida iminente anunciada pelo contrato de trabalho (linhas 2–4).');
+  await page.locator('#reflection').fill('Relacionei o sorriso e a demora com a partida. Passei de um sentimento genérico para uma interpretação sustentada no texto.');
+  await page.locator('#criteria-toggle').click();
+  await page.screenshot({path:path.join(path.dirname(process.env.PT_SCREENSHOT),'lab-revisao.png'),fullPage:true,animations:'disabled'});
+ }
+ assert.deepEqual(errors,[]);await page.close();console.log('PASS guided journey, nuanced evidence, criteria before model, original/revision/reflection preserved, escaped text, privacy in projection/print, cancel/confirm reset, mobile');
+}

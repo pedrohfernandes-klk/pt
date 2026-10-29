@@ -6,6 +6,7 @@ ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/'scripts'))
 from audit_cards import lesson_cards
 from test_task_routes_closure import original_lesson_text
+from auditoria_20261028 import undo as undo_audit_20261028
 
 class UnitPlacement(HTMLParser):
  def __init__(self,text):super().__init__();self.stack=[];self.tasks=[];self.feed(text)
@@ -21,7 +22,8 @@ class TaskNinety(unittest.TestCase):
   # The original support retains its rubric; F11 only changes the surrounding UX.
   source=original_lesson_text('m4/licao-m4-f11/index.html')
   old=json.JSONDecoder().raw_decode(source[source.index('CARTOES=')+len('CARTOES='):])[0][15]['html']
-  page=(ROOT/'tarefas/m4-u3/index.html').read_text('utf-8')
+  # 28/10/2026: o apoio de comparação perdeu «fichas», «folhas» e «HTML» (auditoria; manifesto literal).
+  page=undo_audit_20261028('tarefas/m4-u3/index.html',(ROOT/'tarefas/m4-u3/index.html').read_text('utf-8'))
   self.assertIn(old.split('<details',1)[0],page)
   criteria=re.search(r'<summary>O que conta</summary><div>(<ol>.*?</ol>)',old,re.S).group(1)
   self.assertIn(criteria,page)
