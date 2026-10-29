@@ -115,7 +115,8 @@ def validate_task_source(path, source=None):
         raise AssertionError('Corrupt frozen predecessor: ' + relative)
     actual = (ROOT / relative).read_text('utf-8') if source is None else source
     # 28/10/2026: as correções literais da auditoria do M1 e do M4 desfazem-se antes de comparar; a página
-    # devolvida continua a ser a real.
+    # devolvida continua a ser a real. 28/10/2026 (segundo lote): o undo desfaz também, e antes, o manifesto do
+    # M7 e do resto do M4 e do M1 (tarefas do M7: sem «folhas», cartões pelo nome, próclise, título, itálico).
     checked = undo_audit_20261028(relative, actual)
     successors = _choice_successors()
     if relative in successors:

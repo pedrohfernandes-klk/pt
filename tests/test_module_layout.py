@@ -29,6 +29,8 @@ class ModuleLayout(unittest.TestCase):
   for module in range(1,10):
    source=(ROOT/f'm{module}/index.html').read_text('utf-8-sig')
    # 28/10/2026: «produção em papel» e «trabalho em papel» também no M4 e no M7 (auditoria; manifesto literal).
+   # 28/10/2026 (segundo lote): o undo desfaz também, e antes, o manifesto do M7 e do resto do M4 e do M1
+   # (cartões de tarefa do M1 sem «·»; arquivo do M7 sem remissões para cartões).
    source=undo_audit_20261028(f'm{module}/index.html',source)
    # Exact authorised UX wording only; restore it for the frozen index snapshot.
    # 28/10/2026 (PR #122): mais duas cadeias literais autorizadas no M1 («trabalho em papel» nos cartões das tarefas).
