@@ -4,7 +4,11 @@ on:
     paths:
       - 'exame/**'
       - 'assets/exame/**'
+      - 'assets/pt-lessons/**'
+      - 'scripts/audit_cards.py'
       - 'tests/*exame*'
+      - 'tests/*provas*'
+      - 'tests/fixtures/prova-639-*'
       - 'assets/relogio.*'
       - 'tests/browser_relogio.py'
       - '.github/workflows/pt-exame-laboratorio-qa.yml'
@@ -28,7 +32,10 @@ jobs:
           node --check assets/exame/app.js
           node --check assets/exame/dossier.js
           node --check assets/relogio.js
+          node --check assets/exame/provas.js
+          node --check assets/exame/provas-licao.js
           python -m unittest discover -s tests -p 'test_exame*.py' -v
+          python -m unittest discover -s tests -p 'test_provas*.py' -v
       - name: Preparar navegador
         run: |
           npm install --no-save --package-lock=false playwright
@@ -42,3 +49,5 @@ jobs:
           python tests/browser_exame_cache.py
           python tests/browser_exame_alignment.py
           python tests/browser_relogio.py
+      - name: Testar as provas em cartões
+        run: python tests/browser_provas_cartoes.py

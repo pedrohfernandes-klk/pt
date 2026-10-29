@@ -2,3 +2,8 @@
 
 /* Video is optional: the text route and questions remain available. */
 .video-clips{display:grid;gap:24px;margin-block:24px}.video-clip{border-top:3px solid var(--ink);padding-top:12px;min-width:0}.video-clip h3{margin-top:0}.video-player{aspect-ratio:16/9;width:100%;background:var(--paper);border:1px solid var(--line);display:grid;place-items:center}.video-player iframe{width:100%;height:100%;border:0}.video-fallback{padding-block:14px;border-block:1px solid var(--line);margin-bottom:20px}.video-fallback summary{font-weight:700;cursor:pointer}@media print{.video-player{display:none}}
+
+/* 29/10/2026 (Provas em cartões): com cinco ligações, a navegação do cabeçalho passa à linha seguinte em vez de alargar a página a 320 px. */
+.site-head nav{flex-wrap:wrap;row-gap:0}
+/* 29/10/2026 (Provas em cartões): no laboratório, a 320 px e com letra de substituição larga (DejaVu Sans, no CI), a lista dos textos de treino alargava a página; o rótulo e a lista passam a poder ir para linhas diferentes e a lista encolhe. */
+body.oficina .of-escolha-texto{flex-wrap:wrap;min-width:0}:root body.oficina .of-escolha-texto select{min-width:0;flex:1 1 auto}

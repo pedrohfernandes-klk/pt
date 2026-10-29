@@ -1,0 +1,2456 @@
+{
+ "_sobre": {
+  "o_que_e": "Transcrição estruturada e fiel do Exame Final Nacional de Português (Prova 639), 1.ª fase, 2026, VERSÃO 2, e dos respetivos critérios de classificação, para construir as lições «Provas em cartões».",
+  "convencoes": {
+   "_texto_": "itálico, como no PDF",
+   "**texto**": "negrito, como no PDF",
+   "[^n]": "chamada de nota n (no PDF, número em expoente colado à palavra)",
+   "descritores": "cada nível tem uma lista de alternativas (no PDF, separadas por «OU»); cada alternativa é uma lista de frases ou de linhas, pela ordem do PDF",
+   "linhas": "cada linha numerada guarda o texto exato dessa linha na prova; «inicio_paragrafo» marca as linhas com recuo de parágrafo",
+   "aspas e travessões": "mantidos como no PDF, com os mesmos carateres (aspas angulares, traços de vários comprimentos); os travessões longos só aparecem em texto da prova",
+   "campos *_nossa* e nota_nossa": "texto nosso (não é da prova nem dos critérios)"
+  },
+  "conferencia": "Linhas dos textos extraídas com pdftotext -layout e conferidas com as páginas convertidas em imagem (pdftoppm). Itálicos e negritos conferidos pelos nomes das fontes no PDF (pdfplumber). Todos os enunciados, opções, notas, fontes, tópicos e descritores foram comparados automaticamente com o texto do PDF (sem a marca de água), por correspondência de cadeias.",
+  "gerado_em": "2026-10-29",
+  "conferencia_29_10": "Enunciado igual, byte a byte, ao PDF da versão 2 publicado em eduqa.pt; texto dos critérios igual ao dos critérios publicados em eduqa.pt (a cópia pública tem a marca de água «VERSÃO DE TRABALHO»)."
+ },
+ "prova": {
+  "titulo": "Exame Final Nacional de Português",
+  "codigo": "639",
+  "fase": "1.ª Fase",
+  "ano": 2026,
+  "versao": 2,
+  "versao_rotulo": "VERSÃO 2",
+  "nivel": "Ensino Secundário",
+  "ano_de_escolaridade": "12.º Ano de Escolaridade",
+  "enquadramento_legal": "Decreto-Lei n.º 55/2018, de 6 de julho | Decreto-Lei n.º 62/2023, de 25 de julho",
+  "duracao": "Duração da Prova: 120 minutos. | Tolerância: 30 minutos.",
+  "paginas": 14,
+  "rodape": "Prova 639.V2/1.ª F.",
+  "autor_instituicao": "EduQA, Instituto de Educação, Qualidade e Avaliação",
+  "aviso_autor": "O enunciado e os critérios de 2026 têm o logótipo do EduQA (Instituto de Educação, Qualidade e Avaliação), ao lado do da República Portuguesa (Educação, Ciência e Inovação); as provas de 2023 a 2025 trazem o do IAVE, I.P. Para 2026, o crédito «oficial» deve ser EduQA, não IAVE.",
+  "fontes": {
+   "enunciado_url": "https://www.examesnacionais.com.pt/exames-nacionais/12ano/2026-1fase/Portugues.pdf",
+   "criterios_url": "https://www.examesnacionais.com.pt/exames-nacionais/12ano/2026-1fase/Portugues_Criterios.pdf",
+   "enunciado_original_url": "https://eduqa.pt/wp-content/uploads/2026/06/portugues_prova_639_v2_enunciado.pdf",
+   "criterios_original_url": "https://eduqa.pt/wp-content/uploads/2026/07/portugues_prova_639_cc.pdf"
+  },
+  "capa": {
+   "regra_dos_itens": "A prova inclui 10 itens, devidamente identificados no enunciado (✱), cujas respostas contribuem obrigatoriamente para a classificação final. Dos restantes 5 itens da prova, apenas contribuem para a classificação final os 3 itens cujas respostas obtenham melhor pontuação.",
+   "nota_simbolo": "No PDF, o símbolo é uma etiqueta cinzenta com um asterisco, posta antes do número dos itens obrigatórios e do título «GRUPO III».",
+   "instrucoes": [
+    "**As respostas aos itens da prova são registadas no caderno de respostas.**",
+    "Não é permitida a consulta de dicionário.",
+    "Nas respostas aos itens de escolha múltipla, selecione a opção correta. Assinale, na folha de respostas, a opção selecionada.",
+    "As cotações dos itens encontram-se no final do enunciado da prova."
+   ]
+  }
+ },
+ "criterios": {
+  "titulo": "Critérios de Classificação",
+  "paginas": 16,
+  "rodape": "Prova 639/1.ª F. | CC",
+  "marca_de_agua": "VERSÃO DE TRABALHO",
+  "aviso_marca_de_agua": "Todas as páginas dos critérios descarregados têm a marca de água «VERSÃO DE TRABALHO» (as cópias de 2023 a 2026 no mesmo sítio também). Convém dizer nas lições que os critérios usados são os publicados com essa marca.",
+  "gerais": {
+   "titulo": "CRITÉRIOS GERAIS DE CLASSIFICAÇÃO",
+   "abertura": [
+    "A classificação a atribuir a cada resposta resulta da aplicação dos critérios gerais e dos critérios específicos apresentados para cada item e é expressa por um número inteiro.",
+    "A ausência de indicação inequívoca da versão da prova implica a classificação com zero pontos das respostas aos itens de seleção.",
+    "As respostas ilegíveis ou que não possam ser claramente identificadas são classificadas com zero pontos."
+   ],
+   "itens_de_selecao": [
+    "As respostas aos itens de seleção podem ser classificadas de forma dicotómica ou por níveis de desempenho, de acordo com os critérios específicos. No primeiro caso, a pontuação só é atribuída às respostas corretas, sendo todas as outras respostas classificadas com zero pontos. No caso da classificação por níveis de desempenho, a cada nível corresponde uma dada pontuação, de acordo com os critérios específicos."
+   ],
+   "itens_de_construcao": [
+    "Os critérios de classificação relativos aos itens de construção apresentam-se organizados por parâmetros com os respetivos níveis de desempenho. A cada nível de desempenho corresponde uma dada pontuação. Se permanecerem dúvidas quanto ao nível a atribuir, deve optar-se pelo nível mais elevado de entre os dois tidos em consideração. Qualquer resposta que não atinja o nível 1 de desempenho num parâmetro é classificada com zero pontos nesse parâmetro. A classificação a atribuir à resposta resulta da soma das pontuações atribuídas aos diferentes parâmetros.",
+    "Em caso de omissão ou de engano na identificação de uma resposta, esta pode ser classificada se for possível identificar inequivocamente o item a que diz respeito.",
+    "Se for apresentada mais do que uma resposta ao mesmo item, só é classificada a resposta que surgir em primeiro lugar."
+   ],
+   "resposta_restrita": {
+    "paragrafos": [
+     "Nos itens de resposta restrita, são avaliados aspetos de conteúdo e de estruturação do discurso (C-ED) e de correção linguística (CL).",
+     "A classificação com zero pontos no parâmetro que contempla aspetos de conteúdo e de estruturação do discurso implica a classificação com zero pontos no parâmetro que contempla os aspetos de correção linguística.",
+     "As respostas que não apresentem exatamente os termos ou interpretações constantes nos critérios específicos são classificadas em igualdade de circunstâncias com aquelas que os apresentem, desde que o seu conteúdo seja cientificamente válido, adequado ao solicitado e enquadrado pelos documentos curriculares de referência.",
+     "No âmbito da estruturação do discurso, avalia-se a capacidade de assegurar a progressão e o encadeamento da informação através do recurso a mecanismos de coesão textual adequados, considerando-se o seguinte:"
+    ],
+    "lista": [
+     "exceto quando tal é expressamente requerido no item, as respostas não têm de apresentar um parágrafo introdutório nem um parágrafo conclusivo;",
+     "apenas deve ser penalizada a ausência dos parágrafos inequivocamente necessários, ou seja, aqueles que decorrem da introdução de unidades de sentido claramente distintas das anteriores;",
+     "a progressão e a clareza das ideias podem ser asseguradas através de diversos mecanismos (nomeadamente a pontuação e a repetição lexical), sem recurso obrigatório a conectores interfrásicos."
+    ],
+    "fecho": "No âmbito da correção linguística, os níveis de desempenho têm em conta o tipo e o número de ocorrências, considerando a tipologia prevista no Quadro 1."
+   },
+   "resposta_extensa": [
+    "No item de resposta extensa, são avaliados aspetos de estruturação temática e discursiva (ETD) e de correção linguística (CL).",
+    "No que diz respeito à estruturação temática e discursiva, são considerados os parâmetros seguintes: (A) Género/Formato Textual, (B) Tema e Pertinência da Informação, (C) Organização e Coesão Textuais.",
+    "A atribuição da classificação de zero pontos no parâmetro A (Género/Formato Textual) ou no parâmetro B (Tema e Pertinência da Informação) implica a atribuição de zero pontos nos restantes parâmetros da ETD, bem como na CL.",
+    "No âmbito da correção linguística, os níveis de desempenho têm em conta o tipo e o número de ocorrências, considerando a tipologia prevista no Quadro 1."
+   ],
+   "tipologia_de_erros": {
+    "introducao": "O Quadro 1 apresenta a tipologia de erros no âmbito da correção linguística aplicável aos itens de resposta restrita e ao item de resposta extensa.",
+    "quadro_1": {
+     "titulo": "Quadro 1 – Tipologia de erros no âmbito da correção linguística",
+     "Tipo A": [
+      "erro inequívoco de pontuação",
+      "erro de ortografia (incluindo erro de acentuação, erro de translineação e uso indevido de letra minúscula ou de letra maiúscula)",
+      "erro de morfologia",
+      "incumprimento das regras de citação de texto ou de referência a título de uma obra"
+     ],
+     "Tipo B": [
+      "erro de sintaxe",
+      "impropriedade lexical"
+     ]
+    },
+    "pontuacao": [
+     "Entende-se por erro inequívoco de pontuação aquele que representa uma infração de regras elementares na colocação de vírgula, ponto final, ponto de exclamação, ponto de interrogação, dois pontos, ponto e vírgula, aspas, travessão e parênteses.",
+     "No caso específico da vírgula, considera-se erro inequívoco o seu uso para separar quer o sujeito do predicado, quer o verbo dos seus complementos, incluindo os constituintes oracionais (orações subordinadas substantivas completivas ou relativas).",
+     "Considera-se obrigatório o uso de vírgula nos contextos seguintes:"
+    ],
+    "virgula_obrigatoria": [
+     "separar o nome do local da data;",
+     "separar os elementos de uma enumeração;",
+     "isolar o vocativo;",
+     "isolar o modificador do nome apositivo, seja ele de natureza adjetival, preposicional ou oracional (orações subordinadas adjetivas relativas explicativas);",
+     "isolar palavras ou expressões intencionalmente repetidas em construções de intensificação;",
+     "indicar a elipse de um verbo em orações com uma estrutura paralela à daquelas que as antecedem;",
+     "isolar palavras, expressões ou orações intercaladas na frase;",
+     "separar orações coordenadas (quando aplicável);",
+     "separar orações adverbiais, finitas ou não finitas, quando colocadas no início da frase ou nela intercaladas."
+    ],
+    "contagem": "Em cada resposta, contabiliza-se como uma única ocorrência quer a repetição de uma palavra com o mesmo erro ortográfico, quer a presença de mais de um erro na mesma palavra (incluindo erro de acentuação, erro de translineação e uso indevido de letra minúscula ou de letra maiúscula)."
+   },
+   "fatores_de_desvalorizacao": [
+    {
+     "titulo": "Respostas escritas integralmente em maiúsculas",
+     "texto": [
+      "As provas em que se apresente, pelo menos, uma resposta restrita ou extensa escrita integralmente em maiúsculas são sujeitas a uma desvalorização de cinco pontos na classificação total."
+     ]
+    },
+    {
+     "titulo": "Limites de extensão",
+     "texto": [
+      "Sempre que não sejam respeitados os limites relativos ao número de palavras indicados na instrução do item de resposta extensa, desconta-se um ponto por cada palavra (a mais ou a menos), até ao máximo de cinco (1 × 5) pontos, depois de aplicados todos os critérios definidos para o item.",
+      "Caso a resposta apresente uma extensão inferior a oitenta palavras, é classificada com zero pontos.",
+      "Para efeitos de contagem, considera-se uma palavra qualquer sequência delimitada por espaços em branco, mesmo quando esta integre elementos ligados por hífen (ex.: /dir-se-ia/). Qualquer número conta como uma única palavra, independentemente do número de algarismos que o constituam (ex.: /2026/).",
+      "Nos casos em que da aplicação deste fator de desvalorização resultar uma classificação inferior a zero pontos, é atribuída à resposta a classificação de zero pontos."
+     ]
+    }
+   ]
+  },
+  "tabelas_CL": {
+   "_leitura": "linhas = número de erros do tipo B; colunas = número de erros do tipo A; valor = pontuação. Células que não existem na tabela (a sombreado no PDF) dão zero pontos no parâmetro CL, porque o número de erros excede o máximo da tabela.",
+   "CL_3": {
+    "usada_em": [
+     "I.1",
+     "I.2",
+     "I.4",
+     "I.5"
+    ],
+    "pontos": 3,
+    "erros_B": {
+     "0": {
+      "A0": 3,
+      "A1": 3,
+      "A2": 2,
+      "A3": 1
+     },
+     "1": {
+      "A0": 2,
+      "A1": 1
+     }
+    }
+   },
+   "CL_2": {
+    "usada_em": [
+     "I.7"
+    ],
+    "pontos": 2,
+    "erros_B": {
+     "0": {
+      "A0": 2,
+      "A1": 2,
+      "A2": 1,
+      "A3": 1
+     },
+     "1": {
+      "A0": 1
+     }
+    }
+   },
+   "CL_14": {
+    "usada_em": [
+     "III"
+    ],
+    "pontos": 14,
+    "erros_B": {
+     "0": {
+      "A0": 14,
+      "A1": 14,
+      "A2": 14,
+      "A3": 11,
+      "A4": 11,
+      "A5": 11,
+      "A6": 8,
+      "A7": 8,
+      "A8": 8,
+      "A9": 5,
+      "A10": 5,
+      "A11": 5,
+      "A12": 2,
+      "A13": 2,
+      "A14": 2
+     },
+     "1": {
+      "A0": 14,
+      "A1": 11,
+      "A2": 11,
+      "A3": 11,
+      "A4": 8,
+      "A5": 8,
+      "A6": 8,
+      "A7": 5,
+      "A8": 5,
+      "A9": 5,
+      "A10": 2,
+      "A11": 2,
+      "A12": 2
+     },
+     "2": {
+      "A0": 11,
+      "A1": 11,
+      "A2": 8,
+      "A3": 8,
+      "A4": 8,
+      "A5": 5,
+      "A6": 5,
+      "A7": 5,
+      "A8": 2,
+      "A9": 2,
+      "A10": 2
+     },
+     "3": {
+      "A0": 8,
+      "A1": 8,
+      "A2": 8,
+      "A3": 5,
+      "A4": 5,
+      "A5": 5,
+      "A6": 2,
+      "A7": 2,
+      "A8": 2
+     },
+     "4": {
+      "A0": 8,
+      "A1": 5,
+      "A2": 5,
+      "A3": 5,
+      "A4": 2,
+      "A5": 2,
+      "A6": 2
+     },
+     "5": {
+      "A0": 5,
+      "A1": 5,
+      "A2": 2,
+      "A3": 2,
+      "A4": 2
+     },
+     "6": {
+      "A0": 2
+     },
+     "7": {
+      "A0": 2
+     }
+    }
+   }
+  }
+ },
+ "cotacoes": {
+  "obrigatorios": {
+   "texto": "As pontuações obtidas nas respostas a estes 10 itens da prova contribuem obrigatoriamente para a classificação final.",
+   "itens": [
+    [
+     "I.1",
+     13
+    ],
+    [
+     "I.2",
+     13
+    ],
+    [
+     "I.4",
+     13
+    ],
+    [
+     "I.5",
+     13
+    ],
+    [
+     "I.7",
+     13
+    ],
+    [
+     "II.1",
+     13
+    ],
+    [
+     "II.2",
+     13
+    ],
+    [
+     "II.6",
+     13
+    ],
+    [
+     "II.7",
+     13
+    ],
+    [
+     "III",
+     44
+    ]
+   ],
+   "subtotal": 161
+  },
+  "opcionais": {
+   "texto": "Destes 5 itens, contribuem para a classificação final da prova os 3 itens cujas respostas obtenham melhor pontuação.",
+   "itens": [
+    "I.3",
+    "I.6",
+    "II.3",
+    "II.4",
+    "II.5"
+   ],
+   "cotacao": "3 × 13 pontos",
+   "subtotal": 39
+  },
+  "total": 200
+ },
+ "grupos": [
+  {
+   "id": "I",
+   "titulo": "GRUPO I",
+   "dominios_nossa_designacao": "educação literária e leitura (designação nossa, não da prova)",
+   "instrucao": "Apresente as suas respostas de forma bem estruturada.",
+   "nota_dos_criterios": "Nos tópicos de resposta de cada item, as expressões separadas por barras oblíquas ‒ à exceção das utilizadas no interior de cada uma das transcrições ‒ correspondem a exemplos de formulações possíveis, apresentadas em alternativa. As ideias apresentadas entre parênteses não têm de ser obrigatoriamente mobilizadas para que as respostas sejam consideradas adequadas.",
+   "partes": [
+    {
+     "id": "A",
+     "titulo": "PARTE A",
+     "instrucao": "Leia a contextualização, os dois textos e as notas. A fim de facilitar a eventual referência a elementos textuais, as linhas são numeradas sequencialmente.",
+     "contextualizacao": {
+      "titulo": "Contextualização",
+      "paragrafos": [
+       "Em _Memorial do Convento_, a ação decorre no século XVIII. No excerto apresentado, Baltasar Mateus, também conhecido por Sete-Sóis, é um soldado que acaba de chegar a Lisboa, vindo de Évora, onde permaneceu durante alguns meses. Aí adquiriu um gancho e um espigão de ferro que lhe substituíram a mão esquerda, perdida durante a guerra da Sucessão Espanhola.",
+       "Em _O Ano da Morte de Ricardo Reis_, a ação decorre no século XX. No excerto selecionado, o protagonista, Ricardo Reis, recém-chegado do Brasil, após dezasseis anos de ausência, deambula pelas ruas da Baixa de Lisboa."
+      ]
+     },
+     "textos": [
+      {
+       "id": "I-A-1",
+       "autor": "José Saramago",
+       "obra": "_Memorial do Convento_",
+       "genero": "romance (excerto)",
+       "fonte": "José Saramago, _Memorial do Convento_, 27.ª ed., Lisboa, Caminho, 1998, pp. 41-42.",
+       "linhas": [
+        {
+         "n": 1,
+         "t": "Com pouco dinheiro no bolsilho, umas só moedas de cobre que soavam bem menos que os",
+         "inicio_paragrafo": true
+        },
+        {
+         "n": 2,
+         "t": "ferros do alforge[^1], desembarcado numa cidade que mal conhecia, tinha Baltasar de resolver",
+         "inicio_paragrafo": false
+        },
+        {
+         "n": 3,
+         "t": "que passos daria a seguir, se a Mafra onde não poderia a sua única mão pegar numa enxada",
+         "inicio_paragrafo": false
+        },
+        {
+         "n": 4,
+         "t": "que requer duas, se ao paço onde talvez lhe dessem uma esmola por conta do sangue perdido.",
+         "inicio_paragrafo": false
+        },
+        {
+         "n": 5,
+         "t": "Alguém lhe tinha dito isto em Évora, mas também lhe foram dizendo que era necessário pedir",
+         "inicio_paragrafo": false
+        },
+        {
+         "n": 6,
+         "t": "muito e por muito tempo, com muito empenho de padrinhos, e apesar disso muitas vezes se",
+         "inicio_paragrafo": false
+        },
+        {
+         "n": 7,
+         "t": "apagava a voz e acabava a vida antes que se visse a cor ao dinheiro. Na falta, aí estavam as",
+         "inicio_paragrafo": false
+        },
+        {
+         "n": 8,
+         "t": "irmandades para a esmola e as portarias dos conventos que proviam ao caldo e ao tassalho[^2]",
+         "inicio_paragrafo": false
+        },
+        {
+         "n": 9,
+         "t": "do pão. E um homem a quem falte a mão canhota não tem muito de que se queixar se ainda",
+         "inicio_paragrafo": false
+        },
+        {
+         "n": 10,
+         "t": "lhe ficou a destra para pedir a quem passa. Ou exigir com um ferro aguçado.",
+         "inicio_paragrafo": false
+        },
+        {
+         "n": 11,
+         "t": "Sete-Sóis atravessou o mercado do peixe. As vendedeiras gritavam desbocadamente",
+         "inicio_paragrafo": true
+        },
+        {
+         "n": 12,
+         "t": "aos compradores, provocavam-nos, sacudiam os braços carregados de braceletes de ouro,",
+         "inicio_paragrafo": false
+        },
+        {
+         "n": 13,
+         "t": "batiam juras no peito onde se reuniam fios, cruzes, berloques, cordões, tudo de bom ouro",
+         "inicio_paragrafo": false
+        },
+        {
+         "n": 14,
+         "t": "brasileiro, assim como os longos e pesados brincos ou argolas, arrecadas ricas que valiam",
+         "inicio_paragrafo": false
+        },
+        {
+         "n": 15,
+         "t": "a mulher. Mas, no meio da multidão suja, eram miraculosamente asseadas, como se as não",
+         "inicio_paragrafo": false
+        },
+        {
+         "n": 16,
+         "t": "tocasse sequer o cheiro do peixe que removiam às mãos cheias. À porta duma taberna que",
+         "inicio_paragrafo": false
+        },
+        {
+         "n": 17,
+         "t": "ficava ao lado da casa dos diamantes, Baltasar comprou três sardinhas assadas, que, sobre a",
+         "inicio_paragrafo": false
+        },
+        {
+         "n": 18,
+         "t": "indispensável fatia de pão, soprando e mordiscando, comeu enquanto caminhava em direção",
+         "inicio_paragrafo": false
+        },
+        {
+         "n": 19,
+         "t": "ao Terreiro do Paço.",
+         "inicio_paragrafo": false
+        }
+       ]
+      },
+      {
+       "id": "I-A-2",
+       "autor": "José Saramago",
+       "obra": "_O Ano da Morte de Ricardo Reis_",
+       "genero": "romance (excerto)",
+       "fonte": "José Saramago, _O Ano da Morte de Ricardo Reis_, 17.ª ed., Lisboa, Caminho, 2007, pp. 41-42.",
+       "linhas": [
+        {
+         "n": 20,
+         "t": "Agora, sai, urbanamente deu as boas-tardes, e agradecendo saiu pela porta da Rua dos",
+         "inicio_paragrafo": true
+        },
+        {
+         "n": 21,
+         "t": "Correeiros, esta que dá para a grande babilónia de ferro e vidro[^3] que é a Praça da Figueira,",
+         "inicio_paragrafo": false
+        },
+        {
+         "n": 22,
+         "t": "ainda agitada, porém nada que se possa comparar com as horas da manhã, ruidosas de gritos",
+         "inicio_paragrafo": false
+        },
+        {
+         "n": 23,
+         "t": "e pregões até ao paroxismo[^4]. Respira-se uma atmosfera composta de mil cheiros intensos,",
+         "inicio_paragrafo": false
+        },
+        {
+         "n": 24,
+         "t": "a couve esmagada e murcha, a excrementos de coelho, a penas de galinha escaldadas,",
+         "inicio_paragrafo": false
+        },
+        {
+         "n": 25,
+         "t": "a sangue, a pele esfolada. Andam a lavar as bancadas, as ruas interiores, com baldes e",
+         "inicio_paragrafo": false
+        },
+        {
+         "n": 26,
+         "t": "agulheta, e ásperos piaçabas, ouve-se de vez em quando um arrastar metálico, depois um",
+         "inicio_paragrafo": false
+        },
+        {
+         "n": 27,
+         "t": "estrondo, foi uma porta ondulada que se fechou. Ricardo Reis rodeou a praça pelo sul, entrou",
+         "inicio_paragrafo": false
+        },
+        {
+         "n": 28,
+         "t": "na Rua dos Douradores, quase não chovia já, por isso pôde fechar o guarda-chuva, olhar para",
+         "inicio_paragrafo": false
+        },
+        {
+         "n": 29,
+         "t": "cima, e ver as altas frontarias de cinza parda, as fileiras de janelas à mesma altura, as de",
+         "inicio_paragrafo": false
+        },
+        {
+         "n": 30,
+         "t": "peitoril, as de sacada, com as monótonas cantarias prolongando-se pelo enfiamento da rua,",
+         "inicio_paragrafo": false
+        },
+        {
+         "n": 31,
+         "t": "até se confundirem em delgadas faixas verticais, cada vez mais estreitas, mas não tanto que",
+         "inicio_paragrafo": false
+        },
+        {
+         "n": 32,
+         "t": "se escondessem num ponto de fuga, porque lá ao fundo, aparentemente cortando o caminho,",
+         "inicio_paragrafo": false
+        },
+        {
+         "n": 33,
+         "t": "levanta-se um prédio da Rua da Conceição, igual de cor, de janelas e de grades, feito segundo",
+         "inicio_paragrafo": false
+        },
+        {
+         "n": 34,
+         "t": "o mesmo risco, ou de mínima diferença, todos porejando[^5] sombra e humidade, libertando",
+         "inicio_paragrafo": false
+        },
+        {
+         "n": 35,
+         "t": "nos saguões[^6] o cheiro dos esgotos rachados, com esparsas baforadas de gás, como não",
+         "inicio_paragrafo": false
+        },
+        {
+         "n": 36,
+         "t": "haveriam de ter as faces pálidas os caixeiros que vêm até à porta das lojas, com as suas batas",
+         "inicio_paragrafo": false
+        },
+        {
+         "n": 37,
+         "t": "ou guarda-pós[^7] de paninho cinzento, o lápis de tinta entalado na orelha, o ar enfadado de ser",
+         "inicio_paragrafo": false
+        },
+        {
+         "n": 38,
+         "t": "hoje segunda-feira e não ter o domingo valido a pena.",
+         "inicio_paragrafo": false
+        }
+       ],
+       "nota_numeracao": "A numeração continua do primeiro excerto (linhas 20 a 38), como na prova."
+      }
+     ],
+     "notas": [
+      {
+       "n": 1,
+       "linha": 2,
+       "texto": "_alforge_ – saco dividido em dois compartimentos, que se transporta ao ombro ou sobre o cavalo."
+      },
+      {
+       "n": 2,
+       "linha": 8,
+       "texto": "_tassalho_ – naco; pedaço."
+      },
+      {
+       "n": 3,
+       "linha": 21,
+       "texto": "_grande babilónia de ferro e vidro_ – referência à confusão e à desordem que existia no edifício do mercado da Praça da Figueira, em Lisboa, feito de ferro e de vidro."
+      },
+      {
+       "n": 4,
+       "linha": 23,
+       "texto": "_paroxismo_ – auge; momento de maior intensidade."
+      },
+      {
+       "n": 5,
+       "linha": 34,
+       "texto": "_porejando_ – destilando pelos poros."
+      },
+      {
+       "n": 6,
+       "linha": 35,
+       "texto": "_saguões_ – pátios estreitos e descobertos, que separam as traseiras de prédios."
+      },
+      {
+       "n": 7,
+       "linha": 37,
+       "texto": "_guarda-pós_ – peças de vestuário que se usam por cima de outra roupa para a proteger do pó."
+      }
+     ],
+     "itens": [
+      {
+       "numero": "I.1",
+       "n": 1,
+       "parte": "A",
+       "obrigatorio": true,
+       "tipo": "construção: resposta restrita",
+       "cotacao": 13,
+       "enunciado": [
+        "Releia o primeiro parágrafo do excerto extraído de _Memorial do Convento_.",
+        "Explicite o dilema com o qual Baltasar se debate, tendo em conta tanto a sua condição física como a sua condição económica."
+       ],
+       "verbo_instrucional": "Explicite",
+       "linhas_referidas": {
+        "texto": "I-A-1",
+        "de": 1,
+        "a": 10,
+        "origem": "«primeiro parágrafo» (linhas 1 a 10)"
+       },
+       "criterios": {
+        "pontos": 13,
+        "instrucao": "Devem ser abordados os tópicos seguintes, ou outros igualmente relevantes.",
+        "topicos": [
+         {
+          "texto": "Tendo pouco dinheiro, o dilema de Baltasar consiste em não saber para onde ir:",
+          "pontos": [
+           "se para Mafra (sua terra natal) para se dedicar à agricultura, uma vez que a perda de uma mão na guerra o impede de «pegar numa enxada» (l. 3);",
+           "se ao paço real para pedir uma esmola «por conta do sangue perdido» (l. 4)/da mão perdida na guerra, uma vez que (segundo lhe disseram) é necessário pedir durante muito tempo e com a intercessão de padrinhos para obter o apoio monetário do rei."
+          ]
+         }
+        ],
+        "parametros": [
+         {
+          "sigla": "C-ED",
+          "nome": "Aspetos de conteúdo e de estruturação do discurso",
+          "pontos": 10,
+          "nota_de_rodape": "Os descritores de desempenho definidos para este parâmetro devem ser considerados em articulação com os Critérios Gerais de Classificação relativos à estruturação do discurso (p. 2).",
+          "niveis": [
+           {
+            "nivel": 5,
+            "pontuacao": 10,
+            "descritores": [
+             [
+              "Explicita o dilema com o qual Baltasar se debate, tendo em conta a sua condição física e económica, abordando, adequadamente, dois tópicos de resposta.",
+              "Utiliza mecanismos de coesão textual que, apesar da eventual ocorrência de falhas, asseguram a progressão e o encadeamento das ideias."
+             ]
+            ]
+           },
+           {
+            "nivel": 4,
+            "pontuacao": 8,
+            "descritores": [
+             [
+              "Explicita o dilema com o qual Baltasar se debate, tendo em conta a sua condição física e económica, abordando, adequadamente, dois tópicos de resposta.",
+              "Utiliza mecanismos de coesão textual com falhas que comprometem a progressão e o encadeamento das ideias."
+             ],
+             [
+              "Explicita o dilema com o qual Baltasar se debate, tendo em conta a sua condição física e económica, abordando dois tópicos de resposta, um adequadamente e outro com pequenas imprecisões e/ou omissões.",
+              "Utiliza mecanismos de coesão textual que, apesar da eventual ocorrência de falhas, asseguram a progressão e o encadeamento das ideias."
+             ]
+            ]
+           },
+           {
+            "nivel": 3,
+            "pontuacao": 6,
+            "descritores": [
+             [
+              "Explicita o dilema com o qual Baltasar se debate, tendo em conta a sua condição física e económica, abordando dois tópicos de resposta, um adequadamente e outro com pequenas imprecisões e/ou omissões.",
+              "Utiliza mecanismos de coesão textual com falhas que comprometem a progressão e o encadeamento das ideias."
+             ],
+             [
+              "Explicita o dilema com o qual Baltasar se debate, tendo em conta a sua condição física e económica, abordando dois tópicos de resposta, ambos com pequenas imprecisões e/ou omissões.",
+              "Utiliza mecanismos de coesão textual que, apesar da eventual ocorrência de falhas, asseguram a progressão e o encadeamento das ideias."
+             ],
+             [
+              "Explicita o dilema com o qual Baltasar se debate, tendo em conta a sua condição física e económica, abordando, adequadamente, um tópico de resposta.",
+              "Utiliza mecanismos de coesão textual que, apesar da eventual ocorrência de falhas, asseguram a progressão e o encadeamento das ideias."
+             ]
+            ]
+           },
+           {
+            "nivel": 2,
+            "pontuacao": 4,
+            "descritores": [
+             [
+              "Explicita o dilema com o qual Baltasar se debate, tendo em conta a sua condição física e económica, abordando dois tópicos de resposta, ambos com pequenas imprecisões e/ou omissões.",
+              "Utiliza mecanismos de coesão textual com falhas que comprometem a progressão e o encadeamento das ideias."
+             ],
+             [
+              "Explicita o dilema com o qual Baltasar se debate, tendo em conta a sua condição física e económica, abordando, adequadamente, um tópico de resposta.",
+              "Utiliza mecanismos de coesão textual com falhas que comprometem a progressão e o encadeamento das ideias."
+             ]
+            ]
+           },
+           {
+            "nivel": 1,
+            "pontuacao": 2,
+            "descritores": [
+             [
+              "Explicita o dilema com o qual Baltasar se debate, tendo em conta a sua condição física e económica, abordando um tópico de resposta, com pequenas imprecisões e/ou omissões.",
+              "Utiliza mecanismos de coesão textual com eventual ocorrência de falhas que podem comprometer a progressão e o encadeamento das ideias."
+             ]
+            ]
+           }
+          ]
+         },
+         {
+          "sigla": "CL",
+          "nome": "Aspetos de correção linguística",
+          "pontos": 3,
+          "nota_de_rodape": "_Vide_ Tipologia de erros no âmbito da correção linguística (pp. 2-3).",
+          "texto": "Após a contabilização dos erros do tipo A e do tipo B, apura-se a classificação neste parâmetro. A tabela abaixo apresenta a pontuação a atribuir, de acordo com o número de erros do tipo A e do tipo B identificados. Caso o número total de erros seja superior ao número máximo apresentado na tabela, o parâmetro CL é classificado com zero pontos.",
+          "tabela": "CL_3"
+         }
+        ],
+        "cenario_de_resposta": "Os critérios de 2026 não têm uma secção própria chamada «cenário de resposta»: o que fazem esse papel são os tópicos de resposta transcritos em «topicos», que os critérios apresentam como exemplos («ou outros igualmente relevantes»).",
+        "nota_nossa": "Os «dois tópicos de resposta» dos descritores correspondem, na nossa leitura, às duas alternativas do dilema (Mafra; paço). Os critérios não o dizem por estas palavras."
+       }
+      },
+      {
+       "numero": "I.2",
+       "n": 2,
+       "parte": "A",
+       "obrigatorio": true,
+       "tipo": "construção: resposta restrita",
+       "cotacao": 13,
+       "enunciado": [
+        "Na descrição dos ambientes representados nos dois excertos, ganham relevo os estímulos sensoriais.",
+        "Compare o ambiente do mercado do peixe em _Memorial do Convento_ (linhas 11 a 16) com o ambiente do mercado da Praça da Figueira em _O Ano da Morte de Ricardo Reis_ (linhas 23 a 27), com base em duas sensações distintas captadas pelos sentidos, relativamente a cada um desses ambientes."
+       ],
+       "verbo_instrucional": "Compare",
+       "linhas_referidas": [
+        {
+         "texto": "I-A-1",
+         "de": 11,
+         "a": 16
+        },
+        {
+         "texto": "I-A-2",
+         "de": 23,
+         "a": 27
+        }
+       ],
+       "criterios": {
+        "pontos": 13,
+        "instrucao": "Devem ser abordados **dois** dos tópicos seguintes, ou outros igualmente relevantes.",
+        "introducao_topicos": "As sensações auditivas, visuais e olfativas permitem ao leitor perceber que o ambiente vivido no mercado do peixe apresenta semelhanças com o ambiente vivido no mercado da Praça da Figueira:",
+        "topicos": [
+         {
+          "rotulo": "Sensações auditivas",
+          "pontos": [
+           "trata-se, em ambos os casos, de ambientes ruidosos (embora a intensidade dos sons seja diferente), pois, no mercado do peixe, as «vendedeiras gritavam desbocadamente aos compradores» (ll. 11-12), enquanto, no mercado da Praça da Figueira, se ouvem sons provenientes da lavagem das bancadas e das ruas interiores «com baldes e agulheta, e ásperos piaçabas» (ll. 25-26) e «de vez em quando um arrastar metálico, depois um estrondo» (ll. 26-27)."
+          ]
+         },
+         {
+          "rotulo": "Sensações visuais",
+          "pontos": [
+           "destaca-se, em ambos os locais, um ambiente agitado/movimentado, dado que as vendedeiras do mercado do peixe «sacudiam os braços carregados de braceletes de ouro, batiam juras no peito» (ll. 12-13), enquanto, no mercado da Praça da Figueira, «Andam a lavar as bancadas, as ruas interiores» (l. 25);",
+           "observa-se, em ambos os casos, um ambiente em que coexistem a sujidade e o asseio, pois, no mercado do peixe, as vendedeiras, «no meio da multidão suja, eram miraculosamente asseadas» (l. 15), enquanto, no mercado da Praça da Figueira, «Andam a lavar as bancadas, as ruas interiores» (l. 25), dada a imundície sugerida por expressões como «excrementos de coelho» (l. 24)."
+          ]
+         },
+         {
+          "rotulo": "Sensações olfativas",
+          "pontos": [
+           "evidenciam-se, em ambos os mercados, os cheiros intensos, a peixe, no mercado do peixe (l. 16), «a couve esmagada e murcha, a excrementos de coelho, a penas de galinha escaldadas, a sangue, a pele esfolada» (ll. 24-25), no mercado da Praça da Figueira."
+          ]
+         }
+        ],
+        "parametros": [
+         {
+          "sigla": "C-ED",
+          "nome": "Aspetos de conteúdo e de estruturação do discurso",
+          "pontos": 10,
+          "nota_de_rodape": "Os descritores de desempenho definidos para este parâmetro devem ser considerados em articulação com os Critérios Gerais de Classificação relativos à estruturação do discurso (p. 2).",
+          "niveis": [
+           {
+            "nivel": 5,
+            "pontuacao": 10,
+            "descritores": [
+             [
+              "Compara o ambiente do mercado do peixe com o ambiente do mercado da Praça da Figueira, com base em duas sensações distintas captadas pelos sentidos, relativamente a cada um desses ambientes, abordando, adequadamente, dois tópicos de resposta.",
+              "Utiliza mecanismos de coesão textual que, apesar da eventual ocorrência de falhas, asseguram a progressão e o encadeamento das ideias."
+             ]
+            ]
+           },
+           {
+            "nivel": 4,
+            "pontuacao": 8,
+            "descritores": [
+             [
+              "Compara o ambiente do mercado do peixe com o ambiente do mercado da Praça da Figueira, com base em duas sensações distintas captadas pelos sentidos, relativamente a cada um desses ambientes, abordando, adequadamente, dois tópicos de resposta.",
+              "Utiliza mecanismos de coesão textual com falhas que comprometem a progressão e o encadeamento das ideias."
+             ],
+             [
+              "Compara o ambiente do mercado do peixe com o ambiente do mercado da Praça da Figueira, com base em duas sensações distintas captadas pelos sentidos, relativamente a cada um desses ambientes, abordando dois tópicos de resposta, um adequadamente e outro com pequenas imprecisões e/ou omissões.",
+              "Utiliza mecanismos de coesão textual que, apesar da eventual ocorrência de falhas, asseguram a progressão e o encadeamento das ideias."
+             ]
+            ]
+           },
+           {
+            "nivel": 3,
+            "pontuacao": 6,
+            "descritores": [
+             [
+              "Compara o ambiente do mercado do peixe com o ambiente do mercado da Praça da Figueira, com base em duas sensações distintas captadas pelos sentidos, relativamente a cada um desses ambientes, abordando dois tópicos de resposta, um adequadamente e outro com pequenas imprecisões e/ou omissões.",
+              "Utiliza mecanismos de coesão textual com falhas que comprometem a progressão e o encadeamento das ideias."
+             ],
+             [
+              "Compara o ambiente do mercado do peixe com o ambiente do mercado da Praça da Figueira, com base em duas sensações distintas captadas pelos sentidos, relativamente a cada um desses ambientes, abordando dois tópicos de resposta, ambos com pequenas imprecisões e/ou omissões.",
+              "Utiliza mecanismos de coesão textual que, apesar da eventual ocorrência de falhas, asseguram a progressão e o encadeamento das ideias."
+             ],
+             [
+              "Compara o ambiente do mercado do peixe com o ambiente do mercado da Praça da Figueira, com base em apenas uma sensação captada pelos sentidos, relativamente a cada um desses ambientes, abordando, adequadamente, um tópico de resposta.",
+              "Utiliza mecanismos de coesão textual que, apesar da eventual ocorrência de falhas, asseguram a progressão e o encadeamento das ideias."
+             ]
+            ]
+           },
+           {
+            "nivel": 2,
+            "pontuacao": 4,
+            "descritores": [
+             [
+              "Compara o ambiente do mercado do peixe com o ambiente do mercado da Praça da Figueira, com base em duas sensações distintas captadas pelos sentidos, relativamente a cada um desses ambientes, abordando dois tópicos de resposta, ambos com pequenas imprecisões e/ou omissões.",
+              "Utiliza mecanismos de coesão textual com falhas que comprometem a progressão e o encadeamento das ideias."
+             ],
+             [
+              "Compara o ambiente do mercado do peixe com o ambiente do mercado da Praça da Figueira, com base em apenas uma sensação captada pelos sentidos, relativamente a cada um desses ambientes, abordando, adequadamente, um tópico de resposta.",
+              "Utiliza mecanismos de coesão textual com falhas que comprometem a progressão e o encadeamento das ideias."
+             ]
+            ]
+           },
+           {
+            "nivel": 1,
+            "pontuacao": 2,
+            "descritores": [
+             [
+              "Compara o ambiente do mercado do peixe com o ambiente do mercado da Praça da Figueira, com base em apenas uma sensação captada pelos sentidos, relativamente a cada um desses ambientes, abordando um tópico de resposta, com pequenas imprecisões e/ou omissões.",
+              "Utiliza mecanismos de coesão textual com eventual ocorrência de falhas que podem comprometer a progressão e o encadeamento das ideias."
+             ]
+            ]
+           }
+          ]
+         },
+         {
+          "sigla": "CL",
+          "nome": "Aspetos de correção linguística",
+          "pontos": 3,
+          "nota_de_rodape": "_Vide_ Tipologia de erros no âmbito da correção linguística (pp. 2-3).",
+          "texto": "Após a contabilização dos erros do tipo A e do tipo B, apura-se a classificação neste parâmetro. A tabela abaixo apresenta a pontuação a atribuir, de acordo com o número de erros do tipo A e do tipo B identificados. Caso o número total de erros seja superior ao número máximo apresentado na tabela, o parâmetro CL é classificado com zero pontos.",
+          "tabela": "CL_3"
+         }
+        ],
+        "cenario_de_resposta": "Os critérios de 2026 não têm uma secção própria chamada «cenário de resposta»: o que fazem esse papel são os tópicos de resposta transcritos em «topicos», que os critérios apresentam como exemplos («ou outros igualmente relevantes»)."
+       }
+      },
+      {
+       "numero": "I.3",
+       "n": 3,
+       "parte": "A",
+       "obrigatorio": false,
+       "tipo": "seleção: completamento (uma opção por espaço)",
+       "cotacao": 13,
+       "enunciado": [
+        "Complete o texto seguinte, selecionando a opção adequada a cada espaço.",
+        "Assinale, na folha de respostas, para cada letra, o número da opção selecionada."
+       ],
+       "texto_com_espacos": [
+        "No excerto compreendido entre «Ricardo Reis rodeou a praça» (linha 27) e «sombra e humidade» (linha 34), o narrador privilegia o ponto de vista de Ricardo Reis sobre a cidade de Lisboa, destacando-se, nessa passagem, a ideia de **(a)** .",
+        "Já no excerto compreendido entre «como não» (linha 35) e «valido a pena» (linha 38), é a visão subjetiva do narrador que prevalece, quando este reflete sobre **(b)** ."
+       ],
+       "linhas_referidas": [
+        {
+         "texto": "I-A-2",
+         "de": 27,
+         "a": 34
+        },
+        {
+         "texto": "I-A-2",
+         "de": 35,
+         "a": 38
+        }
+       ],
+       "opcoes": {
+        "a": [
+         {
+          "n": 1,
+          "texto": "monotonia, em expressões como «fileiras de janelas à mesma altura» (linha 29) e «igual de cor, de janelas e de grades» (linha 33)"
+         },
+         {
+          "n": 2,
+          "texto": "abertura, em expressões como «prolongando-se pelo enfiamento da rua» (linha 30) e «delgadas faixas verticais» (linha 31)"
+         },
+         {
+          "n": 3,
+          "texto": "monumentalidade, em expressões como «altas frontarias» (linha 29) e «levanta-se um prédio da Rua da Conceição» (linha 33)"
+         }
+        ],
+        "b": [
+         {
+          "n": 1,
+          "texto": "a oposição entre as especificidades do espaço social lisboeta e o espaço físico envolvente"
+         },
+         {
+          "n": 2,
+          "texto": "a vivência psicológica do tempo e o efeito do ambiente citadino no estado físico e anímico de quem o habita"
+         },
+         {
+          "n": 3,
+          "texto": "a repercussão das características do espaço físico urbano no estado de espírito da personagem Ricardo Reis"
+         }
+        ]
+       },
+       "chave_versao_2": {
+        "a": 1,
+        "b": 2
+       },
+       "criterios": {
+        "pontos": 13,
+        "transcricao": [
+         "Versão 1 ‒ **(a) → (2)**; **(b) → (1)**.",
+         "Versão 2 ‒ **(a) → (1)**; **(b) → (2)**."
+        ],
+        "nota_nossa": "Os critérios específicos dão só a chave, sem níveis; pelos critérios gerais, nesse caso a classificação é dicotómica (13 ou 0). Usar só a chave da versão 2."
+       }
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "titulo": "PARTE B",
+     "instrucao": "Leia as cinco estrofes seguintes, extraídas da primeira parte do poema «O Sentimento dum Ocidental», de Cesário Verde, e as notas.",
+     "textos": [
+      {
+       "id": "I-B-1",
+       "autor": "Cesário Verde",
+       "obra": "«O Sentimento dum Ocidental» (primeira parte; cinco estrofes)",
+       "genero": "poema",
+       "fonte": "Cesário Verde, _Cânticos do Realismo. O Livro de Cesário Verde_, Lisboa, INCM, 2015, p. 123.",
+       "versos_numerados": true,
+       "estrofes": [
+        [
+         {
+          "v": 1,
+          "t": "E o fim da tarde inspira-me; e incomoda!"
+         },
+         {
+          "v": 2,
+          "t": "De um couraçado[^1] inglês vogam os escaleres[^2];"
+         },
+         {
+          "v": 3,
+          "t": "E em terra num tinir de louças e talheres"
+         },
+         {
+          "v": 4,
+          "t": "Flamejam, ao jantar, alguns hotéis da moda."
+         }
+        ],
+        [
+         {
+          "v": 5,
+          "t": "Num trem de praça arengam[^3] dois dentistas;"
+         },
+         {
+          "v": 6,
+          "t": "Um trôpego arlequim braceja numas andas;"
+         },
+         {
+          "v": 7,
+          "t": "Os querubins[^4] do lar flutuam nas varandas;"
+         },
+         {
+          "v": 8,
+          "t": "Às portas, em cabelo, enfadam-se os lojistas!"
+         }
+        ],
+        [
+         {
+          "v": 9,
+          "t": "Vazam-se os arsenais e as oficinas;"
+         },
+         {
+          "v": 10,
+          "t": "Reluz, viscoso, o rio; apressam-se as obreiras[^5];"
+         },
+         {
+          "v": 11,
+          "t": "E num cardume negro, hercúleas, galhofeiras,"
+         },
+         {
+          "v": 12,
+          "t": "Correndo com firmeza, assomam as varinas."
+         }
+        ],
+        [
+         {
+          "v": 13,
+          "t": "Vêm sacudindo as ancas opulentas!"
+         },
+         {
+          "v": 14,
+          "t": "Seus troncos varonis recordam-me pilastras[^6];"
+         },
+         {
+          "v": 15,
+          "t": "E algumas, à cabeça, embalam nas canastras"
+         },
+         {
+          "v": 16,
+          "t": "Os filhos que depois naufragam nas tormentas."
+         }
+        ],
+        [
+         {
+          "v": 17,
+          "t": "Descalças! Nas descargas de carvão,"
+         },
+         {
+          "v": 18,
+          "t": "Desde manhã à noite, a bordo das fragatas;"
+         },
+         {
+          "v": 19,
+          "t": "E apinham-se num bairro aonde miam gatas,"
+         },
+         {
+          "v": 20,
+          "t": "E o peixe podre gera os focos de infeção!"
+         }
+        ]
+       ],
+       "nota_numeracao": "Na prova, só os versos 5, 10, 15 e 20 trazem o número à margem; a numeração é contínua de 1 a 20."
+      }
+     ],
+     "notas": [
+      {
+       "n": 1,
+       "verso": 2,
+       "texto": "_couraçado_ – navio de guerra."
+      },
+      {
+       "n": 2,
+       "verso": 2,
+       "texto": "_escaleres_ – pequenas embarcações para transporte de pessoas de um navio para terra."
+      },
+      {
+       "n": 3,
+       "verso": 5,
+       "texto": "_arengam_ – discutem."
+      },
+      {
+       "n": 4,
+       "verso": 7,
+       "texto": "_querubins_ – anjos."
+      },
+      {
+       "n": 5,
+       "verso": 10,
+       "texto": "_obreiras_ – trabalhadoras."
+      },
+      {
+       "n": 6,
+       "verso": 14,
+       "texto": "_pilastras_ – pilares; colunas."
+      }
+     ],
+     "itens": [
+      {
+       "numero": "I.4",
+       "n": 4,
+       "parte": "B",
+       "obrigatorio": true,
+       "tipo": "construção: resposta restrita",
+       "cotacao": 13,
+       "enunciado": [
+        "Refira duas situações observadas pelo sujeito poético ‒ uma relativa à cidade de Lisboa e outra relativa aos seus tipos sociais ‒ nas quais sejam evidentes os contrastes no modo como são representados estes elementos da paisagem física e humana."
+       ],
+       "verbo_instrucional": "Refira",
+       "criterios": {
+        "pontos": 13,
+        "instrucao": "Devem ser abordados os tópicos seguintes, ou outros igualmente relevantes.",
+        "introducao_topicos": "O sujeito poético observa contrastes, por exemplo:",
+        "topicos": [
+         {
+          "rotulo": "Na cidade de Lisboa",
+          "pontos": [
+           "entre a riqueza da cidade cosmopolita, caracterizada pelos «hotéis da moda» que «Flamejam» (v. 4), e a pobreza dos bairros «aonde miam gatas, / E o peixe podre gera os focos de infeção» (vv. 19-20)."
+          ]
+         },
+         {
+          "rotulo": "Nos tipos sociais",
+          "pontos": [
+           "entre a vida mais fácil de alguns tipos sociais, como a dos dois dentistas, que se deslocam «Num trem de praça» (v. 5)/a dos «querubins do lar» que «flutuam nas varandas» (v. 7)/a dos lojistas que se aborrecem às portas das lojas (v. 8), e a vida difícil das varinas, que se deslocam a pé, descalças, e que trabalham «Desde manhã à noite» nas «descargas de carvão» (vv. 17-18)."
+          ]
+         }
+        ],
+        "parametros": [
+         {
+          "sigla": "C-ED",
+          "nome": "Aspetos de conteúdo e de estruturação do discurso",
+          "pontos": 10,
+          "nota_de_rodape": "Os descritores de desempenho definidos para este parâmetro devem ser considerados em articulação com os Critérios Gerais de Classificação relativos à estruturação do discurso (p. 2).",
+          "niveis": [
+           {
+            "nivel": 5,
+            "pontuacao": 10,
+            "descritores": [
+             [
+              "Refere duas situações nas quais sejam evidentes os contrastes no modo como se representa a cidade de Lisboa e os seus tipos sociais, abordando, adequadamente, dois tópicos de resposta.",
+              "Utiliza mecanismos de coesão textual que, apesar da eventual ocorrência de falhas, asseguram a progressão e o encadeamento das ideias."
+             ]
+            ]
+           },
+           {
+            "nivel": 4,
+            "pontuacao": 8,
+            "descritores": [
+             [
+              "Refere duas situações nas quais sejam evidentes os contrastes no modo como se representa a cidade de Lisboa e os seus tipos sociais, abordando, adequadamente, dois tópicos de resposta.",
+              "Utiliza mecanismos de coesão textual com falhas que comprometem a progressão e o encadeamento das ideias."
+             ],
+             [
+              "Refere duas situações nas quais sejam evidentes os contrastes no modo como se representa a cidade de Lisboa e os seus tipos sociais, abordando dois tópicos de resposta, um adequadamente e outro com pequenas imprecisões e/ou omissões.",
+              "Utiliza mecanismos de coesão textual que, apesar da eventual ocorrência de falhas, asseguram a progressão e o encadeamento das ideias."
+             ]
+            ]
+           },
+           {
+            "nivel": 3,
+            "pontuacao": 6,
+            "descritores": [
+             [
+              "Refere duas situações nas quais sejam evidentes os contrastes no modo como se representa a cidade de Lisboa e os seus tipos sociais, abordando dois tópicos de resposta, um adequadamente e outro com pequenas imprecisões e/ou omissões.",
+              "Utiliza mecanismos de coesão textual com falhas que comprometem a progressão e o encadeamento das ideias."
+             ],
+             [
+              "Refere duas situações nas quais sejam evidentes os contrastes no modo como se representa a cidade de Lisboa e os seus tipos sociais, abordando dois tópicos de resposta, ambos com pequenas imprecisões e/ou omissões.",
+              "Utiliza mecanismos de coesão textual que, apesar da eventual ocorrência de falhas, asseguram a progressão e o encadeamento das ideias."
+             ],
+             [
+              "Refere uma situação na qual seja evidente um contraste no modo como se representa ou a cidade de Lisboa ou os seus tipos sociais, abordando, adequadamente, um tópico de resposta.",
+              "Utiliza mecanismos de coesão textual que, apesar da eventual ocorrência de falhas, asseguram a progressão e o encadeamento das ideias."
+             ]
+            ]
+           },
+           {
+            "nivel": 2,
+            "pontuacao": 4,
+            "descritores": [
+             [
+              "Refere duas situações nas quais sejam evidentes os contrastes no modo como se representa a cidade de Lisboa e os seus tipos sociais, abordando dois tópicos de resposta, ambos com pequenas imprecisões e/ou omissões.",
+              "Utiliza mecanismos de coesão textual com falhas que comprometem a progressão e o encadeamento das ideias."
+             ],
+             [
+              "Refere uma situação na qual seja evidente um contraste no modo como se representa ou a cidade de Lisboa ou os seus tipos sociais, abordando, adequadamente, um tópico de resposta.",
+              "Utiliza mecanismos de coesão textual com falhas que comprometem a progressão e o encadeamento das ideias."
+             ]
+            ]
+           },
+           {
+            "nivel": 1,
+            "pontuacao": 2,
+            "descritores": [
+             [
+              "Refere uma situação na qual seja evidente um contraste no modo como se representa ou a cidade de Lisboa ou os seus tipos sociais, abordando um tópico de resposta, com pequenas imprecisões e/ou omissões.",
+              "Utiliza mecanismos de coesão textual com eventual ocorrência de falhas que podem comprometer a progressão e o encadeamento das ideias."
+             ]
+            ]
+           }
+          ]
+         },
+         {
+          "sigla": "CL",
+          "nome": "Aspetos de correção linguística",
+          "pontos": 3,
+          "nota_de_rodape": "_Vide_ Tipologia de erros no âmbito da correção linguística (pp. 2-3).",
+          "texto": "Após a contabilização dos erros do tipo A e do tipo B, apura-se a classificação neste parâmetro. A tabela abaixo apresenta a pontuação a atribuir, de acordo com o número de erros do tipo A e do tipo B identificados. Caso o número total de erros seja superior ao número máximo apresentado na tabela, o parâmetro CL é classificado com zero pontos.",
+          "tabela": "CL_3"
+         }
+        ],
+        "cenario_de_resposta": "Os critérios de 2026 não têm uma secção própria chamada «cenário de resposta»: o que fazem esse papel são os tópicos de resposta transcritos em «topicos», que os critérios apresentam como exemplos («ou outros igualmente relevantes»)."
+       }
+      },
+      {
+       "numero": "I.5",
+       "n": 5,
+       "parte": "B",
+       "obrigatorio": true,
+       "tipo": "construção: resposta restrita",
+       "cotacao": 13,
+       "enunciado": [
+        "Explicite dois sentimentos revelados pelo sujeito poético, tendo em conta o modo como este descreve as varinas. Fundamente cada um desses sentimentos através da referência a um recurso expressivo relevante, ilustrado com um elemento textual."
+       ],
+       "verbo_instrucional": "Explicite; Fundamente",
+       "criterios": {
+        "pontos": 13,
+        "instrucao": "Devem ser abordados **dois** dos tópicos seguintes, ou outros igualmente relevantes, correspondendo cada um dos tópicos a um dos sentimentos.",
+        "topicos": [
+         {
+          "rotulo": "Por um lado, o sujeito poético revela compaixão/indignação perante a vida difícil das varinas, o que está patente, por exemplo, no recurso:",
+          "sentimento": "compaixão/indignação",
+          "pontos": [
+           "à metáfora presente em «embalam nas canastras / Os filhos que depois naufragam nas tormentas» (vv. 15-16), através da qual se sugere o destino cruel que condena os seus filhos desde a nascença;",
+           "à exclamação presente em «Descalças!» (v. 17), que enfatiza a dureza das condições em que executam diariamente os seus trabalhos, «Nas descargas de carvão, / Desde manhã à noite» (vv. 17-18);",
+           "a vocábulos como a forma verbal «apinham-se», o adjetivo «podre» e a expressão nominal «focos de infeção», sugestivos das péssimas condições sanitárias dos bairros sobrelotados onde habitam (vv. 19-20);",
+           "à exclamação presente no verso 20 («E o peixe podre gera os focos de infeção!»), que reforça a insalubridade dos bairros onde moram."
+          ]
+         },
+         {
+          "rotulo": "Por outro lado, o sujeito poético revela uma profunda admiração pela robustez física e pela atitude das varinas, o que se evidencia, por exemplo, no recurso:",
+          "sentimento": "admiração",
+          "pontos": [
+           "à metáfora presente em «cardume negro» (v. 11), para representar a sua força coletiva/o luto pela morte de entes queridos;",
+           "à hipérbole presente em «hercúleas»/à adjetivação em «hercúleas» (v. 11), «opulentas» (v. 13) e «varonis» (v. 14), para enaltecer a sua resistência extraordinária/a sua força física (semelhante à força dos homens)/à adjetivação em «galhofeiras» (v. 11), para exprimir a sua alegria, apesar do trabalho árduo e da vida difícil;",
+           "à exclamação integrada no verso 13 para transmitir não só a imponência física destas figuras, mas também a ideia de movimento e de sensualidade − «Vêm sacudindo as ancas opulentas!»;",
+           "à comparação presente em «recordam-me pilastras» (v. 14)/ao gerúndio «Correndo» associado à expressão nominal «com firmeza» (v. 12), para traduzir a ideia de vigor físico/vitalidade."
+          ]
+         }
+        ],
+        "parametros": [
+         {
+          "sigla": "C-ED",
+          "nome": "Aspetos de conteúdo e de estruturação do discurso",
+          "pontos": 10,
+          "nota_de_rodape": "Os descritores de desempenho definidos para este parâmetro devem ser considerados em articulação com os Critérios Gerais de Classificação relativos à estruturação do discurso (p. 2).",
+          "niveis": [
+           {
+            "nivel": 5,
+            "pontuacao": 10,
+            "descritores": [
+             [
+              "Explicita dois sentimentos revelados pelo sujeito poético, tendo em conta o modo como descreve as varinas, abordando, adequadamente, dois tópicos de resposta.",
+              "Utiliza mecanismos de coesão textual que, apesar da eventual ocorrência de falhas, asseguram a progressão e o encadeamento das ideias."
+             ]
+            ]
+           },
+           {
+            "nivel": 4,
+            "pontuacao": 8,
+            "descritores": [
+             [
+              "Explicita dois sentimentos revelados pelo sujeito poético, tendo em conta o modo como descreve as varinas, abordando, adequadamente, dois tópicos de resposta.",
+              "Utiliza mecanismos de coesão textual com falhas que comprometem a progressão e o encadeamento das ideias."
+             ],
+             [
+              "Explicita dois sentimentos revelados pelo sujeito poético, tendo em conta o modo como descreve as varinas, abordando dois tópicos de resposta, um adequadamente e outro com pequenas imprecisões e/ou omissões.",
+              "Utiliza mecanismos de coesão textual que, apesar da eventual ocorrência de falhas, asseguram a progressão e o encadeamento das ideias."
+             ]
+            ]
+           },
+           {
+            "nivel": 3,
+            "pontuacao": 6,
+            "descritores": [
+             [
+              "Explicita dois sentimentos revelados pelo sujeito poético, tendo em conta o modo como descreve as varinas, abordando dois tópicos de resposta, um adequadamente e outro com pequenas imprecisões e/ou omissões.",
+              "Utiliza mecanismos de coesão textual com falhas que comprometem a progressão e o encadeamento das ideias."
+             ],
+             [
+              "Explicita dois sentimentos revelados pelo sujeito poético, tendo em conta o modo como descreve as varinas, abordando dois tópicos de resposta, ambos com pequenas imprecisões e/ou omissões.",
+              "Utiliza mecanismos de coesão textual que, apesar da eventual ocorrência de falhas, asseguram a progressão e o encadeamento das ideias."
+             ],
+             [
+              "Explicita um sentimento revelado pelo sujeito poético, tendo em conta o modo como descreve as varinas, abordando, adequadamente, um tópico de resposta.",
+              "Utiliza mecanismos de coesão textual que, apesar da eventual ocorrência de falhas, asseguram a progressão e o encadeamento das ideias."
+             ]
+            ]
+           },
+           {
+            "nivel": 2,
+            "pontuacao": 4,
+            "descritores": [
+             [
+              "Explicita dois sentimentos revelados pelo sujeito poético, tendo em conta o modo como descreve as varinas, abordando dois tópicos de resposta, ambos com pequenas imprecisões e/ou omissões.",
+              "Utiliza mecanismos de coesão textual com falhas que comprometem a progressão e o encadeamento das ideias."
+             ],
+             [
+              "Explicita um sentimento revelado pelo sujeito poético, tendo em conta o modo como descreve as varinas, abordando, adequadamente, um tópico de resposta.",
+              "Utiliza mecanismos de coesão textual com falhas que comprometem a progressão e o encadeamento das ideias."
+             ]
+            ]
+           },
+           {
+            "nivel": 1,
+            "pontuacao": 2,
+            "descritores": [
+             [
+              "Explicita um sentimento revelado pelo sujeito poético, tendo em conta o modo como descreve as varinas, abordando um tópico de resposta, com pequenas imprecisões e/ou omissões.",
+              "Utiliza mecanismos de coesão textual com eventual ocorrência de falhas que podem comprometer a progressão e o encadeamento das ideias."
+             ]
+            ]
+           }
+          ]
+         },
+         {
+          "sigla": "CL",
+          "nome": "Aspetos de correção linguística",
+          "pontos": 3,
+          "nota_de_rodape": "_Vide_ Tipologia de erros no âmbito da correção linguística (pp. 2-3).",
+          "texto": "Após a contabilização dos erros do tipo A e do tipo B, apura-se a classificação neste parâmetro. A tabela abaixo apresenta a pontuação a atribuir, de acordo com o número de erros do tipo A e do tipo B identificados. Caso o número total de erros seja superior ao número máximo apresentado na tabela, o parâmetro CL é classificado com zero pontos.",
+          "tabela": "CL_3"
+         }
+        ],
+        "cenario_de_resposta": "Os critérios de 2026 não têm uma secção própria chamada «cenário de resposta»: o que fazem esse papel são os tópicos de resposta transcritos em «topicos», que os critérios apresentam como exemplos («ou outros igualmente relevantes»)."
+       }
+      },
+      {
+       "numero": "I.6",
+       "n": 6,
+       "parte": "B",
+       "obrigatorio": false,
+       "tipo": "seleção: escolha de três afirmações entre cinco",
+       "cotacao": 13,
+       "enunciado": [
+        "Identifique, de entre as afirmações referentes à poesia de Cesário Verde, as **três** afirmações que podem ser comprovadas através da leitura das estrofes do poema «O Sentimento dum Ocidental» apresentadas.",
+        "Assinale, na folha de respostas, as opções selecionadas."
+       ],
+       "opcoes": [
+        {
+         "n": "I",
+         "texto": "Cesário critica as desigualdades sociais, bem como as condições degradantes em que o povo vive."
+        },
+        {
+         "n": "II",
+         "texto": "O poeta evoca, com saudade e mágoa, os tempos gloriosos da expansão marítima."
+        },
+        {
+         "n": "III",
+         "texto": "O sujeito poético descreve a realidade que observa e a partir da qual constrói as suas reflexões poéticas."
+        },
+        {
+         "n": "IV",
+         "texto": "A linguagem impressionista do poeta evidencia-se na valorização da cor, da luz e do movimento."
+        },
+        {
+         "n": "V",
+         "texto": "A cidade é vista como um espaço fechado e opressivo, por oposição à liberdade propiciada pelo campo."
+        }
+       ],
+       "chave_versao_2": [
+        "I",
+        "III",
+        "IV"
+       ],
+       "criterios": {
+        "pontos": 13,
+        "transcricao": [
+         "Versão 1 ‒ **II**, **IV** e **V**",
+         "Versão 2 ‒ **I**, **III** e **IV**"
+        ],
+        "nota_nossa": "Os critérios específicos dão só a chave, sem níveis nem pontuação parcial. Usar só a chave da versão 2."
+       }
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "titulo": "PARTE C",
+     "itens": [
+      {
+       "numero": "I.7",
+       "n": 7,
+       "parte": "C",
+       "obrigatorio": true,
+       "tipo": "construção: resposta restrita (breve exposição)",
+       "cotacao": 13,
+       "enunciado": [
+        "A denúncia das condições de vida do povo está presente em obras de José Saramago, nomeadamente em _Memorial do Convento_ e em _O Ano da Morte de Ricardo Reis_.",
+        "Escreva uma breve exposição na qual comprove a veracidade da afirmação anterior, baseando-se na sua experiência de leitura de _Memorial do Convento_ **ou** de _O Ano da Morte de Ricardo Reis_.",
+        "A sua exposição deve incluir:"
+       ],
+       "enunciado_lista": [
+        "uma introdução ao tema;",
+        "um desenvolvimento no qual explicite duas situações ou dois momentos em que a denúncia das condições de vida do povo seja evidente, fundamentando cada um desses aspetos em, pelo menos, um exemplo significativo;",
+        "uma conclusão adequada ao desenvolvimento do tema."
+       ],
+       "enunciado_fim": "Comece por indicar, na folha de respostas, o título da obra por si selecionada.",
+       "verbo_instrucional": "Escreva (exposição); explicite",
+       "obras_a_escolha": [
+        "_Memorial do Convento_",
+        "_O Ano da Morte de Ricardo Reis_"
+       ],
+       "criterios": {
+        "pontos": 13,
+        "instrucao": "Relativamente à obra selecionada, devem ser abordados **dois** dos tópicos seguintes, ou outros igualmente relevantes.",
+        "topicos_por_obra": [
+         {
+          "obra": "_Memorial do Convento_",
+          "introducao": "Em _Memorial do Convento_, é evidente a denúncia das condições de vida do povo nas referências:",
+          "pontos": [
+           "ao povo, representado como uma massa anónima obrigada a suportar a penúria e a dureza do trabalho na construção do Convento de Mafra para satisfazer a vontade do Rei;",
+           "à exploração dos homens, forçados a trabalhar na construção do Convento, independentemente da sua vontade (chegando acorrentados de todas as regiões do país);",
+           "às condições degradantes em que os trabalhadores viviam nos barracões do estaleiro de Mafra, espaços que ferem a dignidade humana (Ilha da Madeira);",
+           "à forma como os trabalhadores eram tratados como escravos, trabalhando em condições extenuantes, praticamente sem tempo para descanso;",
+           "à deficiente alimentação, que contrasta com a extrema força que os homens têm de usar para, por exemplo, carregar a pedra (epopeia da pedra);",
+           "à falta de segurança, que leva alguns trabalhadores à morte ou à mutilação, como é o caso, por exemplo, do cunhado de Baltasar."
+          ]
+         },
+         {
+          "obra": "_O Ano da Morte de Ricardo Reis_",
+          "introducao": "Em _O Ano da Morte de Ricardo Reis_, temos um vislumbre das condições de vida do povo através da denúncia:",
+          "pontos": [
+           "da extrema pobreza e da vida miserável da população subjugada pelo regime ditatorial, evidente, por exemplo, no bodo do jornal _O Século_;",
+           "da repressão em que o povo vivia, patente, por exemplo, nas conversas de Lídia com o irmão, Daniel;",
+           "do conflito entre o povo e as forças do regime, que impunham a repressão e a censura, evidente, por exemplo, na forma como a realidade é deturpada pelos jornais;",
+           "da vigilância feroz da PVDE (Polícia de Vigilância e Defesa do Estado) sobre a população, tendo o próprio Ricardo Reis sido alvo de um interrogatório policial, o que põe em evidência o controlo ideológico e a censura;",
+           "da atmosfera opressiva de Lisboa, que deriva do contexto político da época, sendo qualquer manifestação considerada um ato de rebeldia e de dissidência (Revolta dos Marinheiros);",
+           "da desigualdade social testemunhada por Ricardo Reis nas ruas de Lisboa."
+          ]
+         }
+        ],
+        "parametros": [
+         {
+          "sigla": "C",
+          "nome": "Aspetos de conteúdo",
+          "pontos": 8,
+          "niveis": [
+           {
+            "nivel": 4,
+            "pontuacao": 8,
+            "descritores": [
+             [
+              "Explicita, adequadamente, duas situações ou dois momentos em que a denúncia das condições de vida do povo seja evidente."
+             ]
+            ]
+           },
+           {
+            "nivel": 3,
+            "pontuacao": 6,
+            "descritores": [
+             [
+              "Explicita duas situações ou dois momentos em que a denúncia das condições de vida do povo seja evidente, adequadamente, num dos casos, e com pequenas imprecisões e/ou omissões, no outro caso."
+             ]
+            ]
+           },
+           {
+            "nivel": 2,
+            "pontuacao": 4,
+            "descritores": [
+             [
+              "Explicita duas situações ou dois momentos em que a denúncia das condições de vida do povo seja evidente, com pequenas imprecisões e/ou omissões em ambos os casos."
+             ],
+             [
+              "Explicita, adequadamente, apenas uma situação ou um momento em que a denúncia das condições de vida do povo seja evidente."
+             ]
+            ]
+           },
+           {
+            "nivel": 1,
+            "pontuacao": 2,
+            "descritores": [
+             [
+              "Explicita, com pequenas imprecisões e/ou omissões, apenas uma situação ou um momento em que a denúncia das condições de vida do povo seja evidente."
+             ]
+            ]
+           }
+          ]
+         },
+         {
+          "sigla": "ED",
+          "nome": "Aspetos de estruturação do discurso",
+          "pontos": 3,
+          "nota_de_rodape": "Os descritores de desempenho definidos para este parâmetro devem ser considerados em articulação com os Critérios Gerais de Classificação relativos à estruturação do discurso (p. 2).",
+          "niveis": [
+           {
+            "nivel": 3,
+            "pontuacao": 3,
+            "descritores": [
+             [
+              "Escreve um texto bem estruturado constituído por três partes (introdução, desenvolvimento e conclusão), devidamente proporcionadas, e utiliza mecanismos de coesão textual que asseguram de modo global a progressão e o encadeamento das ideias."
+             ]
+            ]
+           },
+           {
+            "nivel": 2,
+            "pontuacao": 2,
+            "descritores": [
+             [
+              "Escreve um texto globalmente bem estruturado constituído por três partes (introdução, desenvolvimento e conclusão) com desequilíbrios de proporção e/ou utiliza mecanismos de coesão textual com a eventual ocorrência de falhas que não comprometem de modo global a progressão e o encadeamento das ideias."
+             ]
+            ]
+           },
+           {
+            "nivel": 1,
+            "pontuacao": 1,
+            "descritores": [
+             [
+              "Escreve um texto insuficientemente estruturado e/ou utiliza mecanismos de coesão textual com falhas que comprometem de modo global a progressão e o encadeamento das ideias."
+             ]
+            ]
+           }
+          ]
+         },
+         {
+          "sigla": "CL",
+          "nome": "Aspetos de correção linguística",
+          "pontos": 2,
+          "nota_de_rodape": "_Vide_ Tipologia de erros no âmbito da correção linguística (pp. 2-3).",
+          "texto": "Após a contabilização dos erros do tipo A e do tipo B, apura-se a classificação neste parâmetro. A tabela abaixo apresenta a pontuação a atribuir, de acordo com o número de erros do tipo A e do tipo B identificados. Caso o número total de erros seja superior ao número máximo apresentado na tabela, o parâmetro CL é classificado com zero pontos.",
+          "tabela": "CL_2"
+         }
+        ],
+        "cenario_de_resposta": "Os critérios de 2026 não têm uma secção própria chamada «cenário de resposta»: o que fazem esse papel são os tópicos de resposta transcritos em «topicos», que os critérios apresentam como exemplos («ou outros igualmente relevantes»)."
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "II",
+   "titulo": "GRUPO II",
+   "dominios_nossa_designacao": "leitura e gramática (designação nossa, não da prova)",
+   "instrucao": "Leia o texto e as notas.",
+   "textos": [
+    {
+     "id": "II-1",
+     "autor": "Miguel Marcelino",
+     "titulo": "«Paisagem sonora»",
+     "genero": "texto de imprensa (adaptado)",
+     "fonte": "Miguel Marcelino, «Paisagem sonora», _Público – P2_, 28 de setembro de 2025, p. 22. (Texto adaptado)",
+     "linhas": [
+      {
+       "n": 1,
+       "t": "Embora a música tenha milénios de existência, o seu conhecimento histórico é relativamente",
+       "inicio_paragrafo": true
+      },
+      {
+       "n": 2,
+       "t": "recente. A sua escrita apenas se consolida a partir do século XV, com a expansão e o",
+       "inicio_paragrafo": false
+      },
+      {
+       "n": 3,
+       "t": "aperfeiçoamento dos sistemas de notação, enquanto a reprodução de áudio surge só no final",
+       "inicio_paragrafo": false
+      },
+      {
+       "n": 4,
+       "t": "do século XIX. Sendo uma arte temporal, manifesta-se no tempo, tornando cada _performance_[^1]",
+       "inicio_paragrafo": false
+      },
+      {
+       "n": 5,
+       "t": "um acontecimento único e irrepetível.",
+       "inicio_paragrafo": false
+      },
+      {
+       "n": 6,
+       "t": "Existe um tipo de música cujos instrumentos não são nem piano, nem violino, nem guitarra,",
+       "inicio_paragrafo": true
+      },
+      {
+       "n": 7,
+       "t": "mas uma orquestra composta por edifícios, ruas, praças, fontanários e aves. A paisagem",
+       "inicio_paragrafo": false
+      },
+      {
+       "n": 8,
+       "t": "sonora característica de cada cidade ou bairro. Aquilo que escutamos quando abrimos uma",
+       "inicio_paragrafo": false
+      },
+      {
+       "n": 9,
+       "t": "janela ou nos sentamos numa praça.",
+       "inicio_paragrafo": false
+      },
+      {
+       "n": 10,
+       "t": "A deliciosa harmonia composta pela mistura única de pessoas a falar ou de crianças a",
+       "inicio_paragrafo": true
+      },
+      {
+       "n": 11,
+       "t": "brincar; o som da buzina de um barco ao longe; o canto das andorinhas ou das cigarras",
+       "inicio_paragrafo": false
+      },
+      {
+       "n": 12,
+       "t": "no verão; um carpinteiro a pregar umas tábuas algures na vizinhança; ou alguém a ensaiar",
+       "inicio_paragrafo": false
+      },
+      {
+       "n": 13,
+       "t": "uma canção dentro do seu apartamento. A combinação de sons mais definidos, perto de nós,",
+       "inicio_paragrafo": false
+      },
+      {
+       "n": 14,
+       "t": "complementados pela mistura homogénea de fundo, ao longe. A vida e a cidade a pulsarem.",
+       "inicio_paragrafo": false
+      },
+      {
+       "n": 15,
+       "t": "Como resistir às _sinfoniettas_[^2] das entranhas dos centros históricos de cidades como Lisboa",
+       "inicio_paragrafo": true
+      },
+      {
+       "n": 16,
+       "t": "e de tantas outras, com as ruas estreitas a imporem um desarmante contraste com as vias",
+       "inicio_paragrafo": false
+      },
+      {
+       "n": 17,
+       "t": "principais, logo após se contornar uma ou duas esquinas? A atmosfera tranquila composta por",
+       "inicio_paragrafo": false
+      },
+      {
+       "n": 18,
+       "t": "sons de pessoas misturados com o sino da igreja, o carrinho de compras de uma senhora a",
+       "inicio_paragrafo": false
+      },
+      {
+       "n": 19,
+       "t": "subir a rua, ou os guinchos das gaivotas em terra.",
+       "inicio_paragrafo": false
+      },
+      {
+       "n": 20,
+       "t": "Ou de cidades aquáticas, como Veneza, ou dos mercados flutuantes que vemos pela Ásia,",
+       "inicio_paragrafo": true
+      },
+      {
+       "n": 21,
+       "t": "onde predomina o som do movimento da água a ser rasgada pelas inúmeras embarcações,",
+       "inicio_paragrafo": false
+      },
+      {
+       "n": 22,
+       "t": "complementando o dos transeuntes e vendilhões.",
+       "inicio_paragrafo": false
+      },
+      {
+       "n": 23,
+       "t": "Ou ainda de cidades como Istambul ou Marraquexe, com aqueles cinco momentos do dia",
+       "inicio_paragrafo": true
+      },
+      {
+       "n": 24,
+       "t": "em que o chamamento à oração — o _adhan_ — é anunciado a partir dos altifalantes instalados",
+       "inicio_paragrafo": false
+      },
+      {
+       "n": 25,
+       "t": "nos minaretes das várias mesquitas espalhadas pelos bairros. Aquele recitar de palavras em",
+       "inicio_paragrafo": false
+      },
+      {
+       "n": 26,
+       "t": "tom hipnótico, ligeiramente distorcido pelos sistemas de amplificação de áudio. A entrada",
+       "inicio_paragrafo": false
+      },
+      {
+       "n": 27,
+       "t": "em cena dessincronizada, resultante dos pequenos desacertos horários, levando ao gradual",
+       "inicio_paragrafo": false
+      },
+      {
+       "n": 28,
+       "t": "acumular de camadas sonoras, em crescendo, tal como numa _fuga_[^3] do género musical clássico",
+       "inicio_paragrafo": false
+      },
+      {
+       "n": 29,
+       "t": "ocidental.",
+       "inicio_paragrafo": false
+      },
+      {
+       "n": 30,
+       "t": "A acústica do instrumento-cidade é favorecida pelo urbanismo tradicional de edifícios",
+       "inicio_paragrafo": true
+      },
+      {
+       "n": 31,
+       "t": "contínuos, em quarteirão, por oposição à cidade feita de blocos dispersos. As ruas formadas",
+       "inicio_paragrafo": false
+      },
+      {
+       "n": 32,
+       "t": "por frentes edificadas propagam os sons mais delicados; os logradouros fechados favorecem",
+       "inicio_paragrafo": false
+      },
+      {
+       "n": 33,
+       "t": "o eco; as praças enclausuradas demarcam melhor a sua música da música das ruas",
+       "inicio_paragrafo": false
+      },
+      {
+       "n": 34,
+       "t": "envolventes, tornando-a mais nítida.",
+       "inicio_paragrafo": false
+      },
+      {
+       "n": 35,
+       "t": "A ameaça óbvia a este património é a poluição sonora causada pelo automóvel ou pelo",
+       "inicio_paragrafo": true
+      },
+      {
+       "n": 36,
+       "t": "avião, cuja presença tudo abafa. Um problema que tenderá a ser mitigado com a progressiva",
+       "inicio_paragrafo": false
+      },
+      {
+       "n": 37,
+       "t": "transição dos motores de combustão para motores elétricos silenciosos. Será uma revolução",
+       "inicio_paragrafo": false
+      },
+      {
+       "n": 38,
+       "t": "na qualidade do ambiente das cidades. Mas também há as ameaças menos óbvias, como a",
+       "inicio_paragrafo": false
+      },
+      {
+       "n": 39,
+       "t": "abusiva reprodução de música amplificada no espaço público que, hoje, contamina qualquer",
+       "inicio_paragrafo": false
+      },
+      {
+       "n": 40,
+       "t": "ponto turístico.",
+       "inicio_paragrafo": false
+      },
+      {
+       "n": 41,
+       "t": "A invisível paisagem sonora é, provavelmente, a qualidade mais subvalorizada das nossas",
+       "inicio_paragrafo": true
+      },
+      {
+       "n": 42,
+       "t": "cidades e habitações, mas de enorme importância para o nosso bem-estar — que não se pode",
+       "inicio_paragrafo": false
+      },
+      {
+       "n": 43,
+       "t": "resumir ao conforto visual, espacial ou térmico dos nossos ambientes.",
+       "inicio_paragrafo": false
+      },
+      {
+       "n": 44,
+       "t": "Um património frágil e de difícil proteção. Podemos desviar o olhar, mas o som não pede",
+       "inicio_paragrafo": true
+      },
+      {
+       "n": 45,
+       "t": "permissão. E não experimentamos música sem a sua contraparte: o silêncio, a _folha branca_. Tal",
+       "inicio_paragrafo": false
+      },
+      {
+       "n": 46,
+       "t": "como as cidades não se fazem apenas de massas edificadas, precisam do seu contraponto: ruas",
+       "inicio_paragrafo": false
+      },
+      {
+       "n": 47,
+       "t": "e praças — as _telas vazias_ que recebem a vida humana a acontecer em conjunto, em sociedade.",
+       "inicio_paragrafo": false
+      }
+     ]
+    }
+   ],
+   "notas": [
+    {
+     "n": 1,
+     "linha": 4,
+     "texto": "performance – desempenho; exibição em público."
+    },
+    {
+     "n": 2,
+     "linha": 15,
+     "texto": "sinfoniettas – sinfonias curtas, para pequena orquestra ou orquestra de câmara."
+    },
+    {
+     "n": 3,
+     "linha": 28,
+     "texto": "fuga – género de música em que as partes se repetem sucessivamente e parecem fugir umas das outras, finalizando sempre em consonâncias."
+    }
+   ],
+   "nota_tipografica": "No corpo do texto, há seis expressões em itálico (linhas 4, 15, 24, 28, 45 e 47); nas notas, as palavras explicadas estão em redondo.",
+   "itens": [
+    {
+     "numero": "II.1",
+     "n": 1,
+     "obrigatorio": true,
+     "tipo": "seleção: escolha múltipla (quatro opções)",
+     "cotacao": 13,
+     "enunciado": [
+      "Nos dois parágrafos iniciais, o autor do texto procura"
+     ],
+     "opcoes": [
+      {
+       "letra": "A",
+       "texto": "realçar a relevância da notação musical como forma de homogeneizar as execuções instrumentais."
+      },
+      {
+       "letra": "B",
+       "texto": "estabelecer uma analogia entre a música e os sons característicos de cada cidade ou de cada bairro."
+      },
+      {
+       "letra": "C",
+       "texto": "destacar a importância da música e da sua história, em particular na vida de cada bairro ou cidade."
+      },
+      {
+       "letra": "D",
+       "texto": "explicar o valor do registo áudio dos ruídos de cada cidade, segundo os princípios da notação musical."
+      }
+     ],
+     "chave_versao_2": "B",
+     "criterios": {
+      "pontos": 13,
+      "transcricao": "Item 1.: Versão 1 (C); Versão 2 (B); pontuação 13",
+      "nota_nossa": "Quadro de chaves do Grupo II nos critérios (p. 13). Usar só a chave da versão 2; classificação dicotómica (13 ou 0)."
+     },
+     "linhas_referidas": [
+      {
+       "texto": "II-1",
+       "de": 1,
+       "a": 9,
+       "origem": "«dois parágrafos iniciais» (linhas 1 a 9)"
+      }
+     ]
+    },
+    {
+     "numero": "II.2",
+     "n": 2,
+     "obrigatorio": true,
+     "tipo": "seleção: escolha múltipla (quatro opções)",
+     "cotacao": 13,
+     "enunciado": [
+      "Na expressão «paisagem sonora» (linhas 7 e 8), evidencia-se o recurso"
+     ],
+     "opcoes": [
+      {
+       "letra": "A",
+       "texto": "à metonímia, para aproximar, sensorialmente, as imagens e os sons percecionados na cidade."
+      },
+      {
+       "letra": "B",
+       "texto": "à aliteração, para sugerir a combinação harmoniosa de sons, próximos e longínquos, ouvidos na cidade."
+      },
+      {
+       "letra": "C",
+       "texto": "à sinestesia, para descrever a simultaneidade de experiências sensoriais propiciadas pela cidade."
+      },
+      {
+       "letra": "D",
+       "texto": "à hipérbole, para enfatizar o excesso de ruídos a que os transeuntes são expostos na cidade."
+      }
+     ],
+     "chave_versao_2": "C",
+     "criterios": {
+      "pontos": 13,
+      "transcricao": "Item 2.: Versão 1 (D); Versão 2 (C); pontuação 13",
+      "nota_nossa": "Quadro de chaves do Grupo II nos critérios (p. 13). Usar só a chave da versão 2; classificação dicotómica (13 ou 0)."
+     },
+     "linhas_referidas": [
+      {
+       "texto": "II-1",
+       "de": 7,
+       "a": 8
+      }
+     ]
+    },
+    {
+     "numero": "II.3",
+     "n": 3,
+     "obrigatorio": false,
+     "tipo": "seleção: escolha múltipla (quatro opções)",
+     "cotacao": 13,
+     "enunciado": [
+      "Entre as linhas 10 e 34, o autor descreve diversos ambientes com a intenção de"
+     ],
+     "opcoes": [
+      {
+       "letra": "A",
+       "texto": "provar que a acústica das cidades decorre da arquitetura dos espaços e da especificidade da sua utilização, propiciando vivências diferentes."
+      },
+      {
+       "letra": "B",
+       "texto": "refutar a ideia de que as cidades ruidosas, por privilegiarem a acumulação e a amplificação de sons, se tornam irresistíveis."
+      },
+      {
+       "letra": "C",
+       "texto": "demonstrar a tese de que as cidades funcionam como instrumentos musicais, independentemente da sua estrutura urbanística."
+      },
+      {
+       "letra": "D",
+       "texto": "ilustrar a suavidade dos diferentes sons que, reiterada e sincopadamente, invadem inúmeros espaços urbanos pelo mundo fora."
+      }
+     ],
+     "chave_versao_2": "A",
+     "criterios": {
+      "pontos": 13,
+      "transcricao": "Item 3.: Versão 1 (C); Versão 2 (A); pontuação 13",
+      "nota_nossa": "Quadro de chaves do Grupo II nos critérios (p. 13). Usar só a chave da versão 2; classificação dicotómica (13 ou 0)."
+     },
+     "linhas_referidas": [
+      {
+       "texto": "II-1",
+       "de": 10,
+       "a": 34
+      }
+     ]
+    },
+    {
+     "numero": "II.4",
+     "n": 4,
+     "obrigatorio": false,
+     "tipo": "seleção: escolha múltipla (quatro opções)",
+     "cotacao": 13,
+     "enunciado": [
+      "O autor conclui a sua reflexão, defendendo a ideia de que,"
+     ],
+     "opcoes": [
+      {
+       "letra": "A",
+       "texto": "dada a revolução que está em curso, as cidades do futuro beneficiarão de melhores qualidades acústicas, visuais, espaciais e térmicas."
+      },
+      {
+       "letra": "B",
+       "texto": "pela sua importância, é fundamental preservar a riqueza do património musical urbano, reduzindo a dimensão das massas edificadas."
+      },
+      {
+       "letra": "C",
+       "texto": "dada a revolução que está em curso, os obstáculos à proteção das paisagens sonoras serão eliminados."
+      },
+      {
+       "letra": "D",
+       "texto": "pela sua importância, a paisagem sonora deve merecer maior atenção, a fim de criar condições que promovam a sua plena fruição."
+      }
+     ],
+     "chave_versao_2": "D",
+     "criterios": {
+      "pontos": 13,
+      "transcricao": "Item 4.: Versão 1 (B); Versão 2 (D); pontuação 13",
+      "nota_nossa": "Quadro de chaves do Grupo II nos critérios (p. 13). Usar só a chave da versão 2; classificação dicotómica (13 ou 0)."
+     }
+    },
+    {
+     "numero": "II.5",
+     "n": 5,
+     "obrigatorio": false,
+     "tipo": "seleção: escolha múltipla (quatro opções)",
+     "cotacao": 13,
+     "enunciado": [
+      "Entre as linhas 6 e 22, a coesão lexical e a coesão gramatical referencial são asseguradas por mecanismos como"
+     ],
+     "opcoes": [
+      {
+       "letra": "A",
+       "texto": "o recurso à pronominalização, no primeiro caso, e o predomínio de verbos no presente do indicativo, no segundo caso."
+      },
+      {
+       "letra": "B",
+       "texto": "o uso de vocábulos que integram os campos lexicais da «música» e da «cidade», no primeiro caso, e o uso dos vocábulos «cujos» e «onde», no segundo caso."
+      },
+      {
+       "letra": "C",
+       "texto": "o recurso à pronominalização, no primeiro caso, e o recurso aos vocábulos «cujos» e «onde», no segundo caso."
+      },
+      {
+       "letra": "D",
+       "texto": "o uso de vocábulos que integram os campos lexicais da «música» e da «cidade», no primeiro caso, e o predomínio de verbos no presente do indicativo, no segundo caso."
+      }
+     ],
+     "chave_versao_2": "B",
+     "criterios": {
+      "pontos": 13,
+      "transcricao": "Item 5.: Versão 1 (A); Versão 2 (B); pontuação 13",
+      "nota_nossa": "Quadro de chaves do Grupo II nos critérios (p. 13). Usar só a chave da versão 2; classificação dicotómica (13 ou 0)."
+     },
+     "linhas_referidas": [
+      {
+       "texto": "II-1",
+       "de": 6,
+       "a": 22
+      }
+     ]
+    },
+    {
+     "numero": "II.6",
+     "n": 6,
+     "obrigatorio": true,
+     "tipo": "seleção: escolha múltipla (quatro opções)",
+     "cotacao": 13,
+     "enunciado": [
+      "O vocábulo «como» está associado a uma ideia de exemplificação e a uma ideia de comparação"
+     ],
+     "opcoes": [
+      {
+       "letra": "A",
+       "texto": "em «como numa _fuga_» (linha 28) e «como as cidades» (linha 46), respetivamente."
+      },
+      {
+       "letra": "B",
+       "texto": "em «Como resistir» (linha 15) e «como Lisboa» (linha 15), respetivamente."
+      },
+      {
+       "letra": "C",
+       "texto": "em «como Veneza» (linha 20) e «como numa _fuga_» (linha 28), respetivamente."
+      },
+      {
+       "letra": "D",
+       "texto": "em «como Lisboa» (linha 15) e «como Veneza» (linha 20), respetivamente."
+      }
+     ],
+     "chave_versao_2": "C",
+     "criterios": {
+      "pontos": 13,
+      "transcricao": "Item 6.: Versão 1 (D); Versão 2 (C); pontuação 13",
+      "nota_nossa": "Quadro de chaves do Grupo II nos critérios (p. 13). Usar só a chave da versão 2; classificação dicotómica (13 ou 0)."
+     }
+    },
+    {
+     "numero": "II.7",
+     "n": 7,
+     "obrigatorio": true,
+     "tipo": "seleção: escolha múltipla (quatro opções)",
+     "cotacao": 13,
+     "enunciado": [
+      "Todas as expressões desempenham a função sintática de complemento agente da passiva, **exceto**"
+     ],
+     "opcoes": [
+      {
+       "letra": "A",
+       "texto": "«pelo automóvel ou pelo avião» (linhas 35 e 36)."
+      },
+      {
+       "letra": "B",
+       "texto": "«pelo urbanismo tradicional de edifícios contínuos» (linhas 30 e 31)."
+      },
+      {
+       "letra": "C",
+       "texto": "«pelas inúmeras embarcações» (linha 21)."
+      },
+      {
+       "letra": "D",
+       "texto": "«pela Ásia» (linha 20)."
+      }
+     ],
+     "chave_versao_2": "D",
+     "criterios": {
+      "pontos": 13,
+      "transcricao": "Item 7.: Versão 1 (A); Versão 2 (D); pontuação 13",
+      "nota_nossa": "Quadro de chaves do Grupo II nos critérios (p. 13). Usar só a chave da versão 2; classificação dicotómica (13 ou 0)."
+     }
+    }
+   ],
+   "chaves_criterios_quadro": {
+    "cabecalho": [
+     "ITEM",
+     "VERSÃO 1",
+     "VERSÃO 2",
+     "PONTUAÇÃO"
+    ],
+    "linhas": [
+     [
+      "1.",
+      "(C)",
+      "(B)",
+      13
+     ],
+     [
+      "2.",
+      "(D)",
+      "(C)",
+      13
+     ],
+     [
+      "3.",
+      "(C)",
+      "(A)",
+      13
+     ],
+     [
+      "4.",
+      "(B)",
+      "(D)",
+      13
+     ],
+     [
+      "5.",
+      "(A)",
+      "(B)",
+      13
+     ],
+     [
+      "6.",
+      "(D)",
+      "(C)",
+      13
+     ],
+     [
+      "7.",
+      "(A)",
+      "(D)",
+      13
+     ]
+    ]
+   }
+  },
+  {
+   "id": "III",
+   "titulo": "GRUPO III",
+   "dominios_nossa_designacao": "escrita (designação nossa, não da prova)",
+   "itens": [
+    {
+     "numero": "III",
+     "obrigatorio": true,
+     "tipo": "construção: resposta extensa",
+     "cotacao": 44,
+     "genero": "texto de apreciação crítica (de um _cartoon_)",
+     "tema": "apreciação crítica do _cartoon_ de Javad Takjoo reproduzido na prova",
+     "extensao": {
+      "min_palavras": 200,
+      "max_palavras": 350,
+      "minimo_para_classificar": 80
+     },
+     "enunciado": [
+      "Num texto bem estruturado, com um mínimo de duzentas e um máximo de trezentas e cinquenta palavras, faça a apreciação crítica do _cartoon_, da autoria de Javad Takjoo.",
+      "No seu texto, deve incluir:"
+     ],
+     "enunciado_lista": [
+      "a descrição da imagem apresentada, destacando elementos significativos da sua composição;",
+      "um comentário crítico, fundamentando a sua apreciação em, pelo menos, três aspetos relevantes e utilizando um discurso valorativo;",
+      "uma conclusão adequada aos pontos de vista desenvolvidos."
+     ],
+     "imagem": {
+      "autor": "Javad Takjoo",
+      "tipo": "_cartoon_",
+      "fonte": "https://takjoo.com (consultado em 23/02/2026).",
+      "titulo": null,
+      "legenda_na_prova": null,
+      "pagina_da_prova": 13,
+      "descricao_nossa": "Descrição nossa, só do que se vê (não está na prova nem nos critérios): uma menina de cabelo escuro, com um laço azul-claro no cabelo e vestido azul-claro com laço branco ao peito, está sentada num banco de madeira e cose um pano branco numa máquina de costura preta, antiga, pousada no assento de um cavalo de baloiço de madeira, que lhe serve de mesa. Tem a cabeça inclinada e os olhos postos no trabalho. Fundo cinzento texturado; sombras fortes projetadas para a direita. Assinatura do autor à esquerda. A imagem não tem título nem texto.",
+      "direitos": "Imagem de Javad Takjoo reproduzida na prova; a reutilização no sítio é decisão à parte."
+     },
+     "observacoes": [
+      "Para efeitos de contagem, considera-se **uma palavra** qualquer sequência delimitada por espaços em branco, mesmo quando esta integre elementos ligados por hífen (ex.: /dir-se-ia/). Qualquer número conta como uma única palavra, independentemente do número de algarismos que o constituam (ex.: /2026/).",
+      {
+       "texto": "Relativamente ao desvio dos limites de extensão indicados – entre duzentas e trezentas e cinquenta palavras –, há que atender ao seguinte:",
+       "lista": [
+        "um desvio dos limites de extensão indicados implica uma desvalorização parcial (até 5 pontos) do texto produzido;",
+        "um texto com extensão inferior a oitenta palavras é classificado com zero pontos."
+       ]
+      }
+     ],
+     "criterios": {
+      "pontos": 44,
+      "ETD": {
+       "nome": "Aspetos de estruturação temática e discursiva",
+       "pontos": 30,
+       "nota_de_rodape": "Além dos descritores de desempenho relativos à estruturação temática e discursiva, há que atender aos Critérios Gerais (p. 2).",
+       "parametros": [
+        {
+         "id": "A",
+         "nome": "Género/Formato Textual",
+         "pontos": 10,
+         "niveis": [
+          {
+           "nivel": 4,
+           "pontuacao": 10,
+           "descritores": [
+            [
+             "Escreve um texto de acordo com o género/formato solicitado (texto de apreciação crítica), incluindo:",
+             "uma descrição da imagem, destacando elementos significativos da sua composição;",
+             "um comentário crítico fundamentado em, pelo menos, três aspetos distintos, recorrendo a um discurso valorativo (juízo de valor explícito ou implícito);",
+             "uma conclusão adequada aos pontos de vista desenvolvidos."
+            ]
+           ]
+          },
+          {
+           "nivel": 3,
+           "pontuacao": 8,
+           "descritores": [
+            [
+             "Escreve um texto de acordo com o género/formato solicitado (texto de apreciação crítica), mas fundamenta o comentário crítico em apenas dois aspetos distintos, assegurando os restantes aspetos em avaliação neste parâmetro."
+            ],
+            [
+             "Escreve um texto de acordo com o género/formato solicitado (texto de apreciação crítica), fundamentando o comentário crítico em, pelo menos, três aspetos distintos, mas apresenta falhas em um ou dois dos restantes aspetos em avaliação neste parâmetro."
+            ]
+           ]
+          },
+          {
+           "nivel": 2,
+           "pontuacao": 5,
+           "descritores": [
+            [
+             "Escreve um texto de acordo com o género/formato solicitado (texto de apreciação crítica), mas fundamenta o comentário crítico em apenas um aspeto, assegurando os restantes aspetos em avaliação neste parâmetro."
+            ],
+            [
+             "Escreve um texto de acordo com o género/formato solicitado (texto de apreciação crítica), fundamentando o comentário crítico em apenas dois aspetos distintos, e apresenta falhas em um ou dois dos restantes aspetos em avaliação neste parâmetro."
+            ]
+           ]
+          },
+          {
+           "nivel": 1,
+           "pontuacao": 3,
+           "descritores": [
+            [
+             "Escreve um texto de acordo com o género/formato solicitado (texto de apreciação crítica), mas apresenta falhas no conjunto dos aspetos em avaliação neste parâmetro."
+            ],
+            [
+             "Escreve um texto em que as marcas do género/formato solicitado se misturam, sem critério nem intencionalidade, com as de outros géneros/formatos."
+            ]
+           ]
+          }
+         ],
+         "nota": "**Nota ‒** A pertinência dos argumentos e dos exemplos é avaliada no parâmetro B."
+        },
+        {
+         "id": "B",
+         "nome": "Tema e Pertinência da Informação",
+         "pontos": 10,
+         "niveis": [
+          {
+           "nivel": 4,
+           "pontuacao": 10,
+           "descritores": [
+            [
+             "Trata o tema proposto sem desvios e escreve um texto com eficácia argumentativa, assegurando:",
+             "a mobilização de aspetos diversificados e pertinentes, tanto no que diz respeito à descrição da imagem como ao comentário crítico;",
+             "a progressão da informação de forma coerente;",
+             "o recurso a um repertório lexical e a um registo de língua globalmente adequados ao desenvolvimento do tema, ainda que possam existir esporádicos afastamentos, justificados pela intencionalidade comunicativa."
+            ]
+           ]
+          },
+          {
+           "nivel": 3,
+           "pontuacao": 8,
+           "descritores": [
+            [
+             "Trata o tema proposto sem desvios, mas escreve um texto com falhas pontuais nos aspetos relativos à eficácia argumentativa."
+            ],
+            [
+             "Trata o tema proposto com desvios pouco significativos, mas escreve um texto com eficácia argumentativa (tendo em conta a forma como o tema foi desenvolvido)."
+            ]
+           ]
+          },
+          {
+           "nivel": 2,
+           "pontuacao": 5,
+           "descritores": [
+            [
+             "Trata o tema proposto com desvios pouco significativos e escreve um texto com falhas pontuais nos aspetos relativos à eficácia argumentativa."
+            ],
+            [
+             "Trata o tema proposto sem desvios, mas escreve um texto com falhas significativas nos aspetos relativos à eficácia argumentativa."
+            ]
+           ]
+          },
+          {
+           "nivel": 1,
+           "pontuacao": 3,
+           "descritores": [
+            [
+             "Trata o tema proposto com desvios significativos e escreve um texto com reduzida eficácia argumentativa, mobilizando muito pouca informação pertinente."
+            ]
+           ]
+          }
+         ]
+        },
+        {
+         "id": "C",
+         "nome": "Organização e Coesão Textuais",
+         "pontos": 10,
+         "niveis": [
+          {
+           "nivel": 4,
+           "pontuacao": 10,
+           "descritores": [
+            [
+             "Escreve um texto bem organizado, evidenciando um bom domínio dos mecanismos de coesão textual:",
+             "apresenta um texto constituído por diferentes partes, devidamente proporcionadas e articuladas entre si de modo consistente;",
+             "marca, corretamente, os parágrafos;",
+             "utiliza, adequadamente, mecanismos de articulação interfrásica;",
+             "mantém, de forma sistemática, cadeias de referência através de substituições nominais e pronominais adequadas;",
+             "estabelece conexões adequadas entre coordenadas de enunciação (pessoa, tempo, espaço) ao longo do texto."
+            ]
+           ]
+          },
+          {
+           "nivel": 3,
+           "pontuacao": 8,
+           "descritores": [
+            [
+             "Escreve um texto globalmente bem organizado, em que evidencia domínio dos mecanismos de coesão textual, mas em que apresenta falhas pontuais em um ou dois dos aspetos em avaliação neste parâmetro."
+            ]
+           ]
+          },
+          {
+           "nivel": 2,
+           "pontuacao": 5,
+           "descritores": [
+            [
+             "Escreve um texto satisfatoriamente organizado, em que evidencia um domínio suficiente dos mecanismos de coesão textual, apresentando falhas pontuais em três ou mais dos aspetos em avaliação neste parâmetro, ou falhas significativas em um ou dois desses aspetos."
+            ]
+           ]
+          },
+          {
+           "nivel": 1,
+           "pontuacao": 3,
+           "descritores": [
+            [
+             "Escreve um texto com uma organização pouco satisfatória, recorrendo a insuficientes mecanismos de coesão ou mobilizando-os de forma inadequada."
+            ]
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      "CL": {
+       "sigla": "CL",
+       "nome": "Aspetos de correção linguística",
+       "pontos": 14,
+       "nota_de_rodape": "_Vide_ Tipologia de erros no âmbito da correção linguística (pp. 2-3).",
+       "texto": "Após a contabilização dos erros do tipo A e do tipo B, apura-se a classificação neste parâmetro. A tabela abaixo apresenta a pontuação a atribuir, de acordo com o número de erros do tipo A e do tipo B identificados. Caso o número total de erros seja superior ao número máximo apresentado na tabela, o parâmetro CL é classificado com zero pontos.",
+       "tabela": "CL_14"
+      },
+      "regras_gerais_aplicaveis": [
+       "A atribuição da classificação de zero pontos no parâmetro A (Género/Formato Textual) ou no parâmetro B (Tema e Pertinência da Informação) implica a atribuição de zero pontos nos restantes parâmetros da ETD, bem como na CL.",
+       "Sempre que não sejam respeitados os limites relativos ao número de palavras indicados na instrução do item de resposta extensa, desconta-se um ponto por cada palavra (a mais ou a menos), até ao máximo de cinco (1 × 5) pontos, depois de aplicados todos os critérios definidos para o item.",
+       "Caso a resposta apresente uma extensão inferior a oitenta palavras, é classificada com zero pontos."
+      ],
+      "nota_nossa": "Os critérios do Grupo III não descrevem a imagem nem dão tópicos de conteúdo ou exemplos de resposta: só os descritores dos parâmetros A, B e C e a tabela de CL."
+     }
+    }
+   ]
+  }
+ ],
+ "resumo_itens": [
+  {
+   "item": "I.1",
+   "parte": "A",
+   "obrigatorio": true,
+   "tipo": "construção: resposta restrita",
+   "cotacao": 13,
+   "chave_versao_2": null
+  },
+  {
+   "item": "I.2",
+   "parte": "A",
+   "obrigatorio": true,
+   "tipo": "construção: resposta restrita",
+   "cotacao": 13,
+   "chave_versao_2": null
+  },
+  {
+   "item": "I.3",
+   "parte": "A",
+   "obrigatorio": false,
+   "tipo": "seleção: completamento (uma opção por espaço)",
+   "cotacao": 13,
+   "chave_versao_2": {
+    "a": 1,
+    "b": 2
+   }
+  },
+  {
+   "item": "I.4",
+   "parte": "B",
+   "obrigatorio": true,
+   "tipo": "construção: resposta restrita",
+   "cotacao": 13,
+   "chave_versao_2": null
+  },
+  {
+   "item": "I.5",
+   "parte": "B",
+   "obrigatorio": true,
+   "tipo": "construção: resposta restrita",
+   "cotacao": 13,
+   "chave_versao_2": null
+  },
+  {
+   "item": "I.6",
+   "parte": "B",
+   "obrigatorio": false,
+   "tipo": "seleção: escolha de três afirmações entre cinco",
+   "cotacao": 13,
+   "chave_versao_2": [
+    "I",
+    "III",
+    "IV"
+   ]
+  },
+  {
+   "item": "I.7",
+   "parte": "C",
+   "obrigatorio": true,
+   "tipo": "construção: resposta restrita (breve exposição)",
+   "cotacao": 13,
+   "chave_versao_2": null
+  },
+  {
+   "item": "II.1",
+   "parte": null,
+   "obrigatorio": true,
+   "tipo": "seleção: escolha múltipla (quatro opções)",
+   "cotacao": 13,
+   "chave_versao_2": "B"
+  },
+  {
+   "item": "II.2",
+   "parte": null,
+   "obrigatorio": true,
+   "tipo": "seleção: escolha múltipla (quatro opções)",
+   "cotacao": 13,
+   "chave_versao_2": "C"
+  },
+  {
+   "item": "II.3",
+   "parte": null,
+   "obrigatorio": false,
+   "tipo": "seleção: escolha múltipla (quatro opções)",
+   "cotacao": 13,
+   "chave_versao_2": "A"
+  },
+  {
+   "item": "II.4",
+   "parte": null,
+   "obrigatorio": false,
+   "tipo": "seleção: escolha múltipla (quatro opções)",
+   "cotacao": 13,
+   "chave_versao_2": "D"
+  },
+  {
+   "item": "II.5",
+   "parte": null,
+   "obrigatorio": false,
+   "tipo": "seleção: escolha múltipla (quatro opções)",
+   "cotacao": 13,
+   "chave_versao_2": "B"
+  },
+  {
+   "item": "II.6",
+   "parte": null,
+   "obrigatorio": true,
+   "tipo": "seleção: escolha múltipla (quatro opções)",
+   "cotacao": 13,
+   "chave_versao_2": "C"
+  },
+  {
+   "item": "II.7",
+   "parte": null,
+   "obrigatorio": true,
+   "tipo": "seleção: escolha múltipla (quatro opções)",
+   "cotacao": 13,
+   "chave_versao_2": "D"
+  },
+  {
+   "item": "III",
+   "parte": null,
+   "obrigatorio": true,
+   "tipo": "construção: resposta extensa",
+   "cotacao": 44,
+   "chave_versao_2": null
+  }
+ ]
+}
