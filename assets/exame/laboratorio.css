@@ -1,0 +1,288 @@
+/* Laboratório de respostas · «Oficina da palavra» (27/10/2026).
+   Identidade só desta página: tokens com prefixo --of-, aplicados a body.oficina.
+   Duas famílias livres (OFL), servidas pelo sítio: Fraunces (leitura e títulos) e IBM Plex Sans (orientação e ferramentas). */
+
+@font-face{font-family:"Fraunces Oficina";src:url("fontes/fraunces-latin-normal.woff2") format("woff2");font-weight:100 900;font-style:normal;font-display:swap}
+@font-face{font-family:"Fraunces Oficina";src:url("fontes/fraunces-latin-italic.woff2") format("woff2");font-weight:100 900;font-style:italic;font-display:swap}
+@font-face{font-family:"Plex Oficina";src:url("fontes/ibm-plex-sans-latin-normal.woff2") format("woff2");font-weight:100 700;font-style:normal;font-display:swap}
+
+/* ---------- tokens ---------- */
+body.oficina{
+ --of-papel:#F3F0E7;--of-cartao:#FBF9F3;--of-tinta:#24231F;--of-suave:#5E5B52;
+ --of-linha:#D8D2C2;--of-borda:#7A7466;--of-pauta:#C9D3DA;
+ --of-oxido:#A83D32;--of-azul:#294B63;--of-amarelo:#E4C66A;--of-verde:#2F6B4F;
+ --of-realce:#E9E4D6;--of-sobre-acento:#F3F0E7;
+ --of-serif:"Fraunces Oficina",Georgia,"Times New Roman",serif;
+ --of-sans:"Plex Oficina","IBM Plex Sans",Arial,Helvetica,sans-serif;
+ --of-acento:var(--of-azul);
+ background:var(--of-papel);color:var(--of-tinta);font:400 1rem/1.55 var(--of-sans);
+ -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility
+}
+body.oficina[data-maquina="1"]{--of-acento:var(--of-tinta)}
+body.oficina[data-maquina="2"]{--of-acento:var(--of-tinta)}
+body.oficina[data-maquina="3"]{--of-acento:var(--of-oxido)}
+:root[data-theme="dark"] body.oficina{
+ --of-papel:#1C1B18;--of-cartao:#25241F;--of-tinta:#EDE9DE;--of-suave:#B3AD9F;
+ --of-linha:#3E3B34;--of-borda:#8F897B;--of-pauta:#36424B;
+ --of-oxido:#E58A78;--of-azul:#9CC1DB;--of-amarelo:#E4C66A;--of-verde:#8FD1AE;
+ --of-realce:#2E2C26;--of-sobre-acento:#1C1B18
+}
+@media (prefers-color-scheme:dark){
+ :root:not([data-theme]) body.oficina{
+  --of-papel:#1C1B18;--of-cartao:#25241F;--of-tinta:#EDE9DE;--of-suave:#B3AD9F;
+  --of-linha:#3E3B34;--of-borda:#8F897B;--of-pauta:#36424B;
+  --of-oxido:#E58A78;--of-azul:#9CC1DB;--of-amarelo:#E4C66A;--of-verde:#8FD1AE;
+  --of-realce:#2E2C26;--of-sobre-acento:#1C1B18
+ }
+}
+
+/* ---------- base da página ---------- */
+body.oficina main{max-width:1240px;margin:0 auto;padding:0 clamp(16px,4vw,48px) 48px}
+body.oficina .site-head{max-width:1240px;padding:18px clamp(16px,4vw,48px) 14px}
+body.oficina .wordmark{font-family:var(--of-sans);font-weight:700;letter-spacing:-.03em}
+body.oficina .wordmark small{font-family:var(--of-sans);color:var(--of-suave)}
+body.oficina .site-head nav a{font-family:var(--of-sans)}
+body.oficina :focus-visible{outline:3px solid var(--of-acento);outline-offset:3px}
+/* 29/10/2026: a ligação «Ir para o exercício» lê os tokens da página (no tema escuro era clara sobre branco). */
+body.oficina .skip{background:var(--of-cartao);color:var(--of-tinta);border:2px solid var(--of-tinta)}
+body.oficina[data-maquina="1"] :focus-visible,body.oficina[data-maquina="2"] :focus-visible{outline-color:var(--of-oxido)}
+body.oficina button{font-family:var(--of-sans);color:var(--of-tinta);border-color:var(--of-borda);background:transparent;min-height:44px}
+body.oficina button:hover{background:var(--of-realce)}
+body.oficina button:disabled{opacity:1;color:var(--of-suave);border-style:dashed;cursor:not-allowed}
+body.oficina button:disabled:hover{background:transparent}
+.of-so-leitor{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap}
+
+/* ---------- rosto: título e índice das quatro máquinas ---------- */
+.of-rosto{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,26rem);gap:12px 48px;align-items:end;padding:28px 0 20px;border-top:3px solid var(--of-tinta)}
+.of-rosto h1{grid-column:1;margin:0;font:italic 600 clamp(2rem,4.2vw,3.4rem)/1 var(--of-serif);letter-spacing:-.02em}
+.of-entrada{grid-column:2;grid-row:1/3;margin:0;font-size:1.02rem;line-height:1.55;color:var(--of-tinta)}
+.of-estatuto-geral{grid-column:1;margin:0;font:600 .72rem/1.4 var(--of-sans);letter-spacing:.14em;text-transform:uppercase;color:var(--of-suave)}
+
+.of-programa{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;margin:8px 0 0;border-top:1px solid var(--of-linha);border-bottom:1px solid var(--of-linha)}
+body.oficina .of-programa button{margin-top:-1px;display:grid;grid-template-columns:auto 1fr;grid-template-areas:"num num" "verbo verbo" "nome nome";align-content:start;justify-items:start;text-align:left;gap:2px;padding:14px 18px 18px 0;border:0;border-top:6px solid transparent;min-height:44px;font-weight:400;background:transparent}
+body.oficina .of-programa button:hover{background:transparent}
+.of-programa button:hover .of-verbo{text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:6px}
+.of-num{grid-area:num;font:300 1rem/1 var(--of-sans);letter-spacing:.12em;color:var(--of-suave);font-variant-numeric:tabular-nums}
+.of-verbo{grid-area:verbo;font:600 clamp(1.7rem,3.7vw,3.5rem)/1 var(--of-serif);letter-spacing:-.025em;color:var(--of-suave);padding:4px 6px 4px 0}
+.of-nome{grid-area:nome;font:500 .86rem/1.35 var(--of-sans);color:var(--of-tinta)}
+.of-programa [data-machine="0"]{--of-m:var(--of-azul)}
+.of-programa [data-machine="1"]{--of-m:var(--of-tinta)}
+.of-programa [data-machine="2"]{--of-m:var(--of-tinta)}
+.of-programa [data-machine="3"]{--of-m:var(--of-oxido)}
+body.oficina .of-programa [aria-current]{border-top-color:var(--of-m)}
+.of-programa [aria-current] .of-verbo{color:var(--of-m)}
+.of-programa [aria-current] .of-num{color:var(--of-tinta);font-weight:600}
+.of-programa [data-machine="1"][aria-current] .of-verbo{background:linear-gradient(transparent 52%,var(--of-amarelo) 52%,var(--of-amarelo) 92%,transparent 92%);padding-right:10px}
+:root[data-theme="dark"] .of-programa [data-machine="1"][aria-current] .of-verbo{background:none;text-decoration:underline;text-decoration-color:var(--of-amarelo);text-decoration-thickness:5px;text-underline-offset:6px}
+.of-programa [data-machine="2"][aria-current] .of-verbo{text-decoration:underline double;text-decoration-thickness:2px;text-underline-offset:8px}
+
+.of-ferramentas{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 24px;margin:16px 0 8px}
+.of-escolha-texto{display:flex;align-items:center;gap:12px}
+.of-escolha-texto label{font:600 .72rem/1 var(--of-sans);letter-spacing:.14em;text-transform:uppercase;color:var(--of-suave)}
+:root body.oficina .of-escolha-texto select{min-height:44px;max-width:100%;padding:6px 28px 6px 4px;border:0;border-bottom:2px solid var(--of-tinta);background:transparent;color:var(--of-tinta);font:italic 500 1.12rem/1.2 var(--of-serif);border-radius:0}
+:root body.oficina .of-escolha-texto select option{background:var(--of-papel);color:var(--of-tinta)}
+.of-sala{display:flex;flex-wrap:wrap;gap:8px}
+body.oficina .of-sala button{font:500 .8rem/1.2 var(--of-sans);padding:8px 12px;border:1px solid var(--of-borda)}
+body.oficina .of-sala button[aria-pressed="true"]{background:var(--of-tinta);color:var(--of-papel);border-color:var(--of-tinta)}
+
+/* ---------- exercício ---------- */
+.of-exercicio{margin-top:28px}
+.of-ex-cabeca{display:grid;grid-template-columns:auto minmax(0,1fr);gap:0 28px;align-items:end;margin-bottom:24px}
+.of-ex-num{margin:0;font:300 clamp(3.6rem,7vw,6rem)/.8 var(--of-serif);letter-spacing:-.04em;color:var(--of-acento);font-variant-numeric:lining-nums}
+.of-ex-num span{display:block;font:600 .7rem/1 var(--of-sans);letter-spacing:.16em;margin:0 0 8px 4px;color:var(--of-suave)}
+.of-ex-cabeca h2{margin:0;font:italic 600 clamp(1.6rem,3vw,2.5rem)/1.05 var(--of-serif);letter-spacing:-.015em}
+.of-ex-cabeca h2:focus{outline:none}
+.of-ex-cabeca h2:focus-visible{outline:3px solid var(--of-acento);outline-offset:4px}
+.of-operacao{margin:8px 0 0;max-width:60ch;color:var(--of-suave);font-size:1rem}
+
+.of-mesa{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);grid-template-areas:"leitura acao";gap:0 clamp(28px,4vw,56px);align-items:start}
+.of-leitura{grid-area:leitura;background:var(--of-cartao);border-top:3px solid var(--of-tinta);padding:22px clamp(18px,2.4vw,32px) 26px}
+.of-acao{grid-area:acao;position:sticky;top:16px}
+.of-estatuto{margin:0 0 6px;font:600 .68rem/1.4 var(--of-sans);letter-spacing:.14em;text-transform:uppercase;color:var(--of-suave)}
+.of-texto-titulo{margin:0 0 14px;font:600 1.45rem/1.15 var(--of-serif);letter-spacing:-.01em}
+body.oficina .of-linhas{list-style:none;margin:0;padding:0;font:400 1.2rem/1.62 var(--of-serif);max-width:none}
+body.oficina .of-linhas li{display:grid;grid-template-columns:2.6rem minmax(0,1fr);align-items:baseline;margin:0 0 10px}
+.of-ref{font:600 .7rem/1 var(--of-sans);letter-spacing:.08em;color:var(--of-suave);font-variant-numeric:tabular-nums}
+
+/* 02 · as linhas do texto são as escolhas */
+body.oficina .of-linhas.choices{display:block}
+body.oficina .of-linha{display:grid;grid-template-columns:2.6rem minmax(0,1fr);align-items:baseline;width:100%;margin:0 0 6px;padding:8px 10px 8px 0;border:0;border-left:4px solid transparent;text-align:left;font:400 1.2rem/1.55 var(--of-serif);background:transparent;cursor:pointer}
+body.oficina .of-linha .of-ref{padding-left:8px}
+body.oficina .of-linha:hover{background:var(--of-realce)}
+body.oficina .of-linha[aria-pressed="true"]{border-left-color:var(--of-tinta)}
+body.oficina .of-linha[aria-pressed="true"] .of-linha-texto{background:linear-gradient(transparent 8%,var(--of-amarelo) 8%,var(--of-amarelo) 94%,transparent 94%);color:#24231F;box-decoration-break:clone;-webkit-box-decoration-break:clone;padding:0 3px}
+body.oficina .of-linha.correct{border-left-color:var(--of-verde);box-shadow:none}
+body.oficina .of-linha.incorrect{border-left-color:var(--of-oxido);box-shadow:none}
+
+/* instrução: a tarefa como figura */
+.of-instrucao{margin:0 0 22px;padding:0 0 0 18px;border-left:4px solid var(--of-acento)}
+.of-rotulo{display:inline-block;margin:0 0 8px;font:700 .68rem/1 var(--of-sans);letter-spacing:.16em;text-transform:uppercase;color:var(--of-suave)}
+.of-instrucao .of-rotulo{background:var(--of-acento);color:var(--of-sobre-acento);padding:5px 8px 4px;transform:rotate(-1.2deg);transform-origin:left bottom}
+body.oficina .of-instrucao .writing-task{margin:0;max-width:none;font:500 clamp(1.15rem,1.6vw,1.38rem)/1.5 var(--of-sans);letter-spacing:-.005em;color:var(--of-tinta)}
+.of-pergunta{margin:0 0 12px;font-weight:600;font-size:1rem}
+
+/* 01 · a instrução anotada (só depois de verificar) */
+.of-instrucao .writing-task:has(.of-parte){line-height:2.7}
+.of-parte{position:relative;padding-bottom:2px}
+.of-parte-rotulo{position:absolute;left:0;top:-1.55em;font:700 .6rem/1 var(--of-sans);letter-spacing:.12em;text-transform:uppercase;white-space:nowrap;color:var(--of-azul)}
+.of-parte[data-parte="verbo"]{border-bottom:4px solid var(--of-azul);font-weight:700}
+.of-parte[data-parte="objeto"]{border-bottom:3px double var(--of-azul)}
+.of-parte[data-parte="condicao"]{border-bottom:3px dotted var(--of-azul)}
+body.oficina[data-maquina="3"] .of-parte-rotulo{color:var(--of-oxido)}
+
+/* escolhas fechadas */
+body.oficina .of-escolhas{display:grid;gap:8px}
+body.oficina .of-escolhas .choice{display:grid;grid-template-columns:2rem minmax(0,1fr);gap:10px;align-items:start;width:100%;padding:10px 14px 10px 10px;border:1px solid var(--of-borda);text-align:left;font:400 1rem/1.45 var(--of-sans);background:transparent}
+.of-letra{display:inline-grid;place-items:center;width:1.8rem;height:1.8rem;border:1px solid currentColor;border-radius:50%;font:italic 600 1rem/1 var(--of-serif)}
+body.oficina .of-escolhas .choice[aria-pressed="true"]{background:var(--of-tinta);color:var(--of-papel);border-color:var(--of-tinta)}
+body.oficina .of-escolhas .choice.correct{box-shadow:inset 0 0 0 2px var(--of-verde),inset 6px 0 0 var(--of-verde)}
+body.oficina .of-escolhas .choice.incorrect{box-shadow:inset 0 0 0 2px var(--of-oxido),inset 6px 0 0 var(--of-oxido)}
+
+/* ações e comentário */
+body.oficina .of-resposta .lab-actions,body.oficina .of-leitura .of-resposta .lab-actions{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin:16px 0 0}
+body.oficina .of-primario{background:var(--of-acento);color:var(--of-sobre-acento);border:1px solid var(--of-acento);padding:10px 18px;font-weight:700}
+body.oficina .of-primario:hover{background:var(--of-acento);filter:brightness(1.12)}
+body.oficina .of-primario:disabled{background:transparent;color:var(--of-suave);border:1px dashed var(--of-borda);filter:none}
+body.oficina .lab-feedback{margin:16px 0 0;padding:14px 16px 14px 18px;border:0;border-left:4px solid var(--of-acento);background:var(--of-cartao);font-size:.98rem}
+body.oficina .lab-feedback p{margin:0 0 8px}
+.of-veredito{font-weight:700}
+.of-sinal{display:inline-block;width:1.4em;font-size:1.1em}
+.of-nota-instrucao{font-size:.86rem;color:var(--of-suave)}
+.of-eixos{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:12px 0 0}
+.of-eixos div{border-top:1px solid var(--of-linha);padding-top:8px}
+.of-eixos dt{font:700 .68rem/1.2 var(--of-sans);letter-spacing:.14em;text-transform:uppercase;color:var(--of-suave);margin-bottom:4px}
+.of-eixos dd{margin:0;font-size:.92rem}
+
+/* 03 · caderno e relógio */
+.of-relogio{display:flex;align-items:flex-end;gap:12px;margin:0 0 16px!important}
+.of-relogio>div{display:grid;margin-right:auto}
+.of-relogio .of-rotulo{margin:0 0 2px}
+body.oficina .lab-timer{font:600 2.4rem/1 var(--of-sans);font-variant-numeric:tabular-nums;letter-spacing:-.02em}
+body.oficina .lab-timer.of-relogio-fim{color:var(--of-oxido)}
+body.oficina .field-label{font:600 .8rem/1.3 var(--of-sans);color:var(--of-suave);margin:8px 0 6px}
+:root body.oficina textarea{width:100%;min-height:9rem;padding:4px 14px 4px 14px;border:1px solid var(--of-borda);border-radius:0;background:var(--of-cartao);color:var(--of-tinta);font:400 1.08rem/2rem var(--of-serif);resize:vertical}
+:root body.oficina textarea.of-caderno{min-height:12.5rem;padding:0 14px 0 3.6rem;background-color:var(--of-cartao);background-image:linear-gradient(to right,transparent 2.8rem,var(--of-oxido) 2.8rem,var(--of-oxido) calc(2.8rem + 1px),transparent calc(2.8rem + 1px)),repeating-linear-gradient(to bottom,transparent 0,transparent calc(2rem - 1px),var(--of-pauta) calc(2rem - 1px),var(--of-pauta) 2rem);background-attachment:local}
+body.oficina .small{font-size:.82rem;color:var(--of-suave)}
+.of-revisao{margin-top:18px;padding-top:12px;border-top:1px solid var(--of-tinta)}
+
+/* 04 · a resposta em revisão */
+.of-prova{margin-top:22px;padding-top:16px;border-top:1px solid var(--of-linha)}
+.of-prova .of-rotulo span{text-transform:none;letter-spacing:0;font-weight:400}
+body.oficina .of-prova-texto{margin:0;padding:14px 16px 14px 3.2rem;border:0;background:var(--of-papel);background-image:linear-gradient(to right,transparent 2.4rem,var(--of-oxido) 2.4rem,var(--of-oxido) calc(2.4rem + 1px),transparent calc(2.4rem + 1px));font:italic 400 1.14rem/1.65 var(--of-serif);white-space:normal}
+mark.of-marca{background:none;color:inherit;-webkit-box-decoration-break:clone;box-decoration-break:clone;text-decoration:underline wavy var(--of-oxido);text-decoration-thickness:1.5px;text-underline-offset:5px}
+.of-nota{display:block;margin:4px 0 10px;font:italic 500 .84rem/1.35 var(--of-sans);color:var(--of-oxido);text-decoration:none}
+.of-nota::before{content:attr(data-n) " · ";font-style:normal;font-weight:700}
+.of-falta{display:block;margin-top:6px;font:600 .84rem/1.35 var(--of-sans);font-style:normal;color:var(--of-oxido)}
+.of-falta::before{content:"‸ ";font-weight:700}
+
+/* apoios: três revelações, por ordem */
+.of-apoios{margin-top:32px;border-top:1px solid var(--of-tinta);padding-top:14px}
+.of-apoios-barra{display:flex;flex-wrap:wrap;align-items:center;gap:12px 16px;margin:0;padding-right:60px}
+body.oficina #reveal{border:1px solid var(--of-tinta);font-weight:700;padding:8px 16px}
+.of-passos{display:inline-flex;gap:6px}
+.of-passo{width:22px;height:8px;border:1px solid var(--of-borda)}
+.of-passo.feito{background:var(--of-acento);border-color:var(--of-acento)}
+body.oficina[data-maquina="1"] .of-passo.feito{background:var(--of-amarelo);border-color:var(--of-tinta)}
+body.oficina .of-discreto{margin-left:auto;border:0;text-decoration:underline;text-underline-offset:4px;font-weight:500;padding:8px 0}
+.of-apoios-grelha{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;counter-reset:apoio}
+.of-apoios-grelha>section{counter-increment:apoio;margin-top:18px;padding-top:10px;border-top:3px solid var(--of-acento)}
+.of-apoios-grelha>section::before{content:"0" counter(apoio);display:block;font:300 1.6rem/1 var(--of-serif);color:var(--of-suave);margin-bottom:6px}
+.of-apoios h3,.of-revisao h3{margin:0 0 8px;font:italic 600 1.2rem/1.2 var(--of-serif)}
+.of-apoios h3:focus,.of-revisao h3:focus{outline:none}
+.of-apoios h3:focus-visible,.of-revisao h3:focus-visible{outline:3px solid var(--of-acento);outline-offset:3px}
+body.oficina .of-apoios .model{margin:0 0 8px;padding:0;border:0;font:400 1.05rem/1.6 var(--of-serif)}
+body.oficina .lab-hint{border:0}
+body.oficina .lab-checks label{display:grid;grid-template-columns:28px minmax(0,1fr);gap:8px;align-items:start;margin:10px 0;font-size:.92rem}
+body.oficina .lab-checks input{width:22px;height:22px;margin:1px 0 0;accent-color:var(--of-acento)}
+
+/* colofão: o critério à vista */
+body.oficina .of-colofao{margin-top:56px;padding:20px 0 0;border-top:3px solid var(--of-tinta);border-bottom:0}
+.of-colofao h2{margin:0 0 14px;font:italic 600 1.5rem/1.1 var(--of-serif)}
+.of-colofao-texto{columns:2 22rem;column-gap:40px;font-size:.9rem;line-height:1.6}
+.of-colofao-texto p{margin:0 0 12px;break-inside:avoid}
+
+/* ---------- telemóvel ---------- */
+@media (max-width:960px){
+ .of-mesa{grid-template-columns:minmax(0,1fr);grid-template-areas:"leitura" "acao";gap:22px}
+ .of-acao{position:static}
+ .of-mesa[data-maquina="1"]{grid-template-areas:"acao" "leitura"}
+ .of-apoios-grelha{grid-template-columns:minmax(0,1fr);gap:0}
+}
+@media (max-width:700px){
+ .of-rosto{grid-template-columns:minmax(0,1fr);gap:10px;padding-top:20px}
+ .of-entrada,.of-estatuto-geral{grid-column:1;grid-row:auto}
+ .of-programa{grid-template-columns:repeat(2,minmax(0,1fr));gap:0 14px}
+ .of-programa button{padding:10px 8px 14px 0}
+ .of-verbo{font-size:1.75rem}
+ .of-ferramentas{align-items:stretch}
+ .of-sala{width:100%}
+ body.oficina .of-sala button{flex:0 1 auto;font-size:.76rem;padding:6px 10px}
+ .of-ex-cabeca{grid-template-columns:minmax(0,1fr);gap:6px}
+ .of-ex-num{font-size:3rem}
+ body.oficina .of-linhas,body.oficina .of-linha{font-size:1.08rem}
+ body.oficina .of-linhas li,body.oficina .of-linha{grid-template-columns:2.2rem minmax(0,1fr)}
+ .of-eixos{grid-template-columns:minmax(0,1fr)}
+ .of-relogio{flex-wrap:wrap}
+ body.oficina .of-discreto{margin-left:0}
+}
+
+/* ---------- projeção: o que a sala precisa de ler e decidir ---------- */
+body.oficina.projected{font-size:clamp(18px,1.25vw,26px)}
+body.oficina.projected .site-head{padding:8px clamp(20px,3vw,64px);max-width:none}
+body.oficina.projected .site-head nav,body.oficina.projected .of-rosto,body.oficina.projected #fontes,body.oficina.projected textarea,body.oficina.projected .personal,body.oficina.projected .of-operacao{display:none}
+body.oficina.projected main{max-width:none;padding-inline:clamp(20px,3vw,64px)}
+body.oficina.projected .of-programa{margin:0}
+body.oficina.projected .of-programa button{padding:8px 12px 10px 0;grid-template-areas:"num verbo" "nome nome";gap:0 8px;align-items:baseline}
+body.oficina.projected .of-verbo{font-size:1.25rem}
+body.oficina.projected .of-nome{font-size:.7rem}
+body.oficina.projected .of-ferramentas{margin:8px 0 0}
+body.oficina.projected .of-exercicio{margin-top:14px}
+body.oficina.projected .of-ex-cabeca{margin-bottom:14px}
+body.oficina.projected .of-ex-num{font-size:2.6rem}
+body.oficina.projected .of-ex-cabeca h2{font-size:1.6rem}
+body.oficina.projected .of-linhas,body.oficina.projected .of-linha{font-size:clamp(21px,1.55vw,32px)}
+body.oficina.projected .of-linhas li{margin-bottom:6px}
+body.oficina.projected .of-instrucao .writing-task{font-size:clamp(20px,1.45vw,30px)}
+body.oficina.projected .of-escolhas .choice{font-size:clamp(17px,1.15vw,24px);padding-block:8px}
+body.oficina.projected .of-leitura{padding-block:16px 18px}
+body.oficina.projected .of-apoios{margin-top:18px}
+
+/* Percurso e revisão: a mesma resposta ganha uma segunda leitura. */
+.of-percurso{display:flex;align-items:center;flex-wrap:wrap;gap:12px;margin-top:30px;padding-top:18px;border-top:3px solid var(--of-tinta)}
+.of-percurso p{display:grid;gap:4px;margin:0 auto 0 0}.of-percurso .of-rotulo{margin:0}.of-percurso strong{font:600 1.25rem/1.2 var(--of-serif)}
+.of-escrita #criteria-toggle{margin:0 0 12px;text-align:left}.of-escrita #keep-draft{margin-top:12px}
+.of-primeira{margin:12px 0 18px;padding:12px 16px;border-left:3px solid var(--of-azul);background:var(--of-cartao)}
+.of-primeira h3{margin:0 0 8px;font:italic 600 1.15rem/1.2 var(--of-serif)}
+.of-manuscrito{white-space:pre-wrap;overflow-wrap:anywhere;margin:0;font:400 1.08rem/1.7 var(--of-serif)}
+@media(max-width:700px){.of-percurso p{flex-basis:100%}.of-percurso button{flex:1}}
+body.oficina.projected .of-percurso{margin-top:18px;padding-top:10px}body.oficina.projected .of-percurso .small{display:none}
+
+/* ---------- movimento ---------- */
+@media (prefers-reduced-motion:no-preference){
+ .of-apoios-grelha>section:not([hidden]),.lab-feedback:not([hidden]),.of-revisao:not([hidden]){animation:of-entra .28s ease-out}
+ @keyframes of-entra{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+}
+
+/* ---------- papel: A4, preto e branco ---------- */
+@media print{
+ #print-sheet{font:10.5pt/1.5 var(--of-serif);color:#000}
+ #print-sheet .of-p-cabeca{display:flex;justify-content:space-between;align-items:baseline;border-bottom:1.5pt solid #000;padding-bottom:4pt;margin-bottom:10pt;font:600 8pt/1.2 var(--of-sans);letter-spacing:.08em;text-transform:uppercase}
+ #print-sheet .of-p-cabeca p{margin:0}
+ #print-sheet .of-p-num{font:300 22pt/1 var(--of-serif);letter-spacing:-.02em;text-transform:none}
+ #print-sheet h1{font:italic 600 20pt/1.1 var(--of-serif);margin:0 0 4pt}
+ #print-sheet h2{font:italic 600 12.5pt/1.2 var(--of-serif);margin:14pt 0 4pt}
+ #print-sheet .of-p-operacao{font:9.5pt/1.4 var(--of-sans);margin:0 0 10pt}
+ #print-sheet .of-p-rotulo{font:700 7.5pt/1 var(--of-sans);letter-spacing:.14em;text-transform:uppercase;margin:0 0 5pt}
+ #print-sheet .of-p-texto{border-top:1pt solid #000;padding-top:6pt}
+ #print-sheet .of-p-texto ol{list-style:none;margin:0;padding:0}
+ #print-sheet .of-p-texto li{display:grid;grid-template-columns:24pt 1fr;margin:0 0 3pt;font-size:11.5pt}
+ #print-sheet .of-p-texto b{font:700 7.5pt/2 var(--of-sans)}
+ #print-sheet .of-p-instrucao{margin:10pt 0;padding:6pt 8pt;border:1.2pt solid #000;break-inside:avoid}
+ #print-sheet .of-p-instrucao p:last-child{margin:0;font:500 11pt/1.45 var(--of-sans)}
+ #print-sheet .of-p-pedido{font:600 10pt/1.4 var(--of-sans)}
+ #print-sheet blockquote{margin:6pt 0;padding-left:10pt;border-left:1pt solid #000;font-style:italic}
+ #print-sheet .answer-lines{height:63mm;margin-top:8pt;background:repeating-linear-gradient(to bottom,transparent 0,transparent 9mm,#777 9mm,#777 9.3mm);-webkit-print-color-adjust:exact;print-color-adjust:exact}
+ #print-sheet .of-p-nome{font:9pt var(--of-sans);margin:8pt 0 0}
+ #print-sheet .print-meta{font:7.5pt/1.4 var(--of-sans);color:#333;margin-top:14pt;border-top:.5pt solid #000;padding-top:4pt}
+ #print-sheet section{break-inside:avoid}
+}

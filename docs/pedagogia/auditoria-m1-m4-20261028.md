@@ -34,7 +34,7 @@ Uma equipa de agentes leu as lições, os painéis, os índices, as tarefas e os
 
 **Coerência**
 - Os painéis do M1 têm a unidade certa (o módulo tem duas).
-- As tarefas do M1 e do M2 com uma só pergunta opcional deixam de a numerar «2.» e de contar «0 de 2». A mudança foi feita no gerador e nos dados.
+- As tarefas do M1 e do M2 com uma só pergunta opcional deixam de a numerar «2.» (não há nenhum «1.» à vista). A mudança foi feita também nos dados. A contagem «0 de 2» fica, porque o aquecimento também conta.
 - No mapa do M4:
   - as ligações vão para as aulas de tarefa (`#tarefa-unidade-N`), e não para o arquivo escondido;
   - as imagens de «Para ver» apontam para as lições onde aparecem;
@@ -44,7 +44,7 @@ Uma equipa de agentes leu as lições, os painéis, os índices, as tarefas e os
   - relembra «Quem sabia, e quando» em vez da F27, que só vem na unidade 3.
 - Créditos completos das imagens da F01, da F04 e da F11 do M4.
 - A F02 do M1 deixa de citar o nome automático do canal do YouTube.
-- A F01 do M4 perde o vídeo do Câmara Clara, por estar fora de contexto (regra de 28/10). O cartão compara agora os dois pregadores pela leitura.
+- A F01 do M4 perde o vídeo do Câmara Clara, por estar fora de contexto (regra de 28/10). O cartão compara agora os dois pregadores pela leitura, e o guião da aula 1 deixa de mandar projetar o vídeo.
 
 ## Como os testes o aceitam
 
@@ -65,4 +65,5 @@ O `browser_m4_tpc` passou a comparar as opções do relâmpago sem os sublinhado
 - Numeração antiga das tarefas do M4 (Tarefa 2 discurso, Tarefa 3 apreciação) na F14, na F20 e nos guiões das aulas 8, 11 e 16. Inclui também o bloco «As tarefas do Teams» no mapa.
 - Guião da aula 9 do M4: descreve uma versão antiga da F28 e tem de ser reescrito a partir da lição.
 - O «Sala —» dos painéis sai com a Sala, num PR próprio: a Sala foi desligada nas fontes a 17/10, mas continua no sítio publicado.
+- Os diapositivos (.pptx e .pdf) das aulas tocadas ainda têm o texto antigo, que já lá estava antes. São eles: M1 aulas 2, 6, 7, 11 e 13; M4 aula 1, aula 12 e sessão 9. Ficam para a próxima geração dos diapositivos.
 - As contagens do mapa do M4 ficam: o número conta as lições principais do plano, como o teste UX06 define.

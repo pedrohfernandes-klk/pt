@@ -85,7 +85,7 @@ def apoios(links, dossier_title, facts, qtitle, options):
 <section class="task-dossier" aria-labelledby="dossie"><h3 id="dossie">{dossier_title}</h3><ul>{fa}</ul></section>
 <details data-task-optional-preparation><summary>Experimentar uma pergunta</summary><div class="task-quiz" aria-label="Uma pergunta opcional">
 <article class="task-question" data-task-question="1" aria-labelledby="q1"><h3 id="q1">{qtitle}</h3>{opts(options)}</article>
-<p data-task-status role="status">Respostas exploradas: 0 de 1. Podes rever qualquer escolha.</p></div></details>
+<p data-task-status role="status">Respostas exploradas: 0 de 2. Podes rever qualquer escolha.</p></div></details>
 </section>
 '''
 

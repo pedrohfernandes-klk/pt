@@ -288,7 +288,9 @@ PAINEL_ATLAS_ANTIGO = ('if(!x)return;var id="r"+Date.now();rel[id]=[];contar(s,f
                        'pedido("Quem sou eu? "+s+" segundos",x.pistas[0]);$("[data-extra]").innerHTML=\'<p class="rot">'
                        'Atlas Lusófono · três pistas</p><ol>\'+x.pistas.map(function(p){return "<li>"+%s+"</li>"})'
                        '.join("")+\'</ol>\';enviar({t:"relampago",k:-1,x:x,s:s,id:id})};')
-PAINEL_ATLAS_VARIANTES = ('esc(p).replace(/_([^_]+)_/g,"<i>$1</i>")', 'esc(p)')
+# 29/10/2026: a terceira variante é a do itálico estrito que a auditoria do M1 e do M4 (#128) pôs nas pistas do Atlas.
+PAINEL_ATLAS_VARIANTES = ('esc(p).replace(/_([^_]+)_/g,"<i>$1</i>")', 'esc(p)',
+                          'esc(p).replace(/(^|[^0-9A-Za-zÀ-ÖØ-öø-ÿ_\\/])_([^_\\n<>]{1,100}?)_(?![0-9A-Za-zÀ-ÖØ-öø-ÿ_])/g,"$1<i>$2</i>")')
 
 # ── o que entra nos painéis (28/10/2026, depois da revisão): sem telemóveis do outro lado, o projetor tem de bastar
 # - CSS do material do relâmpago e do «Quem sou eu?»; o QR cresce no ecrã de abertura (onde estava o placar) e sai,
@@ -361,6 +363,9 @@ PAINEL_TECLAS_JS = ('else if(k==="a"&&$("[data-atlas]"))$("[data-atlas]").click(
                     'else if(k==="i")$("[data-inicio]").click();else if(k==="f")')
 
 PEDIDO_ITALICO = 'function pedido(rot,t){$("[data-rot]").textContent=rot;$("[data-pedido]").innerHTML=esc(t).replace(/_([^_]+)_/g,"<i>$1</i>")}'
+# 29/10/2026: depois da auditoria do M1 e do M4 (#128), o pedido usa um itálico mais estrito (não apanha
+# sublinhados dentro de palavras nem de caminhos); é a mesma função, para efeitos da Sala.
+PEDIDO_ITALICO_ESTRITO = 'function pedido(rot,t){$("[data-rot]").textContent=rot;$("[data-pedido]").innerHTML=esc(t).replace(/(^|[^0-9A-Za-zÀ-ÖØ-öø-ÿ_\\/])_([^_\\n<>]{1,100}?)_(?![0-9A-Za-zÀ-ÖØ-öø-ÿ_])/g,"$1<i>$2</i>")}'
 PEDIDO_SIMPLES = 'function pedido(rot,t){$("[data-rot]").textContent=rot;$("[data-pedido]").textContent=t}'
 
 ATLAS_CSS_SALA = r'''.sala-f label{display:block;font:700 .85rem var(--sans);margin:10px 0 4px}.sala-f input{font:1.2rem var(--sans);width:100%;min-height:48px;padding:0 10px;border:0;border-bottom:2px solid var(--tinta);background:var(--fundo);color:var(--tinta);text-transform:none}
@@ -539,7 +544,7 @@ def relampago_do_painel(rel, texto, ident):
     if i < 0:
         raise FormaDesconhecida(f'{rel}: a lição não tem CARTOES')
     L = json.JSONDecoder().raw_decode(tl, i + len('CARTOES='))[0]
-    if PEDIDO_ITALICO in texto:
+    if PEDIDO_ITALICO in texto or PEDIDO_ITALICO_ESTRITO in texto:
         italico = True
     elif PEDIDO_SIMPLES in texto:
         italico = False
