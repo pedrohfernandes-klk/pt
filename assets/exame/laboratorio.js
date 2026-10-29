@@ -154,7 +154,7 @@
       return '<p class="of-pergunta">Escreve uma resposta breve, em papel ou no campo abaixo. Quatro linhas são uma meta de concisão; o campo não limita a extensão.</p>' +
         '<div class="personal of-escrita"><button id="criteria-toggle" class="of-discreto" aria-controls="writing-criteria" aria-expanded="' + (s.criteriaOpen || s.stage >= 3) + '">Consultar critérios antes de escrever</button>' +
         (s.firstDraft !== null ? '<section class="of-primeira"><h3>Primeira versão · conservada</h3><p class="of-manuscrito">' + esc(s.firstDraft) + '</p></section>' : '') +
-        '<label class="field-label" for="answer">' + (s.firstDraft !== null ? 'Versão revista · melhora a resposta com os critérios' : 'A tua primeira resposta') + '</label><textarea id="answer" class="of-caderno" maxlength="6000" rows="6">' + esc(s.answer) + '</textarea>' +
+        '<label class="field-label" for="answer">' + (s.firstDraft !== null ? 'Versão revista: melhora a resposta com os critérios' : 'A tua primeira resposta') + '</label><textarea id="answer" class="of-caderno" maxlength="6000" rows="6">' + esc(s.answer) + '</textarea>' +
         (s.firstDraft === null ? '<button id="keep-draft" class="of-primario"' + (!s.answer.trim() ? ' disabled' : '') + '>Conservar primeira versão e rever</button>' : '<label class="field-label" for="reflection">O que mudei e porquê? Identifica o critério que orientou a revisão.</label><textarea id="reflection" maxlength="2000" rows="3">' + esc(s.reflection) + '</textarea>') +
         '<p class="small">O texto fica apenas nesta página enquanto estiver aberta. Copia-o antes de sair.</p></div>' +
         '<p class="small personal">Não há classificação automática. Compara a tua resposta com os critérios e revê-a.</p>' +
@@ -185,7 +185,7 @@
     // Escolhas (01, 02): o relógio fica depois de verificar; escrita (03, 04): antes da resposta.
     const slot = '<div class="of-relogio" id="relogio-slot"></div>';
     host.innerHTML =
-      '<header class="of-ex-cabeca"><p class="of-ex-num" aria-hidden="true"><span>Nº</span>0' + (machine + 1) + '</p><div><h2 tabindex="-1">' + m.name + '</h2><p class="of-operacao">' + m.operation + '</p></div></header>' +
+      '<header class="of-ex-cabeca"><p class="of-ex-num" aria-hidden="true"><span>N.º</span>0' + (machine + 1) + '</p><div><h2 tabindex="-1">' + m.name + '</h2><p class="of-operacao">' + m.operation + '</p></div></header>' +
       '<div class="of-mesa" data-maquina="' + machine + '">' + reading(t, s, machine === 1 ? '<div class="of-resposta">' + verify + feedback + '</div>' : '') +
       '<section class="of-acao" aria-label="Tarefa">' + instruction(t, machine === 0 && s.feedback) + (machine >= 2 ? slot : '') + '<div class="of-resposta">' + responseHTML(t, s) + (machine === 1 ? '' : verify + feedback) +
       '</div>' + (machine < 2 ? slot : '') + '</section></div>' +
@@ -311,7 +311,7 @@
       (s.stage >= 2 ? '<h2>Uma resposta possível</h2><p>' + esc(t.model) + '</p>' : '') +
       (s.stage >= 3 ? '<h2>Revisão formativa</h2><ul>' + checks(t).map(c => '<li>' + esc(c) + '</li>').join('') + '</ul>' : '') : '';
     document.querySelector('#print-sheet').innerHTML =
-      '<header class="of-p-cabeca"><p>Laboratório de respostas · Português · treino formativo</p><p class="of-p-num">Nº 0' + (machine + 1) + '</p></header>' +
+      '<header class="of-p-cabeca"><p>Laboratório de respostas · Português · treino formativo</p><p class="of-p-num">N.º 0' + (machine + 1) + '</p></header>' +
       '<h1>' + m.name + '</h1><p class="of-p-operacao">' + m.operation + '</p>' +
       '<section class="of-p-texto"><p class="of-p-rotulo">Texto · ' + esc(t.title) + '</p><ol>' + t.lines.map((l, i) => '<li><b>L' + (i + 1) + '</b>' + esc(l) + '</li>').join('') + '</ol></section>' +
       '<section class="of-p-instrucao"><p class="of-p-rotulo">Instrução</p><p>' + esc(t.prompt) + '</p></section>' + task +
