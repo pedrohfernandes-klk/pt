@@ -99,9 +99,18 @@ Pedido do docente (27/10): uma cantiga não pode parecer um relatório; subir um
 
 - **Textos das sessões:** os 15 recortes literários deixam de ser texto achatado. Cada um é reconstruído a partir da lição de onde vem (`source.passages`): versos e estrofes, omissões marcadas com «[…]», parágrafos numerados, falas de teatro com o nome da figura e as didascálias em itálico, palavras explicadas com nota numerada (como no exame nacional) e crédito com os títulos em itálico. Três referências antigas foram corrigidas pelo caminho: a lição da cantiga de Codax («As cantigas lado a lado»), a estância «Nas naus estar se deixa vagaroso» (VIII, 96) e a parte «Noite Fechada» do poema de Cesário. Cada verso e cada parágrafo guarda a referência à linha da lição; `tests/test_exame_textos.py` falha se a lição mudar e o exame ficar desalinhado.
 - **Identidade:** `assets/exame/oficina.css` reúne as fontes (Fraunces e IBM Plex Sans, locais, OFL) e os tokens claros e escuros, comuns ao laboratório e às sessões. Nas sessões, os tokens antigos passam a ler a Oficina; cada fase tem a sua cor (aquecer amarelo, ler azul, escrever óxido, corrigir verde, fechar tinta) e cada ano do catálogo também.
-- **Relógio do aluno** (`assets/relogio.js`, comum às aulas de tarefa): o aluno escolhe a duração até ao máximo; pode pausar duas vezes; depois disso, parar recomeça do início. Sessões: o máximo é o tempo da fase (5, 8, 10 a 20, 7 a 17 e 5 min). Laboratório: um relógio por exercício, com máximos de 1, 2, 2 e 3 min (máquinas 01 a 04, a validar em sala); mudar de máquina com o relógio a contar conta como pausa e é anunciado.
+- **Relógio do aluno** (`assets/relogio.js`, comum às aulas de tarefa): o aluno escolhe a duração até ao máximo; pode pausar duas vezes; depois disso, parar recomeça do início. Sessões: o máximo é o tempo da fase (5, 8, 10 a 20, 7 a 17 e 5 min). Laboratório: um relógio por exercício, com máximos de 1, 2, 2 e 3 min (máquinas 01 a 04, a validar em sala); mudar de máquina ou de texto com o relógio a contar conta como pausa e é anunciado.
 - **Texto do sítio:** sem «ficha» nem «folha» nas sessões (os dois casos que ficam são citações de Camilo e de Álvaro de Campos).
 
 Por validar em sala: leitura das notas à distância, os máximos do laboratório e a regra das duas pausas.
 
 Ao juntar as duas linhas (29/10/2026), o relógio do aluno passou a servir também o percurso: um relógio por exercício, com os mesmos máximos, e «Recomeçar esta máquina» pede confirmação antes de repor o texto, a revisão e o relógio.
+
+Revisão adversarial antes de publicar (29/10/2026):
+
+- **Papel:** imprimir a partir do tema escuro dava letra quase branca sobre papel branco; no papel, os tokens passam sempre a tinta preta sobre branco.
+- **Relógio:** o botão principal deixava de se ver ao passar o rato ou ao tocar (fundo claro com letra clara); fica escuro, com um traço da cor da fase. Nas sessões, cada fase guarda o seu relógio em memória: mostrar a proposta de correção ou pedir outro aquecimento já não o repõe, mesmo sem armazenamento; sair da fase com o relógio a contar conta como pausa e é anunciado, como no laboratório.
+- **Aquecimento:** várias perguntas pedem o sentido de uma palavra pelo contexto (por exemplo, «deveras», «naus», «orla», «volucres») e a nota de vocabulário dava a resposta. No aquecimento, o texto de apoio aparece sem as notas; as notas voltam na fase Ler.
+- **Catálogo:** a cor de cada ano vem do ano e não da posição (com o filtro «11.º ano», o grupo continua óxido).
+- **Ligação de salto** legível no tema escuro, também no laboratório.
+- **«sr.ª»:** a abreviatura da edição de 1888 de _Os Maias_ aparecia como «sr.^a» na lição M5-F10, na página «O Ramalhete» e na sessão 09; passa a «sr.ª» nos três sítios.

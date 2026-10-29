@@ -38,6 +38,7 @@ jobs:
       - name: Testar máquinas e sessões preservadas
         run: |
           node tests/browser_exame_laboratorio.cjs
+          node tests/browser_exame_oficina_revisao.cjs
           python tests/browser_exame_cache.py
           python tests/browser_exame_alignment.py
           python tests/browser_relogio.py

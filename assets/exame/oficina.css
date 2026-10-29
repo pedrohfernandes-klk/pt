@@ -73,7 +73,10 @@ body.oficina-exame[data-fase="fechar"]{--of-fase:var(--of-tinta)}
 .oficina-exame button:hover,.oficina-exame .button:hover{background:var(--of-realce)}
 .oficina-exame .primary{background:var(--of-tinta);color:var(--of-papel);border-color:var(--of-tinta)}
 .oficina-exame .primary:hover{background:var(--of-tinta);color:var(--of-papel);box-shadow:inset 0 -4px 0 var(--of-fase)}
-.oficina-exame .skip{background:var(--of-papel);color:var(--of-tinta)}
+/* 29/10/2026: a ligação de salto lê os tokens em toda a área (sessões e laboratório), também no tema escuro. */
+body.oficina .skip{background:var(--of-cartao);color:var(--of-tinta);border:2px solid var(--of-tinta)}
+/* O botão principal do relógio fica escuro ao passar o rato ou ao tocar (as regras gerais de :hover davam-lhe fundo claro com letra clara). */
+body.oficina .relogio .relogio-principal:hover{background:var(--r-tinta);color:var(--of-papel);box-shadow:inset 0 -4px 0 var(--of-fase,var(--of-oxido))}
 .oficina-exame .wordmark{font-family:var(--of-sans);font-weight:700;letter-spacing:-.03em}
 .oficina-exame .wordmark small{font-family:var(--of-sans)}
 .oficina-exame :is(.hero h1,.session-heading h1,.dossier-heading h1,.coverage h1,.phase-title,.catalogue-group h2,.dossier-entry h2){font-family:var(--of-serif);font-optical-sizing:auto}
@@ -85,9 +88,10 @@ body.oficina-exame[data-fase="fechar"]{--of-fase:var(--of-tinta)}
 .oficina-exame .eyebrow{font-family:var(--of-sans);letter-spacing:.14em}
 /* Catálogo: cada ano tem a sua cor (semelhança); o número da sessão lê-se em Plex. */
 .oficina-exame .catalogue-group{--grupo:var(--of-tinta)}
-.oficina-exame .catalogue-group:nth-of-type(1){--grupo:var(--of-azul)}
-.oficina-exame .catalogue-group:nth-of-type(2){--grupo:var(--of-oxido)}
-.oficina-exame .catalogue-group:nth-of-type(3){--grupo:var(--of-verde)}
+/* 29/10/2026: a cor vem do ano (data-grupo), não da posição: com o filtro «11.º ano», o grupo continua óxido. */
+.oficina-exame .catalogue-group[data-grupo="0"]{--grupo:var(--of-azul)}
+.oficina-exame .catalogue-group[data-grupo="1"]{--grupo:var(--of-oxido)}
+.oficina-exame .catalogue-group[data-grupo="2"]{--grupo:var(--of-verde)}
 .oficina-exame .catalogue-group h2::before{content:"";display:inline-block;width:.62em;height:.62em;margin-right:.4em;background:var(--grupo);vertical-align:.04em}
 .oficina-exame .session-card{border-top:4px solid var(--grupo,var(--of-tinta))}
 .oficina-exame .session-card .number{color:var(--grupo,var(--of-oxido));font-family:var(--of-sans);font-variant-numeric:tabular-nums;letter-spacing:.06em}
@@ -128,6 +132,8 @@ body.oficina-exame[data-fase="fechar"]{--of-fase:var(--of-tinta)}
 .oficina-exame .photo img{background:var(--of-cartao)}
 .oficina-exame .notice{background:var(--of-papel);color:var(--of-tinta);box-shadow:4px 4px 0 var(--of-linha)}
 @media print{
+ /* 29/10/2026: no papel, sempre tinta preta sobre branco, mesmo quando o ecrã está no tema escuro (os navegadores não imprimem fundos). */
+ :root:is([data-theme],:not([data-theme])) body.oficina.oficina{--of-papel:#fff;--of-cartao:#fff;--of-tinta:#000;--of-suave:#333;--of-linha:#999;--of-borda:#555;--of-pauta:#bbb;--of-oxido:#000;--of-azul:#000;--of-verde:#000;--of-realce:#fff;--of-sobre-acento:#fff;background:#fff;color:#000}
  #print-sheet .passagem{border-top:1.5pt solid #000;padding:8pt 0 0 22pt;break-inside:avoid-page}
  #print-sheet .pass-letra{background:none;color:#000;border:1pt solid #000}
  #print-sheet .pass-verso,#print-sheet .pass-prosa{font:11pt/1.55 Georgia,serif;max-width:none}
