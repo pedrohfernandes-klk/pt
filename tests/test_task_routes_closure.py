@@ -3,6 +3,7 @@ from pathlib import Path
 from html.parser import HTMLParser
 from urllib.parse import urlsplit
 import hashlib,json,re,unittest
+from auditoria_20261028 import undo as undo_audit_20261028
 ROOT=Path(__file__).resolve().parents[1]
 FIXTURE=ROOT/'tests/fixtures/task-route-lesson-content-before.json'
 INSTRUCTION_EDITS=ROOT/'tests/fixtures/task-instruction-edits-20261026.json'
@@ -12,11 +13,14 @@ TABLE_EDITS=ROOT/'tests/fixtures/apoios-tabelas-edits-20261027.json'
 REIS_EDITS=ROOT/'tests/fixtures/m7-f23-reis-edits-20261028.json'
 # 28/10/2026: correções confirmadas pela auditoria do M1 e do M4 (texto apenas; desfazem-se antes de todas as outras).
 AUDIT_EDITS=ROOT/'tests/fixtures/auditoria-m1-m4-edits-20261028.json'
+# 28/10/2026: segundo lote da auditoria (M7 inteiro, resto do M4 e do M1), gerado por scripts/aplicar_trocas.py.
+# Foi aplicado por cima do #128, por isso desfaz-se antes dele: o mais recente primeiro.
+AUDIT_EDITS_M4_M7=ROOT/'tests/fixtures/auditoria-m4-m7-edits-20261028.json'
 
 def original_lesson_text(path):
  """Reverse only the explicitly authorized UX strings; retain the frozen LF hash."""
  source=(ROOT/path).read_text('utf-8')
- for manifest_path in (AUDIT_EDITS,REIS_EDITS,TABLE_EDITS,GRAMMAR_EDITS,INSTRUCTION_EDITS):
+ for manifest_path in (AUDIT_EDITS_M4_M7,AUDIT_EDITS,REIS_EDITS,TABLE_EDITS,GRAMMAR_EDITS,INSTRUCTION_EDITS):
   manifest=json.loads(manifest_path.read_text('utf-8'))
   for edit in reversed(manifest['files'].get(path,{}).get('edits',[])):
    if source.count(edit['new'])!=edit['occurrences']:
@@ -40,7 +44,9 @@ def units(s):
 class TaskRoutes(unittest.TestCase):
  def test_lessons_order_content_and_old_pools_are_preserved(self):
   for m,before in json.loads(FIXTURE.read_text('utf-8')).items():
-   s=(ROOT/f'm{m}/index.html').read_text('utf-8');after=units(s)
+   # 28/10/2026: no arquivo do M7, enunciados e explicações sem remissões para cartões e com a numeração
+   # certa dos versos (auditoria, manifesto literal); o hash de cada pool calcula-se com as trocas desfeitas.
+   s=undo_audit_20261028(f'm{m}/index.html',(ROOT/f'm{m}/index.html').read_text('utf-8'));after=units(s)
    self.assertEqual(len(before['units']),len(after))
    for old,new in zip(before['units'],after):
     self.assertEqual(old['passos'],new['passos']);self.assertEqual(old['licoes'],new['licoes'])

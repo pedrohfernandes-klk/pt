@@ -3,6 +3,7 @@ from html.parser import HTMLParser
 from urllib.parse import urlsplit,unquote
 import json,re,unittest
 from task_source_contract import historical_task_source
+from auditoria_20261028 import undo as undo_audit_20261028
 
 ROOT=Path(__file__).resolve().parents[1]
 
@@ -21,7 +22,9 @@ class Page(HTMLParser):
 class M7Task(unittest.TestCase):
  def test_existing_assignment_and_full_rubric_are_preserved(self):
   baseline=json.loads((ROOT/'tests/fixtures/m7-u2-task-original.json').read_text('utf-8'))['task']
-  guide=(ROOT/'m7/guia-da-tarefa-m7/index.html').read_text('utf-8-sig')
+  # 28/10/2026: no arquivo do guia, «ficha de identidade», «ficha técnica» e «jogar» saíram (auditoria do M7,
+  # manifesto literal); a encomenda congelada lê-se com essas trocas desfeitas.
+  guide=undo_audit_20261028('m7/guia-da-tarefa-m7/index.html',(ROOT/'m7/guia-da-tarefa-m7/index.html').read_text('utf-8-sig'))
   tasks,_=json.JSONDecoder().raw_decode(guide[guide.index('T=[{')+2:])
   self.assertEqual(tasks[0],baseline)
   page=historical_task_source(ROOT/'tarefas/m7-u2/index.html')
