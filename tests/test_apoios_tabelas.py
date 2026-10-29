@@ -25,6 +25,8 @@ class TableAid(unittest.TestCase):
   self.assertEqual(hashlib.sha256(before.encode()).hexdigest(),record['base_sha256_lf'])
   # 28/10/2026: as pistas[0] e [1] da F15 mudaram na auditoria do M7 (manifesto literal, fora dos cartões);
   # o hash de depois das tabelas confere-se com essas trocas desfeitas. Os cartões comparam-se na página real.
+  # 28/10/2026: a Sala de aula saiu desta lição (decisão do docente de 17/10/2026); o mesmo auxiliar desfaz antes
+  # as trocas literais do manifesto da Sala.
   self.assertEqual(hashlib.sha256(undo_audit_20261028(PATH,source).encode()).hexdigest(),record['after_sha256_lf'])
   old,new=cards(before),cards(source)
   self.assertEqual(len(old),len(new));self.assertEqual(len(new),21)

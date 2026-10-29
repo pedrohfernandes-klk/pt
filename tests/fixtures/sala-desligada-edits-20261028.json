@@ -1,5 +1,5 @@
 {
- "base_commit": "40bb62639ea449950ecd3572c205453e753b053a",
+ "base_commit": "5776c55cbf6f195889b1dcc7e0aab311ea16a7ab",
  "_nota": "28/10/2026: a Sala de aula em tempo real sai das páginas publicadas (decisão do docente de 17/10/2026; scripts/desligar_sala.py). Trocas literais pela ordem em que se aplicam; desfazem-se da última para a primeira, antes de todos os outros manifestos. Só entram aqui as páginas cujo conteúdo os testes congelam (task-route-lesson-content-before.json, module-layout-before.json, m1-grammar-pilot e apoios-tabelas); «paginas» lista todas as páginas onde a Sala existia e onde agora corre a limpeza. base_sha256_lf e after_sha256_lf registam o dia do corte e não se voltam a verificar: o script, corrido outra vez, só confirma que estas trocas se desfazem e refazem na página atual.",
  "paginas": {
   "licao": [
@@ -222,8 +222,8 @@
  },
  "files": {
   "m1/index.html": {
-   "base_sha256_lf": "c0fa9f1ac2ec5d0df27af6ebfe4840e4753ad2a40370840d467a8650ab1c1a7f",
-   "after_sha256_lf": "3e3386691769c31fc298c8c808e68bdaa496f9a6dfe3516cbb5f72f1e01c370e",
+   "base_sha256_lf": "dbd3388a925c5470a286f9b74993c025ba1b6be507c4a5a52776831700a76d27",
+   "after_sha256_lf": "6f417d2c254dfd62d86937882a581c07eaaef614f10849014593514d75e80630",
    "edits": [
     {
      "location": "CSS: .casca-menu .sala",
@@ -1602,8 +1602,8 @@
    ]
   },
   "m4/index.html": {
-   "base_sha256_lf": "910b4907dac8f695d561fa2994bf9e6455bed3f72b085d872e85c9003a173242",
-   "after_sha256_lf": "cdd816ecc302e9c83a21458e031f1776a93901fc2cda3cd466eedb7ca49fb56c",
+   "base_sha256_lf": "0af8b4cb644da3a3db471785a5e58c36967f4258e467e26abf7774f134952bf5",
+   "after_sha256_lf": "2b2c9638800f91cfb67ca2168d687d709c7a8cdd02ba978f82a3f080da6af5a9",
    "edits": [
     {
      "location": "CSS: .casca-menu .sala",
@@ -2082,8 +2082,8 @@
    ]
   },
   "m4/licao-m4-f10/index.html": {
-   "base_sha256_lf": "39fde2c4e73e158f78d80e9e0553aaebfa990f8d59c294a50a104ef89fd97717",
-   "after_sha256_lf": "385d4b7e64c7e0c1f403a10d0c933d1e4828e483edec2a396ebd53a5cc1dad5b",
+   "base_sha256_lf": "e2498a88596559f316b4c229df033681dcb1894913b3a128d214f4423a81d8c7",
+   "after_sha256_lf": "7bc32b56b0602c3a19811e028fbde1ce4eba1638e43fdd9b8fc433ed0d25d058",
    "edits": [
     {
      "location": "CSS: comentário «Sala e fontes» e .sala input.maq",
@@ -2214,8 +2214,8 @@
    ]
   },
   "m4/licao-m4-f14/index.html": {
-   "base_sha256_lf": "aed89eacb68608ac967edb982cb7a59b943a3f87bfca3dbecf9ae773b1ed99c5",
-   "after_sha256_lf": "89c5c964864ad14310eaf4c5856de3d451e95f3e801c1ee6b6614236f43de296",
+   "base_sha256_lf": "c4ed6b3fac3acf2799f67b67958ff0719ec84555e2f087684a3efbbdd013a3b4",
+   "after_sha256_lf": "aacc51a07ebbd4b092d4f68ef287213d4fafb13f2f38600ce5376ae8072948d3",
    "edits": [
     {
      "location": "CSS: comentário «Sala e fontes» e .sala input.maq",
@@ -2346,8 +2346,8 @@
    ]
   },
   "m4/licao-m4-f20/index.html": {
-   "base_sha256_lf": "bfc72343892ec0f34555a08340ce61efd35ff908f50cb739af385dbab7922548",
-   "after_sha256_lf": "33bee2cb4fe49927e7b98d3ca8c804604adaa762fc89540a63bc9cb2c2d017ed",
+   "base_sha256_lf": "7b59106adf7b72521d380ea4b21725a8ae3e434eb0f9419570b92efb60b0c7bf",
+   "after_sha256_lf": "3efe4ed55e0a2c4202f97082cf2b5ff8048e627f736d60b3c37197437b89c82f",
    "edits": [
     {
      "location": "CSS: comentário «Sala e fontes» e .sala input.maq",
@@ -2658,8 +2658,8 @@
    ]
   },
   "m7/index.html": {
-   "base_sha256_lf": "62011b3ceb4e0363e05ba3ba192746c56c4183a2cbfa9eb22b5582e7143921d0",
-   "after_sha256_lf": "4f7ae8700ea2ca4b172f657152f057783e1ef9c3ce58ec0f890add63bf57e576",
+   "base_sha256_lf": "a6dbf2c167ff7de5ed960d438fbdbe7fb794424f79bd98e0e5f0eacbeb4cb684",
+   "after_sha256_lf": "be369ee68322e002e946d242e1601c79beba4310492218d603a9f148cf6c16d7",
    "edits": [
     {
      "location": "CSS: .casca-menu .sala",
@@ -2676,8 +2676,8 @@
    ]
   },
   "m7/licao-m7-f01/index.html": {
-   "base_sha256_lf": "c5cbe0ce535f15ca51c74e333eea7ceb621bb97c8ddf5d81590286caca7b179d",
-   "after_sha256_lf": "11cad47195bdf76a7e8af38eaea4c2a367509eb842e5c541d4101cacf97dae22",
+   "base_sha256_lf": "a7f59a8bad6609468ac24782d39083870268d13e1024805427d5354551df18b7",
+   "after_sha256_lf": "a7bf34894b397521680151cfcf0de4b23fc4bc8ea473086c0adb78528c0f32b9",
    "edits": [
     {
      "location": "CSS: comentário «Sala e fontes» e .sala input.maq",
@@ -2742,8 +2742,8 @@
    ]
   },
   "m7/licao-m7-f02/index.html": {
-   "base_sha256_lf": "f0e22f9a72d044932dfdb6480c18565e700dc7e4c0f649e5042993ee50401697",
-   "after_sha256_lf": "a18f61dc2b43f48d330fc533c3eb5cd4443baae70d6a0d7c4d36ca5bca90c046",
+   "base_sha256_lf": "0aa08032f12bab3ec4d19301abcef1d61baa65f5e3317c65bf73756bf59ab8ee",
+   "after_sha256_lf": "85dd1e095ab732ae0aa26dedd0b8de09361487f23888af41b456626fb3270078",
    "edits": [
     {
      "location": "CSS: comentário «Sala e fontes» e .sala input.maq",
@@ -2808,8 +2808,8 @@
    ]
   },
   "m7/licao-m7-f04/index.html": {
-   "base_sha256_lf": "9db0b2f6a5e694c59a89c871a6311b1981ca3bd0c62591f9c9220bc73729ca28",
-   "after_sha256_lf": "44a696812085b5421adaf0fcf722b6e9ae71cb8d7cf09d9e9212676685aa0bf9",
+   "base_sha256_lf": "f5924177ee9addbc39951f575b760bc0c1fcf623ae53a90801e331cc6d12a7df",
+   "after_sha256_lf": "59c1c2bf6ac3163150d0eeef91ce562d0b5db14dc4adb98bc4242135c4e3a4b0",
    "edits": [
     {
      "location": "CSS: comentário «Sala e fontes» e .sala input.maq",
@@ -2874,8 +2874,8 @@
    ]
   },
   "m7/licao-m7-f05/index.html": {
-   "base_sha256_lf": "f29e38d8dd8316505f7022c8e32eb35e593e5b091ac6d77678eb104a95cc4c0a",
-   "after_sha256_lf": "6a455400340be8c0586015c02a338aaae0111f87205cbc59426c69841e913f14",
+   "base_sha256_lf": "b72425224b700dd426c3556d2b605b648ae2d58b16b77e22844c3d29bf5ae6a7",
+   "after_sha256_lf": "c8f25098d4141e2f7a32776f363db4c29e81c57848f88c7593e92364f3e5e971",
    "edits": [
     {
      "location": "CSS: comentário «Sala e fontes» e .sala input.maq",
@@ -2940,8 +2940,8 @@
    ]
   },
   "m7/licao-m7-f06/index.html": {
-   "base_sha256_lf": "296ea2ff0834d75fcbbe60d0e370121639279d96ac378f88b7f4aff6acc792e3",
-   "after_sha256_lf": "9bb5256cadfbe813a5d7555c14b47686b8073e5778ee214c4b56e7b56c800459",
+   "base_sha256_lf": "b6ddd99580b16b4375906814331a7966d14b7a1c35f48b380f82b92257c2cf8d",
+   "after_sha256_lf": "80e4d7c28267db8d4677a9af427c23944c99678e97c46256386b52b333aa5043",
    "edits": [
     {
      "location": "CSS: comentário «Sala e fontes» e .sala input.maq",
@@ -3006,8 +3006,8 @@
    ]
   },
   "m7/licao-m7-f07/index.html": {
-   "base_sha256_lf": "466f12d015faf2482616dcecf8b0525048dbac9a1cc737ace5d4adc96df5b638",
-   "after_sha256_lf": "2a72545f5efcd4bb83eacc97ee16c57f5f224a6118d8f433514cefedf0f164ea",
+   "base_sha256_lf": "8dba3be37dd3d7592e959ff006e7e76dc24b33712f20e4abdf74526672fce97f",
+   "after_sha256_lf": "35258546f83d9271caf7dfc8853c295025ba0a29d2f475799c0579532e1f2d25",
    "edits": [
     {
      "location": "CSS: comentário «Sala e fontes» e .sala input.maq",
@@ -3072,8 +3072,8 @@
    ]
   },
   "m7/licao-m7-f08/index.html": {
-   "base_sha256_lf": "446505c8b10f89a5d5879ff9faa91e212c8f8f41702e9dc22ccaac0d47a2b5f5",
-   "after_sha256_lf": "20720a9bef6eb1eea25c2666c1c7c28669a0e5dbc75bec03597d88704243a931",
+   "base_sha256_lf": "d7284ddfc9aba307c33f012564eb4adfeeb7374415e1ff82fa424b5f93dd0548",
+   "after_sha256_lf": "f97de8451fec86d0d145588d452a8f89ab9be9c423696b2f2d613e1198a546cc",
    "edits": [
     {
      "location": "CSS: comentário «Sala e fontes» e .sala input.maq",
@@ -3138,8 +3138,8 @@
    ]
   },
   "m7/licao-m7-f09/index.html": {
-   "base_sha256_lf": "2f6bc4bc962fda3e9de9604d8c20e7d88ab084ae20c1756c689fc33941b4a245",
-   "after_sha256_lf": "ba9ca01fb1c015badcdf805cca826819c306b94f96458fddf5036929af044a5b",
+   "base_sha256_lf": "c1137e80df11959099e457785fe335de4d451f3e36987f3f1da682549466f649",
+   "after_sha256_lf": "27df5fb956ac498b14403adcb3b746117c338e4cb545a3dd1bf5582e17202869",
    "edits": [
     {
      "location": "CSS: comentário «Sala e fontes» e .sala input.maq",
@@ -3204,8 +3204,8 @@
    ]
   },
   "m7/licao-m7-f10/index.html": {
-   "base_sha256_lf": "b61411fa99e54a8be1dd54710561fb7ccf7d72370619ed80c4c67aecf5ee8ed5",
-   "after_sha256_lf": "0fc43aa1a5b9744d0bf63f0fc0d744cce8d63e3a8a3f2f6bb8bf093cad8cc5e5",
+   "base_sha256_lf": "cb4722d6fde2636c29f7b28df3c4f5a040c947b0804cdd7daccc2e3be6aa2f13",
+   "after_sha256_lf": "970aa6989c38b29a08c82f5e6ed1bbf997ebd591e24690743525804f6992c148",
    "edits": [
     {
      "location": "CSS: comentário «Sala e fontes» e .sala input.maq",
@@ -3270,8 +3270,8 @@
    ]
   },
   "m7/licao-m7-f11/index.html": {
-   "base_sha256_lf": "51c09efbfa0b972f5697c93bc6bd8aae01fb1114b95ce0fdf437d5f7b4dbe40b",
-   "after_sha256_lf": "6ee53087322ec72046103c0f53101b81e2b73fd309efe0ae2e674f86c8505fa8",
+   "base_sha256_lf": "879718d33aceae452ad63305bba440c9cf0b4ce8f2d6dc4ae9c8b5d637a7b27b",
+   "after_sha256_lf": "929ff79cb05efd49ebca118e5060064aea1d1a7c9eb3b4350657d3e0bb586f14",
    "edits": [
     {
      "location": "CSS: comentário «Sala e fontes» e .sala input.maq",
@@ -3336,8 +3336,8 @@
    ]
   },
   "m7/licao-m7-f13/index.html": {
-   "base_sha256_lf": "02e548961c7686c4e3c01c2f809c682407d2908a82897e4adcceab3c876bfe6f",
-   "after_sha256_lf": "a8faa8d2163910c505913709aba4d850fcdb8ebe0bb80de1e8335b2a42702e28",
+   "base_sha256_lf": "ba58546a2d2d4937e198fb247f865779fd2821968ba41bfc43a07c2993f2c486",
+   "after_sha256_lf": "2ac83f695df63c750548874ce92ccdf047f0968fe006a47cae306f946c08a351",
    "edits": [
     {
      "location": "CSS: comentário «Sala e fontes» e .sala input.maq",
@@ -3402,8 +3402,8 @@
    ]
   },
   "m7/licao-m7-f14/index.html": {
-   "base_sha256_lf": "84c948b85e184d0b89feff617d63f930e3f5a4413387787288b093396e22736e",
-   "after_sha256_lf": "f33c335f1b77a7caae8b4279b4de489b7043d5bcf5613529fe70e3c9a110fab1",
+   "base_sha256_lf": "5bec1ab47b6766bfb1d798a7cb7ecf18561d90c28015086b8afae76d2fa99138",
+   "after_sha256_lf": "886635be145f2cea748bdba5c8e9ab85513a31b14e524d244064b9f4fdf2c918",
    "edits": [
     {
      "location": "CSS: comentário «Sala e fontes» e .sala input.maq",
@@ -3468,8 +3468,8 @@
    ]
   },
   "m7/licao-m7-f15/index.html": {
-   "base_sha256_lf": "a3e0ff7b38324a6f7e325162cc23372f226c7dd045af023d1c3e3e6136101b06",
-   "after_sha256_lf": "e2dc3a13ab19e720f66587e4d904dc2fe644d8d44124e88b44c862198c702097",
+   "base_sha256_lf": "1da6a9795aac1773042f4c814e9aa02b09989c44c6211373ccbd0fa1b0ace074",
+   "after_sha256_lf": "d97040da8feab458f5d213c6c3b49ead0b15650627780a9248183cb48feb7c32",
    "edits": [
     {
      "location": "CSS: comentário «Sala e fontes» e .sala input.maq",
@@ -3534,8 +3534,8 @@
    ]
   },
   "m7/licao-m7-f23/index.html": {
-   "base_sha256_lf": "d325ca7482cdf41e66c203861d686811729c53df8e22358529ccee31e05716e9",
-   "after_sha256_lf": "f9bc1aa624401b1e2d527998d5f51892bbfef48c23326fcb74b4c2ddddffea1a",
+   "base_sha256_lf": "267d7566d720eb499afdfaf35881018a293479c5484e19c6aac599a055af4624",
+   "after_sha256_lf": "70e4ae9e440dae22c36ca0a5bc7423d7e53dd2819f191ac3faa62275111388f8",
    "edits": [
     {
      "location": "CSS: comentário «Sala e fontes» e .sala input.maq",
@@ -3600,8 +3600,8 @@
    ]
   },
   "m7/licao-m7-f34/index.html": {
-   "base_sha256_lf": "f85003ff4f63bf7206edc90503d29062eedcfabab3e3b5688b3af0783d7f7499",
-   "after_sha256_lf": "58c5a7f7de818bdeac36912691c7d2a19ca2fdb00f2777ae0e33396d098797ab",
+   "base_sha256_lf": "2c55727ac963c39ab25d6b7adfbc0b1ac59b54c1ec6b93d07728e2d40c19e5db",
+   "after_sha256_lf": "f6cb41cef891ba506e903a7f196193897efea709859a9adc0c1740bb2ddb2c53",
    "edits": [
     {
      "location": "CSS: comentário «Sala e fontes» e .sala input.maq",
@@ -3666,8 +3666,8 @@
    ]
   },
   "m7/licao-m7-f35/index.html": {
-   "base_sha256_lf": "519a4901e4b824bfc8f256aa6b71c3441018c44ef1de813dc43e1eb595221bd0",
-   "after_sha256_lf": "766580790f119beb5c5c8931a59a283fa95429f117ce7971005063db14e3f4e4",
+   "base_sha256_lf": "227bf52652bc1527d7589217a5ea1076e23d8fc1713849ea5f72f4806ed0aa4d",
+   "after_sha256_lf": "5644f4fff3e66b3f11db502e9aba3867034e83639935d9c9e65ac35532c4c0de",
    "edits": [
     {
      "location": "CSS: comentário «Sala e fontes» e .sala input.maq",
@@ -3732,8 +3732,8 @@
    ]
   },
   "m7/licao-m7-f36/index.html": {
-   "base_sha256_lf": "c141f0637d19c654ec31435983eb21080ce17e55dbb4425a579a11562b3dd297",
-   "after_sha256_lf": "cee61f5d68982d3aaba3408441a74d5e9cd1c56b1868150cd71a2fcc4086a6e1",
+   "base_sha256_lf": "6fe92162ac69b0ca4d43a160b4f42bc214a694fb92285fe09ba35c966c1b188d",
+   "after_sha256_lf": "ce626e5b9f214e79f40ad936ebf45089683b9a51ff5294d5608e9b3153670621",
    "edits": [
     {
      "location": "CSS: comentário «Sala e fontes» e .sala input.maq",
