@@ -273,8 +273,8 @@
    ]
   },
   "m7/index.html": {
-   "base_sha256_lf": "62011b3ceb4e0363e05ba3ba192746c56c4183a2cbfa9eb22b5582e7143921d0",
-   "after_sha256_lf": "a6dbf2c167ff7de5ed960d438fbdbe7fb794424f79bd98e0e5f0eacbeb4cb684",
+   "base_sha256_lf": "4f7ae8700ea2ca4b172f657152f057783e1ef9c3ce58ec0f890add63bf57e576",
+   "after_sha256_lf": "be369ee68322e002e946d242e1601c79beba4310492218d603a9f148cf6c16d7",
    "edits": [
     {
      "location": "arquivo, desafio 2, m7-f23 (completar): sem a caixa «Recorda»",
@@ -459,8 +459,8 @@
    ]
   },
   "m7/painel-m7-f01/index.html": {
-   "base_sha256_lf": "b06fc98ed4384357e97e592687166fc3d363e93d980fec1170f94e9a31838263",
-   "after_sha256_lf": "2aa988f59ee9501d8a8a099fe1e705d366a3a39fe81c6d6e35e82e64e5c96295",
+   "base_sha256_lf": "1e0ec385a1e3c50f395369c9c2fcb15b00b05e597641d973db2ff7e12fdd64d8",
+   "after_sha256_lf": "704e4a0ce5f903044448a7e930bce13e4161c34aaba18e8260cbc04872d646a4",
    "edits": [
     {
      "location": "relâmpago k7: dados do painel (CARTOES)",
@@ -501,8 +501,8 @@
    ]
   },
   "m7/painel-m7-f02/index.html": {
-   "base_sha256_lf": "a2b6d9d980f3e9b910a01929178632bfce086ec7f5d05e6a64e03bba25653002",
-   "after_sha256_lf": "3f3a26f67037cff6388a48e8dbacb443fd557f8fdb671673847b9130ff4a88ab",
+   "base_sha256_lf": "91c7a9f4540ecc4685663119ad03b14e82f9ae33a723d6cc4ae13174b91d47fa",
+   "after_sha256_lf": "403a065c6282a0ca61946f1f947a5ad653cbc133ae9d1cc7465e145cf267c653",
    "edits": [
     {
      "location": "relâmpago k9: dados do painel (CARTOES)",
@@ -531,8 +531,8 @@
    ]
   },
   "m7/painel-m7-f04/index.html": {
-   "base_sha256_lf": "3c2349fe45104e5a62b252661b364e1b439fc938b4c4467c11bac2deb622b96c",
-   "after_sha256_lf": "3fb7848837208844eef7be0e539c0241c34ff9fa67829f62c5d9181f8e7dd9f6",
+   "base_sha256_lf": "18d2d7bf49ee963b55960aabd06b67657d92533c6cde3562809eda77b61ca155",
+   "after_sha256_lf": "c091f3138072c75005a6b42ee8751d79aec736ff1a3e9e371f5f3455a88e2871",
    "edits": [
     {
      "location": "relâmpago k7: dados do painel (CARTOES)",
@@ -597,8 +597,8 @@
    ]
   },
   "m7/painel-m7-f05/index.html": {
-   "base_sha256_lf": "730884660610225832139eb39202cf31d95267761f5b996bc9d1c24b0c23cf7a",
-   "after_sha256_lf": "0923d7066c2b56cf40f57f214ebb534447be1e7a7c642eafd39a53c49cebb607",
+   "base_sha256_lf": "e92e2a2c844281e87a365139402eb0eb3e56b5e96e1835c35e02623e8185f6e5",
+   "after_sha256_lf": "a9c4862e53dc4debbbff7a528bd1cb0fc0a8be822a7eaf4d4a689ac4bb5ab3c3",
    "edits": [
     {
      "location": "relâmpago k18: dados do painel (CARTOES)",
@@ -633,8 +633,8 @@
    ]
   },
   "m7/painel-m7-f06/index.html": {
-   "base_sha256_lf": "49fb528980a2e2049748545080d6f7a5fb179527cc07aec10a00412011780a90",
-   "after_sha256_lf": "10099fc8a0bd00b8498deb93c98977321bb8316e4fe8fb902871fe6598c029f9",
+   "base_sha256_lf": "eea94db2863224d5e051e1f931c10b9bcfc8ffe2a727af910e57cba83f56269a",
+   "after_sha256_lf": "57d35436352db5c635eed7d0eeefada8cdb9d187072add1fd19a03b1129c83b1",
    "edits": [
     {
      "location": "relâmpago k23: dados do painel (CARTOES)",
@@ -669,8 +669,8 @@
    ]
   },
   "m7/painel-m7-f07/index.html": {
-   "base_sha256_lf": "d93acc3dfb2d20a8b32cd59a9266478e8a859c41bf3ad6f0ec103a12fa7927d1",
-   "after_sha256_lf": "248e2b5cc22bf1fcf8586347a2431d30b0d707cdf9610a2e2eb2348b545824fc",
+   "base_sha256_lf": "4c7058b2d17f3a0bd17190a4217db6a3b476535ea23c27b473bded1b53bf4eac",
+   "after_sha256_lf": "fc46ed8324834c4f332673c750cd1515bb6769431764a1deb2b9a13285c54779",
    "edits": [
     {
      "location": "relâmpago k3: dados do painel (CARTOES)",
@@ -729,8 +729,8 @@
    ]
   },
   "m7/painel-m7-f08/index.html": {
-   "base_sha256_lf": "9ff5e951d8226047f6788c0f40079f598e89c259ecb972f51cd7b622a4e37a5c",
-   "after_sha256_lf": "34631b70fa7a09c4572c55a7aa1d93eca37db21f4c4410d42ddb60fdb9f91232",
+   "base_sha256_lf": "13465fdaf45d565a7ec92a7b72697b767f4ba8acc52aec8d04df5cbb7c29eda9",
+   "after_sha256_lf": "6661d64304649859fe90868c047eccbbfa67ce2b7e66a1299c7142f0a372fab9",
    "edits": [
     {
      "location": "relâmpago k13: dados do painel (CARTOES)",
@@ -753,8 +753,8 @@
    ]
   },
   "m7/painel-m7-f09/index.html": {
-   "base_sha256_lf": "74166fdadf558db8dd9ccf662b9bf97183141c58423ff13761ace2cee004a7be",
-   "after_sha256_lf": "6ecf5eb9a79966de8fa26c0ccde9471252ee6d270673b270b5bd9a60bb19e9de",
+   "base_sha256_lf": "b96387ea0d4efb5a915eed981c7003a115847654005e90bb7881165fddb2996b",
+   "after_sha256_lf": "5fac758d4dfecc1f5d6b4841fc45a3d31b7374f3625bd540538167f925494434",
    "edits": [
     {
      "location": "relâmpago k15: dados do painel (CARTOES)",
@@ -777,8 +777,8 @@
    ]
   },
   "m7/painel-m7-f10/index.html": {
-   "base_sha256_lf": "d7ea9e714115480e4dbb40d0e2b0ee53c25fef2e556b242db7a1ff66b76cfa88",
-   "after_sha256_lf": "449a35ad9d77c48feabadbc6851da019b621ad1069a1f98f5ad452e699ceff91",
+   "base_sha256_lf": "c4b68a9d2b4864744a2bf69f54b142fb420cd1582a97a630fd431f523f93d049",
+   "after_sha256_lf": "44ab93fd0729d2d9bf1f649ea0781baa712b8c82f64752e241a97d1236e3130e",
    "edits": [
     {
      "location": "relâmpago k3: dados do painel (CARTOES)",
@@ -849,8 +849,8 @@
    ]
   },
   "m7/painel-m7-f11/index.html": {
-   "base_sha256_lf": "c60caf75c0a591a386ca1f37bc2dc45657c242073df1f0ed25bc6cd5c6c4c958",
-   "after_sha256_lf": "e537c367d0605e67311de75f1156d6234d56b76930af0c51bd63611cf75bc526",
+   "base_sha256_lf": "dadbf07980869c22fd71b69bed601273411045d44408fbd6c4b4df2f80e9ed7b",
+   "after_sha256_lf": "48b3807c19a80f6941c664876d52bc6d5b030f2f76ce77901b33fc2eb49fd334",
    "edits": [
     {
      "location": "relâmpago k9: dados do painel (CARTOES)",
@@ -921,8 +921,8 @@
    ]
   },
   "m7/painel-m7-f13/index.html": {
-   "base_sha256_lf": "e75458caf5b255f044a855ecff16eb7ae18c4e40531b07e787d15692aea73583",
-   "after_sha256_lf": "dae960f3c3d5f050e67cf3842cd8c150f3a0e289533ae775dd841f8e4b28e116",
+   "base_sha256_lf": "f482beb09f5773b0b458d186fed399d97d19f8711e7c28db2cb260db9151ff42",
+   "after_sha256_lf": "803fb85e61a67189aa3d602de8950934ee4aad9d639f2a707f3d9a671c350caf",
    "edits": [
     {
      "location": "relâmpago k8: dados do painel (CARTOES)",
@@ -951,8 +951,8 @@
    ]
   },
   "m7/painel-m7-f23/index.html": {
-   "base_sha256_lf": "010b8201225b4eb6dd6bbf3a00ca4f8dbe88b888478b4ad43c0e5df8001d72da",
-   "after_sha256_lf": "99a6546d5022572acd9fa3f1e9b19e8905ec3c25db3190481531184c7fdb6d04",
+   "base_sha256_lf": "d4bdc9b70ff9686bd6b7f2c5188a2074ef0ff5470272d575ea028b5177212110",
+   "after_sha256_lf": "3eb164704c004413afbf11f971de6aea4a72e889098841884d381affe69806ab",
    "edits": [
     {
      "location": "relâmpago k18: dados do painel (CARTOES)",
@@ -987,8 +987,8 @@
    ]
   },
   "m7/painel-m7-f34/index.html": {
-   "base_sha256_lf": "44d70f072c5381f582241d59243b10dbfb5f89e772dc192db29298538142248c",
-   "after_sha256_lf": "9d898844c11cd2459c738c51f1d6a9811e13d823f24783e3cbbc0adc1604acd0",
+   "base_sha256_lf": "02df809bc4ad1d9dc33670469cf0ef7f6daf50646856642340972420e4ff446f",
+   "after_sha256_lf": "1be29afeabc07089224828fd12be23f0d950c93f43421ccdb6e7516c9d210f2c",
    "edits": [
     {
      "location": "relâmpago k4: dados do painel (CARTOES)",
@@ -1017,8 +1017,8 @@
    ]
   },
   "m7/licao-m7-f01/index.html": {
-   "base_sha256_lf": "c5cbe0ce535f15ca51c74e333eea7ceb621bb97c8ddf5d81590286caca7b179d",
-   "after_sha256_lf": "a7f59a8bad6609468ac24782d39083870268d13e1024805427d5354551df18b7",
+   "base_sha256_lf": "11cad47195bdf76a7e8af38eaea4c2a367509eb842e5c541d4101cacf97dae22",
+   "after_sha256_lf": "a7bf34894b397521680151cfcf0de4b23fc4bc8ea473086c0adb78528c0f32b9",
    "edits": [
     {
      "location": "CARTOES[11].p",
@@ -1029,8 +1029,8 @@
    ]
   },
   "m7/licao-m7-f02/index.html": {
-   "base_sha256_lf": "f0e22f9a72d044932dfdb6480c18565e700dc7e4c0f649e5042993ee50401697",
-   "after_sha256_lf": "0aa08032f12bab3ec4d19301abcef1d61baa65f5e3317c65bf73756bf59ab8ee",
+   "base_sha256_lf": "a18f61dc2b43f48d330fc533c3eb5cd4443baae70d6a0d7c4d36ca5bca90c046",
+   "after_sha256_lf": "85dd1e095ab732ae0aa26dedd0b8de09361487f23888af41b456626fb3270078",
    "edits": [
     {
      "location": "CARTOES[13].p2",
@@ -1065,8 +1065,8 @@
    ]
   },
   "m7/licao-m7-f04/index.html": {
-   "base_sha256_lf": "9db0b2f6a5e694c59a89c871a6311b1981ca3bd0c62591f9c9220bc73729ca28",
-   "after_sha256_lf": "f5924177ee9addbc39951f575b760bc0c1fcf623ae53a90801e331cc6d12a7df",
+   "base_sha256_lf": "44a696812085b5421adaf0fcf722b6e9ae71cb8d7cf09d9e9212676685aa0bf9",
+   "after_sha256_lf": "59c1c2bf6ac3163150d0eeef91ce562d0b5db14dc4adb98bc4242135c4e3a4b0",
    "edits": [
     {
      "location": "CARTOES[3].html, numeração à margem: «5» passa a «15» em «Porque pensar é não compreender...…»",
@@ -1119,8 +1119,8 @@
    ]
   },
   "m7/licao-m7-f05/index.html": {
-   "base_sha256_lf": "f29e38d8dd8316505f7022c8e32eb35e593e5b091ac6d77678eb104a95cc4c0a",
-   "after_sha256_lf": "b72425224b700dd426c3556d2b605b648ae2d58b16b77e22844c3d29bf5ae6a7",
+   "base_sha256_lf": "6a455400340be8c0586015c02a338aaae0111f87205cbc59426c69841e913f14",
+   "after_sha256_lf": "c8f25098d4141e2f7a32776f363db4c29e81c57848f88c7593e92364f3e5e971",
    "edits": [
     {
      "location": "CARTOES[6].p2",
@@ -1149,8 +1149,8 @@
    ]
   },
   "m7/licao-m7-f06/index.html": {
-   "base_sha256_lf": "296ea2ff0834d75fcbbe60d0e370121639279d96ac378f88b7f4aff6acc792e3",
-   "after_sha256_lf": "b6ddd99580b16b4375906814331a7966d14b7a1c35f48b380f82b92257c2cf8d",
+   "base_sha256_lf": "9bb5256cadfbe813a5d7555c14b47686b8073e5778ee214c4b56e7b56c800459",
+   "after_sha256_lf": "80e4d7c28267db8d4677a9af427c23944c99678e97c46256386b52b333aa5043",
    "edits": [
     {
      "location": "CARTOES[3].html, numeração à margem: «5» passa a vazio em «Forte espasmo retido dos maquinismos em fúria!…»",
@@ -1215,8 +1215,8 @@
    ]
   },
   "m7/licao-m7-f07/index.html": {
-   "base_sha256_lf": "466f12d015faf2482616dcecf8b0525048dbac9a1cc737ace5d4adc96df5b638",
-   "after_sha256_lf": "8dba3be37dd3d7592e959ff006e7e76dc24b33712f20e4abdf74526672fce97f",
+   "base_sha256_lf": "2a72545f5efcd4bb83eacc97ee16c57f5f224a6118d8f433514cefedf0f164ea",
+   "after_sha256_lf": "35258546f83d9271caf7dfc8853c295025ba0a29d2f475799c0579532e1f2d25",
    "edits": [
     {
      "location": "CARTOES[1].html (O essencial), 1.º item",
@@ -1281,8 +1281,8 @@
    ]
   },
   "m7/licao-m7-f08/index.html": {
-   "base_sha256_lf": "446505c8b10f89a5d5879ff9faa91e212c8f8f41702e9dc22ccaac0d47a2b5f5",
-   "after_sha256_lf": "d7284ddfc9aba307c33f012564eb4adfeeb7374415e1ff82fa424b5f93dd0548",
+   "base_sha256_lf": "20720a9bef6eb1eea25c2666c1c7c28669a0e5dbc75bec03597d88704243a931",
+   "after_sha256_lf": "f97de8451fec86d0d145588d452a8f89ab9be9c423696b2f2d613e1198a546cc",
    "edits": [
     {
      "location": "CARTOES[7].p2",
@@ -1341,8 +1341,8 @@
    ]
   },
   "m7/licao-m7-f09/index.html": {
-   "base_sha256_lf": "2f6bc4bc962fda3e9de9604d8c20e7d88ab084ae20c1756c689fc33941b4a245",
-   "after_sha256_lf": "c1137e80df11959099e457785fe335de4d451f3e36987f3f1da682549466f649",
+   "base_sha256_lf": "ba9ca01fb1c015badcdf805cca826819c306b94f96458fddf5036929af044a5b",
+   "after_sha256_lf": "27df5fb956ac498b14403adcb3b746117c338e4cb545a3dd1bf5582e17202869",
    "edits": [
     {
      "location": "CARTOES[0].html (Abre), figcaption",
@@ -1419,8 +1419,8 @@
    ]
   },
   "m7/licao-m7-f10/index.html": {
-   "base_sha256_lf": "b61411fa99e54a8be1dd54710561fb7ccf7d72370619ed80c4c67aecf5ee8ed5",
-   "after_sha256_lf": "cb4722d6fde2636c29f7b28df3c4f5a040c947b0804cdd7daccc2e3be6aa2f13",
+   "base_sha256_lf": "0fc43aa1a5b9744d0bf63f0fc0d744cce8d63e3a8a3f2f6bb8bf093cad8cc5e5",
+   "after_sha256_lf": "970aa6989c38b29a08c82f5e6ed1bbf997ebd591e24690743525804f6992c148",
    "edits": [
     {
      "location": "CARTOES[2].html («Para entender: A entrega»)",
@@ -1455,8 +1455,8 @@
    ]
   },
   "m7/licao-m7-f11/index.html": {
-   "base_sha256_lf": "51c09efbfa0b972f5697c93bc6bd8aae01fb1114b95ce0fdf437d5f7b4dbe40b",
-   "after_sha256_lf": "879718d33aceae452ad63305bba440c9cf0b4ce8f2d6dc4ae9c8b5d637a7b27b",
+   "base_sha256_lf": "6ee53087322ec72046103c0f53101b81e2b73fd309efe0ae2e674f86c8505fa8",
+   "after_sha256_lf": "929ff79cb05efd49ebca118e5060064aea1d1a7c9eb3b4350657d3e0bb586f14",
    "edits": [
     {
      "location": "CARTOES[11].p",
@@ -1491,8 +1491,8 @@
    ]
   },
   "m7/licao-m7-f13/index.html": {
-   "base_sha256_lf": "02e548961c7686c4e3c01c2f809c682407d2908a82897e4adcceab3c876bfe6f",
-   "after_sha256_lf": "ba58546a2d2d4937e198fb247f865779fd2821968ba41bfc43a07c2993f2c486",
+   "base_sha256_lf": "a8faa8d2163910c505913709aba4d850fcdb8ebe0bb80de1e8335b2a42702e28",
+   "after_sha256_lf": "2ac83f695df63c750548874ce92ccdf047f0968fe006a47cae306f946c08a351",
    "edits": [
     {
      "location": "CARTOES[7].p2",
@@ -1533,8 +1533,8 @@
    ]
   },
   "m7/licao-m7-f14/index.html": {
-   "base_sha256_lf": "84c948b85e184d0b89feff617d63f930e3f5a4413387787288b093396e22736e",
-   "after_sha256_lf": "5bec1ab47b6766bfb1d798a7cb7ecf18561d90c28015086b8afae76d2fa99138",
+   "base_sha256_lf": "f33c335f1b77a7caae8b4279b4de489b7043d5bcf5613529fe70e3c9a110fab1",
+   "after_sha256_lf": "886635be145f2cea748bdba5c8e9ab85513a31b14e524d244064b9f4fdf2c918",
    "edits": [
     {
      "location": "CARTOES[4].p2",
@@ -1551,8 +1551,8 @@
    ]
   },
   "m7/licao-m7-f15/index.html": {
-   "base_sha256_lf": "a3e0ff7b38324a6f7e325162cc23372f226c7dd045af023d1c3e3e6136101b06",
-   "after_sha256_lf": "1da6a9795aac1773042f4c814e9aa02b09989c44c6211373ccbd0fa1b0ace074",
+   "base_sha256_lf": "e2dc3a13ab19e720f66587e4d904dc2fe644d8d44124e88b44c862198c702097",
+   "after_sha256_lf": "d97040da8feab458f5d213c6c3b49ead0b15650627780a9248183cb48feb7c32",
    "edits": [
     {
      "location": "pistas[0] (EPIJogo.montar)",
@@ -1569,8 +1569,8 @@
    ]
   },
   "m7/licao-m7-f23/index.html": {
-   "base_sha256_lf": "d325ca7482cdf41e66c203861d686811729c53df8e22358529ccee31e05716e9",
-   "after_sha256_lf": "267d7566d720eb499afdfaf35881018a293479c5484e19c6aac599a055af4624",
+   "base_sha256_lf": "f9bc1aa624401b1e2d527998d5f51892bbfef48c23326fcb74b4c2ddddffea1a",
+   "after_sha256_lf": "70e4ae9e440dae22c36ca0a5bc7423d7e53dd2819f191ac3faa62275111388f8",
    "edits": [
     {
      "location": "CARTOES[6].p2",
@@ -1593,8 +1593,8 @@
    ]
   },
   "m7/licao-m7-f34/index.html": {
-   "base_sha256_lf": "f85003ff4f63bf7206edc90503d29062eedcfabab3e3b5688b3af0783d7f7499",
-   "after_sha256_lf": "2c55727ac963c39ab25d6b7adfbc0b1ac59b54c1ec6b93d07728e2d40c19e5db",
+   "base_sha256_lf": "58c5a7f7de818bdeac36912691c7d2a19ca2fdb00f2777ae0e33396d098797ab",
+   "after_sha256_lf": "f6cb41cef891ba506e903a7f196193897efea709859a9adc0c1740bb2ddb2c53",
    "edits": [
     {
      "location": "CARTOES[0].html (Abre), p.abre",
@@ -1647,8 +1647,8 @@
    ]
   },
   "m7/licao-m7-f35/index.html": {
-   "base_sha256_lf": "519a4901e4b824bfc8f256aa6b71c3441018c44ef1de813dc43e1eb595221bd0",
-   "after_sha256_lf": "227bf52652bc1527d7589217a5ea1076e23d8fc1713849ea5f72f4806ed0aa4d",
+   "base_sha256_lf": "766580790f119beb5c5c8931a59a283fa95429f117ce7971005063db14e3f4e4",
+   "after_sha256_lf": "5644f4fff3e66b3f11db502e9aba3867034e83639935d9c9e65ac35532c4c0de",
    "edits": [
     {
      "location": "CARTOES[15].p2",
@@ -1659,8 +1659,8 @@
    ]
   },
   "m7/licao-m7-f36/index.html": {
-   "base_sha256_lf": "c141f0637d19c654ec31435983eb21080ce17e55dbb4425a579a11562b3dd297",
-   "after_sha256_lf": "6fe92162ac69b0ca4d43a160b4f42bc214a694fb92285fe09ba35c966c1b188d",
+   "base_sha256_lf": "cee61f5d68982d3aaba3408441a74d5e9cd1c56b1868150cd71a2fcc4086a6e1",
+   "after_sha256_lf": "ce626e5b9f214e79f40ad936ebf45089683b9a51ff5294d5608e9b3153670621",
    "edits": [
     {
      "location": "CARTOES[7].html, numeração à margem: «5» passa a vazio em «(Come chocolates, pequena;…»",
@@ -1707,8 +1707,8 @@
    ]
   },
   "m4/licao-m4-f10/index.html": {
-   "base_sha256_lf": "39fde2c4e73e158f78d80e9e0553aaebfa990f8d59c294a50a104ef89fd97717",
-   "after_sha256_lf": "e2498a88596559f316b4c229df033681dcb1894913b3a128d214f4423a81d8c7",
+   "base_sha256_lf": "385d4b7e64c7e0c1f403a10d0c933d1e4828e483edec2a396ebd53a5cc1dad5b",
+   "after_sha256_lf": "7bc32b56b0602c3a19811e028fbde1ce4eba1638e43fdd9b8fc433ed0d25d058",
    "edits": [
     {
      "location": "CARTOES[3] «A encomenda», 1.º parágrafo",
@@ -1959,8 +1959,8 @@
    ]
   },
   "m4/licao-m4-f14/index.html": {
-   "base_sha256_lf": "aed89eacb68608ac967edb982cb7a59b943a3f87bfca3dbecf9ae773b1ed99c5",
-   "after_sha256_lf": "c4ed6b3fac3acf2799f67b67958ff0719ec84555e2f087684a3efbbdd013a3b4",
+   "base_sha256_lf": "89c5c964864ad14310eaf4c5856de3d451e95f3e801c1ee6b6614236f43de296",
+   "after_sha256_lf": "aacc51a07ebbd4b092d4f68ef287213d4fafb13f2f38600ce5376ae8072948d3",
    "edits": [
     {
      "location": "CARTOES[6] p.quem",
@@ -1971,8 +1971,8 @@
    ]
   },
   "m4/licao-m4-f20/index.html": {
-   "base_sha256_lf": "bfc72343892ec0f34555a08340ce61efd35ff908f50cb739af385dbab7922548",
-   "after_sha256_lf": "7b59106adf7b72521d380ea4b21725a8ae3e434eb0f9419570b92efb60b0c7bf",
+   "base_sha256_lf": "33bee2cb4fe49927e7b98d3ca8c804604adaa762fc89540a63bc9cb2c2d017ed",
+   "after_sha256_lf": "3efe4ed55e0a2c4202f97082cf2b5ff8048e627f736d60b3c37197437b89c82f",
    "edits": [
     {
      "location": "CARTOES[16] «O texto», «Ler mais»",
@@ -2055,8 +2055,8 @@
    ]
   },
   "m1/index.html": {
-   "base_sha256_lf": "c0fa9f1ac2ec5d0df27af6ebfe4840e4753ad2a40370840d467a8650ab1c1a7f",
-   "after_sha256_lf": "dbd3388a925c5470a286f9b74993c025ba1b6be507c4a5a52776831700a76d27",
+   "base_sha256_lf": "3e3386691769c31fc298c8c808e68bdaa496f9a6dfe3516cbb5f72f1e01c370e",
+   "after_sha256_lf": "6f417d2c254dfd62d86937882a581c07eaaef614f10849014593514d75e80630",
    "edits": [
     {
      "location": "cartões «Tarefa da Unidade 1» e «Tarefa da Unidade 2», linha descritiva (span.f)",
@@ -2145,8 +2145,8 @@
    ]
   },
   "m4/painel-m4-f10/index.html": {
-   "base_sha256_lf": "cb92b51315a15e0c36cb841e3a9165c225c3ce689166669b9f4458a9955576e4",
-   "after_sha256_lf": "a7e79e4a7e030383950ac48c0ad495b09d680cbae41403503fdd2d01f4f1ba4d",
+   "base_sha256_lf": "07fb46f643df8778d215533407f840a1c1fdb30bc817fab6b43ccc8c7667287a",
+   "after_sha256_lf": "aee226b401bb1dc5905bcd8ce64696300b726ecf8d5216275241b116174a6321",
    "edits": [
     {
      "location": "relâmpago k7: dados do painel (CARTOES) e opção do seletor, como o p da lição",
@@ -2163,8 +2163,8 @@
    ]
   },
   "m4/index.html": {
-   "base_sha256_lf": "910b4907dac8f695d561fa2994bf9e6455bed3f72b085d872e85c9003a173242",
-   "after_sha256_lf": "0af8b4cb644da3a3db471785a5e58c36967f4258e467e26abf7774f134952bf5",
+   "base_sha256_lf": "cdd816ecc302e9c83a21458e031f1776a93901fc2cda3cd466eedb7ca49fb56c",
+   "after_sha256_lf": "2b2c9638800f91cfb67ca2168d687d709c7a8cdd02ba978f82a3f080da6af5a9",
    "edits": [
     {
      "location": "arquivo, desafio m4-f10: opção certa individual (a chave c=1 não muda)",

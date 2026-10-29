@@ -3,6 +3,10 @@ on:
   pull_request:
     paths:
       - 'm[1-9]/**'
+      # 28/10/2026: a página inicial limpa o que a Sala deixou antes de exportar ou repor o progresso, e o script
+      # que desligou a Sala é conferido por tests/test_sala_desligada.py e tests/browser_sala_desligada.py
+      - 'index.html'
+      - 'scripts/desligar_sala.py'
       - 'assets/pt-lessons/**'
       - 'assets/exame/**'
       - 'exame/**'
@@ -80,5 +84,6 @@ jobs:
           python tests/browser_m2_balance.py
           python tests/browser_revision_activities.py
           python tests/browser_paineis_relampago.py
+          python tests/browser_sala_desligada.py
           python tests/browser_revision_activities.py --lessons 06,11
           python tests/browser_revision_activities.py --module m7 --lessons 14,15
