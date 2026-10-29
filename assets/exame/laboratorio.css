@@ -43,6 +43,8 @@ body.oficina .wordmark{font-family:var(--of-sans);font-weight:700;letter-spacing
 body.oficina .wordmark small{font-family:var(--of-sans);color:var(--of-suave)}
 body.oficina .site-head nav a{font-family:var(--of-sans)}
 body.oficina :focus-visible{outline:3px solid var(--of-acento);outline-offset:3px}
+/* 29/10/2026: a ligação «Ir para o exercício» lê os tokens da página (no tema escuro era clara sobre branco). */
+body.oficina .skip{background:var(--of-cartao);color:var(--of-tinta);border:2px solid var(--of-tinta)}
 body.oficina[data-maquina="1"] :focus-visible,body.oficina[data-maquina="2"] :focus-visible{outline-color:var(--of-oxido)}
 body.oficina button{font-family:var(--of-sans);color:var(--of-tinta);border-color:var(--of-borda);background:transparent;min-height:44px}
 body.oficina button:hover{background:var(--of-realce)}
