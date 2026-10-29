@@ -130,6 +130,7 @@ html.com-casca body{margin:0}
 .casca-menu nav a,.casca-menu nav button{display:flex;align-items:center;width:100%;min-height:52px;font:700 1rem Arial;color:var(--tinta,#000);text-decoration:none;border:0;border-top:1px solid var(--c-cinza);background:none;padding:0;margin:0;cursor:pointer;text-align:left}
 .casca-menu nav a::after{content:"→";margin-left:auto;font-weight:400}
 .casca-menu .c-menu-extra{font-size:.85rem;color:var(--suave,#444);margin:14px 0 0}
+.casca-menu .sala{margin:0;padding:10px 0 0;background:none}
 .c-grelha{display:grid;grid-template-columns:repeat(auto-fill,minmax(52px,1fr));gap:8px;margin:8px 0 0}.c-grelha button{min-height:52px;font:700 1rem Arial;border:1px solid var(--tinta,#000);background:var(--papel,#fff);color:var(--tinta,#000);cursor:pointer;margin:0}.c-grelha button.ok{background:var(--tinta,#000);color:var(--papel,#fff)}.c-grelha button.mau{box-shadow:inset 0 -4px 0 var(--errado,#c8232c)}.c-grelha button:disabled{opacity:.35;cursor:default}
 .c-sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 .casca a:focus-visible,.casca button:focus-visible,.casca select:focus-visible,.casca [tabindex]:focus-visible{outline:3px solid var(--tinta,#000);outline-offset:2px}
@@ -445,10 +446,25 @@ function andar(r){if(!r)return;if(r.nodeType===3){tratar(r);return}if(r.nodeType
 function ligar(){andar(document.body);if(window.MutationObserver)new MutationObserver(function(ms){ms.forEach(function(m){if(m.type==="characterData")tratar(m.target);else [].forEach.call(m.addedNodes,andar)})}).observe(document.body,{childList:true,subtree:true,characterData:true})}
 window.EPIItalico={andar:andar};if(document.body)ligar();else document.addEventListener("DOMContentLoaded",ligar)})();
 </script><script src="../assets/pt-lessons/jogo.js?v=20261021-ux06"></script><script>
-// 28/10/2026: a Sala de aula está desligada desde 17/10/2026 (decisão do docente); só se apaga o que ela deixou neste aparelho
-(function(){try{["epi-sala","epi-sala-atlas"].forEach(function(k){if(localStorage.getItem(k)!==null)localStorage.removeItem(k)});
-for(var i=localStorage.length-1;i>=0;i--){var k=localStorage.key(i);if(k&&k.indexOf("painel-sala-")===0)localStorage.removeItem(k)}}catch(x){}
-try{sessionStorage.removeItem("epi-atlas-sala")}catch(x){}})();
+window.EPISala=(function(){"use strict";
+var BASE="https://ntfy.sh",PREF="epi-pt-",LOCAL=location.protocol==="file:"||/[?&]local\b/.test(location.search),bc={};
+function topico(cod){return PREF+String(cod||"").toUpperCase()}
+function enviar(cod,msg){msg.ts=Date.now();var s=JSON.stringify(msg);
+ if(LOCAL){try{(bc[cod]=bc[cod]||new BroadcastChannel(topico(cod))).postMessage(s)}catch(x){}return Promise.resolve(true)}
+ return fetch(BASE+"/"+topico(cod),{method:"POST",body:s,headers:{"Content-Type":"text/plain"}}).then(function(r){return r.ok}).catch(function(){return false})}
+function ligar(cod,onMsg,desde){
+ if(LOCAL){var c=new BroadcastChannel(topico(cod));c.onmessage=function(ev){try{onMsg(JSON.parse(ev.data),Date.now()/1000)}catch(x){}};return {fechar:function(){c.close()},local:true}}
+ var es=new EventSource(BASE+"/"+topico(cod)+"/sse"+(desde?"?since="+encodeURIComponent(desde):""));
+ var h=function(ev){try{var d=JSON.parse(ev.data);if(d.event&&d.event!=="message")return;var m=JSON.parse(d.message);onMsg(m,d.time)}catch(x){}};
+ es.onmessage=h;es.addEventListener("message",h);return {fechar:function(){es.close()},es:es}}
+function codigo(){var A="ABCDEFGHJKMNPQRSTUVWXYZ23456789",s="";for(var i=0;i<5;i++)s+=A[Math.floor(Math.random()*A.length)];return s}
+function sala(k){try{return JSON.parse(localStorage.getItem(k||"epi-sala")||"null")}catch(x){return null}}
+function entrar(cod,alc,k){try{localStorage.setItem(k||"epi-sala",JSON.stringify({cod:String(cod).toUpperCase().replace(/[^A-Z0-9]/g,"").slice(0,5),alc:String(alc).trim().slice(0,16),t:Date.now()}))}catch(x){}return sala(k)}
+function sair(k){try{localStorage.removeItem(k||"epi-sala")}catch(x){}}
+// modo código (sem canal): o telemóvel mostra um código com a alcunha e os pontos; o painel descodifica-o
+function codificar(m){try{return btoa(unescape(encodeURIComponent(JSON.stringify(m)))).replace(/\+/g,"-").replace(/\//g,"_").replace(/=+$/,"")}catch(x){return ""}}
+function descodificar(s){try{s=String(s||"").trim().replace(/-/g,"+").replace(/_/g,"/");while(s.length%4)s+="=";return JSON.parse(decodeURIComponent(escape(atob(s))))}catch(x){return null}}
+return {enviar:enviar,ligar:ligar,codigo:codigo,sala:sala,entrar:entrar,sair:sair,topico:topico,codificar:codificar,descodificar:descodificar,LOCAL:LOCAL,BASE:BASE}})();
 </script><script>document.addEventListener("click",function(ev){var s=ev.target&&ev.target.closest?ev.target.closest(".simbolo[data-ico]"):null;if(!s)return;var g=s.getAttribute("data-gesto");if(!g)return;s.classList.remove("gesto-"+g);void s.getBoundingClientRect();s.classList.add("gesto-"+g);setTimeout(function(){s.classList.remove("gesto-"+g)},1200)});</script>
 <script>
 (function(){
@@ -490,7 +506,7 @@ function bando(){if(!window.EPIJogo||EPIJogo.reduz())return;var d=document.creat
 function copiar(s,ok){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(s).then(function(){avisar(ok)},function(){avisar("Seleciona e copia")})}else avisar("Seleciona e copia")}
 $("#cartao").onclick=function(){var r=pintar(),l=["CARTÃO DO PERCURSO · MÓDULO "+M.slice(1)+", "+TIT,""];r.unidades.forEach(function(u){l.push("Unidade "+u.n+", "+u.titulo+": "+u.feitos+" de "+u.total+" passos"+(u.cumprida?" · cumprida":u.feitos===u.total&&u.total?" · falta a pergunta":" · por cumprir"));(u.licoes||[]).forEach(function(x){if(x.t)l.push("  Lição "+x.id+": melhor "+x.c+" de "+x.t+" certas"+(x.lida?" · lida":""))});if(u.sintese&&u.sintese.feita)l.push("  Síntese realizada: "+(u.sintese.modo==="oral"?"oralmente":u.sintese.modo==="caderno"?"no caderno":"registo anterior")+"; qualidade não avaliada automaticamente");if(u.resp.trim())l.push("  Resposta: "+u.resp.trim().replace(/\s+/g," "))});l.push("","SELOS: "+(r.conquistas.length?r.conquistas.join("; "):"nenhum ainda"));l.push("","Feito em "+new Date().toLocaleDateString("pt-PT"));var t=$("#cartao-texto");t.textContent=l.join("\n");t.style.display="block";$("#copiar-cartao").hidden=false};
 $("#copiar-cartao").onclick=function(){copiar($("#cartao-texto").textContent,"Cartão copiado: cola na tarefa da última unidade, no Teams")};
-$$("[data-desafio]").forEach(function(b){b.onclick=function(){var u=U.filter(function(x){return String(x.n)===String(b.dataset.desafio)})[0];if(!u||!u.pool||!u.pool.length)return;var K=K0+M+"-u"+u.n,itens=escolherDesafio(u,K);b.textContent="Outra vez, com perguntas novas";EPIJogo.montar({marca:"Desafio "+u.n,itens:itens,chave:K,titulo:"Desafio da unidade "+u.n,emblema:u.emblema,mostrarAnterior:false,fim:function(s){var ch=ls(K)||{};ch.ganho=!!(ch.ganho||s.certas>=6);ch.total=8;var festa=ch.ganho&&!ch.festejado;if(festa)ch.festejado=true;try{localStorage.setItem(K,JSON.stringify(ch))}catch(x){}pintar();if(festa)surpresa(u);}})}});
+$$("[data-desafio]").forEach(function(b){b.onclick=function(){var u=U.filter(function(x){return String(x.n)===String(b.dataset.desafio)})[0];if(!u||!u.pool||!u.pool.length)return;var K=K0+M+"-u"+u.n,itens=escolherDesafio(u,K);b.textContent="Outra vez, com perguntas novas";EPIJogo.montar({marca:"Desafio "+u.n,itens:itens,chave:K,titulo:"Desafio da unidade "+u.n,emblema:u.emblema,mostrarAnterior:false,fim:function(s){var ch=ls(K)||{};ch.ganho=!!(ch.ganho||s.certas>=6);ch.total=8;var festa=ch.ganho&&!ch.festejado;if(festa)ch.festejado=true;try{localStorage.setItem(K,JSON.stringify(ch))}catch(x){}pintar();if(festa)surpresa(u);if(window.EPISala){var S=EPISala.sala();if(S&&S.cod)EPISala.enviar(S.cod,{t:"desafio",a:S.alc,u:u.n,c:s.certas,n:8,ganho:!!ch.ganho})}}})}});
 // Desafio (ronda 1, 11/10/2026): evita as perguntas das duas últimas tentativas e garante uma por lição da unidade
 function chaveDe(x){return String(x.p||x.frase||"").slice(0,60)}
 function escolherDesafio(u,K){var ch=ls(K)||{},ult=[].concat.apply([],(ch.ult||[]).slice(-2));var pool=u.pool.filter(function(x){return ult.indexOf(chaveDe(x))<0});if(pool.length<8)pool=u.pool;var sel=[];(u.licoes||[]).forEach(function(l){var c=EPIJogo.baralhar(pool.filter(function(x){return x._l===l&&sel.indexOf(x)<0}));if(c.length)sel.push(c[0])});var resto=EPIJogo.baralhar(pool.filter(function(x){return sel.indexOf(x)<0}));while(sel.length<8&&resto.length)sel.push(resto.pop());sel=EPIJogo.baralhar(sel).slice(0,8);ch.ult=(ch.ult||[]).concat([sel.map(chaveDe)]).slice(-2);try{localStorage.setItem(K,JSON.stringify(ch))}catch(x){}return sel}

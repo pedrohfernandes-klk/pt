@@ -10,7 +10,9 @@ class SonhoMemoria(unittest.TestCase):
  def test_grammar_uses_distinct_invented_example(self):
   a=bank('15');self.assertEqual('escolha',a[18]['t']);self.assertIn('inventada',a[18]['p']);self.assertIn('onomatopeia',a[18]['f']);self.assertIn('não retirada do poema',a[18]['f']);self.assertIn('Como se formam palavras novas',a[11]['html'])
  def test_conclusion_can_remain_open_and_context_matters(self):
-  a=bank('14');self.assertIn('terceira estrofe',a[17]['pares'][2][1]);self.assertIn('tensão entre ambos',a[22]['html']);self.assertIn('Não é uma reprodução do poema',a[0]['html']);self.assertIn('não exige supor',a[11]['f']);self.assertIn('Oralmente ou no caderno',a[22]['html'])
+  # 28/10/2026: auditoria do M7 (achado 26): a figura de «Tabacaria» na Presença e a nota que a desculpava saem do Abre
+  # da F14 (manifesto literal); fica o símbolo e o texto de abertura, sem imagem de outro poema.
+  a=bank('14');self.assertIn('terceira estrofe',a[17]['pares'][2][1]);self.assertIn('tensão entre ambos',a[22]['html']);self.assertNotIn('<figure',a[0]['html']);self.assertNotIn('Tabacaria',a[0]['html']);self.assertIn('Há uma ilha no extremo sul.',a[0]['html']);self.assertIn('não exige supor',a[11]['f']);self.assertIn('Oralmente ou no caderno',a[22]['html'])
  def test_teacher_panels_and_challenge_match(self):
   s=(ROOT/'m7/index.html').read_text('utf-8');u=json.JSONDecoder().raw_decode(s[re.search(r'\bU\s*=\s*(\[)',s).start(1):])[0]
   for n in ['14','15']:

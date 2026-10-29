@@ -3,7 +3,7 @@ from pathlib import Path
 from html.parser import HTMLParser
 import hashlib,json,unittest
 from test_task_routes_closure import original_lesson_text
-from auditoria_20261028 import undo_sala
+from auditoria_20261028 import undo as undo_audit_20261028
 ROOT=Path(__file__).resolve().parents[1]
 PATH='m7/licao-m7-f15/index.html'
 class Table(HTMLParser):
@@ -23,9 +23,9 @@ class TableAid(unittest.TestCase):
   source=(ROOT/PATH).read_text('utf-8');before=original_lesson_text(PATH)
   record=json.loads((ROOT/'tests/fixtures/apoios-tabelas-edits-20261027.json').read_text('utf-8'))['files'][PATH]
   self.assertEqual(hashlib.sha256(before.encode()).hexdigest(),record['base_sha256_lf'])
-  # 28/10/2026: a Sala de aula saiu desta lição (decisão do docente de 17/10/2026); as trocas literais do manifesto da
-  # Sala desfazem-se antes de comparar com o estado depois das tabelas. O resto do teste lê a página real.
-  self.assertEqual(hashlib.sha256(undo_sala(PATH,source).encode()).hexdigest(),record['after_sha256_lf'])
+  # 28/10/2026: as pistas[0] e [1] da F15 mudaram na auditoria do M7 (manifesto literal, fora dos cartões);
+  # o hash de depois das tabelas confere-se com essas trocas desfeitas. Os cartões comparam-se na página real.
+  self.assertEqual(hashlib.sha256(undo_audit_20261028(PATH,source).encode()).hexdigest(),record['after_sha256_lf'])
   old,new=cards(before),cards(source)
   self.assertEqual(len(old),len(new));self.assertEqual(len(new),21)
   for index,(a,b) in enumerate(zip(old,new)):
