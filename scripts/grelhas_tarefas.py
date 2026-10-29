@@ -13,11 +13,14 @@ correção não vive nestes dados. A «nota» opcional de cada grelha diz ao alu
 se chega à grelha; na correção, os três blocos do comentário ficam sob um título h2; e --saida PASTA escreve as
 páginas noutra raiz (a tarefa lê-se dessa raiz ou, se lá não estiver, da árvore), para os testes compararem
 sem mexer na árvore.
+29/10/2026 (M7-U3): os títulos de obras escrevem-se nos dados entre _…_ e saem em itálico (<i>); no <title>, sem marcas.
+As grelhas sem _…_ saem iguais, byte a byte.
 Idempotente. Uso: python3 scripts/grelhas_tarefas.py [--saida PASTA]
 """
 from html import escape as e
 from pathlib import Path
 import json
+import re
 import sys
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -72,9 +75,18 @@ a:focus-visible,button:focus-visible,.g-tab:focus-visible{outline:3px solid curr
 """
 
 
+def ital(s):
+    """29/10/2026: escapa e põe em itálico os títulos de obras escritos entre _…_ (regra editorial dos itálicos)."""
+    return re.sub(r'(?<![\w/])_([^_<>]{1,100}?)_(?!\w)', r'<i>\1</i>', e(s))
+
+
+def simples(s):
+    return re.sub(r'(?<![\w/])_([^_<>]{1,100}?)_(?!\w)', r'\1', s)
+
+
 def casca(titulo, corpo):
     return ('<!doctype html><html lang="pt-PT" data-appearance-site="pt"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">'
-            f'<title>{e(titulo)} · Português</title><link rel="stylesheet" href="../../../assets/appearance.css?v=20261025-universal-1">'
+            f'<title>{e(simples(titulo))} · Português</title><link rel="stylesheet" href="../../../assets/appearance.css?v=20261025-universal-1">'
             '<script src="../../../assets/appearance.js?v=20261025-universal-1"></script>'
             f'<style>{CSS}</style></head><body><main class="grelha">{corpo}</main>'
             '<script>document.querySelectorAll("[data-print]").forEach(function(b){b.hidden=false;b.onclick=function(){window.print()}})</script>'
@@ -89,27 +101,27 @@ def pagina_aluno(slug, t):
     m = t['modulo'].lower()
     corpo = (f'<nav class="g-nav" aria-label="Navegação"><a href="{VOLTAR}">← Voltar à tarefa</a><a href="../../../{m}/">Módulo {t["modulo"][1:]}</a>'
              '<button type="button" data-print hidden>Imprimir</button></nav>'
-             f'<header><p class="rot">{e(t["modulo"])} · Unidade {t["unidade"]} · Como é avaliado</p><h1>{e(t["titulo"])}</h1>'
+             f'<header><p class="rot">{e(t["modulo"])} · Unidade {t["unidade"]} · Como é avaliado</p><h1>{ital(t["titulo"])}</h1>'
              '<p class="lead">20 valores em cinco critérios. Lê antes de começar e volta aqui antes de entregar.</p>'
-             f'<p>{e(t["produto"])}</p>'
-             + (f'<p class="g-nota">{e(t["nota"])}</p>' if t.get('nota') else '') + '</header>'
+             f'<p>{ital(t["produto"])}</p>'
+             + (f'<p class="g-nota">{ital(t["nota"])}</p>' if t.get('nota') else '') + '</header>'
              f'<div class="g-tab" {REGIAO.format("Os cinco critérios")}><table class="g-resumo"><caption>Os cinco critérios</caption><thead><tr><th>Critério</th><th class="n">Máximo</th></tr></thead><tbody>')
     for i, c in enumerate(t['criterios'], 1):
-        corpo += f'<tr><td><a href="#criterio-{i}">{e(c["nome"])}</a></td><td class="n">{c["max"]}</td></tr>'
+        corpo += f'<tr><td><a href="#criterio-{i}">{ital(c["nome"])}</a></td><td class="n">{c["max"]}</td></tr>'
     corpo += '<tr class="total"><th>Total</th><td class="n">20</td></tr></tbody></table></div>'
     for i, c in enumerate(t['criterios'], 1):
         n = c['niveis']
-        corpo += (f'<section class="g-crit" id="criterio-{i}"><h2><span class="num">{i}</span><span>{e(c["nome"])}</span><span class="max">máx. {c["max"]}</span></h2><dl class="g-niveis">')
+        corpo += (f'<section class="g-crit" id="criterio-{i}"><h2><span class="num">{i}</span><span>{ital(c["nome"])}</span><span class="max">máx. {c["max"]}</span></h2><dl class="g-niveis">')
         for chave, rotulo, sub in (('0', '0', 'sem evidência'), ('parcial', intervalo(c), 'evidência incompleta'), ('max', str(c['max']), 'cumprimento consistente')):
             desc, ex = n[chave]
-            corpo += f'<div><dt>{rotulo}<small>{sub}</small></dt><dd><p>{e(desc)}</p><p class="ex"><b>Exemplo</b>{e(ex)}</p></dd></div>'
-        corpo += '</dl><p class="custa"><b>Custa pontos</b></p><ul>' + ''.join(f'<li>{e(x)}</li>' for x in c['custa']) + '</ul></section>'
+            corpo += f'<div><dt>{rotulo}<small>{sub}</small></dt><dd><p>{ital(desc)}</p><p class="ex"><b>Exemplo</b>{ital(ex)}</p></dd></div>'
+        corpo += '</dl><p class="custa"><b>Custa pontos</b></p><ul>' + ''.join(f'<li>{ital(x)}</li>' for x in c['custa']) + '</ul></section>'
     corpo += ('<section class="g-auto" id="autoavaliacao"><h2>Antes de entregar: dá-te pontos</h2>'
               '<p>Em papel, critério a critério: escreve o número e a passagem do teu texto que o prova. Entrega esta autoavaliação com as fotografias. '
               'O docente põe a nota dele ao lado da tua e comenta a diferença.</p>'
               f'<div class="g-tab" {REGIAO.format("Autoavaliação")}><table><thead><tr><th>Critério</th><th class="n">Máx.</th><th class="n">Eu</th><th>A passagem que o prova</th></tr></thead><tbody>')
     for c in t['criterios']:
-        corpo += f'<tr><td>{e(c["nome"])}</td><td class="n">{c["max"]}</td><td></td><td></td></tr>'
+        corpo += f'<tr><td>{ital(c["nome"])}</td><td class="n">{c["max"]}</td><td></td><td></td></tr>'
     corpo += ('<tr class="total"><th>Total</th><td class="n">20</td><td></td><td></td></tr></tbody></table></div></section>'
               f'<footer><a href="{VOLTAR}">Voltar à tarefa</a><a href="../correcao/">Para o docente: versão de correção</a></footer>')
     return casca(f'Grelha /20: {t["titulo"]}', corpo)
@@ -118,12 +130,12 @@ def pagina_aluno(slug, t):
 def pagina_correcao(slug, t):
     corpo = (f'<nav class="g-nav" aria-label="Navegação"><a href="../grelha/">← Grelha do aluno</a><a href="{VOLTAR}">Tarefa</a>'
              '<button type="button" data-print hidden>Imprimir</button></nav>'
-             f'<header><p class="rot">{e(t["modulo"])} · Unidade {t["unidade"]} · Correção</p><h1>{e(t["titulo"])}</h1>'
+             f'<header><p class="rot">{e(t["modulo"])} · Unidade {t["unidade"]} · Correção</p><h1>{ital(t["titulo"])}</h1>'
              '<p class="lead">Franqueza com cuidado: fala do texto, nunca da pessoa; aponta a passagem; diz o que fazer a seguir.</p>'
              '<p class="nome">Aluno <span></span> Turma <span></span> Data <span></span></p></header>'
              f'<div class="g-tab" {REGIAO.format("Notas por critério")}><table><thead><tr><th>Critério</th><th class="n">Máx.</th><th class="n">Aluno</th><th class="n">Docente</th><th>Observações</th></tr></thead><tbody>')
     for c in t['criterios']:
-        corpo += f'<tr><td>{e(c["nome"])}<br><small>{e(c["niveis"]["max"][0])}</small></td><td class="n">{c["max"]}</td><td></td><td></td><td></td></tr>'
+        corpo += f'<tr><td>{ital(c["nome"])}<br><small>{ital(c["niveis"]["max"][0])}</small></td><td class="n">{c["max"]}</td><td></td><td></td><td></td></tr>'
     corpo += ('<tr class="total"><th>Total</th><td class="n">20</td><td></td><td></td><td></td></tr></tbody></table></div>'
               '<h2 class="g-fb-t">Comentário ao aluno</h2><div class="g-fb">'
               '<div><h3>O que funciona</h3><p>Uma coisa concreta, com a passagem.</p></div>'

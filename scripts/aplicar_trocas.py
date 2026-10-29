@@ -25,6 +25,16 @@ Uso:
   python3 scripts/aplicar_trocas.py               aplica o que faltar e regenera o manifesto
   python3 scripts/aplicar_trocas.py --verificar   só confere; sai com 1 se faltar aplicar ou o manifesto
                                                   não corresponder às páginas
+  python3 scripts/aplicar_trocas.py OUTRO.json --manifesto tests/fixtures/OUTRO.json --nota "…"
+                                                  outro lote, com a sua nota (29/10/2026: sem --nota, o manifesto
+                                                  levava a nota fixa do lote de 28/10)
+  python3 scripts/aplicar_trocas.py --verificar --desfazer-antes tests/fixtures/aquecimentos-m7-edits-20261029.json \
+      --fora tarefas/m7-u3/index.html
+                                                  29/10/2026 (revisão técnica): confere um lote que já tem outra camada
+                                                  por cima. Cada --desfazer-antes (pode repetir-se, da camada mais recente
+                                                  para a mais antiga) desfaz no texto lido as trocas desse manifesto antes
+                                                  de conferir; nada se escreve. --fora deixa de fora um ficheiro gerado de
+                                                  novo por cima do lote (como a tarefa da M7-U3).
 Sai com 2 se algum ficheiro não conferir (nos dois modos).
 """
 from pathlib import Path
@@ -128,6 +138,16 @@ def processar(ficheiro, trocas, text):
     return base, depois, estados
 
 
+def desfazer_camadas(ficheiro, text, camadas):
+    """29/10/2026: desfaz no texto as trocas das camadas mais recentes (da última troca para a primeira, camada a camada)."""
+    for caminho, files in camadas:
+        for edit in reversed(files.get(ficheiro, {}).get('edits', [])):
+            if text.count(edit['new']) != edit['occurrences']:
+                raise TrocaFalhou(f'{ficheiro}: a camada {caminho} já não confere ({edit["location"]})')
+            text = text.replace(edit['new'], edit['old'])
+    return text
+
+
 def commit_base(manual):
     if manual:
         return manual
@@ -145,7 +165,19 @@ def main(argv=None):
     parser.add_argument('--manifesto', default=str(MANIFESTO), help='manifesto a gerar')
     parser.add_argument('--base-commit', help='commit da base (por omissão, git merge-base HEAD origin/main)')
     parser.add_argument('--verificar', action='store_true', help='não escreve nada; sai com 1 se faltar algo')
+    parser.add_argument('--nota', default=None,
+                        help='29/10/2026: a nota do manifesto (por omissão, a do manifesto que já existe, ou a do lote de 28/10)')
+    parser.add_argument('--desfazer-antes', action='append', default=[], metavar='MANIFESTO',
+                        help='29/10/2026: com --verificar, desfaz antes as trocas deste manifesto (camada mais recente primeiro)')
+    parser.add_argument('--fora', action='append', default=[], metavar='FICHEIRO',
+                        help='29/10/2026: com --verificar, não confere este ficheiro (gerado de novo por cima do lote)')
     args = parser.parse_args(argv)
+    if (args.desfazer_antes or args.fora) and not args.verificar:
+        print('ERRO: --desfazer-antes e --fora só servem com --verificar (o texto desfeito nunca se escreve)', file=sys.stderr)
+        return 2
+    camadas = []
+    for caminho in args.desfazer_antes:
+        camadas.append((caminho, json.loads(Path(caminho).read_text('utf-8'))['files']))
 
     try:
         lista, por_ficheiro = carregar(args.trocas)
@@ -156,11 +188,14 @@ def main(argv=None):
     # estava (nenhuma das suas trocas se aplica) e é listado no fim; os outros aplicam-se na mesma.
     resultados, falhas = {}, {}
     for ficheiro, trocas in por_ficheiro.items():
+        if ficheiro in args.fora:
+            continue
         caminho = ROOT / ficheiro
         try:
             if not caminho.is_file():
                 raise TrocaFalhou(f'{ficheiro}: o ficheiro não existe')
             text = caminho.read_bytes().decode('utf-8')
+            text = desfazer_camadas(ficheiro, text, camadas)
             resultados[ficheiro] = (text,) + processar(ficheiro, trocas, text)
         except TrocaFalhou as erro:
             falhas[ficheiro] = str(erro)
@@ -182,7 +217,10 @@ def main(argv=None):
     mesmas_bases = anterior.get('files') and all(
         anterior['files'].get(f, {}).get('base_sha256_lf') == r['base_sha256_lf'] for f, r in files.items())
     base_commit = args.base_commit or (anterior.get('base_commit') if mesmas_bases else None) or commit_base(None)
-    manifesto = {'base_commit': base_commit, '_nota': NOTA, 'files': files}
+    # 29/10/2026 (revisão técnica): sem --nota, fica a nota do manifesto que já existe (voltar a correr ou conferir outro
+    # lote não troca a nota pela do lote de 28/10).
+    nota = args.nota if args.nota is not None else (anterior.get('_nota') or NOTA)
+    manifesto = {'base_commit': base_commit, '_nota': nota, 'files': files}
     novo_manifesto = json.dumps(manifesto, ensure_ascii=False, indent=1) + '\n'
 
     por_aplicar = sum(e.count('por aplicar') for (_, _, _, e) in resultados.values())
@@ -191,6 +229,10 @@ def main(argv=None):
     manifesto_muda = not manifesto_path.is_file() or manifesto_path.read_text('utf-8') != novo_manifesto
 
     if args.verificar:
+        if camadas or args.fora:
+            fora = sum(len(por_ficheiro[f]) for f in args.fora if f in por_ficheiro)
+            print(f'(29/10/2026) conferido com {len(camadas)} camada(s) desfeita(s) antes; {len(args.fora)} ficheiro(s) '
+                  f'de fora ({fora} trocas); o manifesto compara-se só com os ficheiros conferidos.')
         print(f'{len(lista)} trocas em {len(resultados)} ficheiros: {ja} aplicadas, {por_aplicar} por aplicar; '
               f'manifesto {"desatualizado" if manifesto_muda else "em dia"}.')
         avisar_falhas(falhas, por_ficheiro, escrito=False)

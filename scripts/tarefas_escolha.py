@@ -9,9 +9,15 @@ idempotentes e podem correr por qualquer ordem.
 28/10/2026 (revisão do PR #122): as letras das opções e dos temas ficam no nome acessível (deixam de estar
 escondidas aos leitores de ecrã, porque as instruções mandam escrevê-las); o fecho diz o que é a síntese; e
 --saida PASTA escreve as páginas noutra raiz, para os testes compararem sem mexer na árvore.
+29/10/2026 (decisão do docente, M7-U3): uma tarefa pode trocar as duas máquinas em papel pelo aquecimento em cartões
+(«aquecer»: {"cartoes": ...}, página de scripts/aquecimentos.py). O cartão «Aquecer» fica primeiro, com o relógio do
+aquecimento e a ligação em destaque; não há pergunta «aquecer», só a opcional; o enunciado ganha a mesma ligação. Os
+exemplos resolvidos («exemplos») entram em «Relembrar», depois da lista. O <title> leva o título sem marcas (<i>). As
+páginas sem estas chaves saem iguais, byte a byte.
 Uso: python3 scripts/tarefas_escolha.py [--saida PASTA] [slug ...]
 """
 import json
+import re
 import sys
 from html import escape
 from pathlib import Path
@@ -65,27 +71,44 @@ def warmup(slug, instruction, anatomy, claim, qtitle, options):
 '''
 
 
-def header(slug, unit, title, lead, core, themes):
+def warmup_cards(slug, a):
+    """29/10/2026: o aquecimento faz-se em cartões (página própria); não há máquinas nem pergunta «aquecer»."""
+    return f'''<section class="task-section task-warmup" id="aquecer" aria-labelledby="aquecer-title" data-task-warm="cartoes">
+<p class="task-warmup-kicker">Antes de escrever · {a['minutos']} min · em cartões, com consulta</p>
+<h2 id="aquecer-title">Aquecer em cartões</h2>
+<p>{a['texto']}</p>
+<p class="task-aquecer"><a href="{a['cartoes']}">{a['ligacao']}</a></p>
+<div class="task-relogio" data-relogio data-max="{a['minutos']}" data-passo="1" data-rotulo="Aquecimento" data-chave="pt-relogio:tarefas/{slug}:aquecimento"></div>
+</section>
+'''
+
+
+def header(slug, unit, title, lead, core, themes, aquecer=None):
     li = ''.join(f'<li>{x}</li>' for x in core)
+    # 29/10/2026: com o aquecimento em cartões, o enunciado leva também a ligação em destaque, logo a seguir ao lead.
+    link = f'<p class="task-aquecer"><a href="{aquecer["cartoes"]}">{aquecer["ligacao_enunciado"]}</a></p>\n' if aquecer else ''
     # 28/10/2026: «Tema A» / «Tema B» no nome acessível; o fecho manda escrever no topo o tema escolhido.
     th = ''.join(f'<article class="task-theme" data-task-theme="{k}" aria-labelledby="tema-{k}"><h3 id="tema-{k}"><span><span class="sr-only">Tema </span>{k}</span> {name}</h3><p>{text}</p></article>' for k, name, text in themes)
     return f'''<header><p class="task-kicker">Tarefa individual · Unidade {unit} · 90 min</p><h1>{title}</h1>
 <p>{lead}</p>
-<section id="produzir" aria-label="Enunciado">
+{link}<section id="produzir" aria-label="Enunciado">
 <h2 class="task-part">Núcleo comum <small>para todos</small></h2><ol>{li}</ol>
 <h2 class="task-part">Escolhe um tema <small>só um</small></h2><div class="task-themes">{th}</div>
 </section><div class="task-relogio" data-relogio data-max="60" data-passo="5" data-rotulo="Produção em papel" data-chave="pt-relogio:tarefas/{slug}:producao"></div></header>
 '''
 
 
-def apoios(links, dossier_title, facts, qtitle, options):
+def apoios(links, dossier_title, facts, qtitle, options, examples=(), questions=2):
     li = ''.join(f'<li><a href="{h}">{t}</a></li>' for h, t in links)
     fa = ''.join(f'<li>{f} <a class="task-fonte" href="{h}">{s}</a></li>' for f, h, s in facts)
+    # 29/10/2026: exemplos resolvidos («Ver como se faz»), quando a tarefa os tem; ficam fora do enunciado.
+    ex = ('<section class="task-examples" aria-labelledby="exemplos"><h3 id="exemplos">Ver como se faz</h3>'
+          + ''.join(f'<article class="task-example"><h4>{t}</h4>{h}</article>' for t, h in examples) + '</section>\n') if examples else ''
     return f'''<section class="task-section" id="apoios" aria-labelledby="preparacao"><h2 id="preparacao">Relembrar</h2><ul>{li}</ul>
-<section class="task-dossier" aria-labelledby="dossie"><h3 id="dossie">{dossier_title}</h3><ul>{fa}</ul></section>
+{ex}<section class="task-dossier" aria-labelledby="dossie"><h3 id="dossie">{dossier_title}</h3><ul>{fa}</ul></section>
 <details data-task-optional-preparation><summary>Experimentar uma pergunta</summary><div class="task-quiz" aria-label="Uma pergunta opcional">
 <article class="task-question" data-task-question="1" aria-labelledby="q1"><h3 id="q1">{qtitle}</h3>{opts(options)}</article>
-<p data-task-status role="status">Respostas exploradas: 0 de 2. Podes rever qualquer escolha.</p></div></details>
+<p data-task-status role="status">Respostas exploradas: 0 de {questions}. Podes rever qualquer escolha.</p></div></details>
 </section>
 '''
 
@@ -104,12 +127,17 @@ def tarefa(d, com_grelha, raiz=ROOT):
     assert d['fecho'].startswith('Fecha com duas linhas'), slug
     mod = slug.split('-')[0]
     a = d['aquecer']
+    cartoes = 'cartoes' in a
     op = lambda xs: [(x['certa'], x['letra'], x['texto'], x['resposta']) for x in xs]
-    html = (HEAD.format(title=escape(d['titulo'], quote=False), unit=unit, V=V, mod=mod, MOD=mod.upper())
-            + warmup(slug, a['instrucao'], [tuple(x) for x in a['anatomia']], a['afirmacao'], a['pergunta'], op(a['opcoes']))
-            + header(slug, unit, d['titulo'], d['lead'], d['nucleo'], [(t['letra'], t['nome'], t['texto']) for t in d['temas']])
+    titulo = escape(re.sub(r'<[^>]+>', '', d['titulo']), quote=False)
+    html = (HEAD.format(title=titulo, unit=unit, V=V, mod=mod, MOD=mod.upper())
+            + (warmup_cards(slug, a) if cartoes else
+               warmup(slug, a['instrucao'], [tuple(x) for x in a['anatomia']], a['afirmacao'], a['pergunta'], op(a['opcoes'])))
+            + header(slug, unit, d['titulo'], d['lead'], d['nucleo'], [(t['letra'], t['nome'], t['texto']) for t in d['temas']],
+                     a if cartoes else None)
             + apoios([(x['href'], x['texto']) for x in d['apoios']], d['dossie_titulo'], [(x['facto'], x['href'], x['fonte']) for x in d['dossie']],
-                     d['opcional']['pergunta'], op(d['opcional']['opcoes']))
+                     d['opcional']['pergunta'], op(d['opcional']['opcoes']),
+                     [(x['titulo'], x['html']) for x in d.get('exemplos', [])], 1 if cartoes else 2)
             + entregar(d['criterios'], d['fecho'], com_grelha)
             + FOOT)
     p = raiz / 'tarefas' / slug / 'index.html'

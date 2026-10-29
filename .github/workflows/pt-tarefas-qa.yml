@@ -13,6 +13,19 @@ on:
       - 'assets/pt-lessons/lesson.css'
       - 'tests/*task*'
       - 'tests/fixtures/*task*'
+      # 29/10/2026: aquecimentos em cartões (gerador, dados e páginas) e a tarefa nova da M7-U3
+      - 'scripts/aquecimentos.py'
+      - 'scripts/tarefas_escolha.py'
+      - 'scripts/grelhas_tarefas.py'
+      - 'docs/pedagogia/aquecimentos/**'
+      - 'docs/pedagogia/tarefas-escolha/**'
+      # 29/10/2026 (revisão técnica): o teste de navegador dos aquecimentos também confere o percurso, a F10 e o seu painel,
+      # e a página dos diapositivos do M7
+      - 'm7/index.html'
+      - 'm7/licao-m7-f10/**'
+      - 'm7/painel-m7-f10/**'
+      - 'm7/diapositivos/**'
+      - 'm7/guia-da-tarefa-m7/**'
       - '.github/workflows/pt-tarefas-qa.yml'
 permissions:
   contents: read
@@ -43,3 +56,8 @@ jobs:
         run: python tests/browser_task_lesson_matrix.py
       - name: Relógio do aluno (duas pausas, recomeço obrigatório)
         run: python tests/browser_relogio.py
+      # 29/10/2026: as três páginas de aquecimento do M7 até ao fim (390 claro, 1366 escuro, projeção sem gravar),
+      # as ligações nas tarefas e no percurso, e a F10 reescrita. Revisão de 29/10/2026: também a lista dos diapositivos do
+      # M7 depois do lançador da projeção e o arquivo do guia (itálico e blocos de 90 minutos).
+      - name: Aquecimentos em cartões do M7 e tarefa nova da unidade 3
+        run: python tests/browser_task_aquecimentos.py

@@ -3,6 +3,7 @@ from html.parser import HTMLParser
 from urllib.parse import urlsplit, unquote
 import json, re, unittest
 from task_source_contract import historical_task_source
+from auditoria_20261028 import undo as undo_audit_20261028
 ROOT=Path(__file__).resolve().parents[1]
 
 class Page(HTMLParser):
@@ -60,7 +61,10 @@ class RemainingM7Tasks(unittest.TestCase):
     for required in ('nas tuas folhas','durante toda a tarefa','fotografias legíveis','Teams no início desta aula',f'Aula de tarefa · Unidade {n} · 90 min'):
      self.assertIn(required,s)
  def test_original_criteria_and_products(self):
-  g=(ROOT/'m7/guia-da-tarefa-m7/index.html').read_text('utf-8-sig')
+  # 29/10/2026 (decisão do docente): no arquivo do guia, T[1] passa à tarefa nova da unidade 3 («Louco, sim»), por
+  # troca literal (tests/fixtures/aquecimentos-m7-edits-20261029.json); os critérios e os níveis antigos leem-se com
+  # essa camada desfeita, como já faz test_m7_u2_task, e continuam a ter de estar na página histórica da U3.
+  g=undo_audit_20261028('m7/guia-da-tarefa-m7/index.html',(ROOT/'m7/guia-da-tarefa-m7/index.html').read_text('utf-8-sig'))
   tasks,_=json.JSONDecoder().raw_decode(g[g.index('T=[{')+2:])
   _,_,p=self.page(1);t=''.join(p.text)
   for level in tasks[0]['rubrica'][4]['niveis']:self.assertIn(level,t)

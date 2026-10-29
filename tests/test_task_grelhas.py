@@ -100,12 +100,27 @@ CITACOES={
           ('licao-m1-f02','segura um livro pequeno na mão',None),('licao-m1-f02','Quem escreve é este rei',None),
           ('licao-m1-f05','Numa fala imaginada, a representação informal pode ser uma escolha',None),
           ('licao-m1-f05','numa fala documentada, preserva as palavras da fonte',None)],
+ # 29/10/2026 (decisão do docente): a grelha da M7-U3 («Louco, sim»). Os exemplos usam outro tema («Ensaiar vale a pena?»),
+ # «O Infante» e a «Tabacaria»; os versos, as frases e a data estão, letra a letra, nas lições do M7.
+ 'm7-u3':[('licao-m7-f08','Deus quer, o homem sonha, a obra nasce.','«Deus quer, o homem sonha, a obra nasce.»'),
+          ('licao-m7-f08','Deus quer (vontade), o homem sonha (desejo), a obra nasce',None),
+          ('licao-m7-f07','Álvaro de Campos, «Tabacaria» (15-1-1928)','15-1-1928'),
+          ('licao-m7-f11','«Não sou nada.»','«Não sou nada.»'),
+          ('licao-m7-f07','Estou hoje vencido, embora não saiba a verdade','Estou hoje vencido, embora não saiba a verdade')],
 }
+# 29/10/2026: a grelha da M7-U3 não tem chave de respostas (é um texto de opinião), por isso não entra em PROIBIDAS; o que
+# não pode aparecer nas páginas públicas nem nos dados é o assunto dos temas A e B, nem os seus poemas (os exemplos são de
+# outro caso do mesmo tipo). Confere-se em claro, palavra a palavra («Louco» fica de fora: está no título da tarefa).
+TEMAS_M7_U3=('Valeu a pena','Bojador','mães','noivas','Sebastião','Alcácer','sebastianismo','esperamos','Madalena',
+             'loucura','Mar Português','nevoeiro')
 
 
 def licao(nome):
-    """Texto da lição sem marcas e, a seguir, a fonte inteira (para o que só está na descrição de uma imagem)."""
-    s=(ROOT/'m1'/nome/'index.html').read_text('utf-8')
+    """Texto da lição sem marcas e, a seguir, a fonte inteira (para o que só está na descrição de uma imagem).
+
+    29/10/2026: a pasta do módulo sai do nome da lição (licao-m1-…, licao-m7-…).
+    """
+    s=(ROOT/nome.split('-')[1]/nome/'index.html').read_text('utf-8')
     return re.sub(r'\s+',' ',html.unescape(re.sub(r'<[^>]+>|\\n',' ',s)))+' '+html.unescape(s)
 
 
@@ -140,7 +155,9 @@ class Grelhas(unittest.TestCase):
                 self.assertEqual(tarefa.count('<a href="grelha/">'),1)
                 aluno=(ROOT/'tarefas'/slug/'grelha/index.html').read_text('utf-8');correcao=(ROOT/'tarefas'/slug/'correcao/index.html').read_text('utf-8')
                 for c in t['criterios']:
-                    self.assertIn(c['nome'].replace('«','&laquo;') if '&laquo;' in aluno else c['nome'],aluno)
+                    # 29/10/2026 (M7-U3): os títulos de obras escrevem-se nos dados entre _…_ e saem em itálico.
+                    nome=re.sub(r'(?<![\w/])_([^_<>]{1,100}?)_(?!\w)',r'<i>\1</i>',c['nome'])
+                    self.assertIn(nome.replace('«','&laquo;') if '&laquo;' in aluno else nome,aluno)
                 self.assertEqual(aluno.count('class="g-crit"'),5);self.assertIn('id="autoavaliacao"',aluno)
                 for parte in ('O que funciona','O que te custa pontos','Próximo passo'):self.assertIn(parte,correcao)
                 # 28/10/2026: cada tabela num contentor que desliza sozinho, para a página não deslizar na horizontal no telemóvel.
@@ -207,6 +224,18 @@ class Grelhas(unittest.TestCase):
                 with self.subTest(tarefa=slug,licao=nome,citacao=na_licao):
                     self.assertIn(na_licao,licao(nome))
                     if na_grelha:self.assertIn(na_grelha,dados)
+
+    def test_m7_u3_exemplos_noutro_tema(self):
+        # 29/10/2026 (decisão do docente): a grelha /20 da tarefa nova da M7-U3 está nos dados, com as duas páginas, e nenhum
+        # exemplo usa o assunto dos temas A e B (o preço do mar e a espera de D. Sebastião) nem os seus poemas.
+        t=DADOS['tarefas']['m7-u3']
+        self.assertEqual([c['max'] for c in t['criterios']],[3,5,5,4,3])
+        textos=[json.dumps(t,ensure_ascii=False)]+[str(Texto((ROOT/'tarefas/m7-u3'/pasta/'index.html').read_text('utf-8'))) for pasta in ('grelha','correcao')]
+        for nome,texto in zip(('dados','grelha','correcao'),textos):
+            for palavra in TEMAS_M7_U3:
+                with self.subTest(texto=nome,palavra=palavra):
+                    self.assertNotIn(palavra.lower(),texto.lower())
+        self.assertIn('<h1>Louco, sim: argumentar com os movimentos de <i>Mensagem</i></h1>',(ROOT/'tarefas/m7-u3/grelha/index.html').read_text('utf-8'))
 
     def test_gerador_e_idempotente(self):
         # 28/10/2026 (revisão do PR #122): o gerador escreve numa pasta temporária (--saida) e compara-se byte a byte;

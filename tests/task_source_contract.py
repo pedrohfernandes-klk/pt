@@ -8,6 +8,9 @@ and grammar tests must continue to inspect the real files themselves.
 28/10/2026: a task that left the compact format (M1, now in the choice format) is
 checked against its own literal successor manifest before any snapshot is exposed;
 compact_task_source then returns the compact page authorized on 27/10.
+
+29/10/2026: the M7 unit 3 task left the compact format too (choice format, with the warm-up in cards instead of
+the paper machines; teacher decision of 29/10). Its successor manifest is a second file in CHOICE_SUCCESSORS_FILES.
 """
 from pathlib import Path
 import hashlib
@@ -29,6 +32,10 @@ MANIFESTS = (
 # como está, e continua a guardar o predecessor; este segundo manifesto autoriza, literalmente, o corpo novo
 # de cada página e os dados públicos de onde é gerado, encadeado no corpo compacto que substitui.
 CHOICE_SUCCESSORS = 'm1-choice-tasks-20261028.json'
+# 29/10/2026 (decisão do docente): a tarefa da unidade 3 do M7 («Louco, sim: argumentar com os movimentos de Mensagem»)
+# passa ao formato com escolha, gerada por scripts/tarefas_escolha.py. O seu manifesto sucessor encadeia, como o do M1,
+# no corpo compacto autorizado a 27/10 (task-compact-m7-before-after.json).
+CHOICE_SUCCESSORS_FILES = (CHOICE_SUCCESSORS, 'm7-u3-choice-task-20261029.json')
 
 
 def _sha(text):
@@ -36,8 +43,14 @@ def _sha(text):
 
 
 def _choice_successors():
-    manifest = json.loads((ROOT / 'tests/fixtures' / CHOICE_SUCCESSORS).read_text('utf-8'))
-    return manifest['files']
+    files = {}
+    for filename in CHOICE_SUCCESSORS_FILES:
+        manifest = json.loads((ROOT / 'tests/fixtures' / filename).read_text('utf-8'))
+        for path, record in manifest['files'].items():
+            if path in files:
+                raise AssertionError('Duplicate choice successor: ' + path)
+            files[path] = record
+    return files
 
 
 def _records():
@@ -172,7 +185,11 @@ def compact_task_source(path):
     if relative not in _choice_successors():
         raise AssertionError('Task is still live in the compact format; read the real file: ' + relative)
     record = _records()[relative]
-    expected = record['before_source'].replace(record['before_body'], record['after_body'])
+    # 29/10/2026: o manifesto compacto do M7 guarda a página inteira (after_source); o do M1 guarda o corpo.
+    if 'after_source' in record:
+        expected = record['after_source']
+    else:
+        expected = record['before_source'].replace(record['before_body'], record['after_body'])
     if _sha(expected) != record['after_sha256']:
         raise AssertionError('Corrupt compact body snapshot: ' + relative)
     return expected

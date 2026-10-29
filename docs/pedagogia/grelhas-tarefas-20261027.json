@@ -249,6 +249,130 @@
           ]
         }
       ]
+    },
+    "m7-u3": {
+      "modulo": "M7",
+      "unidade": 3,
+      "titulo": "Louco, sim: argumentar com os movimentos de _Mensagem_",
+      "produto": "Um texto de opinião à mão, sobre o tema A ou o tema B, com 180 a 220 palavras e o número escrito no fim, mais duas linhas finais fora da contagem. O aquecimento em cartões não conta para a nota.",
+      "nota": "Os exemplos foram escritos para esta grelha com outro tema do mesmo tipo («Ensaiar vale a pena?») e com «O Infante» e a «Tabacaria», nunca com os temas A e B nem com os seus poemas. Os versos e as datas vêm das lições do módulo.",
+      "criterios": [
+        {
+          "nome": "Tese e conclusão",
+          "max": 3,
+          "niveis": {
+            "0": [
+              "Não há tese, ou a primeira frase não diz o que defendes; a conclusão falta ou fala de outra coisa.",
+              "«Neste texto vou falar sobre ensaiar.»"
+            ],
+            "parcial": [
+              "Há tese, mas sem condição, ou a conclusão copia a tese palavra a palavra.",
+              "Tese: «Ensaiar é importante.» Conclusão: «Em conclusão, ensaiar é importante.»"
+            ],
+            "max": [
+              "A primeira frase tem a tese com uma condição, e a conclusão volta a ela com outras palavras.",
+              "Tese: «Ensaiar só é perder tempo se o ensaio for sempre igual.» Conclusão: «Por isso, desde que cada ensaio mude alguma coisa, ensaiar é o caminho mais curto para falar sem ler.»"
+            ]
+          },
+          "custa": [
+            "Uma tese com «tudo» ou «sempre» sem dizer em que caso é verdade.",
+            "Uma conclusão que repete a primeira frase.",
+            "Começar por resumir o poema em vez de dizer o que defendes."
+          ]
+        },
+        {
+          "nome": "Movimentos",
+          "max": 5,
+          "niveis": {
+            "0": [
+              "Não há nenhum movimento reconhecível, ou não há letras na margem.",
+              "«Há quem não goste de ensaiar mas eu gosto.»"
+            ],
+            "parcial": [
+              "Há um só movimento, ou dois sem um que dê razão ao outro lado (R ou C), ou estão postos à força e não fazem avançar o argumento, ou a causal é confundida com a concessiva.",
+              "«Artificial, sim, artificial.» [R], que aceita a palavra mas não tem a causal que lhe muda o valor."
+            ],
+            "max": [
+              "Há um movimento que dá razão ao outro lado e vira (R ou C) e mais um (N, M ou P), marcados na margem, e cada um faz avançar o argumento.",
+              "«Artificial, sim, artificial, porque escolheu cada pausa em vez de a deixar ao acaso.» [R] «Ensaiar custa uma tarde; mas é no ensaio que se descobre o que ainda não se sabe dizer.» [M]"
+            ]
+          },
+          "custa": [
+            "Chamar R a uma frase com «embora», ou C a uma frase com «porque».",
+            "Dar razão ao outro lado e não virar: o texto fica a defender o que queria contestar.",
+            "Letras na margem sem o movimento no texto."
+          ]
+        },
+        {
+          "nome": "Verso de _Mensagem_",
+          "max": 5,
+          "niveis": {
+            "0": [
+              "Não há verso de _Mensagem_, ou o verso está mudado e sem poema indicado.",
+              "«Pessoa diz em _Mensagem_ que é preciso sonhar.»"
+            ],
+            "parcial": [
+              "O verso está exato mas sem o poema, ou sem explicação ligada ao argumento, ou o herói é lido como biografia.",
+              "«Deus quer, o homem sonha, a obra nasce.» Este verso é muito bonito."
+            ],
+            "max": [
+              "Um verso exato, entre «», com o poema indicado, explicado no contexto e ligado à tese, com o herói lido como símbolo.",
+              "Noutro tema, com «O Infante»: «Deus quer, o homem sonha, a obra nasce.» O Infante é aqui o homem que sonha, um símbolo e não uma biografia (F08); a obra só nasce depois do sonho, e por isso ensaiar é o sonho que vem antes da obra, e não tempo perdido."
+            ]
+          },
+          "custa": [
+            "Uma palavra trocada no verso.",
+            "Citar sem dizer de que poema é.",
+            "Ler o rei ou o Infante como se o poema contasse a vida deles."
+          ]
+        },
+        {
+          "nome": "Facto ou outra voz",
+          "max": 4,
+          "niveis": {
+            "0": [
+              "Não há facto datado nem outra voz, ou há um facto inventado.",
+              "«Sempre se ensaiou muito, desde os tempos antigos.»"
+            ],
+            "parcial": [
+              "Há um facto datado ou outra voz, mas o facto mistura-se com o sentido do poema, ou a voz não se liga à tese.",
+              "«Em 1928, Fernando Pessoa não era nada.»"
+            ],
+            "max": [
+              "Um facto datado das lições, separado do sentido que o poema lhe dá, ou o confronto com Garrett ou com Reis, ligado à tese.",
+              "Noutro caso: a «Tabacaria» tem a data de 15-1-1928, e isso confirma-se fora do poema; «Não sou nada.» é o que a voz diz, e não um dado da vida de quem escreve. Ligado à tese: quem ensaia também pode sentir que não é nada, mas isso é o que sente, não um facto, e é o ensaio que muda alguma coisa que o desmente."
+            ]
+          },
+          "custa": [
+            "Dar como facto o que é o sentido de um verso.",
+            "Um facto sem data, ou uma data que não está nas lições.",
+            "Citar Garrett ou Reis sem dizer o que isso muda na tua tese."
+          ]
+        },
+        {
+          "nome": "Forma",
+          "max": 3,
+          "niveis": {
+            "0": [
+              "Muito fora das 180 a 220 palavras, ou sem as duas linhas finais.",
+              "Um texto de 90 palavras, sem contagem nem fecho."
+            ],
+            "parcial": [
+              "Falha uma destas: a contagem escrita no fim, os conectores certos, a revisão ou as duas linhas com um movimento e o verso ou a frase que o ensinou.",
+              "Fecho: «Aprendi muitas coisas sobre argumentar.»"
+            ],
+            "max": [
+              "180 a 220 palavras, com o número no fim, conectores certos, texto revisto e duas linhas que dizem que movimento vais voltar a usar, onde, e o verso ou a frase que to ensinou.",
+              "Fecho: «Vou voltar ao C quando tiver de admitir um defeito num trabalho meu. Ensinou-mo “Estou hoje vencido, embora não saiba a verdade”, a versão concessiva da lição F07.»"
+            ]
+          },
+          "custa": [
+            "Erros de concordância e de acentuação que uma releitura apanhava.",
+            "Não escrever o número de palavras no fim.",
+            "Fecho genérico, sem movimento nem verso."
+          ]
+        }
+      ]
     }
   }
 }

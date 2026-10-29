@@ -22,3 +22,11 @@ p{max-width:68ch;margin:12px 0}.task-lead{font-size:1.15rem;line-height:1.55;max
 @media print{body{background:#fff;color:#000;font-size:12pt}.task-page{max-width:none;padding:0}.task-nav,.task-actions,.task-quiz,.teacher-access{display:none!important}.task-section{break-inside:avoid}.task-brief{break-before:page}.task-clock{grid-template-columns:repeat(4,minmax(0,1fr))}}
 
 .task-evidence{font:400 1.05rem/1.6 Georgia,serif;max-width:60ch;margin:8px 0 16px}
+
+/* 29/10/2026: ligação ao aquecimento em cartões, em destaque no cartão «Enunciado» (e no «Aquecer» da M7-U3).
+   Só composição: as cores vêm dos tokens da página. Não sai na impressão (o papel não abre ligações). */
+.task-aquecer{margin:16px 0;max-width:none}
+.task-aquecer a{display:inline-flex;align-items:center;gap:10px;min-height:48px;padding:10px 16px;border:2px solid var(--tinta);border-left:8px solid var(--task-accent,var(--tinta));font-weight:700;text-decoration:none;line-height:1.35;overflow-wrap:anywhere}
+.task-aquecer a::after{content:"\2192";font-weight:700}
+.task-aquecer a:hover{background:var(--fundo)}
+@media print{.task-aquecer{display:none!important}}

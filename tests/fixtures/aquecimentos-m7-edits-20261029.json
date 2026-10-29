@@ -1,0 +1,648 @@
+{
+ "base_commit": "0c7f64d47afb84b355ae87b1d1ffccb4dd38d89d",
+ "_nota": "29/10/2026: aquecimentos em cartões antes das aulas de tarefa do M7 e unidade 3 sem «Dia Pessoa» (decisões do docente de 29/10/2026). Ligação ao aquecimento no cartão «Enunciado» das tarefas U1 e U2; linha «A» antes da linha «T» em cada unidade do percurso; U2 com apresentações em pequenos grupos ao mesmo tempo (tarefa, guia e percurso); M7-F10 reescrita como «Argumentar com versos» (cartões, pistas, título, menu e o «depois»), com o painel refeito a partir da lição por scripts/desligar_sala.py (relampago_do_painel); título novo da F10 no índice, em 3/, 3/todos, nos diapositivos e no mapa; arquivo do índice com os cartões da F10 nova; guia (lista visível, botão e T[1] com a tarefa nova e a sua rubrica); mapa, portefólio e página da visita (caderno de campo facultativo, sem avaliação). A tarefa da U3 não entra aqui: é gerada por scripts/tarefas_escolha.py e autorizada pelo manifesto sucessor tests/fixtures/m7-u3-choice-task-20261029.json. Gerado por scripts/aplicar_trocas.py a partir de scripts/aquecimentos_m7_20261029.json: não se edita à mão. É a camada mais recente: desfaz-se antes da Sala e dos dois lotes da auditoria de 28/10 (tests/auditoria_20261028.py e tests/test_task_routes_closure.py). Revisão pedagógica e técnica de 29/10/2026: F10 com versao (regra de 23/10), «dar razão ao outro lado» como termo geral e «conceder» só para o C, cinco movimentos de Mensagem mais a concessiva da F07, facto e sentido sem «o que o poema fez disso», o que separa R e C de M; diapositivos sem «projetar=1» nas ligações (o lançador troca-as pelo seu botão) e sessão 15 ligada à lição (o diapositivo 9 perguntava pelo projeto do Dia Pessoa); guia com blocos de 90 minutos, o aquecimento no T[0], fotografias e nomes de ficheiro do portefólio, títulos de obras em itálico; U2 com a pergunta da apresentação registada no papel; portefólio com as duas linhas da tarefa nova; visita sem a barra das 200 palavras e sem marcar caixas novas com o estado antigo.",
+ "files": {
+  "m7/licao-m7-f10/index.html": {
+   "base_sha256_lf": "970aa6989c38b29a08c82f5e6ed1bbf997ebd591e24690743525804f6992c148",
+   "after_sha256_lf": "4a3c855e6410e2677abda00591a7a103a36c7a78495693083624dcd7b13e0850",
+   "edits": [
+    {
+     "location": "CARTOES[0] (Abre): título",
+     "old": ",\"rot\":\"Abre\",\"titulo\":\"Defender o projeto\",\"html\":\"<svg class=\\\"s",
+     "new": ",\"rot\":\"Abre\",\"titulo\":\"Argumentar com versos\",\"html\":\"<svg class=\\\"s",
+     "occurrences": 1
+    },
+    {
+     "location": "CARTOES[0] (Abre): abertura",
+     "old": "re><p class=\\\"abre\\\"><b>O objeto está feito.</b> Agora tens três minutos para explicar porque é que ele é assim e não de outra maneira, e depois vêm as perguntas. Que pergunta te assusta mais?</p>\"}",
+     "new": "re><p class=\\\"abre\\\"><b>«Valeu a pena? Tudo vale a pena / Se a alma não é pequena.»</b> O poema pergunta e responde com uma condição: isso já é um argumento. Hoje tiras dos versos de <i>Mensagem</i> cinco movimentos, juntas-lhes a concessiva da F07 e tens seis para o texto de opinião da aula de tarefa. Qual deles já usas sem dar por isso?</p>\"}",
+     "occurrences": 1
+    },
+    {
+     "location": "CARTOES[1] (O essencial): a tarefa nova, os seis movimentos, o plano; sai o vídeo do projeto",
+     "old": "0\\\"/></svg></span><span>Projeto do Dia Pessoa (25 %): um objeto (vídeo, som, cartaz, <i>performance</i>, instalação) a partir de textos de Pessoa lidos no módulo.</span></li><li><span class=\\\"mini\\\"><svg class=\\\"simbolo\\\" viewBox=\\\"0 0 48 48\\\" aria-hidden=\\\"true\\\" data-ico=\\\"microfone\\\"><rect x=\\\"18\\\" y=\\\"6\\\" width=\\\"12\\\" height=\\\"20\\\" rx=\\\"6\\\"/><path d=\\\"M12 22a12 12 0 0 0 24 0\\\"/><path d=\\\"M24 34v8M16 42h16\\\"/></svg></span><span>Entregas: o objeto, a memória descritiva (150 a 200 palavras) e a defesa oral (três minutos e perguntas).</span></li><li><span class=\\\"mini\\\"><svg class=\\\"simbolo\\\" viewBox=\\\"0 0 48 48\\\" aria-hidden=\\\"true\\\" data-ico=\\\"pergaminho\\\"><path d=\\\"M12 10h22a4 4 0 0 1 4 4v24a4 4 0 0 1-4 4H12\\\"/><path d=\\\"M12 10a4 4 0 0 0-4 4v2h8\\\"/><path d=\\\"M16 20h16M16 26h16M16 32h10\\\"/></svg></span><span>Processo: três propostas antes da escolha, um diário com três mudanças e os seus critérios, um ensaio cronometrado.</span></li></ol><details><summary>A memória descritiva, ponto a ponto</summary><div><p>Cinco pontos, por esta ordem: intenção, versos de partida, decisões formais, abandonos e o que falta. Cada decisão leva um «porque».</p></div></details><div class=\\\"yt\\\" data-yt=\\\"CI3fzv4EljU\\\" data-titulo=\\\"«Tabacaria», um trabalho de alunos da EPI (4 min)\\\"><button type=\\\"button\\\" class=\\\"yt-abrir\\\" data-yt-abrir>Ver: «Tabacaria», um trabalho de alunos da EPI (4 min)</button><p class=\\\"yt-cred\\\"><b>No caderno:</b> Vê o vídeo como se fosses do júri e escreve duas decisões formais que reconheces e uma pergunta que farias a quem o fez.</p><p class=\\\"yt-cred\\\">Trabalho de três alunos do 3.º ano de Animação da EPI (2015), canal sociocultural epi. <a href=\\\"https://www.youtube.com/watch?v=CI3fzv4EljU\\\" target=\\\"_blank\\\" rel=\\\"noopener\\\">Ver no YouTube</a>.</p></div>\"}",
+     "new": "0\\\"/></svg></span><span>Tarefa da unidade 3 (25 %): um texto de opinião de 180 a 220 palavras, à mão e com consulta, sobre uma de duas perguntas que conheces na aula de tarefa (uma é a retoma «Por quem, ou pelo quê, ainda esperamos?»).</span></li><li><span class=\\\"mini\\\"><svg class=\\\"simbolo\\\" viewBox=\\\"0 0 48 48\\\" aria-hidden=\\\"true\\\" data-ico=\\\"microfone\\\"><rect x=\\\"18\\\" y=\\\"6\\\" width=\\\"12\\\" height=\\\"20\\\" rx=\\\"6\\\"/><path d=\\\"M12 22a12 12 0 0 0 24 0\\\"/><path d=\\\"M24 34v8M16 42h16\\\"/></svg></span><span>Seis movimentos, cada um com a sua letra para a margem: S, N, R, M, P e C.</span></li><li><span class=\\\"mini\\\"><svg class=\\\"simbolo\\\" viewBox=\\\"0 0 48 48\\\" aria-hidden=\\\"true\\\" data-ico=\\\"pergaminho\\\"><path d=\\\"M12 10h22a4 4 0 0 1 4 4v24a4 4 0 0 1-4 4H12\\\"/><path d=\\\"M12 10a4 4 0 0 0-4 4v2h8\\\"/><path d=\\\"M16 20h16M16 26h16M16 32h10\\\"/></svg></span><span>Exemplo: «Louco, sim, louco, porque quis grandeza»: o rei aceita a palavra de quem o acusa e muda-lhe o valor com uma causal. É o movimento R.</span></li></ol><details><summary>O plano do texto, ponto a ponto</summary><div><p>A tese com condição na primeira frase; um movimento que dá razão ao outro lado e vira (R ou C); mais um movimento (N, M ou P); um verso exato de <i>Mensagem</i>, explicado; um facto datado separado do sentido que o poema lhe dá, ou o confronto com Garrett ou com Reis; uma conclusão que volta à tese sem a copiar; as letras dos movimentos na margem.</p></div></details>\"}",
+     "occurrences": 1
+    },
+    {
+     "location": "CARTOES[2]: cartão novo (prepara a tarefa da U3)",
+     "old": "{\"t\":\"ler\",\"rot\":\"Para entender\",\"html\":\"<div class=\\\"caixa\\\"><h3>A entrega</h3><p>Hoje preparas a entrega: documentas o processo no caderno, rascunhas a <b>memória descritiva</b> e ensaias a <b>defesa oral</b> (três minutos e perguntas). Fechas tudo na aula de tarefa da unidade 3. O resultado avalia se o objeto comunica uma leitura do texto, não se é bonito nem se usa o verso mais conhecido. Cada verso usado leva a referência do Arquivo Pessoa.</p></div>\"}",
+     "new": "{\"t\":\"ler\",\"rot\":\"Para entender\",\"html\":\"<div class=\\\"caixa\\\"><h3>Os seis movimentos</h3><p><b>S</b>, tese com condição: «Valeu a pena? Tudo vale a pena / Se a alma não é pequena.» («Mar Português», vv. 7-8)</p><p><b>N</b>, condição necessária: «Quem quer passar além do Bojador / Tem que passar além da dor.» («Mar Português», vv. 9-10)</p><p><b>R</b>, aceitar a palavra de quem acusa e redefini-la com uma causal: «Louco, sim, louco, porque quis grandeza / Qual a Sorte a não dá.» («D. Sebastião, Rei de Portugal», vv. 1-2)</p><p><b>M</b>, admitir e contrapor: «Deus ao mar o perigo e o abismo deu, / Mas nele é que espelhou o céu.» («Mar Português», vv. 11-12)</p><p><b>P</b>, a pergunta que obriga a responder: «Sem a loucura que é o homem / Mais que a besta sadia, / Cadáver adiado que procria?» («D. Sebastião, Rei de Portugal», vv. 8-10)</p><p><b>C</b>, conceder com «embora»: é a concessiva da lição «Como se soubesse a verdade» (F07).</p><p>R e C respondem a quem discorda (uma acusação, uma objeção); M pesa um custo contra um ganho. Por isso, na tarefa, R ou C é o movimento que dá razão ao outro lado, e M conta no segundo grupo.</p><p>Na aula de tarefa, cada verso que citas vai exato, entre «», com o poema indicado; na margem, escreves a letra de cada movimento.</p></div>\"}",
+     "occurrences": 1
+    },
+    {
+     "location": "CARTOES[3]: cartão novo (prepara a tarefa da U3)",
+     "old": "{\"t\":\"completar\",\"p\":\"Quanto vale o projeto do Dia Pessoa, e de que textos parte?\",\"p2\":\"Que peso tem o projeto no módulo, e de que textos nasce o objeto?\",\"frase\":\"O projeto do Dia Pessoa vale [1] do módulo e parte de textos de Pessoa [2] para fazer um objeto.\",\"lacunas\":[{\"o\":[\"50 %\",\"10 %\",\"25 %\",\"75 %\"],\"c\":2},{\"o\":[\"de qualquer autor\",\"lidos no módulo\",\"escolhidos pelo docente\",\"ainda por ler\"],\"c\":1}],\"f\":\"**25 %** do módulo: um objeto feito a partir dos textos **lidos no módulo**.\",\"g\":\"fim\"}",
+     "new": "{\"t\":\"emparelhar\",\"p\":\"Liga cada verso de _Mensagem_ ao movimento que faz.\",\"p2\":\"Condição, preço, palavra virada ou contrapeso? Liga cada verso.\",\"pares\":[[\"«Valeu a pena? Tudo vale a pena / Se a alma não é pequena.»\",\"S, tese com condição\"],[\"«Quem quer passar além do Bojador / Tem que passar além da dor.»\",\"N, condição necessária\"],[\"«Louco, sim, louco, porque quis grandeza»\",\"R, aceitar a palavra e redefini-la\"],[\"«Deus ao mar o perigo e o abismo deu, / Mas nele é que espelhou o céu.»\",\"M, admitir e contrapor\"]],\"f\":\"**S** diz em que caso a tese é verdade; **N** diz o preço que não se pode evitar; **R** aceita a palavra de quem acusa e muda-lhe o valor; **M** admite o custo e contrapõe com «Mas».\",\"fe\":\"Procura a marca de cada verso: «Se» põe a condição, «Tem que» diz o preço, «sim» e «porque» viram a acusação, «Mas» traz o contrapeso.\",\"g\":1}",
+     "occurrences": 1
+    },
+    {
+     "location": "CARTOES[4]: cartão novo (prepara a tarefa da U3)",
+     "old": "{\"t\":\"escolha\",\"p\":\"Que três coisas se entregam?\",\"p2\":\"Quais são as três entregas do projeto do Dia Pessoa?\",\"o\":[\"O objeto, um teste escrito e uma reflexão final\",\"O objeto, a memória descritiva, a defesa oral\",\"A memória, o diário de decisões e as três propostas\",\"O objeto, um cartaz sobre ele e um vídeo do processo\"],\"c\":1,\"f\":\"**Objeto, memória descritiva e defesa oral**, mais perguntas.\",\"g\":\"fim\",\"fe\":[\"Não há teste no projeto: a palavra conta na memória descritiva e na defesa oral («O essencial»).\",null,\"O diário e as três propostas são o processo, que também conta; mas as entregas são o objeto, a memória e a defesa.\",\"Cartaz e vídeo são formas que o objeto pode ter, não entregas à parte; entregam-se também a memória e a defesa.\"]}",
+     "new": "{\"t\":\"completar\",\"p\":\"Que oração dá a condição à tese de «Mar Português»?\",\"p2\":\"Como se chama a oração com «Se» que responde a «Valeu a pena?», e o que diz?\",\"frase\":\"Em «Tudo vale a pena / Se a alma não é pequena», a oração com «Se» é subordinada adverbial [1] e diz em que [2] a tese é verdade.\",\"lacunas\":[{\"o\":[\"condicional\",\"causal\",\"concessiva\",\"final\"],\"c\":0},{\"o\":[\"caso\",\"momento\",\"lugar\",\"ordem\"],\"c\":0}],\"f\":\"Oração subordinada adverbial **condicional**: diz em que **caso** a tese vale. Uma tese com condição é mais difícil de atacar do que um «tudo» sem limites.\",\"fe\":\"«Se» não dá uma causa (isso é «porque») nem admite uma oposição (isso é «embora»): põe um caso. A tese só vale se a condição se cumprir.\",\"g\":\"S\"}",
+     "occurrences": 1
+    },
+    {
+     "location": "CARTOES[5]: cartão novo (prepara a tarefa da U3)",
+     "old": "{\"t\":\"completar\",\"voc\":true,\"p\":\"Como se chama o texto de 150 a 200 palavras que explica o projeto?\",\"p2\":\"Que adjetivo completa o nome do texto que conta a intenção, as decisões e o que falta?\",\"frase\":\"Memória [1]: o texto de 150 a 200 palavras que explica o projeto.\",\"lacunas\":[{\"o\":[\"descritiva\",\"oral\",\"fundamentada\",\"formal\"],\"c\":0}],\"f\":\"Memória **descritiva**: intenção, versos de partida, decisões formais, abandonos e o que falta.\",\"g\":\"fim\"}",
+     "new": "{\"t\":\"sublinhar\",\"p\":\"Toca nas duas palavras que fazem do preço uma obrigação.\",\"p2\":\"Nos versos do Bojador, toca no que diz que não há outro caminho.\",\"frase\":\"Quem quer passar além do Bojador Tem que passar além da dor.\",\"certas\":[6,7],\"f\":\"«**Tem que**»: é a condição necessária. Quem quer uma coisa tem de pagar outra; no teu texto, «tem de» faz o mesmo trabalho.\",\"fe\":\"Procura a obrigação, e não o lugar nem a dor: são duas palavras seguidas, no início do segundo verso.\",\"g\":1}",
+     "occurrences": 1
+    },
+    {
+     "location": "CARTOES[6]: cartão novo (prepara a tarefa da U3)",
+     "old": "{\"t\":\"ordenar\",\"p\":\"A memória descritiva, pela ordem do enunciado:\",\"p2\":\"Põe pela ordem os pontos que a memória descritiva tem de seguir:\",\"passos\":[\"Intenção\",\"Versos de partida\",\"Decisões formais\",\"Abandonos\",\"O que falta\"],\"f\":\"Um parágrafo por ponto; cada decisão com um «porque».\",\"g\":\"fim\"}",
+     "new": "{\"t\":\"escolha\",\"p\":\"Em «Louco, sim, louco, porque quis grandeza», o que faz o rei à palavra «louco»?\",\"p2\":\"O que acontece à acusação de loucura no 1.º verso de «D. Sebastião, Rei de Portugal»?\",\"o\":[\"Aceita-a e muda-lhe o valor: a loucura passa a ser o nome de ter querido grandeza\",\"Nega-a: diz que nunca foi louco\",\"Repete-a para pedir desculpa a quem o acusa\"],\"c\":0,\"f\":\"Aceita a palavra («**Louco, sim**») e muda-lhe o valor com a causal «**porque quis grandeza**». É o movimento R: dar razão ao outro lado numa palavra, e virá-la.\",\"fe\":[null,\"Ele diz «Louco, sim»: aceita a palavra antes de a virar. Negar seria outro movimento, e mais fraco.\",\"Não há desculpa nenhuma: a oração com «porque» dá uma razão, e a razão muda o valor da palavra.\"],\"g\":2}",
+     "occurrences": 1
+    },
+    {
+     "location": "CARTOES[7]: cartão novo (prepara a tarefa da U3)",
+     "old": "{\"t\":\"completar\",\"p\":\"Que medidas têm a memória descritiva e a defesa oral?\",\"p2\":\"Quantas palavras tem a memória, e quantos minutos dura a defesa?\",\"frase\":\"A memória tem [1] palavras; a defesa oral dura [2] minutos.\",\"lacunas\":[{\"o\":[\"100 a 120\",\"150 a 200\",\"120 a 160\",\"180 a 240\"],\"c\":1},{\"o\":[\"três\",\"cinco\",\"dez\",\"dois\"],\"c\":0}],\"f\":\"**150 a 200** palavras e **três** minutos, mais perguntas.\",\"g\":\"fim\"}",
+     "new": "{\"t\":\"vf\",\"p\":\"Em «Louco, sim, louco, porque quis grandeza», a oração com «porque» é concessiva.\",\"p2\":\"A oração «porque quis grandeza» admite uma oposição, como faria «embora».\",\"v\":false,\"f\":\"Falso: é **causal**, dá a razão. A concessiva vem com «**embora**», como em «embora não saiba a verdade» (lição F07): é o movimento C, não o R.\",\"fe\":\"«Porque» dá a causa; «embora» concede. R redefine a palavra com uma causal; C admite com «embora» e segue em frente.\",\"g\":2}",
+     "occurrences": 1
+    },
+    {
+     "location": "CARTOES[8]: cartão novo (prepara a tarefa da U3)",
+     "old": "{\"t\":\"sublinhar\",\"p\":\"Toca na palavra que cada decisão da memória tem de levar.\",\"p2\":\"Na frase sobre as decisões, toca na palavra que dá a razão de cada uma.\",\"frase\":\"Cada decisão com um «porque».\",\"certas\":[4],\"f\":\"Cada decisão com um «**porque**»: a razão conta tanto como a escolha.\",\"g\":\"fim\"}",
+     "new": "{\"t\":\"completar\",\"p\":\"O que faz cada verso no fim de «Mar Português»?\",\"p2\":\"No movimento M, o que faz o primeiro verso e o que traz o «Mas»?\",\"frase\":\"«Deus ao mar o perigo e o abismo deu, / Mas nele é que espelhou o céu.»: o primeiro verso [1] o custo; o «Mas» traz o [2].\",\"lacunas\":[{\"o\":[\"admite\",\"nega\",\"esconde\",\"pergunta\"],\"c\":0},{\"o\":[\"contrapeso\",\"perigo\",\"abismo\",\"fim\"],\"c\":0}],\"f\":\"O primeiro verso **admite** o perigo e o abismo; o «Mas» traz o **contrapeso**, e «é que» põe-no em realce. É o movimento M: admitir o custo e contrapor.\",\"fe\":\"O primeiro verso não esconde nada: diz o perigo e o abismo. O que vem com «Mas» não é mais perigo, é o que pesa do outro lado: o céu espelhado.\",\"g\":2}",
+     "occurrences": 1
+    },
+    {
+     "location": "CARTOES[9]: cartão novo (prepara a tarefa da U3)",
+     "old": "{\"t\":\"vf\",\"p\":\"Na memória descritiva, diz-se também o que ainda falta resolver.\",\"p2\":\"O que falta resolver é um dos pontos obrigatórios da memória descritiva.\",\"v\":true,\"f\":\"Verdadeiro: **o que falta é obrigatório**; um projeto acabado sem dúvidas é suspeito.\",\"g\":\"fim\",\"fe\":\"É verdadeiro: «o que falta» é o último dos cinco pontos da memória descritiva (vê «A memória descritiva, ponto a ponto», em «O essencial»).\"}",
+     "new": "{\"t\":\"escolha\",\"p\":\"«Sem a loucura que é o homem / Mais que a besta sadia, / Cadáver adiado que procria?»: porque é que esta pergunta argumenta?\",\"p2\":\"No fim de «D. Sebastião, Rei de Portugal», o que faz a pergunta a quem lê?\",\"o\":[\"Obriga quem lê a responder, e só uma resposta cabe: sem a loucura, o homem seria apenas um «Cadáver adiado que procria»\",\"Mostra que o rei não sabe o que pensar\",\"Pede uma informação que falta no poema\"],\"c\":0,\"f\":\"É a pergunta que **obriga a responder**: a resposta vem implícita, e quem lê dá-a por si. É o movimento P. Num texto de opinião, uma pergunta destas chega; a seguir, o argumento continua.\",\"fe\":[null,\"Não é uma dúvida do rei: a pergunta diz o que seria o homem sem a loucura, e deixa a resposta a quem lê.\",\"Não falta informação: a pergunta já traz a resposta em «Cadáver adiado que procria».\"],\"g\":3}",
+     "occurrences": 1
+    },
+    {
+     "location": "CARTOES[10]: cartão novo (prepara a tarefa da U3)",
+     "old": "{\"t\":\"escolha\",\"p\":\"O que leva cada verso de Pessoa usado no objeto?\",\"p2\":\"Que indicação acompanha, obrigatoriamente, cada verso que entra no objeto?\",\"o\":[\"A tradução do verso para outra língua\",\"A assinatura do docente que o aprovou\",\"A referência do Arquivo Pessoa\",\"A data em que se fará a defesa oral\"],\"c\":2,\"f\":\"Cada verso leva **a referência do Arquivo Pessoa**.\",\"g\":\"fim\",\"fe\":[\"Ninguém pede tradução: os versos ficam em português, mas cada um diz de onde vem («Para entender»).\",\"O docente não assina versos; quem os usa indica a fonte de cada um («Para entender»).\",null,\"A data da defesa é do calendário, não do verso; o verso leva a sua fonte («Para entender»).\"]}",
+     "new": "{\"t\":\"emparelhar\",\"p\":\"Liga cada conector ao movimento que costuma abrir.\",\"p2\":\"Que movimento anuncia cada palavra pequena? Liga.\",\"pares\":[[\"se\",\"S, tese com condição\"],[\"tem que\",\"N, condição necessária\"],[\"porque\",\"R, redefinir com uma causal\"],[\"mas\",\"M, admitir e contrapor\"],[\"embora\",\"C, conceder\"]],\"f\":\"**Se** põe a condição, **tem que** diz o preço, **porque** redefine, **mas** contrapõe, **embora** concede. P não precisa de conector: é a pergunta.\",\"fe\":\"Pergunta o que faz cada palavra: põe um caso, diz uma obrigação, dá uma razão, opõe, ou admite uma oposição?\",\"g\":3}",
+     "occurrences": 1
+    },
+    {
+     "location": "CARTOES[11]: cartão novo (prepara a tarefa da U3)",
+     "old": "{\"t\":\"vf\",\"p\":\"As três propostas fazem-se depois de escolher o objeto.\",\"p2\":\"Primeiro escolhe-se o objeto; as três propostas vêm depois.\",\"v\":false,\"f\":\"Falso: **três propostas antes da escolha**: o processo conta tanto como o resultado.\",\"g\":\"fim\",\"fe\":\"É ao contrário: primeiro há três propostas, e só depois se escolhe uma («O essencial»).\"}",
+     "new": "{\"t\":\"escolha\",\"p\":\"Qual destas frases concede com «embora», como pede o movimento C?\",\"p2\":\"Que frase admite o que podia travar a ideia, e segue em frente?\",\"o\":[\"Embora a viagem seja longa, o comboio deixa ler.\",\"A viagem é longa porque o comboio para em todas as estações.\",\"Se a viagem for longa, levo um livro.\"],\"c\":0,\"f\":\"Com «**embora**», admites o que podia travar a tua ideia e segues em frente: é o movimento C. O verbo fica no conjuntivo, «seja», como «saiba» em «embora não saiba a verdade» (lição F07).\",\"fe\":[null,\"É causal: «porque» dá a razão de a viagem ser longa, não admite nada ao outro lado.\",\"É condicional: «Se» põe um caso; não admite o que podia travar a ideia.\"],\"g\":\"C\"}",
+     "occurrences": 1
+    },
+    {
+     "location": "CARTOES[12]: cartão novo (prepara a tarefa da U3)",
+     "old": "{\"t\":\"completar\",\"p\":\"O que exige o processo, antes da escolha e no diário?\",\"p2\":\"Quantas propostas antes de escolher, e quantas mudanças no diário de decisões?\",\"frase\":\"O processo exige pelo menos [1] propostas antes da escolha e um diário com [2] mudanças, cada uma com o seu critério.\",\"lacunas\":[{\"o\":[\"três\",\"duas\",\"cinco\",\"quatro\"],\"c\":0},{\"o\":[\"uma\",\"dez\",\"três\",\"cinco\"],\"c\":2}],\"f\":\"**Três** propostas e **três** mudanças com razão: é a evidência de processo.\",\"g\":\"fim\"}",
+     "new": "{\"t\":\"ordenar\",\"p\":\"Põe por ordem os passos do movimento R, como no verso do rei.\",\"p2\":\"Do primeiro ao último: como se aceita uma palavra e se lhe muda o valor?\",\"passos\":[\"Dizes a palavra de quem te acusa\",\"Aceita-la com «sim»\",\"Dás a razão com «porque»\",\"A palavra fica com outro valor\"],\"f\":\"«Louco, sim, louco, porque quis grandeza»: a palavra, o «sim», a causal; no fim, a loucura é o nome de ter querido grandeza.\",\"fe\":\"Não se aceita uma palavra antes de a dizer, nem se dá a razão antes de a aceitar; o valor novo é o resultado, por isso fecha.\",\"g\":4}",
+     "occurrences": 1
+    },
+    {
+     "location": "CARTOES[13]: cartão novo (prepara a tarefa da U3)",
+     "old": "{\"t\":\"vf\",\"p\":\"O processo pede um ensaio da defesa cronometrado.\",\"p2\":\"Antes da defesa, ensaia-se com o tempo medido, para caber em três minutos.\",\"v\":true,\"f\":\"Verdadeiro: **ensaio cronometrado**, para a defesa caber em três minutos.\",\"g\":\"fim\",\"fe\":\"É verdadeiro: o processo inclui um ensaio cronometrado, para a defesa caber nos três minutos («O essencial»).\"}",
+     "new": "{\"t\":\"completar\",\"p\":\"Onde ficam a tese e a conclusão num texto de opinião?\",\"p2\":\"Como abre e como fecha o texto da aula de tarefa?\",\"frase\":\"O texto abre com a [1] na primeira frase e fecha com uma conclusão que [2] sem a copiar.\",\"lacunas\":[{\"o\":[\"tese com condição\",\"pergunta final\",\"concessão\",\"biografia do autor\"],\"c\":0},{\"o\":[\"volta à tese\",\"resume o poema\",\"cita outro verso\",\"conta a vida de Pessoa\"],\"c\":0}],\"f\":\"Abre com a **tese com condição** e fecha com uma conclusão que **volta à tese**, com outras palavras: quem lê sabe onde começaste e onde chegaste.\",\"fe\":\"A primeira frase diz o que defendes, e com que condição; a última volta a isso. Resumir o poema ou contar a vida do autor não é concluir um argumento.\",\"g\":4}",
+     "occurrences": 1
+    },
+    {
+     "location": "CARTOES[14]: cartão novo (prepara a tarefa da U3)",
+     "old": "{\"t\":\"escolha\",\"p\":\"O que avalia o «resultado»?\",\"p2\":\"Que critério diz se o objeto está bem feito?\",\"o\":[\"O objeto comunica uma leitura do texto\",\"O objeto é o mais bonito e cuidado da turma\",\"O objeto usa o verso mais conhecido do poeta\",\"O objeto dura mais de três minutos na defesa\"],\"c\":0,\"f\":\"Resultado: **o objeto comunica uma leitura**; memória completa; defesa clara com respostas fundamentadas.\",\"g\":\"fim\",\"fe\":[null,\"A beleza não é o critério: o objeto vale pelo que mostra do texto lido.\",\"Um verso famoso não é critério; o que conta é o objeto mostrar uma leitura dos textos lidos.\",\"Três minutos é o tempo da defesa oral, não uma medida do objeto; o resultado avalia o que o objeto diz do texto.\"]}",
+     "new": "{\"t\":\"vf\",\"p\":\"A «Tabacaria» tem a data de 15-1-1928, e nela a voz diz «Não sou nada.»: as duas coisas são factos da vida de quem a escreveu.\",\"p2\":\"A data da «Tabacaria» e o verso «Não sou nada.» provam o mesmo tipo de coisa.\",\"v\":false,\"f\":\"Falso: a **data** é um facto; «Não sou nada.» é o que a **voz** diz, o sentido. Num texto de opinião, o facto diz o que aconteceu e confirma-se fora do poema; o verso diz o que a voz pensa ou sente, e não se dá como facto.\",\"fe\":\"A data confirma-se no Arquivo Pessoa; a frase é da voz do poema e não documenta a vida de ninguém.\",\"g\":5}",
+     "occurrences": 1
+    },
+    {
+     "location": "CARTOES[15]: cartão novo (prepara a tarefa da U3)",
+     "old": "{\"t\":\"vf\",\"p\":\"Na defesa oral só conta o objeto; às perguntas não é preciso responder.\",\"p2\":\"Depois dos três minutos, as perguntas são facultativas e não contam.\",\"v\":false,\"f\":\"Falso: a defesa tem três minutos **mais perguntas**, e cada resposta tem de ser fundamentada.\",\"g\":\"fim\",\"fe\":\"As perguntas fazem parte da defesa: três minutos e perguntas, com respostas fundamentadas («O essencial» e «Para entender»).\"}",
+     "new": "{\"t\":\"escolha\",\"p\":\"Depois de dares razão ao outro lado (R ou C), o que vem a seguir no teu texto?\",\"p2\":\"Deste razão ao outro lado numa parte. E agora?\",\"o\":[\"A viragem: o teu argumento, logo a seguir\",\"A conclusão do texto\",\"Outro argumento do outro lado\"],\"c\":0,\"f\":\"Dar razão não é perder: logo a seguir vem **a viragem**, como no rei, que diz «sim» e logo «porque quis grandeza».\",\"fe\":[null,\"Se acabas aí, o texto fica a dar razão ao outro lado: falta a viragem.\",\"Dois argumentos do outro lado seguidos deixam a tua tese sem defesa.\"],\"g\":5}",
+     "occurrences": 1
+    },
+    {
+     "location": "CARTOES[16]: cartão novo (prepara a tarefa da U3)",
+     "old": "{\"t\":\"escolha\",\"p\":\"Na defesa perguntam-te: «Porque escolheste este verso e não o mais conhecido?» Que resposta defende uma leitura?\",\"p2\":\"«Porque não escolheste o verso mais conhecido?» Qual é a melhor resposta na defesa?\",\"o\":[\"Porque ninguém o conhece e o pode corrigir\",\"Porque ocupa menos espaço na memória descritiva\",\"Porque obriga a ler o poema outra vez\",\"Porque rima melhor com o objeto que se fez\"],\"c\":2,\"f\":\"O verso mais conhecido já vem com a leitura feita; o menos conhecido **obriga a reler o poema**.\",\"g\":\"fim\",\"fe\":[\"Fugir à correção não é uma razão de leitura; a defesa pede um «porque» ligado ao poema.\",\"O espaço na memória não diz nada sobre a leitura; a resposta tem de falar do poema.\",null,\"Um verso não rima com um objeto; a razão que defende uma leitura volta ao texto do poema.\"]}",
+     "new": "{\"t\":\"vf\",\"p\":\"Em _Frei Luís de Sousa_, o regresso de D. João de Portugal faz renascer a família de Madalena.\",\"p2\":\"Na peça de Garrett, o regresso de quem desapareceu em Alcácer Quibir salva a família.\",\"v\":false,\"f\":\"Falso: em Garrett, o regresso **destrói** a família de Madalena (lição F09). Se confrontares _Mensagem_ com Garrett, parte deste facto da peça e não acrescentes o que ela não diz.\",\"fe\":\"A lição F09 compara os dois regressos: em Garrett, o de D. João de Portugal destrói a família de Madalena.\",\"g\":5}",
+     "occurrences": 1
+    },
+    {
+     "location": "CARTOES[17]: cartão novo (prepara a tarefa da U3)",
+     "old": "{\"t\":\"emparelhar\",\"p\":\"Liga cada elemento do projeto ao que o define.\",\"p2\":\"Objeto, memória, defesa: liga cada um ao que lhe toca.\",\"pares\":[[\"Objeto\",\"vídeo, som, cartaz, _performance_ ou instalação\"],[\"Memória descritiva\",\"150 a 200 palavras, com um «porque» em cada decisão\"],[\"Defesa oral\",\"três minutos, mais perguntas\"]],\"f\":\"O objeto numa das cinco linguagens, a memória com as razões das decisões, a defesa com perguntas.\",\"g\":\"fim\"}",
+     "new": "{\"t\":\"escolha\",\"p\":\"Qual destas frases usa bem um verso de _Mensagem_ num texto de opinião?\",\"p2\":\"Verso exato, poema indicado e explicação: que frase tem as três coisas?\",\"o\":[\"Como diz «O Infante», «Deus quer, o homem sonha, a obra nasce.»: a obra só nasce no fim, depois do sonho, e quem desiste a meio não chega a ela.\",\"Pessoa diz em _Mensagem_ que é preciso sonhar.\",\"«Deus quer, o homem sonha, a obra nasce.» Este verso é muito bonito.\"],\"c\":0,\"f\":\"Verso **exato, entre «», com o poema indicado**, e logo a explicação presa ao argumento. Lê o herói como símbolo, não como biografia.\",\"fe\":[null,\"Não há verso exato nem poema indicado: é um resumo, e um resumo não prova nada.\",\"O verso está exato, mas falta o poema e a explicação: a beleza não é uma razão.\"],\"g\":6}",
+     "occurrences": 1
+    },
+    {
+     "location": "CARTOES[18]: cartão novo (prepara a tarefa da U3)",
+     "old": "{\"t\":\"frase\",\"p\":\"Põe por ordem a última frase de «A entrega».\",\"palavras\":[\"Cada\",\"verso\",\"usado\",\"leva\",\"a\",\"referência\",\"do\",\"Arquivo\",\"Pessoa.\"],\"f\":\"«Cada verso usado leva a referência do Arquivo Pessoa»: o sujeito, o verbo, e a referência no fim, com o nome do arquivo.\",\"g\":\"frase\"}",
+     "new": "{\"t\":\"frase\",\"p\":\"Põe por ordem o 1.º verso de «D. Sebastião, Rei de Portugal».\",\"palavras\":[\"Louco,\",\"sim,\",\"louco,\",\"porque\",\"quis\",\"grandeza\"],\"f\":\"«Louco, sim, louco, porque quis grandeza»: a palavra de quem acusa, o «sim» que a aceita e a causal que a vira.\",\"g\":\"frase\"}",
+     "occurrences": 1
+    },
+    {
+     "location": "CARTOES[19] (Para levar)",
+     "old": "=\\\"ch\\\" style=\\\"--i:0\\\">«</span><span class=\\\"ch\\\" style=\\\"--i:1\\\">U</span><span class=\\\"ch\\\" style=\\\"--i:2\\\">m</span><span class=\\\"ch\\\" style=\\\"--i:3\\\"> </span><span class=\\\"ch\\\" style=\\\"--i:4\\\">p</span><span class=\\\"ch\\\" style=\\\"--i:5\\\">r</span><span class=\\\"ch\\\" style=\\\"--i:6\\\">o</span><span class=\\\"ch\\\" style=\\\"--i:7\\\">j</span><span class=\\\"ch\\\" style=\\\"--i:8\\\">e</span><span class=\\\"ch\\\" style=\\\"--i:9\\\">t</span><span class=\\\"ch\\\" style=\\\"--i:10\\\">o</span><span class=\\\"ch\\\" style=\\\"--i:11\\\"> </span><span class=\\\"ch\\\" style=\\\"--i:12\\\">a</span><span class=\\\"ch\\\" style=\\\"--i:13\\\">c</span><span class=\\\"ch\\\" style=\\\"--i:14\\\">a</span><span class=\\\"ch\\\" style=\\\"--i:15\\\">b</span><span class=\\\"ch\\\" style=\\\"--i:16\\\">a</span><span class=\\\"ch\\\" style=\\\"--i:17\\\">d</span><span class=\\\"ch\\\" style=\\\"--i:18\\\">o</span><span class=\\\"ch\\\" style=\\\"--i:19\\\"> </span><span class=\\\"ch\\\" style=\\\"--i:20\\\">s</span><span class=\\\"ch\\\" style=\\\"--i:21\\\">e</span><span class=\\\"ch\\\" style=\\\"--i:22\\\">m</span><span class=\\\"ch\\\" style=\\\"--i:23\\\"> </span><span class=\\\"ch\\\" style=\\\"--i:24\\\">d</span><span class=\\\"ch\\\" style=\\\"--i:25\\\">ú</span><span class=\\\"ch\\\" style=\\\"--i:26\\\">v</span><span class=\\\"ch\\\" style=\\\"--i:27\\\">i</span><span class=\\\"ch\\\" style=\\\"--i:28\\\">d</span><span class=\\\"ch\\\" style=\\\"--i:29\\\">a</span><span class=\\\"ch\\\" style=\\\"--i:30\\\">s</span><span class=\\\"ch\\\" style=\\\"--i:31\\\"> </span><span class=\\\"ch\\\" style=\\\"--i:32\\\">é</span><span class=\\\"ch\\\" style=\\\"--i:33\\\"> </span><span class=\\\"ch\\\" style=\\\"--i:34\\\">s</span><span class=\\\"ch\\\" style=\\\"--i:35\\\">u</span><span class=\\\"ch\\\" style=\\\"--i:36\\\">s</span><span class=\\\"ch\\\" style=\\\"--i:37\\\">p</span><span class=\\\"ch\\\" style=\\\"--i:38\\\">e</span><span class=\\\"ch\\\" style=\\\"--i:39\\\">i</span><span class=\\\"ch\\\" style=\\\"--i:40\\\">t</span><span class=\\\"ch\\\" style=\\\"--i:41\\\">o</span><span class=\\\"ch\\\" style=\\\"--i:42\\\">»</span><span class=\\\"ch\\\" style=\\\"--i:43\\\">:</span><span class=\\\"ch\\\" style=\\\"--i:44\\\"> </span><span class=\\\"ch\\\" style=\\\"--i:45\\\">d</span><span class=\\\"ch\\\" style=\\\"--i:46\\\">i</span><span class=\\\"ch\\\" style=\\\"--i:47\\\">z</span><span class=\\\"ch\\\" style=\\\"--i:48\\\"> </span><span class=\\\"ch\\\" style=\\\"--i:49\\\">o</span><span class=\\\"ch\\\" style=\\\"--i:50\\\"> </span><span class=\\\"ch\\\" style=\\\"--i:51\\\">q</span><span class=\\\"ch\\\" style=\\\"--i:52\\\">u</span><span class=\\\"ch\\\" style=\\\"--i:53\\\">e</span><span class=\\\"ch\\\" style=\\\"--i:54\\\"> </span><span class=\\\"ch\\\" style=\\\"--i:55\\\">f</span><span class=\\\"ch\\\" style=\\\"--i:56\\\">a</span><span class=\\\"ch\\\" style=\\\"--i:57\\\">l</span><span class=\\\"ch\\\" style=\\\"--i:58\\\">t</span><span class=\\\"ch\\\" style=\\\"--i:59\\\">a</span><span class=\\\"ch\\\" style=\\\"--i:60\\\">,</span><span class=\\\"ch\\\" style=\\\"--i:61\\\"> </span><span class=\\\"ch\\\" style=\\\"--i:62\\\">e</span><span class=\\\"ch\\\" style=\\\"--i:63\\\"> </span><span class=\\\"ch\\\" style=\\\"--i:64\\\">g</span><span class=\\\"ch\\\" style=\\\"--i:65\\\">a</span><span class=\\\"ch\\\" style=\\\"--i:66\\\">n</span><span class=\\\"ch\\\" style=\\\"--i:67\\\">h</span><span class=\\\"ch\\\" style=\\\"--i:68\\\">a</span><span class=\\\"ch\\\" style=\\\"--i:69\\\">s</span><span class=\\\"ch\\\" style=\\\"--i:70\\\"> </span><span class=\\\"ch\\\" style=\\\"--i:71\\\">a</span><span class=\\\"ch\\\" style=\\\"--i:72\\\"> </span><span class=\\\"ch\\\" style=\\\"--i:73\\\">p</span><span class=\\\"ch\\\" style=\\\"--i:74\\\">e</span><span class=\\\"ch\\\" style=\\\"--i:75\\\">r</span><span class=\\\"ch\\\" style=\\\"--i:76\\\">g</span><span class=\\\"ch\\\" style=\\\"--i:77\\\">u</span><span class=\\\"ch\\\" style=\\\"--i:78\\\">n</span><span class=\\\"ch\\\" style=\\\"--i:79\\\">t</span><span class=\\\"ch\\\" style=\\\"--i:80\\\">a</span><span class=\\\"ch\\\" style=\\\"--i:81\\\"> </span><span class=\\\"ch\\\" style=\\\"--i:82\\\">m</span><span class=\\\"ch\\\" style=\\\"--i:83\\\">a</span><span class=\\\"ch\\\" style=\\\"--i:84\\\">i</span><span class=\\\"ch\\\" style=\\\"--i:85\\\">s</span><span class=\\\"ch\\\" style=\\\"--i:86\\\"> </span><span class=\\\"ch\\\" style=\\\"--i:87\\\">d</span><span class=\\\"ch\\\" style=\\\"--i:88\\\">i</span><span class=\\\"ch\\\" style=\\\"--i:89\\\">f</span><span class=\\\"ch\\\" style=\\\"--i:90\\\">í</span><span class=\\\"ch\\\" style=\\\"--i:91\\\">c</span><span class=\\\"ch\\\" style=\\\"--i:92\\\">i</span><span class=\\\"ch\\\" style=\\\"--i:93\\\">l</span><span class=\\\"ch\\\" style=\\\"--i:94\\\">.</span></p>\"}",
+     "new": "=\\\"ch\\\" style=\\\"--i:0\\\">D</span><span class=\\\"ch\\\" style=\\\"--i:1\\\">a</span><span class=\\\"ch\\\" style=\\\"--i:2\\\">r</span><span class=\\\"ch\\\" style=\\\"--i:3\\\"> </span><span class=\\\"ch\\\" style=\\\"--i:4\\\">r</span><span class=\\\"ch\\\" style=\\\"--i:5\\\">a</span><span class=\\\"ch\\\" style=\\\"--i:6\\\">z</span><span class=\\\"ch\\\" style=\\\"--i:7\\\">ã</span><span class=\\\"ch\\\" style=\\\"--i:8\\\">o</span><span class=\\\"ch\\\" style=\\\"--i:9\\\"> </span><span class=\\\"ch\\\" style=\\\"--i:10\\\">n</span><span class=\\\"ch\\\" style=\\\"--i:11\\\">ã</span><span class=\\\"ch\\\" style=\\\"--i:12\\\">o</span><span class=\\\"ch\\\" style=\\\"--i:13\\\"> </span><span class=\\\"ch\\\" style=\\\"--i:14\\\">é</span><span class=\\\"ch\\\" style=\\\"--i:15\\\"> </span><span class=\\\"ch\\\" style=\\\"--i:16\\\">p</span><span class=\\\"ch\\\" style=\\\"--i:17\\\">e</span><span class=\\\"ch\\\" style=\\\"--i:18\\\">r</span><span class=\\\"ch\\\" style=\\\"--i:19\\\">d</span><span class=\\\"ch\\\" style=\\\"--i:20\\\">e</span><span class=\\\"ch\\\" style=\\\"--i:21\\\">r</span><span class=\\\"ch\\\" style=\\\"--i:22\\\">:</span><span class=\\\"ch\\\" style=\\\"--i:23\\\"> </span><span class=\\\"ch\\\" style=\\\"--i:24\\\">«</span><span class=\\\"ch\\\" style=\\\"--i:25\\\">L</span><span class=\\\"ch\\\" style=\\\"--i:26\\\">o</span><span class=\\\"ch\\\" style=\\\"--i:27\\\">u</span><span class=\\\"ch\\\" style=\\\"--i:28\\\">c</span><span class=\\\"ch\\\" style=\\\"--i:29\\\">o</span><span class=\\\"ch\\\" style=\\\"--i:30\\\">,</span><span class=\\\"ch\\\" style=\\\"--i:31\\\"> </span><span class=\\\"ch\\\" style=\\\"--i:32\\\">s</span><span class=\\\"ch\\\" style=\\\"--i:33\\\">i</span><span class=\\\"ch\\\" style=\\\"--i:34\\\">m</span><span class=\\\"ch\\\" style=\\\"--i:35\\\">,</span><span class=\\\"ch\\\" style=\\\"--i:36\\\"> </span><span class=\\\"ch\\\" style=\\\"--i:37\\\">l</span><span class=\\\"ch\\\" style=\\\"--i:38\\\">o</span><span class=\\\"ch\\\" style=\\\"--i:39\\\">u</span><span class=\\\"ch\\\" style=\\\"--i:40\\\">c</span><span class=\\\"ch\\\" style=\\\"--i:41\\\">o</span><span class=\\\"ch\\\" style=\\\"--i:42\\\">,</span><span class=\\\"ch\\\" style=\\\"--i:43\\\"> </span><span class=\\\"ch\\\" style=\\\"--i:44\\\">p</span><span class=\\\"ch\\\" style=\\\"--i:45\\\">o</span><span class=\\\"ch\\\" style=\\\"--i:46\\\">r</span><span class=\\\"ch\\\" style=\\\"--i:47\\\">q</span><span class=\\\"ch\\\" style=\\\"--i:48\\\">u</span><span class=\\\"ch\\\" style=\\\"--i:49\\\">e</span><span class=\\\"ch\\\" style=\\\"--i:50\\\"> </span><span class=\\\"ch\\\" style=\\\"--i:51\\\">q</span><span class=\\\"ch\\\" style=\\\"--i:52\\\">u</span><span class=\\\"ch\\\" style=\\\"--i:53\\\">i</span><span class=\\\"ch\\\" style=\\\"--i:54\\\">s</span><span class=\\\"ch\\\" style=\\\"--i:55\\\"> </span><span class=\\\"ch\\\" style=\\\"--i:56\\\">g</span><span class=\\\"ch\\\" style=\\\"--i:57\\\">r</span><span class=\\\"ch\\\" style=\\\"--i:58\\\">a</span><span class=\\\"ch\\\" style=\\\"--i:59\\\">n</span><span class=\\\"ch\\\" style=\\\"--i:60\\\">d</span><span class=\\\"ch\\\" style=\\\"--i:61\\\">e</span><span class=\\\"ch\\\" style=\\\"--i:62\\\">z</span><span class=\\\"ch\\\" style=\\\"--i:63\\\">a</span><span class=\\\"ch\\\" style=\\\"--i:64\\\">»</span><span class=\\\"ch\\\" style=\\\"--i:65\\\">.</span></p>\"}",
+     "occurrences": 1
+    },
+    {
+     "location": "pistas (EPIJogo.montar)",
+     "old": "pistas:[\"O projeto do Dia Pessoa vale 25 % do módulo: um objeto (vídeo, som, cartaz, _performance_, instalação) feito a partir de textos de Pessoa lidos no módulo.\",\"Entregam-se três coisas: o objeto, a memória descritiva (150 a 200 palavras, cinco pontos por esta ordem: intenção, versos de partida, decisões formais, abandonos e o que falta; cada decisão com um «porque») e a defesa oral de três minutos e perguntas.\",\"O processo conta tanto como o resultado: três propostas antes da escolha, um diário de decisões com três mudanças e critérios, um ensaio cronometrado.\"]",
+     "new": "pistas:[\"A tarefa da unidade 3 vale 25 % do módulo: um texto de opinião de 180 a 220 palavras sobre uma de duas perguntas que conheces na aula de tarefa, com os movimentos marcados na margem.\",\"Seis movimentos: S, tese com condição; N, condição necessária; R, aceitar a palavra e redefini-la com «porque»; M, admitir e contrapor com «Mas»; P, a pergunta que obriga a responder; C, conceder com «embora».\",\"Cada verso entra exato, entre «», com o poema indicado e explicado; o facto datado fica separado do sentido que o poema lhe dá.\"]",
+     "occurrences": 1
+    },
+    {
+     "location": "<title>, h1.c-sr e migalhas: título novo",
+     "old": "Lição M7-F10: Defender o projeto",
+     "new": "Lição M7-F10: Argumentar com versos",
+     "occurrences": 3
+    },
+    {
+     "location": "menu: rodapé com o título e as fontes",
+     "old": "EPI, Escola Profissional de Imagem. Português 2026/2027. Lição M7-F10, Defender o projeto. Fontes: Trabalho de Projeto (Comum); textos de Pessoa no Arquivo Pessoa.",
+     "new": "EPI, Escola Profissional de Imagem. Português 2026/2027. Lição M7-F10, Argumentar com versos. Fontes: <i>Mensagem</i> no Arquivo Pessoa; lições M7-F07, F08, F09 e F11.",
+     "occurrences": 1
+    },
+    {
+     "location": "depois: a tarefa nova",
+     "old": "<p>A encomenda, o exemplo e a rubrica estão no <a href=\\\"https://pedrohfernandes-klk.github.io/pt/m7/guia-da-tarefa-m7/\\\">Guia da tarefa</a>.</p>",
+     "new": "<p>O texto escreve-se na <a href=\\\"https://pedrohfernandes-klk.github.io/pt/tarefas/m7-u3/\\\">aula de tarefa da unidade 3</a>, que começa com um aquecimento em cartões. A grelha /20 e os critérios estão no <a href=\\\"https://pedrohfernandes-klk.github.io/pt/m7/guia-da-tarefa-m7/\\\">Guia da tarefa</a>.</p>",
+     "occurrences": 1
+    },
+    {
+     "location": "EPIJogo.montar: versao da lição refeita (regra de 23/10)",
+     "old": "EPIJogo.montar({casca:CASCA,el:$(\"#baralho\"),marca:\"M7\",",
+     "new": "EPIJogo.montar({casca:CASCA,versao:\"2026-10-29\",el:$(\"#baralho\"),marca:\"M7\",",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m7/painel-m7-f10/index.html": {
+   "base_sha256_lf": "44ab93fd0729d2d9bf1f649ea0781baa712b8c82f64752e241a97d1236e3130e",
+   "after_sha256_lf": "01fd82a8ee96e9f99f680a65dad7adb6b2e13a26b3c032cce9dfcec90c125224",
+   "edits": [
+    {
+     "location": "relâmpago: dados do painel (CARTOES), da lição nova",
+     "old": "CARTOES=[{\"k\":3,\"t\":\"completar\",\"p\":\"Quanto vale o projeto do Dia Pessoa, e de que textos parte?\"},{\"k\":4,\"t\":\"escolha\",\"p\":\"Que três coisas se entregam?\"},{\"k\":5,\"t\":\"completar\",\"p\":\"Como se chama o texto de 150 a 200 palavras que explica o projeto?\"},{\"k\":6,\"t\":\"ordenar\",\"p\":\"A memória descritiva, pela ordem do enunciado:\"},{\"k\":7,\"t\":\"completar\",\"p\":\"Que medidas têm a memória descritiva e a defesa oral?\"},{\"k\":8,\"t\":\"sublinhar\",\"p\":\"Toca na palavra que cada decisão da memória tem de levar.\"},{\"k\":9,\"t\":\"vf\",\"p\":\"Na memória descritiva, diz-se também o que ainda falta resolver.\"},{\"k\":10,\"t\":\"escolha\",\"p\":\"O que leva cada verso de Pessoa usado no objeto?\"},{\"k\":11,\"t\":\"vf\",\"p\":\"As três propostas fazem-se depois de escolher o objeto.\"},{\"k\":12,\"t\":\"completar\",\"p\":\"O que exige o processo, antes da escolha e no diário?\"},{\"k\":13,\"t\":\"vf\",\"p\":\"O processo pede um ensaio da defesa cronometrado.\"},{\"k\":14,\"t\":\"escolha\",\"p\":\"O que avalia o «resultado»?\"},{\"k\":15,\"t\":\"vf\",\"p\":\"Na defesa oral só conta o objeto; às perguntas não é preciso responder.\"},{\"k\":16,\"t\":\"escolha\",\"p\":\"Na defesa perguntam-te: «Porque escolheste este verso e não o mais conhecido?» Que resposta defende uma leitura?\"},{\"k\":17,\"t\":\"emparelhar\",\"p\":\"Liga cada elemento do projeto ao que o define.\"},{\"k\":18,\"t\":\"frase\",\"p\":\"Põe por ordem a última frase de «A entrega».\"}],MATERIAL=",
+     "new": "CARTOES=[{\"k\":3,\"t\":\"emparelhar\",\"p\":\"Liga cada verso de Mensagem ao movimento que faz.\"},{\"k\":4,\"t\":\"completar\",\"p\":\"Que oração dá a condição à tese de «Mar Português»?\"},{\"k\":5,\"t\":\"sublinhar\",\"p\":\"Toca nas duas palavras que fazem do preço uma obrigação.\"},{\"k\":6,\"t\":\"escolha\",\"p\":\"Em «Louco, sim, louco, porque quis grandeza», o que faz o rei à palavra «louco»?\"},{\"k\":7,\"t\":\"vf\",\"p\":\"Em «Louco, sim, louco, porque quis grandeza», a oração com «porque» é concessiva.\"},{\"k\":8,\"t\":\"completar\",\"p\":\"O que faz cada verso no fim de «Mar Português»?\"},{\"k\":9,\"t\":\"escolha\",\"p\":\"«Sem a loucura que é o homem / Mais que a besta sadia, / Cadáver adiado que procria?»: porque é que esta pergunta argumenta?\"},{\"k\":10,\"t\":\"emparelhar\",\"p\":\"Liga cada conector ao movimento que costuma abrir.\"},{\"k\":11,\"t\":\"escolha\",\"p\":\"Qual destas frases concede com «embora», como pede o movimento C?\"},{\"k\":12,\"t\":\"ordenar\",\"p\":\"Põe por ordem os passos do movimento R, como no verso do rei.\"},{\"k\":13,\"t\":\"completar\",\"p\":\"Onde ficam a tese e a conclusão num texto de opinião?\"},{\"k\":14,\"t\":\"vf\",\"p\":\"A «Tabacaria» tem a data de 15-1-1928, e nela a voz diz «Não sou nada.»: as duas coisas são factos da vida de quem a escreveu.\"},{\"k\":15,\"t\":\"escolha\",\"p\":\"Depois de dares razão ao outro lado (R ou C), o que vem a seguir no teu texto?\"},{\"k\":16,\"t\":\"vf\",\"p\":\"Em Frei Luís de Sousa, o regresso de D. João de Portugal faz renascer a família de Madalena.\"},{\"k\":17,\"t\":\"escolha\",\"p\":\"Qual destas frases usa bem um verso de Mensagem num texto de opinião?\"},{\"k\":18,\"t\":\"frase\",\"p\":\"Põe por ordem o 1.º verso de «D. Sebastião, Rei de Portugal».\"}],MATERIAL=",
+     "occurrences": 1
+    },
+    {
+     "location": "relâmpago: material de cada cartão (MATERIAL), da lição nova",
+     "old": ",MATERIAL={\"3\":{\"f\":\"**25 %** do módulo: um objeto feito a partir dos textos **lidos no módulo**.\",\"frase\":\"O projeto do Dia Pessoa vale [1] do módulo e parte de textos de Pessoa [2] para fazer um objeto.\",\"lac\":[[\"75 %\",\"50 %\",\"10 %\",\"25 %\"],[\"lidos no módulo\",\"escolhidos pelo docente\",\"de qualquer autor\",\"ainda por ler\"]]},\"4\":{\"f\":\"**Objeto, memória descritiva e defesa oral**, mais perguntas.\",\"o\":[\"O objeto, um cartaz sobre ele e um vídeo do processo\",\"O objeto, um teste escrito e uma reflexão final\",\"O objeto, a memória descritiva, a defesa oral\",\"A memória, o diário de decisões e as três propostas\"]},\"5\":{\"f\":\"Memória **descritiva**: intenção, versos de partida, decisões formais, abandonos e o que falta.\",\"frase\":\"Memória [1]: o texto de 150 a 200 palavras que explica o projeto.\",\"lac\":[[\"oral\",\"formal\",\"fundamentada\",\"descritiva\"]]},\"6\":{\"f\":\"Um parágrafo por ponto; cada decisão com um «porque».\",\"itens\":[\"O que falta\",\"Versos de partida\",\"Intenção\",\"Decisões formais\",\"Abandonos\"]},\"7\":{\"f\":\"**150 a 200** palavras e **três** minutos, mais perguntas.\",\"frase\":\"A memória tem [1] palavras; a defesa oral dura [2] minutos.\",\"lac\":[[\"150 a 200\",\"180 a 240\",\"100 a 120\",\"120 a 160\"],[\"dois\",\"cinco\",\"dez\",\"três\"]]},\"8\":{\"f\":\"Cada decisão com um «**porque**»: a razão conta tanto como a escolha.\",\"frase\":\"Cada decisão com um «porque».\"},\"9\":{\"f\":\"Verdadeiro: **o que falta é obrigatório**; um projeto acabado sem dúvidas é suspeito.\"},\"10\":{\"f\":\"Cada verso leva **a referência do Arquivo Pessoa**.\",\"o\":[\"A assinatura do docente que o aprovou\",\"A referência do Arquivo Pessoa\",\"A data em que se fará a defesa oral\",\"A tradução do verso para outra língua\"]},\"11\":{\"f\":\"Falso: **três propostas antes da escolha**: o processo conta tanto como o resultado.\"},\"12\":{\"f\":\"**Três** propostas e **três** mudanças com razão: é a evidência de processo.\",\"frase\":\"O processo exige pelo menos [1] propostas antes da escolha e um diário com [2] mudanças, cada uma com o seu critério.\",\"lac\":[[\"cinco\",\"quatro\",\"duas\",\"três\"],[\"cinco\",\"uma\",\"dez\",\"três\"]]},\"13\":{\"f\":\"Verdadeiro: **ensaio cronometrado**, para a defesa caber em três minutos.\"},\"14\":{\"f\":\"Resultado: **o objeto comunica uma leitura**; memória completa; defesa clara com respostas fundamentadas.\",\"o\":[\"O objeto é o mais bonito e cuidado da turma\",\"O objeto usa o verso mais conhecido do poeta\",\"O objeto dura mais de três minutos na defesa\",\"O objeto comunica uma leitura do texto\"]},\"15\":{\"f\":\"Falso: a defesa tem três minutos **mais perguntas**, e cada resposta tem de ser fundamentada.\"},\"16\":{\"f\":\"O verso mais conhecido já vem com a leitura feita; o menos conhecido **obriga a reler o poema**.\",\"o\":[\"Porque ocupa menos espaço na memória descritiva\",\"Porque obriga a ler o poema outra vez\",\"Porque rima melhor com o objeto que se fez\",\"Porque ninguém o conhece e o pode corrigir\"]},\"17\":{\"f\":\"O objeto numa das cinco linguagens, a memória com as razões das decisões, a defesa com perguntas.\",\"esq\":[\"Memória descritiva\",\"Defesa oral\",\"Objeto\"],\"dir\":[\"três minutos, mais perguntas\",\"vídeo, som, cartaz, _performance_ ou instalação\",\"150 a 200 palavras, com um «porque» em cada decisão\"]},\"18\":{\"f\":\"«Cada verso usado leva a referência do Arquivo Pessoa»: o sujeito, o verbo, e a referência no fim, com o nome do arquivo.\",\"palavras\":[\"Arquivo\",\"do\",\"verso\",\"Pessoa.\",\"referência\",\"a\",\"leva\",\"Cada\",\"usado\"]}},",
+     "new": ",MATERIAL={\"3\":{\"f\":\"**S** diz em que caso a tese é verdade; **N** diz o preço que não se pode evitar; **R** aceita a palavra de quem acusa e muda-lhe o valor; **M** admite o custo e contrapõe com «Mas».\",\"esq\":[\"«Deus ao mar o perigo e o abismo deu, / Mas nele é que espelhou o céu.»\",\"«Quem quer passar além do Bojador / Tem que passar além da dor.»\",\"«Louco, sim, louco, porque quis grandeza»\",\"«Valeu a pena? Tudo vale a pena / Se a alma não é pequena.»\"],\"dir\":[\"N, condição necessária\",\"M, admitir e contrapor\",\"S, tese com condição\",\"R, aceitar a palavra e redefini-la\"]},\"4\":{\"f\":\"Oração subordinada adverbial **condicional**: diz em que **caso** a tese vale. Uma tese com condição é mais difícil de atacar do que um «tudo» sem limites.\",\"frase\":\"Em «Tudo vale a pena / Se a alma não é pequena», a oração com «Se» é subordinada adverbial [1] e diz em que [2] a tese é verdade.\",\"lac\":[[\"causal\",\"condicional\",\"final\",\"concessiva\"],[\"momento\",\"lugar\",\"ordem\",\"caso\"]]},\"5\":{\"f\":\"«**Tem que**»: é a condição necessária. Quem quer uma coisa tem de pagar outra; no teu texto, «tem de» faz o mesmo trabalho.\",\"frase\":\"Quem quer passar além do Bojador Tem que passar além da dor.\"},\"6\":{\"f\":\"Aceita a palavra («**Louco, sim**») e muda-lhe o valor com a causal «**porque quis grandeza**». É o movimento R: dar razão ao outro lado numa palavra, e virá-la.\",\"o\":[\"Nega-a: diz que nunca foi louco\",\"Aceita-a e muda-lhe o valor: a loucura passa a ser o nome de ter querido grandeza\",\"Repete-a para pedir desculpa a quem o acusa\"]},\"7\":{\"f\":\"Falso: é **causal**, dá a razão. A concessiva vem com «**embora**», como em «embora não saiba a verdade» (lição F07): é o movimento C, não o R.\"},\"8\":{\"f\":\"O primeiro verso **admite** o perigo e o abismo; o «Mas» traz o **contrapeso**, e «é que» põe-no em realce. É o movimento M: admitir o custo e contrapor.\",\"frase\":\"«Deus ao mar o perigo e o abismo deu, / Mas nele é que espelhou o céu.»: o primeiro verso [1] o custo; o «Mas» traz o [2].\",\"lac\":[[\"nega\",\"esconde\",\"admite\",\"pergunta\"],[\"contrapeso\",\"perigo\",\"fim\",\"abismo\"]]},\"9\":{\"f\":\"É a pergunta que **obriga a responder**: a resposta vem implícita, e quem lê dá-a por si. É o movimento P. Num texto de opinião, uma pergunta destas chega; a seguir, o argumento continua.\",\"o\":[\"Mostra que o rei não sabe o que pensar\",\"Pede uma informação que falta no poema\",\"Obriga quem lê a responder, e só uma resposta cabe: sem a loucura, o homem seria apenas um «Cadáver adiado que procria»\"]},\"10\":{\"f\":\"**Se** põe a condição, **tem que** diz o preço, **porque** redefine, **mas** contrapõe, **embora** concede. P não precisa de conector: é a pergunta.\",\"esq\":[\"mas\",\"tem que\",\"porque\",\"se\",\"embora\"],\"dir\":[\"S, tese com condição\",\"R, redefinir com uma causal\",\"C, conceder\",\"N, condição necessária\",\"M, admitir e contrapor\"]},\"11\":{\"f\":\"Com «**embora**», admites o que podia travar a tua ideia e segues em frente: é o movimento C. O verbo fica no conjuntivo, «seja», como «saiba» em «embora não saiba a verdade» (lição F07).\",\"o\":[\"A viagem é longa porque o comboio para em todas as estações.\",\"Se a viagem for longa, levo um livro.\",\"Embora a viagem seja longa, o comboio deixa ler.\"]},\"12\":{\"f\":\"«Louco, sim, louco, porque quis grandeza»: a palavra, o «sim», a causal; no fim, a loucura é o nome de ter querido grandeza.\",\"itens\":[\"Aceita-la com «sim»\",\"Dás a razão com «porque»\",\"Dizes a palavra de quem te acusa\",\"A palavra fica com outro valor\"]},\"13\":{\"f\":\"Abre com a **tese com condição** e fecha com uma conclusão que **volta à tese**, com outras palavras: quem lê sabe onde começaste e onde chegaste.\",\"frase\":\"O texto abre com a [1] na primeira frase e fecha com uma conclusão que [2] sem a copiar.\",\"lac\":[[\"tese com condição\",\"biografia do autor\",\"concessão\",\"pergunta final\"],[\"conta a vida de Pessoa\",\"resume o poema\",\"volta à tese\",\"cita outro verso\"]]},\"14\":{\"f\":\"Falso: a **data** é um facto; «Não sou nada.» é o que a **voz** diz, o sentido. Num texto de opinião, o facto diz o que aconteceu e confirma-se fora do poema; o verso diz o que a voz pensa ou sente, e não se dá como facto.\"},\"15\":{\"f\":\"Dar razão não é perder: logo a seguir vem **a viragem**, como no rei, que diz «sim» e logo «porque quis grandeza».\",\"o\":[\"A conclusão do texto\",\"A viragem: o teu argumento, logo a seguir\",\"Outro argumento do outro lado\"]},\"16\":{\"f\":\"Falso: em Garrett, o regresso **destrói** a família de Madalena (lição F09). Se confrontares _Mensagem_ com Garrett, parte deste facto da peça e não acrescentes o que ela não diz.\"},\"17\":{\"f\":\"Verso **exato, entre «», com o poema indicado**, e logo a explicação presa ao argumento. Lê o herói como símbolo, não como biografia.\",\"o\":[\"«Deus quer, o homem sonha, a obra nasce.» Este verso é muito bonito.\",\"Como diz «O Infante», «Deus quer, o homem sonha, a obra nasce.»: a obra só nasce no fim, depois do sonho, e quem desiste a meio não chega a ela.\",\"Pessoa diz em _Mensagem_ que é preciso sonhar.\"]},\"18\":{\"f\":\"«Louco, sim, louco, porque quis grandeza»: a palavra de quem acusa, o «sim» que a aceita e a causal que a vira.\",\"palavras\":[\"sim,\",\"grandeza\",\"quis\",\"porque\",\"Louco,\",\"louco,\"]}},",
+     "occurrences": 1
+    },
+    {
+     "location": "relâmpago: seletor (<select data-r-k>), da lição nova",
+     "old": "<select data-r-k><option value=\"3\">Quanto vale o projeto do Dia Pessoa, e de que textos parte?</option><option value=\"4\">Que três coisas se entregam?</option><option value=\"5\">Como se chama o texto de 150 a 200 palavras que explica o projeto?</option><option value=\"6\">A memória descritiva, pela ordem do enunciado:</option><option value=\"7\">Que medidas têm a memória descritiva e a defesa oral?</option><option value=\"8\">Toca na palavra que cada decisão da memória tem de levar.</option><option value=\"9\">Na memória descritiva, diz-se também o que ainda falta resolver.</option><option value=\"10\">O que leva cada verso de Pessoa usado no objeto?</option><option value=\"11\">As três propostas fazem-se depois de escolher o objeto.</option><option value=\"12\">O que exige o processo, antes da escolha e no diário?</option><option value=\"13\">O processo pede um ensaio da defesa cronometrado.</option><option value=\"14\">O que avalia o «resultado»?</option><option value=\"15\">Na defesa oral só conta o objeto; às perguntas não é preciso responder</option><option value=\"16\">Na defesa perguntam-te: «Porque escolheste este verso e não o mais con</option><option value=\"17\">Liga cada elemento do projeto ao que o define.</option><option value=\"18\">Põe por ordem a última frase de «A entrega».</option></select>",
+     "new": "<select data-r-k><option value=\"3\">Liga cada verso de Mensagem ao movimento que faz.</option><option value=\"4\">Que oração dá a condição à tese de «Mar Português»?</option><option value=\"5\">Toca nas duas palavras que fazem do preço uma obrigação.</option><option value=\"6\">Em «Louco, sim, louco, porque quis grandeza», o que faz o rei à palavra «louco»?</option><option value=\"7\">Em «Louco, sim, louco, porque quis grandeza», a oração com «porque» é concessiva.</option><option value=\"8\">O que faz cada verso no fim de «Mar Português»?</option><option value=\"9\">«Sem a loucura que é o homem / Mais que a besta sadia, / Cadáver adiado que procria?»: porque é que esta pergunta argumenta?</option><option value=\"10\">Liga cada conector ao movimento que costuma abrir.</option><option value=\"11\">Qual destas frases concede com «embora», como pede o movimento C?</option><option value=\"12\">Põe por ordem os passos do movimento R, como no verso do rei.</option><option value=\"13\">Onde ficam a tese e a conclusão num texto de opinião?</option><option value=\"14\">A «Tabacaria» tem a data de 15-1-1928, e nela a voz diz «Não sou nada.»: as duas coisas são factos da vida de quem a escreveu.</option><option value=\"15\">Depois de dares razão ao outro lado (R ou C), o que vem a seguir no teu texto?</option><option value=\"16\">Em Frei Luís de Sousa, o regresso de D. João de Portugal faz renascer a família de Madalena.</option><option value=\"17\">Qual destas frases usa bem um verso de Mensagem num texto de opinião?</option><option value=\"18\">Põe por ordem o 1.º verso de «D. Sebastião, Rei de Portugal».</option></select>",
+     "occurrences": 1
+    },
+    {
+     "location": "<title>",
+     "old": "Painel de aula · Lição M7-F10: Defender o projeto",
+     "new": "Painel de aula · Lição M7-F10: Argumentar com versos",
+     "occurrences": 1
+    },
+    {
+     "location": "cabeçalho: título da lição",
+     "old": ">Defender o projeto</div>",
+     "new": ">Argumentar com versos</div>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "tarefas/m7-u1/index.html": {
+   "base_sha256_lf": "085277eee847cff7da8bbf46549bc6b443f8cf8d50d9288f764a823df77a5d4f",
+   "after_sha256_lf": "3c67d52fbd3332fac64c7870947d6968e1f988e1451dedc18f7528c3f4817cda",
+   "edits": [
+    {
+     "location": "enunciado: ligação em destaque ao aquecimento em cartões, logo a seguir ao produto",
+     "old": "<p class=\"task-lead\">Uma comparação de 80 a 120 palavras.</p>",
+     "new": "<p class=\"task-lead\">Uma comparação de 80 a 120 palavras.</p><p class=\"task-aquecer\"><a href=\"aquecimento/\">Antes de começar: aquecer em cartões, 10 a 15 minutos</a></p>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "tarefas/m7-u2/index.html": {
+   "base_sha256_lf": "637de717988b465d706fe4e9ce0fc0a3faf937fb3ed989b6790c05a5ed68f200",
+   "after_sha256_lf": "e900bcb75ed9d173191fa24140b3d24d8664f03cce307c58dcb67d3f629df1d8",
+   "edits": [
+    {
+     "location": "enunciado: ligação em destaque ao aquecimento, no início da aula de tarefa",
+     "old": "<p class=\"task-lead\">Um perfil breve e um texto de 100 a 150 palavras.</p>",
+     "new": "<p class=\"task-lead\">Um perfil breve e um texto de 100 a 150 palavras.</p><p class=\"task-aquecer\"><a href=\"aquecimento/\">No início da aula: aquecer em cartões, 10 a 15 minutos</a></p>",
+     "occurrences": 1
+    },
+    {
+     "location": "enunciado: a apresentação faz-se ao grupo",
+     "old": "Apresenta a voz em dois minutos, lê uma frase e responde a uma pergunta.",
+     "new": "Apresenta a voz ao teu grupo em dois minutos, lê uma frase e responde a uma pergunta.",
+     "occurrences": 1
+    },
+    {
+     "location": "«Verificar»: apresentações em pequenos grupos, ao mesmo tempo",
+     "old": "data-chave=\"pt-relogio:tarefas/m7-u2:apresentacao\"></div><h3 id=\"criterios\">",
+     "new": "data-chave=\"pt-relogio:tarefas/m7-u2:apresentacao\"></div><p class=\"task-grupos\">As apresentações fazem-se em pequenos grupos de 4 ou 5, todos ao mesmo tempo, com o docente a circular. Cada um regista no seu papel, numa linha, a pergunta que lhe fizeram e o que respondeu; essa linha entra nas fotografias.</p><h3 id=\"criterios\">",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m7/index.html": {
+   "base_sha256_lf": "be369ee68322e002e946d242e1601c79beba4310492218d603a9f148cf6c16d7",
+   "after_sha256_lf": "f778fb1401af4ef88db374283233c42ffb07232cf55a9e6b1d4bda444ab53396",
+   "edits": [
+    {
+     "location": "«Como se cumpre uma unidade»: o aquecimento em cartões abre a aula de tarefa",
+     "old": "Fazes as aulas de leitura e preparação e fechas a unidade na aula de tarefa: produção em papel,",
+     "new": "Fazes as aulas de leitura e preparação e fechas a unidade na aula de tarefa: aquecimento em cartões (a linha A do percurso), produção em papel,",
+     "occurrences": 1
+    },
+    {
+     "location": "nota da unidade 3: a F10 prepara o texto de opinião",
+     "old": "<p class=\"pequeno\">Na unidade 3, a aula de tarefa conduz o fecho do projeto já previsto em «Defender o projeto» (M7-F10), com objeto preparado; não acrescenta uma segunda realização desse fecho.</p>",
+     "new": "<p class=\"pequeno\">Na unidade 3, «Argumentar com versos» (M7-F10) ensina os seis movimentos e o plano do texto de opinião; o texto escreve-se só na aula de tarefa, depois do aquecimento em cartões.</p>",
+     "occurrences": 1
+    },
+    {
+     "location": "percurso, F10: título e linha novos",
+     "old": "<span class=\"t\">Defender o projeto</span><span class=\"f\">A encomenda do Dia Pessoa: o objeto, a memória descritiva, a defesa; faz-se na oficina.</span>",
+     "new": "<span class=\"t\">Argumentar com versos</span><span class=\"f\">Cinco movimentos tirados de <i>Mensagem</i>, mais a concessiva da F07, e o plano do texto de opinião da aula de tarefa.</span>",
+     "occurrences": 1
+    },
+    {
+     "location": "percurso, unidade 1: linha A antes da linha T",
+     "old": "<li class=\"aula-tarefa\" data-task-lesson=\"1\" id=\"tarefa-unidade-1\">",
+     "new": "<li class=\"aula-aquecimento\" id=\"aquecimento-unidade-1\"><a href=\"../tarefas/m7-u1/aquecimento/\"><span class=\"n\">A</span><span><span class=\"t\">Aquecer para a aula de tarefa da Unidade 1</span><span class=\"f\">Cartões que ativam o que a aula de tarefa vai pedir, antes de começar.</span></span><span class=\"chip\">10 a 15 min</span></a></li><li class=\"aula-tarefa\" data-task-lesson=\"1\" id=\"tarefa-unidade-1\">",
+     "occurrences": 1
+    },
+    {
+     "location": "percurso, unidade 2: linha A antes da linha T",
+     "old": "<li class=\"aula-tarefa\" data-task-lesson=\"2\" id=\"tarefa-unidade-2\">",
+     "new": "<li class=\"aula-aquecimento\" id=\"aquecimento-unidade-2\"><a href=\"../tarefas/m7-u2/aquecimento/\"><span class=\"n\">A</span><span><span class=\"t\">Aquecer para a aula de tarefa da Unidade 2</span><span class=\"f\">No início da aula de tarefa: cartões que ativam o que a tarefa vai pedir.</span></span><span class=\"chip\">10 a 15 min</span></a></li><li class=\"aula-tarefa\" data-task-lesson=\"2\" id=\"tarefa-unidade-2\">",
+     "occurrences": 1
+    },
+    {
+     "location": "percurso, unidade 3: linha A antes da linha T",
+     "old": "<li class=\"aula-tarefa\" data-task-lesson=\"3\" id=\"tarefa-unidade-3\">",
+     "new": "<li class=\"aula-aquecimento\" id=\"aquecimento-unidade-3\"><a href=\"../tarefas/m7-u3/aquecimento/\"><span class=\"n\">A</span><span><span class=\"t\">Aquecer para a aula de tarefa da Unidade 3</span><span class=\"f\">No início da aula de tarefa: os seis movimentos (cinco de <i>Mensagem</i> e a concessiva), com outros exemplos.</span></span><span class=\"chip\">10 min</span></a></li><li class=\"aula-tarefa\" data-task-lesson=\"3\" id=\"tarefa-unidade-3\">",
+     "occurrences": 1
+    },
+    {
+     "location": "percurso, linha T da unidade 2: aquecimento e apresentações em pequenos grupos",
+     "old": "<span class=\"t\">Tarefa da Unidade 2 · Uma ideia de heterónimo</span><span class=\"f\">Aula de 90 minutos com consulta, síntese integrada, trabalho em papel e fotografias no Teams.</span>",
+     "new": "<span class=\"t\">Tarefa da Unidade 2 · Uma ideia de heterónimo</span><span class=\"f\">Aula de 90 minutos com consulta: aquecimento em cartões no início, trabalho em papel, síntese integrada, apresentações em pequenos grupos ao mesmo tempo e fotografias no Teams.</span>",
+     "occurrences": 1
+    },
+    {
+     "location": "percurso, linha T da unidade 3: a tarefa nova",
+     "old": "<span class=\"t\">Tarefa da Unidade 3 · Um objeto para o Dia Pessoa</span><span class=\"f\">Aula de 90 minutos com consulta, síntese integrada, trabalho em papel e fotografias no Teams.</span>",
+     "new": "<span class=\"t\">Tarefa da Unidade 3 · Louco, sim: argumentar com os movimentos de <i>Mensagem</i></span><span class=\"f\">Aula de 90 minutos com consulta: aquecimento em cartões, texto de opinião em papel, síntese integrada e fotografias no Teams.</span>",
+     "occurrences": 1
+    },
+    {
+     "location": "EPIUnitTaskRoute.mount: título da tarefa 3",
+     "old": "{\"number\":3,\"title\":\"Um objeto para o Dia Pessoa\",\"href\":\"../tarefas/m7-u3/\"}",
+     "new": "{\"number\":3,\"title\":\"Louco, sim: argumentar com os movimentos de Mensagem\",\"href\":\"../tarefas/m7-u3/\"}",
+     "occurrences": 1
+    },
+    {
+     "location": "epi-unidades-pedagogicas[2].task.title",
+     "old": "\"task\":{\"title\":\"Um objeto para o Dia Pessoa\",\"href\":\"../tarefas/m7-u3/\"",
+     "new": "\"task\":{\"title\":\"Louco, sim: argumentar com os movimentos de Mensagem\",\"href\":\"../tarefas/m7-u3/\"",
+     "occurrences": 1
+    },
+    {
+     "location": "arquivo, desafio 3: os exercícios da F10 nova no lugar dos do projeto antigo",
+     "old": "{\"t\":\"completar\",\"frase\":\"O projeto do Dia Pessoa vale [1] do módulo e parte de textos de Pessoa [2] para fazer um objeto.\",\"lacunas\":[{\"o\":[\"50 %\",\"10 %\",\"25 %\"],\"c\":2},{\"o\":[\"de qualquer autor\",\"lidos no módulo\",\"escolhidos pelo docente\"],\"c\":1}],\"f\":\"Um quarto do módulo: um objeto feito a partir dos textos que leste.\",\"p\":\"Quanto vale o projeto do Dia Pessoa, e de que textos parte?\",\"_l\":\"m7-f10\"},{\"t\":\"escolha\",\"p\":\"Que três coisas se entregam?\",\"o\":[\"O objeto, um teste escrito e uma reflexão final\",\"O objeto, a memória descritiva, a defesa oral\",\"A memória, o diário de decisões e as três propostas\",\"O objeto, um cartaz sobre ele e um vídeo do processo\"],\"c\":1,\"f\":\"Objeto, memória descritiva (150 a 200 palavras) e defesa oral de três minutos, mais perguntas.\",\"_l\":\"m7-f10\",\"fe\":[\"Não há teste no projeto: a palavra conta na memória descritiva e na defesa oral.\",null,\"O diário e as três propostas são o processo, que também conta; mas as entregas são o objeto, a memória e a defesa.\",\"Cartaz e vídeo são formas que o objeto pode ter, não entregas à parte; entregam-se também a memória e a defesa.\"]},{\"t\":\"ordenar\",\"p\":\"A memória descritiva, pela ordem do enunciado:\",\"passos\":[\"Intenção\",\"Versos de partida\",\"Decisões formais\",\"Abandonos\",\"O que falta\"],\"f\":\"Um parágrafo por ponto; cada decisão com um «porque».\",\"_l\":\"m7-f10\"},{\"t\":\"completar\",\"frase\":\"A memória tem [1] palavras; a defesa oral dura [2] minutos.\",\"lacunas\":[{\"o\":[\"100 a 120\",\"150 a 200\",\"120 a 160\"],\"c\":1},{\"o\":[\"três\",\"cinco\",\"dez\"],\"c\":0}],\"f\":\"150 a 200 palavras e três minutos, mais perguntas.\",\"p\":\"Que medidas têm a memória descritiva e a defesa oral?\",\"_l\":\"m7-f10\"},{\"t\":\"vf\",\"p\":\"Na memória descritiva, diz-se também o que ainda falta resolver.\",\"v\":true,\"f\":\"Verdadeiro: **o que falta é obrigatório**; um projeto acabado sem dúvidas é suspeito.\",\"p2\":\"O que falta resolver é um dos pontos obrigatórios da memória descritiva.\",\"_l\":\"m7-f10\"},{\"t\":\"escolha\",\"p\":\"O que leva cada verso de Pessoa usado no objeto?\",\"o\":[\"A tradução do verso para outra língua\",\"A assinatura do docente que o aprovou\",\"A referência do Arquivo Pessoa\",\"A data em que se fará a defesa oral\"],\"c\":2,\"f\":\"Cada verso leva o título do poema e a referência do Arquivo Pessoa.\",\"_l\":\"m7-f10\",\"fe\":[\"Ninguém pede tradução: os versos ficam em português, mas cada um diz de onde vem.\",\"O docente não assina versos; quem os usa indica a fonte de cada um.\",null,\"A data da defesa é do calendário, não do verso; o verso leva a sua fonte.\"]},{\"t\":\"completar\",\"frase\":\"O processo exige pelo menos [1] propostas antes da escolha e um diário com [2] mudanças, cada uma com o seu critério.\",\"lacunas\":[{\"o\":[\"três\",\"duas\",\"cinco\"],\"c\":0},{\"o\":[\"uma\",\"dez\",\"três\"],\"c\":2}],\"f\":\"Três propostas e três mudanças com razão: é a evidência de processo.\",\"p\":\"O que exige o processo, antes da escolha e no diário?\",\"_l\":\"m7-f10\"},{\"t\":\"escolha\",\"p\":\"O que avalia o «resultado»?\",\"o\":[\"O objeto comunica uma leitura do texto\",\"O objeto é o mais bonito e cuidado da turma\",\"O objeto usa o verso mais conhecido do poeta\",\"O objeto dura mais de três minutos na defesa\"],\"c\":0,\"f\":\"Resultado: o objeto comunica uma leitura; memória completa; defesa clara com respostas fundamentadas.\",\"_l\":\"m7-f10\",\"fe\":[null,\"A beleza não é o critério: o objeto vale pelo que mostra do texto lido.\",\"Um verso famoso não é critério; o que conta é o objeto mostrar uma leitura dos textos lidos.\",\"Três minutos é o tempo da defesa oral, não uma medida do objeto; o resultado avalia o que o objeto diz do texto.\"]},{\"t\":\"emparelhar\",\"p\":\"Liga cada entrega do projeto ao que a define.\",\"pares\":[[\"Objeto\",\"vídeo, som, cartaz, performance ou instalação\"],[\"Memória descritiva\",\"150 a 200 palavras, cinco pontos\"],[\"Defesa oral\",\"três minutos e perguntas\"]],\"f\":\"O objeto numa das cinco linguagens, a memória em 150 a 200 palavras, a defesa em três minutos.\",\"_l\":\"m7-f10\"},{\"t\":\"completar\",\"voc\":true,\"p\":\"Como se chama o texto de 150 a 200 palavras que explica o projeto?\",\"frase\":\"Memória [1]: o texto de 150 a 200 palavras que explica o projeto.\",\"lacunas\":[{\"o\":[\"descritiva\",\"oral\",\"fundamentada\"],\"c\":0}],\"f\":\"Memória descritiva: intenção, versos de partida, decisões formais, abandonos e o que falta.\",\"_l\":\"m7-f10\"},{\"t\":\"emparelhar\",\"p\":\"Liga cada ponto da memória descritiva ao que se exige nele.\",\"pares\":[[\"Versos de partida\",\"título do poema e referência\"],[\"Decisões formais\",\"cada uma com um «porque»\"],[\"O que ainda não resolveste\",\"obrigatório: sem dúvidas é suspeito\"]],\"f\":\"Versos com título e referência, decisões com «porque», e o que falta, sempre.\",\"_l\":\"m7-f10\"},{\"t\":\"emparelhar\",\"p\":\"Liga cada número ao que mede no projeto do Dia Pessoa.\",\"pares\":[[\"25 %\",\"o peso no módulo\"],[\"150 a 200\",\"as palavras da memória\"],[\"três minutos\",\"a defesa oral\"],[\"três propostas\",\"antes da escolha\"]],\"f\":\"25 % do módulo, 150 a 200 palavras, três minutos de defesa, três propostas antes de escolher.\",\"_l\":\"m7-f10\"},{\"t\":\"escolha\",\"voc\":true,\"p\":\"Como se chama o registo das três mudanças de ideia, cada uma com o seu critério: «Diário de …»?\",\"o\":[\"decisões\",\"propostas\",\"mudanças\"],\"c\":0,\"f\":\"Diário de decisões: três mudanças reais, cada uma com a sua razão.\",\"_l\":\"m7-f10\"},{\"t\":\"completar\",\"voc\":true,\"p\":\"Para a defesa caber em três minutos, como tem de ser o ensaio?\",\"frase\":\"O processo pede um ensaio da defesa [1], com o tempo medido.\",\"lacunas\":[{\"o\":[\"cronometrado\",\"documentado\",\"fundamentado\"],\"c\":0}],\"f\":\"Cronometrado: ensaiar a defesa com o tempo medido, para caber em três minutos.\",\"_l\":\"m7-f10\"},{\"t\":\"escolha\",\"p\":\"Na defesa perguntam-te: «Porque escolheste este verso e não o mais conhecido?» Que resposta defende uma leitura?\",\"o\":[\"Porque ninguém o conhece e o pode corrigir\",\"Porque ocupa menos espaço na memória descritiva\",\"Porque obriga a ler o poema outra vez\",\"Porque rima melhor com o objeto que se fez\"],\"c\":2,\"f\":\"O verso mais conhecido já vem com a leitura feita; o menos conhecido obriga a reler o poema.\",\"p2\":\"«Porque não escolheste o verso mais conhecido?» Qual é a melhor resposta na defesa?\",\"_l\":\"m7-f10\",\"fe\":[\"Fugir à correção não é uma razão de leitura; a defesa pede um «porque» ligado ao poema.\",\"O espaço na memória não diz nada sobre a leitura; a resposta tem de falar do poema.\",null,\"Um verso não rima com um objeto; a razão que defende uma leitura volta ao texto do poema.\"]},{\"t\":\"vf\",\"p\":\"Na defesa oral só conta o objeto; às perguntas não é preciso responder.\",\"v\":false,\"f\":\"Falso: a defesa tem três minutos mais perguntas, e a resposta a cada pergunta tem de ser fundamentada.\",\"_l\":\"m7-f10\"}",
+     "new": "{\"t\":\"emparelhar\",\"p\":\"Liga cada verso de _Mensagem_ ao movimento que faz.\",\"p2\":\"Condição, preço, palavra virada ou contrapeso? Liga cada verso.\",\"pares\":[[\"«Valeu a pena? Tudo vale a pena / Se a alma não é pequena.»\",\"S, tese com condição\"],[\"«Quem quer passar além do Bojador / Tem que passar além da dor.»\",\"N, condição necessária\"],[\"«Louco, sim, louco, porque quis grandeza»\",\"R, aceitar a palavra e redefini-la\"],[\"«Deus ao mar o perigo e o abismo deu, / Mas nele é que espelhou o céu.»\",\"M, admitir e contrapor\"]],\"f\":\"**S** diz em que caso a tese é verdade; **N** diz o preço que não se pode evitar; **R** aceita a palavra de quem acusa e muda-lhe o valor; **M** admite o custo e contrapõe com «Mas».\",\"fe\":\"Procura a marca de cada verso: «Se» põe a condição, «Tem que» diz o preço, «sim» e «porque» viram a acusação, «Mas» traz o contrapeso.\",\"_l\":\"m7-f10\"},{\"t\":\"completar\",\"p\":\"Que oração dá a condição à tese de «Mar Português»?\",\"p2\":\"Como se chama a oração com «Se» que responde a «Valeu a pena?», e o que diz?\",\"frase\":\"Em «Tudo vale a pena / Se a alma não é pequena», a oração com «Se» é subordinada adverbial [1] e diz em que [2] a tese é verdade.\",\"lacunas\":[{\"o\":[\"condicional\",\"causal\",\"concessiva\",\"final\"],\"c\":0},{\"o\":[\"caso\",\"momento\",\"lugar\",\"ordem\"],\"c\":0}],\"f\":\"Oração subordinada adverbial **condicional**: diz em que **caso** a tese vale. Uma tese com condição é mais difícil de atacar do que um «tudo» sem limites.\",\"fe\":\"«Se» não dá uma causa (isso é «porque») nem admite uma oposição (isso é «embora»): põe um caso. A tese só vale se a condição se cumprir.\",\"_l\":\"m7-f10\"},{\"t\":\"sublinhar\",\"p\":\"Toca nas duas palavras que fazem do preço uma obrigação.\",\"p2\":\"Nos versos do Bojador, toca no que diz que não há outro caminho.\",\"frase\":\"Quem quer passar além do Bojador Tem que passar além da dor.\",\"certas\":[6,7],\"f\":\"«**Tem que**»: é a condição necessária. Quem quer uma coisa tem de pagar outra; no teu texto, «tem de» faz o mesmo trabalho.\",\"fe\":\"Procura a obrigação, e não o lugar nem a dor: são duas palavras seguidas, no início do segundo verso.\",\"_l\":\"m7-f10\"},{\"t\":\"escolha\",\"p\":\"Em «Louco, sim, louco, porque quis grandeza», o que faz o rei à palavra «louco»?\",\"p2\":\"O que acontece à acusação de loucura no 1.º verso de «D. Sebastião, Rei de Portugal»?\",\"o\":[\"Aceita-a e muda-lhe o valor: a loucura passa a ser o nome de ter querido grandeza\",\"Nega-a: diz que nunca foi louco\",\"Repete-a para pedir desculpa a quem o acusa\"],\"c\":0,\"f\":\"Aceita a palavra («**Louco, sim**») e muda-lhe o valor com a causal «**porque quis grandeza**». É o movimento R: dar razão ao outro lado numa palavra, e virá-la.\",\"fe\":[null,\"Ele diz «Louco, sim»: aceita a palavra antes de a virar. Negar seria outro movimento, e mais fraco.\",\"Não há desculpa nenhuma: a oração com «porque» dá uma razão, e a razão muda o valor da palavra.\"],\"_l\":\"m7-f10\"},{\"t\":\"vf\",\"p\":\"Em «Louco, sim, louco, porque quis grandeza», a oração com «porque» é concessiva.\",\"p2\":\"A oração «porque quis grandeza» admite uma oposição, como faria «embora».\",\"v\":false,\"f\":\"Falso: é **causal**, dá a razão. A concessiva vem com «**embora**», como em «embora não saiba a verdade» (lição F07): é o movimento C, não o R.\",\"fe\":\"«Porque» dá a causa; «embora» concede. R redefine a palavra com uma causal; C admite com «embora» e segue em frente.\",\"_l\":\"m7-f10\"},{\"t\":\"completar\",\"p\":\"O que faz cada verso no fim de «Mar Português»?\",\"p2\":\"No movimento M, o que faz o primeiro verso e o que traz o «Mas»?\",\"frase\":\"«Deus ao mar o perigo e o abismo deu, / Mas nele é que espelhou o céu.»: o primeiro verso [1] o custo; o «Mas» traz o [2].\",\"lacunas\":[{\"o\":[\"admite\",\"nega\",\"esconde\",\"pergunta\"],\"c\":0},{\"o\":[\"contrapeso\",\"perigo\",\"abismo\",\"fim\"],\"c\":0}],\"f\":\"O primeiro verso **admite** o perigo e o abismo; o «Mas» traz o **contrapeso**, e «é que» põe-no em realce. É o movimento M: admitir o custo e contrapor.\",\"fe\":\"O primeiro verso não esconde nada: diz o perigo e o abismo. O que vem com «Mas» não é mais perigo, é o que pesa do outro lado: o céu espelhado.\",\"_l\":\"m7-f10\"},{\"t\":\"escolha\",\"p\":\"«Sem a loucura que é o homem / Mais que a besta sadia, / Cadáver adiado que procria?»: porque é que esta pergunta argumenta?\",\"p2\":\"No fim de «D. Sebastião, Rei de Portugal», o que faz a pergunta a quem lê?\",\"o\":[\"Obriga quem lê a responder, e só uma resposta cabe: sem a loucura, o homem seria apenas um «Cadáver adiado que procria»\",\"Mostra que o rei não sabe o que pensar\",\"Pede uma informação que falta no poema\"],\"c\":0,\"f\":\"É a pergunta que **obriga a responder**: a resposta vem implícita, e quem lê dá-a por si. É o movimento P. Num texto de opinião, uma pergunta destas chega; a seguir, o argumento continua.\",\"fe\":[null,\"Não é uma dúvida do rei: a pergunta diz o que seria o homem sem a loucura, e deixa a resposta a quem lê.\",\"Não falta informação: a pergunta já traz a resposta em «Cadáver adiado que procria».\"],\"_l\":\"m7-f10\"},{\"t\":\"emparelhar\",\"p\":\"Liga cada conector ao movimento que costuma abrir.\",\"p2\":\"Que movimento anuncia cada palavra pequena? Liga.\",\"pares\":[[\"se\",\"S, tese com condição\"],[\"tem que\",\"N, condição necessária\"],[\"porque\",\"R, redefinir com uma causal\"],[\"mas\",\"M, admitir e contrapor\"],[\"embora\",\"C, conceder\"]],\"f\":\"**Se** põe a condição, **tem que** diz o preço, **porque** redefine, **mas** contrapõe, **embora** concede. P não precisa de conector: é a pergunta.\",\"fe\":\"Pergunta o que faz cada palavra: põe um caso, diz uma obrigação, dá uma razão, opõe, ou admite uma oposição?\",\"_l\":\"m7-f10\"},{\"t\":\"escolha\",\"p\":\"Qual destas frases concede com «embora», como pede o movimento C?\",\"p2\":\"Que frase admite o que podia travar a ideia, e segue em frente?\",\"o\":[\"Embora a viagem seja longa, o comboio deixa ler.\",\"A viagem é longa porque o comboio para em todas as estações.\",\"Se a viagem for longa, levo um livro.\"],\"c\":0,\"f\":\"Com «**embora**», admites o que podia travar a tua ideia e segues em frente: é o movimento C. O verbo fica no conjuntivo, «seja», como «saiba» em «embora não saiba a verdade» (lição F07).\",\"fe\":[null,\"É causal: «porque» dá a razão de a viagem ser longa, não admite nada ao outro lado.\",\"É condicional: «Se» põe um caso; não admite o que podia travar a ideia.\"],\"_l\":\"m7-f10\"},{\"t\":\"ordenar\",\"p\":\"Põe por ordem os passos do movimento R, como no verso do rei.\",\"p2\":\"Do primeiro ao último: como se aceita uma palavra e se lhe muda o valor?\",\"passos\":[\"Dizes a palavra de quem te acusa\",\"Aceita-la com «sim»\",\"Dás a razão com «porque»\",\"A palavra fica com outro valor\"],\"f\":\"«Louco, sim, louco, porque quis grandeza»: a palavra, o «sim», a causal; no fim, a loucura é o nome de ter querido grandeza.\",\"fe\":\"Não se aceita uma palavra antes de a dizer, nem se dá a razão antes de a aceitar; o valor novo é o resultado, por isso fecha.\",\"_l\":\"m7-f10\"},{\"t\":\"completar\",\"p\":\"Onde ficam a tese e a conclusão num texto de opinião?\",\"p2\":\"Como abre e como fecha o texto da aula de tarefa?\",\"frase\":\"O texto abre com a [1] na primeira frase e fecha com uma conclusão que [2] sem a copiar.\",\"lacunas\":[{\"o\":[\"tese com condição\",\"pergunta final\",\"concessão\",\"biografia do autor\"],\"c\":0},{\"o\":[\"volta à tese\",\"resume o poema\",\"cita outro verso\",\"conta a vida de Pessoa\"],\"c\":0}],\"f\":\"Abre com a **tese com condição** e fecha com uma conclusão que **volta à tese**, com outras palavras: quem lê sabe onde começaste e onde chegaste.\",\"fe\":\"A primeira frase diz o que defendes, e com que condição; a última volta a isso. Resumir o poema ou contar a vida do autor não é concluir um argumento.\",\"_l\":\"m7-f10\"},{\"t\":\"vf\",\"p\":\"A «Tabacaria» tem a data de 15-1-1928, e nela a voz diz «Não sou nada.»: as duas coisas são factos da vida de quem a escreveu.\",\"p2\":\"A data da «Tabacaria» e o verso «Não sou nada.» provam o mesmo tipo de coisa.\",\"v\":false,\"f\":\"Falso: a **data** é um facto; «Não sou nada.» é o que a **voz** diz, o sentido. Num texto de opinião, o facto diz o que aconteceu e confirma-se fora do poema; o verso diz o que a voz pensa ou sente, e não se dá como facto.\",\"fe\":\"A data confirma-se no Arquivo Pessoa; a frase é da voz do poema e não documenta a vida de ninguém.\",\"_l\":\"m7-f10\"},{\"t\":\"escolha\",\"p\":\"Depois de dares razão ao outro lado (R ou C), o que vem a seguir no teu texto?\",\"p2\":\"Deste razão ao outro lado numa parte. E agora?\",\"o\":[\"A viragem: o teu argumento, logo a seguir\",\"A conclusão do texto\",\"Outro argumento do outro lado\"],\"c\":0,\"f\":\"Dar razão não é perder: logo a seguir vem **a viragem**, como no rei, que diz «sim» e logo «porque quis grandeza».\",\"fe\":[null,\"Se acabas aí, o texto fica a dar razão ao outro lado: falta a viragem.\",\"Dois argumentos do outro lado seguidos deixam a tua tese sem defesa.\"],\"_l\":\"m7-f10\"},{\"t\":\"vf\",\"p\":\"Em _Frei Luís de Sousa_, o regresso de D. João de Portugal faz renascer a família de Madalena.\",\"p2\":\"Na peça de Garrett, o regresso de quem desapareceu em Alcácer Quibir salva a família.\",\"v\":false,\"f\":\"Falso: em Garrett, o regresso **destrói** a família de Madalena (lição F09). Se confrontares _Mensagem_ com Garrett, parte deste facto da peça e não acrescentes o que ela não diz.\",\"fe\":\"A lição F09 compara os dois regressos: em Garrett, o de D. João de Portugal destrói a família de Madalena.\",\"_l\":\"m7-f10\"},{\"t\":\"escolha\",\"p\":\"Qual destas frases usa bem um verso de _Mensagem_ num texto de opinião?\",\"p2\":\"Verso exato, poema indicado e explicação: que frase tem as três coisas?\",\"o\":[\"Como diz «O Infante», «Deus quer, o homem sonha, a obra nasce.»: a obra só nasce no fim, depois do sonho, e quem desiste a meio não chega a ela.\",\"Pessoa diz em _Mensagem_ que é preciso sonhar.\",\"«Deus quer, o homem sonha, a obra nasce.» Este verso é muito bonito.\"],\"c\":0,\"f\":\"Verso **exato, entre «», com o poema indicado**, e logo a explicação presa ao argumento. Lê o herói como símbolo, não como biografia.\",\"fe\":[null,\"Não há verso exato nem poema indicado: é um resumo, e um resumo não prova nada.\",\"O verso está exato, mas falta o poema e a explicação: a beleza não é uma razão.\"],\"_l\":\"m7-f10\"},{\"t\":\"frase\",\"p\":\"Põe por ordem o 1.º verso de «D. Sebastião, Rei de Portugal».\",\"palavras\":[\"Louco,\",\"sim,\",\"louco,\",\"porque\",\"quis\",\"grandeza\"],\"f\":\"«Louco, sim, louco, porque quis grandeza»: a palavra de quem acusa, o «sim» que a aceita e a causal que a vira.\",\"_l\":\"m7-f10\"}",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m7/guia-da-tarefa-m7/index.html": {
+   "base_sha256_lf": "bd9aa0ea235936cd9c9c5bdbb1e5fb8d2cf753d690fe8218e8c41ec96acc5748",
+   "after_sha256_lf": "8962f314317c69de257e5780f9e5c65afb4f032d920bc38b9068a722f5fb4efd",
+   "edits": [
+    {
+     "location": "lista visível, unidade 2: aquecimento e apresentações em pequenos grupos",
+     "old": "<li><a href=\"../../tarefas/m7-u2/\">Unidade 2 · Uma ideia de heterónimo</a> · aula de 90 min com consulta</li>",
+     "new": "<li><a href=\"../../tarefas/m7-u2/\">Unidade 2 · Uma ideia de heterónimo</a> · aula de 90 min com consulta: aquecimento em cartões no início e apresentações em pequenos grupos, ao mesmo tempo</li>",
+     "occurrences": 1
+    },
+    {
+     "location": "lista visível, unidade 3: a tarefa nova e a grelha /20",
+     "old": "<li><a href=\"../../tarefas/m7-u3/\">Unidade 3 · Um objeto para o Dia Pessoa</a> · aula de 90 min com consulta</li>",
+     "new": "<li><a href=\"../../tarefas/m7-u3/\">Unidade 3 · Louco, sim: argumentar com os movimentos de <i>Mensagem</i></a> · aula de 90 min com consulta · <a href=\"../../tarefas/m7-u3/grelha/\">grelha /20</a></li>",
+     "occurrences": 1
+    },
+    {
+     "location": "lista visível: cada aula de tarefa começa com o aquecimento em cartões",
+     "old": "<p>Trabalhas em papel, fazes uma síntese simples no trabalho e entregas fotografias na tarefa que o docente cria no Teams no início da aula.</p>",
+     "new": "<p>Cada aula de tarefa começa com um aquecimento em cartões. Trabalhas em papel, fazes uma síntese simples no trabalho e entregas fotografias na tarefa que o docente cria no Teams no início da aula.</p>",
+     "occurrences": 1
+    },
+    {
+     "location": "arquivo, botão da tarefa 2: a tarefa nova",
+     "old": "<button class=\"tarefa\" data-n=\"2\"><b>2. Um objeto para o Dia Pessoa</b><span>individual ou em grupo, como o docente disser; duas aulas</span></button>",
+     "new": "<button class=\"tarefa\" data-n=\"2\"><b>2. Louco, sim: argumentar com os movimentos de <i>Mensagem</i></b><span>individual; uma aula de tarefa</span></button>",
+     "occurrences": 1
+    },
+    {
+     "location": "arquivo, T[0].passos[3]: apresentação em pequenos grupos",
+     "old": "\"Apresenta-o à turma em dois minutos e lê uma frase dele.\"",
+     "new": "\"Apresenta-o ao teu grupo de 4 ou 5 colegas em dois minutos, com os grupos ao mesmo tempo, e lê uma frase dele.\"",
+     "occurrences": 1
+    },
+    {
+     "location": "arquivo, T[1]: a tarefa nova da unidade 3, com a rubrica em pontos (nível 4 soma 200)",
+     "old": "{\"n\":2,\"extra\":false,\"titulo\":\"Um objeto para o Dia Pessoa\",\"quem\":\"individual ou em grupo, como o docente disser\",\"grupo\":true,\"passos\":[\"Na Casa Fernando Pessoa, recolhe material: notas, um verso com a referência e, onde for permitido fotografar, imagens.\",\"Escreve três propostas de objeto e escolhe uma; regista porquê.\",\"Faz o objeto; anota três mudanças que fizeste e a razão de cada uma.\",\"Escreve a memória descritiva (o que o objeto é, o que lê nos versos e como o faz) e prepara a defesa de três minutos.\"],\"entrega\":\"O objeto (ou a ligação para ele), o registo do processo e a memória descritiva.\",\"alternativa\":\"Se faltaste à visita, parte de versos lidos na aula e do Arquivo Pessoa em linha, e faz o mesmo trabalho com os mesmos critérios.\",\"encomenda\":\"Faz um objeto (vídeo, som, imagem, texto, instalação) que comunique uma leitura de versos de Pessoa recolhidos na Casa, sem os ilustrar à letra, e defende-o em três minutos.\",\"produto\":\"O objeto (ou a ligação), o registo do processo (três propostas antes da escolha, três mudanças, cada uma com a sua razão) e a memória descritiva de 150 a 200 palavras. Ficheiros: M7_Tarefa2_Objeto (no formato do objeto), M7_Tarefa2_Memoria.pdf. A defesa é ao vivo, no Dia Pessoa.\",\"criterios\":[\"O objeto comunica uma leitura dos versos sem os ilustrar à letra; o verso tem referência.\",\"O processo está registado: três propostas, uma escolha, três mudanças, cada uma com a sua razão.\",\"Memória de 150 a 200 palavras e defesa de três minutos.\"],\"exemplo\":{\"titulo\":\"Memória descritiva do exemplo (peça sonora de 90 segundos)\",\"texto\":\"Parti do verso de «Autopsicografia» sobre a dor que o poeta finge. O objeto é uma gravação em que a mesma frase minha («hoje não me apeteceu vir») é dita por três vozes: a minha, a de um colega a imitar-me, e a minha outra vez, a imitar o colega a imitar-me. A terceira é a que soa mais verdadeira, e é a mais fingida. Propostas antes desta: um cartaz com três máscaras (literal demais), um vídeo com espelhos (igual a muitos). Mudanças: tirei a música (distraía), encurtei para 90 segundos, acrescentei um silêncio de cinco segundos antes da terceira voz.\",\"nota\":\"Leitura não literal do verso, processo com propostas e mudanças justificadas, dentro do limite.\"},\"fraco\":{\"texto\":\"Fiz um desenho do Fernando Pessoa com um chapéu e escrevi por baixo «O poeta é um fingidor». Gostei de fazer.\",\"porque\":\"Ilustra à letra, não há leitura nem processo registado, não há memória descritiva.\"},\"rubrica\":[{\"nome\":\"Leitura do texto\",\"niveis\":[\"o objeto comunica uma leitura dos versos de partida, que não é literal; cada verso tem a referência\",\"leitura reconhecível; uma referência em falta ou uma ligação literal\",\"os versos estão lá sem ligação ao objeto\",\"o texto de Pessoa não se reconhece\"],\"pontos\":[50,35,20,5]},{\"nome\":\"Processo\",\"niveis\":[\"três propostas antes da escolha; três mudanças registadas, cada uma com critério\",\"propostas e mudanças registadas, sem critério\",\"só a versão final\",\"sem registo\"],\"pontos\":[50,35,20,5]},{\"nome\":\"Memória descritiva\",\"niveis\":[\"os cinco pontos, com o que se abandonou e o que falta resolver; 150 a 200 palavras; correta\",\"falta um ponto, ou pequenos erros\",\"descreve o objeto sem explicar as decisões\",\"sem memória\"],\"pontos\":[50,35,20,5]},{\"nome\":\"Defesa oral\",\"niveis\":[\"três minutos; decisões explicadas com o texto; resposta fundamentada às perguntas\",\"um desvio de tempo, ou uma resposta vaga\",\"lê a memória, ou não responde\",\"não defende\"],\"pontos\":[50,35,20,5]}]}",
+     "new": "{\"n\":2,\"extra\":false,\"titulo\":\"Louco, sim: argumentar com os movimentos de _Mensagem_\",\"quem\":\"individual\",\"grupo\":false,\"passos\":[\"No início da aula, faz o aquecimento em cartões (10 minutos).\",\"Escolhe o tema A ou o tema B (estão na aula de tarefa) e escreve a tese com uma condição na primeira frase.\",\"Escreve o texto de opinião com os movimentos dos versos, um verso exato explicado e um facto datado ou outra voz; marca as letras na margem.\",\"Revê, conta as palavras e escreve as duas linhas finais.\"],\"entrega\":\"Fotografias legíveis do texto, com o tema no topo, as letras na margem, o número de palavras e as duas linhas.\",\"alternativa\":\"\",\"encomenda\":\"Escreve um texto de opinião sobre o tema A ou o tema B com os movimentos de argumentação que os versos de _Mensagem_ fazem, e marca cada movimento na margem.\",\"produto\":\"Um texto de opinião à mão, com 180 a 220 palavras e o número escrito no fim, mais duas linhas fora da contagem. Ficheiro: M7_Tarefa3_Opiniao (fotografias).\",\"criterios\":[\"Tese com condição na primeira frase e conclusão que volta a ela; movimentos marcados na margem, que fazem avançar o argumento.\",\"Verso de _Mensagem_ exato, com o poema indicado e explicado; facto datado separado do sentido, ou outra voz.\",\"180 a 220 palavras, conectores certos, texto revisto e as duas linhas.\"],\"exemplo\":{\"titulo\":\"Um texto inteiro, noutro tema: «Ensaiar vale a pena?»\",\"texto\":\"Ensaiar só é perder tempo se o ensaio for sempre igual. [S] Dizem que quem ensaia muito fica artificial. Artificial, sim, artificial, porque escolheu cada pausa em vez de a deixar ao acaso. [R] Ensaiar custa uma tarde; mas é no ensaio que se descobre o que ainda não se sabe dizer. [M] Quem quer falar três minutos sem ler tem de ouvir a própria voz antes da turma. [N] Por isso, desde que cada ensaio mude alguma coisa, ensaiar é o caminho mais curto para falar sem ler.\",\"nota\":\"Tese com condição, um movimento que vira a acusação (R) e mais dois, conclusão que volta à tese. O verso de _Mensagem_ e o facto datado faltam de propósito: no teu texto, entram depois de [S] ou de [M].\"},\"fraco\":{\"texto\":\"Eu acho que ensaiar é bom porque sim. Há pessoas que não gostam mas eu gosto. Em conclusão, ensaiar é bom.\",\"porque\":\"A tese não tem condição, nenhum movimento vira o outro lado, não há verso nem facto, e a conclusão copia a tese.\"},\"rubrica\":[{\"nome\":\"Tese e conclusão\",\"niveis\":[\"tese com condição na primeira frase; conclusão que volta à tese sem a copiar\",\"tese com condição; a conclusão copia-a\",\"tese sem condição\",\"sem tese\"],\"pontos\":[30,21,12,3]},{\"nome\":\"Movimentos\",\"niveis\":[\"um R ou um C e um N, M ou P, marcados na margem, que fazem avançar o argumento; causal e concessiva bem distinguidas\",\"dois movimentos, um deles posto à força ou mal classificado\",\"um só movimento\",\"nenhum movimento reconhecível\"],\"pontos\":[50,35,20,5]},{\"nome\":\"Verso de _Mensagem_\",\"niveis\":[\"verso exato, entre «», com o poema indicado e explicado no contexto, sem ler o herói como biografia\",\"verso exato, com o poema, mas pouco explicado\",\"verso mudado, sem poema, ou lido como biografia\",\"sem verso de _Mensagem_\"],\"pontos\":[50,35,20,5]},{\"nome\":\"Facto ou outra voz\",\"niveis\":[\"facto datado das lições separado do sentido do poema, ou confronto com Garrett ou Reis, ligado à tese\",\"facto ou voz sem ligação à tese\",\"facto misturado com o sentido do poema\",\"sem facto nem outra voz, ou facto inventado\"],\"pontos\":[40,28,16,4]},{\"nome\":\"Forma\",\"niveis\":[\"180 a 220 palavras com o número no fim; conectores certos; texto revisto; as duas linhas\",\"um desvio de extensão ou de revisão\",\"vários erros, ou sem as duas linhas\",\"texto muito curto ou sem revisão\"],\"pontos\":[30,21,12,3]}]}",
+     "occurrences": 1
+    },
+    {
+     "location": "arquivo, T[0].passos: o aquecimento abre a aula de tarefa (C8)",
+     "old": "\"passos\":[\"Faz o perfil:",
+     "new": "\"passos\":[\"No início da aula, faz o aquecimento em cartões (10 a 15 minutos).\",\"Faz o perfil:",
+     "occurrences": 1
+    },
+    {
+     "location": "arquivo, T[0].entrega: fotografias do trabalho em papel, como na tarefa (P14)",
+     "old": "\"entrega\":\"O perfil, o texto e a lista das fontes, num só documento.\"",
+     "new": "\"entrega\":\"Fotografias legíveis do perfil, do texto, das escolhas justificadas, das fontes e da síntese.\"",
+     "occurrences": 1
+    },
+    {
+     "location": "arquivo, T[0].produto: em papel, com o nome de ficheiro do portefólio (P6, P14)",
+     "old": "num só documento. Ficheiro: M7_Tarefa1_Heteronimo.docx (ou PDF).\"",
+     "new": "em papel. Ficheiro: M7_Tarefa2_Heteronimo (fotografias).\"",
+     "occurrences": 1
+    },
+    {
+     "location": "arquivo, T[0].rubrica, Apresentação: a pergunta fica registada no papel (C10)",
+     "old": "responde a uma pergunta\"",
+     "new": "responde a uma pergunta (registada numa linha no papel)\"",
+     "occurrences": 1
+    },
+    {
+     "location": "arquivo, T[2].produto: a tarefa extra deixa o prefixo M7_Tarefa3, que é o da unidade 3 (P6)",
+     "old": "Ficheiros: M7_Tarefa3_Mensagem.pdf e M7_Tarefa3_Mensagem.m4a.",
+     "new": "Ficheiros: M7_Extra_Mensagem.pdf e M7_Extra_Mensagem.m4a.",
+     "occurrences": 1
+    },
+    {
+     "location": "BLOCOS: três blocos que somam os 90 minutos da aula de tarefa (C9)",
+     "old": "BLOCOS=[[20,\"Plano\",\"Lê o guia, escolhe por onde começas, escreve as três coisas que vais fazer.\"],[75,\"Fazer\",\"Trabalho a sério. Se encravares, regra dos três antes de mim.\"],[25,\"Rever e entregar\",\"Lista da rubrica, regra do original, autoavaliação, copiar para o Teams.\"]]",
+     "new": "BLOCOS=[[15,\"Aquecer\",\"Os cartões do aquecimento e a apresentação da tarefa pelo docente; na tarefa extra, relê o poema de partida.\"],[60,\"Produzir\",\"Trabalho a sério, com o relógio da tarefa. Se encravares, regra dos três antes de mim.\"],[15,\"Rever, apresentar e entregar\",\"Lista da rubrica, regra do original, autoavaliação, duas linhas e fotografias no Teams; na unidade 2, a apresentação ao grupo.\"]]",
+     "occurrences": 1
+    },
+    {
+     "location": "#blocos: os mesmos três blocos, no HTML (C9)",
+     "old": "<b>Plano, 20 min</b><span>Lê o guia, escolhe por onde começas, escreve as três coisas que vais fazer.</span>",
+     "new": "<b>Aquecer, 15 min</b><span>Os cartões do aquecimento e a apresentação da tarefa pelo docente; na tarefa extra, relê o poema de partida.</span>",
+     "occurrences": 1
+    },
+    {
+     "location": "#blocos: bloco 2 (C9)",
+     "old": "<b>Fazer, 75 min</b><span>Trabalho a sério. Se encravares, regra dos três antes de mim.</span>",
+     "new": "<b>Produzir, 60 min</b><span>Trabalho a sério, com o relógio da tarefa. Se encravares, regra dos três antes de mim.</span>",
+     "occurrences": 1
+    },
+    {
+     "location": "#blocos: bloco 3 (C9)",
+     "old": "<b>Rever e entregar, 25 min</b><span>Lista da rubrica, regra do original, autoavaliação, copiar para o Teams.</span>",
+     "new": "<b>Rever, apresentar e entregar, 15 min</b><span>Lista da rubrica, regra do original, autoavaliação, duas linhas e fotografias no Teams; na unidade 2, a apresentação ao grupo.</span>",
+     "occurrences": 1
+    },
+    {
+     "location": "relógio do topo: o primeiro bloco (C9)",
+     "old": "<span class=\"relogio\" id=\"relogio\">20:00</span>",
+     "new": "<span class=\"relogio\" id=\"relogio\">15:00</span>",
+     "occurrences": 1
+    },
+    {
+     "location": "script: it() põe em itálico os títulos de obras escritos entre _…_; sem() tira as marcas do texto copiado (P7)",
+     "old": "function esc(s){return String(s).replace(/[&<>]/g,function(c){return{\"&\":\"&amp;\",\"<\":\"&lt;\",\">\":\"&gt;\"}[c]})}",
+     "new": "function esc(s){return String(s).replace(/[&<>]/g,function(c){return{\"&\":\"&amp;\",\"<\":\"&lt;\",\">\":\"&gt;\"}[c]})}function it(s){return esc(s).replace(/(^|[^\\w\\/])_([^_<>]{1,100}?)_(?!\\w)/g,\"$1<i>$2</i>\")}function sem(s){return String(s).replace(/(^|[^\\w\\/])_([^_<>]{1,100}?)_(?!\\w)/g,\"$1$2\")}",
+     "occurrences": 1
+    },
+    {
+     "location": "script: título e passos com itálico (P7)",
+     "old": "$(\"#r-titulo\").textContent=atual.titulo;$(\"#r-passos\").innerHTML=atual.passos.map(function(p){return \"<li>\"+esc(p)+\"</li>\"}).join(\"\");",
+     "new": "$(\"#r-titulo\").innerHTML=it(atual.titulo);$(\"#r-passos\").innerHTML=atual.passos.map(function(p){return \"<li>\"+it(p)+\"</li>\"}).join(\"\");",
+     "occurrences": 1
+    },
+    {
+     "location": "script: encomenda, produto e critérios com itálico (P7)",
+     "old": "$(\"#r-encomenda\").textContent=atual.encomenda||\"\";$(\"#r-produto\").textContent=atual.produto||\"\";$(\"#r-criterios\").innerHTML=(atual.criterios||[]).map(function(c){return \"<li>\"+esc(c)+\"</li>\"}).join(\"\");",
+     "new": "$(\"#r-encomenda\").innerHTML=it(atual.encomenda||\"\");$(\"#r-produto\").innerHTML=it(atual.produto||\"\");$(\"#r-criterios\").innerHTML=(atual.criterios||[]).map(function(c){return \"<li>\"+it(c)+\"</li>\"}).join(\"\");",
+     "occurrences": 1
+    },
+    {
+     "location": "script: exemplo com itálico (P7)",
+     "old": "'<p class=\"pequeno\"><b>'+esc(ex.titulo||\"Exemplo\")+'</b></p><p style=\"white-space:pre-line\">'+esc(ex.texto)+'</p>'+(ex.nota?'<p class=\"pequeno\">Porque está bem: '+esc(ex.nota)+'</p>':'')",
+     "new": "'<p class=\"pequeno\"><b>'+it(ex.titulo||\"Exemplo\")+'</b></p><p style=\"white-space:pre-line\">'+it(ex.texto)+'</p>'+(ex.nota?'<p class=\"pequeno\">Porque está bem: '+it(ex.nota)+'</p>':'')",
+     "occurrences": 1
+    },
+    {
+     "location": "script: lista da rubrica com itálico (P7)",
+     "old": "<b>'+esc(p.nome)+':</b> '+esc(p.niveis[0])+'.</label>",
+     "new": "<b>'+it(p.nome)+':</b> '+it(p.niveis[0])+'.</label>",
+     "occurrences": 1
+    },
+    {
+     "location": "script: autoavaliação com itálico (P7)",
+     "old": "'<p style=\"margin:10px 0 4px\"><b>'+esc(p.nome)+'</b>",
+     "new": "'<p style=\"margin:10px 0 4px\"><b>'+it(p.nome)+'</b>",
+     "occurrences": 1
+    },
+    {
+     "location": "script: o texto copiado para o Teams sai sem as marcas _…_ no título (P7)",
+     "old": "\" · Tarefa \"+atual.n+\": \"+atual.titulo",
+     "new": "\" · Tarefa \"+atual.n+\": \"+sem(atual.titulo)",
+     "occurrences": 1
+    },
+    {
+     "location": "script: o texto copiado sai sem as marcas _…_ nos parâmetros (P7)",
+     "old": "l.push((D.feito.indexOf(i)>=0?\"[x] \":\"[ ] \")+p.nome)",
+     "new": "l.push((D.feito.indexOf(i)>=0?\"[x] \":\"[ ] \")+sem(p.nome))",
+     "occurrences": 1
+    },
+    {
+     "location": "script: o texto copiado sai sem as marcas _…_ na autoavaliação (P7)",
+     "old": "l.push(p.nome+\": nível \"",
+     "new": "l.push(sem(p.nome)+\": nível \"",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m7/mapa-do-modulo-m7/index.html": {
+   "base_sha256_lf": "73fcaab68191a6b457c868e2301bf41bf5a7165a067495f6e7c4cb97dbcafe11",
+   "after_sha256_lf": "be9ecef43eb36e4424dd07d8fd51ae44db63584f3e9a5b1cb0d89e0e47576901",
+   "edits": [
+    {
+     "location": "«O caminho», unidade 3: título novo da F10",
+     "old": "<li><a href=\"../licao-m7-f10/\">Defender o projeto</a></li>",
+     "new": "<li><a href=\"../licao-m7-f10/\">Argumentar com versos</a></li>",
+     "occurrences": 1
+    },
+    {
+     "location": "«As tarefas do Teams», tarefa 2: a tarefa nova da unidade 3 (o peso que o mapa já dava)",
+     "old": "<b>Um objeto para o Dia Pessoa</b><span class=\"peso\">35 %, individual ou em grupo, como o docente disser</span><span class=\"crit\">Leitura do texto; Processo; Memória descritiva; Defesa oral</span>",
+     "new": "<b>Louco, sim: argumentar com os movimentos de <i>Mensagem</i></b><span class=\"peso\">35 %, individual</span><span class=\"crit\">Tese e conclusão; Movimentos; Verso de <i>Mensagem</i>; Facto ou outra voz; Forma</span>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m7/portefolio-do-modulo-m7/index.html": {
+   "base_sha256_lf": "9e64dc83c225097960257caad885043f42c869ef574968450ab04b7ef827c351",
+   "after_sha256_lf": "c5e00def6cfae94f3c7e0f513d3cf2815acaf40eb09b49c4df89ecaa4d7c5680",
+   "edits": [
+    {
+     "location": "tabela, linha M7_Tarefa3: a tarefa nova",
+     "old": "<td>Tarefa da unidade 3, «Um objeto para o Dia Pessoa»: o objeto ou a ligação e fotografias do processo, da memória e da síntese.</td>",
+     "new": "<td>Tarefa da unidade 3, «Louco, sim: argumentar com os movimentos de <i>Mensagem</i>»: fotografias do texto de opinião, com o tema no topo e as letras na margem, e da síntese.</td>",
+     "occurrences": 1
+    },
+    {
+     "location": "tabela, linha M7_U3_pergunta: as duas linhas da tarefa nova (revisão pedagógica, P12)",
+     "old": "<td>Como transforma a poesia o passado em desejo de futuro? Síntese de duas linhas no papel da aula de tarefa, fotografada com o trabalho. Recupera essa entrega, sem fazer outra síntese.</td>",
+     "new": "<td>As duas linhas finais do texto de opinião da aula de tarefa (que movimento vais voltar a usar, e onde), fotografadas com o trabalho. Recupera essa entrega, sem fazer outra síntese.</td>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m7/visita-casa-fernando-pessoa/index.html": {
+   "base_sha256_lf": "9f34d0867ff2e5f578d28d2d09cf2fd9f21876d50d51d5b579437316e909c936",
+   "after_sha256_lf": "f9f8f244e550d4650d40d73953f778557fd2a72324369ce7ed04af1ad18cb334",
+   "edits": [
+    {
+     "location": "«Antes de entrar»: caderno facultativo, sem objeto a fazer",
+     "old": "<div class=\"cx\"><h2>Antes de entrar</h2><p>Vais sair daqui com material para um objeto teu: vídeo, som, imagem ou texto. O objeto parte de versos e não os ilustra à letra.</p>\n    <p><b>Que objeto te apetece fazer?</b></p>\n    <div class=\"chips\" id=\"escolhas\"><button class=\"chip\" aria-pressed=\"false\">Vídeo</button><button class=\"chip\" aria-pressed=\"false\">Som</button><button class=\"chip\" aria-pressed=\"false\">Imagem</button><button class=\"chip\" aria-pressed=\"false\">Texto</button></div>\n",
+     "new": "<div class=\"cx\"><h2>Antes de entrar</h2><p>Este caderno de campo é facultativo e não conta para a nota. Serve para guardares o que vês na Casa: um verso, um objeto, um pormenor, uma ideia.</p>\n",
+     "occurrences": 1
+    },
+    {
+     "location": "«Como funciona»: sem tarefa do Teams",
+     "old": "<p>Tomas notas curtas durante a visita. No fim, usas as notas para escrever e copias o texto para a tarefa do Teams.</p>",
+     "new": "<p>Tomas notas curtas durante a visita. Depois, se quiseres, escreves umas linhas a partir delas. Nada disto é avaliado.</p>",
+     "occurrences": 1
+    },
+    {
+     "location": "«Não foste à visita?»: sem critérios",
+     "old": "<p>Parte de versos lidos na aula e do Arquivo Pessoa em linha. Faz o mesmo trabalho com os mesmos critérios.</p><p class=\"pequeno\">Usa este caderno na mesma: as notas tomam-se onde estiveres.</p>",
+     "new": "<p>O caderno serve na mesma: as notas tomam-se onde estiveres, com versos lidos na aula e o Arquivo Pessoa em linha.</p>",
+     "occurrences": 1
+    },
+    {
+     "location": "«Depois»: sem o nome «Dia Fernando Pessoa», sem propostas nem memória descritiva",
+     "old": "<p class=\"rot\">Dia Fernando Pessoa</p>\n  <h2>Do material ao objeto</h2>\n  <ol><li>Escreve três propostas diferentes.</li><li>Escolhe uma e diz porquê.</li><li>Escreve a memória descritiva.</li></ol>",
+     "new": "<p class=\"rot\">Depois da visita</p>\n  <h2>Das notas a umas linhas</h2>\n  <ol><li>Relê as notas e escolhe a que mais te fez pensar.</li><li>Escreve umas linhas sobre ela, com o verso copiado como está.</li><li>Guarda o texto, se o quiseres levar para a aula.</li></ol>",
+     "occurrences": 1
+    },
+    {
+     "location": "«Depois»: campos de escrita livres, sem objetivo de palavras",
+     "old": "<label for=\"c-propostas\">Três propostas</label><textarea id=\"c-propostas\" data-k=\"propostas\" class=\"\" placeholder=\"Uma por linha. Cada uma parte de um verso.\"></textarea>\n  <label for=\"c-escolha\">A escolha</label><textarea id=\"c-escolha\" data-k=\"escolha\" class=\"\" placeholder=\"Qual fica, qual abandonas e porquê.\"></textarea>\n  <label for=\"c-texto\">Memória descritiva</label><textarea id=\"c-texto\" data-k=\"texto\" class=\"grande\" placeholder=\"Diz o que fizeste e que decisões tomaste.\"></textarea><div class=\"medidor\"><i id=\"barra\"></i></div><p class=\"pequeno\" id=\"palavras\">0 palavras. Objetivo: 150 a 200.</p>",
+     "new": "<label for=\"c-escolha\">A nota que escolhes</label><textarea id=\"c-escolha\" data-k=\"escolha\" class=\"\" placeholder=\"Copia-a ou resume-a numa linha.\"></textarea>\n  <label for=\"c-texto\">Umas linhas tuas</label><textarea id=\"c-texto\" data-k=\"texto\" class=\"grande\" placeholder=\"O que viste, o verso como está, e o que te fez pensar.\"></textarea><p class=\"pequeno\" id=\"palavras\">0 palavras.</p>",
+     "occurrences": 1
+    },
+    {
+     "location": "«Confere»: sem lista de avaliação",
+     "old": "<h2 style=\"margin-top:18px\">Confere</h2>\n  <ul class=\"lista\" id=\"verificar\"><li><input type=\"checkbox\" id=\"v0\"><label for=\"v0\" style=\"margin:0;font-weight:400\">Cada verso tem a referência.</label></li><li><input type=\"checkbox\" id=\"v1\"><label for=\"v1\" style=\"margin:0;font-weight:400\">O objeto não ilustra o verso à letra.</label></li><li><input type=\"checkbox\" id=\"v2\"><label for=\"v2\" style=\"margin:0;font-weight:400\">Escrevi três propostas antes de escolher.</label></li><li><input type=\"checkbox\" id=\"v3\"><label for=\"v3\" style=\"margin:0;font-weight:400\">Registei o que abandonei.</label></li><li><input type=\"checkbox\" id=\"v4\"><label for=\"v4\" style=\"margin:0;font-weight:400\">Contei: 150 a 200 palavras.</label></li></ul>\n  <div class=\"fila\"><button class=\"btn\" id=\"copiar\">Copiar para o Teams</button>",
+     "new": "<h2 style=\"margin-top:18px\">Antes de guardar</h2>\n  <ul class=\"lista\" id=\"verificar\"><li><input type=\"checkbox\" id=\"v0\"><label for=\"v0\" style=\"margin:0;font-weight:400\">Copiei cada verso como está e disse onde o li.</label></li><li><input type=\"checkbox\" id=\"v1\"><label for=\"v1\" style=\"margin:0;font-weight:400\">Separei o que vi do que pensei.</label></li></ul>\n  <div class=\"fila\"><button class=\"btn\" id=\"copiar\">Copiar o texto</button>",
+     "occurrences": 1
+    },
+    {
+     "location": "fim do separador «Depois»: nada se entrega nem se avalia",
+     "old": "<p class=\"pequeno\" style=\"margin-top:14px\">Cola o texto na tarefa do Teams e entrega lá. Este caderno não envia nada.</p>",
+     "new": "<p class=\"pequeno\" style=\"margin-top:14px\">O texto fica neste telemóvel. Este caderno não envia nada e não conta para a nota.</p>",
+     "occurrences": 1
+    },
+    {
+     "location": "script: o texto copiado leva o nome do caderno, sem o objetivo de palavras",
+     "old": "var CHAVE=\"visita-visita-casa-fernando-pessoa\",DIA=\"2026-11-05\",MIN=150,MAX=200,TAREFA=\"Dia Fernando Pessoa\",",
+     "new": "var CHAVE=\"visita-visita-casa-fernando-pessoa\",DIA=\"2026-11-05\",MIN=0,MAX=200,TAREFA=\"Caderno de campo facultativo\",",
+     "occurrences": 1
+    },
+    {
+     "location": "script: o contador de palavras só conta",
+     "old": "$(\"#palavras\").textContent=n+(n===1?\" palavra. \":\" palavras. \")+(n<MIN?\"Faltam \"+(MIN-n)+\".\":n>MAX?\"Tens \"+(n-MAX)+\" a mais.\":\"Está dentro do limite.\");",
+     "new": "$(\"#palavras\").textContent=n+(n===1?\" palavra.\":\" palavras.\");",
+     "occurrences": 1
+    },
+    {
+     "location": "script: o contador só conta, sem barra (revisão técnica, P9)",
+     "old": "var n=(t.value.trim().match(/\\S+/g)||[]).length,b=$(\"#barra\");\n  b.style.width=Math.min(100,Math.round(n/MAX*100))+\"%\";b.className=n>=MIN&&n<=MAX?\"bom\":\"\";",
+     "new": "var n=(t.value.trim().match(/\\S+/g)||[]).length;",
+     "occurrences": 1
+    },
+    {
+     "location": "script: o estado guardado antes do caderno não marca as caixas novas (revisão técnica, P9)",
+     "old": "try{var g=JSON.parse(localStorage.getItem(CHAVE)||\"null\");if(g)E=Object.assign(E,g)}catch(x){}",
+     "new": "try{var g=JSON.parse(localStorage.getItem(CHAVE)||\"null\");if(g)E=Object.assign(E,g)}catch(x){}\nif(E.caderno!==1){E.feito=[];if(E.campos)delete E.campos.propostas;E.caderno=1}",
+     "occurrences": 1
+    },
+    {
+     "location": "script: aviso depois de copiar, sem o Teams",
+     "old": "avisar(\"Copiado. Cola na tarefa do Teams.\")",
+     "new": "avisar(\"Copiado.\")",
+     "occurrences": 2
+    }
+   ]
+  },
+  "index.html": {
+   "base_sha256_lf": "6bd391f34ec9adcc823c0623f19c8c28c53cc109641740c70b4012ca65c7fe05",
+   "after_sha256_lf": "54ecdcfecbe75d17ac45695977ad7bf62b99c7789e42d63a5e19abfc53211c7c",
+   "edits": [
+    {
+     "location": "lista das lições do 3.º ano: título novo da F10",
+     "old": "{\"id\":\"m7-f10\",\"n\":16,\"t\":\"Defender o projeto\",\"url\":\"m7/licao-m7-f10/\"}",
+     "new": "{\"id\":\"m7-f10\",\"n\":16,\"t\":\"Argumentar com versos\",\"url\":\"m7/licao-m7-f10/\"}",
+     "occurrences": 1
+    }
+   ]
+  },
+  "3/index.html": {
+   "base_sha256_lf": "786202924e6ef870addee7ceacdf3c295a9d8223cb0384d8c41244583e1eba4f",
+   "after_sha256_lf": "7705b575036431231ef3dd377cfd9736e597ccef6c004b56953d05e50a43d8ca",
+   "edits": [
+    {
+     "location": "lista das lições do 3.º ano: título novo da F10",
+     "old": "{\"id\":\"m7-f10\",\"n\":16,\"t\":\"Defender o projeto\",\"url\":\"../m7/licao-m7-f10/\"}",
+     "new": "{\"id\":\"m7-f10\",\"n\":16,\"t\":\"Argumentar com versos\",\"url\":\"../m7/licao-m7-f10/\"}",
+     "occurrences": 1
+    }
+   ]
+  },
+  "3/todos/index.html": {
+   "base_sha256_lf": "a0d40d2f149148c4f7df625e5167ce71b11b0a8ba4b9e558c12931d096fee532",
+   "after_sha256_lf": "ba968900e068b90c3a35118dd8d477a54e3a76cbb647895fc3aaaf6f57f2d789",
+   "edits": [
+    {
+     "location": "M7: título novo da F10",
+     "old": "<a href=\"../../m7/licao-m7-f10/\">Lição M7-F10: Defender o projeto<small>unidade 3</small></a>",
+     "new": "<a href=\"../../m7/licao-m7-f10/\">Lição M7-F10: Argumentar com versos<small>unidade 3</small></a>",
+     "occurrences": 1
+    },
+    {
+     "location": "M7: a visita é um caderno de campo facultativo",
+     "old": "Um verso, um objeto: Casa Fernando Pessoa<small>caderno de campo</small>",
+     "new": "Um verso, um objeto: Casa Fernando Pessoa<small>caderno de campo facultativo</small>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m7/diapositivos/index.html": {
+   "base_sha256_lf": "763a83d05c06329fcf65864c9d79c2664a67a679a78322586953d48bcbbfa917",
+   "after_sha256_lf": "a7bc6c6300ffff2e9344fef41c941809755f8199f5826128dfdb3fb098b4077d",
+   "edits": [
+    {
+     "location": "sessão 14: título novo da F10; os diapositivos antigos (projeto) deixam de ser ligados",
+     "old": "<li><a href=\"sessao-14-m7-f10.pdf\">Sessão 14: Defender o projeto<small>Lição M7-F10 · ver o PDF (254 KB)</small></a><a href=\"sessao-14-m7-f10.pptx\" download style=\"padding-top:0\"><small>Descarregar o PowerPoint (153 KB)</small></a></li>",
+     "new": "<li><a href=\"../licao-m7-f10/\">Sessão 14: Argumentar com versos<small>Lição M7-F10 · abrir a lição e projetá-la a partir do menu; o PDF e o PowerPoint estão a ser refeitos</small></a></li>",
+     "occurrences": 1
+    },
+    {
+     "location": "sessão 15: o diapositivo 9 perguntava pelo projeto do Dia Pessoa; liga-se a lição até a sessão ser refeita (revisão de 29/10, G2)",
+     "old": "<li><a href=\"sessao-15-m7-f11.pdf\">Sessão 15: Quantas vozes cabem num homem<small>Lição M7-F11 · ver o PDF (236 KB)</small></a><a href=\"sessao-15-m7-f11.pptx\" download style=\"padding-top:0\"><small>Descarregar o PowerPoint (260 KB)</small></a></li>",
+     "new": "<li><a href=\"../licao-m7-f11/\">Sessão 15: Quantas vozes cabem num homem<small>Lição M7-F11 · abrir a lição e projetá-la a partir do menu; o PDF e o PowerPoint estão a ser refeitos</small></a></li>",
+     "occurrences": 1
+    },
+    {
+     "location": "sessão 13: o último diapositivo ainda anuncia a F10 pelo título antigo (revisão de 29/10)",
+     "old": "<small>Lição M7-F09 · ver o PDF (222 KB)</small>",
+     "new": "<small>Lição M7-F09 · ver o PDF (222 KB); a lição seguinte chama-se agora «Argumentar com versos»</small>",
+     "occurrences": 1
+    }
+   ]
+  }
+ }
+}

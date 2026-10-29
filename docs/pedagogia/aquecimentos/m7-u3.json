@@ -1,0 +1,241 @@
+{
+ "slug": "m7-u3",
+ "modulo": "m7",
+ "unidade": 3,
+ "versao": "1",
+ "momento": "No início da aula de tarefa",
+ "titulo": "Louco, sim: argumentar com os movimentos de <i>Mensagem</i>",
+ "descricao": "Aquecimento em cartões no início da aula de tarefa da unidade 3 do M7: reconhecer cinco movimentos nos versos de Mensagem e a concessiva, distinguir condicional, causal e concessiva, aceitar uma palavra e redefini-la com outros exemplos, separar facto e sentido, situar a resposta a uma objeção, ligar cada passagem à sua obra e planear a produção.",
+ "licoes_das_citacoes": [
+  "m7/licao-m7-f07",
+  "m7/licao-m7-f08",
+  "m7/licao-m7-f09",
+  "m7/licao-m7-f11"
+ ],
+ "menu": [
+  [
+   "../../../m7/licao-m7-f10/",
+   "Relembrar F10, os seis movimentos"
+  ],
+  [
+   "../../../m7/licao-m7-f08/",
+   "Relembrar F08, «Mar Português»"
+  ],
+  [
+   "../../../m7/licao-m7-f09/",
+   "Relembrar F09, «D. Sebastião, Rei de Portugal»"
+  ]
+ ],
+ "reservadas": [
+  "preço de um sonho grande",
+  "dá força a um país",
+  "pago por outros",
+  "as mães, os filhos e as noivas",
+  "alguém volte e resolva"
+ ],
+ "_nota": "29/10/2026: candidata 1 escolhida pelo docente. Esboço corrigido da proposta final (cartões 4, 8, 9 e 10). As frases de treino são inventadas e vão sem «» (a viagem, ler em papel, ser teimoso, repetir um plano).",
+ "cartoes": [
+  {
+   "t": "ler",
+   "rot": "Abre",
+   "titulo": "Louco, sim",
+   "html": "<p class=\"abre\"><b>Um rei aceita que lhe chamem louco e, no mesmo verso, vira a palavra a seu favor.</b> Este aquecimento não escreve a tua opinião nem toma partido nos temas: treina os seis movimentos com outros exemplos.</p><div class=\"caixa\"><h3>A tarefa de hoje</h3><p>Um texto de opinião, à mão, com 180 a 220 palavras, sobre um destes temas.</p><p><b>Tema A.</b> «Valeu a pena? Tudo vale a pena / Se a alma não é pequena.» Concordas, quando o preço de um sonho grande é pago por outros, como as mães, os filhos e as noivas da primeira estrofe?</p><p><b>Tema B.</b> Por quem, ou pelo quê, ainda esperamos? Esperar que alguém volte e resolva dá força a um país ou tira-lha?</p></div><p>Dez minutos, com consulta. Não conta para a nota.</p>"
+  },
+  {
+   "t": "emparelhar",
+   "g": "1",
+   "p": "Que movimento faz cada verso? Liga, sem abrir a F10.",
+   "p2": "Condição, preço, palavra virada, contrapeso ou pergunta? Liga cada verso.",
+   "pares": [
+    [
+     "«Valeu a pena? Tudo vale a pena / Se a alma não é pequena.»",
+     "S, tese com condição"
+    ],
+    [
+     "«Quem quer passar além do Bojador / Tem que passar além da dor.»",
+     "N, condição necessária"
+    ],
+    [
+     "«Louco, sim, louco, porque quis grandeza»",
+     "R, aceitar a palavra e redefini-la"
+    ],
+    [
+     "«Deus ao mar o perigo e o abismo deu, / Mas nele é que espelhou o céu.»",
+     "M, admitir e contrapor"
+    ],
+    [
+     "«Sem a loucura que é o homem / Mais que a besta sadia, / Cadáver adiado que procria?»",
+     "P, pergunta que obriga a responder"
+    ]
+   ],
+   "f": "O «Se» põe a condição (**S**); «Tem que» diz o preço (**N**); «sim» e «porque» viram a acusação (**R**); o «Mas» traz o contrapeso (**M**); a pergunta deixa a resposta a quem lê (**P**). O sexto, **C**, concede com «embora» (lição F07).",
+   "fe": "Procura a marca de cada verso: um «Se», um «Tem que», um «sim» seguido de «porque», um «Mas», um ponto de interrogação."
+  },
+  {
+   "t": "sublinhar",
+   "g": "2",
+   "p": "Toca na palavra que vira a acusação a favor do rei.",
+   "p2": "No 1.º verso de «D. Sebastião, Rei de Portugal», que palavra abre a razão que muda o valor de «louco»?",
+   "frase": "Louco, sim, louco, porque quis grandeza",
+   "certas": [
+    3
+   ],
+   "f": "«**porque**» abre a oração causal: a loucura passa a ser o nome de ter querido grandeza. Sem a causal, o rei só aceitava a acusação.",
+   "fe": "Procura a palavra que liga a acusação à razão: vem logo depois da segunda vez que se diz «louco»."
+  },
+  {
+   "t": "emparelhar",
+   "g": "3",
+   "p": "Liga cada oração ao seu valor.",
+   "p2": "Condição, causa ou concessão? Liga cada oração.",
+   "pares": [
+    [
+     "«Se a alma não é pequena»",
+     "condicional: diz em que caso"
+    ],
+    [
+     "«porque quis grandeza»",
+     "causal: dá a razão"
+    ],
+    [
+     "«embora não saiba a verdade»",
+     "concessiva: admite uma oposição"
+    ]
+   ],
+   "f": "«Se» põe a condição (**S**), «porque» dá a razão (**R**), «embora» admite o que podia travar a ideia (**C**). São as subordinadas adverbiais da lição F07: em cada movimento, o conector é a prova.",
+   "fe": "Olha para o conector no início de cada oração e pergunta o que faz: põe um caso, dá uma razão, ou admite uma oposição?"
+  },
+  {
+   "t": "vf",
+   "g": "4",
+   "p": "Esta frase dá razão ao outro lado numa parte: _Há quem diga que ler em papel é antiquado, mas eu acho que não._",
+   "p2": "Na frase _Há quem diga que ler em papel é antiquado, mas eu acho que não._, quem escreve aceita alguma coisa do que dizem os outros?",
+   "v": false,
+   "f": "Falso: a frase **nega sem dar razão em nada**. Dar razão ao outro lado é aceitar uma parte, como em _antiquado, sim, porque…_ (R) ou _embora seja antiquado…_ (C), e só depois virar.",
+   "fe": "Procura o que quem escreve aceita: nada. O «mas» aqui só junta duas opiniões; não admite nenhuma parte da outra."
+  },
+  {
+   "t": "completar",
+   "g": "5",
+   "p": "Que palavra põe a condição na tese?",
+   "p2": "Completa a tese para ela dizer em que caso é verdade.",
+   "frase": "Repetir um plano dez vezes só vale a pena [1] cada repetição mudar alguma coisa.",
+   "lacunas": [
+    {
+     "o": [
+      "se",
+      "porque",
+      "embora"
+     ],
+     "c": 0
+    }
+   ],
+   "f": "**se**: a condição diz em que caso a tese vale. É o movimento S, o de «Se a alma não é pequena».",
+   "fe": "«porque» daria uma causa a uma coisa que ainda não aconteceu; «embora» oporia ideias que aqui não se opõem. Só uma condição completa esta frase."
+  },
+  {
+   "t": "escolha",
+   "g": "6",
+   "p": "Qual destas frases aceita a palavra de quem acusa e muda-lhe o valor, como o rei?",
+   "p2": "Acusaram-te de teimoso. Que resposta faz o movimento R?",
+   "o": [
+    "Teimoso, sim, teimoso, porque não deixei o plano a meio.",
+    "Não sou teimoso, os outros é que não percebem.",
+    "Sou teimoso e pronto."
+   ],
+   "c": 0,
+   "f": "Aceita «teimoso» e, com «**porque**», muda-lhe o valor: a teimosia passa a ser o nome de não ter desistido. É o movimento **R**.",
+   "fe": [
+    null,
+    "Nega a palavra em vez de a aceitar: o rei diz «Louco, sim».",
+    "Aceita a palavra mas não lhe muda o valor: falta a causal que diz porquê."
+   ]
+  },
+  {
+   "t": "rever",
+   "g": "7",
+   "p": "Revê a frase para separar o facto do sentido.",
+   "p2": "A frase faz de um verso um facto da vida. Escolhe a versão que separa os dois.",
+   "apoio": "Álvaro de Campos, «Tabacaria» (15-1-1928): «Não sou nada.»",
+   "frase": "Em 1928, Fernando Pessoa não era nada.",
+   "trecho": "Fernando Pessoa não era nada",
+   "o": [
+    "Álvaro de Campos assina a «Tabacaria», onde a voz diz que não é nada",
+    "Fernando Pessoa, como diz a «Tabacaria», não era nada",
+    "Álvaro de Campos, que assina a «Tabacaria», não era nada"
+   ],
+   "c": 0,
+   "f": "A data, **15-1-1928**, é um facto; «Não sou nada.» é o que a voz diz, o **sentido**. Num texto de opinião, o facto diz o que aconteceu e confirma-se fora do poema; o verso diz o que a voz pensa ou sente, e não se dá como facto.",
+   "fe": [
+    null,
+    "Continua a fazer do verso um facto da vida: «Não sou nada.» é a fala da voz do poema, não um registo de 1928.",
+    "Troca o autor pelo heterónimo, mas mantém o erro: o que a voz diz no poema não é um dado de biografia, nem da biografia inventada."
+   ]
+  },
+  {
+   "t": "escolha",
+   "g": "8",
+   "p": "Num texto de opinião, onde fica a resposta a uma objeção?",
+   "p2": "Escreveste o que diria quem discorda de ti. Onde pões a tua resposta?",
+   "o": [
+    "Logo a seguir à objeção.",
+    "Na primeira frase, antes da tese.",
+    "No fim, depois da conclusão."
+   ],
+   "c": 0,
+   "f": "A resposta vem **logo a seguir** à objeção: é o par «Objeção e resposta» da lição F11, e a resposta nunca fica longe da objeção. Se a afastas, quem lê fica com a objeção sem resposta.",
+   "fe": [
+    null,
+    "Na primeira frase, quem lê ainda não sabe o que defendes e toma a objeção pela tua opinião; a primeira frase é a da tese com condição.",
+    "Depois da conclusão, o texto acaba a dar razão ao outro lado; a conclusão volta à tese, e a objeção já tem de ter resposta."
+   ]
+  },
+  {
+   "t": "emparelhar",
+   "g": "9",
+   "p": "Liga cada passagem à obra de onde vem.",
+   "p2": "Reis, _Mensagem_ ou Garrett? Liga cada passagem à sua obra.",
+   "pares": [
+    [
+     "«Imita o Olimpo / No teu coração.»",
+     "Reis, «Segue o teu destino»"
+    ],
+    [
+     "«Ó Portugal, hoje és nevoeiro...»",
+     "_Mensagem_, «Nevoeiro»"
+    ],
+    [
+     "«Minha loucura, outros que me a tomem»",
+     "_Mensagem_, «D. Sebastião, Rei de Portugal»"
+    ],
+    [
+     "D. João de Portugal, desaparecido em Alcácer Quibir, regressa",
+     "Garrett, _Frei Luís de Sousa_"
+    ]
+   ],
+   "f": "Cada passagem com a sua obra: Reis, «Segue o teu destino» (lição F11); «Nevoeiro» e «D. Sebastião, Rei de Portugal», em _Mensagem_ (lição F09); D. João de Portugal, em _Frei Luís de Sousa_. Na tarefa, o confronto com outra voz começa por aqui: dizer de onde vem cada uma.",
+   "fe": "Procura as marcas: os deuses do Olimpo são de uma voz que já leste a falar com Lídia; o regresso de alguém desaparecido em Alcácer Quibir é o que acontece numa peça que leste no 2.º ano."
+  },
+  {
+   "t": "ordenar",
+   "g": "10",
+   "p": "Põe por ordem a produção e a entrega.",
+   "p2": "Cada passo usa o que o anterior produziu. Do primeiro ao último: ordena.",
+   "passos": [
+    "Escolhes o tema e escreves a tese com uma condição",
+    "Escolhes o verso de _Mensagem_ e o facto, ou a outra voz, que servem essa tese",
+    "Escreves o texto, com os movimentos e a conclusão que volta à tese",
+    "Relês o texto, marcas as letras na margem e contas as palavras: 180 a 220",
+    "Escreves as duas linhas finais e entregas as fotografias no Teams"
+   ],
+   "f": "Cada passo usa o anterior: o verso e o facto servem a tese, o texto junta tudo, as letras e a contagem fazem-se no texto escrito, e as duas linhas fecham.",
+   "fe": "Não escolhes o verso sem saber a tese que ele vai servir, nem contas palavras de um texto que ainda não existe; as duas linhas são as últimas."
+  },
+  {
+   "t": "ler",
+   "rot": "Para levar",
+   "escuro": true,
+   "html": "<p class=\"levar\">Dar razão não é perder: «Louco, sim, louco, porque quis grandeza».</p><p>Agora, com o teu tema: a tese com condição na primeira frase, um movimento que dá razão ao outro lado e vira (R ou C), mais um (N, M ou P), um verso exato explicado, um facto datado separado do sentido ou outra voz, a conclusão que volta à tese, e as letras na margem.</p>"
+  }
+ ]
+}
