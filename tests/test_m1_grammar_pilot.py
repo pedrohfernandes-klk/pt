@@ -45,6 +45,7 @@ class M1GrammarPilot(unittest.TestCase):
     def sources(self):
         for path, info in self.manifest['files'].items():
             # 28/10/2026: a F05 recebeu correções literais da auditoria do M1; desfazem-se antes deste manifesto.
+            # 28/10/2026: o mesmo auxiliar desfaz antes o corte da Sala (manifesto literal da Sala desligada).
             after = historical_task_source(ROOT / path) if path.startswith('tarefas/') else undo_audit_20261028(path, (ROOT / path).read_text('utf-8'))
             if path.startswith('tarefas/'):
                 # Compose the independently authorised reader head with this

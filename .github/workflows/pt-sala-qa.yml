@@ -1,0 +1,20 @@
+name: Português — Sala de aula desligada
+# 28/10/2026: a Sala de aula em tempo real enviava a alcunha e os pontos de cada aluno para tópicos públicos do
+# ntfy.sh (desligada por decisão do docente de 17/10/2026; scripts/desligar_sala.py). A guarda vale para toda a
+# árvore publicada, por isso este workflow não tem filtro de caminhos: corre em qualquer PR, mesmo que só mude
+# a página inicial, o c/, as obras/ ou outro sítio que o workflow do M1 ao M9 não vigia.
+on:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  sala:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Nenhuma página publicada fala com o ntfy.sh nem abre os canais da Sala
+        run: python -m unittest discover -s tests -p 'test_sala_desligada.py' -v

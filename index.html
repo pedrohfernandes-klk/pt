@@ -174,7 +174,12 @@ figure img[tabindex]:focus-visible{outline:3px solid var(--tinta,#000);outline-o
 <p>O que fazes nas lições, nas missões e nos cartões fica guardado só neste telemóvel, sem conta nem nome. Para o levares para outro telemóvel, ou para o mostrares ao docente, guarda-o num ficheiro; para o trazeres de volta, repõe o ficheiro.</p>
 <p class="pf-n" data-pf-conta>A contar os registos…</p>
 <div class="pf-b"><button type="button" data-pf-guardar>Guardar num ficheiro</button><label class="pf-l"><input type="file" accept="application/json,.json" data-pf-repor>Repor de um ficheiro</label></div>
-<p class="pf-e" data-pf-estado aria-live="polite"></p></section><script>(function(){var S=document.getElementById("progresso");if(!S)return;
+<p class="pf-e" data-pf-estado aria-live="polite"></p></section><script>
+// 28/10/2026: a Sala de aula está desligada desde 17/10/2026 (decisão do docente); só se apaga o que ela deixou neste aparelho
+(function(){try{["epi-sala","epi-sala-atlas"].forEach(function(k){if(localStorage.getItem(k)!==null)localStorage.removeItem(k)});
+for(var i=localStorage.length-1;i>=0;i--){var k=localStorage.key(i);if(k&&k.indexOf("painel-sala-")===0)localStorage.removeItem(k)}}catch(x){}
+try{sessionStorage.removeItem("epi-atlas-sala")}catch(x){}})();
+</script><script>(function(){var S=document.getElementById("progresso");if(!S)return;
 var conta=S.querySelector("[data-pf-conta]"),estado=S.querySelector("[data-pf-estado]");
 function chaves(){var L=[];for(var i=0;i<localStorage.length;i++){var k=localStorage.key(i);if(k)L.push(k)}return L.sort()}
 function diz(t,c){estado.textContent=t;estado.className="pf-e"+(c?" "+c:"")}

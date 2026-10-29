@@ -12,11 +12,14 @@ TABLE_EDITS=ROOT/'tests/fixtures/apoios-tabelas-edits-20261027.json'
 REIS_EDITS=ROOT/'tests/fixtures/m7-f23-reis-edits-20261028.json'
 # 28/10/2026: correções confirmadas pela auditoria do M1 e do M4 (texto apenas; desfazem-se antes de todas as outras).
 AUDIT_EDITS=ROOT/'tests/fixtures/auditoria-m1-m4-edits-20261028.json'
+# 28/10/2026: a Sala de aula sai das lições (decisão do docente de 17/10/2026; scripts/desligar_sala.py). É a mudança
+# mais recente: o manifesto dela desfaz-se primeiro, antes da auditoria e de todos os outros.
+SALA_EDITS=ROOT/'tests/fixtures/sala-desligada-edits-20261028.json'
 
 def original_lesson_text(path):
  """Reverse only the explicitly authorized UX strings; retain the frozen LF hash."""
  source=(ROOT/path).read_text('utf-8')
- for manifest_path in (AUDIT_EDITS,REIS_EDITS,TABLE_EDITS,GRAMMAR_EDITS,INSTRUCTION_EDITS):
+ for manifest_path in (SALA_EDITS,AUDIT_EDITS,REIS_EDITS,TABLE_EDITS,GRAMMAR_EDITS,INSTRUCTION_EDITS):
   manifest=json.loads(manifest_path.read_text('utf-8'))
   for edit in reversed(manifest['files'].get(path,{}).get('edits',[])):
    if source.count(edit['new'])!=edit['occurrences']:

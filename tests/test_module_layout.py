@@ -29,6 +29,8 @@ class ModuleLayout(unittest.TestCase):
   for module in range(1,10):
    source=(ROOT/f'm{module}/index.html').read_text('utf-8-sig')
    # 28/10/2026: «produção em papel» e «trabalho em papel» também no M4 e no M7 (auditoria; manifesto literal).
+   # 28/10/2026: o auxiliar desfaz antes o corte da Sala nos nove índices (o canal EPISala passa à limpeza e, no
+   # M3, M5, M6, M8 e M9, o Desafio deixa de enviar o resultado); por isso o digest dos scripts continua o mesmo.
    source=undo_audit_20261028(f'm{module}/index.html',source)
    # Exact authorised UX wording only; restore it for the frozen index snapshot.
    # 28/10/2026 (PR #122): mais duas cadeias literais autorizadas no M1 («trabalho em papel» nos cartões das tarefas).
