@@ -81,7 +81,9 @@ def main():
    assert page.locator('button[data-desafio]:visible').count()==0
    task=page.locator('[data-task-lesson="1"] > a')
    task.focus();task.press('Enter');page.wait_for_url('**/tarefas/m1-u1/')
-   assert page.locator('[data-task-question]').count()==2
+   # 30/10/2026 (decisão do docente de 29/10): o aquecimento em papel passou a cartões numa página própria; na tarefa
+   # fica só a pergunta opcional.
+   assert page.locator('[data-task-question]').count()==1
    # 28/10/2026 (decisão do docente, PR #122): a tarefa do M1 passa ao formato com escolha, com um cartão de
    # aquecimento antes do enunciado (aquecer, enunciado, relembrar, verificar).
    assert page.locator('main[data-task-choice]').count()==1

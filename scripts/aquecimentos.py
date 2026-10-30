@@ -27,6 +27,8 @@ Antes de escrever, valida o baralho e recusa-o com a lista dos erros:
 «momento» (opcional) diz no menu quando se faz o aquecimento: «Antes de começar» na U1, «No início da aula de tarefa» na
 U2 e na U3 (revisão pedagógica de 29/10/2026, para a página dizer o mesmo que a tarefa e a linha A do percurso).
 Carrega rever-frase.js sempre que o baralho tem um cartão «rever» (o tipo não vive em jogo.js).
+30/10/2026: num «rever», nenhuma opção pode repetir o que está antes ou depois do «trecho» na frase (rever-frase.js troca
+só o trecho pela opção, e a frase aparecia partida).
 
 Uso: python3 scripts/aquecimentos.py [--saida PASTA] [--dados PASTA] [slug ...]
 Idempotente: só reescreve um ficheiro quando o conteúdo muda. --saida escreve noutra raiz, para os testes compararem
@@ -118,6 +120,14 @@ def validar(raiz, d):
         elif t in FAZER_COM_FE:
             if not (isinstance(c.get('fe'), str) and c['fe'].strip()):
                 erros.append(f'cartão {n}: falta «fe» (o que se diz a quem erra)')
+        if t == 'rever' and isinstance(c.get('frase'), str) and c.get('trecho') and c['trecho'] in c['frase']:
+            # 30/10/2026 (revisão dos aquecimentos do M1): rever-frase.js troca só o «trecho» pela opção escolhida; se uma
+            # opção repetir o que está antes ou depois do trecho, a frase aparece partida («Na cantiga, Na cantiga, …»).
+            antes, depois = c['frase'].split(c['trecho'], 1)
+            pedacos = [x.strip().rstrip('.!?…').strip() for x in (antes, depois)]
+            for j, opcao in enumerate(c.get('o', [])):
+                if any(x and x in opcao for x in pedacos):
+                    erros.append(f'cartão {n}: a opção {j} repete o que fica à volta do «trecho» e a frase aparece partida')
         visivel = texto_visivel(c).replace('**', '')
         for padrao in PROIBIDAS:
             if re.search(padrao, visivel, re.I):
