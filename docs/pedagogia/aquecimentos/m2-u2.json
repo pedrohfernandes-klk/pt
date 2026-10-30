@@ -156,8 +156,8 @@
   },
   {
    "t": "emparelhar",
-   "p": "Estes microcasos são inventados, não anúncios. Liga cada um à origem do efeito.",
-   "p2": "Que caso faz rir pelo contraste e qual se limita a atacar? Distingue prova de uma desqualificação solta.",
+   "p": "Estes microcasos são inventados, não anúncios. Liga cada um à leitura que as pistas permitem, sem inventar o desfecho.",
+   "p2": "Contraste, coerência, insulto ou pista para o futuro? Observa o que é dito e feito em cada caso.",
    "pares": [
     [
      "Diz “Sou pontual!” e chega quando a sessão acabou.",
@@ -170,10 +170,14 @@
     [
      "Chama “inútil” a alguém, sem mostrar um gesto ou uma fala.",
      "Insulto sem prova do comportamento"
+    ],
+    [
+     "Antes do ensaio, admite “Costumo faltar sem avisar.”",
+     "Pista para uma dificuldade futura"
     ]
    ],
-   "f": "O primeiro caso contrapõe autoelogio e ação; o segundo não os contradiz; o terceiro apenas desqualifica. A sátira confronta dizer e fazer, não dispensa a prova (lição F11).",
-   "fe": "Para haver o contraste pedido, mostra o comportamento que desmente o elogio. A palavra depreciativa, sozinha, não cria essa relação e pode tornar-se insulto gratuito.",
+   "f": "O primeiro caso contrapõe autoelogio e ação; o segundo é coerente; o terceiro apenas desqualifica. O quarto permite antecipar uma dificuldade, sem garantir nova falta. Uma fala pode anunciar um problema sem confirmar o desfecho (lições F07 e F11).",
+   "fe": "Procura o apoio de cada leitura. O insulto não mostra comportamento; uma admissão antes do ensaio pode antecipar dificuldades. Distingue essa expectativa do que já se viu acontecer.",
    "g": 6
   },
   {
@@ -197,15 +201,15 @@
   },
   {
    "t": "escolha",
-   "p": "Cena criada: A faz um aparte ao público e B não o ouve. Qual destas mudanças conserva essa distribuição da informação?",
-   "p2": "Numa adaptação, que solução mantém o público informado e B sem conhecer o aparte?",
+   "p": "Cena criada: A faz um aparte ao público e B não o ouve. Queres defender que a adaptação conserva quem sabe o comentário. Que exemplo sustenta essa posição?",
+   "p2": "Que solução serve de prova à ideia de conservar a distribuição da informação: público informado, B sem ouvir?",
    "o": [
     "B responde ao comentário que A dirige à câmara.",
     "A cala o comentário e o público perde essa pista.",
     "A fala à câmara; B continua sem ouvir a fala."
    ],
    "c": 2,
-   "f": "Muda o meio, mas conserva quem sabe e quem não sabe. Uma adaptação justifica-se pela função dramática que conserva ou altera, não apenas por parecer atual (lição F09).",
+   "f": "A fala à câmara muda o meio e conserva quem sabe e quem não sabe (lição F09). Na tarefa, precisas de ligar a tua posição a um exemplo da adaptação e a uma fala da farsa, não de usar este caso inventado.",
    "fe": [
     "Ao responder ao comentário, B passa a conhecê-lo. A distribuição da informação foi alterada.",
     "Se o público perde a pista, já não fica a saber o que o aparte lhe dava. Pode ser uma escolha, mas não conserva a mesma função.",
