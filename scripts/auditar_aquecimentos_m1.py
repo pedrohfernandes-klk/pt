@@ -3,42 +3,28 @@
 
 Amplitude conservadora: (maior - menor) / menor. Empates contam como
 «certa mais longa». V/F usa os rótulos fixos do motor, não opções redigidas.
+30/10/2026: a medição passou para scripts/opcoes_equilibradas.py, a medição única do sítio (também usada pelas
+Provas em cartões, scripts/provas/opcoes.py); este script escolhe as perguntas e devolve o mesmo que antes.
 Uso: python scripts/auditar_aquecimentos_m1.py
 """
-from collections import Counter
-from html import unescape
 from pathlib import Path
 import json
-import re
+
+from opcoes_equilibradas import avaliar
 
 ROOT = Path(__file__).resolve().parents[1]
 
 
-def visivel(texto):
-    return re.sub(r'\s+', ' ', unescape(re.sub(r'<[^>]*>', '', texto)).replace('**', '')).strip()
-
-
 def auditar(d):
-    grupos = []
+    perguntas = []
     for numero, cartao in enumerate(d['cartoes'], 1):
         for q in ([cartao] if cartao.get('t') in ('escolha', 'rever') else cartao.get('lacunas', [])):
-            textos = [visivel(x) for x in q['o']]
-            medidas = [len(x) for x in textos]
-            correta = medidas[q['c']]
-            errada = max(x for i, x in enumerate(medidas) if i != q['c'])
-            grupos.append(dict(cartao=numero, k=len(medidas), caracteres=medidas,
-                               amplitude=(max(medidas)-min(medidas))/min(medidas),
-                               certa_mais_longa=correta == max(medidas),
-                               certa_25_porcento=correta >= errada * 1.25))
-    totais = Counter(g['k'] for g in grupos)
-    longas = Counter(g['k'] for g in grupos if g['certa_mais_longa'])
-    erros = [f"cartão {g['cartao']}: amplitude ou vantagem acima do limite"
-             for g in grupos if g['amplitude'] > .20 or g['certa_25_porcento']]
-    for k, n in totais.items():
-        if longas[k] > n / k:
-            erros.append(f'{longas[k]}/{n} certas mais longas nas perguntas com {k} opções')
-    return dict(slug=d['slug'],grupos=grupos,maior_amplitude=max(g['amplitude'] for g in grupos),
-                certas_mais_longas=sum(longas.values()),grupos_de_opcoes=len(grupos),erros=erros)
+            perguntas.append(dict(opcoes=q['o'], certa=q['c'], cartao=numero, onde=f'cartão {numero}'))
+    r = avaliar(perguntas)
+    grupos = [dict(cartao=g['cartao'], k=g['k'], caracteres=g['caracteres'], amplitude=g['amplitude'],
+                   certa_mais_longa=g['certa_mais_longa'], certa_25_porcento=g['certa_25_porcento']) for g in r['grupos']]
+    return dict(slug=d['slug'], grupos=grupos, maior_amplitude=r['maior_amplitude'],
+                certas_mais_longas=r['certas_mais_longas'], grupos_de_opcoes=r['grupos_de_opcoes'], erros=r['erros'])
 
 
 def main():

@@ -1,0 +1,1025 @@
+{
+ "_sobre": "Grupo II da Prova 639, 2.ª fase, 2026, versão 2: título, «aprendes» e cartões, lidos por scripts/provas/gerar.py. Desenho de 30/10/2026, no molde da revisão do piloto: em cada item, primeiro o item da prova e depois os «Porquê?»; antes do item, só conceitos e testes (nos itens 6 e 7, noutras linhas do texto); opções nossas de comprimento semelhante (regra de 29 e 30/10/2026). Daqui em diante, é este ficheiro que se edita. O que é da prova e dos critérios está nos cartões tal como na transcrição tests/fixtures/prova-639-2026-2f-v2.json; o resto é nosso.",
+ "titulo": "«As virtudes do pensamento lento»",
+ "aprendes": "Aprendes a ler um texto de imprensa como na prova: delimitar parágrafos, reconhecer a opção certa como uma paráfrase do texto, ler uma definição no texto e não no prefixo, distinguir o exemplo dos argumentos de autoridade e encontrar a tese que atravessa o texto. Na gramática: a coesão gramatical referencial, a modalidade deôntica e a epistémica e a oração com a função de sujeito.",
+ "cartoes": [
+  {
+   "t": "ler",
+   "rot": "Abre",
+   "titulo": "Grupo II: «As virtudes do pensamento lento»",
+   "html": "<p class=\"abre\"><b>Um texto sobre pensar depressa e pensar devagar.</b> Um texto de imprensa, do jornal <i>Público</i>, e os sete itens do Grupo II da prova. Lês o texto às partes. Em cada item da prova, tentas primeiro sozinho; depois, os cartões «Porquê?» levam-te às linhas que decidem a resposta.</p><ul><li><b>Quanto vale:</b> sete itens de escolha múltipla, 13 pontos cada. Os itens 1, 3, 4 e 7 (marcados com ✱, como na prova) contam sempre: 52 pontos. Os itens 2, 5 e 6 juntam-se aos itens 3 e 6 do Grupo I: desses cinco, contam os três com melhor pontuação.</li><li><b>Tempo:</b> 120 minutos, mais 30 de tolerância, para a prova toda. A prova não marca tempo para cada grupo.</li><li><b>O que treinas:</b> a paráfrase de uma ideia, o exemplo e os argumentos de autoridade, uma definição, a tese; na gramática, a coesão referencial, a modalidade e a função sintática de uma oração.</li><li><b>Item da prova:</b> são os itens oficiais, com as quatro opções pela ordem da prova. Os cartões «Porquê?», os outros cartões e as explicações são leitura nossa. Para rever o texto, volta atrás com ←.</li></ul><p class=\"fonte\">Exame Final Nacional de Português, Prova 639, 2.ª fase, 2026, versão 2 (IAVE; os PDF de 2026 trazem o logótipo da EduQA, Instituto de Educação, Qualidade e Avaliação). Chaves: critérios de classificação da mesma prova, versão 2. Os cartões de preparação e as explicações são nossos.</p>"
+  },
+  {
+   "t": "ler",
+   "rot": "O texto, 1 de 4",
+   "titulo": "Linhas 1 a 12",
+   "html": "<p class=\"fonte\">Na prova: «Leia o texto.»</p><div class=\"v prova-l\"><span class=\"ln par\" data-l=\"1\"><span class=\"n\"></span>Hoje em dia, revela-se mais difícil mobilizar as crianças para a aprendizagem, se a</span><span class=\"ln\" data-l=\"2\"><span class=\"n\"></span>entendermos como um processo desenvolvido a longo prazo, que inclui momentos de</span><span class=\"ln\" data-l=\"3\"><span class=\"n\"></span>grande encantamento, com atividades entusiasmantes e mobilizadoras, mas também tarefas</span><span class=\"ln\" data-l=\"4\"><span class=\"n\"></span>repetitivas, que necessitam de investimento, concentração, paciência e perseverança por parte</span><span class=\"ln\" data-l=\"5\"><span class=\"n\">5</span>dos alunos. É precisamente neste último ponto que reside a dificuldade em cativar as novas</span><span class=\"ln\" data-l=\"6\"><span class=\"n\"></span>gerações para os desafios escolares, quando estes contrariam a tendência para a rapidez,</span><span class=\"ln\" data-l=\"7\"><span class=\"n\"></span>a fugacidade da atenção, o imediatismo e a volatilidade de interesses.</span><span class=\"ln par\" data-l=\"8\"><span class=\"n\"></span>A prevalência desta postura pode ser explicada pela sobrevalorização do pensamento</span><span class=\"ln\" data-l=\"9\"><span class=\"n\"></span>rápido, que domina na atualidade. Considerado como um progresso civilizacional, este tipo de</span><span class=\"ln\" data-l=\"10\"><span class=\"n\">10</span>pensamento opõe-se ao pensamento lento, encarado como um retrocesso temporal. Chegados</span><span class=\"ln\" data-l=\"11\"><span class=\"n\"></span>a este ponto, a pergunta que se impõe é a seguinte: será que esta visão é correta e está a ser</span><span class=\"ln\" data-l=\"12\"><span class=\"n\"></span>favorável para a própria sociedade que a criou?</span></div>"
+  },
+  {
+   "t": "escolha",
+   "g": "1a",
+   "p": "O item 1 fala dos «dois primeiros parágrafos». Que linhas tens de reler?",
+   "p2": "Que linhas formam os dois primeiros parágrafos do texto?",
+   "o": [
+    "Da linha 1 à linha 12",
+    "Da linha 1 à linha 7",
+    "Da linha 8 à linha 12"
+   ],
+   "c": 0,
+   "f": "**Da linha 1 à linha 12.** Cada parágrafo começa com recuo: o primeiro vai da linha 1 à 7, o segundo da 8 à 12. O item pede as ideias dos dois em conjunto.",
+   "fe": [
+    null,
+    "A linha 7 fecha só o primeiro parágrafo; o segundo começa, com recuo, na linha 8.",
+    "Essas linhas são só o segundo parágrafo. O primeiro começa na linha 1, com «Hoje em dia»."
+   ]
+  },
+  {
+   "t": "item",
+   "g": "1i",
+   "rot": "Item 1 da prova ✱",
+   "p": "De acordo com as ideias expressas pela autora nos dois primeiros parágrafos, hoje em dia, torna-se difícil mobilizar as crianças para a aprendizagem, pelo facto de",
+   "o": [
+    "as atividades repetitivas desencorajarem o desenvolvimento do pensamento lento.",
+    "a aprendizagem ser um processo que exige tarefas curtas e delimitadas no tempo.",
+    "a dispersão mental ser um aspeto sobrestimado na civilização contemporânea.",
+    "os desafios propostos em ambiente escolar serem imediatos e pouco estimulantes."
+   ],
+   "c": 2,
+   "f": "**(C)**, a chave da versão 2. Leitura nossa: os desafios escolares «contrariam a tendência para a rapidez, a fugacidade da atenção, o imediatismo e a volatilidade de interesses» (linhas 6 e 7), isto é, para a dispersão mental. E a autora explica esta postura «pela sobrevalorização do pensamento rápido, que domina na atualidade» (linhas 8 e 9): o que hoje se sobrestima é esse pensamento rápido e disperso.",
+   "fe": [
+    "Ao contrário: as tarefas repetitivas «necessitam de investimento, concentração, paciência e perseverança» (linha 4), o que é próprio do pensamento lento. A dificuldade está aí, porque os desafios escolares contrariam «a tendência para a rapidez» (linha 6).",
+    "O texto diz o contrário: a aprendizagem é «um processo desenvolvido a longo prazo» (linha 2), com «tarefas repetitivas» que pedem «paciência e perseverança» (linhas 3 e 4). Nada de tarefas curtas.",
+    null,
+    "Os desafios escolares não são imediatos: «contrariam a tendência para […] o imediatismo» (linhas 6 e 7). E a aprendizagem tem «atividades entusiasmantes e mobilizadoras» (linha 3), por isso não são pouco estimulantes."
+   ],
+   "l": "8"
+  },
+  {
+   "t": "sublinhar",
+   "frase": "quando estes contrariam a tendência para a rapidez, a fugacidade da atenção, o imediatismo e a volatilidade de interesses.",
+   "certas": [
+    7,
+    9,
+    13,
+    16
+   ],
+   "g": "1b",
+   "rot": "Porquê? Toca nas palavras",
+   "l": "7",
+   "cita": "É precisamente neste último ponto que reside a dificuldade em cativar as novas gerações para os desafios escolares,",
+   "p": "Linhas 6 e 7: que tendências vão contra os desafios escolares? Toca nos quatro nomes que as dizem.",
+   "p2": "Que tendências das novas gerações chocam com os desafios escolares? Toca nos quatro nomes.",
+   "f": "**rapidez**, **fugacidade**, **imediatismo** e **volatilidade**: uma atenção que não para em nada. É a dispersão mental da opção certa. E os desafios escolares vão contra ela: não são imediatos, pedem tempo."
+  },
+  {
+   "t": "vf",
+   "g": "1c",
+   "rot": "Porquê? Verdadeiro ou falso",
+   "l": "2",
+   "p": "No primeiro parágrafo, a aprendizagem é um processo longo, com tarefas que pedem paciência.",
+   "p2": "Para a autora, aprender leva tempo: há tarefas repetitivas, que pedem perseverança.",
+   "v": true,
+   "f": "Verdadeiro. A aprendizagem é «um processo desenvolvido a longo prazo» (linha 2) e inclui «tarefas repetitivas», que pedem «paciência e perseverança» (linhas 3 e 4). Por isso, a opção das «tarefas curtas e delimitadas no tempo» diz o contrário do texto.",
+   "fe": "Relê as linhas 2 a 4: a aprendizagem é «um processo desenvolvido a longo prazo», com tarefas que pedem «paciência e perseverança»."
+  },
+  {
+   "t": "vf",
+   "g": "1d",
+   "rot": "Porquê? Verdadeiro ou falso",
+   "l": "4",
+   "p": "Para a autora, as tarefas repetitivas afastam os alunos do pensamento lento.",
+   "p2": "No primeiro parágrafo, as tarefas repetitivas impedem o pensamento lento.",
+   "v": false,
+   "f": "Falso. As tarefas repetitivas «necessitam de investimento, concentração, paciência e perseverança» (linha 4): pedem o pensamento lento. A dificuldade está aí, porque os desafios escolares contrariam «a tendência para a rapidez» (linha 6).",
+   "fe": "É o contrário: estas tarefas pedem «concentração, paciência e perseverança» (linha 4), isto é, pensamento lento."
+  },
+  {
+   "t": "vf",
+   "g": "1e",
+   "rot": "Porquê? Verdadeiro ou falso",
+   "l": "3",
+   "p": "No primeiro parágrafo, os desafios escolares são imediatos e pouco estimulantes.",
+   "p2": "Segundo a autora, a escola só propõe desafios imediatos e sem encanto.",
+   "v": false,
+   "f": "Falso. A aprendizagem tem «momentos de grande encantamento, com atividades entusiasmantes e mobilizadoras» (linhas 2 e 3). E os desafios escolares não são imediatos: «contrariam a tendência para […] o imediatismo» (linhas 6 e 7).",
+   "fe": "Há «atividades entusiasmantes e mobilizadoras» (linha 3), e os desafios vão contra «o imediatismo» (linha 7), em vez de serem imediatos."
+  },
+  {
+   "t": "emparelhar",
+   "g": "1f",
+   "rot": "Porquê? Liga os pares",
+   "l": "8",
+   "p": "A opção certa diz o mesmo que as linhas 6 a 9, com outras palavras. Liga cada expressão do texto à da opção.",
+   "p2": "Liga as palavras da opção certa às do texto que dizem o mesmo (linhas 6 a 9).",
+   "pares": [
+    [
+     "«a fugacidade da atenção» (linha 7)",
+     "a dispersão mental"
+    ],
+    [
+     "«sobrevalorização» (linha 8)",
+     "sobrestimado"
+    ],
+    [
+     "«na atualidade» (linha 9)",
+     "na civilização contemporânea"
+    ]
+   ],
+   "f": "A opção certa é uma paráfrase: a atenção fugaz é a dispersão mental, a sobrevalorização é o que a opção chama «sobrestimado», e a atualidade é a civilização contemporânea. Na escolha múltipla, a opção certa raramente copia o texto: diz o mesmo por outras palavras."
+  },
+  {
+   "t": "ler",
+   "rot": "O texto, 2 de 4",
+   "titulo": "Linhas 13 a 22",
+   "html": "<div class=\"v prova-l\"><span class=\"ln par\" data-l=\"13\"><span class=\"n\"></span>Antes de responder a esta questão, podemos fazer o seguinte exercício: imaginemo-nos</span><span class=\"ln\" data-l=\"14\"><span class=\"n\"></span>a regressar ao cenário da vida selvagem, na qual um animal tem de dividir a sua atenção por</span><span class=\"ln\" data-l=\"15\"><span class=\"n\">15</span>diversas atividades para que, enquanto come, não acabe por ser comido. A consequência não</span><span class=\"ln\" data-l=\"16\"><span class=\"n\"></span>é difícil de antever: o animal vê-se impossibilitado de se concentrar profundamente naquilo</span><span class=\"ln\" data-l=\"17\"><span class=\"n\"></span>que tem diante de si, pois tem de estar permanentemente alerta em relação àquilo que está</span><span class=\"ln\" data-l=\"18\"><span class=\"n\"></span>atrás de si. Paradoxalmente, muitas das atividades mais valorizadas na atualidade, como a</span><span class=\"ln\" data-l=\"19\"><span class=\"n\"></span>multitarefa e muitas atividades digitais, privilegiam este tipo de mecanismos que geram uma</span><span class=\"ln\" data-l=\"20\"><span class=\"n\">20</span>atenção ampla, mas rasa, semelhante à de um animal selvagem. Tal como refere o filósofo</span><span class=\"ln\" data-l=\"21\"><span class=\"n\"></span>Byung-Chul Han na obra <i>Sociedade do Cansaço</i>, «as mais recentes evoluções sociais e a</span><span class=\"ln\" data-l=\"22\"><span class=\"n\"></span>mudança de estrutura da atenção aproximam a sociedade humana da vida selvagem».</span></div>"
+  },
+  {
+   "t": "ler",
+   "rot": "O texto, 3 de 4",
+   "titulo": "Linhas 23 a 36",
+   "html": "<div class=\"v prova-l\"><span class=\"ln par\" data-l=\"23\"><span class=\"n\"></span>De acordo com a sua análise, estamos a assistir a uma deslocação de um tipo de atenção</span><span class=\"ln\" data-l=\"24\"><span class=\"n\"></span>profunda para uma forma de atenção radicalmente distinta — a hiperatenção —, que</span><span class=\"ln\" data-l=\"25\"><span class=\"n\">25</span>se caracteriza por uma rápida mudança de foco entre diversas atividades, fontes informativas</span><span class=\"ln\" data-l=\"26\"><span class=\"n\"></span>e processos. Esta forma de atenção multitarefa não corresponde, na sua opinião, a um</span><span class=\"ln\" data-l=\"27\"><span class=\"n\"></span>progresso, mas, bem pelo contrário, a um retrocesso civilizacional.</span><span class=\"ln par\" data-l=\"28\"><span class=\"n\"></span>Também é esta a visão do médico e cientista Lamberto Maffei, que aborda a diferença</span><span class=\"ln\" data-l=\"29\"><span class=\"n\"></span>entre o pensamento rápido e o pensamento lento no livro com o emblemático título <i>Elogio da</i></span><span class=\"ln\" data-l=\"30\"><span class=\"n\">30</span><i>Lentidão</i>. De acordo com a sua explicação, o cérebro humano possui dois tipos de mecanismos:</span><span class=\"ln\" data-l=\"31\"><span class=\"n\"></span>os primeiros são mecanismos ancestrais rápidos de resposta ao ambiente; enquanto os</span><span class=\"ln\" data-l=\"32\"><span class=\"n\"></span>segundos, de carácter mais lento, se desenvolvem mais tarde e são fruto do raciocínio.</span><span class=\"ln par\" data-l=\"33\"><span class=\"n\"></span>De carácter automático ou semiautomático, os primeiros mecanismos são essenciais para</span><span class=\"ln\" data-l=\"34\"><span class=\"n\"></span>a sobrevivência [...]. Já a segunda modalidade, própria dos animais superiores, é inerente ao</span><span class=\"ln\" data-l=\"35\"><span class=\"n\">35</span>controlo de um ser humano sobre a sua própria vida, ao seu relacionamento com os outros</span><span class=\"ln\" data-l=\"36\"><span class=\"n\"></span>indivíduos e com o meio ambiente.</span></div>"
+  },
+  {
+   "t": "emparelhar",
+   "g": "2a",
+   "p": "O item 2 fala de «um exemplo» e de «dois argumentos de autoridade». Liga cada termo ao que faz num texto.",
+   "p2": "Tese, argumento de autoridade, exemplo: o que faz cada um? Liga.",
+   "pares": [
+    [
+     "tese",
+     "a ideia que o texto defende"
+    ],
+    [
+     "argumento de autoridade",
+     "apoia a ideia no que diz alguém reconhecido"
+    ],
+    [
+     "exemplo",
+     "mostra a ideia num caso concreto"
+    ]
+   ],
+   "f": "Um argumento de autoridade cita quem sabe do assunto (um filósofo, um cientista) para dar força à ideia; um exemplo põe a ideia num caso que se imagina ou se vê. Os dois servem a tese. O item 2 pergunta o que pretendem demonstrar."
+  },
+  {
+   "t": "emparelhar",
+   "g": "2b",
+   "p": "Linhas 13 a 36: que passo é o exemplo e quais são os argumentos de autoridade? Arruma.",
+   "p2": "Arruma os três passos das linhas 13 a 36: exemplo ou argumento de autoridade?",
+   "pares": [
+    [
+     "o animal na vida selvagem (linhas 13 a 18)",
+     "exemplo"
+    ],
+    [
+     "Byung-Chul Han, filósofo (linhas 20 a 27)",
+     "argumento de autoridade"
+    ],
+    [
+     "Lamberto Maffei, médico e cientista (linhas 28 a 36)",
+     "argumento de autoridade"
+    ]
+   ],
+   "f": "O animal que tem de vigiar o que está atrás de si é um caso imaginado: «imaginemo-nos» (linha 13). Han e Maffei são vozes de quem sabe, um filósofo e um médico e cientista, citados com os seus livros. Falta saber o que a autora quer demonstrar com os três: é o que o item 2 pergunta."
+  },
+  {
+   "t": "item",
+   "g": "2i",
+   "rot": "Item 2 da prova",
+   "p": "Entre as linhas 13 e 36, a autora socorre-se de um exemplo e de dois argumentos de autoridade, com a intenção de demonstrar que",
+   "o": [
+    "a rápida mudança de foco entre atividades, fontes informativas e processos tem a vantagem de estimular o desenvolvimento do raciocínio.",
+    "o progresso civilizacional trouxe como consequências a aceleração do pensamento, aproximando a vida em sociedade da vida selvagem.",
+    "os estímulos constantes a que o homem está sujeito dificultam a concentração, mas tornam-no mais capaz de se adaptar ao meio ambiente.",
+    "o cansaço característico da sociedade contemporânea decorre da multiplicidade de tarefas que o ser humano tem de realizar, quotidianamente."
+   ],
+   "c": 1,
+   "f": "**(B)**, a chave da versão 2. Leitura nossa: o animal divide a atenção para sobreviver, e as atividades «mais valorizadas na atualidade» privilegiam mecanismos que geram uma atenção «semelhante à de um animal selvagem» (linhas 18 a 20). Han dá-lhe autoridade: as evoluções sociais «aproximam a sociedade humana da vida selvagem» (linha 22), com uma atenção de «rápida mudança de foco» (linha 25). Maffei partilha esta visão (linha 28) e distingue os mecanismos rápidos, «ancestrais», dos lentos, «fruto do raciocínio» (linhas 31 e 32).",
+   "fe": [
+    "Para Han, esta «rápida mudança de foco» é a hiperatenção, e não é um progresso: é «um retrocesso civilizacional» (linhas 25 a 27). O raciocínio vem dos mecanismos lentos (linha 32), não da atenção que salta.",
+    null,
+    "A ideia de que os estímulos dificultam a concentração até se aproxima do exemplo do animal, mas o resto é falso: o texto nunca diz que eles nos tornam mais capazes. A relação com «o meio ambiente» (linha 36) depende dos mecanismos lentos, os que a sociedade desvaloriza.",
+    "O cansaço só aparece no título do livro de Han, _Sociedade do Cansaço_ (linha 21). O texto não fala do cansaço nem da sua causa: fala da atenção e do pensamento."
+   ],
+   "l": "22"
+  },
+  {
+   "t": "emparelhar",
+   "g": "2c",
+   "rot": "Porquê? Liga os pares",
+   "l": "22",
+   "p": "A opção certa diz, com outras palavras, o que está nas linhas 21 a 25. Liga cada parte da opção à expressão do texto.",
+   "p2": "Liga cada parte da opção certa às palavras do texto que lhe correspondem.",
+   "pares": [
+    [
+     "o progresso civilizacional",
+     "«as mais recentes evoluções sociais» (linha 21)"
+    ],
+    [
+     "a aceleração do pensamento",
+     "«uma rápida mudança de foco» (linha 25)"
+    ],
+    [
+     "aproximando a vida em sociedade da vida selvagem",
+     "«aproximam a sociedade humana da vida selvagem» (linha 22)"
+    ]
+   ],
+   "f": "Cada parte da opção certa tem apoio no texto: as evoluções sociais são o progresso, a atenção que muda depressa de foco é o pensamento acelerado, e a aproximação à vida selvagem está dita por Han. O exemplo do animal (linhas 13 a 20) prepara esta comparação."
+  },
+  {
+   "t": "vf",
+   "g": "2d",
+   "rot": "Porquê? Verdadeiro ou falso",
+   "l": "27",
+   "p": "Para Han, a rápida mudança de foco entre atividades estimula o raciocínio.",
+   "p2": "Nas linhas 23 a 27, a hiperatenção aparece como uma vantagem para o raciocínio.",
+   "v": false,
+   "f": "Falso. Esta «forma de atenção multitarefa» não é um progresso: é «um retrocesso civilizacional» (linhas 26 e 27). E, para Maffei, o raciocínio vem dos mecanismos lentos (linha 32).",
+   "fe": "É o contrário: para Han, esta atenção é «um retrocesso civilizacional» (linha 27)."
+  },
+  {
+   "t": "vf",
+   "g": "2e",
+   "rot": "Porquê? Verdadeiro ou falso",
+   "l": "35",
+   "p": "Para Maffei, a relação com os outros e com o meio ambiente depende dos mecanismos lentos.",
+   "p2": "Nas linhas 33 a 36, o relacionamento com o meio ambiente é próprio da segunda modalidade, a lenta.",
+   "v": true,
+   "f": "Verdadeiro. Os mecanismos rápidos «são essenciais para a sobrevivência» (linhas 33 e 34); a relação «com os outros indivíduos e com o meio ambiente» (linhas 35 e 36) é da «segunda modalidade», a lenta (linha 34). Por isso, o texto não diz que os estímulos constantes nos tornam mais capazes de nos adaptarmos ao meio ambiente.",
+   "fe": "Relê as linhas 34 a 36: o relacionamento com os outros e com o meio ambiente é da «segunda modalidade», a dos mecanismos lentos."
+  },
+  {
+   "t": "vf",
+   "g": "2f",
+   "rot": "Porquê? Verdadeiro ou falso",
+   "l": "21",
+   "p": "Nas linhas 13 a 36, a autora explica que o cansaço de hoje vem do excesso de tarefas.",
+   "p2": "Entre as linhas 13 e 36, o tema é a causa do cansaço da sociedade contemporânea.",
+   "v": false,
+   "f": "Falso. A palavra «Cansaço» só aparece no título do livro de Han, _Sociedade do Cansaço_ (linha 21). O texto fala da atenção e do pensamento, não do cansaço nem da sua causa. Uma palavra do texto numa opção não a torna certa.",
+   "fe": "A palavra «Cansaço» só está no título do livro de Han (linha 21); o texto não fala do cansaço."
+  },
+  {
+   "t": "ler",
+   "rot": "As linhas do item 3",
+   "titulo": "Linhas 23 a 27",
+   "html": "<p>As linhas do item 3, com os números da prova. Lê-as e responde no cartão seguinte.</p><div class=\"v prova-l\"><span class=\"ln par\"><span class=\"n\">23</span>De acordo com a sua análise, estamos a assistir a uma deslocação de um tipo de atenção</span><span class=\"ln\"><span class=\"n\">24</span>profunda para uma forma de atenção radicalmente distinta — a hiperatenção —, que</span><span class=\"ln\"><span class=\"n\">25</span>se caracteriza por uma rápida mudança de foco entre diversas atividades, fontes informativas</span><span class=\"ln\"><span class=\"n\">26</span>e processos. Esta forma de atenção multitarefa não corresponde, na sua opinião, a um</span><span class=\"ln\"><span class=\"n\">27</span>progresso, mas, bem pelo contrário, a um retrocesso civilizacional.</span></div>"
+  },
+  {
+   "t": "item",
+   "g": "3i",
+   "rot": "Item 3 da prova ✱",
+   "p": "O fenómeno que dá pelo nome de «hiperatenção» (linha 24) é perspetivado como",
+   "o": [
+    "uma dificuldade em concentrar-se, de forma demorada, numa única atividade.",
+    "uma concentração excessiva das pessoas, no momento de execução de tarefas.",
+    "uma mudança brusca e inesperada no modo de executar as tarefas.",
+    "uma alteração positiva da forma de realização das atividades e dos processos."
+   ],
+   "c": 0,
+   "f": "**(A)**, a chave da versão 2. Leitura nossa: a hiperatenção «se caracteriza por uma rápida mudança de foco entre diversas atividades, fontes informativas e processos» (linhas 25 e 26), e opõe-se a «um tipo de atenção profunda» (linhas 23 e 24). Quem salta de atividade em atividade não se concentra, de forma demorada, numa só.",
+   "fe": [
+    null,
+    "O prefixo «hiper-» engana: não é concentração a mais. É o contrário de «atenção profunda» (linhas 23 e 24): o foco muda depressa de uma atividade para outra (linha 25).",
+    "O texto não fala de uma mudança inesperada no modo de executar as tarefas: a hiperatenção é uma forma de atenção em que o foco muda depressa entre diversas atividades (linhas 24 a 26).",
+    "Han não a vê como positiva: esta forma de atenção «não corresponde, na sua opinião, a um progresso, mas, bem pelo contrário, a um retrocesso civilizacional» (linhas 26 e 27)."
+   ],
+   "l": "25"
+  },
+  {
+   "t": "escolha",
+   "g": "3a",
+   "p": "No item 3, onde estava a resposta sobre o modo como é «perspetivado» o fenómeno da «hiperatenção»?",
+   "p2": "Para saberes o que é a «hiperatenção» neste texto, onde tinhas de procurar?",
+   "o": [
+    "Na definição que o texto dá logo a seguir",
+    "No sentido habitual do prefixo «hiper-»",
+    "Na opinião que tu tens sobre a atenção"
+   ],
+   "c": 0,
+   "f": "**Na definição que o texto dá logo a seguir.** O item pergunta como o texto apresenta e avalia a hiperatenção, e o texto diz o que ela é na mesma frase (linhas 23 a 27). O sentido habitual de um prefixo pode enganar: confirma sempre no texto.",
+   "fe": [
+    null,
+    "O prefixo dá uma pista, mas pode enganar. O item pergunta como o texto a apresenta: lê a frase das linhas 23 a 27.",
+    "O item pergunta pelo que diz a autora, não pelo que tu pensas. A resposta está nas linhas 23 a 27."
+   ],
+   "rot": "Porquê? Escolhe"
+  },
+  {
+   "t": "escolha",
+   "g": "3b",
+   "rot": "Porquê? Escolhe",
+   "l": "24",
+   "p": "Linhas 23 e 24: há uma deslocação de um tipo de atenção para a hiperatenção. Que atenção fica para trás?",
+   "p2": "Nas linhas 23 e 24, a hiperatenção toma o lugar de uma atenção…",
+   "o": [
+    "profunda",
+    "excessiva",
+    "distraída"
+   ],
+   "c": 0,
+   "f": "**Profunda**: a deslocação é «de um tipo de atenção profunda para uma forma de atenção radicalmente distinta» (linhas 23 e 24). A hiperatenção é o contrário de concentrar-se a fundo: não é atenção a mais.",
+   "fe": [
+    null,
+    "Não: excessiva seria a leitura do prefixo «hiper-». O texto diz que se sai de «um tipo de atenção profunda» (linhas 23 e 24).",
+    "Distraída é a hiperatenção, que muda sempre de foco. O que fica para trás é «um tipo de atenção profunda» (linhas 23 e 24)."
+   ]
+  },
+  {
+   "t": "emparelhar",
+   "g": "3c",
+   "rot": "Porquê? Liga os pares",
+   "l": "25",
+   "p": "A opção certa diz a definição do texto pelo avesso. Liga cada parte da opção à expressão do texto de que é o contrário.",
+   "p2": "Liga cada parte da opção certa à expressão do texto que ela nega.",
+   "pares": [
+    [
+     "uma dificuldade em concentrar-se",
+     "o contrário de «atenção profunda» (linhas 23 e 24)"
+    ],
+    [
+     "de forma demorada",
+     "o contrário de «rápida mudança de foco» (linha 25)"
+    ],
+    [
+     "numa única atividade",
+     "o contrário de «entre diversas atividades» (linha 25)"
+    ]
+   ],
+   "f": "A opção certa diz pela negativa o que o texto diz pela positiva: quem muda depressa de foco, entre diversas atividades, tem dificuldade em ficar muito tempo numa só. É a mesma ideia, vista do outro lado."
+  },
+  {
+   "t": "sublinhar",
+   "frase": "Esta forma de atenção multitarefa não corresponde, na sua opinião, a um progresso, mas, bem pelo contrário, a um retrocesso civilizacional.",
+   "certas": [
+    12,
+    19
+   ],
+   "g": "3d",
+   "rot": "Porquê? Toca nas palavras",
+   "l": "27",
+   "p": "Linhas 26 e 27: que duas palavras opõe Han, para avaliar a hiperatenção? Toca nelas.",
+   "p2": "Como avalia Han a hiperatenção? Toca nas duas palavras que ele opõe.",
+   "f": "**progresso** e **retrocesso**: Han nega o progresso e afirma o retrocesso, e «bem pelo contrário» reforça a oposição. A avaliação é negativa: nada de «alteração positiva»."
+  },
+  {
+   "t": "vf",
+   "g": "3e",
+   "rot": "Porquê? Verdadeiro ou falso",
+   "l": "25",
+   "p": "Na linha 25, «rápida mudança» quer dizer uma alteração brusca e inesperada no modo de fazer as tarefas.",
+   "p2": "A «rápida mudança de foco» (linha 25) é uma mudança súbita na maneira de executar as tarefas.",
+   "v": false,
+   "f": "Falso. O que muda depressa é o foco da atenção: salta «entre diversas atividades, fontes informativas e processos» (linhas 25 e 26). O texto não diz que a mudança é inesperada nem que muda o modo de executar as tarefas.",
+   "fe": "O que muda é o foco, de uma atividade para outra (linhas 25 e 26), não o modo de fazer as tarefas."
+  },
+  {
+   "t": "ler",
+   "rot": "O texto, 4 de 4",
+   "titulo": "Linhas 37 a 46",
+   "html": "<div class=\"v prova-l\"><span class=\"ln par\" data-l=\"37\"><span class=\"n\"></span>Todavia, de forma totalmente contraditória, a tendência das chamadas sociedades</span><span class=\"ln\" data-l=\"38\"><span class=\"n\"></span>avançadas consiste em atribuir aos mecanismos rápidos de pensamento uma posição</span><span class=\"ln\" data-l=\"39\"><span class=\"n\"></span>predominante, em detrimento das formas de pensamento mais lento. [...]</span><span class=\"ln par\" data-l=\"40\"><span class=\"n\">40</span>As consequências desta opção civilizacional estão à vista. O progresso tecnológico e a sua</span><span class=\"ln\" data-l=\"41\"><span class=\"n\"></span>difusão capilar produziram, além de profundas mudanças sociais, uma aceleração do tempo e,</span><span class=\"ln\" data-l=\"42\"><span class=\"n\"></span>consequentemente, uma verdadeira revolução do pensamento, que se tornou, também este,</span><span class=\"ln\" data-l=\"43\"><span class=\"n\"></span>mais acelerado. [...]</span><span class=\"ln par\" data-l=\"44\"><span class=\"n\"></span>Mas esta revolução tem os seus riscos. Uma excessiva prevalência dos mecanismos</span><span class=\"ln\" data-l=\"45\"><span class=\"n\">45</span>rápidos do pensamento, designados por pensamento rápido ou digital, pode implicar soluções</span><span class=\"ln\" data-l=\"46\"><span class=\"n\"></span>e comportamentos errados, danos na educação e, em geral, na vivência civil.</span></div><p class=\"fonte\">Elsa de Barros, «As virtudes do pensamento lento», <i>Público – P2</i>, 10 de março de 2024, p. 22. (Texto adaptado)</p>"
+  },
+  {
+   "t": "escolha",
+   "g": "4a",
+   "p": "O item 4 pede a tese do texto. O que é a tese?",
+   "p2": "Num texto como este, a tese é…",
+   "o": [
+    "A ideia que a autora defende no texto",
+    "A ideia que aparece no primeiro parágrafo",
+    "Um facto que o texto dá a conhecer ao leitor"
+   ],
+   "c": 0,
+   "f": "**A ideia que a autora defende no texto**: tudo o resto (exemplos, citações, consequências) está lá para a sustentar. Por isso, a tese tem de valer «ao longo do texto», como diz o item, e não só num parágrafo.",
+   "fe": [
+    null,
+    "O primeiro parágrafo pode só preparar a tese. O item diz «ao longo do texto»: a ideia tem de valer do princípio ao fim.",
+    "Um facto informa; a tese é uma posição, que se defende com razões e exemplos."
+   ]
+  },
+  {
+   "t": "escolha",
+   "g": "4b",
+   "p": "Como confirmas que uma opção diz a tese «ao longo do texto»?",
+   "p2": "Que teste fazes a cada opção do item 4?",
+   "o": [
+    "Vês se a ideia vale no início, no meio e no fim",
+    "Vês se a opção usa palavras que estão no texto",
+    "Vês se a ideia aparece num dos parágrafos"
+   ],
+   "c": 0,
+   "f": "**Vês se a ideia vale no início, no meio e no fim.** Uma opção pode copiar palavras do texto e ser falsa; e uma ideia que só está num parágrafo é um pormenor, não a tese.",
+   "fe": [
+    null,
+    "Cuidado: as opções erradas usam muitas vezes palavras do texto, noutro sentido ou noutro lugar.",
+    "Uma ideia de um só parágrafo é um pormenor. A tese atravessa o texto."
+   ]
+  },
+  {
+   "t": "ler",
+   "rot": "O texto todo, para o item 4",
+   "titulo": "Linhas 1 a 46",
+   "html": "<p>O texto inteiro outra vez: o item 4 pede a tese «ao longo do texto». Relê-o antes de escolheres.</p><div class=\"v prova-l\"><span class=\"ln par\"><span class=\"n\">1</span>Hoje em dia, revela-se mais difícil mobilizar as crianças para a aprendizagem, se a</span><span class=\"ln\"><span class=\"n\">2</span>entendermos como um processo desenvolvido a longo prazo, que inclui momentos de</span><span class=\"ln\"><span class=\"n\">3</span>grande encantamento, com atividades entusiasmantes e mobilizadoras, mas também tarefas</span><span class=\"ln\"><span class=\"n\">4</span>repetitivas, que necessitam de investimento, concentração, paciência e perseverança por parte</span><span class=\"ln\"><span class=\"n\">5</span>dos alunos. É precisamente neste último ponto que reside a dificuldade em cativar as novas</span><span class=\"ln\"><span class=\"n\">6</span>gerações para os desafios escolares, quando estes contrariam a tendência para a rapidez,</span><span class=\"ln\"><span class=\"n\">7</span>a fugacidade da atenção, o imediatismo e a volatilidade de interesses.</span><span class=\"ln par\"><span class=\"n\">8</span>A prevalência desta postura pode ser explicada pela sobrevalorização do pensamento</span><span class=\"ln\"><span class=\"n\">9</span>rápido, que domina na atualidade. Considerado como um progresso civilizacional, este tipo de</span><span class=\"ln\"><span class=\"n\">10</span>pensamento opõe-se ao pensamento lento, encarado como um retrocesso temporal. Chegados</span><span class=\"ln\"><span class=\"n\">11</span>a este ponto, a pergunta que se impõe é a seguinte: será que esta visão é correta e está a ser</span><span class=\"ln\"><span class=\"n\">12</span>favorável para a própria sociedade que a criou?</span><span class=\"ln par\"><span class=\"n\">13</span>Antes de responder a esta questão, podemos fazer o seguinte exercício: imaginemo-nos</span><span class=\"ln\"><span class=\"n\">14</span>a regressar ao cenário da vida selvagem, na qual um animal tem de dividir a sua atenção por</span><span class=\"ln\"><span class=\"n\">15</span>diversas atividades para que, enquanto come, não acabe por ser comido. A consequência não</span><span class=\"ln\"><span class=\"n\">16</span>é difícil de antever: o animal vê-se impossibilitado de se concentrar profundamente naquilo</span><span class=\"ln\"><span class=\"n\">17</span>que tem diante de si, pois tem de estar permanentemente alerta em relação àquilo que está</span><span class=\"ln\"><span class=\"n\">18</span>atrás de si. Paradoxalmente, muitas das atividades mais valorizadas na atualidade, como a</span><span class=\"ln\"><span class=\"n\">19</span>multitarefa e muitas atividades digitais, privilegiam este tipo de mecanismos que geram uma</span><span class=\"ln\"><span class=\"n\">20</span>atenção ampla, mas rasa, semelhante à de um animal selvagem. Tal como refere o filósofo</span><span class=\"ln\"><span class=\"n\">21</span>Byung-Chul Han na obra <i>Sociedade do Cansaço</i>, «as mais recentes evoluções sociais e a</span><span class=\"ln\"><span class=\"n\">22</span>mudança de estrutura da atenção aproximam a sociedade humana da vida selvagem».</span><span class=\"ln par\"><span class=\"n\">23</span>De acordo com a sua análise, estamos a assistir a uma deslocação de um tipo de atenção</span><span class=\"ln\"><span class=\"n\">24</span>profunda para uma forma de atenção radicalmente distinta — a hiperatenção —, que</span><span class=\"ln\"><span class=\"n\">25</span>se caracteriza por uma rápida mudança de foco entre diversas atividades, fontes informativas</span><span class=\"ln\"><span class=\"n\">26</span>e processos. Esta forma de atenção multitarefa não corresponde, na sua opinião, a um</span><span class=\"ln\"><span class=\"n\">27</span>progresso, mas, bem pelo contrário, a um retrocesso civilizacional.</span><span class=\"ln par\"><span class=\"n\">28</span>Também é esta a visão do médico e cientista Lamberto Maffei, que aborda a diferença</span><span class=\"ln\"><span class=\"n\">29</span>entre o pensamento rápido e o pensamento lento no livro com o emblemático título <i>Elogio da</i></span><span class=\"ln\"><span class=\"n\">30</span><i>Lentidão</i>. De acordo com a sua explicação, o cérebro humano possui dois tipos de mecanismos:</span><span class=\"ln\"><span class=\"n\">31</span>os primeiros são mecanismos ancestrais rápidos de resposta ao ambiente; enquanto os</span><span class=\"ln\"><span class=\"n\">32</span>segundos, de carácter mais lento, se desenvolvem mais tarde e são fruto do raciocínio.</span><span class=\"ln par\"><span class=\"n\">33</span>De carácter automático ou semiautomático, os primeiros mecanismos são essenciais para</span><span class=\"ln\"><span class=\"n\">34</span>a sobrevivência [...]. Já a segunda modalidade, própria dos animais superiores, é inerente ao</span><span class=\"ln\"><span class=\"n\">35</span>controlo de um ser humano sobre a sua própria vida, ao seu relacionamento com os outros</span><span class=\"ln\"><span class=\"n\">36</span>indivíduos e com o meio ambiente.</span><span class=\"ln par\"><span class=\"n\">37</span>Todavia, de forma totalmente contraditória, a tendência das chamadas sociedades</span><span class=\"ln\"><span class=\"n\">38</span>avançadas consiste em atribuir aos mecanismos rápidos de pensamento uma posição</span><span class=\"ln\"><span class=\"n\">39</span>predominante, em detrimento das formas de pensamento mais lento. [...]</span><span class=\"ln par\"><span class=\"n\">40</span>As consequências desta opção civilizacional estão à vista. O progresso tecnológico e a sua</span><span class=\"ln\"><span class=\"n\">41</span>difusão capilar produziram, além de profundas mudanças sociais, uma aceleração do tempo e,</span><span class=\"ln\"><span class=\"n\">42</span>consequentemente, uma verdadeira revolução do pensamento, que se tornou, também este,</span><span class=\"ln\"><span class=\"n\">43</span>mais acelerado. [...]</span><span class=\"ln par\"><span class=\"n\">44</span>Mas esta revolução tem os seus riscos. Uma excessiva prevalência dos mecanismos</span><span class=\"ln\"><span class=\"n\">45</span>rápidos do pensamento, designados por pensamento rápido ou digital, pode implicar soluções</span><span class=\"ln\"><span class=\"n\">46</span>e comportamentos errados, danos na educação e, em geral, na vivência civil.</span></div><p class=\"fonte\">Elsa de Barros, «As virtudes do pensamento lento», <i>Público – P2</i>, 10 de março de 2024, p. 22. (Texto adaptado)</p>"
+  },
+  {
+   "t": "item",
+   "g": "4i",
+   "rot": "Item 4 da prova ✱",
+   "p": "Ao longo do texto, a autora defende a tese de que, na atualidade, se assiste",
+   "o": [
+    "a uma conceção nova do tempo, que se tornou tão acelerado que provoca o cansaço dos indivíduos das sociedades atuais.",
+    "a uma situação paradoxal, quando se verifica que o avanço tecnológico e digital é acompanhado de um retrocesso civilizacional.",
+    "a um estádio da civilização em que se hiperboliza a importância dos processos digitais na realização de atividades e na manipulação de fontes informativas.",
+    "a um momento singular na história da humanidade, em que o comportamento dos seres humanos é dominado por mecanismos racionais."
+   ],
+   "c": 1,
+   "f": "**(B)**, a chave da versão 2. Leitura nossa: a contradição atravessa o texto. «Paradoxalmente» (linha 18), as atividades mais valorizadas privilegiam uma atenção como a de um animal selvagem; a hiperatenção é «um retrocesso civilizacional» (linha 27); «de forma totalmente contraditória» (linha 37), as sociedades avançadas preferem os mecanismos rápidos; e o progresso tecnológico acelerou o pensamento, com «riscos» (linhas 40 a 44).",
+   "fe": [
+    "A «aceleração do tempo» (linha 41) é uma consequência do progresso tecnológico, e o cansaço só está no título do livro de Han (linha 21). A autora não defende que o tempo acelerado cansa as pessoas: fala do pensamento.",
+    null,
+    "Usa palavras do texto («atividades», «fontes informativas», linha 25), mas fica num pormenor e deixa de fora o essencial: o progresso que é, ao mesmo tempo, um retrocesso. E o texto fala de «pensamento rápido ou digital» (linha 45), não da manipulação de fontes informativas.",
+    "É o contrário: os mecanismos a que se atribui «uma posição predominante» (linhas 38 e 39) são os rápidos, automáticos ou semiautomáticos (linha 33). Os mecanismos do raciocínio são os lentos (linha 32)."
+   ],
+   "l": "37"
+  },
+  {
+   "t": "sublinhar",
+   "frase": "Todavia, de forma totalmente contraditória, a tendência das chamadas sociedades",
+   "certas": [
+    0,
+    4
+   ],
+   "g": "4c",
+   "rot": "Porquê? Toca nas palavras",
+   "l": "37",
+   "p": "Linha 37: toca nas duas palavras que marcam a contradição.",
+   "p2": "Que palavras da linha 37 mostram que a autora vê uma contradição? Toca nas duas.",
+   "f": "**Todavia** opõe este parágrafo ao anterior, e **contraditória** diz o que a autora pensa: as chamadas sociedades avançadas preferem os mecanismos que servem a sobrevivência. Já na linha 18 havia um «Paradoxalmente». É a situação paradoxal da opção certa."
+  },
+  {
+   "t": "ordenar",
+   "g": "4d",
+   "rot": "Porquê? Ordena",
+   "p": "Por ordem: como avança o texto, do princípio ao fim?",
+   "p2": "Arruma as ideias do texto pela ordem em que a autora as apresenta.",
+   "passos": [
+    "A escola pede paciência, e as novas gerações querem rapidez",
+    "O pensamento rápido é visto como progresso, e o lento como retrocesso",
+    "Um animal selvagem e duas autoridades mostram uma atenção ampla, mas rasa",
+    "Contraditoriamente, as sociedades avançadas preferem os mecanismos rápidos",
+    "Esta revolução do pensamento traz riscos para a educação e a vida civil"
+   ],
+   "f": "O problema (linhas 1 a 7), a visão de hoje e a pergunta (linhas 8 a 12), o exemplo e as autoridades (linhas 13 a 36), a contradição (linhas 37 a 43) e os riscos (linhas 44 a 46). Do princípio ao fim, a mesma ideia: um avanço que traz um retrocesso. É a tese da opção certa."
+  },
+  {
+   "t": "emparelhar",
+   "g": "4e",
+   "rot": "Porquê? Liga os pares",
+   "l": "40",
+   "p": "Liga cada parte da opção certa às palavras do texto que a sustentam.",
+   "p2": "Onde está, no texto, cada parte da opção certa? Liga.",
+   "pares": [
+    [
+     "uma situação paradoxal",
+     "«de forma totalmente contraditória» (linha 37)"
+    ],
+    [
+     "o avanço tecnológico e digital",
+     "«O progresso tecnológico e a sua difusão capilar» (linhas 40 e 41)"
+    ],
+    [
+     "um retrocesso civilizacional",
+     "«a um retrocesso civilizacional» (linha 27)"
+    ]
+   ],
+   "f": "As três partes estão no texto: a contradição dita pela autora (linha 37), o progresso tecnológico (linhas 40 e 41) e o retrocesso de que fala Han (linha 27), que a autora faz seu. A opção certa junta-as numa só frase."
+  },
+  {
+   "t": "vf",
+   "g": "4f",
+   "rot": "Porquê? Verdadeiro ou falso",
+   "l": "38",
+   "p": "Nas linhas 37 a 39, as sociedades avançadas dão o primeiro lugar aos mecanismos rápidos, não ao raciocínio.",
+   "p2": "Para a autora, hoje predominam os mecanismos rápidos de pensamento, e não os do raciocínio.",
+   "v": true,
+   "f": "Verdadeiro. A posição predominante é dos «mecanismos rápidos de pensamento» (linha 38), automáticos ou semiautomáticos (linha 33). O raciocínio é dos mecanismos lentos (linha 32), postos em segundo plano: «em detrimento das formas de pensamento mais lento» (linha 39). A opção dos «mecanismos racionais» diz o contrário.",
+   "fe": "Relê as linhas 37 a 39: a «posição predominante» é dos «mecanismos rápidos de pensamento»; o raciocínio é dos lentos (linha 32)."
+  },
+  {
+   "t": "vf",
+   "g": "4g",
+   "rot": "Porquê? Verdadeiro ou falso",
+   "l": "41",
+   "p": "A tese do texto é que o tempo, cada vez mais acelerado, cansa as pessoas.",
+   "p2": "A autora defende sobretudo que a aceleração do tempo provoca cansaço.",
+   "v": false,
+   "f": "Falso. A «aceleração do tempo» (linha 41) é só uma das consequências do progresso tecnológico, e a palavra «Cansaço» aparece só no título do livro de Han (linha 21). O que a autora defende é que este progresso traz um retrocesso no pensamento.",
+   "fe": "A aceleração do tempo é uma consequência (linha 41), e o cansaço não é tema do texto."
+  },
+  {
+   "t": "escolha",
+   "g": "4h",
+   "rot": "Porquê? Escolhe",
+   "l": "19",
+   "p": "A opção que diz que «se hiperboliza a importância dos processos digitais» não é a tese. Porquê?",
+   "p2": "Porque falha, como tese, a opção sobre a importância hiperbolizada dos «processos digitais»?",
+   "o": [
+    "Deixa de fora o retrocesso, que está no centro do texto",
+    "Contradiz o texto, que nunca fala de atividades digitais",
+    "Diz o mesmo que a tese, mas só com outras palavras"
+   ],
+   "c": 0,
+   "f": "**Deixa de fora o retrocesso.** As atividades digitais estão no texto (linha 19), mas como sinal de uma coisa maior: o avanço tecnológico traz um retrocesso no modo de pensar. Uma opção que fica num pormenor não diz a tese.",
+   "fe": [
+    null,
+    "O texto fala delas: «muitas atividades digitais» (linha 19). O problema é outro: falta o retrocesso, a ideia que o texto defende.",
+    "Não diz o mesmo: fala só de exagerar a importância do digital e esquece a contradição entre progresso e retrocesso."
+   ]
+  },
+  {
+   "t": "ler",
+   "rot": "Gramática",
+   "titulo": "Itens 5, 6 e 7",
+   "html": "<p>Os itens 1 a 4 eram sobre o sentido do texto. Os itens 5, 6 e 7 pedem gramática: a coesão referencial, a modalidade e a função sintática de uma oração.</p><p>Antes de cada item, vês o que ele pede e aprendes um teste, que experimentas noutras linhas do texto. Depois do item, os cartões «Porquê?» aplicam o teste às linhas da prova.</p>"
+  },
+  {
+   "t": "emparelhar",
+   "g": "5a",
+   "p": "Que tipo de coesão faz cada mecanismo? Arruma.",
+   "p2": "Referencial, lexical, temporal ou interfrásica? Arruma os mecanismos.",
+   "pares": [
+    [
+     "um pronome ou um demonstrativo que retoma algo já dito",
+     "coesão gramatical referencial"
+    ],
+    [
+     "outra palavra para o mesmo referente (um sinónimo, um hiperónimo)",
+     "coesão lexical"
+    ],
+    [
+     "uma expressão que situa no tempo («depois», «mais tarde»)",
+     "coesão gramatical temporal"
+    ],
+    [
+     "um conector que liga frases («todavia», «mas»)",
+     "coesão gramatical interfrásica"
+    ]
+   ],
+   "f": "A coesão gramatical referencial faz-se com palavras que apontam para um referente já dito: pronomes, demonstrativos, possessivos. A pergunta-teste é: para onde aponta esta palavra? Se não aponta para nada já dito, não é coesão referencial.",
+   "liga": [
+    {
+     "t": "Lição M4-F15: O que prende um texto",
+     "href": "../../../../m4/licao-m4-f15/"
+    }
+   ]
+  },
+  {
+   "t": "completar",
+   "g": "5b",
+   "p": "Para onde aponta? Faz o teste noutras linhas do texto.",
+   "frase": "Na linha 12, «a» (em «que a criou») retoma [1]. Na linha 26, «sua» (em «na sua opinião») retoma [2].",
+   "lacunas": [
+    {
+     "o": [
+      "esta visão",
+      "a pergunta",
+      "a sociedade"
+     ],
+     "c": 0
+    },
+    {
+     "o": [
+      "o filósofo Han",
+      "o médico Maffei",
+      "a própria autora"
+     ],
+     "c": 0
+    }
+   ],
+   "f": "**esta visão** e **o filósofo Han**. Na linha 12, a sociedade criou esta visão: a de que o pensamento rápido é progresso (linhas 9 a 11). Na linha 26, a opinião é a de Han, de quem se fala desde a linha 20; Maffei só aparece na linha 28. Pronomes e possessivos retomam o que já foi dito: é coesão referencial."
+  },
+  {
+   "t": "ler",
+   "rot": "As linhas do item 5",
+   "titulo": "As expressões das quatro opções",
+   "html": "<p>As linhas das quatro opções do item 5, com os números da prova. Em cada expressão, pergunta: para onde aponta?</p><div class=\"v prova-l\"><span class=\"ln par\"><span class=\"n\">1</span>Hoje em dia, revela-se mais difícil mobilizar as crianças para a aprendizagem, se a</span><span class=\"ln\"><span class=\"n\">5</span>dos alunos. É precisamente neste último ponto que reside a dificuldade em cativar as novas</span><span class=\"ln\"><span class=\"n\">6</span>gerações para os desafios escolares, quando estes contrariam a tendência para a rapidez,</span><span class=\"ln\"><span class=\"n\">17</span>que tem diante de si, pois tem de estar permanentemente alerta em relação àquilo que está</span><span class=\"ln\"><span class=\"n\">18</span>atrás de si. Paradoxalmente, muitas das atividades mais valorizadas na atualidade, como a</span><span class=\"ln\"><span class=\"n\">19</span>multitarefa e muitas atividades digitais, privilegiam este tipo de mecanismos que geram uma</span><span class=\"ln\"><span class=\"n\">21</span>Byung-Chul Han na obra <i>Sociedade do Cansaço</i>, «as mais recentes evoluções sociais e a</span><span class=\"ln par\"><span class=\"n\">23</span>De acordo com a sua análise, estamos a assistir a uma deslocação de um tipo de atenção</span><span class=\"ln\"><span class=\"n\">29</span>entre o pensamento rápido e o pensamento lento no livro com o emblemático título <i>Elogio da</i></span><span class=\"ln\"><span class=\"n\">30</span><i>Lentidão</i>. De acordo com a sua explicação, o cérebro humano possui dois tipos de mecanismos:</span><span class=\"ln\"><span class=\"n\">31</span>os primeiros são mecanismos ancestrais rápidos de resposta ao ambiente; enquanto os</span><span class=\"ln\"><span class=\"n\">32</span>segundos, de carácter mais lento, se desenvolvem mais tarde e são fruto do raciocínio.</span></div>"
+  },
+  {
+   "t": "item",
+   "g": "5i",
+   "rot": "Item 5 da prova",
+   "p": "Ao longo do texto, há diversos mecanismos que contribuem para a coesão gramatical referencial, nomeadamente o uso de elementos textuais como",
+   "o": [
+    "«Hoje em dia» (linha 1), «um tipo de atenção» (linha 23) e «no livro» (linha 29).",
+    "«dos alunos» (linha 5), «diante» (linha 17) e «este tipo» (linha 19).",
+    "«atrás» (linha 18), «na obra _Sociedade do Cansaço_» (linha 21) e «dois tipos» (linha 30).",
+    "«estes» (linha 6), «os primeiros» (linha 31) e «os segundos» (linhas 31 e 32)."
+   ],
+   "c": 3,
+   "f": "**(D)**, a chave da versão 2. Leitura nossa: as três expressões apontam para trás. A palavra «estes» (linha 6) retoma «os desafios escolares», da mesma linha; «os primeiros» e «os segundos» (linhas 31 e 32) retomam os «dois tipos de mecanismos» da linha 30: o primeiro tipo e o segundo.",
+   "fe": [
+    "Nenhuma das três retoma algo já dito: «Hoje em dia» situa no tempo (coesão temporal); «um tipo de atenção» e «no livro» apresentam coisas novas, que o texto explica a seguir.",
+    "Só «este tipo» (linha 19) retoma algo já dito: os mecanismos do animal (linhas 14 a 18). A expressão «dos alunos» retoma as crianças da linha 1 com outra palavra, o que é coesão lexical; «diante» situa no espaço.",
+    "Nenhuma retoma: «atrás» situa no espaço, e «na obra _Sociedade do Cansaço_» e «dois tipos» apresentam coisas novas. Os «dois tipos» são, aliás, o que «os primeiros» e «os segundos» retomam a seguir.",
+    null
+   ],
+   "l": "31"
+  },
+  {
+   "t": "completar",
+   "g": "5c",
+   "rot": "Porquê? Completa",
+   "l": "31",
+   "p": "Para onde aponta cada expressão da opção certa?",
+   "frase": "Na linha 6, «estes» retoma [1]. Nas linhas 31 e 32, «os primeiros» e «os segundos» retomam [2].",
+   "lacunas": [
+    {
+     "o": [
+      "os desafios escolares",
+      "as tarefas repetitivas",
+      "as gerações mais novas"
+     ],
+     "c": 0
+    },
+    {
+     "o": [
+      "os dois tipos de mecanismos",
+      "os livros de Han e de Maffei",
+      "os animais e os seres humanos"
+     ],
+     "c": 0
+    }
+   ],
+   "f": "**os desafios escolares** e **os dois tipos de mecanismos**. A palavra «estes» concorda com «os desafios» (masculino plural) e aponta para trás, na mesma linha. E «os primeiros» e «os segundos» dividem os «dois tipos de mecanismos» (linha 30): o primeiro tipo, o rápido, e o segundo, o lento. As três expressões retomam: coesão gramatical referencial."
+  },
+  {
+   "t": "emparelhar",
+   "g": "5d",
+   "rot": "Porquê? Liga os pares",
+   "l": "19",
+   "p": "Retoma algo já dito ou não? Arruma as expressões das opções erradas.",
+   "p2": "Arruma: que expressões das opções erradas fazem coesão referencial?",
+   "pares": [
+    [
+     "«Hoje em dia» (linha 1)",
+     "não retoma nada já dito"
+    ],
+    [
+     "«um tipo de atenção» (linha 23)",
+     "não retoma nada já dito"
+    ],
+    [
+     "«no livro» (linha 29)",
+     "não retoma nada já dito"
+    ],
+    [
+     "«dois tipos» (linha 30)",
+     "não retoma nada já dito"
+    ],
+    [
+     "«este tipo» (linha 19)",
+     "coesão referencial"
+    ],
+    [
+     "«dos alunos» (linha 5)",
+     "coesão lexical"
+    ]
+   ],
+   "f": "A expressão «este tipo» aponta para os mecanismos do animal, descritos nas linhas 14 a 18: é coesão referencial, mas está numa opção com duas expressões que não servem. E «dos alunos» retoma as crianças da linha 1 com outra palavra: coesão lexical. «Hoje em dia» situa no tempo, e «um tipo de atenção», «no livro» e «dois tipos» apresentam coisas novas."
+  },
+  {
+   "t": "escolha",
+   "g": "5e",
+   "rot": "Porquê? Escolhe",
+   "l": "17",
+   "p": "Na opção com «dos alunos», «diante» e «este tipo», o que falha?",
+   "p2": "Porque não serve a opção que junta «dos alunos», «diante» e «este tipo»?",
+   "o": [
+    "Só «este tipo» faz coesão referencial",
+    "Nenhuma das três retoma algo já dito",
+    "Só «dos alunos» faz coesão referencial"
+   ],
+   "c": 0,
+   "f": "**Só «este tipo» faz coesão referencial**: aponta para os mecanismos do animal (linhas 14 a 18). A expressão «dos alunos» retoma as crianças com outra palavra (coesão lexical), e «diante» situa no espaço; quem retoma o animal, em «diante de si», é o pronome «si». Uma expressão certa não chega: as três têm de servir.",
+   "fe": [
+    null,
+    "A expressão «este tipo» retoma: aponta para os mecanismos do animal, descritos nas linhas 14 a 18. O problema é que «dos alunos» e «diante» não servem.",
+    "A expressão «dos alunos» retoma as crianças da linha 1, mas com outra palavra: é coesão lexical, não referencial."
+   ]
+  },
+  {
+   "t": "emparelhar",
+   "g": "6a",
+   "p": "Modalidade e valor: que paráfrase serve de teste a cada um? Liga.",
+   "p2": "Liga cada modalidade, com o seu valor, à paráfrase que a testa.",
+   "pares": [
+    [
+     "deôntica, com valor de obrigação",
+     "«é obrigatório que…»"
+    ],
+    [
+     "deôntica, com valor de permissão",
+     "«é permitido que…»"
+    ],
+    [
+     "epistémica, com valor de certeza",
+     "«é certo que…»"
+    ],
+    [
+     "epistémica, com valor de probabilidade",
+     "«é provável que…»"
+    ]
+   ],
+   "f": "A modalidade deôntica diz o que se deve ou pode fazer (obrigação, permissão); a epistémica, o grau de certeza de quem fala (certeza, probabilidade). O teste: troca o verbo modal pela paráfrase e vê se o sentido se mantém. Os verbos «ter de» e «poder» servem às duas modalidades: só o contexto decide.",
+   "liga": [
+    {
+     "t": "Lição M3-F15: Poder, dever, querer",
+     "href": "../../../../m3/licao-m3-f15/"
+    }
+   ]
+  },
+  {
+   "t": "escolha",
+   "g": "6b",
+   "l": "13",
+   "p": "«podemos fazer o seguinte exercício» (linha 13): que paráfrase mantém o sentido?",
+   "p2": "Na linha 13, como se lê «podemos fazer»?",
+   "o": [
+    "É-nos permitido fazer este exercício",
+    "É certo que fazemos este exercício",
+    "É provável que façamos este exercício"
+   ],
+   "c": 0,
+   "f": "**Permissão**: a autora convida o leitor a fazer um exercício; não diz que é certo nem provável. Modalidade deôntica, com valor de permissão (leitura nossa). Compara com «pode ser explicada» (linha 8): o mesmo verbo, outro valor.",
+   "fe": [
+    null,
+    "A autora não diz que é certo que fazemos o exercício: propõe que o façamos, se quisermos. «Podemos» dá licença, não certeza.",
+    "Não é uma hipótese sobre o que vai acontecer: a autora convida o leitor a imaginar a cena. É permissão, não probabilidade."
+   ]
+  },
+  {
+   "t": "escolha",
+   "g": "6c",
+   "l": "8",
+   "p": "«A prevalência desta postura pode ser explicada pela sobrevalorização do pensamento» (linha 8): que paráfrase mantém o sentido?",
+   "p2": "Na linha 8, como se lê «pode ser explicada»?",
+   "o": [
+    "Talvez esta postura se explique assim",
+    "É permitido explicar assim esta postura",
+    "É obrigatório explicar assim esta postura"
+   ],
+   "c": 0,
+   "f": "**Talvez**: a autora avança uma explicação possível, sem a dar como certa. É modalidade epistémica, com valor de probabilidade. Ninguém está a dar autorização para explicar.",
+   "fe": [
+    null,
+    "Ninguém dá licença para explicar: a autora avança uma explicação provável. É epistémica, não deôntica.",
+    "Não é um dever: é uma hipótese da autora sobre a causa. Aqui, «pode» exprime probabilidade."
+   ]
+  },
+  {
+   "t": "escolha",
+   "g": "6d",
+   "p": "No item 6, o que querem dizer «no primeiro caso» e «no segundo caso»?",
+   "p2": "Cada opção do item 6 tem duas metades. A que se refere cada uma?",
+   "o": [
+    "A «tem de estar» e a «pode implicar», por esta ordem",
+    "A «pode implicar» e a «tem de estar», por esta ordem",
+    "À modalidade deôntica e à epistémica, por esta ordem"
+   ],
+   "c": 0,
+   "f": "**A «tem de estar» e a «pode implicar», por esta ordem**: é a ordem em que o enunciado as cita. Cada metade de uma opção tem de servir à sua expressão; basta uma metade falsa para a opção cair.",
+   "fe": [
+    null,
+    "A ordem é a do enunciado: primeiro «tem de estar» (linha 17), depois «pode implicar» (linha 45).",
+    "No enunciado, «primeiro» e «segundo» retomam as duas expressões citadas, não as modalidades."
+   ]
+  },
+  {
+   "t": "ler",
+   "rot": "As linhas do item 6",
+   "titulo": "Linhas 13 a 18 e 44 a 46",
+   "html": "<p>As duas expressões do item 6 no seu contexto, com os números da prova.</p><div class=\"v prova-l\"><span class=\"ln par\"><span class=\"n\">13</span>Antes de responder a esta questão, podemos fazer o seguinte exercício: imaginemo-nos</span><span class=\"ln\"><span class=\"n\">14</span>a regressar ao cenário da vida selvagem, na qual um animal tem de dividir a sua atenção por</span><span class=\"ln\"><span class=\"n\">15</span>diversas atividades para que, enquanto come, não acabe por ser comido. A consequência não</span><span class=\"ln\"><span class=\"n\">16</span>é difícil de antever: o animal vê-se impossibilitado de se concentrar profundamente naquilo</span><span class=\"ln\"><span class=\"n\">17</span>que tem diante de si, pois tem de estar permanentemente alerta em relação àquilo que está</span><span class=\"ln\"><span class=\"n\">18</span>atrás de si. Paradoxalmente, muitas das atividades mais valorizadas na atualidade, como a</span><span class=\"ln par\"><span class=\"n\">44</span>Mas esta revolução tem os seus riscos. Uma excessiva prevalência dos mecanismos</span><span class=\"ln\"><span class=\"n\">45</span>rápidos do pensamento, designados por pensamento rápido ou digital, pode implicar soluções</span><span class=\"ln\"><span class=\"n\">46</span>e comportamentos errados, danos na educação e, em geral, na vivência civil.</span></div>"
+  },
+  {
+   "t": "item",
+   "g": "6i",
+   "rot": "Item 6 da prova",
+   "p": "As expressões «tem de estar» (linha 17) e «pode implicar» (linha 45) exprimem",
+   "o": [
+    "a modalidade deôntica com valor de obrigação, no primeiro caso, e a modalidade deôntica com valor de permissão, no segundo caso.",
+    "a modalidade epistémica com valor de certeza, no primeiro caso, e a modalidade epistémica com valor de probabilidade, no segundo caso.",
+    "a modalidade deôntica com valor de obrigação, no primeiro caso, e a modalidade epistémica com valor de probabilidade, no segundo caso.",
+    "a modalidade epistémica com valor de certeza, no primeiro caso, e a modalidade deôntica com valor de permissão, no segundo caso."
+   ],
+   "c": 2,
+   "f": "**(C)**, a chave da versão 2. Leitura nossa: o animal «tem de estar permanentemente alerta» (linha 17) porque a vida selvagem o obriga: deôntica, obrigação. Uma prevalência excessiva dos mecanismos rápidos «pode implicar soluções e comportamentos errados» (linhas 45 e 46): é provável que implique; ninguém dá licença. Epistémica, probabilidade.",
+   "fe": [
+    "A obrigação, no primeiro caso, está certa. Mas «pode implicar» não dá permissão: ninguém autoriza que a prevalência dos mecanismos rápidos traga erros. A autora diz que é provável que os traga.",
+    "O segundo caso está certo, mas o primeiro não: «tem de estar» não diz que é certo que o animal está alerta; diz que é obrigado a estar, para não ser comido (linhas 15 a 17).",
+    null,
+    "As duas metades falham: «tem de estar» é obrigação, não certeza, e «pode implicar» é probabilidade, não permissão."
+   ],
+   "l": "45"
+  },
+  {
+   "t": "escolha",
+   "g": "6e",
+   "rot": "Porquê? Escolhe",
+   "l": "17",
+   "p": "«pois tem de estar permanentemente alerta» (linha 17): que paráfrase mantém o sentido?",
+   "p2": "Na linha 17, como se lê «tem de estar»?",
+   "o": [
+    "O animal é obrigado a estar sempre alerta",
+    "É certo que o animal está sempre alerta",
+    "O animal tem licença para estar alerta"
+   ],
+   "c": 0,
+   "f": "**Obrigado**: sem estar alerta, o animal acaba comido (linha 15). É a mesma obrigação da linha 14, «tem de dividir». Modalidade deôntica, com valor de obrigação: as opções que dizem «certeza» no primeiro caso caem.",
+   "fe": [
+    null,
+    "A autora não diz que é certo que o animal está alerta: diz que tem de estar, para não ser comido. Obrigação, não certeza.",
+    "Não é uma licença: é uma obrigação, sem a qual o animal acaba comido (linha 15)."
+   ]
+  },
+  {
+   "t": "escolha",
+   "g": "6f",
+   "rot": "Porquê? Escolhe",
+   "l": "45",
+   "p": "«pode implicar soluções e comportamentos errados» (linhas 45 e 46): que paráfrase mantém o sentido?",
+   "p2": "Nas linhas 45 e 46, como se lê «pode implicar»?",
+   "o": [
+    "É provável que implique erros",
+    "É permitido que implique erros",
+    "É certo que vai implicar erros"
+   ],
+   "c": 0,
+   "f": "**É provável**: a autora avisa de um risco («Mas esta revolução tem os seus riscos», linha 44), sem o dar como certo. Modalidade epistémica, com valor de probabilidade. Permissão não faz sentido: ninguém autoriza erros.",
+   "fe": [
+    null,
+    "Ninguém autoriza erros: «pode» exprime aqui uma probabilidade, um risco (linha 44).",
+    "A autora fala de um risco, não de uma certeza: é provável, não certo."
+   ]
+  },
+  {
+   "t": "emparelhar",
+   "g": "7a",
+   "p": "Que teste confirma cada função sintática? Liga.",
+   "p2": "Liga cada função sintática ao teste que a confirma.",
+   "pares": [
+    [
+     "sujeito",
+     "troca-se por «isso» e passa para antes do verbo"
+    ],
+    [
+     "complemento direto",
+     "troca-se por «o», «a», «os» ou «as»"
+    ],
+    [
+     "complemento do adjetivo",
+     "completa um adjetivo, com preposição («difícil de…»)"
+    ],
+    [
+     "predicativo do sujeito",
+     "diz como é o sujeito, depois de «ser», «estar», «parecer»"
+    ]
+   ],
+   "f": "São os quatro testes das quatro opções do item 7. Uma oração também tem função sintática: troca-a por «isso» e vê que função tem «isso» na frase.",
+   "liga": [
+    {
+     "t": "Lição M6-F04: Como se ligam as orações",
+     "href": "../../../../m6/licao-m6-f04/"
+    }
+   ]
+  },
+  {
+   "t": "vf",
+   "g": "7b",
+   "l": "16",
+   "p": "«A consequência não é difícil de antever» (linhas 15 e 16): «de antever» completa o adjetivo «difícil».",
+   "p2": "Nas linhas 15 e 16, «de antever» é complemento do adjetivo «difícil».",
+   "v": true,
+   "f": "Verdadeiro: difícil de quê? «de antever». Com a preposição «de», a oração completa o adjetivo: é complemento do adjetivo. O que não é difícil de antever é outra coisa, o sujeito.",
+   "fe": "Faz o teste: difícil de quê? «de antever». A preposição «de» liga a oração ao adjetivo: é complemento do adjetivo."
+  },
+  {
+   "t": "sublinhar",
+   "frase": "A consequência não é difícil de antever:",
+   "certas": [
+    0,
+    1
+   ],
+   "g": "7c",
+   "l": "15",
+   "p": "Linhas 15 e 16: o que não é difícil de antever? Toca no sujeito.",
+   "p2": "Qual é o sujeito de «não é difícil de antever»? Toca nas palavras.",
+   "f": "**A consequência**: _isso não é difícil de antever_. Aqui, a frase tem um sujeito (a consequência), e o adjetivo «difícil» tem um complemento com «de» (de antever). Guarda este par: no item 7, a frase é parecida, mas não igual."
+  },
+  {
+   "t": "ler",
+   "rot": "A linha do item 7",
+   "titulo": "Linhas 1 e 2",
+   "html": "<p>O início da frase do item 7, com os números da prova.</p><div class=\"v prova-l\"><span class=\"ln par\"><span class=\"n\">1</span>Hoje em dia, revela-se mais difícil mobilizar as crianças para a aprendizagem, se a</span><span class=\"ln\"><span class=\"n\">2</span>entendermos como um processo desenvolvido a longo prazo, que inclui momentos de</span></div>"
+  },
+  {
+   "t": "item",
+   "g": "7i",
+   "rot": "Item 7 da prova ✱",
+   "p": "A oração «mobilizar as crianças para a aprendizagem» (linha 1) desempenha a função sintática de",
+   "o": [
+    "sujeito.",
+    "complemento direto.",
+    "complemento do adjetivo.",
+    "predicativo do sujeito."
+   ],
+   "c": 0,
+   "f": "**(A)**, a chave da versão 2. Leitura nossa: o que se revela mais difícil? Mobilizar as crianças para a aprendizagem. Troca a oração por «isso»: _Hoje em dia, isso revela-se mais difícil_. A oração é o sujeito; «mais difícil» diz como é esse sujeito.",
+   "fe": [
+    null,
+    "Não há complemento direto: ninguém revela a oração, é a oração que se revela difícil. Com «o» no lugar dela (_revela-o mais difícil_), a frase deixa de dizer o mesmo.",
+    "Não completa o adjetivo: não há preposição, como em «difícil de antever» (linha 16). Aqui, a oração é aquilo que é difícil, isto é, o sujeito de «revela-se mais difícil».",
+    "O predicativo do sujeito é «mais difícil»: diz como é o sujeito. A oração é o próprio sujeito, aquilo de que se diz que é mais difícil."
+   ],
+   "l": "1"
+  },
+  {
+   "t": "sublinhar",
+   "frase": "Hoje em dia, revela-se mais difícil mobilizar as crianças para a aprendizagem,",
+   "certas": [
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+   ],
+   "g": "7d",
+   "rot": "Porquê? Toca nas palavras",
+   "l": "1",
+   "p": "Linha 1: o que se revela mais difícil? Toca nas palavras que respondem.",
+   "p2": "Qual é o sujeito de «revela-se mais difícil»? Toca nas palavras.",
+   "f": "**mobilizar as crianças para a aprendizagem**: é isso que se revela mais difícil. A resposta à pergunta é o sujeito, mesmo quando é uma oração e vem depois do verbo."
+  },
+  {
+   "t": "escolha",
+   "g": "7e",
+   "rot": "Porquê? Escolhe",
+   "l": "1",
+   "p": "Troca a oração da linha 1 por «isso». Que frase mantém o sentido?",
+   "p2": "Que frase mostra que a oração da linha 1 é o sujeito?",
+   "o": [
+    "Hoje em dia, isso revela-se mais difícil",
+    "Hoje em dia, revela-se mais difícil disso",
+    "Hoje em dia, a escola revela-o mais difícil"
+   ],
+   "c": 0,
+   "f": "**Hoje em dia, isso revela-se mais difícil.** A palavra «isso» fica antes do verbo e é aquilo de que se diz que é mais difícil: o sujeito. Com «de» («difícil disso»), seria complemento do adjetivo; com «o» («revela-o»), complemento direto. Nenhuma dessas frases diz o que diz a linha 1.",
+   "fe": [
+    null,
+    "Com «de», a oração passaria a completar «difícil». Mas a linha 1 não tem preposição: a oração não completa o adjetivo.",
+    "Para haver complemento direto, era preciso alguém que revelasse alguma coisa. Na linha 1, ninguém revela: a oração é que se revela difícil."
+   ]
+  },
+  {
+   "t": "vf",
+   "g": "7f",
+   "rot": "Porquê? Verdadeiro ou falso",
+   "l": "1",
+   "p": "Na linha 1, «mais difícil» é o predicativo do sujeito, e o sujeito é a oração que vem depois.",
+   "p2": "Em «revela-se mais difícil mobilizar as crianças», «mais difícil» diz como é a oração, que é o sujeito.",
+   "v": true,
+   "f": "Verdadeiro. O verbo «revelar-se» liga o sujeito a uma qualidade, como «ser»: _mobilizar as crianças é mais difícil_. A expressão «mais difícil» é o predicativo do sujeito; a oração é o sujeito. A opção que diz «predicativo do sujeito» troca as duas peças.",
+   "fe": "Faz o teste: _mobilizar as crianças é mais difícil_. A qualidade, «mais difícil», é o predicativo; a oração é o sujeito."
+  },
+  {
+   "t": "emparelhar",
+   "g": "fim",
+   "p": "Que armadilha tem cada opção errada? Liga.",
+   "p2": "As opções erradas desta prova enganam de quatro maneiras. Liga cada uma ao seu exemplo.",
+   "pares": [
+    [
+     "usa uma palavra do texto noutro sentido",
+     "o «cansaço» da sociedade contemporânea (item 2)"
+    ],
+    [
+     "diz o contrário do texto",
+     "a hiperatenção como «concentração excessiva» (item 3)"
+    ],
+    [
+     "junta uma parte certa a uma parte falsa",
+     "obrigação no primeiro caso, permissão no segundo (item 6)"
+    ],
+    [
+     "fica num pormenor e perde a ideia central",
+     "a importância dos «processos digitais» (item 4)"
+    ]
+   ],
+   "f": "Quatro armadilhas, quatro maneiras de resistir: confirma o sentido da palavra no texto; vê se a opção diz o mesmo ou o contrário; testa cada metade; e pergunta se a ideia vale para o texto todo."
+  },
+  {
+   "t": "ler",
+   "rot": "Para levar",
+   "escuro": true,
+   "html": "<p class=\"levar\">A certa diz o texto por outras palavras. As erradas trocam-lhe o sentido.</p><ul><li><b>Delimita primeiro.</b> Os recuos marcam os parágrafos: «dois primeiros parágrafos» são as linhas 1 a 12.</li><li><b>Paráfrase:</b> procura no texto cada parte da opção, dita de outra maneira («sobrevalorização», «sobrestimado»).</li><li><b>Definição:</b> uma palavra nova lê-se na frase que a define, não no prefixo.</li><li><b>Tese:</b> tem de valer do princípio ao fim. Um pormenor não chega.</li><li><b>Gramática:</b> usa um teste. Pergunta para onde aponta a palavra; troca o verbo modal por «é obrigatório que», «é permitido que» ou «é provável que»; troca a oração por «isso».</li></ul><p>Nas oito provas de 2023 a 2026 (1.ª e 2.ª fases), o Grupo II tem sempre sete itens de escolha múltipla, com quatro opções: primeiro sobre o texto, no fim de gramática (leitura nossa).</p><details class=\"mais\"><summary>Dos critérios oficiais</summary><div><p>«A ausência de indicação inequívoca da versão da prova implica a classificação com zero pontos das respostas aos itens de seleção.»</p><p>«As respostas aos itens de seleção podem ser classificadas de forma dicotómica ou por níveis de desempenho, de acordo com os critérios específicos. No primeiro caso, a pontuação só é atribuída às respostas corretas, sendo todas as outras respostas classificadas com zero pontos.»</p><p>Chaves da versão 2, Grupo II: 1 (C), 2 (B), 3 (A), 4 (B), 5 (D), 6 (C), 7 (A), com 13 pontos cada.</p><p class=\"fonte\">Critérios de Classificação, Prova 639, 2.ª fase, 2026 (IAVE; PDF com o logótipo da EduQA), p. 1 e p. 13.</p></div></details>"
+  }
+ ]
+}

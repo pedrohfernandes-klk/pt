@@ -6,6 +6,12 @@ on:
       - 'assets/exame/**'
       - 'assets/pt-lessons/**'
       - 'scripts/audit_cards.py'
+      - 'scripts/provas/**'
+      # 30/10/2026: a medição única das opções equilibradas (também dos aquecimentos) e as páginas obras/ cujo título as
+      # lições das provas leem (scripts/provas/gerar.py); mudá-las sem correr estes testes deixava as provas desatualizadas
+      - 'scripts/opcoes_equilibradas.py'
+      - 'scripts/auditar_aquecimentos_m1.py'
+      - 'obras/**'
       - 'tests/*exame*'
       - 'tests/*provas*'
       - 'tests/fixtures/prova-639-*'
@@ -17,7 +23,7 @@ permissions:
 jobs:
   test:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 25
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -36,6 +42,7 @@ jobs:
           node --check assets/exame/provas-licao.js
           python -m unittest discover -s tests -p 'test_exame*.py' -v
           python -m unittest discover -s tests -p 'test_provas*.py' -v
+          python scripts/provas/opcoes.py --exigir
       - name: Preparar navegador
         run: |
           npm install --no-save --package-lock=false playwright

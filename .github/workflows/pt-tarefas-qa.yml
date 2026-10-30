@@ -23,6 +23,7 @@ on:
       - 'm4/index.html'
       - 'm4/guia-da-tarefa-m4/**'
       - 'scripts/auditar_aquecimentos_m1.py'
+      - 'scripts/opcoes_equilibradas.py'
       - 'm1/index.html'
       - 'm1/guia-da-tarefa-m1/**'
       - 'tests/fixtures/*task*'

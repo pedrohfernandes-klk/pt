@@ -17,6 +17,8 @@ body.oficina .of-colofao{margin-top:56px;padding:20px 0 0;border-top:3px solid v
 .pv-cab{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,24rem);gap:8px 40px;align-items:end;margin:0 0 20px}
 .pv-quando{grid-column:1;margin:0;font:600 .72rem/1.4 var(--of-sans);letter-spacing:.14em;text-transform:uppercase;color:var(--of-oxido)}
 .pv-cab h2{grid-column:1;margin:0;font:italic 600 clamp(1.5rem,3vw,2.2rem)/1.08 var(--of-serif);letter-spacing:-.015em}
+/* 30/10/2026: o ano e a fase dentro do título, para cada bloco ter um nome próprio nos leitores de ecrã. */
+.pv-cab h2 .pv-quando{display:block;margin:0 0 4px;font-style:normal}
 .pv-cab .pv-sobre{grid-column:2;grid-row:1/3;margin:0;font:400 .92rem/1.55 var(--of-sans);color:var(--of-tinta)}
 .pv-grupos{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
 .pv-grupo{min-width:0}

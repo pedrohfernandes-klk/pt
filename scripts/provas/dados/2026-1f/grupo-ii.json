@@ -1,0 +1,726 @@
+{
+ "_sobre": "Grupo II da Prova 639, 1.ª fase, 2026, versão 2: título, «aprendes» e cartões, lidos por scripts/provas/gerar.py. Vieram do piloto (desenho-g2.json, com as trocas de autoria de gerar_paginas.py já aplicadas) a 30/10/2026; daqui em diante, é este ficheiro que se edita. O que é da prova e dos critérios está nos cartões tal como na transcrição tests/fixtures/prova-639-2026-1f-v2.json; o resto é nosso.",
+ "titulo": "«Paisagem sonora»",
+ "aprendes": "Aprendes a ler um texto de imprensa como na prova: delimitar parágrafos e linhas, encontrar a frase que decide cada opção e eliminar as que têm uma parte falsa. No sentido do texto: a intenção do autor no início, um recurso expressivo, a intenção das descrições e a conclusão. Na gramática: coesão lexical e referencial, os valores de «como» (exemplificação, comparação) e o teste do complemento agente da passiva.",
+ "cartoes": [
+  {
+   "t": "ler",
+   "rot": "Abre",
+   "titulo": "Grupo II: «Paisagem sonora»",
+   "html": "<p class=\"abre\"><b>Um texto sobre o que se ouve nas cidades.</b> Um texto do jornal <i>Público</i> e os sete itens do Grupo II da prova. Lês o texto às partes. Em cada item da prova, tentas primeiro sozinho; depois, os cartões «Porquê?» levam-te às linhas que decidem a resposta.</p><ul><li><b>Quanto vale:</b> sete itens de escolha múltipla, 13 pontos cada. Os itens 1, 2, 6 e 7 (marcados com ✱, como na prova) contam sempre: 52 pontos. Os itens 3, 4 e 5 juntam-se aos itens 3 e 6 do Grupo I: desses cinco, contam os três com melhor pontuação.</li><li><b>Tempo:</b> 120 minutos, mais 30 de tolerância, para a prova toda. A prova não marca tempo para cada grupo.</li><li><b>O que treinas:</b> a intenção do autor, um recurso expressivo, a conclusão, a coesão, os valores de «como» e o complemento agente da passiva.</li><li><b>Item da prova:</b> são os itens oficiais, com as quatro opções pela ordem da prova. Os cartões «Porquê?» e os outros cartões são nossos. Para rever o texto, volta atrás com ←.</li></ul><p class=\"fonte\">Exame Final Nacional de Português, Prova 639, 1.ª fase, 2026, versão 2 (IAVE; os PDF de 2026 trazem o logótipo da EduQA, Instituto de Educação, Qualidade e Avaliação). Chaves: critérios de classificação da mesma prova, versão 2. Os cartões de preparação e as explicações são nossos.</p>"
+  },
+  {
+   "t": "ler",
+   "rot": "O texto, 1 de 4",
+   "titulo": "Linhas 1 a 9",
+   "html": "<p class=\"fonte\">Na prova: «Leia o texto e as notas.»</p><div class=\"v prova-l\"><span class=\"ln par\" data-l=\"1\"><span class=\"n\"></span>Embora a música tenha milénios de existência, o seu conhecimento histórico é relativamente</span><span class=\"ln\" data-l=\"2\"><span class=\"n\"></span>recente. A sua escrita apenas se consolida a partir do século XV, com a expansão e o</span><span class=\"ln\" data-l=\"3\"><span class=\"n\"></span>aperfeiçoamento dos sistemas de notação, enquanto a reprodução de áudio surge só no final</span><span class=\"ln\" data-l=\"4\"><span class=\"n\"></span>do século XIX. Sendo uma arte temporal, manifesta-se no tempo, tornando cada <span class=\"gt\" data-s=\"desempenho; exibição em público.\"><i>performance</i></span><sup>1</sup></span><span class=\"ln\" data-l=\"5\"><span class=\"n\">5</span>um acontecimento único e irrepetível.</span><span class=\"ln par\" data-l=\"6\"><span class=\"n\"></span>Existe um tipo de música cujos instrumentos não são nem piano, nem violino, nem guitarra,</span><span class=\"ln\" data-l=\"7\"><span class=\"n\"></span>mas uma orquestra composta por edifícios, ruas, praças, fontanários e aves. A paisagem</span><span class=\"ln\" data-l=\"8\"><span class=\"n\"></span>sonora característica de cada cidade ou bairro. Aquilo que escutamos quando abrimos uma</span><span class=\"ln\" data-l=\"9\"><span class=\"n\"></span>janela ou nos sentamos numa praça.</span></div><p class=\"gl\"><b>NOTAS</b><br><sup>1</sup> performance – desempenho; exibição em público.</p>"
+  },
+  {
+   "t": "escolha",
+   "g": "1a",
+   "p": "O item 1 fala dos «dois parágrafos iniciais». Que linhas tens de reler?",
+   "p2": "Que linhas formam os dois primeiros parágrafos do texto?",
+   "o": [
+    "Da linha 1 à linha 9",
+    "Da linha 1 à linha 5",
+    "Da linha 1 à linha 14"
+   ],
+   "c": 0,
+   "f": "**Da linha 1 à linha 9.** Cada parágrafo começa com recuo: o primeiro vai da linha 1 à 5, o segundo da 6 à 9. O item pede o que fazem os dois em conjunto.",
+   "fe": [
+    null,
+    "A linha 5 fecha só o primeiro parágrafo; o segundo começa, com recuo, na linha 6.",
+    "Na linha 10 começa, com recuo, o terceiro parágrafo."
+   ]
+  },
+  {
+   "t": "item",
+   "rot": "Item 1 da prova ✱",
+   "p": "Nos dois parágrafos iniciais, o autor do texto procura",
+   "o": [
+    "realçar a relevância da notação musical como forma de homogeneizar as execuções instrumentais.",
+    "estabelecer uma analogia entre a música e os sons característicos de cada cidade ou de cada bairro.",
+    "destacar a importância da música e da sua história, em particular na vida de cada bairro ou cidade.",
+    "explicar o valor do registo áudio dos ruídos de cada cidade, segundo os princípios da notação musical."
+   ],
+   "c": 1,
+   "f": "**(B)**. Nas linhas 6 a 8, há «um tipo de música» cujos instrumentos são «uma orquestra composta por edifícios, ruas, praças, fontanários e aves»: a paisagem sonora de cada cidade ou bairro. É uma analogia entre a música e os sons da cidade.",
+   "fe": [
+    "A notação aparece só como dado histórico (linhas 2 e 3), e cada _performance_ é «um acontecimento único e irrepetível» (linhas 4 e 5): nada de execuções iguais.",
+    null,
+    "Usa palavras do texto («música», «bairro», «cidade»), mas troca a relação. O texto não fala do papel da música na vida dos bairros: diz que os sons do bairro são uma música (linhas 6 a 8). A história da música é só o contexto do primeiro parágrafo.",
+    "A «reprodução de áudio» (linha 3) é só um marco da história da música. O texto não fala de gravar os ruídos da cidade nem de os escrever com notação musical."
+   ],
+   "l": "7",
+   "g": "1i"
+  },
+  {
+   "t": "vf",
+   "g": "1b",
+   "l": "4",
+   "p": "No primeiro parágrafo, o autor diz que a escrita da música torna iguais todas as execuções.",
+   "p2": "Para o autor, a notação musical faz com que cada execução seja igual às outras.",
+   "v": false,
+   "f": "Falso. A notação é só um dado da história da música (linhas 2 e 3). Sobre as execuções, o autor diz o contrário: cada _performance_ é «um acontecimento único e irrepetível» (linhas 4 e 5).",
+   "fe": "O texto não liga a notação a execuções iguais: diz que cada _performance_ é «um acontecimento único e irrepetível» (linhas 4 e 5).",
+   "rot": "Porquê? Verdadeiro ou falso"
+  },
+  {
+   "t": "vf",
+   "g": "1c",
+   "l": "3",
+   "p": "Na linha 3, ao falar da «reprodução de áudio», o autor propõe que se gravem os sons das cidades.",
+   "p2": "A «reprodução de áudio» (linha 3) aparece como uma proposta do autor para guardar os sons da cidade.",
+   "v": false,
+   "f": "Falso. A reprodução de áudio aparece só como marco da história da música: «surge só no final do século XIX» (linhas 3 e 4). Não há proposta nenhuma.",
+   "fe": "É só um marco da história da música: a reprodução de áudio «surge só no final do século XIX» (linhas 3 e 4). O texto não fala em gravar os sons das cidades.",
+   "rot": "Porquê? Verdadeiro ou falso"
+  },
+  {
+   "t": "sublinhar",
+   "g": "1d",
+   "l": "7",
+   "p": "Na linha 7, toca nos cinco «instrumentos» da orquestra de que o autor fala.",
+   "p2": "De que é feita a orquestra da linha 7? Toca nas cinco palavras.",
+   "cita": "Existe um tipo de música cujos instrumentos não são nem piano, nem violino, nem guitarra,",
+   "frase": "mas uma orquestra composta por edifícios, ruas, praças, fontanários e aves.",
+   "certas": [
+    5,
+    6,
+    7,
+    8,
+    10
+   ],
+   "f": "**edifícios, ruas, praças, fontanários e aves**: no lugar do piano, do violino e da guitarra, está a cidade. Logo a seguir, o autor dá-lhe um nome: «A paisagem sonora característica de cada cidade ou bairro» (linhas 7 e 8).",
+   "rot": "Porquê? Toca nas palavras"
+  },
+  {
+   "t": "emparelhar",
+   "g": "2a",
+   "p": "Liga cada recurso das opções do item 2 ao que ele faz.",
+   "p2": "O que faz cada um destes recursos expressivos? Liga.",
+   "pares": [
+    [
+     "sinestesia",
+     "junta, na mesma expressão, sensações de sentidos diferentes"
+    ],
+    [
+     "metonímia",
+     "troca uma palavra por outra que lhe está próxima (o autor pela obra)"
+    ],
+    [
+     "aliteração",
+     "repete o mesmo som consonântico"
+    ],
+    [
+     "hipérbole",
+     "exagera para dar ênfase"
+    ]
+   ],
+   "f": "São os quatro recursos das opções do item 2. Em cada opção, confirma primeiro que o recurso está mesmo na expressão; só depois vê se o efeito descrito bate com o texto.",
+   "liga": [
+    {
+     "t": "Lição M6-F09: Fora do mundo, dentro da cidade",
+     "href": "../../../../m6/licao-m6-f09/"
+    }
+   ]
+  },
+  {
+   "t": "item",
+   "rot": "Item 2 da prova ✱",
+   "p": "Na expressão «paisagem sonora» (linhas 7 e 8), evidencia-se o recurso",
+   "o": [
+    "à metonímia, para aproximar, sensorialmente, as imagens e os sons percecionados na cidade.",
+    "à aliteração, para sugerir a combinação harmoniosa de sons, próximos e longínquos, ouvidos na cidade.",
+    "à sinestesia, para descrever a simultaneidade de experiências sensoriais propiciadas pela cidade.",
+    "à hipérbole, para enfatizar o excesso de ruídos a que os transeuntes são expostos na cidade."
+   ],
+   "c": 2,
+   "f": "**(C)**. Em «paisagem sonora», «paisagem» é o que se vê e «sonora», o que se ouve. Juntar a visão e a audição na mesma expressão é uma sinestesia: a cidade dá-se a ver e a ouvir ao mesmo tempo.",
+   "fe": [
+    "Na metonímia, uma palavra toma o lugar de outra que lhe está próxima (o autor pela obra). Em «paisagem sonora» nada é substituído: juntam-se dois sentidos.",
+    "Em «paisagem sonora» não se repete um som consonântico. E a combinação dos sons «perto de nós» com a mistura de fundo «ao longe» vem descrita nas linhas 13 e 14, não nesta expressão.",
+    null,
+    "A expressão não exagera nada. O excesso de ruído só aparece como «ameaça», nas linhas 35 a 40; aqui, o autor elogia os sons da cidade."
+   ],
+   "l": "7",
+   "g": "2i"
+  },
+  {
+   "t": "emparelhar",
+   "g": "2b",
+   "p": "Linhas 7 e 8: cada palavra é do que se vê ou do que se ouve?",
+   "p2": "Visão ou audição? Arruma as palavras das linhas 7 e 8.",
+   "pares": [
+    [
+     "paisagem",
+     "o que se vê"
+    ],
+    [
+     "sonora",
+     "o que se ouve"
+    ],
+    [
+     "escutamos",
+     "o que se ouve"
+    ],
+    [
+     "orquestra",
+     "o que se ouve"
+    ]
+   ],
+   "f": "Só «paisagem» é da visão: é o que se vê de um lugar. As outras três são da audição.",
+   "rot": "Porquê? Liga os pares"
+  },
+  {
+   "t": "ler",
+   "rot": "O texto, 2 de 4",
+   "titulo": "Linhas 10 a 22",
+   "html": "<div class=\"v prova-l\"><span class=\"ln par\" data-l=\"10\"><span class=\"n\">10</span>A deliciosa harmonia composta pela mistura única de pessoas a falar ou de crianças a</span><span class=\"ln\" data-l=\"11\"><span class=\"n\"></span>brincar; o som da buzina de um barco ao longe; o canto das andorinhas ou das cigarras</span><span class=\"ln\" data-l=\"12\"><span class=\"n\"></span>no verão; um carpinteiro a pregar umas tábuas algures na vizinhança; ou alguém a ensaiar</span><span class=\"ln\" data-l=\"13\"><span class=\"n\"></span>uma canção dentro do seu apartamento. A combinação de sons mais definidos, perto de nós,</span><span class=\"ln\" data-l=\"14\"><span class=\"n\"></span>complementados pela mistura homogénea de fundo, ao longe. A vida e a cidade a pulsarem.</span><span class=\"ln par\" data-l=\"15\"><span class=\"n\">15</span>Como resistir às <span class=\"gt\" data-s=\"sinfonias curtas, para pequena orquestra ou orquestra de câmara.\"><i>sinfoniettas</i></span><sup>2</sup> das entranhas dos centros históricos de cidades como Lisboa</span><span class=\"ln\" data-l=\"16\"><span class=\"n\"></span>e de tantas outras, com as ruas estreitas a imporem um desarmante contraste com as vias</span><span class=\"ln\" data-l=\"17\"><span class=\"n\"></span>principais, logo após se contornar uma ou duas esquinas? A atmosfera tranquila composta por</span><span class=\"ln\" data-l=\"18\"><span class=\"n\"></span>sons de pessoas misturados com o sino da igreja, o carrinho de compras de uma senhora a</span><span class=\"ln\" data-l=\"19\"><span class=\"n\"></span>subir a rua, ou os guinchos das gaivotas em terra.</span><span class=\"ln par\" data-l=\"20\"><span class=\"n\">20</span>Ou de cidades aquáticas, como Veneza, ou dos mercados flutuantes que vemos pela Ásia,</span><span class=\"ln\" data-l=\"21\"><span class=\"n\"></span>onde predomina o som do movimento da água a ser rasgada pelas inúmeras embarcações,</span><span class=\"ln\" data-l=\"22\"><span class=\"n\"></span>complementando o dos transeuntes e vendilhões.</span></div><p class=\"gl\"><b>NOTAS</b><br><sup>2</sup> sinfoniettas – sinfonias curtas, para pequena orquestra ou orquestra de câmara.</p>"
+  },
+  {
+   "t": "ler",
+   "rot": "O texto, 3 de 4",
+   "titulo": "Linhas 23 a 34",
+   "html": "<div class=\"v prova-l\"><span class=\"ln par\" data-l=\"23\"><span class=\"n\"></span>Ou ainda de cidades como Istambul ou Marraquexe, com aqueles cinco momentos do dia</span><span class=\"ln\" data-l=\"24\"><span class=\"n\"></span>em que o chamamento à oração — o <i>adhan</i> — é anunciado a partir dos altifalantes instalados</span><span class=\"ln\" data-l=\"25\"><span class=\"n\">25</span>nos minaretes das várias mesquitas espalhadas pelos bairros. Aquele recitar de palavras em</span><span class=\"ln\" data-l=\"26\"><span class=\"n\"></span>tom hipnótico, ligeiramente distorcido pelos sistemas de amplificação de áudio. A entrada</span><span class=\"ln\" data-l=\"27\"><span class=\"n\"></span>em cena dessincronizada, resultante dos pequenos desacertos horários, levando ao gradual</span><span class=\"ln\" data-l=\"28\"><span class=\"n\"></span>acumular de camadas sonoras, em crescendo, tal como numa <span class=\"gt\" data-s=\"género de música em que as partes se repetem sucessivamente e parecem fugir umas das outras, finalizando sempre em consonâncias.\"><i>fuga</i></span><sup>3</sup> do género musical clássico</span><span class=\"ln\" data-l=\"29\"><span class=\"n\"></span>ocidental.</span><span class=\"ln par\" data-l=\"30\"><span class=\"n\">30</span>A acústica do instrumento-cidade é favorecida pelo urbanismo tradicional de edifícios</span><span class=\"ln\" data-l=\"31\"><span class=\"n\"></span>contínuos, em quarteirão, por oposição à cidade feita de blocos dispersos. As ruas formadas</span><span class=\"ln\" data-l=\"32\"><span class=\"n\"></span>por frentes edificadas propagam os sons mais delicados; os logradouros fechados favorecem</span><span class=\"ln\" data-l=\"33\"><span class=\"n\"></span>o eco; as praças enclausuradas demarcam melhor a sua música da música das ruas</span><span class=\"ln\" data-l=\"34\"><span class=\"n\"></span>envolventes, tornando-a mais nítida.</span></div><p class=\"gl\"><b>NOTAS</b><br><sup>3</sup> fuga – género de música em que as partes se repetem sucessivamente e parecem fugir umas das outras, finalizando sempre em consonâncias.</p>"
+  },
+  {
+   "t": "item",
+   "rot": "Item 3 da prova",
+   "p": "Entre as linhas 10 e 34, o autor descreve diversos ambientes com a intenção de",
+   "o": [
+    "provar que a acústica das cidades decorre da arquitetura dos espaços e da especificidade da sua utilização, propiciando vivências diferentes.",
+    "refutar a ideia de que as cidades ruidosas, por privilegiarem a acumulação e a amplificação de sons, se tornam irresistíveis.",
+    "demonstrar a tese de que as cidades funcionam como instrumentos musicais, independentemente da sua estrutura urbanística.",
+    "ilustrar a suavidade dos diferentes sons que, reiterada e sincopadamente, invadem inúmeros espaços urbanos pelo mundo fora."
+   ],
+   "c": 0,
+   "f": "**(A)**. Cada ambiente soa de maneira diferente, conforme o uso (a vida do bairro, os barcos e os vendilhões, a oração), e as linhas 30 a 34 dizem porquê: a acústica é «favorecida pelo urbanismo tradicional de edifícios contínuos», e ruas, logradouros e praças fazem coisas diferentes ao som.",
+   "fe": [
+    null,
+    "O autor não refuta nada: «Como resistir às _sinfoniettas_ […]?» (linha 15) elogia estes sons, e o que descreve são atmosferas, até uma «atmosfera tranquila» (linha 17), não cidades ruidosas.",
+    "A expressão «independentemente da sua estrutura urbanística» contradiz as linhas 30 e 31: a acústica é favorecida pelos «edifícios contínuos, em quarteirão, por oposição à cidade feita de blocos dispersos».",
+    "Nem todos os sons são suaves (o carpinteiro a pregar, os guinchos das gaivotas, os altifalantes), e o autor não diz que eles «invadem» os espaços: à mistura de sons chama «deliciosa harmonia» (linha 10)."
+   ],
+   "l": "30",
+   "g": "3i"
+  },
+  {
+   "t": "vf",
+   "g": "3a",
+   "l": "15",
+   "p": "«Como resistir às _sinfoniettas_ […]?» (linha 15): o autor queixa-se de sons de que não consegue fugir.",
+   "p2": "Na linha 15, a pergunta «Como resistir…?» é uma queixa contra o barulho.",
+   "v": false,
+   "f": "Falso. É uma pergunta retórica que elogia: estes sons são irresistíveis porque encantam. Logo a seguir, o autor fala de uma «atmosfera tranquila» (linha 17).",
+   "fe": "Não é queixa: é uma pergunta retórica que elogia estes sons, e logo a seguir vem uma «atmosfera tranquila» (linha 17).",
+   "liga": [
+    {
+     "t": "Lição M4-F25: Os peixes e os homens",
+     "href": "../../../../m4/licao-m4-f25/"
+    }
+   ],
+   "rot": "Porquê? Verdadeiro ou falso"
+  },
+  {
+   "t": "vf",
+   "g": "3b",
+   "l": "12",
+   "p": "Entre as linhas 10 e 22, todos os sons descritos são suaves.",
+   "p2": "Nas linhas 10 a 22, o autor só descreve sons delicados.",
+   "v": false,
+   "f": "Falso. Há um carpinteiro a pregar umas tábuas (linha 12) e os guinchos das gaivotas (linha 19). O autor gosta destes sons sem dizer que são todos suaves.",
+   "fe": "Nem todos: há um carpinteiro a pregar umas tábuas (linha 12) e os guinchos das gaivotas (linha 19).",
+   "rot": "Porquê? Verdadeiro ou falso"
+  },
+  {
+   "t": "emparelhar",
+   "g": "3c",
+   "p": "Linhas 15 a 29: que sons marcam cada lugar? Liga.",
+   "p2": "Liga cada lugar aos sons que o autor lhe dá (linhas 15 a 29).",
+   "pares": [
+    [
+     "Centros históricos de cidades como Lisboa",
+     "o sino da igreja e os guinchos das gaivotas"
+    ],
+    [
+     "Cidades aquáticas e mercados flutuantes",
+     "a água rasgada pelas embarcações"
+    ],
+    [
+     "Istambul ou Marraquexe",
+     "o chamamento à oração, nos altifalantes"
+    ]
+   ],
+   "f": "Cada lugar soa ao que lá se faz: a vida do bairro, os barcos e os vendilhões, a oração. Os sons mudam com o uso de cada espaço.",
+   "rot": "Porquê? Liga os pares"
+  },
+  {
+   "t": "sublinhar",
+   "g": "3d",
+   "l": "30",
+   "p": "Linhas 30 e 31: que edifícios favorecem a acústica do instrumento-cidade? Toca nas duas palavras.",
+   "p2": "Que tipo de edifícios ajuda a cidade a soar bem? Toca nas duas palavras.",
+   "frase": "A acústica do instrumento-cidade é favorecida pelo urbanismo tradicional de edifícios contínuos,",
+   "certas": [
+    10,
+    11
+   ],
+   "f": "**edifícios contínuos**, «em quarteirão, por oposição à cidade feita de blocos dispersos» (linha 31). O som depende da forma da cidade.",
+   "rot": "Porquê? Toca nas palavras"
+  },
+  {
+   "t": "emparelhar",
+   "g": "3e",
+   "l": "32",
+   "p": "Linhas 31 a 34: o que faz cada espaço ao som? Liga.",
+   "p2": "Liga cada espaço da cidade ao efeito que tem no som.",
+   "pares": [
+    [
+     "As ruas formadas por frentes edificadas",
+     "propagam os sons mais delicados"
+    ],
+    [
+     "Os logradouros fechados",
+     "favorecem o eco"
+    ],
+    [
+     "As praças enclausuradas",
+     "demarcam melhor a sua música"
+    ]
+   ],
+   "f": "Três espaços, três efeitos: a acústica depende da arquitetura. É a explicação dos ambientes descritos antes.",
+   "rot": "Porquê? Liga os pares"
+  },
+  {
+   "t": "ler",
+   "rot": "O texto, 4 de 4",
+   "titulo": "Linhas 35 a 47",
+   "html": "<div class=\"v prova-l\"><span class=\"ln par\" data-l=\"35\"><span class=\"n\">35</span>A ameaça óbvia a este património é a poluição sonora causada pelo automóvel ou pelo</span><span class=\"ln\" data-l=\"36\"><span class=\"n\"></span>avião, cuja presença tudo abafa. Um problema que tenderá a ser mitigado com a progressiva</span><span class=\"ln\" data-l=\"37\"><span class=\"n\"></span>transição dos motores de combustão para motores elétricos silenciosos. Será uma revolução</span><span class=\"ln\" data-l=\"38\"><span class=\"n\"></span>na qualidade do ambiente das cidades. Mas também há as ameaças menos óbvias, como a</span><span class=\"ln\" data-l=\"39\"><span class=\"n\"></span>abusiva reprodução de música amplificada no espaço público que, hoje, contamina qualquer</span><span class=\"ln\" data-l=\"40\"><span class=\"n\">40</span>ponto turístico.</span><span class=\"ln par\" data-l=\"41\"><span class=\"n\"></span>A invisível paisagem sonora é, provavelmente, a qualidade mais subvalorizada das nossas</span><span class=\"ln\" data-l=\"42\"><span class=\"n\"></span>cidades e habitações, mas de enorme importância para o nosso bem-estar — que não se pode</span><span class=\"ln\" data-l=\"43\"><span class=\"n\"></span>resumir ao conforto visual, espacial ou térmico dos nossos ambientes.</span><span class=\"ln par\" data-l=\"44\"><span class=\"n\"></span>Um património frágil e de difícil proteção. Podemos desviar o olhar, mas o som não pede</span><span class=\"ln\" data-l=\"45\"><span class=\"n\">45</span>permissão. E não experimentamos música sem a sua contraparte: o silêncio, a <i>folha branca</i>. Tal</span><span class=\"ln\" data-l=\"46\"><span class=\"n\"></span>como as cidades não se fazem apenas de massas edificadas, precisam do seu contraponto: ruas</span><span class=\"ln\" data-l=\"47\"><span class=\"n\"></span>e praças — as <i>telas vazias</i> que recebem a vida humana a acontecer em conjunto, em sociedade.</span></div><p class=\"fonte\">Miguel Marcelino, «Paisagem sonora», <i>Público – P2</i>, 28 de setembro de 2025, p. 22. (Texto adaptado)</p>"
+  },
+  {
+   "t": "item",
+   "rot": "Item 4 da prova",
+   "p": "O autor conclui a sua reflexão, defendendo a ideia de que,",
+   "o": [
+    "dada a revolução que está em curso, as cidades do futuro beneficiarão de melhores qualidades acústicas, visuais, espaciais e térmicas.",
+    "pela sua importância, é fundamental preservar a riqueza do património musical urbano, reduzindo a dimensão das massas edificadas.",
+    "dada a revolução que está em curso, os obstáculos à proteção das paisagens sonoras serão eliminados.",
+    "pela sua importância, a paisagem sonora deve merecer maior atenção, a fim de criar condições que promovam a sua plena fruição."
+   ],
+   "c": 3,
+   "f": "**(D)**. A paisagem sonora é «a qualidade mais subvalorizada» das cidades, «mas de enorme importância para o nosso bem-estar» (linhas 41 e 42), e a linha 44 acrescenta: «Um património frágil e de difícil proteção.» Por isso, merece mais atenção. O texto fecha com uma analogia: não experimentamos música sem silêncio, e as cidades precisam de ruas e praças (linhas 45 a 47).",
+   "fe": [
+    "A «revolução» (linha 37) é só a dos motores elétricos e está no parágrafo das ameaças, não na conclusão. O conforto «visual, espacial ou térmico» (linha 43) aparece para dizer que o bem-estar não se resume a ele.",
+    "O texto não pede menos edifícios: as cidades «não se fazem apenas de massas edificadas» (linha 46), precisam também de ruas e praças. E as linhas 30 e 31 elogiam os edifícios contínuos.",
+    "O problema «tenderá a ser mitigado» (linha 36), isto é, atenuado, não eliminado. Ficam «as ameaças menos óbvias» (linha 38), e a paisagem sonora é «de difícil proteção» (linha 44).",
+    null
+   ],
+   "l": "41",
+   "g": "4i"
+  },
+  {
+   "t": "ordenar",
+   "g": "4a",
+   "p": "Por ordem: como avança o fim do texto (linhas 35 a 47)?",
+   "p2": "Que ideias abrem e quais fecham as linhas 35 a 47? Ordena.",
+   "passos": [
+    "Há ameaças: o ruído dos motores e a música amplificada",
+    "A paisagem sonora é a qualidade mais subvalorizada, mas importante para o bem-estar",
+    "É um património frágil e de difícil proteção: o som não pede permissão",
+    "A música precisa do silêncio, e a cidade, de ruas e praças"
+   ],
+   "f": "Primeiro as ameaças (linhas 35 a 40), depois o valor (linhas 41 a 43), por fim a fragilidade e a analogia que fecha o texto: a música precisa do silêncio, a cidade precisa de ruas e praças (linhas 44 a 47).",
+   "rot": "Porquê? Ordena"
+  },
+  {
+   "t": "escolha",
+   "g": "4b",
+   "l": "36",
+   "p": "«Um problema que tenderá a ser mitigado» (linha 36): «mitigado» quer dizer…",
+   "p2": "Na linha 36, o que acontece a um problema «mitigado»?",
+   "o": [
+    "atenuado, tornado menor",
+    "eliminado de vez",
+    "agravado com o tempo"
+   ],
+   "c": 0,
+   "f": "**Atenuado**: o problema diminui, não desaparece. E logo a seguir vêm «as ameaças menos óbvias» (linha 38).",
+   "fe": [
+    null,
+    "Mitigar não é eliminar: é tornar mais brando. Além disso, ficam «as ameaças menos óbvias», como a música amplificada (linhas 38 a 40).",
+    "É o contrário: os motores elétricos «silenciosos» (linha 37) vão diminuir o ruído."
+   ],
+   "rot": "Porquê? Escolhe"
+  },
+  {
+   "t": "sublinhar",
+   "g": "4c",
+   "l": "41",
+   "p": "Linhas 41 e 42: toca nas duas palavras que se opõem, ligadas por «mas».",
+   "p2": "Como tratamos a paisagem sonora e quanto vale ela? Toca nas duas palavras.",
+   "frase": "A invisível paisagem sonora é, provavelmente, a qualidade mais subvalorizada das nossas cidades e habitações, mas de enorme importância para o nosso bem-estar",
+   "certas": [
+    9,
+    18
+   ],
+   "f": "**subvalorizada** e **importância**: vale muito e damos-lhe pouco valor. A conclusão parte deste contraste.",
+   "rot": "Porquê? Toca nas palavras"
+  },
+  {
+   "t": "vf",
+   "g": "4d",
+   "l": "46",
+   "p": "No fim, o autor propõe que se construam menos edifícios para haver mais silêncio.",
+   "p2": "Nas últimas linhas, o autor pede cidades com menos massas edificadas.",
+   "v": false,
+   "f": "Falso. Diz que as cidades «não se fazem apenas de massas edificadas, precisam do seu contraponto: ruas e praças» (linhas 46 e 47). Pede o vazio ao lado do cheio, não menos edifícios.",
+   "fe": "O texto não pede menos edifícios: diz que as cidades «não se fazem apenas de massas edificadas» e precisam também de ruas e praças (linhas 46 e 47).",
+   "rot": "Porquê? Verdadeiro ou falso"
+  },
+  {
+   "t": "ler",
+   "rot": "Gramática",
+   "titulo": "Itens 5, 6 e 7",
+   "html": "<p>Os itens 1 a 4 eram sobre o sentido do texto. Os itens 5, 6 e 7 pedem gramática: a coesão, os valores de «como» e uma função sintática.</p><p>Antes de cada um, vês o que o item pede e aprendes um teste; nos itens 6 e 7, experimentas o teste noutras linhas do texto.</p>"
+  },
+  {
+   "t": "emparelhar",
+   "g": "5a",
+   "p": "Que tipo de coesão faz cada mecanismo? Arruma.",
+   "p2": "Lexical, referencial ou temporal? Arruma os mecanismos.",
+   "pares": [
+    [
+     "palavras do mesmo campo lexical",
+     "coesão lexical"
+    ],
+    [
+     "pronomes pessoais que retomam um nome já dito",
+     "coesão gramatical referencial"
+    ],
+    [
+     "palavras relativas que retomam um antecedente",
+     "coesão gramatical referencial"
+    ],
+    [
+     "a sequência dos tempos verbais",
+     "coesão gramatical temporal"
+    ]
+   ],
+   "f": "Os pronomes e as palavras relativas retomam o que já foi dito: coesão referencial. Os tempos verbais fazem a coesão temporal. As palavras ligadas pelo sentido, como as de um campo lexical, fazem a coesão lexical.",
+   "liga": [
+    {
+     "t": "Lição M4-F15: O que prende um texto",
+     "href": "../../../../m4/licao-m4-f15/"
+    }
+   ]
+  },
+  {
+   "t": "escolha",
+   "g": "5e",
+   "p": "No item 5, a que se referem «no primeiro caso» e «no segundo caso»?",
+   "p2": "No item 5, cada opção tem duas metades. A que tipo de coesão corresponde cada uma?",
+   "o": [
+    "À coesão lexical e à coesão gramatical referencial, por esta ordem",
+    "Às linhas 6 a 14 e às linhas 15 a 22",
+    "À coesão gramatical referencial e à coesão lexical, por esta ordem"
+   ],
+   "c": 0,
+   "f": "O enunciado nomeia primeiro a **coesão lexical** e depois a **coesão gramatical referencial**. A primeira metade de cada opção tem de servir à coesão lexical; a segunda, à referencial.",
+   "fe": [
+    null,
+    "O item não divide as linhas: «primeiro» e «segundo» retomam os dois tipos de coesão, pela ordem em que o enunciado os nomeia.",
+    "A ordem é a do enunciado: primeiro a coesão lexical, depois a gramatical referencial."
+   ]
+  },
+  {
+   "t": "item",
+   "rot": "Item 5 da prova",
+   "p": "Entre as linhas 6 e 22, a coesão lexical e a coesão gramatical referencial são asseguradas por mecanismos como",
+   "o": [
+    "o recurso à pronominalização, no primeiro caso, e o predomínio de verbos no presente do indicativo, no segundo caso.",
+    "o uso de vocábulos que integram os campos lexicais da «música» e da «cidade», no primeiro caso, e o uso dos vocábulos «cujos» e «onde», no segundo caso.",
+    "o recurso à pronominalização, no primeiro caso, e o recurso aos vocábulos «cujos» e «onde», no segundo caso.",
+    "o uso de vocábulos que integram os campos lexicais da «música» e da «cidade», no primeiro caso, e o predomínio de verbos no presente do indicativo, no segundo caso."
+   ],
+   "c": 1,
+   "f": "**(B)**. Coesão lexical: as palavras dos campos da «música» (violino, orquestra, harmonia) e da «cidade» (ruas, praças, fontanários). Coesão referencial: «cujos» (linha 6) retoma «um tipo de música», e «onde» (linha 21) retoma «cidades aquáticas, como Veneza» e «mercados flutuantes» (linha 20).",
+   "fe": [
+    "As duas metades falham: a pronominalização é coesão gramatical referencial, não lexical; e os tempos verbais fazem a coesão temporal, não a referencial.",
+    null,
+    "A segunda metade está certa, mas a primeira não: a pronominalização é um mecanismo de coesão gramatical referencial, não de coesão lexical.",
+    "A primeira metade está certa, mas a segunda não: o presente do indicativo tem a ver com a coesão temporal, não com a referencial."
+   ],
+   "l": "6",
+   "g": "5i"
+  },
+  {
+   "t": "emparelhar",
+   "g": "5b",
+   "p": "Linhas 6 a 22: a que campo lexical pertence cada palavra?",
+   "p2": "Música ou cidade? Arruma as palavras das linhas 6 a 22.",
+   "pares": [
+    [
+     "violino",
+     "música"
+    ],
+    [
+     "orquestra",
+     "música"
+    ],
+    [
+     "harmonia",
+     "música"
+    ],
+    [
+     "fontanários",
+     "cidade"
+    ],
+    [
+     "praças",
+     "cidade"
+    ],
+    [
+     "vias principais",
+     "cidade"
+    ]
+   ],
+   "f": "Música e cidade cruzam-se de linha para linha: são duas cadeias de palavras ligadas pelo sentido, que mantêm o tema à vista.",
+   "rot": "Porquê? Liga os pares"
+  },
+  {
+   "t": "sublinhar",
+   "g": "5c",
+   "l": "6",
+   "p": "Linha 6: toca na palavra que retoma um nome já dito.",
+   "p2": "Na linha 6, que palavra aponta para trás, para um nome já dito? Toca.",
+   "frase": "Existe um tipo de música cujos instrumentos não são nem piano, nem violino, nem guitarra,",
+   "certas": [
+    5
+   ],
+   "f": "**cujos**: aponta para trás, para um nome já dito na mesma frase, e diz que os instrumentos lhe pertencem. É uma palavra relativa: faz coesão referencial.",
+   "rot": "Porquê? Toca nas palavras"
+  },
+  {
+   "t": "completar",
+   "g": "5d",
+   "l": "21",
+   "p": "Para onde aponta cada palavra?",
+   "frase": "Na linha 6, «cujos» retoma [1]. Na linha 21, «onde» retoma [2].",
+   "lacunas": [
+    {
+     "o": [
+      "«um tipo de música»",
+      "«instrumentos»",
+      "«guitarra»"
+     ],
+     "c": 0
+    },
+    {
+     "o": [
+      "as cidades aquáticas e os mercados flutuantes",
+      "o som do movimento da água",
+      "as inúmeras embarcações"
+     ],
+     "c": 0
+    }
+   ],
+   "f": "A palavra «cujos» retoma **«um tipo de música»**: os instrumentos são desse tipo de música. A palavra «onde» retoma **as cidades aquáticas e os mercados flutuantes**, «cidades aquáticas, como Veneza» e «mercados flutuantes» (linha 20): é lá que «predomina o som do movimento da água». As duas apontam para o que já foi dito; as outras opções vêm depois delas no texto.",
+   "rot": "Porquê? Completa"
+  },
+  {
+   "t": "ler",
+   "rot": "As linhas do item 6",
+   "titulo": "Os «como» do texto",
+   "html": "<p>As linhas do texto em que aparece «como», com os números da prova. As linhas 39 e 45 completam as frases das linhas 38 e 46.</p><div class=\"v prova-l\"><span class=\"ln par\"><span class=\"n\">15</span>Como resistir às <span class=\"gt\" data-s=\"sinfonias curtas, para pequena orquestra ou orquestra de câmara.\"><i>sinfoniettas</i></span><sup>2</sup> das entranhas dos centros históricos de cidades como Lisboa</span><span class=\"ln par\"><span class=\"n\">20</span>Ou de cidades aquáticas, como Veneza, ou dos mercados flutuantes que vemos pela Ásia,</span><span class=\"ln par\"><span class=\"n\">23</span>Ou ainda de cidades como Istambul ou Marraquexe, com aqueles cinco momentos do dia</span><span class=\"ln\"><span class=\"n\">28</span>acumular de camadas sonoras, em crescendo, tal como numa <span class=\"gt\" data-s=\"género de música em que as partes se repetem sucessivamente e parecem fugir umas das outras, finalizando sempre em consonâncias.\"><i>fuga</i></span><sup>3</sup> do género musical clássico</span><span class=\"ln\"><span class=\"n\">38</span>na qualidade do ambiente das cidades. Mas também há as ameaças menos óbvias, como a</span><span class=\"ln\"><span class=\"n\">39</span>abusiva reprodução de música amplificada no espaço público que, hoje, contamina qualquer</span><span class=\"ln\"><span class=\"n\">45</span>permissão. E não experimentamos música sem a sua contraparte: o silêncio, a <i>folha branca</i>. Tal</span><span class=\"ln\"><span class=\"n\">46</span>como as cidades não se fazem apenas de massas edificadas, precisam do seu contraponto: ruas</span></div><p class=\"gl\"><b>NOTAS</b><br><sup>2</sup> sinfoniettas – sinfonias curtas, para pequena orquestra ou orquestra de câmara.<br><sup>3</sup> fuga – género de música em que as partes se repetem sucessivamente e parecem fugir umas das outras, finalizando sempre em consonâncias.</p>"
+  },
+  {
+   "t": "emparelhar",
+   "g": "6a",
+   "p": "Que paráfrase serve para testar cada valor de «como»?",
+   "p2": "Para cada valor de «como», que expressão o pode substituir?",
+   "pares": [
+    [
+     "exemplificação",
+     "«por exemplo»"
+    ],
+    [
+     "comparação",
+     "«da mesma maneira que»"
+    ],
+    [
+     "pergunta sobre o modo",
+     "«de que modo?»"
+    ]
+   ],
+   "f": "Troca «como» pela paráfrase e lê de novo: se o sentido se mantém, encontraste o valor."
+  },
+  {
+   "t": "vf",
+   "g": "6b",
+   "l": "23",
+   "p": "«cidades como Istambul ou Marraquexe» (linha 23): aqui, «como» introduz exemplos.",
+   "p2": "Na linha 23, «como» serve para dar exemplos de cidades.",
+   "v": true,
+   "f": "Verdadeiro: «cidades, por exemplo, Istambul ou Marraquexe». São exemplos de cidades onde se ouve o chamamento à oração.",
+   "fe": "Faz o teste: «cidades, por exemplo, Istambul ou Marraquexe» mantém o sentido. É exemplificação."
+  },
+  {
+   "t": "vf",
+   "g": "6c",
+   "l": "38",
+   "p": "«as ameaças menos óbvias, como a abusiva reprodução de música amplificada» (linhas 38 e 39): aqui, «como» compara duas coisas diferentes.",
+   "p2": "Nas linhas 38 e 39, «como» estabelece uma comparação.",
+   "v": false,
+   "f": "Falso: a música amplificada é um **exemplo** de ameaça menos óbvia («por exemplo, a abusiva reprodução…»). Não há duas coisas comparadas.",
+   "fe": "Faz o teste: «as ameaças menos óbvias, por exemplo, a abusiva reprodução de música amplificada» mantém o sentido. É exemplificação, não comparação."
+  },
+  {
+   "t": "escolha",
+   "g": "6d",
+   "p": "No item 6, o que obriga a palavra «respetivamente»?",
+   "p2": "No item 6, como se lê «respetivamente»?",
+   "o": [
+    "A primeira expressão tem de exemplificar e a segunda tem de comparar",
+    "Basta que uma das duas expressões exemplifique ou compare, por qualquer ordem",
+    "As duas expressões têm de ter o mesmo valor, de exemplo ou de comparação"
+   ],
+   "c": 0,
+   "f": "A palavra **«respetivamente»** segue a ordem do enunciado: exemplificação primeiro, comparação depois. Uma opção com os dois valores trocados está errada.",
+   "fe": [
+    null,
+    "Não basta uma: cada expressão tem o seu valor, pela ordem do enunciado.",
+    "O enunciado pede dois valores diferentes: exemplificação e comparação."
+   ]
+  },
+  {
+   "t": "item",
+   "rot": "Item 6 da prova ✱",
+   "p": "O vocábulo «como» está associado a uma ideia de exemplificação e a uma ideia de comparação",
+   "o": [
+    "em «como numa _fuga_» (linha 28) e «como as cidades» (linha 46), respetivamente.",
+    "em «Como resistir» (linha 15) e «como Lisboa» (linha 15), respetivamente.",
+    "em «como Veneza» (linha 20) e «como numa _fuga_» (linha 28), respetivamente.",
+    "em «como Lisboa» (linha 15) e «como Veneza» (linha 20), respetivamente."
+   ],
+   "c": 2,
+   "f": "**(C)**. Em «cidades aquáticas, como Veneza» (linha 20), Veneza é um exemplo («por exemplo, Veneza»). Em «tal como numa _fuga_» (linha 28), o acumular de camadas sonoras é comparado a uma fuga («da mesma maneira que numa _fuga_»).",
+   "fe": [
+    "Em «como numa _fuga_», as camadas de sons são comparadas a uma fuga: não há exemplo. E «como as cidades» (linha 46) também compara. Falta a exemplificação em primeiro lugar.",
+    "«Como resistir» (linha 15) pergunta «de que modo resistir?»: não exemplifica nem compara. E «como Lisboa» dá um exemplo, não compara.",
+    null,
+    "As duas dão exemplos: Lisboa e Veneza são exemplos de cidades. Falta a comparação em segundo lugar."
+   ],
+   "l": "28",
+   "g": "6i"
+  },
+  {
+   "t": "ler",
+   "rot": "As linhas do item 7",
+   "titulo": "As expressões com «pelo», «pela» e «pelas»",
+   "html": "<p>As linhas das quatro opções do item 7, com os números da prova.</p><div class=\"v prova-l\"><span class=\"ln par\"><span class=\"n\">20</span>Ou de cidades aquáticas, como Veneza, ou dos mercados flutuantes que vemos pela Ásia,</span><span class=\"ln\"><span class=\"n\">21</span>onde predomina o som do movimento da água a ser rasgada pelas inúmeras embarcações,</span><span class=\"ln par\"><span class=\"n\">30</span>A acústica do instrumento-cidade é favorecida pelo urbanismo tradicional de edifícios</span><span class=\"ln\"><span class=\"n\">31</span>contínuos, em quarteirão, por oposição à cidade feita de blocos dispersos. As ruas formadas</span><span class=\"ln par\"><span class=\"n\">35</span>A ameaça óbvia a este património é a poluição sonora causada pelo automóvel ou pelo</span><span class=\"ln\"><span class=\"n\">36</span>avião, cuja presença tudo abafa. Um problema que tenderá a ser mitigado com a progressiva</span></div>"
+  },
+  {
+   "t": "ordenar",
+   "g": "7a",
+   "p": "Por ordem: como testas se uma expressão começada por «pelo», «pela» ou «pelas» é complemento agente da passiva?",
+   "p2": "Ordena os passos do teste do complemento agente da passiva.",
+   "passos": [
+    "Encontra o verbo na passiva: _ser_ + particípio, ou só o particípio",
+    "Pergunta quem faz a ação desse verbo",
+    "Passa a frase à ativa, com o que vem depois de «pelo», «pela» ou «pelas» como sujeito",
+    "Se a frase ativa faz sentido, é complemento agente da passiva"
+   ],
+   "f": "Primeiro a passiva, depois quem faz a ação, por fim a prova da ativa. Se não houver passiva, ou se o nome não puder ser sujeito da ativa, não é agente.",
+   "liga": [
+    {
+     "t": "Lição M5-F07: Quem faz o quê a quem",
+     "href": "../../../../m5/licao-m5-f07/"
+    }
+   ]
+  },
+  {
+   "t": "emparelhar",
+   "g": "7b",
+   "p": "Agente da passiva ou lugar? Faz o teste da ativa e arruma.",
+   "p2": "Arruma: quais destas expressões são complemento agente da passiva?",
+   "pares": [
+    [
+     "«composta pela mistura única de pessoas» (linha 10)",
+     "complemento agente da passiva"
+    ],
+    [
+     "«complementados pela mistura homogénea de fundo» (linha 14)",
+     "complemento agente da passiva"
+    ],
+    [
+     "«distorcido pelos sistemas de amplificação» (linha 26)",
+     "complemento agente da passiva"
+    ],
+    [
+     "«espalhadas pelos bairros» (linha 25)",
+     "indica lugar, não é agente"
+    ]
+   ],
+   "f": "«A mistura de pessoas compõe a harmonia», «a mistura de fundo complementa os sons», «os sistemas distorcem aquele recitar»: a ativa faz sentido. «Os bairros espalham as mesquitas» não faz: «pelos bairros» diz onde estão as mesquitas."
+  },
+  {
+   "t": "escolha",
+   "g": "7c",
+   "p": "No item 7, que expressão procuras?",
+   "p2": "O enunciado do item 7 acaba em «exceto». O que pede?",
+   "o": [
+    "A única que **não** é complemento agente da passiva",
+    "A única que é complemento agente da passiva",
+    "Uma das três que são complemento agente da passiva"
+   ],
+   "c": 0,
+   "f": "A palavra **«exceto»** vira a pergunta ao contrário: três expressões são complemento agente da passiva, e procuras a que fica de fora.",
+   "fe": [
+    null,
+    "É ao contrário: «Todas […] exceto» diz que três são agente da passiva; procuras a quarta.",
+    "Essas três são as que eliminas; a resposta é a que sobra."
+   ]
+  },
+  {
+   "t": "item",
+   "rot": "Item 7 da prova ✱",
+   "p": "Todas as expressões desempenham a função sintática de complemento agente da passiva, **exceto**",
+   "o": [
+    "«pelo automóvel ou pelo avião» (linhas 35 e 36).",
+    "«pelo urbanismo tradicional de edifícios contínuos» (linhas 30 e 31).",
+    "«pelas inúmeras embarcações» (linha 21).",
+    "«pela Ásia» (linha 20)."
+   ],
+   "c": 3,
+   "f": "**(D)**. Em «mercados flutuantes que vemos pela Ásia» (linha 20), «vemos» está na ativa (quem vê somos nós) e «pela Ásia» diz onde: por toda a Ásia. «A Ásia vê os mercados» não faz sentido, por isso não é agente: funciona como modificador do grupo verbal, com valor de lugar.",
+   "fe": [
+    "É agente: «a poluição sonora causada pelo automóvel ou pelo avião» dá «o automóvel ou o avião causam a poluição sonora» (linhas 35 e 36).",
+    "É agente: «A acústica […] é favorecida pelo urbanismo tradicional» dá «o urbanismo tradicional favorece a acústica» (linhas 30 e 31).",
+    "É agente: «a água a ser rasgada pelas inúmeras embarcações» dá «as inúmeras embarcações rasgam a água» (linha 21).",
+    null
+   ],
+   "l": "20",
+   "g": "7i"
+  },
+  {
+   "t": "ordenar",
+   "g": "fim",
+   "p": "Por ordem: como resolves um item de escolha múltipla do Grupo II?",
+   "p2": "Junta o que fizeste em cada item: que passos dás, e por que ordem?",
+   "passos": [
+    "Lê o enunciado e marca o que pede: as linhas, «exceto», «respetivamente»",
+    "Relê as linhas indicadas",
+    "Elimina as opções que têm uma parte falsa ou trocada",
+    "Confirma a opção que resta com uma linha do texto"
+   ],
+   "f": "Foi o que fizeste em cada item. Na prova, assinalas uma só opção por item: a certa vale 13 pontos, qualquer outra resposta vale zero."
+  },
+  {
+   "t": "ler",
+   "rot": "Para levar",
+   "escuro": true,
+   "html": "<p class=\"levar\">Muitas opções juntam duas partes. Basta uma falsa para deitares a opção fora.</p><ul><li><b>Delimita primeiro.</b> Os recuos marcam os parágrafos; «entre as linhas 10 e 34» quer dizer: relê essas linhas.</li><li><b>Lê as palavras que mudam a pergunta:</b> «exceto», «a única», «respetivamente», «no primeiro caso».</li><li><b>Recurso expressivo:</b> confirma que o recurso está na expressão; só depois vê se o efeito bate com o texto.</li><li><b>Conclusão:</b> procura o que o autor defende no fim, não o que só refere de passagem.</li><li><b>Gramática:</b> usa um teste. Troca «como» por «por exemplo»; passa a frase à ativa; pergunta para onde aponta a palavra.</li></ul><p>Nas oito provas de 2023 a 2026 (1.ª e 2.ª fases), o Grupo II tem sempre sete itens de escolha múltipla, com quatro opções: primeiro sobre o texto, no fim de gramática.</p><details class=\"mais\"><summary>Dos critérios oficiais</summary><div><p>«A ausência de indicação inequívoca da versão da prova implica a classificação com zero pontos das respostas aos itens de seleção.»</p><p>«As respostas aos itens de seleção podem ser classificadas de forma dicotómica ou por níveis de desempenho, de acordo com os critérios específicos. No primeiro caso, a pontuação só é atribuída às respostas corretas, sendo todas as outras respostas classificadas com zero pontos.»</p><p>Chaves da versão 2, Grupo II: 1 (B), 2 (C), 3 (A), 4 (D), 5 (B), 6 (C), 7 (D), com 13 pontos cada.</p><p class=\"fonte\">Critérios de Classificação, Prova 639, 1.ª fase, 2026 (IAVE; PDF com o logótipo da EduQA), p. 1 e p. 13.</p></div></details>"
+  }
+ ]
+}
