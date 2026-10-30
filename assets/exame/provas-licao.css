@@ -53,3 +53,15 @@
  .jogo .ler table.grelha th[style]{width:auto!important}
  .jogo .ler details.mais>summary{font-weight:700}
 }
+/* 29/10/2026 (pedido do docente): a prosa da prova em texto corrido. Cada linha impressa da prova continua a ser um
+   span.ln, mas na prosa (não nas estrofes) as linhas seguem-se na mesma linha do ecrã, como num parágrafo; o número de cada
+   linha fica antes dela, pequeno e discreto, para se encontrar «linhas 23 a 27» a qualquer largura. Cada parágrafo da prova
+   (span.ln.par) começa numa linha nova, com recuo. Antes, cada linha impressa era um bloco e, quando não cabia no ecrã,
+   partia a meio e o texto ficava aos bocados. */
+.jogo .ler .prova-l:not(.estrofe) .ln{display:inline;padding-left:0;text-indent:0}
+.jogo .ler .prova-l:not(.estrofe) .ln .n{display:none}
+.jogo .ler .prova-l:not(.estrofe) .ln::before{content:attr(data-l);font:400 .6em/1 Arial,Helvetica,sans-serif;color:var(--suave);vertical-align:.5em;margin:0 .25em 0 .1em;font-variant-numeric:tabular-nums}
+.jogo .ler .prova-l:not(.estrofe) .ln[data-l$="0"]::before,.jogo .ler .prova-l:not(.estrofe) .ln[data-l$="5"]::before{font-weight:700}
+.jogo .ler .prova-l:not(.estrofe) .ln.par::before{content:"\A\2003" attr(data-l)}
+.jogo .ler .prova-l:not(.estrofe) .ln.par:first-child::before{content:"\2003" attr(data-l)}
+.jogo .ler .prova-l:not(.estrofe) .ln::after{content:" "}
