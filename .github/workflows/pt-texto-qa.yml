@@ -40,7 +40,7 @@ jobs:
           python -m unittest discover -s tests -p 'test_task_routes_closure.py' -v
           python -m unittest discover -s tests -p 'test_appearance_universal.py' -v
           # 30/10/2026: a camada das opções denunciadoras foi aplicada por cima desta; desfaz-se antes de conferir.
-          python scripts/aplicar_trocas.py scripts/texto_justificado_20261030.json --manifesto tests/fixtures/texto-justificado-edits-20261030.json --verificar --desfazer-antes tests/fixtures/opcoes-denunciadoras-edits-20261030.json
+          python scripts/aplicar_trocas.py scripts/texto_justificado_20261030.json --manifesto tests/fixtures/texto-justificado-edits-20261030.json --verificar --desfazer-antes tests/fixtures/lingua-pessoa-m7-edits-20261030.json --desfazer-antes tests/fixtures/opcoes-denunciadoras-edits-20261030.json
       - uses: actions/setup-node@v4
         with:
           node-version: '20'

@@ -2,7 +2,7 @@
  "slug": "m7-u2",
  "modulo": "m7",
  "unidade": 2,
- "versao": "3",
+ "versao": "4",
  "momento": "No início da aula de tarefa",
  "titulo": "Uma ideia de heterónimo",
  "descricao": "Aquecimento em cartões no início da aula de tarefa da unidade 2 do M7: reconhecer Caeiro, Reis e Campos, separar heterónimo de pseudónimo, ver em que ideia duas vozes discordam, ligar a linguagem a uma maneira de ver, pesar duas fontes, julgar dois perfis e planear a apresentação.",
@@ -38,13 +38,13 @@
   "Augusto Pires",
   "guindaste"
  ],
- "_nota": "Baralho final da proposta de 29/10/2026 (aquecimento-m7-u2-final.json, com as correções dos três júris), gerado por scripts/aquecimentos.py. «reservadas»: passagens da tarefa que nenhum cartão de fazer usa.",
+ "_nota": "Baralho final da proposta de 29/10/2026 (aquecimento-m7-u2-final.json, com as correções dos três júris), gerado por scripts/aquecimentos.py. «reservadas»: passagens da tarefa que nenhum cartão de fazer usa. 30/10/2026 (decisão 3a do docente): aquecimento fixo de 10 minutos, dentro dos 90 da aula; o cartão de leitura «Dois perfis» junta-se à escolha que os compara (os perfis passam para o enunciado, em p e em p2), e o baralho fica com 12 cartões, 10 de fazer.",
  "cartoes": [
   {
    "t": "ler",
    "rot": "Abre",
    "titulo": "Antes de inventares uma voz",
-   "html": "<p class=\"abre\"><b>Pessoa inventou poetas com nome, vida e maneira de escrever.</b> Na tarefa, inventas uma voz que discorda de ti. Antes, com Caeiro, Reis e Campos, treinas o que a tarefa pede: reconhecer uma voz, separá-la de um pseudónimo, ver em que ideia discorda, provar uma maneira de ver na linguagem, pesar fontes, julgar perfis e planear os dois minutos.</p><p>No início da aula de tarefa, dez a quinze minutos. Podes abrir as lições. Não conta para a nota.</p>"
+   "html": "<p class=\"abre\"><b>Pessoa inventou poetas com nome, vida e maneira de escrever.</b> Na tarefa, inventas uma voz que discorda de ti. Antes, com Caeiro, Reis e Campos, treinas o que a tarefa pede: reconhecer uma voz, separá-la de um pseudónimo, ver em que ideia discorda, provar uma maneira de ver na linguagem, pesar fontes, julgar perfis e planear os dois minutos.</p><p>No início da aula de tarefa, dez minutos. Podes abrir as lições. Não conta para a nota.</p>"
   },
   {
    "t": "emparelhar",
@@ -214,16 +214,10 @@
    ]
   },
   {
-   "t": "ler",
-   "rot": "Dois perfis",
-   "titulo": "Dois perfis inventados",
-   "html": "<div class=\"paralelo\"><div class=\"lado\"><h3>Perfil A</h3><ul><li><b>Nome e datas:</b> Benedita Arroio, Peniche, 1931 a 1999.</li><li><b>Ofício:</b> faroleira.</li><li><b>Maneira de ver:</b> só acredita no que se repete; o que acontece uma vez não conta.</li><li><b>Discorda de quem a criou:</b> quem a criou gosta de surpresas; Benedita acha que uma surpresa é um erro que ainda não se repetiu.</li><li><b>Maneira de escrever:</b> a mesma palavra a abrir versos seguidos, horas sempre exatas, nenhum ponto de exclamação.</li></ul></div><div class=\"lado\"><h3>Perfil B</h3><ul><li><b>Nome e datas:</b> Tomé Varela, Bragança, 1948 a 2010.</li><li><b>Ofício:</b> afinador de pianos.</li><li><b>Maneira de ver:</b> desconfia de todas as certezas; nenhum som é igual duas vezes.</li><li><b>Discorda de quem o criou:</b> quem o criou acredita em regras fixas; Tomé acha que cada regra é um palpite.</li><li><b>Maneira de escrever:</b> frases curtas e todas no indicativo, sem uma pergunta.</li></ul></div></div><p class=\"liga\">Dois exemplos inventados para este aquecimento. Não podes usar estes ofícios nem estas maneiras de ver: o teu perfil é outro, e é teu.</p>"
-  },
-  {
    "t": "escolha",
    "g": "8",
-   "p": "Lembra: A só acredita no que se repete e escreve com repetições, horas exatas e sem exclamações; B desconfia das certezas e escreve frases curtas, só no indicativo e sem perguntas. Qual dos dois perfis está mais bem construído?",
-   "p2": "Num perfil, cada parte deve confirmar as outras. Qual dos dois o consegue?",
+   "p": "Dois perfis inventados para este aquecimento (não uses estes ofícios nem estas maneiras de ver). A: Benedita Arroio, faroleira, só acredita no que se repete, ao contrário de quem a criou, que gosta de surpresas; escreve com a mesma palavra a abrir versos seguidos, horas exatas e nenhuma exclamação. B: Tomé Varela, afinador de pianos, desconfia de todas as certezas, ao contrário de quem o criou, que acredita em regras fixas; escreve frases curtas, todas no indicativo, sem uma pergunta. Qual dos dois perfis está mais bem construído?",
+   "p2": "Benedita (A), faroleira, só acredita no que se repete e escreve com repetições, horas exatas e sem exclamações; Tomé (B), afinador de pianos, desconfia das certezas e escreve frases curtas, só no indicativo e sem perguntas. Os dois discordam de quem os criou. Num perfil, cada parte deve confirmar as outras: qual dos dois o consegue?",
    "o": [
     "O perfil B: afinar pianos é um ofício mais raro do que guardar um farol.",
     "O perfil A: ofício, maneira de ver e maneira de escrever puxam para o mesmo lado, e a discordância é clara.",

@@ -330,7 +330,9 @@ class Aquecimentos(unittest.TestCase):
         self.assertIn(f'<span class="relogio" id="relogio">{blocos[0][0]}:00</span>', guia)
         i = guia.index('T=[{') + 2
         T, _ = json.JSONDecoder().raw_decode(guia, i)
-        self.assertEqual(T[0]['passos'][0], 'No início da aula, faz o aquecimento em cartões (10 a 15 minutos).')
+        # 30/10/2026 (decisão 3a do docente): o aquecimento da U2 fica fixo em 10 minutos, como o da U3, para a aula caber
+        # nos 90 (10 de cartões e 5 de apresentação no bloco «Aquecer» de 15); camada lingua-pessoa-m7-edits-20261030.
+        self.assertEqual(T[0]['passos'][0], 'No início da aula, faz o aquecimento em cartões (10 minutos).')
         self.assertEqual(T[1]['passos'][0], 'No início da aula, faz o aquecimento em cartões (10 minutos).')
         ficheiros = re.findall(r'M7_[A-Za-z0-9]+_[A-Za-z]+', json.dumps(T, ensure_ascii=False))
         self.assertEqual(sorted(set(ficheiros)), ['M7_Extra_Mensagem', 'M7_Tarefa2_Heteronimo', 'M7_Tarefa3_Opiniao'])

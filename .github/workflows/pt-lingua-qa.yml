@@ -1,0 +1,25 @@
+name: Português, língua das perguntas
+# 30/10/2026: pedido do docente («Qual citação identifica…» é muito mau em português; o problema é transversal). Corre em
+# todos os pedidos de integração, como o lingua-qa.yml do Lente: nenhuma pergunta «Qual» seguida de nome e nenhum imperativo
+# de «você» a abrir uma instrução. A camada literal desta passagem (tests/fixtures/lingua-pessoa-m7-edits-20261030.json,
+# com o Pessoa da F13 e os acertos do M7) confere-se aqui e desfaz-se antes das outras nos testes de estado congelado.
+on:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  lingua:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Perguntas em português europeu, camada literal e estados congelados
+        run: |
+          python -m unittest discover -s tests -p 'test_lingua_perguntas.py' -v
+          python -m unittest discover -s tests -p 'test_task_routes_closure.py' -v
+          python -m unittest discover -s tests -p 'test_module_layout.py' -v
+          python -m unittest discover -s tests -p 'test_task_aquecimentos.py' -v
+          python scripts/aplicar_trocas.py scripts/lingua_pessoa_m7_20261030.json --manifesto tests/fixtures/lingua-pessoa-m7-edits-20261030.json --verificar
