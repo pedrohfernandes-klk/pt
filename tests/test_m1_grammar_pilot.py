@@ -157,7 +157,10 @@ class M1GrammarPilot(unittest.TestCase):
             text = validate_task_source(ROOT / f'tarefas/m1-u{unit}/index.html')
             parsed = TaskPage(text)
             self.assertEqual(parsed.errors, [])
-            self.assertEqual([q['key'] for q in parsed.questions], ['aquecer', '1'])
+            # 30/10/2026: o aquecimento em papel (a pergunta «aquecer» com três opções) passou a cartões, numa página
+            # própria (tarefas/m1-uN/aquecimento/, decisão do docente de 29/10); na tarefa fica só a pergunta opcional «1».
+            self.assertEqual([q['key'] for q in parsed.questions], ['1'])
+            self.assertIn('aquecimento/', text)
             for q in parsed.questions:
                 self.assertEqual(len(q['options']), 3)
                 self.assertEqual(sum(o['data-correct'] == 'true' for o in q['options']), 1)
