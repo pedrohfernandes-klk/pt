@@ -80,6 +80,9 @@ class AquecimentosM2(unittest.TestCase):
             self.assertEqual(destinos,set(d['licoes_das_citacoes']))
             self.assertTrue(all(t.startswith('Relembrar F') for _,t in d['menu']))
             self.assertTrue(all(p.startswith('m2/licao-m2-f') for p in destinos))
+            for c in d['cartoes']:
+                for f in re.findall(r'\bF(\d{2})\b',texto_visivel(c)):
+                    self.assertIn('m2/licao-m2-f'+f,destinos)
 
     def test_medicao_conta_caracteres_visiveis_do_italico(self):
         d={'slug':'teste','cartoes':[{'t':'escolha','o':['_livro_','livros','livrão'],'c':0}]}
