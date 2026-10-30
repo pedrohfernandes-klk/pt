@@ -147,5 +147,28 @@ class M1UnitTasks(unittest.TestCase):
                         self.assertIn(html.unescape(line), original, (unit, source, number))
 
 
+
+# 30/10/2026: aquecimento em cartões (decisão do docente)
+class AquecimentoAtualM1(unittest.TestCase):
+    """As asserções anteriores preservam as tarefas históricas; estas verificam as atuais."""
+    def test_aquecimento_atual_substitui_maquinas_e_totaliza_90(self):
+        import json
+        from pathlib import Path
+        raiz = Path(__file__).resolve().parents[1]
+        for unidade in (1, 2):
+            slug = f'm1-u{unidade}'
+            with self.subTest(slug=slug):
+                d = json.loads((raiz / 'docs/pedagogia/tarefas-escolha' / f'{slug}.json').read_text('utf-8'))
+                s = (raiz / 'tarefas' / slug / 'index.html').read_text('utf-8')
+                self.assertEqual(d['aquecer']['cartoes'], 'aquecimento/')
+                self.assertEqual(d['aquecer']['minutos'], 10)
+                self.assertIn('data-task-warm="cartoes"', s)
+                self.assertNotIn('data-task-machine', s)
+                self.assertNotIn('data-task-question="aquecer"', s)
+                self.assertIn('data-max="10"', s)
+                self.assertIn('data-max="60"', s)
+                self.assertIn('Total: 90 minutos', s)
+                self.assertEqual(10 + 5 + 60 + 15, 90)
+
 if __name__ == '__main__':
     unittest.main()

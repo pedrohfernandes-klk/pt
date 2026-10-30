@@ -1,0 +1,106 @@
+[
+ {
+  "ficheiro": "m1/index.html",
+  "local": "bloco 1 de 2 (carateres 71397-71397 na base)",
+  "antigo": "de 1.</span></span><span class=\"chip\" data-chip=\"\">por fazer</span></a></li><li class=\"aula-tarefa\" data-task-lesson=\"1\"",
+  "novo": "de 1.</span></span><span class=\"chip\" data-chip=\"\">por fazer</span></a></li><li class=\"aula-aquecimento\" id=\"aquecimento-unidade-1\"><a href=\"../tarefas/m1-u1/aquecimento/\"><span class=\"n\">A</span><span><span class=\"t\">Aquecer para a aula de tarefa da Unidade 1</span><span class=\"f\">No início da aula de tarefa: cartões com consulta para preparar as operações da tarefa.</span></span><span class=\"chip\">10 min</span></a></li><li class=\"aula-tarefa\" data-task-lesson=\"1\"",
+  "ocorrencias": 1,
+  "achado": "decisão do docente de 29/10/2026 (aquecimentos em cartões antes das aulas de tarefa, ordem M7, M1, M4); trabalho de 30/10/2026"
+ },
+ {
+  "ficheiro": "m1/index.html",
+  "local": "bloco 2 de 2 (carateres 75099-75099 na base)",
+  "antigo": "span></a></li><li class=\"aula-tarefa\" data-task-lesson=\"2\" i",
+  "novo": "span></a></li><li class=\"aula-aquecimento\" id=\"aquecimento-unidade-2\"><a href=\"../tarefas/m1-u2/aquecimento/\"><span class=\"n\">A</span><span><span class=\"t\">Aquecer para a aula de tarefa da Unidade 2</span><span class=\"f\">No início da aula de tarefa: cartões com consulta para preparar as operações da tarefa.</span></span><span class=\"chip\">10 min</span></a></li><li class=\"aula-tarefa\" data-task-lesson=\"2\" i",
+  "ocorrencias": 1,
+  "achado": "decisão do docente de 29/10/2026 (aquecimentos em cartões antes das aulas de tarefa, ordem M7, M1, M4); trabalho de 30/10/2026"
+ },
+ {
+  "ficheiro": "m1/guia-da-tarefa-m1/index.html",
+  "local": "bloco 1 de 1 (carateres 8898-9012 na base)",
+  "antigo": "onsulta</li></ol><p>Cada aula começa com um aquecimento de 15 minutos, em papel e sem consulta (duas máquinas do exame); depois, com consulta, respondes ao núcleo comum e esc",
+  "novo": "onsulta</li></ol><p>Cada aula de 90 minutos começa com 10 minutos de aquecimento em cartões, no telemóvel e com consulta. Seguem-se 5 minutos de apresentação do enunciado pelo docente, 60 minutos de produção com consulta e 15 minutos de revisão e entrega. Respondes ao núcleo comum e esc",
+  "ocorrencias": 1,
+  "achado": "decisão do docente de 29/10/2026 (aquecimentos em cartões antes das aulas de tarefa, ordem M7, M1, M4); trabalho de 30/10/2026"
+ },
+ {
+  "ficheiro": "docs/pedagogia/tarefas-escolha/m1-u1.json",
+  "local": "bloco 1 de 1 (carateres 91-1970 na base)",
+  "antigo": "unidade\": 1,\n \"aquecer\": {\n  \"instrucao\": \"Em «Ondas do mar de Vigo», quem fala e a quem? Cita uma repetição. Classifica-a. Explica como faz durar a espera. Em <i>mare</i> &gt; mar e <i>malu</i> &gt; mau, identifica o som que cai, onde cai e o processo.\",\n  \"anatomia\": [\n   [\n    \"Verbos\",\n    \"«Cita», «classifica» e «explica»: três operações sobre uma repetição, por esta ordem. Antes, a pergunta pede quem fala e a quem; no fim, «identifica» pede três respostas: o som, o lugar e o processo.\"\n   ],\n   [\n    \"Objeto\",\n    \"como a repetição faz <b>durar a espera</b>, e não a repetição sozinha; na segunda parte, o <b>som</b> que cai, e não a palavra inteira.\"\n   ],\n   [\n    \"Condição\",\n    \"«uma repetição» (uma só, citada entre aspas) e «<i>mare</i> &gt; mar e <i>malu</i> &gt; mau» (os dois casos, cada um com o seu lugar e o seu processo).\"\n   ]\n  ],\n  \"afirmacao\": \"Afirmação: «Guilhade faz a cantiga em resposta a um pedido da dona.»\",\n  \"pergunta\": \"Qual destas passagens prova a afirmação? Escreve a letra e uma razão no papel; depois confirma.\",\n  \"opcoes\": [\n   {\n    \"certa\": false,\n    \"letra\": \"A\",\n    \"texto\": \"«e vedes como vos quero loar: / dona fea, velha e sandia!»\",\n    \"resposta\": \"Distração: é Guilhade, mas aqui é ele a anunciar como a vai louvar. Não diz que a dona lhe pediu nada.\"\n   },\n   {\n    \"certa\": true,\n    \"letra\": \"B\",\n    \"texto\": \"«Ai dona fea, fostes-vos queixar / que vos nunca louv'en[o] meu cantar»\",\n    \"resposta\": \"Prova: a dona queixou-se de nunca ter sido louvada no cantar dele. A cantiga que ele promete a seguir responde a essa queixa.\"\n   },\n   {\n    \"certa\": false,\n    \"letra\": \"C\",\n    \"texto\": \"«tanto a fez Deus comprida de bem / que mais que todas las do mundo val»\",\n    \"resposta\": \"Distração: é outra cantiga, de D. Dinis, e outra senhora. Nada aqui fala de queixa nem de pedido.\"\n   }\n  ]\n },\n \"lead\": \"À mão, entre 200 e 240 palavras: cerca de 60 por resposta do núcleo e ",
+  "novo": "unidade\": 1,\n \"aquecer\": {\n  \"cartoes\": \"aquecimento/\",\n  \"minutos\": 10,\n  \"texto\": \"No início da aula de tarefa: 10 minutos de cartões com consulta, 5 minutos para o docente apresentar o enunciado, 60 minutos de produção e 15 minutos de revisão e entrega. Total: 90 minutos. O relógio de produção começa depois da apresentação.\",\n  \"ligacao\": \"Abrir o aquecimento em cartões\",\n  \"ligacao_enunciado\": \"Aquecer\"\n },\n \"lead\": \"À mão, entre 200 e 240 palavras: aproximadamente 60 por resposta do núcleo e ",
+  "ocorrencias": 1,
+  "achado": "decisão do docente de 29/10/2026 (aquecimentos em cartões antes das aulas de tarefa, ordem M7, M1, M4); trabalho de 30/10/2026"
+ },
+ {
+  "ficheiro": "docs/pedagogia/tarefas-escolha/m1-u2.json",
+  "local": "bloco 1 de 1 (carateres 85-1875 na base)",
+  "antigo": "unidade\": 2,\n \"aquecer\": {\n  \"instrucao\": \"Como transforma Fernão Lopes a cidade numa só figura, quando ela ouve o grito do pajem? Cita uma passagem do cap. XII. Explica o que essa passagem faz ver.\",\n  \"anatomia\": [\n   [\n    \"Verbos\",\n    \"«Cita» e «Explica»: duas operações, por esta ordem. A pergunta inicial diz o que a explicação tem de mostrar: como a cidade passa a ser uma só figura.\"\n   ],\n   [\n    \"Objeto\",\n    \"o que a passagem faz <b>ver</b> da cidade, e não o que se sabe do Mestre ou do pajem.\"\n   ],\n   [\n    \"Condição\",\n    \"«quando ela ouve o grito do pajem» e «do cap. XII» (este episódio, não o cerco); «uma passagem» (copiada sem mudar nada, entre aspas).\"\n   ]\n  ],\n  \"afirmacao\": \"Afirmação: «O grito do pajem estava combinado antes.»\",\n  \"pergunta\": \"Qual destas passagens prova a afirmação? Escreve a letra e uma razão no papel; depois confirma.\",\n  \"opcoes\": [\n   {\n    \"certa\": false,\n    \"letra\": \"A\",\n    \"texto\": \"O narrador, sobre Álvaro Pais: «com uma coifa na cabeça, segundo usança daquele tempo»\",\n    \"resposta\": \"Distração: também tem «segundo», mas aqui quer dizer conforme o costume. Fala da coifa de Álvaro Pais, não do grito.\"\n   },\n   {\n    \"certa\": false,\n    \"letra\": \"B\",\n    \"texto\": \"O narrador, sobre Álvaro Pais: «cavalgou logo à pressa, em cima de um cavalo que anos havia que não cavalgara»\",\n    \"resposta\": \"Distração: faz ver a urgência de Álvaro Pais, num cavalo que há anos não montava. Ter pressa não prova que o grito estava combinado.\"\n   },\n   {\n    \"certa\": true,\n    \"letra\": \"C\",\n    \"texto\": \"O narrador, sobre o pajem: «como lhe disseram que fosse pela vila, segundo já era percebido»\",\n    \"resposta\": \"Prova: «segundo já era percebido» quer dizer combinado, e «lhe disseram que fosse pela vila» mostra que o pajem cumpre uma ordem dada antes.\"\n   }\n  ]\n },\n \"lead\": \"Núcleo: cerca de",
+  "novo": "unidade\": 2,\n \"aquecer\": {\n  \"cartoes\": \"aquecimento/\",\n  \"minutos\": 10,\n  \"texto\": \"No início da aula de tarefa: 10 minutos de cartões com consulta, 5 minutos para o docente apresentar o enunciado, 60 minutos de produção e 15 minutos de revisão e entrega. Total: 90 minutos. O relógio de produção começa depois da apresentação.\",\n  \"ligacao\": \"Abrir o aquecimento em cartões\",\n  \"ligacao_enunciado\": \"Aquecer\"\n },\n \"lead\": \"Núcleo: cerca de",
+  "ocorrencias": 1,
+  "achado": "decisão do docente de 29/10/2026 (aquecimentos em cartões antes das aulas de tarefa, ordem M7, M1, M4); trabalho de 30/10/2026"
+ },
+ {
+  "ficheiro": "tarefas/m1-u1/index.html",
+  "local": "bloco 1 de 4 (carateres 1687-1945 na base)",
+  "antigo": "ria-labelledby=\"aquecer-title\">\n<p class=\"task-warmup-kicker\">Antes de escrever · 15 min · em papel, sem consultar</p>\n<h2 id=\"aquecer-title\">Aquecer com duas máquinas do exame</h2>\n<p>Faz cada máquina no papel. Só depois confirmas.</p>\n<div class=\"task-relogio\" data-relogio data-max=\"15\" data-passo=\"1\" data-rotulo=\"",
+  "novo": "ria-labelledby=\"aquecer-title\" data-task-warm=\"cartoes\">\n<p class=\"task-warmup-kicker\">Antes de escrever · 10 min · em cartões, com consulta</p>\n<h2 id=\"aquecer-title\">Aquecer em cartões</h2>\n<p>No início da aula de tarefa: 10 minutos de cartões com consulta, 5 minutos para o docente apresentar o enunciado, 60 minutos de produção e 15 minutos de revisão e entrega. Total: 90 minutos. O relógio de produção começa depois da apresentação.</p>\n<p class=\"task-aquecer\"><a href=\"aquecimento/\">Abrir o aquecimento em cartões</a></p>\n<div class=\"task-relogio\" data-relogio data-max=\"10\" data-passo=\"1\" data-rotulo=\"",
+  "ocorrencias": 1,
+  "achado": "decisão do docente de 29/10/2026 (aquecimentos em cartões antes das aulas de tarefa, ordem M7, M1, M4); trabalho de 30/10/2026"
+ },
+ {
+  "ficheiro": "tarefas/m1-u1/index.html",
+  "local": "bloco 2 de 4 (carateres 2045-4950 na base)",
+  "antigo": "fas/m1-u1:aquecimento\"></div>\n<article class=\"task-machine\" data-task-machine=\"1\" aria-labelledby=\"maquina-1\"><p class=\"task-machine-tag\"><span>01</span> Pensa.</p><h3 id=\"maquina-1\">Descobre o que te pedem</h3>\n<blockquote class=\"task-instruction\">Em «Ondas do mar de Vigo», quem fala e a quem? Cita uma repetição. Classifica-a. Explica como faz durar a espera. Em <i>mare</i> &gt; mar e <i>malu</i> &gt; mau, identifica o som que cai, onde cai e o processo.</blockquote>\n<p>Copia a instrução. Sublinha os verbos que mandam fazer, rodeia o objeto e põe a condição entre parênteses.</p>\n<details class=\"task-confirm\"><summary>Confirmar depois de marcares</summary><dl class=\"task-anatomy\"><div><dt>Verbos</dt><dd>«Cita», «classifica» e «explica»: três operações sobre uma repetição, por esta ordem. Antes, a pergunta pede quem fala e a quem; no fim, «identifica» pede três respostas: o som, o lugar e o processo.</dd></div><div><dt>Objeto</dt><dd>como a repetição faz <b>durar a espera</b>, e não a repetição sozinha; na segunda parte, o <b>som</b> que cai, e não a palavra inteira.</dd></div><div><dt>Condição</dt><dd>«uma repetição» (uma só, citada entre aspas) e «<i>mare</i> &gt; mar e <i>malu</i> &gt; mau» (os dois casos, cada um com o seu lugar e o seu processo).</dd></div></dl></details></article>\n<article class=\"task-machine\" data-task-machine=\"2\" aria-labelledby=\"maquina-2\"><p class=\"task-machine-tag\"><span>02</span> Prova.</p><h3 id=\"maquina-2\">Prova ou distração?</h3>\n<p class=\"task-claim\">Afirmação: «Guilhade faz a cantiga em resposta a um pedido da dona.»</p>\n<div class=\"task-question\" data-task-question=\"aquecer\" aria-labelledby=\"q-aquecer\"><p class=\"task-question-title\" id=\"q-aquecer\">Qual destas passagens prova a afirmação? Escreve a letra e uma razão no papel; depois confirma.</p><div class=\"task-options\"><button type=\"button\" aria-pressed=\"false\" data-correct=\"false\" data-response=\"Distração: é Guilhade, mas aqui é ele a anunciar como a vai louvar. Não diz que a dona lhe pediu nada.\"><span class=\"task-letter\">A<span class=\"sr-only\">:</span></span> «e vedes como vos quero loar: / dona fea, velha e sandia!»</button><button type=\"button\" aria-pressed=\"false\" data-correct=\"true\" data-response=\"Prova: a dona queixou-se de nunca ter sido louvada no cantar dele. A cantiga que ele promete a seguir responde a essa queixa.\"><span class=\"task-letter\">B<span class=\"sr-only\">:</span></span> «Ai dona fea, fostes-vos queixar / que vos nunca louv'en[o] meu cantar»</button><button type=\"button\" aria-pressed=\"false\" data-correct=\"false\" data-response=\"Distração: é outra cantiga, de D. Dinis, e outra senhora. Nada aqui fala de queixa nem de pedido.\"><span class=\"task-letter\">C<span class=\"sr-only\">:</span></span> «tanto a fez Deus comprida de bem / que mais que todas las do mundo val»</button></div><p class=\"task-feedback\" data-task-feedback role=\"status\" aria-live=\"polite\" hidden></p></div></article>\n</section>\n<header><p class=\"t",
+  "novo": "fas/m1-u1:aquecimento\"></div>\n</section>\n<header><p class=\"t",
+  "ocorrencias": 1,
+  "achado": "decisão do docente de 29/10/2026 (aquecimentos em cartões antes das aulas de tarefa, ordem M7, M1, M4); trabalho de 30/10/2026"
+ },
+ {
+  "ficheiro": "tarefas/m1-u1/index.html",
+  "local": "bloco 3 de 4 (carateres 5104-5177 na base)",
+  "antigo": "ão, entre 200 e 240 palavras: cerca de 60 por resposta do núcleo e 80 a 120 no tema. Com consulta.</p>\n<section id=\"produzir\" aria-la",
+  "novo": "ão, entre 200 e 240 palavras: aproximadamente 60 por resposta do núcleo e 80 a 120 no tema. Com consulta.</p>\n<p class=\"task-aquecer\"><a href=\"aquecimento/\">Aquecer</a></p>\n<section id=\"produzir\" aria-la",
+  "ocorrencias": 1,
+  "achado": "decisão do docente de 29/10/2026 (aquecimentos em cartões antes das aulas de tarefa, ordem M7, M1, M4); trabalho de 30/10/2026"
+ },
+ {
+  "ficheiro": "tarefas/m1-u1/index.html",
+  "local": "bloco 4 de 4 (carateres 10921-10922 na base)",
+  "antigo": "s\">Respostas exploradas: 0 de 2. Podes rever qualquer escolha",
+  "novo": "s\">Respostas exploradas: 0 de 1. Podes rever qualquer escolha",
+  "ocorrencias": 1,
+  "achado": "decisão do docente de 29/10/2026 (aquecimentos em cartões antes das aulas de tarefa, ordem M7, M1, M4); trabalho de 30/10/2026"
+ },
+ {
+  "ficheiro": "tarefas/m1-u2/index.html",
+  "local": "bloco 1 de 4 (carateres 1681-1939 na base)",
+  "antigo": "ria-labelledby=\"aquecer-title\">\n<p class=\"task-warmup-kicker\">Antes de escrever · 15 min · em papel, sem consultar</p>\n<h2 id=\"aquecer-title\">Aquecer com duas máquinas do exame</h2>\n<p>Faz cada máquina no papel. Só depois confirmas.</p>\n<div class=\"task-relogio\" data-relogio data-max=\"15\" data-passo=\"1\" data-rotulo=\"",
+  "novo": "ria-labelledby=\"aquecer-title\" data-task-warm=\"cartoes\">\n<p class=\"task-warmup-kicker\">Antes de escrever · 10 min · em cartões, com consulta</p>\n<h2 id=\"aquecer-title\">Aquecer em cartões</h2>\n<p>No início da aula de tarefa: 10 minutos de cartões com consulta, 5 minutos para o docente apresentar o enunciado, 60 minutos de produção e 15 minutos de revisão e entrega. Total: 90 minutos. O relógio de produção começa depois da apresentação.</p>\n<p class=\"task-aquecer\"><a href=\"aquecimento/\">Abrir o aquecimento em cartões</a></p>\n<div class=\"task-relogio\" data-relogio data-max=\"10\" data-passo=\"1\" data-rotulo=\"",
+  "ocorrencias": 1,
+  "achado": "decisão do docente de 29/10/2026 (aquecimentos em cartões antes das aulas de tarefa, ordem M7, M1, M4); trabalho de 30/10/2026"
+ },
+ {
+  "ficheiro": "tarefas/m1-u2/index.html",
+  "local": "bloco 2 de 4 (carateres 2039-4909 na base)",
+  "antigo": "fas/m1-u2:aquecimento\"></div>\n<article class=\"task-machine\" data-task-machine=\"1\" aria-labelledby=\"maquina-1\"><p class=\"task-machine-tag\"><span>01</span> Pensa.</p><h3 id=\"maquina-1\">Descobre o que te pedem</h3>\n<blockquote class=\"task-instruction\">Como transforma Fernão Lopes a cidade numa só figura, quando ela ouve o grito do pajem? Cita uma passagem do cap. XII. Explica o que essa passagem faz ver.</blockquote>\n<p>Copia a instrução. Sublinha os verbos que mandam fazer, rodeia o objeto e põe a condição entre parênteses.</p>\n<details class=\"task-confirm\"><summary>Confirmar depois de marcares</summary><dl class=\"task-anatomy\"><div><dt>Verbos</dt><dd>«Cita» e «Explica»: duas operações, por esta ordem. A pergunta inicial diz o que a explicação tem de mostrar: como a cidade passa a ser uma só figura.</dd></div><div><dt>Objeto</dt><dd>o que a passagem faz <b>ver</b> da cidade, e não o que se sabe do Mestre ou do pajem.</dd></div><div><dt>Condição</dt><dd>«quando ela ouve o grito do pajem» e «do cap. XII» (este episódio, não o cerco); «uma passagem» (copiada sem mudar nada, entre aspas).</dd></div></dl></details></article>\n<article class=\"task-machine\" data-task-machine=\"2\" aria-labelledby=\"maquina-2\"><p class=\"task-machine-tag\"><span>02</span> Prova.</p><h3 id=\"maquina-2\">Prova ou distração?</h3>\n<p class=\"task-claim\">Afirmação: «O grito do pajem estava combinado antes.»</p>\n<div class=\"task-question\" data-task-question=\"aquecer\" aria-labelledby=\"q-aquecer\"><p class=\"task-question-title\" id=\"q-aquecer\">Qual destas passagens prova a afirmação? Escreve a letra e uma razão no papel; depois confirma.</p><div class=\"task-options\"><button type=\"button\" aria-pressed=\"false\" data-correct=\"false\" data-response=\"Distração: também tem «segundo», mas aqui quer dizer conforme o costume. Fala da coifa de Álvaro Pais, não do grito.\"><span class=\"task-letter\">A<span class=\"sr-only\">:</span></span> O narrador, sobre Álvaro Pais: «com uma coifa na cabeça, segundo usança daquele tempo»</button><button type=\"button\" aria-pressed=\"false\" data-correct=\"false\" data-response=\"Distração: faz ver a urgência de Álvaro Pais, num cavalo que há anos não montava. Ter pressa não prova que o grito estava combinado.\"><span class=\"task-letter\">B<span class=\"sr-only\">:</span></span> O narrador, sobre Álvaro Pais: «cavalgou logo à pressa, em cima de um cavalo que anos havia que não cavalgara»</button><button type=\"button\" aria-pressed=\"false\" data-correct=\"true\" data-response=\"Prova: «segundo já era percebido» quer dizer combinado, e «lhe disseram que fosse pela vila» mostra que o pajem cumpre uma ordem dada antes.\"><span class=\"task-letter\">C<span class=\"sr-only\">:</span></span> O narrador, sobre o pajem: «como lhe disseram que fosse pela vila, segundo já era percebido»</button></div><p class=\"task-feedback\" data-task-feedback role=\"status\" aria-live=\"polite\" hidden></p></div></article>\n</section>\n<header><p class=\"t",
+  "novo": "fas/m1-u2:aquecimento\"></div>\n</section>\n<header><p class=\"t",
+  "ocorrencias": 1,
+  "achado": "decisão do docente de 29/10/2026 (aquecimentos em cartões antes das aulas de tarefa, ordem M7, M1, M4); trabalho de 30/10/2026"
+ },
+ {
+  "ficheiro": "tarefas/m1-u2/index.html",
+  "local": "bloco 3 de 4 (carateres 5375-5375 na base)",
+  "antigo": "e-a. À mão, com consulta.</p>\n<section id=\"produzir\" aria-la",
+  "novo": "e-a. À mão, com consulta.</p>\n<p class=\"task-aquecer\"><a href=\"aquecimento/\">Aquecer</a></p>\n<section id=\"produzir\" aria-la",
+  "ocorrencias": 1,
+  "achado": "decisão do docente de 29/10/2026 (aquecimentos em cartões antes das aulas de tarefa, ordem M7, M1, M4); trabalho de 30/10/2026"
+ },
+ {
+  "ficheiro": "tarefas/m1-u2/index.html",
+  "local": "bloco 4 de 4 (carateres 11588-11589 na base)",
+  "antigo": "s\">Respostas exploradas: 0 de 2. Podes rever qualquer escolha",
+  "novo": "s\">Respostas exploradas: 0 de 1. Podes rever qualquer escolha",
+  "ocorrencias": 1,
+  "achado": "decisão do docente de 29/10/2026 (aquecimentos em cartões antes das aulas de tarefa, ordem M7, M1, M4); trabalho de 30/10/2026"
+ }
+]

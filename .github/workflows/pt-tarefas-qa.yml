@@ -12,6 +12,11 @@ on:
       - 'assets/pt-lessons/casca.js'
       - 'assets/pt-lessons/lesson.css'
       - 'tests/*task*'
+      # 30/10/2026: aquecimento em cartões (decisão do docente)
+      - 'tests/*aquecimentos_m1*'
+      - 'scripts/auditar_aquecimentos_m1.py'
+      - 'm1/index.html'
+      - 'm1/guia-da-tarefa-m1/**'
       - 'tests/fixtures/*task*'
       # 29/10/2026: aquecimentos em cartões (gerador, dados e páginas) e a tarefa nova da M7-U3
       - 'scripts/aquecimentos.py'
@@ -44,6 +49,9 @@ jobs:
       - name: Verificar conteúdo, continuidade e sintaxe
         run: |
           python -m unittest discover -s tests -p 'test_*task*.py' -v
+          # 30/10/2026: aquecimento em cartões (decisão do docente)
+          python -m unittest discover -s tests -p 'test_aquecimentos_m1_opcoes.py' -v
+          python scripts/auditar_aquecimentos_m1.py
           node --check assets/task-90.js
           node --check assets/task-reader.js
           node --check assets/relogio.js
@@ -61,3 +69,6 @@ jobs:
       # M7 depois do lançador da projeção e o arquivo do guia (itálico e blocos de 90 minutos).
       - name: Aquecimentos em cartões do M7 e tarefa nova da unidade 3
         run: python tests/browser_task_aquecimentos.py
+      # 30/10/2026: aquecimento em cartões (decisão do docente)
+      - name: Respostas certas e erradas nos aquecimentos do M1
+        run: python tests/browser_aquecimentos_m1_feedback.py
