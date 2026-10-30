@@ -30,8 +30,9 @@ ROOT = Path(__file__).resolve().parents[1]
 DADOS = ROOT / 'docs/pedagogia/aquecimentos'
 # 30/10/2026: aquecimento em cartões (decisão do docente)
 # 30/10/2026: o M4 também liga aos aquecimentos (camada tests/fixtures/aquecimentos-m4-edits-20261030.json).
-TAREFAS_LIGADAS = ['m1-u1', 'm1-u2', 'm4-u1', 'm4-u2', 'm4-u3-discurso', 'm7-u1', 'm7-u2', 'm7-u3']
-SLUGS = ['m1-u1', 'm1-u2', 'm4-u1', 'm4-u2', 'm4-u3-discurso', 'm7-u1', 'm7-u2', 'm7-u3']
+TAREFAS_LIGADAS = ['m1-u1', 'm1-u2', 'm2-u1', 'm2-u2', 'm4-u1', 'm4-u2', 'm4-u3-discurso', 'm7-u1', 'm7-u2', 'm7-u3']
+# 30/10/2026: M2 recebe páginas novas (aquecimentos em cartões das duas unidades).
+SLUGS = ['m1-u1', 'm1-u2', 'm2-u1', 'm2-u2', 'm4-u1', 'm4-u2', 'm4-u3-discurso', 'm7-u1', 'm7-u2', 'm7-u3']
 sys.path.insert(0, str(ROOT / 'scripts'))
 from audit_cards import lesson_cards, validate_cards  # noqa: E402
 # 29/10/2026 (revisão técnica, P1): as lições do M7 de onde vêm as citações da unidade 3, nenhuma escrita nesta camada.
