@@ -1,0 +1,49 @@
+name: Português, opções equilibradas
+# 30/10/2026: opções denunciadoras (pedido do docente de 29/10: a certa não pode ser «quase de certeza» a mais comprida).
+# As trocas entram por uma camada literal (tests/fixtures/opcoes-denunciadoras-edits-20261030.json), desfeita antes das
+# outras nos testes de estado congelado; scripts/medir_opcoes.py mede toda a árvore e tests/test_opcoes_equilibradas.py
+# pede zero denunciadoras e guarda uma catraca por pasta (fora dos 20 % e certa a mais longa não sobem).
+on:
+  pull_request:
+    paths:
+      - 'scripts/medir_opcoes.py'
+      - 'scripts/opcoes_equilibradas.py'
+      - 'scripts/opcoes_denunciadoras_20261030.json'
+      - 'tests/fixtures/opcoes-denunciadoras-edits-20261030.json'
+      - 'tests/test_opcoes_equilibradas.py'
+      - 'tests/browser_opcoes_denunciadoras.py'
+      - 'tests/auditoria_20261028.py'
+      - 'tests/test_task_routes_closure.py'
+      - '.github/workflows/pt-opcoes-qa.yml'
+      # as escolhas múltiplas vivem nas páginas, nos dados de cartões em .js e nas sessões do exame
+      - '**/index.html'
+      - 'm*/recursos/*.js'
+      - 'assets/pt-lessons/*.js'
+      - 'assets/exame/*.json'
+permissions:
+  contents: read
+jobs:
+  opcoes:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Zero denunciadoras, catraca por pasta, camada literal e estados congelados
+        run: |
+          python -m unittest discover -s tests -p 'test_opcoes_equilibradas.py' -v
+          python -m unittest discover -s tests -p 'test_task_routes_closure.py' -v
+          python -m unittest discover -s tests -p 'test_module_layout.py' -v
+          python -m unittest discover -s tests -p 'test_legacy_task_instructions.py' -v
+          python -m unittest discover -s tests -p 'test_apoios_tabelas.py' -v
+          python -m unittest discover -s tests -p 'test_desfecho_satira.py' -v
+          python scripts/aplicar_trocas.py scripts/opcoes_denunciadoras_20261030.json --manifesto tests/fixtures/opcoes-denunciadoras-edits-20261030.json --verificar
+          python scripts/medir_opcoes.py --regra
+      - name: Instalar Chromium
+        run: |
+          python -m pip install playwright
+          python -m playwright install --with-deps chromium
+      - name: Cartões mudados respondidos a 390 px (certa aceite, retorno visível)
+        run: python tests/browser_opcoes_denunciadoras.py

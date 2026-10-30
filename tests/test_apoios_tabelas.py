@@ -3,7 +3,7 @@ from pathlib import Path
 from html.parser import HTMLParser
 import hashlib,json,unittest
 from test_task_routes_closure import original_lesson_text
-from auditoria_20261028 import undo as undo_audit_20261028
+from auditoria_20261028 import undo as undo_audit_20261028, undo_opcoes
 ROOT=Path(__file__).resolve().parents[1]
 PATH='m7/licao-m7-f15/index.html'
 class Table(HTMLParser):
@@ -28,7 +28,10 @@ class TableAid(unittest.TestCase):
   # 28/10/2026: a Sala de aula saiu desta lição (decisão do docente de 17/10/2026); o mesmo auxiliar desfaz antes
   # as trocas literais do manifesto da Sala.
   self.assertEqual(hashlib.sha256(undo_audit_20261028(PATH,source).encode()).hexdigest(),record['after_sha256_lf'])
-  old,new=cards(before),cards(source)
+  # 30/10/2026: as opções denunciadoras (pedido do docente de 29/10) mudam a lacuna [1] do cartão 18 (camada literal
+  # tests/fixtures/opcoes-denunciadoras-edits-20261030.json, que original_lesson_text() desfaz); os cartões comparam-se
+  # com a página real sem essa camada.
+  old,new=cards(before),cards(undo_opcoes(PATH,source))
   self.assertEqual(len(old),len(new));self.assertEqual(len(new),21)
   for index,(a,b) in enumerate(zip(old,new)):
    if index==11:

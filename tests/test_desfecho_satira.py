@@ -9,7 +9,10 @@ class DesfechoSatira(unittest.TestCase):
   self.assertLess(text.index('Andar'),text.index('Vem um Ermitão'));self.assertIn('segundo casamento',a[15]['html'])
   labels=re.findall(r'data-l="([^"]+)"',text);self.assertEqual(len(labels),len(set(labels)))
  def test_hearing_not_confused_with_understanding(self):
-  a=bank('06');self.assertNotIn('Pêro ouve «Quanto vos amo»; o público ouve',a[1]['html']);self.assertIn('compreensão',a[1]['html']);self.assertEqual('rever',a[23]['t']);self.assertIn('não dá sinais',a[23]['o'][0]);self.assertIn('cuco',a[25]['cita']);self.assertIn('data-l="'+a[25]['l']+'"',a[21]['html'])
+  # 30/10/2026: opções denunciadoras (pedido do docente de 29/10): a certa do cartão 24 encurta-se para «ouve a cantiga,
+  # mas não mostra entender a alusão» (tests/fixtures/opcoes-denunciadoras-edits-20261030.json); continua a separar ouvir de
+  # compreender.
+  a=bank('06');self.assertNotIn('Pêro ouve «Quanto vos amo»; o público ouve',a[1]['html']);self.assertIn('compreensão',a[1]['html']);self.assertEqual('rever',a[23]['t']);self.assertIn('ouve a cantiga, mas não mostra entender',a[23]['o'][0]);self.assertIn('cuco',a[25]['cita']);self.assertIn('data-l="'+a[25]['l']+'"',a[21]['html'])
  def test_speakers_and_distinct_contexts(self):
   a=bank('11');self.assertEqual(24,len(a));self.assertIn('duas cenas diferentes',a[2]['html']);self.assertIn('Ermitão: Y rezaré',a[2]['html']);self.assertIn('não demonstra',a[12]['f']);self.assertIn('não transforma',a[13]['f'])
  def test_evidence_and_open_transfer(self):

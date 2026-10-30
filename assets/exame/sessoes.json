@@ -179,7 +179,7 @@
           "id": "s01-q1",
           "q": "Mendinho (lição «Cercada pelas ondas»): «cercarom-mi as ondas». Codax: «se vistes meu amigo?». Que papel tem o mar em cada uma?",
           "options": [
-            "Em Mendinho ameaça e cerca; em Codax ouve a pergunta, como confidente",
+            "Em Mendinho cerca; em Codax ouve, como confidente",
             "Nas duas traz notícias do amigo",
             "Nas duas afoga a rapariga",
             "Em Codax ameaça; em Mendinho consola",
@@ -254,7 +254,7 @@
           "id": "s01-check",
           "q": "Depois da revisão: Mendinho (lição «Cercada pelas ondas»): «cercarom-mi as ondas». Codax: «se vistes meu amigo?». Que papel tem o mar em cada uma?",
           "options": [
-            "Em Mendinho ameaça e cerca; em Codax ouve a pergunta, como confidente",
+            "Em Mendinho cerca; em Codax ouve, como confidente",
             "Nas duas traz notícias do amigo",
             "Nas duas afoga a rapariga",
             "Em Codax ameaça; em Mendinho consola",
@@ -365,10 +365,10 @@
           "id": "s02-q2",
           "q": "«pera lhe dar vida e escusar morte»: que inferência sobre a gente da cidade tem mais apoio?",
           "options": [
-            "Acredita no grito e corre para salvar o Mestre",
+            "Acredita no grito e corre a salvar o Mestre",
             "Conhece pessoalmente o Mestre, um a um",
             "Corre para fugir da cidade",
-            "Sabe que o grito era combinado",
+            "Sabe desde o início que o grito era combinado",
             "Quer castigar o pajem pelo alarme"
           ],
           "answer": 0,
@@ -381,8 +381,8 @@
           "options": [
             "O Mestre decide junto com a cidade, não sozinho",
             "O Mestre manda e a cidade só obedece",
-            "A cidade decide sem o Mestre",
-            "Os nobres ficam de fora da guarda",
+            "A cidade decide sozinha a defesa, sem o Mestre",
+            "Os nobres ficam de fora da guarda dos muros",
             "A cidade foge com o Mestre"
           ],
           "answer": 0,
