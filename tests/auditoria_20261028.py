@@ -32,6 +32,14 @@ e dos dados públicos, por isso, depois de a desfazer, os manifestos sucessores 
 30/10/2026 (depois do M1): aquecimentos em cartões antes das aulas de tarefa do M4 e apresentações da U1 e da U3 em pequenos
 grupos. As trocas literais estão em tests/fixtures/aquecimentos-m4-edits-20261030.json, geradas por scripts/aplicar_trocas.py
 a partir de scripts/aquecimentos_m4_20261030.json. É agora a camada mais recente: undo() desfá-la antes da do M1.
+
+30/10/2026: texto corrido justificado (decisão do docente). Os excertos em prosa citados em blockquote nos percursos
+«Pensar devagar» e a prosa dialogada escrita com <br> nos exercícios do M5 levam a classe «prosa», para que
+assets/appearance.css os justifique sem justificar as estrofes, que usam a mesma marcação. As trocas literais estão em
+tests/fixtures/texto-justificado-edits-20261030.json, geradas por scripts/aplicar_trocas.py a partir de
+scripts/texto_justificado_20261030.json. É agora a camada mais recente: undo() desfá-la antes de todas as outras (antes da do M4).
+Revisão de 30/10/2026: a mesma camada põe também a classe «verso» nos parágrafos que só trazem verso citado, «prosa» nos
+três blockquote sem parágrafos de m4/recursos/tpc-entrada.js e lang="en" em dois trechos em inglês; nenhum texto muda.
 """
 from pathlib import Path
 import json
@@ -111,14 +119,31 @@ def undo_aquecimentos(path, text):
     return text
 
 
+# 30/10/2026: a camada do texto justificado (a mais recente; desfaz-se antes das dos aquecimentos do M4, do M1 e do M7).
+JUSTIFICADO_MANIFEST = ROOT / 'tests/fixtures/texto-justificado-edits-20261030.json'
+_JUSTIFICADO_FILES = json.loads(JUSTIFICADO_MANIFEST.read_text('utf-8'))['files']
+
+
+def undo_justificado(path, text):
+    """30/10/2026: devolve o texto anterior à classe «prosa» do texto justificado (ou o mesmo texto, se não a tem)."""
+    relative = _relative(path)
+    for edit in reversed(_JUSTIFICADO_FILES.get(relative, {}).get('edits', [])):
+        if text.count(edit['new']) != edit['occurrences']:
+            raise AssertionError(f"Troca autorizada a 30/10 já não confere: {relative}: {edit['location']}")
+        text = text.replace(edit['new'], edit['old'])
+    return text
+
+
 def undo(path, text):
     """Devolve o texto anterior às correções de 28/10 para este ficheiro (ou o mesmo texto, se não as tem).
 
     28/10/2026: desfaz primeiro o corte da Sala (o mais recente) e depois os dois lotes da auditoria.
     29/10/2026: antes de tudo, a camada dos aquecimentos do M7. Numa página gerada de novo a 29/10 (REGENERADAS_20261029)
     não há trocas de 28/10 a desfazer: o predecessor compacto continua autorizado pelo seu manifesto literal.
+    30/10/2026: antes ainda, a camada do texto justificado (classe «prosa»).
     """
-    # 30/10/2026: antes de tudo, a camada dos aquecimentos do M4 (a mais recente) e depois a do M1.
+    # 30/10/2026: antes de tudo, a camada do texto justificado (a mais recente), depois a dos aquecimentos do M4 e a do M1.
+    text = undo_justificado(path, text)
     text = undo_aquecimentos_m4(path, text)
     text = undo_aquecimentos_m1(path, text)
     text = undo_aquecimentos(path, text)

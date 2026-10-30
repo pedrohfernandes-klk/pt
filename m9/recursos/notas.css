@@ -1,1 +1,5 @@
 body{margin:0;background:#f3f2ee;color:#111;font:1rem/1.55 Arial,Helvetica,sans-serif}main{max-width:46rem;margin:auto;padding:24px 20px}h1{font-size:clamp(2rem,6vw,3rem);line-height:1.05;letter-spacing:-.03em}h2{border-top:2px solid;padding-top:12px}a{color:inherit;display:inline-block;min-height:44px}a:focus-visible{outline:3px solid;outline-offset:3px}@media(prefers-color-scheme:dark){body{background:#181715;color:#f3f2ee}}
+/* 30/10/2026: texto corrido justificado, com hifenização em português europeu (decisão do docente; regra comum em
+   assets/appearance.css, que também define --epi-texto-corrido). Os parágrafos depois do título (salvo a linha das ligações) e
+   os parágrafos dentro de um bloco que se abre justificam-se; ficam à esquerda o antetítulo, as listas e a linha das ligações. */
+@supports selector(p:has(a)){main>h1~p:not(:has(a)),main>details p:not([class]){text-align:var(--epi-texto-corrido,start);text-align-last:auto;-webkit-hyphens:auto;hyphens:auto;hyphenate-limit-chars:6 3 3;-webkit-hyphenate-limit-before:3;-webkit-hyphenate-limit-after:3;word-spacing:normal;overflow-wrap:break-word}}
