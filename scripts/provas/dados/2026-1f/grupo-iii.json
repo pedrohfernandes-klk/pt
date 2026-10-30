@@ -1,0 +1,853 @@
+{
+ "_sobre": "Grupo III da Prova 639, 1.ª fase, 2026, versão 2: título, «aprendes» e cartões, lidos por scripts/provas/gerar.py. Vieram do piloto (desenho-g3.json, com as trocas de autoria de gerar_paginas.py já aplicadas) a 30/10/2026; daqui em diante, é este ficheiro que se edita. O que é da prova e dos critérios está nos cartões tal como na transcrição tests/fixtures/prova-639-2026-1f-v2.json; o resto é nosso.",
+ "titulo": "Uma máquina no cavalo de baloiço",
+ "aprendes": "A escrever a apreciação crítica de um cartoon como na prova: ler o pedido (género, objeto, extensão e as três partes), descrever destacando os elementos significativos da composição, separar descrição e juízo, fundamentar o comentário em três aspetos distintos com o pormenor que os prova, escolher o juízo global, ligar as ideias (conectores, retomas, tempo verbal) e rever o registo, a pontuação e o vocabulário. Também fazes as contas das regras que tiram pontos (extensão, maiúsculas, tabela da correção linguística). No fim, escreves no caderno com a grelha oficial à vista e avalias o teu texto.",
+ "cartoes": [
+  {
+   "t": "ler",
+   "rot": "Abre",
+   "titulo": "Grupo III: uma máquina no cavalo de baloiço",
+   "html": "<p class=\"abre\"><b>Uma imagem sem palavras e um texto teu, de 200 a 350 palavras.</b> O Grupo III pede a apreciação crítica de um <i>cartoon</i> de Javad Takjoo. Primeiro, lês o pedido e olhas para a imagem; depois, constróis o texto às peças, com os critérios ao lado; no fim, escreves no caderno.</p><ul><li><b>Quanto vale:</b> 44 pontos, o item com mais peso da prova (22 % dos 200). Está marcado com ✱, como na prova: conta sempre. Nos critérios, 30 pontos são de estruturação temática e discursiva (três parâmetros de 10) e 14 de correção linguística.</li><li><b>Tempo:</b> a prova dura 120 minutos, mais 30 de tolerância, para os três grupos. Não marca tempo para cada grupo.</li><li><b>O que treinas:</b> ler o pedido (género, objeto, extensão e partes); descrever o que se vê; separar descrição e juízo; escolher três aspetos e um juízo global; ligar as ideias; rever; fazer o plano; escrever com a grelha à vista.</li><li><b>O que é oficial:</b> o enunciado, a imagem e a grelha vêm da prova e dos critérios. Os critérios do Grupo III não descrevem a imagem nem dão exemplos de resposta: todas as frases e todos os textos de exemplo desta lição são nossos.</li></ul><p class=\"fonte\">Exame Final Nacional de Português, Prova 639, 1.ª fase, 2026, versão 2 (IAVE; os PDF de 2026 trazem o logótipo da EduQA, Instituto de Educação, Qualidade e Avaliação). Grelha e regras: critérios de classificação da mesma prova. Os cartões de preparação, as explicações e os exemplos são nossos.</p>"
+  },
+  {
+   "t": "ler",
+   "rot": "A prova",
+   "titulo": "Grupo III ✱",
+   "html": "<p class=\"fonte\">Na prova, p. 13:</p><p><b>✱ GRUPO III</b></p><p>Num texto bem estruturado, com um mínimo de duzentas e um máximo de trezentas e cinquenta palavras, faça a apreciação crítica do <i>cartoon</i>, da autoria de Javad Takjoo.</p><p>No seu texto, deve incluir:</p><ul class=\"prova-lista\"><li>a descrição da imagem apresentada, destacando elementos significativos da sua composição;</li><li>um comentário crítico, fundamentando a sua apreciação em, pelo menos, três aspetos relevantes e utilizando um discurso valorativo;</li><li>uma conclusão adequada aos pontos de vista desenvolvidos.</li></ul><figure class=\"fig inteiro cor\"><span class=\"moldura\"><img src=\"../../../../img/exame/provas/2026-1f/grupo-iii-takjoo.jpg\" alt=\"Desenho a cores, visto de cima: uma menina de cabelo escuro, com um laço azul-claro no cabelo e um vestido azul-claro com um laço branco ao peito, está sentada num banco de madeira e cose um pano branco numa máquina de costura preta, pousada no assento de um cavalo de baloiço de madeira. Tem a cabeça inclinada e os olhos baixos, postos no trabalho. Fundo cinzento e vazio; sombras fortes; a sombra da menina, grande e escura, à direita. Assinatura do autor à esquerda.\" loading=\"lazy\"></span><figcaption>https://takjoo.com (consultado em 23/02/2026).</figcaption></figure><p><b>Observações:</b></p><ol class=\"prova-obs\"><li>Para efeitos de contagem, considera-se <b>uma palavra</b> qualquer sequência delimitada por espaços em branco, mesmo quando esta integre elementos ligados por hífen (ex.: /dir-se-ia/). Qualquer número conta como uma única palavra, independentemente do número de algarismos que o constituam (ex.: /2026/).</li><li>Relativamente ao desvio dos limites de extensão indicados – entre duzentas e trezentas e cinquenta palavras –, há que atender ao seguinte:<ul class=\"prova-lista\"><li>um desvio dos limites de extensão indicados implica uma desvalorização parcial (até 5 pontos) do texto produzido;</li><li>um texto com extensão inferior a oitenta palavras é classificado com zero pontos.</li></ul></li></ol>"
+  },
+  {
+   "t": "escolha",
+   "g": "01",
+   "p": "Que género de texto pede o Grupo III?",
+   "p2": "No enunciado, que tipo de texto te mandam escrever?",
+   "o": [
+    "Uma apreciação crítica",
+    "Um texto de opinião",
+    "Uma exposição sobre um tema"
+   ],
+   "c": 0,
+   "f": "**Uma apreciação crítica.** O enunciado manda: «faça a apreciação crítica do _cartoon_». Os critérios chamam-lhe «texto de apreciação crítica». O objeto é uma obra, aqui uma imagem: descreves essa obra e julgas o que ela consegue.",
+   "fe": [
+    null,
+    "O texto de opinião defende uma perspetiva pessoal sobre uma afirmação ou uma questão. Aqui, o objeto é uma imagem, e o enunciado diz «faça a apreciação crítica do _cartoon_».",
+    "A exposição explica um assunto. Aqui tens de julgar uma obra, com «um discurso valorativo»."
+   ]
+  },
+  {
+   "t": "escolha",
+   "g": "02",
+   "p": "Sobre o que escreves?",
+   "p2": "Qual é o objeto da apreciação?",
+   "o": [
+    "O _cartoon_ de Javad Takjoo que vem na prova",
+    "O trabalho infantil no mundo em que vivemos",
+    "A vida e a obra do autor, Javad Takjoo"
+   ],
+   "c": 0,
+   "f": "**O _cartoon_.** É ele que descreves e comentas. O parâmetro B pede aspetos pertinentes «tanto no que diz respeito à descrição da imagem como ao comentário crítico». Um texto que larga a imagem desvia-se do tema proposto.",
+   "fe": [
+    null,
+    "Um assunto geral pode entrar no comentário, mas a partir da imagem. Sem a descrição e o comentário do _cartoon_, o texto desvia-se do que é pedido.",
+    "A prova dá só o nome do autor e o endereço de onde a imagem foi tirada. O objeto da apreciação é a imagem."
+   ]
+  },
+  {
+   "t": "emparelhar",
+   "g": "03",
+   "p": "O enunciado pede três partes e um discurso. Liga cada exigência ao que tens de fazer.",
+   "p2": "Liga cada exigência do enunciado à operação que ela pede.",
+   "pares": [
+    [
+     "a descrição da imagem",
+     "dizer o que se vê e destacar o que conta na composição"
+    ],
+    [
+     "um comentário crítico",
+     "julgar com razões, em pelo menos três aspetos"
+    ],
+    [
+     "um discurso valorativo",
+     "deixar ver o teu juízo, explícito ou implícito"
+    ],
+    [
+     "uma conclusão",
+     "fechar a partir dos pontos de vista que desenvolveste"
+    ]
+   ],
+   "f": "São as exigências que o parâmetro A confere: a descrição, «destacando elementos significativos da sua composição»; o comentário, «fundamentado em, pelo menos, três aspetos distintos»; o «discurso valorativo (juízo de valor explícito ou implícito)»; a conclusão, «adequada aos pontos de vista desenvolvidos».",
+   "liga": [
+    {
+     "t": "Sessão 25: Apreciação crítica, julgar mostrando",
+     "href": "../../../../exame/#s25"
+    }
+   ]
+  },
+  {
+   "t": "sublinhar",
+   "g": "04",
+   "p": "Toca no verbo que diz o que fazes enquanto descreves (está no gerúndio).",
+   "p2": "Na exigência sobre a descrição da imagem, que verbo, no gerúndio, diz que não basta descrever tudo?",
+   "frase": "a descrição da imagem apresentada, destacando elementos significativos da sua composição;",
+   "certas": [
+    5
+   ],
+   "f": "**Destacando.** Escolhes os elementos que contam para o sentido da imagem e dizes porque contam; não fazes uma lista de tudo o que se vê."
+  },
+  {
+   "t": "sublinhar",
+   "g": "05",
+   "p": "Toca nos dois verbos que dizem o que fazes no comentário.",
+   "p2": "No comentário, que dois verbos mandam? Toca neles.",
+   "frase": "um comentário crítico, fundamentando a sua apreciação em, pelo menos, três aspetos relevantes e utilizando um discurso valorativo;",
+   "certas": [
+    3,
+    14
+   ],
+   "f": "**Fundamentando** e **utilizando**: o comentário dá razões, em pelo menos três aspetos, e mostra um juízo de valor. Sem razões, fica só o gosto; sem juízo, fica só a descrição."
+  },
+  {
+   "t": "escolha",
+   "g": "06",
+   "cita": "Dir-se-ia que, em 2026, esta imagem continua atual.",
+   "p": "Pelas regras da prova, quantas palavras tem esta frase?",
+   "p2": "Conta as palavras desta frase como a prova manda contar.",
+   "o": [
+    "8",
+    "10",
+    "11"
+   ],
+   "c": 0,
+   "f": "**8.** «Dir-se-ia» é uma só sequência entre espaços: conta uma. «2026» conta uma, seja qual for o número de algarismos. São as duas regras das Observações da prova.",
+   "fe": [
+    null,
+    "Contaste «dir», «se» e «ia» em separado. Com hífen, é uma só palavra (ex.: /dir-se-ia/).",
+    "Contaste os algarismos de «2026». Qualquer número conta como uma única palavra (ex.: /2026/)."
+   ]
+  },
+  {
+   "t": "escolha",
+   "g": "07",
+   "cita": "desconta-se um ponto por cada palavra (a mais ou a menos), até ao máximo de cinco (1 × 5) pontos",
+   "p": "Esta é a regra dos critérios para a extensão. Um texto tem 353 palavras: quanto desconta?",
+   "p2": "Com esta regra dos critérios, que desconto tem um texto de 353 palavras?",
+   "o": [
+    "3 pontos",
+    "5 pontos",
+    "Nada: o limite é aproximado"
+   ],
+   "c": 0,
+   "f": "**3 pontos:** são 3 palavras a mais, e os critérios dizem que «desconta-se um ponto por cada palavra (a mais ou a menos), até ao máximo de cinco». O desconto faz-se no fim, «depois de aplicados todos os critérios definidos para o item».",
+   "fe": [
+    null,
+    "Cinco é o máximo, a partir de 5 palavras de desvio. Com 3 a mais, são 3 pontos.",
+    "O limite conta palavra a palavra: cada palavra a mais tira um ponto, até cinco."
+   ]
+  },
+  {
+   "t": "vf",
+   "g": "08",
+   "p": "Um texto com 150 palavras é classificado com zero pontos.",
+   "p2": "Com 150 palavras, a resposta vale zero.",
+   "v": false,
+   "f": "Falso. Zero pontos só abaixo de **oitenta palavras**. Com 150, faltam 50 para o mínimo de 200: o desconto chega ao máximo, 5 pontos, e o resto da classificação conta.",
+   "fe": "Zero é só para um texto com menos de oitenta palavras. Com 150 palavras, o desconto da extensão é o máximo, 5 pontos."
+  },
+  {
+   "t": "vf",
+   "g": "09",
+   "p": "Se escreveres o texto todo em maiúsculas, perdes cinco pontos na classificação total da prova.",
+   "p2": "Um texto escrito só em maiúsculas tira cinco pontos à classificação da prova.",
+   "v": true,
+   "f": "Verdadeiro. Os critérios gerais dizem: «As provas em que se apresente, pelo menos, uma resposta restrita ou extensa escrita integralmente em maiúsculas são sujeitas a uma desvalorização de cinco pontos na classificação total.» Escreve com minúsculas e maiúsculas, como sempre.",
+   "fe": "É verdade: uma resposta extensa escrita integralmente em maiúsculas tira cinco pontos à classificação total da prova."
+  },
+  {
+   "t": "vf",
+   "g": "10",
+   "p": "Se o texto tiver zero pontos no parâmetro A (Género/Formato Textual), a correção linguística ainda pode dar pontos.",
+   "p2": "Um texto com zero no parâmetro A pode ainda ganhar pontos na correção linguística.",
+   "v": false,
+   "f": "Falso. Os critérios dizem: «A atribuição da classificação de zero pontos no parâmetro A (Género/Formato Textual) ou no parâmetro B (Tema e Pertinência da Informação) implica a atribuição de zero pontos nos restantes parâmetros da ETD, bem como na CL.» Fazer a apreciação crítica do _cartoon_ é a condição de tudo o resto.",
+   "fe": "Com zero no parâmetro A ou no B, todo o resto do item fica a zero, também a correção linguística."
+  },
+  {
+   "t": "vf",
+   "g": "11",
+   "ver": "<img class=\"cor inteira\" src=\"../../../../img/exame/provas/2026-1f/grupo-iii-takjoo.jpg\" alt=\"O cartoon de Javad Takjoo: uma menina, sentada num banco, cose um pano branco numa máquina de costura pousada no assento de um cavalo de baloiço.\" loading=\"lazy\">",
+   "p": "Na imagem, a menina está montada no cavalo de baloiço.",
+   "p2": "A menina brinca no cavalo de baloiço.",
+   "v": false,
+   "f": "Falso. A menina está sentada num banco de madeira, **ao lado** do cavalo. No assento do cavalo está pousada uma máquina de costura, e é aí que ela cose um pano branco.",
+   "fe": "Olha outra vez: a menina está num banco, e o assento do cavalo serve de mesa à máquina de costura."
+  },
+  {
+   "t": "emparelhar",
+   "g": "12",
+   "ver": "<img class=\"cor inteira\" src=\"../../../../img/exame/provas/2026-1f/grupo-iii-takjoo.jpg\" alt=\"O cartoon de Javad Takjoo: uma menina, sentada num banco, cose um pano branco numa máquina de costura pousada no assento de um cavalo de baloiço.\" loading=\"lazy\">",
+   "p": "Olha para a imagem: o que está lá e o que não está? Arruma.",
+   "p2": "Arruma cada pormenor: está ou não está na imagem?",
+   "pares": [
+    [
+     "a sombra da menina, grande, à direita",
+     "está na imagem"
+    ],
+    [
+     "o pano branco a cair do assento do cavalo",
+     "está na imagem"
+    ],
+    [
+     "um laço branco ao peito da menina",
+     "está na imagem"
+    ],
+    [
+     "a sombra da menina, pequena, à esquerda",
+     "não está na imagem"
+    ],
+    [
+     "o pano no colo da menina",
+     "não está na imagem"
+    ],
+    [
+     "uma janela ao fundo",
+     "não está na imagem"
+    ]
+   ],
+   "f": "Na imagem, a sombra da menina é grande e escura e cai à direita; o pano branco cai do assento do cavalo, já com uma costura; ao peito, um laço branco. Não há janela nenhuma: o fundo é cinzento e vazio. Descrever é isto: dizer o que está, onde está e como está, sem acrescentar nada. Ainda não disseste se a imagem é boa ou eficaz."
+  },
+  {
+   "t": "sublinhar",
+   "g": "13",
+   "ver": "<img class=\"cor inteira\" src=\"../../../../img/exame/provas/2026-1f/grupo-iii-takjoo.jpg\" alt=\"O cartoon de Javad Takjoo: uma menina, sentada num banco, cose um pano branco numa máquina de costura pousada no assento de um cavalo de baloiço.\" loading=\"lazy\">",
+   "p": "Esta frase mistura o que se vê com o que se imagina. Toca nas palavras que a imagem não mostra.",
+   "p2": "Toca nas palavras desta descrição que não estão na imagem.",
+   "frase": "Uma menina chora numa fábrica enquanto cose um pano branco à máquina.",
+   "certas": [
+    2,
+    4
+   ],
+   "f": "**Chora** e **fábrica** não estão na imagem: a menina tem os olhos baixos, postos no trabalho, e o fundo é cinzento, sem lugar reconhecível. Na descrição, diz o que se vê; o que imaginas fica para o comentário, como leitura tua e com a razão que a apoia."
+  },
+  {
+   "t": "escolha",
+   "g": "14",
+   "ver": "<img class=\"cor inteira\" src=\"../../../../img/exame/provas/2026-1f/grupo-iii-takjoo.jpg\" alt=\"O cartoon de Javad Takjoo: uma menina, sentada num banco, cose um pano branco numa máquina de costura pousada no assento de um cavalo de baloiço.\" loading=\"lazy\">",
+   "p": "Que descrição destaca «elementos significativos da sua composição»?",
+   "p2": "Qual destas descrições escolhe o que conta na imagem?",
+   "o": [
+    "Uma menina cose à máquina, de olhos baixos. A máquina está pousada no assento de um cavalo de baloiço, que lhe serve de mesa.",
+    "É uma imagem muito bonita e bem desenhada, com cores bonitas, uma menina simpática e um ambiente muito agradável.",
+    "A menina tem cabelo escuro, um laço azul, um vestido azul, sapatos, um banco de madeira e um cavalo de madeira."
+   ],
+   "c": 0,
+   "f": "**A descrição da máquina pousada no cavalo de baloiço** escolhe o que conta: o pormenor mais surpreendente da imagem. A que diz «muito bonita» já julga, e só com gosto, sem descrever; a lista do cabelo, do laço e do vestido enumera pormenores sem dizer o que importa. Descrições nossas.",
+   "fe": [
+    null,
+    "Isto é um juízo de gosto, não uma descrição: falta dizer o que se vê e destacar o essencial.",
+    "É uma lista sem hierarquia: o pormenor que muda o sentido, a máquina pousada no cavalo de baloiço, nem aparece."
+   ]
+  },
+  {
+   "t": "escolha",
+   "g": "15",
+   "ver": "<img class=\"cor inteira\" src=\"../../../../img/exame/provas/2026-1f/grupo-iii-takjoo.jpg\" alt=\"O cartoon de Javad Takjoo: uma menina, sentada num banco, cose um pano branco numa máquina de costura pousada no assento de um cavalo de baloiço.\" loading=\"lazy\">",
+   "p": "De onde vemos a cena?",
+   "p2": "Em que ponto de vista está quem olha para a cena?",
+   "o": [
+    "De cima, sobre a menina e o cavalo",
+    "De baixo, ao nível do chão",
+    "De frente, à altura dos olhos da menina"
+   ],
+   "c": 0,
+   "f": "**De cima.** Vemos o assento do cavalo e o chão à volta das figuras, e a menina parece pequena. O ponto de vista é um elemento da composição: descreve-o e, no comentário, diz que efeito te parece ter.",
+   "fe": [
+    null,
+    "Vista de baixo, a cena não mostraria o assento do cavalo por cima nem o chão à volta das figuras.",
+    "Vemos a cena de cima: o assento do cavalo e o chão estão à vista, e a cabeça da menina aparece inclinada para o trabalho."
+   ]
+  },
+  {
+   "t": "completar",
+   "g": "16",
+   "ver": "<img class=\"cor inteira\" src=\"../../../../img/exame/provas/2026-1f/grupo-iii-takjoo.jpg\" alt=\"O cartoon de Javad Takjoo: uma menina, sentada num banco, cose um pano branco numa máquina de costura pousada no assento de um cavalo de baloiço.\" loading=\"lazy\">",
+   "p": "Completa a frase de descrição com o que se vê.",
+   "frase": "Num fundo [1], uma menina de vestido [2] cose um pano branco numa máquina de costura [3], pousada no assento de um cavalo de baloiço.",
+   "lacunas": [
+    {
+     "o": [
+      "cinzento e vazio",
+      "escuro e cheio de máquinas",
+      "colorido e alegre"
+     ],
+     "c": 0
+    },
+    {
+     "o": [
+      "azul-claro",
+      "vermelho",
+      "amarelo"
+     ],
+     "c": 0
+    },
+    {
+     "o": [
+      "preta",
+      "branca",
+      "vermelha"
+     ],
+     "c": 0
+    }
+   ],
+   "f": "Fundo **cinzento e vazio**, vestido **azul-claro**, máquina **preta**: uma frase de descrição com as cores que a imagem mostra e com o pormenor que vai dar que pensar, a máquina no cavalo de baloiço. Frase nossa."
+  },
+  {
+   "t": "emparelhar",
+   "g": "17",
+   "p": "Descreve ou julga? Arruma cada frase.",
+   "p2": "Separa as frases que só descrevem das que já têm um juízo de valor.",
+   "pares": [
+    [
+     "A menina está sentada num banco de madeira.",
+     "Descreve"
+    ],
+    [
+     "O fundo é cinzento e não tem objetos.",
+     "Descreve"
+    ],
+    [
+     "A máquina está pousada no assento do cavalo.",
+     "Descreve"
+    ],
+    [
+     "O fundo vazio é um acerto: nada distrai do essencial.",
+     "Julga"
+    ],
+    [
+     "O traço realista torna a cena mais perturbadora.",
+     "Julga"
+    ],
+    [
+     "Uma menina que devia estar a brincar cose em silêncio.",
+     "Julga"
+    ]
+   ],
+   "f": "Julgar é dar valor: «um acerto», «mais perturbadora». Em «devia estar a brincar», o juízo está implícito: não há «bom» nem «mau», mas a frase diz o que não está certo. Os critérios aceitam as duas formas: «discurso valorativo (juízo de valor explícito ou implícito)». Frases nossas."
+  },
+  {
+   "t": "escolha",
+   "g": "18",
+   "p": "Qual destas frases tem um juízo de valor **implícito**?",
+   "p2": "Que frase julga sem usar nenhum adjetivo de valor?",
+   "o": [
+    "A menina cose um pano branco, ao lado do cavalo de baloiço.",
+    "Em vez de brincar no cavalo, a menina usa-o como mesa de trabalho.",
+    "Este _cartoon_ é excelente, um dos melhores que alguma vez vi."
+   ],
+   "c": 1,
+   "f": "**A frase do «Em vez de brincar».** «Em vez de» mostra o que se perdeu, sem nenhum adjetivo de valor: o juízo está implícito. A frase «Este _cartoon_ é excelente…» tem um juízo explícito, mas sem razão nenhuma; a da menina que cose ao lado do cavalo só descreve. Frases nossas.",
+   "fe": [
+    "Só descreve: diz o que se vê, sem tomar posição.",
+    null,
+    "O juízo é explícito («excelente»), e falta-lhe a razão. Um comentário precisa das duas coisas."
+   ]
+  },
+  {
+   "t": "escolha",
+   "g": "19",
+   "ver": "<img class=\"cor inteira\" src=\"../../../../img/exame/provas/2026-1f/grupo-iii-takjoo.jpg\" alt=\"O cartoon de Javad Takjoo: uma menina, sentada num banco, cose um pano branco numa máquina de costura pousada no assento de um cavalo de baloiço.\" loading=\"lazy\">",
+   "p": "Qual destes trios dá **três aspetos distintos** para o comentário?",
+   "p2": "Os critérios pedem «três aspetos distintos». Que trio os tem?",
+   "o": [
+    "O contraste entre o brinquedo e a máquina; a postura da menina; a cor e a luz",
+    "O cavalo de baloiço; o brinquedo de madeira; o cavalo que serve de mesa",
+    "A menina é bonita; o vestido é bonito; o laço é bonito"
+   ],
+   "c": 0,
+   "f": "**O trio contraste, postura, cor e luz:** três lados diferentes da imagem (a composição, a figura, a cor e a luz), cada um com o seu pormenor e a sua razão. Exemplos nossos.",
+   "fe": [
+    null,
+    "É o mesmo aspeto dito três vezes: o cavalo de baloiço. Conta como um.",
+    "É um só aspeto, a aparência da menina, e só com gosto, sem razão."
+   ]
+  },
+  {
+   "t": "escolha",
+   "g": "20",
+   "p": "Um texto de apreciação crítica tem uma descrição que destaca os elementos significativos, juízos de valor e uma conclusão adequada, mas o comentário só se fundamenta em dois aspetos distintos. Que pontuação tem no parâmetro A?",
+   "p2": "Apreciação crítica com descrição, juízos de valor e conclusão bem feitos, mas com só dois aspetos distintos no comentário: quanto vale no parâmetro A?",
+   "o": [
+    "8 pontos (nível 3)",
+    "10 pontos (nível 4)",
+    "5 pontos (nível 2)"
+   ],
+   "c": 0,
+   "f": "**8 pontos.** O nível 3 do parâmetro A é o de quem «fundamenta o comentário crítico em apenas dois aspetos distintos, assegurando os restantes aspetos em avaliação neste parâmetro». Com um terceiro aspeto distinto, e o resto igual, o texto chegava ao nível 4: 10 pontos.",
+   "fe": [
+    null,
+    "O nível 4 exige um comentário «fundamentado em, pelo menos, três aspetos distintos».",
+    "O nível 2 é para um só aspeto com o resto certo, ou para dois aspetos com falhas noutros pontos."
+   ]
+  },
+  {
+   "t": "escolha",
+   "g": "21",
+   "cita": "Gostei muito do _cartoon_ porque é giro.",
+   "p": "Imagina que um colega escreve isto no comentário (frase nossa). O que lhe falta?",
+   "p2": "Que falha tem esta frase de comentário (exemplo nosso)?",
+   "o": [
+    "Um aspeto da imagem e a razão do juízo, num registo adequado",
+    "Mais adjetivos de gosto, como «lindo», «fixe» e «espetacular»",
+    "Uma pergunta ao leitor, para o fazer pensar no que a imagem quer dizer"
+   ],
+   "c": 0,
+   "f": "Falta **mostrar**: que aspeto da imagem, e porque funciona. E «giro» é registo de conversa: o parâmetro B pede «o recurso a um repertório lexical e a um registo de língua globalmente adequados ao desenvolvimento do tema».",
+   "fe": [
+    null,
+    "Mais adjetivos de gosto não fazem razões, e «fixe» afasta ainda mais o registo do que o texto pede.",
+    "Uma pergunta pode abrir um parágrafo, mas não substitui o aspeto e a razão."
+   ]
+  },
+  {
+   "t": "completar",
+   "g": "22",
+   "ver": "<img class=\"cor inteira\" src=\"../../../../img/exame/provas/2026-1f/grupo-iii-takjoo.jpg\" alt=\"O cartoon de Javad Takjoo: uma menina, sentada num banco, cose um pano branco numa máquina de costura pousada no assento de um cavalo de baloiço.\" loading=\"lazy\">",
+   "p": "Completa: um juízo e a razão que o sustenta.",
+   "frase": "A máquina pousada no cavalo de baloiço é [1], porque [2].",
+   "lacunas": [
+    {
+     "o": [
+      "uma escolha muito expressiva",
+      "uma máquina antiga",
+      "de madeira castanha"
+     ],
+     "c": 0
+    },
+    {
+     "o": [
+      "junta, no mesmo objeto, o tempo de brincar e o tempo de trabalhar",
+      "o cavalo é castanho",
+      "a máquina é preta"
+     ],
+     "c": 0
+    }
+   ],
+   "f": "Juízo (**uma escolha muito expressiva**) e razão (**junta, no mesmo objeto, o tempo de brincar e o tempo de trabalhar**): é o tipo de frase que pode abrir cada parágrafo do comentário. Frase nossa."
+  },
+  {
+   "t": "escolha",
+   "g": "23",
+   "ver": "<img class=\"cor inteira\" src=\"../../../../img/exame/provas/2026-1f/grupo-iii-takjoo.jpg\" alt=\"O cartoon de Javad Takjoo: uma menina, sentada num banco, cose um pano branco numa máquina de costura pousada no assento de um cavalo de baloiço.\" loading=\"lazy\">",
+   "p": "Que frase pode ser o juízo global, a ideia que o texto todo vai sustentar?",
+   "p2": "Escolhe a frase que funciona como juízo global sobre o _cartoon_.",
+   "o": [
+    "Com um só objeto fora do lugar, o _cartoon_ de Javad Takjoo mostra, de forma eficaz e perturbadora, uma infância posta a trabalhar.",
+    "Neste _cartoon_ há uma menina de vestido azul, uma máquina de costura preta, um banco de madeira e um cavalo de baloiço.",
+    "O trabalho infantil é um problema grave em muitos países do mundo, e todos devemos lutar contra ele já."
+   ],
+   "c": 0,
+   "f": "**A frase do objeto fora do lugar:** fala do _cartoon_, toma posição («eficaz e perturbadora») e diz em que se apoia (um objeto fora do lugar). É uma leitura possível, nossa: os critérios não dizem o que a imagem significa; o que avaliam é a fundamentação.",
+   "fe": [
+    null,
+    "É descrição: não tem juízo de valor. Serve para a primeira parte, não para o juízo global.",
+    "Não fala da imagem: um texto construído sobre esta frase arrisca desviar-se do tema proposto, que é o _cartoon_."
+   ]
+  },
+  {
+   "t": "vf",
+   "g": "24",
+   "p": "Para haver discurso valorativo, tens de escrever na primeira pessoa («eu acho»).",
+   "p2": "Sem «eu acho» ou «na minha opinião», o texto não tem juízo de valor.",
+   "v": false,
+   "f": "Falso. Os critérios pedem um «discurso valorativo (juízo de valor explícito ou implícito)» e não dizem que pessoa usar. «Este pormenor é eficaz» já é um juízo, sem «eu». O que o parâmetro C confere é a coerência ao longo do texto: «conexões adequadas entre coordenadas de enunciação (pessoa, tempo, espaço)». Se começas com «eu», não mudes de pessoa sem razão.",
+   "fe": "Um juízo pode ser explícito ou implícito, com ou sem «eu»: «Este pormenor é eficaz» já julga."
+  },
+  {
+   "t": "emparelhar",
+   "g": "25",
+   "ver": "<img class=\"cor inteira\" src=\"../../../../img/exame/provas/2026-1f/grupo-iii-takjoo.jpg\" alt=\"O cartoon de Javad Takjoo: uma menina, sentada num banco, cose um pano branco numa máquina de costura pousada no assento de um cavalo de baloiço.\" loading=\"lazy\">",
+   "p": "Cada aspeto do comentário precisa de um pormenor que o prove. Liga-os.",
+   "p2": "Liga cada aspeto do comentário ao pormenor da imagem que o sustenta.",
+   "pares": [
+    [
+     "O contraste entre o brinquedo e o trabalho",
+     "a máquina pousada no assento do cavalo de baloiço"
+    ],
+    [
+     "A concentração de adulto num corpo de criança",
+     "a cabeça inclinada e as mãos a guiar o pano"
+    ],
+    [
+     "A inocência da figura",
+     "o laço azul-claro no cabelo e o laço branco ao peito"
+    ],
+    [
+     "Uma cena sem tempo nem lugar",
+     "o fundo cinzento e vazio"
+    ],
+    [
+     "A fragilidade da menina",
+     "a cena vista de cima"
+    ]
+   ],
+   "f": "Aspeto e pormenor: é assim que o comentário se fundamenta. Sem o pormenor, o aspeto é só uma opinião; sem o aspeto, o pormenor é só descrição. As leituras são nossas; outras valem, se a imagem as sustentar."
+  },
+  {
+   "t": "ordenar",
+   "g": "26",
+   "p": "Põe por ordem as frases deste parágrafo de comentário (exemplo nosso).",
+   "p2": "Reconstrói o parágrafo: que frase vem a seguir a qual?",
+   "passos": [
+    "O aspeto mais forte da imagem é o contraste entre o brinquedo e o trabalho.",
+    "De facto, o cavalo de baloiço, feito para brincar, serve de mesa a uma máquina.",
+    "Assim, o objeto que devia servir para brincar passa a servir para produzir.",
+    "Esta troca de funções, quase escondida, é o que torna a imagem tão perturbadora."
+   ],
+   "f": "Juízo, pormenor, efeito, ligação. As palavras de ligação guiam a ordem: «De facto» confirma o que a primeira frase afirma; «Assim» tira a consequência do pormenor; «Esta troca de funções» retoma a frase anterior."
+  },
+  {
+   "t": "emparelhar",
+   "g": "27",
+   "p": "Cada conector diz uma relação entre ideias. Liga-os.",
+   "p2": "Liga cada conector à relação que estabelece.",
+   "pares": [
+    [
+     "além disso",
+     "acrescenta um aspeto"
+    ],
+    [
+     "no entanto",
+     "opõe uma ideia à anterior"
+    ],
+    [
+     "por isso",
+     "tira uma consequência"
+    ],
+    [
+     "por exemplo",
+     "dá um caso concreto"
+    ],
+    [
+     "em suma",
+     "fecha e resume"
+    ]
+   ],
+   "f": "São mecanismos de «articulação interfrásica», que o parâmetro C confere. Escolhe-os pela relação entre as ideias, não para enfeitar.",
+   "liga": [
+    {
+     "t": "Lição M4-F15: O que prende um texto",
+     "href": "../../../../m4/licao-m4-f15/"
+    }
+   ]
+  },
+  {
+   "t": "completar",
+   "g": "28",
+   "p": "Escolhe o conector certo para cada espaço.",
+   "frase": "[1], a cena parece calma: uma menina cose, concentrada. [2], o cavalo de baloiço lembra que aquele lugar devia ser de brincadeira. [3], a imagem transforma uma cena tranquila numa denúncia.",
+   "lacunas": [
+    {
+     "o": [
+      "À primeira vista",
+      "Por isso",
+      "Em suma"
+     ],
+     "c": 0
+    },
+    {
+     "o": [
+      "No entanto",
+      "Além disso",
+      "Por exemplo"
+     ],
+     "c": 0
+    },
+    {
+     "o": [
+      "Deste modo",
+      "Pelo contrário",
+      "Antes de mais"
+     ],
+     "c": 0
+    }
+   ],
+   "f": "**À primeira vista** abre a aparência; **No entanto** vira-a; **Deste modo** tira a conclusão. Três conectores, três relações: é isso que faz o parágrafo avançar. Exemplo nosso."
+  },
+  {
+   "t": "rever",
+   "g": "29",
+   "p": "Revê a segunda frase: evita repetir «A menina» sem perder o referente.",
+   "apoio": "Parâmetro C, nível 4: «mantém, de forma sistemática, cadeias de referência através de substituições nominais e pronominais adequadas».",
+   "frase": "A menina cose um pano branco. A menina tem a cabeça inclinada e as mãos a guiar o pano.",
+   "trecho": "A menina tem",
+   "o": [
+    "A pequena costureira tem",
+    "O cavalo de madeira tem",
+    "As meninas costureiras têm"
+   ],
+   "c": 0,
+   "f": "**A pequena costureira** retoma a menina com outro nome e ainda acrescenta sentido: uma criança no papel de quem trabalha. É uma substituição nominal; «Ela tem» seria uma substituição pronominal, também certa. Frases nossas.",
+   "fe": [
+    "",
+    "Muda o referente: quem tem a cabeça inclinada é a menina, não o cavalo.",
+    "«As meninas costureiras» está no plural: não há duas meninas, e o verbo também muda."
+   ]
+  },
+  {
+   "t": "rever",
+   "g": "30",
+   "p": "Revê a segunda frase: o tempo verbal tem de acompanhar o da primeira.",
+   "apoio": "Parâmetro C, nível 4: «estabelece conexões adequadas entre coordenadas de enunciação (pessoa, tempo, espaço) ao longo do texto».",
+   "frase": "A menina cose um pano branco. Ao lado, o cavalo de baloiço servia de mesa à máquina.",
+   "trecho": "servia",
+   "o": [
+    "serve",
+    "servirá",
+    "serviu"
+   ],
+   "c": 0,
+   "f": "**Serve.** A descrição está no presente («cose»): o que se vê na imagem acontece diante de quem olha. Mudar de tempo sem razão parte a ligação entre as frases. Frases nossas.",
+   "fe": [
+    "",
+    "O futuro põe a ação depois do momento em que olhas para a imagem; a menina cose agora.",
+    "O pretérito perfeito conta uma ação acabada; na imagem, a cena está a acontecer."
+   ]
+  },
+  {
+   "t": "rever",
+   "g": "31",
+   "p": "Revê o registo: troca a expressão de conversa por uma que julgue com precisão.",
+   "apoio": "Parâmetro B, nível 4: «o recurso a um repertório lexical e a um registo de língua globalmente adequados ao desenvolvimento do tema».",
+   "frase": "A imagem é super fixe porque mostra uma infância trocada pelo trabalho.",
+   "trecho": "super fixe",
+   "o": [
+    "eficaz",
+    "gira",
+    "mesmo muito boa"
+   ],
+   "c": 0,
+   "f": "**Eficaz** julga, porque diz que a imagem consegue o que quer, e fá-lo num registo adequado. «Gira» e «mesmo muito boa» são de conversa e não dizem em quê. Frase nossa.",
+   "fe": [
+    "",
+    "Continua a ser registo de conversa, e não diz o que a imagem consegue.",
+    "É vago e coloquial: muito boa em quê?"
+   ]
+  },
+  {
+   "t": "rever",
+   "g": "32",
+   "p": "Revê a pontuação entre o sujeito e o verbo.",
+   "apoio": "Critérios gerais: «No caso específico da vírgula, considera-se erro inequívoco o seu uso para separar quer o sujeito do predicado, quer o verbo dos seus complementos […]».",
+   "frase": "A menina de vestido azul-claro, cose um pano branco numa máquina antiga.",
+   "trecho": "azul-claro, cose",
+   "o": [
+    "azul-claro cose",
+    "azul-claro; cose",
+    "azul-claro: cose"
+   ],
+   "c": 0,
+   "f": "**Sem vírgula.** «A menina de vestido azul-claro» é o sujeito e «cose» é o verbo: a vírgula entre os dois é um erro inequívoco de pontuação, do tipo A. Um sujeito comprido tenta a vírgula; resiste. Frase nossa.",
+   "fe": [
+    "",
+    "O ponto e vírgula também separa o sujeito do verbo.",
+    "Os dois pontos também cortam o sujeito do verbo."
+   ],
+   "liga": [
+    {
+     "t": "Lição M5-F07: Quem faz o quê a quem",
+     "href": "../../../../m5/licao-m5-f07/"
+    }
+   ]
+  },
+  {
+   "t": "ler",
+   "rot": "Para entender",
+   "titulo": "Como se contam os erros",
+   "html": "<p>Na correção linguística, os critérios separam os erros em dois tipos e leem a pontuação numa tabela. Lê o Quadro 1 e a tabela: os cartões a seguir usam-nos.</p><p class=\"fonte\">Dos critérios oficiais, tal como estão:</p><p><b>Quadro 1 – Tipologia de erros no âmbito da correção linguística</b></p><table class=\"empilha\"><tr><th colspan=\"2\">Tipo de ocorrências</th></tr><tr><td data-th=\"Tipo\" style=\"width:5em\"><b>Tipo A</b></td><td data-th=\"Ocorrências\"><ul><li>erro inequívoco de pontuação</li><li>erro de ortografia (incluindo erro de acentuação, erro de translineação e uso indevido de letra minúscula ou de letra maiúscula)</li><li>erro de morfologia</li><li>incumprimento das regras de citação de texto ou de referência a título de uma obra</li></ul></td></tr><tr><td data-th=\"Tipo\"><b>Tipo B</b></td><td data-th=\"Ocorrências\"><ul><li>erro de sintaxe</li><li>impropriedade lexical</li></ul></td></tr></table><p><b>Aspetos de correção linguística (CL): 14 pontos</b></p><p>«Após a contabilização dos erros do tipo A e do tipo B, apura-se a classificação neste parâmetro. A tabela abaixo apresenta a pontuação a atribuir, de acordo com o número de erros do tipo A e do tipo B identificados. Caso o número total de erros seja superior ao número máximo apresentado na tabela, o parâmetro CL é classificado com zero pontos.»</p><div class=\"rol\"><table class=\"cl\"><tr><th rowspan=\"2\">Número de erros do tipo B</th><th colspan=\"15\">Número de erros do tipo A</th></tr><tr><th>0</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th><th>10</th><th>11</th><th>12</th><th>13</th><th>14</th></tr><tr><th>0</th><td>14</td><td>14</td><td>14</td><td>11</td><td>11</td><td>11</td><td>8</td><td>8</td><td>8</td><td>5</td><td>5</td><td>5</td><td>2</td><td>2</td><td>2</td></tr><tr><th>1</th><td>14</td><td>11</td><td>11</td><td>11</td><td>8</td><td>8</td><td>8</td><td>5</td><td>5</td><td>5</td><td>2</td><td>2</td><td>2</td><td class=\"sombra\"></td><td class=\"sombra\"></td></tr><tr><th>2</th><td>11</td><td>11</td><td>8</td><td>8</td><td>8</td><td>5</td><td>5</td><td>5</td><td>2</td><td>2</td><td>2</td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td></tr><tr><th>3</th><td>8</td><td>8</td><td>8</td><td>5</td><td>5</td><td>5</td><td>2</td><td>2</td><td>2</td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td></tr><tr><th>4</th><td>8</td><td>5</td><td>5</td><td>5</td><td>2</td><td>2</td><td>2</td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td></tr><tr><th>5</th><td>5</td><td>5</td><td>2</td><td>2</td><td>2</td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td></tr><tr><th>6</th><td>2</td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td></tr><tr><th>7</th><td>2</td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td></tr></table></div><p>Para ler a tabela: procura a linha do número de erros do tipo B e a coluna do número de erros do tipo A; a pontuação está no cruzamento. As células vazias estão a sombreado nos critérios, sem pontuação.</p><p class=\"fonte\">Critérios de Classificação, Prova 639, 1.ª fase, 2026 (IAVE; PDF com o logótipo da EduQA): Quadro 1, p. 2; tabela da correção linguística, p. 16. A explicação de como ler a tabela é nossa.</p>"
+  },
+  {
+   "t": "emparelhar",
+   "g": "33",
+   "p": "Erro do tipo A ou do tipo B? Arruma cada caso.",
+   "p2": "Na correção linguística, os erros são de dois tipos. Arruma estes.",
+   "pares": [
+    [
+     "«A menina, cose um pano.» (vírgula entre o sujeito e o verbo)",
+     "Tipo A"
+    ],
+    [
+     "«maquina», sem acento",
+     "Tipo A"
+    ],
+    [
+     "«javad takjoo», com minúsculas",
+     "Tipo A"
+    ],
+    [
+     "«O autor quis descriminar o trabalho infantil.» (queria dizer «denunciar»)",
+     "Tipo B"
+    ],
+    [
+     "«A menina, que está sentada num banco.» (falta a oração principal)",
+     "Tipo B"
+    ]
+   ],
+   "f": "Tipo A: erro inequívoco de pontuação, ortografia (incluindo acentuação, translineação e uso indevido de minúscula ou de maiúscula), morfologia, regras de citação de texto ou de referência a título de uma obra. Tipo B: sintaxe e impropriedade lexical. É o Quadro 1 dos critérios, e é com ele que se lê a tabela da correção linguística."
+  },
+  {
+   "t": "vf",
+   "g": "34",
+   "p": "Na tabela da correção linguística, quatro erros do tipo B custam mais do que quatro erros do tipo A.",
+   "p2": "Na tabela da correção linguística, dois erros do tipo B tiram mais pontos do que dois erros do tipo A.",
+   "v": true,
+   "f": "Verdadeiro. Sem erros do outro tipo: 2 do tipo A deixam os **14** pontos e 2 do tipo B dão **11**; 4 do tipo A dão **11** e 4 do tipo B dão **8**. Os erros do tipo B (sintaxe, vocabulário) pesam mais do que os do tipo A.",
+   "fe": "Na tabela, sem erros do outro tipo: 2 do tipo A dão 14 pontos e 2 do tipo B dão 11; 4 do tipo A dão 11 e 4 do tipo B dão 8."
+  },
+  {
+   "t": "escolha",
+   "g": "35",
+   "p": "Um texto tem 2 erros do tipo A e 1 do tipo B. Quantos pontos tem na correção linguística (máximo 14)?",
+   "p2": "Dois erros do tipo A e um do tipo B: quanto vale a correção linguística?",
+   "o": [
+    "11",
+    "14",
+    "8"
+   ],
+   "c": 0,
+   "f": "**11.** Na tabela, a linha de 1 erro do tipo B cruza com a coluna de 2 erros do tipo A: 11 pontos.",
+   "fe": [
+    null,
+    "Com 1 erro do tipo B, os 14 pontos só ficam se não houver nenhum do tipo A.",
+    "8 pontos pedem mais erros: por exemplo, 1 do tipo B e 4 do tipo A, ou 2 do tipo B e 2 do tipo A."
+   ]
+  },
+  {
+   "t": "escolha",
+   "g": "36",
+   "p": "Qual conclusão é «adequada aos pontos de vista desenvolvidos»? São exemplos nossos, para um texto que comentou o brinquedo e a máquina, a menina, e a cor e a luz.",
+   "p2": "Três conclusões de exemplo, nossas: qual decorre do que o texto comentou (o brinquedo e a máquina, a menina, a cor e a luz)?",
+   "o": [
+    "Em suma, com um brinquedo, uma máquina e cores apagadas, Takjoo obriga-nos a ver o que uma infância perde quando passa a trabalhar.",
+    "Em suma, o trabalho infantil tem de acabar em todo o mundo, e os governos devem agir já, para que nenhuma criança trabalhe.",
+    "Em suma, gostei muito deste _cartoon_, porque é bonito e original, e recomendo-o a todos os meus colegas de turma."
+   ],
+   "c": 0,
+   "f": "**A conclusão do brinquedo, da máquina e das cores apagadas** retoma os aspetos comentados e fecha com o que a imagem obriga a ver. A do trabalho infantil muda de assunto; a do «gostei muito» fica no gosto. Nenhuma das duas decorre do que o texto mostrou.",
+   "fe": [
+    null,
+    "Muda de assunto: passa da imagem para uma exigência que o texto não desenvolveu.",
+    "É só gosto, sem retomar nenhum dos aspetos comentados; recomendar não fecha a apreciação."
+   ]
+  },
+  {
+   "t": "escolha",
+   "g": "37",
+   "p": "Num texto de 200 a 350 palavras, que distribuição tem partes «devidamente proporcionadas»? (Planos nossos.)",
+   "p2": "Qual destes planos dá a cada parte o peso que ela pede? (Planos nossos.)",
+   "o": [
+    "Descrição, cerca de 70 palavras; comentário, cerca de 170, em três parágrafos; conclusão, cerca de 50",
+    "Descrição, cerca de 220 palavras; comentário, cerca de 40, num só parágrafo; conclusão, cerca de 20",
+    "Descrição, cerca de 20 palavras; comentário, cerca de 300, em quatro parágrafos; sem conclusão"
+   ],
+   "c": 0,
+   "f": "**O plano de 70, 170 e 50 palavras:** a descrição situa, o comentário, com um parágrafo por aspeto, tem o maior peso, e a conclusão fecha. São cerca de 290 palavras, dentro dos limites. O parâmetro C pede «diferentes partes, devidamente proporcionadas e articuladas entre si».",
+   "fe": [
+    null,
+    "A descrição come quase tudo: 40 palavras não chegam para três aspetos fundamentados.",
+    "Sem conclusão, falta uma das três partes pedidas, e 20 palavras de descrição não destacam os elementos da composição."
+   ]
+  },
+  {
+   "t": "ler",
+   "rot": "Para avaliar",
+   "titulo": "Um texto de exemplo, nosso",
+   "html": "<p class=\"fonte\">Exemplo nosso, escrito para este treino, com uma falha de propósito. Não vem dos critérios. Tem 210 palavras.</p><div class=\"exemplo\"><p>O <i>cartoon</i> de Javad Takjoo mostra uma menina sentada num banco de madeira, a coser um pano branco numa máquina de costura preta, de modelo antigo. A máquina não está pousada numa mesa, mas no assento de um cavalo de baloiço. A menina, de cabelo escuro, com um laço azul-claro e um vestido da mesma cor, tem a cabeça inclinada e os olhos baixos, postos no trabalho. A cena é vista de cima, sobre um fundo cinzento e vazio, onde se desenham sombras fortes.</p><p>O aspeto mais forte da imagem é o contraste entre o brinquedo e o trabalho. De facto, o cavalo de baloiço, feito para brincar, serve de mesa a uma máquina. Assim, o objeto que devia servir para brincar passa a servir para produzir. Esta troca de funções, quase escondida, é o que torna a imagem tão perturbadora.</p><p>Além disso, a cor e a luz reforçam essa ideia. O cinzento do fundo tira à cena qualquer alegria, e as sombras escuras pesam sobre a menina e sobre o brinquedo, como se a luz da infância se tivesse apagado.</p><p>Em suma, o <i>cartoon</i> é eficaz porque, com poucos elementos, mostra uma infância posta a trabalhar. É uma imagem simples, mas que fica na memória de quem a vê.</p></div><p>Lê-o com a grelha na cabeça: descrição, aspetos do comentário, juízo, conclusão. Nos cartões seguintes, avalias.</p>"
+  },
+  {
+   "t": "escolha",
+   "g": "38",
+   "p": "No texto de exemplo, em quantos aspetos distintos se fundamenta o comentário?",
+   "p2": "Conta os aspetos do comentário no texto de exemplo.",
+   "o": [
+    "Dois: o contraste entre o brinquedo e o trabalho; a cor e a luz",
+    "Três: a descrição, o contraste, e a cor e a luz",
+    "Um só: o cavalo de baloiço, que aparece em vários parágrafos"
+   ],
+   "c": 0,
+   "f": "**Dois.** O segundo parágrafo trata o contraste; o terceiro, a cor e a luz. O primeiro parágrafo é a descrição, outra parte do texto, e não conta como aspeto do comentário. No parâmetro A, pela nossa leitura do descritor, fica no nível 3: 8 pontos.",
+   "fe": [
+    null,
+    "A descrição é a primeira parte do texto, pedida à parte no enunciado. Os aspetos do comentário estão no segundo e no terceiro parágrafos: são dois.",
+    "O cavalo é o pormenor do primeiro aspeto; o terceiro parágrafo traz outro aspeto, a cor e a luz."
+   ]
+  },
+  {
+   "t": "escolha",
+   "g": "39",
+   "p": "Que acrescento leva o texto de exemplo ao nível 4 do parâmetro A?",
+   "p2": "O que falta ao texto de exemplo para chegar aos 10 pontos do parâmetro A?",
+   "o": [
+    "Um parágrafo sobre a menina (os olhos baixos, as mãos no pano), com o efeito e o juízo",
+    "Mais uma frase sobre o cavalo de baloiço e sobre a máquina pousada no seu assento",
+    "Um título para o texto e uma frase final a recomendar o _cartoon_"
+   ],
+   "c": 0,
+   "f": "**Um terceiro aspeto distinto**, com o pormenor que o prova e o seu efeito: o nível 4 pede o comentário «fundamentado em, pelo menos, três aspetos distintos». Atenção à extensão: o acrescento tem de caber nas 350 palavras.",
+   "fe": [
+    null,
+    "Mais uma frase sobre o cavalo fica no mesmo aspeto: continuam a ser dois.",
+    "Os critérios do Grupo III não pedem título; o que falta é um terceiro aspeto."
+   ]
+  },
+  {
+   "t": "ordenar",
+   "g": "40",
+   "p": "O plano do Grupo III, do enunciado à revisão. Põe os passos por ordem.",
+   "p2": "Ordena o que fazes no Grupo III, do princípio ao fim.",
+   "passos": [
+    "Sublinhar no enunciado o género, o objeto, a extensão e as três partes",
+    "Com o pedido já sublinhado, olhar para a imagem e anotar o que se vê, com o pormenor que importa",
+    "Escolher o juízo global e três aspetos, cada um com o seu pormenor",
+    "Escrever a descrição, o comentário (um parágrafo por aspeto) e a conclusão",
+    "Contar as palavras (200 a 350) e rever pontuação, acentos, sintaxe e vocabulário"
+   ],
+   "f": "Do pedido à revisão. Os três primeiros passos fazem o plano, no rascunho; o quarto é o texto; o quinto protege a extensão e a correção linguística. A ordem é nossa; as exigências vêm do enunciado e dos critérios."
+  },
+  {
+   "t": "ordenar",
+   "g": "41",
+   "p": "Põe por ordem os inícios dos parágrafos de um texto completo (exemplo nosso).",
+   "p2": "Cinco parágrafos de um texto de exemplo, nosso: por que ordem aparecem?",
+   "passos": [
+    "O _cartoon_ de Javad Takjoo mostra uma menina sentada num banco de madeira…",
+    "O aspeto mais forte da imagem é o contraste entre o brinquedo e o trabalho…",
+    "Além disso, a própria menina parece ter perdido a infância…",
+    "Por fim, a cor e a luz reforçam essa ideia…",
+    "Em suma, com um brinquedo, uma máquina e cores apagadas…"
+   ],
+   "f": "Descrição, três parágrafos de comentário (um aspeto cada) e conclusão. «O aspeto mais forte», «Além disso» e «Por fim» marcam a sequência do comentário; «Em suma» abre a conclusão."
+  },
+  {
+   "t": "ler",
+   "rot": "Escreve no caderno",
+   "titulo": "Grupo III ✱",
+   "html": "<p class=\"papel-q\"><b>✱ GRUPO III</b><br>Num texto bem estruturado, com um mínimo de duzentas e um máximo de trezentas e cinquenta palavras, faça a apreciação crítica do <i>cartoon</i>, da autoria de Javad Takjoo.<br>No seu texto, deve incluir:</p><ul class=\"prova-lista\"><li>a descrição da imagem apresentada, destacando elementos significativos da sua composição;</li><li>um comentário crítico, fundamentando a sua apreciação em, pelo menos, três aspetos relevantes e utilizando um discurso valorativo;</li><li>uma conclusão adequada aos pontos de vista desenvolvidos.</li></ul><p>Escreve o texto no caderno, à mão, com o plano que ordenaste e a imagem à vista. Nada se escreve no telemóvel. Depois, revês o teu texto com a grelha e só então o comparas com um exemplo nosso. <b>Extensão:</b> 200 a 350 palavras; cada palavra de desvio desconta um ponto, até 5; menos de 80 palavras dá zero. <b>Cotação:</b> 44 pontos (30 de estruturação temática e discursiva, 14 de correção linguística).</p><figure class=\"fig inteiro cor\"><span class=\"moldura\"><img src=\"../../../../img/exame/provas/2026-1f/grupo-iii-takjoo.jpg\" alt=\"Desenho a cores, visto de cima: uma menina de cabelo escuro, com um laço azul-claro no cabelo e um vestido azul-claro com um laço branco ao peito, está sentada num banco de madeira e cose um pano branco numa máquina de costura preta, pousada no assento de um cavalo de baloiço de madeira. Tem a cabeça inclinada e os olhos baixos, postos no trabalho. Fundo cinzento e vazio; sombras fortes; a sombra da menina, grande e escura, à direita. Assinatura do autor à esquerda.\" loading=\"lazy\"></span><figcaption>https://takjoo.com (consultado em 23/02/2026).</figcaption></figure><p class=\"fonte\">A grelha oficial, tal como está nos critérios:</p><p><b>Aspetos de estruturação temática e discursiva (ETD)<sup>1</sup>: 30 pontos</b></p><p class=\"gl\"><sup>1</sup> Além dos descritores de desempenho relativos à estruturação temática e discursiva, há que atender aos Critérios Gerais (p. 2).</p><p><b>Parâmetro A: Género/Formato Textual</b></p><table class=\"empilha grelha\"><tr><th style=\"width:4em\">Nível</th><th>Descritor de desempenho</th><th style=\"width:6em\">Pontuação</th></tr><tr><td data-th=\"Nível\">4</td><td data-th=\"Descritor de desempenho\">Escreve um texto de acordo com o género/formato solicitado (texto de apreciação crítica), incluindo:<ul><li>uma descrição da imagem, destacando elementos significativos da sua composição;</li><li>um comentário crítico fundamentado em, pelo menos, três aspetos distintos, recorrendo a um discurso valorativo (juízo de valor explícito ou implícito);</li><li>uma conclusão adequada aos pontos de vista desenvolvidos.</li></ul></td><td data-th=\"Pontuação\">10</td></tr><tr><td data-th=\"Nível\">3</td><td data-th=\"Descritor de desempenho\">Escreve um texto de acordo com o género/formato solicitado (texto de apreciação crítica), mas fundamenta o comentário crítico em apenas dois aspetos distintos, assegurando os restantes aspetos em avaliação neste parâmetro.<br><b>OU</b><br>Escreve um texto de acordo com o género/formato solicitado (texto de apreciação crítica), fundamentando o comentário crítico em, pelo menos, três aspetos distintos, mas apresenta falhas em um ou dois dos restantes aspetos em avaliação neste parâmetro.</td><td data-th=\"Pontuação\">8</td></tr><tr><td data-th=\"Nível\">2</td><td data-th=\"Descritor de desempenho\">Escreve um texto de acordo com o género/formato solicitado (texto de apreciação crítica), mas fundamenta o comentário crítico em apenas um aspeto, assegurando os restantes aspetos em avaliação neste parâmetro.<br><b>OU</b><br>Escreve um texto de acordo com o género/formato solicitado (texto de apreciação crítica), fundamentando o comentário crítico em apenas dois aspetos distintos, e apresenta falhas em um ou dois dos restantes aspetos em avaliação neste parâmetro.</td><td data-th=\"Pontuação\">5</td></tr><tr><td data-th=\"Nível\">1</td><td data-th=\"Descritor de desempenho\">Escreve um texto de acordo com o género/formato solicitado (texto de apreciação crítica), mas apresenta falhas no conjunto dos aspetos em avaliação neste parâmetro.<br><b>OU</b><br>Escreve um texto em que as marcas do género/formato solicitado se misturam, sem critério nem intencionalidade, com as de outros géneros/formatos.</td><td data-th=\"Pontuação\">3</td></tr></table><p class=\"gl\"><b>Nota ‒</b> A pertinência dos argumentos e dos exemplos é avaliada no parâmetro B.</p><p><b>Parâmetro B: Tema e Pertinência da Informação</b></p><table class=\"empilha grelha\"><tr><th style=\"width:4em\">Nível</th><th>Descritor de desempenho</th><th style=\"width:6em\">Pontuação</th></tr><tr><td data-th=\"Nível\">4</td><td data-th=\"Descritor de desempenho\">Trata o tema proposto sem desvios e escreve um texto com eficácia argumentativa, assegurando:<ul><li>a mobilização de aspetos diversificados e pertinentes, tanto no que diz respeito à descrição da imagem como ao comentário crítico;</li><li>a progressão da informação de forma coerente;</li><li>o recurso a um repertório lexical e a um registo de língua globalmente adequados ao desenvolvimento do tema, ainda que possam existir esporádicos afastamentos, justificados pela intencionalidade comunicativa.</li></ul></td><td data-th=\"Pontuação\">10</td></tr><tr><td data-th=\"Nível\">3</td><td data-th=\"Descritor de desempenho\">Trata o tema proposto sem desvios, mas escreve um texto com falhas pontuais nos aspetos relativos à eficácia argumentativa.<br><b>OU</b><br>Trata o tema proposto com desvios pouco significativos, mas escreve um texto com eficácia argumentativa (tendo em conta a forma como o tema foi desenvolvido).</td><td data-th=\"Pontuação\">8</td></tr><tr><td data-th=\"Nível\">2</td><td data-th=\"Descritor de desempenho\">Trata o tema proposto com desvios pouco significativos e escreve um texto com falhas pontuais nos aspetos relativos à eficácia argumentativa.<br><b>OU</b><br>Trata o tema proposto sem desvios, mas escreve um texto com falhas significativas nos aspetos relativos à eficácia argumentativa.</td><td data-th=\"Pontuação\">5</td></tr><tr><td data-th=\"Nível\">1</td><td data-th=\"Descritor de desempenho\">Trata o tema proposto com desvios significativos e escreve um texto com reduzida eficácia argumentativa, mobilizando muito pouca informação pertinente.</td><td data-th=\"Pontuação\">3</td></tr></table><p><b>Parâmetro C: Organização e Coesão Textuais</b></p><table class=\"empilha grelha\"><tr><th style=\"width:4em\">Nível</th><th>Descritor de desempenho</th><th style=\"width:6em\">Pontuação</th></tr><tr><td data-th=\"Nível\">4</td><td data-th=\"Descritor de desempenho\">Escreve um texto bem organizado, evidenciando um bom domínio dos mecanismos de coesão textual:<ul><li>apresenta um texto constituído por diferentes partes, devidamente proporcionadas e articuladas entre si de modo consistente;</li><li>marca, corretamente, os parágrafos;</li><li>utiliza, adequadamente, mecanismos de articulação interfrásica;</li><li>mantém, de forma sistemática, cadeias de referência através de substituições nominais e pronominais adequadas;</li><li>estabelece conexões adequadas entre coordenadas de enunciação (pessoa, tempo, espaço) ao longo do texto.</li></ul></td><td data-th=\"Pontuação\">10</td></tr><tr><td data-th=\"Nível\">3</td><td data-th=\"Descritor de desempenho\">Escreve um texto globalmente bem organizado, em que evidencia domínio dos mecanismos de coesão textual, mas em que apresenta falhas pontuais em um ou dois dos aspetos em avaliação neste parâmetro.</td><td data-th=\"Pontuação\">8</td></tr><tr><td data-th=\"Nível\">2</td><td data-th=\"Descritor de desempenho\">Escreve um texto satisfatoriamente organizado, em que evidencia um domínio suficiente dos mecanismos de coesão textual, apresentando falhas pontuais em três ou mais dos aspetos em avaliação neste parâmetro, ou falhas significativas em um ou dois desses aspetos.</td><td data-th=\"Pontuação\">5</td></tr><tr><td data-th=\"Nível\">1</td><td data-th=\"Descritor de desempenho\">Escreve um texto com uma organização pouco satisfatória, recorrendo a insuficientes mecanismos de coesão ou mobilizando-os de forma inadequada.</td><td data-th=\"Pontuação\">3</td></tr></table><p><b>Aspetos de correção linguística (CL)<sup>1</sup>: 14 pontos</b></p><p class=\"gl\"><sup>1</sup> <i>Vide</i> Tipologia de erros no âmbito da correção linguística (pp. 2-3).</p><p>«Após a contabilização dos erros do tipo A e do tipo B, apura-se a classificação neste parâmetro. A tabela abaixo apresenta a pontuação a atribuir, de acordo com o número de erros do tipo A e do tipo B identificados. Caso o número total de erros seja superior ao número máximo apresentado na tabela, o parâmetro CL é classificado com zero pontos.»</p><details class=\"mais\"><summary>Tabela da correção linguística</summary><div><div class=\"rol\"><table class=\"cl\"><tr><th rowspan=\"2\">Número de erros do tipo B</th><th colspan=\"15\">Número de erros do tipo A</th></tr><tr><th>0</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th><th>10</th><th>11</th><th>12</th><th>13</th><th>14</th></tr><tr><th>0</th><td>14</td><td>14</td><td>14</td><td>11</td><td>11</td><td>11</td><td>8</td><td>8</td><td>8</td><td>5</td><td>5</td><td>5</td><td>2</td><td>2</td><td>2</td></tr><tr><th>1</th><td>14</td><td>11</td><td>11</td><td>11</td><td>8</td><td>8</td><td>8</td><td>5</td><td>5</td><td>5</td><td>2</td><td>2</td><td>2</td><td class=\"sombra\"></td><td class=\"sombra\"></td></tr><tr><th>2</th><td>11</td><td>11</td><td>8</td><td>8</td><td>8</td><td>5</td><td>5</td><td>5</td><td>2</td><td>2</td><td>2</td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td></tr><tr><th>3</th><td>8</td><td>8</td><td>8</td><td>5</td><td>5</td><td>5</td><td>2</td><td>2</td><td>2</td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td></tr><tr><th>4</th><td>8</td><td>5</td><td>5</td><td>5</td><td>2</td><td>2</td><td>2</td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td></tr><tr><th>5</th><td>5</td><td>5</td><td>2</td><td>2</td><td>2</td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td></tr><tr><th>6</th><td>2</td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td></tr><tr><th>7</th><td>2</td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td></tr></table></div><p class=\"fonte\">Cada célula dá a pontuação. As células vazias são as que os critérios deixam a sombreado, sem pontuação (leitura nossa: com esses números de erros, o parâmetro CL vale zero).</p><p>A mesma tabela, lida por linhas (leitura nossa):</p><ul><li><b>nenhum erro do tipo B:</b> 0 a 2 do tipo A: 14; 3 a 5 do tipo A: 11; 6 a 8 do tipo A: 8; 9 a 11 do tipo A: 5; 12 a 14 do tipo A: 2.</li><li><b>1 erro do tipo B:</b> 0 do tipo A: 14; 1 a 3 do tipo A: 11; 4 a 6 do tipo A: 8; 7 a 9 do tipo A: 5; 10 a 12 do tipo A: 2.</li><li><b>2 erros do tipo B:</b> 0 a 1 do tipo A: 11; 2 a 4 do tipo A: 8; 5 a 7 do tipo A: 5; 8 a 10 do tipo A: 2.</li><li><b>3 erros do tipo B:</b> 0 a 2 do tipo A: 8; 3 a 5 do tipo A: 5; 6 a 8 do tipo A: 2.</li><li><b>4 erros do tipo B:</b> 0 do tipo A: 8; 1 a 3 do tipo A: 5; 4 a 6 do tipo A: 2.</li><li><b>5 erros do tipo B:</b> 0 a 1 do tipo A: 5; 2 a 4 do tipo A: 2.</li><li><b>6 erros do tipo B:</b> 0 do tipo A: 2.</li><li><b>7 erros do tipo B:</b> 0 do tipo A: 2.</li></ul><p>Os tipos de erro (Quadro 1): <b>tipo A</b>, erro inequívoco de pontuação; erro de ortografia (incluindo erro de acentuação, erro de translineação e uso indevido de letra minúscula ou de letra maiúscula); erro de morfologia; incumprimento das regras de citação de texto ou de referência a título de uma obra; <b>tipo B</b>, erro de sintaxe; impropriedade lexical.</p></div></details><details class=\"mais\"><summary>Regras dos critérios que contam na classificação</summary><div><ul><li>«A atribuição da classificação de zero pontos no parâmetro A (Género/Formato Textual) ou no parâmetro B (Tema e Pertinência da Informação) implica a atribuição de zero pontos nos restantes parâmetros da ETD, bem como na CL.»</li><li>«Sempre que não sejam respeitados os limites relativos ao número de palavras indicados na instrução do item de resposta extensa, desconta-se um ponto por cada palavra (a mais ou a menos), até ao máximo de cinco (1 × 5) pontos, depois de aplicados todos os critérios definidos para o item.»</li><li>«Caso a resposta apresente uma extensão inferior a oitenta palavras, é classificada com zero pontos.»</li><li>«As provas em que se apresente, pelo menos, uma resposta restrita ou extensa escrita integralmente em maiúsculas são sujeitas a uma desvalorização de cinco pontos na classificação total.»</li><li>«Se permanecerem dúvidas quanto ao nível a atribuir, deve optar-se pelo nível mais elevado de entre os dois tidos em consideração.»</li></ul><p class=\"fonte\">Critérios de Classificação, critérios gerais, pp. 1 a 3.</p></div></details><details class=\"mais\"><summary>Cenário de resposta</summary><div><p>Os critérios do Grupo III não trazem cenário de resposta, tópicos nem exemplos: só os descritores dos parâmetros A, B e C (com uma nota ao parâmetro A) e a tabela da correção linguística. Nada aqui é uma resposta oficial.</p></div></details>"
+  },
+  {
+   "t": "ler",
+   "rot": "Revê com a grelha",
+   "titulo": "Autoavaliação",
+   "html": "<p>Relê o teu texto no caderno com estas perguntas. Cada uma vem de uma parte da grelha ou das regras dos critérios. Onde respondes «não», volta ao texto e corrige.</p><table class=\"empilha\"><tr><th>Pergunta</th><th style=\"width:9em\">Onde conta</th></tr><tr><td data-th=\"Pergunta\">Descrevi a imagem e destaquei o que conta: a máquina no cavalo de baloiço, a menina, o ponto de vista, a cor?</td><td data-th=\"Onde conta\">A e B</td></tr><tr><td data-th=\"Pergunta\">Fundamentei o comentário em três aspetos distintos, cada um com um pormenor da imagem?</td><td data-th=\"Onde conta\">A e B</td></tr><tr><td data-th=\"Pergunta\">Há juízos de valor, explícitos ou implícitos?</td><td data-th=\"Onde conta\">A</td></tr><tr><td data-th=\"Pergunta\">A conclusão retoma os aspetos e fecha o juízo global?</td><td data-th=\"Onde conta\">A</td></tr><tr><td data-th=\"Pergunta\">Falei sempre do <i>cartoon</i>, sem me desviar para um assunto geral?</td><td data-th=\"Onde conta\">B</td></tr><tr><td data-th=\"Pergunta\">Usei palavras precisas e um registo cuidado, sem «giro» nem «fixe»?</td><td data-th=\"Onde conta\">B</td></tr><tr><td data-th=\"Pergunta\">Marquei os parágrafos, com partes proporcionadas e ligadas por conectores?</td><td data-th=\"Onde conta\">C</td></tr><tr><td data-th=\"Pergunta\">Retomei a menina e os objetos sem repetições («ela», «a criança», «o brinquedo»)?</td><td data-th=\"Onde conta\">C</td></tr><tr><td data-th=\"Pergunta\">Mantive a pessoa e o tempo verbal do princípio ao fim, sem mudar sem razão?</td><td data-th=\"Onde conta\">C</td></tr><tr><td data-th=\"Pergunta\">Contei as palavras: entre 200 e 350?</td><td data-th=\"Onde conta\">Extensão</td></tr><tr><td data-th=\"Pergunta\">Reli à procura de erros do tipo A (pontuação, acentos, maiúsculas) e do tipo B (sintaxe, vocabulário)?</td><td data-th=\"Onde conta\">CL</td></tr><tr><td data-th=\"Pergunta\">Escrevi com minúsculas e maiúsculas, e não tudo em maiúsculas?</td><td data-th=\"Onde conta\">Classificação total</td></tr></table><p class=\"fonte\">Perguntas nossas, a partir dos descritores dos parâmetros A, B e C, da tabela da correção linguística e das regras dos critérios.</p>"
+  },
+  {
+   "t": "ler",
+   "rot": "Compara com um exemplo",
+   "titulo": "Um texto completo, de exemplo, nosso",
+   "html": "<p>Já reviste o teu texto com a grelha? Compara-o agora com este exemplo nosso: a descrição, os três aspetos do comentário, cada um com o seu pormenor, e a conclusão.</p><div class=\"exemplo\"><p>O <i>cartoon</i> de Javad Takjoo mostra uma menina sentada num banco de madeira, a coser um pano branco numa máquina de costura preta, de modelo antigo. A máquina não está pousada numa mesa, mas no assento de um cavalo de baloiço. A menina, de cabelo escuro, com um laço azul-claro e um vestido da mesma cor, tem a cabeça inclinada e os olhos baixos, postos no trabalho. A cena é vista de cima, sobre um fundo cinzento e vazio, onde se desenham sombras fortes.</p><p>O aspeto mais forte da imagem é o contraste entre o brinquedo e o trabalho. De facto, o cavalo de baloiço, feito para brincar, serve de mesa a uma máquina. Assim, o objeto que devia servir para brincar passa a servir para produzir. Esta troca de funções, quase escondida, é o que torna a imagem tão perturbadora.</p><p>Além disso, a própria menina parece ter perdido a infância. Tem a postura concentrada de quem trabalha, e as mãos guiam o pano com cuidado. O laço no cabelo e o vestido claro lembram a criança que é; a máquina lembra o que lhe pedem que seja. Este desencontro entre a figura e a tarefa comove sem precisar de exagero.</p><p>Por fim, a cor e a luz reforçam essa ideia. O fundo cinzento não tem nenhum objeto, por isso nada distrai do essencial, e a cena podia passar-se em qualquer lugar. As sombras escuras e o olhar de cima tornam a menina ainda mais pequena e frágil.</p><p>Em suma, com um brinquedo, uma máquina e cores apagadas, Takjoo obriga-nos a ver o que uma infância perde quando passa a trabalhar. É essa economia de meios, sem uma única palavra, que torna este <i>cartoon</i> tão eficaz.</p></div><p class=\"fonte\">Exemplo nosso, com 286 palavras, escrito para esta lição a partir das frases que trabalhaste. Não vem dos critérios. A leitura da imagem é uma entre outras possíveis: o que conta é a descrição, os três aspetos com o seu pormenor e o juízo.</p>"
+  },
+  {
+   "t": "ler",
+   "rot": "Para levar",
+   "escuro": true,
+   "html": "<p class=\"levar\">Descreve o que se vê, julga com razões, fecha com o que mostraste.</p><ul><li><b>Lê o pedido como uma lista.</b> Género, objeto, extensão (200 a 350 palavras) e as partes que o texto deve incluir.</li><li><b>O objeto manda.</b> Numa apreciação crítica, tudo parte da obra: a descrição e o comentário falam da imagem, não de um assunto geral.</li><li><b>Conta os aspetos.</b> Três aspetos distintos, cada um com o pormenor que o prova e o teu juízo.</li><li><b>Juízo explícito ou implícito.</b> «Eficaz», «um acerto», «em vez de brincar»: o valor tem de se ver.</li><li><b>A forma também conta.</b> Parágrafos proporcionados, conectores pela relação certa, retomas sem repetição, pessoa e tempo verbal coerentes.</li><li><b>Pontos que se perdem sem razão:</b> palavras fora dos limites (até 5), menos de 80 palavras (zero), tudo em maiúsculas (5 na classificação da prova), erros do tipo B (pesam mais).</li></ul><p>Nas oito provas de 2023 a 2026 (1.ª e 2.ª fases), o Grupo III vale sempre 44 pontos, conta sempre e pede sempre um texto «bem estruturado» de 200 a 350 palavras, classificado nos parâmetros A, B e C e na correção linguística. Em cinco provas, o género é o texto de opinião; em três (2.ª fase de 2023 e de 2025, 1.ª fase de 2026), a apreciação crítica de uma imagem, com descrição, comentário em pelo menos três aspetos e conclusão. Nos dois géneros, pede-se um discurso valorativo.</p><details class=\"mais\"><summary>Dos critérios oficiais</summary><div><p>«A atribuição da classificação de zero pontos no parâmetro A (Género/Formato Textual) ou no parâmetro B (Tema e Pertinência da Informação) implica a atribuição de zero pontos nos restantes parâmetros da ETD, bem como na CL.»</p><p>«Sempre que não sejam respeitados os limites relativos ao número de palavras indicados na instrução do item de resposta extensa, desconta-se um ponto por cada palavra (a mais ou a menos), até ao máximo de cinco (1 × 5) pontos, depois de aplicados todos os critérios definidos para o item.»</p><p>«Se permanecerem dúvidas quanto ao nível a atribuir, deve optar-se pelo nível mais elevado de entre os dois tidos em consideração.»</p><p class=\"fonte\">Critérios de Classificação, Prova 639, 1.ª fase, 2026 (IAVE; PDF com o logótipo da EduQA), critérios gerais (pp. 1 a 3) e critérios específicos do Grupo III (pp. 14 a 16).</p></div></details>"
+  }
+ ]
+}

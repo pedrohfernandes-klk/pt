@@ -1,0 +1,2547 @@
+{
+ "_sobre": {
+  "o_que_e": "Transcrição estruturada e fiel do Exame Final Nacional de Português (Prova 639), 2.ª fase, 2026, VERSÃO 2, e dos respetivos critérios de classificação, para construir as lições «Provas em cartões».",
+  "convencoes": {
+   "_texto_": "itálico, como no PDF",
+   "**texto**": "negrito, como no PDF",
+   "[^n]": "chamada de nota n (no PDF, número em expoente colado à palavra)",
+   "descritores": "cada nível tem uma lista de alternativas (no PDF, separadas por «OU»); cada alternativa é uma lista de frases ou de linhas, pela ordem do PDF",
+   "linhas": "cada linha numerada guarda o texto exato dessa linha na prova; «inicio_paragrafo» marca as linhas com recuo de parágrafo",
+   "aspas e travessões": "mantidos como no PDF, com os mesmos carateres (aspas angulares, traços de vários comprimentos); os travessões longos só aparecem em texto da prova",
+   "campos *_nossa* e nota_nossa": "texto nosso (não é da prova nem dos critérios)",
+   "estrofes": "um poema numerado guarda os versos por estrofe; «v» é o número do verso na prova (cada poema da Parte A é numerado a partir do verso 1)",
+   "texto dramático": "nas linhas do excerto de _Frei Luís de Sousa_, «personagem» marca as linhas com o nome da personagem (centradas e em maiúsculas no PDF; contam na numeração) e «inicio_fala» a primeira linha de cada fala; as falas não têm recuo («inicio_paragrafo» falso)",
+   "topicos": "um objeto por tópico de resposta dos critérios; «rotulo» só quando os critérios dão um cabeçalho ao tópico ou ao grupo de tópicos"
+  },
+  "conferencia": "Linhas dos textos lidas do PDF com pdfplumber (itálicos e chamadas de nota pelos nomes e corpos das fontes; o número impresso na margem conferido com a numeração), comparadas com pdftotext -layout e com as páginas convertidas em imagem (pdftoppm). Todos os enunciados, opções, notas, fontes, tópicos e descritores foram comparados automaticamente com o texto do PDF (o dos critérios sem a marca de água), por correspondência de cadeias, e a ordem dos níveis e das alternativas «OU» de cada grelha com a ordem do PDF.",
+  "gerado_em": "2026-10-30",
+  "conferencia_30_10": "Enunciado igual, byte a byte, ao PDF da versão 2 publicado em eduqa.pt (EX-Port639-F2-2026-V2_net.pdf). Texto dos critérios igual, palavra a palavra, ao dos critérios publicados em eduqa.pt (EX-Port639-F2-2026-CC-VD_net.pdf, sem marca de água); a cópia pública tem a marca de água «VERSÃO DE TRABALHO»."
+ },
+ "prova": {
+  "titulo": "Exame Final Nacional de Português",
+  "codigo": "639",
+  "fase": "2.ª Fase",
+  "ano": 2026,
+  "versao": 2,
+  "versao_rotulo": "VERSÃO 2",
+  "nivel": "Ensino Secundário",
+  "ano_de_escolaridade": "12.º Ano de Escolaridade",
+  "enquadramento_legal": "Decreto-Lei n.º 55/2018, de 6 de julho | Decreto-Lei n.º 62/2023, de 25 de julho",
+  "duracao": "Duração da Prova: 120 minutos. | Tolerância: 30 minutos.",
+  "paginas": 8,
+  "rodape": "Prova 639.V2/2.ª F.",
+  "autor_instituicao": "EduQA, Instituto de Educação, Qualidade e Avaliação",
+  "aviso_autor": "O enunciado e os critérios da 2.ª fase de 2026 têm o logótipo da EduQA (Instituto de Educação, Qualidade e Avaliação), ao lado do da República Portuguesa (Educação, Ciência e Inovação), como os da 1.ª fase; publica-os em eduqa.pt. As provas de 2023 a 2025 trazem o do IAVE, I.P.",
+  "fontes": {
+   "enunciado_url": "https://www.examesnacionais.com.pt/exames-nacionais/12ano/2026-2fase/Portugues.pdf",
+   "criterios_url": "https://www.examesnacionais.com.pt/exames-nacionais/12ano/2026-2fase/Portugues_Criterios.pdf",
+   "enunciado_original_url": "https://eduqa.pt/wp-content/uploads/2026/07/EX-Port639-F2-2026-V2_net.pdf",
+   "criterios_original_url": "https://eduqa.pt/wp-content/uploads/2026/07/EX-Port639-F2-2026-CC-VD_net.pdf"
+  },
+  "capa": {
+   "regra_dos_itens": "A prova inclui 10 itens, devidamente identificados no enunciado (✱), cujas respostas contribuem obrigatoriamente para a classificação final. Dos restantes 5 itens da prova, apenas contribuem para a classificação final os 3 itens cujas respostas obtenham melhor pontuação.",
+   "nota_simbolo": "No PDF, o símbolo é uma etiqueta cinzenta com um asterisco, posta antes do número dos itens obrigatórios e do título «GRUPO III».",
+   "instrucoes": [
+    "**As respostas aos itens da prova são registadas no caderno de respostas.**",
+    "Não é permitida a consulta de dicionário.",
+    "Nas respostas aos itens de escolha múltipla, selecione a opção correta. Assinale, na folha de respostas, a opção selecionada.",
+    "As cotações dos itens encontram-se no final do enunciado da prova."
+   ]
+  }
+ },
+ "criterios": {
+  "titulo": "Critérios de Classificação",
+  "paginas": 16,
+  "rodape": "Prova 639/2.ª F. | CC",
+  "marca_de_agua": "VERSÃO DE TRABALHO",
+  "aviso_marca_de_agua": "Todas as páginas da cópia pública dos critérios (examesnacionais.com.pt) têm a marca de água «VERSÃO DE TRABALHO». Os critérios publicados em eduqa.pt (EX-Port639-F2-2026-CC-VD_net.pdf) não a têm e dizem o mesmo, palavra a palavra (conferido a 30/10/2026).",
+  "gerais": {
+   "titulo": "CRITÉRIOS GERAIS DE CLASSIFICAÇÃO",
+   "abertura": [
+    "A classificação a atribuir a cada resposta resulta da aplicação dos critérios gerais e dos critérios específicos apresentados para cada item e é expressa por um número inteiro.",
+    "A ausência de indicação inequívoca da versão da prova implica a classificação com zero pontos das respostas aos itens de seleção.",
+    "As respostas ilegíveis ou que não possam ser claramente identificadas são classificadas com zero pontos."
+   ],
+   "itens_de_selecao": [
+    "As respostas aos itens de seleção podem ser classificadas de forma dicotómica ou por níveis de desempenho, de acordo com os critérios específicos. No primeiro caso, a pontuação só é atribuída às respostas corretas, sendo todas as outras respostas classificadas com zero pontos. No caso da classificação por níveis de desempenho, a cada nível corresponde uma dada pontuação, de acordo com os critérios específicos."
+   ],
+   "itens_de_construcao": [
+    "Os critérios de classificação relativos aos itens de construção apresentam-se organizados por parâmetros com os respetivos níveis de desempenho. A cada nível de desempenho corresponde uma dada pontuação. Se permanecerem dúvidas quanto ao nível a atribuir, deve optar-se pelo nível mais elevado de entre os dois tidos em consideração. Qualquer resposta que não atinja o nível 1 de desempenho num parâmetro é classificada com zero pontos nesse parâmetro. A classificação a atribuir à resposta resulta da soma das pontuações atribuídas aos diferentes parâmetros.",
+    "Em caso de omissão ou de engano na identificação de uma resposta, esta pode ser classificada se for possível identificar inequivocamente o item a que diz respeito.",
+    "Se for apresentada mais do que uma resposta ao mesmo item, só é classificada a resposta que surgir em primeiro lugar."
+   ],
+   "resposta_restrita": {
+    "paragrafos": [
+     "Nos itens de resposta restrita, são avaliados aspetos de conteúdo e de estruturação do discurso (C-ED) e de correção linguística (CL).",
+     "A classificação com zero pontos no parâmetro que contempla aspetos de conteúdo e de estruturação do discurso implica a classificação com zero pontos no parâmetro que contempla os aspetos de correção linguística.",
+     "As respostas que não apresentem exatamente os termos ou interpretações constantes nos critérios específicos são classificadas em igualdade de circunstâncias com aquelas que os apresentem, desde que o seu conteúdo seja cientificamente válido, adequado ao solicitado e enquadrado pelos documentos curriculares de referência.",
+     "No âmbito da estruturação do discurso, avalia-se a capacidade de assegurar a progressão e o encadeamento da informação através do recurso a mecanismos de coesão textual adequados, considerando-se o seguinte:"
+    ],
+    "lista": [
+     "exceto quando tal é expressamente requerido no item, as respostas não têm de apresentar um parágrafo introdutório nem um parágrafo conclusivo;",
+     "apenas deve ser penalizada a ausência dos parágrafos inequivocamente necessários, ou seja, aqueles que decorrem da introdução de unidades de sentido claramente distintas das anteriores;",
+     "a progressão e a clareza das ideias podem ser asseguradas através de diversos mecanismos (nomeadamente a pontuação e a repetição lexical), sem recurso obrigatório a conectores interfrásicos."
+    ],
+    "fecho": "No âmbito da correção linguística, os níveis de desempenho têm em conta o tipo e o número de ocorrências, considerando a tipologia prevista no Quadro 1."
+   },
+   "resposta_extensa": [
+    "No item de resposta extensa, são avaliados aspetos de estruturação temática e discursiva (ETD) e de correção linguística (CL).",
+    "No que diz respeito à estruturação temática e discursiva, são considerados os parâmetros seguintes: (A) Género/Formato Textual, (B) Tema e Pertinência da Informação, (C) Organização e Coesão Textuais.",
+    "A atribuição da classificação de zero pontos no parâmetro A (Género/Formato Textual) ou no parâmetro B (Tema e Pertinência da Informação) implica a atribuição de zero pontos nos restantes parâmetros da ETD, bem como na CL.",
+    "No âmbito da correção linguística, os níveis de desempenho têm em conta o tipo e o número de ocorrências, considerando a tipologia prevista no Quadro 1."
+   ],
+   "tipologia_de_erros": {
+    "introducao": "O Quadro 1 apresenta a tipologia de erros no âmbito da correção linguística aplicável aos itens de resposta restrita e ao item de resposta extensa.",
+    "quadro_1": {
+     "titulo": "Quadro 1 – Tipologia de erros no âmbito da correção linguística",
+     "Tipo A": [
+      "erro inequívoco de pontuação",
+      "erro de ortografia (incluindo erro de acentuação, erro de translineação e uso indevido de letra minúscula ou de letra maiúscula)",
+      "erro de morfologia",
+      "incumprimento das regras de citação de texto ou de referência a título de uma obra"
+     ],
+     "Tipo B": [
+      "erro de sintaxe",
+      "impropriedade lexical"
+     ]
+    },
+    "pontuacao": [
+     "Entende-se por erro inequívoco de pontuação aquele que representa uma infração de regras elementares na colocação de vírgula, ponto final, ponto de exclamação, ponto de interrogação, dois pontos, ponto e vírgula, aspas, travessão e parênteses.",
+     "No caso específico da vírgula, considera-se erro inequívoco o seu uso para separar quer o sujeito do predicado, quer o verbo dos seus complementos, incluindo os constituintes oracionais (orações subordinadas substantivas completivas ou relativas).",
+     "Considera-se obrigatório o uso de vírgula nos contextos seguintes:"
+    ],
+    "virgula_obrigatoria": [
+     "separar o nome do local da data;",
+     "separar os elementos de uma enumeração;",
+     "isolar o vocativo;",
+     "isolar o modificador do nome apositivo, seja ele de natureza adjetival, preposicional ou oracional (orações subordinadas adjetivas relativas explicativas);",
+     "isolar palavras ou expressões intencionalmente repetidas em construções de intensificação;",
+     "indicar a elipse de um verbo em orações com uma estrutura paralela à daquelas que as antecedem;",
+     "isolar palavras, expressões ou orações intercaladas na frase;",
+     "separar orações coordenadas (quando aplicável);",
+     "separar orações adverbiais, finitas ou não finitas, quando colocadas no início da frase ou nela intercaladas."
+    ],
+    "contagem": "Em cada resposta, contabiliza-se como uma única ocorrência quer a repetição de uma palavra com o mesmo erro ortográfico, quer a presença de mais de um erro na mesma palavra (incluindo erro de acentuação, erro de translineação e uso indevido de letra minúscula ou de letra maiúscula)."
+   },
+   "fatores_de_desvalorizacao": [
+    {
+     "titulo": "Respostas escritas integralmente em maiúsculas",
+     "texto": [
+      "As provas em que se apresente, pelo menos, uma resposta restrita ou extensa escrita integralmente em maiúsculas são sujeitas a uma desvalorização de cinco pontos na classificação total."
+     ]
+    },
+    {
+     "titulo": "Limites de extensão",
+     "texto": [
+      "Sempre que não sejam respeitados os limites relativos ao número de palavras indicados na instrução do item de resposta extensa, desconta-se um ponto por cada palavra (a mais ou a menos), até ao máximo de cinco (1 × 5) pontos, depois de aplicados todos os critérios definidos para o item.",
+      "Caso a resposta apresente uma extensão inferior a oitenta palavras, é classificada com zero pontos.",
+      "Para efeitos de contagem, considera-se uma palavra qualquer sequência delimitada por espaços em branco, mesmo quando esta integre elementos ligados por hífen (ex.: /dir-se-ia/). Qualquer número conta como uma única palavra, independentemente do número de algarismos que o constituam (ex.: /2026/).",
+      "Nos casos em que da aplicação deste fator de desvalorização resultar uma classificação inferior a zero pontos, é atribuída à resposta a classificação de zero pontos."
+     ]
+    }
+   ]
+  },
+  "tabelas_CL": {
+   "_leitura": "linhas = número de erros do tipo B; colunas = número de erros do tipo A; valor = pontuação. Células que não existem na tabela (a sombreado no PDF) dão zero pontos no parâmetro CL, porque o número de erros excede o máximo da tabela.",
+   "CL_3": {
+    "usada_em": [
+     "I.1",
+     "I.2",
+     "I.4",
+     "I.5"
+    ],
+    "pontos": 3,
+    "erros_B": {
+     "0": {
+      "A0": 3,
+      "A1": 3,
+      "A2": 2,
+      "A3": 1
+     },
+     "1": {
+      "A0": 2,
+      "A1": 1
+     }
+    }
+   },
+   "CL_2": {
+    "usada_em": [
+     "I.7"
+    ],
+    "pontos": 2,
+    "erros_B": {
+     "0": {
+      "A0": 2,
+      "A1": 2,
+      "A2": 1,
+      "A3": 1
+     },
+     "1": {
+      "A0": 1
+     }
+    }
+   },
+   "CL_14": {
+    "usada_em": [
+     "III"
+    ],
+    "pontos": 14,
+    "erros_B": {
+     "0": {
+      "A0": 14,
+      "A1": 14,
+      "A2": 14,
+      "A3": 11,
+      "A4": 11,
+      "A5": 11,
+      "A6": 8,
+      "A7": 8,
+      "A8": 8,
+      "A9": 5,
+      "A10": 5,
+      "A11": 5,
+      "A12": 2,
+      "A13": 2,
+      "A14": 2
+     },
+     "1": {
+      "A0": 14,
+      "A1": 11,
+      "A2": 11,
+      "A3": 11,
+      "A4": 8,
+      "A5": 8,
+      "A6": 8,
+      "A7": 5,
+      "A8": 5,
+      "A9": 5,
+      "A10": 2,
+      "A11": 2,
+      "A12": 2
+     },
+     "2": {
+      "A0": 11,
+      "A1": 11,
+      "A2": 8,
+      "A3": 8,
+      "A4": 8,
+      "A5": 5,
+      "A6": 5,
+      "A7": 5,
+      "A8": 2,
+      "A9": 2,
+      "A10": 2
+     },
+     "3": {
+      "A0": 8,
+      "A1": 8,
+      "A2": 8,
+      "A3": 5,
+      "A4": 5,
+      "A5": 5,
+      "A6": 2,
+      "A7": 2,
+      "A8": 2
+     },
+     "4": {
+      "A0": 8,
+      "A1": 5,
+      "A2": 5,
+      "A3": 5,
+      "A4": 2,
+      "A5": 2,
+      "A6": 2
+     },
+     "5": {
+      "A0": 5,
+      "A1": 5,
+      "A2": 2,
+      "A3": 2,
+      "A4": 2
+     },
+     "6": {
+      "A0": 2
+     },
+     "7": {
+      "A0": 2
+     }
+    }
+   }
+  }
+ },
+ "cotacoes": {
+  "obrigatorios": {
+   "texto": "As pontuações obtidas nas respostas a estes 10 itens da prova contribuem obrigatoriamente para a classificação final.",
+   "itens": [
+    [
+     "I.1",
+     13
+    ],
+    [
+     "I.2",
+     13
+    ],
+    [
+     "I.4",
+     13
+    ],
+    [
+     "I.5",
+     13
+    ],
+    [
+     "I.7",
+     13
+    ],
+    [
+     "II.1",
+     13
+    ],
+    [
+     "II.3",
+     13
+    ],
+    [
+     "II.4",
+     13
+    ],
+    [
+     "II.7",
+     13
+    ],
+    [
+     "III",
+     44
+    ]
+   ],
+   "subtotal": 161
+  },
+  "opcionais": {
+   "texto": "Destes 5 itens, contribuem para a classificação final da prova os 3 itens cujas respostas obtenham melhor pontuação.",
+   "itens": [
+    "I.3",
+    "I.6",
+    "II.2",
+    "II.5",
+    "II.6"
+   ],
+   "cotacao": "3 × 13 pontos",
+   "subtotal": 39
+  },
+  "total": 200
+ },
+ "grupos": [
+  {
+   "id": "I",
+   "titulo": "GRUPO I",
+   "dominios_nossa_designacao": "educação literária e leitura (designação nossa, não da prova)",
+   "instrucao": "Apresente as suas respostas de forma bem estruturada.",
+   "nota_dos_criterios": "Nos tópicos de resposta de cada item, as expressões separadas por barras oblíquas ‒ à exceção das utilizadas no interior de cada uma das transcrições ‒ correspondem a exemplos de formulações possíveis, apresentadas em alternativa. As ideias apresentadas entre parênteses não têm de ser obrigatoriamente mobilizadas para que as respostas sejam consideradas adequadas.",
+   "partes": [
+    {
+     "id": "A",
+     "titulo": "PARTE A",
+     "instrucao": "Leia os dois poemas e as notas.",
+     "textos": [
+      {
+       "id": "I-A-1",
+       "rotulo": "Poema 1",
+       "autor": "Eugénio de Andrade",
+       "titulo": "AGORA AS PALAVRAS",
+       "obra": "_O Sal da Língua_",
+       "genero": "poema",
+       "fonte": "Eugénio de Andrade, _O Sal da Língua_, 2.ª ed., Porto, Fundação Eugénio de Andrade, 1996, p. 35.",
+       "versos_numerados": true,
+       "estrofes": [
+        [
+         {
+          "v": 1,
+          "t": "Obedecem-me agora muito menos,"
+         },
+         {
+          "v": 2,
+          "t": "as palavras. A propósito"
+         },
+         {
+          "v": 3,
+          "t": "de nada resmungam, não fazem"
+         },
+         {
+          "v": 4,
+          "t": "caso do que lhes digo,"
+         },
+         {
+          "v": 5,
+          "t": "não respeitam a minha idade."
+         },
+         {
+          "v": 6,
+          "t": "Provavelmente fartaram-se da rédea,"
+         },
+         {
+          "v": 7,
+          "t": "não me perdoam"
+         },
+         {
+          "v": 8,
+          "t": "a mão rigorosa, a indiferença"
+         },
+         {
+          "v": 9,
+          "t": "pelo fogo de artifício."
+         },
+         {
+          "v": 10,
+          "t": "Eu gosto delas, nunca tive outra"
+         },
+         {
+          "v": 11,
+          "t": "paixão, e elas durante muitos anos"
+         },
+         {
+          "v": 12,
+          "t": "também gostaram de mim: dançavam"
+         },
+         {
+          "v": 13,
+          "t": "à minha roda quando as encontrava."
+         },
+         {
+          "v": 14,
+          "t": "Com elas fazia o lume,"
+         },
+         {
+          "v": 15,
+          "t": "sustentava os meus dias, mas agora"
+         },
+         {
+          "v": 16,
+          "t": "estão ariscas[^1], escapam-se por entre"
+         },
+         {
+          "v": 17,
+          "t": "as mãos, arreganham os dentes"
+         },
+         {
+          "v": 18,
+          "t": "se tento retê-las. Ou será que"
+         },
+         {
+          "v": 19,
+          "t": "já só procuro as mais encabritadas[^2]?"
+         }
+        ]
+       ],
+       "nota_numeracao": "Uma só estrofe, de 19 versos. Na prova, só os versos 5, 10 e 15 trazem o número à margem. O título está em maiúsculas, por cima do primeiro verso, e não conta na numeração."
+      },
+      {
+       "id": "I-A-2",
+       "rotulo": "Poema 2",
+       "autor": "Fernando Pessoa",
+       "heteronimo": "Alberto Caeiro",
+       "titulo": null,
+       "obra": "_Poesia de Alberto Caeiro_",
+       "genero": "poema",
+       "fonte": "Fernando Pessoa, _Poesia de Alberto Caeiro_, edição de Fernando Cabral Martins e Richard Zenith, 3.ª ed., Lisboa, Assírio & Alvim, 2009, p. 110.",
+       "versos_numerados": true,
+       "estrofes": [
+        [
+         {
+          "v": 1,
+          "t": "Se, depois de eu morrer, quiserem escrever a minha biografia,"
+         },
+         {
+          "v": 2,
+          "t": "Não há nada mais simples."
+         },
+         {
+          "v": 3,
+          "t": "Tem só duas datas — a da minha nascença e a da minha morte."
+         },
+         {
+          "v": 4,
+          "t": "Entre uma e outra cousa todos os dias são meus."
+         }
+        ],
+        [
+         {
+          "v": 5,
+          "t": "Sou fácil de definir."
+         },
+         {
+          "v": 6,
+          "t": "Vi como um danado."
+         },
+         {
+          "v": 7,
+          "t": "Amei as coisas sem sentimentalidade nenhuma."
+         },
+         {
+          "v": 8,
+          "t": "Nunca tive um desejo que não pudesse realizar, porque nunca ceguei."
+         },
+         {
+          "v": 9,
+          "t": "Mesmo ouvir nunca foi para mim senão um acompanhamento de ver."
+         },
+         {
+          "v": 10,
+          "t": "Compreendi que as coisas são reais e todas diferentes umas das outras;"
+         },
+         {
+          "v": 11,
+          "t": "Compreendi isto com os olhos, nunca com o pensamento."
+         },
+         {
+          "v": 12,
+          "t": "Compreender isto com o pensamento seria achá-las todas iguais."
+         }
+        ],
+        [
+         {
+          "v": 13,
+          "t": "Um dia deu-me o sono como a qualquer criança."
+         },
+         {
+          "v": 14,
+          "t": "Fechei os olhos e dormi."
+         },
+         {
+          "v": 15,
+          "t": "Além disso, fui o único poeta da Natureza."
+         }
+        ]
+       ],
+       "nota_numeracao": "Três estrofes (4, 8 e 3 versos), numeradas a partir do verso 1, como o Poema 1; na prova, só os versos 5, 10 e 15 trazem o número à margem. A prova não dá título a este poema. Nas lições, os data-l deste poema levam o prefixo «p2v» (prefixos_data_l em prova.json), para não repetirem os do Poema 1."
+      }
+     ],
+     "notas": [
+      {
+       "n": 1,
+       "texto_id": "I-A-1",
+       "verso": 16,
+       "texto": "_ariscas_ – esquivas; fugidias."
+      },
+      {
+       "n": 2,
+       "texto_id": "I-A-1",
+       "verso": 19,
+       "texto": "_encabritadas_ – empinadas; agitadas; enfurecidas."
+      }
+     ],
+     "itens": [
+      {
+       "numero": "I.1",
+       "n": 1,
+       "parte": "A",
+       "obrigatorio": true,
+       "tipo": "construção: resposta restrita",
+       "cotacao": 13,
+       "enunciado": [
+        "No Poema 1, quanto à relação do sujeito poético com as palavras, verifica-se uma oposição entre dois tempos: o presente («agora», vv. 1 e 15) e o passado («durante muitos anos», v. 11).",
+        "Refira duas alterações sentidas pelo sujeito poético na sua relação com as palavras."
+       ],
+       "verbo_instrucional": "Refira",
+       "versos_referidos": {
+        "texto": "I-A-1",
+        "de": 1,
+        "a": 19,
+        "citados": [
+         1,
+         11,
+         15
+        ]
+       },
+       "criterios": {
+        "pontos": 13,
+        "instrucao": "Devem ser abordados **dois** dos tópicos seguintes, ou outros igualmente relevantes:",
+        "topicos": [
+         {
+          "pontos": [
+           "no passado, as palavras obedeciam/ocorriam facilmente ao sujeito poético («Obedecem-me agora muito menos, / as palavras – vv. 1-2), enquanto, no presente, este passou a sentir mais dificuldade em dominá-las, sendo por elas ignorado («não fazem / caso do que lhes digo» – vv. 3-4)/as palavras são «ariscas» (v. 16) e escapam-se-lhe «por entre / as mãos» (vv. 16-17);"
+          ]
+         },
+         {
+          "pontos": [
+           "no passado, as palavras gostavam do sujeito poético («e elas durante muitos anos / também gostaram de mim» – vv. 11-12), enquanto, no presente, as palavras «resmungam» (v. 3) e mostram-lhe os dentes, como manifestação de revolta (v. 17);"
+          ]
+         },
+         {
+          "pontos": [
+           "no passado, havia uma relação harmoniosa/de felicidade entre o sujeito poético e as palavras («dançavam / à minha roda quando as encontrava» – vv. 12-13), enquanto, no presente, as palavras parecem zangadas com o sujeito poético, não respeitando a sua idade («A propósito / de nada resmungam» – vv. 2-3; «não respeitam a minha idade» – v. 5);"
+          ]
+         },
+         {
+          "pontos": [
+           "no passado, as palavras e a poesia davam sentido à vida/alimentavam a vida do sujeito poético («Com elas fazia o lume, / sustentava os meus dias» – vv. 14-15), enquanto, no presente, lhe provocam um sentimento de frustração/deceção, decorrente da tensão que existe entre a sua vontade de trabalhar as palavras e a sua incapacidade de o fazer (vv. 16-17)."
+          ]
+         }
+        ],
+        "parametros": [
+         {
+          "sigla": "C-ED",
+          "nome": "Aspetos de conteúdo e de estruturação do discurso",
+          "pontos": 10,
+          "nota_de_rodape": "Os descritores de desempenho definidos para este parâmetro devem ser considerados em articulação com os Critérios Gerais de Classificação relativos à estruturação do discurso (p. 2).",
+          "niveis": [
+           {
+            "nivel": 5,
+            "pontuacao": 10,
+            "descritores": [
+             [
+              "Refere duas alterações sentidas pelo sujeito poético na sua relação com as palavras, abordando, adequadamente, dois tópicos de resposta.",
+              "Utiliza mecanismos de coesão textual que, apesar da eventual ocorrência de falhas, asseguram a progressão e o encadeamento das ideias."
+             ]
+            ]
+           },
+           {
+            "nivel": 4,
+            "pontuacao": 8,
+            "descritores": [
+             [
+              "Refere duas alterações sentidas pelo sujeito poético na sua relação com as palavras, abordando, adequadamente, dois tópicos de resposta.",
+              "Utiliza mecanismos de coesão textual com falhas que comprometem a progressão e o encadeamento das ideias."
+             ],
+             [
+              "Refere duas alterações sentidas pelo sujeito poético na sua relação com as palavras, abordando dois tópicos de resposta, um adequadamente e outro com pequenas imprecisões e/ou omissões.",
+              "Utiliza mecanismos de coesão textual que, apesar da eventual ocorrência de falhas, asseguram a progressão e o encadeamento das ideias."
+             ]
+            ]
+           },
+           {
+            "nivel": 3,
+            "pontuacao": 6,
+            "descritores": [
+             [
+              "Refere duas alterações sentidas pelo sujeito poético na sua relação com as palavras, abordando dois tópicos de resposta, um adequadamente e outro com pequenas imprecisões e/ou omissões.",
+              "Utiliza mecanismos de coesão textual com falhas que comprometem a progressão e o encadeamento das ideias."
+             ],
+             [
+              "Refere duas alterações sentidas pelo sujeito poético na sua relação com as palavras, abordando dois tópicos de resposta, ambos com pequenas imprecisões e/ou omissões.",
+              "Utiliza mecanismos de coesão textual que, apesar da eventual ocorrência de falhas, asseguram a progressão e o encadeamento das ideias."
+             ],
+             [
+              "Refere uma alteração sentida pelo sujeito poético na sua relação com as palavras, abordando, adequadamente, um tópico de resposta.",
+              "Utiliza mecanismos de coesão textual que, apesar da eventual ocorrência de falhas, asseguram a progressão e o encadeamento das ideias."
+             ]
+            ]
+           },
+           {
+            "nivel": 2,
+            "pontuacao": 4,
+            "descritores": [
+             [
+              "Refere duas alterações sentidas pelo sujeito poético na sua relação com as palavras, abordando dois tópicos de resposta, ambos com pequenas imprecisões e/ou omissões.",
+              "Utiliza mecanismos de coesão textual com falhas que comprometem a progressão e o encadeamento das ideias."
+             ],
+             [
+              "Refere uma alteração sentida pelo sujeito poético na sua relação com as palavras, abordando, adequadamente, um tópico de resposta.",
+              "Utiliza mecanismos de coesão textual com falhas que comprometem a progressão e o encadeamento das ideias."
+             ]
+            ]
+           },
+           {
+            "nivel": 1,
+            "pontuacao": 2,
+            "descritores": [
+             [
+              "Refere uma alteração sentida pelo sujeito poético na sua relação com as palavras, abordando um tópico de resposta, com pequenas imprecisões e/ou omissões.",
+              "Utiliza mecanismos de coesão textual com eventual ocorrência de falhas que podem comprometer a progressão e o encadeamento das ideias."
+             ]
+            ]
+           }
+          ]
+         },
+         {
+          "sigla": "CL",
+          "nome": "Aspetos de correção linguística",
+          "pontos": 3,
+          "nota_de_rodape": "_Vide_ Tipologia de erros no âmbito da correção linguística (pp. 2-3).",
+          "texto": "Após a contabilização dos erros do tipo A e do tipo B, apura-se a classificação neste parâmetro. A tabela abaixo apresenta a pontuação a atribuir, de acordo com o número de erros do tipo A e do tipo B identificados. Caso o número total de erros seja superior ao número máximo apresentado na tabela, o parâmetro CL é classificado com zero pontos.",
+          "tabela": "CL_3"
+         }
+        ],
+        "cenario_de_resposta": "Os critérios de 2026 não têm uma secção própria chamada «cenário de resposta»: o que fazem esse papel são os tópicos de resposta transcritos em «topicos», que os critérios apresentam como exemplos («ou outros igualmente relevantes»).",
+        "nota_nossa": "No primeiro tópico, a citação dos vv. 1-2 abre com «, mas o PDF dos critérios não a fecha antes do travessão (está assim nas duas cópias, a pública e a da EduQA); a transcrição mantém-no."
+       }
+      },
+      {
+       "numero": "I.2",
+       "n": 2,
+       "parte": "A",
+       "obrigatorio": true,
+       "tipo": "construção: resposta restrita",
+       "cotacao": 13,
+       "enunciado": [
+        "Explique o modo como, em cada poema, o sujeito poético perspetiva a escrita − poética, num caso, e de uma eventual biografia, no outro caso −, fundamentando a sua resposta em transcrições textuais pertinentes."
+       ],
+       "verbo_instrucional": "Explique",
+       "versos_referidos": [
+        {
+         "texto": "I-A-1",
+         "de": 1,
+         "a": 19
+        },
+        {
+         "texto": "I-A-2",
+         "de": 1,
+         "a": 15
+        }
+       ],
+       "criterios": {
+        "pontos": 13,
+        "instrucao": "Devem ser abordados **dois** dos tópicos seguintes, ou outros igualmente relevantes, um relativo ao poema de Eugénio de Andrade e outro relativo ao poema de Alberto Caeiro.",
+        "topicos": [
+         {
+          "rotulo": "No poema de Eugénio de Andrade, a escrita poética assume uma grande importância, pois:",
+          "poema": "I-A-1",
+          "pontos": [
+           "constitui um processo de criação artística meticuloso, na medida em que trabalha as palavras com rigor – «mão rigorosa» (v. 8) – e com controlo absoluto, pelo que agora elas se fartaram «da rédea» (v. 6);",
+           "o sujeito poético sempre gostou das palavras – «Eu gosto delas, nunca tive outra / paixão» (vv. 10-11) – e estas retribuíam-lhe o sentimento – «e elas durante muitos anos / também gostaram de mim» (vv. 11-12);",
+           "a alegria emanava da relação entre o sujeito poético e as palavras – «dançavam / à minha roda quando as encontrava» (vv. 12-13);",
+           "as palavras alimentavam a sua existência, dando-lhe sentido – «Com elas fazia o lume, / sustentava os meus dias» (vv. 14-15)."
+          ]
+         },
+         {
+          "rotulo": "No poema de Alberto Caeiro, a escrita de uma eventual biografia sua afigura-se pouco importante/será fácil, pois:",
+          "poema": "I-A-2",
+          "pontos": [
+           "constitui um processo simples e objetivo, na medida em que na sua vida apenas duas datas importam – «Não há nada mais simples.» (v. 2)/«Tem só duas datas — a da minha nascença e a da minha morte» (v. 3);",
+           "Alberto Caeiro é «fácil de definir» (v. 5), visto que a sua existência consistiu em ver «como um danado» (v. 6) e em compreender «com os olhos, nunca com o pensamento» (v. 11);",
+           "o sujeito poético não deseja dedicar-se a ela, deixando-a para outros, depois da sua morte, se, porventura, assim o «quiserem» – «Se, depois de eu morrer, quiserem escrever a minha biografia» (v. 1);",
+           "o sujeito poético, parecendo deixar a escrita da sua biografia para outrem, acaba por fazer uma autobiografia (sob a forma de epitáfio) como se verifica, por exemplo, nos versos 1 a 4/fornece um guião detalhado da sua biografia, em que a simplicidade da sua existência é refletida na simplicidade da escrita, como se constata, por exemplo, nos versos 5-6."
+          ]
+         }
+        ],
+        "parametros": [
+         {
+          "sigla": "C-ED",
+          "nome": "Aspetos de conteúdo e de estruturação do discurso",
+          "pontos": 10,
+          "nota_de_rodape": "Os descritores de desempenho definidos para este parâmetro devem ser considerados em articulação com os Critérios Gerais de Classificação relativos à estruturação do discurso (p. 2).",
+          "niveis": [
+           {
+            "nivel": 5,
+            "pontuacao": 10,
+            "descritores": [
+             [
+              "Explica o modo como, em cada poema, o sujeito poético perspetiva a escrita, abordando, adequadamente, dois tópicos de resposta.",
+              "Utiliza mecanismos de coesão textual que, apesar da eventual ocorrência de falhas, asseguram a progressão e o encadeamento das ideias."
+             ]
+            ]
+           },
+           {
+            "nivel": 4,
+            "pontuacao": 8,
+            "descritores": [
+             [
+              "Explica o modo como, em cada poema, o sujeito poético perspetiva a escrita, abordando, adequadamente, dois tópicos de resposta.",
+              "Utiliza mecanismos de coesão textual com falhas que comprometem a progressão e o encadeamento das ideias."
+             ],
+             [
+              "Explica o modo como, em cada poema, o sujeito poético perspetiva a escrita, abordando dois tópicos de resposta, um adequadamente e outro com pequenas imprecisões e/ou omissões.",
+              "Utiliza mecanismos de coesão textual que, apesar da eventual ocorrência de falhas, asseguram a progressão e o encadeamento das ideias."
+             ]
+            ]
+           },
+           {
+            "nivel": 3,
+            "pontuacao": 6,
+            "descritores": [
+             [
+              "Explica o modo como, em cada poema, o sujeito poético perspetiva a escrita, abordando dois tópicos de resposta, um adequadamente e outro com pequenas imprecisões e/ou omissões.",
+              "Utiliza mecanismos de coesão textual com falhas que comprometem a progressão e o encadeamento das ideias."
+             ],
+             [
+              "Explica o modo como, em cada poema, o sujeito poético perspetiva a escrita, abordando dois tópicos de resposta, ambos com pequenas imprecisões e/ou omissões.",
+              "Utiliza mecanismos de coesão textual que, apesar da eventual ocorrência de falhas, asseguram a progressão e o encadeamento das ideias."
+             ],
+             [
+              "Explica o modo como um dos sujeitos poéticos perspetiva a escrita, abordando, adequadamente, um tópico de resposta.",
+              "Utiliza mecanismos de coesão textual que, apesar da eventual ocorrência de falhas, asseguram a progressão e o encadeamento das ideias."
+             ]
+            ]
+           },
+           {
+            "nivel": 2,
+            "pontuacao": 4,
+            "descritores": [
+             [
+              "Explica o modo como, em cada poema, o sujeito poético perspetiva a escrita, abordando dois tópicos de resposta, ambos com pequenas imprecisões e/ou omissões.",
+              "Utiliza mecanismos de coesão textual com falhas que comprometem a progressão e o encadeamento das ideias."
+             ],
+             [
+              "Explica o modo como um dos sujeitos poéticos perspetiva a escrita, abordando, adequadamente, um tópico de resposta.",
+              "Utiliza mecanismos de coesão textual com falhas que comprometem a progressão e o encadeamento das ideias."
+             ]
+            ]
+           },
+           {
+            "nivel": 1,
+            "pontuacao": 2,
+            "descritores": [
+             [
+              "Explica o modo como um dos sujeitos poéticos perspetiva a escrita, abordando um tópico de resposta, com pequenas imprecisões e/ou omissões.",
+              "Utiliza mecanismos de coesão textual com eventual ocorrência de falhas que podem comprometer a progressão e o encadeamento das ideias."
+             ]
+            ]
+           }
+          ]
+         },
+         {
+          "sigla": "CL",
+          "nome": "Aspetos de correção linguística",
+          "pontos": 3,
+          "nota_de_rodape": "_Vide_ Tipologia de erros no âmbito da correção linguística (pp. 2-3).",
+          "texto": "Após a contabilização dos erros do tipo A e do tipo B, apura-se a classificação neste parâmetro. A tabela abaixo apresenta a pontuação a atribuir, de acordo com o número de erros do tipo A e do tipo B identificados. Caso o número total de erros seja superior ao número máximo apresentado na tabela, o parâmetro CL é classificado com zero pontos.",
+          "tabela": "CL_3"
+         }
+        ],
+        "cenario_de_resposta": "Os critérios de 2026 não têm uma secção própria chamada «cenário de resposta»: o que fazem esse papel são os tópicos de resposta transcritos em «topicos», que os critérios apresentam como exemplos («ou outros igualmente relevantes»).",
+        "nota_nossa": "Os «dois tópicos de resposta» dos descritores são, pela instrução, um de cada poema (um ponto de cada lista)."
+       }
+      },
+      {
+       "numero": "I.3",
+       "n": 3,
+       "parte": "A",
+       "obrigatorio": false,
+       "tipo": "seleção: completamento (uma opção por espaço)",
+       "cotacao": 13,
+       "enunciado": [
+        "Complete o texto seguinte, selecionando a opção adequada a cada espaço.",
+        "Assinale, na folha de respostas, para cada letra, o número da opção selecionada."
+       ],
+       "texto_com_espacos": [
+        "Nos poemas, o estado emocional de cada um dos sujeitos poéticos difere substancialmente.",
+        "De facto, no poema de Eugénio de Andrade, o sujeito poético conclui o seu discurso com uma interrogação que **(a)** , enquanto, no poema de Alberto Caeiro, a estrofe final **(b)** ."
+       ],
+       "versos_referidos": [
+        {
+         "texto": "I-A-1",
+         "de": 18,
+         "a": 19
+        },
+        {
+         "texto": "I-A-2",
+         "de": 13,
+         "a": 15
+        }
+       ],
+       "opcoes": {
+        "a": [
+         {
+          "n": 1,
+          "texto": "mostra uma outra faceta surpreendente do carácter das palavras, repudiada pelo «eu» poético"
+         },
+         {
+          "n": 2,
+          "texto": "funciona como uma possibilidade de explicação lógica da situação apresentada anteriormente"
+         },
+         {
+          "n": 3,
+          "texto": "revela a estranheza perante o modo como as palavras se comportam agora"
+         }
+        ],
+        "b": [
+         {
+          "n": 1,
+          "texto": "comprova a serenidade de quem opta por aceitar a realidade das coisas sem as questionar"
+         },
+         {
+          "n": 2,
+          "texto": "revela o estatuto singular de um poeta satisfeito com a sua perceção sensorial da Natureza"
+         },
+         {
+          "n": 3,
+          "texto": "sugere o pasmo inicial do sujeito poético perante a existência e o absurdo da morte"
+         }
+        ]
+       },
+       "chave_versao_2": {
+        "a": 2,
+        "b": 1
+       },
+       "criterios": {
+        "pontos": 13,
+        "transcricao": [
+         "Versão 1 ‒ **(a) → (3)**; **(b) → (2)**.",
+         "Versão 2 ‒ **(a) → (2)**; **(b) → (1)**."
+        ],
+        "nota_nossa": "Os critérios específicos dão só a chave, sem níveis; pelos critérios gerais, nesse caso a classificação é dicotómica (13 ou 0). Usar só a chave da versão 2. Os versos referidos são leitura nossa: a interrogação final do Poema 1 (vv. 18-19) e a última estrofe do Poema 2 (vv. 13-15)."
+       }
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "titulo": "PARTE B",
+     "instrucao": "Leia o texto e as notas.",
+     "textos": [
+      {
+       "id": "I-B-1",
+       "autor": "Almeida Garrett",
+       "obra": "_Frei Luís de Sousa_",
+       "genero": "texto dramático (excerto)",
+       "fonte": "Almeida Garrett, _Frei Luís de Sousa_, edição de João Dionísio, Lisboa, INCM, 2022, pp. 237-239.",
+       "linhas": [
+        {
+         "n": 1,
+         "t": "MANUEL",
+         "inicio_paragrafo": false,
+         "personagem": true
+        },
+        {
+         "n": 2,
+         "t": "Oh minha filha, minha filha! (_Silêncio longo._) Desgraçada filha, que ficas órfã!... Órfã de pai e de",
+         "inicio_paragrafo": false,
+         "inicio_fala": true
+        },
+        {
+         "n": 3,
+         "t": "mãe... (_Pausa._)... e de família e de nome, que tudo perdeste hoje... (_Levanta-se com violenta_",
+         "inicio_paragrafo": false
+        },
+        {
+         "n": 4,
+         "t": "_aflição_.) A desgraçada nunca os teve! — Oh Jorge, que esta lembrança é que me mata, que",
+         "inicio_paragrafo": false
+        },
+        {
+         "n": 5,
+         "t": "me desespera! (_Apertando a mão do irmão, que se levantou após dele e o está consolando do_",
+         "inicio_paragrafo": false
+        },
+        {
+         "n": 6,
+         "t": "_gesto._) É o castigo terrível do meu erro... se foi erro... crime sei que não foi. E sabe-o Deus,",
+         "inicio_paragrafo": false
+        },
+        {
+         "n": 7,
+         "t": "Jorge, e castigou-me assim, meu irmão!",
+         "inicio_paragrafo": false
+        },
+        {
+         "n": 8,
+         "t": "JORGE",
+         "inicio_paragrafo": false,
+         "personagem": true
+        },
+        {
+         "n": 9,
+         "t": "Paciência, paciência: os seus juízos são imperscrutáveis[^1]. (_Acalma e faz sentar o irmão:_",
+         "inicio_paragrafo": false,
+         "inicio_fala": true
+        },
+        {
+         "n": 10,
+         "t": "_tornam a ficar ambos como estavam._)",
+         "inicio_paragrafo": false
+        },
+        {
+         "n": 11,
+         "t": "MANUEL",
+         "inicio_paragrafo": false,
+         "personagem": true
+        },
+        {
+         "n": 12,
+         "t": "Mas eu em que mereci ser feito o homem mais infeliz da terra, posto de alvo à irrisão[^2] e ao",
+         "inicio_paragrafo": false,
+         "inicio_fala": true
+        },
+        {
+         "n": 13,
+         "t": "discursar do vulgo[^3]?... Manuel de Sousa Coutinho, o filho de Lopo de Sousa Coutinho, o filho",
+         "inicio_paragrafo": false
+        },
+        {
+         "n": 14,
+         "t": "de nosso pai, Jorge!",
+         "inicio_paragrafo": false
+        },
+        {
+         "n": 15,
+         "t": "JORGE",
+         "inicio_paragrafo": false,
+         "personagem": true
+        },
+        {
+         "n": 16,
+         "t": "Tu chamas-te o homem mais infeliz da terra... Já te esqueceste que ainda está vivo aquele…",
+         "inicio_paragrafo": false,
+         "inicio_fala": true
+        },
+        {
+         "n": 17,
+         "t": "MANUEL, _caindo em si_",
+         "inicio_paragrafo": false,
+         "personagem": true
+        },
+        {
+         "n": 18,
+         "t": "É verdade. (_Pausa; e depois, como quem se desdiz._) Mas não é, nem tanto: padeceu mais,",
+         "inicio_paragrafo": false,
+         "inicio_fala": true
+        },
+        {
+         "n": 19,
+         "t": "padeceu mais longamente, e bebeu até às fezes o cálix[^4] das amarguras humanas... (_Levantando_",
+         "inicio_paragrafo": false
+        },
+        {
+         "n": 20,
+         "t": "_a voz._) Mas fui eu, eu que lho preparei, eu que lho dei a beber, pelas mãos... inocentes mãos!...",
+         "inicio_paragrafo": false
+        },
+        {
+         "n": 21,
+         "t": "dessa infeliz que arrastei na minha queda, que lancei nesse abismo de vergonha, a quem",
+         "inicio_paragrafo": false
+        },
+        {
+         "n": 22,
+         "t": "cobri as faces — as faces puras, e que não tinham corado doutro pejo[^5] senão do da virtude",
+         "inicio_paragrafo": false
+        },
+        {
+         "n": 23,
+         "t": "e do recato... cobri-lhas de um véu d’infâmia que nem a morte há de levantar, porque lhe",
+         "inicio_paragrafo": false
+        },
+        {
+         "n": 24,
+         "t": "fica, perpétuo e para sempre, lançado sobre o túmulo a cobrir-lhe a memória de sombras... de",
+         "inicio_paragrafo": false
+        },
+        {
+         "n": 25,
+         "t": "manchas que se não lavam! — Fui eu o autor de tudo isto, o autor da minha desgraça e da sua",
+         "inicio_paragrafo": false
+        },
+        {
+         "n": 26,
+         "t": "desonra deles... Sei-o, conheço-o; e não sou mais infeliz que nenhum?",
+         "inicio_paragrafo": false
+        },
+        {
+         "n": 27,
+         "t": "JORGE",
+         "inicio_paragrafo": false,
+         "personagem": true
+        },
+        {
+         "n": 28,
+         "t": "Vê a palavra que disseste, «desonra»: lembra-te dela e de ti, e considera se podes pleitear[^6]",
+         "inicio_paragrafo": false,
+         "inicio_fala": true
+        },
+        {
+         "n": 29,
+         "t": "misérias com esse homem a quem Deus não quis acudir com a morte antes de conhecer",
+         "inicio_paragrafo": false
+        },
+        {
+         "n": 30,
+         "t": "essoutra agonia maior. — Ele não tem...",
+         "inicio_paragrafo": false
+        },
+        {
+         "n": 31,
+         "t": "MANUEL",
+         "inicio_paragrafo": false,
+         "personagem": true
+        },
+        {
+         "n": 32,
+         "t": "Ele não tem uma filha como eu, desgraçado... (_Pausa._) — uma filha bela, pura, adorada, sobre",
+         "inicio_paragrafo": false,
+         "inicio_fala": true
+        },
+        {
+         "n": 33,
+         "t": "cuja cabeça — oh, porque não é na minha! — vai cair toda essa desonra, toda a ignomínia[^7],",
+         "inicio_paragrafo": false
+        },
+        {
+         "n": 34,
+         "t": "todo o opróbrio[^8] que a injustiça do mundo, não sei porquê, me não quer lançar no rosto a mim,",
+         "inicio_paragrafo": false
+        },
+        {
+         "n": 35,
+         "t": "para pôr tudo na testa branca e pura de um anjo que não tem outra culpa senão a da origem",
+         "inicio_paragrafo": false
+        },
+        {
+         "n": 36,
+         "t": "que eu lhe dei.",
+         "inicio_paragrafo": false
+        }
+       ],
+       "nota_numeracao": "Linhas numeradas de 1 a 36 (na prova, o número à margem de 5 em 5). A numeração conta as linhas com o nome da personagem (1, 8, 11, 15, 17, 27 e 31) e não conta as linhas em branco entre as falas. As didascálias estão em itálico, sem os parênteses."
+      }
+     ],
+     "notas": [
+      {
+       "n": 1,
+       "linha": 9,
+       "texto": "_imperscrutáveis_ – insondáveis; misteriosos."
+      },
+      {
+       "n": 2,
+       "linha": 12,
+       "texto": "_irrisão_ – chacota; escárnio; zombaria."
+      },
+      {
+       "n": 3,
+       "linha": 13,
+       "texto": "_vulgo_ – povo."
+      },
+      {
+       "n": 4,
+       "linha": 19,
+       "texto": "_cálix_ – cálice."
+      },
+      {
+       "n": 5,
+       "linha": 22,
+       "texto": "_pejo_ – acanhamento; vergonha; pudor."
+      },
+      {
+       "n": 6,
+       "linha": 28,
+       "texto": "_pleitear_ – disputar."
+      },
+      {
+       "n": 7,
+       "linha": 33,
+       "texto": "_ignomínia_ – infâmia; desonra."
+      },
+      {
+       "n": 8,
+       "linha": 34,
+       "texto": "_opróbrio_ – desonra e humilhação públicas."
+      }
+     ],
+     "itens": [
+      {
+       "numero": "I.4",
+       "n": 4,
+       "parte": "B",
+       "obrigatorio": true,
+       "tipo": "construção: resposta restrita",
+       "cotacao": 13,
+       "enunciado": [
+        "Infira dois traços da personalidade de Manuel evidenciados no excerto apresentado, fundamentando a sua resposta com elementos textuais pertinentes."
+       ],
+       "verbo_instrucional": "Infira",
+       "linhas_referidas": {
+        "texto": "I-B-1",
+        "de": 1,
+        "a": 36
+       },
+       "criterios": {
+        "pontos": 13,
+        "instrucao": "Devem ser abordados **dois** dos tópicos seguintes, ou outros igualmente relevantes:",
+        "topicos": [
+         {
+          "pontos": [
+           "profunda religiosidade, evidenciada na assunção de que a situação de ignomínia em que a sua filha se encontra («Órfã de pai e de mãe... [...] e de família e de nome» – ll. 1-2) é castigo de Deus pelo «erro» que cometeu («E sabe-o Deus, Jorge, e castigou-me assim, meu irmão!» – ll. 6-7);"
+          ]
+         },
+         {
+          "pontos": [
+           "sentido de dignidade e de honra, patente no facto de se considerar «o homem mais infeliz da terra» (l. 12) por ter sido desonrado o bom nome da sua família (ll. 12-14);"
+          ]
+         },
+         {
+          "pontos": [
+           "racionalidade, pois, apesar do intenso sofrimento que o dilacera, ouve os argumentos do seu interlocutor e reformula o seu raciocínio («É verdade. (_Pausa; e depois, como quem se desdiz._)» – l. 18);"
+          ]
+         },
+         {
+          "pontos": [
+           "nobreza de carácter/integridade, evidenciada no ato de assumir a responsabilidade pelo sofrimento de D. João de Portugal («bebeu até às fezes o cálix das amarguras humanas... [...] Mas fui eu, eu que lho preparei» – ll. 19-20)/pelo sofrimento que considera ter infligido a outrem, bem como pela sua «desgraça» e pela «desonra» da família («Fui eu o autor de tudo isto, o autor da minha desgraça e da sua desonra deles...» – ll. 25-26);"
+          ]
+         },
+         {
+          "pontos": [
+           "abnegação/altruísmo, patente no facto de desejar que o «opróbrio» (l. 34) do mundo recaia sobre si e não sobre a sua inocente filha, que tanto ama (ll. 33-36)."
+          ]
+         }
+        ],
+        "parametros": [
+         {
+          "sigla": "C-ED",
+          "nome": "Aspetos de conteúdo e de estruturação do discurso",
+          "pontos": 10,
+          "nota_de_rodape": "Os descritores de desempenho definidos para este parâmetro devem ser considerados em articulação com os Critérios Gerais de Classificação relativos à estruturação do discurso (p. 2).",
+          "niveis": [
+           {
+            "nivel": 5,
+            "pontuacao": 10,
+            "descritores": [
+             [
+              "Infere dois traços da personalidade de Manuel, abordando, adequadamente, dois tópicos de resposta.",
+              "Utiliza mecanismos de coesão textual que, apesar da eventual ocorrência de falhas, asseguram a progressão e o encadeamento das ideias."
+             ]
+            ]
+           },
+           {
+            "nivel": 4,
+            "pontuacao": 8,
+            "descritores": [
+             [
+              "Infere dois traços da personalidade de Manuel, abordando, adequadamente, dois tópicos de resposta.",
+              "Utiliza mecanismos de coesão textual com falhas que comprometem a progressão e o encadeamento das ideias."
+             ],
+             [
+              "Infere dois traços da personalidade de Manuel, abordando dois tópicos de resposta, um adequadamente e outro com pequenas imprecisões e/ou omissões.",
+              "Utiliza mecanismos de coesão textual que, apesar da eventual ocorrência de falhas, asseguram a progressão e o encadeamento das ideias."
+             ]
+            ]
+           },
+           {
+            "nivel": 3,
+            "pontuacao": 6,
+            "descritores": [
+             [
+              "Infere dois traços da personalidade de Manuel, abordando dois tópicos de resposta, um adequadamente e outro com pequenas imprecisões e/ou omissões.",
+              "Utiliza mecanismos de coesão textual com falhas que comprometem a progressão e o encadeamento das ideias."
+             ],
+             [
+              "Infere dois traços da personalidade de Manuel, abordando dois tópicos de resposta, ambos com pequenas imprecisões e/ou omissões.",
+              "Utiliza mecanismos de coesão textual que, apesar da eventual ocorrência de falhas, asseguram a progressão e o encadeamento das ideias."
+             ],
+             [
+              "Infere um traço da personalidade de Manuel, abordando, adequadamente, um tópico de resposta.",
+              "Utiliza mecanismos de coesão textual que, apesar da eventual ocorrência de falhas, asseguram a progressão e o encadeamento das ideias."
+             ]
+            ]
+           },
+           {
+            "nivel": 2,
+            "pontuacao": 4,
+            "descritores": [
+             [
+              "Infere dois traços da personalidade de Manuel, abordando dois tópicos de resposta, ambos com pequenas imprecisões e/ou omissões.",
+              "Utiliza mecanismos de coesão textual com falhas que comprometem a progressão e o encadeamento das ideias."
+             ],
+             [
+              "Infere um traço da personalidade de Manuel, abordando, adequadamente, um tópico de resposta.",
+              "Utiliza mecanismos de coesão textual com falhas que comprometem a progressão e o encadeamento das ideias."
+             ]
+            ]
+           },
+           {
+            "nivel": 1,
+            "pontuacao": 2,
+            "descritores": [
+             [
+              "Infere um traço da personalidade de Manuel, abordando um tópico de resposta, com pequenas imprecisões e/ou omissões.",
+              "Utiliza mecanismos de coesão textual com eventual ocorrência de falhas que podem comprometer a progressão e o encadeamento das ideias."
+             ]
+            ]
+           }
+          ]
+         },
+         {
+          "sigla": "CL",
+          "nome": "Aspetos de correção linguística",
+          "pontos": 3,
+          "nota_de_rodape": "_Vide_ Tipologia de erros no âmbito da correção linguística (pp. 2-3).",
+          "texto": "Após a contabilização dos erros do tipo A e do tipo B, apura-se a classificação neste parâmetro. A tabela abaixo apresenta a pontuação a atribuir, de acordo com o número de erros do tipo A e do tipo B identificados. Caso o número total de erros seja superior ao número máximo apresentado na tabela, o parâmetro CL é classificado com zero pontos.",
+          "tabela": "CL_3"
+         }
+        ],
+        "cenario_de_resposta": "Os critérios de 2026 não têm uma secção própria chamada «cenário de resposta»: o que fazem esse papel são os tópicos de resposta transcritos em «topicos», que os critérios apresentam como exemplos («ou outros igualmente relevantes»).",
+        "nota_nossa": "No primeiro tópico, os critérios dão «ll. 1-2» para «Órfã de pai e de mãe... [...] e de família e de nome», mas na numeração impressa da prova (que conta as linhas com o nome das personagens) essas palavras estão nas linhas 2 e 3; todas as outras referências dos itens 4 e 5 batem com a numeração. A transcrição mantém o texto dos critérios; nas lições, convém dizer as linhas certas."
+       }
+      },
+      {
+       "numero": "I.5",
+       "n": 5,
+       "parte": "B",
+       "obrigatorio": true,
+       "tipo": "construção: resposta restrita",
+       "cotacao": 13,
+       "enunciado": [
+        "Explicite dois objetivos subjacentes às falas de Jorge."
+       ],
+       "verbo_instrucional": "Explicite",
+       "linhas_referidas": [
+        {
+         "texto": "I-B-1",
+         "de": 8,
+         "a": 10
+        },
+        {
+         "texto": "I-B-1",
+         "de": 15,
+         "a": 16
+        },
+        {
+         "texto": "I-B-1",
+         "de": 27,
+         "a": 30
+        }
+       ],
+       "criterios": {
+        "pontos": 13,
+        "instrucao": "Devem ser abordados **dois** dos tópicos seguintes, ou outros igualmente relevantes:",
+        "topicos": [
+         {
+          "pontos": [
+           "acalmar o ânimo exaltado de Manuel, tentando incutir-lhe «paciência» (l. 9);"
+          ]
+         },
+         {
+          "pontos": [
+           "questionar os pressupostos do discurso de Manuel de Sousa Coutinho («Tu chamas-te o homem mais infeliz da terra... Já te esqueceste que ainda está vivo aquele...» – l. 16);"
+          ]
+         },
+         {
+          "pontos": [
+           "apaziguar o sofrimento do irmão, recordando-lhe que há outras vítimas da tragédia que se abate sobre a família («lembra-te dela e de ti, e considera se podes pleitear misérias com esse homem» – ll. 28-29)/levando-o a confrontar a dimensão da sua dor com a «agonia maior» (l. 30) de D. João de Portugal, esse que «padeceu mais, padeceu mais longamente» (ll. 18-19)."
+          ]
+         }
+        ],
+        "parametros": [
+         {
+          "sigla": "C-ED",
+          "nome": "Aspetos de conteúdo e de estruturação do discurso",
+          "pontos": 10,
+          "nota_de_rodape": "Os descritores de desempenho definidos para este parâmetro devem ser considerados em articulação com os Critérios Gerais de Classificação relativos à estruturação do discurso (p. 2).",
+          "niveis": [
+           {
+            "nivel": 5,
+            "pontuacao": 10,
+            "descritores": [
+             [
+              "Explicita dois objetivos subjacentes às falas de Jorge, abordando, adequadamente, dois tópicos de resposta.",
+              "Utiliza mecanismos de coesão textual que, apesar da eventual ocorrência de falhas, asseguram a progressão e o encadeamento das ideias."
+             ]
+            ]
+           },
+           {
+            "nivel": 4,
+            "pontuacao": 8,
+            "descritores": [
+             [
+              "Explicita dois objetivos subjacentes às falas de Jorge, abordando, adequadamente, dois tópicos de resposta.",
+              "Utiliza mecanismos de coesão textual com falhas que comprometem a progressão e o encadeamento das ideias."
+             ],
+             [
+              "Explicita dois objetivos subjacentes às falas de Jorge, abordando dois tópicos de resposta, um adequadamente e outro com pequenas imprecisões e/ou omissões.",
+              "Utiliza mecanismos de coesão textual que, apesar da eventual ocorrência de falhas, asseguram a progressão e o encadeamento das ideias."
+             ]
+            ]
+           },
+           {
+            "nivel": 3,
+            "pontuacao": 6,
+            "descritores": [
+             [
+              "Explicita dois objetivos subjacentes às falas de Jorge, abordando dois tópicos de resposta, um adequadamente e outro com pequenas imprecisões e/ou omissões.",
+              "Utiliza mecanismos de coesão textual com falhas que comprometem a progressão e o encadeamento das ideias."
+             ],
+             [
+              "Explicita dois objetivos subjacentes às falas de Jorge, abordando dois tópicos de resposta, ambos com pequenas imprecisões e/ou omissões.",
+              "Utiliza mecanismos de coesão textual que, apesar da eventual ocorrência de falhas, asseguram a progressão e o encadeamento das ideias."
+             ],
+             [
+              "Explicita um objetivo subjacente às falas de Jorge, abordando, adequadamente, um tópico de resposta.",
+              "Utiliza mecanismos de coesão textual que, apesar da eventual ocorrência de falhas, asseguram a progressão e o encadeamento das ideias."
+             ]
+            ]
+           },
+           {
+            "nivel": 2,
+            "pontuacao": 4,
+            "descritores": [
+             [
+              "Explicita dois objetivos subjacentes às falas de Jorge, abordando dois tópicos de resposta, ambos com pequenas imprecisões e/ou omissões.",
+              "Utiliza mecanismos de coesão textual com falhas que comprometem a progressão e o encadeamento das ideias."
+             ],
+             [
+              "Explicita um objetivo subjacente às falas de Jorge, abordando, adequadamente, um tópico de resposta.",
+              "Utiliza mecanismos de coesão textual com falhas que comprometem a progressão e o encadeamento das ideias."
+             ]
+            ]
+           },
+           {
+            "nivel": 1,
+            "pontuacao": 2,
+            "descritores": [
+             [
+              "Explicita um objetivo subjacente às falas de Jorge, abordando um tópico de resposta, com pequenas imprecisões e/ou omissões.",
+              "Utiliza mecanismos de coesão textual com eventual ocorrência de falhas que podem comprometer a progressão e o encadeamento das ideias."
+             ]
+            ]
+           }
+          ]
+         },
+         {
+          "sigla": "CL",
+          "nome": "Aspetos de correção linguística",
+          "pontos": 3,
+          "nota_de_rodape": "_Vide_ Tipologia de erros no âmbito da correção linguística (pp. 2-3).",
+          "texto": "Após a contabilização dos erros do tipo A e do tipo B, apura-se a classificação neste parâmetro. A tabela abaixo apresenta a pontuação a atribuir, de acordo com o número de erros do tipo A e do tipo B identificados. Caso o número total de erros seja superior ao número máximo apresentado na tabela, o parâmetro CL é classificado com zero pontos.",
+          "tabela": "CL_3"
+         }
+        ],
+        "cenario_de_resposta": "Os critérios de 2026 não têm uma secção própria chamada «cenário de resposta»: o que fazem esse papel são os tópicos de resposta transcritos em «topicos», que os critérios apresentam como exemplos («ou outros igualmente relevantes»).",
+        "nota_nossa": "As falas de Jorge são as das linhas 8 a 10, 15 e 16 e 27 a 30 (leitura nossa da numeração). No segundo tópico, os critérios citam a linha 16 com «...» no fim; na prova, a linha acaba com o carácter de reticências «…»."
+       }
+      },
+      {
+       "numero": "I.6",
+       "n": 6,
+       "parte": "B",
+       "obrigatorio": false,
+       "tipo": "seleção: escolha de três afirmações entre cinco",
+       "cotacao": 13,
+       "enunciado": [
+        "Identifique, de entre as afirmações referentes à obra _Frei Luís de Sousa_, de Almeida Garrett, as **três** afirmações que podem ser comprovadas através da leitura do excerto apresentado.",
+        "Assinale, na folha de respostas, as opções selecionadas."
+       ],
+       "opcoes": [
+        {
+         "n": "I",
+         "texto": "Manuel é um honrado fidalgo que manifesta o seu patriotismo através das suas ações."
+        },
+        {
+         "n": "II",
+         "texto": "As didascálias fornecem informação sobre movimento, gestos, emoções e tom de voz das personagens."
+        },
+        {
+         "n": "III",
+         "texto": "Maria representa a imagem da mulher-anjo romântica, pela sua pureza e inocência."
+        },
+        {
+         "n": "IV",
+         "texto": "A mentira sobre a identidade do Romeiro surge como uma solução possível para evitar a catástrofe."
+        },
+        {
+         "n": "V",
+         "texto": "O uso de interjeições, repetições e exclamações, entre outros aspetos, evidencia o estado emocional das personagens."
+        }
+       ],
+       "chave_versao_2": [
+        "II",
+        "III",
+        "V"
+       ],
+       "criterios": {
+        "pontos": 13,
+        "transcricao": [
+         "Versão 1 ‒ **I**, **III** e **IV**.",
+         "Versão 2 ‒ **II**, **III** e **V**."
+        ],
+        "nota_nossa": "Os critérios específicos dão só a chave, sem níveis nem pontuação parcial. Usar só a chave da versão 2."
+       }
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "titulo": "PARTE C",
+     "itens": [
+      {
+       "numero": "I.7",
+       "n": 7,
+       "parte": "C",
+       "obrigatorio": true,
+       "tipo": "construção: resposta restrita (breve exposição)",
+       "cotacao": 13,
+       "enunciado": [
+        "Na lírica de Luís de Camões, vários poemas evidenciam uma reflexão sobre diferentes aspetos da existência humana, por exemplo, sentimentos, experiências pessoais, relação com os outros.",
+        "Escreva uma breve exposição na qual comprove a afirmação anterior, baseando-se na sua experiência de leitura da poesia lírica camoniana.",
+        "A sua exposição deve incluir:"
+       ],
+       "enunciado_lista": [
+        "uma introdução ao tema;",
+        "um desenvolvimento no qual explicite duas reflexões sobre a existência humana, presentes na lírica de Camões, fundamentando cada uma delas com referência a poemas lidos;",
+        "uma conclusão adequada ao desenvolvimento do tema."
+       ],
+       "verbo_instrucional": "Escreva (exposição); explicite",
+       "criterios": {
+        "pontos": 13,
+        "instrucao": "Devem ser abordados **dois** dos tópicos seguintes, ou outros igualmente relevantes.",
+        "introducao_topicos": "Por exemplo, reflexão sobre:",
+        "topicos": [
+         {
+          "pontos": [
+           "a experiência amorosa, nomeadamente sobre as emoções contraditórias geradas pelo amor (em vivo ardor tremer de frio, por exemplo), que é, simultaneamente, fonte de sofrimento atroz (a «ferida que dói, e não se sente») e de felicidade suprema («Estando em terra, chego ao Céu voando»);"
+          ]
+         },
+         {
+          "pontos": [
+           "a dor provocada pela saudade da amada que morreu no mar, nomeadamente sobre a crueldade da morte que a levou prematuramente e de forma inesperada, condenando o poeta a viver em profunda tristeza («cá na terra sempre triste»);"
+          ]
+         },
+         {
+          "pontos": [
+           "o sofrimento provocado pela ausência da amada, razão pela qual o poeta não consegue apreciar a beleza da natureza («Sem ti, tudo me enoja e me avorrece»);"
+          ]
+         },
+         {
+          "pontos": [
+           "o destino que amarga a vida do poeta, conduzindo-o a um estado de infelicidade provocado não só pelos erros cometidos e pelas desilusões amorosas, mas, sobretudo, pela «má Fortuna» que, continuamente, frustra as suas esperanças;"
+          ]
+         },
+         {
+          "pontos": [
+           "a vida pessoal marcada pela desventura, o que leva o poeta a amaldiçoar o dia em que nasceu (porque «deitou ao mundo a vida / mais desgraçada que jamais se viu»);"
+          ]
+         },
+         {
+          "pontos": [
+           "o desconcerto gerado pelo desequilíbrio que o poeta observa num mundo no qual, absurdamente, o mal triunfa sobre o bem, pois os bons passam «graves tormentos», ao passo que os maus nadam «em mar de contentamentos»;"
+          ]
+         },
+         {
+          "pontos": [
+           "a mudança constante observada num mundo instável e tão confuso que até parece que «dele Deus se esquece»."
+          ]
+         }
+        ],
+        "parametros": [
+         {
+          "sigla": "C",
+          "nome": "Aspetos de conteúdo",
+          "pontos": 8,
+          "niveis": [
+           {
+            "nivel": 4,
+            "pontuacao": 8,
+            "descritores": [
+             [
+              "Explicita, adequadamente, duas reflexões sobre a existência humana, presentes na poesia lírica de Camões."
+             ]
+            ]
+           },
+           {
+            "nivel": 3,
+            "pontuacao": 6,
+            "descritores": [
+             [
+              "Explicita, adequadamente, duas reflexões sobre a existência humana, presentes na poesia lírica de Camões, adequadamente, num dos casos, e com pequenas imprecisões e/ou omissões, no outro caso."
+             ]
+            ]
+           },
+           {
+            "nivel": 2,
+            "pontuacao": 4,
+            "descritores": [
+             [
+              "Explicita, adequadamente, duas reflexões sobre a existência humana, presentes na poesia lírica de Camões, com pequenas imprecisões e/ou omissões em ambos os casos."
+             ],
+             [
+              "Explicita, adequadamente, apenas uma reflexão sobre a existência humana, presente na poesia lírica de Camões."
+             ]
+            ]
+           },
+           {
+            "nivel": 1,
+            "pontuacao": 2,
+            "descritores": [
+             [
+              "Explicita, com pequenas imprecisões e/ou omissões, apenas uma reflexão sobre a existência humana, presente na poesia lírica de Camões."
+             ]
+            ]
+           }
+          ]
+         },
+         {
+          "sigla": "ED",
+          "nome": "Aspetos de estruturação do discurso",
+          "pontos": 3,
+          "nota_de_rodape": "Além dos descritores de desempenho relativos à estruturação temática e discursiva, há que atender aos Critérios Gerais (p. 2).",
+          "niveis": [
+           {
+            "nivel": 3,
+            "pontuacao": 3,
+            "descritores": [
+             [
+              "Escreve um texto bem estruturado constituído por três partes (introdução, desenvolvimento e conclusão), devidamente proporcionadas, e utiliza mecanismos de coesão textual que asseguram de modo global a progressão e o encadeamento das ideias."
+             ]
+            ]
+           },
+           {
+            "nivel": 2,
+            "pontuacao": 2,
+            "descritores": [
+             [
+              "Escreve um texto globalmente bem estruturado constituído por três partes (introdução, desenvolvimento e conclusão) com desequilíbrios de proporção e/ou utiliza mecanismos de coesão textual com a eventual ocorrência de falhas que não comprometem de modo global a progressão e o encadeamento das ideias."
+             ]
+            ]
+           },
+           {
+            "nivel": 1,
+            "pontuacao": 1,
+            "descritores": [
+             [
+              "Escreve um texto insuficientemente estruturado e/ou utiliza mecanismos de coesão textual com falhas que comprometem de modo global a progressão e o encadeamento das ideias."
+             ]
+            ]
+           }
+          ]
+         },
+         {
+          "sigla": "CL",
+          "nome": "Aspetos de correção linguística",
+          "pontos": 2,
+          "nota_de_rodape": "_Vide_ Tipologia de erros no âmbito da correção linguística (pp. 2-3).",
+          "texto": "Após a contabilização dos erros do tipo A e do tipo B, apura-se a classificação neste parâmetro. A tabela abaixo apresenta a pontuação a atribuir, de acordo com o número de erros do tipo A e do tipo B identificados. Caso o número total de erros seja superior ao número máximo apresentado na tabela, o parâmetro CL é classificado com zero pontos.",
+          "tabela": "CL_2"
+         }
+        ],
+        "cenario_de_resposta": "Os critérios de 2026 não têm uma secção própria chamada «cenário de resposta»: o que fazem esse papel são os tópicos de resposta transcritos em «topicos», que os critérios apresentam como exemplos («ou outros igualmente relevantes»).",
+        "nota_nossa": "Os tópicos citam versos de Camões sem dizer de que poemas são. Os níveis 3 e 2 do parâmetro C dizem «Explicita, adequadamente,» também quando há imprecisões, e a nota de rodapé do parâmetro ED (p. 13) é a das grelhas da resposta extensa; está assim no PDF (nas duas cópias) e a transcrição mantém-no."
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "II",
+   "titulo": "GRUPO II",
+   "dominios_nossa_designacao": "leitura e gramática (designação nossa, não da prova)",
+   "instrucao": "Leia o texto.",
+   "textos": [
+    {
+     "id": "II-1",
+     "autor": "Elsa de Barros",
+     "titulo": "«As virtudes do pensamento lento»",
+     "genero": "texto de imprensa (adaptado)",
+     "fonte": "Elsa de Barros, «As virtudes do pensamento lento», _Público – P2_, 10 de março de 2024, p. 22. (Texto adaptado)",
+     "linhas": [
+      {
+       "n": 1,
+       "t": "Hoje em dia, revela-se mais difícil mobilizar as crianças para a aprendizagem, se a",
+       "inicio_paragrafo": true
+      },
+      {
+       "n": 2,
+       "t": "entendermos como um processo desenvolvido a longo prazo, que inclui momentos de",
+       "inicio_paragrafo": false
+      },
+      {
+       "n": 3,
+       "t": "grande encantamento, com atividades entusiasmantes e mobilizadoras, mas também tarefas",
+       "inicio_paragrafo": false
+      },
+      {
+       "n": 4,
+       "t": "repetitivas, que necessitam de investimento, concentração, paciência e perseverança por parte",
+       "inicio_paragrafo": false
+      },
+      {
+       "n": 5,
+       "t": "dos alunos. É precisamente neste último ponto que reside a dificuldade em cativar as novas",
+       "inicio_paragrafo": false
+      },
+      {
+       "n": 6,
+       "t": "gerações para os desafios escolares, quando estes contrariam a tendência para a rapidez,",
+       "inicio_paragrafo": false
+      },
+      {
+       "n": 7,
+       "t": "a fugacidade da atenção, o imediatismo e a volatilidade de interesses.",
+       "inicio_paragrafo": false
+      },
+      {
+       "n": 8,
+       "t": "A prevalência desta postura pode ser explicada pela sobrevalorização do pensamento",
+       "inicio_paragrafo": true
+      },
+      {
+       "n": 9,
+       "t": "rápido, que domina na atualidade. Considerado como um progresso civilizacional, este tipo de",
+       "inicio_paragrafo": false
+      },
+      {
+       "n": 10,
+       "t": "pensamento opõe-se ao pensamento lento, encarado como um retrocesso temporal. Chegados",
+       "inicio_paragrafo": false
+      },
+      {
+       "n": 11,
+       "t": "a este ponto, a pergunta que se impõe é a seguinte: será que esta visão é correta e está a ser",
+       "inicio_paragrafo": false
+      },
+      {
+       "n": 12,
+       "t": "favorável para a própria sociedade que a criou?",
+       "inicio_paragrafo": false
+      },
+      {
+       "n": 13,
+       "t": "Antes de responder a esta questão, podemos fazer o seguinte exercício: imaginemo-nos",
+       "inicio_paragrafo": true
+      },
+      {
+       "n": 14,
+       "t": "a regressar ao cenário da vida selvagem, na qual um animal tem de dividir a sua atenção por",
+       "inicio_paragrafo": false
+      },
+      {
+       "n": 15,
+       "t": "diversas atividades para que, enquanto come, não acabe por ser comido. A consequência não",
+       "inicio_paragrafo": false
+      },
+      {
+       "n": 16,
+       "t": "é difícil de antever: o animal vê-se impossibilitado de se concentrar profundamente naquilo",
+       "inicio_paragrafo": false
+      },
+      {
+       "n": 17,
+       "t": "que tem diante de si, pois tem de estar permanentemente alerta em relação àquilo que está",
+       "inicio_paragrafo": false
+      },
+      {
+       "n": 18,
+       "t": "atrás de si. Paradoxalmente, muitas das atividades mais valorizadas na atualidade, como a",
+       "inicio_paragrafo": false
+      },
+      {
+       "n": 19,
+       "t": "multitarefa e muitas atividades digitais, privilegiam este tipo de mecanismos que geram uma",
+       "inicio_paragrafo": false
+      },
+      {
+       "n": 20,
+       "t": "atenção ampla, mas rasa, semelhante à de um animal selvagem. Tal como refere o filósofo",
+       "inicio_paragrafo": false
+      },
+      {
+       "n": 21,
+       "t": "Byung-Chul Han na obra _Sociedade do Cansaço_, «as mais recentes evoluções sociais e a",
+       "inicio_paragrafo": false
+      },
+      {
+       "n": 22,
+       "t": "mudança de estrutura da atenção aproximam a sociedade humana da vida selvagem».",
+       "inicio_paragrafo": false
+      },
+      {
+       "n": 23,
+       "t": "De acordo com a sua análise, estamos a assistir a uma deslocação de um tipo de atenção",
+       "inicio_paragrafo": true
+      },
+      {
+       "n": 24,
+       "t": "profunda para uma forma de atenção radicalmente distinta — a hiperatenção —, que",
+       "inicio_paragrafo": false
+      },
+      {
+       "n": 25,
+       "t": "se caracteriza por uma rápida mudança de foco entre diversas atividades, fontes informativas",
+       "inicio_paragrafo": false
+      },
+      {
+       "n": 26,
+       "t": "e processos. Esta forma de atenção multitarefa não corresponde, na sua opinião, a um",
+       "inicio_paragrafo": false
+      },
+      {
+       "n": 27,
+       "t": "progresso, mas, bem pelo contrário, a um retrocesso civilizacional.",
+       "inicio_paragrafo": false
+      },
+      {
+       "n": 28,
+       "t": "Também é esta a visão do médico e cientista Lamberto Maffei, que aborda a diferença",
+       "inicio_paragrafo": true
+      },
+      {
+       "n": 29,
+       "t": "entre o pensamento rápido e o pensamento lento no livro com o emblemático título _Elogio da_",
+       "inicio_paragrafo": false
+      },
+      {
+       "n": 30,
+       "t": "_Lentidão_. De acordo com a sua explicação, o cérebro humano possui dois tipos de mecanismos:",
+       "inicio_paragrafo": false
+      },
+      {
+       "n": 31,
+       "t": "os primeiros são mecanismos ancestrais rápidos de resposta ao ambiente; enquanto os",
+       "inicio_paragrafo": false
+      },
+      {
+       "n": 32,
+       "t": "segundos, de carácter mais lento, se desenvolvem mais tarde e são fruto do raciocínio.",
+       "inicio_paragrafo": false
+      },
+      {
+       "n": 33,
+       "t": "De carácter automático ou semiautomático, os primeiros mecanismos são essenciais para",
+       "inicio_paragrafo": true
+      },
+      {
+       "n": 34,
+       "t": "a sobrevivência [...]. Já a segunda modalidade, própria dos animais superiores, é inerente ao",
+       "inicio_paragrafo": false
+      },
+      {
+       "n": 35,
+       "t": "controlo de um ser humano sobre a sua própria vida, ao seu relacionamento com os outros",
+       "inicio_paragrafo": false
+      },
+      {
+       "n": 36,
+       "t": "indivíduos e com o meio ambiente.",
+       "inicio_paragrafo": false
+      },
+      {
+       "n": 37,
+       "t": "Todavia, de forma totalmente contraditória, a tendência das chamadas sociedades",
+       "inicio_paragrafo": true
+      },
+      {
+       "n": 38,
+       "t": "avançadas consiste em atribuir aos mecanismos rápidos de pensamento uma posição",
+       "inicio_paragrafo": false
+      },
+      {
+       "n": 39,
+       "t": "predominante, em detrimento das formas de pensamento mais lento. [...]",
+       "inicio_paragrafo": false
+      },
+      {
+       "n": 40,
+       "t": "As consequências desta opção civilizacional estão à vista. O progresso tecnológico e a sua",
+       "inicio_paragrafo": true
+      },
+      {
+       "n": 41,
+       "t": "difusão capilar produziram, além de profundas mudanças sociais, uma aceleração do tempo e,",
+       "inicio_paragrafo": false
+      },
+      {
+       "n": 42,
+       "t": "consequentemente, uma verdadeira revolução do pensamento, que se tornou, também este,",
+       "inicio_paragrafo": false
+      },
+      {
+       "n": 43,
+       "t": "mais acelerado. [...]",
+       "inicio_paragrafo": false
+      },
+      {
+       "n": 44,
+       "t": "Mas esta revolução tem os seus riscos. Uma excessiva prevalência dos mecanismos",
+       "inicio_paragrafo": true
+      },
+      {
+       "n": 45,
+       "t": "rápidos do pensamento, designados por pensamento rápido ou digital, pode implicar soluções",
+       "inicio_paragrafo": false
+      },
+      {
+       "n": 46,
+       "t": "e comportamentos errados, danos na educação e, em geral, na vivência civil.",
+       "inicio_paragrafo": false
+      }
+     ],
+     "nota_numeracao": "Linhas numeradas de 1 a 46 (na prova, o número à margem de 5 em 5), com recuo no início de cada parágrafo (nove parágrafos). Os cortes da autora da prova estão assinalados com «[...]» (linhas 34, 39 e 43)."
+    }
+   ],
+   "notas": [],
+   "nota_tipografica": "O texto não tem notas. Há dois títulos de livros em itálico: _Sociedade do Cansaço_ (linha 21) e _Elogio da Lentidão_ (linhas 29 e 30, partido na mudança de linha).",
+   "itens": [
+    {
+     "numero": "II.1",
+     "n": 1,
+     "obrigatorio": true,
+     "tipo": "seleção: escolha múltipla (quatro opções)",
+     "cotacao": 13,
+     "enunciado": [
+      "De acordo com as ideias expressas pela autora nos dois primeiros parágrafos, hoje em dia, torna-se difícil mobilizar as crianças para a aprendizagem, pelo facto de"
+     ],
+     "opcoes": [
+      {
+       "letra": "A",
+       "texto": "as atividades repetitivas desencorajarem o desenvolvimento do pensamento lento."
+      },
+      {
+       "letra": "B",
+       "texto": "a aprendizagem ser um processo que exige tarefas curtas e delimitadas no tempo."
+      },
+      {
+       "letra": "C",
+       "texto": "a dispersão mental ser um aspeto sobrestimado na civilização contemporânea."
+      },
+      {
+       "letra": "D",
+       "texto": "os desafios propostos em ambiente escolar serem imediatos e pouco estimulantes."
+      }
+     ],
+     "chave_versao_2": "C",
+     "criterios": {
+      "pontos": 13,
+      "transcricao": "Item 1.: Versão 1 (D); Versão 2 (C); pontuação 13",
+      "nota_nossa": "Quadro de chaves do Grupo II nos critérios (p. 13). Usar só a chave da versão 2; classificação dicotómica (13 ou 0)."
+     },
+     "linhas_referidas": [
+      {
+       "texto": "II-1",
+       "de": 1,
+       "a": 12,
+       "origem": "«dois primeiros parágrafos» (linhas 1 a 12)"
+      }
+     ]
+    },
+    {
+     "numero": "II.2",
+     "n": 2,
+     "obrigatorio": false,
+     "tipo": "seleção: escolha múltipla (quatro opções)",
+     "cotacao": 13,
+     "enunciado": [
+      "Entre as linhas 13 e 36, a autora socorre-se de um exemplo e de dois argumentos de autoridade, com a intenção de demonstrar que"
+     ],
+     "opcoes": [
+      {
+       "letra": "A",
+       "texto": "a rápida mudança de foco entre atividades, fontes informativas e processos tem a vantagem de estimular o desenvolvimento do raciocínio."
+      },
+      {
+       "letra": "B",
+       "texto": "o progresso civilizacional trouxe como consequências a aceleração do pensamento, aproximando a vida em sociedade da vida selvagem."
+      },
+      {
+       "letra": "C",
+       "texto": "os estímulos constantes a que o homem está sujeito dificultam a concentração, mas tornam-no mais capaz de se adaptar ao meio ambiente."
+      },
+      {
+       "letra": "D",
+       "texto": "o cansaço característico da sociedade contemporânea decorre da multiplicidade de tarefas que o ser humano tem de realizar, quotidianamente."
+      }
+     ],
+     "chave_versao_2": "B",
+     "criterios": {
+      "pontos": 13,
+      "transcricao": "Item 2.: Versão 1 (C); Versão 2 (B); pontuação 13",
+      "nota_nossa": "Quadro de chaves do Grupo II nos critérios (p. 13). Usar só a chave da versão 2; classificação dicotómica (13 ou 0)."
+     },
+     "linhas_referidas": [
+      {
+       "texto": "II-1",
+       "de": 13,
+       "a": 36
+      }
+     ]
+    },
+    {
+     "numero": "II.3",
+     "n": 3,
+     "obrigatorio": true,
+     "tipo": "seleção: escolha múltipla (quatro opções)",
+     "cotacao": 13,
+     "enunciado": [
+      "O fenómeno que dá pelo nome de «hiperatenção» (linha 24) é perspetivado como"
+     ],
+     "opcoes": [
+      {
+       "letra": "A",
+       "texto": "uma dificuldade em concentrar-se, de forma demorada, numa única atividade."
+      },
+      {
+       "letra": "B",
+       "texto": "uma concentração excessiva das pessoas, no momento de execução de tarefas."
+      },
+      {
+       "letra": "C",
+       "texto": "uma mudança brusca e inesperada no modo de executar as tarefas."
+      },
+      {
+       "letra": "D",
+       "texto": "uma alteração positiva da forma de realização das atividades e dos processos."
+      }
+     ],
+     "chave_versao_2": "A",
+     "criterios": {
+      "pontos": 13,
+      "transcricao": "Item 3.: Versão 1 (B); Versão 2 (A); pontuação 13",
+      "nota_nossa": "Quadro de chaves do Grupo II nos critérios (p. 13). Usar só a chave da versão 2; classificação dicotómica (13 ou 0)."
+     },
+     "linhas_referidas": [
+      {
+       "texto": "II-1",
+       "de": 24,
+       "a": 24
+      }
+     ]
+    },
+    {
+     "numero": "II.4",
+     "n": 4,
+     "obrigatorio": true,
+     "tipo": "seleção: escolha múltipla (quatro opções)",
+     "cotacao": 13,
+     "enunciado": [
+      "Ao longo do texto, a autora defende a tese de que, na atualidade, se assiste"
+     ],
+     "opcoes": [
+      {
+       "letra": "A",
+       "texto": "a uma conceção nova do tempo, que se tornou tão acelerado que provoca o cansaço dos indivíduos das sociedades atuais."
+      },
+      {
+       "letra": "B",
+       "texto": "a uma situação paradoxal, quando se verifica que o avanço tecnológico e digital é acompanhado de um retrocesso civilizacional."
+      },
+      {
+       "letra": "C",
+       "texto": "a um estádio da civilização em que se hiperboliza a importância dos processos digitais na realização de atividades e na manipulação de fontes informativas."
+      },
+      {
+       "letra": "D",
+       "texto": "a um momento singular na história da humanidade, em que o comportamento dos seres humanos é dominado por mecanismos racionais."
+      }
+     ],
+     "chave_versao_2": "B",
+     "criterios": {
+      "pontos": 13,
+      "transcricao": "Item 4.: Versão 1 (D); Versão 2 (B); pontuação 13",
+      "nota_nossa": "Quadro de chaves do Grupo II nos critérios (p. 13). Usar só a chave da versão 2; classificação dicotómica (13 ou 0)."
+     }
+    },
+    {
+     "numero": "II.5",
+     "n": 5,
+     "obrigatorio": false,
+     "tipo": "seleção: escolha múltipla (quatro opções)",
+     "cotacao": 13,
+     "enunciado": [
+      "Ao longo do texto, há diversos mecanismos que contribuem para a coesão gramatical referencial, nomeadamente o uso de elementos textuais como"
+     ],
+     "opcoes": [
+      {
+       "letra": "A",
+       "texto": "«Hoje em dia» (linha 1), «um tipo de atenção» (linha 23) e «no livro» (linha 29)."
+      },
+      {
+       "letra": "B",
+       "texto": "«dos alunos» (linha 5), «diante» (linha 17) e «este tipo» (linha 19)."
+      },
+      {
+       "letra": "C",
+       "texto": "«atrás» (linha 18), «na obra _Sociedade do Cansaço_» (linha 21) e «dois tipos» (linha 30)."
+      },
+      {
+       "letra": "D",
+       "texto": "«estes» (linha 6), «os primeiros» (linha 31) e «os segundos» (linhas 31 e 32)."
+      }
+     ],
+     "chave_versao_2": "D",
+     "criterios": {
+      "pontos": 13,
+      "transcricao": "Item 5.: Versão 1 (C); Versão 2 (D); pontuação 13",
+      "nota_nossa": "Quadro de chaves do Grupo II nos critérios (p. 13). Usar só a chave da versão 2; classificação dicotómica (13 ou 0)."
+     }
+    },
+    {
+     "numero": "II.6",
+     "n": 6,
+     "obrigatorio": false,
+     "tipo": "seleção: escolha múltipla (quatro opções)",
+     "cotacao": 13,
+     "enunciado": [
+      "As expressões «tem de estar» (linha 17) e «pode implicar» (linha 45) exprimem"
+     ],
+     "opcoes": [
+      {
+       "letra": "A",
+       "texto": "a modalidade deôntica com valor de obrigação, no primeiro caso, e a modalidade deôntica com valor de permissão, no segundo caso."
+      },
+      {
+       "letra": "B",
+       "texto": "a modalidade epistémica com valor de certeza, no primeiro caso, e a modalidade epistémica com valor de probabilidade, no segundo caso."
+      },
+      {
+       "letra": "C",
+       "texto": "a modalidade deôntica com valor de obrigação, no primeiro caso, e a modalidade epistémica com valor de probabilidade, no segundo caso."
+      },
+      {
+       "letra": "D",
+       "texto": "a modalidade epistémica com valor de certeza, no primeiro caso, e a modalidade deôntica com valor de permissão, no segundo caso."
+      }
+     ],
+     "chave_versao_2": "C",
+     "criterios": {
+      "pontos": 13,
+      "transcricao": "Item 6.: Versão 1 (A); Versão 2 (C); pontuação 13",
+      "nota_nossa": "Quadro de chaves do Grupo II nos critérios (p. 13). Usar só a chave da versão 2; classificação dicotómica (13 ou 0)."
+     },
+     "linhas_referidas": [
+      {
+       "texto": "II-1",
+       "de": 17,
+       "a": 17
+      },
+      {
+       "texto": "II-1",
+       "de": 45,
+       "a": 45
+      }
+     ]
+    },
+    {
+     "numero": "II.7",
+     "n": 7,
+     "obrigatorio": true,
+     "tipo": "seleção: escolha múltipla (quatro opções)",
+     "cotacao": 13,
+     "enunciado": [
+      "A oração «mobilizar as crianças para a aprendizagem» (linha 1) desempenha a função sintática de"
+     ],
+     "opcoes": [
+      {
+       "letra": "A",
+       "texto": "sujeito."
+      },
+      {
+       "letra": "B",
+       "texto": "complemento direto."
+      },
+      {
+       "letra": "C",
+       "texto": "complemento do adjetivo."
+      },
+      {
+       "letra": "D",
+       "texto": "predicativo do sujeito."
+      }
+     ],
+     "chave_versao_2": "A",
+     "criterios": {
+      "pontos": 13,
+      "transcricao": "Item 7.: Versão 1 (B); Versão 2 (A); pontuação 13",
+      "nota_nossa": "Quadro de chaves do Grupo II nos critérios (p. 13). Usar só a chave da versão 2; classificação dicotómica (13 ou 0)."
+     },
+     "linhas_referidas": [
+      {
+       "texto": "II-1",
+       "de": 1,
+       "a": 1
+      }
+     ],
+     "nota_disposicao": "Na prova, as quatro opções estão em duas colunas: (A) e (B) numa linha, (C) e (D) na seguinte."
+    }
+   ],
+   "chaves_criterios_quadro": {
+    "cabecalho": [
+     "ITEM",
+     "VERSÃO 1",
+     "VERSÃO 2",
+     "PONTUAÇÃO"
+    ],
+    "linhas": [
+     [
+      "1.",
+      "(D)",
+      "(C)",
+      13
+     ],
+     [
+      "2.",
+      "(C)",
+      "(B)",
+      13
+     ],
+     [
+      "3.",
+      "(B)",
+      "(A)",
+      13
+     ],
+     [
+      "4.",
+      "(D)",
+      "(B)",
+      13
+     ],
+     [
+      "5.",
+      "(C)",
+      "(D)",
+      13
+     ],
+     [
+      "6.",
+      "(A)",
+      "(C)",
+      13
+     ],
+     [
+      "7.",
+      "(B)",
+      "(A)",
+      13
+     ]
+    ]
+   }
+  },
+  {
+   "id": "III",
+   "titulo": "GRUPO III",
+   "dominios_nossa_designacao": "escrita (designação nossa, não da prova)",
+   "itens": [
+    {
+     "numero": "III",
+     "obrigatorio": true,
+     "tipo": "construção: resposta extensa",
+     "cotacao": 44,
+     "genero": "texto de opinião",
+     "tema": "o contributo das experiências pessoais e dos conhecimentos adquiridos na escola para o enriquecimento da visão que cada indivíduo constrói do mundo",
+     "extensao": {
+      "min_palavras": 200,
+      "max_palavras": 350,
+      "minimo_para_classificar": 80
+     },
+     "enunciado": [
+      "Cada indivíduo tem a sua própria visão do mundo, baseada quer nas suas experiências pessoais, quer nos conhecimentos adquiridos na escola.",
+      "Num texto de opinião bem estruturado, com um mínimo de duzentas e um máximo de trezentas e cinquenta palavras, defenda uma perspetiva pessoal sobre o contributo das experiências pessoais e dos conhecimentos adquiridos na escola para o enriquecimento da visão que cada indivíduo constrói do mundo.",
+      "No seu texto:"
+     ],
+     "enunciado_lista": [
+      "explicite, de forma clara e pertinente, o seu ponto de vista, fundamentando-o em dois argumentos, cada um deles ilustrado com um exemplo significativo;",
+      "utilize um discurso valorativo (juízo de valor explícito ou implícito);",
+      "formule uma conclusão adequada à argumentação desenvolvida."
+     ],
+     "imagem": null,
+     "observacoes": [
+      "Para efeitos de contagem, considera-se **uma palavra** qualquer sequência delimitada por espaços em branco, mesmo quando esta integre elementos ligados por hífen (ex.: /dir-se-ia/). Qualquer número conta como uma única palavra, independentemente do número de algarismos que o constituam (ex.: /2026/).",
+      {
+       "texto": "Relativamente ao desvio dos limites de extensão indicados – entre duzentas e trezentas e cinquenta palavras –, há que atender ao seguinte:",
+       "lista": [
+        "um desvio dos limites de extensão indicados implica uma desvalorização parcial (até 5 pontos) do texto produzido;",
+        "um texto com extensão inferior a oitenta palavras é classificado com zero pontos."
+       ]
+      }
+     ],
+     "criterios": {
+      "pontos": 44,
+      "ETD": {
+       "nome": "Aspetos de estruturação temática e discursiva",
+       "pontos": 30,
+       "nota_de_rodape": "_Vide_ Critérios Gerais (p. 2) e descritores de desempenho relativos à estruturação temática e discursiva (pp. 14-15).",
+       "parametros": [
+        {
+         "id": "A",
+         "nome": "Género/Formato Textual",
+         "pontos": 10,
+         "niveis": [
+          {
+           "nivel": 4,
+           "pontuacao": 10,
+           "descritores": [
+            [
+             "Escreve um texto de acordo com o género/formato solicitado (texto de opinião):",
+             "explicita o seu ponto de vista;",
+             "fundamenta a perspetiva adotada em, pelo menos, dois argumentos distintos;",
+             "ilustra cada um dos argumentos com, pelo menos, um exemplo;",
+             "produz um discurso valorativo (desenvolvendo um juízo de valor explícito ou implícito);",
+             "formula uma conclusão adequada à argumentação desenvolvida."
+            ]
+           ]
+          },
+          {
+           "nivel": 3,
+           "pontuacao": 8,
+           "descritores": [
+            [
+             "Escreve um texto de acordo com o género/formato solicitado (texto de opinião) e fundamenta a perspetiva adotada em, pelo menos, dois argumentos distintos, mas ilustra apenas um deles com um exemplo, assegurando os restantes aspetos em avaliação neste parâmetro."
+            ],
+            [
+             "Escreve um texto de acordo com o género/formato solicitado (texto de opinião), fundamentando a perspetiva adotada em, pelo menos, dois argumentos, cada um deles ilustrado com, pelo menos, um exemplo, mas apresenta falhas em um ou dois dos restantes aspetos em avaliação neste parâmetro."
+            ]
+           ]
+          },
+          {
+           "nivel": 2,
+           "pontuacao": 5,
+           "descritores": [
+            [
+             "Escreve um texto de acordo com o género/formato solicitado (texto de opinião), mas fundamenta a perspetiva adotada em apenas um argumento, ilustrado com um exemplo, assegurando os restantes aspetos em avaliação neste parâmetro."
+            ],
+            [
+             "Escreve um texto de acordo com o género/formato solicitado (texto de opinião) e fundamenta a perspetiva adotada em, pelo menos, dois argumentos distintos, mas ilustra apenas um deles com um exemplo e apresenta falhas em um ou dois dos restantes aspetos em avaliação neste parâmetro."
+            ]
+           ]
+          },
+          {
+           "nivel": 1,
+           "pontuacao": 3,
+           "descritores": [
+            [
+             "Escreve um texto de acordo com o género/formato solicitado (texto de opinião), mas apresenta falhas no conjunto dos aspetos em avaliação neste parâmetro."
+            ],
+            [
+             "Escreve um texto em que as marcas do género/formato solicitado se misturam, sem critério nem intencionalidade, com as de outros géneros/formatos."
+            ]
+           ]
+          }
+         ],
+         "nota": "**Nota ‒** A pertinência dos argumentos e dos exemplos é avaliada no parâmetro B."
+        },
+        {
+         "id": "B",
+         "nome": "Tema e Pertinência da Informação",
+         "pontos": 10,
+         "niveis": [
+          {
+           "nivel": 4,
+           "pontuacao": 10,
+           "descritores": [
+            [
+             "Trata o tema proposto sem desvios e escreve um texto com eficácia argumentativa, assegurando:",
+             "a mobilização de argumentos e de exemplos diversificados e pertinentes;",
+             "a progressão da informação de forma coerente;",
+             "o recurso a um repertório lexical e a um registo de língua globalmente adequados ao desenvolvimento do tema, ainda que possam existir esporádicos afastamentos, justificados pela intencionalidade comunicativa."
+            ]
+           ]
+          },
+          {
+           "nivel": 3,
+           "pontuacao": 8,
+           "descritores": [
+            [
+             "Trata o tema proposto sem desvios, mas escreve um texto com falhas pontuais nos aspetos relativos à eficácia argumentativa."
+            ],
+            [
+             "Trata o tema proposto com desvios pouco significativos, mas escreve um texto com eficácia argumentativa (tendo em conta a forma como o tema foi desenvolvido)."
+            ]
+           ]
+          },
+          {
+           "nivel": 2,
+           "pontuacao": 5,
+           "descritores": [
+            [
+             "Trata o tema proposto com desvios pouco significativos e escreve um texto com falhas pontuais nos aspetos relativos à eficácia argumentativa."
+            ],
+            [
+             "Trata o tema proposto sem desvios, mas escreve um texto com falhas significativas nos aspetos relativos à eficácia argumentativa."
+            ]
+           ]
+          },
+          {
+           "nivel": 1,
+           "pontuacao": 3,
+           "descritores": [
+            [
+             "Trata o tema proposto com desvios significativos e escreve um texto com reduzida eficácia argumentativa, mobilizando muito pouca informação pertinente."
+            ]
+           ]
+          }
+         ]
+        },
+        {
+         "id": "C",
+         "nome": "Organização e Coesão Textuais",
+         "pontos": 10,
+         "niveis": [
+          {
+           "nivel": 4,
+           "pontuacao": 10,
+           "descritores": [
+            [
+             "Escreve um texto bem organizado, evidenciando um bom domínio dos mecanismos de coesão textual:",
+             "apresenta um texto constituído por diferentes partes, devidamente proporcionadas e articuladas entre si de modo consistente;",
+             "marca, corretamente, os parágrafos;",
+             "utiliza, adequadamente, mecanismos de articulação interfrásica;",
+             "mantém, de forma sistemática, cadeias de referência através de substituições nominais e pronominais adequadas;",
+             "estabelece conexões adequadas entre coordenadas de enunciação (pessoa, tempo, espaço) ao longo do texto."
+            ]
+           ]
+          },
+          {
+           "nivel": 3,
+           "pontuacao": 8,
+           "descritores": [
+            [
+             "Escreve um texto globalmente bem organizado, em que evidencia domínio dos mecanismos de coesão textual, mas em que apresenta falhas pontuais em um ou dois dos aspetos em avaliação neste parâmetro."
+            ]
+           ]
+          },
+          {
+           "nivel": 2,
+           "pontuacao": 5,
+           "descritores": [
+            [
+             "Escreve um texto satisfatoriamente organizado, em que evidencia um domínio suficiente dos mecanismos de coesão textual, apresentando falhas pontuais em três ou mais dos aspetos em avaliação neste parâmetro, ou falhas significativas em um ou dois desses aspetos."
+            ]
+           ]
+          },
+          {
+           "nivel": 1,
+           "pontuacao": 3,
+           "descritores": [
+            [
+             "Escreve um texto com uma organização pouco satisfatória, recorrendo a insuficientes mecanismos de coesão ou mobilizando-os de forma inadequada."
+            ]
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      "CL": {
+       "sigla": "CL",
+       "nome": "Aspetos de correção linguística",
+       "pontos": 14,
+       "nota_de_rodape": "_Vide_ Tipologia de erros no âmbito da correção linguística (pp. 2-3).",
+       "texto": "Após a contabilização dos erros do tipo A e do tipo B, apura-se a classificação neste parâmetro. A tabela abaixo apresenta a pontuação a atribuir, de acordo com o número de erros do tipo A e do tipo B identificados. Caso o número total de erros seja superior ao número máximo apresentado na tabela, o parâmetro CL é classificado com zero pontos.",
+       "tabela": "CL_14"
+      },
+      "regras_gerais_aplicaveis": [
+       "A atribuição da classificação de zero pontos no parâmetro A (Género/Formato Textual) ou no parâmetro B (Tema e Pertinência da Informação) implica a atribuição de zero pontos nos restantes parâmetros da ETD, bem como na CL.",
+       "Sempre que não sejam respeitados os limites relativos ao número de palavras indicados na instrução do item de resposta extensa, desconta-se um ponto por cada palavra (a mais ou a menos), até ao máximo de cinco (1 × 5) pontos, depois de aplicados todos os critérios definidos para o item.",
+       "Caso a resposta apresente uma extensão inferior a oitenta palavras, é classificada com zero pontos."
+      ],
+      "nota_nossa": "Os critérios do Grupo III não dão tópicos de conteúdo nem exemplos de resposta: só os descritores dos parâmetros A, B e C e a tabela de CL. Não há imagem neste grupo (a 1.ª fase de 2026 tinha um cartoon)."
+     }
+    }
+   ]
+  }
+ ],
+ "resumo_itens": [
+  {
+   "item": "I.1",
+   "parte": "A",
+   "obrigatorio": true,
+   "tipo": "construção: resposta restrita",
+   "cotacao": 13,
+   "chave_versao_2": null
+  },
+  {
+   "item": "I.2",
+   "parte": "A",
+   "obrigatorio": true,
+   "tipo": "construção: resposta restrita",
+   "cotacao": 13,
+   "chave_versao_2": null
+  },
+  {
+   "item": "I.3",
+   "parte": "A",
+   "obrigatorio": false,
+   "tipo": "seleção: completamento (uma opção por espaço)",
+   "cotacao": 13,
+   "chave_versao_2": {
+    "a": 2,
+    "b": 1
+   }
+  },
+  {
+   "item": "I.4",
+   "parte": "B",
+   "obrigatorio": true,
+   "tipo": "construção: resposta restrita",
+   "cotacao": 13,
+   "chave_versao_2": null
+  },
+  {
+   "item": "I.5",
+   "parte": "B",
+   "obrigatorio": true,
+   "tipo": "construção: resposta restrita",
+   "cotacao": 13,
+   "chave_versao_2": null
+  },
+  {
+   "item": "I.6",
+   "parte": "B",
+   "obrigatorio": false,
+   "tipo": "seleção: escolha de três afirmações entre cinco",
+   "cotacao": 13,
+   "chave_versao_2": [
+    "II",
+    "III",
+    "V"
+   ]
+  },
+  {
+   "item": "I.7",
+   "parte": "C",
+   "obrigatorio": true,
+   "tipo": "construção: resposta restrita (breve exposição)",
+   "cotacao": 13,
+   "chave_versao_2": null
+  },
+  {
+   "item": "II.1",
+   "parte": null,
+   "obrigatorio": true,
+   "tipo": "seleção: escolha múltipla (quatro opções)",
+   "cotacao": 13,
+   "chave_versao_2": "C"
+  },
+  {
+   "item": "II.2",
+   "parte": null,
+   "obrigatorio": false,
+   "tipo": "seleção: escolha múltipla (quatro opções)",
+   "cotacao": 13,
+   "chave_versao_2": "B"
+  },
+  {
+   "item": "II.3",
+   "parte": null,
+   "obrigatorio": true,
+   "tipo": "seleção: escolha múltipla (quatro opções)",
+   "cotacao": 13,
+   "chave_versao_2": "A"
+  },
+  {
+   "item": "II.4",
+   "parte": null,
+   "obrigatorio": true,
+   "tipo": "seleção: escolha múltipla (quatro opções)",
+   "cotacao": 13,
+   "chave_versao_2": "B"
+  },
+  {
+   "item": "II.5",
+   "parte": null,
+   "obrigatorio": false,
+   "tipo": "seleção: escolha múltipla (quatro opções)",
+   "cotacao": 13,
+   "chave_versao_2": "D"
+  },
+  {
+   "item": "II.6",
+   "parte": null,
+   "obrigatorio": false,
+   "tipo": "seleção: escolha múltipla (quatro opções)",
+   "cotacao": 13,
+   "chave_versao_2": "C"
+  },
+  {
+   "item": "II.7",
+   "parte": null,
+   "obrigatorio": true,
+   "tipo": "seleção: escolha múltipla (quatro opções)",
+   "cotacao": 13,
+   "chave_versao_2": "A"
+  },
+  {
+   "item": "III",
+   "parte": null,
+   "obrigatorio": true,
+   "tipo": "construção: resposta extensa",
+   "cotacao": 44,
+   "chave_versao_2": null
+  }
+ ]
+}
