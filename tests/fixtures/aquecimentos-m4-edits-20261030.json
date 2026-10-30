@@ -1,0 +1,144 @@
+{
+ "base_commit": "3dcb65c9456f223020cd160720246b94188d5624",
+ "_nota": "30/10/2026: aquecimentos em cartões antes das aulas de tarefa do M4 (decisão do docente de 29/10/2026, ordem M7, M1, M4) e apresentações da U1 e da U3 em pequenos grupos, na mesma aula (decisão de 30/10/2026). As três tarefas ligam aos cartões (tarefas/m4-u1/aquecimento/, m4-u2/aquecimento/ e m4-u3-discurso/aquecimento/, gerados por scripts/aquecimentos.py) no cabeçalho, antes do enunciado; os relógios da produção passam a 45 (U1) e 50 (U3) minutos; o percurso do M4 ganha uma linha «A» antes de cada linha «T»; o guia diz que cada aula de tarefa começa com o aquecimento. Gerado por scripts/aplicar_trocas.py a partir de scripts/aquecimentos_m4_20261030.json: não se edita à mão. É a camada mais recente: undo() desfá-la antes da camada dos aquecimentos do M1.",
+ "files": {
+  "tarefas/m4-u1/index.html": {
+   "base_sha256_lf": "34719ea4581bb4e0db5b49c0aed556d0c90e91d1c7c451cf3fe8c2c86f08144a",
+   "after_sha256_lf": "a573d5dccce89c7bd52c05e522448cd469aa6922b7d5e84e78d8a45940b880b4",
+   "edits": [
+    {
+     "location": "cabeçalho: ligação ao aquecimento em cartões, antes do enunciado",
+     "old": "<h1>Um peixe de hoje</h1>\n<section id=\"produzir\"",
+     "new": "<h1>Um peixe de hoje</h1><p class=\"task-aquecer\"><a href=\"aquecimento/\">No início da aula de tarefa: aquecer em cartões, 10 minutos</a></p>\n<section id=\"produzir\"",
+     "occurrences": 1
+    },
+    {
+     "location": "enunciado: apresentação em pequenos grupos, ao mesmo tempo",
+     "old": "<p class=\"task-lead\">Guião de 150 a 200 palavras e apresentação individual de 3 a 4 minutos.</p>",
+     "new": "<p class=\"task-lead\">Guião de 150 a 200 palavras e apresentação individual de 3 a 4 minutos, ao teu grupo de quatro, com os grupos ao mesmo tempo.</p>",
+     "occurrences": 1
+    },
+    {
+     "location": "relógio da produção: 45 minutos (10 de cartões, 5 de apresentação da tarefa, 45 de produção, 20 de apresentações em grupo, 10 para rever e entregar)",
+     "old": "data-max=\"60\" data-passo=\"5\" data-rotulo=\"Produção em papel\" data-chave=\"pt-relogio:tarefas/m4-u1:producao\"",
+     "new": "data-max=\"45\" data-passo=\"5\" data-rotulo=\"Produção em papel\" data-chave=\"pt-relogio:tarefas/m4-u1:producao\"",
+     "occurrences": 1
+    }
+   ]
+  },
+  "tarefas/m4-u2/index.html": {
+   "base_sha256_lf": "4f7ac3871f4d2fa12795e2d48b9393e0237d00670616affa4649f996b677e72f",
+   "after_sha256_lf": "c0363d90ac54aaf7d90876eb345cf7a2acf22f0cca2045e57d296eee48a7c5cd",
+   "edits": [
+    {
+     "location": "cabeçalho: ligação ao aquecimento em cartões, antes do enunciado",
+     "old": "<h1>Apreciação crítica do espetáculo</h1>\n<section id=\"produzir\"",
+     "new": "<h1>Apreciação crítica do espetáculo</h1><p class=\"task-aquecer\"><a href=\"aquecimento/\">No início da aula de tarefa: aquecer em cartões, 10 minutos</a></p>\n<section id=\"produzir\"",
+     "occurrences": 1
+    }
+   ]
+  },
+  "tarefas/m4-u3-discurso/index.html": {
+   "base_sha256_lf": "7ed4b7244c99ade47865c747b9746963b104372fee901add9a14b03448e95b56",
+   "after_sha256_lf": "332fa4865f63072dce204c3e7be55449b702b128a3467f83a7826135691e111f",
+   "edits": [
+    {
+     "location": "cabeçalho: ligação ao aquecimento em cartões, antes do enunciado",
+     "old": "<h1>Discurso no abrigo</h1>\n<section id=\"produzir\"",
+     "new": "<h1>Discurso no abrigo</h1><p class=\"task-aquecer\"><a href=\"aquecimento/\">No início da aula de tarefa: aquecer em cartões, 10 minutos</a></p>\n<section id=\"produzir\"",
+     "occurrences": 1
+    },
+    {
+     "location": "enunciado: apresentação em pequenos grupos, ao mesmo tempo",
+     "old": "<p class=\"task-lead\">Discurso de 220 a 280 palavras e apresentação individual de 2 minutos.</p>",
+     "new": "<p class=\"task-lead\">Discurso de 220 a 280 palavras e apresentação individual de 2 minutos, ao teu grupo de quatro ou cinco, com os grupos ao mesmo tempo.</p>",
+     "occurrences": 1
+    },
+    {
+     "location": "relógio da produção: 50 minutos (10 de cartões, 5 de apresentação da tarefa, 50 de produção, 15 de apresentações em grupo, 10 para rever e entregar)",
+     "old": "data-max=\"60\" data-passo=\"5\" data-rotulo=\"Produção em papel\" data-chave=\"pt-relogio:tarefas/m4-u3-discurso:producao\"",
+     "new": "data-max=\"50\" data-passo=\"5\" data-rotulo=\"Produção em papel\" data-chave=\"pt-relogio:tarefas/m4-u3-discurso:producao\"",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/index.html": {
+   "base_sha256_lf": "2b2c9638800f91cfb67ca2168d687d709c7a8cdd02ba978f82a3f080da6af5a9",
+   "after_sha256_lf": "9d98869fe5705e17131d6c000b7f1c8d5576e7683fe685adaeeefbba1d35d8cb",
+   "edits": [
+    {
+     "location": "«Como se cumpre uma unidade»: o aquecimento em cartões abre a aula de tarefa",
+     "old": "fechas a unidade na aula de tarefa: produção em papel,",
+     "new": "fechas a unidade na aula de tarefa: aquecimento em cartões (a linha A do percurso), produção em papel,",
+     "occurrences": 1
+    },
+    {
+     "location": "percurso, unidade 1: linha A antes da linha T",
+     "old": "<li class=\"aula-tarefa\" data-task-lesson=\"1\" id=\"tarefa-unidade-1\">",
+     "new": "<li class=\"aula-aquecimento\" id=\"aquecimento-unidade-1\"><a href=\"../tarefas/m4-u1/aquecimento/\"><span class=\"n\">A</span><span><span class=\"t\">Aquecer para a aula de tarefa da Unidade 1</span><span class=\"f\">No início da aula de tarefa: cartões sobre a alegoria, a citação e a objeção, com outros exemplos.</span></span><span class=\"chip\">10 min</span></a></li><li class=\"aula-tarefa\" data-task-lesson=\"1\" id=\"tarefa-unidade-1\">",
+     "occurrences": 1
+    },
+    {
+     "location": "percurso, linha T da unidade 1: aquecimento em cartões e apresentações em pequenos grupos",
+     "old": "<span class=\"t\">Tarefa da Unidade 1 · Um peixe de hoje</span><span class=\"f\">Aula de 90 minutos com consulta, síntese integrada, trabalho em papel e fotografias no Teams.</span>",
+     "new": "<span class=\"t\">Tarefa da Unidade 1 · Um peixe de hoje</span><span class=\"f\">Aula de 90 minutos com consulta: aquecimento em cartões, guião em papel, apresentações em pequenos grupos ao mesmo tempo e fotografias no Teams.</span>",
+     "occurrences": 1
+    },
+    {
+     "location": "percurso, unidade 2: linha A antes da linha T",
+     "old": "<li class=\"aula-tarefa\" data-task-lesson=\"2\" id=\"tarefa-unidade-2\">",
+     "new": "<li class=\"aula-aquecimento\" id=\"aquecimento-unidade-2\"><a href=\"../tarefas/m4-u2/aquecimento/\"><span class=\"n\">A</span><span><span class=\"t\">Aquecer para a aula de tarefa da Unidade 2</span><span class=\"f\">No início da aula de tarefa: cartões sobre observar, citar e julgar, com uma cena inventada.</span></span><span class=\"chip\">10 min</span></a></li><li class=\"aula-tarefa\" data-task-lesson=\"2\" id=\"tarefa-unidade-2\">",
+     "occurrences": 1
+    },
+    {
+     "location": "percurso, linha T da unidade 2: aquecimento em cartões",
+     "old": "<span class=\"t\">Tarefa da Unidade 2 · Apreciação crítica do espetáculo</span><span class=\"f\">Aula de 90 minutos com consulta, síntese integrada, trabalho em papel e fotografias no Teams.</span>",
+     "new": "<span class=\"t\">Tarefa da Unidade 2 · Apreciação crítica do espetáculo</span><span class=\"f\">Aula de 90 minutos com consulta: aquecimento em cartões, apreciação crítica em papel, síntese integrada e fotografias no Teams.</span>",
+     "occurrences": 1
+    },
+    {
+     "location": "percurso, unidade 3: linha A antes da linha T",
+     "old": "<li class=\"aula-tarefa\" data-task-lesson=\"3\" id=\"tarefa-unidade-3\">",
+     "new": "<li class=\"aula-aquecimento\" id=\"aquecimento-unidade-3\"><a href=\"../tarefas/m4-u3-discurso/aquecimento/\"><span class=\"n\">A</span><span><span class=\"t\">Aquecer para a aula de tarefa da Unidade 3</span><span class=\"f\">No início da aula de tarefa: cartões sobre proposta, objeção e apelo, com casos da escola.</span></span><span class=\"chip\">10 min</span></a></li><li class=\"aula-tarefa\" data-task-lesson=\"3\" id=\"tarefa-unidade-3\">",
+     "occurrences": 1
+    },
+    {
+     "location": "percurso, linha T da unidade 3: aquecimento em cartões e apresentações em pequenos grupos",
+     "old": "<span class=\"t\">Tarefa da Unidade 3 · Discurso no abrigo</span><span class=\"f\">Aula de 90 minutos com consulta, síntese integrada, trabalho em papel e fotografias no Teams.</span>",
+     "new": "<span class=\"t\">Tarefa da Unidade 3 · Discurso no abrigo</span><span class=\"f\">Aula de 90 minutos com consulta: aquecimento em cartões, discurso em papel, apresentações em pequenos grupos ao mesmo tempo e fotografias no Teams.</span>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/guia-da-tarefa-m4/index.html": {
+   "base_sha256_lf": "017b6b5a9d310db138402a9e23e96709f86bb4f884503b4e80a0c4e2082fa991",
+   "after_sha256_lf": "2082e55ef014ceef5f8f7b735e336d89df80aafb870e8ad008d013fd5f3a45d8",
+   "edits": [
+    {
+     "location": "lista visível, unidade 1: aquecimento e apresentações em pequenos grupos",
+     "old": "<li><a href=\"../../tarefas/m4-u1/\">Unidade 1 · Um peixe de hoje</a> · aula de 90 min com consulta</li>",
+     "new": "<li><a href=\"../../tarefas/m4-u1/\">Unidade 1 · Um peixe de hoje</a> · aula de 90 min com consulta: aquecimento em cartões no início e apresentações em pequenos grupos, ao mesmo tempo</li>",
+     "occurrences": 1
+    },
+    {
+     "location": "lista visível, unidade 2: aquecimento",
+     "old": "<li><a href=\"../../tarefas/m4-u2/\">Unidade 2 · Apreciação crítica do espetáculo</a> · aula de 90 min com consulta</li>",
+     "new": "<li><a href=\"../../tarefas/m4-u2/\">Unidade 2 · Apreciação crítica do espetáculo</a> · aula de 90 min com consulta: aquecimento em cartões no início</li>",
+     "occurrences": 1
+    },
+    {
+     "location": "lista visível, unidade 3: aquecimento e apresentações em pequenos grupos",
+     "old": "<li><a href=\"../../tarefas/m4-u3-discurso/\">Unidade 3 · Discurso no abrigo</a> · aula de 90 min com consulta</li>",
+     "new": "<li><a href=\"../../tarefas/m4-u3-discurso/\">Unidade 3 · Discurso no abrigo</a> · aula de 90 min com consulta: aquecimento em cartões no início e apresentações em pequenos grupos, ao mesmo tempo</li>",
+     "occurrences": 1
+    },
+    {
+     "location": "lista visível: cada aula de tarefa começa com o aquecimento em cartões",
+     "old": "<p>Escreves em papel, fazes uma síntese simples integrada e entregas fotografias na tarefa criada pelo docente no Teams no início da aula.",
+     "new": "<p>Cada aula de tarefa começa com um aquecimento em cartões. Escreves em papel, fazes uma síntese simples integrada e entregas fotografias na tarefa criada pelo docente no Teams no início da aula.",
+     "occurrences": 1
+    }
+   ]
+  }
+ }
+}

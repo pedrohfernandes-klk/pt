@@ -35,7 +35,10 @@ class CompactTasks(unittest.TestCase):
     self.assertIn('task-reader.js?v=20261027-compact-1',text)
     self.assertIn('task-90.js?v=20261027-compact-1',text)
     # 27/10/2026 (pedido do docente): relógio do aluno, até 60 min de produção, no enunciado.
-    self.assertIn('data-relogio data-max="60" data-passo="5" data-rotulo="Produção em papel" data-chave="pt-relogio:tarefas/'+slug+':producao"',text)
+    # 30/10/2026 (decisão do docente): no M4, a aula começa com 10 minutos de cartões e a U1 e a U3 têm apresentações em
+    # pequenos grupos na mesma aula; a produção fica com 45 (U1) e 50 (U3) minutos. As outras tarefas compactas mantêm 60.
+    producao={'m4-u1':'45','m4-u3-discurso':'50'}.get(slug,'60')
+    self.assertIn('data-relogio data-max="'+producao+'" data-passo="5" data-rotulo="Produção em papel" data-chave="pt-relogio:tarefas/'+slug+':producao"',text)
     self.assertLess(text.index('assets/relogio.js'),text.index('pt-lessons/casca.js'))
     for i in range(2):
      options=p.options[i*3:i*3+3]
