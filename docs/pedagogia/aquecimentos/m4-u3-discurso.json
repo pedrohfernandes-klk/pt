@@ -1,0 +1,233 @@
+{
+ "slug": "m4-u3-discurso",
+ "modulo": "m4",
+ "unidade": 3,
+ "versao": "1",
+ "momento": "No início da aula de tarefa",
+ "titulo": "Propor, fundamentar, incluir",
+ "descricao": "Aquecimento da unidade 3 do M4: dez minutos com consulta, com outros exemplos para preparar a tarefa.",
+ "licoes_das_citacoes": [
+  "m4/licao-m4-f01",
+  "m4/licao-m4-f02",
+  "m4/licao-m4-f14",
+  "m4/licao-m4-f27"
+ ],
+ "menu": [
+  [
+   "../../../m4/",
+   "Voltar ao percurso do M4"
+  ]
+ ],
+ "reservadas": [
+  "trinta dias",
+  "uma hora de silêncio",
+  "das dez às onze",
+  "o gerador zumbe",
+  "prisão dentro da prisão",
+  "Proponho dez minutos diários",
+  "Limitamos a reunião a dez minutos",
+  "Votem nesta regra"
+ ],
+ "cartoes": [
+  {
+   "t": "ler",
+   "rot": "Abre",
+   "titulo": "Uma proposta que aguenta perguntas",
+   "html": "<p>Dez minutos com consulta. Treinas proposta, razões, exemplos, discordância, oralidade e apelo. Os casos do clube de leitura e da biblioteca são inventados: não escolhem uma regra para o abrigo. Recupera as operações de F14/F27 e do sermão. Não conta para a nota.</p>"
+  },
+  {
+   "t": "emparelhar",
+   "p": "Liga cada frase inventada à função no discurso de um clube de leitura.",
+   "p2": "Liga cada frase inventada à função no discurso de um clube de leitura.",
+   "pares": [
+    [
+     "Proponho que cada pessoa escolha uma passagem.",
+     "Apresenta a proposta"
+    ],
+    [
+     "Assim ouvimos leituras que não conheceríamos.",
+     "Dá uma razão"
+    ],
+    [
+     "Na última sessão, uma leitura mudou a conversa.",
+     "Oferece um exemplo"
+    ],
+    [
+     "Tragam uma passagem para a próxima sessão.",
+     "Pede uma ação concreta"
+    ]
+   ],
+   "f": "Proposta, razão, exemplo e apelo cumprem funções diferentes. A ideia inicial precisa de apoio e o fecho dirige-se a quem pode agir (F14).",
+   "fe": "Proponho diz o que defendes; assim apresenta uma vantagem; a última sessão dá um caso; tragam solicita uma ação.",
+   "g": 1
+  },
+  {
+   "t": "escolha",
+   "p": "Clube de leitura inventado: qual destas frases apresenta uma proposta clara?",
+   "p2": "Clube de leitura inventado: qual destas frases apresenta uma proposta clara?",
+   "o": [
+    "Proponho ouvir uma passagem por pessoa.",
+    "A leitura dá uma passagem a cada pessoa.",
+    "A conversa sobre passagens interessa-nos."
+   ],
+   "c": 0,
+   "f": "Proponho explicita o que queres que o grupo adote. As restantes frases enunciam ideias gerais sem formular uma decisão (F14).",
+   "fe": [
+    null,
+    "A frase fala de uma passagem por pessoa, mas não apresenta uma proposta ao grupo.",
+    "Dizer que a conversa interessa não define o que propões fazer."
+   ],
+   "g": 2
+  },
+  {
+   "t": "completar",
+   "p": "Completa a diferença trabalhada em F14/F27.",
+   "p2": "Completa a diferença trabalhada em F14/F27.",
+   "frase": "O argumento apresenta uma razão; o exemplo [1].",
+   "lacunas": [
+    {
+     "o": [
+      "repete toda a ideia sem a mostrar",
+      "mostra a razão num caso concreto",
+      "elogia apenas quem aceita a proposta"
+     ],
+     "c": 1
+    }
+   ],
+   "f": "Um caso permite compreender e testar a razão. Repetir a tese ou elogiar o auditório não a demonstra.",
+   "fe": "A repetição pode dar ritmo, mas não fornece um caso; o elogio também não prova a utilidade da proposta.",
+   "g": 3
+  },
+  {
+   "t": "escolha",
+   "p": "No clube inventado, alguém objeta: ler em voz alta pode constranger quem está a começar. Que resposta enfrenta a dificuldade?",
+   "p2": "No clube inventado, alguém objeta: ler em voz alta pode constranger quem está a começar. Que resposta enfrenta a dificuldade?",
+   "o": [
+    "Quem fica constrangido não tem de participar.",
+    "Quem fica constrangido precisa de se esforçar.",
+    "Quem fica constrangido pode pedir leitura a par."
+   ],
+   "c": 2,
+   "f": "A leitura a par responde ao constrangimento sem retirar a participação. A refutação considera a objeção, em vez de atacar quem a apresenta (F14).",
+   "fe": [
+    "Afastar a pessoa da participação mantém o problema de exclusão.",
+    "Mandar esforçar-se não responde ao receio nem oferece uma forma de participar.",
+    null
+   ],
+   "g": 4
+  },
+  {
+   "t": "ordenar",
+   "p": "Organiza uma intervenção breve no clube de leitura inventado.",
+   "p2": "Organiza uma intervenção breve no clube de leitura inventado.",
+   "passos": [
+    "Dizer claramente a proposta ao grupo",
+    "Dar uma razão com um exemplo reconhecível",
+    "Apresentar uma discordância e responder-lhe",
+    "Pedir uma ação concreta a quem ouve"
+   ],
+   "f": "O discurso abre com o que defende, sustenta-o, enfrenta um limite e fecha com um pedido. É uma sequência de preparação, não o teu discurso do abrigo.",
+   "fe": "Sem a proposta, as razões ficam sem alvo. A discordância testa-a antes do pedido final dirigido ao grupo.",
+   "g": 5
+  },
+  {
+   "t": "emparelhar",
+   "p": "Liga cada frase criada à marca de oralidade que torna visível.",
+   "p2": "Liga cada frase criada à marca de oralidade que torna visível.",
+   "pares": [
+    [
+     "Colegas, escutemos esta passagem.",
+     "Interpela quem ouve"
+    ],
+    [
+     "Ouvir para descobrir, ouvir para discordar.",
+     "Repete uma estrutura"
+    ],
+    [
+     "Quem aprende se ninguém pode perguntar?",
+     "Formula uma pergunta retórica"
+    ],
+    [
+     "Na próxima sessão, tragam uma passagem.",
+     "Faz um apelo à ação"
+    ]
+   ],
+   "f": "As marcas orientam o auditório: chamam, dão ritmo, convidam a pensar e pedem um gesto. Não substituem razões (F01/F02/F14).",
+   "fe": "Colegas chama o auditório; ouvir repete a estrutura; a pergunta sustenta uma ideia sem pedir uma informação desconhecida; tragam pede um gesto.",
+   "g": 6
+  },
+  {
+   "t": "completar",
+   "p": "Em F01, Vieira pergunta «Que faria logo?». Para que serve aqui a pergunta retórica?",
+   "p2": "Em F01, Vieira pergunta «Que faria logo?». Para que serve aqui a pergunta retórica?",
+   "frase": "A pergunta chama quem ouve para [1].",
+   "lacunas": [
+    {
+     "o": [
+      "acompanhar o raciocínio proposto",
+      "preencher um formulário de dados",
+      "contar o total de pessoas na sala"
+     ],
+     "c": 0
+    }
+   ],
+   "f": "A pergunta organiza o raciocínio e envolve o auditório. Em F01, Vieira encadeia perguntas antes de contar a decisão de António.",
+   "fe": "Preencher dados ou contar pessoas seria recolher informação. Aqui, a pergunta prepara o raciocínio que o orador vai desenvolver.",
+   "g": 7
+  },
+  {
+   "t": "escolha",
+   "p": "Na biblioteca inventada, qual destas revisões mantém o objetivo sem humilhar?",
+   "p2": "Na biblioteca inventada, qual destas revisões mantém o objetivo sem humilhar?",
+   "o": [
+    "Quem lê devagar fica fora; assim somos eficazes.",
+    "Quem lê devagar atrasa tudo; que prove o seu valor.",
+    "Quem lê devagar pode pedir apoio; todos participam."
+   ],
+   "c": 2,
+   "f": "A última versão oferece apoio e mantém a participação. Um objetivo comum não justifica excluir pessoas por uma dificuldade.",
+   "fe": [
+    "Excluir quem precisa de mais tempo retira-lhe a participação, em vez de resolver a dificuldade.",
+    "Exigir que alguém prove o seu valor transforma a dificuldade em desqualificação pessoal.",
+    null
+   ],
+   "g": 8
+  },
+  {
+   "t": "rever",
+   "p": "Revê o apelo para que o grupo saiba o que fazer, sem ser ameaçado.",
+   "p2": "Revê o apelo para que o grupo saiba o que fazer, sem ser ameaçado.",
+   "o": [
+    "Obrigado a todos; talvez um dia alguém tome uma decisão.",
+    "Tragam uma passagem; combinemos juntos a próxima sessão.",
+    "Aceitem já tudo; quem discordar fica fora desta conversa."
+   ],
+   "c": 1,
+   "f": "O pedido nomeia uma ação possível e inclui o grupo na decisão. É um fecho dirigido a quem ouve, sem castigar a discordância (F14).",
+   "fe": [
+    "Agradecer sem definir uma ação deixa o grupo sem saber o que fazer a seguir.",
+    null,
+    "Ameaçar excluir quem discorda contraria a participação e evita responder à objeção."
+   ],
+   "frase": "Aceitem já tudo; quem discordar fica fora desta conversa.",
+   "trecho": "Aceitem já tudo; quem discordar fica fora desta conversa.",
+   "apoio": "Caso criado para um clube de leitura. Pretendes fechar uma proposta de partilha de passagens, depois de a fundamentares.",
+   "g": 9
+  },
+  {
+   "t": "vf",
+   "p": "Uma pergunta retórica e uma repetição tornam dispensáveis os argumentos e exemplos do discurso.",
+   "p2": "Uma pergunta retórica e uma repetição tornam dispensáveis os argumentos e exemplos do discurso.",
+   "v": false,
+   "f": "Falso. Podem envolver quem ouve e dar ritmo, mas a proposta precisa de razões e de casos que as sustentem (F14/F27).",
+   "fe": "Uma frase pode soar bem sem provar a ideia. Procura a razão, o caso e a resposta à objeção, além das marcas de oralidade.",
+   "g": 10
+  },
+  {
+   "t": "ler",
+   "rot": "Para levar",
+   "titulo": "Agora, a regra é tua",
+   "html": "<p>No abrigo, escolhe uma regra própria. Formula a proposta, sustenta duas razões com exemplos, enfrenta a discordância e fecha com um pedido. Lê em voz alta e verifica se a regra continua a incluir quem tem mais dificuldade.</p>"
+  }
+ ]
+}
