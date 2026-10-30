@@ -1,262 +1,286 @@
 {
- "slug": "m2-u2",
- "modulo": "m2",
- "unidade": 2,
- "versao": "1",
- "momento": "No início da aula de tarefa",
- "titulo": "Da fala à marca, da marca à cena",
- "descricao": "Dez minutos com consulta para preparar as operações da tarefa da unidade 2 do M2, com outras passagens e sem modelos prontos.",
- "licoes_das_citacoes": [
-  "m2/licao-m2-f02",
-  "m2/licao-m2-f07",
-  "m2/licao-m2-f08",
-  "m2/licao-m2-f09",
-  "m2/licao-m2-f10",
-  "m2/licao-m2-f11"
- ],
- "menu": [
-  [
-   "../../../m2/licao-m2-f02/",
-   "Relembrar F02"
+  "slug": "m2-u2",
+  "modulo": "m2",
+  "unidade": 2,
+  "versao": "1",
+  "momento": "No início da aula de tarefa",
+  "titulo": "Da fala à marca, da marca à cena",
+  "descricao": "Dez minutos com consulta para preparar as operações da tarefa da unidade 2 do M2, com outras passagens e sem modelos prontos.",
+  "licoes_das_citacoes": [
+    "m2/licao-m2-f02",
+    "m2/licao-m2-f07",
+    "m2/licao-m2-f08",
+    "m2/licao-m2-f09",
+    "m2/licao-m2-f10",
+    "m2/licao-m2-f11"
   ],
-  [
-   "../../../m2/licao-m2-f07/",
-   "Relembrar F07"
+  "menu": [
+    [
+      "../../../m2/licao-m2-f02/",
+      "Relembrar F02"
+    ],
+    [
+      "../../../m2/licao-m2-f07/",
+      "Relembrar F07"
+    ],
+    [
+      "../../../m2/licao-m2-f08/",
+      "Relembrar F08"
+    ],
+    [
+      "../../../m2/licao-m2-f09/",
+      "Relembrar F09"
+    ],
+    [
+      "../../../m2/licao-m2-f10/",
+      "Relembrar F10"
+    ],
+    [
+      "../../../m2/licao-m2-f11/",
+      "Relembrar F11"
+    ]
   ],
-  [
-   "../../../m2/licao-m2-f08/",
-   "Relembrar F08"
+  "reservadas": [
+    "Homem que não tem nem preto",
+    "Casa muito na má hora",
+    "E que val aqui uma destas",
+    "Gabando-me de privado",
+    "Rico, honrado, conhecido",
+    "Diz o que pensa, e pensa pouco",
+    "O Escudeiro é pobre, apesar da aparência de fidalgo.",
+    "Homem que não tem nem preto, / Casa muito na má hora",
+    "Homem que não tem nem preto,",
+    "E que val aqui uma destas?",
+    "Que fala... e com' ora fala! / Estrugirá esta sala",
+    "Que fala... e com' ora fala!",
+    "Estrugirá esta sala",
+    "que não tem nem preto",
+    "Diz o que pensa, e pensa pouco, o que poupa discussões.",
+    "lavrador rico e simples",
+    "fidalgo pobre",
+    "falso galante",
+    "João das bestas",
+    "Assentou-se com as costas",
+    "Pêras da minha pereira",
+    "Algum rapaz m'as comeu",
+    "E se me vires mentir",
+    "Está tu dissimulado",
+    "Que mau calçado é o meu",
+    "Não tem solas nem tem pele",
+    "E mais calças te prometo",
+    "De feição d'atafoneiro",
+    "Que fala... e com’ ora fala!",
+    "até que vós não queirais",
+    "Já vos preguei as janelas",
+    "Não sois vós, mulher meu ouro",
+    "Eu vos trago um bom marido",
+    "tolo de costas",
+    "o único que cumpre o que diz",
+    "Procura-se noiva",
+    "não toca viola",
+    "pensa pouco",
+    "Pedro Penim"
   ],
-  [
-   "../../../m2/licao-m2-f09/",
-   "Relembrar F09"
-  ],
-  [
-   "../../../m2/licao-m2-f10/",
-   "Relembrar F10"
-  ],
-  [
-   "../../../m2/licao-m2-f11/",
-   "Relembrar F11"
+  "cartoes": [
+    {
+      "t": "ler",
+      "rot": "Abre",
+      "titulo": "Quem fala, o que mostra, como se ouve",
+      "html": "<p>Dez minutos com consulta, sem nota. Treinas prova e voz, oração relativa, o que uma fala anuncia, contraste cómico, pausa e adaptação. Usas uma fala de Inês à Mãe e pequenos casos criados para o treino, não os retratos dos pretendentes nem anúncios prontos. As falas criadas têm aspas curvas; os textos de Gil Vicente são identificados.</p>"
+    },
+    {
+      "t": "emparelhar",
+      "p": "Num rascunho, cada problema falha uma verificação da prova. Liga cada problema ao que devias ter conferido.",
+      "p2": "Que verificação ficou por fazer em cada caso? Liga o problema do rascunho ao que tens de conferir antes de citar.",
+      "pares": [
+        [
+          "Trocaste uma palavra ao copiar a fala.",
+          "Exatidão da transcrição"
+        ],
+        [
+          "Deste a uma figura o aparte que outra diz sobre ela.",
+          "Identificação da voz"
+        ],
+        [
+          "Puseste a fala numa cena em que ela não surge.",
+          "Localização na ação"
+        ],
+        [
+          "A fala não mostra o traço que lhe atribuis.",
+          "Ligação entre marca e prova"
+        ]
+      ],
+      "f": "Uma prova serve quando está copiada com exatidão, tem a voz certa, está situada e mostra mesmo a marca escolhida. Um aparte sobre uma figura continua a ser de quem o diz (lições F02 e F11; critérios U2).",
+      "fe": "Pergunta o que falhou em cada caso: as palavras, quem as diz, o momento ou a relação com a marca. Quem é nomeado ou comentado numa fala não passa a ser quem a diz.",
+      "g": 1
+    },
+    {
+      "t": "escolha",
+      "p": "Na lição F02, Inês diz «Mas eu, mãe, sam aguçosa». Qual destas afirmações respeita a voz e o alcance da fala?",
+      "p2": "Em «Mas eu, mãe, sam aguçosa», até onde pode ir a tua conclusão sobre Inês?",
+      "o": [
+        "Inês apresenta-se como alguém apressado.",
+        "A Mãe confirma que Inês trabalha depressa.",
+        "A cena prova que Inês é sempre diligente."
+      ],
+      "c": 0,
+      "f": "É Inês a apresentar-se como **aguçosa**, por oposição ao vagar da Mãe. A fala não é uma confirmação da Mãe nem prova de uma qualidade permanente (lição F02).",
+      "fe": [
+        null,
+        "A afirmação é de Inês. Trocar quem fala por quem é interpelado altera a prova.",
+        "A forma de se apresentar numa situação não comprova como a personagem age sempre."
+      ],
+      "g": 2
+    },
+    {
+      "t": "completar",
+      "p": "Frase criada: “O livro que está na mesa pertence à biblioteca.” Classifica a oração iniciada por _que_.",
+      "p2": "Na frase criada “O livro que está na mesa pertence à biblioteca”, como se classifica a oração “que está na mesa”?",
+      "frase": "A oração “que está na mesa” é [1].",
+      "lacunas": [
+        {
+          "o": [
+            "uma subordinada adjetiva relativa explicativa",
+            "uma subordinada substantiva completiva",
+            "uma subordinada adjetiva relativa restritiva"
+          ],
+          "c": 2
+        }
+      ],
+      "f": "A oração restringe o antecedente, o nome **livro**: não se fala de qualquer livro, mas do que está na mesa. Usa o nome completo da classificação (lições F07 e F11).",
+      "fe": "Não é informação adicional isolada por vírgulas nem uma oração que completa um verbo. Identifica o nome retomado e a restrição do seu referente.",
+      "g": 3
+    },
+    {
+      "t": "escolha",
+      "p": "Cena inventada: a Sara diz que vai subir a serra de sandálias. O guia diz, à parte: “Pés sem botas, serra sem fim.” O que anuncia o comentário?",
+      "p2": "Numa cena inventada, a Sara quer subir a serra de sandálias e o guia diz só para o público: “Pés sem botas, serra sem fim.” Que leitura respeita o que o comentário anuncia?",
+      "o": [
+        "A subida pode vir a custar muito à Sara.",
+        "A Sara já desistiu a meio daquela subida.",
+        "Ninguém consegue subir aquela serra."
+      ],
+      "c": 0,
+      "f": "O guia antecipa uma dificuldade para quem sobe sem botas: anuncia o que pode vir antes de a ação o mostrar, sem relatar um desfecho nem criar uma regra para todos. Explicar o que uma fala anuncia é ligar as palavras à situação em que surgem (lição F11).",
+      "fe": [
+        null,
+        "O comentário surge antes da subida: prevê uma dificuldade, não relata uma desistência que ninguém viu.",
+        "O comentário fala de quem sobe sem botas. Tirar dele uma regra para toda a gente ultrapassa o que diz."
+      ],
+      "g": 4
+    },
+    {
+      "t": "ordenar",
+      "p": "Neste ensaio, só vais mudar a pausa de uma fala. Põe os passos do ensaio por ordem.",
+      "p2": "Queres saber onde a pausa resulta melhor sem mexer em mais nada. Por que ordem trabalhas?",
+      "passos": [
+        "Fixar a fala e a rubrica que não vão mudar",
+        "Ensaiar a fala com a pausa em dois sítios",
+        "Comparar o efeito das duas versões",
+        "Escolher a pausa com melhor efeito e justificar"
+      ],
+      "f": "É o protocolo deste ensaio: só comparas depois de haver duas versões; a escolha final usa essa comparação. Não é uma ordem obrigatória para toda a criação teatral (lições F09 e F10).",
+      "fe": "Se mudares também o texto, deixas de isolar a pausa. Comparar exige os ensaios, e a escolha justificada exige a comparação: cada resultado alimenta o passo seguinte.",
+      "g": 5
+    },
+    {
+      "t": "emparelhar",
+      "p": "Estes microcasos são inventados, não anúncios. Liga cada um à leitura que as pistas permitem, sem inventar o desfecho.",
+      "p2": "Contraste, coerência, insulto ou pista para o futuro? Observa o que é dito e feito em cada caso.",
+      "pares": [
+        [
+          "Diz “Sou pontual!” e chega quando a sessão acabou.",
+          "Contraste entre elogio e ação"
+        ],
+        [
+          "Diz “Trago o guião” e entrega-o logo à colega.",
+          "Coerência entre fala e ação"
+        ],
+        [
+          "Chama “inútil” a alguém, sem apontar nada do que essa pessoa fez.",
+          "Insulto sem prova do comportamento"
+        ],
+        [
+          "Antes do ensaio, admite “Costumo faltar sem avisar.”",
+          "Pista para uma dificuldade futura"
+        ]
+      ],
+      "f": "O primeiro caso contrapõe autoelogio e ação; o segundo é coerente; o terceiro apenas desqualifica. O quarto permite antecipar uma dificuldade, sem garantir nova falta. Uma fala pode anunciar um problema sem confirmar o desfecho (lições F07 e F11).",
+      "fe": "Procura o apoio de cada leitura. O insulto não mostra comportamento; uma admissão antes do ensaio pode antecipar dificuldades. Distingue essa expectativa do que já se viu acontecer.",
+      "g": 6
+    },
+    {
+      "t": "completar",
+      "p": "Frase criada para ensaio: “Já / cheguei.” (com alívio). A barra marca uma pausa. O que indicam os parênteses?",
+      "p2": "Na frase criada “Já / cheguei.” (com alívio), a pausa já está na barra. Que informação acrescentam os parênteses?",
+      "frase": "A indicação (com alívio) explicita [1].",
+      "lacunas": [
+        {
+          "o": [
+            "a pausa entre as duas palavras",
+            "a intenção escolhida para a voz",
+            "a pessoa a quem se dirige a fala"
+          ],
+          "c": 1
+        }
+      ],
+      "f": "A barra marca **onde paras**; os parênteses dizem **como queres soar**: é a intenção de voz. São duas marcas diferentes, e o tema A pede as duas (tarefa U2; a pausa ensaia-se em F10).",
+      "fe": "A pausa já está na barra, e (com alívio) não diz a quem se fala, como faria (à parte). Os parênteses dizem como a fala deve soar.",
+      "g": 7
+    },
+    {
+      "t": "escolha",
+      "p": "Cena criada: A faz um aparte e B está em cena. Queres defender que uma adaptação em vídeo deve manter a função do aparte. Que exemplo sustenta essa posição?",
+      "p2": "Para mostrar que o vídeo conserva o que o aparte faz na cena, que solução escolhes como exemplo?",
+      "o": [
+        "B responde ao comentário que A dirige à câmara.",
+        "A cala o comentário e o público perde essa pista.",
+        "A diz o comentário à câmara e B não o ouve."
+      ],
+      "c": 2,
+      "f": "O aparte é dito para o público e as outras figuras não o ouvem. Dito à câmara, com B sem ouvir, muda o meio e conserva essa função (lições F09 e F11). Na tarefa, ligas a tua posição a um exemplo da adaptação que viste e a uma fala da farsa, não a este caso inventado.",
+      "fe": [
+        "Se B responde, passou a ouvir o comentário: o aparte deixou de ser só para o público.",
+        "Calar o comentário tira ao público a informação que o aparte lhe dava. Pode ser uma escolha, mas não mantém a função.",
+        null
+      ],
+      "g": 8
+    },
+    {
+      "t": "rever",
+      "p": "Cena inventada. Corrige só a identificação destacada, conferindo a passagem de apoio.",
+      "p2": "Quem diz “Está queimado por baixo”, e para quem? Escolhe a identificação certa da prova.",
+      "o": [
+        "um aparte do Tiago ao público",
+        "uma fala do Tiago dirigida à Rita",
+        "um aparte da Rita para o público"
+      ],
+      "c": 0,
+      "f": "As palavras são do **Tiago**, ditas **à parte**: o público ouve-as, a Rita não. Falar do bolo da Rita não faz da fala uma fala dela (lição F11).",
+      "fe": [
+        null,
+        "No aparte, o Tiago fala para o público e a Rita não o ouve. Dizer que fala à Rita muda a situação da prova.",
+        "A Rita gaba o bolo; as palavras citadas são do Tiago. Confere a etiqueta antes de citar."
+      ],
+      "frase": "Para mostrar o defeito do bolo, cito uma fala da Rita.",
+      "trecho": "uma fala da Rita",
+      "apoio": "Cena inventada: a Rita gaba o bolo que trouxe; o Tiago diz, à parte, para o público: “Está queimado por baixo.”",
+      "g": 9
+    },
+    {
+      "t": "vf",
+      "p": "Um trabalho com 230 palavras no total e anúncios de 70 palavras cada dispensa as duas linhas finais com a marca revista e a fala.",
+      "p2": "Cumprir 200 a 260 palavras no total e 50 a 80 por anúncio permite entregar sem a síntese fundamentada.",
+      "v": false,
+      "f": "Falso. As contagens cabem nos intervalos pedidos, mas não substituem a síntese: indica a marca que passaste a ver de outra maneira e a fala. Revê também a escrita: lê em voz alta e corta o que repete (tarefa U2; lição F08).",
+      "fe": "Cumprir uma condição não elimina as outras. O total do trabalho, a extensão de cada anúncio e as duas linhas de reflexão continuam a ser exigidos.",
+      "g": 10
+    },
+    {
+      "t": "ler",
+      "rot": "Para levar",
+      "titulo": "O produto continua a ser teu",
+      "html": "<p>Na tarefa, escolhe as tuas provas e identifica quem diz cada fala. Classifica a oração e explica o que a fala do Moço anuncia. No tema A, faz rir pelo contraste, sem insulto gratuito, e marca a pausa e a intenção de voz. No tema B, defende uma posição com o exemplo da adaptação e uma fala da farsa. Revê a escrita e a síntese; confere 200 a 260 palavras no total e, no tema A, 50 a 80 em cada anúncio.</p>"
+    }
   ]
- ],
- "reservadas": [
-  "Homem que não tem nem preto",
-  "Casa muito na má hora",
-  "E que val aqui uma destas",
-  "Gabando-me de privado",
-  "Rico, honrado, conhecido",
-  "Diz o que pensa, e pensa pouco",
-  "O Escudeiro é pobre, apesar da aparência de fidalgo.",
-  "Homem que não tem nem preto, / Casa muito na má hora",
-  "Homem que não tem nem preto,",
-  "E que val aqui uma destas?",
-  "Que fala... e com' ora fala! / Estrugirá esta sala",
-  "Que fala... e com' ora fala!",
-  "Estrugirá esta sala",
-  "que não tem nem preto",
-  "Diz o que pensa, e pensa pouco, o que poupa discussões."
- ],
- "cartoes": [
-  {
-   "t": "ler",
-   "rot": "Abre",
-   "titulo": "Quem fala, o que mostra, como se ouve",
-   "html": "<p>Dez minutos com consulta, sem nota. Treinas prova, oração relativa, contraste cómico, pausa e adaptação. Usas uma fala de Inês à Mãe e pequenos casos criados para o treino, não os retratos dos pretendentes nem anúncios prontos. As falas criadas têm aspas curvas; os textos de Gil Vicente são identificados.</p>"
-  },
-  {
-   "t": "emparelhar",
-   "p": "Liga cada elemento ao que deves conferir antes de usar uma fala como prova.",
-   "p2": "Como evitas trocar as palavras de uma personagem por uma rubrica ou por um aparte de outra?",
-   "pares": [
-    [
-     "Palavras copiadas da fala",
-     "Exatidão da transcrição"
-    ],
-    [
-     "Nome de quem diz as palavras",
-     "Identificação da voz"
-    ],
-    [
-     "Situação em que a fala surge",
-     "Localização na ação"
-    ],
-    [
-     "Traço que as palavras mostram",
-     "Ligação entre marca e prova"
-    ]
-   ],
-   "f": "A prova não é só uma frase expressiva: identifica a voz, situa-a e mostra como sustenta a marca escolhida (lições F02 e F11; critérios U2).",
-   "fe": "A rubrica não é uma fala; a voz de uma figura não passa a ser de outra por falar dela. Confere a etiqueta da personagem e o contexto antes de atribuir a marca.",
-   "g": 1
-  },
-  {
-   "t": "escolha",
-   "p": "Na lição F02, Inês diz «Mas eu, mãe, sam aguçosa». Qual destas afirmações respeita a voz e o alcance da fala?",
-   "p2": "Aguçosa pode significar apressada. O que podes afirmar sobre a forma como Inês se apresenta neste diálogo?",
-   "o": [
-    "Inês apresenta-se como alguém apressado.",
-    "A Mãe confirma que Inês trabalha depressa.",
-    "A cena prova que Inês é sempre diligente."
-   ],
-   "c": 0,
-   "f": "É Inês a apresentar-se como aguçosa, em contraste com a demora da Mãe. A fala não é uma confirmação da Mãe nem prova de uma qualidade permanente (lição F02).",
-   "fe": [
-    null,
-    "A afirmação é de Inês. Trocar quem fala por quem é interpelado altera a prova.",
-    "A forma de se apresentar numa situação não comprova como a personagem age sempre."
-   ],
-   "g": 2
-  },
-  {
-   "t": "completar",
-   "p": "Frase criada: “O livro que está na mesa pertence à biblioteca.” Classifica a oração iniciada por _que_.",
-   "p2": "Na frase do livro, que tipo de oração delimita qual é o livro referido?",
-   "frase": "A oração “que está na mesa” é [1].",
-   "lacunas": [
-    {
-     "o": [
-      "uma subordinada adjetiva relativa explicativa",
-      "uma subordinada substantiva completiva",
-      "uma subordinada adjetiva relativa restritiva"
-     ],
-     "c": 2
-    }
-   ],
-   "f": "A oração restringe o antecedente, o nome _livro_: não se fala de qualquer livro, mas do que está na mesa. Usa o nome completo da classificação (lições F07 e F11).",
-   "fe": "Não é informação adicional isolada por vírgulas nem uma oração que completa um verbo. Identifica o nome retomado e a restrição do seu referente.",
-   "g": 3
-  },
-  {
-   "t": "escolha",
-   "p": "Que justificação explica a função de “que está na mesa”, na frase criada?",
-   "p2": "Para justificar o tipo de oração, procura o antecedente e o trabalho que a oração faz sobre ele.",
-   "o": [
-    "A oração completa o verbo, dizendo o que pertence.",
-    "A oração restringe o nome _livro_, identificando qual é.",
-    "A oração explica a causa de pertencer à biblioteca."
-   ],
-   "c": 1,
-   "f": "O antecedente é _livro_; a oração seleciona o livro de que se fala. Não dá a causa da pertença nem completa o verbo principal (lição F07).",
-   "fe": [
-    "A oração está ligada ao nome, não ocupa o lugar de um complemento do verbo pertence.",
-    null,
-    "Estar na mesa identifica o livro; a frase não apresenta essa localização como causa da pertença."
-   ],
-   "g": 4
-  },
-  {
-   "t": "ordenar",
-   "p": "Neste ensaio, só vais mudar a pausa. Ordena o protocolo: fixar, testar duas versões, comparar e decidir.",
-   "p2": "Que passo precisa das duas versões já ensaiadas? Reconstrói a sequência que mantém o texto fixo até à decisão.",
-   "passos": [
-    "Fixar a fala e a rubrica que serão iguais nas duas versões",
-    "Ensaiar esse texto em duas versões, mudando apenas a pausa",
-    "Comparar o efeito observado nessas duas versões ensaiadas",
-    "Escolher a pausa com base nessa comparação e justificar"
-   ],
-   "f": "É o protocolo deste ensaio: só comparas depois de haver duas versões; a escolha final usa essa comparação. Não é uma ordem obrigatória para toda a criação teatral (lições F09 e F10).",
-   "fe": "Se mudares também o texto, deixas de isolar a pausa. Comparar exige os ensaios, e a escolha justificada exige a comparação: cada resultado alimenta o passo seguinte.",
-   "g": 5
-  },
-  {
-   "t": "emparelhar",
-   "p": "Estes microcasos são inventados, não anúncios. Liga cada um à leitura que as pistas permitem, sem inventar o desfecho.",
-   "p2": "Contraste, coerência, insulto ou pista para o futuro? Observa o que é dito e feito em cada caso.",
-   "pares": [
-    [
-     "Diz “Sou pontual!” e chega quando a sessão acabou.",
-     "Contraste entre elogio e ação"
-    ],
-    [
-     "Diz “Estou sentado” e fica sentado na cadeira.",
-     "Coerência entre fala e ação"
-    ],
-    [
-     "Chama “inútil” a alguém, sem mostrar um gesto ou uma fala.",
-     "Insulto sem prova do comportamento"
-    ],
-    [
-     "Antes do ensaio, admite “Costumo faltar sem avisar.”",
-     "Pista para uma dificuldade futura"
-    ]
-   ],
-   "f": "O primeiro caso contrapõe autoelogio e ação; o segundo é coerente; o terceiro apenas desqualifica. O quarto permite antecipar uma dificuldade, sem garantir nova falta. Uma fala pode anunciar um problema sem confirmar o desfecho (lições F07 e F11).",
-   "fe": "Procura o apoio de cada leitura. O insulto não mostra comportamento; uma admissão antes do ensaio pode antecipar dificuldades. Distingue essa expectativa do que já se viu acontecer.",
-   "g": 6
-  },
-  {
-   "t": "completar",
-   "p": "Frase criada para ensaio: “Já / cheguei.” A barra marca uma pausa; depois da frase, (com alívio) indica o quê?",
-   "p2": "Distingue a pausa assinalada pela barra da indicação entre parênteses que orienta a leitura em voz alta.",
-   "frase": "A indicação (com alívio) explicita [1].",
-   "lacunas": [
-    {
-     "o": [
-      "a intenção escolhida para a voz",
-      "a localização exata do episódio",
-      "a personagem que escreveu a fala"
-     ],
-     "c": 0
-    }
-   ],
-   "f": "A barra marca onde paras; a indicação entre parênteses diz como pretendes soar. Experimenta essa diferença ao ler, sem a confundir com o nome de quem fala (lições F09 e F10; critério do tema A).",
-   "fe": "A indicação de voz não localiza a cena nem identifica quem a escreveu. O critério pede uma pausa marcada e uma intenção de voz: são duas informações diferentes.",
-   "g": 7
-  },
-  {
-   "t": "escolha",
-   "p": "Cena criada: A faz um aparte ao público e B não o ouve. Queres defender que a adaptação conserva quem sabe o comentário. Que exemplo sustenta essa posição?",
-   "p2": "Que solução serve de prova à ideia de conservar a distribuição da informação: público informado, B sem ouvir?",
-   "o": [
-    "B responde ao comentário que A dirige à câmara.",
-    "A cala o comentário e o público perde essa pista.",
-    "A fala à câmara; B continua sem ouvir a fala."
-   ],
-   "c": 2,
-   "f": "A fala à câmara muda o meio e conserva quem sabe e quem não sabe (lição F09). Na tarefa, precisas de ligar a tua posição a um exemplo da adaptação e a uma fala da farsa, não de usar este caso inventado.",
-   "fe": [
-    "Ao responder ao comentário, B passa a conhecê-lo. A distribuição da informação foi alterada.",
-    "Se o público perde a pista, já não fica a saber o que o aparte lhe dava. Pode ser uma escolha, mas não conserva a mesma função.",
-    null
-   ],
-   "g": 8
-  },
-  {
-   "t": "rever",
-   "p": "Corrige só a atribuição destacada: não confundas a pessoa interpelada com quem fala.",
-   "p2": "O nome Mãe dentro da fala é um chamamento. Que fragmento identifica corretamente quem diz as palavras?",
-   "o": [
-    "pela Mãe perante Inês",
-    "por Inês perante a Mãe",
-    "por Lianor perante a Mãe"
-   ],
-   "c": 1,
-   "f": "Inês diz as palavras e dirige-se à Mãe. Chamar a Mãe não muda quem fala; confirma a etiqueta do diálogo (lição F02).",
-   "fe": [
-    "Mãe é a destinatária nesta fala, não quem a diz. A troca falsearia a citação usada como prova.",
-    null,
-    "Lianor não diz esta fala. A presença de várias figuras na obra não permite trocar a autoria das palavras."
-   ],
-   "frase": "Na cena, a fala é dita pela Mãe perante Inês.",
-   "trecho": "pela Mãe perante Inês",
-   "apoio": "Inês: «Mas eu, mãe, sam aguçosa» (lição F02).",
-   "g": 9
-  },
-  {
-   "t": "vf",
-   "p": "Um trabalho com 230 palavras no total e anúncios de 70 palavras cada dispensa as duas linhas finais com a marca revista e a fala.",
-   "p2": "Cumprir 200 a 260 palavras no total e 50 a 80 por anúncio permite entregar sem a síntese fundamentada.",
-   "v": false,
-   "f": "Falso. As contagens cabem nos intervalos pedidos, mas não substituem a síntese: indica a marca revista e a fala. Revê também a articulação, a ortografia e a pontuação (tarefa U2; revisão na lição F08).",
-   "fe": "Cumprir uma condição não elimina as outras. O total do trabalho, a extensão de cada anúncio e as duas linhas de reflexão continuam a ser exigidos.",
-   "g": 10
-  },
-  {
-   "t": "ler",
-   "rot": "Para levar",
-   "titulo": "O produto continua a ser teu",
-   "html": "<p>Na tarefa, escolhe outras provas: identifica quem fala e justifica a oração. No tema A, sustenta o contraste e marca a pausa e a intenção de voz. No tema B, defende uma posição com o exemplo da adaptação e uma fala da farsa. Revê a escrita e a síntese; confere 200 a 260 palavras no total e, no tema A, 50 a 80 em cada anúncio.</p>"
-  }
- ]
 }
