@@ -1,6 +1,6 @@
 {
  "base_commit": "f648b22dd4f0a9a852fa2299cfa1e353e401dc94",
- "_nota": "30/10/2026: perguntas em português europeu («Qual das…», «Que…», nunca «Qual» seguido de nome; pedido do docente), M7-F13 com os versos 12 e 14 como na Athena, n.º 3, 1924, em grafia atualizada («p'ra», «'stá», «ó canção»; decisão 4b), M7-U2 com aquecimento fixo de 10 minutos (decisão 3a) e pesos do M7 no mapa (U3 a 25 %, prova escrita a 30 %; decisões 3b e 3c). Gerado por scripts/aplicar_trocas.py a partir de scripts/lingua_pessoa_m7_20261030.json: não se edita à mão. Só texto: ordem, tipos, chaves e respostas certas dos cartões ficam iguais. É a camada mais recente: desfaz-se antes da das opções denunciadoras.",
+ "_nota": "30/10/2026: perguntas em português europeu («Qual das…», «Que…», nunca «Qual» seguido de nome; pedido do docente), M7-F13 com os versos 12 e 14 como na Athena, n.º 3, 1924, em grafia atualizada («p'ra», «'stá»; decisão 4b; o verso 20 mantém «Ó canção» com maiúscula, por decisão do docente de 30/10), M7-U2 com aquecimento fixo de 10 minutos (decisão 3a) e pesos do M7 no mapa (U3 a 25 %, prova escrita a 30 %; decisões 3b e 3c). Gerado por scripts/aplicar_trocas.py a partir de scripts/lingua_pessoa_m7_20261030.json: não se edita à mão. Só texto: ordem, tipos, chaves e respostas certas dos cartões ficam iguais. É a camada mais recente: desfaz-se antes da das opções denunciadoras.",
  "files": {
   "assets/exame/sessoes.json": {
    "base_sha256_lf": "5a963d008fd574053745e6b15f4ba436e816867a004a400b2a7f90dd92eb75a1",
@@ -370,7 +370,7 @@
   },
   "m7/index.html": {
    "base_sha256_lf": "2f936da944f6087fd88b633d0f989eaa7aab0dd0f53439bcadc9257c29981c0b",
-   "after_sha256_lf": "9645d7a87e0a668378a1f56bbdd0d2d887c0a4ee3217db5081a2d38d703cb098",
+   "after_sha256_lf": "6639bb76cd14b016863762bddd42dfe79ae6d9a1adfe46894ea5b3f0f8bedd90",
    "edits": [
     {
      "location": "M7-U2",
@@ -383,18 +383,12 @@
      "old": "sente está pensando",
      "new": "sente 'stá pensando",
      "occurrences": 1
-    },
-    {
-     "location": "M7-F13",
-     "old": "Ó campo! Ó canção!",
-     "new": "Ó campo! ó canção!",
-     "occurrences": 2
     }
    ]
   },
   "m7/licao-m7-f13/index.html": {
    "base_sha256_lf": "014fe270b0140a5246299aaaeb76022d95731df5f671e776bbf99afc0ba33cde",
-   "after_sha256_lf": "fb1a7546de41546a54fc8ae87f36f7ea26ccd61d62a0170a237e5d199254f305",
+   "after_sha256_lf": "fb0a7fc41a332522ad32d3147809177988b0e7145cee2bcf2cf7351f3632f8e1",
    "edits": [
     {
      "location": "M7-F13",
@@ -425,12 +419,6 @@
      "old": "sente está pensando",
      "new": "sente 'stá pensando",
      "occurrences": 7
-    },
-    {
-     "location": "M7-F13",
-     "old": "Ó campo! Ó canção!",
-     "new": "Ó campo! ó canção!",
-     "occurrences": 3
     }
    ]
   },
@@ -442,18 +430,6 @@
      "location": "M7-F13",
      "old": "sente está pensando",
      "new": "sente 'stá pensando",
-     "occurrences": 1
-    }
-   ]
-  },
-  "m7/m7-quatro-vozes-um-problema/index.html": {
-   "base_sha256_lf": "2b8b6bbe6efda569cd14afd19724331da349bde38fb8f0ff684281067a580082",
-   "after_sha256_lf": "c11f63bd4e5f505c3db49bbbe8c72c9664bd8338909dd6719998346c7d017b34",
-   "edits": [
-    {
-     "location": "M7-F13",
-     "old": "Ó campo! Ó canção!",
-     "new": "Ó campo! ó canção!",
      "occurrences": 1
     }
    ]
@@ -484,7 +460,7 @@
   },
   "m7/painel-m7-f13/index.html": {
    "base_sha256_lf": "fc4959836e8efd5400f0e8753d08d53f5f339567a0fda254a4056ddeddaca5ee",
-   "after_sha256_lf": "e45692810091dde1861839ee6f61e3263f6e584ea79b0eb01918695c9a304d90",
+   "after_sha256_lf": "812d2c5452e86a6f199453c7653e716bb4a2edd700cde9743f6e0e7a47bcdbe9",
    "edits": [
     {
      "location": "M7-F13",
@@ -497,18 +473,12 @@
      "old": "sente está pensando",
      "new": "sente 'stá pensando",
      "occurrences": 4
-    },
-    {
-     "location": "M7-F13",
-     "old": "Ó campo! Ó canção!",
-     "new": "Ó campo! ó canção!",
-     "occurrences": 1
     }
    ]
   },
   "m7/pessoa-ceifeira/index.html": {
    "base_sha256_lf": "763cf9ee49e2b74c0aa0d063397e1d1dc685847747f975675e6335a5520c9678",
-   "after_sha256_lf": "f27cfcf66d64041f73c7a00c3960817fdef7685fe884dc00d6275a1694322fa5",
+   "after_sha256_lf": "eb092d6cc9eb2843018ada5e1c532a354d749b0502ab03c00786d04f52e2726b",
    "edits": [
     {
      "location": "M7-F13",
@@ -538,12 +508,6 @@
      "location": "M7-F13",
      "old": "sente está pensando",
      "new": "sente 'stá pensando",
-     "occurrences": 1
-    },
-    {
-     "location": "M7-F13",
-     "old": "Ó campo! Ó canção!",
-     "new": "Ó campo! ó canção!",
      "occurrences": 1
     }
    ]
