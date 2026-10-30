@@ -1,0 +1,41 @@
+name: Português M2, aquecimentos em cartões
+on:
+  pull_request:
+    paths:
+      - 'docs/pedagogia/aquecimentos/**'
+      - 'tarefas/**/aquecimento/**'
+      - 'scripts/aquecimentos.py'
+      - 'scripts/auditar_aquecimentos_m1.py'
+      - 'tests/*aquecimentos*'
+      - '.github/workflows/pt-aquecimentos-m2-qa.yml'
+permissions:
+  contents: read
+jobs:
+  suite:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Suite completa e opções M2
+        run: |
+          python -m unittest discover -s tests
+          python tests/test_aquecimentos_m2_opcoes.py --medir
+  navegador:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Instalar Chromium
+        run: |
+          python -m pip install playwright
+          python -m playwright install --with-deps chromium
+      - name: Aquecimentos e ligações já integradas
+        run: python tests/browser_task_aquecimentos.py
+      - name: M2 certo, errado e pré-visualização das revisões
+        run: python tests/browser_aquecimentos_m2_feedback.py

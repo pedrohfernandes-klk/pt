@@ -24,7 +24,8 @@ from browser_m2_complete import respond
 # 30/10/2026: aquecimento em cartões (decisão do docente)
 # 30/10/2026: M4 recebe páginas novas; a ligação às páginas congeladas cabe ao Claude.
 TAREFAS_LIGADAS = ['m1-u1', 'm1-u2', 'm7-u1', 'm7-u2', 'm7-u3']
-SLUGS = ['m1-u1', 'm1-u2', 'm4-u1', 'm4-u2', 'm4-u3-discurso', 'm7-u1', 'm7-u2', 'm7-u3']
+# 30/10/2026: M2 recebe páginas novas; tarefas e percursos congelados continuam noutra camada.
+SLUGS = ['m1-u1', 'm1-u2', 'm2-u1', 'm2-u2', 'm4-u1', 'm4-u2', 'm4-u3-discurso', 'm7-u1', 'm7-u2', 'm7-u3']
 CHAVES = r"""() => Object.keys(localStorage).filter(k => /^(licao-|percurso-|desafio-|epi-pt-|epi-ultima|aquecimento-)/.test(k)).sort()"""
 
 
