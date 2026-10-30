@@ -1,0 +1,53 @@
+name: Português, texto corrido justificado
+# 30/10/2026: texto corrido justificado, com hifenização em português europeu (decisão do docente). A regra está no fim
+# de assets/appearance.css (mais uma linha em cada ficheiro de estilo dos painéis de notas, assets/pt-lessons/notes.css e
+# m9/recursos/notas.css); as classes «prosa» e «verso» entram por uma camada literal
+# (tests/fixtures/texto-justificado-edits-20261030.json), desfeita antes das outras nos testes de estado congelado.
+on:
+  pull_request:
+    paths:
+      - 'assets/appearance.css'
+      - 'm9/recursos/notas.css'
+      - 'assets/pt-lessons/notes.css'
+      - 'scripts/texto_justificado_20261030.json'
+      - 'tests/fixtures/texto-justificado-edits-20261030.json'
+      - 'tests/auditoria_20261028.py'
+      - 'tests/test_task_routes_closure.py'
+      - 'tests/*texto_justificado*'
+      - '.github/workflows/pt-texto-qa.yml'
+      # 30/10/2026 (revisão): também as páginas (a camada põe as classes «prosa» e «verso» e o lang nas páginas; uma página
+      # gerada de novo sem elas tem de falhar aqui), os dados de cartões em .js e os motores que geram a explicação, o
+      # retorno, as ligações e as sessões do exame
+      - '**/index.html'
+      - 'm*/recursos/*.js'
+      - 'assets/pt-lessons/*.js'
+      - 'assets/appearance.js'
+      - 'assets/exame/app.js'
+permissions:
+  contents: read
+jobs:
+  texto:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Regra comum, famílias de páginas, camada literal e estados congelados
+        run: |
+          python -m unittest discover -s tests -p 'test_texto_justificado.py' -v
+          python -m unittest discover -s tests -p 'test_task_routes_closure.py' -v
+          python -m unittest discover -s tests -p 'test_appearance_universal.py' -v
+          python scripts/aplicar_trocas.py scripts/texto_justificado_20261030.json --manifesto tests/fixtures/texto-justificado-edits-20261030.json --verificar
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Tema comum (appearance.css e appearance.js)
+        run: node --test tests/appearance.test.cjs
+      - name: Instalar Chromium
+        run: |
+          python -m pip install playwright
+          python -m playwright install --with-deps chromium
+      - name: Uma página de cada família a 390 e 1366 px (justificado) e a 320 e 300 px (à esquerda)
+        run: python tests/browser_texto_justificado.py

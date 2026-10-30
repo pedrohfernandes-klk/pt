@@ -77,3 +77,7 @@
 .jogo .ler .prova-l:not(.estrofe) .ln.salto::before{content:"\A" attr(data-l) attr(data-n)}
 .jogo .ler .prova-l:not(.estrofe) .ln.par[data-n]::before,.jogo .ler .prova-l:not(.estrofe) .ln.par.salto::before{content:"\A\2003" attr(data-l) attr(data-n)}
 .jogo .ler .prova-l:not(.estrofe) .ln.par[data-n]:first-child::before{content:"\2003" attr(data-n)}
+/* 30/10/2026: a prosa da prova justifica-se com hifenização (decisão do docente); os números de todas as linhas ficam como
+   estão; as estrofes, as notas, os enunciados e as tabelas ficam à esquerda. --epi-texto-corrido vem de assets/appearance.css
+   (à esquerda abaixo de 22.5em). */
+.jogo .ler .prova-l:not(.estrofe){text-align:var(--epi-texto-corrido,justify);text-align-last:auto;-webkit-hyphens:auto;hyphens:auto;hyphenate-limit-chars:6 3 3;-webkit-hyphenate-limit-before:3;-webkit-hyphenate-limit-after:3;word-spacing:normal;overflow-wrap:break-word}

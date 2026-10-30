@@ -22,11 +22,14 @@ SALA_EDITS=ROOT/'tests/fixtures/sala-desligada-edits-20261028.json'
 # 29/10/2026: aquecimentos e unidade 3 do M7 (a F10 reescrita para a tarefa nova; decisões do docente de 29/10). É a
 # camada mais recente: o manifesto dela desfaz-se antes da Sala.
 AQUECIMENTOS_EDITS=ROOT/'tests/fixtures/aquecimentos-m7-edits-20261029.json'
+# 30/10/2026: texto corrido justificado (decisão do docente): a classe «prosa» nos excertos em prosa dos percursos
+# «Pensar devagar». É a camada mais recente: o manifesto dela desfaz-se antes de todos os outros.
+JUSTIFICADO_EDITS=ROOT/'tests/fixtures/texto-justificado-edits-20261030.json'
 
 def original_lesson_text(path):
  """Reverse only the explicitly authorized UX strings; retain the frozen LF hash."""
  source=(ROOT/path).read_text('utf-8')
- for manifest_path in (AQUECIMENTOS_EDITS,SALA_EDITS,AUDIT_EDITS_M4_M7,AUDIT_EDITS,REIS_EDITS,TABLE_EDITS,GRAMMAR_EDITS,INSTRUCTION_EDITS):
+ for manifest_path in (JUSTIFICADO_EDITS,AQUECIMENTOS_EDITS,SALA_EDITS,AUDIT_EDITS_M4_M7,AUDIT_EDITS,REIS_EDITS,TABLE_EDITS,GRAMMAR_EDITS,INSTRUCTION_EDITS):
   manifest=json.loads(manifest_path.read_text('utf-8'))
   for edit in reversed(manifest['files'].get(path,{}).get('edits',[])):
    if source.count(edit['new'])!=edit['occurrences']:

@@ -141,3 +141,82 @@ body:has(>[data-appearance-floating])::after{content:"";display:block;height:68p
  :root[data-appearance-family="cards"][data-theme] #palco .dil-leitura{--dil-acento:#96503c;--dil-regiao:#f6f4ee}
  :root[data-appearance-family="cards"][data-appearance-site="pt"][data-theme]{--acento:#a84939;--campo:#e8967a}
 }
+
+/* 30/10/2026: texto corrido justificado, com hifenização automática em português europeu (decisão do docente).
+   Só alinhamento e hifenização: a letra, o tamanho, as cores e o espaçamento das linhas não mudam.
+   A lista é positiva: entra só o texto corrido (textos das obras, leituras, excertos, explicações e parágrafos das
+   páginas). Ficam à esquerda, por não estarem na lista, os versos (nunca se justificam, nem quando um verso longo
+   parte), os títulos, os rótulos, os botões, as opções, o retorno curto, as listas, as tabelas, as legendas, os
+   créditos, os formulários e as caixas estreitas. Um parágrafo com <br> conta como verso (ou linhas soltas), salvo
+   se o HTML o marcar como prosa (classe «prosa»); um parágrafo que só traz verso citado leva a classe «verso».
+   Um parágrafo com um botão ou um campo no meio do texto fica à esquerda (o controlo não parte e abriria um buraco).
+   Nos exercícios de telemóvel, as caixas com botões de escolha (versos com lacuna, casos e itens a classificar) ficam
+   à esquerda. Abaixo de 22.5em de largura (360 px: telemóveis pequenos ou ampliação; revisão de 30/10/2026, porque a
+   320 px um quarto dos parágrafos de três ou mais linhas ficava com buracos mesmo com hifenização, e a 360 px menos de
+   um décimo) o texto volta à esquerda; a hifenização fica em todos os ecrãs. A língua vem de <html lang="pt-PT">, presente em todas as páginas;
+   um trecho com outro lang hifeniza-se pelas regras dessa língua.
+   Revisão de 30/10/2026: falas de teatro em p.pr com <br> e blockquote.prosa sem <p> (texto da obra), cenas do
+   Pensar devagar (p.cid-cena), retorno da opção escolhida (.fe, que tem três a quatro linhas no telemóvel), linha
+   do plano da aula (p.aula-linha) e contexto e avisos das sessões do exame entram; o parágrafo com o botão de
+   imprimir dos mapas, as especificações de entrega das guias (nomes de ficheiro que não partem) e a pergunta de
+   abertura a negrito do Pensar devagar (p.etq-m+p) ficam à esquerda. */
+:root{--epi-texto-corrido:start}
+@media screen and (min-width:22.5em),print{:root{--epi-texto-corrido:justify}}
+/* cartões (lições, aquecimentos, provas, Pensar devagar, exercícios): excertos em prosa marcados no HTML; o texto da
+   obra em prosa (p.pr, com ou sem <br>: cada fala termina à esquerda, como a última linha de um parágrafo); a linha do
+   plano da aula no primeiro cartão */
+.jogo .ler blockquote.prosa>p,#palco .caixa p.prosa,.jogo .ler p.pr:not(.verso),.jogo p.aula-linha,
+/* exame: sessões, laboratório e índice das provas (30/10/2026: o índice deixou de ser área reservada com o #137) */
+.pass-prosa .par,.source blockquote,.model,#app .hero .lead,.provas-porta p:not([class]),.intro-row>p:not([class]),
+#app .source>p.context,#app p.callout,
+#laboratorio .of-rosto>.of-entrada,#laboratorio .writing-task,main#provas .of-rosto>.of-entrada,
+/* obras */
+main.ob>p:not([class]),.ob-comp>p:not([class]),.ob-aviso,.ob-falta,
+/* entrada, portais e atlas */
+.p-cab .p-lead,.pt-entry-lead,#progresso>p:not([class]),
+.atlas-investigar>p:not([class]),.atlas-directory>p:not([class]),.atlas-memoria>p:not([class]),.metodo-l .m,
+/* percurso do módulo (índice), mapa, guia e portefólio; visitas */
+.pt-module details.regra>div,.pt-module p.regras,.pt-module .unit-retoma>p:not([class]),.pt-module .desafio>p.pequeno,
+.pt-module section.cartao>p.pequeno,.pt-module main>p.pequeno,
+aside.unit-map-note>p:not([class]),main>header.topo>p[class="lead"],details.sec .cartao>p:not([class]),details.sec>p.aval,
+#rota>div.regra,main>div.regra,
+#arquivo-producoes>p:not([class]),#arquivo-producoes :is(p.unidades-n,p.pequeno,p.ex),
+/* painéis de notas, provas rápidas e questionários */
+main.pg>details p:not([class]),section#entrada>.aviso,section#indice>.aviso,.q .exp,
+/* guiões de aula */
+header.cab+p.nota,.dois .caixa p:not([class]),.caixa.papel>p:not([class]),ol.disc p.r,
+/* tarefas e grelhas */
+.task-page header>p:not([class]),.task-page .task-consultation,.task-texts article>p:not([class]),.task-texts blockquote,.task-model p,
+.task-choice-page .task-instruction,.task-theme p,.task-page .instruction>p:not([class]),.task-page section>p:not([class]),
+.task-example>p:not([class]),.task-example>p.task-example-text,
+main.grelha>header>p:not([class]),main.grelha .g-nota,main.grelha .g-auto>p:not([class])
+{text-align:var(--epi-texto-corrido);text-align-last:auto;-webkit-hyphens:auto;hyphens:auto;hyphenate-limit-chars:6 3 3;-webkit-hyphenate-limit-before:3;-webkit-hyphenate-limit-after:3;word-spacing:normal;overflow-wrap:break-word}
+/* Só onde o navegador conhece :has(): fora dele estes blocos ficam à esquerda, e o resto da lista continua válido. */
+@supports selector(p:has(br)){
+ /* cartões de leitura, «Para entender», «Ler mais», casos e explicações depois de responder (sem <br>: com ele é verso ou
+    lista); a pergunta de abertura a negrito, logo a seguir à etiqueta do Pensar devagar (p.etq-m), é um título */
+ .jogo .ler p:not([class]):not(:has(br)):not(:is(blockquote,li,td,th,figure,figcaption,.paralelo,.vida,.ju-video,.arvore,.cc-ops) p):not(.etq-m+p),
+ .jogo .ler :is(p.abre,p.abre-gancho,p.ex-antes,p.ex-depois,p.nota-ed,p.nota,p.nota-pensa,p.fecho-o,p.liga,p.cx,p.cc-def,p.cc-nao,p.pequeno):not(.verso):not(:has(br)),
+ .jogo .ler .paralelo>.lado>p:not([class]):not(:has(br)),
+ .casca-folha .c-expl:not(:has(>br)),.jogo .f-rev:not(:has(>br)),
+ /* texto da obra em blockquote sem <p> (marcado como prosa) e cenas do Pensar devagar */
+ .jogo .ler blockquote.prosa:not(:has(p)),.jogo p.cid-cena:not(:has(br)),
+ /* exercícios de telemóvel (fora das caixas com botões de escolha), portais, guia e portefólio do módulo, mapas, visitas,
+    índice dos guiões e fontes do laboratório do exame (sem o parágrafo das ligações); nunca um parágrafo com um controlo */
+ #palco .caixa:not(:has(>.chips)) p:not([class]):not(:has(br)),
+ main.pg>p:not([class]):not(:has(br)):not(:has(button,input,select,textarea)),
+ details.sec>p:not([class]):not(:has(button,input,select,textarea)),
+ #escolha>p:not([class]):not(:has(button,input,select,textarea)),#escolha .cx>p:not([class]):not(:has(button,input,select,textarea)),
+ section[id] .cx>p:not([class]):not(:has(button,input,select,textarea)),
+ /* guia: o arquivo das produções (os parágrafos de abertura vão na lista geral), sem as especificações de entrega de cada
+    tarefa (section.tarefa-c), que trazem nomes de ficheiro compridos que não partem */
+ #arquivo-producoes :not(section.tarefa-c)>p:not([class]),
+ main:has(>details#arquivo-producoes)>p:not([class]),
+ main:is(:has(>section#rota),:has(>div.regra))>:is(section:not([id]),aside:not([class]))>p:not([class]),
+ header.topo:has(+.regra)>p:not([class]),main:has(>div.regra)>h2+p:not([class]),header.cab:has(+p.nota)>p.meta,
+ #laboratorio .of-colofao-texto>p:not(:has(a)),main#provas .of-colofao-texto>p:not(:has(a))
+ {text-align:var(--epi-texto-corrido);text-align-last:auto;-webkit-hyphens:auto;hyphens:auto;hyphenate-limit-chars:6 3 3;-webkit-hyphenate-limit-before:3;-webkit-hyphenate-limit-after:3;word-spacing:normal;overflow-wrap:break-word}
+}
+/* Dentro da explicação: a resposta projetada, as listas e as ligações ficam à esquerda (o retorno da opção escolhida,
+   .fe, acompanha a explicação: revisão de 30/10/2026). */
+:is(.casca-folha .c-expl,.jogo .f-rev) :is(.resp-proj,.liga,ul,ol),.metodo-l .m>:is(b,strong){text-align:start;-webkit-hyphens:manual;hyphens:manual}

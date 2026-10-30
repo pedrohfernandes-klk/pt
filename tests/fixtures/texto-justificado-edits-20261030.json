@@ -1,0 +1,750 @@
+{
+ "base_commit": "865aa802f3b13556d030fa1ca75b9dcdc650a778",
+ "_nota": "30/10/2026: texto corrido justificado (decisão do docente). Só se acrescentam classes (e, em dois trechos em inglês, o atributo lang), sem mudar texto: «prosa» nos excertos em prosa citados em blockquote nos percursos «Pensar devagar» (Fernão Lopes, Vieira, Garrett, Eça, Camilo, Antero, Pessoa, Saramago, uma notícia) e nos parágrafos de prosa dialogada escritos com <br> nos exercícios do M4 e do M5, para que assets/appearance.css os justifique sem justificar as estrofes, que usam a mesma marcação; «verso» nos parágrafos que só trazem verso citado (com rótulo, atribuição ou glosa curta), nas lições e nos exercícios, para que não se justifiquem quando o verso parte. Revisão de 30/10/2026: «verso» também nos parágrafos com rótulo seguido de verso citado sem « / » (exercícios do M2, M3 e M7); «prosa» nos três blockquote sem parágrafos de m4/recursos/tpc-entrada.js (falas e didascália de Frei Luís de Sousa, cartões da M4-F28); lang=\"en\" em dois trechos em inglês (c/quinta-mandamentos e a nota de método do atlas). Nenhum texto, ordem, tipo, chave ou resposta muda. Gerado por scripts/aplicar_trocas.py a partir de scripts/texto_justificado_20261030.json: não se edita à mão. É a camada mais recente: desfaz-se antes de todas as outras (tests/auditoria_20261028.py e tests/test_task_routes_closure.py).",
+ "files": {
+  "m1/m1-promessa-do-cronista/index.html": {
+   "base_sha256_lf": "f5172d277453af4072348e8c6b1d2d29e5a3849fa3b82e6aafa84274c0b8e33e",
+   "after_sha256_lf": "cee3450ae4d0350814dc1a481daf74ab2c48d240647006bf415c2371012c97c6",
+   "edits": [
+    {
+     "location": "excerto em prosa: «Nós certamente, levando outro modo, posta a de par»",
+     "old": "<blockquote class=\\\"cit\\\"><p>Nós certamente, levando outro modo, posta a de parte toda a afeição que por azo das ditas razões haver podíamos, nosso desejo foi em esta obra escrever verdade, sem outra mistura, leixando nos bons aquecimentos todo fingido louvor, e mormente mostrar ao povo quaisquer contrárias causas da guisa que avierem.</p><p>[…",
+     "new": "<blockquote class=\\\"cit prosa\\\"><p>Nós certamente, levando outro modo, posta a de parte toda a afeição que por azo das ditas razões haver podíamos, nosso desejo foi em esta obra escrever verdade, sem outra mistura, leixando nos bons aquecimentos todo fingido louvor, e mormente mostrar ao povo quaisquer contrárias causas da guisa que avierem.</p><p>[…",
+     "occurrences": 1
+    },
+    {
+     "location": "excerto em prosa: «O pajem do Mestre, que estava à porta, como lhe di»",
+     "old": "<blockquote class=\\\"cit\\\"><p>O pajem do Mestre, que estava à porta",
+     "new": "<blockquote class=\\\"cit prosa\\\"><p>O pajem do Mestre, que estava à porta",
+     "occurrences": 1
+    },
+    {
+     "location": "excerto em prosa: «Álvaro Pais, que estava já prestes e armado, com u»",
+     "old": "<blockquote class=\\\"cit\\\"><p>Álvaro Pais, que estava já prestes e ",
+     "new": "<blockquote class=\\\"cit prosa\\\"><p>Álvaro Pais, que estava já prestes e ",
+     "occurrences": 1
+    },
+    {
+     "location": "excerto em prosa: «Havia mais nestas torres muitas lanças d'armas, e »",
+     "old": "<blockquote class=\\\"cit\\\"><p>Havia mais nestas torres muitas lança",
+     "new": "<blockquote class=\\\"cit prosa\\\"><p>Havia mais nestas torres muitas lança",
+     "occurrences": 1
+    },
+    {
+     "location": "excerto em prosa: «Na cidade não havia trigo pera vender, e se o havi»",
+     "old": "<blockquote class=\\\"cit\\\"><p>Na cidade não havia trigo pera vender",
+     "new": "<blockquote class=\\\"cit prosa\\\"><p>Na cidade não havia trigo pera vender",
+     "occurrences": 1
+    },
+    {
+     "location": "excerto em prosa: «Nós certamente, levando outro modo, posta a de par»",
+     "old": "<blockquote class=\\\"cit\\\"><p>Nós certamente, levando outro modo, posta a de parte toda a afeição que por azo das ditas razões haver podíamos, nosso desejo foi em esta obra escrever verdade, sem outra mistura, leixando nos bons aquecimentos todo fingido louvor, e mormente mostrar ao povo quaisquer contrárias causas da guisa que avierem.</p></blo",
+     "new": "<blockquote class=\\\"cit prosa\\\"><p>Nós certamente, levando outro modo, posta a de parte toda a afeição que por azo das ditas razões haver podíamos, nosso desejo foi em esta obra escrever verdade, sem outra mistura, leixando nos bons aquecimentos todo fingido louvor, e mormente mostrar ao povo quaisquer contrárias causas da guisa que avierem.</p></blo",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m1/m1-voz-emprestada/index.html": {
+   "base_sha256_lf": "d06e93fce23fd5a9388e21c3538f17b60186ae05d83b21a5bc4cada6fce23afa",
+   "after_sha256_lf": "a65d0f595ae556d3870eeecc5f20713ac954bc9b253e75f843f344b53d32d0ac",
+   "edits": [
+    {
+     "location": "excerto em prosa: «Cantigas d'escarneo som aquelas que os trobadores »",
+     "old": "<blockquote class=\\\"cit\\\"><p>Cantigas d'escarneo som aquelas que o",
+     "new": "<blockquote class=\\\"cit prosa\\\"><p>Cantigas d'escarneo som aquelas que o",
+     "occurrences": 1
+    },
+    {
+     "location": "excerto em prosa: «A cantiga trovadoresca como um todo dependia, para»",
+     "old": "<blockquote class=\\\"cit\\\"><p>A cantiga trovadoresca como um todo d",
+     "new": "<blockquote class=\\\"cit prosa\\\"><p>A cantiga trovadoresca como um todo d",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/m4-frei-luis-quem-sabia/index.html": {
+   "base_sha256_lf": "68f810d58bdf8457b2a0959e891c46417446856772a8b0602c59a8ac0d790d2c",
+   "after_sha256_lf": "f45f2ba8ce3c35cacad83f454197ca349626722303d1afd94c1f3d8c8a84f69f",
+   "edits": [
+    {
+     "location": "excerto em prosa: «MADALENA: […] Depois que fiquei só, depois daquela»",
+     "old": "<blockquote class=\\\"cit\\\"><p>MADALENA: […] Depois que fiquei só, d",
+     "new": "<blockquote class=\\\"cit prosa\\\"><p>MADALENA: […] Depois que fiquei só, d",
+     "occurrences": 1
+    },
+    {
+     "location": "excerto em prosa: «Com paz e alegria d'alma… um engano, um engano de »",
+     "old": "<blockquote class=\\\"cit\\\"><p>Com paz e alegria d'alma… um engano, ",
+     "new": "<blockquote class=\\\"cit prosa\\\"><p>Com paz e alegria d'alma… um engano, ",
+     "occurrences": 1
+    },
+    {
+     "location": "excerto em prosa: «Oh! mas é verdade… vinde cá: (Leva-o diante dos tr»",
+     "old": "<blockquote class=\\\"cit\\\"><p>Oh! mas é verdade… vinde cá: (Leva-o ",
+     "new": "<blockquote class=\\\"cit prosa\\\"><p>Oh! mas é verdade… vinde cá: (Leva-o ",
+     "occurrences": 1
+    },
+    {
+     "location": "excerto em prosa: «MARIA, separando-se com eles da outra gente, e tra»",
+     "old": "<blockquote class=\\\"cit\\\"><p>MARIA, separando-se com eles da outra",
+     "new": "<blockquote class=\\\"cit prosa\\\"><p>MARIA, separando-se com eles da outra",
+     "occurrences": 1
+    },
+    {
+     "location": "excerto em prosa: «Ide a D. Madalena de Vilhena, e dizei-lhe que um h»",
+     "old": "<blockquote class=\\\"cit\\\"><p>Ide a D. Madalena de Vilhena, e dizei",
+     "new": "<blockquote class=\\\"cit prosa\\\"><p>Ide a D. Madalena de Vilhena, e dizei",
+     "occurrences": 1
+    },
+    {
+     "location": "excerto em prosa: «Conheceis bem esse homem, romeiro: não é assim?»",
+     "old": "<blockquote class=\\\"cit\\\"><p>Conheceis bem esse homem",
+     "new": "<blockquote class=\\\"cit prosa\\\"><p>Conheceis bem esse homem",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/m4-sermao-tribunal/index.html": {
+   "base_sha256_lf": "97f46e8be5a44c31f0d7067e9b0c4ea664bd881a62492b465d597033a035eef4",
+   "after_sha256_lf": "652bbba0fc9f4560e5fcbbbdb34cb8d39033a0a95ac3d7aa900fee7ff4f64a5d",
+   "edits": [
+    {
+     "location": "excerto em prosa: «Pregava Santo António em Itália na cidade de Arimi»",
+     "old": "<blockquote class=\\\"cit\\\"><p>Pregava Santo António em Itália na ci",
+     "new": "<blockquote class=\\\"cit prosa\\\"><p>Pregava Santo António em Itália na ci",
+     "occurrences": 1
+    },
+    {
+     "location": "excerto em prosa: «Antes, porém, que vos vás embora, assim como ouvis»",
+     "old": "<blockquote class=\\\"cit\\\"><p>Antes, porém, que vos vás embora, ass",
+     "new": "<blockquote class=\\\"cit prosa\\\"><p>Antes, porém, que vos vás embora, ass",
+     "occurrences": 1
+    },
+    {
+     "location": "excerto em prosa: «[…] sendo pequenos, não só se chegam a outros maio»",
+     "old": "<blockquote class=\\\"cit\\\"><p>[…] sendo pequenos, não só se chegam ",
+     "new": "<blockquote class=\\\"cit prosa\\\"><p>[…] sendo pequenos, não só se chegam ",
+     "occurrences": 1
+    },
+    {
+     "location": "excerto em prosa: «O Polvo, com aquele seu capelo na cabeça, parece u»",
+     "old": "<blockquote class=\\\"cit\\\"><p>O Polvo, com aquele seu capelo na cab",
+     "new": "<blockquote class=\\\"cit prosa\\\"><p>O Polvo, com aquele seu capelo na cab",
+     "occurrences": 1
+    },
+    {
+     "location": "excerto em prosa: «Oh que boa doutrina era esta para a terra, se eu n»",
+     "old": "<blockquote class=\\\"cit\\\"><p>Oh que boa doutrina era esta para a t",
+     "new": "<blockquote class=\\\"cit prosa\\\"><p>Oh que boa doutrina era esta para a t",
+     "occurrences": 1
+    },
+    {
+     "location": "excerto em prosa: «Ah peixes, quantas invejas vos tenho a essa natura»",
+     "old": "<blockquote class=\\\"cit\\\"><p>Ah peixes, quantas invejas vos tenho ",
+     "new": "<blockquote class=\\\"cit prosa\\\"><p>Ah peixes, quantas invejas vos tenho ",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m5/m5-o-pais-ou-eles/index.html": {
+   "base_sha256_lf": "7a67da48e787204c6f2d95003b4ba4e47b9eef6a475c1b7629339557956d4c9b",
+   "after_sha256_lf": "5bb4087e79144524f345822b87511bf1f14580f9ed369cd6428a475e5f702231",
+   "edits": [
+    {
+     "location": "excerto em prosa: «Mas n'essa noite teve o regosijo de encontrar alli»",
+     "old": "<blockquote class=\\\"cit\\\"><p>Mas n'essa noite teve o regosijo de e",
+     "new": "<blockquote class=\\\"cit prosa\\\"><p>Mas n'essa noite teve o regosijo de e",
+     "occurrences": 1
+    },
+    {
+     "location": "excerto em prosa: «Então, Cohen, diga-nos você, conte-nos cá... O e»",
+     "old": "<blockquote class=\\\"cit\\\"><p>— Então, Cohen, diga-nos você, conte-",
+     "new": "<blockquote class=\\\"cit prosa\\\"><p>— Então, Cohen, diga-nos você, conte-",
+     "occurrences": 1
+    },
+    {
+     "location": "excerto em prosa: «Então Ega perguntou, do fundo do sofá onde se ente»",
+     "old": "<blockquote class=\\\"cit\\\"><p>Então Ega perguntou, do fundo do sofá",
+     "new": "<blockquote class=\\\"cit prosa\\\"><p>Então Ega perguntou, do fundo do sofá",
+     "occurrences": 1
+    },
+    {
+     "location": "excerto em prosa: «As semanas foram passando n'estes planos de instal»",
+     "old": "<blockquote class=\\\"cit\\\"><p>As semanas foram passando n'estes pla",
+     "new": "<blockquote class=\\\"cit prosa\\\"><p>As semanas foram passando n'estes pla",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m5/m5-quem-podia-ter-feito-diferente/index.html": {
+   "base_sha256_lf": "1011f607b0e59c0fa8785f444f5c379ca1f521ab0b511231b7b8c9ee0098a847",
+   "after_sha256_lf": "c63b1c0e7ffd53ddc2da639d51beb5ee09093677403aa71a4352d817d25e9eca",
+   "edits": [
+    {
+     "location": "excerto em prosa: «Folheando os livros de antigos assentamentos, no c»",
+     "old": "<blockquote class=\\\"cit\\\"><p>Folheando os livros de antigos assent",
+     "new": "<blockquote class=\\\"cit prosa\\\"><p>Folheando os livros de antigos assent",
+     "occurrences": 1
+    },
+    {
+     "location": "excerto em prosa: «Ao romper d'alva, d'um domingo de Junho de 1803, f»",
+     "old": "<blockquote class=\\\"cit\\\"><p>Ao romper d'alva, d'um domingo de Jun",
+     "new": "<blockquote class=\\\"cit prosa\\\"><p>Ao romper d'alva, d'um domingo de Jun",
+     "occurrences": 1
+    },
+    {
+     "location": "excerto em prosa: «O coração de Thereza estava mentindo. Vão lá pedir»",
+     "old": "<blockquote class=\\\"cit\\\"><p>O coração de Thereza estava mentindo.",
+     "new": "<blockquote class=\\\"cit prosa\\\"><p>O coração de Thereza estava mentindo.",
+     "occurrences": 1
+    },
+    {
+     "location": "excerto em prosa: «Se te podesses illudir, meu amigo, quererias antes»",
+     "old": "<blockquote class=\\\"cit\\\"><p>Se te podesses illudir, meu amigo, qu",
+     "new": "<blockquote class=\\\"cit prosa\\\"><p>Se te podesses illudir, meu amigo, qu",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m6/m6-antero-viagem-ao-nada/index.html": {
+   "base_sha256_lf": "c251cdf881363e3740ab0c5bc32f5dc60da01de48dc28727847ab80abe8a01e0",
+   "after_sha256_lf": "3949a7242c06907b1c8dc816b9a1e4893bd6dd5f462d6155b30b8897709d4663",
+   "edits": [
+    {
+     "location": "excerto em prosa: «Mas é que as suas paginas foram escriptas com sang»",
+     "old": "<blockquote class=\\\"cit\\\"><p>Mas é que as suas paginas foram escri",
+     "new": "<blockquote class=\\\"cit prosa\\\"><p>Mas é que as suas paginas foram escri",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m7/m7-quatro-vozes-um-problema/index.html": {
+   "base_sha256_lf": "7b8b5ccb96a6d132a6182760f72b18f4fb22c9801a6189c3e5f7951b5f573f01",
+   "after_sha256_lf": "61c8f01db876179ae5eb791fed73d164aeeec646381cbc7d0ea31ee179a3d111",
+   "edits": [
+    {
+     "location": "excerto em prosa: «Num jacto, e à máquina de escrever, sem interrupçã»",
+     "old": "<blockquote class=\\\"cit\\\"><p>Num jacto, e à máquina de escrever, s",
+     "new": "<blockquote class=\\\"cit prosa\\\"><p>Num jacto, e à máquina de escrever, s",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m8/m8-poema-testemunha/index.html": {
+   "base_sha256_lf": "5944a61ac23bab37f03fa7e37d444e3d70c3fb922d5ff1ae1e6e5c583b62d91a",
+   "after_sha256_lf": "d4f45e68eb0b2c331a041ac51c32e02424c3a1580c9f4492340ecd8267097242",
+   "edits": [
+    {
+     "location": "excerto em prosa: «Uma embarcação com vinte pessoas a bordo foi auxil»",
+     "old": "<blockquote><p>Uma embarcação com vinte pessoas a bo",
+     "new": "<blockquote class=\\\"prosa\\\"><p>Uma embarcação com vinte pessoas a bo",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m9/m9-de-quem-e-o-convento/index.html": {
+   "base_sha256_lf": "a6c9dc941c2b91daa4607447c28cfeafdb5c5068d83c3c0fc332e269b1f23f19",
+   "after_sha256_lf": "8bb0d7c122b1037403c6e74e68977f5930780c7dbd75f0278501aba2f1f858d9",
+   "edits": [
+    {
+     "location": "excerto em prosa: «Aqui o mar acaba e a terra principia.»",
+     "old": "<blockquote class=\\\"cit\\\"><p>Aqui o mar acaba e a terra principia.",
+     "new": "<blockquote class=\\\"cit prosa\\\"><p>Aqui o mar acaba e a terra principia.",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m9/m9-ver-e-nao-ver/index.html": {
+   "base_sha256_lf": "32b35eac204560450a1b85200b0013bad676f0859bcba2b7df9f83de6b76db0d",
+   "after_sha256_lf": "baa73861a52922db8a98e540b289cbaca17e8852064e7ed6487aaf7ba42745f5",
+   "edits": [
+    {
+     "location": "excerto em prosa: «um dia vão separar-se todos e não terá ficado escl»",
+     "old": "<blockquote class=\\\"cit\\\"><p>um dia vão separar-se todos e não ter",
+     "new": "<blockquote class=\\\"cit prosa\\\"><p>um dia vão separar-se todos e não ter",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m5/eca-hotel/index.html": {
+   "base_sha256_lf": "6f488e922b9c3564cd30b144818417a427a731ae032f0273fd2e814a6f186b6f",
+   "after_sha256_lf": "fd21f934e54fb86fb68aa8219759036d023e5f7bfdf29764e70e922dd4f1bb40",
+   "edits": [
+    {
+     "location": "passo «Ler»: prosa dialogada com <br>: «Isso é absurdo, dizia Carlos»",
+     "old": "<p><i>— Isso é absurdo, dizia Carlos",
+     "new": "<p class=\\\"prosa\\\"><i>— Isso é absurdo, dizia Carlos",
+     "occurrences": 1
+    },
+    {
+     "location": "passo «Ler»: prosa dialogada com <br>: «Carlos não entendia de finanças»",
+     "old": "<p><i>Carlos não entendia de finanças",
+     "new": "<p class=\\\"prosa\\\"><i>Carlos não entendia de finanças",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m5/camilo-pai/index.html": {
+   "base_sha256_lf": "6eefd03dc3525dd6d8eea75a1c49e30b8722023f1616078596ff15700e83c1d1",
+   "after_sha256_lf": "42ac7e8a6d85410e14fc4464641cc8bbee660ba41f83086b7596826e905b8828",
+   "edits": [
+    {
+     "location": "passo «Ler»: prosa dialogada com <br>: «E não será mais certo»",
+     "old": "<p><i>— E não será mais certo",
+     "new": "<p class=\\\"prosa\\\"><i>— E não será mais certo",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m5/camilo-seculo/index.html": {
+   "base_sha256_lf": "08148bdee27b2488dc13d3be1f44e3493db9f17b7214caf83ef6b5c95beadf3e",
+   "after_sha256_lf": "b22f228725120a019fe9117ce73344b666b3e66c4365664d7e989f31c85a4924",
+   "edits": [
+    {
+     "location": "passo «Ler»: prosa dialogada com <br>: «D. Rita, avistando o prestito»",
+     "old": "<p><i>D. Rita, avistando o prestito",
+     "new": "<p class=\\\"prosa\\\"><i>D. Rita, avistando o prestito",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m5/eca-falhamos/index.html": {
+   "base_sha256_lf": "c0a98aa472317bd3390b887c446f6cfb7e77b7ab9792d06107521b12d60434f9",
+   "after_sha256_lf": "74074149a8c430ce3fb50d412c3511bdfb53b0c7e66692582e7efd115ca9ceaf",
+   "edits": [
+    {
+     "location": "passo «Ler»: prosa dialogada com <br>: «E aqui tens tu uma existencia»",
+     "old": "<p><i>— E aqui tens tu uma existencia",
+     "new": "<p class=\\\"prosa\\\"><i>— E aqui tens tu uma existencia",
+     "occurrences": 1
+    },
+    {
+     "location": "passo «Ler»: prosa dialogada com <br>: «Muitas outras coisas dão valor»",
+     "old": "<p><i>— Muitas outras coisas dão valor",
+     "new": "<p class=\\\"prosa\\\"><i>— Muitas outras coisas dão valor",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m1/licao-m1-f01/index.html": {
+   "base_sha256_lf": "7f36ad68c8ff2f924ea5d891a562c219e1315f86d71fa5ff293b60f86b2d4c95",
+   "after_sha256_lf": "3010740ee1183075da8e056579339d026c99df92737324ef6b6e46488989ba09",
+   "edits": [
+    {
+     "location": "parágrafo só com verso citado: «morrerei fremosa no mar maior»",
+     "old": "<p class=\\\"cx\\\">«[e] <span data-c=\\\"a\\\">morrerei <b class=\\\"gt\\\" data-s=\\\"formosa, bela\\\">fremosa</b></span> no <b class=\\\"gt\\\" data-s=\\\"mar alto\\\">mar maior</b>.»</p>",
+     "new": "<p class=\\\"cx verso\\\">«[e] <span data-c=\\\"a\\\">morrerei <b class=\\\"gt\\\" data-s=\\\"formosa, bela\\\">fremosa</b></span> no <b class=\\\"gt\\\" data-s=\\\"mar alto\\\">mar maior</b>.»</p>",
+     "occurrences": 1
+    },
+    {
+     "location": "parágrafo só com verso citado: «Ler mais»: «A primeira estrofe inteira: «Lourenço jograr, hás mui gram sabor / …»",
+     "old": "<p>A primeira estrofe inteira: «Lourenço jograr",
+     "new": "<p class=\\\"verso\\\">A primeira estrofe inteira: «Lourenço jograr",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m1/licao-m1-f04/index.html": {
+   "base_sha256_lf": "1bef2ba231353bc07d74eaa959879e65d2b044f97740b3afba2224b24f3a06ef",
+   "after_sha256_lf": "aaf5585efd8b6837267aca5ba1305c828e80dec48994cd55cbaf5b420cc62362",
+   "edits": [
+    {
+     "location": "parágrafo só com verso citado: «querrei muit»",
+     "old": "<p class=\\\"cx\\\">«e <b class=\\\"gt\\\" data-s=\\\"quererei\\\">querrei</b> muit'i <span data-c=\\\"a\\\">loar mia senhor</span>»</p>",
+     "new": "<p class=\\\"cx verso\\\">«e <b class=\\\"gt\\\" data-s=\\\"quererei\\\">querrei</b> muit'i <span data-c=\\\"a\\\">loar mia senhor</span>»</p>",
+     "occurrences": 1
+    },
+    {
+     "location": "parágrafo só com verso citado: «tanto a fez Deus comprida»",
+     "old": "<p class=\\\"cx\\\">«tanto a fez Deus <span data-c=\\\"a\\\"><b class=\\\"gt\\\" data-s=\\\"cheia de qualidades\\\">comprida de bem</b></span> / que <span data-c=\\\"b\\\">mais que todas <b class=\\\"gt\\\" data-s=\\\"as\\\">las</b> do mundo <b class=\\\"gt\\\" data-s=\\\"vale\\\">val</b></span>.»</p>",
+     "new": "<p class=\\\"cx verso\\\">«tanto a fez Deus <span data-c=\\\"a\\\"><b class=\\\"gt\\\" data-s=\\\"cheia de qualidades\\\">comprida de bem</b></span> / que <span data-c=\\\"b\\\">mais que todas <b class=\\\"gt\\\" data-s=\\\"as\\\">las</b> do mundo <b class=\\\"gt\\\" data-s=\\\"vale\\\">val</b></span>.»</p>",
+     "occurrences": 1
+    },
+    {
+     "location": "parágrafo só com verso citado: «e vedes como vos quero loar: / dona»",
+     "old": "<p class=\\\"cx\\\">«e vedes como vos quero <span data-c=\\\"a\\\">loar</span>: / <span data-c=\\\"b\\\">dona fea, velha e sandia!</span>»</p>",
+     "new": "<p class=\\\"cx verso\\\">«e vedes como vos quero <span data-c=\\\"a\\\">loar</span>: / <span data-c=\\\"b\\\">dona fea, velha e sandia!</span>»</p>",
+     "occurrences": 1
+    },
+    {
+     "location": "parágrafo só com verso citado: «Quer'eu em maneira de proençal»",
+     "old": "<p class=\\\"cx\\\">«<span data-c=\\\"a\\\">Quer'eu</span> em maneira de proen<span data-c=\\\"b\\\">çal</span>»</p>",
+     "new": "<p class=\\\"cx verso\\\">«<span data-c=\\\"a\\\">Quer'eu</span> em maneira de proen<span data-c=\\\"b\\\">çal</span>»</p>",
+     "occurrences": 1
+    },
+    {
+     "location": "parágrafo só com verso citado: caso: «[…] sei eu bem que nom / ham tam gram coita no seu coraçom / …»",
+     "old": "<p class=\\\"cx\\\">«[…] sei eu bem que nom",
+     "new": "<p class=\\\"cx verso\\\">«[…] sei eu bem que nom",
+     "occurrences": 1
+    },
+    {
+     "location": "parágrafo só com verso citado: «Ler mais»: «A primeira estrofe da cantiga 548, de D. Dinis: «Proençaes soem…»",
+     "old": "<p>A primeira estrofe da cantiga 548",
+     "new": "<p class=\\\"verso\\\">A primeira estrofe da cantiga 548",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m1/licao-m1-f15/index.html": {
+   "base_sha256_lf": "0b80b87eb6729e49b231391ef127dba993c7a98b770a650a9166c5e2279fc294",
+   "after_sha256_lf": "659485bced77a933cca3afde37e5e39a798d88223f8515f83821c591f2e31d90",
+   "edits": [
+    {
+     "location": "parágrafo só com verso citado: «nom hei [eu i] barqueiro»",
+     "old": "<p class=\\\"cx\\\">«nom hei [eu i] barqueiro <span data-c=\\\"b\\\">nem sei remar</span>»</p>",
+     "new": "<p class=\\\"cx verso\\\">«nom hei [eu i] barqueiro <span data-c=\\\"b\\\">nem sei remar</span>»</p>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m2/licao-m2-f07/index.html": {
+   "base_sha256_lf": "311ecf24766aee9ccb858a79dcf0ffd50981e39500253aae0ad738c3562c0a03",
+   "after_sha256_lf": "50aa35cb3543fb87562b6884bc715bd339d823504281dc43e3270554deb8ae16",
+   "edits": [
+    {
+     "location": "parágrafo só com verso citado: «Já vos preguei as janelas, / Por que»",
+     "old": "<p>«Já vos preguei as janelas, / Por que não vos ponhais nelas.»</p>",
+     "new": "<p class=\\\"verso\\\">«Já vos preguei as janelas, / Por que não vos ponhais nelas.»</p>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/frei-luis-ninguem/index.html": {
+   "base_sha256_lf": "a65544a7d92f095b97ddcd728679ade5c687f65c238631ccbd6efe57c8bba5a6",
+   "after_sha256_lf": "3966c245667f4367e43cca0e67fca493114021e53c8f5e1fdb1dd2b817fd8df9",
+   "edits": [
+    {
+     "location": "passo «Ler»: prosa dialogada com <br>: «JORGE: Romeiro, romeiro! quem és tu?»",
+     "old": "<p><i>JORGE: Romeiro, romeiro! quem és tu?<br>",
+     "new": "<p class=\\\"prosa\\\"><i>JORGE: Romeiro, romeiro! quem és tu?<br>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "c/compasso-rimas/index.html": {
+   "base_sha256_lf": "995ccf472df3ed450555c3251ac22c4330dd54c40418906cbac2db4b84e357df",
+   "after_sha256_lf": "d6bc8ac8e4a7eb10b69d79c478655d1c3b8e85dbc7e3515cd9a3842c34dc2682",
+   "edits": [
+    {
+     "location": "parágrafo só com verso citado: A. «Ondas do mar de Vigo, / se vistes meu amigo?»",
+     "old": "<p><b>A.</b> «Ondas do mar de Vigo",
+     "new": "<p class=\\\"verso\\\"><b>A.</b> «Ondas do mar de Vigo",
+     "occurrences": 1
+    },
+    {
+     "location": "parágrafo só com verso citado: B. «Sam eu coruja ou corujo, / Ou sam algum caramujo»",
+     "old": "<p><b>B.</b> «Sam eu coruja ou corujo",
+     "new": "<p class=\\\"verso\\\"><b>B.</b> «Sam eu coruja ou corujo",
+     "occurrences": 1
+    },
+    {
+     "location": "parágrafo só com verso citado: C. «Que mortes, que perigos, que tormentas, / Que crueldades…»",
+     "old": "<p><b>C.</b> «Que mortes, que perigos",
+     "new": "<p class=\\\"verso\\\"><b>C.</b> «Que mortes, que perigos",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m1/gram-coordenadas/index.html": {
+   "base_sha256_lf": "eadfe7430deac82f646095b72f16fcf3d34d9429da35e4b878eaf48acd6c1977",
+   "after_sha256_lf": "97d7f5a44d702d036895b63fdd7c39ab58c6437828769e2fbe79550cbcfce900",
+   "edits": [
+    {
+     "location": "parágrafo só com verso citado: A. «Nom hei [eu i] barqueiro nem sei remar.»",
+     "old": "<p><b>A.</b> «Nom hei",
+     "new": "<p class=\\\"verso\\\"><b>A.</b> «Nom hei",
+     "occurrences": 1
+    },
+    {
+     "location": "parágrafo só com verso citado: B. «fostes-vos queixar… / mais ora quero fazer um cantar»",
+     "old": "<p><b>B.</b> «fostes-vos queixar",
+     "new": "<p class=\\\"verso\\\"><b>B.</b> «fostes-vos queixar",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m2/gram-oracoes-farsa/index.html": {
+   "base_sha256_lf": "9a33b2ab8a8c4f3cef46dc6ab9502d2231749574e65d72c9f6b28204221dc5bc",
+   "after_sha256_lf": "73d9c267a47f4069157666d40880fb5312c8430a92a25759ab0e5fa812b5289d",
+   "edits": [
+    {
+     "location": "parágrafo só com verso citado: A. «Se vos eu vejo cantar / Eu vos farei assoviar»",
+     "old": "<p><b>A.</b> «Se vos eu vejo cantar",
+     "new": "<p class=\\\"verso\\\"><b>A.</b> «Se vos eu vejo cantar",
+     "occurrences": 1
+    },
+    {
+     "location": "parágrafo só com verso citado: B. «Já vos preguei as janelas, / Por que não vos ponhais nelas»",
+     "old": "<p><b>B.</b> «Já vos preguei as janelas",
+     "new": "<p class=\\\"verso\\\"><b>B.</b> «Já vos preguei as janelas",
+     "occurrences": 1
+    },
+    {
+     "location": "parágrafo só com verso citado: C. «Quero tomar por esposo / Quem se tenha por ditoso»",
+     "old": "<p><b>C.</b> «Quero tomar por esposo",
+     "new": "<p class=\\\"verso\\\"><b>C.</b> «Quero tomar por esposo",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m3/gram-anafora/index.html": {
+   "base_sha256_lf": "c46ca3f1cca53ad1257c7448a8650a95c5e582a05e3f9b9255f50c6aa22a553f",
+   "after_sha256_lf": "7db8a1d30111ac32c51d66d7a646672107b5cdbc4f7e768dc6ce0c0454ad2773",
+   "edits": [
+    {
+     "location": "parágrafo só com verso citado: A. «Este rende munidas fortalezas, / Faz tredores…»",
+     "old": "<p><b>A.</b> «Este rende munidas fortalezas",
+     "new": "<p class=\\\"verso\\\"><b>A.</b> «Este rende munidas fortalezas",
+     "occurrences": 1
+    },
+    {
+     "location": "parágrafo só com verso citado: B. «Que as Ninfas do Oceano, tão formosas, / …»",
+     "old": "<p><b>B.</b> «Que as Ninfas do Oceano",
+     "new": "<p class=\\\"verso\\\"><b>B.</b> «Que as Ninfas do Oceano",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m6/gram-oracoes-rua/index.html": {
+   "base_sha256_lf": "63207c03d43f16dba44863fe3b7a6dfdf7677eb5c3846e5473a5ab58c3534a78",
+   "after_sha256_lf": "c281a5c0e937d9501701a1d4862c33f3d6c2c58a095165fa00efd0270a4d9889",
+   "edits": [
+    {
+     "location": "parágrafo só com verso citado: A. «Há tal soturnidade, há tal melancolia, / …»",
+     "old": "<p><b>A.</b> «Há tal soturnidade",
+     "new": "<p class=\\\"verso\\\"><b>A.</b> «Há tal soturnidade",
+     "occurrences": 1
+    },
+    {
+     "location": "parágrafo só com verso citado: B. «Sonho que sou um cavaleiro andante.»",
+     "old": "<p><b>B.</b> «Sonho que sou um cavaleiro andante.»",
+     "new": "<p class=\\\"verso\\\"><b>B.</b> «Sonho que sou um cavaleiro andante.»",
+     "occurrences": 1
+    },
+    {
+     "location": "parágrafo só com verso citado: C. «Os filhos que depois naufragam nas tormentas»",
+     "old": "<p><b>C.</b> «Os filhos que depois naufragam",
+     "new": "<p class=\\\"verso\\\"><b>C.</b> «Os filhos que depois naufragam",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m6/cesario-gas/index.html": {
+   "base_sha256_lf": "1ccca17ab7983c706a74d39e4d9b52f1e6a6e5d7ed4c94042fbb06923303c496",
+   "after_sha256_lf": "a681f5bf11f5eaf641260fcff47e18cdd2b4ff03eee1c1456dc8b43f95c1d515",
+   "edits": [
+    {
+     "location": "parágrafo só com verso citado: estrofe citada: «E mais: as costureiras, as floristas / …»",
+     "old": "<p><i>«E mais: as costureiras, as floristas",
+     "new": "<p class=\\\"verso\\\"><i>«E mais: as costureiras, as floristas",
+     "occurrences": 1
+    },
+    {
+     "location": "parágrafo só com verso citado: estrofe citada: «Num cuteleiro, de avental, ao torno, / …»",
+     "old": "<p><i>«Num cuteleiro, de avental, ao torno",
+     "new": "<p class=\\\"verso\\\"><i>«Num cuteleiro, de avental, ao torno",
+     "occurrences": 1
+    },
+    {
+     "location": "parágrafo só com verso citado: estrofe citada: «“Dó da miséria!… Compaixão de mim!…” / …»",
+     "old": "<p><i>«“Dó da miséria!",
+     "new": "<p class=\\\"verso\\\"><i>«“Dó da miséria!",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m2/licao-m2-f12/index.html": {
+   "base_sha256_lf": "afd1faf3f4533a239fa6b69c7cb4a4b7bcf9526cbb609dfdebfc136b0ca8a742",
+   "after_sha256_lf": "8f3a909b6bb0ebf1e865b13dd13f48ddd2da186b3f53b9928dc5b64f5a9bf2c7",
+   "edits": [
+    {
+     "location": "parágrafo só com verso citado: Fidalgo: «Sou fidalgo de solar, / é bem que me recolhais.»",
+     "old": "<p><b>Fidalgo:</b> «Sou fidalgo de solar",
+     "new": "<p class=\\\"verso\\\"><b>Fidalgo:</b> «Sou fidalgo de solar",
+     "occurrences": 1
+    },
+    {
+     "location": "parágrafo só com verso citado: Anjo: «Não se embarca tirania / neste batel divinal.»",
+     "old": "<p><b>Anjo:</b> «Não se embarca tirania",
+     "new": "<p class=\\\"verso\\\"><b>Anjo:</b> «Não se embarca tirania",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m2/licao-m2-f13/index.html": {
+   "base_sha256_lf": "a93512bd57fdb0c4f537889c452dc961e725589e7d5afc6d6ada0371051b341e",
+   "after_sha256_lf": "011a50894ffd868994f4d86605e3c11fe8536db65eb06606c186c2650a6b9739",
+   "edits": [
+    {
+     "location": "parágrafo só com verso citado: Sapateiro: «Como poderá isso ser, / confessado e comungado?!...»",
+     "old": "<p><b>Sapateiro:</b> «Como poderá isso ser",
+     "new": "<p class=\\\"verso\\\"><b>Sapateiro:</b> «Como poderá isso ser",
+     "occurrences": 1
+    },
+    {
+     "location": "parágrafo só com verso citado: Diabo: «Tu roubaste bem trint’anos / o povo com teu mester.»",
+     "old": "<p><b>Diabo:</b> «Tu roubaste bem trint’anos / o povo com teu mester.»</p>",
+     "new": "<p class=\\\"verso\\\"><b>Diabo:</b> «Tu roubaste bem trint’anos / o povo com teu mester.»</p>",
+     "occurrences": 1
+    },
+    {
+     "location": "parágrafo só com verso citado: Sapateiro: «Quantas missas eu ouvi, / nom me hão elas de prestar?»",
+     "old": "<p><b>Sapateiro:</b> «Quantas missas eu ouvi",
+     "new": "<p class=\\\"verso\\\"><b>Sapateiro:</b> «Quantas missas eu ouvi",
+     "occurrences": 1
+    },
+    {
+     "location": "parágrafo só com verso citado: Diabo: «Ouvir missa, então roubar, / é caminho per’aqui.»",
+     "old": "<p><b>Diabo:</b> «Ouvir missa, então roubar, / é caminho per’aqui.»</p>",
+     "new": "<p class=\\\"verso\\\"><b>Diabo:</b> «Ouvir missa, então roubar, / é caminho per’aqui.»</p>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m7/licao-m7-f34/index.html": {
+   "base_sha256_lf": "f6cb41cef891ba506e903a7f196193897efea709859a9adc0c1740bb2ddb2c53",
+   "after_sha256_lf": "ac6898a5837c6064c9bffe6e3b2c1a3eaa6c144c6d29af050fe5c71c5d9f864b",
+   "edits": [
+    {
+     "location": "parágrafo só com verso citado: modelo: «Exemplo inventado: «O autocarro trava… / A campainha da escola…»",
+     "old": "<p>Exemplo inventado: «O autocarro trava",
+     "new": "<p class=\\\"verso\\\">Exemplo inventado: «O autocarro trava",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m3/camoes-desconcerto/index.html": {
+   "base_sha256_lf": "40c976153edf34f9430e0ce5d99a499c2aea8bebc15eef5a403410099930f927",
+   "after_sha256_lf": "1c1ddc02e36c3365b71560e45893957a549400f35329c1cf819ba18f15f4c687",
+   "edits": [
+    {
+     "location": "parágrafo só com verso citado: rótulo C e «Erros meus, má fortuna, amor ardente»",
+     "old": "<p><b>C</b> — «Erros meus, má fortuna, amor ardente»:",
+     "new": "<p class=\\\"verso\\\"><b>C</b> — «Erros meus, má fortuna, amor ardente»:",
+     "occurrences": 1
+    },
+    {
+     "location": "parágrafo só com verso citado: rótulo D e «Tanto de meu estado me acho incerto»",
+     "old": "<p><b>D</b> — «Tanto de meu estado me acho incerto»:",
+     "new": "<p class=\\\"verso\\\"><b>D</b> — «Tanto de meu estado me acho incerto»:",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m7/gram-valores-pessoa/index.html": {
+   "base_sha256_lf": "025ef353db61b233b117724bb96b802eed3a2bc799cb323c5aa7528d54cee062",
+   "after_sha256_lf": "a3f7f8724fe74e7f9c838aa9757b2f9eac3dda2cf63dcaf1ba14f059028646dc",
+   "edits": [
+    {
+     "location": "parágrafo só com verso citado: «A. Eu era feliz e ninguém estava morto.»",
+     "old": "<p><b>A.</b> «Eu era feliz e ninguém",
+     "new": "<p class=\\\"verso\\\"><b>A.</b> «Eu era feliz e ninguém",
+     "occurrences": 1
+    },
+    {
+     "location": "parágrafo só com verso citado: «B. Cumpriu-se o Mar, e o Império se desfez.»",
+     "old": "<p><b>B.</b> «Cumpriu-se o Mar, e o Império se desfez.» (",
+     "new": "<p class=\\\"verso\\\"><b>B.</b> «Cumpriu-se o Mar, e o Império se desfez.» (",
+     "occurrences": 1
+    },
+    {
+     "location": "parágrafo só com verso citado: «C. Julgando-se feliz talvez»",
+     "old": "<p><b>C.</b> «Julgando-se feliz talvez» (",
+     "new": "<p class=\\\"verso\\\"><b>C.</b> «Julgando-se feliz talvez» (",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m2/gram-formacao/index.html": {
+   "base_sha256_lf": "169a7a2593d610e6426457b75f92cfefeb4ee649184c20b599428c7ca4ff194a",
+   "after_sha256_lf": "0cec4291994b87702805b39e9fa48bb13530c1d0823433a6518238d4a6daef53",
+   "edits": [
+    {
+     "location": "parágrafo só com verso citado: «A. Oh Jesu! que enfadamento»",
+     "old": "<p><b>A.</b> «Oh Jesu! que <i>enfadamento</i>»",
+     "new": "<p class=\\\"verso\\\"><b>A.</b> «Oh Jesu! que <i>enfadamento</i>»",
+     "occurrences": 1
+    },
+    {
+     "location": "parágrafo só com verso citado: «B. Me tire do cativeiro»",
+     "old": "<p><b>B.</b> «Me tire do <i>cativeiro</i>»",
+     "new": "<p class=\\\"verso\\\"><b>B.</b> «Me tire do <i>cativeiro</i>»",
+     "occurrences": 1
+    },
+    {
+     "location": "parágrafo só com verso citado: «C. Em poder de desfiados»",
+     "old": "<p><b>C.</b> «Em poder de <i>desfiados</i>»",
+     "new": "<p class=\\\"verso\\\"><b>C.</b> «Em poder de <i>desfiados</i>»",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m3/gram-modalidade/index.html": {
+   "base_sha256_lf": "1cc3530f985d5d3edc78c4bc765a23cb8509996879177a324d440b5e53432e8b",
+   "after_sha256_lf": "935e9a9e290ebdf3725deb4b7ce2eca0a9d498b40e4d29f5d163c8e2d75ae2ee",
+   "edits": [
+    {
+     "location": "parágrafo só com verso citado: «A. Dai-me agora um som alto e sublimado»",
+     "old": "<p><b>A.</b> «Dai-me agora um som alto e sublimado",
+     "new": "<p class=\\\"verso\\\"><b>A.</b> «Dai-me agora um som alto e sublimado",
+     "occurrences": 1
+    },
+    {
+     "location": "parágrafo só com verso citado: «B. Roga a Deus, que teus anos encurtou»",
+     "old": "<p><b>B.</b> «Roga a Deus, que teus anos encurtou",
+     "new": "<p class=\\\"verso\\\"><b>B.</b> «Roga a Deus, que teus anos encurtou",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/recursos/tpc-entrada.js": {
+   "base_sha256_lf": "6fe893a4958e19f20dde7e13f37484f163228ffd987a7aec87f117548ef55367",
+   "after_sha256_lf": "0b93783d93ddfcd90037001355c37d17d59c7e9f1850216fd4c90277ae9cc317",
+   "edits": [
+    {
+     "location": "fala de Madalena: «Oh! que o não saiba ele ao menos, que não suspeite…»",
+     "old": "<blockquote>«Oh! que o não saiba ele ao menos, que não suspeite",
+     "new": "<blockquote class=\\\"prosa\\\">«Oh! que o não saiba ele ao menos, que não suspeite",
+     "occurrences": 1
+    },
+    {
+     "location": "didascália: «MAGDALENA so, sentada junto á banca…»",
+     "old": "<blockquote>«MAGDALENA so",
+     "new": "<blockquote class=\\\"prosa\\\">«MAGDALENA so",
+     "occurrences": 1
+    },
+    {
+     "location": "fala de Madalena, abertura: «Oh! que o não saiba ele ao menos…»",
+     "old": "<blockquote>«Oh! que o não saiba ele ao menos…»</blockquote>",
+     "new": "<blockquote class=\\\"prosa\\\">«Oh! que o não saiba ele ao menos…»</blockquote>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "c/quinta-mandamentos/index.html": {
+   "base_sha256_lf": "9d4687c7352014418f4fcc64bc26b38ee05661fe3fe9bfb217b16c3128c5b420",
+   "after_sha256_lf": "111b54962ed0279b335354eb23869b0bd15a2bdde1f49f27b1196bf913b9694c",
+   "edits": [
+    {
+     "location": "frase original em inglês: «ALL ANIMALS ARE EQUAL…»",
+     "old": "No original: <i>ALL ANIMALS",
+     "new": "No original: <i lang=\\\"en\\\">ALL ANIMALS",
+     "occurrences": 1
+    }
+   ]
+  },
+  "atlas/index.html": {
+   "base_sha256_lf": "0a9ccb21864e7d2109ac370700497df11f068928b737df38363be59eec5d7b15",
+   "after_sha256_lf": "92b957dcb92608e976eb532bc0d1530e17800768928c591d94c83ad19801da92",
+   "edits": [
+    {
+     "location": "nota de método: título da série «Pictures of Garbage», em inglês",
+     "old": "a série <i>Pictures of Garbage</i>, de Vik Muniz",
+     "new": "a série <i lang=\"en\">Pictures of Garbage</i>, de Vik Muniz",
+     "occurrences": 1
+    }
+   ]
+  }
+ }
+}
