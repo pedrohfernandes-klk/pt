@@ -1,0 +1,586 @@
+[
+ {
+  "ficheiro": "assets/exame/sessoes.json",
+  "local": "«Qual + nome» (pedido do docente de 30/10/2026",
+  "antigo": "Qual nota explica uma revisão?",
+  "novo": "Qual destas notas explica uma revisão?",
+  "ocorrencias": 1,
+  "achado": "«Qual + nome» (pedido do docente de 30/10/2026: em português europeu, «Qual das…» ou «Que…»)"
+ },
+ {
+  "ficheiro": "assets/exame/sessoes.json",
+  "local": "«Qual + nome» (pedido do docente de 30/10/2026",
+  "antigo": ", qual ação aplica melhor",
+  "novo": ", que ação aplica melhor",
+  "ocorrencias": 1,
+  "achado": "«Qual + nome» (pedido do docente de 30/10/2026: em português europeu, «Qual das…» ou «Que…»)"
+ },
+ {
+  "ficheiro": "assets/exame/sessoes.json",
+  "local": "«Qual + nome» (pedido do docente de 30/10/2026",
+  "antigo": "Qual registo ajuda mais",
+  "novo": "Qual destes registos ajuda mais",
+  "ocorrencias": 1,
+  "achado": "«Qual + nome» (pedido do docente de 30/10/2026: em português europeu, «Qual das…» ou «Que…»)"
+ },
+ {
+  "ficheiro": "assets/exame/sessoes.json",
+  "local": "«Qual + nome» (pedido do docente de 30/10/2026",
+  "antigo": "Qual início delimita",
+  "novo": "Qual destes inícios delimita",
+  "ocorrencias": 2,
+  "achado": "«Qual + nome» (pedido do docente de 30/10/2026: em português europeu, «Qual das…» ou «Que…»)"
+ },
+ {
+  "ficheiro": "assets/exame/sessoes.json",
+  "local": "«Qual + nome» (pedido do docente de 30/10/2026",
+  "antigo": "Qual alteração torna",
+  "novo": "Que alteração torna",
+  "ocorrencias": 1,
+  "achado": "«Qual + nome» (pedido do docente de 30/10/2026: em português europeu, «Qual das…» ou «Que…»)"
+ },
+ {
+  "ficheiro": "assets/pt-lessons/m3-f18.js",
+  "local": "«Qual + nome» (pedido do docente de 30/10/2026",
+  "antigo": "Qual síntese usa os três recortes",
+  "novo": "Qual das sínteses usa os três recortes",
+  "ocorrencias": 1,
+  "achado": "«Qual + nome» (pedido do docente de 30/10/2026: em português europeu, «Qual das…» ou «Que…»)"
+ },
+ {
+  "ficheiro": "m1/aulas/aula-05/index.html",
+  "local": "«Qual + nome» (pedido do docente de 30/10/2026",
+  "antigo": "Qual promessa é irónica",
+  "novo": "Qual das promessas é irónica",
+  "ocorrencias": 1,
+  "achado": "«Qual + nome» (pedido do docente de 30/10/2026: em português europeu, «Qual das…» ou «Que…»)"
+ },
+ {
+  "ficheiro": "m1/licao-m1-f19/index.html",
+  "local": "«Qual + nome» (pedido do docente de 30/10/2026",
+  "antigo": "Qual promessa é irónica",
+  "novo": "Qual das promessas é irónica",
+  "ocorrencias": 1,
+  "achado": "«Qual + nome» (pedido do docente de 30/10/2026: em português europeu, «Qual das…» ou «Que…»)"
+ },
+ {
+  "ficheiro": "m2/gram-subordinadas/index.html",
+  "local": "«Qual + nome» (pedido do docente de 30/10/2026",
+  "antigo": "Responde a «qual homem?»",
+  "novo": "Responde a «que homem?»",
+  "ocorrencias": 1,
+  "achado": "«Qual + nome» (pedido do docente de 30/10/2026: em português europeu, «Qual das…» ou «Que…»)"
+ },
+ {
+  "ficheiro": "m2/index.html",
+  "local": "«Qual + nome» (pedido do docente de 30/10/2026",
+  "antigo": "diz qual homem casa",
+  "novo": "diz que homem casa",
+  "ocorrencias": 1,
+  "achado": "«Qual + nome» (pedido do docente de 30/10/2026: em português europeu, «Qual das…» ou «Que…»)"
+ },
+ {
+  "ficheiro": "m2/licao-m2-f11/index.html",
+  "local": "«Qual + nome» (pedido do docente de 30/10/2026",
+  "antigo": "Qual afirmação permite discutir Inês",
+  "novo": "Qual das afirmações permite discutir Inês",
+  "ocorrencias": 1,
+  "achado": "«Qual + nome» (pedido do docente de 30/10/2026: em português europeu, «Qual das…» ou «Que…»)"
+ },
+ {
+  "ficheiro": "m2/licao-m2-f11/index.html",
+  "local": "«Qual + nome» (pedido do docente de 30/10/2026",
+  "antigo": "a relativa diz qual homem,",
+  "novo": "a relativa diz que homem,",
+  "ocorrencias": 1,
+  "achado": "«Qual + nome» (pedido do docente de 30/10/2026: em português europeu, «Qual das…» ou «Que…»)"
+ },
+ {
+  "ficheiro": "m2/licao-m2-f11/index.html",
+  "local": "«Qual + nome» (pedido do docente de 30/10/2026",
+  "antigo": "diz qual homem casa",
+  "novo": "diz que homem casa",
+  "ocorrencias": 1,
+  "achado": "«Qual + nome» (pedido do docente de 30/10/2026: em português europeu, «Qual das…» ou «Que…»)"
+ },
+ {
+  "ficheiro": "m2/licao-m2-f12/index.html",
+  "local": "«Qual + nome» (pedido do docente de 30/10/2026",
+  "antigo": "Qual comparação explica funções",
+  "novo": "Qual das comparações explica funções",
+  "ocorrencias": 1,
+  "achado": "«Qual + nome» (pedido do docente de 30/10/2026: em português europeu, «Qual das…» ou «Que…»)"
+ },
+ {
+  "ficheiro": "m2/licao-m2-f13/index.html",
+  "local": "«Qual + nome» (pedido do docente de 30/10/2026",
+  "antigo": "Qual interpretação responde",
+  "novo": "Qual das interpretações responde",
+  "ocorrencias": 1,
+  "achado": "«Qual + nome» (pedido do docente de 30/10/2026: em português europeu, «Qual das…» ou «Que…»)"
+ },
+ {
+  "ficheiro": "m2/licao-m2-f13/index.html",
+  "local": "«Qual + nome» (pedido do docente de 30/10/2026",
+  "antigo": "Qual revisão reconhece",
+  "novo": "Qual das revisões reconhece",
+  "ocorrencias": 1,
+  "achado": "«Qual + nome» (pedido do docente de 30/10/2026: em português europeu, «Qual das…» ou «Que…»)"
+ },
+ {
+  "ficheiro": "m2/painel-m2-f11/index.html",
+  "local": "«Qual + nome» (pedido do docente de 30/10/2026",
+  "antigo": "a relativa diz qual homem,",
+  "novo": "a relativa diz que homem,",
+  "ocorrencias": 1,
+  "achado": "«Qual + nome» (pedido do docente de 30/10/2026: em português europeu, «Qual das…» ou «Que…»)"
+ },
+ {
+  "ficheiro": "m2/painel-m2-f11/index.html",
+  "local": "«Qual + nome» (pedido do docente de 30/10/2026",
+  "antigo": "diz qual homem casa",
+  "novo": "diz que homem casa",
+  "ocorrencias": 1,
+  "achado": "«Qual + nome» (pedido do docente de 30/10/2026: em português europeu, «Qual das…» ou «Que…»)"
+ },
+ {
+  "ficheiro": "m2/painel-m2-f12/index.html",
+  "local": "«Qual + nome» (pedido do docente de 30/10/2026",
+  "antigo": "Qual comparação explica funções",
+  "novo": "Qual das comparações explica funções",
+  "ocorrencias": 1,
+  "achado": "«Qual + nome» (pedido do docente de 30/10/2026: em português europeu, «Qual das…» ou «Que…»)"
+ },
+ {
+  "ficheiro": "m2/painel-m2-f13/index.html",
+  "local": "«Qual + nome» (pedido do docente de 30/10/2026",
+  "antigo": "Qual interpretação responde",
+  "novo": "Qual das interpretações responde",
+  "ocorrencias": 1,
+  "achado": "«Qual + nome» (pedido do docente de 30/10/2026: em português europeu, «Qual das…» ou «Que…»)"
+ },
+ {
+  "ficheiro": "m2/painel-m2-f13/index.html",
+  "local": "«Qual + nome» (pedido do docente de 30/10/2026",
+  "antigo": "Qual revisão reconhece",
+  "novo": "Qual das revisões reconhece",
+  "ocorrencias": 1,
+  "achado": "«Qual + nome» (pedido do docente de 30/10/2026: em português europeu, «Qual das…» ou «Que…»)"
+ },
+ {
+  "ficheiro": "m3/index.html",
+  "local": "«Qual + nome» (pedido do docente de 30/10/2026",
+  "antigo": "Qual síntese usa os três recortes",
+  "novo": "Qual das sínteses usa os três recortes",
+  "ocorrencias": 1,
+  "achado": "«Qual + nome» (pedido do docente de 30/10/2026: em português europeu, «Qual das…» ou «Que…»)"
+ },
+ {
+  "ficheiro": "m4/gram-deiticos/index.html",
+  "local": "«Qual + nome» (pedido do docente de 30/10/2026",
+  "antigo": "Qual par cumpre?",
+  "novo": "Qual dos pares cumpre?",
+  "ocorrencias": 1,
+  "achado": "«Qual + nome» (pedido do docente de 30/10/2026: em português europeu, «Qual das…» ou «Que…»)"
+ },
+ {
+  "ficheiro": "m5/gram-dil/index.html",
+  "local": "«Qual + nome» (pedido do docente de 30/10/2026",
+  "antigo": "Qual trio apresenta",
+  "novo": "Qual dos trios apresenta",
+  "ocorrencias": 1,
+  "achado": "«Qual + nome» (pedido do docente de 30/10/2026: em português europeu, «Qual das…» ou «Que…»)"
+ },
+ {
+  "ficheiro": "m5/licao-m5-f04/index.html",
+  "local": "«Qual + nome» (pedido do docente de 30/10/2026",
+  "antigo": "não de qual palavra vem primeiro",
+  "novo": "não da ordem das palavras",
+  "ocorrencias": 1,
+  "achado": "«Qual + nome» (pedido do docente de 30/10/2026: em português europeu, «Qual das…» ou «Que…»)"
+ },
+ {
+  "ficheiro": "m5/licao-m5-f07/index.html",
+  "local": "«Qual + nome» (pedido do docente de 30/10/2026",
+  "antigo": "diz qual menina",
+  "novo": "diz que menina",
+  "ocorrencias": 3,
+  "achado": "«Qual + nome» (pedido do docente de 30/10/2026: em português europeu, «Qual das…» ou «Que…»)"
+ },
+ {
+  "ficheiro": "m5/painel-m5-f07/index.html",
+  "local": "«Qual + nome» (pedido do docente de 30/10/2026",
+  "antigo": "diz qual menina",
+  "novo": "diz que menina",
+  "ocorrencias": 2,
+  "achado": "«Qual + nome» (pedido do docente de 30/10/2026: em português europeu, «Qual das…» ou «Que…»)"
+ },
+ {
+  "ficheiro": "m6/index.html",
+  "local": "«Qual + nome» (pedido do docente de 30/10/2026",
+  "antigo": "qual justificação avança mais?",
+  "novo": "que justificação avança mais?",
+  "ocorrencias": 1,
+  "achado": "«Qual + nome» (pedido do docente de 30/10/2026: em português europeu, «Qual das…» ou «Que…»)"
+ },
+ {
+  "ficheiro": "m6/licao-m6-f08/index.html",
+  "local": "«Qual + nome» (pedido do docente de 30/10/2026",
+  "antigo": "qual justificação avança mais?",
+  "novo": "que justificação avança mais?",
+  "ocorrencias": 1,
+  "achado": "«Qual + nome» (pedido do docente de 30/10/2026: em português europeu, «Qual das…» ou «Que…»)"
+ },
+ {
+  "ficheiro": "m6/licao-m6-f12/index.html",
+  "local": "«Qual + nome» (pedido do docente de 30/10/2026",
+  "antigo": "Qual frase usa melhor",
+  "novo": "Qual das frases usa melhor",
+  "ocorrencias": 1,
+  "achado": "«Qual + nome» (pedido do docente de 30/10/2026: em português europeu, «Qual das…» ou «Que…»)"
+ },
+ {
+  "ficheiro": "m6/licao-m6-f13/index.html",
+  "local": "«Qual + nome» (pedido do docente de 30/10/2026",
+  "antigo": "Qual desenvolvimento melhora",
+  "novo": "Qual dos desenvolvimentos melhora",
+  "ocorrencias": 1,
+  "achado": "«Qual + nome» (pedido do docente de 30/10/2026: em português europeu, «Qual das…» ou «Que…»)"
+ },
+ {
+  "ficheiro": "m6/licao-m6-f13/index.html",
+  "local": "«Qual + nome» (pedido do docente de 30/10/2026",
+  "antigo": "Qual comparação mantém",
+  "novo": "Qual das comparações mantém",
+  "ocorrencias": 1,
+  "achado": "«Qual + nome» (pedido do docente de 30/10/2026: em português europeu, «Qual das…» ou «Que…»)"
+ },
+ {
+  "ficheiro": "m6/painel-m6-f12/index.html",
+  "local": "«Qual + nome» (pedido do docente de 30/10/2026",
+  "antigo": "Qual frase usa melhor",
+  "novo": "Qual das frases usa melhor",
+  "ocorrencias": 1,
+  "achado": "«Qual + nome» (pedido do docente de 30/10/2026: em português europeu, «Qual das…» ou «Que…»)"
+ },
+ {
+  "ficheiro": "m6/painel-m6-f13/index.html",
+  "local": "«Qual + nome» (pedido do docente de 30/10/2026",
+  "antigo": "Qual desenvolvimento melhora",
+  "novo": "Qual dos desenvolvimentos melhora",
+  "ocorrencias": 1,
+  "achado": "«Qual + nome» (pedido do docente de 30/10/2026: em português europeu, «Qual das…» ou «Que…»)"
+ },
+ {
+  "ficheiro": "m6/painel-m6-f13/index.html",
+  "local": "«Qual + nome» (pedido do docente de 30/10/2026",
+  "antigo": "Qual comparação mantém",
+  "novo": "Qual das comparações mantém",
+  "ocorrencias": 1,
+  "achado": "«Qual + nome» (pedido do docente de 30/10/2026: em português europeu, «Qual das…» ou «Que…»)"
+ },
+ {
+  "ficheiro": "m7/guia-da-tarefa-m7/index.html",
+  "local": "M7-U2",
+  "antigo": "\"titulo\":\"Uma ideia de heterónimo\",\"quem\":\"individual\",\"grupo\":false,\"passos\":[\"No início da aula, faz o aquecimento em cartões (10 a 15 minutos).",
+  "novo": "\"titulo\":\"Uma ideia de heterónimo\",\"quem\":\"individual\",\"grupo\":false,\"passos\":[\"No início da aula, faz o aquecimento em cartões (10 minutos).",
+  "ocorrencias": 1,
+  "achado": "M7-U2: aquecimento fixo de 10 minutos, dentro dos 90 (decisão 3a de 30/10/2026)"
+ },
+ {
+  "ficheiro": "m7/index.html",
+  "local": "M7-U2",
+  "antigo": "No início da aula de tarefa: cartões que ativam o que a tarefa vai pedir.</span></span><span class=\"chip\">10 a 15 min</span>",
+  "novo": "No início da aula de tarefa: cartões que ativam o que a tarefa vai pedir.</span></span><span class=\"chip\">10 min</span>",
+  "ocorrencias": 1,
+  "achado": "M7-U2: aquecimento fixo de 10 minutos, dentro dos 90 (decisão 3a de 30/10/2026)"
+ },
+ {
+  "ficheiro": "m7/index.html",
+  "local": "M7-F13",
+  "antigo": "sente está pensando",
+  "novo": "sente 'stá pensando",
+  "ocorrencias": 1,
+  "achado": "M7-F13: versos 12 e 14 como na Athena, n.º 3, 1924, em grafia atualizada (decisão 4b de 30/10/2026)"
+ },
+ {
+  "ficheiro": "m7/index.html",
+  "local": "M7-F13",
+  "antigo": "Ó campo! Ó canção!",
+  "novo": "Ó campo! ó canção!",
+  "ocorrencias": 2,
+  "achado": "M7-F13: versos 12 e 14 como na Athena, n.º 3, 1924, em grafia atualizada (decisão 4b de 30/10/2026)"
+ },
+ {
+  "ficheiro": "m7/licao-m7-f13/index.html",
+  "local": "M7-F13",
+  "antigo": "Fontes: Fernando Pessoa, <i>Poesias</i>, Ática, 1942; Arquivo Pessoa.",
+  "novo": "Fontes: Fernando Pessoa, <i>Athena</i>, n.º 3, 1924 (grafia atualizada).",
+  "ocorrencias": 1,
+  "achado": "M7-F13: versos 12 e 14 como na Athena, n.º 3, 1924, em grafia atualizada (decisão 4b de 30/10/2026)"
+ },
+ {
+  "ficheiro": "m7/licao-m7-f13/index.html",
+  "local": "M7-F13",
+  "antigo": "Fernando Pessoa, _Poesias_, Ática, 1942; Arquivo Pessoa.",
+  "novo": "Fernando Pessoa, _Athena_, n.º 3, 1924 (grafia atualizada).",
+  "ocorrencias": 1,
+  "achado": "M7-F13: versos 12 e 14 como na Athena, n.º 3, 1924, em grafia atualizada (decisão 4b de 30/10/2026)"
+ },
+ {
+  "ficheiro": "m7/licao-m7-f13/index.html",
+  "local": "M7-F13",
+  "antigo": "Fernando Pessoa, _Poesias_, 1942",
+  "novo": "Fernando Pessoa, _Athena_, 1924",
+  "ocorrencias": 1,
+  "achado": "M7-F13: versos 12 e 14 como na Athena, n.º 3, 1924, em grafia atualizada (decisão 4b de 30/10/2026)"
+ },
+ {
+  "ficheiro": "m7/licao-m7-f13/index.html",
+  "local": "M7-F13",
+  "antigo": "razões para cantar que a vida",
+  "novo": "razões p'ra cantar que a vida",
+  "ocorrencias": 4,
+  "achado": "M7-F13: versos 12 e 14 como na Athena, n.º 3, 1924, em grafia atualizada (decisão 4b de 30/10/2026)"
+ },
+ {
+  "ficheiro": "m7/licao-m7-f13/index.html",
+  "local": "M7-F13",
+  "antigo": "sente está pensando",
+  "novo": "sente 'stá pensando",
+  "ocorrencias": 7,
+  "achado": "M7-F13: versos 12 e 14 como na Athena, n.º 3, 1924, em grafia atualizada (decisão 4b de 30/10/2026)"
+ },
+ {
+  "ficheiro": "m7/licao-m7-f13/index.html",
+  "local": "M7-F13",
+  "antigo": "Ó campo! Ó canção!",
+  "novo": "Ó campo! ó canção!",
+  "ocorrencias": 3,
+  "achado": "M7-F13: versos 12 e 14 como na Athena, n.º 3, 1924, em grafia atualizada (decisão 4b de 30/10/2026)"
+ },
+ {
+  "ficheiro": "m7/m7-fingidor-maquina/index.html",
+  "local": "M7-F13",
+  "antigo": "sente está pensando",
+  "novo": "sente 'stá pensando",
+  "ocorrencias": 1,
+  "achado": "M7-F13: versos 12 e 14 como na Athena, n.º 3, 1924, em grafia atualizada (decisão 4b de 30/10/2026)"
+ },
+ {
+  "ficheiro": "m7/m7-quatro-vozes-um-problema/index.html",
+  "local": "M7-F13",
+  "antigo": "Ó campo! Ó canção!",
+  "novo": "Ó campo! ó canção!",
+  "ocorrencias": 1,
+  "achado": "M7-F13: versos 12 e 14 como na Athena, n.º 3, 1924, em grafia atualizada (decisão 4b de 30/10/2026)"
+ },
+ {
+  "ficheiro": "m7/mapa-do-modulo-m7/index.html",
+  "local": "M7",
+  "antigo": "<b>Louco, sim: argumentar com os movimentos de <i>Mensagem</i></b><span class=\"peso\">35 %, individual</span>",
+  "novo": "<b>Louco, sim: argumentar com os movimentos de <i>Mensagem</i></b><span class=\"peso\">25 %, individual</span>",
+  "ocorrencias": 1,
+  "achado": "M7: pesos da avaliação (decisões 3b e 3c de 30/10/2026: U3 a 25 %, prova escrita a 30 %)"
+ },
+ {
+  "ficheiro": "m7/mapa-do-modulo-m7/index.html",
+  "local": "M7",
+  "antigo": "uma prova escrita de 45 minutos (20 %)",
+  "novo": "uma prova escrita de 45 minutos (30 %)",
+  "ocorrencias": 1,
+  "achado": "M7: pesos da avaliação (decisões 3b e 3c de 30/10/2026: U3 a 25 %, prova escrita a 30 %)"
+ },
+ {
+  "ficheiro": "m7/mapa-do-modulo-m7/index.html",
+  "local": "M7",
+  "antigo": "duas tarefas no Teams (35 % cada)",
+  "novo": "duas tarefas no Teams (35 % e 25 %)",
+  "ocorrencias": 1,
+  "achado": "M7: pesos da avaliação (decisões 3b e 3c de 30/10/2026: U3 a 25 %, prova escrita a 30 %)"
+ },
+ {
+  "ficheiro": "m7/painel-m7-f13/index.html",
+  "local": "M7-F13",
+  "antigo": "razões para cantar que a vida",
+  "novo": "razões p'ra cantar que a vida",
+  "ocorrencias": 3,
+  "achado": "M7-F13: versos 12 e 14 como na Athena, n.º 3, 1924, em grafia atualizada (decisão 4b de 30/10/2026)"
+ },
+ {
+  "ficheiro": "m7/painel-m7-f13/index.html",
+  "local": "M7-F13",
+  "antigo": "sente está pensando",
+  "novo": "sente 'stá pensando",
+  "ocorrencias": 4,
+  "achado": "M7-F13: versos 12 e 14 como na Athena, n.º 3, 1924, em grafia atualizada (decisão 4b de 30/10/2026)"
+ },
+ {
+  "ficheiro": "m7/painel-m7-f13/index.html",
+  "local": "M7-F13",
+  "antigo": "Ó campo! Ó canção!",
+  "novo": "Ó campo! ó canção!",
+  "ocorrencias": 1,
+  "achado": "M7-F13: versos 12 e 14 como na Athena, n.º 3, 1924, em grafia atualizada (decisão 4b de 30/10/2026)"
+ },
+ {
+  "ficheiro": "m7/pessoa-ceifeira/index.html",
+  "local": "M7-F13",
+  "antigo": "Fernando Pessoa, «Ela canta, pobre ceifeira» (Arquivo Pessoa)",
+  "novo": "Fernando Pessoa, «Ela canta, pobre ceifeira», Athena, n.º 3, 1924 (grafia atualizada); ler no Arquivo Pessoa",
+  "ocorrencias": 2,
+  "achado": "M7-F13: versos 12 e 14 como na Athena, n.º 3, 1924, em grafia atualizada (decisão 4b de 30/10/2026)"
+ },
+ {
+  "ficheiro": "m7/pessoa-ceifeira/index.html",
+  "local": "M7-F13",
+  "antigo": "Fernando Pessoa, <i>Poesias</i>, 1942",
+  "novo": "Fernando Pessoa, <i>Athena</i>, 1924",
+  "ocorrencias": 1,
+  "achado": "M7-F13: versos 12 e 14 como na Athena, n.º 3, 1924, em grafia atualizada (decisão 4b de 30/10/2026)"
+ },
+ {
+  "ficheiro": "m7/pessoa-ceifeira/index.html",
+  "local": "M7-F13",
+  "antigo": "Fernando Pessoa, _Poesias_, 1942",
+  "novo": "Fernando Pessoa, _Athena_, 1924",
+  "ocorrencias": 1,
+  "achado": "M7-F13: versos 12 e 14 como na Athena, n.º 3, 1924, em grafia atualizada (decisão 4b de 30/10/2026)"
+ },
+ {
+  "ficheiro": "m7/pessoa-ceifeira/index.html",
+  "local": "M7-F13",
+  "antigo": "razões para cantar que a vida",
+  "novo": "razões p'ra cantar que a vida",
+  "ocorrencias": 1,
+  "achado": "M7-F13: versos 12 e 14 como na Athena, n.º 3, 1924, em grafia atualizada (decisão 4b de 30/10/2026)"
+ },
+ {
+  "ficheiro": "m7/pessoa-ceifeira/index.html",
+  "local": "M7-F13",
+  "antigo": "sente está pensando",
+  "novo": "sente 'stá pensando",
+  "ocorrencias": 1,
+  "achado": "M7-F13: versos 12 e 14 como na Athena, n.º 3, 1924, em grafia atualizada (decisão 4b de 30/10/2026)"
+ },
+ {
+  "ficheiro": "m7/pessoa-ceifeira/index.html",
+  "local": "M7-F13",
+  "antigo": "Ó campo! Ó canção!",
+  "novo": "Ó campo! ó canção!",
+  "ocorrencias": 1,
+  "achado": "M7-F13: versos 12 e 14 como na Athena, n.º 3, 1924, em grafia atualizada (decisão 4b de 30/10/2026)"
+ },
+ {
+  "ficheiro": "m7/prova-c/index.html",
+  "local": "M7-F13",
+  "antigo": "sente está pensando",
+  "novo": "sente 'stá pensando",
+  "ocorrencias": 1,
+  "achado": "M7-F13: versos 12 e 14 como na Athena, n.º 3, 1924, em grafia atualizada (decisão 4b de 30/10/2026)"
+ },
+ {
+  "ficheiro": "m7/questionarios/index.html",
+  "local": "M7-F13",
+  "antigo": "sente está pensando",
+  "novo": "sente 'stá pensando",
+  "ocorrencias": 1,
+  "achado": "M7-F13: versos 12 e 14 como na Athena, n.º 3, 1924, em grafia atualizada (decisão 4b de 30/10/2026)"
+ },
+ {
+  "ficheiro": "m8/index.html",
+  "local": "«Qual + nome» (pedido do docente de 30/10/2026",
+  "antigo": "Qual comparação respeita",
+  "novo": "Qual das comparações respeita",
+  "ocorrencias": 1,
+  "achado": "«Qual + nome» (pedido do docente de 30/10/2026: em português europeu, «Qual das…» ou «Que…»)"
+ },
+ {
+  "ficheiro": "m8/licao-m8-f09/index.html",
+  "local": "«Qual + nome» (pedido do docente de 30/10/2026",
+  "antigo": "Qual revisão cria tensão",
+  "novo": "Qual das revisões cria tensão",
+  "ocorrencias": 1,
+  "achado": "«Qual + nome» (pedido do docente de 30/10/2026: em português europeu, «Qual das…» ou «Que…»)"
+ },
+ {
+  "ficheiro": "m8/licao-m8-f12/index.html",
+  "local": "«Qual + nome» (pedido do docente de 30/10/2026",
+  "antigo": "de contar qual nome está mais perto",
+  "novo": "de ver que nome está mais perto",
+  "ocorrencias": 1,
+  "achado": "«Qual + nome» (pedido do docente de 30/10/2026: em português europeu, «Qual das…» ou «Que…»)"
+ },
+ {
+  "ficheiro": "m8/licao-m8-f12/index.html",
+  "local": "«Qual + nome» (pedido do docente de 30/10/2026",
+  "antigo": "Qual comparação respeita",
+  "novo": "Qual das comparações respeita",
+  "ocorrencias": 1,
+  "achado": "«Qual + nome» (pedido do docente de 30/10/2026: em português europeu, «Qual das…» ou «Que…»)"
+ },
+ {
+  "ficheiro": "m8/painel-m8-f09/index.html",
+  "local": "«Qual + nome» (pedido do docente de 30/10/2026",
+  "antigo": "Qual revisão cria tensão",
+  "novo": "Qual das revisões cria tensão",
+  "ocorrencias": 2,
+  "achado": "«Qual + nome» (pedido do docente de 30/10/2026: em português europeu, «Qual das…» ou «Que…»)"
+ },
+ {
+  "ficheiro": "m8/painel-m8-f12/index.html",
+  "local": "«Qual + nome» (pedido do docente de 30/10/2026",
+  "antigo": "de contar qual nome está mais perto",
+  "novo": "de ver que nome está mais perto",
+  "ocorrencias": 1,
+  "achado": "«Qual + nome» (pedido do docente de 30/10/2026: em português europeu, «Qual das…» ou «Que…»)"
+ },
+ {
+  "ficheiro": "m8/painel-m8-f12/index.html",
+  "local": "«Qual + nome» (pedido do docente de 30/10/2026",
+  "antigo": "Qual comparação respeita",
+  "novo": "Qual das comparações respeita",
+  "ocorrencias": 2,
+  "achado": "«Qual + nome» (pedido do docente de 30/10/2026: em português europeu, «Qual das…» ou «Que…»)"
+ },
+ {
+  "ficheiro": "m9/recursos/f11.js",
+  "local": "«Qual + nome» (pedido do docente de 30/10/2026",
+  "antigo": "Qual síntese responde",
+  "novo": "Qual das sínteses responde",
+  "ocorrencias": 1,
+  "achado": "«Qual + nome» (pedido do docente de 30/10/2026: em português europeu, «Qual das…» ou «Que…»)"
+ },
+ {
+  "ficheiro": "m9/recursos/f12.js",
+  "local": "«Qual + nome» (pedido do docente de 30/10/2026",
+  "antigo": "Qual conclusão distingue",
+  "novo": "Qual das conclusões distingue",
+  "ocorrencias": 1,
+  "achado": "«Qual + nome» (pedido do docente de 30/10/2026: em português europeu, «Qual das…» ou «Que…»)"
+ },
+ {
+  "ficheiro": "m9/recursos/f13.js",
+  "local": "«Qual + nome» (pedido do docente de 30/10/2026",
+  "antigo": "Qual reformulação resiste",
+  "novo": "Qual das reformulações resiste",
+  "ocorrencias": 1,
+  "achado": "«Qual + nome» (pedido do docente de 30/10/2026: em português europeu, «Qual das…» ou «Que…»)"
+ },
+ {
+  "ficheiro": "m9/recursos/f13.js",
+  "local": "«Qual + nome» (pedido do docente de 30/10/2026",
+  "antigo": "Qual procedimento testa",
+  "novo": "Qual dos procedimentos testa",
+  "ocorrencias": 1,
+  "achado": "«Qual + nome» (pedido do docente de 30/10/2026: em português europeu, «Qual das…» ou «Que…»)"
+ },
+ {
+  "ficheiro": "tarefas/m7-u2/index.html",
+  "local": "M7-U2",
+  "antigo": "aquecer em cartões, 10 a 15 minutos",
+  "novo": "aquecer em cartões, 10 minutos",
+  "ocorrencias": 1,
+  "achado": "M7-U2: aquecimento fixo de 10 minutos, dentro dos 90 (decisão 3a de 30/10/2026)"
+ }
+]

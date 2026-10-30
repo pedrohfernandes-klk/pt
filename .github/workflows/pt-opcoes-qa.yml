@@ -39,7 +39,8 @@ jobs:
           python -m unittest discover -s tests -p 'test_legacy_task_instructions.py' -v
           python -m unittest discover -s tests -p 'test_apoios_tabelas.py' -v
           python -m unittest discover -s tests -p 'test_desfecho_satira.py' -v
-          python scripts/aplicar_trocas.py scripts/opcoes_denunciadoras_20261030.json --manifesto tests/fixtures/opcoes-denunciadoras-edits-20261030.json --verificar
+          # 30/10/2026: a camada da língua (lingua-pessoa-m7) foi aplicada por cima desta; desfaz-se antes de conferir.
+          python scripts/aplicar_trocas.py scripts/opcoes_denunciadoras_20261030.json --manifesto tests/fixtures/opcoes-denunciadoras-edits-20261030.json --verificar --desfazer-antes tests/fixtures/lingua-pessoa-m7-edits-20261030.json
           python scripts/medir_opcoes.py --regra
       - name: Instalar Chromium
         run: |

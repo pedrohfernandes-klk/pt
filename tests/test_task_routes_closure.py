@@ -28,11 +28,14 @@ JUSTIFICADO_EDITS=ROOT/'tests/fixtures/texto-justificado-edits-20261030.json'
 # 30/10/2026: opções denunciadoras (pedido do docente de 29/10): só o texto das opções e do feedback que as cita. É a
 # camada mais recente: o manifesto dela desfaz-se antes do do texto justificado.
 OPCOES_EDITS=ROOT/'tests/fixtures/opcoes-denunciadoras-edits-20261030.json'
+# 30/10/2026: «Qual das…» nas perguntas, os versos 12 e 14 da «Ceifeira» como na Athena (1924) e os acertos do M7. É a
+# camada mais recente: o manifesto dela desfaz-se antes do das opções.
+LINGUA_EDITS=ROOT/'tests/fixtures/lingua-pessoa-m7-edits-20261030.json'
 
 def original_lesson_text(path):
  """Reverse only the explicitly authorized UX strings; retain the frozen LF hash."""
  source=(ROOT/path).read_text('utf-8')
- for manifest_path in (OPCOES_EDITS,JUSTIFICADO_EDITS,AQUECIMENTOS_EDITS,SALA_EDITS,AUDIT_EDITS_M4_M7,AUDIT_EDITS,REIS_EDITS,TABLE_EDITS,GRAMMAR_EDITS,INSTRUCTION_EDITS):
+ for manifest_path in (LINGUA_EDITS,OPCOES_EDITS,JUSTIFICADO_EDITS,AQUECIMENTOS_EDITS,SALA_EDITS,AUDIT_EDITS_M4_M7,AUDIT_EDITS,REIS_EDITS,TABLE_EDITS,GRAMMAR_EDITS,INSTRUCTION_EDITS):
   manifest=json.loads(manifest_path.read_text('utf-8'))
   for edit in reversed(manifest['files'].get(path,{}).get('edits',[])):
    if source.count(edit['new'])!=edit['occurrences']:

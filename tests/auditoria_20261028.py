@@ -47,6 +47,11 @@ três blockquote sem parágrafos de m4/recursos/tpc-entrada.js e lang="en" em do
 certeza» a mais comprida). As trocas literais estão em tests/fixtures/opcoes-denunciadoras-edits-20261030.json, geradas por
 scripts/aplicar_trocas.py a partir de scripts/opcoes_denunciadoras_20261030.json: só o texto das opções e do feedback que as
 cita. É agora a camada mais recente: undo() desfá-la antes de todas as outras (antes da do texto justificado).
+30/10/2026 (depois das opções): perguntas em português europeu («Qual das…», «Que…», nunca «Qual» seguido de nome), os versos
+12 e 14 de «Ela canta, pobre ceifeira» como na Athena, n.º 3, 1924 (M7-F13 e cópias), o aquecimento da M7-U2 fixo em 10 minutos e
+os pesos do M7 no mapa. As trocas literais estão em tests/fixtures/lingua-pessoa-m7-edits-20261030.json, geradas por
+scripts/aplicar_trocas.py a partir de scripts/lingua_pessoa_m7_20261030.json. É agora a camada mais recente: undo() desfá-la antes
+de todas as outras (antes da das opções denunciadoras).
 """
 from pathlib import Path
 import json
@@ -171,6 +176,22 @@ def undo_opcoes(path, text):
     return text
 
 
+# 30/10/2026: a camada da língua das perguntas, do Pessoa da F13 e dos acertos do M7 (a mais recente; desfaz-se antes da das
+# opções denunciadoras).
+LINGUA_MANIFEST = ROOT / 'tests/fixtures/lingua-pessoa-m7-edits-20261030.json'
+_LINGUA_FILES = json.loads(LINGUA_MANIFEST.read_text('utf-8'))['files']
+
+
+def undo_lingua(path, text):
+    """30/10/2026: devolve o texto anterior à camada da língua, do Pessoa da F13 e do M7 (ou o mesmo texto, se não a tem)."""
+    relative = _relative(path)
+    for edit in reversed(_LINGUA_FILES.get(relative, {}).get('edits', [])):
+        if text.count(edit['new']) != edit['occurrences']:
+            raise AssertionError(f"Troca autorizada a 30/10 (língua) já não confere: {relative}: {edit['location']}")
+        text = text.replace(edit['new'], edit['old'])
+    return text
+
+
 def undo(path, text):
     """Devolve o texto anterior às correções de 28/10 para este ficheiro (ou o mesmo texto, se não as tem).
 
@@ -178,10 +199,12 @@ def undo(path, text):
     29/10/2026: antes de tudo, a camada dos aquecimentos do M7. Numa página gerada de novo a 29/10 (REGENERADAS_20261029)
     não há trocas de 28/10 a desfazer: o predecessor compacto continua autorizado pelo seu manifesto literal.
     30/10/2026: antes ainda, a camada do texto justificado (classe «prosa»).
-    30/10/2026: e antes dessa, a das opções denunciadoras (a mais recente).
+    30/10/2026: e antes dessa, a das opções denunciadoras.
+    30/10/2026: e antes de todas, a da língua das perguntas, do Pessoa da F13 e do M7 (a mais recente).
     """
-    # 30/10/2026: antes de tudo, a camada das opções denunciadoras (a mais recente), depois a do texto justificado e as dos
-    # aquecimentos do M2, do M4 e do M1.
+    # 30/10/2026: antes de tudo, a camada da língua (a mais recente), depois a das opções denunciadoras, a do texto
+    # justificado e as dos aquecimentos do M2, do M4 e do M1.
+    text = undo_lingua(path, text)
     text = undo_opcoes(path, text)
     text = undo_justificado(path, text)
     text = undo_aquecimentos_m2(path, text)

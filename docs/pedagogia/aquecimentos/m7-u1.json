@@ -34,7 +34,7 @@
   "Não é com ilhas do fim do mundo",
   "Se quem fui é enigma"
  ],
- "_nota": "Baralho final da proposta de 29/10/2026 (aquecimento-m7-u1-final.json, com as correções dos três júris), gerado por scripts/aquecimentos.py. «reservadas»: passagens da tarefa que nenhum cartão de fazer usa.",
+ "_nota": "Baralho final da proposta de 29/10/2026 (aquecimento-m7-u1-final.json, com as correções dos três júris), gerado por scripts/aquecimentos.py. «reservadas»: passagens da tarefa que nenhum cartão de fazer usa. 30/10/2026: o verso 14 de «Ela canta, pobre ceifeira» passa a «O que em mim sente 'stá pensando», como na Athena, n.º 3, 1924, em grafia atualizada (decisão 4b; a lição F13 mudou na mesma camada).",
  "cartoes": [
   {
    "t": "ler",
@@ -216,8 +216,8 @@
    "p": "Qual destas comparações de «Autopsicografia» e «Ela canta, pobre ceifeira» está completa?",
    "p2": "Que comparação dos dois poemas tem um ponto comum, uma diferença e uma passagem de cada?",
    "o": [
-    "Em comum, sentir passa por pensar: «a entreter a razão», «O que em mim sente está pensando». Mas só a «Ceifeira» deseja «poder ser tu, sendo eu».",
-    "Em comum, sentir passa por pensar: «a entreter a razão», «O que em mim sente está pensando». E os dois têm quadras e são do mesmo poeta.",
+    "Em comum, sentir passa por pensar: «a entreter a razão», «O que em mim sente 'stá pensando». Mas só a «Ceifeira» deseja «poder ser tu, sendo eu».",
+    "Em comum, sentir passa por pensar: «a entreter a razão», «O que em mim sente 'stá pensando». E os dois têm quadras e são do mesmo poeta.",
     "Pessoa sofria quando escreveu os dois poemas: por isso o fingidor e a ceifeira mostram a dor da vida dele."
    ],
    "c": 0,
@@ -231,15 +231,15 @@
   {
    "t": "escolha",
    "g": 10,
-   "p": "Uma comparação diz: nos dois poemas a voz não sente nada, porque o poeta «Finge tão completamente» e, na «Ceifeira», «O que em mim sente está pensando», isto é, só pensa. Onde falha?",
+   "p": "Uma comparação diz: nos dois poemas a voz não sente nada, porque o poeta «Finge tão completamente» e, na «Ceifeira», «O que em mim sente 'stá pensando», isto é, só pensa. Onde falha?",
    "p2": "Esta comparação conclui que, nos dois poemas, a voz só pensa e não sente. Qual é o erro?",
    "o": [
     "Faz os versos dizer o que não dizem: o poeta finge «A dor que deveras sente», e na «Ceifeira» há algo que sente enquanto pensa.",
     "Cita poemas a mais: para comparar, bastava uma passagem de «Autopsicografia».",
-    "Não falha: cita «Finge tão completamente» e «O que em mim sente está pensando», uma passagem de cada poema, e isso chega."
+    "Não falha: cita «Finge tão completamente» e «O que em mim sente 'stá pensando», uma passagem de cada poema, e isso chega."
    ],
    "c": 0,
-   "f": "Citar não chega: a explicação tem de **respeitar o que as palavras dizem**. A dor que o poeta «deveras sente» impede apagar o sentir; «O que em mim sente está pensando» junta sentir e pensar (lição F13). Antes de escreveres «isto é», confirma que o verso o diz.",
+   "f": "Citar não chega: a explicação tem de **respeitar o que as palavras dizem**. A dor que o poeta «deveras sente» impede apagar o sentir; «O que em mim sente 'stá pensando» junta sentir e pensar (lição F13). Antes de escreveres «isto é», confirma que o verso o diz.",
    "fe": [
     null,
     "A instrução pede uma passagem de cada poema; o problema não está no número de citações, está no que se diz delas.",

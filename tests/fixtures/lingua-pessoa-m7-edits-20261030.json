@@ -1,0 +1,702 @@
+{
+ "base_commit": "f648b22dd4f0a9a852fa2299cfa1e353e401dc94",
+ "_nota": "30/10/2026: perguntas em português europeu («Qual das…», «Que…», nunca «Qual» seguido de nome; pedido do docente), M7-F13 com os versos 12 e 14 como na Athena, n.º 3, 1924, em grafia atualizada («p'ra», «'stá», «ó canção»; decisão 4b), M7-U2 com aquecimento fixo de 10 minutos (decisão 3a) e pesos do M7 no mapa (U3 a 25 %, prova escrita a 30 %; decisões 3b e 3c). Gerado por scripts/aplicar_trocas.py a partir de scripts/lingua_pessoa_m7_20261030.json: não se edita à mão. Só texto: ordem, tipos, chaves e respostas certas dos cartões ficam iguais. É a camada mais recente: desfaz-se antes da das opções denunciadoras.",
+ "files": {
+  "assets/exame/sessoes.json": {
+   "base_sha256_lf": "5a963d008fd574053745e6b15f4ba436e816867a004a400b2a7f90dd92eb75a1",
+   "after_sha256_lf": "70f2f29963ae51c4cc8fbc4f30f770e926c30d7aeacfbb558db6b4175d4b1a73",
+   "edits": [
+    {
+     "location": "«Qual + nome» (pedido do docente de 30/10/2026",
+     "old": "Qual nota explica uma revisão?",
+     "new": "Qual destas notas explica uma revisão?",
+     "occurrences": 1
+    },
+    {
+     "location": "«Qual + nome» (pedido do docente de 30/10/2026",
+     "old": ", qual ação aplica melhor",
+     "new": ", que ação aplica melhor",
+     "occurrences": 1
+    },
+    {
+     "location": "«Qual + nome» (pedido do docente de 30/10/2026",
+     "old": "Qual registo ajuda mais",
+     "new": "Qual destes registos ajuda mais",
+     "occurrences": 1
+    },
+    {
+     "location": "«Qual + nome» (pedido do docente de 30/10/2026",
+     "old": "Qual início delimita",
+     "new": "Qual destes inícios delimita",
+     "occurrences": 2
+    },
+    {
+     "location": "«Qual + nome» (pedido do docente de 30/10/2026",
+     "old": "Qual alteração torna",
+     "new": "Que alteração torna",
+     "occurrences": 1
+    }
+   ]
+  },
+  "assets/pt-lessons/m3-f18.js": {
+   "base_sha256_lf": "11c4bc9df673b4cf8eb8e585fa0e44677e6f7af0eee5a317c34e32c72f373123",
+   "after_sha256_lf": "11cf60486da4c7ecc83a260ac89660c8775ec69eeb6958a165b9e3ae88ae993c",
+   "edits": [
+    {
+     "location": "«Qual + nome» (pedido do docente de 30/10/2026",
+     "old": "Qual síntese usa os três recortes",
+     "new": "Qual das sínteses usa os três recortes",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m1/aulas/aula-05/index.html": {
+   "base_sha256_lf": "3cfc04ec6adc397406547d10f9b529f991ad7db0da3a79b02e667b4fe986f5f9",
+   "after_sha256_lf": "e12de24f4136c568e8be1a95a55d68feb18aa6dc243996a31767eea2d375deca",
+   "edits": [
+    {
+     "location": "«Qual + nome» (pedido do docente de 30/10/2026",
+     "old": "Qual promessa é irónica",
+     "new": "Qual das promessas é irónica",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m1/licao-m1-f19/index.html": {
+   "base_sha256_lf": "8d2c8449a3841861c4eac9ceeb0131904147adb9db4d2206c25a3dc54ee7287a",
+   "after_sha256_lf": "3fe9631c0cf50469595136990d143b7e2866ada0f87e86b32833a1e293e70052",
+   "edits": [
+    {
+     "location": "«Qual + nome» (pedido do docente de 30/10/2026",
+     "old": "Qual promessa é irónica",
+     "new": "Qual das promessas é irónica",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m2/gram-subordinadas/index.html": {
+   "base_sha256_lf": "0374c9a37373116b412b907bd8b4613568e24a08a78671864b8171d2c6b029a4",
+   "after_sha256_lf": "0203ec8fb312df8a2fad1c4c5c4f838042f6d2e9245bfefe21cac708f67b8b9b",
+   "edits": [
+    {
+     "location": "«Qual + nome» (pedido do docente de 30/10/2026",
+     "old": "Responde a «qual homem?»",
+     "new": "Responde a «que homem?»",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m2/index.html": {
+   "base_sha256_lf": "ee8cb1b1c6281f9e0877911e5acb678bc714bed6b371bbc3d9cb77c8cab36ed2",
+   "after_sha256_lf": "4d9c823c39bfe6faf537ec223cf119ee223d080317dbd591b8c2a41618e8d68c",
+   "edits": [
+    {
+     "location": "«Qual + nome» (pedido do docente de 30/10/2026",
+     "old": "diz qual homem casa",
+     "new": "diz que homem casa",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m2/licao-m2-f11/index.html": {
+   "base_sha256_lf": "0fa804b860962ae84f801bf971115395df27200a476c2e35792079f7bd311236",
+   "after_sha256_lf": "ab1266108ab33052c4260ac3e1d70def204087c889510719dca9d5e443b51e2d",
+   "edits": [
+    {
+     "location": "«Qual + nome» (pedido do docente de 30/10/2026",
+     "old": "Qual afirmação permite discutir Inês",
+     "new": "Qual das afirmações permite discutir Inês",
+     "occurrences": 1
+    },
+    {
+     "location": "«Qual + nome» (pedido do docente de 30/10/2026",
+     "old": "a relativa diz qual homem,",
+     "new": "a relativa diz que homem,",
+     "occurrences": 1
+    },
+    {
+     "location": "«Qual + nome» (pedido do docente de 30/10/2026",
+     "old": "diz qual homem casa",
+     "new": "diz que homem casa",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m2/licao-m2-f12/index.html": {
+   "base_sha256_lf": "8f3a909b6bb0ebf1e865b13dd13f48ddd2da186b3f53b9928dc5b64f5a9bf2c7",
+   "after_sha256_lf": "ffe30aa88c3d3af4cf122c8ef5069db4bb86a823190b7b1f137bda2fd4644db5",
+   "edits": [
+    {
+     "location": "«Qual + nome» (pedido do docente de 30/10/2026",
+     "old": "Qual comparação explica funções",
+     "new": "Qual das comparações explica funções",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m2/licao-m2-f13/index.html": {
+   "base_sha256_lf": "011a50894ffd868994f4d86605e3c11fe8536db65eb06606c186c2650a6b9739",
+   "after_sha256_lf": "41e244cd6a6798999a69218c8a65440f60836270f64e124d51cb2f1c81f638f2",
+   "edits": [
+    {
+     "location": "«Qual + nome» (pedido do docente de 30/10/2026",
+     "old": "Qual interpretação responde",
+     "new": "Qual das interpretações responde",
+     "occurrences": 1
+    },
+    {
+     "location": "«Qual + nome» (pedido do docente de 30/10/2026",
+     "old": "Qual revisão reconhece",
+     "new": "Qual das revisões reconhece",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m2/painel-m2-f11/index.html": {
+   "base_sha256_lf": "5d923168fb8f21adf2cc85764102621b1acc032876f8906a85d3a348fd4b0d6a",
+   "after_sha256_lf": "ac82deb5c1c7ab95211138e3cdbde6cac74669d74f56aa713538691e3b2c74ab",
+   "edits": [
+    {
+     "location": "«Qual + nome» (pedido do docente de 30/10/2026",
+     "old": "a relativa diz qual homem,",
+     "new": "a relativa diz que homem,",
+     "occurrences": 1
+    },
+    {
+     "location": "«Qual + nome» (pedido do docente de 30/10/2026",
+     "old": "diz qual homem casa",
+     "new": "diz que homem casa",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m2/painel-m2-f12/index.html": {
+   "base_sha256_lf": "48decb89997a6e63dcaf8bbf5f68e766cccd363be842cce03f50d92a32094072",
+   "after_sha256_lf": "ee24311fe62a1e2987e08fcbcc116e214b262d99a1edae8cc89397e6049161f0",
+   "edits": [
+    {
+     "location": "«Qual + nome» (pedido do docente de 30/10/2026",
+     "old": "Qual comparação explica funções",
+     "new": "Qual das comparações explica funções",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m2/painel-m2-f13/index.html": {
+   "base_sha256_lf": "23cf87963368639e83ea40bb66a8d410b372dffb4224ceb2a8175713d83a952f",
+   "after_sha256_lf": "ebf3ec01a58c03d4df4243c9460b0b17db5a82fd530942692054e08f6aad79f5",
+   "edits": [
+    {
+     "location": "«Qual + nome» (pedido do docente de 30/10/2026",
+     "old": "Qual interpretação responde",
+     "new": "Qual das interpretações responde",
+     "occurrences": 1
+    },
+    {
+     "location": "«Qual + nome» (pedido do docente de 30/10/2026",
+     "old": "Qual revisão reconhece",
+     "new": "Qual das revisões reconhece",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m3/index.html": {
+   "base_sha256_lf": "81ee73e5f9aaab6d81a7a8796acb154c4ff1f842cf9de4c2ec10aab333d3d861",
+   "after_sha256_lf": "b682ddd29ba8736ca641328080bec57c49b858381cacc6f042bc14d34b161a7c",
+   "edits": [
+    {
+     "location": "«Qual + nome» (pedido do docente de 30/10/2026",
+     "old": "Qual síntese usa os três recortes",
+     "new": "Qual das sínteses usa os três recortes",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/gram-deiticos/index.html": {
+   "base_sha256_lf": "91889ceca81d700d62ecb42d3c4051d5412683e67f2aa9238c39351ad5e79932",
+   "after_sha256_lf": "36484d127d4a924fb7b7dcfa1fb367938269c32e6dd2cb5c9425bbb4339ffa67",
+   "edits": [
+    {
+     "location": "«Qual + nome» (pedido do docente de 30/10/2026",
+     "old": "Qual par cumpre?",
+     "new": "Qual dos pares cumpre?",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m5/gram-dil/index.html": {
+   "base_sha256_lf": "30fdd5a31b67e905fcd85b3e5c003a3cae22c07622c982f50e6874915a38c1f3",
+   "after_sha256_lf": "0c07c2c0cfd34820b79b53faa34ce3c5f0c2cfb833101172832694ed72b12592",
+   "edits": [
+    {
+     "location": "«Qual + nome» (pedido do docente de 30/10/2026",
+     "old": "Qual trio apresenta",
+     "new": "Qual dos trios apresenta",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m5/licao-m5-f04/index.html": {
+   "base_sha256_lf": "20b7636badc60bba3de1b6dd7b9c31f83bc75c4625c8c28adeb44039cce66da4",
+   "after_sha256_lf": "c2113ef09431078e48e90cb5b83f885c90ae060e01a19b14d3841a6bf6b6ee63",
+   "edits": [
+    {
+     "location": "«Qual + nome» (pedido do docente de 30/10/2026",
+     "old": "não de qual palavra vem primeiro",
+     "new": "não da ordem das palavras",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m5/licao-m5-f07/index.html": {
+   "base_sha256_lf": "cdb92080c8a0f1bcc6777be4096d17a87763b9f92342adf7c019ed39dfe26434",
+   "after_sha256_lf": "65dbd1969ede0bb891a0099375015b020616a582490ef040c1c83d167fc2918d",
+   "edits": [
+    {
+     "location": "«Qual + nome» (pedido do docente de 30/10/2026",
+     "old": "diz qual menina",
+     "new": "diz que menina",
+     "occurrences": 3
+    }
+   ]
+  },
+  "m5/painel-m5-f07/index.html": {
+   "base_sha256_lf": "f22836f89a862d879dc8478d4cdcbbeae9f818ef3950184861e35993f8d90f84",
+   "after_sha256_lf": "dff55f8f476bb3d2f4d4eac511f52a315b4f8a791722f71c7438821227c13a1c",
+   "edits": [
+    {
+     "location": "«Qual + nome» (pedido do docente de 30/10/2026",
+     "old": "diz qual menina",
+     "new": "diz que menina",
+     "occurrences": 2
+    }
+   ]
+  },
+  "m6/index.html": {
+   "base_sha256_lf": "439c7a5775726347d1dee1e4768c46b427d8372d0e163b8b8fbac179851fefd9",
+   "after_sha256_lf": "32dc518f9e49fd1a2c5d645e8b08b2067a0fffa165ffb7072f716e561d499346",
+   "edits": [
+    {
+     "location": "«Qual + nome» (pedido do docente de 30/10/2026",
+     "old": "qual justificação avança mais?",
+     "new": "que justificação avança mais?",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m6/licao-m6-f08/index.html": {
+   "base_sha256_lf": "fb656e36c82b8be9e02a188a5c7d6861721316ec0a15b0a11aee54a886690c4e",
+   "after_sha256_lf": "0508f2068da955169b641bade00411d6d184e8fa19ccd71eae6954f4da6e71ed",
+   "edits": [
+    {
+     "location": "«Qual + nome» (pedido do docente de 30/10/2026",
+     "old": "qual justificação avança mais?",
+     "new": "que justificação avança mais?",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m6/licao-m6-f12/index.html": {
+   "base_sha256_lf": "5f7144d5faad56d0fabbcad314029ce08945e3aa3c7ee08f5c31af40a6c3b984",
+   "after_sha256_lf": "ebc06b5fccd13f3cdd83773addda8cd7970e7859965319643a269a113abe6f41",
+   "edits": [
+    {
+     "location": "«Qual + nome» (pedido do docente de 30/10/2026",
+     "old": "Qual frase usa melhor",
+     "new": "Qual das frases usa melhor",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m6/licao-m6-f13/index.html": {
+   "base_sha256_lf": "83bf4e886322feee2487fb28aad75d9805895983214cb357e8bca5b5fce91b7d",
+   "after_sha256_lf": "24e43577beec24b2deb4310a4b92d9baf97f5724033e5f69b5d7142ad8d88848",
+   "edits": [
+    {
+     "location": "«Qual + nome» (pedido do docente de 30/10/2026",
+     "old": "Qual desenvolvimento melhora",
+     "new": "Qual dos desenvolvimentos melhora",
+     "occurrences": 1
+    },
+    {
+     "location": "«Qual + nome» (pedido do docente de 30/10/2026",
+     "old": "Qual comparação mantém",
+     "new": "Qual das comparações mantém",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m6/painel-m6-f12/index.html": {
+   "base_sha256_lf": "318e8836cc525c1c97b929a751aa9cc267b719d36cad48f6d44d6bc04e2d62a3",
+   "after_sha256_lf": "d51a4a359546d129f54bb09c0c5a6ff0b9336d6dced512476520b99bc540186a",
+   "edits": [
+    {
+     "location": "«Qual + nome» (pedido do docente de 30/10/2026",
+     "old": "Qual frase usa melhor",
+     "new": "Qual das frases usa melhor",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m6/painel-m6-f13/index.html": {
+   "base_sha256_lf": "3eeaac8890173300ab3ff66793cb7e0927332ee42e1a37145b85e647aaf234ae",
+   "after_sha256_lf": "53057c31fba5a44787a1959194e0cd586352efaba4dc46b8379c9fe1500b6c28",
+   "edits": [
+    {
+     "location": "«Qual + nome» (pedido do docente de 30/10/2026",
+     "old": "Qual desenvolvimento melhora",
+     "new": "Qual dos desenvolvimentos melhora",
+     "occurrences": 1
+    },
+    {
+     "location": "«Qual + nome» (pedido do docente de 30/10/2026",
+     "old": "Qual comparação mantém",
+     "new": "Qual das comparações mantém",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m7/guia-da-tarefa-m7/index.html": {
+   "base_sha256_lf": "8962f314317c69de257e5780f9e5c65afb4f032d920bc38b9068a722f5fb4efd",
+   "after_sha256_lf": "6d8af5f38e835a6d60a1dc368b4b2b4be05df0528294de2b503ee1ccc76369e8",
+   "edits": [
+    {
+     "location": "M7-U2",
+     "old": "\"titulo\":\"Uma ideia de heterónimo\",\"quem\":\"individual\",\"grupo\":false,\"passos\":[\"No início da aula, faz o aquecimento em cartões (10 a 15 minutos).",
+     "new": "\"titulo\":\"Uma ideia de heterónimo\",\"quem\":\"individual\",\"grupo\":false,\"passos\":[\"No início da aula, faz o aquecimento em cartões (10 minutos).",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m7/index.html": {
+   "base_sha256_lf": "2f936da944f6087fd88b633d0f989eaa7aab0dd0f53439bcadc9257c29981c0b",
+   "after_sha256_lf": "9645d7a87e0a668378a1f56bbdd0d2d887c0a4ee3217db5081a2d38d703cb098",
+   "edits": [
+    {
+     "location": "M7-U2",
+     "old": "No início da aula de tarefa: cartões que ativam o que a tarefa vai pedir.</span></span><span class=\"chip\">10 a 15 min</span>",
+     "new": "No início da aula de tarefa: cartões que ativam o que a tarefa vai pedir.</span></span><span class=\"chip\">10 min</span>",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F13",
+     "old": "sente está pensando",
+     "new": "sente 'stá pensando",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F13",
+     "old": "Ó campo! Ó canção!",
+     "new": "Ó campo! ó canção!",
+     "occurrences": 2
+    }
+   ]
+  },
+  "m7/licao-m7-f13/index.html": {
+   "base_sha256_lf": "014fe270b0140a5246299aaaeb76022d95731df5f671e776bbf99afc0ba33cde",
+   "after_sha256_lf": "fb1a7546de41546a54fc8ae87f36f7ea26ccd61d62a0170a237e5d199254f305",
+   "edits": [
+    {
+     "location": "M7-F13",
+     "old": "Fontes: Fernando Pessoa, <i>Poesias</i>, Ática, 1942; Arquivo Pessoa.",
+     "new": "Fontes: Fernando Pessoa, <i>Athena</i>, n.º 3, 1924 (grafia atualizada).",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F13",
+     "old": "Fernando Pessoa, _Poesias_, Ática, 1942; Arquivo Pessoa.",
+     "new": "Fernando Pessoa, _Athena_, n.º 3, 1924 (grafia atualizada).",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F13",
+     "old": "Fernando Pessoa, _Poesias_, 1942",
+     "new": "Fernando Pessoa, _Athena_, 1924",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F13",
+     "old": "razões para cantar que a vida",
+     "new": "razões p'ra cantar que a vida",
+     "occurrences": 4
+    },
+    {
+     "location": "M7-F13",
+     "old": "sente está pensando",
+     "new": "sente 'stá pensando",
+     "occurrences": 7
+    },
+    {
+     "location": "M7-F13",
+     "old": "Ó campo! Ó canção!",
+     "new": "Ó campo! ó canção!",
+     "occurrences": 3
+    }
+   ]
+  },
+  "m7/m7-fingidor-maquina/index.html": {
+   "base_sha256_lf": "cc33f1877a42e8686d966c8b4cf72d684c72f73c4fb58ee92e42091c82c06f51",
+   "after_sha256_lf": "1078f9f732af032cd6ab2b0e011db6f9bd4088f0882869af3d4a30b1be394589",
+   "edits": [
+    {
+     "location": "M7-F13",
+     "old": "sente está pensando",
+     "new": "sente 'stá pensando",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m7/m7-quatro-vozes-um-problema/index.html": {
+   "base_sha256_lf": "2b8b6bbe6efda569cd14afd19724331da349bde38fb8f0ff684281067a580082",
+   "after_sha256_lf": "c11f63bd4e5f505c3db49bbbe8c72c9664bd8338909dd6719998346c7d017b34",
+   "edits": [
+    {
+     "location": "M7-F13",
+     "old": "Ó campo! Ó canção!",
+     "new": "Ó campo! ó canção!",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m7/mapa-do-modulo-m7/index.html": {
+   "base_sha256_lf": "be9ecef43eb36e4424dd07d8fd51ae44db63584f3e9a5b1cb0d89e0e47576901",
+   "after_sha256_lf": "42569c6f1beb82f004fdd17e9fa1cb86e18fddc6ee1134b703bf56e6e8c4d06e",
+   "edits": [
+    {
+     "location": "M7",
+     "old": "<b>Louco, sim: argumentar com os movimentos de <i>Mensagem</i></b><span class=\"peso\">35 %, individual</span>",
+     "new": "<b>Louco, sim: argumentar com os movimentos de <i>Mensagem</i></b><span class=\"peso\">25 %, individual</span>",
+     "occurrences": 1
+    },
+    {
+     "location": "M7",
+     "old": "uma prova escrita de 45 minutos (20 %)",
+     "new": "uma prova escrita de 45 minutos (30 %)",
+     "occurrences": 1
+    },
+    {
+     "location": "M7",
+     "old": "duas tarefas no Teams (35 % cada)",
+     "new": "duas tarefas no Teams (35 % e 25 %)",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m7/painel-m7-f13/index.html": {
+   "base_sha256_lf": "fc4959836e8efd5400f0e8753d08d53f5f339567a0fda254a4056ddeddaca5ee",
+   "after_sha256_lf": "e45692810091dde1861839ee6f61e3263f6e584ea79b0eb01918695c9a304d90",
+   "edits": [
+    {
+     "location": "M7-F13",
+     "old": "razões para cantar que a vida",
+     "new": "razões p'ra cantar que a vida",
+     "occurrences": 3
+    },
+    {
+     "location": "M7-F13",
+     "old": "sente está pensando",
+     "new": "sente 'stá pensando",
+     "occurrences": 4
+    },
+    {
+     "location": "M7-F13",
+     "old": "Ó campo! Ó canção!",
+     "new": "Ó campo! ó canção!",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m7/pessoa-ceifeira/index.html": {
+   "base_sha256_lf": "763cf9ee49e2b74c0aa0d063397e1d1dc685847747f975675e6335a5520c9678",
+   "after_sha256_lf": "f27cfcf66d64041f73c7a00c3960817fdef7685fe884dc00d6275a1694322fa5",
+   "edits": [
+    {
+     "location": "M7-F13",
+     "old": "Fernando Pessoa, «Ela canta, pobre ceifeira» (Arquivo Pessoa)",
+     "new": "Fernando Pessoa, «Ela canta, pobre ceifeira», Athena, n.º 3, 1924 (grafia atualizada); ler no Arquivo Pessoa",
+     "occurrences": 2
+    },
+    {
+     "location": "M7-F13",
+     "old": "Fernando Pessoa, <i>Poesias</i>, 1942",
+     "new": "Fernando Pessoa, <i>Athena</i>, 1924",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F13",
+     "old": "Fernando Pessoa, _Poesias_, 1942",
+     "new": "Fernando Pessoa, _Athena_, 1924",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F13",
+     "old": "razões para cantar que a vida",
+     "new": "razões p'ra cantar que a vida",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F13",
+     "old": "sente está pensando",
+     "new": "sente 'stá pensando",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F13",
+     "old": "Ó campo! Ó canção!",
+     "new": "Ó campo! ó canção!",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m7/prova-c/index.html": {
+   "base_sha256_lf": "d78824ed0a9095ccd974c0c571b348e9bb711f2b022159afbd32a47d302e01c9",
+   "after_sha256_lf": "a2c794bf9d1df10ad319292d59332b64d88704ed4c72db2b7f2733fa829eaf03",
+   "edits": [
+    {
+     "location": "M7-F13",
+     "old": "sente está pensando",
+     "new": "sente 'stá pensando",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m7/questionarios/index.html": {
+   "base_sha256_lf": "54165ba4711cc5a42183973605322fb797f2615fc5a94b3cbb7ab62f636faed2",
+   "after_sha256_lf": "12db69052ad705a3ce3e35f57fd5ac30859ff31c21008e0e17b67af897ea8406",
+   "edits": [
+    {
+     "location": "M7-F13",
+     "old": "sente está pensando",
+     "new": "sente 'stá pensando",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m8/index.html": {
+   "base_sha256_lf": "6e464a3046097344da36df3e0bc154f86868ac6af0e9f582044227b77714243e",
+   "after_sha256_lf": "e317015520a917e086091c873631de78f80351588da8503dcf93c36efe1d634b",
+   "edits": [
+    {
+     "location": "«Qual + nome» (pedido do docente de 30/10/2026",
+     "old": "Qual comparação respeita",
+     "new": "Qual das comparações respeita",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m8/licao-m8-f09/index.html": {
+   "base_sha256_lf": "dc2c3125a35acf855a716ed41400b2632e1e6260b780da5fff1e6158eeef8169",
+   "after_sha256_lf": "6a693f68e5a598f41f55adebc5513f0ef23fc0d68c672a01f21c216561e92a36",
+   "edits": [
+    {
+     "location": "«Qual + nome» (pedido do docente de 30/10/2026",
+     "old": "Qual revisão cria tensão",
+     "new": "Qual das revisões cria tensão",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m8/licao-m8-f12/index.html": {
+   "base_sha256_lf": "e48d856bee5079ebf98b5378a251c481421cfc3f696c091a3c44a649bb84a82c",
+   "after_sha256_lf": "bfd86323ca65562315a3c47df2a7c6f595bd9a4a330f722c12952bc911949ced",
+   "edits": [
+    {
+     "location": "«Qual + nome» (pedido do docente de 30/10/2026",
+     "old": "de contar qual nome está mais perto",
+     "new": "de ver que nome está mais perto",
+     "occurrences": 1
+    },
+    {
+     "location": "«Qual + nome» (pedido do docente de 30/10/2026",
+     "old": "Qual comparação respeita",
+     "new": "Qual das comparações respeita",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m8/painel-m8-f09/index.html": {
+   "base_sha256_lf": "86c8894e70709e78c372230f35156c9b547b26b578b97f96ea5c83a8c30db692",
+   "after_sha256_lf": "66c21f848ac7cc1cc0706653270e7401d82cf30e019bc140cb0d85dd231a489d",
+   "edits": [
+    {
+     "location": "«Qual + nome» (pedido do docente de 30/10/2026",
+     "old": "Qual revisão cria tensão",
+     "new": "Qual das revisões cria tensão",
+     "occurrences": 2
+    }
+   ]
+  },
+  "m8/painel-m8-f12/index.html": {
+   "base_sha256_lf": "118795a98fc652ff99e09ebe061b7bb10d50aad87afe95259f78e58ae7449351",
+   "after_sha256_lf": "3b1350922bb38013fdf431fa694e1bd510c8879bad7449f1521429a5485b3db3",
+   "edits": [
+    {
+     "location": "«Qual + nome» (pedido do docente de 30/10/2026",
+     "old": "de contar qual nome está mais perto",
+     "new": "de ver que nome está mais perto",
+     "occurrences": 1
+    },
+    {
+     "location": "«Qual + nome» (pedido do docente de 30/10/2026",
+     "old": "Qual comparação respeita",
+     "new": "Qual das comparações respeita",
+     "occurrences": 2
+    }
+   ]
+  },
+  "m9/recursos/f11.js": {
+   "base_sha256_lf": "6eabf2b4f2776c1e336235c78eed1ec860d55756bc7b4d53d0545d08de7077d6",
+   "after_sha256_lf": "3f7f6163a6a73333e7f6e8e0d6c013971021ac2a8ef566440d87e57c4f49e8d6",
+   "edits": [
+    {
+     "location": "«Qual + nome» (pedido do docente de 30/10/2026",
+     "old": "Qual síntese responde",
+     "new": "Qual das sínteses responde",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m9/recursos/f12.js": {
+   "base_sha256_lf": "2ef1859f96f6efb6dc765470ad78acc31df24c6c5b7f38042d49d270a735f2cd",
+   "after_sha256_lf": "ec05fb44a8a069ec80e4a2a25e922e73e3774191ad49c78d1045f0f6ed3a8fe4",
+   "edits": [
+    {
+     "location": "«Qual + nome» (pedido do docente de 30/10/2026",
+     "old": "Qual conclusão distingue",
+     "new": "Qual das conclusões distingue",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m9/recursos/f13.js": {
+   "base_sha256_lf": "12bf4074f26be0b750d1495e65a86815ef23ec3205ddb1e489da9713309a8f83",
+   "after_sha256_lf": "693dbea63a1a2ab46342610dce4484eefde87f385a89de05b94292e1e9d2666c",
+   "edits": [
+    {
+     "location": "«Qual + nome» (pedido do docente de 30/10/2026",
+     "old": "Qual reformulação resiste",
+     "new": "Qual das reformulações resiste",
+     "occurrences": 1
+    },
+    {
+     "location": "«Qual + nome» (pedido do docente de 30/10/2026",
+     "old": "Qual procedimento testa",
+     "new": "Qual dos procedimentos testa",
+     "occurrences": 1
+    }
+   ]
+  },
+  "tarefas/m7-u2/index.html": {
+   "base_sha256_lf": "e900bcb75ed9d173191fa24140b3d24d8664f03cce307c58dcb67d3f629df1d8",
+   "after_sha256_lf": "79a57906639a40f0a4654166dfecc823ccb06945f6722bb0123caae5674b7b22",
+   "edits": [
+    {
+     "location": "M7-U2",
+     "old": "aquecer em cartões, 10 a 15 minutos",
+     "new": "aquecer em cartões, 10 minutos",
+     "occurrences": 1
+    }
+   ]
+  }
+ }
+}

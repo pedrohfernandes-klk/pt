@@ -4213,7 +4213,7 @@
       "warmup": [
         {
           "id": "s23-q1",
-          "q": "Qual início delimita melhor uma exposição?",
+          "q": "Qual destes inícios delimita melhor uma exposição?",
           "options": [
             "Neste texto vou falar de tudo",
             "Em duas obras, a escolha individual confronta-se com regras familiares distintas",
@@ -4285,7 +4285,7 @@
         ],
         "check": {
           "id": "s23-check",
-          "q": "Depois da revisão: Qual início delimita melhor uma exposição?",
+          "q": "Depois da revisão: Qual destes inícios delimita melhor uma exposição?",
           "options": [
             "Neste texto vou falar de tudo",
             "Em duas obras, a escolha individual confronta-se com regras familiares distintas",
@@ -4560,7 +4560,7 @@
         },
         {
           "id": "s26-q2",
-          "q": "Qual nota explica uma revisão?",
+          "q": "Qual destas notas explica uma revisão?",
           "options": [
             "Ficou mais bonito",
             "Mudei algumas palavras",
@@ -4673,7 +4673,7 @@
         },
         {
           "id": "s27-q2",
-          "q": "Qual registo ajuda mais a decidir o que rever?",
+          "q": "Qual destes registos ajuda mais a decidir o que rever?",
           "options": [
             "Estudei muito.",
             "Português é difícil.",
@@ -4733,7 +4733,7 @@
           },
           {
             "id": "s27-video2",
-            "q": "Depois de rever as funções sintáticas, qual ação aplica melhor essa proposta?",
+            "q": "Depois de rever as funções sintáticas, que ação aplica melhor essa proposta?",
             "options": [
               "Copiar novamente todas as definições.",
               "Identificar funções em frases novas e justificar as escolhas; depois resolver um exercício misto.",
@@ -4809,7 +4809,7 @@
         ],
         "check": {
           "id": "s27-check",
-          "q": "Qual alteração torna o conselho «estuda melhor» verificável?",
+          "q": "Que alteração torna o conselho «estuda melhor» verificável?",
           "options": [
             "Acrescentar «muito melhor».",
             "Resolver um exemplo novo, justificar a escolha e comparar o raciocínio com a correção.",
