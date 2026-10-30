@@ -21,7 +21,8 @@ from playwright.sync_api import sync_playwright
 from browser_m1_and_inventory import ROOT, QuietHandler
 from browser_m2_complete import respond
 
-SLUGS = ['m7-u1', 'm7-u2', 'm7-u3']
+# 30/10/2026: aquecimento em cartões (decisão do docente)
+SLUGS = ['m1-u1', 'm1-u2', 'm7-u1', 'm7-u2', 'm7-u3']
 CHAVES = r"""() => Object.keys(localStorage).filter(k => /^(licao-|percurso-|desafio-|epi-pt-|epi-ultima|aquecimento-)/.test(k)).sort()"""
 
 
@@ -102,7 +103,8 @@ def tarefas(browser, host):
             enunciado = page.locator('#produzir').evaluate('e=>+e.closest("[data-task-card]").dataset.taskCard')
             ligacao = page.locator(f'[data-task-card="{enunciado}"] header .task-aquecer a[href="aquecimento/"]')
             assert ligacao.count() == 1, slug
-            if slug == 'm7-u3':
+            # 30/10/2026: aquecimento em cartões (decisão do docente)
+            if slug in {'m1-u1', 'm1-u2', 'm7-u3'}:
                 # Os cartões substituem as máquinas em papel: o cartão «Aquecer» é o primeiro e liga ao aquecimento.
                 assert enunciado == 1
                 primeiro = page.locator('[data-task-card="0"]')
@@ -110,7 +112,8 @@ def tarefas(browser, host):
                 destaque = primeiro.locator('.task-aquecer a[href="aquecimento/"]')
                 assert destaque.is_visible()
                 assert page.locator('[data-task-question]').count() == 1
-                assert page.locator('#exemplos').count() == 1 and page.locator('.task-example').count() == 2
+                if slug == 'm7-u3':
+                    assert page.locator('#exemplos').count() == 1 and page.locator('.task-example').count() == 2
             else:
                 assert enunciado == 0 and ligacao.is_visible()
                 destaque = ligacao
@@ -129,6 +132,21 @@ def tarefas(browser, host):
 
 
 def percurso(browser, host):
+    # 30/10/2026: aquecimento em cartões (decisão do docente)
+    for n in (1, 2):
+        ctx, page, errors = contexto(browser, 390)
+        page.goto(f'{host}/m1/', wait_until='networkidle')
+        a = page.locator(f'#aquecimento-unidade-{n}')
+        assert a.is_visible()
+        assert a.evaluate('e=>e.nextElementSibling.id') == f'tarefa-unidade-{n}'
+        assert a.evaluate('e=>!e.hasAttribute("data-passo") && !e.hasAttribute("data-task-lesson")')
+        sem_deslizar(page, f'percurso m1 unidade {n}')
+        a.locator('a').click()
+        page.wait_for_url(f'**/tarefas/m1-u{n}/aquecimento/')
+        assert not errors, errors
+        ctx.close()
+    print('PASS percurso M1: A antes de T nas duas unidades', flush=True)
+
     ctx, page, errors = contexto(browser, 390)
     page.goto(f'{host}/m7/', wait_until='networkidle')
     for n in (1, 2, 3):

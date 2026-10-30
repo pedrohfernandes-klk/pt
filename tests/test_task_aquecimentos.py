@@ -28,7 +28,8 @@ import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
 DADOS = ROOT / 'docs/pedagogia/aquecimentos'
-SLUGS = ['m7-u1', 'm7-u2', 'm7-u3']
+# 30/10/2026: aquecimento em cartões (decisão do docente)
+SLUGS = ['m1-u1', 'm1-u2', 'm7-u1', 'm7-u2', 'm7-u3']
 sys.path.insert(0, str(ROOT / 'scripts'))
 from audit_cards import lesson_cards, validate_cards  # noqa: E402
 # 29/10/2026 (revisão técnica, P1): as lições do M7 de onde vêm as citações da unidade 3, nenhuma escrita nesta camada.
@@ -126,6 +127,7 @@ class Aquecimentos(unittest.TestCase):
                       '«alguém volte e resolva»', 'título, descrição ou menu'):
             self.assertIn(marca, erros)
 
+    # 30/10/2026: aquecimento em cartões (decisão do docente)
     def test_chave_propria_sem_licao_nem_continuar(self):
         for slug in SLUGS:
             s = pagina(slug)
@@ -138,10 +140,10 @@ class Aquecimentos(unittest.TestCase):
                 self.assertEqual(re.findall(r'"((?:licao|percurso|desafio|epi-pt|aquecimento)-[a-z0-9-]+)"', s), [f'aquecimento-{slug}'])
                 # Casca, aparência, projeção e o regresso à tarefa e à unidade.
                 # 29/10/2026 (revisão pedagógica, C8): o menu diz quando se faz o aquecimento, como a tarefa e a linha A.
-                self.assertIn(f'<p>Módulo 7 · {dados(slug)["momento"]}<br>Unidade {slug[-1]}</p>', s)
+                self.assertIn(f'<p>Módulo {dados(slug)["modulo"][1:]} · {dados(slug)["momento"]}<br>Unidade {slug[-1]}</p>', s)
                 for marca in ('assets/pt-lessons/casca.js', 'assets/pt-lessons/jogo.js', 'assets/appearance.css', 'assets/appearance.js',
                               'assets/projection-launcher.js', '<a class="c-marca" href="../"', '"seguinte": "../"',
-                              f'data-unit-return="../../../m7/#unidade-pedagogica-{slug[-1]}"', '<a href="?projetar=1">Projetar para a turma</a>',
+                              f'data-unit-return="../../../{dados(slug)["modulo"]}/#unidade-pedagogica-{slug[-1]}"', '<a href="?projetar=1">Projetar para a turma</a>',
                               'não conta para a nota'):
                     self.assertIn(marca, s)
                 self.assertEqual(s.count('<style id="casca-pc">'), 1)
@@ -150,9 +152,11 @@ class Aquecimentos(unittest.TestCase):
                     self.assertNotIn(proibido, texto.lower())
 
     def test_ligacao_no_enunciado_e_linha_a_no_percurso(self):
-        indice = (ROOT / 'm7/index.html').read_text('utf-8')
-        items = Lista(indice).li
-        for n, slug in enumerate(SLUGS, 1):
+        # 30/10/2026: aquecimento em cartões (decisão do docente)
+        for slug in SLUGS:
+            n = dados(slug)["unidade"]
+            indice = (ROOT / dados(slug)["modulo"] / "index.html").read_text("utf-8")
+            items = Lista(indice).li
             tarefa = (ROOT / 'tarefas' / slug / 'index.html').read_text('utf-8')
             with self.subTest(tarefa=slug):
                 header = tarefa.split('<header>', 1)[1].split('</header>', 1)[0]

@@ -3,43 +3,11 @@
  "titulo": "Crónica «Estar lá»",
  "unidade": 2,
  "aquecer": {
-  "instrucao": "Como transforma Fernão Lopes a cidade numa só figura, quando ela ouve o grito do pajem? Cita uma passagem do cap. XII. Explica o que essa passagem faz ver.",
-  "anatomia": [
-   [
-    "Verbos",
-    "«Cita» e «Explica»: duas operações, por esta ordem. A pergunta inicial diz o que a explicação tem de mostrar: como a cidade passa a ser uma só figura."
-   ],
-   [
-    "Objeto",
-    "o que a passagem faz <b>ver</b> da cidade, e não o que se sabe do Mestre ou do pajem."
-   ],
-   [
-    "Condição",
-    "«quando ela ouve o grito do pajem» e «do cap. XII» (este episódio, não o cerco); «uma passagem» (copiada sem mudar nada, entre aspas)."
-   ]
-  ],
-  "afirmacao": "Afirmação: «O grito do pajem estava combinado antes.»",
-  "pergunta": "Qual destas passagens prova a afirmação? Escreve a letra e uma razão no papel; depois confirma.",
-  "opcoes": [
-   {
-    "certa": false,
-    "letra": "A",
-    "texto": "O narrador, sobre Álvaro Pais: «com uma coifa na cabeça, segundo usança daquele tempo»",
-    "resposta": "Distração: também tem «segundo», mas aqui quer dizer conforme o costume. Fala da coifa de Álvaro Pais, não do grito."
-   },
-   {
-    "certa": false,
-    "letra": "B",
-    "texto": "O narrador, sobre Álvaro Pais: «cavalgou logo à pressa, em cima de um cavalo que anos havia que não cavalgara»",
-    "resposta": "Distração: faz ver a urgência de Álvaro Pais, num cavalo que há anos não montava. Ter pressa não prova que o grito estava combinado."
-   },
-   {
-    "certa": true,
-    "letra": "C",
-    "texto": "O narrador, sobre o pajem: «como lhe disseram que fosse pela vila, segundo já era percebido»",
-    "resposta": "Prova: «segundo já era percebido» quer dizer combinado, e «lhe disseram que fosse pela vila» mostra que o pajem cumpre uma ordem dada antes."
-   }
-  ]
+  "cartoes": "aquecimento/",
+  "minutos": 10,
+  "texto": "No início da aula de tarefa: 10 minutos de cartões com consulta, 5 minutos para o docente apresentar o enunciado, 60 minutos de produção e 15 minutos de revisão e entrega. Total: 90 minutos. O relógio de produção começa depois da apresentação.",
+  "ligacao": "Abrir o aquecimento em cartões",
+  "ligacao_enunciado": "Aquecer"
  },
  "lead": "Núcleo: cerca de 40 palavras por resposta. Crónica: título e 160 a 200 palavras. Abre dentro de um momento. Faz ver com um pormenor. Põe o povo a agir. Inclui uma fala marcada «documentada» ou «imaginada». Marca as tuas inferências e opiniões. Confronta duas fontes. Lista-as no fim. Risca uma frase, sem apagar. Reescreve-a. À mão, com consulta.",
  "nucleo": [

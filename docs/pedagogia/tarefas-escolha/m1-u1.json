@@ -3,45 +3,13 @@
  "titulo": "Vozes da lírica medieval",
  "unidade": 1,
  "aquecer": {
-  "instrucao": "Em «Ondas do mar de Vigo», quem fala e a quem? Cita uma repetição. Classifica-a. Explica como faz durar a espera. Em <i>mare</i> &gt; mar e <i>malu</i> &gt; mau, identifica o som que cai, onde cai e o processo.",
-  "anatomia": [
-   [
-    "Verbos",
-    "«Cita», «classifica» e «explica»: três operações sobre uma repetição, por esta ordem. Antes, a pergunta pede quem fala e a quem; no fim, «identifica» pede três respostas: o som, o lugar e o processo."
-   ],
-   [
-    "Objeto",
-    "como a repetição faz <b>durar a espera</b>, e não a repetição sozinha; na segunda parte, o <b>som</b> que cai, e não a palavra inteira."
-   ],
-   [
-    "Condição",
-    "«uma repetição» (uma só, citada entre aspas) e «<i>mare</i> &gt; mar e <i>malu</i> &gt; mau» (os dois casos, cada um com o seu lugar e o seu processo)."
-   ]
-  ],
-  "afirmacao": "Afirmação: «Guilhade faz a cantiga em resposta a um pedido da dona.»",
-  "pergunta": "Qual destas passagens prova a afirmação? Escreve a letra e uma razão no papel; depois confirma.",
-  "opcoes": [
-   {
-    "certa": false,
-    "letra": "A",
-    "texto": "«e vedes como vos quero loar: / dona fea, velha e sandia!»",
-    "resposta": "Distração: é Guilhade, mas aqui é ele a anunciar como a vai louvar. Não diz que a dona lhe pediu nada."
-   },
-   {
-    "certa": true,
-    "letra": "B",
-    "texto": "«Ai dona fea, fostes-vos queixar / que vos nunca louv'en[o] meu cantar»",
-    "resposta": "Prova: a dona queixou-se de nunca ter sido louvada no cantar dele. A cantiga que ele promete a seguir responde a essa queixa."
-   },
-   {
-    "certa": false,
-    "letra": "C",
-    "texto": "«tanto a fez Deus comprida de bem / que mais que todas las do mundo val»",
-    "resposta": "Distração: é outra cantiga, de D. Dinis, e outra senhora. Nada aqui fala de queixa nem de pedido."
-   }
-  ]
+  "cartoes": "aquecimento/",
+  "minutos": 10,
+  "texto": "No início da aula de tarefa: 10 minutos de cartões com consulta, 5 minutos para o docente apresentar o enunciado, 60 minutos de produção e 15 minutos de revisão e entrega. Total: 90 minutos. O relógio de produção começa depois da apresentação.",
+  "ligacao": "Abrir o aquecimento em cartões",
+  "ligacao_enunciado": "Aquecer"
  },
- "lead": "À mão, entre 200 e 240 palavras: cerca de 60 por resposta do núcleo e 80 a 120 no tema. Com consulta.",
+ "lead": "À mão, entre 200 e 240 palavras: aproximadamente 60 por resposta do núcleo e 80 a 120 no tema. Com consulta.",
  "nucleo": [
   "Em «Ondas do mar de Vigo», quem fala e a quem? Cita uma repetição. Classifica-a. Explica como faz durar a espera. Em <i>mare</i> &gt; mar e <i>malu</i> &gt; mau, identifica o som que cai, onde cai e o processo.",
   "D. Dinis e Guilhade prometem louvar uma senhora. Em qual se cumpre a promessa? Comprova com uma passagem de cada cantiga, fora da primeira estrofe. Identifica o recurso que, na outra, a desmente. Mostra, na passagem, como o faz."

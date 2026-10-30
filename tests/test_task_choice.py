@@ -16,7 +16,8 @@ CHOICE = ['m1-u1', 'm1-u2', 'm2-u1', 'm2-u2', 'm7-u3']
 # 29/10/2026: na M7-U3 os cartões substituem as máquinas em papel, para caber nos 90 minutos: o cartão «Aquecer» liga à
 # página tarefas/m7-u3/aquecimento/ e não há pergunta «aquecer». As citações do baralho conferem-se em
 # tests/test_task_aquecimentos.py, contra as lições indicadas nos dados do aquecimento.
-CARTOES_NO_AQUECER = {'m7-u3'}
+# 30/10/2026: aquecimento em cartões (decisão do docente)
+CARTOES_NO_AQUECER = {'m1-u1', 'm1-u2', 'm7-u3'}
 # Lições onde estão as passagens do aquecimento, por módulo (a lista do M2 fica como estava).
 # 28/10/2026: no M1, as cantigas de D. Dinis e Guilhade (F04, F19) e o grito do cap. XII (F06).
 WARM_LESSONS = {'m2': ('licao-m2-f02', 'licao-m2-f06', 'licao-m2-f07', 'licao-m2-f11'),
