@@ -1,0 +1,907 @@
+RESULTADOS DOS TESTES, 30/10/2026
+
+BASE, antes das alterações: 308 testes; 461 falhas e 2 erros, todos em test_sala_desligada.
+A cópia limpa de origin/main via git archive reproduziu os mesmos números. Não é apenas uma diferença de finais de linha.
+
+VERSÃO PROPOSTA: 311 testes; 476 falhas e 2 erros. Nenhum teste omitido, desligado ou marcado como skip.
+
+FALHAS ADICIONAIS: saída integral das 15 asserções que passaram a falhar.
+
+FAIL: test_all_card_types_order_metadata_and_progress_keys_are_preserved (test_m1_grammar_pilot.M1GrammarPilot.test_all_card_types_order_metadata_and_progress_keys_are_preserved)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[repositorio]\tests\test_m1_grammar_pilot.py", line 88, in test_all_card_types_order_metadata_and_progress_keys_are_preserved
+    for path, _, before, after in self.sources():
+                                  ^^^^^^^^^^^^^^
+  File "[repositorio]\tests\test_m1_grammar_pilot.py", line 49, in sources
+    after = historical_task_source(ROOT / path) if path.startswith('tarefas/') else undo_audit_20261028(path, (ROOT / path).read_text('utf-8'))
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "[repositorio]\tests\task_source_contract.py", line 173, in historical_task_source
+    validate_task_source(path)
+  File "[repositorio]\tests\task_source_contract.py", line 142, in validate_task_source
+    raise AssertionError('Public task data differs from its authorization: ' + successor['data'])
+AssertionError: Public task data differs from its authorization: docs/pedagogia/tarefas-escolha/m1-u1.json
+
+
+FAIL: test_exact_authorized_edits_restore_frozen_files_and_heads (test_m1_grammar_pilot.M1GrammarPilot.test_exact_authorized_edits_restore_frozen_files_and_heads)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[repositorio]\tests\test_m1_grammar_pilot.py", line 68, in test_exact_authorized_edits_restore_frozen_files_and_heads
+    for path, info, before, after in self.sources():
+                                     ^^^^^^^^^^^^^^
+  File "[repositorio]\tests\test_m1_grammar_pilot.py", line 49, in sources
+    after = historical_task_source(ROOT / path) if path.startswith('tarefas/') else undo_audit_20261028(path, (ROOT / path).read_text('utf-8'))
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "[repositorio]\tests\task_source_contract.py", line 173, in historical_task_source
+    validate_task_source(path)
+  File "[repositorio]\tests\task_source_contract.py", line 142, in validate_task_source
+    raise AssertionError('Public task data differs from its authorization: ' + successor['data'])
+AssertionError: Public task data differs from its authorization: docs/pedagogia/tarefas-escolha/m1-u1.json
+
+
+FAIL: test_live_choice_tasks_keep_grammar_in_the_common_core (test_m1_grammar_pilot.M1GrammarPilot.test_live_choice_tasks_keep_grammar_in_the_common_core)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[repositorio]\tests\test_m1_grammar_pilot.py", line 157, in test_live_choice_tasks_keep_grammar_in_the_common_core
+    text = validate_task_source(ROOT / f'tarefas/m1-u{unit}/index.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "[repositorio]\tests\task_source_contract.py", line 142, in validate_task_source
+    raise AssertionError('Public task data differs from its authorization: ' + successor['data'])
+AssertionError: Public task data differs from its authorization: docs/pedagogia/tarefas-escolha/m1-u1.json
+
+
+FAIL: test_real_compact_tasks_keep_grammar_application_and_literary_transfer (test_m1_grammar_pilot.M1GrammarPilot.test_real_compact_tasks_keep_grammar_application_and_literary_transfer)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[repositorio]\tests\test_m1_grammar_pilot.py", line 124, in test_real_compact_tasks_keep_grammar_application_and_literary_transfer
+    text = compact_task_source(ROOT / f'tarefas/m1-u{unit}/index.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "[repositorio]\tests\task_source_contract.py", line 184, in compact_task_source
+    validate_task_source(path)
+  File "[repositorio]\tests\task_source_contract.py", line 142, in validate_task_source
+    raise AssertionError('Public task data differs from its authorization: ' + successor['data'])
+AssertionError: Public task data differs from its authorization: docs/pedagogia/tarefas-escolha/m1-u1.json
+
+
+FAIL: test_schema_attempt_and_transfer_select_sounds_not_complete_etymologies (test_m1_grammar_pilot.M1GrammarPilot.test_schema_attempt_and_transfer_select_sounds_not_complete_etymologies)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[repositorio]\tests\test_m1_grammar_pilot.py", line 105, in test_schema_attempt_and_transfer_select_sounds_not_complete_etymologies
+    for path, _, _, source in self.sources():
+                              ^^^^^^^^^^^^^^
+  File "[repositorio]\tests\test_m1_grammar_pilot.py", line 49, in sources
+    after = historical_task_source(ROOT / path) if path.startswith('tarefas/') else undo_audit_20261028(path, (ROOT / path).read_text('utf-8'))
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "[repositorio]\tests\task_source_contract.py", line 173, in historical_task_source
+    validate_task_source(path)
+  File "[repositorio]\tests\task_source_contract.py", line 142, in validate_task_source
+    raise AssertionError('Public task data differs from its authorization: ' + successor['data'])
+AssertionError: Public task data differs from its authorization: docs/pedagogia/tarefas-escolha/m1-u1.json
+
+
+FAIL: test_html_links_and_shared_quiz_contract (test_m1_unit_tasks.M1UnitTasks.test_html_links_and_shared_quiz_contract)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[repositorio]\tests\test_m1_unit_tasks.py", line 63, in test_html_links_and_shared_quiz_contract
+    for unit, path, text in self.pages():
+                            ^^^^^^^^^^^^
+  File "[repositorio]\tests\test_m1_unit_tasks.py", line 60, in pages
+    yield unit, path, historical_task_source(path)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "[repositorio]\tests\task_source_contract.py", line 173, in historical_task_source
+    validate_task_source(path)
+  File "[repositorio]\tests\task_source_contract.py", line 142, in validate_task_source
+    raise AssertionError('Public task data differs from its authorization: ' + successor['data'])
+AssertionError: Public task data differs from its authorization: docs/pedagogia/tarefas-escolha/m1-u1.json
+
+
+FAIL: test_lesson_timing_consultation_and_integrated_submission (test_m1_unit_tasks.M1UnitTasks.test_lesson_timing_consultation_and_integrated_submission)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[repositorio]\tests\test_m1_unit_tasks.py", line 95, in test_lesson_timing_consultation_and_integrated_submission
+    for unit, _, text in self.pages():
+                         ^^^^^^^^^^^^
+  File "[repositorio]\tests\test_m1_unit_tasks.py", line 60, in pages
+    yield unit, path, historical_task_source(path)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "[repositorio]\tests\task_source_contract.py", line 173, in historical_task_source
+    validate_task_source(path)
+  File "[repositorio]\tests\task_source_contract.py", line 142, in validate_task_source
+    raise AssertionError('Public task data differs from its authorization: ' + successor['data'])
+AssertionError: Public task data differs from its authorization: docs/pedagogia/tarefas-escolha/m1-u1.json
+
+
+FAIL: test_support_quotations_are_in_the_identified_lesson_cards (test_m1_unit_tasks.M1UnitTasks.test_support_quotations_are_in_the_identified_lesson_cards)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[repositorio]\tests\test_m1_unit_tasks.py", line 138, in test_support_quotations_are_in_the_identified_lesson_cards
+    for unit, _, text in self.pages():
+                         ^^^^^^^^^^^^
+  File "[repositorio]\tests\test_m1_unit_tasks.py", line 60, in pages
+    yield unit, path, historical_task_source(path)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "[repositorio]\tests\task_source_contract.py", line 173, in historical_task_source
+    validate_task_source(path)
+  File "[repositorio]\tests\task_source_contract.py", line 142, in validate_task_source
+    raise AssertionError('Public task data differs from its authorization: ' + successor['data'])
+AssertionError: Public task data differs from its authorization: docs/pedagogia/tarefas-escolha/m1-u1.json
+
+
+FAIL: test_u1_is_written_comparison_and_transfer_without_old_products (test_m1_unit_tasks.M1UnitTasks.test_u1_is_written_comparison_and_transfer_without_old_products)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[repositorio]\tests\test_m1_unit_tasks.py", line 110, in test_u1_is_written_comparison_and_transfer_without_old_products
+    text = historical_task_source(ROOT / 'tarefas/m1-u1/index.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "[repositorio]\tests\task_source_contract.py", line 173, in historical_task_source
+    validate_task_source(path)
+  File "[repositorio]\tests\task_source_contract.py", line 142, in validate_task_source
+    raise AssertionError('Public task data differs from its authorization: ' + successor['data'])
+AssertionError: Public task data differs from its authorization: docs/pedagogia/tarefas-escolha/m1-u1.json
+
+
+FAIL: test_u2_preserves_guide_criteria_and_preconditions (test_m1_unit_tasks.M1UnitTasks.test_u2_preserves_guide_criteria_and_preconditions)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[repositorio]\tests\test_m1_unit_tasks.py", line 121, in test_u2_preserves_guide_criteria_and_preconditions
+    text = historical_task_source(ROOT / 'tarefas/m1-u2/index.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "[repositorio]\tests\task_source_contract.py", line 173, in historical_task_source
+    validate_task_source(path)
+  File "[repositorio]\tests\task_source_contract.py", line 142, in validate_task_source
+    raise AssertionError('Public task data differs from its authorization: ' + successor['data'])
+AssertionError: Public task data differs from its authorization: docs/pedagogia/tarefas-escolha/m1-u2.json
+
+
+FAIL: test_nine_modules_keep_student_content_links_images_ids_and_scripts (test_module_layout.ModuleLayout.test_nine_modules_keep_student_content_links_images_ids_and_scripts) (module=1, kind='text')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[repositorio]\tests\test_module_layout.py", line 56, in test_nine_modules_keep_student_content_links_images_ids_and_scripts
+    self.assertEqual(digest(value),baseline['modules'][str(module)][kind])
+AssertionError: '5084874143be062a9cbf0b132de56a76c29b74a2e591e96615251e30a4c3e35b' != '59040fbde52dd3151254d26302fe67db998e7b4e736041e3bd46bc3dbfe21882'
+- 5084874143be062a9cbf0b132de56a76c29b74a2e591e96615251e30a4c3e35b
++ 59040fbde52dd3151254d26302fe67db998e7b4e736041e3bd46bc3dbfe21882
+
+
+
+FAIL: test_nine_modules_keep_student_content_links_images_ids_and_scripts (test_module_layout.ModuleLayout.test_nine_modules_keep_student_content_links_images_ids_and_scripts) (module=1, kind='links')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[repositorio]\tests\test_module_layout.py", line 56, in test_nine_modules_keep_student_content_links_images_ids_and_scripts
+    self.assertEqual(digest(value),baseline['modules'][str(module)][kind])
+AssertionError: '35f722f1d51513bc48166c96c2dea1def320c343007e457f535109d312a9b3a7' != '32ca9f069cf72f5b52565d7db835e4038595943ffa36b772235e6309bcef3cd9'
+- 35f722f1d51513bc48166c96c2dea1def320c343007e457f535109d312a9b3a7
++ 32ca9f069cf72f5b52565d7db835e4038595943ffa36b772235e6309bcef3cd9
+
+
+
+FAIL: test_nine_modules_keep_student_content_links_images_ids_and_scripts (test_module_layout.ModuleLayout.test_nine_modules_keep_student_content_links_images_ids_and_scripts) (module=1, kind='ids')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[repositorio]\tests\test_module_layout.py", line 56, in test_nine_modules_keep_student_content_links_images_ids_and_scripts
+    self.assertEqual(digest(value),baseline['modules'][str(module)][kind])
+AssertionError: 'd8e96a8bb04b8b1e5b05528ae0ff46b68323434b6fd69479d709b5a239d4e794' != '6f2e5b43040ae613564401d2b979f1779ba4bb88944399829520455ceba0769b'
+- d8e96a8bb04b8b1e5b05528ae0ff46b68323434b6fd69479d709b5a239d4e794
++ 6f2e5b43040ae613564401d2b979f1779ba4bb88944399829520455ceba0769b
+
+
+
+FAIL: test_original_content_identifiers_links_quotes_and_rubrics_survive (test_task_reader.TaskReader.test_original_content_identifiers_links_quotes_and_rubrics_survive) (task='m1-u1')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[repositorio]\tests\test_task_reader.py", line 13, in test_original_content_identifiers_links_quotes_and_rubrics_survive
+    source=historical_task_source(ROOT/f'tarefas/{slug}/index.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "[repositorio]\tests\task_source_contract.py", line 173, in historical_task_source
+    validate_task_source(path)
+  File "[repositorio]\tests\task_source_contract.py", line 142, in validate_task_source
+    raise AssertionError('Public task data differs from its authorization: ' + successor['data'])
+AssertionError: Public task data differs from its authorization: docs/pedagogia/tarefas-escolha/m1-u1.json
+
+
+FAIL: test_original_content_identifiers_links_quotes_and_rubrics_survive (test_task_reader.TaskReader.test_original_content_identifiers_links_quotes_and_rubrics_survive) (task='m1-u2')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[repositorio]\tests\test_task_reader.py", line 13, in test_original_content_identifiers_links_quotes_and_rubrics_survive
+    source=historical_task_source(ROOT/f'tarefas/{slug}/index.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "[repositorio]\tests\task_source_contract.py", line 173, in historical_task_source
+    validate_task_source(path)
+  File "[repositorio]\tests\task_source_contract.py", line 142, in validate_task_source
+    raise AssertionError('Public task data differs from its authorization: ' + successor['data'])
+AssertionError: Public task data differs from its authorization: docs/pedagogia/tarefas-escolha/m1-u2.json
+
+----------------------------------------------------------------------
+Ran 311 tests in 22.663s
+
+FAILED (failures=476, errors=2)
+
+
+FALHAS E ERROS PRÉ-EXISTENTES: lista completa de identificadores.
+test_pagina_inicial_limpa_antes_de_exportar_ou_repor_o_progresso (test_sala_desligada.SalaDesligada.test_pagina_inicial_limpa_antes_de_exportar_ou_repor_o_progresso)
+test_script_aceita_mudancas_fora_da_sala_nas_paginas_congeladas (test_sala_desligada.SalaDesligada.test_script_aceita_mudancas_fora_da_sala_nas_paginas_congeladas)
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='atlas/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='atlas/sala/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m1/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m1/licao-m1-f01/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m1/licao-m1-f02/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m1/licao-m1-f04/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m1/licao-m1-f05/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m1/licao-m1-f06/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m1/licao-m1-f07/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m1/licao-m1-f08/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m1/licao-m1-f10/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m1/licao-m1-f11/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m1/licao-m1-f15/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m1/licao-m1-f19/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m1/licao-m1-f20/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m1/painel-m1-f01/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m1/painel-m1-f02/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m1/painel-m1-f04/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m1/painel-m1-f05/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m1/painel-m1-f06/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m1/painel-m1-f07/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m1/painel-m1-f08/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m1/painel-m1-f10/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m1/painel-m1-f11/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m1/painel-m1-f15/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m2/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m2/licao-m2-f01/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m2/licao-m2-f02/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m2/licao-m2-f06/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m2/licao-m2-f07/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m2/licao-m2-f08/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m2/licao-m2-f09/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m2/licao-m2-f10/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m2/licao-m2-f11/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m2/painel-m2-f01/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m2/painel-m2-f02/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m2/painel-m2-f06/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m2/painel-m2-f07/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m2/painel-m2-f08/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m2/painel-m2-f09/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m2/painel-m2-f10/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m2/painel-m2-f11/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m3/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m3/licao-m3-f02/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m3/licao-m3-f03/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m3/licao-m3-f04/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m3/licao-m3-f05/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m3/licao-m3-f09/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m3/licao-m3-f10/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m3/licao-m3-f11/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m3/licao-m3-f13/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m3/licao-m3-f15/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m3/licao-m3-f16/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m3/licao-m3-f17/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m3/painel-m3-f02/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m3/painel-m3-f03/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m3/painel-m3-f04/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m3/painel-m3-f05/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m3/painel-m3-f09/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m3/painel-m3-f10/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m3/painel-m3-f11/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m3/painel-m3-f13/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m3/painel-m3-f15/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m3/painel-m3-f16/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m3/painel-m3-f17/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m4/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m4/licao-m4-f01/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m4/licao-m4-f02/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m4/licao-m4-f04/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m4/licao-m4-f06/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m4/licao-m4-f07/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m4/licao-m4-f08/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m4/licao-m4-f09/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m4/licao-m4-f10/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m4/licao-m4-f11/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m4/licao-m4-f14/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m4/licao-m4-f15/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m4/licao-m4-f20/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m4/licao-m4-f25/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m4/licao-m4-f26/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m4/licao-m4-f27/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m4/painel-m4-f01/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m4/painel-m4-f02/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m4/painel-m4-f04/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m4/painel-m4-f06/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m4/painel-m4-f07/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m4/painel-m4-f08/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m4/painel-m4-f09/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m4/painel-m4-f10/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m4/painel-m4-f11/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m4/painel-m4-f14/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m4/painel-m4-f15/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m4/painel-m4-f20/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m5/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m5/licao-m5-f02/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m5/licao-m5-f04/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m5/licao-m5-f07/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m5/licao-m5-f08/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m5/licao-m5-f09/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m5/licao-m5-f10/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m5/licao-m5-f11/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m5/licao-m5-f12/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m5/licao-m5-f13/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m5/licao-m5-f14/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m5/licao-m5-f15/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m5/painel-m5-f02/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m5/painel-m5-f04/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m5/painel-m5-f07/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m5/painel-m5-f08/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m5/painel-m5-f09/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m5/painel-m5-f10/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m5/painel-m5-f11/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m5/painel-m5-f12/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m5/painel-m5-f13/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m5/painel-m5-f14/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m5/painel-m5-f15/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m6/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m6/licao-m6-f01/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m6/licao-m6-f02/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m6/licao-m6-f04/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m6/licao-m6-f05/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m6/licao-m6-f06/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m6/licao-m6-f07/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m6/licao-m6-f08/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m6/licao-m6-f09/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m6/licao-m6-f11/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m6/painel-m6-f01/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m6/painel-m6-f02/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m6/painel-m6-f04/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m6/painel-m6-f05/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m6/painel-m6-f06/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m6/painel-m6-f07/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m6/painel-m6-f08/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m6/painel-m6-f09/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m6/painel-m6-f11/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m7/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m7/licao-m7-f01/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m7/licao-m7-f02/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m7/licao-m7-f04/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m7/licao-m7-f05/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m7/licao-m7-f06/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m7/licao-m7-f07/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m7/licao-m7-f08/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m7/licao-m7-f09/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m7/licao-m7-f10/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m7/licao-m7-f11/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m7/licao-m7-f13/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m7/licao-m7-f14/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m7/licao-m7-f15/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m7/licao-m7-f23/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m7/licao-m7-f34/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m7/licao-m7-f35/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m7/licao-m7-f36/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m7/painel-m7-f01/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m7/painel-m7-f02/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m7/painel-m7-f04/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m7/painel-m7-f05/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m7/painel-m7-f06/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m7/painel-m7-f07/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m7/painel-m7-f08/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m7/painel-m7-f09/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m7/painel-m7-f10/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m7/painel-m7-f11/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m7/painel-m7-f13/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m7/painel-m7-f14/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m7/painel-m7-f15/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m7/painel-m7-f23/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m7/painel-m7-f34/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m8/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m8/licao-m8-f01/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m8/licao-m8-f03/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m8/licao-m8-f04/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m8/licao-m8-f05/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m8/licao-m8-f06/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m8/licao-m8-f08/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m8/licao-m8-f09/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m8/licao-m8-f10/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m8/licao-m8-f11/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m8/licao-m8-f12/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m8/painel-m8-f01/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m8/painel-m8-f03/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m8/painel-m8-f04/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m8/painel-m8-f05/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m8/painel-m8-f06/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m8/painel-m8-f08/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m8/painel-m8-f09/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m8/painel-m8-f10/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m8/painel-m8-f11/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m8/painel-m8-f12/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m9/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m9/licao-m9-f01/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m9/licao-m9-f02/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m9/licao-m9-f03/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m9/licao-m9-f04/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m9/licao-m9-f05/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m9/licao-m9-f07/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m9/licao-m9-f10/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m9/painel-m9-f01/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m9/painel-m9-f02/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m9/painel-m9-f03/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m9/painel-m9-f04/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m9/painel-m9-f05/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m9/painel-m9-f07/index.html')
+test_a_limpeza_corre_onde_a_sala_existia_e_so_ai (test_sala_desligada.SalaDesligada.test_a_limpeza_corre_onde_a_sala_existia_e_so_ai) (pagina='m9/painel-m9-f10/index.html')
+test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica (test_sala_desligada.SalaDesligada.test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica) (licao='m1/licao-m1-f01/index.html')
+test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica (test_sala_desligada.SalaDesligada.test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica) (licao='m1/licao-m1-f02/index.html')
+test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica (test_sala_desligada.SalaDesligada.test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica) (licao='m1/licao-m1-f04/index.html')
+test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica (test_sala_desligada.SalaDesligada.test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica) (licao='m1/licao-m1-f05/index.html')
+test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica (test_sala_desligada.SalaDesligada.test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica) (licao='m1/licao-m1-f06/index.html')
+test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica (test_sala_desligada.SalaDesligada.test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica) (licao='m1/licao-m1-f07/index.html')
+test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica (test_sala_desligada.SalaDesligada.test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica) (licao='m1/licao-m1-f08/index.html')
+test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica (test_sala_desligada.SalaDesligada.test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica) (licao='m1/licao-m1-f10/index.html')
+test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica (test_sala_desligada.SalaDesligada.test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica) (licao='m1/licao-m1-f11/index.html')
+test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica (test_sala_desligada.SalaDesligada.test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica) (licao='m1/licao-m1-f15/index.html')
+test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica (test_sala_desligada.SalaDesligada.test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica) (licao='m1/licao-m1-f19/index.html')
+test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica (test_sala_desligada.SalaDesligada.test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica) (licao='m1/licao-m1-f20/index.html')
+test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica (test_sala_desligada.SalaDesligada.test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica) (licao='m2/licao-m2-f01/index.html')
+test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica (test_sala_desligada.SalaDesligada.test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica) (licao='m2/licao-m2-f02/index.html')
+test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica (test_sala_desligada.SalaDesligada.test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica) (licao='m2/licao-m2-f06/index.html')
+test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica (test_sala_desligada.SalaDesligada.test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica) (licao='m2/licao-m2-f07/index.html')
+test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica (test_sala_desligada.SalaDesligada.test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica) (licao='m2/licao-m2-f08/index.html')
+test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica (test_sala_desligada.SalaDesligada.test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica) (licao='m2/licao-m2-f09/index.html')
+test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica (test_sala_desligada.SalaDesligada.test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica) (licao='m2/licao-m2-f10/index.html')
+test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica (test_sala_desligada.SalaDesligada.test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica) (licao='m2/licao-m2-f11/index.html')
+test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica (test_sala_desligada.SalaDesligada.test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica) (licao='m3/licao-m3-f02/index.html')
+test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica (test_sala_desligada.SalaDesligada.test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica) (licao='m3/licao-m3-f03/index.html')
+test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica (test_sala_desligada.SalaDesligada.test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica) (licao='m3/licao-m3-f04/index.html')
+test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica (test_sala_desligada.SalaDesligada.test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica) (licao='m3/licao-m3-f05/index.html')
+test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica (test_sala_desligada.SalaDesligada.test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica) (licao='m3/licao-m3-f09/index.html')
+test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica (test_sala_desligada.SalaDesligada.test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica) (licao='m3/licao-m3-f10/index.html')
+test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica (test_sala_desligada.SalaDesligada.test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica) (licao='m3/licao-m3-f11/index.html')
+test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica (test_sala_desligada.SalaDesligada.test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica) (licao='m3/licao-m3-f13/index.html')
+test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica (test_sala_desligada.SalaDesligada.test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica) (licao='m3/licao-m3-f15/index.html')
+test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica (test_sala_desligada.SalaDesligada.test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica) (licao='m3/licao-m3-f16/index.html')
+test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica (test_sala_desligada.SalaDesligada.test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica) (licao='m3/licao-m3-f17/index.html')
+test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica (test_sala_desligada.SalaDesligada.test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica) (licao='m4/licao-m4-f01/index.html')
+test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica (test_sala_desligada.SalaDesligada.test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica) (licao='m4/licao-m4-f02/index.html')
+test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica (test_sala_desligada.SalaDesligada.test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica) (licao='m4/licao-m4-f04/index.html')
+test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica (test_sala_desligada.SalaDesligada.test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica) (licao='m4/licao-m4-f06/index.html')
+test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica (test_sala_desligada.SalaDesligada.test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica) (licao='m4/licao-m4-f07/index.html')
+test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica (test_sala_desligada.SalaDesligada.test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica) (licao='m4/licao-m4-f08/index.html')
+test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica (test_sala_desligada.SalaDesligada.test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica) (licao='m4/licao-m4-f09/index.html')
+test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica (test_sala_desligada.SalaDesligada.test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica) (licao='m4/licao-m4-f10/index.html')
+test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica (test_sala_desligada.SalaDesligada.test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica) (licao='m4/licao-m4-f11/index.html')
+test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica (test_sala_desligada.SalaDesligada.test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica) (licao='m4/licao-m4-f14/index.html')
+test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica (test_sala_desligada.SalaDesligada.test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica) (licao='m4/licao-m4-f15/index.html')
+test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica (test_sala_desligada.SalaDesligada.test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica) (licao='m4/licao-m4-f20/index.html')
+test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica (test_sala_desligada.SalaDesligada.test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica) (licao='m4/licao-m4-f25/index.html')
+test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica (test_sala_desligada.SalaDesligada.test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica) (licao='m4/licao-m4-f26/index.html')
+test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica (test_sala_desligada.SalaDesligada.test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica) (licao='m4/licao-m4-f27/index.html')
+test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica (test_sala_desligada.SalaDesligada.test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica) (licao='m5/licao-m5-f02/index.html')
+test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica (test_sala_desligada.SalaDesligada.test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica) (licao='m5/licao-m5-f04/index.html')
+test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica (test_sala_desligada.SalaDesligada.test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica) (licao='m5/licao-m5-f07/index.html')
+test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica (test_sala_desligada.SalaDesligada.test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica) (licao='m5/licao-m5-f08/index.html')
+test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica (test_sala_desligada.SalaDesligada.test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica) (licao='m5/licao-m5-f09/index.html')
+test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica (test_sala_desligada.SalaDesligada.test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica) (licao='m5/licao-m5-f10/index.html')
+test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica (test_sala_desligada.SalaDesligada.test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica) (licao='m5/licao-m5-f11/index.html')
+test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica (test_sala_desligada.SalaDesligada.test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica) (licao='m5/licao-m5-f12/index.html')
+test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica (test_sala_desligada.SalaDesligada.test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica) (licao='m5/licao-m5-f13/index.html')
+test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica (test_sala_desligada.SalaDesligada.test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica) (licao='m5/licao-m5-f14/index.html')
+test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica (test_sala_desligada.SalaDesligada.test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica) (licao='m5/licao-m5-f15/index.html')
+test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica (test_sala_desligada.SalaDesligada.test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica) (licao='m6/licao-m6-f01/index.html')
+test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica (test_sala_desligada.SalaDesligada.test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica) (licao='m6/licao-m6-f02/index.html')
+test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica (test_sala_desligada.SalaDesligada.test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica) (licao='m6/licao-m6-f04/index.html')
+test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica (test_sala_desligada.SalaDesligada.test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica) (licao='m6/licao-m6-f05/index.html')
+test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica (test_sala_desligada.SalaDesligada.test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica) (licao='m6/licao-m6-f06/index.html')
+test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica (test_sala_desligada.SalaDesligada.test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica) (licao='m6/licao-m6-f07/index.html')
+test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica (test_sala_desligada.SalaDesligada.test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica) (licao='m6/licao-m6-f08/index.html')
+test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica (test_sala_desligada.SalaDesligada.test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica) (licao='m6/licao-m6-f09/index.html')
+test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica (test_sala_desligada.SalaDesligada.test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica) (licao='m6/licao-m6-f11/index.html')
+test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica (test_sala_desligada.SalaDesligada.test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica) (licao='m7/licao-m7-f01/index.html')
+test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica (test_sala_desligada.SalaDesligada.test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica) (licao='m7/licao-m7-f02/index.html')
+test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica (test_sala_desligada.SalaDesligada.test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica) (licao='m7/licao-m7-f04/index.html')
+test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica (test_sala_desligada.SalaDesligada.test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica) (licao='m7/licao-m7-f05/index.html')
+test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica (test_sala_desligada.SalaDesligada.test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica) (licao='m7/licao-m7-f06/index.html')
+test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica (test_sala_desligada.SalaDesligada.test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica) (licao='m7/licao-m7-f07/index.html')
+test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica (test_sala_desligada.SalaDesligada.test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica) (licao='m7/licao-m7-f08/index.html')
+test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica (test_sala_desligada.SalaDesligada.test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica) (licao='m7/licao-m7-f09/index.html')
+test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica (test_sala_desligada.SalaDesligada.test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica) (licao='m7/licao-m7-f10/index.html')
+test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica (test_sala_desligada.SalaDesligada.test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica) (licao='m7/licao-m7-f11/index.html')
+test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica (test_sala_desligada.SalaDesligada.test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica) (licao='m7/licao-m7-f13/index.html')
+test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica (test_sala_desligada.SalaDesligada.test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica) (licao='m7/licao-m7-f14/index.html')
+test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica (test_sala_desligada.SalaDesligada.test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica) (licao='m7/licao-m7-f15/index.html')
+test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica (test_sala_desligada.SalaDesligada.test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica) (licao='m7/licao-m7-f23/index.html')
+test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica (test_sala_desligada.SalaDesligada.test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica) (licao='m7/licao-m7-f34/index.html')
+test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica (test_sala_desligada.SalaDesligada.test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica) (licao='m7/licao-m7-f35/index.html')
+test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica (test_sala_desligada.SalaDesligada.test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica) (licao='m7/licao-m7-f36/index.html')
+test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica (test_sala_desligada.SalaDesligada.test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica) (licao='m8/licao-m8-f01/index.html')
+test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica (test_sala_desligada.SalaDesligada.test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica) (licao='m8/licao-m8-f03/index.html')
+test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica (test_sala_desligada.SalaDesligada.test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica) (licao='m8/licao-m8-f04/index.html')
+test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica (test_sala_desligada.SalaDesligada.test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica) (licao='m8/licao-m8-f05/index.html')
+test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica (test_sala_desligada.SalaDesligada.test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica) (licao='m8/licao-m8-f06/index.html')
+test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica (test_sala_desligada.SalaDesligada.test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica) (licao='m8/licao-m8-f08/index.html')
+test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica (test_sala_desligada.SalaDesligada.test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica) (licao='m8/licao-m8-f09/index.html')
+test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica (test_sala_desligada.SalaDesligada.test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica) (licao='m8/licao-m8-f10/index.html')
+test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica (test_sala_desligada.SalaDesligada.test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica) (licao='m8/licao-m8-f11/index.html')
+test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica (test_sala_desligada.SalaDesligada.test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica) (licao='m8/licao-m8-f12/index.html')
+test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica (test_sala_desligada.SalaDesligada.test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica) (licao='m9/licao-m9-f01/index.html')
+test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica (test_sala_desligada.SalaDesligada.test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica) (licao='m9/licao-m9-f02/index.html')
+test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica (test_sala_desligada.SalaDesligada.test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica) (licao='m9/licao-m9-f03/index.html')
+test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica (test_sala_desligada.SalaDesligada.test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica) (licao='m9/licao-m9-f04/index.html')
+test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica (test_sala_desligada.SalaDesligada.test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica) (licao='m9/licao-m9-f05/index.html')
+test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica (test_sala_desligada.SalaDesligada.test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica) (licao='m9/licao-m9-f07/index.html')
+test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica (test_sala_desligada.SalaDesligada.test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica) (licao='m9/licao-m9-f10/index.html')
+test_manifesto_literal_desfaz_e_refaz_as_paginas_congeladas (test_sala_desligada.SalaDesligada.test_manifesto_literal_desfaz_e_refaz_as_paginas_congeladas) (pagina='m1/index.html')
+test_manifesto_literal_desfaz_e_refaz_as_paginas_congeladas (test_sala_desligada.SalaDesligada.test_manifesto_literal_desfaz_e_refaz_as_paginas_congeladas) (pagina='m1/licao-m1-f01/index.html')
+test_manifesto_literal_desfaz_e_refaz_as_paginas_congeladas (test_sala_desligada.SalaDesligada.test_manifesto_literal_desfaz_e_refaz_as_paginas_congeladas) (pagina='m1/licao-m1-f02/index.html')
+test_manifesto_literal_desfaz_e_refaz_as_paginas_congeladas (test_sala_desligada.SalaDesligada.test_manifesto_literal_desfaz_e_refaz_as_paginas_congeladas) (pagina='m1/licao-m1-f04/index.html')
+test_manifesto_literal_desfaz_e_refaz_as_paginas_congeladas (test_sala_desligada.SalaDesligada.test_manifesto_literal_desfaz_e_refaz_as_paginas_congeladas) (pagina='m1/licao-m1-f05/index.html')
+test_manifesto_literal_desfaz_e_refaz_as_paginas_congeladas (test_sala_desligada.SalaDesligada.test_manifesto_literal_desfaz_e_refaz_as_paginas_congeladas) (pagina='m1/licao-m1-f06/index.html')
+test_manifesto_literal_desfaz_e_refaz_as_paginas_congeladas (test_sala_desligada.SalaDesligada.test_manifesto_literal_desfaz_e_refaz_as_paginas_congeladas) (pagina='m1/licao-m1-f07/index.html')
+test_manifesto_literal_desfaz_e_refaz_as_paginas_congeladas (test_sala_desligada.SalaDesligada.test_manifesto_literal_desfaz_e_refaz_as_paginas_congeladas) (pagina='m1/licao-m1-f08/index.html')
+test_manifesto_literal_desfaz_e_refaz_as_paginas_congeladas (test_sala_desligada.SalaDesligada.test_manifesto_literal_desfaz_e_refaz_as_paginas_congeladas) (pagina='m1/licao-m1-f10/index.html')
+test_manifesto_literal_desfaz_e_refaz_as_paginas_congeladas (test_sala_desligada.SalaDesligada.test_manifesto_literal_desfaz_e_refaz_as_paginas_congeladas) (pagina='m1/licao-m1-f11/index.html')
+test_manifesto_literal_desfaz_e_refaz_as_paginas_congeladas (test_sala_desligada.SalaDesligada.test_manifesto_literal_desfaz_e_refaz_as_paginas_congeladas) (pagina='m1/licao-m1-f15/index.html')
+test_manifesto_literal_desfaz_e_refaz_as_paginas_congeladas (test_sala_desligada.SalaDesligada.test_manifesto_literal_desfaz_e_refaz_as_paginas_congeladas) (pagina='m1/licao-m1-f19/index.html')
+test_manifesto_literal_desfaz_e_refaz_as_paginas_congeladas (test_sala_desligada.SalaDesligada.test_manifesto_literal_desfaz_e_refaz_as_paginas_congeladas) (pagina='m1/licao-m1-f20/index.html')
+test_manifesto_literal_desfaz_e_refaz_as_paginas_congeladas (test_sala_desligada.SalaDesligada.test_manifesto_literal_desfaz_e_refaz_as_paginas_congeladas) (pagina='m2/index.html')
+test_manifesto_literal_desfaz_e_refaz_as_paginas_congeladas (test_sala_desligada.SalaDesligada.test_manifesto_literal_desfaz_e_refaz_as_paginas_congeladas) (pagina='m2/licao-m2-f01/index.html')
+test_manifesto_literal_desfaz_e_refaz_as_paginas_congeladas (test_sala_desligada.SalaDesligada.test_manifesto_literal_desfaz_e_refaz_as_paginas_congeladas) (pagina='m2/licao-m2-f02/index.html')
+test_manifesto_literal_desfaz_e_refaz_as_paginas_congeladas (test_sala_desligada.SalaDesligada.test_manifesto_literal_desfaz_e_refaz_as_paginas_congeladas) (pagina='m2/licao-m2-f06/index.html')
+test_manifesto_literal_desfaz_e_refaz_as_paginas_congeladas (test_sala_desligada.SalaDesligada.test_manifesto_literal_desfaz_e_refaz_as_paginas_congeladas) (pagina='m2/licao-m2-f07/index.html')
+test_manifesto_literal_desfaz_e_refaz_as_paginas_congeladas (test_sala_desligada.SalaDesligada.test_manifesto_literal_desfaz_e_refaz_as_paginas_congeladas) (pagina='m2/licao-m2-f08/index.html')
+test_manifesto_literal_desfaz_e_refaz_as_paginas_congeladas (test_sala_desligada.SalaDesligada.test_manifesto_literal_desfaz_e_refaz_as_paginas_congeladas) (pagina='m2/licao-m2-f09/index.html')
+test_manifesto_literal_desfaz_e_refaz_as_paginas_congeladas (test_sala_desligada.SalaDesligada.test_manifesto_literal_desfaz_e_refaz_as_paginas_congeladas) (pagina='m2/licao-m2-f10/index.html')
+test_manifesto_literal_desfaz_e_refaz_as_paginas_congeladas (test_sala_desligada.SalaDesligada.test_manifesto_literal_desfaz_e_refaz_as_paginas_congeladas) (pagina='m2/licao-m2-f11/index.html')
+test_manifesto_literal_desfaz_e_refaz_as_paginas_congeladas (test_sala_desligada.SalaDesligada.test_manifesto_literal_desfaz_e_refaz_as_paginas_congeladas) (pagina='m3/index.html')
+test_manifesto_literal_desfaz_e_refaz_as_paginas_congeladas (test_sala_desligada.SalaDesligada.test_manifesto_literal_desfaz_e_refaz_as_paginas_congeladas) (pagina='m4/index.html')
+test_manifesto_literal_desfaz_e_refaz_as_paginas_congeladas (test_sala_desligada.SalaDesligada.test_manifesto_literal_desfaz_e_refaz_as_paginas_congeladas) (pagina='m4/licao-m4-f01/index.html')
+test_manifesto_literal_desfaz_e_refaz_as_paginas_congeladas (test_sala_desligada.SalaDesligada.test_manifesto_literal_desfaz_e_refaz_as_paginas_congeladas) (pagina='m4/licao-m4-f02/index.html')
+test_manifesto_literal_desfaz_e_refaz_as_paginas_congeladas (test_sala_desligada.SalaDesligada.test_manifesto_literal_desfaz_e_refaz_as_paginas_congeladas) (pagina='m4/licao-m4-f04/index.html')
+test_manifesto_literal_desfaz_e_refaz_as_paginas_congeladas (test_sala_desligada.SalaDesligada.test_manifesto_literal_desfaz_e_refaz_as_paginas_congeladas) (pagina='m4/licao-m4-f06/index.html')
+test_manifesto_literal_desfaz_e_refaz_as_paginas_congeladas (test_sala_desligada.SalaDesligada.test_manifesto_literal_desfaz_e_refaz_as_paginas_congeladas) (pagina='m4/licao-m4-f07/index.html')
+test_manifesto_literal_desfaz_e_refaz_as_paginas_congeladas (test_sala_desligada.SalaDesligada.test_manifesto_literal_desfaz_e_refaz_as_paginas_congeladas) (pagina='m4/licao-m4-f08/index.html')
+test_manifesto_literal_desfaz_e_refaz_as_paginas_congeladas (test_sala_desligada.SalaDesligada.test_manifesto_literal_desfaz_e_refaz_as_paginas_congeladas) (pagina='m4/licao-m4-f09/index.html')
+test_manifesto_literal_desfaz_e_refaz_as_paginas_congeladas (test_sala_desligada.SalaDesligada.test_manifesto_literal_desfaz_e_refaz_as_paginas_congeladas) (pagina='m4/licao-m4-f10/index.html')
+test_manifesto_literal_desfaz_e_refaz_as_paginas_congeladas (test_sala_desligada.SalaDesligada.test_manifesto_literal_desfaz_e_refaz_as_paginas_congeladas) (pagina='m4/licao-m4-f11/index.html')
+test_manifesto_literal_desfaz_e_refaz_as_paginas_congeladas (test_sala_desligada.SalaDesligada.test_manifesto_literal_desfaz_e_refaz_as_paginas_congeladas) (pagina='m4/licao-m4-f14/index.html')
+test_manifesto_literal_desfaz_e_refaz_as_paginas_congeladas (test_sala_desligada.SalaDesligada.test_manifesto_literal_desfaz_e_refaz_as_paginas_congeladas) (pagina='m4/licao-m4-f15/index.html')
+test_manifesto_literal_desfaz_e_refaz_as_paginas_congeladas (test_sala_desligada.SalaDesligada.test_manifesto_literal_desfaz_e_refaz_as_paginas_congeladas) (pagina='m4/licao-m4-f20/index.html')
+test_manifesto_literal_desfaz_e_refaz_as_paginas_congeladas (test_sala_desligada.SalaDesligada.test_manifesto_literal_desfaz_e_refaz_as_paginas_congeladas) (pagina='m4/licao-m4-f25/index.html')
+test_manifesto_literal_desfaz_e_refaz_as_paginas_congeladas (test_sala_desligada.SalaDesligada.test_manifesto_literal_desfaz_e_refaz_as_paginas_congeladas) (pagina='m4/licao-m4-f26/index.html')
+test_manifesto_literal_desfaz_e_refaz_as_paginas_congeladas (test_sala_desligada.SalaDesligada.test_manifesto_literal_desfaz_e_refaz_as_paginas_congeladas) (pagina='m4/licao-m4-f27/index.html')
+test_manifesto_literal_desfaz_e_refaz_as_paginas_congeladas (test_sala_desligada.SalaDesligada.test_manifesto_literal_desfaz_e_refaz_as_paginas_congeladas) (pagina='m5/index.html')
+test_manifesto_literal_desfaz_e_refaz_as_paginas_congeladas (test_sala_desligada.SalaDesligada.test_manifesto_literal_desfaz_e_refaz_as_paginas_congeladas) (pagina='m6/index.html')
+test_manifesto_literal_desfaz_e_refaz_as_paginas_congeladas (test_sala_desligada.SalaDesligada.test_manifesto_literal_desfaz_e_refaz_as_paginas_congeladas) (pagina='m7/index.html')
+test_manifesto_literal_desfaz_e_refaz_as_paginas_congeladas (test_sala_desligada.SalaDesligada.test_manifesto_literal_desfaz_e_refaz_as_paginas_congeladas) (pagina='m7/licao-m7-f01/index.html')
+test_manifesto_literal_desfaz_e_refaz_as_paginas_congeladas (test_sala_desligada.SalaDesligada.test_manifesto_literal_desfaz_e_refaz_as_paginas_congeladas) (pagina='m7/licao-m7-f02/index.html')
+test_manifesto_literal_desfaz_e_refaz_as_paginas_congeladas (test_sala_desligada.SalaDesligada.test_manifesto_literal_desfaz_e_refaz_as_paginas_congeladas) (pagina='m7/licao-m7-f04/index.html')
+test_manifesto_literal_desfaz_e_refaz_as_paginas_congeladas (test_sala_desligada.SalaDesligada.test_manifesto_literal_desfaz_e_refaz_as_paginas_congeladas) (pagina='m7/licao-m7-f05/index.html')
+test_manifesto_literal_desfaz_e_refaz_as_paginas_congeladas (test_sala_desligada.SalaDesligada.test_manifesto_literal_desfaz_e_refaz_as_paginas_congeladas) (pagina='m7/licao-m7-f06/index.html')
+test_manifesto_literal_desfaz_e_refaz_as_paginas_congeladas (test_sala_desligada.SalaDesligada.test_manifesto_literal_desfaz_e_refaz_as_paginas_congeladas) (pagina='m7/licao-m7-f07/index.html')
+test_manifesto_literal_desfaz_e_refaz_as_paginas_congeladas (test_sala_desligada.SalaDesligada.test_manifesto_literal_desfaz_e_refaz_as_paginas_congeladas) (pagina='m7/licao-m7-f08/index.html')
+test_manifesto_literal_desfaz_e_refaz_as_paginas_congeladas (test_sala_desligada.SalaDesligada.test_manifesto_literal_desfaz_e_refaz_as_paginas_congeladas) (pagina='m7/licao-m7-f09/index.html')
+test_manifesto_literal_desfaz_e_refaz_as_paginas_congeladas (test_sala_desligada.SalaDesligada.test_manifesto_literal_desfaz_e_refaz_as_paginas_congeladas) (pagina='m7/licao-m7-f10/index.html')
+test_manifesto_literal_desfaz_e_refaz_as_paginas_congeladas (test_sala_desligada.SalaDesligada.test_manifesto_literal_desfaz_e_refaz_as_paginas_congeladas) (pagina='m7/licao-m7-f11/index.html')
+test_manifesto_literal_desfaz_e_refaz_as_paginas_congeladas (test_sala_desligada.SalaDesligada.test_manifesto_literal_desfaz_e_refaz_as_paginas_congeladas) (pagina='m7/licao-m7-f13/index.html')
+test_manifesto_literal_desfaz_e_refaz_as_paginas_congeladas (test_sala_desligada.SalaDesligada.test_manifesto_literal_desfaz_e_refaz_as_paginas_congeladas) (pagina='m7/licao-m7-f14/index.html')
+test_manifesto_literal_desfaz_e_refaz_as_paginas_congeladas (test_sala_desligada.SalaDesligada.test_manifesto_literal_desfaz_e_refaz_as_paginas_congeladas) (pagina='m7/licao-m7-f15/index.html')
+test_manifesto_literal_desfaz_e_refaz_as_paginas_congeladas (test_sala_desligada.SalaDesligada.test_manifesto_literal_desfaz_e_refaz_as_paginas_congeladas) (pagina='m7/licao-m7-f23/index.html')
+test_manifesto_literal_desfaz_e_refaz_as_paginas_congeladas (test_sala_desligada.SalaDesligada.test_manifesto_literal_desfaz_e_refaz_as_paginas_congeladas) (pagina='m7/licao-m7-f34/index.html')
+test_manifesto_literal_desfaz_e_refaz_as_paginas_congeladas (test_sala_desligada.SalaDesligada.test_manifesto_literal_desfaz_e_refaz_as_paginas_congeladas) (pagina='m7/licao-m7-f35/index.html')
+test_manifesto_literal_desfaz_e_refaz_as_paginas_congeladas (test_sala_desligada.SalaDesligada.test_manifesto_literal_desfaz_e_refaz_as_paginas_congeladas) (pagina='m7/licao-m7-f36/index.html')
+test_manifesto_literal_desfaz_e_refaz_as_paginas_congeladas (test_sala_desligada.SalaDesligada.test_manifesto_literal_desfaz_e_refaz_as_paginas_congeladas) (pagina='m8/index.html')
+test_manifesto_literal_desfaz_e_refaz_as_paginas_congeladas (test_sala_desligada.SalaDesligada.test_manifesto_literal_desfaz_e_refaz_as_paginas_congeladas) (pagina='m9/index.html')
+test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala (test_sala_desligada.SalaDesligada.test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala) (painel='m1/painel-m1-f01/index.html')
+test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala (test_sala_desligada.SalaDesligada.test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala) (painel='m1/painel-m1-f02/index.html')
+test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala (test_sala_desligada.SalaDesligada.test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala) (painel='m1/painel-m1-f04/index.html')
+test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala (test_sala_desligada.SalaDesligada.test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala) (painel='m1/painel-m1-f05/index.html')
+test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala (test_sala_desligada.SalaDesligada.test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala) (painel='m1/painel-m1-f06/index.html')
+test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala (test_sala_desligada.SalaDesligada.test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala) (painel='m1/painel-m1-f07/index.html')
+test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala (test_sala_desligada.SalaDesligada.test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala) (painel='m1/painel-m1-f08/index.html')
+test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala (test_sala_desligada.SalaDesligada.test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala) (painel='m1/painel-m1-f10/index.html')
+test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala (test_sala_desligada.SalaDesligada.test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala) (painel='m1/painel-m1-f11/index.html')
+test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala (test_sala_desligada.SalaDesligada.test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala) (painel='m1/painel-m1-f15/index.html')
+test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala (test_sala_desligada.SalaDesligada.test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala) (painel='m2/painel-m2-f01/index.html')
+test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala (test_sala_desligada.SalaDesligada.test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala) (painel='m2/painel-m2-f02/index.html')
+test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala (test_sala_desligada.SalaDesligada.test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala) (painel='m2/painel-m2-f06/index.html')
+test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala (test_sala_desligada.SalaDesligada.test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala) (painel='m2/painel-m2-f07/index.html')
+test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala (test_sala_desligada.SalaDesligada.test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala) (painel='m2/painel-m2-f08/index.html')
+test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala (test_sala_desligada.SalaDesligada.test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala) (painel='m2/painel-m2-f09/index.html')
+test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala (test_sala_desligada.SalaDesligada.test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala) (painel='m2/painel-m2-f10/index.html')
+test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala (test_sala_desligada.SalaDesligada.test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala) (painel='m2/painel-m2-f11/index.html')
+test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala (test_sala_desligada.SalaDesligada.test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala) (painel='m3/painel-m3-f02/index.html')
+test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala (test_sala_desligada.SalaDesligada.test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala) (painel='m3/painel-m3-f03/index.html')
+test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala (test_sala_desligada.SalaDesligada.test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala) (painel='m3/painel-m3-f04/index.html')
+test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala (test_sala_desligada.SalaDesligada.test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala) (painel='m3/painel-m3-f05/index.html')
+test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala (test_sala_desligada.SalaDesligada.test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala) (painel='m3/painel-m3-f09/index.html')
+test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala (test_sala_desligada.SalaDesligada.test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala) (painel='m3/painel-m3-f10/index.html')
+test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala (test_sala_desligada.SalaDesligada.test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala) (painel='m3/painel-m3-f11/index.html')
+test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala (test_sala_desligada.SalaDesligada.test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala) (painel='m3/painel-m3-f13/index.html')
+test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala (test_sala_desligada.SalaDesligada.test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala) (painel='m3/painel-m3-f15/index.html')
+test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala (test_sala_desligada.SalaDesligada.test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala) (painel='m3/painel-m3-f16/index.html')
+test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala (test_sala_desligada.SalaDesligada.test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala) (painel='m3/painel-m3-f17/index.html')
+test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala (test_sala_desligada.SalaDesligada.test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala) (painel='m4/painel-m4-f01/index.html')
+test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala (test_sala_desligada.SalaDesligada.test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala) (painel='m4/painel-m4-f02/index.html')
+test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala (test_sala_desligada.SalaDesligada.test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala) (painel='m4/painel-m4-f04/index.html')
+test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala (test_sala_desligada.SalaDesligada.test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala) (painel='m4/painel-m4-f06/index.html')
+test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala (test_sala_desligada.SalaDesligada.test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala) (painel='m4/painel-m4-f07/index.html')
+test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala (test_sala_desligada.SalaDesligada.test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala) (painel='m4/painel-m4-f08/index.html')
+test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala (test_sala_desligada.SalaDesligada.test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala) (painel='m4/painel-m4-f09/index.html')
+test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala (test_sala_desligada.SalaDesligada.test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala) (painel='m4/painel-m4-f10/index.html')
+test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala (test_sala_desligada.SalaDesligada.test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala) (painel='m4/painel-m4-f11/index.html')
+test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala (test_sala_desligada.SalaDesligada.test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala) (painel='m4/painel-m4-f14/index.html')
+test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala (test_sala_desligada.SalaDesligada.test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala) (painel='m4/painel-m4-f15/index.html')
+test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala (test_sala_desligada.SalaDesligada.test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala) (painel='m4/painel-m4-f20/index.html')
+test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala (test_sala_desligada.SalaDesligada.test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala) (painel='m5/painel-m5-f02/index.html')
+test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala (test_sala_desligada.SalaDesligada.test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala) (painel='m5/painel-m5-f04/index.html')
+test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala (test_sala_desligada.SalaDesligada.test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala) (painel='m5/painel-m5-f07/index.html')
+test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala (test_sala_desligada.SalaDesligada.test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala) (painel='m5/painel-m5-f08/index.html')
+test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala (test_sala_desligada.SalaDesligada.test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala) (painel='m5/painel-m5-f09/index.html')
+test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala (test_sala_desligada.SalaDesligada.test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala) (painel='m5/painel-m5-f10/index.html')
+test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala (test_sala_desligada.SalaDesligada.test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala) (painel='m5/painel-m5-f11/index.html')
+test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala (test_sala_desligada.SalaDesligada.test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala) (painel='m5/painel-m5-f12/index.html')
+test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala (test_sala_desligada.SalaDesligada.test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala) (painel='m5/painel-m5-f13/index.html')
+test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala (test_sala_desligada.SalaDesligada.test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala) (painel='m5/painel-m5-f14/index.html')
+test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala (test_sala_desligada.SalaDesligada.test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala) (painel='m5/painel-m5-f15/index.html')
+test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala (test_sala_desligada.SalaDesligada.test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala) (painel='m6/painel-m6-f01/index.html')
+test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala (test_sala_desligada.SalaDesligada.test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala) (painel='m6/painel-m6-f02/index.html')
+test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala (test_sala_desligada.SalaDesligada.test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala) (painel='m6/painel-m6-f04/index.html')
+test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala (test_sala_desligada.SalaDesligada.test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala) (painel='m6/painel-m6-f05/index.html')
+test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala (test_sala_desligada.SalaDesligada.test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala) (painel='m6/painel-m6-f06/index.html')
+test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala (test_sala_desligada.SalaDesligada.test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala) (painel='m6/painel-m6-f07/index.html')
+test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala (test_sala_desligada.SalaDesligada.test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala) (painel='m6/painel-m6-f08/index.html')
+test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala (test_sala_desligada.SalaDesligada.test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala) (painel='m6/painel-m6-f09/index.html')
+test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala (test_sala_desligada.SalaDesligada.test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala) (painel='m6/painel-m6-f11/index.html')
+test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala (test_sala_desligada.SalaDesligada.test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala) (painel='m7/painel-m7-f01/index.html')
+test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala (test_sala_desligada.SalaDesligada.test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala) (painel='m7/painel-m7-f02/index.html')
+test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala (test_sala_desligada.SalaDesligada.test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala) (painel='m7/painel-m7-f04/index.html')
+test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala (test_sala_desligada.SalaDesligada.test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala) (painel='m7/painel-m7-f05/index.html')
+test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala (test_sala_desligada.SalaDesligada.test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala) (painel='m7/painel-m7-f06/index.html')
+test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala (test_sala_desligada.SalaDesligada.test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala) (painel='m7/painel-m7-f07/index.html')
+test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala (test_sala_desligada.SalaDesligada.test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala) (painel='m7/painel-m7-f08/index.html')
+test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala (test_sala_desligada.SalaDesligada.test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala) (painel='m7/painel-m7-f09/index.html')
+test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala (test_sala_desligada.SalaDesligada.test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala) (painel='m7/painel-m7-f10/index.html')
+test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala (test_sala_desligada.SalaDesligada.test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala) (painel='m7/painel-m7-f11/index.html')
+test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala (test_sala_desligada.SalaDesligada.test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala) (painel='m7/painel-m7-f13/index.html')
+test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala (test_sala_desligada.SalaDesligada.test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala) (painel='m7/painel-m7-f14/index.html')
+test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala (test_sala_desligada.SalaDesligada.test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala) (painel='m7/painel-m7-f15/index.html')
+test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala (test_sala_desligada.SalaDesligada.test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala) (painel='m7/painel-m7-f23/index.html')
+test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala (test_sala_desligada.SalaDesligada.test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala) (painel='m7/painel-m7-f34/index.html')
+test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala (test_sala_desligada.SalaDesligada.test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala) (painel='m8/painel-m8-f01/index.html')
+test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala (test_sala_desligada.SalaDesligada.test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala) (painel='m8/painel-m8-f03/index.html')
+test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala (test_sala_desligada.SalaDesligada.test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala) (painel='m8/painel-m8-f04/index.html')
+test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala (test_sala_desligada.SalaDesligada.test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala) (painel='m8/painel-m8-f05/index.html')
+test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala (test_sala_desligada.SalaDesligada.test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala) (painel='m8/painel-m8-f06/index.html')
+test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala (test_sala_desligada.SalaDesligada.test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala) (painel='m8/painel-m8-f08/index.html')
+test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala (test_sala_desligada.SalaDesligada.test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala) (painel='m8/painel-m8-f09/index.html')
+test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala (test_sala_desligada.SalaDesligada.test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala) (painel='m8/painel-m8-f10/index.html')
+test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala (test_sala_desligada.SalaDesligada.test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala) (painel='m8/painel-m8-f11/index.html')
+test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala (test_sala_desligada.SalaDesligada.test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala) (painel='m8/painel-m8-f12/index.html')
+test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala (test_sala_desligada.SalaDesligada.test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala) (painel='m9/painel-m9-f01/index.html')
+test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala (test_sala_desligada.SalaDesligada.test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala) (painel='m9/painel-m9-f02/index.html')
+test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala (test_sala_desligada.SalaDesligada.test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala) (painel='m9/painel-m9-f03/index.html')
+test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala (test_sala_desligada.SalaDesligada.test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala) (painel='m9/painel-m9-f04/index.html')
+test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala (test_sala_desligada.SalaDesligada.test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala) (painel='m9/painel-m9-f05/index.html')
+test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala (test_sala_desligada.SalaDesligada.test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala) (painel='m9/painel-m9-f07/index.html')
+test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala (test_sala_desligada.SalaDesligada.test_paineis_continuam_a_servir_a_aula_sem_placar_nem_codigo_de_sala) (painel='m9/painel-m9-f10/index.html')
+test_script_nao_tem_nada_por_fazer (test_sala_desligada.SalaDesligada.test_script_nao_tem_nada_por_fazer)
+test_script_reconhece_a_forma_e_falha_com_uma_desconhecida (test_sala_desligada.SalaDesligada.test_script_reconhece_a_forma_e_falha_com_uma_desconhecida)
+
+BROWSER DOS AQUECIMENTOS, SAÍDA INTEGRAL
+PASS aquecimento: m1-u1 390 light cartões 12 passos 22 chave ['aquecimento-m1-u1']
+PASS aquecimento: m1-u1 1366 dark cartões 12 passos 22 chave ['aquecimento-m1-u1']
+PASS projeção sem gravar: m1-u1
+PASS aquecimento: m1-u2 390 light cartões 12 passos 22 chave ['aquecimento-m1-u2']
+PASS aquecimento: m1-u2 1366 dark cartões 12 passos 22 chave ['aquecimento-m1-u2']
+PASS projeção sem gravar: m1-u2
+PASS aquecimento: m7-u1 390 light cartões 12 passos 22 chave ['aquecimento-m7-u1']
+PASS aquecimento: m7-u1 1366 dark cartões 12 passos 22 chave ['aquecimento-m7-u1']
+PASS projeção sem gravar: m7-u1
+PASS aquecimento: m7-u2 390 light cartões 13 passos 23 chave ['aquecimento-m7-u2']
+PASS aquecimento: m7-u2 1366 dark cartões 13 passos 23 chave ['aquecimento-m7-u2']
+PASS projeção sem gravar: m7-u2
+PASS aquecimento: m7-u3 390 light cartões 12 passos 22 chave ['aquecimento-m7-u3']
+PASS aquecimento: m7-u3 1366 dark cartões 12 passos 22 chave ['aquecimento-m7-u3']
+PASS projeção sem gravar: m7-u3
+PASS tarefa com ligação ao aquecimento: m1-u1 390 light
+PASS tarefa com ligação ao aquecimento: m1-u1 1366 dark
+PASS tarefa com ligação ao aquecimento: m1-u2 390 light
+PASS tarefa com ligação ao aquecimento: m1-u2 1366 dark
+PASS tarefa com ligação ao aquecimento: m7-u1 390 light
+PASS tarefa com ligação ao aquecimento: m7-u1 1366 dark
+PASS tarefa com ligação ao aquecimento: m7-u2 390 light
+PASS tarefa com ligação ao aquecimento: m7-u2 1366 dark
+PASS tarefa com ligação ao aquecimento: m7-u3 390 light
+PASS tarefa com ligação ao aquecimento: m7-u3 1366 dark
+PASS percurso M1: A antes de T nas duas unidades
+PASS percurso: linhas A antes das linhas T, F10 e tarefa 3 com títulos novos
+PASS F10 reescrita até ao fim e painel com 16 relâmpagos
+PASS diapositivos: sessões 14 e 15 pelo nome, sem PDF com «Dia Pessoa»
+PASS guia: _Mensagem_ em itálico e blocos de 90 minutos
+
+
+BROWSER DO FEEDBACK M1, SAÍDA INTEGRAL
+PASS feedback M1 m1-u1 certo 10 cartões, seis tipos, 390 px
+PASS feedback M1 m1-u1 errado 10 cartões, seis tipos, 390 px
+PASS feedback M1 m1-u2 certo 10 cartões, seis tipos, 390 px
+PASS feedback M1 m1-u2 errado 10 cartões, seis tipos, 390 px
+
+
+MATRIZ GERAL DAS TAREFAS, SAÍDA INTEGRAL DO TIMEOUT
+PASS responsive task: m1-u1 actual width 390 light feedback/anchors/buoy/projection
+PASS responsive task: m1-u2 actual width 390 light feedback/anchors/buoy/projection
+PASS responsive task: m2-u1 actual width 390 light feedback/anchors/buoy/projection
+PASS responsive task: m2-u2 actual width 390 light feedback/anchors/buoy/projection
+PASS responsive task: m4-u1 actual width 390 light feedback/anchors/buoy/projection
+PASS responsive task: m4-u2 actual width 390 light feedback/anchors/buoy/projection
+PASS responsive task: m4-u3-discurso actual width 390 light feedback/anchors/buoy/projection
+Error occurred in event listener
+Traceback (most recent call last):
+  File "[pasta-de-trabalho]\python-browserdeps\playwright\_impl\_page.py", line 312, in _on_route
+    handled = await route_handler.handle(route)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "[pasta-de-trabalho]\python-browserdeps\playwright\_impl\_helper.py", line 456, in handle
+    raise e
+  File "[pasta-de-trabalho]\python-browserdeps\playwright\_impl\_helper.py", line 443, in handle
+    return await self._handle_internal(route)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "[pasta-de-trabalho]\python-browserdeps\playwright\_impl\_helper.py", line 479, in _handle_internal
+    await handler_finished_future
+  File "[pasta-de-trabalho]\python-browserdeps\playwright\_impl\_helper.py", line 470, in _handler
+    self.handler(route, route.request)  # type: ignore
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "[pasta-de-trabalho]\python-browserdeps\playwright\_impl\_impl_to_api_mapping.py", line 140, in wrapper_func
+    return handler(
+           ^^^^^^^^
+  File "[repositorio]\tests\browser_task_contract.py", line 264, in local
+    response = route.fetch(url=host + u.path.removeprefix('/pt') +
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "[pasta-de-trabalho]\python-browserdeps\playwright\sync_api\_generated.py", line 22646, in fetch
+    self._sync(
+  File "[pasta-de-trabalho]\python-browserdeps\playwright\_impl\_sync_base.py", line 111, in _sync
+    return task.result()
+           ^^^^^^^^^^^^^
+  File "[pasta-de-trabalho]\python-browserdeps\playwright\_impl\_network.py", line 520, in fetch
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "[pasta-de-trabalho]\python-browserdeps\playwright\_impl\_connection.py", line 636, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.Error: Route.fetch: connect ECONNREFUSED 127.0.0.1:60470
+Call log:
+  - → GET http://127.0.0.1:60470/assets/appearance.js?v=20261025-universal-1
+    - user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/149.0.7827.55 Safari/537.36
+    - accept: */*
+    - accept-encoding: gzip,deflate,br
+    - referer: http://127.0.0.1:60470/pt/tarefas/m7-u1/
+    - sec-ch-ua: "HeadlessChrome";v="149", "Chromium";v="149", "Not)A;Brand";v="24"
+    - sec-ch-ua-mobile: ?0
+    - sec-ch-ua-platform: "Windows"
+
+Error occurred in event listener
+Traceback (most recent call last):
+  File "[pasta-de-trabalho]\python-browserdeps\playwright\_impl\_page.py", line 312, in _on_route
+    handled = await route_handler.handle(route)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "[pasta-de-trabalho]\python-browserdeps\playwright\_impl\_helper.py", line 456, in handle
+    raise e
+  File "[pasta-de-trabalho]\python-browserdeps\playwright\_impl\_helper.py", line 443, in handle
+    return await self._handle_internal(route)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "[pasta-de-trabalho]\python-browserdeps\playwright\_impl\_helper.py", line 479, in _handle_internal
+    await handler_finished_future
+  File "[pasta-de-trabalho]\python-browserdeps\playwright\_impl\_helper.py", line 470, in _handler
+    self.handler(route, route.request)  # type: ignore
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "[pasta-de-trabalho]\python-browserdeps\playwright\_impl\_impl_to_api_mapping.py", line 140, in wrapper_func
+    return handler(
+           ^^^^^^^^
+  File "[repositorio]\tests\browser_task_contract.py", line 266, in local
+    route.fulfill(response=response)
+  File "[pasta-de-trabalho]\python-browserdeps\playwright\sync_api\_generated.py", line 22711, in fulfill
+    self._sync(
+  File "[pasta-de-trabalho]\python-browserdeps\playwright\_impl\_sync_base.py", line 111, in _sync
+    return task.result()
+           ^^^^^^^^^^^^^
+  File "[pasta-de-trabalho]\python-browserdeps\playwright\_impl\_network.py", line 430, in fulfill
+    await self._handle_route(
+  File "[pasta-de-trabalho]\python-browserdeps\playwright\_impl\_network.py", line 508, in _handle_route
+    raise e
+  File "[pasta-de-trabalho]\python-browserdeps\playwright\_impl\_network.py", line 504, in _handle_route
+    await callback()
+  File "[pasta-de-trabalho]\python-browserdeps\playwright\_impl\_network.py", line 499, in _inner_fulfill
+    await self._race_with_page_close(self._channel.send("fulfill", None, params))
+  File "[pasta-de-trabalho]\python-browserdeps\playwright\_impl\_network.py", line 604, in _race_with_page_close
+    raise cast(BaseException, fut.exception())
+  File "[pasta-de-trabalho]\python-browserdeps\playwright\_impl\_connection.py", line 78, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "[pasta-de-trabalho]\python-browserdeps\playwright\_impl\_connection.py", line 636, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.Error: Route.fulfill: Route.fetch: connect ECONNREFUSED 127.0.0.1:60470
+Call log:
+  - → GET http://127.0.0.1:60470/assets/appearance.js?v=20261025-universal-1
+    - user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/149.0.7827.55 Safari/537.36
+    - accept: */*
+    - accept-encoding: gzip,deflate,br
+    - referer: http://127.0.0.1:60470/pt/tarefas/m7-u1/
+    - sec-ch-ua: "HeadlessChrome";v="149", "Chromium";v="149", "Not)A;Brand";v="24"
+    - sec-ch-ua-mobile: ?0
+    - sec-ch-ua-platform: "Windows"
+
+Error occurred in event listener
+Traceback (most recent call last):
+  File "[pasta-de-trabalho]\python-browserdeps\playwright\_impl\_page.py", line 312, in _on_route
+    handled = await route_handler.handle(route)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "[pasta-de-trabalho]\python-browserdeps\playwright\_impl\_helper.py", line 456, in handle
+    raise e
+  File "[pasta-de-trabalho]\python-browserdeps\playwright\_impl\_helper.py", line 443, in handle
+    return await self._handle_internal(route)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "[pasta-de-trabalho]\python-browserdeps\playwright\_impl\_helper.py", line 479, in _handle_internal
+    await handler_finished_future
+  File "[pasta-de-trabalho]\python-browserdeps\playwright\_impl\_helper.py", line 470, in _handler
+    self.handler(route, route.request)  # type: ignore
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "[pasta-de-trabalho]\python-browserdeps\playwright\_impl\_impl_to_api_mapping.py", line 140, in wrapper_func
+    return handler(
+           ^^^^^^^^
+  File "[repositorio]\tests\browser_task_contract.py", line 266, in local
+    route.fulfill(response=response)
+  File "[pasta-de-trabalho]\python-browserdeps\playwright\sync_api\_generated.py", line 22711, in fulfill
+    self._sync(
+  File "[pasta-de-trabalho]\python-browserdeps\playwright\_impl\_sync_base.py", line 111, in _sync
+    return task.result()
+           ^^^^^^^^^^^^^
+  File "[pasta-de-trabalho]\python-browserdeps\playwright\_impl\_network.py", line 430, in fulfill
+    await self._handle_route(
+  File "[pasta-de-trabalho]\python-browserdeps\playwright\_impl\_network.py", line 508, in _handle_route
+    raise e
+  File "[pasta-de-trabalho]\python-browserdeps\playwright\_impl\_network.py", line 504, in _handle_route
+    await callback()
+  File "[pasta-de-trabalho]\python-browserdeps\playwright\_impl\_network.py", line 499, in _inner_fulfill
+    await self._race_with_page_close(self._channel.send("fulfill", None, params))
+  File "[pasta-de-trabalho]\python-browserdeps\playwright\_impl\_network.py", line 604, in _race_with_page_close
+    raise cast(BaseException, fut.exception())
+  File "[pasta-de-trabalho]\python-browserdeps\playwright\_impl\_connection.py", line 78, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "[pasta-de-trabalho]\python-browserdeps\playwright\_impl\_connection.py", line 636, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.Error: Route.fulfill: Route.fulfill: Route.fetch: connect ECONNREFUSED 127.0.0.1:60470
+Call log:
+  - → GET http://127.0.0.1:60470/assets/appearance.js?v=20261025-universal-1
+    - user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/149.0.7827.55 Safari/537.36
+    - accept: */*
+    - accept-encoding: gzip,deflate,br
+    - referer: http://127.0.0.1:60470/pt/tarefas/m7-u1/
+    - sec-ch-ua: "HeadlessChrome";v="149", "Chromium";v="149", "Not)A;Brand";v="24"
+    - sec-ch-ua-mobile: ?0
+    - sec-ch-ua-platform: "Windows"
+
+Traceback (most recent call last):
+  File "[pasta-de-trabalho]\browser_runner_m1.py", line 13, in <module>
+    runpy.run_path(str(target),run_name='__main__')
+  File "<frozen runpy>", line 287, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "[repositorio]\tests\browser_task_lesson_matrix.py", line 25, in <module>
+    main()
+  File "[repositorio]\tests\browser_task_lesson_matrix.py", line 16, in main
+    responsive_task_matrix(browser, f'http://127.0.0.1:{server.server_port}')
+  File "[repositorio]\tests\browser_task_contract.py", line 276, in responsive_task_matrix
+    assert_reader_navigation(page)
+  File "[repositorio]\tests\browser_task_contract.py", line 211, in assert_reader_navigation
+    page.reload(wait_until='networkidle')
+  File "[pasta-de-trabalho]\python-browserdeps\playwright\sync_api\_generated.py", line 19882, in reload
+    self._sync(
+  File "[pasta-de-trabalho]\python-browserdeps\playwright\_impl\_sync_base.py", line 111, in _sync
+    return task.result()
+           ^^^^^^^^^^^^^
+  File "[pasta-de-trabalho]\python-browserdeps\playwright\_impl\_page.py", line 572, in reload
+    await self._channel.send(
+  File "[pasta-de-trabalho]\python-browserdeps\playwright\_impl\_connection.py", line 78, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "[pasta-de-trabalho]\python-browserdeps\playwright\_impl\_connection.py", line 636, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TimeoutError: Page.reload: Timeout 30000ms exceeded.
+Call log:
+  - waiting for navigation until "networkidle"
+    - navigated to "http://127.0.0.1:60470/pt/tarefas/m7-u1/#apoios"
+
