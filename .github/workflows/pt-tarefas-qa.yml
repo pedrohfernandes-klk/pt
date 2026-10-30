@@ -16,6 +16,10 @@ on:
       - 'tests/*aquecimentos_m1*'
       # 30/10/2026: aquecimentos do M4 e a sua camada literal
       - 'tests/*aquecimentos_m4*'
+      # 30/10/2026: aquecimentos do M2 e a sua camada literal
+      - 'tests/*aquecimentos_m2*'
+      - 'm2/index.html'
+      - 'm2/guia-da-tarefa-m2/**'
       - 'm4/index.html'
       - 'm4/guia-da-tarefa-m4/**'
       - 'scripts/auditar_aquecimentos_m1.py'
@@ -56,6 +60,7 @@ jobs:
           # 30/10/2026: aquecimento em cartões (decisão do docente)
           python -m unittest discover -s tests -p 'test_aquecimentos_m1_opcoes.py' -v
           python -m unittest discover -s tests -p 'test_aquecimentos_m4_opcoes.py' -v
+          python -m unittest discover -s tests -p 'test_aquecimentos_m2_opcoes.py' -v
           python scripts/auditar_aquecimentos_m1.py
           node --check assets/task-90.js
           node --check assets/task-reader.js
@@ -80,3 +85,6 @@ jobs:
       # 30/10/2026: aquecimentos do M4 (decisão do docente)
       - name: Respostas certas e erradas nos aquecimentos do M4
         run: python tests/browser_aquecimentos_m4_feedback.py
+      # 30/10/2026: aquecimentos do M2 (decisão do docente)
+      - name: Respostas certas e erradas nos aquecimentos do M2
+        run: python tests/browser_aquecimentos_m2_feedback.py
