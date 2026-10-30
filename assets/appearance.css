@@ -166,10 +166,10 @@ body:has(>[data-appearance-floating])::after{content:"";display:block;height:68p
    obra em prosa (p.pr, com ou sem <br>: cada fala termina à esquerda, como a última linha de um parágrafo); a linha do
    plano da aula no primeiro cartão */
 .jogo .ler blockquote.prosa>p,#palco .caixa p.prosa,.jogo .ler p.pr:not(.verso),.jogo p.aula-linha,
-/* exame: sessões e laboratório (o índice das provas, área reservada, não entra) */
+/* exame: sessões, laboratório e índice das provas (30/10/2026: o índice deixou de ser área reservada com o #137) */
 .pass-prosa .par,.source blockquote,.model,#app .hero .lead,.provas-porta p:not([class]),.intro-row>p:not([class]),
 #app .source>p.context,#app p.callout,
-#laboratorio .of-rosto>.of-entrada,#laboratorio .writing-task,
+#laboratorio .of-rosto>.of-entrada,#laboratorio .writing-task,main#provas .of-rosto>.of-entrada,
 /* obras */
 main.ob>p:not([class]),.ob-comp>p:not([class]),.ob-aviso,.ob-falta,
 /* entrada, portais e atlas */
@@ -214,7 +214,7 @@ main.grelha>header>p:not([class]),main.grelha .g-nota,main.grelha .g-auto>p:not(
  main:has(>details#arquivo-producoes)>p:not([class]),
  main:is(:has(>section#rota),:has(>div.regra))>:is(section:not([id]),aside:not([class]))>p:not([class]),
  header.topo:has(+.regra)>p:not([class]),main:has(>div.regra)>h2+p:not([class]),header.cab:has(+p.nota)>p.meta,
- #laboratorio .of-colofao-texto>p:not(:has(a))
+ #laboratorio .of-colofao-texto>p:not(:has(a)),main#provas .of-colofao-texto>p:not(:has(a))
  {text-align:var(--epi-texto-corrido);text-align-last:auto;-webkit-hyphens:auto;hyphens:auto;hyphenate-limit-chars:6 3 3;-webkit-hyphenate-limit-before:3;-webkit-hyphenate-limit-after:3;word-spacing:normal;overflow-wrap:break-word}
 }
 /* Dentro da explicação: a resposta projetada, as listas e as ligações ficam à esquerda (o retorno da opção escolhida,

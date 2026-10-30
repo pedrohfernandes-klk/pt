@@ -9,7 +9,8 @@ que usam <main> sem classe). Este teste confere, sem navegador:
 * que a regra só mexe no alinhamento e na hifenização (nem letra, nem tamanho, nem cores, nem espaçamento das linhas)
   e volta à esquerda abaixo de 22.5em (360 px; era 20em até à revisão de 30/10/2026);
 * que nenhum seletor justificado aponta para versos, opções, botões, listas, tabelas, legendas, créditos ou para as
-  áreas reservadas (o índice das provas e a prosa das provas em cartões);
+  áreas reservadas (30/10/2026: o índice das provas deixou de o ser com o #137 e recebe as regras do laboratório;
+  a prosa das provas em cartões justifica-se em assets/exame/provas-licao.css, não aqui);
 * que a camada literal de 30/10 (classes «prosa» e «verso») só acrescenta classes, que nenhum excerto em prosa
   citado em blockquote nos cartões fica por marcar e que nenhum parágrafo feito sobretudo de verso citado fica por
   marcar como verso;
@@ -99,7 +100,7 @@ FAMILIAS = [
     ('lições em cartões', r'^m\d/licao-m\d-f\d+/index\.html$', 'casca',
      ['.jogo .ler p:not([class]):not(:has(br))', '.casca-folha .c-expl:not(:has(>br))', '.jogo .ler blockquote.prosa>p']),
     ('aquecimentos', r'^tarefas/m\d-u\d/aquecimento/index\.html$', 'casca', ['.jogo .ler p:not([class]):not(:has(br))']),
-    ('provas em cartões (área reservada: herdam a regra dos cartões)', r'^exame/provas/[^/]+/grupo-[ivx]+/index\.html$',
+    ('provas em cartões (herdam a regra dos cartões)', r'^exame/provas/[^/]+/grupo-[ivx]+/index\.html$',
      'casca', ['.jogo .ler p:not([class]):not(:has(br))']),
     ('Pensar devagar', r'^m\d/m\d-[^/]+/index\.html$', 'Pensar devagar', ['.jogo .ler blockquote.prosa>p']),
     ('exercícios de telemóvel', r'^(c|m\d)/[^/]+/index\.html$', 'id="palco"',
@@ -126,12 +127,16 @@ FAMILIAS = [
     ('atlas', r'^atlas/index\.html$', 'atlas-investigar', ['.atlas-investigar>p:not([class])']),
     ('exame (sessões)', r'^exame/index\.html$', 'app.js', ['.pass-prosa .par', '.model']),
     ('laboratório do exame', r'^exame/laboratorio/index\.html$', 'laboratorio', ['#laboratorio .of-rosto>.of-entrada']),
+    # 30/10/2026: o índice das provas deixou de ser área reservada com o #137
+    ('índice das provas', r'^exame/provas/index\.html$', 'id="provas"', ['main#provas .of-rosto>.of-entrada']),
 ]
 
 # Nenhum seletor justificado pode atravessar versos nem as áreas reservadas (o índice das provas e a prosa das provas em
 # cartões), e nenhum pode ter por sujeito opções, botões, listas, tabelas, legendas, créditos, formulários, títulos,
 # perguntas ou o retorno curto. O que vem dentro de :not() e de :has() é condição, não sujeito.
-PROIBIDO_EM_TODO = re.compile(r'\.(v|vl|ln|estrofe|verso|dupla-v|verso-q|frase-toda|prova-l)(?![\w-])|blockquote\.cit(?!\.prosa)|#provas|\.pv-')
+# 30/10/2026: #provas sai da lista (o índice das provas deixou de ser área reservada com o #137); .pv- continua (os blocos
+# de cada prova no índice são curtos e ficam à esquerda).
+PROIBIDO_EM_TODO = re.compile(r'\.(v|vl|ln|estrofe|verso|dupla-v|verso-q|frase-toda|prova-l)(?![\w-])|blockquote\.cit(?!\.prosa)|\.pv-')
 PROIBIDO_SUJEITO = re.compile(r'(^|[(,])(li|td|th|dd|dt|tr|table|button|label|figcaption|summary|h[1-6]|input|textarea|select)(?![\w-])'
                               r'|\.(op|cc-op|fe|resp-proj|fonte|fonte-x|rodape|gl|cita|q|perg|papel-q|c-veredito)(?![\w-])')
 
@@ -414,3 +419,17 @@ class TextoJustificado(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+
+
+class ProsaDasProvas(unittest.TestCase):
+    # 30/10/2026: a prosa das provas em cartões (div.prova-l sem .estrofe) justifica-se em assets/exame/provas-licao.css,
+    # com a mesma declaração e o limiar de appearance.css; as estrofes não.
+    def test_regra_da_prosa_das_provas(self):
+        css = (ROOT / 'assets/exame/provas-licao.css').read_text('utf-8')
+        regra = re.search(r'\.jogo \.ler \.prova-l:not\(\.estrofe\)\{([^}]*)\}', css)
+        self.assertIsNotNone(regra)
+        corpo = regra.group(1)
+        self.assertIn('text-align:var(--epi-texto-corrido,justify)', corpo)
+        self.assertIn('hyphens:auto', corpo)
+        self.assertIn('text-align-last:auto', corpo)
+        self.assertNotRegex(css, r'\.prova-l\.estrofe[^{]*\{[^}]*justify')

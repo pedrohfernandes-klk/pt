@@ -10,7 +10,9 @@ Abre uma página de cada família do sítio a 390 e a 1366 px e confere, pelo es
 * (30/10/2026, revisão) nenhum bloco justificado tem um botão ou um campo no meio do texto, e a 390 e a 1366 px nenhuma
   linha de um bloco justificado (salvo a última) tem um espaço entre palavras de 4 em ou mais (um nome de ficheiro ou um
   controlo que não parte); o limite é largo porque este Chromium não hifeniza;
-* no índice das provas (área reservada) nada se justifica.
+* no índice das provas (30/10/2026: deixou de ser área reservada com o #137) justificam-se a entrada e o colofão, como no
+  laboratório, e os blocos de cada prova ficam à esquerda; nas provas em cartões, a prosa da prova (.prova-l sem .estrofe)
+  justifica-se e as estrofes não.
 
 Também a 320 px (30/10/2026, revisão: abaixo de 22.5em, telemóveis pequenos ou ampliação), em todos os casos, e a 300 px:
 o texto corrido volta à esquerda e a hifenização mantém-se, sem deslocamento horizontal nem controlos em texto justificado.
@@ -35,7 +37,7 @@ from playwright.sync_api import sync_playwright
 ROOT = Path(__file__).resolve().parents[1]
 
 # Seletores que, se existirem, nunca podem estar justificados (em qualquer página).
-NUNCA = ('.jogo .ler .v', '.jogo .ler .v *', '.pass-verso .vl', 'div.verso', 'blockquote.cit:not(.prosa) p', 'p.verso',
+NUNCA = ('.jogo .ler .v:not(.prova-l:not(.estrofe))', '.jogo .ler .v:not(.prova-l:not(.estrofe)) *', '.pass-verso .vl', 'div.verso', 'blockquote.cit:not(.prosa) p', 'p.verso',
          'button', 'button *', 'li', 'td', 'th', 'figcaption', 'label', 'summary', 'h1', 'h2', 'h3', 'p.fonte',
          'p.fonte-x', 'p.rodape', '.casca-folha .c-veredito', '.casca-folha .c-expl .resp-proj',
          '#palco .caixa p:not(.prosa):has(br)', '#palco .caixa:has(>.chips) p', '.jogo .ler p.cita', '.jogo .ler p.q', 'p.perg',
@@ -63,6 +65,20 @@ def ler_seguinte(page):
         .find(b => /^(Seguinte|Começar|Continuar|Mostrar resposta)/.test(b.textContent.trim()));
       if (b) { b.click(); return true; } return false;
     }""")
+
+
+def projetar_ate(page, seletor, maximo=60):
+    """30/10/2026: em projeção (sem respostas), avança com R e → até haver um elemento visível com este seletor; as provas
+    em cartões pedem resposta antes de «Seguinte», e o texto da prova só existe no cartão em que aparece."""
+    vis = 's => [...document.querySelectorAll(s)].some(e => e.getBoundingClientRect().height > 0)'
+    for _ in range(maximo):
+        if page.evaluate(vis, seletor):
+            return True
+        page.keyboard.press('r')
+        page.wait_for_timeout(120)
+        page.keyboard.press('ArrowRight')
+        page.wait_for_timeout(300)
+    return page.evaluate(vis, seletor)
 
 
 def ate(page, seletor, maximo=20):
@@ -155,6 +171,11 @@ CASOS = [
     ('aquecimentos', 'tarefas/m7-u1/aquecimento/', lambda p: None, ['.jogo .ler p.abre'], []),
     ('provas em cartões (herdam a regra dos cartões)', 'exame/provas/2026-1f/grupo-i/', lambda p: None,
      ['.jogo .ler p:not([class])'], ['.jogo .ler li']),
+    # 30/10/2026: a prosa da prova (o Memorial do Convento da captura do docente) justifica-se; as estrofes não
+    ('provas em cartões: prosa da prova', 'exame/provas/2026-1f/grupo-i/?projetar=1',
+     lambda p: projetar_ate(p, '.jogo .ler .prova-l:not(.estrofe)'), ['.jogo .ler .prova-l:not(.estrofe)'], []),
+    ('provas em cartões: estrofes', 'exame/provas/2026-1f/grupo-i/?projetar=1',
+     lambda p: projetar_ate(p, '.jogo .ler .prova-l.estrofe'), [], ['.jogo .ler .prova-l.estrofe']),
     ('Pensar devagar: excerto em prosa', 'm4/m4-sermao-tribunal/', lambda p: ate(p, 'blockquote.prosa p'),
      ['blockquote.prosa > p', '.jogo .ler p:not([class])'], []),
     ('Pensar devagar: estrofes', 'm1/m1-voz-emprestada/', lambda p: ate(p, 'blockquote.cit:not(.prosa) p'),
@@ -221,7 +242,9 @@ CASOS = [
     ('exame: laboratório', 'exame/laboratorio/', lambda p: None,
      ['#laboratorio .of-rosto > .of-entrada', '#laboratorio .of-colofao-texto > p:not(:has(a))'],
      ['#laboratorio .of-colofao-texto > p:has(a)']),
-    ('índice das provas (área reservada)', 'exame/provas/', lambda p: None, [], ['.pv-prova p']),
+    # 30/10/2026: o índice das provas deixou de ser área reservada com o #137
+    ('índice das provas', 'exame/provas/', lambda p: None,
+     ['main#provas .of-rosto > .of-entrada', 'main#provas .of-colofao-texto > p:not(:has(a))'], ['.pv-prova p']),
     ('página não encontrada (texto centrado)', '404.html', lambda p: None, [], []),
 ]
 
