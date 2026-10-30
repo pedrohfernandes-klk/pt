@@ -1,0 +1,5 @@
+{
+ "_sobre": "A secção exame/provas/ (scripts/provas/gerar.py): as provas previstas, pela ordem do docente (as mais recentes primeiro, as oito do programa atual). Cada prova com dados em scripts/provas/dados/AAAA-Nf/ entra como bloco, da mais recente para a mais antiga; as que faltam ficam em «O que vem a seguir», sem datas.",
+ "previstas": [[2026, 1], [2026, 2], [2025, 1], [2025, 2], [2024, 1], [2024, 2], [2023, 1], [2023, 2]],
+ "seguir": "Primeiro as provas mais recentes, as oito do programa atual, sempre com os critérios de classificação. Cada prova chega aqui em três lições, uma por grupo, quando estiver conferida com o enunciado e com os critérios."
+}

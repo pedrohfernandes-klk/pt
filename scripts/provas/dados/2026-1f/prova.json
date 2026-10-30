@@ -1,0 +1,60 @@
+{
+ "_sobre": "Parâmetros da Prova 639, 1.ª fase, 2026, versão 2, para scripts/provas/gerar.py. A pasta (2026-1f), as chaves do progresso (prova-2026-1f-g1 a g3) e a transcrição (tests/fixtures/prova-639-2026-1f-v2.json) saem de prova, ano, fase e versao. versao_licao é a versão gravada com o progresso: mudá-la recomeça o progresso desse grupo neste aparelho.",
+ "prova": "639",
+ "ano": 2026,
+ "fase": 1,
+ "versao": 2,
+ "versao_licao": "2026-10-29",
+ "autoria": {
+  "nota": "os PDF de 2026 trazem o logótipo da EduQA, Instituto de Educação, Qualidade e Avaliação, que os publica em eduqa.pt",
+  "originais_em": "eduqa.pt",
+  "nota_copias": "A cópia pública dos critérios tem a marca de água «VERSÃO DE TRABALHO»; o texto é igual ao dos critérios publicados em eduqa.pt (conferido a 29/10/2026)."
+ },
+ "grupos": [
+  {
+   "licoes": ["m9/licao-m9-f01", "m9/licao-m9-f02", "m9/licao-m9-f03", "m9/licao-m9-f05", "obras/memorial", "m6/licao-m6-f06", "m6/licao-m6-f07", "obras/cesario"],
+   "sessoes": ["s19", "s11", "s23"],
+   "o_que": "Saramago e Cesário Verde: sete itens, cinco de resposta escrita e dois de seleção.",
+   "aprendes": "Aprendes a desmontar os itens de resposta escrita do Grupo I: o que pede o verbo, que linhas ou versos provam, como se ordena a resposta e o que a grelha oficial valoriza.",
+   "meta": "Cinco respostas no caderno."
+  },
+  {
+   "licoes": ["m4/licao-m4-f15", "m5/licao-m5-f07", "m6/licao-m6-f09", "m6/licao-m6-f07", "m4/licao-m4-f25"],
+   "sessoes": ["s22", "s21"],
+   "o_que": "Um texto de imprensa e gramática: sete itens de escolha múltipla.",
+   "aprendes": "Aprendes a ler um texto de imprensa como na prova: delimitar as linhas, encontrar a frase que decide cada opção e eliminar as que têm uma parte falsa; na gramática, coesão, os valores de «como» e o complemento agente da passiva.",
+   "meta": "Os sete itens da prova, com as quatro opções."
+  },
+  {
+   "licoes": ["m2/licao-m2-f08", "m4/licao-m4-f20", "m6/licao-m6-f11", "m4/licao-m4-f15", "m5/licao-m5-f07"],
+   "sessoes": ["s25", "s24"],
+   "o_que": "Escrita: a apreciação crítica de um <i>cartoon</i>, de 200 a 350 palavras.",
+   "aprendes": "Aprendes a escrever a apreciação crítica como na prova: ler o pedido, descrever o que conta, fundamentar o comentário em três aspetos, concluir, ligar as ideias e rever, com as contas das regras que tiram pontos.",
+   "meta": "Um texto no caderno e a autoavaliação com a grelha."
+  }
+ ],
+ "imagem": {
+  "_sobre": "Imagem com direitos (cartoon de Javad Takjoo): não se reproduz enquanto o docente não decidir (reproduzir: false). Sem ela, a figura e os campos «ver» dão lugar a uma ligação para a página do PDF do enunciado. Com reproduzir: true (ou gerar.py --com-imagem), o ficheiro tem de estar no repositório.",
+  "grupo": 3,
+  "reproduzir": false,
+  "ficheiro": "img/exame/provas/2026-1f/grupo-iii-takjoo.jpg",
+  "pagina_pdf": 13,
+  "paginas_pdf": 16,
+  "abre_sem_imagem": [
+   "<li><b>O que é oficial:</b> o enunciado, a imagem e a grelha vêm da prova e dos critérios.",
+   "<li><b>O que é oficial:</b> o enunciado, a imagem e a grelha vêm da prova e dos critérios. A imagem está no PDF da prova, p. 13: cada cartão que te pede para olhar para ela tem a ligação."
+  ]
+ },
+ "seccao": {
+  "textos": "José Saramago, <i>Memorial do Convento</i> e <i>O Ano da Morte de Ricardo Reis</i>; Cesário Verde, «O Sentimento dum Ocidental»; Miguel Marcelino, «Paisagem sonora» (texto adaptado); <i>cartoon</i> de Javad Takjoo"
+ },
+ "_imagens_com_licenca": "Imagens que as páginas desta prova podem reproduzir, cada uma com o crédito e a licença: {ficheiro, credito, licenca}. O cartoon do Grupo III é a imagem com direitos (acima), que só se reproduz com autorização do docente; não há outras. tests/test_provas_cartoes.py confere que nenhuma página da prova reproduz uma imagem fora desta lista e da imagem com direitos autorizada.",
+ "imagens_com_licenca": [],
+ "opcoes_equilibradas": false,
+ "_opcoes_equilibradas": "Regra do docente de 29 e 30/10/2026 (opções de comprimento semelhante: scripts/provas/opcoes.py, com a medição única do sítio, scripts/opcoes_equilibradas.py). Esta prova foi feita antes da regra e o conteúdo fica como está até uma passagem com versao_licao nova. Desde 30/10/2026 (nenhum teste saltado, regra do docente), tem uma catraca: opcoes_catraca guarda, por grupo, as perguntas com falhas e as vezes em que a certa é a mais longa (empates incluídos), medidas a 30/10/2026 com python3 scripts/provas/opcoes.py --catraca 2026-1f; o teste falha se algum destes números subir. As provas novas ficam com true, e os testes exigem a regra inteira.",
+ "opcoes_catraca": {
+  "grupo-i": {"falhas": 10, "certa_mais_longa": 16},
+  "grupo-ii": {"falhas": 4, "certa_mais_longa": 4},
+  "grupo-iii": {"falhas": 18, "certa_mais_longa": 13}
+ }
+}

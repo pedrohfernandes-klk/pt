@@ -33,11 +33,14 @@ e dos dados públicos, por isso, depois de a desfazer, os manifestos sucessores 
 grupos. As trocas literais estão em tests/fixtures/aquecimentos-m4-edits-20261030.json, geradas por scripts/aplicar_trocas.py
 a partir de scripts/aquecimentos_m4_20261030.json. É agora a camada mais recente: undo() desfá-la antes da do M1.
 
+30/10/2026 (depois do M4): aquecimentos em cartões antes das aulas de tarefa do M2. As trocas literais estão em
+tests/fixtures/aquecimentos-m2-edits-20261030.json, geradas por scripts/aplicar_trocas.py a partir de
+scripts/aquecimentos_m2_20261030.json. É agora a camada mais recente: undo() desfá-la antes da do M4.
 30/10/2026: texto corrido justificado (decisão do docente). Os excertos em prosa citados em blockquote nos percursos
 «Pensar devagar» e a prosa dialogada escrita com <br> nos exercícios do M5 levam a classe «prosa», para que
 assets/appearance.css os justifique sem justificar as estrofes, que usam a mesma marcação. As trocas literais estão em
 tests/fixtures/texto-justificado-edits-20261030.json, geradas por scripts/aplicar_trocas.py a partir de
-scripts/texto_justificado_20261030.json. É agora a camada mais recente: undo() desfá-la antes de todas as outras (antes da do M4).
+scripts/texto_justificado_20261030.json. É agora a camada mais recente: undo() desfá-la antes de todas as outras (antes da do M2).
 Revisão de 30/10/2026: a mesma camada põe também a classe «verso» nos parágrafos que só trazem verso citado, «prosa» nos
 três blockquote sem parágrafos de m4/recursos/tpc-entrada.js e lang="en" em dois trechos em inglês; nenhum texto muda.
 """
@@ -79,7 +82,22 @@ _AQUECIMENTOS_FILES = json.loads(AQUECIMENTOS_MANIFEST.read_text('utf-8'))['file
 REGENERADAS_20261029 = frozenset({'tarefas/m7-u3/index.html'})
 
 
-# 30/10/2026: a camada dos aquecimentos do M4 (a mais recente; desfaz-se antes da do M1).
+# 30/10/2026: a camada dos aquecimentos do M2 (a mais recente; desfaz-se antes da do M4).
+AQUECIMENTOS_M2_MANIFEST = ROOT / 'tests/fixtures/aquecimentos-m2-edits-20261030.json'
+_AQUECIMENTOS_M2_FILES = json.loads(AQUECIMENTOS_M2_MANIFEST.read_text('utf-8'))['files']
+
+
+def undo_aquecimentos_m2(path, text):
+    """30/10/2026: devolve o texto anterior à camada dos aquecimentos do M2 (ou o mesmo texto, se não a tem)."""
+    relative = _relative(path)
+    for edit in reversed(_AQUECIMENTOS_M2_FILES.get(relative, {}).get('edits', [])):
+        if text.count(edit['new']) != edit['occurrences']:
+            raise AssertionError(f"Troca autorizada a 30/10 (M2) já não confere: {relative}: {edit['location']}")
+        text = text.replace(edit['new'], edit['old'])
+    return text
+
+
+# 30/10/2026: a camada dos aquecimentos do M4 (desfaz-se antes da do M1).
 AQUECIMENTOS_M4_MANIFEST = ROOT / 'tests/fixtures/aquecimentos-m4-edits-20261030.json'
 _AQUECIMENTOS_M4_FILES = json.loads(AQUECIMENTOS_M4_MANIFEST.read_text('utf-8'))['files']
 
@@ -142,8 +160,9 @@ def undo(path, text):
     não há trocas de 28/10 a desfazer: o predecessor compacto continua autorizado pelo seu manifesto literal.
     30/10/2026: antes ainda, a camada do texto justificado (classe «prosa»).
     """
-    # 30/10/2026: antes de tudo, a camada do texto justificado (a mais recente), depois a dos aquecimentos do M4 e a do M1.
+    # 30/10/2026: antes de tudo, a camada do texto justificado (a mais recente), depois as dos aquecimentos do M2, do M4 e do M1.
     text = undo_justificado(path, text)
+    text = undo_aquecimentos_m2(path, text)
     text = undo_aquecimentos_m4(path, text)
     text = undo_aquecimentos_m1(path, text)
     text = undo_aquecimentos(path, text)

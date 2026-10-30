@@ -1,0 +1,857 @@
+{
+ "_sobre": "Grupo III da Prova 639, 2.ª fase, 2026, versão 2: título, «aprendes» e cartões, lidos por scripts/provas/gerar.py. Desenho de 30/10/2026, no molde da revisão do piloto: o pedido (género, tema, verbos), as regras que tiram pontos, o ponto de vista, argumentos e exemplos, o tema e o registo, a coesão e a revisão, a correção linguística, a conclusão e o plano, «Escreve no caderno» com o que separa os níveis e a grelha em desdobráveis, depois «Compara a tua resposta», um texto nosso com uma falha para avaliar com a grelha, «Revê com a grelha» e, só então, o texto completo de exemplo. Opções nossas de comprimento semelhante (regra de 29 e 30/10/2026). Daqui em diante, é este ficheiro que se edita. O que é da prova e dos critérios está nos cartões tal como na transcrição tests/fixtures/prova-639-2026-2f-v2.json; o resto é nosso. Revisão pedagógica de 30/10/2026: o texto com uma falha passou para depois do caderno, as respostas certas do «Compara» deixaram de repetir o que os cartões anteriores dão, e a conclusão e as proporções vêm logo a seguir ao parágrafo ordenado.",
+ "titulo": "A vida, a escola e a visão do mundo",
+ "aprendes": "Aprendes a escrever o texto de opinião como na prova: ler o pedido (género, tema e exigências), explicitar um ponto de vista sobre o que as experiências pessoais e a escola dão à visão do mundo, sustentá-lo em dois argumentos distintos, cada um com um exemplo significativo, julgar, concluir, ligar as ideias e rever o registo, a pontuação e o vocabulário. Também fazes as contas das regras que tiram pontos (extensão, maiúsculas, tabela da correção linguística). No fim, escreves no caderno com a grelha oficial ao lado, revês o texto com ela e só então o comparas com um exemplo.",
+ "cartoes": [
+  {
+   "t": "ler",
+   "rot": "Abre",
+   "titulo": "Grupo III: a vida, a escola e a visão do mundo",
+   "html": "<p class=\"abre\"><b>Uma pergunta sobre o modo como vemos o mundo e um texto teu, de 200 a 350 palavras.</b> O Grupo III pede um texto de opinião: o que dão as experiências pessoais e a escola à visão que cada um tem do mundo? Primeiro, lês o pedido; depois, constróis o texto às peças, com os critérios ao lado; no fim, escreves no caderno.</p><ul><li><b>Quanto vale:</b> 44 pontos, o item com mais peso da prova (22 % dos 200). Está marcado com ✱, como na prova: conta sempre. Nos critérios, 30 pontos são de estruturação temática e discursiva (três parâmetros de 10) e 14 de correção linguística.</li><li><b>Tempo:</b> a prova dura 120 minutos, mais 30 de tolerância, para os três grupos. Não marca tempo para cada grupo.</li><li><b>O que treinas:</b> ler o pedido (género, tema e exigências); tomar posição; separar argumento e exemplo; escolher exemplos significativos; julgar; concluir; ligar as ideias; rever; fazer o plano; escrever com a grelha ao lado.</li><li><b>Como funciona:</b> os cartões levam ao cartão «Escreve no caderno», com o enunciado e a grelha oficial. Depois de escreveres, comparas partes do teu texto com exemplos, avalias com a grelha um texto com uma falha, revês o teu e só então lês um texto completo de exemplo.</li><li><b>O que é oficial:</b> o enunciado e a grelha vêm da prova e dos critérios. Os critérios do Grupo III não dão tópicos nem exemplos de resposta: todas as frases e todos os textos de exemplo desta lição são nossos.</li></ul><p class=\"fonte\">Exame Final Nacional de Português, Prova 639, 2.ª fase, 2026, versão 2 (IAVE; os PDF de 2026 trazem o logótipo da EduQA, Instituto de Educação, Qualidade e Avaliação). Grelha e regras: critérios de classificação da mesma prova. Os cartões de preparação, as explicações e os exemplos são nossos.</p>"
+  },
+  {
+   "t": "ler",
+   "rot": "A prova",
+   "titulo": "Grupo III ✱",
+   "html": "<p class=\"fonte\">Na prova, p. 8:</p><p><b>✱ GRUPO III</b></p><p>Cada indivíduo tem a sua própria visão do mundo, baseada quer nas suas experiências pessoais, quer nos conhecimentos adquiridos na escola.</p><p>Num texto de opinião bem estruturado, com um mínimo de duzentas e um máximo de trezentas e cinquenta palavras, defenda uma perspetiva pessoal sobre o contributo das experiências pessoais e dos conhecimentos adquiridos na escola para o enriquecimento da visão que cada indivíduo constrói do mundo.</p><p>No seu texto:</p><ul class=\"prova-lista\"><li>explicite, de forma clara e pertinente, o seu ponto de vista, fundamentando-o em dois argumentos, cada um deles ilustrado com um exemplo significativo;</li><li>utilize um discurso valorativo (juízo de valor explícito ou implícito);</li><li>formule uma conclusão adequada à argumentação desenvolvida.</li></ul><p><b>Observações:</b></p><ol class=\"prova-obs\"><li>Para efeitos de contagem, considera-se <b>uma palavra</b> qualquer sequência delimitada por espaços em branco, mesmo quando esta integre elementos ligados por hífen (ex.: /dir-se-ia/). Qualquer número conta como uma única palavra, independentemente do número de algarismos que o constituam (ex.: /2026/).</li><li>Relativamente ao desvio dos limites de extensão indicados – entre duzentas e trezentas e cinquenta palavras –, há que atender ao seguinte:<ul class=\"prova-lista\"><li>um desvio dos limites de extensão indicados implica uma desvalorização parcial (até 5 pontos) do texto produzido;</li><li>um texto com extensão inferior a oitenta palavras é classificado com zero pontos.</li></ul></li></ol>"
+  },
+  {
+   "t": "escolha",
+   "g": "01",
+   "p": "Que género de texto pede o Grupo III?",
+   "p2": "No enunciado, que tipo de texto te mandam escrever?",
+   "o": [
+    "Um texto de opinião",
+    "Uma apreciação crítica",
+    "Uma breve exposição"
+   ],
+   "c": 0,
+   "f": "**Um texto de opinião.** O enunciado diz: «Num texto de opinião bem estruturado […] defenda uma perspetiva pessoal». Os critérios confirmam-no no parâmetro A: «texto de opinião». Defendes uma posição tua e dás razões para ela.",
+   "fe": [
+    null,
+    "A apreciação crítica julga uma obra, como o _cartoon_ da 1.ª fase de 2026. Aqui não há obra para julgar: há uma questão, e pedem-te a tua perspetiva sobre ela.",
+    "A exposição explica um tema sem tomar partido. Aqui pedem-te que defendas «uma perspetiva pessoal»."
+   ],
+   "liga": [
+    {
+     "t": "Sessão 24: Opinião, uma posição que resiste à revisão",
+     "href": "../../../../exame/#s24"
+    }
+   ]
+  },
+  {
+   "t": "sublinhar",
+   "g": "02",
+   "p": "Toca na forma verbal que diz o que fazes com a tua perspetiva.",
+   "p2": "Nesta frase do enunciado, que forma verbal diz o que te pedem que faças?",
+   "frase": "Num texto de opinião bem estruturado, com um mínimo de duzentas e um máximo de trezentas e cinquenta palavras, defenda uma perspetiva pessoal sobre o contributo das experiências pessoais e dos conhecimentos adquiridos na escola para o enriquecimento da visão que cada indivíduo constrói do mundo.",
+   "certas": [
+    19
+   ],
+   "f": "**Defenda.** Defender é tomar uma posição e sustentá-la com razões, do princípio ao fim do texto. É o verbo que faz deste texto um texto de opinião."
+  },
+  {
+   "t": "escolha",
+   "g": "03",
+   "p": "O que te pede «defenda uma perspetiva pessoal»?",
+   "p2": "Defender uma perspetiva pessoal é…",
+   "o": [
+    "Tomar posição e defendê-la com razões",
+    "Expor as duas posições sem escolher uma",
+    "Contar uma experiência que viveste"
+   ],
+   "c": 0,
+   "f": "**Tomar posição e defendê-la com razões.** A posição é tua e o texto sustenta-a do princípio ao fim: o ponto de vista, os dois argumentos, os exemplos e a conclusão.",
+   "fe": [
+    null,
+    "Expor as posições sem escolher é o que faz uma exposição. Aqui, o enunciado pede que explicites «o seu ponto de vista».",
+    "Uma experiência pode ser um exemplo, mas sozinha não é uma posição: falta dizer o que defendes e porquê."
+   ]
+  },
+  {
+   "t": "sublinhar",
+   "g": "04",
+   "p": "Na primeira exigência, toca nas duas formas verbais que mandam: uma diz o que fazes ao ponto de vista, a outra como o sustentas.",
+   "p2": "Que duas formas verbais dizem o que fazes com o ponto de vista? Toca nelas.",
+   "frase": "explicite, de forma clara e pertinente, o seu ponto de vista, fundamentando-o em dois argumentos, cada um deles ilustrado com um exemplo significativo;",
+   "certas": [
+    0,
+    11
+   ],
+   "f": "**Explicite** e **fundamentando-o**: dizes com clareza o que defendes e sustentas essa posição em dois argumentos, cada um com o seu exemplo. Sem a posição, não há opinião; sem os argumentos, fica só um palpite."
+  },
+  {
+   "t": "emparelhar",
+   "g": "05",
+   "p": "O tema tem três peças. Liga cada peça do enunciado ao que ela te obriga a tratar.",
+   "p2": "Liga cada parte do tema ao que tens de tratar no texto.",
+   "pares": [
+    [
+     "as experiências pessoais",
+     "o que vives: viagens, trabalho, encontros"
+    ],
+    [
+     "os conhecimentos adquiridos na escola",
+     "o que aprendes nas aulas: ciências, história, livros"
+    ],
+    [
+     "o enriquecimento da visão do mundo",
+     "o efeito: compreender melhor o mundo e os outros"
+    ]
+   ],
+   "f": "O tema junta duas fontes e um efeito: o contributo das experiências pessoais e dos conhecimentos adquiridos na escola «para o enriquecimento da visão que cada indivíduo constrói do mundo». Leitura nossa: o teu texto fala das duas fontes e do que elas fazem à visão do mundo; os exemplos servem para o mostrar."
+  },
+  {
+   "t": "escolha",
+   "g": "06",
+   "p": "Qual destas teses se desvia do tema? (Teses nossas.)",
+   "p2": "Uma destas teses fala de outro assunto. Qual?",
+   "o": [
+    "A escola vale sobretudo pelo diploma, que abre a porta a um bom emprego.",
+    "A escola dá nome ao que vivemos, e a vida dá sentido ao que aprendemos.",
+    "As viagens alargam a visão do mundo muito mais do que as aulas de Geografia."
+   ],
+   "c": 0,
+   "f": "**A tese do diploma e do emprego** fala de outra coisa: o tema é o contributo das duas fontes «para o enriquecimento da visão que cada indivíduo constrói do mundo». Um texto construído sobre ela arrisca tratar o tema com desvios, que o parâmetro B penaliza (leitura nossa). A tese da escola que dá nome ao que vivemos e a das viagens que alargam a visão do mundo estão dentro do tema, mesmo quando dão mais peso a uma das fontes.",
+   "fe": [
+    null,
+    "Esta junta as duas fontes e o efeito pedido: a escola, a vida e o modo como completam a visão do mundo. Está dentro do tema.",
+    "Dá mais peso à experiência, mas compara-a com a escola e fala do alargamento da visão do mundo: está dentro do tema."
+   ]
+  },
+  {
+   "t": "vf",
+   "g": "07",
+   "p": "Para tratares o tema sem desvios, tens de defender que a escola e a experiência valem exatamente o mesmo.",
+   "p2": "Uma perspetiva que dá mais peso à experiência do que à escola sai do tema.",
+   "v": false,
+   "f": "Falso. A «perspetiva pessoal» pedida pode dar mais peso a uma das fontes, ou mostrar como se completam. O que não deve faltar é o contributo das duas para a visão do mundo, porque o tema as junta (leitura nossa).",
+   "fe": "A perspetiva é tua: podes defender que uma das fontes pesa mais, desde que fales das duas e do modo como enriquecem a visão do mundo."
+  },
+  {
+   "t": "vf",
+   "g": "08",
+   "p": "Um texto que só fala de viagens e de trabalhos de verão, sem nunca referir a escola, trata o tema sem desvios.",
+   "p2": "Para tratar o tema todo, basta falar das experiências pessoais.",
+   "v": false,
+   "f": "Falso, pela nossa leitura do enunciado: o tema é o contributo das experiências pessoais **e** dos conhecimentos adquiridos na escola. Um texto que esquece uma das fontes trata só metade do tema e arrisca um desvio no parâmetro B (os critérios não dizem quanto vale esse desvio).",
+   "fe": "O tema junta as duas fontes. Se esqueces a escola, tratas só metade do que te pedem (leitura nossa)."
+  },
+  {
+   "t": "escolha",
+   "g": "09",
+   "cita": "Em 2025, ao visitar Conímbriga, lembrei-me da aula de História.",
+   "p": "Pelas regras da prova, quantas palavras tem esta frase?",
+   "p2": "Conta as palavras desta frase como a prova manda contar.",
+   "o": [
+    "10",
+    "11",
+    "13"
+   ],
+   "c": 0,
+   "f": "**10.** A forma «lembrei-me» é uma só sequência entre espaços: conta uma. «2025» conta uma, seja qual for o número de algarismos. São as duas regras das Observações da prova.",
+   "fe": [
+    null,
+    "Contaste «lembrei» e «me» em separado. Com hífen, é uma só palavra (ex.: /dir-se-ia/).",
+    "Contaste os algarismos de «2025». Qualquer número conta como uma única palavra (ex.: /2026/)."
+   ]
+  },
+  {
+   "t": "escolha",
+   "g": "10",
+   "cita": "desconta-se um ponto por cada palavra (a mais ou a menos), até ao máximo de cinco (1 × 5) pontos",
+   "p": "Esta é a regra dos critérios para a extensão. Um texto tem 196 palavras: quanto desconta?",
+   "p2": "Com esta regra dos critérios, que desconto tem um texto de 196 palavras?",
+   "o": [
+    "4 pontos",
+    "5 pontos",
+    "0 pontos"
+   ],
+   "c": 0,
+   "f": "**4 pontos:** faltam 4 palavras para as 200, e os critérios dizem que «desconta-se um ponto por cada palavra (a mais ou a menos), até ao máximo de cinco». O desconto faz-se no fim, «depois de aplicados todos os critérios definidos para o item».",
+   "fe": [
+    null,
+    "Cinco é o máximo, a partir de 5 palavras de desvio. Com 4 a menos, são 4 pontos.",
+    "O limite conta palavra a palavra: cada palavra a menos tira um ponto, até cinco."
+   ]
+  },
+  {
+   "t": "vf",
+   "g": "11",
+   "p": "Um texto com 75 palavras perde só os 5 pontos do desconto da extensão.",
+   "p2": "Com 75 palavras, o texto tem o desconto máximo da extensão, e o resto conta.",
+   "v": false,
+   "f": "Falso. Abaixo de **oitenta palavras**, o texto vale zero. Os critérios dizem: «Caso a resposta apresente uma extensão inferior a oitenta palavras, é classificada com zero pontos.»",
+   "fe": "Com menos de oitenta palavras, a classificação é zero, não um desconto."
+  },
+  {
+   "t": "vf",
+   "g": "12",
+   "p": "Se escreveres o texto todo em maiúsculas, a prova perde cinco pontos na classificação total.",
+   "p2": "Um texto escrito só em maiúsculas tira cinco pontos à classificação da prova.",
+   "v": true,
+   "f": "Verdadeiro. Os critérios gerais dizem: «As provas em que se apresente, pelo menos, uma resposta restrita ou extensa escrita integralmente em maiúsculas são sujeitas a uma desvalorização de cinco pontos na classificação total.» Escreve com minúsculas e maiúsculas, como sempre.",
+   "fe": "É verdade: uma resposta extensa escrita integralmente em maiúsculas tira cinco pontos à classificação total da prova."
+  },
+  {
+   "t": "vf",
+   "g": "13",
+   "p": "Um texto que fala de outro assunto e tem zero pontos no parâmetro B pode ainda ganhar pontos na correção linguística.",
+   "p2": "Com zero no parâmetro B (Tema e Pertinência da Informação), a correção linguística ainda pode dar pontos.",
+   "v": false,
+   "f": "Falso. Os critérios dizem: «A atribuição da classificação de zero pontos no parâmetro A (Género/Formato Textual) ou no parâmetro B (Tema e Pertinência da Informação) implica a atribuição de zero pontos nos restantes parâmetros da ETD, bem como na CL.» Tratar o tema pedido é a condição de tudo o resto.",
+   "fe": "Com zero no parâmetro A ou no B, todo o resto do item fica a zero, também a correção linguística."
+  },
+  {
+   "t": "escolha",
+   "g": "14",
+   "p": "Que frase explicita, de forma clara, um ponto de vista sobre o tema? (Frases nossas.)",
+   "p2": "Qual destas frases diz o que quem escreve defende?",
+   "o": [
+    "A escola dá-nos as ferramentas, mas é a experiência que nos ensina a usá-las.",
+    "Há quem prefira a escola e quem prefira a vida, e todos têm as suas razões.",
+    "Neste texto, vou falar da escola, das experiências e da visão do mundo."
+   ],
+   "c": 0,
+   "f": "**A frase das ferramentas e da experiência** toma posição: diz o que vale cada fonte e como se ligam. A frase do «Há quem prefira» fica nas opiniões dos outros, sem escolher; a do «Neste texto, vou falar» anuncia o assunto, mas não diz o que defendes. O enunciado pede que explicites, «de forma clara e pertinente, o seu ponto de vista».",
+   "fe": [
+    null,
+    "Apresenta posições alheias e não escolhe: falta o teu ponto de vista.",
+    "Anuncia o assunto, mas não toma posição. Um ponto de vista diz o que defendes."
+   ]
+  },
+  {
+   "t": "escolha",
+   "g": "15",
+   "p": "Qual destas frases tem um juízo de valor **implícito**? (Frases nossas.)",
+   "p2": "Que frase julga sem usar nenhum adjetivo de valor?",
+   "o": [
+    "Quem nunca saiu da sua rua conhece o mundo pelas palavras dos outros.",
+    "As visitas de estudo são excelentes e deviam ser muito mais frequentes.",
+    "Em 2025, a turma visitou o Museu Nacional de Arqueologia, em Lisboa."
+   ],
+   "c": 0,
+   "f": "**A frase de quem nunca saiu da sua rua** julga sem nenhum adjetivo de valor: diz que falta alguma coisa a quem só conhece o mundo pelo que os outros contam. O juízo está implícito. A frase das visitas «excelentes» tem um juízo explícito; a do museu só informa. O enunciado aceita as duas formas: «juízo de valor explícito ou implícito».",
+   "fe": [
+    null,
+    "O juízo é explícito: está à vista, num adjetivo de valor, «excelentes».",
+    "Só informa: diz o que aconteceu, sem tomar posição."
+   ]
+  },
+  {
+   "t": "vf",
+   "g": "16",
+   "p": "Para haver discurso valorativo, tens de escrever «na minha opinião» ou «eu acho».",
+   "p2": "Sem «eu acho» nem «na minha opinião», o texto não tem juízo de valor.",
+   "v": false,
+   "f": "Falso. O enunciado pede «um discurso valorativo (juízo de valor explícito ou implícito)» e não diz que expressões usar. «Uma aula de História pode mudar o modo como ouvimos os nossos avós» já julga, sem «eu». Se usares a primeira pessoa, mantém-na: o parâmetro C confere as «conexões adequadas entre coordenadas de enunciação (pessoa, tempo, espaço)».",
+   "fe": "Um juízo pode estar num adjetivo, num verbo ou na própria escolha do exemplo, com ou sem «eu»."
+  },
+  {
+   "t": "emparelhar",
+   "g": "17",
+   "p": "Argumento ou exemplo? Arruma cada frase (frases nossas).",
+   "p2": "Que frases dão uma razão geral, e quais mostram um caso concreto? Arruma.",
+   "pares": [
+    [
+     "A escola dá conceitos para interpretar o que vivemos.",
+     "argumento"
+    ],
+    [
+     "A experiência põe à prova o que se aprende nas aulas.",
+     "argumento"
+    ],
+    [
+     "Os livros lidos nas aulas mostram vidas que não são as nossas.",
+     "argumento"
+    ],
+    [
+     "Num estágio, as percentagens das aulas passaram a ter consequências.",
+     "exemplo"
+    ],
+    [
+     "Depois de estudar o 25 de Abril, ouvi o meu avô de outra maneira.",
+     "exemplo"
+    ],
+    [
+     "Em Conímbriga, as ruínas ganharam sentido por causa da aula de História.",
+     "exemplo"
+    ]
+   ],
+   "f": "O argumento é uma razão geral que sustenta o ponto de vista; o exemplo é um caso concreto (o quê, onde, quando) que mostra essa razão a funcionar. O nível 4 do parâmetro A pede as duas coisas: «fundamenta a perspetiva adotada em, pelo menos, dois argumentos distintos» e «ilustra cada um dos argumentos com, pelo menos, um exemplo».",
+   "liga": [
+    {
+     "t": "Lição M5-F13: Falhámos a vida, menino!",
+     "href": "../../../../m5/licao-m5-f13/"
+    }
+   ]
+  },
+  {
+   "t": "escolha",
+   "g": "18",
+   "p": "Qual destes pares tem **dois argumentos distintos**? (Pares nossos.)",
+   "p2": "Os critérios pedem «dois argumentos distintos». Que par os tem?",
+   "o": [
+    "A escola dá conceitos para compreender; a experiência põe-nos à prova",
+    "A escola ensina muitas coisas; nas aulas aprendemos muitos conteúdos",
+    "As viagens ensinam imenso; conhecer outros países também nos ensina"
+   ],
+   "c": 0,
+   "f": "**O par dos conceitos e da prova:** duas razões diferentes, uma sobre o que a escola dá e outra sobre o que a experiência faz. Os critérios pedem «dois argumentos distintos».",
+   "fe": [
+    null,
+    "É a mesma razão dita duas vezes: «ensina» e «aprendemos» dizem o mesmo. Conta como um argumento.",
+    "É a mesma razão dita duas vezes: as viagens e conhecer outros países são a mesma experiência."
+   ]
+  },
+  {
+   "t": "escolha",
+   "g": "19",
+   "p": "Qual destas frases dá um **exemplo significativo**? (Frases nossas.)",
+   "p2": "Que frase mostra um caso concreto, e não uma generalidade?",
+   "o": [
+    "No verão, a trabalhar num café, aprendi a ouvir pessoas de todas as idades.",
+    "Toda a gente sabe que a vida nos vai ensinando coisas muito importantes.",
+    "Há muitas experiências diferentes que podem mudar o modo como vemos o mundo."
+   ],
+   "c": 0,
+   "f": "**A frase do café, no verão:** um caso concreto, com o lugar, o tempo e o que se aprendeu. A do «Toda a gente sabe» e a das «muitas experiências diferentes» servem para qualquer texto e não mostram nada. O enunciado pede cada argumento «ilustrado com um exemplo significativo».",
+   "fe": [
+    null,
+    "É uma generalidade: não diz que coisa, onde nem quando. Não ilustra nenhum argumento.",
+    "É uma generalidade: anuncia experiências, mas não mostra nenhuma."
+   ]
+  },
+  {
+   "t": "emparelhar",
+   "g": "20",
+   "p": "Liga cada argumento ao exemplo que o ilustra (exemplos nossos).",
+   "p2": "Que exemplo prova cada argumento? Liga.",
+   "pares": [
+    [
+     "A escola dá conceitos para compreender o que vemos",
+     "as aulas sobre o clima explicaram a seca na aldeia dos avós"
+    ],
+    [
+     "A experiência põe à prova o que se aprende",
+     "no estágio, as percentagens deixaram de ser exercícios"
+    ],
+    [
+     "Os livros das aulas mostram mundos que não são o nosso",
+     "_Os Maias_ mostraram a vida de uma elite do século XIX"
+    ],
+    [
+     "O contacto com outras pessoas desfaz preconceitos",
+     "num banco alimentar, conheci vizinhos que só via de passagem"
+    ]
+   ],
+   "f": "Cada exemplo prova o seu argumento, e só esse. Um exemplo que servia a qualquer argumento é fraco; um argumento sem exemplo fica no ar, e no parâmetro A o texto desce de nível. Os teus exemplos podem vir das tuas aulas e da tua vida, também do estágio.",
+   "liga": [
+    {
+     "t": "Lição M7-F10: Argumentar com versos",
+     "href": "../../../../m7/licao-m7-f10/"
+    }
+   ]
+  },
+  {
+   "t": "rever",
+   "g": "21",
+   "p": "Este parágrafo (exemplo nosso) tem o argumento, mas não o prova. Experimenta trocar a frase a negro e fica com a que dá um exemplo significativo.",
+   "apoio": "Enunciado do Grupo III: o ponto de vista fundamentado «em dois argumentos, cada um deles ilustrado com um exemplo significativo».",
+   "frase": "Em primeiro lugar, a escola dá nome ao que vivemos. Há muitas situações na vida que só compreendemos depois de as estudarmos.",
+   "trecho": "Há muitas situações na vida que só compreendemos depois de as estudarmos.",
+   "o": [
+    "Só percebi a seca na aldeia dos avós depois de a estudar em Geografia.",
+    "Há imensas situações da vida que só compreendemos bem depois de estudar.",
+    "A Geografia estuda o território, o clima e as populações de cada lugar."
+   ],
+   "c": 0,
+   "f": "A frase nova dá **um exemplo** que prova o argumento: um lugar, um acontecimento e a aula que o explicou. Repetir a ideia com outras palavras («imensas», «bem») não prova nada, e uma definição da disciplina também não.",
+   "fe": [
+    "",
+    "Diz o mesmo com outras palavras. Falta o caso concreto: o quê, onde, quando.",
+    "É uma informação sobre a disciplina, não um exemplo do que a escola fez ao teu olhar."
+   ]
+  },
+  {
+   "t": "vf",
+   "g": "22",
+   "p": "O enunciado do Grupo III pede um contra-argumento.",
+   "p2": "Para cumprir o enunciado, tens de responder a quem pensa o contrário.",
+   "v": false,
+   "f": "Falso. O enunciado pede o ponto de vista, «fundamentando-o em dois argumentos, cada um deles ilustrado com um exemplo significativo», um discurso valorativo e uma conclusão. Um contra-argumento pode tornar o texto mais forte (leitura nossa), mas não é pedido e gasta palavras: confere a extensão.",
+   "fe": "Não pede: pede o ponto de vista, dois argumentos com exemplo, um discurso valorativo e a conclusão. O contra-argumento é opcional."
+  },
+  {
+   "t": "escolha",
+   "g": "23",
+   "p": "Um texto de opinião explicita o ponto de vista, tem dois argumentos distintos, um discurso valorativo e uma conclusão adequada, mas só o primeiro argumento tem um exemplo. Que pontuação tem no parâmetro A?",
+   "p2": "Ponto de vista, dois argumentos, juízo e conclusão bem feitos, mas um exemplo só no primeiro argumento: quanto vale no parâmetro A?",
+   "o": [
+    "8 pontos (nível 3)",
+    "10 pontos (nível 4)",
+    "5 pontos (nível 2)"
+   ],
+   "c": 0,
+   "f": "**8 pontos.** O nível 3 do parâmetro A é o de quem «fundamenta a perspetiva adotada em, pelo menos, dois argumentos distintos, mas ilustra apenas um deles com um exemplo, assegurando os restantes aspetos em avaliação neste parâmetro». Com um exemplo também no segundo argumento, e o resto igual, o texto chegava ao nível 4: 10 pontos.",
+   "fe": [
+    null,
+    "No nível 4, o texto «ilustra cada um dos argumentos com, pelo menos, um exemplo».",
+    "O nível 2 é para um só argumento com exemplo, ou para dois argumentos com um só exemplo e outras falhas."
+   ]
+  },
+  {
+   "t": "escolha",
+   "g": "24",
+   "p": "E um texto com um só argumento, ilustrado com um exemplo, e o resto certo? Que pontuação tem no parâmetro A?",
+   "p2": "Um só argumento, com o seu exemplo, e tudo o resto bem feito: quanto vale no parâmetro A?",
+   "o": [
+    "5 pontos (nível 2)",
+    "8 pontos (nível 3)",
+    "3 pontos (nível 1)"
+   ],
+   "c": 0,
+   "f": "**5 pontos.** O nível 2 descreve quem «fundamenta a perspetiva adotada em apenas um argumento, ilustrado com um exemplo, assegurando os restantes aspetos em avaliação neste parâmetro». Um segundo argumento, com o seu exemplo, levava o texto ao nível 4: mais 5 pontos.",
+   "fe": [
+    null,
+    "O nível 3 pede, pelo menos, dois argumentos distintos.",
+    "O nível 1 é para falhas no conjunto dos aspetos, ou para marcas de outros géneros misturadas sem critério."
+   ]
+  },
+  {
+   "t": "escolha",
+   "g": "25",
+   "cita": "A escola é uma seca, mas tem de ser, e pronto.",
+   "p": "Imagina que um colega escreve isto como argumento (frase nossa). O que lhe falta?",
+   "p2": "Que falha tem este argumento (exemplo nosso)?",
+   "o": [
+    "Uma razão ligada à visão do mundo, num registo cuidado",
+    "Mais força, com um ponto de exclamação no fim da frase",
+    "Uma pergunta ao leitor, para o obrigar a pensar no tema"
+   ],
+   "c": 0,
+   "f": "Falta **uma razão** que diga o que a escola acrescenta à visão do mundo, e falta registo: «uma seca» e «e pronto» são de conversa. O parâmetro B pede «a mobilização de argumentos e de exemplos diversificados e pertinentes» e «o recurso a um repertório lexical e a um registo de língua globalmente adequados ao desenvolvimento do tema».",
+   "fe": [
+    null,
+    "Um ponto de exclamação não faz uma razão: o argumento continua a não dizer o que a escola dá.",
+    "Uma pergunta pode abrir um parágrafo, mas não substitui a razão nem corrige o registo."
+   ]
+  },
+  {
+   "t": "rever",
+   "g": "26",
+   "p": "Revê o registo: troca a palavra de conversa por uma que julgue com precisão.",
+   "apoio": "Parâmetro B, nível 4: «o recurso a um repertório lexical e a um registo de língua globalmente adequados ao desenvolvimento do tema».",
+   "frase": "As viagens são brutais para quem quer conhecer outras formas de viver.",
+   "trecho": "brutais",
+   "o": [
+    "cruciais",
+    "altamente",
+    "bué boas"
+   ],
+   "c": 0,
+   "f": "**Cruciais** diz que as viagens pesam, e diz em quê: julga com precisão, num registo adequado. As formas «altamente» e «bué boas» são de conversa e não dizem o que as viagens fazem. Frase nossa.",
+   "fe": [
+    "",
+    "É gíria de conversa: num texto de opinião da prova, afasta o registo do que se pede.",
+    "É registo de conversa, e vago: boas em quê?"
+   ]
+  },
+  {
+   "t": "emparelhar",
+   "g": "27",
+   "p": "Cada conector diz uma relação entre ideias. Liga-os.",
+   "p2": "Liga cada conector ao que faz no texto de opinião.",
+   "pares": [
+    [
+     "em primeiro lugar",
+     "abre o primeiro argumento"
+    ],
+    [
+     "além disso",
+     "junta outro argumento"
+    ],
+    [
+     "por exemplo",
+     "introduz um caso concreto"
+    ],
+    [
+     "com efeito",
+     "confirma o que se disse antes"
+    ],
+    [
+     "em suma",
+     "abre a conclusão"
+    ]
+   ],
+   "f": "São mecanismos de «articulação interfrásica», que o parâmetro C confere. Num texto de opinião, marcam o caminho: onde começa cada argumento, onde entra o exemplo e onde se conclui. Escolhe-os pela relação entre as ideias, não para enfeitar.",
+   "liga": [
+    {
+     "t": "Lição M4-F15: O que prende um texto",
+     "href": "../../../../m4/licao-m4-f15/"
+    }
+   ]
+  },
+  {
+   "t": "completar",
+   "g": "28",
+   "p": "Escolhe o conector certo para cada espaço.",
+   "frase": "[1], a escola dá-nos conceitos para compreender o que vivemos. [2], nas aulas de Geografia estudei as secas e as cheias. [3], quando a ribeira da aldeia secou, soube explicar porquê.",
+   "lacunas": [
+    {
+     "o": [
+      "Antes de mais",
+      "Em conclusão",
+      "Pelo contrário"
+     ],
+     "c": 0
+    },
+    {
+     "o": [
+      "Por exemplo",
+      "Apesar disso",
+      "No entanto"
+     ],
+     "c": 0
+    },
+    {
+     "o": [
+      "Por isso",
+      "Todavia",
+      "Ou seja"
+     ],
+     "c": 0
+    }
+   ],
+   "f": "**Antes de mais** abre o argumento; **Por exemplo** traz o caso concreto; **Por isso** tira a consequência. Três conectores, três relações: argumento, exemplo, efeito. Exemplo nosso."
+  },
+  {
+   "t": "ordenar",
+   "g": "29",
+   "p": "Põe por ordem as frases deste parágrafo de argumento (exemplo nosso).",
+   "p2": "Reconstrói o parágrafo: que frase vem a seguir a qual?",
+   "passos": [
+    "Além disso, a experiência põe à prova o que aprendemos nas aulas.",
+    "Foi o que me aconteceu no estágio de verão, num estúdio de fotografia.",
+    "Ali, as proporções e as percentagens deixaram de ser exercícios e passaram a ter consequências.",
+    "Esse confronto com o trabalho real mostrou-me, afinal, para que serviam as aulas de Matemática."
+   ],
+   "f": "Argumento, exemplo, pormenor, juízo. As palavras de ligação guiam a ordem: «Além disso» abre um argumento novo; «Foi o que me aconteceu» traz o exemplo; «Ali» retoma o estúdio; «Esse confronto» retoma a frase anterior e fecha com o juízo."
+  },
+  {
+   "t": "escolha",
+   "g": "37",
+   "p": "Qual conclusão é «adequada à argumentação desenvolvida»? São exemplos nossos, para um texto que defendeu que a escola dá os conceitos e a experiência os põe à prova.",
+   "p2": "Três conclusões de exemplo, nossas: qual decorre de um texto que defendeu que a escola dá os conceitos e a experiência os põe à prova?",
+   "o": [
+    "Em suma, a escola dá-nos os nomes e a vida obriga-nos a usá-los: só as duas juntas alargam, de facto, o nosso olhar.",
+    "Em suma, a escola devia ter menos aulas teóricas e mais visitas de estudo, porque os alunos ficam mais motivados.",
+    "Em suma, cada pessoa tem a sua opinião sobre este assunto, e todas as opiniões merecem exatamente o mesmo respeito."
+   ],
+   "c": 0,
+   "f": "**A conclusão dos nomes que a vida obriga a usar** retoma os dois argumentos e fecha com o ponto de vista. A das visitas de estudo muda de assunto; a das opiniões que merecem o mesmo respeito larga a posição no fim. Nenhuma das duas decorre do que o texto defendeu.",
+   "fe": [
+    null,
+    "Muda de assunto: passa da visão do mundo para uma proposta sobre as aulas, que o texto não desenvolveu.",
+    "Larga o ponto de vista no fim: depois de defender uma posição, o texto acaba sem nenhuma."
+   ]
+  },
+  {
+   "t": "escolha",
+   "g": "38",
+   "p": "Num texto de 200 a 350 palavras, que plano tem partes «devidamente proporcionadas»? (Planos nossos.)",
+   "p2": "Qual destes planos dá a cada parte o peso que ela pede? (Planos nossos.)",
+   "o": [
+    "Ponto de vista, cerca de 50 palavras; dois argumentos, cerca de 100 cada; conclusão, cerca de 40",
+    "Ponto de vista, cerca de 160 palavras; dois argumentos, cerca de 40 cada; conclusão, cerca de 20 palavras",
+    "Ponto de vista, cerca de 20 palavras; dois argumentos, cerca de 150 cada; e nenhuma conclusão"
+   ],
+   "c": 0,
+   "f": "**O plano de 50, 100, 100 e 40 palavras:** o ponto de vista abre, cada argumento tem o seu parágrafo com o exemplo, e a conclusão fecha. São cerca de 290 palavras, dentro dos limites. O parâmetro C pede «diferentes partes, devidamente proporcionadas e articuladas entre si de modo consistente».",
+   "fe": [
+    null,
+    "A abertura come quase tudo: 40 palavras não chegam para um argumento com o seu exemplo.",
+    "Sem conclusão, falta uma parte pedida, e 20 palavras de abertura para 300 de argumentos desequilibram o texto."
+   ]
+  },
+  {
+   "t": "rever",
+   "g": "30",
+   "p": "Revê a segunda frase: evita repetir «A escola» sem perder o referente.",
+   "apoio": "Parâmetro C, nível 4: «mantém, de forma sistemática, cadeias de referência através de substituições nominais e pronominais adequadas».",
+   "frase": "A escola dá-nos conceitos para compreender o mundo. A escola também nos ensina a trabalhar com os outros.",
+   "trecho": "A escola também nos ensina",
+   "o": [
+    "Ela também nos ensina",
+    "Ele também nos ensina",
+    "Elas também nos ensinam"
+   ],
+   "c": 0,
+   "f": "**Ela** retoma «a escola», no feminino singular, e evita a repetição. É uma substituição pronominal; «Essa instituição» seria uma substituição nominal, também certa. Frases nossas.",
+   "fe": [
+    "",
+    "«Ele» está no masculino: não retoma «a escola».",
+    "«Elas» está no plural, e o verbo também muda: não há duas escolas."
+   ]
+  },
+  {
+   "t": "rever",
+   "g": "31",
+   "p": "Revê a segunda frase: a pessoa tem de acompanhar a da primeira.",
+   "apoio": "Parâmetro C, nível 4: «estabelece conexões adequadas entre coordenadas de enunciação (pessoa, tempo, espaço) ao longo do texto».",
+   "frase": "Na minha opinião, a escola alarga a visão do mundo. Por isso, defendemos que nenhuma viagem a substitui.",
+   "trecho": "defendemos",
+   "o": [
+    "defendo",
+    "defendes",
+    "defendem"
+   ],
+   "c": 0,
+   "f": "**Defendo**: a primeira frase está na primeira pessoa do singular («Na minha opinião»), e a segunda continua nela. Passar de «eu» para «nós», ou para «tu», sem razão parte as coordenadas de enunciação. Frases nossas.",
+   "fe": [
+    "",
+    "A forma «defendes» fala com o leitor, na segunda pessoa: muda a pessoa sem razão.",
+    "A forma «defendem» passa para a terceira pessoa do plural: quem defende deixa de ser quem escreve."
+   ]
+  },
+  {
+   "t": "rever",
+   "g": "32",
+   "p": "Revê a pontuação entre o sujeito e o verbo.",
+   "apoio": "Critérios gerais: «No caso específico da vírgula, considera-se erro inequívoco o seu uso para separar quer o sujeito do predicado, quer o verbo dos seus complementos, incluindo os constituintes oracionais (orações subordinadas substantivas completivas ou relativas).»",
+   "frase": "Os conhecimentos que adquirimos na escola, ajudam-nos a ler o mundo.",
+   "trecho": "escola, ajudam-nos",
+   "o": [
+    "escola ajudam-nos",
+    "escola; ajudam-nos",
+    "escola: ajudam-nos"
+   ],
+   "c": 0,
+   "f": "**Sem vírgula.** «Os conhecimentos que adquirimos na escola» é o sujeito e «ajudam» é o verbo: a vírgula entre os dois é um erro inequívoco de pontuação, do tipo A. Quanto mais comprido o sujeito, maior a tentação da vírgula. Frase nossa.",
+   "fe": [
+    "",
+    "O ponto e vírgula também separa o sujeito do verbo.",
+    "Os dois pontos também cortam o sujeito do verbo."
+   ],
+   "liga": [
+    {
+     "t": "Lição M5-F07: Quem faz o quê a quem",
+     "href": "../../../../m5/licao-m5-f07/"
+    }
+   ]
+  },
+  {
+   "t": "rever",
+   "g": "33",
+   "p": "Revê o vocabulário: a palavra a negro não diz o que quem escreve queria dizer.",
+   "apoio": "Quadro 1 dos critérios, tipo B: «impropriedade lexical».",
+   "frase": "A escola deu-me ferramentas para descriminar as notícias falsas das verdadeiras.",
+   "trecho": "descriminar",
+   "o": [
+    "distinguir",
+    "desculpar",
+    "descrever"
+   ],
+   "c": 0,
+   "f": "**Distinguir.** A palavra «descriminar» quer dizer absolver, tirar a culpa a alguém; para separar o falso do verdadeiro, a palavra é «distinguir». Usar uma palavra com o sentido de outra é impropriedade lexical, erro do tipo B, que pesa mais na tabela da correção linguística. Frase nossa.",
+   "fe": [
+    "",
+    "A palavra «desculpar» quer dizer perdoar: a frase deixa de fazer sentido.",
+    "A palavra «descrever» quer dizer contar como uma coisa é: não separa o falso do verdadeiro."
+   ]
+  },
+  {
+   "t": "ler",
+   "rot": "Para entender",
+   "titulo": "Como se contam os erros",
+   "html": "<p>Na correção linguística, os critérios separam os erros em dois tipos e leem a pontuação numa tabela. Lê o Quadro 1 e a tabela: os cartões a seguir usam-nos.</p><p class=\"fonte\">Dos critérios oficiais, tal como estão:</p><p><b>Quadro 1 – Tipologia de erros no âmbito da correção linguística</b></p><table class=\"empilha\"><tr><th colspan=\"2\">Tipo de ocorrências</th></tr><tr><td data-th=\"Tipo\" style=\"width:5em\"><b>Tipo A</b></td><td data-th=\"Ocorrências\"><ul><li>erro inequívoco de pontuação</li><li>erro de ortografia (incluindo erro de acentuação, erro de translineação e uso indevido de letra minúscula ou de letra maiúscula)</li><li>erro de morfologia</li><li>incumprimento das regras de citação de texto ou de referência a título de uma obra</li></ul></td></tr><tr><td data-th=\"Tipo\"><b>Tipo B</b></td><td data-th=\"Ocorrências\"><ul><li>erro de sintaxe</li><li>impropriedade lexical</li></ul></td></tr></table><p><b>Aspetos de correção linguística (CL): 14 pontos</b></p><p>«Após a contabilização dos erros do tipo A e do tipo B, apura-se a classificação neste parâmetro. A tabela abaixo apresenta a pontuação a atribuir, de acordo com o número de erros do tipo A e do tipo B identificados. Caso o número total de erros seja superior ao número máximo apresentado na tabela, o parâmetro CL é classificado com zero pontos.»</p><div class=\"rol\"><table class=\"cl\"><tr><th rowspan=\"2\">Número de erros do tipo B</th><th colspan=\"15\">Número de erros do tipo A</th></tr><tr><th>0</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th><th>10</th><th>11</th><th>12</th><th>13</th><th>14</th></tr><tr><th>0</th><td>14</td><td>14</td><td>14</td><td>11</td><td>11</td><td>11</td><td>8</td><td>8</td><td>8</td><td>5</td><td>5</td><td>5</td><td>2</td><td>2</td><td>2</td></tr><tr><th>1</th><td>14</td><td>11</td><td>11</td><td>11</td><td>8</td><td>8</td><td>8</td><td>5</td><td>5</td><td>5</td><td>2</td><td>2</td><td>2</td><td class=\"sombra\"></td><td class=\"sombra\"></td></tr><tr><th>2</th><td>11</td><td>11</td><td>8</td><td>8</td><td>8</td><td>5</td><td>5</td><td>5</td><td>2</td><td>2</td><td>2</td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td></tr><tr><th>3</th><td>8</td><td>8</td><td>8</td><td>5</td><td>5</td><td>5</td><td>2</td><td>2</td><td>2</td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td></tr><tr><th>4</th><td>8</td><td>5</td><td>5</td><td>5</td><td>2</td><td>2</td><td>2</td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td></tr><tr><th>5</th><td>5</td><td>5</td><td>2</td><td>2</td><td>2</td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td></tr><tr><th>6</th><td>2</td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td></tr><tr><th>7</th><td>2</td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td></tr></table></div><p>Para ler a tabela: procura a linha do número de erros do tipo B e a coluna do número de erros do tipo A; a pontuação está no cruzamento. As células vazias estão a sombreado nos critérios, sem pontuação.</p><p class=\"fonte\">Critérios de Classificação, Prova 639, 2.ª fase, 2026 (IAVE; PDF com o logótipo da EduQA): Quadro 1, p. 2; tabela da correção linguística, p. 16. A explicação de como ler a tabela é nossa.</p>"
+  },
+  {
+   "t": "emparelhar",
+   "g": "34",
+   "p": "Erro do tipo A ou do tipo B? Arruma cada caso.",
+   "p2": "Na correção linguística, os erros são de dois tipos. Arruma estes.",
+   "pares": [
+    [
+     "«A escola, ensina-nos a pensar.» (vírgula entre o sujeito e o verbo)",
+     "Tipo A"
+    ],
+    [
+     "«experiencia», sem acento, em vez de «experiência»",
+     "Tipo A"
+    ],
+    [
+     "«os maias», com minúsculas, no título da obra",
+     "Tipo A"
+    ],
+    [
+     "«Na aula, aprendi a interpelar um poema.» (queria dizer «interpretar»)",
+     "Tipo B"
+    ],
+    [
+     "«As viagens que fiz com a turma.» (falta a oração principal)",
+     "Tipo B"
+    ]
+   ],
+   "f": "Tipo A: erro inequívoco de pontuação, ortografia (incluindo acentuação, translineação e uso indevido de minúscula ou de maiúscula), morfologia, regras de citação de texto ou de referência a título de uma obra. Tipo B: sintaxe e impropriedade lexical. É o Quadro 1 dos critérios, e é com ele que se lê a tabela da correção linguística."
+  },
+  {
+   "t": "vf",
+   "g": "35",
+   "p": "Na tabela da correção linguística, 1 erro do tipo B, sem nenhum do tipo A, deixa os 14 pontos.",
+   "p2": "Um só erro do tipo B, e nenhum do tipo A, não tira pontos na correção linguística.",
+   "v": true,
+   "f": "Verdadeiro. Na linha de 1 erro do tipo B, a coluna de 0 erros do tipo A dá **14** pontos. Mas basta juntar 1 erro do tipo A para descer a **11**.",
+   "fe": "Na tabela, 1 erro do tipo B e 0 do tipo A dão 14 pontos; com mais 1 do tipo A, descem a 11."
+  },
+  {
+   "t": "escolha",
+   "g": "36",
+   "p": "Um texto tem 4 erros do tipo A e 2 do tipo B. Quantos pontos tem na correção linguística (máximo 14)?",
+   "p2": "Quatro erros do tipo A e dois do tipo B: quanto vale a correção linguística?",
+   "o": [
+    "8 pontos",
+    "11 pontos",
+    "5 pontos"
+   ],
+   "c": 0,
+   "f": "**8 pontos.** Na tabela, a linha de 2 erros do tipo B cruza com a coluna de 4 erros do tipo A.",
+   "fe": [
+    null,
+    "Com 2 erros do tipo B, os 11 pontos só ficam até 1 erro do tipo A.",
+    "5 pontos pedem mais erros: com 2 do tipo B, de 5 a 7 do tipo A."
+   ]
+  },
+  {
+   "t": "ordenar",
+   "g": "39",
+   "p": "Por ordem: as notas do plano de um texto de opinião (exemplo nosso). As palavras que ligam uma nota à outra dizem-te a ordem.",
+   "p2": "Ordena as notas deste plano (exemplo nosso). Repara no que liga cada nota à anterior.",
+   "passos": [
+    "A escola e a vida completam-se: uma dá os conceitos, a outra põe-nos à prova",
+    "Em primeiro lugar, a escola dá nome ao que vemos: a seca na aldeia, explicada nas aulas",
+    "Além disso, a vida põe à prova o que se aprende: as percentagens no estágio de fotografia",
+    "Assim, só as duas juntas alargam o olhar sobre o mundo"
+   ],
+   "f": "A primeira nota é o ponto de vista; «Em primeiro lugar» abre o primeiro argumento e «Além disso» só pode vir depois dele; «Assim» abre a conclusão. Cada argumento já leva o seu exemplo. No caderno, cada nota passa a um parágrafo."
+  },
+  {
+   "t": "ordenar",
+   "g": "40",
+   "p": "O caminho do Grupo III, do enunciado à revisão. Põe os passos por ordem.",
+   "p2": "Ordena o que fazes no Grupo III, do princípio ao fim.",
+   "passos": [
+    "Sublinhar no enunciado o género, o tema e as três exigências",
+    "Com o pedido sublinhado, decidir o ponto de vista sobre as duas fontes",
+    "Escolher dois argumentos distintos, cada um com um exemplo concreto",
+    "Escrever o ponto de vista, um parágrafo por argumento e a conclusão",
+    "Contar as palavras (200 a 350) e rever pontuação, acentos, sintaxe e vocabulário"
+   ],
+   "f": "Do pedido à revisão. Os três primeiros passos fazem o plano, no rascunho; o quarto é o texto; o quinto protege a extensão e a correção linguística. A ordem é nossa; as exigências vêm do enunciado e dos critérios."
+  },
+  {
+   "t": "ler",
+   "rot": "Escreve no caderno",
+   "titulo": "Grupo III ✱",
+   "html": "<p class=\"papel-q\"><b>✱ GRUPO III</b><br>Cada indivíduo tem a sua própria visão do mundo, baseada quer nas suas experiências pessoais, quer nos conhecimentos adquiridos na escola.<br>Num texto de opinião bem estruturado, com um mínimo de duzentas e um máximo de trezentas e cinquenta palavras, defenda uma perspetiva pessoal sobre o contributo das experiências pessoais e dos conhecimentos adquiridos na escola para o enriquecimento da visão que cada indivíduo constrói do mundo.<br>No seu texto:</p><ul class=\"papel-l\"><li>explicite, de forma clara e pertinente, o seu ponto de vista, fundamentando-o em dois argumentos, cada um deles ilustrado com um exemplo significativo;</li><li>utilize um discurso valorativo (juízo de valor explícito ou implícito);</li><li>formule uma conclusão adequada à argumentação desenvolvida.</li></ul><p>Escreve o texto no caderno, à mão, com o plano que ordenaste. Nada se escreve no telemóvel. Depois, comparas partes do teu texto com exemplos, avalias com a grelha um texto com uma falha, revês o teu e só então lês um texto completo de exemplo. <b>Extensão:</b> 200 a 350 palavras; cada palavra de desvio desconta um ponto, até 5; menos de 80 palavras dá zero. <b>Cotação:</b> 44 pontos (30 de estruturação temática e discursiva, 14 de correção linguística).</p><p class=\"niveis-t\"><b>O que separa 10, 8 e 5 pontos em cada parâmetro</b> (leitura nossa da grelha):</p><ul class=\"niveis\"><li><b>Parâmetro A:</b> 10 com o ponto de vista explícito, dois argumentos distintos, um exemplo em cada um, juízo de valor e conclusão adequada; 8 se só um argumento tem exemplo, ou se falham um ou dois dos outros aspetos; 5 com um só argumento e o seu exemplo, ou com um só exemplo e outras falhas.</li><li><b>Parâmetro B:</b> 10 sem desvios, com argumentos e exemplos pertinentes, ideias que progridem e registo adequado; 8 com falhas pontuais na eficácia argumentativa, ou com desvios pouco significativos; 5 com desvios pouco significativos e falhas pontuais, ou com falhas significativas.</li><li><b>Parâmetro C:</b> 10 com partes proporcionadas, parágrafos marcados, conectores, retomas sem repetições e pessoa e tempo coerentes; 8 com falhas pontuais em um ou dois destes aspetos; 5 com falhas pontuais em três ou mais, ou com falhas significativas.</li></ul><p class=\"niveis-cl\">Correção linguística: os 14 pontos ficam com, no máximo, 2 erros do tipo A e nenhum do tipo B, ou com 1 do tipo B e nenhum do tipo A.</p><details class=\"mais\"><summary>A grelha oficial, tal como está nos critérios</summary><div><p><b>Aspetos de estruturação temática e discursiva (ETD)<sup>1</sup>: 30 pontos</b></p><p class=\"gl\"><sup>1</sup> <i>Vide</i> Critérios Gerais (p. 2) e descritores de desempenho relativos à estruturação temática e discursiva (pp. 14-15).</p><p><b>Parâmetro A: Género/Formato Textual</b></p><table class=\"empilha grelha\"><tr><th style=\"width:4em\">Nível</th><th>Descritor de desempenho</th><th style=\"width:6em\">Pontuação</th></tr><tr><td data-th=\"Nível\">4</td><td data-th=\"Descritor de desempenho\">Escreve um texto de acordo com o género/formato solicitado (texto de opinião):<ul><li>explicita o seu ponto de vista;</li><li>fundamenta a perspetiva adotada em, pelo menos, dois argumentos distintos;</li><li>ilustra cada um dos argumentos com, pelo menos, um exemplo;</li><li>produz um discurso valorativo (desenvolvendo um juízo de valor explícito ou implícito);</li><li>formula uma conclusão adequada à argumentação desenvolvida.</li></ul></td><td data-th=\"Pontuação\">10</td></tr><tr><td data-th=\"Nível\">3</td><td data-th=\"Descritor de desempenho\">Escreve um texto de acordo com o género/formato solicitado (texto de opinião) e fundamenta a perspetiva adotada em, pelo menos, dois argumentos distintos, mas ilustra apenas um deles com um exemplo, assegurando os restantes aspetos em avaliação neste parâmetro.<br><b>OU</b><br>Escreve um texto de acordo com o género/formato solicitado (texto de opinião), fundamentando a perspetiva adotada em, pelo menos, dois argumentos, cada um deles ilustrado com, pelo menos, um exemplo, mas apresenta falhas em um ou dois dos restantes aspetos em avaliação neste parâmetro.</td><td data-th=\"Pontuação\">8</td></tr><tr><td data-th=\"Nível\">2</td><td data-th=\"Descritor de desempenho\">Escreve um texto de acordo com o género/formato solicitado (texto de opinião), mas fundamenta a perspetiva adotada em apenas um argumento, ilustrado com um exemplo, assegurando os restantes aspetos em avaliação neste parâmetro.<br><b>OU</b><br>Escreve um texto de acordo com o género/formato solicitado (texto de opinião) e fundamenta a perspetiva adotada em, pelo menos, dois argumentos distintos, mas ilustra apenas um deles com um exemplo e apresenta falhas em um ou dois dos restantes aspetos em avaliação neste parâmetro.</td><td data-th=\"Pontuação\">5</td></tr><tr><td data-th=\"Nível\">1</td><td data-th=\"Descritor de desempenho\">Escreve um texto de acordo com o género/formato solicitado (texto de opinião), mas apresenta falhas no conjunto dos aspetos em avaliação neste parâmetro.<br><b>OU</b><br>Escreve um texto em que as marcas do género/formato solicitado se misturam, sem critério nem intencionalidade, com as de outros géneros/formatos.</td><td data-th=\"Pontuação\">3</td></tr></table><p class=\"gl\"><b>Nota ‒</b> A pertinência dos argumentos e dos exemplos é avaliada no parâmetro B.</p><p><b>Parâmetro B: Tema e Pertinência da Informação</b></p><table class=\"empilha grelha\"><tr><th style=\"width:4em\">Nível</th><th>Descritor de desempenho</th><th style=\"width:6em\">Pontuação</th></tr><tr><td data-th=\"Nível\">4</td><td data-th=\"Descritor de desempenho\">Trata o tema proposto sem desvios e escreve um texto com eficácia argumentativa, assegurando:<ul><li>a mobilização de argumentos e de exemplos diversificados e pertinentes;</li><li>a progressão da informação de forma coerente;</li><li>o recurso a um repertório lexical e a um registo de língua globalmente adequados ao desenvolvimento do tema, ainda que possam existir esporádicos afastamentos, justificados pela intencionalidade comunicativa.</li></ul></td><td data-th=\"Pontuação\">10</td></tr><tr><td data-th=\"Nível\">3</td><td data-th=\"Descritor de desempenho\">Trata o tema proposto sem desvios, mas escreve um texto com falhas pontuais nos aspetos relativos à eficácia argumentativa.<br><b>OU</b><br>Trata o tema proposto com desvios pouco significativos, mas escreve um texto com eficácia argumentativa (tendo em conta a forma como o tema foi desenvolvido).</td><td data-th=\"Pontuação\">8</td></tr><tr><td data-th=\"Nível\">2</td><td data-th=\"Descritor de desempenho\">Trata o tema proposto com desvios pouco significativos e escreve um texto com falhas pontuais nos aspetos relativos à eficácia argumentativa.<br><b>OU</b><br>Trata o tema proposto sem desvios, mas escreve um texto com falhas significativas nos aspetos relativos à eficácia argumentativa.</td><td data-th=\"Pontuação\">5</td></tr><tr><td data-th=\"Nível\">1</td><td data-th=\"Descritor de desempenho\">Trata o tema proposto com desvios significativos e escreve um texto com reduzida eficácia argumentativa, mobilizando muito pouca informação pertinente.</td><td data-th=\"Pontuação\">3</td></tr></table><p><b>Parâmetro C: Organização e Coesão Textuais</b></p><table class=\"empilha grelha\"><tr><th style=\"width:4em\">Nível</th><th>Descritor de desempenho</th><th style=\"width:6em\">Pontuação</th></tr><tr><td data-th=\"Nível\">4</td><td data-th=\"Descritor de desempenho\">Escreve um texto bem organizado, evidenciando um bom domínio dos mecanismos de coesão textual:<ul><li>apresenta um texto constituído por diferentes partes, devidamente proporcionadas e articuladas entre si de modo consistente;</li><li>marca, corretamente, os parágrafos;</li><li>utiliza, adequadamente, mecanismos de articulação interfrásica;</li><li>mantém, de forma sistemática, cadeias de referência através de substituições nominais e pronominais adequadas;</li><li>estabelece conexões adequadas entre coordenadas de enunciação (pessoa, tempo, espaço) ao longo do texto.</li></ul></td><td data-th=\"Pontuação\">10</td></tr><tr><td data-th=\"Nível\">3</td><td data-th=\"Descritor de desempenho\">Escreve um texto globalmente bem organizado, em que evidencia domínio dos mecanismos de coesão textual, mas em que apresenta falhas pontuais em um ou dois dos aspetos em avaliação neste parâmetro.</td><td data-th=\"Pontuação\">8</td></tr><tr><td data-th=\"Nível\">2</td><td data-th=\"Descritor de desempenho\">Escreve um texto satisfatoriamente organizado, em que evidencia um domínio suficiente dos mecanismos de coesão textual, apresentando falhas pontuais em três ou mais dos aspetos em avaliação neste parâmetro, ou falhas significativas em um ou dois desses aspetos.</td><td data-th=\"Pontuação\">5</td></tr><tr><td data-th=\"Nível\">1</td><td data-th=\"Descritor de desempenho\">Escreve um texto com uma organização pouco satisfatória, recorrendo a insuficientes mecanismos de coesão ou mobilizando-os de forma inadequada.</td><td data-th=\"Pontuação\">3</td></tr></table><p><b>Aspetos de correção linguística (CL)<sup>1</sup>: 14 pontos</b></p><p class=\"gl\"><sup>1</sup> <i>Vide</i> Tipologia de erros no âmbito da correção linguística (pp. 2-3).</p><p>«Após a contabilização dos erros do tipo A e do tipo B, apura-se a classificação neste parâmetro. A tabela abaixo apresenta a pontuação a atribuir, de acordo com o número de erros do tipo A e do tipo B identificados. Caso o número total de erros seja superior ao número máximo apresentado na tabela, o parâmetro CL é classificado com zero pontos.»</p><div class=\"rol\"><table class=\"cl\"><tr><th rowspan=\"2\">Número de erros do tipo B</th><th colspan=\"15\">Número de erros do tipo A</th></tr><tr><th>0</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th><th>10</th><th>11</th><th>12</th><th>13</th><th>14</th></tr><tr><th>0</th><td>14</td><td>14</td><td>14</td><td>11</td><td>11</td><td>11</td><td>8</td><td>8</td><td>8</td><td>5</td><td>5</td><td>5</td><td>2</td><td>2</td><td>2</td></tr><tr><th>1</th><td>14</td><td>11</td><td>11</td><td>11</td><td>8</td><td>8</td><td>8</td><td>5</td><td>5</td><td>5</td><td>2</td><td>2</td><td>2</td><td class=\"sombra\"></td><td class=\"sombra\"></td></tr><tr><th>2</th><td>11</td><td>11</td><td>8</td><td>8</td><td>8</td><td>5</td><td>5</td><td>5</td><td>2</td><td>2</td><td>2</td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td></tr><tr><th>3</th><td>8</td><td>8</td><td>8</td><td>5</td><td>5</td><td>5</td><td>2</td><td>2</td><td>2</td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td></tr><tr><th>4</th><td>8</td><td>5</td><td>5</td><td>5</td><td>2</td><td>2</td><td>2</td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td></tr><tr><th>5</th><td>5</td><td>5</td><td>2</td><td>2</td><td>2</td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td></tr><tr><th>6</th><td>2</td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td></tr><tr><th>7</th><td>2</td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td><td class=\"sombra\"></td></tr></table></div><p class=\"fonte\">Cada célula dá a pontuação. As células vazias são as que os critérios deixam a sombreado, sem pontuação (leitura nossa: com esses números de erros, o parâmetro CL vale zero).</p></div></details><details class=\"mais\"><summary>A tabela da correção linguística, lida por linhas</summary><div><p>Leitura nossa da tabela dos critérios:</p><ul><li><b>nenhum erro do tipo B:</b> 0 a 2 do tipo A: 14; 3 a 5 do tipo A: 11; 6 a 8 do tipo A: 8; 9 a 11 do tipo A: 5; 12 a 14 do tipo A: 2.</li><li><b>1 erro do tipo B:</b> 0 do tipo A: 14; 1 a 3 do tipo A: 11; 4 a 6 do tipo A: 8; 7 a 9 do tipo A: 5; 10 a 12 do tipo A: 2.</li><li><b>2 erros do tipo B:</b> 0 a 1 do tipo A: 11; 2 a 4 do tipo A: 8; 5 a 7 do tipo A: 5; 8 a 10 do tipo A: 2.</li><li><b>3 erros do tipo B:</b> 0 a 2 do tipo A: 8; 3 a 5 do tipo A: 5; 6 a 8 do tipo A: 2.</li><li><b>4 erros do tipo B:</b> 0 do tipo A: 8; 1 a 3 do tipo A: 5; 4 a 6 do tipo A: 2.</li><li><b>5 erros do tipo B:</b> 0 a 1 do tipo A: 5; 2 a 4 do tipo A: 2.</li><li><b>6 erros do tipo B:</b> 0 do tipo A: 2.</li><li><b>7 erros do tipo B:</b> 0 do tipo A: 2.</li></ul></div></details><details class=\"mais\"><summary>Tipos de erro (Quadro 1 dos critérios)</summary><div><p><b>Tipo A</b></p><ul><li>erro inequívoco de pontuação</li><li>erro de ortografia (incluindo erro de acentuação, erro de translineação e uso indevido de letra minúscula ou de letra maiúscula)</li><li>erro de morfologia</li><li>incumprimento das regras de citação de texto ou de referência a título de uma obra</li></ul><p><b>Tipo B</b></p><ul><li>erro de sintaxe</li><li>impropriedade lexical</li></ul></div></details><details class=\"mais\"><summary>Regras dos critérios que contam na classificação</summary><div><ul><li>«A atribuição da classificação de zero pontos no parâmetro A (Género/Formato Textual) ou no parâmetro B (Tema e Pertinência da Informação) implica a atribuição de zero pontos nos restantes parâmetros da ETD, bem como na CL.»</li><li>«Sempre que não sejam respeitados os limites relativos ao número de palavras indicados na instrução do item de resposta extensa, desconta-se um ponto por cada palavra (a mais ou a menos), até ao máximo de cinco (1 × 5) pontos, depois de aplicados todos os critérios definidos para o item.»</li><li>«Caso a resposta apresente uma extensão inferior a oitenta palavras, é classificada com zero pontos.»</li><li>«As provas em que se apresente, pelo menos, uma resposta restrita ou extensa escrita integralmente em maiúsculas são sujeitas a uma desvalorização de cinco pontos na classificação total.»</li><li>«Se permanecerem dúvidas quanto ao nível a atribuir, deve optar-se pelo nível mais elevado de entre os dois tidos em consideração.»</li></ul><p class=\"fonte\">Critérios de Classificação, Prova 639, 2.ª fase, 2026 (IAVE; PDF com o logótipo da EduQA), critérios gerais, pp. 1 a 3.</p></div></details><details class=\"mais\"><summary>Cenário de resposta</summary><div><p>Os critérios do Grupo III não trazem cenário de resposta, tópicos nem exemplos: só os descritores dos parâmetros A, B e C (com uma nota ao parâmetro A) e a tabela da correção linguística. Nada nesta lição é uma resposta oficial.</p></div></details>"
+  },
+  {
+   "t": "escolha",
+   "rot": "Compara a tua resposta",
+   "g": "43",
+   "p": "Já escreveste no caderno? Compara o teu primeiro parágrafo com três aberturas de exemplo (nossas). Qual explicita o ponto de vista como o enunciado pede?",
+   "p2": "Qual destas aberturas de exemplo (nossas) diz, com clareza, o que quem escreve defende?",
+   "o": [
+    "Cada um de nós vê o mundo com o que viveu e com o que aprendeu. Na minha opinião, é a escola que mais alarga esse olhar, porque dá nome ao que vivemos; a experiência pessoal só o confirma ou o corrige.",
+    "Cada um de nós vê o mundo com o que viveu e com o que aprendeu. Há quem diga que a escola é o mais importante e há quem diga que a vida ensina mais, e as duas opiniões têm razões válidas e respeitáveis.",
+    "Desde pequenos que vamos à escola e que vivemos experiências de todos os tipos. Neste texto, vou falar da escola, das experiências pessoais e da visão que temos do mundo à nossa volta."
+   ],
+   "c": 0,
+   "f": "**A abertura que dá mais peso à escola** explicita o ponto de vista e diz logo porquê. Não é a posição que treinaste nos cartões, e cumpre na mesma: o enunciado pede uma perspetiva pessoal, não uma resposta certa. A abertura das «duas opiniões» apresenta as posições dos outros sem escolher; a do «Neste texto, vou falar» anuncia o assunto sem tomar posição. No nível 4 do parâmetro A, o texto «explicita o seu ponto de vista».",
+   "fe": [
+    null,
+    "Apresenta as duas posições e não escolhe nenhuma: falta o teu ponto de vista, que o enunciado pede de forma clara.",
+    "Anuncia o assunto, mas não toma posição. Se a tua abertura é assim, acrescenta uma frase com o que defendes."
+   ]
+  },
+  {
+   "t": "escolha",
+   "rot": "Compara a tua resposta",
+   "g": "44",
+   "p": "Compara agora um dos teus parágrafos de argumento com três parágrafos de exemplo (nossos). Qual tem um argumento ilustrado com um exemplo significativo?",
+   "p2": "Qual destes parágrafos de exemplo (nossos) diz a razão e a prova com um caso concreto?",
+   "o": [
+    "Além disso, a experiência põe à prova o que aprendemos. Numa visita da turma a um lar de idosos, os números sobre o envelhecimento estudados em Geografia passaram a ter rostos e histórias. Esse contacto mudou o meu olhar.",
+    "Além disso, a experiência põe à prova o que aprendemos. Muitas vezes, só percebemos as coisas quando as vivemos, e há muitas situações na vida em que isso acontece. Todos já passámos por momentos assim, que nos marcam.",
+    "No estágio de verão, num estúdio de fotografia, ajudei a montar luzes, a limpar lentes e a arrumar o material ao fim do dia. Aprendi os nomes de muitos equipamentos e conheci pessoas simpáticas e experientes, que me ensinaram imenso."
+   ],
+   "c": 0,
+   "f": "**O parágrafo da visita ao lar** diz a razão, mostra-a num caso concreto e fecha com o juízo. O dos «momentos assim» fica na generalidade; o das luzes e das lentes conta o estágio, mas não diz que argumento prova.",
+   "fe": [
+    null,
+    "Tem o argumento, mas não tem exemplo: «muitas situações» e «momentos assim» não mostram nenhum caso. No parâmetro A, um argumento sem exemplo faz descer o nível.",
+    "Conta uma experiência, mas não diz que argumento ela prova: falta a razão e a ligação à visão do mundo."
+   ]
+  },
+  {
+   "t": "ler",
+   "rot": "Avalia outro texto com a grelha",
+   "titulo": "Um texto com uma falha, nosso",
+   "html": "<p class=\"fonte\">Texto nosso, escrito para este treino, com uma falha de propósito. Não vem dos critérios. Tem 213 palavras.</p><div class=\"exemplo\"><p>Cada pessoa olha para o mundo a partir do que viveu e do que aprendeu, e nem sempre é fácil separar as duas coisas. Na minha opinião, as experiências pessoais são as que mais enriquecem essa visão, embora precisem da escola para ganharem sentido.</p><p>Em primeiro lugar, as experiências põem-nos diante do que é diferente de nós. No ano passado, participei num intercâmbio com uma escola de Cracóvia. Durante uma semana, vivi com uma família polaca e percebi que muitas coisas que eu julgava universais eram apenas hábitos portugueses, como jantar tarde ou falar alto à mesa. Nenhum manual me teria mostrado isso com a mesma força.</p><p>Além disso, a escola dá-nos conceitos, mas só a experiência os torna nossos. O que se aprende nas aulas fica muitas vezes esquecido, porque não está ligado a nada do que vivemos. Os conhecimentos que não usamos tornam-se depressa uma lista de nomes e de datas. Quando aquilo que estudamos se cruza com a nossa vida, passa a fazer parte do modo como vemos o mundo.</p><p>Em suma, a escola dá-nos instrumentos, mas são as experiências que nos obrigam a usá-los e que os tornam verdadeiramente nossos. Por isso, quem quer conhecer o mundo não pode ficar à espera dele: tem de sair ao seu encontro.</p></div><p>Antes de reveres o teu texto, treina o olhar neste. Lê-o com a grelha ao lado: ponto de vista, argumentos, exemplos, juízo, conclusão. Nos cartões seguintes, avalias.</p>"
+  },
+  {
+   "t": "escolha",
+   "g": "41",
+   "p": "No texto com uma falha, quantos argumentos há, e quantos têm um exemplo?",
+   "p2": "Conta os argumentos do texto com uma falha e os exemplos que os ilustram.",
+   "o": [
+    "Dois argumentos, e só o primeiro tem um exemplo concreto",
+    "Dois argumentos, e cada um tem o seu exemplo concreto",
+    "Um só argumento, dito em dois parágrafos diferentes"
+   ],
+   "c": 0,
+   "f": "**Dois argumentos, só o primeiro com exemplo.** O segundo parágrafo tem o intercâmbio em Cracóvia, um caso concreto; o terceiro diz que só a experiência torna nossos os conceitos, mas fica na generalidade: «muitas vezes», «nada do que vivemos». Pela nossa leitura do descritor, o texto fica no nível 3 do parâmetro A: 8 pontos.",
+   "fe": [
+    null,
+    "Procura o caso concreto do terceiro parágrafo: o quê, onde, quando. Não há: só frases gerais.",
+    "São duas razões diferentes: o contacto com o que é diferente e a escola que só ganha sentido com a experiência."
+   ]
+  },
+  {
+   "t": "escolha",
+   "g": "42",
+   "p": "Que acrescento leva o texto com uma falha ao nível 4 do parâmetro A?",
+   "p2": "O que falta ao texto com uma falha para chegar aos 10 pontos do parâmetro A?",
+   "o": [
+    "Um caso concreto no terceiro parágrafo, com o que a aula ensinou",
+    "Mais uma frase sobre a semana passada com uma família de Cracóvia",
+    "Um título para o texto e uma pergunta final a quem o lê"
+   ],
+   "c": 0,
+   "f": "**Um exemplo para o segundo argumento**, o do terceiro parágrafo: uma aula que ganhou sentido numa visita, num estágio ou numa conversa. No nível 4, o texto «ilustra cada um dos argumentos com, pelo menos, um exemplo». Atenção à extensão: o acrescento tem de caber nas 350 palavras.",
+   "fe": [
+    null,
+    "Mais uma frase sobre Cracóvia fica no primeiro argumento: o segundo continua sem exemplo.",
+    "Os critérios do Grupo III não pedem título nem perguntas; o que falta é um exemplo no segundo argumento."
+   ]
+  },
+  {
+   "t": "ler",
+   "rot": "Revê com a grelha",
+   "titulo": "O teu texto e os critérios",
+   "html": "<p>Relê o teu texto no caderno com estas perguntas. Cada uma vem de uma parte da grelha ou das regras dos critérios. Onde respondes «não», volta ao texto e corrige. Depois, vê em que nível fica cada parâmetro, com as linhas «O que separa 10, 8 e 5 pontos» do cartão «Escreve no caderno».</p><table class=\"empilha\"><tr><th>Pergunta</th><th style=\"width:9em\">Onde conta</th></tr><tr><td data-th=\"Pergunta\">Disse, logo no início, o que defendo sobre as experiências, a escola e a visão do mundo?</td><td data-th=\"Onde conta\">A</td></tr><tr><td data-th=\"Pergunta\">Tenho dois argumentos distintos, e não o mesmo dito duas vezes?</td><td data-th=\"Onde conta\">A</td></tr><tr><td data-th=\"Pergunta\">Cada argumento tem um exemplo concreto: o quê, onde, quando?</td><td data-th=\"Onde conta\">A e B</td></tr><tr><td data-th=\"Pergunta\">Há juízos de valor, explícitos ou implícitos?</td><td data-th=\"Onde conta\">A</td></tr><tr><td data-th=\"Pergunta\">A conclusão retoma os argumentos e fecha o ponto de vista, sem ideias novas?</td><td data-th=\"Onde conta\">A</td></tr><tr><td data-th=\"Pergunta\">Falei das duas fontes e da visão do mundo, sem me desviar para o emprego ou para as notas?</td><td data-th=\"Onde conta\">B</td></tr><tr><td data-th=\"Pergunta\">Usei palavras precisas e um registo cuidado, sem «seca» nem «bué»?</td><td data-th=\"Onde conta\">B</td></tr><tr><td data-th=\"Pergunta\">Marquei os parágrafos, com partes proporcionadas e ligadas por conectores?</td><td data-th=\"Onde conta\">C</td></tr><tr><td data-th=\"Pergunta\">Retomei as ideias sem repetições («ela», «essa experiência», «esse saber»)?</td><td data-th=\"Onde conta\">C</td></tr><tr><td data-th=\"Pergunta\">Mantive a pessoa e o tempo verbal do princípio ao fim, sem mudar sem razão?</td><td data-th=\"Onde conta\">C</td></tr><tr><td data-th=\"Pergunta\">Contei as palavras: entre 200 e 350?</td><td data-th=\"Onde conta\">Extensão</td></tr><tr><td data-th=\"Pergunta\">Reli à procura de erros do tipo A (pontuação, acentos, maiúsculas) e do tipo B (sintaxe, vocabulário)?</td><td data-th=\"Onde conta\">CL</td></tr><tr><td data-th=\"Pergunta\">Escrevi com minúsculas e maiúsculas, e não tudo em maiúsculas?</td><td data-th=\"Onde conta\">Classificação total</td></tr></table><p class=\"fonte\">Perguntas nossas, a partir dos descritores dos parâmetros A, B e C, da tabela da correção linguística e das regras dos critérios. Os critérios do Grupo III não trazem tópicos de resposta.</p>"
+  },
+  {
+   "t": "ler",
+   "rot": "Compara com um exemplo",
+   "titulo": "Um texto completo, de exemplo, nosso",
+   "html": "<p>Já reviste o teu texto com a grelha? Compara-o agora com este exemplo nosso: o ponto de vista no primeiro parágrafo, dois argumentos distintos, cada um com o seu exemplo, e a conclusão.</p><div class=\"exemplo\"><p>Cada um de nós constrói a sua visão do mundo com o que vive e com o que aprende. Na minha opinião, nenhuma destas fontes chega sozinha: a escola dá-nos os instrumentos para compreender, e as experiências pessoais obrigam-nos a usá-los e, muitas vezes, a corrigi-los.</p><p>Em primeiro lugar, a escola dá nome e contexto ao que vivemos. Nas aulas de História, estudei a censura e a guerra colonial do Estado Novo. Semanas depois, quando o meu avô contou, ao jantar, como partira para Angola aos vinte anos, já não ouvi apenas uma história de família: percebi que a vida dele fazia parte de um tempo que as aulas me tinham ensinado a ler. Sem esse saber, a memória do meu avô seria só um episódio triste; com ele, tornou-se uma lição sobre o país.</p><p>Além disso, a experiência põe à prova o que se aprende e dá-lhe um rosto. Na escola, já tinha lido números sobre a pobreza em Portugal, mas eram apenas percentagens num gráfico. No inverno passado, numa recolha do banco alimentar do meu bairro, conheci uma senhora que pedia ajuda pela primeira vez, envergonhada. A partir desse dia, aqueles números deixaram de ser abstratos, e o meu olhar sobre a cidade onde vivo ficou mais justo e mais exigente.</p><p>Em suma, a escola e a vida não competem: completam-se. A escola sem a experiência fica abstrata, e a experiência sem a escola fica confusa. É no encontro das duas que a visão do mundo de cada um se torna, de facto, mais rica.</p></div><p class=\"fonte\">Exemplo nosso, com 257 palavras, escrito para esta lição. Não vem dos critérios. A perspetiva é uma entre outras possíveis: o que conta é o ponto de vista explícito, os dois argumentos com o seu exemplo, o juízo e a conclusão.</p>"
+  },
+  {
+   "t": "ler",
+   "rot": "Para levar",
+   "escuro": true,
+   "html": "<p class=\"levar\">Toma posição, prova com dois casos, fecha com o que provaste.</p><ul><li><b>Lê o pedido como uma lista.</b> Género (texto de opinião), tema (as duas fontes e a visão do mundo), extensão (200 a 350 palavras) e as três exigências.</li><li><b>O tema manda.</b> Fala das duas fontes e do que fazem à visão do mundo; o emprego, as notas ou as férias, sozinhos, desviam-te.</li><li><b>Argumento e exemplo não são a mesma coisa.</b> O argumento é a razão; o exemplo é o caso concreto que a mostra. Dois argumentos distintos, um exemplo em cada um.</li><li><b>Juízo explícito ou implícito.</b> «Quem nunca saiu da sua rua» julga sem adjetivos; «cruciais» e «mais justo» julgam à vista. O valor tem de se ver.</li><li><b>O contra-argumento é opcional.</b> Nos módulos, treinaste-o; no exame, o enunciado não o pede, e gasta palavras.</li><li><b>A forma também conta.</b> Parágrafos proporcionados, conectores pela relação certa, retomas sem repetição, pessoa e tempo verbal coerentes.</li><li><b>Pontos que se perdem sem razão:</b> palavras fora dos limites (até 5), menos de 80 palavras (zero), tudo em maiúsculas (5 na classificação da prova), erros do tipo B (pesam mais).</li></ul><p>Nas oito provas de 2023 a 2026 (1.ª e 2.ª fases), o Grupo III vale sempre 44 pontos, conta sempre e pede sempre um texto «bem estruturado» de 200 a 350 palavras, classificado nos parâmetros A, B e C e na correção linguística. Em cinco provas, o género é o texto de opinião (1.ª fase de 2023, 2024 e 2025; 2.ª fase de 2024 e de 2026), sempre com o ponto de vista, dois argumentos, cada um com um exemplo significativo, e um discurso valorativo; em três, a apreciação crítica de uma imagem.</p><details class=\"mais\"><summary>Dos critérios oficiais</summary><div><p>«A atribuição da classificação de zero pontos no parâmetro A (Género/Formato Textual) ou no parâmetro B (Tema e Pertinência da Informação) implica a atribuição de zero pontos nos restantes parâmetros da ETD, bem como na CL.»</p><p>«Sempre que não sejam respeitados os limites relativos ao número de palavras indicados na instrução do item de resposta extensa, desconta-se um ponto por cada palavra (a mais ou a menos), até ao máximo de cinco (1 × 5) pontos, depois de aplicados todos os critérios definidos para o item.»</p><p>«Se permanecerem dúvidas quanto ao nível a atribuir, deve optar-se pelo nível mais elevado de entre os dois tidos em consideração.»</p><p class=\"fonte\">Critérios de Classificação, Prova 639, 2.ª fase, 2026 (IAVE; PDF com o logótipo da EduQA), critérios gerais (pp. 1 a 3) e critérios específicos do Grupo III (pp. 14 a 16).</p></div></details>"
+  }
+ ]
+}

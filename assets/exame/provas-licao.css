@@ -24,7 +24,7 @@
  .jogo .ler table.cl tr:first-child th[colspan]{white-space:normal}
 }
 @media (max-width:350px){
- .jogo .ler table.cl{font-size:.58rem}
+ .jogo .ler table.cl{font-size:.54rem}
  .jogo .ler table.cl th,.jogo .ler table.cl td{padding:1px 1px}
  .jogo .ler table.cl tr:first-child th:first-child{width:4.2em}
 }
@@ -37,6 +37,9 @@
 .jogo .ver-fig img.inteira{object-fit:contain}
 /* Nos cartões oficiais, as citações ficam como na prova (o motor põe as longas em itálico). */
 .jogo .cartao.oficial .cit{font-style:normal;font-family:inherit;font-size:inherit}
+/* 30/10/2026: no item de completamento, a instrução da prova fica num parágrafo e o texto a completar noutro (\n nos
+   dados; o motor escapa o texto e não tem outra forma de partir a pergunta). */
+.jogo .cartao.oficial .q{white-space:pre-line}
 .jogo .ops-item .op{text-align:left}
 .jogo .ops-item button.op{font-weight:400}
 .jogo .ops-item .op .tx{font-weight:400}
@@ -65,3 +68,12 @@
 .jogo .ler .prova-l:not(.estrofe) .ln.par::before{content:"\A\2003" attr(data-l)}
 .jogo .ler .prova-l:not(.estrofe) .ln.par:first-child::before{content:"\2003" attr(data-l)}
 .jogo .ler .prova-l:not(.estrofe) .ln::after{content:" "}
+/* 30/10/2026: nos excertos repetidos da prosa (linhas sem data-l, como «As linhas do item»), o número da linha vem em
+   data-n (posto por scripts/provas/gerar.py) e vê-se como o das outras linhas; sem isto, o excerto ficava sem números e com
+   um espaço vazio no lugar de cada um. Uma linha que não segue a anterior (o excerto salta linhas) tem a classe «salto» e
+   começa numa linha nova do ecrã: as linhas não ficam coladas como se fossem seguidas. */
+.jogo .ler .prova-l:not(.estrofe) .ln[data-n]::before{content:attr(data-n)}
+.jogo .ler .prova-l:not(.estrofe) .ln[data-n$="0"]::before,.jogo .ler .prova-l:not(.estrofe) .ln[data-n$="5"]::before{font-weight:700}
+.jogo .ler .prova-l:not(.estrofe) .ln.salto::before{content:"\A" attr(data-l) attr(data-n)}
+.jogo .ler .prova-l:not(.estrofe) .ln.par[data-n]::before,.jogo .ler .prova-l:not(.estrofe) .ln.par.salto::before{content:"\A\2003" attr(data-l) attr(data-n)}
+.jogo .ler .prova-l:not(.estrofe) .ln.par[data-n]:first-child::before{content:"\2003" attr(data-n)}

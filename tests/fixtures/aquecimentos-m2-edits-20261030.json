@@ -1,0 +1,138 @@
+{
+ "base_commit": "fd5a7ba12b3cb49a7d87f67c5bd4d417e3d6f85b",
+ "_nota": "30/10/2026: aquecimentos em cartões antes das aulas de tarefa do M2 (decisão do docente de 29/10/2026: M7, M1, M4, depois os outros). As tarefas das unidades 1 e 2 trocam as duas máquinas em papel pelo aquecimento em cartões (tarefas/m2-u1/aquecimento/ e tarefas/m2-u2/aquecimento/, gerados por scripts/aquecimentos.py): cartão «Aquecer» com a ligação e o relógio de 10 minutos, ligação no cabeçalho, só a pergunta opcional; o percurso do M2 ganha uma linha «A» antes de cada linha «T»; o guia das tarefas passa aos blocos de 15, 60 e 15 minutos, como o do M7. Gerado por scripts/aplicar_trocas.py a partir de scripts/aquecimentos_m2_20261030.json: não se edita à mão. É a camada mais recente: undo() desfá-la antes da do M4.",
+ "files": {
+  "tarefas/m2-u1/index.html": {
+   "base_sha256_lf": "12dc10f88451f44165405463b3f4083126c7eaf643e314f55a2598a26863955f",
+   "after_sha256_lf": "72afaf773bfce5ba90db93e99d1cc20217f604694d269f881ffaba56dc393cd2",
+   "edits": [
+    {
+     "location": "cartão «Aquecer»: as duas máquinas em papel dão lugar ao aquecimento em cartões (10 minutos)",
+     "old": "<section class=\"task-section task-warmup\" id=\"aquecer\" aria-labelledby=\"aquecer-title\">\n<p class=\"task-warmup-kicker\">Antes de escrever · 15 min · em papel, sem consultar</p>\n<h2 id=\"aquecer-title\">Aquecer com duas máquinas do exame</h2>\n<p>Faz cada máquina no papel. Só depois confirmas.</p>\n<div class=\"task-relogio\" data-relogio data-max=\"15\" data-passo=\"1\" data-rotulo=\"Aquecimento\" data-chave=\"pt-relogio:tarefas/m2-u1:aquecimento\"></div>\n<article class=\"task-machine\" data-task-machine=\"1\" aria-labelledby=\"maquina-1\"><p class=\"task-machine-tag\"><span>01</span> Pensa.</p><h3 id=\"maquina-1\">Descobre o que te pedem</h3>\n<blockquote class=\"task-instruction\">No início, o que diz Inês da vida em casa? Cita os versos e explica o que a comparação «como panela sem asa» mostra do seu desejo.</blockquote>\n<p>Copia a instrução. Sublinha os verbos que mandam fazer, rodeia o objeto e põe a condição entre parênteses.</p>\n<details class=\"task-confirm\"><summary>Confirmar depois de marcares</summary><dl class=\"task-anatomy\"><div><dt>Verbos</dt><dd>«Cita» e «explica»: duas operações, por esta ordem. A pergunta inicial pede primeiro o que Inês diz.</dd></div><div><dt>Objeto</dt><dd>o que a comparação mostra do <b>desejo</b> de Inês, e não a comparação em si.</dd></div><div><dt>Condição</dt><dd>«No início» (só a primeira cena) e «os versos» (citação exata, entre aspas).</dd></div></dl></details></article>\n<article class=\"task-machine\" data-task-machine=\"2\" aria-labelledby=\"maquina-2\"><p class=\"task-machine-tag\"><span>02</span> Prova.</p><h3 id=\"maquina-2\">Prova ou distração?</h3>\n<p class=\"task-claim\">Afirmação: «Antes de casar, Inês sente a casa como uma prisão.»</p>\n<div class=\"task-question\" data-task-question=\"aquecer\" aria-labelledby=\"q-aquecer\"><p class=\"task-question-title\" id=\"q-aquecer\">Qual destas passagens prova a afirmação? Escreve a letra e uma razão no papel; depois confirma.</p><div class=\"task-options\"><button type=\"button\" aria-pressed=\"false\" data-correct=\"true\" data-response=\"Prova: é Inês, no início, a dizer que está «encerrada». Sustenta a afirmação no momento em que é dita.\"><span class=\"task-letter\">A<span class=\"sr-only\">:</span></span> «Coitada, assi hei-de estar / Encerrada nesta casa»</button><button type=\"button\" aria-pressed=\"false\" data-correct=\"false\" data-response=\"Distração: é o Escudeiro, depois do casamento. Mostra outra prisão, não a do início.\"><span class=\"task-letter\">B<span class=\"sr-only\">:</span></span> «Já vos preguei as janelas, / Por que não vos ponhais nelas»</button><button type=\"button\" aria-pressed=\"false\" data-correct=\"false\" data-response=\"Distração: é a escolha da viúva, no desfecho. Fala do que Inês quer no fim, não de como vê a casa no início.\"><span class=\"task-letter\">C<span class=\"sr-only\">:</span></span> «Quero asno que me leve, / E não cavalo folão»</button></div><p class=\"task-feedback\" data-task-feedback role=\"status\" aria-live=\"polite\" hidden></p></div></article>\n</section>",
+     "new": "<section class=\"task-section task-warmup\" id=\"aquecer\" aria-labelledby=\"aquecer-title\" data-task-warm=\"cartoes\">\n<p class=\"task-warmup-kicker\">Antes de escrever · 10 min · em cartões, com consulta</p>\n<h2 id=\"aquecer-title\">Aquecer em cartões</h2>\n<p>No início da aula de tarefa: 10 minutos de cartões com consulta, 5 minutos para o docente apresentar o enunciado, 60 minutos de produção e 15 minutos de revisão e entrega. Total: 90 minutos. O relógio de produção começa depois da apresentação.</p>\n<p class=\"task-aquecer\"><a href=\"aquecimento/\">Abrir o aquecimento em cartões</a></p>\n<div class=\"task-relogio\" data-relogio data-max=\"10\" data-passo=\"1\" data-rotulo=\"Aquecimento\" data-chave=\"pt-relogio:tarefas/m2-u1:aquecimento\"></div>\n</section>",
+     "occurrences": 1
+    },
+    {
+     "location": "cabeçalho: ligação ao aquecimento antes do enunciado",
+     "old": "</p>\n<section id=\"produzir\" aria-label=\"Enunciado\">",
+     "new": "</p>\n<p class=\"task-aquecer\"><a href=\"aquecimento/\">Aquecer</a></p>\n<section id=\"produzir\" aria-label=\"Enunciado\">",
+     "occurrences": 1
+    },
+    {
+     "location": "estado das perguntas opcionais: fica só a pergunta 1",
+     "old": "Respostas exploradas: 0 de 2.",
+     "new": "Respostas exploradas: 0 de 1.",
+     "occurrences": 1
+    }
+   ]
+  },
+  "tarefas/m2-u2/index.html": {
+   "base_sha256_lf": "35c0e7ae79da238634a05d53ecb83495845a4f7d99d19834223222dbafa9532f",
+   "after_sha256_lf": "afe6117e4827ee743db1d53e5e5ce5326021693f46c29aa7692e137c0692c7b3",
+   "edits": [
+    {
+     "location": "cartão «Aquecer»: as duas máquinas em papel dão lugar ao aquecimento em cartões (10 minutos)",
+     "old": "<section class=\"task-section task-warmup\" id=\"aquecer\" aria-labelledby=\"aquecer-title\">\n<p class=\"task-warmup-kicker\">Antes de escrever · 15 min · em papel, sem consultar</p>\n<h2 id=\"aquecer-title\">Aquecer com duas máquinas do exame</h2>\n<p>Faz cada máquina no papel. Só depois confirmas.</p>\n<div class=\"task-relogio\" data-relogio data-max=\"15\" data-passo=\"1\" data-rotulo=\"Aquecimento\" data-chave=\"pt-relogio:tarefas/m2-u2:aquecimento\"></div>\n<article class=\"task-machine\" data-task-machine=\"1\" aria-labelledby=\"maquina-1\"><p class=\"task-machine-tag\"><span>01</span> Pensa.</p><h3 id=\"maquina-1\">Descobre o que te pedem</h3>\n<blockquote class=\"task-instruction\">Escolhe uma marca de Pêro Marques e uma do Escudeiro. Para cada uma, cita a fala da farsa que a mostra e diz quem a diz.</blockquote>\n<p>Copia a instrução. Sublinha os verbos que mandam fazer, rodeia o objeto e põe a condição entre parênteses.</p>\n<details class=\"task-confirm\"><summary>Confirmar depois de marcares</summary><dl class=\"task-anatomy\"><div><dt>Verbos</dt><dd>«Escolhe», «cita» e «diz»: três operações para cada pretendente.</dd></div><div><dt>Objeto</dt><dd>uma marca de cada pretendente, duas no total, e não o retrato completo.</dd></div><div><dt>Condição</dt><dd>a fala tem de mostrar a marca e tens de dizer quem a diz: um aparte do Moço não é uma fala do Escudeiro.</dd></div></dl></details></article>\n<article class=\"task-machine\" data-task-machine=\"2\" aria-labelledby=\"maquina-2\"><p class=\"task-machine-tag\"><span>02</span> Prova.</p><h3 id=\"maquina-2\">Prova ou distração?</h3>\n<p class=\"task-claim\">Afirmação: «O Escudeiro é pobre, apesar da aparência de fidalgo.»</p>\n<div class=\"task-question\" data-task-question=\"aquecer\" aria-labelledby=\"q-aquecer\"><p class=\"task-question-title\" id=\"q-aquecer\">Qual destas passagens prova a afirmação? Escreve a letra e uma razão no papel; depois confirma.</p><div class=\"task-options\"><button type=\"button\" aria-pressed=\"false\" data-correct=\"true\" data-response=\"Prova: o criado conhece o bastidor, e «nem preto» quer dizer nem um tostão.\"><span class=\"task-letter\">A<span class=\"sr-only\">:</span></span> O Moço, à parte: «Homem que não tem nem preto, / Casa muito na má hora»</button><button type=\"button\" aria-pressed=\"false\" data-correct=\"false\" data-response=\"Distração: é Pêro, e mostra a sua simplicidade, não a pobreza do Escudeiro.\"><span class=\"task-letter\">B<span class=\"sr-only\">:</span></span> Pêro Marques, diante da cadeira: «E que val aqui uma destas?»</button><button type=\"button\" aria-pressed=\"false\" data-correct=\"false\" data-response=\"Distração: é o elogio dos casamenteiros, a aparência que a afirmação contraria.\"><span class=\"task-letter\">C<span class=\"sr-only\">:</span></span> Vidal, casamenteiro: «Que fala... e com' ora fala! / Estrugirá esta sala»</button></div><p class=\"task-feedback\" data-task-feedback role=\"status\" aria-live=\"polite\" hidden></p></div></article>\n</section>",
+     "new": "<section class=\"task-section task-warmup\" id=\"aquecer\" aria-labelledby=\"aquecer-title\" data-task-warm=\"cartoes\">\n<p class=\"task-warmup-kicker\">Antes de escrever · 10 min · em cartões, com consulta</p>\n<h2 id=\"aquecer-title\">Aquecer em cartões</h2>\n<p>No início da aula de tarefa: 10 minutos de cartões com consulta, 5 minutos para o docente apresentar o enunciado, 60 minutos de produção e 15 minutos de revisão e entrega. Total: 90 minutos. O relógio de produção começa depois da apresentação.</p>\n<p class=\"task-aquecer\"><a href=\"aquecimento/\">Abrir o aquecimento em cartões</a></p>\n<div class=\"task-relogio\" data-relogio data-max=\"10\" data-passo=\"1\" data-rotulo=\"Aquecimento\" data-chave=\"pt-relogio:tarefas/m2-u2:aquecimento\"></div>\n</section>",
+     "occurrences": 1
+    },
+    {
+     "location": "cabeçalho: ligação ao aquecimento antes do enunciado",
+     "old": "</p>\n<section id=\"produzir\" aria-label=\"Enunciado\">",
+     "new": "</p>\n<p class=\"task-aquecer\"><a href=\"aquecimento/\">Aquecer</a></p>\n<section id=\"produzir\" aria-label=\"Enunciado\">",
+     "occurrences": 1
+    },
+    {
+     "location": "estado das perguntas opcionais: fica só a pergunta 1",
+     "old": "Respostas exploradas: 0 de 2.",
+     "new": "Respostas exploradas: 0 de 1.",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m2/index.html": {
+   "base_sha256_lf": "4ff835c685bdd9c8f54ba8d9090f41fed1524ee7f35ba1a8caa67426c7603e7d",
+   "after_sha256_lf": "5a31ea4e4f9a870d7cb016f0d67eb868fea0fe271dcaade099fe940037395f36",
+   "edits": [
+    {
+     "location": "percurso, unidade 1: linha A antes da linha T",
+     "old": "<li class=\"aula-tarefa\" data-task-lesson=\"1\" id=\"tarefa-unidade-1\">",
+     "new": "<li class=\"aula-aquecimento\" id=\"aquecimento-unidade-1\"><a href=\"../tarefas/m2-u1/aquecimento/\"><span class=\"n\">A</span><span><span class=\"t\">Aquecer para a aula de tarefa da Unidade 1</span><span class=\"f\">No início da aula de tarefa: cartões sobre citar, justificar e limitar uma conclusão, com outros exemplos.</span></span><span class=\"chip\">10 min</span></a></li><li class=\"aula-tarefa\" data-task-lesson=\"1\" id=\"tarefa-unidade-1\">",
+     "occurrences": 1
+    },
+    {
+     "location": "percurso, linha T da unidade 1: aquecimento em cartões",
+     "old": "<span class=\"t\">Tarefa da Unidade 1 · Duas escolhas, que liberdade?</span><span class=\"f\">Aula de 90 min com consulta · síntese integrada · trabalho em papel e fotografias no Teams.</span>",
+     "new": "<span class=\"t\">Tarefa da Unidade 1 · Duas escolhas, que liberdade?</span><span class=\"f\">Aula de 90 minutos com consulta: aquecimento em cartões no início, trabalho em papel, síntese integrada e fotografias no Teams.</span>",
+     "occurrences": 1
+    },
+    {
+     "location": "percurso, unidade 2: linha A antes da linha T",
+     "old": "<li class=\"aula-tarefa\" data-task-lesson=\"2\" id=\"tarefa-unidade-2\">",
+     "new": "<li class=\"aula-aquecimento\" id=\"aquecimento-unidade-2\"><a href=\"../tarefas/m2-u2/aquecimento/\"><span class=\"n\">A</span><span><span class=\"t\">Aquecer para a aula de tarefa da Unidade 2</span><span class=\"f\">No início da aula de tarefa: cartões sobre a fala como prova, o contraste e a voz, com outros exemplos.</span></span><span class=\"chip\">10 min</span></a></li><li class=\"aula-tarefa\" data-task-lesson=\"2\" id=\"tarefa-unidade-2\">",
+     "occurrences": 1
+    },
+    {
+     "location": "percurso, linha T da unidade 2: aquecimento em cartões",
+     "old": "<span class=\"t\">Tarefa da Unidade 2 · Dois anúncios de casamento</span><span class=\"f\">Aula de 90 min com consulta · síntese integrada · trabalho em papel e fotografias no Teams.</span>",
+     "new": "<span class=\"t\">Tarefa da Unidade 2 · Dois anúncios de casamento</span><span class=\"f\">Aula de 90 minutos com consulta: aquecimento em cartões no início, trabalho em papel, síntese integrada e fotografias no Teams.</span>",
+     "occurrences": 1
+    },
+    {
+     "location": "«Como se cumpre uma unidade»: o aquecimento em cartões abre a aula de tarefa",
+     "old": "fechas a unidade na aula de tarefa: produção em papel,",
+     "new": "fechas a unidade na aula de tarefa: aquecimento em cartões (a linha A do percurso), produção em papel,",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m2/guia-da-tarefa-m2/index.html": {
+   "base_sha256_lf": "a35d2d165105e93ac856684b0695f665f5d4783160918a89bc3efcc15f17cb2b",
+   "after_sha256_lf": "7804c82302358c88cb4c87aaf005f06e1348ceaa6595e1a4faedb1ef7237dec7",
+   "edits": [
+    {
+     "location": "lista visível, unidade 1: aquecimento em cartões",
+     "old": "<li><a href=\"../../tarefas/m2-u1/\">Unidade 1 · Duas escolhas, que liberdade?</a> · aula de 90 min com consulta</li>",
+     "new": "<li><a href=\"../../tarefas/m2-u1/\">Unidade 1 · Duas escolhas, que liberdade?</a> · aula de 90 min com consulta: aquecimento em cartões no início</li>",
+     "occurrences": 1
+    },
+    {
+     "location": "lista visível, unidade 2: aquecimento em cartões",
+     "old": "<li><a href=\"../../tarefas/m2-u2/\">Unidade 2 · Dois anúncios de casamento</a> · aula de 90 min com consulta</li>",
+     "new": "<li><a href=\"../../tarefas/m2-u2/\">Unidade 2 · Dois anúncios de casamento</a> · aula de 90 min com consulta: aquecimento em cartões no início</li>",
+     "occurrences": 1
+    },
+    {
+     "location": "lista visível: o aquecimento passa a cartões, 10 minutos",
+     "old": "Cada aula começa com um aquecimento de 15 minutos (duas máquinas do exame, em papel);",
+     "new": "Cada aula começa com um aquecimento de 10 minutos em cartões, com consulta, e 5 minutos de apresentação do enunciado pelo docente;",
+     "occurrences": 1
+    },
+    {
+     "location": "BLOCOS: três blocos que somam os 90 minutos da aula de tarefa (como no M7)",
+     "old": "BLOCOS=[[15,\"Plano\",\"Lê o guia, escolhe por onde começas, escreve as três coisas que vais fazer.\"],[55,\"Fazer\",\"Trabalho a sério. Se encravares, regra dos três antes de mim.\"],[20,\"Rever e entregar\",\"Lista da rubrica, regra do original, autoavaliação, copiar para o Teams.\"]]",
+     "new": "BLOCOS=[[15,\"Aquecer\",\"Os cartões do aquecimento e a apresentação da tarefa pelo docente.\"],[60,\"Produzir\",\"Trabalho a sério, com o relógio da tarefa. Se encravares, regra dos três antes de mim.\"],[15,\"Rever e entregar\",\"Lista da rubrica, regra do original, autoavaliação, duas linhas e fotografias no Teams.\"]]",
+     "occurrences": 1
+    },
+    {
+     "location": "#blocos: bloco 1",
+     "old": "<b>Plano, 15 min</b><span>Lê o guia, escolhe por onde começas, escreve as três coisas que vais fazer.</span>",
+     "new": "<b>Aquecer, 15 min</b><span>Os cartões do aquecimento e a apresentação da tarefa pelo docente.</span>",
+     "occurrences": 1
+    },
+    {
+     "location": "#blocos: bloco 2",
+     "old": "<b>Fazer, 55 min</b><span>Trabalho a sério. Se encravares, regra dos três antes de mim.</span>",
+     "new": "<b>Produzir, 60 min</b><span>Trabalho a sério, com o relógio da tarefa. Se encravares, regra dos três antes de mim.</span>",
+     "occurrences": 1
+    },
+    {
+     "location": "#blocos: bloco 3",
+     "old": "<b>Rever e entregar, 20 min</b><span>Lista da rubrica, regra do original, autoavaliação, copiar para o Teams.</span>",
+     "new": "<b>Rever e entregar, 15 min</b><span>Lista da rubrica, regra do original, autoavaliação, duas linhas e fotografias no Teams.</span>",
+     "occurrences": 1
+    }
+   ]
+  }
+ }
+}

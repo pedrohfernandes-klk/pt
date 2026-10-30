@@ -1,0 +1,47 @@
+{
+ "_sobre": "Parâmetros da Prova 639, 2.ª fase, 2026, versão 2, para scripts/provas/gerar.py. A pasta (2026-2f), as chaves do progresso (prova-2026-2f-g1 a g3) e a transcrição (tests/fixtures/prova-639-2026-2f-v2.json) saem de prova, ano, fase e versao. versao_licao é a versão gravada com o progresso: mudá-la recomeça o progresso desse grupo neste aparelho. Sem imagem com direitos: o Grupo III é um texto de opinião sem imagem, e os PDF não têm imagens além dos logótipos.",
+ "prova": "639",
+ "ano": 2026,
+ "fase": 2,
+ "versao": 2,
+ "versao_licao": "2026-10-30",
+ "autoria": {
+  "nota": "os PDF de 2026 trazem o logótipo da EduQA, Instituto de Educação, Qualidade e Avaliação, que os publica em eduqa.pt",
+  "originais_em": "eduqa.pt",
+  "nota_copias": "A cópia pública dos critérios tem a marca de água «VERSÃO DE TRABALHO»; o texto é igual ao dos critérios publicados em eduqa.pt (conferido a 30/10/2026)."
+ },
+ "_prefixos_data_l": "O Grupo I tem dois poemas, cada um numerado a partir do verso 1: os versos do Poema 2 levam data-l «p2v1», «p2v2»… (os do Poema 1, «v1», «v2»…).",
+ "prefixos_data_l": {"I-A-2": "p2v"},
+ "grupos": [
+  {
+   "licoes": ["m8/licao-m8-f04", "m7/licao-m7-f04", "obras/pessoa", "m4/licao-m4-f09", "m4/licao-m4-f07", "m4/licao-m4-f08", "obras/frei-luis", "m3/licao-m3-f09", "m3/camoes-mudanca", "m3/m3-soneto-raciocinio", "m3/camoes-desconcerto", "obras/lirica-camoes"],
+   "sessoes": ["s17", "s13", "s07", "s04", "s23"],
+   "o_que": "Eugénio de Andrade, Caeiro, <i>Frei Luís de Sousa</i> e a lírica de Camões: sete itens, cinco de resposta escrita e dois de seleção.",
+   "aprendes": "Aprendes a desmontar os itens de resposta escrita do Grupo I: o que pede o verbo, que versos ou linhas provam, como se ordena a resposta e o que a grelha oficial valoriza.",
+   "meta": "Cinco respostas no caderno."
+  },
+  {
+   "licoes": ["m4/licao-m4-f15", "m3/licao-m3-f15", "m2/licao-m2-f07", "m6/licao-m6-f04"],
+   "sessoes": ["s22", "s21", "s24"],
+   "o_que": "Um texto de imprensa e gramática: sete itens de escolha múltipla.",
+   "aprendes": "Aprendes a ler um texto de imprensa como na prova: delimitar parágrafos, reconhecer a paráfrase certa, distinguir o exemplo dos argumentos de autoridade e encontrar a tese; na gramática, a coesão referencial, a modalidade e a oração com a função de sujeito.",
+   "meta": "Os sete itens da prova, com as quatro opções."
+  },
+  {
+   "licoes": ["m7/licao-m7-f10", "m5/licao-m5-f13", "m4/licao-m4-f15", "m5/licao-m5-f07"],
+   "sessoes": ["s24", "s22"],
+   "o_que": "Escrita: um texto de opinião, de 200 a 350 palavras, sobre o que as experiências pessoais e a escola dão à visão do mundo.",
+   "aprendes": "Aprendes a escrever o texto de opinião como na prova: ler o pedido, tomar posição, sustentá-la em dois argumentos, cada um com um exemplo significativo, concluir, ligar as ideias e rever, com as contas das regras que tiram pontos.",
+   "meta": "Um texto no caderno e a autoavaliação com a grelha.",
+   "_sem_texto_da_prova": "O Grupo III desta prova é só o enunciado de um texto de opinião: não tem texto nem imagem da prova. tests/test_provas_cartoes.py confere que a transcrição também não tem e que o menu não inventa a fonte de um texto.",
+   "sem_texto_da_prova": true
+  }
+ ],
+ "seccao": {
+  "textos": "Eugénio de Andrade, «Agora as palavras»; Fernando Pessoa, «Se, depois de eu morrer, quiserem escrever a minha biografia», em <i>Poesia de Alberto Caeiro</i>; Almeida Garrett, <i>Frei Luís de Sousa</i>; Elsa de Barros, «As virtudes do pensamento lento» (texto adaptado)"
+ },
+ "_imagens_com_licenca": "Imagens que as páginas desta prova podem reproduzir, cada uma com o crédito e a licença: {ficheiro, credito, licenca}. Os PDF desta prova só têm os logótipos, que não se reproduzem, por isso a lista está vazia. tests/test_provas_cartoes.py confere que nenhuma página da prova reproduz uma imagem fora desta lista (e da imagem com direitos, quando o docente a deixa reproduzir).",
+ "imagens_com_licenca": [],
+ "opcoes_equilibradas": true,
+ "_opcoes_equilibradas": "Regra do docente de 29 e 30/10/2026 (opções de comprimento semelhante nas escolhas nossas: scripts/provas/opcoes.py). Esta prova foi feita depois da regra, e os testes exigem-na."
+}

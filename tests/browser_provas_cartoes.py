@@ -1,17 +1,26 @@
-"""29/10/2026: Provas em cartões no navegador (Prova 639, 1.ª fase, 2026, versão 2).
+"""Provas em cartões no navegador: piloto de 29/10/2026 (Prova 639, 1.ª fase, 2026, versão 2); um caso por prova desde
+30/10/2026 (cada fixture tests/fixtures/prova-639-AAAA-Nf-vN.json, como em tests/provas_casos.py).
 
-Para cada grupo, a 320, 390 e 1366 px: abre a lição, percorre todos os cartões pela ordem da prova respondendo certo
-(as respostas vêm dos dados da página, lidos com audit_cards.lesson_cards), confere que cada resposta dá «Certo.»,
-que não há erros na página nem pedidos internos falhados nem deslocamento horizontal, que nenhuma peça passa da
+Para cada prova e cada grupo, a 320, 390 e 1366 px: abre a lição, percorre todos os cartões pela ordem da prova
+respondendo certo (as respostas vêm dos dados da página, lidos com audit_cards.lesson_cards), confere que cada resposta dá
+«Certo.», que não há erros na página nem pedidos internos falhados nem deslocamento horizontal, que nenhuma peça passa da
 largura do cartão (com os desdobráveis abertos: tabelas, linhas da prova, etiquetas), que o fim grava o progresso na
-chave do grupo e que a segunda visita abre em «Já feita». Os itens de escolha múltipla do Grupo II mostram as quatro
-opções da prova, de (A) a (D), pela ordem e sem negrito. No Grupo III, sem a imagem no sítio, os cartões de observação
-levam a ligação para a p. 13 do enunciado, e a figura deixa de ser um botão. Em projeção, os três grupos percorrem-se só
-com «Mostrar resposta» e «Seguinte» (também nos cartões «rever»), a faixa diz «Resposta» e nada se grava.
-Depois, a secção exame/provas/ (estado de cada grupo neste aparelho, versão da lição, impressão) e as ligações a partir
-de /exame/ e do laboratório, sem partir as 27 sessões, o filtro dos anos e a ligação ao laboratório.
+chave do grupo (prova-AAAA-Nf-gN) e que a segunda visita abre em «Já feita». Os itens de escolha múltipla mostram as
+quatro opções da prova, de (A) a (D), pela ordem e sem negrito. Com uma imagem com direitos que não se reproduz (o Grupo III
+de 2026-1f), os cartões de observação levam a ligação para a página do enunciado, e a figura deixa de ser um botão.
+Prosa da prova em texto corrido (pedido do docente de 30/10/2026): em cada cartão com prosa da prova, cada linha impressa
+(span.ln) segue na mesma linha do ecrã que a anterior, salvo no início de parágrafo ou quando a primeira palavra já não
+cabia; nenhuma linha começa numa linha nova do ecrã com espaço livre no fim da anterior (o texto «partido»), e o número da
+linha (data-l, ou data-n nos excertos repetidos) está à vista antes dela. Nos excertos que saltam linhas, a linha que não
+segue a anterior («salto») começa numa linha nova do ecrã, em vez de ficar colada. As estrofes ficam em verso: um verso por
+linha.
+Em projeção, cada grupo percorre-se só com «Mostrar resposta» e «Seguinte» (também nos cartões «rever»), a faixa diz
+«Resposta» e nada se grava.
+Depois, a secção exame/provas/ (um bloco por prova, a mais recente primeiro; estado de cada grupo neste aparelho, versão da
+lição, impressão) e as ligações a partir de /exame/ e do laboratório, sem partir as 27 sessões, o filtro dos anos e a
+ligação ao laboratório.
 O sítio é servido em /pt/ (como no GitHub Pages): uma ligação que saísse de /pt/ dava 404 e falhava o teste.
-Corre com: python tests/browser_provas_cartoes.py
+Corre com: python tests/browser_provas_cartoes.py [AAAA-Nf ...] (sem pastas, todas as provas).
 """
 from functools import partial
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
@@ -25,12 +34,8 @@ import threading
 
 from playwright.sync_api import sync_playwright
 
-ROOT = Path(__file__).resolve().parents[1]
-sys.path.insert(0, str(ROOT / 'scripts'))
-from audit_cards import lesson_cards  # noqa: E402
-
-GRUPOS = {1: 'grupo-i', 2: 'grupo-ii', 3: 'grupo-iii'}
-ROMANO = {1: 'I', 2: 'II', 3: 'III'}
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from provas_casos import DADOS, PROVAS, ROMANOS, ROOT  # noqa: E402
 
 
 class Quiet(SimpleHTTPRequestHandler):
@@ -67,10 +72,60 @@ PASSA_DO_CARTAO = """() => {
   return fora.slice(0, 5);
 }"""
 
+# Prosa em texto corrido: uma linha impressa que não começa parágrafo só pode começar numa linha nova do ecrã se a primeira
+# palavra (com o número pequeno antes dela, folga de 3em) não cabia no espaço que sobrava no fim da linha anterior.
+PROSA = """() => {
+  const c = document.querySelector('#baralho .cartao'); if (!c) return {linhas: 0, versos: 0, partidas: []};
+  c.querySelectorAll('details').forEach(d => { if (!d.open) { d.open = true; d.dataset.abertoProsa = '1'; } });
+  const partidas = []; let linhas = 0, versos = 0;
+  const primeira = ln => {
+    const w = document.createTreeWalker(ln, NodeFilter.SHOW_TEXT, {acceptNode: t => t.parentElement.closest('.n') ? NodeFilter.FILTER_REJECT : NodeFilter.FILTER_ACCEPT});
+    for (let t = w.nextNode(); t; t = w.nextNode()) {
+      const m = /\\S+/.exec(t.data); if (!m) continue;
+      const r = document.createRange(); r.setStart(t, m.index); r.setEnd(t, m.index + m[0].length);
+      return r.getBoundingClientRect().width;
+    }
+    return 0;
+  };
+  c.querySelectorAll('.prova-l').forEach(bl => {
+    const lns = [...bl.querySelectorAll(':scope > .ln')];
+    if (bl.classList.contains('estrofe')) {
+      lns.forEach((ln, i) => { versos++; if (i && ln.getClientRects()[0].top < lns[i - 1].getClientRects()[0].bottom - 2) partidas.push('verso ' + (ln.dataset.l || '?') + ' na linha do anterior'); });
+      return;
+    }
+    const dir = bl.getBoundingClientRect().right;
+    lns.forEach((ln, i) => {
+      linhas++;
+      const nome = 'linha ' + (ln.dataset.l || '(sem número) ' + ln.textContent.slice(0, 30));
+      const cs = getComputedStyle(ln);
+      if (cs.display !== 'inline') { partidas.push(nome + ': display ' + cs.display); return; }
+      const num = ln.dataset.l || ln.dataset.n;
+      if (!num || !getComputedStyle(ln, '::before').content.includes(num)) partidas.push(nome + ': sem o número à vista');
+      if (i === 0) return;
+      // o «\\A» do início de parágrafo ou de salto deixa um pedaço vazio no fim da linha anterior: conta o primeiro com largura
+      const a = lns[i - 1].getClientRects(), b = [...ln.getClientRects()].filter(r => r.width > 5);
+      if (!a.length || !b.length) return;
+      const fim = a[a.length - 1], ini = b[0], nova = ini.top >= fim.bottom - 2;
+      if (ln.classList.contains('salto') && !nova) partidas.push(nome + ': não segue a anterior, mas está colada a ela');
+      if (ln.classList.contains('par') || ln.classList.contains('salto') || !nova) return;
+      const sobra = dir - fim.right, precisa = primeira(ln) + 3 * parseFloat(cs.fontSize);
+      if (sobra > precisa) partidas.push(nome + ': começa numa linha nova com ' + Math.round(sobra) + ' px livres no fim da anterior');
+    });
+  });
+  c.querySelectorAll('details[data-aberto-prosa]').forEach(d => { d.open = false; delete d.dataset.abertoProsa; });
+  return {linhas, versos, partidas: partidas.slice(0, 5)};
+}"""
+
 
 def dentro_do_cartao(page, onde):
     fora = page.evaluate(PASSA_DO_CARTAO)
     assert not fora, f'peças que passam do cartão: {onde}: {fora}'
+
+
+def prosa_corrida(page, onde):
+    r = page.evaluate(PROSA)
+    assert not r['partidas'], f'prosa partida: {onde}: {r["partidas"]}'
+    return r
 
 
 def seguinte_na_faixa(page, onde):
@@ -126,40 +181,47 @@ def responder(page, k, x, onde):
     seguinte_na_faixa(page, onde)
 
 
-def percorrer(browser, host, g, width):
-    slug = GRUPOS[g]
-    cards = lesson_cards(ROOT / 'exame/provas/2026-1f' / slug / 'index.html')
+def percorrer(browser, host, P, g, width):
+    slug = P.grupos[g]
+    cards = P.cartoes(g)
     fazer = [c for c in cards if c['t'] != 'ler']
+    img = P.imagem()
+    liga_imagem = img and img['grupo'] == g and not img.get('reproduzir')
     ctx, page, erros = nova(browser, width)
-    page.goto(f'{host}/exame/provas/2026-1f/{slug}/', wait_until='networkidle')
-    assert page.title() == f'Prova 639, 1.ª fase, 2026: Grupo {ROMANO[g]}'
+    page.goto(f'{host}/exame/provas/{P.pasta}/{slug}/', wait_until='networkidle')
+    assert page.title() == f'{P.nome}: Grupo {ROMANOS[g - 1]}', page.title()
+    linhas = versos = 0
     for k, x in enumerate(cards):
-        onde = f'{slug} {width}px cartão {k + 1} ({x["t"]})'
+        onde = f'{P.pasta} {slug} {width}px cartão {k + 1} ({x["t"]})'
         num = page.locator('[data-c-num]').inner_text()
         assert num.split('/')[0].strip() == str(k + 1), (onde, num)
         if x.get('rot'):
             assert x['rot'] in page.locator('#baralho .rot').text_content(), (onde, x['rot'])
         sem_desvio(page, onde)
         dentro_do_cartao(page, onde)
-        if g == 3 and x.get('ver'):
+        if x['t'] == 'ler' and 'prova-l' in x.get('html', ''):
+            r = prosa_corrida(page, onde)
+            linhas, versos = linhas + r['linhas'], versos + r['versos']
+        if liga_imagem and x.get('ver'):
             fig = page.locator('#baralho figure.ver-fig')
             assert fig.get_attribute('role') is None and fig.get_attribute('tabindex') is None, (onde, 'a figura da ligação continua um botão')
             href = page.locator('#baralho figure.ver-fig a.ver-pdf').get_attribute('href')
-            assert href.endswith('Portugues.pdf#page=13'), (onde, href)
-            assert 'p. 13' in page.locator('#baralho figure.ver-fig a.ver-pdf').inner_text()
+            assert href == f'{P.url_enunciado}#page={img["pagina_pdf"]}', (onde, href)
+            assert f'p. {img["pagina_pdf"]}' in page.locator('#baralho figure.ver-fig a.ver-pdf').inner_text()
         responder(page, k, x, onde)
     page.locator('#baralho .cartao.fim').wait_for()
-    sem_desvio(page, f'{slug} {width}px fim')
-    st = page.evaluate(f'JSON.parse(localStorage.getItem("prova-2026-1f-g{g}"))')
+    sem_desvio(page, f'{P.pasta} {slug} {width}px fim')
+    st = page.evaluate(f'JSON.parse(localStorage.getItem("{P.chave(g)}"))')
     assert st['lida'] is True and st['certas'] == len(fazer) and st['melhor'] == len(fazer), st
+    assert st['versao'] == P.versao_licao(g), st
     assert page.evaluate('localStorage.getItem("epi-ultima")') is None
     acoes = page.evaluate('[...document.querySelectorAll("[data-c-acoes] a,[data-c-acoes] button")].map(a=>a.textContent.trim()+"|"+(a.getAttribute("href")||""))')
-    if g < 3:
-        assert any(a.startswith(f'Grupo {ROMANO[g + 1]}|../{GRUPOS[g + 1]}/') for a in acoes), acoes
-    assert any(a.startswith('Provas em cartões|../../#prova-2026-1f') or a.startswith('Voltar às provas') for a in acoes), acoes
+    if g < len(P.grupos):
+        assert any(a.startswith(f'Grupo {ROMANOS[g]}|../{P.grupos[g + 1]}/') for a in acoes), acoes
+    assert any(a.startswith(f'Provas em cartões|../../#prova-{P.pasta}') or a.startswith('Voltar às provas') for a in acoes), acoes
     fim = page.locator('#baralho').text_content()
     assert 'Onde se estuda nos módulos' in fim and 'Na preparação de exame' in fim, fim[-400:]
-    if g in (1, 2):
+    if any(c['t'] == 'ler' and 'data-l=' in c.get('html', '') for c in cards):
         marcas = page.evaluate('(document.querySelector("[data-leste]")||{}).textContent||""')
         assert 'O texto com as tuas marcas' in marcas, marcas
     # menu: migalhas, fonte e ligações
@@ -167,7 +229,10 @@ def percorrer(browser, host, g, width):
     menu = page.locator('[data-c-painel]')
     menu.wait_for(state='visible')
     texto = menu.text_content()
-    for marca in ('Provas em cartões', f'Estás em: Grupo {ROMANO[g]}', 'IAVE', 'EduQA', 'versão 2', 'Aprendes:'):
+    marcas_menu = ['Provas em cartões', f'Estás em: Grupo {ROMANOS[g - 1]}', 'IAVE', f'versão {P.versao}', 'Aprendes:']
+    if P.autor_nao_iave():
+        marcas_menu.append(P.autor_nao_iave().split(',')[0])
+    for marca in marcas_menu:
         assert marca in texto, (slug, marca)
     page.locator('[data-c-fecha-menu]').click()
     # segunda visita: «Já feita»
@@ -176,18 +241,19 @@ def percorrer(browser, host, g, width):
     assert page.locator('#baralho .grande').inner_text().strip() == f'{len(fazer)} de {len(fazer)}'
     assert not erros, erros
     ctx.close()
-    print(f'PASS {slug} a {width} px: {len(cards)} cartões, {len(fazer)} respondidos certo, progresso e «Já feita», sem erros nem deslocamento', flush=True)
+    print(f'PASS {P.pasta} {slug} a {width} px: {len(cards)} cartões, {len(fazer)} respondidos certo, progresso e «Já feita», '
+          f'prosa corrida ({linhas} linhas e {versos} versos da prova vistos), sem erros nem deslocamento', flush=True)
 
 
-def projecao(browser, host, g):
+def projecao(browser, host, P, g):
     """Projetado, só com o teclado: R mostra a resposta e → avança, em todos os cartões (também «item» e «rever»)."""
-    slug = GRUPOS[g]
-    cards = lesson_cards(ROOT / 'exame/provas/2026-1f' / slug / 'index.html')
+    slug = P.grupos[g]
+    cards = P.cartoes(g)
     ctx, page, erros = nova(browser, 1366)
-    page.goto(f'{host}/exame/provas/2026-1f/{slug}/?projetar=1', wait_until='networkidle')
+    page.goto(f'{host}/exame/provas/{P.pasta}/{slug}/?projetar=1', wait_until='networkidle')
     externos = 0
     for k, x in enumerate(cards):
-        onde = f'projeção {slug} cartão {k + 1} ({x["t"]})'
+        onde = f'projeção {P.pasta} {slug} cartão {k + 1} ({x["t"]})'
         if x['t'] != 'ler':
             assert page.locator('[data-c-acoes] [data-mostrar]').count() == 1, (onde, 'sem «Mostrar resposta»')
             page.keyboard.press('r')
@@ -198,48 +264,78 @@ def projecao(browser, host, g):
             externos += x['t'] in ('item', 'rever')
         page.keyboard.press('ArrowRight')
     page.locator('#baralho .cartao.fim').wait_for()
-    assert page.evaluate(f'localStorage.getItem("prova-2026-1f-g{g}")') is None
+    assert page.evaluate(f'localStorage.getItem("{P.chave(g)}")') is None
     assert not erros, erros
     ctx.close()
-    print(f'PASS projeção do Grupo {ROMANO[g]}: {len(cards)} cartões só com R e →, «Resposta» em todos ({externos} «item» ou «rever»), nada gravado', flush=True)
+    print(f'PASS projeção {P.pasta} Grupo {ROMANOS[g - 1]}: {len(cards)} cartões só com R e →, «Resposta» em todos ({externos} «item» ou «rever»), nada gravado', flush=True)
+
+
+def rotulos_a_seguir():
+    sec = json.loads((DADOS / 'seccao.json').read_text('utf-8'))
+    feitas = {(P.ano, P.fase) for P in PROVAS}
+    faltam = {}
+    for ano, fase in sec['previstas']:
+        if (ano, fase) not in feitas:
+            faltam.setdefault(ano, []).append(fase)
+    out = []
+    for ano in sorted(faltam, reverse=True):
+        fs = sorted(faltam[ano])
+        out.append(f'{ano}, {fs[0]}.ª fase' if len(fs) == 1 else f'{ano}, ' + ', '.join(f'{f}.ª' for f in fs[:-1]) + f' e {fs[-1]}.ª fases')
+    return out
 
 
 def seccao(browser, host):
+    P0 = PROVAS[0]  # a mais recente: o primeiro bloco
+    f1 = len([c for c in P0.cartoes(1) if c['t'] != 'ler'])
+    f2 = len([c for c in P0.cartoes(2) if c['t'] != 'ler'])
+    m2 = f2 // 2  # «Feito», abaixo dos 80 % do «Conquistado»
+    estado = (f'localStorage.setItem("{P0.chave(1)}",JSON.stringify({{versao:"{P0.versao_licao(1)}",lida:true,melhor:{f1},totalMelhor:{f1},total:{f1}}}));'
+              f'localStorage.setItem("{P0.chave(2)}",JSON.stringify({{versao:"{P0.versao_licao(2)}",lida:true,melhor:{m2},totalMelhor:{f2},total:{f2}}}));')
+    esperados = [f'conquistado|Conquistado: melhor resultado {f1} de {f1}', f'feito|Feito: melhor resultado {m2} de {f2}', 'nao|Por fazer']
+    esperados += ['nao|Por fazer'] * (sum(len(P.grupos) for P in PROVAS) - 3)
+    hrefs_esperados = [f'{P.pasta}/{slug}/' for P in PROVAS for slug in P.grupos.values()]
     for width in (320, 390, 1366):
         ctx, page, erros = nova(browser, width)
-        page.add_init_script('localStorage.setItem("prova-2026-1f-g1",JSON.stringify({versao:"2026-10-29",lida:true,melhor:54,totalMelhor:54,total:54}));'
-                             'localStorage.setItem("prova-2026-1f-g2",JSON.stringify({versao:"2026-10-29",lida:true,melhor:20,totalMelhor:35,total:35}));')
+        page.add_init_script(estado)
         page.goto(f'{host}/exame/provas/', wait_until='networkidle')
         sem_desvio(page, f'secção {width}px')
         estados = page.evaluate('[...document.querySelectorAll("[data-chave]")].map(a=>a.getAttribute("data-feito")+"|"+a.querySelector("[data-estado]").textContent)')
-        assert estados == ['conquistado|Conquistado: melhor resultado 54 de 54', 'feito|Feito: melhor resultado 20 de 35', 'nao|Por fazer'], estados
+        assert estados == esperados, estados
         hrefs = page.evaluate('[...document.querySelectorAll(".pv-grupo a")].map(a=>a.getAttribute("href"))')
-        assert hrefs == ['2026-1f/grupo-i/', '2026-1f/grupo-ii/', '2026-1f/grupo-iii/'], hrefs
+        assert hrefs == hrefs_esperados, hrefs
+        blocos = page.evaluate('[...document.querySelectorAll("section.pv-prova")].map(s=>s.id)')
+        assert blocos == [f'prova-{P.pasta}' for P in PROVAS], blocos
         seguir = page.locator('.pv-seguir').text_content()
-        for prova in ('2026, 2.ª fase', '2025, 1.ª e 2.ª fases', '2024, 1.ª e 2.ª fases', '2023, 1.ª e 2.ª fases'):
-            assert prova in seguir
+        for rot in rotulos_a_seguir():
+            assert rot in seguir, rot
         page.locator('.pv-grupo a').nth(2).click()
-        page.wait_for_url('**/exame/provas/2026-1f/grupo-iii/')
+        page.wait_for_url(f'**/exame/provas/{P0.pasta}/{P0.grupos[3]}/')
         page.locator('#baralho .cartao').wait_for()
         page.locator('.c-marca').click()
-        page.wait_for_url('**/exame/provas/#prova-2026-1f')
+        page.wait_for_url(f'**/exame/provas/#prova-{P0.pasta}')
         assert not erros, erros
         ctx.close()
     # outra versão da lição gravada neste aparelho: o motor recomeça, a secção diz «Por fazer»
     ctx, page, erros = nova(browser, 390)
-    page.add_init_script('localStorage.setItem("prova-2026-1f-g1",JSON.stringify({versao:"2026-01-01",lida:true,melhor:54,totalMelhor:54,total:54}));')
+    page.add_init_script(f'localStorage.setItem("{P0.chave(1)}",JSON.stringify({{versao:"2026-01-01",lida:true,melhor:{f1},totalMelhor:{f1},total:{f1}}}));')
     page.goto(f'{host}/exame/provas/', wait_until='networkidle')
-    assert page.locator('[data-chave="prova-2026-1f-g1"] [data-estado]').inner_text() == 'Por fazer'
-    nome = page.evaluate('(()=>{const a=document.querySelector(".pv-grupo a");return a.getAttribute("aria-labelledby").split(" ").map(i=>document.getElementById(i).textContent).join(" ")})()')
-    assert nome.startswith('Grupo I Baltasar') and nome.endswith('Por fazer'), nome
+    assert page.locator(f'[data-chave="{P0.chave(1)}"] [data-estado]').inner_text() == 'Por fazer'
+    # nome acessível de cada ligação: «Grupo n, título, estado»
+    nomes = page.evaluate('[...document.querySelectorAll(".pv-grupo a")].map(a=>a.getAttribute("aria-labelledby").split(" ").map(i=>document.getElementById(i).textContent).join(" "))')
+    titulos = [json.loads((DADOS / P.pasta / f'{slug}.json').read_text('utf-8'))['titulo'] for P in PROVAS for slug in P.grupos.values()]
+    grupos = [ROMANOS[g - 1] for P in PROVAS for g in P.grupos]
+    for nome, titulo, rom in zip(nomes, titulos, grupos):
+        assert nome == f'Grupo {rom} {titulo} Por fazer', nome
     # impressão: a secção sai no papel (exame.css esconde main nas páginas das sessões)
     page.emulate_media(media='print')
     assert page.evaluate('getComputedStyle(document.querySelector("main#provas")).display') != 'none'
-    assert page.locator('#prova-2026-1f').bounding_box()['height'] > 200
+    for P in PROVAS:
+        assert page.locator(f'#prova-{P.pasta}').bounding_box()['height'] > 200
     page.emulate_media(media='screen')
     assert not erros, erros
     ctx.close()
-    print('PASS secção Provas em cartões a 320, 390 e 1366 px: três grupos, estado do aparelho e versão, nome acessível, impressão, o que vem a seguir, ida e volta', flush=True)
+    print(f'PASS secção Provas em cartões a 320, 390 e 1366 px: {len(PROVAS)} prova(s), a mais recente primeiro, estado do aparelho e versão, '
+          'nome acessível, impressão, o que vem a seguir, ida e volta', flush=True)
     for width in (320, 1366):
         ctx, page, erros = nova(browser, width)
         page.goto(f'{host}/exame/', wait_until='networkidle')
@@ -252,7 +348,8 @@ def seccao(browser, host):
         sem_desvio(page, f'/exame/ {width}px')
         page.locator('#app .provas-porta a[href="provas/"]').click()
         page.wait_for_url('**/exame/provas/')
-        assert page.locator('#prova-2026-1f').count() == 1
+        for P in PROVAS:
+            assert page.locator(f'#prova-{P.pasta}').count() == 1
         page.goto(f'{host}/exame/#s19/aquecer', wait_until='networkidle')
         page.locator('[data-action="another"]').wait_for()
         page.goto(f'{host}/exame/laboratorio/', wait_until='networkidle')
@@ -266,6 +363,9 @@ def seccao(browser, host):
 
 
 def main():
+    pedidas = sys.argv[1:]
+    provas = [P for P in PROVAS if not pedidas or P.pasta in pedidas]
+    assert provas, f'sem provas para {pedidas}'
     raiz = tempfile.mkdtemp(prefix='provas-pt-')
     os.symlink(ROOT, os.path.join(raiz, 'pt'))
     server = ThreadingHTTPServer(('127.0.0.1', 0), partial(Quiet, directory=raiz))
@@ -274,11 +374,12 @@ def main():
     try:
         with sync_playwright() as pw:
             browser = pw.chromium.launch(headless=True)
-            for g in GRUPOS:
-                for width in (320, 390, 1366):
-                    percorrer(browser, host, g, width)
-            for g in GRUPOS:
-                projecao(browser, host, g)
+            for P in provas:
+                for g in P.grupos:
+                    for width in (320, 390, 1366):
+                        percorrer(browser, host, P, g, width)
+                for g in P.grupos:
+                    projecao(browser, host, P, g)
             seccao(browser, host)
             browser.close()
     finally:
