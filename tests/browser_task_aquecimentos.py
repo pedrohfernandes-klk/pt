@@ -23,8 +23,9 @@ from browser_m2_complete import respond
 
 # 30/10/2026: aquecimento em cartões (decisão do docente)
 # 30/10/2026: o M4 também liga aos aquecimentos (camada tests/fixtures/aquecimentos-m4-edits-20261030.json).
-TAREFAS_LIGADAS = ['m1-u1', 'm1-u2', 'm4-u1', 'm4-u2', 'm4-u3-discurso', 'm7-u1', 'm7-u2', 'm7-u3']
-SLUGS = ['m1-u1', 'm1-u2', 'm4-u1', 'm4-u2', 'm4-u3-discurso', 'm7-u1', 'm7-u2', 'm7-u3']
+TAREFAS_LIGADAS = ['m1-u1', 'm1-u2', 'm2-u1', 'm2-u2', 'm4-u1', 'm4-u2', 'm4-u3-discurso', 'm7-u1', 'm7-u2', 'm7-u3']
+# 30/10/2026: M2 recebe páginas novas (aquecimentos em cartões das duas unidades).
+SLUGS = ['m1-u1', 'm1-u2', 'm2-u1', 'm2-u2', 'm4-u1', 'm4-u2', 'm4-u3-discurso', 'm7-u1', 'm7-u2', 'm7-u3']
 CHAVES = r"""() => Object.keys(localStorage).filter(k => /^(licao-|percurso-|desafio-|epi-pt-|epi-ultima|aquecimento-)/.test(k)).sort()"""
 
 
@@ -107,7 +108,8 @@ def tarefas(browser, host):
             ligacao = page.locator(f'[data-task-card="{enunciado}"] header .task-aquecer a[href="aquecimento/"]')
             assert ligacao.count() == 1, slug
             # 30/10/2026: aquecimento em cartões (decisão do docente)
-            if slug in {'m1-u1', 'm1-u2', 'm7-u3'}:
+            # 30/10/2026: as tarefas do M2 também passam ao formato com o cartão «Aquecer» em cartões.
+            if slug in {'m1-u1', 'm1-u2', 'm2-u1', 'm2-u2', 'm7-u3'}:
                 # Os cartões substituem as máquinas em papel: o cartão «Aquecer» é o primeiro e liga ao aquecimento.
                 assert enunciado == 1
                 primeiro = page.locator('[data-task-card="0"]')
