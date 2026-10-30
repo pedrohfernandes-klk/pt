@@ -22,7 +22,9 @@ from browser_m1_and_inventory import ROOT, QuietHandler
 from browser_m2_complete import respond
 
 # 30/10/2026: aquecimento em cartões (decisão do docente)
-SLUGS = ['m1-u1', 'm1-u2', 'm7-u1', 'm7-u2', 'm7-u3']
+# 30/10/2026: o M4 também liga aos aquecimentos (camada tests/fixtures/aquecimentos-m4-edits-20261030.json).
+TAREFAS_LIGADAS = ['m1-u1', 'm1-u2', 'm4-u1', 'm4-u2', 'm4-u3-discurso', 'm7-u1', 'm7-u2', 'm7-u3']
+SLUGS = ['m1-u1', 'm1-u2', 'm4-u1', 'm4-u2', 'm4-u3-discurso', 'm7-u1', 'm7-u2', 'm7-u3']
 CHAVES = r"""() => Object.keys(localStorage).filter(k => /^(licao-|percurso-|desafio-|epi-pt-|epi-ultima|aquecimento-)/.test(k)).sort()"""
 
 
@@ -95,7 +97,8 @@ def aquecimentos(browser, host):
 
 
 def tarefas(browser, host):
-    for slug in SLUGS:
+    # 30/10/2026: a integração do M4 fica para a camada literal, sem omitir testes existentes.
+    for slug in TAREFAS_LIGADAS:
         for width, scheme in ((390, 'light'), (1366, 'dark')):
             ctx, page, errors = contexto(browser, width, scheme)
             page.goto(f'{host}/tarefas/{slug}/', wait_until='networkidle')

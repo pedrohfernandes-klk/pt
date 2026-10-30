@@ -1,0 +1,239 @@
+{
+ "slug": "m4-u3-discurso",
+ "modulo": "m4",
+ "unidade": 3,
+ "versao": "2",
+ "momento": "No início da aula de tarefa",
+ "titulo": "Propor, fundamentar, incluir",
+ "descricao": "Aquecimento da unidade 3 do M4: dez minutos com consulta e casos inventados na escola, para treinar as peças, a voz e o tempo do discurso.",
+ "licoes_das_citacoes": [
+  "m4/licao-m4-f01",
+  "m4/licao-m4-f02",
+  "m4/licao-m4-f14",
+  "m4/licao-m4-f27"
+ ],
+ "menu": [
+  [
+   "../../../m4/",
+   "Voltar ao percurso do M4"
+  ]
+ ],
+ "reservadas": [
+  "trinta dias",
+  "uma hora de silêncio",
+  "das dez às onze",
+  "o gerador zumbe",
+  "prisão dentro da prisão",
+  "vai para a arrecadação",
+  "o sono que a todos nos falta",
+  "podemos escolher como estamos",
+  "Votem o silêncio",
+  "Proponho dez minutos diários",
+  "Uma reunião diária tira-nos tempo",
+  "Limitamos a reunião a dez minutos",
+  "Votem nesta regra"
+ ],
+ "cartoes": [
+  {
+   "t": "ler",
+   "rot": "Abre",
+   "titulo": "Uma proposta que aguenta perguntas",
+   "html": "<p>Dez minutos com consulta. Treinas as peças de um discurso feito para ser ouvido: proposta, argumentos com exemplo, objeção e resposta, apelo, voz e tempo. Os casos da rádio, da horta, da biblioteca e da visita de estudo são inventados e ficam na escola: a regra, os exemplos e a objeção do abrigo são teus. Recupera F14, F27 e as perguntas de Vieira em F01. Não conta para a nota.</p>"
+  },
+  {
+   "t": "emparelhar",
+   "p": "Discurso inventado sobre a rádio da escola: liga cada frase à função que cumpre.",
+   "p2": "Proposta, razão, exemplo ou apelo? Liga cada frase do discurso inventado da rádio.",
+   "pares": [
+    [
+     "Proponho que a rádio da escola dê a sexta-feira às turmas.",
+     "Apresenta a proposta"
+    ],
+    [
+     "Assim ouvimos vozes que hoje não chegam ao microfone.",
+     "Dá uma razão"
+    ],
+    [
+     "No dia de experiência, o 7.º B entrevistou a cozinheira.",
+     "Dá um exemplo concreto"
+    ],
+    [
+     "Mandem à rádio uma ideia de entrevista até quinta.",
+     "Pede uma ação a quem ouve"
+    ]
+   ],
+   "f": "Cada frase tem a sua função: a proposta diz o que defendes, a razão diz porquê, o exemplo mostra-o num caso que aconteceu e o apelo pede a quem ouve que aja (F14).",
+   "fe": "Pergunta a cada frase o que faz: afirma o que se propõe, explica a vantagem, conta um caso que aconteceu, ou pede um gesto a quem ouve?",
+   "g": 1
+  },
+  {
+   "t": "escolha",
+   "p": "Discurso inventado sobre a horta da escola: que frase serve de proposta para o abrir?",
+   "p2": "Para abrir o discurso inventado da horta, que frase afirma uma regra de que se pode discordar?",
+   "o": [
+    "Cada turma rega a horta um dia por semana.",
+    "A rega da horta da escola ao longo do ano.",
+    "Reguem todos a horta da escola, por favor!"
+   ],
+   "c": 0,
+   "f": "A proposta afirma a regra numa frase de que se pode discordar e abre o discurso (F14). O tema só diz o assunto; o apelo, que manda fazer, fica para o fim.",
+   "fe": [
+    null,
+    "É o tema: diz de que se vai falar, mas não afirma nada de que se possa discordar.",
+    "Pede uma ação: é um apelo, e o apelo fecha o discurso. A proposta abre-o e afirma a regra."
+   ],
+   "g": 2
+  },
+  {
+   "t": "completar",
+   "p": "Completa a definição de argumento trabalhada em F14.",
+   "p2": "Segundo F14, o que tem de acompanhar a razão num argumento?",
+   "frase": "Um argumento junta à razão [1].",
+   "lacunas": [
+    {
+     "o": [
+      "um caso que quem ouve reconhece",
+      "um elogio ao grupo que te ouve",
+      "a mesma tese com outras palavras"
+     ],
+     "c": 0
+    }
+   ],
+   "f": "Em F14, o argumento é uma razão com um caso que quem ouve reconhece: uma pessoa, uma hora, uma coisa que aconteceu. Sem o caso, a razão fica dita, mas não mostrada.",
+   "fe": "Repetir a tese anda em círculo, e um elogio dá orgulho sem provar nada (F14). Falta o caso concreto que mostra a razão.",
+   "g": 3
+  },
+  {
+   "t": "escolha",
+   "p": "Discurso inventado: propões abrir a biblioteca da escola ao almoço. Que objeção deves dizer no discurso, para lhe responderes?",
+   "p2": "Na proposta inventada da biblioteca aberta ao almoço, que objeção faria o grupo de facto?",
+   "o": [
+    "Ninguém fica a vigiar a sala ao almoço.",
+    "A biblioteca precisa de livros mais novos.",
+    "Quem propõe isto quer fugir ao refeitório."
+   ],
+   "c": 0,
+   "f": "É a objeção que o grupo faria de facto e que limita a proposta: sem vigilância, a sala não abre. Diz tu a objeção mais forte e desfá-la logo a seguir (F14).",
+   "fe": [
+    null,
+    "Não se opõe à proposta: fala de outro problema da biblioteca. Uma objeção pertinente limita a tese (F11).",
+    "Ataca quem propõe, não a proposta: não discute a regra, por isso não é a objeção a que respondes."
+   ],
+   "g": 4
+  },
+  {
+   "t": "escolha",
+   "p": "Proposta inventada: a turma escolhe por votação o destino da visita de estudo. Objeção: quem faltar nesse dia fica sem voz. Que resposta a desfaz?",
+   "p2": "Alguém objeta que, na votação inventada da visita de estudo, quem faltar fica sem voz. Que resposta mantém a proposta?",
+   "o": [
+    "Quem faltar vota no dia seguinte, por escrito.",
+    "Então a turma deixa de votar o destino da visita.",
+    "Quem falta à votação não merece escolher a visita."
+   ],
+   "c": 0,
+   "f": "O voto por escrito no dia seguinte desfaz a objeção e a votação fica: ninguém perde a voz. A refutação responde sem largar a tese e sem castigar ninguém (F14).",
+   "fe": [
+    null,
+    "Desiste da proposta em vez de responder: a refutação segura a tese e desfaz só o que custava.",
+    "Ataca quem falta em vez de responder: exclui e humilha, e a objeção fica de pé."
+   ],
+   "g": 5
+  },
+  {
+   "t": "ordenar",
+   "p": "Põe por ordem as peças de um discurso para convencer um grupo.",
+   "p2": "Do princípio ao fim: em que ordem entram as peças do discurso?",
+   "passos": [
+    "Dizer a regra numa frase, logo no início",
+    "Dar dois argumentos, cada um com um exemplo",
+    "Dizer a objeção mais forte de quem discorda",
+    "Responder à objeção sem castigar ninguém",
+    "Fechar com um apelo, não com um resumo"
+   ],
+   "f": "É a ordem do plano de F14: a regra abre, os argumentos sustentam-na, a objeção mais forte é dita e desfeita logo a seguir, e o apelo fecha. A estrutura é esta; o conteúdo do abrigo é teu.",
+   "fe": "Sem a regra no início, os argumentos não têm alvo; a resposta vem logo depois da objeção; e o fim pede uma ação, em vez de resumir.",
+   "g": 6
+  },
+  {
+   "t": "emparelhar",
+   "p": "Liga cada frase inventada à marca de oralidade que torna visível.",
+   "p2": "Vocativo, repetição, pergunta retórica ou apelo? Liga cada frase à sua marca.",
+   "pares": [
+    [
+     "Colegas, isto também vos diz respeito.",
+     "Chama quem ouve com um vocativo"
+    ],
+    [
+     "Ouvir para descobrir, ouvir para discordar.",
+     "Repete uma estrutura"
+    ],
+    [
+     "Quem aprende, se ninguém pode perguntar?",
+     "Faz uma pergunta retórica"
+    ],
+    [
+     "Inscrevam-se hoje, no fim desta reunião.",
+     "Faz um apelo à ação"
+    ]
+   ],
+   "f": "As marcas orientam quem ouve: o vocativo chama-o, a repetição dá ritmo e ajuda a seguir, a pergunta retórica já traz a resposta e o apelo pede um gesto. Não substituem as razões (F01, F04, F14, F15).",
+   "fe": "Procura a marca: um vocativo que chama quem ouve, palavras que voltam na mesma ordem, uma pergunta que já traz a resposta, um verbo que manda fazer.",
+   "g": 7
+  },
+  {
+   "t": "completar",
+   "p": "Em F01, Vieira pergunta «Que faria logo? Retirar-se-ia? Calar-se-ia?». Completa.",
+   "p2": "Vieira encadeia «Retirar-se-ia? Calar-se-ia?». Que efeito têm estas perguntas em quem ouve?",
+   "frase": "Estas perguntas retóricas levam quem ouve a [1].",
+   "lacunas": [
+    {
+     "o": [
+      "pesar cada saída com o orador",
+      "dar em voz alta a sua resposta",
+      "saber já o que António decidiu"
+     ],
+     "c": 0
+    }
+   ],
+   "f": "As perguntas seguidas são retóricas: não esperam resposta e levam quem ouve a pesar cada saída (F01). Só depois Vieira conta a decisão de António, com «Pois que fez?».",
+   "fe": "Uma pergunta retórica não pede resposta em voz alta, e a decisão de António só vem depois, com «Pois que fez?». Primeiro, quem ouve pesa as saídas.",
+   "g": 8
+  },
+  {
+   "t": "rever",
+   "p": "Discurso inventado sobre a horta: revê o fecho para que peça uma ação, sem ameaçar.",
+   "p2": "O fecho do discurso inventado da horta ameaça quem não adere. Que versão é um apelo?",
+   "o": [
+    "Quem não se inscrever fica sem canteiro e sem voz.",
+    "Inscrevam a turma no quadro da horta até sexta.",
+    "Em resumo, falei da horta, das razões e da objeção."
+   ],
+   "c": 1,
+   "f": "O apelo pede a quem ouve uma ação concreta, com prazo, e não castiga quem discorda. Em F14, o fim pede uma ação, como «Votem», e não resume o discurso.",
+   "fe": [
+    "Ameaçar quem não adere castiga a discordância e exclui: o fecho pede uma ação, não um castigo.",
+    null,
+    "É um resumo: repete o que já ouviram e não diz ao grupo o que fazer a seguir."
+   ],
+   "frase": "Já ouviram as razões e a resposta a quem duvida. Quem não se inscrever fica sem canteiro e sem voz.",
+   "trecho": "Quem não se inscrever fica sem canteiro e sem voz.",
+   "apoio": "F14, sobre o plano do discurso: «O fim é um apelo que pede uma ação».",
+   "g": 9
+  },
+  {
+   "t": "vf",
+   "p": "Na tarefa, um discurso de 350 palavras serve, desde que o leias depressa para caber em dois minutos.",
+   "p2": "Ensaias em voz alta e passas dos dois minutos: basta ler mais depressa.",
+   "v": false,
+   "f": "Falso. A tarefa pede 220 a 280 palavras ditas em dois minutos. Se passas, corta repetições e pormenores e mantém a regra, os dois argumentos, a objeção com resposta e o apelo.",
+   "fe": "Quem ouve não pode voltar atrás na página (F15): ler depressa tira-lhe as pausas de que precisa para seguir as razões. Corta, em vez de acelerar.",
+   "g": 10
+  },
+  {
+   "t": "ler",
+   "rot": "Para levar",
+   "titulo": "Agora, a regra é tua",
+   "html": "<p>No abrigo, a regra, os exemplos e a objeção são teus. Abre com a regra numa frase; dá dois argumentos, cada um com um exemplo do abrigo; diz a objeção mais forte e responde-lhe sem excluir nem humilhar ninguém; fecha com um apelo, não com um resumo. Lê em voz alta e cronometra: 220 a 280 palavras, dois minutos.</p>"
+  }
+ ]
+}

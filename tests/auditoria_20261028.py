@@ -28,6 +28,10 @@ literais estão em tests/fixtures/aquecimentos-m1-edits-20261030.json, geradas p
 scripts/aquecimentos_m1_20261030.json. É agora a camada mais recente: undo() desfá-la antes da camada do M7. As tarefas
 das unidades 1 e 2 do M1 foram geradas de novo por scripts/tarefas_escolha.py; a camada guarda a diferença das páginas
 e dos dados públicos, por isso, depois de a desfazer, os manifestos sucessores de 28/10 continuam a conferir.
+
+30/10/2026 (depois do M1): aquecimentos em cartões antes das aulas de tarefa do M4 e apresentações da U1 e da U3 em pequenos
+grupos. As trocas literais estão em tests/fixtures/aquecimentos-m4-edits-20261030.json, geradas por scripts/aplicar_trocas.py
+a partir de scripts/aquecimentos_m4_20261030.json. É agora a camada mais recente: undo() desfá-la antes da do M1.
 """
 from pathlib import Path
 import json
@@ -67,7 +71,22 @@ _AQUECIMENTOS_FILES = json.loads(AQUECIMENTOS_MANIFEST.read_text('utf-8'))['file
 REGENERADAS_20261029 = frozenset({'tarefas/m7-u3/index.html'})
 
 
-# 30/10/2026: a camada dos aquecimentos do M1 (a mais recente; desfaz-se antes da do M7).
+# 30/10/2026: a camada dos aquecimentos do M4 (a mais recente; desfaz-se antes da do M1).
+AQUECIMENTOS_M4_MANIFEST = ROOT / 'tests/fixtures/aquecimentos-m4-edits-20261030.json'
+_AQUECIMENTOS_M4_FILES = json.loads(AQUECIMENTOS_M4_MANIFEST.read_text('utf-8'))['files']
+
+
+def undo_aquecimentos_m4(path, text):
+    """30/10/2026: devolve o texto anterior à camada dos aquecimentos do M4 (ou o mesmo texto, se não a tem)."""
+    relative = _relative(path)
+    for edit in reversed(_AQUECIMENTOS_M4_FILES.get(relative, {}).get('edits', [])):
+        if text.count(edit['new']) != edit['occurrences']:
+            raise AssertionError(f"Troca autorizada a 30/10 (M4) já não confere: {relative}: {edit['location']}")
+        text = text.replace(edit['new'], edit['old'])
+    return text
+
+
+# 30/10/2026: a camada dos aquecimentos do M1 (desfaz-se antes da do M7).
 AQUECIMENTOS_M1_MANIFEST = ROOT / 'tests/fixtures/aquecimentos-m1-edits-20261030.json'
 _AQUECIMENTOS_M1_FILES = json.loads(AQUECIMENTOS_M1_MANIFEST.read_text('utf-8'))['files']
 
@@ -99,7 +118,8 @@ def undo(path, text):
     29/10/2026: antes de tudo, a camada dos aquecimentos do M7. Numa página gerada de novo a 29/10 (REGENERADAS_20261029)
     não há trocas de 28/10 a desfazer: o predecessor compacto continua autorizado pelo seu manifesto literal.
     """
-    # 30/10/2026: antes de tudo, a camada dos aquecimentos do M1 (a mais recente).
+    # 30/10/2026: antes de tudo, a camada dos aquecimentos do M4 (a mais recente) e depois a do M1.
+    text = undo_aquecimentos_m4(path, text)
     text = undo_aquecimentos_m1(path, text)
     text = undo_aquecimentos(path, text)
     relative = _relative(path)

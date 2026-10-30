@@ -29,7 +29,9 @@ import zipfile
 ROOT = Path(__file__).resolve().parents[1]
 DADOS = ROOT / 'docs/pedagogia/aquecimentos'
 # 30/10/2026: aquecimento em cartões (decisão do docente)
-SLUGS = ['m1-u1', 'm1-u2', 'm7-u1', 'm7-u2', 'm7-u3']
+# 30/10/2026: o M4 também liga aos aquecimentos (camada tests/fixtures/aquecimentos-m4-edits-20261030.json).
+TAREFAS_LIGADAS = ['m1-u1', 'm1-u2', 'm4-u1', 'm4-u2', 'm4-u3-discurso', 'm7-u1', 'm7-u2', 'm7-u3']
+SLUGS = ['m1-u1', 'm1-u2', 'm4-u1', 'm4-u2', 'm4-u3-discurso', 'm7-u1', 'm7-u2', 'm7-u3']
 sys.path.insert(0, str(ROOT / 'scripts'))
 from audit_cards import lesson_cards, validate_cards  # noqa: E402
 # 29/10/2026 (revisão técnica, P1): as lições do M7 de onde vêm as citações da unidade 3, nenhuma escrita nesta camada.
@@ -140,10 +142,10 @@ class Aquecimentos(unittest.TestCase):
                 self.assertEqual(re.findall(r'"((?:licao|percurso|desafio|epi-pt|aquecimento)-[a-z0-9-]+)"', s), [f'aquecimento-{slug}'])
                 # Casca, aparência, projeção e o regresso à tarefa e à unidade.
                 # 29/10/2026 (revisão pedagógica, C8): o menu diz quando se faz o aquecimento, como a tarefa e a linha A.
-                self.assertIn(f'<p>Módulo {dados(slug)["modulo"][1:]} · {dados(slug)["momento"]}<br>Unidade {slug[-1]}</p>', s)
+                self.assertIn(f'<p>Módulo {dados(slug)["modulo"][1:]} · {dados(slug)["momento"]}<br>Unidade {dados(slug)["unidade"]}</p>', s)
                 for marca in ('assets/pt-lessons/casca.js', 'assets/pt-lessons/jogo.js', 'assets/appearance.css', 'assets/appearance.js',
                               'assets/projection-launcher.js', '<a class="c-marca" href="../"', '"seguinte": "../"',
-                              f'data-unit-return="../../../{dados(slug)["modulo"]}/#unidade-pedagogica-{slug[-1]}"', '<a href="?projetar=1">Projetar para a turma</a>',
+                              f'data-unit-return="../../../{dados(slug)["modulo"]}/#unidade-pedagogica-{dados(slug)["unidade"]}"', '<a href="?projetar=1">Projetar para a turma</a>',
                               'não conta para a nota'):
                     self.assertIn(marca, s)
                 self.assertEqual(s.count('<style id="casca-pc">'), 1)
@@ -153,7 +155,8 @@ class Aquecimentos(unittest.TestCase):
 
     def test_ligacao_no_enunciado_e_linha_a_no_percurso(self):
         # 30/10/2026: aquecimento em cartões (decisão do docente)
-        for slug in SLUGS:
+        # 30/10/2026: M4 ainda sem ligação; preservam-se todas as verificações das tarefas já ligadas.
+        for slug in TAREFAS_LIGADAS:
             n = dados(slug)["unidade"]
             indice = (ROOT / dados(slug)["modulo"] / "index.html").read_text("utf-8")
             items = Lista(indice).li
