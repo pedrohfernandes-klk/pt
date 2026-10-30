@@ -1,5 +1,6 @@
 """Respostas certas e erradas em todos os tipos dos dois baralhos novos, a 390 px."""
 from functools import partial
+import re
 from http.server import ThreadingHTTPServer
 import json
 import threading
@@ -50,12 +51,14 @@ def verificar(browser, host):
                 else:raise AssertionError(t)
                 feedback=page.locator('.casca [data-c-folha]:visible')
                 feedback.wait_for()
-                assert esperado.replace('**','') in feedback.inner_text(),(slug,n,acertar,feedback.inner_text())
+                # 30/10/2026 (revisão dos baralhos): o motor mostra _…_ em itálico, sem os traços; compara-se o texto visível.
+                visivel=re.sub(r'_([^_]+)_',r'\1',esperado.replace('**',''))
+                assert visivel in feedback.inner_text(),(slug,n,acertar,feedback.inner_text())
                 sem_deslizar(page,f'{slug} {n} feedback')
                 feedback.locator('[data-seguinte]').click()
             assert page.locator('#baralho .cartao.fim').count()
             assert not errors,errors
-            print('PASS feedback M1',slug,'certo' if acertar else 'errado','10 cartões, seis tipos, 390 px',flush=True)
+            print('PASS feedback M1',slug,'certo' if acertar else 'errado','10 cartões, cinco ou mais tipos, 390 px',flush=True)
             ctx.close()
 
 

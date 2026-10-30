@@ -11,12 +11,25 @@
   "m1/licao-m1-f08",
   "m1/licao-m1-f10",
   "m1/licao-m1-f20",
-  "m1/licao-m1-f07"
+  "m1/licao-m1-f07",
+  "m1/licao-m1-f05"
  ],
  "menu": [
   [
-   "../../../m1/",
-   "Voltar ao percurso do M1"
+   "../../../m1/licao-m1-f06/",
+   "Relembrar F06, fazer ver"
+  ],
+  [
+   "../../../m1/licao-m1-f10/",
+   "Relembrar F10, Estar lá"
+  ],
+  [
+   "../../../m1/licao-m1-f20/",
+   "Relembrar F20, explícito ou inferência"
+  ],
+  [
+   "../../../m1/licao-m1-f05/",
+   "Relembrar F05, os sons"
   ]
  ],
  "reservadas": [
@@ -64,19 +77,117 @@
   "O grito do pajem",
   "a casa de pedra",
   "O pajem gritou",
-  "o grito do pajem"
+  "o grito do pajem",
+  "viúva que rei não tinha",
+  "em logo de marido",
+  "estranha cousa de ver",
+  "se ajuntar a ele",
+  "Soaram as vozes do arruído"
  ],
  "cartoes": [
   {
    "t": "ler",
    "rot": "Abre",
    "titulo": "Conta, mas mostra de onde vem",
-   "html": "<p>Dez minutos com consulta. Treinas as operações das lições com pequenos casos inventados sobre um cinema e uma biblioteca. Não são acontecimentos históricos nem excertos de Fernão Lopes. As passagens da tarefa ficam para o teu trabalho. Não conta para a nota.</p>"
+   "html": "<p>Dez minutos com consulta. Treinas as operações das lições com pequenos casos inventados, num cinema, num estádio e numa escola. Não são acontecimentos históricos nem excertos de Fernão Lopes. As passagens da tarefa ficam para o teu trabalho. Não conta para a nota.</p>"
+  },
+  {
+   "t": "completar",
+   "p": "Caso inventado: A porta range, a luz treme, a fila avança. Completa.",
+   "p2": "Para que servem o som da porta, a luz que treme e a fila que avança? Completa.",
+   "frase": "Som, luz e movimento servem para [1].",
+   "lacunas": [
+    {
+     "o": [
+      "fazer ver a cena ao leitor",
+      "provar que a cena aconteceu",
+      "resumir o que aconteceu"
+     ],
+     "c": 0
+    }
+   ],
+   "f": "Pormenores de som, de luz e de movimento fazem ver a cena: é o visualismo (lição F06). Na tarefa, explica o que a passagem faz ver.",
+   "fe": "Um pormenor não prova nada: pode ser criado por quem escreve. Resumir deixa o leitor fora do momento. Som, luz e movimento põem a cena diante dos olhos.",
+   "g": 1
+  },
+  {
+   "t": "escolha",
+   "p": "Caso inventado: Ao apito final, o estádio inteiro levantou-se e gritou. Que explicação mostra a multidão como uma só figura?",
+   "p2": "Na frase inventada sobre o estádio, o que faz da multidão uma só figura?",
+   "o": [
+    "Todos fazem o mesmo gesto, e ninguém tem nome.",
+    "Os adeptos estavam muito felizes com a vitória.",
+    "Cada adepto reagiu ao apito à sua maneira."
+   ],
+   "c": 0,
+   "f": "O estádio inteiro levanta-se e grita: todos fazem o mesmo gesto e ninguém tem nome. É a personagem coletiva (lição F06). Na tarefa, cita a passagem e diz o que ela faz ver da cidade.",
+   "fe": [
+    null,
+    "Diz uma emoção que a frase não mostra. Explica o que se vê: quem age e como.",
+    "A frase diz o contrário: não há um gesto de cada um, há um só gesto de todos."
+   ],
+   "g": 2
+  },
+  {
+   "t": "rever",
+   "p": "Caso inventado. Revê a marca da fala.",
+   "p2": "Nenhuma fonte regista as palavras da técnica. Que marca leva a fala?",
+   "apoio": "Nenhuma fonte regista estas palavras: foram criadas por quem escreve.",
+   "frase": "A técnica diz: “Abre a porta.” (fala documentada)",
+   "trecho": "fala documentada",
+   "o": [
+    "fala verificada",
+    "fala imaginada",
+    "fala registada"
+   ],
+   "c": 1,
+   "f": "Criada por quem escreve, a fala leva a marca imaginada, e mesmo assim não pode desmentir as fontes (lição F10).",
+   "fe": [
+    "Verificada promete uma confirmação que nenhuma fonte dá.",
+    null,
+    "Registada quer dizer que uma fonte a guardou; aqui, nenhuma a regista."
+   ],
+   "g": 3
+  },
+  {
+   "t": "completar",
+   "p": "Caso inventado: numa crónica, um rapaz diz _brigado_ em vez de _obrigado_. Nenhuma fonte regista a fala. Completa.",
+   "p2": "Em brigado, dito em vez de obrigado, que som cai, onde, e onde pode ficar na crónica?",
+   "frase": "Cai [1]: é [2]. Na crónica, brigado pode ficar [3].",
+   "lacunas": [
+    {
+     "o": [
+      "o o, à cabeça da palavra",
+      "o i, no centro da palavra",
+      "o o, no final da palavra"
+     ],
+     "c": 0
+    },
+    {
+     "o": [
+      "aférese",
+      "apócope",
+      "epêntese"
+     ],
+     "c": 0
+    },
+    {
+     "o": [
+      "numa fala imaginada",
+      "na voz de quem narra",
+      "numa fala documentada"
+     ],
+     "c": 0
+    }
+   ],
+   "f": "Cai o _o_ do início: aférese (lição F05). Numa fala imaginada, a forma da conversa pode ser uma escolha; no relato, escreve-se obrigado; numa fala documentada, ficam as palavras da fonte (lição F05).",
+   "fe": "Brigado começa por _b_: falta o _o_ do início, e isso é aférese. Sem fonte, a fala é imaginada; quem narra usa a forma da escrita.",
+   "g": 4
   },
   {
    "t": "emparelhar",
-   "p": "Liga cada afirmação à sua função. Caso inventado: A porta estava fechada. Ana voltou com uma chave.",
-   "p2": "Liga cada afirmação à sua função. Caso inventado: A porta estava fechada. Ana voltou com uma chave.",
+   "p": "Caso inventado: A porta estava fechada. Ana voltou com uma chave. Que etiqueta merece cada frase?",
+   "p2": "Explícita, inferência, interpretação ou opinião: arruma cada frase sobre a porta e a chave.",
    "pares": [
     [
      "A porta estava fechada.",
@@ -87,7 +198,7 @@
      "Inferência apoiada"
     ],
     [
-     "A porta cria um obstáculo na cena.",
+     "Quem escreve fecha a porta para criar suspense.",
      "Interpretação"
     ],
     [
@@ -95,135 +206,57 @@
      "Opinião"
     ]
    ],
-   "f": "Apontar o que está escrito, concluir por pistas, atribuir sentido e avaliar são operações diferentes, trabalhadas em F20.",
-   "fe": "Talvez quisesse entrar conclui por pistas; obstáculo propõe um sentido; magnífica avalia. Nenhuma destas operações é copiar a informação explícita.",
-   "g": 1
-  },
-  {
-   "t": "escolha",
-   "p": "Caso inventado: O porteiro gritou: Há fogo! O público saiu. Que informação é explícita?",
-   "p2": "Caso inventado: O porteiro gritou: Há fogo! O público saiu. Que informação é explícita?",
-   "o": [
-    "O porteiro lançou um aviso de fogo.",
-    "O incêndio destruiu a sala de cinema.",
-    "O porteiro provocou o fogo no cinema."
-   ],
-   "c": 0,
-   "f": "O relato regista o aviso e a saída. A fala não confirma, por si, que havia fogo: distingue afirmação da personagem e informação do relato (F20).",
-   "fe": [
-    null,
-    "Não há descrição de incêndio nem destruição. Não acrescentes ao relato o conteúdo de uma fala como facto confirmado.",
-    "O texto não identifica nenhuma causa de fogo. Atribuí-la ao porteiro não tem apoio."
-   ],
-   "g": 2
-  },
-  {
-   "t": "completar",
-   "p": "Caso inventado: A porta range, a luz treme, a fila avança. Completa.",
-   "p2": "Caso inventado: A porta range, a luz treme, a fila avança. Completa.",
-   "frase": "Som, luz e movimento ajudam a [1].",
-   "lacunas": [
-    {
-     "o": [
-      "contar os anos todos",
-      "pôr o leitor na cena",
-      "listar nomes de obras"
-     ],
-     "c": 1
-    }
-   ],
-   "f": "Os pormenores sensoriais e de movimento fazem ver a cena. É a operação de visualismo recordada em F10.",
-   "fe": "Contar anos ou listar títulos não explora os pormenores dados: procura o efeito do som, da luz e do movimento.",
-   "g": 3
+   "f": "A porta fechada aponta-se; que Ana quisesse entrar conclui-se da chave; o suspense é um sentido que se defende com o texto; magnífica é um juízo de quem comenta (lição F20).",
+   "fe": "Pergunta a cada frase: está escrito? Conclui-se de uma pista, a chave? Dá um sentido à escolha de quem escreve? Ou diz o que vale?",
+   "g": 5
   },
   {
    "t": "escolha",
    "p": "Duas fontes inventadas sobre uma sessão: o jornal diz sala cheia; a entrevista diz meia sala. Como registar?",
-   "p2": "Duas fontes inventadas sobre uma sessão: o jornal diz sala cheia; a entrevista diz meia sala. Como registar?",
+   "p2": "Uma fonte diz sala cheia, outra diz meia sala. Que fazes na crónica?",
    "o": [
-    "Apagar o jornal e citar a entrevista.",
+    "Calar o jornal e citar a entrevista.",
     "Fazer uma média e omitir a diferença.",
     "Indicar cada versão e a sua origem."
    ],
    "c": 2,
-   "f": "Confronta as fontes: apresenta a divergência e identifica quem sustenta cada versão (F10).",
+   "f": "Confronta as fontes: apresenta a divergência e identifica quem sustenta cada versão (lição F10).",
    "fe": [
     "Escolher uma e ocultar a outra elimina a divergência que tens de tornar visível.",
     "A média não vem de nenhuma fonte. Não cria um facto intermédio.",
     null
    ],
-   "g": 4
-  },
-  {
-   "t": "ordenar",
-   "p": "Organiza uma revisão do teu relato.",
-   "p2": "Organiza uma revisão do teu relato.",
-   "passos": [
-    "Voltar às fontes do momento escolhido",
-    "Conferir os factos e copiar as citações com rigor",
-    "Assinalar as falas criadas e verificar a coerência",
-    "Riscar uma frase e justificar a alteração"
-   ],
-   "f": "Consulta, confere, distingue a criação e mostra a revisão. São operações trabalhadas em F10; aqui aplicam-se a outro caso.",
-   "fe": "Verifica primeiro o apoio documental. Só depois decides o que é criação e o que precisas de corrigir; a alteração fica visível.",
-   "g": 5
-  },
-  {
-   "t": "emparelhar",
-   "p": "Liga os segmentos inventados à operação que mostram.",
-   "p2": "Liga os segmentos inventados à operação que mostram.",
-   "pares": [
-    [
-     "A defesa da biblioteca: da biblioteca",
-     "Completa um nome"
-    ],
-    [
-     "A porta range ao abrir",
-     "Dá um pormenor sonoro"
-    ],
-    [
-     "Para, escuta, corre: cresce a urgência",
-     "Cria uma gradação"
-    ],
-    [
-     "O grupo inteiro avançou junto",
-     "Faz agir um conjunto"
-    ]
-   ],
-   "f": "Repara no que cada segmento faz: completa, faz ouvir, intensifica ou põe o grupo em ação. São treinos das operações de F08, F07 e F10.",
-   "fe": "Da biblioteca completa defesa; range dá som; a sequência aumenta a urgência; o grupo inteiro é apresentado a agir em conjunto.",
    "g": 6
   },
   {
-   "t": "completar",
-   "p": "Caso inventado: um cartaz mostra só a fachada do cinema. Completa a comparação com um relato do público na sala.",
-   "p2": "Caso inventado: um cartaz mostra só a fachada do cinema. Completa a comparação com um relato do público na sala.",
-   "frase": "A imagem mostra o exterior; o relato pode acrescentar [1].",
-   "lacunas": [
-    {
-     "o": [
-      "a reação de quem vê",
-      "o nome de quem cria",
-      "a moldura que se vê"
-     ],
-     "c": 0
-    }
+   "t": "escolha",
+   "p": "Caso inventado: crónica sobre a estreia de um filme no cinema do bairro. Que primeira frase põe o leitor dentro do momento?",
+   "p2": "Que começo de crónica dá um lugar, uma hora e alguém a fazer alguma coisa?",
+   "o": [
+    "Sexta, 21h, sala 2: as luzes apagam-se e alguém tosse.",
+    "Esta crónica conta uma noite muito especial no bairro.",
+    "Em 2025, o cinema do bairro estreou muitos filmes."
    ],
-   "f": "O contraste exterior/interior permite explicar o que uma representação acrescenta e o que outra deixa de fora. Não é preciso declarar que uma é sempre superior.",
-   "fe": "Saber o nome do autor não descreve a reação do público; a moldura pertence ao objeto visual. Procura o que o relato pode mostrar dentro da sala.",
+   "c": 0,
+   "f": "Lugar e hora, _sexta, 21h, sala 2_, e alguém a fazer alguma coisa: o leitor está lá dentro (lição F10). A tua primeira frase faz o mesmo no momento que escolheres.",
+   "fe": [
+    null,
+    "Apresenta e fica à porta: não há lugar, hora nem ação.",
+    "Resume: há um ano, mas nenhum instante nem ninguém a fazer alguma coisa."
+   ],
    "g": 7
   },
   {
    "t": "escolha",
    "p": "Caso inventado: Anda, apressa o passo, corre! Que leitura explica a gradação?",
-   "p2": "Caso inventado: Anda, apressa o passo, corre! Que leitura explica a gradação?",
+   "p2": "Da marcha à corrida: que efeito tem a ordem destas três ordens? Anda, apressa o passo, corre!",
    "o": [
-    "As ordens repetem a mesma velocidade.",
+    "As ordens repetem sempre a mesma velocidade.",
     "As ordens aumentam a urgência da ação.",
     "As ordens diminuem a urgência da ação."
    ],
    "c": 1,
-   "f": "Da marcha à corrida, cresce a intensidade. A explicação liga a ordem dos elementos ao efeito, em vez de apenas dar o nome do recurso.",
+   "f": "Da marcha à corrida, cresce a intensidade: é uma gradação (lição F07). A explicação liga a ordem dos termos ao efeito, em vez de só dar o nome do recurso.",
    "fe": [
     "Andar e correr não mantêm a mesma intensidade. A sequência aumenta-a.",
     null,
@@ -232,40 +265,42 @@
    "g": 8
   },
   {
-   "t": "rever",
-   "p": "Revê a frase para declarar a origem da fala. Caso inteiramente inventado: nenhuma fonte regista a fala da técnica.",
-   "p2": "Revê a frase para declarar a origem da fala. Caso inteiramente inventado: nenhuma fonte regista a fala da técnica.",
+   "t": "escolha",
+   "p": "Caso inventado: em 2020, um ilustrador desenhou a estreia do cinema do bairro, em 1950, com luzes douradas. Que frase diz o que é escolha dele?",
+   "p2": "Um desenho de 2020 mostra uma noite de 1950 com luzes douradas. O que é escolha do ilustrador?",
    "o": [
-    "A técnica diz Abre a porta (fala verificada).",
-    "A técnica diz Abre a porta (fala imaginada).",
-    "A técnica diz Abre a porta (fala documentada)."
+    "Não viu 1950: as luzes douradas são escolha sua.",
+    "A imagem prova que a sala tinha luzes douradas.",
+    "As luzes douradas mostram o que o público viu."
    ],
-   "c": 1,
-   "f": "A fala foi criada para este caso: assinala-a como imaginada. F10 distingue a criação de uma fala registada por uma fonte.",
+   "c": 0,
+   "f": "Feita setenta anos depois, a imagem reconstitui o momento: os pormenores são escolha de quem a fez, como na pintura de 1860 (lição F06). Para o mostrar, junta a data da imagem e a do momento.",
    "fe": [
-    "Verificada promete uma confirmação que o enunciado exclui.",
     null,
-    "Documentada exige uma fonte que registe as palavras; neste caso não existe."
+    "Uma imagem não prova os seus pormenores: quem a fez reconstitui o que não viu.",
+    "O ilustrador não estava lá: não sabe o que o público viu."
    ],
-   "frase": "A técnica diz Abre a porta (fala documentada).",
-   "trecho": "fala documentada",
-   "apoio": "Exercício inventado. A fala foi criada por quem escreve e não é registada por nenhuma fonte.",
    "g": 9
   },
   {
-   "t": "vf",
-   "p": "Se uma fala for marcada como imaginada, podes fazê-la contradizer os factos das fontes.",
-   "p2": "A marca imaginada dispensa a coerência com as fontes.",
-   "v": false,
-   "f": "Falso. A marca informa que criaste a fala; não autoriza a contrariar os factos documentados (F10).",
-   "fe": "A fonte continua a limitar a criação. Confere o que ela permite antes de atribuíres palavras a alguém.",
+   "t": "ordenar",
+   "p": "Põe por ordem o trabalho da tua crónica, do plano à revisão.",
+   "p2": "Do momento escolhido à frase riscada: ordena os passos da crónica.",
+   "passos": [
+    "Escolher o momento e as duas fontes",
+    "Escrever a primeira frase dentro do momento",
+    "Confrontar as fontes e marcar a fala",
+    "Riscar uma frase, sem apagar, e reescrevê-la"
+   ],
+   "f": "Primeiro o momento e as fontes; depois a primeira frase, dentro do momento; no corpo, o confronto e a fala marcada; na revisão, riscas sem apagar e reescreves (lição F10).",
+   "fe": "Não escreves sem saber o momento e as fontes; a primeira frase vem antes do resto; a revisão é o último passo, e a frase riscada fica à vista.",
    "g": 10
   },
   {
    "t": "ler",
    "rot": "Para levar",
    "titulo": "Uma cena, várias responsabilidades",
-   "html": "<p>Na tarefa, escolhe provas tuas. Distingue o que o relato diz do que concluis; explica o efeito das escolhas de linguagem. Confronta texto e imagem, identifica as fontes e assinala a criação. Não faças passar hipótese por facto.</p>"
+   "html": "<p>Na tarefa, escolhe provas tuas. Abre dentro do momento, faz ver e põe o povo a agir. Distingue o que o relato diz do que concluis. Confronta as fontes, marca cada fala e risca sem apagar. Não faças passar hipótese por facto.</p>"
   }
  ]
 }

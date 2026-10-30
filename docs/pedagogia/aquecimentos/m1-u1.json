@@ -13,8 +13,16 @@
  ],
  "menu": [
   [
-   "../../../m1/",
-   "Voltar ao percurso do M1"
+   "../../../m1/licao-m1-f01/",
+   "Relembrar F01, quem diz «eu»"
+  ],
+  [
+   "../../../m1/licao-m1-f02/",
+   "Relembrar F02, as repetições"
+  ],
+  [
+   "../../../m1/licao-m1-f05/",
+   "Relembrar F05, os sons"
   ]
  ],
  "reservadas": [
@@ -48,208 +56,217 @@
   "Chegaram as letras",
   "Certeza ou hipótese",
   "Sem música, ainda é a cantiga?",
-  "As cantigas lado a lado"
+  "As cantigas lado a lado",
+  "dona fea",
+  "velha e sandia",
+  "loar mia senhor",
+  "vos loarei",
+  "nom fal"
  ],
  "cartoes": [
   {
    "t": "ler",
    "rot": "Abre",
    "titulo": "Antes de escrever, prova",
-   "html": "<p>Dez minutos com consulta. Treinas identificar, citar, classificar e explicar com Mendinho e exemplos criados para este aquecimento. As passagens da tarefa ficam para a tua resposta. Este treino não conta para a nota.</p>"
+   "html": "<p>Dez minutos com consulta. Treinas identificar, citar, classificar e explicar com Mendinho, Torneol e exemplos criados para este aquecimento. As passagens da tarefa ficam para a tua resposta. Este treino não conta para a nota.</p>"
   },
   {
    "t": "emparelhar",
-   "p": "Liga cada operação ao que tens de fazer.",
-   "p2": "Liga cada operação ao que tens de fazer.",
+   "p": "Liga cada verbo da tarefa ao que te pede.",
+   "p2": "Identificar, citar, classificar ou explicar: o que faz cada um?",
    "pares": [
     [
      "Identificar",
-     "Indicar quem fala"
+     "Dizer qual é: a voz, o som que cai"
     ],
     [
      "Citar",
-     "Copiar palavras exatas"
+     "Copiar as palavras exatas, entre aspas"
     ],
     [
      "Classificar",
-     "Dar o nome ao recurso"
+     "Dar o nome: refrão, paralelismo"
     ],
     [
      "Explicar",
-     "Ligar o recurso ao efeito"
+     "Dizer o que faz e com que efeito"
     ]
    ],
-   "f": "Uma resposta completa distingue a identificação, a prova, o nome e o efeito.",
-   "fe": "Copiar palavras prova o que dizes; dar um nome classifica; explicar liga esse nome ao sentido. Não são operações iguais.",
+   "f": "São as quatro operações da tarefa. Dar o nome sem explicar o efeito deixa a resposta a meio.",
+   "fe": "Identificas o que está lá (quem fala, que som cai); citas copiando entre aspas; classificas dando o nome da repetição; explicas o efeito.",
    "g": 1
   },
   {
    "t": "escolha",
    "p": "Mendinho escreve «[e] morrerei fremosa no mar maior.» Quem diz que morrerá?",
-   "p2": "Mendinho escreve «[e] morrerei fremosa no mar maior.» Quem diz que morrerá?",
+   "p2": "De quem é a voz que diz «[e] morrerei fremosa no mar maior.»?",
    "o": [
     "Uma voz feminina que espera o amigo.",
     "O autor medieval que espera o amigo.",
     "Uma voz masculina que espera o amigo."
    ],
    "c": 0,
-   "f": "Fremosa está no feminino: é a voz da rapariga, construída por Mendinho (F01 e F02).",
+   "f": "«Fremosa» está no feminino: quem diz «eu» é a rapariga, a voz que Mendinho criou (lição F01).",
    "fe": [
     null,
-    "Mendinho escreve a cantiga; o feminino caracteriza quem fala, não quem a escreveu.",
-    "Fremosa é uma marca de feminino. Não sustenta a identificação de uma voz masculina."
+    "Mendinho escreve a cantiga; o feminino «fremosa» diz quem fala, não quem escreveu.",
+    "«Fremosa» está no feminino: não pode ser a voz de um homem."
    ],
    "g": 2
   },
   {
-   "t": "completar",
-   "p": "Lê o verso de Mendinho: «Eu atendendo meu amig', eu a[tendendo].» Ele fecha todas as estrofes. Completa.",
-   "p2": "Lê o verso de Mendinho: «Eu atendendo meu amig', eu a[tendendo].» Ele fecha todas as estrofes. Completa.",
-   "frase": "A repetição do verso no fim das estrofes é um [1].",
-   "lacunas": [
-    {
-     "o": [
-      "refrão fixo",
-      "verso solto",
-      "som rimado"
-     ],
-     "c": 0
-    }
+   "t": "escolha",
+   "p": "Torneol: «Levad', amigo, que dormides as manhanas frias». Quem diz «eu» é uma rapariga. A quem fala ela?",
+   "p2": "Em «Levad', amigo, que dormides as manhanas frias», quem é chamado pela voz?",
+   "o": [
+    "Ao amigo, que ainda está a dormir.",
+    "Às manhãs frias, que descreve.",
+    "A Torneol, que escreveu a cantiga."
    ],
-   "f": "É o refrão: volta igual no fim de cada estrofe (F02).",
-   "fe": "Verso solto não nomeia esta repetição; a rima repete sons finais, não o verso inteiro.",
+   "c": 0,
+   "f": "«Levad', amigo»: a voz chama o amigo, o destinatário (lição F01). Para saber a quem se fala, procura quem é chamado. Na tarefa, diz quem fala e a quem.",
+   "fe": [
+    null,
+    "As manhãs frias são o tempo em que o amigo dorme. Quem é chamado é o amigo: «Levad', amigo».",
+    "Torneol escreve; a voz não fala com ele. Procura quem é chamado no verso."
+   ],
    "g": 3
   },
   {
    "t": "escolha",
-   "p": "Em Mendinho, «e morrerei fremosa no alto mar.» permite concluir o quê?",
-   "p2": "Em Mendinho, «e morrerei fremosa no alto mar.» permite concluir o quê?",
+   "p": "Mendinho: «Eu atendendo meu amig', eu a[tendendo].» Onde volta este verso, e que repetição é?",
+   "p2": "Este verso de Mendinho volta várias vezes. Onde, e com que nome? «Eu atendendo meu amig', eu a[tendendo].»",
    "o": [
-    "A voz conta uma morte já acontecida.",
-    "A voz anuncia uma morte ainda futura.",
-    "A voz confirma uma salvação garantida."
+    "No fim das seis estrofes, igual: é o refrão.",
+    "Na estrofe seguinte, com uma troca: paralelismo.",
+    "A abrir a estrofe 3, vindo do meio: leixa-pren."
    ],
-   "c": 1,
-   "f": "Morrerei está no futuro. A morte é anunciada; este verso não conta uma morte já consumada nem garante salvação (F02).",
+   "c": 0,
+   "f": "Volta igual, palavra por palavra, no fim de todas as estrofes: é o refrão (lição F02). Na tarefa, diz onde volta a repetição antes de lhe dares o nome.",
    "fe": [
-    "Morrerei anuncia o que poderá acontecer, não narra um acontecimento passado.",
     null,
-    "O anúncio de morte não é garantia de salvação. Seria preciso outro apoio."
+    "Este verso não muda: volta palavra por palavra. Há paralelismo quando uma palavra se troca, como «remador» e «remar».",
+    "O verso que passa do meio de uma estrofe para o começo de outra é «E cercarom-mi as ondas, que grandes som!»; este fecha todas."
    ],
    "g": 4
   },
   {
-   "t": "ordenar",
-   "p": "Organiza uma resposta sobre o refrão de Mendinho.",
-   "p2": "Organiza uma resposta sobre o refrão de Mendinho.",
-   "passos": [
-    "Dizer que a repetição prolonga a espera",
-    "Citar o verso que fecha as estrofes",
-    "Nomear o refrão e mostrar onde volta",
-    "Explicar que a espera persiste mesmo com o perigo"
+   "t": "escolha",
+   "p": "Mendinho escreve «[e] morrerei fremosa no mar maior.» e, na estrofe seguinte, «e morrerei fremosa no alto mar.» Que repetição é?",
+   "p2": "De uma estrofe para a seguinte, «no mar maior» passa a «no alto mar». Que nome tem esta repetição?",
+   "o": [
+    "Diz o mesmo com uma troca no fim: paralelismo.",
+    "Volta o mesmo verso, sem mudar nada: refrão.",
+    "O verso passa a abrir outra estrofe: leixa-pren."
    ],
-   "f": "Começa pela leitura, apresenta a prova e explica a ligação entre repetição e espera. A classificação serve a explicação.",
-   "fe": "Começa pelo que defendes; depois prova-o. Dar o nome sem mostrar o que a repetição faz deixa a explicação incompleta.",
+   "c": 0,
+   "f": "A mesma cena, com o fim do verso trocado: é paralelismo (lição F02). E «morrerei» anuncia a morte, não a conta. Nas tuas estrofes, troca uma ou duas palavras de uma para a outra.",
+   "fe": [
+    null,
+    "Os dois versos não são iguais: «mar maior» passa a «alto mar». O refrão volta palavra por palavra.",
+    "Os dois versos estão no mesmo lugar, em estrofes seguidas: não passam do meio de uma para o começo de outra."
+   ],
    "g": 5
   },
   {
-   "t": "emparelhar",
-   "p": "Observa apenas o segmento indicado e liga-o ao processo (F05).",
-   "p2": "Observa apenas o segmento indicado e liga-o ao processo (F05).",
-   "pares": [
-    [
-     "luna > lua: perda do n interior",
-     "Síncope"
-    ],
-    [
-     "ante > antes: entrada do s final",
-     "Paragoge"
-    ],
-    [
-     "semper > sempre: posição do r",
-     "Metátese"
-    ],
-    [
-     "lupum > lobo: p passa a b",
-     "Sonorização"
-    ]
+   "t": "ordenar",
+   "p": "Põe por ordem uma resposta sobre o refrão de Mendinho, como a tarefa pede.",
+   "p2": "Quem fala, citação, nome e efeito: ordena a resposta sobre o refrão de Mendinho.",
+   "passos": [
+    "Dizer quem fala: a rapariga, sozinha na ermida",
+    "Citar o verso que volta, entre aspas",
+    "Classificar essa repetição e dizer onde volta",
+    "Explicar o que essa repetição faz à espera"
    ],
-   "f": "Observa o som e a posição, não apenas o tamanho escrito. Cada exemplo seleciona um processo, sem representar todas as mudanças.",
-   "fe": "Em luna cai um som no meio; em antes entra no fim; em sempre o r muda de posição; em lobo p passa a b.",
+   "f": "A ordem da tarefa: quem fala, a citação, o nome dessa repetição e, por fim, o efeito. Em Mendinho, o perigo sobe e o verso fica: a espera não cede (lição F02).",
+   "fe": "Segue a tarefa: primeiro quem fala; depois citas; só então classificas a repetição que citaste; o efeito fecha a resposta.",
    "g": 6
   },
   {
-   "t": "completar",
-   "p": "Observa só o n que desaparece em luna > lua (F05). Completa a justificação.",
-   "p2": "Observa só o n que desaparece em luna > lua (F05). Completa a justificação.",
-   "frase": "É síncope porque cai um som [1].",
-   "lacunas": [
-    {
-     "o": [
-      "no fim da palavra",
-      "no início da forma",
-      "no meio da palavra"
-     ],
-     "c": 2
-    }
+   "t": "emparelhar",
+   "p": "Olha só para o som indicado: caiu ou entrou, e onde? Liga-o ao nome.",
+   "p2": "Síncope, aférese, prótese ou paragoge? Liga cada mudança pelo som indicado.",
+   "pares": [
+    [
+     "luna > lua: o _n_",
+     "síncope"
+    ],
+    [
+     "obrigado > brigado: o _o_",
+     "aférese"
+    ],
+    [
+     "scutum > escudo: o _e_",
+     "prótese"
+    ],
+    [
+     "ante > antes: o _s_",
+     "paragoge"
+    ]
    ],
-   "f": "O n está entre duas vogais: a perda é interior. A escrita ajuda a localizar o segmento, mas o processo refere-se ao som.",
-   "fe": "No fim seria apócope; no início seria aférese. O n de luna ocupa uma posição interior.",
+   "f": "Primeiro vê se o som caiu ou entrou; depois, onde: no início, no meio ou no fim. O gesto e o lugar dão o nome (lição F05).",
+   "fe": "Pergunta a cada som: a palavra de partida tinha-o? O _n_ de luna e o _o_ de obrigado caem, no meio e no início; o _e_ de escudo e o _s_ de antes entram, no início e no fim.",
    "g": 7
   },
   {
-   "t": "escolha",
-   "p": "Exemplo inventado: Prometo silêncio / prometo segredo / conto tudo ao bairro. Onde está a contradição?",
-   "p2": "Exemplo inventado: Prometo silêncio / prometo segredo / conto tudo ao bairro. Onde está a contradição?",
-   "o": [
-    "A terceira linha cumpre a discrição.",
-    "A segunda linha nega a discrição.",
-    "A terceira linha nega a discrição."
+   "t": "completar",
+   "p": "Completa: que som cai, onde, e com que nome?",
+   "p2": "Em lupum > lobo, diz o som que cai, o lugar e o processo.",
+   "frase": "Em lupum > lobo, cai [1]: é [2].",
+   "lacunas": [
+    {
+     "o": [
+      "o m, no fim da palavra",
+      "o p, no meio da palavra",
+      "o u, no meio da palavra"
+     ],
+     "c": 0
+    },
+    {
+     "o": [
+      "apócope",
+      "síncope",
+      "paragoge"
+     ],
+     "c": 0
+    }
    ],
-   "c": 2,
-   "f": "Contar tudo ao bairro contradiz a promessa de guardar segredo. O efeito depende do confronto entre promessa e ação.",
-   "fe": [
-    "Contar tudo não cumpre a promessa de silêncio e segredo.",
-    "A segunda linha mantém a promessa: guardar segredo. A quebra vem depois.",
-    null
-   ],
+   "f": "Cai o _m_ do fim: lupu(m). No fim, é apócope (lição F05). O _u_ que passa a _o_ e o _p_ que passa a _b_ são outras mudanças, não quedas. Na tarefa, diz sempre o som, o lugar e o nome.",
+   "fe": "Compara som a som: lupum acaba em _m_, lobo já não. O _p_ não cai, passa a _b_; o _u_ não cai, passa a _o_. Cair no fim é apócope.",
    "g": 8
   },
   {
-   "t": "rever",
-   "p": "Revê a afirmação sem transformar uma voz poética num dado biográfico.",
-   "p2": "Revê a afirmação sem transformar uma voz poética num dado biográfico.",
+   "t": "escolha",
+   "p": "Caso inventado: um café afixa _Servimos sempre com um sorriso_. Ao balcão, o empregado atende a resmungar. Onde está a contradição?",
+   "p2": "Caso inventado: o cartaz do café promete um sorriso, e quem atende resmunga. Onde está a contradição?",
    "o": [
-    "Na cantiga, Mendinho anuncia a sua morte no alto mar.",
-    "Na cantiga, a rapariga anuncia a sua morte no mar.",
-    "Na cantiga, o amigo anuncia a sua morte no mar."
+    "Entre o sorriso prometido e o resmungo.",
+    "Entre o café e o balcão onde ele atende.",
+    "Em nada: resmungar também é atender bem."
    ],
-   "c": 1,
-   "f": "A versão separa autor e sujeito poético e respeita o feminino fremosa (F01 e F02).",
+   "c": 0,
+   "f": "O cartaz promete um sorriso; o resmungo desmente-o. Para mostrar uma promessa desmentida, aponta as duas partes: o que se promete e o que o desmente.",
    "fe": [
-    "Trocar a voz da rapariga pela vida de Mendinho não tem apoio no verso.",
     null,
-    "O amigo é esperado; não é ele quem diz morrerei fremosa."
+    "O lugar não se contradiz: contradizem-se o sorriso prometido e o resmungo.",
+    "Atender a resmungar desmente o sorriso prometido: a promessa não se cumpre."
    ],
-   "frase": "Na cantiga, Mendinho anuncia a sua morte no mar.",
-   "trecho": "Mendinho",
-   "apoio": "Mendinho: «[e] morrerei fremosa no mar maior.»",
    "g": 9
   },
   {
    "t": "vf",
-   "p": "Num cartaz inventado sobre Mendinho, podes anunciar que a cantiga termina com o resgate da rapariga.",
-   "p2": "O anúncio da morte prova que alguém chega para a salvar.",
+   "p": "Num cartaz para um concerto com a cantiga de Mendinho, podes prometer a melodia medieval.",
+   "p2": "O cartaz de um concerto com a cantiga de Mendinho pode anunciar a melodia do século XIII.",
    "v": false,
-   "f": "Falso. O texto anuncia a morte e mantém a espera; não narra um resgate (F02). Um cartaz não deve prometer um episódio sem apoio.",
-   "fe": "Uma possibilidade imaginada por ti não é um acontecimento narrado. Volta ao futuro morrerei e ao refrão de espera.",
+   "f": "Falso. De Mendinho chegaram só as palavras (lição F01); quem a canta hoje faz uma interpretação de hoje, como os DOA (lição F02). Um cartaz só promete o que as fontes garantem; noutra cantiga, confirma no dossiê o que chegou.",
+   "fe": "Pergunta o que chegou desta cantiga: as palavras, a melodia, os instrumentos? O que não chegou, o cartaz não pode prometer.",
    "g": 10
   },
   {
    "t": "ler",
    "rot": "Para levar",
    "titulo": "Da prova ao efeito",
-   "html": "<p>Na tarefa, escolhe as tuas passagens. Identifica quem fala, cita com rigor, classifica e explica o efeito. Nos sons, indica o segmento e a posição. Num texto criado por ti, verifica se os recursos fazem o que pretendias.</p>"
+   "html": "<p>Na tarefa, escolhe as tuas passagens. Diz quem fala e a quem, cita com rigor, classifica e explica o efeito. Nos sons, diz o som, o lugar e o nome. Num cartaz, promete só o que as fontes garantem.</p>"
   }
  ]
 }
