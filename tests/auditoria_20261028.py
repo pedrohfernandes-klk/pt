@@ -43,6 +43,10 @@ tests/fixtures/texto-justificado-edits-20261030.json, geradas por scripts/aplica
 scripts/texto_justificado_20261030.json. É agora a camada mais recente: undo() desfá-la antes de todas as outras (antes da do M2).
 Revisão de 30/10/2026: a mesma camada põe também a classe «verso» nos parágrafos que só trazem verso citado, «prosa» nos
 três blockquote sem parágrafos de m4/recursos/tpc-entrada.js e lang="en" em dois trechos em inglês; nenhum texto muda.
+30/10/2026 (depois do texto justificado): opções denunciadoras (pedido do docente de 29/10: a certa não pode ser «quase de
+certeza» a mais comprida). As trocas literais estão em tests/fixtures/opcoes-denunciadoras-edits-20261030.json, geradas por
+scripts/aplicar_trocas.py a partir de scripts/opcoes_denunciadoras_20261030.json: só o texto das opções e do feedback que as
+cita. É agora a camada mais recente: undo() desfá-la antes de todas as outras (antes da do texto justificado).
 """
 from pathlib import Path
 import json
@@ -152,6 +156,21 @@ def undo_justificado(path, text):
     return text
 
 
+# 30/10/2026: a camada das opções denunciadoras (a mais recente; desfaz-se antes da do texto justificado).
+OPCOES_MANIFEST = ROOT / 'tests/fixtures/opcoes-denunciadoras-edits-20261030.json'
+_OPCOES_FILES = json.loads(OPCOES_MANIFEST.read_text('utf-8'))['files']
+
+
+def undo_opcoes(path, text):
+    """30/10/2026: devolve o texto anterior às opções denunciadoras reescritas (ou o mesmo texto, se não as tem)."""
+    relative = _relative(path)
+    for edit in reversed(_OPCOES_FILES.get(relative, {}).get('edits', [])):
+        if text.count(edit['new']) != edit['occurrences']:
+            raise AssertionError(f"Troca autorizada a 30/10 (opções) já não confere: {relative}: {edit['location']}")
+        text = text.replace(edit['new'], edit['old'])
+    return text
+
+
 def undo(path, text):
     """Devolve o texto anterior às correções de 28/10 para este ficheiro (ou o mesmo texto, se não as tem).
 
@@ -159,8 +178,11 @@ def undo(path, text):
     29/10/2026: antes de tudo, a camada dos aquecimentos do M7. Numa página gerada de novo a 29/10 (REGENERADAS_20261029)
     não há trocas de 28/10 a desfazer: o predecessor compacto continua autorizado pelo seu manifesto literal.
     30/10/2026: antes ainda, a camada do texto justificado (classe «prosa»).
+    30/10/2026: e antes dessa, a das opções denunciadoras (a mais recente).
     """
-    # 30/10/2026: antes de tudo, a camada do texto justificado (a mais recente), depois as dos aquecimentos do M2, do M4 e do M1.
+    # 30/10/2026: antes de tudo, a camada das opções denunciadoras (a mais recente), depois a do texto justificado e as dos
+    # aquecimentos do M2, do M4 e do M1.
+    text = undo_opcoes(path, text)
     text = undo_justificado(path, text)
     text = undo_aquecimentos_m2(path, text)
     text = undo_aquecimentos_m4(path, text)
