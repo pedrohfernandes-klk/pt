@@ -22,7 +22,12 @@ for(const unavailable of [false,true]){
  progress.textContent="";
  window.EPIUnitTaskRoute.mount({module:"M2",units:[{n:1,passos:[{id:"m1-f01",licao:"m1-f01"},{id:"m1-f02",licao:"m1-f02"}]}]});
  assert(progress.textContent.includes("de 2 lições"));assert.deepStrictEqual(writes,[]);
- progress.textContent="";window.EPIUnitTaskRoute.mount({module:"M3",units:[{n:1,passos:[]}]});assert.strictEqual(progress.textContent,"");
+ // 31/10/2026: M3, M5 e M6 aderem ao percurso; M8 continua fora.
+ for(const module of ["M3","M5","M6"]){
+  progress.textContent="";window.EPIUnitTaskRoute.mount({module,units:[{n:1,passos:[{id:"m1-f01",licao:"m1-f01"}]}]});
+  assert(progress.textContent.includes("de 1 lições"));assert.deepStrictEqual(writes,[]);
+ }
+ progress.textContent="";window.EPIUnitTaskRoute.mount({module:"M8",units:[{n:1,passos:[]}]});assert.strictEqual(progress.textContent,"");
 }
 // 27/10/2026: as perguntas do arquivo cobrem todas as lições da unidade (garantia que o M2 já tinha), sem acaso no teste.
 {const ctx={window:{addEventListener(){}},document:{querySelectorAll(){return []},querySelector(){return null},getElementById(){return null},addEventListener(){}},localStorage:{getItem(){return null}},location:{search:""},URLSearchParams,EPIJogo:{baralhar:a=>a.slice()}};

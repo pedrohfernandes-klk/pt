@@ -30,7 +30,7 @@
   return EPIJogo.baralhar(chosen);
  }
  function mount(options) {
-  if(!options||!["M1","M2","M4","M7"].includes(options.module))return;
+  if(!options||!["M1","M2","M3","M4","M5","M6","M7"].includes(options.module))return;
   var units=options.units,module=options.module;
   function paint() {
    var next=null;

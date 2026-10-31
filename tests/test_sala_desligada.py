@@ -20,7 +20,7 @@ import subprocess
 import sys
 import unittest
 
-from auditoria_20261028 import undo_sala
+from auditoria_20261028 import undo_sala, undo_tarefas_m356
 
 ROOT = Path(__file__).resolve().parents[1]
 _spec = importlib.util.spec_from_file_location('desligar_sala', ROOT / 'scripts/desligar_sala.py')
@@ -219,7 +219,8 @@ class SalaDesligada(unittest.TestCase):
             texto = ler(f'm{m}/index.html')
             with self.subTest(modulo=m):
                 self.nao_tem('.casca-menu .sala{', texto, m)
-                if m in (3, 5, 6, 8, 9):
+                # 31/10/2026: M3, M5 e M6 usam agora o adaptador sem Sala.
+                if m in (8, 9):
                     self.tem('titulo:"Desafio da unidade "+u.n', texto, m)
                     self.tem('pintar();if(festa)surpresa(u);}})}});', texto, m)
 
@@ -256,7 +257,8 @@ class SalaDesligada(unittest.TestCase):
         self.assertLessEqual(set(files), set(TODAS) & D.congelados())
         self.assertEqual(len(files), 61)
         for rel, registo in files.items():
-            atual = ler(rel)
+            # 31/10/2026: confere o estado anterior à nova camada, sem perder a reversibilidade.
+            atual = undo_tarefas_m356(rel, ler(rel))
             with self.subTest(pagina=rel):
                 for edit in registo['edits']:
                     self.assertTrue(edit['new'])

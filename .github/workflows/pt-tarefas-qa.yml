@@ -1,7 +1,15 @@
-name: Português — aulas de tarefa M1 M4 M7
+name: Português, aulas de tarefa M1 a M7
 on:
   pull_request:
     paths:
+      # 31/10/2026: percursos, fontes e camada das seis tarefas novas.
+      - 'm3/**'
+      - 'm5/**'
+      - 'm6/**'
+      - 'docs/pedagogia/grelhas-tarefas-20261027.json'
+      - 'scripts/tarefas_m356_20261031.json'
+      - 'tests/fixtures/tarefas-m356-edits-20261031.json'
+      - 'tests/*m356*'
       - 'tarefas/**'
       - 'assets/task-90.*'
       - 'assets/task-reader.*'
@@ -62,6 +70,9 @@ jobs:
           python -m unittest discover -s tests -p 'test_aquecimentos_m1_opcoes.py' -v
           python -m unittest discover -s tests -p 'test_aquecimentos_m4_opcoes.py' -v
           python -m unittest discover -s tests -p 'test_aquecimentos_m2_opcoes.py' -v
+          # 31/10/2026: mesmos critérios de opções, fontes e segunda tentativa nos seis baralhos.
+          python -m unittest discover -s tests -p 'test_aquecimentos_m356_opcoes.py' -v
+          python scripts/aplicar_trocas.py scripts/tarefas_m356_20261031.json --manifesto tests/fixtures/tarefas-m356-edits-20261031.json --verificar
           python scripts/auditar_aquecimentos_m1.py
           node --check assets/task-90.js
           node --check assets/task-reader.js
@@ -71,14 +82,14 @@ jobs:
         run: |
           python -m pip install playwright
           python -m playwright install --with-deps chromium
-      - name: Percorrer as oito aulas, nos dois temas e tamanhos
+      - name: Percorrer todas as aulas, nos dois temas e tamanhos
         run: python tests/browser_task_lesson_matrix.py
       - name: Relógio do aluno (duas pausas, recomeço obrigatório)
         run: python tests/browser_relogio.py
       # 29/10/2026: as três páginas de aquecimento do M7 até ao fim (390 claro, 1366 escuro, projeção sem gravar),
       # as ligações nas tarefas e no percurso, e a F10 reescrita. Revisão de 29/10/2026: também a lista dos diapositivos do
       # M7 depois do lançador da projeção e o arquivo do guia (itálico e blocos de 90 minutos).
-      - name: Aquecimentos em cartões do M7 e tarefa nova da unidade 3
+      - name: Aquecimentos e ligações das 16 tarefas
         run: python tests/browser_task_aquecimentos.py
       # 30/10/2026: aquecimento em cartões (decisão do docente)
       - name: Respostas certas e erradas nos aquecimentos do M1
@@ -89,3 +100,11 @@ jobs:
       # 30/10/2026: aquecimentos do M2 (decisão do docente)
       - name: Respostas certas e erradas nos aquecimentos do M2
         run: python tests/browser_aquecimentos_m2_feedback.py
+
+      # 31/10/2026: percursos, arquivos e quatro blocos dos guias novos.
+      - name: Percursos e guias do M3 M5 M6
+        run: python tests/browser_tarefas_m356.py
+
+      # 31/10/2026: feedback e segunda tentativa nos seis novos aquecimentos.
+      - name: Respostas certas e erradas no M3 M5 M6
+        run: python tests/browser_aquecimentos_m356_feedback.py

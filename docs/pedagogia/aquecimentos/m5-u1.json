@@ -1,0 +1,274 @@
+{
+ "slug": "m5-u1",
+ "modulo": "m5",
+ "unidade": 1,
+ "versao": "1",
+ "momento": "No início da aula de tarefa",
+ "titulo": "Quem decide por quem: vozes de <i>Amor de Perdição</i>",
+ "descricao": "Aquecimento em cartões no início da aula de tarefa da unidade 1 do M5: reconhecer o narrador que julga ou antecipa, provar funções sintáticas com testes, ligar recursos a uma carta, rever uma promessa que a situação não permite, separar ficção de história num painel e planear a produção, com outros exemplos.",
+ "licoes_das_citacoes": [
+  "m5/licao-m5-f07",
+  "m5/licao-m5-f08"
+ ],
+ "menu": [
+  [
+   "../../../m5/licao-m5-f02/",
+   "Relembrar F02, a Introdução"
+  ],
+  [
+   "../../../m5/licao-m5-f07/",
+   "Relembrar F07, os testes das funções"
+  ],
+  [
+   "../../../m5/licao-m5-f08/",
+   "Relembrar F08, a carta"
+  ]
+ ],
+ "reservadas": [
+  "Não te posso dar",
+  "já não tenho filha",
+  "minha filha",
+  "ta posso",
+  "Dezoito annos",
+  "leitor",
+  "choraria",
+  "É triste",
+  "fazer dó",
+  "compungia",
+  "sensibilidade",
+  "arrebol",
+  "louçanias",
+  "nem irmãos",
+  "Pois não?",
+  "Vão lá pedir sinceridade",
+  "estava mentindo",
+  "finos entendedores",
+  "abundo",
+  "gente boa",
+  "varonil",
+  "astucia",
+  "hypocrisia",
+  "perspicacia",
+  "atalhos",
+  "aleive",
+  "derradeiras",
+  "desesperança",
+  "companheira",
+  "amar outra vez",
+  "alto mar",
+  "meu espírito",
+  "Monchique",
+  "Baltasar",
+  "Balthazar",
+  "Centro Português de Fotografia",
+  "Largo Amor de Perdição",
+  "Na cadêa",
+  "dedicatória",
+  "sugestão biográfica",
+  "Marrão",
+  "Casa Real",
+  "1861",
+  "1807"
+ ],
+ "_nota": "30/10/2026: proposta da autora para o docente. As frases de treino são inventadas e vão sem «» (o rapaz que sai às sete, a carta a um amigo que partiu, o café de um romance, a fotógrafa e o editor, o emigrante no navio, a estação de comboios). Nenhum cartão de fazer usa passagens do narrador da Introdução ou do cap. IV, a fala de Tadeu ao sobrinho, as perguntas de Teresa ou os factos do dossiê do tema B. Os efeitos treinados (juízo, antecipação, ironia) treinam-se com frases inventadas; a ironia e o juízo também servem nas passagens do núcleo, mas com outro efeito (comover, desculpar Teresa), que o aquecimento não treina. Revisão de 30/10: o «Para levar» deixa de dar uma passagem para as duas linhas finais, e os recursos do cartão da carta deixam de servir tal e qual a uma carta de luto.",
+ "cartoes": [
+  {
+   "t": "ler",
+   "rot": "Abre",
+   "titulo": "Quem decide por quem",
+   "html": "<p class=\"abre\"><b>Um registo de prisão, um pai, uma carta escrita no mar: em <i>Amor de Perdição</i>, quem decide por quem?</b> Este aquecimento não faz a tarefa: treina com frases inventadas e outros casos.</p><div class=\"caixa\"><h3>A tarefa de hoje</h3><p><b>Núcleo, para todos.</b> O narrador na Introdução e no cap. IV; as funções sintáticas numa fala de Tadeu.</p><p><b>Tema A.</b> A carta de Simão a Teresa, escrita na nau.</p><p><b>Tema B.</b> O painel da entrada da antiga Cadeia da Relação, hoje Centro Português de Fotografia.</p></div><p>Dez minutos, com consulta. Não conta para a nota.</p>"
+  },
+  {
+   "t": "emparelhar",
+   "g": "1",
+   "p": "Numa história inventada, o que faz o narrador em cada frase? Liga.",
+   "p2": "Conta, descreve de fora, julga ou antecipa? Liga cada frase inventada.",
+   "pares": [
+    [
+     "O rapaz saiu de casa às sete.",
+     "conta o que acontece"
+    ],
+    [
+     "Era alto, de olhos escuros e casaco curto.",
+     "descreve de fora"
+    ],
+    [
+     "Que rapaz tão vaidoso, sempre ao espelho!",
+     "julga a personagem"
+    ],
+    [
+     "Nunca mais havia de voltar àquela rua.",
+     "antecipa o que vai acontecer"
+    ]
+   ],
+   "f": "Contar e descrever ficam do lado de fora; **julgar** e **antecipar** são gestos de um narrador que não se limita a contar, como falar com quem lê. Na tarefa, as passagens e o que o narrador quer são teus.",
+   "fe": "Pergunta a cada frase: diz só o que aconteceu ou como é? Ou mostra o que o narrador pensa, ou o que ele já sabe do futuro?"
+  },
+  {
+   "t": "sublinhar",
+   "g": "2",
+   "p": "Toca na palavra com que o narrador julga a personagem.",
+   "p2": "Na frase inventada, que palavra é já uma opinião de quem conta? Toca-lhe.",
+   "frase": "Saiu de casa às sete, o teimoso, sem olhar para trás.",
+   "certas": [
+    6
+   ],
+   "f": "**teimoso**: o narrador mete um juízo no meio da ação, antes de contar o que vai acontecer. A frase já não é só um relato.",
+   "fe": "Procura a palavra que não diz o que o rapaz fez, mas o que o narrador pensa dele: está entre vírgulas."
+  },
+  {
+   "t": "emparelhar",
+   "g": "3",
+   "p": "Numa carta inventada a um amigo que partiu, que recurso tem cada frase? Liga.",
+   "p2": "Apóstrofe, interrogação retórica ou metáfora? Liga cada frase da carta inventada.",
+   "pares": [
+    [
+     "Ó Rui, ouve-me ao menos desta vez.",
+     "apóstrofe: chama quem está ausente"
+    ],
+    [
+     "Quem me paga agora os cafés da manhã?",
+     "interrogação retórica: não espera resposta"
+    ],
+    [
+     "A tua pressa é um comboio sem travão.",
+     "metáfora: dá forma ao que não se vê"
+    ]
+   ],
+   "f": "A **apóstrofe** chama o ausente pelo nome; a **interrogação retórica** já traz a resposta; a **metáfora** dá forma ao que não se vê. Na carta do tema A, o recurso é teu e tem de fazer alguma coisa à dor de quem escreve.",
+   "fe": "Procura a marca: um nome chamado com Ó, um ponto de interrogação sem resposta possível, uma coisa que passa a ser outra com o verbo ser."
+  },
+  {
+   "t": "vf",
+   "g": "4",
+   "p": "Num painel inventado: _Este café aparece num romance; por isso, o que a personagem lá faz aconteceu mesmo._",
+   "p2": "Um lugar real num romance prova que o que a personagem lá faz aconteceu: verdadeiro ou falso?",
+   "v": false,
+   "f": "Falso: o café é real e confirma-se fora do livro; o que a personagem lá faz é ficção. Um painel separa as duas coisas: escreve _no romance_ antes do que só acontece na história.",
+   "fe": "Pergunta onde se confirma cada coisa: o café, num mapa ou numa fotografia; a cena, só nas páginas do livro."
+  },
+  {
+   "t": "completar",
+   "g": "5",
+   "p": "Duas frases inventadas: _A fotógrafa revelou as provas._ e _A fotógrafa telefonou ao editor._ Que pronome fica no lugar de cada complemento?",
+   "p2": "Troca por um pronome _as provas_, na primeira frase, e _ao editor_, na segunda. O pronome que encaixa diz a função.",
+   "frase": "Revelou as provas: troca por [1]. Telefonou ao editor: troca por [2].",
+   "lacunas": [
+    {
+     "o": [
+      "as, e é complemento direto",
+      "lhes, e é complemento indireto",
+      "elas, e é o sujeito da frase"
+     ],
+     "c": 0
+    },
+    {
+     "o": [
+      "lhe, e é complemento indireto",
+      "o, e é o complemento direto",
+      "a ele, e é complemento oblíquo"
+     ],
+     "c": 0
+    }
+   ],
+   "f": "**As provas** troca por **as** (revelou-as): complemento direto. **Ao editor** troca por **lhe** (telefonou-lhe): complemento indireto. O pronome que encaixa é o teste da lição F07.",
+   "fe": "Faz a troca e lê em voz alta: revelou-as, telefonou-lhe. Lhes seria plural e elas seriam o sujeito; telefonou-o não se diz, e trocar por a ele não é teste: o que decide é caber o lhe."
+  },
+  {
+   "t": "escolha",
+   "g": "6",
+   "p": "Numa história inventada, o narrador escreve: _Ainda não sabia que nunca mais voltaria àquela casa._ Que faz esta frase a quem lê?",
+   "p2": "O narrador inventado conta o que a personagem ainda não sabia. Para que serve isso a quem lê?",
+   "o": [
+    "Antecipa o fim e faz ler a cena já com medo.",
+    "Mostra o que a personagem pensa naquela hora.",
+    "Descreve a casa como era naquele mesmo dia."
+   ],
+   "c": 0,
+   "f": "O narrador **sabe o fim** e deixa-o escapar: quem lê passa a seguir a cena com a perda já à vista. É um narrador que não se limita a contar, mas o efeito aqui é o medo do que vem.",
+   "fe": [
+    null,
+    "A personagem ainda não sabia: quem sabe é o narrador, que fala do futuro por cima dela.",
+    "Não há nenhum pormenor da casa: a frase fala do que vai acontecer, não de como a casa era."
+   ]
+  },
+  {
+   "t": "escolha",
+   "g": "7",
+   "p": "Em _A fotógrafa telefonou ao editor._ e _A fotógrafa foi ao editor._, _ao editor_ tem funções diferentes. Que teste o mostra?",
+   "p2": "_Ao editor_ é complemento indireto numa frase inventada e oblíquo na outra. Que teste as separa?",
+   "o": [
+    "Só na primeira se troca por lhe: telefonou-lhe.",
+    "Só na segunda se pode cortar sem estragar a frase.",
+    "Só na primeira responde à pergunta quem fez isto?"
+   ],
+   "c": 0,
+   "f": "**Só o complemento indireto se troca por lhe**: telefonou-lhe. Com ir, não se diz foi-lhe: o verbo pede o sítio ou a pessoa para onde se vai, e isso é complemento oblíquo (lição F07).",
+   "fe": [
+    null,
+    "É ao contrário: na segunda, cortar estraga a frase (a fotógrafa foi… onde?); na primeira, aguenta-se, mas isso não faz de ao editor um modificador. Quem decide é o pronome.",
+    "A pergunta quem fez isto? dá o sujeito, a fotógrafa, nas duas frases; não diz nada sobre ao editor."
+   ]
+  },
+  {
+   "t": "rever",
+   "g": "8",
+   "p": "Revê o rascunho para não prometer o que a situação já não permite.",
+   "p2": "O rascunho inventado promete o que a viagem não deixa. Que versão o corrige sem perder a voz de quem escreve?",
+   "apoio": "Situação inventada: o navio saiu ontem de Lisboa para o Brasil, e a viagem dura semanas.",
+   "frase": "Mãe, amanhã desembarco em Lisboa e janto contigo.",
+   "trecho": "amanhã desembarco em Lisboa e janto contigo",
+   "o": [
+    "já não vejo Lisboa, e não sei quando janto contigo",
+    "amanhã desembarco em Lisboa, mas janto um pouco triste",
+    "amanhã já não estou a bordo e janto contigo, contente"
+   ],
+   "c": 0,
+   "f": "O navio já saiu e a viagem dura semanas: quem escreve **não pode prometer** jantar amanhã. Rever é respeitar o que a situação já decidiu, sem perder a voz. Na carta do tema A, a situação é a do romance.",
+   "fe": [
+    null,
+    "A tristeza não corrige a promessa: continua a desembarcar amanhã, e o navio já saiu ontem.",
+    "Mudar o sentimento não muda o erro: a viagem dura semanas, e amanhã ainda vai a bordo."
+   ]
+  },
+  {
+   "t": "escolha",
+   "g": "9",
+   "p": "Num painel inventado sobre um romance passado numa estação de comboios, que frase precisa de começar por _No romance_?",
+   "p2": "Painel inventado: que frase conta ficção e, por isso, tem de dizer que só acontece no livro?",
+   "o": [
+    "A rapariga perde o último comboio para Lisboa.",
+    "A estação abriu ao público há mais de cem anos.",
+    "O autor escreveu o livro numa sala desta estação."
+   ],
+   "c": 0,
+   "f": "**A rapariga perde o comboio** só nas páginas do livro: é ficção, e o painel tem de o dizer. A data da estação e o sítio onde o autor escreveu confirmam-se fora do livro, com fontes.",
+   "fe": [
+    null,
+    "A data de abertura da estação é um facto: confirma-se em documentos, fora do romance.",
+    "Onde o autor escreveu é um facto da vida dele, que se confirma numa fonte; não é uma cena da história."
+   ]
+  },
+  {
+   "t": "ordenar",
+   "g": "10",
+   "p": "Põe por ordem a produção e a entrega.",
+   "p2": "Cada passo usa o que o anterior produziu. Do primeiro ao último: ordena.",
+   "passos": [
+    "Escreves no topo o tema que escolheste, A ou B",
+    "Respondes ao núcleo: o narrador, depois as funções",
+    "Escreves a carta ou o painel do teu tema",
+    "Relês as citações letra a letra e contas as palavras",
+    "Escreves as duas linhas finais e entregas as fotografias no Teams"
+   ],
+   "f": "O tema fica no topo, o núcleo vem primeiro e o tema a seguir; as citações e a contagem conferem-se no texto já escrito, e as duas linhas fecham.",
+   "fe": "Não contas palavras de um texto que ainda não existe, nem entregas antes das duas linhas; o tema escreve-se no topo, antes de tudo."
+  },
+  {
+   "t": "ler",
+   "rot": "Para levar",
+   "escuro": true,
+   "html": "<p class=\"levar\">Quem fala, a quem, e o que quer de quem ouve: pergunta-o a cada frase que citares.</p><p>Agora, na tarefa: duas passagens do narrador e o que ele quer de quem lê; as funções na fala de Tadeu, com testes; e a carta ou o painel. Abre a aula de tarefa.</p>"
+  }
+ ]
+}

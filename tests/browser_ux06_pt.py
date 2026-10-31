@@ -1,3 +1,4 @@
+# 31/10/2026: M3, M5 e M6 passam ao contrato das aulas de tarefa.
 from functools import partial
 from http.server import ThreadingHTTPServer
 from urllib.parse import urlsplit
@@ -8,7 +9,7 @@ PLANS=json.loads((ROOT/'docs/pedagogia/percursos-unidades-20261020.json').read_t
 OUT=ROOT.parents[1]/'outputs/design-pt'
 # 24/10/2026 (aulas claras do M1, como o M4 a 23/10): o percurso do M1 passa a lista simples de aulas, sem passaporte
 # 27/10/2026 (passagem do GPT, tarefas por unidade): o M2 passa ao mesmo modelo, com duas aulas de tarefa.
-SEM_PASSAPORTE={1,2,4,7}
+SEM_PASSAPORTE={1,2,3,4,5,6,7}
 
 def main():
  server=ThreadingHTTPServer(('127.0.0.1',0),partial(QuietHandler,directory=str(ROOT.parent)))

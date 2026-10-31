@@ -1,0 +1,114 @@
+{
+ "slug": "m3-u2",
+ "titulo": "Nô mais: do canto alto ao silêncio",
+ "unidade": 2,
+ "aquecer": {
+  "cartoes": "aquecimento/",
+  "minutos": 10,
+  "texto": "No início da aula de tarefa: 10 minutos de cartões com consulta, 5 minutos para o docente apresentar o enunciado, 60 minutos de produção e 15 minutos de revisão e entrega. Total: 90 minutos. O relógio de produção começa depois da apresentação.",
+  "ligacao": "Abrir o aquecimento em cartões",
+  "ligacao_enunciado": "Aquecer"
+ },
+ "lead": "À mão, 200 a 250 palavras: 110 no núcleo e 90 a 140 no tema. Com consulta.",
+ "nucleo": [
+  "O Poeta pede às Tágides um canto alto (I, 4 e 5) e manda calar a Musa (X, 145). Abre com uma tese discutível sobre essa mudança e prova-a com uma citação de cada passagem, com canto e estância, explicada.",
+  "Em «Veja agora o juízo curioso» (VIII, 96), que modalidade há, com que valor, e que palavra a marca? Em «O favor com que mais se acende o engenho / Não no dá a pátria» (X, 145), que palavra retoma «O favor», e por que meio?"
+ ],
+ "temas": [
+  {
+   "letra": "A",
+   "nome": "A voz que para a ação",
+   "texto": "Uma cena para e uma voz-off julga uma coisa de hoje, como o Poeta em VIII, 96 a 99: seis linhas, quatro a abrir com «Este» ou «Esta», uma enumeração e um disfarce no fim. Cita o verso de VIII, 98 ou 99 que imitaste, diz o que imitaste e o que retoma o teu «Este»."
+  },
+  {
+   "letra": "B",
+   "nome": "O Velho do Restelo, hoje",
+   "texto": "Dá voz a um Velho do Restelo de hoje contra uma partida atual, uma coisa e nunca uma pessoa. Transpõe dois argumentos dele, cada um com a expressão citada e a estância. Usa um facto do dossiê. Acaba com quem parte a responder a um deles, em duas frases."
+  }
+ ],
+ "apoios": [
+  {
+   "href": "../../m3/licao-m3-f10/",
+   "texto": "Quem é a Musa? (F10): relê «O texto, 1 de 3», «O texto, 2 de 3» e «O texto, 3 de 3» (I, 4 e 5 e X, 145, com o vocabulário) e «Para entender» (a pergunta, a tese e as citações com canto e estância; aqui não há fontes e as palavras são as do enunciado)."
+  },
+  {
+   "href": "../../m3/licao-m3-f15/",
+   "texto": "Poder, dever, querer (F15): relê «Para entender» (as três modalidades e a anáfora como retoma) e «Em paralelo» (a anáfora é duas coisas)."
+  },
+  {
+   "href": "../../m3/licao-m3-f13/",
+   "texto": "Um bicho da terra tão pequeno (F13): relê «O texto, 2 de 5» (VIII, 96) e, para o tema A, «O texto, 4 de 5» e «O texto, 5 de 5» (VIII, 98 e 99) e «Para entender»."
+  },
+  {
+   "href": "../../m3/licao-m3-f03/",
+   "texto": "Jerónimos: ler um edifício (F03), para o tema B: relê «O texto, 1 de 2» e «O texto, 2 de 2» (IV, 94 e 95, com o vocabulário)."
+  },
+  {
+   "href": "../../m3/m3-velho-restelo-juri/",
+   "texto": "A voz contra, dentro do poema (Pensar devagar), para o tema B: relê o «Ato 2» (o que diz o Velho) e o «Ato 4» (a melhor objeção)."
+  }
+ ],
+ "exemplos": [
+  {
+   "titulo": "Citar com canto e estância (resolvido, noutra passagem)",
+   "html": "<p>Em VIII, 97, o Poeta junta três histórias antigas, e uma delas diz: «Pode tanto em Tarpeia avaro vício» (VIII, 97). O verso mostra que o crime por dinheiro não é de agora: a avareza já levava Tarpeia a entregar a torre aos inimigos.</p><p>A citação entra na frase, letra a letra e entre «», com o canto e a estância logo a seguir; a explicação diz o que o verso mostra e para que serve na tua tese.</p>"
+  }
+ ],
+ "dossie_titulo": "Dossiê do tema B",
+ "dossie": [
+  {
+   "facto": "Quando a armada de Vasco da Gama parte de Belém, quem conta o episódio vai nas naus e ouve o Velho: «nós no mar ouvimos claramente».",
+   "href": "../../m3/m3-velho-restelo-juri/",
+   "fonte": "«A voz contra, dentro do poema» (Pensar devagar), «Ato 1»"
+  },
+  {
+   "facto": "O Velho surge em IV, 94 e fala de IV, 95 a 104: dez estâncias de discurso.",
+   "href": "../../m3/m3-velho-restelo-juri/",
+   "fonte": "«A voz contra, dentro do poema» (Pensar devagar), «Ato 3»"
+  },
+  {
+   "facto": "Nas estâncias lidas, ninguém se ri do Velho nem o desmente, e as naus partem na mesma.",
+   "href": "../../m3/m3-velho-restelo-juri/",
+   "fonte": "«A voz contra, dentro do poema» (Pensar devagar), «Ato 3» e «Ato 5»"
+  },
+  {
+   "facto": "Manoel de Oliveira fez em 2014 o filme <i>O Velho do Restelo</i>, com Diogo Dória, Luís Miguel Cintra, Ricardo Trêpa e Mário Barroso.",
+   "href": "../../m3/licao-m3-f03/",
+   "fonte": "Lição «Jerónimos: ler um edifício», «Em paralelo»"
+  },
+  {
+   "facto": "Em 2013, o documentário <i>8816 Versos</i>, de Sofia Marques, mostra o ator António Fonseca a dizer <i>Os Lusíadas</i> de cor.",
+   "href": "../../m3/licao-m3-f16/",
+   "fonte": "Lição «Quem disse este verso?», «O essencial»"
+  }
+ ],
+ "opcional": {
+  "pergunta": "Qual das três frases é uma tese que se pode discutir?",
+  "opcoes": [
+   {
+    "certa": false,
+    "letra": "A",
+    "texto": "«Amor é fogo» tem catorze versos e acaba a perguntar.",
+    "resposta": "É um facto: conta-se e confirma-se no soneto. Ninguém o discute, e uma tese pede versos que a provem."
+   },
+   {
+    "certa": true,
+    "letra": "B",
+    "texto": "A pergunta de «Amor é fogo» é uma conclusão, não uma fuga.",
+    "resposta": "Defende uma leitura que outra pessoa pode contestar com versos, por exemplo com o «Mas» do verso 12. É uma tese."
+   },
+   {
+    "certa": false,
+    "letra": "C",
+    "texto": "Gosto mais de «Amor é fogo» do que dos outros sonetos todos.",
+    "resposta": "É um gosto: diz o que preferes, não o que o poema faz, e nenhum verso o pode provar ou desmentir."
+   }
+  ]
+ },
+ "criterios": [
+  "Núcleo: tese discutível na primeira frase, duas citações localizadas e explicadas; modalidade, valor, marca; retoma e meio.",
+  "Tema A: seis linhas, anáfora, enumeração, disfarce, verso citado, imitação e retoma. Tema B: partida que é uma coisa, dois argumentos localizados, facto, resposta que responde.",
+  "Respostas articuladas, 200 a 250 palavras, escrita revista."
+ ],
+ "fecho": "Fecha com duas linhas, fora da contagem de palavras: quando um poema celebra, que pergunta lhe vais passar a fazer? Aponta o verso que ta ensinou."
+}
