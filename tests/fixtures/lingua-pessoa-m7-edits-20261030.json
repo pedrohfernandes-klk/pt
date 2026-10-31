@@ -1,6 +1,6 @@
 {
- "base_commit": "f648b22dd4f0a9a852fa2299cfa1e353e401dc94",
- "_nota": "30/10/2026: perguntas em português europeu («Qual das…», «Que…», nunca «Qual» seguido de nome; pedido do docente), M7-F13 com os versos 12 e 14 como na Athena, n.º 3, 1924, em grafia atualizada («p'ra», «'stá»; decisão 4b; o verso 20 mantém «Ó canção» com maiúscula, por decisão do docente de 30/10), M7-U2 com aquecimento fixo de 10 minutos (decisão 3a) e pesos do M7 no mapa (U3 a 25 %, prova escrita a 30 %; decisões 3b e 3c). Gerado por scripts/aplicar_trocas.py a partir de scripts/lingua_pessoa_m7_20261030.json: não se edita à mão. Só texto: ordem, tipos, chaves e respostas certas dos cartões ficam iguais. É a camada mais recente: desfaz-se antes da das opções denunciadoras.",
+ "base_commit": "203eaf5dfbfb0cf9af921bb3a3691a354954d8cd",
+ "_nota": "30/10/2026: perguntas em português europeu («Qual das…», «Que…», nunca «Qual» seguido de nome; pedido do docente), M7-F13 com os versos 12 e 14 como na Athena, n.º 3, 1924, em grafia atualizada («p'ra», «'stá»; decisão 4b; o verso 20 mantém «Ó canção» com maiúscula, por decisão do docente de 30/10), M7-U2 com aquecimento fixo de 10 minutos (decisão 3a) e pesos do M7 no mapa (U3 a 25 %, prova escrita a 30 %; decisões 3b e 3c). Gerado por scripts/aplicar_trocas.py a partir de scripts/lingua_pessoa_m7_20261030.json: não se edita à mão. Só texto: ordem, tipos, chaves e respostas certas dos cartões ficam iguais. É a camada mais recente: desfaz-se antes da das opções denunciadoras. 31/10/2026: dois achados do GPT 1 corrigidos por decisão do docente: a M2-F08 e o percurso do M2 deixam de dar à apreciação crítica o peso de 25 %, e o exercício longo do M9 passa a «Quem vê mais?», para não repetir o título da M9-F02.",
  "files": {
   "assets/exame/sessoes.json": {
    "base_sha256_lf": "5a963d008fd574053745e6b15f4ba436e816867a004a400b2a7f90dd92eb75a1",
@@ -88,12 +88,18 @@
   },
   "m2/index.html": {
    "base_sha256_lf": "ee8cb1b1c6281f9e0877911e5acb678bc714bed6b371bbc3d9cb77c8cab36ed2",
-   "after_sha256_lf": "4d9c823c39bfe6faf537ec223cf119ee223d080317dbd591b8c2a41618e8d68c",
+   "after_sha256_lf": "532bfd9a334a920201cfe055c6f765819eb5e7227eeb7a2d60aa924fd35a1248",
    "edits": [
     {
      "location": "«Qual + nome» (pedido do docente de 30/10/2026",
      "old": "diz qual homem casa",
      "new": "diz que homem casa",
+     "occurrences": 1
+    },
+    {
+     "location": "Percurso do M2, linha da lição M2-F08",
+     "old": "escreve a apreciação crítica (tarefa de 25 por cento).",
+     "new": "escreve a apreciação crítica.",
      "occurrences": 1
     }
    ]
@@ -658,6 +664,96 @@
      "location": "M7-U2",
      "old": "aquecer em cartões, 10 a 15 minutos",
      "new": "aquecer em cartões, 10 minutos",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m2/licao-m2-f08/index.html": {
+   "base_sha256_lf": "9734d38ebd2ccd354491a3a7d6cbb7258df2aa657dd9784982555b8076e1e16a",
+   "after_sha256_lf": "34f711b829671bed04327dcf76752b8be23a86b1455211d537d638386ec55f15",
+   "edits": [
+    {
+     "location": "M2-F08, cartão do juízo",
+     "old": "cortas o que repete e assinas (vale 25 %).",
+     "new": "cortas o que repete e assinas.",
+     "occurrences": 1
+    },
+    {
+     "location": "M2-F08, pistas",
+     "old": "cortas o que repete, assinas: vale 25 por cento.",
+     "new": "cortas o que repete e, no fim, assinas.",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m9/m9-ver-e-nao-ver/index.html": {
+   "base_sha256_lf": "79e585ce5ba54c0b00871924d8073edd7ed96d23d0dc39923b4c24e67984aa02",
+   "after_sha256_lf": "d3339829f90089ebc80202ffd19f5e5320770a8afed71ee1d97ea5b0a956507a",
+   "edits": [
+    {
+     "location": "Exercício longo do M9, título",
+     "old": "<title>Ver e não ver · Português · Módulo 9</title>",
+     "new": "<title>Quem vê mais? · Português · Módulo 9</title>",
+     "occurrences": 1
+    },
+    {
+     "location": "Exercício longo do M9, h1",
+     "old": "<h1 class=\"c-sr\">Ver e não ver",
+     "new": "<h1 class=\"c-sr\">Quem vê mais?",
+     "occurrences": 1
+    },
+    {
+     "location": "Exercício longo do M9, migalhas",
+     "old": "Estás em: Ver e não ver",
+     "new": "Estás em: Quem vê mais?",
+     "occurrences": 1
+    },
+    {
+     "location": "Exercício longo do M9, título do baralho",
+     "old": "titulo:\"Ver e não ver\",itens",
+     "new": "titulo:\"Quem vê mais?\",itens",
+     "occurrences": 1
+    },
+    {
+     "location": "Exercício longo do M9, cartão «Abre»",
+     "old": "\"rot\":\"Abre\",\"titulo\":\"Ver e não ver\"",
+     "new": "\"rot\":\"Abre\",\"titulo\":\"Quem vê mais?\"",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m9/index.html": {
+   "base_sha256_lf": "f71ef4ddb746a7434047c221a274fe6d588ab01473045df3f6fbdb656eb2f731",
+   "after_sha256_lf": "03fb7b37a55e8ed9b1e84f08e1745cf34914f0fc4c2a350ff26559bb86d6ff2d",
+   "edits": [
+    {
+     "location": "Percurso do M9, linha do exercício longo",
+     "old": "<span class=\"t\">Ver e não ver</span><span class=\"s\">Pensar devagar:",
+     "new": "<span class=\"t\">Quem vê mais?</span><span class=\"s\">Pensar devagar:",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m9/mapa-do-modulo-m9/index.html": {
+   "base_sha256_lf": "9ba283e52691ca5b0889e42e136a325a2df5982445b3558d65c13b462aae4636",
+   "after_sha256_lf": "167b11a49f4e6bb806dfc099f13023e7fa1eaa5ff5338d0045e3122ac992208b",
+   "edits": [
+    {
+     "location": "Mapa do M9, ligação ao exercício longo",
+     "old": "<a href=\"../m9-ver-e-nao-ver/\">Ver e não ver</a>",
+     "new": "<a href=\"../m9-ver-e-nao-ver/\">Quem vê mais?</a>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m9/m9-de-quem-e-o-convento/index.html": {
+   "base_sha256_lf": "32fa33017104d277320e0d2608c4a22eb558b86fd6b21bf221e6e85a382890af",
+   "after_sha256_lf": "9a003e4ffdfd8578b7ae8290b7acdb23fe1e1919ef3326b9f5ca8123ceb003b3",
+   "edits": [
+    {
+     "location": "Outro exercício longo do M9, ligação",
+     "old": "m9-ver-e-nao-ver/\\\">Ver e não ver</a>",
+     "new": "m9-ver-e-nao-ver/\\\">Quem vê mais?</a>",
      "occurrences": 1
     }
    ]
