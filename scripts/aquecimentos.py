@@ -241,8 +241,8 @@ def main(argv=None):
         alvo = saida / 'tarefas' / d['slug'] / 'aquecimento' / 'index.html'
         html = pagina(raiz, d)
         alvo.parent.mkdir(parents=True, exist_ok=True)
-        if not alvo.exists() or alvo.read_text('utf-8') != html:
-            alvo.write_text(html, 'utf-8')
+        if not alvo.exists() or alvo.read_bytes() != html.encode('utf-8'):
+            alvo.write_text(html, 'utf-8', newline='\n')
         feitos.append(d['slug'])
     for slug, erros in falhas.items():
         print(f'NÃO GERADO {slug}:', *erros, sep='\n  ', file=sys.stderr)

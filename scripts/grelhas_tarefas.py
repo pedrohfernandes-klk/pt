@@ -157,14 +157,14 @@ def main():
         for pasta, html in (('grelha', pagina_aluno(slug, t)), ('correcao', pagina_correcao(slug, t))):
             p = base / pasta / 'index.html'
             p.parent.mkdir(parents=True, exist_ok=True)
-            if not p.exists() or p.read_text('utf-8') != html:
-                p.write_text(html, 'utf-8')
+            if not p.exists() or p.read_bytes() != html.encode('utf-8'):
+                p.write_text(html, 'utf-8', newline='\n')
         tarefa = base / 'index.html'
         s = (tarefa if tarefa.exists() else ROOT / 'tarefas' / slug / 'index.html').read_text('utf-8')
         if LIGACAO not in s:
             assert s.count(ANCORA) == 1, slug
             s = s.replace(ANCORA, LIGACAO + ANCORA)
-            tarefa.write_text(s, 'utf-8')
+            tarefa.write_text(s, 'utf-8', newline='\n')
         print('grelha:', slug)
 
 

@@ -2,14 +2,16 @@
 from functools import partial
 from http.server import ThreadingHTTPServer
 import json
+import re
 import threading
 from playwright.sync_api import sync_playwright
 from browser_task_aquecimentos import ROOT, QuietHandler, contexto, sem_deslizar
 
 
 # 30/10/2026: aquecimento em cartões (decisão do docente)
-def verificar(browser, host):
-    for slug in ('m2-u1', 'm2-u2'):
+# 31/10/2026: o mesmo contrato serve os novos baralhos, mantendo o M2 por omissão.
+def verificar(browser, host, slugs=('m2-u1', 'm2-u2')):
+    for slug in slugs:
         dados=json.loads((ROOT / 'docs/pedagogia/aquecimentos' / f'{slug}.json').read_text('utf-8'))
         for tentativa in (0, 1, 2):
             acertar = tentativa == 0
@@ -37,6 +39,13 @@ def verificar(browser, host):
                     page.locator(f'#baralho .ops [data-j="{i}"]').click()
                     if t=='rever':page.locator('.casca [data-rever-confirmar]').click()
                     esperado=c['f'] if acertar else c['fe'][i]
+                # 31/10/2026: os novos baralhos incluem seleção de palavras.
+                elif t=='sublinhar':
+                    indices = c['certas'] if acertar else [next(j for j in range(len(c['frase'].split())) if j not in c['certas'])]
+                    for j in indices:
+                        page.locator(f'#baralho .palavras [data-j="{j}"]').click()
+                    page.locator('.casca [data-confirmar]').click()
+                    esperado=c['f'] if acertar else c['fe']
                 elif t=='vf':
                     v=c['v'] if acertar else not c['v']
                     page.locator(f'#baralho .ops [data-j="{int(v)}"]').click()
@@ -61,12 +70,14 @@ def verificar(browser, host):
                 else:raise AssertionError(t)
                 feedback=page.locator('.casca [data-c-folha]:visible')
                 feedback.wait_for()
-                assert esperado.replace('**','').replace('_','') in feedback.inner_text(),(slug,n,acertar,feedback.inner_text())
+                # 31/10/2026: só retirar marcas de itálico emparelhadas; preservar de_a na escansão.
+                visivel=re.sub(r'_([^_]+)_',r'\1',esperado.replace('**',''))
+                assert visivel in feedback.inner_text(),(slug,n,acertar,feedback.inner_text())
                 sem_deslizar(page,f'{slug} {n} feedback')
                 feedback.locator('[data-seguinte]').click()
             assert page.locator('#baralho .cartao.fim').count()
             assert not errors,errors
-            print('PASS feedback M2',slug,'certo' if acertar else f'errado {tentativa}','10 cartões, seis tipos, 390 px',flush=True)
+            print('PASS feedback',slug,'certo' if acertar else f'errado {tentativa}','10 cartões, 390 px',flush=True)
             ctx.close()
 
 

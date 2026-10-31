@@ -192,6 +192,20 @@ def undo_lingua(path, text):
     return text
 
 
+# 31/10/2026: camada mais recente, tarefas M3, M5 e M6.
+TAREFAS_M356_MANIFEST = ROOT / 'tests/fixtures/tarefas-m356-edits-20261031.json'
+_TAREFAS_M356_FILES = json.loads(TAREFAS_M356_MANIFEST.read_text('utf-8'))['files']
+
+
+def undo_tarefas_m356(path, text):
+    relative = _relative(path)
+    for edit in reversed(_TAREFAS_M356_FILES.get(relative, {}).get('edits', [])):
+        if text.count(edit['new']) != edit['occurrences']:
+            raise AssertionError(f"Troca de 31/10 não confere: {relative}: {edit['location']}")
+        text = text.replace(edit['new'], edit['old'])
+    return text
+
+
 def undo(path, text):
     """Devolve o texto anterior às correções de 28/10 para este ficheiro (ou o mesmo texto, se não as tem).
 
@@ -204,6 +218,8 @@ def undo(path, text):
     """
     # 30/10/2026: antes de tudo, a camada da língua (a mais recente), depois a das opções denunciadoras, a do texto
     # justificado e as dos aquecimentos do M2, do M4 e do M1.
+    # 31/10/2026: desfaz primeiro as tarefas M3, M5 e M6.
+    text = undo_tarefas_m356(path, text)
     text = undo_lingua(path, text)
     text = undo_opcoes(path, text)
     text = undo_justificado(path, text)

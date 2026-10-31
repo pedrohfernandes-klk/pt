@@ -835,7 +835,15 @@ def main():
                     contagem['congelada depois do corte (fora do manifesto)'] += 1
                 continue
             try:
-                confirmar_congelada(rel, tipo, texto, reg)
+                # 31/10/2026: a substituição do percurso antigo é uma camada literal posterior.
+                posterior = ROOT / 'tests/fixtures/tarefas-m356-edits-20261031.json'
+                conferencia = texto
+                if posterior.is_file():
+                    for edit in reversed(json.loads(posterior.read_text('utf-8'))['files'].get(rel, {}).get('edits', [])):
+                        if conferencia.count(edit['new']) != edit['occurrences']:
+                            raise ManifestoDesatualizado(f'{rel}: camada das tarefas não confere')
+                        conferencia = conferencia.replace(edit['new'], edit['old'])
+                confirmar_congelada(rel, tipo, conferencia, reg)
             except ManifestoDesatualizado as e:
                 erros['manifesto'].append(str(e))
                 continue

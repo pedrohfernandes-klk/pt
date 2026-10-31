@@ -142,8 +142,8 @@ def tarefa(d, com_grelha, raiz=ROOT):
             + FOOT)
     p = raiz / 'tarefas' / slug / 'index.html'
     p.parent.mkdir(parents=True, exist_ok=True)
-    if not p.exists() or p.read_text('utf-8') != html:
-        p.write_text(html, 'utf-8')
+    if not p.exists() or p.read_bytes() != html.encode('utf-8'):
+        p.write_text(html, 'utf-8', newline='\n')
 
 
 def main():

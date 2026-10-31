@@ -779,7 +779,8 @@ class SeccaoEGerador(unittest.TestCase):
             self.assertEqual(gerados, esperados, 'cada página de exame/provas/ sai do gerador')
             for rel in gerados:
                 with self.subTest(pagina=rel):
-                    self.assertEqual((Path(tmp) / rel).read_bytes(), (ROOT / rel).read_bytes())
+                    # 31/10/2026: compara o texto integral com fins de linha iguais no Windows e no Linux.
+                    self.assertEqual((Path(tmp) / rel).read_text('utf-8'), (ROOT / rel).read_text('utf-8'))
 
 
 # Um caso por fixture: Prova_2026_1f_v2, …
