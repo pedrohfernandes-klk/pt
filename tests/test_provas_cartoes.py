@@ -780,7 +780,10 @@ class SeccaoEGerador(unittest.TestCase):
             for rel in gerados:
                 with self.subTest(pagina=rel):
                     # 31/10/2026: compara o texto integral com fins de linha iguais no Windows e no Linux.
-                    self.assertEqual((Path(tmp) / rel).read_text('utf-8'), (ROOT / rel).read_text('utf-8'))
+                    # 01/11/2026: o gerador exige LF; só a cópia de trabalho pode usar CRLF.
+                    gerado = (Path(tmp) / rel).read_bytes()
+                    self.assertNotIn(b'\r', gerado)
+                    self.assertEqual(gerado, (ROOT / rel).read_bytes().replace(b'\r\n', b'\n'))
 
 
 # Um caso por fixture: Prova_2026_1f_v2, …

@@ -126,3 +126,6 @@ jobs:
 
       - name: Percursos e guias do M8 M9
         run: python tests/browser_tarefas_m89.py
+      # 01/11/2026: alvos, abertura e impressão da revisão, incluindo as grelhas anteriores afetadas.
+      - name: Apresentação e impressão das tarefas revistas
+        run: python tests/browser_revisao_tarefas_20261101.py

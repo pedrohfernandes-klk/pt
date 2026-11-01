@@ -145,6 +145,11 @@ def projecao_ate_explicacao(page):
 
 # (família, página, preparação, seletores de texto corrido justificado, seletores que ficam à esquerda)
 CASOS = [
+    # 01/11/2026: cobre os pesos e a prosa nova sem retirar os casos anteriores.
+    ('guia da tarefa (aula de tarefa)', 'm3/guia-da-tarefa-m3/', lambda p: None,
+     ['#tarefas-das-unidades > p.avaliacao-tarefas', '#tarefas-das-unidades > p:not([class]):not(:has(a))'], []),
+    ('índice (avaliação na regra)', 'm3/', lambda p: p.locator('details.regra').evaluate('(e)=>e.open=true'),
+     ['p.avaliacao-tarefas'], []),
     ('lições em cartões: leitura e verso', 'm7/licao-m7-f34/', lambda p: None,
      ['.jogo .ler p.abre'], ['.casca-topo .c-marca']),
     ('lições em cartões: verso', 'm7/licao-m7-f34/', lambda p: ate(p, '.jogo .ler .v'),
