@@ -221,6 +221,7 @@ from revisao_licoes_20261101 import aplicar
 aplicar(LESSONS)
 # 01/11/2026: o pedido B acrescenta nove bancos aos sete do pedido A.
 import licoes_m1_m6_20261101
-
 from revisao_licoes_m16_20261101 import REVISOES_B
 aplicar(LESSONS, REVISOES_B)
+from imagens_licoes_20261101 import aplicar_imagens
+aplicar_imagens(LESSONS)

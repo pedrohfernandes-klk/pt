@@ -56,8 +56,8 @@ REVISOES = {
   ordem=['O gesto de montagem torna o poder observável','A escala reduzida contrasta com a grandeza régia','A comparação abre uma hipótese satírica','As diferenças de risco e de trabalho limitam a analogia'],
   ordem_p='Ordena uma interpretação da miniatura que preserve o limite da comparação.'),
  'm9-f15': dict(
-  recuperar=('Recupera a leitura da F02: a posição de quem assiste a uma cerimónia pode ser diferente da experiência de quem é exposto nela?',True,
-             'Confundir a experiência do público com a de quem é julgado apaga posições diferentes. Regressa à cena do auto de fé e distingue observadores e condenados antes de interpretar a solenidade.'),
+  recuperar=('Recupera a miniatura da lição anterior: observar um gesto basta para provar a intenção de quem o faz?',False,
+             'Confundir gesto e intenção transforma um indício numa certeza. Regressa à comparação da miniatura: a interpretação precisa das relações e do enquadramento, não apenas do objeto.'),
   modelo='Uma leitura apresentada como descansada pode ser confrontada com a gravidade das sentenças. A diferença entre as posições produz a tensão. Não é necessário atribuir o mesmo sentimento a cada pessoa do público.',
   limite='Contraexemplo à conclusão de que o público inteiro sente o mesmo: a referência coletiva não individualiza todas as reações. Critério: uma conclusão sobre cada pessoa exige uma marca que a distinga dentro do grupo.',
   pista='Identifica a quem pertence o conforto e sobre quem recai a sentença. A descrição de um gesto permite deduzir a intenção de toda a multidão?',
@@ -107,6 +107,13 @@ REVISOES['m8-f15']['escolhas']={
  17:['Criar duas vozes distintas para observar o mesmo objeto.', 'Criar duas vozes equivalentes, trocando o nome do objeto.', 'Criar duas vozes biográficas a partir do nome da autora.']}
 
 
+# 01/11/2026: o retorno acompanha os distratores revistos, sem referências a opções retiradas.
+REVISOES['m9-f14']['retornos']={
+ 3:'Relacionar a escala reduzida com a grandeza encenada permite interpretar a caracterização. Confundir o gesto com prova de eficácia ou devoção atribui-lhe uma conclusão que o objeto não demonstra.',
+ 14:'Reconhecer quem faz a obra altera a desigualdade do reconhecimento. Confundir dimensão do objeto ou escolha da peça com contributo para a construção deixa essa desigualdade por explicar.'}
+REVISOES['m8-f16']['retornos']={10:'George recusa explicitamente uma expressão atenuada. Confundir a rejeição da palavra com rejeição da pessoa acrescenta uma atitude que o recorte não comprova.'}
+REVISOES['m9-f15']['retornos']={14:'A pergunta pela experiência excluída confronta o conforto com as consequências. Confundir tranquilidade com acordo ou inocência transforma uma aparência em prova de um juízo.'}
+
 def aplicar(bancos, revisoes=REVISOES):
     for item in bancos:
         if item['id'] not in revisoes:
@@ -121,6 +128,8 @@ def aplicar(bancos, revisoes=REVISOES):
         cards[16]['f']='A sequência liga os pormenores à interpretação e conserva o seu limite. Relê o modelo e o contraexemplo: '+d['pista']
         for index,options in d.get('escolhas',{}).items():
             cards[index]['o']=options
+        for index,feedback in d.get('retornos',{}).items():
+            cards[index]['f']=feedback
         # O retorno identifica a confusão já descrita no banco e delimita a releitura.
         for i,c in enumerate(cards):
             if c['t']=='ler':continue

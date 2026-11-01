@@ -36,6 +36,14 @@ def main():
                 url=f'https://licoes.test/{module}/licao-{item["id"]}/'+('?projetar=1' if projection else '')
                 page.goto(url,wait_until='networkidle')
                 page.locator('#baralho .cartao').wait_for()
+                # 01/11/2026: as imagens do Abre carregam inteiras, também na projeção.
+                for picture in page.locator('#baralho .documento img').all():
+                    assert picture.evaluate('(im)=>im.complete && im.naturalWidth>0'),(item['id'],'image missing')
+                    assert picture.evaluate('(im)=>getComputedStyle(im).objectFit')=='contain'
+                    bounds=picture.bounding_box()
+                    assert bounds and bounds['width']<=width,(item['id'],'image overflow')
+                if item['id']=='m9-f14' and width==390:
+                    page.screenshot(path=str(ROOT.parent/'licoes-a-abre-piranesi.png'),full_page=True)
                 seen=set();feedback=0
                 for _ in range(100):
                     if page.locator('#baralho .cartao.fim').count():break

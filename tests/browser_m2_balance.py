@@ -1,12 +1,24 @@
 from functools import partial
 from http.server import ThreadingHTTPServer
-import threading,json,re
+import threading,json,re,mimetypes
+from urllib.parse import urlsplit,unquote
 from playwright.sync_api import sync_playwright
 from browser_m1_and_inventory import QuietHandler,new_page,ROOT
 from browser_m2_complete import respond
 OUT=ROOT.parents[1]/'outputs/m2-coerencia';OUT.mkdir(parents=True,exist_ok=True)
 server=ThreadingHTTPServer(('127.0.0.1',0),partial(QuietHandler,directory=str(ROOT.parent)));threading.Thread(target=server.serve_forever,daemon=True).start();host=f'http://127.0.0.1:{server.server_port}'
 results=[]
+
+# 01/11/2026: serve as rotas absolutas a partir da mesma cópia, sem uma segunda ligação HTTP no Windows.
+# Todas as verificações de destino, visibilidade, cartões e progresso permanecem.
+def local(route):
+ path=(ROOT/unquote(urlsplit(route.request.url).path.removeprefix('/pt/'))).resolve()
+ if not path.is_relative_to(ROOT):
+  route.fulfill(status=403,body='Forbidden');return
+ if path.is_dir():path=path/'index.html'
+ if path.is_file():route.fulfill(path=str(path),content_type=mimetypes.guess_type(path)[0] or 'application/octet-stream')
+ else:route.fulfill(status=404,body='Not found')
+
 def at_task_2(page):
  # 28/10/2026: a ligação #desafio-unidade-2 da F09 (congelada) acaba na aula de tarefa da unidade 2, visível e assinalada.
  page.wait_for_url(re.compile(r'/pt/m2/#(desafio|tarefa)-unidade-2$'));page.wait_for_function('location.hash==="#tarefa-unidade-2"')
@@ -19,7 +31,6 @@ try:
   browser=pw.chromium.launch(headless=True)
   for width in (320,1280):
    ctx,page=new_page(browser,width);errors=[];page.on('pageerror',lambda e:errors.append(str(e)))
-   def local(route):route.fulfill(response=route.fetch(url=route.request.url.replace('https://pedrohfernandes-klk.github.io',host)))
    page.route('https://pedrohfernandes-klk.github.io/pt/**',local)
    page.goto(host+'/pt/m2/',wait_until='networkidle')
    ids=page.locator('.unidade[data-u="2"] li[data-passo]').evaluate_all('(els)=>els.map(e=>e.dataset.passo)');assert ids==['m2-f11','m2-f10','m2-f08','m2-f09']
@@ -71,7 +82,7 @@ try:
    state=page.evaluate("JSON.parse(localStorage.getItem('licao-m2-f07'))");assert state['lida'] and state['melhor']==12 and state['tentativas']==3;assert state['exposicoes']=={'6':2,'11':4,'26':1},state
    if run==0:page.reload(wait_until='networkidle')
   results.append({'legacy_f07':True,'scores_preserved':True,'exposures_mapped_once':True});ctx.close()
-  ctx,page=new_page(browser,1440);page.route('https://pedrohfernandes-klk.github.io/pt/**',lambda route:route.fulfill(response=route.fetch(url=route.request.url.replace('https://pedrohfernandes-klk.github.io',host))))
+  ctx,page=new_page(browser,1440);page.route('https://pedrohfernandes-klk.github.io/pt/**',local)
   page.goto(host+'/pt/projetar/?pagina=/pt/m2/licao-m2-f07/',wait_until='networkidle');frame=page.frame_locator('#lesson-frame');frame.locator('#baralho .cartao').wait_for();page.locator('[data-projection-size="large"]').click();assert frame.locator('html').get_attribute('data-projection-size')=='large'
   for _ in range(35):
    if 'uma ordem e a sua finalidade' in frame.locator('#baralho').inner_text().casefold():break
