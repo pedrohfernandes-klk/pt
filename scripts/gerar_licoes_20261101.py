@@ -44,7 +44,7 @@ def render(item, units):
                   MODULE=module.upper(), ID=item['id'], PREVIOUS=previous, NEXT=following,
                   JSON_TITLE=json.dumps(item['title'], ensure_ascii=False),
                   CARDS=json.dumps(item['cards'], ensure_ascii=False, separators=(',', ':')).replace('</', '<\\/'))
-    text = (ROOT / 'scripts/templates/licao-20261101.html').read_text('utf-8')
+    text = (ROOT / 'scripts/templates/licao-20261101.html.tpl').read_text('utf-8')
     for key, value in values.items():
         text = text.replace('@@' + key + '@@', value)
     if '@@' in text:
