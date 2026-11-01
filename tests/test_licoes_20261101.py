@@ -56,6 +56,17 @@ class NewLessons(unittest.TestCase):
                 self.assertNotRegex(text, r'Qual (?:frase|palavra|citação|razão|texto)\b')
                 self.assertIn('https://', text)
 
+    def test_embedded_routes_match_the_visible_curriculum(self):
+        # 01/11/2026: as aulas de tarefa leem também o contrato JSON de cada índice.
+        plan=json.loads((ROOT/'docs/pedagogia/percursos-unidades-20261020.json').read_text('utf-8'))
+        for module in {int(x['id'][1]) for x in LESSONS}:
+            text=(ROOT/f'm{module}/index.html').read_text('utf-8')
+            raw=re.search(r'<script[^>]+id="epi-unidades-pedagogicas"[^>]*>(.*?)</script>', text, re.S).group(1)
+            embedded=json.loads(raw)
+            for actual,expected in zip(embedded,plan[module-1]['units']):
+                self.assertEqual(actual['lessons'],expected['lessons'])
+                self.assertEqual(actual['steps'],expected['steps'])
+
     def test_george_quote_and_credit(self):
         item = next(x for x in LESSONS if x['id']=='m8-f16')
         quote = re.search(r'<blockquote[^>]*>«(.*?)»</blockquote>', item['cards'][2]['html']).group(1)
