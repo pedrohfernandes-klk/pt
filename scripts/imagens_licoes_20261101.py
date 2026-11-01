@@ -81,13 +81,15 @@ USOS.update({
  'm6-f14': ('antero-de-quental-1887', 'Antero de Quental num retrato de cerca de 1887, posterior à conferência de 1871.'),
  'm6-f15': ('cesario-verde-columbano-1887', 'Cesário Verde retratado por Columbano em 1887.'),
 })
+IMAGENS['antero-de-quental-1887']['data_html'] = 'Cerca de 1887; publicado em <i>In Memoriam</i>, 1896'
+IMAGENS['cesario-verde-columbano-1887']['instituicao_html'] = 'Publicado em <i>O Livro de Cesário Verde</i>; reprodução no Wikimedia Commons.'
 
 def aplicar_imagens(bancos):
     for item in bancos:
         if item['id'] not in USOS:
             continue
         nome,legenda=USOS[item['id']];d=IMAGENS[nome]
-        rows=''.join('<tr><th scope="row">'+label+'</th><td>'+(d.get('obra_html') if key=='obra' and d.get('obra_html') else escape(d[key]))+'</td></tr>' for label,key in
+        rows=''.join('<tr><th scope="row">'+label+'</th><td>'+(d.get(key+'_html') or escape(d[key]))+'</td></tr>' for label,key in
                      [('Autor','autor'),('Obra','obra'),('Data','data'),('Instituição ou acervo','instituicao')])
         rows+='<tr><th scope="row">Licença</th><td><a href="'+d['direitos']+'">'+d['licenca']+'</a></td></tr>'
         ficheiro=d.get('ficheiro','../../img/fontes/licoes-20261101/'+nome+'.jpg')
