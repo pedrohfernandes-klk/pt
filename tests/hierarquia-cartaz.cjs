@@ -3,9 +3,11 @@
 const assert=require('node:assert/strict'),fs=require('fs'),path=require('path'),http=require('http');
 const {chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright');
 const root=path.resolve(__dirname,'..');
-const candidates=['index.html','narrativas/index.html','narrativas/ver/index.html','narrativas/treinar/index.html','narrativas/criar/index.html'];
-const pages=candidates.filter(p=>fs.existsSync(path.join(root,p))&&fs.readFileSync(path.join(root,p),'utf8').includes('data-cartaz="2"'));
-const server=http.createServer((q,r)=>{let f=path.resolve(root,'.'+new URL(q.url,'http://local').pathname.replace(/^\/lente/,''));if(f!==root&&!f.startsWith(root+path.sep)){r.writeHead(403);return r.end();}try{if(fs.statSync(f).isDirectory())f=path.join(f,'index.html');r.setHeader('content-type',({'.html':'text/html; charset=utf-8','.css':'text/css','.js':'text/javascript','.json':'application/json'})[path.extname(f)]||'application/octet-stream');r.end(fs.readFileSync(f));}catch{r.writeHead(404);r.end();}});
+// 01/11/2026: revisão curta. A lista fixa era de caminhos do Lente e no Português nunca media nenhuma página. Aqui, os
+// candidatos são todas as páginas .html com data-cartaz="2", abertas em /pt/ como no sítio público.
+const walk=dir=>fs.readdirSync(dir,{withFileTypes:true}).flatMap(e=>e.name.startsWith('.')||['tests','node_modules'].includes(e.name)?[]:e.isDirectory()?walk(path.join(dir,e.name)):e.name.endsWith('.html')?[path.join(dir,e.name)]:[]);
+const pages=walk(root).filter(f=>fs.readFileSync(f,'utf8').includes('data-cartaz="2"')).map(f=>path.relative(root,f).split(path.sep).join('/')).sort();
+const server=http.createServer((q,r)=>{let f=path.resolve(root,'.'+new URL(q.url,'http://local').pathname.replace(/^\/pt(?=\/|$)/,''));if(f!==root&&!f.startsWith(root+path.sep)){r.writeHead(403);return r.end();}try{if(fs.statSync(f).isDirectory())f=path.join(f,'index.html');r.setHeader('content-type',({'.html':'text/html; charset=utf-8','.css':'text/css','.js':'text/javascript','.json':'application/json'})[path.extname(f)]||'application/octet-stream');r.end(fs.readFileSync(f));}catch{r.writeHead(404);r.end();}});
 const MEASURE=()=>{
   const vis=e=>{const r=e.getBoundingClientRect();if(r.width<2||r.height<2)return false;for(let x=e;x&&x!==document.documentElement;x=x.parentElement){if(x.hidden)return false;const c=getComputedStyle(x);if(c.display==='none'||c.visibility==='hidden'||+c.opacity<.05)return false;if(x.matches&&x.matches('.sr-only,.c-sr,.p-sr,.visually-hidden,dialog:not([open]),details:not([open])>:not(summary)'))return false;}return true;};
   const fs=e=>parseFloat(getComputedStyle(e).fontSize);
@@ -33,21 +35,26 @@ const MEASURE=()=>{
  for(const theme of ['light','dark'])for(const width of [390,1366]){
  const ctx=await browser.newContext({viewport:{width,height:900},colorScheme:theme,reducedMotion:'reduce'});
  // O CSS absoluto do próprio sítio é servido pela árvore local; fontes externas não alteram tamanhos.
- await ctx.route('**/*',async route=>{const u=new URL(route.request().url());if(u.origin===origin)return route.continue();if(u.hostname==='pedrohfernandes-klk.github.io'&&u.pathname.startsWith('/lente/')){const response=await ctx.request.get(origin+u.pathname+u.search);return route.fulfill({response});}return route.abort();});
+ await ctx.route('**/*',async route=>{const u=new URL(route.request().url());if(u.origin===origin)return route.continue();if(u.hostname==='pedrohfernandes-klk.github.io'&&u.pathname.startsWith('/pt/')){const response=await ctx.request.get(origin+u.pathname+u.search);return route.fulfill({response});}return route.abort();});
  const page=await ctx.newPage();
- for(const p of pages){await page.goto(origin+'/lente/'+p,{waitUntil:'networkidle'});
- for(const mode of ['normal','dobras abertas']){
+ for(const p of pages){await page.goto(origin+'/pt/'+p,{waitUntil:'networkidle'});
+ // 01/11/2026: revisão curta. Mede-se também a projeção: ?projetar=1 e a classe do sistema (em-projecao), posta aqui
+ // quando a família não a põe, para medir sempre as regras de projeção das peças.
+ for(const mode of ['normal','dobras abertas','projeção']){
  if(mode==='dobras abertas')await page.locator('details').evaluateAll(es=>es.forEach(e=>e.open=true));
+ if(mode==='projeção'){await page.goto(origin+'/pt/'+p+'?projetar=1',{waitUntil:'networkidle'});await page.evaluate(()=>document.documentElement.classList.add('em-projecao'));}
  const m=await page.evaluate(MEASURE);const row={page:p,width,theme,mode,...m};rows.push(row);
  for(const rule of ['r1','r2','r3','r5'])assert.deepEqual(m[rule],[],`${p} ${width} ${theme} ${mode} ${rule}: ${JSON.stringify(m[rule])}`);
- const offScale=await page.evaluate(()=>{const scale=[13,16,20,25,31,39,49,61];return [...document.querySelectorAll('[data-cartaz="2"] :is(h1,h2,h3,h4,h5,h6,[role=heading],h1 a,h2 a,h3 a,.cz-label,.marca,.lente-etq,.ld-rot,.sp-title,.sp-kicker)')].filter(e=>!e.closest('[aria-hidden="true"]')&&e.getBoundingClientRect().height>0).map(e=>({text:e.textContent.trim().slice(0,60),size:parseFloat(getComputedStyle(e).fontSize)})).filter(x=>!scale.some(n=>Math.abs(n-x.size)<.02));});
+ // 01/11/2026: revisão curta. Na projeção, os degraus leem-se em unidades da raiz: a 16 px são os mesmos; se a família
+ // amplia a raiz, crescem todos na mesma proporção. Fora da projeção, a verificação continua em px absolutos.
+ const offScale=await page.evaluate(projected=>{const unit=projected?parseFloat(getComputedStyle(document.documentElement).fontSize)/16:1;const scale=[13,16,20,25,31,39,49,61].map(n=>n*unit);return [...document.querySelectorAll('[data-cartaz="2"] :is(h1,h2,h3,h4,h5,h6,[role=heading],h1 a,h2 a,h3 a,.cz-label,.marca,.lente-etq,.ld-rot,.sp-title,.sp-kicker)')].filter(e=>!e.closest('[aria-hidden="true"]')&&e.getBoundingClientRect().height>0).map(e=>({text:e.textContent.trim().slice(0,60),size:parseFloat(getComputedStyle(e).fontSize)})).filter(x=>!scale.some(n=>Math.abs(n-x.size)<.02));},mode==='projeção');
  assert.deepEqual(offScale,[],`${p} fora da escala: ${JSON.stringify(offScale)}`);
  }
  }await ctx.close();}
  const roles=new Map();let r4=0;
  for(const row of rows){const template=/narrativas\/(ver|treinar|criar)\//.test(row.page)?'bloco':row.page;for(const role of row.roles){const key=[template,row.width,row.theme,row.mode,role.sig].join('|');if(roles.has(key)&&Math.abs(roles.get(key)-role.fs)>.02)r4++;roles.set(key,role.fs);}}
  assert.equal(r4,0,'R4: tamanhos diferentes no mesmo molde');
- for(const p of pages)for(const width of [390,1366])console.log(`${p} | ${width}px | claro/escuro, normal/dobras abertas | R1=0 R2=0 R3=0 R4=0 R5=0 | escala conforme`);
+ for(const p of pages)for(const width of [390,1366])console.log(`${p} | ${width}px | claro/escuro, normal/dobras abertas/projeção | R1=0 R2=0 R3=0 R4=0 R5=0 | escala conforme`);
  if(process.env.HIERARQUIA_SAIDA)fs.writeFileSync(process.env.HIERARQUIA_SAIDA,JSON.stringify(rows,null,2));
  }finally{await browser.close();server.closeAllConnections();server.close();}
 })().catch(e=>{console.error(e);process.exitCode=1;server.closeAllConnections();server.close();});
