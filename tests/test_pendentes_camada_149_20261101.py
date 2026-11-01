@@ -615,9 +615,29 @@ PENDENTES_CAMADA_149_20261101 = [{'ficheiro': 'm1/licao-m1-f20/index.html',
   'local': 'M4 guião: C11 sai do complemento',
   'antigo': 'Os peixes em ordem (a segunda parte do texto), alegoria ou comparação',
   'novo': 'Alegoria ou comparação',
+  'ocorrencias': 1},
+ {'ficheiro': 'm4/aulas/aula-01/index.html',
+  'local': 'M4 guião: lista de 13',
+  'antigo': 'Os 12 cartões da aula',
+  'novo': 'Os 13 cartões da aula',
+  'ocorrencias': 1},
+ {'ficheiro': 'm4/aulas/aula-01/index.html',
+  'local': 'M4 guião: fecho 13',
+  'antigo': 'Fechar</small><small>cartão 12',
+  'novo': 'Fechar</small><small>cartão 13',
+  'ocorrencias': 1},
+ {'ficheiro': 'm4/aulas/aula-01/index.html',
+  'local': 'M4 guião: leitura e produção',
+  'antigo': 'Escrever</small><small>cartão 11',
+  'novo': 'Escrever</small><small>cartões 11 e 12',
+  'ocorrencias': 1},
+ {'ficheiro': 'm4/aulas/aula-01/index.html',
+  'local': 'M4 guião: pergunta do arco',
+  'antigo': '«Agora, em papel»:',
+  'novo': 'A pergunta sobre a atenção dos peixes e «Agora, em papel»:',
   'ocorrencias': 1}]
 
-LIMITE_149_20261101 = frozenset([('m1/licao-m1-f20/index.html', 'M1-F20 C14'), ('m4/licao-m4-f01/index.html', 'M4-F01 C11'), ('m4/licao-m4-f01/index.html', 'M4-F01 C18'), ('m4/recursos/tpc-entrada.js', 'M4-F28 C03'), ('m4/recursos/tpc-entrada.js', 'M4-F28 C05'), ('m6/licao-m6-f01/index.html', 'M6-F01 C08'), ('m7/licao-m7-f34/index.html', 'M7-F34 C09'), ('m7/licao-m7-f34/index.html', 'M7-F34 C31'), ('m8/licao-m8-f12/index.html', 'M8-F12 C09'), ('m8/licao-m8-f12/index.html', 'M8-F12 C17'), ('m8/licao-m8-f12/index.html', 'M8-F12 C22'), ('m9/recursos/f13.js', 'M9-F13 C02'), ('m9/recursos/f13.js', 'M9-F13 C10'), ('m9/recursos/f13.js', 'M9-F13 C21'), ('m9/recursos/f13.js', 'M9-F13 C23'), ('tarefas/m4-u1/aquecimento/index.html', 'A-M4 C05'), ('exame/provas/2026-1f/grupo-i/index.html', 'E-2026-I C34'), ('docs/pedagogia/aquecimentos/m4-u1.json', 'A-M4 fonte do gerador'), ('scripts/provas/dados/2026-1f/grupo-i.json', 'E-2026-I fonte do gerador'), ('m4/index.html', 'M4 unidade 1: prova esperada'), ('m4/index.html', 'M4 unidade 2: prova esperada'), ('m4/index.html', 'M4 unidade 3: prova esperada'), ('m4/index.html', 'M4 prova: peça de fecho'), ('m4/aulas/aula-01/index.html', 'M4 guião: contagem'), ('m9/painel-m9-f13/index.html', 'M9 medição: procedimento e rubrica'), ('m9/painel-m9-f13/index.html', 'M9 medição: impressão e noindex'), ('m4/aulas/aula-01/index.html', 'M4 guião: complementos'), ('m4/aulas/aula-01/index.html', 'M4 guião: C11 no núcleo'), ('m4/aulas/aula-01/index.html', 'M4 guião: C11 sai do complemento')])
+LIMITE_149_20261101 = frozenset([('m1/licao-m1-f20/index.html', 'M1-F20 C14'), ('m4/licao-m4-f01/index.html', 'M4-F01 C11'), ('m4/licao-m4-f01/index.html', 'M4-F01 C18'), ('m4/recursos/tpc-entrada.js', 'M4-F28 C03'), ('m4/recursos/tpc-entrada.js', 'M4-F28 C05'), ('m6/licao-m6-f01/index.html', 'M6-F01 C08'), ('m7/licao-m7-f34/index.html', 'M7-F34 C09'), ('m7/licao-m7-f34/index.html', 'M7-F34 C31'), ('m8/licao-m8-f12/index.html', 'M8-F12 C09'), ('m8/licao-m8-f12/index.html', 'M8-F12 C17'), ('m8/licao-m8-f12/index.html', 'M8-F12 C22'), ('m9/recursos/f13.js', 'M9-F13 C02'), ('m9/recursos/f13.js', 'M9-F13 C10'), ('m9/recursos/f13.js', 'M9-F13 C21'), ('m9/recursos/f13.js', 'M9-F13 C23'), ('tarefas/m4-u1/aquecimento/index.html', 'A-M4 C05'), ('exame/provas/2026-1f/grupo-i/index.html', 'E-2026-I C34'), ('docs/pedagogia/aquecimentos/m4-u1.json', 'A-M4 fonte do gerador'), ('scripts/provas/dados/2026-1f/grupo-i.json', 'E-2026-I fonte do gerador'), ('m4/index.html', 'M4 unidade 1: prova esperada'), ('m4/index.html', 'M4 unidade 2: prova esperada'), ('m4/index.html', 'M4 unidade 3: prova esperada'), ('m4/index.html', 'M4 prova: peça de fecho'), ('m4/aulas/aula-01/index.html', 'M4 guião: contagem'), ('m9/painel-m9-f13/index.html', 'M9 medição: procedimento e rubrica'), ('m9/painel-m9-f13/index.html', 'M9 medição: impressão e noindex'), ('m4/aulas/aula-01/index.html', 'M4 guião: complementos'), ('m4/aulas/aula-01/index.html', 'M4 guião: C11 no núcleo'), ('m4/aulas/aula-01/index.html', 'M4 guião: C11 sai do complemento'), ('m4/aulas/aula-01/index.html', 'M4 guião: lista de 13'), ('m4/aulas/aula-01/index.html', 'M4 guião: fecho 13'), ('m4/aulas/aula-01/index.html', 'M4 guião: leitura e produção'), ('m4/aulas/aula-01/index.html', 'M4 guião: pergunta do arco')])
 
 # 01/11/2026: as cópias serão atualizadas juntamente com a lição, sem dispensar a comparação atual.
 PENDENTES_DESAFIO_M8_20261101 = [
