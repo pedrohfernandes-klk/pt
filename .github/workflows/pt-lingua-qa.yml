@@ -22,5 +22,4 @@ jobs:
           python -m unittest discover -s tests -p 'test_task_routes_closure.py' -v
           python -m unittest discover -s tests -p 'test_module_layout.py' -v
           python -m unittest discover -s tests -p 'test_task_aquecimentos.py' -v
-          # 01/11/2026: conferir a camada antiga depois de desfazer os conteúdos aprovados.
-          python scripts/aplicar_trocas.py scripts/lingua_pessoa_m7_20261030.json --manifesto tests/fixtures/lingua-pessoa-m7-edits-20261030.json --verificar --desfazer-antes tests/fixtures/conteudos-lote1-edits-20261101.json
+          python scripts/aplicar_trocas.py scripts/lingua_pessoa_m7_20261030.json --manifesto tests/fixtures/lingua-pessoa-m7-edits-20261030.json --verificar

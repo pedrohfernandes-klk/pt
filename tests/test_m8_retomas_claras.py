@@ -14,8 +14,7 @@ class RetomasClaras(unittest.TestCase):
         self.assertEqual(len(c),22)
         self.assertEqual(c[9]['t'],'vf');self.assertFalse(c[9]['v'])
         self.assertIn('poeta',c[9]['p']);self.assertIn('editora',c[9]['p2'])
-        # 01/11/2026: o material da retoma continua antes da ação de ligar as lentes.
-        self.assertIn('inventado',c[0]['html'])
+        self.assertIn('inventado',c[1]['html'])
         self.assertEqual([x['c'] for x in c[19]['lacunas']],[0,0])
         self.assertEqual(c[19]['lacunas'][0]['o'][0],'A editora')
         self.assertEqual(c[19]['lacunas'][1]['o'][0],'a poeta ou a editora')
