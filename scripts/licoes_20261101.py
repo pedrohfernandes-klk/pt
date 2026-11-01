@@ -219,3 +219,6 @@ lesson('m8-f15', 'A autora não é o poema', 1, 'm8-f14',
 # 01/11/2026: revisão dos cartões segundo a adenda do docente.
 from revisao_licoes_20261101 import aplicar
 aplicar(LESSONS)
+
+from imagens_licoes_20261101 import aplicar_imagens
+aplicar_imagens(LESSONS)
