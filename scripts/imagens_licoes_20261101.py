@@ -20,9 +20,9 @@ IMAGENS = {
 }
 
 USOS = {
- 'm8-f13': ('eugenio', 'O retrato identifica o autor. A voz da despedida terá de ser interpretada no poema; a imagem não comprova um episódio da sua vida.'),
- 'm8-f14': ('amaral', 'Esta fotografia identifica a autora em contexto público. A cena doméstica do poema pertence a outro plano de prova.'),
- 'm8-f15': ('amaral', 'Um rosto e uma ocasião pública identificam a autora; não identificam automaticamente quem fala em cada poema.'),
+ 'm8-f13': ('eugenio', 'Eugénio de Andrade, num retrato pintado por Bottelho em 2010.'),
+ 'm8-f14': ('amaral', 'Ana Luísa Amaral na Feira do Livro de Gotemburgo, em 2013.'),
+ 'm8-f15': ('amaral', 'Ana Luísa Amaral na Feira do Livro de Gotemburgo, em 2013. A fotografia documenta esta presença pública.'),
  'm9-f14': ('piranesi', 'A escala das figuras humanas permite comparar dimensão e grandeza. A gravura representa a basílica, não a miniatura do rei nem a cena do romance.'),
 }
 
