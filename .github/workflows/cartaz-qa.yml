@@ -30,4 +30,16 @@ jobs:
       - run: node tests/hierarquia-cartaz.cjs
       # 01/11/2026: família dos índices, antes/depois, estados, acessibilidade e impressão.
       - run: node tests/browser_cartaz_indices.cjs
+        env:
+          CARTAZ_INDICES_OUTPUT: ${{ runner.temp }}/cartaz-indices
       - run: node tests/browser_cartaz_indices_contracts.cjs
+        if: ${{ !cancelled() }}
+        env:
+          CARTAZ_INDICES_OUTPUT: ${{ runner.temp }}/cartaz-indices
+      # 01/11/2026: provas de revisão fora das páginas publicadas.
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: cartaz-indices-antes-depois
+          path: ${{ runner.temp }}/cartaz-indices
+          retention-days: 30
