@@ -127,6 +127,8 @@ def licao(nome):
     29/10/2026: a pasta do módulo sai do nome da lição (licao-m1-…, licao-m7-…).
     """
     s=(ROOT/nome.split('-')[1]/nome/'index.html').read_text('utf-8')
+    # 01/11/2026: a barra com espaços é separador de versos; não se omite texto entre eles.
+    s = s.replace(' / ', ' ')
     return re.sub(r'\s+',' ',html.unescape(re.sub(r'<[^>]+>|\\n',' ',s)))+' '+html.unescape(s)
 
 
@@ -228,9 +230,8 @@ class Grelhas(unittest.TestCase):
             dados=json.dumps(DADOS['tarefas'][slug],ensure_ascii=False)
             for nome,na_licao,na_grelha in citacoes:
                 with self.subTest(tarefa=slug,licao=nome,citacao=na_licao):
-                    # 31/10/2026: a barra separa versos na grelha; confere cada verso na fonte.
-                    for verso in na_licao.split(" / "):
-                        self.assertTrue(verso in licao(nome), f"{slug}: {nome}: {verso}")
+                    # 01/11/2026: os versos têm de ser seguidos.
+                    self.assertRegex(licao(nome), r'\s+'.join(map(re.escape, na_licao.split(' / '))), f'{slug}: {nome}')
                     if na_grelha:self.assertIn(na_grelha,dados)
 
     def test_m7_u3_exemplos_noutro_tema(self):

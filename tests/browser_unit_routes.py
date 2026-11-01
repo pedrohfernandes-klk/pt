@@ -56,8 +56,8 @@ def main():
                             assert set(captured['ids']).issubset(unit['lessons']), (m, n, captured)
                             # Inspect the full preserved input pool, not a probabilistic sample.
                             assert set(captured['bank']) == set(unit['lessons']), (m, n, captured)
-                            # 01/11/2026: M8/M9 mantêm a chave histórica do main, tal como M4.
-                            prefix = 'desafio-' if m in (4,8,9) else 'desafio-unidade-v2-'
+                            # 01/11/2026: M5, M6, M8 e M9 mantêm a chave do main (K0="desafio-").
+                            prefix = 'desafio-' if m in (4, 5, 6, 8, 9) else 'desafio-unidade-v2-'
                             assert captured['key'] == f'{prefix}M{m}-u{n}'
                         # 28/10/2026 (revisão do PR #124): a âncora antiga #desafio-unidade-N (fim da M2-F09,
                         # congelada) aponta para o arquivo escondido; fora do arquivo leva à aula de tarefa da
