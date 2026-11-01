@@ -47,7 +47,6 @@ TRABALHADORES = 6
 # dessa classe); em R5, o título e o texto. Os seletores são os da medição (etiqueta, #id e até três classes).
 CONGELADA = ('página congelada (gerada fora do repositório): corrige-se numa camada nova de trocas literais '
              '(scripts/aplicar_trocas.py), depois do #144 e do #145, que ocupam a camada mais recente')
-EXAME_147 = 'corrige-se no #147 (exame: títulos na ordem certa); quando o #147 entrar, sai daqui'
 OBRAS = CONGELADA + ('; troca prevista em cada uma das 15 páginas das obras: «.ob h2{font:700 .78rem/1.2» passa a '
                      '«.ob h2{font:700 1.25rem/1.2» (20 px, acima dos h3 de 17,3 px)')
 AGUA = CONGELADA + ('; troca prevista: «<span class="agua">escolha</span>» passa a '
@@ -70,10 +69,7 @@ PENDENTES_20261101 = (
     ('R1', 'obras/sermao/index.html', UMA, 'h2#ouvir', 'h3', OBRAS),
     # a palavra de marca de água «escolha» é decorativa, mas sem aria-hidden="true" conta como antetítulo
     ('R2', 'm2/gram-subordinadas/index.html', UMA, 'span.agua', 'h1', AGUA),
-    # entrada do exame
-    ('R1', 'exame/index.html', (4, 4), 'h2', 'h3', EXAME_147),
-    ('R2', 'exame/index.html', UMA, 'p.eyebrow', 'h2#provas-porta-t', EXAME_147),
-    ('R3', 'exame/index.html', (2, 2), 'p.eyebrow', '', EXAME_147),
+    # 01/11/2026: os três casos da entrada do exame saem da lista, porque o #147 entrou no main (4826aab) e os corrigiu.
 )
 
 # Copiada letra a letra de medir-hierarquia.js (01/11/2026, decisão 61): a mesma função mede no relatório e aqui.
