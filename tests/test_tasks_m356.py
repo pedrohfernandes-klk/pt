@@ -43,8 +43,42 @@ class TasksM356(unittest.TestCase):
             guia = (ROOT / f'm{m}/guia-da-tarefa-m{m}/index.html').read_text('utf-8')
             for errado in ('#5c5a60', '#607a24', 'rgba(260,260,260,.15)', '.bloco.feito{opacity:.60}'):
                 self.assertNotIn(errado, guia)
-            self.assertIn('#arquivo-producoes>summary{min-height:44px', guia)
-            self.assertIn('#arquivo-producoes>summary{min-height:88px', guia)
+            # 01/11/2026: 44 px é o alvo do sistema; 88 px abria uma faixa vazia
+            self.assertIn('#arquivo-producoes>summary{display:flex;gap:.6rem;align-items:center;list-style:none;'
+                          'cursor:pointer;padding:.75rem 0;min-height:44px;font:700 .9rem/1.4 Arial,sans-serif}'
+                          '#arquivo-producoes>summary::-webkit-details-marker{display:none}', guia)
+            self.assertNotIn('min-height:88px', guia)
+
+    # 01/11/2026: o número de aulas do «Neste módulo» conta os passos da unidade, como no M1 e no M7.
+    def test_neste_modulo_conta_os_passos(self):
+        for m in (3, 5, 6):
+            s = (ROOT / f'm{m}/index.html').read_text('utf-8')
+            U, _ = json.JSONDecoder().raw_decode(s[s.find('U=[') + 2:])
+            aulas = [int(n) for n in re.findall(r'<small>(\d+) aulas de leitura/preparação', s)]
+            self.assertEqual(aulas, [len(u['passos']) for u in U])
+
+    # 01/11/2026: o número de aulas do índice é o número de li[data-passo] da unidade
+    def test_neste_modulo_igual_aos_passos_do_percurso_m1_a_m7(self):
+        for m in range(1, 8):
+            s = (ROOT / f'm{m}/index.html').read_text('utf-8')
+            aulas = [int(n) for n in re.findall(r'<small>(\d+) aulas de leitura/preparação', s)]
+            passos = []
+            for u in range(1, len(aulas) + 1):
+                inicio = s.index(f'<section class="unidade" data-u="{u}">')
+                fim = s.index('</ol>', s.index('<ol class="passos">', inicio))
+                passos.append(len(re.findall(r'<li\b[^>]*\bdata-passo=', s[inicio:fim])))
+            self.assertTrue(aulas, m)
+            self.assertNotIn(f'<section class="unidade" data-u="{len(aulas) + 1}">', s)
+            self.assertEqual(aulas, passos, f'M{m}')
+
+    # 01/11/2026: o <style> dos nove guias é idêntico
+    def test_estilo_dos_nove_guias_identico(self):
+        estilos = []
+        for m in range(1, 10):
+            guia = (ROOT / f'm{m}/guia-da-tarefa-m{m}/index.html').read_text('utf-8')
+            estilos.append(re.search(r'<style>(.*?)</style>', guia, re.S)[1])
+        self.assertEqual(len(estilos), 9)
+        self.assertEqual(len(set(estilos)), 1)
 
     def test_camada_literal_aplicada_e_reversivel(self):
         r = subprocess.run([sys.executable, 'scripts/aplicar_trocas.py',
