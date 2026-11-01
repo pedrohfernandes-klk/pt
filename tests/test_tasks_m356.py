@@ -34,6 +34,18 @@ class TasksM356(unittest.TestCase):
                 self.assertIn(f'../../tarefas/m{m}-u{u}/', portfolio)
             self.assertNotIn(f'M{m}_Tarefa3', portfolio)
 
+    # 01/11/2026: nenhum texto entre a barra e header.topo no percurso do módulo.
+    def test_abertura_e_guias_sem_corrupcao_css(self):
+        for m in (3, 5, 6):
+            s = (ROOT / f'm{m}/index.html').read_text('utf-8')
+            self.assertGreater(s.find('class="avaliacao-tarefas"'), s.find('<h1'))
+            self.assertIn('Cada unidade termina na sua aula de tarefa', s)
+            guia = (ROOT / f'm{m}/guia-da-tarefa-m{m}/index.html').read_text('utf-8')
+            for errado in ('#5c5a60', '#607a24', 'rgba(260,260,260,.15)', '.bloco.feito{opacity:.60}'):
+                self.assertNotIn(errado, guia)
+            self.assertIn('#arquivo-producoes>summary{min-height:44px', guia)
+            self.assertIn('#arquivo-producoes>summary{min-height:88px', guia)
+
     def test_camada_literal_aplicada_e_reversivel(self):
         r = subprocess.run([sys.executable, 'scripts/aplicar_trocas.py',
                             'scripts/tarefas_m356_20261031.json', '--manifesto',

@@ -1,212 +1,212 @@
 {
-  "slug": "m8-u1",
-  "modulo": "m8",
-  "unidade": 1,
-  "versao": "1",
-  "momento": "No início da aula de tarefa",
-  "titulo": "Comparar sem colar dois resumos",
-  "descricao": "Dez minutos para treinar leitura, fundamentação e revisão com exemplos inventados.",
-  "licoes_das_citacoes": [
-    "m8/licao-m8-f03",
-    "m8/licao-m8-f06",
-    "m8/licao-m8-f10"
+ "slug": "m8-u1",
+ "modulo": "m8",
+ "unidade": 1,
+ "versao": "1",
+ "momento": "No início da aula de tarefa",
+ "titulo": "Comparar sem colar dois resumos",
+ "descricao": "Dez minutos para treinar leitura, fundamentação e revisão com exemplos inventados.",
+ "licoes_das_citacoes": [
+  "m8/licao-m8-f03",
+  "m8/licao-m8-f06",
+  "m8/licao-m8-f10"
+ ],
+ "menu": [
+  [
+   "../../../m8/licao-m8-f03/",
+   "Relembrar F03, Jorge de Sena, poeta testemunha"
   ],
-  "menu": [
-    [
-      "../../../m8/licao-m8-f03/",
-      "Relembrar F03"
-    ],
-    [
-      "../../../m8/licao-m8-f06/",
-      "Relembrar F06"
-    ],
-    [
-      "../../../m8/licao-m8-f10/",
-      "Relembrar F10"
-    ]
+  [
+   "../../../m8/licao-m8-f06/",
+   "Relembrar F06, verbos que duram, palavras que apontam"
   ],
-  "reservadas": [
-    "Adeus",
-    "tigela"
-  ],
-  "cartoes": [
-    {
-      "t": "ler",
-      "rot": "Abre",
-      "titulo": "Comparar sem colar dois resumos",
-      "html": "<p>Dez minutos com consulta, sem nota. Os exemplos foram inventados para treinar operações de leitura e escrita; não dão as respostas da tarefa.</p><p>Dois textos inventados: A. A janela bebe a manhã. B. A janela mede a manhã. São duas imagens criadas para este aquecimento, não versos de um autor estudado.</p>"
-    },
-    {
-      "t": "escolha",
-      "p": "Que diferença merece ser explicada?",
-      "p2": "Que relação compara uma escolha concreta?",
-      "o": [
-        "Beber e medir dão gestos distintos à janela.",
-        "Beber e medir provam autores sempre rivais.",
-        "Beber e medir fixam a idade real da janela."
-      ],
-      "c": 0,
-      "f": "A comparação incide nos verbos e no tipo de relação com a manhã; ainda tens de explicar o efeito.",
-      "fe": [
-        null,
-        "Os autores destes exemplos não são objeto de uma disputa.",
-        "Uma escolha verbal não indica a idade de um objeto."
-      ],
-      "g": "1"
-    },
-    {
-      "t": "emparelhar",
-      "p": "Liga cada função ao elemento do caso.",
-      "p2": "Que elemento observa, interpreta ou limita?",
-      "pares": [
-        [
-          "Pormenor",
-          "o verbo escolhido"
-        ],
-        [
-          "Efeito possível",
-          "o modo de sentir o tempo"
-        ],
-        [
-          "Comparação",
-          "a relação entre os dois efeitos"
-        ]
-      ],
-      "f": "Uma interpretação precisa de observação e de uma relação explicada. Mantém distintas as funções.",
-      "fe": "Volta ao caso: uma coisa é observar, outra é concluir ou propor.",
-      "g": "2"
-    },
-    {
-      "t": "rever",
-      "p": "Revê a conclusão para a ajustar ao caso.",
-      "p2": "Que substituição evita afirmar mais do que o exemplo permite?",
-      "apoio": "Dois textos inventados: A. A janela bebe a manhã. B. A janela mede a manhã. São duas imagens criadas para este aquecimento, não versos de um autor estudado.",
-      "frase": "Os dois textos tratam a janela de modo igual.",
-      "trecho": "de modo igual",
-      "o": [
-        "com gestos diferentes",
-        "sem qualquer diferença",
-        "com idêntico movimento"
-      ],
-      "c": 0,
-      "f": "A revisão ajusta a conclusão aos elementos disponíveis e conserva uma frase completa.",
-      "fe": [
-        null,
-        "Bebe e mede atribuem ações diferentes à janela. A ausência de diferença apaga essa escolha.",
-        "Um movimento idêntico não distingue a absorção sugerida por bebe da medição sugerida por mede."
-      ],
-      "g": "3"
-    },
-    {
-      "t": "vf",
-      "p": "Dar nome a um recurso basta para explicar o seu efeito.",
-      "p2": "Uma classificação, sem contexto, já fundamenta a leitura?",
-      "v": false,
-      "f": "O nome classifica; a explicação mostra o que a escolha faz neste contexto.",
-      "fe": "Volta ao pormenor e pergunta que diferença faz para quem lê.",
-      "g": "4"
-    },
-    {
-      "t": "ordenar",
-      "p": "Ordena um percurso de revisão.",
-      "p2": "Que sequência permite testar uma interpretação?",
-      "passos": [
-        "Localizar um pormenor no texto.",
-        "Explicar o efeito desse pormenor.",
-        "Confrontar a explicação com o contexto."
-      ],
-      "f": "Localizas, explicas e testas. Podes voltar atrás se o contexto contrariar a hipótese.",
-      "fe": "Não confirmes uma leitura antes de a confrontares com aquilo que o texto mostra.",
-      "g": "5"
-    },
-    {
-      "t": "escolha",
-      "p": "Que comentário ajuda a melhorar uma resposta?",
-      "p2": "Que pedido exige uma relação verificável?",
-      "o": [
-        "Explica como o pormenor sustenta a leitura.",
-        "Afirma que a leitura é sempre a mais bonita.",
-        "Repete que o autor escreveu muitos textos."
-      ],
-      "c": 0,
-      "f": "O comentário pede uma relação entre prova e conclusão, em vez de elogio ou informação lateral.",
-      "fe": [
-        null,
-        "A preferência não substitui a justificação.",
-        "A quantidade de textos do autor não prova esta leitura."
-      ],
-      "g": "6"
-    },
-    {
-      "t": "completar",
-      "p": "Completa a revisão do argumento.",
-      "p2": "Que palavras articulam prova e limite?",
-      "frase": "Um indício ajuda a [1] uma leitura, mas não permite [2] todas as alternativas.",
-      "lacunas": [
-        {
-          "o": [
-            "sustentar",
-            "disfarçar",
-            "substituir"
-          ],
-          "c": 0
-        },
-        {
-          "o": [
-            "acolher",
-            "excluir",
-            "registar"
-          ],
-          "c": 1
-        }
-      ],
-      "f": "O indício dá fundamento. Para excluir uma alternativa, precisas de a confrontar com o contexto.",
-      "fe": "Distingue dar apoio a uma hipótese de eliminar automaticamente todas as outras.",
-      "g": "7"
-    },
-    {
-      "t": "vf",
-      "p": "Uma objeção pertinente pode obrigar a limitar a tua conclusão.",
-      "p2": "Responder a uma dificuldade pode tornar a posição menos absoluta?",
-      "v": true,
-      "f": "Responder não exige manter tudo igual: podes precisar melhor as condições da tua posição.",
-      "fe": "A revisão serve para tornar a posição defensável, não para a repetir sem mudança.",
-      "g": "8"
-    },
-    {
-      "t": "escolha",
-      "p": "Que fonte de informação permite conferir o indício?",
-      "p2": "Onde regressas para verificar a tua interpretação?",
-      "o": [
-        "À passagem e ao contexto que a acompanha.",
-        "À popularidade de quem dá a interpretação.",
-        "À quantidade de vezes que repetes a ideia."
-      ],
-      "c": 0,
-      "f": "É no texto e no contexto que a hipótese se testa; a repetição e a popularidade não são provas.",
-      "fe": [
-        null,
-        "Ser popular não garante rigor de leitura.",
-        "Repetir a hipótese não acrescenta evidência."
-      ],
-      "g": "9"
-    },
-    {
-      "t": "sublinhar",
-      "p": "Toca na palavra que limita a certeza da conclusão.",
-      "p2": "Que palavra apresenta a afirmação como hipótese?",
-      "frase": "Este gesto talvez indique uma hesitação.",
-      "certas": [
-        2
-      ],
-      "f": "Talvez assinala uma possibilidade. A hipótese tem de ser sustentada e pode ser revista.",
-      "fe": "Procura a palavra que admite que a conclusão não está garantida.",
-      "g": "10"
-    },
-    {
-      "t": "ler",
-      "rot": "Para levar",
-      "html": "<p>Na tarefa, escolhe as tuas passagens. Localiza, explica e revê: os exemplos deste aquecimento não são um texto para copiares.</p><p><a href=\"../\">Abrir a aula de tarefa</a></p>"
-    }
+  [
+   "../../../m8/licao-m8-f10/",
+   "Relembrar F10, poema com pintura ou álbum"
   ]
+ ],
+ "reservadas": [
+  "Adeus",
+  "tigela"
+ ],
+ "cartoes": [
+  {
+   "t": "ler",
+   "rot": "Abre",
+   "titulo": "Comparar sem colar dois resumos",
+   "html": "<p>Dez minutos com consulta, sem nota. Os exemplos foram inventados para treinar operações de leitura e escrita; não dão as respostas da tarefa.</p><p>Dois textos inventados: A. A janela bebe a manhã. B. A janela mede a manhã. São duas imagens criadas para este aquecimento, não versos de um autor estudado.</p>"
+  },
+  {
+   "t": "escolha",
+   "p": "Nos dois textos inventados, que diferença merece ser explicada?",
+   "p2": "Que diferença entre _bebe_ e _mede_ vale a pena explicar?",
+   "o": [
+    "Beber e medir dão relações distintas ao tempo.",
+    "Beber e medir descrevem horários da mesma rotina.",
+    "Beber e medir narram duas ações físicas da janela."
+   ],
+   "c": 0,
+   "f": "A comparação incide nos verbos e no tipo de relação com a manhã; ainda tens de explicar o efeito.",
+   "fe": [
+    null,
+    "Os verbos criam relações com a manhã, mas não dão horários. Relê a imagem criada sem lhe acrescentar uma rotina.",
+    "A janela não bebe nem mede literalmente. Atribuir-lhe essas ações constrói uma imagem, não relata movimentos físicos."
+   ],
+   "g": "1"
+  },
+  {
+   "t": "emparelhar",
+   "p": "Liga cada função ao elemento do caso.",
+   "p2": "Pormenor, efeito ou comparação? Liga cada um ao caso.",
+   "pares": [
+    [
+     "Pormenor",
+     "o verbo escolhido"
+    ],
+    [
+     "Efeito possível",
+     "o modo de sentir o tempo"
+    ],
+    [
+     "Comparação",
+     "a relação entre os dois efeitos"
+    ]
+   ],
+   "f": "Uma interpretação precisa de observação e de uma relação explicada. Mantém distintas as funções.",
+   "fe": "Volta ao caso: uma coisa é observar, outra é concluir ou propor.",
+   "g": "2"
+  },
+  {
+   "t": "rever",
+   "p": "Revê a conclusão para a ajustar ao caso.",
+   "p2": "Que substituição evita afirmar mais do que o exemplo permite?",
+   "apoio": "Dois textos inventados: A. A janela bebe a manhã. B. A janela mede a manhã. São duas imagens criadas para este aquecimento, não versos de um autor estudado.",
+   "frase": "Os dois textos tratam a janela de modo igual.",
+   "trecho": "de modo igual",
+   "o": [
+    "com gestos diferentes",
+    "sem qualquer diferença",
+    "com idêntico movimento"
+   ],
+   "c": 0,
+   "f": "A revisão ajusta a conclusão aos elementos disponíveis e conserva uma frase completa.",
+   "fe": [
+    null,
+    "Bebe e mede atribuem ações diferentes à janela. A ausência de diferença apaga essa escolha.",
+    "Um movimento idêntico não distingue a absorção sugerida por bebe da medição sugerida por mede."
+   ],
+   "g": "3"
+  },
+  {
+   "t": "vf",
+   "p": "Nos exemplos criados, a janela ocupa a mesma posição na frase, mas recebe ações diferentes.",
+   "p2": "A comparação pode partir da janela comum e distinguir os dois verbos?",
+   "v": true,
+   "f": "A janela é sujeito nas duas frases. _Bebe_ sugere absorção; _mede_ introduz uma relação de medida com a manhã.",
+   "fe": "Confundes uma estrutura comum com um efeito comum. Compara os verbos _bebe_ e _mede_, mantendo a janela.",
+   "g": "4"
+  },
+  {
+   "t": "ordenar",
+   "p": "Ordena uma comparação dos dois exemplos criados.",
+   "p2": "Como passas de dois verbos a uma relação entre os textos?",
+   "passos": [
+    "Observa que a janela recebe os verbos beber e medir.",
+    "Relaciona beber com absorver e medir com delimitar.",
+    "Explica como a manhã passa de experiência a medida."
+   ],
+   "f": "A comparação tem um elemento comum e uma diferença explicada: não termina em dois resumos separados.",
+   "fe": "Não atribuas o efeito antes de distinguir as ações. Regressa aos dois verbos dados à janela.",
+   "g": "5"
+  },
+  {
+   "t": "escolha",
+   "p": "Que continuação explica o contraste entre beber e medir?",
+   "p2": "Que diferença de relação com a manhã é sustentada pelos verbos?",
+   "o": [
+    "A manhã vai de alimento a medida.",
+    "A manhã passa de passado a futuro.",
+    "A manhã passa de janela a pessoa."
+   ],
+   "c": 0,
+   "f": "Alimento é uma associação de _beber_; medida é uma associação de _medir_. São imagens possíveis, não objetos presentes numa cena real.",
+   "fe": [
+    null,
+    "Os verbos estão no presente. A oposição entre passado e futuro não aparece nas duas frases.",
+    "A janela mantém-se nas duas frases. A diferença está na ação que lhe é atribuída, não numa substituição por uma pessoa."
+   ],
+   "g": "6"
+  },
+  {
+   "t": "completar",
+   "p": "Completa a comparação sem atribuir uma intenção ao autor.",
+   "p2": "Que palavras desenvolvem as duas imagens sem trocar o seu sentido?",
+   "frase": "Em A, a janela parece [1] a manhã; em B, parece [2] a sua passagem.",
+   "lacunas": [
+    {
+     "o": [
+      "absorver",
+      "recusar",
+      "esconder"
+     ],
+     "c": 0
+    },
+    {
+     "o": [
+      "delimitar",
+      "esquecer",
+      "cancelar"
+     ],
+     "c": 0
+    }
+   ],
+   "f": "As escolhas prolongam as imagens dos verbos. Explicam o efeito possível sem inventar a biografia de quem escreveu.",
+   "fe": "Relê _bebe_ e _mede_: procura ações próximas desses sentidos, não uma rejeição ou um esquecimento.",
+   "g": "7"
+  },
+  {
+   "t": "vf",
+   "p": "Como os dois exemplos mencionam a manhã, a diferença dos verbos é apenas decorativa.",
+   "p2": "A referência comum à manhã torna dispensável interpretar beber e medir?",
+   "v": false,
+   "f": "A referência é comum, mas os verbos mudam a relação com ela. A semelhança permite localizar a diferença, não apagá-la.",
+   "fe": "Confundes objeto comum com efeito idêntico. Compara uma manhã absorvida com uma manhã medida.",
+   "g": "8"
+  },
+  {
+   "t": "escolha",
+   "p": "A que voltas para conferir a comparação dos exemplos?",
+   "p2": "A que regressas para verificar o efeito que atribuíste à mudança?",
+   "o": [
+    "À relação de bebe e mede com manhã.",
+    "À diferença de tamanho entre frases.",
+    "À posição da janela junto de manhã."
+   ],
+   "c": 0,
+   "f": "Os dois verbos aplicados à manhã sustentam a comparação; a posição ou o tamanho não explicam o contraste semântico.",
+   "fe": [
+    null,
+    "O comprimento não distingue os sentidos. Relê os verbos que ocupam o mesmo lugar nas frases.",
+    "A janela está na mesma posição sintática. É a ação atribuída que muda a relação com a manhã."
+   ],
+   "g": "9"
+  },
+  {
+   "t": "sublinhar",
+   "p": "Na frase criada, toca na palavra que limita a certeza da interpretação.",
+   "p2": "Que palavra mantém como hipótese a interpretação de beber?",
+   "frase": "A janela talvez transforme o tempo em alimento.",
+   "certas": [
+    2
+   ],
+   "f": "_Talvez_ assinala uma probabilidade: a associação entre beber e alimento sustenta a leitura, mas a frase não descreve uma refeição.",
+   "fe": "A palavra pedida admite que a leitura é provável, mas pode ser revista. Não é o nome do objeto nem o verbo que descreve o efeito.",
+   "g": "10"
+  },
+  {
+   "t": "ler",
+   "rot": "Para levar",
+   "html": "<p>Na tarefa, relaciona um indício de cada poema: mostra o que têm em comum e explica a diferença que muda a leitura.</p><p><a href=\"../\">Abrir a aula de tarefa</a></p>"
+  }
+ ]
 }

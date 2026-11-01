@@ -98,7 +98,7 @@
    "t": "ler",
    "rot": "Abre",
    "titulo": "Celebrar e julgar",
-   "html": "<p class=\"abre\"><b>A mesma epopeia que pede um canto do tamanho do mundo acaba a mandar calar a Musa.</b> Este aquecimento não responde à tarefa: treina as operações com outros versos e frases inventadas.</p><div class=\"caixa\"><h3>A tarefa de hoje</h3><p>À mão, com 200 a 250 palavras.</p><p><b>Núcleo.</b> Uma tese sobre o pedido às Tágides (I, 4 e 5) e o «Nô mais» (X, 145), com uma citação de cada; a modalidade de um verso e a palavra que retoma outra.</p><p><b>Tema A.</b> Uma voz-off que para a cena e julga, com «Este». <b>Tema B.</b> O Velho do Restelo, hoje, contra uma partida atual.</p></div><p>Dez minutos, com consulta. Não conta para a nota.</p>"
+   "html": "<p class=\"abre\"><b>A mesma epopeia que pede um canto do tamanho do mundo acaba a mandar calar a Musa.</b> Este aquecimento não responde à tarefa: treina as operações com outros versos e frases inventadas.</p><div class=\"caixa\"><h3>A tarefa de hoje</h3><p>À mão, com 200 a 250 palavras.</p><p><b>Núcleo.</b> Uma tese sobre o pedido às Tágides (I, 4 e 5) e o «Nô mais» (X, 145), com uma citação de cada; a modalidade de um verso e a palavra que retoma outra.</p><p><b>Tema A.</b> Uma voz off que suspende a cena e julga, com «Este». <b>Tema B.</b> O Velho do Restelo, hoje, contra uma partida atual.</p></div><p>Dez minutos, com consulta. Não conta para a nota.</p>"
   },
   {
    "t": "sublinhar",
@@ -109,7 +109,7 @@
    "certas": [
     0
    ],
-   "f": "**Talvez** mede a certeza: modalidade **epistémica**, com valor de possibilidade (lição F15). Na tarefa, dizes a modalidade, o valor e a palavra que a marca.",
+   "f": "_Talvez_ mede a certeza: modalidade epistémica, com valor de probabilidade (lição F15). Na tarefa, dizes a modalidade, o valor e a palavra que a marca.",
    "fe": "Procura a palavra que diz se quem fala tem a certeza do que diz."
   },
   {
@@ -140,13 +140,13 @@
    "p": "Numa reflexão do Poeta, a viagem continua enquanto o narrador julga.",
    "p2": "Quando o Poeta reflete, a ação segue ao mesmo tempo, sem parar.",
    "v": false,
-   "f": "Falso: na reflexão, o narrador **para a ação** e fala em nome próprio para julgar, como em I, 106, que fecha o canto I (lição F13). Num filme, seria uma cena parada com uma voz-off.",
-   "fe": "A lição F13 diz que o narrador para a ação para julgar: enquanto ele julga, a viagem espera."
+   "f": "Falso: na reflexão, o narrador suspende a ação e fala em nome próprio para julgar, como em I, 106, que fecha o canto I (lição F13). Num filme, seria uma cena parada com uma voz off.",
+   "fe": "A lição F13 diz que o narrador suspende a ação para julgar: enquanto ele julga, a viagem espera."
   },
   {
    "t": "escolha",
    "g": "4",
-   "p": "Frase inventada: _O Gama esperou nas naus. Ele não se fiava do Catual._ Como retoma a segunda frase o Gama?",
+   "p": "Frase inventada: _O Gama esperou nas naus. Ele não se fiava do Catual._ Como é que a segunda frase retoma o Gama?",
    "p2": "_O Gama esperou nas naus. Ele não se fiava do Catual._ Que meio de retoma usa a segunda frase?",
    "o": [
     "Por um pronome pessoal, «Ele».",
@@ -208,7 +208,7 @@
     "Gosto mais da estância I, 106 do que de qualquer outra."
    ],
    "c": 0,
-   "f": "A primeira **defende uma leitura** que se pode contestar com versos: é uma tese. A segunda confirma-se no poema, é um facto; a terceira é um gosto, que não se prova. Na tarefa, a tese abre a tua primeira resposta.",
+   "f": "Encolher o homem para engrandecer a viagem é uma leitura que se pode contestar com versos: é uma tese. Que I, 106 fecha o canto I confirma-se no poema, é um facto; preferir uma estância é um gosto, que não se prova. Na tarefa, a tese abre a tua primeira resposta.",
    "fe": [
     null,
     "Confirma-se no poema: é um facto. Ninguém o discute, e uma tese pede argumentos.",

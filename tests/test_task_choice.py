@@ -164,7 +164,10 @@ class ChoiceTasks(unittest.TestCase):
                     self.assertIn(slug, ('m8-u1','m8-u2','m9-u1','m9-u2'))
                     self.assertEqual(urlsplit(href).scheme, 'https')
                     self.assertTrue(urlsplit(href).netloc)
-                    self.assertNotRegex(html.unescape(re.sub(r'<[^>]+>', '', fact)), r'«[^»]+»')
+                    # 01/11/2026: títulos entre aspas são créditos, não excertos; qualquer outra citação continua proibida.
+                    titulos = {'As Palavras', 'Adeus', 'Prece no Mediterrâneo', 'A verdade histórica', 'George'}
+                    citados = re.findall(r'«([^»]+)»', html.unescape(re.sub(r'<[^>]+>', '', fact)))
+                    self.assertTrue(set(citados) <= titulos, citados)
                     continue
                 target = flat((path.parent / href / 'index.html').resolve())
                 text = html.unescape(re.sub(r'<[^>]+>', '', fact))
@@ -187,7 +190,10 @@ class ChoiceTasks(unittest.TestCase):
                     self.assertIn(slug, ('m8-u1','m8-u2','m9-u1','m9-u2'))
                     self.assertEqual(urlsplit(href).scheme, 'https')
                     self.assertTrue(urlsplit(href).netloc)
-                    self.assertNotRegex(html.unescape(re.sub(r'<[^>]+>', '', fact)), r'«[^»]+»')
+                    # 01/11/2026: títulos entre aspas são créditos, não excertos; qualquer outra citação continua proibida.
+                    titulos = {'As Palavras', 'Adeus', 'Prece no Mediterrâneo', 'A verdade histórica', 'George'}
+                    citados = re.findall(r'«([^»]+)»', html.unescape(re.sub(r'<[^>]+>', '', fact)))
+                    self.assertTrue(set(citados) <= titulos, citados)
                     continue
                 target = flat((path.parent / href / 'index.html').resolve())
                 for name in re.findall(r'«([^»]+)»', text):

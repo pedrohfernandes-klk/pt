@@ -183,6 +183,8 @@ def pagina(raiz, d):
         '<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">'
         f'<title>Aquecer · {escape(simples, quote=False)} · {M}</title>'
         f'<meta name="description" content="{escape(d["descricao"])}">'
+        '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;display=swap">'
+        '<style>.jogo .tit{text-wrap:balance}</style>'
         '<link rel="stylesheet" href="../../../assets/pt-lessons/lesson.css">'
         '<script defer src="../../../assets/pt-lessons/casca.js"></script>'
         f'<script defer src="../../../assets/pt-lessons/jogo.js?v={V_JOGO}"></script>'

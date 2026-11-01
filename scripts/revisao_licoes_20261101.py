@@ -30,7 +30,7 @@ REVISOES = {
   ordem_p='Ordena a transformação do incidente numa reflexão sobre valor e história.'),
  'm8-f15': dict(
   recuperar=('Recupera a distinção das leituras anteriores: uma declaração da autora e uma fala do sujeito poético pertencem ao mesmo plano de prova?',False,
-             'Confundir testemunho público e voz poética troca a natureza da fonte. Regressa à F05: a voz do poema é construída; uma declaração pública deve ser atribuída à pessoa e à ocasião em que foi feita.'),
+             'Confundir testemunho público e voz poética troca a natureza da fonte. Regressa a «Ana Luísa Amaral: reescrever a tradição»: a voz do poema é construída; uma declaração pública deve ser atribuída à pessoa e à ocasião em que foi feita.'),
   modelo='A reportagem apresenta uma autora e uma obra em contexto público. Essa informação pode orientar uma pergunta ao poema. Só a leitura do poema permite demonstrar o funcionamento de uma imagem.',
   limite='Contraexemplo à equivalência entre reportagem e poema: um texto jornalístico pode informar sobre uma publicação sem conter a voz que fala no poema. Critério: cada afirmação precisa de uma fonte que possa sustentá-la.',
   pista='Pergunta se a afirmação diz respeito à pessoa, à publicação ou à construção de uma voz. Procura a fonte adequada a esse plano.',
@@ -67,8 +67,8 @@ REVISOES = {
  'm9-f16': dict(
   recuperar=('Recupera a leitura do trabalho na F05: identificar quem executa uma ação permite, por si só, determinar a duração dessa ação?',False,
              'Confundir o agente com o recorte temporal mistura perguntas diferentes. Regressa à F05 para identificar quem trabalha; agora será necessário observar as formas verbais e os marcadores para estudar a duração.'),
-  modelo='No exemplo criado, trabalhava apresenta uma situação em curso e cedeu introduz uma ocorrência. A relação produz interrupção. O tempo verbal, sozinho, não determina a responsabilidade pelo acontecimento.',
-  limite='Contraexemplo à regra de que uma ação concluída é breve: trabalhou durante três anos apresenta uma longa duração como um todo. Critério: duração e modo de apresentar a ação são dimensões diferentes.',
+  modelo='No exemplo criado, «trabalhava» apresenta uma situação em curso e «cedeu» introduz uma ocorrência. A relação produz interrupção. O tempo verbal, sozinho, não determina a responsabilidade pelo acontecimento.',
+  limite='Contraexemplo à regra de que uma ação concluída é breve: «trabalhou durante três anos» apresenta uma longa duração como um todo. Critério: duração e modo de apresentar a ação são dimensões diferentes.',
   pista='Conserva o acontecimento e compara apenas a maneira de o apresentar. Os complementos delimitam a ação ou indicam repetição?',
   prova='Que palavra distingue uma ocorrência situada dentro da ação de duas ações sem relação explicitada?',
   ordem=['O trabalho é apresentado enquanto decorre','Uma ocorrência interrompe a ação individual','A continuidade da obra contrasta com a perda','A relação temporal não demonstra responsabilidade'],
@@ -120,26 +120,19 @@ def aplicar(bancos, revisoes=REVISOES):
             continue
         d=revisoes[item['id']];cards=item['cards']
         # Todos os cartões permanecem no núcleo integral, incluindo a recuperação.
-        cards[0]['html']='<p class="abre">'+escape(item['question'])+'</p>'+cards[0]['html']
+        cards[0]['html']='<p class="abre"><strong>'+escape(item['question'])+'</strong></p>'+cards[0]['html']
         cards[6]['html'] += '<p><strong>Modelo completo.</strong> '+d['modelo']+'</p>'
         cards[12]['html'] += '<p>'+d['limite']+'</p><details class="apoio"><summary>Uma pista, se precisares</summary><p>'+d['pista']+'</p><p>Consultar esta ajuda não altera o teu progresso.</p></details>'
         cards[9]['p']=d['prova']
         cards[16]['p']=d['ordem_p'];cards[16]['passos']=d['ordem']
-        cards[16]['f']='A sequência liga os pormenores à interpretação e conserva o seu limite. Relê o modelo e o contraexemplo: '+d['pista']
+        cards[16]['f']='A sequência liga os pormenores à interpretação e conserva o seu limite.'
         for index,options in d.get('escolhas',{}).items():
             cards[index]['o']=options
         for index,feedback in d.get('retornos',{}).items():
             cards[index]['f']=feedback
-        for index,prompt in d.get('perguntas',{}).items():
-            cards[index]['p']=prompt
-        # O retorno identifica a confusão já descrita no banco e delimita a releitura.
-        for i,c in enumerate(cards):
-            if c['t']=='ler':continue
-            anchor=2 if i<6 else 6 if i<12 else 12
-            c['f']+=' Relê o cartão «'+cards[anchor]['titulo']+'» e confronta a pista com a tua resposta.'
         p,value,feedback=d['recuperar']
         recall=cards.pop(18)
-        recall.update(p='Antes de reler. '+p,v=value,f=feedback+' Relê essa distinção na lição anterior depois de tentares responder.')
+        recall.update(p='Antes de reler. '+p,v=value,f=feedback)
         cards.insert(1,recall)
         cards[-1]['html']='<p class="levar">'+escape(item['question'])+'</p><p>Responde oralmente com uma passagem que sustente a tua leitura e outra que a limite. Explica o critério que te permite distingui-las. Podes manter a leitura inicial, se mostrares por que razão resiste ao confronto.</p>'
         item['tentativa']=dict(automaticas=14,producao_oral=1,escrita_livre=0,selecionadas=0,variantes_p2=0)

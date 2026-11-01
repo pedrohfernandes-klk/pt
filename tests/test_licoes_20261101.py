@@ -94,7 +94,22 @@ class NewLessons(unittest.TestCase):
             self.assertIn(item['question'],item['cards'][-1]['html'])
             self.assertIn('outra que a limite',item['cards'][-1]['html'])
             self.assertTrue(any('<details class="apoio">' in c.get('html','') for c in item['cards']))
-            self.assertTrue(all('Relê' in c['f'] or 'relê' in c['f'] or 'Regressa' in c['f'] for c in item['cards'] if c['t']!='ler'))
+            # 01/11/2026: a releitura é delimitada por alternativa, sem exigir a frase-molde retirada.
+            for card in item['cards']:
+                self.assertNotIn('confronta a pista com a tua resposta',card.get('f',''))
+                if card['t']=='escolha':
+                    self.assertEqual(len(card['fe']),len(card['o']))
+                    self.assertEqual(len(set(card['fe'])),len(card['o']))
+                    for i,feedback in enumerate(card['fe']):
+                        self.assertGreaterEqual(len(feedback.split()),15)
+                        if i!=card['c']:
+                            self.assertRegex(feedback,r'Relê|Repara|Regressa|Confronta|Retoma|Volta|Confere|Compara|Mantém')
+            values=[c['v'] for c in item['cards'] if c['t']=='vf']
+            self.assertIn(True,values)
+            self.assertIn(False,values)
+        self.assertEqual(len({tuple(c['t'] for c in item['cards']) for item in LESSONS}),len(LESSONS))
+        values=[c['v'] for item in LESSONS for c in item['cards'] if c['t']=='vf']
+        self.assertLessEqual(abs(sum(values)-len(values)/2),2)
 
     def test_george_quote_and_credit(self):
         item = next(x for x in LESSONS if x['id']=='m8-f16')

@@ -499,13 +499,13 @@ def main(argv=None):
             if cartoes is not None:  # a página relida dá os mesmos cartões
                 prova_lida = Path(tmp) / rel
                 prova_lida.parent.mkdir(parents=True, exist_ok=True)
-                prova_lida.write_text(conteudo, encoding='utf-8')
+                prova_lida.write_text(conteudo, encoding='utf-8', newline='\n')
                 if A.lesson_cards(prova_lida) != cartoes:
                     print(f'ERRO: {rel}: a página relida não dá os mesmos cartões', file=sys.stderr)
                     return 2
             if not a.verificar and atual != conteudo:
                 alvo.parent.mkdir(parents=True, exist_ok=True)
-                alvo.write_text(conteudo, encoding='utf-8')
+                alvo.write_text(conteudo, encoding='utf-8', newline='\n')
     for pasta, grupos in contagens.items():
         print(pasta + ': ' + '; '.join(f'{slug} {t} cartões, {f} para responder' for slug, (t, f) in grupos.items()))
     if a.verificar:
