@@ -108,3 +108,7 @@ jobs:
       # 31/10/2026: feedback e segunda tentativa nos seis novos aquecimentos.
       - name: Respostas certas e erradas no M3 M5 M6
         run: python tests/browser_aquecimentos_m356_feedback.py
+
+      # 01/11/2026: alvos, abertura e impressão da revisão, incluindo as grelhas anteriores afetadas.
+      - name: Apresentação e impressão das tarefas revistas
+        run: python tests/browser_revisao_tarefas_20261101.py

@@ -35,4 +35,9 @@ for(const unavailable of [false,true]){
  const pool=[...Array(8)].map((_,i)=>({_l:"a",i})).concat([{_l:"b"},{_l:"c"},{_l:"d"},{_l:"b"}]);
  const got=ctx.window.EPIUnitTaskRoute.pick({licoes:["a","b","c","d"],pool});
  assert.strictEqual(got.length,8);assert.deepStrictEqual([...new Set(got.map(x=>x._l))].sort(),["a","b","c","d"]);}
+// 01/11/2026: o arquivo do M5 lê a chave do main sem criar outra.
+{const badge={dataset:{desafioEstado:"1"}},readKeys=[];
+ const ctx={window:{addEventListener(){}},document:{querySelector(){return null},querySelectorAll(s){return s==="[data-desafio-estado]"?[badge]:[]},getElementById(){return null},addEventListener(){}},localStorage:{getItem(k){readKeys.push(k);return k==="desafio-M5-u1"?JSON.stringify({tentativas:2,melhor:7,total:8}):null},setItem(){throw Error("Não deve gravar")}},location:{search:""},URLSearchParams};
+ vm.runInNewContext(code,ctx);ctx.window.EPIUnitTaskRoute.mount({module:"M5",units:[]});
+ assert(readKeys.includes("desafio-M5-u1"));assert(!readKeys.includes("desafio-unidade-v2-M5-u1"));assert(badge.textContent.includes("melhor 7 de 8"));}
 console.log("Route runtime OK: storage available/unavailable; no card nodes; no completion writes.");
