@@ -188,8 +188,9 @@ class ChoiceTasks(unittest.TestCase):
             subprocess.run([sys.executable, '-B', 'scripts/tarefas_escolha.py', '--saida', tmp], cwd=ROOT, check=True, capture_output=True)
             for p in data:
                 slug = p.stem
-                self.assertEqual((Path(tmp) / 'tarefas' / slug / 'index.html').read_bytes(),
-                                 (ROOT / 'tarefas' / slug / 'index.html').read_bytes(), slug)
+                # 01/11/2026: normaliza apenas as terminações de linha no Windows.
+                self.assertEqual((Path(tmp) / 'tarefas' / slug / 'index.html').read_text('utf-8'),
+                                 (ROOT / 'tarefas' / slug / 'index.html').read_text('utf-8'), slug)
 
     def test_reader_puts_the_warmup_first(self):
         reader = (ROOT / 'assets/task-reader.js').read_text('utf-8')

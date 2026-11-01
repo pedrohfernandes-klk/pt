@@ -228,6 +228,12 @@ def main(argv=None):
     mudam = [f for f, (atual, _, depois, _) in resultados.items() if atual != depois]
     manifesto_muda = not manifesto_path.is_file() or manifesto_path.read_text('utf-8') != novo_manifesto
 
+    # 01/11/2026: verifica as entradas selecionadas, sem reescrever o manifesto histórico.
+    if args.verificar and args.fora and anterior:
+        comparado = dict(anterior)
+        comparado['files'] = {f: v for f, v in anterior['files'].items() if f not in args.fora}
+        manifesto_muda = comparado != manifesto
+
     if args.verificar:
         if camadas or args.fora:
             fora = sum(len(por_ficheiro[f]) for f in args.fora if f in por_ficheiro)

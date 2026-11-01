@@ -47,9 +47,11 @@ class Paineis(unittest.TestCase):
             texto=(ROOT/pasta/'index.html').read_text('utf-8');P=banco(texto)
             L=banco((ROOT/pasta.replace('painel-','licao-')/'index.html').read_text('utf-8'))
             esperado=[{'k':i,'t':c['t'],'p':enunciado(c)} for i,c in enumerate(L) if c['t']!='ler']
-            self.assertEqual(P,esperado,pasta)
+            # 01/11/2026: o cartão ganha itálico; a equivalência textual e a ordem mantêm-se.
+            self.assertEqual([dict(c,p=enunciado(c)) for c in P],esperado,pasta)
             ops=re.findall(r'<option value="\d+">(.*?)</option>',re.search(r'<select data-r-k>(.*?)</select>',texto,re.S).group(1))
             self.assertEqual([html.unescape(o) for o in ops],[c['p'] for c in esperado],pasta)
-            self.assertFalse(any('_' in c['p'] or '**' in c['p'] for c in P),pasta)
+            # 01/11/2026: sem marcadores visíveis no seletor; o painel converte os do cartão em itálico.
+            self.assertFalse(any('_' in o or '**' in o for o in ops),pasta)
 
 if __name__=='__main__':unittest.main()

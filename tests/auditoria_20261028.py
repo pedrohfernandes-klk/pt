@@ -192,6 +192,20 @@ def undo_lingua(path, text):
     return text
 
 
+# 01/11/2026: a varredura de formatação é a camada mais recente; as antigas ficam intactas.
+VARREDURA_MANIFEST = ROOT / 'tests/fixtures/varredura-formatacao-edits-20261101.json'
+_VARREDURA_FILES = json.loads(VARREDURA_MANIFEST.read_text('utf-8'))['files']
+
+
+def undo_varredura(path, text):
+    relative = _relative(path)
+    for edit in reversed(_VARREDURA_FILES.get(relative, {}).get('edits', [])):
+        if text.count(edit['new']) != edit['occurrences']:
+            raise AssertionError(f"Troca autorizada a 01/11 (formatação) já não confere: {relative}: {edit['location']}")
+        text = text.replace(edit['new'], edit['old'])
+    return text
+
+
 def undo(path, text):
     """Devolve o texto anterior às correções de 28/10 para este ficheiro (ou o mesmo texto, se não as tem).
 
@@ -204,6 +218,8 @@ def undo(path, text):
     """
     # 30/10/2026: antes de tudo, a camada da língua (a mais recente), depois a das opções denunciadoras, a do texto
     # justificado e as dos aquecimentos do M2, do M4 e do M1.
+    # 01/11/2026: desfaz a varredura antes da língua e das restantes camadas.
+    text = undo_varredura(path, text)
     text = undo_lingua(path, text)
     text = undo_opcoes(path, text)
     text = undo_justificado(path, text)

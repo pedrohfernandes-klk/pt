@@ -457,7 +457,7 @@
         "fala",
         "ação"
       ],
-      "focus": "Interpretar o conflito na Farsa de Inês Pereira",
+      "focus": "Interpretar o conflito na _Farsa de Inês Pereira_",
       "source": {
         "title": "Gil Vicente: desejo, escolha e sátira",
         "author": "Gil Vicente",
@@ -526,7 +526,7 @@
         ],
         "target": "80–120 palavras",
         "criteria": [
-          "Respondi ao pedido: interpretar o conflito na Farsa de Inês Pereira.",
+          "Respondi ao pedido: interpretar o conflito na _Farsa de Inês Pereira_.",
           "Usei referências pertinentes e expliquei a sua relação com a interpretação.",
           "Organizei as ideias com ligações e referentes claros.",
           "Revi construção frásica, pontuação e ortografia."
@@ -815,7 +815,7 @@
       ],
       "focus": "Explicar o sentido de uma reflexão do Poeta",
       "source": {
-        "title": "Os Lusíadas: celebrar e interrogar",
+        "title": "_Os Lusíadas_: celebrar e interrogar",
         "author": "Luís de Camões",
         "context": "Abre a leitura de apoio, lê o recorte indicado e identifica duas marcas relevantes antes de responder. O texto de origem está na lição; esta sessão organiza o treino a partir dele.",
         "url": "/pt/m3/licao-m3-f13/",
@@ -1249,7 +1249,7 @@
       ],
       "focus": "Relacionar informação, reconhecimento e efeito dramático",
       "source": {
-        "title": "Frei Luís de Sousa: o que a cena revela",
+        "title": "_Frei Luís de Sousa_: o que a cena revela",
         "author": "Almeida Garrett",
         "context": "Abre a leitura de apoio, lê o recorte indicado e identifica duas marcas relevantes antes de responder. O texto de origem está na lição; esta sessão organiza o treino a partir dele.",
         "url": "/pt/m4/licao-m4-f26/",
@@ -1551,7 +1551,7 @@
       "writing": {
         "minutes": 15,
         "title": "Construir uma resposta fundamentada",
-        "prompt": "A partir de Amor de Perdição, mostra como uma escolha individual é condicionada por relações familiares ou convenções sociais. Distingue explicar uma ação de a justificar.",
+        "prompt": "A partir de _Amor de Perdição_, mostra como uma escolha individual é condicionada por relações familiares ou convenções sociais. Distingue explicar uma ação de a justificar.",
         "instructions": [
           "Lê o pedido e define o eixo da resposta antes de escrever.",
           "Seleciona duas referências ou exemplos e explica o que demonstram.",
@@ -1706,7 +1706,7 @@
       "writing": {
         "minutes": 15,
         "title": "Construir uma resposta fundamentada",
-        "prompt": "Analisa dois pormenores de um espaço ou de uma cena de Os Maias. Explica como contribuem para caracterizar uma personagem ou para construir uma visão crítica da sociedade.",
+        "prompt": "Analisa dois pormenores de um espaço ou de uma cena de _Os Maias_. Explica como contribuem para caracterizar uma personagem ou para construir uma visão crítica da sociedade.",
         "instructions": [
           "Lê o pedido e define o eixo da resposta antes de escrever.",
           "Seleciona duas referências ou exemplos e explica o que demonstram.",
@@ -2223,7 +2223,7 @@
       "writing": {
         "minutes": 15,
         "title": "Construir uma resposta fundamentada",
-        "prompt": "Explica como uma passagem de O Sentimento dum Ocidental transforma uma observação urbana numa reflexão. Analisa uma sensação e um contraste social ou temporal.",
+        "prompt": "Explica como uma passagem de «O Sentimento dum Ocidental» transforma uma observação urbana numa reflexão. Analisa uma sensação e um contraste social ou temporal.",
         "instructions": [
           "Lê o pedido e define o eixo da resposta antes de escrever.",
           "Seleciona duas referências ou exemplos e explica o que demonstram.",
@@ -4263,7 +4263,7 @@
         ]
       },
       "correction": {
-        "model": "Em Farsa de Inês Pereira e em Amor de Perdição, as escolhas individuais confrontam-se com regras sociais e relações familiares. No entanto, os textos representam esse confronto de modos diferentes: a farsa expõe interesses através do cómico, enquanto a narrativa de Camilo desenvolve um conflito de consequências trágicas.\n\nInês procura uma vida que corresponda às suas expectativas e rejeita inicialmente Pêro Marques. A experiência do casamento com o Escudeiro confronta o desejo de distinção com uma limitação concreta da liberdade. A escolha seguinte resulta de uma aprendizagem que o desfecho permite discutir. O provérbio organiza essa comparação, mas a sátira impede que a personagem seja lida como um simples exemplo de virtude.\n\nEm Amor de Perdição, a relação de Simão e Teresa situa-se num contexto de rivalidade familiar e de autoridade sobre as decisões dos mais novos. As pressões sociais não eliminam a responsabilidade individual: as ações das personagens também fazem avançar o conflito e agravam as suas consequências. Explicar os condicionamentos é, por isso, diferente de desculpar automaticamente tudo o que fazem.\n\nAs duas obras tornam visível a distância entre desejar e poder agir. Contudo, a negociação irónica de interesses na farsa e o desenvolvimento trágico da narrativa produzem leituras diferentes dessa distância. Comparar não exige apagar tais diferenças; exige mostrar como cada obra transforma um conflito humano numa construção literária própria.",
+        "model": "Em _Farsa de Inês Pereira_ e em _Amor de Perdição_, as escolhas individuais confrontam-se com regras sociais e relações familiares. No entanto, os textos representam esse confronto de modos diferentes: a farsa expõe interesses através do cómico, enquanto a narrativa de Camilo desenvolve um conflito de consequências trágicas.\n\nInês procura uma vida que corresponda às suas expectativas e rejeita inicialmente Pêro Marques. A experiência do casamento com o Escudeiro confronta o desejo de distinção com uma limitação concreta da liberdade. A escolha seguinte resulta de uma aprendizagem que o desfecho permite discutir. O provérbio organiza essa comparação, mas a sátira impede que a personagem seja lida como um simples exemplo de virtude.\n\nEm _Amor de Perdição_, a relação de Simão e Teresa situa-se num contexto de rivalidade familiar e de autoridade sobre as decisões dos mais novos. As pressões sociais não eliminam a responsabilidade individual: as ações das personagens também fazem avançar o conflito e agravam as suas consequências. Explicar os condicionamentos é, por isso, diferente de desculpar automaticamente tudo o que fazem.\n\nAs duas obras tornam visível a distância entre desejar e poder agir. Contudo, a negociação irónica de interesses na farsa e o desenvolvimento trágico da narrativa produzem leituras diferentes dessa distância. Comparar não exige apagar tais diferenças; exige mostrar como cada obra transforma um conflito humano numa construção literária própria.",
         "steps": [
           {
             "label": "Cumprir o pedido",

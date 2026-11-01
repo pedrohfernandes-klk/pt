@@ -169,7 +169,8 @@ class SalaDesligada(unittest.TestCase):
                     self.assertEqual(c['t'], x['t'])
                     self.assertEqual(D.normal(c['p']), D.normal(D.enunciado(x)))
                     self.assertFalse(solucoes & set(m), sorted(solucoes & set(m)))
-                    self.assertEqual(m['f'], x['f'])
+                    # 01/11/2026: a lição pode ganhar itálico antes do painel que aguarda revisão.
+                    self.assertEqual(D.normal(m['f']), D.normal(x['f']))
                     t = x['t']
                     if t in ('escolha', 'rever'):
                         self.assertEqual(sorted(m['o']), sorted(x['o']))
@@ -190,7 +191,8 @@ class SalaDesligada(unittest.TestCase):
                             alinhados = [a for i, a in enumerate(m['esq']) if par[a] == m['dir'][i]]
                             self.assertEqual(alinhados, [], 'o projetor mostraria a solução lado a lado')
                     elif t == 'completar':
-                        self.assertEqual(m['frase'], x['frase'])
+                        # 01/11/2026: conserva a comparação integral das palavras, independentemente do itálico.
+                        self.assertEqual(D.normal(m['frase']), D.normal(x['frase']))
                         self.assertEqual([sorted(o) for o in m['lac']], [sorted(l['o']) for l in x['lacunas']])
                         # 29/10/2026 (revisão do #129): a citação por cima da frase não traz a palavra que falta
                         if 'cita' in m:
@@ -198,7 +200,8 @@ class SalaDesligada(unittest.TestCase):
                             for l in x['lacunas']:
                                 self.assertNotIn(' ' + D.so_letras(l['o'][l['c']]) + ' ', cita)
                     elif t == 'sublinhar':
-                        self.assertEqual(m['frase'], x['frase'])
+                        # 01/11/2026: conserva a comparação integral das palavras, independentemente do itálico.
+                        self.assertEqual(D.normal(m['frase']), D.normal(x['frase']))
                     else:
                         self.assertEqual(t, 'vf')
         self.assertEqual(n, 1445)

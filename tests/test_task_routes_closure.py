@@ -35,7 +35,8 @@ LINGUA_EDITS=ROOT/'tests/fixtures/lingua-pessoa-m7-edits-20261030.json'
 def original_lesson_text(path):
  """Reverse only the explicitly authorized UX strings; retain the frozen LF hash."""
  source=(ROOT/path).read_text('utf-8')
- for manifest_path in (LINGUA_EDITS,OPCOES_EDITS,JUSTIFICADO_EDITS,AQUECIMENTOS_EDITS,SALA_EDITS,AUDIT_EDITS_M4_M7,AUDIT_EDITS,REIS_EDITS,TABLE_EDITS,GRAMMAR_EDITS,INSTRUCTION_EDITS):
+ # 01/11/2026: desfaz a formatação antes de conferir os hashes congelados.
+ for manifest_path in (ROOT/'tests/fixtures/varredura-formatacao-edits-20261101.json',LINGUA_EDITS,OPCOES_EDITS,JUSTIFICADO_EDITS,AQUECIMENTOS_EDITS,SALA_EDITS,AUDIT_EDITS_M4_M7,AUDIT_EDITS,REIS_EDITS,TABLE_EDITS,GRAMMAR_EDITS,INSTRUCTION_EDITS):
   manifest=json.loads(manifest_path.read_text('utf-8'))
   for edit in reversed(manifest['files'].get(path,{}).get('edits',[])):
    if source.count(edit['new'])!=edit['occurrences']:

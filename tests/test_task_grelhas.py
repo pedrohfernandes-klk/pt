@@ -245,7 +245,8 @@ class Grelhas(unittest.TestCase):
             for slug in DADOS['tarefas']:
                 for pasta in ('grelha','correcao'):
                     with self.subTest(tarefa=slug,pasta=pasta):
-                        self.assertEqual((Path(tmp)/'tarefas'/slug/pasta/'index.html').read_bytes(),(ROOT/'tarefas'/slug/pasta/'index.html').read_bytes())
+                        # 01/11/2026: normaliza apenas as terminações de linha para conferir também no Windows.
+                        self.assertEqual((Path(tmp)/'tarefas'/slug/pasta/'index.html').read_text('utf-8'),(ROOT/'tarefas'/slug/pasta/'index.html').read_text('utf-8'))
                 self.assertFalse((Path(tmp)/'tarefas'/slug/'index.html').exists(),'a ligação à grelha já está na tarefa')
 
 if __name__=='__main__':unittest.main()
