@@ -56,7 +56,7 @@ V = {
     'provas-licao.css': '20261030-excertos-1', 'provas-licao.js': '20261029-provas-1', 'aula-clara.css': '20261023',
     'jogo.js': '20261021-ux06', 'rever-frase.js': '20261021', 'appearance.css-licao': '20261025-reading1',
     'appearance.js': '20261025-universal-1', 'projection-launcher.js': '20261019.4',
-    'exame.css': '20261029-provas-1', 'appearance.css': '20261025-universal-1', 'oficina.css': '20261029-provas-1',
+    'exame.css': '20261029-provas-1', 'appearance.css': '20261025-universal-1', 'oficina.css': '20261101-titulos-1',
     'provas.css': '20261030-provas-2', 'provas.js': '20261029-provas-1',
 }
 ROMANOS = ['I', 'II', 'III', 'IV', 'V']
