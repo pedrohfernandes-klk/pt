@@ -262,8 +262,13 @@ def painel(browser, host, caminho, italico, com_atlas):
 def indice_e_desafio(browser, host):
     v = Visita(browser, host, caminho='/pt/m3/')
     page = v.abrir('/pt/m3/')
+    # 01/11/2026: o desafio do M3 passou ao arquivo; abrir pelo percurso visível, sem dispensar a gravação nem a vigilância da rede.
+    page.locator('.route-teacher-tools > summary').click()
+    page.locator('.route-teacher-tools a[href="?arquivo=1#arquivo-percurso"]').click()
+    page.wait_for_url('**/?arquivo=1#arquivo-percurso')
+    assert page.locator('#arquivo-percurso').is_visible()
     page.evaluate('''() => { const m = EPIJogo.montar; window.__desafio = null;
-      EPIJogo.montar = cfg => { if (/^Desafio da unidade/.test(cfg.titulo || '')) window.__desafio = cfg; return m(cfg); }; }''')
+      EPIJogo.montar = cfg => { if (cfg.chave === 'desafio-unidade-v2-M3-u1') window.__desafio = cfg; return m(cfg); }; }''')
     page.locator('[data-desafio="1"]').click()
     page.locator('.casca.sobreposta .cartao').wait_for()
     page.evaluate('() => window.__desafio.fim({certas: 8, total: 8, n: 8})')
