@@ -136,3 +136,5 @@
 @media screen{.caminho>h2{font-size:2rem}}
 @media screen{.caminho .unidade-pedagogica{margin:36px 0 48px;border-top:4px solid var(--tinta,#171715);padding-top:16px}.caminho .unidade-pedagogica>.grupo-topo{margin-bottom:24px}}
 @media screen and (max-width:480px){.caminho .unidade-pedagogica{margin:28px 0 36px}}
+/* 01/11/2026, decisão 61: no papel, «O caminho» fica a 23,2 px; o título da unidade desce para 20 px, abaixo do título que o agrupa, sem mudar o número de páginas A4. */
+@media print{.caminho .grupo-topo h2{font-size:1.25rem}}
