@@ -25,6 +25,24 @@ class NewLessons(unittest.TestCase):
                 self.assertEqual(lesson_cards(path), item['cards'])
                 self.assertEqual(validate_cards(item['cards']), [])
 
+    # 01/11/2026: decisão do docente, recorte intacto e enquadramento só no guia.
+    def test_lianor_recorte_falantes_e_enquadramento(self):
+        item = next(x for x in LESSONS if x['id'] == 'm2-f16')
+        visible = json.dumps(item['cards'], ensure_ascii=False)
+        for excerpt in ('E hum clérigo, mana minha,<br>Pardeos, lançou mão de mi;<br>Não me podia valer',
+                        'Hui! seria algum muchacho,<br>Que brincava por prazer?',
+                        'Mana, conhecia-te ele?', 'Mas queria-me conhecer!'):
+            self.assertIn(excerpt, visible)
+        for card in item['cards']:
+            for quote in re.findall(r'<blockquote>(.*?)</blockquote>', card.get('html', ''), re.S):
+                self.assertNotRegex(quote, r'«(?:Lianor|Mãe):')
+        for warning in ('Não tens de a representar', 'partilhar experiências pessoais',
+                        'A análise do duplo sentido não exige rir', 'sem julgar a vítima'):
+            self.assertNotIn(warning, visible)
+        guide = (ROOT / 'docs/pedagogia/guia-docente-licoes-20261101.md').read_text('utf-8')
+        self.assertIn('a Mãe desvaloriza-o ao sugerir uma brincadeira', guide)
+        self.assertNotIn('a Mãe desvaloriza-o ao sugerir uma brincadeira', visible)
+
     def test_fourteen_activities_five_nonwriting_types_and_feedback(self):
         for item in LESSONS:
             cards = [c for c in item['cards'] if c['t'] != 'ler']
