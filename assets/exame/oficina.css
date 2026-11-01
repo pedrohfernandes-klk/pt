@@ -153,3 +153,5 @@ body.oficina .relogio .relogio-principal:hover{background:var(--r-tinta);color:v
 /* 01/11/2026: o antetítulo da porta («Provas em cartões») herdava a letra do parágrafo (serifa a 15,7 px) e competia com o título; fica com a letra dos outros antetítulos da página */
 .oficina-exame .provas-porta p:not(.eyebrow){margin:0;max-width:70ch;font:400 .98rem/1.55 var(--of-serif)}
 .oficina-exame .provas-porta>a{font:700 .9rem/1.4 var(--of-sans);padding:8px 0}
+/* 01/11/2026: a única ação da porta («Abrir as provas em cartões →») media 198×36 px; o alvo passa a 44 px de altura (D1) */
+.oficina-exame .provas-porta>a{display:inline-flex;align-items:center;min-height:44px;padding:0}
