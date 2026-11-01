@@ -32,6 +32,14 @@ def learning_storage(page):
       .filter(k=>/^(licao-|percurso-|desafio-|epi-pt-)/.test(k))
       .sort().map(k=>[k,localStorage.getItem(k)]))""")
 
+def open_route_unit(page, number):
+    # 01/11/2026: as unidades Cartaz usam dobras nativas no telemóvel.
+    fold = page.locator(f'details[data-cz-unit="{number}"]')
+    if fold.count() and not fold.evaluate('e=>e.open'):
+        fold.locator(':scope > summary').press('Enter')
+        assert fold.evaluate('e=>e.open')
+
+
 def assert_task_route(page, module, units):
     assert module in TASK_MODULES
     assert page.locator('[data-task-lesson]').count() == len(units)
@@ -39,7 +47,9 @@ def assert_task_route(page, module, units):
     assert not page.locator('#arquivo-percurso').is_visible()
     assert page.locator('button[data-desafio]:visible').count() == 0
     assert page.locator('.module-links-support:visible, .extra-cidade:visible, .cz-linha').count() == 0
-    assert page.locator('[data-cartaz]').count() == 0
+    # 01/11/2026: exclui o carrossel antigo, conservando a opção explícita pelo Cartaz.
+    assert page.locator('[data-cartaz]:not([data-cartaz="2"])').count() == 0
+    assert page.locator('main.cz-index[data-cartaz="2"]').count() == 1
     assert page.locator('.route-teacher-tools').count() == 1
     assert not page.locator('.route-teacher-tools').evaluate('e=>e.open')
     assert page.locator('a[href^="#sintese-unidade"], a[href^="#desafio-unidade"]').count() == 0
@@ -47,6 +57,7 @@ def assert_task_route(page, module, units):
     hrefs = []
     for unit, slug in zip(units, TASK_SLUGS[module]):
         n = unit['number']
+        open_route_unit(page, n)
         section = page.locator(f'.unidade[data-u="{n}"]')
         assert section.locator('li[data-passo]').evaluate_all('(els)=>els.map(e=>e.dataset.passo)') == unit['steps']
         assert section.locator('[data-task-lesson]').count() == 1
@@ -63,6 +74,7 @@ def assert_task_route(page, module, units):
 def visit_task_from_route(page, module, number, expected_href):
     route_url = page.url
     before = learning_storage(page)
+    open_route_unit(page, number)
     page.locator(f'[data-task-lesson="{number}"] > a').click()
     page.wait_for_url('**/tarefas/' + TASK_SLUGS[module][number - 1] + '/')
     assert page.url == urljoin(route_url, expected_href)
