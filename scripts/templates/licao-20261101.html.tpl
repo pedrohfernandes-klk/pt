@@ -33,7 +33,7 @@
 <main class="casca-corpo" tabindex="-1"><div id="baralho" class="jogo-alvo"></div></main>
 <footer class="casca-acoes" data-c-acoes></footer>
 <section class="casca-folha" data-c-folha role="status" aria-live="polite" hidden></section>
-<div class="casca-menu" data-c-painel hidden><div class="c-menu-in" role="dialog" aria-label="Menu"><div class="c-menu-cab"><p>Módulo @@NUMBER@@<br>Unidade @@UNIT@@</p><button type="button" class="c-ic" data-c-fecha-menu aria-label="Fechar o menu">✕</button></div><nav aria-label="Navegação da lição"><a href="../#@@ID@@">Esta lição no percurso</a><a href="@@PREVIOUS@@">Lição anterior</a><a href="@@NEXT@@">Lição seguinte</a></nav><p class="c-menu-extra">As citações têm crédito junto ao texto. Os exemplos criados estão identificados. O progresso fica neste aparelho.</p></div></div>
+<div class="casca-menu" data-c-painel hidden><div class="c-menu-in" role="dialog" aria-label="Menu"><div class="c-menu-cab"><p>Módulo @@NUMBER@@<br>Unidade @@UNIT@@</p><button type="button" class="c-ic" data-c-fecha-menu aria-label="Fechar o menu">✕</button></div><nav aria-label="Navegação da lição"><a href="../#@@ID@@">Esta lição no percurso</a><a href="@@PREVIOUS@@">Lição anterior</a><a href="@@NEXT@@">Lição seguinte</a><a href="../painel-@@ID@@/">Notas para a aula</a></nav><p class="c-menu-extra">As citações têm crédito junto ao texto. Os exemplos criados estão identificados. O progresso fica neste aparelho.</p></div></div>
 </div>
 <noscript>Esta lição precisa de JavaScript. <a href="../">Voltar ao módulo</a>.</noscript>
 <script>

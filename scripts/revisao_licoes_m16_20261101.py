@@ -1,18 +1,18 @@
 """01/11/2026: aplicação da adenda pedagógica às nove lições do pedido B."""
 REVISOES_B={
  'm1-f21':dict(
-  recuperar=('Recupera a cantiga de amor: o sofrimento apresentado pela voz basta para comprovar um episódio vivido pelo trovador?',False,'Confundir a voz construída com o autor transforma o poema em biografia. Relê a caracterização da voz na cantiga de amor da F04 e procura o plano a que pertence a coita.'),
-  modelo='A condição se eu podesse abre uma capacidade desejada. A negativa da segunda estrofe mostra o obstáculo. A conclusão distingue a vingança imaginada de uma ação realizada.',
+  recuperar=('Recupera a cantiga de amor: o sofrimento apresentado pela voz basta para comprovar um episódio vivido pelo trovador?',False,'Confundir a voz construída com o autor transforma o poema em biografia. Relê a caracterização da voz na cantiga de amor da F04 e procura o plano a que pertence a «coita».'),
+  modelo='A condição «se eu podesse» abre uma capacidade desejada. A negativa da segunda estrofe mostra o obstáculo. A conclusão distingue a vingança imaginada de uma ação realizada.',
   limite='Contraexemplo à leitura de que a primeira estrofe anuncia uma vingança conseguida: a voz reconhece depois a incapacidade de dominar o coração. Critério: a interpretação tem de explicar a hipótese e a negativa.',
-  pista='No segundo caso criado, observa as formas consegui e descansei. O desejo continua dependente de uma capacidade ou é apresentado como realizado?',
+  pista='No segundo caso criado, observa as formas «consegui» e «descansei». O desejo continua dependente de uma capacidade ou é apresentado como realizado?',
   prova='Que palavra impede ler este desejo como uma capacidade já realizada?',
   ordem=['A voz imagina deixar de amar','Deseja trocar a posição de quem recebe e dá sofrimento','Reconhece que não domina o coração','O refrão conserva o desejo sem resolver o conflito'],
   ordem_p='Ordena o conflito entre vontade, retribuição e incapacidade.',
   escolhas={3:['Deseja retribuir, mas não domina o amor.', 'Deseja retribuir e já domina o próprio amor.', 'Deseja esquecer e já recebe amor em resposta.'],
             17:['A voz apresenta na cantiga um desejo de vingança.','A voz relata na cantiga uma vingança já realizada.','A voz prevê na cantiga uma reconciliação amorosa.']}),
  'm2-f14':dict(
-  recuperar=('Recupera o retrato antecipado de Pêro Marques: o juízo de Inês e a apresentação da personagem são necessariamente equivalentes?',False,'Confundir a avaliação de Inês com um retrato neutro elimina a perspetiva. Relê a antecipação da entrada de Pêro e distingue o que Inês imagina do que a cena mostra.'),
-  modelo='A base vilão recebe um sufixo diminutivo. A comparação com o ancinho apoia uma avaliação depreciativa. O valor não vem do sufixo isolado: depende da expectativa construída por Inês.',
+  recuperar=('Recupera a cena de Lianor Vaz: a reação de uma personagem e a apresentação da cena são necessariamente equivalentes?',False,'Confundir a reação de uma personagem com um retrato neutro elimina a perspetiva. Relê a resposta da Mãe ao relato de Lianor e distingue o que a personagem avalia do que a cena mostra.'),
+  modelo='A base «vilão» recebe um sufixo diminutivo. A comparação com o ancinho apoia uma avaliação depreciativa. O valor não vem do sufixo isolado: depende da expectativa construída por Inês.',
   limite='Contraexemplo à regra de que um diminutivo deprecia: no exemplo da casa que acolhe a família, o contexto torna saliente o afeto. Critério: a classificação tem de explicar as palavras que acompanham o diminutivo.',
   pista='No segundo caso, conserva a mesma palavra e observa o que muda na relação com a casa. Dimensão e avaliação são a mesma informação?',
   prova='Que palavra distingue a antecipação de Inês de uma descrição feita depois de conhecer o pretendente?',
@@ -22,10 +22,10 @@ REVISOES_B={
  'm2-f16':dict(
   recuperar=('Recupera a leitura dramática: a posição expressa por uma personagem equivale à posição de todas as vozes da obra?',False,'Confundir uma fala com a posição da obra apaga o confronto dramático. Relê o diálogo da F02 e atribui cada avaliação à personagem que a exprime.'),
   modelo='Lianor apresenta uma ação de que não conseguia defender-se. A Mãe reformula-a como brincadeira. A diferença permite analisar uma minimização, sem converter essa resposta em prova do acontecimento.',
-  limite='Contraexemplo à ideia de que a palavra conhecer conserva o mesmo sentido: a resposta desloca o verbo para uma insinuação. Critério: o sentido deve explicar a relação entre pergunta, resposta e relato anterior.',
+  limite='Contraexemplo à ideia de que a palavra «conhecer» conserva o mesmo sentido: a resposta desloca o verbo para uma insinuação. Critério: o sentido deve explicar a relação entre pergunta, resposta e relato anterior.',
   pista='Compara a consequência das duas respostas criadas para quem relata. Que mudança reconhece a dificuldade, em vez de a reduzir?',
   prova='Que palavra marca a mudança de perspetiva entre a pergunta e a resposta?',
-  ordem=['Lianor relata uma ação de que não se podia defender','A Mãe responde com uma hipótese que a atenua','A repetição de conhecer desloca o sentido do verbo','A interpretação distingue mecanismo cómico e alvo crítico'],
+  ordem=['Lianor relata uma ação de que não se podia defender','A Mãe responde com uma hipótese que a atenua','A repetição de «conhecer» desloca o sentido do verbo','A interpretação distingue mecanismo cómico e alvo crítico'],
   ordem_p='Ordena a relação entre relato, reação e deslocação do sentido.',
   escolhas={17:['Como altera a resposta a gravidade reconhecida?', 'Como confirma a resposta a intenção do clérigo?', 'Como revela a resposta a invenção do incidente?']}),
  'm2-f15':dict(
@@ -34,7 +34,7 @@ REVISOES_B={
   limite='Contraexemplo à conclusão de que toda a diferença decorre do país: os dois pedidos criados podem ser feitos pela mesma pessoa em situações distintas. Critério: identifica o eixo que efetivamente mudou.',
   pista='Mantém o assunto do pedido e compara a relação entre os interlocutores. Mudou o lugar, a época ou a situação comunicativa?',
   prova='Que palavra transforma uma pista de uso numa certeza indevida sobre a nacionalidade?',
-  ordem=['Identificam-se as formas autocarro e ônibus','A fonte situa os usos em variedades nacionais','A comparação dos pedidos introduz outro eixo','A classificação distingue geografia e situação'],
+  ordem=['Identificam-se as formas «autocarro» e «ônibus»','A fonte situa os usos em variedades nacionais','A comparação dos pedidos introduz outro eixo','A classificação distingue geografia e situação'],
   ordem_p='Ordena a comparação que impede atribuir toda a diferença ao lugar.',
   escolhas={3:['Uma diferença lexical entre variedades nacionais.', 'Uma diferença de registo entre situações formais.', 'Uma diferença de época entre testemunhos escritos.'],
             17:['A diferença lexical está documentada entre variedades.', 'A diferença lexical identifica a nacionalidade pessoal.', 'A diferença lexical distingue por si só registos formais.']}),
@@ -105,13 +105,13 @@ REVISOES_B['m3-f19']['escolhas'].update({
  3:['A experiência diverge daquilo que se esperava.','A experiência confirma aquilo que se esperava.','A experiência repete aquilo que se recordava.'],
  10:['A maneira de mudar já não é a de antes.','A mudança deixou de ocorrer no presente.','A mudança repete a maneira de antes.']})
 REVISOES_B['m5-f17']['escolhas'].update({
- 3:['O pai retirava as cartas no correio.','A mãe retirava as cartas no correio.','Simão retirava as cartas no correio.'],
+ 3:['O pai mandava retirar as cartas no correio.','A mãe retirava as cartas no correio.','Simão mandava retirar as cartas no correio.'],
  10:['Obriga a rever a interpretação do silêncio.','Reforça a interpretação inicial do silêncio.','Esclarece a intenção de Simão no silêncio.'],
  14:['Contar a interceção antes da espera da mãe.','Contar a recusa de Simão antes da espera da mãe.','Contar a desistência da mãe antes da interceção.'],
  17:['O controlo das cartas afeta a relação familiar.','A ausência de resposta confirma a rejeição de Simão.','A descoberta das cartas confirma que Simão as leu.']})
 REVISOES_B['m2-f16']['escolhas'].update({
  3:['A resposta atenua a gravidade da ação relatada.','A resposta confirma a intenção do autor da ação.','A resposta contesta a ocorrência da ação relatada.'],
- 10:['Conhecer muda de sentido entre as duas falas.','Conhecer exprime a mesma ação nas duas falas.','Conhecer indica duas ações de reconhecimento.'],
+ 10:['Conhecer muda de sentido entre as duas falas.','«Conhecer» exprime a mesma ação nas duas falas.','«Conhecer» indica duas ações de reconhecimento.'],
  14:['Criar uma pausa após a resposta que atenua.','Criar uma pausa antes do relato de Lianor.','Criar uma pausa após a pergunta de Inês.']})
 REVISOES_B['m2-f14']['escolhas'].update({
  3:['Apresenta o pretendente com uma avaliação depreciativa.','Apresenta o pretendente como figura de baixa estatura.','Apresenta o pretendente com familiaridade afetuosa.'],
@@ -119,7 +119,7 @@ REVISOES_B['m2-f14']['escolhas'].update({
 REVISOES_B['m1-f21']['retornos']={17:'A condição apresenta o desejo, e a negativa limita a capacidade de o realizar. Confundir esse desejo com um facto ou uma previsão apaga a tensão entre as duas estrofes.'}
 REVISOES_B['m6-f14']['retornos']={14:'A objeção discutível identifica a conclusão e uma razão. Confundir a origem ou a reputação da pessoa com prova da ideia desloca o debate para outro objeto.'}
 REVISOES_B['m6-f15']['retornos']={14:'Mudar para a perspetiva da atriz altera o acesso à cena. Confundir alteração de cor ou de momento com alteração de ponto de vista mantém a mesma posição de observação; a voz nova tem de ser identificada como criação.'}
-REVISOES_B['m2-f15']['retornos']={3:'Autocarro e ônibus documentam uma diferença lexical entre variedades nacionais. Confundir essa diferença com registo ou época exige dados que este par não fornece.',10:'Para distinguir mudança no tempo e diferença entre comunidades, são necessárias datas e comunidades. Confundir registo com um desses eixos troca a situação de comunicação pela época ou pelo lugar.'}
+REVISOES_B['m2-f15']['retornos']={3:'«Autocarro» e «ônibus» documentam uma diferença lexical entre variedades nacionais. Confundir essa diferença com registo ou época exige dados que este par não fornece.',10:'Para distinguir mudança no tempo e diferença entre comunidades, são necessárias datas e comunidades. Confundir registo com um desses eixos troca a situação de comunicação pela época ou pelo lugar.'}
 REVISOES_B['m2-f16']['retornos']={14:'A pausa após a resposta dá tempo para considerar a atenuação acabada de ouvir. Deslocá-la para outro momento muda o foco; esta é uma decisão de encenação, não uma indicação original.'}
 
 REVISOES_B['m1-f21']['perguntas']={17:'Que comentário distingue o desejo da sua realização?'}
@@ -129,8 +129,8 @@ REVISOES_B['m5-f16']['escolhas'][10][0]='A formação influencia escolhas futura
 REVISOES_B['m6-f14']['escolhas'][10][0]='Cria uma imagem de abertura à discussão.'
 REVISOES_B['m6-f15']['escolhas'][14][0]='Criar uma versão da rua vista pela atriz.'
 REVISOES_B['m3-f19']['escolhas'][3][0]='A experiência diverge do que se esperava.'
-REVISOES_B['m5-f17']['escolhas'][3][1]='A mãe retirava as suas cartas no correio.'
-REVISOES_B['m2-f16']['escolhas'][10][0]='Conhecer muda de sentido nas duas falas.'
+REVISOES_B['m5-f17']['escolhas'][3][1]='A mãe mandava retirar as suas cartas no correio.'
+REVISOES_B['m2-f16']['escolhas'][10][0]='«Conhecer» muda de sentido nas duas falas.'
 REVISOES_B['m2-f16']['escolhas'][14][0]='Pausar depois da resposta que atenua.'
 REVISOES_B['m2-f16']['escolhas'][17][0]='Como altera a resposta o peso desse relato?'
 REVISOES_B['m2-f14']['escolhas'][3][0]='Apresenta o pretendente de modo depreciativo.'

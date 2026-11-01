@@ -52,6 +52,28 @@ def render(item, units):
     return text
 
 
+def render_notes(item):
+    """01/11/2026: notas editoriais pelo molde já usado na M6-F12/F13."""
+    module=item['id'].split('-')[0]
+    enquadramento=''
+    if item['id']=='m2-f16':
+        guia=(ROOT/'docs/pedagogia/guia-docente-licoes-20261101.md').read_text('utf-8')
+        linha=next(x for x in guia.splitlines() if x.startswith('O relato de Lianor'))
+        enquadramento='<section aria-labelledby="enquadramento"><h2 id="enquadramento">Enquadramento para o docente</h2><p>'+escape(linha)+'</p></section>'
+    perguntas=[]
+    for card in item['cards']:
+        if card['t']=='ler':continue
+        feedback='<p>'+escape(card['f'])+'</p>'
+        if card.get('fe'):
+            feedback+='<ul>'+''.join('<li>'+escape(f)+'</li>' for i,f in enumerate(card['fe']) if i!=card['c'])+'</ul>'
+        perguntas.append('<li><p>'+escape(card['p'])+'</p><details><summary>Indícios e retorno</summary>'+feedback+'</details></li>')
+    values=dict(TITLE=escape(item['title']),NUMBER=module[1:],ID=item['id'],QUESTION=escape(item['question']),CONTEXT=enquadramento,CARDS=''.join(perguntas))
+    text=(ROOT/'scripts/templates/notas-licoes-20261101.html.tpl').read_text('utf-8')
+    for key,value in values.items():text=text.replace('@@'+key+'@@',value)
+    assert '@@' not in text
+    return text
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--verificar', action='store_true')
@@ -65,6 +87,12 @@ def main():
         else:
             path.parent.mkdir(parents=True, exist_ok=True)
             path.write_text(text, 'utf-8', newline='\n')
+        notes=ROOT/item['id'].split('-')[0]/('painel-'+item['id'])/'index.html'
+        if args.verificar:
+            assert notes.read_text('utf-8')==render_notes(item),str(notes)
+        else:
+            notes.parent.mkdir(parents=True,exist_ok=True)
+            notes.write_text(render_notes(item),'utf-8',newline='\n')
         print(('Conferida: ' if args.verificar else 'Gerada: ') + item['id'])
 
 

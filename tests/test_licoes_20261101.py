@@ -10,7 +10,7 @@ import unittest
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'scripts'))
 from licoes_20261101 import LESSONS
-from gerar_licoes_20261101 import render, sequences
+from gerar_licoes_20261101 import render, sequences, render_notes
 from audit_cards import lesson_cards, validate_cards
 from opcoes_equilibradas import avaliar
 
@@ -42,6 +42,20 @@ class NewLessons(unittest.TestCase):
         guide = (ROOT / 'docs/pedagogia/guia-docente-licoes-20261101.md').read_text('utf-8')
         self.assertIn('a Mãe desvaloriza-o ao sugerir uma brincadeira', guide)
         self.assertNotIn('a Mãe desvaloriza-o ao sugerir uma brincadeira', visible)
+
+    # 01/11/2026: as 16 lições têm notas geradas e todas as perguntas sincronizadas.
+    def test_teacher_notes_generated_and_linked(self):
+        for item in LESSONS:
+            panel=ROOT/item['id'].split('-')[0]/('painel-'+item['id'])/'index.html'
+            text=panel.read_text('utf-8')
+            self.assertEqual(text,render_notes(item))
+            self.assertEqual(text.count('<summary>Indícios e retorno</summary>'),14)
+            for card in item['cards']:
+                if card['t']!='ler':
+                    from html import escape
+                    self.assertIn(escape(card['p']),text)
+            page=ROOT/item['id'].split('-')[0]/('licao-'+item['id'])/'index.html'
+            self.assertIn('../painel-'+item['id']+'/',page.read_text('utf-8'))
 
     def test_fourteen_activities_five_nonwriting_types_and_feedback(self):
         for item in LESSONS:

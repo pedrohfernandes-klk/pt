@@ -32,7 +32,7 @@ def documento(nome, autor, obra, data, instituicao, fonte, alt, obra_html=None):
         ficheiro='../../img/fontes/'+nome+'.jpg', obra_html=obra_html)
 
 documento('cancioneiro-ajuda-21r', 'Iluminador não identificado',
- 'Iluminura do Cancioneiro da Ajuda, fólio 21r', 'Manuscrito medieval',
+ 'Iluminura do Cancioneiro da Ajuda, fólio 21r', 'Finais do século XIII',
  'Biblioteca da Ajuda; reprodução no Wikimedia Commons, a partir do projeto Cantigas Medievais Galego-Portuguesas.',
  'https://commons.wikimedia.org/wiki/File:Cancioneiro_da_Ajuda_folio_21r.jpg',
  'Iluminura com uma figura sentada, um músico de pé e uma figura com pandeiro.',
@@ -71,14 +71,9 @@ documento('cesario-verde-columbano-1887', 'Columbano Bordalo Pinheiro',
  'https://commons.wikimedia.org/wiki/File:CesarioVerde_Columbano.jpg',
  'Retrato desenhado de Cesário Verde, com bigode, assinado por Columbano.')
 USOS.update({
- 'm1-f21': ('cancioneiro-ajuda-21r', 'Iluminura do <i>Cancioneiro da Ajuda</i>: um documento da cultura das cantigas. Não representa Pero da Ponte nem identifica os versos lidos nesta lição.'),
- 'm2-f14': ('gil-vicente-copilacam-1562', 'A compilação das obras de Gil Vicente foi impressa em Lisboa em 1562.'),
- 'm2-f16': ('gil-vicente-copilacam-1562', 'Página de título da compilação das obras de Gil Vicente, de 1562. Não é uma imagem da representação da farsa.'),
  'm3-f19': ('camoes-rimas-1595', 'Página de título de <i>Rhythmas</i>, de 1595, uma edição póstuma da poesia de Camões.'),
- 'm5-f16': ('os-maias-1888', 'O primeiro volume de <i>Os Maias</i>, na edição de 1888.'),
  'm5-f17': ('camilo-1882', 'Camilo Castelo Branco, fotografado em 1882. O retrato identifica o autor, não a personagem de Simão.'),
  'm6-f14': ('antero-de-quental-1887', 'Antero de Quental num retrato de cerca de 1887, posterior à conferência de 1871.'),
- 'm6-f15': ('cesario-verde-columbano-1887', 'Cesário Verde retratado por Columbano em 1887.'),
 })
 IMAGENS['antero-de-quental-1887']['data_html'] = 'Cerca de 1887; publicado em <i>In Memoriam</i>, 1896'
 IMAGENS['cesario-verde-columbano-1887']['instituicao_html'] = 'Publicado em <i>O Livro de Cesário Verde</i>; reprodução no Wikimedia Commons.'

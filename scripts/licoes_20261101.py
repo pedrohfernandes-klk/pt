@@ -226,6 +226,8 @@ aplicar(LESSONS, REVISOES_B)
 
 from revisao_confirmacao_20261101 import aplicar_confirmacao
 aplicar_confirmacao(LESSONS)
+from revisao_confirmacao_m16_20261101 import aplicar_confirmacao_b
+aplicar_confirmacao_b(LESSONS)
 
 from imagens_licoes_20261101 import aplicar_imagens
 aplicar_imagens(LESSONS)
