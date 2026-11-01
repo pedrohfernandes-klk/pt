@@ -1,3 +1,4 @@
+# 01/11/2026: os nove módulos fecham agora com a aula de tarefa.
 # 31/10/2026: M3, M5 e M6 passam ao contrato das aulas de tarefa.
 from pathlib import Path
 from html.parser import HTMLParser
@@ -18,7 +19,7 @@ class UX06(unittest.TestCase):
     self.assertIn('desafio-unidade-'+str(u['number']),ids)
     # 26/10: M1/M4/M7 use a task lesson instead of a separate synthesis checkpoint.
     # 27/10/2026 (passagem do GPT, tarefas por unidade): o M2 passa ao mesmo modelo, com duas aulas de tarefa.
-    if m in (1,2,3,4,5,6,7):
+    if m in tuple(range(1,10)):
      self.assertIn('tarefa-unidade-'+str(u['number']),ids)
      self.assertNotIn('sintese-unidade-'+str(u['number']),ids)
     else:self.assertIn('sintese-unidade-'+str(u['number']),ids)

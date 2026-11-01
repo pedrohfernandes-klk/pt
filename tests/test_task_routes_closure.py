@@ -36,7 +36,8 @@ def original_lesson_text(path):
  """Reverse only the explicitly authorized UX strings; retain the frozen LF hash."""
  source=(ROOT/path).read_text('utf-8')
  # 31/10/2026: a camada das tarefas precede todas as anteriores.
- for manifest_path in (ROOT/'tests/fixtures/tarefas-m356-edits-20261031.json',LINGUA_EDITS,OPCOES_EDITS,JUSTIFICADO_EDITS,AQUECIMENTOS_EDITS,SALA_EDITS,AUDIT_EDITS_M4_M7,AUDIT_EDITS,REIS_EDITS,TABLE_EDITS,GRAMMAR_EDITS,INSTRUCTION_EDITS):
+ # 01/11/2026: camada M8/M9 antes das anteriores.
+ for manifest_path in (ROOT/'tests/fixtures/tarefas-m89-edits-20261101.json',ROOT/'tests/fixtures/tarefas-m356-edits-20261031.json',LINGUA_EDITS,OPCOES_EDITS,JUSTIFICADO_EDITS,AQUECIMENTOS_EDITS,SALA_EDITS,AUDIT_EDITS_M4_M7,AUDIT_EDITS,REIS_EDITS,TABLE_EDITS,GRAMMAR_EDITS,INSTRUCTION_EDITS):
   manifest=json.loads(manifest_path.read_text('utf-8'))
   for edit in reversed(manifest['files'].get(path,{}).get('edits',[])):
    if source.count(edit['new'])!=edit['occurrences']:
@@ -74,6 +75,8 @@ class TaskRoutes(unittest.TestCase):
   expected={1:['m1-u1','m1-u2'],2:['m2-u1','m2-u2'],4:['m4-u1','m4-u2','m4-u3-discurso'],7:['m7-u1','m7-u2','m7-u3']}
   # 31/10/2026: inclui as seis tarefas aprovadas do M3, M5 e M6.
   expected.update({3: ['m3-u1', 'm3-u2'], 5: ['m5-u1', 'm5-u2'], 6: ['m6-u1', 'm6-u2']})
+  # 01/11/2026: todos os módulos têm aula de tarefa.
+  expected.update({8:["m8-u1","m8-u2"],9:["m9-u1","m9-u2"]})
   for m,slugs in expected.items():
    s=(ROOT/f'm{m}/index.html').read_text('utf-8');p=Route(s)
    self.assertEqual(len(p.ids),len(set(p.ids)))

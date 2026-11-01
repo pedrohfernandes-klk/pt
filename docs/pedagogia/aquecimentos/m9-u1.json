@@ -1,0 +1,213 @@
+{
+  "slug": "m9-u1",
+  "modulo": "m9",
+  "unidade": 1,
+  "versao": "1",
+  "momento": "No início da aula de tarefa",
+  "titulo": "Do gesto ao efeito",
+  "descricao": "Dez minutos para treinar leitura, fundamentação e revisão com exemplos inventados.",
+  "licoes_das_citacoes": [
+    "m9/licao-m9-f01",
+    "m9/licao-m9-f03",
+    "m9/licao-m9-f02"
+  ],
+  "menu": [
+    [
+      "../../../m9/licao-m9-f01/",
+      "Relembrar F01"
+    ],
+    [
+      "../../../m9/licao-m9-f03/",
+      "Relembrar F03"
+    ],
+    [
+      "../../../m9/licao-m9-f02/",
+      "Relembrar F02"
+    ]
+  ],
+  "reservadas": [
+    "miniatura",
+    "auto de fé",
+    "São Pedro"
+  ],
+  "cartoes": [
+    {
+      "t": "ler",
+      "rot": "Abre",
+      "titulo": "Do gesto ao efeito",
+      "html": "<p>Dez minutos com consulta, sem nota. Os exemplos foram inventados para treinar operações de leitura e escrita; não dão as respostas da tarefa.</p><p>Caso inventado: o diretor inaugura a biblioteca, corta uma fita e elogia o silêncio. Atrás dele, uma máquina de obras impede que se ouça o discurso. O narrador descreve ambos os sons.</p>"
+    },
+    {
+      "t": "escolha",
+      "p": "Que pormenor obriga a reler o elogio?",
+      "p2": "Que relação cria distância entre fala e situação?",
+      "o": [
+        "A biblioteca tem uma fita para ser cortada.",
+        "A máquina abafa a voz que elogia o silêncio.",
+        "O diretor está presente na sua inauguração."
+      ],
+      "c": 1,
+      "f": "O ruído contrasta com o elogio; explica esse contraste antes de lhe dar um nome.",
+      "fe": [
+        "A fita, por si só, não contradiz a fala.",
+        null,
+        "Estar presente não altera o sentido do elogio."
+      ],
+      "g": "1"
+    },
+    {
+      "t": "emparelhar",
+      "p": "Liga cada função ao elemento do caso.",
+      "p2": "Que elemento observa, interpreta ou limita?",
+      "pares": [
+        [
+          "Fala da personagem",
+          "o elogio do silêncio"
+        ],
+        [
+          "Descrição do narrador",
+          "a máquina abafa o discurso"
+        ],
+        [
+          "Relação relevante",
+          "o ruído contraria o elogio"
+        ]
+      ],
+      "f": "Uma interpretação precisa de observação e de uma relação explicada. Mantém distintas as funções.",
+      "fe": "Volta ao caso: uma coisa é observar, outra é concluir ou propor.",
+      "g": "2"
+    },
+    {
+      "t": "rever",
+      "p": "Revê a conclusão para a ajustar ao caso.",
+      "p2": "Que substituição evita afirmar mais do que o exemplo permite?",
+      "apoio": "Caso inventado: o diretor inaugura a biblioteca, corta uma fita e elogia o silêncio. Atrás dele, uma máquina de obras impede que se ouça o discurso. O narrador descreve ambos os sons.",
+      "frase": "O narrador confirma o elogio do diretor.",
+      "trecho": "confirma o elogio",
+      "o": [
+        "repete o elogio sem reservas",
+        "contrapõe ruído ao elogio",
+        "apoia o elogio sem reservas"
+      ],
+      "c": 1,
+      "f": "A revisão ajusta a conclusão aos elementos disponíveis e conserva uma frase completa.",
+      "fe": [
+        "Esta alternativa não resolve o desajuste entre a conclusão e os elementos do caso. Confere o que foi observado.",
+        null,
+        "Esta alternativa não resolve o desajuste entre a conclusão e os elementos do caso. Volta ao contexto antes de decidir."
+      ],
+      "g": "3"
+    },
+    {
+      "t": "vf",
+      "p": "Dar nome a um recurso basta para explicar o seu efeito.",
+      "p2": "Uma classificação, sem contexto, já fundamenta a leitura?",
+      "v": false,
+      "f": "O nome classifica; a explicação mostra o que a escolha faz neste contexto.",
+      "fe": "Volta ao pormenor e pergunta que diferença faz para quem lê.",
+      "g": "4"
+    },
+    {
+      "t": "ordenar",
+      "p": "Ordena um percurso de revisão.",
+      "p2": "Que sequência permite testar uma interpretação?",
+      "passos": [
+        "Localizar um pormenor no texto.",
+        "Explicar o efeito desse pormenor.",
+        "Confrontar a explicação com o contexto."
+      ],
+      "f": "Localizas, explicas e testas. Podes voltar atrás se o contexto contrariar a hipótese.",
+      "fe": "Não confirmes uma leitura antes de a confrontares com aquilo que o texto mostra.",
+      "g": "5"
+    },
+    {
+      "t": "escolha",
+      "p": "Que comentário ajuda a melhorar uma resposta?",
+      "p2": "Que pedido exige uma relação verificável?",
+      "o": [
+        "Explica como o pormenor sustenta a leitura.",
+        "Afirma que a leitura é sempre a mais bonita.",
+        "Repete que o autor escreveu muitos textos."
+      ],
+      "c": 0,
+      "f": "O comentário pede uma relação entre prova e conclusão, em vez de elogio ou informação lateral.",
+      "fe": [
+        null,
+        "A preferência não substitui a justificação.",
+        "A quantidade de textos do autor não prova esta leitura."
+      ],
+      "g": "6"
+    },
+    {
+      "t": "completar",
+      "p": "Completa a revisão do argumento.",
+      "p2": "Que palavras articulam prova e limite?",
+      "frase": "Um indício ajuda a [1] uma leitura, mas não permite [2] todas as alternativas.",
+      "lacunas": [
+        {
+          "o": [
+            "sustentar",
+            "disfarçar",
+            "substituir"
+          ],
+          "c": 0
+        },
+        {
+          "o": [
+            "acolher",
+            "excluir",
+            "registar"
+          ],
+          "c": 1
+        }
+      ],
+      "f": "O indício dá fundamento. Para excluir uma alternativa, precisas de a confrontar com o contexto.",
+      "fe": "Distingue dar apoio a uma hipótese de eliminar automaticamente todas as outras.",
+      "g": "7"
+    },
+    {
+      "t": "vf",
+      "p": "Uma objeção pertinente pode obrigar a limitar a tua conclusão.",
+      "p2": "Responder a uma dificuldade pode tornar a posição menos absoluta?",
+      "v": true,
+      "f": "Responder não exige manter tudo igual: podes precisar melhor as condições da tua posição.",
+      "fe": "A revisão serve para tornar a posição defensável, não para a repetir sem mudança.",
+      "g": "8"
+    },
+    {
+      "t": "escolha",
+      "p": "Que fonte de informação permite conferir o indício?",
+      "p2": "Onde regressas para verificar a tua interpretação?",
+      "o": [
+        "À passagem e ao contexto que a acompanha.",
+        "À popularidade de quem dá a interpretação.",
+        "À quantidade de vezes que repetes a ideia."
+      ],
+      "c": 0,
+      "f": "É no texto e no contexto que a hipótese se testa; a repetição e a popularidade não são provas.",
+      "fe": [
+        null,
+        "Ser popular não garante rigor de leitura.",
+        "Repetir a hipótese não acrescenta evidência."
+      ],
+      "g": "9"
+    },
+    {
+      "t": "sublinhar",
+      "p": "Toca na palavra que limita a certeza da conclusão.",
+      "p2": "Que palavra apresenta a afirmação como hipótese?",
+      "frase": "Este gesto talvez indique uma hesitação.",
+      "certas": [
+        2
+      ],
+      "f": "Talvez assinala uma possibilidade. A hipótese tem de ser sustentada e pode ser revista.",
+      "fe": "Procura a palavra que admite que a conclusão não está garantida.",
+      "g": "10"
+    },
+    {
+      "t": "ler",
+      "rot": "Para levar",
+      "html": "<p>Na tarefa, escolhe as tuas passagens. Localiza, explica e revê: os exemplos deste aquecimento não são um texto para copiares.</p><p><a href=\"../\">Abrir a aula de tarefa</a></p>"
+    }
+  ]
+}

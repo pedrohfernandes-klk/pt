@@ -1,0 +1,103 @@
+{
+  "aquecer": {
+    "cartoes": "aquecimento/",
+    "minutos": 10,
+    "texto": "Dez minutos com casos inventados para treinar. Depois, o docente apresenta o enunciado e começam os 60 minutos de produção.",
+    "ligacao": "Abrir o aquecimento em cartões",
+    "ligacao_enunciado": "Antes de começar: aquecer em cartões, 10 minutos"
+  },
+  "dossie_titulo": "Textos e condições de consulta",
+  "opcional": {
+    "pergunta": "Que frase liga um pormenor a uma interpretação?",
+    "opcoes": [
+      {
+        "letra": "A",
+        "certa": false,
+        "texto": "A porta aparece no início e volta no final.",
+        "resposta": "Localiza um pormenor, mas ainda não explica o seu efeito."
+      },
+      {
+        "letra": "B",
+        "certa": true,
+        "texto": "A porta fechada torna a espera mais incerta.",
+        "resposta": "Relaciona uma escolha concreta com um efeito de leitura; falta conferir esse efeito no contexto."
+      },
+      {
+        "letra": "C",
+        "certa": false,
+        "texto": "A porta pertence a um texto muito conhecido.",
+        "resposta": "A fama do texto não explica o efeito desse pormenor."
+      }
+    ]
+  },
+  "fecho": "Fecha com duas linhas, fora da contagem: indica uma decisão de escrita e a passagem que a sustenta. Junta a autoavaliação /20. O núcleo de planificação também fica fora da contagem.",
+  "slug": "m9-u2",
+  "titulo": "O que vale preservar",
+  "unidade": 2,
+  "lead": "Escreve um texto de opinião, em 220 a 260 palavras, que propõe uma decisão pública com apoio em <i>Memorial do Convento</i>. Trabalha individualmente, à mão, com consulta. Conta as palavras.",
+  "nucleo": [
+    "Antes do texto, regista o tema, uma decisão concreta e duas situações localizadas do romance.",
+    "Anota uma objeção e uma diferença entre épocas. No texto, justifica a decisão, responde à objeção e explica o limite da comparação com o presente."
+  ],
+  "temas": [
+    {
+      "letra": "A",
+      "nome": "Apresentar um monumento",
+      "texto": "Que lugar devem ter as vidas de quem o construiu? Propõe uma decisão de apresentação pública, relacionando a nomeação dos trabalhadores com Francisco Marques."
+    },
+    {
+      "letra": "B",
+      "nome": "Apresentar uma invenção",
+      "texto": "Que lugar devem ter o cuidado e a arte que a tornaram possível? Propõe uma decisão de apresentação pública, relacionando Blimunda e a intervenção de Scarlatti."
+    }
+  ],
+  "apoios": [
+    {
+      "href": "../../m9/licao-m9-f05/",
+      "texto": "Os que carregaram a pedra: consulta o episódio e os nomes."
+    },
+    {
+      "href": "../../m9/licao-m9-f11/",
+      "texto": "O cuidado também é ação: relê as situações de cuidado."
+    },
+    {
+      "href": "../../m9/licao-m9-f12/",
+      "texto": "Quando a música entra no projeto: relê a intervenção de Scarlatti."
+    },
+    {
+      "href": "../../m9/licao-m9-f10/",
+      "texto": "De quem é uma obra?: retoma a objeção e a resposta, sem repetir o debate."
+    },
+    {
+      "href": "../../m9/licao-m9-f13/",
+      "texto": "Da pista à interpretação: revê a proporção entre indícios e hipótese."
+    }
+  ],
+  "dossie": [
+    {
+      "facto": "Usa o exemplar de <i>Memorial do Convento</i> consultado na unidade. Identifica autor, título, editora, ano e páginas; não se presume uma paginação igual em todas as edições.",
+      "href": "https://www.josesaramago.org/livro/memorial-do-convento/",
+      "fonte": "Fundação José Saramago, edições"
+    },
+    {
+      "facto": "Tema A: a passagem de Francisco Marques também está num excerto editorial. Consulta apenas o texto literário, não o questionário desse recurso.",
+      "href": "https://recursos.portoeditora.pt/recurso?id=2363389",
+      "fonte": "Porto Editora, excerto de Memorial do Convento"
+    },
+    {
+      "facto": "Tema B: localiza no livro duas situações, uma relativa a Blimunda e outra a Scarlatti. As lições dão acesso ao contexto; a decisão pública é tua.",
+      "href": "../../m9/licao-m9-f12/",
+      "fonte": "Lição sobre Scarlatti"
+    },
+    {
+      "facto": "A entrega é apenas o texto com o núcleo e a síntese. A decisão pode ser uma escolha de conteúdo ou de apresentação; não construas uma campanha, um cartaz ou outro produto.",
+      "href": "../../m9/guia-da-tarefa-m9/",
+      "fonte": "Guia da tarefa"
+    }
+  ],
+  "criterios": [
+    "Decisão concreta e duas situações do romance usadas com rigor.",
+    "Argumento, objeção, resposta e uma diferença entre os contextos explicada.",
+    "Organização, correção linguística, extensão, núcleo e síntese revistos."
+  ]
+}

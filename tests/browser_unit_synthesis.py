@@ -12,42 +12,8 @@ host=f'http://127.0.0.1:{server.server_port}'
 try:
  with sync_playwright() as pw:
   browser=pw.chromium.launch(headless=True)
-  for mode in ('oral','caderno'):
-   ctx,page=new_page(browser,320)
-   # 27/10/2026 (passagem do GPT, tarefas por unidade): o M2 passou à aula de tarefa, sem síntese separada.
-   # 31/10/2026: o M3 passou à aula de tarefa; a síntese verifica-se agora no M8
-   page.goto(host+'/m8/',wait_until='networkidle')
-   page.evaluate('''() => { for(const id of ['m8-f01','m8-f03','m8-f04','m8-f05','m8-f06','m8-f10']) {localStorage.setItem('licao-'+id,JSON.stringify({lida:true}));localStorage.setItem('licao-'+id+'-a1',JSON.stringify({lida:true}));} for(const id of ['m8-poema-testemunha','lentes-poema','gramatica-aspeto']) localStorage.setItem('epi-pt-'+id,JSON.stringify({fim:true}));localStorage.setItem('desafio-M8-u1',JSON.stringify({ganho:true,melhor:8,total:8}));}''')
-   page.reload(wait_until='networkidle')
-   page.locator('[data-fim="1"] > summary').click()
-   box=page.locator('[data-sintese="1"]')
-   box.locator(f'input[value="{mode}"]').check()
-   box.locator('[data-sintese-registar]').click()
-   if mode=='oral':
-    out=ROOT.parents[1]/'outputs/sintese-interpretacao'
-    out.mkdir(parents=True,exist_ok=True)
-    box.screenshot(path=str(out/'sintese-oral-320.png'))
-   # 23/10/2026 (plano de melhoria, fase 0): a síntese já não tem caixa de notas nem botão «Copiar para o Teams».
-   assert page.locator('[data-fim="1"] textarea, [data-fim="1"] [data-copiar], [data-fim="1"] .sintese-notas').count()==0
-   assert page.evaluate('JSON.parse(localStorage.getItem("percurso-M8")).unidades[0].cumprida')
-   assert box.locator('[data-sintese-rever]').evaluate('el=>el===document.activeElement')
-   page.reload(wait_until='networkidle')
-   assert mode in page.evaluate('localStorage.getItem("percurso-sintese-M8-u1")')
-   page.locator('[data-fim="1"] > summary').click()
-   box.locator('[data-sintese-rever]').click()
-   assert not page.evaluate('JSON.parse(localStorage.getItem("percurso-M8")).unidades[0].cumprida')
-   # 23/10/2026 (plano de melhoria, fase 0): sem notas no ecrã, confirma-se só que o «Ainda estou a rever» persiste.
-   page.reload(wait_until='networkidle')
-   assert not page.evaluate('JSON.parse(localStorage.getItem("percurso-sintese-M8-u1")).feita')
-   print('PASS synthesis without on-screen writing, completion, focus, reload and undo:',mode,flush=True)
-   ctx.close()
-  ctx,page=new_page(browser,320)
-  page.goto(host+'/m8/',wait_until='networkidle')
-  page.evaluate("localStorage.removeItem('percurso-sintese-M8-u1-inicializada'); localStorage.setItem('percurso-M8-u1',JSON.stringify(Array(85).fill('anterior').join(' ')))")
-  page.reload(wait_until='networkidle')
-  assert page.evaluate('JSON.parse(localStorage.getItem("percurso-sintese-M8-u1")).modo')=='anterior'
-  print('PASS prior qualifying synthesis migration',flush=True)
-  ctx.close()
+  # 01/11/2026: nenhum módulo mantém a síntese separada; todos têm aula de tarefa.
+  assert TASK_MODULES == set(range(1,10))
   # 26/10: M1/M4/M7 close in the task lesson. Historic notes stay readable,
   # never migrate into a new assessment or become a second synthesis gate.
   for m in sorted(TASK_MODULES):

@@ -1,0 +1,104 @@
+{
+  "aquecer": {
+    "cartoes": "aquecimento/",
+    "minutos": 10,
+    "texto": "Dez minutos com casos inventados para treinar. Depois, o docente apresenta o enunciado e começam os 60 minutos de produção.",
+    "ligacao": "Abrir o aquecimento em cartões",
+    "ligacao_enunciado": "Antes de começar: aquecer em cartões, 10 minutos"
+  },
+  "dossie_titulo": "Textos e condições de consulta",
+  "opcional": {
+    "pergunta": "Que frase liga um pormenor a uma interpretação?",
+    "opcoes": [
+      {
+        "letra": "A",
+        "certa": false,
+        "texto": "A porta aparece no início e volta no final.",
+        "resposta": "Localiza um pormenor, mas ainda não explica o seu efeito."
+      },
+      {
+        "letra": "B",
+        "certa": true,
+        "texto": "A porta fechada torna a espera mais incerta.",
+        "resposta": "Relaciona uma escolha concreta com um efeito de leitura; falta conferir esse efeito no contexto."
+      },
+      {
+        "letra": "C",
+        "certa": false,
+        "texto": "A porta pertence a um texto muito conhecido.",
+        "resposta": "A fama do texto não explica o efeito desse pormenor."
+      }
+    ]
+  },
+  "fecho": "Fecha com duas linhas, fora da contagem: indica uma decisão de escrita e a passagem que a sustenta. Junta a autoavaliação /20. O núcleo de planificação também fica fora da contagem.",
+  "slug": "m8-u1",
+  "titulo": "O que as palavras conseguem",
+  "unidade": 1,
+  "lead": "Escreve uma apreciação crítica comparativa de dois poemas do mesmo autor, em 200 a 240 palavras. Trabalha individualmente, à mão, com consulta. Conta as palavras do texto.",
+  "nucleo": [
+    "Antes do texto, regista o tema, um juízo provisório e uma dificuldade que a comparação terá de resolver.",
+    "Localiza um indício de cada poema. No texto, explica o efeito e a relação entre ambos; não juntes dois resumos."
+  ],
+  "temas": [
+    {
+      "letra": "A",
+      "nome": "Eugénio de Andrade",
+      "texto": "Compara <i>As Palavras</i> e <i>Adeus</i>. Aprecia como a linguagem ganha ou perde força em cada situação, considerando uma diferença entre os poemas."
+    },
+    {
+      "letra": "B",
+      "nome": "Ana Luísa Amaral",
+      "texto": "Compara <i>Prece no Mediterrâneo</i> e <i>A verdade histórica</i>. Aprecia como uma forma reconhecível, a prece ou o relato doméstico, altera a atenção dada a uma experiência."
+    }
+  ],
+  "apoios": [
+    {
+      "href": "../../m8/licao-m8-f04/",
+      "texto": "Eugénio de Andrade: lê os dois poemas, incluindo o novo cartão antes de Para levar."
+    },
+    {
+      "href": "../../m8/licao-m8-f05/",
+      "texto": "Ana Luísa Amaral: lê os dois poemas, incluindo o novo cartão antes de Para levar."
+    },
+    {
+      "href": "../../m8/licao-m8-f03/",
+      "texto": "Jorge de Sena: retoma a ligação entre pormenor e efeito, com outros poemas."
+    },
+    {
+      "href": "../../m8/licao-m8-f10/",
+      "texto": "Comparar: retoma a diferença entre pôr lado a lado e relacionar."
+    }
+  ],
+  "dossie": [
+    {
+      "facto": "Tema A: Eugénio de Andrade, <i>As Palavras</i>, de <i>Até Amanhã</i>. Texto e leitura na RTP Ensina; regista a publicação consultada.",
+      "href": "https://ensina.rtp.pt/artigo/as-palavras-de-eugenio-de-andrade/",
+      "fonte": "RTP Ensina, As Palavras"
+    },
+    {
+      "facto": "Tema A: Eugénio de Andrade, <i>Adeus</i>, de <i>Os Amantes sem Dinheiro</i> (1950). Texto na RTP Ensina e leitura de Fernando Alves, programa <i>Voz</i> (2005).",
+      "href": "https://ensina.rtp.pt/artigo/adeus-de-eugenio-de-andrade/",
+      "fonte": "RTP Ensina, Adeus"
+    },
+    {
+      "facto": "Tema B: Ana Luísa Amaral, <i>Prece no Mediterrâneo</i>, <i>Ágora</i>, Assírio & Alvim, 2019. Reprodução na Seara Nova, 7 de agosto de 2023.",
+      "href": "https://searanova.publ.pt/2023/08/07/poesia-prece-no-mediterraneo/",
+      "fonte": "Seara Nova"
+    },
+    {
+      "facto": "Tema B: Ana Luísa Amaral, <i>A verdade histórica</i>, em <i>PÁ Poesia & Outras Artes</i>, n.º zero, Casa Comum, U.Porto Press, setembro de 2023, pp. 14 e 15. Reprodução autorizada pela Assírio & Alvim.",
+      "href": "https://www.up.pt/casacomum/wp-content/uploads/sites/520/2023/11/pa_versao_final-1.pdf#page=14",
+      "fonte": "Casa Comum, PÁ"
+    },
+    {
+      "facto": "Lê os poemas completos antes da aula. Na aula, consulta o mesmo material; indica título e verso ou estrofe de cada indício. Cita no máximo quatro versos de cada poema. Se usares outro exemplar, regista a edição.",
+      "href": "../../m8/guia-da-tarefa-m8/",
+      "fonte": "Guia da tarefa"
+    }
+  ],
+  "criterios": [
+    "Juízo crítico sustentado e leitura rigorosa dos dois poemas.",
+    "Comparação explicada com um indício localizado de cada poema.",
+    "Organização, correção linguística, extensão, núcleo e síntese revistos."
+  ]
+}
