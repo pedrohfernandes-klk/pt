@@ -67,13 +67,24 @@ class NewLessons(unittest.TestCase):
                 self.assertEqual(actual['lessons'],expected['lessons'])
                 self.assertEqual(actual['steps'],expected['steps'])
 
+    def test_attempt_arc_retrieval_and_proof(self):
+        # 01/11/2026: conta a sequência efetiva e a produção oral, não só o banco automático.
+        for item in LESSONS:
+            self.assertEqual(item['tentativa'],dict(automaticas=14,producao_oral=1,escrita_livre=0,selecionadas=0,variantes_p2=0))
+            self.assertTrue(item['cards'][1]['p'].startswith('Antes de reler.'))
+            self.assertIn(item['question'],item['cards'][0]['html'])
+            self.assertIn(item['question'],item['cards'][-1]['html'])
+            self.assertIn('outra que a limite',item['cards'][-1]['html'])
+            self.assertTrue(any('<details class="apoio">' in c.get('html','') for c in item['cards']))
+            self.assertTrue(all('Relê' in c['f'] or 'relê' in c['f'] or 'Regressa' in c['f'] for c in item['cards'] if c['t']!='ler'))
+
     def test_george_quote_and_credit(self):
         item = next(x for x in LESSONS if x['id']=='m8-f16')
-        quote = re.search(r'<blockquote[^>]*>«(.*?)»</blockquote>', item['cards'][2]['html']).group(1)
+        quote = re.search(r'<blockquote[^>]*>«(.*?)»</blockquote>', next(c['html'] for c in item['cards'] if 'Europa-América, 1995' in c.get('html',''))).group(1)
         self.assertEqual(len(quote.split()), 25)
         self.assertEqual(quote, 'À sua frente uma senhora de idade, primeiro esboçada, finalmente completa, olha-a atentamente. De idade não, George detesta eufemismos, mesmo só pensados, uma mulher velha.')
-        self.assertIn('Europa-América, 1995', item['cards'][2]['html'])
-        self.assertIn('não indica a página da edição', item['cards'][2]['html'])
+        self.assertIn('Europa-América, 1995', next(c['html'] for c in item['cards'] if 'Europa-América, 1995' in c.get('html','')))
+        self.assertIn('não indica a página da edição', next(c['html'] for c in item['cards'] if 'Europa-América, 1995' in c.get('html','')))
 
     def test_protected_poems_quote_at_most_four_lines(self):
         for id in ('m8-f13','m8-f14'):

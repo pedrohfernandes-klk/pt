@@ -30,7 +30,16 @@ def render(item, units):
     route = units[(module, item['unit'])]
     i = route.index(item['id'])
     previous = '../licao-' + route[i-1] + '/' if i else '../'
-    following = '../licao-' + route[i+1] + '/' if i+1 < len(route) else '../../tarefas/' + module + '-u' + str(item['unit']) + '/'
+    # 01/11/2026: segue os passos completos, incluindo exercícios entre as lições.
+    plan=json.loads((ROOT/'docs/pedagogia/percursos-unidades-20261020.json').read_text('utf-8'))
+    steps=list(plan[int(module[1:])-1]['units'][item['unit']-1]['steps'])
+    for new in sorted((x for x in LESSONS if x['id'].startswith(module+'-') and x['unit']==item['unit']),key=lambda x:route.index(x['id'])):
+        if new['id'] not in steps:steps.insert(steps.index(new['after'])+1,new['id'])
+    position=steps.index(item['id'])
+    if position+1<len(steps):
+        target=steps[position+1]
+        following='../'+('licao-' if target in route else '')+target+'/'
+    else:following='../../tarefas/'+module+'-u'+str(item['unit'])+'/' 
     values = dict(TITLE=escape(item['title']), UNIT=str(item['unit']), NUMBER=module[1:],
                   MODULE=module.upper(), ID=item['id'], PREVIOUS=previous, NEXT=following,
                   JSON_TITLE=json.dumps(item['title'], ensure_ascii=False),
