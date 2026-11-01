@@ -10,6 +10,8 @@ body.pt-module-layout .cz-index .cabm .n{font:700 20px/1 Arial,sans-serif;color:
 body.pt-module-layout .cz-index .mod-pergunta{margin:8px 0}
 body.pt-module-layout .cz-index .mod-pergunta .serif{font:400 20px/1.4 Georgia,serif}
 body.pt-module-layout .cz-index .mod-ambito{font:16px/1.55 Georgia,serif;margin:0}
+body.pt-module-layout .cz-index .pequeno{font-size:13px}
+body.pt-module-layout .cz-index .unit-retoma p:first-child{font:13px/1.5 Arial,sans-serif}
 body.pt-module-layout .cz-index .module-opening .module-entry.cz-next{margin:16px 0 24px;padding:24px;background:var(--cz-ink);color:var(--cz-paper)}
 body.pt-module-layout .cz-index .cz-next h2{font:700 25px/1.2 Arial,sans-serif;margin:0 0 16px}
 body.pt-module-layout .cz-index .cz-next p{font:16px/1.5 Arial,sans-serif;margin:0 0 16px}
