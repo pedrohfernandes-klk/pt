@@ -6,7 +6,8 @@ const root=path.resolve(__dirname,'..');
 // 01/11/2026: serve o prefixo publicado do próprio repositório, também no Português.
 const site=require('node:child_process').execFileSync('git',['config','--get','remote.origin.url'],{cwd:root,encoding:'utf8'}).trim().split('/').pop().replace(/\.git$/,'');
 // 01/11/2026: a demonstração nova também passa pela medição integral R1–R5.
-const candidates=['demonstracoes/cartaz-animacoes/index.html','index.html','narrativas/index.html','narrativas/ver/index.html','narrativas/treinar/index.html','narrativas/criar/index.html'];
+// 01/11/2026: medir também os nove índices migrados.
+const candidates=[...Array.from({length:9},(_,i)=>`m${i+1}/index.html`),'demonstracoes/cartaz-animacoes/index.html','index.html','narrativas/index.html','narrativas/ver/index.html','narrativas/treinar/index.html','narrativas/criar/index.html'];
 const pages=candidates.filter(p=>fs.existsSync(path.join(root,p))&&fs.readFileSync(path.join(root,p),'utf8').includes('data-cartaz="2"'));
 const server=http.createServer((q,r)=>{let f=path.resolve(root,'.'+new URL(q.url,'http://local').pathname.replace(new RegExp('^/'+site),''));if(f!==root&&!f.startsWith(root+path.sep)){r.writeHead(403);return r.end();}try{if(fs.statSync(f).isDirectory())f=path.join(f,'index.html');r.setHeader('content-type',({'.html':'text/html; charset=utf-8','.css':'text/css','.js':'text/javascript','.json':'application/json'})[path.extname(f)]||'application/octet-stream');r.end(fs.readFileSync(f));}catch{r.writeHead(404);r.end();}});
 const MEASURE=()=>{
@@ -48,7 +49,7 @@ const MEASURE=()=>{
  }
  }await ctx.close();}
  const roles=new Map();let r4=0;
- for(const row of rows){const template=/narrativas\/(ver|treinar|criar)\//.test(row.page)?'bloco':row.page;for(const role of row.roles){const key=[template,row.width,row.theme,row.mode,role.sig].join('|');if(roles.has(key)&&Math.abs(roles.get(key)-role.fs)>.02)r4++;roles.set(key,role.fs);}}
+ for(const row of rows){const template=/^m[1-9]\/index\.html$/.test(row.page)?'indices-pt':/narrativas\/(ver|treinar|criar)\//.test(row.page)?'bloco':row.page;for(const role of row.roles){const key=[template,row.width,row.theme,row.mode,role.sig].join('|');if(roles.has(key)&&Math.abs(roles.get(key)-role.fs)>.02)r4++;roles.set(key,role.fs);}}
  assert.equal(r4,0,'R4: tamanhos diferentes no mesmo molde');
  for(const p of pages)for(const width of [390,1366])console.log(`${p} | ${width}px | claro/escuro, normal/dobras abertas | R1=0 R2=0 R3=0 R4=0 R5=0 | escala conforme`);
  if(process.env.HIERARQUIA_SAIDA)fs.writeFileSync(process.env.HIERARQUIA_SAIDA,JSON.stringify(rows,null,2));

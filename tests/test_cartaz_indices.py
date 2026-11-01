@@ -1,0 +1,46 @@
+"""01/11/2026: índices Cartaz, preservação e camada literal reversível."""
+import json,re,subprocess,sys,unittest
+from pathlib import Path
+from auditoria_20261028 import undo_cartaz_indices
+ROOT=Path(__file__).resolve().parents[1]
+BASE='746253a44fa8e8567a4223afe0c60c032aeff220'
+
+class IndicesCartaz(unittest.TestCase):
+ def test_ligacoes_ancoras_ordem_e_dados_do_motor(self):
+  for n in range(1,10):
+   rel=f'm{n}/index.html';after=(ROOT/rel).read_text('utf8');before=undo_cartaz_indices(rel,after)
+   with self.subTest(module=n):
+    self.assertEqual(re.findall(r'\bhref="([^"]*)"',before),[x for x in re.findall(r'\bhref="([^"]*)"',after) if 'cartaz-indices.css' not in x])
+    ids=lambda s:re.findall(r'\bid="([^"]*)"',s)
+    self.assertEqual(ids(before),[x for x in ids(after) if x!='cz-index-route'])
+    data=lambda s:json.JSONDecoder().raw_decode(s.split('var U=',1)[1])[0]
+    self.assertEqual(data(before),data(after))
+    self.assertEqual(re.findall(r'localStorage\.[\s\S]{0,150}',before),re.findall(r'localStorage\.[\s\S]{0,150}',after))
+    self.assertEqual(re.findall(r'<img\b[^>]*>',before),re.findall(r'<img\b[^>]*>',after))
+ def test_m4_conserva_as_tres_provas_do_149(self):
+  p='m4/index.html';after=(ROOT/p).read_text('utf8');before=undo_cartaz_indices(p,after)
+  proofs=lambda s:re.findall(r'<p class="prova-esperada">(.*?)</p>',s)
+  self.assertEqual(proofs(before),proofs(after));self.assertEqual(len(proofs(after)),3)
+ def test_uma_prova_e_uma_dobra_aberta_por_unidade(self):
+  for n in range(1,10):
+   s=(ROOT/f'm{n}/index.html').read_text('utf8');units=json.JSONDecoder().raw_decode(s.split('var U=',1)[1])[0]
+   self.assertEqual(s.count('<p class="prova-esperada">'),len(units))
+   self.assertEqual(len(re.findall(r'<details class="cz-fold"[^>]*\bopen>',s)),len(units))
+   self.assertEqual(s.count('class="module-entry cz-next"'),1)
+ def test_adaptador_nao_grava_progresso_e_reutiliza_o_motor(self):
+  s=(ROOT/'assets/cartaz-indices.js').read_text('utf8')
+  self.assertNotRegex(s,r'(?:localStorage|sessionStorage)\.(?:setItem|removeItem|clear)')
+  self.assertIn('EPIUnitTaskRoute.lessonDone(step)',s)
+  self.assertIn('previous.get(step.id)===false&&done',s)
+  self.assertNotIn('setAttribute("href"',s)
+ def test_camada_aplicada_e_reversivel(self):
+  r=subprocess.run([sys.executable,'scripts/aplicar_trocas.py','scripts/cartaz_indices_20261101.json','--manifesto','tests/fixtures/cartaz-indices-edits-20261101.json','--verificar'],cwd=ROOT,capture_output=True,text=True,encoding='utf8')
+  self.assertEqual(r.returncode,0,r.stdout+r.stderr)
+ def test_so_nove_paginas_migram_sobre_a_base_integrada(self):
+  files=subprocess.check_output(['git','diff','--name-only',BASE,'--','*.html'],cwd=ROOT,text=True).splitlines()
+  self.assertEqual(sorted(files),[f'm{n}/index.html' for n in range(1,10)])
+ def test_o_carrossel_antigo_nao_apaga_o_ambito_novo(self):
+  for n in range(1,10):
+   s=(ROOT/f'm{n}/index.html').read_text('utf8')
+   self.assertIn("[data-cartaz]:not([data-cartaz='2']):not([data-cz-feito])",s)
+if __name__=='__main__':unittest.main()

@@ -1,3 +1,4 @@
+# 01/11/2026: desfazer a camada dos índices antes dos contratos históricos.
 name: Português, texto corrido justificado
 # 30/10/2026: texto corrido justificado, com hifenização em português europeu (decisão do docente). A regra está no fim
 # de assets/appearance.css (mais uma linha em cada ficheiro de estilo dos painéis de notas, assets/pt-lessons/notes.css e
@@ -43,7 +44,7 @@ jobs:
           # 01/11/2026: desfazer primeiro a camada das tarefas M8/M9.
           # 01/11/2026: desfaz primeiro a camada das sete lições novas.
           # 01/11/2026: desfaz antes a camada do pedido B.
-          python scripts/aplicar_trocas.py scripts/texto_justificado_20261030.json --manifesto tests/fixtures/texto-justificado-edits-20261030.json --verificar --desfazer-antes tests/fixtures/conteudos-lote1-edits-20261101.json --desfazer-antes tests/fixtures/licoes-m16-edits-20261101.json --desfazer-antes tests/fixtures/licoes-m89-edits-20261101.json --desfazer-antes tests/fixtures/tarefas-m89-edits-20261101.json --desfazer-antes tests/fixtures/tarefas-m356-edits-20261031.json --desfazer-antes tests/fixtures/lingua-pessoa-m7-edits-20261030.json --desfazer-antes tests/fixtures/opcoes-denunciadoras-edits-20261030.json
+          python scripts/aplicar_trocas.py scripts/texto_justificado_20261030.json --manifesto tests/fixtures/texto-justificado-edits-20261030.json --verificar --desfazer-antes tests/fixtures/cartaz-indices-edits-20261101.json --desfazer-antes tests/fixtures/conteudos-lote1-edits-20261101.json --desfazer-antes tests/fixtures/licoes-m16-edits-20261101.json --desfazer-antes tests/fixtures/licoes-m89-edits-20261101.json --desfazer-antes tests/fixtures/tarefas-m89-edits-20261101.json --desfazer-antes tests/fixtures/tarefas-m356-edits-20261031.json --desfazer-antes tests/fixtures/lingua-pessoa-m7-edits-20261030.json --desfazer-antes tests/fixtures/opcoes-denunciadoras-edits-20261030.json
       - uses: actions/setup-node@v4
         with:
           node-version: '20'

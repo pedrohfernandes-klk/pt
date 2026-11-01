@@ -10,6 +10,7 @@ sys.path.insert(0, str(ROOT / 'scripts'))
 from audit_cards import lesson_cards, validate_cards
 from opcoes_equilibradas import medir
 from aplicar_trocas import sha_lf
+from auditoria_20261028 import undo_cartaz_indices
 
 PATHS = {k: ROOT / f'{k[:2].lower()}/licao-{k.lower()}/index.html'
          for k in ('M1-F20','M4-F01','M4-F28','M6-F01','M7-F34','M8-F12','M9-F13')}
@@ -24,7 +25,22 @@ class Conteudos(unittest.TestCase):
         manifest = json.loads((ROOT/'tests/fixtures/conteudos-lote1-edits-20261101.json').read_text('utf-8'))
         for rel, item in manifest['files'].items():
             with self.subTest(path=rel):
-                after = (ROOT/rel).read_text('utf-8')
+                # 01/11/2026: conservar os hashes do #149 na integração com o #150.
+                # Desfaz o conteúdo, retira as camadas paralelas e reaplica o mesmo conteúdo.
+                after = undo_cartaz_indices(rel, (ROOT/rel).read_text('utf-8'))
+                prior = after
+                for e in reversed(item['edits']):
+                    self.assertEqual(prior.count(e['new']), e['occurrences'])
+                    prior = prior.replace(e['new'], e['old'])
+                for name in ('licoes-m16-edits-20261101.json','licoes-m89-edits-20261101.json','tarefas-m89-edits-20261101.json','tarefas-m356-edits-20261031.json'):
+                    layer=json.loads((ROOT/'tests/fixtures'/name).read_text('utf-8'))
+                    for e in reversed(layer['files'].get(rel,{}).get('edits',[])):
+                        self.assertEqual(prior.count(e['new']), e['occurrences'])
+                        prior=prior.replace(e['new'],e['old'])
+                after=prior
+                for e in item['edits']:
+                    self.assertEqual(after.count(e['old']),e['occurrences'])
+                    after=after.replace(e['old'],e['new'])
                 self.assertEqual(sha_lf(after), item['after_sha256_lf'])
                 before = after
                 for e in reversed(item['edits']):

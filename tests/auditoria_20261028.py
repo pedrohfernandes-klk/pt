@@ -222,6 +222,7 @@ _LICOES_M16_FILES = json.loads((ROOT / 'tests/fixtures/licoes-m16-edits-20261101
 
 def undo_licoes_m16(path, text):
     # 01/11/2026: integrar o lote de conteúdos acima dos pedidos de lições.
+    text = undo_cartaz_indices(path, text)
     text = undo_conteudos(path, text)
     relative = _relative(path)
     for edit in reversed(_LICOES_M16_FILES.get(relative, {}).get('edits', [])):
@@ -261,6 +262,18 @@ def undo_conteudos(path, text):
     for edit in reversed(_CONTEUDOS_FILES.get(relative, {}).get('edits', [])):
         if text.count(edit['new']) != edit['occurrences']:
             raise AssertionError(f"Troca de conteúdos de 01/11 não confere: {relative}: {edit['location']}")
+        text = text.replace(edit['new'], edit['old'])
+    return text
+
+
+# 01/11/2026: índices Cartaz, camada mais recente sobre as dependências integradas.
+_CARTAZ_INDICES = json.loads((ROOT / 'tests/fixtures/cartaz-indices-edits-20261101.json').read_text('utf-8'))['files']
+
+def undo_cartaz_indices(path, text):
+    relative = _relative(path)
+    for edit in reversed(_CARTAZ_INDICES.get(relative, {}).get('edits', [])):
+        if text.count(edit['new']) != edit['occurrences']:
+            raise AssertionError(f"Índices Cartaz não conferem: {relative}: {edit['location']}")
         text = text.replace(edit['new'], edit['old'])
     return text
 
