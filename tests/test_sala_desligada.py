@@ -201,7 +201,8 @@ class SalaDesligada(unittest.TestCase):
                         self.assertEqual(m['frase'], x['frase'])
                     else:
                         self.assertEqual(t, 'vf')
-        self.assertEqual(n, 1445)
+        # 01/11/2026: três leituras passam a ações com material no apoio (M6, M7 e M8 C02).
+        self.assertEqual(n, 1448)
 
     def test_licoes_sem_envio_com_o_cartao_extra_e_o_menu_que_fica(self):
         for rel in PAGINAS['licao']:

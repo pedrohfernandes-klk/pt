@@ -498,15 +498,19 @@
    "rot": "Porquê? Verdadeiro ou falso"
   },
   {
-   "t": "vf",
+   "t": "sublinhar",
    "g": "3c",
    "l": "29",
-   "p": "As frontarias da Rua dos Douradores são descritas como grandiosas e ricas.",
-   "p2": "Ricardo Reis vê na rua prédios imponentes e cheios de ornamentos.",
-   "v": false,
-   "f": "Falso. São altas, mas «de cinza parda» (linha 29), com «monótonas cantarias» (linha 30), e os prédios estão «porejando sombra e humidade» (linha 34). Altura não é grandeza: a rua é parda e húmida. Por isso, no espaço (a), a opção (3), «monumentalidade», não serve.",
-   "fe": "As frontarias são «de cinza parda» (linha 29) e as cantarias, «monótonas» (linha 30). Nada de riqueza: a opção (3), «monumentalidade», não serve.",
-   "rot": "Porquê? Verdadeiro ou falso"
+   "p": "Toca nas duas palavras que caracterizam a cor das frontarias e limitam a leitura de riqueza.",
+   "f": "«Cinza parda» caracteriza a cor; «altas» indica dimensão. Na linha 29, a altura não basta para defender a monumentalidade, sobretudo quando a linha 30 acrescenta a monotonia.",
+   "fe": "Confundes altura com riqueza. Relê a linha 29: depois de «frontarias de», que duas palavras descrevem a cor?",
+   "rot": "Porquê? Sublinha a prova",
+   "p2": "Toca nas duas palavras que caracterizam a cor das frontarias e limitam a leitura de riqueza.",
+   "frase": "e ver as altas frontarias de cinza parda,",
+   "certas": [
+    6,
+    7
+   ]
   },
   {
    "t": "vf",

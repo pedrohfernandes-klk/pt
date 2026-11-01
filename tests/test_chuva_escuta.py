@@ -29,9 +29,16 @@ class ChuvaEscuta(unittest.TestCase):
         self.assertEqual(len({c['g'] for c in activities}), 3) # três operações essenciais na seleção
         for c in activities:
             self.assertTrue(c['f'])
-            self.assertEqual(len(c['o']), len(c['fe']))
-            self.assertIsNone(c['fe'][c['c']])
-            self.assertTrue(all(f for i, f in enumerate(c['fe']) if i != c['c']))
+            # 01/11/2026: a análise passa a completar, mantendo o retorno e as três operações.
+            if c['t']=='completar':
+                self.assertEqual(len(c['lacunas']),1)
+                self.assertEqual(c['lacunas'][0]['c'],0)
+                self.assertIn('fusão',c['lacunas'][0]['o'][0])
+                self.assertTrue(c['fe'])
+            else:
+                self.assertEqual(len(c['o']), len(c['fe']))
+                self.assertIsNone(c['fe'][c['c']])
+                self.assertTrue(all(f for i, f in enumerate(c['fe']) if i != c['c']))
         self.assertIn('Compara I e VI', activities[-1]['p'])
 
     def test_painel_lanca_todas_as_perguntas_reais_da_ficha(self):

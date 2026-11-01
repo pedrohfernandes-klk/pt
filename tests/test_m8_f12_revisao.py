@@ -2,6 +2,8 @@
 from pathlib import Path
 import json
 import unittest
+# 01/11/2026: o arquivo do M8 fica intacto neste lote; compara-se com o seu predecessor.
+from auditoria_20261028 import undo_conteudos
 from html.parser import HTMLParser
 
 ROOT=Path(__file__).resolve().parents[1]
@@ -25,14 +27,19 @@ class F12Review(unittest.TestCase):
         self.pool=[c for c in self.units[1]['pool'] if c.get('_l')=='m8-f12']
 
     def test_aspect_feedback_matches_the_lesson_in_challenge(self):
+        path='m8/licao-m8-f12/index.html'
+        previous=undo_conteudos(path,(ROOT/path).read_text('utf-8'))
+        previous=json.JSONDecoder().raw_decode(previous.split('CARTOES=',1)[1])[0]
         for index in (8,17):
-            card=self.cards[index]
+            card=previous[index]
             copied=next(c for c in self.pool if c['p']==card['p'])
             self.assertEqual(card['f'],copied['f'])
             self.assertEqual(card['p2'],copied['p2'])
-        self.assertEqual(self.cards[8]['c'],2)
-        self.assertIn('Um hábito também envolve repetição',self.cards[8]['f'])
-        self.assertIn('não é necessária uma contagem exata',self.cards[8]['f'])
+        # 01/11/2026: habitual e iterativo deixam de ser alternativas incompatíveis.
+        self.assertEqual(self.cards[8]['t'],'completar')
+        self.assertEqual(self.cards[8]['lacunas'][0]['c'],0)
+        self.assertIn('hábito',self.cards[8]['lacunas'][0]['o'][0])
+        self.assertIn('não são rótulos sempre incompatíveis',self.cards[8]['f'])
         self.assertIn('não diz que a pintora parou',self.cards[17]['f'])
 
     def test_challenge_requires_evidence_instead_of_universal_preference(self):
@@ -62,7 +69,7 @@ class F12Review(unittest.TestCase):
         self.assertNotIn(10,[c['k'] for c in expected])
 
     def test_retrieval_has_antecedent_and_hypothesis_is_labelled(self):
-        self.assertIn('Li o conto. Ele surpreendeu-me',self.cards[1]['html'])
+        self.assertIn('Li o conto. Ele surpreendeu-me',self.cards[0]['html'])
         self.assertIn('hipótese',self.cards[11]['p'])
         self.assertEqual(self.cards[11]['certas'],[8,9,10])
         words=self.cards[11]['frase'].split()

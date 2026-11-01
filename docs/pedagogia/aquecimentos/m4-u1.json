@@ -125,21 +125,21 @@
   },
   {
    "t": "escolha",
-   "p": "No ensaio com relógio, a tua apresentação chega aos cinco minutos. O que fazes?",
-   "p2": "A apresentação tem de durar três a quatro minutos, e o ensaio deu cinco. Qual é a boa decisão?",
-   "o": [
-    "Cortas o que se repete e voltas a ensaiar.",
-    "Falas mais depressa, para caber tudo no tempo.",
-    "Deixas assim: um minuto a mais não conta."
-   ],
-   "c": 0,
-   "f": "Três a quatro minutos é um critério, e o ensaio com relógio serve para mudares alguma coisa (F10). Corta o que se repete, não a citação, o recurso ou a resposta à objeção.",
+   "p": "Caso criado: o teu ensaio dura cinco minutos. Repetes a mesma ideia, citas Vieira e explicas o efeito da citação. Que revisão conserva o essencial?",
+   "f": "A repetição ocupa tempo sem acrescentar prova. Depois do corte, confirma se ainda explicas a relação entre a citação e a ideia e se cumpres o tempo pedido.",
    "fe": [
-    null,
-    "Falar depressa tira clareza: quem ouve não pode voltar atrás. Ganha tempo a cortar, não a acelerar.",
-    "O tempo conta: são três a quatro minutos. Um ensaio que passa do limite pede uma mudança."
+    "Sem a citação, perdes uma prova necessária. Primeiro corta o que se repete; depois verifica a clareza e a duração da nova versão.",
+    "Nomear ou citar sem explicar o efeito deixa a justificação incompleta. A revisão deve retirar redundância, não o raciocínio que liga a prova à ideia.",
+    null
    ],
-   "g": 4
+   "g": 4,
+   "p2": "Caso criado: o teu ensaio dura cinco minutos. Repetes a mesma ideia, citas Vieira e explicas o efeito da citação. Que revisão conserva o essencial?",
+   "o": [
+    "Cortas a citação de Vieira, manténs a repetição e voltas a medir o tempo.",
+    "Cortas a explicação do efeito, manténs a repetição e voltas a medir o tempo.",
+    "Cortas a ideia repetida, manténs a prova e a explicação e medes o tempo."
+   ],
+   "c": 2
   },
   {
    "t": "ordenar",
