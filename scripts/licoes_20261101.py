@@ -216,5 +216,8 @@ lesson('m8-f15', 'A autora não é o poema', 1, 'm8-f14',
  read('Para levar', '<p class="levar">O contexto abre perguntas; o texto sustenta respostas.</p><p>Formula oralmente uma aproximação entre a reportagem e um poema lido. Inclui um dado, um indício e um limite. Não atribuas à reportagem uma explicação da origem de «A verdade histórica».</p>', 'Para levar'),
 ])
 
+# 01/11/2026: revisão do pedido A antes de registar os bancos do pedido B.
+from revisao_licoes_20261101 import aplicar
+aplicar(LESSONS)
 # 01/11/2026: o pedido B acrescenta nove bancos aos sete do pedido A.
 import licoes_m1_m6_20261101
