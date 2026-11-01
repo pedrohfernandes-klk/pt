@@ -30,9 +30,13 @@ ROOT = Path(__file__).resolve().parents[1]
 DADOS = ROOT / 'docs/pedagogia/aquecimentos'
 # 30/10/2026: aquecimento em cartões (decisão do docente)
 # 30/10/2026: o M4 também liga aos aquecimentos (camada tests/fixtures/aquecimentos-m4-edits-20261030.json).
-TAREFAS_LIGADAS = ['m1-u1', 'm1-u2', 'm2-u1', 'm2-u2', 'm4-u1', 'm4-u2', 'm4-u3-discurso', 'm7-u1', 'm7-u2', 'm7-u3']
+# 31/10/2026: inclui as seis tarefas aprovadas do M3, M5 e M6.
+# 01/11/2026: inclui as quatro tarefas do M8 e do M9.
+TAREFAS_LIGADAS = ['m1-u1', 'm1-u2', 'm2-u1', 'm2-u2', 'm3-u1', 'm3-u2', 'm4-u1', 'm4-u2', 'm4-u3-discurso', 'm5-u1', 'm5-u2', 'm6-u1', 'm6-u2', 'm7-u1', 'm7-u2', 'm7-u3', 'm8-u1', 'm8-u2', 'm9-u1', 'm9-u2']
 # 30/10/2026: M2 recebe páginas novas (aquecimentos em cartões das duas unidades).
-SLUGS = ['m1-u1', 'm1-u2', 'm2-u1', 'm2-u2', 'm4-u1', 'm4-u2', 'm4-u3-discurso', 'm7-u1', 'm7-u2', 'm7-u3']
+# 31/10/2026: inclui as seis tarefas aprovadas do M3, M5 e M6.
+# 01/11/2026: inclui as quatro tarefas do M8 e do M9.
+SLUGS = ['m1-u1', 'm1-u2', 'm2-u1', 'm2-u2', 'm3-u1', 'm3-u2', 'm4-u1', 'm4-u2', 'm4-u3-discurso', 'm5-u1', 'm5-u2', 'm6-u1', 'm6-u2', 'm7-u1', 'm7-u2', 'm7-u3', 'm8-u1', 'm8-u2', 'm9-u1', 'm9-u2']
 sys.path.insert(0, str(ROOT / 'scripts'))
 from audit_cards import lesson_cards, validate_cards  # noqa: E402
 # 29/10/2026 (revisão técnica, P1): as lições do M7 de onde vêm as citações da unidade 3, nenhuma escrita nesta camada.
