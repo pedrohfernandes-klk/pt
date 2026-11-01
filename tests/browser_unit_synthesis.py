@@ -36,7 +36,9 @@ try:
    assert page.locator('[data-sintese], [data-sintese-registar], #cartao, #copiar-cartao').count()==0
    assert not page.locator('#arquivo-percurso').is_visible()
    assert page.locator('button[data-desafio]:visible').count()==0
-   assert page.locator(f'#{first} [data-chip]').inner_text() == 'feito'
+   # 01/11/2026: um registo antigo sem data lê-se «Feita», sem inventar uma data.
+   assert page.locator(f'#{first} [data-cz-state-text]').inner_text() == 'Feita'
+   assert page.locator(f'#{first} [data-cz-point]').get_attribute('aria-hidden') == 'true'
    page.locator('.route-teacher-tools > summary').click()
    page.locator('.route-teacher-tools a[href="?arquivo=1#arquivo-percurso"]').click()
    page.wait_for_url('**/?arquivo=1#arquivo-percurso')

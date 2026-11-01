@@ -90,6 +90,9 @@ def main():
    assert page.locator('[data-sintese], #cartao, #copiar-cartao').count()==0
    assert page.locator('button[data-desafio]:visible').count()==0
    task=page.locator('[data-task-lesson="1"] > a')
+   # 01/11/2026: a unidade já lida fica dobrada; reabre-se pelo teclado para a tarefa.
+   from browser_task_contract import open_route_unit
+   open_route_unit(page, 1)
    task.focus();task.press('Enter');page.wait_for_url('**/tarefas/m1-u1/')
    # 30/10/2026 (decisão do docente de 29/10): o aquecimento em papel passou a cartões numa página própria; na tarefa
    # fica só a pergunta opcional.
