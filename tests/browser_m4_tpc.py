@@ -53,7 +53,9 @@ try:
    assert 'Almeida Garrett' in page.locator('#baralho').inner_text()
    page.locator('.casca [data-seguinte]').click()
    page.locator('#baralho button[data-j="0"]').press('Enter')
-   assert 'não uma transcrição integral' in page.locator('[data-c-folha]').inner_text()
+   # 01/11/2026: o erro distingue relação temática de repetição e aponta as duas situações a reler.
+   assert 'Confundes relação temática com repetição do enredo' in page.locator('[data-c-folha]').inner_text()
+   assert 'um namoro terminado e um marido desaparecido' in page.locator('[data-c-folha]').inner_text()
    page.locator('[data-c-folha] [data-seguinte]').click()
    page.locator('summary').filter(has_text='Ajuda: como sustentar').press('Enter')
    assert 'Procura outro detalhe' in page.locator('#baralho').inner_text()
