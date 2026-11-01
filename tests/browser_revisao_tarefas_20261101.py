@@ -7,7 +7,9 @@ import threading
 from playwright.sync_api import sync_playwright
 
 ROOT = Path(__file__).resolve().parents[1]
-SLUGS = ('m1-u1', 'm3-u1', 'm3-u2', 'm5-u1', 'm5-u2', 'm6-u1', 'm6-u2', 'm7-u3')
+# 01/11/2026: acrescenta as quatro tarefas seguintes sem retirar a cobertura anterior.
+SLUGS = ('m1-u1', 'm3-u1', 'm3-u2', 'm5-u1', 'm5-u2', 'm6-u1', 'm6-u2', 'm7-u3',
+         'm8-u1', 'm8-u2', 'm9-u1', 'm9-u2')
 
 class Quiet(SimpleHTTPRequestHandler):
     def log_message(self, *args):
@@ -26,7 +28,7 @@ def main():
                     page = ctx.new_page()
                     page.route('https://fonts.googleapis.com/**', lambda r: r.abort())
                     page.route('https://fonts.gstatic.com/**', lambda r: r.abort())
-                    for m in (3, 5, 6):
+                    for m in (3, 5, 6, 8, 9):
                         page.goto(f'{host}/m{m}/', wait_until='networkidle')
                         button = page.locator('[data-module-next]').bounding_box()
                         if width == 320:
