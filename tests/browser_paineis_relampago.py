@@ -21,7 +21,7 @@ import threading
 from urllib.parse import urlsplit
 from playwright.sync_api import sync_playwright
 from browser_m1_and_inventory import ROOT, QuietHandler
-from test_paineis_cartoes import CORRIGIDOS, banco, enunciado
+from test_paineis_cartoes import CORRIGIDOS, banco, enunciado, sem_italico
 
 FONTES = ('fonts.googleapis.com', 'fonts.gstatic.com')
 
@@ -89,12 +89,12 @@ def main():
                 assert opcoes.count() == len(P), pasta
                 for i, c in enumerate(P):
                     # 01/11/2026: compara o texto integral e confirma separadamente o itálico apresentado.
-                    assert L[c['k']]['t'] != 'ler' and enunciado(L[c['k']]) == enunciado(c), (pasta, c['k'])
-                    assert html.unescape(opcoes.nth(i).inner_html()) == enunciado(c), (pasta, c['k'])
+                    assert L[c['k']]['t'] != 'ler' and enunciado(L[c['k']]) == sem_italico(c['p']), (pasta, c['k'])
+                    assert html.unescape(opcoes.nth(i).inner_html()) == sem_italico(c['p']), (pasta, c['k'])
                     painel.locator('[data-r-k]').select_option(str(c['k']))
                     painel.locator('[data-relampago]').click()
                     assert painel.locator('[data-rot]').text_content() == 'Relâmpago, 60 segundos', (pasta, c['k'])
-                    assert painel.locator('[data-pedido]').text_content() == enunciado(c), (pasta, c['k'])
+                    assert painel.locator('[data-pedido]').text_content() == sem_italico(c['p']), (pasta, c['k'])
                     if '_' in c['p']:
                         assert painel.locator('[data-pedido] i').count() >= 1, (pasta,c['k'])
                     assert painel.locator('[data-crono]').is_visible(), (pasta, c['k'])

@@ -15,6 +15,11 @@ def banco(texto):
     m=re.search(r'CARTOES\s*=\s*(\[)',texto)
     return json.JSONDecoder().raw_decode(texto[m.start(1):])[0] if m else None
 
+# 01/11/2026: retira apenas o itálico; conserva espaços, negrito e números das lacunas.
+def sem_italico(s):
+    return re.sub(r'(?<!\w)_(.+?)_(?!\w)',r'\1',s)
+
+
 def enunciado(c):
     p=c.get('p') or c.get('frase') or ''
     p=re.sub(r'\*\*(.+?)\*\*',r'\1',re.sub(r'(?<!\w)_(.+?)_(?!\w)',r'\1',p))
@@ -48,7 +53,7 @@ class Paineis(unittest.TestCase):
             L=banco((ROOT/pasta.replace('painel-','licao-')/'index.html').read_text('utf-8'))
             esperado=[{'k':i,'t':c['t'],'p':enunciado(c)} for i,c in enumerate(L) if c['t']!='ler']
             # 01/11/2026: o cartão ganha itálico; a equivalência textual e a ordem mantêm-se.
-            self.assertEqual([dict(c,p=enunciado(c)) for c in P],esperado,pasta)
+            self.assertEqual([dict(c,p=sem_italico(c['p'])) for c in P],esperado,pasta)
             ops=re.findall(r'<option value="\d+">(.*?)</option>',re.search(r'<select data-r-k>(.*?)</select>',texto,re.S).group(1))
             self.assertEqual([html.unescape(o) for o in ops],[c['p'] for c in esperado],pasta)
             # 01/11/2026: sem marcadores visíveis no seletor; o painel converte os do cartão em itálico.

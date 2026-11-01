@@ -170,7 +170,7 @@ class SalaDesligada(unittest.TestCase):
                     self.assertEqual(D.normal(c['p']), D.normal(D.enunciado(x)))
                     self.assertFalse(solucoes & set(m), sorted(solucoes & set(m)))
                     # 01/11/2026: a lição pode ganhar itálico antes do painel que aguarda revisão.
-                    self.assertEqual(D.normal(m['f']), D.normal(x['f']))
+                    self.assertEqual(D.sem_italico(m['f']), D.sem_italico(x['f']))
                     t = x['t']
                     if t in ('escolha', 'rever'):
                         self.assertEqual(sorted(m['o']), sorted(x['o']))
@@ -192,7 +192,7 @@ class SalaDesligada(unittest.TestCase):
                             self.assertEqual(alinhados, [], 'o projetor mostraria a solução lado a lado')
                     elif t == 'completar':
                         # 01/11/2026: conserva a comparação integral das palavras, independentemente do itálico.
-                        self.assertEqual(D.normal(m['frase']), D.normal(x['frase']))
+                        self.assertEqual(D.sem_italico(m['frase']), D.sem_italico(x['frase']))
                         self.assertEqual([sorted(o) for o in m['lac']], [sorted(l['o']) for l in x['lacunas']])
                         # 29/10/2026 (revisão do #129): a citação por cima da frase não traz a palavra que falta
                         if 'cita' in m:
@@ -201,7 +201,7 @@ class SalaDesligada(unittest.TestCase):
                                 self.assertNotIn(' ' + D.so_letras(l['o'][l['c']]) + ' ', cita)
                     elif t == 'sublinhar':
                         # 01/11/2026: conserva a comparação integral das palavras, independentemente do itálico.
-                        self.assertEqual(D.normal(m['frase']), D.normal(x['frase']))
+                        self.assertEqual(D.sem_italico(m['frase']), D.sem_italico(x['frase']))
                     else:
                         self.assertEqual(t, 'vf')
         self.assertEqual(n, 1445)
