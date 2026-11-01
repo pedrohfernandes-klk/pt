@@ -17,6 +17,20 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 class QuietHandler(SimpleHTTPRequestHandler):
+    # 01/11/2026: /pt/ aponta para a cópia em teste, mesmo num ramo guardado noutra pasta.
+    # Evita testar por engano a cópia vizinha chamada pt; nenhuma asserção é alterada.
+    def translate_path(self, path):
+        from urllib.parse import urlsplit
+        route = urlsplit(path).path
+        if route == '/pt' or route.startswith('/pt/'):
+            previous = self.directory
+            self.directory = str(ROOT)
+            try:
+                return super().translate_path(path[3:] or '/')
+            finally:
+                self.directory = previous
+        return super().translate_path(path)
+
     def log_message(self, *args):
         pass
 

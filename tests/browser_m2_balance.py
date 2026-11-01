@@ -42,8 +42,9 @@ try:
    page.locator('[data-unidade="2"]').screenshot(path=str(OUT/f'unidade-2-{width}.png'))
    # Follow the menu links, so order and destinations are tested as rendered.
    page.goto(host+'/pt/m2/licao-m2-f06/',wait_until='networkidle')
+   # 01/11/2026: o menu do molde novo diz Continuar o percurso; o destino continua a ser verificado.
    for target in ['11','15','10','08','09']:
-    page.locator('[data-c-menu]').first.click();link=page.locator('[data-c-painel] a').filter(has_text=re.compile('^Lição seguinte$')).first;assert link.count()==1;link.click();page.wait_for_url(f'**/licao-m2-f{target}/')
+    page.locator('[data-c-menu]').first.click();link=page.locator('[data-c-painel] a').filter(has_text=re.compile('^(Lição seguinte|Continuar o percurso)$')).first;assert link.count()==1;link.click();page.wait_for_url(f'**/licao-m2-f{target}/')
    # 28/10/2026 (revisão do PR #124): antes conferia-se só o URL (**/m2/#desafio-unidade-2), mas esse desafio
    # está no arquivo escondido. O índice leva à aula de tarefa da unidade 2, à vista, pelo menu e pelo botão final.
    page.locator('[data-c-menu]').first.click();page.locator('[data-c-painel] a').filter(has_text=re.compile('^Desafio da unidade 2$')).click();at_task_2(page)
