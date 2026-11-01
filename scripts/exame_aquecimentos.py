@@ -19,6 +19,32 @@ ROOT = Path(__file__).resolve().parents[1]
 TIPOS = {'escolha', 'vf', 'emparelhar', 'ordenar', 'sublinhar', 'completar', 'versos'}
 
 
+def atualizar_contratos():
+    """01/11/2026: regista os 50 minutos sem mudar as trocas antigas de texto."""
+    from aplicar_trocas import carregar, processar, desfazer_camadas, sha_lf, commit_base
+    relative = 'assets/exame/sessoes.json'
+    language = ROOT / 'tests/fixtures/lingua-pessoa-m7-edits-20261030.json'
+    options = ROOT / 'tests/fixtures/opcoes-denunciadoras-edits-20261030.json'
+    for target, source, layers in (
+        (language, 'scripts/lingua_pessoa_m7_20261030.json', []),
+        (options, 'scripts/opcoes_denunciadoras_20261030.json', [language]),
+    ):
+        manifest = json.loads(target.read_text('utf-8'))
+        _, changes = carregar(str(ROOT / source))
+        text = (ROOT / relative).read_bytes().decode('utf-8')
+        text = desfazer_camadas(relative, text, [(str(p), json.loads(p.read_text('utf-8'))['files']) for p in layers])
+        before, after, states = processar(relative, changes[relative], text)
+        if after != text or any(state != 'aplicada' for state in states):
+            raise ValueError('As trocas anteriores têm de estar todas aplicadas; não se altera o seu conteúdo.')
+        entry = manifest['files'][relative]
+        hashes = {'base_sha256_lf': sha_lf(before), 'after_sha256_lf': sha_lf(after)}
+        if any(entry[k] != value for k, value in hashes.items()):
+            entry.update(hashes)
+            manifest['base_commit'] = commit_base(None)
+            manifest['_nota'] += ' 01/11/2026: duração das sessões de exame atualizada para 50 minutos (decisão 106); trocas, ocorrências e restantes ficheiros preservados.'
+            target.write_text(json.dumps(manifest, ensure_ascii=False, indent=1) + '\n', 'utf-8')
+
+
 def validar(d):
     cards = d['cartoes']
     erros = validate_cards(cards)
@@ -101,7 +127,12 @@ def pagina(d, raiz=ROOT):
 def main():
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument('--check', action='store_true', help='confere também se as páginas estão atualizadas')
+    ap.add_argument('--atualizar-contratos', action='store_true', help='regenera os resumos de verificação de sessoes.json, preservando as trocas anteriores')
     a = ap.parse_args()
+    if a.atualizar_contratos:
+        if a.check:
+            ap.error('--check não escreve contratos')
+        atualizar_contratos()
     falhas = []
     for p in sorted((ROOT / 'docs/pedagogia/exame-aquecimentos').glob('s*.json')):
         d = json.loads(p.read_text('utf-8'))

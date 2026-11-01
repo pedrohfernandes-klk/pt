@@ -51,7 +51,7 @@ Todos os bancos têm pelo menos cinco tipos e pelo menos um cartão de completar
 
 As escolhas têm retorno alinhado com cada alternativa. Nas lacunas, o controlador fornece ao motor apenas o retorno das alternativas erradas selecionadas, conservando a explicação geral. Não foi alterado o motor partilhado.
 
-O gerador exige diferença máxima de 20 % em caracteres visíveis, sem margem mínima de caracteres, tanto nas escolhas como nas lacunas. Exige também que a resposta certa nunca seja a única mais longa. A medição final e o resultado do teste geral serão registados após a última execução.
+O gerador exige diferença máxima de 20 % em caracteres visíveis, sem margem mínima de caracteres, tanto nas escolhas como nas lacunas. Exige também que a resposta certa nunca seja a única mais longa. Resultado: 156 conjuntos (71 escolhas e 85 lacunas), amplitude máxima de 20 %, zero conjuntos fora dos 20 %, zero certas como única opção mais longa. Há 44 cartões de completar, 41 com várias lacunas. Os tipos por sessão variam entre cinco e sete. `tests/test_opcoes_equilibradas.py`: cinco testes aprovados, também no CI.
 
 ## Progresso e projeção
 
@@ -67,11 +67,42 @@ Versos não tem vídeo dedicado: o motor usa o vídeo de ordenar, que demonstra 
 
 ## Verificações
 
-A primeira passagem de navegador percorreu todos os cartões a 320, 390 e 1366 px, com respostas, ajuda, conclusão, regresso, reinício e projeção. Está em curso a passagem final após a revisão dos retornos e da tipografia.
+A passagem final de `python tests/browser_exame_aquecimentos.py` percorreu os 324 cartões nas três larguras: 320, 390 e 1366 px. Todas as respostas certas foram aceites; verificaram-se ajuda, ausência de deslocamento horizontal, conclusão, melhor resultado, reinício, retorno por alternativa, retorno de uma só lacuna errada e projeção sem gravações nem exposição de resultados privados.
 
-A suite completa revelou falhas antigas em `test_sala_desligada.py`: 461 falhas de subtestes e dois erros, reproduzidos numa extração limpa do mesmo commit de base, sem as alterações deste pedido. Os testes da Sala não foram modificados. Os resultados finais dos outros testes serão acrescentados neste relatório.
+| Comando | Resultado |
+|---|---|
+| `python scripts/exame_aquecimentos.py --check` | 27 páginas atuais; bancos válidos e opções dentro dos limites |
+| `python -m unittest discover -s tests -p 'test_exame*.py' -v` | 16 testes aprovados |
+| `node tests/exame-catalogo.cjs` | 27 sessões; 108 itens anteriores preservados; tempos e destinos válidos |
+| `python tests/browser_exame_aquecimentos.py` | 81 percursos completos, mais os casos de erro e projeção |
+| `node tests/browser_exame_laboratorio.cjs` | Aprovado |
+| `node tests/browser_exame_oficina_revisao.cjs` | Aprovado, incluindo impressão e relógio sem armazenamento |
+| `python tests/browser_exame_cache.py` | Aprovado a 320 e 1440 px |
+| `python tests/browser_exame_alignment.py` | Aprovado |
+| `python tests/browser_relogio.py` | Aprovado |
+| `python tests/browser_exame_hierarquia.py` | Aprovado: três páginas, 390 e 1366 px |
+| `python tests/browser_provas_cartoes.py` | Aprovado: duas provas, todos os grupos, três larguras e projeção |
+| `python -m unittest discover -s tests -p 'test_*.py'` | 381 testes executados; ver ressalva de Windows abaixo |
+| `git diff --check` | Sem erros |
 
-No Windows, dois testes de navegador exigem uma ligação simbólica para servir `/pt/`. A execução direta dá `WinError 1314`; executam-se os mesmos testes com uma junção de diretório, sem mudar as suas asserções. O CI em Linux usa os comandos originais.
+A suite completa no Windows termina com 461 falhas de subtestes e dois erros, todos em `test_sala_desligada.py`. O mesmo resultado reproduz-se numa extração limpa do commit de base. No CI Linux deste pedido, a verificação da Sala passou. Não se alteraram esses testes nem se apresenta a execução local como aprovada.
+
+No Windows, a execução direta de dois testes de navegador (`browser_exame_hierarquia.py` e `browser_provas_cartoes.py`) deu `WinError 1314` ao criar uma ligação simbólica para servir `/pt/`. Os mesmos testes passaram usando uma junção de diretório, sem mudar qualquer asserção. No CI Linux correm pelos comandos originais.
+
+O primeiro CI aprovou os testes de opções e de língua, mas os dois trabalhos falharam depois com `manifesto desatualizado`: a duração de `sessoes.json` mudou. Foram regenerados apenas os resumos desse ficheiro nos dois manifestos, com a nota `01/11/2026`, sem alterar trocas, ocorrências ou os registos dos outros ficheiros. Reprodução: `python scripts/exame_aquecimentos.py --atualizar-contratos`. As verificações completas dos manifestos confirmam 68/68 e 425/425 trocas aplicadas, zero por aplicar, zero ficheiros excluídos.
+
+O pedido de integração é [#155, em rascunho](https://github.com/pedrohfernandes-klk/pt/pull/155). O estado final do CI consulta-se nesse pedido.
+
+## Capturas e revisão visual
+
+A 390 px, foram vistos o cartão de escolha e o de lacunas: pergunta e controlos legíveis, sem deslocamento horizontal. As colunas de emparelhamento receberam uma regra local de largura para palavras longas a 320 px. Não se alterou o alinhamento do texto corrido.
+
+- [Consulta inicial](exame-aquecimentos-20261101/01-consulta-390.png)
+- [Escolha](exame-aquecimentos-20261101/02-escolha-390.png)
+- [Várias lacunas](exame-aquecimentos-20261101/03-lacunas-390.png)
+- [Projeção](exame-aquecimentos-20261101/04-projecao-390.png)
+
+Foi também verificado o relógio: começa em 10:00, continua na abertura dos cartões e conserva o estado no regresso à fase Aquecer.
 
 ## Limites e revisão do docente
 
