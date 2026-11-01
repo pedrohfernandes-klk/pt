@@ -130,6 +130,8 @@ def aplicar(bancos, revisoes=REVISOES):
             cards[index]['o']=options
         for index,feedback in d.get('retornos',{}).items():
             cards[index]['f']=feedback
+        for index,prompt in d.get('perguntas',{}).items():
+            cards[index]['p']=prompt
         # O retorno identifica a confusão já descrita no banco e delimita a releitura.
         for i,c in enumerate(cards):
             if c['t']=='ler':continue

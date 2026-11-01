@@ -33,15 +33,16 @@ try:
    ctx,page=new_page(browser,width);errors=[];page.on('pageerror',lambda e:errors.append(str(e)))
    page.route('https://pedrohfernandes-klk.github.io/pt/**',local)
    page.goto(host+'/pt/m2/',wait_until='networkidle')
-   ids=page.locator('.unidade[data-u="2"] li[data-passo]').evaluate_all('(els)=>els.map(e=>e.dataset.passo)');assert ids==['m2-f11','m2-f10','m2-f08','m2-f09']
+   # 01/11/2026: as novas lições entram nas duas unidades, mantendo todas as verificações do percurso.
+   ids=page.locator('.unidade[data-u="2"] li[data-passo]').evaluate_all('(els)=>els.map(e=>e.dataset.passo)');assert ids==['m2-f11','m2-f15','m2-f10','m2-f08','m2-f09']
    assert page.locator('button[data-desafio]').count()==2;assert page.locator('.module-opening figure.doc').is_visible()
-   for n,expected in [(1,['m2-f01','m2-f02','m2-f07','m2-f06']),(2,ids)]:
+   for n,expected in [(1,['m2-f01','m2-f02','m2-f16','m2-f14','m2-f07','m2-f06']),(2,ids)]:
     capture=page.evaluate('''n=>{let captured;const original=EPIJogo.montar;EPIJogo.montar=cfg=>{captured=cfg.itens.map(c=>c._l)};document.querySelector('[data-desafio="'+n+'"]').click();EPIJogo.montar=original;return captured;}''',n)
     assert len(capture)==8 and set(capture)==set(expected),(n,capture)
    page.locator('[data-unidade="2"]').screenshot(path=str(OUT/f'unidade-2-{width}.png'))
    # Follow the menu links, so order and destinations are tested as rendered.
    page.goto(host+'/pt/m2/licao-m2-f06/',wait_until='networkidle')
-   for target in ['11','10','08','09']:
+   for target in ['11','15','10','08','09']:
     page.locator('[data-c-menu]').first.click();link=page.locator('[data-c-painel] a').filter(has_text=re.compile('^Lição seguinte$')).first;assert link.count()==1;link.click();page.wait_for_url(f'**/licao-m2-f{target}/')
    # 28/10/2026 (revisão do PR #124): antes conferia-se só o URL (**/m2/#desafio-unidade-2), mas esse desafio
    # está no arquivo escondido. O índice leva à aula de tarefa da unidade 2, à vista, pelo menu e pelo botão final.

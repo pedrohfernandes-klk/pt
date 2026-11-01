@@ -64,8 +64,9 @@ class UnitRoutes(unittest.TestCase):
     def test_m2_is_two_complete_core_sequences_with_purposeful_complements(self):
         plan = json.loads(PLAN.read_text('utf-8'))[1]
         first, second = plan['units']
-        self.assertEqual(['m2-f01', 'm2-f02', 'm2-f07', 'm2-f06'], first['lessons'])
-        self.assertEqual(['m2-f11', 'm2-f10', 'm2-f08', 'm2-f09'], second['lessons'])
+        # 01/11/2026: as três leituras novas entram sem retirar os complementos.
+        self.assertEqual(['m2-f01', 'm2-f02', 'm2-f16', 'm2-f14', 'm2-f07', 'm2-f06'], first['lessons'])
+        self.assertEqual(['m2-f11', 'm2-f15', 'm2-f10', 'm2-f08', 'm2-f09'], second['lessons'])
         self.assertEqual(['m2-f10', 'm2-f10', 'm2-f11'], [x['after'] for x in second['complements']])
         self.assertEqual(4, sum(len(u['complements']) for u in plan['units']))
         self.assertTrue(all(c['purpose'] for u in plan['units'] for c in u['complements']))

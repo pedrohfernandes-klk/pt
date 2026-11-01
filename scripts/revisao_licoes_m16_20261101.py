@@ -84,3 +84,56 @@ REVISOES_B={
   ordem_p='Ordena a ampliação do olhar sobre a rua e as pessoas que a atravessam.',
   escolhas={17:['As imagens mostram esforço e um olhar situado.','As imagens registam a opinião dita pelos operários.','As imagens traduzem o pensamento interior da atriz.']}),
 }
+
+# 01/11/2026: erros próximos de leitura, sem alternativas descartáveis por absolutos.
+REVISOES_B['m5-f16']['escolhas'].update({
+ 3:['Contrasta repetir doutrina e compreender o concreto.','Contrasta aprender por si e dispensar a orientação.','Contrasta praticar desporto e dispensar a leitura.'],
+ 10:['A formação participa nas escolhas posteriores de Carlos.','A formação explica as escolhas posteriores de Carlos.','A formação corrige as escolhas posteriores de Carlos.'],
+ 14:['Como confronta a ação de Carlos a promessa do método?','Como confirma a ação de Carlos a superioridade do método?','Como traduz a ação de Carlos o programa do seu educador?']})
+REVISOES_B['m6-f14']['escolhas'].update({
+ 3:['A discussão das ideias admite a discordância.','A escuta das ideias pressupõe o acordo mútuo.','A discussão das ideias adia a avaliação crítica.'],
+ 10:['Constrói uma imagem de abertura à discussão.','Apresenta a divergência como razão da tese.','Apresenta o acordo como condição da escuta.'],
+ 14:['Nomear a conclusão contestada e explicar a objeção.','Nomear a pessoa contestada e explicar a sua origem.','Nomear a conclusão contestada e invocar a reputação.']})
+REVISOES_B['m6-f15']['escolhas'].update({
+ 3:['A luz e as posturas tornam o esforço visível.','A luz e as posturas tornam o esforço agradável.','A luz e as posturas exprimem a voz dos operários.'],
+ 10:['A voz interpreta os corpos através das imagens.','A voz recolhe nos corpos a opinião dos operários.','A voz descreve nos corpos uma identidade fixa.'],
+ 14:['Imaginar a rua vista pela atriz, como texto criado.','Imaginar a rua vista pelo sujeito, com outra cor.','Imaginar a rua vista pelo sujeito, noutra altura.']})
+REVISOES_B['m2-f15']['escolhas'].update({
+ 10:['As datas e as comunidades dos exemplos comparados.','As comunidades e os registos dos exemplos comparados.','As datas e os registos de cada exemplo comparado.'],
+ 14:['Reformular o mesmo pedido para uma entidade pública.','Reformular o pedido trocando a informação solicitada.','Reformular o pedido trocando a finalidade pretendida.']})
+REVISOES_B['m3-f19']['escolhas'].update({
+ 3:['A experiência diverge daquilo que se esperava.','A experiência confirma aquilo que se esperava.','A experiência repete aquilo que se recordava.'],
+ 10:['A maneira de mudar já não é a de antes.','A mudança deixou de ocorrer no presente.','A mudança repete a maneira de antes.']})
+REVISOES_B['m5-f17']['escolhas'].update({
+ 3:['O pai retirava as cartas no correio.','A mãe retirava as cartas no correio.','Simão retirava as cartas no correio.'],
+ 10:['Obriga a rever a interpretação do silêncio.','Reforça a interpretação inicial do silêncio.','Esclarece a intenção de Simão no silêncio.'],
+ 14:['Contar a interceção antes da espera da mãe.','Contar a recusa de Simão antes da espera da mãe.','Contar a desistência da mãe antes da interceção.'],
+ 17:['O controlo das cartas afeta a relação familiar.','A ausência de resposta confirma a rejeição de Simão.','A descoberta das cartas confirma que Simão as leu.']})
+REVISOES_B['m2-f16']['escolhas'].update({
+ 3:['A resposta atenua a gravidade da ação relatada.','A resposta confirma a intenção do autor da ação.','A resposta contesta a ocorrência da ação relatada.'],
+ 10:['Conhecer muda de sentido entre as duas falas.','Conhecer exprime a mesma ação nas duas falas.','Conhecer indica duas ações de reconhecimento.'],
+ 14:['Criar uma pausa após a resposta que atenua.','Criar uma pausa antes do relato de Lianor.','Criar uma pausa após a pergunta de Inês.']})
+REVISOES_B['m2-f14']['escolhas'].update({
+ 3:['Apresenta o pretendente com uma avaliação depreciativa.','Apresenta o pretendente como figura de baixa estatura.','Apresenta o pretendente com familiaridade afetuosa.'],
+ 10:['O juízo de Inês constrói uma perspetiva da figura.','O juízo de Inês confirma o caráter da figura.','O juízo de Inês demonstra a origem da figura.']})
+REVISOES_B['m1-f21']['retornos']={17:'A condição apresenta o desejo, e a negativa limita a capacidade de o realizar. Confundir esse desejo com um facto ou uma previsão apaga a tensão entre as duas estrofes.'}
+REVISOES_B['m6-f14']['retornos']={14:'A objeção discutível identifica a conclusão e uma razão. Confundir a origem ou a reputação da pessoa com prova da ideia desloca o debate para outro objeto.'}
+REVISOES_B['m6-f15']['retornos']={14:'Mudar para a perspetiva da atriz altera o acesso à cena. Confundir alteração de cor ou de momento com alteração de ponto de vista mantém a mesma posição de observação; a voz nova tem de ser identificada como criação.'}
+REVISOES_B['m2-f15']['retornos']={3:'Autocarro e ônibus documentam uma diferença lexical entre variedades nacionais. Confundir essa diferença com registo ou época exige dados que este par não fornece.',10:'Para distinguir mudança no tempo e diferença entre comunidades, são necessárias datas e comunidades. Confundir registo com um desses eixos troca a situação de comunicação pela época ou pelo lugar.'}
+REVISOES_B['m2-f16']['retornos']={14:'A pausa após a resposta dá tempo para considerar a atenuação acabada de ouvir. Deslocá-la para outro momento muda o foco; esta é uma decisão de encenação, não uma indicação original.'}
+
+REVISOES_B['m1-f21']['perguntas']={17:'Que comentário distingue o desejo da sua realização?'}
+
+REVISOES_B['m5-f16']['escolhas'][3][0]='Opõe repetir doutrina e compreender o concreto.'
+REVISOES_B['m5-f16']['escolhas'][10][0]='A formação influencia escolhas futuras de Carlos.'
+REVISOES_B['m6-f14']['escolhas'][10][0]='Cria uma imagem de abertura à discussão.'
+REVISOES_B['m6-f15']['escolhas'][14][0]='Criar uma versão da rua vista pela atriz.'
+REVISOES_B['m3-f19']['escolhas'][3][0]='A experiência diverge do que se esperava.'
+REVISOES_B['m5-f17']['escolhas'][3][1]='A mãe retirava as suas cartas no correio.'
+REVISOES_B['m2-f16']['escolhas'][10][0]='Conhecer muda de sentido nas duas falas.'
+REVISOES_B['m2-f16']['escolhas'][14][0]='Pausar depois da resposta que atenua.'
+REVISOES_B['m2-f16']['escolhas'][17][0]='Como altera a resposta o peso desse relato?'
+REVISOES_B['m2-f14']['escolhas'][3][0]='Apresenta o pretendente de modo depreciativo.'
+REVISOES_B['m2-f14']['escolhas'][10][0]='O juízo de Inês exprime um olhar sobre a figura.'
+
+REVISOES_B['m2-f14']['escolhas'][10][0]='O juízo de Inês exprime um olhar sobre Pêro.'

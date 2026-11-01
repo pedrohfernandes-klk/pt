@@ -17,10 +17,19 @@ def expected_cards(lesson):
 
 
 def synchronize(root, modules=('m5', 'm6'), write=False):
-    result = {'checked': [], 'different': [], 'notes': []}
+    result = {'checked': [], 'different': [], 'notes': [], 'direct_projection': []}
     for module in modules:
         for lesson in sorted((root / module).glob('licao-*/index.html')):
             panel = lesson.parent.with_name(lesson.parent.name.replace('licao-', 'painel-', 1)) / 'index.html'
+            # 01/11/2026: as quatro novas lições usam o próprio banco em projeção.
+            # Uma ausência de painel fora deste conjunto continua a ser um erro.
+            if lesson.parent.name in {'licao-m5-f16','licao-m5-f17','licao-m6-f14','licao-m6-f15'}:
+                source = lesson.read_text('utf-8')
+                required = ('data-casca', 'EPIJogo.montar', 'projection-launcher.js', 'variar:false')
+                if not all(marker in source for marker in required) or len(expected_cards(lesson)) < 14:
+                    raise ValueError(f'{lesson}: incomplete direct projection')
+                result['direct_projection'].append(lesson.relative_to(root).as_posix())
+                continue
             text = panel.read_bytes().decode('utf-8')
             rel = panel.relative_to(root).as_posix()
             if 'CARTOES=' not in text:
