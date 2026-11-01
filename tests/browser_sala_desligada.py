@@ -271,9 +271,18 @@ def indice_e_desafio(browser, host):
       EPIJogo.montar = cfg => { if (cfg.chave === 'desafio-unidade-v2-M3-u1') window.__desafio = cfg; return m(cfg); }; }''')
     page.locator('[data-desafio="1"]').click()
     page.locator('.casca.sobreposta .cartao').wait_for()
-    page.evaluate('() => window.__desafio.fim({certas: 8, total: 8, n: 8})')
+    assert page.evaluate('() => !!window.__desafio')
+    # 01/11/2026: o motor grava a tentativa do arquivo; o callback apenas atualiza o índice.
+    # Responder aos oito cartões verifica a gravação real, sem simular uma antiga aprovação da unidade.
+    page.evaluate('document.querySelector(".casca.sobreposta .jogo-alvo").id="baralho"')
+    for action in range(60):
+        if page.locator('#baralho .cartao.fim').count():
+            break
+        respond(page)
+    else:
+        raise AssertionError('O desafio do arquivo M3 não terminou')
     guardado = page.evaluate('JSON.parse(localStorage.getItem("desafio-unidade-v2-M3-u1") || "null")')
-    assert guardado and guardado.get('ganho') is True and guardado.get('total') == 8, guardado
+    assert guardado and guardado.get('lida') is True and guardado.get('total') == 8 and guardado.get('tentativas') == 1, guardado
     externos = v.confirmar('índice M3 e fim do Desafio')
     v.fechar()
     print('PASS índice M3: fim do Desafio da unidade grava no aparelho e não envia nada:', externos, flush=True)
