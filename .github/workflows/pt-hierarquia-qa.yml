@@ -2,7 +2,7 @@ name: Português, hierarquia dos títulos
 # 01/11/2026: decisão 61 (o docente viu na entrada do exame um título mais pequeno do que devia). O teste de navegador
 # tests/browser_hierarquia_titulos.py abre todas as páginas do sítio a 390 e a 1366 px e corre as regras R1, R2, R3 e R5
 # da medição da hierarquia (a função MEASURE de medir-hierarquia.js); falha com qualquer caso novo e com um caso da lista
-# datada (PENDENTES_20261101) que já não exista, para que a lista só diminua. A regra vale para toda a árvore publicada
+# datada (PENDENTES_20261101) que apareça menos vezes do que as listadas, para que a lista só diminua. A regra vale para toda a árvore publicada
 # (páginas, folhas de estilo e scripts partilhados), por isso este workflow não tem filtro de caminhos, como o
 # pt-sala-qa.yml. Fica num ficheiro próprio porque o pt-m1-qa.yml, que corre os outros testes de navegador, está nos
 # pedidos abertos #148 e #150 e só vigia parte da árvore (não vê obras/ nem c/, nem folhas de estilo partilhadas como

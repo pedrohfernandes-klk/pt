@@ -11,10 +11,10 @@ copiada letra a letra do script; não se muda aqui sem mudar lá):
 * R5, um título mais pequeno do que o texto corrido que o segue.
 
 Os elementos decorativos com aria-hidden="true" (as palavras de marca de água) ficam fora de R2 e de R3. A regra R4 (o
-mesmo papel com tamanhos diferentes em páginas do mesmo molde) não faz falhar: imprime-se no fim, como relatório.
+mesmo papel com tamanhos diferentes em páginas do mesmo molde) não faz falhar o teste: imprime-se no fim, como relatório.
 
-Falha com qualquer caso novo. Os casos ainda por corrigir estão em PENDENTES_20261101, com o número de vezes que
-aparecem a 390 e a 1366 px, a data e o motivo. O teste falha se um caso aparecer mais vezes do que as listadas (um caso
+Falha com qualquer caso novo. Os casos ainda por corrigir estão na lista datada PENDENTES_20261101, com o número de vezes
+que aparecem a 390 e a 1366 px e o motivo. O teste falha se um caso aparecer mais vezes do que as listadas (um caso
 novo, mesmo numa página que já está na lista e com os mesmos seletores) e também se aparecer menos vezes: corrigido um
 caso, baixa-se o número ou tira-se da lista, que só pode diminuir.
 
@@ -160,7 +160,7 @@ def descrever(medicao, chave):
 
 
 def relatorio_r4(medicoes):
-    """R4 fica como relatório: o mesmo papel (assinatura e nível) com tamanhos diferentes no mesmo molde e largura."""
+    """R4 fica como relatório: o mesmo papel (assinatura e nível) com tamanhos diferentes no mesmo molde e à mesma largura."""
     por = collections.defaultdict(lambda: collections.defaultdict(set))
     for m in medicoes:
         molde = re.sub(r'\d+', 'N', re.sub(r'/index\.html$', '/', m['page']))
