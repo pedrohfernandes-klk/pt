@@ -78,10 +78,13 @@ def main():
                 for session in sessions:
                     for phase in ('aquecer','ler','escrever','corrigir','fechar'):
                         page.goto(host+'/exame/#'+session['id']+'/'+phase,wait_until='networkidle')
+                        # 01/11/2026: a rota aguarda IndexedDB; conferir a fase e a sessão antes de tocar.
+                        page.wait_for_function('x=>document.body.dataset.fase===x.phase && document.querySelector(".session-heading h1")?.textContent===x.title',arg={'phase':phase,'title':session['title']})
                         if phase=='corrigir':page.locator('[data-action="reveal"]').click()
                         for question in page.locator('.question').all():
                             choice=question.locator('button:not([disabled])').first
                             if choice.count():choice.click()
+                            question.locator('.feedback').wait_for(state='visible')
                         assert not re.search(r'(?<![\w/])_[^_\n]+_(?!\w)',page.locator('#app').inner_text()),(session['id'],phase,width)
                 # Cópia HTML legível, com os dados de reposição intactos.
                 exported=page.evaluate("""async sessions=>{

@@ -16,6 +16,8 @@ try:
    # 01/11/2026: todas as cinco fases, incluindo títulos e opções do aquecimento.
    for phase in ('aquecer','ler','escrever','corrigir','fechar'):
     page.goto(host+'/exame/#'+s['id']+'/'+phase,wait_until='networkidle')
+    # 01/11/2026: esperar pela rota pedida, incluindo a leitura assíncrona do dossiê.
+    page.wait_for_function('x=>document.body.dataset.fase===x.phase && document.querySelector(".session-heading h1")?.textContent===x.title',arg={'phase':phase,'title':s['title']})
     page.locator('h1').filter(has_text=s['title']).wait_for()
     if phase=='ler' and s['id']=='s01':assert 'Nom hei [eu] i barqueiro nem remador' in page.locator('#app').inner_text()
     if phase=='escrever':assert visivel(s['writing']['prompt']) in page.locator('#app').inner_text()
