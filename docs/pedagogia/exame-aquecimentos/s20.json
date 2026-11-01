@@ -1,0 +1,217 @@
+{
+  "sessao": "s20",
+  "versao": 1,
+  "titulo": "Ler informação e escrever uma síntese",
+  "cartoes": [
+    {
+      "p": "Qual deve ser preservado numa síntese?",
+      "f": "A síntese mantém a informação essencial e as relações que a organizam; não acrescenta uma avaliação pessoal.",
+      "legacyId": "s20-q1",
+      "recycledFrom": "/pt/m9/licao-m9-f07/",
+      "t": "escolha",
+      "o": [
+        "A relação entre as ideias centrais.",
+        "A sequência de todos os exemplos dados.",
+        "A opinião pessoal de quem resume."
+      ],
+      "c": 0,
+      "fe": [
+        null,
+        "Exemplos secundários podem sair; a organização das ideias não.",
+        "Uma síntese não substitui a posição do texto pela tua opinião."
+      ]
+    },
+    {
+      "p": "Qual destas operações é reformulação?",
+      "f": "Reformular exige compreender a ideia e construir outra expressão para o mesmo sentido, sem disfarçar cópia.",
+      "legacyId": "s20-q2",
+      "recycledFrom": "/pt/m9/licao-m9-f07/",
+      "t": "escolha",
+      "o": [
+        "Dizer a ideia de outro modo, sem a alterar.",
+        "Copiar a mesma ideia sem indicar de quem ela é.",
+        "Trocar uma palavra, copiando todo o resto."
+      ],
+      "c": 0,
+      "fe": [
+        null,
+        "Retirar a autoria de uma cópia não a transforma numa reformulação.",
+        "Trocar uma palavra pode deixar toda a estrutura copiada."
+      ]
+    },
+    {
+      "p": "No texto de apoio, que relação se estabelece entre rapidez e estudo?",
+      "f": "A ideia é uma condição, não uma rejeição do acesso digital: a vantagem precisa de ser acompanhada por leitura crítica.",
+      "legacyId": "s20-q3",
+      "recycledFrom": "/pt/m9/licao-m9-f07/",
+      "t": "escolha",
+      "o": [
+        "Ajuda, mas não substitui a compreensão.",
+        "Dispensa compreender o que se encontra.",
+        "Impede sempre compreender o que se lê."
+      ],
+      "c": 0,
+      "fe": [
+        null,
+        "Encontrar rapidamente não dispensa compreender.",
+        "O texto reconhece utilidade à rapidez; não a apresenta como impedimento absoluto."
+      ]
+    },
+    {
+      "t": "emparelhar",
+      "p": "Liga cada operação ao seu objetivo.",
+      "pares": [
+        [
+          "Localizar a ideia que organiza o texto",
+          "Selecionar o essencial"
+        ],
+        [
+          "Dizer a mesma ideia com outras palavras",
+          "Reformular sem alterar"
+        ],
+        [
+          "Conservar a relação entre duas ideias",
+          "Manter a organização"
+        ]
+      ],
+      "f": "Selecionar não é copiar tudo; reformular não é alterar o sentido. Verifica também como as ideias se ligam.",
+      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder.",
+      "recycledFrom": "/pt/m4/licao-m4-f27/",
+      "sourceCard": 13,
+      "adaptacao": "Operação da lição aplicada a um recorte ou exemplo indicado no cartão."
+    },
+    {
+      "t": "sublinhar",
+      "p": "No exemplo criado para este treino, toca na palavra que impede tratar a relação como causa.",
+      "frase": "A consulta é rápida, mas compreender exige relacionar ideias.",
+      "certas": [
+        4
+      ],
+      "f": "Mas opõe a rapidez à exigência de compreender. Uma síntese que o trocasse por porque alteraria a relação entre as ideias.",
+      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder.",
+      "recycledFrom": "/pt/m7/licao-m7-f07/",
+      "sourceCard": 4,
+      "adaptacao": "Operação da lição aplicada a um recorte ou exemplo indicado no cartão."
+    },
+    {
+      "t": "completar",
+      "p": "Completa uma regra de reformulação fiel.",
+      "frase": "Mudam as [1], mas conserva-se o [2] da passagem.",
+      "lacunas": [
+        {
+          "o": [
+            "palavras",
+            "citações"
+          ],
+          "c": 0,
+          "fe": [
+            null,
+            "Nesta lacuna, citações não corresponde à relação pedida."
+          ]
+        },
+        {
+          "o": [
+            "sentido",
+            "tamanho"
+          ],
+          "c": 0,
+          "fe": [
+            null,
+            "Nesta lacuna, tamanho não corresponde à relação pedida."
+          ]
+        }
+      ],
+      "f": "Reformular altera a expressão, não o sentido. Conservar o número de palavras não garante que a ideia se mantenha.",
+      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder.",
+      "recycledFrom": "/pt/m4/licao-m4-f27/",
+      "sourceCard": 13,
+      "adaptacao": "Operação da lição aplicada a um recorte ou exemplo indicado no cartão."
+    },
+    {
+      "t": "ordenar",
+      "p": "Ordena a preparação de uma síntese.",
+      "passos": [
+        "Ler o texto por inteiro",
+        "Distinguir ideias centrais e exemplos",
+        "Registar as relações entre as ideias",
+        "Reformular e confrontar com o original"
+      ],
+      "f": "Não comeces por cortar frases ao acaso. Lê o conjunto, seleciona e verifica se a versão breve conserva as relações.",
+      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder.",
+      "recycledFrom": "/pt/m9/licao-m9-f07/",
+      "sourceCard": 15,
+      "adaptacao": "Operação da lição aplicada a um recorte ou exemplo indicado no cartão."
+    },
+    {
+      "t": "vf",
+      "p": "Uma citação correta pode ser insuficiente para explicar uma ideia.",
+      "v": true,
+      "f": "A lição distingue ideia, prova e explicação. Repara se a resposta apenas transcreve ou se mostra como a passagem apoia a ideia.",
+      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder.",
+      "recycledFrom": "/pt/m4/licao-m4-f27/",
+      "sourceCard": 11,
+      "adaptacao": "Operação da lição aplicada a um recorte ou exemplo indicado no cartão."
+    },
+    {
+      "t": "emparelhar",
+      "p": "Distingue três operações presentes nas respostas.",
+      "pares": [
+        [
+          "Dar o nome de um recurso",
+          "Identificar"
+        ],
+        [
+          "Mostrar como um indício apoia uma ideia",
+          "Fundamentar"
+        ],
+        [
+          "Relacionar textos por um mesmo critério",
+          "Comparar"
+        ]
+      ],
+      "f": "O verbo do pedido orienta a resposta. Dar um nome não substitui explicar a ligação entre a prova e a ideia.",
+      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder.",
+      "recycledFrom": "/pt/m4/licao-m4-f27/",
+      "sourceCard": 14,
+      "adaptacao": "Operação da lição aplicada a um recorte ou exemplo indicado no cartão."
+    },
+    {
+      "t": "sublinhar",
+      "p": "No exemplo imaginário, toca na palavra que limita o alcance da afirmação.",
+      "frase": "Alguns leitores confundem rapidez de consulta com compreensão.",
+      "certas": [
+        0
+      ],
+      "f": "Alguns limita o conjunto. Uma síntese que dissesse todos acrescentaria uma generalização que a frase não autoriza.",
+      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder.",
+      "recycledFrom": "/pt/m2/licao-m2-f08/",
+      "sourceCard": 7,
+      "adaptacao": "Operação da lição aplicada a um recorte ou exemplo indicado no cartão."
+    },
+    {
+      "t": "vf",
+      "p": "Um exemplo secundário deve ocupar sempre tanto espaço como a ideia central numa síntese.",
+      "v": false,
+      "f": "A seleção depende da função de cada informação. Repara no que organiza o texto e no que apenas ilustra essa ideia.",
+      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder.",
+      "recycledFrom": "/pt/m9/licao-m9-f07/",
+      "sourceCard": 15,
+      "adaptacao": "Operação da lição aplicada a um recorte ou exemplo indicado no cartão."
+    },
+    {
+      "t": "ordenar",
+      "p": "Ordena a revisão de uma reformulação.",
+      "passos": [
+        "Confrontar a ideia com a passagem original",
+        "Verificar o alcance das afirmações",
+        "Confirmar os conectores e os referentes",
+        "Retirar repetições dispensáveis"
+      ],
+      "f": "Revê o sentido antes do tamanho. Alterar um quantificador ou um conector pode mudar a ideia mesmo numa frase curta.",
+      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder.",
+      "recycledFrom": "/pt/m2/licao-m2-f08/",
+      "sourceCard": 18,
+      "adaptacao": "Operação da lição aplicada a um recorte ou exemplo indicado no cartão."
+    }
+  ]
+}

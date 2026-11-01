@@ -1,0 +1,223 @@
+{
+  "sessao": "s10",
+  "versao": 1,
+  "titulo": "Antero: procurar, negar, descansar",
+  "cartoes": [
+    {
+      "t": "ler",
+      "titulo": "Texto para consultar",
+      "html": "<p>Consulta o texto quando precisares de confirmar uma escolha.</p><details><summary>Abrir o texto de apoio</summary><p class=\"v\"><span class=\"ln\" data-l=\"0-0\">Sonho que sou um cavalleiro andante.</span>\n<span class=\"ln\" data-l=\"0-1\">Por desertos, por sóes, por noite escura,</span>\n<span class=\"ln\" data-l=\"0-2\">Paladino do amor, busco anhelante</span>\n<span class=\"ln\" data-l=\"0-3\">O palacio encantado da Ventura!</span>\n<span class=\"ln\" data-l=\"0-5\">Mas já desmaio, exhausto e vacillante.</span>\n<span class=\"ln\" data-l=\"0-6\">Quebrada a espada já, rota a armadura...</span>\n<span class=\"ln\" data-l=\"0-7\">E eis que subito o avisto, fulgurante</span>\n<span class=\"ln\" data-l=\"0-8\">Na sua pompa e aerea formosura!</span>\n<span class=\"ln\" data-l=\"0-10\">Com grandes golpes bato á porta e brado:</span>\n<span class=\"ln\" data-l=\"0-11\">Eu sou o Vagabundo, o Desherdado...</span>\n<span class=\"ln\" data-l=\"0-12\">Abri-vos, portas d'ouro, ante meus ais!</span></p><p class=\"v\"><span class=\"ln\" data-l=\"0-14\">Abrem-se as portas d'ouro, com fragor...</span>\n<span class=\"ln\" data-l=\"0-15\">Mas dentro encontro só, cheio de dor,</span>\n<span class=\"ln\" data-l=\"0-16\">Silencio e escuridão — e nada mais!</span></p><p class=\"fonte\">Antero de Quental, <i>Os Sonetos Completos</i> (1886) (grafia da edição; v. 6 corrigido: «rota», onde o <i>e-book</i> lê «roda»).</p><p class=\"fonte\"><a href=\"../../../m6/licao-m6-f01/\">Texto e fontes na lição de origem</a></p></details>",
+      "recycledFrom": "/pt/m6/licao-m6-f01/"
+    },
+    {
+      "p": "Quem fala em «_O Palacio da Ventura_» e o que se sonha?",
+      "f": "«Sonho que sou um cavalleiro andante» (v. 1): o sujeito sonha-se o próprio cavaleiro, não o vê de fora.",
+      "legacyId": "s10-q1",
+      "recycledFrom": "/pt/m6/licao-m6-f01/",
+      "t": "escolha",
+      "o": [
+        "O sujeito sonha ser um cavaleiro andante.",
+        "O sujeito recorda um cavaleiro de outrora.",
+        "O sujeito observa um cavaleiro que passa."
+      ],
+      "c": 0,
+      "fe": [
+        null,
+        "Sonho que sou não apresenta uma simples recordação.",
+        "A voz assume o papel de cavaleiro, não observa outro a passar."
+      ]
+    },
+    {
+      "p": "A primeira quadra termina com «O palacio encantado da Ventura!».",
+      "f": "Verdadeiro: a primeira quadra fecha no alvo da busca, «O palacio encantado da Ventura!».",
+      "legacyId": "s10-q2",
+      "recycledFrom": "/pt/m6/licao-m6-f01/",
+      "t": "vf",
+      "v": true,
+      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder."
+    },
+    {
+      "p": "«E eis que subito o avisto, fulgurante»: o que avista o cavaleiro?",
+      "f": "Avista o palácio, «Na sua pompa e aerea formosura»: a promessa de luz antes do vazio.",
+      "legacyId": "s10-q3",
+      "recycledFrom": "/pt/m6/licao-m6-f01/",
+      "t": "escolha",
+      "o": [
+        "O palácio brilhante que procurava.",
+        "A espada destruída que abandonara.",
+        "O deserto escuro que atravessara."
+      ],
+      "c": 0,
+      "fe": [
+        null,
+        "A espada já quebrada não é o objeto fulgurante avistado.",
+        "O deserto pertence ao percurso, não à descoberta anunciada."
+      ]
+    },
+    {
+      "t": "sublinhar",
+      "p": "Toca nas três palavras repetidas que fazem a anáfora do verso.",
+      "frase": "Por desertos, por sóes, por noite escura,",
+      "certas": [
+        0,
+        2,
+        4
+      ],
+      "f": "«Por… por… por»: a **anáfora** acumula os lugares da busca.",
+      "cita": "Por desertos, por sóes, por noite escura,",
+      "recycledFrom": "/pt/m6/licao-m6-f01/",
+      "sourceCard": 6,
+      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder."
+    },
+    {
+      "t": "sublinhar",
+      "p": "Toca nos dois adjetivos que dizem o estado do cavaleiro.",
+      "frase": "Mas já desmaio, exhausto e vacillante.",
+      "certas": [
+        3,
+        5
+      ],
+      "f": "«Exhausto» e «vacillante»: cansado e a cambalear, antes de avistar o palácio.",
+      "cita": "Mas já desmaio, exhausto e vacillante.",
+      "recycledFrom": "/pt/m6/licao-m6-f01/",
+      "sourceCard": 9,
+      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder."
+    },
+    {
+      "t": "completar",
+      "p": "Que armas do cavaleiro estão desfeitas na segunda quadra?",
+      "frase": "«Quebrada a [1] já, rota a [2]...»: as armas do cavaleiro desfeitas.",
+      "lacunas": [
+        {
+          "o": [
+            "espada",
+            "viseira"
+          ],
+          "c": 0,
+          "fe": [
+            null,
+            "Nesta lacuna, viseira não corresponde à relação pedida."
+          ]
+        },
+        {
+          "o": [
+            "armadura",
+            "bandeira"
+          ],
+          "c": 0,
+          "fe": [
+            null,
+            "Nesta lacuna, bandeira não corresponde à relação pedida."
+          ]
+        }
+      ],
+      "f": "«Quebrada a **espada** já, rota a **armadura**»: «rota» é partida, desfeita.",
+      "cita": "Quebrada a espada já, rota a armadura...",
+      "recycledFrom": "/pt/m6/licao-m6-f01/",
+      "sourceCard": 10,
+      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder."
+    },
+    {
+      "t": "versos",
+      "p": "Põe os versos do primeiro terceto pela ordem do soneto.",
+      "linhas": [
+        "Com grandes golpes bato á porta e brado:",
+        "Eu sou o Vagabundo, o Desherdado...",
+        "Abri-vos, portas d'ouro, ante meus ais!"
+      ],
+      "f": "Bate, diz quem é, pede que abram: o apelo vem antes do vazio.",
+      "cita": "Com grandes golpes bato á porta e brado:",
+      "recycledFrom": "/pt/m6/licao-m6-f01/",
+      "sourceCard": 12,
+      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder."
+    },
+    {
+      "t": "vf",
+      "p": "As portas de ouro abrem-se devagar e em silêncio.",
+      "v": false,
+      "f": "Falso: «Abrem-se as portas d'ouro, com **fragor**», com estrondo; o silêncio está lá dentro.",
+      "cita": "Abrem-se as portas d'ouro, com fragor...",
+      "fe": "É falso: o verso 12 diz que as portas se abrem «com fragor», com estrondo; o silêncio é o que se encontra lá dentro (v. 14).",
+      "recycledFrom": "/pt/m6/licao-m6-f01/",
+      "sourceCard": 15
+    },
+    {
+      "t": "vf",
+      "p": "A chave de ouro deste soneto está na primeira quadra, em «busco anhelante».",
+      "v": false,
+      "f": "Falso: a **chave de ouro** é o último verso, «e nada mais!», que fecha o sentido e o vira.",
+      "fe": "É falso: «busco anhelante» está no verso 3, ainda na busca; a chave de ouro é o último verso, «e nada mais!», que vira o sentido do soneto.",
+      "recycledFrom": "/pt/m6/licao-m6-f01/",
+      "sourceCard": 19
+    },
+    {
+      "t": "emparelhar",
+      "p": "Liga cada elemento da alegoria ao que representa.",
+      "pares": [
+        [
+          "O cavaleiro",
+          "o sujeito, que busca"
+        ],
+        [
+          "O palácio",
+          "a promessa de felicidade"
+        ],
+        [
+          "O vazio final",
+          "a desilusão"
+        ]
+      ],
+      "f": "Cavaleiro, palácio, vazio: o sujeito, a promessa de sentido, a desilusão; a alegoria da busca do Ideal.",
+      "recycledFrom": "/pt/m6/licao-m6-f01/",
+      "sourceCard": 20,
+      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder."
+    },
+    {
+      "t": "completar",
+      "p": "Como se organizam as estrofes de «_O Palacio da Ventura_»?",
+      "frase": "Neste poema, os [1] versos distribuem-se por [2] e dois tercetos: 4 + 4 + 3 + 3.",
+      "lacunas": [
+        {
+          "o": [
+            "14",
+            "12"
+          ],
+          "c": 0,
+          "fe": [
+            null,
+            "Nesta lacuna, 12 não corresponde à relação pedida."
+          ]
+        },
+        {
+          "o": [
+            "duas quadras",
+            "três quadras"
+          ],
+          "c": 0,
+          "fe": [
+            null,
+            "Nesta lacuna, três quadras não corresponde à relação pedida."
+          ]
+        }
+      ],
+      "f": "**Catorze** versos, **duas quadras** e dois tercetos. A organização estrófica e a medida dos versos são aspetos diferentes: neste poema há decassílabos, mas existem sonetos com outras medidas. Relaciona agora a última estrofe com a expectativa criada nas anteriores.",
+      "recycledFrom": "/pt/m6/licao-m6-f01/",
+      "sourceCard": 21,
+      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder."
+    },
+    {
+      "t": "ordenar",
+      "p": "Os quatro tempos do soneto, por ordem:",
+      "passos": [
+        "Sonha-se cavaleiro em busca do palácio",
+        "Exausto e com as armas desfeitas, avista-o fulgurante",
+        "Bate à porta e pede que abram",
+        "As portas abrem-se: dentro não há nada"
+      ],
+      "f": "Busca, visão, apelo, vazio: uma estrofe para cada momento. A sequência termina com a abertura das portas, mas frustra a expectativa de felicidade. O texto diz que a espada está quebrada e a armadura rota; não afirma que o cavaleiro foi ferido.",
+      "recycledFrom": "/pt/m6/licao-m6-f01/",
+      "sourceCard": 22,
+      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder."
+    }
+  ]
+}

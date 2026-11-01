@@ -1,0 +1,217 @@
+{
+  "sessao": "s26",
+  "versao": 1,
+  "titulo": "Oficina final: transformar uma resposta",
+  "cartoes": [
+    {
+      "p": "Qual deve ser a primeira pergunta ao rever uma resposta?",
+      "f": "A revisão começa pela adequação ao pedido e pelo conteúdo. Uma frase correta não compensa uma resposta a outra pergunta.",
+      "legacyId": "s26-q1",
+      "recycledFrom": "/pt/m9/licao-m9-f07/",
+      "t": "escolha",
+      "o": [
+        "Respondi ao que foi pedido?",
+        "Usei vocabulário elaborado?",
+        "Escrevi o máximo possível?"
+      ],
+      "c": 0,
+      "fe": [
+        null,
+        "Vocabulário elaborado não garante adequação ao pedido.",
+        "Extensão não garante que respondeste à pergunta."
+      ]
+    },
+    {
+      "p": "Qual destas notas explica uma revisão?",
+      "f": "A terceira nota identifica a operação e o efeito que produziu na leitura.",
+      "legacyId": "s26-q2",
+      "recycledFrom": "/pt/m9/licao-m9-f07/",
+      "t": "escolha",
+      "o": [
+        "Nomeei o antecedente e desfiz a ambiguidade.",
+        "Mudei as palavras para o texto ficar bonito.",
+        "Troquei palavras sem explicar o meu motivo."
+      ],
+      "c": 0,
+      "fe": [
+        null,
+        "Bonito não identifica o problema resolvido.",
+        "Uma lista de trocas sem motivo não explica a revisão."
+      ]
+    },
+    {
+      "p": "Se uma citação não é comentada, o que pode faltar?",
+      "f": "A prova textual precisa de ser ligada ao argumento. A simples presença de aspas não demonstra uma interpretação.",
+      "legacyId": "s26-q3",
+      "recycledFrom": "/pt/m9/licao-m9-f07/",
+      "t": "escolha",
+      "o": [
+        "A ligação entre prova e interpretação.",
+        "A repetição exata da citação escolhida.",
+        "A indicação de vários autores adicionais."
+      ],
+      "c": 0,
+      "fe": [
+        null,
+        "Copiar de novo não explica a prova.",
+        "Acrescentar autores não relaciona a passagem com a interpretação."
+      ]
+    },
+    {
+      "t": "vf",
+      "p": "Uma resposta cheia de citações está necessariamente bem fundamentada.",
+      "v": false,
+      "f": "Falso: **uma citação só apoia a ideia quando explicas a ligação**, respeitas o contexto e não escondes uma objeção decisiva. Uma prova explicada vale mais do que cinco copiadas.",
+      "fe": "É falso: uma citação só apoia a ideia quando explicas a ligação; cinco citações copiadas não valem uma explicada.",
+      "recycledFrom": "/pt/m4/licao-m4-f27/",
+      "sourceCard": 11
+    },
+    {
+      "t": "emparelhar",
+      "p": "Que verbo cumpre cada resposta: identifica, explica ou compara?",
+      "pares": [
+        [
+          "«Há uma alegoria.»",
+          "identifica"
+        ],
+        [
+          "«Há uma apóstrofe: “Olhai, peixes”.»",
+          "identifica"
+        ],
+        [
+          "«Os grandes que comem os pequenos são os poderosos.»",
+          "explica"
+        ],
+        [
+          "«Nos dois, alguém orienta o olhar: Vieira para a cidade, Maria para o retrato.»",
+          "compara"
+        ]
+      ],
+      "f": "«Há uma alegoria» e «Há uma apóstrofe» só dão o nome do recurso: cumprem «identifica». Dizer quem são os grandes é explicar o que a imagem quer dizer. Juntar Vieira e Maria pelo mesmo gesto, orientar o olhar, é comparar.",
+      "fe": "Pergunta a cada resposta: dá só o nome, diz o que significa, ou junta os dois textos?",
+      "recycledFrom": "/pt/m4/licao-m4-f27/",
+      "sourceCard": 14
+    },
+    {
+      "t": "sublinhar",
+      "p": "Toca nas duas palavras do modificador do grupo verbal.",
+      "frase": "«Teresa ergueu-se sem lágrimas.»",
+      "certas": [
+        2,
+        3
+      ],
+      "f": "**«sem lágrimas»**: «Teresa ergueu-se» aguenta-se sozinha; o que se corta é modificador do grupo verbal.",
+      "recycledFrom": "/pt/m5/licao-m5-f07/",
+      "sourceCard": 4,
+      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder."
+    },
+    {
+      "t": "completar",
+      "p": "Completa os critérios para corrigir uma interpretação.",
+      "frase": "A [1] deve sustentar a ideia; o [2] liga as frases, mas não cria essa sustentação.",
+      "lacunas": [
+        {
+          "o": [
+            "prova",
+            "forma"
+          ],
+          "c": 0,
+          "fe": [
+            null,
+            "Nesta lacuna, forma não corresponde à relação pedida."
+          ]
+        },
+        {
+          "o": [
+            "conector",
+            "contexto"
+          ],
+          "c": 0,
+          "fe": [
+            null,
+            "Nesta lacuna, contexto não corresponde à relação pedida."
+          ]
+        }
+      ],
+      "f": "Uma ligação verbal não transforma um indício insuficiente numa prova. Olha para a passagem e verifica exatamente o que ela permite concluir.",
+      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder.",
+      "recycledFrom": "/pt/m4/licao-m4-f27/",
+      "sourceCard": 8,
+      "adaptacao": "Operação da lição aplicada a um recorte ou exemplo indicado no cartão."
+    },
+    {
+      "t": "ordenar",
+      "p": "Ordena uma revisão que começa pelo sentido.",
+      "passos": [
+        "Confrontar a resposta com o pedido",
+        "Verificar a prova de cada afirmação",
+        "Resolver referentes e ligações ambíguas",
+        "Rever pontuação e ortografia"
+      ],
+      "f": "Uma frase bem escrita pode não responder ao pedido. Revê primeiro a adequação e a fundamentação, antes dos pormenores de forma.",
+      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder.",
+      "recycledFrom": "/pt/m2/licao-m2-f08/",
+      "sourceCard": 18,
+      "adaptacao": "Operação da lição aplicada a um recorte ou exemplo indicado no cartão."
+    },
+    {
+      "t": "sublinhar",
+      "p": "No exemplo imaginário, toca no pronome cujo referente precisas de esclarecer.",
+      "frase": "A Ana falou com a Rita quando ela chegou.",
+      "certas": [
+        7
+      ],
+      "f": "Ela pode remeter para Ana ou Rita. Nomear quem chegou desfaz a ambiguidade sem mudar o acontecimento.",
+      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder.",
+      "recycledFrom": "/pt/m5/licao-m5-f07/",
+      "sourceCard": 10,
+      "adaptacao": "Operação da lição aplicada a um recorte ou exemplo indicado no cartão."
+    },
+    {
+      "t": "vf",
+      "p": "Substituir sempre os pronomes pelos nomes torna qualquer texto melhor.",
+      "v": false,
+      "f": "A substituição é útil quando elimina uma ambiguidade. Quando o referente já é claro, pode apenas criar repetição desnecessária.",
+      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder.",
+      "recycledFrom": "/pt/m5/licao-m5-f07/",
+      "sourceCard": 10,
+      "adaptacao": "Operação da lição aplicada a um recorte ou exemplo indicado no cartão."
+    },
+    {
+      "t": "emparelhar",
+      "p": "Liga cada alteração ao problema que resolve.",
+      "pares": [
+        [
+          "Nomear quem chegou",
+          "Referente ambíguo"
+        ],
+        [
+          "Explicar o alcance da citação",
+          "Prova sem comentário"
+        ],
+        [
+          "Retirar uma generalização sem apoio",
+          "Conclusão excessiva"
+        ]
+      ],
+      "f": "O comentário da revisão deve dizer que problema foi resolvido. Trocar palavras sem explicar a razão não mostra esse trabalho.",
+      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder.",
+      "recycledFrom": "/pt/m2/licao-m2-f08/",
+      "sourceCard": 7,
+      "adaptacao": "Operação da lição aplicada a um recorte ou exemplo indicado no cartão."
+    },
+    {
+      "t": "sublinhar",
+      "p": "No exemplo imaginário, toca na palavra que generaliza para além de uma única cena.",
+      "frase": "A personagem hesitou nesta cena, logo mente sempre.",
+      "certas": [
+        7
+      ],
+      "f": "Sempre alarga uma observação a todas as situações. Uma hesitação nesta cena não prova mentira constante.",
+      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder.",
+      "recycledFrom": "/pt/m2/licao-m2-f08/",
+      "sourceCard": 7,
+      "adaptacao": "Operação da lição aplicada a um recorte ou exemplo indicado no cartão."
+    }
+  ]
+}

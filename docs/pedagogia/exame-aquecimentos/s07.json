@@ -1,0 +1,229 @@
+{
+  "sessao": "s07",
+  "versao": 1,
+  "titulo": "Frei Luís de Sousa: o que a cena revela",
+  "cartoes": [
+    {
+      "t": "ler",
+      "titulo": "Texto para consultar",
+      "html": "<p>Consulta o texto quando precisares de confirmar uma escolha.</p><details><summary>Abrir o texto de apoio</summary><p class=\"pr\" data-l=\"0-0\"><b>[1]</b> (Arrebata duas tochas das mãos dos criados, corre à porta da esquerda, atira com uma para dentro: e vê-se atear logo uma labareda imensa. Vai ao fundo, atira a outra tocha; e sucede o mesmo. Ouve-se alarido de fora.)</p><p class=\"pr\" data-l=\"0-1\"><b>[2]</b> MADALENA: Que fazes?… que fizeste? Que é isto, oh meu Deus!</p><p class=\"pr\" data-l=\"0-2\"><b>[3]</b> MANUEL, tranquilamente: Ilumino a minha casa para receber os muito poderosos e excelentes senhores governadores destes reinos. Suas excelências podem vir quando quiserem.</p><p class=\"fonte\">Almeida Garrett, <i>Frei Luís de Sousa</i> (1844), ato I, cenas XI e XII, ortografia atualizada.</p><p class=\"pr\" data-l=\"1-0\"><b>[1]</b> MADALENA: Português?… cativo da batalha de?…</p><p class=\"pr\" data-l=\"1-1\"><b>[2]</b> ROMEIRO: De Alcácer-Quibir.</p><p class=\"pr\" data-l=\"1-2\"><b>[3]</b> MADALENA, espavorida: Meu Deus, meu Deus! Que se não abre a terra debaixo dos meus pés?…</p><p class=\"pr\" data-l=\"1-3\"><b>[4]</b> […] JORGE: Romeiro, romeiro! quem és tu?</p><p class=\"pr\" data-l=\"1-4\"><b>[5]</b> ROMEIRO, apontando com o bordão para o retrato de D. João de Portugal: Ninguém.</p><p class=\"fonte\">Almeida Garrett, <i>Frei Luís de Sousa</i> (1844), ato II, cenas XIV e XV, ortografia atualizada; cortes marcados com […].</p><p class=\"pr\" data-l=\"2-0\"><b>[1]</b> MARIA: Oh! mas é verdade… vinde cá: (Leva-o diante dos três retratos que estão no fundo; e apontando para o de D. João) de quem é este retrato aqui, Telmo?</p><p class=\"pr\" data-l=\"2-1\"><b>[2]</b> TELMO, olha, e vira a cara de repente: Esse é… há de ser… é um da família, destes senhores da casa de Vimioso que aqui estão tantos.</p><p class=\"pr\" data-l=\"2-2\"><b>[3]</b> MARIA, ameaçando-o com o dedo: Tu não dizes a verdade, Telmo.</p><p class=\"pr\" data-l=\"2-3\"><b>[4]</b> TELMO, quase ofendido: Eu nunca menti, senhora D. Maria de Noronha.</p><p class=\"pr\" data-l=\"2-4\"><b>[5]</b> MARIA: Mas não diz a verdade toda o senhor Telmo Pais; que é quase o mesmo.</p><p class=\"fonte\">Almeida Garrett, <i>Frei Luís de Sousa</i> (1844), ato II, cena I, ortografia atualizada.</p><p class=\"pr\" data-l=\"3-0\"><b>[1]</b> MARIA: […] Esta é a minha mãe, este é o meu pai… Que me importa a mim com o outro? […] Mate-me, mate-me, se quer, mas deixe-me este pai, esta mãe, que são meus.</p><p class=\"pr\" data-l=\"3-1\"><b>[2]</b> […] MARIA, a Madalena: Pobre mãe! tu não podes… coitada!… não tens ânimo… nunca mentiste?… Pois mente agora para salvar a honra de tua filha, para que lhe não tirem o nome de seu pai.</p><p class=\"pr\" data-l=\"3-2\"><b>[3]</b> MADALENA: Misericórdia, meu Deus!</p><p class=\"fonte\">Almeida Garrett, <i>Frei Luís de Sousa</i> (1844), ato III, cena XI, ortografia atualizada; cortes marcados com […].</p><p class=\"fonte\"><a href=\"../../../m4/licao-m4-f26/\">Texto e fontes na lição de origem</a></p></details>",
+      "recycledFrom": "/pt/m4/licao-m4-f26/"
+    },
+    {
+      "p": "Manuel de Sousa incendeia o palácio. O que acrescenta uma didascália que mostra tochas e labaredas?",
+      "f": "A didascália orienta a representação. A informação que cada personagem possui tem de ser verificada nas falas e ações.",
+      "legacyId": "s07-q1",
+      "recycledFrom": "/pt/m4/licao-m4-f26/",
+      "t": "escolha",
+      "o": [
+        "Mostra a ação e orienta a encenação.",
+        "Dá à personagem uma fala explicativa.",
+        "Prova que toda a gente previa o fogo."
+      ],
+      "c": 0,
+      "fe": [
+        null,
+        "Uma indicação cénica não é uma fala para a personagem dizer.",
+        "Mostrar o incêndio não prova conhecimento prévio de toda a gente."
+      ]
+    },
+    {
+      "p": "Porque é irónica a fala «Ilumino a minha casa para receber os senhores governadores»?",
+      "f": "Hospitalidade nas palavras, recusa no gesto: a fórmula de receção descreve um incêndio. «Tranquilamente» reforça o desafio.",
+      "legacyId": "s07-q2",
+      "recycledFrom": "/pt/m4/licao-m4-f26/",
+      "t": "escolha",
+      "o": [
+        "Promete receber, mas destrói a casa.",
+        "Descreve um fogo que ainda desconhece.",
+        "Obedece ao pedido dos governadores."
+      ],
+      "c": 0,
+      "fe": [
+        null,
+        "A ação de Manuel é deliberada, não uma descoberta do incêndio.",
+        "O gesto impede a ocupação, não cumpre um pedido dos governadores."
+      ]
+    },
+    {
+      "p": "Madalena sabia do plano de Manuel antes de ver o fogo.",
+      "f": "Falso: «Que fazes?… que fizeste?» mostra que não sabia. O público viu as tochas antes dela.",
+      "legacyId": "s07-q3",
+      "recycledFrom": "/pt/m4/licao-m4-f26/",
+      "t": "vf",
+      "v": false,
+      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder."
+    },
+    {
+      "t": "emparelhar",
+      "p": "Caso imaginário: desapareceu o telemóvel do Tiago. Certeza, suspeita ou receio?",
+      "pares": [
+        [
+          "A Ana viu o Rui tirá-lo da mochila do Tiago",
+          "certeza"
+        ],
+        [
+          "O Tiago diz que foi o Rui: corou quando lhe perguntaram",
+          "suspeita"
+        ],
+        [
+          "A Inês deixa o dela em casa, não vá desaparecer também",
+          "receio"
+        ],
+        [
+          "A Rita aponta o Rui, que saiu da sala sozinho",
+          "suspeita"
+        ]
+      ],
+      "f": "A Ana viu: tem prova, é certeza. O Tiago e a Rita têm sinais (corou, saiu sozinho) e nenhuma prova: suspeitam, como Maria, mesmo quando afirmam. A Inês não aponta ninguém: só teme o que pode vir, é receio.",
+      "fe": "Pergunta a cada frase: tem prova, tem só sinais, ou só tem medo do que pode vir?",
+      "recycledFrom": "/pt/m4/licao-m4-f26/",
+      "sourceCard": 8
+    },
+    {
+      "t": "vf",
+      "p": "Uma resposta cheia de citações está necessariamente bem fundamentada.",
+      "v": false,
+      "f": "Falso: **uma citação só apoia a ideia quando explicas a ligação**, respeitas o contexto e não escondes uma objeção decisiva. Uma prova explicada vale mais do que cinco copiadas.",
+      "fe": "É falso: uma citação só apoia a ideia quando explicas a ligação; cinco citações copiadas não valem uma explicada.",
+      "recycledFrom": "/pt/m4/licao-m4-f27/",
+      "sourceCard": 11
+    },
+    {
+      "t": "emparelhar",
+      "p": "Que verbo cumpre cada resposta: identifica, explica ou compara?",
+      "pares": [
+        [
+          "«Há uma alegoria.»",
+          "identifica"
+        ],
+        [
+          "«Há uma apóstrofe: “Olhai, peixes”.»",
+          "identifica"
+        ],
+        [
+          "«Os grandes que comem os pequenos são os poderosos.»",
+          "explica"
+        ],
+        [
+          "«Nos dois, alguém orienta o olhar: Vieira para a cidade, Maria para o retrato.»",
+          "compara"
+        ]
+      ],
+      "f": "«Há uma alegoria» e «Há uma apóstrofe» só dão o nome do recurso: cumprem «identifica». Dizer quem são os grandes é explicar o que a imagem quer dizer. Juntar Vieira e Maria pelo mesmo gesto, orientar o olhar, é comparar.",
+      "fe": "Pergunta a cada resposta: dá só o nome, diz o que significa, ou junta os dois textos?",
+      "recycledFrom": "/pt/m4/licao-m4-f27/",
+      "sourceCard": 14
+    },
+    {
+      "t": "sublinhar",
+      "p": "No exemplo imaginário, toca na ação observável, sem marcar a interpretação.",
+      "frase": "A personagem vira a cara, talvez para esconder o receio.",
+      "certas": [
+        2,
+        3,
+        4
+      ],
+      "f": "Vira a cara descreve o gesto; talvez para esconder o receio interpreta-o. Uma didascália pode orientar o gesto sem fixar uma única motivação.",
+      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder.",
+      "recycledFrom": "/pt/m4/licao-m4-f27/",
+      "sourceCard": 9,
+      "adaptacao": "Operação da lição aplicada a um recorte ou exemplo indicado no cartão."
+    },
+    {
+      "t": "completar",
+      "p": "Completa a distinção entre gesto e interpretação.",
+      "frase": "O gesto que o texto apresenta é um [1]; a leitura da sua motivação é uma [2].",
+      "lacunas": [
+        {
+          "o": [
+            "indício",
+            "palpite"
+          ],
+          "c": 0,
+          "fe": [
+            null,
+            "Nesta lacuna, palpite não corresponde à relação pedida."
+          ]
+        },
+        {
+          "o": [
+            "interpretação",
+            "identificação"
+          ],
+          "c": 0,
+          "fe": [
+            null,
+            "Nesta lacuna, identificação não corresponde à relação pedida."
+          ]
+        }
+      ],
+      "f": "O gesto fornece um indício. A motivação precisa de ser sustentada pelo contexto, não se torna certa por o gesto ser visível.",
+      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder.",
+      "recycledFrom": "/pt/m4/licao-m4-f27/",
+      "sourceCard": 9,
+      "adaptacao": "Operação da lição aplicada a um recorte ou exemplo indicado no cartão."
+    },
+    {
+      "t": "ordenar",
+      "p": "Ordena a análise de uma fala acompanhada de um gesto.",
+      "passos": [
+        "Ler a fala e a indicação cénica",
+        "Identificar o que a fala afirma",
+        "Confrontar o gesto com as palavras",
+        "Explicar o efeito da concordância ou do contraste"
+      ],
+      "f": "A indicação cénica faz parte da prova. Ler só a fala pode esconder uma contradição entre o que se diz e o que se faz.",
+      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder.",
+      "recycledFrom": "/pt/m4/licao-m4-f27/",
+      "sourceCard": 10,
+      "adaptacao": "Operação da lição aplicada a um recorte ou exemplo indicado no cartão."
+    },
+    {
+      "t": "vf",
+      "p": "Uma hesitação prova, por si só, o conteúdo exato do segredo de uma personagem.",
+      "v": false,
+      "f": "Hesitar pode indiciar evasão; não revela automaticamente o que se esconde. Procura outra passagem antes de afirmar o conteúdo do segredo.",
+      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder.",
+      "recycledFrom": "/pt/m4/licao-m4-f27/",
+      "sourceCard": 8,
+      "adaptacao": "Operação da lição aplicada a um recorte ou exemplo indicado no cartão."
+    },
+    {
+      "t": "emparelhar",
+      "p": "No caso imaginário do telemóvel, liga o indício ao que permite afirmar.",
+      "pares": [
+        [
+          "A Ana viu alguém tirar o telemóvel.",
+          "Observação direta da ação"
+        ],
+        [
+          "O suspeito corou quando o interrogaram.",
+          "Indício que não prova o furto"
+        ],
+        [
+          "A Inês deixa o seu telemóvel em casa.",
+          "Receio de que o caso se repita"
+        ]
+      ],
+      "f": "Ver a ação difere de interpretar um rubor. Deixar um objeto em casa mostra receio, não testemunho do que aconteceu.",
+      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder.",
+      "recycledFrom": "/pt/m4/licao-m4-f26/",
+      "sourceCard": 8,
+      "adaptacao": "Operação da lição aplicada a um recorte ou exemplo indicado no cartão."
+    },
+    {
+      "t": "sublinhar",
+      "p": "No exemplo imaginário, toca na palavra que evita apresentar uma hipótese como certeza.",
+      "frase": "O gesto talvez revele que a personagem evita responder.",
+      "certas": [
+        2
+      ],
+      "f": "Talvez assinala uma hipótese. Retirá-lo tornaria a leitura mais categórica sem acrescentar qualquer prova.",
+      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder.",
+      "recycledFrom": "/pt/m4/licao-m4-f27/",
+      "sourceCard": 9,
+      "adaptacao": "Operação da lição aplicada a um recorte ou exemplo indicado no cartão."
+    }
+  ]
+}

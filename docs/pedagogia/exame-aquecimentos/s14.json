@@ -1,0 +1,236 @@
+{
+  "sessao": "s14",
+  "versao": 1,
+  "titulo": "Reis: a disciplina do instante",
+  "cartoes": [
+    {
+      "t": "ler",
+      "titulo": "Texto para consultar",
+      "html": "<p>Consulta o texto quando precisares de confirmar uma escolha.</p><details><summary>Abrir o texto de apoio</summary><p class=\"v\"><span class=\"ln\" data-l=\"0-0\">As rosas amo dos jardins de Adónis,</span>\n<span class=\"ln\" data-l=\"0-1\">Essas volucres amo, Lídia, rosas,</span>\n<span class=\"ln\" data-l=\"0-2\">Que em o dia em que nascem,</span>\n<span class=\"ln\" data-l=\"0-3\">Em esse dia morrem.</span>\n<span class=\"ln\" data-l=\"0-5\">A luz para elas é eterna, porque</span>\n<span class=\"ln\" data-l=\"0-6\">Nascem nascido já o Sol, e acabam</span>\n<span class=\"ln\" data-l=\"0-7\">Antes que Apolo deixe</span>\n<span class=\"ln\" data-l=\"0-8\">O seu curso visível.</span>\n<span class=\"ln\" data-l=\"0-10\">Assim façamos nossa vida um dia,</span>\n<span class=\"ln\" data-l=\"0-11\">Inscientes, Lídia, voluntariamente</span>\n<span class=\"ln\" data-l=\"0-12\">Que há noite antes e após</span>\n<span class=\"ln\" data-l=\"0-13\">O pouco que duramos.</span></p><p class=\"fonte\">Ricardo Reis (11-7-1914); 1.ª publicação na <i>Athena</i>, n.º 1, Lisboa, outubro de 1924; <i>Odes de Ricardo Reis</i>, Ática, 1946; Arquivo Pessoa.</p><p class=\"fonte\"><a href=\"../../../m7/licao-m7-f23/\">Texto e fontes na lição de origem</a></p></details>",
+      "recycledFrom": "/pt/m7/licao-m7-f23/"
+    },
+    {
+      "p": "«Volucres», em «Essas volucres amo, Lídia, rosas», quer dizer…",
+      "f": "Volucres: passageiras, que duram pouco; é por isso que Reis as ama.",
+      "legacyId": "s14-q1",
+      "recycledFrom": "/pt/m7/licao-m7-f23/",
+      "t": "escolha",
+      "o": [
+        "passageiras, que duram pouco",
+        "vermelhas, que brilham muito",
+        "perfumadas, que atraem aves"
+      ],
+      "c": 0,
+      "fe": [
+        null,
+        "A palavra não identifica a cor das rosas.",
+        "A palavra não identifica o perfume nem a atração de aves."
+      ]
+    },
+    {
+      "p": "As rosas do poema duram um dia.",
+      "f": "Verdadeiro: «Que em o dia em que nascem, / Em esse dia morrem»: é um facto do texto.",
+      "legacyId": "s14-q2",
+      "recycledFrom": "/pt/m7/licao-m7-f23/",
+      "t": "vf",
+      "v": true,
+      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder."
+    },
+    {
+      "p": "«Antes que Apolo deixe / O seu curso visível»: quem é Apolo, aqui?",
+      "f": "Apolo é aqui o Sol: as rosas acabam antes de ele se pôr.",
+      "legacyId": "s14-q3",
+      "recycledFrom": "/pt/m7/licao-m7-f23/",
+      "t": "escolha",
+      "o": [
+        "O Sol, no seu percurso.",
+        "A noite, no seu começo.",
+        "Adónis, no seu caminho."
+      ],
+      "c": 0,
+      "fe": [
+        null,
+        "O curso visível termina antes da noite.",
+        "Adónis aparece na imagem das rosas, mas não é Apolo."
+      ]
+    },
+    {
+      "t": "emparelhar",
+      "p": "Liga cada ideia à maneira de viver.",
+      "pares": [
+        [
+          "Prazeres simples, sem excessos",
+          "Epicurismo"
+        ],
+        [
+          "Dominar as paixões",
+          "Estoicismo"
+        ],
+        [
+          "Aproveitar o dia, porque a vida é breve",
+          "Epicurismo"
+        ],
+        [
+          "Aceitar a ordem do mundo",
+          "Estoicismo"
+        ]
+      ],
+      "f": "O prazer medido e o dia aproveitado são epicurismo; as paixões dominadas e a ordem aceite, estoicismo.",
+      "recycledFrom": "/pt/m7/licao-m7-f23/",
+      "sourceCard": 4,
+      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder."
+    },
+    {
+      "t": "versos",
+      "p": "Põe os versos da primeira estrofe de «_As rosas amo_» pela ordem.",
+      "linhas": [
+        "As rosas amo dos jardins de Adónis,",
+        "Essas volucres amo, Lídia, rosas,",
+        "Que em o dia em que nascem,",
+        "Em esse dia morrem."
+      ],
+      "f": "Primeira estrofe: as rosas de Adónis nascem e morrem no mesmo dia.",
+      "cita": "As rosas amo dos jardins de Adónis,",
+      "recycledFrom": "/pt/m7/licao-m7-f23/",
+      "sourceCard": 6,
+      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder."
+    },
+    {
+      "t": "completar",
+      "p": "Porque é a luz eterna para as rosas, na 2.ª estrofe?",
+      "frase": "A luz para elas é [1], porque nunca veem a [2].",
+      "lacunas": [
+        {
+          "o": [
+            "eterna",
+            "incerta"
+          ],
+          "c": 0,
+          "fe": [
+            null,
+            "Nesta lacuna, incerta não corresponde à relação pedida."
+          ]
+        },
+        {
+          "o": [
+            "noite",
+            "morte"
+          ],
+          "c": 0,
+          "fe": [
+            null,
+            "Nesta lacuna, morte não corresponde à relação pedida."
+          ]
+        }
+      ],
+      "f": "**Eterna**, porque nunca veem a **noite**: para quem só vive de dia, o dia é tudo o que existe.",
+      "cita": "A luz para elas é eterna, porque",
+      "recycledFrom": "/pt/m7/licao-m7-f23/",
+      "sourceCard": 9,
+      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder."
+    },
+    {
+      "t": "sublinhar",
+      "p": "Toca nos dois verbos que dizem o que as rosas fazem.",
+      "frase": "Nascem nascido já o Sol, e acabam",
+      "certas": [
+        0,
+        6
+      ],
+      "f": "«**Nascem**» e «**acabam**»: entre o Sol já nascido e Apolo ainda visível.",
+      "cita": "Nascem nascido já o Sol, e acabam",
+      "recycledFrom": "/pt/m7/licao-m7-f23/",
+      "sourceCard": 10,
+      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder."
+    },
+    {
+      "t": "versos",
+      "p": "Põe os versos da terceira estrofe pela ordem da ode.",
+      "linhas": [
+        "Assim façamos nossa vida um dia,",
+        "Inscientes, Lídia, voluntariamente",
+        "Que há noite antes e após",
+        "O pouco que duramos."
+      ],
+      "f": "A proposta: fazer da vida um dia, sem querer saber da noite que há antes e após.",
+      "cita": "Assim façamos nossa vida um dia,",
+      "recycledFrom": "/pt/m7/licao-m7-f23/",
+      "sourceCard": 12,
+      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder."
+    },
+    {
+      "t": "completar",
+      "p": "O que há antes e depois do pouco que duramos?",
+      "frase": "Para as rosas e para nós «há noite [1] e após / O pouco que [2]».",
+      "lacunas": [
+        {
+          "o": [
+            "antes",
+            "depois"
+          ],
+          "c": 0,
+          "fe": [
+            null,
+            "Nesta lacuna, depois não corresponde à relação pedida."
+          ]
+        },
+        {
+          "o": [
+            "duramos",
+            "cantamos"
+          ],
+          "c": 0,
+          "fe": [
+            null,
+            "Nesta lacuna, cantamos não corresponde à relação pedida."
+          ]
+        }
+      ],
+      "f": "«Que há noite **antes** e após / O pouco que **duramos**»: a vida é um dia.",
+      "cita": "Que há noite antes e após",
+      "recycledFrom": "/pt/m7/licao-m7-f23/",
+      "sourceCard": 14,
+      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder."
+    },
+    {
+      "t": "vf",
+      "p": "O poema diz que Reis tem medo de morrer.",
+      "v": false,
+      "f": "Falso: é uma **inferência discutível**; o poema diz que há noite e propõe não olhar para ela.",
+      "fe": "O poema não diz «medo»: diz que há noite antes e depois da vida e propõe viver «Inscientes» dela; o medo seria uma inferência tua.",
+      "recycledFrom": "/pt/m7/licao-m7-f23/",
+      "sourceCard": 18
+    },
+    {
+      "t": "vf",
+      "p": "Para Reis, saber que a vida é curta leva ao desespero.",
+      "v": false,
+      "f": "Falso: leva a **viver com medida**; «O pouco que duramos» diz-se com serenidade.",
+      "fe": "Não há desespero nos versos: a resposta é viver «um dia», por escolha («voluntariamente»), e o fim fala da brevidade sem queixa.",
+      "recycledFrom": "/pt/m7/licao-m7-f23/",
+      "sourceCard": 20
+    },
+    {
+      "t": "emparelhar",
+      "p": "Liga cada termo da lição ao que quer dizer.",
+      "pares": [
+        [
+          "Ode",
+          "poema de tom elevado, em estrofes regulares"
+        ],
+        [
+          "_Carpe diem_",
+          "aproveitar o dia de hoje"
+        ],
+        [
+          "Horácio",
+          "o poeta latino que Reis segue"
+        ]
+      ],
+      "f": "A ode é a forma, _carpe diem_ o lema, Horácio o modelo.",
+      "recycledFrom": "/pt/m7/licao-m7-f23/",
+      "sourceCard": 21,
+      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder."
+    }
+  ]
+}

@@ -1,0 +1,223 @@
+{
+  "sessao": "s27",
+  "versao": 1,
+  "titulo": "Ver, compreender, estudar melhor",
+  "cartoes": [
+    {
+      "p": "Reconhecer uma explicação ao relê-la basta para verificar se a sabes aplicar?",
+      "f": "Aplicar num caso diferente ajuda a distinguir a familiaridade com as palavras da compreensão do conteúdo.",
+      "legacyId": "s27-q1",
+      "recycledFrom": "/pt/m5/licao-m5-f07/",
+      "t": "escolha",
+      "o": [
+        "Não: testa a aplicação num caso novo.",
+        "Sim: reconhecer e aplicar são iguais.",
+        "Sim: basta reler a explicação depressa."
+      ],
+      "c": 0,
+      "fe": [
+        null,
+        "Reconhecer uma explicação e aplicá-la são operações diferentes.",
+        "A velocidade da releitura não demonstra aplicação autónoma."
+      ]
+    },
+    {
+      "p": "Qual destes registos ajuda mais a decidir o que rever?",
+      "f": "O registo concreto permite escolher uma ação de revisão e verificar depois se a dificuldade foi ultrapassada.",
+      "legacyId": "s27-q2",
+      "recycledFrom": "/pt/m5/licao-m5-f07/",
+      "t": "escolha",
+      "o": [
+        "Identifiquei a função, mas não a expliquei.",
+        "Dediquei bastante tempo a estudar esta parte.",
+        "Achei o estudo desta parte muito difícil."
+      ],
+      "c": 0,
+      "fe": [
+        null,
+        "O tempo de estudo não identifica a operação que falta dominar.",
+        "Difícil é uma avaliação vaga, sem diagnóstico do passo em falta."
+      ]
+    },
+    {
+      "p": "Como usar uma proposta de estudo apresentada num vídeo?",
+      "f": "Uma proposta deve ser aplicada e avaliada. A utilidade depende do que precisas de aprender e do resultado do ensaio.",
+      "legacyId": "s27-q3",
+      "recycledFrom": "/pt/m5/licao-m5-f07/",
+      "t": "escolha",
+      "o": [
+        "Testar, observar resultados e ajustar.",
+        "Cumprir sempre, sem rever resultados.",
+        "Aceitar como garantia de bons resultados."
+      ],
+      "c": 0,
+      "fe": [
+        null,
+        "Um procedimento que não ajuda precisa de ser ajustado.",
+        "Uma proposta de estudo não garante o resultado sem aplicação e verificação."
+      ]
+    },
+    {
+      "t": "emparelhar",
+      "p": "Liga cada função ao nível da frase a que pertence.",
+      "pares": [
+        [
+          "Sujeito e predicado",
+          "ao nível da frase"
+        ],
+        [
+          "Complemento oblíquo",
+          "interno ao grupo verbal"
+        ],
+        [
+          "Complemento do nome",
+          "interno ao grupo nominal"
+        ]
+      ],
+      "f": "Três níveis: a frase, o grupo verbal, o grupo nominal; cada função tem o seu.",
+      "recycledFrom": "/pt/m5/licao-m5-f07/",
+      "sourceCard": 13,
+      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder."
+    },
+    {
+      "t": "vf",
+      "p": "Cortar «serenamente» de «Entrou serenamente no seu quarto» deixa a frase inteira: é modificador do grupo verbal.",
+      "v": true,
+      "f": "Verdadeiro: «Entrou no seu quarto» aguenta-se; o **teste de cortar** revela o modificador do grupo verbal.",
+      "fe": "É verdadeiro: «Entrou no seu quarto» aguenta-se sem «serenamente»; o que se corta sem estragar a frase é modificador do grupo verbal.",
+      "recycledFrom": "/pt/m5/licao-m5-f07/",
+      "sourceCard": 14
+    },
+    {
+      "t": "emparelhar",
+      "p": "Liga cada pedaço da frase à sua função sintática.",
+      "pares": [
+        [
+          "Teresa",
+          "sujeito"
+        ],
+        [
+          "enviou a trança a Simão",
+          "predicado"
+        ],
+        [
+          "a trança",
+          "complemento direto"
+        ],
+        [
+          "a Simão",
+          "complemento indireto"
+        ]
+      ],
+      "f": "Quem? Teresa. O quê? A trança, que vira «a». A quem? A Simão, que vira «lhe»: juntos, «enviou-lha».",
+      "recycledFrom": "/pt/m5/licao-m5-f07/",
+      "sourceCard": 19,
+      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder."
+    },
+    {
+      "t": "sublinhar",
+      "p": "No exemplo de treino, toca no grupo que o verbo seleciona como complemento direto.",
+      "frase": "A leitora encontrou provas no texto.",
+      "certas": [
+        3
+      ],
+      "f": "Provas é o que a leitora encontrou. No texto situa a ação, mas não responde à pergunta sobre o que foi encontrado.",
+      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder.",
+      "recycledFrom": "/pt/m5/licao-m5-f07/",
+      "sourceCard": 3,
+      "adaptacao": "Operação da lição aplicada a um recorte ou exemplo indicado no cartão."
+    },
+    {
+      "t": "completar",
+      "p": "Completa o registo de uma dificuldade concreta.",
+      "frase": "Consigo [1] a função, mas ainda preciso de [2] a relação com o verbo.",
+      "lacunas": [
+        {
+          "o": [
+            "nomear",
+            "copiar"
+          ],
+          "c": 0,
+          "fe": [
+            null,
+            "Nesta lacuna, copiar não corresponde à relação pedida."
+          ]
+        },
+        {
+          "o": [
+            "explicar",
+            "recordar"
+          ],
+          "c": 0,
+          "fe": [
+            null,
+            "Nesta lacuna, recordar não corresponde à relação pedida."
+          ]
+        }
+      ],
+      "f": "Nomear a função e explicar a relação são operações diferentes. O registo útil indica precisamente qual delas ainda falta dominar.",
+      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder.",
+      "recycledFrom": "/pt/m5/licao-m5-f07/",
+      "sourceCard": 13,
+      "adaptacao": "Operação da lição aplicada a um recorte ou exemplo indicado no cartão."
+    },
+    {
+      "t": "ordenar",
+      "p": "Ordena uma verificação da aprendizagem.",
+      "passos": [
+        "Resolver um exemplo sem consultar a explicação",
+        "Confrontar a resposta com a justificação",
+        "Identificar a operação em que houve dificuldade",
+        "Resolver outro exemplo dessa operação"
+      ],
+      "f": "Reconhecer uma explicação não prova que a sabes aplicar. O segundo exemplo verifica se corrigiste a dificuldade, não apenas se recordas a resposta.",
+      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder.",
+      "recycledFrom": "/pt/m5/licao-m5-f07/",
+      "sourceCard": 9,
+      "adaptacao": "Operação da lição aplicada a um recorte ou exemplo indicado no cartão."
+    },
+    {
+      "t": "vf",
+      "p": "Se acertas no nome da função mas não consegues justificá-la, já verificaste as duas operações.",
+      "v": false,
+      "f": "Nomear e justificar exigem respostas diferentes. Volta à relação entre o verbo e o grupo da frase para testar a segunda operação.",
+      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder.",
+      "recycledFrom": "/pt/m5/licao-m5-f07/",
+      "sourceCard": 13,
+      "adaptacao": "Operação da lição aplicada a um recorte ou exemplo indicado no cartão."
+    },
+    {
+      "t": "sublinhar",
+      "p": "No registo de treino, toca no que identifica uma dificuldade observável.",
+      "frase": "Acertei na função, mas não expliquei a seleção pelo verbo.",
+      "certas": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "f": "Não expliquei a seleção pelo verbo identifica o passo em falta. Uma avaliação vaga de esforço não mostra o que deves voltar a experimentar.",
+      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder.",
+      "recycledFrom": "/pt/m5/licao-m5-f07/",
+      "sourceCard": 13,
+      "adaptacao": "Operação da lição aplicada a um recorte ou exemplo indicado no cartão."
+    },
+    {
+      "t": "ordenar",
+      "p": "Ordena o uso de uma explicação de ajuda.",
+      "passos": [
+        "Escolher a ajuda para a dificuldade identificada",
+        "Observar o procedimento explicado",
+        "Aplicar o procedimento a outro exemplo",
+        "Verificar o resultado e ajustar o estudo"
+      ],
+      "f": "A ajuda serve uma dificuldade concreta. Voltar ao vídeo sem experimentar a operação pode deixar a mesma dificuldade por resolver.",
+      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder.",
+      "recycledFrom": "/pt/m5/licao-m5-f07/",
+      "sourceCard": 9,
+      "adaptacao": "Operação da lição aplicada a um recorte ou exemplo indicado no cartão."
+    }
+  ]
+}

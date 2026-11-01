@@ -1,0 +1,239 @@
+{
+  "sessao": "s18",
+  "versao": 1,
+  "titulo": "Conto: o que o texto deixa por dizer",
+  "cartoes": [
+    {
+      "p": "O que acontece em «_George_»?",
+      "f": "Em «_George_», uma mulher encontra-se com as outras idades; as outras histórias são de Sena, de Amaral e do resumo-modelo.",
+      "legacyId": "s18-q1",
+      "recycledFrom": "/pt/m8/licao-m8-f08/",
+      "t": "escolha",
+      "o": [
+        "Uma mulher encontra-se jovem e velha.",
+        "Uma mulher escreve aos filhos adultos.",
+        "Uma mulher atravessa o mar pela paz."
+      ],
+      "c": 0,
+      "fe": [
+        null,
+        "O encontro entre idades não é uma carta aos filhos.",
+        "A viagem marítima não corresponde à situação apresentada no conto."
+      ]
+    },
+    {
+      "p": "Ao interpretar uma omissão num conto, qual é o procedimento mais seguro?",
+      "f": "Inferir exige apoio textual. Uma hipótese plausível não deve ser apresentada como uma informação explícita.",
+      "legacyId": "s18-q2",
+      "recycledFrom": "/pt/m8/licao-m8-f08/",
+      "t": "escolha",
+      "o": [
+        "Relacionar pistas e delimitar dúvidas.",
+        "Inventar episódios e tomá-los por factos.",
+        "Ignorar os indícios que o texto sugere."
+      ],
+      "c": 0,
+      "fe": [
+        null,
+        "Uma hipótese tua não se torna um episódio comprovado.",
+        "Omitir não torna irrelevantes as pistas implícitas."
+      ]
+    },
+    {
+      "p": "De que livro é «_George_»?",
+      "f": "_Seta Despedida_, de 1995; _Ágora_ é de Amaral e _Metamorfoses_ de Sena.",
+      "legacyId": "s18-q3",
+      "recycledFrom": "/pt/m8/licao-m8-f08/",
+      "t": "escolha",
+      "o": [
+        "_Seta Despedida_, publicado em 1995",
+        "_Metamorfoses_, publicado em 1963",
+        "_Novas Cartas Portuguesas_, em 2010"
+      ],
+      "c": 0,
+      "fe": [
+        null,
+        "Metamorfoses pertence a outra obra e a outro autor.",
+        "Esse título não é o livro de que faz parte _George_."
+      ]
+    },
+    {
+      "t": "emparelhar",
+      "p": "Liga cada traço à idade a que pertence.",
+      "pares": [
+        [
+          "A rapariga que George foi",
+          "Gi"
+        ],
+        [
+          "A velha que George vai ser",
+          "Georgina"
+        ],
+        [
+          "Chega do lado da memória",
+          "Gi"
+        ],
+        [
+          "Chega do lado do futuro",
+          "Georgina"
+        ]
+      ],
+      "f": "Gi é a juventude que ficou para trás; Georgina, a velhice que ainda há de vir; George está no meio.",
+      "recycledFrom": "/pt/m8/licao-m8-f08/",
+      "sourceCard": 4,
+      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder."
+    },
+    {
+      "t": "sublinhar",
+      "p": "Toca nos três nomes da protagonista.",
+      "frase": "No conto, a protagonista tem três nomes, um para cada idade: Gi, George, Georgina.",
+      "certas": [
+        11,
+        12,
+        13
+      ],
+      "f": "Gi, George, Georgina: um nome para cada idade.",
+      "recycledFrom": "/pt/m8/licao-m8-f08/",
+      "sourceCard": 7,
+      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder."
+    },
+    {
+      "t": "completar",
+      "p": "O que escreveu sobretudo Maria Judite de Carvalho, e como?",
+      "frase": "Maria Judite de Carvalho escreveu sobretudo [1], numa escrita contida que prefere a [2] à explicação.",
+      "lacunas": [
+        {
+          "o": [
+            "narrativas breves",
+            "narrativas extensas"
+          ],
+          "c": 0,
+          "fe": [
+            null,
+            "Nesta lacuna, narrativas extensas não corresponde à relação pedida."
+          ]
+        },
+        {
+          "o": [
+            "sugestão",
+            "descrição"
+          ],
+          "c": 0,
+          "fe": [
+            null,
+            "Nesta lacuna, descrição não corresponde à relação pedida."
+          ]
+        }
+      ],
+      "f": "**Narrativas breves**, numa escrita contida que prefere a **sugestão** à explicação.",
+      "recycledFrom": "/pt/m8/licao-m8-f08/",
+      "sourceCard": 8,
+      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder."
+    },
+    {
+      "t": "sublinhar",
+      "p": "Toca na palavra que diz quem os títulos dos contos nomeiam.",
+      "frase": "Os títulos dos seus contos nomeiam muitas vezes as protagonistas, como «_George_».",
+      "certas": [
+        9
+      ],
+      "f": "«Protagonistas»: os títulos de Maria Judite de Carvalho nomeiam as mulheres dos contos.",
+      "recycledFrom": "/pt/m8/licao-m8-f08/",
+      "sourceCard": 10,
+      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder."
+    },
+    {
+      "t": "completar",
+      "p": "Como se chamam as duas maneiras de dar as falas no conto?",
+      "frase": "As palavras da personagem, com travessão ou aspas, são discurso [1]; o narrador a contar o que foi dito é discurso [2].",
+      "lacunas": [
+        {
+          "o": [
+            "direto",
+            "contido"
+          ],
+          "c": 0,
+          "fe": [
+            null,
+            "Nesta lacuna, contido não corresponde à relação pedida."
+          ]
+        },
+        {
+          "o": [
+            "indireto",
+            "imaginado"
+          ],
+          "c": 0,
+          "fe": [
+            null,
+            "Nesta lacuna, imaginado não corresponde à relação pedida."
+          ]
+        }
+      ],
+      "f": "**Direto**: a personagem fala; **indireto**: o narrador conta.",
+      "recycledFrom": "/pt/m8/licao-m8-f08/",
+      "sourceCard": 12,
+      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder."
+    },
+    {
+      "t": "completar",
+      "p": "O que significam concentração de tempo e de espaço e unidade de ação?",
+      "frase": "Por concentração de tempo e de espaço entende-se [1] e por unidade de ação entende-se [2] numa narrativa breve.",
+      "lacunas": [
+        {
+          "o": [
+            "pouco tempo, poucos lugares",
+            "muitas idades da protagonista"
+          ],
+          "c": 0,
+          "fe": [
+            null,
+            "Nesta lacuna, muitas idades da protagonista não corresponde à relação pedida."
+          ]
+        },
+        {
+          "o": [
+            "uma só linha de acontecimentos",
+            "um só nome para a protagonista"
+          ],
+          "c": 0,
+          "fe": [
+            null,
+            "Nesta lacuna, um só nome para a protagonista não corresponde à relação pedida."
+          ]
+        }
+      ],
+      "f": "**Pouco tempo e poucos lugares**; **uma só linha de acontecimentos**: duas características do conto.",
+      "recycledFrom": "/pt/m8/licao-m8-f08/",
+      "sourceCard": 13,
+      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder."
+    },
+    {
+      "t": "vf",
+      "p": "«O encontro entre idades é imaginado» é um facto verificável no texto.",
+      "v": false,
+      "f": "Falso: é uma **interpretação**, a defender com provas; o conto sugere, não explica.",
+      "fe": "Não: é uma interpretação, que se defende com provas; «O essencial» dá este mesmo exemplo.",
+      "recycledFrom": "/pt/m8/licao-m8-f08/",
+      "sourceCard": 15
+    },
+    {
+      "t": "vf",
+      "p": "Em «_George_», a autora explica tudo o que liga Gi, George e Georgina.",
+      "v": false,
+      "f": "Falso: a autora **quase não explica**; prefere a sugestão à explicação, e o resto é contigo.",
+      "fe": "Não: a autora quase não explica (vê «Abre» e «Em paralelo»); o resto fica para o leitor.",
+      "recycledFrom": "/pt/m8/licao-m8-f08/",
+      "sourceCard": 17
+    },
+    {
+      "t": "vf",
+      "p": "O conto deixa perguntas sem resposta: prefere sugerir a explicar.",
+      "v": true,
+      "f": "Verdadeiro: a escrita contida **prefere a sugestão à explicação**; o leitor fica com as perguntas.",
+      "fe": "É verdadeiro: a escrita de Maria Judite de Carvalho prefere a sugestão à explicação («O essencial»), e «Abre» avisa: o resto é contigo.",
+      "recycledFrom": "/pt/m8/licao-m8-f08/",
+      "sourceCard": 19
+    }
+  ]
+}

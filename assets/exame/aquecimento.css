@@ -1,0 +1,5 @@
+/* As duas colunas conservam a ligação visual, mesmo com palavras longas a 320 px. */
+#baralho .pares { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+#baralho .pares .col, #baralho .pares .tx { min-width: 0; }
+#baralho .pares .tx { overflow-wrap: anywhere; }
+#baralho .lacuna select, #baralho select { max-width: 100%; }

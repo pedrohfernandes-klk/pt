@@ -5,7 +5,7 @@
     {
       "id": "s01",
       "order": 1,
-      "durationMinutes": 45,
+      "durationMinutes": 50,
       "title": "Cantigas: comparar sem confundir",
       "group": "10.º ano",
       "module": "M1",
@@ -272,7 +272,7 @@
     {
       "id": "s02",
       "order": 2,
-      "durationMinutes": 45,
+      "durationMinutes": 50,
       "title": "Fernão Lopes: uma multidão em ação",
       "group": "10.º ano",
       "module": "M1",
@@ -447,7 +447,7 @@
     {
       "id": "s03",
       "order": 3,
-      "durationMinutes": 45,
+      "durationMinutes": 50,
       "title": "Gil Vicente: desejo, escolha e sátira",
       "group": "10.º ano",
       "module": "M2",
@@ -580,7 +580,7 @@
     {
       "id": "s04",
       "order": 4,
-      "durationMinutes": 45,
+      "durationMinutes": 50,
       "title": "Camões lírico: o que a forma faz sentir",
       "group": "10.º ano",
       "module": "M3",
@@ -803,7 +803,7 @@
     {
       "id": "s05",
       "order": 5,
-      "durationMinutes": 45,
+      "durationMinutes": 50,
       "title": "Os Lusíadas: celebrar e interrogar",
       "group": "10.º ano",
       "module": "M3",
@@ -1047,7 +1047,7 @@
     {
       "id": "s06",
       "order": 6,
-      "durationMinutes": 45,
+      "durationMinutes": 50,
       "title": "Vieira: os peixes são o argumento",
       "group": "11.º ano",
       "module": "M4",
@@ -1237,7 +1237,7 @@
     {
       "id": "s07",
       "order": 7,
-      "durationMinutes": 45,
+      "durationMinutes": 50,
       "title": "Frei Luís de Sousa: o que a cena revela",
       "group": "11.º ano",
       "module": "M4",
@@ -1425,7 +1425,7 @@
     {
       "id": "s08",
       "order": 8,
-      "durationMinutes": 45,
+      "durationMinutes": 50,
       "title": "Prosa romântica: paixão e condicionamento",
       "group": "11.º ano",
       "module": "M5",
@@ -1618,7 +1618,7 @@
     {
       "id": "s09",
       "order": 9,
-      "durationMinutes": 45,
+      "durationMinutes": 50,
       "title": "Eça: ver a crítica nos pormenores",
       "group": "11.º ano",
       "module": "M5",
@@ -1768,7 +1768,7 @@
     {
       "id": "s10",
       "order": 10,
-      "durationMinutes": 45,
+      "durationMinutes": 50,
       "title": "Antero: procurar, negar, descansar",
       "group": "11.º ano",
       "module": "M6",
@@ -1988,7 +1988,7 @@
     {
       "id": "s11",
       "order": 11,
-      "durationMinutes": 45,
+      "durationMinutes": 50,
       "title": "Cesário: uma cidade em transformação",
       "group": "11.º ano",
       "module": "M6",
@@ -2279,7 +2279,7 @@
     {
       "id": "s12",
       "order": 12,
-      "durationMinutes": 45,
+      "durationMinutes": 50,
       "title": "Pessoa: sentir e construir o poema",
       "group": "12.º ano",
       "module": "M7",
@@ -2530,7 +2530,7 @@
     {
       "id": "s13",
       "order": 13,
-      "durationMinutes": 45,
+      "durationMinutes": 50,
       "title": "Caeiro: o rio e a medida do olhar",
       "group": "12.º ano",
       "module": "M7",
@@ -2753,7 +2753,7 @@
     {
       "id": "s14",
       "order": 14,
-      "durationMinutes": 45,
+      "durationMinutes": 50,
       "title": "Reis: a disciplina do instante",
       "group": "12.º ano",
       "module": "M7",
@@ -2959,7 +2959,7 @@
     {
       "id": "s15",
       "order": 15,
-      "durationMinutes": 45,
+      "durationMinutes": 50,
       "title": "Campos: desejo e desencontro",
       "group": "12.º ano",
       "module": "M7",
@@ -3172,7 +3172,7 @@
     {
       "id": "s16",
       "order": 16,
-      "durationMinutes": 45,
+      "durationMinutes": 50,
       "title": "Mensagem: mito, história e apelo",
       "group": "12.º ano",
       "module": "M7",
@@ -3465,7 +3465,7 @@
     {
       "id": "s17",
       "order": 17,
-      "durationMinutes": 45,
+      "durationMinutes": 50,
       "title": "Poesia contemporânea: três modos de dizer",
       "group": "12.º ano",
       "module": "M8",
@@ -3596,7 +3596,7 @@
     {
       "id": "s18",
       "order": 18,
-      "durationMinutes": 45,
+      "durationMinutes": 50,
       "title": "Conto: o que o texto deixa por dizer",
       "group": "12.º ano",
       "module": "M8",
@@ -3725,7 +3725,7 @@
     {
       "id": "s19",
       "order": 19,
-      "durationMinutes": 45,
+      "durationMinutes": 50,
       "title": "Saramago: quem conta e quem faz",
       "group": "12.º ano",
       "module": "M9",
@@ -3853,7 +3853,7 @@
     {
       "id": "s20",
       "order": 20,
-      "durationMinutes": 45,
+      "durationMinutes": 50,
       "title": "Ler informação e escrever uma síntese",
       "group": "Competências",
       "module": "M1–M9",
@@ -3965,7 +3965,7 @@
     {
       "id": "s21",
       "order": 21,
-      "durationMinutes": 45,
+      "durationMinutes": 50,
       "title": "Gramática: funções e relações entre orações",
       "group": "Competências",
       "module": "M2 · M5 · M6",
@@ -4077,7 +4077,7 @@
     {
       "id": "s22",
       "order": 22,
-      "durationMinutes": 45,
+      "durationMinutes": 50,
       "title": "Gramática: ligar, retomar e situar",
       "group": "Competências",
       "module": "M3 · M7 · M8",
@@ -4190,7 +4190,7 @@
     {
       "id": "s23",
       "order": 23,
-      "durationMinutes": 45,
+      "durationMinutes": 50,
       "title": "Exposição: explicar com uma linha clara",
       "group": "Competências",
       "module": "M1–M9",
@@ -4302,7 +4302,7 @@
     {
       "id": "s24",
       "order": 24,
-      "durationMinutes": 45,
+      "durationMinutes": 50,
       "title": "Opinião: uma posição que resiste à revisão",
       "group": "Competências",
       "module": "M1–M9",
@@ -4414,7 +4414,7 @@
     {
       "id": "s25",
       "order": 25,
-      "durationMinutes": 45,
+      "durationMinutes": 50,
       "title": "Apreciação crítica: julgar mostrando",
       "group": "Competências",
       "module": "M1–M9",
@@ -4526,7 +4526,7 @@
     {
       "id": "s26",
       "order": 26,
-      "durationMinutes": 45,
+      "durationMinutes": 50,
       "title": "Oficina final: transformar uma resposta",
       "group": "Competências",
       "module": "M1–M9",
@@ -4638,7 +4638,7 @@
     {
       "id": "s27",
       "order": 27,
-      "durationMinutes": 45,
+      "durationMinutes": 50,
       "title": "Ver, compreender, estudar melhor",
       "group": "Competências",
       "module": "M1–M9",
