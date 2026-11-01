@@ -124,10 +124,15 @@
 .v-ed .module-opening figcaption a{color:inherit}
 /* 01/11/2026, decisão 61 (hierarquia dos títulos, R4): nos nove mapas do módulo, o topo de cada unidade tinha duas formas,
    33,6 px em Arial nos mapas que carregam pt-unit-groups.css (M1, M2, M3 e M7) e 23,2 px em Bebas, com o antetítulo e a
-   pergunta sem estilo, nos outros cinco (M4, M5, M6, M8 e M9). Fica uma só forma, a de pt-unit-groups.css, com os tamanhos
-   na escala do «Cartaz»: antetítulo de 13 px e título de 25 px (31 px no ecrã a partir de 700 px). Só nos mapas (.caminho);
-   os índices dos módulos não mudam. */
+   pergunta sem estilo, nos outros cinco (M4, M5, M6, M8 e M9). Fica uma só forma, a de pt-unit-groups.css, no topo e na
+   caixa da unidade, com os tamanhos na escala do «Cartaz»: antetítulo de 13 px, título de 25 px em todas as larguras e
+   pergunta em Georgia itálico. O título de secção «O caminho», que agrupa as unidades, fica acima delas, a 2 rem (32 px)
+   no ecrã, como o título de secção do «Cartaz» (um nível nunca fica abaixo do nível que agrupa). A caixa da unidade (filete
+   de 4 px, margens de 36 e 48 px, 28 e 36 px até 480 px, 16 px de recuo e 24 px sob o topo) passa aos nove mapas só no
+   ecrã, para a impressão não mudar. Só nos mapas (.caminho); os índices dos módulos não mudam. */
 .caminho .grupo-topo .grupo-etq{font:700 .8125rem/1.4 Arial,sans-serif;letter-spacing:.1em;text-transform:uppercase;margin:0 0 8px}
 .caminho .grupo-topo h2{font:700 1.5625rem/1.12 Arial,sans-serif;letter-spacing:-.025em;margin:0 0 10px;text-transform:none;overflow-wrap:break-word}
 .caminho .grupo-topo .grupo-pergunta{font:italic 1.05rem/1.45 Georgia,serif;margin:0;max-width:58ch}
-@media screen and (min-width:700px){.caminho .grupo-topo h2{font-size:1.9375rem}}
+@media screen{.caminho>h2{font-size:2rem}}
+@media screen{.caminho .unidade-pedagogica{margin:36px 0 48px;border-top:4px solid var(--tinta,#171715);padding-top:16px}.caminho .unidade-pedagogica>.grupo-topo{margin-bottom:24px}}
+@media screen and (max-width:480px){.caminho .unidade-pedagogica{margin:28px 0 36px}}

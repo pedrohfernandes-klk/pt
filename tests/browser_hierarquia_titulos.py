@@ -13,8 +13,10 @@ copiada letra a letra do script; não se muda aqui sem mudar lá):
 Os elementos decorativos com aria-hidden="true" (as palavras de marca de água) ficam fora de R2 e de R3. A regra R4 (o
 mesmo papel com tamanhos diferentes em páginas do mesmo molde) não faz falhar: imprime-se no fim, como relatório.
 
-Falha com qualquer caso novo. Os casos ainda por corrigir estão em PENDENTES_20261101, com a data e o motivo, e o teste
-também falha se um caso da lista já não existir: corrigido um caso, tira-se da lista, que só pode diminuir.
+Falha com qualquer caso novo. Os casos ainda por corrigir estão em PENDENTES_20261101, com o número de vezes que
+aparecem a 390 e a 1366 px, a data e o motivo. O teste falha se um caso aparecer mais vezes do que as listadas (um caso
+novo, mesmo numa página que já está na lista e com os mesmos seletores) e também se aparecer menos vezes: corrigido um
+caso, baixa-se o número ou tira-se da lista, que só pode diminuir.
 
 Páginas: todos os .html com </head> e sem redirecionamento (meta refresh), fora de .git, tests, docs, _qa, node_modules e
 assets, como no script. O sítio é servido em /pt/ (como no GitHub Pages) e os pedidos para fora do servidor local são
@@ -39,9 +41,10 @@ LARGURAS = (390, 1366)
 FORA = {'.git', 'tests', 'docs', '_qa', 'node_modules', 'assets'}
 TRABALHADORES = 6
 
-# 01/11/2026: casos medidos que ainda não se podem corrigir. Cada um é (regra, página, larguras, primeiro, segundo, motivo):
-# em R1, o título que agrupa e o título maior; em R2, o antetítulo e o título; em R3, a classe dos antetítulos; em R5, o
-# título e o texto. Os seletores são os da medição (etiqueta, #id e até três classes).
+# 01/11/2026: casos medidos que ainda não se podem corrigir. Cada um é (regra, página, vezes, primeiro, segundo, motivo):
+# vezes é o número de ocorrências a 390 e a 1366 px (como no teste do Lente); em R1, primeiro e segundo são o título que
+# agrupa e o título maior; em R2, o antetítulo e o título; em R3, a classe dos antetítulos (uma ocorrência por antetítulo
+# dessa classe); em R5, o título e o texto. Os seletores são os da medição (etiqueta, #id e até três classes).
 CONGELADA = ('página congelada (gerada fora do repositório): corrige-se numa camada nova de trocas literais '
              '(scripts/aplicar_trocas.py), depois do #144 e do #145, que ocupam a camada mais recente')
 EXAME_147 = 'corrige-se no #147 (exame: títulos na ordem certa); quando o #147 entrar, sai daqui'
@@ -49,31 +52,31 @@ OBRAS = CONGELADA + ('; troca prevista em cada uma das 15 páginas das obras: «
                      '«.ob h2{font:700 1.25rem/1.2» (20 px, acima dos h3 de 17,3 px)')
 AGUA = CONGELADA + ('; troca prevista: «<span class="agua">escolha</span>» passa a '
                     '«<span class="agua" aria-hidden="true">escolha</span>», como nas outras páginas do M2')
-AMBAS = (390, 1366)
+UMA = (1, 1)
 PENDENTES_20261101 = (
     # «Ouvir o texto» e «Ver em cena» (h2 de 12,5 px) sobre h3 de 17,3 px nas páginas das obras
-    ('R1', 'obras/amor-perdicao/index.html', AMBAS, 'h2#ouvir', 'h3', OBRAS),
-    ('R1', 'obras/cantigas/index.html', AMBAS, 'h2#ouvir', 'h3', OBRAS),
-    ('R1', 'obras/cesario/index.html', AMBAS, 'h2#ouvir', 'h3', OBRAS),
-    ('R1', 'obras/frei-luis/index.html', AMBAS, 'h2#ouvir', 'h3', OBRAS),
-    ('R1', 'obras/frei-luis/index.html', AMBAS, 'h2#ver', 'h3', OBRAS),
-    ('R1', 'obras/ines/index.html', AMBAS, 'h2#ver', 'h3', OBRAS),
-    ('R1', 'obras/lirica-camoes/index.html', AMBAS, 'h2#ouvir', 'h3', OBRAS),
-    ('R1', 'obras/lusiadas/index.html', AMBAS, 'h2#ouvir', 'h3', OBRAS),
-    ('R1', 'obras/maias/index.html', AMBAS, 'h2#ouvir', 'h3', OBRAS),
-    ('R1', 'obras/memorial/index.html', AMBAS, 'h2#ouvir', 'h3', OBRAS),
-    ('R1', 'obras/pessoa/index.html', AMBAS, 'h2#ouvir', 'h3', OBRAS),
-    ('R1', 'obras/poesia-m8/index.html', AMBAS, 'h2#ouvir', 'h3', OBRAS),
-    ('R1', 'obras/sermao/index.html', AMBAS, 'h2#ouvir', 'h3', OBRAS),
+    ('R1', 'obras/amor-perdicao/index.html', UMA, 'h2#ouvir', 'h3', OBRAS),
+    ('R1', 'obras/cantigas/index.html', UMA, 'h2#ouvir', 'h3', OBRAS),
+    ('R1', 'obras/cesario/index.html', UMA, 'h2#ouvir', 'h3', OBRAS),
+    ('R1', 'obras/frei-luis/index.html', UMA, 'h2#ouvir', 'h3', OBRAS),
+    ('R1', 'obras/frei-luis/index.html', UMA, 'h2#ver', 'h3', OBRAS),
+    ('R1', 'obras/ines/index.html', UMA, 'h2#ver', 'h3', OBRAS),
+    ('R1', 'obras/lirica-camoes/index.html', UMA, 'h2#ouvir', 'h3', OBRAS),
+    ('R1', 'obras/lusiadas/index.html', UMA, 'h2#ouvir', 'h3', OBRAS),
+    ('R1', 'obras/maias/index.html', UMA, 'h2#ouvir', 'h3', OBRAS),
+    ('R1', 'obras/memorial/index.html', UMA, 'h2#ouvir', 'h3', OBRAS),
+    ('R1', 'obras/pessoa/index.html', UMA, 'h2#ouvir', 'h3', OBRAS),
+    ('R1', 'obras/poesia-m8/index.html', UMA, 'h2#ouvir', 'h3', OBRAS),
+    ('R1', 'obras/sermao/index.html', UMA, 'h2#ouvir', 'h3', OBRAS),
     # a palavra de marca de água «escolha» é decorativa, mas sem aria-hidden="true" conta como antetítulo
-    ('R2', 'm2/gram-subordinadas/index.html', AMBAS, 'span.agua', 'h1', AGUA),
+    ('R2', 'm2/gram-subordinadas/index.html', UMA, 'span.agua', 'h1', AGUA),
     # entrada do exame
-    ('R1', 'exame/index.html', AMBAS, 'h2', 'h3', EXAME_147),
-    ('R2', 'exame/index.html', AMBAS, 'p.eyebrow', 'h2#provas-porta-t', EXAME_147),
-    ('R3', 'exame/index.html', AMBAS, 'p.eyebrow', '', EXAME_147),
+    ('R1', 'exame/index.html', (4, 4), 'h2', 'h3', EXAME_147),
+    ('R2', 'exame/index.html', UMA, 'p.eyebrow', 'h2#provas-porta-t', EXAME_147),
+    ('R3', 'exame/index.html', (2, 2), 'p.eyebrow', '', EXAME_147),
 )
 
-# Copiado letra a letra de medir-hierarquia.js (01/11/2026, decisão 61): a mesma função mede no relatório e aqui.
+# Copiada letra a letra de medir-hierarquia.js (01/11/2026, decisão 61): a mesma função mede no relatório e aqui.
 MEASURE = r'''()=>{
   const vis=e=>{const r=e.getBoundingClientRect();if(r.width<2||r.height<2)return false;for(let x=e;x&&x!==document.documentElement;x=x.parentElement){if(x.hidden)return false;const c=getComputedStyle(x);if(c.display==='none'||c.visibility==='hidden'||+c.opacity<.05)return false;if(x.matches&&x.matches('.sr-only,.c-sr,.p-sr,.visually-hidden,dialog:not([open]),details:not([open])>:not(summary)'))return false;}return true;};
   const fs=e=>parseFloat(getComputedStyle(e).fontSize);
@@ -118,26 +121,30 @@ def paginas():
 
 
 def casos(medicao):
-    """Chaves (regra, página, largura, primeiro, segundo) de uma medição."""
+    """Chaves (regra, página, largura, primeiro, segundo) de uma medição, com o número de vezes que cada uma aparece.
+
+    01/11/2026: conta-se cada ocorrência (collections.Counter, como no teste do Lente), em vez de um conjunto: numa página
+    que já está na lista, um caso novo com os mesmos seletores também faz falhar."""
     pagina, largura = medicao['page'], medicao['w']
-    chaves = set()
+    chaves = collections.Counter()
     for x in medicao['r1']:
-        chaves.add(('R1', pagina, largura, x['pai'], x['filho']))
+        chaves[('R1', pagina, largura, x['pai'], x['filho'])] += 1
     for x in medicao['r2']:
-        chaves.add(('R2', pagina, largura, x['ante'], x['titulo']))
+        chaves[('R2', pagina, largura, x['ante'], x['titulo'])] += 1
     for x in medicao['r3']:
-        chaves.add(('R3', pagina, largura, x['cls'], ''))
+        chaves[('R3', pagina, largura, x['cls'], '')] += 1
     for x in medicao['r5']:
-        chaves.add(('R5', pagina, largura, x['titulo'], x['texto']))
+        chaves[('R5', pagina, largura, x['titulo'], x['texto'])] += 1
     return chaves
 
 
 def pendentes():
-    chaves = {}
-    for regra, pagina, larguras, primeiro, segundo, motivo in PENDENTES_20261101:
-        for largura in larguras:
-            chaves[(regra, pagina, largura, primeiro, segundo)] = motivo
-    return chaves
+    """Chaves da lista, com o número de vezes listado a cada largura (as que ficam a 0 não entram)."""
+    chaves = collections.Counter()
+    for regra, pagina, vezes, primeiro, segundo, motivo in PENDENTES_20261101:
+        for largura, n in zip(LARGURAS, vezes):
+            chaves[(regra, pagina, largura, primeiro, segundo)] += n
+    return +chaves
 
 
 def descrever(medicao, chave):
@@ -221,25 +228,33 @@ def main():
         Path(sys.argv[sys.argv.index('--json') + 1]).write_text(json.dumps(medicoes, ensure_ascii=False), 'utf-8')
 
     lista_pendente = pendentes()
-    encontrados = {}
+    encontrados, medicao_de = collections.Counter(), {}
     for m in medicoes:
-        for chave in casos(m):
-            encontrados[chave] = m
+        for chave, n in casos(m).items():
+            encontrados[chave] += n
+            medicao_de[chave] = m
     falhas = list(erros)
-    for chave in sorted(set(encontrados) - set(lista_pendente)):
-        regra, pagina, largura, primeiro, segundo = chave
-        falhas.append(f'caso novo {regra} em {pagina} a {largura} px ({primeiro}' + (f' / {segundo}' if segundo else '')
-                      + f'): {descrever(encontrados[chave], chave)}')
-    for chave in sorted(set(lista_pendente) - set(encontrados)):
-        regra, pagina, largura, primeiro, segundo = chave
-        falhas.append(f'{regra} em {pagina} a {largura} px ({primeiro}' + (f' / {segundo}' if segundo else '')
-                      + ') já não existe: tira-o de PENDENTES_20261101 (a lista só diminui)')
+    # 01/11/2026: compara-se o número de vezes a cada largura: mais do que na lista é um caso novo; menos é um caso
+    # corrigido, que se tira da lista (ou se baixa o número) no mesmo pedido.
+    for chave in sorted(encontrados):
+        n, listado = encontrados[chave], lista_pendente.get(chave, 0)
+        if n > listado:
+            regra, pagina, largura, primeiro, segundo = chave
+            falhas.append(f'caso novo {regra} em {pagina} a {largura} px ({primeiro}' + (f' / {segundo}' if segundo else '')
+                          + f'), {n} vez(es) para {listado} na lista: {descrever(medicao_de[chave], chave)}')
+    for chave in sorted(lista_pendente):
+        n, listado = encontrados.get(chave, 0), lista_pendente[chave]
+        if n < listado:
+            regra, pagina, largura, primeiro, segundo = chave
+            falhas.append(f'{regra} em {pagina} a {largura} px ({primeiro}' + (f' / {segundo}' if segundo else '')
+                          + f'): agora {n} vez(es) para {listado} na lista; baixa o número ou tira-o de PENDENTES_20261101 '
+                          '(a lista só diminui)')
     for linha in relatorio_r4(medicoes):
         print(linha)
     if falhas:
         print('\n'.join(falhas))
         sys.exit(1)
-    print(f'hierarquia dos títulos: {len(lista)} páginas a {LARGURAS[0]} e {LARGURAS[1]} px ({len(medicoes)} medições), '
+    print(f'Hierarquia dos títulos: {len(lista)} páginas a {LARGURAS[0]} e a {LARGURAS[1]} px ({len(medicoes)} medições); '
           f'R1, R2, R3 e R5 sem casos novos; {len(lista_pendente)} casos por corrigir, todos ainda presentes')
 
 
