@@ -1,7 +1,11 @@
 .atlas-entradas{display:flex;flex-wrap:wrap;gap:8px 24px;font:700 1rem/1.4 var(--sans);margin:20px 0}
 .atlas-entradas a{display:inline-flex;align-items:center;min-height:44px;color:var(--tinta);text-underline-offset:5px}
 .atlas-investigar{margin:0 0 40px;border-top:2px solid var(--tinta);padding-top:20px}
-.atlas-investigar h2{font:400 clamp(2rem,5vw,3.2rem)/1.05 var(--cartaz);margin:0 0 12px}
+/* 01/11/2026, decisão 61 (hierarquia dos títulos): o h2 «Obras em conversa» tinha 51,2 px a 1366 px, acima do h1 «Atlas
+   Lusófono» (36,8 px); passa a 2 rem (32 px), o título de secção do «Cartaz», como «O caminho» nos mapas, em todas as larguras. Os dois antetítulos da página
+   (p.portal-kicker) ficam iguais, a 13 px: o da lista de pessoas herdava 16 px de .atlas-directory>p. */
+.atlas-investigar h2{font:400 2rem/1.05 var(--cartaz);margin:0 0 12px}
+.atlas .portal-kicker{font:700 .8125rem/1.4 Arial,Helvetica,sans-serif;letter-spacing:.1em;text-transform:uppercase}
 .atlas-investigacoes{display:grid;gap:12px;margin:20px 0 0}
 .atlas-cartaz{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:12px 20px;text-align:left;padding:20px;background:var(--papel);color:var(--tinta);border:1px solid var(--tinta);border-left:5px solid var(--vermelho);cursor:pointer;font:1rem/1.5 var(--serif)}
 .atlas-cartaz>*{grid-column:1/-1}.atlas-cartaz strong{font:400 clamp(1.8rem,5vw,2.6rem)/1.05 var(--cartaz);max-width:22ch}
