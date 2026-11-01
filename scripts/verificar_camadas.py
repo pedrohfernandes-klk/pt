@@ -6,6 +6,8 @@ import sys
 
 ROOT=Path(__file__).resolve().parents[1]
 LAYERS=[
+ ('cartaz_indices_20261101','cartaz-indices-edits-20261101'),
+ ('conteudos_lote1_20261101','conteudos-lote1-edits-20261101'),
  ('licoes_m16_20261101','licoes-m16-edits-20261101'),
  ('licoes_m89_20261101','licoes-m89-edits-20261101'),
  ('tarefas_m89_20261101','tarefas-m89-edits-20261101'),
@@ -24,6 +26,14 @@ LAYERS=[
 def main():
     failures=[]
     for i,(layer,manifest) in enumerate(LAYERS):
+        # 01/11/2026: o #149 nasceu em paralelo; o contrato confere ambos os hashes
+        # originais depois de desfazer e reaplicar as camadas integradas por merge.
+        if layer=='conteudos_lote1_20261101':
+            result=subprocess.run([sys.executable,'-m','unittest','discover','-s','tests',
+                                   '-p','test_conteudos_lote1.py','-v'],cwd=ROOT)
+            print(layer, 'PASS' if result.returncode==0 else 'FAIL', flush=True)
+            if result.returncode:failures.append(layer)
+            continue
         command=[sys.executable,'scripts/aplicar_trocas.py','scripts/'+layer+'.json',
                  '--manifesto','tests/fixtures/'+manifest+'.json','--verificar']
         for _,newer in LAYERS[:i]:
