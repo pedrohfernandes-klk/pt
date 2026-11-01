@@ -33,6 +33,8 @@ for(const n of [1,2,3,4,5,6,7,8,9])for(const width of [320,390,1024,1366])for(co
   if(out&&state==='none'&&mode==='normal'&&[390,1366].includes(width))await p.screenshot({path:path.join(out,`m${n}-${width}-${theme}-${variant}.png`),fullPage:true});
   if(variant==='after'){
    assert(pair.after.next.height>=48,'ação de 48 px');assert(pair.after.next.visible,'ação visível');assert.equal(await p.locator('.cz-next a').count(),1,'ação única');
+   // 01/11/2026: conserva também o limite UX-06 da primeira ação no telemóvel.
+   if(width===320&&mode==='normal'&&state==='none')assert(pair.after.next.y<600,'primeira ação antes de 600 px');
    assert.deepEqual(pair.after.groups,config(n).map(()=>31),'topos de grupo iguais');
    assert.equal(pair.after.states.filter(s=>s==='A seguir').length,state==='all'?0:1);
    assert.equal(pair.after.states.filter(s=>s.startsWith('Feita')).length,count);
