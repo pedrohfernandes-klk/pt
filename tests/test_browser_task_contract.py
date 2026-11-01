@@ -1,3 +1,4 @@
+# 01/11/2026: sete lições novas no M8/M9 elevam o inventário a 116.
 """Static CI coverage checks; browser execution stays in the platform workflow."""
 from pathlib import Path
 import ast,re,unittest
@@ -36,7 +37,7 @@ class BrowserTaskCoverage(unittest.TestCase):
    self.assertIn(contract,helper)
  def test_inventory_and_lesson_feedback_coverage_stays_enabled(self):
   source=(ROOT/'tests/browser_m1_and_inventory.py').read_text('utf-8')
-  for original in ('assert len(pages) == 109','for width in (320, 1440)',
+  for original in ('assert len(pages) == 116','for width in (320, 1440)',
                    "saved['lida'] and saved['tentativas'] >= 1",
                    "assert len(text) > 60"):
    self.assertIn(original,source)

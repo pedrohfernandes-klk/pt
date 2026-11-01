@@ -838,7 +838,14 @@ def main():
                 # 31/10/2026: a substituição do percurso antigo é uma camada literal posterior.
                 posterior = ROOT / 'tests/fixtures/tarefas-m356-edits-20261031.json'
                 conferencia = texto
-                # 01/11/2026: o M8/M9 é a camada mais recente.
+                # 01/11/2026: desfaz as novas lições antes das tarefas do #145.
+                licoes = ROOT / 'tests/fixtures/licoes-m89-edits-20261101.json'
+                if licoes.is_file():
+                    for edit in reversed(json.loads(licoes.read_text('utf-8'))['files'].get(rel, {}).get('edits', [])):
+                        if conferencia.count(edit['new']) != edit['occurrences']:
+                            raise ManifestoDesatualizado(f'{rel}: camada das lições não confere')
+                        conferencia = conferencia.replace(edit['new'], edit['old'])
+                # 01/11/2026: o M8/M9 precede as novas lições.
                 recente = ROOT / 'tests/fixtures/tarefas-m89-edits-20261101.json'
                 if recente.is_file():
                     for edit in reversed(json.loads(recente.read_text('utf-8'))['files'].get(rel, {}).get('edits', [])):

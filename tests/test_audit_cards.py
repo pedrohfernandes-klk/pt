@@ -1,3 +1,4 @@
+# 01/11/2026: sete lições novas no M8/M9 elevam o inventário a 116.
 """Inventory coverage and broken-answer regressions, including dedicated engines."""
 import importlib.util
 from pathlib import Path
@@ -14,7 +15,7 @@ class CardAudit(unittest.TestCase):
     def test_current_inventory_and_answers(self):
         result = audit.audit()
         self.assertEqual([], result['errors'])
-        self.assertEqual(109, result['lessons'])
+        self.assertEqual(116, result['lessons'])
         self.assertEqual(5, len(result['external_banks']))
 
     def test_external_banks_have_actual_validated_activities(self):

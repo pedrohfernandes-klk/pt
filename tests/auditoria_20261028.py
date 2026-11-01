@@ -211,7 +211,23 @@ TAREFAS_M89_MANIFEST = ROOT / 'tests/fixtures/tarefas-m89-edits-20261101.json'
 _TAREFAS_M89_FILES = json.loads(TAREFAS_M89_MANIFEST.read_text('utf-8'))['files']
 
 
+# 01/11/2026: as sete lições M8/M9 são a camada mais recente, acima do #145.
+LICOES_M89_MANIFEST = ROOT / 'tests/fixtures/licoes-m89-edits-20261101.json'
+_LICOES_M89_FILES = json.loads(LICOES_M89_MANIFEST.read_text('utf-8'))['files']
+
+
+def undo_licoes_m89(path, text):
+    relative = _relative(path)
+    for edit in reversed(_LICOES_M89_FILES.get(relative, {}).get('edits', [])):
+        if text.count(edit['new']) != edit['occurrences']:
+            raise AssertionError(f"Lições de 01/11 não conferem: {relative}: {edit['location']}")
+        text = text.replace(edit['new'], edit['old'])
+    return text
+
+
 def undo_tarefas_m89(path, text):
+    # 01/11/2026: também os contratos que desfazem só esta camada recebem a base correta.
+    text = undo_licoes_m89(path, text)
     relative = _relative(path)
     for edit in reversed(_TAREFAS_M89_FILES.get(relative, {}).get('edits', [])):
         if text.count(edit['new']) != edit['occurrences']:
