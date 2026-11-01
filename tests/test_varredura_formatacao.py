@@ -37,8 +37,14 @@ class Varredura(unittest.TestCase):
                 for edit in record['edits']:
                     self.assertEqual(current.count(edit['new']), 1)
                 if rel.endswith('.html'):
-                    self.assertEqual(re.search(r'<head>.*?</head>', original, re.S)[0],
-                                     re.search(r'<head>.*?</head>', current, re.S)[0])
+                    # 01/11/2026: apenas os estilos explícitos da revisão podem entrar no cabeçalho.
+                    before=re.search(r'<head>.*?</head>',original,re.S)[0]
+                    after=re.search(r'<head>.*?</head>',current,re.S)[0]
+                    credits='.tabela{display:block;margin-top:4px;font:.8125rem/1.4 Arial,Helvetica,sans-serif;color:var(--suave)}.tabela a{color:inherit}'
+                    verse='.verso .vl{display:block;padding-left:1.4em;text-indent:-1.4em}.verso:has(>b:first-child){padding-left:1.6em}.verso>b:first-child{float:left;width:1.6em;margin-left:-1.6em}'
+                    for css in (credits,verse):
+                        after=after.replace('<style>'+css+'</style>','')
+                    self.assertEqual(before,after)
                     self.assertIn('<html lang="pt-PT"', current)
 
     def test_lugar_familia_e_poema_nao_passam_a_titulos_de_livro(self):
@@ -53,11 +59,31 @@ class Varredura(unittest.TestCase):
     def test_creditos_declaram_as_lacunas_da_fonte(self):
         for slug in ('licao-m7-f01', 'licao-m7-f05', 'mapa-do-modulo-m7'):
             s=(ROOT/f'm7/{slug}/index.html').read_text('utf-8').replace('\\"', '"')
-            self.assertIn('Fotógrafo não identificado.', s)
-            self.assertIn('Instituição depositária do original não indicada.', s)
-            self.assertIn('File:PessoaChapeu.jpg', s)
-            for field in ('Autor', 'Obra', 'Data', 'Instituição', 'Licença'):
-                self.assertIn(f'<th scope="row">{field}</th>', s)
+            # 01/11/2026: crédito visível na peça .tabela, sem controlo de abertura.
+            for field in ('Fotógrafo não identificado;', 'retrato de Fernando Pessoa com chapéu;',
+                          'cerca de 1914 (data incerta);', 'original sem instituição indicada;',
+                          'domínio público', 'File:PessoaChapeu.jpg'):
+                self.assertIn(field,s)
+            self.assertIn('<span class="tabela">',s)
+            self.assertNotIn('credito-imagem',s)
+            self.assertIn('alt="Fernando Pessoa de chapéu e óculos, cerca de 1914"',s)
+        mapa=(ROOT/'m7/mapa-do-modulo-m7/index.html').read_text('utf-8')
+        self.assertIn('licao-m7-f01/">Lição M7-F01</a><span class="tabela">',mapa)
+
+    # 01/11/2026: o motor de palavras formata cada peça isoladamente.
+    def test_marcadores_de_italico_fecham_em_cada_palavra(self):
+        import sys
+        sys.path.insert(0,str(ROOT/'scripts'))
+        from audit_cards import lesson_cards
+        checked=0
+        for path in ROOT.glob('m*/licao-*/index.html'):
+            for card in lesson_cards(path):
+                if card['t'] not in ('sublinhar','riscar'):continue
+                for token in card['frase'].split():
+                    self.assertEqual(token.count('_')%2,0,(str(path),token))
+                checked+=1
+        self.assertGreater(checked,0)
+
 
 
 if __name__ == '__main__':

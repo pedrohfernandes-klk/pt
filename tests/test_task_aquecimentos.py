@@ -16,8 +16,7 @@ os diapositivos ligados não trazem o «Dia Pessoa»; o guia diz o mesmo que as 
 nomes de ficheiro do portefólio).
 """
 from html.parser import HTMLParser
-# 01/11/2026: comparar o gerador com o predecessor da camada literal, em LF também no Windows.
-from auditoria_20261028 import undo_varredura
+# 01/11/2026: compara diretamente o gerador e a fonte com a página publicada.
 from pathlib import Path
 import importlib.util
 import json
@@ -74,6 +73,11 @@ class Lista(HTMLParser):
 
 
 class Aquecimentos(unittest.TestCase):
+    # 01/11/2026: read_text não pode esconder CRLF na página publicada.
+    def test_paginas_publicadas_usam_lf(self):
+        for page in (ROOT / 'tarefas').rglob('*.html'):
+            self.assertNotIn(b'\r', page.read_bytes(), str(page))
+
     def test_dados_publicos_e_gerador_idempotente(self):
         self.assertEqual(sorted(p.stem for p in DADOS.glob('*.json')), SLUGS)
         for slug in SLUGS:
@@ -89,17 +93,15 @@ class Aquecimentos(unittest.TestCase):
             for slug in SLUGS:
                 with self.subTest(aquecimento=slug):
                     self.assertEqual((Path(tmp) / 'tarefas' / slug / 'aquecimento' / 'index.html').read_text('utf-8'),
-                                     undo_varredura(f'tarefas/{slug}/aquecimento/index.html', pagina(slug)))
+                                     pagina(slug))
 
     def test_baralho_validado_e_lido_pelo_auditor(self):
         for slug in SLUGS:
             d, s = dados(slug), pagina(slug)
             cartoes = lesson_cards(ROOT / 'tarefas' / slug / 'aquecimento' / 'index.html')
             with self.subTest(aquecimento=slug):
-                # 01/11/2026: valida o baralho publicado e confere a origem antes das trocas editoriais.
-                predecessor = undo_varredura(f'tarefas/{slug}/aquecimento/index.html', s)
-                inicio = re.search(r'CARTOES\s*=\s*', predecessor).end()
-                self.assertEqual(json.JSONDecoder().raw_decode(predecessor[inicio:])[0], d['cartoes'])
+                # 01/11/2026: a fonte JSON é igual ao baralho publicado, sem desfazer a revisão.
+                self.assertEqual(cartoes, d['cartoes'])
                 self.assertEqual(validate_cards(cartoes), [])
                 self.assertTrue(10 <= len(cartoes) <= 14, len(cartoes))
                 fazer = [c for c in cartoes if c['t'] != 'ler']

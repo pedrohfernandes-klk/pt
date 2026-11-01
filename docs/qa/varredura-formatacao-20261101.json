@@ -1007,7 +1007,7 @@
       "id": "V012",
       "depois": [],
       "estado": "corrigido",
-      "resultado": "nem, e não; mais: mas; Duas orações estão coordenadas quando se ligam sem que nenhuma esteja dentro da outra."
+      "resultado": "nem: e não; mais: mas. Duas orações estão coordenadas quando se ligam sem que nenhuma esteja dentro da outra."
     },
     {
       "file": "m1/gram-fonologia/index.html",
@@ -1739,7 +1739,7 @@
       "id": "V078",
       "depois": [],
       "estado": "corrigido",
-      "resultado": "eda — alegre · siso — juízo · bárbara — estrangeira, «selvagem» (duplo sentido do nome)"
+      "resultado": "eda: alegre; siso: juízo; bárbara: estrangeira, «selvagem» (duplo sentido do nome)"
     },
     {
       "file": "m3/camoes-barbara/index.html",
@@ -3969,7 +3969,7 @@
       "id": "V253",
       "depois": [],
       "estado": "corrigido",
-      "resultado": "a começar pelo título *O Guardador de Rebanhos*."
+      "resultado": "a começar pelo título *O* *Guardador* *de* *Rebanhos*."
     },
     {
       "file": "m7/mensagem-mostrengo/index.html",
@@ -4479,7 +4479,7 @@
       "id": "V295",
       "depois": [],
       "estado": "corrigido",
-      "resultado": "Quem és quando escreves, e quem fica de fora do que contas?"
+      "resultado": "Quem és quando escreves e quem fica de fora do que contas?"
     },
     {
       "file": "3/todos/index.html",
@@ -5207,5 +5207,6 @@
       "estado": "corrigido",
       "resultado": "*Sermão de Santo António aos Peixes*, de padre António VieiraRTP Ensina (Grandes Livros, 2009), 48 min. Documentário sobre o sermão pregado no Maranhão a 13 de junho de 1654."
     }
-  ]
+  ],
+  "revisao": "01/11/2026: revisão da cabeça ba36cf2c; relatório e manifesto atualizados."
 }

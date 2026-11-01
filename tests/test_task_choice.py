@@ -64,6 +64,11 @@ class Page(HTMLParser):
 
 
 class ChoiceTasks(unittest.TestCase):
+    # 01/11/2026: read_text não pode esconder CRLF na página publicada.
+    def test_paginas_publicadas_usam_lf(self):
+        for page in (ROOT / 'tarefas').rglob('*.html'):
+            self.assertNotIn(b'\r', page.read_bytes(), str(page))
+
     def test_warmup_core_and_two_themes(self):
         for slug in CHOICE:
             source = (ROOT / 'tarefas' / slug / 'index.html').read_text('utf-8'); p = Page(source)

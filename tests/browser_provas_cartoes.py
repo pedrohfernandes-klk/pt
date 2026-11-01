@@ -369,7 +369,10 @@ def main():
     # 01/11/2026: servir os mesmos ficheiros em /pt sem privilégios de symlink no Windows.
     class MountedQuiet(Quiet):
         def translate_path(self, path):
-            return super().translate_path(path.removeprefix('/pt'))
+            # 01/11/2026: mantém 404 fora de /pt, sem ligação simbólica no Windows.
+            if path != '/pt' and not path.startswith('/pt/') and not path.startswith('/pt?'):
+                return str(ROOT / 'fora_de_pt')
+            return super().translate_path(path[3:] or '/')
     server = ThreadingHTTPServer(('127.0.0.1', 0), partial(MountedQuiet, directory=str(ROOT)))
     threading.Thread(target=server.serve_forever, daemon=True).start()
     host = f'http://127.0.0.1:{server.server_port}/pt'

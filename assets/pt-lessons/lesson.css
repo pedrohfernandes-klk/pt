@@ -321,3 +321,6 @@ ol.passos .n{font-size:2rem}
  .jogo .ler .paralelo>.lado+.lado,.jogo .ler .paralelo>.onda+.lado{border-top:1px solid var(--tinta);padding-top:16px}
  .jogo .ler .paralelo>.onda{display:none}
 }
+
+/* 01/11/2026: continuação visual do verso, sem confundir a quebra automática. */
+.verso .vl{display:block;padding-left:1.4em;text-indent:-1.4em}.verso:has(>b:first-child){padding-left:1.6em}.verso>b:first-child{float:left;width:1.6em;margin-left:-1.6em}

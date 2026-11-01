@@ -86,7 +86,7 @@
       "t": "ler",
       "rot": "Abre",
       "titulo": "Quem fala, o que mostra, como se ouve",
-      "html": "<p>Dez minutos com consulta, sem nota. Treinas prova e voz, oração relativa, o que uma fala anuncia, contraste cómico, pausa e adaptação. Usas uma fala de Inês à Mãe e pequenos casos criados para o treino, não os retratos dos pretendentes nem anúncios prontos. As falas criadas têm aspas curvas; os textos de Gil Vicente são identificados.</p>"
+      "html": "<p>Dez minutos com consulta, sem nota. Treinas prova e voz, oração relativa, o que uma fala anuncia, contraste cómico, pausa e adaptação. Usas uma fala de Inês à Mãe e pequenos casos criados para o treino, não os retratos dos pretendentes nem anúncios prontos. As falas criadas são identificadas como tal; os textos de Gil Vicente são identificados.</p>"
     },
     {
       "t": "emparelhar",
@@ -134,9 +134,9 @@
     },
     {
       "t": "completar",
-      "p": "Frase criada: “O livro que está na mesa pertence à biblioteca.” Classifica a oração iniciada por _que_.",
-      "p2": "Na frase criada “O livro que está na mesa pertence à biblioteca”, como se classifica a oração “que está na mesa”?",
-      "frase": "A oração “que está na mesa” é [1].",
+      "p": "Frase criada: _O livro que está na mesa pertence à biblioteca._ Classifica a oração iniciada por _que_.",
+      "p2": "Na frase criada _O livro que está na mesa pertence à biblioteca_, como se classifica a oração _que está na mesa_?",
+      "frase": "A oração _que está na mesa_ é [1].",
       "lacunas": [
         {
           "o": [
@@ -153,8 +153,8 @@
     },
     {
       "t": "escolha",
-      "p": "Cena inventada: a Sara diz que vai subir a serra de sandálias. O guia diz, à parte: “Pés sem botas, serra sem fim.” O que anuncia o comentário?",
-      "p2": "Numa cena inventada, a Sara quer subir a serra de sandálias e o guia diz só para o público: “Pés sem botas, serra sem fim.” Que leitura respeita o que o comentário anuncia?",
+      "p": "Cena inventada: a Sara diz que vai subir a serra de sandálias. O guia diz, à parte: «Pés sem botas, serra sem fim.» O que anuncia o comentário?",
+      "p2": "Numa cena inventada, a Sara quer subir a serra de sandálias e o guia diz só para o público: «Pés sem botas, serra sem fim.» Que leitura respeita o que o comentário anuncia?",
       "o": [
         "A subida pode vir a custar muito à Sara.",
         "A Sara já desistiu a meio daquela subida.",
@@ -189,19 +189,19 @@
       "p2": "Contraste, coerência, insulto ou pista para o futuro? Observa o que é dito e feito em cada caso.",
       "pares": [
         [
-          "Diz “Sou pontual!” e chega quando a sessão acabou.",
+          "Diz «Sou pontual!» e chega quando a sessão acabou.",
           "Contraste entre elogio e ação"
         ],
         [
-          "Diz “Trago o guião” e entrega-o logo à colega.",
+          "Diz «Trago o guião» e entrega-o logo à colega.",
           "Coerência entre fala e ação"
         ],
         [
-          "Chama “inútil” a alguém, sem apontar nada do que essa pessoa fez.",
+          "Chama «inútil» a alguém, sem apontar nada do que essa pessoa fez.",
           "Insulto sem prova do comportamento"
         ],
         [
-          "Antes do ensaio, admite “Costumo faltar sem avisar.”",
+          "Antes do ensaio, admite «Costumo faltar sem avisar.»",
           "Pista para uma dificuldade futura"
         ]
       ],
@@ -211,8 +211,8 @@
     },
     {
       "t": "completar",
-      "p": "Frase criada para ensaio: “Já / cheguei.” (com alívio). A barra marca uma pausa. O que indicam os parênteses?",
-      "p2": "Na frase criada “Já / cheguei.” (com alívio), a pausa já está na barra. Que informação acrescentam os parênteses?",
+      "p": "Frase criada para ensaio: _Já / cheguei._ (com alívio). A barra marca uma pausa. O que indicam os parênteses?",
+      "p2": "Na frase criada _Já / cheguei._ (com alívio), a pausa já está na barra. Que informação acrescentam os parênteses?",
       "frase": "A indicação (com alívio) explicita [1].",
       "lacunas": [
         {
@@ -249,7 +249,7 @@
     {
       "t": "rever",
       "p": "Cena inventada. Corrige só a identificação destacada, conferindo a passagem de apoio.",
-      "p2": "Quem diz “Está queimado por baixo”, e para quem? Escolhe a identificação certa da prova.",
+      "p2": "Quem diz «Está queimado por baixo», e para quem? Escolhe a identificação certa da prova.",
       "o": [
         "um aparte do Tiago ao público",
         "uma fala do Tiago dirigida à Rita",
@@ -264,7 +264,7 @@
       ],
       "frase": "Para mostrar o defeito do bolo, cito uma fala da Rita.",
       "trecho": "uma fala da Rita",
-      "apoio": "Cena inventada: a Rita gaba o bolo que trouxe; o Tiago diz, à parte, para o público: “Está queimado por baixo.”",
+      "apoio": "Cena inventada: a Rita gaba o bolo que trouxe; o Tiago diz, à parte, para o público: «Está queimado por baixo.»",
       "g": 9
     },
     {

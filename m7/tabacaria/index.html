@@ -147,11 +147,11 @@ figure img[tabindex]:focus-visible{outline:3px solid var(--tinta,#000);outline-o
   <div id="resumo" class="resumo" hidden>
     <h2>A minha leitura</h2>
     <dl>
-      <dt>Da janela, vejo</dt><dd id="s1">: </dd>
-      <dt>Hoje estou mais do lado</dt><dd id="s2">: </dd>
-      <dt>O Esteves, para mim, é</dt><dd id="s3">: </dd>
-      <dt>A minha ligação</dt><dd id="s4">: </dd>
-      <dt>Esta semana</dt><dd id="s5">: </dd>
+      <dt>Da janela, vejo</dt><dd id="s1"></dd>
+      <dt>Hoje estou mais do lado</dt><dd id="s2"></dd>
+      <dt>O Esteves, para mim, é</dt><dd id="s3"></dd>
+      <dt>A minha ligação</dt><dd id="s4"></dd>
+      <dt>Esta semana</dt><dd id="s5"></dd>
     </dl>
     <div class="nav"><button class="btn sec" id="copiar" type="button">Copiar</button></div>
     <p class="fonte" style="margin-top:10px">Se o docente pedir, fotografa este cartão ou cola o texto na tarefa do Teams.</p>
@@ -221,11 +221,11 @@ figure img[tabindex]:focus-visible{outline:3px solid var(--tinta,#000);outline-o
   }
   function lado(){return est.lado<40?"da rua e da Tabacaria":est.lado>60?"do sonho, por dentro":"dividido, como o poeta"}
   function preencher(){
-    $("#s1").textContent=est.p1.map(function(v){return {gente:"gente a passar",misterio:"um mistério",si:"a mim próprio",nada:"nada de especial"}[v]}).join(", ")||"—";
+    $("#s1").textContent=est.p1.map(function(v){return {gente:"gente a passar",misterio:"um mistério",si:"a mim próprio",nada:"nada de especial"}[v]}).join(", ")||"(sem resposta)";
     $("#s2").textContent=lado();
-    $("#s3").textContent={comum:"um homem comum, sem metafísica",contrario:"o contrário do poeta",amigo:"um amigo (mas o texto não o diz)",dono:"o Dono da Tabacaria (mas o texto distingue-os)"}[est.p3]||"—";
-    $("#s4").textContent=est.p4?NOMES4[est.p4]+": "+est.t4:"—";
-    $("#s5").textContent=est.t5||"—";
+    $("#s3").textContent={comum:"um homem comum, sem metafísica",contrario:"o contrário do poeta",amigo:"um amigo (mas o texto não o diz)",dono:"o Dono da Tabacaria (mas o texto distingue-os)"}[est.p3]||"(sem resposta)";
+    $("#s4").textContent=est.p4?NOMES4[est.p4]+": "+est.t4:"(sem resposta)";
+    $("#s5").textContent=est.t5||"(sem resposta)";
   }
   $("#seguir").onclick=function(){
     if(est.passo<5){est.passo++;guardar();atualizar();window.scrollTo(0,0)}

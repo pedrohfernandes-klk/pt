@@ -34,6 +34,7 @@ Uso: python3 scripts/aquecimentos.py [--saida PASTA] [--dados PASTA] [slug ...]
 Idempotente: só reescreve um ficheiro quando o conteúdo muda. --saida escreve noutra raiz, para os testes compararem
 sem mexer na árvore.
 """
+from aquecimentos_falas_criadas import fala_criada
 from html import escape
 from pathlib import Path
 import argparse
@@ -135,6 +136,9 @@ def validar(raiz, d):
         if re.search(r'\w ·|· \w', visivel):
             erros.append(f'cartão {n}: «·» dentro de uma frase')
         for citacao in re.findall(r'«([^»]{12,})»', visivel):
+            # 01/11/2026: falas de casos inventados são conferidas numa lista literal fechada.
+            if fala_criada(d['slug'], n, c, citacao):
+                continue
             for verso in [v.strip() for v in citacao.split(' / ')]:
                 if verso not in fontes:
                     erros.append(f'cartão {n}: citação que não está letra a letra nas lições indicadas: «{verso}»')
@@ -242,7 +246,7 @@ def main(argv=None):
         html = pagina(raiz, d)
         alvo.parent.mkdir(parents=True, exist_ok=True)
         if not alvo.exists() or alvo.read_text('utf-8') != html:
-            alvo.write_text(html, 'utf-8')
+            alvo.write_text(html, 'utf-8', newline='\n')
         feitos.append(d['slug'])
     for slug, erros in falhas.items():
         print(f'NÃO GERADO {slug}:', *erros, sep='\n  ', file=sys.stderr)

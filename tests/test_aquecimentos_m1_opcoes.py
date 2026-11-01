@@ -7,6 +7,7 @@ import unittest
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'scripts'))
 from auditar_aquecimentos_m1 import auditar
+from aquecimentos_falas_criadas import fala_criada
 from aquecimentos import plano, texto_visivel
 import re
 
@@ -24,9 +25,11 @@ class AquecimentosM1Opcoes(unittest.TestCase):
                 self.assertEqual(d['momento'],'No início da aula de tarefa')
                 self.assertEqual(auditar(d)['erros'],[])
                 fontes=' '.join(plano(ROOT,p) for p in d['licoes_das_citacoes'])
-                for c in d['cartoes']:
+                for numero,c in enumerate(d['cartoes'],1):
                     for citacao in re.findall('«([^»]+)»',texto_visivel(c)):
-                        self.assertIn(citacao,fontes)
+                        # 01/11/2026: a fala criada mantém conferência literal própria.
+                        if not fala_criada(d['slug'],numero,c,citacao):
+                            self.assertIn(citacao,fontes)
 
     def test_medicao_recusa_vantagem_e_distribuicao_denunciadora(self):
         d={'slug':'controlo','cartoes':[{'t':'escolha','o':['abc','abc','abcd'],'c':2}]}
