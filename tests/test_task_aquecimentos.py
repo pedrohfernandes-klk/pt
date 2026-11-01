@@ -1,4 +1,4 @@
-# 01/11/2026: sete lições novas no M8/M9 elevam o inventário a 116.
+# 01/11/2026: nove lições no M1/M2/M3/M5/M6 elevam o inventário a 125.
 """Aquecimentos em cartões antes das aulas de tarefa (29/10/2026, decisões do docente; piloto no M7).
 
 Contrato: cada tarefa do M7 tem uma página própria de cartões, tarefas/<slug>/aquecimento/, gerada por
@@ -6,7 +6,7 @@ scripts/aquecimentos.py a partir de docs/pedagogia/aquecimentos/<slug>.json. A p
 «aquecimento-<slug>» (não conta como lição, não mexe no «Continuar», não grava em projeção), o baralho passa no validador
 do sítio e nas regras de escrita, as citações estão letra a letra nas lições indicadas e nenhum cartão de fazer usa as
 passagens reservadas à tarefa (o aquecimento não faz a tarefa por ti). A tarefa liga ao aquecimento no cartão
-«Enunciado» e o percurso tem a linha «A» logo antes da linha «T». Fica fora de audit_cards.audit() (as 116 lições).
+«Enunciado» e o percurso tem a linha «A» logo antes da linha «T». Fica fora de audit_cards.audit() (as 125 lições).
 
 29/10/2026: a unidade 3 do M7 deixa o «Dia Pessoa» (tarefa nova «Louco, sim», F10 reescrita como «Argumentar com
 versos», página da visita como caderno de campo facultativo) e a U2 faz as apresentações em pequenos grupos.
@@ -115,8 +115,8 @@ class Aquecimentos(unittest.TestCase):
                         self.assertTrue(c.get('fe'))
                 # rever-frase.js só quando há um cartão «rever» (o tipo não vive em jogo.js)
                 self.assertEqual('rever-frase.js' in s, any(c['t'] == 'rever' for c in cartoes))
-        # O auditor das 116 lições não conta estas páginas.
-        self.assertEqual(len(list(ROOT.glob('m[1-9]/licao-*/index.html'))), 116)
+        # O auditor das 125 lições não conta estas páginas.
+        self.assertEqual(len(list(ROOT.glob('m[1-9]/licao-*/index.html'))), 125)
 
     def test_o_validador_recusa_o_que_deve(self):
         d = dados('m7-u3')

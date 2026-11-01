@@ -215,3 +215,6 @@ lesson('m8-f15', 'A autora não é o poema', 1, 'm8-f14',
  vf('Duas interpretações podem usar o mesmo dado biográfico e continuar a precisar de provas diferentes no poema.',True,'O contexto não determina uma única leitura. Cada interpretação tem de demonstrar as relações textuais que propõe, mesmo quando parte da mesma informação.'),
  read('Para levar', '<p class="levar">O contexto abre perguntas; o texto sustenta respostas.</p><p>Formula oralmente uma aproximação entre a reportagem e um poema lido. Inclui um dado, um indício e um limite. Não atribuas à reportagem uma explicação da origem de «A verdade histórica».</p>', 'Para levar'),
 ])
+
+# 01/11/2026: o pedido B acrescenta nove bancos aos sete do pedido A.
+import licoes_m1_m6_20261101

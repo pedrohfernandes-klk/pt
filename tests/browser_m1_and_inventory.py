@@ -1,4 +1,4 @@
-# 01/11/2026: sete lições novas no M8/M9 elevam o inventário a 116.
+# 01/11/2026: nove lições no M1/M2/M3/M5/M6 elevam o inventário a 125.
 """Inventory smoke checks plus full M1/M2 paths and deterministic roles QA.
 
 Fresh browser contexts never access a pupil's saved progress. Full paths use
@@ -40,7 +40,7 @@ def main():
         with sync_playwright() as pw:
             browser = pw.chromium.launch(headless=True)
             pages = sorted(ROOT.glob('m[1-9]/licao-*/index.html'))
-            assert len(pages) == 116
+            assert len(pages) == 125
             for path in ([] if args.focused_only else pages):
                 for width in (320, 1440):
                     ctx, page = new_page(browser, width)
