@@ -58,6 +58,8 @@ body.pt-module-layout .cz-index a{min-height:44px;min-width:44px}
 body.pt-module-layout .cz-index details:not(.cz-fold)>summary{display:flex;align-items:center;min-height:44px;padding:8px 0;font:700 16px/1.5 Arial,sans-serif}
 body.pt-module-layout .cz-index :is(.module-links-support,.unit-complements) a{display:flex;align-items:center;min-height:44px;padding:8px 16px;color:var(--cz-ink);font:16px/1.5 Arial,sans-serif;text-decoration:none;background:var(--cz-paper);overflow-wrap:anywhere}
 body.pt-module-layout .cz-index .mod-sec nav.ligas a{text-decoration:none!important}
+body.pt-module-layout .cz-index .mais{display:flex;flex-wrap:wrap;gap:8px;margin:24px 0;font:16px/1.5 Arial,sans-serif}
+body.pt-module-layout .cz-index .mais a{display:flex;align-items:center;gap:16px;padding:8px 16px;min-height:48px;font:700 16px/1.5 Arial,sans-serif;text-decoration:none;color:var(--cz-ink);background:var(--cz-paper)}
 html:not([data-cz-motion-enabled]) body.pt-module-layout .cz-index *,html:not([data-cz-motion-enabled]) body.pt-module-layout .cz-index *::before,html:not([data-cz-motion-enabled]) body.pt-module-layout .cz-index *::after{animation:none!important;transition:none!important}
 body.pt-module-layout .cz-index :is(.cz-row,.unit-index a,.cz-fold>summary):focus-visible{outline:3px solid var(--cz-ink);outline-offset:3px}
 body.pt-module-layout .cz-index :is(.cz-row,.unit-index a):hover{outline:2px solid var(--cz-ink);outline-offset:-2px}
