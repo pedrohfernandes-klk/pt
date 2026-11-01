@@ -45,6 +45,13 @@ def main():
                 page.goto(host+'/exame/#s08/escrever',wait_until='networkidle')
                 assert page.locator('.writing-task i').filter(has_text='Amor de Perdição').count()==1
                 assert '_Amor de Perdição_' not in page.locator('.writing-task').inner_text()
+                # Os títulos mantêm o itálico quando o docente lança o cartão do painel.
+                for slug,book in [('m3/painel-m3-f10','Os Lusíadas'),('m7/painel-m7-f10','Frei Luís de Sousa'),('m9/painel-m9-f07','Os Maias')]:
+                    page.goto(host+'/'+slug+'/',wait_until='load')
+                    value=page.locator('[data-r-k] option').filter(has_text=book).first.get_attribute('value')
+                    page.locator('[data-r-k]').select_option(value)
+                    page.locator('[data-relampago]').click()
+                    assert page.locator('[data-pedido] i').filter(has_text=book).count()==1,slug
                 # Créditos legíveis e sem alargar o ecrã; a data incerta continua declarada.
                 page.goto(host+'/m7/mapa-do-modulo-m7/',wait_until='load')
                 page.locator('#galeria > summary').click()

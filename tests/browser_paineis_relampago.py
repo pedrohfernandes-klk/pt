@@ -88,12 +88,15 @@ def main():
                 opcoes = painel.locator('[data-r-k] option')
                 assert opcoes.count() == len(P), pasta
                 for i, c in enumerate(P):
-                    assert L[c['k']]['t'] != 'ler' and enunciado(L[c['k']]) == c['p'], (pasta, c['k'])
-                    assert html.unescape(opcoes.nth(i).inner_html()) == c['p'], (pasta, c['k'])
+                    # 01/11/2026: compara o texto integral e confirma separadamente o itálico apresentado.
+                    assert L[c['k']]['t'] != 'ler' and enunciado(L[c['k']]) == enunciado(c), (pasta, c['k'])
+                    assert html.unescape(opcoes.nth(i).inner_html()) == enunciado(c), (pasta, c['k'])
                     painel.locator('[data-r-k]').select_option(str(c['k']))
                     painel.locator('[data-relampago]').click()
                     assert painel.locator('[data-rot]').text_content() == 'Relâmpago, 60 segundos', (pasta, c['k'])
-                    assert painel.locator('[data-pedido]').text_content() == c['p'], (pasta, c['k'])
+                    assert painel.locator('[data-pedido]').text_content() == enunciado(c), (pasta, c['k'])
+                    if '_' in c['p']:
+                        assert painel.locator('[data-pedido] i').count() >= 1, (pasta,c['k'])
                     assert painel.locator('[data-crono]').is_visible(), (pasta, c['k'])
                     material_visivel(painel, c, MAT)
                     painel.keyboard.press('Escape')

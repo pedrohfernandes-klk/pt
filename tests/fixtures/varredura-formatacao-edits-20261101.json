@@ -592,12 +592,18 @@
   },
   "m3/painel-m3-f10/index.html": {
    "base_sha256_lf": "3d65ffb3c06de6440e9cec805faf777ca7aa46ec537579c3340312690e5f3952",
-   "after_sha256_lf": "9a6e0f5f0f41cb255c4fe05200e37eb29bfb971bb8bba17690906ed1f03833bd",
+   "after_sha256_lf": "3a0f56131508deea05bf4add5df9c4263995f2ba284ed84402b8b104473145c5",
    "edits": [
     {
      "location": "Varredura de 01/11/2026, linhas 68 a 70",
      "old": ",{\"k\":20,\"t\":\"vf\",\"p\":\"No ensaio, cada citação de Os Lusíadas leva o canto e a estância, como «X, 145».\"},{\"k\":",
      "new": ",{\"k\":20,\"t\":\"vf\",\"p\":\"No ensaio, cada citação de _Os Lusíadas_ leva o canto e a estância, como «X, 145».\"},{\"k\":",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de 01/11/2026, linhas 86 a 88",
+     "old": "(\"[data-rot]\").textContent=rot;$(\"[data-pedido]\").textContent=t}\nfunction contar(seg,aoFim){clearInterval(crono);",
+     "new": "(\"[data-rot]\").textContent=rot;$(\"[data-pedido]\").innerHTML=esc(t).replace(/(^|[^0-9A-Za-zÀ-ÖØ-öø-ÿ_\\/])_([^_\\n<>]{1,100}?)_(?![0-9A-Za-zÀ-ÖØ-öø-ÿ_])/g,\"$1<i>$2</i>\")}\nfunction contar(seg,aoFim){clearInterval(crono);",
      "occurrences": 1
     }
    ]
@@ -1174,12 +1180,18 @@
   },
   "m7/painel-m7-f10/index.html": {
    "base_sha256_lf": "9d1aaee38f6eae01a02c11cf62b36cbd6d36f4604f4d85ef38170a588e4a5b92",
-   "after_sha256_lf": "84985bfb708f192ea161dce970e018f24a81f847ed786c93fb940910ce8c4744",
+   "after_sha256_lf": "3b1e0e6b78ba2c05df65250348b8068bd796f0782867f5f8fe173cfc764c74a8",
    "edits": [
     {
      "location": "Varredura de 01/11/2026, linhas 68 a 70",
      "old": "a seguir no teu texto?\"},{\"k\":16,\"t\":\"vf\",\"p\":\"Em Frei Luís de Sousa, o regresso de D. João de Portugal faz renascer a",
      "new": "a seguir no teu texto?\"},{\"k\":16,\"t\":\"vf\",\"p\":\"Em _Frei Luís de Sousa_, o regresso de D. João de Portugal faz renascer a",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de 01/11/2026, linhas 86 a 88",
+     "old": "(\"[data-rot]\").textContent=rot;$(\"[data-pedido]\").textContent=t}\nfunction contar(seg,aoFim){clearInterval(crono);",
+     "new": "(\"[data-rot]\").textContent=rot;$(\"[data-pedido]\").innerHTML=esc(t).replace(/(^|[^0-9A-Za-zÀ-ÖØ-öø-ÿ_\\/])_([^_\\n<>]{1,100}?)_(?![0-9A-Za-zÀ-ÖØ-öø-ÿ_])/g,\"$1<i>$2</i>\")}\nfunction contar(seg,aoFim){clearInterval(crono);",
      "occurrences": 1
     }
    ]
@@ -1258,12 +1270,18 @@
   },
   "m9/painel-m9-f07/index.html": {
    "base_sha256_lf": "2edfe663a3d1d4a7568bfcdfd02557ff3fa45ce0b1cf78229f0a72cb01e39117",
-   "after_sha256_lf": "5a45577264529b461a0fb495885c4e635c44a3326a127b378628ca5bb1519ac2",
+   "after_sha256_lf": "cba2ef20483f4a87e770eaa8eb25f207cd9b07943c67ae1a9294a00f9723f778",
    "edits": [
     {
      "location": "Varredura de 01/11/2026, linhas 68 a 70",
      "old": "nte do poder, ao lado do Memorial, estão Vieira e Os Maias.\"},{\"k\":14,\"t\":\"ordenar\",\"p\":\"Como se escreve o c",
      "new": "nte do poder, ao lado do Memorial, estão Vieira e _Os Maias_.\"},{\"k\":14,\"t\":\"ordenar\",\"p\":\"Como se escreve o c",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de 01/11/2026, linhas 86 a 88",
+     "old": "(\"[data-rot]\").textContent=rot;$(\"[data-pedido]\").textContent=t}\nfunction contar(seg,aoFim){clearInterval(crono);",
+     "new": "(\"[data-rot]\").textContent=rot;$(\"[data-pedido]\").innerHTML=esc(t).replace(/(^|[^0-9A-Za-zÀ-ÖØ-öø-ÿ_\\/])_([^_\\n<>]{1,100}?)_(?![0-9A-Za-zÀ-ÖØ-öø-ÿ_])/g,\"$1<i>$2</i>\")}\nfunction contar(seg,aoFim){clearInterval(crono);",
      "occurrences": 1
     }
    ]

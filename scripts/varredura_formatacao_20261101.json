@@ -440,6 +440,14 @@
     "achado": "V106"
   },
   {
+    "ficheiro": "m3/painel-m3-f10/index.html",
+    "local": "Varredura de 01/11/2026, linhas 86 a 88",
+    "antigo": "(\"[data-rot]\").textContent=rot;$(\"[data-pedido]\").textContent=t}\nfunction contar(seg,aoFim){clearInterval(crono);",
+    "novo": "(\"[data-rot]\").textContent=rot;$(\"[data-pedido]\").innerHTML=esc(t).replace(/(^|[^0-9A-Za-zÀ-ÖØ-öø-ÿ_\\/])_([^_\\n<>]{1,100}?)_(?![0-9A-Za-zÀ-ÖØ-öø-ÿ_])/g,\"$1<i>$2</i>\")}\nfunction contar(seg,aoFim){clearInterval(crono);",
+    "ocorrencias": 1,
+    "achado": "V106"
+  },
+  {
     "ficheiro": "m3/questionarios/index.html",
     "local": "Varredura de 01/11/2026, linhas 42 a 44",
     "antigo": "ata-i=\"2\"><span class=\"n\">3</span><span class=\"t\">Os Lusíadas</span><span class=\"estado\" id=\"estado-2\">fechado<",
@@ -848,6 +856,14 @@
     "achado": "V256"
   },
   {
+    "ficheiro": "m7/painel-m7-f10/index.html",
+    "local": "Varredura de 01/11/2026, linhas 86 a 88",
+    "antigo": "(\"[data-rot]\").textContent=rot;$(\"[data-pedido]\").textContent=t}\nfunction contar(seg,aoFim){clearInterval(crono);",
+    "novo": "(\"[data-rot]\").textContent=rot;$(\"[data-pedido]\").innerHTML=esc(t).replace(/(^|[^0-9A-Za-zÀ-ÖØ-öø-ÿ_\\/])_([^_\\n<>]{1,100}?)_(?![0-9A-Za-zÀ-ÖØ-öø-ÿ_])/g,\"$1<i>$2</i>\")}\nfunction contar(seg,aoFim){clearInterval(crono);",
+    "ocorrencias": 1,
+    "achado": "V256"
+  },
+  {
     "ficheiro": "m7/pessoa-almas/index.html",
     "local": "Varredura de 01/11/2026, linhas 345 a 347",
     "antigo": " onde estou.</i></p><p class=\\\"nota\\\"><b>móbil</b> — que se move</p>\",\"links\":[[\"Ler o poema inteiro n",
@@ -900,6 +916,14 @@
     "local": "Varredura de 01/11/2026, linhas 68 a 70",
     "antigo": "nte do poder, ao lado do Memorial, estão Vieira e Os Maias.\"},{\"k\":14,\"t\":\"ordenar\",\"p\":\"Como se escreve o c",
     "novo": "nte do poder, ao lado do Memorial, estão Vieira e _Os Maias_.\"},{\"k\":14,\"t\":\"ordenar\",\"p\":\"Como se escreve o c",
+    "ocorrencias": 1,
+    "achado": "V278"
+  },
+  {
+    "ficheiro": "m9/painel-m9-f07/index.html",
+    "local": "Varredura de 01/11/2026, linhas 86 a 88",
+    "antigo": "(\"[data-rot]\").textContent=rot;$(\"[data-pedido]\").textContent=t}\nfunction contar(seg,aoFim){clearInterval(crono);",
+    "novo": "(\"[data-rot]\").textContent=rot;$(\"[data-pedido]\").innerHTML=esc(t).replace(/(^|[^0-9A-Za-zÀ-ÖØ-öø-ÿ_\\/])_([^_\\n<>]{1,100}?)_(?![0-9A-Za-zÀ-ÖØ-öø-ÿ_])/g,\"$1<i>$2</i>\")}\nfunction contar(seg,aoFim){clearInterval(crono);",
     "ocorrencias": 1,
     "achado": "V278"
   },

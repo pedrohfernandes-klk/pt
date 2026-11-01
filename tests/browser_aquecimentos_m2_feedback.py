@@ -61,7 +61,8 @@ def verificar(browser, host):
                 else:raise AssertionError(t)
                 feedback=page.locator('.casca [data-c-folha]:visible')
                 feedback.wait_for()
-                assert esperado.replace('**','').replace('_','') in feedback.inner_text(),(slug,n,acertar,feedback.inner_text())
+                # 01/11/2026: conserva toda a frase esperada, com as aspas da camada editorial.
+                assert esperado.replace('**','').replace('_','').replace('“','«').replace('”','»') in feedback.inner_text(),(slug,n,acertar,feedback.inner_text())
                 sem_deslizar(page,f'{slug} {n} feedback')
                 feedback.locator('[data-seguinte]').click()
             assert page.locator('#baralho .cartao.fim').count()
