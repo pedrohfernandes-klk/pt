@@ -12,7 +12,7 @@ REVISOES = {
   modelo='A imagem inicial apresenta palavras como matéria que se gasta. A insuficiência atual relaciona essa imagem com o vínculo. A conclusão aplica-se a esta relação, não a toda a comunicação.',
   limite='Contraexemplo à ideia de que tudo no poema perdeu valor: o silêncio recebe um tratamento diferente. Critério: uma conclusão sobre todos os elementos só resiste se explicar também esse contraste.',
   pista='Compara o alcance da primeira formulação criada com o da segunda: a relação concreta passou a regra universal?',
-  prova='Que duas palavras distinguem uma mudança na relação de uma impossibilidade sem história?',
+  prova='Na frase criada, que duas palavras distinguem uma mudança na relação de uma impossibilidade sem história?',
   ordem=['As palavras surgem como matéria que se gasta','A insuficiência atual afeta o vínculo','A abundância passada torna a perda mais intensa','O tratamento do silêncio limita a generalização'],
   ordem_p='Ordena esta reconstrução da leitura, da imagem inicial ao limite da conclusão.',
   escolhas={3:['Perderam força dentro desta relação.','Ficaram repetidas sem alterar o vínculo.','Passaram a designar objetos diferentes.'],
@@ -77,24 +77,24 @@ REVISOES = {
 
 
 # Distratores próximos: cada alternativa conserva o objeto e altera a inferência.
-REVISOES['m8-f14']['prova']='Que palavra distingue uma hipótese sobre o futuro de uma descoberta já comprovada?'
+REVISOES['m8-f14']['prova']='Na frase criada, que palavra distingue uma hipótese sobre o futuro de uma descoberta já comprovada?'
 REVISOES['m8-f15']['prova']='Que palavra distingue uma orientação possível de uma prova que decidiria a leitura?'
 REVISOES['m9-f15']['prova']='Que palavra permite confrontar o modo de ler com a gravidade das sentenças?'
 REVISOES['m9-f14']['escolhas']={
- 3:['Como liga a escala reduzida à grandeza encenada?', 'Como prova a montagem a eficácia do governo?', 'Como confirma a réplica a devoção da pessoa real?'],
+ 3:['Como liga a escala reduzida à grandeza encenada?', 'Como liga a montagem à eficácia do seu governo?', 'Como liga a réplica à devoção da pessoa histórica?'],
  10:['A escala altera os riscos e as condições de trabalho.', 'A escala conserva os riscos e as condições de trabalho.', 'A escala basta para explicar as condições de trabalho.'],
  14:['Reconhecer o contributo das pessoas que fazem a obra.', 'Aumentar o tamanho da peça que recebe os louvores.', 'Transferir os louvores para quem escolheu a miniatura.'],
  17:['Mostrar a autoridade através do uso de um objeto.', 'Apresentar o objeto como símbolo de sentido fixo.', 'Trocar o objeto por uma descrição direta do poder.']}
 REVISOES['m9-f15']['escolhas']={
  3:['Tranquilidade da leitura perante consequências violentas.', 'Tranquilidade dos condenados perante a leitura das penas.', 'Tranquilidade do público como prova de acordo com as penas.'],
  10:['Observar o efeito da cerimónia na vida dos condenados.', 'Deduzir a justiça da cerimónia da sua ordem e solenidade.', 'Deduzir a reação dos condenados do comportamento público.'],
- 14:['Que experiência falta na tranquilidade apresentada?', 'Que acordo se comprova na tranquilidade apresentada?', 'Que inocência se prova na tranquilidade apresentada?'],
+ 14:['Que experiência falta na tranquilidade apresentada?', 'Que acordo geral exprime a tranquilidade apresentada?', 'Que inocência exprime a tranquilidade apresentada?'],
  17:['Criar duas legendas da praça, de posições distintas.', 'Criar duas legendas da praça, mudando só os adjetivos.', 'Criar duas legendas da praça, mantendo a mesma posição.']}
 REVISOES['m8-f16']['escolhas']={
  3:['Da perceção da figura para uma correção interior.', 'Da perceção da figura para uma resposta pronunciada.', 'Da perceção da figura para uma recordação partilhada.'],
  10:['George recusa a expressão atenuada sobre a idade.', 'George recusa a presença da mulher idosa que a observa.', 'George recusa ouvir uma resposta da mulher idosa.'],
  14:['Retirar a informação sobre o pensamento de George.', 'Transformar em fala a informação pensada por George.', 'Atribuir à mulher o pensamento apresentado de George.'],
- 17:['Como se relaciona este encontro com o resto do conto?', 'Como confirma este encontro uma rejeição da velhice?', 'Como comprova este encontro uma hostilidade recíproca?']}
+ 17:['Como se relaciona este encontro com o resto do conto?', 'Como se relaciona este encontro com a rejeição da velhice?', 'Como se relaciona este encontro com a hostilidade mútua?']}
 REVISOES['m8-f14']['escolhas']={
  3:['O incidente doméstico torna-se matéria de escrita.', 'O incidente doméstico impede a vontade de escrever.', 'O incidente doméstico confirma uma memória pública.'],
  10:['Interrogar o prestígio dado aos vestígios.', 'Transferir para a tigela o prestígio antigo.', 'Confirmar o prestígio pela idade do objeto.'],
@@ -102,7 +102,7 @@ REVISOES['m8-f14']['escolhas']={
  17:['Explicar como cada voz transforma um objeto em pergunta.', 'Explicar como o tema comum torna equivalentes as duas vozes.', 'Explicar como o mesmo objeto recebe um sentido já definido.']}
 REVISOES['m8-f15']['escolhas']={
  3:['A reportagem situa a atenção da autora ao mundo.', 'A reportagem identifica a autora com a voz de um poema.', 'A reportagem explica a origem doméstica de cada poema.'],
- 10:['Como se constrói a atenção ao quotidiano neste poema?', 'Como confirma este poema o episódio vivido pela autora?', 'Como reproduz a voz do poema a declaração da autora?'],
+ 10:['Como se constrói a atenção ao quotidiano neste poema?', 'Como reconta este poema o episódio vivido pela autora?', 'Como reproduz a voz do poema a declaração da autora?'],
  14:['Síntese da apresentação publicada pela RTP Ensina.', 'Declaração da autora transcrita na apresentação RTP.', 'Comentário do sujeito poético à apresentação da RTP.'],
  17:['Criar duas vozes distintas para observar o mesmo objeto.', 'Criar duas vozes equivalentes, trocando o nome do objeto.', 'Criar duas vozes biográficas a partir do nome da autora.']}
 

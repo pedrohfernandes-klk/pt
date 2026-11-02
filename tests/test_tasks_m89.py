@@ -31,6 +31,16 @@ class TasksM89(unittest.TestCase):
             blocks, _ = json.JSONDecoder().raw_decode(s.split('BLOCOS=', 1)[1])
             self.assertEqual([x[0] for x in blocks], [10, 5, 60, 15])
             self.assertIn('Extras sem nota', s)
+            # 01/11/2026: a dobra do arquivo mostra um só sinal também no Safari
+            self.assertIn('#arquivo-producoes>summary::-webkit-details-marker{display:none}', s)
+
+    # 01/11/2026: o número de aulas do «Neste módulo» conta os passos da unidade, como no M1 e no M7.
+    def test_neste_modulo_conta_os_passos(self):
+        for m in (8, 9):
+            s = (ROOT / f'm{m}/index.html').read_text('utf-8')
+            U, _ = json.JSONDecoder().raw_decode(s[s.find('U=[') + 2:])
+            aulas = [int(n) for n in re.findall(r'<small>(\d+) aulas de leitura/preparação', s)]
+            self.assertEqual(aulas, [len(u['passos']) for u in U])
 
     def test_pesos_coerentes_e_entregas_das_duas_unidades(self):
         for m in (8, 9):

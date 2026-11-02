@@ -122,6 +122,15 @@ class NewLessons(unittest.TestCase):
                         self.assertGreaterEqual(len(feedback.split()),15)
                         if i!=card['c']:
                             self.assertRegex(feedback,r'Relê|Repara|Regressa|Confronta|Retoma|Volta|Confere|Compara|Mantém')
+                elif card['t']!='ler':
+                    # 02/11/2026: repõe a exigência de releitura em todos os cartões de fazer que não são escolha, agora no
+                    # retorno de erro (fe), que o motor mostra só quando o aluno erra: a verificação do achado 17 da
+                    # confirmação, à letra, mais as palavras do teste original («Relê» ou «Regressa») e um retorno com
+                    # pelo menos 15 palavras. As duas expressões juntas são mais estritas do que cada uma sozinha.
+                    self.assertIsInstance(card.get('fe'),str,(item['id'],card['g']))
+                    self.assertRegex(card.get('fe',''), r'Relê|Repara|Regressa|Confronta|Retoma|Volta|Confere|Compara|Mantém')
+                    self.assertRegex(card['fe'],r'Relê|relê|Regressa',(item['id'],card['g']))
+                    self.assertGreaterEqual(len(card['fe'].split()),15,(item['id'],card['g']))
             values=[c['v'] for c in item['cards'] if c['t']=='vf']
             self.assertIn(True,values)
             self.assertIn(False,values)

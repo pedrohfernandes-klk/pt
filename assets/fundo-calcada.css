@@ -1,0 +1,38 @@
+/* 02/11/2026: decisão 125 (docente). Fundo animado a traço «A calçada e o mar» (protótipo 05) por trás do nome do Português.
+   Desenho nosso. Parado é o estado de partida: sem JavaScript, com movimento reduzido e na projeção fica o padrão completo,
+   sem a entrada; na impressão, o desenho não sai. Pedras a preto e branco, sem cor de acento. */
+.raiz .p-cab{--cf-alt:440px;position:relative;overflow:hidden;min-height:var(--cf-alt);isolation:isolate;align-content:start}
+@media(min-width:640px){.raiz .p-cab{--cf-alt:540px}}
+@media(min-width:960px){.raiz .p-cab{--cf-alt:clamp(600px,78vh,760px)}}
+.raiz .p-cab>:not(.cf-fundo):not(.cf-papel){position:relative;z-index:2}
+.raiz .p-cab>:is(.p-etiqueta,h1,.pt-entry-lead){width:fit-content;max-width:100%;background:var(--fundo);box-shadow:0 0 0 6px var(--fundo)}
+/* o desenho fica dentro da coluna do cabeçalho; nos dois lados, desvanece em 32 px em vez de acabar a direito */
+.raiz .cf-fundo{position:absolute;inset:0;z-index:0;pointer-events:none;color:var(--tinta);-webkit-mask-image:linear-gradient(90deg,transparent,#000 32px,#000 calc(100% - 32px),transparent);mask-image:linear-gradient(90deg,transparent,#000 32px,#000 calc(100% - 32px),transparent)}
+.raiz .cf-cena{position:absolute;bottom:0;left:50%;width:min(max(100%,calc(var(--cf-alt) * 1440 / 760)),1900px);aspect-ratio:1440/760;transform:translateX(-50%)}
+@media(min-width:960px){.raiz .cf-cena{left:auto;right:0;transform:none}}
+/* as fiadas são mais largas do que a cena (200 %): a regra geral dos SVG do sítio (max-width:100%) não se lhes aplica */
+.raiz .cf-cena svg{position:absolute;left:0;width:100%;max-width:none;max-height:none;overflow:visible}
+.raiz .cf-fundo svg *{vector-effect:non-scaling-stroke}
+.raiz .cf-calcada{position:absolute;inset:0}
+/* 02/11/2026: pedido do docente («as pedras têm de melhorar»). As pedras passam a cheias, como os cubos de basalto da calçada,
+   com o contorno mais fino a arredondar as arestas; no escuro ficam claras, como o calcário. */
+.raiz .cf-calcada svg{fill:currentColor;fill-opacity:.88;stroke:currentColor;stroke-width:1.2;stroke-linejoin:round}
+.raiz .cf-soltas{opacity:.6}
+.raiz .cf-fi{transform-origin:50% 50%}
+/* no escuro, a pedra clara sobre preto pesa mais: as fiadas de 1,5 px descem a 0,85 (as de perto ficam inteiras) */
+:root[data-theme=dark] .raiz .cf-fi g:not([stroke-width]){opacity:.85}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]) .raiz .cf-fi g:not([stroke-width]){opacity:.85}}
+/* abaixo de 960 px, o padrão desce mais do que no protótipo: as pedras soltas ficam pelo menos 40 px abaixo do botão da projeção */
+@media(max-width:639px){.raiz .cf-calcada{inset:auto;left:-12.5%;width:125%;top:-10%;height:125%}.raiz .cf-longe{display:none}}
+@media(max-width:359px){.raiz .cf-calcada{top:-6.5%}}
+@media(min-width:640px) and (max-width:959px){.raiz .cf-calcada{inset:auto;left:-15%;width:130%;top:-24.5%;height:130%}}
+/* a entrada: uma folha da cor do fundo, com o bordo esquerdo suave (140 px), desliza para a direita e destapa as pedras, uma vez */
+.raiz .cf-papel{display:none;position:absolute;z-index:1;top:45%;bottom:0;left:-140px;width:calc(100% + 140px);pointer-events:none;background:linear-gradient(90deg,transparent,var(--fundo) 140px)}
+.raiz .cf-credito{margin:8px 0 0;font:400 .8125rem/1.4 Arial,Helvetica,sans-serif;color:var(--suave,#444)}
+@keyframes cf-respira{0%{transform:scaleY(1);animation-timing-function:steps(2)}10%{transform:scaleY(1.01);animation-timing-function:steps(6)}20%{transform:scaleY(1.05);animation-timing-function:steps(6)}30%{transform:scaleY(1.09);animation-timing-function:steps(2)}40%,50%{transform:scaleY(1.1);animation-timing-function:steps(2)}60%{transform:scaleY(1.09);animation-timing-function:steps(6)}70%{transform:scaleY(1.05);animation-timing-function:steps(6)}80%{transform:scaleY(1.01);animation-timing-function:steps(2)}90%,100%{transform:scaleY(1)}}
+@keyframes cf-assenta{0%{transform:translateX(0%);animation-timing-function:steps(30)}12.5%{transform:translateX(8.83%);animation-timing-function:steps(30)}25%{transform:translateX(25.42%);animation-timing-function:steps(30)}37.5%{transform:translateX(45.68%);animation-timing-function:steps(30)}50%{transform:translateX(65.09%);animation-timing-function:steps(30)}62.5%{transform:translateX(80.81%);animation-timing-function:steps(30)}75%{transform:translateX(91.78%);animation-timing-function:steps(30)}87.5%{transform:translateX(98.03%);animation-timing-function:steps(30)}100%{transform:translateX(100%)}}
+@media(prefers-reduced-motion:no-preference){
+html:not(.em-projecao) .raiz .cf-anda .cf-papel{display:block;animation:cf-assenta 8s linear both;will-change:transform}
+html:not(.em-projecao) .raiz .cf-anda .cf-fi{animation:cf-respira 16s linear infinite;will-change:transform}
+}
+@media print{.raiz .p-cab{min-height:0}.raiz .cf-fundo,.raiz .cf-papel{display:none}}
