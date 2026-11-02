@@ -6,6 +6,8 @@ import sys
 
 ROOT=Path(__file__).resolve().parents[1]
 LAYERS=[
+ # 02/11/2026: pedido do docente, não há tarefas de grupo (camada mais recente).
+ ('tarefas_individuais_20261102','tarefas-individuais-edits-20261102'),
  ('cartaz_indices_20261101','cartaz-indices-edits-20261101'),
  ('licoes_m16_20261101','licoes-m16-edits-20261101'),
  ('licoes_m89_20261101','licoes-m89-edits-20261101'),

@@ -1,13 +1,15 @@
 """01/11/2026: índices Cartaz, preservação e camada literal reversível."""
 import json,re,subprocess,sys,unittest
 from pathlib import Path
-from auditoria_20261028 import undo_cartaz_indices
+from auditoria_20261028 import undo_cartaz_indices, undo_tarefas_individuais
 ROOT=Path(__file__).resolve().parents[1]
 
 class IndicesCartaz(unittest.TestCase):
  def test_ligacoes_ancoras_ordem_e_dados_do_motor(self):
   for n in range(1,10):
    rel=f'm{n}/index.html';after=(ROOT/rel).read_text('utf8');before=undo_cartaz_indices(rel,after)
+   # 02/11/2026: a camada das tarefas individuais (por cima desta) muda o texto de cartões da retoma; compara-se a página sem ela.
+   after=undo_tarefas_individuais(rel,after)
    with self.subTest(module=n):
     # 01/11/2026: só a política de carregamento da fonte muda, sem trocar o recurso.
     self.assertEqual(re.findall(r'\bhref="([^"]*)"',before.replace('display=swap','display=optional')),[x for x in re.findall(r'\bhref="([^"]*)"',after) if 'cartaz-indices.css' not in x])
@@ -43,7 +45,8 @@ class IndicesCartaz(unittest.TestCase):
   self.assertIn('previous.get(step.id)===false&&done',s)
   self.assertNotIn('setAttribute("href"',s)
  def test_camada_aplicada_e_reversivel(self):
-  r=subprocess.run([sys.executable,'scripts/aplicar_trocas.py','scripts/cartaz_indices_20261101.json','--manifesto','tests/fixtures/cartaz-indices-edits-20261101.json','--verificar'],cwd=ROOT,capture_output=True,text=True,encoding='utf8')
+  # 02/11/2026: desfaz antes a camada das tarefas individuais, a mais recente.
+  r=subprocess.run([sys.executable,'scripts/aplicar_trocas.py','scripts/cartaz_indices_20261101.json','--manifesto','tests/fixtures/cartaz-indices-edits-20261101.json','--verificar','--desfazer-antes','tests/fixtures/tarefas-individuais-edits-20261102.json'],cwd=ROOT,capture_output=True,text=True,encoding='utf8')
   self.assertEqual(r.returncode,0,r.stdout+r.stderr)
  def test_so_nove_paginas_migram_sobre_a_base_integrada(self):
   # 01/11/2026: o manifesto delimita a camada, sem depender de commits após squash.
