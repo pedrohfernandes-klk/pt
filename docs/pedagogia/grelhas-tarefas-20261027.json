@@ -1,378 +1,1122 @@
 {
-  "descricao": "Grelhas /20 das tarefas de unidade (27/10/2026, decisão do docente): níveis descritos (0, parcial, máximo) com um exemplo curto inventado por nível e o que custa pontos; autoavaliação antes de entregar; versão de correção com feedback em três partes. Só a grelha /20: os pesos no módulo ficam por confirmar nas fichas oficiais. Piloto: M1. 28/10/2026, regra das soluções: as duas páginas são públicas, por isso nenhum descritor nem exemplo responde à tarefa. Os descritores dizem o que se avalia em termos gerais; os exemplos mostram a qualidade com outro caso do mesmo tipo (outra palavra, outra passagem, outra cantiga, outro tema). A chave da correção fica fora do repositório.",
-  "tarefas": {
-    "m1-u1": {
-      "modulo": "M1",
-      "unidade": 1,
-      "titulo": "Vozes da lírica medieval",
-      "produto": "Núcleo comum (duas respostas) e um tema à escolha (A ou B), à mão, entre 200 e 240 palavras, mais duas linhas finais que não contam para as palavras. O aquecimento não conta para a nota.",
-      "nota": "Os exemplos foram escritos para esta grelha com outros casos do mesmo tipo (outras cantigas, outras palavras, outras frases), nunca com as respostas da tarefa. As citações de cantigas vêm das lições do módulo.",
-      "criterios": [
-        {
-          "nome": "Codax: quem fala, a quem e o que faz a repetição",
-          "max": 4,
-          "niveis": {
-            "0": [
-              "Não dizes quem fala nem a quem, ou não citas nenhuma repetição.",
-              "Mendinho fala da ermida."
-            ],
-            "parcial": [
-              "Dizes quem fala e a quem e citas, mas não classificas a repetição ou não explicas o que ela faz à espera.",
-              "Fala a rapariga, sozinha na ermida: «Eu atendendo meu amig', eu a[tendendo]». A repetição é bonita."
-            ],
-            "max": [
-              "Dizes quem fala e a quem, citas uma repetição, classifica-la com o nome certo (refrão, paralelismo ou leixa-pren) e explicas como faz durar a espera.",
-              "Quem escreve é Mendinho; quem diz «eu» é a rapariga que espera, e não fala a ninguém: conta, sozinha na ermida, que o mar a cerca. O refrão, «Eu atendendo meu amig', eu a[tendendo]», volta igual no fim de todas as estrofes: o perigo sobe, o verso fica, e a espera não cede."
-            ]
-          },
-          "custa": [
-            "Confundir a voz que diz «eu» com o trovador que escreve.",
-            "Citar sem explicar o efeito na espera.",
-            "Trocar os nomes das repetições: refrão, paralelismo e leixa-pren não são a mesma coisa."
-          ]
-        },
-        {
-          "nome": "Fonologia: o som que cai, o lugar e o processo",
-          "max": 3,
-          "niveis": {
-            "0": [
-              "Não dizes que som cai, ou dás um processo sem relação com o lugar.",
-              "Em acume > gume a palavra fica mais curta."
-            ],
-            "parcial": [
-              "Acertas um dos dois casos, ou dás o processo sem dizer que som cai e onde.",
-              "Em acume > gume cai o «a» do início: aférese. Alevantada > levantada também fica mais curta."
-            ],
-            "max": [
-              "Nos dois casos dizes o som que cai, o lugar na palavra (início, meio ou fim) e o nome do processo, e o nome bate certo com o lugar.",
-              "Em acume > gume cai o «a» no início da palavra: aférese. Em alevantada > levantada cai também o «a» do início: aférese. O gesto é o mesmo, cair, e o lugar também: por isso o nome é o mesmo."
-            ]
-          },
-          "custa": [
-            "Dar o mesmo nome a todas as quedas, só porque a palavra encurta.",
-            "Dizer o nome do processo sem dizer que som cai e onde."
-          ]
-        },
-        {
-          "nome": "D. Dinis e Guilhade: a promessa, as passagens e o recurso",
-          "max": 4,
-          "niveis": {
-            "0": [
-              "Não dizes em qual das cantigas se cumpre a promessa, ou não citas nenhuma delas.",
-              "Os dois escrevem sobre mulheres."
-            ],
-            "parcial": [
-              "Dizes em qual se cumpre, mas só provas um dos lados, citas a primeira estrofe ou não identificas o recurso que desmente a promessa na outra.",
-              "«Que sopa boa!» é um elogio a sério e «Que rapidez!» não é."
-            ],
-            "max": [
-              "Dizes em qual se cumpre a promessa, provas os dois lados com uma passagem de cada cantiga, fora da primeira estrofe, e identificas pelo nome o recurso que a desmente na outra, mostrando na passagem como o faz.",
-              "Diante de uma sopa boa, «Que sopa boa!» cumpre o elogio: nada o desdiz. Depois de uma hora à espera do autocarro, «Que rapidez!» diz um elogio e a hora de espera mostra o contrário. Dou o nome do recurso e aponto o que se diz, «rapidez», e o que o desmente, a hora à espera."
-            ]
-          },
-          "custa": [
-            "Comparar autores em vez de passagens.",
-            "Dar ao recurso um nome que não corresponde ao que a passagem faz.",
-            "Citar a primeira estrofe, que a tarefa deixa de fora.",
-            "Dar o nome do recurso sem mostrar, na passagem, como funciona."
-          ]
-        },
-        {
-          "nome": "Tema à escolha (A ou B): cinco elementos e a justificação",
-          "max": 6,
-          "niveis": {
-            "0": [
-              "Conta um ponto por elemento cumprido e mais um pela explicação que o tema pede. Aqui, não cumpres nenhum dos cinco elementos do teu tema.",
-              "A (o painel de uma paragem): «O painel mente sempre e eu fico à espera.» B (um concerto com Mendinho): «Fazia um cartaz bonito com o mar.»"
-            ],
-            "parcial": [
-              "Cumpres um a quatro dos cinco elementos, ou cumpres os cinco sem a explicação que o tema pede.",
-              "A: duas estrofes certas e, depois, «É como em Mendinho, porque também espero.» B: «No cartaz, a ilha. Por baixo, “Eu atendendo meu amig', eu a[tendendo]”. Ponho a ilha porque a ermida ficava numa ilha.»"
-            ],
-            "max": [
-              "Cumpres os cinco elementos do teu tema (um ponto cada) e explicas a escolha que o tema pede (mais um ponto). Tema A: paralelismo; refrão que repete a promessa; o teu verso que desmente a promessa; um verso de Codax citado; uma diferença entre a tua espera e a da cantiga de Codax. Explicação: o que imitaste de Codax. Tema B: imagem em duas frases; dois factos do dossiê (contam como dois); um verso escolhido; o que o cartaz não pode prometer. Explicação: porque escolheste esse verso.",
-              "A, com outra promessa e outra cantiga (o painel de uma paragem, à maneira de Mendinho): «Sentada na paragem do bairro, / já passou a chuva da manhã. / Dois minutos, diz o painel.» e «Sentada na paragem da escola, / já passou o vento da tarde. / Dois minutos, diz o painel.» «Imitei “Sedia-m'eu na ermida de Sam Simion”: também começo sentada, à espera, num sítio que digo logo no primeiro verso. O verso “já passou o vento da tarde” desmente o refrão: da manhã à tarde, o painel continua a prometer dois minutos. A diferença: a rapariga de Mendinho não tem barqueiro e não sabe remar, e sair dali já não depende dela; eu posso desistir e ir a pé.» B, com outra cantiga (um concerto com Mendinho): «No cartaz, a ilha de San Simón com a água à volta e, ao centro, uma rapariga sentada, de costas. Por baixo, o refrão “Eu atendendo meu amig', eu a[tendendo]” e o nome dos DOA. A ilha, porque a ermida ficava numa ilha da ria de Vigo; os DOA, porque é este grupo galego que a canta hoje. O refrão, porque é o verso que não muda quando o mar sobe. O cartaz não pode prometer a melodia medieval: desta cantiga, a melodia não chegou até nós, e os DOA cantam uma interpretação de hoje.»"
-            ]
-          },
-          "custa": [
-            "Tema A: estrofes sem paralelismo ou sem refrão; apontar o desmentido fora das tuas estrofes; esquecer a diferença.",
-            "Tema B: usar factos que não estão no dossiê ou que não sustentam a escolha; pôr o verso no cartaz sem explicar porquê; prometer a quem vai ouvir o que as fontes não garantem.",
-            "Nos dois temas: cumprir os elementos sem a explicação que o tema pede."
-          ]
-        },
-        {
-          "nome": "Respostas articuladas, extensão e escrita revista",
-          "max": 3,
-          "niveis": {
-            "0": [
-              "Respostas soltas, ou muito fora das 200 a 240 palavras.",
-              "Três listas de palavras sem frases completas."
-            ],
-            "parcial": [
-              "As respostas ligam-se, mas falha uma ou mais destas: a revisão (erros que uma releitura apanhava), a extensão, o tema no topo ou as duas linhas finais com um verso.",
-              "Fecho: «Aprendi muitas coisas sobre as cantigas.»"
-            ],
-            "max": [
-              "As respostas ligam-se, estão dentro da extensão, o tema escolhido está no topo, a escrita foi revista e as duas linhas finais apontam um verso.",
-              "Fecho: «Passei a ver se uma repetição traz alguma coisa nova. Ajudou-me Mendinho: em “nom hei [eu i] barqueiro nem sei remar”, o fim do verso muda e fecha-se a última saída.»"
-            ]
-          },
-          "custa": [
-            "Erros de concordância e de acentuação que uma releitura apanhava.",
-            "Fecho genérico, sem verso.",
-            "Não escrever no topo o tema escolhido (A ou B)."
-          ]
-        }
+ "descricao": "Grelhas /20 das tarefas de unidade (27/10/2026, decisão do docente): níveis descritos (0, parcial, máximo) com um exemplo curto inventado por nível e o que custa pontos; autoavaliação antes de entregar; versão de correção com feedback em três partes. Só a grelha /20: os pesos no módulo ficam por confirmar nas fichas oficiais. Piloto: M1. 28/10/2026, regra das soluções: as duas páginas são públicas, por isso nenhum descritor nem exemplo responde à tarefa. Os descritores dizem o que se avalia em termos gerais; os exemplos mostram a qualidade com outro caso do mesmo tipo (outra palavra, outra passagem, outra cantiga, outro tema). A chave da correção fica fora do repositório.",
+ "tarefas": {
+  "m1-u1": {
+   "modulo": "M1",
+   "unidade": 1,
+   "titulo": "Vozes da lírica medieval",
+   "produto": "Núcleo comum (duas respostas) e um tema à escolha (A ou B), à mão, entre 200 e 240 palavras, mais duas linhas finais que não contam para as palavras. O aquecimento não conta para a nota.",
+   "nota": "Os exemplos foram escritos para esta grelha com outros casos do mesmo tipo (outras cantigas, outras palavras, outras frases), nunca com as respostas da tarefa. As citações de cantigas vêm das lições do módulo.",
+   "criterios": [
+    {
+     "nome": "Codax: quem fala, a quem e o que faz a repetição",
+     "max": 4,
+     "niveis": {
+      "0": [
+       "Não dizes quem fala nem a quem, ou não citas nenhuma repetição.",
+       "Mendinho fala da ermida."
+      ],
+      "parcial": [
+       "Dizes quem fala e a quem e citas, mas não classificas a repetição ou não explicas o que ela faz à espera.",
+       "Fala a rapariga, sozinha na ermida: «Eu atendendo meu amig', eu a[tendendo]». A repetição é bonita."
+      ],
+      "max": [
+       "Dizes quem fala e a quem, citas uma repetição, classifica-la com o nome certo (refrão, paralelismo ou leixa-pren) e explicas como faz durar a espera.",
+       "Quem escreve é Mendinho; quem diz «eu» é a rapariga que espera, e não fala a ninguém: conta, sozinha na ermida, que o mar a cerca. O refrão, «Eu atendendo meu amig', eu a[tendendo]», volta igual no fim de todas as estrofes: o perigo sobe, o verso fica, e a espera não cede."
       ]
+     },
+     "custa": [
+      "Confundir a voz que diz «eu» com o trovador que escreve.",
+      "Citar sem explicar o efeito na espera.",
+      "Trocar os nomes das repetições: refrão, paralelismo e leixa-pren não são a mesma coisa."
+     ]
     },
-    "m1-u2": {
-      "modulo": "M1",
-      "unidade": 2,
-      "titulo": "Crónica «Estar lá»",
-      "produto": "Núcleo comum (duas respostas de cerca de 40 palavras) e uma crónica à escolha, tema A ou B, de 160 a 200 palavras, com título e fontes no fim. À mão, com consulta. O núcleo, as fontes e o fecho ficam fora da contagem; o aquecimento não conta para a nota.",
-      "nota": "Os exemplos foram escritos para esta grelha com outros casos do mesmo tipo (outra fala, outra imagem, uma manhã na escola), nunca com as respostas da tarefa: são inventados, menos a gravura de D. Dinis, que vem das lições do módulo.",
-      "criterios": [
-        {
-          "nome": "Núcleo 1: a cidade como uma só figura",
-          "max": 3,
-          "niveis": {
-            "0": [
-              "Não há passagem do cap. XII, ou a resposta fala do Mestre ou do pajem e não da cidade.",
-              "O Mestre era muito importante e toda a gente gostava dele."
-            ],
-            "parcial": [
-              "Citas uma passagem exata, mas nomeias uma emoção em vez de dizer o que se vê; ou explicas sem citar; ou citas a voz de uma só personagem.",
-              "Com uma frase inventada: «Ao toque da campainha, a escola inteira levantou-se e correu para o portão.» A escola estava ansiosa."
-            ],
-            "max": [
-              "Uma passagem do cap. XII, copiada letra a letra e entre aspas, e a explicação do que ela faz ver da cidade a agir como uma só figura. O termo «personagem coletiva» não é obrigatório para o máximo.",
-              "Com uma frase inventada: em «Ao toque da campainha, a escola inteira levantou-se e correu para o portão.», o sujeito é um só, «a escola inteira», e os verbos vêm no singular: os alunos deixam de se ver um a um e passam a ser um corpo que se levanta e corre."
-            ]
-          },
-          "custa": [
-            "Dar a voz de uma só personagem como prova da multidão.",
-            "Dizer a emoção («estavam com medo») em vez do que a passagem faz ver.",
-            "Citar uma passagem do cerco: a pergunta pede o cap. XII."
-          ]
-        },
-        {
-          "nome": "Núcleo 2: a fala, a marca e o registo",
-          "max": 3,
-          "niveis": {
-            "0": [
-              "Não apontas a parte da fala que não está nos excertos, não nomeias o processo e não decides onde fica «pra».",
-              "A frase está bem, é assim que se fala na rua."
-            ],
-            "parcial": [
-              "Acertas uma ou duas das três partes: a parte que não está nos excertos do cap. XII, o processo em «pra», o lugar de «pra».",
-              "Outra fala: o jornal da escola cita o diretor, «Bora lá, malta!», e um rascunho escreve, como fala documentada, «Bora lá, malta! Todos ao portão!». Resposta: «“Todos ao portão!” não está no jornal. Em “bora” cai uma letra no fim: apócope.»"
-            ],
-            "max": [
-              "Apontas a parte da fala que não está nos excertos do cap. XII, dizes em «pra» o som que cai, onde cai e o nome do processo, e justificas onde pode ficar «pra» com a diferença entre o relato, a fala documentada e a fala imaginada.",
-              "A mesma fala do jornal da escola: «“Todos ao portão!” não está no jornal, que só regista “Bora lá, malta!”. Em “bora”, de “embora”, cai o som do início, “em”: aférese. Aqui, “bora” fica na fala documentada, porque é a palavra que o jornal regista; no relato, escrevo “vamos embora”; numa fala imaginada, teria de a marcar como imaginada.»"
-            ]
-          },
-          "custa": [
-            "Dar ao processo um nome que não bate certo com o lugar do som que cai.",
-            "Dizer o que está nos excertos sem os confrontar com a fala.",
-            "Justificar o lugar da forma reduzida sem distinguir o relato, a fala documentada e a fala imaginada."
-          ]
-        },
-        {
-          "nome": "Estar lá: começo, pormenor e povo em ação",
-          "max": 5,
-          "niveis": {
-            "0": [
-              "A crónica começa por um resumo ou pela apresentação da figura; não há pormenor que se veja nem povo a agir.",
-              "Esta crónica conta uma manhã muito importante na vida da escola."
-            ],
-            "parcial": [
-              "Há momento e lugar, mas a primeira frase fica à porta; ou o pormenor diz em vez de fazer ver; ou o povo fica parado, como cenário. Pontua 1 a 2 se só um dos três (começo, pormenor, povo) está conseguido; 3 a 4 se falta um.",
-              "À porta da escola havia muita gente e muita pressa. Toda a gente estava nervosa."
-            ],
-            "max": [
-              "A primeira frase põe o leitor num lugar, numa hora e numa ação; um pormenor de som, cor ou movimento faz ver; o povo age, com um gesto seu.",
-              "Outro lugar e outra hora: «Sexta-feira, oito e um quarto, na rua de cima: ouve-se a campainha antes de se ver a escola, e as mochilas desatam a correr, uma, outra, a rua inteira para o portão.»"
-            ]
-          },
-          "custa": [
-            "Começar por «Esta crónica conta…» ou por um resumo do que aconteceu.",
-            "Dizer o sentimento («havia muito medo») em vez de o fazer ver.",
-            "O povo como cenário, sem um gesto seu."
-          ]
-        },
-        {
-          "nome": "Duas fontes confrontadas, e o que é teu marcado",
-          "max": 5,
-          "niveis": {
-            "0": [
-              "Uma fonte só, ou fontes sem lista no fim; falas e inferências inventadas passam por factos.",
-              "Segundo a internet, a escola inteira chegou atrasada e alguém gritou «Socorro!»."
-            ],
-            "parcial": [
-              "Duas fontes listadas, mas lado a lado, sem confronto; ou a fala vai sem marca; ou uma inferência passa por facto. Pontua 1 a 2 se só um dos três (fontes confrontadas, fala marcada, o que é teu marcado) está conseguido; 3 a 4 se falta um.",
-              "O jornal da escola conta a corrida. A fotografia mostra o portão. A campainha tocou às oito e dez."
-            ],
-            "max": [
-              "Duas fontes identificadas, confrontadas no texto (o que uma mostra e a outra não, com a origem de cada versão) e listadas no fim; a fala vai marcada «documentada» ou «imaginada» e não desmente as fontes; inferências e opiniões vêm marcadas como tuas, e cada inferência apoia-se no texto.",
-              "A mesma manhã na escola: «O jornal da escola conta a corrida para o portão; a fotografia da Rita mostra o portão, mas não quem corre. “Esperem por mim!” (fala imaginada). Que muitos chegaram tarde, concluo eu: o jornal conta gente a correr depois da campainha.» No fim: «Fontes: jornal da escola; fotografia da Rita.»"
-            ]
-          },
-          "custa": [
-            "«Segundo a internet» como fonte.",
-            "Escolher uma fonte e calar a outra, ou inventar um meio-termo.",
-            "Uma fala sem marca, ou imaginada contra o que a fonte diz.",
-            "Inventar horas, números ou nomes sem os marcar."
-          ]
-        },
-        {
-          "nome": "O pedido do tema, a extensão e a revisão",
-          "max": 4,
-          "niveis": {
-            "0": [
-              "Falta o pedido do tema (A: a gradação e a passagem copiada da crónica; B: o que a imagem escolhe e dois factos do dossiê), ou a crónica fica muito longe das 160 a 200 palavras, sem título.",
-              "Crónica de 90 palavras, sem título e sem nada do dossiê."
-            ],
-            "parcial": [
-              "O pedido do tema está lá só em parte (A: repetição sem degraus, ou a passagem com palavras mudadas; B: um só facto do dossiê, ou a imagem descrita sem dizer o que nela é escolha), ou há erros que a revisão apanhava. Pontua 1 se faltam dois ou mais elementos do máximo; 2 a 3 se falta um.",
-              "A: «Correu, correu, correu.» B: «A gravura é de 1594 e é muito bonita.»"
-            ],
-            "max": [
-              "A: uma gradação em que cada termo pesa mais e uma passagem do capítulo copiada letra a letra. B: o que na imagem é escolha de quem a fez, dito com dois factos do dossiê. Nos dois, título, 160 a 200 palavras, uma frase riscada e reescrita, à vista, e o fecho de duas linhas.",
-              "A, com outro caso: «Primeiro um aluno, depois uma turma, por fim a escola inteira.» B, com outra imagem, a gravura de D. Dinis: «A gravura de 1594 põe um livro na mão de D. Dinis, rei de 1279 a 1325: foi feita quase três séculos depois dele, e o livro, suponho, é escolha de quem o quis mostrar poeta.»"
-            ]
-          },
-          "custa": [
-            "Contar o núcleo, as fontes ou o fecho nas 160 a 200 palavras da crónica.",
-            "Apagar em vez de riscar: a frase cortada é a prova da revisão.",
-            "Entregar sem o fecho de duas linhas."
-          ]
-        }
+    {
+     "nome": "Fonologia: o som que cai, o lugar e o processo",
+     "max": 3,
+     "niveis": {
+      "0": [
+       "Não dizes que som cai, ou dás um processo sem relação com o lugar.",
+       "Em acume > gume a palavra fica mais curta."
+      ],
+      "parcial": [
+       "Acertas um dos dois casos, ou dás o processo sem dizer que som cai e onde.",
+       "Em acume > gume cai o «a» do início: aférese. Alevantada > levantada também fica mais curta."
+      ],
+      "max": [
+       "Nos dois casos dizes o som que cai, o lugar na palavra (início, meio ou fim) e o nome do processo, e o nome bate certo com o lugar.",
+       "Em acume > gume cai o «a» no início da palavra: aférese. Em alevantada > levantada cai também o «a» do início: aférese. O gesto é o mesmo, cair, e o lugar também: por isso o nome é o mesmo."
       ]
+     },
+     "custa": [
+      "Dar o mesmo nome a todas as quedas, só porque a palavra encurta.",
+      "Dizer o nome do processo sem dizer que som cai e onde."
+     ]
     },
-    "m7-u3": {
-      "modulo": "M7",
-      "unidade": 3,
-      "titulo": "Louco, sim: argumentar com os movimentos de _Mensagem_",
-      "produto": "Um texto de opinião à mão, sobre o tema A ou o tema B, com 180 a 220 palavras e o número escrito no fim, mais duas linhas finais fora da contagem. O aquecimento em cartões não conta para a nota.",
-      "nota": "Os exemplos foram escritos para esta grelha com outro tema do mesmo tipo («Ensaiar vale a pena?») e com «O Infante» e a «Tabacaria», nunca com os temas A e B nem com os seus poemas. Os versos e as datas vêm das lições do módulo.",
-      "criterios": [
-        {
-          "nome": "Tese e conclusão",
-          "max": 3,
-          "niveis": {
-            "0": [
-              "Não há tese, ou a primeira frase não diz o que defendes; a conclusão falta ou fala de outra coisa.",
-              "«Neste texto vou falar sobre ensaiar.»"
-            ],
-            "parcial": [
-              "Há tese, mas sem condição, ou a conclusão copia a tese palavra a palavra.",
-              "Tese: «Ensaiar é importante.» Conclusão: «Em conclusão, ensaiar é importante.»"
-            ],
-            "max": [
-              "A primeira frase tem a tese com uma condição, e a conclusão volta a ela com outras palavras.",
-              "Tese: «Ensaiar só é perder tempo se o ensaio for sempre igual.» Conclusão: «Por isso, desde que cada ensaio mude alguma coisa, ensaiar é o caminho mais curto para falar sem ler.»"
-            ]
-          },
-          "custa": [
-            "Uma tese com «tudo» ou «sempre» sem dizer em que caso é verdade.",
-            "Uma conclusão que repete a primeira frase.",
-            "Começar por resumir o poema em vez de dizer o que defendes."
-          ]
-        },
-        {
-          "nome": "Movimentos",
-          "max": 5,
-          "niveis": {
-            "0": [
-              "Não há nenhum movimento reconhecível, ou não há letras na margem.",
-              "«Há quem não goste de ensaiar mas eu gosto.»"
-            ],
-            "parcial": [
-              "Há um só movimento, ou dois sem um que dê razão ao outro lado (R ou C), ou estão postos à força e não fazem avançar o argumento, ou a causal é confundida com a concessiva.",
-              "«Artificial, sim, artificial.» [R], que aceita a palavra mas não tem a causal que lhe muda o valor."
-            ],
-            "max": [
-              "Há um movimento que dá razão ao outro lado e vira (R ou C) e mais um (N, M ou P), marcados na margem, e cada um faz avançar o argumento.",
-              "«Artificial, sim, artificial, porque escolheu cada pausa em vez de a deixar ao acaso.» [R] «Ensaiar custa uma tarde; mas é no ensaio que se descobre o que ainda não se sabe dizer.» [M]"
-            ]
-          },
-          "custa": [
-            "Chamar R a uma frase com «embora», ou C a uma frase com «porque».",
-            "Dar razão ao outro lado e não virar: o texto fica a defender o que queria contestar.",
-            "Letras na margem sem o movimento no texto."
-          ]
-        },
-        {
-          "nome": "Verso de _Mensagem_",
-          "max": 5,
-          "niveis": {
-            "0": [
-              "Não há verso de _Mensagem_, ou o verso está mudado e sem poema indicado.",
-              "«Pessoa diz em _Mensagem_ que é preciso sonhar.»"
-            ],
-            "parcial": [
-              "O verso está exato mas sem o poema, ou sem explicação ligada ao argumento, ou o herói é lido como biografia.",
-              "«Deus quer, o homem sonha, a obra nasce.» Este verso é muito bonito."
-            ],
-            "max": [
-              "Um verso exato, entre «», com o poema indicado, explicado no contexto e ligado à tese, com o herói lido como símbolo.",
-              "Noutro tema, com «O Infante»: «Deus quer, o homem sonha, a obra nasce.» O Infante é aqui o homem que sonha, um símbolo e não uma biografia (F08); a obra só nasce depois do sonho, e por isso ensaiar é o sonho que vem antes da obra, e não tempo perdido."
-            ]
-          },
-          "custa": [
-            "Uma palavra trocada no verso.",
-            "Citar sem dizer de que poema é.",
-            "Ler o rei ou o Infante como se o poema contasse a vida deles."
-          ]
-        },
-        {
-          "nome": "Facto ou outra voz",
-          "max": 4,
-          "niveis": {
-            "0": [
-              "Não há facto datado nem outra voz, ou há um facto inventado.",
-              "«Sempre se ensaiou muito, desde os tempos antigos.»"
-            ],
-            "parcial": [
-              "Há um facto datado ou outra voz, mas o facto mistura-se com o sentido do poema, ou a voz não se liga à tese.",
-              "«Em 1928, Fernando Pessoa não era nada.»"
-            ],
-            "max": [
-              "Um facto datado das lições, separado do sentido que o poema lhe dá, ou o confronto com Garrett ou com Reis, ligado à tese.",
-              "Noutro caso: a «Tabacaria» tem a data de 15-1-1928, e isso confirma-se fora do poema; «Não sou nada.» é o que a voz diz, e não um dado da vida de quem escreve. Ligado à tese: quem ensaia também pode sentir que não é nada, mas isso é o que sente, não um facto, e é o ensaio que muda alguma coisa que o desmente."
-            ]
-          },
-          "custa": [
-            "Dar como facto o que é o sentido de um verso.",
-            "Um facto sem data, ou uma data que não está nas lições.",
-            "Citar Garrett ou Reis sem dizer o que isso muda na tua tese."
-          ]
-        },
-        {
-          "nome": "Forma",
-          "max": 3,
-          "niveis": {
-            "0": [
-              "Muito fora das 180 a 220 palavras, ou sem as duas linhas finais.",
-              "Um texto de 90 palavras, sem contagem nem fecho."
-            ],
-            "parcial": [
-              "Falha uma destas: a contagem escrita no fim, os conectores certos, a revisão ou as duas linhas com um movimento e o verso ou a frase que o ensinou.",
-              "Fecho: «Aprendi muitas coisas sobre argumentar.»"
-            ],
-            "max": [
-              "180 a 220 palavras, com o número no fim, conectores certos, texto revisto e duas linhas que dizem que movimento vais voltar a usar, onde, e o verso ou a frase que to ensinou.",
-              "Fecho: «Vou voltar ao C quando tiver de admitir um defeito num trabalho meu. Ensinou-mo “Estou hoje vencido, embora não saiba a verdade”, a versão concessiva da lição F07.»"
-            ]
-          },
-          "custa": [
-            "Erros de concordância e de acentuação que uma releitura apanhava.",
-            "Não escrever o número de palavras no fim.",
-            "Fecho genérico, sem movimento nem verso."
-          ]
-        }
+    {
+     "nome": "D. Dinis e Guilhade: a promessa, as passagens e o recurso",
+     "max": 4,
+     "niveis": {
+      "0": [
+       "Não dizes em qual das cantigas se cumpre a promessa, ou não citas nenhuma delas.",
+       "Os dois escrevem sobre mulheres."
+      ],
+      "parcial": [
+       "Dizes em qual se cumpre, mas só provas um dos lados, citas a primeira estrofe ou não identificas o recurso que desmente a promessa na outra.",
+       "«Que sopa boa!» é um elogio a sério e «Que rapidez!» não é."
+      ],
+      "max": [
+       "Dizes em qual se cumpre a promessa, provas os dois lados com uma passagem de cada cantiga, fora da primeira estrofe, e identificas pelo nome o recurso que a desmente na outra, mostrando na passagem como o faz.",
+       "Diante de uma sopa boa, «Que sopa boa!» cumpre o elogio: nada o desdiz. Depois de uma hora à espera do autocarro, «Que rapidez!» diz um elogio e a hora de espera mostra o contrário. Dou o nome do recurso e aponto o que se diz, «rapidez», e o que o desmente, a hora à espera."
       ]
+     },
+     "custa": [
+      "Comparar autores em vez de passagens.",
+      "Dar ao recurso um nome que não corresponde ao que a passagem faz.",
+      "Citar a primeira estrofe, que a tarefa deixa de fora.",
+      "Dar o nome do recurso sem mostrar, na passagem, como funciona."
+     ]
+    },
+    {
+     "nome": "Tema à escolha (A ou B): cinco elementos e a justificação",
+     "max": 6,
+     "niveis": {
+      "0": [
+       "Conta um ponto por elemento cumprido e mais um pela explicação que o tema pede. Aqui, não cumpres nenhum dos cinco elementos do teu tema.",
+       "A (o painel de uma paragem): «O painel mente sempre e eu fico à espera.» B (um concerto com Mendinho): «Fazia um cartaz bonito com o mar.»"
+      ],
+      "parcial": [
+       "Cumpres um a quatro dos cinco elementos, ou cumpres os cinco sem a explicação que o tema pede.",
+       "A: duas estrofes certas e, depois, «É como em Mendinho, porque também espero.» B: «No cartaz, a ilha. Por baixo, “Eu atendendo meu amig', eu a[tendendo]”. Ponho a ilha porque a ermida ficava numa ilha.»"
+      ],
+      "max": [
+       "Cumpres os cinco elementos do teu tema (um ponto cada) e explicas a escolha que o tema pede (mais um ponto). Tema A: paralelismo; refrão que repete a promessa; o teu verso que desmente a promessa; um verso de Codax citado; uma diferença entre a tua espera e a da cantiga de Codax. Explicação: o que imitaste de Codax. Tema B: imagem em duas frases; dois factos do dossiê (contam como dois); um verso escolhido; o que o cartaz não pode prometer. Explicação: porque escolheste esse verso.",
+       "A, com outra promessa e outra cantiga (o painel de uma paragem, à maneira de Mendinho): «Sentada na paragem do bairro, / já passou a chuva da manhã. / Dois minutos, diz o painel.» e «Sentada na paragem da escola, / já passou o vento da tarde. / Dois minutos, diz o painel.» «Imitei “Sedia-m'eu na ermida de Sam Simion”: também começo sentada, à espera, num sítio que digo logo no primeiro verso. O verso “já passou o vento da tarde” desmente o refrão: da manhã à tarde, o painel continua a prometer dois minutos. A diferença: a rapariga de Mendinho não tem barqueiro e não sabe remar, e sair dali já não depende dela; eu posso desistir e ir a pé.» B, com outra cantiga (um concerto com Mendinho): «No cartaz, a ilha de San Simón com a água à volta e, ao centro, uma rapariga sentada, de costas. Por baixo, o refrão “Eu atendendo meu amig', eu a[tendendo]” e o nome dos DOA. A ilha, porque a ermida ficava numa ilha da ria de Vigo; os DOA, porque é este grupo galego que a canta hoje. O refrão, porque é o verso que não muda quando o mar sobe. O cartaz não pode prometer a melodia medieval: desta cantiga, a melodia não chegou até nós, e os DOA cantam uma interpretação de hoje.»"
+      ]
+     },
+     "custa": [
+      "Tema A: estrofes sem paralelismo ou sem refrão; apontar o desmentido fora das tuas estrofes; esquecer a diferença.",
+      "Tema B: usar factos que não estão no dossiê ou que não sustentam a escolha; pôr o verso no cartaz sem explicar porquê; prometer a quem vai ouvir o que as fontes não garantem.",
+      "Nos dois temas: cumprir os elementos sem a explicação que o tema pede."
+     ]
+    },
+    {
+     "nome": "Respostas articuladas, extensão e escrita revista",
+     "max": 3,
+     "niveis": {
+      "0": [
+       "Respostas soltas, ou muito fora das 200 a 240 palavras.",
+       "Três listas de palavras sem frases completas."
+      ],
+      "parcial": [
+       "As respostas ligam-se, mas falha uma ou mais destas: a revisão (erros que uma releitura apanhava), a extensão, o tema no topo ou as duas linhas finais com um verso.",
+       "Fecho: «Aprendi muitas coisas sobre as cantigas.»"
+      ],
+      "max": [
+       "As respostas ligam-se, estão dentro da extensão, o tema escolhido está no topo, a escrita foi revista e as duas linhas finais apontam um verso.",
+       "Fecho: «Passei a ver se uma repetição traz alguma coisa nova. Ajudou-me Mendinho: em “nom hei [eu i] barqueiro nem sei remar”, o fim do verso muda e fecha-se a última saída.»"
+      ]
+     },
+     "custa": [
+      "Erros de concordância e de acentuação que uma releitura apanhava.",
+      "Fecho genérico, sem verso.",
+      "Não escrever no topo o tema escolhido (A ou B)."
+     ]
     }
+   ]
+  },
+  "m1-u2": {
+   "modulo": "M1",
+   "unidade": 2,
+   "titulo": "Crónica «Estar lá»",
+   "produto": "Núcleo comum (duas respostas de cerca de 40 palavras) e uma crónica à escolha, tema A ou B, de 160 a 200 palavras, com título e fontes no fim. À mão, com consulta. O núcleo, as fontes e o fecho ficam fora da contagem; o aquecimento não conta para a nota.",
+   "nota": "Os exemplos foram escritos para esta grelha com outros casos do mesmo tipo (outra fala, outra imagem, uma manhã na escola), nunca com as respostas da tarefa: são inventados, menos a gravura de D. Dinis, que vem das lições do módulo.",
+   "criterios": [
+    {
+     "nome": "Núcleo 1: a cidade como uma só figura",
+     "max": 3,
+     "niveis": {
+      "0": [
+       "Não há passagem do cap. XII, ou a resposta fala do Mestre ou do pajem e não da cidade.",
+       "O Mestre era muito importante e toda a gente gostava dele."
+      ],
+      "parcial": [
+       "Citas uma passagem exata, mas nomeias uma emoção em vez de dizer o que se vê; ou explicas sem citar; ou citas a voz de uma só personagem.",
+       "Com uma frase inventada: «Ao toque da campainha, a escola inteira levantou-se e correu para o portão.» A escola estava ansiosa."
+      ],
+      "max": [
+       "Uma passagem do cap. XII, copiada letra a letra e entre aspas, e a explicação do que ela faz ver da cidade a agir como uma só figura. O termo «personagem coletiva» não é obrigatório para o máximo.",
+       "Com uma frase inventada: em «Ao toque da campainha, a escola inteira levantou-se e correu para o portão.», o sujeito é um só, «a escola inteira», e os verbos vêm no singular: os alunos deixam de se ver um a um e passam a ser um corpo que se levanta e corre."
+      ]
+     },
+     "custa": [
+      "Dar a voz de uma só personagem como prova da multidão.",
+      "Dizer a emoção («estavam com medo») em vez do que a passagem faz ver.",
+      "Citar uma passagem do cerco: a pergunta pede o cap. XII."
+     ]
+    },
+    {
+     "nome": "Núcleo 2: a fala, a marca e o registo",
+     "max": 3,
+     "niveis": {
+      "0": [
+       "Não apontas a parte da fala que não está nos excertos, não nomeias o processo e não decides onde fica «pra».",
+       "A frase está bem, é assim que se fala na rua."
+      ],
+      "parcial": [
+       "Acertas uma ou duas das três partes: a parte que não está nos excertos do cap. XII, o processo em «pra», o lugar de «pra».",
+       "Outra fala: o jornal da escola cita o diretor, «Bora lá, malta!», e um rascunho escreve, como fala documentada, «Bora lá, malta! Todos ao portão!». Resposta: «“Todos ao portão!” não está no jornal. Em “bora” cai uma letra no fim: apócope.»"
+      ],
+      "max": [
+       "Apontas a parte da fala que não está nos excertos do cap. XII, dizes em «pra» o som que cai, onde cai e o nome do processo, e justificas onde pode ficar «pra» com a diferença entre o relato, a fala documentada e a fala imaginada.",
+       "A mesma fala do jornal da escola: «“Todos ao portão!” não está no jornal, que só regista “Bora lá, malta!”. Em “bora”, de “embora”, cai o som do início, “em”: aférese. Aqui, “bora” fica na fala documentada, porque é a palavra que o jornal regista; no relato, escrevo “vamos embora”; numa fala imaginada, teria de a marcar como imaginada.»"
+      ]
+     },
+     "custa": [
+      "Dar ao processo um nome que não bate certo com o lugar do som que cai.",
+      "Dizer o que está nos excertos sem os confrontar com a fala.",
+      "Justificar o lugar da forma reduzida sem distinguir o relato, a fala documentada e a fala imaginada."
+     ]
+    },
+    {
+     "nome": "Estar lá: começo, pormenor e povo em ação",
+     "max": 5,
+     "niveis": {
+      "0": [
+       "A crónica começa por um resumo ou pela apresentação da figura; não há pormenor que se veja nem povo a agir.",
+       "Esta crónica conta uma manhã muito importante na vida da escola."
+      ],
+      "parcial": [
+       "Há momento e lugar, mas a primeira frase fica à porta; ou o pormenor diz em vez de fazer ver; ou o povo fica parado, como cenário. Pontua 1 a 2 se só um dos três (começo, pormenor, povo) está conseguido; 3 a 4 se falta um.",
+       "À porta da escola havia muita gente e muita pressa. Toda a gente estava nervosa."
+      ],
+      "max": [
+       "A primeira frase põe o leitor num lugar, numa hora e numa ação; um pormenor de som, cor ou movimento faz ver; o povo age, com um gesto seu.",
+       "Outro lugar e outra hora: «Sexta-feira, oito e um quarto, na rua de cima: ouve-se a campainha antes de se ver a escola, e as mochilas desatam a correr, uma, outra, a rua inteira para o portão.»"
+      ]
+     },
+     "custa": [
+      "Começar por «Esta crónica conta…» ou por um resumo do que aconteceu.",
+      "Dizer o sentimento («havia muito medo») em vez de o fazer ver.",
+      "O povo como cenário, sem um gesto seu."
+     ]
+    },
+    {
+     "nome": "Duas fontes confrontadas, e o que é teu marcado",
+     "max": 5,
+     "niveis": {
+      "0": [
+       "Uma fonte só, ou fontes sem lista no fim; falas e inferências inventadas passam por factos.",
+       "Segundo a internet, a escola inteira chegou atrasada e alguém gritou «Socorro!»."
+      ],
+      "parcial": [
+       "Duas fontes listadas, mas lado a lado, sem confronto; ou a fala vai sem marca; ou uma inferência passa por facto. Pontua 1 a 2 se só um dos três (fontes confrontadas, fala marcada, o que é teu marcado) está conseguido; 3 a 4 se falta um.",
+       "O jornal da escola conta a corrida. A fotografia mostra o portão. A campainha tocou às oito e dez."
+      ],
+      "max": [
+       "Duas fontes identificadas, confrontadas no texto (o que uma mostra e a outra não, com a origem de cada versão) e listadas no fim; a fala vai marcada «documentada» ou «imaginada» e não desmente as fontes; inferências e opiniões vêm marcadas como tuas, e cada inferência apoia-se no texto.",
+       "A mesma manhã na escola: «O jornal da escola conta a corrida para o portão; a fotografia da Rita mostra o portão, mas não quem corre. “Esperem por mim!” (fala imaginada). Que muitos chegaram tarde, concluo eu: o jornal conta gente a correr depois da campainha.» No fim: «Fontes: jornal da escola; fotografia da Rita.»"
+      ]
+     },
+     "custa": [
+      "«Segundo a internet» como fonte.",
+      "Escolher uma fonte e calar a outra, ou inventar um meio-termo.",
+      "Uma fala sem marca, ou imaginada contra o que a fonte diz.",
+      "Inventar horas, números ou nomes sem os marcar."
+     ]
+    },
+    {
+     "nome": "O pedido do tema, a extensão e a revisão",
+     "max": 4,
+     "niveis": {
+      "0": [
+       "Falta o pedido do tema (A: a gradação e a passagem copiada da crónica; B: o que a imagem escolhe e dois factos do dossiê), ou a crónica fica muito longe das 160 a 200 palavras, sem título.",
+       "Crónica de 90 palavras, sem título e sem nada do dossiê."
+      ],
+      "parcial": [
+       "O pedido do tema está lá só em parte (A: repetição sem degraus, ou a passagem com palavras mudadas; B: um só facto do dossiê, ou a imagem descrita sem dizer o que nela é escolha), ou há erros que a revisão apanhava. Pontua 1 se faltam dois ou mais elementos do máximo; 2 a 3 se falta um.",
+       "A: «Correu, correu, correu.» B: «A gravura é de 1594 e é muito bonita.»"
+      ],
+      "max": [
+       "A: uma gradação em que cada termo pesa mais e uma passagem do capítulo copiada letra a letra. B: o que na imagem é escolha de quem a fez, dito com dois factos do dossiê. Nos dois, título, 160 a 200 palavras, uma frase riscada e reescrita, à vista, e o fecho de duas linhas.",
+       "A, com outro caso: «Primeiro um aluno, depois uma turma, por fim a escola inteira.» B, com outra imagem, a gravura de D. Dinis: «A gravura de 1594 põe um livro na mão de D. Dinis, rei de 1279 a 1325: foi feita quase três séculos depois dele, e o livro, suponho, é escolha de quem o quis mostrar poeta.»"
+      ]
+     },
+     "custa": [
+      "Contar o núcleo, as fontes ou o fecho nas 160 a 200 palavras da crónica.",
+      "Apagar em vez de riscar: a frase cortada é a prova da revisão.",
+      "Entregar sem o fecho de duas linhas."
+     ]
+    }
+   ]
+  },
+  "m7-u3": {
+   "modulo": "M7",
+   "unidade": 3,
+   "titulo": "Louco, sim: argumentar com os movimentos de _Mensagem_",
+   "produto": "Um texto de opinião à mão, sobre o tema A ou o tema B, com 180 a 220 palavras e o número escrito no fim, mais duas linhas finais fora da contagem. O aquecimento em cartões não conta para a nota.",
+   "nota": "Os exemplos foram escritos para esta grelha com outro tema do mesmo tipo («Ensaiar vale a pena?») e com «O Infante» e a «Tabacaria», nunca com os temas A e B nem com os seus poemas. Os versos e as datas vêm das lições do módulo.",
+   "criterios": [
+    {
+     "nome": "Tese e conclusão",
+     "max": 3,
+     "niveis": {
+      "0": [
+       "Não há tese, ou a primeira frase não diz o que defendes; a conclusão falta ou fala de outra coisa.",
+       "«Neste texto vou falar sobre ensaiar.»"
+      ],
+      "parcial": [
+       "Há tese, mas sem condição, ou a conclusão copia a tese palavra a palavra.",
+       "Tese: «Ensaiar é importante.» Conclusão: «Em conclusão, ensaiar é importante.»"
+      ],
+      "max": [
+       "A primeira frase tem a tese com uma condição, e a conclusão volta a ela com outras palavras.",
+       "Tese: «Ensaiar só é perder tempo se o ensaio for sempre igual.» Conclusão: «Por isso, desde que cada ensaio mude alguma coisa, ensaiar é o caminho mais curto para falar sem ler.»"
+      ]
+     },
+     "custa": [
+      "Uma tese com «tudo» ou «sempre» sem dizer em que caso é verdade.",
+      "Uma conclusão que repete a primeira frase.",
+      "Começar por resumir o poema em vez de dizer o que defendes."
+     ]
+    },
+    {
+     "nome": "Movimentos",
+     "max": 5,
+     "niveis": {
+      "0": [
+       "Não há nenhum movimento reconhecível, ou não há letras na margem.",
+       "«Há quem não goste de ensaiar mas eu gosto.»"
+      ],
+      "parcial": [
+       "Há um só movimento, ou dois sem um que dê razão ao outro lado (R ou C), ou estão postos à força e não fazem avançar o argumento, ou a causal é confundida com a concessiva.",
+       "«Artificial, sim, artificial.» [R], que aceita a palavra mas não tem a causal que lhe muda o valor."
+      ],
+      "max": [
+       "Há um movimento que dá razão ao outro lado e vira (R ou C) e mais um (N, M ou P), marcados na margem, e cada um faz avançar o argumento.",
+       "«Artificial, sim, artificial, porque escolheu cada pausa em vez de a deixar ao acaso.» [R] «Ensaiar custa uma tarde; mas é no ensaio que se descobre o que ainda não se sabe dizer.» [M]"
+      ]
+     },
+     "custa": [
+      "Chamar R a uma frase com «embora», ou C a uma frase com «porque».",
+      "Dar razão ao outro lado e não virar: o texto fica a defender o que queria contestar.",
+      "Letras na margem sem o movimento no texto."
+     ]
+    },
+    {
+     "nome": "Verso de _Mensagem_",
+     "max": 5,
+     "niveis": {
+      "0": [
+       "Não há verso de _Mensagem_, ou o verso está mudado e sem poema indicado.",
+       "«Pessoa diz em _Mensagem_ que é preciso sonhar.»"
+      ],
+      "parcial": [
+       "O verso está exato mas sem o poema, ou sem explicação ligada ao argumento, ou o herói é lido como biografia.",
+       "«Deus quer, o homem sonha, a obra nasce.» Este verso é muito bonito."
+      ],
+      "max": [
+       "Um verso exato, entre «», com o poema indicado, explicado no contexto e ligado à tese, com o herói lido como símbolo.",
+       "Noutro tema, com «O Infante»: «Deus quer, o homem sonha, a obra nasce.» O Infante é aqui o homem que sonha, um símbolo e não uma biografia (F08); a obra só nasce depois do sonho, e por isso ensaiar é o sonho que vem antes da obra, e não tempo perdido."
+      ]
+     },
+     "custa": [
+      "Uma palavra trocada no verso.",
+      "Citar sem dizer de que poema é.",
+      "Ler o rei ou o Infante como se o poema contasse a vida deles."
+     ]
+    },
+    {
+     "nome": "Facto ou outra voz",
+     "max": 4,
+     "niveis": {
+      "0": [
+       "Não há facto datado nem outra voz, ou há um facto inventado.",
+       "«Sempre se ensaiou muito, desde os tempos antigos.»"
+      ],
+      "parcial": [
+       "Há um facto datado ou outra voz, mas o facto mistura-se com o sentido do poema, ou a voz não se liga à tese.",
+       "«Em 1928, Fernando Pessoa não era nada.»"
+      ],
+      "max": [
+       "Um facto datado das lições, separado do sentido que o poema lhe dá, ou o confronto com Garrett ou com Reis, ligado à tese.",
+       "Noutro caso: a «Tabacaria» tem a data de 15-1-1928, e isso confirma-se fora do poema; «Não sou nada.» é o que a voz diz, e não um dado da vida de quem escreve. Ligado à tese: quem ensaia também pode sentir que não é nada, mas isso é o que sente, não um facto, e é o ensaio que muda alguma coisa que o desmente."
+      ]
+     },
+     "custa": [
+      "Dar como facto o que é o sentido de um verso.",
+      "Um facto sem data, ou uma data que não está nas lições.",
+      "Citar Garrett ou Reis sem dizer o que isso muda na tua tese."
+     ]
+    },
+    {
+     "nome": "Forma",
+     "max": 3,
+     "niveis": {
+      "0": [
+       "Muito fora das 180 a 220 palavras, ou sem as duas linhas finais.",
+       "Um texto de 90 palavras, sem contagem nem fecho."
+      ],
+      "parcial": [
+       "Falha uma destas: a contagem escrita no fim, os conectores certos, a revisão ou as duas linhas com um movimento e o verso ou a frase que o ensinou.",
+       "Fecho: «Aprendi muitas coisas sobre argumentar.»"
+      ],
+      "max": [
+       "180 a 220 palavras, com o número no fim, conectores certos, texto revisto e duas linhas que dizem que movimento vais voltar a usar, onde, e o verso ou a frase que to ensinou.",
+       "Fecho: «Vou voltar ao C quando tiver de admitir um defeito num trabalho meu. Ensinou-mo “Estou hoje vencido, embora não saiba a verdade”, a versão concessiva da lição F07.»"
+      ]
+     },
+     "custa": [
+      "Erros de concordância e de acentuação que uma releitura apanhava.",
+      "Não escrever o número de palavras no fim.",
+      "Fecho genérico, sem movimento nem verso."
+     ]
+    }
+   ]
+  },
+  "m3-u1": {
+   "modulo": "M3",
+   "unidade": 1,
+   "titulo": "Quem canta, quem cala: as vozes de Camões",
+   "produto": "Núcleo comum (duas respostas) e um tema à escolha (A ou B), à mão, entre 200 e 240 palavras, mais duas linhas finais que não contam para as palavras. O aquecimento em cartões não conta para a nota.",
+   "nota": "Os exemplos foram escritos para esta grelha com outros casos do mesmo tipo (a pimenta, o perdigão, a redondilha de Bárbara, outro soneto, um autocarro, o frontispício da primeira edição da epopeia), nunca com as passagens nem com os factos da tarefa. As citações entre «» vêm das lições do módulo; as frases e os versos sem «» foram escritos para esta grelha, e os factos que usam vêm das lições F04, F13 e F16.",
+   "criterios": [
+    {
+     "nome": "A Proposição, o _Kit_, o facto e o juízo",
+     "max": 4,
+     "niveis": {
+      "0": [
+       "Não citas a Proposição, ou não dizes nada sobre o objeto do _Kit_, ou não escreves o facto e o juízo.",
+       "Noutro caso: A pimenta é uma especiaria e era importante."
+      ],
+      "parcial": [
+       "Citas só um dos lados, ou explicas o objeto sem o ligar ao que o poema cala, ou o facto e o juízo estão trocados.",
+       "Noutro caso, a etiqueta da pimenta: «A rota das especiarias» é a história que se conta. Facto: a pimenta é a melhor especiaria."
+      ],
+      "max": [
+       "Citas, com as palavras exatas, uma expressão que canta quem partiu e outra sobre quem lá vivia; explicas o que o objeto põe à vista e o poema não diz; escreves um facto que se confirma e um juízo que se discute.",
+       "Noutro caso, a etiqueta da pimenta: «A rota das especiarias» é a história que se conta, e «Quem apanhava a pimenta no Malabar» é a que ficou por contar. Um objeto inventado, um diário de bordo com as páginas da chegada em branco, põe à vista o que ninguém escreveu sobre a chegada. Facto: a pimenta vinha pela rota das especiarias. Juízo: uma etiqueta que só fala da rota esconde quem trabalhou."
+      ]
+     },
+     "custa": [
+      "Citar só quem é cantado e esquecer quem lá vivia.",
+      "Descrever o objeto sem dizer o que ele põe à vista.",
+      "Chamar facto a uma frase que se discute."
+     ]
+    },
+    {
+     "nome": "A amada: versos citados e recursos explicados",
+     "max": 4,
+     "niveis": {
+      "0": [
+       "Não citas nenhum dos dois poemas, ou citas sem dizer nada sobre a amada.",
+       "Noutro caso: O perdigão é um pássaro triste."
+      ],
+      "parcial": [
+       "Citas os dois poemas, mas falta o nome de um recurso ou o que ele mostra, ou citas versos que a tarefa deixa de fora, ou mudas uma palavra do verso.",
+       "Noutros poemas: «Olhos sossegados, / Pretos e cansados». É uma descrição. «Perde a pena do voar» é um verso bonito."
+      ],
+      "max": [
+       "Citas um verso de cada poema, letra a letra e dentro do que a tarefa pede, nomeias um recurso em cada um e explicas o que ele mostra da amada: como é vista, onde está, o que a voz lhe diz.",
+       "Noutros poemas: em «Perdigão perdeu a pena», «Perde a pena do voar, / Ganha a pena do tormento» usa os dois sentidos de «pena», e o amante perde a esperança e ganha a dor. Na redondilha de Bárbara, «Olhos sossegados, / Pretos e cansados» mostra-a pelos olhos, com adjetivos de calma e de cansaço."
+      ]
+     },
+     "custa": [
+      "Confundir a voz que diz «eu» com Camões.",
+      "Dar o nome do recurso sem dizer o que mostra da amada.",
+      "Citar versos que a tarefa deixa de fora, ou mudar uma palavra do verso."
+     ]
+    },
+    {
+     "nome": "Sílabas métricas e medida",
+     "max": 3,
+     "niveis": {
+      "0": [
+       "Não divides os versos, ou dás uma medida sem contagem.",
+       "Noutro caso: É um verso comprido."
+      ],
+      "parcial": [
+       "Divides bem só um dos versos, ou contas como na gramática, sem juntar as vogais que se juntam nem parar na última sílaba tónica.",
+       "«Agora espero, agora desconfio»: A / go / ra / es / pe / ro / a / go / ra / des / con / fi / o, treze."
+      ],
+      "max": [
+       "Divides os dois versos em sílabas métricas, juntas as vogais que se juntam, paras na última sílaba tónica e dizes a medida de cada um.",
+       "«Não há mal que lhe não venha»: Não / há / mal / que / lhe / não / ve(nha), sete, redondilha maior. «Agora espero, agora desconfio»: A / go / ra_es / pe / ro_a / go / ra / des / con / fi(o), dez, decassílabo."
+      ]
+     },
+     "custa": [
+      "Contar as sílabas como na gramática, até ao fim da última palavra.",
+      "Esquecer que a vogal do fim de uma palavra se junta à do início da seguinte.",
+      "Dar uma medida que não bate certo com a contagem."
+     ]
+    },
+    {
+     "nome": "Tema à escolha (A ou B): cinco elementos e a explicação",
+     "max": 6,
+     "niveis": {
+      "0": [
+       "Conta um ponto por elemento cumprido e mais um pela explicação que o tema pede. Aqui, não cumpres nenhum dos cinco elementos do teu tema.",
+       "A (outra figura): O autocarro é amarelo e chega sempre atrasado. B (outra imagem): A fotografia é bonita e antiga."
+      ],
+      "parcial": [
+       "Cumpres um a quatro dos cinco elementos, ou cumpres os cinco sem a explicação que o tema pede.",
+       "A: duas estrofes sobre um autocarro, sem verso que volte e sem sílabas divididas. B: Na imagem, um livro antigo. Facto: a epopeia saiu em 1572. É bonito."
+      ],
+      "max": [
+       "Cumpres os cinco elementos do teu tema (um ponto cada) e dás a explicação (mais um ponto). Tema A: um mote de dois versos e uma volta de cinco, em redondilha maior; a volta acaba no último verso do mote; um retrato com cores e uma hipérbole; dois versos divididos em sílabas; uma diferença entre a tua Leonor e a de Camões. Explicação: o verso de Camões que imitaste, citado, e o que imitaste dele. Tema B: a imagem descrita em duas frases; dois factos do dossiê (contam como dois); um verso da Proposição ou do Velho do Restelo, com canto e estância; o que a legenda não pode afirmar. Explicação: a razão por que puseste esse verso ao lado da imagem.",
+       "A, com outra figura e outro modelo (um autocarro, à maneira de «Perdigão perdeu a pena»): Vem o autocarro das sete, / e ninguém o vê chegar. // Traz o tejadilho cinza, / as portas cor de limão, / demora mais do que um século / a subir o quarteirão; / e ninguém o vê chegar. Divisões: As / por / tas / cor / de / li / mão, sete; De / mo / ra / mais / do / que_um / sé(culo), sete. Imitei a forma de «Perdigão perdeu a pena»: um mote de dois versos, e o último a fechar a volta. A diferença: o perdigão cai por querer subir alto; o meu autocarro nem consegue subir a rua. B, com outra imagem (o frontispício da primeira edição de _Os Lusíadas_, que abre a lição F13): Uma página de rosto antiga, com o título ao centro, entre duas colunas torcidas, e uma ave de asas abertas no alto. Em baixo, a data, 1572. Factos: é a epopeia tal como saiu em 1572; a imagem está em domínio público e vem da Academia Brasileira de Letras. Ao lado, «Contra um bicho da terra tão pequeno?» (I, 106), porque um livro solene guarda um verso que faz o homem pequeno. O que a legenda não pode afirmar: que este exemplar foi de Camões, porque nenhuma das fontes o diz."
+      ]
+     },
+     "custa": [
+      "Tema A: versos que não têm sete sílabas; uma volta que não acaba no verso do mote; um retrato sem cores ou sem hipérbole.",
+      "Tema B: usar factos que não estão no dossiê; pôr o verso sem canto e estância; afirmar o que as fontes não dizem.",
+      "Nos dois temas: cumprir os elementos sem a explicação que o tema pede."
+     ]
+    },
+    {
+     "nome": "Respostas articuladas, extensão e escrita revista",
+     "max": 3,
+     "niveis": {
+      "0": [
+       "Respostas soltas, ou muito fora das 200 a 240 palavras.",
+       "Três listas de palavras sem frases completas."
+      ],
+      "parcial": [
+       "As respostas ligam-se, mas falha uma ou mais destas: a revisão (erros que uma releitura apanhava), a extensão, o tema no topo ou as duas linhas finais com um verso.",
+       "Fecho: Aprendi muitas coisas sobre Camões."
+      ],
+      "max": [
+       "As respostas ligam-se, estão dentro da extensão, o tema escolhido está no topo, a escrita foi revista e as duas linhas finais apontam um verso.",
+       "Fecho: Passei a perguntar o que um poema não consegue nomear. Ajudou-me «Vem não sei como, e dói não sei porquê»: o poema conta o que não sabe explicar."
+      ]
+     },
+     "custa": [
+      "Erros de concordância e de acentuação que uma releitura apanhava.",
+      "Fecho genérico, sem verso.",
+      "Não escrever no topo o tema escolhido (A ou B)."
+     ]
+    }
+   ]
+  },
+  "m3-u2": {
+   "modulo": "M3",
+   "unidade": 2,
+   "titulo": "Nô mais: do canto alto ao silêncio",
+   "produto": "Núcleo comum (duas respostas) e um tema à escolha (A ou B), à mão, entre 200 e 250 palavras, mais duas linhas finais que não contam para as palavras. O aquecimento em cartões não conta para a nota.",
+   "nota": "Os exemplos foram escritos para esta grelha com outros casos do mesmo tipo (I, 106 e IX, 92, «Tanto de meu estado me acho incerto», uma frase inventada, uma reflexão sobre o barulho, a voz de I, 106 contra uma partida inventada de outro século), nunca com as passagens, os versos nem os factos da tarefa. As citações entre «» vêm das lições do módulo; as frases e as linhas sem «» foram escritas para esta grelha, e a data que usam vem das lições.",
+   "criterios": [
+    {
+     "nome": "Tese na primeira frase",
+     "max": 3,
+     "niveis": {
+      "0": [
+       "Não há tese, ou a primeira frase não diz o que defendes.",
+       "Noutro caso: Neste texto vou falar de I, 106."
+      ],
+      "parcial": [
+       "Há uma tese, mas é um facto ou um resumo, ou não está na primeira frase, ou a resposta não a prova.",
+       "Noutro caso: Em I, 106, o Poeta fala do mar e da terra."
+      ],
+      "max": [
+       "A primeira frase defende uma leitura que outra pessoa poderia contestar com versos, e o resto da resposta prova-a.",
+       "Noutro par de passagens: O Poeta encolhe o homem em I, 106 e manda-o crescer em IX, 92: a pequenez é o ponto de partida da fama."
+      ]
+     },
+     "custa": [
+      "Uma tese que é só um facto, como o número de cantos.",
+      "Resumir as passagens em vez de dizer o que defendes.",
+      "Uma tese que as citações depois não provam."
+     ]
+    },
+    {
+     "nome": "Citações localizadas e explicadas",
+     "max": 4,
+     "niveis": {
+      "0": [
+       "Não há citação, ou as palavras estão mudadas e sem lugar.",
+       "Noutro caso: O Poeta diz que o homem é um bicho pequeno."
+      ],
+      "parcial": [
+       "Há citações, mas falta o canto e a estância, ou uma das duas passagens, ou a explicação que as liga à tese.",
+       "Noutro caso: «Contra um bicho da terra tão pequeno?» Este verso é muito expressivo."
+      ],
+      "max": [
+       "Uma citação de cada passagem, letra a letra e entre «», com o canto e a estância, e explicada: o que o verso mostra e como prova a tese.",
+       "Noutro par: «Contra um bicho da terra tão pequeno?» (I, 106): a metáfora tira ao homem a grandeza da viagem. «Despertai já do sono do ócio ignavo» (IX, 92): o imperativo manda-o acordar. O homem pequeno é o que ainda não fez obras; a fama começa quando acorda."
+      ]
+     },
+     "custa": [
+      "Uma palavra trocada na citação.",
+      "Citar sem canto e estância.",
+      "Citar e passar à frente, sem dizer o que o verso mostra."
+     ]
+    },
+    {
+     "nome": "Gramática: modalidade e retoma",
+     "max": 4,
+     "niveis": {
+      "0": [
+       "Não classificas a modalidade nem dizes o que a palavra retoma.",
+       "Noutro caso: É uma frase do Poeta."
+      ],
+      "parcial": [
+       "Acertas só uma das duas perguntas, ou dás a modalidade sem o valor ou sem a marca, ou dizes o que se retoma sem dizer por que meio.",
+       "Noutros versos: «Respondo que não sei; porém suspeito»: modalidade epistémica. Na frase inventada O rapaz tinha medo do mar; o receio não o deixava dormir, receio retoma medo."
+      ],
+      "max": [
+       "Dizes a modalidade, o valor e a palavra que a marca; dizes que palavra retoma, o que retoma e por que meio.",
+       "Noutros versos: em «Respondo que não sei; porém suspeito», a modalidade é epistémica, com valor de probabilidade, e a marca é o verbo «suspeito». Na frase inventada O rapaz tinha medo do mar; o receio não o deixava dormir, a palavra receio retoma medo por um sinónimo: outra palavra para a mesma coisa."
+      ]
+     },
+     "custa": [
+      "Dar a modalidade sem o valor ou sem a palavra que a marca.",
+      "Dizer o que se retoma sem dizer por que meio.",
+      "Confundir a anáfora como figura com a anáfora como retoma."
+     ]
+    },
+    {
+     "nome": "Tema à escolha (A ou B): cinco elementos e a ligação",
+     "max": 6,
+     "niveis": {
+      "0": [
+       "Conta um ponto por elemento cumprido e mais um pela ligação que o tema pede. Aqui, não cumpres nenhum dos cinco elementos do teu tema.",
+       "A (outra coisa): O barulho é mau. B (outra voz): A viagem é perigosa."
+      ],
+      "parcial": [
+       "Cumpres um a quatro dos cinco elementos, ou cumpres os cinco sem a ligação que o tema pede.",
+       "A: quatro linhas que começam por O barulho, sem disfarce no fim e sem verso imitado. B: um só argumento, sem estância, e uma resposta que fala de outra coisa."
+      ],
+      "max": [
+       "Cumpres os cinco elementos do teu tema (um ponto cada) e a ligação (mais um ponto). Tema A: seis linhas que param uma cena e julgam uma coisa de hoje; «Este» ou «Esta» a abrir quatro linhas; uma enumeração do que essa coisa faz; um disfarce na última linha; o verso de VIII, 98 ou 99 que imitaste, citado. Ligação: o que imitaste do verso citado e o que retoma o teu «Este». Tema B: uma partida de hoje que é uma coisa, nunca uma pessoa; dois argumentos do Velho transpostos, cada um com a expressão de Camões citada e a estância (contam como dois); um facto do dossiê; a resposta de quem parte, em duas frases. Ligação: essa resposta responde mesmo a um dos argumentos, e não a outra coisa.",
+       "A, com outro modelo e outra palavra (o barulho, à maneira de «Agora espero, agora desconfio»): A cena para no meio da rua. / O barulho acorda quem dorme, / o barulho cala a conversa, / o barulho enche a noite, / o barulho entra pela janela / e chama alegria ao que é só ruído. Imitei «Agora espero, agora desconfio»: a mesma palavra a abrir, a juntar o que o barulho faz. Aqui, o barulho retoma-se pela repetição do nome, e essa repetição é também a figura. B, com outra voz e uma partida inventada, de outro século (o Poeta de I, 106 contra uma caravana que atravessa o deserto sem água de reserva): Partem sem água e chamam a isso coragem. «Onde terá segura a curta vida» (I, 106) quem atravessa a areia assim? E não é só o corpo: «Na terra tanta guerra, tanto engano» (I, 106), e no deserto também. Já em 1572 o poema sabia que o homem é pequeno. Resposta de quem parte: Pequenos, sim; é por isso que vamos juntos e devagar. A tua pergunta não nos trava: lembra-nos de levar mais água."
+      ]
+     },
+     "custa": [
+      "Tema A: linhas que começam por «Este» sem enumerar o que a coisa faz; última linha sem disfarce; um verso citado que não é de VIII, 98 ou 99.",
+      "Tema B: falar contra uma pessoa; argumentos sem a expressão de Camões ou sem a estância; um facto que não está no dossiê; uma resposta que fala de outra coisa.",
+      "Nos dois temas: cumprir os elementos sem a ligação que o tema pede."
+     ]
+    },
+    {
+     "nome": "Respostas articuladas, extensão e escrita revista",
+     "max": 3,
+     "niveis": {
+      "0": [
+       "Respostas soltas, ou muito fora das 200 a 250 palavras.",
+       "Três listas de palavras sem frases completas."
+      ],
+      "parcial": [
+       "As respostas ligam-se, mas falha uma ou mais destas: a revisão (erros que uma releitura apanhava), a extensão, o tema no topo ou as duas linhas finais com um verso.",
+       "Fecho: Aprendi muitas coisas sobre a epopeia."
+      ],
+      "max": [
+       "As respostas ligam-se, estão dentro da extensão, o tema escolhido está no topo, a escrita foi revista e as duas linhas finais apontam um verso.",
+       "Fecho: Vou perguntar o que fica por baixo de uma festa. Ensinou-mo «não é gosto, mas é mágoa»: o mesmo bem, lembrado, muda de nome."
+      ]
+     },
+     "custa": [
+      "Erros de concordância e de acentuação que uma releitura apanhava.",
+      "Fecho genérico, sem verso.",
+      "Não escrever no topo o tema escolhido (A ou B)."
+     ]
+    }
+   ]
+  },
+  "m5-u1": {
+   "modulo": "M5",
+   "unidade": 1,
+   "titulo": "Quem decide por quem: vozes de _Amor de Perdição_",
+   "produto": "Núcleo comum (duas respostas) e um tema à escolha (A ou B), à mão, entre 200 e 250 palavras, mais duas linhas finais que não contam para as palavras. O aquecimento em cartões não conta para a nota.",
+   "nota": "Os exemplos foram escritos para esta grelha com outros casos do mesmo tipo (histórias e cartas inventadas, outra frase do romance, a Casa de Camilo, Gil Vicente), nunca com as respostas da tarefa. As citações vêm das lições do sítio.",
+   "criterios": [
+    {
+     "nome": "Narrador: duas passagens, um recurso e o que quer de quem lê",
+     "max": 4,
+     "niveis": {
+      "0": [
+       "Não citas nenhuma passagem do narrador, ou citas falas de personagens como se fossem dele.",
+       "O narrador conta a história de um rapaz que vai preso."
+      ],
+      "parcial": [
+       "Citas uma passagem de cada parte, mas não identificas o recurso, ou só explicas o que o narrador quer numa delas, ou uma das passagens só conta.",
+       "Numa história inventada, uma só passagem: Ainda não sabia que nunca mais voltaria àquela casa. Aqui o narrador fala do futuro."
+      ],
+      "max": [
+       "Citas, entre «», uma passagem da Introdução e outra do cap. IV em que o narrador comenta, julga ou fala com quem lê; identificas um recurso pelo nome; e explicas, para cada passagem, o que o narrador quer provocar em quem lê.",
+       "Numa história inventada, com outras passagens. Primeira: Ainda não sabia que nunca mais voltaria àquela casa. O narrador antecipa o fim e quer que quem lê siga a cena já com medo. Segunda: O senhor, homem de muita honra, contou o dinheiro duas vezes antes de dar a esmola. A ironia (homem de muita honra) julga a personagem e quer que quem lê se ria dela."
+      ]
+     },
+     "custa": [
+      "Citar uma fala de Tadeu ou de Teresa como se fosse do narrador.",
+      "Escolher uma passagem que só conta, sem comentário nem juízo.",
+      "Dar o nome do recurso sem dizer o que faz a quem lê."
+     ]
+    },
+    {
+     "nome": "Funções sintáticas: as duas funções, os testes e o que mostram",
+     "max": 4,
+     "niveis": {
+      "0": [
+       "Não identificas as funções, ou dás funções sem nenhum teste e sem relação com a frase.",
+       "Em «Teu primo é um composto de todas as virtudes», virtudes é o sujeito, porque é a palavra mais importante."
+      ],
+      "parcial": [
+       "Identificas uma das funções com o teste, ou as duas sem teste, ou as duas com teste mas sem dizer o que mostram.",
+       "Em «Teu primo é um composto de todas as virtudes», «Teu primo» é o sujeito e «um composto de todas as virtudes» é predicativo do sujeito."
+      ],
+      "max": [
+       "Identificas as duas funções, provas cada uma com um teste da lição (trocar por um pronome, perguntar, cortar, passar à passiva) e explicas o que essas funções mostram da personagem na frase.",
+       "Em «Teu primo é um composto de todas as virtudes» (cap. IV), «Teu primo» é o sujeito: responde à pergunta _quem é um composto de todas as virtudes?_, e o verbo concorda com ele. A expressão «um composto de todas as virtudes» é predicativo do sujeito: com _ser_, diz como é o sujeito, e a frase não se aguenta sem ele. O sujeito é Baltasar e o predicativo é só elogio: Tadeu vende o noivo à filha."
+      ]
+     },
+     "custa": [
+      "Trocar os nomes das funções: cada uma tem o seu teste.",
+      "Dar a função sem o teste que a prova.",
+      "Explicar a função sem dizer o que mostra da personagem."
+     ]
+    },
+    {
+     "nome": "Tema à escolha (A ou B): cinco elementos e a explicação",
+     "max": 6,
+     "niveis": {
+      "0": [
+       "Conta um ponto por elemento cumprido e mais um pela explicação que o tema pede. Aqui, não cumpres nenhum dos cinco elementos do teu tema.",
+       "A (uma carta inventada de Tadeu à filha, no convento): Teresa, espero que estejas bem. B (um painel para a Casa de Camilo): Esta casa é muito bonita e tem muita história."
+      ],
+      "parcial": [
+       "Cumpres um a quatro dos cinco elementos, ou cumpres os cinco sem a explicação que o tema pede.",
+       "A: Na casa de meus avós, dia de Natal. Teresa: o teu primo ainda espera por ti. Que Deus te guarde. Teu pai. (As marcas estão todas; faltam a resposta, a memória, o recurso e o eco.) B: Esta é a casa de Camilo, em São Miguel de Seide. (Um facto, sem frase do romance nem o que o painel não pode afirmar.)"
+      ],
+      "max": [
+       "Cumpres os cinco elementos do teu tema (um ponto cada) e a explicação (mais um ponto). Tema A: as marcas da carta (local e data, vocativo, despedida e assinatura); a resposta a uma pergunta de Teresa; uma memória dos dois; um recurso expressivo teu; um eco do romance, entre «». Explicação: o facto do romance que a carta respeita e o que faz o recurso. Tema B: um painel para quem nunca leu o romance; dois factos do dossiê (contam como dois); uma frase curta do romance, entre «»; o que o painel não pode afirmar. Explicação: porque escolheste a frase.",
+       "A, noutra voz (uma carta inventada de Tadeu à filha, no convento): Na casa de meus avós, dia de Natal. Teresa: perguntas-me se ainda tens pai. Tens, e és tu que o recusas. Lembras-te da manhã de domingo em que te chamei para a missa? Já então te disse que «a violencia de um pae é sempre amor». A tua teimosia é um muro alto entre nós. Que Deus te dê juízo. Teu pai, Tadeu de Albuquerque. Respeitei o romance: Teresa está no convento com que o pai a ameaçou, e ele não se desdiz. A metáfora do muro mostra que Tadeu põe a culpa na filha. B, noutro lugar (um painel para a Casa de Camilo): Esta é a casa de Camilo Castelo Branco, em São Miguel de Seide. Foi reconstituída, refeita como era no tempo do escritor. Num romance dele, uma filha ameaçada pelo pai responde assim: «Thereza ergueu-se sem lagrimas, e entrou serenamente no seu quarto.» Escolhi a frase porque quem visita uma casa entra em quartos. Este painel não pode afirmar que tudo o que se vê é o que Camilo usou: a casa foi refeita."
+      ]
+     },
+     "custa": [
+      "Tema A: uma carta que contradiz o romance (um regresso, um casamento, alguém que já morreu vivo); copiar o exemplo inventado da lição F08; esquecer uma das marcas da carta.",
+      "Tema B: factos que não estão no dossiê; uma frase sem explicação; um painel que só faz sentido para quem leu o romance.",
+      "Nos dois temas: cumprir os elementos sem a explicação que o tema pede."
+     ]
+    },
+    {
+     "nome": "Rigor: citações exatas e nada contra o romance",
+     "max": 3,
+     "niveis": {
+      "0": [
+       "Citas de memória, com palavras mudadas e sem «», ou o que escreves contradiz o romance.",
+       "Na carta inventada de Tadeu, Teresa já casou com o primo."
+      ],
+      "parcial": [
+       "As citações estão entre «», mas uma tem uma palavra mudada ou a grafia corrigida, ou há uma contradição pontual com o romance.",
+       "Cito a frase de Tadeu sobre a violência e o amor com a grafia de hoje, e sem dizer de que capítulo é."
+      ],
+      "max": [
+       "Todas as citações estão letra a letra, com a grafia da edição, entre «» e com o lugar (Introdução ou capítulo); nada contradiz o romance; o que é ficção fica separado do que é história.",
+       "«a violencia de um pae é sempre amor» (cap. IV): copio violencia e pae como estão na edição, sem os corrigir."
+      ]
+     },
+     "custa": [
+      "Corrigir a grafia da edição dentro das aspas.",
+      "Citar sem dizer de que parte do romance é.",
+      "Contar como facto da história o que só acontece no romance."
+     ]
+    },
+    {
+     "nome": "Respostas articuladas, extensão e escrita revista",
+     "max": 3,
+     "niveis": {
+      "0": [
+       "Respostas soltas, ou muito fora das 200 a 250 palavras, ou sem as duas linhas finais.",
+       "Três listas de palavras, sem frases completas."
+      ],
+      "parcial": [
+       "As respostas ligam-se, mas falha uma destas: a revisão (erros que uma releitura apanhava), a extensão, o tema no topo ou as duas linhas finais com uma passagem.",
+       "Fecho: Aprendi muitas coisas sobre o amor."
+      ],
+      "max": [
+       "As respostas ligam-se, estão dentro da extensão, o tema escolhido está no topo, a escrita foi revista e as duas linhas finais respondem à pergunta e apontam uma passagem.",
+       "Fecho, noutra obra: Em Gil Vicente, quem decide é Inês, e escolhe a quem obedecer. Fez-me pensar nisso: «Mais quero asno que me leve que cavalo que me derrube»."
+      ]
+     },
+     "custa": [
+      "Erros de concordância e de acentuação que uma releitura apanhava.",
+      "Fecho genérico, sem passagem.",
+      "Não escrever no topo o tema escolhido (A ou B)."
+     ]
+    }
+   ]
+  },
+  "m5-u2": {
+   "modulo": "M5",
+   "unidade": 2,
+   "titulo": "Uma casa, um jantar, uma frase: _Os Maias_",
+   "produto": "Núcleo comum (duas respostas) e um tema à escolha (A ou B), à mão, entre 200 e 250 palavras, mais duas linhas finais que não contam para as palavras. O aquecimento em cartões não conta para a nota.",
+   "nota": "Os exemplos foram escritos para esta grelha com outros casos do mesmo tipo (uma cantiga de Mendinho, uma pergunta de Ega, uma cena noutro espaço, um parágrafo noutro tema, o romance de Camilo), nunca com as respostas da tarefa. As citações vêm das lições do sítio.",
+   "criterios": [
+    {
+     "nome": "O Ramalhete: o que volta, o que muda e a vida de Carlos",
+     "max": 4,
+     "niveis": {
+      "0": [
+       "Não citas nenhuma expressão da descrição, ou citas sem dizer o que vem do cap. I e o que é novo.",
+       "Mendinho repete muitas vezes o mesmo verso."
+      ],
+      "parcial": [
+       "Citas uma expressão que volta, mas não dizes o que muda, ou não dás nome à estrutura, ou não ligas a repetição à vida de Carlos.",
+       "Em Mendinho, «Eu atendendo meu amig', eu a[tendendo]» volta no fim das estrofes. É uma repetição."
+      ],
+      "max": [
+       "Citas, entre «», uma expressão que já estava no cap. I e outra que a descrição final traz de novo; dás nome à estrutura; e explicas o que a repetição e a diferença dizem da vida que, para Carlos, ficou metida na casa.",
+       "Noutra obra, com outra repetição: em Mendinho, «Eu atendendo meu amig', eu a[tendendo]» volta igual no fim de todas as estrofes, enquanto o mar sobe à volta da rapariga. O que volta é a espera; o que muda é o perigo. É o refrão, e diz que a espera não cede, mesmo quando já não há saída."
+      ]
+     },
+     "custa": [
+      "Citar só o que se repete, sem o que muda.",
+      "Dar à estrutura um nome que não lhe corresponde.",
+      "Descrever a casa sem a ligar à vida de Carlos."
+     ]
+    },
+    {
+     "nome": "Modos de relato: as duas passagens, duas marcas e o discurso direto",
+     "max": 4,
+     "niveis": {
+      "0": [
+       "Não identificas os modos de relato, ou dás um nome sem nenhuma marca que o prove.",
+       "Em «Então Ega perguntou, do fundo do sofá onde se enterrára, se, n'esses ultimos annos, elle não tivera a idéa», há discurso direto."
+      ],
+      "parcial": [
+       "Identificas os dois modos, mas provas o segundo com uma só marca, ou com uma marca que sozinha não chega, ou a reescrita em discurso direto não muda o que tem de mudar.",
+       "Em «Então Ega perguntou, do fundo do sofá onde se enterrára, se, n'esses ultimos annos, elle não tivera a idéa», há discurso indireto, porque está na terceira pessoa."
+      ],
+      "max": [
+       "Identificas o modo de relato de cada passagem, provas o segundo com duas marcas certas e reescreves a pergunta em discurso direto, com travessão, mudando o que o novo contexto pede (pessoa, tempo, deíticos).",
+       "Em «Então Ega perguntou, do fundo do sofá onde se enterrára, se, n'esses ultimos annos, elle não tivera a idéa» (último capítulo), o relato é indireto: há um verbo declarativo, _perguntou_, e uma oração subordinada com _se_. Em discurso direto, Ega diria, depois de um travessão: _Nestes últimos anos, não tiveste a ideia, o vago desejo de voltar para Portugal?_ Ega fala com Carlos: _elle_ passa a _tu_ e _tivera_ passa a _tiveste_."
+      ]
+     },
+     "custa": [
+      "Provar um modo de relato só com o tempo verbal.",
+      "Reescrever em discurso direto sem travessão, ou sem mudar o que o novo contexto pede.",
+      "Confundir o verbo declarativo com qualquer verbo da frase."
+     ]
+    },
+    {
+     "nome": "Tema à escolha (A ou B): cinco elementos e a explicação ou a conclusão",
+     "max": 6,
+     "niveis": {
+      "0": [
+       "Conta um ponto por elemento cumprido e mais um pela explicação (A) ou pela conclusão (B). Aqui, não cumpres nenhum dos cinco elementos do teu tema.",
+       "A: Os meus amigos estavam a jantar e falaram de muitas coisas. B: Eu acho que cada um tem a sua opinião sobre a vida."
+      ],
+      "parcial": [
+       "Cumpres um a quatro dos cinco elementos, ou cumpres os cinco sem a explicação (A) ou sem a conclusão (B).",
+       "A: À mesa do café, a Joana falou do estágio e o Rui olhou para o relógio. (Não há interrupção, fala em discurso direto nem pensamento em indireto livre.) B, noutro tema: Fotografar tudo ajuda a lembrar, desde que se volte a olhar para as fotografias. Dir-me-ão que quem fotografa não vê o que tem à frente. (Faltam a citação explicada, o facto datado, a refutação e a conclusão.)"
+      ],
+      "max": [
+       "Cumpres os cinco elementos do teu tema (um ponto cada) e a explicação ou a conclusão (mais um ponto). Tema A: uma mesa de hoje narrada na 3.ª pessoa; uma conversa séria; uma coisa banal que a corta ou desmonta; uma fala em discurso direto; um pensamento em indireto livre. Explicação: o que imitaste de Eça e o que critica a tua interrupção. Tema B: a tese na primeira frase; outra citação do último capítulo, explicada; um facto datado do dossiê, ligado à tese; um contra-argumento; a tua refutação. Conclusão: volta à tese com outras palavras.",
+       "A, noutro espaço (uma paragem de autocarro): Na paragem, a Inês contava à mãe que o estágio tinha acabado sem contrato. A mãe perguntou: «E agora?» O autocarro apareceu ao fundo da rua e as duas correram para ele. A Inês sentou-se à janela. Contrato? Isso ficava para amanhã. Imitei o «Sole normande?»: uma coisa banal, o autocarro, corta a conversa séria e ninguém volta a ela. Critico as duas, que adiam o problema à primeira desculpa. B, noutro tema: Fotografar tudo ajuda a lembrar, desde que se volte a olhar para as fotografias. [tese] Dir-me-ão que quem fotografa não vê o que tem à frente. [contra-argumento] Respondo que o problema não é a câmara, é guardar sem escolher. [refutação] Por isso, a fotografia só ajuda a memória de quem a escolhe e a revê. [conclusão] A citação e o facto faltam de propósito: no teu texto, a citação do último capítulo entra depois da tese e o facto do dossiê antes do contra-argumento. As marcas entre parênteses retos não se escrevem."
+      ]
+     },
+     "custa": [
+      "Tema A: uma cena sem interrupção, ou com a fala e o pensamento no mesmo modo de relato; dizer o que se imitou sem dizer o que se critica.",
+      "Tema B: uma tese que não toma posição; usar a frase de Ega como única citação; um facto sem data ou que não está no dossiê; um contra-argumento sem refutação.",
+      "Nos dois temas: cumprir os elementos sem a explicação ou a conclusão que o tema pede."
+     ]
+    },
+    {
+     "nome": "Rigor: citações exatas e factos do dossiê",
+     "max": 3,
+     "niveis": {
+      "0": [
+       "Citas de memória, sem «», ou usas um facto que não está no dossiê nem nas lições.",
+       "Toda a gente em Portugal já leu este romance."
+      ],
+      "parcial": [
+       "As citações estão entre «», mas uma tem a grafia corrigida ou uma palavra trocada, ou o facto do dossiê vem sem data.",
+       "Cito a frase do narrador sobre Teresa no quarto com a grafia de hoje, _lágrimas_ e _Teresa_, em vez de copiar a edição."
+      ],
+      "max": [
+       "Todas as citações estão letra a letra, com a grafia da edição, entre «» e com o lugar; o facto vem do dossiê, com a data; nada do que escreves contradiz o romance.",
+       "Noutra obra: «mate-me; mas não me force a casar com meu primo!» (cap. IV de _Amor de Perdição_), copiado como está, e o filme de Mário Barroso, com a data, 2008."
+      ]
+     },
+     "custa": [
+      "Corrigir a grafia da edição dentro das aspas.",
+      "Usar um facto sem data, ou uma data que não está no dossiê.",
+      "Dar como facto o que só acontece no romance."
+     ]
+    },
+    {
+     "nome": "Respostas articuladas, extensão e escrita revista",
+     "max": 3,
+     "niveis": {
+      "0": [
+       "Respostas soltas, ou muito fora das 200 a 250 palavras, ou sem as duas linhas finais.",
+       "Três listas de palavras, sem frases completas."
+      ],
+      "parcial": [
+       "As respostas ligam-se, mas falha uma destas: a revisão (erros que uma releitura apanhava), a extensão, o tema no topo ou as duas linhas finais com uma passagem.",
+       "Fecho: Aprendi muitas coisas sobre _Os Maias_."
+      ],
+      "max": [
+       "As respostas ligam-se, estão dentro da extensão, o tema escolhido está no topo, a escrita foi revista e as duas linhas finais respondem à pergunta e apontam uma passagem.",
+       "Fecho, noutra obra: Teresa não deixa que lhe falhem a vida; recusa, mesmo vencida. Fez-me pensar nisso: «Thereza ergueu-se sem lagrimas, e entrou serenamente no seu quarto.»"
+      ]
+     },
+     "custa": [
+      "Erros de concordância e de acentuação que uma releitura apanhava.",
+      "Fecho genérico, sem passagem.",
+      "Não escrever no topo o tema escolhido (A ou B)."
+     ]
+    }
+   ]
+  },
+  "m6-u1": {
+   "modulo": "M6",
+   "unidade": 1,
+   "titulo": "Um ideal que não se alcança",
+   "produto": "Núcleo comum (duas respostas) e um tema à escolha (A ou B), à mão, entre 200 e 240 palavras, mais duas linhas finais que não contam para as palavras. O aquecimento em cartões não conta para a nota.",
+   "nota": "Os exemplos foram escritos para esta grelha com outros casos do mesmo tipo (outro par de sonetos, outro verso, outro soneto para reescrever, outro poema para filmar), nunca com os sonetos, o verso ou o soneto da tarefa. As citações vêm das lições do M3 e do M6.",
+   "criterios": [
+    {
+     "nome": "Os dois sonetos: a voz, o sonho e os versos",
+     "max": 4,
+     "niveis": {
+      "0": [
+       "Não dizes a quem fala a voz nem o que é o sonho ou o ideal, ou não citas nenhum verso.",
+       "Os dois sonetos são tristes e falam de sonhos."
+      ],
+      "parcial": [
+       "Fazes isto só num soneto, ou citas versos sem os explicar, ou citas fora dos tercetos, ou tomas a voz pelo próprio poeta.",
+       "Em «Na mão de Deus», Antero está cansado da vida: «Dorme o teu somno, coração liberto,»."
+      ],
+      "max": [
+       "Em cada soneto, dizes a quem fala a voz e o que é o sonho ou o ideal, com um verso exato dos tercetos, explicado.",
+       "Noutro par: em «Alma minha gentil», a voz fala com a amada morta, e o desejo é voltar a vê-la: «Roga a Deus, que teus anos encurtou,». Em «Na mão de Deus», fala com o próprio coração, já sem Ideal, e manda-o descansar: «Dorme o teu somno, coração liberto,»."
+      ]
+     },
+     "custa": [
+      "Tomar a voz do soneto pelo próprio poeta, como se o poema contasse a vida dele.",
+      "Citar com uma palavra trocada, ou sem dizer de que soneto é o verso.",
+      "Citar fora dos tercetos, que é onde a tarefa pede os versos."
+     ]
+    },
+    {
+     "nome": "A comparação: uma semelhança e o que muda",
+     "max": 3,
+     "niveis": {
+      "0": [
+       "Não há semelhança nem diferença, ou só há um gosto.",
+       "Gosto mais do segundo soneto."
+      ],
+      "parcial": [
+       "Há uma semelhança ou uma diferença, mas não explicas o que muda no papel do sonho, ou o que muda não se apoia nos versos.",
+       "Os dois são sonetos e falam de sonhos."
+      ],
+      "max": [
+       "Indicas uma semelhança e explicas, com os versos citados, o que muda de um soneto para o outro no papel do sonho.",
+       "No mesmo par: nos dois, Deus aparece no último terceto. Muda o desejo: em Camões, continua; em «Na mão de Deus», foi posto de lado («Depuz do Ideal e da Paixão»), e o coração descansa."
+      ]
+     },
+     "custa": [
+      "Comparar a vida dos poetas em vez dos versos.",
+      "Ficar na semelhança e não dizer o que muda.",
+      "Dizer o que muda sem um verso que o mostre."
+     ]
+    },
+    {
+     "nome": "O verso de Cesário: as orações, o «que» e o que diz a oração",
+     "max": 4,
+     "niveis": {
+      "0": [
+       "Não divides o verso em orações, ou classificas sem relação com o verso.",
+       "O verso tem um «que» e é muito bonito."
+      ],
+      "parcial": [
+       "Divides e classificas, mas a justificação falha (o que faz «que», a palavra que retoma ou a sua função), ou confundes a relativa com a completiva, ou não dizes o que a oração acrescenta.",
+       "Em «Os filhos que depois naufragam nas tormentas», a oração «que depois naufragam» é subordinada substantiva completiva."
+      ],
+      "max": [
+       "Divides o verso em orações, classificas cada uma, justificas com o papel de «que» na sua oração (se completa um verbo, ou se retoma um nome e com que função) e explicas o que essa oração acrescenta ao verso.",
+       "Noutro verso de Cesário, «Eu temo que me avives / Uma paixão defunta»: «Eu temo» é a subordinante; a oração com «que» é subordinada substantiva completiva, porque completa «temo» (Eu temo isso), e «que» não retoma nenhum nome. A oração diz o que a voz receia: reviver uma paixão morta."
+      ]
+     },
+     "custa": [
+      "Confundir a relativa com a completiva: a relativa retoma um nome, a completiva completa um verbo.",
+      "Classificar pela palavra «que», sem mostrar o que ela faz na sua oração.",
+      "Classificar sem dizer o que a oração faz ao sentido do verso."
+     ]
+    },
+    {
+     "nome": "Tema à escolha (A ou B): cinco elementos e a explicação",
+     "max": 6,
+     "niveis": {
+      "0": [
+       "Conta um ponto por elemento cumprido e mais um pela explicação que o tema pede. Aqui, não cumpres nenhum dos cinco elementos do teu tema.",
+       "A: Quero ser feliz e vou conseguir. B: Fazia um vídeo bonito com o mar."
+      ],
+      "parcial": [
+       "Cumpres um a quatro dos cinco elementos, ou cumpres os cinco sem a explicação que o tema pede.",
+       "A, a partir de «Na mão de Deus»: um texto de hoje em que alguém desiste de um sonho e descansa, sem verso citado nem diferença. B, com «Alma minha gentil»: três planos sem o verso de cada um, e um facto que não está nas lições."
+      ],
+      "max": [
+       "Cumpres os cinco elementos do teu tema (um ponto cada) e explicas o que o tema pede (mais um ponto). Tema A: um ideal de hoje num lugar concreto; a procura, a chegada e a porta aberta; uma última frase que vira o que o texto prometia; uma anáfora ou uma antítese tua; uma diferença entre o teu ideal e o do cavaleiro. Explicação: o verso de Antero que imitaste, citado e explicado. Tema B: três planos; um verso exato em cada um; dois factos do dossiê (contam como dois); o que o vídeo não pode dar como facto. Explicação: se o último plano ilustra, contraria ou acrescenta algo ao verso, e porquê.",
+       "A, com outro soneto, «Na mão de Deus» (texto inventado): Às onze da noite, no último andar da residência, desliguei o telemóvel. Desci as escadas devagar, degrau a degrau. Deixei no corredor a lista dos festivais que nunca me escolheram, como quem deixa um casaco que já não serve. Contei os anos, contei as recusas, contei as noites; depois deixei de contar. Dorme, cabeça, que amanhã não há candidatura. Imitei «Desci a passo e passo a escada estreita»: também começo por descer, devagar, de um lugar alto. A diferença: no soneto, o coração descansa na mão de Deus; eu descanso porque larguei uma lista. B, com outro poema, «Alma minha gentil», de Camões: plano 1, um quarto vazio de manhã, com «Alma minha gentil, que te partiste»; plano 2, um lençol dobrado, com «Repousa lá no céu eternamente,»; plano 3, uma janela aberta para o céu e alguém de costas para ela, com «E viva eu cá na terra sempre triste.». Abro com o retrato de Camões por Fernão Gomes (c. 1577), que está em domínio público; o soneto vem nas _Rhythmas_, de 1595, e a legenda di-lo. O vídeo não pode dizer quem era a amada: o soneto não o diz. O último plano acrescenta algo ao verso: o verso diz só a terra «sempre triste»; a imagem junta-lhe o gesto de virar as costas ao céu, onde a amada repousa."
+      ]
+     },
+     "custa": [
+      "Tema A: copiar versos no teu texto; um ideal abstrato, como ser feliz, ou um lugar vago; uma última frase que não vira nada.",
+      "Tema B: planos sem verso, ou com o verso mudado; factos que não estão no dossiê; dar como facto da vida do poeta o que é o sentido do soneto.",
+      "Nos dois temas: cumprir os elementos sem a explicação que o tema pede."
+     ]
+    },
+    {
+     "nome": "Respostas articuladas, extensão e escrita revista",
+     "max": 3,
+     "niveis": {
+      "0": [
+       "Respostas soltas, ou muito fora das 200 a 240 palavras.",
+       "Três listas de palavras sem frases completas."
+      ],
+      "parcial": [
+       "As respostas ligam-se, mas falha uma ou mais destas: a revisão (erros que uma releitura apanhava), a extensão, o tema no topo ou as duas linhas finais com um verso.",
+       "Fecho: Aprendi muitas coisas sobre Antero."
+      ],
+      "max": [
+       "As respostas ligam-se, estão dentro da extensão, o tema escolhido está no topo, a escrita foi revista e as duas linhas finais apontam um verso.",
+       "Fecho: Passei a procurar o verso onde um soneto vira. Ajudou-me «Dorme o teu somno, coração liberto,»: depois da viagem, a ordem é dormir."
+      ]
+     },
+     "custa": [
+      "Erros de concordância e de acentuação que uma releitura apanhava.",
+      "Fecho genérico, sem verso.",
+      "Não escrever no topo o tema escolhido (A ou B)."
+     ]
+    }
+   ]
+  },
+  "m6-u2": {
+   "modulo": "M6",
+   "unidade": 2,
+   "titulo": "A cidade vista e transfigurada",
+   "produto": "Núcleo comum (duas respostas) e um tema à escolha (A ou B), à mão, entre 200 e 240 palavras, mais duas linhas finais que não contam para as palavras. O aquecimento em cartões não conta para a nota.",
+   "nota": "Os exemplos foram escritos para esta grelha com outros casos do mesmo tipo (outra estrofe, outro verso, outras palavras de 1887, outro poema para fotografar), nunca com a estrofe, os versos ou as palavras que a tarefa pede. As citações vêm das lições do M3 e do M6.",
+   "criterios": [
+    {
+     "nome": "A estrofe de «Horas Mortas»: o que se vê e em que se transforma",
+     "max": 4,
+     "niveis": {
+      "0": [
+       "Não dizes o que o sujeito observa nem em que o transforma, ou não identificas nenhum recurso.",
+       "Em «Num Bairro Moderno», fala-se de legumes."
+      ],
+      "parcial": [
+       "Dizes o que se observa e em que se transforma, mas sem dois recursos com nome, ou nomeias recursos sem as palavras que os mostram, ou sem explicar o efeito.",
+       "Em «Num Bairro Moderno», o cesto vira uma horta. É uma metáfora muito bonita."
+      ],
+      "max": [
+       "Dizes o que o sujeito observa e em que o transforma, identificas dois recursos pelo nome, com as palavras que os mostram, e explicas o efeito na cidade que o poema constrói.",
+       "Noutro poema, «Num Bairro Moderno»: às dez da manhã, o sujeito vê a larga rua ao sol, e o branco torna-se um golpe: «E fere a vista, com brancuras quentes,». Sinestesia em «brancuras quentes» (a cor aquece) e metáfora em «fere a vista» (a luz fere): a rua das casas ricas agride quem passa."
+      ]
+     },
+     "custa": [
+      "Nomear um recurso sem as palavras que o mostram.",
+      "Ficar no que se vê e não dizer em que se transforma.",
+      "Explicar o efeito com uma ideia geral, como é triste, em vez da cidade que a estrofe constrói."
+     ]
+    },
+    {
+     "nome": "O livro do real: a oração e a leitura da estrofe",
+     "max": 3,
+     "niveis": {
+      "0": [
+       "Não classificas a oração, ou classificas sem relação com o verso, e não dizes se a estrofe fica no real.",
+       "A oração é uma frase do poema."
+      ],
+      "parcial": [
+       "Classificas a oração sem mostrar porquê, ou dizes se a estrofe fica no real ou vai além dele sem te apoiares nas palavras.",
+       "Em «Um sopro que arripia os hombros quasi nús.», a oração com «que» é completiva, porque começa por «que»."
+      ],
+      "max": [
+       "Classificas a oração e mostras porquê, e dizes, com as palavras da estrofe, se ela fica no real ou vai além dele.",
+       "Noutro verso de «Ao Gás», em «Um sopro que arripia os hombros quasi nús.», a oração com «que» é subordinada adjetiva relativa restritiva: «que» retoma «sopro» e é sujeito de «arripia». E «Num Bairro Moderno» volta ao real: «Nós levantámos todo aquelle peso» é um gesto."
+      ]
+     },
+     "custa": [
+      "Classificar pelo «que» sem ver o que a oração faz: completa um verbo ou retoma um nome?",
+      "Dizer que a estrofe fica no real, ou vai além dele, sem uma palavra que o prove.",
+      "Confundir o sujeito do poema com o próprio Cesário."
+     ]
+    },
+    {
+     "nome": "Palavras com passado: o étimo, as vias e as grafias",
+     "max": 4,
+     "niveis": {
+      "0": [
+       "Não dizes a via de nenhuma das palavras, nem passas as grafias para hoje.",
+       "São palavras parecidas."
+      ],
+      "parcial": [
+       "Dizes a via de cada palavra sem a mostrar na forma, comparada com o étimo, ou passas as grafias para hoje sem dizer o que mudou.",
+       "Chave veio pela via popular e clave pela erudita. «Edade-média» hoje escreve-se Idade Média."
+      ],
+      "max": [
+       "Mostras a via de cada palavra comparando as suas letras com as do étimo, e passas as duas grafias para hoje, com o nome da mudança.",
+       "Noutro par, de _macula-_: mácula guarda quase todas as letras do latim (via erudita); mancha afasta-se dele (via popular). E de 1887: «Edade-média» passa a Idade Média (a vogal inicial fixou-se em i, o hífen caiu e Média leva maiúscula); «oxygenio» passa a oxigénio (o y passou a i, com acento gráfico)."
+      ]
+     },
+     "custa": [
+      "Dizer a via sem mostrar, nas letras, o que mudou desde o étimo.",
+      "Inventar um étimo, em vez de o procurar na lição.",
+      "Passar a palavra para a grafia de hoje sem dizer o que mudou."
+     ]
+    },
+    {
+     "nome": "Tema à escolha (A ou B): cinco elementos e a explicação",
+     "max": 6,
+     "niveis": {
+      "0": [
+       "Conta um ponto por elemento cumprido e mais um pela explicação que o tema pede. Aqui, não cumpres nenhum dos cinco elementos do teu tema.",
+       "A: Passo pela rua e vejo pessoas. B: Tirava uma fotografia bonita ao rio."
+      ],
+      "parcial": [
+       "Cumpres um a quatro dos cinco elementos, ou cumpres os cinco sem a explicação que o tema pede.",
+       "A: um lugar, uma hora e um tipo social, sem sensações nem transfiguração. B, com «Descalça vai para a fonte»: duas fotografias com legenda, sem a relação explicada e sem factos."
+      ],
+      "max": [
+       "Cumpres os cinco elementos do teu tema (um ponto cada) e explicas o que o tema pede (mais um ponto). Tema A: um lugar e uma hora, percorridos a pé; duas sensações de sentidos diferentes; um tipo social de hoje com um gesto; uma transfiguração tua; uma diferença entre a tua cidade e a dele. Explicação: o verso de Cesário que imitaste, citado e explicado. Tema B: duas fotografias, cada uma com lugar e hora; em cada uma, a legenda com um verso exato e a parte; dois factos do dossiê (contam como dois); o que não podes fotografar, e porquê. Explicação: a relação, não literal, entre uma fotografia e o seu verso.",
+       "A, à maneira de outro poema, «Num Bairro Moderno» (texto inventado): Sete e meia: atravesso a pé o átrio da estação. Cheira a café queimado e a chuva nos casacos; os altifalantes repetem um atraso. De mochila quadrada às costas, molhado, apressado, um estafeta conta as moedas da gorjeta com o polegar. E a mochila, de repente, é uma casa que ele leva às costas para lado nenhum. Imitei «E rota, pequenina, azafamada,»: também digo primeiro como a pessoa vem e a pressa que tem, e só depois quem é. A diferença: a vendedora do poema pousa o cesto numa escada; o estafeta não pousa nada. B, com outro poema, «Descalça vai para a fonte», de Camões: fotografia 1, às oito da manhã, numa passadeira, uma rapariga com o portátil na cabeça, por causa da chuva; legenda: «Leva na cabeça o pote,» (primeira volta). Fotografia 2, ao fim da tarde, na paragem do autocarro, a rapariga a correr; legenda: «Vai formosa, e não segura.» (mote). A gravura _Lavadeiras portuguesas_ (Henri L'Evêque, 1814) deu-me o enquadramento do pote à cabeça; a leitura de Maria Flor Pedroso, na série _Camões, Outros 500_, ensinou-me o verso que volta. Não posso fotografar a insegurança de que fala o verso: fica na legenda. A primeira não é literal: o portátil não é um pote, mas o gesto de levar à cabeça o que é precioso é o mesmo."
+      ]
+     },
+     "custa": [
+      "Tema A: um lugar vago ou sem hora; sensações todas do mesmo sentido; um tipo social sem gesto; copiar versos de Cesário no teu texto.",
+      "Tema B: legendas sem verso exato ou sem a parte; uma relação literal, que só repete o verso; factos que não estão no dossiê; fotografar pessoas sem autorização.",
+      "Nos dois temas: cumprir os elementos sem a explicação que o tema pede."
+     ]
+    },
+    {
+     "nome": "Respostas articuladas, extensão e escrita revista",
+     "max": 3,
+     "niveis": {
+      "0": [
+       "Respostas soltas, ou muito fora das 200 a 240 palavras.",
+       "Três listas de palavras sem frases completas."
+      ],
+      "parcial": [
+       "As respostas ligam-se, mas falha uma ou mais destas: a revisão (erros que uma releitura apanhava), a extensão, o tema no topo ou as duas linhas finais com um verso.",
+       "Fecho: Gostei muito de Cesário."
+      ],
+      "max": [
+       "As respostas ligam-se, estão dentro da extensão, o tema escolhido está no topo, a escrita foi revista e as duas linhas finais apontam um verso.",
+       "Fecho: Passei a ver as montras quando as luzes se apagam. Ensinou-me «Tornam-se mausoléos as armações fulgentes.»."
+      ]
+     },
+     "custa": [
+      "Erros de concordância e de acentuação que uma releitura apanhava.",
+      "Fecho genérico, sem verso.",
+      "Não escrever no topo o tema escolhido (A ou B)."
+     ]
+    }
+   ]
   }
+ }
 }

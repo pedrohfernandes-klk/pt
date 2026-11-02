@@ -1,3 +1,4 @@
+# 31/10/2026: M3, M5 e M6 passam ao contrato das aulas de tarefa.
 from pathlib import Path
 import json,sys,unittest,re
 ROOT=Path(__file__).resolve().parents[1]
@@ -9,7 +10,7 @@ class Synthesis(unittest.TestCase):
    s=(ROOT/f'm{m}/index.html').read_text('utf-8')
    # 26/10: the task is a lesson; synthesis is inside its production time, never a separate gate.
    # 27/10/2026 (passagem do GPT, tarefas por unidade): o M2 passa ao mesmo modelo, com duas aulas de tarefa.
-   if m in (1,2,4,7):
+   if m in (1,2,3,4,5,6,7):
     self.assertIn('unit-task-route.js',s)
     self.assertNotIn('sinteseFeita',s)
     self.assertNotIn('data-sintese-registar',s)

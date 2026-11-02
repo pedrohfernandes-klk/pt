@@ -183,6 +183,9 @@ def pagina(raiz, d):
         '<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">'
         f'<title>Aquecer · {escape(simples, quote=False)} · {M}</title>'
         f'<meta name="description" content="{escape(d["descricao"])}">'
+        '<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>'
+        '<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;family=Special+Elite&amp;display=swap" rel="stylesheet">'
+        '<style>.jogo .tit{text-wrap:balance}</style>'
         '<link rel="stylesheet" href="../../../assets/pt-lessons/lesson.css">'
         '<script defer src="../../../assets/pt-lessons/casca.js"></script>'
         f'<script defer src="../../../assets/pt-lessons/jogo.js?v={V_JOGO}"></script>'
@@ -241,8 +244,8 @@ def main(argv=None):
         alvo = saida / 'tarefas' / d['slug'] / 'aquecimento' / 'index.html'
         html = pagina(raiz, d)
         alvo.parent.mkdir(parents=True, exist_ok=True)
-        if not alvo.exists() or alvo.read_text('utf-8') != html:
-            alvo.write_text(html, 'utf-8')
+        if not alvo.exists() or alvo.read_bytes() != html.encode('utf-8'):
+            alvo.write_text(html, 'utf-8', newline='\n')
         feitos.append(d['slug'])
     for slug, erros in falhas.items():
         print(f'NÃO GERADO {slug}:', *erros, sep='\n  ', file=sys.stderr)

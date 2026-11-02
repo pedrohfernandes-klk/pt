@@ -1,0 +1,252 @@
+{
+ "slug": "m5-u2",
+ "modulo": "m5",
+ "unidade": 2,
+ "versao": "1",
+ "momento": "No início da aula de tarefa",
+ "titulo": "Uma casa, um jantar, uma frase: <i>Os Maias</i>",
+ "descricao": "Aquecimento em cartões no início da aula de tarefa da unidade 2 do M5: distinguir os modos de relato e passar o indireto livre a discurso direto, ler o valor de um espaço e de uma repetição, ver o que critica uma interrupção banal e montar um parágrafo de opinião, com outros exemplos.",
+ "licoes_das_citacoes": [
+  "m5/licao-m5-f10",
+  "m5/licao-m5-f12",
+  "m5/licao-m5-f13"
+ ],
+ "menu": [
+  [
+   "../../../m5/licao-m5-f10/",
+   "Relembrar F10, o Ramalhete"
+  ],
+  [
+   "../../../m5/licao-m5-f12/",
+   "Relembrar F12, os modos de relato"
+  ],
+  [
+   "../../../m5/licao-m5-f13/",
+   "Relembrar F13, o texto de opinião"
+  ]
+ ],
+ "reservadas": [
+  "parece estar mettida",
+  "vida inteira",
+  "dois annos",
+  "sombrio casarão",
+  "paredes severas",
+  "tons de ruina",
+  "deshabitado",
+  "janellinhas",
+  "postigos",
+  "ecclesiastica",
+  "penumbra",
+  "treva",
+  "mudo, para sempre",
+  "supplicou",
+  "Alli todos",
+  "d'aceio",
+  "de sala, hein",
+  "excremento",
+  "latrinaria",
+  "Sole normande",
+  "linguado",
+  "travessa",
+  "Falhámos a vida",
+  "inoffensivo",
+  "nullo",
+  "assado",
+  "planeou com a imaginação",
+  "succedido",
+  "homem rico que vive bem",
+  "pelo sentimento e não pela razão",
+  "idéa de romantico",
+  "relevo á vida",
+  "Botelho",
+  "Panteão",
+  "Benoliel",
+  "minissérie"
+ ],
+ "_nota": "30/10/2026: proposta da autora para o docente. As frases de treino são inventadas e vão sem «» (a sala do filme, a Rita, a Marta no cacifo, a reunião de vizinhos com o café, o parágrafo sobre legendas e séries, o livro antigo). As passagens de Eça usadas (o quintal do cap. I e o «Pois bem.» de Alencar) não são as que a tarefa pede. Nenhum cartão de fazer usa a descrição final do Ramalhete, as duas passagens de Alencar do núcleo, o «Sole normande?» nem as frases do último capítulo. Revisão de 30/10: nenhum cartão monta uma mesa de hoje (o tema A), e as peças do texto de opinião têm os nomes da lição F13.",
+ "cartoes": [
+  {
+   "t": "ler",
+   "rot": "Abre",
+   "titulo": "Uma casa, um jantar, uma frase",
+   "html": "<p class=\"abre\"><b>Uma casa em Lisboa, um jantar num hotel, uma frase dita no fim, antes de descer uma escada forrada de veludo.</b> Este aquecimento não faz a tarefa: treina com frases inventadas e outros casos.</p><div class=\"caixa\"><h3>A tarefa de hoje</h3><p><b>Núcleo, para todos.</b> O Ramalhete no último capítulo; dois modos de relato numa fala de Alencar.</p><p><b>Tema A.</b> Uma mesa de hoje, à maneira do jantar do Hotel Central.</p><p><b>Tema B.</b> O «Falhámos a vida, menino!» de Ega ainda diz alguma coisa a quem tem a tua idade?</p></div><p>Dez minutos, com consulta. Não conta para a nota.</p>"
+  },
+  {
+   "t": "emparelhar",
+   "g": "1",
+   "p": "Que marca tem cada modo de relato? Liga.",
+   "p2": "Direto, indireto ou indireto livre? Liga cada um à sua marca.",
+   "pares": [
+    [
+     "Discurso direto",
+     "a fala vem separada, com travessão, tal como foi dita"
+    ],
+    [
+     "Discurso indireto",
+     "verbo declarativo e oração subordinada com que ou se"
+    ],
+    [
+     "Discurso indireto livre",
+     "a voz da personagem entra na narração, sem verbo declarativo"
+    ]
+   ],
+   "f": "O **direto** separa a fala; o **indireto** relata-a com um verbo declarativo e uma subordinada; no **indireto livre**, a pergunta ou a exclamação da personagem fica dentro da narração (lição F12).",
+   "fe": "Procura o que separa ou não separa a fala: um travessão, um disse que, ou nada, com a voz da personagem misturada na do narrador."
+  },
+  {
+   "t": "ordenar",
+   "g": "2",
+   "p": "Num parágrafo de opinião inventado sobre legendas, põe as frases por ordem.",
+   "p2": "Tese, argumento, contra-argumento, refutação, conclusão: ordena o parágrafo inventado.",
+   "passos": [
+    "Ver filmes legendados ajuda a aprender línguas, desde que se leia com atenção.",
+    "Quem vê séries com legendas ouve a língua e lê-a ao mesmo tempo.",
+    "Dir-me-ão que as legendas distraem da imagem.",
+    "Respondo que, com o hábito, os olhos leem sem largar a cena.",
+    "Por isso, legendas lidas com atenção são uma aula que não parece aula."
+   ],
+   "f": "**Tese**, **argumento**, **contra-argumento**, **refutação** e uma **conclusão** que volta à tese com outras palavras: a lição F13 chama contra-argumento à objeção e refutação à tua resposta.",
+   "fe": "A tese vem primeiro, porque tudo a defende; a refutação só existe depois do contra-argumento; a conclusão fecha e volta à tese."
+  },
+  {
+   "t": "vf",
+   "g": "3",
+   "p": "Num filme inventado, a primeira e a última cena mostram a mesma sala: na primeira, vazia e em obras; na última, cheia de gente a dançar. A repetição só serve para dizer que nada mudou.",
+   "p2": "Quando a última cena repete a primeira com uma diferença, a repetição diz que tudo ficou igual: verdadeiro ou falso?",
+   "v": false,
+   "f": "Falso: o filme acaba onde começou, numa **estrutura circular**, e a diferença mostra **o que mudou** entre as duas cenas. Aqui, o que se construiu; noutra obra, pode ser o contrário.",
+   "fe": "Olha para as duas coisas ao mesmo tempo: o que se repete, a sala, e o que mudou nela, vazia e depois cheia."
+  },
+  {
+   "t": "escolha",
+   "g": "4",
+   "p": "No quintal do Ramalhete, no cap. I, há uma estátua de Vénus «ennegrecendo a um canto na lenta humidade das ramagens silvestres», junto a um cipreste. Que anunciam a estátua e o cipreste?",
+   "p2": "A deusa do amor a escurecer ao pé da árvore dos cemitérios: o que anuncia este quintal?",
+   "o": [
+    "Amor e morte: a paixão e a ruína que virão.",
+    "Fé e riqueza: a Igreja e a nobreza da família.",
+    "Campo e frescura: a vida de uma casa de verão."
+   ],
+   "c": 0,
+   "f": "Vénus é a deusa do **amor**; o cipreste, a árvore dos cemitérios, a **morte**. O espaço anuncia o que a família vai viver: um lugar também se lê pelo que guarda (lição F10).",
+   "fe": [
+    null,
+    "A estátua e o cipreste não falam de fé nem de riqueza: uma deusa a escurecer fala de ruína.",
+    "O quintal é inculto e está abandonado: nada ali é frescura de verão."
+   ]
+  },
+  {
+   "t": "sublinhar",
+   "g": "5",
+   "p": "Toca nas duas palavras com que Alencar responde à sua própria pergunta, sem travessão.",
+   "p2": "Depois da pergunta sobre o naturalismo, que resposta é já de Alencar, na voz do narrador? Toca nas duas palavras.",
+   "frase": "ameaçava corromper o pudor social? Pois bem. Elle, Alencar, seria o paladino da Moral",
+   "certas": [
+    5,
+    6
+   ],
+   "f": "_Pois bem_: a pergunta e a resposta são de Alencar, ditas na voz do narrador, sem travessão nem verbo declarativo. É indireto livre, e é por isso que Eça se pode rir dele na mesma frase (lição F12).",
+   "fe": "Procura a resposta curta logo depois do ponto de interrogação: é Alencar a falar consigo, dentro da narração."
+  },
+  {
+   "t": "completar",
+   "g": "6",
+   "p": "Indireto livre inventado: _A Rita fechou o portátil. Naquela noite ninguém a ouvia, pois não?_ Que frase diria a Rita, em discurso direto, nessa noite?",
+   "p2": "A pergunta da Rita, em indireto livre, passa a discurso direto, dita por ela no momento. Completa.",
+   "frase": "Em discurso direto, a Rita diria: [1]",
+   "lacunas": [
+    {
+     "o": [
+      "Esta noite ninguém me ouve, pois não?",
+      "Naquela noite ninguém me ouvia, pois não?",
+      "Esta noite ninguém a ouve, pois não?"
+     ],
+     "c": 0
+    }
+   ],
+   "f": "_Esta noite ninguém me ouve, pois não?_: na boca da Rita, a noite é _esta_, o tempo é o presente e a pessoa é _me_. O _naquela_, o _ouvia_ e o _a_ eram do narrador, que conta de fora e depois (lição F12, «Quem relata, quando e onde?»).",
+   "fe": "Põe-te no lugar da Rita: ela fala de si (me, não a), na noite em que está (esta) e no momento em que fala (ouve, no presente)."
+  },
+  {
+   "t": "escolha",
+   "g": "7",
+   "p": "Numa cena inventada, que frase põe o pensamento da Marta em indireto livre?",
+   "p2": "A Marta está farta da conversa. Que versão inventada mete o pensamento dela na narração, sem verbo declarativo?",
+   "o": [
+    "A Marta fechou o cacifo. Outra vez o estágio? Que seca!",
+    "A Marta fechou o cacifo e disse que o estágio a cansava.",
+    "A Marta fechou o cacifo e pensou no estágio, aborrecida."
+   ],
+   "c": 0,
+   "f": "_Outra vez o estágio? Que seca!_ é a voz da Marta dentro da narração: pergunta e exclamação dela, sem _disse_ nem travessão. No tema A, o pensamento em indireto livre faz isto.",
+   "fe": [
+    null,
+    "_Disse_ é verbo declarativo e _que o estágio a cansava_ é oração subordinada: é discurso indireto, e a voz da Marta fica longe.",
+    "_Pensou no estágio_ é o narrador a resumir de fora; não se ouve a voz da Marta, nem pergunta nem exclamação dela."
+   ]
+  },
+  {
+   "t": "escolha",
+   "g": "8",
+   "p": "Numa reunião de vizinhos inventada, discute-se a falta de água no prédio até o porteiro perguntar quem quer café, e ninguém volta ao assunto. Que critica a cena?",
+   "p2": "Chega o café e a conversa sobre a falta de água morre ali. Quem fica mal na cena inventada?",
+   "o": [
+    "Os vizinhos, que trocam o problema por um café.",
+    "O porteiro, que os interrompe a meio da reunião.",
+    "O café, que distrai a sala inteira da conversa."
+   ],
+   "c": 0,
+   "f": "A crítica cai sobre **quem está na reunião**: bastou um café para esquecerem o problema. Quem o oferece só dá a ocasião; são os vizinhos que mostram o que vale mais para eles.",
+   "fe": [
+    null,
+    "O porteiro só dá a ocasião e nem é da reunião; o que a cena critica é que ninguém retome a conversa depois.",
+    "O café é um objeto: a cena mostra o que as pessoas escolhem, não a culpa de uma bebida."
+   ]
+  },
+  {
+   "t": "rever",
+   "g": "9",
+   "p": "Revê a primeira frase para ela ser uma tese que se pode discutir.",
+   "p2": "A primeira frase inventada anuncia um tema e não toma posição. Que versão é uma tese?",
+   "apoio": "Lição F13: a tese é a tua posição, numa frase.",
+   "frase": "Neste texto vou falar das séries que todos veem.",
+   "trecho": "Neste texto vou falar das séries que todos veem",
+   "o": [
+    "Uma série vista por todos só une quem a discute",
+    "As séries que todos veem são um tema muito atual",
+    "Há quem goste de ver séries e há quem não goste"
+   ],
+   "c": 0,
+   "f": "**Só une quem a discute** toma posição e pode ser atacado: é uma tese, com uma condição. Anunciar o tema ou descrever gostos não defende nada.",
+   "fe": [
+    null,
+    "Dizer que é um tema atual continua a anunciar o tema: ainda não sabemos o que defendes.",
+    "Descrever que há gostos diferentes não toma partido: ninguém pode discordar, por isso não é tese."
+   ]
+  },
+  {
+   "t": "escolha",
+   "g": "10",
+   "p": "Tese inventada: _Um livro antigo só continua vivo se alguém o voltar a contar._ Que frase usa um facto datado e liga-o à tese?",
+   "p2": "Para defender a tese inventada sobre livros antigos, que frase traz um facto com data e o põe a trabalhar?",
+   "o": [
+    "Em 2008, Mário Barroso filmou o romance de Camilo: voltou a contá-lo.",
+    "O romance de Camilo é belíssimo e toda a gente devia lê-lo uma vez.",
+    "Em 2008, Mário Barroso filmou o romance. O cinema é uma arte antiga."
+   ],
+   "c": 0,
+   "f": "O facto tem **data** (2008) e **trabalha para a tese**: alguém voltou a contar o romance. Um facto solto, ou uma opinião sem facto, não prova nada. No teu parágrafo, o facto vem do dossiê.",
+   "fe": [
+    null,
+    "É uma opinião, sem facto nem data: diz que o romance é belo, não que continua vivo.",
+    "O facto está lá, mas a frase seguinte foge para o cinema em geral: fica solto, sem ligação à tese."
+   ]
+  },
+  {
+   "t": "ler",
+   "rot": "Para levar",
+   "escuro": true,
+   "html": "<p class=\"levar\">«Falhámos a vida, menino!», diz Ega, com um gesto desolado. Tu decides se a frase ainda é para ti.</p><p>Agora, na tarefa: duas expressões do Ramalhete e o que dizem da vida de Carlos; dois modos de relato numa fala de Alencar e a reescrita em discurso direto; e a mesa de hoje ou o parágrafo de opinião. Abre a aula de tarefa.</p>"
+  }
+ ]
+}
