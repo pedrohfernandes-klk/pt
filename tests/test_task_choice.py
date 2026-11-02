@@ -12,19 +12,28 @@ ROOT = Path(__file__).resolve().parents[1]
 # geradas por scripts/tarefas_escolha.py a partir de docs/pedagogia/tarefas-escolha/<slug>.json.
 # 29/10/2026 (decisão do docente): a tarefa da unidade 3 do M7 («Louco, sim: argumentar com os movimentos de Mensagem»)
 # entra no formato com escolha, gerada por scripts/tarefas_escolha.py; o aquecimento é em cartões (CARTOES_NO_AQUECER).
-CHOICE = ['m1-u1', 'm1-u2', 'm2-u1', 'm2-u2', 'm7-u3']
+# 31/10/2026: inclui as seis tarefas aprovadas do M3, M5 e M6.
+# 01/11/2026: inclui as quatro tarefas do M8 e do M9.
+CHOICE = ['m1-u1', 'm1-u2', 'm2-u1', 'm2-u2', 'm3-u1', 'm3-u2', 'm5-u1', 'm5-u2', 'm6-u1', 'm6-u2', 'm7-u3', 'm8-u1', 'm8-u2', 'm9-u1', 'm9-u2']
 # 29/10/2026: na M7-U3 os cartões substituem as máquinas em papel, para caber nos 90 minutos: o cartão «Aquecer» liga à
 # página tarefas/m7-u3/aquecimento/ e não há pergunta «aquecer». As citações do baralho conferem-se em
 # tests/test_task_aquecimentos.py, contra as lições indicadas nos dados do aquecimento.
 # 30/10/2026: aquecimento em cartões (decisão do docente)
 # 30/10/2026: o M2 também passa ao aquecimento em cartões (camada tests/fixtures/aquecimentos-m2-edits-20261030.json).
-CARTOES_NO_AQUECER = {'m1-u1', 'm1-u2', 'm2-u1', 'm2-u2', 'm7-u3'}
+# 31/10/2026: inclui as seis tarefas aprovadas do M3, M5 e M6.
+# 01/11/2026: inclui as quatro tarefas do M8 e do M9.
+CARTOES_NO_AQUECER = {'m5-u1', 'm9-u2', 'm5-u2', 'm1-u1', 'm6-u1', 'm7-u3', 'm1-u2', 'm3-u2', 'm6-u2', 'm8-u1', 'm8-u2', 'm9-u1', 'm2-u1', 'm3-u1', 'm2-u2'}
 # Lições onde estão as passagens do aquecimento, por módulo (a lista do M2 fica como estava).
 # 28/10/2026: no M1, as cantigas de D. Dinis e Guilhade (F04, F19) e o grito do cap. XII (F06).
 WARM_LESSONS = {'m2': ('licao-m2-f02', 'licao-m2-f06', 'licao-m2-f07', 'licao-m2-f11'),
                 'm1': ('licao-m1-f04', 'licao-m1-f06', 'licao-m1-f19'),
                 # 29/10/2026: no M7, as lições da unidade 3 (o aquecimento em papel não tem passagens; fica para o caso).
                 'm7': ('licao-m7-f07', 'licao-m7-f08', 'licao-m7-f09', 'licao-m7-f11')}
+# 31/10/2026: inclui as seis tarefas aprovadas do M3, M5 e M6.
+WARM_LESSONS.update({'m3': ('licao-m3-f02', 'licao-m3-f03', 'licao-m3-f04', 'licao-m3-f05', 'licao-m3-f09', 'licao-m3-f10', 'licao-m3-f11', 'licao-m3-f13', 'licao-m3-f15', 'licao-m3-f16', 'licao-m3-f17', 'licao-m3-f18'), 'm5': ('licao-m5-f02', 'licao-m5-f04', 'licao-m5-f07', 'licao-m5-f08', 'licao-m5-f09', 'licao-m5-f10', 'licao-m5-f11', 'licao-m5-f12', 'licao-m5-f13', 'licao-m5-f14', 'licao-m5-f15'), 'm6': ('licao-m6-f01', 'licao-m6-f02', 'licao-m6-f04', 'licao-m6-f05', 'licao-m6-f06', 'licao-m6-f07', 'licao-m6-f08', 'licao-m6-f09', 'licao-m6-f11', 'licao-m6-f12', 'licao-m6-f13')})
+
+# 01/11/2026: fontes de treino dos dois módulos novos.
+WARM_LESSONS.update({m: tuple(p.name for p in sorted((ROOT/m).glob('licao-*'))) for m in ('m8','m9')})
 
 
 def flat(path):
@@ -79,7 +88,7 @@ class ChoiceTasks(unittest.TestCase):
                 aquecer = (('Aquecer em cartões', 'data-task-warm="cartoes"', '<p class="task-aquecer"><a href="aquecimento/">') if cartoes
                            else ('Descobre o que te pedem', 'Prova ou distração?', 'Verbos', 'Objeto', 'Condição'))
                 for token in aquecer + ('Núcleo comum', 'Escolhe um tema',
-                              'Dossiê do tema B', 'Tarefa individual', '90 min', 'consulta', 'Teams', 'duas linhas', 'tema que escolheste (A ou B)'):
+                              ('Textos e condições de consulta' if slug.startswith(('m8-','m9-')) else 'Dossiê do tema B'), 'Tarefa individual', '90 min', 'consulta', 'Teams', 'duas linhas', 'tema que escolheste (A ou B)'):
                     self.assertIn(token, source)
                 if cartoes:
                     self.assertEqual(source.count('<p class="task-aquecer"><a href="aquecimento/">'), 2)
@@ -150,6 +159,16 @@ class ChoiceTasks(unittest.TestCase):
             facts = re.findall(r'<li>(.*?) <a class="task-fonte" href="([^"]+)"', dossier)
             self.assertEqual(len(facts), dossier.count('<li>'))
             for fact, href in facts:
+                # 01/11/2026: o dossiê novo remete para edições externas, sem transcrições.
+                if urlsplit(href).scheme:
+                    self.assertIn(slug, ('m8-u1','m8-u2','m9-u1','m9-u2'))
+                    self.assertEqual(urlsplit(href).scheme, 'https')
+                    self.assertTrue(urlsplit(href).netloc)
+                    # 01/11/2026: títulos entre aspas são créditos, não excertos; qualquer outra citação continua proibida.
+                    titulos = {'As Palavras', 'Adeus', 'Prece no Mediterrâneo', 'A verdade histórica', 'George'}
+                    citados = re.findall(r'«([^»]+)»', html.unescape(re.sub(r'<[^>]+>', '', fact)))
+                    self.assertTrue(set(citados) <= titulos, citados)
+                    continue
                 target = flat((path.parent / href / 'index.html').resolve())
                 text = html.unescape(re.sub(r'<[^>]+>', '', fact))
                 for piece in re.findall(r'«([^»]+)»', text) + re.findall(r'\b\d{3,4}\b', text):
@@ -166,6 +185,16 @@ class ChoiceTasks(unittest.TestCase):
             items = re.findall(r'<li><a href="([^"]+)">(.*?)</a></li>', support)
             self.assertGreaterEqual(len(items), 3)
             for href, text in items:
+                # 01/11/2026: o dossiê novo remete para edições externas, sem transcrições.
+                if urlsplit(href).scheme:
+                    self.assertIn(slug, ('m8-u1','m8-u2','m9-u1','m9-u2'))
+                    self.assertEqual(urlsplit(href).scheme, 'https')
+                    self.assertTrue(urlsplit(href).netloc)
+                    # 01/11/2026: títulos entre aspas são créditos, não excertos; qualquer outra citação continua proibida.
+                    titulos = {'As Palavras', 'Adeus', 'Prece no Mediterrâneo', 'A verdade histórica', 'George'}
+                    citados = re.findall(r'«([^»]+)»', html.unescape(re.sub(r'<[^>]+>', '', fact)))
+                    self.assertTrue(set(citados) <= titulos, citados)
+                    continue
                 target = flat((path.parent / href / 'index.html').resolve())
                 for name in re.findall(r'«([^»]+)»', text):
                     name = html.unescape(re.sub(r'<[^>]+>', '', name)).replace('“', '«').replace('”', '»')
@@ -177,7 +206,7 @@ class ChoiceTasks(unittest.TestCase):
         # página publica (sem grelha nem chave da correção) e o gerador é idempotente.
         data = sorted((ROOT / 'docs/pedagogia/tarefas-escolha').glob('*.json'))
         # 29/10/2026 (decisão do docente): junta-se a M7-U3, gerada pelo mesmo script.
-        self.assertEqual([p.stem for p in data], ['m1-u1', 'm1-u2', 'm7-u3'])
+        self.assertEqual([p.stem for p in data], ['m1-u1', 'm1-u2', 'm3-u1', 'm3-u2', 'm5-u1', 'm5-u2', 'm6-u1', 'm6-u2', 'm7-u3', 'm8-u1', 'm8-u2', 'm9-u1', 'm9-u2'])
         for p in data:
             d = json.loads(p.read_text('utf-8'))
             self.assertFalse({'grelha', 'provas', 'notas_docente', 'chave'} & set(d), p.name)

@@ -22,7 +22,12 @@ for(const unavailable of [false,true]){
  progress.textContent="";
  window.EPIUnitTaskRoute.mount({module:"M2",units:[{n:1,passos:[{id:"m1-f01",licao:"m1-f01"},{id:"m1-f02",licao:"m1-f02"}]}]});
  assert(progress.textContent.includes("de 2 lições"));assert.deepStrictEqual(writes,[]);
- progress.textContent="";window.EPIUnitTaskRoute.mount({module:"M3",units:[{n:1,passos:[]}]});assert.strictEqual(progress.textContent,"");
+ // 31/10/2026: M3, M5 e M6 aderem ao percurso; 01/11/2026: M8/M9 entram; M10 continua fora.
+ for(const module of ["M3","M5","M6","M8","M9"]){
+  progress.textContent="";window.EPIUnitTaskRoute.mount({module,units:[{n:1,passos:[{id:"m1-f01",licao:"m1-f01"}]}]});
+  assert(progress.textContent.includes("de 1 lições"));assert.deepStrictEqual(writes,[]);
+ }
+ progress.textContent="";window.EPIUnitTaskRoute.mount({module:"M10",units:[{n:1,passos:[]}]});assert.strictEqual(progress.textContent,"");
 }
 // 27/10/2026: as perguntas do arquivo cobrem todas as lições da unidade (garantia que o M2 já tinha), sem acaso no teste.
 {const ctx={window:{addEventListener(){}},document:{querySelectorAll(){return []},querySelector(){return null},getElementById(){return null},addEventListener(){}},localStorage:{getItem(){return null}},location:{search:""},URLSearchParams,EPIJogo:{baralhar:a=>a.slice()}};
@@ -30,4 +35,9 @@ for(const unavailable of [false,true]){
  const pool=[...Array(8)].map((_,i)=>({_l:"a",i})).concat([{_l:"b"},{_l:"c"},{_l:"d"},{_l:"b"}]);
  const got=ctx.window.EPIUnitTaskRoute.pick({licoes:["a","b","c","d"],pool});
  assert.strictEqual(got.length,8);assert.deepStrictEqual([...new Set(got.map(x=>x._l))].sort(),["a","b","c","d"]);}
+// 01/11/2026: o arquivo do M5 lê a chave do main sem criar outra.
+{const badge={dataset:{desafioEstado:"1"}},readKeys=[];
+ const ctx={window:{addEventListener(){}},document:{querySelector(){return null},querySelectorAll(s){return s==="[data-desafio-estado]"?[badge]:[]},getElementById(){return null},addEventListener(){}},localStorage:{getItem(k){readKeys.push(k);return k==="desafio-M5-u1"?JSON.stringify({tentativas:2,melhor:7,total:8}):null},setItem(){throw Error("Não deve gravar")}},location:{search:""},URLSearchParams};
+ vm.runInNewContext(code,ctx);ctx.window.EPIUnitTaskRoute.mount({module:"M5",units:[]});
+ assert(readKeys.includes("desafio-M5-u1"));assert(!readKeys.includes("desafio-unidade-v2-M5-u1"));assert(badge.textContent.includes("melhor 7 de 8"));}
 console.log("Route runtime OK: storage available/unavailable; no card nodes; no completion writes.");

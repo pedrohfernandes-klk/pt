@@ -1,10 +1,11 @@
+# 01/11/2026: um cartão adicional antes de Para levar; posições anteriores preservadas.
 from pathlib import Path
 import json,re,unittest
 ROOT=Path(__file__).resolve().parents[1]
 def bank():return json.JSONDecoder().raw_decode((ROOT/'m8/licao-m8-f04/index.html').read_text('utf-8').split('CARTOES=',1)[1])[0]
 class PalavrasEscuta(unittest.TestCase):
  def test_video_has_task_and_alternative(self):
-  c=bank();self.assertEqual(len(c),25);s=c[3]['html'];self.assertIn('data-rtp-leitura',s);self.assertIn('Antes:',s);self.assertIn('Depois:',s);self.assertIn('Sem vídeo',s);self.assertIn('não depende de imitar',s);self.assertNotIn('<video',s);self.assertIn('Fonte: RTP Ensina',s)
+  c=bank();self.assertEqual(len(c),26);s=c[3]['html'];self.assertIn('data-rtp-leitura',s);self.assertIn('Antes:',s);self.assertIn('Depois:',s);self.assertIn('Sem vídeo',s);self.assertIn('não depende de imitar',s);self.assertNotIn('<video',s);self.assertIn('Fonte: RTP Ensina',s)
  def test_cut_model_is_complete_and_deletion_only(self):
   examples=re.findall(r'<dd>(.*?)</dd>',bank()[6]['html']);self.assertEqual([len(t.split()) for t in examples],[17,13,9,6]);tokens=lambda s:re.findall(r'\w+',s.lower());base=tokens(examples[0])
   for text in examples[1:]:

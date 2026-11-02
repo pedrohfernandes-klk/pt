@@ -1,0 +1,213 @@
+{
+ "slug": "m9-u1",
+ "modulo": "m9",
+ "unidade": 1,
+ "versao": "1",
+ "momento": "No início da aula de tarefa",
+ "titulo": "Do gesto ao efeito",
+ "descricao": "Dez minutos para treinar leitura, fundamentação e revisão com exemplos inventados.",
+ "licoes_das_citacoes": [
+  "m9/licao-m9-f01",
+  "m9/licao-m9-f03",
+  "m9/licao-m9-f02"
+ ],
+ "menu": [
+  [
+   "../../../m9/licao-m9-f01/",
+   "Relembrar F01, um convento, uma promessa"
+  ],
+  [
+   "../../../m9/licao-m9-f03/",
+   "Relembrar F03, a voz que conta"
+  ],
+  [
+   "../../../m9/licao-m9-f02/",
+   "Relembrar F02, ver e não ver"
+  ]
+ ],
+ "reservadas": [
+  "miniatura",
+  "auto de fé",
+  "São Pedro"
+ ],
+ "cartoes": [
+  {
+   "t": "ler",
+   "rot": "Abre",
+   "titulo": "Do gesto ao efeito",
+   "html": "<p>Dez minutos com consulta, sem nota. Os exemplos foram inventados para treinar operações de leitura e escrita; não dão as respostas da tarefa.</p><p>Caso inventado: o diretor inaugura a biblioteca, corta uma fita e elogia o silêncio. Atrás dele, uma máquina de obras impede que se ouça o discurso. O narrador descreve ambos os sons.</p>"
+  },
+  {
+   "t": "escolha",
+   "p": "Que pormenor obriga a reler o elogio?",
+   "p2": "Que relação cria distância entre fala e situação?",
+   "o": [
+    "A biblioteca tem uma fita para ser cortada.",
+    "A máquina abafa o elogio feito ao silêncio.",
+    "O diretor está presente na sua inauguração."
+   ],
+   "c": 1,
+   "f": "O ruído contrasta com o elogio; explica esse contraste antes de lhe dar um nome.",
+   "fe": [
+    "A fita, por si só, não contradiz a fala.",
+    null,
+    "Estar presente não altera o sentido do elogio."
+   ],
+   "g": "1"
+  },
+  {
+   "t": "emparelhar",
+   "p": "Liga cada função ao elemento do caso.",
+   "p2": "Fala, descrição ou relação? Liga cada uma ao caso.",
+   "pares": [
+    [
+     "Fala da personagem",
+     "o elogio do silêncio"
+    ],
+    [
+     "Descrição do narrador",
+     "a máquina abafa o discurso"
+    ],
+    [
+     "Relação relevante",
+     "o ruído contraria o elogio"
+    ]
+   ],
+   "f": "Uma interpretação precisa de observação e de uma relação explicada. Mantém distintas as funções.",
+   "fe": "Volta ao caso: uma coisa é observar, outra é concluir ou propor.",
+   "g": "2"
+  },
+  {
+   "t": "rever",
+   "p": "Revê a conclusão para a ajustar ao caso.",
+   "p2": "Que substituição evita afirmar mais do que o exemplo permite?",
+   "apoio": "Caso inventado: o diretor inaugura a biblioteca, corta uma fita e elogia o silêncio. Atrás dele, uma máquina de obras impede que se ouça o discurso. O narrador descreve ambos os sons.",
+   "frase": "O narrador confirma o elogio do diretor.",
+   "trecho": "confirma o elogio",
+   "o": [
+    "repete o elogio sem reservas",
+    "contrapõe ruído ao elogio",
+    "apoia o elogio sem reservas"
+   ],
+   "c": 1,
+   "f": "A revisão ajusta a conclusão aos elementos disponíveis e conserva uma frase completa.",
+   "fe": [
+    "_Repete o elogio_ esquece a máquina: o narrador põe o ruído por cima da fala.",
+    null,
+    "_Apoia o elogio_ ignora o contraste: a máquina abafa o discurso que elogia o silêncio."
+   ],
+   "g": "3"
+  },
+  {
+   "t": "vf",
+   "p": "No caso criado, o ruído vem da descrição do narrador, não do elogio feito pelo diretor.",
+   "p2": "O texto distribui o elogio e o ruído por duas formas de apresentar a cena?",
+   "v": true,
+   "f": "O diretor elogia; o narrador mostra a máquina que impede ouvi-lo. Essa distribuição cria a distância entre fala e situação.",
+   "fe": "Confundes a fala da personagem com a construção da cena. Repara em quem elogia e em quem descreve os dois sons.",
+   "g": "4"
+  },
+  {
+   "t": "ordenar",
+   "p": "Ordena a explicação do procedimento narrativo.",
+   "p2": "Como passas do discurso do diretor à leitura crítica da cena?",
+   "passos": [
+    "Localiza o elogio do silêncio na fala do diretor.",
+    "Relaciona essa fala com a máquina que a abafa.",
+    "Explica como o contraste enfraquece a solenidade da inauguração."
+   ],
+   "f": "O efeito nasce da relação entre a fala e a descrição. A etiqueta de ironia só é útil depois de explicares essa relação.",
+   "fe": "Não atribuas ao diretor a crítica produzida pela cena. Começa na fala dele e confronta-a com o ruído.",
+   "g": "5"
+  },
+  {
+   "t": "escolha",
+   "p": "Que alteração conserva o procedimento crítico do caso?",
+   "p2": "Que cena criada mantém uma descrição que contraria a fala?",
+   "o": [
+    "O diretor elogia a calma entre buzinas.",
+    "O diretor elogia a calma numa sala vazia.",
+    "O diretor elogia a calma e todos escutam."
+   ],
+   "c": 0,
+   "f": "A calma elogiada contrasta com as buzinas. Mantém-se a relação entre o que se diz e o que a descrição deixa ouvir.",
+   "fe": [
+    null,
+    "Uma sala vazia pode ser calma. Falta a oposição ao elogio que a máquina criava no caso.",
+    "A escuta confirma a calma em vez de a contrariar. A relação entre fala e ambiente mudou."
+   ],
+   "g": "6"
+  },
+  {
+   "t": "completar",
+   "p": "Completa a análise sem atribuir a crítica à personagem.",
+   "p2": "Que verbos distinguem a ação da personagem do efeito narrativo?",
+   "frase": "O diretor [1] o silêncio; a descrição [2] esse elogio ao dar a ouvir a máquina.",
+   "lacunas": [
+    {
+     "o": [
+      "exalta",
+      "critica",
+      "corrige"
+     ],
+     "c": 0
+    },
+    {
+     "o": [
+      "contesta",
+      "corrobora",
+      "reproduz"
+     ],
+     "c": 0
+    }
+   ],
+   "f": "A personagem diz uma coisa; a organização da cena permite ler outra. Não é necessário que o diretor reconheça a contradição.",
+   "fe": "Relê o elogio e o som que impede ouvi-lo. Os dois elementos não exprimem a mesma avaliação.",
+   "g": "7"
+  },
+  {
+   "t": "vf",
+   "p": "O contraste prova que o diretor sabia que o público não o conseguiria ouvir.",
+   "p2": "A descrição do ruído permite conhecer o que o diretor sabia?",
+   "v": false,
+   "f": "O caso mostra o resultado, não o conhecimento ou a intenção do diretor. A crítica da cena não demonstra o seu pensamento.",
+   "fe": "Atribuíste um estado mental a partir de um efeito. Procura uma fala ou um acesso ao pensamento: o caso não os dá.",
+   "g": "8"
+  },
+  {
+   "t": "escolha",
+   "p": "A que voltas para conferir a crítica construída pela cena?",
+   "p2": "A que regressas para provar o efeito sem inventar intenções?",
+   "o": [
+    "À relação entre o elogio e o ruído.",
+    "À fita cortada como sinal de silêncio.",
+    "À presença do diretor como crítica."
+   ],
+   "c": 0,
+   "f": "A relação entre a fala e o som da máquina distingue a leitura crítica de uma simples descrição de inauguração.",
+   "fe": [
+    null,
+    "Cortar uma fita não demonstra silêncio. Regressa ao elemento que impede ouvir o elogio.",
+    "Estar presente não é, por si, uma avaliação crítica. Falta explicar o contraste entre o que diz e o que se ouve."
+   ],
+   "g": "9"
+  },
+  {
+   "t": "sublinhar",
+   "p": "Na frase criada, toca na palavra que limita a certeza da interpretação.",
+   "p2": "Que palavra apresenta como interpretação o efeito sobre a cerimónia?",
+   "frase": "O contraste talvez diminua a solenidade da cerimónia.",
+   "certas": [
+    2
+   ],
+   "f": "_Talvez_ assinala uma probabilidade. A máquina e o elogio sustentam uma leitura crítica, sem descrever a intenção do diretor.",
+   "fe": "A palavra pedida admite que a leitura é provável, mas pode ser revista. Não é _contraste_, que nomeia a relação, nem _diminua_, que descreve o efeito.",
+   "g": "10"
+  },
+  {
+   "t": "ler",
+   "rot": "Para levar",
+   "html": "<p>Na tarefa, distingue o gesto ou a fala da personagem da maneira como o narrador os apresenta. Explica o efeito dessa distância.</p><p><a href=\"../\">Abrir a aula de tarefa</a></p>"
+  }
+ ]
+}

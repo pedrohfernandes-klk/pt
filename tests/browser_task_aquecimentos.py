@@ -23,9 +23,13 @@ from browser_m2_complete import respond
 
 # 30/10/2026: aquecimento em cartões (decisão do docente)
 # 30/10/2026: o M4 também liga aos aquecimentos (camada tests/fixtures/aquecimentos-m4-edits-20261030.json).
-TAREFAS_LIGADAS = ['m1-u1', 'm1-u2', 'm2-u1', 'm2-u2', 'm4-u1', 'm4-u2', 'm4-u3-discurso', 'm7-u1', 'm7-u2', 'm7-u3']
+# 31/10/2026: inclui os seis aquecimentos e as suas ligações.
+# 01/11/2026: inclui as quatro tarefas do M8 e do M9.
+TAREFAS_LIGADAS = ['m1-u1', 'm1-u2', 'm2-u1', 'm2-u2', 'm3-u1', 'm3-u2', 'm4-u1', 'm4-u2', 'm4-u3-discurso', 'm5-u1', 'm5-u2', 'm6-u1', 'm6-u2', 'm7-u1', 'm7-u2', 'm7-u3', 'm8-u1', 'm8-u2', 'm9-u1', 'm9-u2']
 # 30/10/2026: M2 recebe páginas novas (aquecimentos em cartões das duas unidades).
-SLUGS = ['m1-u1', 'm1-u2', 'm2-u1', 'm2-u2', 'm4-u1', 'm4-u2', 'm4-u3-discurso', 'm7-u1', 'm7-u2', 'm7-u3']
+# 31/10/2026: inclui os seis aquecimentos e as suas ligações.
+# 01/11/2026: inclui as quatro tarefas do M8 e do M9.
+SLUGS = ['m1-u1', 'm1-u2', 'm2-u1', 'm2-u2', 'm3-u1', 'm3-u2', 'm4-u1', 'm4-u2', 'm4-u3-discurso', 'm5-u1', 'm5-u2', 'm6-u1', 'm6-u2', 'm7-u1', 'm7-u2', 'm7-u3', 'm8-u1', 'm8-u2', 'm9-u1', 'm9-u2']
 CHAVES = r"""() => Object.keys(localStorage).filter(k => /^(licao-|percurso-|desafio-|epi-pt-|epi-ultima|aquecimento-)/.test(k)).sort()"""
 
 
@@ -109,7 +113,10 @@ def tarefas(browser, host):
             assert ligacao.count() == 1, slug
             # 30/10/2026: aquecimento em cartões (decisão do docente)
             # 30/10/2026: as tarefas do M2 também passam ao formato com o cartão «Aquecer» em cartões.
-            if slug in {'m1-u1', 'm1-u2', 'm2-u1', 'm2-u2', 'm7-u3'}:
+            # 31/10/2026: as seis tarefas novas usam o mesmo contrato de escolha.
+            # 01/11/2026: partilha o contrato com as quatro tarefas do M8/M9.
+            from browser_task_contract import CHOICE_SLUGS
+            if slug in CHOICE_SLUGS:
                 # Os cartões substituem as máquinas em papel: o cartão «Aquecer» é o primeiro e liga ao aquecimento.
                 assert enunciado == 1
                 primeiro = page.locator('[data-task-card="0"]')
