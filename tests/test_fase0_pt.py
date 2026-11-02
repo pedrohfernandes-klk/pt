@@ -1,3 +1,4 @@
+# 31/10/2026: M3, M5 e M6 passam ao contrato das aulas de tarefa.
 """Fase 0 do plano de melhoria (23/10/2026): imagens próprias no «Abre», marca do canto que não tapa o «Para levar»
 e ligações dos cartões no estilo do sítio."""
 from pathlib import Path
@@ -53,7 +54,7 @@ class Fase0(unittest.TestCase):
                 s = (ROOT / f'm{m}/index.html').read_text('utf-8')
                 # 26/10: closure lessons read historic notes without migrating or evaluating tasks.
                 # 27/10/2026 (passagem do GPT, tarefas por unidade): o M2 passa ao mesmo modelo, com duas aulas de tarefa.
-                if m in (1,2,4,7):
+                if m in (1,2,3,4,5,6,7):
                     self.assertIn('unit-task-route.js',s)
                     adapter=(ROOT/'assets/unit-task-route.js').read_text('utf-8')
                     for key in ('percurso-v2-','percurso-','percurso-sintese-'):

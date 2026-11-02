@@ -1,21 +1,27 @@
-"""Shared browser assertions for the authorised M1/M4/M7 closure-lesson model.
+"""Shared browser assertions for the authorised M1 to M7 closure-lesson model.
 
 Imported by the existing CI entry points; this file never launches a browser.
 """
+from pathlib import Path
 from urllib.parse import urljoin
+ROOT = Path(__file__).resolve().parents[1]
 import re
 # 27/10/2026 (passagem do GPT, tarefas por unidade): o M2 passa ao mesmo modelo, com duas aulas de tarefa.
-TASK_MODULES = {1, 2, 4, 7}
+# 31/10/2026: inclui as seis tarefas aprovadas do M3, M5 e M6.
+TASK_MODULES = {1, 2, 3, 4, 5, 6, 7}
 TASK_SLUGS = {1: ['m1-u1', 'm1-u2'],
               2: ['m2-u1', 'm2-u2'],
               4: ['m4-u1', 'm4-u2', 'm4-u3-discurso'],
               7: ['m7-u1', 'm7-u2', 'm7-u3']}
+# 31/10/2026: inclui as seis tarefas aprovadas do M3, M5 e M6.
+TASK_SLUGS.update({3: ['m3-u1', 'm3-u2'], 5: ['m5-u1', 'm5-u2'], 6: ['m6-u1', 'm6-u2']})
 # 28/10/2026 (decisão do docente, PR #122): o formato com aquecimento e tema à escolha cobre o M2 (piloto) e o M1.
 # Estas páginas têm de o declarar; nenhuma passa pelo contrato compacto por omissão.
 # 29/10/2026 (decisão do docente): a M7-U3 entra no formato com escolha, com o aquecimento em cartões no lugar das
 # máquinas em papel (#aquecer[data-task-warm="cartoes"]): o cartão «Aquecer» liga à página dos cartões e a única pergunta
 # da tarefa é a opcional («1»).
-CHOICE_SLUGS = {'m1-u1', 'm1-u2', 'm2-u1', 'm2-u2', 'm7-u3'}
+# 31/10/2026: inclui as seis tarefas aprovadas do M3, M5 e M6.
+CHOICE_SLUGS = {'m5-u2', 'm3-u2', 'm3-u1', 'm5-u1', 'm2-u2', 'm6-u1', 'm2-u1', 'm7-u3', 'm1-u2', 'm1-u1', 'm6-u2'}
 WARM_CARDS = '#aquecer[data-task-warm="cartoes"]'
 
 def learning_storage(page):
@@ -246,7 +252,7 @@ def assert_reader_navigation(page):
 
 
 def responsive_task_matrix(browser, host):
-    """CI-only 8 tasks x 2 real viewports x 2 media schemes; no CSS-regex proxy."""
+    """CI-only 16 tasks x 2 real viewports x 2 media schemes; no CSS-regex proxy."""
     from urllib.parse import urlsplit, parse_qs
     for width in (390, 1366):
         for scheme in ('light', 'dark'):
@@ -261,9 +267,19 @@ def responsive_task_matrix(browser, host):
                     # The fixture server serves the checkout root; strip only this URL prefix.
                     def local(route):
                         u = urlsplit(route.request.url)
-                        response = route.fetch(url=host + u.path.removeprefix('/pt') +
-                                               ('?' + u.query if u.query else ''))
-                        route.fulfill(response=response)
+                        # 31/10/2026: servir os mesmos ficheiros sem uma segunda ligação HTTP.
+                        from urllib.parse import unquote
+                        import mimetypes
+                        asset = (ROOT / unquote(u.path.removeprefix('/pt/'))).resolve()
+                        if not asset.is_relative_to(ROOT.resolve()):
+                            route.fulfill(status=403, body='Forbidden')
+                            return
+                        if asset.is_dir():
+                            asset = asset / 'index.html'
+                        if asset.is_file():
+                            route.fulfill(path=str(asset), content_type=mimetypes.guess_type(str(asset))[0] or 'application/octet-stream')
+                        else:
+                            route.fulfill(status=404, body='Not found')
                     page.route(host + '/pt/**', local)
                     errors = []
                     page.on('pageerror', lambda e: errors.append(str(e)))

@@ -1,0 +1,281 @@
+{
+ "slug": "m6-u1",
+ "modulo": "m6",
+ "unidade": 1,
+ "versao": "1",
+ "momento": "No início da aula de tarefa",
+ "titulo": "Um ideal que não se alcança",
+ "descricao": "Aquecimento em cartões no início da aula de tarefa da unidade 1 do M6: rever a forma do soneto e os recursos de «Na mão de Deus», distinguir antítese, anáfora e enumeração, saber a quem fala a voz, distinguir a completiva da relativa e o papel de «que», ligar uma imagem a um verso, separar a voz do soneto da vida do poeta, comparar sem ficar na semelhança e planear a produção, sempre com outros exemplos.",
+ "licoes_das_citacoes": [
+  "m6/licao-m6-f01",
+  "m6/licao-m6-f02",
+  "m6/licao-m6-f04",
+  "m6/licao-m6-f06",
+  "m6/licao-m6-f07",
+  "m6/licao-m6-f13"
+ ],
+ "menu": [
+  [
+   "../../../m6/licao-m6-f02/",
+   "Relembrar F02, «Ideal» e «Na mão de Deus»"
+  ],
+  [
+   "../../../m6/licao-m6-f13/",
+   "Relembrar F13, «A um poeta»"
+  ],
+  [
+   "../../../m6/licao-m6-f04/",
+   "Relembrar F04, as orações"
+  ]
+ ],
+ "reservadas": [
+  "«Ideal»",
+  "Aquella, que eu adoro",
+  "A mim mesmo pergunto",
+  "não atino",
+  "essa visão",
+  "ora amostra",
+  "miragem",
+  "nasceu na solidão",
+  "impalpavel",
+  "Nuvem, sonho",
+  "A um poeta",
+  "Tu, que dormes",
+  "Accorda",
+  "Escuta!",
+  "multidões",
+  "teus irmãos",
+  "vozes de rebate",
+  "soldado do Futuro",
+  "Sonhador",
+  "espada de combate",
+  "mundo novo",
+  "Singram",
+  "soberbas naus",
+  "não verei jámais",
+  "chronicas navaes",
+  "Palacio da Ventura",
+  "Palácio da Ventura",
+  "portas d'ouro",
+  "nada mais",
+  "cavalleiro",
+  "cavaleiro andante",
+  "Vagabundo",
+  "fulgurante",
+  "Silencio e escuridão",
+  "anhelante",
+  "Ventura",
+  "Ponta Delgada",
+  "Geração de 70",
+  "In Memoriam",
+  "Columbano",
+  "IADE",
+  "«roda»",
+  "e-book",
+  "1886",
+  "Um ideal de hoje",
+  "canal da escola",
+  "vídeo de um minuto"
+ ],
+ "_nota": "30/10/2026: proposta para o docente (camada M3, M5 e M6). Os cartões de fazer usam «Na mão de Deus», versos de «Ave-Marias» que a tarefa não pede, as frases didáticas da F04 e frases inventadas (escritas em itálico, sem «»): a praça de dia e de noite, o comboio, a escada filmada, a cidade de dia e de noite; o «Abre» di-lo. Os dois sonetos do núcleo, o verso das naus, «O Palacio da Ventura» dos temas e os factos do dossiê ficam em «reservadas».",
+ "cartoes": [
+  {
+   "t": "ler",
+   "rot": "Abre",
+   "titulo": "Para que serve um ideal?",
+   "html": "<p class=\"abre\"><b>Dois sonetos de Antero lado a lado, um verso de Cesário por dentro e um texto teu.</b> Este aquecimento não faz a tarefa: treina a forma do soneto, a voz, os recursos, as orações e a ligação entre imagem e verso com passagens que a tarefa não pede e com casos inventados.</p><div class=\"caixa\"><h3>A tarefa de hoje</h3><p>À mão, 200 a 240 palavras.</p><p><b>Núcleo.</b> «Ideal» e «A um poeta», de Antero, lado a lado; e um verso de «Ave-Marias», dividido em orações.</p><p><b>Tema A.</b> Um ideal de hoje: «O Palacio da Ventura» reescrito em prosa.</p><p><b>Tema B.</b> «O Palacio da Ventura» num vídeo de um minuto.</p></div><p>Dez minutos, com consulta. Não conta para a nota.</p>"
+  },
+  {
+   "t": "vf",
+   "g": "1",
+   "p": "Nos sonetos de Antero, os catorze versos dividem-se em três quadras e um dístico.",
+   "p2": "Os sonetos de Antero têm três estrofes de quatro versos e uma de dois.",
+   "v": false,
+   "f": "Falso: duas **quadras** e dois **tercetos**, 4 + 4 + 3 + 3 (lição F01). Muitas vezes, o sentido vira nos tercetos, e o último verso fecha-o: é a chave de ouro.",
+   "fe": "Conta as estrofes como nas lições: duas de quatro versos e duas de três. São catorze versos, mas não em três quadras."
+  },
+  {
+   "t": "emparelhar",
+   "g": "2",
+   "p": "Liga cada verso de «Na mão de Deus» ao recurso que tem.",
+   "p2": "Apóstrofe, comparação, enumeração ou metáfora? Liga cada verso.",
+   "pares": [
+    [
+     "«Dorme o teu somno, coração liberto,»",
+     "Apóstrofe: a voz chama o coração"
+    ],
+    [
+     "«Como criança, em lobrega jornada,»",
+     "Comparação, com «como»"
+    ],
+    [
+     "«Selvas, mares, areias do deserto…»",
+     "Enumeração de lugares"
+    ],
+    [
+     "«Do palacio encantado da Illusão»",
+     "Metáfora: a ilusão é um palácio"
+    ]
+   ],
+   "f": "A voz fala ao coração (**apóstrofe**); o coração é como uma criança ao colo (**comparação**); os lugares somam-se (**enumeração**); a ilusão passa a ser um palácio de onde se desce (**metáfora**). A apóstrofe, a comparação e a metáfora estão no cartão «Para entender» da lição F02; a enumeração, em «Em paralelo».",
+   "fe": "Procura as marcas: quem é chamado, um «como», uma lista de lugares, uma coisa dita por outra."
+  },
+  {
+   "t": "escolha",
+   "g": "3",
+   "p": "Qual destas frases inventadas tem uma antítese?",
+   "p2": "Antítese, anáfora ou enumeração? Escolhe a frase que opõe duas ideias.",
+   "o": [
+    "_De dia, a praça grita; à noite, cala-se toda._",
+    "_De dia, a praça tem bancas, pombos e turistas._",
+    "_De dia, a praça grita; de dia, a praça vende._"
+   ],
+   "c": 0,
+   "f": "Antítese: dia e noite, gritar e calar, lado a lado. A frase das bancas, dos pombos e dos turistas faz uma lista, uma enumeração; a que repete _De dia_ no princípio das duas partes faz uma anáfora. Se escolheres o tema A, a figura que usares é tua.",
+   "fe": [
+    null,
+    "Bancas, pombos e turistas somam-se numa lista: é uma enumeração, e nada se opõe.",
+    "_De dia_ volta no princípio das duas partes: é uma anáfora; não há duas ideias opostas."
+   ]
+  },
+  {
+   "t": "escolha",
+   "g": "4",
+   "p": "Caso inventado: num poema, a voz diz _Fica, comboio, não partas sem mim._ A quem fala?",
+   "p2": "Em _Fica, comboio, não partas sem mim._, quem é chamado pela voz?",
+   "o": [
+    "Ao comboio, como se ele ouvisse",
+    "A quem vai sentado no comboio",
+    "A si mesma, em voz baixa, no cais"
+   ],
+   "c": 0,
+   "f": "Fala **ao comboio**: chama-o e dá-lhe uma ordem, como a uma pessoa. É uma apóstrofe a uma coisa, como «Dorme o teu somno, coração liberto». Para saber a quem fala a voz, procura quem é chamado.",
+   "fe": [
+    null,
+    "Ninguém dentro do comboio é chamado: a voz chama o próprio comboio, _Fica, comboio_.",
+    "Falar consigo é perguntar-se ou pensar alto; aqui a voz chama alguém, o comboio, e dá-lhe uma ordem."
+   ]
+  },
+  {
+   "t": "sublinhar",
+   "g": "5",
+   "p": "Toca no nome que as duas orações com «que» retomam.",
+   "p2": "Neste verso de «Noite Fechada», que a lição F04 analisa, de que nome falam as duas relativas?",
+   "frase": "Chora-me o coração que se enche e que se abysma",
+   "certas": [
+    2
+   ],
+   "f": "**«coração»** é o antecedente: as duas relativas, «que se enche» e «que se abysma», dizem o que ele faz, e «que» é sujeito nas duas (lição F04). Na tarefa, mostra sempre o que faz «que» na sua oração.",
+   "fe": "O antecedente é o nome que vem antes de «que» e que «que» retoma: pergunta o que é que se enche e se abisma."
+  },
+  {
+   "t": "completar",
+   "g": "6",
+   "p": "Frases didáticas da lição F04: _Penso que escolheste o poema_ e _Leio o poema que escolheste_. Completa.",
+   "p2": "O mesmo «que» em duas frases da lição F04: completa um verbo ou retoma um nome? Completa.",
+   "frase": "Em _Penso que escolheste o poema_, a oração com «que» é [1]; em _Leio o poema que escolheste_, «que» retoma «poema» e é [2] de «escolheste».",
+   "lacunas": [
+    {
+     "o": [
+      "completiva: completa «Penso»",
+      "relativa: retoma o «poema»",
+      "coordenada: liga duas orações"
+     ],
+     "c": 0
+    },
+    {
+     "o": [
+      "complemento direto",
+      "sujeito da oração",
+      "modificador do nome"
+     ],
+     "c": 0
+    }
+   ],
+   "f": "_Penso isso_: na primeira, a oração **completa** o verbo, e «que» não retoma nada. Na segunda, «que» retoma **poema** e é **complemento direto** de «escolheste»: escolheste o poema. A mesma palavra, duas relações (lição F04).",
+   "fe": "Experimenta _isso_ no lugar da oração: _Penso isso_ fica completo. Na segunda, põe o nome no lugar de _que_: _escolheste o poema_; o nome completa o verbo, sem preposição, e o sujeito de _escolheste_ é _tu_."
+  },
+  {
+   "t": "emparelhar",
+   "g": "7",
+   "p": "Planos inventados para «Desci a passo e passo a escada estreita.»: liga cada imagem ao que faz ao verso.",
+   "p2": "A imagem ilustra o verso, contraria-o ou acrescenta-lhe alguma coisa? Liga cada plano.",
+   "pares": [
+    [
+     "Uma escada estreita, filmada de cima, e alguém a descer devagar",
+     "Ilustra o verso"
+    ],
+    [
+     "Uma escada rolante a subir, cheia de gente com pressa",
+     "Contraria o verso"
+    ],
+    [
+     "A mesma escada e, ao fundo, uma cama feita, à espera",
+     "Acrescenta uma ideia"
+    ]
+   ],
+   "f": "A escada filmada de cima mostra o que o verso diz; a escada rolante faz o contrário, subir depressa; a cama feita ao fundo junta o que o verso não diz, o descanso que vem depois. Num vídeo, as três podem servir: o que conta é explicar a escolha.",
+   "fe": "Compara cada imagem com o verso: desce ou sobe? Devagar ou com pressa? Mostra só o que o verso diz, ou junta outra coisa?"
+  },
+  {
+   "t": "rever",
+   "g": "8",
+   "p": "Caso inventado: revê a frase de um vídeo; o soneto não é uma página da vida do poeta.",
+   "p2": "Num vídeo inventado, a voz dá como facto da vida de Antero o que o soneto diz. Escolhe a versão que separa os dois.",
+   "apoio": "Antero de Quental, «Na mão de Deus»: «Desci a passo e passo a escada estreita.»",
+   "frase": "Num vídeo inventado, ouve-se: Antero estava cansado e desceu a escada de um palácio.",
+   "trecho": "Antero estava cansado e desceu a escada de um palácio",
+   "o": [
+    "no soneto, a voz diz que desceu a escada do palácio",
+    "Antero, cansado da vida, desceu a escada do palácio",
+    "o poeta, como ele confessa, desceu a escada estreita"
+   ],
+   "c": 0,
+   "f": "Quem fala no soneto é uma voz, e descer a escada é o que ela diz: o **sentido**. Que Antero estava cansado não se confirma no soneto. Um vídeo pode mostrar a escada, mas não dá o soneto como biografia (lição F13: comparar sem fazer dos poemas uma biografia).",
+   "fe": [
+    null,
+    "Continua a fazer do verso um facto da vida: cansado da vida é uma leitura, e o soneto não fala de Antero.",
+    "Dizer que o poeta confessa trata o soneto como um diário: o que a voz diz não é uma confissão provada."
+   ]
+  },
+  {
+   "t": "escolha",
+   "g": "9",
+   "p": "Caso inventado: num poema, a cidade aparece de dia; noutro, a mesma cidade aparece de noite. Qual destas frases diz o que muda?",
+   "p2": "Dois poemas inventados, a mesma cidade, de dia e de noite. Escolhe a frase que compara e não fica na semelhança.",
+   "o": [
+    "Os dois poemas passam-se na mesma cidade.",
+    "De um poema ao outro, a cidade escurece.",
+    "O segundo é melhor, porque se passa à noite."
+   ],
+   "c": 1,
+   "f": "Diz o que muda: a luz, de um poema para o outro. _Os dois poemas passam-se na mesma cidade_ só aponta a semelhança; dizer que o segundo é melhor é um gosto, sem prova. Numa comparação, a semelhança vem primeiro, e o que muda decide a resposta.",
+   "fe": [
+    "É uma semelhança, e é verdade; mas falta dizer o que muda de um poema para o outro.",
+    null,
+    "É uma opinião sem prova: comparar é mostrar o que muda, não dizer qual se prefere."
+   ]
+  },
+  {
+   "t": "ordenar",
+   "g": "10",
+   "p": "Põe por ordem a produção e a entrega.",
+   "p2": "Cada passo usa o anterior. Do primeiro ao último: ordena.",
+   "passos": [
+    "Lês o enunciado e escreves no topo o tema que escolhes",
+    "Respondes ao núcleo: os dois sonetos e o verso de Cesário",
+    "Escreves o tema, com o verso citado e a explicação",
+    "Relês, corriges e contas as palavras: 200 a 240",
+    "Escreves as duas linhas finais e entregas as fotografias no Teams"
+   ],
+   "f": "O tema fica escrito no topo; o núcleo vem primeiro, porque é para todos; a contagem faz-se no texto escrito; as duas linhas fecham, fora da contagem.",
+   "fe": "Não contas palavras de um texto que ainda não existe, e as duas linhas são as últimas, depois da revisão."
+  },
+  {
+   "t": "ler",
+   "rot": "Para levar",
+   "escuro": true,
+   "html": "<p class=\"levar\">Antes de escrever, três perguntas a cada passagem: quem fala, a quem, e o que faz a forma.</p><p>Agora, na tarefa: a voz e o sonho de cada soneto, com um verso dos tercetos; uma semelhança e o que muda; as orações do verso de Cesário e o papel de «que»; e o teu tema, A ou B.</p>"
+  }
+ ]
+}

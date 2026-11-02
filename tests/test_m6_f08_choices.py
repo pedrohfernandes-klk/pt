@@ -18,7 +18,8 @@ class CreativeChoices(unittest.TestCase):
         self.assertEqual(len(cards),20)
         self.assertIn('quatro fotografias, uma por parte',cards[1]['html'])
         self.assertIn('sete horas',cards[1]['html'])
-        self.assertIn('25 %',cards[1]['html'])
+        # 31/10/2026: decisão 21, mantém-se o produto como extra sem nota.
+        self.assertIn('Extra sem nota',cards[1]['html'])
         self.assertNotIn('seis fotografias',source.lower())
         self.assertIn('Quatro fotografias',(ROOT/'m6/guia-da-tarefa-m6/index.html').read_text(encoding='utf-8'))
 
