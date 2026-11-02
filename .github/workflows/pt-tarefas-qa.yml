@@ -80,12 +80,12 @@ jobs:
           python -m unittest discover -s tests -p 'test_aquecimentos_m356_opcoes.py' -v
           # 01/11/2026: desfaz primeiro a camada das sete lições novas.
           # 01/11/2026: desfaz antes a camada do pedido B.
-          python scripts/aplicar_trocas.py scripts/tarefas_m356_20261031.json --manifesto tests/fixtures/tarefas-m356-edits-20261031.json --verificar --desfazer-antes tests/fixtures/licoes-m16-edits-20261101.json --desfazer-antes tests/fixtures/licoes-m89-edits-20261101.json --desfazer-antes tests/fixtures/tarefas-m89-edits-20261101.json
+          python scripts/aplicar_trocas.py scripts/tarefas_m356_20261031.json --manifesto tests/fixtures/tarefas-m356-edits-20261031.json --verificar --desfazer-antes tests/fixtures/conteudos-lote2-edits-20261101.json --desfazer-antes tests/fixtures/licoes-m16-edits-20261101.json --desfazer-antes tests/fixtures/licoes-m89-edits-20261101.json --desfazer-antes tests/fixtures/tarefas-m89-edits-20261101.json
           # 01/11/2026: verificar a camada nova e os quatro aquecimentos.
           python -m unittest discover -s tests -p 'test_aquecimentos_m89_opcoes.py' -v
           # 01/11/2026: desfaz primeiro a camada das sete lições novas.
           # 01/11/2026: desfaz antes a camada do pedido B.
-          python scripts/aplicar_trocas.py scripts/tarefas_m89_20261101.json --manifesto tests/fixtures/tarefas-m89-edits-20261101.json --verificar --desfazer-antes tests/fixtures/licoes-m16-edits-20261101.json --desfazer-antes tests/fixtures/licoes-m89-edits-20261101.json
+          python scripts/aplicar_trocas.py scripts/tarefas_m89_20261101.json --manifesto tests/fixtures/tarefas-m89-edits-20261101.json --verificar --desfazer-antes tests/fixtures/conteudos-lote2-edits-20261101.json --desfazer-antes tests/fixtures/licoes-m16-edits-20261101.json --desfazer-antes tests/fixtures/licoes-m89-edits-20261101.json
           python scripts/auditar_aquecimentos_m1.py
           node --check assets/task-90.js
           node --check assets/task-reader.js

@@ -838,6 +838,13 @@ def main():
                 # 31/10/2026: a substituição do percurso antigo é uma camada literal posterior.
                 posterior = ROOT / 'tests/fixtures/tarefas-m356-edits-20261031.json'
                 conferencia = texto
+                # 01/11/2026: conteúdo do lote 2 posterior, sem dispensar o contrato da Sala.
+                lote2 = ROOT / 'tests/fixtures/conteudos-lote2-edits-20261101.json'
+                if lote2.is_file():
+                    for edit in reversed(json.loads(lote2.read_text('utf-8'))['files'].get(rel, {}).get('edits', [])):
+                        if conferencia.count(edit['new']) != edit['occurrences']:
+                            raise ManifestoDesatualizado(f'{rel}: camada do lote 2 não confere')
+                        conferencia = conferencia.replace(edit['new'], edit['old'])
                 # 01/11/2026: a camada do pedido B precede a do pedido A.
                 novas = ROOT / 'tests/fixtures/licoes-m16-edits-20261101.json'
                 if novas.is_file():

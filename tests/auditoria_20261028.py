@@ -220,7 +220,21 @@ _LICOES_M89_FILES = json.loads(LICOES_M89_MANIFEST.read_text('utf-8'))['files']
 _LICOES_M16_FILES = json.loads((ROOT / 'tests/fixtures/licoes-m16-edits-20261101.json').read_text('utf-8'))['files']
 
 
+# 01/11/2026: lote 2 autorizado; desfaz-se antes das lições, com contagem estrita.
+_CONTEUDOS_LOTE2_FILES = json.loads((ROOT / 'tests/fixtures/conteudos-lote2-edits-20261101.json').read_text('utf-8'))['files']
+
+
+def undo_conteudos_lote2(path, text):
+    relative = _relative(path)
+    for edit in reversed(_CONTEUDOS_LOTE2_FILES.get(relative, {}).get('edits', [])):
+        if text.count(edit['new']) != edit['occurrences']:
+            raise AssertionError(f"Lote 2 de 01/11 não confere: {relative}: {edit['location']}")
+        text = text.replace(edit['new'], edit['old'])
+    return text
+
+
 def undo_licoes_m16(path, text):
+    text = undo_conteudos_lote2(path, text)
     relative = _relative(path)
     for edit in reversed(_LICOES_M16_FILES.get(relative, {}).get('edits', [])):
         if text.count(edit['new']) != edit['occurrences']:

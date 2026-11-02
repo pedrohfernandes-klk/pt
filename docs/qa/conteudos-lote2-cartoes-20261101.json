@@ -1,0 +1,330 @@
+[
+  {
+    "licao": "m1-f01",
+    "cartao": 11,
+    "tipo": "escolha",
+    "intervencao": "P3: limitar uma reconstrução com a natureza da fonte",
+    "antes": {
+      "t": "escolha",
+      "rot": "O que falta a quem lê",
+      "tipo": "reconhecer",
+      "g": "fim",
+      "p": "Abres um cancioneiro e lês uma cantiga. O que te falta para a conheceres como o público a conheceu?",
+      "p2": "Da música das cantigas quase nada sobreviveu. O que te falta, então, quando lês uma?",
+      "o": [
+        "O som: a melodia e o ritmo",
+        "As palavras: as letras perderam-se quase todas",
+        "Os autores: as cantigas chegaram sem nome",
+        "A língua: as cantigas chegaram traduzidas"
+      ],
+      "c": 0,
+      "fe": [
+        "",
+        "As letras são o que chegou: cerca de 1680 cantigas, guardadas em três cancioneiros. O que se perdeu foi a música.",
+        "Conhecem-se perto de 187 autores, D. Dinis entre eles. O que se perdeu foi a música, não os nomes.",
+        "Chegaram em galego-português, a língua em que foram feitas. Falta-lhes a música, não a língua."
+      ],
+      "f": "Era poesia para ser **cantada**: chegam-te as palavras; a melodia, o ritmo e a voz que a cantava tens de os imaginar.",
+      "mais": true
+    },
+    "depois": {
+      "t": "escolha",
+      "rot": "O que falta a quem lê",
+      "tipo": "reconhecer",
+      "g": "fim",
+      "p": "Lês uma cantiga cuja melodia não chegou até nós. Que limite deves reconhecer ao propor uma interpretação cantada?",
+      "p2": "Uma cantiga conserva a letra, mas perdeu a melodia. Que relação pode ter uma interpretação de hoje com a música medieval?",
+      "o": [
+        "A letra permite criar uma versão, sem confirmar a melodia que se perdeu.",
+        "O ritmo da letra permite recuperar a melodia usada na apresentação antiga.",
+        "O género da cantiga permite escolher a melodia que o público antigo ouviu.",
+        "A língua da letra permite reconhecer os instrumentos da execução antiga."
+      ],
+      "c": 0,
+      "fe": [
+        null,
+        "Confundes o ritmo das palavras com uma melodia documentada. Relê «Chegaram as letras»: que parte da música se perdeu?",
+        "Confundes uma classificação literária com um registo musical. Volta aos pergaminhos Vindel e Sharrer: que informação conservam além das palavras?",
+        "Confundes a língua do texto com os meios da apresentação. Relê «Certeza ou hipótese»: o pergaminho indica instrumentos?"
+      ],
+      "f": "Podes interpretar hoje a cantiga, mas a letra não permite confirmar uma melodia perdida. Em «Certeza ou hipótese», palavras, notas e instrumentos exigem provas diferentes.",
+      "mais": true
+    },
+    "medidas": [
+      {
+        "k": 4,
+        "caracteres": [
+          72,
+          74,
+          74,
+          72
+        ],
+        "amplitude": 0.027777777777777776,
+        "vantagem": 0.972972972972973,
+        "certa_mais_longa": false,
+        "certa_sozinha": false,
+        "todas_iguais": false,
+        "certa_25_porcento": false,
+        "amplitude_acima": false
+      }
+    ],
+    "ficheiro": "m1/licao-m1-f01/index.html"
+  },
+  {
+    "licao": "m1-f01",
+    "cartao": 15,
+    "tipo": "escolha",
+    "intervencao": "P4: distinguir o alcance de uma fonte de usos que ela não sustenta",
+    "antes": {
+      "t": "escolha",
+      "rot": "O valor de um tratado",
+      "tipo": "efeito",
+      "g": "fim",
+      "p": "A _Arte de Trovar_ foi escrita no tempo das cantigas. Porque vale tanto para quem as estuda hoje?",
+      "p2": "Porque é tão precioso um tratado anónimo e incompleto, escrito quando ainda se faziam cantigas?",
+      "o": [
+        "Mostra como a própria época pensava os géneros e as regras",
+        "Guarda as melodias de todas as cantigas que os pergaminhos não guardaram",
+        "Dá a lista dos trovadores e jograis do seu tempo",
+        "Reúne num só livro as cantigas que chegaram"
+      ],
+      "c": 0,
+      "fe": [
+        "",
+        "As melodias que restam estão nos pergaminhos Vindel e Sharrer. A _Arte de Trovar_ é teoria: define géneros e regras.",
+        "É um tratado sobre géneros e regras, não uma lista de nomes. E é anónimo: nem o seu autor se conhece.",
+        "Isso fazem os três cancioneiros, coletâneas manuscritas. A _Arte de Trovar_ é um pequeno tratado que abre um deles, o da Biblioteca Nacional."
+      ],
+      "f": "**Teoria escrita na própria época**: quem a escreveu vivia no tempo das cantigas. Define os géneros e as regras, e chegou-nos incompleta.",
+      "mais": true
+    },
+    "depois": {
+      "t": "escolha",
+      "rot": "O valor de um tratado",
+      "tipo": "efeito",
+      "g": "fim",
+      "p": "A _Arte de Trovar_ descreve géneros e regras na época das cantigas. Que uso respeita a natureza deste tratado incompleto?",
+      "p2": "Ao ler uma cantiga, como podes usar a _Arte de Trovar_ sem confundir regras escritas e práticas de apresentação?",
+      "o": [
+        "Confrontar as regras descritas com os traços que encontras numa cantiga.",
+        "Tomar as regras descritas como relato de como se apresentou uma cantiga.",
+        "Usar as regras descritas para atribuir um nome a uma cantiga sem autor.",
+        "Reconstituir pelas regras descritas os instrumentos usados numa cantiga."
+      ],
+      "c": 0,
+      "fe": [
+        null,
+        "Confundes uma regra de composição com o relato de uma apresentação. Relê «Chegaram as letras»: o tratado descreve géneros e regras.",
+        "Confundes classificação e autoria. Relê a apresentação do tratado: uma regra partilhada permite identificar quem compôs?",
+        "Confundes regras literárias e documentação musical. Volta a «Certeza ou hipótese»: que fonte indicaria os instrumentos?"
+      ],
+      "f": "O tratado permite confrontar uma descrição da época com uma cantiga concreta. É uma fonte sobre géneros e regras; não é, só por isso, prova de autoria ou de uma apresentação particular.",
+      "mais": true
+    },
+    "medidas": [
+      {
+        "k": 4,
+        "caracteres": [
+          72,
+          72,
+          71,
+          72
+        ],
+        "amplitude": 0.014084507042253521,
+        "vantagem": 1.0,
+        "certa_mais_longa": true,
+        "certa_sozinha": false,
+        "todas_iguais": false,
+        "certa_25_porcento": false,
+        "amplitude_acima": false
+      }
+    ],
+    "ficheiro": "m1/licao-m1-f01/index.html"
+  },
+  {
+    "licao": "m1-f01",
+    "cartao": 21,
+    "tipo": "ler",
+    "intervencao": "P2: retomar a pergunta com um indício e o seu limite",
+    "antes": {
+      "t": "ler",
+      "rot": "Para levar",
+      "escuro": true,
+      "html": "<p class=\"levar\"><span class=\"ch\" style=\"--i:0\">Q</span><span class=\"ch\" style=\"--i:1\">u</span><span class=\"ch\" style=\"--i:2\">e</span><span class=\"ch\" style=\"--i:3\">m</span><span class=\"ch\" style=\"--i:4\"> </span><span class=\"ch\" style=\"--i:5\">c</span><span class=\"ch\" style=\"--i:6\">o</span><span class=\"ch\" style=\"--i:7\">m</span><span class=\"ch\" style=\"--i:8\">p</span><span class=\"ch\" style=\"--i:9\">õ</span><span class=\"ch\" style=\"--i:10\">e</span><span class=\"ch\" style=\"--i:11\">,</span><span class=\"ch\" style=\"--i:12\"> </span><span class=\"ch\" style=\"--i:13\">q</span><span class=\"ch\" style=\"--i:14\">u</span><span class=\"ch\" style=\"--i:15\">e</span><span class=\"ch\" style=\"--i:16\">m</span><span class=\"ch\" style=\"--i:17\"> </span><span class=\"ch\" style=\"--i:18\">c</span><span class=\"ch\" style=\"--i:19\">a</span><span class=\"ch\" style=\"--i:20\">n</span><span class=\"ch\" style=\"--i:21\">t</span><span class=\"ch\" style=\"--i:22\">a</span><span class=\"ch\" style=\"--i:23\"> </span><span class=\"ch\" style=\"--i:24\">e</span><span class=\"ch\" style=\"--i:25\"> </span><span class=\"ch\" style=\"--i:26\">q</span><span class=\"ch\" style=\"--i:27\">u</span><span class=\"ch\" style=\"--i:28\">e</span><span class=\"ch\" style=\"--i:29\">m</span><span class=\"ch\" style=\"--i:30\"> </span><span class=\"ch\" style=\"--i:31\">d</span><span class=\"ch\" style=\"--i:32\">i</span><span class=\"ch\" style=\"--i:33\">z</span><span class=\"ch\" style=\"--i:34\"> </span><span class=\"ch\" style=\"--i:35\">«</span><span class=\"ch\" style=\"--i:36\">e</span><span class=\"ch\" style=\"--i:37\">u</span><span class=\"ch\" style=\"--i:38\">»</span><span class=\"ch\" style=\"--i:39\"> </span><span class=\"ch\" style=\"--i:40\">p</span><span class=\"ch\" style=\"--i:41\">o</span><span class=\"ch\" style=\"--i:42\">d</span><span class=\"ch\" style=\"--i:43\">e</span><span class=\"ch\" style=\"--i:44\">m</span><span class=\"ch\" style=\"--i:45\"> </span><span class=\"ch\" style=\"--i:46\">s</span><span class=\"ch\" style=\"--i:47\">e</span><span class=\"ch\" style=\"--i:48\">r</span><span class=\"ch\" style=\"--i:49\"> </span><span class=\"ch\" style=\"--i:50\">t</span><span class=\"ch\" style=\"--i:51\">r</span><span class=\"ch\" style=\"--i:52\">ê</span><span class=\"ch\" style=\"--i:53\">s</span><span class=\"ch\" style=\"--i:54\"> </span><span class=\"ch\" style=\"--i:55\">p</span><span class=\"ch\" style=\"--i:56\">e</span><span class=\"ch\" style=\"--i:57\">s</span><span class=\"ch\" style=\"--i:58\">s</span><span class=\"ch\" style=\"--i:59\">o</span><span class=\"ch\" style=\"--i:60\">a</span><span class=\"ch\" style=\"--i:61\">s</span><span class=\"ch\" style=\"--i:62\"> </span><span class=\"ch\" style=\"--i:63\">d</span><span class=\"ch\" style=\"--i:64\">i</span><span class=\"ch\" style=\"--i:65\">f</span><span class=\"ch\" style=\"--i:66\">e</span><span class=\"ch\" style=\"--i:67\">r</span><span class=\"ch\" style=\"--i:68\">e</span><span class=\"ch\" style=\"--i:69\">n</span><span class=\"ch\" style=\"--i:70\">t</span><span class=\"ch\" style=\"--i:71\">e</span><span class=\"ch\" style=\"--i:72\">s</span><span class=\"ch\" style=\"--i:73\">.</span></p><p>O trovador faz a cantiga, letra e música; o jogral leva-a a quem ouve, muitas vezes por paga, e às vezes também compõe. E quem diz «eu» é o sujeito poético: em Mendinho, um homem dá a voz a uma rapariga.</p><details class=\"mais\"><summary>As frases da aula</summary><div><ol><li>Nos séculos XIII e XIV, as cantigas em galego-português eram poesia para ser cantada.</li><li>Chegaram as letras, em três cancioneiros; a música perdeu-se quase toda, e só dois pergaminhos guardam melodias.</li><li>Trovador: quem compõe cantigas, texto e música.</li><li>Jogral: profissional que as apresenta, muitas vezes pago; alguns também compunham.</li><li>Sujeito poético: a voz que diz «eu» no poema; não se confunde com o autor.</li><li>Na cantiga de amigo, um trovador dá a voz a uma rapariga que fala do amigo.</li></ol></div></details>"
+    },
+    "depois": {
+      "t": "ler",
+      "rot": "Para levar",
+      "escuro": true,
+      "html": "<p class=\"levar\"><span class=\"ch\" style=\"--i:0\">Q</span><span class=\"ch\" style=\"--i:1\">u</span><span class=\"ch\" style=\"--i:2\">e</span><span class=\"ch\" style=\"--i:3\">m</span><span class=\"ch\" style=\"--i:4\"> </span><span class=\"ch\" style=\"--i:5\">c</span><span class=\"ch\" style=\"--i:6\">o</span><span class=\"ch\" style=\"--i:7\">m</span><span class=\"ch\" style=\"--i:8\">p</span><span class=\"ch\" style=\"--i:9\">õ</span><span class=\"ch\" style=\"--i:10\">e</span><span class=\"ch\" style=\"--i:11\">,</span><span class=\"ch\" style=\"--i:12\"> </span><span class=\"ch\" style=\"--i:13\">q</span><span class=\"ch\" style=\"--i:14\">u</span><span class=\"ch\" style=\"--i:15\">e</span><span class=\"ch\" style=\"--i:16\">m</span><span class=\"ch\" style=\"--i:17\"> </span><span class=\"ch\" style=\"--i:18\">c</span><span class=\"ch\" style=\"--i:19\">a</span><span class=\"ch\" style=\"--i:20\">n</span><span class=\"ch\" style=\"--i:21\">t</span><span class=\"ch\" style=\"--i:22\">a</span><span class=\"ch\" style=\"--i:23\"> </span><span class=\"ch\" style=\"--i:24\">e</span><span class=\"ch\" style=\"--i:25\"> </span><span class=\"ch\" style=\"--i:26\">q</span><span class=\"ch\" style=\"--i:27\">u</span><span class=\"ch\" style=\"--i:28\">e</span><span class=\"ch\" style=\"--i:29\">m</span><span class=\"ch\" style=\"--i:30\"> </span><span class=\"ch\" style=\"--i:31\">d</span><span class=\"ch\" style=\"--i:32\">i</span><span class=\"ch\" style=\"--i:33\">z</span><span class=\"ch\" style=\"--i:34\"> </span><span class=\"ch\" style=\"--i:35\">«</span><span class=\"ch\" style=\"--i:36\">e</span><span class=\"ch\" style=\"--i:37\">u</span><span class=\"ch\" style=\"--i:38\">»</span><span class=\"ch\" style=\"--i:39\"> </span><span class=\"ch\" style=\"--i:40\">p</span><span class=\"ch\" style=\"--i:41\">o</span><span class=\"ch\" style=\"--i:42\">d</span><span class=\"ch\" style=\"--i:43\">e</span><span class=\"ch\" style=\"--i:44\">m</span><span class=\"ch\" style=\"--i:45\"> </span><span class=\"ch\" style=\"--i:46\">s</span><span class=\"ch\" style=\"--i:47\">e</span><span class=\"ch\" style=\"--i:48\">r</span><span class=\"ch\" style=\"--i:49\"> </span><span class=\"ch\" style=\"--i:50\">t</span><span class=\"ch\" style=\"--i:51\">r</span><span class=\"ch\" style=\"--i:52\">ê</span><span class=\"ch\" style=\"--i:53\">s</span><span class=\"ch\" style=\"--i:54\"> </span><span class=\"ch\" style=\"--i:55\">p</span><span class=\"ch\" style=\"--i:56\">e</span><span class=\"ch\" style=\"--i:57\">s</span><span class=\"ch\" style=\"--i:58\">s</span><span class=\"ch\" style=\"--i:59\">o</span><span class=\"ch\" style=\"--i:60\">a</span><span class=\"ch\" style=\"--i:61\">s</span><span class=\"ch\" style=\"--i:62\"> </span><span class=\"ch\" style=\"--i:63\">d</span><span class=\"ch\" style=\"--i:64\">i</span><span class=\"ch\" style=\"--i:65\">f</span><span class=\"ch\" style=\"--i:66\">e</span><span class=\"ch\" style=\"--i:67\">r</span><span class=\"ch\" style=\"--i:68\">e</span><span class=\"ch\" style=\"--i:69\">n</span><span class=\"ch\" style=\"--i:70\">t</span><span class=\"ch\" style=\"--i:71\">e</span><span class=\"ch\" style=\"--i:72\">s</span><span class=\"ch\" style=\"--i:73\">.</span></p><p>O trovador faz a cantiga, letra e música; o jogral leva-a a quem ouve, muitas vezes por paga, e às vezes também compõe. E quem diz «eu» é o sujeito poético: em Mendinho, um homem dá a voz a uma rapariga.</p><p>Volta à pergunta do início: quem compõe, quem canta e quem diz «eu»? Escolhe uma palavra da cantiga que sustente a atribuição da voz e explica por que não identifica, por si, quem a cantou.</p><details class=\"mais\"><summary>As frases da aula</summary><div><ol><li>Nos séculos XIII e XIV, as cantigas em galego-português eram poesia para ser cantada.</li><li>Chegaram as letras, em três cancioneiros; a música perdeu-se quase toda, e só dois pergaminhos guardam melodias.</li><li>Trovador: quem compõe cantigas, texto e música.</li><li>Jogral: profissional que as apresenta, muitas vezes pago; alguns também compunham.</li><li>Sujeito poético: a voz que diz «eu» no poema; não se confunde com o autor.</li><li>Na cantiga de amigo, um trovador dá a voz a uma rapariga que fala do amigo.</li></ol></div></details>"
+    },
+    "medidas": [],
+    "ficheiro": "m1/licao-m1-f01/index.html"
+  },
+  {
+    "licao": "m1-f20",
+    "cartao": 6,
+    "tipo": "escolha",
+    "intervencao": "P4: separar ação narrada, conteúdo de uma fala e intenção inferida",
+    "antes": {
+      "t": "escolha",
+      "rot": "Uma sala que fecha",
+      "tipo": "transferir",
+      "g": "c-explicito-inferencia",
+      "mais": true,
+      "p": "Caso imaginário: «Alguém gritou “A sala vai fechar!”, e muitos saíram.» O que é informação explícita?",
+      "p2": "No relato da sala que ia fechar, o que se pode apontar nas palavras?",
+      "o": [
+        "Que alguém gritou e que muitos saíram",
+        "Que a sala ia mesmo fechar",
+        "Que quem saiu teve medo de ficar fechado",
+        "Que fizeram mal em sair sem confirmar"
+      ],
+      "c": 0,
+      "fe": [
+        "",
+        "É o que o grito afirma: o relato só mostra que foi gritado, como «Matam o Mestre!».",
+        "É uma inferência: o relato não diz o que sentiram; concluis do grito e da saída.",
+        "É uma opinião: «fizeram mal» é um juízo de quem comenta, e não está no relato."
+      ],
+      "f": "O relato mostra o grito e a saída: isso aponta-se. Que a sala fosse fechar é só o que o grito afirma. Como no grito do pajem: o que se diz não prova o que se anuncia."
+    },
+    "depois": {
+      "t": "escolha",
+      "rot": "Uma sala que fecha",
+      "tipo": "transferir",
+      "g": "c-explicito-inferencia",
+      "mais": true,
+      "p": "Caso criado: alguém gritou «A sala vai fechar!», e muitos saíram. Que informação podes verificar nas palavras deste relato?",
+      "p2": "Caso criado: alguém gritou «A sala vai fechar!», e muitos saíram. Que afirmação se apoia diretamente no que foi narrado?",
+      "o": [
+        "Uma pessoa anunciou o fecho e várias pessoas saíram da sala.",
+        "Uma pessoa confirmou o fecho e várias pessoas evitaram ficar.",
+        "Uma pessoa avisou do perigo e várias pessoas saíram com medo.",
+        "Uma pessoa deu uma ordem e várias pessoas decidiram obedecer."
+      ],
+      "c": 0,
+      "fe": [
+        null,
+        "Confundes anunciar um fecho com confirmar que vai acontecer. Relê o verbo «gritou»: o relato confirma a fala, não o seu conteúdo.",
+        "Acrescentas um perigo e um sentimento que o relato não nomeia. Relê «muitos saíram»: a ação revela, por si, o motivo da saída?",
+        "Transformas um anúncio numa ordem e atribuis uma intenção a quem sai. Compara «vai fechar» com «saíram»: o relato diz que obedeceram?"
+      ],
+      "f": "O relato apresenta duas ações: alguém grita e muitas pessoas saem. Como em «Matam o Mestre!», a existência de uma fala não confirma o acontecimento que ela anuncia."
+    },
+    "medidas": [
+      {
+        "k": 4,
+        "caracteres": [
+          60,
+          61,
+          61,
+          61
+        ],
+        "amplitude": 0.016666666666666666,
+        "vantagem": 0.9836065573770492,
+        "certa_mais_longa": false,
+        "certa_sozinha": false,
+        "todas_iguais": false,
+        "certa_25_porcento": false,
+        "amplitude_acima": false
+      }
+    ],
+    "ficheiro": "m1/licao-m1-f20/index.html"
+  },
+  {
+    "licao": "m1-f20",
+    "cartao": 9,
+    "tipo": "escolha",
+    "intervencao": "P5: explicar a relação entre indícios sem atribuir estados interiores",
+    "antes": {
+      "t": "escolha",
+      "rot": "Ao sino da quadrilha",
+      "tipo": "aplicar",
+      "g": 1,
+      "l": "1-0",
+      "mais": true,
+      "cita": "logo todos direitamente corriam pera lá.",
+      "p": "«logo todos direitamente corriam pera lá»: que cidade faz ver esta frase?",
+      "p2": "Ao som do sino, como age a cidade, segundo «logo todos direitamente corriam»?",
+      "o": [
+        "Uma cidade que age como uma só figura, sem demora",
+        "Uma cidade que espera nova ordem do Mestre a cada ataque",
+        "Uma cidade dividida, em que cada um corre para onde quer",
+        "Uma cidade que o cronista elogia com adjetivos"
+      ],
+      "c": 0,
+      "fe": [
+        "",
+        "«Logo» quer dizer imediatamente: ao ouvir o sino, corriam. A ordem já estava dada antes, «com as gentes da cidade».",
+        "Não corre cada um para onde quer: corre ao sino «da sua quadrilha», e «direitamente», sem desvio.",
+        "Não há adjetivos de elogio: o cronista mostra a corrida, «logo» e «direitamente», e a rapidez fala por si."
+      ],
+      "f": "Imediatamente, a direito, cada um ao sino da sua quadrilha, sem esperar ordens: a cidade age como uma **personagem coletiva**. E o cronista não a elogia, fá-la ver: é o visualismo (aula 7)."
+    },
+    "depois": {
+      "t": "escolha",
+      "rot": "Ao sino da quadrilha",
+      "tipo": "aplicar",
+      "g": 1,
+      "l": "1-0",
+      "mais": true,
+      "cita": "logo todos direitamente corriam pera lá.",
+      "p": "«Logo todos direitamente corriam pera lá»: que leitura da ação coletiva se apoia nesta passagem?",
+      "p2": "Que relação entre as palavras «logo», «todos» e «direitamente» explica como o cronista apresenta a reação da cidade?",
+      "o": [
+        "A rapidez e a direção comum fazem a multidão agir como uma figura.",
+        "A rapidez e a direção comum mostram que cada pessoa conhecia o plano.",
+        "A rapidez e a direção comum indicam que todos sentiam o mesmo medo.",
+        "A rapidez e a direção comum revelam que a cidade dispensava ordens."
+      ],
+      "c": 0,
+      "fe": [
+        null,
+        "Confundes a ação conjunta com o conhecimento de cada pessoa. Relê «todos direitamente corriam»: a passagem mostra ações ou pensamentos?",
+        "Atribuis um sentimento comum a partir de movimentos semelhantes. Volta a «logo»: a rapidez nomeia o que cada pessoa sente?",
+        "Generalizas a reação a este sinal para toda a defesa. Relê a indicação do sino «da sua quadrilha»: a corrida faz parte de uma organização."
+      ],
+      "f": "«Logo» marca a rapidez, «todos» reúne a gente e «direitamente» dá uma direção à corrida. A conjugação destes indícios constrói uma personagem coletiva; não revela o pensamento de cada pessoa."
+    },
+    "medidas": [
+      {
+        "k": 4,
+        "caracteres": [
+          66,
+          69,
+          67,
+          67
+        ],
+        "amplitude": 0.045454545454545456,
+        "vantagem": 0.9565217391304348,
+        "certa_mais_longa": false,
+        "certa_sozinha": false,
+        "todas_iguais": false,
+        "certa_25_porcento": false,
+        "amplitude_acima": false
+      }
+    ],
+    "ficheiro": "m1/licao-m1-f20/index.html"
+  },
+  {
+    "licao": "m1-f20",
+    "cartao": 16,
+    "tipo": "ler",
+    "intervencao": "P2/P3: fechar com prova e limite da inferência",
+    "antes": {
+      "t": "ler",
+      "rot": "Agora, em papel",
+      "titulo": "A resposta que entregas",
+      "html": "<p class=\"papel-q\">Um grito, uma reação: o que prova o relato? Responde em cinco linhas, com uma informação explícita e uma inferência, cada uma com a sua citação.</p><p>Em papel, à mão, para entregar no fim da aula. Nada se escreve no telemóvel.</p><details class=\"mais\"><summary>O que conta</summary><div><ol><li>Separa o que o pajem afirma (o grito) do que o relato mostra (o grito dito e a cidade a correr).</li><li>Dá uma informação explícita, com a citação entre aspas.</li><li>Dá uma inferência apoiada e diz de que pistas a tiras, com a citação entre aspas.</li><li>Não chama prova ao grito, nem opinião ao que só não tem apoio no excerto.</li></ol></div></details><details class=\"mais\"><summary>Um exemplo</summary><div><p>O pajem grita «Matam o Mestre!», mas o grito é o que uma personagem afirma: não prova que matassem o Mestre. O que o relato mostra, e posso apontar, é a reação da cidade: «se moveram todos com mão armada». Daí tiro uma inferência apoiada: a cidade acredita no grito, porque corre «pera lhe dar vida e escusar morte». Quem sabe que o grito estava combinado é o leitor, não a cidade.</p></div></details>"
+    },
+    "depois": {
+      "t": "ler",
+      "rot": "Agora, em papel",
+      "titulo": "A resposta que entregas",
+      "html": "<p class=\"papel-q\">Um grito, uma reação: o que prova o relato? Responde em cinco linhas: distingue uma informação explícita de uma inferência, cita a pista que a sustenta e explica o que essa pista não permite concluir.</p><p>Em papel, à mão, para entregar no fim da aula. Nada se escreve no telemóvel.</p><details class=\"mais\"><summary>O que conta</summary><div><ol><li>Separa o que o pajem afirma (o grito) do que o relato mostra (o grito dito e a cidade a correr).</li><li>Dá uma informação explícita, com a citação entre aspas.</li><li>Dá uma inferência apoiada, cita a pista e distingue-a de uma conclusão que essa pista não permite.</li><li>Não chama prova ao grito, nem opinião ao que só não tem apoio no excerto.</li></ol></div></details><details class=\"mais\"><summary>Um exemplo</summary><div><p>O pajem grita «Matam o Mestre!», mas o grito é o que uma personagem afirma: não prova que matassem o Mestre. O que o relato mostra, e posso apontar, é a reação da cidade: «se moveram todos com mão armada». Daí tiro uma inferência apoiada: a cidade acredita no grito, porque corre «pera lhe dar vida e escusar morte». Quem sabe que o grito estava combinado é o leitor, não a cidade.</p></div></details>"
+    },
+    "medidas": [],
+    "ficheiro": "m1/licao-m1-f20/index.html"
+  }
+]

@@ -6,6 +6,7 @@ import sys
 
 ROOT=Path(__file__).resolve().parents[1]
 LAYERS=[
+ ('conteudos_lote2_20261101','conteudos-lote2-edits-20261101'),
  ('licoes_m16_20261101','licoes-m16-edits-20261101'),
  ('licoes_m89_20261101','licoes-m89-edits-20261101'),
  ('tarefas_m89_20261101','tarefas-m89-edits-20261101'),

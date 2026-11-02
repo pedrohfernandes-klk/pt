@@ -49,6 +49,8 @@ class TasksM89(unittest.TestCase):
                             'scripts/tarefas_m89_20261101.json', '--manifesto',
                             # 01/11/2026: confere a camada das tarefas por baixo das novas lições.
                             'tests/fixtures/tarefas-m89-edits-20261101.json', '--verificar',
+                            # 01/11/2026: lote 2 acima da cadeia, sem relaxar a comparação.
+                            '--desfazer-antes', 'tests/fixtures/conteudos-lote2-edits-20261101.json',
                             '--desfazer-antes', 'tests/fixtures/licoes-m16-edits-20261101.json',
                             '--desfazer-antes', 'tests/fixtures/licoes-m89-edits-20261101.json'],
                            cwd=ROOT, capture_output=True, text=True, encoding='utf-8')
