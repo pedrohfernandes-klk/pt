@@ -4,6 +4,13 @@
   "titulo": "Ver, compreender, estudar melhor",
   "cartoes": [
     {
+      "t": "ler",
+      "titulo": "Texto para consultar",
+      "html": "<p>Consulta o texto quando precisares de confirmar uma escolha.</p><details><summary>Abrir o texto de apoio</summary><p>A Inês reconhece as definições quando as relê. Numa frase nova, hesita na função sintática. O Rui termina depressa uma resposta sobre um poema, mas não explica o que a sua citação demonstra.</p><p class=\"fonte\">Proposta de aplicação produzida para esta sessão.</p></details>",
+      "recycledFrom": "/pt/exame/",
+      "sourceSession": "s27"
+    },
+    {
       "p": "Reconhecer uma explicação ao relê-la basta para verificar se a sabes aplicar?",
       "f": "Aplicar num caso diferente ajuda a distinguir a familiaridade com as palavras da compreensão do conteúdo.",
       "legacyId": "s27-q1",

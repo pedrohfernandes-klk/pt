@@ -7,7 +7,7 @@ Ramo: `codex/exame-aquecimentos-20261101`. Integração apenas por revisão da e
 
 Cada sessão passa a ter 12 cartões de fazer, num total de 324. Conservam-se as 81 perguntas anteriores, com as opções reequilibradas e os títulos em itálico. Os dados antigos de `sessoes.json` mantêm-se para rastreabilidade; nesse ficheiro só muda a duração das sessões.
 
-Os bancos ficam em `docs/pedagogia/exame-aquecimentos/s01.json` a `s27.json`. Cada cartão indica `recycledFrom` e, nos acrescentos, `sourceCard`; `adaptacao` identifica transferências para exemplos de treino. Os textos primários são consultáveis, sem glossários nem modelos de resposta. Os exemplos inventados identificam-se como treino ou caso imaginário.
+Os bancos ficam em `docs/pedagogia/exame-aquecimentos/s01.json` a `s27.json`. Cada cartão indica `recycledFrom` e, nos acrescentos, `sourceCard`; `adaptacao` identifica transferências para exemplos de treino. Os textos primários são consultáveis, sem glossários nem modelos de resposta. Nas sessões 20 e 27, a consulta inclui também o texto original de treino da sessão, necessário para interpretar as perguntas anteriores. Os exemplos inventados identificam-se como treino ou caso imaginário.
 
 As páginas próprias em `exame/aquecimentos/sNN/` usam a casca e o motor das lições, sem os alterar. A página inteira evita dois níveis de deslocamento e barras concorrentes no telemóvel e na projeção. Há regresso ao aquecimento no topo e no menu e, no fim, continuação para a leitura. O relógio, acessível no menu dos cartões, partilha o estado com a fase Aquecer.
 
@@ -72,7 +72,7 @@ A passagem final de `python tests/browser_exame_aquecimentos.py` percorreu os 32
 | Comando | Resultado |
 |---|---|
 | `python scripts/exame_aquecimentos.py --check` | 27 páginas atuais; bancos válidos e opções dentro dos limites |
-| `python -m unittest discover -s tests -p 'test_exame*.py' -v` | 16 testes aprovados |
+| `python -m unittest discover -s tests -p 'test_exame*.py' -v` | 17 testes aprovados |
 | `node tests/exame-catalogo.cjs` | 27 sessões; 108 itens anteriores preservados; tempos e destinos válidos |
 | `python tests/browser_exame_aquecimentos.py` | 81 percursos completos, mais os casos de erro e projeção |
 | `node tests/browser_exame_laboratorio.cjs` | Aprovado |

@@ -4,6 +4,13 @@
   "titulo": "Ler informação e escrever uma síntese",
   "cartoes": [
     {
+      "t": "ler",
+      "titulo": "Texto para consultar",
+      "html": "<p>Consulta o texto quando precisares de confirmar uma escolha.</p><details><summary>Abrir o texto de apoio</summary><p>A consulta digital permite encontrar documentos com rapidez e aproximar leitores de obras que antes estavam longe. Contudo, a abundância de resultados cria também dificuldades de seleção. Uma lista extensa pode repetir a mesma origem ou misturar informação verificada e interpretação. A biblioteca ajuda a organizar esse universo: identifica fontes, oferece critérios e apoia quem procura. Estudar exige, por isso, comparar documentos e perceber as relações entre as ideias. Copiar fragmentos para uma pasta não equivale a compreender. A rapidez de acesso é uma vantagem quando é acompanhada pelo tempo necessário para ler, interrogar e reformular. O objetivo não é acumular resultados, mas construir conhecimento que possa ser explicado e usado com responsabilidade.</p><p class=\"fonte\">Texto e proposta produzidos para este treino.</p></details>",
+      "recycledFrom": "/pt/exame/",
+      "sourceSession": "s20"
+    },
+    {
       "p": "Qual deve ser preservado numa síntese?",
       "f": "A síntese mantém a informação essencial e as relações que a organizam; não acrescenta uma avaliação pessoal.",
       "legacyId": "s20-q1",

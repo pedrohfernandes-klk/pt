@@ -4,6 +4,7 @@ from pathlib import Path
 import re
 import sys
 import unittest
+from html import unescape
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'scripts'))
@@ -45,6 +46,13 @@ class AquecimentosExame(unittest.TestCase):
     def test_ajudas_existentes(self):
         for name in ('escolher', 'verdadeiro-falso', 'ligar-pares', 'ligar-lados', 'ordenar', 'tocar-palavras', 'completar'):
             self.assertTrue((ROOT / 'como' / (name + '.mp4')).is_file(), name)
+
+    def test_textos_autorais_da_sessao_consultaveis_nos_cartoes(self):
+        # 01/11/2026: uma pergunta que remete para o apoio tem o texto também na página própria.
+        for s in self.sessions:
+            if s['source'].get('excerpt'):
+                html = ''.join(c.get('html', '') for c in self.banks[s['id']]['cartoes'] if c['t'] == 'ler')
+                self.assertIn(s['source']['excerpt'], unescape(html))
 
     def test_tempos_e_chaves(self):
         for s in self.sessions:

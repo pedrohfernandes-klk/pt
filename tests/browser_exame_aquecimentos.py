@@ -55,12 +55,15 @@ def main():
             ctx, page, errors = nova(browser, 390)
             d = BANKS[19]
             page.goto(host+'/exame/aquecimentos/s20/', wait_until='networkidle')
+            assert d['cartoes'][0]['t'] == 'ler'
+            responder(page, 0, d['cartoes'][0], 'apoio s20')
+            fazer = [c for c in d['cartoes'] if c['t'] != 'ler']
             page.locator('#baralho .op[data-j="1"]').click()
-            assert d['cartoes'][0]['fe'][1] in page.locator('[data-c-folha]').text_content()
+            assert fazer[0]['fe'][1] in page.locator('[data-c-folha]').text_content()
             page.locator('[data-c-folha] [data-seguinte]').click()
-            for k, c in enumerate(d['cartoes'][1:5], 1):
+            for k, c in enumerate(fazer[1:5], 1):
                 responder(page, k, c, 'retorno s20')
-            c = d['cartoes'][5]
+            c = fazer[5]
             assert c['t'] == 'completar'
             page.locator('select[data-k="0"]').select_option('1')
             page.locator('select[data-k="1"]').select_option('0')
