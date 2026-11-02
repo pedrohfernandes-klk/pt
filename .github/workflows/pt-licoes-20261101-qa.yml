@@ -38,6 +38,8 @@ jobs:
       - name: Todas as atividades, projeção e percursos
         run: |
           python tests/browser_licoes_20261101.py
+          # 02/11/2026: documentos ampliados, teclado, foco e progresso.
+          python tests/browser_documentos_lote2.py
           python tests/browser_unit_routes.py
           python tests/browser_unit_support.py
           python tests/browser_ux06_pt.py

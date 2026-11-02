@@ -21,10 +21,10 @@ class IndicesCartaz(unittest.TestCase):
     self.assertEqual(re.findall(r'localStorage\.[\s\S]{0,150}',before),re.findall(r'localStorage\.[\s\S]{0,150}',after))
     self.assertEqual(re.findall(r'<img\b[^>]*>',before),re.findall(r'<img\b[^>]*>',after))
  def test_m4_conserva_as_tres_provas_do_149(self):
-  # 01/11/2026: o #149 guarda agora as provas na lista pendente, sem camada aplicada.
-  from test_pendentes_camada_149_20261101 import PENDENTES_CAMADA_149_20261101
+  # 02/11/2026: comparar as três provas com o histórico aprovado, agora aplicado no lote 2.
+  from test_pendentes_camada_149_20261101 import APROVADAS_CAMADA_149_20261101
   proofs=lambda s:re.findall(r'<p class="prova-esperada">(.*?)</p>',s)
-  expected=[proofs(e['novo'])[0] for e in PENDENTES_CAMADA_149_20261101 if e['local'].startswith('M4 unidade')]
+  expected=[proofs(e['novo'])[0] for e in APROVADAS_CAMADA_149_20261101 if e['local'].startswith('M4 unidade')]
   self.assertEqual(proofs((ROOT/'m4/index.html').read_text('utf8')),expected)
   self.assertEqual(len(expected),3)
  def test_uma_prova_e_uma_dobra_aberta_por_unidade(self):

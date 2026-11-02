@@ -20,7 +20,14 @@ class Lote2(unittest.TestCase):
             self.assertEqual(len(before),len(after),rel)
             for i,(a,b) in enumerate(zip(before,after)):
                 for key in ('t','mais','g','l','variar','aula'):
-                    self.assertEqual(a.get(key),b.get(key),(rel,i,key))
+                    # 02/11/2026: mudanças explícitas já confirmadas no #149, verificadas pelo valor exato.
+                    approved={('m4/licao-m4-f01/index.html',10,'mais'):(True,None),
+                              ('m7/licao-m7-f34/index.html',8,'g'):(2,'dupla-exposicao'),
+                              ('m8/licao-m8-f12/index.html',16,'t'):('vf','escolha')}
+                    if (rel,i,key) in approved:
+                        self.assertEqual((a.get(key),b.get(key)),approved[rel,i,key])
+                    else:
+                        self.assertEqual(a.get(key),b.get(key),(rel,i,key))
     def test_limite_de_seis_e_registo_exato(self):
         counts=Counter(x['licao'] for x in LOG)
         self.assertTrue(all(n<=6 for n in counts.values()),counts)
@@ -45,14 +52,18 @@ class Lote2(unittest.TestCase):
     def test_provas_nao_alteram_dados_dos_percursos(self):
         for m in range(1,10):
             rel=f'm{m}/index.html';current=(ROOT/rel).read_text('utf-8')
-            if 'id="prova-esperada-lote2"' not in current:continue
+            # 02/11/2026: verificar os nove índices, incluindo as provas já publicadas pelo Cartaz.
             before=undo_conteudos_lote2(rel,current)
-            pattern=r'<script id="epi-unidades-pedagogicas">(.*?)</script>'
+            # 02/11/2026: M4/M7 já publicam o tipo JSON antes do id; verificar o mesmo conteúdo integral.
+            pattern=r'<script (?:type="application/json" )?id="epi-unidades-pedagogicas">(.*?)</script>'
             self.assertEqual(re.search(pattern,before,re.S)[1],re.search(pattern,current,re.S)[1])
-            self.assertEqual(re.findall(r'\bid="([^"]+)"',before),[v for v in re.findall(r'\bid="([^"]+)"',current) if v!='prova-esperada-lote2'])
+            # 02/11/2026: o identificador novo limita a correção dos alvos táteis ao M2.
+            self.assertEqual(current.count('id="alvos-lote2"'),1 if m==2 else 0)
+            self.assertEqual(re.findall(r'\bid="([^"]+)"',before),[v for v in re.findall(r'\bid="([^"]+)"',current) if v not in ('prova-esperada-lote2','alvos-lote2')])
             self.assertEqual(re.findall(r'\bhref="([^"]+)"',before),re.findall(r'\bhref="([^"]+)"',current))
             units=json.loads(re.search(pattern,current,re.S)[1])
             self.assertEqual(current.count('<p class="prova-esperada">'),len(units))
-            self.assertIn('content:"Prova da unidade"',current)
+            self.assertIn('cartaz-indices.css',current)
+            self.assertRegex((ROOT/'assets/cartaz-indices.css').read_text('utf-8'),r'\.prova-esperada\{[^}]*font:1rem/1\.55 Georgia,serif')
 
 if __name__=='__main__':unittest.main()
