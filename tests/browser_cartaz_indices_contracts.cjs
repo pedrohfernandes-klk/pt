@@ -7,6 +7,20 @@ const quiet=()=>{const main=document.querySelector('main'),bad=[];for(const e of
 (async()=>{await new Promise(r=>server.listen(0,'127.0.0.1',r));const origin='http://127.0.0.1:'+server.address().port,b=await chromium.launch({headless:true,...(process.env.CHROME_PATH?{executablePath:process.env.CHROME_PATH}:{})});let scenarios=0;try{
 async function context(options){const ctx=await b.newContext(options);await ctx.route('**/*',async r=>{const u=new URL(r.request().url());if(u.origin===origin)return r.continue();if(u.hostname==='pedrohfernandes-klk.github.io'&&u.pathname.startsWith('/pt/')){const response=await ctx.request.get(origin+u.pathname+u.search);return r.fulfill({response})}return r.abort()});return ctx}
 for(let n=1;n<=9;n++){
+ // 02/11/2026: o crédito usa o alvo das peças, sem sair da coluna nem separar pontuação.
+ if(n===3||n===5)for(const width of [320,390,801,852,1366,1440])for(const theme of ['light','dark']){
+  const ctx=await context({viewport:{width,height:900},colorScheme:theme,reducedMotion:'reduce'}),p=await ctx.newPage();await p.goto(`${origin}/pt/m${n}/`,{waitUntil:'load'});
+  const result=await p.locator('figcaption.cz-credit').evaluate(c=>{
+   const bad=[],box=c.getBoundingClientRect(),walker=document.createTreeWalker(c,NodeFilter.SHOW_TEXT);let text;
+   while(text=walker.nextNode())for(let i=0;i<text.length;i++)if(/[.,;:!?]/.test(text.data[i])){const range=document.createRange();range.setStart(text,i);range.setEnd(text,i+1);const r=range.getBoundingClientRect();if(r.width&&Math.abs(r.left-box.left)<1)bad.push(text.data[i]);}
+   const links=[...c.querySelectorAll('a')].map(a=>{const r=a.getBoundingClientRect();return {text:a.textContent.trim(),inside:r.left>=box.left-.1&&r.right<=box.right+.1,rects:a.getClientRects().length}});
+   return {bad,links};
+  });
+  assert.deepEqual(result.bad,[],`M${n} ${width}: pontuação no início da linha`);assert.equal(result.links.length,1);assert(result.links.every(a=>a.inside&&a.rects===1&&a.text==='Wikimedia Commons ↗'),JSON.stringify(result));
+  const targets=await p.locator('figcaption.cz-credit a').evaluateAll(es=>es.map(a=>{a.scrollIntoView({block:'center'});const r=a.getBoundingClientRect(),s=getComputedStyle(a,'::before'),cx=(r.left+r.right)/2,cy=(r.top+r.bottom)/2;return {width:parseFloat(s.width),height:parseFloat(s.height),hits:[[-21,-21],[21,-21],[-21,21],[21,21]].map(([x,y])=>{const hit=document.elementFromPoint(cx+x,cy+y);return hit===a||a.contains(hit)})}}));
+  for(const t of targets){assert(t.width>=44-1/64&&t.height>=44-1/64);assert.deepEqual(t.hits,[true,true,true,true]);}
+  await ctx.close();scenarios++;
+ }
  // 01/11/2026: a ação inteira cabe no primeiro ecrã pequeno, nos três estados.
  for(const [width,height] of [[320,568],[360,560],[375,548]])for(const theme of ['light','dark'])for(const progress of ['none','half','all']){
   const ctx=await context({viewport:{width,height},colorScheme:theme,reducedMotion:'reduce'}),p=await ctx.newPage(),errors=[];p.on('pageerror',e=>errors.push(String(e)));
