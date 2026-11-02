@@ -44,8 +44,11 @@ def main():
                     assert state['lida'] and state['total'] == 12 and state['certas'] == 12, (sid, state)
                     assert page.locator('[data-licao-seguinte]').get_attribute('href').endswith('#'+sid+'/ler')
                     page.reload(wait_until='networkidle')
+                    # 01/11/2026: aguardar o desenho do motor antes de verificar o estado guardado.
+                    page.locator('#baralho .cartao').wait_for()
                     assert 'Já feita' in page.locator('#baralho').text_content(), (sid, page.locator('#baralho').text_content()[:250], page.evaluate('(k)=>localStorage.getItem(k)', 'aquecimento-exame-'+sid))
                     page.goto(target+'?recomecar=1', wait_until='networkidle')
+                    page.locator('#baralho .cartao').wait_for()
                     assert 'Já feita' not in page.locator('#baralho').text_content()
                     assert page.evaluate('(k)=>JSON.parse(localStorage.getItem(k)).melhor', 'aquecimento-exame-'+sid) == 12
                     print('PASS', sid, width, '12 cartões, ajuda e progresso', flush=True)
