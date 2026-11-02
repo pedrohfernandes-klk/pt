@@ -1,3 +1,4 @@
+# 02/11/2026: desfazer o piloto M4 antes das camadas históricas, sem mudar asserções.
 # 02/11/2026: desfaz o lote 2 antes da base publicada; mesmas asserções.
 """01/11/2026: decisões 20 a 25 nas tarefas e nos guias do M8 e M9."""
 from pathlib import Path
@@ -61,7 +62,7 @@ class TasksM89(unittest.TestCase):
                             'tests/fixtures/tarefas-m89-edits-20261101.json', '--verificar',
                             # 01/11/2026: conservar as três camadas posteriores sem dispensar o predecessor.
                             # 02/11/2026: e a das tarefas individuais e a da calçada, as mais recentes.
-                            '--desfazer-antes', 'tests/fixtures/conteudos-lote2-edits-20261101.json', '--desfazer-antes', 'tests/fixtures/varredura-formatacao-edits-20261101.json', '--desfazer-antes', 'tests/fixtures/calcada-mar-edits-20261102.json',
+                            '--desfazer-antes', 'tests/fixtures/cartaz-m4-piloto-edits-20261102.json', '--desfazer-antes', 'tests/fixtures/conteudos-lote2-edits-20261101.json', '--desfazer-antes', 'tests/fixtures/varredura-formatacao-edits-20261101.json', '--desfazer-antes', 'tests/fixtures/calcada-mar-edits-20261102.json',
                             '--desfazer-antes','tests/fixtures/tarefas-individuais-edits-20261102.json',
                             '--desfazer-antes','tests/fixtures/cartaz-indices-edits-20261101.json',
                             '--desfazer-antes','tests/fixtures/licoes-m16-edits-20261101.json',

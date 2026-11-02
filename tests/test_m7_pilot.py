@@ -26,5 +26,9 @@ class M7Pilot(unittest.TestCase):
  def test_opening_figures_are_outside_details(self):
   for n in range(1,10):
    text=(ROOT/f'm{n}/index.html').read_text('utf-8');figs=Figures(text).figures
-   self.assertEqual(len(figs),1);self.assertNotIn('details',figs[0]);self.assertIn('<figcaption',text)
+   self.assertEqual(len(figs),1);self.assertIn('<figcaption',text)
+   # 02/11/2026: só no piloto M4 a imagem documental integra os recursos nativos.
+   if n==4:
+    self.assertIn('details',figs[0]);self.assertIn('class="m4-recursos"',text)
+   else:self.assertNotIn('details',figs[0])
 if __name__=='__main__':unittest.main()
