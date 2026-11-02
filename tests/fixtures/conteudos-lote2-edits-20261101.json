@@ -1,6 +1,6 @@
 {
  "base_commit": "fe2d829e53a384c76fd00e77833bd0593d117841",
- "_nota": "02/11/2026: lote 2 sobre a correção do pedido 150, com etiquetas e contagens preservadas.",
+ "_nota": "01/11/2026: lote 2 de conteúdos; provas esperadas e cartões revistos, sem alterar tipos, seleção, âncoras ou progresso.",
  "files": {
   "m1/licao-m1-f01/index.html": {
    "base_sha256_lf": "273b3bad9310e8e6dafa3330b7ad7d516937c20ebc8a896b5841530c520d1790",
@@ -232,6 +232,54 @@
      "location": "Mapa, tarefas e avaliação",
      "old": "<details class=\"sec\" id=\"tarefas\"><summary>As tarefas do Teams</summary><div class=\"tarefa\"><span class=\"tn\">1</span><div><b>Apreciação crítica da Farsa de Inês Pereira no teatro</b><span class=\"peso\">25 %, individual</span><span class=\"crit\">Descrição e juízo; Provas; Língua e género; Respostas das unidades (percurso)</span></div></div><div class=\"tarefa\"><span class=\"tn\">2</span><div><b>Recontagem contemporânea da farsa em vídeo</b><span class=\"peso\">25 %, individual</span><span class=\"crit\">Fidelidade e escolha; Cenas e apartes; Produção e apresentação</span></div></div><div class=\"tarefa\"><span class=\"tn\">3</span><div><b>Dois anúncios de casamento</b><span class=\"peso\">25 %, individual</span><span class=\"crit\">Marcas da farsa; Registo e contraste; Limite e áudio</span></div></div><p class=\"aval\"><b>Como se avalia:</b> três tarefas no Teams (25 % cada), provas rápidas (10 %, média das três; conta a primeira tentativa) e uma prova escrita de 45 minutos (15 %). <b>Em papel:</b> a Revisão 1, a Revisão 2 e a prova escrita; tudo o resto está aqui e no Teams.</p></details>",
      "new": "<details class=\"sec\" id=\"tarefas\"><summary>As tarefas do Teams</summary><p>As aulas de tarefa atuais são «Duas escolhas, que liberdade?» (Unidade 1, 30 %) e «Dois anúncios de casamento» (Unidade 2, 30 %). Os produtos seguintes pertencem ao arquivo de propostas anteriores do guia; não acrescentam pesos à avaliação atual.</p><div class=\"tarefa\"><span class=\"tn\">1</span><div><b>Apreciação crítica da Farsa de Inês Pereira no teatro</b><span class=\"peso\">Arquivo, sem peso próprio</span><span class=\"crit\">Descrição e juízo; Provas; Língua e género; Respostas das unidades (percurso)</span></div></div><div class=\"tarefa\"><span class=\"tn\">2</span><div><b>Recontagem contemporânea da farsa em vídeo</b><span class=\"peso\">Arquivo, sem peso próprio</span><span class=\"crit\">Fidelidade e escolha; Cenas e apartes; Produção e apresentação</span></div></div><div class=\"tarefa\"><span class=\"tn\">3</span><div><b>Dois anúncios de casamento</b><span class=\"peso\">Arquivo, sem peso próprio</span><span class=\"crit\">Marcas da farsa; Registo e contraste; Limite e áudio</span></div></div><p class=\"aval\"><b>Como se avalia:</b> duas tarefas de unidade no Teams (30 % cada), provas rápidas (10 %, média das três; conta a primeira tentativa) e uma prova escrita de 45 minutos (30 %). <b>Em papel:</b> a Revisão 1, a Revisão 2 e a prova escrita; tudo o resto está aqui e no Teams.</p></details>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m1/portefolio-do-modulo-m1/index.html": {
+   "base_sha256_lf": "a48bb4a93990eaee8ad186f8afc5eb5866c37a6cd8a236ee37ddd492883d7525",
+   "after_sha256_lf": "db7ce09e06e6379904cfa56b33082a3d0cf9052ecf3ce2623ac86a1088aca954",
+   "edits": [
+    {
+     "location": "Para que serve",
+     "old": "<p>É a base da avaliação qualitativa do módulo (40 %): autonomia, responsabilidade, trabalho de equipa, pensamento crítico, entre outros. Não tem nota própria; o que faltar pesa nos parâmetros. Quem não cumpriu o percurso continua a fazer as revisões e a prova.</p>",
+     "new": "<p>É a base da avaliação qualitativa do módulo: autonomia, responsabilidade, trabalho de equipa, pensamento crítico, entre outros. Não tem nota própria; o que faltar pesa nos parâmetros. Quem não cumpriu o percurso continua a fazer as revisões e a prova.</p>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m2/portefolio-do-modulo-m2/index.html": {
+   "base_sha256_lf": "e557de7415b28892ebd575ea1d600a7c8c2a8ec1d21cfb8a5e0885f4af16b119",
+   "after_sha256_lf": "9ea880bfde0d6f59f27a116a356289b71fbea8d6ab6c8a4f001c33b918af9cd5",
+   "edits": [
+    {
+     "location": "Para que serve",
+     "old": "<p>É a base da avaliação qualitativa do módulo (40 %): autonomia, responsabilidade, trabalho de equipa, pensamento crítico, entre outros. Não tem nota própria; o que faltar pesa nos parâmetros. Quem não cumpriu o percurso continua a fazer as revisões e a prova.</p>",
+     "new": "<p>É a base da avaliação qualitativa do módulo: autonomia, responsabilidade, trabalho de equipa, pensamento crítico, entre outros. Não tem nota própria; o que faltar pesa nos parâmetros. Quem não cumpriu o percurso continua a fazer as revisões e a prova.</p>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/portefolio-do-modulo-m4/index.html": {
+   "base_sha256_lf": "da42e45a6857585e6819be06faff6760922a4158378d68cb779688c3e3d2b52d",
+   "after_sha256_lf": "cd0ba5da098e5c9eedf34f46ec46921654a1cd69f5ae469a36421e58f6b3a32a",
+   "edits": [
+    {
+     "location": "Para que serve",
+     "old": "<p>É a base da avaliação qualitativa do módulo (40 %): autonomia, responsabilidade, trabalho de equipa, pensamento crítico, entre outros. Não tem nota própria; o que faltar pesa nos parâmetros. Quem não cumpriu o percurso continua a fazer as revisões e a prova.</p>",
+     "new": "<p>É a base da avaliação qualitativa do módulo: autonomia, responsabilidade, trabalho de equipa, pensamento crítico, entre outros. Não tem nota própria; o que faltar pesa nos parâmetros. Quem não cumpriu o percurso continua a fazer as revisões e a prova.</p>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m7/portefolio-do-modulo-m7/index.html": {
+   "base_sha256_lf": "c5e00def6cfae94f3c7e0f513d3cf2815acaf40eb09b49c4df89ecaa4d7c5680",
+   "after_sha256_lf": "e9715d0f3df07ca3e759fe2bdec68fc26037faf6fc35167cc324ef05d3d18b9a",
+   "edits": [
+    {
+     "location": "Para que serve",
+     "old": "<p>É a base da avaliação qualitativa do módulo (40 %): autonomia, responsabilidade, trabalho de equipa, pensamento crítico, entre outros. Não tem nota própria; o que faltar pesa nos parâmetros. Quem não cumpriu o percurso continua a fazer as revisões e a prova.</p>",
+     "new": "<p>É a base da avaliação qualitativa do módulo: autonomia, responsabilidade, trabalho de equipa, pensamento crítico, entre outros. Não tem nota própria; o que faltar pesa nos parâmetros. Quem não cumpriu o percurso continua a fazer as revisões e a prova.</p>",
      "occurrences": 1
     }
    ]

@@ -39,7 +39,7 @@ Mantêm-se os tipos, a seleção, as variantes, a ordem e as chaves de progresso
 | M2, dobra do índice | Sem pesos | U1 30 %, U2 30 %, provas rápidas 10 %, prova escrita 30 %. |
 | M2, mapa | Três produtos a 25 %, prova escrita 15 % | Duas tarefas a 30 %, provas rápidas 10 %, prova escrita 30 %; propostas anteriores identificadas como arquivo. |
 
-Os 40 % mencionados nos portefólios M1, M2, M4 e M7 aguardam decisão: não foram alterados. Os pesos do M8 e do M9 não foram alterados neste lote.
+Em 02/11/2026, o docente autorizou retirar apenas «(40 %)» dos portefólios M1, M2, M4 e M7. Mantêm-se, palavra por palavra, a função qualitativa e a indicação de que não têm nota própria. Os pesos do M8 e do M9 não foram alterados neste lote.
 
 ## Prova esperada e pontuação
 
@@ -53,3 +53,12 @@ A tabela de pontuação está em [conteudos-lote2-travessoes-20261102.md](conteu
 - A2: completar as provas esperadas dos restantes índices.
 - A3: rever os cartões previstos dos restantes módulos e do exame, dentro dos limites acordados.
 - Completar a bateria e os percursos de navegador do lote 2 antes de pedir revisão.
+
+## Decisão sobre os portefólios, 02/11/2026
+
+| Ficheiro | Antes | Depois |
+| --- | --- | --- |
+| `m1/portefolio-do-modulo-m1/index.html` | avaliação qualitativa do módulo (40 %) | avaliação qualitativa do módulo |
+| `m2/portefolio-do-modulo-m2/index.html` | avaliação qualitativa do módulo (40 %) | avaliação qualitativa do módulo |
+| `m4/portefolio-do-modulo-m4/index.html` | avaliação qualitativa do módulo (40 %) | avaliação qualitativa do módulo |
+| `m7/portefolio-do-modulo-m7/index.html` | avaliação qualitativa do módulo (40 %) | avaliação qualitativa do módulo |
