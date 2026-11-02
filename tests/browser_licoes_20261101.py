@@ -59,7 +59,7 @@ def main():
                             return [...card.querySelectorAll('.pares .op,.pares .tx')].filter(e=>e.getBoundingClientRect().right>edge+1 || (e.matches('.tx') && e.scrollWidth>e.clientWidth+1)).map(e=>({text:e.textContent,tag:e.className,right:e.getBoundingClientRect().right,edge,scroll:e.scrollWidth,width:e.clientWidth}));
                         }""")
                         assert not outside,(item['id'],outside)
-                    # 01/11/2026: nenhuma palavra dos pares se parte a meio sem hífen (320 e 390 px).
+                    # 02/11/2026: nenhuma palavra dos pares se parte a meio sem hífen (320 e 390 px).
                     if width in (320,390) and page.locator('#baralho .cartao .pares').count():
                         page.locator('#baralho .cartao').evaluate('async e=>{await Promise.all(e.getAnimations({subtree:true}).filter(a=>a.effect.getTiming().iterations!==Infinity).map(a=>a.finished.catch(()=>{})))}')
                         split=page.locator('#baralho .cartao').evaluate("""card=>{const r=document.createRange(),out=[];
