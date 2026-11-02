@@ -17,10 +17,11 @@ def expected_cards(lesson):
 
 
 def synchronize(root, modules=('m5', 'm6'), write=False):
-    result = {'checked': [], 'different': [], 'notes': []}
+    result = {'checked': [], 'different': [], 'notes': [], 'direct_projection': []}
     for module in modules:
         for lesson in sorted((root / module).glob('licao-*/index.html')):
             panel = lesson.parent.with_name(lesson.parent.name.replace('licao-', 'painel-', 1)) / 'index.html'
+            # 01/11/2026: todas as lições têm painel; as novas usam notas editoriais.
             text = panel.read_bytes().decode('utf-8')
             rel = panel.relative_to(root).as_posix()
             if 'CARTOES=' not in text:

@@ -51,7 +51,7 @@ jobs:
           python -m pip install playwright
           python -m playwright install --with-deps chromium
       # 01/11/2026: sete lições novas, mantendo todas as verificações anteriores.
-      - name: Verificar as 116 entradas e os percursos prioritários
+      - name: Verificar as 125 entradas e os percursos prioritários
         run: |
           python tests/browser_comparacao_layout.py
           python tests/browser_m4_tpc.py

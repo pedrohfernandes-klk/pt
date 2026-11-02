@@ -216,7 +216,21 @@ LICOES_M89_MANIFEST = ROOT / 'tests/fixtures/licoes-m89-edits-20261101.json'
 _LICOES_M89_FILES = json.loads(LICOES_M89_MANIFEST.read_text('utf-8'))['files']
 
 
+# 01/11/2026: camada mais recente, nove lições do pedido B, acima do pedido A.
+_LICOES_M16_FILES = json.loads((ROOT / 'tests/fixtures/licoes-m16-edits-20261101.json').read_text('utf-8'))['files']
+
+
+def undo_licoes_m16(path, text):
+    relative = _relative(path)
+    for edit in reversed(_LICOES_M16_FILES.get(relative, {}).get('edits', [])):
+        if text.count(edit['new']) != edit['occurrences']:
+            raise AssertionError(f"Lições M1/M6 de 01/11 não conferem: {relative}: {edit['location']}")
+        text = text.replace(edit['new'], edit['old'])
+    return text
+
+
 def undo_licoes_m89(path, text):
+    text = undo_licoes_m16(path, text)
     relative = _relative(path)
     for edit in reversed(_LICOES_M89_FILES.get(relative, {}).get('edits', [])):
         if text.count(edit['new']) != edit['occurrences']:

@@ -25,16 +25,70 @@ USOS = {
  'm9-f14': ('piranesi', 'A escala das figuras humanas permite comparar dimensão e grandeza. A gravura representa a basílica, não a miniatura do rei nem a cena do romance.'),
 }
 
+# 01/11/2026: documentos existentes, inspecionados antes da integração no pedido B.
+def documento(nome, autor, obra, data, instituicao, fonte, alt, obra_html=None):
+    IMAGENS[nome] = dict(autor=autor, obra=obra, data=data, instituicao=instituicao,
+        fonte=fonte, direitos=fonte, licenca='Domínio público', alt=alt,
+        ficheiro='../../img/fontes/'+nome+'.jpg', obra_html=obra_html)
+
+documento('cancioneiro-ajuda-21r', 'Iluminador não identificado',
+ 'Iluminura do Cancioneiro da Ajuda, fólio 21r', 'Finais do século XIII',
+ 'Biblioteca da Ajuda; reprodução no Wikimedia Commons, a partir do projeto Cantigas Medievais Galego-Portuguesas.',
+ 'https://commons.wikimedia.org/wiki/File:Cancioneiro_da_Ajuda_folio_21r.jpg',
+ 'Iluminura com uma figura sentada, um músico de pé e uma figura com pandeiro.',
+ 'Iluminura do <i>Cancioneiro da Ajuda</i>, fólio 21r')
+documento('gil-vicente-copilacam-1562', 'Gil Vicente; impressão de João Álvares; reprodução de Victorcouto',
+ 'Copilacam de todalas obras de Gil Vicente, página de título', '1562',
+ 'Wikimedia Commons. Coleção do exemplar não indicada na fonte da reprodução.',
+ 'https://commons.wikimedia.org/wiki/File:Imagem160_Gil_Vicente._Compila%C3%A7am_de_todalas_obras._Joam_Alvarez_impressor._Lisboa,_1562.jpg',
+ 'Página de título com as armas reais portuguesas e a indicação da impressão em Lisboa, em 1562.',
+ '<i>Copilacam de todalas obras de Gil Vicente</i>, página de título')
+documento('camoes-rimas-1595', 'Luís de Camões; impressão de Manuel de Lira; reprodução anónima',
+ 'Rhythmas, página de título', '1595',
+ 'Wikimedia Commons. Coleção do exemplar não indicada na fonte da reprodução.',
+ 'https://commons.wikimedia.org/wiki/File:Cam%C3%B5es_-_Rimas_1595.jpg',
+ 'Página de título de Rhythmas, com uma árvore e a data de 1595 em numeração romana.',
+ '<i>Rhythmas</i>, página de título')
+documento('os-maias-1888', 'Eça de Queirós; edição da Livraria Internacional de Ernesto Chardron',
+ 'Os Maias, volume I, página de título', '1888',
+ 'Wikimedia Commons. Coleção do exemplar não indicada na fonte da reprodução.',
+ 'https://commons.wikimedia.org/wiki/File:Os_Maias_Book_Cover.jpg',
+ 'Página de título de Os Maias, volume I, com o nome de Eça de Queirós e a edição do Porto de 1888.',
+ '<i>Os Maias</i>, volume I, página de título')
+documento('camilo-1882', 'União, Photographia da Casa Real, Porto',
+ 'Retrato de Camilo Castelo Branco', '7 de março de 1882',
+ 'Wikimedia Commons. Coleção original não indicada.',
+ 'https://commons.wikimedia.org/wiki/File:Camilo_Castelo_Branco_(1882)_-_Uni%C3%A3o_%E2%80%93_Photographia_da_Casa_Real-Porto.png',
+ 'Fotografia de Camilo Castelo Branco sentado, com óculos e bigode.')
+documento('antero-de-quental-1887', 'Fotógrafo não identificado',
+ 'Retrato de Antero de Quental', 'Cerca de 1887; publicado em In Memoriam, 1896',
+ 'Biblioteca Nacional de Portugal; reprodução no Wikimedia Commons.',
+ 'https://commons.wikimedia.org/wiki/File:Antero_de_Quental_(ca._1887).jpg',
+ 'Retrato fotográfico de Antero de Quental, de barba e perfil a três quartos.')
+documento('cesario-verde-columbano-1887', 'Columbano Bordalo Pinheiro',
+ 'Retrato de Cesário Verde', '1887',
+ 'Publicado em O Livro de Cesário Verde; reprodução no Wikimedia Commons.',
+ 'https://commons.wikimedia.org/wiki/File:CesarioVerde_Columbano.jpg',
+ 'Retrato desenhado de Cesário Verde, com bigode, assinado por Columbano.')
+USOS.update({
+ 'm3-f19': ('camoes-rimas-1595', '<i>Rhythmas</i>, 1595: página de título da edição póstuma da poesia de Camões.'),
+ 'm5-f17': ('camilo-1882', 'Camilo Castelo Branco em 1882. O retrato mostra o autor, não Simão.'),
+ 'm6-f14': ('antero-de-quental-1887', 'Antero de Quental num retrato de cerca de 1887, posterior à conferência de 1871.'),
+})
+IMAGENS['antero-de-quental-1887']['data_html'] = 'Cerca de 1887; publicado em <i>In Memoriam</i>, 1896'
+IMAGENS['cesario-verde-columbano-1887']['instituicao_html'] = 'Publicado em <i>O Livro de Cesário Verde</i>; reprodução no Wikimedia Commons.'
+
 def aplicar_imagens(bancos):
     for item in bancos:
         if item['id'] not in USOS:
             continue
         nome,legenda=USOS[item['id']];d=IMAGENS[nome]
-        rows=''.join('<tr><th scope="row">'+label+'</th><td>'+(escape(d[key]).replace('Vedute di Roma','<i>Vedute di Roma</i>'))+'</td></tr>' for label,key in
+        rows=''.join('<tr><th scope="row">'+label+'</th><td>'+(d.get(key+'_html') or escape(d[key]).replace('Vedute di Roma','<i>Vedute di Roma</i>'))+'</td></tr>' for label,key in
                      [('Autor','autor'),('Obra','obra'),('Data','data'),('Instituição ou acervo','instituicao')])
         rows+='<tr><th scope="row">Licença</th><td><a href="'+d['direitos']+'">'+d['licenca']+'</a></td></tr>'
+        ficheiro=d.get('ficheiro','../../img/fontes/licoes-20261101/'+nome+'.jpg')
         opening=item['cards'][0]['html']
-        item['cards'][0]['html'] = ('<figure class="fig documento"><a href="../../img/fontes/licoes-20261101/'+nome+'.jpg" aria-label="Abrir a imagem inteira">'
-          '<img src="../../img/fontes/licoes-20261101/'+nome+'.jpg" alt="'+escape(d['alt'],quote=True)+'"></a>'
+        item['cards'][0]['html'] = ('<figure class="fig documento"><a href="'+ficheiro+'" aria-label="Abrir a imagem inteira">'
+          '<img src="'+ficheiro+'" alt="'+escape(d['alt'],quote=True)+'"></a>'
           '<figcaption><p>'+legenda+'</p><p>'+d['licenca']+'; <a href="'+d['fonte']+'">Fonte ↗</a></p><details><summary>Créditos e fonte da imagem</summary><table><caption>Identificação do documento visual</caption>'+rows+'</table>'
           '<p><a href="'+d['fonte']+'">Consultar a fonte e os direitos ↗</a>. Reprodução redimensionada, sem recorte.</p></details></figcaption></figure>')+opening

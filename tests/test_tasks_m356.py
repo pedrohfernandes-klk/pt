@@ -84,7 +84,7 @@ class TasksM356(unittest.TestCase):
     def test_camada_literal_aplicada_e_reversivel(self):
         r = subprocess.run([sys.executable, 'scripts/aplicar_trocas.py',
                             'scripts/tarefas_m356_20261031.json', '--manifesto',
-                            'tests/fixtures/tarefas-m356-edits-20261031.json', '--verificar', '--desfazer-antes', 'tests/fixtures/tarefas-m89-edits-20261101.json'], # 01/11/2026: verificar o predecessor por baixo da camada M8/M9.
+                            'tests/fixtures/tarefas-m356-edits-20261031.json', '--verificar', '--desfazer-antes', 'tests/fixtures/licoes-m16-edits-20261101.json', '--desfazer-antes', 'tests/fixtures/licoes-m89-edits-20261101.json', '--desfazer-antes', 'tests/fixtures/tarefas-m89-edits-20261101.json'], # 01/11/2026: verificar o predecessor por baixo das duas camadas de lições e da camada M8/M9.
                            cwd=ROOT, capture_output=True, text=True, encoding='utf-8')
         self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
 

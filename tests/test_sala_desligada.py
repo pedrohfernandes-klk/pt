@@ -1,4 +1,4 @@
-# 01/11/2026: sete lições novas no M8/M9 elevam o inventário a 116.
+# 01/11/2026: nove lições no M1/M2/M3/M5/M6 elevam o inventário a 125.
 """28/10/2026: a Sala de aula em tempo real está desligada nas páginas publicadas.
 
 Decisão do docente de 17/10/2026: a Sala enviava a alcunha, a lição e os pontos de cada aluno para tópicos
@@ -91,10 +91,10 @@ class SalaDesligada(unittest.TestCase):
         self.assertEqual(com_limpeza, TODAS)
         # as nove lições que nunca tiveram a Sala (ligam lesson.css) ficam como estavam
         licoes = sorted(p.relative_to(ROOT).as_posix() for p in ROOT.glob('m[1-9]/licao-*/index.html'))
-        self.assertEqual(len(licoes), 116)
+        self.assertEqual(len(licoes), 125)
         sem_sala = sorted(set(licoes) - set(PAGINAS['licao']))
-        # 01/11/2026: sete lições novas nunca tiveram Sala, além das nove anteriores.
-        self.assertEqual(len(sem_sala), 16)
+        # 01/11/2026: dezasseis lições novas nunca tiveram Sala, além das nove anteriores.
+        self.assertEqual(len(sem_sala), 25)
         for rel in licoes:
             self.assertEqual('assets/pt-lessons/lesson.css' in ler(rel), rel in sem_sala, rel)
 
@@ -147,9 +147,9 @@ class SalaDesligada(unittest.TestCase):
                 for marca in saem:
                     self.nao_tem(marca, codigo, rel)
         self.assertEqual(atlas, 75)
-        # os oito painéis estáticos (notas do docente, prolongamentos) nunca tiveram a Sala e ficam iguais
+        # 01/11/2026: os oito painéis estáticos anteriores mantêm-se; somam-se 16 notas das lições novas.
         estaticos = sorted(set(p.relative_to(ROOT).as_posix() for p in ROOT.glob('m[1-9]/painel-*/index.html')) - set(PAGINAS['painel']))
-        self.assertEqual(len(estaticos), 8)
+        self.assertEqual(len(estaticos), 24)
         for rel in estaticos:
             self.assertNotIn('CARTOES=', ler(rel))
 

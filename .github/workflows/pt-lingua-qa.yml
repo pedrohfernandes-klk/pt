@@ -24,4 +24,5 @@ jobs:
           python -m unittest discover -s tests -p 'test_task_aquecimentos.py' -v
           # 01/11/2026: desfazer primeiro a camada das tarefas M8/M9.
           # 01/11/2026: desfaz primeiro a camada das sete lições novas.
-          python scripts/aplicar_trocas.py scripts/lingua_pessoa_m7_20261030.json --manifesto tests/fixtures/lingua-pessoa-m7-edits-20261030.json --verificar --desfazer-antes tests/fixtures/licoes-m89-edits-20261101.json --desfazer-antes tests/fixtures/tarefas-m89-edits-20261101.json --desfazer-antes tests/fixtures/tarefas-m356-edits-20261031.json
+          # 01/11/2026: desfaz antes a camada do pedido B.
+          python scripts/aplicar_trocas.py scripts/lingua_pessoa_m7_20261030.json --manifesto tests/fixtures/lingua-pessoa-m7-edits-20261030.json --verificar --desfazer-antes tests/fixtures/licoes-m16-edits-20261101.json --desfazer-antes tests/fixtures/licoes-m89-edits-20261101.json --desfazer-antes tests/fixtures/tarefas-m89-edits-20261101.json --desfazer-antes tests/fixtures/tarefas-m356-edits-20261031.json
