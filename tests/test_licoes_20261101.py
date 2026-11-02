@@ -10,7 +10,7 @@ import unittest
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'scripts'))
 from licoes_20261101 import LESSONS
-from gerar_licoes_20261101 import render, sequences
+from gerar_licoes_20261101 import render, sequences, render_notes
 from audit_cards import lesson_cards, validate_cards
 from opcoes_equilibradas import avaliar
 
@@ -24,6 +24,38 @@ class NewLessons(unittest.TestCase):
                 self.assertEqual(path.read_text('utf-8'), render(item, units))
                 self.assertEqual(lesson_cards(path), item['cards'])
                 self.assertEqual(validate_cards(item['cards']), [])
+
+    # 01/11/2026: decisão do docente, recorte intacto e enquadramento só no guia.
+    def test_lianor_recorte_falantes_e_enquadramento(self):
+        item = next(x for x in LESSONS if x['id'] == 'm2-f16')
+        visible = json.dumps(item['cards'], ensure_ascii=False)
+        for excerpt in ('E hum clérigo, mana minha,<br>Pardeos, lançou mão de mi;<br>Não me podia valer',
+                        'Hui! seria algum muchacho,<br>Que brincava por prazer?',
+                        'Mana, conhecia-te ele?', 'Mas queria-me conhecer!'):
+            self.assertIn(excerpt, visible)
+        for card in item['cards']:
+            for quote in re.findall(r'<blockquote>(.*?)</blockquote>', card.get('html', ''), re.S):
+                self.assertNotRegex(quote, r'«(?:Lianor|Mãe):')
+        for warning in ('Não tens de a representar', 'partilhar experiências pessoais',
+                        'A análise do duplo sentido não exige rir', 'sem julgar a vítima'):
+            self.assertNotIn(warning, visible)
+        guide = (ROOT / 'docs/pedagogia/guia-docente-licoes-20261101.md').read_text('utf-8')
+        self.assertIn('a Mãe desvaloriza-o ao sugerir uma brincadeira', guide)
+        self.assertNotIn('a Mãe desvaloriza-o ao sugerir uma brincadeira', visible)
+
+    # 01/11/2026: as 16 lições têm notas geradas e todas as perguntas sincronizadas.
+    def test_teacher_notes_generated_and_linked(self):
+        for item in LESSONS:
+            panel=ROOT/item['id'].split('-')[0]/('painel-'+item['id'])/'index.html'
+            text=panel.read_text('utf-8')
+            self.assertEqual(text,render_notes(item))
+            self.assertEqual(text.count('<summary>Indícios e retorno</summary>'),14)
+            for card in item['cards']:
+                if card['t']!='ler':
+                    from html import escape
+                    self.assertIn(escape(card['p']),text)
+            page=ROOT/item['id'].split('-')[0]/('licao-'+item['id'])/'index.html'
+            self.assertIn('../painel-'+item['id']+'/',page.read_text('utf-8'))
 
     def test_fourteen_activities_five_nonwriting_types_and_feedback(self):
         for item in LESSONS:
@@ -76,7 +108,22 @@ class NewLessons(unittest.TestCase):
             self.assertIn(item['question'],item['cards'][-1]['html'])
             self.assertIn('outra que a limite',item['cards'][-1]['html'])
             self.assertTrue(any('<details class="apoio">' in c.get('html','') for c in item['cards']))
-            self.assertTrue(all('Relê' in c['f'] or 'relê' in c['f'] or 'Regressa' in c['f'] for c in item['cards'] if c['t']!='ler'))
+            # 01/11/2026: a releitura é delimitada por alternativa, sem exigir a frase-molde retirada.
+            for card in item['cards']:
+                self.assertNotIn('confronta a pista com a tua resposta',card.get('f',''))
+                if card['t']=='escolha':
+                    self.assertEqual(len(card['fe']),len(card['o']))
+                    self.assertEqual(len(set(card['fe'])),len(card['o']))
+                    for i,feedback in enumerate(card['fe']):
+                        self.assertGreaterEqual(len(feedback.split()),15)
+                        if i!=card['c']:
+                            self.assertRegex(feedback,r'Relê|Repara|Regressa|Confronta|Retoma|Volta|Confere|Compara|Mantém')
+            values=[c['v'] for c in item['cards'] if c['t']=='vf']
+            self.assertIn(True,values)
+            self.assertIn(False,values)
+        self.assertEqual(len({tuple(c['t'] for c in item['cards']) for item in LESSONS}),len(LESSONS))
+        values=[c['v'] for item in LESSONS for c in item['cards'] if c['t']=='vf']
+        self.assertLessEqual(abs(sum(values)-len(values)/2),2)
 
     def test_george_quote_and_credit(self):
         item = next(x for x in LESSONS if x['id']=='m8-f16')

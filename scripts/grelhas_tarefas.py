@@ -43,9 +43,11 @@ h1{font:700 clamp(1.8rem,5vw,2.6rem)/1.1 Arial,Helvetica,sans-serif;margin:0 0 1
 h2{font:700 1.2rem/1.3 Arial,Helvetica,sans-serif;margin:0 0 12px}
 .lead{font-size:1.15rem;margin:0 0 8px}p{margin:0 0 12px}.g-nota{font-size:.9rem;color:var(--g-suave);border-left:4px solid var(--g-linha);padding-left:12px}
 table{width:100%;border-collapse:collapse;background:var(--g-papel);margin:16px 0 8px}
+.g-tab td a{color:inherit;text-decoration:none;display:block;min-height:44px;padding:12px 0}
 .g-tab{overflow-x:auto;margin:16px 0 8px}.g-tab>table{margin:0}
 caption{text-align:left;font:700 .75rem Arial,Helvetica,sans-serif;letter-spacing:.12em;text-transform:uppercase;padding:0 0 8px}
 th,td{border:1px solid var(--g-linha);padding:8px 10px;text-align:left;vertical-align:top}
+.g-resumo td{vertical-align:baseline}
 thead th{font:700 .8rem Arial,Helvetica,sans-serif;border-bottom:2px solid var(--g-tinta)}
 td.n,th.n{text-align:center;width:4.5em;font:700 1rem Arial,Helvetica,sans-serif}
 tr.total th,tr.total td{border-top:2px solid var(--g-tinta);font-weight:700}
@@ -55,7 +57,7 @@ tr.total th,tr.total td{border-top:2px solid var(--g-tinta);font-weight:700}
 .g-niveis>div{display:grid;grid-template-columns:5.5em minmax(0,1fr);gap:4px 14px;background:var(--g-papel);border:1px solid var(--g-linha);padding:12px 14px}
 .g-niveis dt{font:700 1rem Arial,Helvetica,sans-serif}.g-niveis dt small{display:block;font-weight:400;font-size:.75rem;color:var(--g-suave)}
 .g-niveis dd{margin:0}.g-niveis .ex{margin:6px 0 0;padding-left:12px;border-left:4px solid var(--g-linha);font-style:italic}
-.g-niveis .ex b{font:700 .7rem Arial,Helvetica,sans-serif;font-style:normal;letter-spacing:.1em;text-transform:uppercase;margin-right:6px}
+.g-niveis .ex b{font:700 .8125rem Arial,Helvetica,sans-serif;font-style:normal;letter-spacing:.1em;text-transform:uppercase;margin-right:6px}
 .custa{margin:14px 0 0}.custa b{font:700 .75rem Arial,Helvetica,sans-serif;letter-spacing:.1em;text-transform:uppercase}
 ul{margin:6px 0 0;padding-left:22px}
 .g-auto{margin:36px 0 0;padding:20px;background:var(--g-papel);border:3px solid var(--g-tinta)}
@@ -70,7 +72,9 @@ footer a{color:inherit;min-height:44px;display:inline-flex;align-items:center}
 a:focus-visible,button:focus-visible,.g-tab:focus-visible{outline:3px solid currentColor;outline-offset:3px}
 @media(max-width:560px){.g-niveis>div{grid-template-columns:1fr}.g-crit h2{flex-wrap:wrap}.g-crit h2 .max{margin-left:0}th,td{padding:6px}td.n,th.n{width:3em;padding:6px 4px}thead th.n{font-size:.8rem}.g-auto{padding:16px 10px}}
 @media(min-width:760px){.g-fb{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media screen and (max-width:480px){.g-tab th:nth-child(5),.g-tab td:nth-child(5){display:none}}
 @page{size:A4;margin:12mm}
+@media print{.g-tab table{table-layout:fixed;width:100%}.g-tab th:first-child{width:55%}.g-tab th.n{width:9%}.g-tab thead th.n{font-size:.8rem}.g-tab td{line-height:1.25}h1{font-size:20pt;margin-bottom:6px}.lead{font-size:11pt}.g-fb-t{margin-top:14px;break-after:avoid-page}.g-fb>div{min-height:7em}.g-fb{gap:8px}.g-fb h3{font-size:9pt}th,td{padding:5px 7px}.g-fb-t{break-after:avoid-page}.g-fb{break-inside:avoid}.custa{break-after:avoid-page}.g-tab small{font-size:8.5pt;line-height:1.3}}
 @media print{body{background:#fff;color:#000;font-size:10.5pt}.g-tab{overflow:visible}.g-nav,footer,button{display:none!important}.g-crit,.g-auto{break-inside:avoid}.grelha{padding:0;max-width:none}.g-niveis>div{grid-template-columns:5em minmax(0,1fr)}}
 """
 

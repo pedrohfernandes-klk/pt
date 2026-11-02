@@ -13,7 +13,7 @@
   if(step.licao)return !!(read("licao-"+step.licao)||{}).lida;
   return !!(step.exs&&step.exs.length&&step.exs.every(exercise));
  }
- function challengeKey(module,n) { return ((module==="M4"||module==="M8"||module==="M9")?"desafio-":"desafio-unidade-v2-")+module+"-u"+n; }
+ function challengeKey(module,n) { return (["M4","M5","M6","M8","M9"].indexOf(module)>=0?"desafio-":"desafio-unidade-v2-")+module+"-u"+n; }
  function historicalKeys(module,n) {
   return ["percurso-"+module+"-u"+n,"percurso-v2-"+module+"-u"+n,
    "percurso-sintese-"+module+"-u"+n,"desafio-"+module+"-u"+n,
@@ -50,7 +50,7 @@
      }
     });
     var progress=section.querySelector("[data-prog]");
-    if(progress)progress.textContent=count+" de "+unit.passos.length+" lições feitas · tarefa individual com consulta";
+    if(progress)progress.textContent=count+" de "+unit.passos.length+" lições feitas; tarefa individual com consulta";
     var bar=section.querySelector("[data-barra]");
     if(bar)bar.style.width=Math.round(count/Math.max(1,unit.passos.length)*100)+"%";
     var ok=section.querySelector("[data-ok]");

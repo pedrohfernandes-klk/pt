@@ -4,7 +4,8 @@
   margin-bottom: 24px;
   padding-right: 0;
   font-family: "Arial Black", Arial, sans-serif;
-  font-size: clamp(2rem, 4.5vw, 3rem);
+  /* 01/11/2026, decisão 61 (R4): sem tamanho próprio; o título-cartaz tem o tamanho da regra comum das lições
+     (30,4 px a 390 px, como nas outras 105), em vez de 32 px. A letra (Arial Black) fica. */
   font-weight: 900;
   line-height: 1;
   letter-spacing: -.035em;

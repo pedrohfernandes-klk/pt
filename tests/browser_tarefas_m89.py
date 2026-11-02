@@ -16,6 +16,20 @@ def main():
     try:
         with sync_playwright() as pw:
             browser = pw.chromium.launch(headless=True)
+            # 01/11/2026: acrescentar uma leitura preserva o progresso anterior, sem versão artificial.
+            for lesson in ('m8-f04', 'm8-f05', 'm9-f05'):
+                ctx, page, errors = contexto(browser, 390, 'light')
+                key = 'licao-' + lesson
+                state = {'lida': True, 'tentativas': 3, 'melhor': 7, 'total': 12,
+                         'totalMelhor': 12, 'exposicoes': {'1': 3, '4': 2}}
+                page.add_init_script('localStorage.setItem(' + json.dumps(key) + ',' + json.dumps(json.dumps(state)) + ')')
+                page.goto(f'{host}/{lesson[:2]}/licao-{lesson}/', wait_until='networkidle')
+                assert page.locator('.jogo.feita').is_visible(), lesson
+                assert 'JÁ FEITA' in page.locator('.jogo.feita > .cartao > .rot').inner_text(), lesson
+                assert json.loads(page.evaluate('(k)=>localStorage.getItem(k)', key)) == state, lesson
+                assert not errors, errors
+                ctx.close()
+                print('PASS progresso anterior intacto', lesson, flush=True)
             for m in (8, 9):
                 for width, scheme in ((390, 'light'), (1366, 'dark')):
                     ctx, page, errors = contexto(browser, width, scheme)
@@ -54,7 +68,7 @@ def main():
                     page.goto(f'{host}/{path}?projetar=1',wait_until='networkidle')
                     card=next(c for c in lesson_cards(ROOT/path/'index.html') if c.get('titulo')==title)
                     before=learning_storage(page)
-                    page.evaluate('card=>EPIJogo.montar({itens:[card],chave:"qa-nova-leitura",variar:false,versao:"20261101-m89-1"})',card)
+                    page.evaluate('card=>EPIJogo.montar({itens:[card],chave:"qa-nova-leitura",variar:false})',card)
                     box=page.locator('.casca.sobreposta .cartao')
                     assert box.locator('blockquote.verso').is_visible()
                     assert box.get_by_role('link',name='Ler o poema completo na fonte').is_visible()

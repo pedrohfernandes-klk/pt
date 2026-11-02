@@ -8,12 +8,21 @@
 <script defer src="../../assets/pt-lessons/jogo.js?v=20261021-ux06"></script>
 <link rel="stylesheet" href="../../assets/appearance.css?v=20261025-universal-1">
 <script src="../../assets/appearance.js?v=20261025-universal-1"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;display=swap">
 <style>
+.jogo .tit,.jogo .q{text-wrap:balance}
+.jogo .pares{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+.jogo .pares .op,.jogo .pares .op .tx{min-width:0;hyphens:auto;overflow-wrap:break-word}
+.casca-topo .c-marca{min-width:44px;justify-content:center}
+.casca-folha .c-veredito .c-pts{color:var(--suave)}
+.jogo .acoes-fim a,.jogo .depois a{display:inline-flex;align-items:center;min-height:44px}
+.jogo .xp{color:var(--suave)}
+@media(max-width:360px){.jogo .pares{column-gap:12px}.jogo .pares .op{padding-left:8px;padding-right:8px;gap:6px;font-size:.875rem}}
 .jogo .ler blockquote{margin:1.25rem 0;padding:0 0 0 1rem;border-left:2px solid currentColor;line-height:1.65}
 .jogo .ler h3{font-size:1.3em;line-height:1.3}
 .jogo .ler table{width:100%;border-collapse:collapse;font-size:.9em}
 .jogo .ler th,.jogo .ler td{text-align:left;vertical-align:top;padding:.35em;border-bottom:1px solid currentColor}
-.jogo .ler .fig{margin:1.25rem 0}.jogo .ler .fig img{display:block;margin:auto;max-width:100%;max-height:45vh;width:auto;height:auto;object-fit:contain}.jogo .ler .fig figcaption{font-size:.85em;line-height:1.5}.jogo .ler .fig td{overflow-wrap:anywhere}
+.jogo .ler .fig{margin:1.25rem 0}.jogo .ler .fig img{display:block;margin:auto;max-width:100%;max-height:38vh;width:auto;height:auto;object-fit:contain}.jogo .ler .fig figcaption{font-size:.85em;line-height:1.5}.jogo .ler .fig td{overflow-wrap:anywhere}
 @media(min-width:1024px){:root{--col:min(850px,100%)}.casca .jogo .ler{font-size:1.24rem;line-height:1.62}.casca .jogo .q{font-size:1.6rem}.casca .jogo .tit{font-size:1.6rem}.casca .jogo .tit.cartaz{font-size:clamp(2.4rem,3.2vw,3rem)}}
 </style>
 </head>
@@ -24,7 +33,7 @@
 <main class="casca-corpo" tabindex="-1"><div id="baralho" class="jogo-alvo"></div></main>
 <footer class="casca-acoes" data-c-acoes></footer>
 <section class="casca-folha" data-c-folha role="status" aria-live="polite" hidden></section>
-<div class="casca-menu" data-c-painel hidden><div class="c-menu-in" role="dialog" aria-label="Menu"><div class="c-menu-cab"><p>Módulo @@NUMBER@@<br>Unidade @@UNIT@@</p><button type="button" class="c-ic" data-c-fecha-menu aria-label="Fechar o menu">✕</button></div><nav aria-label="Navegação da lição"><a href="../#@@ID@@">Esta lição no percurso</a><a href="@@PREVIOUS@@">Lição anterior</a><a href="@@NEXT@@">Continuar o percurso</a></nav><p class="c-menu-extra">As citações têm crédito junto ao texto. Os exemplos criados estão identificados. O progresso fica neste aparelho.</p></div></div>
+<div class="casca-menu" data-c-painel hidden><div class="c-menu-in" role="dialog" aria-label="Menu"><div class="c-menu-cab"><p>Módulo @@NUMBER@@<br>Unidade @@UNIT@@</p><button type="button" class="c-ic" data-c-fecha-menu aria-label="Fechar o menu">✕</button></div><nav aria-label="Navegação da lição"><a href="../#@@ID@@">Esta lição no percurso</a><a href="@@PREVIOUS@@">Lição anterior</a><a href="@@NEXT@@">Lição seguinte</a><a href="../painel-@@ID@@/">Notas para a aula</a></nav><p class="c-menu-extra">As citações têm crédito junto ao texto. Os exemplos criados estão identificados. O progresso fica neste aparelho.</p></div></div>
 </div>
 <noscript>Esta lição precisa de JavaScript. <a href="../">Voltar ao módulo</a>.</noscript>
 <script>

@@ -27,9 +27,10 @@ def main():
     cases=activities=0
     with sync_playwright() as pw:
         browser=pw.chromium.launch(headless=True)
-        for width,projection in ((320,False),(390,False),(1366,True)):
+        # 01/11/2026: inclui 320 px em claro e escuro e projeção a 1366 × 768.
+        for width,projection,scheme in ((320,False,'light'),(320,False,'dark'),(390,False,'light'),(1366,True,'dark')):
             for item in LESSONS:
-                context=browser.new_context(viewport={'width':width,'height':900},reduced_motion='reduce')
+                context=browser.new_context(viewport={'width':width,'height':768 if projection else 640 if width==320 else 900},color_scheme=scheme,reduced_motion='reduce')
                 page=context.new_page();page.route('**/*',local)
                 errors=[];page.on('pageerror',lambda e:errors.append(str(e)))
                 module=item['id'].split('-')[0]
@@ -49,6 +50,15 @@ def main():
                     if page.locator('#baralho .cartao.fim').count():break
                     assert page.locator('#baralho .cartao').count()==1,(item['id'],'one card')
                     assert not page.evaluate('document.documentElement.scrollWidth > innerWidth + 2'),(item['id'],width,'overflow')
+                    # 01/11/2026: nenhum par nem texto pode ultrapassar a margem do cartão a 320 px.
+                    if width==320:
+                        # Medir a disposição final, depois da entrada animada dos pares.
+                        page.locator('#baralho .cartao').evaluate('async e=>{await Promise.all(e.getAnimations({subtree:true}).filter(a=>a.effect.getTiming().iterations!==Infinity).map(a=>a.finished.catch(()=>{})))}')
+                        outside=page.locator('#baralho .cartao').evaluate("""card=>{
+                            const edge=card.getBoundingClientRect().right;
+                            return [...card.querySelectorAll('.pares .op,.pares .tx')].filter(e=>e.getBoundingClientRect().right>edge+1 || (e.matches('.tx') && e.scrollWidth>e.clientWidth+1)).map(e=>({text:e.textContent,tag:e.className,right:e.getBoundingClientRect().right,edge,scroll:e.scrollWidth,width:e.clientWidth}));
+                        }""")
+                        assert not outside,(item['id'],outside)
                     text=page.locator('#baralho .cartao').inner_text()
                     seen.add(page.locator('[data-c-num]').inner_text())
                     result=respond(page)
@@ -70,7 +80,7 @@ def main():
                 else:
                     assert page.evaluate('(key)=>JSON.parse(localStorage.getItem(key)).lida',key)
                 cases+=1;activities+=feedback
-                print(f'PASS {item["id"]} {width} projection={projection}: {feedback} atividades, progresso conservado',flush=True)
+                print(f'PASS {item["id"]} {width} {scheme} projection={projection}: {feedback} atividades, progresso conservado',flush=True)
                 context.close()
         browser.close()
     print(f'PASS total: {cases} percursos, {activities} atividades',flush=True)

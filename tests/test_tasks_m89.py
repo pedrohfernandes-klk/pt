@@ -11,6 +11,16 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 class TasksM89(unittest.TestCase):
+    # 01/11/2026: a sobreposição do percurso abre vazia, sem copiar o arquivo nem os pesos.
+    def test_sobreposicao_sem_arquivo_duplicado(self):
+        for m in range(1, 10):
+            s = (ROOT / f'm{m}/index.html').read_text('utf-8')
+            self.assertEqual(s.count('id="arquivo-percurso"'), 1, m)
+            for script in re.findall(r'<script\b[^>]*>.*?</script>', s, re.S):
+                if 'd.innerHTML=' in script:
+                    self.assertNotIn('avaliacao-tarefas', script, m)
+                    self.assertNotIn('id="arquivo-percurso"', script, m)
+
     def test_extras_sem_exemplos_e_quatro_blocos(self):
         for m in (8, 9):
             s = (ROOT / f'm{m}/guia-da-tarefa-m{m}/index.html').read_text('utf-8')
@@ -59,7 +69,8 @@ class LeiturasM8(unittest.TestCase):
             self.assertEqual(after[index+1]['rot'],'Para levar')
             self.assertEqual(after[:index]+after[index+1:],before)
             self.assertLessEqual(after[index]['html'].split('</blockquote>')[0].count('<br>')+1,maxlines)
-            self.assertIn('versao:"20261101-m89-1"',s)
+            # 01/11/2026: cartão de leitura acrescentado sem recomeçar o progresso.
+            self.assertNotIn('versao:"20261101-m89-1"',s)
             self.assertIn('https://',after[index]['html'])
 
 if __name__ == '__main__':

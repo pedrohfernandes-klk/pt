@@ -147,9 +147,9 @@ class SalaDesligada(unittest.TestCase):
                 for marca in saem:
                     self.nao_tem(marca, codigo, rel)
         self.assertEqual(atlas, 75)
-        # os oito painéis estáticos (notas do docente, prolongamentos) nunca tiveram a Sala e ficam iguais
+        # 01/11/2026: os oito painéis estáticos anteriores mantêm-se; somam-se 16 notas das lições novas.
         estaticos = sorted(set(p.relative_to(ROOT).as_posix() for p in ROOT.glob('m[1-9]/painel-*/index.html')) - set(PAGINAS['painel']))
-        self.assertEqual(len(estaticos), 8)
+        self.assertEqual(len(estaticos), 24)
         for rel in estaticos:
             self.assertNotIn('CARTOES=', ler(rel))
 
