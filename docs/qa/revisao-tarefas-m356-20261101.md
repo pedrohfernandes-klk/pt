@@ -37,8 +37,25 @@ Aplicação da parte 1 da revisão de arte, português europeu, factos e qualida
 
 [Fotografia de Camilo, ficha do Commons](https://commons.wikimedia.org/wiki/File:Camilo_Castelo_Branco_(1882)_-_Uni%C3%A3o_%E2%80%93_Photographia_da_Casa_Real-Porto.png): a inscrição no verso data a fotografia de 7 de março de 1882; autor União, Photographia da Casa Real, Porto.
 
+## Confirmação, 01/11/2026
+
+Achados que ficaram depois da confirmação dos quatro revisores, aplicados num commit novo:
+
+| Achado | Aplicação |
+|---|---|
+| Impressão das nove correções | Cabeçalho «Máx.», «Aluno» e «Docente» a 12,8 px, sem transbordar; caixas do comentário com 7em, como no ecrã; continuam numa página A4. |
+| Resumo das grelhas | Critério e máximo alinhados pela linha de base. |
+| «Neste módulo» do M3, M5 e M6 | O número de aulas conta os passos da unidade, com o exercício longo, como no M1, M2, M4 e M7. |
+| Dobra dos extras nos guias | A regra do sistema (44 px, Arial 700, sem o triângulo do WebKit); deixa de haver a faixa de 88 px no telemóvel. |
+| Aquecimentos | Bebas Neue e Special Elite, com a mesma ligação das lições. |
+| Pesos nos índices | «Pesos na avaliação», sem o eco com a frase comum da regra. |
+| Língua | Grelhas M5-U1 e M5-U2, tarefa e aquecimento M3-U2, «aula de tarefa da unidade N» nas seis lições e «…» no cartão e no painel da M6-F02. |
+| Fins de linha | `.gitattributes` com LF em `exame/provas/`; o teste do gerador volta a comparar byte a byte, sem normalizar. |
+
 ## Coordenação e validação
 
 M1 e M7: uniformização futura do texto da linha T, sem alterar agora os seus percursos congelados. Os casos do molde de grelhas e aquecimentos explicitamente pedidos foram corrigidos pelo gerador.
+
+M1, M2, M4 e M7 (01/11/2026, na mesma lista e para a mesma camada seguinte): o mesmo `<p class="avaliacao-tarefas">` dentro de `details.regra` («Como se cumpre uma unidade»), com os pesos de cada módulo, para que a dobra diga o mesmo nos nove módulos. O M8 e o M9 recebem-no pelo #145.
 
 O 152 fica fora desta revisão. A ordem de integração e o registo das camadas serão conferidos depois da revisão humana, sem fusão automática. Os números finais dos testes e as ligações às verificações ficam na descrição do pedido.
