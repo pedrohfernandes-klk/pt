@@ -1,4 +1,3 @@
-# 01/11/2026: verificar as tarefas após desfazer índices e conteúdos.
 """01/11/2026: decisões 20 a 25 nas tarefas e nos guias do M8 e M9."""
 from pathlib import Path
 import json
@@ -32,6 +31,16 @@ class TasksM89(unittest.TestCase):
             blocks, _ = json.JSONDecoder().raw_decode(s.split('BLOCOS=', 1)[1])
             self.assertEqual([x[0] for x in blocks], [10, 5, 60, 15])
             self.assertIn('Extras sem nota', s)
+            # 01/11/2026: a dobra do arquivo mostra um só sinal também no Safari
+            self.assertIn('#arquivo-producoes>summary::-webkit-details-marker{display:none}', s)
+
+    # 01/11/2026: o número de aulas do «Neste módulo» conta os passos da unidade, como no M1 e no M7.
+    def test_neste_modulo_conta_os_passos(self):
+        for m in (8, 9):
+            s = (ROOT / f'm{m}/index.html').read_text('utf-8')
+            U, _ = json.JSONDecoder().raw_decode(s[s.find('U=[') + 2:])
+            aulas = [int(n) for n in re.findall(r'<small>(\d+) (?:aulas de leitura/preparação|passos)', s)]
+            self.assertEqual(aulas, [len(u['passos']) for u in U])
 
     def test_pesos_coerentes_e_entregas_das_duas_unidades(self):
         for m in (8, 9):
@@ -48,10 +57,11 @@ class TasksM89(unittest.TestCase):
     def test_camada_literal_aplicada_e_reversivel(self):
         r = subprocess.run([sys.executable, 'scripts/aplicar_trocas.py',
                             'scripts/tarefas_m89_20261101.json', '--manifesto',
-                            # 01/11/2026: confere a camada das tarefas por baixo das novas lições.
-                            'tests/fixtures/tarefas-m89-edits-20261101.json', '--verificar', '--desfazer-antes', 'tests/fixtures/cartaz-indices-edits-20261101.json', 
-                            '--desfazer-antes', 'tests/fixtures/licoes-m16-edits-20261101.json',
-                            '--desfazer-antes', 'tests/fixtures/licoes-m89-edits-20261101.json'],
+                            'tests/fixtures/tarefas-m89-edits-20261101.json', '--verificar',
+                            # 01/11/2026: conservar as três camadas posteriores sem dispensar o predecessor.
+                            '--desfazer-antes','tests/fixtures/cartaz-indices-edits-20261101.json',
+                            '--desfazer-antes','tests/fixtures/licoes-m16-edits-20261101.json',
+                            '--desfazer-antes','tests/fixtures/licoes-m89-edits-20261101.json'],
                            cwd=ROOT, capture_output=True, text=True, encoding='utf-8')
         self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
 

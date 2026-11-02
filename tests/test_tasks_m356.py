@@ -37,7 +37,8 @@ class TasksM356(unittest.TestCase):
 
     # 01/11/2026: nenhum texto entre a barra e header.topo no percurso do módulo.
     def test_abertura_e_guias_sem_corrupcao_css(self):
-        for m in (3, 5, 6):
+        # 01/11/2026: o M8 e o M9 entram com a mesma regra da dobra do arquivo (achado 2 do pt 145), sem tirar nenhum módulo.
+        for m in (3, 5, 6, 8, 9):
             s = (ROOT / f'm{m}/index.html').read_text('utf-8')
             self.assertGreater(s.find('class="avaliacao-tarefas"'), s.find('<h1'))
             self.assertIn('Cada unidade termina na sua aula de tarefa', s)
