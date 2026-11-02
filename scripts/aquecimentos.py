@@ -35,6 +35,7 @@ Idempotente: só reescreve um ficheiro quando o conteúdo muda. --saida escreve 
 sem mexer na árvore.
 """
 from aquecimentos_falas_criadas import fala_criada
+from tipos_regras import ENTROU, textos_de
 from html import escape
 from pathlib import Path
 import argparse
@@ -70,6 +71,8 @@ def sem_marcas(s):
 
 def texto_visivel(c):
     """Tudo o que o aluno lê num cartão (sem marcas HTML)."""
+    if c.get('t') in ENTROU:
+        return re.sub(r'\s+', ' ', re.sub(r'<[^>]+>', ' ', ' '.join(textos_de(c))))
     partes = []
     for k in ('p', 'p2', 'frase', 'f', 'titulo', 'html', 'rot', 'trecho', 'apoio', 'cita'):
         if isinstance(c.get(k), str):
@@ -100,7 +103,7 @@ def validar(raiz, d):
     if not d['slug'].startswith(d['modulo'] + '-u'):
         erros.append('o slug não é da forma <módulo>-u<n>')
     cartoes = d['cartoes']
-    erros += list(validate_cards(cartoes))
+    erros += list(validate_cards(cartoes, contexto='aquecimento'))
     for pagina in d['licoes_das_citacoes']:
         if not (raiz / pagina / 'index.html').is_file():
             erros.append(f'«licoes_das_citacoes»: não existe {pagina}/index.html')
@@ -181,6 +184,8 @@ def pagina(raiz, d):
         cfg['versao'] = d['versao']
     cfg_js = json.dumps(cfg, ensure_ascii=False)[1:-1]
     banco = json.dumps(d['cartoes'], ensure_ascii=False).replace('</', '<\\/')
+    novos={c.get('t') for c in d['cartoes']} & ENTROU.keys()
+    recursos=('' if not novos else '<link rel="stylesheet" href="../../../assets/pt-lessons/tipos-mais.css?v='+max(ENTROU[t] for t in novos)+'"><script defer src="../../../assets/pt-lessons/tipos-mais.js?v='+max(ENTROU[t] for t in novos)+'"></script>')
     depois = (f'<p><a href="../">Abrir a aula de tarefa</a> · <a href="{unidade}">Voltar à unidade {u}</a></p>')
     return (
         '<!doctype html><html lang="pt-PT" data-appearance-site="pt" data-appearance-family="cards"><head>'
@@ -192,7 +197,7 @@ def pagina(raiz, d):
         '<style>.jogo .tit{text-wrap:balance}</style>'
         '<link rel="stylesheet" href="../../../assets/pt-lessons/lesson.css">'
         '<script defer src="../../../assets/pt-lessons/casca.js"></script>'
-        f'<script defer src="../../../assets/pt-lessons/jogo.js?v={V_JOGO}"></script>'
+        + recursos + f'<script defer src="../../../assets/pt-lessons/jogo.js?v={V_JOGO}"></script>'
         + scripts_externos(d) + molde(raiz) +
         '<link rel="stylesheet" href="../../../assets/appearance.css?v=20261025-universal-1">'
         '<script src="../../../assets/appearance.js?v=20261025-universal-1"></script></head>'

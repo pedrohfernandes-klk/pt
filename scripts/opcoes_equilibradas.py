@@ -68,3 +68,11 @@ def avaliar(perguntas):
     return dict(grupos=grupos, por_k=por_k, erros=erros,
                 maior_amplitude=max((g['amplitude'] for g in grupos), default=0.0),
                 certas_mais_longas=sum(longas.values()), grupos_de_opcoes=len(grupos))
+
+
+def perguntas_adicionais(cartao):
+    """02/11/2026: cada resposta aceite é medida, mantendo os limites comuns."""
+    from tipos_regras import campos_opcoes
+    return [dict(opcoes=g['opcoes'],certa=i,onde=g['onde'])
+            for g in campos_opcoes(cartao) for i in g['certas']
+            if 0<len(g['certas'])<len(g['opcoes'])]

@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+from tipos_regras import ENTROU, campos_opcoes
 """Mede o comprimento das opções de todas as escolhas múltiplas do sítio (30/10/2026).
 
 Pedido do docente (29/10/2026): «Ainda há demasiadas escolhas múltiplas em que a resposta certa é claramente a de maior
@@ -93,6 +94,11 @@ def objetos(texto):
 def itens(no):
     """As escolhas múltiplas de um literal: (formato, pergunta, opções limpas, índices das certas)."""
     if isinstance(no, dict):
+        # 02/11/2026: cobre os conjuntos F2 sem contar de novo os seus subobjetos.
+        if no.get('t') in ENTROU:
+            for g in campos_opcoes(no):
+                yield (no['t']+'/'+g['onde'], no.get('p',''), [limpa(v) for v in g['opcoes']], g['certas'])
+            return
         oficial = no.get('t') == 'item'
         o = no.get('o')
         c = no.get('c')

@@ -498,10 +498,32 @@ def sem_pares_alinhados(esq, dir_, par, semente=''):
     return ordem[r:] + ordem[:r]
 
 
+# 02/11/2026: carrega regras pelo caminho também nos verificadores históricos por importlib.
+from functools import lru_cache
+
+@lru_cache(maxsize=1)
+def regras_adicionais():
+    import importlib.util
+    spec=importlib.util.spec_from_file_location('pt_tipos_regras',ROOT/'scripts/tipos_regras.py')
+    mod=importlib.util.module_from_spec(spec);spec.loader.exec_module(mod)
+    return mod
+
+
+def painel_js(material):
+    """Só os painéis com tipos novos recebem a extensão; históricos byte a byte."""
+    if not any('adicional_html' in m for m in json.loads(material).values()):return PAINEL_MATERIAL_JS
+    return PAINEL_MATERIAL_JS.replace(" if(m.cita)", " if(m.adicional_html){h+='<p>'+md(m.dica)+'</p>'+m.adicional_html;return h+'</div>'}\n if(m.cita)",1)
+
+
 def material_de(rel, k, x, semente):
     """O que o telemóvel mostrava no relâmpago (o cartão k da lição), sem a solução: sem c, v, certas nem a ordem certa.
     A correção (f) vai à parte e só aparece quando o tempo acaba."""
     t, m = x['t'], {}
+    regras=regras_adicionais()
+    if t in regras.ENTROU:
+        erros=regras.validar(x)
+        if erros:raise FormaDesconhecida(f'{rel}: cartão {k}: '+ '; '.join(erros))
+        return {'f':x['f'],'dica':regras.DICAS_PAPEL[t], 'adicional_html':regras.material_html(x,semente)}
     if not x.get('f'):
         raise FormaDesconhecida(f'{rel}: cartão {k}: sem a correção (f) que o projetor mostra no fim do tempo')
     m['f'] = x['f']
@@ -669,7 +691,7 @@ def trocas_painel(rel, texto):
         ('canal window.EPISala (ntfy.sh) passa à limpeza', EPISALA_SCRIPT, LIMPEZA_SCRIPT),
         ('script: chave da sala guardada', m.group(0), f'var ID="{ident}",CARTOES='),
         ('script: estado da sala, ls() e gravar() saem; os cartões do relâmpago ganham o material da lição',
-         cartoes_antigo + PAINEL_JS_ESTADO, cartoes_novo + ',MATERIAL=' + material + ',crono=null,tPistas=null;\n' + PAINEL_MATERIAL_JS),
+         cartoes_antigo + PAINEL_JS_ESTADO, cartoes_novo + ',MATERIAL=' + material + ',crono=null,tPistas=null;\n' + painel_js(material)),
         ('script: canal, placar ao vivo, respostas e votos', PAINEL_JS_CANAL + 'function contar(seg,aoFim){',
          'function contar(seg,aoFim){'),
         ('script: enviar(), Nova sala e Limpar', PAINEL_JS_ENVIAR + '$("[data-projetar]").onclick=', '$("[data-projetar]").onclick='),
