@@ -225,9 +225,26 @@ def undo_licoes_m89(path, text):
     return text
 
 
+# 02/11/2026: o fundo animado da entrada (pt #159 e #160) entrou no main sem camada; fica registado como camada própria,
+# abaixo das lições M8/M9 (que foram juntadas por cima dele) e acima das tarefas M8/M9.
+FUNDOS_MANIFEST = ROOT / 'tests/fixtures/fundos-edits-20261102.json'
+_FUNDOS_FILES = json.loads(FUNDOS_MANIFEST.read_text('utf-8'))['files']
+
+
+def undo_fundos(path, text):
+    relative = _relative(path)
+    for edit in reversed(_FUNDOS_FILES.get(relative, {}).get('edits', [])):
+        if text.count(edit['new']) != edit['occurrences']:
+            raise AssertionError(f"Fundo de 02/11 não confere: {relative}: {edit['location']}")
+        text = text.replace(edit['new'], edit['old'])
+    return text
+
+
 def undo_tarefas_m89(path, text):
     # 01/11/2026: também os contratos que desfazem só esta camada recebem a base correta.
     text = undo_licoes_m89(path, text)
+    # 02/11/2026: e o fundo da entrada, que está entre as lições M8/M9 e as tarefas M8/M9.
+    text = undo_fundos(path, text)
     relative = _relative(path)
     for edit in reversed(_TAREFAS_M89_FILES.get(relative, {}).get('edits', [])):
         if text.count(edit['new']) != edit['occurrences']:
