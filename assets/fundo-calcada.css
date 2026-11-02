@@ -14,7 +14,9 @@
 .raiz .cf-cena svg{position:absolute;left:0;width:100%;max-width:none;max-height:none;overflow:visible}
 .raiz .cf-fundo svg *{vector-effect:non-scaling-stroke}
 .raiz .cf-calcada{position:absolute;inset:0}
-.raiz .cf-calcada svg{fill:none;stroke:currentColor;stroke-width:1.5;stroke-linejoin:round}
+/* 02/11/2026: pedido do docente («as pedras têm de melhorar»). As pedras passam a cheias, como os cubos de basalto da calçada,
+   com o contorno mais fino a arredondar as arestas; no escuro ficam claras, como o calcário. */
+.raiz .cf-calcada svg{fill:currentColor;fill-opacity:.88;stroke:currentColor;stroke-width:1.2;stroke-linejoin:round}
 .raiz .cf-soltas{opacity:.6}
 .raiz .cf-fi{transform-origin:50% 50%}
 /* no escuro, a pedra clara sobre preto pesa mais: as fiadas de 1,5 px descem a 0,85 (as de perto ficam inteiras) */
@@ -33,5 +35,4 @@
 html:not(.em-projecao) .raiz .cf-anda .cf-papel{display:block;animation:cf-assenta 8s linear both;will-change:transform}
 html:not(.em-projecao) .raiz .cf-anda .cf-fi{animation:cf-respira 16s linear infinite;will-change:transform}
 }
-.raiz .cf-fora *{animation-play-state:paused!important}
 @media print{.raiz .p-cab{min-height:0}.raiz .cf-fundo,.raiz .cf-papel{display:none}}
