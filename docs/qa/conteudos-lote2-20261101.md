@@ -146,3 +146,9 @@ Ficheiros: `assets/ampliar-documentos.js`, `assets/ampliar-documentos.css`; inte
 Interface pública: `window.EPIAmpliar.abre(img, legenda, elementoDeAbertura)`, `fecha()` e `rotulo(img, legenda)`. A imagem usa `data-original`, depois `currentSrc` e `src`. A abertura mostra a imagem inteira; os controlos ampliam e reduzem de 100 % a 400 %, em passos de 50 %, e repõem a imagem inteira. As teclas + e - fazem o mesmo. A área ampliada permite percorrer a imagem. Escape fecha; Tab e Shift+Tab ficam no diálogo; o fundo fica inerte e o foco regressa ao elemento que abriu o leitor. Uma ligação `.documento > a` conserva o destino sem JavaScript. O leitor não grava progresso.
 
 Reutilização possível no Lente #84, após validação da integração local e teste dos seletores desse sítio. Não se criou cópia no Lente nem se alteraram os caminhos reservados ao GPT3. O contrato existente `EPIAmpliar` exige atenção: esta implementação não substitui automaticamente outra já carregada. A equipa que a integrar deve escolher uma única implementação e conferir abertura, foco, teclado, legenda e original em cada família de páginas.
+
+## Confirmação incremental PT156-01, 02/11/2026
+
+A cabeça `7abc237ea7d247157939f1bd318b1be959f0e0ec` concluiu os 15 fluxos do CI com sucesso. Na revisão seguinte, a porta de qualidade assinalou a instrução em par no M9-F13 C02.
+
+A versão final passa a «Entre estações, confronta a tua leitura com uma passagem do livro e anota a página da edição.». Mantêm-se os restantes parágrafos, o tipo, a ordem, as opções e o progresso. A troca existente da camada e o campo `depois` do registo foram atualizados; `antigo` e `antes` conservam a prova histórica. O manifesto foi regenerado, mantendo todos os hashes de base e alterando apenas o resultado de `m9/recursos/f13.js`. Nenhum teste foi mudado. A confirmação é incremental; não se repetem as baterias já aprovadas sem relação com a frase.

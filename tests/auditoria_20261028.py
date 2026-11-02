@@ -286,7 +286,21 @@ _VARREDURA_FILES = json.loads(VARREDURA_MANIFEST.read_text('utf-8'))['files']
 _CONTEUDOS_LOTE2_FILES = json.loads((ROOT / 'tests/fixtures/conteudos-lote2-edits-20261101.json').read_text('utf-8'))['files']
 
 
+_VARIEDADE_F0_FILES = json.loads((ROOT / 'tests/fixtures/variedade-f0-edits-20261102.json').read_text('utf-8'))['files']
+
+
+def undo_variedade_f0(path, text):
+    relative = _relative(path)
+    for edit in reversed(_VARIEDADE_F0_FILES.get(relative, {}).get('edits', [])):
+        if text.count(edit['new']) != edit['occurrences']:
+            raise AssertionError(f"F0 não confere: {relative}: {edit['location']}")
+        text = text.replace(edit['new'], edit['old'])
+    return text
+
+
 def undo_conteudos_lote2(path, text):
+    # 02/11/2026: F0 acima do lote 2; ocorrências exatas antes de desfazer.
+    text = undo_variedade_f0(path, text)
     relative = _relative(path)
     for edit in reversed(_CONTEUDOS_LOTE2_FILES.get(relative, {}).get('edits', [])):
         if text.count(edit['new']) != edit['occurrences']:
