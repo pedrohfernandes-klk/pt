@@ -122,9 +122,19 @@ def conferir(page, rotulo, esperado, fe):
 def main():
     lista = mudados()
     assert len(lista) >= 40, len(lista)
-    raiz = tempfile.mkdtemp(prefix='opcoes-pt-')
-    os.symlink(ROOT, os.path.join(raiz, 'pt'))
-    server = ThreadingHTTPServer(('127.0.0.1', 0), partial(Quiet, directory=raiz))
+    # 01/11/2026: servir os mesmos ficheiros em /pt sem privilégios de symlink no Windows.
+    class MountedQuiet(Quiet):
+        # 01/11/2026: montagem exclusiva em /pt/, sem aceitar caminhos externos.
+        def send_head(self):
+            from urllib.parse import urlsplit
+            if not urlsplit(self.path).path.startswith('/pt/'):
+                self.send_error(404)
+                return None
+            return super().send_head()
+
+        def translate_path(self, path):
+            return super().translate_path(path[len('/pt'):])
+    server = ThreadingHTTPServer(('127.0.0.1', 0), partial(MountedQuiet, directory=str(ROOT)))
     threading.Thread(target=server.serve_forever, daemon=True).start()
     host = f'http://127.0.0.1:{server.server_port}/pt'
     feitos = 0
@@ -157,8 +167,6 @@ def main():
             browser.close()
     finally:
         server.shutdown()
-        os.unlink(os.path.join(raiz, 'pt'))
-        os.rmdir(raiz)
 
 
 if __name__ == '__main__':

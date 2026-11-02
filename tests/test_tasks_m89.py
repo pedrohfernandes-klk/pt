@@ -57,7 +57,9 @@ class TasksM89(unittest.TestCase):
     def test_camada_literal_aplicada_e_reversivel(self):
         r = subprocess.run([sys.executable, 'scripts/aplicar_trocas.py',
                             'scripts/tarefas_m89_20261101.json', '--manifesto',
-                            'tests/fixtures/tarefas-m89-edits-20261101.json', '--verificar'],
+                            # 01/11/2026: confere a camada das tarefas por baixo das novas lições.
+                            'tests/fixtures/tarefas-m89-edits-20261101.json', '--verificar',
+                            '--desfazer-antes', 'tests/fixtures/licoes-m89-edits-20261101.json'],
                            cwd=ROOT, capture_output=True, text=True, encoding='utf-8')
         self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
 

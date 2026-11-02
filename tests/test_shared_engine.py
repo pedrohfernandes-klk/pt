@@ -1,9 +1,10 @@
+# 01/11/2026: sete lições novas no M8/M9 elevam o inventário a 116.
 from pathlib import Path
 import unittest,re
 ROOT=Path(__file__).resolve().parents[1]
 class SharedEngine(unittest.TestCase):
- def test_all_109_lessons_use_one_versioned_engine(self):
-  paths=list(ROOT.glob('m[1-9]/licao-*/index.html'));self.assertEqual(len(paths),109)
+ def test_all_116_lessons_use_one_versioned_engine(self):
+  paths=list(ROOT.glob('m[1-9]/licao-*/index.html'));self.assertEqual(len(paths),116)
   for p in paths:
    s=p.read_text('utf-8')
    self.assertNotIn('window.EPIJogo=(function()',s,str(p))

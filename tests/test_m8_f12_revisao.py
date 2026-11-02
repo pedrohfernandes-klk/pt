@@ -51,7 +51,8 @@ class F12Review(unittest.TestCase):
         self.assertEqual([v for _,v in reference['pares']],['o conto','a revista','um poema','uma carta'])
         self.assertIn('informação anterior',reference['f'])
         self.assertEqual(len(self.cards),22)
-        self.assertEqual(len(self.units[1]['pool']),53)
+        # 01/11/2026: George acrescenta dois itens ao arquivo da U2.
+        self.assertEqual(len(self.units[1]['pool']),55)
         self.assertEqual(len(self.pool),15)
 
     def test_teacher_only_offers_current_interactive_cards(self):

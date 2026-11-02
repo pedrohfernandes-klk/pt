@@ -12,7 +12,8 @@ import sys
 from urllib.parse import urlsplit, unquote
 
 ROOT = Path(__file__).resolve().parents[1]
-EXPECTED = [12, 10, 12, 16, 11, 11, 17, 10, 10]
+# 01/11/2026: quatro lições M8 e três M9; todas as anteriores mantêm-se.
+EXPECTED = [12, 10, 12, 16, 11, 11, 17, 14, 13]
 
 class Page(HTMLParser):
     def __init__(self):
