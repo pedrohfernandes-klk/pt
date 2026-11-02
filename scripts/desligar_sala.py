@@ -845,6 +845,14 @@ def main():
                     if conferencia.count(edit['new']) != edit['occurrences']:
                         raise ManifestoDesatualizado(f'{rel}: lote 2 não confere')
                     conferencia = conferencia.replace(edit['new'], edit['old'])
+                # 02/11/2026: a varredura de formatação (a mais recente) desfaz-se antes de tudo, só para conferir.
+                varredura = ROOT / 'tests/fixtures/varredura-formatacao-edits-20261101.json'
+                if varredura.is_file():
+                    for edit in reversed(json.loads(varredura.read_text('utf-8'))['files'].get(rel, {}).get('edits', [])):
+                        if conferencia.count(edit['new']) != edit['occurrences']:
+                            raise ManifestoDesatualizado(f'{rel}: camada da varredura não confere')
+                        conferencia = conferencia.replace(edit['new'], edit['old'])
+                # 02/11/2026: a camada da calçada da entrada desfaz-se a seguir, só para conferir.
                 calcada = ROOT / 'tests/fixtures/calcada-mar-edits-20261102.json'
                 if calcada.is_file():
                     for edit in reversed(json.loads(calcada.read_text('utf-8'))['files'].get(rel, {}).get('edits', [])):

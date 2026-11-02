@@ -1,5 +1,5 @@
 {
- "base_commit": "fe2d829e53a384c76fd00e77833bd0593d117841",
+ "base_commit": "d1f343535901b0bb0045032196f3f09c398a8c4e",
  "_nota": "01/11/2026: lote 2 de conteúdos; provas esperadas e cartões revistos, sem alterar tipos, seleção, âncoras ou progresso.",
  "files": {
   "m1/licao-m1-f01/index.html": {
@@ -165,12 +165,12 @@
    ]
   },
   "3/index.html": {
-   "base_sha256_lf": "7705b575036431231ef3dd377cfd9736e597ccef6c004b56953d05e50a43d8ca",
+   "base_sha256_lf": "71235d746ea7336d62e4f0cd9fd067b147793aa1ef2a742cd1e253a1ccf49cfa",
    "after_sha256_lf": "fbf3683e29ec62e29026255e9aecf64d0c8d5373cc3a02dd5d8ebec41e06948f",
    "edits": [
     {
      "location": "Título do percurso do 3.º ano",
-     "old": "Quem és quando escreves — e quem fica de fora do que contas?",
+     "old": "Quem és quando escreves e quem fica de fora do que contas?",
      "new": "Quem és quando escreves, e quem fica de fora do que contas?",
      "occurrences": 1
     }
@@ -279,8 +279,8 @@
    ]
   },
   "m2/portefolio-do-modulo-m2/index.html": {
-   "base_sha256_lf": "e557de7415b28892ebd575ea1d600a7c8c2a8ec1d21cfb8a5e0885f4af16b119",
-   "after_sha256_lf": "9ea880bfde0d6f59f27a116a356289b71fbea8d6ab6c8a4f001c33b918af9cd5",
+   "base_sha256_lf": "cb55788fea0a6d2dbeeb35b2f74051abc3525785cc10b15f3739cc716afd33f1",
+   "after_sha256_lf": "0b64f3383f8bf97715d5c1cd9b0d7c38cdff07283676394080dcc7be25f08520",
    "edits": [
     {
      "location": "Para que serve",
@@ -291,8 +291,8 @@
    ]
   },
   "m4/portefolio-do-modulo-m4/index.html": {
-   "base_sha256_lf": "da42e45a6857585e6819be06faff6760922a4158378d68cb779688c3e3d2b52d",
-   "after_sha256_lf": "cd0ba5da098e5c9eedf34f46ec46921654a1cd69f5ae469a36421e58f6b3a32a",
+   "base_sha256_lf": "5c20c23209faebcb55faabdd328f30e7137cb17c05fbf58d7b8d415013122a1f",
+   "after_sha256_lf": "0d46a92ca4f776f000eba6c6d5aaea6358f592b14382683e85ad3cf8a16eb447",
    "edits": [
     {
      "location": "Para que serve",
@@ -765,8 +765,8 @@
    ]
   },
   "m7/licao-m7-f01/index.html": {
-   "base_sha256_lf": "a7bf34894b397521680151cfcf0de4b23fc4bc8ea473086c0adb78528c0f32b9",
-   "after_sha256_lf": "da2c7391b2de9378a365a0526f58e7bca5cccc995a0a97fcc07cdfbbaa6dcbf4",
+   "base_sha256_lf": "ad5d879f5e0ad5939696093cb3e06964f78e0ac13038a95cd046bed557cb6951",
+   "after_sha256_lf": "4c4b808e7f1e935221072ef4e89f5b034a4efc2feb35bdc7aa9b9e428c42409f",
    "edits": [
     {
      "location": "M7-F01 C11",
@@ -777,8 +777,8 @@
    ]
   },
   "m7/painel-m7-f01/index.html": {
-   "base_sha256_lf": "704e4a0ce5f903044448a7e930bce13e4161c34aaba18e8260cbc04872d646a4",
-   "after_sha256_lf": "b691a192a61d6de1ffca6beb1d0aac4178a9c5f4484bb354cb16212f965cb553",
+   "base_sha256_lf": "1e90efe3421a7fc6ed5936f87a1d3fd23c07bfd9e4b3d0fd59183dbfec35acdc",
+   "after_sha256_lf": "269c0017c6eda45df3928c9b1152d28d8c07df86b3a25ae870344dc686ca0cda",
    "edits": [
     {
      "location": "Relâmpago C11",
@@ -837,8 +837,8 @@
    ]
   },
   "m2/licao-m2-f13/index.html": {
-   "base_sha256_lf": "41e244cd6a6798999a69218c8a65440f60836270f64e124d51cb2f1c81f638f2",
-   "after_sha256_lf": "630edc02cdf0a69570078f1ac309a19191f4029bca8b62e0aa0e77a86b0cca66",
+   "base_sha256_lf": "c2b0cc310f2c8d2e5a927b0fa8a454af62175f32cfdf38ed5528f3be5c22a061",
+   "after_sha256_lf": "cd9b461fc29907b6d754fc5dd0f96ac37552cace72ff9194d578d9b608065a40",
    "edits": [
     {
      "location": "M2-F13 C11",
@@ -1041,8 +1041,8 @@
    ]
   },
   "assets/exame/sessoes.json": {
-   "base_sha256_lf": "70f2f29963ae51c4cc8fbc4f30f770e926c30d7aeacfbb558db6b4175d4b1a73",
-   "after_sha256_lf": "0775d97001dc5acba79bb62c2fbad9ab726971733db0f8fa656ceb336047e287",
+   "base_sha256_lf": "d0e5c13da3cabba0d6f50f594e6a842ca6b5ff31e029d89c958b92ca5a031b9d",
+   "after_sha256_lf": "894c2e273f1dedf8578f66401aef9679895c880da32d7bd290ad24fde0995355",
    "edits": [
     {
      "location": "Aquecimento: cópia de M9-F01 C14",
@@ -1053,8 +1053,8 @@
    ]
   },
   "assets/pt-lessons/lesson.css": {
-   "base_sha256_lf": "063e8a3b5ac3966ba86adacf2dbf875bf88c2656e252a30d695f5aef75b90daf",
-   "after_sha256_lf": "7891ae99329b23c217f98f265e7beaef3820395ff9e080410eaf6ac0346c3854",
+   "base_sha256_lf": "f0c06b06d47b9a9a0edbef18eaa18f3aba8f150e8454d29f9b08ac3e1f4e12d7",
+   "after_sha256_lf": "3278797958c4b7485c6a95445e9da7e6d1dbc07d05a401cf6c40bb8b68240f23",
    "edits": [
     {
      "location": "Palavras para selecionar",

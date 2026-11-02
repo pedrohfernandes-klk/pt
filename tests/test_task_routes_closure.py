@@ -41,7 +41,7 @@ def original_lesson_text(path):
  # 01/11/2026: os índices desfazem-se antes dos conteúdos e das lições.
  # 02/11/2026: e, antes de todas, as tarefas individuais; antes delas, a calçada da entrada.
  # 02/11/2026: lote 2 antes das camadas históricas, sem normalizações.
- for manifest_path in (ROOT/'tests/fixtures/conteudos-lote2-edits-20261101.json',ROOT/'tests/fixtures/calcada-mar-edits-20261102.json',ROOT/'tests/fixtures/tarefas-individuais-edits-20261102.json',ROOT/'tests/fixtures/cartaz-indices-edits-20261101.json',ROOT/'tests/fixtures/licoes-m16-edits-20261101.json',ROOT/'tests/fixtures/licoes-m89-edits-20261101.json',ROOT/'tests/fixtures/tarefas-m89-edits-20261101.json',ROOT/'tests/fixtures/tarefas-m356-edits-20261031.json',LINGUA_EDITS,OPCOES_EDITS,JUSTIFICADO_EDITS,AQUECIMENTOS_EDITS,SALA_EDITS,AUDIT_EDITS_M4_M7,AUDIT_EDITS,REIS_EDITS,TABLE_EDITS,GRAMMAR_EDITS,INSTRUCTION_EDITS):
+ for manifest_path in (ROOT/'tests/fixtures/conteudos-lote2-edits-20261101.json',ROOT/'tests/fixtures/varredura-formatacao-edits-20261101.json',ROOT/'tests/fixtures/calcada-mar-edits-20261102.json',ROOT/'tests/fixtures/tarefas-individuais-edits-20261102.json',ROOT/'tests/fixtures/cartaz-indices-edits-20261101.json',ROOT/'tests/fixtures/licoes-m16-edits-20261101.json',ROOT/'tests/fixtures/licoes-m89-edits-20261101.json',ROOT/'tests/fixtures/tarefas-m89-edits-20261101.json',ROOT/'tests/fixtures/tarefas-m356-edits-20261031.json',LINGUA_EDITS,OPCOES_EDITS,JUSTIFICADO_EDITS,AQUECIMENTOS_EDITS,SALA_EDITS,AUDIT_EDITS_M4_M7,AUDIT_EDITS,REIS_EDITS,TABLE_EDITS,GRAMMAR_EDITS,INSTRUCTION_EDITS):
   manifest=json.loads(manifest_path.read_text('utf-8'))
   for edit in reversed(manifest['files'].get(path,{}).get('edits',[])):
    if source.count(edit['new'])!=edit['occurrences']:

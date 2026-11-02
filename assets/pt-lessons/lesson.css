@@ -321,3 +321,8 @@ ol.passos .n{font-size:2rem}
  .jogo .ler .paralelo>.lado+.lado,.jogo .ler .paralelo>.onda+.lado{border-top:1px solid var(--tinta);padding-top:16px}
  .jogo .ler .paralelo>.onda{display:none}
 }
+
+/* 01/11/2026: continuação visual do verso, sem confundir a quebra automática.
+   02/11/2026: só a continuação. A coluna do rótulo («A.») era global e sobrepunha os nomes das falas («Fidalgo:», «Anjo:»)
+   ao primeiro verso nas lições do M2; as páginas de exercícios que a usam trazem o seu próprio <style>. */
+.verso .vl{display:block;padding-left:1.4em;text-indent:-1.4em}

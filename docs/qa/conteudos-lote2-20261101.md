@@ -2,7 +2,7 @@
 
 ## Estado em 02/11/2026
 
-As alterações estão em validação local. O pedido continua em rascunho e não está pronto para publicação. O main recebido em 02/11, com os pedidos #152 e #163, será integrado antes da próxima cabeça de revisão. Os resultados abaixo pertencem à base anterior e serão repetidos após o merge.
+As alterações estão em validação local. O pedido continua em rascunho e não está pronto para publicação. O main recebido em 02/11, com os pedidos #152 e #163, foi integrado por merge nesta revisão. Os resultados abaixo pertencem à base anterior e serão repetidos após o merge.
 
 ## A1: alterações confirmadas do #149
 
@@ -135,4 +135,4 @@ A tabela de pontuação permanece em [conteudos-lote2-travessoes-20261102.md](co
 
 Na base anterior à integração do #152/#163, 17 de 17 camadas conferiram. A bateria de 433 testes encontrou uma subida na contagem de opções certas mais longas do M3; a redação foi corrigida e os cinco testes específicos de opções passaram depois. Os sete testes do #149, incluindo os materiais regenerados, passaram. A bateria de navegador está em curso. Estes resultados não constituem aprovação da cabeça final nem autorização de publicação.
 
-Antes de pedir revisão: integrar o main atual por merge, reconciliar a camada do lote 2 por cima da varredura, conferir as cadeias de desfazer e repetir a bateria completa. Não se acrescentam ao âmbito os 109 pontos adiados da varredura.
+O main d1f343535901b0bb0045032196f3f09c398a8c4e foi integrado por merge. A varredura conserva as 648 trocas, sem alterações; a nossa camada fica por cima e as 18 camadas conferem. O único contexto reconciliado é o título do 3.º ano, conservando a vírgula aprovada. A bateria completa está a ser repetida. Não se acrescentam ao âmbito os 109 pontos adiados da varredura.

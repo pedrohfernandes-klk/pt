@@ -9,6 +9,9 @@ LAYERS=[
  # 02/11/2026: lote 2 reaplicado por cima do main publicado.
  ('conteudos_lote2_20261101','conteudos-lote2-edits-20261101'),
  # 02/11/2026: decisão 139, a calçada «mar largo» na entrada (camada mais recente).
+ # 02/11/2026: varredura de formatação (pt #152), refeita em trocas mínimas sobre o main (camada mais recente).
+ ('varredura_formatacao_20261101','varredura-formatacao-edits-20261101'),
+ # 02/11/2026: decisão 139, a calçada «mar largo» na entrada.
  ('calcada_mar_20261102','calcada-mar-edits-20261102'),
  # 02/11/2026: pedido do docente, não há tarefas de grupo.
  ('tarefas_individuais_20261102','tarefas-individuais-edits-20261102'),
