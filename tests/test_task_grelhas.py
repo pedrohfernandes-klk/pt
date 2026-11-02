@@ -144,6 +144,11 @@ class Texto(HTMLParser):
     def __str__(self):return re.sub(r'\s+',' ',' '.join(self.out))
 
 class Grelhas(unittest.TestCase):
+    # 01/11/2026: read_text não pode esconder CRLF na página publicada.
+    def test_paginas_publicadas_usam_lf(self):
+        for page in (ROOT / 'tarefas').rglob('*.html'):
+            self.assertNotIn(b'\r', page.read_bytes(), str(page))
+
     def test_dados(self):
         self.assertIn('m1-u1',DADOS['tarefas']);self.assertIn('m1-u2',DADOS['tarefas'])
         for slug,t in DADOS['tarefas'].items():
@@ -254,7 +259,8 @@ class Grelhas(unittest.TestCase):
             for slug in DADOS['tarefas']:
                 for pasta in ('grelha','correcao'):
                     with self.subTest(tarefa=slug,pasta=pasta):
-                        self.assertEqual((Path(tmp)/'tarefas'/slug/pasta/'index.html').read_bytes(),(ROOT/'tarefas'/slug/pasta/'index.html').read_bytes())
+                        # 01/11/2026: normaliza apenas as terminações de linha para conferir também no Windows.
+                        self.assertEqual((Path(tmp)/'tarefas'/slug/pasta/'index.html').read_text('utf-8'),(ROOT/'tarefas'/slug/pasta/'index.html').read_text('utf-8'))
                 self.assertFalse((Path(tmp)/'tarefas'/slug/'index.html').exists(),'a ligação à grelha já está na tarefa')
 
 if __name__=='__main__':unittest.main()

@@ -1,3 +1,4 @@
+# 01/11/2026: fonte sincronizada; não converter aspas para ocultar diferenças.
 """Respostas certas e erradas em todos os tipos dos dois baralhos novos, a 390 px."""
 from functools import partial
 from http.server import ThreadingHTTPServer

@@ -27,9 +27,11 @@ try:
    ctx,page=new_page(browser,width);errors=[]
    page.on('pageerror',lambda e:errors.append(str(e)))
    page.goto(host+'/',wait_until='networkidle')
+   # 01/11/2026: o mapa troca o travessão por dois pontos; mantém-se a contagem.
    assert '16 lições' in page.locator('li[data-m="M4"]').inner_text().lower()
    page.goto(host+'/mapa/',wait_until='networkidle')
-   assert '16 lições' in page.locator('summary').filter(has_text='M4 —').inner_text().lower()
+   # 01/11/2026: o mapa troca o travessão por dois pontos; mantém-se a contagem.
+   assert '16 lições' in page.locator('summary').filter(has_text='M4:').inner_text().lower()
    page.goto(host+'/m4/',wait_until='networkidle')
    assert page.locator('.cabm .n').inner_text()=='4'
    # 26/10: original lesson numbering/order remains; task lessons have their own T row.

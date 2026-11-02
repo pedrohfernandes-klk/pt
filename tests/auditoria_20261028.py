@@ -277,7 +277,24 @@ _TAREFAS_INDIVIDUAIS = json.loads((ROOT / 'tests/fixtures/tarefas-individuais-ed
 _CALCADA_MAR = json.loads((ROOT / 'tests/fixtures/calcada-mar-edits-20261102.json').read_text('utf-8'))['files']
 
 
+# 02/11/2026: a varredura de formatação (pt #152), refeita em trocas mínimas sobre o main, é a camada mais recente,
+# por cima da calçada da entrada.
+VARREDURA_MANIFEST = ROOT / 'tests/fixtures/varredura-formatacao-edits-20261101.json'
+_VARREDURA_FILES = json.loads(VARREDURA_MANIFEST.read_text('utf-8'))['files']
+
+
+def undo_varredura(path, text):
+    relative = _relative(path)
+    for edit in reversed(_VARREDURA_FILES.get(relative, {}).get('edits', [])):
+        if text.count(edit['new']) != edit['occurrences']:
+            raise AssertionError(f"Troca autorizada a 01/11 (formatação) já não confere: {relative}: {edit['location']}")
+        text = text.replace(edit['new'], edit['old'])
+    return text
+
+
 def undo_calcada_mar(path, text):
+    # 02/11/2026: a varredura, mais recente, desfaz-se antes.
+    text = undo_varredura(path, text)
     relative = _relative(path)
     for edit in reversed(_CALCADA_MAR.get(relative, {}).get('edits', [])):
         if text.count(edit['new']) != edit['occurrences']:

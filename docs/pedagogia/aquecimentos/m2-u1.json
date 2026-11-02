@@ -108,9 +108,9 @@
     },
     {
       "t": "completar",
-      "p": "Frase criada: “Arrumei os livros para que a mesa ficasse livre.” Classifica a oração iniciada por _para que_.",
+      "p": "Frase criada: _Arrumei os livros para que a mesa ficasse livre._ Classifica a oração iniciada por _para que_.",
       "p2": "Na frase dos livros, a oração com _para que_ diz uma causa, um objetivo ou um tempo? Escolhe a classificação completa.",
-      "frase": "A oração “para que a mesa ficasse livre” é [1].",
+      "frase": "A oração _para que a mesa ficasse livre_ é [1].",
       "lacunas": [
         {
           "o": [
@@ -127,7 +127,7 @@
     },
     {
       "t": "escolha",
-      "p": "Que justificação aponta, na frase criada, os traços que confirmam a classificação de “para que a mesa ficasse livre”?",
+      "p": "Que justificação aponta, na frase criada, os traços que confirmam a classificação de _para que a mesa ficasse livre_?",
       "p2": "Não basta repetir o nome da oração. Que traços da frase dos livros confirmam a classificação?",
       "o": [
         "_Para que_ abre um fim pretendido e _ficasse_ está no conjuntivo.",
@@ -139,7 +139,7 @@
       "fe": [
         null,
         "**Ficasse** está no conjuntivo, e a frase não diz que a mesa ficou livre: um fim pretendido não é um fim alcançado.",
-        "A posição não classifica a oração: “Para que a mesa ficasse livre, arrumei os livros.” continua a ser final. Confirmam-na o conector e o conjuntivo."
+        "A posição não classifica a oração: _Para que a mesa ficasse livre, arrumei os livros._ continua a ser final. Confirmam-na o conector e o conjuntivo."
       ],
       "g": 4
     },
@@ -163,19 +163,19 @@
       "p2": "Já tens o nome de cada recurso. Que sentimento ou situação revela cada frase criada?",
       "pares": [
         [
-          "Comparação: “A notícia caiu como água gelada.”",
+          "Comparação: _A notícia caiu como água gelada._",
           "Um choque súbito e frio"
         ],
         [
-          "Antítese: “Sorrio por fora, choro por dentro.”",
+          "Antítese: _Sorrio por fora, choro por dentro._",
           "Uma tristeza escondida"
         ],
         [
-          "Enumeração: “Testes, treinos, recados, turnos.”",
+          "Enumeração: _Testes, treinos, recados, turnos._",
           "Obrigações a mais"
         ],
         [
-          "Interrogação retórica: “De que serve correr?”",
+          "Interrogação retórica: _De que serve correr?_",
           "Um esforço sem proveito"
         ]
       ],

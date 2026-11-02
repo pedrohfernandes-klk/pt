@@ -261,7 +261,9 @@ class TextoJustificado(unittest.TestCase):
         manifesto = json.loads(MANIFESTO.read_text('utf-8'))
         self.assertTrue(manifesto['files'])
         for rel, registo in manifesto['files'].items():
-            texto = (ROOT / rel).read_text('utf-8')
+            # 01/11/2026: a camada de formatação posterior é desfeita para conferir esta camada.
+            from auditoria_20261028 import undo_varredura
+            texto = undo_varredura(rel, (ROOT / rel).read_text('utf-8'))
             for edit in registo['edits']:
                 with self.subTest(pagina=rel, local=edit['location']):
                     self.assertEqual(texto.count(edit['new']), edit['occurrences'])
@@ -298,7 +300,9 @@ class TextoJustificado(unittest.TestCase):
             for m in re.finditer(r'<blockquote([^>]*)>((?:(?!</blockquote>).)*)</blockquote>', dados, re.S):
                 if '<p' in m.group(2) or '<br' in m.group(2):
                     continue
-                txt = re.sub(r'<[^>]+>', '', m.group(2)).strip()
+                # 01/11/2026: cada .vl é um verso; a cobertura anterior conserva o mínimo de 20.
+                linhas=re.sub(r'</span>\s*<span class="vl">', ' / ', m.group(2))
+                txt = re.sub(r'<[^>]+>', '', re.sub(r'<br\s*/?>', ' / ', linhas)).strip()
                 if len(txt) >= 100:
                     vistos += 1
                     with self.subTest(ficheiro=rel, inicio=txt[:40]):
@@ -319,9 +323,12 @@ class TextoJustificado(unittest.TestCase):
             dados = texto.replace('\\"', '"').replace('\\/', '/')
             for m in re.finditer(r'<p(?: class="([^"]*)")?>((?:(?!</p>).)*?)</p>', dados, re.S):
                 classes = (m.group(1) or '').split()
-                if '<br' in m.group(2) or not set(classes) - {'verso'} <= prosa:
+                # 01/11/2026: versos separados por br continuam abrangidos pela verificação.
+                if ('<br' in m.group(2) and 'verso' not in classes) or not set(classes) - {'verso'} <= prosa:
                     continue
-                txt = re.sub(r'<[^>]+>', '', m.group(2)).strip()
+                # 01/11/2026: cada .vl é um verso; a cobertura anterior conserva o mínimo de 20.
+                linhas=re.sub(r'</span>\s*<span class="vl">', ' / ', m.group(2))
+                txt = re.sub(r'<[^>]+>', '', re.sub(r'<br\s*/?>', ' / ', linhas)).strip()
                 if ' / ' not in txt:
                     continue
                 citado = sum(len(q) for q in re.findall(r'«(?:[^«»]|«[^«»]*»)*»', txt) if ' / ' in q)
@@ -376,9 +383,12 @@ class TextoJustificado(unittest.TestCase):
                 itens = []
                 for m in corrida:
                     classes = (m.group(1) or '').split()
-                    if '<br' in m.group(2) or not set(classes) - {'verso'} <= prosa:
+                    # 01/11/2026: versos separados por br continuam abrangidos pela verificação.
+                    if ('<br' in m.group(2) and 'verso' not in classes) or not set(classes) - {'verso'} <= prosa:
                         continue
-                    txt = re.sub(r'<[^>]+>', '', m.group(2)).strip()
+                    # 01/11/2026: cada .vl é um verso; a cobertura anterior conserva o mínimo de 20.
+                    linhas=re.sub(r'</span>\s*<span class="vl">', ' / ', m.group(2))
+                    txt = re.sub(r'<[^>]+>', '', re.sub(r'<br\s*/?>', ' / ', linhas)).strip()
                     r = rotulo.match(txt)
                     if not r or len(r.group(2).strip()) > 60 or r.group(1) in PROSA_EM_LISTA:
                         continue

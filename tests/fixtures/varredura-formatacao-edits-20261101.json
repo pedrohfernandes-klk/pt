@@ -1,0 +1,4602 @@
+{
+ "base_commit": "fe2d829e53a384c76fd00e77833bd0593d117841",
+ "_nota": "01/11/2026: varredura editorial autorizada (títulos, versos, aspas, vocabulário, pontuação e créditos, sem alterar respostas nem progresso). 02/11/2026: refeita em trocas mínimas sobre o main, depois do #144, #145, #148, #150, #154, #161 e #162; as páginas de aquecimento ficam com o gerador.",
+ "files": {
+  "1/todos/index.html": {
+   "base_sha256_lf": "1df692c28f655feeefc929260757bf35972a4ad34d47ec59cf3422e69c7b60ff",
+   "after_sha256_lf": "da3597d65e58ab1bb5f823860f797cb03c31022194e5a078ab0e143c453b3c38",
+   "edits": [
+    {
+     "location": "Varredura de formatação, troca mínima 1",
+     "old": "cena: Farsa de Inês Pereira,",
+     "new": "cena: <i>Farsa de Inês Pereira</i>,",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 2",
+     "old": "Farsa de Inês Pereira, 1523,",
+     "new": "<i>Farsa de Inês Pereira</i>, 1523,",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 3",
+     "old": "Os Lusíadas, 1572,",
+     "new": "<i>Os Lusíadas</i>, 1572,",
+     "occurrences": 1
+    }
+   ]
+  },
+  "2/todos/index.html": {
+   "base_sha256_lf": "4a507d6246959344bb4f9fb243d4adb2db62cb735a90bf8404b61cc504cfca03",
+   "after_sha256_lf": "ef35e6f3978f2397fcec5e0b5a58f1d92cf3a88d61d579f951e69fb8d15f786a",
+   "edits": [
+    {
+     "location": "Varredura de formatação, troca mínima 1",
+     "old": "palco: Frei Luís de Sousa,",
+     "new": "palco: <i>Frei Luís de Sousa</i>,",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 2",
+     "old": "Frei Luís de Sousa, 1843,",
+     "new": "<i>Frei Luís de Sousa</i>, 1843,",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 3",
+     "old": "Amor de Perdição, 1862, uma ",
+     "new": "<i>Amor de Perdição</i>, 1862, uma ",
+     "occurrences": 1
+    }
+   ]
+  },
+  "3/index.html": {
+   "base_sha256_lf": "7705b575036431231ef3dd377cfd9736e597ccef6c004b56953d05e50a43d8ca",
+   "after_sha256_lf": "71235d746ea7336d62e4f0cd9fd067b147793aa1ef2a742cd1e253a1ccf49cfa",
+   "edits": [
+    {
+     "location": "Varredura de formatação, troca mínima 1",
+     "old": "escreves — e ",
+     "new": "escreves e ",
+     "occurrences": 1
+    }
+   ]
+  },
+  "3/todos/index.html": {
+   "base_sha256_lf": "ba968900e068b90c3a35118dd8d477a54e3a76cbb647895fc3aaaf6f57f2d789",
+   "after_sha256_lf": "63bebfb6d990440be891826dc0a80ae00a3e01dd60c5aaf7fa930a66b608433b",
+   "edits": [
+    {
+     "location": "Varredura de formatação, troca mínima 1",
+     "old": "Memorial do Convento ",
+     "new": "<i>Memorial do Convento</i> ",
+     "occurrences": 1
+    }
+   ]
+  },
+  "assets/exame/sessoes.json": {
+   "base_sha256_lf": "70f2f29963ae51c4cc8fbc4f30f770e926c30d7aeacfbb558db6b4175d4b1a73",
+   "after_sha256_lf": "d0e5c13da3cabba0d6f50f594e6a842ca6b5ff31e029d89c958b92ca5a031b9d",
+   "edits": [
+    {
+     "location": "Varredura de formatação, troca mínima 1",
+     "old": "Farsa de Inês Pereira\",",
+     "new": "_Farsa de Inês Pereira_\",",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 2",
+     "old": "Farsa de Inês Pereira.",
+     "new": "_Farsa de Inês Pereira_.",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 3",
+     "old": "       \"title\": \"Os Lusíadas: ",
+     "new": "       \"title\": \"_Os Lusíadas_: ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 4",
+     "old": "       \"title\": \"Frei Luís de Sousa: ",
+     "new": "       \"title\": \"_Frei Luís de Sousa_: ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 5",
+     "old": "de Amor de Perdição,",
+     "new": "de _Amor de Perdição_,",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 6",
+     "old": "Os Maias.",
+     "new": "_Os Maias_.",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 7",
+     "old": "O Sentimento dum Ocidental ",
+     "new": "«O Sentimento dum Ocidental» ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 8",
+     "old": "\"Em Farsa de Inês Pereira e em Amor de Perdição,",
+     "new": "\"Na _Farsa de Inês Pereira_ e em _Amor de Perdição_,",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 9",
+     "old": "\\n\\nEm Amor de Perdição,",
+     "new": "\\n\\nEm _Amor de Perdição_,",
+     "occurrences": 1
+    }
+   ]
+  },
+  "atlas/index.html": {
+   "base_sha256_lf": "b06ac16671a9408b41b344690b2f989a6c58e05d03175d30430434c023d10876",
+   "after_sha256_lf": "472ccc5c2ff9b8fa60f379069a7e8258ab8efe1457a6c33f80e6ebf07d18a76b",
+   "edits": [
+    {
+     "location": "Varredura de formatação, troca mínima 1",
+     "old": "<summary>Jogo ",
+     "new": "<summary>Atividade ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 2",
+     "old": "O jogo ",
+     "new": "A atividade ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 3",
+     "old": "do jogo</button>",
+     "new": "da atividade</button>",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 4",
+     "old": "datas</b>Para o Amor de Perdição ",
+     "new": "datas</b>Para o <i>Amor de Perdição</i> ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 5",
+     "old": "confirmaste.</div><div class=\"m\"><b>Pessoa ou personagem?</b>Bartolomeu de Gusmão existiu: em 1709 fez subir um pequeno balão diante da corte. No Memorial do Convento,",
+     "new": "confirmaste.</div><div class=\"m\"><b>Pessoa ou personagem?</b>Bartolomeu de Gusmão existiu: em 1709 fez subir um pequeno balão diante da corte. No <i>Memorial do Convento</i>,",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 6",
+     "old": "duas versões</b>Eunice Muñoz fez de Maria em Frei Luís de Sousa: ",
+     "new": "duas versões</b>Eunice Muñoz fez de Maria em <i>Frei Luís de Sousa</i>: ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 7",
+     "old": "do jogo ",
+     "new": "da atividade ",
+     "occurrences": 1
+    }
+   ]
+  },
+  "c/candide-jardim/index.html": {
+   "base_sha256_lf": "7313421ec148f9cf40f3fdc0f4cf8259c25d4a87dc56a9508f053e07e4037951",
+   "after_sha256_lf": "6c872e7a786ccf5bb4ffe5850bb1aded40065e3b000b805fb990f276a7d7faf5",
+   "edits": [
+    {
+     "location": "Varredura de formatação, troca mínima 1",
+     "old": "percebeste o jogo.",
+     "new": "desconfias do narrador.",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 2",
+     "old": " Cândido — ",
+     "new": "<br><b>Cândido</b>: ",
+     "occurrences": 1
+    }
+   ]
+  },
+  "c/compasso-rimas/index.html": {
+   "base_sha256_lf": "9522eeac70b2bb8234b839fd1bfe9b5353a9f6f798c81d2c13e5c5b710926f12",
+   "after_sha256_lf": "a4f95f05a693280c40faf2bd4429336a08f9e15c288072c0c6e28a206f6c296b",
+   "edits": [
+    {
+     "location": "Varredura de formatação, troca mínima 1",
+     "old": "</head>",
+     "new": "<style>.verso .vl{display:block;padding-left:1.4em;text-indent:-1.4em}.verso:has(>b:first-child){padding-left:1.6em}.verso>b:first-child{float:left;width:1.6em;margin-left:-1.6em}</style></head>",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 2",
+     "old": "</b> «Ondas ",
+     "new": "</b> <span class=\\\"vl\\\">«Ondas ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 3",
+     "old": " / se vistes meu amigo?» ",
+     "new": "</span><span class=\\\"vl\\\">se vistes meu amigo?» ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 4",
+     "old": "voltar.",
+     "new": "voltar.</span>",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 5",
+     "old": "«Sam ",
+     "new": "<span class=\\\"vl\\\">«Sam ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 6",
+     "old": "eu coruja ou corujo, / ",
+     "new": "eu coruja ou corujo,</span><span class=\\\"vl\\\">",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 7",
+     "old": "verso.</p>",
+     "new": "verso.</span></p>",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 8",
+     "old": "«Que ",
+     "new": "<span class=\\\"vl\\\">«Que ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 9",
+     "old": " / Que ",
+     "new": "</span><span class=\\\"vl\\\">Que ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 10",
+     "old": "abrir.",
+     "new": "abrir.</span>",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 11",
+     "old": "pobre</b> — ",
+     "new": "pobre</b>: ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 12",
+     "old": "infinitivos · <b>rima rica</b> — ",
+     "new": "infinitivos<br><b>rima rica</b>: ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 13",
+     "old": "rimar · <b>rima interna</b> — ",
+     "new": "rimar<br><b>rima interna</b>: ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 14",
+     "old": "verso · <b>assonância</b> — a vogal que volta · <b>aliteração</b> — a consoante que volta · <b>anáfora</b> — ",
+     "new": "verso<br><b>assonância</b>: a vogal que volta<br><b>aliteração</b>: a consoante que volta<br><b>anáfora</b>: ",
+     "occurrences": 1
+    }
+   ]
+  },
+  "c/kafka-acordar/index.html": {
+   "base_sha256_lf": "83be4941ade94a0c1eb807bf6d070b0130f8de2ead89af049dc6e9f80bb1e054",
+   "after_sha256_lf": "056b018bf07eb65817c7d55771e09100369f3795757d050ebe8eda6815d6fa3f",
+   "edits": [
+    {
+     "location": "Varredura de formatação, troca mínima 1",
+     "old": " — armadura · <b>abaulado</b> — curvo · <b>caixeiro-viajante</b> — ",
+     "new": ": armadura<br><b>abaulado</b>: curvo<br><b>caixeiro-viajante</b>: ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 2",
+     "old": "amostras · <b>regalo</b> — ",
+     "new": "amostras<br><b>regalo</b>: ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 3",
+     "old": "mãos · <b>flanco</b> — ",
+     "new": "mãos<br><b>flanco</b>: ",
+     "occurrences": 1
+    }
+   ]
+  },
+  "c/quinta-mandamentos/index.html": {
+   "base_sha256_lf": "111b54962ed0279b335354eb23869b0bd15a2bdde1f49f27b1196bf913b9694c",
+   "after_sha256_lf": "c6396c38a8e65ef4de887107b4d890e740ebf9c18e763a42f5b70b473e64db2e",
+   "edits": [
+    {
+     "location": "Varredura de formatação, troca mínima 1",
+     "old": " Garganta — ",
+     "new": "<br><b>Garganta</b>: ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 2",
+     "old": "original) · <b>Napoleão</b> — ",
+     "new": "original)<br><b>Napoleão</b>: ",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m1/flores-verde-pino/index.html": {
+   "base_sha256_lf": "445349db6263dc5c7eb3eb443fd0483074154ed82450bc8176962bd440a7621d",
+   "after_sha256_lf": "8a9093184fc7241e2a9024430a23976e9f49028108f75a259449ac22fb61e3ce",
+   "edits": [
+    {
+     "location": "Varredura de formatação, troca mínima 1",
+     "old": "u é? — onde está? · <b>pino</b> — pinheiro · <b>pôs conmigo</b> — combinou comigo · <b>preguntades</b> — perguntais · <b>vosco</b> — convosco · <b>ant'o prazo saído</b> — ",
+     "new": "<b>u é</b>: onde está<br><b>pino</b>: pinheiro<br><b>pôs conmigo</b>: combinou comigo<br><b>preguntades</b>: perguntais<br><b>vosco</b>: convosco<br><b>ant'o prazo saído</b>: ",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m1/gram-complementos/index.html": {
+   "base_sha256_lf": "ac83b02adc58b8f7e0b6732edb2e5de23fa27e0472d5ac1973439685d04648bc",
+   "after_sha256_lf": "9b215d856633022c0257193e0c44ffb0bcd1385028e177aee3582bf7c2c9eaa0",
+   "edits": [
+    {
+     "location": "Varredura de formatação, troca mínima 1",
+     "old": "complemento</b> — ",
+     "new": "complemento</b>: ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 2",
+     "old": "completo · <b>modificador</b> — ",
+     "new": "completo<br><b>modificador</b>: ",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m1/gram-coordenadas/index.html": {
+   "base_sha256_lf": "d72a5b49593d74ff03b0335e98c09b2924fa26feeb8a5af8a71c34efaaa91fc7",
+   "after_sha256_lf": "9d16a02db85f2bc231d5ed91650d9fa29e7c26daec854ac2f6e900f2e9e3f6b2",
+   "edits": [
+    {
+     "location": "Varredura de formatação, troca mínima 1",
+     "old": "</head>",
+     "new": "<style>.verso .vl{display:block;padding-left:1.4em;text-indent:-1.4em}.verso:has(>b:first-child){padding-left:1.6em}.verso>b:first-child{float:left;width:1.6em;margin-left:-1.6em}</style></head>",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 2",
+     "old": "concluir — ",
+     "new": "concluir, ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 3",
+     "old": "«fostes-vos queixar ",
+     "new": "<span class=\\\"vl\\\">«fostes-vos queixar</span><span class=\\\"vl\\\">",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 4",
+     "old": " / <i>",
+     "new": "</span><span class=\\\"vl\\\"><i>",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 5",
+     "old": "(Guilhade)</p>",
+     "new": "(Guilhade)</span></p>",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 6",
+     "old": " — e não · <b>mais</b> — mas · ",
+     "new": ": e não<br><b>mais</b>: mas. ",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m1/gram-fonologia/index.html": {
+   "base_sha256_lf": "2c54729c497e65dce9d8b3454ac89959c09a5c9a54e1cd493fc41250f4dbb91c",
+   "after_sha256_lf": "a08a9d888eaee15ff202191aeb953f161c7a722f45a83601714ade1cec9a1516",
+   "edits": [
+    {
+     "location": "Varredura de formatação, troca mínima 1",
+     "old": "fonológico</b> — ",
+     "new": "fonológico</b>: ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 2",
+     "old": "português · <b>síncope</b> — cai um som no meio · <b>sonorização</b> — ",
+     "new": "português<br><b>síncope</b>: cai um som no meio<br><b>sonorização</b>: ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 3",
+     "old": "g) · <b>prótese</b> — entra um som no início · <b>apócope</b> — cai um som no fim · <b>paragoge</b> — junta-se um som no fim · <b>metátese</b> — ",
+     "new": "g)<br><b>prótese</b>: entra um som no início<br><b>apócope</b>: cai um som no fim<br><b>paragoge</b>: junta-se um som no fim<br><b>metátese</b>: ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 4",
+     "old": "— PEP:</strong>",
+     "new": "(PEP):</strong>",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 5",
+     "old": "— ASA:</strong>",
+     "new": "(ASA):</strong>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m1/guilhade-dona-fea/index.html": {
+   "base_sha256_lf": "fb35821ad7da309f52161a5652049adbcec4497e7b914224b15835e79d2fb8a7",
+   "after_sha256_lf": "e3d7c02ddb853e938fdd3177d4541cf4e64a3e79abe472bee72490687888b513",
+   "edits": [
+    {
+     "location": "Varredura de formatação, troca mínima 1",
+     "old": "A</b> — ",
+     "new": "A.</b> ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 2",
+     "old": "B</b> — ",
+     "new": "B.</b> ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 3",
+     "old": " — louvar · <b>prez</b> — valor · <b>nom fal</b> — não falta · <b>comprida de bem</b> — cheia de qualidades · <b>fea</b> — feia · <b>sandia</b> — louca · <b>escárnio</b> — ",
+     "new": ": louvar<br><b>prez</b>: valor<br><b>nom fal</b>: não falta<br><b>comprida de bem</b>: cheia de qualidades<br><b>fea</b>: feia<br><b>sandia</b>: louca<br><b>escárnio</b>: ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 4",
+     "old": "sentido) · <b>maldizer</b> — ",
+     "new": "sentido)<br><b>maldizer</b>: ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 5",
+     "old": "jogo com ",
+     "new": "contraste com ",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m1/lisboa-cercada/index.html": {
+   "base_sha256_lf": "4bef4739407c617427420a895ee2a2df373bd176bf2f25f33400c0f61c7389ed",
+   "after_sha256_lf": "0200201c9680ab85616adfddf499c8a0d0b93ba0a91d89de3b6b9b68cb7cf756",
+   "edits": [
+    {
+     "location": "Varredura de formatação, troca mínima 1",
+     "old": "A</b> — preparada: ",
+     "new": "A.</b> Preparada: ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 2",
+     "old": "B</b> — com ",
+     "new": "B.</b> Com ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 3",
+     "old": " — capacetes · <b>abastaria</b> — bastaria · <b>esgravatando</b> — remexendo a terra · <b>mantimento</b> — ",
+     "new": ": capacetes<br><b>abastaria</b>: bastaria<br><b>esgravatando</b>: remexendo a terra<br><b>mantimento</b>: ",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m1/matam-o-mestre/index.html": {
+   "base_sha256_lf": "0e487ab84bfd9bac3f28a6684f2220b2512e52078b32ef59d554fb2ba87ece01",
+   "after_sha256_lf": "48447e6c46eb1ff0d3885672195db66d33b3b8f20d6e2d0069f8acad20be367e",
+   "edits": [
+    {
+     "location": "Varredura de formatação, troca mínima 1",
+     "old": " — combinado · <b>rijamente</b> — com força · <b>arruído</b> — alvoroço · <b>em logo de</b> — em lugar de · <b>hu</b> — onde · <b>escusar</b> — ",
+     "new": ": combinado<br><b>rijamente</b>: com força<br><b>arruído</b>: alvoroço<br><b>em logo de</b>: em lugar de<br><b>hu</b>: onde<br><b>escusar</b>: ",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m1/mendinho-ermida/index.html": {
+   "base_sha256_lf": "5a8ad8544b4a4a63f16c9a297e608be8def18b104340507fe2d36b408454cb0d",
+   "after_sha256_lf": "4960dbf3bdea596ff38aaa7adaf11a82950b0bbee087fb1b0c8497b8af704cfa",
+   "edits": [
+    {
+     "location": "Varredura de formatação, troca mínima 1",
+     "old": " — estava eu · <b>cercarom-mi</b> — cercaram-me · <b>som</b> — são · <b>atendendo</b> — esperando · <b>nom hei i</b> — não tenho ali · <b>fremosa</b> — ",
+     "new": ": estava eu<br><b>cercarom-mi</b>: cercaram-me<br><b>som</b>: são<br><b>atendendo</b>: esperando<br><b>nom hei i</b>: não tenho ali<br><b>fremosa</b>: ",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m1/ondas-vigo/index.html": {
+   "base_sha256_lf": "90c7153df88aae7b979421aeded3e5237baf84a0c832dea3607ca0983bc9812c",
+   "after_sha256_lf": "a88abc7f90da42adb418c31eff813d56888da0cdc5e71df60de127834503cec2",
+   "edits": [
+    {
+     "location": "Varredura de formatação, troca mínima 1",
+     "old": "jogo das ",
+     "new": "efeito das ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 2",
+     "old": " — agitado · <b>verrá</b> — virá · <b>cedo</b> — ",
+     "new": ": agitado<br><b>verrá</b>: virá<br><b>cedo</b>: ",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m1/tempo-da-flor/index.html": {
+   "base_sha256_lf": "b2f5a33aa3da2ee1f7f72f6c498563cc471f54f1b41f0d1ddd8f69ec65d10d90",
+   "after_sha256_lf": "7966bb8282377b4b9ea5700963fedcc7a0a19fb201bfe0b86661c7c4e545005d",
+   "edits": [
+    {
+     "location": "Varredura de formatação, troca mínima 1",
+     "old": " — trovadores da Provença · <b>soem</b> — costumam · <b>mais</b> — mas · <b>coita</b> — sofrimento de amor · <b>levar</b> — ",
+     "new": ": trovadores da Provença<br><b>soem</b>: costumam<br><b>mais</b>: mas<br><b>coita</b>: sofrimento de amor<br><b>levar</b>: ",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m2/gram-formacao/index.html": {
+   "base_sha256_lf": "0cec4291994b87702805b39e9fa48bb13530c1d0823433a6518238d4a6daef53",
+   "after_sha256_lf": "e1fca7a3c3d20430a1305679a677ea4b8d94094d7bb756b4a239882f5504ba53",
+   "edits": [
+    {
+     "location": "Varredura de formatação, troca mínima 1",
+     "old": "</head>",
+     "new": "<style>.verso .vl{display:block;padding-left:1.4em;text-indent:-1.4em}.verso:has(>b:first-child){padding-left:1.6em}.verso>b:first-child{float:left;width:1.6em;margin-left:-1.6em}</style></head>",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 2",
+     "old": "«Oh ",
+     "new": "<span class=\\\"vl\\\">«Oh ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 3",
+     "old": "» — enfadar + -mento</p>",
+     "new": "»: enfadar + -mento</span></p>",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 4",
+     "old": "«Me ",
+     "new": "<span class=\\\"vl\\\">«Me ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 5",
+     "old": "» — cativo + -eiro</p>",
+     "new": "»: cativo + -eiro</span></p>",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 6",
+     "old": "«Em ",
+     "new": "<span class=\\\"vl\\\">«Em ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 7",
+     "old": "» — des- + fiar + -ado</p><p class=\\\"nota\\\"><b>derivação</b> — ",
+     "new": "»: des- + fiar + -ado</span></p><p class=\\\"nota\\\"><b>derivação</b>: ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 8",
+     "old": "afixo · <b>prefixo</b> — ",
+     "new": "afixo<br><b>prefixo</b>: ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 9",
+     "old": "in-) · <b>sufixo</b> — ",
+     "new": "in-)<br><b>sufixo</b>: ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 10",
+     "old": "-oso) · <b>teste</b> — tira o afixo: ",
+     "new": "-oso)<br><b>teste</b>: tira o afixo, e ",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m2/gram-oracoes-farsa/index.html": {
+   "base_sha256_lf": "8a08d965e1d8be93d311c50b69fceea77e8c24398154551f51a5880cbba7a053",
+   "after_sha256_lf": "b4720cbd48f240e0ea0a69ee1df04fa0810c696102270447c7f22061bfbe1c51",
+   "edits": [
+    {
+     "location": "Varredura de formatação, troca mínima 1",
+     "old": "</head>",
+     "new": "<style>.verso .vl{display:block;padding-left:1.4em;text-indent:-1.4em}.verso:has(>b:first-child){padding-left:1.6em}.verso>b:first-child{float:left;width:1.6em;margin-left:-1.6em}</style></head>",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 2",
+     "old": "«Se vos eu vejo cantar / ",
+     "new": "<span class=\\\"vl\\\">«Se vos eu vejo cantar</span><span class=\\\"vl\\\">",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 3",
+     "old": "casado)</p>",
+     "new": "casado)</span></p>",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 4",
+     "old": "«Já vos ",
+     "new": "<span class=\\\"vl\\\">«Já vos ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 5",
+     "old": " / Por ",
+     "new": "</span><span class=\\\"vl\\\">Por ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 6",
+     "old": "Escudeiro)</p>",
+     "new": "Escudeiro)</span></p>",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 7",
+     "old": "«Quero tomar por esposo / ",
+     "new": "<span class=\\\"vl\\\">«Quero tomar por esposo</span><span class=\\\"vl\\\">",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 8",
+     "old": "viúva)</p><p class=\\\"nota\\\"><b>coordenada</b> — ",
+     "new": "viúva)</span></p><p class=\\\"nota\\\"><b>coordenada</b>: ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 9",
+     "old": "«pois» · <b>subordinada</b> — ",
+     "new": "«pois»<br><b>subordinada</b>: ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 10",
+     "old": "outra: de ",
+     "new": "outra, com valor de ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 11",
+     "old": "causa, fim; de nome (relativa);",
+     "new": "causa ou fim, de nome (relativa),",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 12",
+     "old": "substantiva relativa); ",
+     "new": "substantiva relativa) ou ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 13",
+     "old": "(comparativa) · «que» ",
+     "new": "(comparativa).<br>«Que» ",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m2/guia-da-tarefa-m2/index.html": {
+   "base_sha256_lf": "1fd8dc39b22dd781af91964025cf5835c6c98a8e4012db6b9d6f16d0ac703c04",
+   "after_sha256_lf": "b8d7b071ccef80a141dd40653bb43f43ebf1865aa5592601c05cf5a70b4f6555",
+   "edits": [
+    {
+     "location": "Varredura de formatação, troca mínima 1",
+     "old": "Farsa de Inês Pereira no teatro</b>",
+     "new": "<i>Farsa de Inês Pereira</i> no teatro</b>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m2/ines-escolhe/index.html": {
+   "base_sha256_lf": "844e147e997e4f44297751db3b0ee6777ccb3d73226188d2e14a966a6977b215",
+   "after_sha256_lf": "ad6b9afaf81c477b8e8f72c79485303f6d17965ac3c8bbdb2e02f93a76a079ba",
+   "edits": [
+    {
+     "location": "Varredura de formatação, troca mínima 1",
+     "old": "Farsa de Inês Pereira</p>",
+     "new": "<i>Farsa de Inês Pereira</i></p>",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 2",
+     "old": "Farsa de Inês Pereira, texto integral (Wikisource)</a>",
+     "new": "<i>Farsa de Inês Pereira</i>, texto integral (Wikisource)</a>",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 3",
+     "old": "Farsa de Inês Pereira (Wikipédia)</a>",
+     "new": "<i>Farsa de Inês Pereira</i> (Wikipédia)</a>",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 4",
+     "old": "class=\"sub\">Gil Vicente, Farsa de Inês Pereira,",
+     "new": "class=\"sub\">Gil Vicente, <i>Farsa de Inês Pereira</i>,",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 5",
+     "old": "Farsa de Inês Pereira\",",
+     "new": "_Farsa de Inês Pereira_\",",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 6",
+     "old": "\"subtitulo\":\"Gil Vicente, Farsa de Inês Pereira,",
+     "new": "\"subtitulo\":\"Gil Vicente, _Farsa de Inês Pereira_,",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 7",
+     "old": "\"fontes\":[[\"Gil Vicente, Farsa de Inês Pereira,",
+     "new": "\"fontes\":[[\"Gil Vicente, _Farsa de Inês Pereira_,",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m2/ines-escolher/index.html": {
+   "base_sha256_lf": "916e20c115bf9b9ae6bbf0b5442a4cba9a9f5238ba9fd9a36bf16d8e217e3d3d",
+   "after_sha256_lf": "bf33bd992df1e6ea4f89262674b6d162e30771df1055d6c32ad50473fb853617",
+   "edits": [
+    {
+     "location": "Varredura de formatação, troca mínima 1",
+     "old": "o jogo ",
+     "new": "a oposição dentro ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 2",
+     "old": " — bom senso · <b>folão</b> — fogoso, indomável · <b>Nero</b> — ",
+     "new": ": bom senso<br><b>folão</b>: fogoso, indomável<br><b>Nero</b>: ",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m2/ines-panela/index.html": {
+   "base_sha256_lf": "d8fd4975aec50d529b11062fe4e896b7ac7610a7f52fccc3350f430283957a7f",
+   "after_sha256_lf": "c6ee2cba9543582b2ccad5f349d327ce960007957cffccfe9803850d61a980fd",
+   "edits": [
+    {
+     "location": "Varredura de formatação, troca mínima 1",
+     "old": " — bordar · <b>aviamento</b> — ",
+     "new": ": bordar<br><b>aviamento</b>: ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 2",
+     "old": "casamento) · <b>caramujo</b> — caracol · <b>bugia</b> — ",
+     "new": "casamento)<br><b>caramujo</b>: caracol<br><b>bugia</b>: ",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m2/licao-m2-f12/index.html": {
+   "base_sha256_lf": "ffe30aa88c3d3af4cf122c8ef5069db4bb86a823190b7b1f137bda2fd4644db5",
+   "after_sha256_lf": "546a38e2c8987ded48cede0af6846dc00b5ddc7f69a3aa85c602137a65d71d11",
+   "edits": [
+    {
+     "location": "Varredura de formatação, troca mínima 1",
+     "old": "Farsa de Inês Pereira ",
+     "new": "<i>Farsa de Inês Pereira</i> ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 2",
+     "old": " / é ",
+     "new": "<br>é ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 3",
+     "old": "tirania / ",
+     "new": "tirania<br>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m2/licao-m2-f13/index.html": {
+   "base_sha256_lf": "41e244cd6a6798999a69218c8a65440f60836270f64e124d51cb2f1c81f638f2",
+   "after_sha256_lf": "c2b0cc310f2c8d2e5a927b0fa8a454af62175f32cfdf38ed5528f3be5c22a061",
+   "edits": [
+    {
+     "location": "Varredura de formatação, troca mínima 1",
+     "old": "Farsa de Inês Pereira ",
+     "new": "<i>Farsa de Inês Pereira</i> ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 2",
+     "old": " / confessado ",
+     "new": "<br>confessado ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 3",
+     "old": "trint’anos / o povo com teu mester.»</p>",
+     "new": "trint’anos<br>o povo com teu mester.»</p>",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 4",
+     "old": " / nom ",
+     "new": "<br>nom ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 5",
+     "old": " / é caminho per’aqui.",
+     "new": "<br>é caminho per’aqui.",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m2/portefolio-do-modulo-m2/index.html": {
+   "base_sha256_lf": "e557de7415b28892ebd575ea1d600a7c8c2a8ec1d21cfb8a5e0885f4af16b119",
+   "after_sha256_lf": "cb55788fea0a6d2dbeeb35b2f74051abc3525785cc10b15f3739cc716afd33f1",
+   "edits": [
+    {
+     "location": "Varredura de formatação, troca mínima 1",
+     "old": "Farsa de Inês Pereira ",
+     "new": "<i>Farsa de Inês Pereira</i> ",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m2/visita-farsa-de-ines-pereira-no-teatro/index.html": {
+   "base_sha256_lf": "86f7b3508588b7d056712a7a0edd27e2827fbaa7c41d7a387f13a1f86c16f57d",
+   "after_sha256_lf": "30fd6461a71018cc11d1f70f8dfa5adc46b24aa94a3c2759fcc6f2e8182a824e",
+   "edits": [
+    {
+     "location": "Varredura de formatação, troca mínima 1",
+     "old": "A farsa em cena: Farsa de Inês Pereira, no teatro</span>",
+     "new": "<span>A farsa em cena: <i>Farsa de Inês Pereira</i>, no teatro</span></span>",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 2",
+     "old": "<p>Farsa de Inês Pereira,",
+     "new": "<p><i>Farsa de Inês Pereira</i>,",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m3/arte-estima/index.html": {
+   "base_sha256_lf": "c53c1e2348016b0717bd414c5b56ecb7f043949decd7232deed709765aa0d899",
+   "after_sha256_lf": "2bde878ddc992739b2636bbc65dceffc033153f94ec77c6c25384b1dff73895d",
+   "edits": [
+    {
+     "location": "Varredura de formatação, troca mínima 1",
+     "old": "A</b> — ",
+     "new": "A.</b> ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 2",
+     "old": "B</b> — ",
+     "new": "B.</b> ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 3",
+     "old": " — culto e sábio · <b>prezado</b> — estimado · <b>troncos nobres</b> — linhagens · <b>zebelinos</b> — peles de zibelina (luxo) · <b>forjado aço</b> — ",
+     "new": ": culto e sábio<br><b>prezado</b>: estimado<br><b>troncos nobres</b>: linhagens<br><b>zebelinos</b>: peles de zibelina (luxo)<br><b>forjado aço</b>: ",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m3/bicho-da-terra/index.html": {
+   "base_sha256_lf": "303cde3d974d2dbd990531128ff072c063978cdc8e4378d3b8ddd9ebfa9eb29d",
+   "after_sha256_lf": "c4f8b8d2d5348542b34c8f6383cceab9dbe913207fc891483c7df2a29522c211",
+   "edits": [
+    {
+     "location": "Varredura de formatação, troca mínima 1",
+     "old": "A</b> — ",
+     "new": "A.</b> ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 2",
+     "old": "B</b> — ",
+     "new": "B.</b> ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 3",
+     "old": " — à espreita · <b>avorrecida</b> — detestável · <b>rende</b> — faz render-se · <b>tredores</b> — traidores · <b>deprava</b> — ",
+     "new": ": à espreita<br><b>avorrecida</b>: detestável<br><b>rende</b>: faz render-se<br><b>tredores</b>: traidores<br><b>deprava</b>: ",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m3/camoes-alma/index.html": {
+   "base_sha256_lf": "a759b33a08cdf521797353a17434ea57d1013460cd0da22ff8693d2e8dd61ab0",
+   "after_sha256_lf": "5ea5c5bd3b6af553f8b3f22889577c5b776cdd7cb0b30558bdba62b64c8c1439",
+   "edits": [
+    {
+     "location": "Varredura de formatação, troca mínima 1",
+     "old": " — nobre · <b>assento etéreo</b> — céu · <b>se consente</b> — é permitida · <b>roga</b> — ",
+     "new": ": nobre<br><b>assento etéreo</b>: céu<br><b>se consente</b>: é permitida<br><b>roga</b>: ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 2",
+     "old": "faz o jogo «lá» e «cá» com ",
+     "new": "usa o contraste entre «lá» e «cá» para falar de ",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m3/camoes-barbara/index.html": {
+   "base_sha256_lf": "81fc47f9873a80ce37136978dd62b919cdafd5e29c0239db25594bf0011e24cb",
+   "after_sha256_lf": "cf069cb601d82dd696795aa92f9ede478e6ba9282d97be2f06de741feb168ac7",
+   "edits": [
+    {
+     "location": "Varredura de formatação, troca mínima 1",
+     "old": "vão</b> — ",
+     "new": "vão</b>: ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 2",
+     "old": "juízo · <b>perde opinião</b> — perde a convicção · <b>leda</b> — alegre · <b>siso</b> — juízo · <b>bárbara</b> — estrangeira, «selvagem» (jogo com o ",
+     "new": "juízo<br><b>perde opinião</b>: perde a convicção<br><b>leda</b>: alegre<br><b>siso</b>: juízo<br><b>bárbara</b>: estrangeira, «selvagem» (duplo sentido do ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 3",
+     "old": "jogo de palavras e ",
+     "new": "duplo sentido e ",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m3/camoes-desconcerto/index.html": {
+   "base_sha256_lf": "1c1ddc02e36c3365b71560e45893957a549400f35329c1cf819ba18f15f4c687",
+   "after_sha256_lf": "37d909893e82cbe520182e61dc30e292d7836b7e5b89728b8961a40d29ceef32",
+   "edits": [
+    {
+     "location": "Varredura de formatação, troca mínima 1",
+     "old": "</head>",
+     "new": "<style>.verso .vl{display:block;padding-left:1.4em;text-indent:-1.4em}.verso:has(>b:first-child){padding-left:1.6em}.verso>b:first-child{float:left;width:1.6em;margin-left:-1.6em}</style></head>",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 2",
+     "old": "D</b> — ",
+     "new": "D.</b> <span class=\\\"vl\\\">",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 3",
+     "old": "incerto»:</p>",
+     "new": "incerto»:</span></p>",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 4",
+     "old": "C</b> — ",
+     "new": "C.</b> <span class=\\\"vl\\\">",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 5",
+     "old": "ardente»:</p>",
+     "new": "ardente»:</span></p>",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 6",
+     "old": " — desordem, falta de harmonia · <b>sobejaram</b> — ",
+     "new": ": desordem, falta de harmonia<br><b>sobejaram</b>: ",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m3/camoes-invocacoes/index.html": {
+   "base_sha256_lf": "23abe2f9668e6f5d3c80b9d98e9c78febda5cdb1ad9522fa898db0eaf0fa849b",
+   "after_sha256_lf": "bff21f59dff11dc5b6d8652f11f83142ade5925aa1ca00e5d175e3b3531f4c01",
+   "edits": [
+    {
+     "location": "Varredura de formatação, troca mínima 1",
+     "old": " — ninfas do Tejo · <b>grandíloquo</b> — elevado, solene · <b>nô mais</b> — não mais · <b>destemperada</b> — ",
+     "new": ": ninfas do Tejo<br><b>grandíloquo</b>: elevado, solene<br><b>nô mais</b>: não mais<br><b>destemperada</b>: ",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m3/camoes-leonor/index.html": {
+   "base_sha256_lf": "7c417cdec3e8476560b2b341e5154674d276b4154d59d3c20b5fc2f90bf0c5c3",
+   "after_sha256_lf": "04319112787cbdcb4c8af5b6e9e10b4cf52ebf0091d183c932111b0a6065cd4c",
+   "edits": [
+    {
+     "location": "Varredura de formatação, troca mínima 1",
+     "old": " — campo verde · <b>testo</b> — tampa · <b>escarlata</b> — tecido vermelho · <b>sainho</b> — casaco curto · <b>vasquinha de cote</b> — ",
+     "new": ": campo verde<br><b>testo</b>: tampa<br><b>escarlata</b>: tecido vermelho<br><b>sainho</b>: casaco curto<br><b>vasquinha de cote</b>: ",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m3/camoes-perdigao/index.html": {
+   "base_sha256_lf": "e42b1c5bce941a60040eed0f97390d2bc48020bb7c7982780ecda83bf8610046",
+   "after_sha256_lf": "002e2736d827163766b947cdfc40edad11fccc544e7ebfce52446da25f5770a4",
+   "edits": [
+    {
+     "location": "Varredura de formatação, troca mínima 1",
+     "old": " — macho da perdiz · <b>pena</b> — pluma; sofrimento · <b>desasado</b> — sem asas · <b>penado</b> — ",
+     "new": ": macho da perdiz<br><b>pena</b>: pluma e sofrimento (duplo sentido)<br><b>desasado</b>: sem asas<br><b>penado</b>: ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 2",
+     "old": "jogo do ",
+     "new": "duplo sentido do ",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m3/camoes-restelo-ramos/index.html": {
+   "base_sha256_lf": "f5d36abec64ab6583bd2e29ec05a39371871da5b82db21b21b1259429d654c6a",
+   "after_sha256_lf": "a7926a96105dd9e659dcb1023fa5f9eecd48877e8927ec9f3035358d41646437",
+   "edits": [
+    {
+     "location": "Varredura de formatação, troca mínima 1",
+     "old": "Os Lusíadas</p>",
+     "new": "<i>Os Lusíadas</i></p>",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 2",
+     "old": "Os Lusíadas, texto integral (oslusiadas.org)</a></p>",
+     "new": "<i>Os Lusíadas</i>, texto integral (oslusiadas.org)</a></p>",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 3",
+     "old": "Os Lusíadas (Wikipédia)</a>",
+     "new": "<i>Os Lusíadas</i> (Wikipédia)</a>",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 4",
+     "old": "<p class=\"sub\">Luís de Camões, Os Lusíadas,",
+     "new": "<p class=\"sub\">Luís de Camões, <i>Os Lusíadas</i>,",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 5",
+     "old": "Os Lusíadas\",",
+     "new": "_Os Lusíadas_\",",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 6",
+     "old": "\"subtitulo\":\"Luís de Camões, Os Lusíadas,",
+     "new": "\"subtitulo\":\"Luís de Camões, _Os Lusíadas_,",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 7",
+     "old": "\"fontes\":[[\"Luís de Camões, Os Lusíadas,",
+     "new": "\"fontes\":[[\"Luís de Camões, _Os Lusíadas_,",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m3/camoes-sobolos/index.html": {
+   "base_sha256_lf": "e3280f0f216ea93d1e36bb9297589c1a2a1dcc89f8a19626dac332a9613659bb",
+   "after_sha256_lf": "8ce23b7aa36b6a3f0df2959b3687601ac31e692b8a4c3a9bc831206b1e9787df",
+   "edits": [
+    {
+     "location": "Varredura de formatação, troca mínima 1",
+     "old": " — sobre os · <b>manado</b> — que correu · <b>Babilónia</b> — o lugar do desterro · <b>Sião</b> — a terra de origem · <b>despois d'acordado</b> — ",
+     "new": ": sobre os<br><b>manado</b>: que correu<br><b>Babilónia</b>: o lugar do desterro<br><b>Sião</b>: a terra de origem<br><b>despois d'acordado</b>: ",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m3/espada-pena/index.html": {
+   "base_sha256_lf": "38d95650046d7b4b543ea10d81124899bce6dd6f79e4b00a1f660e08382f7766",
+   "after_sha256_lf": "a40f596593b692fdafb7ab63e0f8d30b075cee4bf57620d95cc0e80fbf66d6b6",
+   "edits": [
+    {
+     "location": "Varredura de formatação, troca mínima 1",
+     "old": "A</b> — a ",
+     "new": "A.</b> A ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 2",
+     "old": "B</b> — o ",
+     "new": "B.</b> O ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 3",
+     "old": " — barco pequeno · <b>peregrinando</b> — andando errante · <b>Mavórcios</b> — da guerra · <b>Canace</b> — ",
+     "new": ": barco pequeno<br><b>peregrinando</b>: andando errante<br><b>Mavórcios</b>: da guerra<br><b>Canace</b>: ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 4",
+     "old": "morrer · <b>ócio ignavo</b> — ",
+     "new": "morrer<br><b>ócio ignavo</b>: ",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m3/gram-anafora/index.html": {
+   "base_sha256_lf": "3a1ff60002c26211b032b4a2f1be0be0cf538ee700a3950126682870bb933bab",
+   "after_sha256_lf": "253191c55eef31d74f81f288af835c2ccce3973bef621379e36fbab23c3c63a8",
+   "edits": [
+    {
+     "location": "Varredura de formatação, troca mínima 1",
+     "old": "</head>",
+     "new": "<style>.verso .vl{display:block;padding-left:1.4em;text-indent:-1.4em}.verso:has(>b:first-child){padding-left:1.6em}.verso>b:first-child{float:left;width:1.6em;margin-left:-1.6em}</style></head>",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 2",
+     "old": "«Este rende munidas fortalezas, / ",
+     "new": "<span class=\\\"vl\\\">«Este rende munidas fortalezas,</span><span class=\\\"vl\\\">",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 3",
+     "old": " Duas ",
+     "new": "</span></p><p>Duas ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 4",
+     "old": "«Que as Ninfas do Oceano, tão formosas, / Tétis ",
+     "new": "<span class=\\\"vl\\\">«Que as Ninfas do Oceano tão formosas,</span><span class=\\\"vl\\\">Tethys, ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 5",
+     "old": " / Outra ",
+     "new": "</span><span class=\\\"vl\\\">Outra ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 6",
+     "old": "deleitosas / Honras […] ",
+     "new": "deleitosas</span><span class=\\\"vl\\\">Honras […]</span><span class=\\\"vl\\\">",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 7",
+     "old": "89).",
+     "new": "89).</span>",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 8",
+     "old": " — uma palavra ",
+     "new": ": uma palavra ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 9",
+     "old": "antes · <b>anáfora como figura</b> — ",
+     "new": "antes<br><b>anáfora como figura</b>: ",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m3/gram-modalidade/index.html": {
+   "base_sha256_lf": "935e9a9e290ebdf3725deb4b7ce2eca0a9d498b40e4d29f5d163c8e2d75ae2ee",
+   "after_sha256_lf": "8210ac784de59bc3beafd061ea4137a25f86602914ecca73d289efda7996db8a",
+   "edits": [
+    {
+     "location": "Varredura de formatação, troca mínima 1",
+     "old": "</head>",
+     "new": "<style>.verso .vl{display:block;padding-left:1.4em;text-indent:-1.4em}.verso:has(>b:first-child){padding-left:1.6em}.verso>b:first-child{float:left;width:1.6em;margin-left:-1.6em}</style></head>",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 2",
+     "old": "</b> «Dai-me ",
+     "new": "</b> <span class=\\\"vl\\\">«Dai-me ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 3",
+     "old": "pedido.</p>",
+     "new": "pedido.</span></p>",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 4",
+     "old": "«Roga ",
+     "new": "<span class=\\\"vl\\\">«Roga ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 5",
+     "old": "ordem.</p>",
+     "new": "ordem.</span></p>",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 6",
+     "old": " — grau de certeza: talvez,",
+     "new": ": grau de certeza (talvez,",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 7",
+     "old": "que · <b>deôntica</b> — ",
+     "new": "que)<br><b>deôntica</b>: ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 8",
+     "old": "ordem: tem de, pode, dai-me · <b>apreciativa</b> — avaliação de quem fala: infelizmente, que belo!</p>",
+     "new": "ordem (tem de, pode, dai-me)<br><b>apreciativa</b>: avaliação de quem fala (infelizmente, que belo!)</p>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m3/maquina-mundo/index.html": {
+   "base_sha256_lf": "e5b22b2e788de07bcd7906afb1202288c0583848700045cb1a308c5070166877",
+   "after_sha256_lf": "6836af9c42339b4250d2b3f049cc6a4fb7ca78fa43549d7a7ac59a4a050f2c04",
+   "edits": [
+    {
+     "location": "Varredura de formatação, troca mínima 1",
+     "old": " — luz · <b>orbes</b> — esferas · <b>verga</b> — vara · <b>derredor</b> — à volta · <b>limada</b> — polida · <b>engenho</b> — ",
+     "new": ": luz<br><b>orbes</b>: esferas<br><b>verga</b>: vara<br><b>derredor</b>: à volta<br><b>limada</b>: polida<br><b>engenho</b>: ",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m3/painel-m3-f10/index.html": {
+   "base_sha256_lf": "3d65ffb3c06de6440e9cec805faf777ca7aa46ec537579c3340312690e5f3952",
+   "after_sha256_lf": "3a0f56131508deea05bf4add5df9c4263995f2ba284ed84402b8b104473145c5",
+   "edits": [
+    {
+     "location": "Varredura de formatação, troca mínima 1",
+     "old": "\"p\":\"No ensaio, cada citação de Os Lusíadas ",
+     "new": "\"p\":\"No ensaio, cada citação de _Os Lusíadas_ ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 2",
+     "old": "textContent=t}\n",
+     "new": "innerHTML=esc(t).replace(/(^|[^0-9A-Za-zÀ-ÖØ-öø-ÿ_\\/])_([^_\\n<>]{1,100}?)_(?![0-9A-Za-zÀ-ÖØ-öø-ÿ_])/g,\"$1<i>$2</i>\")}\n",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m3/questionarios/index.html": {
+   "base_sha256_lf": "54866987cf26d27497dadf24facc0c66302bd42a1cf08c0ddf18f809cc015fb6",
+   "after_sha256_lf": "fa34c718ebb66b9bfefcd201c47a36e28a0e6e6043b5d3f3cd27ed25b072cf89",
+   "edits": [
+    {
+     "location": "Varredura de formatação, troca mínima 1",
+     "old": "Os Lusíadas</span>",
+     "new": "<i>Os Lusíadas</i></span>",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 2",
+     "old": "X — «no ",
+     "new": "X, «no ",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/frei-luis-ramos/index.html": {
+   "base_sha256_lf": "4d4b543387cabbb6792eef68019fb5e4f60edd2c7a31c94ac073dd564e94b2fb",
+   "after_sha256_lf": "691715ac91b1b2cdb00c1a6513ba069b484b7906e58c6e573b455e48fe79023c",
+   "edits": [
+    {
+     "location": "Varredura de formatação, troca mínima 1",
+     "old": "Frei Luís de Sousa</p>",
+     "new": "<i>Frei Luís de Sousa</i></p>",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 2",
+     "old": "rel=\"noopener\">Frei Luís de Sousa ",
+     "new": "rel=\"noopener\"><i>Frei Luís de Sousa</i> ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 3",
+     "old": "class=\"sub\">Almeida Garrett, Frei Luís de Sousa,",
+     "new": "class=\"sub\">Almeida Garrett, <i>Frei Luís de Sousa</i>,",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 4",
+     "old": "Frei Luís de Sousa\",",
+     "new": "_Frei Luís de Sousa_\",",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 5",
+     "old": "\"subtitulo\":\"Almeida Garrett, Frei Luís de Sousa,",
+     "new": "\"subtitulo\":\"Almeida Garrett, _Frei Luís de Sousa_,",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/garrett-fogo/index.html": {
+   "base_sha256_lf": "7b6cc0f82872690fd865a0f6cfceccb87e2383f9d14a7af322c8ed221037206e",
+   "after_sha256_lf": "aefb68d6c4fdd6a1825e6dc63786cebfed6d06fc717456ee1133938343d511bd",
+   "edits": [
+    {
+     "location": "Varredura de formatação, troca mínima 1",
+     "old": "«Frei Luís de Sousa (peça teatral)»</a>",
+     "new": "«_Frei Luís de Sousa_ (peça teatral)»</a>",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 2",
+     "old": " — bens, riqueza · <b>atear</b> — acender · o ",
+     "new": ": bens, riqueza<br><b>atear</b>: acender. O ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 3",
+     "old": "palco</p>",
+     "new": "palco.</p>",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 4",
+     "old": "«Frei Luís de Sousa (peça teatral)»\",",
+     "new": "«_Frei Luís de Sousa_ (peça teatral)»\",",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/garrett-nome/index.html": {
+   "base_sha256_lf": "c53cfae3ded665d0bf932df95b623c4bdba73a5123bf57983109db6f9c9dff0a",
+   "after_sha256_lf": "464dee6b666741712a08acd2b7fae205bc2d452297e114f72f6022a29604a61c",
+   "edits": [
+    {
+     "location": "Varredura de formatação, troca mínima 1",
+     "old": " — coragem · <b>honra</b> — ",
+     "new": ": coragem<br><b>honra</b>: ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 2",
+     "old": "jogo não ",
+     "new": "causa não ",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/gram-atos-fala/index.html": {
+   "base_sha256_lf": "bbfd64dfddbfabfdd64dcbe070a789f71e3eefeec0dd7c1a6248e52f2f459696",
+   "after_sha256_lf": "c47ce6ee18dd75e478e47aa6135ed41182d0a347cf7273c3dbc6d167ecd6d7fe",
+   "edits": [
+    {
+     "location": "Varredura de formatação, troca mínima 1",
+     "old": " — afirma alguma coisa como verdadeira · <b>diretivo</b> — leva o outro a agir · <b>compromissivo</b> — compromete quem fala · <b>expressivo</b> — ",
+     "new": ": afirma alguma coisa como verdadeira<br><b>diretivo</b>: leva o outro a agir<br><b>compromissivo</b>: compromete quem fala<br><b>expressivo</b>: ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 2",
+     "old": "fala · <b>declarativo</b> — ",
+     "new": "fala<br><b>declarativo</b>: ",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/gram-coesao/index.html": {
+   "base_sha256_lf": "385aa1219220576197998c0feac653cdac8ca4608dca2ba2470176a883c58120",
+   "after_sha256_lf": "763ce6f9635c9c8a7b842c95aa6150d39ae9fc4b992dc2533f4571e384249c48",
+   "edits": [
+    {
+     "location": "Varredura de formatação, troca mínima 1",
+     "old": " — pronomes ",
+     "new": ": pronomes ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 2",
+     "old": "ligam · <b>coesão lexical</b> — ",
+     "new": "ligam<br><b>coesão lexical</b>: ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 3",
+     "old": "equivalente · <b>coerência</b> — ",
+     "new": "equivalente<br><b>coerência</b>: ",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/gram-deiticos/index.html": {
+   "base_sha256_lf": "36484d127d4a924fb7b7dcfa1fb367938269c32e6dd2cb5c9425bbb4339ffa67",
+   "after_sha256_lf": "c3aadad35d89b41bafcb60625ae7eb5b708b841695955553ef368a29fa122e5b",
+   "edits": [
+    {
+     "location": "Varredura de formatação, troca mínima 1",
+     "old": " — eu,",
+     "new": ": eu,",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 2",
+     "old": "teu · <b>deítico espacial</b> — ",
+     "new": "teu<br><b>deítico espacial</b>: ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 3",
+     "old": "aquele · <b>deítico temporal</b> — ",
+     "new": "aquele<br><b>deítico temporal</b>: ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 4",
+     "old": "mês · <b>referente</b> — ",
+     "new": "mês<br><b>referente</b>: ",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/guia-da-tarefa-m4/index.html": {
+   "base_sha256_lf": "1be3a496747d4ea3ca2199183ca4c9824630a55736f8cffdff2fbabe1e651924",
+   "after_sha256_lf": "6bec1c372c9ac55d7c76188cc4897928f29ac1e30d8300416a95ceb40273d2ca",
+   "edits": [
+    {
+     "location": "Varredura de formatação, troca mínima 1",
+     "old": "Frei Luís de Sousa no teatro</a>",
+     "new": "<i>Frei Luís de Sousa</i> no teatro</a>",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 2",
+     "old": "Frei Luís de Sousa no teatro</h2>",
+     "new": "<i>Frei Luís de Sousa</i> no teatro</h2>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/licao-m4-f20/index.html": {
+   "base_sha256_lf": "3efe4ed55e0a2c4202f97082cf2b5ff8048e627f736d60b3c37197437b89c82f",
+   "after_sha256_lf": "13d8977a87ae3749e400ac547fed8dc25adc0c0ec8f8756ce725d9b441cc11e8",
+   "edits": [
+    {
+     "location": "Varredura de formatação, troca mínima 1",
+     "old": "class=\\\"ju-t\\\">TPC: Frei Luís de Sousaaa,",
+     "new": "class=\\\"ju-t\\\"><i>TPC: Frei Luís de Sousaaa</i>,",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/mapa-do-modulo-m4/index.html": {
+   "base_sha256_lf": "36bfd4ff7c68acb3194835073196c22ac0d124e1b14f3a0c589d203970eefe7b",
+   "after_sha256_lf": "5714358229f9d6392a97bde802b92f99d8d4fa26ceb84126bf7b75b2377e8679",
+   "edits": [
+    {
+     "location": "Varredura de formatação, troca mínima 1",
+     "old": "<figcaption>Sermão ",
+     "new": "<figcaption><i>Sermão ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 2",
+     "old": "Peixes, em Sermoens (Lisboa, 1682).",
+     "new": "Peixes</i>, em <i>Sermoens</i> (Lisboa, 1682).",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 3",
+     "old": "<figcaption>Frei Luís de Sousa,",
+     "new": "<figcaption><i>Frei Luís de Sousa</i>,",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/olhar-lupi/index.html": {
+   "base_sha256_lf": "590204e3d3ed8ce794eee4e11ea04ac30aa602827dd2a76f337bcf807bb39f7f",
+   "after_sha256_lf": "c1ceb9ca0c0e3aaccf14d19ba287c9776f6b4b048198c63de339030a7faed7f5",
+   "edits": [
+    {
+     "location": "Varredura de formatação, troca mínima 1",
+     "old": "Frei Luís de Sousa</p>",
+     "new": "<i>Frei Luís de Sousa</i></p>",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 2",
+     "old": "«Frei Luís de Sousa (peça teatral)»</a>",
+     "new": "«<i>Frei Luís de Sousa</i> (peça teatral)»</a>",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 3",
+     "old": "Frei Luís de Sousa\",",
+     "new": "_Frei Luís de Sousa_\",",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 4",
+     "old": "«Frei Luís de Sousa (peça teatral)»\",",
+     "new": "«_Frei Luís de Sousa_ (peça teatral)»\",",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/portefolio-do-modulo-m4/index.html": {
+   "base_sha256_lf": "da42e45a6857585e6819be06faff6760922a4158378d68cb779688c3e3d2b52d",
+   "after_sha256_lf": "5c20c23209faebcb55faabdd328f30e7137cb17c05fbf58d7b8d415013122a1f",
+   "edits": [
+    {
+     "location": "Varredura de formatação, troca mínima 1",
+     "old": "quer ouvir? Síntese de duas linhas na folha ",
+     "new": "quer ouvir? Síntese de duas linhas no papel ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 2",
+     "old": "o nome? Síntese de duas linhas na folha ",
+     "new": "o nome? Síntese de duas linhas no papel ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 3",
+     "old": "dois minutos? Síntese de duas linhas na folha ",
+     "new": "dois minutos? Síntese de duas linhas no papel ",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/questionarios/index.html": {
+   "base_sha256_lf": "531c43e7e0cb64ee5ef09cf1e72e9140f322cc3eab9ca66ea55a0330f503a038",
+   "after_sha256_lf": "d36630f756376edb72dd5bfdba2057ecd9ec02c2f84d62e6579382d122347501",
+   "edits": [
+    {
+     "location": "Varredura de formatação, troca mínima 1",
+     "old": "Frei Luís de Sousa</span>",
+     "new": "<i>Frei Luís de Sousa</i></span>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/tradutor-detetive/index.html": {
+   "base_sha256_lf": "4b79485f95cfbded5e8bab9614577cc9ddb52957548b753d9d90c69b6988fb34",
+   "after_sha256_lf": "6aa45bb19c3b448fc3c40cbe64ed6a8ee366c71531618ad85d92061f4f760ffb",
+   "edits": [
+    {
+     "location": "Varredura de formatação, troca mínima 1",
+     "old": "jogo era ",
+     "new": "desafio era ",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/vieira-auditorio/index.html": {
+   "base_sha256_lf": "b41014ac74c0fd6b60bb40a58bb2bb7e453963c944f5c2470462640af049525c",
+   "after_sha256_lf": "4ec0500cc9aad67f42a8cdb0ad4e0751889e89427a35e4aafdaa4e82c7afefe8",
+   "edits": [
+    {
+     "location": "Varredura de formatação, troca mínima 1",
+     "old": " — público · <b>preservar dele</b> — ",
+     "new": ": público<br><b>preservar dele</b>: ",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/vieira-peixes/index.html": {
+   "base_sha256_lf": "60420297651d60e6277bd8cb73ed3027d08086748387a694cf5b11eb415a0030",
+   "after_sha256_lf": "7930ceaff7fb1846a322db8490b1cd6bf8cb55a48ecd1ab8ea50afb9dcd435f2",
+   "edits": [
+    {
+     "location": "Varredura de formatação, troca mínima 1",
+     "old": " — lados do corpo · <b>desferram</b> — largam · <b>capelo</b> — capuz · <b>limos</b> — ",
+     "new": ": lados do corpo<br><b>desferram</b>: largam<br><b>capelo</b>: capuz<br><b>limos</b>: ",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/vieira-praia/index.html": {
+   "base_sha256_lf": "f974bf4aa5446050cf8e6e1869ad2f100931284c0e1dd6d2ee4d23cec91aa35c",
+   "after_sha256_lf": "63e5e68b887b696954c5847efe1fd6f92d642a61fb294f4b17a949501f0d6a80",
+   "edits": [
+    {
+     "location": "Varredura de formatação, troca mínima 1",
+     "old": " — Rimini, cidade de Itália · <b>hereges</b> — ",
+     "new": ": Rimini, cidade de Itália<br><b>hereges</b>: ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 2",
+     "old": "Igreja · <b>dissimular</b> — ",
+     "new": "Igreja<br><b>dissimular</b>: ",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/vieira-sal/index.html": {
+   "base_sha256_lf": "7889978db27ce293139610e2447ee7134da6f61a102ab1cb3f6b454755e34821",
+   "after_sha256_lf": "edaa82836b42a758dcbdf317f7ca5577e0a1bde1dc7ef420e0d9cce6f3d83798",
+   "edits": [
+    {
+     "location": "Varredura de formatação, troca mínima 1",
+     "old": " — função, dever · <b>corrupção</b> — ",
+     "new": ": função, dever<br><b>corrupção</b>: ",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/visita-frei-luis-de-sousa-no-teatro/index.html": {
+   "base_sha256_lf": "c1b9a02188b3338f7129c0e637ae0d5ae4de7e1c21947eceadd449ae6af2850b",
+   "after_sha256_lf": "570bf4d48f047b5e9568a2aaa4ecfdcbc156258f772080163501550d4c117e98",
+   "edits": [
+    {
+     "location": "Varredura de formatação, troca mínima 1",
+     "old": "aria-current=\"page\">Do texto ao palco: Frei Luís de Sousa,",
+     "new": "aria-current=\"page\"><span>Do texto ao palco: <i>Frei Luís de Sousa</i>,",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 2",
+     "old": "Camões</span>",
+     "new": "Camões</span></span>",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 3",
+     "old": "<p>Frei Luís de Sousa,",
+     "new": "<p><i>Frei Luís de Sousa</i>,",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m5/camilo-assento/index.html": {
+   "base_sha256_lf": "96e0def0eeb169e2d8ab508134bac2bed70901b40724b94a957f854d52218959",
+   "after_sha256_lf": "61a046738f7c7e6c494af9d56322791483c554da86e78fbea72798e45cc81ec9",
+   "edits": [
+    {
+     "location": "Varredura de formatação, troca mínima 1",
+     "old": " — registos · <b>a folhas 232</b> — na página 232 · <b>baetão</b> — pano grosso de lã · <b>pedrez</b> — com pintas · <b>compungia</b> — comovia · <b>enchutos</b> — ",
+     "new": ": registos<br><b>a folhas 232</b>: na página 232<br><b>baetão</b>: pano grosso de lã<br><b>pedrez</b>: com pintas<br><b>compungia</b>: comovia<br><b>enchutos</b>: ",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m5/camilo-carta/index.html": {
+   "base_sha256_lf": "3ded86b0668b31b4937b96dbca9e005bed03d241e5e28ae92fad02a9a4c78d87",
+   "after_sha256_lf": "4234e3be4384abc5a253624fb35f04e65ce18f808f86a0c5364232cfffbf6920",
+   "edits": [
+    {
+     "location": "Varredura de formatação, troca mínima 1",
+     "old": " — conforto · <b>degredados</b> — condenados ao exílio · <b>pejo</b> — vergonha · <b>derradeiras</b> — ",
+     "new": ": conforto<br><b>degredados</b>: condenados ao exílio<br><b>pejo</b>: vergonha<br><b>derradeiras</b>: ",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m5/camilo-pai/index.html": {
+   "base_sha256_lf": "56574b551bb1d95cedcd850e81f42f7a911d3924319770e89bc6eaa36a8397ca",
+   "after_sha256_lf": "31a620bf51de748e5fbc2c7528a1bce84b59d2864742731dc58c66a75fb410f3",
+   "edits": [
+    {
+     "location": "Varredura de formatação, troca mínima 1",
+     "old": " — tolerância · <b>escusada</b> — ",
+     "new": ": tolerância<br><b>escusada</b>: ",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m5/camilo-seculo/index.html": {
+   "base_sha256_lf": "16e179bc4d953d00542747c830983d9235d2790f3fbf7311d0d4d13eafe67fa4",
+   "after_sha256_lf": "36c7fb23bdd423f28221966487c0abfc7f1ab6b5e5631747aec81e1243a0f75a",
+   "edits": [
+    {
+     "location": "Varredura de formatação, troca mínima 1",
+     "old": " — cortejo · <b>liteiras</b> — ",
+     "new": ": cortejo<br><b>liteiras</b>: ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 2",
+     "old": "animais · <b>dama do paço</b> — senhora da corte · <b>chiste</b> — ",
+     "new": "animais<br><b>dama do paço</b>: senhora da corte<br><b>chiste</b>: ",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m5/camilo-simao-ramos/index.html": {
+   "base_sha256_lf": "71526935d44353a836529e1b370d3911c61d6fe34e2292f1e38dffffc126fa11",
+   "after_sha256_lf": "fd473501f0a12523fc893894a510a420b548900d42742ed255a0f40eafad3aa5",
+   "edits": [
+    {
+     "location": "Varredura de formatação, troca mínima 1",
+     "old": "Amor de Perdição</p>",
+     "new": "<i>Amor de Perdição</i></p>",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 2",
+     "old": "target=\"_blank\" rel=\"noopener\">Camilo Castelo Branco, Amor de Perdição,",
+     "new": "target=\"_blank\" rel=\"noopener\">Camilo Castelo Branco, <i>Amor de Perdição</i>,",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 3",
+     "old": "Amor de Perdição (Wikipédia)</a>",
+     "new": "<i>Amor de Perdição</i> (Wikipédia)</a>",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 4",
+     "old": "<p class=\"sub\">Camilo Castelo Branco, Amor de Perdição,",
+     "new": "<p class=\"sub\">Camilo Castelo Branco, <i>Amor de Perdição</i>,",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 5",
+     "old": "Amor de Perdição\",",
+     "new": "_Amor de Perdição_\",",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 6",
+     "old": "\"subtitulo\":\"Camilo Castelo Branco, Amor de Perdição,",
+     "new": "\"subtitulo\":\"Camilo Castelo Branco, _Amor de Perdição_,",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 7",
+     "old": "\"fontes\":[[\"Camilo Castelo Branco, Amor de Perdição,",
+     "new": "\"fontes\":[[\"Camilo Castelo Branco, _Amor de Perdição_,",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m5/eca-falhamos/index.html": {
+   "base_sha256_lf": "3c26fc61d77fe61c4e2459ed61db7d1da748a9f4c571f8809718dd4fd0804170",
+   "after_sha256_lf": "a8dbb8e857c6ca271d3f943dbf70e87fdae31e58fa7d6b74331b343581ceeb72",
+   "edits": [
+    {
+     "location": "Varredura de formatação, troca mínima 1",
+     "old": " — carruagem ligeira · <b>Saint-Cloud</b> — arredores de Paris · <b><i>Figaro</i></b> — ",
+     "new": ": carruagem ligeira<br><b>Saint-Cloud</b>: arredores de Paris<br><b><i>Figaro</i></b>: ",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m5/eca-hotel/index.html": {
+   "base_sha256_lf": "fd21f934e54fb86fb68aa8219759036d023e5f7bfdf29764e70e922dd4f1bb40",
+   "after_sha256_lf": "c96b4b757aec341c157b65d36513aadd71acc1a4ad49eb5953ced9eddb601f5a",
+   "edits": [
+    {
+     "location": "Varredura de formatação, troca mínima 1",
+     "old": "gastando cêra com ruins defuntos — ",
+     "new": "<b>gastando cêra com ruins defuntos</b>: ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 2",
+     "old": "merece · ",
+     "new": "merece<br>",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 3",
+     "old": " — linguado à normanda (francês) · <b>banca-rota</b> — falência · <b>fazenda</b> — ",
+     "new": ": linguado à normanda (francês)<br><b>banca-rota</b>: falência<br><b>fazenda</b>: ",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m5/eca-ramalhete/index.html": {
+   "base_sha256_lf": "f5076958af14c09f81678f1ce0f803c79c9597c7d85d1f3da8d222373b39342a",
+   "after_sha256_lf": "1d150107101ab48169f3c1b4716a2fc64342a651d3b2f2517dc9e0a2dd6cd112",
+   "edits": [
+    {
+     "location": "Varredura de formatação, troca mínima 1",
+     "old": "A</b> — a ",
+     "new": "A.</b> A ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 2",
+     "old": "B</b> — dez ",
+     "new": "B.</b> Dez ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 3",
+     "old": " — fila · <b>Residencia Ecclesiastica</b> — casa de padres · <b>Escudo d'Armas</b> — brasão · <b>postigos terreos</b> — ",
+     "new": ": fila<br><b>Residencia Ecclesiastica</b>: casa de padres<br><b>Escudo d'Armas</b>: brasão<br><b>postigos terreos</b>: ",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m5/gram-dil/index.html": {
+   "base_sha256_lf": "0c07c2c0cfd34820b79b53faa34ce3c5f0c2cfb833101172832694ed72b12592",
+   "after_sha256_lf": "4d83abf7af5c2962bbb5142860df6dffe671e6e5a759552a7725859fc8234a5f",
+   "edits": [
+    {
+     "location": "Varredura de formatação, troca mínima 1",
+     "old": "indireto</b> — ",
+     "new": "indireto</b>: ",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m5/gram-funcoes/index.html": {
+   "base_sha256_lf": "22119d42d50d86c106e8ff58c6d6b55ec9968e61e046a9c0220e76091adc300d",
+   "after_sha256_lf": "26b366bf514d4dac123cd66b3741344800835af957d9bb2e48f593ccb7d55033",
+   "edits": [
+    {
+     "location": "Varredura de formatação, troca mínima 1",
+     "old": " — «o»,",
+     "new": ": «o»,",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 2",
+     "old": "direto; «lhe» dá o indireto · <b>teste do corte</b> — ",
+     "new": "direto, «lhe» dá o indireto<br><b>teste do corte</b>: ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 3",
+     "old": "modificador · <b>predicativo do sujeito</b> — ",
+     "new": "modificador<br><b>predicativo do sujeito</b>: ",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m5/padre-amaro-rego/index.html": {
+   "base_sha256_lf": "bbcae89b800cb752f99b7c3fe390c8ffa76fbf8399c099a1983b8b8ebfbcef1f",
+   "after_sha256_lf": "78dca8e488938e6ad9f3608df36d2f4fb58f5787651759f56002d1f353f64767",
+   "edits": [
+    {
+     "location": "Varredura de formatação, troca mínima 1",
+     "old": "Os Maias\",\"pergunta\":\"E ",
+     "new": "_Os Maias_\",\"pergunta\":\"E ",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m5/questionarios/index.html": {
+   "base_sha256_lf": "346757bb7bec5ab42cae8078f53be03a96e5c03002d998509b779e962c326c76",
+   "after_sha256_lf": "10b63837e56e26bd86c73a90f00803887ac0bc44ad180645ede8cae44ed4388e",
+   "edits": [
+    {
+     "location": "Varredura de formatação, troca mínima 1",
+     "old": "Amor de Perdição</span>",
+     "new": "<i>Amor de Perdição</i></span>",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 2",
+     "old": "class=\"t\">Os Maias</span>",
+     "new": "class=\"t\"><i>Os Maias</i></span>",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 3",
+     "old": "de Os Maias</span>",
+     "new": "de <i>Os Maias</i></span>",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 4",
+     "old": "class=\"t\">Os Maias: ",
+     "new": "class=\"t\"><i>Os Maias</i>: ",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m6/antero-deus/index.html": {
+   "base_sha256_lf": "80e7bd929fc3da14624083d9914337e3396b178d04d17530b3040d9443161394",
+   "after_sha256_lf": "400c61da99cf81ef4337e88c35329006333131dcaa8734429895265c79af6b85",
+   "edits": [
+    {
+     "location": "Varredura de formatação, troca mínima 1",
+     "old": "A</b> — ",
+     "new": "A.</b> ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 2",
+     "old": "B</b> — ",
+     "new": "B.</b> ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 3",
+     "old": " — que não se pode tocar · <b>a final</b> — por fim · <b>despojo vão</b> — resto inútil · <b>depuz</b> — pus de lado · <b>lobrega</b> — ",
+     "new": ": que não se pode tocar<br><b>a final</b>: por fim<br><b>despojo vão</b>: resto inútil<br><b>depuz</b>: pus de lado<br><b>lobrega</b>: ",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m6/cesario-avemarias/index.html": {
+   "base_sha256_lf": "f1225747330c61e4b53fda0f2af7ac92648c8ecf94ac7c2d20f106100be13f8c",
+   "after_sha256_lf": "d0f4558c7adb44001ba76e69ad45475b24e85ce0f52e2fee908c85514fcc429f",
+   "edits": [
+    {
+     "location": "Varredura de formatação, troca mínima 1",
+     "old": " — tristeza sombria · <b>bulicio</b> — burburinho, ruído de gente · <b>extravasado</b> — que se espalha · <b>baixeis</b> — navios · <b>singram</b> — navegam · <b>varonis</b> — ",
+     "new": ": tristeza sombria<br><b>bulicio</b>: burburinho, ruído de gente<br><b>extravasado</b>: que se espalha<br><b>baixeis</b>: navios<br><b>singram</b>: navegam<br><b>varonis</b>: ",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m6/cesario-gas/index.html": {
+   "base_sha256_lf": "e4c3856ad09af5a0e89a447963085167ece8dca5581601f00738752ee1255d3d",
+   "after_sha256_lf": "85d1755c02377c492760f316f29d0786e83c77490f69e56f600722d278d93241",
+   "edits": [
+    {
+     "location": "Varredura de formatação, troca mínima 1",
+     "old": "</head>",
+     "new": "<style>.verso .vl{display:block;padding-left:1.4em;text-indent:-1.4em}.verso:has(>b:first-child){padding-left:1.6em}.verso>b:first-child{float:left;width:1.6em;margin-left:-1.6em}</style></head>",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 2",
+     "old": "<i>«E ",
+     "new": "<span class=\\\"vl\\\"><i>«E ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 3",
+     "old": "floristas / ",
+     "new": "floristas</i></span><span class=\\\"vl\\\"><i>",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 4",
+     "old": " / Custa-lhes ",
+     "new": "</i></span><span class=\\\"vl\\\"><i>Custa-lhes ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 5",
+     "old": "altos / ",
+     "new": "altos</i></span><span class=\\\"vl\\\"><i>",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 6",
+     "old": "</p><p class=\\\"verso\\\"><i>«Num ",
+     "new": "</span></p><p class=\\\"verso\\\"><span class=\\\"vl\\\"><i>«Num ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 7",
+     "old": "torno, / ",
+     "new": "torno,</i></span><span class=\\\"vl\\\"><i>",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 8",
+     "old": "rubramente; / ",
+     "new": "rubramente;</i></span><span class=\\\"vl\\\"><i>",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 9",
+     "old": " / Um cheiro ",
+     "new": "</i></span><span class=\\\"vl\\\"><i>Um cheiro ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 10",
+     "old": "</p><p class=\\\"verso\\\"><i>«“Dó ",
+     "new": "</span></p><p class=\\\"verso\\\"><span class=\\\"vl\\\"><i>«“Dó ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 11",
+     "old": "mim!…” / ",
+     "new": "mim!…”</i></span><span class=\\\"vl\\\"><i>",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 12",
+     "old": " / Pede-me ",
+     "new": "</i></span><span class=\\\"vl\\\"><i>Pede-me ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 13",
+     "old": " / Meu ",
+     "new": "</i></span><span class=\\\"vl\\\"><i>Meu ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 14",
+     "old": "latim!»</i>",
+     "new": "latim!»</i></span>",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 15",
+     "old": " — lojas · <b>cuteleiro</b> — oficina de facas · <b>malho</b> — ",
+     "new": ": lojas<br><b>cuteleiro</b>: oficina de facas<br><b>malho</b>: ",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m6/cesario-noite-ramos/index.html": {
+   "base_sha256_lf": "ea108869f6ea6857f5892c1d0828e0f2372a806869cba0ad7b7769a92cfb5716",
+   "after_sha256_lf": "e636a5095b24fb713636422236174592515fac4463f7c90c9429169166617226",
+   "edits": [
+    {
+     "location": "Varredura de formatação, troca mínima 1",
+     "old": "O Sentimento dum Ocidental</p>",
+     "new": "«O Sentimento dum Ocidental»</p>",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 2",
+     "old": "rel=\"noopener\">Cesário Verde, O Livro de Cesário Verde ",
+     "new": "rel=\"noopener\">Cesário Verde, <i>O Livro de Cesário Verde</i> ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 3",
+     "old": "O Sentimento dum Ocidental\",\"titulo\":\"Uma ",
+     "new": "«O Sentimento dum Ocidental»\",\"titulo\":\"Uma ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 4",
+     "old": "\"fontes\":[[\"Cesário Verde, O Livro de Cesário Verde ",
+     "new": "\"fontes\":[[\"Cesário Verde, _O Livro de Cesário Verde_ ",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m6/cesario-noite/index.html": {
+   "base_sha256_lf": "3d8247d797f52e98f69162a2dd8ef3ca39206eb3f7f2b8f8481c3dd1db106a87",
+   "after_sha256_lf": "4ff1d13bf464a62fa08c0c73ac96c9608e0141c9b5dca4d46154e7f75dd84357",
+   "edits": [
+    {
+     "location": "Varredura de formatação, troca mínima 1",
+     "old": "II</b> — ",
+     "new": "II.</b> ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 2",
+     "old": "IV</b> — ",
+     "new": "IV.</b> ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 3",
+     "old": " — atormenta · <b>aljube</b> — prisão · <b>mulher de «dom»</b> — senhora de família nobre · <b>enfezados</b> — raquíticos · <b>emparedados</b> — fechados entre paredes · <b>fel</b> — amargura · <b>imagina</b> — assim na edição de 1887; muitas edições corrigem para «imagino»</p>",
+     "new": ": atormenta<br><b>aljube</b>: prisão<br><b>mulher de «dom»</b>: senhora de família nobre<br><b>enfezados</b>: raquíticos<br><b>emparedados</b>: fechados entre paredes<br><b>fel</b>: amargura<br><b>imagina</b>: assim na edição de 1887 (muitas edições corrigem para «imagino»)</p>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m6/gram-oracoes-rua/index.html": {
+   "base_sha256_lf": "c281a5c0e937d9501701a1d4862c33f3d6c2c58a095165fa00efd0270a4d9889",
+   "after_sha256_lf": "6e747467884396e8d2e29bd14bd5b5d846a4d4bff8af3758f006d92c03a2c41d",
+   "edits": [
+    {
+     "location": "Varredura de formatação, troca mínima 1",
+     "old": "</head>",
+     "new": "<style>.verso .vl{display:block;padding-left:1.4em;text-indent:-1.4em}.verso:has(>b:first-child){padding-left:1.6em}.verso>b:first-child{float:left;width:1.6em;margin-left:-1.6em}</style></head>",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 2",
+     "old": "«Há tal ",
+     "new": "<span class=\\\"vl\\\">«Há tal ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 3",
+     "old": " / Que ",
+     "new": "</span><span class=\\\"vl\\\">Que ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 4",
+     "old": "maresia / ",
+     "new": "maresia</span><span class=\\\"vl\\\">",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 5",
+     "old": "sofrer.»</p>",
+     "new": "sofrer.»</span></p>",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 6",
+     "old": "«isso»</b> — ",
+     "new": "«isso»</b>: ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 7",
+     "old": "substantiva · ",
+     "new": "substantiva<br>",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 8",
+     "old": "qual»</b> — ",
+     "new": "qual»</b>: ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 9",
+     "old": "relativa · <b>teste da pergunta</b> — quando, porquê, com que resultado: ",
+     "new": "relativa<br><b>teste da pergunta</b>: se responde a «quando?», «porquê?» ou «com que resultado?», ",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m7/campos-aniversario/index.html": {
+   "base_sha256_lf": "4ab9e8928bb6d303c9bc34d3f95109455a43735c19d734c8a192c152260318a3",
+   "after_sha256_lf": "b0426e1d07f617fba34f80c098ae59ca70f72a41fd4f146c475d80e54bf533ec",
+   "edits": [
+    {
+     "location": "Varredura de formatação, troca mínima 1",
+     "old": " — bolor · <b>«Pára»</b> — ",
+     "new": ": bolor<br><b>«Pára»</b>: ",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m7/campos-maquina/index.html": {
+   "base_sha256_lf": "713315332c8cffc84b78136de1f623d72eae342f68a4f99d1507f1d08a8096c7",
+   "after_sha256_lf": "304cd032832badc5e260e6003c21b677cb189dff6c831b69ae8adfe930077473",
+   "edits": [
+    {
+     "location": "Varredura de formatação, troca mínima 1",
+     "old": "A</b> — ",
+     "new": "A.</b> ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 2",
+     "old": "B</b> — ",
+     "new": "B.</b> ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 3",
+     "old": " — grafia ",
+     "new": ": grafia ",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m7/gram-valores-pessoa/index.html": {
+   "base_sha256_lf": "d4dfc11f616aa7bb139d56682bd9d2e0b35569b780c36662875801cc8609cf98",
+   "after_sha256_lf": "9901e3cc157df4794aa477f3a63df7a3391eb4b6f1cfd4d16d35a0d95a513ec5",
+   "edits": [
+    {
+     "location": "Varredura de formatação, troca mínima 1",
+     "old": "</head>",
+     "new": "<style>.verso .vl{display:block;padding-left:1.4em;text-indent:-1.4em}.verso:has(>b:first-child){padding-left:1.6em}.verso>b:first-child{float:left;width:1.6em;margin-left:-1.6em}</style></head>",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 2",
+     "old": "«Eu ",
+     "new": "<span class=\\\"vl\\\">«Eu ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 3",
+     "old": "(Campos)</p>",
+     "new": "(Campos)</span></p>",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 4",
+     "old": "«Cumpriu-se ",
+     "new": "<span class=\\\"vl\\\">«Cumpriu-se ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 5",
+     "old": "Mensagem</i>)</p>",
+     "new": "Mensagem</i>)</span></p>",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 6",
+     "old": "«Julgando-se feliz talvez» (ortónimo)</p><p class=\\\"nota\\\"><b>aspeto</b> — ",
+     "new": "<span class=\\\"vl\\\">«Julgando-se feliz talvez» (ortónimo)</span></p><p class=\\\"nota\\\"><b>aspeto</b>: ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 7",
+     "old": "(genérico) · <b>modalidade</b> — ",
+     "new": "(genérico)<br><b>modalidade</b>: ",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m7/licao-m7-f01/index.html": {
+   "base_sha256_lf": "a7bf34894b397521680151cfcf0de4b23fc4bc8ea473086c0adb78528c0f32b9",
+   "after_sha256_lf": "ad5d879f5e0ad5939696093cb3e06964f78e0ac13038a95cd046bed557cb6951",
+   "edits": [
+    {
+     "location": "Varredura de formatação, troca mínima 1",
+     "old": "</head>",
+     "new": "<style>.tabela{display:block;margin-top:4px;font:.8125rem/1.4 Arial,Helvetica,sans-serif;color:var(--suave)}.tabela a{color:inherit}</style></head>",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 2",
+     "old": "(fotografia, 1914)\\\" loading=\\\"lazy\\\"></span><figcaption>Fernando Pessoa (fotografia, 1914). Domínio público. Pessoa em 1914, o ano do «dia triunfal».",
+     "new": "de chapéu e óculos, cerca de 1914\\\" loading=\\\"lazy\\\"></span><figcaption>Fernando Pessoa, cerca de 1914.<span class=\\\"tabela\\\">Fotógrafo não identificado; retrato de Fernando Pessoa com chapéu; cerca de 1914 (data incerta); reprodução no Wikimedia Commons, original sem instituição indicada; <a href=\\\"https://commons.wikimedia.org/wiki/File:PessoaChapeu.jpg\\\">domínio público</a>.</span>",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 3",
+     "old": "O Guardador de Rebanhos.",
+     "new": "_O_ _Guardador_ _de_ _Rebanhos_.",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 4",
+     "old": "\"f\":\"**O Guardador de Rebanhos**: ",
+     "new": "\"f\":\"**_O Guardador de Rebanhos_**: ",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m7/licao-m7-f05/index.html": {
+   "base_sha256_lf": "c8f25098d4141e2f7a32776f363db4c29e81c57848f88c7593e92364f3e5e971",
+   "after_sha256_lf": "557562933fca9c179cdaa210164e61e52c430909718ec0b146439066934c6f7a",
+   "edits": [
+    {
+     "location": "Varredura de formatação, troca mínima 1",
+     "old": "</head>",
+     "new": "<style>.tabela{display:block;margin-top:4px;font:.8125rem/1.4 Arial,Helvetica,sans-serif;color:var(--suave)}.tabela a{color:inherit}</style></head>",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 2",
+     "old": "(fotografia, 1914)\\\" loading=\\\"lazy\\\"></span><figcaption>Fernando Pessoa (fotografia, 1914). Domínio público. Pessoa em 1914, o ano do «dia triunfal».",
+     "new": "de chapéu e óculos, cerca de 1914\\\" loading=\\\"lazy\\\"></span><figcaption>Fernando Pessoa, cerca de 1914.<span class=\\\"tabela\\\">Fotógrafo não identificado; retrato de Fernando Pessoa com chapéu; cerca de 1914 (data incerta); reprodução no Wikimedia Commons, original sem instituição indicada; <a href=\\\"https://commons.wikimedia.org/wiki/File:PessoaChapeu.jpg\\\">domínio público</a>.</span>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m7/mapa-do-modulo-m7/index.html": {
+   "base_sha256_lf": "42569c6f1beb82f004fdd17e9fa1cb86e18fddc6ee1134b703bf56e6e8c4d06e",
+   "after_sha256_lf": "47414ca258fa7259d46b90812819a75682716925fbb9375146c7e11168238c74",
+   "edits": [
+    {
+     "location": "Varredura de formatação, troca mínima 1",
+     "old": "</head>",
+     "new": "<style>.tabela{display:block;margin-top:4px;font:.8125rem/1.4 Arial,Helvetica,sans-serif;color:var(--suave)}.tabela a{color:inherit}</style></head>",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 2",
+     "old": "(fotografia, 1914)\" loading=\"lazy\"><figcaption>Fernando Pessoa (fotografia, 1914). Domínio público. <a href=\"https://pedrohfernandes-klk.github.io/pt/m7/licao-m7-f01/\">Lição M7-F01</a>",
+     "new": "de chapéu e óculos, cerca de 1914\" loading=\"lazy\"><figcaption>Fernando Pessoa, cerca de 1914. <a href=\"https://pedrohfernandes-klk.github.io/pt/m7/licao-m7-f01/\">Lição M7-F01</a><span class=\"tabela\">Fotógrafo não identificado; retrato de Fernando Pessoa com chapéu; cerca de 1914 (data incerta); reprodução no Wikimedia Commons, original sem instituição indicada; <a href=\"https://commons.wikimedia.org/wiki/File:PessoaChapeu.jpg\">domínio público</a>.</span>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m7/mensagem-mostrengo/index.html": {
+   "base_sha256_lf": "4132b0f4a54e916686aa3dfcd2c9d4e4979b0ef1c12fa6fbf149b9b5fdfd57aa",
+   "after_sha256_lf": "444fdd58d52d6be39151f7f8e576864f50802d695f0e5c7737cc3ad48b6a58d8",
+   "edits": [
+    {
+     "location": "Varredura de formatação, troca mínima 1",
+     "old": " — escuridão total · <b>reprendeu</b> — ",
+     "new": ": escuridão total<br><b>reprendeu</b>: ",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m7/mensagem-nevoeiro/index.html": {
+   "base_sha256_lf": "ac9847eb02057aad34e797f67683b9f3bb46537388da2a78c98feca430d42211",
+   "after_sha256_lf": "9de3caf2081141f2f58fa85864c516e7978f9131c5408f7198ed5312e2f2d2d7",
+   "edits": [
+    {
+     "location": "Varredura de formatação, troca mínima 1",
+     "old": " — brilho sem força · <b>fogo-fátuo</b> — chama fraca sobre os pântanos · <b>derradeiro</b> — ",
+     "new": ": brilho sem força<br><b>fogo-fátuo</b>: chama fraca sobre os pântanos<br><b>derradeiro</b>: ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 2",
+     "old": "nevoeiro...\",",
+     "new": "nevoeiro…\",",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m7/painel-m7-f10/index.html": {
+   "base_sha256_lf": "9d1aaee38f6eae01a02c11cf62b36cbd6d36f4604f4d85ef38170a588e4a5b92",
+   "after_sha256_lf": "3b1e0e6b78ba2c05df65250348b8068bd796f0782867f5f8fe173cfc764c74a8",
+   "edits": [
+    {
+     "location": "Varredura de formatação, troca mínima 1",
+     "old": "\"p\":\"Em Frei Luís de Sousa,",
+     "new": "\"p\":\"Em _Frei Luís de Sousa_,",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 2",
+     "old": "textContent=t}\n",
+     "new": "innerHTML=esc(t).replace(/(^|[^0-9A-Za-zÀ-ÖØ-öø-ÿ_\\/])_([^_\\n<>]{1,100}?)_(?![0-9A-Za-zÀ-ÖØ-öø-ÿ_])/g,\"$1<i>$2</i>\")}\n",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m7/pessoa-almas/index.html": {
+   "base_sha256_lf": "2f4479286e5b10d38b98d74d3deb8440cf785bc3b578144f4fe78d86dddcaa58",
+   "after_sha256_lf": "d11ff103a3c9def6c52e8dbd5dc6e5434ca7c5381d63b814c5c557b6321ceef2",
+   "edits": [
+    {
+     "location": "Varredura de formatação, troca mínima 1",
+     "old": " — que ",
+     "new": ": que ",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m7/pessoa-ceifeira/index.html": {
+   "base_sha256_lf": "eb092d6cc9eb2843018ada5e1c532a354d749b0502ab03c00786d04f52e2726b",
+   "after_sha256_lf": "072b07ffa674ca4db2debfc26637c48e66f18cff8b44f6135833829b1a064538",
+   "edits": [
+    {
+     "location": "Varredura de formatação, troca mínima 1",
+     "old": " — mulher que corta cereal · <b>lida</b> — trabalho · <b>ciência</b> — ",
+     "new": ": mulher que corta cereal<br><b>lida</b>: trabalho<br><b>ciência</b>: ",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m7/pessoa-ilha/index.html": {
+   "base_sha256_lf": "9a0ae57da6ea49ca16857bc758e4f56d62118b76e27007b23877f9124c7847b1",
+   "after_sha256_lf": "247c02e7e06a51eea2b58cb8ea519bb35201cf6e78e691f3cdbd2bb4dbac498b",
+   "edits": [
+    {
+     "location": "Varredura de formatação, troca mínima 1",
+     "old": " — se esquece · <b>desvirtua</b> — ",
+     "new": ": se esquece<br><b>desvirtua</b>: ",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m7/reis-lidia/index.html": {
+   "base_sha256_lf": "147c7d9d5003ddf0784e312e9c658eac5637e0ab047411d8a416645811d6bcb2",
+   "after_sha256_lf": "d0d52c752061c4cb04ef88a60cceaf0203b9ac9b6e29b55d3291c22c3f509fa6",
+   "edits": [
+    {
+     "location": "Varredura de formatação, troca mínima 1",
+     "old": " — olhemos fixamente · <b>Fado</b> — ",
+     "new": ": olhemos fixamente<br><b>Fado</b>: ",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m7/tabacaria/index.html": {
+   "base_sha256_lf": "70135dabbb685879cef4a1c5f016f7fb7a85ee5313380d4d4fb78ad77a716248",
+   "after_sha256_lf": "e5661d8e0a9d714c87d1a677b7cd24046af47fe9eca997bcc23f0db777281e23",
+   "edits": [
+    {
+     "location": "Varredura de formatação, troca mínima 1",
+     "old": "id=\"s1\">—</dd>",
+     "new": "id=\"s1\"></dd>",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 2",
+     "old": "id=\"s2\">—</dd>",
+     "new": "id=\"s2\"></dd>",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 3",
+     "old": "id=\"s3\">—</dd>",
+     "new": "id=\"s3\"></dd>",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 4",
+     "old": "id=\"s4\">—</dd>",
+     "new": "id=\"s4\"></dd>",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 5",
+     "old": "id=\"s5\">—</dd>",
+     "new": "id=\"s5\"></dd>",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 6",
+     "old": "\")||\"—\";",
+     "new": "\")||\"(sem resposta)\";",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 7",
+     "old": "p3]||\"—\";",
+     "new": "p3]||\"(sem resposta)\";",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 8",
+     "old": "t4:\"—\";",
+     "new": "t4:\"(sem resposta)\";",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 9",
+     "old": "t5||\"—\";",
+     "new": "t5||\"(sem resposta)\";",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m9/gram-aspeto-memorial/index.html": {
+   "base_sha256_lf": "2934229f8ae6863c3961a3f7bb0c013afb5393f805b41df288566b2adf870ef4",
+   "after_sha256_lf": "7f46f48418743e31260b561a90a835d49e0b0c0b563798565005c2c6eebf0ae6",
+   "edits": [
+    {
+     "location": "Varredura de formatação, troca mínima 1",
+     "old": " — acabou ",
+     "new": ": acabou ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 2",
+     "old": "(genérico) · <b>coesão</b> — ",
+     "new": "(genérico)<br><b>coesão</b>: ",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m9/painel-m9-f07/index.html": {
+   "base_sha256_lf": "8a4e105cef5ab5e0e9423d8bd1fe91511609d490d4242261cfba2909199024c8",
+   "after_sha256_lf": "e2040bc6edd9af47c38498e024e93e0889ec046bc71b9ded7ad7c31c5d85fc3f",
+   "edits": [
+    {
+     "location": "Varredura de formatação, troca mínima 1",
+     "old": "Memorial a ponte da história?\"},",
+     "new": "_Memorial_ a ponte da história?\"},",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 2",
+     "old": "Memorial, estão Vieira e Os Maias.\"},",
+     "new": "_Memorial_, estão Vieira e _Os Maias_.\"},",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 3",
+     "old": "textContent=t}\n",
+     "new": "innerHTML=esc(t).replace(/(^|[^0-9A-Za-zÀ-ÖØ-öø-ÿ_\\/])_([^_\\n<>]{1,100}?)_(?![0-9A-Za-zÀ-ÖØ-öø-ÿ_])/g,\"$1<i>$2</i>\")}\n",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m9/passarola-ramos/index.html": {
+   "base_sha256_lf": "e1942c8371b18c4a3ab081984c4e761c2d1ba9d34edf3a6d685dc66212674d61",
+   "after_sha256_lf": "4aebb87fd52942e29ba91abc913d1177511045799ec149c7b5f3b44225897be4",
+   "edits": [
+    {
+     "location": "Varredura de formatação, troca mínima 1",
+     "old": "Memorial do Convento</p>",
+     "new": "<i>Memorial do Convento</i></p>",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 2",
+     "old": "Memorial do Convento (Wikipédia)</a>",
+     "new": "<i>Memorial do Convento</i> (Wikipédia)</a>",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 3",
+     "old": "class=\"sub\">José Saramago, Memorial do Convento ",
+     "new": "class=\"sub\">José Saramago, <i>Memorial do Convento</i> ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 4",
+     "old": "Memorial do Convento\",",
+     "new": "_Memorial do Convento_\",",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 5",
+     "old": "\"subtitulo\":\"José Saramago, Memorial do Convento ",
+     "new": "\"subtitulo\":\"José Saramago, _Memorial do Convento_ ",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m9/questionarios/index.html": {
+   "base_sha256_lf": "e159e60a7f501fa40b47526a3677c7190ffa1f6256f3dc96b096be9126d9e7af",
+   "after_sha256_lf": "6755065a7f6d8cbd3983460fde2331b0dc020b5bcaff63026c147658f950993c",
+   "edits": [
+    {
+     "location": "Varredura de formatação, troca mínima 1",
+     "old": "class=\"t\">Memorial do Convento: ",
+     "new": "class=\"t\"><i>Memorial do Convento</i>: ",
+     "occurrences": 1
+    }
+   ]
+  },
+  "mapa/index.html": {
+   "base_sha256_lf": "8e81ccfbfe77a6574978dd55182cf353dd0b114b163b4cb774e8ce5fd3afcae0",
+   "after_sha256_lf": "2538b69e6240587b2411230498558954093deba3789defc0cea2080cd69a0dfc",
+   "edits": [
+    {
+     "location": "Varredura de formatação, troca mínima 1",
+     "old": "<span>M1 — ",
+     "new": "<span>M1: ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 2",
+     "old": "Abrir M1 — ",
+     "new": "Abrir M1: ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 3",
+     "old": "<span>M2 — ",
+     "new": "<span>M2: ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 4",
+     "old": "Abrir M2 — ",
+     "new": "Abrir M2: ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 5",
+     "old": "<span>M3 — ",
+     "new": "<span>M3: ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 6",
+     "old": "Abrir M3 — ",
+     "new": "Abrir M3: ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 7",
+     "old": "<span>M4 — ",
+     "new": "<span>M4: ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 8",
+     "old": "Abrir M4 — ",
+     "new": "Abrir M4: ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 9",
+     "old": "<span>M5 — ",
+     "new": "<span>M5: ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 10",
+     "old": "Abrir M5 — ",
+     "new": "Abrir M5: ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 11",
+     "old": "<span>M6 — ",
+     "new": "<span>M6: ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 12",
+     "old": "Abrir M6 — ",
+     "new": "Abrir M6: ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 13",
+     "old": "<span>M7 — ",
+     "new": "<span>M7: ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 14",
+     "old": "Abrir M7 — ",
+     "new": "Abrir M7: ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 15",
+     "old": "<span>M8 — ",
+     "new": "<span>M8: ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 16",
+     "old": "Abrir M8 — ",
+     "new": "Abrir M8: ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 17",
+     "old": "<span>M9 — ",
+     "new": "<span>M9: ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 18",
+     "old": "Abrir M9 — ",
+     "new": "Abrir M9: ",
+     "occurrences": 1
+    }
+   ]
+  },
+  "obras/amor-perdicao/index.html": {
+   "base_sha256_lf": "e7fd92dc63cf35b64b62a9263e8b1c1b20c3710689aa2c6abb046592573526fb",
+   "after_sha256_lf": "c18eb3dbeedded014b7867f5dd2bd56339ad0449fe6e487c3fd87c09cdf1f061",
+   "edits": [
+    {
+     "location": "Varredura de formatação, troca mínima 1",
+     "old": "Amor de Perdição</span>",
+     "new": "<i>Amor de Perdição</i></span>",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 2",
+     "old": "Amor de Perdição (Projeto ",
+     "new": "<i>Amor de Perdição</i> (Projeto ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 3",
+     "old": "«Amor de Perdição»,",
+     "new": "<i>Amor de Perdição</i>,",
+     "occurrences": 1
+    }
+   ]
+  },
+  "obras/cesario/index.html": {
+   "base_sha256_lf": "48123700ff109e247493043f1b18c256352e8847a06b45f2547cb839231815bc",
+   "after_sha256_lf": "542d02e87139cf067fe4cf0479a8d743ecd2ac6312eb2f94ad986ec43791a2e1",
+   "edits": [
+    {
+     "location": "Varredura de formatação, troca mínima 1",
+     "old": "O Sentimento dum Ocidental</span>",
+     "new": "«O Sentimento dum Ocidental»</span>",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 2",
+     "old": "O Sentimento dum Ocidental</h1>",
+     "new": "«O Sentimento dum Ocidental»</h1>",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 3",
+     "old": "O Sentimento dum Ocidental (Biblioteca)</a>",
+     "new": "«O Sentimento dum Ocidental» (Biblioteca)</a>",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 4",
+     "old": "O Livro de Cesário Verde</a>",
+     "new": "<i>O Livro de Cesário Verde</i></a>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "obras/frei-luis/index.html": {
+   "base_sha256_lf": "c9383709b171a84d465142715f2b49414692d8ce9ea0b59df3a96daa00212a4a",
+   "after_sha256_lf": "c7d8bf77e0864dd8888a6f49af561757a8a0e75288210db24664a50bf65cf672",
+   "edits": [
+    {
+     "location": "Varredura de formatação, troca mínima 1",
+     "old": "Frei Luís de Sousa</span>",
+     "new": "<i>Frei Luís de Sousa</i></span>",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 2",
+     "old": "Frei Luís de Sousa (Biblioteca)</a>",
+     "new": "<i>Frei Luís de Sousa</i> (Biblioteca)</a>",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 3",
+     "old": "<h3>Frei Luís de Sousa,",
+     "new": "<h3><i>Frei Luís de Sousa</i>,",
+     "occurrences": 1
+    }
+   ]
+  },
+  "obras/index.html": {
+   "base_sha256_lf": "efad31a5918ba9fbec0880c5a26cd6c5c561d32af45cfece8bd2029afbeec085",
+   "after_sha256_lf": "53c0d09984a3b3d3ae2d26ff4691b074ad741522e6e37f08d07a2eca34eedba4",
+   "edits": [
+    {
+     "location": "Varredura de formatação, troca mínima 1",
+     "old": "O Sentimento dum Ocidental</a>",
+     "new": "«O Sentimento dum Ocidental»</a>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "obras/ines/index.html": {
+   "base_sha256_lf": "d742e4deeae5faab41c6d03f20ab03fc62b1fda2e23f39494fdfe76e41defdf5",
+   "after_sha256_lf": "89fdef5c12a12be463d4fc2321bba5f1241df787cddd34f8fdff2c483749cdd9",
+   "edits": [
+    {
+     "location": "Varredura de formatação, troca mínima 1",
+     "old": "Farsa de Inês Pereira</span>",
+     "new": "<i>Farsa de Inês Pereira</i></span>",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 2",
+     "old": "Auto da Barca do Inferno (2022)</h3>",
+     "new": "<i>Auto da Barca do Inferno</i> (2022)</h3>",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 3",
+     "old": "Farsa de Inês Pereira: ",
+     "new": "<i>Farsa de Inês Pereira</i>: ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 4",
+     "old": "«Auto da Barca do Inferno»,",
+     "new": "<i>Auto da Barca do Inferno</i>,",
+     "occurrences": 1
+    }
+   ]
+  },
+  "obras/lusiadas/index.html": {
+   "base_sha256_lf": "5a729cc6ec93c0a53ba63033a510146660fe756f5af2bd48ccd49cfeea9594bf",
+   "after_sha256_lf": "1b96ba84e938fbe3f1e6ff07a3333ff4ae58e8748c1105e512ca3a84feaee809",
+   "edits": [
+    {
+     "location": "Varredura de formatação, troca mínima 1",
+     "old": "Os Lusíadas</span>",
+     "new": "<i>Os Lusíadas</i></span>",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 2",
+     "old": "Os Lusíadas (Projeto ",
+     "new": "<i>Os Lusíadas</i> (Projeto ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 3",
+     "old": "Os Lusíadas: ",
+     "new": "<i>Os Lusíadas</i>: ",
+     "occurrences": 1
+    }
+   ]
+  },
+  "obras/maias/index.html": {
+   "base_sha256_lf": "1d316cf8da3346d84dbf6e9323e0c43cce44f89ab10ca7189af337089b18764b",
+   "after_sha256_lf": "06b53b16e18bc08defb32b07200eef3b44cabc1fab79d5e467273e1518fa140a",
+   "edits": [
+    {
+     "location": "Varredura de formatação, troca mínima 1",
+     "old": "Os Maias</span>",
+     "new": "<i>Os Maias</i></span>",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 2",
+     "old": "Os Maias (Projeto ",
+     "new": "<i>Os Maias</i> (Projeto ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 3",
+     "old": "rel=\"noopener\">Os Maias,",
+     "new": "rel=\"noopener\"><i>Os Maias</i>,",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 4",
+     "old": "«Os Maias»</a>",
+     "new": "<i>Os Maias</i></a>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "obras/memorial/index.html": {
+   "base_sha256_lf": "444decdebec95cd9c9f5a82c9e841025c51d300cf43e07eb31c47ee8116c6120",
+   "after_sha256_lf": "7610cdab59e278ac2c3cb2acbdba4390148987d33e507811ebb7979b0c2091d1",
+   "edits": [
+    {
+     "location": "Varredura de formatação, troca mínima 1",
+     "old": "Memorial do Convento</span>",
+     "new": "<i>Memorial do Convento</i></span>",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 2",
+     "old": "Memorial do Convento).",
+     "new": "<i>Memorial do Convento</i>).",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 3",
+     "old": "«Memorial do Convento»,",
+     "new": "<i>Memorial do Convento</i>,",
+     "occurrences": 1
+    }
+   ]
+  },
+  "obras/pessoa/index.html": {
+   "base_sha256_lf": "0f53ad59bfa5428c2bac17122c60508ed547fc1edcc3748df8fe99f52c1e166e",
+   "after_sha256_lf": "f3e3357567f5ec413fd85edba13a14afa7cd0b7bfe19d96c852c2cedbab99f8e",
+   "edits": [
+    {
+     "location": "Varredura de formatação, troca mínima 1",
+     "old": " «O Guardador de Rebanhos»,",
+     "new": " <i>O Guardador de Rebanhos</i>,",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 2",
+     "old": "io/lente/biblioteca/caeiro-guardador-xx/\">O Guardador de Rebanhos,",
+     "new": "io/lente/biblioteca/caeiro-guardador-xx/\"><i>O Guardador de Rebanhos</i>,",
+     "occurrences": 1
+    }
+   ]
+  },
+  "obras/sermao/index.html": {
+   "base_sha256_lf": "721de44e6ca8825786aebad8ac60fbb8deefdd76ae4b2d6f823c25f9f67a6981",
+   "after_sha256_lf": "084c52d9e80e8cea8536c76ded8b9639cecb97dcada2d4198665a35d92c2c866",
+   "edits": [
+    {
+     "location": "Varredura de formatação, troca mínima 1",
+     "old": "aria-current=\"page\">",
+     "new": "aria-current=\"page\"><i>",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 2",
+     "old": "Peixes</span>",
+     "new": "Peixes</i></span>",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 3",
+     "old": "«Sermão de Santo António aos Peixes»,",
+     "new": "<i>Sermão de Santo António aos Peixes</i>,",
+     "occurrences": 1
+    }
+   ]
+  },
+  "tarefas/m4-u3/index.html": {
+   "base_sha256_lf": "ca672868b9d8c009c098f336cdfcf4e0e9c42fa0532e522255004637016ff1d8",
+   "after_sha256_lf": "5f980c9f341b099df8d63b62b3a40dcc3f1f894d28badee729590c2dd03dfea1",
+   "edits": [
+    {
+     "location": "Varredura de formatação, troca mínima 1",
+     "old": "<blockquote>Oh ",
+     "new": "<blockquote>«Oh ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 2",
+     "old": "mar!</blockquote>",
+     "new": "mar!»</blockquote>",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 3",
+     "old": "<blockquote>Ilumino ",
+     "new": "<blockquote>«Ilumino ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 4",
+     "old": "reinos.</blockquote>",
+     "new": "reinos.»</blockquote>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "assets/exame/app.js": {
+   "base_sha256_lf": "034b971f2dcd17389629452d8cc5889cd1928e993eee71bb9d6cd661d19bf58d",
+   "after_sha256_lf": "d3d904b62a6c7861904ea1815e57bda06dde7dccd231b70338dd42162a6f5edb",
+   "edits": [
+    {
+     "location": "Varredura de formatação, troca mínima 1",
+     "old": "const url=v=>",
+     "new": "// 01/11/2026: itálico nos títulos dos dados, mantendo o escape de HTML.\nconst f=v=>e(v).replace(/_([^_<>]+)_/g,'<i>$1</i>');\nconst url=v=>",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 2",
+     "old": "'+e(x)+'</li>",
+     "new": "'+f(x)+'</li>",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 3",
+     "old": "'+e(s.source.title)+'</h3>",
+     "new": "'+f(s.source.title)+'</h3>",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 4",
+     "old": "'+e(q.q)+'</h3>",
+     "new": "'+f(q.q)+'</h3>",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 5",
+     "old": "'+e(o.",
+     "new": "'+f(o.",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 6",
+     "old": "'+e(q.feedback)+'</p>",
+     "new": "'+f(q.feedback)+'</p>",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 7",
+     "old": "'+e(text)+'</label>",
+     "new": "'+f(text)+'</label>",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 8",
+     "old": "'+e(c.model)+'</blockquote>",
+     "new": "'+f(c.model)+'</blockquote>",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 9",
+     "old": "'+e(session.focus)+'</p>'+source(session)+'<p ",
+     "new": "'+f(session.focus)+'</p>'+source(session)+'<p ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 10",
+     "old": "'+e(session.writing.prompt)+'</p>",
+     "new": "'+f(session.writing.prompt)+'</p>",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 11",
+     "old": "'+e(session.focus)+'</p></div>",
+     "new": "'+f(session.focus)+'</p></div>",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 12",
+     "old": "'+e(s.focus)+'</p>'+source(s)+'<h2>",
+     "new": "'+f(s.focus)+'</p>'+source(s)+'<h2>",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 13",
+     "old": "'+e(s.writing.prompt)+'</p>",
+     "new": "'+f(s.writing.prompt)+'</p>",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 14",
+     "old": "'+e(s.correction.",
+     "new": "'+f(s.correction.",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 15",
+     "old": "'+e(s.focus)+'</p><p ",
+     "new": "'+f(s.focus)+'</p><p ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 16",
+     "old": "'+e(s.focus)+'</td>",
+     "new": "'+f(s.focus)+'</td>",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 17",
+     "old": "'+e(r.session.writing&&r.",
+     "new": "'+f(r.session.writing&&r.",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 18",
+     "old": "class=\"model\">'+e(r.",
+     "new": "class=\"model\">'+f(r.",
+     "occurrences": 1
+    }
+   ]
+  },
+  "assets/exame/dossier.js": {
+   "base_sha256_lf": "6e9861f7a34727725684d939262d0b1a7392ad514a0266486f9270ccc4a139db",
+   "after_sha256_lf": "9a1408d6ac2d4e60035cb1f23854ac11a2b23ab9c2a142c416f3536196ea914d",
+   "edits": [
+    {
+     "location": "Varredura de formatação, troca mínima 1",
+     "old": "var s=p.",
+     "new": "function visible(v){if(typeof v==='string')return v.replace(/_([^_]+)_/g,'$1');if(Array.isArray(v))return v.map(visible);if(v&&typeof v==='object'){var out={};Object.keys(v).forEach(function(k){out[k]=visible(v[k]);});return out;}return v;}\n    var s=p.",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 2",
+     "old": "{reading:reading,writing:writing,correction:correction,answers:answers,checks:checks};",
+     "new": "visible({reading:reading,writing:writing,correction:correction,answers:answers,checks:checks});",
+     "occurrences": 1
+    }
+   ]
+  },
+  "assets/pt-lessons/lesson.css": {
+   "base_sha256_lf": "063e8a3b5ac3966ba86adacf2dbf875bf88c2656e252a30d695f5aef75b90daf",
+   "after_sha256_lf": "f0c06b06d47b9a9a0edbef18eaa18f3aba8f150e8454d29f9b08ac3e1f4e12d7",
+   "edits": [
+    {
+     "location": "Varredura de formatação, troca mínima 1",
+     "old": "onda{display:none}\n}\n",
+     "new": "onda{display:none}\n}\n\n/* 01/11/2026: continuação visual do verso, sem confundir a quebra automática.\n   02/11/2026: só a continuação. A coluna do rótulo («A.») era global e sobrepunha os nomes das falas («Fidalgo:», «Anjo:»)\n   ao primeiro verso nas lições do M2; as páginas de exercícios que a usam trazem o seu próprio <style>. */\n.verso .vl{display:block;padding-left:1.4em;text-indent:-1.4em}\n",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m7/painel-m7-f01/index.html": {
+   "base_sha256_lf": "704e4a0ce5f903044448a7e930bce13e4161c34aaba18e8260cbc04872d646a4",
+   "after_sha256_lf": "1e90efe3421a7fc6ed5936f87a1d3fd23c07bfd9e4b3d0fd59183dbfec35acdc",
+   "edits": [
+    {
+     "location": "Varredura de formatação, troca mínima 1",
+     "old": "\"16\":{\"f\":\"**O Guardador de Rebanhos**: ",
+     "new": "\"16\":{\"f\":\"**_O Guardador de Rebanhos_**: ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 2",
+     "old": "O Guardador de Rebanhos.",
+     "new": "_O_ _Guardador_ _de_ _Rebanhos_.",
+     "occurrences": 1
+    }
+   ]
+  },
+  "docs/pedagogia/aquecimentos/m1-u2.json": {
+   "base_sha256_lf": "29a87eae23c36ba488ec16869eb347ec55ca61a6d9b908018e3ae44fe697c9ca",
+   "after_sha256_lf": "8de748665048323d8e71e73c16c8ec568e2b106179bc48ca38eb45c43922a7ac",
+   "edits": [
+    {
+     "location": "Varredura de formatação, troca mínima 1",
+     "old": "\"slug\": \"m1-u2\",\n \"modulo\": \"m1\",\n \"unidade\": 2,\n \"versao\": \"1\",\n ",
+     "new": " \"slug\": \"m1-u2\",\n  \"modulo\": \"m1\",\n  \"unidade\": 2,\n  \"versao\": \"1\",\n  ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 2",
+     "old": " \"titulo\": \"Da ",
+     "new": "  \"titulo\": \"Da ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 3",
+     "old": " \"descricao\": ",
+     "new": "  \"descricao\": ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 4",
+     "old": "\"licoes_das_citacoes\": [\n  \"m1/licao-m1-f06\",\n  \"m1/licao-m1-f08\",\n  \"m1/licao-m1-f10\",\n  \"m1/licao-m1-f20\",\n  \"m1/licao-m1-f07\",\n  \"m1/licao-m1-f05\"\n ],\n \"menu\": [\n  [\n   ",
+     "new": " \"licoes_das_citacoes\": [\n    \"m1/licao-m1-f06\",\n    \"m1/licao-m1-f08\",\n    \"m1/licao-m1-f10\",\n    \"m1/licao-m1-f20\",\n    \"m1/licao-m1-f07\",\n    \"m1/licao-m1-f05\"\n  ],\n  \"menu\": [\n    [\n      ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 5",
+     "old": " \"Relembrar F06,",
+     "new": "    \"Relembrar F06,",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 6",
+     "old": "ver\"\n  ],\n  [\n   ",
+     "new": "ver\"\n    ],\n    [\n      ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 7",
+     "old": " \"Relembrar F10,",
+     "new": "    \"Relembrar F10,",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 8",
+     "old": "lá\"\n  ],\n  [\n   ",
+     "new": "lá\"\n    ],\n    [\n      ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 9",
+     "old": " \"Relembrar F20,",
+     "new": "    \"Relembrar F20,",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 10",
+     "old": "inferência\"\n  ],\n  [\n   ",
+     "new": "inferência\"\n    ],\n    [\n      ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 11",
+     "old": " \"Relembrar F05,",
+     "new": "    \"Relembrar F05,",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 12",
+     "old": "]\n ],\n \"reservadas\": [\n  ",
+     "new": "  ]\n  ],\n  \"reservadas\": [\n    ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 13",
+     "old": " \"Acorrei ",
+     "new": "   \"Acorrei ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 14",
+     "old": " \"Vamos ",
+     "new": "   \"Vamos ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 15",
+     "old": "\"pra\",\n  ",
+     "new": "  \"pra\",\n    ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 16",
+     "old": " \"não ",
+     "new": "   \"não ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 17",
+     "old": " \"atravessavam ",
+     "new": "   \"atravessavam ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 18",
+     "old": " \"pera ",
+     "new": "   \"pera ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 19",
+     "old": " \"dizendo ",
+     "new": "   \"dizendo ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 20",
+     "old": " \"rijamente ",
+     "new": "   \"rijamente ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 21",
+     "old": " \"segundo ",
+     "new": "   \"segundo ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 22",
+     "old": " \"Ordenou ",
+     "new": "   \"Ordenou ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 23",
+     "old": " \"em cada ",
+     "new": "   \"em cada ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 24",
+     "old": " \"logo ",
+     "new": "   \"logo ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 25",
+     "old": " \"esgravatando ",
+     "new": "   \"esgravatando ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 26",
+     "old": " \"algum ",
+     "new": "   \"algum ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 27",
+     "old": " \"sem ",
+     "new": "   \"sem ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 28",
+     "old": " \"Matam o Mestre! ",
+     "new": "   \"Matam o Mestre! ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 29",
+     "old": " \"O grito pela ",
+     "new": "   \"O grito pela ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 30",
+     "old": " \"A cidade ",
+     "new": "   \"A cidade ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 31",
+     "old": " \"Um começo,",
+     "new": "   \"Um começo,",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 32",
+     "old": " \"Dois ",
+     "new": "   \"Dois ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 33",
+     "old": " \"Que fala ",
+     "new": "   \"Que fala ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 34",
+     "old": " \"Que som ",
+     "new": "   \"Que som ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 35",
+     "old": " \"A.",
+     "new": "   \"A.",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 36",
+     "old": " \"B.",
+     "new": "   \"B.",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 37",
+     "old": " \"Podias ",
+     "new": "   \"Podias ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 38",
+     "old": " \"Sem ",
+     "new": "   \"Sem ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 39",
+     "old": " \"Marta ",
+     "new": "   \"Marta ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 40",
+     "old": " \"Matam o Mestre!\",",
+     "new": "   \"Matam o Mestre!\",",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 41",
+     "old": " \"Para ir ",
+     "new": "   \"Para ir ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 42",
+     "old": " \"Uma pintura ",
+     "new": "   \"Uma pintura ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 43",
+     "old": " \"Lisboa ",
+     "new": "   \"Lisboa ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 44",
+     "old": " \"O arraial ",
+     "new": "   \"O arraial ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 45",
+     "old": " \"O que ",
+     "new": "   \"O que ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 46",
+     "old": " \"Quem cerca ",
+     "new": "   \"Quem cerca ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 47",
+     "old": " \"grandes ",
+     "new": "   \"grandes ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 48",
+     "old": " \"públicas ",
+     "new": "   \"públicas ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 49",
+     "old": " \"Como ",
+     "new": "   \"Como ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 50",
+     "old": " \"Quem é ",
+     "new": "   \"Quem é ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 51",
+     "old": " \"Imaginar ",
+     "new": "   \"Imaginar ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 52",
+     "old": " \"O grito do ",
+     "new": "   \"O grito do ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 53",
+     "old": " \"a ",
+     "new": "   \"a ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 54",
+     "old": " \"O pajem ",
+     "new": "   \"O pajem ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 55",
+     "old": " \"o grito ",
+     "new": "   \"o grito ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 56",
+     "old": " \"viúva ",
+     "new": "   \"viúva ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 57",
+     "old": " \"em logo ",
+     "new": "   \"em logo ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 58",
+     "old": " \"estranha ",
+     "new": "   \"estranha ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 59",
+     "old": " \"se ajuntar ",
+     "new": "   \"se ajuntar ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 60",
+     "old": " \"Soaram ",
+     "new": "   \"Soaram ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 61",
+     "old": "],\n \"cartoes\": [\n  {\n   ",
+     "new": " ],\n  \"cartoes\": [\n    {\n      ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 62",
+     "old": " \"rot\": \"Abre\",",
+     "new": "    \"rot\": \"Abre\",",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 63",
+     "old": " \"titulo\": \"Conta,",
+     "new": "    \"titulo\": \"Conta,",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 64",
+     "old": " \"html\": \"<p>Dez ",
+     "new": "    \"html\": \"<p>Dez ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 65",
+     "old": "\"\n  },\n  {\n   ",
+     "new": "\"\n    },\n    {\n      ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 66",
+     "old": " \"p\": \"Caso inventado: A porta range,",
+     "new": "    \"p\": \"Caso inventado: A porta range,",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 67",
+     "old": " \"p2\": \"Para ",
+     "new": "    \"p2\": \"Para ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 68",
+     "old": " \"frase\": \"Som,",
+     "new": "    \"frase\": \"Som,",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 69",
+     "old": "[1].\",\n   \"lacunas\": [\n    {\n     ",
+     "new": "[1].\",\n      \"lacunas\": [\n        {\n          ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 70",
+     "old": " \"fazer ",
+     "new": "       \"fazer ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 71",
+     "old": " \"provar ",
+     "new": "       \"provar ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 72",
+     "old": " \"resumir ",
+     "new": "       \"resumir ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 73",
+     "old": "aconteceu\"\n     ",
+     "new": "aconteceu\"\n          ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 74",
+     "old": "\"c\": 0\n    }\n   ],\n   \"f\": \"Pormenores ",
+     "new": "     \"c\": 0\n        }\n      ],\n      \"f\": \"Pormenores ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 75",
+     "old": " \"fe\": \"Um ",
+     "new": "    \"fe\": \"Um ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 76",
+     "old": "\"g\": 1\n  },\n  {\n   ",
+     "new": "   \"g\": 1\n    },\n    {\n      ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 77",
+     "old": " \"p\": \"Caso inventado: Ao ",
+     "new": "    \"p\": \"Caso inventado: Ao ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 78",
+     "old": " \"p2\": \"Na ",
+     "new": "    \"p2\": \"Na ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 79",
+     "old": "só figura?\",\n   \"o\": ",
+     "new": "só figura?\",\n      \"o\": ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 80",
+     "old": " \"Todos ",
+     "new": "     \"Todos ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 81",
+     "old": " \"Os ",
+     "new": "     \"Os ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 82",
+     "old": " \"Cada ",
+     "new": "     \"Cada ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 83",
+     "old": "sua maneira.\"\n   ],\n   ",
+     "new": "sua maneira.\"\n      ],\n      ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 84",
+     "old": " \"f\": \"O ",
+     "new": "    \"f\": \"O ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 85",
+     "old": "cidade.\",\n   \"fe\": [\n    ",
+     "new": "cidade.\",\n      \"fe\": [\n        ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 86",
+     "old": " \"Diz ",
+     "new": "     \"Diz ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 87",
+     "old": " \"A frase ",
+     "new": "     \"A frase ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 88",
+     "old": "de todos.\"\n   ",
+     "new": "de todos.\"\n      ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 89",
+     "old": "\"g\": 2\n  },\n  {\n   ",
+     "new": "   \"g\": 2\n    },\n    {\n      ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 90",
+     "old": " \"p\": \"Caso inventado.",
+     "new": "    \"p\": \"Caso inventado.",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 91",
+     "old": " \"p2\": \"Nenhuma ",
+     "new": "    \"p2\": \"Nenhuma ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 92",
+     "old": " \"apoio\": ",
+     "new": "    \"apoio\": ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 93",
+     "old": "\"frase\": \"A técnica diz: “Abre a porta.” ",
+     "new": "   \"frase\": \"A técnica diz: «Abre a porta.» ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 94",
+     "old": " \"trecho\": ",
+     "new": "    \"trecho\": ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 95",
+     "old": "\"fala documentada\",\n   ",
+     "new": "\"fala documentada\",\n      ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 96",
+     "old": " \"fala verificada\",",
+     "new": "     \"fala verificada\",",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 97",
+     "old": " \"fala imaginada\",",
+     "new": "     \"fala imaginada\",",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 98",
+     "old": " \"fala registada\"\n",
+     "new": "     \"fala registada\"\n",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 99",
+     "old": "registada\"\n   ],\n   ",
+     "new": "registada\"\n      ],\n      ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 100",
+     "old": " \"f\": \"Criada ",
+     "new": "    \"f\": \"Criada ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 101",
+     "old": "fontes (lição F10).\",\n   ",
+     "new": "fontes (lição F10).\",\n      ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 102",
+     "old": " \"Verificada ",
+     "new": "     \"Verificada ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 103",
+     "old": "fonte dá.\",\n    ",
+     "new": "fonte dá.\",\n        ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 104",
+     "old": " \"Registada ",
+     "new": "     \"Registada ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 105",
+     "old": "a regista.\"\n   ",
+     "new": "a regista.\"\n      ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 106",
+     "old": "\"g\": 3\n  },\n  {\n   ",
+     "new": "   \"g\": 3\n    },\n    {\n      ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 107",
+     "old": " \"p\": \"Caso inventado: numa ",
+     "new": "    \"p\": \"Caso inventado: numa ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 108",
+     "old": " \"p2\": \"Em ",
+     "new": "    \"p2\": \"Em ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 109",
+     "old": " \"frase\": \"Cai ",
+     "new": "    \"frase\": \"Cai ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 110",
+     "old": "[3].\",\n   \"lacunas\": [\n    {\n     ",
+     "new": "[3].\",\n      \"lacunas\": [\n        {\n          ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 111",
+     "old": " \"o o, à ",
+     "new": "       \"o o, à ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 112",
+     "old": " \"o i,",
+     "new": "       \"o i,",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 113",
+     "old": " \"o o, no ",
+     "new": "       \"o o, no ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 114",
+     "old": "palavra\"\n     ],\n     \"c\": 0\n    },\n    {\n     ",
+     "new": "palavra\"\n          ],\n          \"c\": 0\n        },\n        {\n          ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 115",
+     "old": " \"aférese\",",
+     "new": "       \"aférese\",",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 116",
+     "old": " \"apócope\",",
+     "new": "       \"apócope\",",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 117",
+     "old": " \"epêntese\"\n",
+     "new": "       \"epêntese\"\n",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 118",
+     "old": "\"epêntese\"\n     ],\n     \"c\": 0\n    },\n    {\n     ",
+     "new": "\"epêntese\"\n          ],\n          \"c\": 0\n        },\n        {\n          ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 119",
+     "old": " \"numa fala imaginada\",",
+     "new": "       \"numa fala imaginada\",",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 120",
+     "old": " \"na ",
+     "new": "       \"na ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 121",
+     "old": " \"numa fala documentada\"\n",
+     "new": "       \"numa fala documentada\"\n",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 122",
+     "old": "documentada\"\n     ",
+     "new": "documentada\"\n          ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 123",
+     "old": "\"c\": 0\n    }\n   ],\n   \"f\": \"Cai ",
+     "new": "     \"c\": 0\n        }\n      ],\n      \"f\": \"Cai ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 124",
+     "old": " \"fe\": \"Brigado ",
+     "new": "    \"fe\": \"Brigado ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 125",
+     "old": "\"g\": 4\n  },\n  {\n   ",
+     "new": "   \"g\": 4\n    },\n    {\n      ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 126",
+     "old": "\"t\": \"emparelhar\",\n   ",
+     "new": "\"t\": \"emparelhar\",\n      ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 127",
+     "old": " \"p2\": \"Explícita,",
+     "new": "    \"p2\": \"Explícita,",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 128",
+     "old": " \"pares\": ",
+     "new": "    \"pares\": ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 129",
+     "old": "\"pares\": [\n    ",
+     "new": "\"pares\": [\n        ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 130",
+     "old": " \"A porta estava ",
+     "new": "      \"A porta estava ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 131",
+     "old": " \"Informação ",
+     "new": "      \"Informação ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 132",
+     "old": "\"Informação explícita\"\n    ],\n    ",
+     "new": "\"Informação explícita\"\n        ],\n        ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 133",
+     "old": " \"Ana ",
+     "new": "      \"Ana ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 134",
+     "old": " \"Inferência ",
+     "new": "      \"Inferência ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 135",
+     "old": "\"Inferência apoiada\"\n    ],\n    ",
+     "new": "\"Inferência apoiada\"\n        ],\n        ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 136",
+     "old": " \"Quem escreve ",
+     "new": "      \"Quem escreve ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 137",
+     "old": " \"Interpretação\"\n",
+     "new": "      \"Interpretação\"\n",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 138",
+     "old": "\"Interpretação\"\n    ],\n    ",
+     "new": "\"Interpretação\"\n        ],\n        ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 139",
+     "old": " \"É ",
+     "new": "      \"É ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 140",
+     "old": " \"Opinião\"\n",
+     "new": "      \"Opinião\"\n",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 141",
+     "old": "]\n   ",
+     "new": "    ]\n      ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 142",
+     "old": " \"f\": \"A ",
+     "new": "    \"f\": \"A ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 143",
+     "old": " \"fe\": \"Pergunta ",
+     "new": "    \"fe\": \"Pergunta ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 144",
+     "old": "\"g\": 5\n  },\n  {\n   ",
+     "new": "   \"g\": 5\n    },\n    {\n      ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 145",
+     "old": " \"p\": \"Duas ",
+     "new": "    \"p\": \"Duas ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 146",
+     "old": " \"p2\": \"Uma ",
+     "new": "    \"p2\": \"Uma ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 147",
+     "old": "na crónica?\",\n   \"o\": ",
+     "new": "na crónica?\",\n      \"o\": ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 148",
+     "old": " \"Calar ",
+     "new": "     \"Calar ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 149",
+     "old": " \"Fazer ",
+     "new": "     \"Fazer ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 150",
+     "old": " \"Indicar ",
+     "new": "     \"Indicar ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 151",
+     "old": "sua origem.\"\n   ",
+     "new": "sua origem.\"\n      ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 152",
+     "old": " \"c\": 2,",
+     "new": "    \"c\": 2,",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 153",
+     "old": " \"f\": \"Confronta ",
+     "new": "    \"f\": \"Confronta ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 154",
+     "old": "versão (lição F10).\",\n   ",
+     "new": "versão (lição F10).\",\n      ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 155",
+     "old": " \"Escolher uma ",
+     "new": "     \"Escolher uma ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 156",
+     "old": " \"A média ",
+     "new": "     \"A média ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 157",
+     "old": "null\n   ",
+     "new": "    null\n      ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 158",
+     "old": "\"g\": 6\n  },\n  {\n   ",
+     "new": "   \"g\": 6\n    },\n    {\n      ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 159",
+     "old": " \"p\": \"Caso inventado: crónica ",
+     "new": "    \"p\": \"Caso inventado: crónica ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 160",
+     "old": " \"p2\": \"Que ",
+     "new": "    \"p2\": \"Que ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 161",
+     "old": "alguma coisa?\",\n   ",
+     "new": "alguma coisa?\",\n      ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 162",
+     "old": " \"Sexta,",
+     "new": "     \"Sexta,",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 163",
+     "old": " \"Esta ",
+     "new": "     \"Esta ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 164",
+     "old": " \"Em 2025,",
+     "new": "     \"Em 2025,",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 165",
+     "old": "muitos filmes.\"\n   ],\n   ",
+     "new": "muitos filmes.\"\n      ],\n      ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 166",
+     "old": " \"f\": \"Lugar ",
+     "new": "    \"f\": \"Lugar ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 167",
+     "old": "escolheres.\",\n   \"fe\": [\n    ",
+     "new": "escolheres.\",\n      \"fe\": [\n        ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 168",
+     "old": " \"Apresenta ",
+     "new": "     \"Apresenta ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 169",
+     "old": " \"Resume: ",
+     "new": "     \"Resume: ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 170",
+     "old": "alguma coisa.\"\n   ",
+     "new": "alguma coisa.\"\n      ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 171",
+     "old": "\"g\": 7\n  },\n  {\n   ",
+     "new": "   \"g\": 7\n    },\n    {\n      ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 172",
+     "old": " \"p\": \"Caso inventado: Anda,",
+     "new": "    \"p\": \"Caso inventado: Anda,",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 173",
+     "old": " \"p2\": \"Da ",
+     "new": "    \"p2\": \"Da ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 174",
+     "old": " corre!\",\n   ",
+     "new": " corre!\",\n      ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 175",
+     "old": " \"As ordens repetem ",
+     "new": "     \"As ordens repetem ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 176",
+     "old": " \"As ordens aumentam ",
+     "new": "     \"As ordens aumentam ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 177",
+     "old": " \"As ordens diminuem ",
+     "new": "     \"As ordens diminuem ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 178",
+     "old": "da ação.\"\n   ],\n   ",
+     "new": "da ação.\"\n      ],\n      ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 179",
+     "old": " \"f\": \"Da ",
+     "new": "    \"f\": \"Da ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 180",
+     "old": "recurso.\",\n   ",
+     "new": "recurso.\",\n      ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 181",
+     "old": " \"Andar ",
+     "new": "     \"Andar ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 182",
+     "old": "sequência aumenta-a.\",\n    ",
+     "new": "sequência aumenta-a.\",\n        ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 183",
+     "old": " \"A progressão ",
+     "new": "     \"A progressão ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 184",
+     "old": "a abranda.\"\n   ",
+     "new": "a abranda.\"\n      ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 185",
+     "old": "\"g\": 8\n  },\n  {\n   ",
+     "new": "   \"g\": 8\n    },\n    {\n      ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 186",
+     "old": " \"p\": \"Caso inventado: em ",
+     "new": "    \"p\": \"Caso inventado: em ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 187",
+     "old": " \"p2\": \"Um ",
+     "new": "    \"p2\": \"Um ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 188",
+     "old": "do ilustrador?\",\n   ",
+     "new": "do ilustrador?\",\n      ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 189",
+     "old": " \"Não viu ",
+     "new": "     \"Não viu ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 190",
+     "old": " \"A imagem ",
+     "new": "     \"A imagem ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 191",
+     "old": " \"As luzes ",
+     "new": "     \"As luzes ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 192",
+     "old": "público viu.\"\n   ],\n   \"c\": ",
+     "new": "público viu.\"\n      ],\n      \"c\": ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 193",
+     "old": " \"f\": \"Feita ",
+     "new": "    \"f\": \"Feita ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 194",
+     "old": "momento.\",\n   \"fe\": [\n    ",
+     "new": "momento.\",\n      \"fe\": [\n        ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 195",
+     "old": " \"Uma imagem ",
+     "new": "     \"Uma imagem ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 196",
+     "old": " \"O ilustrador ",
+     "new": "     \"O ilustrador ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 197",
+     "old": "lá: não sabe o que o público viu.\"\n   ",
+     "new": "lá: não sabe o que o público viu.\"\n      ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 198",
+     "old": "\"g\": 9\n  },\n  {\n   ",
+     "new": "   \"g\": 9\n    },\n    {\n      ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 199",
+     "old": " \"p\": \"Põe ",
+     "new": "    \"p\": \"Põe ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 200",
+     "old": " \"p2\": \"Do ",
+     "new": "    \"p2\": \"Do ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 201",
+     "old": " \"passos\": ",
+     "new": "    \"passos\": ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 202",
+     "old": " \"Escolher o ",
+     "new": "     \"Escolher o ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 203",
+     "old": " \"Escrever ",
+     "new": "     \"Escrever ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 204",
+     "old": " \"Confrontar ",
+     "new": "     \"Confrontar ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 205",
+     "old": " \"Riscar ",
+     "new": "     \"Riscar ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 206",
+     "old": "reescrevê-la\"\n   ",
+     "new": "reescrevê-la\"\n      ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 207",
+     "old": " \"f\": \"Primeiro ",
+     "new": "    \"f\": \"Primeiro ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 208",
+     "old": " \"fe\": \"Não ",
+     "new": "    \"fe\": \"Não ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 209",
+     "old": "\"g\": 10\n  },\n  {\n   ",
+     "new": "   \"g\": 10\n    },\n    {\n      ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 210",
+     "old": " \"rot\": \"Para ",
+     "new": "    \"rot\": \"Para ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 211",
+     "old": " \"titulo\": \"Uma ",
+     "new": "    \"titulo\": \"Uma ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 212",
+     "old": " \"html\": \"<p>Na ",
+     "new": "    \"html\": \"<p>Na ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 213",
+     "old": "}\n ]\n}",
+     "new": "  }\n  ]\n}\n",
+     "occurrences": 1
+    }
+   ]
+  },
+  "docs/pedagogia/aquecimentos/m2-u1.json": {
+   "base_sha256_lf": "36c47b0794e64957c20b1e44b2e7855144a00a17895423fa3c6a6678966ea872",
+   "after_sha256_lf": "56ad90550e93399b6ab7869f0b09b9ec1e0c5602f92f589afaffd7f039f7fcd8",
+   "edits": [
+    {
+     "location": "Varredura de formatação, troca mínima 1",
+     "old": "“Arrumei ",
+     "new": "_Arrumei ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 2",
+     "old": "” Classifica ",
+     "new": "_ Classifica ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 3",
+     "old": "“para que a mesa ficasse livre” ",
+     "new": "_para que a mesa ficasse livre_ ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 4",
+     "old": "“para que a mesa ficasse livre”?\",",
+     "new": "_para que a mesa ficasse livre_?\",",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 5",
+     "old": "“Para que ",
+     "new": "_Para que ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 6",
+     "old": "” continua ",
+     "new": "_ continua ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 7",
+     "old": "“A ",
+     "new": "_A ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 8",
+     "old": "gelada.”\",",
+     "new": "gelada._\",",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 9",
+     "old": "“Sorrio ",
+     "new": "_Sorrio ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 10",
+     "old": "dentro.”\",",
+     "new": "dentro._\",",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 11",
+     "old": "“Testes,",
+     "new": "_Testes,",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 12",
+     "old": "turnos.”\",",
+     "new": "turnos._\",",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 13",
+     "old": "“De que serve correr?”\",",
+     "new": "_De que serve correr?_\",",
+     "occurrences": 1
+    }
+   ]
+  },
+  "docs/pedagogia/aquecimentos/m2-u2.json": {
+   "base_sha256_lf": "af7dcfc512414266cc8198a5f7b0e7dbdb517994b150e927400494f8c53cad49",
+   "after_sha256_lf": "71efca3f5d62b50c70cf5836c0c6385ff4e604eadf27d0a9f473bf911680d5cf",
+   "edits": [
+    {
+     "location": "Varredura de formatação, troca mínima 1",
+     "old": "têm aspas curvas;",
+     "new": "são identificadas como tal;",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 2",
+     "old": "criada: “O ",
+     "new": "criada: _O ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 3",
+     "old": "” Classifica ",
+     "new": "_ Classifica ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 4",
+     "old": "criada “O ",
+     "new": "criada _O ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 5",
+     "old": "biblioteca”,",
+     "new": "biblioteca_,",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 6",
+     "old": "“que está na mesa”?\",",
+     "new": "_que está na mesa_?\",",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 7",
+     "old": "“que está na mesa” ",
+     "new": "_que está na mesa_ ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 8",
+     "old": "parte: “Pés ",
+     "new": "parte: «Pés ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 9",
+     "old": "” O ",
+     "new": "» O ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 10",
+     "old": "público: “Pés ",
+     "new": "público: «Pés ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 11",
+     "old": "” Que ",
+     "new": "» Que ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 12",
+     "old": "“Sou pontual!” ",
+     "new": "«Sou pontual!» ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 13",
+     "old": "“Trago o guião” ",
+     "new": "«Trago o guião» ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 14",
+     "old": "“inútil” ",
+     "new": "«inútil» ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 15",
+     "old": "“Costumo faltar sem avisar.”\",",
+     "new": "«Costumo faltar sem avisar.»\",",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 16",
+     "old": "ensaio: “Já / cheguei.” ",
+     "new": "ensaio: _Já / cheguei._ ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 17",
+     "old": "criada “Já / cheguei.” ",
+     "new": "criada _Já / cheguei._ ",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 18",
+     "old": "“Está queimado por baixo”,",
+     "new": "«Está queimado por baixo»,",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 19",
+     "old": "“Está queimado por baixo.”\",",
+     "new": "«Está queimado por baixo.»\",",
+     "occurrences": 1
+    }
+   ]
+  }
+ }
+}
