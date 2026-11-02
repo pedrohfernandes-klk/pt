@@ -1,3 +1,4 @@
+# 02/11/2026: desfazer primeiro a atribuição de IA; conservar as verificações históricas.
 """01/11/2026: decisões 20 a 25 nas tarefas e nos guias do M8 e M9."""
 from pathlib import Path
 import json
@@ -61,7 +62,7 @@ class TasksM89(unittest.TestCase):
                             # 01/11/2026: conservar as três camadas posteriores sem dispensar o predecessor.
                             # 02/11/2026: e a das tarefas individuais e a da calçada, as mais recentes.
                             # 02/11/2026: e a varredura de formatação, por cima de todas.
-                            '--desfazer-antes','tests/fixtures/varredura-formatacao-edits-20261101.json',
+                            '--desfazer-antes','tests/fixtures/creditos-grafismos-ia-edits-20261102.json', '--desfazer-antes', 'tests/fixtures/varredura-formatacao-edits-20261101.json',
                             '--desfazer-antes','tests/fixtures/calcada-mar-edits-20261102.json',
                             '--desfazer-antes','tests/fixtures/tarefas-individuais-edits-20261102.json',
                             '--desfazer-antes','tests/fixtures/cartaz-indices-edits-20261101.json',

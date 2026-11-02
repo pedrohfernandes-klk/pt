@@ -55,9 +55,13 @@ class FundoCalcada(unittest.TestCase):
 
     def test_credito_e_texto_inalterados(self):
         # 02/11/2026: decisão 137. O crédito leva o botão «Parar o desenho», escondido sem script (WCAG 2.2.2).
-        # 02/11/2026: decisão 139. O desenho deixa de ser a traço: o crédito diz «pedra a pedra».
-        self.assertIn('<p class="cf-credito">Desenho nosso, pedra a pedra, EPI, 2026, a partir do padrão de ondas da calçada portuguesa '
+        # 02/11/2026: nova instrução editorial do docente, crédito explícito de IA sem atribuição manual.
+        self.assertIn('<p class="cf-credito">Grafismo gerado com recurso a IA, EPI, 2026, a partir do padrão de ondas da calçada portuguesa '
                       '(o «mar largo» do Rossio, Lisboa). <button type="button" class="fundo-botao" data-fundo-botao="cf" hidden>Parar o desenho</button></p>', HTML)
+        credito=HTML[HTML.index('<p class="cf-credito">'):HTML.index('</p>', HTML.index('<p class="cf-credito">'))]
+        self.assertNotIn('pedra a pedra', credito)
+        self.assertNotIn('Desenho nosso', credito)
+        self.assertIn('Grafismo gerado com recurso a IA, EPI, 2026:', (ROOT/'assets/calcada-mar.svg').read_text('utf-8'))
         self.assertNotIn('a traço', HTML[HTML.index('<p class="cf-credito">'):HTML.index('</p>', HTML.index('<p class="cf-credito">'))])
         self.assertIn('<h1 aria-label="Português">', HTML)
         # 02/11/2026: decisão 139. O texto da entrada não muda; a faixa vem logo depois dele.
