@@ -27,3 +27,10 @@ O script que construiu a camada antiga da calçada é um registo histórico, nã
 ## Validação
 
 444 testes unitários aprovados; 18 de 18 camadas conferidas. SVG regenerado e verificado pelo gerador. Conferência visual aprovada a 390 e 1366 px: legenda e referência legíveis, botão de pausa conservado, sem deslocamento horizontal. O pedido fica em rascunho e aguarda revisão e lugar na fila de publicação.
+
+
+## Integração depois da publicação do #156
+
+Main `bd9ec1ba3e82e0a2e76ab9aac674b0154310d908` integrado por merge, depois da publicação do #156. A camada de créditos fica acima de `conteudos_lote2_20261101`, com o manifesto regenerado sobre esta base. As verificações desfazem primeiro os créditos e depois o lote 2; conservam as asserções e os hashes históricos. Não há alterações ao conteúdo aprovado do #156.
+
+Validação desta integração: 449 testes unitários aprovados; 19/19 camadas; SVG conferido pelo gerador; crédito visto novamente a 390 e 1366 px, sem deslocamento horizontal. Não foram alteradas a geometria nem as regras visuais. Pedido em rascunho, para confirmação da nova cabeça e atribuição da vez de publicação.

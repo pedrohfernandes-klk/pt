@@ -294,8 +294,22 @@ def undo_creditos_ia(path, text):
     return text
 
 
-def undo_varredura(path, text):
+_CONTEUDOS_LOTE2_FILES = json.loads((ROOT / 'tests/fixtures/conteudos-lote2-edits-20261101.json').read_text('utf-8'))['files']
+
+
+def undo_conteudos_lote2(path, text):
     text = undo_creditos_ia(path, text)
+    relative = _relative(path)
+    for edit in reversed(_CONTEUDOS_LOTE2_FILES.get(relative, {}).get('edits', [])):
+        if text.count(edit['new']) != edit['occurrences']:
+            raise AssertionError(f"Lote 2 não confere: {relative}: {edit['location']}")
+        text = text.replace(edit['new'], edit['old'])
+    return text
+
+
+def undo_varredura(path, text):
+    # 02/11/2026: lote 2 por cima da varredura integrada.
+    text = undo_conteudos_lote2(path, text)
     relative = _relative(path)
     for edit in reversed(_VARREDURA_FILES.get(relative, {}).get('edits', [])):
         if text.count(edit['new']) != edit['occurrences']:

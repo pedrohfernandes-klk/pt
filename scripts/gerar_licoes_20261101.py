@@ -49,6 +49,10 @@ def render(item, units):
         text = text.replace('@@' + key + '@@', value)
     if '@@' in text:
         raise ValueError('Campo do molde por preencher')
+    # 02/11/2026: os três documentos do pedido B usam o ampliador comum, com foco e zoom.
+    if item['id'] in ('m3-f19','m5-f17','m6-f14'):
+        text=text.replace('</head>','<link rel="stylesheet" href="../../assets/ampliar-documentos.css"></head>')
+        text=text.replace('</body>','<script src="../../assets/ampliar-documentos.js"></script></body>')
     return text
 
 
