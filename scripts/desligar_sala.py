@@ -838,7 +838,14 @@ def main():
                 # 31/10/2026: a substituição do percurso antigo é uma camada literal posterior.
                 posterior = ROOT / 'tests/fixtures/tarefas-m356-edits-20261031.json'
                 conferencia = texto
-                # 02/11/2026: a camada das tarefas individuais (a mais recente) desfaz-se antes dos índices, só para conferir.
+                # 02/11/2026: a camada da calçada da entrada (a mais recente) desfaz-se antes das outras, só para conferir.
+                calcada = ROOT / 'tests/fixtures/calcada-mar-edits-20261102.json'
+                if calcada.is_file():
+                    for edit in reversed(json.loads(calcada.read_text('utf-8'))['files'].get(rel, {}).get('edits', [])):
+                        if conferencia.count(edit['new']) != edit['occurrences']:
+                            raise ManifestoDesatualizado(f'{rel}: camada da calçada não confere')
+                        conferencia = conferencia.replace(edit['new'], edit['old'])
+                # 02/11/2026: a camada das tarefas individuais desfaz-se antes dos índices, só para conferir.
                 individuais = ROOT / 'tests/fixtures/tarefas-individuais-edits-20261102.json'
                 if individuais.is_file():
                     for edit in reversed(json.loads(individuais.read_text('utf-8'))['files'].get(rel, {}).get('edits', [])):
