@@ -8,7 +8,7 @@
  },
  "dossie_titulo": "Textos e condições de consulta",
  "opcional": {
-  "pergunta": "Caso criado para o aquecimento. Que continuação explica o contraste entre beber e medir?",
+  "pergunta": "Dois textos inventados: A. A janela bebe a manhã. B. A janela mede a manhã. Que frase explica o contraste entre os dois verbos?",
   "opcoes": [
    {
     "letra": "A",
@@ -30,7 +30,7 @@
    }
   ]
  },
- "fecho": "Fecha com duas linhas: que diferença entre os poemas mais alterou a tua leitura? Indica o indício que a sustenta.",
+ "fecho": "Fecha com duas linhas, fora da contagem, como o núcleo: que diferença entre os poemas mais alterou a tua leitura? Indica o indício que a sustenta.",
  "slug": "m8-u1",
  "titulo": "O que as palavras conseguem",
  "unidade": 1,
@@ -73,12 +73,12 @@
   {
    "facto": "Tema A: Eugénio de Andrade, «As Palavras», de <i>Até Amanhã</i>. Texto e leitura na RTP Ensina; regista a publicação consultada.",
    "href": "https://ensina.rtp.pt/artigo/as-palavras-de-eugenio-de-andrade/",
-   "fonte": "RTP Ensina, As Palavras"
+   "fonte": "RTP Ensina, «As Palavras»"
   },
   {
    "facto": "Tema A: Eugénio de Andrade, «Adeus», de <i>Os Amantes sem Dinheiro</i> (1950). Texto na RTP Ensina e leitura de Fernando Alves, programa <i>Voz</i> (2005).",
    "href": "https://ensina.rtp.pt/artigo/adeus-de-eugenio-de-andrade/",
-   "fonte": "RTP Ensina, Adeus"
+   "fonte": "RTP Ensina, «Adeus»"
   },
   {
    "facto": "Tema B: Ana Luísa Amaral, «Prece no Mediterrâneo», em <i>Ágora</i>, Assírio & Alvim, 2019. Reprodução na Seara Nova, 7 de agosto de 2023.",
@@ -86,9 +86,9 @@
    "fonte": "Seara Nova"
   },
   {
-   "facto": "Tema B: Ana Luísa Amaral, «A verdade histórica», em <i>PÁ: Poesia & Outras Artes</i>, n.º 0, Casa Comum/U.Porto Press, setembro de 2023, pp. 14–15. Reprodução autorizada pela Assírio & Alvim.",
+   "facto": "Tema B: Ana Luísa Amaral, «A verdade histórica», em <i>PÁ: Poesia & Outras Artes</i>, n.º 0, Casa Comum/U.Porto Press, setembro de 2023, pp. 14–15. Publicação autorizada pela Assírio & Alvim.",
    "href": "https://www.up.pt/casacomum/wp-content/uploads/sites/520/2023/11/pa_versao_final-1.pdf#page=14",
-   "fonte": "Casa Comum, PÁ"
+   "fonte": "Casa Comum, <i>PÁ</i>"
   },
   {
    "facto": "Lê os poemas completos antes da aula. Na aula, consulta o mesmo material; indica título e verso ou estrofe de cada indício. Cita no máximo quatro versos de cada poema. Se usares outro exemplar, regista a edição.",
