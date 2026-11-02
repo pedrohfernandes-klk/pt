@@ -166,5 +166,61 @@
     "novo": "Dá uma inferência apoiada, cita a pista e distingue-a de uma conclusão que essa pista não permite.",
     "ocorrencias": 1,
     "achado": "P2/P3: sincronizar com M1-F20 C16"
+  },
+  {
+    "ficheiro": "3/index.html",
+    "local": "Título do percurso do 3.º ano",
+    "antigo": "Quem és quando escreves — e quem fica de fora do que contas?",
+    "novo": "Quem és quando escreves, e quem fica de fora do que contas?",
+    "ocorrencias": 1,
+    "achado": "Acrescento de 02/11/2026: pontuação editorial sem travessão"
+  },
+  {
+    "ficheiro": "m6/index.html",
+    "local": "Desafio de arquivo, retorno sobre a hipálage",
+    "antigo": "a qualidade moral é deslocada para o cheiro do pão — hipálage.",
+    "novo": "a qualidade moral é deslocada para o cheiro do pão: hipálage.",
+    "ocorrencias": 1,
+    "achado": "Acrescento de 02/11/2026: pontuação editorial sem travessão"
+  },
+  {
+    "ficheiro": "m8/index.html",
+    "local": "Desafio de arquivo, variante da comparação entre poema e conto",
+    "antigo": "Duas formas de deixar espaço ao leitor — perguntas num poema e encontros num conto.",
+    "novo": "Duas formas de deixar espaço ao leitor: perguntas num poema e encontros num conto.",
+    "ocorrencias": 1,
+    "achado": "Acrescento de 02/11/2026: pontuação editorial sem travessão"
+  },
+  {
+    "ficheiro": "m4/index.html",
+    "local": "Pesos na dobra do índice",
+    "antigo": "<details class=\"regra\"><summary>Como se cumpre uma unidade</summary><div>Fazes as aulas de leitura e preparação e fechas a unidade na aula de tarefa: aquecimento em cartões (a linha A do percurso), produção em papel, uma síntese simples integrada e fotografias no Teams. A avaliação é feita pelo docente. A tarefa organiza a produção prevista para a unidade; não exige repetir uma produção já realizada.</div></details>",
+    "novo": "<details class=\"regra\"><summary>Como se cumpre uma unidade</summary><div>Fazes as aulas de leitura e preparação e fechas a unidade na aula de tarefa: aquecimento em cartões (a linha A do percurso), produção em papel, uma síntese simples integrada e fotografias no Teams. A avaliação é feita pelo docente. A tarefa organiza a produção prevista para a unidade; não exige repetir uma produção já realizada.<p class=\"avaliacao-tarefas\">Pesos na avaliação: tarefas das Unidades 1, 2 e 3, 25 % cada; provas rápidas, 10 %; prova escrita, 15 %. Cada tarefa tem uma grelha /20.</p></div></details>",
+    "ocorrencias": 1,
+    "achado": "A1b: pesos explicitamente aprovados em 30 e 31/10"
+  },
+  {
+    "ficheiro": "m7/index.html",
+    "local": "Pesos na dobra do índice",
+    "antigo": "<details class=\"regra\"><summary>Como se cumpre uma unidade</summary><div>Fazes as aulas de leitura e preparação e fechas a unidade na aula de tarefa: aquecimento em cartões (a linha A do percurso), produção em papel, uma síntese simples integrada e fotografias no Teams. A avaliação é feita pelo docente. A tarefa organiza a produção prevista para a unidade; não exige repetir uma produção já realizada.</div></details>",
+    "novo": "<details class=\"regra\"><summary>Como se cumpre uma unidade</summary><div>Fazes as aulas de leitura e preparação e fechas a unidade na aula de tarefa: aquecimento em cartões (a linha A do percurso), produção em papel, uma síntese simples integrada e fotografias no Teams. A avaliação é feita pelo docente. A tarefa organiza a produção prevista para a unidade; não exige repetir uma produção já realizada.<p class=\"avaliacao-tarefas\">Pesos na avaliação: tarefa da Unidade 2 (a ideia de heterónimo), 35 %; tarefa da Unidade 3 («Louco, sim»), 25 %; provas rápidas, 10 %; prova escrita, 30 %. Cada tarefa tem uma grelha /20.</p></div></details>",
+    "ocorrencias": 1,
+    "achado": "A1b: pesos explicitamente aprovados em 30 e 31/10"
+  },
+  {
+    "ficheiro": "m2/index.html",
+    "local": "Pesos na dobra do índice",
+    "antigo": "<details class=\"regra\"><summary>Como se cumpre uma unidade</summary><div>Fazes as aulas de leitura e preparação e fechas a unidade na aula de tarefa: aquecimento em cartões (a linha A do percurso), produção em papel, uma síntese simples integrada e fotografias no Teams. A avaliação é feita pelo docente. A tarefa organiza a produção prevista para a unidade; não exige repetir uma produção já realizada.</div></details>",
+    "novo": "<details class=\"regra\"><summary>Como se cumpre uma unidade</summary><div>Fazes as aulas de leitura e preparação e fechas a unidade na aula de tarefa: aquecimento em cartões (a linha A do percurso), produção em papel, uma síntese simples integrada e fotografias no Teams. A avaliação é feita pelo docente. A tarefa organiza a produção prevista para a unidade; não exige repetir uma produção já realizada.<p class=\"avaliacao-tarefas\">Pesos na avaliação: tarefa da Unidade 1, 30 %; tarefa da Unidade 2, 30 %; provas rápidas, 10 %; prova escrita, 30 %. Cada tarefa tem uma grelha /20.</p></div></details>",
+    "ocorrencias": 1,
+    "achado": "A1b: pesos explicitamente aprovados em 30 e 31/10"
+  },
+  {
+    "ficheiro": "m2/mapa-do-modulo-m2/index.html",
+    "local": "Mapa, tarefas e avaliação",
+    "antigo": "<details class=\"sec\" id=\"tarefas\"><summary>As tarefas do Teams</summary><div class=\"tarefa\"><span class=\"tn\">1</span><div><b>Apreciação crítica da Farsa de Inês Pereira no teatro</b><span class=\"peso\">25 %, individual</span><span class=\"crit\">Descrição e juízo; Provas; Língua e género; Respostas das unidades (percurso)</span></div></div><div class=\"tarefa\"><span class=\"tn\">2</span><div><b>Recontagem contemporânea da farsa em vídeo</b><span class=\"peso\">25 %, em grupo</span><span class=\"crit\">Fidelidade e escolha; A cena assinada; Produção e apresentação</span></div></div><div class=\"tarefa\"><span class=\"tn\">3</span><div><b>Dois anúncios de casamento</b><span class=\"peso\">25 %, em grupo de 2 ou 3</span><span class=\"crit\">Marcas da farsa; Registo e contraste; Limite, áudio e grupo</span></div></div><p class=\"aval\"><b>Como se avalia:</b> três tarefas no Teams (25 % cada), provas rápidas (10 %, média das três; conta a primeira tentativa) e uma prova escrita de 45 minutos (15 %). <b>Em papel:</b> a Revisão 1, a Revisão 2 e a prova escrita; tudo o resto está aqui e no Teams.</p></details>",
+    "novo": "<details class=\"sec\" id=\"tarefas\"><summary>As tarefas do Teams</summary><p>As aulas de tarefa atuais são «Duas escolhas, que liberdade?» (Unidade 1, 30 %) e «Dois anúncios de casamento» (Unidade 2, 30 %). Os produtos seguintes pertencem ao arquivo de propostas anteriores do guia; não acrescentam pesos à avaliação atual.</p><div class=\"tarefa\"><span class=\"tn\">1</span><div><b>Apreciação crítica da Farsa de Inês Pereira no teatro</b><span class=\"peso\">Arquivo, sem peso próprio</span><span class=\"crit\">Descrição e juízo; Provas; Língua e género; Respostas das unidades (percurso)</span></div></div><div class=\"tarefa\"><span class=\"tn\">2</span><div><b>Recontagem contemporânea da farsa em vídeo</b><span class=\"peso\">Arquivo, sem peso próprio</span><span class=\"crit\">Fidelidade e escolha; A cena assinada; Produção e apresentação</span></div></div><div class=\"tarefa\"><span class=\"tn\">3</span><div><b>Dois anúncios de casamento</b><span class=\"peso\">Arquivo, sem peso próprio</span><span class=\"crit\">Marcas da farsa; Registo e contraste; Limite, áudio e grupo</span></div></div><p class=\"aval\"><b>Como se avalia:</b> duas tarefas de unidade no Teams (30 % cada), provas rápidas (10 %, média das três; conta a primeira tentativa) e uma prova escrita de 45 minutos (30 %). <b>Em papel:</b> a Revisão 1, a Revisão 2 e a prova escrita; tudo o resto está aqui e no Teams.</p></details>",
+    "ocorrencias": 1,
+    "achado": "A1b: duas tarefas de 30 %; produtos anteriores identificados como arquivo"
   }
 ]
