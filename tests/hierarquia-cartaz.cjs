@@ -52,7 +52,7 @@ const MEASURE=()=>{
  }
  }await ctx.close();}
  const roles=new Map();let r4=0;
- for(const row of rows){const template=/narrativas\/(ver|treinar|criar)\//.test(row.page)?'bloco':row.page;for(const role of row.roles){const key=[template,row.width,row.theme,row.mode,role.sig].join('|');if(roles.has(key)&&Math.abs(roles.get(key)-role.fs)>.02)r4++;roles.set(key,role.fs);}}
+ for(const row of rows){const template=/^m[1-9]\/index\.html$/.test(row.page)?'indices-pt':/narrativas\/(ver|treinar|criar)\//.test(row.page)?'bloco':row.page;for(const role of row.roles){const key=[template,row.width,row.theme,row.mode,role.sig].join('|');if(roles.has(key)&&Math.abs(roles.get(key)-role.fs)>.02)r4++;roles.set(key,role.fs);}}
  assert.equal(r4,0,'R4: tamanhos diferentes no mesmo molde');
  for(const p of pages)for(const width of [390,1366])console.log(`${p} | ${width}px | claro/escuro, normal/dobras abertas/projeção | R1=0 R2=0 R3=0 R4=0 R5=0 | escala conforme`);
  if(process.env.HIERARQUIA_SAIDA)fs.writeFileSync(process.env.HIERARQUIA_SAIDA,JSON.stringify(rows,null,2));

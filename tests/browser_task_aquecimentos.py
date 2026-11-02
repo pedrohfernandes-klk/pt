@@ -144,10 +144,13 @@ def tarefas(browser, host):
 
 
 def percurso(browser, host):
+    # 01/11/2026: abrir pelo teclado cada unidade antes de verificar as linhas A e T.
+    from browser_task_contract import open_route_unit
     # 30/10/2026: aquecimento em cartões (decisão do docente)
     for n in (1, 2):
         ctx, page, errors = contexto(browser, 390)
         page.goto(f'{host}/m1/', wait_until='networkidle')
+        open_route_unit(page, n)
         a = page.locator(f'#aquecimento-unidade-{n}')
         assert a.is_visible()
         assert a.evaluate('e=>e.nextElementSibling.id') == f'tarefa-unidade-{n}'
@@ -162,6 +165,7 @@ def percurso(browser, host):
     ctx, page, errors = contexto(browser, 390)
     page.goto(f'{host}/m7/', wait_until='networkidle')
     for n in (1, 2, 3):
+        open_route_unit(page, n)
         a = page.locator(f'#aquecimento-unidade-{n}')
         assert a.is_visible(), n
         assert a.evaluate('e=>e.nextElementSibling && e.nextElementSibling.id') == f'tarefa-unidade-{n}'

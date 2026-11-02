@@ -8,6 +8,8 @@ import re
 import unittest
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
+# 01/11/2026: conferir o conteúdo pendente por baixo da camada visual dos índices.
+from auditoria_20261028 import undo_cartaz_indices
 
 # 01/11/2026: para depois do #144 e do #145.
 PENDENTES_CAMADA_149_20261101 = [{'ficheiro': 'm1/licao-m1-f20/index.html',
@@ -1276,7 +1278,7 @@ class Pendentes149(unittest.TestCase):
         texts={}
         for e in PENDENTES_CAMADA_149_20261101:
             with self.subTest(local=e['local']):
-                s=texts.setdefault(e['ficheiro'],(ROOT/e['ficheiro']).read_text('utf-8'))
+                s=texts.setdefault(e['ficheiro'],undo_cartaz_indices(e['ficheiro'],(ROOT/e['ficheiro']).read_text('utf-8')))
                 self.assertNotEqual(e['antigo'],e['novo'])
                 self.assertEqual(s.count(e['antigo']),e['ocorrencias'])
                 self.assertNotIn(e['novo'],s,'Troca aplicada: retirar da lista pendente')

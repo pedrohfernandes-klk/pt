@@ -1,3 +1,4 @@
+# 01/11/2026: a linha mantém destino e número e passa a usar a peça cz-row.
 # 01/11/2026: nove lições no M1/M2/M3/M5/M6 elevam o inventário a 125.
 """Aquecimentos em cartões antes das aulas de tarefa (29/10/2026, decisões do docente; piloto no M7).
 
@@ -178,7 +179,7 @@ class Aquecimentos(unittest.TestCase):
                 self.assertEqual(linha.get('class'), 'aula-aquecimento')
                 self.assertNotIn('data-passo', linha)
                 self.assertNotIn('data-task-lesson', linha)
-                self.assertIn(f'<li class="aula-aquecimento" id="aquecimento-unidade-{n}"><a href="../tarefas/{slug}/aquecimento/"><span class="n">A</span>', indice)
+                self.assertIn(f'<li class="aula-aquecimento" id="aquecimento-unidade-{n}"><a class="cz-row" href="../tarefas/{slug}/aquecimento/"><span class="n">A</span>', indice)
                 self.assertTrue((ROOT / 'tarefas' / slug / 'aquecimento' / 'index.html').is_file())
         css = (ROOT / 'assets/task-90.css').read_text('utf-8')
         self.assertIn('.task-aquecer a{', css)

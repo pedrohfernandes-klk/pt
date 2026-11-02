@@ -1,9 +1,9 @@
 name: Cartaz pieces
 on:
   push:
-    paths: ['assets/cartaz-components.*', 'assets/appearance.css', 'demonstracoes/cartaz-animacoes/**', 'tests/*cartaz*', '.github/workflows/cartaz-qa.yml']
+    paths: ['assets/cartaz-indices.*', 'm[1-9]/index.html', 'scripts/cartaz_indices*', 'tests/fixtures/cartaz-indices*', 'assets/cartaz-components.*', 'assets/appearance.css', 'demonstracoes/cartaz-animacoes/**', 'tests/*cartaz*', '.github/workflows/cartaz-qa.yml']
   pull_request:
-    paths: ['assets/cartaz-components.*', 'assets/appearance.css', 'demonstracoes/cartaz-animacoes/**', 'tests/*cartaz*', '.github/workflows/cartaz-qa.yml']
+    paths: ['assets/cartaz-indices.*', 'm[1-9]/index.html', 'scripts/cartaz_indices*', 'tests/fixtures/cartaz-indices*', 'assets/cartaz-components.*', 'assets/appearance.css', 'demonstracoes/cartaz-animacoes/**', 'tests/*cartaz*', '.github/workflows/cartaz-qa.yml']
 jobs:
   pieces:
     runs-on: ubuntu-latest
@@ -28,3 +28,18 @@ jobs:
       - run: node tests/browser_cartaz_animacoes.cjs
       # 01/11/2026: decisão 61, hierarquia e escala nas páginas migradas.
       - run: node tests/hierarquia-cartaz.cjs
+      # 01/11/2026: família dos índices, antes/depois, estados, acessibilidade e impressão.
+      - run: node tests/browser_cartaz_indices.cjs
+        env:
+          CARTAZ_INDICES_OUTPUT: ${{ runner.temp }}/cartaz-indices
+      - run: node tests/browser_cartaz_indices_contracts.cjs
+        if: ${{ !cancelled() }}
+        env:
+          CARTAZ_INDICES_OUTPUT: ${{ runner.temp }}/cartaz-indices
+      # 01/11/2026: provas de revisão fora das páginas publicadas.
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: cartaz-indices-antes-depois
+          path: ${{ runner.temp }}/cartaz-indices
+          retention-days: 30

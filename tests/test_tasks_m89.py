@@ -39,7 +39,7 @@ class TasksM89(unittest.TestCase):
         for m in (8, 9):
             s = (ROOT / f'm{m}/index.html').read_text('utf-8')
             U, _ = json.JSONDecoder().raw_decode(s[s.find('U=[') + 2:])
-            aulas = [int(n) for n in re.findall(r'<small>(\d+) aulas de leitura/preparação', s)]
+            aulas = [int(n) for n in re.findall(r'<small>(\d+) (?:aulas de leitura/preparação|passos)', s)]
             self.assertEqual(aulas, [len(u['passos']) for u in U])
 
     def test_pesos_coerentes_e_entregas_das_duas_unidades(self):
@@ -57,10 +57,11 @@ class TasksM89(unittest.TestCase):
     def test_camada_literal_aplicada_e_reversivel(self):
         r = subprocess.run([sys.executable, 'scripts/aplicar_trocas.py',
                             'scripts/tarefas_m89_20261101.json', '--manifesto',
-                            # 01/11/2026: confere a camada das tarefas por baixo das novas lições.
                             'tests/fixtures/tarefas-m89-edits-20261101.json', '--verificar',
-                            '--desfazer-antes', 'tests/fixtures/licoes-m16-edits-20261101.json',
-                            '--desfazer-antes', 'tests/fixtures/licoes-m89-edits-20261101.json'],
+                            # 01/11/2026: conservar as três camadas posteriores sem dispensar o predecessor.
+                            '--desfazer-antes','tests/fixtures/cartaz-indices-edits-20261101.json',
+                            '--desfazer-antes','tests/fixtures/licoes-m16-edits-20261101.json',
+                            '--desfazer-antes','tests/fixtures/licoes-m89-edits-20261101.json'],
                            cwd=ROOT, capture_output=True, text=True, encoding='utf-8')
         self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
 
