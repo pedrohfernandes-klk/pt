@@ -145,6 +145,11 @@ def projecao_ate_explicacao(page):
 
 # (família, página, preparação, seletores de texto corrido justificado, seletores que ficam à esquerda)
 CASOS = [
+    # 01/11/2026: cobre os pesos e a prosa nova sem retirar os casos anteriores.
+    ('guia da tarefa (aula de tarefa)', 'm3/guia-da-tarefa-m3/', lambda p: None,
+     ['#tarefas-das-unidades > p.avaliacao-tarefas', '#tarefas-das-unidades > p:not([class]):not(:has(a))'], []),
+    ('índice (avaliação na regra)', 'm3/', lambda p: p.locator('details.regra').evaluate('(e)=>e.open=true'),
+     ['p.avaliacao-tarefas'], []),
     ('lições em cartões: leitura e verso', 'm7/licao-m7-f34/', lambda p: None,
      ['.jogo .ler p.abre'], ['.casca-topo .c-marca']),
     ('lições em cartões: verso', 'm7/licao-m7-f34/', lambda p: ate(p, '.jogo .ler .v'),
@@ -195,13 +200,17 @@ CASOS = [
     ('lições em cartões: verso citado num caso', 'm1/licao-m1-f04/', lambda p: ate(p, '.jogo .ler p.cx.verso'),
      [], ['.jogo .ler p.cx.verso']),
     ('Tabacaria', 'm7/tabacaria/', lambda p: None, [], ['div.verso']),
-    ('índice do módulo', 'm8/', lambda p: None,
-     ['.pt-module details.regra > div', '.pt-module p.regras', '.pt-module section.cartao > p.pequeno'],
+    # 01/11/2026: M8 com aula de tarefa; mantém três blocos de prosa no índice.
+    # 01/11/2026: abre a regra para conferir também a avaliação, mantendo os seletores anteriores.
+    ('índice do módulo', 'm8/', lambda p: p.locator('details.regra').evaluate('(e)=>e.open=true'),
+     # 01/11/2026: o parágrafo dos pesos dentro da regra entra na lista dos justificados, sem tirar nenhum seletor.
+     ['.pt-module details.regra > div', '.pt-module details.regra p.avaliacao-tarefas', '.pt-module .unidade[data-u="1"] .unit-retoma > p:last-child', '.pt-module .unidade[data-u="2"] .unit-retoma > p:last-child'],
      ['p.rodape', 'header.topo p.lead.mod-pergunta', 'header.topo p.lead.mod-ambito']),
     ('mapa do módulo', 'm8/mapa-do-modulo-m8/', lambda p: None,
      ['header.topo > p.lead', 'aside.unit-map-note > p', 'details.sec > p:not([class]):not(:has(button))'],
      ['aside.unit-map-note li', 'details.sec > p:has(button)']),
-    ('guia da tarefa', 'm8/guia-da-tarefa-m8/', lambda p: None, ['#escolha > p:not([class])'], []),
+    # 01/11/2026: o guia M8 usa a nota de unidade e o arquivo, ambos com prosa verificada.
+    ('guia da tarefa', 'm8/guia-da-tarefa-m8/', lambda p: None, ['aside.unit-map-note > p', '#arquivo-producoes > p:not([class])', '#tarefas-das-unidades > p.avaliacao-tarefas', '#tarefas-das-unidades > p:not([class]):not(:has(a))', 'p.avaliacao-tarefas'], []),
     ('guia da tarefa com o arquivo das produções', 'm4/guia-da-tarefa-m4/', lambda p: None,
      ['main > p:not([class])', '#arquivo-producoes > p:not([class])', '#arquivo-producoes p.ex'],
      ['#arquivo-producoes li', '#arquivo-producoes p.quem', '#arquivo-producoes section.tarefa-c > p:not([class])']),
@@ -373,9 +382,12 @@ def verificar_estreito(browser, host, falhas):
 
 
 def main():
-    raiz = tempfile.mkdtemp(prefix='justificado-pt-')
-    os.symlink(ROOT, os.path.join(raiz, 'pt'))
-    server = ThreadingHTTPServer(('127.0.0.1', 0), partial(Quiet, directory=raiz))
+    # 01/11/2026: servir /pt sem symlink, que exige privilégios adicionais no Windows.
+    # A raiz e todas as verificações permanecem iguais nos dois sistemas.
+    class MountedQuiet(Quiet):
+        def translate_path(self, path):
+            return super().translate_path(path.removeprefix('/pt'))
+    server = ThreadingHTTPServer(('127.0.0.1', 0), partial(MountedQuiet, directory=str(ROOT)))
     threading.Thread(target=server.serve_forever, daemon=True).start()
     host = f'http://127.0.0.1:{server.server_port}/pt'
     falhas = []

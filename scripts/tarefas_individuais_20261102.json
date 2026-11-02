@@ -1,0 +1,1762 @@
+[
+  {
+    "ficheiro": "m1/guia-da-tarefa-m1/index.html",
+    "local": "Tarefas individuais, troca 1",
+    "antigo": "<p class=\"quem\">Em grupo de 2 ou 3.</p><p class=\"enc\">Escrevam, à maneira de Guilhade e com palavras cobertas, uma cantiga de escárnio sobre um alvo de hoje que não seja ninguém da escola, e gravem a leitura.",
+    "novo": "<p class=\"quem\">Individual.</p><p class=\"enc\">Escreve, à maneira de Guilhade e com palavras cobertas, uma cantiga de escárnio sobre um alvo de hoje que não seja ninguém da escola, e grava a leitura.",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m1/guia-da-tarefa-m1/index.html",
+    "local": "Tarefas individuais, troca 2",
+    "antigo": "M1_Tarefa2_Escarnio.m4a. Uma entrega por grupo.",
+    "novo": "M1_Tarefa2_Escarnio.m4a. Entrega individual.",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m1/guia-da-tarefa-m1/index.html",
+    "local": "Tarefas individuais, troca 3",
+    "antigo": "O alvo é um costume ou uma figura pública, nunca alguém da escola; os créditos dizem quem fez o quê.",
+    "novo": "O alvo é um costume ou uma figura pública, nunca alguém da escola.",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m1/mapa-do-modulo-m1/index.html",
+    "local": "Tarefas individuais, troca 1",
+    "antigo": "<b>Cantiga de escárnio de 2026</b><span class=\"peso\">25 %, em grupo de 2 ou 3</span>",
+    "novo": "<b>Cantiga de escárnio de 2026</b><span class=\"peso\">25 %, individual</span>",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m1/mapa-do-modulo-m1/index.html",
+    "local": "Tarefas individuais, troca 2",
+    "antigo": "Forma e leitura; Alvo, língua e grupo</span>",
+    "novo": "Forma e leitura; Alvo e língua</span>",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m1/portefolio-do-modulo-m1/index.html",
+    "local": "Tarefas individuais, troca 1",
+    "antigo": "O produto, ou a ligação, e uma linha: o que fiz, o que corrigi depois da devolução. Nos trabalhos de grupo, o responsável carrega o produto; os outros põem a ligação e os créditos próprios.</div>",
+    "novo": "O produto, ou a ligação, e uma linha: o que fiz, o que corrigi depois da devolução.</div>",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m1/portefolio-do-modulo-m1/index.html",
+    "local": "Tarefas individuais, troca 2",
+    "antigo": "Tarefa 2, «Cantiga de escárnio de 2026»: a ligação para o produto do grupo (só o responsável carrega o ficheiro) e os teus créditos, assinados: o que fizeste tu.",
+    "novo": "Tarefa 2, «Cantiga de escárnio de 2026»: o teu produto, ou a ligação para ele.",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m2/guia-da-tarefa-m2/index.html",
+    "local": "Tarefas individuais, troca 1",
+    "antigo": "<b>2. Recontagem contemporânea da farsa em vídeo</b><span>em grupo; duas aulas</span>",
+    "novo": "<b>2. Recontagem contemporânea da farsa em vídeo</b><span>individual; duas aulas</span>",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m2/guia-da-tarefa-m2/index.html",
+    "local": "Tarefas individuais, troca 2",
+    "antigo": "<b>3. Dois anúncios de casamento</b><span>em grupo de 2 ou 3; duas aulas</span>",
+    "novo": "<b>3. Dois anúncios de casamento</b><span>individual; duas aulas</span>",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m2/guia-da-tarefa-m2/index.html",
+    "local": "Tarefas individuais, troca 3",
+    "antigo": "\"titulo\":\"Recontagem contemporânea da farsa em vídeo\",\"quem\":\"em grupo\",\"grupo\":true",
+    "novo": "\"titulo\":\"Recontagem contemporânea da farsa em vídeo\",\"quem\":\"individual\",\"grupo\":false",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m2/guia-da-tarefa-m2/index.html",
+    "local": "Tarefas individuais, troca 4",
+    "antigo": "\"titulo\":\"Dois anúncios de casamento\",\"quem\":\"em grupo de 2 ou 3\",\"grupo\":true",
+    "novo": "\"titulo\":\"Dois anúncios de casamento\",\"quem\":\"individual\",\"grupo\":false",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m2/guia-da-tarefa-m2/index.html",
+    "local": "Tarefas individuais, troca 5",
+    "antigo": "Dividam a farsa em cinco momentos",
+    "novo": "Divide a farsa em cinco momentos",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m2/guia-da-tarefa-m2/index.html",
+    "local": "Tarefas individuais, troca 6",
+    "antigo": "a segunda escolha) e decidam o equivalente de hoje",
+    "novo": "a segunda escolha) e decide o equivalente de hoje",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m2/guia-da-tarefa-m2/index.html",
+    "local": "Tarefas individuais, troca 7",
+    "antigo": "\"Escrevam o guião: cada personagem",
+    "novo": "\"Escreve o guião: cada personagem",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m2/guia-da-tarefa-m2/index.html",
+    "local": "Tarefas individuais, troca 8",
+    "antigo": "Filmem só quem autorizou; cumpram as regras de imagem da escola.",
+    "novo": "Filma só quem autorizou; cumpre as regras de imagem da escola.",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m2/guia-da-tarefa-m2/index.html",
+    "local": "Tarefas individuais, troca 9",
+    "antigo": "Nos créditos, cada mudança tem uma razão escrita; digam quem fez o quê.",
+    "novo": "Nos créditos, cada mudança tem uma razão escrita; diz quem aparece no vídeo.",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m2/guia-da-tarefa-m2/index.html",
+    "local": "Tarefas individuais, troca 10",
+    "antigo": "o guião e os créditos. Uma entrega por grupo.",
+    "novo": "o guião e os créditos. Entrega individual.",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m2/guia-da-tarefa-m2/index.html",
+    "local": "Tarefas individuais, troca 11",
+    "antigo": "Recontem a Farsa de Inês Pereira nos dias de hoje",
+    "novo": "Reconta a Farsa de Inês Pereira nos dias de hoje",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m2/guia-da-tarefa-m2/index.html",
+    "local": "Tarefas individuais, troca 12",
+    "antigo": "M2_Tarefa2_FichaTecnica.pdf. Uma entrega por grupo.",
+    "novo": "M2_Tarefa2_FichaTecnica.pdf. Entrega individual.",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m2/guia-da-tarefa-m2/index.html",
+    "local": "Tarefas individuais, troca 13",
+    "antigo": "{\"nome\":\"A cena assinada\",\"niveis\":[\"cada aluno assina uma cena com função clara; os apartes resolvidos\",\"cena assinada; aparte pouco claro\",\"cena sem função na história\",\"sem cena própria\"]",
+    "novo": "{\"nome\":\"Cenas e apartes\",\"niveis\":[\"cada cena tem função clara na história; os apartes resolvidos\",\"cenas com função; um aparte pouco claro\",\"uma cena sem função na história\",\"cenas sem função na história\"]",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m2/guia-da-tarefa-m2/index.html",
+    "local": "Tarefas individuais, troca 14",
+    "antigo": "Fizemos um vídeo em que a Inês escolhe um namorado. Mudámos tudo porque assim era mais engraçado.",
+    "novo": "Fiz um vídeo em que a Inês escolhe um namorado. Mudei tudo porque assim era mais engraçado.",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m2/guia-da-tarefa-m2/index.html",
+    "local": "Tarefas individuais, troca 15",
+    "antigo": "Releiam as cenas de Pêro Marques e do Escudeiro e copiem três marcas",
+    "novo": "Relê as cenas de Pêro Marques e do Escudeiro e copia três marcas",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m2/guia-da-tarefa-m2/index.html",
+    "local": "Tarefas individuais, troca 16",
+    "antigo": "\"Escrevam cada anúncio como Lianor Vaz o faria",
+    "novo": "\"Escreve cada anúncio como Lianor Vaz o faria",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m2/guia-da-tarefa-m2/index.html",
+    "local": "Tarefas individuais, troca 17",
+    "antigo": "Gravem a leitura dos dois anúncios num minuto",
+    "novo": "Grava a leitura dos dois anúncios num minuto",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m2/guia-da-tarefa-m2/index.html",
+    "local": "Tarefas individuais, troca 18",
+    "antigo": "com a voz da casamenteira.\",\"Créditos: quem fez o quê.\"",
+    "novo": "com a voz da casamenteira.\",\"Confere os limites: 100 a 130 palavras em cada anúncio e um minuto de áudio.\"",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m2/guia-da-tarefa-m2/index.html",
+    "local": "Tarefas individuais, troca 19",
+    "antigo": "Os dois anúncios com as marcas citadas, o áudio e os créditos, num só envio por grupo.",
+    "novo": "Os dois anúncios com as marcas citadas e o áudio, num só envio.",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m2/guia-da-tarefa-m2/index.html",
+    "local": "Tarefas individuais, troca 20",
+    "antigo": "Escrevam os dois anúncios que Lianor Vaz publicaria hoje",
+    "novo": "Escreve os dois anúncios que Lianor Vaz publicaria hoje",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m2/guia-da-tarefa-m2/index.html",
+    "local": "Tarefas individuais, troca 21",
+    "antigo": "M2_Tarefa3_Anuncios.m4a. Uma entrega por grupo.",
+    "novo": "M2_Tarefa3_Anuncios.m4a. Entrega individual.",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m2/guia-da-tarefa-m2/index.html",
+    "local": "Tarefas individuais, troca 22",
+    "antigo": "{\"nome\":\"Limite, áudio e grupo\",\"niveis\":[\"100 a 130 palavras cada; áudio de um minuto, percetível, na voz da casamenteira; créditos\",\"limite ou áudio com um desvio\",\"sem áudio, ou limite muito falhado\",\"sem áudio nem créditos\"]",
+    "novo": "{\"nome\":\"Limite e áudio\",\"niveis\":[\"100 a 130 palavras cada; áudio de um minuto, percetível, na voz da casamenteira\",\"limite ou áudio com um desvio\",\"sem áudio, ou limite muito falhado\",\"sem áudio nem limite cumprido\"]",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m2/mapa-do-modulo-m2/index.html",
+    "local": "Tarefas individuais, troca 1",
+    "antigo": "<b>Recontagem contemporânea da farsa em vídeo</b><span class=\"peso\">25 %, em grupo</span>",
+    "novo": "<b>Recontagem contemporânea da farsa em vídeo</b><span class=\"peso\">25 %, individual</span>",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m2/mapa-do-modulo-m2/index.html",
+    "local": "Tarefas individuais, troca 2",
+    "antigo": "<b>Dois anúncios de casamento</b><span class=\"peso\">25 %, em grupo de 2 ou 3</span>",
+    "novo": "<b>Dois anúncios de casamento</b><span class=\"peso\">25 %, individual</span>",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m2/mapa-do-modulo-m2/index.html",
+    "local": "Tarefas individuais, troca 3",
+    "antigo": "Fidelidade e escolha; A cena assinada; Produção",
+    "novo": "Fidelidade e escolha; Cenas e apartes; Produção",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m2/mapa-do-modulo-m2/index.html",
+    "local": "Tarefas individuais, troca 4",
+    "antigo": "Registo e contraste; Limite, áudio e grupo</span>",
+    "novo": "Registo e contraste; Limite e áudio</span>",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m2/portefolio-do-modulo-m2/index.html",
+    "local": "Tarefas individuais, troca 1",
+    "antigo": "O produto, ou a ligação, e uma linha: o que fiz, o que corrigi depois da devolução. Nos trabalhos de grupo, o responsável carrega o produto; os outros põem a ligação e os créditos próprios.</div>",
+    "novo": "O produto, ou a ligação, e uma linha: o que fiz, o que corrigi depois da devolução.</div>",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m2/portefolio-do-modulo-m2/index.html",
+    "local": "Tarefas individuais, troca 2",
+    "antigo": "Tarefa 2, «Recontagem contemporânea da farsa em vídeo»: a ligação para o produto do grupo (só o responsável carrega o ficheiro) e os teus créditos, assinados: o que fizeste tu.",
+    "novo": "Tarefa 2, «Recontagem contemporânea da farsa em vídeo»: o teu produto, ou a ligação para ele.",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m2/portefolio-do-modulo-m2/index.html",
+    "local": "Tarefas individuais, troca 3",
+    "antigo": "Tarefa 3, «Dois anúncios de casamento»: a ligação para o produto do grupo (só o responsável carrega o ficheiro) e os teus créditos, assinados: o que fizeste tu.",
+    "novo": "Tarefa 3, «Dois anúncios de casamento»: o teu produto, ou a ligação para ele.",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m3/guia-da-tarefa-m3/index.html",
+    "local": "Tarefas individuais, troca 1",
+    "antigo": "<b>2. Objeto crítico das Descobertas</b><span>em grupo; duas aulas</span>",
+    "novo": "<b>2. Objeto crítico das Descobertas</b><span>individual; duas aulas</span>",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m3/guia-da-tarefa-m3/index.html",
+    "local": "Tarefas individuais, troca 2",
+    "antigo": "<b>3. O Velho do Restelo em 2026</b><span>em grupo de 2 ou 3; duas aulas</span>",
+    "novo": "<b>3. O Velho do Restelo em 2026</b><span>individual; duas aulas</span>",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m3/guia-da-tarefa-m3/index.html",
+    "local": "Tarefas individuais, troca 3",
+    "antigo": "\"titulo\":\"Objeto crítico das Descobertas\",\"quem\":\"em grupo\",\"grupo\":true",
+    "novo": "\"titulo\":\"Objeto crítico das Descobertas\",\"quem\":\"individual\",\"grupo\":false",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m3/guia-da-tarefa-m3/index.html",
+    "local": "Tarefas individuais, troca 4",
+    "antigo": "\"titulo\":\"O Velho do Restelo em 2026\",\"quem\":\"em grupo de 2 ou 3\",\"grupo\":true",
+    "novo": "\"titulo\":\"O Velho do Restelo em 2026\",\"quem\":\"individual\",\"grupo\":false",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m3/guia-da-tarefa-m3/index.html",
+    "local": "Tarefas individuais, troca 5",
+    "antigo": "\"Escolham o objeto (astrolábio, padrão, mapa, caixa de especiarias) e decidam a mudança que o critica",
+    "novo": "\"Escolhe o objeto (astrolábio, padrão, mapa, caixa de especiarias) e decide a mudança que o critica",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m3/guia-da-tarefa-m3/index.html",
+    "local": "Tarefas individuais, troca 6",
+    "antigo": "Construam ou desenhem o objeto; fotografem-no sobre fundo liso.",
+    "novo": "Constrói ou desenha o objeto; fotografa-o sobre fundo liso.",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m3/guia-da-tarefa-m3/index.html",
+    "local": "Tarefas individuais, troca 7",
+    "antigo": "\"Escrevam a legenda (o que é, o que mudou, porquê)",
+    "novo": "\"Escreve a legenda (o que é, o que mudou, porquê)",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m3/guia-da-tarefa-m3/index.html",
+    "local": "Tarefas individuais, troca 8",
+    "antigo": "\"Registem duas fontes",
+    "novo": "\"Regista duas fontes",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m3/guia-da-tarefa-m3/index.html",
+    "local": "Tarefas individuais, troca 9",
+    "antigo": "o manual, com as duas fontes. Uma entrega por grupo.",
+    "novo": "o manual, com as duas fontes. Entrega individual.",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m3/guia-da-tarefa-m3/index.html",
+    "local": "Tarefas individuais, troca 10",
+    "antigo": "Recriem um objeto das Descobertas",
+    "novo": "Recria um objeto das Descobertas",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m3/guia-da-tarefa-m3/index.html",
+    "local": "Tarefas individuais, troca 11",
+    "antigo": "M3_Tarefa2_Legenda.pdf. Uma entrega por grupo.",
+    "novo": "M3_Tarefa2_Legenda.pdf. Entrega individual.",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m3/guia-da-tarefa-m3/index.html",
+    "local": "Tarefas individuais, troca 12",
+    "antigo": "Releiam o Velho do Restelo (canto IV) e resumam os três argumentos dele em três frases vossas",
+    "novo": "Relê o Velho do Restelo (canto IV) e resume os três argumentos dele em três frases tuas",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m3/guia-da-tarefa-m3/index.html",
+    "local": "Tarefas individuais, troca 13",
+    "antigo": "\"Escolham a «partida» de hoje",
+    "novo": "\"Escolhe a «partida» de hoje",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m3/guia-da-tarefa-m3/index.html",
+    "local": "Tarefas individuais, troca 14",
+    "antigo": "Escrevam o discurso de um minuto, transpondo os três argumentos; digam-no ao vivo, um de cada vez ou a várias vozes.",
+    "novo": "Escreve o discurso de um minuto, transpondo os três argumentos; di-lo ao vivo.",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m3/guia-da-tarefa-m3/index.html",
+    "local": "Tarefas individuais, troca 15",
+    "antigo": "Escrevam, em três linhas, o que responderia quem parte. Créditos: quem fez o quê.",
+    "novo": "Escreve, em três linhas, o que responderia quem parte.",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m3/guia-da-tarefa-m3/index.html",
+    "local": "Tarefas individuais, troca 16",
+    "antigo": "O texto com as estâncias, o áudio, a resposta de quem parte e os créditos, num só envio por grupo.",
+    "novo": "O texto com as estâncias, o áudio e a resposta de quem parte, num só envio.",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m3/guia-da-tarefa-m3/index.html",
+    "local": "Tarefas individuais, troca 17",
+    "antigo": "Deem voz a um Velho do Restelo de hoje",
+    "novo": "Dá voz a um Velho do Restelo de hoje",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m3/guia-da-tarefa-m3/index.html",
+    "local": "Tarefas individuais, troca 18",
+    "antigo": "M3_Tarefa3_Restelo.m4a. Uma entrega por grupo.",
+    "novo": "M3_Tarefa3_Restelo.m4a. Entrega individual.",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m3/guia-da-tarefa-m3/index.html",
+    "local": "Tarefas individuais, troca 19",
+    "antigo": "{\"nome\":\"Discurso ao vivo e grupo\",\"niveis\":[\"um minuto, dito ao vivo com voz e olhar; 150 a 200 palavras; créditos\"",
+    "novo": "{\"nome\":\"Discurso ao vivo\",\"niveis\":[\"um minuto, dito ao vivo com voz e olhar; 150 a 200 palavras\"",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m3/portefolio-do-modulo-m3/index.html",
+    "local": "Tarefas individuais, troca 1",
+    "antigo": "O produto, ou a ligação, e uma linha: o que fiz, o que corrigi depois da devolução. Nos trabalhos de grupo, o responsável carrega o produto; os outros põem a ligação e os créditos próprios.</div>",
+    "novo": "O produto, ou a ligação, e uma linha: o que fiz, o que corrigi depois da devolução.</div>",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m4/guia-da-tarefa-m4/index.html",
+    "local": "Tarefas individuais, troca 1",
+    "antigo": "aquecimento em cartões no início e apresentações em pequenos grupos, ao mesmo tempo",
+    "novo": "aquecimento em cartões no início e apresentação individual",
+    "ocorrencias": 2,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m4/guia-da-tarefa-m4/index.html",
+    "local": "Tarefas individuais, troca 2",
+    "antigo": "<p class=\"quem\">Em grupo de 2 ou 3.</p><p class=\"enc\">Escolham um peixe das repreensões de Vieira e apresentem-no à turma",
+    "novo": "<p class=\"quem\">Individual.</p><p class=\"enc\">Escolhe um peixe das repreensões de Vieira e apresenta-o à turma",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m4/guia-da-tarefa-m4/index.html",
+    "local": "Tarefas individuais, troca 3",
+    "antigo": "M4_Tarefa1_Peixe.mp4. Uma entrega por grupo.",
+    "novo": "M4_Tarefa1_Peixe.mp4. Entrega individual.",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m4/guia-da-tarefa-m4/index.html",
+    "local": "Tarefas individuais, troca 4",
+    "antigo": "Três a quatro minutos, todos falam, no máximo três imagens com crédito.",
+    "novo": "Três a quatro minutos, no máximo três imagens com crédito.",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m5/portefolio-do-modulo-m5/index.html",
+    "local": "Tarefas individuais, troca 1",
+    "antigo": "O produto, ou a ligação, e uma linha: o que fiz, o que corrigi depois da devolução. Nos trabalhos de grupo, o responsável carrega o produto; os outros põem a ligação e os créditos próprios.</div>",
+    "novo": "O produto, ou a ligação, e uma linha: o que fiz, o que corrigi depois da devolução.</div>",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m6/guia-da-tarefa-m6/index.html",
+    "local": "Tarefas individuais, troca 1",
+    "antigo": "<b>2. Cesário Verde nos dias de hoje</b><span>em grupo; duas aulas</span>",
+    "novo": "<b>2. Cesário Verde nos dias de hoje</b><span>individual; duas aulas</span>",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m6/guia-da-tarefa-m6/index.html",
+    "local": "Tarefas individuais, troca 2",
+    "antigo": "\"titulo\":\"Cesário Verde nos dias de hoje\",\"quem\":\"em grupo\",\"grupo\":true",
+    "novo": "\"titulo\":\"Cesário Verde nos dias de hoje\",\"quem\":\"individual\",\"grupo\":false",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m6/guia-da-tarefa-m6/index.html",
+    "local": "Tarefas individuais, troca 3",
+    "antigo": "Horas Mortas) escolham um lugar da Lisboa ribeirinha",
+    "novo": "Horas Mortas) escolhe um lugar da Lisboa ribeirinha",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m6/guia-da-tarefa-m6/index.html",
+    "local": "Tarefas individuais, troca 4",
+    "antigo": "\"Fotografem ou filmem a pensar nos cinco sentidos",
+    "novo": "\"Fotografa ou filma a pensar nos cinco sentidos",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m6/guia-da-tarefa-m6/index.html",
+    "local": "Tarefas individuais, troca 5",
+    "antigo": "\"Legendem cada imagem",
+    "novo": "\"Legenda cada imagem",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m6/guia-da-tarefa-m6/index.html",
+    "local": "Tarefas individuais, troca 6",
+    "antigo": "Apresentem à turma em três minutos e entreguem os créditos, com quem fez o quê.",
+    "novo": "Apresenta à turma em três minutos e entrega os créditos.",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m6/guia-da-tarefa-m6/index.html",
+    "local": "Tarefas individuais, troca 7",
+    "antigo": "(ou a ligação) e os créditos. Uma entrega por grupo.",
+    "novo": "(ou a ligação) e os créditos. Entrega individual.",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m6/guia-da-tarefa-m6/index.html",
+    "local": "Tarefas individuais, troca 8",
+    "antigo": "Refaçam o percurso de «O Sentimento dum Ocidental»",
+    "novo": "Refaz o percurso de «O Sentimento dum Ocidental»",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m6/guia-da-tarefa-m6/index.html",
+    "local": "Tarefas individuais, troca 9",
+    "antigo": "M6_Tarefa2_FichaTecnica.pdf. Uma entrega por grupo.",
+    "novo": "M6_Tarefa2_FichaTecnica.pdf. Entrega individual.",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m6/guia-da-tarefa-m6/index.html",
+    "local": "Tarefas individuais, troca 10",
+    "antigo": "\"todos falam; versos ditos de cor ou bem lidos;",
+    "novo": "\"versos ditos de cor ou bem lidos;",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m6/portefolio-do-modulo-m6/index.html",
+    "local": "Tarefas individuais, troca 1",
+    "antigo": "O produto, ou a ligação, e uma linha: o que fiz, o que corrigi depois da devolução. Nos trabalhos de grupo, o responsável carrega o produto; os outros põem a ligação e os créditos próprios.</div>",
+    "novo": "O produto, ou a ligação, e uma linha: o que fiz, o que corrigi depois da devolução.</div>",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m7/guia-da-tarefa-m7/index.html",
+    "local": "Tarefas individuais, troca 1",
+    "antigo": "aquecimento em cartões no início e apresentações em pequenos grupos, ao mesmo tempo",
+    "novo": "aquecimento em cartões no início e apresentação individual",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m7/guia-da-tarefa-m7/index.html",
+    "local": "Tarefas individuais, troca 2",
+    "antigo": "<b>Extra. Mensagem para 2026</b><span>em grupo de 2 ou 3; sem nota, por gosto ou para recuperação</span>",
+    "novo": "<b>Extra. Mensagem para 2026</b><span>individual; sem nota, por gosto ou para recuperação</span>",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m7/guia-da-tarefa-m7/index.html",
+    "local": "Tarefas individuais, troca 3",
+    "antigo": "na unidade 2, a apresentação ao grupo.",
+    "novo": "na unidade 2, a apresentação individual.",
+    "ocorrencias": 2,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m7/guia-da-tarefa-m7/index.html",
+    "local": "Tarefas individuais, troca 4",
+    "antigo": "Apresenta-o ao teu grupo de 4 ou 5 colegas em dois minutos, com os grupos ao mesmo tempo, e lê uma frase dele.",
+    "novo": "Apresenta-o em dois minutos e lê uma frase dele.",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m7/guia-da-tarefa-m7/index.html",
+    "local": "Tarefas individuais, troca 5",
+    "antigo": "\"titulo\":\"Mensagem para 2026\",\"quem\":\"em grupo de 2 ou 3\",\"grupo\":true",
+    "novo": "\"titulo\":\"Mensagem para 2026\",\"quem\":\"individual\",\"grupo\":false",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m7/guia-da-tarefa-m7/index.html",
+    "local": "Tarefas individuais, troca 6",
+    "antigo": "\"Escolham o poema («O Infante»",
+    "novo": "\"Escolhe o poema («O Infante»",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m7/guia-da-tarefa-m7/index.html",
+    "local": "Tarefas individuais, troca 7",
+    "antigo": "«Nevoeiro») e digam, em duas linhas, a estrutura dele",
+    "novo": "«Nevoeiro») e diz, em duas linhas, a estrutura dele",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m7/guia-da-tarefa-m7/index.html",
+    "local": "Tarefas individuais, troca 8",
+    "antigo": "\"Decidam o símbolo de hoje",
+    "novo": "\"Decide o símbolo de hoje",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m7/guia-da-tarefa-m7/index.html",
+    "local": "Tarefas individuais, troca 9",
+    "antigo": "Escrevam a versão com a mesma estrutura; citem dois versos do original como modelo.",
+    "novo": "Escreve a versão com a mesma estrutura; cita dois versos do original como modelo.",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m7/guia-da-tarefa-m7/index.html",
+    "local": "Tarefas individuais, troca 10",
+    "antigo": "Gravem a leitura num minuto; registem os créditos (quem fez o quê).",
+    "novo": "Grava a leitura num minuto.",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m7/guia-da-tarefa-m7/index.html",
+    "local": "Tarefas individuais, troca 11",
+    "antigo": "O texto com os versos de modelo, o áudio e os créditos, num só envio por grupo.",
+    "novo": "O texto com os versos de modelo e o áudio, num só envio.",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m7/guia-da-tarefa-m7/index.html",
+    "local": "Tarefas individuais, troca 12",
+    "antigo": "Escolham um poema da Mensagem e façam a sua versão para hoje",
+    "novo": "Escolhe um poema da Mensagem e faz a tua versão para hoje",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m7/guia-da-tarefa-m7/index.html",
+    "local": "Tarefas individuais, troca 13",
+    "antigo": "dois versos dele citados como modelo, a gravação da leitura (um minuto) e os créditos (quem fez o quê).",
+    "novo": "dois versos dele citados como modelo e a gravação da leitura (um minuto).",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m7/guia-da-tarefa-m7/index.html",
+    "local": "Tarefas individuais, troca 14",
+    "antigo": "M7_Extra_Mensagem.m4a. Uma entrega por grupo.",
+    "novo": "M7_Extra_Mensagem.m4a. Entrega individual.",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m7/guia-da-tarefa-m7/index.html",
+    "local": "Tarefas individuais, troca 15",
+    "antigo": "são símbolos, não pessoas; o texto é vosso.",
+    "novo": "são símbolos, não pessoas; o texto é teu.",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m7/guia-da-tarefa-m7/index.html",
+    "local": "Tarefas individuais, troca 16",
+    "antigo": "{\"nome\":\"Forma, leitura e grupo\",\"niveis\":[\"12 a 16 versos ou 150 a 180 palavras; leitura de um minuto, percetível; créditos\",\"limite ou leitura com um desvio\",\"sem leitura, ou limite muito falhado\",\"sem áudio nem créditos\"]",
+    "novo": "{\"nome\":\"Forma e leitura\",\"niveis\":[\"12 a 16 versos ou 150 a 180 palavras; leitura de um minuto, percetível\",\"limite ou leitura com um desvio\",\"sem leitura, ou limite muito falhado\",\"sem leitura nem texto completo\"]",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m8/portefolio-do-modulo-m8/index.html",
+    "local": "Tarefas individuais, troca 1",
+    "antigo": "O produto, ou a ligação, e uma linha: o que fiz, o que corrigi depois da devolução. Nos trabalhos de grupo, o responsável carrega o produto; os outros põem a ligação e os créditos próprios.</div>",
+    "novo": "O produto, ou a ligação, e uma linha: o que fiz, o que corrigi depois da devolução.</div>",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m9/guia-da-tarefa-m9/index.html",
+    "local": "Tarefas individuais, troca 1",
+    "antigo": "<b>Extra. Os que carregaram a pedra</b><span>em grupo; duas aulas</span>",
+    "novo": "<b>Extra. Os que carregaram a pedra</b><span>individual; duas aulas</span>",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m9/guia-da-tarefa-m9/index.html",
+    "local": "Tarefas individuais, troca 2",
+    "antigo": "\"titulo\":\"Os que carregaram a pedra\",\"quem\":\"em grupo\",\"grupo\":true",
+    "novo": "\"titulo\":\"Os que carregaram a pedra\",\"quem\":\"individual\",\"grupo\":false",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m9/guia-da-tarefa-m9/index.html",
+    "local": "Tarefas individuais, troca 3",
+    "antigo": "\"Releiam o capítulo da pedra e copiem os nomes",
+    "novo": "\"Relê o capítulo da pedra e copia os nomes",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m9/guia-da-tarefa-m9/index.html",
+    "local": "Tarefas individuais, troca 4",
+    "antigo": "\"Decidam o produto e o que vai mostrar",
+    "novo": "\"Decide o produto e o que vai mostrar",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m9/guia-da-tarefa-m9/index.html",
+    "local": "Tarefas individuais, troca 5",
+    "antigo": "\"Façam o produto; cada escolha de forma",
+    "novo": "\"Faz o produto; cada escolha de forma",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m9/guia-da-tarefa-m9/index.html",
+    "local": "Tarefas individuais, troca 6",
+    "antigo": "Apresentem à turma e entreguem os créditos, com quem fez o quê.",
+    "novo": "Apresenta à turma e entrega os créditos.",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m9/guia-da-tarefa-m9/index.html",
+    "local": "Tarefas individuais, troca 7",
+    "antigo": "a fundamentação e os créditos. Uma entrega por grupo.",
+    "novo": "a fundamentação e os créditos. Entrega individual.",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m9/guia-da-tarefa-m9/index.html",
+    "local": "Tarefas individuais, troca 8",
+    "antigo": "Deem nome aos anónimos do Memorial do Convento num produto do vosso curso",
+    "novo": "Dá nome aos anónimos do Memorial do Convento num produto do teu curso",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m9/guia-da-tarefa-m9/index.html",
+    "local": "Tarefas individuais, troca 9",
+    "antigo": "M9_Tarefa1_Fundamentacao.pdf. Uma entrega por grupo.",
+    "novo": "M9_Tarefa1_Fundamentacao.pdf. Entrega individual.",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m9/guia-da-tarefa-m9/index.html",
+    "local": "Tarefas individuais, troca 10",
+    "antigo": "Apresentação à turma; créditos; todos fizeram alguma coisa.",
+    "novo": "Apresentação à turma; créditos.",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m9/guia-da-tarefa-m9/index.html",
+    "local": "Tarefas individuais, troca 11",
+    "antigo": "\"7 minutos; todos falam; uma objeção prevista e respondida\"",
+    "novo": "\"7 minutos; uma objeção prevista e respondida\"",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m9/guia-da-tarefa-m9/index.html",
+    "local": "Tarefas individuais, troca 12",
+    "antigo": "\"lê-se do papel; fala um só\"",
+    "novo": "\"lê-se do papel\"",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m9/guia-da-tarefa-m9/index.html",
+    "local": "Tarefas individuais, troca 13",
+    "antigo": "{\"nome\":\"Processo e parte de cada um\",\"niveis\":[\"três grupos testados, crítica de outro grupo registada, memória descritiva individual com 100 a 150 palavras\"",
+    "novo": "{\"nome\":\"Processo e memória descritiva\",\"niveis\":[\"três grupos de anónimos testados, crítica de um colega registada, memória descritiva com 100 a 150 palavras\"",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m9/portefolio-do-modulo-m9/index.html",
+    "local": "Tarefas individuais, troca 1",
+    "antigo": "O produto, ou a ligação, e uma linha: o que fiz, o que corrigi depois da devolução. Nos trabalhos de grupo, o responsável carrega o produto; os outros põem a ligação e os créditos próprios.</div>",
+    "novo": "O produto, ou a ligação, e uma linha: o que fiz, o que corrigi depois da devolução.</div>",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "tarefas/m4-u1/index.html",
+    "local": "Tarefas individuais, troca 1",
+    "antigo": "apresentação individual de 3 a 4 minutos, ao teu grupo de quatro, com os grupos ao mesmo tempo.",
+    "novo": "apresentação individual de 3 a 4 minutos.",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "tarefas/m4-u3-discurso/index.html",
+    "local": "Tarefas individuais, troca 1",
+    "antigo": "apresentação individual de 2 minutos, ao teu grupo de quatro ou cinco, com os grupos ao mesmo tempo.",
+    "novo": "apresentação individual de 2 minutos.",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "tarefas/m7-u2/index.html",
+    "local": "Tarefas individuais, troca 1",
+    "antigo": "Apresenta a voz ao teu grupo em dois minutos, lê uma frase e responde a uma pergunta.",
+    "novo": "Apresenta a voz em dois minutos, lê uma frase e responde a uma pergunta.",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "tarefas/m7-u2/index.html",
+    "local": "Tarefas individuais, troca 2",
+    "antigo": "As apresentações fazem-se em pequenos grupos de 4 ou 5, todos ao mesmo tempo, com o docente a circular. Cada um regista no seu papel, numa linha, a pergunta que lhe fizeram e o que respondeu; essa linha entra nas fotografias.",
+    "novo": "A apresentação é individual. Regista no teu papel, numa linha, a pergunta que te fizeram e o que respondeste; essa linha entra nas fotografias.",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m3/index.html",
+    "local": "Tarefas individuais, troca 1",
+    "antigo": "<span class=\"f\">Em grupo, recria um objeto das navegações com duas histórias",
+    "novo": "<span class=\"f\">Recria um objeto das navegações com duas histórias",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m3/index.html",
+    "local": "Tarefas individuais, troca 2",
+    "antigo": "Como o grupo trabalha, por ordem:",
+    "novo": "Como trabalhas, por ordem:",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m3/index.html",
+    "local": "Tarefas individuais, troca 3",
+    "antigo": "\"Mostrar o protótipo a outro grupo\"",
+    "novo": "\"Mostrar o protótipo a um colega\"",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m3/index.html",
+    "local": "Tarefas individuais, troca 4",
+    "antigo": "\"p\":\"Quantos objetos candidatos investiga o grupo antes de escolher um?\",\"frase\":\"O grupo investiga [1] objetos candidatos",
+    "novo": "\"p\":\"Quantos objetos candidatos investigas antes de escolher um?\",\"frase\":\"Investigas [1] objetos candidatos",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m3/index.html",
+    "local": "Tarefas individuais, troca 5",
+    "antigo": "\"o\":[\"Ao docente\",\"Aos autores de um manual\",\"A outro grupo\"],\"c\":2,\"f\":\"A outro grupo: «Protótipo mostrado a outro grupo» é o terceiro passo do processo.\"",
+    "novo": "\"o\":[\"Ao docente\",\"Aos autores de um manual\",\"A um colega\"],\"c\":2,\"f\":\"A um colega: «Protótipo mostrado a um colega» é o terceiro passo do processo.\"",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m4/index.html",
+    "local": "Tarefas individuais, troca 1",
+    "antigo": "guião em papel, apresentações em pequenos grupos ao mesmo tempo e fotografias no Teams.",
+    "novo": "guião em papel, apresentação individual e fotografias no Teams.",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m4/index.html",
+    "local": "Tarefas individuais, troca 2",
+    "antigo": "discurso em papel, apresentações em pequenos grupos ao mesmo tempo e fotografias no Teams.",
+    "novo": "discurso em papel, apresentação individual e fotografias no Teams.",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m6/index.html",
+    "local": "Tarefas individuais, troca 1",
+    "antigo": "<span class=\"f\">Em grupo, refaz o percurso do poema a partir do Cais do Sodré",
+    "novo": "<span class=\"f\">Refaz o percurso do poema a partir do Cais do Sodré",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m6/index.html",
+    "local": "Tarefas individuais, troca 2",
+    "antigo": "aqui explica-se uma escolha do próprio grupo: verso, imagem e ligação.",
+    "novo": "aqui explicas uma escolha tua: verso, imagem e ligação.",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m6/index.html",
+    "local": "Tarefas individuais, troca 3",
+    "antigo": "(I), o grupo inventa um corredor apertado e som irregular. Como distingue a sua proposta da informação do verso?",
+    "novo": "(I), inventas um corredor apertado e som irregular. Como distingues a tua proposta da informação do verso?",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m6/index.html",
+    "local": "Tarefas individuais, troca 4",
+    "antigo": "O percurso pode demorar o tempo que o grupo quiser, desde que seja seguro.",
+    "novo": "O percurso pode demorar o tempo que quiseres, desde que seja seguro.",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m6/index.html",
+    "local": "Tarefas individuais, troca 5",
+    "antigo": "que explica uma escolha do grupo?",
+    "novo": "que explica uma escolha tua?",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m6/index.html",
+    "local": "Tarefas individuais, troca 6",
+    "antigo": "(I): o grupo quer criar incómodo sem mostrar gás.",
+    "novo": "(I): queres criar incómodo sem mostrar gás.",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m7/index.html",
+    "local": "Tarefas individuais, troca 1",
+    "antigo": "síntese integrada, apresentações em pequenos grupos ao mesmo tempo e fotografias no Teams.",
+    "novo": "síntese integrada, apresentação individual e fotografias no Teams.",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m2/licao-m2-f09/index.html",
+    "local": "Tarefas individuais, troca 1",
+    "antigo": "O provérbio e o par asno/cavalo que escolheram (meio minuto). 2) O mapa: em que se transformou cada momento da farsa, e uma escolha de que se orgulham (dois minutos). 3) Uma dificuldade e como a resolveram (um minuto). 4) A resposta do grupo à pergunta do módulo: <b>o que é que escolheram mudar na vossa recontagem, e porquê?</b> (um minuto). Sobra meio minuto para uma pergunta da turma. Decidam antes quem fala em cada passo.</p>",
+    "novo": "O provérbio e o par asno/cavalo que escolheste (meio minuto). 2) O mapa: em que se transformou cada momento da farsa, e uma escolha de que te orgulhas (dois minutos). 3) Uma dificuldade e como a resolveste (um minuto). 4) A tua resposta à pergunta do módulo: <b>o que é que escolheste mudar na tua recontagem, e porquê?</b> (um minuto). Sobra meio minuto para uma pergunta da turma.</p>",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m2/licao-m2-f09/index.html",
+    "local": "Tarefas individuais, troca 2",
+    "antigo": "o efeito que o grupo se propôs conservar.",
+    "novo": "o efeito que te propuseste conservar.",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m2/licao-m2-f09/index.html",
+    "local": "Tarefas individuais, troca 3",
+    "antigo": "ordena a apresentação oral do grupo.",
+    "novo": "ordena a tua apresentação oral.",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m2/licao-m2-f09/index.html",
+    "local": "Tarefas individuais, troca 4",
+    "antigo": "\"Uma dificuldade e como a resolveram\"",
+    "novo": "\"Uma dificuldade e como a resolveste\"",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m2/licao-m2-f09/index.html",
+    "local": "Tarefas individuais, troca 5",
+    "antigo": "O grupo escolheu uma aplicação de encontros",
+    "novo": "Escolheste uma aplicação de encontros",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m2/licao-m2-f09/index.html",
+    "local": "Tarefas individuais, troca 6",
+    "antigo": "Neste ensaio, o grupo quer comparar duas marcações",
+    "novo": "Neste ensaio, queres comparar duas marcações",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m2/licao-m2-f09/index.html",
+    "local": "Tarefas individuais, troca 7",
+    "antigo": "\"Um tema do grupo, creditado\"",
+    "novo": "\"Um tema próprio, creditado\"",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m2/painel-m2-f09/index.html",
+    "local": "Tarefas individuais, troca 1",
+    "antigo": "\"Uma dificuldade e como a resolveram\"",
+    "novo": "\"Uma dificuldade e como a resolveste\"",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m2/painel-m2-f09/index.html",
+    "local": "Tarefas individuais, troca 2",
+    "antigo": "O grupo escolheu uma aplicação de encontros",
+    "novo": "Escolheste uma aplicação de encontros",
+    "ocorrencias": 2,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m2/painel-m2-f09/index.html",
+    "local": "Tarefas individuais, troca 3",
+    "antigo": "Neste ensaio, o grupo quer comparar duas marcações",
+    "novo": "Neste ensaio, queres comparar duas marcações",
+    "ocorrencias": 2,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m2/painel-m2-f09/index.html",
+    "local": "Tarefas individuais, troca 4",
+    "antigo": "\"Um tema do grupo, creditado\"",
+    "novo": "\"Um tema próprio, creditado\"",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m2/index.html",
+    "local": "Tarefas individuais, troca 1",
+    "antigo": "o efeito que o grupo se propôs conservar.",
+    "novo": "o efeito que te propuseste conservar.",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m2/index.html",
+    "local": "Tarefas individuais, troca 2",
+    "antigo": "\"Uma dificuldade e como a resolveram\"",
+    "novo": "\"Uma dificuldade e como a resolveste\"",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m2/index.html",
+    "local": "Tarefas individuais, troca 3",
+    "antigo": "O grupo escolheu uma aplicação de encontros",
+    "novo": "Escolheste uma aplicação de encontros",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m2/index.html",
+    "local": "Tarefas individuais, troca 4",
+    "antigo": "{\"t\":\"vf\",\"p\":\"Quem não aparece no vídeo não precisa de função registada no grupo.\",\"v\":false,\"f\":\"Falso: todos os elementos têm função registada; é regra de produção e entra no diário de grupo.\",\"_l\":\"m2-f09\"}",
+    "novo": "{\"t\":\"vf\",\"p\":\"Quem aparece no vídeo não precisa de ter autorizado a filmagem.\",\"v\":false,\"f\":\"Falso: filma só quem autorizou; é regra de produção da escola.\",\"_l\":\"m2-f09\"}",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m3/licao-m3-f04/index.html",
+    "local": "Tarefas individuais, troca 1",
+    "antigo": "protótipo mostrado a outro grupo, etiqueta revista duas vezes.",
+    "novo": "protótipo mostrado a um colega, etiqueta revista duas vezes.",
+    "ocorrencias": 2,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m3/licao-m3-f04/index.html",
+    "local": "Tarefas individuais, troca 2",
+    "antigo": "\"A divisão do trabalho não é a pergunta; a reflexão olha",
+    "novo": "\"A ajuda de um colega não é a pergunta; a reflexão olha",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m3/licao-m3-f04/index.html",
+    "local": "Tarefas individuais, troca 3",
+    "antigo": "Recriem-no com olhar crítico",
+    "novo": "Recria-o com olhar crítico",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m3/licao-m3-f04/index.html",
+    "local": "Tarefas individuais, troca 4",
+    "antigo": "Como o grupo trabalha, por ordem:",
+    "novo": "Como trabalhas, por ordem:",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m3/licao-m3-f04/index.html",
+    "local": "Tarefas individuais, troca 5",
+    "antigo": "\"Mostrar o protótipo a outro grupo\"",
+    "novo": "\"Mostrar o protótipo a um colega\"",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m3/licao-m3-f04/index.html",
+    "local": "Tarefas individuais, troca 6",
+    "antigo": "\"Que parte não conseguimos confirmar\"",
+    "novo": "\"Que parte não consegui confirmar\"",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m3/licao-m3-f04/index.html",
+    "local": "Tarefas individuais, troca 7",
+    "antigo": "\"Que parte ficou entregue a outro grupo\"",
+    "novo": "\"Que parte ficou entregue a um colega\"",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m3/licao-m3-f04/index.html",
+    "local": "Tarefas individuais, troca 8",
+    "antigo": "**O que não conseguimos confirmar**, e o que fizemos com isso.",
+    "novo": "**O que não consegui confirmar**, e o que fiz com isso.",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m3/painel-m3-f04/index.html",
+    "local": "Tarefas individuais, troca 1",
+    "antigo": "Recriem-no com olhar crítico",
+    "novo": "Recria-o com olhar crítico",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m3/painel-m3-f04/index.html",
+    "local": "Tarefas individuais, troca 2",
+    "antigo": "Como o grupo trabalha, por ordem:",
+    "novo": "Como trabalhas, por ordem:",
+    "ocorrencias": 2,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m3/painel-m3-f04/index.html",
+    "local": "Tarefas individuais, troca 3",
+    "antigo": "\"Mostrar o protótipo a outro grupo\"",
+    "novo": "\"Mostrar o protótipo a um colega\"",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m3/painel-m3-f04/index.html",
+    "local": "Tarefas individuais, troca 4",
+    "antigo": "\"Que parte não conseguimos confirmar\"",
+    "novo": "\"Que parte não consegui confirmar\"",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m3/painel-m3-f04/index.html",
+    "local": "Tarefas individuais, troca 5",
+    "antigo": "\"Que parte ficou entregue a outro grupo\"",
+    "novo": "\"Que parte ficou entregue a um colega\"",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m3/painel-m3-f04/index.html",
+    "local": "Tarefas individuais, troca 6",
+    "antigo": "**O que não conseguimos confirmar**, e o que fizemos com isso.",
+    "novo": "**O que não consegui confirmar**, e o que fiz com isso.",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m6/licao-m6-f08/index.html",
+    "local": "Tarefas individuais, troca 1",
+    "antigo": "Extra sem nota, em grupo: quatro fotografias, uma por parte do poema,",
+    "novo": "Extra sem nota, individual: quatro fotografias, uma por parte do poema,",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m6/licao-m6-f08/index.html",
+    "local": "Tarefas individuais, troca 2",
+    "antigo": "Extra sem nota, em grupo, sete horas:",
+    "novo": "Extra sem nota, individual, sete horas:",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m6/licao-m6-f08/index.html",
+    "local": "Tarefas individuais, troca 3",
+    "antigo": "o corredor e o som são escolhas do grupo.",
+    "novo": "o corredor e o som são escolhas tuas.",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m6/licao-m6-f08/index.html",
+    "local": "Tarefas individuais, troca 4",
+    "antigo": "\"p2\":\"O que faz o grupo antes de filmar alguém que se reconhece?\"",
+    "novo": "\"p2\":\"O que fazes antes de filmar alguém que se reconhece?\"",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m6/licao-m6-f08/index.html",
+    "local": "Tarefas individuais, troca 5",
+    "antigo": "Que nome tem o texto em que cada um explica o verso, a imagem e a ligação?",
+    "novo": "Que nome tem o texto em que explicas o verso, a imagem e a ligação?",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m6/licao-m6-f08/index.html",
+    "local": "Tarefas individuais, troca 6",
+    "antigo": "aqui explica-se uma escolha do próprio grupo: verso, imagem e ligação.",
+    "novo": "aqui explicas uma escolha tua: verso, imagem e ligação.",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m6/licao-m6-f08/index.html",
+    "local": "Tarefas individuais, troca 7",
+    "antigo": "(I), o grupo inventa um corredor apertado e som irregular. Como distingue a sua proposta da informação do verso?",
+    "novo": "(I), inventas um corredor apertado e som irregular. Como distingues a tua proposta da informação do verso?",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m6/licao-m6-f08/index.html",
+    "local": "Tarefas individuais, troca 8",
+    "antigo": "Em vez das quatro fotografias ou da curta, o grupo pode usar o formato do seu curso.",
+    "novo": "Em vez das quatro fotografias ou da curta, podes usar o formato do teu curso.",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m6/licao-m6-f08/index.html",
+    "local": "Tarefas individuais, troca 9",
+    "antigo": "Que colunas tem o guião que o grupo preenche parte a parte?",
+    "novo": "Que colunas tem o guião que preenches parte a parte?",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m6/licao-m6-f08/index.html",
+    "local": "Tarefas individuais, troca 10",
+    "antigo": "Toca na condição para usar música que não é do grupo.",
+    "novo": "Toca na condição para usar música que não é tua.",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m6/licao-m6-f08/index.html",
+    "local": "Tarefas individuais, troca 11",
+    "antigo": "Um grupo escolhe uma fotografia «bonita», mas não explica",
+    "novo": "Um aluno escolhe uma fotografia «bonita», mas não explica",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m6/licao-m6-f08/index.html",
+    "local": "Tarefas individuais, troca 12",
+    "antigo": "O percurso pode demorar o tempo que o grupo quiser, desde que seja seguro.",
+    "novo": "O percurso pode demorar o tempo que quiseres, desde que seja seguro.",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m6/licao-m6-f08/index.html",
+    "local": "Tarefas individuais, troca 13",
+    "antigo": "que explica uma escolha do grupo?",
+    "novo": "que explica uma escolha tua?",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m6/licao-m6-f08/index.html",
+    "local": "Tarefas individuais, troca 14",
+    "antigo": "(I): o grupo quer criar incómodo sem mostrar gás.",
+    "novo": "(I): queres criar incómodo sem mostrar gás.",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m6/licao-m6-f08/index.html",
+    "local": "Tarefas individuais, troca 15",
+    "antigo": "Em cada parte do guião registam o [1] escolhido, o que mostram hoje e [2].",
+    "novo": "Em cada parte do guião registas o [1] escolhido, o que mostras hoje e [2].",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m6/licao-m6-f08/index.html",
+    "local": "Tarefas individuais, troca 16",
+    "antigo": "o que mostramos hoje, **luz, hora e som**.",
+    "novo": "o que mostras hoje, **luz, hora e som**.",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m6/licao-m6-f08/index.html",
+    "local": "Tarefas individuais, troca 17",
+    "antigo": "os sons que não são do teu grupo.",
+    "novo": "os sons que não são teus.",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m6/licao-m6-f08/index.html",
+    "local": "Tarefas individuais, troca 18",
+    "antigo": "«Livres de direitos»: ou são do grupo, ou podem usar-se sem autorização.",
+    "novo": "«Livres de direitos»: ou são teus, ou podem usar-se sem autorização.",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m6/licao-m6-f08/index.html",
+    "local": "Tarefas individuais, troca 19",
+    "antigo": "Exemplo inventado: o grupo escolhe uma fotografia",
+    "novo": "Exemplo inventado: escolhes uma fotografia",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m6/painel-m6-f08/index.html",
+    "local": "Tarefas individuais, troca 1",
+    "antigo": "O percurso pode demorar o tempo que o grupo quiser, desde que seja seguro.",
+    "novo": "O percurso pode demorar o tempo que quiseres, desde que seja seguro.",
+    "ocorrencias": 2,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m6/painel-m6-f08/index.html",
+    "local": "Tarefas individuais, troca 2",
+    "antigo": "que explica uma escolha do grupo?",
+    "novo": "que explica uma escolha tua?",
+    "ocorrencias": 2,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m6/painel-m6-f08/index.html",
+    "local": "Tarefas individuais, troca 3",
+    "antigo": "(I): o grupo quer criar incómodo sem mostrar gás.",
+    "novo": "(I): queres criar incómodo sem mostrar gás.",
+    "ocorrencias": 2,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m6/painel-m6-f08/index.html",
+    "local": "Tarefas individuais, troca 4",
+    "antigo": "Em cada parte do guião registam o [1] escolhido, o que mostram hoje e [2].",
+    "novo": "Em cada parte do guião registas o [1] escolhido, o que mostras hoje e [2].",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m6/painel-m6-f08/index.html",
+    "local": "Tarefas individuais, troca 5",
+    "antigo": "o que mostramos hoje, **luz, hora e som**.",
+    "novo": "o que mostras hoje, **luz, hora e som**.",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m6/painel-m6-f08/index.html",
+    "local": "Tarefas individuais, troca 6",
+    "antigo": "os sons que não são do teu grupo.",
+    "novo": "os sons que não são teus.",
+    "ocorrencias": 2,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m6/painel-m6-f08/index.html",
+    "local": "Tarefas individuais, troca 7",
+    "antigo": "«Livres de direitos»: ou são do grupo, ou podem usar-se sem autorização.",
+    "novo": "«Livres de direitos»: ou são teus, ou podem usar-se sem autorização.",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m6/painel-m6-f08/index.html",
+    "local": "Tarefas individuais, troca 8",
+    "antigo": "Exemplo inventado: o grupo escolhe uma fotografia",
+    "novo": "Exemplo inventado: escolhes uma fotografia",
+    "ocorrencias": 2,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m9/licao-m9-f05/index.html",
+    "local": "Tarefas individuais, troca 1",
+    "antigo": "E vocês, com as ferramentas do curso?",
+    "novo": "E tu, com as ferramentas do curso?",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m9/licao-m9-f05/index.html",
+    "local": "Tarefas individuais, troca 2",
+    "antigo": "Em grupo, um produto do vosso curso faz o mesmo por anónimos,",
+    "novo": "Um produto do teu curso faz o mesmo por anónimos,",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m9/licao-m9-f05/index.html",
+    "local": "Tarefas individuais, troca 3",
+    "antigo": "Em grupo, um produto do vosso curso faz o mesmo por um grupo de anónimos,",
+    "novo": "Um produto do teu curso faz o mesmo por um grupo de anónimos,",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m9/licao-m9-f05/index.html",
+    "local": "Tarefas individuais, troca 4",
+    "antigo": "o vosso produto faz o mesmo.</p>",
+    "novo": "o teu produto faz o mesmo.</p>",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m9/licao-m9-f05/index.html",
+    "local": "Tarefas individuais, troca 5",
+    "antigo": "Como o _Memorial_, o vosso produto dá nome e voz",
+    "novo": "Como o _Memorial_, o teu produto dá nome e voz",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m9/licao-m9-f05/index.html",
+    "local": "Tarefas individuais, troca 6",
+    "antigo": "Além do produto do grupo, há um texto curto.",
+    "novo": "Além do produto, há um texto curto.",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m9/licao-m9-f05/index.html",
+    "local": "Tarefas individuais, troca 7",
+    "antigo": "\"A memória descritiva não é do grupo: é individual, e cada um conta o que fez («O essencial»).\"",
+    "novo": "\"A crítica de um colega ajuda a rever o produto; a memória descritiva é tua e conta o que fizeste («O essencial»).\"",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m9/licao-m9-f05/index.html",
+    "local": "Tarefas individuais, troca 8",
+    "antigo": "A memória descritiva, que é tua e não do grupo, tem que extensão?",
+    "novo": "A memória descritiva que acompanha o produto tem que extensão?",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m9/licao-m9-f05/index.html",
+    "local": "Tarefas individuais, troca 9",
+    "antigo": "no produto do teu grupo, e o que o permitiria?",
+    "novo": "no teu produto, e o que o permitiria?",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m9/licao-m9-f05/index.html",
+    "local": "Tarefas individuais, troca 10",
+    "antigo": "os que o romance e o vosso produto querem lembrar?",
+    "novo": "os que o romance e o teu produto querem lembrar?",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m9/licao-m9-f05/index.html",
+    "local": "Tarefas individuais, troca 11",
+    "antigo": "\"palavras\":[\"O\",\"produto\",\"é do\",\"grupo;\",\"a\",\"memória\",\"descritiva\",\"é tua.\"],\"f\":\"«O produto é do grupo; a memória descritiva é tua»: duas frases paralelas, o ponto e vírgula ao meio, e «tua» a fechar.\"",
+    "novo": "\"palavras\":[\"O\",\"produto\",\"dá nome\",\"e voz;\",\"a\",\"memória\",\"descritiva\",\"explica-o.\"],\"f\":\"«O produto dá nome e voz; a memória descritiva explica-o»: duas frases paralelas, o ponto e vírgula ao meio, e «explica-o» a fechar.\"",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m9/licao-m9-f05/index.html",
+    "local": "Tarefas individuais, troca 12",
+    "antigo": "O produto do grupo faz por um grupo de anónimos",
+    "novo": "O teu produto faz por um grupo de anónimos",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m9/licao-m9-f05/index.html",
+    "local": "Tarefas individuais, troca 13",
+    "antigo": "O produto do grupo tem [1] citações",
+    "novo": "O teu produto tem [1] citações",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m9/licao-m9-f05/index.html",
+    "local": "Tarefas individuais, troca 14",
+    "antigo": "de apresentação; cronometra com o teu grupo.",
+    "novo": "de apresentação; cronometra o teu ensaio.",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m9/licao-m9-f05/index.html",
+    "local": "Tarefas individuais, troca 15",
+    "antigo": "\"Um texto individual sobre o que cada um fez\"",
+    "novo": "\"Um texto teu sobre o que fizeste no produto\"",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m9/licao-m9-f05/index.html",
+    "local": "Tarefas individuais, troca 16",
+    "antigo": "\"Um texto escrito pelo grupo sobre o produto\"",
+    "novo": "\"A crítica que um colega fez ao teu produto\"",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m9/licao-m9-f05/index.html",
+    "local": "Tarefas individuais, troca 17",
+    "antigo": "É tua, não do grupo: **100 a 150 palavras**",
+    "novo": "É tua: **100 a 150 palavras**",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m9/licao-m9-f05/index.html",
+    "local": "Tarefas individuais, troca 18",
+    "antigo": "**100 a 150 palavras**: a memória é individual; o produto é do grupo.",
+    "novo": "**100 a 150 palavras**: a memória descritiva é curta e acompanha o produto.",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m9/licao-m9-f05/index.html",
+    "local": "Tarefas individuais, troca 19",
+    "antigo": "o narrador e o vosso produto lembram.",
+    "novo": "o narrador e o teu produto lembram.",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m9/licao-m9-f05/index.html",
+    "local": "Tarefas individuais, troca 20",
+    "antigo": "\"O vosso produto\"",
+    "novo": "\"O teu produto\"",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m9/painel-m9-f05/index.html",
+    "local": "Tarefas individuais, troca 1",
+    "antigo": "O produto do grupo faz por um grupo de anónimos",
+    "novo": "O teu produto faz por um grupo de anónimos",
+    "ocorrencias": 2,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m9/painel-m9-f05/index.html",
+    "local": "Tarefas individuais, troca 2",
+    "antigo": "O produto do grupo tem [1] citações",
+    "novo": "O teu produto tem [1] citações",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m9/painel-m9-f05/index.html",
+    "local": "Tarefas individuais, troca 3",
+    "antigo": "de apresentação; cronometra com o teu grupo.",
+    "novo": "de apresentação; cronometra o teu ensaio.",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m9/painel-m9-f05/index.html",
+    "local": "Tarefas individuais, troca 4",
+    "antigo": "\"Um texto individual sobre o que cada um fez\"",
+    "novo": "\"Um texto teu sobre o que fizeste no produto\"",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m9/painel-m9-f05/index.html",
+    "local": "Tarefas individuais, troca 5",
+    "antigo": "\"Um texto escrito pelo grupo sobre o produto\"",
+    "novo": "\"A crítica que um colega fez ao teu produto\"",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m9/painel-m9-f05/index.html",
+    "local": "Tarefas individuais, troca 6",
+    "antigo": "É tua, não do grupo: **100 a 150 palavras**",
+    "novo": "É tua: **100 a 150 palavras**",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m9/painel-m9-f05/index.html",
+    "local": "Tarefas individuais, troca 7",
+    "antigo": "**100 a 150 palavras**: a memória é individual; o produto é do grupo.",
+    "novo": "**100 a 150 palavras**: a memória descritiva é curta e acompanha o produto.",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m9/painel-m9-f05/index.html",
+    "local": "Tarefas individuais, troca 8",
+    "antigo": "o narrador e o vosso produto lembram.",
+    "novo": "o narrador e o teu produto lembram.",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m9/painel-m9-f05/index.html",
+    "local": "Tarefas individuais, troca 9",
+    "antigo": "\"O vosso produto\"",
+    "novo": "\"O teu produto\"",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m9/painel-m9-f05/index.html",
+    "local": "Tarefas individuais, troca 10",
+    "antigo": "\"25\":{\"f\":\"«O produto é do grupo; a memória descritiva é tua»: duas frases paralelas, o ponto e vírgula ao meio, e «tua» a fechar.\",\"palavras\":[\"produto\",\"memória\",\"grupo;\",\"é do\",\"é tua.\",\"a\",\"O\",\"descritiva\"]}",
+    "novo": "\"25\":{\"f\":\"«O produto dá nome e voz; a memória descritiva explica-o»: duas frases paralelas, o ponto e vírgula ao meio, e «explica-o» a fechar.\",\"palavras\":[\"produto\",\"memória\",\"e voz;\",\"dá nome\",\"explica-o.\",\"a\",\"O\",\"descritiva\"]}",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m9/index.html",
+    "local": "Tarefas individuais, troca 1",
+    "antigo": "\"A memória descritiva não é do grupo: é individual, e cada um conta o que fez («O essencial»).\"",
+    "novo": "\"A crítica de um colega ajuda a rever o produto; a memória descritiva é tua e conta o que fizeste («O essencial»).\"",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m9/index.html",
+    "local": "Tarefas individuais, troca 2",
+    "antigo": "no produto do teu grupo, e o que o permitiria?",
+    "novo": "no teu produto, e o que o permitiria?",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m9/index.html",
+    "local": "Tarefas individuais, troca 3",
+    "antigo": "O produto do grupo tem [1] citações",
+    "novo": "O teu produto tem [1] citações",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m9/index.html",
+    "local": "Tarefas individuais, troca 4",
+    "antigo": "de apresentação; cronometra com o teu grupo.",
+    "novo": "de apresentação; cronometra o teu ensaio.",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m9/index.html",
+    "local": "Tarefas individuais, troca 5",
+    "antigo": "\"Um texto individual sobre o que cada um fez\"",
+    "novo": "\"Um texto teu sobre o que fizeste no produto\"",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m9/index.html",
+    "local": "Tarefas individuais, troca 6",
+    "antigo": "\"Um texto escrito pelo grupo sobre o produto\"",
+    "novo": "\"A crítica que um colega fez ao teu produto\"",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m9/index.html",
+    "local": "Tarefas individuais, troca 7",
+    "antigo": "<span class=\"f\">Com o teu grupo, dá forma e voz a anónimos num produto do teu curso",
+    "novo": "<span class=\"f\">Dá forma e voz a anónimos num produto do teu curso",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m9/index.html",
+    "local": "Tarefas individuais, troca 8",
+    "antigo": "\"f\":\"É tua, não do grupo: 100 a 150 palavras",
+    "novo": "\"f\":\"É tua: 100 a 150 palavras",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m9/licao-m9-f07/index.html",
+    "local": "Tarefas individuais, troca 1",
+    "antigo": "\"À memória descritiva do grupo\"",
+    "novo": "\"À memória descritiva da tarefa\"",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m9/painel-m9-f07/index.html",
+    "local": "Tarefas individuais, troca 1",
+    "antigo": "\"À memória descritiva do grupo\"",
+    "novo": "\"À memória descritiva da tarefa\"",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m4/aulas/aula-08/index.html",
+    "local": "Tarefas individuais, troca 1",
+    "antigo": "guarda a versão anterior da encomenda, em grupo e com PDF: não se projeta",
+    "novo": "guarda a versão anterior da encomenda, com PDF: não se projeta",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "m6/m6-cesario-noite-inteira/index.html",
+    "local": "Tarefas individuais, troca 1",
+    "antigo": "<p>Imagina um grupo que refaz o percurso do poema com uma câmara",
+    "novo": "<p>Imagina alguém que refaz o percurso do poema com uma câmara",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  },
+  {
+    "ficheiro": "assets/atlas-editorial.js",
+    "local": "Tarefas individuais, troca 1",
+    "antigo": "Em grupo, inventem uma saudação breve com palavras ou gestos e expliquem uma escolha coletiva.",
+    "novo": "Inventa uma saudação breve com palavras ou gestos e explica uma das tuas escolhas.",
+    "ocorrencias": 1,
+    "achado": "Pedido do docente de 02/11/2026: não há tarefas de grupo; a tarefa fica igual, mas individual."
+  }
+]

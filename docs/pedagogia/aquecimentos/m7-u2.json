@@ -247,7 +247,7 @@
   {
    "t": "ordenar",
    "g": "10",
-   "p": "Põe por ordem os teus dois minutos de apresentação ao grupo.",
+   "p": "Põe por ordem os teus dois minutos de apresentação.",
    "p2": "Apresentar a voz, prová-la, responder: ordena os passos dos dois minutos.",
    "passos": [
     "Dizes quem é a voz e em que ideia discorda de ti",
@@ -255,8 +255,8 @@
     "Explicas que escolha de linguagem a frase lida mostra",
     "Respondes à pergunta que te fizerem, com o teu texto ou uma fonte"
    ],
-   "f": "Apresentar não é ler o perfil: a grelha dá menos pontos a quem «lê o perfil do princípio ao fim». No teu grupo de 4 ou 5, diz quem é a voz, prova-a com uma frase lida e responde com o texto ou uma fonte.",
-   "fe": "Primeiro a voz e a discordância, depois a frase lida e o que ela mostra; a pergunta vem de quem te ouve no grupo, por isso fecha."
+   "f": "Apresentar não é ler o perfil: a grelha dá menos pontos a quem «lê o perfil do princípio ao fim». Na apresentação, diz quem é a voz, prova-a com uma frase lida e responde com o texto ou uma fonte.",
+   "fe": "Primeiro a voz e a discordância, depois a frase lida e o que ela mostra; a pergunta vem de quem te ouve, por isso fecha."
   },
   {
    "t": "ler",

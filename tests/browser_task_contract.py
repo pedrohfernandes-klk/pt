@@ -1,27 +1,44 @@
-"""Shared browser assertions for the authorised M1/M4/M7 closure-lesson model.
+"""Shared browser assertions for the authorised M1 to M7 closure-lesson model.
 
 Imported by the existing CI entry points; this file never launches a browser.
 """
+from pathlib import Path
 from urllib.parse import urljoin
+ROOT = Path(__file__).resolve().parents[1]
 import re
 # 27/10/2026 (passagem do GPT, tarefas por unidade): o M2 passa ao mesmo modelo, com duas aulas de tarefa.
-TASK_MODULES = {1, 2, 4, 7}
+# 31/10/2026: inclui as seis tarefas aprovadas do M3, M5 e M6.
+# 01/11/2026: os nove módulos fecham com aulas de tarefa.
+TASK_MODULES = set(range(1,10))
 TASK_SLUGS = {1: ['m1-u1', 'm1-u2'],
               2: ['m2-u1', 'm2-u2'],
               4: ['m4-u1', 'm4-u2', 'm4-u3-discurso'],
               7: ['m7-u1', 'm7-u2', 'm7-u3']}
+# 31/10/2026: inclui as seis tarefas aprovadas do M3, M5 e M6.
+TASK_SLUGS.update({3: ['m3-u1', 'm3-u2'], 5: ['m5-u1', 'm5-u2'], 6: ['m6-u1', 'm6-u2']})
 # 28/10/2026 (decisão do docente, PR #122): o formato com aquecimento e tema à escolha cobre o M2 (piloto) e o M1.
 # Estas páginas têm de o declarar; nenhuma passa pelo contrato compacto por omissão.
 # 29/10/2026 (decisão do docente): a M7-U3 entra no formato com escolha, com o aquecimento em cartões no lugar das
 # máquinas em papel (#aquecer[data-task-warm="cartoes"]): o cartão «Aquecer» liga à página dos cartões e a única pergunta
 # da tarefa é a opcional («1»).
-CHOICE_SLUGS = {'m1-u1', 'm1-u2', 'm2-u1', 'm2-u2', 'm7-u3'}
+# 31/10/2026: inclui as seis tarefas aprovadas do M3, M5 e M6.
+# 01/11/2026: inclui as quatro tarefas do M8 e do M9.
+TASK_SLUGS.update({8: ["m8-u1","m8-u2"], 9: ["m9-u1","m9-u2"]})
+CHOICE_SLUGS = {'m5-u1', 'm9-u2', 'm5-u2', 'm1-u1', 'm6-u1', 'm7-u3', 'm1-u2', 'm3-u2', 'm6-u2', 'm8-u1', 'm8-u2', 'm9-u1', 'm2-u1', 'm3-u1', 'm2-u2'}
 WARM_CARDS = '#aquecer[data-task-warm="cartoes"]'
 
 def learning_storage(page):
     return page.evaluate("""() => Object.fromEntries(Object.keys(localStorage)
       .filter(k=>/^(licao-|percurso-|desafio-|epi-pt-)/.test(k))
       .sort().map(k=>[k,localStorage.getItem(k)]))""")
+
+def open_route_unit(page, number):
+    # 01/11/2026: as unidades Cartaz usam dobras nativas no telemóvel.
+    fold = page.locator(f'details[data-cz-unit="{number}"]')
+    if fold.count() and not fold.evaluate('e=>e.open'):
+        fold.locator(':scope > summary').press('Enter')
+        assert fold.evaluate('e=>e.open')
+
 
 def assert_task_route(page, module, units):
     assert module in TASK_MODULES
@@ -30,7 +47,9 @@ def assert_task_route(page, module, units):
     assert not page.locator('#arquivo-percurso').is_visible()
     assert page.locator('button[data-desafio]:visible').count() == 0
     assert page.locator('.module-links-support:visible, .extra-cidade:visible, .cz-linha').count() == 0
-    assert page.locator('[data-cartaz]').count() == 0
+    # 01/11/2026: exclui o carrossel antigo, conservando a opção explícita pelo Cartaz.
+    assert page.locator('[data-cartaz]').count() == 1
+    assert page.locator('main.cz-index[data-cartaz="2"]').count() == 1
     assert page.locator('.route-teacher-tools').count() == 1
     assert not page.locator('.route-teacher-tools').evaluate('e=>e.open')
     assert page.locator('a[href^="#sintese-unidade"], a[href^="#desafio-unidade"]').count() == 0
@@ -38,6 +57,7 @@ def assert_task_route(page, module, units):
     hrefs = []
     for unit, slug in zip(units, TASK_SLUGS[module]):
         n = unit['number']
+        open_route_unit(page, n)
         section = page.locator(f'.unidade[data-u="{n}"]')
         assert section.locator('li[data-passo]').evaluate_all('(els)=>els.map(e=>e.dataset.passo)') == unit['steps']
         assert section.locator('[data-task-lesson]').count() == 1
@@ -54,6 +74,7 @@ def assert_task_route(page, module, units):
 def visit_task_from_route(page, module, number, expected_href):
     route_url = page.url
     before = learning_storage(page)
+    open_route_unit(page, number)
     page.locator(f'[data-task-lesson="{number}"] > a').click()
     page.wait_for_url('**/tarefas/' + TASK_SLUGS[module][number - 1] + '/')
     assert page.url == urljoin(route_url, expected_href)
@@ -246,7 +267,7 @@ def assert_reader_navigation(page):
 
 
 def responsive_task_matrix(browser, host):
-    """CI-only 8 tasks x 2 real viewports x 2 media schemes; no CSS-regex proxy."""
+    """CI-only 16 tasks x 2 real viewports x 2 media schemes; no CSS-regex proxy."""
     from urllib.parse import urlsplit, parse_qs
     for width in (390, 1366):
         for scheme in ('light', 'dark'):
@@ -261,9 +282,19 @@ def responsive_task_matrix(browser, host):
                     # The fixture server serves the checkout root; strip only this URL prefix.
                     def local(route):
                         u = urlsplit(route.request.url)
-                        response = route.fetch(url=host + u.path.removeprefix('/pt') +
-                                               ('?' + u.query if u.query else ''))
-                        route.fulfill(response=response)
+                        # 31/10/2026: servir os mesmos ficheiros sem uma segunda ligação HTTP.
+                        from urllib.parse import unquote
+                        import mimetypes
+                        asset = (ROOT / unquote(u.path.removeprefix('/pt/'))).resolve()
+                        if not asset.is_relative_to(ROOT.resolve()):
+                            route.fulfill(status=403, body='Forbidden')
+                            return
+                        if asset.is_dir():
+                            asset = asset / 'index.html'
+                        if asset.is_file():
+                            route.fulfill(path=str(asset), content_type=mimetypes.guess_type(str(asset))[0] or 'application/octet-stream')
+                        else:
+                            route.fulfill(status=404, body='Not found')
                     page.route(host + '/pt/**', local)
                     errors = []
                     page.on('pageerror', lambda e: errors.append(str(e)))

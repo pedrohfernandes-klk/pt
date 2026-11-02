@@ -8,7 +8,7 @@ import argparse
 from playwright.sync_api import sync_playwright
 from browser_m1_and_inventory import QuietHandler, new_page, ROOT
 from browser_m2_complete import respond
-from browser_task_contract import TASK_MODULES, assert_task_route, visit_task_from_route
+from browser_task_contract import TASK_MODULES, assert_task_route, visit_task_from_route, open_route_unit
 
 PLAN = json.loads((ROOT / 'docs/pedagogia/percursos-unidades-20261020.json').read_text('utf-8'))
 
@@ -56,7 +56,8 @@ def main():
                             assert set(captured['ids']).issubset(unit['lessons']), (m, n, captured)
                             # Inspect the full preserved input pool, not a probabilistic sample.
                             assert set(captured['bank']) == set(unit['lessons']), (m, n, captured)
-                            prefix = 'desafio-' if m == 4 else 'desafio-unidade-v2-'
+                            # 01/11/2026: M5, M6, M8 e M9 mantêm a chave do main (K0="desafio-").
+                            prefix = 'desafio-' if m in (4, 5, 6, 8, 9) else 'desafio-unidade-v2-'
                             assert captured['key'] == f'{prefix}M{m}-u{n}'
                         # 28/10/2026 (revisão do PR #124): a âncora antiga #desafio-unidade-N (fim da M2-F09,
                         # congelada) aponta para o arquivo escondido; fora do arquivo leva à aula de tarefa da
@@ -128,6 +129,8 @@ def main():
             assert page.evaluate('localStorage.getItem("percurso-M2-u1")').startswith('A minha resposta')
             assert page.locator('[data-passo="m2-f12"],[data-passo="m2-f13"]').count() == 0
             assert page.locator('.unit-complements a[href*="licao-m2-f12"]').count() == 1
+            # 01/11/2026: os complementos conservam-se dentro da dobra da unidade 2.
+            open_route_unit(page, 2)
             page.locator('.unit-complements').last.locator('summary').click()
             page.locator('.unit-complements a[href*="licao-m2-f12"]').focus()
             focused = page.evaluate('document.activeElement.outerHTML')

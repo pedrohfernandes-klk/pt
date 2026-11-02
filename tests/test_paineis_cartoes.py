@@ -25,6 +25,13 @@ def enunciado(c):
     p=re.sub(r'\*\*(.+?)\*\*',r'\1',re.sub(r'(?<!\w)_(.+?)_(?!\w)',r'\1',p))
     return re.sub(r'\[\d\]','…',p)
 
+# 02/11/2026: o enunciado que o painel projeta conserva o itálico do cartão (_…_); só saem o negrito e os números das
+# lacunas. Assim, um título em itálico na lição fica em itálico no painel, e nunca só metade (M9-F07, k=13).
+def enunciado_italico(c):
+    p=c.get('p') or c.get('frase') or ''
+    p=re.sub(r'\*\*(.+?)\*\*',r'\1',p)
+    return re.sub(r'\[\d\]','…',p)
+
 def paineis():
     for p in sorted(ROOT.glob('m*/painel-m*-f*/index.html')):
         texto=p.read_text('utf-8');P=banco(texto)
@@ -53,10 +60,23 @@ class Paineis(unittest.TestCase):
             L=banco((ROOT/pasta.replace('painel-','licao-')/'index.html').read_text('utf-8'))
             esperado=[{'k':i,'t':c['t'],'p':enunciado(c)} for i,c in enumerate(L) if c['t']!='ler']
             # 01/11/2026: o cartão ganha itálico; a equivalência textual e a ordem mantêm-se.
-            self.assertEqual([dict(c,p=sem_italico(c['p'])) for c in P],esperado,pasta)
+            # 02/11/2026: compara com o itálico mantido (enunciado_italico), em vez de o tirar dos dois lados.
+            self.assertEqual(P,[{'k':i,'t':c['t'],'p':enunciado_italico(c)} for i,c in enumerate(L) if c['t']!='ler'],pasta)
             ops=re.findall(r'<option value="\d+">(.*?)</option>',re.search(r'<select data-r-k>(.*?)</select>',texto,re.S).group(1))
             self.assertEqual([html.unescape(o) for o in ops],[c['p'] for c in esperado],pasta)
             # 01/11/2026: sem marcadores visíveis no seletor; o painel converte os do cartão em itálico.
             self.assertFalse(any('_' in o or '**' in o for o in ops),pasta)
+
+    def test_italico_do_painel_igual_ao_da_licao(self):
+        # 02/11/2026: em todos os painéis, cada enunciado com itálico é o do cartão da lição, itálico incluído.
+        n=0
+        for p,texto,P,licao in paineis():
+            L=banco(licao.read_text('utf-8'))
+            for c in P:
+                if '_' in c['p']:
+                    with self.subTest(painel=p.parent.name,k=c['k']):
+                        self.assertEqual(c['p'],enunciado_italico(L[c['k']]))
+                    n+=1
+        self.assertGreater(n,0)
 
 if __name__=='__main__':unittest.main()

@@ -1,6 +1,6 @@
 {
   "data": "2026-11-01",
-  "base": "203eaf5dfbfb0cf9af921bb3a3691a354954d8cd",
+  "base": "fe2d829e53a384c76fd00e77833bd0593d117841",
   "pedidos": [
     {
       "numero": 143,
@@ -15,7 +15,8 @@
         "m9/mapa-do-modulo-m9/index.html",
         "scripts/lingua_pessoa_m7_20261030.json",
         "tests/fixtures/lingua-pessoa-m7-edits-20261030.json"
-      ]
+      ],
+      "estado": "aberto"
     },
     {
       "numero": 144,
@@ -126,7 +127,8 @@
         "tests/test_unit_synthesis.py",
         "tests/test_ux06_pt.py",
         "tests/unit_task_route_runtime.js"
-      ]
+      ],
+      "estado": "fundido no main (8e3303b7)"
     },
     {
       "numero": 145,
@@ -286,7 +288,8 @@
         "tests/test_unit_synthesis.py",
         "tests/test_ux06_pt.py",
         "tests/unit_task_route_runtime.js"
-      ]
+      ],
+      "estado": "fundido no main (dc8dc918)"
     },
     {
       "numero": 146,
@@ -300,7 +303,8 @@
         "tests/browser_cartaz.cjs",
         "tests/cartaz.test.cjs",
         "tests/hierarquia-cartaz.cjs"
-      ]
+      ],
+      "estado": "fundido no main (399ff57d)"
     },
     {
       "numero": 147,
@@ -312,7 +316,8 @@
         "exame/laboratorio/index.html",
         "exame/provas/index.html",
         "scripts/provas/gerar.py"
-      ]
+      ],
+      "estado": "fundido no main (4826aabd)"
     },
     {
       "numero": 148,
@@ -525,7 +530,8 @@
         "tests/test_ux06_pt.py",
         "tests/unit_task_route_runtime.js",
         "tools/medir-hierarquia.js"
-      ]
+      ],
+      "estado": "fundido no main (de418e6a)"
     },
     {
       "numero": 149,
@@ -565,7 +571,8 @@
         "tests/test_m8_retomas_claras.py",
         "tests/test_sala_desligada.py",
         "tests/test_task_routes_closure.py"
-      ]
+      ],
+      "estado": "fundido no main (8bdd2b3a)"
     },
     {
       "numero": 150,
@@ -840,7 +847,8 @@
         "tests/test_ux06_pt.py",
         "tests/unit_task_route_runtime.js",
         "tools/medir-hierarquia.js"
-      ]
+      ],
+      "estado": "fundido no main (0d806936)"
     },
     {
       "numero": 151,
@@ -859,7 +867,8 @@
         "tests/cartaz.test.cjs",
         "tests/cartaz_animacoes.test.cjs",
         "tests/hierarquia-cartaz.cjs"
-      ]
+      ],
+      "estado": "fundido no main (65b514c8)"
     }
   ],
   "achados": [
@@ -974,7 +983,7 @@
       "id": "V009",
       "depois": [],
       "estado": "corrigido",
-      "resultado": "u é?: onde está?; pino: pinheiro; pôs conmigo: combinou comigo; preguntades: perguntais; vosco: convosco; ant'o prazo saído: antes de acabar o prazo"
+      "resultado": "u é: onde está ↵ pino: pinheiro ↵ pôs conmigo: combinou comigo ↵ preguntades: perguntais ↵ vosco: convosco ↵ ant'o prazo saído: antes de acabar o prazo"
     },
     {
       "file": "m1/gram-complementos/index.html",
@@ -985,7 +994,7 @@
       "id": "V010",
       "depois": [],
       "estado": "corrigido",
-      "resultado": "complemento: o que uma palavra exige para o seu sentido ficar completo; modificador: o que se junta a uma palavra sem ser exigido"
+      "resultado": "complemento: o que uma palavra exige para o seu sentido ficar completo ↵ modificador: o que se junta a uma palavra sem ser exigido"
     },
     {
       "file": "m1/gram-coordenadas/index.html",
@@ -1007,7 +1016,7 @@
       "id": "V012",
       "depois": [],
       "estado": "corrigido",
-      "resultado": "nem: e não; mais: mas. Duas orações estão coordenadas quando se ligam sem que nenhuma esteja dentro da outra."
+      "resultado": "nem: e não ↵ mais: mas. Duas orações estão coordenadas quando se ligam sem que nenhuma esteja dentro da outra."
     },
     {
       "file": "m1/gram-fonologia/index.html",
@@ -1018,7 +1027,7 @@
       "id": "V013",
       "depois": [],
       "estado": "corrigido",
-      "resultado": "Desaparece: ASA: início, aférese (alevantada > levantada: vogal inicial); interior, síncope (malu > mau: [l]); fim, apócope (amare > amar: vogal final)."
+      "resultado": "Desaparece (ASA): início, aférese (alevantada > levantada: vogal inicial); interior, síncope (*malu* > mau: [l]); fim, apócope (*amare* > amar: vogal final)."
     },
     {
       "file": "m1/gram-fonologia/index.html",
@@ -1029,7 +1038,7 @@
       "id": "V014",
       "depois": [],
       "estado": "corrigido",
-      "resultado": "Entra: PEP: início, prótese (scribere > escrever: vogal inicial); interior, epêntese (humile > humilde: [d]); fim, paragoge (ante > antes: consoante final)."
+      "resultado": "Entra (PEP): início, prótese (*scribere* > escrever: vogal inicial); interior, epêntese (*humile* > humilde: [d]); fim, paragoge (*ante* > antes: consoante final)."
     },
     {
       "file": "m1/gram-fonologia/index.html",
@@ -1040,7 +1049,7 @@
       "id": "V015",
       "depois": [],
       "estado": "corrigido",
-      "resultado": "processo fonológico: uma mudança regular de sons, do latim ao português; síncope: cai um som no meio; sonorização: um som surdo (p, t, c) passa a sonoro (b, d, g); prótese: entra um som no início; apócope: cai um som no fim; parag"
+      "resultado": "processo fonológico: uma mudança regular de sons, do latim ao português ↵ síncope: cai um som no meio ↵ sonorização: um som surdo (p, t, c) passa a sonoro (b, d, g) ↵ prótese: entra um som no início ↵ apócope: cai um som no fim"
     },
     {
       "file": "m1/guilhade-dona-fea/index.html",
@@ -1051,7 +1060,7 @@
       "id": "V016",
       "depois": [],
       "estado": "corrigido",
-      "resultado": "loar: louvar; prez: valor; nom fal: não falta; comprida de bem: cheia de qualidades; fea: feia; sandia: louca; escárnio: diz mal com palavras cobertas (duplo sentido); maldizer: diz mal descobertamente, muitas vezes nomeando"
+      "resultado": "loar: louvar ↵ prez: valor ↵ nom fal: não falta ↵ comprida de bem: cheia de qualidades ↵ fea: feia ↵ sandia: louca ↵ escárnio: diz mal com palavras cobertas (duplo sentido) ↵ maldizer: diz mal descobertamente, muitas vezes nomeando o visado"
     },
     {
       "file": "m1/guilhade-dona-fea/index.html",
@@ -1073,7 +1082,7 @@
       "id": "V018",
       "depois": [],
       "estado": "corrigido",
-      "resultado": "bacinetes: capacetes; abastaria: bastaria; esgravatando: remexendo a terra; mantimento: alimento"
+      "resultado": "bacinetes: capacetes ↵ abastaria: bastaria ↵ esgravatando: remexendo a terra ↵ mantimento: alimento"
     },
     {
       "file": "m1/matam-o-mestre/index.html",
@@ -1084,7 +1093,7 @@
       "id": "V019",
       "depois": [],
       "estado": "corrigido",
-      "resultado": "percebido: combinado; rijamente: com força; arruído: alvoroço; em logo de: em lugar de; hu: onde; escusar: evitar"
+      "resultado": "percebido: combinado ↵ rijamente: com força ↵ arruído: alvoroço ↵ em logo de: em lugar de ↵ hu: onde ↵ escusar: evitar"
     },
     {
       "file": "m1/mendinho-ermida/index.html",
@@ -1095,7 +1104,7 @@
       "id": "V020",
       "depois": [],
       "estado": "corrigido",
-      "resultado": "sedia-m'eu: estava eu; cercarom-mi: cercaram-me; som: são; atendendo: esperando; nom hei i: não tenho ali; fremosa: formosa"
+      "resultado": "sedia-m'eu: estava eu ↵ cercarom-mi: cercaram-me ↵ som: são ↵ atendendo: esperando ↵ nom hei i: não tenho ali ↵ fremosa: formosa"
     },
     {
       "file": "m1/ondas-vigo/index.html",
@@ -1117,7 +1126,7 @@
       "id": "V022",
       "depois": [],
       "estado": "corrigido",
-      "resultado": "levado: agitado; verrá: virá; cedo: em breve"
+      "resultado": "levado: agitado ↵ verrá: virá ↵ cedo: em breve"
     },
     {
       "file": "m1/tempo-da-flor/index.html",
@@ -1128,7 +1137,7 @@
       "id": "V023",
       "depois": [],
       "estado": "corrigido",
-      "resultado": "proençaes: trovadores da Provença; soem: costumam; mais: mas; coita: sofrimento de amor; levar: suportar"
+      "resultado": "proençaes: trovadores da Provença ↵ soem: costumam ↵ mais: mas ↵ coita: sofrimento de amor ↵ levar: suportar"
     },
     {
       "file": "tarefas/m1-u2/aquecimento/index.html",
@@ -1262,7 +1271,7 @@
       "id": "V035",
       "depois": [],
       "estado": "corrigido",
-      "resultado": "derivação: formar uma palavra a partir de outra, com um afixo; prefixo: o afixo antes da base (des-, re-, in-); sufixo: o afixo depois da base (-mento, -eiro, -oso); teste: tira o afixo: a base tem de existir sozinha"
+      "resultado": "derivação: formar uma palavra a partir de outra, com um afixo ↵ prefixo: o afixo antes da base (des-, re-, in-) ↵ sufixo: o afixo depois da base (-mento, -eiro, -oso) ↵ teste: tira o afixo, e a base tem de existir sozinha"
     },
     {
       "file": "m2/gram-oracoes-farsa/index.html",
@@ -1273,7 +1282,7 @@
       "id": "V036",
       "depois": [],
       "estado": "corrigido",
-      "resultado": "coordenada: fica ao lado da outra, ligada por «e», «mas», «ou», «logo», «pois»; subordinada: ocupa um lugar dentro da outra: de tempo, condição, causa, fim; de nome (relativa); de complemento (completiva, ou relativa sem nome antes, com"
+      "resultado": "coordenada: fica ao lado da outra, ligada por «e», «mas», «ou», «logo», «pois» ↵ subordinada: ocupa um lugar dentro da outra, com valor de tempo, condição, causa ou fim, de nome (relativa), de complemento (completiva, ou relativa sem nome antes, com «quem»:"
     },
     {
       "file": "m2/guia-da-tarefa-m2/index.html",
@@ -1328,7 +1337,7 @@
       "id": "V041",
       "depois": [],
       "estado": "corrigido",
-      "resultado": "Apanhaste a ironia e o cruzamento dos provérbios."
+      "resultado": "Apanhaste a ironia e a oposição dentro dos provérbios."
     },
     {
       "file": "m2/ines-escolher/index.html",
@@ -1339,7 +1348,7 @@
       "id": "V042",
       "depois": [],
       "estado": "corrigido",
-      "resultado": "siso mero: bom senso; folão: fogoso, indomável; Nero: imperador romano, símbolo de crueldade"
+      "resultado": "siso mero: bom senso ↵ folão: fogoso, indomável ↵ Nero: imperador romano, símbolo de crueldade"
     },
     {
       "file": "m2/ines-panela/index.html",
@@ -1350,7 +1359,7 @@
       "id": "V043",
       "depois": [],
       "estado": "corrigido",
-      "resultado": "lavrar: bordar; aviamento: arranjo de vida (aqui, casamento); caramujo: caracol; bugia: macaca"
+      "resultado": "lavrar: bordar ↵ aviamento: arranjo de vida (aqui, casamento) ↵ caramujo: caracol ↵ bugia: macaca"
     },
     {
       "file": "m2/licao-m2-f01/index.html",
@@ -1442,7 +1451,7 @@
       "id": "V051",
       "depois": [],
       "estado": "corrigido",
-      "resultado": "A oração «para que a mesa ficasse livre» é [1]."
+      "resultado": "A oração *para que a mesa ficasse livre* é [1]."
     },
     {
       "file": "tarefas/m2-u1/aquecimento/index.html",
@@ -1453,7 +1462,7 @@
       "id": "V052",
       "depois": [],
       "estado": "corrigido",
-      "resultado": "Frase criada: «Arrumei os livros para que a mesa ficasse livre.» Classifica a oração iniciada por para que."
+      "resultado": "Frase criada: *Arrumei os livros para que a mesa ficasse livre.* Classifica a oração iniciada por *para que*."
     },
     {
       "file": "tarefas/m2-u1/aquecimento/index.html",
@@ -1464,7 +1473,7 @@
       "id": "V053",
       "depois": [],
       "estado": "corrigido",
-      "resultado": "A posição não classifica a oração: «Para que a mesa ficasse livre, arrumei os livros.» continua a ser final. Confirmam-na o conector e o conjuntivo."
+      "resultado": "A posição não classifica a oração: *Para que a mesa ficasse livre, arrumei os livros.* continua a ser final. Confirmam-na o conector e o conjuntivo."
     },
     {
       "file": "tarefas/m2-u1/aquecimento/index.html",
@@ -1475,7 +1484,7 @@
       "id": "V054",
       "depois": [],
       "estado": "corrigido",
-      "resultado": "Que justificação aponta, na frase criada, os traços que confirmam a classificação de «para que a mesa ficasse livre»?"
+      "resultado": "Que justificação aponta, na frase criada, os traços que confirmam a classificação de *para que a mesa ficasse livre*?"
     },
     {
       "file": "tarefas/m2-u1/aquecimento/index.html",
@@ -1486,7 +1495,7 @@
       "id": "V055",
       "depois": [],
       "estado": "corrigido",
-      "resultado": "Comparação: «A notícia caiu como água gelada.»"
+      "resultado": "Comparação: *A notícia caiu como água gelada.*"
     },
     {
       "file": "tarefas/m2-u1/aquecimento/index.html",
@@ -1497,7 +1506,7 @@
       "id": "V056",
       "depois": [],
       "estado": "corrigido",
-      "resultado": "Antítese: «Sorrio por fora, choro por dentro.»"
+      "resultado": "Antítese: *Sorrio por fora, choro por dentro.*"
     },
     {
       "file": "tarefas/m2-u1/aquecimento/index.html",
@@ -1508,7 +1517,7 @@
       "id": "V057",
       "depois": [],
       "estado": "corrigido",
-      "resultado": "Enumeração: «Testes, treinos, recados, turnos.»"
+      "resultado": "Enumeração: *Testes, treinos, recados, turnos.*"
     },
     {
       "file": "tarefas/m2-u1/aquecimento/index.html",
@@ -1519,7 +1528,7 @@
       "id": "V058",
       "depois": [],
       "estado": "corrigido",
-      "resultado": "Interrogação retórica: «De que serve correr?»"
+      "resultado": "Interrogação retórica: *De que serve correr?*"
     },
     {
       "file": "tarefas/m2-u2/aquecimento/index.html",
@@ -1552,7 +1561,7 @@
       "id": "V061",
       "depois": [],
       "estado": "corrigido",
-      "resultado": "A oração «que está na mesa» é [1]."
+      "resultado": "A oração *que está na mesa* é [1]."
     },
     {
       "file": "tarefas/m2-u2/aquecimento/index.html",
@@ -1563,7 +1572,7 @@
       "id": "V062",
       "depois": [],
       "estado": "corrigido",
-      "resultado": "Frase criada: «O livro que está na mesa pertence à biblioteca.» Classifica a oração iniciada por que."
+      "resultado": "Frase criada: *O livro que está na mesa pertence à biblioteca.* Classifica a oração iniciada por *que*."
     },
     {
       "file": "tarefas/m2-u2/aquecimento/index.html",
@@ -1574,7 +1583,7 @@
       "id": "V063",
       "depois": [],
       "estado": "corrigido",
-      "resultado": "Na frase criada «O livro que está na mesa pertence à biblioteca», como se classifica a oração «que está na mesa»?"
+      "resultado": "Na frase criada *O livro que está na mesa pertence à biblioteca*, como se classifica a oração *que está na mesa*?"
     },
     {
       "file": "tarefas/m2-u2/aquecimento/index.html",
@@ -1640,7 +1649,7 @@
       "id": "V069",
       "depois": [],
       "estado": "corrigido",
-      "resultado": "Frase criada para ensaio: «Já / cheguei.» (com alívio). A barra marca uma pausa. O que indicam os parênteses?"
+      "resultado": "Frase criada para ensaio: *Já / cheguei.* (com alívio). A barra marca uma pausa. O que indicam os parênteses?"
     },
     {
       "file": "tarefas/m2-u2/aquecimento/index.html",
@@ -1651,7 +1660,7 @@
       "id": "V070",
       "depois": [],
       "estado": "corrigido",
-      "resultado": "Na frase criada «Já / cheguei.» (com alívio), a pausa já está na barra. Que informação acrescentam os parênteses?"
+      "resultado": "Na frase criada *Já / cheguei.* (com alívio), a pausa já está na barra. Que informação acrescentam os parênteses?"
     },
     {
       "file": "m3/gram-anafora/index.html",
@@ -1673,7 +1682,7 @@
       "id": "V072",
       "depois": [],
       "estado": "corrigido",
-      "resultado": "B. «Que as Ninfas do Oceano, tão formosas, ↵ Tétis e a ilha angélica pintada, ↵ Outra coisa não é que as deleitosas ↵ Honras […] ↵ Estes são os deleites desta ilha» (IX, 89)."
+      "resultado": "B. «Que as Ninfas do Oceano tão formosas, ↵ Tethys, e a ilha angélica pintada, ↵ Outra coisa não é que as deleitosas ↵ Honras […] ↵ Estes são os deleites desta ilha» (IX, 89)."
     },
     {
       "file": "m3/arte-estima/index.html",
@@ -1684,7 +1693,7 @@
       "id": "V073",
       "depois": [],
       "estado": "corrigido",
-      "resultado": "douto e ciente: culto e sábio; prezado: estimado; troncos nobres: linhagens; zebelinos: peles de zibelina (luxo); forjado aço: armadura"
+      "resultado": "douto e ciente: culto e sábio ↵ prezado: estimado ↵ troncos nobres: linhagens ↵ zebelinos: peles de zibelina (luxo) ↵ forjado aço: armadura"
     },
     {
       "file": "m3/bicho-da-terra/index.html",
@@ -1695,7 +1704,7 @@
       "id": "V074",
       "depois": [],
       "estado": "corrigido",
-      "resultado": "apercebida: à espreita; avorrecida: detestável; rende: faz render-se; tredores: traidores; deprava: corrompe"
+      "resultado": "apercebida: à espreita ↵ avorrecida: detestável ↵ rende: faz render-se ↵ tredores: traidores ↵ deprava: corrompe"
     },
     {
       "file": "m3/camoes-alma/index.html",
@@ -1706,7 +1715,7 @@
       "id": "V075",
       "depois": [],
       "estado": "corrigido",
-      "resultado": "gentil: nobre; assento etéreo: céu; se consente: é permitida; roga: pede"
+      "resultado": "gentil: nobre ↵ assento etéreo: céu ↵ se consente: é permitida ↵ roga: pede"
     },
     {
       "file": "m3/camoes-alma/index.html",
@@ -1717,7 +1726,7 @@
       "id": "V076",
       "depois": [],
       "estado": "corrigido",
-      "resultado": "Qual destes pares de versos explora o contraste entre «lá» e «cá» com algo teu, sem copiar o soneto?"
+      "resultado": "Qual destes pares de versos usa o contraste entre «lá» e «cá» para falar de algo teu, sem copiar o soneto?"
     },
     {
       "file": "m3/camoes-barbara/index.html",
@@ -1728,7 +1737,7 @@
       "id": "V077",
       "depois": [],
       "estado": "corrigido",
-      "resultado": "o povo vão: a gente comum, sem juízo; perde opinião: perde a convicção; leda: alegre; siso: juízo; bárbara: estrangeira, «selvagem» (jogo com o nome)"
+      "resultado": "o povo vão: a gente comum, sem juízo ↵ perde opinião: perde a convicção ↵ leda: alegre ↵ siso: juízo ↵ bárbara: estrangeira, «selvagem» (duplo sentido do nome)"
     },
     {
       "file": "m3/camoes-barbara/index.html",
@@ -1739,7 +1748,7 @@
       "id": "V078",
       "depois": [],
       "estado": "corrigido",
-      "resultado": "eda: alegre; siso: juízo; bárbara: estrangeira, «selvagem» (duplo sentido do nome)"
+      "resultado": "leda: alegre ↵ siso: juízo ↵ bárbara: estrangeira, «selvagem» (duplo sentido do nome)"
     },
     {
       "file": "m3/camoes-barbara/index.html",
@@ -1761,7 +1770,7 @@
       "id": "V080",
       "depois": [],
       "estado": "corrigido",
-      "resultado": "desconcerto: desordem, falta de harmonia; sobejaram: foram demais"
+      "resultado": "desconcerto: desordem, falta de harmonia ↵ sobejaram: foram demais"
     },
     {
       "file": "m3/camoes-invocacoes/index.html",
@@ -1772,7 +1781,7 @@
       "id": "V081",
       "depois": [],
       "estado": "corrigido",
-      "resultado": "Tágides: ninfas do Tejo; grandíloquo: elevado, solene; nô mais: não mais; destemperada: desafinada"
+      "resultado": "Tágides: ninfas do Tejo ↵ grandíloquo: elevado, solene ↵ nô mais: não mais ↵ destemperada: desafinada"
     },
     {
       "file": "m3/camoes-leonor/index.html",
@@ -1783,7 +1792,7 @@
       "id": "V082",
       "depois": [],
       "estado": "corrigido",
-      "resultado": "verdura: campo verde; testo: tampa; escarlata: tecido vermelho; sainho: casaco curto; vasquinha de cote: saia de uso diário"
+      "resultado": "verdura: campo verde ↵ testo: tampa ↵ escarlata: tecido vermelho ↵ sainho: casaco curto ↵ vasquinha de cote: saia de uso diário"
     },
     {
       "file": "m3/camoes-perdigao/index.html",
@@ -1794,7 +1803,7 @@
       "id": "V083",
       "depois": [],
       "estado": "corrigido",
-      "resultado": "perdigão: macho da perdiz; pena: pluma; sofrimento; desasado: sem asas; penado: que sofre"
+      "resultado": "perdigão: macho da perdiz ↵ pena: pluma e sofrimento (duplo sentido) ↵ desasado: sem asas ↵ penado: que sofre"
     },
     {
       "file": "m3/camoes-perdigao/index.html",
@@ -1849,7 +1858,7 @@
       "id": "V088",
       "depois": [],
       "estado": "corrigido",
-      "resultado": "sôbolos: sobre os; manado: que correu; Babilónia: o lugar do desterro; Sião: a terra de origem; despois d'acordado: depois de acordado"
+      "resultado": "sôbolos: sobre os ↵ manado: que correu ↵ Babilónia: o lugar do desterro ↵ Sião: a terra de origem ↵ despois d'acordado: depois de acordado"
     },
     {
       "file": "m3/espada-pena/index.html",
@@ -1860,7 +1869,7 @@
       "id": "V089",
       "depois": [],
       "estado": "corrigido",
-      "resultado": "batel: barco pequeno; peregrinando: andando errante; Mavórcios: da guerra; Canace: figura mitológica que escreveu uma carta antes de morrer; ócio ignavo: preguiça"
+      "resultado": "batel: barco pequeno ↵ peregrinando: andando errante ↵ Mavórcios: da guerra ↵ Canace: figura mitológica que escreveu uma carta antes de morrer ↵ ócio ignavo: preguiça"
     },
     {
       "file": "m3/gram-anafora/index.html",
@@ -1871,7 +1880,7 @@
       "id": "V090",
       "depois": [],
       "estado": "corrigido",
-      "resultado": "retoma: uma palavra aponta para outra que veio antes; anáfora como figura: a repetição de uma palavra no início de versos seguidos (também em VIII, 98: Este… Este… Este…)"
+      "resultado": "retoma: uma palavra aponta para outra que veio antes ↵ anáfora como figura: a repetição de uma palavra no início de versos seguidos (também em VIII, 98: Este… Este… Este…)"
     },
     {
       "file": "m3/gram-modalidade/index.html",
@@ -1882,7 +1891,7 @@
       "id": "V091",
       "depois": [],
       "estado": "corrigido",
-      "resultado": "epistémica: grau de certeza: talvez, deve estar, é certo que; deôntica: obrigação, permissão, pedido, ordem: tem de, pode, dai-me; apreciativa: avaliação de quem fala: infelizmente, que belo!"
+      "resultado": "epistémica: grau de certeza (talvez, deve estar, é certo que) ↵ deôntica: obrigação, permissão, pedido, ordem (tem de, pode, dai-me) ↵ apreciativa: avaliação de quem fala (infelizmente, que belo!)"
     },
     {
       "file": "m3/index.html",
@@ -2077,7 +2086,7 @@
       "id": "V105",
       "depois": [],
       "estado": "corrigido",
-      "resultado": "lume: luz; orbes: esferas; verga: vara; derredor: à volta; limada: polida; engenho: inteligência"
+      "resultado": "lume: luz ↵ orbes: esferas ↵ verga: vara ↵ derredor: à volta ↵ limada: polida ↵ engenho: inteligência"
     },
     {
       "file": "m3/painel-m3-f10/index.html",
@@ -2132,7 +2141,7 @@
       "id": "V110",
       "depois": [],
       "estado": "corrigido",
-      "resultado": "haveres: bens, riqueza; atear: acender; o texto entre parênteses é a didascália: o que se faz em palco"
+      "resultado": "haveres: bens, riqueza ↵ atear: acender. O texto entre parênteses é a didascália: o que se faz em palco."
     },
     {
       "file": "m4/garrett-nome/index.html",
@@ -2143,7 +2152,7 @@
       "id": "V111",
       "depois": [],
       "estado": "corrigido",
-      "resultado": "ânimo: coragem; honra: aqui, o bom nome perante os outros"
+      "resultado": "ânimo: coragem ↵ honra: aqui, o bom nome perante os outros"
     },
     {
       "file": "m4/garrett-nome/index.html",
@@ -2165,7 +2174,7 @@
       "id": "V113",
       "depois": [],
       "estado": "corrigido",
-      "resultado": "assertivo: afirma alguma coisa como verdadeira; diretivo: leva o outro a agir; compromissivo: compromete quem fala; expressivo: exprime um estado de quem fala; declarativo: muda a realidade ao ser dito por quem pode"
+      "resultado": "assertivo: afirma alguma coisa como verdadeira ↵ diretivo: leva o outro a agir ↵ compromissivo: compromete quem fala ↵ expressivo: exprime um estado de quem fala ↵ declarativo: muda a realidade ao ser dito por quem pode"
     },
     {
       "file": "m4/gram-coesao/index.html",
@@ -2176,7 +2185,7 @@
       "id": "V114",
       "depois": [],
       "estado": "corrigido",
-      "resultado": "coesão gramatical: pronomes e demonstrativos que retomam, conectores que ligam; coesão lexical: a palavra repetida, o sinónimo, a expressão equivalente; coerência: o texto faz sentido e avança"
+      "resultado": "coesão gramatical: pronomes e demonstrativos que retomam, conectores que ligam ↵ coesão lexical: a palavra repetida, o sinónimo, a expressão equivalente ↵ coerência: o texto faz sentido e avança"
     },
     {
       "file": "m4/gram-deiticos/index.html",
@@ -2187,7 +2196,7 @@
       "id": "V115",
       "depois": [],
       "estado": "corrigido",
-      "resultado": "deítico pessoal: eu, tu, vós, meu, teu; deítico espacial: aqui, ali, este, aquele; deítico temporal: hoje, agora, amanhã, este mês; referente: aquilo para que a palavra aponta"
+      "resultado": "deítico pessoal: eu, tu, vós, meu, teu ↵ deítico espacial: aqui, ali, este, aquele ↵ deítico temporal: hoje, agora, amanhã, este mês ↵ referente: aquilo para que a palavra aponta"
     },
     {
       "file": "m4/guia-da-tarefa-m4/index.html",
@@ -2345,7 +2354,7 @@
       "id": "V129",
       "depois": [],
       "estado": "corrigido",
-      "resultado": "auditório: público; preservar dele: proteger do mal"
+      "resultado": "auditório: público ↵ preservar dele: proteger do mal"
     },
     {
       "file": "m4/vieira-peixes/index.html",
@@ -2356,7 +2365,7 @@
       "id": "V130",
       "depois": [],
       "estado": "corrigido",
-      "resultado": "costados: lados do corpo; desferram: largam; capelo: capuz; limos: algas"
+      "resultado": "costados: lados do corpo ↵ desferram: largam ↵ capelo: capuz ↵ limos: algas"
     },
     {
       "file": "m4/vieira-praia/index.html",
@@ -2367,7 +2376,7 @@
       "id": "V131",
       "depois": [],
       "estado": "corrigido",
-      "resultado": "Arimino: Rimini, cidade de Itália; hereges: os que se afastam da doutrina da Igreja; dissimular: fingir que não é nada"
+      "resultado": "Arimino: Rimini, cidade de Itália ↵ hereges: os que se afastam da doutrina da Igreja ↵ dissimular: fingir que não é nada"
     },
     {
       "file": "m4/vieira-sal/index.html",
@@ -2378,7 +2387,7 @@
       "id": "V132",
       "depois": [],
       "estado": "corrigido",
-      "resultado": "ofício: função, dever; corrupção: aqui, o mal moral que se espalha"
+      "resultado": "ofício: função, dever ↵ corrupção: aqui, o mal moral que se espalha"
     },
     {
       "file": "m4/visita-frei-luis-de-sousa-no-teatro/index.html",
@@ -2411,7 +2420,7 @@
       "id": "V135",
       "depois": [],
       "estado": "corrigido",
-      "resultado": "«Ilumino a minha casa para receber os muito poderosos e excelentes senhores governadores destes reinos. […] celentes senhores governadores destes reinos.»"
+      "resultado": "«Ilumino a minha casa para receber os muito poderosos e excelentes senhores governadores destes reinos.»"
     },
     {
       "file": "tarefas/m4-u3/index.html",
@@ -2422,7 +2431,7 @@
       "id": "V136",
       "depois": [],
       "estado": "corrigido",
-      "resultado": "«Oh que boa doutrina era esta para a terra, se eu não pregara para o mar! […] a para a terra, se eu não pregara para o mar!»"
+      "resultado": "«Oh que boa doutrina era esta para a terra, se eu não pregara para o mar!»"
     },
     {
       "file": "m5/camilo-assento/index.html",
@@ -2433,7 +2442,7 @@
       "id": "V137",
       "depois": [],
       "estado": "corrigido",
-      "resultado": "assentamentos: registos; a folhas 232: na página 232; baetão: pano grosso de lã; pedrez: com pintas; compungia: comovia; enchutos: secos"
+      "resultado": "assentamentos: registos ↵ a folhas 232: na página 232 ↵ baetão: pano grosso de lã ↵ pedrez: com pintas ↵ compungia: comovia ↵ enchutos: secos"
     },
     {
       "file": "m5/camilo-carta/index.html",
@@ -2444,7 +2453,7 @@
       "id": "V138",
       "depois": [],
       "estado": "corrigido",
-      "resultado": "consolação: conforto; degredados: condenados ao exílio; pejo: vergonha; derradeiras: últimas"
+      "resultado": "consolação: conforto ↵ degredados: condenados ao exílio ↵ pejo: vergonha ↵ derradeiras: últimas"
     },
     {
       "file": "m5/camilo-pai/index.html",
@@ -2455,7 +2464,7 @@
       "id": "V139",
       "depois": [],
       "estado": "corrigido",
-      "resultado": "condescendencia: tolerância; escusada: inútil"
+      "resultado": "condescendencia: tolerância ↵ escusada: inútil"
     },
     {
       "file": "m5/camilo-seculo/index.html",
@@ -2466,7 +2475,7 @@
       "id": "V140",
       "depois": [],
       "estado": "corrigido",
-      "resultado": "prestito: cortejo; liteiras: cadeiras cobertas levadas por homens ou animais; dama do paço: senhora da corte; chiste: piada"
+      "resultado": "prestito: cortejo ↵ liteiras: cadeiras cobertas levadas por homens ou animais ↵ dama do paço: senhora da corte ↵ chiste: piada"
     },
     {
       "file": "m5/camilo-simao-ramos/index.html",
@@ -2510,7 +2519,7 @@
       "id": "V144",
       "depois": [],
       "estado": "corrigido",
-      "resultado": "phaeton: carruagem ligeira; Saint-Cloud: arredores de Paris; Figaro: jornal de Paris"
+      "resultado": "phaeton: carruagem ligeira ↵ Saint-Cloud: arredores de Paris ↵ *Figaro*: jornal de Paris"
     },
     {
       "file": "m5/eca-hotel/index.html",
@@ -2521,7 +2530,7 @@
       "id": "V145",
       "depois": [],
       "estado": "corrigido",
-      "resultado": "gastando cêra com ruins defuntos: a perder tempo com o que não merece; sole normande: linguado à normanda (francês); banca-rota: falência; fazenda: finanças"
+      "resultado": "gastando cêra com ruins defuntos: a perder tempo com o que não merece ↵ *sole normande*: linguado à normanda (francês) ↵ banca-rota: falência ↵ fazenda: finanças"
     },
     {
       "file": "m5/eca-ramalhete/index.html",
@@ -2532,7 +2541,7 @@
       "id": "V146",
       "depois": [],
       "estado": "corrigido",
-      "resultado": "renque: fila; Residencia Ecclesiastica: casa de padres; Escudo d'Armas: brasão; postigos terreos: pequenas janelas ao nível da rua"
+      "resultado": "renque: fila ↵ Residencia Ecclesiastica: casa de padres ↵ Escudo d'Armas: brasão ↵ postigos terreos: pequenas janelas ao nível da rua"
     },
     {
       "file": "m5/eca-ramalhete/index.html",
@@ -2565,7 +2574,7 @@
       "id": "V149",
       "depois": [],
       "estado": "corrigido",
-      "resultado": "teste do pronome: «o», «a» dão o complemento direto; «lhe» dá o indireto; teste do corte: se a frase se aguenta sem a expressão, é modificador; predicativo do sujeito: vem com verbos como ser, estar, parecer, ficar"
+      "resultado": "teste do pronome: «o», «a» dão o complemento direto, «lhe» dá o indireto ↵ teste do corte: se a frase se aguenta sem a expressão, é modificador ↵ predicativo do sujeito: vem com verbos como ser, estar, parecer, ficar"
     },
     {
       "file": "m5/index.html",
@@ -3118,7 +3127,7 @@
       "id": "V189",
       "depois": [],
       "estado": "corrigido",
-      "resultado": "impalpavel: que não se pode tocar; a final: por fim; despojo vão: resto inútil; depuz: pus de lado; lobrega: escura, triste"
+      "resultado": "impalpavel: que não se pode tocar ↵ a final: por fim ↵ despojo vão: resto inútil ↵ depuz: pus de lado ↵ lobrega: escura, triste"
     },
     {
       "file": "m6/cesario-avemarias/index.html",
@@ -3140,7 +3149,7 @@
       "id": "V191",
       "depois": [],
       "estado": "corrigido",
-      "resultado": "soturnidade: tristeza sombria; bulicio: burburinho, ruído de gente; extravasado: que se espalha; baixeis: navios; singram: navegam; varonis: fortes"
+      "resultado": "soturnidade: tristeza sombria ↵ bulicio: burburinho, ruído de gente ↵ extravasado: que se espalha ↵ baixeis: navios ↵ singram: navegam ↵ varonis: fortes"
     },
     {
       "file": "m6/cesario-avemarias/index.html",
@@ -3162,7 +3171,7 @@
       "id": "V193",
       "depois": [],
       "estado": "corrigido",
-      "resultado": "magasins: lojas; cuteleiro: oficina de facas; malho: martelo grande"
+      "resultado": "*magasins*: lojas ↵ cuteleiro: oficina de facas ↵ malho: martelo grande"
     },
     {
       "file": "m6/cesario-noite-ramos/index.html",
@@ -3228,7 +3237,7 @@
       "id": "V199",
       "depois": [],
       "estado": "corrigido",
-      "resultado": "II: «Noite Fechada»:"
+      "resultado": "II. «Noite Fechada»:"
     },
     {
       "file": "m6/cesario-noite/index.html",
@@ -3239,7 +3248,7 @@
       "id": "V200",
       "depois": [],
       "estado": "corrigido",
-      "resultado": "IV: «Horas Mortas»:"
+      "resultado": "IV. «Horas Mortas»:"
     },
     {
       "file": "m6/cesario-noite/index.html",
@@ -3250,7 +3259,7 @@
       "id": "V201",
       "depois": [],
       "estado": "corrigido",
-      "resultado": "mortifica: atormenta; aljube: prisão; mulher de «dom»: senhora de família nobre; enfezados: raquíticos; emparedados: fechados entre paredes; fel: amargura; imagina: assim na edição de 1887; muitas edições corrigem para «imagino"
+      "resultado": "mortifica: atormenta ↵ aljube: prisão ↵ mulher de «dom»: senhora de família nobre ↵ enfezados: raquíticos ↵ emparedados: fechados entre paredes ↵ fel: amargura ↵ imagina: assim na edição de 1887 (muitas edições corrigem para «imagino»)"
     },
     {
       "file": "m6/cesario-noite/index.html",
@@ -3272,7 +3281,7 @@
       "id": "V203",
       "depois": [],
       "estado": "corrigido",
-      "resultado": "teste do «isso»: se a oração se troca por «isso», é substantiva; teste do «o qual»: se «que» se troca por «o qual», «os quais», é relativa; teste da pergunta: quando, porquê, com que resultado: é adverbial"
+      "resultado": "teste do «isso»: se a oração se troca por «isso», é substantiva ↵ teste do «o qual»: se «que» se troca por «o qual», «os quais», é relativa ↵ teste da pergunta: se responde a «quando?», «porquê?» ou «com que resultado?», é adverbial"
     },
     {
       "file": "m6/index.html",
@@ -3879,7 +3888,7 @@
       "id": "V245",
       "depois": [],
       "estado": "corrigido",
-      "resultado": "Autor não identificado; retrato de Pessoa com chapéu; cerca de 1914 (data incerta); Commons, acervo original não indicado; domínio público segundo a fonte."
+      "resultado": "Fotógrafo não identificado; retrato de Fernando Pessoa com chapéu; cerca de 1914 (data incerta); reprodução no Wikimedia Commons, original sem instituição indicada; domínio público."
     },
     {
       "file": "m7/licao-m7-f05/index.html",
@@ -3890,7 +3899,7 @@
       "id": "V246",
       "depois": [],
       "estado": "corrigido",
-      "resultado": "Autor não identificado; retrato de Pessoa com chapéu; cerca de 1914 (data incerta); Commons, acervo original não indicado; domínio público segundo a fonte."
+      "resultado": "Fotógrafo não identificado; retrato de Fernando Pessoa com chapéu; cerca de 1914 (data incerta); reprodução no Wikimedia Commons, original sem instituição indicada; domínio público."
     },
     {
       "file": "m7/licao-m7-f34/index.html",
@@ -3914,7 +3923,7 @@
       "id": "V248",
       "depois": [],
       "estado": "corrigido",
-      "resultado": "Autor não identificado; retrato de Pessoa com chapéu; cerca de 1914 (data incerta); Commons, acervo original não indicado; domínio público segundo a fonte."
+      "resultado": "Fotógrafo não identificado; retrato de Fernando Pessoa com chapéu; cerca de 1914 (data incerta); reprodução no Wikimedia Commons, original sem instituição indicada; domínio público."
     },
     {
       "file": "m7/campos-aniversario/index.html",
@@ -3925,7 +3934,7 @@
       "id": "V249",
       "depois": [],
       "estado": "corrigido",
-      "resultado": "grelado: bolor; «Pára»: grafia da edição"
+      "resultado": "grelado: bolor ↵ «Pára»: grafia da edição"
     },
     {
       "file": "m7/campos-maquina/index.html",
@@ -3947,7 +3956,7 @@
       "id": "V251",
       "depois": [],
       "estado": "corrigido",
-      "resultado": "aspeto: acabou (perfetivo), dura (imperfetivo), é costume (habitual), repete-se vezes contadas (iterativo), vale sempre (genérico); modalidade: certeza ou probabilidade (epistémica), dever ou conselho (deôntica), avaliação (apreciativa)"
+      "resultado": "aspeto: acabou (perfetivo), dura (imperfetivo), é costume (habitual), repete-se vezes contadas (iterativo), vale sempre (genérico) ↵ modalidade: certeza ou probabilidade (epistémica), dever ou conselho (deôntica), avaliação (apreciativa)"
     },
     {
       "file": "m7/licao-m7-f01/index.html",
@@ -3980,7 +3989,7 @@
       "id": "V254",
       "depois": [],
       "estado": "corrigido",
-      "resultado": "breu: escuridão total; reprendeu: voltou a prender"
+      "resultado": "breu: escuridão total ↵ reprendeu: voltou a prender"
     },
     {
       "file": "m7/mensagem-nevoeiro/index.html",
@@ -3991,7 +4000,7 @@
       "id": "V255",
       "depois": [],
       "estado": "corrigido",
-      "resultado": "fulgor baço: brilho sem força; fogo-fátuo: chama fraca sobre os pântanos; derradeiro: último"
+      "resultado": "fulgor baço: brilho sem força ↵ fogo-fátuo: chama fraca sobre os pântanos ↵ derradeiro: último"
     },
     {
       "file": "m7/painel-m7-f10/index.html",
@@ -4024,7 +4033,7 @@
       "id": "V258",
       "depois": [],
       "estado": "corrigido",
-      "resultado": "ceifeira: mulher que corta cereal; lida: trabalho; ciência: aqui, a consciência"
+      "resultado": "ceifeira: mulher que corta cereal ↵ lida: trabalho ↵ ciência: aqui, a consciência"
     },
     {
       "file": "m7/pessoa-ilha/index.html",
@@ -4035,7 +4044,7 @@
       "id": "V259",
       "depois": [],
       "estado": "corrigido",
-      "resultado": "se olvida: se esquece; desvirtua: perde o valor"
+      "resultado": "se olvida: se esquece ↵ desvirtua: perde o valor"
     },
     {
       "file": "m7/reis-lidia/index.html",
@@ -4046,7 +4055,7 @@
       "id": "V260",
       "depois": [],
       "estado": "corrigido",
-      "resultado": "fitemos: olhemos fixamente; Fado: destino"
+      "resultado": "fitemos: olhemos fixamente ↵ Fado: destino"
     },
     {
       "file": "m7/tabacaria/index.html",
@@ -4079,7 +4088,7 @@
       "id": "V263",
       "depois": [],
       "estado": "corrigido",
-      "resultado": "Da janela, vejo:  Hoje estou mais do lado:  O Esteves, para mim, é:  A minha ligação:  Esta semana: "
+      "resultado": "Da janela, vejo ↵ Hoje estou mais do lado ↵ O Esteves, para mim, é ↵ A minha ligação ↵ Esta semana"
     },
     {
       "file": "m7/mensagem-nevoeiro/index.html",
@@ -4146,7 +4155,7 @@
       "id": "V268",
       "depois": [],
       "estado": "corrigido",
-      "resultado": "aspeto: acabou (perfetivo), dura (imperfetivo), é costume (habitual), repete-se vezes contadas (iterativo), vale sempre (genérico); coesão: anáfora (retoma o que já foi dito), catáfora (anuncia o que vem), conector (liga e diz a relação)"
+      "resultado": "aspeto: acabou (perfetivo), dura (imperfetivo), é costume (habitual), repete-se vezes contadas (iterativo), vale sempre (genérico) ↵ coesão: anáfora (retoma o que já foi dito), catáfora (anuncia o que vem), conector (liga e diz a relação)"
     },
     {
       "file": "m9/index.html",
@@ -4512,7 +4521,7 @@
       "id": "V298",
       "depois": [],
       "estado": "corrigido",
-      "resultado": "Em *Farsa de Inês Pereira* e em *Amor de Perdição*, as escolhas individuais confrontam-se com regras sociais e relações familiares. No entanto, os textos representam esse confronto de modos diferentes: a farsa expõe interesses através do cómico"
+      "resultado": "Na *Farsa de Inês Pereira* e em *Amor de Perdição*, as escolhas individuais confrontam-se com regras sociais e relações familiares. No entanto, os textos representam esse confronto de modos diferentes: a farsa expõe interesses através do cómico, enquanto a"
     },
     {
       "file": "assets/exame/sessoes.json",
@@ -4666,7 +4675,7 @@
       "id": "V312",
       "depois": [],
       "estado": "corrigido",
-      "resultado": "Já percebeste a ironia. Relê o elogio ao barão e pergunta porquê."
+      "resultado": "Já desconfias do narrador. Relê o elogio ao barão e pergunta porquê."
     },
     {
       "file": "c/compasso-rimas/index.html",
@@ -4677,7 +4686,7 @@
       "id": "V313",
       "depois": [],
       "estado": "corrigido",
-      "resultado": "rima pobre: duas palavras da mesma classe, quase sempre dois infinitivos; rima rica: classes diferentes, ou mais de uma sílaba a rimar; rima interna: sons que voltam dentro do verso; assonância: a vogal que volta; aliteração: a con"
+      "resultado": "rima pobre: duas palavras da mesma classe, quase sempre dois infinitivos ↵ rima rica: classes diferentes, ou mais de uma sílaba a rimar ↵ rima interna: sons que voltam dentro do verso ↵ assonância: a vogal que volta ↵ aliteração: a consoante que volta"
     },
     {
       "file": "c/kafka-acordar/index.html",
@@ -4688,7 +4697,7 @@
       "id": "V314",
       "depois": [],
       "estado": "corrigido",
-      "resultado": "couraça: armadura; abaulado: curvo; caixeiro-viajante: vendedor que percorre a região com amostras; regalo: manga de peles para aquecer as mãos; flanco: lado do corpo"
+      "resultado": "couraça: armadura ↵ abaulado: curvo ↵ caixeiro-viajante: vendedor que percorre a região com amostras ↵ regalo: manga de peles para aquecer as mãos ↵ flanco: lado do corpo"
     },
     {
       "file": "c/quinta-mandamentos/index.html",
@@ -4699,7 +4708,7 @@
       "id": "V315",
       "depois": [],
       "estado": "corrigido",
-      "resultado": "Tradução nossa do inglês; o original está em domínio público na União Europeia. Garganta: o porco que fala pelos outros (Squealer, no original); Napoleão: o porco que governa"
+      "resultado": "Tradução nossa do inglês; o original está em domínio público na União Europeia. ↵ Garganta: o porco que fala pelos outros (Squealer, no original) ↵ Napoleão: o porco que governa"
     },
     {
       "file": "mapa/index.html",
@@ -5208,5 +5217,5 @@
       "resultado": "*Sermão de Santo António aos Peixes*, de padre António VieiraRTP Ensina (Grandes Livros, 2009), 48 min. Documentário sobre o sermão pregado no Maranhão a 13 de junho de 1654."
     }
   ],
-  "revisao": "01/11/2026: revisão da cabeça ba36cf2c; relatório e manifesto atualizados."
+  "revisao": "02/11/2026: camada refeita em trocas mínimas sobre o main (fe2d829e), achados da volta de confirmação corrigidos; resultados regenerados a partir dos ficheiros atuais (↵ marca a quebra de linha)."
 }

@@ -1,3 +1,4 @@
+@import url("cartaz-components.css?v=20261101-1");
 /* Tokens Cartaz exatos. Carregar após cartaz.css; não modifica esse ficheiro. */
 /* Leitura: o texto nunca ocupa a coluna reservada a um ícone ou separador.
    Estas regras são de composição e aplicam-se nos dois temas. */
@@ -189,10 +190,12 @@ header.cab+p.nota,.dois .caixa p:not([class]),.caixa.papel>p:not([class]),ol.dis
 .task-page header>p:not([class]),.task-page .task-consultation,.task-texts article>p:not([class]),.task-texts blockquote,.task-model p,
 .task-choice-page .task-instruction,.task-theme p,.task-page .instruction>p:not([class]),.task-page section>p:not([class]),
 .task-example>p:not([class]),.task-example>p.task-example-text,
-main.grelha>header>p:not([class]),main.grelha .g-nota,main.grelha .g-auto>p:not([class])
+/* 01/11/2026: prosa das aulas de tarefa, incluindo os pesos. */
+p.avaliacao-tarefas,main.grelha>header>p:not([class]),main.grelha .g-nota,main.grelha .g-auto>p:not([class])
 {text-align:var(--epi-texto-corrido);text-align-last:auto;-webkit-hyphens:auto;hyphens:auto;hyphenate-limit-chars:6 3 3;-webkit-hyphenate-limit-before:3;-webkit-hyphenate-limit-after:3;word-spacing:normal;overflow-wrap:break-word}
 /* Só onde o navegador conhece :has(): fora dele estes blocos ficam à esquerda, e o resto da lista continua válido. */
 @supports selector(p:has(br)){
+ #tarefas-das-unidades>p:not([class]):not(:has(a)),
  /* cartões de leitura, «Para entender», «Ler mais», casos e explicações depois de responder (sem <br>: com ele é verso ou
     lista); a pergunta de abertura a negrito, logo a seguir à etiqueta do Pensar devagar (p.etq-m), é um título */
  .jogo .ler p:not([class]):not(:has(br)):not(:is(blockquote,li,td,th,figure,figcaption,.paralelo,.vida,.ju-video,.arvore,.cc-ops) p):not(.etq-m+p),

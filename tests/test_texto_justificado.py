@@ -249,7 +249,8 @@ class TextoJustificado(unittest.TestCase):
                 texto = css.read_text('utf-8')
                 self.assertIn('@supports selector(p:has(a)){' + seletor + 'text-align:var(--epi-texto-corrido,start);', texto)
                 usam = [rel for rel, _, t in paginas() if nome in t]
-                self.assertEqual(len(usam), 4, usam)
+                # 01/11/2026: as 16 notas novas usam notes.css, além das quatro anteriores.
+                self.assertEqual(len(usam), 20 if nome == 'pt-lessons/notes.css' else 4, usam)
                 for rel, _, t in paginas():
                     if nome in t:
                         self.assertLess(t.index(nome), t.index('assets/appearance.css'), rel)

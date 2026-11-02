@@ -15,6 +15,17 @@ class Quiet(SimpleHTTPRequestHandler):
         pass
 
 
+# 02/11/2026: posição do texto de cada rótulo .verso>b (não da caixa, que pode ser mais estreita do que o texto)
+# e do primeiro caráter visível que se lhe segue.
+ROTULOS=r"""()=>[...document.querySelectorAll('.casca.sobreposta .verso>b')].map(b=>{
+  const w=document.createTreeWalker(b.parentNode,NodeFilter.SHOW_TEXT);let n,txt=null;
+  while((n=w.nextNode())){if(b.contains(n))continue;if((b.compareDocumentPosition(n)&Node.DOCUMENT_POSITION_FOLLOWING)&&n.textContent.trim()){txt=n;break}}
+  const qr=document.createRange();qr.selectNodeContents(b);const q=qr.getBoundingClientRect();
+  if(!txt)return {rot:b.textContent,dir:q.right,ini:null,mesma:false};
+  const k=txt.textContent.search(/\S/),r=document.createRange();r.setStart(txt,k);r.setEnd(txt,k+1);
+  const c=r.getBoundingClientRect();
+  return {rot:b.textContent,dir:q.right,ini:c.left,mesma:Math.abs((c.top+c.bottom)/2-(q.top+q.bottom)/2)<q.height/2}})"""
+
 def main():
     manifest=json.loads((ROOT/'tests/fixtures/varredura-formatacao-edits-20261101.json').read_text('utf-8'))
     pages=[p for p in manifest['files'] if p.endswith('.html')]
@@ -70,6 +81,19 @@ def main():
                 assert page.locator('.casca.sobreposta .pal').count()==8
                 assert '_' not in page.locator('.casca.sobreposta').inner_text()
                 assert page.locator('.casca.sobreposta .pal i').count()==4
+                # 02/11/2026: os rótulos de fala das lições («Fidalgo:», «Sapateiro:») não ficam por cima do verso:
+                # o lado direito do rótulo não passa do primeiro caráter do texto que se segue na mesma linha.
+                for slug,idx in [('m2/licao-m2-f12',3),('m2/licao-m2-f13',1),('m2/licao-m2-f13',3)]:
+                    page.goto(host+'/'+slug+'/',wait_until='load')
+                    raw=(ROOT/slug/'index.html').read_text('utf-8')
+                    start=re.search(r'CARTOES\s*=\s*',raw).end()
+                    card=json.JSONDecoder().raw_decode(raw[start:])[0][idx]
+                    page.evaluate('x=>{window.checkCasca=EPICasca.abrir({semVoltar:true});EPIJogo.montar({casca:checkCasca,itens:[x],chave:"qa-rotulos"})}',card)
+                    medidas=page.evaluate(ROTULOS)
+                    assert len(medidas)>=2,(slug,idx,width)
+                    for m in medidas:
+                        assert m['ini'] is not None,(slug,idx,width,m)
+                        if m['mesma']:assert m['dir']<=m['ini']+1,(slug,idx,width,m)
                 for slug,phrase in [('m2/visita-farsa-de-ines-pereira-no-teatro','cena: Farsa'),('m4/visita-frei-luis-de-sousa-no-teatro','palco: Frei')]:
                     page.goto(host+'/'+slug+'/',wait_until='load')
                     assert phrase in page.locator('.migalhas [aria-current]').inner_text(),slug

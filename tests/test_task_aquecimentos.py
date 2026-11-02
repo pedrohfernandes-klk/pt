@@ -1,3 +1,5 @@
+# 01/11/2026: a linha mantém destino e número e passa a usar a peça cz-row.
+# 01/11/2026: nove lições no M1/M2/M3/M5/M6 elevam o inventário a 125.
 """Aquecimentos em cartões antes das aulas de tarefa (29/10/2026, decisões do docente; piloto no M7).
 
 Contrato: cada tarefa do M7 tem uma página própria de cartões, tarefas/<slug>/aquecimento/, gerada por
@@ -5,10 +7,12 @@ scripts/aquecimentos.py a partir de docs/pedagogia/aquecimentos/<slug>.json. A p
 «aquecimento-<slug>» (não conta como lição, não mexe no «Continuar», não grava em projeção), o baralho passa no validador
 do sítio e nas regras de escrita, as citações estão letra a letra nas lições indicadas e nenhum cartão de fazer usa as
 passagens reservadas à tarefa (o aquecimento não faz a tarefa por ti). A tarefa liga ao aquecimento no cartão
-«Enunciado» e o percurso tem a linha «A» logo antes da linha «T». Fica fora de audit_cards.audit() (as 109 lições).
+«Enunciado» e o percurso tem a linha «A» logo antes da linha «T». Fica fora de audit_cards.audit() (as 125 lições).
 
 29/10/2026: a unidade 3 do M7 deixa o «Dia Pessoa» (tarefa nova «Louco, sim», F10 reescrita como «Argumentar com
 versos», página da visita como caderno de campo facultativo) e a U2 faz as apresentações em pequenos grupos.
+02/11/2026: o docente — «não há tarefas de grupo». A apresentação da U2 passa a ser individual, sem grupos; o contrato
+test_u2_apresentacao_individual substitui o das apresentações em pequenos grupos e proíbe o regresso dos grupos.
 
 29/10/2026 (revisão pedagógica e técnica): as citações da U3 e da F10 conferem-se só nas lições que esta camada não
 escreve; o validador olha também para o título, a descrição e o menu, e não distingue maiúsculas nas passagens reservadas;
@@ -31,9 +35,13 @@ ROOT = Path(__file__).resolve().parents[1]
 DADOS = ROOT / 'docs/pedagogia/aquecimentos'
 # 30/10/2026: aquecimento em cartões (decisão do docente)
 # 30/10/2026: o M4 também liga aos aquecimentos (camada tests/fixtures/aquecimentos-m4-edits-20261030.json).
-TAREFAS_LIGADAS = ['m1-u1', 'm1-u2', 'm2-u1', 'm2-u2', 'm4-u1', 'm4-u2', 'm4-u3-discurso', 'm7-u1', 'm7-u2', 'm7-u3']
+# 31/10/2026: inclui as seis tarefas aprovadas do M3, M5 e M6.
+# 01/11/2026: inclui as quatro tarefas do M8 e do M9.
+TAREFAS_LIGADAS = ['m1-u1', 'm1-u2', 'm2-u1', 'm2-u2', 'm3-u1', 'm3-u2', 'm4-u1', 'm4-u2', 'm4-u3-discurso', 'm5-u1', 'm5-u2', 'm6-u1', 'm6-u2', 'm7-u1', 'm7-u2', 'm7-u3', 'm8-u1', 'm8-u2', 'm9-u1', 'm9-u2']
 # 30/10/2026: M2 recebe páginas novas (aquecimentos em cartões das duas unidades).
-SLUGS = ['m1-u1', 'm1-u2', 'm2-u1', 'm2-u2', 'm4-u1', 'm4-u2', 'm4-u3-discurso', 'm7-u1', 'm7-u2', 'm7-u3']
+# 31/10/2026: inclui as seis tarefas aprovadas do M3, M5 e M6.
+# 01/11/2026: inclui as quatro tarefas do M8 e do M9.
+SLUGS = ['m1-u1', 'm1-u2', 'm2-u1', 'm2-u2', 'm3-u1', 'm3-u2', 'm4-u1', 'm4-u2', 'm4-u3-discurso', 'm5-u1', 'm5-u2', 'm6-u1', 'm6-u2', 'm7-u1', 'm7-u2', 'm7-u3', 'm8-u1', 'm8-u2', 'm9-u1', 'm9-u2']
 sys.path.insert(0, str(ROOT / 'scripts'))
 from audit_cards import lesson_cards, validate_cards  # noqa: E402
 # 29/10/2026 (revisão técnica, P1): as lições do M7 de onde vêm as citações da unidade 3, nenhuma escrita nesta camada.
@@ -117,8 +125,8 @@ class Aquecimentos(unittest.TestCase):
                         self.assertTrue(c.get('fe'))
                 # rever-frase.js só quando há um cartão «rever» (o tipo não vive em jogo.js)
                 self.assertEqual('rever-frase.js' in s, any(c['t'] == 'rever' for c in cartoes))
-        # O auditor das 109 lições não conta estas páginas.
-        self.assertEqual(len(list(ROOT.glob('m[1-9]/licao-*/index.html'))), 109)
+        # O auditor das 125 lições não conta estas páginas.
+        self.assertEqual(len(list(ROOT.glob('m[1-9]/licao-*/index.html'))), 125)
 
     def test_o_validador_recusa_o_que_deve(self):
         d = dados('m7-u3')
@@ -180,7 +188,7 @@ class Aquecimentos(unittest.TestCase):
                 self.assertEqual(linha.get('class'), 'aula-aquecimento')
                 self.assertNotIn('data-passo', linha)
                 self.assertNotIn('data-task-lesson', linha)
-                self.assertIn(f'<li class="aula-aquecimento" id="aquecimento-unidade-{n}"><a href="../tarefas/{slug}/aquecimento/"><span class="n">A</span>', indice)
+                self.assertIn(f'<li class="aula-aquecimento" id="aquecimento-unidade-{n}"><a class="cz-row" href="../tarefas/{slug}/aquecimento/"><span class="n">A</span>', indice)
                 self.assertTrue((ROOT / 'tarefas' / slug / 'aquecimento' / 'index.html').is_file())
         css = (ROOT / 'assets/task-90.css').read_text('utf-8')
         self.assertIn('.task-aquecer a{', css)
@@ -226,24 +234,29 @@ class Aquecimentos(unittest.TestCase):
                     self.assertRegex(facto['facto'], r'\b1[0-9]{3}\b')
         self.assertIn('o facto que usares tem de ter data', tarefa['temas'][1]['texto'])
 
-    def test_u2_apresentacoes_em_pequenos_grupos(self):
+    def test_u2_apresentacao_individual(self):
         # Decisão 5 do docente: a tarefa, o guia e a linha do percurso dizem o mesmo.
+        # 02/11/2026: o docente — «não há tarefas de grupo». A apresentação passa a ser individual: as frases dos grupos
+        # saem da tarefa, do guia, da linha do percurso e do aquecimento, e não podem voltar.
         tarefa = (ROOT / 'tarefas/m7-u2/index.html').read_text('utf-8')
         guia = (ROOT / 'm7/guia-da-tarefa-m7/index.html').read_text('utf-8')
         indice = (ROOT / 'm7/index.html').read_text('utf-8')
-        self.assertIn('As apresentações fazem-se em pequenos grupos de 4 ou 5, todos ao mesmo tempo, com o docente a circular.', tarefa)
-        self.assertIn('Apresenta a voz ao teu grupo em dois minutos', tarefa)
-        self.assertIn('apresentações em pequenos grupos, ao mesmo tempo</li>', guia)
-        self.assertIn('Apresenta-o ao teu grupo de 4 ou 5 colegas', guia)
+        aquecimento = (ROOT / 'tarefas/m7-u2/aquecimento/index.html').read_text('utf-8')
+        self.assertIn('A apresentação é individual.', tarefa)
+        self.assertIn('Apresenta a voz em dois minutos, lê uma frase e responde a uma pergunta.', tarefa)
+        self.assertIn('apresentação individual</li>', guia)
+        self.assertIn('Apresenta-o em dois minutos e lê uma frase dele.', guia)
         linha_t = re.search(r'<li class="aula-tarefa" data-task-lesson="2".*?</li>', indice).group(0)
-        self.assertIn('apresentações em pequenos grupos ao mesmo tempo', linha_t)
+        self.assertIn('apresentação individual e fotografias no Teams.', linha_t)
         self.assertIn('aquecimento em cartões no início', linha_t)
         self.assertIn('No início da aula de tarefa', dados('m7-u2')['cartoes'][0]['html'])
-        self.assertNotIn('em grupo', tarefa)
+        for texto in (tarefa, guia, linha_t, aquecimento, json.dumps(dados('m7-u2'), ensure_ascii=False)):
+            for proibido in ('em grupo', 'pequenos grupos', 'ao teu grupo', 'teu grupo', 'ao grupo', 'no grupo', 'grupos ao mesmo tempo'):
+                self.assertNotIn(proibido, texto)
         # 29/10/2026 (revisão pedagógica): a descrição diz o mesmo (C8), e a resposta à pergunta fica registada no papel,
-        # para a Apresentação ter prova com os grupos todos ao mesmo tempo (C10).
+        # para a Apresentação ter prova (C10).
         self.assertIn('no início da aula de tarefa', dados('m7-u2')['descricao'])
-        self.assertIn('Cada um regista no seu papel, numa linha, a pergunta que lhe fizeram e o que respondeu', tarefa)
+        self.assertIn('Regista no teu papel, numa linha, a pergunta que te fizeram e o que respondeste', tarefa)
         self.assertIn('responde a uma pergunta (registada numa linha no papel)', guia)
 
     def test_sem_dia_pessoa_e_f10_com_o_titulo_novo(self):

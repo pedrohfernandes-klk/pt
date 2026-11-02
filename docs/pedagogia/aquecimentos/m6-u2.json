@@ -1,0 +1,266 @@
+{
+ "slug": "m6-u2",
+ "modulo": "m6",
+ "unidade": 2,
+ "versao": "1",
+ "momento": "No início da aula de tarefa",
+ "titulo": "A cidade vista e transfigurada",
+ "descricao": "Aquecimento em cartões no início da aula de tarefa da unidade 2 do M6: ligar versos aos sentidos, as regras de quem fotografa na rua, um tipo social pelo gesto, uma qualidade de pessoa num cheiro, a comparação que aproxima, do real à transfiguração, completiva ou relativa, a história das palavras e das grafias, uma fotografia que não repete o verso e o plano da produção, sempre com outros exemplos.",
+ "licoes_das_citacoes": [
+  "m6/licao-m6-f04",
+  "m6/licao-m6-f05",
+  "m6/licao-m6-f06",
+  "m6/licao-m6-f07",
+  "m6/licao-m6-f12"
+ ],
+ "menu": [
+  [
+   "../../../m6/licao-m6-f07/",
+   "Relembrar F07, da «Noite Fechada» às «Horas Mortas»"
+  ],
+  [
+   "../../../m6/licao-m6-f05/",
+   "Relembrar F05, palavras com passado"
+  ],
+  [
+   "../../../m6/licao-m6-f08/",
+   "Relembrar F08, Cesário nos dias de hoje"
+  ]
+ ],
+ "reservadas": [
+  "cães parecem lobos",
+  "Amarelladamente",
+  "sem ladrar",
+  "osseos",
+  "febris",
+  "errantes",
+  "todavia, os roubos",
+  "dubios caminhantes",
+  "Quizera",
+  "o real e a analyse",
+  "m'o dessem",
+  "medito um livro",
+  "exarcebe",
+  "cheio",
+  "pleno",
+  "bellas",
+  "Pousára",
+  "proporções carnaes",
+  "A um poeta",
+  "Ovar",
+  "Silva Pinto",
+  "200 exemplares",
+  "1755",
+  "estátua de Camões",
+  "épico d'outr'ora",
+  "Leitão Bárcia",
+  "Ribeira Nova",
+  "quatro partes",
+  "por onde passas"
+ ],
+ "_nota": "30/10/2026: proposta para o docente (camada M3, M5 e M6). Os cartões de fazer usam versos de «Ave-Marias», «Noite Fechada», «Ao Gás» e «Num Bairro Moderno» que a tarefa não pede, as palavras das lições F05 e F07 e frases inventadas (escritas em itálico, sem «»). Revisão de 30/10: nenhum cartão troca só uma palavra da tarefa (a hipálage de «honesto», a comparação com «como» e as grafias «melancholia» e «egrejas» ficaram no lugar do advérbio de cor, da comparação por verbo e das grafias com consoante dupla e acento). A estrofe dos cães, o verso do livro que o sujeito medita, «cheio» e «pleno», «bellas», «Pousára» e os factos do dossiê ficam em «reservadas».",
+ "cartoes": [
+  {
+   "t": "ler",
+   "rot": "Abre",
+   "titulo": "A cidade que Cesário viu",
+   "html": "<p class=\"abre\"><b>Uma estrofe de «Horas Mortas» por dentro, duas palavras com passado e a tua cidade, escrita ou fotografada.</b> Este aquecimento não faz a tarefa: treina os sentidos, a transfiguração, as orações, a história das palavras e a fotografia com passagens que a tarefa não pede e com fotografias inventadas.</p><div class=\"caixa\"><h3>A tarefa de hoje</h3><p>À mão, 200 a 240 palavras.</p><p><b>Núcleo.</b> Uma oração de «Ao Gás» e uma estrofe de «Horas Mortas»; e duas palavras com passado.</p><p><b>Tema A.</b> À maneira de Cesário: um lugar por onde passas a pé, a uma hora certa.</p><p><b>Tema B.</b> «O Sentimento dum Ocidental» em duas fotografias da cidade de hoje.</p></div><p>Dez minutos, com consulta. Não conta para a nota.</p>"
+  },
+  {
+   "t": "emparelhar",
+   "g": "1",
+   "p": "Por que sentido chega cada verso? Liga.",
+   "p2": "Visão, audição, olfato ou tato? Liga cada verso ao sentido.",
+   "pares": [
+    [
+     "«O gaz extravasado enjôa-me, perturba;»",
+     "Olfato"
+    ],
+    [
+     "«E em terra n'um tinir de louças e talheres»",
+     "Audição"
+    ],
+    [
+     "«O ceu parece baixo e de neblina,»",
+     "Visão"
+    ],
+    [
+     "«Um sopro que arripia os hombros quasi nús.»",
+     "Tato"
+    ]
+   ],
+   "f": "O gás cheira, o tinir ouve-se, o céu vê-se, o sopro sente-se na pele: a cidade entra pelos sentidos (lição F06, perceção sensorial). No tema A, as duas sensações vêm de sentidos diferentes.",
+   "fe": "Pergunta a cada verso o que o corpo do sujeito apanha: um cheiro, um som, uma cor, um arrepio."
+  },
+  {
+   "t": "vf",
+   "g": "2",
+   "p": "Para uma fotografia de rua, basta desfocar depois o rosto de quem aparece, sem lhe pedir autorização.",
+   "p2": "Quem aparece reconhecível pode ser fotografado sem autorização, se o rosto for desfocado depois.",
+   "v": false,
+   "f": "Falso: **pede-se autorização antes** a quem aparece reconhecível; não se fotografa às escondidas, nem quem está em situação vulnerável sem consentimento (lição F08, regras de produção).",
+   "fe": "Desfocar depois não substitui o pedido: a regra pede autorização antes, à pessoa fotografada."
+  },
+  {
+   "t": "escolha",
+   "g": "3",
+   "p": "Qual destes versos mostra um tipo social pelo gesto?",
+   "p2": "Um ofício que vale por um grupo, visto a fazer alguma coisa: qual destes versos o mostra?",
+   "o": [
+    "«Saltam de viga em viga os mestres carpinteiros.»",
+    "«Vem lagrimas de luz dos astros com olheiras,»",
+    "«Muram-se as construcções rectas, eguaes, crescidas;»"
+   ],
+   "c": 0,
+   "f": "Os **carpinteiros** valem pelo ofício inteiro e veem-se pelo gesto: saltam de viga em viga. Um tipo social reconhece-se pelo que faz, não só pelo nome (lição F06). No tema A, o teu tipo social de hoje também precisa de um gesto.",
+   "fe": [
+    null,
+    "Os astros com olheiras são uma imagem do céu: não há uma pessoa nem um ofício.",
+    "Os prédios muram-se, mas não aparece ninguém: falta o ofício e falta o gesto."
+   ]
+  },
+  {
+   "t": "sublinhar",
+   "g": "4",
+   "p": "Toca no adjetivo que dá ao cheiro uma qualidade de quem faz o pão.",
+   "p2": "No verso da padaria, em «Ao Gás», que palavra leva para o cheiro uma qualidade de pessoa?",
+   "frase": "Um cheiro salutar e honesto a pão no forno.",
+   "certas": [
+    4
+   ],
+   "f": "**honesto**: uma qualidade de pessoa passa para o cheiro, e o trabalho de quem faz o pão fica valorizado: é a hipálage (lição F07, «Para entender»). Um recurso só conta com a palavra que o mostra.",
+   "fe": "Procura a palavra que se diria de uma pessoa e não de um cheiro."
+  },
+  {
+   "t": "escolha",
+   "g": "5",
+   "p": "Em «Os candelabros, como estrellas, pouco a pouco;», que recurso aproxima as luzes das lojas e os astros?",
+   "p2": "As luzes que se apagam nas lojas e as estrelas: que recurso as aproxima, e porquê?",
+   "o": [
+    "Comparação: «como» liga luzes e estrelas",
+    "Metáfora: diz que as luzes já são estrelas",
+    "Hipálage: dá às estrelas o brilho das lojas"
+   ],
+   "c": 0,
+   "f": "**Comparação**: «como» aproxima as luzes que se apagam das estrelas, e a rua parece um céu a escurecer (lição F07). Antes de dar o nome, vê que palavra faz a aproximação.",
+   "fe": [
+    null,
+    "Uma metáfora diria que os candelabros são estrelas; aqui «como» só os aproxima, sem os confundir.",
+    "A hipálage dá a uma coisa a qualidade de uma pessoa (lição F07); aqui não há pessoa: há luzes e astros."
+   ]
+  },
+  {
+   "t": "rever",
+   "g": "6",
+   "p": "Revê a frase: o sujeito não copia a rua, transforma-a.",
+   "p2": "A frase diz que o verso só copia o que se vê. Escolhe a versão que mostra o real e a transformação.",
+   "apoio": "Cesário Verde, «Ao Gás»: «Tornam-se mausoléos as armações fulgentes.» (as armações são as montras)",
+   "frase": "Neste verso, Cesário só copia as montras que viu na rua.",
+   "trecho": "Cesário só copia as montras que viu na rua",
+   "o": [
+    "o sujeito vê montras e muda-as em túmulos",
+    "Cesário descreve túmulos de verdade, na rua",
+    "o sujeito inventa túmulos, sem olhar a rua"
+   ],
+   "c": 0,
+   "f": "Parte do real, **as montras** a brilhar, e transforma-o em **túmulos**: é a transfiguração. O real dá a matéria; a linguagem muda-lhe o sentido (lição F07, «Uma montra pode tornar-se um túmulo?»).",
+   "fe": [
+    null,
+    "Não há túmulos na rua: são as montras que, pela linguagem, se tornam túmulos.",
+    "Sem as montras não havia imagem: o sujeito parte do que vê."
+   ]
+  },
+  {
+   "t": "completar",
+   "g": "7",
+   "p": "Completiva ou relativa? Completa.",
+   "p2": "Um «que» completa um verbo, o outro retoma um nome. Completa.",
+   "frase": "Em «Eu temo que me avives», a oração com «que» é [1]; em «Dos arcos dos quarteis que foram já conventos», é [2].",
+   "lacunas": [
+    {
+     "o": [
+      "completiva: completa «temo»",
+      "relativa: retoma o verbo «temo»",
+      "consecutiva: diz o resultado"
+     ],
+     "c": 0
+    },
+    {
+     "o": [
+      "relativa: retoma «quarteis»",
+      "completiva: completa «foram»",
+      "causal: diz porque partem"
+     ],
+     "c": 0
+    }
+   ],
+   "f": "_Eu temo isso_: a oração **completa** o verbo (lições F04 e F09). Em «quarteis que foram já conventos», «que» **retoma** «quarteis» e é sujeito de «foram», como em «os filhos que depois naufragam», na F04. Pergunta sempre: completa um verbo ou retoma um nome?",
+   "fe": "Experimenta _isso_ no lugar da oração: se o verbo fica completo, é completiva. Se «que» retoma um nome que vem antes, é relativa."
+  },
+  {
+   "t": "emparelhar",
+   "g": "8",
+   "p": "Liga cada palavra ao que a sua história conta.",
+   "p2": "Via popular, via erudita ou grafia de 1887? Liga cada palavra.",
+   "pares": [
+    [
+     "«chave»",
+     "Via popular: mudou muito na fala"
+    ],
+    [
+     "«clave»",
+     "Via erudita: ficou perto do latim"
+    ],
+    [
+     "«melancholia»",
+     "Hoje, c em vez de ch"
+    ],
+    [
+     "«egrejas»",
+     "Hoje, com i no princípio"
+    ]
+   ],
+   "f": "_Clave-_ deu **chave**, gasta na boca do povo, e **clave**, tomada mais tarde dos livros: palavras divergentes (lição F05). Em 1887 escrevia-se «melancholia» e «egrejas»; hoje, melancolia e igrejas.",
+   "fe": "Compara cada forma com o latim _clave-_: qual mudou mais? Nas grafias de 1887, compara letra a letra com a palavra de hoje."
+  },
+  {
+   "t": "escolha",
+   "g": "9",
+   "p": "Para «E fere a vista, com brancuras quentes,» («Num Bairro Moderno»), que fotografia faz uma relação clara e não literal?",
+   "p2": "Uma fotografia para o verso da rua que fere a vista: qual se liga ao verso sem o repetir à letra?",
+   "o": [
+    "Alguém de olhos semicerrados diante de uma fachada ao sol",
+    "Uma rua alcatroada, larga e vazia, fotografada de frente, ao sol",
+    "Uma rua à noite, com as janelas e os candeeiros acesos"
+   ],
+   "c": 0,
+   "f": "Os olhos semicerrados diante da fachada não mostram só a rua: mostram o efeito do verso, a luz que fere os olhos. É uma relação clara e não literal (lição F08). A rua vazia ao sol repete o que se vê; a rua à noite muda a hora, e o poema passa-se de manhã.",
+   "fe": [
+    null,
+    "Mostra a rua, mas não o que o verso faz: a luz a ferir a vista. É a relação literal.",
+    "O poema começa às dez horas da manhã; a noite e as janelas acesas não se ligam a este verso."
+   ]
+  },
+  {
+   "t": "ordenar",
+   "g": "10",
+   "p": "Põe por ordem a produção e a entrega.",
+   "p2": "Cada passo usa o anterior. Do primeiro ao último: ordena.",
+   "passos": [
+    "Lês o enunciado e escreves no topo o tema que escolhes",
+    "Respondes ao núcleo: a oração, a estrofe e as duas palavras",
+    "Escreves o tema, com o verso citado e a explicação",
+    "Relês, corriges e contas as palavras: 200 a 240",
+    "Escreves as duas linhas finais e entregas as fotografias no Teams"
+   ],
+   "f": "O tema fica escrito no topo; o núcleo vem primeiro, porque é para todos; a contagem faz-se no texto escrito; as duas linhas fecham, fora da contagem.",
+   "fe": "Não contas palavras de um texto que ainda não existe, e as duas linhas são as últimas, depois da revisão."
+  },
+  {
+   "t": "ler",
+   "rot": "Para levar",
+   "escuro": true,
+   "html": "<p class=\"levar\">Primeiro o que se vê, depois em que se transforma, e sempre as palavras que o provam.</p><p>Agora, na tarefa: a oração de «Ao Gás» classificada; a estrofe de «Horas Mortas», com o que o sujeito observa, em que o transforma, dois recursos e o efeito; «cheio» e «pleno», com o que a forma diz da via de cada uma; duas grafias de hoje; e o teu tema, A ou B.</p>"
+  }
+ ]
+}

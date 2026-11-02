@@ -40,7 +40,8 @@ class AuthorContext(unittest.TestCase):
   self.assertIn('confirma-a.',self.c[22]['palavras'])
   self.assertNotIn('depois da guerra',json.dumps(self.c,ensure_ascii=False))
  def test_counts_keys_and_panel_remain_coherent(self):
-  self.assertEqual(len(self.c),24);self.assertEqual(len(self.u[0]['pool']),94)
+  # 01/11/2026: três lições U1 acrescentam dois itens cada ao arquivo.
+  self.assertEqual(len(self.c),24);self.assertEqual(len(self.u[0]['pool']),100)
   self.assertEqual(self.c[11]['lacunas'][0]['c'],1)
   self.assertEqual(self.c[11]['lacunas'][0]['o'][1],'José Fontinhas')
   panel=bank('m8/painel-m8-f01/index.html')

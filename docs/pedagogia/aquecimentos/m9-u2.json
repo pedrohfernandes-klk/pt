@@ -1,0 +1,213 @@
+{
+ "slug": "m9-u2",
+ "modulo": "m9",
+ "unidade": 2,
+ "versao": "1",
+ "momento": "No início da aula de tarefa",
+ "titulo": "Uma decisão que aguenta perguntas",
+ "descricao": "Dez minutos para treinar leitura, fundamentação e revisão com exemplos inventados.",
+ "licoes_das_citacoes": [
+  "m9/licao-m9-f10",
+  "m9/licao-m9-f13",
+  "m9/licao-m9-f03"
+ ],
+ "menu": [
+  [
+   "../../../m9/licao-m9-f10/",
+   "Relembrar F10, de quem é uma obra?"
+  ],
+  [
+   "../../../m9/licao-m9-f13/",
+   "Relembrar F13, da pista à interpretação"
+  ],
+  [
+   "../../../m9/licao-m9-f03/",
+   "Relembrar F03, a voz que conta"
+  ]
+ ],
+ "reservadas": [
+  "Francisco Marques",
+  "Blimunda",
+  "Scarlatti"
+ ],
+ "cartoes": [
+  {
+   "t": "ler",
+   "rot": "Abre",
+   "titulo": "Uma decisão que aguenta perguntas",
+   "html": "<p>Dez minutos com consulta, sem nota. Os exemplos foram inventados para treinar operações de leitura e escrita; não dão as respostas da tarefa.</p><p>Caso inventado: numa exposição escolar, as legendas só dão os títulos das fotografias. A turma discute se deve acrescentar as datas. Algumas imagens mostram o mesmo lugar em anos diferentes.</p>"
+  },
+  {
+   "t": "escolha",
+   "p": "Que decisão responde ao problema das imagens?",
+   "p2": "Que proposta permite comparar momentos do lugar?",
+   "o": [
+    "Juntar datas para distinguir os momentos.",
+    "Retirar títulos para igualar os momentos.",
+    "Trocar imagens para esquecer os momentos."
+   ],
+   "c": 0,
+   "f": "As datas permitem situar mudanças; a decisão precisa ainda de justificação e de uma resposta a objeções.",
+   "fe": [
+    null,
+    "Retirar informação não ajuda a situar os momentos.",
+    "Apagar diferenças evita a questão em vez de a resolver."
+   ],
+   "g": "1"
+  },
+  {
+   "t": "emparelhar",
+   "p": "Liga cada função ao elemento do caso.",
+   "p2": "Decisão, fundamento ou objeção? Liga cada um ao caso.",
+   "pares": [
+    [
+     "Decisão",
+     "acrescentar datas às legendas"
+    ],
+    [
+     "Fundamento",
+     "há imagens de anos diferentes"
+    ],
+    [
+     "Objeção",
+     "mais texto pode dificultar a leitura"
+    ]
+   ],
+   "f": "Uma interpretação precisa de observação e de uma relação explicada. Mantém distintas as funções.",
+   "fe": "Volta ao caso: uma coisa é observar, outra é concluir ou propor.",
+   "g": "2"
+  },
+  {
+   "t": "rever",
+   "p": "Revê a conclusão para a ajustar ao caso.",
+   "p2": "Que substituição evita afirmar mais do que o exemplo permite?",
+   "apoio": "Caso inventado: numa exposição escolar, as legendas só dão os títulos das fotografias. A turma discute se deve acrescentar as datas. Algumas imagens mostram o mesmo lugar em anos diferentes.",
+   "frase": "As datas devem entrar porque sim.",
+   "trecho": "porque sim",
+   "o": [
+    "para tornar desnecessária a leitura",
+    "para distinguir anos nas imagens",
+    "para apagar diferenças entre imagens"
+   ],
+   "c": 1,
+   "f": "A revisão ajusta a conclusão aos elementos disponíveis e conserva uma frase completa.",
+   "fe": [
+    "As datas não dispensam a leitura: ajudam a ler as mudanças do lugar.",
+    null,
+    "As datas não apagam diferenças: mostram-nas, porque o lugar muda de um ano para outro."
+   ],
+   "g": "3"
+  },
+  {
+   "t": "vf",
+   "p": "No caso criado, acrescentar as datas permite distinguir mudanças no mesmo lugar.",
+   "p2": "Uma data na legenda ajuda a comparar imagens de anos diferentes?",
+   "v": true,
+   "f": "As imagens mostram o mesmo lugar em momentos distintos. A data fornece uma condição de comparação que o título não assegura.",
+   "fe": "Confundes nomear o lugar com situá-lo no tempo. Regressa à informação sobre os anos diferentes.",
+   "g": "4"
+  },
+  {
+   "t": "ordenar",
+   "p": "Ordena uma proposta que responde ao problema da exposição.",
+   "p2": "Como ligas o problema, a decisão e o benefício esperado?",
+   "passos": [
+    "Identifica a dificuldade de distinguir os anos nas imagens.",
+    "Propõe acrescentar as datas às legendas.",
+    "Explica como as datas permitem comparar mudanças do lugar."
+   ],
+   "f": "A proposta responde a uma dificuldade concreta e explicita o seu efeito. A decisão não se justifica apenas por acrescentar informação.",
+   "fe": "Não comeces pela solução sem mostrar o problema. A dificuldade é distinguir os momentos do mesmo lugar.",
+   "g": "5"
+  },
+  {
+   "t": "escolha",
+   "p": "Que resposta enfrenta a objeção de haver texto a mais?",
+   "p2": "Que revisão mantém a finalidade e responde ao excesso de texto?",
+   "o": [
+    "Juntar o ano numa linha da legenda.",
+    "Juntar a história completa de cada lugar.",
+    "Juntar o nome do autor em vez da data."
+   ],
+   "c": 0,
+   "f": "Uma linha curta conserva a informação temporal e responde à dificuldade de leitura. A objeção altera a forma, não apaga a finalidade.",
+   "fe": [
+    null,
+    "A história completa aumenta a quantidade de texto. Não responde à dificuldade levantada pela objeção.",
+    "O autor identifica quem fotografou, não quando. A substituição deixa por resolver a comparação dos anos."
+   ],
+   "g": "6"
+  },
+  {
+   "t": "completar",
+   "p": "Completa a frase sobre o limite da analogia entre a exposição da turma e uma exposição municipal.",
+   "p2": "Que relação permite aproveitar uma ideia sem igualar dois contextos?",
+   "frase": "As duas exposições podem pedir [1] temporal; os públicos diferentes exigem [2] a apresentação.",
+   "lacunas": [
+    {
+     "o": [
+      "localização",
+      "ocultamento",
+      "apagamento"
+     ],
+     "c": 0
+    },
+    {
+     "o": [
+      "mudar",
+      "copiar",
+      "anular"
+     ],
+     "c": 0
+    }
+   ],
+   "f": "A necessidade de situar as imagens permite comparar; públicos diferentes impedem transportar a solução sem ajustamentos.",
+   "fe": "A analogia aproxima um problema, não torna os contextos iguais. Mantém a data e reconsidera a forma de a apresentar.",
+   "g": "7"
+  },
+  {
+   "t": "vf",
+   "p": "Uma solução adequada à turma pode precisar de outra apresentação para visitantes que não conhecem o lugar.",
+   "p2": "Mudar o público pode obrigar a rever a legenda, mesmo conservando a data?",
+   "v": true,
+   "f": "A turma pode reconhecer lugares que outros visitantes desconhecem. O critério é tornar a informação compreensível para quem visita.",
+   "fe": "Confundes a finalidade comum com destinatários iguais. A necessidade de identificar o lugar depende do que o público sabe.",
+   "g": "8"
+  },
+  {
+   "t": "escolha",
+   "p": "A que voltas para justificar a decisão sobre as legendas?",
+   "p2": "A que regressas para mostrar a necessidade da informação proposta?",
+   "o": [
+    "Às imagens do lugar em anos diferentes.",
+    "À escolha de datas para enfeitar títulos.",
+    "À preferência por legendas mais extensas."
+   ],
+   "c": 0,
+   "f": "A diferença temporal entre imagens do mesmo lugar cria o problema que a data ajuda a resolver.",
+   "fe": [
+    null,
+    "A data tem uma função de leitura, não apenas decorativa. Confere os momentos que o visitante precisa de distinguir.",
+    "A extensão não é o objetivo. A objeção pede precisamente informação útil com leitura acessível."
+   ],
+   "g": "9"
+  },
+  {
+   "t": "sublinhar",
+   "p": "Na frase criada, toca na palavra que limita a certeza da interpretação.",
+   "p2": "Que palavra evita prometer que uma data resolve toda a leitura?",
+   "frase": "A data talvez esclareça uma mudança do lugar.",
+   "certas": [
+    2
+   ],
+   "f": "_Talvez_ assinala uma probabilidade. Situar a imagem ajuda, mas compreender a mudança pode exigir informação adicional.",
+   "fe": "A palavra pedida admite que a leitura é provável, mas pode ser revista. Não é o nome do objeto nem o verbo que descreve o efeito.",
+   "g": "10"
+  },
+  {
+   "t": "ler",
+   "rot": "Para levar",
+   "html": "<p>Na tarefa, propõe uma decisão pública, responde a uma objeção e explicita uma diferença que limita a analogia com o romance.</p><p><a href=\"../\">Abrir a aula de tarefa</a></p>"
+  }
+ ]
+}

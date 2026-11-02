@@ -1,0 +1,279 @@
+{
+ "slug": "m3-u2",
+ "modulo": "m3",
+ "unidade": 2,
+ "versao": "1",
+ "momento": "No início da aula de tarefa",
+ "titulo": "Nô mais: do canto alto ao silêncio",
+ "descricao": "Aquecimento em cartões no início da aula de tarefa da unidade 2 do M3: reconhecer a marca de uma modalidade e o seu valor, dizer por que meio uma palavra retoma outra, distinguir invocação, proposição e dedicatória, citar com canto e estância, separar uma tese de um facto e de um gosto, e mostrar um disfarce no fim de uma reflexão, com outros versos e frases inventadas.",
+ "licoes_das_citacoes": [
+  "m3/licao-m3-f09",
+  "m3/licao-m3-f10",
+  "m3/licao-m3-f13",
+  "m3/licao-m3-f15",
+  "m3/m3-soneto-raciocinio",
+  "m3/m3-velho-restelo-juri"
+ ],
+ "menu": [
+  [
+   "../../../m3/licao-m3-f10/",
+   "Relembrar F10, quem é a Musa"
+  ],
+  [
+   "../../../m3/licao-m3-f15/",
+   "Relembrar F15, modalidade e retoma"
+  ],
+  [
+   "../../../m3/licao-m3-f13/",
+   "Relembrar F13, as reflexões do Poeta"
+  ]
+ ],
+ "reservadas": [
+  "Tágides",
+  "som alto",
+  "sublimado",
+  "grandíloquo",
+  "engenho ardente",
+  "verso humilde",
+  "sonorosa",
+  "agreste avena",
+  "frauta ruda",
+  "tuba canora",
+  "Marte tanto ajuda",
+  "se espalhe e se cante",
+  "sublime preço",
+  "Hipocrene",
+  "Nô mais",
+  "Destemperada",
+  "enrouquecida",
+  "gente surda",
+  "endurecida",
+  "Não no dá",
+  "O favor com que",
+  "acende o engenho",
+  "gosto da cobiça",
+  "vil tristeza",
+  "Veja agora",
+  "juízo curioso",
+  "vil interesse",
+  "a tudo nos obriga",
+  "Este rende",
+  "munidas fortalezas",
+  "tredores",
+  "Este a mais nobres",
+  "vilezas",
+  "Este corrompe",
+  "virginais purezas",
+  "Este deprava",
+  "Este interpreta",
+  "faz e desfaz leis",
+  "perjúrios",
+  "tiranos torna",
+  "encantador",
+  "cor de virtude",
+  "cor, contudo, de virtude",
+  "aspeito venerando",
+  "Três vezes a cabeça",
+  "saber só de experiências",
+  "experto peito",
+  "glória de mandar",
+  "vã cobiça",
+  "fraudulento gosto",
+  "aura popular",
+  "peito vão",
+  "castigo tamanho",
+  "Que mortes, que perigos",
+  "crueldades",
+  "ouvimos claramente",
+  "95 a 104",
+  "dez estâncias",
+  "Manoel de Oliveira",
+  "8816",
+  "uma coisa de hoje",
+  "partida atual"
+ ],
+ "_nota": "30/10/2026: proposta da autora para o docente decidir, no formato do M7-U3 e do M4. As passagens que a tarefa pede (I, 4 e 5, X, 145, VIII, 96, VIII, 98 e 99, IV, 94 e 95) e os factos do dossiê estão em «reservadas»; o treino usa I, 106, «Tanto de meu estado me acho incerto» e frases inventadas para este aquecimento. Parecer de 30/10: os cartões de modalidade deixam de treinar o par imperativo e pedido, que bastava transpor para o núcleo 2.",
+ "cartoes": [
+  {
+   "t": "ler",
+   "rot": "Abre",
+   "titulo": "Celebrar e julgar",
+   "html": "<p class=\"abre\"><b>A mesma epopeia que pede um canto do tamanho do mundo acaba a mandar calar a Musa.</b> Este aquecimento não responde à tarefa: treina as operações com outros versos e frases inventadas.</p><div class=\"caixa\"><h3>A tarefa de hoje</h3><p>À mão, com 200 a 250 palavras.</p><p><b>Núcleo.</b> Uma tese sobre o pedido às Tágides (I, 4 e 5) e o «Nô mais» (X, 145), com uma citação de cada; a modalidade de um verso e a palavra que retoma outra.</p><p><b>Tema A.</b> Uma voz <i>off</i> que suspende a cena e julga, com «Este». <b>Tema B.</b> O Velho do Restelo, hoje, contra uma partida atual.</p></div><p>Dez minutos, com consulta. Não conta para a nota.</p>"
+  },
+  {
+   "t": "sublinhar",
+   "g": "1",
+   "p": "Frase inventada: toca na palavra que mostra que quem fala não tem a certeza.",
+   "p2": "Nesta frase inventada, que palavra mede a certeza de quem fala?",
+   "frase": "Talvez a armada chegue a Calecute amanhã.",
+   "certas": [
+    0
+   ],
+   "f": "_Talvez_ mede a certeza: modalidade epistémica, com valor de probabilidade (lição F15). Na tarefa, dizes a modalidade, o valor e a palavra que a marca.",
+   "fe": "Procura a palavra que diz se quem fala tem a certeza do que diz."
+  },
+  {
+   "t": "emparelhar",
+   "g": "2",
+   "p": "Liga cada frase à sua modalidade e ao valor.",
+   "p2": "Obrigação, probabilidade ou avaliação? Liga cada frase.",
+   "pares": [
+    [
+     "Tens de citar com o canto e a estância.",
+     "deôntica: obrigação"
+    ],
+    [
+     "«Respondo que não sei; porém suspeito»",
+     "epistémica: probabilidade"
+    ],
+    [
+     "Infelizmente, a viagem foi longa.",
+     "apreciativa: avaliação"
+    ]
+   ],
+   "f": "**Tens de** obriga; «suspeito» mede pouca certeza (soneto «Tanto de meu estado me acho incerto»); «Infelizmente» avalia (lição F15). Em cada frase, a marca é a prova: uma locução verbal, um verbo, um advérbio.",
+   "fe": "Pergunta a cada frase: obriga? Mede a certeza? Avalia? A palavra que o mostra é a marca."
+  },
+  {
+   "t": "vf",
+   "g": "3",
+   "p": "Numa reflexão do Poeta, a viagem continua enquanto o narrador julga.",
+   "p2": "Quando o Poeta reflete, a ação segue ao mesmo tempo, sem parar.",
+   "v": false,
+   "f": "Falso: na reflexão, o narrador suspende a ação e fala em nome próprio para julgar, como em I, 106, que fecha o canto I (lição F13). Num filme, seria uma cena parada com uma voz _off_.",
+   "fe": "A lição F13 diz que o narrador suspende a ação para julgar: enquanto ele julga, a viagem espera."
+  },
+  {
+   "t": "escolha",
+   "g": "4",
+   "p": "Frase inventada: _O Gama esperou nas naus. Ele não se fiava do Catual._ Como é que a segunda frase retoma o Gama?",
+   "p2": "_O Gama esperou nas naus. Ele não se fiava do Catual._ Que meio de retoma usa a segunda frase?",
+   "o": [
+    "Por um pronome pessoal, «Ele».",
+    "Por um demonstrativo, como «este».",
+    "Por repetição do nome «Gama»."
+   ],
+   "c": 0,
+   "f": "«Ele» é um **pronome pessoal**: retoma «O Gama» sem o repetir (lição F15). Na tarefa, dizes a palavra que retoma, o que retoma e por que meio.",
+   "fe": [
+    null,
+    "«Este», «esse» e «aquele» são demonstrativos; «Ele» é um pronome pessoal.",
+    "A segunda frase não volta a dizer «Gama»: substitui-o por «Ele»."
+   ]
+  },
+  {
+   "t": "completar",
+   "g": "5",
+   "p": "Que parte da epopeia é, e como se localiza uma citação?",
+   "p2": "Pedir ajuda para cantar tem um nome, e citar _Os Lusíadas_ tem uma regra. Completa.",
+   "frase": "Pedir inspiração às Musas é [1]; numa citação de _Os Lusíadas_, indica-se [2].",
+   "lacunas": [
+    {
+     "o": [
+      "a invocação",
+      "a proposição",
+      "a dedicatória"
+     ],
+     "c": 0
+    },
+    {
+     "o": [
+      "o canto e a estância",
+      "a página e a edição",
+      "o capítulo e as linhas"
+     ],
+     "c": 0
+    }
+   ],
+   "f": "A **invocação** pede inspiração; a proposição anuncia o tema e a dedicatória oferece o poema ao rei (lição F10). Cita-se com **o canto e a estância**, como I, 106.",
+   "fe": "A proposição diz o que se vai cantar e a dedicatória oferece o poema; quem pede ajuda para cantar invoca. _Os Lusíadas_ não têm capítulos: têm cantos e estâncias."
+  },
+  {
+   "t": "vf",
+   "g": "6",
+   "p": "Num discurso de um Velho do Restelo de hoje, podes atacar um colega pelo nome, se a crítica for justa.",
+   "p2": "O Velho do Restelo de hoje pode falar contra uma pessoa que a turma conhece.",
+   "v": false,
+   "f": "Falso: a partida de hoje é uma coisa, uma viagem, um projeto, uma tecnologia ou uma moda, e **nunca uma pessoa**. Critica-se o que se faz, não quem o faz.",
+   "fe": "Pergunta contra o quê fala o discurso: contra uma partida, que é uma coisa. Uma pessoa com nome, ou que todos reconhecem, fica de fora."
+  },
+  {
+   "t": "escolha",
+   "g": "7",
+   "p": "Uma tese não é um facto nem um gosto. Que frase defende uma leitura que outros podem contestar?",
+   "p2": "Facto, gosto ou tese: que frase se discute com versos?",
+   "o": [
+    "I, 106 encolhe o homem para que a viagem pareça maior.",
+    "I, 106 é a estância que fecha o canto I do poema.",
+    "Gosto mais da estância I, 106 do que de qualquer outra."
+   ],
+   "c": 0,
+   "f": "Encolher o homem para engrandecer a viagem é uma leitura que se pode contestar com versos: é uma tese. Que I, 106 fecha o canto I confirma-se no poema, é um facto; preferir uma estância é um gosto, que não se prova. Na tarefa, a tese abre a tua primeira resposta.",
+   "fe": [
+    null,
+    "Confirma-se no poema: é um facto. Ninguém o discute, e uma tese pede argumentos.",
+    "É um gosto pessoal: diz o que preferes, não o que o poema faz, e nenhum verso o pode provar."
+   ]
+  },
+  {
+   "t": "rever",
+   "g": "8",
+   "p": "Revê a frase: troca a paráfrase pela citação exata, com o lugar.",
+   "p2": "A frase muda as palavras do Poeta e não diz onde estão. Que versão cita e localiza?",
+   "apoio": "_Os Lusíadas_, I, 106: «Contra um bicho da terra tão pequeno?»",
+   "frase": "O Poeta chama ao homem um bicho pequeno e diz que o Céu se arma contra ele.",
+   "trecho": "um bicho pequeno",
+   "o": [
+    "«um bicho da terra tão pequeno» (I, 106)",
+    "um bicho da terra muito pequeno, em I, 106",
+    "«um bicho da terra tão pequeno», no poema"
+   ],
+   "c": 0,
+   "f": "Entre «», as palavras são as do poema, letra a letra; o lugar vem logo a seguir, com o canto e a estância. Na tarefa, cada citação leva o canto e a estância.",
+   "fe": [
+    null,
+    "Tem o lugar, mas troca «tão» por «muito» e não tem aspas: já não é uma citação.",
+    "As palavras estão certas, mas «no poema» não localiza: faltam o canto e a estância."
+   ]
+  },
+  {
+   "t": "escolha",
+   "g": "9",
+   "p": "Uma reflexão inventada acusa a pressa: _Esta salta refeições, esta apaga dúvidas, esta manda em todos._ Que última linha mostra o disfarce?",
+   "p2": "No fim de uma reflexão, o mal aparece com ar de virtude. Que última linha, nesta reflexão inventada sobre a pressa, faz isso?",
+   "o": [
+    "E tudo isto com nome de eficiência.",
+    "E ninguém percebe porque é assim.",
+    "E a pressa, no fim, é sempre muito má."
+   ],
+   "c": 0,
+   "f": "A pressa veste-se de **eficiência**, como o dinheiro se veste de virtude no fim de VIII, 99 (lição F13). Se escolheres o tema A, a tua última linha mostra o disfarce da coisa que julgas.",
+   "fe": [
+    null,
+    "Fica na dúvida e não mostra disfarce nenhum: falta o nome bonito com que a pressa se apresenta.",
+    "Condena outra vez em vez de mostrar o disfarce: o fim pede a aparência de virtude."
+   ]
+  },
+  {
+   "t": "ordenar",
+   "g": "10",
+   "p": "Põe por ordem a produção e a entrega.",
+   "p2": "Cada passo usa o que o anterior deixou feito. Do primeiro ao último: ordena.",
+   "passos": [
+    "Escreves a tese numa frase, sobre a mudança do canto I para o X",
+    "Escolhes as duas citações e anotas o canto e a estância",
+    "Respondes à gramática: modalidade, valor, marca e retoma",
+    "Escreves o tema que escolheste, com a letra no topo",
+    "Relês, contas as palavras e escreves as duas linhas finais"
+   ],
+   "f": "A tese vem primeiro porque as citações a servem; a gramática fecha o núcleo; o tema vem depois, e a revisão, a contagem e as duas linhas fazem-se no texto escrito.",
+   "fe": "Não escolhes as citações sem saber a tese que vão provar, nem contas palavras de um texto que ainda não existe; as duas linhas são as últimas."
+  },
+  {
+   "t": "ler",
+   "rot": "Para levar",
+   "escuro": true,
+   "html": "<p class=\"levar\">Primeiro o que defendes; depois, as palavras exatas que o provam.</p><p>Agora, na tarefa: a tese na primeira frase, as citações letra a letra com canto e estância, a modalidade com o valor e a marca, a palavra que retoma e o meio, e o tema que escolheste, A ou B.</p>"
+  }
+ ]
+}

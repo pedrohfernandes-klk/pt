@@ -1,0 +1,54 @@
+name: Português, novas lições e percursos
+on:
+  pull_request:
+    paths:
+      - 'm*/**'
+      - 'scripts/**'
+      - 'tests/**'
+      - 'tools/medir-hierarquia.js'
+      - 'docs/pedagogia/percursos-unidades-20261020.json'
+      - '.github/workflows/pt-licoes-20261101-qa.yml'
+permissions:
+  contents: read
+jobs:
+  licoes:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        # 01/11/2026: o contrato dos índices compara a base integrada.
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Testes unitários e geração reproduzível
+        run: |
+          python -m unittest discover -s tests -p 'test_*.py'
+          python scripts/gerar_licoes_20261101.py --verificar
+          python scripts/verificar_camadas.py
+          python scripts/medir_opcoes.py --regra
+      - name: Preparar navegador
+        run: |
+          python -m pip install playwright
+          python -m playwright install --with-deps chromium
+      - name: Todas as atividades, projeção e percursos
+        run: |
+          python tests/browser_licoes_20261101.py
+          python tests/browser_unit_routes.py
+          python tests/browser_unit_support.py
+          python tests/browser_ux06_pt.py
+      - name: Hierarquia em todo o sítio, sem casos nas páginas novas
+        run: |
+          npm install --prefix "$RUNNER_TEMP/pt-hierarquia" playwright
+          "$RUNNER_TEMP/pt-hierarquia/node_modules/.bin/playwright" install --with-deps chromium
+          ROOT_PT="$GITHUB_WORKSPACE" NODE_PATH="$RUNNER_TEMP/pt-hierarquia/node_modules" node tools/medir-hierarquia.js "$RUNNER_TEMP/hierarquia.json" --sitio pt
+          python scripts/verificar_hierarquia_licoes.py "$RUNNER_TEMP/hierarquia.json"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: hierarquia-licoes
+          path: ${{ runner.temp }}/hierarquia.json

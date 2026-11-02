@@ -85,6 +85,48 @@ class Varredura(unittest.TestCase):
         self.assertGreater(checked,0)
 
 
+    # 02/11/2026: rótulos A./B./C., II./IV. sem travessão nem dois pontos encadeados (volta de confirmação, achados F2 e F7).
+    def test_rotulos_com_ponto_e_sem_travessao(self):
+        rotulados=('m1/guilhade-dona-fea','m1/lisboa-cercada','m3/arte-estima','m3/bicho-da-terra','m3/camoes-desconcerto',
+                   'm3/espada-pena','m5/eca-ramalhete','m6/antero-deus','m6/cesario-noite','m7/campos-maquina')
+        for slug in rotulados:
+            s=(ROOT/slug/'index.html').read_text('utf-8')
+            with self.subTest(slug=slug):
+                self.assertNotIn('</b> — ',s)
+                self.assertRegex(s,r'<b>(?:[A-D]|II|IV)\.</b> ')
+        for rel in MANIFEST['files']:
+            if rel.endswith('.html'):
+                with self.subTest(file=rel):
+                    self.assertIsNone(re.search(r'<b>[A-Z]{1,3}</b>(?: —|:)',(ROOT/rel).read_text('utf-8')))
+
+    # 02/11/2026: o «Depois» de cada ponto corrigido existe no texto visível do ficheiro, pela ordem do relatório
+    # (sem os asteriscos do itálico; ↵ marca a quebra de linha).
+    def test_relatorio_coincide_com_o_texto_visivel(self):
+        import html as H
+        def visivel(s):
+            s=s.replace('\\"','"').replace('\\/','/').replace('\\n','\n')
+            s=re.sub(r'\\u([0-9a-fA-F]{4})',lambda m:chr(int(m.group(1),16)),s)
+            s=re.sub(r'<br\s*/?>','\n',s)
+            s=re.sub(r'</(p|li|dt|dd|div|h\d|figcaption|tr)>','\n',s)
+            s=H.unescape(re.sub(r'<[^>]+>','',s))
+            s=re.sub(r'(?<![\w/])_([^_\n]+?)_(?!\w)',r'\1',s).replace('**','')
+            return re.sub(r'\s+',' ',s)
+        cache={}
+        corrigidos=[r for r in LEDGER['achados'] if r['estado']=='corrigido']
+        self.assertEqual(len(corrigidos),239)
+        for r in corrigidos:
+            if r['file'] not in cache:
+                cache[r['file']]=visivel((ROOT/r['file']).read_text('utf-8'))
+            texto=cache[r['file']]
+            segmentos=[re.sub(r'\s+',' ',x).strip() for x in r['resultado'].replace('*','').split('↵') if x.strip()]
+            self.assertTrue(segmentos,r['id'])
+            pos=texto.find(segmentos[0])
+            self.assertNotEqual(pos,-1,(r['id'],segmentos[0][:120]))
+            for seg in segmentos[1:]:
+                nxt=texto.find(seg,pos)
+                self.assertNotEqual(nxt,-1,(r['id'],seg[:120]))
+                pos=nxt
+
 
 if __name__ == '__main__':
     unittest.main()

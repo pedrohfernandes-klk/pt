@@ -1,0 +1,1554 @@
+{
+ "base_commit": "f72364ce84b565e3b928e417d5a716ea646e9a13",
+ "_nota": "02/11/2026: pedido do docente, não há tarefas de grupo; as tarefas ficam iguais, mas individuais (guias, mapas, portefólios, tarefas de unidade, índices e lições das tarefas com os seus painéis).",
+ "files": {
+  "m1/guia-da-tarefa-m1/index.html": {
+   "base_sha256_lf": "9350d4a18ea8882d5a764ebae6ea8010a91e2b3a0484f7f17a6e3eab3c15ce1a",
+   "after_sha256_lf": "edbaf3b9fb4a3e01f34d51bf9803bc9c54b2973ac97be0ec29a8e928baa5a623",
+   "edits": [
+    {
+     "location": "Tarefas individuais, troca 1",
+     "old": "<p class=\"quem\">Em grupo de 2 ou 3.</p><p class=\"enc\">Escrevam, à maneira de Guilhade e com palavras cobertas, uma cantiga de escárnio sobre um alvo de hoje que não seja ninguém da escola, e gravem a leitura.",
+     "new": "<p class=\"quem\">Individual.</p><p class=\"enc\">Escreve, à maneira de Guilhade e com palavras cobertas, uma cantiga de escárnio sobre um alvo de hoje que não seja ninguém da escola, e grava a leitura.",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 2",
+     "old": "M1_Tarefa2_Escarnio.m4a. Uma entrega por grupo.",
+     "new": "M1_Tarefa2_Escarnio.m4a. Entrega individual.",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 3",
+     "old": "O alvo é um costume ou uma figura pública, nunca alguém da escola; os créditos dizem quem fez o quê.",
+     "new": "O alvo é um costume ou uma figura pública, nunca alguém da escola.",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m1/mapa-do-modulo-m1/index.html": {
+   "base_sha256_lf": "3478c449ce6d2cfa50c97d3811171dd4675ba692f31ed7003ab8ba55178ee384",
+   "after_sha256_lf": "3b3000f0635dd36d1047c85db5abeddbf5efcb2195c099c3a2e678242bca237c",
+   "edits": [
+    {
+     "location": "Tarefas individuais, troca 1",
+     "old": "<b>Cantiga de escárnio de 2026</b><span class=\"peso\">25 %, em grupo de 2 ou 3</span>",
+     "new": "<b>Cantiga de escárnio de 2026</b><span class=\"peso\">25 %, individual</span>",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 2",
+     "old": "Forma e leitura; Alvo, língua e grupo</span>",
+     "new": "Forma e leitura; Alvo e língua</span>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m1/portefolio-do-modulo-m1/index.html": {
+   "base_sha256_lf": "a429ffbbe7aa1516445706934884be03e5d3b5dff6ef6942de1fdf62fb23aea4",
+   "after_sha256_lf": "a48bb4a93990eaee8ad186f8afc5eb5866c37a6cd8a236ee37ddd492883d7525",
+   "edits": [
+    {
+     "location": "Tarefas individuais, troca 1",
+     "old": "O produto, ou a ligação, e uma linha: o que fiz, o que corrigi depois da devolução. Nos trabalhos de grupo, o responsável carrega o produto; os outros põem a ligação e os créditos próprios.</div>",
+     "new": "O produto, ou a ligação, e uma linha: o que fiz, o que corrigi depois da devolução.</div>",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 2",
+     "old": "Tarefa 2, «Cantiga de escárnio de 2026»: a ligação para o produto do grupo (só o responsável carrega o ficheiro) e os teus créditos, assinados: o que fizeste tu.",
+     "new": "Tarefa 2, «Cantiga de escárnio de 2026»: o teu produto, ou a ligação para ele.",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m2/guia-da-tarefa-m2/index.html": {
+   "base_sha256_lf": "7804c82302358c88cb4c87aaf005f06e1348ceaa6595e1a4faedb1ef7237dec7",
+   "after_sha256_lf": "1fd8dc39b22dd781af91964025cf5835c6c98a8e4012db6b9d6f16d0ac703c04",
+   "edits": [
+    {
+     "location": "Tarefas individuais, troca 1",
+     "old": "<b>2. Recontagem contemporânea da farsa em vídeo</b><span>em grupo; duas aulas</span>",
+     "new": "<b>2. Recontagem contemporânea da farsa em vídeo</b><span>individual; duas aulas</span>",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 2",
+     "old": "<b>3. Dois anúncios de casamento</b><span>em grupo de 2 ou 3; duas aulas</span>",
+     "new": "<b>3. Dois anúncios de casamento</b><span>individual; duas aulas</span>",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 3",
+     "old": "\"titulo\":\"Recontagem contemporânea da farsa em vídeo\",\"quem\":\"em grupo\",\"grupo\":true",
+     "new": "\"titulo\":\"Recontagem contemporânea da farsa em vídeo\",\"quem\":\"individual\",\"grupo\":false",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 4",
+     "old": "\"titulo\":\"Dois anúncios de casamento\",\"quem\":\"em grupo de 2 ou 3\",\"grupo\":true",
+     "new": "\"titulo\":\"Dois anúncios de casamento\",\"quem\":\"individual\",\"grupo\":false",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 5",
+     "old": "Dividam a farsa em cinco momentos",
+     "new": "Divide a farsa em cinco momentos",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 6",
+     "old": "a segunda escolha) e decidam o equivalente de hoje",
+     "new": "a segunda escolha) e decide o equivalente de hoje",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 7",
+     "old": "\"Escrevam o guião: cada personagem",
+     "new": "\"Escreve o guião: cada personagem",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 8",
+     "old": "Filmem só quem autorizou; cumpram as regras de imagem da escola.",
+     "new": "Filma só quem autorizou; cumpre as regras de imagem da escola.",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 9",
+     "old": "Nos créditos, cada mudança tem uma razão escrita; digam quem fez o quê.",
+     "new": "Nos créditos, cada mudança tem uma razão escrita; diz quem aparece no vídeo.",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 10",
+     "old": "o guião e os créditos. Uma entrega por grupo.",
+     "new": "o guião e os créditos. Entrega individual.",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 11",
+     "old": "Recontem a Farsa de Inês Pereira nos dias de hoje",
+     "new": "Reconta a Farsa de Inês Pereira nos dias de hoje",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 12",
+     "old": "M2_Tarefa2_FichaTecnica.pdf. Uma entrega por grupo.",
+     "new": "M2_Tarefa2_FichaTecnica.pdf. Entrega individual.",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 13",
+     "old": "{\"nome\":\"A cena assinada\",\"niveis\":[\"cada aluno assina uma cena com função clara; os apartes resolvidos\",\"cena assinada; aparte pouco claro\",\"cena sem função na história\",\"sem cena própria\"]",
+     "new": "{\"nome\":\"Cenas e apartes\",\"niveis\":[\"cada cena tem função clara na história; os apartes resolvidos\",\"cenas com função; um aparte pouco claro\",\"uma cena sem função na história\",\"cenas sem função na história\"]",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 14",
+     "old": "Fizemos um vídeo em que a Inês escolhe um namorado. Mudámos tudo porque assim era mais engraçado.",
+     "new": "Fiz um vídeo em que a Inês escolhe um namorado. Mudei tudo porque assim era mais engraçado.",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 15",
+     "old": "Releiam as cenas de Pêro Marques e do Escudeiro e copiem três marcas",
+     "new": "Relê as cenas de Pêro Marques e do Escudeiro e copia três marcas",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 16",
+     "old": "\"Escrevam cada anúncio como Lianor Vaz o faria",
+     "new": "\"Escreve cada anúncio como Lianor Vaz o faria",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 17",
+     "old": "Gravem a leitura dos dois anúncios num minuto",
+     "new": "Grava a leitura dos dois anúncios num minuto",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 18",
+     "old": "com a voz da casamenteira.\",\"Créditos: quem fez o quê.\"",
+     "new": "com a voz da casamenteira.\",\"Confere os limites: 100 a 130 palavras em cada anúncio e um minuto de áudio.\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 19",
+     "old": "Os dois anúncios com as marcas citadas, o áudio e os créditos, num só envio por grupo.",
+     "new": "Os dois anúncios com as marcas citadas e o áudio, num só envio.",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 20",
+     "old": "Escrevam os dois anúncios que Lianor Vaz publicaria hoje",
+     "new": "Escreve os dois anúncios que Lianor Vaz publicaria hoje",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 21",
+     "old": "M2_Tarefa3_Anuncios.m4a. Uma entrega por grupo.",
+     "new": "M2_Tarefa3_Anuncios.m4a. Entrega individual.",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 22",
+     "old": "{\"nome\":\"Limite, áudio e grupo\",\"niveis\":[\"100 a 130 palavras cada; áudio de um minuto, percetível, na voz da casamenteira; créditos\",\"limite ou áudio com um desvio\",\"sem áudio, ou limite muito falhado\",\"sem áudio nem créditos\"]",
+     "new": "{\"nome\":\"Limite e áudio\",\"niveis\":[\"100 a 130 palavras cada; áudio de um minuto, percetível, na voz da casamenteira\",\"limite ou áudio com um desvio\",\"sem áudio, ou limite muito falhado\",\"sem áudio nem limite cumprido\"]",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m2/mapa-do-modulo-m2/index.html": {
+   "base_sha256_lf": "a6c85f0d777821e226551d666cfbf69e14a8913fcd9faacce617bcb975b10f1c",
+   "after_sha256_lf": "23e39ec6e37fadbbc965a104563d0df51014a4f7e12164adb1b9d140ab9cc840",
+   "edits": [
+    {
+     "location": "Tarefas individuais, troca 1",
+     "old": "<b>Recontagem contemporânea da farsa em vídeo</b><span class=\"peso\">25 %, em grupo</span>",
+     "new": "<b>Recontagem contemporânea da farsa em vídeo</b><span class=\"peso\">25 %, individual</span>",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 2",
+     "old": "<b>Dois anúncios de casamento</b><span class=\"peso\">25 %, em grupo de 2 ou 3</span>",
+     "new": "<b>Dois anúncios de casamento</b><span class=\"peso\">25 %, individual</span>",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 3",
+     "old": "Fidelidade e escolha; A cena assinada; Produção",
+     "new": "Fidelidade e escolha; Cenas e apartes; Produção",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 4",
+     "old": "Registo e contraste; Limite, áudio e grupo</span>",
+     "new": "Registo e contraste; Limite e áudio</span>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m2/portefolio-do-modulo-m2/index.html": {
+   "base_sha256_lf": "2c66db0145f96e77c9617090381ed24fc62924035fb19e2368a96f2ee3236a44",
+   "after_sha256_lf": "e557de7415b28892ebd575ea1d600a7c8c2a8ec1d21cfb8a5e0885f4af16b119",
+   "edits": [
+    {
+     "location": "Tarefas individuais, troca 1",
+     "old": "O produto, ou a ligação, e uma linha: o que fiz, o que corrigi depois da devolução. Nos trabalhos de grupo, o responsável carrega o produto; os outros põem a ligação e os créditos próprios.</div>",
+     "new": "O produto, ou a ligação, e uma linha: o que fiz, o que corrigi depois da devolução.</div>",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 2",
+     "old": "Tarefa 2, «Recontagem contemporânea da farsa em vídeo»: a ligação para o produto do grupo (só o responsável carrega o ficheiro) e os teus créditos, assinados: o que fizeste tu.",
+     "new": "Tarefa 2, «Recontagem contemporânea da farsa em vídeo»: o teu produto, ou a ligação para ele.",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 3",
+     "old": "Tarefa 3, «Dois anúncios de casamento»: a ligação para o produto do grupo (só o responsável carrega o ficheiro) e os teus créditos, assinados: o que fizeste tu.",
+     "new": "Tarefa 3, «Dois anúncios de casamento»: o teu produto, ou a ligação para ele.",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m3/guia-da-tarefa-m3/index.html": {
+   "base_sha256_lf": "28099651f9352b27db534d617450f5264835372639dd7da91e861433d1397a1b",
+   "after_sha256_lf": "185995b4dc3ee4a021e45ba35f5d7b2dd8f42745d420187667601d8d43e39c75",
+   "edits": [
+    {
+     "location": "Tarefas individuais, troca 1",
+     "old": "<b>2. Objeto crítico das Descobertas</b><span>em grupo; duas aulas</span>",
+     "new": "<b>2. Objeto crítico das Descobertas</b><span>individual; duas aulas</span>",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 2",
+     "old": "<b>3. O Velho do Restelo em 2026</b><span>em grupo de 2 ou 3; duas aulas</span>",
+     "new": "<b>3. O Velho do Restelo em 2026</b><span>individual; duas aulas</span>",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 3",
+     "old": "\"titulo\":\"Objeto crítico das Descobertas\",\"quem\":\"em grupo\",\"grupo\":true",
+     "new": "\"titulo\":\"Objeto crítico das Descobertas\",\"quem\":\"individual\",\"grupo\":false",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 4",
+     "old": "\"titulo\":\"O Velho do Restelo em 2026\",\"quem\":\"em grupo de 2 ou 3\",\"grupo\":true",
+     "new": "\"titulo\":\"O Velho do Restelo em 2026\",\"quem\":\"individual\",\"grupo\":false",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 5",
+     "old": "\"Escolham o objeto (astrolábio, padrão, mapa, caixa de especiarias) e decidam a mudança que o critica",
+     "new": "\"Escolhe o objeto (astrolábio, padrão, mapa, caixa de especiarias) e decide a mudança que o critica",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 6",
+     "old": "Construam ou desenhem o objeto; fotografem-no sobre fundo liso.",
+     "new": "Constrói ou desenha o objeto; fotografa-o sobre fundo liso.",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 7",
+     "old": "\"Escrevam a legenda (o que é, o que mudou, porquê)",
+     "new": "\"Escreve a legenda (o que é, o que mudou, porquê)",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 8",
+     "old": "\"Registem duas fontes",
+     "new": "\"Regista duas fontes",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 9",
+     "old": "o manual, com as duas fontes. Uma entrega por grupo.",
+     "new": "o manual, com as duas fontes. Entrega individual.",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 10",
+     "old": "Recriem um objeto das Descobertas",
+     "new": "Recria um objeto das Descobertas",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 11",
+     "old": "M3_Tarefa2_Legenda.pdf. Uma entrega por grupo.",
+     "new": "M3_Tarefa2_Legenda.pdf. Entrega individual.",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 12",
+     "old": "Releiam o Velho do Restelo (canto IV) e resumam os três argumentos dele em três frases vossas",
+     "new": "Relê o Velho do Restelo (canto IV) e resume os três argumentos dele em três frases tuas",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 13",
+     "old": "\"Escolham a «partida» de hoje",
+     "new": "\"Escolhe a «partida» de hoje",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 14",
+     "old": "Escrevam o discurso de um minuto, transpondo os três argumentos; digam-no ao vivo, um de cada vez ou a várias vozes.",
+     "new": "Escreve o discurso de um minuto, transpondo os três argumentos; di-lo ao vivo.",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 15",
+     "old": "Escrevam, em três linhas, o que responderia quem parte. Créditos: quem fez o quê.",
+     "new": "Escreve, em três linhas, o que responderia quem parte.",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 16",
+     "old": "O texto com as estâncias, o áudio, a resposta de quem parte e os créditos, num só envio por grupo.",
+     "new": "O texto com as estâncias, o áudio e a resposta de quem parte, num só envio.",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 17",
+     "old": "Deem voz a um Velho do Restelo de hoje",
+     "new": "Dá voz a um Velho do Restelo de hoje",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 18",
+     "old": "M3_Tarefa3_Restelo.m4a. Uma entrega por grupo.",
+     "new": "M3_Tarefa3_Restelo.m4a. Entrega individual.",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 19",
+     "old": "{\"nome\":\"Discurso ao vivo e grupo\",\"niveis\":[\"um minuto, dito ao vivo com voz e olhar; 150 a 200 palavras; créditos\"",
+     "new": "{\"nome\":\"Discurso ao vivo\",\"niveis\":[\"um minuto, dito ao vivo com voz e olhar; 150 a 200 palavras\"",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m3/portefolio-do-modulo-m3/index.html": {
+   "base_sha256_lf": "fdbd47a5d132f73a80843684d677677a58bb35baab74a30dcd8dc240c1f0f68f",
+   "after_sha256_lf": "0e05f306c6474774801119109b141a9461ed65ee780159ed1f3616943b0e88d2",
+   "edits": [
+    {
+     "location": "Tarefas individuais, troca 1",
+     "old": "O produto, ou a ligação, e uma linha: o que fiz, o que corrigi depois da devolução. Nos trabalhos de grupo, o responsável carrega o produto; os outros põem a ligação e os créditos próprios.</div>",
+     "new": "O produto, ou a ligação, e uma linha: o que fiz, o que corrigi depois da devolução.</div>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/guia-da-tarefa-m4/index.html": {
+   "base_sha256_lf": "2082e55ef014ceef5f8f7b735e336d89df80aafb870e8ad008d013fd5f3a45d8",
+   "after_sha256_lf": "1be3a496747d4ea3ca2199183ca4c9824630a55736f8cffdff2fbabe1e651924",
+   "edits": [
+    {
+     "location": "Tarefas individuais, troca 1",
+     "old": "aquecimento em cartões no início e apresentações em pequenos grupos, ao mesmo tempo",
+     "new": "aquecimento em cartões no início e apresentação individual",
+     "occurrences": 2
+    },
+    {
+     "location": "Tarefas individuais, troca 2",
+     "old": "<p class=\"quem\">Em grupo de 2 ou 3.</p><p class=\"enc\">Escolham um peixe das repreensões de Vieira e apresentem-no à turma",
+     "new": "<p class=\"quem\">Individual.</p><p class=\"enc\">Escolhe um peixe das repreensões de Vieira e apresenta-o à turma",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 3",
+     "old": "M4_Tarefa1_Peixe.mp4. Uma entrega por grupo.",
+     "new": "M4_Tarefa1_Peixe.mp4. Entrega individual.",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 4",
+     "old": "Três a quatro minutos, todos falam, no máximo três imagens com crédito.",
+     "new": "Três a quatro minutos, no máximo três imagens com crédito.",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m5/portefolio-do-modulo-m5/index.html": {
+   "base_sha256_lf": "0a51a1ce3bb5dfe454b776ab8b22e6a44f2d42a5db4895bed36ee80bdccf24c7",
+   "after_sha256_lf": "ad1356f562b66d5641a5650323fdd4df895c616e63843527fa0525ffdd827cfc",
+   "edits": [
+    {
+     "location": "Tarefas individuais, troca 1",
+     "old": "O produto, ou a ligação, e uma linha: o que fiz, o que corrigi depois da devolução. Nos trabalhos de grupo, o responsável carrega o produto; os outros põem a ligação e os créditos próprios.</div>",
+     "new": "O produto, ou a ligação, e uma linha: o que fiz, o que corrigi depois da devolução.</div>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m6/guia-da-tarefa-m6/index.html": {
+   "base_sha256_lf": "8036d2cc3b4298dbd8727ffe5f808d58aee81cdfc011f40b266fe1c38a13117a",
+   "after_sha256_lf": "f6bc7f51ee53a2ff0df0f7b303458bee2d9beef41dd12952bb39fce10f351619",
+   "edits": [
+    {
+     "location": "Tarefas individuais, troca 1",
+     "old": "<b>2. Cesário Verde nos dias de hoje</b><span>em grupo; duas aulas</span>",
+     "new": "<b>2. Cesário Verde nos dias de hoje</b><span>individual; duas aulas</span>",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 2",
+     "old": "\"titulo\":\"Cesário Verde nos dias de hoje\",\"quem\":\"em grupo\",\"grupo\":true",
+     "new": "\"titulo\":\"Cesário Verde nos dias de hoje\",\"quem\":\"individual\",\"grupo\":false",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 3",
+     "old": "Horas Mortas) escolham um lugar da Lisboa ribeirinha",
+     "new": "Horas Mortas) escolhe um lugar da Lisboa ribeirinha",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 4",
+     "old": "\"Fotografem ou filmem a pensar nos cinco sentidos",
+     "new": "\"Fotografa ou filma a pensar nos cinco sentidos",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 5",
+     "old": "\"Legendem cada imagem",
+     "new": "\"Legenda cada imagem",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 6",
+     "old": "Apresentem à turma em três minutos e entreguem os créditos, com quem fez o quê.",
+     "new": "Apresenta à turma em três minutos e entrega os créditos.",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 7",
+     "old": "(ou a ligação) e os créditos. Uma entrega por grupo.",
+     "new": "(ou a ligação) e os créditos. Entrega individual.",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 8",
+     "old": "Refaçam o percurso de «O Sentimento dum Ocidental»",
+     "new": "Refaz o percurso de «O Sentimento dum Ocidental»",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 9",
+     "old": "M6_Tarefa2_FichaTecnica.pdf. Uma entrega por grupo.",
+     "new": "M6_Tarefa2_FichaTecnica.pdf. Entrega individual.",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 10",
+     "old": "\"todos falam; versos ditos de cor ou bem lidos;",
+     "new": "\"versos ditos de cor ou bem lidos;",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m6/portefolio-do-modulo-m6/index.html": {
+   "base_sha256_lf": "314ee666025649084674be3c961004be9e7a0d91e14e486e9d34bae873b98002",
+   "after_sha256_lf": "c9f66f90274e20bd7dd595af3f7cab3b8d435ce5a8dcc249aa70748b83f8050c",
+   "edits": [
+    {
+     "location": "Tarefas individuais, troca 1",
+     "old": "O produto, ou a ligação, e uma linha: o que fiz, o que corrigi depois da devolução. Nos trabalhos de grupo, o responsável carrega o produto; os outros põem a ligação e os créditos próprios.</div>",
+     "new": "O produto, ou a ligação, e uma linha: o que fiz, o que corrigi depois da devolução.</div>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m7/guia-da-tarefa-m7/index.html": {
+   "base_sha256_lf": "6d8af5f38e835a6d60a1dc368b4b2b4be05df0528294de2b503ee1ccc76369e8",
+   "after_sha256_lf": "da675ef822c44c8f63c28c87805a41d18e5a73dabd343360c6afd02160293666",
+   "edits": [
+    {
+     "location": "Tarefas individuais, troca 1",
+     "old": "aquecimento em cartões no início e apresentações em pequenos grupos, ao mesmo tempo",
+     "new": "aquecimento em cartões no início e apresentação individual",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 2",
+     "old": "<b>Extra. Mensagem para 2026</b><span>em grupo de 2 ou 3; sem nota, por gosto ou para recuperação</span>",
+     "new": "<b>Extra. Mensagem para 2026</b><span>individual; sem nota, por gosto ou para recuperação</span>",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 3",
+     "old": "na unidade 2, a apresentação ao grupo.",
+     "new": "na unidade 2, a apresentação individual.",
+     "occurrences": 2
+    },
+    {
+     "location": "Tarefas individuais, troca 4",
+     "old": "Apresenta-o ao teu grupo de 4 ou 5 colegas em dois minutos, com os grupos ao mesmo tempo, e lê uma frase dele.",
+     "new": "Apresenta-o em dois minutos e lê uma frase dele.",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 5",
+     "old": "\"titulo\":\"Mensagem para 2026\",\"quem\":\"em grupo de 2 ou 3\",\"grupo\":true",
+     "new": "\"titulo\":\"Mensagem para 2026\",\"quem\":\"individual\",\"grupo\":false",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 6",
+     "old": "\"Escolham o poema («O Infante»",
+     "new": "\"Escolhe o poema («O Infante»",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 7",
+     "old": "«Nevoeiro») e digam, em duas linhas, a estrutura dele",
+     "new": "«Nevoeiro») e diz, em duas linhas, a estrutura dele",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 8",
+     "old": "\"Decidam o símbolo de hoje",
+     "new": "\"Decide o símbolo de hoje",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 9",
+     "old": "Escrevam a versão com a mesma estrutura; citem dois versos do original como modelo.",
+     "new": "Escreve a versão com a mesma estrutura; cita dois versos do original como modelo.",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 10",
+     "old": "Gravem a leitura num minuto; registem os créditos (quem fez o quê).",
+     "new": "Grava a leitura num minuto.",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 11",
+     "old": "O texto com os versos de modelo, o áudio e os créditos, num só envio por grupo.",
+     "new": "O texto com os versos de modelo e o áudio, num só envio.",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 12",
+     "old": "Escolham um poema da Mensagem e façam a sua versão para hoje",
+     "new": "Escolhe um poema da Mensagem e faz a tua versão para hoje",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 13",
+     "old": "dois versos dele citados como modelo, a gravação da leitura (um minuto) e os créditos (quem fez o quê).",
+     "new": "dois versos dele citados como modelo e a gravação da leitura (um minuto).",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 14",
+     "old": "M7_Extra_Mensagem.m4a. Uma entrega por grupo.",
+     "new": "M7_Extra_Mensagem.m4a. Entrega individual.",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 15",
+     "old": "são símbolos, não pessoas; o texto é vosso.",
+     "new": "são símbolos, não pessoas; o texto é teu.",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 16",
+     "old": "{\"nome\":\"Forma, leitura e grupo\",\"niveis\":[\"12 a 16 versos ou 150 a 180 palavras; leitura de um minuto, percetível; créditos\",\"limite ou leitura com um desvio\",\"sem leitura, ou limite muito falhado\",\"sem áudio nem créditos\"]",
+     "new": "{\"nome\":\"Forma e leitura\",\"niveis\":[\"12 a 16 versos ou 150 a 180 palavras; leitura de um minuto, percetível\",\"limite ou leitura com um desvio\",\"sem leitura, ou limite muito falhado\",\"sem leitura nem texto completo\"]",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m8/portefolio-do-modulo-m8/index.html": {
+   "base_sha256_lf": "c42cc49f408dfe75dcba220ac410d4e6b2973609560eaac37d4a829a43ebcf70",
+   "after_sha256_lf": "0fc3cce93ce21abd3ec2f78570a9c2b1b94474449bf3a02a6bb9dccd5a56f109",
+   "edits": [
+    {
+     "location": "Tarefas individuais, troca 1",
+     "old": "O produto, ou a ligação, e uma linha: o que fiz, o que corrigi depois da devolução. Nos trabalhos de grupo, o responsável carrega o produto; os outros põem a ligação e os créditos próprios.</div>",
+     "new": "O produto, ou a ligação, e uma linha: o que fiz, o que corrigi depois da devolução.</div>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m9/guia-da-tarefa-m9/index.html": {
+   "base_sha256_lf": "5a5a00e47061521ec4aeae99a6cdfa1343bc299e11ada3573f54057db3ac16f5",
+   "after_sha256_lf": "6d74a4439d86a4920ec15c5579141df89784c90a6e624f9a9e92301a6f188b01",
+   "edits": [
+    {
+     "location": "Tarefas individuais, troca 1",
+     "old": "<b>Extra. Os que carregaram a pedra</b><span>em grupo; duas aulas</span>",
+     "new": "<b>Extra. Os que carregaram a pedra</b><span>individual; duas aulas</span>",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 2",
+     "old": "\"titulo\":\"Os que carregaram a pedra\",\"quem\":\"em grupo\",\"grupo\":true",
+     "new": "\"titulo\":\"Os que carregaram a pedra\",\"quem\":\"individual\",\"grupo\":false",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 3",
+     "old": "\"Releiam o capítulo da pedra e copiem os nomes",
+     "new": "\"Relê o capítulo da pedra e copia os nomes",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 4",
+     "old": "\"Decidam o produto e o que vai mostrar",
+     "new": "\"Decide o produto e o que vai mostrar",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 5",
+     "old": "\"Façam o produto; cada escolha de forma",
+     "new": "\"Faz o produto; cada escolha de forma",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 6",
+     "old": "Apresentem à turma e entreguem os créditos, com quem fez o quê.",
+     "new": "Apresenta à turma e entrega os créditos.",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 7",
+     "old": "a fundamentação e os créditos. Uma entrega por grupo.",
+     "new": "a fundamentação e os créditos. Entrega individual.",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 8",
+     "old": "Deem nome aos anónimos do Memorial do Convento num produto do vosso curso",
+     "new": "Dá nome aos anónimos do Memorial do Convento num produto do teu curso",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 9",
+     "old": "M9_Tarefa1_Fundamentacao.pdf. Uma entrega por grupo.",
+     "new": "M9_Tarefa1_Fundamentacao.pdf. Entrega individual.",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 10",
+     "old": "Apresentação à turma; créditos; todos fizeram alguma coisa.",
+     "new": "Apresentação à turma; créditos.",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 11",
+     "old": "\"7 minutos; todos falam; uma objeção prevista e respondida\"",
+     "new": "\"7 minutos; uma objeção prevista e respondida\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 12",
+     "old": "\"lê-se do papel; fala um só\"",
+     "new": "\"lê-se do papel\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 13",
+     "old": "{\"nome\":\"Processo e parte de cada um\",\"niveis\":[\"três grupos testados, crítica de outro grupo registada, memória descritiva individual com 100 a 150 palavras\"",
+     "new": "{\"nome\":\"Processo e memória descritiva\",\"niveis\":[\"três grupos de anónimos testados, crítica de um colega registada, memória descritiva com 100 a 150 palavras\"",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m9/portefolio-do-modulo-m9/index.html": {
+   "base_sha256_lf": "01b0757ac3e6606db7dfb28c291fa3a14b50dd5a5ece868ae21cc691692c2b0a",
+   "after_sha256_lf": "83fa4dd6c4fd6bb38084ee3a701613e7860f46048093f2e0fc68dd4236290e1d",
+   "edits": [
+    {
+     "location": "Tarefas individuais, troca 1",
+     "old": "O produto, ou a ligação, e uma linha: o que fiz, o que corrigi depois da devolução. Nos trabalhos de grupo, o responsável carrega o produto; os outros põem a ligação e os créditos próprios.</div>",
+     "new": "O produto, ou a ligação, e uma linha: o que fiz, o que corrigi depois da devolução.</div>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "tarefas/m4-u1/index.html": {
+   "base_sha256_lf": "a573d5dccce89c7bd52c05e522448cd469aa6922b7d5e84e78d8a45940b880b4",
+   "after_sha256_lf": "e2ec11f85bf0197da3619cb29a4a1aab7bc6e09bf8c3b87a07c8cb89438d3931",
+   "edits": [
+    {
+     "location": "Tarefas individuais, troca 1",
+     "old": "apresentação individual de 3 a 4 minutos, ao teu grupo de quatro, com os grupos ao mesmo tempo.",
+     "new": "apresentação individual de 3 a 4 minutos.",
+     "occurrences": 1
+    }
+   ]
+  },
+  "tarefas/m4-u3-discurso/index.html": {
+   "base_sha256_lf": "332fa4865f63072dce204c3e7be55449b702b128a3467f83a7826135691e111f",
+   "after_sha256_lf": "83673d6a3d599036eaa0e7096207436969236fab300c86be9bc7440a0cfe7acb",
+   "edits": [
+    {
+     "location": "Tarefas individuais, troca 1",
+     "old": "apresentação individual de 2 minutos, ao teu grupo de quatro ou cinco, com os grupos ao mesmo tempo.",
+     "new": "apresentação individual de 2 minutos.",
+     "occurrences": 1
+    }
+   ]
+  },
+  "tarefas/m7-u2/index.html": {
+   "base_sha256_lf": "79a57906639a40f0a4654166dfecc823ccb06945f6722bb0123caae5674b7b22",
+   "after_sha256_lf": "235e1050daf2150472087283aee9836e93c2ba3260c3db9383810f1c68e0caff",
+   "edits": [
+    {
+     "location": "Tarefas individuais, troca 1",
+     "old": "Apresenta a voz ao teu grupo em dois minutos, lê uma frase e responde a uma pergunta.",
+     "new": "Apresenta a voz em dois minutos, lê uma frase e responde a uma pergunta.",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 2",
+     "old": "As apresentações fazem-se em pequenos grupos de 4 ou 5, todos ao mesmo tempo, com o docente a circular. Cada um regista no seu papel, numa linha, a pergunta que lhe fizeram e o que respondeu; essa linha entra nas fotografias.",
+     "new": "A apresentação é individual. Regista no teu papel, numa linha, a pergunta que te fizeram e o que respondeste; essa linha entra nas fotografias.",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m3/index.html": {
+   "base_sha256_lf": "c133d8266a10345ba58a5543d27ee7fd9a051756399e8f076957ccad96c7587e",
+   "after_sha256_lf": "3e287d42e3e72d093001f86f17ee6425a5b8a110ae4dbf4db87e564cd1adb32c",
+   "edits": [
+    {
+     "location": "Tarefas individuais, troca 1",
+     "old": "<span class=\"f\">Em grupo, recria um objeto das navegações com duas histórias",
+     "new": "<span class=\"f\">Recria um objeto das navegações com duas histórias",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 2",
+     "old": "Como o grupo trabalha, por ordem:",
+     "new": "Como trabalhas, por ordem:",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 3",
+     "old": "\"Mostrar o protótipo a outro grupo\"",
+     "new": "\"Mostrar o protótipo a um colega\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 4",
+     "old": "\"p\":\"Quantos objetos candidatos investiga o grupo antes de escolher um?\",\"frase\":\"O grupo investiga [1] objetos candidatos",
+     "new": "\"p\":\"Quantos objetos candidatos investigas antes de escolher um?\",\"frase\":\"Investigas [1] objetos candidatos",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 5",
+     "old": "\"o\":[\"Ao docente\",\"Aos autores de um manual\",\"A outro grupo\"],\"c\":2,\"f\":\"A outro grupo: «Protótipo mostrado a outro grupo» é o terceiro passo do processo.\"",
+     "new": "\"o\":[\"Ao docente\",\"Aos autores de um manual\",\"A um colega\"],\"c\":2,\"f\":\"A um colega: «Protótipo mostrado a um colega» é o terceiro passo do processo.\"",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/index.html": {
+   "base_sha256_lf": "ef2b93475f4413aea1968c494091161c41c0c9755a87a2cd4168da9100d03490",
+   "after_sha256_lf": "4ff8eed49052927a071c0d4c419e20c20eae953a203714d38233a5844aa99761",
+   "edits": [
+    {
+     "location": "Tarefas individuais, troca 1",
+     "old": "guião em papel, apresentações em pequenos grupos ao mesmo tempo e fotografias no Teams.",
+     "new": "guião em papel, apresentação individual e fotografias no Teams.",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 2",
+     "old": "discurso em papel, apresentações em pequenos grupos ao mesmo tempo e fotografias no Teams.",
+     "new": "discurso em papel, apresentação individual e fotografias no Teams.",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m6/index.html": {
+   "base_sha256_lf": "910d7491cdafbded51a90358043c6073a616b3b9268988157e6d15a8cc3a773e",
+   "after_sha256_lf": "c86e055efe9e6830ae0fcdfb786d6347dd5a9b6aca3e5eddd1cd307001797b1b",
+   "edits": [
+    {
+     "location": "Tarefas individuais, troca 1",
+     "old": "<span class=\"f\">Em grupo, refaz o percurso do poema a partir do Cais do Sodré",
+     "new": "<span class=\"f\">Refaz o percurso do poema a partir do Cais do Sodré",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 2",
+     "old": "aqui explica-se uma escolha do próprio grupo: verso, imagem e ligação.",
+     "new": "aqui explicas uma escolha tua: verso, imagem e ligação.",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 3",
+     "old": "(I), o grupo inventa um corredor apertado e som irregular. Como distingue a sua proposta da informação do verso?",
+     "new": "(I), inventas um corredor apertado e som irregular. Como distingues a tua proposta da informação do verso?",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 4",
+     "old": "O percurso pode demorar o tempo que o grupo quiser, desde que seja seguro.",
+     "new": "O percurso pode demorar o tempo que quiseres, desde que seja seguro.",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 5",
+     "old": "que explica uma escolha do grupo?",
+     "new": "que explica uma escolha tua?",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 6",
+     "old": "(I): o grupo quer criar incómodo sem mostrar gás.",
+     "new": "(I): queres criar incómodo sem mostrar gás.",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m7/index.html": {
+   "base_sha256_lf": "fc5caa6a4e886c44b13b941c773d178f0dfae4fecad6898708f2ecc81055b322",
+   "after_sha256_lf": "1558c4aeaa03d2a4e8be7aebeeddb7cffa246941ad11c8b4c754d8f62524ef5d",
+   "edits": [
+    {
+     "location": "Tarefas individuais, troca 1",
+     "old": "síntese integrada, apresentações em pequenos grupos ao mesmo tempo e fotografias no Teams.",
+     "new": "síntese integrada, apresentação individual e fotografias no Teams.",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m2/licao-m2-f09/index.html": {
+   "base_sha256_lf": "d1b02d7ae5de841f59e02805173f391337296dc096c3cdfe54b504aa4133afcc",
+   "after_sha256_lf": "1678b67c33a67774229164084e8aa672be256f0e62afaf8565c33e0576e197ba",
+   "edits": [
+    {
+     "location": "Tarefas individuais, troca 1",
+     "old": "O provérbio e o par asno/cavalo que escolheram (meio minuto). 2) O mapa: em que se transformou cada momento da farsa, e uma escolha de que se orgulham (dois minutos). 3) Uma dificuldade e como a resolveram (um minuto). 4) A resposta do grupo à pergunta do módulo: <b>o que é que escolheram mudar na vossa recontagem, e porquê?</b> (um minuto). Sobra meio minuto para uma pergunta da turma. Decidam antes quem fala em cada passo.</p>",
+     "new": "O provérbio e o par asno/cavalo que escolheste (meio minuto). 2) O mapa: em que se transformou cada momento da farsa, e uma escolha de que te orgulhas (dois minutos). 3) Uma dificuldade e como a resolveste (um minuto). 4) A tua resposta à pergunta do módulo: <b>o que é que escolheste mudar na tua recontagem, e porquê?</b> (um minuto). Sobra meio minuto para uma pergunta da turma.</p>",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 2",
+     "old": "o efeito que o grupo se propôs conservar.",
+     "new": "o efeito que te propuseste conservar.",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 3",
+     "old": "ordena a apresentação oral do grupo.",
+     "new": "ordena a tua apresentação oral.",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 4",
+     "old": "\"Uma dificuldade e como a resolveram\"",
+     "new": "\"Uma dificuldade e como a resolveste\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 5",
+     "old": "O grupo escolheu uma aplicação de encontros",
+     "new": "Escolheste uma aplicação de encontros",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 6",
+     "old": "Neste ensaio, o grupo quer comparar duas marcações",
+     "new": "Neste ensaio, queres comparar duas marcações",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 7",
+     "old": "\"Um tema do grupo, creditado\"",
+     "new": "\"Um tema próprio, creditado\"",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m2/painel-m2-f09/index.html": {
+   "base_sha256_lf": "89b345c5640e7b83bb20d2d7b3a6344e22074693b77bdec839968c8be38ce89d",
+   "after_sha256_lf": "07c41381c9c476a5c6c61fa9fa9ab0f5ff236e400174784e3c944ad5fd20259d",
+   "edits": [
+    {
+     "location": "Tarefas individuais, troca 1",
+     "old": "\"Uma dificuldade e como a resolveram\"",
+     "new": "\"Uma dificuldade e como a resolveste\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 2",
+     "old": "O grupo escolheu uma aplicação de encontros",
+     "new": "Escolheste uma aplicação de encontros",
+     "occurrences": 2
+    },
+    {
+     "location": "Tarefas individuais, troca 3",
+     "old": "Neste ensaio, o grupo quer comparar duas marcações",
+     "new": "Neste ensaio, queres comparar duas marcações",
+     "occurrences": 2
+    },
+    {
+     "location": "Tarefas individuais, troca 4",
+     "old": "\"Um tema do grupo, creditado\"",
+     "new": "\"Um tema próprio, creditado\"",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m2/index.html": {
+   "base_sha256_lf": "d4d9841dbfc81e7e7b77e24bfe71d56f13b467bc78aceb4ba93a14634e5d7f86",
+   "after_sha256_lf": "d011df8e61d4a3b391b1a3a1c33faca19b540647643586c36209c18d71c67425",
+   "edits": [
+    {
+     "location": "Tarefas individuais, troca 1",
+     "old": "o efeito que o grupo se propôs conservar.",
+     "new": "o efeito que te propuseste conservar.",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 2",
+     "old": "\"Uma dificuldade e como a resolveram\"",
+     "new": "\"Uma dificuldade e como a resolveste\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 3",
+     "old": "O grupo escolheu uma aplicação de encontros",
+     "new": "Escolheste uma aplicação de encontros",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 4",
+     "old": "{\"t\":\"vf\",\"p\":\"Quem não aparece no vídeo não precisa de função registada no grupo.\",\"v\":false,\"f\":\"Falso: todos os elementos têm função registada; é regra de produção e entra no diário de grupo.\",\"_l\":\"m2-f09\"}",
+     "new": "{\"t\":\"vf\",\"p\":\"Quem aparece no vídeo não precisa de ter autorizado a filmagem.\",\"v\":false,\"f\":\"Falso: filma só quem autorizou; é regra de produção da escola.\",\"_l\":\"m2-f09\"}",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m3/licao-m3-f04/index.html": {
+   "base_sha256_lf": "511c5f5c534cb3761189bddb941b448c7c0a7ba57c946ac226bd191f249327ba",
+   "after_sha256_lf": "65b2e07da24c060b095120be9d84cc27c7817d8fb08bae397da529dc79c7e2ab",
+   "edits": [
+    {
+     "location": "Tarefas individuais, troca 1",
+     "old": "protótipo mostrado a outro grupo, etiqueta revista duas vezes.",
+     "new": "protótipo mostrado a um colega, etiqueta revista duas vezes.",
+     "occurrences": 2
+    },
+    {
+     "location": "Tarefas individuais, troca 2",
+     "old": "\"A divisão do trabalho não é a pergunta; a reflexão olha",
+     "new": "\"A ajuda de um colega não é a pergunta; a reflexão olha",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 3",
+     "old": "Recriem-no com olhar crítico",
+     "new": "Recria-o com olhar crítico",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 4",
+     "old": "Como o grupo trabalha, por ordem:",
+     "new": "Como trabalhas, por ordem:",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 5",
+     "old": "\"Mostrar o protótipo a outro grupo\"",
+     "new": "\"Mostrar o protótipo a um colega\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 6",
+     "old": "\"Que parte não conseguimos confirmar\"",
+     "new": "\"Que parte não consegui confirmar\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 7",
+     "old": "\"Que parte ficou entregue a outro grupo\"",
+     "new": "\"Que parte ficou entregue a um colega\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 8",
+     "old": "**O que não conseguimos confirmar**, e o que fizemos com isso.",
+     "new": "**O que não consegui confirmar**, e o que fiz com isso.",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m3/painel-m3-f04/index.html": {
+   "base_sha256_lf": "e50ff87e209aa292e3da83279297c66cf5467662dd104827ee3ee9a7dcd86ced",
+   "after_sha256_lf": "973eadc78de3d06f637588d78e6f231393ab91649769629a0ddc60ce86cde7bb",
+   "edits": [
+    {
+     "location": "Tarefas individuais, troca 1",
+     "old": "Recriem-no com olhar crítico",
+     "new": "Recria-o com olhar crítico",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 2",
+     "old": "Como o grupo trabalha, por ordem:",
+     "new": "Como trabalhas, por ordem:",
+     "occurrences": 2
+    },
+    {
+     "location": "Tarefas individuais, troca 3",
+     "old": "\"Mostrar o protótipo a outro grupo\"",
+     "new": "\"Mostrar o protótipo a um colega\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 4",
+     "old": "\"Que parte não conseguimos confirmar\"",
+     "new": "\"Que parte não consegui confirmar\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 5",
+     "old": "\"Que parte ficou entregue a outro grupo\"",
+     "new": "\"Que parte ficou entregue a um colega\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 6",
+     "old": "**O que não conseguimos confirmar**, e o que fizemos com isso.",
+     "new": "**O que não consegui confirmar**, e o que fiz com isso.",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m6/licao-m6-f08/index.html": {
+   "base_sha256_lf": "47c698a669e2fd7c8ceb9803e92b06e636f902581e2d21c123447952eaf840d4",
+   "after_sha256_lf": "75b29748702ff0db5a2af2d9d98d4dfe9e6e7d0be253b10f79c6337bc2bb79f9",
+   "edits": [
+    {
+     "location": "Tarefas individuais, troca 1",
+     "old": "Extra sem nota, em grupo: quatro fotografias, uma por parte do poema,",
+     "new": "Extra sem nota, individual: quatro fotografias, uma por parte do poema,",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 2",
+     "old": "Extra sem nota, em grupo, sete horas:",
+     "new": "Extra sem nota, individual, sete horas:",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 3",
+     "old": "o corredor e o som são escolhas do grupo.",
+     "new": "o corredor e o som são escolhas tuas.",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 4",
+     "old": "\"p2\":\"O que faz o grupo antes de filmar alguém que se reconhece?\"",
+     "new": "\"p2\":\"O que fazes antes de filmar alguém que se reconhece?\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 5",
+     "old": "Que nome tem o texto em que cada um explica o verso, a imagem e a ligação?",
+     "new": "Que nome tem o texto em que explicas o verso, a imagem e a ligação?",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 6",
+     "old": "aqui explica-se uma escolha do próprio grupo: verso, imagem e ligação.",
+     "new": "aqui explicas uma escolha tua: verso, imagem e ligação.",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 7",
+     "old": "(I), o grupo inventa um corredor apertado e som irregular. Como distingue a sua proposta da informação do verso?",
+     "new": "(I), inventas um corredor apertado e som irregular. Como distingues a tua proposta da informação do verso?",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 8",
+     "old": "Em vez das quatro fotografias ou da curta, o grupo pode usar o formato do seu curso.",
+     "new": "Em vez das quatro fotografias ou da curta, podes usar o formato do teu curso.",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 9",
+     "old": "Que colunas tem o guião que o grupo preenche parte a parte?",
+     "new": "Que colunas tem o guião que preenches parte a parte?",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 10",
+     "old": "Toca na condição para usar música que não é do grupo.",
+     "new": "Toca na condição para usar música que não é tua.",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 11",
+     "old": "Um grupo escolhe uma fotografia «bonita», mas não explica",
+     "new": "Um aluno escolhe uma fotografia «bonita», mas não explica",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 12",
+     "old": "O percurso pode demorar o tempo que o grupo quiser, desde que seja seguro.",
+     "new": "O percurso pode demorar o tempo que quiseres, desde que seja seguro.",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 13",
+     "old": "que explica uma escolha do grupo?",
+     "new": "que explica uma escolha tua?",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 14",
+     "old": "(I): o grupo quer criar incómodo sem mostrar gás.",
+     "new": "(I): queres criar incómodo sem mostrar gás.",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 15",
+     "old": "Em cada parte do guião registam o [1] escolhido, o que mostram hoje e [2].",
+     "new": "Em cada parte do guião registas o [1] escolhido, o que mostras hoje e [2].",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 16",
+     "old": "o que mostramos hoje, **luz, hora e som**.",
+     "new": "o que mostras hoje, **luz, hora e som**.",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 17",
+     "old": "os sons que não são do teu grupo.",
+     "new": "os sons que não são teus.",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 18",
+     "old": "«Livres de direitos»: ou são do grupo, ou podem usar-se sem autorização.",
+     "new": "«Livres de direitos»: ou são teus, ou podem usar-se sem autorização.",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 19",
+     "old": "Exemplo inventado: o grupo escolhe uma fotografia",
+     "new": "Exemplo inventado: escolhes uma fotografia",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m6/painel-m6-f08/index.html": {
+   "base_sha256_lf": "005150194a06a8caff99b34fef441a6058fcd77025dae123013a7edc36365b6e",
+   "after_sha256_lf": "0f710ac1faef9de35fe774ee5c6c969ef571cd0641c9a83ae3d0ffa7219589c4",
+   "edits": [
+    {
+     "location": "Tarefas individuais, troca 1",
+     "old": "O percurso pode demorar o tempo que o grupo quiser, desde que seja seguro.",
+     "new": "O percurso pode demorar o tempo que quiseres, desde que seja seguro.",
+     "occurrences": 2
+    },
+    {
+     "location": "Tarefas individuais, troca 2",
+     "old": "que explica uma escolha do grupo?",
+     "new": "que explica uma escolha tua?",
+     "occurrences": 2
+    },
+    {
+     "location": "Tarefas individuais, troca 3",
+     "old": "(I): o grupo quer criar incómodo sem mostrar gás.",
+     "new": "(I): queres criar incómodo sem mostrar gás.",
+     "occurrences": 2
+    },
+    {
+     "location": "Tarefas individuais, troca 4",
+     "old": "Em cada parte do guião registam o [1] escolhido, o que mostram hoje e [2].",
+     "new": "Em cada parte do guião registas o [1] escolhido, o que mostras hoje e [2].",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 5",
+     "old": "o que mostramos hoje, **luz, hora e som**.",
+     "new": "o que mostras hoje, **luz, hora e som**.",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 6",
+     "old": "os sons que não são do teu grupo.",
+     "new": "os sons que não são teus.",
+     "occurrences": 2
+    },
+    {
+     "location": "Tarefas individuais, troca 7",
+     "old": "«Livres de direitos»: ou são do grupo, ou podem usar-se sem autorização.",
+     "new": "«Livres de direitos»: ou são teus, ou podem usar-se sem autorização.",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 8",
+     "old": "Exemplo inventado: o grupo escolhe uma fotografia",
+     "new": "Exemplo inventado: escolhes uma fotografia",
+     "occurrences": 2
+    }
+   ]
+  },
+  "m9/licao-m9-f05/index.html": {
+   "base_sha256_lf": "d69db21f44808fc71ebe73c61106f1f675e7523c92326a05c4d18fca4866146a",
+   "after_sha256_lf": "0c7dff507d4f185303ea2a4b50bdcfaa273717f09f99a53ae8bbdba2cafccfac",
+   "edits": [
+    {
+     "location": "Tarefas individuais, troca 1",
+     "old": "E vocês, com as ferramentas do curso?",
+     "new": "E tu, com as ferramentas do curso?",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 2",
+     "old": "Em grupo, um produto do vosso curso faz o mesmo por anónimos,",
+     "new": "Um produto do teu curso faz o mesmo por anónimos,",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 3",
+     "old": "Em grupo, um produto do vosso curso faz o mesmo por um grupo de anónimos,",
+     "new": "Um produto do teu curso faz o mesmo por um grupo de anónimos,",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 4",
+     "old": "o vosso produto faz o mesmo.</p>",
+     "new": "o teu produto faz o mesmo.</p>",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 5",
+     "old": "Como o _Memorial_, o vosso produto dá nome e voz",
+     "new": "Como o _Memorial_, o teu produto dá nome e voz",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 6",
+     "old": "Além do produto do grupo, há um texto curto.",
+     "new": "Além do produto, há um texto curto.",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 7",
+     "old": "\"A memória descritiva não é do grupo: é individual, e cada um conta o que fez («O essencial»).\"",
+     "new": "\"A crítica de um colega ajuda a rever o produto; a memória descritiva é tua e conta o que fizeste («O essencial»).\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 8",
+     "old": "A memória descritiva, que é tua e não do grupo, tem que extensão?",
+     "new": "A memória descritiva que acompanha o produto tem que extensão?",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 9",
+     "old": "no produto do teu grupo, e o que o permitiria?",
+     "new": "no teu produto, e o que o permitiria?",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 10",
+     "old": "os que o romance e o vosso produto querem lembrar?",
+     "new": "os que o romance e o teu produto querem lembrar?",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 11",
+     "old": "\"palavras\":[\"O\",\"produto\",\"é do\",\"grupo;\",\"a\",\"memória\",\"descritiva\",\"é tua.\"],\"f\":\"«O produto é do grupo; a memória descritiva é tua»: duas frases paralelas, o ponto e vírgula ao meio, e «tua» a fechar.\"",
+     "new": "\"palavras\":[\"O\",\"produto\",\"dá nome\",\"e voz;\",\"a\",\"memória\",\"descritiva\",\"explica-o.\"],\"f\":\"«O produto dá nome e voz; a memória descritiva explica-o»: duas frases paralelas, o ponto e vírgula ao meio, e «explica-o» a fechar.\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 12",
+     "old": "O produto do grupo faz por um grupo de anónimos",
+     "new": "O teu produto faz por um grupo de anónimos",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 13",
+     "old": "O produto do grupo tem [1] citações",
+     "new": "O teu produto tem [1] citações",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 14",
+     "old": "de apresentação; cronometra com o teu grupo.",
+     "new": "de apresentação; cronometra o teu ensaio.",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 15",
+     "old": "\"Um texto individual sobre o que cada um fez\"",
+     "new": "\"Um texto teu sobre o que fizeste no produto\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 16",
+     "old": "\"Um texto escrito pelo grupo sobre o produto\"",
+     "new": "\"A crítica que um colega fez ao teu produto\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 17",
+     "old": "É tua, não do grupo: **100 a 150 palavras**",
+     "new": "É tua: **100 a 150 palavras**",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 18",
+     "old": "**100 a 150 palavras**: a memória é individual; o produto é do grupo.",
+     "new": "**100 a 150 palavras**: a memória descritiva é curta e acompanha o produto.",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 19",
+     "old": "o narrador e o vosso produto lembram.",
+     "new": "o narrador e o teu produto lembram.",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 20",
+     "old": "\"O vosso produto\"",
+     "new": "\"O teu produto\"",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m9/painel-m9-f05/index.html": {
+   "base_sha256_lf": "7c2c01ed4207c5dff47cb772f42454946ee13e6862e0da6f576f3dc16a2af28e",
+   "after_sha256_lf": "371cc326859680f907e887e2a7bda0011f6c0b36fe8a751ba22b6bc7139e0050",
+   "edits": [
+    {
+     "location": "Tarefas individuais, troca 1",
+     "old": "O produto do grupo faz por um grupo de anónimos",
+     "new": "O teu produto faz por um grupo de anónimos",
+     "occurrences": 2
+    },
+    {
+     "location": "Tarefas individuais, troca 2",
+     "old": "O produto do grupo tem [1] citações",
+     "new": "O teu produto tem [1] citações",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 3",
+     "old": "de apresentação; cronometra com o teu grupo.",
+     "new": "de apresentação; cronometra o teu ensaio.",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 4",
+     "old": "\"Um texto individual sobre o que cada um fez\"",
+     "new": "\"Um texto teu sobre o que fizeste no produto\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 5",
+     "old": "\"Um texto escrito pelo grupo sobre o produto\"",
+     "new": "\"A crítica que um colega fez ao teu produto\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 6",
+     "old": "É tua, não do grupo: **100 a 150 palavras**",
+     "new": "É tua: **100 a 150 palavras**",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 7",
+     "old": "**100 a 150 palavras**: a memória é individual; o produto é do grupo.",
+     "new": "**100 a 150 palavras**: a memória descritiva é curta e acompanha o produto.",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 8",
+     "old": "o narrador e o vosso produto lembram.",
+     "new": "o narrador e o teu produto lembram.",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 9",
+     "old": "\"O vosso produto\"",
+     "new": "\"O teu produto\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 10",
+     "old": "\"25\":{\"f\":\"«O produto é do grupo; a memória descritiva é tua»: duas frases paralelas, o ponto e vírgula ao meio, e «tua» a fechar.\",\"palavras\":[\"produto\",\"memória\",\"grupo;\",\"é do\",\"é tua.\",\"a\",\"O\",\"descritiva\"]}",
+     "new": "\"25\":{\"f\":\"«O produto dá nome e voz; a memória descritiva explica-o»: duas frases paralelas, o ponto e vírgula ao meio, e «explica-o» a fechar.\",\"palavras\":[\"produto\",\"memória\",\"e voz;\",\"dá nome\",\"explica-o.\",\"a\",\"O\",\"descritiva\"]}",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m9/index.html": {
+   "base_sha256_lf": "01e741576bb7f140b4b892a503ffa8171adf12fddb234b8b4af4802c1d67133c",
+   "after_sha256_lf": "8ec1f9bb677cb5042bfa14c4c2b11b2a59b988df04df644ee69cd0105232426f",
+   "edits": [
+    {
+     "location": "Tarefas individuais, troca 1",
+     "old": "\"A memória descritiva não é do grupo: é individual, e cada um conta o que fez («O essencial»).\"",
+     "new": "\"A crítica de um colega ajuda a rever o produto; a memória descritiva é tua e conta o que fizeste («O essencial»).\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 2",
+     "old": "no produto do teu grupo, e o que o permitiria?",
+     "new": "no teu produto, e o que o permitiria?",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 3",
+     "old": "O produto do grupo tem [1] citações",
+     "new": "O teu produto tem [1] citações",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 4",
+     "old": "de apresentação; cronometra com o teu grupo.",
+     "new": "de apresentação; cronometra o teu ensaio.",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 5",
+     "old": "\"Um texto individual sobre o que cada um fez\"",
+     "new": "\"Um texto teu sobre o que fizeste no produto\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 6",
+     "old": "\"Um texto escrito pelo grupo sobre o produto\"",
+     "new": "\"A crítica que um colega fez ao teu produto\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 7",
+     "old": "<span class=\"f\">Com o teu grupo, dá forma e voz a anónimos num produto do teu curso",
+     "new": "<span class=\"f\">Dá forma e voz a anónimos num produto do teu curso",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefas individuais, troca 8",
+     "old": "\"f\":\"É tua, não do grupo: 100 a 150 palavras",
+     "new": "\"f\":\"É tua: 100 a 150 palavras",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m9/licao-m9-f07/index.html": {
+   "base_sha256_lf": "d21f8179c64685187884a75b74ec03cef5bc61a62ef7ec1024ebb3d9bf5b030f",
+   "after_sha256_lf": "cd35aabf606f550413ed036685885a51fcb2010068b5c80661fcdd2d8e247500",
+   "edits": [
+    {
+     "location": "Tarefas individuais, troca 1",
+     "old": "\"À memória descritiva do grupo\"",
+     "new": "\"À memória descritiva da tarefa\"",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m9/painel-m9-f07/index.html": {
+   "base_sha256_lf": "2edfe663a3d1d4a7568bfcdfd02557ff3fa45ce0b1cf78229f0a72cb01e39117",
+   "after_sha256_lf": "8a4e105cef5ab5e0e9423d8bd1fe91511609d490d4242261cfba2909199024c8",
+   "edits": [
+    {
+     "location": "Tarefas individuais, troca 1",
+     "old": "\"À memória descritiva do grupo\"",
+     "new": "\"À memória descritiva da tarefa\"",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/aulas/aula-08/index.html": {
+   "base_sha256_lf": "78e82bc0e0baef4130117f97da8e4aaf4a972e3d6794c2452427f5efe6c89c67",
+   "after_sha256_lf": "7bfb61a1e6e1ff8fbc49e1179f0cb14befd8b2ca1d80e2717ac3f9a5808336ae",
+   "edits": [
+    {
+     "location": "Tarefas individuais, troca 1",
+     "old": "guarda a versão anterior da encomenda, em grupo e com PDF: não se projeta",
+     "new": "guarda a versão anterior da encomenda, com PDF: não se projeta",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m6/m6-cesario-noite-inteira/index.html": {
+   "base_sha256_lf": "b7f8892ef683ee12a6aeead9831e32c1050e84f71335bb4acecf14e403a814f3",
+   "after_sha256_lf": "5eca564dd578ec2d92a604321cc1bb14d3b3e0f6905e1dc0c3e5bea75de82adb",
+   "edits": [
+    {
+     "location": "Tarefas individuais, troca 1",
+     "old": "<p>Imagina um grupo que refaz o percurso do poema com uma câmara",
+     "new": "<p>Imagina alguém que refaz o percurso do poema com uma câmara",
+     "occurrences": 1
+    }
+   ]
+  },
+  "assets/atlas-editorial.js": {
+   "base_sha256_lf": "464f5b1e7c30a4f9123046b766d4ff3cbd2e433af859fb040f622a405ec701a2",
+   "after_sha256_lf": "c426b0678ae0685d43a7d6b84807a51b37b6c1c7d584191d1b7a9e6d6efc4f50",
+   "edits": [
+    {
+     "location": "Tarefas individuais, troca 1",
+     "old": "Em grupo, inventem uma saudação breve com palavras ou gestos e expliquem uma escolha coletiva.",
+     "new": "Inventa uma saudação breve com palavras ou gestos e explica uma das tuas escolhas.",
+     "occurrences": 1
+    }
+   ]
+  }
+ }
+}

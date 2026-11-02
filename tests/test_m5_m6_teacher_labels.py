@@ -13,8 +13,12 @@ class TeacherLabels(unittest.TestCase):
         report = synchronize(ROOT)
         self.assertEqual(len(report['checked']), 20)
         self.assertEqual(report['different'], [])
+        # 01/11/2026: preserva os 20 painéis anteriores e exige as quatro notas novas.
         self.assertEqual(report['notes'], [
-            'm6/painel-m6-f12/index.html', 'm6/painel-m6-f13/index.html'])
+            'm5/painel-m5-f16/index.html', 'm5/painel-m5-f17/index.html',
+            'm6/painel-m6-f12/index.html', 'm6/painel-m6-f13/index.html',
+            'm6/painel-m6-f14/index.html', 'm6/painel-m6-f15/index.html'])
+        self.assertEqual(report['direct_projection'], [])
 
 
 if __name__ == '__main__':

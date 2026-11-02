@@ -6,7 +6,19 @@ import sys
 
 ROOT=Path(__file__).resolve().parents[1]
 LAYERS=[
+ # 02/11/2026: varredura de formatação (pt #152), refeita em trocas mínimas sobre o main (camada mais recente).
  ('varredura_formatacao_20261101','varredura-formatacao-edits-20261101'),
+ # 02/11/2026: decisão 139, a calçada «mar largo» na entrada.
+ ('calcada_mar_20261102','calcada-mar-edits-20261102'),
+ # 02/11/2026: pedido do docente, não há tarefas de grupo.
+ ('tarefas_individuais_20261102','tarefas-individuais-edits-20261102'),
+ ('cartaz_indices_20261101','cartaz-indices-edits-20261101'),
+ ('licoes_m16_20261101','licoes-m16-edits-20261101'),
+ ('licoes_m89_20261101','licoes-m89-edits-20261101'),
+ # 02/11/2026: o fundo da entrada (pt #159 e #160), que entrou no main sem camada.
+ ('fundos_20261102','fundos-edits-20261102'),
+ ('tarefas_m89_20261101','tarefas-m89-edits-20261101'),
+ ('tarefas_m356_20261031','tarefas-m356-edits-20261031'),
  ('lingua_pessoa_m7_20261030','lingua-pessoa-m7-edits-20261030'),
  ('opcoes_denunciadoras_20261030','opcoes-denunciadoras-edits-20261030'),
  ('texto_justificado_20261030','texto-justificado-edits-20261030'),

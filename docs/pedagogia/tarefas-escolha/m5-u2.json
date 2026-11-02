@@ -1,0 +1,114 @@
+{
+ "slug": "m5-u2",
+ "titulo": "Uma casa, um jantar, uma frase: <i>Os Maias</i>",
+ "unidade": 2,
+ "aquecer": {
+  "cartoes": "aquecimento/",
+  "minutos": 10,
+  "texto": "No início da aula de tarefa: 10 minutos de cartões com consulta, 5 minutos para o docente apresentar o enunciado, 60 minutos de produção e 15 minutos de revisão e entrega. Total: 90 minutos. O relógio de produção começa depois da apresentação.",
+  "ligacao": "Abrir o aquecimento em cartões",
+  "ligacao_enunciado": "Aquecer em cartões"
+ },
+ "lead": "À mão, 200 a 250 palavras: cerca de 50 por resposta do núcleo e 100 a 150 no tema. Com consulta.",
+ "nucleo": [
+  "No último capítulo, Carlos diz do Ramalhete: «é n'ella que me parece estar mettida a minha vida inteira!» Da descrição antes da fala, cita uma expressão que vem do cap. I e outra nova. Nomeia a estrutura. Explica o que dizem dessa vida.",
+  "No cap. VI, Alencar «supplicou que se não discutisse» o realismo; logo a seguir: «Alli todos eram homens d'aceio, de sala, hein?». Identifica o modo de relato de cada passagem. Prova o segundo com duas marcas. Reescreve a pergunta em discurso direto."
+ ],
+ "temas": [
+  {
+   "letra": "A",
+   "nome": "À mesa, à maneira de Eça",
+   "texto": "Narra na 3.ª pessoa (70 a 100 palavras) uma mesa de hoje onde uma coisa banal corta uma conversa séria, como o «Sole normande?» no Hotel Central. Inclui uma fala em discurso direto e um pensamento em indireto livre. Depois, em duas frases, diz o que imitaste de Eça e o que criticas."
+  },
+  {
+   "letra": "B",
+   "nome": "Falhámos a vida, hoje?",
+   "texto": "<i>Os Maias</i> chegou ao ecrã mais de um século depois. O «Falhámos a vida, menino!» de Ega diz alguma coisa a quem tem a tua idade? Num parágrafo de opinião (100 a 130 palavras): tese na primeira frase; outra citação do último capítulo, explicada; um facto datado do dossiê, ligado à tese; contra-argumento e refutação; conclusão."
+  }
+ ],
+ "apoios": [
+  {
+   "href": "../../m5/licao-m5-f10/",
+   "texto": "Sombrio casarão (F10): relê «O texto, 1 de 3» (o início) e «O texto, 2 de 3» (o fim)."
+  },
+  {
+   "href": "../../m5/licao-m5-f11/",
+   "texto": "Jantar no Hotel Central (F11): relê de «O texto, 1 de 6» a «O texto, 6 de 6» e «Para entender» (quem está à mesa)."
+  },
+  {
+   "href": "../../m5/licao-m5-f12/",
+   "texto": "A voz que se infiltra (F12): relê «O essencial», «Em paralelo» e «Quem relata, quando e onde?»."
+  },
+  {
+   "href": "../../m5/licao-m5-f13/",
+   "texto": "Falhámos a vida, menino! (F13): para o tema B, relê de «O texto, 1 de 5» a «O texto, 5 de 5» e «Para entender» (as peças de um texto de opinião)."
+  },
+  {
+   "href": "../../m5/licao-m5-f14/",
+   "texto": "Do livro ao ecrã (F14): para o tema B, relê «O essencial» (o filme e a minissérie)."
+  }
+ ],
+ "exemplos": [
+  {
+   "titulo": "Do indireto ao direto (resolvido)",
+   "html": "<p>Em «Então Ega perguntou, do fundo do sofá onde se enterrára, se, n'esses ultimos annos, elle não tivera a idéa» (último capítulo), o relato é indireto: há um verbo declarativo, <i>perguntou</i>, e uma oração subordinada com <i>se</i>. Em discurso direto, Ega diria, depois de um travessão: <i>Nestes últimos anos, não tiveste a ideia, o vago desejo de voltar para Portugal?</i> Ega fala com Carlos: <i>elle</i> passa a <i>tu</i> e <i>tivera</i> passa a <i>tiveste</i>.</p><p>Na tarefa, dás o modo de relato das duas passagens de Alencar; as marcas e a reescrita são só para a pergunta.</p>"
+  }
+ ],
+ "dossie_titulo": "Dossiê do tema B",
+ "dossie": [
+  {
+   "facto": "Em 1888, Eça de Queirós publica <i>Os Maias</i>.",
+   "href": "../../m5/licao-m5-f10/",
+   "fonte": "Lição «Sombrio casarão», «Linha de vida»"
+  },
+  {
+   "facto": "Por volta de 1910, Joshua Benoliel fotografa o Hotel Central, em Lisboa, o hotel do cap. VI, trinta anos depois do tempo do romance.",
+   "href": "../../m5/licao-m5-f11/",
+   "fonte": "Lição «Jantar no Hotel Central», «Abre» (legenda da imagem)"
+  },
+  {
+   "facto": "Em 2014, estreia no cinema <i>Os Maias: Cenas da Vida Romântica</i>, de João Botelho; o narrador fica, em voz <i>off</i>, com frases do romance.",
+   "href": "../../m5/licao-m5-f14/",
+   "fonte": "Lição «Do livro ao ecrã», «O essencial»"
+  },
+  {
+   "facto": "A 28 de dezembro de 2015, a RTP1 exibe a minissérie; narra Jorge Vaz de Carvalho, em voz <i>off</i>.",
+   "href": "../../m5/licao-m5-f10/",
+   "fonte": "Lição «Sombrio casarão», «Linha de vida»"
+  },
+  {
+   "facto": "A 8 de janeiro de 2025, Eça recebe honras de Panteão.",
+   "href": "../../m5/licao-m5-f15/",
+   "fonte": "Lição «Dois modos de perder a vida», «O essencial» (o vídeo de Teresa Pinto Coelho)"
+  }
+ ],
+ "opcional": {
+  "pergunta": "Que modo de relato tem a pergunta desta passagem inventada? <i>O Rui fechou o caderno. Para que estudar mais? Amanhã logo se via.</i>",
+  "opcoes": [
+   {
+    "certa": false,
+    "letra": "A",
+    "texto": "Discurso indireto, porque está na terceira pessoa.",
+    "resposta": "Faltam o verbo declarativo e a oração subordinada, como em O Rui perguntou-se para que havia de estudar. A terceira pessoa, sozinha, não decide."
+   },
+   {
+    "certa": true,
+    "letra": "B",
+    "texto": "Indireto livre, porque o Rui pensa sem travessão.",
+    "resposta": "Não há verbo declarativo nem travessão: a pergunta do Rui entra na voz do narrador. O indício é a pergunta dele dentro da narração, não o tempo verbal sozinho."
+   },
+   {
+    "certa": false,
+    "letra": "C",
+    "texto": "Discurso direto, porque a pergunta é do Rui.",
+    "resposta": "No direto, a fala vem separada, com travessão ou aspas; aqui, a pergunta mistura-se com a narração, sem marca nenhuma."
+   }
+  ]
+ },
+ "criterios": [
+  "Núcleo: expressões, estrutura e vida de Carlos; modos de relato, marcas e discurso direto.",
+  "Tema: os cinco elementos e o remate (as duas frases em A, a conclusão em B).",
+  "Citações exatas, factos do dossiê, extensão e escrita revista."
+ ],
+ "fecho": "Fecha com duas linhas, fora da contagem: falha-se a vida, ou deixa-se falhar? Aponta a passagem de <i>Os Maias</i> que te fez pensar nisso."
+}
