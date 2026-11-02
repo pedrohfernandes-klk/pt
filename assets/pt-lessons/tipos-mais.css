@@ -1,0 +1,18 @@
+/* 02/11/2026: base visual F2/F3. Cores herdadas do sítio, sem animação de entrada. */
+.jogo [data-tipo-ext] *{animation:none!important}
+.jogo [data-tipo-ext] .tm-texto{font:1.15rem/2.3 var(--serif,Georgia,serif)}
+.jogo [data-tipo-ext] .w{display:inline-block;position:relative;min-width:24px;min-height:44px;line-height:44px;padding:0 3px;border:0;background:none;font-family:inherit;font-size:inherit;color:inherit}
+.jogo [data-tipo-ext] .tm-r{position:relative;display:block;width:100%;min-height:48px;padding:8px 12px 8px 40px;border:1.5px solid var(--tinta);background:var(--papel);color:var(--tinta);font:inherit;text-align:left}
+.jogo [data-tipo-ext] .tm-r.uma:before{content:'○';position:absolute;left:14px;top:50%;transform:translateY(-50%)}
+.jogo [data-tipo-ext] .tm-r.uma.sel:before{content:'●'}
+.jogo [data-tipo-ext] .tm-r.varias:before{content:'';position:absolute;left:12px;top:50%;transform:translateY(-50%);width:20px;height:20px;box-sizing:border-box;border:2px solid currentColor}
+.jogo [data-tipo-ext] .tm-r.varias.sel:after{content:'✓';position:absolute;left:14px;top:50%;transform:translateY(-50%)}
+.jogo [data-tipo-ext] .tm-r.sel{outline:3px solid var(--tinta);outline-offset:-3px}
+.jogo [data-tipo-ext] .bom{border-color:var(--acerto,var(--certo,#1b7f3b))}
+.jogo [data-tipo-ext] .mau{border-color:var(--errado,#c8232c)}
+.jogo [data-tipo-ext] .tm-conta{font:.9rem/1.5 Arial,Helvetica,sans-serif;color:var(--suave)}
+.jogo [data-tipo-ext] :focus-visible{outline:3px solid var(--tinta);outline-offset:3px}
+html.epi-projection [data-tipo-ext] *,html.em-projecao [data-tipo-ext] *{animation:none!important;transition:none!important}
+html.epi-projection [data-tipo-ext] .tm-r,html.epi-projection [data-tipo-ext] .tm-texto,html.epi-projection [data-tipo-ext] .w,
+html.em-projecao [data-tipo-ext] .tm-r,html.em-projecao [data-tipo-ext] .tm-texto,html.em-projecao [data-tipo-ext] .w{font-size:max(17.9px,1.15rem)}
+@media print{.jogo [data-tipo-ext] .tm-r,.jogo [data-tipo-ext] .w{color:var(--tinta);break-inside:avoid}}
