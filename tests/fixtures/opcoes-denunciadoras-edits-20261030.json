@@ -1,6 +1,6 @@
 {
- "base_commit": "a47c01d8cc86b106728cea0ef4dc0ade0e58533e",
- "_nota": "30/10/2026: opções denunciadoras (pedido do docente de 29/10): só o texto das opções e do feedback que as cita; índices das certas, ordem e tipos dos cartões iguais. Gerado por scripts/aplicar_trocas.py; não se edita à mão. É a camada mais recente: desfaz-se antes das outras.",
+ "base_commit": "5bf8b757bb80f4b8b0ce72aba2c48dca813b9c61",
+ "_nota": "30/10/2026: opções denunciadoras (pedido do docente de 29/10): só o texto das opções e do feedback que as cita; índices das certas, ordem e tipos dos cartões iguais. Gerado por scripts/aplicar_trocas.py; não se edita à mão. É a camada mais recente: desfaz-se antes das outras. 01/11/2026: duração das sessões de exame atualizada para 50 minutos (decisão 106); trocas, ocorrências e restantes ficheiros preservados.",
  "files": {
   "m1/gram-coordenadas/index.html": {
    "base_sha256_lf": "97d7f5a44d702d036895b63fdd7c39ab58c6437828769e2fbe79550cbcfce900",
@@ -663,8 +663,8 @@
    ]
   },
   "assets/exame/sessoes.json": {
-   "base_sha256_lf": "21965e0a6e1c1d4f1d31d3d73fad24c9eecdcbe828e66db5148d2ca89104e020",
-   "after_sha256_lf": "5a963d008fd574053745e6b15f4ba436e816867a004a400b2a7f90dd92eb75a1",
+   "base_sha256_lf": "dc525260e948a68ce24967e256bf787b20d69b39b4f0c1b21320127e162841bf",
+   "after_sha256_lf": "77a341fcac47a13802e070df06601ea07dcc5532312ba5114fd1ccca70f43806",
    "edits": [
     {
      "location": "cópia em s01 (aquecimento e verificação), opção certa",

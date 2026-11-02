@@ -1,0 +1,228 @@
+{
+  "sessao": "s16",
+  "versao": 1,
+  "titulo": "Mensagem: mito, história e apelo",
+  "cartoes": [
+    {
+      "t": "ler",
+      "titulo": "Texto para consultar",
+      "html": "<p>Consulta o texto quando precisares de confirmar uma escolha.</p><details><summary>Abrir o texto de apoio</summary><p class=\"v\"><span class=\"ln\" data-l=\"0-0\">Deus quer, o homem sonha, a obra nasce.</span>\n<span class=\"ln\" data-l=\"0-1\">Deus quis que a terra fosse toda uma,</span>\n<span class=\"ln\" data-l=\"0-2\">Que o mar unisse, já não separasse.</span>\n<span class=\"ln\" data-l=\"0-3\">Sagrou-te, e foste desvendando a espuma.</span>\n<span class=\"ln\" data-l=\"0-5\">E a orla branca foi de ilha em continente,</span>\n<span class=\"ln\" data-l=\"0-6\">Clareou, correndo, até ao fim do mundo,</span>\n<span class=\"ln\" data-l=\"0-7\">E viu-se a terra inteira, de repente,</span>\n<span class=\"ln\" data-l=\"0-8\">Surgir, redonda, do azul profundo.</span>\n<span class=\"ln\" data-l=\"0-10\">Quem te sagrou criou-te português.</span>\n<span class=\"ln\" data-l=\"0-11\">Do mar e nós em ti nos deu sinal.</span>\n<span class=\"ln\" data-l=\"0-12\">Cumpriu-se o Mar, e o Império se desfez.</span>\n<span class=\"ln\" data-l=\"0-13\">Senhor, falta cumprir-se Portugal!</span></p><p class=\"fonte\"><i>Mensagem</i>, II. «<i>Mar Português</i>», I; Arquivo Pessoa.</p><p class=\"v\"><span class=\"ln\" data-l=\"1-0\">Ó mar salgado, quanto do teu sal</span>\n<span class=\"ln\" data-l=\"1-1\">São lágrimas de Portugal!</span>\n<span class=\"ln\" data-l=\"1-2\">Por te cruzarmos, quantas mães choraram,</span>\n<span class=\"ln\" data-l=\"1-3\">Quantos filhos em vão rezaram!</span>\n<span class=\"ln\" data-l=\"1-4\">Quantas noivas ficaram por casar</span>\n<span class=\"ln\" data-l=\"1-5\">Para que fosses nosso, ó mar!</span>\n<span class=\"ln\" data-l=\"1-7\">Valeu a pena? Tudo vale a pena</span>\n<span class=\"ln\" data-l=\"1-8\">Se a alma não é pequena.</span>\n<span class=\"ln\" data-l=\"1-9\">Quem quer passar além do Bojador</span>\n<span class=\"ln\" data-l=\"1-10\">Tem que passar além da dor.</span>\n<span class=\"ln\" data-l=\"1-11\">Deus ao mar o perigo e o abismo deu,</span>\n<span class=\"ln\" data-l=\"1-12\">Mas nele é que espelhou o céu.</span></p><p class=\"fonte\"><i>Mensagem</i>, II. «<i>Mar Português</i>», X; Arquivo Pessoa.</p><p class=\"fonte\"><a href=\"../../../m7/licao-m7-f08/\">Texto e fontes na lição de origem</a></p></details>",
+      "recycledFrom": "/pt/m7/licao-m7-f08/"
+    },
+    {
+      "p": "Na gradação «Deus quer, o homem sonha, a obra nasce», o que é «a obra nasce»?",
+      "f": "Deus quer (vontade), o homem sonha (desejo), a obra nasce (realização): projeto divino e humano.",
+      "legacyId": "s16-q1",
+      "recycledFrom": "/pt/m7/licao-m7-f08/",
+      "t": "escolha",
+      "o": [
+        "A realização do que se sonha.",
+        "A vontade de quem é divino.",
+        "O desejo de quem ainda sonha."
+      ],
+      "c": 0,
+      "fe": [
+        null,
+        "A vontade divina está em Deus quer.",
+        "O desejo humano está em o homem sonha."
+      ]
+    },
+    {
+      "p": "Que palavra de «_O Infante_» quer dizer «margem, espuma na costa»?",
+      "f": "Orla, margem, espuma na costa: «E a orla branca foi de ilha em continente».",
+      "legacyId": "s16-q2",
+      "recycledFrom": "/pt/m7/licao-m7-f08/",
+      "t": "escolha",
+      "o": [
+        "orla",
+        "obra",
+        "ilha"
+      ],
+      "c": 0,
+      "fe": [
+        null,
+        "Obra designa a realização, não a margem.",
+        "Ilha não é a palavra usada para margem neste verso."
+      ]
+    },
+    {
+      "p": "Em «_Mar Português_», as noivas rezaram e os filhos ficaram por casar.",
+      "f": "Falso: «Quantos filhos em vão rezaram! / Quantas noivas ficaram por casar».",
+      "legacyId": "s16-q3",
+      "recycledFrom": "/pt/m7/licao-m7-f08/",
+      "t": "vf",
+      "v": false,
+      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder."
+    },
+    {
+      "t": "sublinhar",
+      "p": "Toca nos dois verbos que dizem o que Deus quis que o mar fizesse.",
+      "frase": "Que o mar unisse, já não separasse.",
+      "certas": [
+        3,
+        6
+      ],
+      "f": "«**Unisse**», «já não **separasse**»: o mar deixa de ser fronteira e passa a ser caminho.",
+      "cita": "Que o mar unisse, já não separasse.",
+      "recycledFrom": "/pt/m7/licao-m7-f08/",
+      "sourceCard": 6,
+      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder."
+    },
+    {
+      "t": "versos",
+      "p": "Põe os versos da segunda estrofe de «_O Infante_» pela ordem.",
+      "linhas": [
+        "E a orla branca foi de ilha em continente,",
+        "Clareou, correndo, até ao fim do mundo,",
+        "E viu-se a terra inteira, de repente,",
+        "Surgir, redonda, do azul profundo."
+      ],
+      "f": "A orla branca corre até ao fim do mundo e a terra surge redonda.",
+      "cita": "E a orla branca foi de ilha em continente,",
+      "recycledFrom": "/pt/m7/licao-m7-f08/",
+      "sourceCard": 7,
+      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder."
+    },
+    {
+      "t": "completar",
+      "p": "Que antítese fecha «_O Infante_»?",
+      "frase": "No fim de «_O Infante_», «Cumpriu-se o [1], e o Império se desfez»; o último verso diz que «falta cumprir-se [2]».",
+      "lacunas": [
+        {
+          "o": [
+            "Mar",
+            "Sol"
+          ],
+          "c": 0,
+          "fe": [
+            null,
+            "Nesta lacuna, Sol não corresponde à relação pedida."
+          ]
+        },
+        {
+          "o": [
+            "Portugal",
+            "o Infante"
+          ],
+          "c": 0,
+          "fe": [
+            null,
+            "Nesta lacuna, o Infante não corresponde à relação pedida."
+          ]
+        }
+      ],
+      "f": "Cumpriu-se o **Mar**, falta cumprir-se **Portugal**: a missão marítima está feita; falta um Portugal ainda não realizado.",
+      "cita": "Cumpriu-se o Mar, e o Império se desfez.",
+      "recycledFrom": "/pt/m7/licao-m7-f08/",
+      "sourceCard": 9,
+      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder."
+    },
+    {
+      "t": "versos",
+      "p": "Põe os primeiros versos de «_Mar Português_» pela ordem do poema.",
+      "linhas": [
+        "Ó mar salgado, quanto do teu sal",
+        "São lágrimas de Portugal!",
+        "Por te cruzarmos, quantas mães choraram,",
+        "Quantos filhos em vão rezaram!"
+      ],
+      "f": "Do sal às lágrimas, das lágrimas às mães e aos filhos: o preço do mar.",
+      "cita": "Ó mar salgado, quanto do teu sal",
+      "recycledFrom": "/pt/m7/licao-m7-f08/",
+      "sourceCard": 11,
+      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder."
+    },
+    {
+      "t": "completar",
+      "p": "Que recursos há em «_Mar Português_»?",
+      "frase": "«Ó mar salgado» é uma [1] e a repetição de «Quantos» / «Quantas» a abrir versos seguidos é uma [2].",
+      "lacunas": [
+        {
+          "o": [
+            "apóstrofe",
+            "comparação"
+          ],
+          "c": 0,
+          "fe": [
+            null,
+            "Nesta lacuna, comparação não corresponde à relação pedida."
+          ]
+        },
+        {
+          "o": [
+            "anáfora",
+            "gradação"
+          ],
+          "c": 0,
+          "fe": [
+            null,
+            "Nesta lacuna, gradação não corresponde à relação pedida."
+          ]
+        }
+      ],
+      "f": "A **apóstrofe** chama o mar; a **anáfora** acumula o sofrimento, verso a verso.",
+      "cita": "Ó mar salgado, quanto do teu sal",
+      "recycledFrom": "/pt/m7/licao-m7-f08/",
+      "sourceCard": 12,
+      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder."
+    },
+    {
+      "t": "sublinhar",
+      "p": "Toca nas duas palavras que rimam e ligam o cabo ao sofrimento.",
+      "frase": "Quem quer passar além do Bojador Tem que passar além da dor.",
+      "certas": [
+        5,
+        11
+      ],
+      "f": "«**Bojador**» e «**dor**»: passar o cabo é passar a dor.",
+      "cita": "Quem quer passar além do Bojador",
+      "recycledFrom": "/pt/m7/licao-m7-f08/",
+      "sourceCard": 15,
+      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder."
+    },
+    {
+      "t": "emparelhar",
+      "p": "Liga cada afirmação ao lado a que pertence.",
+      "pares": [
+        [
+          "O Bojador dobrado em 1434",
+          "História"
+        ],
+        [
+          "«Deus quer, o homem sonha»",
+          "Mito"
+        ],
+        [
+          "Mães, filhos e noivas que esperaram",
+          "História"
+        ],
+        [
+          "O herói como símbolo",
+          "Mito"
+        ]
+      ],
+      "f": "A data e o sofrimento das famílias são história; a vontade de Deus e o herói-símbolo são mito.",
+      "recycledFrom": "/pt/m7/licao-m7-f08/",
+      "sourceCard": 18,
+      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder."
+    },
+    {
+      "t": "vf",
+      "p": "Gil Eanes passou o cabo Bojador pela primeira vez em 1434: é um facto histórico.",
+      "v": true,
+      "f": "Verdadeiro: **Gil Eanes, 1434**, facto histórico; no poema, o Bojador vira medida da dor.",
+      "fe": "É verdadeiro: Gil Eanes dobrou o Bojador em 1434 (linha de vida); é um facto que se confirma em fontes, fora do poema.",
+      "recycledFrom": "/pt/m7/licao-m7-f08/",
+      "sourceCard": 20
+    },
+    {
+      "t": "vf",
+      "p": "«O mar une a terra por vontade de Deus» é um facto histórico.",
+      "v": false,
+      "f": "Falso: é a **visão mítica e religiosa** do poema; o herói é símbolo, não biografia.",
+      "fe": "Não se prova em nenhuma fonte: é a leitura do poema («Deus quis que a terra fosse toda uma»), mito e não história.",
+      "recycledFrom": "/pt/m7/licao-m7-f08/",
+      "sourceCard": 21
+    }
+  ]
+}

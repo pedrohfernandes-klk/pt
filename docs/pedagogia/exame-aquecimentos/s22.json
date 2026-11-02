@@ -1,0 +1,261 @@
+{
+  "sessao": "s22",
+  "versao": 1,
+  "titulo": "Gramática: ligar, retomar e situar",
+  "cartoes": [
+    {
+      "t": "ler",
+      "titulo": "Texto para consultar",
+      "html": "<p>Consulta o texto quando precisares de confirmar uma escolha.</p><details><summary>Abrir o texto de apoio</summary><p class=\"v\">Estou hoje vencido, como se soubesse a verdade.\nEstou hoje lúcido, como se estivesse para morrer,</p><p class=\"v\">Sossegadamente fitemos o seu curso e aprendamos\nQue a vida passa, e não estamos de mãos enlaçadas.</p><p class=\"v\">A realidade\nSempre é mais ou menos\nDo que nós queremos.\n[…]\nOs deuses são deuses\nPorque não se pensam.</p><p class=\"fonte\">Arquivo Pessoa.</p><p class=\"fonte\"><a href=\"../../../m7/licao-m7-f07/\">Texto e fontes na lição de origem</a></p></details>",
+      "recycledFrom": "/pt/m7/licao-m7-f07/"
+    },
+    {
+      "p": "Em «Inês viu a mãe quando ela entrou», o que convém rever?",
+      "f": "Sem contexto, «ela» pode remeter para referentes diferentes. A revisão deve explicitar quem entrou.",
+      "legacyId": "s22-q1",
+      "recycledFrom": "/pt/m7/licao-m7-f07/",
+      "t": "escolha",
+      "o": [
+        "A identidade de quem é «ela».",
+        "A necessidade de retirar «viu».",
+        "A obrigação de encurtar a frase."
+      ],
+      "c": 0,
+      "fe": [
+        null,
+        "Retirar viu não esclarece a identidade do pronome.",
+        "O problema é o referente, não uma regra sobre extensão."
+      ]
+    },
+    {
+      "p": "Que relação exprime «contudo»?",
+      "f": "O conector orienta a leitura para um contraste; deve corresponder à relação efetiva entre as ideias.",
+      "legacyId": "s22-q2",
+      "recycledFrom": "/pt/m7/licao-m7-f07/",
+      "t": "escolha",
+      "o": [
+        "Uma oposição ao que se esperava.",
+        "Uma causa para o que se afirmou.",
+        "Uma repetição do que já foi dito."
+      ],
+      "c": 0,
+      "fe": [
+        null,
+        "Contudo não introduz uma causa.",
+        "O conector contraria uma expectativa em vez de repetir a afirmação."
+      ]
+    },
+    {
+      "p": "Em «Talvez a personagem reconheça o erro», «talvez» apresenta…",
+      "f": "A marca de modalidade indica possibilidade; não transforma a interpretação numa certeza.",
+      "legacyId": "s22-q3",
+      "recycledFrom": "/pt/m7/licao-m7-f07/",
+      "t": "escolha",
+      "o": [
+        "a possibilidade de acontecer",
+        "a certeza de que já aconteceu",
+        "uma ordem para que aconteça"
+      ],
+      "c": 0,
+      "fe": [
+        null,
+        "Talvez impede tomar a afirmação como certeza absoluta.",
+        "A frase não ordena à personagem que reconheça o erro."
+      ]
+    },
+    {
+      "t": "emparelhar",
+      "p": "Liga cada pedaço ou valor ao conector a que pertence.",
+      "pares": [
+        [
+          "«como se estivesse para morrer»",
+          "«Como se»"
+        ],
+        [
+          "«porque não se pensam»",
+          "«Porque»"
+        ],
+        [
+          "Hipótese, com conjuntivo",
+          "«Como se»"
+        ],
+        [
+          "Causa, com indicativo",
+          "«Porque»"
+        ]
+      ],
+      "f": "«Como se» abre uma hipótese, com conjuntivo; «porque» fecha com uma causa, no indicativo.",
+      "recycledFrom": "/pt/m7/licao-m7-f07/",
+      "sourceCard": 4,
+      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder."
+    },
+    {
+      "t": "sublinhar",
+      "p": "Toca nas duas palavras que abrem a oração comparativa hipotética.",
+      "frase": "Estou hoje vencido, como se soubesse a verdade.",
+      "certas": [
+        3,
+        4
+      ],
+      "f": "«**Como se**»: abre a comparação hipotética e leva o verbo ao conjuntivo.",
+      "recycledFrom": "/pt/m7/licao-m7-f07/",
+      "sourceCard": 5,
+      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder."
+    },
+    {
+      "t": "completar",
+      "p": "Que oração é «como se soubesse a verdade»?",
+      "frase": "Em «Estou hoje vencido, como se soubesse a verdade», a oração é subordinada adverbial [1] e exprime uma [2].",
+      "lacunas": [
+        {
+          "o": [
+            "comparativa",
+            "condicional"
+          ],
+          "c": 0,
+          "fe": [
+            null,
+            "Nesta lacuna, condicional não corresponde à relação pedida."
+          ]
+        },
+        {
+          "o": [
+            "hipótese",
+            "oposição"
+          ],
+          "c": 0,
+          "fe": [
+            null,
+            "Nesta lacuna, oposição não corresponde à relação pedida."
+          ]
+        }
+      ],
+      "f": "Subordinada adverbial **comparativa**, hipotética: exprime uma **hipótese**, não um facto.",
+      "recycledFrom": "/pt/m7/licao-m7-f07/",
+      "sourceCard": 7,
+      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder."
+    },
+    {
+      "t": "vf",
+      "p": "Em «Estou hoje lúcido, como se estivesse para morrer», «estivesse» está no conjuntivo, como «soubesse».",
+      "v": true,
+      "f": "Verdadeiro: «como se» pede o **conjuntivo**, «estivesse», «soubesse»: a morte fica como hipótese.",
+      "fe": "É verdadeiro: depois de «como se», o verbo vai para o conjuntivo: «estivesse», como «soubesse».",
+      "recycledFrom": "/pt/m7/licao-m7-f07/",
+      "sourceCard": 8
+    },
+    {
+      "t": "completar",
+      "p": "Que oração é «Que a vida passa»?",
+      "frase": "Em «fitemos o seu curso e aprendamos / Que a vida passa», «Que a vida passa» é [1] e funciona como [2] de «aprendamos».",
+      "lacunas": [
+        {
+          "o": [
+            "subordinada completiva",
+            "subordinada concessiva"
+          ],
+          "c": 0,
+          "fe": [
+            null,
+            "Nesta lacuna, subordinada concessiva não corresponde à relação pedida."
+          ]
+        },
+        {
+          "o": [
+            "complemento direto",
+            "modificador verbal"
+          ],
+          "c": 0,
+          "fe": [
+            null,
+            "Nesta lacuna, modificador verbal não corresponde à relação pedida."
+          ]
+        }
+      ],
+      "f": "**Substantiva completiva**: completa o verbo **«aprendamos»**; o que aprendemos é «que a vida passa».",
+      "recycledFrom": "/pt/m7/licao-m7-f07/",
+      "sourceCard": 9,
+      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder."
+    },
+    {
+      "t": "sublinhar",
+      "p": "Toca na palavra que liga as duas orações e dá a causa.",
+      "frase": "Os deuses são deuses porque não se pensam.",
+      "certas": [
+        4
+      ],
+      "f": "«**Porque**»: introduz a razão de os deuses serem deuses.",
+      "recycledFrom": "/pt/m7/licao-m7-f07/",
+      "sourceCard": 10,
+      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder."
+    },
+    {
+      "t": "completar",
+      "p": "Que versão é «embora não saiba a verdade», e o que faz?",
+      "frase": "«Estou hoje vencido, embora não saiba a verdade» é a versão [1] da frase e opõe duas [2].",
+      "lacunas": [
+        {
+          "o": [
+            "concessiva",
+            "comparativa"
+          ],
+          "c": 0,
+          "fe": [
+            null,
+            "Nesta lacuna, comparativa não corresponde à relação pedida."
+          ]
+        },
+        {
+          "o": [
+            "ideias",
+            "causas"
+          ],
+          "c": 0,
+          "fe": [
+            null,
+            "Nesta lacuna, causas não corresponde à relação pedida."
+          ]
+        }
+      ],
+      "f": "**Concessiva**, com «embora»: opõe duas **ideias**, estar vencido e não saber.",
+      "recycledFrom": "/pt/m7/licao-m7-f07/",
+      "sourceCard": 15,
+      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder."
+    },
+    {
+      "t": "ordenar",
+      "p": "Como se classifica uma oração subordinada, por ordem:",
+      "passos": [
+        "Procura a palavra que liga",
+        "Diz o que a oração faz",
+        "Dá o nome à oração"
+      ],
+      "f": "Primeiro o conector («como se», «que», «porque»), depois a função, depois o nome.",
+      "recycledFrom": "/pt/m7/licao-m7-f07/",
+      "sourceCard": 18,
+      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder."
+    },
+    {
+      "t": "emparelhar",
+      "p": "Liga cada conector ao valor que dá à oração.",
+      "pares": [
+        [
+          "como se",
+          "comparação hipotética"
+        ],
+        [
+          "porque",
+          "causa"
+        ],
+        [
+          "embora",
+          "concessão"
+        ]
+      ],
+      "f": "«Como se» compara por hipótese, «porque» dá a causa, «embora» concede.",
+      "recycledFrom": "/pt/m7/licao-m7-f07/",
+      "sourceCard": 19,
+      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder."
+    }
+  ]
+}
