@@ -1,3 +1,4 @@
+# 02/11/2026: verifica os predecessores depois de desfazer também o fio do ano.
 """01/11/2026: decisões 20 a 25 nas tarefas e nos guias do M8 e M9."""
 from pathlib import Path
 import json
@@ -50,7 +51,7 @@ class TasksM89(unittest.TestCase):
                             # 01/11/2026: confere a camada das tarefas por baixo das novas lições.
                             'tests/fixtures/tarefas-m89-edits-20261101.json', '--verificar',
                             # 01/11/2026: lote 2 acima da cadeia, sem relaxar a comparação.
-                            '--desfazer-antes', 'tests/fixtures/conteudos-lote2-edits-20261101.json',
+                            '--desfazer-antes', 'tests/fixtures/fio-do-ano-edits-20261101.json', '--desfazer-antes', 'tests/fixtures/conteudos-lote2-edits-20261101.json',
                             '--desfazer-antes', 'tests/fixtures/licoes-m16-edits-20261101.json',
                             '--desfazer-antes', 'tests/fixtures/licoes-m89-edits-20261101.json'],
                            cwd=ROOT, capture_output=True, text=True, encoding='utf-8')
