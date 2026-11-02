@@ -10,6 +10,9 @@ ROOT = Path(__file__).resolve().parents[1]
 # 01/11/2026: acrescenta as quatro tarefas seguintes sem retirar a cobertura anterior.
 SLUGS = ('m1-u1', 'm3-u1', 'm3-u2', 'm5-u1', 'm5-u2', 'm6-u1', 'm6-u2', 'm7-u3',
          'm8-u1', 'm8-u2', 'm9-u1', 'm9-u2')
+# 01/11/2026: as nove versões de correção, para a impressão A4, e as quatro do M8 e do M9, que já iam à A4 pelo SLUGS.
+CORRECOES = ('m1-u1', 'm1-u2', 'm3-u1', 'm3-u2', 'm5-u1', 'm5-u2', 'm6-u1', 'm6-u2', 'm7-u3',
+             'm8-u1', 'm8-u2', 'm9-u1', 'm9-u2')
 
 class Quiet(SimpleHTTPRequestHandler):
     def log_message(self, *args):
@@ -36,7 +39,9 @@ def main():
                         assert page.locator('details.regra p.avaliacao-tarefas').count() == 1
                         page.goto(f'{host}/m{m}/guia-da-tarefa-m{m}/', wait_until='networkidle')
                         size = page.locator('#arquivo-producoes > summary').bounding_box()
-                        assert size['height'] >= (88 if width < 640 else 44), (m, width, size)
+                        # 01/11/2026: 44 px é o alvo do sistema; 88 px abria uma faixa vazia. O teto são duas linhas:
+                        # 2 x 20,16 px (.9rem com 1.4) + 24 px de margem interior dão 64,3 px a 320 px, ou seja, 64 px.
+                        assert 44 <= size['height'] < 64.5, (m, width, size)
                     for slug in SLUGS:
                         page.goto(f'{host}/tarefas/{slug}/grelha/', wait_until='networkidle')
                         for link in page.locator('.g-tab td a').all():
@@ -47,8 +52,16 @@ def main():
                     ctx.close()
                     print('PASS apresentação', width, scheme, flush=True)
             page = browser.new_page()
-            for slug in SLUGS:
+            # 01/11/2026: largura útil do A4 com margens de 12 mm (210 - 24 = 186 mm, 703 px a 96 ppp), como na medição
+            # da revisão; as nove correções, incluindo a do M1-U2, e as quatro do M8 e do M9.
+            page.set_viewport_size({'width': 703, 'height': 1000})
+            for slug in CORRECOES:
                 page.goto(f'{host}/tarefas/{slug}/correcao/', wait_until='networkidle')
+                page.emulate_media(media='print')
+                # 01/11/2026: nenhum cabeçalho transborda na impressão
+                assert page.evaluate("[...document.querySelectorAll('.g-tab thead th')].every(t=>t.scrollWidth<=t.clientWidth)"), slug
+                # 01/11/2026: as caixas do comentário guardam espaço para escrever
+                assert page.locator('.g-fb>div').first.evaluate("e=>e.getBoundingClientRect().height>=7*parseFloat(getComputedStyle(e).fontSize)"), slug
                 pdf = page.pdf(format='A4', prefer_css_page_size=True)
                 pages = len(re.findall(rb'/Type\s*/Page\b', pdf))
                 assert pages == 1, (slug, pages)
