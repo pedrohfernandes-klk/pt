@@ -15,11 +15,10 @@ body.pt-module-layout .cz-index .mod-pergunta .serif{font:400 1.25rem/1.4 Georgi
 body.pt-module-layout .cz-index .mod-ambito{font:1rem/1.55 Georgia,serif;margin:0}
 body.pt-module-layout .cz-index .pequeno{font-size:0.8125rem}
 body.pt-module-layout .cz-index .unit-retoma p:first-child{font:0.8125rem/1.5 Arial,sans-serif}
-body.pt-module-layout .cz-index .module-opening .module-entry.cz-next{margin:16px 0 24px;padding:24px;background:var(--cz-ink);color:var(--cz-paper)}
-body.pt-module-layout .cz-index .cz-next h2{font:700 1.5625rem/1.2 Arial,sans-serif;letter-spacing:0;margin:0 0 16px}
-body.pt-module-layout .cz-index .cz-next p{font:1rem/1.5 Arial,sans-serif;margin:0 0 16px}
-body.pt-module-layout .cz-index .cz-next>a.cz-button{display:flex;min-height:48px;padding:8px 16px;border:2px solid var(--cz-paper);background:var(--cz-paper);color:var(--cz-ink);font:700 1rem/1.5 Arial,sans-serif;text-decoration:none;gap:16px}
-body.pt-module-layout .cz-index .cz-next>a>span:first-child{flex:1;min-width:0}
+/* 02/11/2026: decisão 134 (docente). Sem a caixa «A seguir»: fica o botão de continuar, com contorno, como as ações da entrada do Lente. */
+body.pt-module-layout .cz-index .module-opening .module-entry{margin:16px 0 24px}
+body.pt-module-layout .cz-index .module-entry>a.cz-button{display:inline-flex;max-width:100%;min-height:48px;align-items:center;padding:8px 24px;border:2px solid var(--cz-ink);background:transparent;color:var(--cz-ink);font:700 1rem/1.5 Arial,sans-serif;text-decoration:none;gap:16px}
+body.pt-module-layout .cz-index .module-entry>a>span:first-child{min-width:0}
 body.pt-module-layout .cz-index .module-opening .doc{padding:0 0 0 24px}
 body.pt-module-layout .cz-index .module-opening figcaption{font:0.8125rem/1.5 Arial,sans-serif;color:var(--cz-muted)}
 body.pt-module-layout .cz-index .mod-sec{padding-top:16px;margin:8px 0 0;gap:16px 24px}
@@ -74,10 +73,9 @@ body.pt-module-layout .cz-index .cz-state.current [data-cz-point]{border:2px sol
 @media(max-width:639px){
  body.pt-module-layout main.cz-index{padding-top:8px}
  body.pt-module-layout .cz-index header.topo{padding-top:0;gap:8px 16px}
- body.pt-module-layout .cz-index .module-opening .module-entry.cz-next{margin:0 0 16px;padding:12px 16px}
- body.pt-module-layout .cz-index .cz-next h2,body.pt-module-layout .cz-index .cz-next p{margin-bottom:8px}
+ body.pt-module-layout .cz-index .module-opening .module-entry{margin:0 0 16px}
 }
-@media print{body.pt-module-layout main.cz-index{max-width:none;padding:0;color:#000;background:#fff}body.pt-module-layout .cz-index details.cz-fold{display:block}body.pt-module-layout .cz-index .cz-fold>summary{display:none}body.pt-module-layout .cz-index .cz-fold::details-content{content-visibility:visible}body.pt-module-layout .cz-index .unidade-pedagogica{break-inside:auto}body.pt-module-layout .cz-index .passos>li{break-inside:avoid}body.pt-module-layout .cz-index .passos>li>a.cz-row{color:#000;background:#fff;border-bottom:1px solid #444}body.pt-module-layout .cz-index .cz-next{color:#000!important;background:#fff!important;border:2px solid #000}body.pt-module-layout .cz-index .cz-next>a.cz-button{color:#000;background:#fff;border-color:#000}body.pt-module-layout .cz-index .module-opening .doc img{max-height:160px}}
+@media print{body.pt-module-layout main.cz-index{max-width:none;padding:0;color:#000;background:#fff}body.pt-module-layout .cz-index details.cz-fold{display:block}body.pt-module-layout .cz-index .cz-fold>summary{display:none}body.pt-module-layout .cz-index .cz-fold::details-content{content-visibility:visible}body.pt-module-layout .cz-index .unidade-pedagogica{break-inside:auto}body.pt-module-layout .cz-index .passos>li{break-inside:avoid}body.pt-module-layout .cz-index .passos>li>a.cz-row{color:#000;background:#fff;border-bottom:1px solid #444}body.pt-module-layout .cz-index .module-entry>a.cz-button{color:#000;background:#fff;border-color:#000}body.pt-module-layout .cz-index .module-opening .doc img{max-height:160px}}
 
 /* 02/11/2026: confirmação #154, bandas identificadas e estado comum. */
 body.pt-module-layout .cz-index .cz-index-fold-state:not(:empty)::before{content:"";display:inline-block;width:12px;height:12px;margin-right:8px;border:2px solid var(--cz-ink);box-sizing:border-box;background:var(--cz-current);vertical-align:-1px}
@@ -85,8 +83,6 @@ body.pt-module-layout .cz-index .cz-index-fold-state.feita::before{background:va
 body.pt-module-layout .cz-index.cz-sala .cz-fold>summary{display:none!important}
 body.pt-module-layout .cz-index.cz-sala :is(.estado,.barra,[data-prog]){display:none!important}
 @media(max-width:639px){
- body.pt-module-layout .cz-index .cz-next h2{font:700 0.8125rem/1.4 Arial,sans-serif;letter-spacing:.1em;text-transform:uppercase;margin:0 0 8px}
- body.pt-module-layout .cz-index .cz-next .cz-index-status{margin:8px 0 0}
  body.pt-module-layout .cz-index .cz-fold>summary{display:grid;grid-template-columns:minmax(0,1fr) auto 24px;align-content:center;column-gap:16px;row-gap:0}
  body.pt-module-layout .cz-index .cz-fold-k{grid-column:1;font:700 0.8125rem/1.4 Arial,sans-serif;letter-spacing:.1em;text-transform:uppercase}
  body.pt-module-layout .cz-index .cz-fold-t{grid-column:1;font:700 1.25rem/1.25 Arial,sans-serif;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}

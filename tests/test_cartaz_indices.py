@@ -29,7 +29,9 @@ class IndicesCartaz(unittest.TestCase):
    s=(ROOT/f'm{n}/index.html').read_text('utf8');units=json.JSONDecoder().raw_decode(s.split('var U=',1)[1])[0]
    self.assertEqual(s.count('<p class="prova-esperada">'),len(units))
    self.assertEqual(len(re.findall(r'<details class="cz-fold"[^>]*\bopen>',s)),len(units))
-   self.assertEqual(s.count('class="module-entry cz-next"'),1)
+   # 02/11/2026: decisão 134 (docente). Sem a caixa «A seguir»: um só botão de continuar, simples, sem título nem linha de estado.
+   self.assertEqual(s.count('<div class="module-entry"><a class="cz-button primary" data-module-next'),1)
+   self.assertEqual(s.count('class="module-entry cz-next"'),0);self.assertNotIn('<h2>A seguir</h2>',s);self.assertNotIn('cz-index-status',s)
    # 01/11/2026: a banda fechada identifica a unidade, além do seu número.
    names=re.findall(r'<span class="cz-fold-t">(.*?)</span>',s)
    self.assertEqual(len(names),len(units))

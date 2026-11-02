@@ -33,8 +33,8 @@
    fold.querySelector('.cz-index-fold-state').classList.toggle('feita',!sala&&!here&&doneUnit===unit.passos.length);
    if(sala)fold.open=true;else if(!initialized&&matchMedia('(max-width:639px)').matches&&!new URLSearchParams(location.search).has('projetar'))fold.open=!!(here||fold.contains(anchor()));else if(here||fold.contains(anchor()))fold.open=true;
   }
-  const status=main.querySelector('.cz-index-status');status.hidden=sala;
-  text(status,doneCount?`${doneCount} de ${total} passos feitos.`:'Ainda não há passos feitos.');
+  // 02/11/2026: decisão 134. A linha de estado saiu com a caixa «A seguir»; se existir numa cópia antiga, continua a funcionar.
+  const status=main.querySelector('.cz-index-status');if(status){status.hidden=sala;text(status,doneCount?`${doneCount} de ${total} passos feitos.`:'Ainda não há passos feitos.');}
   const label=main.querySelector('[data-module-next-label]');if(label&&!doneCount)text(label,label.textContent.replace(/^Continuar: /,'Começar: '));
   // Mantém o destino e o rótulo calculados pelo motor, bem como todos os contadores.
   main.querySelectorAll('[data-prog]').forEach(e=>text(e,e.textContent.replace(/ · /g,', ')));
