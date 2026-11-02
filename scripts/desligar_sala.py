@@ -838,6 +838,13 @@ def main():
                 # 31/10/2026: a substituição do percurso antigo é uma camada literal posterior.
                 posterior = ROOT / 'tests/fixtures/tarefas-m356-edits-20261031.json'
                 conferencia = texto
+                # 02/11/2026: desfaz primeiro o piloto do fio; conserva o contrato estrito da Sala.
+                fio = ROOT / 'tests/fixtures/fio-do-ano-edits-20261101.json'
+                if fio.is_file():
+                    for edit in reversed(json.loads(fio.read_text('utf-8'))['files'].get(rel, {}).get('edits', [])):
+                        if conferencia.count(edit['new']) != edit['occurrences']:
+                            raise ManifestoDesatualizado(f'{rel}: camada do fio do ano não confere')
+                        conferencia = conferencia.replace(edit['new'], edit['old'])
                 # 01/11/2026: conteúdo do lote 2 posterior, sem dispensar o contrato da Sala.
                 lote2 = ROOT / 'tests/fixtures/conteudos-lote2-edits-20261101.json'
                 if lote2.is_file():

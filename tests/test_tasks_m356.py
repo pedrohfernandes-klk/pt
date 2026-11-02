@@ -1,3 +1,4 @@
+# 02/11/2026: verifica os predecessores depois de desfazer também o fio do ano.
 """31/10/2026: decisões 20 a 25 nas tarefas e nos guias do M3, M5 e M6."""
 from pathlib import Path
 import json
@@ -83,7 +84,7 @@ class TasksM356(unittest.TestCase):
     def test_camada_literal_aplicada_e_reversivel(self):
         r = subprocess.run([sys.executable, 'scripts/aplicar_trocas.py',
                             'scripts/tarefas_m356_20261031.json', '--manifesto',
-                            'tests/fixtures/tarefas-m356-edits-20261031.json', '--verificar', '--desfazer-antes', 'tests/fixtures/conteudos-lote2-edits-20261101.json', '--desfazer-antes', 'tests/fixtures/licoes-m16-edits-20261101.json', '--desfazer-antes', 'tests/fixtures/licoes-m89-edits-20261101.json', '--desfazer-antes', 'tests/fixtures/tarefas-m89-edits-20261101.json'], # 01/11/2026: desfazer primeiro o lote 2, mantendo a verificação estrita de todas as camadas anteriores.
+                            'tests/fixtures/tarefas-m356-edits-20261031.json', '--verificar', '--desfazer-antes', 'tests/fixtures/fio-do-ano-edits-20261101.json', '--desfazer-antes', 'tests/fixtures/conteudos-lote2-edits-20261101.json', '--desfazer-antes', 'tests/fixtures/licoes-m16-edits-20261101.json', '--desfazer-antes', 'tests/fixtures/licoes-m89-edits-20261101.json', '--desfazer-antes', 'tests/fixtures/tarefas-m89-edits-20261101.json'], # 01/11/2026: desfazer primeiro o lote 2, mantendo a verificação estrita de todas as camadas anteriores.
                            cwd=ROOT, capture_output=True, text=True, encoding='utf-8')
         self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
 

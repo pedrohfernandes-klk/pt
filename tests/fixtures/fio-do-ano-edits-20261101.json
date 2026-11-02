@@ -1,0 +1,78 @@
+{
+ "base_commit": "8e3303b7bf0d2451d894d590ad31e5c1305d5b0c",
+ "_nota": "02/11/2026: proposta e piloto do fio do primeiro ano; quatro páginas, sem alterar lições, percursos, pesos ou progresso.",
+ "files": {
+  "1/index.html": {
+   "base_sha256_lf": "9f8137bba574e1a13cb80f433165e3e8149ac3cd528be5f32ff46db0bc3742c2",
+   "after_sha256_lf": "e1adcb3172f54e92fb6f4d5b7b56b4c11e350103aef9c63de2507a317c82b927",
+   "edits": [
+    {
+     "location": "Estilo isolado do fio do ano",
+     "old": "</head>",
+     "new": "<style>.fio-ano{max-width:70ch;margin:0 0 28px;padding:16px 0;border-top:1px solid var(--linha);color:var(--tinta)}.fio-ano .fio-ano-rotulo{margin:0 0 6px;font:700 .8125rem/1.4 Arial,Helvetica,sans-serif;letter-spacing:.08em;text-transform:uppercase}.fio-ano .fio-ano-sentido{margin:0 0 8px;font:400 1rem/1.5 Georgia,serif}.fio-ano summary{min-height:44px;padding:10px 0;cursor:pointer;font:700 1rem/1.5 Arial,Helvetica,sans-serif}.fio-ano summary:focus-visible{outline:2px solid var(--tinta);outline-offset:4px}.fio-ano dl{margin:8px 0 0;font:400 1rem/1.5 Georgia,serif}.fio-ano dt{font:700 1rem/1.5 Arial,Helvetica,sans-serif}.fio-ano dd{margin:0 0 12px}.fio-ano .fio-ano-pergunta{font:400 1rem/1.5 Georgia,serif;margin:8px 0 12px}.fio-ano-modulo{max-width:70ch;margin:12px 0 20px;padding-top:12px;border-top:1px solid var(--linha);font:400 1rem/1.5 Georgia,serif;color:var(--tinta)}.fio-ano-modulo>span{font:700 .8125rem/1.5 Arial,Helvetica,sans-serif}</style></head>",
+     "occurrences": 1
+    },
+    {
+     "location": "Depois da abertura do ano, antes dos módulos",
+     "old": "<header class=\"p-cab\"><p class=\"p-etiqueta\">Português, 2026/2027</p><h1>1.º ano</h1><p class=\"p-sub\">Quem fala, quem escolhe, quem fica na história?</p><p class=\"p-lead\">Das cantigas medievais ao teatro de Gil Vicente e à poesia de Camões, vais descobrir maneiras de dizer o amor, desafiar regras e contar feitos. Escolhe o módulo que estás a trabalhar para abrir o percurso.</p></header>",
+     "new": "<header class=\"p-cab\"><p class=\"p-etiqueta\">Português, 2026/2027</p><h1>1.º ano</h1><p class=\"p-sub\">Quem fala, quem escolhe, quem fica na história?</p><p class=\"p-lead\">Das cantigas medievais ao teatro de Gil Vicente e à poesia de Camões, vais descobrir maneiras de dizer o amor, desafiar regras e contar feitos. Escolhe o módulo que estás a trabalhar para abrir o percurso.</p></header><section class=\"fio-ano\" aria-label=\"Fio do primeiro ano\"><p class=\"fio-ano-rotulo\">Fio do 1.º ano</p><p class=\"fio-ano-sentido\">Neste ano, distingues o que observas no texto do que concluis a partir dele.</p><details><summary>Quatro perguntas para rever</summary><p class=\"fio-ano-pergunta\">O que afirmo, em que me apoio, o que me obriga a rever.</p><dl><div><dt>Afirmação delimitada</dt><dd>O que concluis sobre esta passagem?</dd></div><div><dt>Indício pertinente</dt><dd>Que palavra, verso ou gesto apoia essa leitura?</dd></div><div><dt>Ligação explicada</dt><dd>Como sustenta esse indício a tua conclusão?</dd></div><div><dt>Limite reconhecido</dt><dd>O que ainda não podes concluir, ou que indício te faria rever a leitura?</dd></div></dl></details></section>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m1/index.html": {
+   "base_sha256_lf": "5b5bf51f8d277269c707812686d158b8643e8042e2ee28f37b2549b883cbb507",
+   "after_sha256_lf": "c2734b6a4bb2ab05271b2aa944e9f913c5f72b6953bfd4728f96fbec56dbe119",
+   "edits": [
+    {
+     "location": "Estilo isolado do fio do ano",
+     "old": "</head>",
+     "new": "<style>.fio-ano{max-width:70ch;margin:0 0 28px;padding:16px 0;border-top:1px solid var(--linha);color:var(--tinta)}.fio-ano .fio-ano-rotulo{margin:0 0 6px;font:700 .8125rem/1.4 Arial,Helvetica,sans-serif;letter-spacing:.08em;text-transform:uppercase}.fio-ano .fio-ano-sentido{margin:0 0 8px;font:400 1rem/1.5 Georgia,serif}.fio-ano summary{min-height:44px;padding:10px 0;cursor:pointer;font:700 1rem/1.5 Arial,Helvetica,sans-serif}.fio-ano summary:focus-visible{outline:2px solid var(--tinta);outline-offset:4px}.fio-ano dl{margin:8px 0 0;font:400 1rem/1.5 Georgia,serif}.fio-ano dt{font:700 1rem/1.5 Arial,Helvetica,sans-serif}.fio-ano dd{margin:0 0 12px}.fio-ano .fio-ano-pergunta{font:400 1rem/1.5 Georgia,serif;margin:8px 0 12px}.fio-ano-modulo{max-width:70ch;margin:12px 0 20px;padding-top:12px;border-top:1px solid var(--linha);font:400 1rem/1.5 Georgia,serif;color:var(--tinta)}.fio-ano-modulo>span{font:700 .8125rem/1.5 Arial,Helvetica,sans-serif}</style></head>",
+     "occurrences": 1
+    },
+    {
+     "location": "Depois da abertura e antes de Neste módulo",
+     "old": "<nav aria-label=\"Unidades do módulo\" class=\"unit-index\">",
+     "new": "<p class=\"fio-ano-modulo\"><span>Fio do 1.º ano.</span> Distingues quem fala e o que é dito das intenções que atribuis à voz.</p><nav aria-label=\"Unidades do módulo\" class=\"unit-index\">",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m2/index.html": {
+   "base_sha256_lf": "57405b3a3c4c48028894d33ed8082da3c4872d864b63c13103418dad3d9f9b21",
+   "after_sha256_lf": "a0a04923be651a46d191507f3284a1554076e01a8319da5a8cddeea2cc7dbe22",
+   "edits": [
+    {
+     "location": "Estilo isolado do fio do ano",
+     "old": "</head>",
+     "new": "<style>.fio-ano{max-width:70ch;margin:0 0 28px;padding:16px 0;border-top:1px solid var(--linha);color:var(--tinta)}.fio-ano .fio-ano-rotulo{margin:0 0 6px;font:700 .8125rem/1.4 Arial,Helvetica,sans-serif;letter-spacing:.08em;text-transform:uppercase}.fio-ano .fio-ano-sentido{margin:0 0 8px;font:400 1rem/1.5 Georgia,serif}.fio-ano summary{min-height:44px;padding:10px 0;cursor:pointer;font:700 1rem/1.5 Arial,Helvetica,sans-serif}.fio-ano summary:focus-visible{outline:2px solid var(--tinta);outline-offset:4px}.fio-ano dl{margin:8px 0 0;font:400 1rem/1.5 Georgia,serif}.fio-ano dt{font:700 1rem/1.5 Arial,Helvetica,sans-serif}.fio-ano dd{margin:0 0 12px}.fio-ano .fio-ano-pergunta{font:400 1rem/1.5 Georgia,serif;margin:8px 0 12px}.fio-ano-modulo{max-width:70ch;margin:12px 0 20px;padding-top:12px;border-top:1px solid var(--linha);font:400 1rem/1.5 Georgia,serif;color:var(--tinta)}.fio-ano-modulo>span{font:700 .8125rem/1.5 Arial,Helvetica,sans-serif}</style></head>",
+     "occurrences": 1
+    },
+    {
+     "location": "Depois da abertura e antes de Neste módulo",
+     "old": "<nav aria-label=\"Unidades do módulo\" class=\"unit-index\">",
+     "new": "<p class=\"fio-ano-modulo\"><span>Fio do 1.º ano.</span> Distingues o que uma personagem diz e faz dos motivos que lhe atribuis.</p><nav aria-label=\"Unidades do módulo\" class=\"unit-index\">",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m3/index.html": {
+   "base_sha256_lf": "75446510be7e968ac38b012cd22aed67a00325cd9f8504131af14490ccff6774",
+   "after_sha256_lf": "e70d447556fb34ea7d4534fb2c5a414b41bca62507f038cd82dd7e77bf34b322",
+   "edits": [
+    {
+     "location": "Estilo isolado do fio do ano",
+     "old": "</head>",
+     "new": "<style>.fio-ano{max-width:70ch;margin:0 0 28px;padding:16px 0;border-top:1px solid var(--linha);color:var(--tinta)}.fio-ano .fio-ano-rotulo{margin:0 0 6px;font:700 .8125rem/1.4 Arial,Helvetica,sans-serif;letter-spacing:.08em;text-transform:uppercase}.fio-ano .fio-ano-sentido{margin:0 0 8px;font:400 1rem/1.5 Georgia,serif}.fio-ano summary{min-height:44px;padding:10px 0;cursor:pointer;font:700 1rem/1.5 Arial,Helvetica,sans-serif}.fio-ano summary:focus-visible{outline:2px solid var(--tinta);outline-offset:4px}.fio-ano dl{margin:8px 0 0;font:400 1rem/1.5 Georgia,serif}.fio-ano dt{font:700 1rem/1.5 Arial,Helvetica,sans-serif}.fio-ano dd{margin:0 0 12px}.fio-ano .fio-ano-pergunta{font:400 1rem/1.5 Georgia,serif;margin:8px 0 12px}.fio-ano-modulo{max-width:70ch;margin:12px 0 20px;padding-top:12px;border-top:1px solid var(--linha);font:400 1rem/1.5 Georgia,serif;color:var(--tinta)}.fio-ano-modulo>span{font:700 .8125rem/1.5 Arial,Helvetica,sans-serif}</style></head>",
+     "occurrences": 1
+    },
+    {
+     "location": "Depois da abertura e antes de Neste módulo",
+     "old": "<nav aria-label=\"Unidades do módulo\" class=\"unit-index\">",
+     "new": "<p class=\"fio-ano-modulo\"><span>Fio do 1.º ano.</span> Distingues o que os versos mostram da interpretação que fazes do amor, da mudança e dos feitos narrados.</p><nav aria-label=\"Unidades do módulo\" class=\"unit-index\">",
+     "occurrences": 1
+    }
+   ]
+  }
+ }
+}

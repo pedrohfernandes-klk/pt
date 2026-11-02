@@ -1,0 +1,66 @@
+[
+  {
+    "ficheiro": "1/index.html",
+    "local": "Estilo isolado do fio do ano",
+    "antigo": "</head>",
+    "novo": "<style>.fio-ano{max-width:70ch;margin:0 0 28px;padding:16px 0;border-top:1px solid var(--linha);color:var(--tinta)}.fio-ano .fio-ano-rotulo{margin:0 0 6px;font:700 .8125rem/1.4 Arial,Helvetica,sans-serif;letter-spacing:.08em;text-transform:uppercase}.fio-ano .fio-ano-sentido{margin:0 0 8px;font:400 1rem/1.5 Georgia,serif}.fio-ano summary{min-height:44px;padding:10px 0;cursor:pointer;font:700 1rem/1.5 Arial,Helvetica,sans-serif}.fio-ano summary:focus-visible{outline:2px solid var(--tinta);outline-offset:4px}.fio-ano dl{margin:8px 0 0;font:400 1rem/1.5 Georgia,serif}.fio-ano dt{font:700 1rem/1.5 Arial,Helvetica,sans-serif}.fio-ano dd{margin:0 0 12px}.fio-ano .fio-ano-pergunta{font:400 1rem/1.5 Georgia,serif;margin:8px 0 12px}.fio-ano-modulo{max-width:70ch;margin:12px 0 20px;padding-top:12px;border-top:1px solid var(--linha);font:400 1rem/1.5 Georgia,serif;color:var(--tinta)}.fio-ano-modulo>span{font:700 .8125rem/1.5 Arial,Helvetica,sans-serif}</style></head>",
+    "ocorrencias": 1,
+    "achado": "Pedido B, 02/11/2026: piloto discreto do fio do primeiro ano, sem mudar conteúdos, progresso ou avaliação."
+  },
+  {
+    "ficheiro": "m1/index.html",
+    "local": "Estilo isolado do fio do ano",
+    "antigo": "</head>",
+    "novo": "<style>.fio-ano{max-width:70ch;margin:0 0 28px;padding:16px 0;border-top:1px solid var(--linha);color:var(--tinta)}.fio-ano .fio-ano-rotulo{margin:0 0 6px;font:700 .8125rem/1.4 Arial,Helvetica,sans-serif;letter-spacing:.08em;text-transform:uppercase}.fio-ano .fio-ano-sentido{margin:0 0 8px;font:400 1rem/1.5 Georgia,serif}.fio-ano summary{min-height:44px;padding:10px 0;cursor:pointer;font:700 1rem/1.5 Arial,Helvetica,sans-serif}.fio-ano summary:focus-visible{outline:2px solid var(--tinta);outline-offset:4px}.fio-ano dl{margin:8px 0 0;font:400 1rem/1.5 Georgia,serif}.fio-ano dt{font:700 1rem/1.5 Arial,Helvetica,sans-serif}.fio-ano dd{margin:0 0 12px}.fio-ano .fio-ano-pergunta{font:400 1rem/1.5 Georgia,serif;margin:8px 0 12px}.fio-ano-modulo{max-width:70ch;margin:12px 0 20px;padding-top:12px;border-top:1px solid var(--linha);font:400 1rem/1.5 Georgia,serif;color:var(--tinta)}.fio-ano-modulo>span{font:700 .8125rem/1.5 Arial,Helvetica,sans-serif}</style></head>",
+    "ocorrencias": 1,
+    "achado": "Pedido B, 02/11/2026: piloto discreto do fio do primeiro ano, sem mudar conteúdos, progresso ou avaliação."
+  },
+  {
+    "ficheiro": "m2/index.html",
+    "local": "Estilo isolado do fio do ano",
+    "antigo": "</head>",
+    "novo": "<style>.fio-ano{max-width:70ch;margin:0 0 28px;padding:16px 0;border-top:1px solid var(--linha);color:var(--tinta)}.fio-ano .fio-ano-rotulo{margin:0 0 6px;font:700 .8125rem/1.4 Arial,Helvetica,sans-serif;letter-spacing:.08em;text-transform:uppercase}.fio-ano .fio-ano-sentido{margin:0 0 8px;font:400 1rem/1.5 Georgia,serif}.fio-ano summary{min-height:44px;padding:10px 0;cursor:pointer;font:700 1rem/1.5 Arial,Helvetica,sans-serif}.fio-ano summary:focus-visible{outline:2px solid var(--tinta);outline-offset:4px}.fio-ano dl{margin:8px 0 0;font:400 1rem/1.5 Georgia,serif}.fio-ano dt{font:700 1rem/1.5 Arial,Helvetica,sans-serif}.fio-ano dd{margin:0 0 12px}.fio-ano .fio-ano-pergunta{font:400 1rem/1.5 Georgia,serif;margin:8px 0 12px}.fio-ano-modulo{max-width:70ch;margin:12px 0 20px;padding-top:12px;border-top:1px solid var(--linha);font:400 1rem/1.5 Georgia,serif;color:var(--tinta)}.fio-ano-modulo>span{font:700 .8125rem/1.5 Arial,Helvetica,sans-serif}</style></head>",
+    "ocorrencias": 1,
+    "achado": "Pedido B, 02/11/2026: piloto discreto do fio do primeiro ano, sem mudar conteúdos, progresso ou avaliação."
+  },
+  {
+    "ficheiro": "m3/index.html",
+    "local": "Estilo isolado do fio do ano",
+    "antigo": "</head>",
+    "novo": "<style>.fio-ano{max-width:70ch;margin:0 0 28px;padding:16px 0;border-top:1px solid var(--linha);color:var(--tinta)}.fio-ano .fio-ano-rotulo{margin:0 0 6px;font:700 .8125rem/1.4 Arial,Helvetica,sans-serif;letter-spacing:.08em;text-transform:uppercase}.fio-ano .fio-ano-sentido{margin:0 0 8px;font:400 1rem/1.5 Georgia,serif}.fio-ano summary{min-height:44px;padding:10px 0;cursor:pointer;font:700 1rem/1.5 Arial,Helvetica,sans-serif}.fio-ano summary:focus-visible{outline:2px solid var(--tinta);outline-offset:4px}.fio-ano dl{margin:8px 0 0;font:400 1rem/1.5 Georgia,serif}.fio-ano dt{font:700 1rem/1.5 Arial,Helvetica,sans-serif}.fio-ano dd{margin:0 0 12px}.fio-ano .fio-ano-pergunta{font:400 1rem/1.5 Georgia,serif;margin:8px 0 12px}.fio-ano-modulo{max-width:70ch;margin:12px 0 20px;padding-top:12px;border-top:1px solid var(--linha);font:400 1rem/1.5 Georgia,serif;color:var(--tinta)}.fio-ano-modulo>span{font:700 .8125rem/1.5 Arial,Helvetica,sans-serif}</style></head>",
+    "ocorrencias": 1,
+    "achado": "Pedido B, 02/11/2026: piloto discreto do fio do primeiro ano, sem mudar conteúdos, progresso ou avaliação."
+  },
+  {
+    "ficheiro": "1/index.html",
+    "local": "Depois da abertura do ano, antes dos módulos",
+    "antigo": "<header class=\"p-cab\"><p class=\"p-etiqueta\">Português, 2026/2027</p><h1>1.º ano</h1><p class=\"p-sub\">Quem fala, quem escolhe, quem fica na história?</p><p class=\"p-lead\">Das cantigas medievais ao teatro de Gil Vicente e à poesia de Camões, vais descobrir maneiras de dizer o amor, desafiar regras e contar feitos. Escolhe o módulo que estás a trabalhar para abrir o percurso.</p></header>",
+    "novo": "<header class=\"p-cab\"><p class=\"p-etiqueta\">Português, 2026/2027</p><h1>1.º ano</h1><p class=\"p-sub\">Quem fala, quem escolhe, quem fica na história?</p><p class=\"p-lead\">Das cantigas medievais ao teatro de Gil Vicente e à poesia de Camões, vais descobrir maneiras de dizer o amor, desafiar regras e contar feitos. Escolhe o módulo que estás a trabalhar para abrir o percurso.</p></header><section class=\"fio-ano\" aria-label=\"Fio do primeiro ano\"><p class=\"fio-ano-rotulo\">Fio do 1.º ano</p><p class=\"fio-ano-sentido\">Neste ano, distingues o que observas no texto do que concluis a partir dele.</p><details><summary>Quatro perguntas para rever</summary><p class=\"fio-ano-pergunta\">O que afirmo, em que me apoio, o que me obriga a rever.</p><dl><div><dt>Afirmação delimitada</dt><dd>O que concluis sobre esta passagem?</dd></div><div><dt>Indício pertinente</dt><dd>Que palavra, verso ou gesto apoia essa leitura?</dd></div><div><dt>Ligação explicada</dt><dd>Como sustenta esse indício a tua conclusão?</dd></div><div><dt>Limite reconhecido</dt><dd>O que ainda não podes concluir, ou que indício te faria rever a leitura?</dd></div></dl></details></section>",
+    "ocorrencias": 1,
+    "achado": "Pedido B, 02/11/2026: piloto discreto do fio do primeiro ano, sem mudar conteúdos, progresso ou avaliação."
+  },
+  {
+    "ficheiro": "m1/index.html",
+    "local": "Depois da abertura e antes de Neste módulo",
+    "antigo": "<nav aria-label=\"Unidades do módulo\" class=\"unit-index\">",
+    "novo": "<p class=\"fio-ano-modulo\"><span>Fio do 1.º ano.</span> Distingues quem fala e o que é dito das intenções que atribuis à voz.</p><nav aria-label=\"Unidades do módulo\" class=\"unit-index\">",
+    "ocorrencias": 1,
+    "achado": "Pedido B, 02/11/2026: piloto discreto do fio do primeiro ano, sem mudar conteúdos, progresso ou avaliação."
+  },
+  {
+    "ficheiro": "m2/index.html",
+    "local": "Depois da abertura e antes de Neste módulo",
+    "antigo": "<nav aria-label=\"Unidades do módulo\" class=\"unit-index\">",
+    "novo": "<p class=\"fio-ano-modulo\"><span>Fio do 1.º ano.</span> Distingues o que uma personagem diz e faz dos motivos que lhe atribuis.</p><nav aria-label=\"Unidades do módulo\" class=\"unit-index\">",
+    "ocorrencias": 1,
+    "achado": "Pedido B, 02/11/2026: piloto discreto do fio do primeiro ano, sem mudar conteúdos, progresso ou avaliação."
+  },
+  {
+    "ficheiro": "m3/index.html",
+    "local": "Depois da abertura e antes de Neste módulo",
+    "antigo": "<nav aria-label=\"Unidades do módulo\" class=\"unit-index\">",
+    "novo": "<p class=\"fio-ano-modulo\"><span>Fio do 1.º ano.</span> Distingues o que os versos mostram da interpretação que fazes do amor, da mudança e dos feitos narrados.</p><nav aria-label=\"Unidades do módulo\" class=\"unit-index\">",
+    "ocorrencias": 1,
+    "achado": "Pedido B, 02/11/2026: piloto discreto do fio do primeiro ano, sem mudar conteúdos, progresso ou avaliação."
+  }
+]

@@ -224,7 +224,21 @@ _LICOES_M16_FILES = json.loads((ROOT / 'tests/fixtures/licoes-m16-edits-20261101
 _CONTEUDOS_LOTE2_FILES = json.loads((ROOT / 'tests/fixtures/conteudos-lote2-edits-20261101.json').read_text('utf-8'))['files']
 
 
+# 02/11/2026: o fio do ano precede o lote 2 na reversão, sem normalizar textos.
+_FIO_DO_ANO_FILES = json.loads((ROOT / 'tests/fixtures/fio-do-ano-edits-20261101.json').read_text('utf-8'))['files']
+
+
+def undo_fio_do_ano(path, text):
+    relative = _relative(path)
+    for edit in reversed(_FIO_DO_ANO_FILES.get(relative, {}).get('edits', [])):
+        if text.count(edit['new']) != edit['occurrences']:
+            raise AssertionError(f"Fio do ano não confere: {relative}: {edit['location']}")
+        text = text.replace(edit['new'], edit['old'])
+    return text
+
+
 def undo_conteudos_lote2(path, text):
+    text = undo_fio_do_ano(path, text)
     relative = _relative(path)
     for edit in reversed(_CONTEUDOS_LOTE2_FILES.get(relative, {}).get('edits', [])):
         if text.count(edit['new']) != edit['occurrences']:
