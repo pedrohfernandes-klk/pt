@@ -1,7 +1,8 @@
 /* 02/11/2026: a tipografia acompanha a ampliação da raiz em projeção. */
 /* 01/11/2026: decisões 57/61/76. Só os nove índices que optam pelo Cartaz. */
 body.pt-module-layout main.cz-index{max-width:1200px;padding:24px 16px 64px;font:1rem/1.55 Georgia,serif;color:var(--cz-ink)}
-body.pt-module-layout:has(main.cz-index){background:var(--cz-ground)}
+/* 02/11/2026: o token do tema existe no body; --cz-ground só existe dentro do main. */
+body.pt-module-layout:has(main.cz-index){background:var(--fundo)}
 body.pt-module-layout .cz-index :is(h1,h2,h3,p,li,figure){min-width:0}
 body.pt-module-layout .cz-index header.topo{gap:16px 32px;padding:16px 0 32px}
 body.pt-module-layout .cz-index .marca{font:700 0.8125rem/1.5 Arial,sans-serif;letter-spacing:.08em}
