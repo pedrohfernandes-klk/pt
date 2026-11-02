@@ -52,7 +52,7 @@ VF = {
  'm9-f15': {5: ('O contraste entre a leitura tranquila e as sentenças permite questionar a solenidade da cerimónia.',True),
             12: ('A referência à multidão indica que cada pessoa teve a mesma reação à cerimónia.',False,
                  'Uma referência coletiva não individualiza as reações. Para afirmar o que sente cada pessoa, o texto teria de distinguir alguém dentro do grupo.')},
- 'm9-f16': {5: ('Em «trabalhou durante três anos», uma ação longa é apresentada como um todo concluído.',True),
+ 'm9-f16': {5: ('No exemplo criado «trabalhou durante três anos», uma ação longa é apresentada como um todo concluído.',True),
             12: ('A relação entre ação em curso e interrupção ajuda a explicar o contraste entre a vida individual e a continuidade da obra.',True,
                  'Identificar as formas é só o primeiro passo. A ação em curso interrompida pelo acidente torna percetível a perda de uma vida, enquanto a obra continua.')}
 }
