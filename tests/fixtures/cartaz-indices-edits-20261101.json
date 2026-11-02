@@ -1,10 +1,10 @@
 {
- "base_commit": "203eaf5dfbfb0cf9af921bb3a3691a354954d8cd",
+ "base_commit": "11068f02f4a23e7de4b25edea70aa4cbdaf8031c",
  "_nota": "02/11/2026: índices Cartaz revistos e regenerados sobre as dependências atualizadas; créditos curtos do M3 e M5.",
  "files": {
   "m1/index.html": {
-   "base_sha256_lf": "70d385b53e37bbe947d0fc38455d47ab7bab5298a0d0f4f4d4b2cff615650b61",
-   "after_sha256_lf": "7e8b75d1c1f689559cd48c749222109b36d569e2299a583a2068ec1b94d7b0f5",
+   "base_sha256_lf": "30d8f47dcb0c220cad5f8438a0821bd5b06055aed746b87111d0a0ecf17ff4a2",
+   "after_sha256_lf": "b46a22fd95040531aa3ef7a125551eaf310992f21b101828e3e9b3b101228cce",
    "edits": [
     {
      "location": "Carregamento optativo",
@@ -63,8 +63,8 @@
    ]
   },
   "m2/index.html": {
-   "base_sha256_lf": "398fca35136c3b826e720c365837e6fc926cb398c64c87ecf939990902586ef6",
-   "after_sha256_lf": "813bb8674dad5a299e28f119148cbaf9c6c102c965dacd6ca83654619ba6d5a8",
+   "base_sha256_lf": "e7db2ee8b1b800b614ee1954d008dd5fb087223f54370b219fc7b01d057051fc",
+   "after_sha256_lf": "d4d9841dbfc81e7e7b77e24bfe71d56f13b467bc78aceb4ba93a14634e5d7f86",
    "edits": [
     {
      "location": "Carregamento optativo",
@@ -129,8 +129,8 @@
    ]
   },
   "m3/index.html": {
-   "base_sha256_lf": "75446510be7e968ac38b012cd22aed67a00325cd9f8504131af14490ccff6774",
-   "after_sha256_lf": "a7927d3bab7f33f3b74d97e9c1331772b487fc23425320e052380c07078ecfb0",
+   "base_sha256_lf": "ede7e695cf0d003c17980659275b5a89a535576f4d21328c399d0033b9430839",
+   "after_sha256_lf": "c133d8266a10345ba58a5543d27ee7fd9a051756399e8f076957ccad96c7587e",
    "edits": [
     {
      "location": "Carregamento optativo",
@@ -255,8 +255,8 @@
    ]
   },
   "m5/index.html": {
-   "base_sha256_lf": "a76e6b143af82fd8d2c9109e5ba82d4a814ede111c9d5f113be67c93196d1666",
-   "after_sha256_lf": "351d13d8fd2a4f41f45a015f1afbf1c6d0f63cbc9a53a74bcc901f014ffd82c0",
+   "base_sha256_lf": "09cb3b3df6c3136f0bc15dbd9b1ca9d676c6a5df36c4ce7133cb5e406488105d",
+   "after_sha256_lf": "53068c1737ac0f9ee21d7c944e4136a28d1494a8b11e4c6b07d7b16562d638bb",
    "edits": [
     {
      "location": "Carregamento optativo",
@@ -315,8 +315,8 @@
    ]
   },
   "m6/index.html": {
-   "base_sha256_lf": "92c213acfcd41f8e043833845f118a5de4c72a099c25a45778da5fcd741672ad",
-   "after_sha256_lf": "cf4a420652afdf1f6f176fe78a5f0ba3738c5e2dc298ff105e49cd14bf20d4f4",
+   "base_sha256_lf": "a75d61bdab4b92c16f1e9e0e9dec0c9b0d53f9631b1918f01a63a991d756a7ea",
+   "after_sha256_lf": "910d7491cdafbded51a90358043c6073a616b3b9268988157e6d15a8cc3a773e",
    "edits": [
     {
      "location": "Carregamento optativo",
@@ -441,8 +441,8 @@
    ]
   },
   "m8/index.html": {
-   "base_sha256_lf": "abc68c6fffa7e934f95a870c8f224a0c0e50cfd2d5e0a36bc1790a1ba9692fd0",
-   "after_sha256_lf": "786e699ae488c88d4d43e006023bfd81be052f3648bd2fdddcb7152b47285ab7",
+   "base_sha256_lf": "310d3a8fddd444db7a5823495b5a0f029ea475883dd31fc41e35dd2eb4163b9c",
+   "after_sha256_lf": "ab4eb64458db6834d90780e325278e6db72115dddafa444ed03e195c84b4bd3a",
    "edits": [
     {
      "location": "Carregamento optativo",
@@ -495,8 +495,8 @@
    ]
   },
   "m9/index.html": {
-   "base_sha256_lf": "8c5ff0d5aaffefe6845e649e8ab19e77687cad710658039d6e0757d5dadde2b3",
-   "after_sha256_lf": "1f041fd5b2f2182426efc5463498c58d4b5f40c4b4a7c0a6079cbc1faffdcad3",
+   "base_sha256_lf": "59421d75e64f607911c97253fdd40091b4bda4a0271a0c24abbae211be7c4da4",
+   "after_sha256_lf": "01e741576bb7f140b4b892a503ffa8171adf12fddb234b8b4af4802c1d67133c",
    "edits": [
     {
      "location": "Carregamento optativo",
