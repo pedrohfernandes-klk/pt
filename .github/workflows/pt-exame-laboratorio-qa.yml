@@ -56,5 +56,7 @@ jobs:
           python tests/browser_exame_cache.py
           python tests/browser_exame_alignment.py
           python tests/browser_relogio.py
+          # 01/11/2026: decisão 61; os títulos do exame (entrada, provas e laboratório) ficam na ordem certa a 390 e a 1366 px
+          python tests/browser_exame_hierarquia.py
       - name: Testar as provas em cartões
         run: python tests/browser_provas_cartoes.py
