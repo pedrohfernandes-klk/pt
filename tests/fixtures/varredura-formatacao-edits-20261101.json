@@ -1,6 +1,6 @@
 {
  "base_commit": "fe2d829e53a384c76fd00e77833bd0593d117841",
- "_nota": "01/11/2026: varredura editorial autorizada (títulos, versos, aspas, vocabulário, pontuação e créditos, sem alterar respostas nem progresso). 02/11/2026: refeita em trocas mínimas sobre o main, depois do #144, #145, #148, #150, #154, #161 e #162; as páginas de aquecimento ficam com o gerador.",
+ "_nota": "01/11/2026: varredura editorial autorizada (títulos, versos, aspas, vocabulário, pontuação e créditos, sem alterar respostas nem progresso). 02/11/2026: refeita em trocas mínimas sobre o main, depois do #144, #145, #148, #150, #154, #161 e #162; as páginas de aquecimento ficam com o gerador. Depois do #152: sai a nota da barra dos versos da M2-F12, que já não tem barras.",
  "files": {
   "1/todos/index.html": {
    "base_sha256_lf": "1df692c28f655feeefc929260757bf35972a4ad34d47ec59cf3422e69c7b60ff",
@@ -802,7 +802,7 @@
   },
   "m2/licao-m2-f12/index.html": {
    "base_sha256_lf": "ffe30aa88c3d3af4cf122c8ef5069db4bb86a823190b7b1f137bda2fd4644db5",
-   "after_sha256_lf": "546a38e2c8987ded48cede0af6846dc00b5ddc7f69a3aa85c602137a65d71d11",
+   "after_sha256_lf": "cb08ff0c730fe6cce6d5f35cf5876d237eae764cc5be1cf0050e2aeea9ebc629",
    "edits": [
     {
      "location": "Varredura de formatação, troca mínima 1",
@@ -820,6 +820,12 @@
      "location": "Varredura de formatação, troca mínima 3",
      "old": "tirania / ",
      "new": "tirania<br>",
+     "occurrences": 1
+    },
+    {
+     "location": "Varredura de formatação, troca mínima 4",
+     "old": "</a>. A barra marca mudança de verso. «De solar»",
+     "new": "</a>. «De solar»",
      "occurrences": 1
     }
    ]

@@ -127,6 +127,17 @@ class Varredura(unittest.TestCase):
                 self.assertNotEqual(nxt,-1,(r['id'],seg[:120]))
                 pos=nxt
 
+    # 02/11/2026: uma nota que explica as barras dos versos só fica onde ainda há barras entre versos
+    # (a M2-F12 ficou com a nota depois de perder as barras; visto no sítio público, depois do #152).
+    def test_nota_da_barra_so_onde_ha_barras(self):
+        self.assertNotIn('barra marca mudança de verso', (ROOT/'m2/licao-m2-f12/index.html').read_text('utf-8'))
+        for rel in MANIFEST['files']:
+            if rel.endswith('.html'):
+                s=(ROOT/rel).read_text('utf-8')
+                if 'barra marca mudança de verso' in s:
+                    with self.subTest(file=rel):
+                        self.assertRegex(s,r'class=\\?"verso\\?"[^>]*>(?:(?!</p>).)*? / ')
+
 
 if __name__ == '__main__':
     unittest.main()
