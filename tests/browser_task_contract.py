@@ -48,7 +48,7 @@ def assert_task_route(page, module, units):
     assert page.locator('button[data-desafio]:visible').count() == 0
     assert page.locator('.module-links-support:visible, .extra-cidade:visible, .cz-linha').count() == 0
     # 01/11/2026: exclui o carrossel antigo, conservando a opção explícita pelo Cartaz.
-    assert page.locator('[data-cartaz]:not([data-cartaz="2"])').count() == 0
+    assert page.locator('[data-cartaz]').count() == 1
     assert page.locator('main.cz-index[data-cartaz="2"]').count() == 1
     assert page.locator('.route-teacher-tools').count() == 1
     assert not page.locator('.route-teacher-tools').evaluate('e=>e.open')

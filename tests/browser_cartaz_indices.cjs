@@ -1,8 +1,10 @@
 // 01/11/2026: decisão 83. Estados antigos, continuação, dobras, projeção e impressão.
 const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),http=require('node:http'),cp=require('node:child_process');
 const {chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright');
-const root=path.resolve(__dirname,'..'),BASE='746253a44fa8e8567a4223afe0c60c032aeff220',out=process.env.CARTAZ_INDICES_OUTPUT;
-const before=new Map(Array.from({length:9},(_,i)=>{const f=`m${i+1}/index.html`;return [f,cp.execFileSync('git',['show',BASE+':'+f],{cwd:root})]}));
+const root=path.resolve(__dirname,'..'),out=process.env.CARTAZ_INDICES_OUTPUT;
+// 01/11/2026: o antes desfaz a própria camada, com contagens, mesmo após squash.
+const manifest=JSON.parse(fs.readFileSync(path.join(root,'tests/fixtures/cartaz-indices-edits-20261101.json'),'utf8'));
+const before=new Map(Object.entries(manifest.files).map(([f,rec])=>{let text=fs.readFileSync(path.join(root,f),'utf8').replace(/\r\n/g,'\n');for(const e of [...rec.edits].reverse()){assert.equal(text.split(e.new).length-1,e.occurrences,f+' '+e.location);text=text.split(e.new).join(e.old)}return [f,text]}));
 const config=n=>JSON.parse(fs.readFileSync(path.join(root,`m${n}/index.html`),'utf8').match(/<script type="application\/json" id="cz-index-route">([\s\S]*?)<\/script>/)[1]);
 const server=http.createServer((q,r)=>{let url=new URL(q.url,'http://local'),isBefore=url.pathname.startsWith('/before/'),rel=decodeURIComponent(url.pathname.replace(/^\/(?:before\/)?pt\//,''));if(rel.endsWith('/'))rel+='index.html';let f=path.resolve(root,rel);if(!f.startsWith(root+path.sep)){r.writeHead(403);return r.end()}try{r.setHeader('content-type',({'.html':'text/html; charset=utf-8','.js':'text/javascript','.css':'text/css','.json':'application/json','.jpg':'image/jpeg','.png':'image/png','.webp':'image/webp','.svg':'image/svg+xml'})[path.extname(f)]||'application/octet-stream');r.end(isBefore&&before.has(rel)?before.get(rel):fs.readFileSync(f))}catch{r.writeHead(404);r.end()}});
 function measure(){
@@ -19,7 +21,7 @@ function measure(){
 try{
 for(const n of [1,2,3,4,5,6,7,8,9])for(const width of [320,390,1024,1366])for(const theme of ['light','dark'])for(const mode of ['normal','projection'])for(const state of ['none','half','all']){
  const steps=config(n).flatMap(u=>u.passos),count=state==='all'?steps.length:state==='half'?Math.floor(steps.length/2):0,seed={};
- steps.slice(0,count).forEach((s,i)=>{const value=i%2?{lida:true,fim:true,n:10,i:10}:{lida:true,fim:true,n:10,i:10,t:Date.UTC(2026,10,1,12)};if(s.licao)seed['licao-'+s.licao]=JSON.stringify(value);else for(const id of s.exs||[])seed['epi-pt-'+id]=JSON.stringify(value)});
+ steps.slice(0,count).forEach((s,i)=>{const value=i%2?{lida:true,fim:true,n:10,i:10}:{lida:true,fim:true,n:10,i:10,t:Date.UTC(2026,10,1,12)};if(s.licao)seed['licao-'+s.licao]=JSON.stringify(value);else{const longos=JSON.parse(seed['epi-pt-longos']||'{"feitas":{}}');for(const id of s.exs||[])longos.feitas[id]=Date.UTC(2026,10,1,12);seed['epi-pt-longos']=JSON.stringify(longos)}});
  seed[`percurso-M${n}-antes-unidades`]=JSON.stringify({legado:true,feito:1});
  const pair={n,width,theme,mode,state};
  for(const variant of ['before','after']){
@@ -36,12 +38,15 @@ for(const n of [1,2,3,4,5,6,7,8,9])for(const width of [320,390,1024,1366])for(co
    // 01/11/2026: conserva também o limite UX-06 da primeira ação no telemóvel.
    if(width===320&&mode==='normal'&&state==='none')assert(pair.after.next.y<600,'primeira ação antes de 600 px');
    assert.deepEqual(pair.after.groups,config(n).map(()=>31),'topos de grupo iguais');
-   assert.equal(pair.after.states.filter(s=>s==='A seguir').length,state==='all'?0:1);
-   assert.equal(pair.after.states.filter(s=>s.startsWith('Feita')).length,count);
+   assert.equal(pair.after.states.filter(s=>s==='A seguir').length,mode==='projection'||state==='all'?0:1);
+   assert.equal(pair.after.states.filter(s=>s.startsWith('Feita')).length,mode==='projection'?0:count);
    assert.equal(pair.after.states.filter(s=>s==='por fazer').length,0);
    assert.deepEqual(pair.after.counts,pair.before.counts,'contadores mantidos');assert.equal(pair.after.next.href,pair.before.next.href,'continuação mantida');
+   if(mode==='projection'){assert(await p.locator('.cz-index-status').isHidden());assert(await p.locator('.cz-fold>summary').evaluateAll(es=>es.every(e=>!e.checkVisibility())));assert(await p.locator('.cz-index-fold-state').evaluateAll(es=>es.every(e=>!e.textContent)));}
+   if(mode==='normal'&&count){for(const step of steps.slice(0,count).filter(s=>!s.licao))assert.equal(await p.locator('#'+step.id+' [data-cz-state-text]').textContent(),'Feita 01/11');}
+   if(state==='none')assert(pair.after.next.text.startsWith('Começar:'));else if(state==='half')assert(pair.after.next.text.startsWith('Continuar:'));
    if(mode==='projection')assert.equal(await p.evaluate(()=>document.querySelector('main').getAnimations({subtree:true}).length),0,'projeção parada');
-   if(width<640&&mode==='normal')assert(pair.after.folds.every(f=>f.height===88),'bandas de 88 px');
+   if(width<640&&mode==='normal')assert(pair.after.folds.every(f=>f.height===(width<360?72:88)),'bandas de 72 ou 88 px');
    for(const key of ['small','tiny','contrast'])if(pair.after[key].length)quality.push({n,width,theme,mode,state,key,problems:pair.after[key]});
   }
   await ctx.close();

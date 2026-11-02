@@ -22,7 +22,10 @@ def main():
     for plan in PLANS:
      m=plan['module'];
      if os.environ.get('UX_MODULE') and str(m)!=os.environ['UX_MODULE']:continue
-     ctx,page=new_page(browser,width);errors=[];page.on('pageerror',lambda e:errors.append(str(e)))
+     ctx,page=new_page(browser,width);
+     # 01/11/2026: ação inteira no primeiro ecrã real de 320 × 568.
+     if width==320:page.set_viewport_size({'width':320,'height':568})
+     errors=[];page.on('pageerror',lambda e:errors.append(str(e)))
      def local(route):
       # 01/11/2026: mesmos ficheiros locais sem uma segunda ligação HTTP (Windows).
       from urllib.parse import unquote
@@ -44,6 +47,7 @@ def main():
      assert action.get_attribute('href').endswith('/licao-'+first+'/')
      assert any(label in action.inner_text() for label in (('Começar:','Continuar:') if m in SEM_PASSAPORTE else ('Começar:',)))
      assert action.bounding_box()['y']<600,(m,width,action.bounding_box())
+     if width==320:assert action.bounding_box()['y']+action.bounding_box()['height']<=568,(m,action.bounding_box())
      assert not page.evaluate('document.documentElement.scrollWidth>innerWidth+2')
      # 23/10/2026 (decisão do docente, aulas claras): o M4 é o piloto do percurso como lista simples de aulas, sem passaporte, níveis nem pontos
      assert page.locator('.module-opening figure.doc').count()==1 and page.locator('.module-progress .passaporte').count()==(0 if m in SEM_PASSAPORTE else 1)

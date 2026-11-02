@@ -7,6 +7,15 @@ const quiet=()=>{const main=document.querySelector('main'),bad=[];for(const e of
 (async()=>{await new Promise(r=>server.listen(0,'127.0.0.1',r));const origin='http://127.0.0.1:'+server.address().port,b=await chromium.launch({headless:true,...(process.env.CHROME_PATH?{executablePath:process.env.CHROME_PATH}:{})});let scenarios=0;try{
 async function context(options){const ctx=await b.newContext(options);await ctx.route('**/*',async r=>{const u=new URL(r.request().url());if(u.origin===origin)return r.continue();if(u.hostname==='pedrohfernandes-klk.github.io'&&u.pathname.startsWith('/pt/')){const response=await ctx.request.get(origin+u.pathname+u.search);return r.fulfill({response})}return r.abort()});return ctx}
 for(let n=1;n<=9;n++){
+ // 01/11/2026: a ação inteira cabe no primeiro ecrã pequeno, nos três estados.
+ for(const [width,height] of [[320,568],[360,560],[375,548]])for(const theme of ['light','dark'])for(const progress of ['none','half','all']){
+  const ctx=await context({viewport:{width,height},colorScheme:theme,reducedMotion:'reduce'}),p=await ctx.newPage(),errors=[];p.on('pageerror',e=>errors.push(String(e)));
+  const html=fs.readFileSync(path.join(root,`m${n}/index.html`),'utf8'),steps=JSON.parse(html.match(/<script type="application\/json" id="cz-index-route">([\s\S]*?)<\/script>/)[1]).flatMap(u=>u.passos);
+  await p.addInitScript(({steps,progress})=>{const count=progress==='all'?steps.length:progress==='half'?Math.floor(steps.length/2):0,longos={feitas:{}};for(const s of steps.slice(0,count)){if(s.licao)localStorage.setItem('licao-'+s.licao,JSON.stringify({lida:true,t:Date.UTC(2026,10,1,12)}));else for(const id of s.exs||[])longos.feitas[id]=Date.UTC(2026,10,1,12)}localStorage.setItem('epi-pt-longos',JSON.stringify(longos))},{steps,progress});
+  await p.goto(`${origin}/pt/m${n}/`,{waitUntil:'load'});
+  const box=await p.locator('[data-module-next]').boundingBox();assert(box.y<600);assert(box.y+box.height<=height,`M${n} ${width} ${theme} ${progress}: ${JSON.stringify(box)}`);assert((await p.evaluate(action)).hit,'ação sem sobreposição');assert.equal(await p.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);assert.deepEqual(errors,[]);
+  await ctx.close();scenarios++;
+ }
  for(const width of [390,1366])for(const theme of ['light','dark'])for(const js of [false,true]){
   const ctx=await context({viewport:{width,height:900},colorScheme:theme,reducedMotion:'reduce',javaScriptEnabled:js}),p=await ctx.newPage(),errors=[];p.on('pageerror',e=>errors.push(String(e)));await p.goto(`${origin}/pt/m${n}/`,{waitUntil:'load'});
   assert.deepEqual(await p.evaluate(quiet),{active:0,bad:[]},'movimento reduzido e sem JS');
