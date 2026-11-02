@@ -35,17 +35,13 @@ try:
     assert not page.evaluate('document.documentElement.scrollWidth>innerWidth+3')
     if item['t']=='escolha':
      modal.locator(f'button.op[data-j="{item["c"]}"]').press('Enter')
-    # 01/11/2026: hábito e repetição são relacionados num cartão de completar.
-    elif item['t']=='completar':
-     for i,lac in enumerate(item['lacunas']):
-      modal.locator(f'select[data-k="{i}"]').select_option(str(lac['c']))
     else:
      for i in range(len(item['pares'])):
       modal.locator(f'.pares .esq [data-e="{i}"]').click()
       modal.locator(f'.pares .dir [data-d="{i}"]').click()
     feedback=modal.locator('.casca-folha')
     assert feedback.is_visible()
-    if name=='habit':assert 'não são rótulos sempre incompatíveis' in feedback.inner_text()
+    if name=='habit':assert 'não é necessária uma contagem exata' in feedback.inner_text()
     if name=='aspect':assert 'não diz que a pintora parou' in feedback.inner_text()
     if name=='reference':assert 'informação anterior' in feedback.inner_text()
     assert not page.evaluate('document.documentElement.scrollWidth>innerWidth+3')
@@ -63,7 +59,7 @@ try:
   ctx,page=new_page(browser,1440)
   page.goto(host+'/projetar/?pagina=/pt/m8/licao-m8-f12/',wait_until='networkidle')
   frame=page.frame_locator('#lesson-frame')
-  # 01/11/2026: o contexto preservado precede agora a recuperação das quatro lentes.
+  frame.locator('.casca [data-seguinte]').click()
   page.locator('[data-projection-size="large"]').click()
   assert frame.locator('html').get_attribute('data-projection-size')=='large'
   assert 'Li o conto. Ele surpreendeu-me' in frame.locator('#baralho').inner_text()

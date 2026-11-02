@@ -34,13 +34,12 @@ LINGUA_EDITS=ROOT/'tests/fixtures/lingua-pessoa-m7-edits-20261030.json'
 
 def original_lesson_text(path):
  """Reverse only the explicitly authorized UX strings; retain the frozen LF hash."""
- # 01/11/2026: desfaz primeiro a nova camada autorizada de conteúdos.
  source=(ROOT/path).read_text('utf-8')
  # 31/10/2026: a camada das tarefas precede todas as anteriores.
  # 01/11/2026: camada M8/M9 antes das anteriores.
  # 01/11/2026: desfaz primeiro as duas camadas de lições, conservando os hashes históricos.
  # 01/11/2026: os índices desfazem-se antes dos conteúdos e das lições.
- for manifest_path in (ROOT/'tests/fixtures/cartaz-indices-edits-20261101.json',ROOT/'tests/fixtures/conteudos-lote1-edits-20261101.json',ROOT/'tests/fixtures/licoes-m16-edits-20261101.json',ROOT/'tests/fixtures/licoes-m89-edits-20261101.json',ROOT/'tests/fixtures/tarefas-m89-edits-20261101.json',ROOT/'tests/fixtures/tarefas-m356-edits-20261031.json',LINGUA_EDITS,OPCOES_EDITS,JUSTIFICADO_EDITS,AQUECIMENTOS_EDITS,SALA_EDITS,AUDIT_EDITS_M4_M7,AUDIT_EDITS,REIS_EDITS,TABLE_EDITS,GRAMMAR_EDITS,INSTRUCTION_EDITS):
+ for manifest_path in (ROOT/'tests/fixtures/cartaz-indices-edits-20261101.json',ROOT/'tests/fixtures/licoes-m16-edits-20261101.json',ROOT/'tests/fixtures/licoes-m89-edits-20261101.json',ROOT/'tests/fixtures/tarefas-m89-edits-20261101.json',ROOT/'tests/fixtures/tarefas-m356-edits-20261031.json',LINGUA_EDITS,OPCOES_EDITS,JUSTIFICADO_EDITS,AQUECIMENTOS_EDITS,SALA_EDITS,AUDIT_EDITS_M4_M7,AUDIT_EDITS,REIS_EDITS,TABLE_EDITS,GRAMMAR_EDITS,INSTRUCTION_EDITS):
   manifest=json.loads(manifest_path.read_text('utf-8'))
   for edit in reversed(manifest['files'].get(path,{}).get('edits',[])):
    if source.count(edit['new'])!=edit['occurrences']:

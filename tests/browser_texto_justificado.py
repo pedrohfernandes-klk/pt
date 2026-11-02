@@ -143,17 +143,6 @@ def projecao_ate_explicacao(page):
     raise AssertionError('em projeção, nenhuma explicação apareceu')
 
 
-def verso_m7(page):
-    # 01/11/2026: C02 passou a emparelhar; responde à ação e continua até ao verso, mantendo todas as medições.
-    from browser_m2_complete import respond
-    for _ in range(20):
-        if page.locator('.jogo .ler .v:visible').count():
-            return
-        respond(page)
-        page.wait_for_timeout(350)
-    raise AssertionError('M7-F34: o percurso não chegou ao verso')
-
-
 # (família, página, preparação, seletores de texto corrido justificado, seletores que ficam à esquerda)
 CASOS = [
     # 01/11/2026: cobre os pesos e a prosa nova sem retirar os casos anteriores.
@@ -163,7 +152,7 @@ CASOS = [
      ['p.avaliacao-tarefas'], []),
     ('lições em cartões: leitura e verso', 'm7/licao-m7-f34/', lambda p: None,
      ['.jogo .ler p.abre'], ['.casca-topo .c-marca']),
-    ('lições em cartões: verso', 'm7/licao-m7-f34/', verso_m7,
+    ('lições em cartões: verso', 'm7/licao-m7-f34/', lambda p: ate(p, '.jogo .ler .v'),
      [], ['.jogo .ler .v', '.jogo .ler .v .ln']),
     ('lições em cartões: texto da obra', 'm4/licao-m4-f07/', lambda p: ate(p, '.jogo .ler p.pr'),
      ['.jogo .ler p.pr'], []),

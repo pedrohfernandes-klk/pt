@@ -18,9 +18,12 @@ class IndicesCartaz(unittest.TestCase):
     self.assertEqual(re.findall(r'localStorage\.[\s\S]{0,150}',before),re.findall(r'localStorage\.[\s\S]{0,150}',after))
     self.assertEqual(re.findall(r'<img\b[^>]*>',before),re.findall(r'<img\b[^>]*>',after))
  def test_m4_conserva_as_tres_provas_do_149(self):
-  p='m4/index.html';after=(ROOT/p).read_text('utf8');before=undo_cartaz_indices(p,after)
+  # 01/11/2026: o #149 guarda agora as provas na lista pendente, sem camada aplicada.
+  from test_pendentes_camada_149_20261101 import PENDENTES_CAMADA_149_20261101
   proofs=lambda s:re.findall(r'<p class="prova-esperada">(.*?)</p>',s)
-  self.assertEqual(proofs(before),proofs(after));self.assertEqual(len(proofs(after)),3)
+  expected=[proofs(e['novo'])[0] for e in PENDENTES_CAMADA_149_20261101 if e['local'].startswith('M4 unidade')]
+  self.assertEqual(proofs((ROOT/'m4/index.html').read_text('utf8')),expected)
+  self.assertEqual(len(expected),3)
  def test_uma_prova_e_uma_dobra_aberta_por_unidade(self):
   for n in range(1,10):
    s=(ROOT/f'm{n}/index.html').read_text('utf8');units=json.JSONDecoder().raw_decode(s.split('var U=',1)[1])[0]

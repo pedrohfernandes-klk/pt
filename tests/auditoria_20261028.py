@@ -223,7 +223,6 @@ _LICOES_M16_FILES = json.loads((ROOT / 'tests/fixtures/licoes-m16-edits-20261101
 def undo_licoes_m16(path, text):
     # 01/11/2026: integrar o lote de conteúdos acima dos pedidos de lições.
     text = undo_cartaz_indices(path, text)
-    text = undo_conteudos(path, text)
     relative = _relative(path)
     for edit in reversed(_LICOES_M16_FILES.get(relative, {}).get('edits', [])):
         if text.count(edit['new']) != edit['occurrences']:
@@ -249,19 +248,6 @@ def undo_tarefas_m89(path, text):
     for edit in reversed(_TAREFAS_M89_FILES.get(relative, {}).get('edits', [])):
         if text.count(edit['new']) != edit['occurrences']:
             raise AssertionError(f"Troca de 01/11 não confere: {relative}: {edit['location']}")
-        text = text.replace(edit['new'], edit['old'])
-    return text
-
-
-# 01/11/2026: primeiro lote de conteúdos; desfazer antes de todas as camadas anteriores.
-_CONTEUDOS_FILES = json.loads((ROOT / 'tests/fixtures/conteudos-lote1-edits-20261101.json').read_text('utf-8'))['files']
-
-
-def undo_conteudos(path, text):
-    relative = _relative(path)
-    for edit in reversed(_CONTEUDOS_FILES.get(relative, {}).get('edits', [])):
-        if text.count(edit['new']) != edit['occurrences']:
-            raise AssertionError(f"Troca de conteúdos de 01/11 não confere: {relative}: {edit['location']}")
         text = text.replace(edit['new'], edit['old'])
     return text
 
