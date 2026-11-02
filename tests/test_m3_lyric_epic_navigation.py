@@ -7,7 +7,8 @@ ROOT = Path(__file__).resolve().parents[1]
 class M3LyricEpicNavigation(unittest.TestCase):
     def test_lyric_lesson_points_to_epic_introduction(self):
         source = (ROOT / "m3/licao-m3-f09/index.html").read_text(encoding="utf-8")
-        self.assertIn('seguinte:"https://pedrohfernandes-klk.github.io/pt/m3/licao-m3-f18/"', source)
+        # 31/10/2026: a unidade fecha após o exercício longo e a aula de tarefa.
+        self.assertIn('seguinte:"https://pedrohfernandes-klk.github.io/pt/m3/m3-soneto-raciocinio/"', source)
         self.assertNotIn('seguinte:"https://pedrohfernandes-klk.github.io/pt/m3/licao-m3-f13/"', source)
 
     def test_epic_introduction_exists_and_leads_to_next_lesson(self):

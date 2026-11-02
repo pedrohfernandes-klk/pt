@@ -1,0 +1,117 @@
+{
+ "slug": "m6-u1",
+ "titulo": "Um ideal que não se alcança",
+ "unidade": 1,
+ "aquecer": {
+  "cartoes": "aquecimento/",
+  "minutos": 10,
+  "texto": "No início da aula de tarefa: 10 minutos de cartões com consulta, 5 minutos para o docente apresentar o enunciado, 60 minutos de produção e 15 minutos de revisão e entrega. Total: 90 minutos. O relógio de produção começa depois da apresentação.",
+  "ligacao": "Abrir o aquecimento em cartões",
+  "ligacao_enunciado": "Aquecer"
+ },
+ "lead": "À mão, 200 a 240 palavras: cerca de 110 no núcleo e 90 a 130 no tema. Com consulta.",
+ "nucleo": [
+  "«Ideal» e «A um poeta», de Antero: a quem fala a voz e o que é o sonho? Cita um verso dos tercetos de cada. Indica uma semelhança e explica o que muda: para que serve o sonho em cada um?",
+  "Em «Ave-Marias»: «Singram soberbas naus que eu não verei jámais!» Divide o verso em orações e classifica-as. Justifica com o papel de «que» na sua oração. Explica o que essa oração acrescenta ao verso."
+ ],
+ "temas": [
+  {
+   "letra": "A",
+   "nome": "Um ideal de hoje",
+   "texto": "Reescreve «O Palacio da Ventura» em prosa, como texto de hoje: ideal e lugar concretos; a procura, a chegada, a porta aberta; uma última frase que vira o que prometia. Usa uma anáfora ou uma antítese tua; não copies versos. Cita e explica o verso de Antero que imitaste. Indica uma diferença entre o teu ideal e o do cavaleiro."
+  },
+  {
+   "letra": "B",
+   "nome": "O soneto num minuto",
+   "texto": "O canal da escola pede um vídeo de um minuto com «O Palacio da Ventura». Descreve três planos, com o verso exato de cada. Diz se o último ilustra, contraria ou acrescenta algo ao verso, e porquê. Justifica uma escolha com dois factos do dossiê. Indica o que o vídeo não pode dar como facto."
+  }
+ ],
+ "apoios": [
+  {
+   "href": "../../m6/licao-m6-f02/",
+   "texto": "Da procura ao descanso (F02): relê «A: “Ideal”» e «O texto, 2 de 4» (o soneto inteiro) e o cartão «Para entender» (apóstrofe, metáfora, comparação, anáfora)."
+  },
+  {
+   "href": "../../m6/licao-m6-f13/",
+   "texto": "O sonho pode pedir ação? (F13): relê «Quem é chamado?», «A mudança de tom» e «Uma espada feita de sonho»."
+  },
+  {
+   "href": "../../m6/licao-m6-f06/",
+   "texto": "«Ave-Marias» (F06): relê «O texto, 2 de 4» (a estrofe do verso) e «Para entender» (transfiguração do real, imaginário épico)."
+  },
+  {
+   "href": "../../m6/licao-m6-f04/",
+   "texto": "Como se ligam as orações (F04): relê «O essencial», «Para entender» (três relações a observar) e a «Árvore da frase»."
+  },
+  {
+   "href": "../../m6/licao-m6-f01/",
+   "texto": "O cavaleiro que encontra o nada (F01): para os temas, relê «O texto, 1 de 2», «O texto, 2 de 2» e «Para entender» (forma e mudança de sentido)."
+  },
+  {
+   "href": "../../m6/licao-m6-f11/",
+   "texto": "Quem conta a vida de um poeta (F11): para o tema B, relê «Em paralelo» (o que se sabe e o que se conta)."
+  }
+ ],
+ "dossie_titulo": "Dossiê do tema B",
+ "dossie": [
+  {
+   "facto": "Antero de Quental nasce em Ponta Delgada, em 1842, e morre em 1891; fica como uma das figuras da Geração de 70.",
+   "href": "../../m6/licao-m6-f01/",
+   "fonte": "Lição «O cavaleiro que encontra o nada», «Linha de vida»"
+  },
+  {
+   "facto": "Em 1886 saem <i>Os Sonetos Completos</i>, com «O Palacio da Ventura»: poesia que pensa o sentido da vida, o Ideal, a dor, a morte.",
+   "href": "../../m6/licao-m6-f01/",
+   "fonte": "Lição «O cavaleiro que encontra o nada», «Linha de vida»"
+  },
+  {
+   "facto": "A lição lê o soneto na grafia da edição de 1886 e corrige o verso 6: «rota», onde o <i>e-book</i> lê «roda».",
+   "href": "../../m6/licao-m6-f01/",
+   "fonte": "Lição «O cavaleiro que encontra o nada», «O texto, 2 de 2»"
+  },
+  {
+   "facto": "Uma fotografia de Antero, de cerca de 1887, foi publicada em <i>In Memoriam</i> (1896) e está em domínio público.",
+   "href": "../../m6/licao-m6-f01/",
+   "fonte": "Lição «O cavaleiro que encontra o nada», «Abre»"
+  },
+  {
+   "facto": "Columbano Bordalo Pinheiro pintou Antero a óleo em 1889; o retrato, no Museu Nacional de Arte Contemporânea, está em domínio público.",
+   "href": "../../m6/licao-m6-f02/",
+   "fonte": "Lição «Da procura ao descanso», «Abre»"
+  },
+  {
+   "facto": "Em 2023/24, estudantes de Ciências da Comunicação do IADE fizeram um vídeo de «Na mão de Deus» com imagens.",
+   "href": "../../m6/licao-m6-f02/",
+   "fonte": "Lição «Da procura ao descanso», «O texto, 3 de 4»"
+  }
+ ],
+ "opcional": {
+  "pergunta": "Num soneto, que verso é a chave de ouro?",
+  "opcoes": [
+   {
+    "certa": false,
+    "letra": "A",
+    "texto": "O primeiro, que anuncia o tema do soneto.",
+    "resposta": "O primeiro verso abre o soneto; a chave de ouro está no fim, onde o sentido vira."
+   },
+   {
+    "certa": true,
+    "letra": "B",
+    "texto": "O último, que fecha e vira o sentido.",
+    "resposta": "O último verso fecha o soneto e muda o sentido do que vinha antes. Num texto em prosa, a última frase pode fazer o mesmo."
+   },
+   {
+    "certa": false,
+    "letra": "C",
+    "texto": "O que se repete no fim de cada estrofe.",
+    "resposta": "Um verso que volta no fim de cada estrofe é um refrão, como nas cantigas; o soneto fecha num só verso."
+   }
+  ]
+ },
+ "criterios": [
+  "Núcleo: voz e sonho de cada soneto, com verso; semelhança e mudança; orações e papel de «que».",
+  "A: ideal e lugar, viagem, frase final, figura, diferença, verso imitado e explicado. B: planos com verso, último plano, dois factos, limite do vídeo.",
+  "200 a 240 palavras, respostas ligadas, escrita revista."
+ ],
+ "fecho": "Fecha com duas linhas, fora da contagem: o que passaste a procurar quando um poema fala de um sonho? Aponta o verso que te ajudou."
+}
