@@ -135,4 +135,14 @@ A tabela de pontuação permanece em [conteudos-lote2-travessoes-20261102.md](co
 
 Na base anterior à integração do #152/#163, 17 de 17 camadas conferiram. A bateria de 433 testes encontrou uma subida na contagem de opções certas mais longas do M3; a redação foi corrigida e os cinco testes específicos de opções passaram depois. Os sete testes do #149, incluindo os materiais regenerados, passaram. A bateria de navegador está em curso. Estes resultados não constituem aprovação da cabeça final nem autorização de publicação.
 
-O main d1f343535901b0bb0045032196f3f09c398a8c4e foi integrado por merge. A varredura conserva as 648 trocas, sem alterações; a nossa camada fica por cima e as 18 camadas conferem. O único contexto reconciliado é o título do 3.º ano, conservando a vírgula aprovada. A bateria completa está a ser repetida. Não se acrescentam ao âmbito os 109 pontos adiados da varredura.
+O main d1f343535901b0bb0045032196f3f09c398a8c4e foi integrado por merge. A varredura conserva as 648 trocas, sem alterações; a nossa camada fica por cima e as 18 camadas conferem. O único contexto reconciliado é o título do 3.º ano, conservando a vírgula aprovada. Na repetição sobre esta base, os 449 testes unitários passaram e as 18 camadas conferiram. As verificações de navegador continuam em curso. Não se acrescentam ao âmbito os 109 pontos adiados da varredura.
+
+## Coordenação: visor reutilizável
+
+Implementação inicial no commit `18343ca6d73466db2d80654c7eeff4569156fadb`, integrada no merge `2053ecca65c12eb653e4bcc6d1c4671fbafc4e0e`. Ainda local e em validação, sem cabeça remota aprovada.
+
+Ficheiros: `assets/ampliar-documentos.js`, `assets/ampliar-documentos.css`; integração em `scripts/gerar_licoes_20261101.py`, seleção do original em `scripts/imagens_licoes_20261101.py`; contrato verificado por `tests/browser_documentos_lote2.py`.
+
+Interface pública: `window.EPIAmpliar.abre(img, legenda, elementoDeAbertura)`, `fecha()` e `rotulo(img, legenda)`. A imagem usa `data-original`, depois `currentSrc` e `src`. A abertura mostra a imagem inteira; os controlos ampliam e reduzem de 100 % a 400 %, em passos de 50 %, e repõem a imagem inteira. As teclas + e - fazem o mesmo. A área ampliada permite percorrer a imagem. Escape fecha; Tab e Shift+Tab ficam no diálogo; o fundo fica inerte e o foco regressa ao elemento que abriu o leitor. Uma ligação `.documento > a` conserva o destino sem JavaScript. O leitor não grava progresso.
+
+Reutilização possível no Lente #84, após validação da integração local e teste dos seletores desse sítio. Não se criou cópia no Lente nem se alteraram os caminhos reservados ao GPT3. O contrato existente `EPIAmpliar` exige atenção: esta implementação não substitui automaticamente outra já carregada. A equipa que a integrar deve escolher uma única implementação e conferir abertura, foco, teclado, legenda e original em cada família de páginas.
