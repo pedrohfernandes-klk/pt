@@ -42,6 +42,8 @@ class NewLessons(unittest.TestCase):
         guide = (ROOT / 'docs/pedagogia/guia-docente-licoes-20261101.md').read_text('utf-8')
         self.assertIn('a Mãe desvaloriza-o ao sugerir uma brincadeira', guide)
         self.assertNotIn('a Mãe desvaloriza-o ao sugerir uma brincadeira', visible)
+        # 02/11/2026: achado 16 da confirmação do #150. A página da lição não liga para as notas, que têm o enquadramento.
+        self.assertNotIn('../painel-m2-f16/', (ROOT / 'm2/licao-m2-f16/index.html').read_text('utf-8'))
 
     # 01/11/2026: as 16 lições têm notas geradas e todas as perguntas sincronizadas.
     def test_teacher_notes_generated_and_linked(self):
@@ -55,7 +57,9 @@ class NewLessons(unittest.TestCase):
                     from html import escape
                     self.assertIn(escape(card['p']),text)
             page=ROOT/item['id'].split('-')[0]/('licao-'+item['id'])/'index.html'
-            self.assertIn('../painel-'+item['id']+'/',page.read_text('utf-8'))
+            # 02/11/2026: achado 16 da confirmação do #150. As notas têm retornos e o enquadramento da M2-F16; não se
+            # ligam do menu do aluno (como nas M6-F12 e M6-F13). Fica mais exigente: a ligação passa a ser proibida.
+            self.assertNotIn('../painel-'+item['id']+'/', page.read_text('utf-8'))
 
     def test_fourteen_activities_five_nonwriting_types_and_feedback(self):
         for item in LESSONS:
