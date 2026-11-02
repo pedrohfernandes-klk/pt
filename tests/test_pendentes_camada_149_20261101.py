@@ -215,22 +215,22 @@ PENDENTES_CAMADA_149_20261101 = [{'ficheiro': 'm1/licao-m1-f20/index.html',
   'ocorrencias': 1,
   'achado': '01/11/2026: para depois do #144 e do #145; revisão curta do #149'},
  {'ficheiro': 'm8/licao-m8-f12/index.html',
-  'local': 'M8-F12 C09',
-  'antigo': '{"t":"escolha","p":"Que leitura se destaca em «Todas as manhãs, relia a carta»?","p2":"Que valor é destacado por «todas as '
-            'manhãs» nesta frase?","o":["iterativo","perfetivo","habitual","genérico"],"c":2,"f":"**Habitual**: «todas as manhãs» '
-            'apresenta a releitura como um costume. Um hábito também envolve repetição. Em «Naquela revisão, releu a carta várias vezes», '
-            'destaca-se a repetição num episódio; não é necessária uma contagem exata.","g":"fim","fe":["Há repetição, mas «todas as '
-            'manhãs» apresenta-a como costume, não como um episódio delimitado.","«Relia», no imperfeito, não apresenta uma releitura '
-            'concluída; e «todas as manhãs» marca regularidade.",null,"O genérico fala de uma classe em geral («Os contos são narrativas '
-            'breves»); aqui é o costume de alguém."]}',
-  'novo': '{"t":"escolha","p":"Exemplo criado: Todas as manhãs, relia a carta. Que valor aspetual destaca a expressão '
-          'inicial?","g":"fim","o":["habitual","perfetivo","genérico"],"c":0,"f":"Habitual: «todas as manhãs» apresenta a releitura como '
-          'um costume. Um hábito também envolve repetição: habitual e iterativo não são rótulos sempre '
-          'incompatíveis.","fe":[null,"Confundes a regularidade de alguém com a conclusão de um ato. Relê «todas as manhãs» e «relia»: que '
-          'costume apresentam?","Confundes um costume de alguém com uma verdade geral. Relê «todas as manhãs» e «relia»: a frase descreve '
-          'uma situação particular."]}',
-  'ocorrencias': 1,
-  'achado': '01/11/2026: para depois do #144 e do #145; revisão curta do #149'},
+ 'local': 'M8-F12 C09',
+ 'antigo': '{"t":"escolha","p":"Que leitura se destaca em «Todas as manhãs, relia a carta»?","p2":"Que valor é destacado por «todas as '
+           'manhãs» nesta frase?","o":["iterativo","perfetivo","habitual","genérico"],"c":2,"f":"**Habitual**: «todas as manhãs» apresenta '
+           'a releitura como um costume. Um hábito também envolve repetição. Em «Naquela revisão, releu a carta várias vezes», destaca-se '
+           'a repetição num episódio; não é necessária uma contagem exata.","g":"fim","fe":["Há repetição, mas «todas as manhãs» '
+           'apresenta-a como costume, não como um episódio delimitado.","«Relia», no imperfeito, não apresenta uma releitura concluída; e '
+           '«todas as manhãs» marca regularidade.",null,"O genérico fala de uma classe em geral («Os contos são narrativas breves»); aqui '
+           'é o costume de alguém."]}',
+ 'novo': '{"t":"escolha","p":"Exemplo criado: Todas as manhãs, relia a carta. Que valor aspetual destaca a expressão '
+         'inicial?","g":"fim","o":["habitual","perfetivo","genérico"],"c":0,"f":"**Habitual**: «todas as manhãs» apresenta a releitura '
+         'como um costume. Um hábito também envolve repetição: habitual e iterativo não são rótulos sempre '
+         'incompatíveis.","fe":[null,"Confundes a regularidade de alguém com a conclusão de um ato. Relê «todas as manhãs» e «relia»: que '
+         'costume apresentam?","Confundes um costume de alguém com uma verdade geral. Relê «todas as manhãs» e «relia»: a frase descreve '
+         'uma situação particular."]}',
+ 'ocorrencias': 1,
+ 'achado': '01/11/2026: para depois do #144 e do #145; revisão curta do #149'},
  {'ficheiro': 'm8/licao-m8-f12/index.html',
   'local': 'M8-F12 C17',
   'antigo': '{"t":"vf","p":"A revisão do módulo vem antes da prova de recuperação e das tarefas.","p2":"Esta lição de revisão antecede a '
@@ -642,11 +642,11 @@ PENDENTES_CAMADA_149_20261101 = [{'ficheiro': 'm1/licao-m1-f20/index.html',
   'novo': 'A pergunta sobre a atenção dos peixes e «Agora, em papel»:',
   'ocorrencias': 1},
  {'ficheiro': 'm4/aulas/aula-01/index.html',
-  'local': 'M4 guião: turma no cartão 11',
-  'antigo': 'Escrever sozinho, sem telemóvel.',
-  'novo': 'Responder no telemóvel à pergunta sobre a atenção dos peixes e só então mostrar a resposta (tecla R). Depois, escrever sozinho, '
-          'sem telemóvel.',
-  'ocorrencias': 1},
+ 'local': 'M4 guião: turma no cartão 11',
+ 'antigo': 'Escrever sozinho, sem telemóvel.',
+ 'novo': 'Responder no telemóvel à pergunta sobre a atenção dos peixes; só então se carrega em «Mostrar resposta» (tecla R). Depois, '
+         'escrever sozinho, sem telemóvel.',
+ 'ocorrencias': 1},
  {'ficheiro': 'm4/painel-m4-f01/index.html',
   'local': 'M4-F01 painel: CARTOES',
   'antigo': '[{"k":2,"t":"escolha","p":"Porque não escolhe António nenhuma destas saídas?"},{"k":4,"t":"escolha","p":"Caso imaginário: a '
@@ -828,43 +828,42 @@ PENDENTES_CAMADA_149_20261101 = [{'ficheiro': 'm1/licao-m1-f20/index.html',
   'ocorrencias': 1,
   'achado': '01/11/2026: manter o seletor do painel coerente com CARTOES'},
  {'ficheiro': 'm7/painel-m7-f34/index.html',
-  'local': 'M7-F34 painel: seletor',
-  'antigo': '<select data-r-k><option value="3">Põe os versos da primeira estrofe do poema I pela ordem do poema.</option><option '
-            'value="4">Toca na palavra que nomeia o lugar que o poeta vê e na que nomeia o lu</option><option value="5">Liga cada verso ao '
-            'plano em que está.</option><option value="7">«Liberto em duplo»: como se sente o poeta, e em que se torna o '
-            'cais?</option><option value="8">No cinema, a «dupla exposição» mostra duas imagens no mesmo sítio, uma</option><option '
-            'value="9">Em «Com uma horizontalidade vertical», o poeta engana-se nas palavras.</option><option value="11">Que palavra do '
-            'poema I quer dizer «fila, fileira»?</option><option value="13">No poema II, a vela de dentro diz-se com uma coisa de fora. '
-            'Completa.</option><option value="14">Liga cada pedaço do poema II ao lugar de onde vem.</option><option value="15">Em «as '
-            'vidraças da igreja vistas de fora são o som da chuva ouvido por</option><option value="16">Toca na forma do verbo «ver» e na '
-            'forma do verbo «ouvir».</option><option value="18">«A missa é um automóvel que passa»: que dois planos se cruzam neste '
-            've</option><option value="19">Ordena o final do poema II, do vento à chuva que cessa.</option><option value="21">Liga cada '
-            'coisa ao plano onde nasce.</option><option value="23">«Chuva Oblíqua» foi publicada no segundo número da revista '
-            '<i>Orpheu</i>, e</option><option value="24">«Poemas interseccionistas» são poemas em que duas realidades se '
-            'cruzam</option><option value="25">O percurso de «Chuva Oblíqua», I e II, pela ordem do texto:</option><option value="26">Põe '
-            'por ordem o verso em que os navios atravessam as árvores.</option><option value="28">Na parte VI ouvida no vídeo, que dois '
-            'planos se cruzam?</option><option value="29">«Todo o teatro é o meu quintal»: qual é a interpretação mais bem '
-            'apoia</option><option value="30">Compara I e VI: «os navios […] são estas árvores» e «Todo o teatro é o</option></select>',
-  'novo': '<select data-r-k><option value="3">Põe os versos da primeira estrofe do poema I pela ordem do poema.</option><option '
-          'value="4">Toca na palavra que nomeia o lugar que o poeta vê e na que nomeia o lugar que ele sonha.</option><option '
-          'value="5">Liga cada verso ao plano em que está.</option><option value="7">«Liberto em duplo»: como se sente o poeta, e em que '
-          'se torna o cais?</option><option value="8">No verso «os navios passam por dentro dos troncos das árvores», que leitura '
-          'justifica a aproximação à dupla exposição?</option><option value="9">Em «Com uma horizontalidade vertical», o poeta engana-se '
-          'nas palavras.</option><option value="11">Que palavra do poema I quer dizer «fila, fileira»?</option><option value="13">No poema '
-          'II, a vela de dentro diz-se com uma coisa de fora. Completa.</option><option value="14">Liga cada pedaço do poema II ao lugar '
-          'de onde vem.</option><option value="15">Em «as vidraças da igreja vistas de fora são o som da chuva ouvido por dentro», o que '
-          'separa e junta o dentro e o fora da igreja?</option><option value="16">Toca na forma do verbo «ver» e na forma do verbo '
-          '«ouvir».</option><option value="18">«A missa é um automóvel que passa»: que dois planos se cruzam neste verso?</option><option '
-          'value="19">Ordena o final do poema II, do vento à chuva que cessa.</option><option value="21">Liga cada coisa ao plano onde '
-          'nasce.</option><option value="23">«Chuva Oblíqua» foi publicada no segundo número da revista _Orpheu_, em 1915.</option><option '
-          'value="24">«Poemas interseccionistas» são poemas em que duas realidades se cruzam no mesmo verso.</option><option value="25">O '
-          'percurso de «Chuva Oblíqua», I e II, pela ordem do texto:</option><option value="26">Põe por ordem o verso em que os navios '
-          'atravessam as árvores.</option><option value="28">Na parte VI ouvida no vídeo, que dois planos se cruzam?</option><option '
-          'value="29">«Todo o teatro é o meu quintal»: qual é a interpretação mais bem apoiada pelo verso?</option><option '
-          'value="30">Compara I e VI: «os navios […] são estas árvores» e «Todo o teatro é o meu quintal». O que aproxima estes '
-          'versos?</option></select>',
-  'ocorrencias': 1,
-  'achado': '01/11/2026: manter o seletor do painel coerente com CARTOES'},
+ 'local': 'M7-F34 painel: seletor',
+ 'antigo': '<select data-r-k><option value="3">Põe os versos da primeira estrofe do poema I pela ordem do poema.</option><option '
+           'value="4">Toca na palavra que nomeia o lugar que o poeta vê e na que nomeia o lu</option><option value="5">Liga cada verso ao '
+           'plano em que está.</option><option value="7">«Liberto em duplo»: como se sente o poeta, e em que se torna o '
+           'cais?</option><option value="8">No cinema, a «dupla exposição» mostra duas imagens no mesmo sítio, uma</option><option '
+           'value="9">Em «Com uma horizontalidade vertical», o poeta engana-se nas palavras.</option><option value="11">Que palavra do '
+           'poema I quer dizer «fila, fileira»?</option><option value="13">No poema II, a vela de dentro diz-se com uma coisa de fora. '
+           'Completa.</option><option value="14">Liga cada pedaço do poema II ao lugar de onde vem.</option><option value="15">Em «as '
+           'vidraças da igreja vistas de fora são o som da chuva ouvido por</option><option value="16">Toca na forma do verbo «ver» e na '
+           'forma do verbo «ouvir».</option><option value="18">«A missa é um automóvel que passa»: que dois planos se cruzam neste '
+           've</option><option value="19">Ordena o final do poema II, do vento à chuva que cessa.</option><option value="21">Liga cada '
+           'coisa ao plano onde nasce.</option><option value="23">«Chuva Oblíqua» foi publicada no segundo número da revista '
+           '<i>Orpheu</i>, e</option><option value="24">«Poemas interseccionistas» são poemas em que duas realidades se '
+           'cruzam</option><option value="25">O percurso de «Chuva Oblíqua», I e II, pela ordem do texto:</option><option value="26">Põe '
+           'por ordem o verso em que os navios atravessam as árvores.</option><option value="28">Na parte VI ouvida no vídeo, que dois '
+           'planos se cruzam?</option><option value="29">«Todo o teatro é o meu quintal»: qual é a interpretação mais bem '
+           'apoia</option><option value="30">Compara I e VI: «os navios […] são estas árvores» e «Todo o teatro é o</option></select>',
+ 'novo': '<select data-r-k><option value="3">Põe os versos da primeira estrofe do poema I pela ordem do poema.</option><option '
+         'value="4">Toca na palavra que nomeia o lugar que o poeta vê e na que nomeia o lu</option><option value="5">Liga cada verso ao '
+         'plano em que está.</option><option value="7">«Liberto em duplo»: como se sente o poeta, e em que se torna o '
+         'cais?</option><option value="8">No verso «os navios passam por dentro dos troncos das árvores», que leitura justifica a '
+         'aproximação à dupla exposição?</option><option value="9">Em «Com uma horizontalidade vertical», o poeta engana-se nas '
+         'palavras.</option><option value="11">Que palavra do poema I quer dizer «fila, fileira»?</option><option value="13">No poema II, '
+         'a vela de dentro diz-se com uma coisa de fora. Completa.</option><option value="14">Liga cada pedaço do poema II ao lugar de '
+         'onde vem.</option><option value="15">Em «as vidraças da igreja vistas de fora são o som da chuva ouvido por</option><option '
+         'value="16">Toca na forma do verbo «ver» e na forma do verbo «ouvir».</option><option value="18">«A missa é um automóvel que '
+         'passa»: que dois planos se cruzam neste ve</option><option value="19">Ordena o final do poema II, do vento à chuva que '
+         'cessa.</option><option value="21">Liga cada coisa ao plano onde nasce.</option><option value="23">«Chuva Oblíqua» foi publicada '
+         'no segundo número da revista <i>Orpheu</i>, e</option><option value="24">«Poemas interseccionistas» são poemas em que duas '
+         'realidades se cruzam</option><option value="25">O percurso de «Chuva Oblíqua», I e II, pela ordem do texto:</option><option '
+         'value="26">Põe por ordem o verso em que os navios atravessam as árvores.</option><option value="28">Na parte VI ouvida no vídeo, '
+         'que dois planos se cruzam?</option><option value="29">«Todo o teatro é o meu quintal»: qual é a interpretação mais bem '
+         'apoia</option><option value="30">Compara I e VI: «os navios […] são estas árvores» e «Todo o teatro é o meu quintal». O que '
+         'aproxima estes versos?</option></select>',
+ 'ocorrencias': 1,
+ 'achado': '01/11/2026: manter o seletor do painel coerente com CARTOES'},
  {'ficheiro': 'm8/painel-m8-f12/index.html',
   'local': 'M8-F12 painel: seletor',
   'antigo': '<select data-r-k><option value="3">Liga cada traço ao género a que pertence.</option><option value="4">O que perguntam as '
@@ -898,15 +897,368 @@ PENDENTES_CAMADA_149_20261101 = [{'ficheiro': 'm1/licao-m1-f20/index.html',
           'value="19">Como tornas claro que foi a editora a levar o manuscrito?</option><option value="20">Põe por ordem a pergunta da '
           'lente do contemporâneo.</option></select>',
   'ocorrencias': 1,
-  'achado': '01/11/2026: manter o seletor do painel coerente com CARTOES'}]
+  'achado': '01/11/2026: manter o seletor do painel coerente com CARTOES'},
+ # 02/11/2026: o relâmpago projeta as opções e a correção do cartão novo.
+ {'ficheiro': 'm4/painel-m4-f01/index.html',
+ 'local': 'M4-F01 painel: MATERIAL',
+ 'antigo': '{"2":{"f":"As perguntas seguidas são retóricas: não esperam resposta, levam quem ouve a pesar cada saída. Retirar-se, calar-se '
+           'ou dissimular «ensinaria porventura a prudência, ou a covardia humana». Mas o zelo de António «não se rendeu a semelhantes '
+           'partidos».","cita":"Que faria logo? Retirar-se-ia? Calar-se-ia? Dissimularia? Daria tempo ao tempo?","o":["Os hereges eram '
+           'poucos e valia a pena esperar","Seriam prudência ou covardia, e o zelo não se rende","Para Vieira, a prudência é sempre um '
+           'defeito","Já se tinha calado antes, sem resultado"]},"4":{"f":"António «mudou somente o púlpito e o auditório, mas não '
+           'desistiu da doutrina»: a mensagem fica, muda quem a ouve. Levar a mesma queixa a outro auditório é fazer o '
+           'mesmo.","cita":"Mudou somente o púlpito e o auditório, mas não desistiu da doutrina.","o":["Calar-se até ao fim do ano, para '
+           'evitar problemas","Trocar a queixa por outra, mais fácil de aceitar","Levar a mesma queixa à assembleia da escola","Fingir que '
+           'concorda e esperar por melhor altura"]},"7":{"f":"O sermão «todo é alegórico»: o voador é peixe no que se diz e homem no que '
+           'se quer dizer. Um peixe com asas quer ser ave: vale por quem, em São Luís, quer ser mais do que é. Cromolitografia: Allen & '
+           'Ginter, _Peixe-voador_ (série _Fish from American Waters_), 1889, The Met. Domínio público.","ver":"<img '
+           'src=\\"../../img/fontes/peixe-voador-1889.jpg\\" alt=\\"Gravura a cores de um peixe-voador sobre o mar, de barbatanas abertas '
+           'como asas; em baixo, aves numa rocha.\\" loading=\\"lazy\\">","o":["Quem defende os indígenas, como Vieira","Quem quer ser '
+           'mais do que é","Quem foge de quem o quer apanhar","Nenhum: é só um peixe do mar do Maranhão"]},"9":{"f":"Os homens de Arimino '
+           'e os colonos de São Luís têm o mesmo papel: não querem ouvir. Os peixes são o auditório novo dos dois pregadores. E a defesa '
+           'dos indígenas é, em São Luís, a doutrina que não muda.","esq":["Os homens de Arimino","A defesa dos indígenas","Os peixes, de '
+           'cabeça fora de água","Os colonos de São Luís"],"dir":["O auditório novo","O que não muda","Quem não quer '
+           'ouvir"]},"10":{"f":"«António pregava, e eles ouviam»: em ordem e de cabeça fora de água, os peixes são o auditório que os '
+           'homens recusaram ser. A frase opõe-se em silêncio aos homens, que não ouviam.","cita":"postos todos por sua ordem com as '
+           'cabeças de fora da água, António pregava, e eles ouviam.","o":["Mostra-os como um auditório atento, o contrário dos '
+           'homens","Mostra que os peixes pequenos ficavam à frente","Descreve as espécies do mar de Arimino","Prova que os peixes '
+           'entendiam a doutrina melhor que os homens"]},"11":{"f":"O texto fala do aquário para dizer a escola, sem «como» e sem a '
+           'nomear: é uma alegoria, como o sermão em que os peixes valem pelos homens.","o":["Uma notícia sobre o aquário verdadeiro da '
+           'escola","Uma fábula, com a moral dita no fim","Uma alegoria: o aquário vale pela escola, do princípio ao fim","Uma comparação: '
+           'diz que a escola é como um aquário"]},"13":{"f":"O exórdio é a abertura: apresenta o tema e prende o auditório. Vieira abre '
+           'com «Vós […] sois o sal da terra» e o episódio de Arimino.","o":["Os louvores, porque elogia a escola","O exórdio, porque é a '
+           'entrada e prepara o resto","A peroração, porque é a parte que fica na memória","As repreensões, porque lembra o que correu '
+           'mal"]},"15":{"f":"A imagem das ondas e dos peixes dá gosto a quem ouve (deleitar); a frase do púlpito e do auditório é a lição '
+           '(ensinar); a exclamação mexe com os sentimentos de quem ouve (comover).","esq":["«Mudou somente o púlpito e o auditório, mas '
+           'não desistiu da doutrina»","A imagem das ondas a ferver e dos peixes a acorrer","«Oh! maravilhas do '
+           'Altíssimo!»"],"dir":["Deleitar","Comover","Ensinar"]}}',
+ 'novo': '{"2":{"f":"As perguntas seguidas são retóricas: não esperam resposta, levam quem ouve a pesar cada saída. Retirar-se, calar-se '
+         'ou dissimular «ensinaria porventura a prudência, ou a covardia humana». Mas o zelo de António «não se rendeu a semelhantes '
+         'partidos».","cita":"Que faria logo? Retirar-se-ia? Calar-se-ia? Dissimularia? Daria tempo ao tempo?","o":["Os hereges eram '
+         'poucos e valia a pena esperar","Seriam prudência ou covardia, e o zelo não se rende","Para Vieira, a prudência é sempre um '
+         'defeito","Já se tinha calado antes, sem resultado"]},"4":{"f":"António «mudou somente o púlpito e o auditório, mas não desistiu '
+         'da doutrina»: a mensagem fica, muda quem a ouve. Levar a mesma queixa a outro auditório é fazer o mesmo.","cita":"Mudou somente '
+         'o púlpito e o auditório, mas não desistiu da doutrina.","o":["Calar-se até ao fim do ano, para evitar problemas","Trocar a '
+         'queixa por outra, mais fácil de aceitar","Levar a mesma queixa à assembleia da escola","Fingir que concorda e esperar por melhor '
+         'altura"]},"7":{"f":"O sermão «todo é alegórico»: o voador é peixe no que se diz e homem no que se quer dizer. Um peixe com asas '
+         'quer ser ave: vale por quem, em São Luís, quer ser mais do que é. Cromolitografia: Allen & Ginter, _Peixe-voador_ (série _Fish '
+         'from American Waters_), 1889, The Met. Domínio público.","ver":"<img src=\\"../../img/fontes/peixe-voador-1889.jpg\\" '
+         'alt=\\"Gravura a cores de um peixe-voador sobre o mar, de barbatanas abertas como asas; em baixo, aves numa rocha.\\" '
+         'loading=\\"lazy\\">","o":["Quem defende os indígenas, como Vieira","Quem quer ser mais do que é","Quem foge de quem o quer '
+         'apanhar","Nenhum: é só um peixe do mar do Maranhão"]},"9":{"f":"Os homens de Arimino e os colonos de São Luís têm o mesmo papel: '
+         'não querem ouvir. Os peixes são o auditório novo dos dois pregadores. E a defesa dos indígenas é, em São Luís, a doutrina que '
+         'não muda.","esq":["Os homens de Arimino","A defesa dos indígenas","Os peixes, de cabeça fora de água","Os colonos de São '
+         'Luís"],"dir":["O auditório novo","O que não muda","Quem não quer ouvir"]},"10":{"f":"A atenção dos peixes faz sobressair a '
+         'recusa dos homens. Assim, falar aos peixes continua a ser uma forma de interpelar os homens. No texto, procura a ação que mostra '
+         'essa atenção.","cita":"postos todos por sua ordem com as cabeças de fora da água, António pregava, e eles ouviam.","o":["Os '
+         'peixes entendem; essa capacidade torna desnecessário pregar aos homens.","Os peixes escutam atentos; essa atenção põe em causa a '
+         'recusa dos homens.","Os peixes reúnem-se; essa ordem explica como vivem longe dos homens."]},"11":{"f":"O texto fala do aquário '
+         'para dizer a escola, sem «como» e sem a nomear: é uma alegoria, como o sermão em que os peixes valem pelos homens.","o":["Uma '
+         'notícia sobre o aquário verdadeiro da escola","Uma fábula, com a moral dita no fim","Uma alegoria: o aquário vale pela escola, '
+         'do princípio ao fim","Uma comparação: diz que a escola é como um aquário"]},"13":{"f":"O exórdio é a abertura: apresenta o tema '
+         'e prende o auditório. Vieira abre com «Vós […] sois o sal da terra» e o episódio de Arimino.","o":["Os louvores, porque elogia a '
+         'escola","O exórdio, porque é a entrada e prepara o resto","A peroração, porque é a parte que fica na memória","As repreensões, '
+         'porque lembra o que correu mal"]},"15":{"f":"A imagem das ondas e dos peixes dá gosto a quem ouve (deleitar); a frase do púlpito '
+         'e do auditório é a lição (ensinar); a exclamação mexe com os sentimentos de quem ouve (comover).","esq":["«Mudou somente o '
+         'púlpito e o auditório, mas não desistiu da doutrina»","A imagem das ondas a ferver e dos peixes a acorrer","«Oh! maravilhas do '
+         'Altíssimo!»"],"dir":["Deleitar","Comover","Ensinar"]}}',
+ 'ocorrencias': 1,
+ 'achado': '02/11/2026: o relâmpago projeta as opções e a correção do cartão novo'},
+ {'ficheiro': 'm6/painel-m6-f01/index.html',
+ 'local': 'M6-F01 painel: MATERIAL',
+ 'antigo': '{"4":{"f":"«Sonho que sou um cavalleiro andante» (v. 1): o sujeito **sonha-se o próprio cavaleiro**, não o vê de '
+           'fora.","cita":"Sonho que sou um cavalleiro andante.","o":["O sujeito, que acorda um cavaleiro adormecido","O sujeito, que vê '
+           'um cavaleiro passar à porta","O sujeito, que se sonha um cavaleiro andante","O sujeito, que se lembra de um cavaleiro '
+           'antigo"]},"5":{"f":"«Por… por… por»: a **anáfora** acumula os lugares da busca.","frase":"Por desertos, por sóes, por noite '
+           'escura,"},"6":{"f":"**Anhelante**, ansioso: «busco anhelante» é a palavra-chave da primeira quadra.","frase":"«Paladino do '
+           'amor, busco [1]»: busco ansioso.","lac":[["exhausto","vacillante","andante","anhelante","fulgurante"]]},"7":{"f":"Verdadeiro: '
+           'a primeira quadra fecha no alvo da busca, «O palacio encantado da Ventura!».","cita":"O palacio encantado da '
+           'Ventura!"},"8":{"f":"«Exhausto» e «vacillante»: cansado e a cambalear, antes de avistar o palácio.","frase":"Mas já desmaio, '
+           'exhausto e vacillante."},"9":{"f":"«Quebrada a **espada** já, rota a **armadura**»: «rota» é partida, '
+           'desfeita.","frase":"«Quebrada a [1] já, rota a [2]...»: as armas do cavaleiro '
+           'desfeitas.","lac":[["lança","espada","adaga","bandeira"],["montada","couraça","viseira","armadura"]]},"10":{"f":"Avista o '
+           '**palácio**, «Na sua pompa e aerea formosura»: a promessa de luz antes do vazio.","cita":"E eis que subito o avisto, '
+           'fulgurante","o":["O deserto, iluminado pelo sol ao fim do dia","A espada, que lhe brilha quebrada nas mãos","O palácio, na sua '
+           'pompa e aérea formosura","A Ventura, à espera dele à janela do palácio"]},"11":{"f":"Bate, diz quem é, pede que abram: o apelo '
+           'vem antes do vazio.","cita":"Com grandes golpes bato á porta e brado:","itens":["Eu sou o Vagabundo, o '
+           'Desherdado...","Abri-vos, portas d\'ouro, ante meus ais!","Com grandes golpes bato á porta e brado:"]},"12":{"f":"O '
+           '**cavaleiro** brada às portas do palácio: chama-se vagabundo e deserdado antes de pedir que abram.","cita":"Eu sou o '
+           'Vagabundo, o Desherdado...","o":["O poeta, ao leitor, fora do sonho","O palácio, ao cavaleiro que chega","O cavaleiro, às '
+           'portas do palácio","A Ventura, ao cavaleiro que bate à porta"]},"14":{"f":"Falso: «Abrem-se as portas d\'ouro, com '
+           '**fragor**», com estrondo; o silêncio está lá dentro.","cita":"Abrem-se as portas d\'ouro, com fragor..."},"15":{"f":"Lá '
+           'dentro há só «Silencio e escuridão» e, diz o último verso, «nada mais!» (v. 14): a promessa de luz dá em '
+           '**vazio**.","cita":"Silencio e escuridão — e nada mais!","o":["A luz fulgurante que tinha visto de fora","Uma sala de ouro, '
+           'sem ninguém à espera","A Ventura, que o recebe em silêncio","Silêncio e escuridão, e nada mais"]},"16":{"f":"**Antítese**: luz '
+           'e esplendor prometidos contra escuridão e silêncio encontrados.","cita":"Silencio e escuridão — e nada mais!","frase":"Os dois '
+           'versos formam uma [1] que opõe a [2] prometida à escuridão encontrada.","lac":[["anáfora","alegoria","antítese","chave de '
+           'ouro"],["porta","luz","espada","dor"]]},"18":{"f":"Falso: a **chave de ouro** é o último verso, «e nada mais!», que fecha o '
+           'sentido e o vira."},"19":{"f":"Cavaleiro, palácio, vazio: o sujeito, a promessa de sentido, a desilusão; a alegoria da busca '
+           'do Ideal.","esq":["O palácio","O vazio final","O cavaleiro"],"dir":["a desilusão","o sujeito, que busca","a promessa de '
+           'felicidade"]},"20":{"f":"**Catorze** versos, **duas quadras** e dois tercetos. A organização estrófica e a medida dos versos '
+           'são aspetos diferentes: neste poema há decassílabos, mas existem sonetos com outras medidas. Relaciona agora a última estrofe '
+           'com a expectativa criada nas anteriores.","frase":"Neste poema, os [1] versos distribuem-se por [2] e dois tercetos: 4 + 4 + 3 '
+           '+ 3.","lac":[["dezasseis","dez","doze","catorze"],["três quadras","duas quadras","quatro quadras","uma '
+           'quadra"]]},"21":{"f":"Busca, visão, apelo, vazio: uma estrofe para cada momento. A sequência termina com a abertura das '
+           'portas, mas frustra a expectativa de felicidade. O texto diz que a espada está quebrada e a armadura rota; não afirma que o '
+           'cavaleiro foi ferido.","itens":["Bate à porta e pede que abram","Sonha-se cavaleiro em busca do palácio","Exausto e com as '
+           'armas desfeitas, avista-o fulgurante","As portas abrem-se: dentro não há nada"]},"22":{"f":"«Abrem-se as portas d\'ouro, com '
+           'fragor...»: o verbo abre o verso e o estrondo fecha-o; o silêncio vem a '
+           'seguir.","palavras":["d\'ouro,","as","fragor...","portas","com","Abrem-se"]}}',
+ 'novo': '{"4":{"f":"«Sonho que sou um cavalleiro andante» (v. 1): o sujeito **sonha-se o próprio cavaleiro**, não o vê de '
+         'fora.","cita":"Sonho que sou um cavalleiro andante.","o":["O sujeito, que acorda um cavaleiro adormecido","O sujeito, que vê um '
+         'cavaleiro passar à porta","O sujeito, que se sonha um cavaleiro andante","O sujeito, que se lembra de um cavaleiro '
+         'antigo"]},"5":{"f":"«Por… por… por»: a **anáfora** acumula os lugares da busca.","frase":"Por desertos, por sóes, por noite '
+         'escura,"},"6":{"f":"**Anhelante**, ansioso: «busco anhelante» é a palavra-chave da primeira quadra.","frase":"«Paladino do amor, '
+         'busco [1]»: busco ansioso.","lac":[["exhausto","vacillante","andante","anhelante","fulgurante"]]},"7":{"f":"Verdadeiro: a '
+         'primeira quadra fecha no alvo da busca, «O palacio encantado da Ventura!».","cita":"O palacio encantado da '
+         'Ventura!"},"8":{"f":"«Exhausto» e «vacillante»: cansado e a cambalear, antes de avistar o palácio.","frase":"Mas já desmaio, '
+         'exhausto e vacillante."},"9":{"f":"«Quebrada a **espada** já, rota a **armadura**»: «rota» é partida, '
+         'desfeita.","frase":"«Quebrada a [1] já, rota a [2]...»: as armas do cavaleiro '
+         'desfeitas.","lac":[["lança","espada","adaga","bandeira"],["montada","couraça","viseira","armadura"]]},"10":{"f":"Avista o '
+         '**palácio**, «Na sua pompa e aerea formosura»: a promessa de luz antes do vazio.","cita":"E eis que subito o avisto, '
+         'fulgurante","o":["O deserto, iluminado pelo sol ao fim do dia","A espada, que lhe brilha quebrada nas mãos","O palácio, na sua '
+         'pompa e aérea formosura","A Ventura, à espera dele à janela do palácio"]},"11":{"f":"Bate, diz quem é, pede que abram: o apelo '
+         'vem antes do vazio.","cita":"Com grandes golpes bato á porta e brado:","itens":["Eu sou o Vagabundo, o Desherdado...","Abri-vos, '
+         'portas d\'ouro, ante meus ais!","Com grandes golpes bato á porta e brado:"]},"12":{"f":"O **cavaleiro** brada às portas do '
+         'palácio: chama-se vagabundo e deserdado antes de pedir que abram.","cita":"Eu sou o Vagabundo, o Desherdado...","o":["O poeta, '
+         'ao leitor, fora do sonho","O palácio, ao cavaleiro que chega","O cavaleiro, às portas do palácio","A Ventura, ao cavaleiro que '
+         'bate à porta"]},"14":{"f":"Falso: «Abrem-se as portas d\'ouro, com **fragor**», com estrondo; o silêncio está lá '
+         'dentro.","cita":"Abrem-se as portas d\'ouro, com fragor..."},"15":{"f":"A promessa de riqueza não coincide com o que o cavaleiro '
+         'encontra. Procura uma palavra do exterior e outra do interior: a relação entre elas sustenta a interpretação.","cita":"Silencio '
+         'e escuridão — e nada mais!","o":["Que distância percorreu o cavaleiro antes de chegar à porta?","Que pessoa mandou construir o '
+         'palácio para receber o cavaleiro?","Que contraste liga a promessa exterior ao que encontra dentro?"]},"16":{"f":"**Antítese**: '
+         'luz e esplendor prometidos contra escuridão e silêncio encontrados.","cita":"Silencio e escuridão — e nada mais!","frase":"Os '
+         'dois versos formam uma [1] que opõe a [2] prometida à escuridão encontrada.","lac":[["anáfora","alegoria","antítese","chave de '
+         'ouro"],["porta","luz","espada","dor"]]},"18":{"f":"Falso: a **chave de ouro** é o último verso, «e nada mais!», que fecha o '
+         'sentido e o vira."},"19":{"f":"Cavaleiro, palácio, vazio: o sujeito, a promessa de sentido, a desilusão; a alegoria da busca do '
+         'Ideal.","esq":["O palácio","O vazio final","O cavaleiro"],"dir":["a desilusão","o sujeito, que busca","a promessa de '
+         'felicidade"]},"20":{"f":"**Catorze** versos, **duas quadras** e dois tercetos. A organização estrófica e a medida dos versos são '
+         'aspetos diferentes: neste poema há decassílabos, mas existem sonetos com outras medidas. Relaciona agora a última estrofe com a '
+         'expectativa criada nas anteriores.","frase":"Neste poema, os [1] versos distribuem-se por [2] e dois tercetos: 4 + 4 + 3 + '
+         '3.","lac":[["dezasseis","dez","doze","catorze"],["três quadras","duas quadras","quatro quadras","uma '
+         'quadra"]]},"21":{"f":"Busca, visão, apelo, vazio: uma estrofe para cada momento. A sequência termina com a abertura das portas, '
+         'mas frustra a expectativa de felicidade. O texto diz que a espada está quebrada e a armadura rota; não afirma que o cavaleiro '
+         'foi ferido.","itens":["Bate à porta e pede que abram","Sonha-se cavaleiro em busca do palácio","Exausto e com as armas '
+         'desfeitas, avista-o fulgurante","As portas abrem-se: dentro não há nada"]},"22":{"f":"«Abrem-se as portas d\'ouro, com '
+         'fragor...»: o verbo abre o verso e o estrondo fecha-o; o silêncio vem a '
+         'seguir.","palavras":["d\'ouro,","as","fragor...","portas","com","Abrem-se"]}}',
+ 'ocorrencias': 1,
+ 'achado': '02/11/2026: o relâmpago projeta as opções e a correção do cartão novo'},
+ {'ficheiro': 'm7/painel-m7-f34/index.html',
+ 'local': 'M7-F34 painel: MATERIAL',
+ 'antigo': '{"3":{"f":"A paisagem, as velas, o cais, as árvores: a estrofe entra e sai do sonho a cada verso.","cita":"Atravessa esta '
+           'paisagem o meu sonho dum porto infinito","itens":["E a cor das flores é transparente de as velas de grandes navios","Os vultos '
+           'ao sol daquelas árvores antigas...","Que largam do cais arrastando nas águas por sombra","Atravessa esta paisagem o meu sonho '
+           'dum porto infinito"]},"4":{"f":"«**paisagem**» é o lugar que o poeta vê; «**porto**» é o lugar que sonha. O verbo «Atravessa» '
+           'põe o sonho do porto dentro da paisagem.","frase":"Atravessa esta paisagem o meu sonho dum porto infinito"},"5":{"f":"O sol '
+           'fica na paisagem, a sombra no porto; no último verso, **navios e árvores são a mesma coisa**.","cita":"O porto que sonho é '
+           'sombrio e pálido","esq":["«O porto que sonho é sombrio e pálido»","«E os navios que saem do porto são estas árvores ao '
+           'sol...»","«E esta paisagem é cheia de sol deste lado...»"],"dir":["os dois planos fundidos","só o que se vê","só o que se '
+           'sonha"]},"7":{"f":"**Em duplo**: um eu que vê e um eu que sonha. Por isso o cais (sonho) é **a estrada** '
+           '(paisagem).","cita":"Liberto em duplo, abandonei-me da paisagem abaixo...","frase":"«Liberto em duplo»: o poeta sente-se [1]; '
+           'e o vulto do cais passa a ser [2].","lac":[["a dormir","sozinho no porto","preso à paisagem","desdobrado em dois"],["os '
+           'troncos das árvores","a vidraça da igreja","a sombra duma nau antiga","a estrada nítida e calma"]]},"8":{"f":"**Navios e '
+           'troncos ocupam o mesmo lugar** da imagem. Os outros versos falam de um só plano, ou de nenhuma imagem.","cita":"E os navios '
+           'passam por dentro dos troncos das árvores","o":["«Liberto em duplo, abandonei-me da paisagem abaixo...»","«O porto que sonho é '
+           'sombrio e pálido»","«E esta paisagem é cheia de sol deste lado...»","«os navios passam por dentro dos troncos das '
+           'árvores»"]},"9":{"f":"Falso: é um **paradoxo** de propósito. Os navios (horizontais) passam pelos troncos (verticais): os '
+           'planos cruzam-se, e as direções também.","cita":"Com uma horizontalidade vertical,"},"11":{"f":"**Renque** é uma fila: uma '
+           'fila de árvores. «Amarras» são cabos e «estampa» é uma gravura.","cita":"Esta paisagem toda, renque de árvores, estrada a '
+           'arder em aquele porto,","o":["estampa","vulto","amarras","renque"]},"13":{"f":"A vela (dentro) é **chuva** (fora) e bate na '
+           '**vidraça**, que está entre os dois.","frase":"Poema II: «E cada vela que se acende é mais [1] a bater na '
+           '[2]...»","lac":[["gente","chuva","luz","cera"],["estrada","porta","vidraça","toalha do altar"]]},"14":{"f":"A vela é de '
+           '**dentro**, a chuva de **fora**; no canto do coro que é vento na vidraça, os dois fundem-se numa só imagem.","cita":"E cada '
+           'vela que se acende é mais chuva a bater na vidraça...","esq":["«mais chuva a bater na vidraça»","«o canto do coro, latino e '
+           'vento a sacudir-me a vidraça»","«cada vela que se acende»"],"dir":["dentro da igreja","fora da igreja","dentro e fora ao mesmo '
+           'tempo"]},"15":{"f":"**As vidraças** pertencem à igreja e levam com a chuva: são a palavra-charneira, onde um plano passa para '
+           'o outro.","cita":"E as vidraças da igreja vistas de fora são o som da chuva ouvido por dentro...","o":["as vidraças","a igreja '
+           'acesa","o som da chuva","a chuva lá fora"]},"16":{"f":"«**vistas**» de fora são o som «**ouvido**» por dentro: a vista e o '
+           'ouvido fundem-se, como os dois planos.","cita":"E as vidraças da igreja vistas de fora são o som da chuva ouvido por '
+           'dentro...","frase":"vistas de fora são o som da chuva ouvido por dentro"},"18":{"f":"**A cerimónia e a rua**: o automóvel '
+           'volta no fim, «Com o som de rodas de automóvel».","cita":"A missa é um automóvel que passa","o":["o porto sonhado e a paisagem '
+           'vista no poema I","o passado do poeta e o futuro que ele sonha","uma festa de casamento e uma viagem de carro","a missa dentro '
+           'da igreja e a rua lá fora"]},"19":{"f":"O som da chuva **engole** a missa; quando a chuva para, a igreja apaga-se: os dois '
+           'planos acabam juntos.","cita":"Súbito vento sacode em esplendor maior","itens":["E apagam-se as luzes da igreja","Na chuva que '
+           'cessa...","Até só se ouvir a voz do padre água perder-se ao longe","A festa da catedral e o ruído da chuva absorve '
+           'tudo","Súbito vento sacode em esplendor maior","Com o som de rodas de automóvel..."]},"21":{"f":"As árvores e a estrada são do '
+           'que se vê; as velas e as amarras, do que se sonha.","esq":["«árvores antigas»","«estrada nítida e calma»","«velas de grandes '
+           'navios»","«amarras»"],"dir":["O porto","A paisagem"]},"23":{"f":"Verdadeiro: _Orpheu_ n.º 2, **abril a junho de 1915**, com o '
+           'subtítulo «poemas interseccionistas»."},"24":{"f":"Verdadeiro: interseção é cruzamento. **Dois planos no mesmo verso**, como '
+           'duas imagens no mesmo fotograma."},"25":{"f":"Do porto sonhado na paisagem à igreja dentro da chuva: em cada poema, dois '
+           'planos fundem-se até acabarem juntos.","itens":["A chuva cessa e apagam-se as luzes da igreja","«Liberto em duplo»: o cais '
+           'torna-se estrada","A paisagem ao sol e o porto sonhado","A igreja acesa e a chuva lá fora"]},"26":{"f":"«E os navios passam '
+           'por dentro dos troncos das árvores»: o porto sonhado dentro da paisagem '
+           'vista.","palavras":["passam","árvores","das","E","por","troncos","navios","os","dentro","dos"]},"28":{"f":"A música do '
+           '**concerto** faz regressar a **infância no quintal**. Depois os lugares deixam de ficar separados: «Todo o teatro é o meu '
+           'quintal».","o":["O porto sonhado e a paisagem ao sol","A missa na igreja e a chuva na rua","Duas brincadeiras que decorrem no '
+           'mesmo quintal","O concerto presente e a brincadeira de infância no quintal"]},"29":{"f":"O verbo **«é»** apresenta uma '
+           'identificação: não diz apenas que um lugar lembra o outro. A memória transforma a perceção do concerto. É uma fusão de planos, '
+           'não uma mudança física de lugar.","o":["O lugar do concerto e o da memória fundem-se na experiência do sujeito","O sujeito '
+           'deixa o teatro e desloca-se fisicamente ao quintal","O teatro foi construído no quintal onde o poeta viveu","O maestro '
+           'interrompe o concerto para brincar com a criança"]},"30":{"f":"Em I, **navios e árvores**; em VI, **teatro e quintal**. As '
+           'formas de «ser» fundem os planos. A VI transporta a mesma técnica para outra relação: presente e memória.","o":["Apagam o '
+           'presente para contar só acontecimentos da infância","Usam uma comparação explícita introduzida por «como»","Identificam '
+           'elementos de dois planos, em vez de apenas os colocarem lado a lado","Narram duas viagens reais, primeiro de barco e depois de '
+           'comboio"]}}',
+ 'novo': '{"3":{"f":"A paisagem, as velas, o cais, as árvores: a estrofe entra e sai do sonho a cada verso.","cita":"Atravessa esta '
+         'paisagem o meu sonho dum porto infinito","itens":["E a cor das flores é transparente de as velas de grandes navios","Os vultos '
+         'ao sol daquelas árvores antigas...","Que largam do cais arrastando nas águas por sombra","Atravessa esta paisagem o meu sonho '
+         'dum porto infinito"]},"4":{"f":"«**paisagem**» é o lugar que o poeta vê; «**porto**» é o lugar que sonha. O verbo «Atravessa» '
+         'põe o sonho do porto dentro da paisagem.","frase":"Atravessa esta paisagem o meu sonho dum porto infinito"},"5":{"f":"O sol fica '
+         'na paisagem, a sombra no porto; no último verso, **navios e árvores são a mesma coisa**.","cita":"O porto que sonho é sombrio e '
+         'pálido","esq":["«O porto que sonho é sombrio e pálido»","«E os navios que saem do porto são estas árvores ao sol...»","«E esta '
+         'paisagem é cheia de sol deste lado...»"],"dir":["os dois planos fundidos","só o que se vê","só o que se sonha"]},"7":{"f":"**Em '
+         'duplo**: um eu que vê e um eu que sonha. Por isso o cais (sonho) é **a estrada** (paisagem).","cita":"Liberto em duplo, '
+         'abandonei-me da paisagem abaixo...","frase":"«Liberto em duplo»: o poeta sente-se [1]; e o vulto do cais passa a ser '
+         '[2].","lac":[["a dormir","sozinho no porto","preso à paisagem","desdobrado em dois"],["os troncos das árvores","a vidraça da '
+         'igreja","a sombra duma nau antiga","a estrada nítida e calma"]]},"8":{"f":"Os navios pertencem a um plano e os troncos a outro. '
+         'A expressão «por dentro» põe-nos no mesmo espaço imaginado, em vez de apenas alternar duas cenas.","cita":"E os navios passam '
+         'por dentro dos troncos das árvores","o":["Dois espaços ocupam a mesma imagem; atravessar os troncos aproxima os planos.","Dois '
+         'espaços pertencem à mesma viagem; a passagem descreve uma rota real e possível.","Dois espaços aparecem um depois do outro; a '
+         'passagem separa os momentos."]},"9":{"f":"Falso: é um **paradoxo** de propósito. Os navios (horizontais) passam pelos troncos '
+         '(verticais): os planos cruzam-se, e as direções também.","cita":"Com uma horizontalidade vertical,"},"11":{"f":"**Renque** é uma '
+         'fila: uma fila de árvores. «Amarras» são cabos e «estampa» é uma gravura.","cita":"Esta paisagem toda, renque de árvores, '
+         'estrada a arder em aquele porto,","o":["estampa","vulto","amarras","renque"]},"13":{"f":"A vela (dentro) é **chuva** (fora) e '
+         'bate na **vidraça**, que está entre os dois.","frase":"Poema II: «E cada vela que se acende é mais [1] a bater na '
+         '[2]...»","lac":[["gente","chuva","luz","cera"],["estrada","porta","vidraça","toalha do altar"]]},"14":{"f":"A vela é de '
+         '**dentro**, a chuva de **fora**; no canto do coro que é vento na vidraça, os dois fundem-se numa só imagem.","cita":"E cada vela '
+         'que se acende é mais chuva a bater na vidraça...","esq":["«mais chuva a bater na vidraça»","«o canto do coro, latino e vento a '
+         'sacudir-me a vidraça»","«cada vela que se acende»"],"dir":["dentro da igreja","fora da igreja","dentro e fora ao mesmo '
+         'tempo"]},"15":{"f":"**As vidraças** pertencem à igreja e levam com a chuva: são a palavra-charneira, onde um plano passa para o '
+         'outro.","cita":"E as vidraças da igreja vistas de fora são o som da chuva ouvido por dentro...","o":["as vidraças","a igreja '
+         'acesa","o som da chuva","a chuva lá fora"]},"16":{"f":"«**vistas**» de fora são o som «**ouvido**» por dentro: a vista e o '
+         'ouvido fundem-se, como os dois planos.","cita":"E as vidraças da igreja vistas de fora são o som da chuva ouvido por '
+         'dentro...","frase":"vistas de fora são o som da chuva ouvido por dentro"},"18":{"f":"**A cerimónia e a rua**: o automóvel volta '
+         'no fim, «Com o som de rodas de automóvel».","cita":"A missa é um automóvel que passa","o":["o porto sonhado e a paisagem vista '
+         'no poema I","o passado do poeta e o futuro que ele sonha","uma festa de casamento e uma viagem de carro","a missa dentro da '
+         'igreja e a rua lá fora"]},"19":{"f":"O som da chuva **engole** a missa; quando a chuva para, a igreja apaga-se: os dois planos '
+         'acabam juntos.","cita":"Súbito vento sacode em esplendor maior","itens":["E apagam-se as luzes da igreja","Na chuva que '
+         'cessa...","Até só se ouvir a voz do padre água perder-se ao longe","A festa da catedral e o ruído da chuva absorve tudo","Súbito '
+         'vento sacode em esplendor maior","Com o som de rodas de automóvel..."]},"21":{"f":"As árvores e a estrada são do que se vê; as '
+         'velas e as amarras, do que se sonha.","esq":["«árvores antigas»","«estrada nítida e calma»","«velas de grandes '
+         'navios»","«amarras»"],"dir":["O porto","A paisagem"]},"23":{"f":"Verdadeiro: _Orpheu_ n.º 2, **abril a junho de 1915**, com o '
+         'subtítulo «poemas interseccionistas»."},"24":{"f":"Verdadeiro: interseção é cruzamento. **Dois planos no mesmo verso**, como '
+         'duas imagens no mesmo fotograma."},"25":{"f":"Do porto sonhado na paisagem à igreja dentro da chuva: em cada poema, dois planos '
+         'fundem-se até acabarem juntos.","itens":["A chuva cessa e apagam-se as luzes da igreja","«Liberto em duplo»: o cais torna-se '
+         'estrada","A paisagem ao sol e o porto sonhado","A igreja acesa e a chuva lá fora"]},"26":{"f":"«E os navios passam por dentro '
+         'dos troncos das árvores»: o porto sonhado dentro da paisagem '
+         'vista.","palavras":["passam","árvores","das","E","por","troncos","navios","os","dentro","dos"]},"28":{"f":"A música do '
+         '**concerto** faz regressar a **infância no quintal**. Depois os lugares deixam de ficar separados: «Todo o teatro é o meu '
+         'quintal».","o":["O porto sonhado e a paisagem ao sol","A missa na igreja e a chuva na rua","Duas brincadeiras que decorrem no '
+         'mesmo quintal","O concerto presente e a brincadeira de infância no quintal"]},"29":{"f":"O verbo **«é»** apresenta uma '
+         'identificação: não diz apenas que um lugar lembra o outro. A memória transforma a perceção do concerto. É uma fusão de planos, '
+         'não uma mudança física de lugar.","o":["O lugar do concerto e o da memória fundem-se na experiência do sujeito","O sujeito deixa '
+         'o teatro e desloca-se fisicamente ao quintal","O teatro foi construído no quintal onde o poeta viveu","O maestro interrompe o '
+         'concerto para brincar com a criança"]},"30":{"f":"Em I, **navios e árvores**; em VI, **teatro e quintal**. As formas de «ser» '
+         'fundem os planos. A VI transporta a mesma técnica para outra relação: presente e memória.","o":["Substituem o presente, deixando '
+         'no verso apenas o lugar da memória","Identificam dois planos distintos, fazendo um passar pelo outro","Alternam dois planos, '
+         'descrevendo um lugar depois do outro"]}}',
+ 'ocorrencias': 1,
+ 'achado': '02/11/2026: o relâmpago projeta as opções e a correção do cartão novo'},
+ {'ficheiro': 'm8/painel-m8-f12/index.html',
+ 'local': 'M8-F12 painel: MATERIAL',
+ 'antigo': '{"3":{"f":"A poesia lê-se com as lentes e a forma; o conto, pela unidade de ação e pela brevidade.","esq":["Estrofes, métrica, '
+           'rima ou verso livre","Unidade de ação e poucas personagens","Gi, George e Georgina: três idades","Figurações do poeta e arte '
+           'poética"],"dir":["Conto","Poesia"]},"4":{"f":"Contemporâneo: **o mundo do seu tempo**; tradição: **o que retoma** ou contesta '
+           'de antes.","frase":"A lente do contemporâneo pergunta [1] e a da tradição pergunta [2] ao mesmo poema.","lac":[["que forma e '
+           'que rima tem","como se vê quem escreve","se o poema fala da própria poesia","que mundo e que problemas aparecem"],["que mundo '
+           'do seu tempo aparece","a quem dá voz o sujeito poético","que recursos expressivos usa o poema","que autores, formas ou mitos '
+           'retoma"]]},"5":{"f":"Figurações: **como se vê quem escreve**; arte poética: **se fala da própria poesia**.","frase":"Com a '
+           'lente das figurações perguntas [1] e com a da arte poética perguntas [2] ao poema que lês.","lac":[["como se vê quem '
+           'escreve","que mitos antigos retoma","que recursos usa","que mundo aparece"],["que forma e que rima tem o poema","que problemas '
+           'do seu tempo aparecem","se o poema fala da própria poesia","a quem dá voz o sujeito poético"]]},"6":{"f":"O ponto comum é o '
+           '**trabalho de inferência** do leitor, não uma mensagem idêntica. Num texto, observa as perguntas e a sua posição; no outro, as '
+           'ações e o encontro narrado. Uma comparação precisa de **critério comum e diferenças sustentadas**.","o":["Os dois deixam '
+           'perguntas em aberto, logo a protagonista e o sujeito poético sentem o mesmo arrependimento.","Os dois omitem respostas, logo '
+           'não há informação suficiente para defender qualquer leitura.","Os dois textos têm exatamente a mesma mensagem, porque ambos '
+           'evitam explicar tudo.","Os dois convidam a interpretar; as pistas e a função do que fica por explicar analisam-se em cada '
+           'obra."]},"7":{"f":"**Tradição literária**: que autores, formas ou mitos retoma.","o":["Arte poética","Tradição '
+           'literária","Figurações do poeta","Contemporâneo"]},"8":{"f":"**Habitual**: «todas as manhãs» apresenta a releitura como um '
+           'costume. Um hábito também envolve repetição. Em «Naquela revisão, releu a carta várias vezes», destaca-se a repetição num '
+           'episódio; não é necessária uma contagem exata.","o":["genérico","habitual","perfetivo","iterativo"]},"9":{"f":"**Falso.** '
+           '«Ela» pode retomar **a poeta ou a editora**. O pronome aponta para trás, mas este pequeno contexto não resolve quem levou o '
+           'manuscrito. Para informar com clareza, explicita a pessoa pretendida."},"11":{"f":"«O que calam» aponta para o trabalho de '
+           'inferência do leitor. Esse trabalho precisa de pistas: relaciona uma pergunta deixada sem resposta num poema com uma omissão '
+           'relevante em «George» e explica o efeito de cada uma. O silêncio do texto não autoriza qualquer conclusão; a interpretação '
+           'deve mostrar em que palavras ou situações se apoia.","frase":"preferem sugerir a explicar, e deixam ao leitor o que '
+           'calam."},"12":{"f":"Tese, dois exemplos, conclusão: 120 a 150 palavras.","itens":["Última frase: o que se pede ao '
+           'leitor","Dois parágrafos: o poema com um verso e «George» com a página","Primeira frase: concordo, discordo ou '
+           'depende"]},"13":{"f":"**Brevidade**: com unidade de ação, concentração de tempo e espaço e poucas '
+           'personagens.","o":["brevidade","concentração","sugestão","unidade"]},"14":{"f":"Sena: «Uma pequenina luz»; Eugénio: «As '
+           'Palavras»; Amaral: «Prece no Mediterrâneo»; Maria Judite de Carvalho: «George». Para comparar os efeitos, regressa às '
+           'passagens de cada texto.","esq":["Eugénio de Andrade","Ana Luísa Amaral","Maria Judite de Carvalho","Jorge de '
+           'Sena"],"dir":["«George»","«Uma pequenina luz»","«Prece no Mediterrâneo»","«As Palavras»"]},"15":{"f":"Falso: tem **120 a 150** '
+           'palavras; 60 a 80 é o parágrafo sobre aspeto, anáfora e catáfora."},"16":{"f":"Verdadeiro: poesia e conto, valor aspetual, '
+           'anáfora e catáfora, numa só lição."},"17":{"f":"«Terminou o retrato ontem» apresenta conclusão; «três vezes» explicita '
+           'repetição; «Os contos são narrativas breves» faz uma caracterização geral; «pintava quando a campainha tocou» mostra a pintura '
+           'em curso. A frase não diz que a pintora parou. Estes valores não são sempre incompatíveis.","esq":["A pintora terminou o '
+           'retrato ontem.","Os contos são narrativas breves.","O poeta riscou a mesma palavra três vezes.","Ela pintava quando a '
+           'campainha tocou."],"dir":["iterativo","imperfetivo","perfetivo","genérico"]},"18":{"f":"Verdadeiro: **arte poética** é o poema '
+           'que fala da própria poesia, como «As Palavras»."},"19":{"f":"**A editora** explicita a pessoa pretendida. No contexto inicial, '
+           '**a poeta ou a editora** eram possíveis antecedentes de «Ela». A escolha não resulta de ver que nome está mais perto: '
+           'considera o sentido e a informação disponível.","frase":"Para dizer que foi a editora, escreve «A poeta conversou com a '
+           'editora. [1] levou o manuscrito». Sem essa reformulação, «Ela» podia retomar [2].","lac":[["Ela","A outra","A editora","A '
+           'poeta"],["o manuscrito","a poeta ou a editora","apenas a poeta","apenas a editora"]]},"20":{"f":"«Que mundo e que problemas do '
+           'seu tempo aparecem?»: dois sujeitos coordenados e o verbo só no fim da '
+           'pergunta.","palavras":["aparecem?","problemas","que","do","Que","e","seu","tempo","mundo"]}}',
+ 'novo': '{"3":{"f":"A poesia lê-se com as lentes e a forma; o conto, pela unidade de ação e pela brevidade.","esq":["Estrofes, métrica, '
+         'rima ou verso livre","Unidade de ação e poucas personagens","Gi, George e Georgina: três idades","Figurações do poeta e arte '
+         'poética"],"dir":["Conto","Poesia"]},"4":{"f":"Contemporâneo: **o mundo do seu tempo**; tradição: **o que retoma** ou contesta de '
+         'antes.","frase":"A lente do contemporâneo pergunta [1] e a da tradição pergunta [2] ao mesmo poema.","lac":[["que forma e que '
+         'rima tem","como se vê quem escreve","se o poema fala da própria poesia","que mundo e que problemas aparecem"],["que mundo do seu '
+         'tempo aparece","a quem dá voz o sujeito poético","que recursos expressivos usa o poema","que autores, formas ou mitos '
+         'retoma"]]},"5":{"f":"Figurações: **como se vê quem escreve**; arte poética: **se fala da própria poesia**.","frase":"Com a lente '
+         'das figurações perguntas [1] e com a da arte poética perguntas [2] ao poema que lês.","lac":[["como se vê quem escreve","que '
+         'mitos antigos retoma","que recursos usa","que mundo aparece"],["que forma e que rima tem o poema","que problemas do seu tempo '
+         'aparecem","se o poema fala da própria poesia","a quem dá voz o sujeito poético"]]},"6":{"f":"O ponto comum é o **trabalho de '
+         'inferência** do leitor, não uma mensagem idêntica. Num texto, observa as perguntas e a sua posição; no outro, as ações e o '
+         'encontro narrado. Uma comparação precisa de **critério comum e diferenças sustentadas**.","o":["Os dois deixam perguntas em '
+         'aberto, logo a protagonista e o sujeito poético sentem o mesmo arrependimento.","Os dois omitem respostas, logo não há '
+         'informação suficiente para defender qualquer leitura.","Os dois textos têm exatamente a mesma mensagem, porque ambos evitam '
+         'explicar tudo.","Os dois convidam a interpretar; as pistas e a função do que fica por explicar analisam-se em cada '
+         'obra."]},"7":{"f":"**Tradição literária**: que autores, formas ou mitos retoma.","o":["Arte poética","Tradição '
+         'literária","Figurações do poeta","Contemporâneo"]},"8":{"f":"**Habitual**: «todas as manhãs» apresenta a releitura como um '
+         'costume. Um hábito também envolve repetição: habitual e iterativo não são rótulos sempre '
+         'incompatíveis.","o":["genérico","perfetivo","habitual"]},"9":{"f":"**Falso.** «Ela» pode retomar **a poeta ou a editora**. O '
+         'pronome aponta para trás, mas este pequeno contexto não resolve quem levou o manuscrito. Para informar com clareza, explicita a '
+         'pessoa pretendida."},"11":{"f":"«O que calam» aponta para o trabalho de inferência do leitor. Esse trabalho precisa de pistas: '
+         'relaciona uma pergunta deixada sem resposta num poema com uma omissão relevante em «George» e explica o efeito de cada uma. O '
+         'silêncio do texto não autoriza qualquer conclusão; a interpretação deve mostrar em que palavras ou situações se '
+         'apoia.","frase":"preferem sugerir a explicar, e deixam ao leitor o que calam."},"12":{"f":"Tese, dois exemplos, conclusão: 120 a '
+         '150 palavras.","itens":["Última frase: o que se pede ao leitor","Dois parágrafos: o poema com um verso e «George» com a '
+         'página","Primeira frase: concordo, discordo ou depende"]},"13":{"f":"**Brevidade**: com unidade de ação, concentração de tempo e '
+         'espaço e poucas personagens.","o":["brevidade","concentração","sugestão","unidade"]},"14":{"f":"Sena: «Uma pequenina luz»; '
+         'Eugénio: «As Palavras»; Amaral: «Prece no Mediterrâneo»; Maria Judite de Carvalho: «George». Para comparar os efeitos, regressa '
+         'às passagens de cada texto.","esq":["Eugénio de Andrade","Ana Luísa Amaral","Maria Judite de Carvalho","Jorge de '
+         'Sena"],"dir":["«George»","«Uma pequenina luz»","«Prece no Mediterrâneo»","«As Palavras»"]},"15":{"f":"Falso: tem **120 a 150** '
+         'palavras; 60 a 80 é o parágrafo sobre aspeto, anáfora e catáfora."},"16":{"f":"A lente da tradição pergunta pelo que o texto '
+         'retoma e transforma. As palavras conservadas e a mudança final permitem testar essa relação.","o":["Que imagem de quem escreve '
+         'surge e como se mostra essa voz?","Que problema do seu tempo aparece e que pessoas ficam afetadas?","Que palavras conserva da '
+         'oração e que efeito produz a mudança?"]},"17":{"f":"«Terminou o retrato ontem» apresenta conclusão; «três vezes» explicita '
+         'repetição; «Os contos são narrativas breves» faz uma caracterização geral; «pintava quando a campainha tocou» mostra a pintura '
+         'em curso. A frase não diz que a pintora parou. Estes valores não são sempre incompatíveis.","esq":["A pintora terminou o retrato '
+         'ontem.","Os contos são narrativas breves.","O poeta riscou a mesma palavra três vezes.","Ela pintava quando a campainha '
+         'tocou."],"dir":["iterativo","imperfetivo","perfetivo","genérico"]},"18":{"f":"Verdadeiro: **arte poética** é o poema que fala da '
+         'própria poesia, como «As Palavras»."},"19":{"f":"**A editora** explicita a pessoa pretendida. No contexto inicial, **a poeta ou '
+         'a editora** eram possíveis antecedentes de «Ela». A escolha não resulta de ver que nome está mais perto: considera o sentido e a '
+         'informação disponível.","frase":"Para dizer que foi a editora, escreve «A poeta conversou com a editora. [1] levou o '
+         'manuscrito». Sem essa reformulação, «Ela» podia retomar [2].","lac":[["Ela","A outra","A editora","A poeta"],["o manuscrito","a '
+         'poeta ou a editora","apenas a poeta","apenas a editora"]]},"20":{"f":"«Que mundo e que problemas do seu tempo aparecem?»: dois '
+         'sujeitos coordenados e o verbo só no fim da '
+         'pergunta.","palavras":["aparecem?","problemas","que","do","Que","e","seu","tempo","mundo"]}}',
+ 'ocorrencias': 1,
+ 'achado': '02/11/2026: o relâmpago projeta as opções e a correção do cartão novo'}]
 
 # 01/11/2026: P1 passa do C08 para o C16, depois da segunda parte do poema.
-LIMITE_149_20261101 = frozenset([('docs/pedagogia/aquecimentos/m4-u1.json', 'A-M4 fonte do gerador'), ('exame/provas/2026-1f/grupo-i/index.html', 'E-2026-I C34'), ('m1/licao-m1-f20/index.html', 'M1-F20 C14'), ('m4/aulas/aula-01/index.html', 'M4 guião: C11 no núcleo'), ('m4/aulas/aula-01/index.html', 'M4 guião: C11 sai do complemento'), ('m4/aulas/aula-01/index.html', 'M4 guião: complementos'), ('m4/aulas/aula-01/index.html', 'M4 guião: contagem'), ('m4/aulas/aula-01/index.html', 'M4 guião: fecho 13'), ('m4/aulas/aula-01/index.html', 'M4 guião: leitura e produção'), ('m4/aulas/aula-01/index.html', 'M4 guião: lista de 13'), ('m4/aulas/aula-01/index.html', 'M4 guião: pergunta do arco'), ('m4/aulas/aula-01/index.html', 'M4 guião: turma no cartão 11'), ('m4/index.html', 'M4 prova: peça de fecho'), ('m4/index.html', 'M4 unidade 1: prova esperada'), ('m4/index.html', 'M4 unidade 2: prova esperada'), ('m4/index.html', 'M4 unidade 3: prova esperada'), ('m4/licao-m4-f01/index.html', 'M4-F01 C11'), ('m4/licao-m4-f01/index.html', 'M4-F01 C18'), ('m4/painel-m4-f01/index.html', 'M4-F01 painel: CARTOES'), ('m4/painel-m4-f01/index.html', 'M4-F01 painel: seletor'), ('m4/recursos/tpc-entrada.js', 'M4-F28 C03'), ('m4/recursos/tpc-entrada.js', 'M4-F28 C05'), ('m6/licao-m6-f01/index.html', 'M6-F01 C16'), ('m6/painel-m6-f01/index.html', 'M6-F01 painel: CARTOES'), ('m6/painel-m6-f01/index.html', 'M6-F01 painel: seletor'), ('m7/licao-m7-f34/index.html', 'M7-F34 C09'), ('m7/licao-m7-f34/index.html', 'M7-F34 C31'), ('m7/painel-m7-f34/index.html', 'M7-F34 painel: CARTOES'), ('m7/painel-m7-f34/index.html', 'M7-F34 painel: seletor'), ('m8/licao-m8-f12/index.html', 'M8-F12 C09'), ('m8/licao-m8-f12/index.html', 'M8-F12 C17'), ('m8/licao-m8-f12/index.html', 'M8-F12 C22'), ('m8/painel-m8-f12/index.html', 'M8-F12 painel: CARTOES'), ('m8/painel-m8-f12/index.html', 'M8-F12 painel: seletor'), ('m9/painel-m9-f13/index.html', 'M9 medição: impressão e noindex'), ('m9/painel-m9-f13/index.html', 'M9 medição: procedimento e rubrica'), ('m9/recursos/f13.js', 'M9-F13 C02'), ('m9/recursos/f13.js', 'M9-F13 C10'), ('m9/recursos/f13.js', 'M9-F13 C21'), ('m9/recursos/f13.js', 'M9-F13 C23'), ('scripts/provas/dados/2026-1f/grupo-i.json', 'E-2026-I fonte do gerador'), ('tarefas/m4-u1/aquecimento/index.html', 'A-M4 C05')])
+LIMITE_149_20261101 = frozenset([('docs/pedagogia/aquecimentos/m4-u1.json', 'A-M4 fonte do gerador'), ('exame/provas/2026-1f/grupo-i/index.html', 'E-2026-I C34'), ('m1/licao-m1-f20/index.html', 'M1-F20 C14'), ('m4/aulas/aula-01/index.html', 'M4 guião: C11 no núcleo'), ('m4/aulas/aula-01/index.html', 'M4 guião: C11 sai do complemento'), ('m4/aulas/aula-01/index.html', 'M4 guião: complementos'), ('m4/aulas/aula-01/index.html', 'M4 guião: contagem'), ('m4/aulas/aula-01/index.html', 'M4 guião: fecho 13'), ('m4/aulas/aula-01/index.html', 'M4 guião: leitura e produção'), ('m4/aulas/aula-01/index.html', 'M4 guião: lista de 13'), ('m4/aulas/aula-01/index.html', 'M4 guião: pergunta do arco'), ('m4/aulas/aula-01/index.html', 'M4 guião: turma no cartão 11'), ('m4/index.html', 'M4 prova: peça de fecho'), ('m4/index.html', 'M4 unidade 1: prova esperada'), ('m4/index.html', 'M4 unidade 2: prova esperada'), ('m4/index.html', 'M4 unidade 3: prova esperada'), ('m4/licao-m4-f01/index.html', 'M4-F01 C11'), ('m4/licao-m4-f01/index.html', 'M4-F01 C18'), ('m4/painel-m4-f01/index.html', 'M4-F01 painel: CARTOES'), ('m4/painel-m4-f01/index.html', 'M4-F01 painel: seletor'), ('m4/recursos/tpc-entrada.js', 'M4-F28 C03'), ('m4/recursos/tpc-entrada.js', 'M4-F28 C05'), ('m6/licao-m6-f01/index.html', 'M6-F01 C16'), ('m6/painel-m6-f01/index.html', 'M6-F01 painel: CARTOES'), ('m6/painel-m6-f01/index.html', 'M6-F01 painel: seletor'), ('m7/licao-m7-f34/index.html', 'M7-F34 C09'), ('m7/licao-m7-f34/index.html', 'M7-F34 C31'), ('m7/painel-m7-f34/index.html', 'M7-F34 painel: CARTOES'), ('m7/painel-m7-f34/index.html', 'M7-F34 painel: seletor'), ('m8/licao-m8-f12/index.html', 'M8-F12 C09'), ('m8/licao-m8-f12/index.html', 'M8-F12 C17'), ('m8/licao-m8-f12/index.html', 'M8-F12 C22'), ('m8/painel-m8-f12/index.html', 'M8-F12 painel: CARTOES'), ('m8/painel-m8-f12/index.html', 'M8-F12 painel: seletor'), ('m9/painel-m9-f13/index.html', 'M9 medição: impressão e noindex'), ('m9/painel-m9-f13/index.html', 'M9 medição: procedimento e rubrica'), ('m9/recursos/f13.js', 'M9-F13 C02'), ('m9/recursos/f13.js', 'M9-F13 C10'), ('m9/recursos/f13.js', 'M9-F13 C21'), ('m9/recursos/f13.js', 'M9-F13 C23'), ('scripts/provas/dados/2026-1f/grupo-i.json', 'E-2026-I fonte do gerador'), ('tarefas/m4-u1/aquecimento/index.html', 'A-M4 C05'), ('m4/painel-m4-f01/index.html', 'M4-F01 painel: MATERIAL'), ('m6/painel-m6-f01/index.html', 'M6-F01 painel: MATERIAL'), ('m7/painel-m7-f34/index.html', 'M7-F34 painel: MATERIAL'), ('m8/painel-m8-f12/index.html', 'M8-F12 painel: MATERIAL')])
 
 # 01/11/2026: as cópias serão atualizadas juntamente com a lição, sem dispensar a comparação atual.
 PENDENTES_DESAFIO_M8_20261101 = [
     ('m8/index.html', 'desafio U2: cópia de M8-F12 C09'),
 ]
+
+# 02/11/2026: o desafio da U1 do M6 guarda a cópia do C16 antigo; fica como está
+# (faz parte da camada literal do #144) e deixa de ter par na lição.
 
 # 01/11/2026: materiais gerados a refazer com a camada do #149 (não aceitam troca literal).
 # 02/11/2026: reúne os achados 5/14/21; regenerar nas fontes quando C11 entrar no núcleo.
@@ -965,6 +1317,8 @@ class Pendentes149(unittest.TestCase):
             self.assertTrue(any(c['p']==json.loads(e['antigo'])['p'] for c in pool),'Cópia inexistente no desafio: retirar o pendente')
             self.assertNotIn(json.loads(e['novo'])['p'],source,'Cópia corrigida: retirar o pendente')
 
+        self.assertIn(json.loads(next(e for e in PENDENTES_CAMADA_149_20261101 if e['local']=='M6-F01 C16')['antigo'])['p'],(ROOT/'m6/index.html').read_text('utf-8'))
+
     # 01/11/2026: proteger a serialização dos geradores e os materiais ainda por regenerar.
     def test_json_das_paginas_geradas(self):
         for e in PENDENTES_CAMADA_149_20261101:
@@ -983,6 +1337,27 @@ class Pendentes149(unittest.TestCase):
 
     # 01/11/2026: a aplicação futura conserva os seletores k/t/p dos painéis e a ordem de leitura do M6.
     def test_paineis_pendentes_correspondem_as_licoes(self):
+        # 02/11/2026: os seletores não levam marcas dos dados.
+        for e in PENDENTES_CAMADA_149_20261101:
+            if e['local'].endswith('painel: seletor'):
+                self.assertNotRegex(e['novo'],r'(?<![\w/])_[^_<>"]+_(?!\w)|\*\*',e['local'])
+                lesson=e['local'].split()[0]
+                changed={int(x['local'].split(' C')[1])-1 for x in PENDENTES_CAMADA_149_20261101 if re.fullmatch(lesson+r' C\d+',x['local'])}
+                options=lambda text:{int(m[1]):m[0] for m in re.finditer(r'<option value="(\d+)">.*?</option>',text)}
+                published=options((ROOT/e['ficheiro']).read_text('utf-8'))
+                for k,option in options(e['novo']).items():
+                    if k not in changed:self.assertEqual(option,published[k],(lesson,k))
+            # 02/11/2026: o relâmpago projeta as opções e a correção do cartão novo.
+            if e['local'].endswith('painel: MATERIAL'):
+                lesson=e['local'].split()[0];material=json.loads(e['novo'])
+                for change in PENDENTES_CAMADA_149_20261101:
+                    if not re.fullmatch(lesson+r' C\d+',change['local']):continue
+                    c=json.loads(change['novo']);k=int(change['local'].split(' C')[1])-1
+                    if c['t']=='ler':continue
+                    m=material[str(k)]
+                    self.assertEqual(m['f'],c['f']);self.assertEqual(m.get('cita'),c.get('cita'))
+                    self.assertFalse({'c','v','fe'}&set(m))
+                    if c['t']=='escolha':self.assertEqual(sorted(m['o']),sorted(c['o']))
         for e in PENDENTES_CAMADA_149_20261101:
             if not e['local'].endswith('painel: CARTOES'):continue
             lesson=e['local'].split()[0];cards=json.loads(e['novo'])
