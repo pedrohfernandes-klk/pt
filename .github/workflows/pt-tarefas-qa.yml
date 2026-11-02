@@ -3,6 +3,9 @@ name: Português, aulas de tarefa M1 a M9
 on:
   pull_request:
     paths:
+      # 02/11/2026: não há tarefas de grupo (camada das tarefas individuais).
+      - 'scripts/tarefas_individuais_20261102.*'
+      - 'tests/fixtures/tarefas-individuais-edits-20261102.json'
       # 01/11/2026: quatro tarefas, percursos e leituras M8/M9.
       - 'm8/**'
       - 'm9/**'
@@ -81,12 +84,16 @@ jobs:
           python -m unittest discover -s tests -p 'test_aquecimentos_m356_opcoes.py' -v
           # 01/11/2026: desfaz primeiro a camada das sete lições novas.
           # 01/11/2026: desfaz antes a camada do pedido B.
-          python scripts/aplicar_trocas.py scripts/tarefas_m356_20261031.json --manifesto tests/fixtures/tarefas-m356-edits-20261031.json --verificar --desfazer-antes tests/fixtures/cartaz-indices-edits-20261101.json --desfazer-antes tests/fixtures/licoes-m16-edits-20261101.json --desfazer-antes tests/fixtures/licoes-m89-edits-20261101.json --desfazer-antes tests/fixtures/tarefas-m89-edits-20261101.json
+          # 02/11/2026: desfaz antes de tudo a camada das tarefas individuais (a mais recente).
+          python scripts/aplicar_trocas.py scripts/tarefas_m356_20261031.json --manifesto tests/fixtures/tarefas-m356-edits-20261031.json --verificar --desfazer-antes tests/fixtures/tarefas-individuais-edits-20261102.json --desfazer-antes tests/fixtures/cartaz-indices-edits-20261101.json --desfazer-antes tests/fixtures/licoes-m16-edits-20261101.json --desfazer-antes tests/fixtures/licoes-m89-edits-20261101.json --desfazer-antes tests/fixtures/tarefas-m89-edits-20261101.json
           # 01/11/2026: verificar a camada nova e os quatro aquecimentos.
           python -m unittest discover -s tests -p 'test_aquecimentos_m89_opcoes.py' -v
           # 01/11/2026: desfaz primeiro a camada das sete lições novas.
           # 01/11/2026: desfaz antes a camada do pedido B.
-          python scripts/aplicar_trocas.py scripts/tarefas_m89_20261101.json --manifesto tests/fixtures/tarefas-m89-edits-20261101.json --verificar --desfazer-antes tests/fixtures/cartaz-indices-edits-20261101.json --desfazer-antes tests/fixtures/licoes-m16-edits-20261101.json --desfazer-antes tests/fixtures/licoes-m89-edits-20261101.json
+          # 02/11/2026: desfaz antes de tudo a camada das tarefas individuais (a mais recente).
+          python scripts/aplicar_trocas.py scripts/tarefas_m89_20261101.json --manifesto tests/fixtures/tarefas-m89-edits-20261101.json --verificar --desfazer-antes tests/fixtures/tarefas-individuais-edits-20261102.json --desfazer-antes tests/fixtures/cartaz-indices-edits-20261101.json --desfazer-antes tests/fixtures/licoes-m16-edits-20261101.json --desfazer-antes tests/fixtures/licoes-m89-edits-20261101.json
+          # 02/11/2026: a camada das tarefas individuais, a mais recente, confere com o ponto de partida.
+          python scripts/aplicar_trocas.py scripts/tarefas_individuais_20261102.json --manifesto tests/fixtures/tarefas-individuais-edits-20261102.json --verificar
           python scripts/auditar_aquecimentos_m1.py
           node --check assets/task-90.js
           node --check assets/task-reader.js

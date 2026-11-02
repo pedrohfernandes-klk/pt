@@ -838,6 +838,13 @@ def main():
                 # 31/10/2026: a substituição do percurso antigo é uma camada literal posterior.
                 posterior = ROOT / 'tests/fixtures/tarefas-m356-edits-20261031.json'
                 conferencia = texto
+                # 02/11/2026: a camada das tarefas individuais (a mais recente) desfaz-se antes dos índices, só para conferir.
+                individuais = ROOT / 'tests/fixtures/tarefas-individuais-edits-20261102.json'
+                if individuais.is_file():
+                    for edit in reversed(json.loads(individuais.read_text('utf-8'))['files'].get(rel, {}).get('edits', [])):
+                        if conferencia.count(edit['new']) != edit['occurrences']:
+                            raise ManifestoDesatualizado(f'{rel}: camada das tarefas individuais não confere')
+                        conferencia = conferencia.replace(edit['new'], edit['old'])
                 # 01/11/2026: o desenho dos índices desfaz-se antes das lições, só para conferir.
                 indices = ROOT / 'tests/fixtures/cartaz-indices-edits-20261101.json'
                 if indices.is_file():

@@ -174,7 +174,9 @@ def percurso(browser, host):
         assert t.evaluate('(el)=>el===el.parentElement.lastElementChild')
     assert 'Argumentar com versos' in page.locator('#m7-f10').inner_text()
     assert 'Louco, sim' in page.locator('#tarefa-unidade-3').inner_text()
-    assert 'pequenos grupos' in page.locator('#tarefa-unidade-2').inner_text()
+    # 02/11/2026: o docente — «não há tarefas de grupo»: a linha da U2 diz «apresentação individual» e nada de grupos.
+    t2 = page.locator('#tarefa-unidade-2').inner_text()
+    assert 'apresentação individual' in t2 and 'grupo' not in t2, t2
     sem_deslizar(page, 'percurso m7')
     page.locator('#aquecimento-unidade-3 a').click()
     page.wait_for_url('**/tarefas/m7-u3/aquecimento/')

@@ -269,10 +269,25 @@ def undo_tarefas_m89(path, text):
     return text
 
 
+# 02/11/2026: tarefas individuais (pedido do docente: não há tarefas de grupo), camada mais recente, por cima dos índices.
+_TAREFAS_INDIVIDUAIS = json.loads((ROOT / 'tests/fixtures/tarefas-individuais-edits-20261102.json').read_text('utf-8'))['files']
+
+
+def undo_tarefas_individuais(path, text):
+    relative = _relative(path)
+    for edit in reversed(_TAREFAS_INDIVIDUAIS.get(relative, {}).get('edits', [])):
+        if text.count(edit['new']) != edit['occurrences']:
+            raise AssertionError(f"Tarefas individuais de 02/11 não conferem: {relative}: {edit['location']}")
+        text = text.replace(edit['new'], edit['old'])
+    return text
+
+
 # 01/11/2026: índices Cartaz, camada mais recente sobre as dependências integradas.
 _CARTAZ_INDICES = json.loads((ROOT / 'tests/fixtures/cartaz-indices-edits-20261101.json').read_text('utf-8'))['files']
 
 def undo_cartaz_indices(path, text):
+    # 02/11/2026: a camada das tarefas individuais, mais recente, desfaz-se antes.
+    text = undo_tarefas_individuais(path, text)
     relative = _relative(path)
     for edit in reversed(_CARTAZ_INDICES.get(relative, {}).get('edits', [])):
         if text.count(edit['new']) != edit['occurrences']:
