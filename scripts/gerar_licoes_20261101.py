@@ -64,7 +64,10 @@ def render_notes(item):
     for card in item['cards']:
         if card['t']=='ler':continue
         feedback='<p>'+escape(card['f'])+'</p>'
-        if card.get('fe'):
+        # 02/11/2026: o retorno de erro é uma lista por opção nas escolhas e um texto único nos outros cartões de fazer.
+        if isinstance(card.get('fe'),str):
+            feedback+='<ul><li>'+escape(card['fe'])+'</li></ul>'
+        elif card.get('fe'):
             feedback+='<ul>'+''.join('<li>'+escape(f)+'</li>' for i,f in enumerate(card['fe']) if i!=card['c'])+'</ul>'
         perguntas.append('<li><p>'+escape(card['p'])+'</p><details><summary>Indícios e retorno</summary>'+feedback+'</details></li>')
     values=dict(TITLE=escape(item['title']),NUMBER=module[1:],ID=item['id'],QUESTION=escape(item['question']),CONTEXT=enquadramento,CARDS=''.join(perguntas))

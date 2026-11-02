@@ -12,12 +12,14 @@
 <style>
 .jogo .tit,.jogo .q{text-wrap:balance}
 .jogo .pares{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
-.jogo .pares .op,.jogo .pares .op .tx{min-width:0;hyphens:auto;overflow-wrap:break-word}
+/* 02/11/2026: as palavras dos pares ficam inteiras (sem hifenização automática); só uma palavra maior do que a coluna parte. */
+.jogo .pares .op,.jogo .pares .op .tx{min-width:0;-webkit-hyphens:manual;hyphens:manual;overflow-wrap:break-word}
 .casca-topo .c-marca{min-width:44px;justify-content:center}
 .casca-folha .c-veredito .c-pts{color:var(--suave)}
 .jogo .acoes-fim a,.jogo .depois a{display:inline-flex;align-items:center;min-height:44px}
 .jogo .xp{color:var(--suave)}
-@media(max-width:360px){.jogo .pares{column-gap:12px}.jogo .pares .op{padding-left:8px;padding-right:8px;gap:6px;font-size:.875rem}}
+@media(max-width:360px){.jogo .pares{column-gap:12px}.jogo .pares .op{padding-left:8px;padding-right:8px;gap:6px;font-size:.875rem}.jogo .pares .op.ligado{padding-left:7px;padding-right:7px}}
+@media(max-width:480px){.jogo .pares .op .marca-par{position:absolute;top:-9px;background:var(--papel)}.jogo .pares .esq .marca-par{right:-9px}.jogo .pares .dir .marca-par{left:-9px}.jogo .pares .op .marca-par:empty{display:none}}
 .jogo .ler blockquote{margin:1.25rem 0;padding:0 0 0 1rem;border-left:2px solid currentColor;line-height:1.65}
 .jogo .ler h3{font-size:1.3em;line-height:1.3}
 .jogo .ler table{width:100%;border-collapse:collapse;font-size:.9em}
@@ -33,7 +35,7 @@
 <main class="casca-corpo" tabindex="-1"><div id="baralho" class="jogo-alvo"></div></main>
 <footer class="casca-acoes" data-c-acoes></footer>
 <section class="casca-folha" data-c-folha role="status" aria-live="polite" hidden></section>
-<div class="casca-menu" data-c-painel hidden><div class="c-menu-in" role="dialog" aria-label="Menu"><div class="c-menu-cab"><p>Módulo @@NUMBER@@<br>Unidade @@UNIT@@</p><button type="button" class="c-ic" data-c-fecha-menu aria-label="Fechar o menu">✕</button></div><nav aria-label="Navegação da lição"><a href="../#@@ID@@">Esta lição no percurso</a><a href="@@PREVIOUS@@">Lição anterior</a><a href="@@NEXT@@">Lição seguinte</a><a href="../painel-@@ID@@/">Notas para a aula</a></nav><p class="c-menu-extra">As citações têm crédito junto ao texto. Os exemplos criados estão identificados. O progresso fica neste aparelho.</p></div></div>
+<div class="casca-menu" data-c-painel hidden><div class="c-menu-in" role="dialog" aria-label="Menu"><div class="c-menu-cab"><p>Módulo @@NUMBER@@<br>Unidade @@UNIT@@</p><button type="button" class="c-ic" data-c-fecha-menu aria-label="Fechar o menu">✕</button></div><nav aria-label="Navegação da lição"><a href="../#@@ID@@">Esta lição no percurso</a><a href="@@PREVIOUS@@">Lição anterior</a><a href="@@NEXT@@">Lição seguinte</a></nav><p class="c-menu-extra">As citações têm crédito junto ao texto. Os exemplos criados estão identificados. O progresso fica neste aparelho.</p></div></div>
 </div>
 <noscript>Esta lição precisa de JavaScript. <a href="../">Voltar ao módulo</a>.</noscript>
 <script>

@@ -1,43 +1,7 @@
 {
- "base_commit": "8e3303b7bf0d2451d894d590ad31e5c1305d5b0c",
+ "base_commit": "fe2d829e53a384c76fd00e77833bd0593d117841",
  "_nota": "02/11/2026: lote 2 sobre a correção do pedido 150, com etiquetas e contagens preservadas.",
  "files": {
-  "m1/index.html": {
-   "base_sha256_lf": "70d385b53e37bbe947d0fc38455d47ab7bab5298a0d0f4f4d4b2cff615650b61",
-   "after_sha256_lf": "5b5bf51f8d277269c707812686d158b8643e8042e2ee28f37b2549b883cbb507",
-   "edits": [
-    {
-     "location": "Prova da unidade 1",
-     "old": "n><span class=\"t\">Tarefa da Unidade 1 · Vozes da lírica medieval</span><span class=\"f\">Aula de 90 minutos com consulta, síntese integrada, trabalho em papel e fotografias no Teams.</span></span><span class=\"chip\">90 min</span></a></li></ol>",
-     "new": "n><span class=\"t\">Tarefa da Unidade 1 · Vozes da lírica medieval</span><span class=\"f\">Aula de 90 minutos com consulta, síntese integrada, trabalho em papel e fotografias no Teams.</span></span><span class=\"chip\">90 min</span></a></li></ol><p class=\"prova-esperada\">No fim, distingues autor e voz, explicas o efeito de uma repetição e confrontas uma promessa com versos que a confirmam ou desmentem.</p>",
-     "occurrences": 1
-    },
-    {
-     "location": "Prova da unidade 2",
-     "old": "n><span><span class=\"t\">Tarefa da Unidade 2 · Crónica «Estar lá»</span><span class=\"f\">Aula de 90 minutos com consulta, síntese integrada, trabalho em papel e fotografias no Teams.</span></span><span class=\"chip\">90 min</span></a></li></ol>",
-     "new": "n><span><span class=\"t\">Tarefa da Unidade 2 · Crónica «Estar lá»</span><span class=\"f\">Aula de 90 minutos com consulta, síntese integrada, trabalho em papel e fotografias no Teams.</span></span><span class=\"chip\">90 min</span></a></li></ol><p class=\"prova-esperada\">No fim, escreves uma crónica com duas fontes, distingues o que está documentado do que inferes ou imaginas e justificas uma revisão do teu texto.</p>",
-     "occurrences": 1
-    },
-    {
-     "location": "Estilo da prova esperada",
-     "old": "</head>",
-     "new": "<style id=\"prova-esperada-lote2\">.unidade>.prova-esperada{margin:8px 0 0;padding-left:43px;max-width:calc(70ch + 43px);font:400 1rem/1.5 Georgia,serif;color:var(--suave)}@media (min-width:601px){.unidade>.prova-esperada{padding-left:64px;max-width:calc(70ch + 64px)}}.unidade>.prova-esperada::before{content:\"Prova da unidade\";display:block;margin:0 0 4px;font:700 .8125rem/1.3 Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--tinta)}</style></head>",
-     "occurrences": 1
-    },
-    {
-     "location": "Pesos na dobra do índice",
-     "old": "<details class=\"regra\"><summary>Como se cumpre uma unidade</summary><div>Fazes as aulas de leitura e preparação e fechas a unidade na aula de tarefa: produção em papel, uma síntese simples integrada e fotografias no Teams. A avaliação é feita pelo docente. A tarefa organiza a produção prevista para a unidade; não exige repetir uma produção já realizada.</div></details>",
-     "new": "<details class=\"regra\"><summary>Como se cumpre uma unidade</summary><div>Fazes as aulas de leitura e preparação e fechas a unidade na aula de tarefa: produção em papel, uma síntese simples integrada e fotografias no Teams. A avaliação é feita pelo docente. A tarefa organiza a produção prevista para a unidade; não exige repetir uma produção já realizada.<p class=\"avaliacao-tarefas\">Pesos na avaliação: tarefa da Unidade 1, 30 %; tarefa da Unidade 2, 30 %; provas rápidas, 10 %; prova escrita, 30 %. Cada tarefa tem uma grelha /20.</p></div></details>",
-     "occurrences": 1
-    },
-    {
-     "location": "Desafio do arquivo, crónica",
-     "old": "{\"t\":\"completar\",\"p\":\"Que peso e que extensão tem a crónica do módulo?\",\"frase\":\"A crónica do módulo é a tarefa de [1] e tem [2] palavras, para leitores de uma revista de história para jovens.\",\"lacunas\":[{\"o\":[\"50 %\",\"25 %\",\"10 %\"],\"c\":1},{\"o\":[\"80 a 120\",\"180 a 240\",\"250 a 300\"],\"c\":2}],\"f\":\"Tarefa de 25 %, 250 a 300 palavras, para uma revista de história para jovens: unidade 1 do projeto do ano.\",\"_l\":\"m1-f10\"}",
-     "new": "{\"t\":\"completar\",\"p\":\"Que peso tem a tarefa da unidade 2 e que extensão tinha a crónica preparada na F10?\",\"frase\":\"A tarefa da unidade 2 vale [1]. A preparação da F10 propunha [2] palavras; na aula de tarefa, segue a extensão do enunciado atual.\",\"lacunas\":[{\"o\":[\"25 %\",\"30 %\",\"35 %\"],\"c\":1},{\"o\":[\"80 a 120\",\"180 a 240\",\"250 a 300\"],\"c\":2}],\"f\":\"A tarefa da unidade 2 vale 30 %. A preparação da F10 propunha 250 a 300 palavras; a tarefa atual pede uma crónica de 160 a 200 palavras, além do núcleo comum.\",\"_l\":\"m1-f10\"}",
-     "occurrences": 1
-    }
-   ]
-  },
   "m1/licao-m1-f01/index.html": {
    "base_sha256_lf": "273b3bad9310e8e6dafa3330b7ad7d516937c20ebc8a896b5841530c520d1790",
    "after_sha256_lf": "0feae1a1e1f7e02f3295b153628394c67e8d016b93f061b7b29fdb6f3596b847",
@@ -128,6 +92,24 @@
     }
    ]
   },
+  "m1/index.html": {
+   "base_sha256_lf": "b46a22fd95040531aa3ef7a125551eaf310992f21b101828e3e9b3b101228cce",
+   "after_sha256_lf": "3b5c6772a6939860064950f3f4d1c30846d2eb56f3d7bf2f7c196e8a075bec22",
+   "edits": [
+    {
+     "location": "Pesos na dobra do índice",
+     "old": "<details class=\"regra\"><summary>Como se cumpre uma unidade</summary><div>Fazes as aulas de leitura e preparação e fechas a unidade na aula de tarefa: produção em papel, uma síntese simples integrada e fotografias no Teams. A avaliação é feita pelo docente. A tarefa organiza a produção prevista para a unidade; não exige repetir uma produção já realizada.</div></details>",
+     "new": "<details class=\"regra\"><summary>Como se cumpre uma unidade</summary><div>Fazes as aulas de leitura e preparação e fechas a unidade na aula de tarefa: produção em papel, uma síntese simples integrada e fotografias no Teams. A avaliação é feita pelo docente. A tarefa organiza a produção prevista para a unidade; não exige repetir uma produção já realizada.<p class=\"avaliacao-tarefas\">Pesos na avaliação: tarefa da Unidade 1, 30 %; tarefa da Unidade 2, 30 %; provas rápidas, 10 %; prova escrita, 30 %. Cada tarefa tem uma grelha /20.</p></div></details>",
+     "occurrences": 1
+    },
+    {
+     "location": "Desafio do arquivo, crónica",
+     "old": "{\"t\":\"completar\",\"p\":\"Que peso e que extensão tem a crónica do módulo?\",\"frase\":\"A crónica do módulo é a tarefa de [1] e tem [2] palavras, para leitores de uma revista de história para jovens.\",\"lacunas\":[{\"o\":[\"50 %\",\"25 %\",\"10 %\"],\"c\":1},{\"o\":[\"80 a 120\",\"180 a 240\",\"250 a 300\"],\"c\":2}],\"f\":\"Tarefa de 25 %, 250 a 300 palavras, para uma revista de história para jovens: unidade 1 do projeto do ano.\",\"_l\":\"m1-f10\"}",
+     "new": "{\"t\":\"completar\",\"p\":\"Que peso tem a tarefa da unidade 2 e que extensão tinha a crónica preparada na F10?\",\"frase\":\"A tarefa da unidade 2 vale [1]. A preparação da F10 propunha [2] palavras; na aula de tarefa, segue a extensão do enunciado atual.\",\"lacunas\":[{\"o\":[\"25 %\",\"30 %\",\"35 %\"],\"c\":1},{\"o\":[\"80 a 120\",\"180 a 240\",\"250 a 300\"],\"c\":2}],\"f\":\"A tarefa da unidade 2 vale 30 %. A preparação da F10 propunha 250 a 300 palavras; a tarefa atual pede uma crónica de 160 a 200 palavras, além do núcleo comum.\",\"_l\":\"m1-f10\"}",
+     "occurrences": 1
+    }
+   ]
+  },
   "m1/licao-m1-f10/index.html": {
    "base_sha256_lf": "bc632b8f73ee1964cc95b9aeb23a507eec59827c2b69e5c9776f3e0d968e9a52",
    "after_sha256_lf": "3d3110f224e85bacf228812682b5aa800633686380224d81e7655db27877dda9",
@@ -141,13 +123,13 @@
    ]
   },
   "m1/mapa-do-modulo-m1/index.html": {
-   "base_sha256_lf": "3478c449ce6d2cfa50c97d3811171dd4675ba692f31ed7003ab8ba55178ee384",
-   "after_sha256_lf": "30c0af1d68eaa13062fa8152dcb2b6d282a13628541c5578f2eb704355978437",
+   "base_sha256_lf": "3b3000f0635dd36d1047c85db5abeddbf5efcb2195c099c3a2e678242bca237c",
+   "after_sha256_lf": "c716d840574a89c991277e9586d0583a49ff0d16debed82841a39467f34dfec0",
    "edits": [
     {
      "location": "Mapa, tarefas e avaliação",
-     "old": "<details class=\"sec\" id=\"tarefas\"><summary>As tarefas do Teams</summary><div class=\"tarefa\"><span class=\"tn\">1</span><div><b>Cantiga de amigo com iluminura</b><span class=\"peso\">25 %, individual</span><span class=\"crit\">Voz e situação; Forma de cantiga; Iluminura e entrega; Respostas das unidades (percurso)</span></div></div><div class=\"tarefa\"><span class=\"tn\">2</span><div><b>Cantiga de escárnio de 2026</b><span class=\"peso\">25 %, em grupo de 2 ou 3</span><span class=\"crit\">Elogio falso e palavras cobertas; Forma e leitura; Alvo, língua e grupo</span></div></div><div class=\"tarefa\"><span class=\"tn\">3</span><div><b>Crónica «Estar lá», a partir do passeio literário</b><span class=\"peso\">25 %, individual</span><span class=\"crit\">Momento e método; Fontes e factos confirmados; Língua e número de palavras</span></div></div><p class=\"aval\"><b>Como se avalia:</b> três tarefas no Teams (25 % cada), provas rápidas (10 %, média das três; conta a primeira tentativa) e uma prova escrita de 45 minutos (15 %). <b>Em papel:</b> a Revisão 1, a Revisão 2 e a prova escrita; tudo o resto está aqui e no Teams.</p></details>",
-     "new": "<details class=\"sec\" id=\"tarefas\"><summary>As tarefas do Teams</summary><p>As aulas de tarefa atuais são «Vozes da lírica medieval» (Unidade 1, 30 %) e «Crónica “Estar lá”» (Unidade 2, 30 %). Os produtos seguintes pertencem ao arquivo de propostas anteriores do guia; não acrescentam pesos à avaliação atual.</p><div class=\"tarefa\"><span class=\"tn\">1</span><div><b>Cantiga de amigo com iluminura</b><span class=\"peso\">Arquivo, sem peso próprio</span><span class=\"crit\">Voz e situação; Forma de cantiga; Iluminura e entrega; Respostas das unidades (percurso)</span></div></div><div class=\"tarefa\"><span class=\"tn\">2</span><div><b>Cantiga de escárnio de 2026</b><span class=\"peso\">Arquivo, sem peso próprio</span><span class=\"crit\">Elogio falso e palavras cobertas; Forma e leitura; Alvo, língua e grupo</span></div></div><div class=\"tarefa\"><span class=\"tn\">3</span><div><b>Crónica «Estar lá», a partir do passeio literário</b><span class=\"peso\">Arquivo, sem peso próprio</span><span class=\"crit\">Momento e método; Fontes e factos confirmados; Língua e número de palavras</span></div></div><p class=\"aval\"><b>Como se avalia:</b> duas tarefas de unidade no Teams (30 % cada), provas rápidas (10 %, média das três; conta a primeira tentativa) e uma prova escrita de 45 minutos (30 %). <b>Em papel:</b> a Revisão 1, a Revisão 2 e a prova escrita; tudo o resto está aqui e no Teams.</p></details>",
+     "old": "<details class=\"sec\" id=\"tarefas\"><summary>As tarefas do Teams</summary><div class=\"tarefa\"><span class=\"tn\">1</span><div><b>Cantiga de amigo com iluminura</b><span class=\"peso\">25 %, individual</span><span class=\"crit\">Voz e situação; Forma de cantiga; Iluminura e entrega; Respostas das unidades (percurso)</span></div></div><div class=\"tarefa\"><span class=\"tn\">2</span><div><b>Cantiga de escárnio de 2026</b><span class=\"peso\">25 %, individual</span><span class=\"crit\">Elogio falso e palavras cobertas; Forma e leitura; Alvo e língua</span></div></div><div class=\"tarefa\"><span class=\"tn\">3</span><div><b>Crónica «Estar lá», a partir do passeio literário</b><span class=\"peso\">25 %, individual</span><span class=\"crit\">Momento e método; Fontes e factos confirmados; Língua e número de palavras</span></div></div><p class=\"aval\"><b>Como se avalia:</b> três tarefas no Teams (25 % cada), provas rápidas (10 %, média das três; conta a primeira tentativa) e uma prova escrita de 45 minutos (15 %). <b>Em papel:</b> a Revisão 1, a Revisão 2 e a prova escrita; tudo o resto está aqui e no Teams.</p></details>",
+     "new": "<details class=\"sec\" id=\"tarefas\"><summary>As tarefas do Teams</summary><p>As aulas de tarefa atuais são «Vozes da lírica medieval» (Unidade 1, 30 %) e «Crónica “Estar lá”» (Unidade 2, 30 %). Os produtos seguintes pertencem ao arquivo de propostas anteriores do guia; não acrescentam pesos à avaliação atual.</p><div class=\"tarefa\"><span class=\"tn\">1</span><div><b>Cantiga de amigo com iluminura</b><span class=\"peso\">Arquivo, sem peso próprio</span><span class=\"crit\">Voz e situação; Forma de cantiga; Iluminura e entrega; Respostas das unidades (percurso)</span></div></div><div class=\"tarefa\"><span class=\"tn\">2</span><div><b>Cantiga de escárnio de 2026</b><span class=\"peso\">Arquivo, sem peso próprio</span><span class=\"crit\">Elogio falso e palavras cobertas; Forma e leitura; Alvo e língua</span></div></div><div class=\"tarefa\"><span class=\"tn\">3</span><div><b>Crónica «Estar lá», a partir do passeio literário</b><span class=\"peso\">Arquivo, sem peso próprio</span><span class=\"crit\">Momento e método; Fontes e factos confirmados; Língua e número de palavras</span></div></div><p class=\"aval\"><b>Como se avalia:</b> duas tarefas de unidade no Teams (30 % cada), provas rápidas (10 %, média das três; conta a primeira tentativa) e uma prova escrita de 45 minutos (30 %). <b>Em papel:</b> a Revisão 1, a Revisão 2 e a prova escrita; tudo o resto está aqui e no Teams.</p></details>",
      "occurrences": 1
     }
    ]
@@ -183,8 +165,8 @@
    ]
   },
   "m6/index.html": {
-   "base_sha256_lf": "92c213acfcd41f8e043833845f118a5de4c72a099c25a45778da5fcd741672ad",
-   "after_sha256_lf": "3147486c8573f5c138e89f60df14d59a9f733e0557b1cb421b5103aa2502d993",
+   "base_sha256_lf": "c86e055efe9e6830ae0fcdfb786d6347dd5a9b6aca3e5eddd1cd307001797b1b",
+   "after_sha256_lf": "e5908795528e51761ca59ef2de6ede54c2b96e1643ecf41603b34da84aa2bcc2",
    "edits": [
     {
      "location": "Desafio de arquivo, retorno sobre a hipálage",
@@ -195,8 +177,8 @@
    ]
   },
   "m8/index.html": {
-   "base_sha256_lf": "71e89e755498789e67bb4cf892355d8c2305ec14fe074c40fc8975738f32262d",
-   "after_sha256_lf": "bf98dc861309178d1d5e16b3f775e449e44114c0df942709c710c7dacf8035cb",
+   "base_sha256_lf": "ab4eb64458db6834d90780e325278e6db72115dddafa444ed03e195c84b4bd3a",
+   "after_sha256_lf": "55c40f1bfdfa833abf819d4ee66e952db4cb57b3b4aa91c9b28f716aa0bb328c",
    "edits": [
     {
      "location": "Desafio de arquivo, variante da comparação entre poema e conto",
@@ -207,8 +189,8 @@
    ]
   },
   "m4/index.html": {
-   "base_sha256_lf": "9433d90ffe8ba3ec4f06f9b2f3edc20debf089fb748a948cf789e316fcd3b2a8",
-   "after_sha256_lf": "0db5577a9c241ff36a1cf02a1a9b2f955b090af6c5ad00a0ed493e0a70bfb394",
+   "base_sha256_lf": "4ff8eed49052927a071c0d4c419e20c20eae953a203714d38233a5844aa99761",
+   "after_sha256_lf": "78287c5f6ca5071941dbfa13658fcf00135613857d4b07f4266a518acb4ffb89",
    "edits": [
     {
      "location": "Pesos na dobra do índice",
@@ -219,8 +201,8 @@
    ]
   },
   "m7/index.html": {
-   "base_sha256_lf": "6639bb76cd14b016863762bddd42dfe79ae6d9a1adfe46894ea5b3f0f8bedd90",
-   "after_sha256_lf": "7d7c846c7af6ba367bca430f3f2ecbb28788a1f2463b20874ab3bd34283220b5",
+   "base_sha256_lf": "1558c4aeaa03d2a4e8be7aebeeddb7cffa246941ad11c8b4c754d8f62524ef5d",
+   "after_sha256_lf": "867b177f737ca9f6e8aec8775ee1d9ca96848805c3640707343777bdc6bef438",
    "edits": [
     {
      "location": "Pesos na dobra do índice",
@@ -231,8 +213,8 @@
    ]
   },
   "m2/index.html": {
-   "base_sha256_lf": "398fca35136c3b826e720c365837e6fc926cb398c64c87ecf939990902586ef6",
-   "after_sha256_lf": "57405b3a3c4c48028894d33ed8082da3c4872d864b63c13103418dad3d9f9b21",
+   "base_sha256_lf": "d011df8e61d4a3b391b1a3a1c33faca19b540647643586c36209c18d71c67425",
+   "after_sha256_lf": "6182df49c7ce979a34b7b9dcc18a15fa1e86d58f2c8ee8d14424252956d42e81",
    "edits": [
     {
      "location": "Pesos na dobra do índice",
@@ -243,13 +225,13 @@
    ]
   },
   "m2/mapa-do-modulo-m2/index.html": {
-   "base_sha256_lf": "a6c85f0d777821e226551d666cfbf69e14a8913fcd9faacce617bcb975b10f1c",
-   "after_sha256_lf": "8d23caa54a1f831ac02986c3463c2389b6bfb83079a6526c41a6b42946651de9",
+   "base_sha256_lf": "23e39ec6e37fadbbc965a104563d0df51014a4f7e12164adb1b9d140ab9cc840",
+   "after_sha256_lf": "0539a11ca85974c1a1edc73d74f5861b6c3dd33258eefa23d61f64067cd2919d",
    "edits": [
     {
      "location": "Mapa, tarefas e avaliação",
-     "old": "<details class=\"sec\" id=\"tarefas\"><summary>As tarefas do Teams</summary><div class=\"tarefa\"><span class=\"tn\">1</span><div><b>Apreciação crítica da Farsa de Inês Pereira no teatro</b><span class=\"peso\">25 %, individual</span><span class=\"crit\">Descrição e juízo; Provas; Língua e género; Respostas das unidades (percurso)</span></div></div><div class=\"tarefa\"><span class=\"tn\">2</span><div><b>Recontagem contemporânea da farsa em vídeo</b><span class=\"peso\">25 %, em grupo</span><span class=\"crit\">Fidelidade e escolha; A cena assinada; Produção e apresentação</span></div></div><div class=\"tarefa\"><span class=\"tn\">3</span><div><b>Dois anúncios de casamento</b><span class=\"peso\">25 %, em grupo de 2 ou 3</span><span class=\"crit\">Marcas da farsa; Registo e contraste; Limite, áudio e grupo</span></div></div><p class=\"aval\"><b>Como se avalia:</b> três tarefas no Teams (25 % cada), provas rápidas (10 %, média das três; conta a primeira tentativa) e uma prova escrita de 45 minutos (15 %). <b>Em papel:</b> a Revisão 1, a Revisão 2 e a prova escrita; tudo o resto está aqui e no Teams.</p></details>",
-     "new": "<details class=\"sec\" id=\"tarefas\"><summary>As tarefas do Teams</summary><p>As aulas de tarefa atuais são «Duas escolhas, que liberdade?» (Unidade 1, 30 %) e «Dois anúncios de casamento» (Unidade 2, 30 %). Os produtos seguintes pertencem ao arquivo de propostas anteriores do guia; não acrescentam pesos à avaliação atual.</p><div class=\"tarefa\"><span class=\"tn\">1</span><div><b>Apreciação crítica da Farsa de Inês Pereira no teatro</b><span class=\"peso\">Arquivo, sem peso próprio</span><span class=\"crit\">Descrição e juízo; Provas; Língua e género; Respostas das unidades (percurso)</span></div></div><div class=\"tarefa\"><span class=\"tn\">2</span><div><b>Recontagem contemporânea da farsa em vídeo</b><span class=\"peso\">Arquivo, sem peso próprio</span><span class=\"crit\">Fidelidade e escolha; A cena assinada; Produção e apresentação</span></div></div><div class=\"tarefa\"><span class=\"tn\">3</span><div><b>Dois anúncios de casamento</b><span class=\"peso\">Arquivo, sem peso próprio</span><span class=\"crit\">Marcas da farsa; Registo e contraste; Limite, áudio e grupo</span></div></div><p class=\"aval\"><b>Como se avalia:</b> duas tarefas de unidade no Teams (30 % cada), provas rápidas (10 %, média das três; conta a primeira tentativa) e uma prova escrita de 45 minutos (30 %). <b>Em papel:</b> a Revisão 1, a Revisão 2 e a prova escrita; tudo o resto está aqui e no Teams.</p></details>",
+     "old": "<details class=\"sec\" id=\"tarefas\"><summary>As tarefas do Teams</summary><div class=\"tarefa\"><span class=\"tn\">1</span><div><b>Apreciação crítica da Farsa de Inês Pereira no teatro</b><span class=\"peso\">25 %, individual</span><span class=\"crit\">Descrição e juízo; Provas; Língua e género; Respostas das unidades (percurso)</span></div></div><div class=\"tarefa\"><span class=\"tn\">2</span><div><b>Recontagem contemporânea da farsa em vídeo</b><span class=\"peso\">25 %, individual</span><span class=\"crit\">Fidelidade e escolha; Cenas e apartes; Produção e apresentação</span></div></div><div class=\"tarefa\"><span class=\"tn\">3</span><div><b>Dois anúncios de casamento</b><span class=\"peso\">25 %, individual</span><span class=\"crit\">Marcas da farsa; Registo e contraste; Limite e áudio</span></div></div><p class=\"aval\"><b>Como se avalia:</b> três tarefas no Teams (25 % cada), provas rápidas (10 %, média das três; conta a primeira tentativa) e uma prova escrita de 45 minutos (15 %). <b>Em papel:</b> a Revisão 1, a Revisão 2 e a prova escrita; tudo o resto está aqui e no Teams.</p></details>",
+     "new": "<details class=\"sec\" id=\"tarefas\"><summary>As tarefas do Teams</summary><p>As aulas de tarefa atuais são «Duas escolhas, que liberdade?» (Unidade 1, 30 %) e «Dois anúncios de casamento» (Unidade 2, 30 %). Os produtos seguintes pertencem ao arquivo de propostas anteriores do guia; não acrescentam pesos à avaliação atual.</p><div class=\"tarefa\"><span class=\"tn\">1</span><div><b>Apreciação crítica da Farsa de Inês Pereira no teatro</b><span class=\"peso\">Arquivo, sem peso próprio</span><span class=\"crit\">Descrição e juízo; Provas; Língua e género; Respostas das unidades (percurso)</span></div></div><div class=\"tarefa\"><span class=\"tn\">2</span><div><b>Recontagem contemporânea da farsa em vídeo</b><span class=\"peso\">Arquivo, sem peso próprio</span><span class=\"crit\">Fidelidade e escolha; Cenas e apartes; Produção e apresentação</span></div></div><div class=\"tarefa\"><span class=\"tn\">3</span><div><b>Dois anúncios de casamento</b><span class=\"peso\">Arquivo, sem peso próprio</span><span class=\"crit\">Marcas da farsa; Registo e contraste; Limite e áudio</span></div></div><p class=\"aval\"><b>Como se avalia:</b> duas tarefas de unidade no Teams (30 % cada), provas rápidas (10 %, média das três; conta a primeira tentativa) e uma prova escrita de 45 minutos (30 %). <b>Em papel:</b> a Revisão 1, a Revisão 2 e a prova escrita; tudo o resto está aqui e no Teams.</p></details>",
      "occurrences": 1
     }
    ]

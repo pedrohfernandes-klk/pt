@@ -71,8 +71,8 @@ documento('cesario-verde-columbano-1887', 'Columbano Bordalo Pinheiro',
  'https://commons.wikimedia.org/wiki/File:CesarioVerde_Columbano.jpg',
  'Retrato desenhado de Cesário Verde, com bigode, assinado por Columbano.')
 USOS.update({
- 'm3-f19': ('camoes-rimas-1595', 'Página de título de <i>Rhythmas</i>, de 1595, uma edição póstuma da poesia de Camões.'),
- 'm5-f17': ('camilo-1882', 'Camilo Castelo Branco, fotografado em 1882. O retrato identifica o autor, não a personagem de Simão.'),
+ 'm3-f19': ('camoes-rimas-1595', '<i>Rhythmas</i>, 1595: página de título da edição póstuma da poesia de Camões.'),
+ 'm5-f17': ('camilo-1882', 'Camilo Castelo Branco em 1882. O retrato mostra o autor, não Simão.'),
  'm6-f14': ('antero-de-quental-1887', 'Antero de Quental num retrato de cerca de 1887, posterior à conferência de 1871.'),
 })
 IMAGENS['antero-de-quental-1887']['data_html'] = 'Cerca de 1887; publicado em <i>In Memoriam</i>, 1896'

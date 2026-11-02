@@ -59,6 +59,16 @@ def main():
                             return [...card.querySelectorAll('.pares .op,.pares .tx')].filter(e=>e.getBoundingClientRect().right>edge+1 || (e.matches('.tx') && e.scrollWidth>e.clientWidth+1)).map(e=>({text:e.textContent,tag:e.className,right:e.getBoundingClientRect().right,edge,scroll:e.scrollWidth,width:e.clientWidth}));
                         }""")
                         assert not outside,(item['id'],outside)
+                    # 02/11/2026: nenhuma palavra dos pares se parte a meio sem hífen (320 e 390 px).
+                    if width in (320,390) and page.locator('#baralho .cartao .pares').count():
+                        page.locator('#baralho .cartao').evaluate('async e=>{await Promise.all(e.getAnimations({subtree:true}).filter(a=>a.effect.getTiming().iterations!==Infinity).map(a=>a.finished.catch(()=>{})))}')
+                        split=page.locator('#baralho .cartao').evaluate("""card=>{const r=document.createRange(),out=[];
+                            for(const tx of card.querySelectorAll('.pares .tx')){const w=document.createTreeWalker(tx,NodeFilter.SHOW_TEXT);let n;
+                              while(n=w.nextNode()){const re=/\\S+/g;let m;while(m=re.exec(n.textContent)){if(m[0].includes('-'))continue;
+                                r.setStart(n,m.index);r.setEnd(n,m.index+m[0].length);
+                                if(new Set([...r.getClientRects()].filter(x=>x.width>0).map(x=>Math.round(x.top))).size>1)out.push(m[0])}}}
+                            return out}""")
+                        assert not split,(item['id'],width,split)
                     text=page.locator('#baralho .cartao').inner_text()
                     seen.add(page.locator('[data-c-num]').inner_text())
                     result=respond(page)

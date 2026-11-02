@@ -39,6 +39,11 @@ try:
    steps=page.locator('[data-unidade="2"] .passos > li[data-passo]')
    assert steps.first.get_attribute('id')=='m4-f28'
    assert steps.nth(1).get_attribute('id')=='m4-f07'
+   # 01/11/2026: no telemóvel, abrir a unidade pelo controlo nativo antes da ligação.
+   fold=page.locator('[data-cz-unit="2"]')
+   if fold.count() and fold.get_attribute('open') is None:
+    fold.locator(':scope > summary').press('Enter')
+    assert fold.get_attribute('open') is not None
    steps.first.get_by_role('link').click()
    # 23/10/2026: espera pelo cartão desenhado (lido logo a seguir ao clique, o #baralho ainda vazio dava falsos erros em máquinas lentas)
    page.wait_for_url('**/licao-m4-f28/');page.locator('#baralho .cartao').wait_for()

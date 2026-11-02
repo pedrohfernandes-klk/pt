@@ -1,3 +1,4 @@
+# 01/11/2026: a linha mantém destino e número e passa a usar a peça cz-row.
 # 01/11/2026: nove lições no M1/M2/M3/M5/M6 elevam o inventário a 125.
 """Aquecimentos em cartões antes das aulas de tarefa (29/10/2026, decisões do docente; piloto no M7).
 
@@ -10,6 +11,8 @@ passagens reservadas à tarefa (o aquecimento não faz a tarefa por ti). A taref
 
 29/10/2026: a unidade 3 do M7 deixa o «Dia Pessoa» (tarefa nova «Louco, sim», F10 reescrita como «Argumentar com
 versos», página da visita como caderno de campo facultativo) e a U2 faz as apresentações em pequenos grupos.
+02/11/2026: o docente — «não há tarefas de grupo». A apresentação da U2 passa a ser individual, sem grupos; o contrato
+test_u2_apresentacao_individual substitui o das apresentações em pequenos grupos e proíbe o regresso dos grupos.
 
 29/10/2026 (revisão pedagógica e técnica): as citações da U3 e da F10 conferem-se só nas lições que esta camada não
 escreve; o validador olha também para o título, a descrição e o menu, e não distingue maiúsculas nas passagens reservadas;
@@ -178,7 +181,7 @@ class Aquecimentos(unittest.TestCase):
                 self.assertEqual(linha.get('class'), 'aula-aquecimento')
                 self.assertNotIn('data-passo', linha)
                 self.assertNotIn('data-task-lesson', linha)
-                self.assertIn(f'<li class="aula-aquecimento" id="aquecimento-unidade-{n}"><a href="../tarefas/{slug}/aquecimento/"><span class="n">A</span>', indice)
+                self.assertIn(f'<li class="aula-aquecimento" id="aquecimento-unidade-{n}"><a class="cz-row" href="../tarefas/{slug}/aquecimento/"><span class="n">A</span>', indice)
                 self.assertTrue((ROOT / 'tarefas' / slug / 'aquecimento' / 'index.html').is_file())
         css = (ROOT / 'assets/task-90.css').read_text('utf-8')
         self.assertIn('.task-aquecer a{', css)
@@ -224,24 +227,29 @@ class Aquecimentos(unittest.TestCase):
                     self.assertRegex(facto['facto'], r'\b1[0-9]{3}\b')
         self.assertIn('o facto que usares tem de ter data', tarefa['temas'][1]['texto'])
 
-    def test_u2_apresentacoes_em_pequenos_grupos(self):
+    def test_u2_apresentacao_individual(self):
         # Decisão 5 do docente: a tarefa, o guia e a linha do percurso dizem o mesmo.
+        # 02/11/2026: o docente — «não há tarefas de grupo». A apresentação passa a ser individual: as frases dos grupos
+        # saem da tarefa, do guia, da linha do percurso e do aquecimento, e não podem voltar.
         tarefa = (ROOT / 'tarefas/m7-u2/index.html').read_text('utf-8')
         guia = (ROOT / 'm7/guia-da-tarefa-m7/index.html').read_text('utf-8')
         indice = (ROOT / 'm7/index.html').read_text('utf-8')
-        self.assertIn('As apresentações fazem-se em pequenos grupos de 4 ou 5, todos ao mesmo tempo, com o docente a circular.', tarefa)
-        self.assertIn('Apresenta a voz ao teu grupo em dois minutos', tarefa)
-        self.assertIn('apresentações em pequenos grupos, ao mesmo tempo</li>', guia)
-        self.assertIn('Apresenta-o ao teu grupo de 4 ou 5 colegas', guia)
+        aquecimento = (ROOT / 'tarefas/m7-u2/aquecimento/index.html').read_text('utf-8')
+        self.assertIn('A apresentação é individual.', tarefa)
+        self.assertIn('Apresenta a voz em dois minutos, lê uma frase e responde a uma pergunta.', tarefa)
+        self.assertIn('apresentação individual</li>', guia)
+        self.assertIn('Apresenta-o em dois minutos e lê uma frase dele.', guia)
         linha_t = re.search(r'<li class="aula-tarefa" data-task-lesson="2".*?</li>', indice).group(0)
-        self.assertIn('apresentações em pequenos grupos ao mesmo tempo', linha_t)
+        self.assertIn('apresentação individual e fotografias no Teams.', linha_t)
         self.assertIn('aquecimento em cartões no início', linha_t)
         self.assertIn('No início da aula de tarefa', dados('m7-u2')['cartoes'][0]['html'])
-        self.assertNotIn('em grupo', tarefa)
+        for texto in (tarefa, guia, linha_t, aquecimento, json.dumps(dados('m7-u2'), ensure_ascii=False)):
+            for proibido in ('em grupo', 'pequenos grupos', 'ao teu grupo', 'teu grupo', 'ao grupo', 'no grupo', 'grupos ao mesmo tempo'):
+                self.assertNotIn(proibido, texto)
         # 29/10/2026 (revisão pedagógica): a descrição diz o mesmo (C8), e a resposta à pergunta fica registada no papel,
-        # para a Apresentação ter prova com os grupos todos ao mesmo tempo (C10).
+        # para a Apresentação ter prova (C10).
         self.assertIn('no início da aula de tarefa', dados('m7-u2')['descricao'])
-        self.assertIn('Cada um regista no seu papel, numa linha, a pergunta que lhe fizeram e o que respondeu', tarefa)
+        self.assertIn('Regista no teu papel, numa linha, a pergunta que te fizeram e o que respondeste', tarefa)
         self.assertIn('responde a uma pergunta (registada numa linha no papel)', guia)
 
     def test_sem_dia_pessoa_e_f10_com_o_titulo_novo(self):

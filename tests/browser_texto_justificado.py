@@ -203,7 +203,8 @@ CASOS = [
     # 01/11/2026: M8 com aula de tarefa; mantém três blocos de prosa no índice.
     # 01/11/2026: abre a regra para conferir também a avaliação, mantendo os seletores anteriores.
     ('índice do módulo', 'm8/', lambda p: p.locator('details.regra').evaluate('(e)=>e.open=true'),
-     ['.pt-module details.regra > div', '.pt-module .unidade[data-u="1"] .unit-retoma > p:last-child', '.pt-module .unidade[data-u="2"] .unit-retoma > p:last-child'],
+     # 01/11/2026: o parágrafo dos pesos dentro da regra entra na lista dos justificados, sem tirar nenhum seletor.
+     ['.pt-module details.regra > div', '.pt-module details.regra p.avaliacao-tarefas', '.pt-module .unidade[data-u="1"] .unit-retoma > p:last-child', '.pt-module .unidade[data-u="2"] .unit-retoma > p:last-child'],
      ['p.rodape', 'header.topo p.lead.mod-pergunta', 'header.topo p.lead.mod-ambito']),
     ('mapa do módulo', 'm8/mapa-do-modulo-m8/', lambda p: None,
      ['header.topo > p.lead', 'aside.unit-map-note > p', 'details.sec > p:not([class]):not(:has(button))'],
