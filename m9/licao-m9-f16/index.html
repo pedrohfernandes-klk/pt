@@ -12,7 +12,8 @@
 <style>
 .jogo .tit,.jogo .q{text-wrap:balance}
 .jogo .pares{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
-.jogo .pares .op,.jogo .pares .op .tx{min-width:0;-webkit-hyphens:auto;hyphens:auto;overflow-wrap:break-word}
+/* 02/11/2026: as palavras dos pares ficam inteiras (sem hifenização automática); só uma palavra maior do que a coluna parte. */
+.jogo .pares .op,.jogo .pares .op .tx{min-width:0;-webkit-hyphens:manual;hyphens:manual;overflow-wrap:break-word}
 .casca-topo .c-marca{min-width:44px;justify-content:center}
 .casca-folha .c-veredito .c-pts{color:var(--suave)}
 .jogo .acoes-fim a,.jogo .depois a{display:inline-flex;align-items:center;min-height:44px}
