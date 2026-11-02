@@ -5174,5 +5174,13 @@
     "novo": "«Está queimado por baixo.»\",",
     "ocorrencias": 1,
     "achado": "01/11/2026: varredura editorial (docs/qa/varredura-formatacao-20261101.md); 02/11/2026: refeita em trocas mínimas sobre o main."
+  },
+  {
+    "ficheiro": "m2/licao-m2-f12/index.html",
+    "local": "Varredura de formatação, troca mínima 4",
+    "antigo": "</a>. A barra marca mudança de verso. «De solar»",
+    "novo": "</a>. «De solar»",
+    "ocorrencias": 1,
+    "achado": "02/11/2026: a nota «A barra marca mudança de verso» sai, porque os versos do cartão 4 já não levam barra (V029, V030); visto no sítio público depois do #152."
   }
 ]

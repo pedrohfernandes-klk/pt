@@ -531,3 +531,5 @@ O ramo juntou o main `fe2d829e` por merge, já com os pedidos #144 a #151, #154,
 ### Resultados de 02/11/2026
 
 443 testes unitários aprovados; 17 camadas conferidas; opções com 2991 perguntas, zero denunciadoras, 730 grupos fora dos 20 % e 741 com a certa mais longa, exatamente como no main. Os testes de navegador e os fluxos do GitHub ficam registados na descrição do pedido, com a cabeça enviada.
+
+Depois da publicação (`2f57cce6`), no sítio público: a nota do cartão 4 da M2-F12 ainda dizia «A barra marca mudança de verso», e os versos já não têm barra. Sai a frase, com uma troca a mais na camada (648 trocas) e um teste que só deixa esta nota onde ainda houver barras entre versos.
