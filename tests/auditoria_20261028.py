@@ -273,7 +273,22 @@ def undo_tarefas_m89(path, text):
 _TAREFAS_INDIVIDUAIS = json.loads((ROOT / 'tests/fixtures/tarefas-individuais-edits-20261102.json').read_text('utf-8'))['files']
 
 
+# 02/11/2026: decisão 139, a calçada «mar largo» na entrada do Português, camada mais recente, por cima das tarefas individuais.
+_CALCADA_MAR = json.loads((ROOT / 'tests/fixtures/calcada-mar-edits-20261102.json').read_text('utf-8'))['files']
+
+
+def undo_calcada_mar(path, text):
+    relative = _relative(path)
+    for edit in reversed(_CALCADA_MAR.get(relative, {}).get('edits', [])):
+        if text.count(edit['new']) != edit['occurrences']:
+            raise AssertionError(f"Calçada de 02/11 não confere: {relative}: {edit['location']}")
+        text = text.replace(edit['new'], edit['old'])
+    return text
+
+
 def undo_tarefas_individuais(path, text):
+    # 02/11/2026: a camada da calçada, mais recente, desfaz-se antes.
+    text = undo_calcada_mar(path, text)
     relative = _relative(path)
     for edit in reversed(_TAREFAS_INDIVIDUAIS.get(relative, {}).get('edits', [])):
         if text.count(edit['new']) != edit['occurrences']:
