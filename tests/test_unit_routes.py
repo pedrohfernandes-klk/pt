@@ -1,3 +1,4 @@
+# 01/11/2026: os nove módulos fecham agora com a aula de tarefa.
 # 31/10/2026: M3, M5 e M6 passam ao contrato das aulas de tarefa.
 """One meaningful checkpoint per unit; explicit M2 core/complement split."""
 from html.parser import HTMLParser
@@ -44,7 +45,7 @@ class UnitRoutes(unittest.TestCase):
                 self.assertEqual(numbers, ui.challenges)
                 # 26/10: M1/M4/M7 end in a task lesson; old pools remain optional archive.
                 # 27/10/2026 (passagem do GPT, tarefas por unidade): o M2 passa ao mesmo modelo, com duas aulas de tarefa.
-                if module in (1, 2, 3, 4, 5, 6, 7):
+                if module in tuple(range(1,10)):
                     self.assertEqual(numbers, ui.tasks)
                     self.assertEqual([], ui.responses)
                     self.assertIn('id="arquivo-percurso" hidden', src)

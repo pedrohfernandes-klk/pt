@@ -8,7 +8,8 @@ ROOT = Path(__file__).resolve().parents[1]
 import re
 # 27/10/2026 (passagem do GPT, tarefas por unidade): o M2 passa ao mesmo modelo, com duas aulas de tarefa.
 # 31/10/2026: inclui as seis tarefas aprovadas do M3, M5 e M6.
-TASK_MODULES = {1, 2, 3, 4, 5, 6, 7}
+# 01/11/2026: os nove módulos fecham com aulas de tarefa.
+TASK_MODULES = set(range(1,10))
 TASK_SLUGS = {1: ['m1-u1', 'm1-u2'],
               2: ['m2-u1', 'm2-u2'],
               4: ['m4-u1', 'm4-u2', 'm4-u3-discurso'],
@@ -21,7 +22,9 @@ TASK_SLUGS.update({3: ['m3-u1', 'm3-u2'], 5: ['m5-u1', 'm5-u2'], 6: ['m6-u1', 'm
 # máquinas em papel (#aquecer[data-task-warm="cartoes"]): o cartão «Aquecer» liga à página dos cartões e a única pergunta
 # da tarefa é a opcional («1»).
 # 31/10/2026: inclui as seis tarefas aprovadas do M3, M5 e M6.
-CHOICE_SLUGS = {'m5-u2', 'm3-u2', 'm3-u1', 'm5-u1', 'm2-u2', 'm6-u1', 'm2-u1', 'm7-u3', 'm1-u2', 'm1-u1', 'm6-u2'}
+# 01/11/2026: inclui as quatro tarefas do M8 e do M9.
+TASK_SLUGS.update({8: ["m8-u1","m8-u2"], 9: ["m9-u1","m9-u2"]})
+CHOICE_SLUGS = {'m5-u1', 'm9-u2', 'm5-u2', 'm1-u1', 'm6-u1', 'm7-u3', 'm1-u2', 'm3-u2', 'm6-u2', 'm8-u1', 'm8-u2', 'm9-u1', 'm2-u1', 'm3-u1', 'm2-u2'}
 WARM_CARDS = '#aquecer[data-task-warm="cartoes"]'
 
 def learning_storage(page):

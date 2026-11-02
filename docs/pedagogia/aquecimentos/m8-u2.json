@@ -1,0 +1,212 @@
+{
+ "slug": "m8-u2",
+ "modulo": "m8",
+ "unidade": 2,
+ "versao": "1",
+ "momento": "No início da aula de tarefa",
+ "titulo": "Defender sem fechar a leitura",
+ "descricao": "Dez minutos para treinar leitura, fundamentação e revisão com exemplos inventados.",
+ "licoes_das_citacoes": [
+  "m8/licao-m8-f08",
+  "m8/licao-m8-f06",
+  "m8/licao-m8-f12"
+ ],
+ "menu": [
+  [
+   "../../../m8/licao-m8-f08/",
+   "Relembrar F08, «George», uma mulher em três idades"
+  ],
+  [
+   "../../../m8/licao-m8-f06/",
+   "Relembrar F06, verbos que duram, palavras que apontam"
+  ],
+  [
+   "../../../m8/licao-m8-f12/",
+   "Relembrar F12, sugerir em vez de explicar"
+  ]
+ ],
+ "reservadas": [
+  "Georgina",
+  "libertação"
+ ],
+ "cartoes": [
+  {
+   "t": "ler",
+   "rot": "Abre",
+   "titulo": "Defender sem fechar a leitura",
+   "html": "<p>Dez minutos com consulta, sem nota. Os exemplos foram inventados para treinar operações de leitura e escrita; não dão as respostas da tarefa.</p><p>Caso inventado: Inês recebe um convite para cantar. Guarda-o no bolso e continua a ensaiar em voz baixa. O narrador não diz se ela aceita o convite.</p>"
+  },
+  {
+   "t": "escolha",
+   "p": "Que conclusão respeita o que sabemos?",
+   "p2": "Que leitura mantém aberta uma dúvida do caso?",
+   "o": [
+    "Guardar o convite sugere a aceitação de Inês.",
+    "Guardar o convite sugere a recusa de cantar.",
+    "Guardar o convite não esclarece a decisão."
+   ],
+   "c": 2,
+   "f": "Guardar o convite é observável; aceitar ou recusar continua por confirmar.",
+   "fe": [
+    "Guardar não prova a aceitação.",
+    "O relato não mostra uma recusa.",
+    null
+   ],
+   "g": "1"
+  },
+  {
+   "t": "emparelhar",
+   "p": "Liga cada função ao elemento do caso.",
+   "p2": "Que elemento observa, interpreta ou limita?",
+   "pares": [
+    [
+     "Observação",
+     "o convite fica no bolso"
+    ],
+    [
+     "Inferência possível",
+     "a decisão pode estar por tomar"
+    ],
+    [
+     "Limite",
+     "não sabemos se aceita cantar"
+    ]
+   ],
+   "f": "Uma interpretação precisa de observação e de uma relação explicada. Mantém distintas as funções.",
+   "fe": "Volta ao caso: uma coisa é observar, outra é concluir ou propor.",
+   "g": "2"
+  },
+  {
+   "t": "rever",
+   "p": "Revê a conclusão para a ajustar ao caso.",
+   "p2": "Que substituição evita afirmar mais do que o exemplo permite?",
+   "apoio": "Caso inventado: Inês recebe um convite para cantar. Guarda-o no bolso e continua a ensaiar em voz baixa. O narrador não diz se ela aceita o convite.",
+   "frase": "A ação prova que Inês aceitou o convite.",
+   "trecho": "prova que Inês aceitou",
+   "o": [
+    "garante que Inês recusou",
+    "não diz se Inês aceitou",
+    "demonstra que Inês aceitou"
+   ],
+   "c": 1,
+   "f": "A revisão ajusta a conclusão aos elementos disponíveis e conserva uma frase completa.",
+   "fe": [
+    "Recusar também não se vê: o convite fica no bolso e o narrador não diz o que Inês decide.",
+    null,
+    "_Demonstra_ diz o mesmo que _prova_: guardar o convite não mostra que Inês aceitou."
+   ],
+   "g": "3"
+  },
+  {
+   "t": "vf",
+   "p": "No caso criado, continuar a ensaiar é compatível com aceitar o convite, mas não confirma a aceitação.",
+   "p2": "O ensaio pode apoiar uma hipótese sem resolver a decisão de Inês?",
+   "v": true,
+   "f": "Ensaiar mantém a atividade de cantar; o narrador não diz se o convite é a causa. A hipótese precisa dessa distinção.",
+   "fe": "Confundes uma ação compatível com uma decisão com a prova dessa decisão. Relê o que o narrador deixa por dizer.",
+   "g": "4"
+  },
+  {
+   "t": "ordenar",
+   "p": "Ordena um argumento que deixa espaço a uma objeção.",
+   "p2": "Como apresentas uma leitura e a dificuldade que ela enfrenta?",
+   "passos": [
+    "Defende que Inês pode estar a preparar-se para aceitar.",
+    "Usa como indício a continuação do ensaio.",
+    "Admite que ela já podia ensaiar antes de receber o convite."
+   ],
+   "f": "A objeção limita a força do indício sem apagar a hipótese. O texto permite uma posição discutível, não uma certeza sobre a decisão.",
+   "fe": "Uma objeção pertinente testa a ligação entre o ensaio e o convite. Não muda os acontecimentos dados.",
+   "g": "5"
+  },
+  {
+   "t": "escolha",
+   "p": "Que objeção testa a leitura de que Inês ensaia para aceitar?",
+   "p2": "Que alternativa explica o mesmo gesto sem inventar outro acontecimento?",
+   "o": [
+    "Pode estar a repetir um ensaio habitual.",
+    "Pode ter deixado o convite sobre a mesa.",
+    "Pode ter anunciado a recusa ao narrador."
+   ],
+   "c": 0,
+   "f": "Um ensaio habitual explica o mesmo gesto sem o ligar à aceitação. A objeção mantém os factos do caso.",
+   "fe": [
+    null,
+    "O caso diz que o convite fica no bolso. Esta alternativa troca o facto em vez de discutir a sua interpretação.",
+    "O narrador não apresenta esse anúncio. Uma objeção não pode acrescentar uma recusa que o caso não conta."
+   ],
+   "g": "6"
+  },
+  {
+   "t": "completar",
+   "p": "Completa a resposta à objeção do ensaio habitual.",
+   "p2": "Como distingues o indício favorável do limite da tua posição?",
+   "frase": "O ensaio [1] a hipótese de aceitação, mas o silêncio do narrador [2] a certeza.",
+   "lacunas": [
+    {
+     "o": [
+      "sustenta",
+      "contraria",
+      "substitui"
+     ],
+     "c": 0
+    },
+    {
+     "o": [
+      "limita",
+      "garante",
+      "reforça"
+     ],
+     "c": 0
+    }
+   ],
+   "f": "Um indício favorável pode coexistir com um limite. A resposta à objeção torna a posição mais precisa.",
+   "fe": "Não confundas apoio com confirmação. Liga o ensaio ao que é possível e a omissão do narrador ao que não sabemos.",
+   "g": "7"
+  },
+  {
+   "t": "vf",
+   "p": "A ausência de uma resposta de Inês permite concluir que ela recusou o convite.",
+   "p2": "O que o narrador omite pode ser tratado como uma recusa?",
+   "v": false,
+   "f": "Não dizer se aceita deixa a decisão aberta. O silêncio do relato não é uma fala de recusa da personagem.",
+   "fe": "Transformaste uma omissão narrativa numa decisão. Relê a última frase do caso, que não escolhe entre aceitar e recusar.",
+   "g": "8"
+  },
+  {
+   "t": "escolha",
+   "p": "A que voltas para responder à objeção sobre a decisão?",
+   "p2": "A que regressas para fundamentar uma posição sem fechar a dúvida?",
+   "o": [
+    "Ao ensaio e ao que o narrador omite.",
+    "Ao ensaio como declaração de recusa.",
+    "Ao convite como anúncio de aceitação."
+   ],
+   "c": 0,
+   "f": "A resposta reúne um gesto e um limite: Inês ensaia, mas a decisão não é narrada.",
+   "fe": [
+    null,
+    "Ensaiar não é declarar uma recusa. O caso não apresenta palavras de Inês sobre o convite.",
+    "O convite é recebido, não é uma resposta de Inês. Distingue a proposta que chega da decisão que não conhecemos."
+   ],
+   "g": "9"
+  },
+  {
+   "t": "sublinhar",
+   "p": "Na frase criada, toca na palavra que limita a certeza da interpretação.",
+   "p2": "Que palavra deixa a aceitação como uma leitura discutível?",
+   "frase": "O ensaio talvez anuncie uma aceitação.",
+   "certas": [
+    2
+   ],
+   "f": "_Talvez_ assinala uma probabilidade. O ensaio favorece a leitura, mas não substitui a resposta que o narrador omite.",
+   "fe": "A palavra pedida admite que a leitura é provável, mas pode ser revista. Não é _ensaio_, que nomeia o gesto, nem _anuncie_, que diz o que ele faria.",
+   "g": "10"
+  },
+  {
+   "t": "ler",
+   "rot": "Para levar",
+   "html": "<p>Na tarefa, defende uma posição sobre dois momentos do conto e responde à objeção que mais a põe à prova.</p><p><a href=\"../\">Abrir a aula de tarefa</a></p>"
+  }
+ ]
+}

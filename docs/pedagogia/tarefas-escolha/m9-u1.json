@@ -1,0 +1,99 @@
+{
+ "aquecer": {
+  "cartoes": "aquecimento/",
+  "minutos": 10,
+  "texto": "Dez minutos com casos inventados para treinar. Depois, o docente apresenta o enunciado e começam os 60 minutos de produção.",
+  "ligacao": "Abrir o aquecimento em cartões",
+  "ligacao_enunciado": "Antes de começar: aquecer em cartões, 10 minutos"
+ },
+ "dossie_titulo": "Textos e condições de consulta",
+ "opcional": {
+  "pergunta": "Caso inventado: o diretor inaugura a biblioteca e elogia o silêncio, mas uma máquina de obras impede que se ouça o discurso. Que alteração conserva o procedimento crítico do caso?",
+  "opcoes": [
+   {
+    "letra": "A",
+    "certa": true,
+    "texto": "O diretor elogia a calma entre buzinas.",
+    "resposta": "A calma elogiada contrasta com as buzinas. Mantém-se a relação entre o que se diz e o que a descrição deixa ouvir."
+   },
+   {
+    "letra": "B",
+    "certa": false,
+    "texto": "O diretor elogia a calma numa sala vazia.",
+    "resposta": "Uma sala vazia pode ser calma. Falta a oposição ao elogio que a máquina criava no caso."
+   },
+   {
+    "letra": "C",
+    "certa": false,
+    "texto": "O diretor elogia a calma e todos escutam.",
+    "resposta": "A escuta confirma a calma em vez de a contrariar. A relação entre fala e ambiente mudou."
+   }
+  ]
+ },
+ "fecho": "Fecha com duas linhas, fora da contagem, como o núcleo: como muda a tua leitura do episódio quando distingues o que acontece da maneira como é contado? Localiza o pormenor decisivo.",
+ "slug": "m9-u1",
+ "titulo": "O poder em cena",
+ "unidade": 1,
+ "lead": "Escreve uma apreciação crítica de um episódio de <i>Memorial do Convento</i>, em 200 a 240 palavras. Trabalha individualmente, à mão, com consulta. Conta as palavras do texto.",
+ "nucleo": [
+  "Antes do texto, regista o tema, um juízo provisório e dois pormenores localizados do episódio.",
+  "Anota um procedimento de escrita e uma dificuldade da tua leitura. No texto, explica como esse procedimento produz um efeito; não basta dar-lhe um nome."
+ ],
+ "temas": [
+  {
+   "letra": "A",
+   "nome": "O rei e a miniatura",
+   "texto": "Aprecia como a descrição da miniatura da basílica de São Pedro, no capítulo I, transforma a imagem do rei. Distingue os gestos do rei da maneira como são contados."
+  },
+  {
+   "letra": "B",
+   "nome": "A cerimónia e o olhar",
+   "texto": "Aprecia como a representação do auto de fé, no capítulo V, transforma a imagem da cerimónia. Distingue a perspetiva da assistência da crítica construída pelo narrador."
+  }
+ ],
+ "apoios": [
+  {
+   "href": "../../m9/licao-m9-f01/",
+   "texto": "Um convento, uma promessa: situa a corte e as linhas de ação."
+  },
+  {
+   "href": "../../m9/licao-m9-f03/",
+   "texto": "A voz que conta: distingue personagem, narrador e autor."
+  },
+  {
+   "href": "../../m9/licao-m9-f02/",
+   "texto": "Ver e não ver: localiza os indícios antes de concluir."
+  },
+  {
+   "href": "../../m9/licao-m9-f11/",
+   "texto": "O cuidado também é ação: interpreta gestos sem lhes atribuir intenções automáticas."
+  }
+ ],
+ "dossie": [
+  {
+   "facto": "José Saramago, <i>Memorial do Convento</i>, Editorial Caminho, primeira edição de 1982. Consulta o exemplar da turma e regista a editora, o ano e as páginas efetivamente usados.",
+   "href": "https://www.josesaramago.org/livro/memorial-do-convento/",
+   "fonte": "Fundação José Saramago, referência editorial"
+  },
+  {
+   "facto": "Tema A: capítulo I, sequência em que o rei monta a miniatura da basílica de São Pedro. Lê o capítulo completo antes da aula e marca dois pormenores; esta referência não fornece a interpretação.",
+   "href": "../../m9/guia-da-tarefa-m9/",
+   "fonte": "Guia, preparação da unidade 1"
+  },
+  {
+   "facto": "Tema B: capítulo V, primeiro auto de fé do romance. Lê o capítulo completo antes da aula e marca dois pormenores; não o confundas com o episódio final.",
+   "href": "../../m9/guia-da-tarefa-m9/",
+   "fonte": "Guia, preparação da unidade 1"
+  },
+  {
+   "facto": "Os dois capítulos devem estar disponíveis para consulta em condições equivalentes. Não é necessária pesquisa adicional nem a reprodução integral de excertos neste enunciado.",
+   "href": "https://estudoemcasaapoia.dge.mec.pt/recurso/memorial-do-convento-de-jose-saramago-representatividade-de-sociedade-da-epoca-rei-e-rainha",
+   "fonte": "DGE/RTP, enquadramento da representação do poder"
+  }
+ ],
+ "criterios": [
+  "Juízo crítico centrado no episódio e dois pormenores textuais contextualizados.",
+  "Procedimento narrativo identificado e efeito explicado com apoio no texto.",
+  "Organização, correção linguística, extensão, núcleo e síntese revistos."
+ ]
+}

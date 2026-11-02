@@ -1117,6 +1117,491 @@
      ]
     }
    ]
+  },
+  "m8-u1": {
+   "modulo": "M8",
+   "unidade": 1,
+   "titulo": "O que as palavras conseguem",
+   "produto": "Texto de 200 a 240 palavras, com núcleo de planificação e síntese de duas linhas fora da contagem. Escolhe só o tema A ou B. O aquecimento não conta para a nota.",
+   "nota": "Os exemplos são inventados e usam outros casos. Não são respostas à tarefa. Avalia-se o fundamento da leitura, não a concordância com uma opinião esperada. Uma atualização ortográfica coerente na citação não é penalizada se conservar as palavras e o sentido. Os níveis intermédios graduam-se segundo o cumprimento dos descritores; a mesma falha não se desconta duas vezes.",
+   "criterios": [
+    {
+     "nome": "Juízo crítico pertinente e desenvolvido",
+     "max": 4,
+     "niveis": {
+      "0": [
+       "Não apresentas um juízo sobre o efeito da escrita.",
+       "O texto fala de um corredor."
+      ],
+      "parcial": [
+       "Apresentas um juízo, mas desenvolves pouco o efeito que aprecias.",
+       "A descrição do corredor é interessante."
+      ],
+      "max": [
+       "Apresentas um juízo pertinente, desenvolves o efeito e justificas o seu valor no contexto.",
+       "A repetição das portas transforma o corredor numa espera sem saída; o efeito é mais forte porque o fim não oferece uma abertura."
+      ]
+     },
+     "custa": [
+      "Resumir em vez de apreciar.",
+      "Usar elogios sem fundamento."
+     ]
+    },
+    {
+     "nome": "Leitura rigorosa dos dois poemas",
+     "max": 5,
+     "niveis": {
+      "0": [
+       "Não usas indícios pertinentes ou deturpas o sentido dos momentos escolhidos.",
+       "A personagem está feliz, porque sim."
+      ],
+      "parcial": [
+       "Lês apenas um dos poemas com rigor ou usas ambos com localização ou explicação incompletas.",
+       "A porta aparece no fim, mas não indico onde."
+      ],
+      "max": [
+       "Usas um indício preciso de cada poema, com localização, contexto e explicação, sem os fazer dizer o que não dizem.",
+       "No início do exemplo, a porta abre-se; no último parágrafo, fecha-se. Distingo os dois momentos antes de relacionar a mudança."
+      ]
+     },
+     "custa": [
+      "Inventar palavras ou episódios.",
+      "Confundir uma hipótese com um facto do texto.",
+      "Acumular citações sem contexto."
+     ]
+    },
+    {
+     "nome": "Comparação explicada através de indícios",
+     "max": 5,
+     "niveis": {
+      "0": [
+       "Não relacionas os dois poemas.",
+       "São dois textos."
+      ],
+      "parcial": [
+       "Assinalas uma semelhança ou diferença, mas não explicas a relação entre os efeitos.",
+       "Um fala de um relógio; o outro também."
+      ],
+      "max": [
+       "Relacionas os efeitos com um indício de cada poema, explicando semelhança e diferença relevantes para o juízo.",
+       "Num exemplo, o relógio corre; no outro, para. O mesmo objeto produz urgência num texto e suspensão no outro."
+      ]
+     },
+     "custa": [
+      "Apresentar dois resumos separados.",
+      "Confundir tema comum com efeito idêntico."
+     ]
+    },
+    {
+     "nome": "Organização e coesão",
+     "max": 3,
+     "niveis": {
+      "0": [
+       "As partes não se articulam ou a progressão não é compreensível.",
+       "Porta. Cansaço. Conclusão."
+      ],
+      "parcial": [
+       "A organização é reconhecível, mas há ligações pouco claras ou repetições.",
+       "Digo a conclusão e depois repito-a sem avançar."
+      ],
+      "max": [
+       "Organizas o texto com progressão clara, parágrafos articulados e referências inequívocas.",
+       "Apresento a posição, desenvolvo o indício e retomo a posição com uma precisão nova."
+      ]
+     },
+     "custa": [
+      "Usar conectores que contradizem a relação pretendida.",
+      "Deixar pronomes sem referência clara."
+     ]
+    },
+    {
+     "nome": "Correção linguística e cumprimento do produto",
+     "max": 3,
+     "niveis": {
+      "0": [
+       "Os erros comprometem a compreensão ou não entregas o produto pedido.",
+       "Um conjunto de palavras sem relações compreensíveis."
+      ],
+      "parcial": [
+       "O texto é compreensível, mas há erros ou falta algum elemento de extensão, identificação, núcleo ou síntese.",
+       "O texto está legível, mas falta a contagem e o tema."
+      ],
+      "max": [
+       "Revês sintaxe, pontuação e ortografia; cumpres o produto, a extensão, a identificação do tema, o núcleo e a síntese.",
+       "Revejo as concordâncias, conto as palavras do texto e separo dele o núcleo e as duas linhas finais."
+      ]
+     },
+     "custa": [
+      "Erros que dificultam a compreensão.",
+      "Omitir partes pedidas ou ignorar a extensão.",
+      "Não identificar a edição consultada."
+     ]
+    }
+   ]
+  },
+  "m8-u2": {
+   "modulo": "M8",
+   "unidade": 2,
+   "titulo": "Uma vida, outra leitura",
+   "produto": "Texto de 200 a 240 palavras, com núcleo de planificação e síntese de duas linhas fora da contagem. Escolhe só o tema A ou B. O aquecimento não conta para a nota.",
+   "nota": "Os exemplos são inventados e usam outros casos. Não são respostas à tarefa. Avalia-se o fundamento da leitura, não a concordância com uma opinião esperada. Uma atualização ortográfica coerente na citação não é penalizada se conservar as palavras e o sentido. Os níveis intermédios graduam-se segundo o cumprimento dos descritores; a mesma falha não se desconta duas vezes.",
+   "criterios": [
+    {
+     "nome": "Posição clara e ajustada à pergunta",
+     "max": 3,
+     "niveis": {
+      "0": [
+       "Não tomas posição sobre a pergunta.",
+       "Vou falar do texto."
+      ],
+      "parcial": [
+       "Tomas posição, mas a formulação é vaga ou oscila sem explicação.",
+       "A situação tanto é boa como má."
+      ],
+      "max": [
+       "Formulas uma posição clara e ajustada à pergunta, com condições ou matizes quando necessários.",
+       "O gesto admite dúvida, mas considero-o uma recusa provisória e justifico essa condição."
+      ]
+     },
+     "custa": [
+      "Confundir apresentar o tema com defender uma posição."
+     ]
+    },
+    {
+     "nome": "Leitura e localização rigorosas de dois momentos",
+     "max": 5,
+     "niveis": {
+      "0": [
+       "Não usas indícios pertinentes ou deturpas o sentido dos momentos escolhidos.",
+       "A personagem está feliz, porque sim."
+      ],
+      "parcial": [
+       "Usas um indício com rigor ou dois com localização ou explicação incompletas.",
+       "A porta aparece no fim, mas não indico onde."
+      ],
+      "max": [
+       "Usas dois indícios precisos, localizados e contextualizados, sem os fazer dizer o que não dizem.",
+       "No início do exemplo, a porta abre-se; no último parágrafo, fecha-se. Distingo os dois momentos antes de relacionar a mudança."
+      ]
+     },
+     "custa": [
+      "Inventar palavras ou episódios.",
+      "Confundir uma hipótese com um facto do texto.",
+      "Acumular citações sem contexto."
+     ]
+    },
+    {
+     "nome": "Argumentação e resposta à objeção",
+     "max": 6,
+     "niveis": {
+      "0": [
+       "Não desenvolves um argumento nem respondes a uma objeção.",
+       "É assim porque eu acho."
+      ],
+      "parcial": [
+       "Dás uma razão, mas a objeção é fraca ou a resposta repete a posição.",
+       "A personagem pode hesitar, mas a minha leitura está certa."
+      ],
+      "max": [
+       "Desenvolves a posição com prova, enfrentas uma objeção pertinente e respondes, limitando a conclusão quando necessário.",
+       "O silêncio pode ser cansaço, não recusa. Ainda assim, a repetição do gesto noutro momento permite defender a recusa como hipótese, sem a tornar certa."
+      ]
+     },
+     "custa": [
+      "Desqualificar quem poderia discordar.",
+      "Inventar uma objeção que não desafia a posição.",
+      "Repetir a tese como se fosse uma resposta."
+     ]
+    },
+    {
+     "nome": "Organização e coesão",
+     "max": 3,
+     "niveis": {
+      "0": [
+       "As partes não se articulam ou a progressão não é compreensível.",
+       "Porta. Cansaço. Conclusão."
+      ],
+      "parcial": [
+       "A organização é reconhecível, mas há ligações pouco claras ou repetições.",
+       "Digo a conclusão e depois repito-a sem avançar."
+      ],
+      "max": [
+       "Organizas o texto com progressão clara, parágrafos articulados e referências inequívocas.",
+       "Apresento a posição, desenvolvo o indício e retomo a posição com uma precisão nova."
+      ]
+     },
+     "custa": [
+      "Usar conectores que contradizem a relação pretendida.",
+      "Deixar pronomes sem referência clara."
+     ]
+    },
+    {
+     "nome": "Correção linguística e cumprimento do produto",
+     "max": 3,
+     "niveis": {
+      "0": [
+       "Os erros comprometem a compreensão ou não entregas o produto pedido.",
+       "Um conjunto de palavras sem relações compreensíveis."
+      ],
+      "parcial": [
+       "O texto é compreensível, mas há erros ou falta algum elemento de extensão, identificação, núcleo ou síntese.",
+       "O texto está legível, mas falta a contagem e o tema."
+      ],
+      "max": [
+       "Revês sintaxe, pontuação e ortografia; cumpres o produto, a extensão, a identificação do tema, o núcleo e a síntese.",
+       "Revejo as concordâncias, conto as palavras do texto e separo dele o núcleo e as duas linhas finais."
+      ]
+     },
+     "custa": [
+      "Erros que dificultam a compreensão.",
+      "Omitir partes pedidas ou ignorar a extensão.",
+      "Não identificar a edição consultada."
+     ]
+    }
+   ]
+  },
+  "m9-u1": {
+   "modulo": "M9",
+   "unidade": 1,
+   "titulo": "O poder em cena",
+   "produto": "Texto de 200 a 240 palavras, com núcleo de planificação e síntese de duas linhas fora da contagem. Escolhe só o tema A ou B. O aquecimento não conta para a nota.",
+   "nota": "Os exemplos são inventados e usam outros casos. Não são respostas à tarefa. Avalia-se o fundamento da leitura, não a concordância com uma opinião esperada. Uma atualização ortográfica coerente na citação não é penalizada se conservar as palavras e o sentido. Os níveis intermédios graduam-se segundo o cumprimento dos descritores; a mesma falha não se desconta duas vezes.",
+   "criterios": [
+    {
+     "nome": "Juízo crítico pertinente e desenvolvido",
+     "max": 4,
+     "niveis": {
+      "0": [
+       "Não apresentas um juízo sobre o efeito da escrita.",
+       "O texto fala de um corredor."
+      ],
+      "parcial": [
+       "Apresentas um juízo, mas desenvolves pouco o efeito que aprecias.",
+       "A descrição do corredor é interessante."
+      ],
+      "max": [
+       "Apresentas um juízo pertinente, desenvolves o efeito e justificas o seu valor no contexto.",
+       "A repetição das portas transforma o corredor numa espera sem saída; o efeito é mais forte porque o fim não oferece uma abertura."
+      ]
+     },
+     "custa": [
+      "Resumir em vez de apreciar.",
+      "Usar elogios sem fundamento."
+     ]
+    },
+    {
+     "nome": "Leitura rigorosa de dois indícios",
+     "max": 5,
+     "niveis": {
+      "0": [
+       "Não usas indícios pertinentes ou deturpas o sentido dos momentos escolhidos.",
+       "A personagem está feliz, porque sim."
+      ],
+      "parcial": [
+       "Usas um indício com rigor ou dois com localização ou explicação incompletas.",
+       "A porta aparece no fim, mas não indico onde."
+      ],
+      "max": [
+       "Usas dois indícios precisos, localizados e contextualizados, sem os fazer dizer o que não dizem.",
+       "No início do exemplo, a porta abre-se; no último parágrafo, fecha-se. Distingo os dois momentos antes de relacionar a mudança."
+      ]
+     },
+     "custa": [
+      "Inventar palavras ou episódios.",
+      "Confundir uma hipótese com um facto do texto.",
+      "Acumular citações sem contexto."
+     ]
+    },
+    {
+     "nome": "Procedimento narrativo e efeito",
+     "max": 5,
+     "niveis": {
+      "0": [
+       "Não identificas um procedimento pertinente nem explicas o efeito.",
+       "Há recursos."
+      ],
+      "parcial": [
+       "Identificas um procedimento ou um efeito, mas a relação com os pormenores fica incompleta.",
+       "Há uma repetição de portas."
+      ],
+      "max": [
+       "Explicas como um procedimento narrativo atua em dois pormenores do episódio e sustenta o juízo crítico.",
+       "O narrador repete a mesma ação diante de portas diferentes; a acumulação faz sentir que a procura não avança."
+      ]
+     },
+     "custa": [
+      "Dar um nome técnico sem mostrar o funcionamento.",
+      "Atribuir ao autor a fala de uma personagem."
+     ]
+    },
+    {
+     "nome": "Organização e coesão",
+     "max": 3,
+     "niveis": {
+      "0": [
+       "As partes não se articulam ou a progressão não é compreensível.",
+       "Porta. Cansaço. Conclusão."
+      ],
+      "parcial": [
+       "A organização é reconhecível, mas há ligações pouco claras ou repetições.",
+       "Digo a conclusão e depois repito-a sem avançar."
+      ],
+      "max": [
+       "Organizas o texto com progressão clara, parágrafos articulados e referências inequívocas.",
+       "Apresento a posição, desenvolvo o indício e retomo a posição com uma precisão nova."
+      ]
+     },
+     "custa": [
+      "Usar conectores que contradizem a relação pretendida.",
+      "Deixar pronomes sem referência clara."
+     ]
+    },
+    {
+     "nome": "Correção linguística e cumprimento do produto",
+     "max": 3,
+     "niveis": {
+      "0": [
+       "Os erros comprometem a compreensão ou não entregas o produto pedido.",
+       "Um conjunto de palavras sem relações compreensíveis."
+      ],
+      "parcial": [
+       "O texto é compreensível, mas há erros ou falta algum elemento de extensão, identificação, núcleo ou síntese.",
+       "O texto está legível, mas falta a contagem e o tema."
+      ],
+      "max": [
+       "Revês sintaxe, pontuação e ortografia; cumpres o produto, a extensão, a identificação do tema, o núcleo e a síntese.",
+       "Revejo as concordâncias, conto as palavras do texto e separo dele o núcleo e as duas linhas finais."
+      ]
+     },
+     "custa": [
+      "Erros que dificultam a compreensão.",
+      "Omitir partes pedidas ou ignorar a extensão.",
+      "Não identificar a edição consultada."
+     ]
+    }
+   ]
+  },
+  "m9-u2": {
+   "modulo": "M9",
+   "unidade": 2,
+   "titulo": "O que vale preservar",
+   "produto": "Texto de 220 a 260 palavras, com núcleo de planificação e síntese de duas linhas fora da contagem. Escolhe só o tema A ou B. O aquecimento não conta para a nota.",
+   "nota": "Os exemplos são inventados e usam outros casos. Não são respostas à tarefa. Avalia-se o fundamento da leitura, não a concordância com uma opinião esperada. Uma atualização ortográfica coerente na citação não é penalizada se conservar as palavras e o sentido. Os níveis intermédios graduam-se segundo o cumprimento dos descritores; a mesma falha não se desconta duas vezes.",
+   "criterios": [
+    {
+     "nome": "Posição e decisão concretas",
+     "max": 3,
+     "niveis": {
+      "0": [
+       "Não propões uma decisão de apresentação pública.",
+       "É preciso mudar tudo."
+      ],
+      "parcial": [
+       "Propões uma decisão, mas faltam o conteúdo ou o destinatário da apresentação.",
+       "Acrescentaria informação à exposição."
+      ],
+      "max": [
+       "Defines uma decisão concreta de conteúdo ou apresentação, adequada à questão e ao público.",
+       "Acrescentaria a data a cada fotografia da exposição escolar para permitir comparar mudanças do lugar."
+      ]
+     },
+     "custa": [
+      "Ficar por um desejo genérico.",
+      "Entregar outro produto em vez do texto."
+     ]
+    },
+    {
+     "nome": "Utilização rigorosa de duas situações do romance",
+     "max": 5,
+     "niveis": {
+      "0": [
+       "Não usas indícios pertinentes ou deturpas o sentido dos momentos escolhidos.",
+       "A personagem está feliz, porque sim."
+      ],
+      "parcial": [
+       "Usas um indício com rigor ou dois com localização ou explicação incompletas.",
+       "A porta aparece no fim, mas não indico onde."
+      ],
+      "max": [
+       "Usas dois indícios precisos, localizados e contextualizados, sem os fazer dizer o que não dizem.",
+       "No início do exemplo, a porta abre-se; no último parágrafo, fecha-se. Distingo os dois momentos antes de relacionar a mudança."
+      ]
+     },
+     "custa": [
+      "Inventar palavras ou episódios.",
+      "Confundir uma hipótese com um facto do texto.",
+      "Acumular citações sem contexto."
+     ]
+    },
+    {
+     "nome": "Argumentação e resposta à objeção",
+     "max": 5,
+     "niveis": {
+      "0": [
+       "Não desenvolves um argumento nem respondes a uma objeção.",
+       "É assim porque eu acho."
+      ],
+      "parcial": [
+       "Dás uma razão, mas a objeção é fraca ou a resposta repete a posição.",
+       "A personagem pode hesitar, mas a minha leitura está certa."
+      ],
+      "max": [
+       "Desenvolves a posição com prova, enfrentas uma objeção pertinente e respondes, limitando a conclusão quando necessário.",
+       "O silêncio pode ser cansaço, não recusa. Ainda assim, a repetição do gesto noutro momento permite defender a recusa como hipótese, sem a tornar certa."
+      ]
+     },
+     "custa": [
+      "Desqualificar quem poderia discordar.",
+      "Inventar uma objeção que não desafia a posição.",
+      "Repetir a tese como se fosse uma resposta."
+     ]
+    },
+    {
+     "nome": "Transposição contextualizada, organização e coesão",
+     "max": 4,
+     "niveis": {
+      "0": [
+       "Não distingues os contextos ou o texto não tem progressão compreensível.",
+       "Antigamente era tudo igual a hoje."
+      ],
+      "parcial": [
+       "Assinalas uma diferença entre épocas ou organizas o texto, mas a articulação é incompleta.",
+       "Hoje há outros meios, mas não digo o que isso muda."
+      ],
+      "max": [
+       "Explicas uma diferença relevante entre épocas e organizas a transposição com progressão e ligações claras.",
+       "Uma legenda digital pode mudar depois de publicada; uma inscrição fixa exige outra decisão. A analogia ajuda a escolher, mas os meios não são os mesmos."
+      ]
+     },
+     "custa": [
+      "Tratar situações de épocas diferentes como equivalentes em tudo.",
+      "Usar a comparação sem explicar o limite."
+     ]
+    },
+    {
+     "nome": "Correção linguística e cumprimento do produto",
+     "max": 3,
+     "niveis": {
+      "0": [
+       "Os erros comprometem a compreensão ou não entregas o produto pedido.",
+       "Um conjunto de palavras sem relações compreensíveis."
+      ],
+      "parcial": [
+       "O texto é compreensível, mas há erros ou falta algum elemento de extensão, identificação, núcleo ou síntese.",
+       "O texto está legível, mas falta a contagem e o tema."
+      ],
+      "max": [
+       "Revês sintaxe, pontuação e ortografia; cumpres o produto, a extensão, a identificação do tema, o núcleo e a síntese.",
+       "Revejo as concordâncias, conto as palavras do texto e separo dele o núcleo e as duas linhas finais."
+      ]
+     },
+     "custa": [
+      "Erros que dificultam a compreensão.",
+      "Omitir partes pedidas ou ignorar a extensão.",
+      "Não identificar a edição consultada."
+     ]
+    }
+   ]
   }
  }
 }

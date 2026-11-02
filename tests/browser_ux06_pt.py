@@ -9,7 +9,8 @@ PLANS=json.loads((ROOT/'docs/pedagogia/percursos-unidades-20261020.json').read_t
 OUT=ROOT.parents[1]/'outputs/design-pt'
 # 24/10/2026 (aulas claras do M1, como o M4 a 23/10): o percurso do M1 passa a lista simples de aulas, sem passaporte
 # 27/10/2026 (passagem do GPT, tarefas por unidade): o M2 passa ao mesmo modelo, com duas aulas de tarefa.
-SEM_PASSAPORTE={1,2,3,4,5,6,7}
+# 01/11/2026: M8/M9 também têm aula de tarefa; os limites visuais não mudam.
+SEM_PASSAPORTE={1,2,3,4,5,6,7,8,9}
 
 def main():
  server=ThreadingHTTPServer(('127.0.0.1',0),partial(QuietHandler,directory=str(ROOT.parent)))
@@ -23,7 +24,15 @@ def main():
      if os.environ.get('UX_MODULE') and str(m)!=os.environ['UX_MODULE']:continue
      ctx,page=new_page(browser,width);errors=[];page.on('pageerror',lambda e:errors.append(str(e)))
      def local(route):
-      u=urlsplit(route.request.url);response=route.fetch(url=host+u.path+('?' +u.query if u.query else ''));route.fulfill(response=response)
+      # 01/11/2026: mesmos ficheiros locais sem uma segunda ligação HTTP (Windows).
+      from urllib.parse import unquote
+      import mimetypes
+      asset=(ROOT/unquote(urlsplit(route.request.url).path.removeprefix('/pt/'))).resolve()
+      if not asset.is_relative_to(ROOT.resolve()):
+       route.fulfill(status=403,body='Forbidden');return
+      if asset.is_dir():asset=asset/'index.html'
+      if asset.is_file():route.fulfill(path=str(asset),content_type=mimetypes.guess_type(str(asset))[0] or 'application/octet-stream')
+      else:route.fulfill(status=404,body='Not found')
      page.route('https://pedrohfernandes-klk.github.io/pt/**',local)
      page.route('https://pedrohfernandes-klk.github.io/lente/**',lambda r:r.abort())
      first,second=plan['units'][0]['lessons'][:2]

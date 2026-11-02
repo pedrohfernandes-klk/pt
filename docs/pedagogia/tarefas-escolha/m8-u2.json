@@ -1,0 +1,94 @@
+{
+ "aquecer": {
+  "cartoes": "aquecimento/",
+  "minutos": 10,
+  "texto": "Dez minutos com casos inventados para treinar. Depois, o docente apresenta o enunciado e começam os 60 minutos de produção.",
+  "ligacao": "Abrir o aquecimento em cartões",
+  "ligacao_enunciado": "Antes de começar: aquecer em cartões, 10 minutos"
+ },
+ "dossie_titulo": "Textos e condições de consulta",
+ "opcional": {
+  "pergunta": "Caso inventado: Inês recebe um convite para cantar, guarda-o no bolso e continua a ensaiar em voz baixa; o narrador não diz se aceita. Que objeção testa a leitura de que Inês ensaia para aceitar?",
+  "opcoes": [
+   {
+    "letra": "A",
+    "certa": true,
+    "texto": "Pode estar a repetir um ensaio habitual.",
+    "resposta": "Um ensaio habitual explica o mesmo gesto sem o ligar à aceitação. A objeção mantém os factos do caso."
+   },
+   {
+    "letra": "B",
+    "certa": false,
+    "texto": "Pode ter deixado o convite sobre a mesa.",
+    "resposta": "O caso diz que o convite fica no bolso. Esta alternativa troca o facto em vez de discutir a sua interpretação."
+   },
+   {
+    "letra": "C",
+    "certa": false,
+    "texto": "Pode ter anunciado a recusa ao narrador.",
+    "resposta": "O narrador não apresenta esse anúncio. Uma objeção não pode acrescentar uma recusa que o caso não conta."
+   }
+  ]
+ },
+ "fecho": "Fecha com duas linhas, fora da contagem, como o núcleo: que objeção te obrigou a precisar a tua posição? Mostra o momento do conto a que voltaste.",
+ "slug": "m8-u2",
+ "titulo": "Uma vida, outra leitura",
+ "unidade": 2,
+ "lead": "Escreve um texto de opinião literária sobre «George», em 200 a 240 palavras. Trabalha individualmente, à mão, com consulta. Conta as palavras do texto.",
+ "nucleo": [
+  "Antes do texto, regista o tema, a tua posição provisória e dois momentos localizados do conto.",
+  "Anota uma dificuldade para essa posição. No texto, desenvolve a tua leitura e responde a uma objeção, sem transformar a interpretação em certeza biográfica."
+ ],
+ "temas": [
+  {
+   "letra": "A",
+   "nome": "Partir",
+   "texto": "A partida de George é libertação, perda ou uma combinação? Defende a tua leitura e considera uma passagem que a dificulte."
+  },
+  {
+   "letra": "B",
+   "nome": "Encontrar o futuro",
+   "texto": "O encontro com a mulher mais velha abre uma possibilidade ou parece fechar o futuro? Defende a tua leitura e distingue o que o conto mostra do que inferes."
+  }
+ ],
+ "apoios": [
+  {
+   "href": "../../m8/licao-m8-f08/",
+   "texto": "«George»: distingue observação, inferência e interpretação."
+  },
+  {
+   "href": "../../m8/licao-m8-f12/",
+   "texto": "Sugerir em vez de explicar: retoma as lentes de leitura."
+  },
+  {
+   "href": "../../m8/licao-m8-f06/",
+   "texto": "Verbos e referências: confere quem fala e a que tempo se refere."
+  },
+  {
+   "href": "../../m8/licao-m8-f09/",
+   "texto": "A criação narrativa é formativa; esta tarefa pede uma opinião literária."
+  }
+ ],
+ "dossie": [
+  {
+   "facto": "Maria Judite de Carvalho, «George», em <i>Seta Despedida</i> (1995). Consulta o conto integral no manual adotado ou no exemplar usado na unidade; identifica editora, ano e páginas desse exemplar.",
+   "href": "../../m8/licao-m8-f08/",
+   "fonte": "Lição «George»"
+  },
+  {
+   "facto": "O recurso da DGE permite rever o conto e a tipologia textual. É apoio à leitura; não substitui as passagens do exemplar que identificares.",
+   "href": "https://estudoautonomo.dge.mec.pt/recurso/george-de-maria-judite-de-carvalho",
+   "fonte": "DGE, Estudo Autónomo"
+  },
+  {
+   "facto": "Usa dois momentos distintos. A localização pode ser a página do teu exemplar e o início da passagem, sem copiar o conto. Não é pedido qualquer relato da tua vida.",
+   "href": "../../m8/m8-george-tres-idades/",
+   "fonte": "Três idades, uma mulher, um leitor"
+  }
+ ],
+ "criterios": [
+  "Posição clara e dois momentos do conto localizados e bem interpretados.",
+  "Argumentos desenvolvidos, uma objeção pertinente e resposta fundamentada.",
+  "Organização, correção linguística, extensão, núcleo e síntese revistos."
+ ]
+}

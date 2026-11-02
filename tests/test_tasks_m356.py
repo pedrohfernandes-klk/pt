@@ -36,7 +36,8 @@ class TasksM356(unittest.TestCase):
 
     # 01/11/2026: nenhum texto entre a barra e header.topo no percurso do módulo.
     def test_abertura_e_guias_sem_corrupcao_css(self):
-        for m in (3, 5, 6):
+        # 01/11/2026: o M8 e o M9 entram com a mesma regra da dobra do arquivo (achado 2 do pt 145), sem tirar nenhum módulo.
+        for m in (3, 5, 6, 8, 9):
             s = (ROOT / f'm{m}/index.html').read_text('utf-8')
             self.assertGreater(s.find('class="avaliacao-tarefas"'), s.find('<h1'))
             self.assertIn('Cada unidade termina na sua aula de tarefa', s)
@@ -83,7 +84,7 @@ class TasksM356(unittest.TestCase):
     def test_camada_literal_aplicada_e_reversivel(self):
         r = subprocess.run([sys.executable, 'scripts/aplicar_trocas.py',
                             'scripts/tarefas_m356_20261031.json', '--manifesto',
-                            'tests/fixtures/tarefas-m356-edits-20261031.json', '--verificar'],
+                            'tests/fixtures/tarefas-m356-edits-20261031.json', '--verificar', '--desfazer-antes', 'tests/fixtures/tarefas-m89-edits-20261101.json'], # 01/11/2026: verificar o predecessor por baixo da camada M8/M9.
                            cwd=ROOT, capture_output=True, text=True, encoding='utf-8')
         self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
 

@@ -13,7 +13,7 @@
   if(step.licao)return !!(read("licao-"+step.licao)||{}).lida;
   return !!(step.exs&&step.exs.length&&step.exs.every(exercise));
  }
- function challengeKey(module,n) { return (["M4","M5","M6"].indexOf(module)>=0?"desafio-":"desafio-unidade-v2-")+module+"-u"+n; }
+ function challengeKey(module,n) { return (["M4","M5","M6","M8","M9"].indexOf(module)>=0?"desafio-":"desafio-unidade-v2-")+module+"-u"+n; }
  function historicalKeys(module,n) {
   return ["percurso-"+module+"-u"+n,"percurso-v2-"+module+"-u"+n,
    "percurso-sintese-"+module+"-u"+n,"desafio-"+module+"-u"+n,
@@ -30,7 +30,7 @@
   return EPIJogo.baralhar(chosen);
  }
  function mount(options) {
-  if(!options||!["M1","M2","M3","M4","M5","M6","M7"].includes(options.module))return;
+  if(!options||!["M1","M2","M3","M4","M5","M6","M7","M8","M9"].includes(options.module))return;
   var units=options.units,module=options.module;
   function paint() {
    var next=null;

@@ -7,9 +7,12 @@ import threading
 from playwright.sync_api import sync_playwright
 
 ROOT = Path(__file__).resolve().parents[1]
-SLUGS = ('m1-u1', 'm3-u1', 'm3-u2', 'm5-u1', 'm5-u2', 'm6-u1', 'm6-u2', 'm7-u3')
-# 01/11/2026: as nove versões de correção, para a impressão A4.
-CORRECOES = ('m1-u1', 'm1-u2', 'm3-u1', 'm3-u2', 'm5-u1', 'm5-u2', 'm6-u1', 'm6-u2', 'm7-u3')
+# 01/11/2026: acrescenta as quatro tarefas seguintes sem retirar a cobertura anterior.
+SLUGS = ('m1-u1', 'm3-u1', 'm3-u2', 'm5-u1', 'm5-u2', 'm6-u1', 'm6-u2', 'm7-u3',
+         'm8-u1', 'm8-u2', 'm9-u1', 'm9-u2')
+# 01/11/2026: as nove versões de correção, para a impressão A4, e as quatro do M8 e do M9, que já iam à A4 pelo SLUGS.
+CORRECOES = ('m1-u1', 'm1-u2', 'm3-u1', 'm3-u2', 'm5-u1', 'm5-u2', 'm6-u1', 'm6-u2', 'm7-u3',
+             'm8-u1', 'm8-u2', 'm9-u1', 'm9-u2')
 
 class Quiet(SimpleHTTPRequestHandler):
     def log_message(self, *args):
@@ -28,7 +31,7 @@ def main():
                     page = ctx.new_page()
                     page.route('https://fonts.googleapis.com/**', lambda r: r.abort())
                     page.route('https://fonts.gstatic.com/**', lambda r: r.abort())
-                    for m in (3, 5, 6):
+                    for m in (3, 5, 6, 8, 9):
                         page.goto(f'{host}/m{m}/', wait_until='networkidle')
                         button = page.locator('[data-module-next]').bounding_box()
                         if width == 320:
@@ -50,7 +53,7 @@ def main():
                     print('PASS apresentação', width, scheme, flush=True)
             page = browser.new_page()
             # 01/11/2026: largura útil do A4 com margens de 12 mm (210 - 24 = 186 mm, 703 px a 96 ppp), como na medição
-            # da revisão; as nove correções, incluindo a do M1-U2.
+            # da revisão; as nove correções, incluindo a do M1-U2, e as quatro do M8 e do M9.
             page.set_viewport_size({'width': 703, 'height': 1000})
             for slug in CORRECOES:
                 page.goto(f'{host}/tarefas/{slug}/correcao/', wait_until='networkidle')
