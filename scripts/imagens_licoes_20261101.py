@@ -87,8 +87,10 @@ def aplicar_imagens(bancos):
                      [('Autor','autor'),('Obra','obra'),('Data','data'),('Instituição ou acervo','instituicao')])
         rows+='<tr><th scope="row">Licença</th><td><a href="'+d['direitos']+'">'+d['licenca']+'</a></td></tr>'
         ficheiro=d.get('ficheiro','../../img/fontes/licoes-20261101/'+nome+'.jpg')
+        # 02/11/2026: original conferido no Commons; as outras duas imagens já têm a dimensão máxima disponível.
+        original=' data-original="../../img/fontes/antero-de-quental-1887-original.jpg"' if item['id']=='m6-f14' else ''
         opening=item['cards'][0]['html']
         item['cards'][0]['html'] = ('<figure class="fig documento"><a href="'+ficheiro+'" aria-label="Abrir a imagem inteira">'
-          '<img src="'+ficheiro+'" alt="'+escape(d['alt'],quote=True)+'"></a>'
+          '<img'+original+' src="'+ficheiro+'" alt="'+escape(d['alt'],quote=True)+'"></a>'
           '<figcaption><p>'+legenda+'</p><p>'+d['licenca']+'; <a href="'+d['fonte']+'">Fonte ↗</a></p><details><summary>Créditos e fonte da imagem</summary><table><caption>Identificação do documento visual</caption>'+rows+'</table>'
           '<p><a href="'+d['fonte']+'">Consultar a fonte e os direitos ↗</a>. Reprodução redimensionada, sem recorte.</p></details></figcaption></figure>')+opening

@@ -1,3 +1,4 @@
+# 02/11/2026: desfaz o lote 2 antes da base publicada; mesmas asserções.
 """01/11/2026: índices Cartaz, preservação e camada literal reversível."""
 import json,re,subprocess,sys,unittest
 from pathlib import Path
@@ -20,10 +21,10 @@ class IndicesCartaz(unittest.TestCase):
     self.assertEqual(re.findall(r'localStorage\.[\s\S]{0,150}',before),re.findall(r'localStorage\.[\s\S]{0,150}',after))
     self.assertEqual(re.findall(r'<img\b[^>]*>',before),re.findall(r'<img\b[^>]*>',after))
  def test_m4_conserva_as_tres_provas_do_149(self):
-  # 01/11/2026: o #149 guarda agora as provas na lista pendente, sem camada aplicada.
-  from test_pendentes_camada_149_20261101 import PENDENTES_CAMADA_149_20261101
+  # 02/11/2026: comparar as três provas com o histórico aprovado, agora aplicado no lote 2.
+  from test_pendentes_camada_149_20261101 import APROVADAS_CAMADA_149_20261101
   proofs=lambda s:re.findall(r'<p class="prova-esperada">(.*?)</p>',s)
-  expected=[proofs(e['novo'])[0] for e in PENDENTES_CAMADA_149_20261101 if e['local'].startswith('M4 unidade')]
+  expected=[proofs(e['novo'])[0] for e in APROVADAS_CAMADA_149_20261101 if e['local'].startswith('M4 unidade')]
   self.assertEqual(proofs((ROOT/'m4/index.html').read_text('utf8')),expected)
   self.assertEqual(len(expected),3)
  def test_uma_prova_e_uma_dobra_aberta_por_unidade(self):
@@ -46,7 +47,7 @@ class IndicesCartaz(unittest.TestCase):
   self.assertNotIn('setAttribute("href"',s)
  def test_camada_aplicada_e_reversivel(self):
   # 02/11/2026: desfaz antes a camada das tarefas individuais, a mais recente.
-  r=subprocess.run([sys.executable,'scripts/aplicar_trocas.py','scripts/cartaz_indices_20261101.json','--manifesto','tests/fixtures/cartaz-indices-edits-20261101.json','--verificar','--desfazer-antes','tests/fixtures/varredura-formatacao-edits-20261101.json','--desfazer-antes','tests/fixtures/calcada-mar-edits-20261102.json','--desfazer-antes','tests/fixtures/tarefas-individuais-edits-20261102.json'],cwd=ROOT,capture_output=True,text=True,encoding='utf8')
+  r=subprocess.run([sys.executable,'scripts/aplicar_trocas.py','scripts/cartaz_indices_20261101.json','--manifesto','tests/fixtures/cartaz-indices-edits-20261101.json','--verificar','--desfazer-antes', 'tests/fixtures/conteudos-lote2-edits-20261101.json', '--desfazer-antes', 'tests/fixtures/varredura-formatacao-edits-20261101.json', '--desfazer-antes', 'tests/fixtures/calcada-mar-edits-20261102.json','--desfazer-antes','tests/fixtures/tarefas-individuais-edits-20261102.json'],cwd=ROOT,capture_output=True,text=True,encoding='utf8')
   self.assertEqual(r.returncode,0,r.stdout+r.stderr)
  def test_so_nove_paginas_migram_sobre_a_base_integrada(self):
   # 01/11/2026: o manifesto delimita a camada, sem depender de commits após squash.

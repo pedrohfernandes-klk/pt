@@ -9,10 +9,10 @@ import unittest
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 # 01/11/2026: conferir o conteúdo pendente por baixo da camada visual dos índices.
-from auditoria_20261028 import undo_cartaz_indices
+from auditoria_20261028 import undo_cartaz_indices, undo_conteudos_lote2
 
 # 01/11/2026: para depois do #144 e do #145.
-PENDENTES_CAMADA_149_20261101 = [{'ficheiro': 'm1/licao-m1-f20/index.html',
+APROVADAS_CAMADA_149_20261101 = [{'ficheiro': 'm1/licao-m1-f20/index.html',
   'local': 'M1-F20 C14',
   'antigo': '{"t":"escolha","rot":"O nome do homem de barrete","tipo":"transferir","g":"c-interpretacao-opiniao","mais":true,"ver":"<img '
             'src=\\"../../img/fontes/fernao-lopes-painel.jpg\\" alt=\\"Rosto de um homem velho, de rugas fundas, com um barrete alto '
@@ -1255,41 +1255,43 @@ PENDENTES_CAMADA_149_20261101 = [{'ficheiro': 'm1/licao-m1-f20/index.html',
 LIMITE_149_20261101 = frozenset([('docs/pedagogia/aquecimentos/m4-u1.json', 'A-M4 fonte do gerador'), ('exame/provas/2026-1f/grupo-i/index.html', 'E-2026-I C34'), ('m1/licao-m1-f20/index.html', 'M1-F20 C14'), ('m4/aulas/aula-01/index.html', 'M4 guião: C11 no núcleo'), ('m4/aulas/aula-01/index.html', 'M4 guião: C11 sai do complemento'), ('m4/aulas/aula-01/index.html', 'M4 guião: complementos'), ('m4/aulas/aula-01/index.html', 'M4 guião: contagem'), ('m4/aulas/aula-01/index.html', 'M4 guião: fecho 13'), ('m4/aulas/aula-01/index.html', 'M4 guião: leitura e produção'), ('m4/aulas/aula-01/index.html', 'M4 guião: lista de 13'), ('m4/aulas/aula-01/index.html', 'M4 guião: pergunta do arco'), ('m4/aulas/aula-01/index.html', 'M4 guião: turma no cartão 11'), ('m4/index.html', 'M4 prova: peça de fecho'), ('m4/index.html', 'M4 unidade 1: prova esperada'), ('m4/index.html', 'M4 unidade 2: prova esperada'), ('m4/index.html', 'M4 unidade 3: prova esperada'), ('m4/licao-m4-f01/index.html', 'M4-F01 C11'), ('m4/licao-m4-f01/index.html', 'M4-F01 C18'), ('m4/painel-m4-f01/index.html', 'M4-F01 painel: CARTOES'), ('m4/painel-m4-f01/index.html', 'M4-F01 painel: seletor'), ('m4/recursos/tpc-entrada.js', 'M4-F28 C03'), ('m4/recursos/tpc-entrada.js', 'M4-F28 C05'), ('m6/licao-m6-f01/index.html', 'M6-F01 C16'), ('m6/painel-m6-f01/index.html', 'M6-F01 painel: CARTOES'), ('m6/painel-m6-f01/index.html', 'M6-F01 painel: seletor'), ('m7/licao-m7-f34/index.html', 'M7-F34 C09'), ('m7/licao-m7-f34/index.html', 'M7-F34 C31'), ('m7/painel-m7-f34/index.html', 'M7-F34 painel: CARTOES'), ('m7/painel-m7-f34/index.html', 'M7-F34 painel: seletor'), ('m8/licao-m8-f12/index.html', 'M8-F12 C09'), ('m8/licao-m8-f12/index.html', 'M8-F12 C17'), ('m8/licao-m8-f12/index.html', 'M8-F12 C22'), ('m8/painel-m8-f12/index.html', 'M8-F12 painel: CARTOES'), ('m8/painel-m8-f12/index.html', 'M8-F12 painel: seletor'), ('m9/painel-m9-f13/index.html', 'M9 medição: impressão e noindex'), ('m9/painel-m9-f13/index.html', 'M9 medição: procedimento e rubrica'), ('m9/recursos/f13.js', 'M9-F13 C02'), ('m9/recursos/f13.js', 'M9-F13 C10'), ('m9/recursos/f13.js', 'M9-F13 C21'), ('m9/recursos/f13.js', 'M9-F13 C23'), ('scripts/provas/dados/2026-1f/grupo-i.json', 'E-2026-I fonte do gerador'), ('tarefas/m4-u1/aquecimento/index.html', 'A-M4 C05'), ('m4/painel-m4-f01/index.html', 'M4-F01 painel: MATERIAL'), ('m6/painel-m6-f01/index.html', 'M6-F01 painel: MATERIAL'), ('m7/painel-m7-f34/index.html', 'M7-F34 painel: MATERIAL'), ('m8/painel-m8-f12/index.html', 'M8-F12 painel: MATERIAL')])
 
 # 01/11/2026: as cópias serão atualizadas juntamente com a lição, sem dispensar a comparação atual.
-PENDENTES_DESAFIO_M8_20261101 = [
-    ('m8/index.html', 'desafio U2: cópia de M8-F12 C09'),
-]
+PENDENTES_DESAFIO_M8_20261101 = []
 
 # 02/11/2026: o desafio da U1 do M6 guarda a cópia do C16 antigo; fica como está
 # (faz parte da camada literal do #144) e deixa de ter par na lição.
 
 # 01/11/2026: materiais gerados a refazer com a camada do #149 (não aceitam troca literal).
 # 02/11/2026: reúne os achados 5/14/21; regenerar nas fontes quando C11 entrar no núcleo.
-PENDENTES_MATERIAIS_149_20261101 = [
-    ('m4/diapositivos/aula-01-f01.pdf', 'aula 1: 13 cartões; diapositivo do C11 «Que contraste responde melhor…» antes de «Agora, em papel»; «Para ir mais longe»: 3 cartões de pergunta e 2 de leitura, sem «Os peixes em ordem»'),
-    ('m4/diapositivos/aula-01-f01.pptx', 'o mesmo que o PDF'),
-    ('m4/aulas/guioes-m4.pdf', 'aula 1: «13 cartões na aula», lista de 13 e «Para ir mais longe: 3 cartões de pergunta e 2 de leitura», sem «Os peixes em ordem»'),
-]
+# 02/11/2026: os três materiais foram regenerados e conferidos.
+PENDENTES_MATERIAIS_149_20261101 = []
+
+# 02/11/2026: o histórico aprovado conserva a prova; não há trocas textuais por aplicar.
+PENDENTES_CAMADA_149_20261101 = []
 
 class Pendentes149(unittest.TestCase):
-    def test_lista_apenas_diminui_e_trocas_nao_estao_aplicadas(self):
-        ids=[(e['ficheiro'],e['local']) for e in PENDENTES_CAMADA_149_20261101]
-        self.assertEqual(len(ids),len(set(ids)))
-        self.assertTrue(set(ids)<=LIMITE_149_20261101)
-        texts={}
-        for e in PENDENTES_CAMADA_149_20261101:
+    # 02/11/2026: a lista foi aplicada; conservar o contrato das 46 propostas e provar a entrega.
+    def test_lista_esvaziada_e_trocas_aplicadas(self):
+        self.assertEqual(PENDENTES_CAMADA_149_20261101, [])
+        self.assertEqual(len(APROVADAS_CAMADA_149_20261101),46)
+        layer=json.loads((ROOT/'scripts/conteudos_lote2_20261101.json').read_text('utf-8'))
+        for e in APROVADAS_CAMADA_149_20261101:
             with self.subTest(local=e['local']):
-                s=texts.setdefault(e['ficheiro'],undo_cartaz_indices(e['ficheiro'],(ROOT/e['ficheiro']).read_text('utf-8')))
-                self.assertNotEqual(e['antigo'],e['novo'])
-                self.assertEqual(s.count(e['antigo']),e['ocorrencias'])
-                self.assertNotIn(e['novo'],s,'Troca aplicada: retirar da lista pendente')
-                texts[e['ficheiro']]=s.replace(e['antigo'],e['novo'])
+                if e['local'].startswith('M4 unidade'):
+                    proof=re.search(r'<p class="prova-esperada">(.*?)</p>',e['novo'])[1]
+                    self.assertIn('<p class="prova-esperada">'+proof+'</p>',(ROOT/e['ficheiro']).read_text('utf-8'))
+                elif e['local']=='M4 prova: peça de fecho':
+                    self.assertIn('.prova-esperada',(ROOT/'assets/cartaz-indices.css').read_text('utf-8'))
+                else:
+                    applied=[x for x in layer if x['ficheiro']==e['ficheiro'] and x['antigo']==e['antigo']]
+                    self.assertEqual(len(applied),1)
+                    self.assertIn(applied[0]['novo'],(ROOT/e['ficheiro']).read_text('utf-8'))
         self.assertFalse((ROOT/'scripts/conteudos_lote1_20261101.json').exists())
         self.assertFalse((ROOT/'tests/fixtures/conteudos-lote1-edits-20261101.json').exists())
 
     def test_cartoes_corrigidos_sem_extras_e_opcoes_equilibradas(self):
         # 01/11/2026: contar também as certas mais longas, incluindo empates.
         shortest=0;longest=0;three=0
-        for e in PENDENTES_CAMADA_149_20261101:
+        for e in APROVADAS_CAMADA_149_20261101:
             if not re.fullmatch(r'(?:M[1-9]-F[0-9]+|A-M4|E-2026-I) C[0-9]+',e['local']):continue
             c=json.loads(e['novo']);before=json.loads(e['antigo'])
             self.assertNotEqual(c.get('p2',''),c.get('p','!'))
@@ -1313,17 +1315,29 @@ class Pendentes149(unittest.TestCase):
             ('m8/index.html','desafio U2: cópia de M8-F12 C09')})
         source=(ROOT/'m8/index.html').read_text('utf-8')
         pool=[c for c in json.JSONDecoder().raw_decode(source.split('var U=',1)[1])[0][1]['pool'] if c.get('_l')=='m8-f12']
-        for _,label in PENDENTES_DESAFIO_M8_20261101:
-            local=label.split('cópia de ')[1]
-            e=next(e for e in PENDENTES_CAMADA_149_20261101 if e['local']==local)
-            self.assertTrue(any(c['p']==json.loads(e['antigo'])['p'] for c in pool),'Cópia inexistente no desafio: retirar o pendente')
-            self.assertNotIn(json.loads(e['novo'])['p'],source,'Cópia corrigida: retirar o pendente')
+        # 02/11/2026: as duas cópias são comparadas à lição, sem isenções.
+        self.assertEqual(PENDENTES_DESAFIO_M8_20261101, [])
+        text=(ROOT/'m8/licao-m8-f12/index.html').read_text('utf-8')
+        lesson=json.JSONDecoder().raw_decode(text,re.search(r'\bCARTOES\s*=\s*',text).end())[0]
+        for n in (9,18):
+            expected=lesson[n-1]
+            matches=[c for c in pool if c.get('p')==expected.get('p')]
+            self.assertEqual(len(matches),1,(n,matches))
+            if n==9:
+                self.assertEqual({k:v for k,v in matches[0].items() if not k.startswith('_')},expected)
+            else:
+                # 02/11/2026: C18 conserva integralmente a versão própria do desafio; não é a cópia C09 corrigida.
+                original=undo_conteudos_lote2('m8/index.html',source)
+                original_pool=json.JSONDecoder().raw_decode(original.split('var U=',1)[1])[0][1]['pool']
+                old=next(c for c in original_pool if c.get('_l')=='m8-f12' and c.get('p')==expected.get('p'))
+                self.assertEqual(matches[0],old)
+                self.assertEqual(matches[0]['pares'],expected['pares'])
 
-        self.assertIn(json.loads(next(e for e in PENDENTES_CAMADA_149_20261101 if e['local']=='M6-F01 C16')['antigo'])['p'],(ROOT/'m6/index.html').read_text('utf-8'))
+        self.assertIn(json.loads(next(e for e in APROVADAS_CAMADA_149_20261101 if e['local']=='M6-F01 C16')['antigo'])['p'],(ROOT/'m6/index.html').read_text('utf-8'))
 
     # 01/11/2026: proteger a serialização dos geradores e os materiais ainda por regenerar.
     def test_json_das_paginas_geradas(self):
-        for e in PENDENTES_CAMADA_149_20261101:
+        for e in APROVADAS_CAMADA_149_20261101:
             if '/aquecimento/' in e['ficheiro'] or e['ficheiro'].startswith('exame/provas/'):
                 self.assertEqual(e['novo'],json.dumps(json.loads(e['novo']),ensure_ascii=False),e['local'])
 
@@ -1337,22 +1351,38 @@ class Pendentes149(unittest.TestCase):
         self.assertTrue(set(PENDENTES_MATERIAIS_149_20261101)<=limite)
         for path,_ in PENDENTES_MATERIAIS_149_20261101:self.assertTrue((ROOT/path).is_file(),path)
 
+    # 02/11/2026: impedir o regresso dos materiais anteriores e conferir o C11 na apresentação.
+    def test_materiais_regenerados_e_cartao_no_nucleo(self):
+        import hashlib,zipfile,xml.etree.ElementTree as ET
+        self.assertEqual(PENDENTES_MATERIAIS_149_20261101,[])
+        record=json.loads((ROOT/'tests/fixtures/materiais-m4-lote2-20261102.json').read_text('utf-8'))
+        for rel,digest in record['ficheiros'].items():
+            self.assertEqual(hashlib.sha256((ROOT/rel).read_bytes()).hexdigest(),digest,rel)
+        with zipfile.ZipFile(ROOT/'m4/diapositivos/aula-01-f01.pptx') as z:
+            names=sorted((n for n in z.namelist() if re.fullmatch(r'ppt/slides/slide\d+\.xml',n)),key=lambda n:int(re.search(r'slide(\d+)',n)[1]))
+            self.assertEqual(len(names),31)
+            texts=[' '.join(ET.fromstring(z.read(n)).itertext()) for n in names]
+            self.assertIn('Que contraste responde melhor',texts[26])
+            self.assertIn('distingue essa mudança de uma desistência',texts[28])
+            self.assertIn('3 cartões de pergunta e 2 de leitura',texts[30])
+            self.assertNotIn('Os peixes em ordem',texts[30])
+
     # 01/11/2026: a aplicação futura conserva os seletores k/t/p dos painéis e a ordem de leitura do M6.
     def test_paineis_pendentes_correspondem_as_licoes(self):
         # 02/11/2026: os seletores não levam marcas dos dados.
-        for e in PENDENTES_CAMADA_149_20261101:
+        for e in APROVADAS_CAMADA_149_20261101:
             if e['local'].endswith('painel: seletor'):
                 self.assertNotRegex(e['novo'],r'(?<![\w/])_[^_<>"]+_(?!\w)|\*\*',e['local'])
                 lesson=e['local'].split()[0]
-                changed={int(x['local'].split(' C')[1])-1 for x in PENDENTES_CAMADA_149_20261101 if re.fullmatch(lesson+r' C\d+',x['local'])}
+                changed={int(x['local'].split(' C')[1])-1 for x in APROVADAS_CAMADA_149_20261101 if re.fullmatch(lesson+r' C\d+',x['local'])}
                 options=lambda text:{int(m[1]):m[0] for m in re.finditer(r'<option value="(\d+)">.*?</option>',text)}
-                published=options((ROOT/e['ficheiro']).read_text('utf-8'))
+                published=options(undo_conteudos_lote2(e['ficheiro'],(ROOT/e['ficheiro']).read_text('utf-8')))
                 for k,option in options(e['novo']).items():
                     if k not in changed:self.assertEqual(option,published[k],(lesson,k))
             # 02/11/2026: o relâmpago projeta as opções e a correção do cartão novo.
             if e['local'].endswith('painel: MATERIAL'):
                 lesson=e['local'].split()[0];material=json.loads(e['novo'])
-                for change in PENDENTES_CAMADA_149_20261101:
+                for change in APROVADAS_CAMADA_149_20261101:
                     if not re.fullmatch(lesson+r' C\d+',change['local']):continue
                     c=json.loads(change['novo']);k=int(change['local'].split(' C')[1])-1
                     if c['t']=='ler':continue
@@ -1360,18 +1390,18 @@ class Pendentes149(unittest.TestCase):
                     self.assertEqual(m['f'],c['f']);self.assertEqual(m.get('cita'),c.get('cita'))
                     self.assertFalse({'c','v','fe'}&set(m))
                     if c['t']=='escolha':self.assertEqual(sorted(m['o']),sorted(c['o']))
-        for e in PENDENTES_CAMADA_149_20261101:
+        for e in APROVADAS_CAMADA_149_20261101:
             if not e['local'].endswith('painel: CARTOES'):continue
             lesson=e['local'].split()[0];cards=json.loads(e['novo'])
-            for change in PENDENTES_CAMADA_149_20261101:
+            for change in APROVADAS_CAMADA_149_20261101:
                 if re.fullmatch(lesson+r' C\d+',change['local']):
                     c=json.loads(change['novo']);k=int(change['local'].split(' C')[1])-1
                     if c['t']=='ler':continue
                     self.assertEqual(next(x for x in cards if x['k']==k),{'k':k,'t':c['t'],'p':c['p']})
-        e=next(e for e in PENDENTES_CAMADA_149_20261101 if e['local']=='M6-F01 C16')
+        e=next(e for e in APROVADAS_CAMADA_149_20261101 if e['local']=='M6-F01 C16')
         before=json.loads(e['antigo']);after=json.loads(e['novo'])
         self.assertEqual(after['g'],2)
         self.assertEqual((after['cita'],after['l']),(before['cita'],before['l']))
-        self.assertFalse(any(e['local']=='M6-F01 C08' for e in PENDENTES_CAMADA_149_20261101))
+        self.assertFalse(any(e['local']=='M6-F01 C08' for e in APROVADAS_CAMADA_149_20261101))
 
 if __name__=='__main__':unittest.main()

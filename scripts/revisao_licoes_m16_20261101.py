@@ -88,7 +88,7 @@ REVISOES_B={
 # 01/11/2026: erros próximos de leitura, sem alternativas descartáveis por absolutos.
 REVISOES_B['m5-f16']['escolhas'].update({
  3:['Contrasta repetir doutrina e compreender o concreto.','Contrasta aprender por si e dispensar a orientação.','Contrasta praticar desporto e dispensar a leitura.'],
- 10:['A formação participa nas escolhas posteriores de Carlos.','A formação explica as escolhas posteriores de Carlos.','A formação corrige as escolhas posteriores de Carlos.'],
+ 10:['A formação participa nas escolhas posteriores de Carlos.','A formação determina todas as escolhas de Carlos.','A formação corrige as escolhas posteriores de Carlos.'],
  14:['Como confronta a ação de Carlos a promessa do método?','Como confirma a ação de Carlos a superioridade do método?','Como traduz a ação de Carlos o programa do seu educador?']})
 REVISOES_B['m6-f14']['escolhas'].update({
  3:['A discussão das ideias admite a discordância.','A escuta das ideias pressupõe o acordo mútuo.','A discussão das ideias adia a avaliação crítica.'],

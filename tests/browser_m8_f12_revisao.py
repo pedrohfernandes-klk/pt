@@ -41,7 +41,10 @@ try:
       modal.locator(f'.pares .dir [data-d="{i}"]').click()
     feedback=modal.locator('.casca-folha')
     assert feedback.is_visible()
-    if name=='habit':assert 'não é necessária uma contagem exata' in feedback.inner_text()
+    # 02/11/2026: C09 aprovado no #149 distingue o valor habitual do mero número de ocorrências.
+    if name=='habit':
+     assert 'habitual e iterativo não são rótulos sempre incompatíveis' in feedback.inner_text()
+     assert '«todas as manhãs» apresenta a releitura como um costume' in feedback.inner_text()
     if name=='aspect':assert 'não diz que a pintora parou' in feedback.inner_text()
     if name=='reference':assert 'informação anterior' in feedback.inner_text()
     assert not page.evaluate('document.documentElement.scrollWidth>innerWidth+3')

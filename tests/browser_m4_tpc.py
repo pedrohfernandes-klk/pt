@@ -60,7 +60,10 @@ try:
    assert 'Almeida Garrett' in page.locator('#baralho').inner_text()
    page.locator('.casca [data-seguinte]').click()
    page.locator('#baralho button[data-j="0"]').press('Enter')
-   assert 'não uma transcrição integral' in page.locator('[data-c-folha]').inner_text()
+   # 02/11/2026: C03 revisto pelo #149 distingue relação temática de repetição do enredo.
+   retorno=page.locator('[data-c-folha]').inner_text()
+   assert 'Confundes relação temática com repetição do enredo' in retorno
+   assert 'Relê as duas situações: um namoro terminado e um marido desaparecido.' in retorno
    page.locator('[data-c-folha] [data-seguinte]').click()
    page.locator('summary').filter(has_text='Ajuda: como sustentar').press('Enter')
    assert 'Procura outro detalhe' in page.locator('#baralho').inner_text()

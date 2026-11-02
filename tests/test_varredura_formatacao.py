@@ -4,7 +4,7 @@ import hashlib
 import json
 import re
 import unittest
-from auditoria_20261028 import undo_varredura
+from auditoria_20261028 import undo_varredura, undo_conteudos_lote2
 
 ROOT = Path(__file__).resolve().parents[1]
 LEDGER = json.loads((ROOT/'docs/qa/varredura-formatacao-20261101.json').read_text('utf-8'))
@@ -32,6 +32,8 @@ class Varredura(unittest.TestCase):
             with self.subTest(file=rel):
                 current = (ROOT/rel).read_text('utf-8')
                 original = undo_varredura(rel, current)
+                # 02/11/2026: conferir o hash histórico após desfazer estritamente apenas o lote 2 posterior.
+                current = undo_conteudos_lote2(rel, current)
                 self.assertEqual(hashlib.sha256(original.encode()).hexdigest(), record['base_sha256_lf'])
                 self.assertEqual(hashlib.sha256(current.encode()).hexdigest(), record['after_sha256_lf'])
                 for edit in record['edits']:
@@ -116,7 +118,8 @@ class Varredura(unittest.TestCase):
         self.assertEqual(len(corrigidos),239)
         for r in corrigidos:
             if r['file'] not in cache:
-                cache[r['file']]=visivel((ROOT/r['file']).read_text('utf-8'))
+                # 02/11/2026: o relatório descreve a varredura publicada, anterior ao lote 2.
+                cache[r['file']]=visivel(undo_conteudos_lote2(r['file'],(ROOT/r['file']).read_text('utf-8')))
             texto=cache[r['file']]
             segmentos=[re.sub(r'\s+',' ',x).strip() for x in r['resultado'].replace('*','').split('↵') if x.strip()]
             self.assertTrue(segmentos,r['id'])
