@@ -1,9 +1,9 @@
 name: Cartaz pieces
 on:
   push:
-    paths: ['assets/calcada-*', 'scripts/gerar_calcada_continua.py', 'tests/*calcada_continua*', 'assets/cartaz-cabecalho.css', 'assets/fundo-calcada.css', 'index.html', 'scripts/cartaz_cabecalho*', 'tests/fixtures/cartaz-cabecalho*', 'assets/cartaz-indices.*', 'assets/cartaz-m4-*', 'assets/fontes/**', 'm[1-9]/index.html', 'scripts/cartaz_indices*', 'scripts/cartaz_m4*', 'tests/fixtures/cartaz-*', 'assets/cartaz-components.*', 'assets/appearance.css', 'demonstracoes/cartaz-animacoes/**', 'tests/*cartaz*', '.github/workflows/cartaz-qa.yml']
+    paths: ['tests/browser_cabecalhos_compactos.cjs', 'assets/calcada-*', 'scripts/gerar_calcada_continua.py', 'tests/*calcada_continua*', 'assets/cartaz-cabecalho.css', 'assets/fundo-calcada.css', 'index.html', 'scripts/cartaz_cabecalho*', 'tests/fixtures/cartaz-cabecalho*', 'assets/cartaz-indices.*', 'assets/cartaz-m4-*', 'assets/fontes/**', 'm[1-9]/index.html', 'scripts/cartaz_indices*', 'scripts/cartaz_m4*', 'tests/fixtures/cartaz-*', 'assets/cartaz-components.*', 'assets/appearance.css', 'demonstracoes/cartaz-animacoes/**', 'tests/*cartaz*', '.github/workflows/cartaz-qa.yml']
   pull_request:
-    paths: ['assets/calcada-*', 'scripts/gerar_calcada_continua.py', 'tests/*calcada_continua*', 'assets/cartaz-cabecalho.css', 'assets/fundo-calcada.css', 'index.html', 'scripts/cartaz_cabecalho*', 'tests/fixtures/cartaz-cabecalho*', 'assets/cartaz-indices.*', 'assets/cartaz-m4-*', 'assets/fontes/**', 'm[1-9]/index.html', 'scripts/cartaz_indices*', 'scripts/cartaz_m4*', 'tests/fixtures/cartaz-*', 'assets/cartaz-components.*', 'assets/appearance.css', 'demonstracoes/cartaz-animacoes/**', 'tests/*cartaz*', '.github/workflows/cartaz-qa.yml']
+    paths: ['tests/browser_cabecalhos_compactos.cjs', 'assets/calcada-*', 'scripts/gerar_calcada_continua.py', 'tests/*calcada_continua*', 'assets/cartaz-cabecalho.css', 'assets/fundo-calcada.css', 'index.html', 'scripts/cartaz_cabecalho*', 'tests/fixtures/cartaz-cabecalho*', 'assets/cartaz-indices.*', 'assets/cartaz-m4-*', 'assets/fontes/**', 'm[1-9]/index.html', 'scripts/cartaz_indices*', 'scripts/cartaz_m4*', 'tests/fixtures/cartaz-*', 'assets/cartaz-components.*', 'assets/appearance.css', 'demonstracoes/cartaz-animacoes/**', 'tests/*cartaz*', '.github/workflows/cartaz-qa.yml']
 jobs:
   pieces:
     runs-on: ubuntu-latest
@@ -27,6 +27,16 @@ jobs:
       - run: npm install --no-save playwright
       - run: npx playwright install --with-deps chromium
       - run: node --test tests/cartaz.test.cjs tests/appearance.test.cjs tests/cartaz_animacoes.test.cjs
+      # 03/11/2026: cabeçalhos compactos, contraste real, projeção e zoom nativo.
+      - run: node tests/browser_cabecalhos_compactos.cjs
+        env:
+          HEADER_OUTPUT: ${{ runner.temp }}/cabecalhos-compactos
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: cabecalhos-compactos
+          path: ${{ runner.temp }}/cabecalhos-compactos
+          retention-days: 30
       - run: node tests/browser_cartaz.cjs
       # 01/11/2026: movimento, estado final, primeira ação e contrato do visor.
       - run: node tests/browser_cartaz_animacoes.cjs

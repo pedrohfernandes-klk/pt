@@ -56,10 +56,10 @@ html:not(.em-projecao):not(.epi-projection):not([data-cz-projection]):not([data-
 html:not(.em-projecao):not(.epi-projection):not([data-cz-projection]):not([data-cz-reduce]) body[data-site="pt"] .raiz .p-cab.cf-anda.fundo-pausa[data-fundo="cf"] .cf-pedras::after{animation-play-state:paused}
 
 /* 03/11/2026: no telemóvel, a pedra recupera a proporção e a onda afina.
-   A região desvanece-se no papel; nunca repete o desenho na vertical. */
+   A região sobe para trás do título e desvanece-se no papel; nunca repete o desenho na vertical. */
 @media(max-width:639px){
   body[data-site="pt"] .raiz .p-cab[data-fundo="cf"] div.cf-mar{
-    top:auto;bottom:0;height:clamp(248px,64vw,280px);opacity:.36;
+    top:0;bottom:auto;height:clamp(248px,64vw,280px);opacity:.36;
     mask-image:linear-gradient(180deg,transparent,rgba(0,0,0,.6) 20%,rgba(0,0,0,.9) 65%,#000 85%,transparent);
   }
   :root[data-theme="dark"] body[data-site="pt"] .raiz .p-cab[data-fundo="cf"] div.cf-mar{opacity:.3}
