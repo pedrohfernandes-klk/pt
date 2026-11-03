@@ -1,0 +1,276 @@
+{
+ "base_commit": "123335cf9804a493c003ea03b6806196833d91ef",
+ "_nota": "02/11/2026: F0, ajuda nos vinte aquecimentos gerados e proteção dos índices na importação do progresso; cartões, versões e resultados preservados.",
+ "files": {
+  "tarefas/m1-u1/aquecimento/index.html": {
+   "base_sha256_lf": "8d90e6d55494b0d7d3c52949e7091ec8d1a0ea691352c1c5f78f94e2e28b7fdf",
+   "after_sha256_lf": "82389e7ba1e6f060a54e6a458747f4329f879f63f9b875368fca45c3166021c5",
+   "edits": [
+    {
+     "location": "F0: ajuda do cartão no cabeçalho",
+     "old": "<span class=\"c-modo\" data-c-modo hidden></span>",
+     "new": "<span class=\"c-modo\" data-c-modo hidden></span><button type=\"button\" class=\"c-ic\" data-c-como aria-label=\"Como se faz\" title=\"Como se faz\" hidden><span class=\"c-roda\">?</span></button>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "tarefas/m1-u2/aquecimento/index.html": {
+   "base_sha256_lf": "cb6998cfbe2ae65c3488708b0398adc2e43a56096e25734879aab375682514cb",
+   "after_sha256_lf": "c581492da0b114dc89360f39b2c8c772e0fc5a30f75d361ce53585d51756b000",
+   "edits": [
+    {
+     "location": "F0: ajuda do cartão no cabeçalho",
+     "old": "<span class=\"c-modo\" data-c-modo hidden></span>",
+     "new": "<span class=\"c-modo\" data-c-modo hidden></span><button type=\"button\" class=\"c-ic\" data-c-como aria-label=\"Como se faz\" title=\"Como se faz\" hidden><span class=\"c-roda\">?</span></button>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "tarefas/m2-u1/aquecimento/index.html": {
+   "base_sha256_lf": "8f8db11c35578c6328edf57bcea286d821a332a64f8e7134a5f20e8122e03de1",
+   "after_sha256_lf": "a45d690cf5bbaad14bddb5341c46d0efc7367e619c69144ea9c3cf918eb1464e",
+   "edits": [
+    {
+     "location": "F0: ajuda do cartão no cabeçalho",
+     "old": "<span class=\"c-modo\" data-c-modo hidden></span>",
+     "new": "<span class=\"c-modo\" data-c-modo hidden></span><button type=\"button\" class=\"c-ic\" data-c-como aria-label=\"Como se faz\" title=\"Como se faz\" hidden><span class=\"c-roda\">?</span></button>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "tarefas/m2-u2/aquecimento/index.html": {
+   "base_sha256_lf": "30dc7e7a1750facd3bdaac76ea51b73b8313722732d902854593d76713ef05d5",
+   "after_sha256_lf": "d4a665bb6a3e775f9488bd430fa3c5e05c7df8e3155a9ed09ffa45fe830466b7",
+   "edits": [
+    {
+     "location": "F0: ajuda do cartão no cabeçalho",
+     "old": "<span class=\"c-modo\" data-c-modo hidden></span>",
+     "new": "<span class=\"c-modo\" data-c-modo hidden></span><button type=\"button\" class=\"c-ic\" data-c-como aria-label=\"Como se faz\" title=\"Como se faz\" hidden><span class=\"c-roda\">?</span></button>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "tarefas/m3-u1/aquecimento/index.html": {
+   "base_sha256_lf": "2a5a3760d1635dc71ee5014b8fff04fc10d4ce79093ab788126c9912c90660a7",
+   "after_sha256_lf": "415049da57db838b252b04b6806b2d4e28dccf2e163cfa7d3c8991cd484954f9",
+   "edits": [
+    {
+     "location": "F0: ajuda do cartão no cabeçalho",
+     "old": "<span class=\"c-modo\" data-c-modo hidden></span>",
+     "new": "<span class=\"c-modo\" data-c-modo hidden></span><button type=\"button\" class=\"c-ic\" data-c-como aria-label=\"Como se faz\" title=\"Como se faz\" hidden><span class=\"c-roda\">?</span></button>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "tarefas/m3-u2/aquecimento/index.html": {
+   "base_sha256_lf": "294a5cdf56466eb769170f181827e8a7e8495240ed33aef5b48e9d2b8c72a8b0",
+   "after_sha256_lf": "7417f85aad89028d979f01541a326e245dbf0908329a46e18f69eac4de179d12",
+   "edits": [
+    {
+     "location": "F0: ajuda do cartão no cabeçalho",
+     "old": "<span class=\"c-modo\" data-c-modo hidden></span>",
+     "new": "<span class=\"c-modo\" data-c-modo hidden></span><button type=\"button\" class=\"c-ic\" data-c-como aria-label=\"Como se faz\" title=\"Como se faz\" hidden><span class=\"c-roda\">?</span></button>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "tarefas/m4-u1/aquecimento/index.html": {
+   "base_sha256_lf": "28b0b56b6ecdc1155f8620c71a5f561517f9e96fe8bd45e53c1c384e192e9aac",
+   "after_sha256_lf": "c77222b7e1650fccf55e15654123103ebc26df613e9426dd75b6a68cda25a9fa",
+   "edits": [
+    {
+     "location": "F0: ajuda do cartão no cabeçalho",
+     "old": "<span class=\"c-modo\" data-c-modo hidden></span>",
+     "new": "<span class=\"c-modo\" data-c-modo hidden></span><button type=\"button\" class=\"c-ic\" data-c-como aria-label=\"Como se faz\" title=\"Como se faz\" hidden><span class=\"c-roda\">?</span></button>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "tarefas/m4-u2/aquecimento/index.html": {
+   "base_sha256_lf": "e531d0e91b9cdffd05e56149b50fa4df36d7741f832cde932355f7e21503b8a9",
+   "after_sha256_lf": "4ea947d863fac3fc1c0ac7fd3cedeabeaf09677b60fef17f62513e1b1aa0e55c",
+   "edits": [
+    {
+     "location": "F0: ajuda do cartão no cabeçalho",
+     "old": "<span class=\"c-modo\" data-c-modo hidden></span>",
+     "new": "<span class=\"c-modo\" data-c-modo hidden></span><button type=\"button\" class=\"c-ic\" data-c-como aria-label=\"Como se faz\" title=\"Como se faz\" hidden><span class=\"c-roda\">?</span></button>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "tarefas/m4-u3-discurso/aquecimento/index.html": {
+   "base_sha256_lf": "3eee2ebc658d5b3684f2482307ff56f744405f627c96e58a4926df563811adf2",
+   "after_sha256_lf": "8c52b55554e9e62a704854161ae9c03f1a47e16fa4ed961da1b3bde4f1496995",
+   "edits": [
+    {
+     "location": "F0: ajuda do cartão no cabeçalho",
+     "old": "<span class=\"c-modo\" data-c-modo hidden></span>",
+     "new": "<span class=\"c-modo\" data-c-modo hidden></span><button type=\"button\" class=\"c-ic\" data-c-como aria-label=\"Como se faz\" title=\"Como se faz\" hidden><span class=\"c-roda\">?</span></button>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "tarefas/m5-u1/aquecimento/index.html": {
+   "base_sha256_lf": "1dd13d692efcec904d5beaa8cf70278df466e87d947bd8234814c4c25a0f2cc6",
+   "after_sha256_lf": "08d897bb0b564c3bbf3f787088753ad6ac838118241895132f875622f166fa15",
+   "edits": [
+    {
+     "location": "F0: ajuda do cartão no cabeçalho",
+     "old": "<span class=\"c-modo\" data-c-modo hidden></span>",
+     "new": "<span class=\"c-modo\" data-c-modo hidden></span><button type=\"button\" class=\"c-ic\" data-c-como aria-label=\"Como se faz\" title=\"Como se faz\" hidden><span class=\"c-roda\">?</span></button>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "tarefas/m5-u2/aquecimento/index.html": {
+   "base_sha256_lf": "a96a30bb90f4d3b4e9099c743cbe28249bf5782bfd8caf035e6d1dc8fcb2e814",
+   "after_sha256_lf": "a567ca148416bfbc64556055270710734c814a6683a2f017d67567c36ebd01ef",
+   "edits": [
+    {
+     "location": "F0: ajuda do cartão no cabeçalho",
+     "old": "<span class=\"c-modo\" data-c-modo hidden></span>",
+     "new": "<span class=\"c-modo\" data-c-modo hidden></span><button type=\"button\" class=\"c-ic\" data-c-como aria-label=\"Como se faz\" title=\"Como se faz\" hidden><span class=\"c-roda\">?</span></button>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "tarefas/m6-u1/aquecimento/index.html": {
+   "base_sha256_lf": "2980bb7cb492d39b9322de1fe5da403112942fe8a861df449a26c9bb45e7adc9",
+   "after_sha256_lf": "b95cdd7da2da206c63e2877011be22f3af1bd1ea54ff7ec1f4245800f986691a",
+   "edits": [
+    {
+     "location": "F0: ajuda do cartão no cabeçalho",
+     "old": "<span class=\"c-modo\" data-c-modo hidden></span>",
+     "new": "<span class=\"c-modo\" data-c-modo hidden></span><button type=\"button\" class=\"c-ic\" data-c-como aria-label=\"Como se faz\" title=\"Como se faz\" hidden><span class=\"c-roda\">?</span></button>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "tarefas/m6-u2/aquecimento/index.html": {
+   "base_sha256_lf": "41d4339d0d077c12efee5ed14ec2891899a26f077c75fa9d2431c50432b4112f",
+   "after_sha256_lf": "8b3c15cb6853b9885936ac9e8e3d1b2759498dae1b382a1c977e9dc71fe30501",
+   "edits": [
+    {
+     "location": "F0: ajuda do cartão no cabeçalho",
+     "old": "<span class=\"c-modo\" data-c-modo hidden></span>",
+     "new": "<span class=\"c-modo\" data-c-modo hidden></span><button type=\"button\" class=\"c-ic\" data-c-como aria-label=\"Como se faz\" title=\"Como se faz\" hidden><span class=\"c-roda\">?</span></button>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "tarefas/m7-u1/aquecimento/index.html": {
+   "base_sha256_lf": "a8598bbd50651921ea3c4b57aecb86f7b977e805fa2668e42318d8babf8a9022",
+   "after_sha256_lf": "1cc0ef982f8d15d1a69c35c09789c80a65f83cbb92ce1aa5a0cb43addf134ac4",
+   "edits": [
+    {
+     "location": "F0: ajuda do cartão no cabeçalho",
+     "old": "<span class=\"c-modo\" data-c-modo hidden></span>",
+     "new": "<span class=\"c-modo\" data-c-modo hidden></span><button type=\"button\" class=\"c-ic\" data-c-como aria-label=\"Como se faz\" title=\"Como se faz\" hidden><span class=\"c-roda\">?</span></button>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "tarefas/m7-u2/aquecimento/index.html": {
+   "base_sha256_lf": "08212c1b17847d9355e7de6f9140aa7ee85d4500a88860001cb88b41de2f6165",
+   "after_sha256_lf": "974647960d41a6d795bbd31e7c133edae78dab451a262561759bc81ce2c60dc6",
+   "edits": [
+    {
+     "location": "F0: ajuda do cartão no cabeçalho",
+     "old": "<span class=\"c-modo\" data-c-modo hidden></span>",
+     "new": "<span class=\"c-modo\" data-c-modo hidden></span><button type=\"button\" class=\"c-ic\" data-c-como aria-label=\"Como se faz\" title=\"Como se faz\" hidden><span class=\"c-roda\">?</span></button>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "tarefas/m7-u3/aquecimento/index.html": {
+   "base_sha256_lf": "d28decc5b35629b0db2efede374c9f31a2d2a490045c6e20f9101d3319c268b8",
+   "after_sha256_lf": "75104378a31ea67100f686ceddbb5041ce7e2ad86a23fadb852901cac83a2c11",
+   "edits": [
+    {
+     "location": "F0: ajuda do cartão no cabeçalho",
+     "old": "<span class=\"c-modo\" data-c-modo hidden></span>",
+     "new": "<span class=\"c-modo\" data-c-modo hidden></span><button type=\"button\" class=\"c-ic\" data-c-como aria-label=\"Como se faz\" title=\"Como se faz\" hidden><span class=\"c-roda\">?</span></button>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "tarefas/m8-u1/aquecimento/index.html": {
+   "base_sha256_lf": "ed04f461c80dad2c0de5cd3dd43ef2d3df82a69683c91a2c8ee8c0d4359bd188",
+   "after_sha256_lf": "f8fad6332dd370da41a212d03d836d76ffb970bb813dcc1f8cf884e5b15d5380",
+   "edits": [
+    {
+     "location": "F0: ajuda do cartão no cabeçalho",
+     "old": "<span class=\"c-modo\" data-c-modo hidden></span>",
+     "new": "<span class=\"c-modo\" data-c-modo hidden></span><button type=\"button\" class=\"c-ic\" data-c-como aria-label=\"Como se faz\" title=\"Como se faz\" hidden><span class=\"c-roda\">?</span></button>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "tarefas/m8-u2/aquecimento/index.html": {
+   "base_sha256_lf": "219e8e7e681e66ebd4fcd33b07b62f1b020267b2abd9dc85f86ed3c173cdc197",
+   "after_sha256_lf": "a4590e5a299d72a2fe3cb3461173fc52d1fdeebd3b41d70e5abc5f1c145d2204",
+   "edits": [
+    {
+     "location": "F0: ajuda do cartão no cabeçalho",
+     "old": "<span class=\"c-modo\" data-c-modo hidden></span>",
+     "new": "<span class=\"c-modo\" data-c-modo hidden></span><button type=\"button\" class=\"c-ic\" data-c-como aria-label=\"Como se faz\" title=\"Como se faz\" hidden><span class=\"c-roda\">?</span></button>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "tarefas/m9-u1/aquecimento/index.html": {
+   "base_sha256_lf": "fcb34e89c5cd25506a9ba6d9d5949903b1d3e98f7e50fd0c411fc34cb09de149",
+   "after_sha256_lf": "6b345733561be7302884dea0671cbb1ecf1b4a258bd388895833cdbf57312269",
+   "edits": [
+    {
+     "location": "F0: ajuda do cartão no cabeçalho",
+     "old": "<span class=\"c-modo\" data-c-modo hidden></span>",
+     "new": "<span class=\"c-modo\" data-c-modo hidden></span><button type=\"button\" class=\"c-ic\" data-c-como aria-label=\"Como se faz\" title=\"Como se faz\" hidden><span class=\"c-roda\">?</span></button>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "tarefas/m9-u2/aquecimento/index.html": {
+   "base_sha256_lf": "b35aaf6c756e532703eca0ea7555f9bf85e5918a43432a03dc3aa07b6f4932b0",
+   "after_sha256_lf": "ec6ea94c14c59885b02531a4229d88aebc9a897424f2cba24c39404081fffd89",
+   "edits": [
+    {
+     "location": "F0: ajuda do cartão no cabeçalho",
+     "old": "<span class=\"c-modo\" data-c-modo hidden></span>",
+     "new": "<span class=\"c-modo\" data-c-modo hidden></span><button type=\"button\" class=\"c-ic\" data-c-como aria-label=\"Como se faz\" title=\"Como se faz\" hidden><span class=\"c-roda\">?</span></button>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "index.html": {
+   "base_sha256_lf": "0c0fbf7a2dd68a8505576d216f4218a805fe4e13690ec1713ce19b63ac21ca11",
+   "after_sha256_lf": "947a1e4c92f1116789f747dea6afd8ada147b2dacef5df2ccb9a0009d6692335",
+   "edits": [
+    {
+     "location": "F0: recurso de compatibilidade antes da importação",
+     "old": "<script>\n// 28/10/2026: a Sala de aula está desligada desde 17/10/2026 (decisão do docente); só se apaga o que ela deixou neste aparelho\n(function(){try{[\"epi-sala\",\"epi-sala-atlas\"].forEach(function(k){if(localStorage.getItem(k)!==null)localStorage.removeItem(k)});\nfor(var i=localStorage.length-1;i>=0;i--){var k=localStorage.key(i);if(k&&k.indexOf(\"painel-sala-\")===0)localStorage.removeItem(k)}}catch(x){}\ntry{sessionStorage.removeItem(\"epi-atlas-sala\")}catch(x){}})();\n</script>",
+     "new": "<script src=\"assets/pt-lessons/acrescentos.js?v=20261102-f0\"></script><script>\n// 28/10/2026: a Sala de aula está desligada desde 17/10/2026 (decisão do docente); só se apaga o que ela deixou neste aparelho\n(function(){try{[\"epi-sala\",\"epi-sala-atlas\"].forEach(function(k){if(localStorage.getItem(k)!==null)localStorage.removeItem(k)});\nfor(var i=localStorage.length-1;i>=0;i--){var k=localStorage.key(i);if(k&&k.indexOf(\"painel-sala-\")===0)localStorage.removeItem(k)}}catch(x){}\ntry{sessionStorage.removeItem(\"epi-atlas-sala\")}catch(x){}})();\n</script>",
+     "occurrences": 1
+    },
+    {
+     "location": "F0: fotografia dos lotes antes de importar",
+     "old": "var n=0,novos=0;\nObject.keys(d.registos).forEach(function(k){",
+     "new": "var n=0,novos=0,lotesAntes={};\nObject.keys(d.registos).forEach(function(k){lotesAntes[k]=localStorage.getItem(k+\"-acrescentos\")});\nObject.keys(d.registos).forEach(function(k){if(!/-acrescentos$/.test(k))return;var base=k.slice(0,-\"-acrescentos\".length);if(Object.prototype.hasOwnProperty.call(d.registos,base))return;try{var raw=localStorage.getItem(base);if(raw===null)return;var a=JSON.parse(raw),b=EPIAcrescentos.protegerImportacao(a,d.registos[k],localStorage.getItem(k));if(b!==a)localStorage.setItem(base,JSON.stringify(b))}catch(x){}});\nObject.keys(d.registos).forEach(function(k){",
+     "occurrences": 1
+    },
+    {
+     "location": "F0: não importar índices anteriores aos lotes locais",
+     "old": "var v=d.registos[k],atual=localStorage.getItem(k);if(atual===null){",
+     "new": "var v=d.registos[k],atual=localStorage.getItem(k);if(lotesAntes[k])try{v=JSON.stringify(EPIAcrescentos.protegerImportacao(JSON.parse(v),lotesAntes[k],d.registos[k+\"-acrescentos\"]||null))}catch(x){}if(atual===null){",
+     "occurrences": 1
+    },
+    {
+     "location": "F0: não misturar índices locais anteriores ao ficheiro",
+     "old": "var A=JSON.parse(atual),B=JSON.parse(v);localStorage.setItem(k,JSON.stringify(fundir(A,B)))",
+     "new": "var A=JSON.parse(atual),B=JSON.parse(v);A=EPIAcrescentos.protegerImportacao(A,d.registos[k+\"-acrescentos\"]||null,lotesAntes[k]);localStorage.setItem(k,JSON.stringify(fundir(A,B)))",
+     "occurrences": 1
+    }
+   ]
+  }
+ }
+}

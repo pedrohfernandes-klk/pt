@@ -1,0 +1,29 @@
+name: Português, variedade F0
+on:
+  pull_request:
+  push:
+    branches: [main]
+jobs:
+  f0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Conferir migração e camada F0
+        run: |
+          python -m unittest discover -s tests -p test_acrescentos.py -v
+          python -m unittest discover -s tests -p test_variedade_f0.py -v
+          python scripts/verificar_camadas.py
+      - name: Instalar Chromium
+        run: |
+          python -m pip install playwright
+          python -m playwright install --with-deps chromium
+      - name: Conferir ajuda, importação e progressos anteriores
+        run: |
+          python tests/browser_acrescentos.py -v
+          python tests/browser_variedade_f0.py
