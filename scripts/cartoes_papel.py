@@ -35,7 +35,7 @@ h1{font-size:1.8rem;line-height:1.15;margin:0 0 16px}h2{font-size:1.12rem;line-h
 .mat-marcas li,.mat-sinais li{border:1px solid;padding:4px 8px}
 @page{size:A4;margin:17mm}
 @media(max-width:400px){main{padding:16px}h1{font-size:1.5rem}}
-@media print{html,body{background:white;color:black;font-size:11pt}main{max-width:none;padding:0}h1{font-size:19pt}.dica{color:black}a{color:inherit;text-decoration:none}}
+@media print{:root,body{background:white;color:black;font-size:11pt}main{max-width:none;padding:0}h1{font-size:19pt}.dica{color:black}a{color:inherit;text-decoration:none}}
 '''
 
 

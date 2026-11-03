@@ -34,6 +34,9 @@ def main():
     box=el.bounding_box();assert box['x']>=0 and box['x']+box['width']<=width
    if out:page.screenshot(path=str(out/f'papel-{width}.png'),full_page=True)
    page.emulate_media(media='print')
+   # 03/11/2026: a regra de impressão tem de vencer o fundo de :root.
+   for el in ('html','body'):
+    assert page.locator(el).evaluate('(e)=>getComputedStyle(e).backgroundColor')=='rgb(255, 255, 255)'
    assert page.locator('.pedido').all_text_contents()==[c['p'] for c in cards]
    assert page.locator('main').evaluate('(e)=>getComputedStyle(e).padding')=='0px'
    assert page.locator('.cartao-papel').first.evaluate('(e)=>getComputedStyle(e).breakInside')=='avoid-page'
