@@ -38,6 +38,6 @@ body[data-site="pt"] .raiz .cf-credito{margin:0 0 32px;padding:8px 0;border-bott
 /* 03/11/2026: a seta decorativa do Atlas cabe na primeira linha do título
    na entrada projetada; não se corta conteúdo nem se esconde o transbordo. */
 @media(max-width:639px){
-  html.epi-projection body[data-site="pt"] .raiz .atlas-poster h2{position:relative}
+  html.epi-projection body[data-site="pt"] .raiz .atlas-poster h2{position:relative;font-size:min(2.6rem,14vw)}
   html.epi-projection body[data-site="pt"] .raiz .atlas-poster h2>span{position:absolute;top:0;right:0;margin-left:0}
 }
