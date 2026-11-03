@@ -1,0 +1,35 @@
+name: Português, variedade F2
+on:
+  pull_request:
+  push:
+    branches: [main]
+jobs:
+  f2:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Validadores e consumidores comuns
+        run: |
+          python -m unittest discover -s tests -p test_tipos_mais.py -v
+          python -m unittest discover -s tests -p test_cartoes_papel.py -v
+          python -m unittest discover -s tests -p test_tipos_mais_contrato.py -v
+          python -m unittest discover -s tests -p test_task_aquecimentos.py -v
+      - name: Instalar Chromium
+        run: |
+          python -m pip install playwright
+          python -m playwright install --with-deps chromium
+      - name: Motor, impressão, imagens e limites
+        run: |
+          python tests/browser_tipos_mais_contrato.py
+          python tests/browser_tipos_mais.py
+          python tests/browser_tipos_mais_limites.py
+          # 03/11/2026: F2-03, lançador real, caixas e texto nos dois temas.
+          python tests/browser_tipos_mais_projecao.py
+          python tests/browser_tipos_mais_sequencia.py
+          python tests/browser_cartoes_papel.py

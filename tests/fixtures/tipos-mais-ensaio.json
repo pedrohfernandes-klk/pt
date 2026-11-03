@@ -1,0 +1,178 @@
+[
+  {
+    "t": "lacunas",
+    "p": "Completa as relações entre as ideias.",
+    "texto": "Choveu; [1], o rio subiu. Quis sair, [2] a ponte fechou.",
+    "espacos": [
+      "por isso",
+      "mas"
+    ],
+    "distratores": [
+      "embora",
+      "porque"
+    ],
+    "fe_bloco": {
+      "embora": {
+        "1": "Uma concessão não exprime a consequência. Relê a subida do rio.",
+        "2": "O conector pede conjuntivo. Relê a forma fechou."
+      },
+      "porque": "A causa fica trocada. Relê o acontecimento anterior."
+    },
+    "fe_espaco": [
+      "A subida resulta da chuva.",
+      "O fecho contraria a vontade."
+    ],
+    "id": "n106-ensaio-1",
+    "f": "A subida do rio resulta da chuva; a ponte fechada contraria a vontade de sair. Os conectores tornam estas relações explícitas."
+  },
+  {
+    "t": "varias",
+    "p": "Escolhe as duas frases com uma oração dependente.",
+    "o": [
+      "Disse que vinha amanhã.",
+      "Fui e comprei uma maçã.",
+      "Quando parou, saímos.",
+      "Ou vens, ou fico aqui."
+    ],
+    "certas": [
+      0,
+      2
+    ],
+    "fe": [
+      "A oração completa disse.",
+      "E coordena as orações.",
+      "Quando indica o tempo.",
+      "Ou coordena as alternativas."
+    ],
+    "diz_quantas": true,
+    "id": "n106-ensaio-2",
+    "f": "Que vinha amanhã completa disse; quando parou indica o tempo de saímos. As outras frases ligam orações do mesmo nível."
+  },
+  {
+    "t": "montar",
+    "p": "Transforma a afirmação em negativa.",
+    "apoio": "Frase criada: Vi-o ontem.",
+    "blocos": [
+      "não",
+      "o",
+      "vi",
+      "ontem"
+    ],
+    "fim": ".",
+    "proprios": [],
+    "aceita": [
+      [
+        3,
+        0,
+        1,
+        2
+      ]
+    ],
+    "distratores": [
+      "vi-o"
+    ],
+    "fe_bloco": {
+      "vi-o": "A negação exige o pronome antes do verbo. Relê não."
+    },
+    "fe_ordem": "Na negativa, o pronome fica antes do verbo.",
+    "id": "n106-ensaio-3",
+    "f": "A negação desloca o pronome para antes do verbo: não o vi. Ontem pode ficar no início ou no fim."
+  },
+  {
+    "t": "intruso",
+    "p": "Encontra um elemento que não pertence ao conjunto.",
+    "itens": [
+      "_ler_",
+      "_adorar_",
+      "_gostar_",
+      "_escrever_"
+    ],
+    "razoes": [
+      "É o único que pede «de» antes do complemento.",
+      "É o único que diz um sentimento.",
+      "É o único da primeira conjugação."
+    ],
+    "certos": [
+      [
+        2,
+        0
+      ]
+    ],
+    "fe_item": [
+      "Ler um livro tem complemento direto.",
+      "Adorar música tem complemento direto.",
+      "",
+      "Escrever uma carta tem complemento direto."
+    ],
+    "fe_razao": [
+      "",
+      "Adorar também diz um sentimento.",
+      "Adorar pertence à primeira conjugação."
+    ],
+    "id": "n106-ensaio-4",
+    "f": "Gostar pede de antes do complemento. Adorar também indica um sentimento, mas pede complemento direto; o sentido não decide a construção."
+  },
+  {
+    "t": "razao",
+    "p": "Que leitura se sustenta, e com que indício?",
+    "apoio": "Texto criado: Recusei o convite. Agora ouço a música da festa.",
+    "itens": [
+      "Quem fala escolheu ficar de fora.",
+      "Quem fala foi posto de parte."
+    ],
+    "razoes": [
+      "«Recusei o convite»",
+      "«ouço a música da festa»",
+      "«Agora»"
+    ],
+    "certos": [
+      [
+        0,
+        0
+      ]
+    ],
+    "fe_item": [
+      "",
+      "Ser posto de parte não explica a recusa."
+    ],
+    "fe_razao": [
+      "",
+      "A música serve às duas leituras.",
+      "O tempo não distingue as leituras."
+    ],
+    "id": "n106-ensaio-5",
+    "f": "Recusei mostra uma escolha de quem fala. Ouvir a música é compatível com as duas leituras e, por isso, não as distingue."
+  },
+  {
+    "t": "corrigir",
+    "p": "Encontra os dois erros e corrige-os.",
+    "texto": "Á tarde, houveram muitas pessoas na praça.",
+    "erros": [
+      {
+        "em": 0,
+        "o": [
+          "À",
+          "A",
+          "Há"
+        ],
+        "c": 0,
+        "fe": "A preposição e o artigo contraem-se em à."
+      },
+      {
+        "em": 2,
+        "o": [
+          "houve",
+          "haviam",
+          "houvesse"
+        ],
+        "c": 0,
+        "fe": "Haver com sentido de existir fica no singular."
+      }
+    ],
+    "armadilhas": {
+      "5": "Na é a contração de em e a."
+    },
+    "id": "n106-ensaio-6",
+    "f": "À tarde junta a preposição e o artigo. Haver com sentido de existir fica no singular: houve muitas pessoas."
+  }
+]

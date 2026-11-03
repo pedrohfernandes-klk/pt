@@ -21,6 +21,8 @@ def main():
                     dialog=page.get_by_role('dialog');dialog.wait_for()
                     assert page.url==url
                     im=dialog.locator('img')
+                    # 03/11/2026: aguarda a imagem recém-aberta; uma imagem inválida continua a falhar.
+                    im.evaluate('(im)=>im.decode()')
                     assert im.evaluate('(im)=>im.complete && im.naturalWidth>0')
                     box=im.bounding_box();area=dialog.locator('.amp-area').bounding_box()
                     assert box['width']<=area['width']+1 and box['height']<=area['height']+1,(lesson,width,box,area)

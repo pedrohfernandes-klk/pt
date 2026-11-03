@@ -1,3 +1,5 @@
+# 03/11/2026: cabeçalho sobre F0 publicada, mantendo reversão e asserções.
+# 03/11/2026: desfazer primeiro a camada visual do cabecalho, com as mesmas assercoes.
 # 01/11/2026: desfazer a camada dos índices antes dos contratos históricos.
 name: Português, opções equilibradas
 # 30/10/2026: opções denunciadoras (pedido do docente de 29/10: a certa não pode ser «quase de certeza» a mais comprida).
@@ -45,8 +47,9 @@ jobs:
           # 01/11/2026: desfaz primeiro a camada das sete lições novas.
           # 01/11/2026: desfaz antes a camada do pedido B.
           # 02/11/2026: desfaz antes de tudo a varredura, a calçada e as tarefas individuais (as mais recentes).
-          # 03/11/2026: desfaz F0 antes dos créditos publicados e do lote 2.
-          python scripts/aplicar_trocas.py scripts/opcoes_denunciadoras_20261030.json --manifesto tests/fixtures/opcoes-denunciadoras-edits-20261030.json --verificar --desfazer-antes tests/fixtures/variedade-f0-edits-20261102.json --desfazer-antes tests/fixtures/creditos-grafismos-ia-edits-20261102.json --desfazer-antes tests/fixtures/conteudos-lote2-edits-20261101.json --desfazer-antes tests/fixtures/varredura-formatacao-edits-20261101.json --desfazer-antes tests/fixtures/calcada-mar-edits-20261102.json --desfazer-antes tests/fixtures/tarefas-individuais-edits-20261102.json --desfazer-antes tests/fixtures/cartaz-indices-edits-20261101.json --desfazer-antes tests/fixtures/licoes-m16-edits-20261101.json --desfazer-antes tests/fixtures/licoes-m89-edits-20261101.json --desfazer-antes tests/fixtures/tarefas-m89-edits-20261101.json --desfazer-antes tests/fixtures/tarefas-m356-edits-20261031.json --desfazer-antes tests/fixtures/lingua-pessoa-m7-edits-20261030.json
+          # 03/11/2026: desfaz o piloto M4 e F0 antes dos créditos publicados e do lote 2.
+          # 03/11/2026: desfazer estritamente a projeção F2 antes das camadas históricas.
+          python scripts/aplicar_trocas.py scripts/opcoes_denunciadoras_20261030.json --manifesto tests/fixtures/opcoes-denunciadoras-edits-20261030.json --verificar --desfazer-antes tests/fixtures/variedade-f2-projecao-edits-20261103.json --desfazer-antes tests/fixtures/cartaz-cabecalho-edits-20261103.json --desfazer-antes tests/fixtures/cartaz-m4-piloto-edits-20261102.json --desfazer-antes tests/fixtures/variedade-f0-edits-20261102.json --desfazer-antes tests/fixtures/creditos-grafismos-ia-edits-20261102.json --desfazer-antes tests/fixtures/conteudos-lote2-edits-20261101.json --desfazer-antes tests/fixtures/varredura-formatacao-edits-20261101.json --desfazer-antes tests/fixtures/calcada-mar-edits-20261102.json --desfazer-antes tests/fixtures/tarefas-individuais-edits-20261102.json --desfazer-antes tests/fixtures/cartaz-indices-edits-20261101.json --desfazer-antes tests/fixtures/licoes-m16-edits-20261101.json --desfazer-antes tests/fixtures/licoes-m89-edits-20261101.json --desfazer-antes tests/fixtures/tarefas-m89-edits-20261101.json --desfazer-antes tests/fixtures/tarefas-m356-edits-20261031.json --desfazer-antes tests/fixtures/lingua-pessoa-m7-edits-20261030.json
           python scripts/medir_opcoes.py --regra
       - name: Instalar Chromium
         run: |

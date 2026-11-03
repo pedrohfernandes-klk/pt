@@ -9,6 +9,8 @@ import json
 import re
 from pathlib import Path
 import sys
+# 02/11/2026: tipos adicionais mantêm o mesmo validador nas lições e nos aquecimentos.
+from tipos_regras import ENTROU, validar as validar_adicional, verificar_recursos
 
 ROOT = Path(__file__).resolve().parents[1]
 TYPES = {'ler', 'emparelhar', 'escolha', 'completar', 'vf', 'ordenar', 'frase', 'versos', 'sublinhar', 'calcada', 'rever'}
@@ -39,15 +41,23 @@ def lesson_cards(path):
     return cards
 
 
-def validate_cards(cards):
+def validate_cards(cards, contexto='licao'):
     errors = []
     if not isinstance(cards, list):
         return ['CARTOES must be an array']
+    ids=set()
     for number, card in enumerate(cards, 1):
         if not isinstance(card, dict):
             errors.append(f'card {number}: expected object')
             continue
         kind = card.get('t')
+        if kind in ENTROU:
+            errors.extend(f'card {number}: {s}' for s in validar_adicional(card,contexto))
+            ident=card.get('id')
+            if isinstance(ident,str):
+                if ident in ids:errors.append(f'card {number}: duplicate id {ident}')
+                ids.add(ident)
+            continue
         if kind not in TYPES:
             errors.append(f'card {number}: unknown type {kind!r}')
         if kind != 'ler' and not (isinstance(card.get('f'), str) and card['f'].strip()):
@@ -95,6 +105,7 @@ def audit(root=ROOT):
         try:
             cards = lesson_cards(path)
             issues = validate_cards(cards)
+            issues += verificar_recursos(path.read_text(encoding='utf8'),cards)
             errors.extend(f'{rel}: {issue}' for issue in issues)
             if isinstance(cards, list):
                 kinds = Counter(c.get('t', 'unknown') for c in cards if isinstance(c, dict))

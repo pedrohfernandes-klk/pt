@@ -1,3 +1,4 @@
+# 03/11/2026: cabeçalho sobre F0 publicada, mantendo reversão e asserções.
 #!/usr/bin/env python3
 """01/11/2026: verifica todas as camadas literais, da mais recente para a mais antiga."""
 from pathlib import Path
@@ -6,6 +7,13 @@ import sys
 
 ROOT=Path(__file__).resolve().parents[1]
 LAYERS=[
+ # 03/11/2026: registo da projeção F2-03, acima das camadas publicadas.
+ ('variedade_f2_projecao_20261103','variedade-f2-projecao-edits-20261103'),
+ # 02/11/2026: créditos de IA depois do lote 2 publicado.
+ # 03/11/2026: abertura visual acima dos creditos publicados.
+ ('cartaz_cabecalho_20261103','cartaz-cabecalho-edits-20261103'),
+ # 03/11/2026: piloto M4 acima de F0 publicado, ambos reversíveis.
+ ('cartaz_m4_piloto_20261102','cartaz-m4-piloto-edits-20261102'),
  # 03/11/2026: F0 acima dos créditos publicados, antes do lote 2.
  ('variedade_f0_20261102','variedade-f0-edits-20261102'),
  ('creditos_grafismos_ia_20261102','creditos-grafismos-ia-edits-20261102'),
