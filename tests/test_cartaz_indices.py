@@ -41,7 +41,7 @@ class IndicesCartaz(unittest.TestCase):
    self.assertEqual(s.count('<div class="module-entry"><a class="cz-button primary" data-module-next'),1)
    self.assertEqual(s.count('class="module-entry cz-next"'),0);self.assertNotIn('<h2>A seguir</h2>',s);self.assertNotIn('cz-index-status',s)
    # 01/11/2026: a banda fechada identifica a unidade, além do seu número.
-   # 02/11/2026: o piloto M4 promove o mesmo nome a h2 no summary; os outros mantêm span.
+   # 03/11/2026: conservar no merge o contrato h2 do piloto M4 aprovado.
    names=re.findall(r'<h2 class="cz-fold-t"[^>]*>(.*?)</h2>',s) if n==4 else re.findall(r'<span class="cz-fold-t">(.*?)</span>',s)
    self.assertEqual(len(names),len(units))
    self.assertTrue(all(re.sub('<[^>]+>','',name).strip() for name in names))
