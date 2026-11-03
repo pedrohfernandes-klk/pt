@@ -1,0 +1,78 @@
+{
+ "base_commit": "1503f6db27c96bd4a7bea438018a15cd223c9710",
+ "_nota": "03/11/2026: fundos seletivos M4 e M6, sobre o piloto M4; sem alterações a conteúdo, ligações ou progresso.",
+ "files": {
+  "m4/index.html": {
+   "base_sha256_lf": "d0e57cdf50c6e7caa4de6a02f09292edb5d9730168d91dd3c45e1f0f2a911e03",
+   "after_sha256_lf": "005cba82505b73e81cef999aa9e091b11d0745bbbf3efc855f82e655562d7da4",
+   "edits": [
+    {
+     "location": "M4: fundo cardume",
+     "old": "</head>",
+     "new": "<link rel=\"stylesheet\" href=\"../assets/fundos-modulos.css?v=20261103\"><script defer src=\"../assets/fundos.js?v=20261102\"></script></head>",
+     "occurrences": 1
+    },
+    {
+     "location": "M4: fundo cardume",
+     "old": "<header class=\"topo\">",
+     "new": "<header class=\"topo\" data-fundo=\"fm4\" data-fundo-ciclo=\"32\"><div class=\"fm-desenho fm-cardume\" aria-hidden=\"true\"><span class=\"fm-traco\"></span><span class=\"fm-luz\"></span></div>",
+     "occurrences": 1
+    },
+    {
+     "location": "M4: fundo cardume",
+     "old": "class=\"cz-motion-title\"",
+     "new": "class=\"fm-titulo\"",
+     "occurrences": 1
+    },
+    {
+     "location": "M4: fundo cardume",
+     "old": "class=\"cz-motion-part\"",
+     "new": "class=\"fm-titulo-parte\"",
+     "occurrences": 1
+    },
+    {
+     "location": "M4: fundo cardume",
+     "old": "<!-- id=\"podcast\":",
+     "new": "<div class=\"fm-legenda\"><small>Peixes e escuta, a partir do sermão de Vieira. Grafismo gerado com recurso a IA.</small><button type=\"button\" data-fundo-botao=\"fm4\" hidden>Parar o desenho</button></div><!-- id=\"podcast\":",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m6/index.html": {
+   "base_sha256_lf": "e5908795528e51761ca59ef2de6ede54c2b96e1643ecf41603b34da84aa2bcc2",
+   "after_sha256_lf": "ed5e477502e043e2519978899efd52a75d009ff43860c0cbae03da164a89dc9a",
+   "edits": [
+    {
+     "location": "M6: fundo cidade",
+     "old": "</head>",
+     "new": "<link rel=\"stylesheet\" href=\"../assets/fundos-modulos.css?v=20261103\"><script defer src=\"../assets/fundos.js?v=20261102\"></script></head>",
+     "occurrences": 1
+    },
+    {
+     "location": "M6: fundo cidade",
+     "old": "<header class=\"topo\">",
+     "new": "<header class=\"topo\" data-fundo=\"fm6\" data-fundo-ciclo=\"32\"><div class=\"fm-desenho fm-cidade\" aria-hidden=\"true\"><span class=\"fm-traco\"></span><span class=\"fm-luz\"></span></div>",
+     "occurrences": 1
+    },
+    {
+     "location": "M6: fundo cidade",
+     "old": "class=\"cz-motion-title\"",
+     "new": "class=\"fm-titulo\"",
+     "occurrences": 1
+    },
+    {
+     "location": "M6: fundo cidade",
+     "old": "class=\"cz-motion-part\"",
+     "new": "class=\"fm-titulo-parte\"",
+     "occurrences": 1
+    },
+    {
+     "location": "M6: fundo cidade",
+     "old": "<!-- id=\"podcast\":",
+     "new": "<div class=\"fm-legenda\"><small>Rua e luz, a partir da poesia de Cesário Verde. Grafismo gerado com recurso a IA.</small><button type=\"button\" data-fundo-botao=\"fm6\" hidden>Parar o desenho</button></div><!-- id=\"podcast\":",
+     "occurrences": 1
+    }
+   ]
+  }
+ }
+}

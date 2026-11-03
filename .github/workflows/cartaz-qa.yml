@@ -1,9 +1,9 @@
 name: Cartaz pieces
 on:
   push:
-    paths: ['assets/cartaz-cabecalho.css', 'assets/fundo-calcada.css', 'index.html', 'scripts/cartaz_cabecalho*', 'tests/fixtures/cartaz-cabecalho*', 'assets/cartaz-indices.*', 'assets/cartaz-m4-*', 'assets/fontes/**', 'm[1-9]/index.html', 'scripts/cartaz_indices*', 'scripts/cartaz_m4*', 'tests/fixtures/cartaz-*', 'assets/cartaz-components.*', 'assets/appearance.css', 'demonstracoes/cartaz-animacoes/**', 'tests/*cartaz*', '.github/workflows/cartaz-qa.yml']
+    paths: ['assets/fundo*-m*.svg', 'assets/fundos-modulos.css', 'scripts/*fundos_modulos*', 'tests/*fundos_modulos*', 'tests/fixtures/fundos-modulos-*', 'assets/cartaz-cabecalho.css', 'assets/fundo-calcada.css', 'index.html', 'scripts/cartaz_cabecalho*', 'tests/fixtures/cartaz-cabecalho*', 'assets/cartaz-indices.*', 'assets/cartaz-m4-*', 'assets/fontes/**', 'm[1-9]/index.html', 'scripts/cartaz_indices*', 'scripts/cartaz_m4*', 'tests/fixtures/cartaz-*', 'assets/cartaz-components.*', 'assets/appearance.css', 'demonstracoes/cartaz-animacoes/**', 'tests/*cartaz*', '.github/workflows/cartaz-qa.yml']
   pull_request:
-    paths: ['assets/cartaz-cabecalho.css', 'assets/fundo-calcada.css', 'index.html', 'scripts/cartaz_cabecalho*', 'tests/fixtures/cartaz-cabecalho*', 'assets/cartaz-indices.*', 'assets/cartaz-m4-*', 'assets/fontes/**', 'm[1-9]/index.html', 'scripts/cartaz_indices*', 'scripts/cartaz_m4*', 'tests/fixtures/cartaz-*', 'assets/cartaz-components.*', 'assets/appearance.css', 'demonstracoes/cartaz-animacoes/**', 'tests/*cartaz*', '.github/workflows/cartaz-qa.yml']
+    paths: ['assets/fundo*-m*.svg', 'assets/fundos-modulos.css', 'scripts/*fundos_modulos*', 'tests/*fundos_modulos*', 'tests/fixtures/fundos-modulos-*', 'assets/cartaz-cabecalho.css', 'assets/fundo-calcada.css', 'index.html', 'scripts/cartaz_cabecalho*', 'tests/fixtures/cartaz-cabecalho*', 'assets/cartaz-indices.*', 'assets/cartaz-m4-*', 'assets/fontes/**', 'm[1-9]/index.html', 'scripts/cartaz_indices*', 'scripts/cartaz_m4*', 'tests/fixtures/cartaz-*', 'assets/cartaz-components.*', 'assets/appearance.css', 'demonstracoes/cartaz-animacoes/**', 'tests/*cartaz*', '.github/workflows/cartaz-qa.yml']
 jobs:
   pieces:
     runs-on: ubuntu-latest
@@ -47,6 +47,10 @@ jobs:
       - run: node tests/browser_cartaz_m4_interacoes.cjs
         env:
           M4_PILOTO_OUTPUT: ${{ runner.temp }}/cartaz-indices/m4-piloto
+      # 03/11/2026: fundos isolados, movimento/paragem e projeção real.
+      - run: node tests/browser_fundos_modulos.cjs
+        env:
+          FUNDOS_OUTPUT: ${{ runner.temp }}/cartaz-indices/fundos-modulos
       # 03/11/2026: M4-02, acento único e palavra inteira nos dois temas e a 200%.
       - run: node tests/browser_cartaz_m4_acento.cjs
         env:

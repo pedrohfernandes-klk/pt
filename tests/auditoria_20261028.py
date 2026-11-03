@@ -311,7 +311,19 @@ _CONTEUDOS_LOTE2_FILES = json.loads((ROOT / 'tests/fixtures/conteudos-lote2-edit
 _M4_PILOTO_FILES = json.loads((ROOT / 'tests/fixtures/cartaz-m4-piloto-edits-20261102.json').read_text('utf-8'))['files']
 
 
+def undo_fundos_modulos(path, text):
+    # 03/11/2026: reversão estrita dos dois fundos, antes das camadas históricas.
+    files = json.loads((ROOT / 'tests/fixtures/fundos-modulos-edits-20261103.json').read_text('utf-8'))['files']
+    relative = _relative(path)
+    for edit in reversed(files.get(relative, {}).get('edits', [])):
+        if text.count(edit['new']) != edit['occurrences']:
+            raise AssertionError(f"Fundos dos módulos não conferem: {relative}: {edit['location']}")
+        text = text.replace(edit['new'], edit['old'])
+    return text
+
+
 def undo_m4_piloto(path, text):
+    text = undo_fundos_modulos(path, text)
     # 02/11/2026: desfaz só a camada visual autorizada, com contagem estrita.
     relative = _relative(path)
     for edit in reversed(_M4_PILOTO_FILES.get(relative, {}).get('edits', [])):
