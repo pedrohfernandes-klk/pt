@@ -7,6 +7,8 @@ import sys
 
 ROOT=Path(__file__).resolve().parents[1]
 LAYERS=[
+ # 03/11/2026: registo da projeção F2-03, acima das camadas publicadas.
+ ('variedade_f2_projecao_20261103','variedade-f2-projecao-edits-20261103'),
  # 02/11/2026: créditos de IA depois do lote 2 publicado.
  # 03/11/2026: abertura visual acima dos creditos publicados.
  ('cartaz_cabecalho_20261103','cartaz-cabecalho-edits-20261103'),

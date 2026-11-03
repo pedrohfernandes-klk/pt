@@ -1,0 +1,10 @@
+[
+  {
+    "ficheiro": "assets/pt-lessons/lesson.css",
+    "local": "F2-03, coluna e ações na projeção real",
+    "antigo": ".casca.sobreposta{z-index:40}\n",
+    "novo": ".casca.sobreposta{z-index:40}\n/* 03/11/2026: F2-03, a coluna projetada cabe na moldura; as ações repartem-se sem recortar texto. */\nhtml.epi-projection .casca{grid-template-columns:minmax(0,1fr)}\nhtml.epi-projection .casca>*,html.epi-projection .casca-corpo>*{min-width:0}\nhtml.epi-projection .casca-topo,html.epi-projection .casca-acoes{flex-wrap:wrap}\nhtml.epi-projection .casca-acoes .c-prim,html.epi-projection .casca-acoes .c-sec{max-width:100%;white-space:normal}\n",
+    "ocorrencias": 1,
+    "achado": "F2-03: registar a correção geométrica confirmada sem alterar o CSS"
+  }
+]

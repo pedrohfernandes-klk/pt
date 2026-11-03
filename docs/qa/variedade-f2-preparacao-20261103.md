@@ -1,5 +1,13 @@
 # F2: preparação para revisão
 
+## Integração e CI após F2-03, 03/11/2026
+
+As quatro falhas de CI em `dc5f8218` tinham a mesma origem: o CSS confirmado não estava registado como camada literal posterior. Três verificações falharam no hash histórico de `lesson.css`; F0 encontrou os manifestos do lote 2 e da formatação desatualizados ao desfazer as camadas. Não era uma nova falha geométrica.
+
+O main publicado `8a38a69d` (#166 e #168) entrou por merge em `40bd5dd4`, sem conflitos. A reserva do #169 não foi tocada. A camada nova `variedade_f2_projecao_20261103`, com manifesto gerado por `aplicar_trocas.py`, regista exatamente os estilos já confirmados. Entra no topo do verificador e na cadeia estrita da auditoria, antes das camadas históricas; os quatro fluxos com comandos literais recebem a mesma reversão. Nenhum hash histórico ou critério de comparação foi alterado.
+
+Passaram 23/23 camadas e os 12 testes específicos de F0/formatação. O CSS, os tipos F2 e a prova de projeção permanecem idênticos a `dc5f8218`; não se repetem vídeos ou a confirmação geométrica por esta alteração de registo. Bateria integral e CI da nova cabeça acompanham a entrega no pedido. Continua sem publicação.
+
 ## Revisão F2-03, 03/11/2026
 
 O lançador real de projeção aumenta a letra através da moldura e do CSS injetado. O ensaio anterior com `?projetar=1` não exercitava essa composição. Na cabeça `929cafe2`, a coluna automática da casca chegou a 384,42 px numa moldura de 320 px; o `overflow-x:hidden` do corpo ocultava o excesso sem aumentar o `scrollWidth` do documento.

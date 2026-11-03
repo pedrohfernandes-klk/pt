@@ -334,6 +334,8 @@ def undo_variedade_f0(path, text):
 
 
 def undo_conteudos_lote2(path, text):
+    # 03/11/2026: F2-03 posterior, sem alterar hashes nem contagens históricas.
+    text = undo_projecao_f2(path, text)
     # 03/11/2026: desfaz F0 e os créditos publicados, com as mesmas contagens estritas.
     # 03/11/2026: cabeçalho posterior à F0 publicada.
     text = undo_cabecalho(path, text)
@@ -345,6 +347,17 @@ def undo_conteudos_lote2(path, text):
     for edit in reversed(_CONTEUDOS_LOTE2_FILES.get(relative, {}).get('edits', [])):
         if text.count(edit['new']) != edit['occurrences']:
             raise AssertionError(f"Lote 2 não confere: {relative}: {edit['location']}")
+        text = text.replace(edit['new'], edit['old'])
+    return text
+
+
+_PROJECAO_F2 = json.loads((ROOT / 'tests/fixtures/variedade-f2-projecao-edits-20261103.json').read_text('utf-8'))['files']
+
+
+def undo_projecao_f2(path, text):
+    for edit in reversed(_PROJECAO_F2.get(_relative(path), {}).get('edits', [])):
+        if text.count(edit['new']) != edit['occurrences']:
+            raise AssertionError(f"Projeção F2 não confere: {path}: {edit['location']}")
         text = text.replace(edit['new'], edit['old'])
     return text
 
