@@ -16,6 +16,13 @@ class TiposMais(unittest.TestCase):
    before=copy.deepcopy(c)
    for ctx in ('licao','nucleo','projecao','aquecimento'):self.assertEqual(validar(c,ctx),[],(c['t'],ctx))
    self.assertEqual(c,before)
+ def test_chaves_de_ajuda_e_identificadores(self):
+  import subprocess
+  code="const vm=require('vm'),fs=require('fs');const s={window:{},Map,WeakMap};vm.runInNewContext(fs.readFileSync('assets/pt-lessons/tipos-mais.js','utf8'),s);console.log(JSON.stringify(Object.fromEntries(Object.entries(s.window.EPITipos).map(([t,d])=>[t,d.como]))));"
+  r=subprocess.run(['node','-e',code],cwd=ROOT,capture_output=True,text=True,encoding='utf8')
+  self.assertEqual(r.returncode,0,r.stderr)
+  self.assertEqual(json.loads(r.stdout),dict(lacunas='completar-texto',varias='escolher-certas',montar='montar-frase',intruso='intruso',razao='escolher-com-razao',corrigir='corrigir-erro'))
+  c=self.c('lacunas');c['id']='temporario';self.assertTrue(validar(c))
  def test_lacunas_retornos_dependem_do_espaco(self):
   c=self.c('lacunas');del c['fe_bloco']['embora']['2'];self.assertTrue(validar(c))
   c['fe_bloco']['embora']['*']='Relê a oposição.';self.assertEqual(validar(c),[])

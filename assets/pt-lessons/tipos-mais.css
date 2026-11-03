@@ -45,3 +45,16 @@ html.em-projecao [data-tipo-ext] .tm-r,html.em-projecao [data-tipo-ext] .tm-text
 .tm-visor button{min-width:44px;min-height:44px}
 html.epi-projection [data-tipo-ext] .tm-blocos button,html.epi-projection [data-tipo-ext] .tm-espaco,html.em-projecao [data-tipo-ext] .tm-blocos button,html.em-projecao [data-tipo-ext] .tm-espaco{font-size:17.9px}
 @media print{.jogo [data-tipo-ext] .tm-banco{position:static!important}.jogo [data-tipo-ext] .tm-ampliar{display:none}}
+
+.jogo [data-tipo-ext] .tm-impressao{display:none}
+.jogo [data-tipo-ext] .tm-itens:has(.tm-imagem){margin-inline:-8px}
+@media print{
+ .jogo [data-tipo-ext]:has(.tm-impressao)>:not(.tm-impressao){display:none!important}
+ .jogo [data-tipo-ext] .tm-impressao{display:block!important;color:var(--tinta)}
+ .jogo .cartao:has(.tm-impressao) .f-rev{display:none!important}
+}
+
+html.epi-projection [data-tipo-ext] .dica,html.epi-projection [data-tipo-ext] .tm-conta,html.epi-projection [data-tipo-ext] .tm-passo,html.epi-projection [data-tipo-ext] .tm-credito,
+html.em-projecao [data-tipo-ext] .dica,html.em-projecao [data-tipo-ext] .tm-conta,html.em-projecao [data-tipo-ext] .tm-passo,html.em-projecao [data-tipo-ext] .tm-credito{font-size:17.9px}
+
+@media print{.tm-impressao figure{break-inside:avoid}.tm-impressao img{max-width:65mm;max-height:45mm;object-fit:contain}.tm-impressao figcaption{font:9pt/1.4 Arial,sans-serif}}

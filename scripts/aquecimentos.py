@@ -186,6 +186,8 @@ def pagina(raiz, d):
     banco = json.dumps(d['cartoes'], ensure_ascii=False).replace('</', '<\\/')
     novos={c.get('t') for c in d['cartoes']} & ENTROU.keys()
     recursos=('' if not novos else '<link rel="stylesheet" href="../../../assets/pt-lessons/tipos-mais.css?v='+max(ENTROU[t] for t in novos)+'"><script defer src="../../../assets/pt-lessons/tipos-mais.js?v='+max(ENTROU[t] for t in novos)+'"></script>')
+    if any(c.get('t')=='intruso' and any(isinstance(i,dict) for i in c.get('itens',[])) for c in d['cartoes']):
+        recursos += '<link rel="stylesheet" href="../../../assets/ampliar-documentos.css"><script defer src="../../../assets/ampliar-documentos.js"></script>'
     depois = (f'<p><a href="../">Abrir a aula de tarefa</a> · <a href="{unidade}">Voltar à unidade {u}</a></p>')
     return (
         '<!doctype html><html lang="pt-PT" data-appearance-site="pt" data-appearance-family="cards"><head>'

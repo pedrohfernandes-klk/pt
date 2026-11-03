@@ -140,12 +140,22 @@
  var T=root.EPITiposMais, anteriores=new Map();
  function indices(n){return Array.from({length:n},function(_,i){return i});}
  function topo(x,a,dica){return '<p class="q">'+a.it(x.p)+'</p>'+(x.cita?'<p class="tm-cita">'+a.it(x.cita)+'</p>':'')+'<p class="dica">'+a.it(dica)+'</p>';}
- function rodape(){return '<p class="tm-conta"></p><p class="tm-viva c-sr" aria-live="polite"></p>';}
+ function papel(x,a){
+  var h='<h2>'+a.it(x.p)+'</h2>'+(x.cita?'<p>'+a.it(x.cita)+'</p>':''),items=[];
+  if(x.t==='lacunas'){h+='<p>'+a.it(x.texto).replace(/\[(\d+)\]/g,'____ ($1)')+'</p>';items=x.espacos.concat(x.distratores).slice().sort();}
+  if(x.t==='montar'){items=x.blocos.concat(x.distratores||[]).slice().sort();h+='<p>Escreve a frase e termina com '+a.esc(x.fim)+'</p>';}
+  if(x.t==='varias')items=x.o;
+  if(x.t==='corrigir')h+='<p>'+a.esc(Array.isArray(x.partes)?x.partes.join(' '):x.texto)+'</p><p>Identifica os erros e escreve as formas corretas.</p>';
+  if(x.t==='intruso'||x.t==='razao'){h+='<ol>'+x.itens.map(function(v){return '<li>'+(typeof v==='string'?a.it(v):'<figure><img src="'+a.esc(v.img)+'" alt="'+a.esc(v.alt)+'"><figcaption>'+a.esc([v.autor,v.obra,v.data,v.origem,v.licenca].join('; '))+'</figcaption></figure>')+'</li>'}).join('')+'</ol>';items=x.razoes;}
+  if(items.length)h+='<ol>'+items.map(function(v){return '<li>'+a.it(v)+'</li>'}).join('')+'</ol>';
+  return '<section class="tm-impressao" aria-label="Material para papel">'+h+'</section>';
+ }
+ function rodape(x,a){return '<p class="tm-conta"></p><p class="tm-viva c-sr" aria-live="polite"></p>'+papel(x,a);}
  function radio(a,name,i,text,attrs){return '<label class="tm-r uma"><input type="radio" name="'+a.esc(name)+'" value="'+i+'" '+(attrs||'')+'><span>'+a.it(text)+'</span></label>';}
  function ouvirRadios(el,cb){el.querySelectorAll('input[type=radio]').forEach(function(inp){inp.onchange=function(){el.querySelectorAll('input[type=radio]').forEach(function(r){r.closest('label').classList.toggle('sel',r.checked)});cb(Number(inp.value));};});}
  function res(total, falhas, erros){return {ok:falhas.length===0,certas:total-falhas.length,total:total,erros:erros.filter(Boolean).slice(0,2),falhas:falhas};}
  function marca(el,ok,text){el.classList.add(ok?'bom':'mau');var s=document.createElement('span');s.className='tm-retorno';s.textContent=(ok?'✓ ':'✗ ')+(text||'');el.appendChild(s);}
- function enter(a){a.el.addEventListener('keydown',function(ev){if(ev.key==='Enter'&&ev.target.matches('input[type=radio],input[type=checkbox]')){ev.preventDefault();var b=a.C.acao('[data-confirmar]');if(b&&!b.disabled)b.click();}});}
+ function enter(a){a.el.querySelector('[data-tipo-ext]').addEventListener('keydown',function(ev){if(ev.key==='Enter'&&ev.target.matches('input[type=radio],input[type=checkbox]')){ev.preventDefault();var b=a.C.acao('[data-confirmar]');if(b&&!b.disabled)b.click();}});}
 
  T.registar('varias',{rot:'Escolhe as certas',como:'escolher-certas',criar:function(x,a,c){
   var rev=c.repeticao, alvos=rev&&c.falhas&&c.falhas.length?c.falhas.filter(Number.isInteger):indices(x.o.length), vals={}, feito=false;
@@ -153,7 +163,7 @@
   function mudar(){var n=Object.keys(vals).filter(function(k){return vals[k]}).length;c.atualizar(rev?Object.keys(vals).length===alvos.length:n>0,rev?'Revistas '+Object.keys(vals).length+' de '+alvos.length+'.':'Marcaste '+n+(x.diz_quantas?' de '+x.certas.length:'')+'.');}
   function pintar(){alvos.forEach(function(i){if(rev){a.el.querySelectorAll('[name="v-'+x.id+'-'+i+'"]').forEach(function(r){r.checked=(r.value==='1')===vals[i];r.closest('label').classList.toggle('sel',r.checked)});}else{var r=a.el.querySelector('[data-op="'+i+'"]');r.checked=!!vals[i];r.closest('label').classList.toggle('sel',r.checked);}});}
   function fim(){feito=true;var fs=[],es=[];alvos.forEach(function(i){var ok=!!vals[i]===certo(i);if(!ok){fs.push(i);es.push(x.fe[i]);}marca(a.el.querySelector('[data-item="'+i+'"]'),ok,!ok?(certo(i)?'Falta. ':'A mais. ')+x.fe[i]:'');});return res(alvos.length,fs,es);}
-  return {html:function(){return topo(x,a,rev?'Revê cada afirmação que ficou por resolver. Decide se é verdadeira ou falsa.':'Marca todas as certas. Tocar outra vez tira a marca.')+'<div class="tm-varias">'+alvos.map(function(i){return '<div data-item="'+i+'">'+(rev?'<fieldset><legend>'+a.it(x.o[i])+'</legend>'+radio(a,'v-'+x.id+'-'+i,1,'Verdadeiro')+radio(a,'v-'+x.id+'-'+i,0,'Falso')+'</fieldset>':'<label class="tm-r varias"><input type="checkbox" data-op="'+i+'"><span>'+a.it(x.o[i])+'</span></label>')+'</div>';}).join('')+'</div>'+rodape();},
+  return {html:function(){return topo(x,a,rev?'Revê cada afirmação que ficou por resolver. Decide se é verdadeira ou falsa.':'Marca todas as certas. Tocar outra vez tira a marca.')+'<div class="tm-varias">'+alvos.map(function(i){return '<div data-item="'+i+'">'+(rev?'<fieldset><legend>'+a.it(x.o[i])+'</legend>'+radio(a,'v-'+x.id+'-'+i,1,'Verdadeiro')+radio(a,'v-'+x.id+'-'+i,0,'Falso')+'</fieldset>':'<label class="tm-r varias"><input type="checkbox" data-op="'+i+'"><span>'+a.it(x.o[i])+'</span></label>')+'</div>';}).join('')+'</div>'+rodape(x,a);},
    ligar:function(){alvos.forEach(function(i){if(rev){var group=a.el.querySelector('[data-item="'+i+'"]');ouvirRadios(group,function(v){if(feito)return;vals[i]=v===1;mudar();});}else a.el.querySelector('[data-op="'+i+'"]').onchange=function(ev){if(feito)return;vals[i]=ev.target.checked;pintar();mudar();};});enter(a);mudar();},
    confirmar:fim,revelar:function(){alvos.forEach(function(i){vals[i]=certo(i);});pintar();return fim();}};
  }});
@@ -174,9 +184,9 @@
    if(!itok)er.push(x.fe_item[item]);if(!pair)er.push(x.fe_razao[razao]||'A razão tem de justificar o elemento escolhido. Relê o par.');
    if(x.certos.length>1){var extra=document.createElement('p');extra.className='tm-alternativas';extra.textContent='Também se defende: '+x.certos.filter(function(p){return p[0]!==item||p[1]!==razao}).map(function(p){return textoItem(p[0])+', porque '+x.razoes[p[1]]}).join('; ');a.el.querySelector('.tm-duplo').appendChild(extra);}
    return {ok:pair,certas:pair?2:itok?1:0,total:2,erros:er.filter(Boolean).slice(0,2),falhas:pair?[]:itok?['razao']:['item','razao']};}
-  return {html:function(){return topo(x,a,rev?'O elemento está fixo. Revê apenas a razão que o distingue.':'Escolhe primeiro um elemento; depois, a razão que o distingue.')+'<div class="tm-duplo"><p class="tm-passo">Passo '+(rev?'2':'1')+' de 2: '+(rev?'escolhe a razão.':'escolhe um elemento.')+'</p><fieldset class="tm-itens" '+(rev?'disabled':'')+'><legend>'+(tipo==='intruso'?'O intruso':'A leitura')+'</legend>'+escolhas()+'</fieldset><fieldset class="tm-razoes" '+(rev?'':'hidden')+'><legend>'+(tipo==='intruso'?'Porquê?':'O indício')+'</legend>'+x.razoes.map(function(r,i){return radio(a,'r-'+x.id,i,r);}).join('')+'</fieldset></div>'+rodape();},
+  return {html:function(){return topo(x,a,rev?'O elemento está fixo. Revê apenas a razão que o distingue.':'Escolhe primeiro um elemento; depois, a razão que o distingue.')+'<div class="tm-duplo"><p class="tm-passo">Passo '+(rev?'2':'1')+' de 2: '+(rev?'escolhe a razão.':'escolhe um elemento.')+'</p><fieldset class="tm-itens" '+(rev?'disabled':'')+'><legend>'+(tipo==='intruso'?'O intruso':'A leitura')+'</legend>'+escolhas()+'</fieldset>'+x.itens.filter(function(v){return typeof v==='object'}).map(function(v){return '<p class="tm-credito">'+a.esc(v.autor)+'; '+a.it('_'+v.obra+'_')+'; '+a.esc(v.data)+'; '+a.esc(v.licenca)+'. <a href="'+a.esc(v.origem)+'">Fonte</a></p>'}).join('')+'<fieldset class="tm-razoes" '+(rev?'':'hidden')+'><legend>'+(tipo==='intruso'?'Porquê?':'O indício')+'</legend>'+x.razoes.map(function(r,i){return radio(a,'r-'+x.id,i,r);}).join('')+'</fieldset></div>'+rodape(x,a);},
    ligar:function(){ouvirRadios(a.el.querySelector('.tm-itens'),function(v){if(feito)return;item=v;abrirRazoes();});ouvirRadios(a.el.querySelector('.tm-razoes'),function(v){if(feito)return;razao=v;c.atualizar(item!==null,'Elemento e razão escolhidos.');});
-    a.el.querySelectorAll('[data-ampliar]').forEach(function(b){b.onclick=function(){var v=x.itens[Number(b.dataset.ampliar)],d=document.createElement('dialog');d.className='tm-visor';d.innerHTML='<button type="button">Fechar</button><img src="'+a.esc(v.img)+'" alt="'+a.esc(v.alt)+'"><p>'+a.esc(v.autor)+'; '+a.it('_'+v.obra+'_')+'; '+a.esc(v.data)+'; '+a.esc(v.licenca)+'. <a href="'+a.esc(v.origem)+'">Fonte</a></p>';document.body.appendChild(d);d.querySelector('button').onclick=function(){d.close()};d.onclose=function(){d.remove();c.focar(b)};d.showModal();};});
+    a.el.querySelectorAll('[data-ampliar]').forEach(function(b){b.onclick=function(){var v=x.itens[Number(b.dataset.ampliar)],im=b.closest('.tm-imagem').querySelector('img');if(!root.EPIAmpliar)throw new Error('O cartão com imagem exige o visor comum');root.EPIAmpliar.abre(im,[v.autor,v.obra,v.data,v.origem,v.licenca].join('; '),b);};});
     pintar();enter(a);c.atualizar(false,rev?'Falta escolher a razão.':'Falta escolher um elemento.');},confirmar:fim,revelar:function(){item=x.certos[0][0];razao=x.certos[0][1];a.el.querySelector('.tm-razoes').hidden=false;pintar();return fim();}};
  }});});
 
@@ -192,15 +202,15 @@
   }
   function colocar(i,j){values[i]=j;slot=null;block=null;sync();var next=a.el.querySelector('[data-espaco="'+values.indexOf(null)+'"]');if(next)c.focar(next);}
   function fim(){feito=true;var fs=[],es=[];alvos.forEach(function(i){var certo=ok(i),b=a.el.querySelector('[data-espaco="'+i+'"]');if(!certo){fs.push(i);var f=(x.fe_bloco||{})[banco[values[i]]];if(f&&typeof f==='object')f=f[String(i+1)]||f['*'];if(f)es.push(f);if(x.fe_espaco)es.push(x.fe_espaco[i]);}marca(b,certo,certo?'':'Aqui vai: '+x.espacos[i]);});a.el.querySelector('.tm-banco').style.position='static';return res(alvos.length,fs,es);}
-  return {html:function(){return topo(x,a,rev?'Revê os espaços falhados. Os restantes já estão preenchidos.':'Toca num bloco e no espaço, ou começa pelo espaço. Tocar num espaço preenchido devolve o bloco.')+'<div class="tm-lacunas"><div class="tm-texto">'+a.it(x.texto).replace(/\[(\d+)\]/g,function(_,n){return '<button type="button" class="tm-espaco" data-espaco="'+(Number(n)-1)+'">'+n+'</button>';})+'</div><div class="tm-banco" role="region" aria-label="Blocos"><span class="tm-banco-titulo">Blocos</span><div class="tm-blocos">'+ordem.map(function(i){return '<button type="button" data-bloco="'+i+'" aria-pressed="false">'+a.esc(banco[i])+'</button>';}).join('')+'</div></div></div>'+rodape();},
-   ligar:function(){a.el.querySelectorAll('[data-espaco]').forEach(function(b){b.onclick=function(){if(feito)return;var i=Number(b.dataset.espaco);if(values[i]!==null){values[i]=null;sync();return;}if(block!==null){colocar(i,block);return;}slot=i;sync();c.focar(a.el.querySelector('[data-bloco]:not(:disabled)'));};});a.el.querySelectorAll('[data-bloco]').forEach(function(b){b.onclick=function(){if(feito)return;var i=Number(b.dataset.bloco);if(slot!==null){colocar(slot,i);return;}block=block===i?null:i;sync();};});a.el.querySelector('.tm-lacunas').onkeydown=function(ev){if(ev.key==='Escape'){var focus=slot!==null?a.el.querySelector('[data-espaco="'+slot+'"]'):a.el.querySelector('[data-bloco="'+block+'"]');slot=null;block=null;sync();c.focar(focus);}};sync();var bank=a.el.querySelector('.tm-banco');bank.style.position=bank.getBoundingClientRect().height<=innerHeight*.35?'sticky':'static';},
+  return {html:function(){return topo(x,a,rev?'Revê os espaços falhados. Os restantes já estão preenchidos.':'Toca num bloco e no espaço, ou começa pelo espaço. Tocar num espaço preenchido devolve o bloco.')+'<div class="tm-lacunas"><div class="tm-texto">'+a.it(x.texto).replace(/\[(\d+)\]/g,function(_,n){return '<button type="button" class="tm-espaco" data-espaco="'+(Number(n)-1)+'">'+n+'</button>';})+'</div><div class="tm-banco" role="region" aria-label="Blocos"><span class="tm-banco-titulo">Blocos</span><div class="tm-blocos">'+ordem.map(function(i){return '<button type="button" data-bloco="'+i+'" aria-pressed="false">'+a.esc(banco[i])+'</button>';}).join('')+'</div></div></div>'+rodape(x,a);},
+   ligar:function(){a.el.querySelectorAll('[data-espaco]').forEach(function(b){b.onclick=function(){if(feito)return;var i=Number(b.dataset.espaco);if(values[i]!==null){values[i]=null;sync();return;}if(block!==null){colocar(i,block);return;}slot=i;sync();var bank=a.el.querySelector('.tm-banco');if(bank.style.position==='static')b.insertAdjacentElement('afterend',bank);c.focar(a.el.querySelector('[data-bloco]:not(:disabled)'));};});a.el.querySelectorAll('[data-bloco]').forEach(function(b){b.onclick=function(){if(feito)return;var i=Number(b.dataset.bloco);if(slot!==null){colocar(slot,i);return;}block=block===i?null:i;sync();};});a.el.querySelector('.tm-lacunas').onkeydown=function(ev){if(ev.key==='Escape'&&(slot!==null||block!==null)){ev.preventDefault();ev.stopPropagation();var focus=slot!==null?a.el.querySelector('[data-espaco="'+slot+'"]'):a.el.querySelector('[data-bloco="'+block+'"]');slot=null;block=null;sync();c.focar(focus);}};sync();var bank=a.el.querySelector('.tm-banco');bank.style.position=bank.getBoundingClientRect().height<=innerHeight*.35?'sticky':'static';},
    confirmar:fim,revelar:function(){values=indices(x.espacos.length);sync();return fim();}};
  }});
 
  T.registar('montar',{rot:'Monta a frase',como:'montar-frase',criar:function(x,a,c){
   var bank=x.blocos.concat(x.distratores||[]),seq=[],feito=false,rev=c.repeticao,choice=null,key=String(a.cfg.chave)+'|'+x.id;
   var aceites=[indices(x.blocos.length)].concat((x.aceita||[]).map(function(o){return Array.isArray(o[0])?o[0]:o;}));
-  function frase(s){var words=s.map(function(i){return bank[i]});if(words.length)words[0]=words[0].charAt(0).toUpperCase()+words[0].slice(1);return words.join(' ')+(words.length?x.fim:'');}
+  function frase(s){var escrita=(x.aceita||[]).find(function(o){return Array.isArray(o[0])&&JSON.stringify(o[0])===JSON.stringify(s)});if(escrita)return escrita[1];var words=s.map(function(i){return bank[i]});if(words.length)words[0]=words[0].charAt(0).toUpperCase()+words[0].slice(1);return words.join(' ')+(words.length?x.fim:'');}
   var order=c.ordem(indices(bank.length));if(aceites.some(function(o){return JSON.stringify(o)===JSON.stringify(order)}))order.push(order.shift());
   var errado=anteriores.get(key)||indices(x.blocos.length).reverse(),dist=indices(x.blocos.length);if(bank.length>x.blocos.length)dist[1]=x.blocos.length;else dist.push(dist.shift());
   var frases=[frase(aceites[0]),frase(errado),frase(dist)].filter(function(v,i,arr){return arr.indexOf(v)===i});
@@ -210,20 +220,63 @@
    anteriores.set(key,seq.slice());var best=aceites.slice().sort(function(u,v){function n(s){return s.filter(function(i,k){return seq[k]===i}).length}return n(v)-n(u)})[0];var fs=[],es=[];
    var total=Math.max(seq.length,best.length);for(var k=0;k<total;k++){var i=seq[k],ok=i===best[k],el=a.el.querySelector('[data-linha="'+k+'"]');if(!ok){fs.push(k);if(i>=x.blocos.length)es.push(x.fe_bloco[bank[i]]);}if(el)marca(el,ok,ok?'':i>=x.blocos.length?'A mais':'Vai em '+(best.indexOf(i)+1)+'.º');}
    if(fs.length)es.push(x.fe_ordem);return res(total,fs,es);}
-  return {html:function(){return topo(x,a,rev?'Compara a frase principal, a tentativa anterior e uma alternativa. Escolhe a forma que respeita a relação pedida.':'Toca nos blocos pela ordem da frase. Tocar num bloco da linha devolve-o.')+'<div class="tm-montar">'+(rev?'<fieldset><legend>Qual das formas está certa?</legend>'+frases.map(function(s,i){return radio(a,'m-'+x.id,i,s)}).join('')+'</fieldset>':'<ol class="tm-linha" aria-label="A tua frase"></ol><div class="tm-blocos">'+order.map(function(i){return '<button type="button" data-monta="'+i+'">'+a.esc(bank[i])+'</button>'}).join('')+'</div>')+'</div>'+rodape();},
+  return {html:function(){return topo(x,a,rev?'Compara a frase principal, a tentativa anterior e uma alternativa. Escolhe a forma que respeita a relação pedida.':'Toca nos blocos pela ordem da frase. Tocar num bloco da linha devolve-o.')+'<div class="tm-montar">'+(rev?'<fieldset><legend>Qual das formas está certa?</legend>'+frases.map(function(s,i){return radio(a,'m-'+x.id,i,s)}).join('')+'</fieldset>':'<ol class="tm-linha" aria-label="A tua frase"></ol><div class="tm-blocos">'+order.map(function(i){return '<button type="button" data-monta="'+i+'">'+a.esc(bank[i])+'</button>'}).join('')+'</div>')+'</div>'+rodape(x,a);},
    ligar:function(){if(rev){ouvirRadios(a.el.querySelector('fieldset'),function(i){choice=i;c.atualizar(true,'Uma frase escolhida.');});c.atualizar(false,'Falta escolher uma frase.');}else{a.el.querySelectorAll('[data-monta]').forEach(function(b){b.onclick=function(){if(feito)return;seq.push(Number(b.dataset.monta));draw();c.focar(a.el.querySelector('[data-monta]:not(:disabled)'));};});draw();}enter(a);},confirmar:finish,revelar:function(){if(rev){choice=0;var r=a.el.querySelector('input[value="0"]');r.checked=true;r.closest('label').classList.add('sel');}else{seq=aceites[0].slice();draw();if(aceites.length>1){var p=document.createElement('p');p.textContent='Também certo: '+aceites.slice(1).map(frase).join(' / ');a.el.querySelector('.tm-montar').appendChild(p);}}return finish();}};
  }});
 
- T.registar('corrigir',{rot:'Corrige o erro',como:'corrigir-erros',criar:function(x,a,c){
-  var parts=c.partes(),marks=new Set(),vals={},step=c.repeticao?2:1,feito=false;
-  var alvo=c.repeticao&&c.falhas&&c.falhas.length?x.erros.filter(function(e){return c.falhas.indexOf(e.em)>=0}):x.erros.slice();
-  if(!alvo.length)alvo=x.erros.slice();
-  function fase2(){step=2;var text=a.el.querySelector('.tm-corrigir-texto');text.querySelectorAll('[data-palavra]').forEach(function(b){var i=Number(b.dataset.palavra),n=x.erros.findIndex(function(e){return e.em===i});b.disabled=true;if(n>=0){var s=document.createElement('sup');s.textContent=String(n+1);b.appendChild(s);b.classList.add('mau');}else if(marks.has(i))marca(b,false,(x.armadilhas||{})[i]||'Esta palavra estava certa. Relê a frase.');});a.el.querySelector('.tm-trocas').hidden=false;a.el.querySelector('.tm-passo').textContent='Passo 2 de 2: escolhe a palavra certa.';c.atualizar(false,'Faltam '+alvo.length+' correções.','Confirmar');c.focar(a.el.querySelector('.tm-trocas input'));}
-  function final(){feito=true;var fs=[],es=[];alvo.forEach(function(e){var ok=vals[e.em]===e.c;if(!ok){fs.push(e.em);es.push(e.fe);}var g=a.el.querySelector('[data-erro="'+e.em+'"]');marca(g,ok,ok?'':e.fe);var b=a.el.querySelector('[data-palavra="'+e.em+'"]');var punct=(parts[e.em].match(/[.,;:!?…]+$/)||[''])[0];b.textContent=e.o[e.c]+punct;b.classList.toggle('mau',!ok);b.classList.toggle('bom',ok);});if(!c.repeticao){var misses=x.erros.filter(function(e){return !marks.has(e.em)}).length,extra=Array.from(marks).filter(function(i){return !x.erros.some(function(e){return e.em===i})}).length;var p=document.createElement('p');p.textContent='Na identificação: '+(x.erros.length-misses)+' erros encontrados; '+extra+' palavras corretas marcadas.';a.el.querySelector('.tm-corrigir').appendChild(p);if(misses||extra){alvo.forEach(function(e){if(!marks.has(e.em)&&fs.indexOf(e.em)<0)fs.push(e.em)});if(extra&&!fs.length)fs.push(alvo[0].em);if(!es.length)es.push('Distingue localizar o erro de escolher a correção. Relê as palavras numeradas.');}}
-   return res(alvo.length,fs,es);}
-  return {html:function(){return topo(x,a,c.repeticao?'Revê a forma certa de cada erro falhado.':'Marca primeiro as palavras erradas. Só depois verás as formas de correção.')+'<div class="tm-corrigir"><p class="tm-passo">Passo '+step+' de 2: '+(step===1?'encontra os erros.':'escolhe a palavra certa.')+'</p><div class="tm-texto tm-corrigir-texto">'+parts.map(function(w,i){return '<button class="w" type="button" data-palavra="'+i+'" aria-pressed="false">'+a.esc(w)+'</button>'}).join(' ')+'</div><div class="tm-trocas" '+(step===1?'hidden':'')+'>'+alvo.map(function(e){return '<fieldset data-erro="'+e.em+'"><legend>Erro '+(x.erros.indexOf(e)+1)+': '+a.esc(parts[e.em])+'</legend>'+e.o.map(function(o,i){return radio(a,'c-'+x.id+'-'+e.em,i,o)}).join('')+'</fieldset>'}).join('')+'</div></div>'+rodape();},
-   ligar:function(){a.el.querySelectorAll('[data-palavra]').forEach(function(b){b.onclick=function(){if(step!==1||feito)return;var i=Number(b.dataset.palavra);if(marks.has(i))marks.delete(i);else marks.add(i);b.setAttribute('aria-pressed',String(marks.has(i)));b.classList.toggle('sel',marks.has(i));c.atualizar(marks.size>0,'Marcaste '+marks.size+' palavras.','Ver os erros');};});alvo.forEach(function(e){ouvirRadios(a.el.querySelector('[data-erro="'+e.em+'"]'),function(i){vals[e.em]=i;c.atualizar(Object.keys(vals).length===alvo.length,'Corrigiste '+Object.keys(vals).length+' de '+alvo.length+'.');});});if(step===2)fase2();else c.atualizar(false,'Falta marcar uma palavra.','Ver os erros');enter(a);},
-   confirmar:function(){if(step===1){fase2();return null;}return final();},revelar:function(){x.erros.forEach(function(e){marks.add(e.em)});if(step===1)fase2();alvo.forEach(function(e){vals[e.em]=e.c;var r=a.el.querySelector('[name="c-'+x.id+'-'+e.em+'"][value="'+e.c+'"]');r.checked=true;r.closest('label').classList.add('sel');});return final();}};
+ T.registar('corrigir',{rot:'Corrige o erro',como:'corrigir-erro',criar:function(x,a,c){
+  var parts=c.partes(),marks=new Set(),vals={},locvals={},step=c.repeticao?2:1,feito=false;
+  function isError(i){return x.erros.some(function(e){return e.em===i});}
+  var failed=c.falhas||[],alvo=x.erros.slice(),loc=[];
+  if(c.repeticao&&failed.length){
+   alvo=x.erros.filter(function(e){return failed.indexOf('forma:'+e.em)>=0||failed.indexOf(e.em)>=0});
+   loc=failed.filter(function(v){return typeof v==='string'&&v.indexOf('local:')===0}).map(function(v){return Number(v.split(':')[1])});
+  }
+  function pronto(){return alvo.every(function(e){return vals[e.em]!==undefined})&&loc.every(function(i){return locvals[i]!==undefined});}
+  function atualizar(){c.atualizar(pronto(),'Revistas '+(Object.keys(vals).length+Object.keys(locvals).length)+' de '+(alvo.length+loc.length)+'.','Confirmar');}
+  function fase2(){
+   step=2;a.el.querySelectorAll('[data-palavra]').forEach(function(b){
+    var i=Number(b.dataset.palavra),n=x.erros.findIndex(function(e){return e.em===i});b.disabled=true;
+    if(n>=0){var s=document.createElement('sup');s.textContent=String(n+1);b.appendChild(s);}
+    if(!c.repeticao&&marks.has(i)&&n<0)marca(b,false,(x.armadilhas||{})[i]||'Esta forma já estava correta. Relê a frase com ela.');
+   });
+   a.el.querySelector('.tm-trocas').hidden=false;
+   a.el.querySelector('.tm-passo').textContent=c.repeticao?'Revê apenas as decisões falhadas.':'Passo 2 de 2: escolhe a palavra certa.';
+   atualizar();c.focar(a.el.querySelector('.tm-trocas input'));
+  }
+  function localFeedback(i){var err=x.erros.find(function(e){return e.em===i});return err?err.fe:(x.armadilhas||{})[i]||'Esta forma já estava correta. Relê a palavra no contexto da frase.';}
+  function final(){
+   feito=true;var fs=[],es=[],localTotal=c.repeticao?loc.length:parts.length,localCertas=0,formasCertas=0;
+   (c.repeticao?loc:indices(parts.length)).forEach(function(i){var ok=(c.repeticao?locvals[i]:marks.has(i))===isError(i);if(ok)localCertas++;else{fs.push('local:'+i);es.push(localFeedback(i));}var g=a.el.querySelector('[data-local="'+i+'"]');if(g)marca(g,ok,ok?'':localFeedback(i));});
+   alvo.forEach(function(e){
+    var ok=vals[e.em]===e.c;if(ok)formasCertas++;else{fs.push('forma:'+e.em);es.push(e.fe);}
+    marca(a.el.querySelector('[data-erro="'+e.em+'"]'),ok,ok?'':e.fe);
+    var b=a.el.querySelector('[data-palavra="'+e.em+'"]'),punct=(parts[e.em].match(/[.,;:!?…]+$/)||[''])[0];
+    b.textContent=e.o[e.c]+punct;var sup=document.createElement('sup');sup.textContent=String(x.erros.indexOf(e)+1);b.appendChild(sup);b.classList.toggle('mau',!ok);b.classList.toggle('bom',ok);
+   });
+   var p=document.createElement('p');p.className='tm-balanco';p.textContent='Identificação: '+localCertas+' de '+localTotal+' decisões corretas. Formas: '+formasCertas+' de '+alvo.length+' correções.';a.el.querySelector('.tm-corrigir').appendChild(p);
+   return res(localTotal+alvo.length,fs,es);
+  }
+  return {
+   html:function(){
+    var forms=alvo.map(function(e){return '<fieldset data-erro="'+e.em+'"><legend>Erro '+(x.erros.indexOf(e)+1)+': '+a.esc(parts[e.em])+'</legend>'+e.o.map(function(o,i){return radio(a,'c-'+x.id+'-'+e.em,i,o)}).join('')+'</fieldset>';}).join('');
+    var locations=loc.map(function(i){return '<fieldset data-local="'+i+'"><legend>A forma '+a.esc(parts[i])+' precisa de correção?</legend>'+radio(a,'l-'+x.id+'-'+i,1,'Precisa de correção.')+radio(a,'l-'+x.id+'-'+i,0,'Já está correta.')+'</fieldset>';}).join('');
+    return topo(x,a,c.repeticao?'Revê as decisões que falharam: localizar uma forma e escolher a correção são operações diferentes.':'Marca primeiro as palavras erradas. Só depois verás as formas de correção.')+'<div class="tm-corrigir"><p class="tm-passo">Passo '+step+' de 2: '+(step===1?'encontra os erros.':'revê as decisões.')+'</p><div class="tm-texto tm-corrigir-texto">'+parts.map(function(w,i){return '<button class="w" type="button" data-palavra="'+i+'" aria-pressed="false">'+a.esc(w)+'</button>';}).join(' ')+'</div><div class="tm-trocas" '+(step===1?'hidden':'')+'>'+locations+forms+'</div></div>'+rodape(x,a);
+   },
+   ligar:function(){
+    a.el.querySelectorAll('[data-palavra]').forEach(function(b){b.onclick=function(){if(step!==1||feito)return;var i=Number(b.dataset.palavra);if(marks.has(i))marks.delete(i);else marks.add(i);b.setAttribute('aria-pressed',String(marks.has(i)));b.classList.toggle('sel',marks.has(i));c.atualizar(marks.size>0,'Marcaste '+marks.size+' palavras.','Ver os erros');};});
+    alvo.forEach(function(e){ouvirRadios(a.el.querySelector('[data-erro="'+e.em+'"]'),function(i){vals[e.em]=i;atualizar();});});
+    loc.forEach(function(i){ouvirRadios(a.el.querySelector('[data-local="'+i+'"]'),function(v){locvals[i]=v===1;atualizar();});});
+    if(step===2)fase2();else c.atualizar(false,'Falta marcar uma palavra.','Ver os erros');enter(a);
+   },
+   confirmar:function(){if(step===1){fase2();return null;}return final();},
+   revelar:function(){
+    x.erros.forEach(function(e){marks.add(e.em)});if(step===1)fase2();
+    alvo.forEach(function(e){vals[e.em]=e.c;var r=a.el.querySelector('[name="c-'+x.id+'-'+e.em+'"][value="'+e.c+'"]');r.checked=true;r.closest('label').classList.add('sel');});
+    loc.forEach(function(i){locvals[i]=isError(i);var r=a.el.querySelector('[name="l-'+x.id+'-'+i+'"][value="'+(isError(i)?1:0)+'"]');r.checked=true;r.closest('label').classList.add('sel');});
+    return final();
+   }
+  };
  }});
 })(window);
 /* FIM F2 CONTRATO 1 */

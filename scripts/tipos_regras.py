@@ -50,6 +50,7 @@ def validar(x, contexto='licao'):
         if not ok: e.append(msg)
     for k in ('id', 'p', 'f'):
         exigir(_texto(x.get(k)), k + ': texto obrigatório')
+    exigir(isinstance(x.get('id'),str) and bool(re.fullmatch(r'n106-[a-z0-9-]+',x['id'])), 'id: prefixo n106 e identificador estável')
     for k in ('cita', 'p2'):
         if k in x: exigir(_texto(x[k]), k + ': texto não vazio')
     curto = contexto != 'licao'
@@ -213,6 +214,9 @@ def verificar_recursos(html, cartoes):
     js=re.search(r'<script\b[^>]*src=[\"\'][^\"\']*tipos-mais\.js',html,re.I)
     montar=html.find('EPIJogo.montar(')
     if js and montar>=0 and js.start()>montar:erros.append('tipos-mais.js: carregar antes de montar')
+    if any(c.get('t')=='intruso' and any(isinstance(i,dict) for i in c.get('itens',[])) for c in cartoes):
+        for nome in ('ampliar-documentos.js','ampliar-documentos.css'):
+            if nome not in html:erros.append(nome+': visor obrigatório para imagens')
     return erros
 
 DICAS_PAPEL = {
@@ -266,16 +270,29 @@ def material_html(x,semente=''):
     """Material inicial escapado, sem inferir marcação a partir de HTML recebido."""
     if x.get('t') in _EXTENSOES:return _EXTENSOES[x['t']].material_html(x)
     from html import escape
+    def fmt(s):
+        s=escape(s)
+        s=re.sub(r'\*\*([^*\n]{1,80})\*\*',r'<b>\1</b>',s)
+        return re.sub(r'(^|[^\w/])_([^_\n<>]{1,100})_(?!\w)',r'\1<i>\2</i>',s)
     m=material_publico(x,semente);out=[]
     for k in ('cita','texto'):
-        if k in m:out.append('<p>'+escape(m[k])+'</p>')
+        if k in m:out.append('<p>'+fmt(m[k])+'</p>')
     for k in ('banco','o','itens','razoes'):
         if k in m:
             values=[]
             for v in m[k]:
-                if isinstance(v,str):values.append(escape(v))
-                else:values.append(escape(v['alt'])+' ('+escape(v['autor'])+', '+escape(v['obra'])+', '+escape(v['data'])+')')
-            out.append('<ol>'+''.join('<li>'+v+'</li>' for v in values)+'</ol>')
+                if isinstance(v,str):values.append(fmt(v))
+                else:
+                    # 03/11/2026: a imagem e o crédito acompanham o material em papel.
+                    src=v['img']
+                    if re.match(r'(?i)\s*(?:javascript|vbscript):',src):
+                        raise ValueError('Endereço de imagem não permitido')
+                    values.append('<figure><img src="'+escape(src,quote=True)+'" alt="'+escape(v['alt'],quote=True)+'">'
+                                  '<figcaption>'+fmt(v['autor'])+'; '+fmt(v['obra'])+'; '+fmt(v['data'])+'; '
+                                  '<a href="'+escape(v['origem'],quote=True)+'">Fonte</a>; '+escape(v['licenca'])+'</figcaption></figure>')
+            titulo={'banco':'Blocos disponíveis','o':'Afirmações','itens':'Elementos','razoes':'Razões'}[k]
+            tipo=' type="A"' if k in ('o','itens') else ''
+            out.append('<p><b>'+titulo+'</b></p><ol'+tipo+'>'+''.join('<li>'+v+'</li>' for v in values)+'</ol>')
     return ''.join(out)
 
 
