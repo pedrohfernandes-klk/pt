@@ -852,6 +852,13 @@ def main():
                         raise ManifestoDesatualizado(f'{rel}: créditos de IA não conferem')
                     conferencia = conferencia.replace(edit['new'], edit['old'])
                 # 02/11/2026: lote 2 por cima da base publicada, só para conferir.
+                # 02/11/2026: o piloto M4 desfaz-se primeiro, apenas em memória.
+                piloto = ROOT / 'tests/fixtures/cartaz-m4-piloto-edits-20261102.json'
+                if piloto.is_file():
+                    for edit in reversed(json.loads(piloto.read_text('utf-8'))['files'].get(rel, {}).get('edits', [])):
+                        if conferencia.count(edit['new']) != edit['occurrences']:
+                            raise ManifestoDesatualizado(f'{rel}: camada do piloto M4 não confere')
+                        conferencia = conferencia.replace(edit['new'], edit['old'])
                 lote2 = ROOT / 'tests/fixtures/conteudos-lote2-edits-20261101.json'
                 for edit in reversed(json.loads(lote2.read_text('utf-8'))['files'].get(rel, {}).get('edits', [])):
                     if conferencia.count(edit['new']) != edit['occurrences']:

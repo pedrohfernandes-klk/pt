@@ -1,6 +1,4 @@
-# 03/11/2026: cabeçalho sobre F0 publicada, mantendo reversão e asserções.
-# 03/11/2026: desfazer primeiro a camada visual do cabecalho, com as mesmas assercoes.
-# 02/11/2026: crédito de IA acima do lote 2; mesmas asserções.
+# 03/11/2026: desfaz piloto M4, F0, créditos publicados e lote 2; asserções intactas.
 # 02/11/2026: desfaz o lote 2 antes da base publicada; mesmas asserções.
 """01/11/2026: decisões 20 a 25 nas tarefas e nos guias do M8 e M9."""
 from pathlib import Path
@@ -64,7 +62,7 @@ class TasksM89(unittest.TestCase):
                             'tests/fixtures/tarefas-m89-edits-20261101.json', '--verificar',
                             # 01/11/2026: conservar as três camadas posteriores sem dispensar o predecessor.
                             # 02/11/2026: e a das tarefas individuais e a da calçada, as mais recentes.
-                            '--desfazer-antes', 'tests/fixtures/cartaz-cabecalho-edits-20261103.json', '--desfazer-antes', 'tests/fixtures/variedade-f0-edits-20261102.json', '--desfazer-antes', 'tests/fixtures/creditos-grafismos-ia-edits-20261102.json', '--desfazer-antes', 'tests/fixtures/conteudos-lote2-edits-20261101.json', '--desfazer-antes', 'tests/fixtures/varredura-formatacao-edits-20261101.json', '--desfazer-antes', 'tests/fixtures/calcada-mar-edits-20261102.json',
+                            '--desfazer-antes', 'tests/fixtures/cartaz-cabecalho-edits-20261103.json', '--desfazer-antes', 'tests/fixtures/cartaz-m4-piloto-edits-20261102.json', '--desfazer-antes', 'tests/fixtures/variedade-f0-edits-20261102.json', '--desfazer-antes', 'tests/fixtures/creditos-grafismos-ia-edits-20261102.json', '--desfazer-antes', 'tests/fixtures/conteudos-lote2-edits-20261101.json', '--desfazer-antes', 'tests/fixtures/varredura-formatacao-edits-20261101.json', '--desfazer-antes', 'tests/fixtures/calcada-mar-edits-20261102.json',
                             '--desfazer-antes','tests/fixtures/tarefas-individuais-edits-20261102.json',
                             '--desfazer-antes','tests/fixtures/cartaz-indices-edits-20261101.json',
                             '--desfazer-antes','tests/fixtures/licoes-m16-edits-20261101.json',

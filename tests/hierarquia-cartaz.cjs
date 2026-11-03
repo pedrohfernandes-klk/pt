@@ -1,3 +1,4 @@
+// 02/11/2026: M4 é um molde piloto separado; R4 mantém-se integral nos outros oito e nas três unidades.
 // 01/11/2026: decisão 61. MEASURE preservado do medir-hierarquia.js fornecido pelo docente.
 // O invólucro limita a medição às páginas migradas, compara R4 entre blocos e verifica a escala.
 const assert=require('node:assert/strict'),fs=require('fs'),path=require('path'),http=require('http');
@@ -52,7 +53,7 @@ const MEASURE=()=>{
  }
  }await ctx.close();}
  const roles=new Map();let r4=0;
- for(const row of rows){const template=/^m[1-9]\/index\.html$/.test(row.page)?'indices-pt':/narrativas\/(ver|treinar|criar)\//.test(row.page)?'bloco':row.page;for(const role of row.roles){const key=[template,row.width,row.theme,row.mode,role.sig].join('|');if(roles.has(key)&&Math.abs(roles.get(key)-role.fs)>.02)r4++;roles.set(key,role.fs);}}
+ for(const row of rows){const template=row.page==='m4/index.html'?'piloto-m4':/^m[1-9]\/index\.html$/.test(row.page)?'indices-pt':/narrativas\/(ver|treinar|criar)\//.test(row.page)?'bloco':row.page;for(const role of row.roles){const key=[template,row.width,row.theme,row.mode,role.sig].join('|');if(roles.has(key)&&Math.abs(roles.get(key)-role.fs)>.02)r4++;roles.set(key,role.fs);}}
  assert.equal(r4,0,'R4: tamanhos diferentes no mesmo molde');
  for(const p of pages)for(const width of [390,1366])console.log(`${p} | ${width}px | claro/escuro, normal/dobras abertas/projeção | R1=0 R2=0 R3=0 R4=0 R5=0 | escala conforme`);
  if(process.env.HIERARQUIA_SAIDA)fs.writeFileSync(process.env.HIERARQUIA_SAIDA,JSON.stringify(rows,null,2));
