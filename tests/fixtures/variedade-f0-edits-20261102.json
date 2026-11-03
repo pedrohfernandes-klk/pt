@@ -1,5 +1,5 @@
 {
- "base_commit": "077da24988d4f7104bce2f6a5c6f007b1360e276",
+ "base_commit": "123335cf9804a493c003ea03b6806196833d91ef",
  "_nota": "02/11/2026: F0, ajuda nos vinte aquecimentos gerados e proteção dos índices na importação do progresso; cartões, versões e resultados preservados.",
  "files": {
   "tarefas/m1-u1/aquecimento/index.html": {
@@ -243,8 +243,8 @@
    ]
   },
   "index.html": {
-   "base_sha256_lf": "2a9ed61575a4dfc833dd3d1ae3b114a437ed11cd31b4468e127a448524421ac4",
-   "after_sha256_lf": "ab440d9e9df1a1636e4a08318b90d20d7a1308653b463467840b9daa84921896",
+   "base_sha256_lf": "0c0fbf7a2dd68a8505576d216f4218a805fe4e13690ec1713ce19b63ac21ca11",
+   "after_sha256_lf": "947a1e4c92f1116789f747dea6afd8ada147b2dacef5df2ccb9a0009d6692335",
    "edits": [
     {
      "location": "F0: recurso de compatibilidade antes da importação",
