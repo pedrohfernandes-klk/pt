@@ -21,8 +21,6 @@ class CalcadaContinua(unittest.TestCase):
         self.assertIn('prefers-reduced-motion:no-preference',css)
         self.assertIn('animation-play-state:paused',css)
         self.assertNotIn('!important',css)
-    def test_ambito_isolado(self):
-        # 03/11/2026: prova de preservação exata dos HTML, motores, páginas e peças em revisão.
-        result=subprocess.run(['git','diff','--exit-code','8a38a69d554dca94e7018b14e7fef581286f5896','--','*.html','assets/fundos.js','assets/fundos.css','assets/appearance.js','assets/pt-lessons/','assets/task-*','assets/cartaz-components.*'],cwd=ROOT,capture_output=True)
-        self.assertEqual(result.returncode,0,result.stdout+result.stderr)
+    # 03/11/2026: a comparação git de isolamento corre no workflow Cartaz,
+    # com fetch-depth: 0. Os outros workflows têm clones sem o commit de base.
 if __name__=='__main__':unittest.main()
