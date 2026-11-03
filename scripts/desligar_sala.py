@@ -839,6 +839,12 @@ def main():
                 posterior = ROOT / 'tests/fixtures/tarefas-m356-edits-20261031.json'
                 conferencia = texto
                 # 02/11/2026: a camada da calçada da entrada (a mais recente) desfaz-se antes das outras, só para conferir.
+                # 02/11/2026: a atribuição de IA é posterior ao lote 2 publicado.
+                creditos_ia = ROOT / 'tests/fixtures/creditos-grafismos-ia-edits-20261102.json'
+                for edit in reversed(json.loads(creditos_ia.read_text('utf-8'))['files'].get(rel, {}).get('edits', [])):
+                    if conferencia.count(edit['new']) != edit['occurrences']:
+                        raise ManifestoDesatualizado(f'{rel}: créditos de IA não conferem')
+                    conferencia = conferencia.replace(edit['new'], edit['old'])
                 # 02/11/2026: lote 2 por cima da base publicada, só para conferir.
                 lote2 = ROOT / 'tests/fixtures/conteudos-lote2-edits-20261101.json'
                 for edit in reversed(json.loads(lote2.read_text('utf-8'))['files'].get(rel, {}).get('edits', [])):
