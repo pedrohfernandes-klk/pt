@@ -202,6 +202,7 @@ def pagina(raiz, d):
         '<span class="c-num" data-c-num></span><button type="button" class="c-barra" data-c-barra aria-label="Ver os cartões já feitos" disabled>'
         '<svg viewBox="0 0 1 10" preserveAspectRatio="none" aria-hidden="true"></svg></button>'
         '<span class="c-modo" data-c-modo hidden></span>'
+        '<button type="button" class="c-ic" data-c-como aria-label="Como se faz" title="Como se faz" hidden><span class="c-roda">?</span></button>'
         '<button type="button" class="c-ic" data-c-som aria-pressed="false" aria-label="Som"><span class="c-roda">♪</span></button>'
         '<button type="button" class="c-ic" data-c-menu aria-label="Menu" aria-expanded="false"><span class="c-tres"></span></button></header>'
         f'<h1 class="c-sr">Aquecer: {titulo}</h1>'

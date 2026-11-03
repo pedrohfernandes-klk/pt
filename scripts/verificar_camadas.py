@@ -1,3 +1,4 @@
+# 03/11/2026: cabeçalho sobre F0 publicada, mantendo reversão e asserções.
 #!/usr/bin/env python3
 """01/11/2026: verifica todas as camadas literais, da mais recente para a mais antiga."""
 from pathlib import Path
@@ -9,6 +10,7 @@ LAYERS=[
  # 02/11/2026: créditos de IA depois do lote 2 publicado.
  # 03/11/2026: abertura visual acima dos creditos publicados.
  ('cartaz_cabecalho_20261103','cartaz-cabecalho-edits-20261103'),
+ ('variedade_f0_20261102','variedade-f0-edits-20261102'),
  ('creditos_grafismos_ia_20261102','creditos-grafismos-ia-edits-20261102'),
  # 02/11/2026: lote 2 reaplicado por cima do main publicado.
  ('conteudos_lote2_20261101','conteudos-lote2-edits-20261101'),

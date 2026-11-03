@@ -88,7 +88,17 @@ function luminance(rgb) { return rgb.map(v => v / 255).map(v => v <= .04045 ? v 
       await local(zoomContext); const page = await zoomContext.newPage(); await page.goto(base + '/pt/');
       zoom = await page.evaluate(() => ({ outerWidth, innerWidth, dpr: devicePixelRatio, overflow: document.documentElement.scrollWidth - innerWidth, cssZoom: getComputedStyle(document.documentElement).zoom }));
       assert.equal(zoom.dpr, 2); assert(Math.abs(zoom.innerWidth - zoom.outerWidth / 2) <= 10); assert.equal(zoom.cssZoom, '1'); assert.equal(zoom.overflow, 0);
-      if (out) await page.screenshot({ path: path.join(out, 'zoom-nativo-200.png') });
+      // 03/11/2026: captura a superfície completa com zoom nativo, sem recorte a metade.
+      if (out) {
+        const cdp = await zoomContext.newCDPSession(page);
+        const shot = await cdp.send('Page.captureScreenshot', { format: 'png', captureBeyondViewport: false, fromSurface: true });
+        const png = Buffer.from(shot.data, 'base64');
+        const view = await page.evaluate(() => ({ width: visualViewport.width * devicePixelRatio, height: visualViewport.height * devicePixelRatio }));
+        assert(Math.abs(png.readUInt32BE(16) - view.width) <= 1);
+        assert(Math.abs(png.readUInt32BE(20) - view.height) <= 1);
+        fs.writeFileSync(path.join(out, 'zoom-nativo-200.png'), png);
+        await cdp.detach();
+      }
     } finally {
       await zoomContext.close();
       assert(path.resolve(profile).startsWith(path.resolve(os.tmpdir()) + path.sep) && path.basename(profile).startsWith('cartaz-cabecalho-zoom-'));

@@ -1,10 +1,10 @@
 {
- "base_commit": "123335cf9804a493c003ea03b6806196833d91ef",
+ "base_commit": "e3b4b00fb3990744d6c6eebca18a47b6ba399bde",
  "_nota": "03/11/2026: camada visual da entrada sobre os créditos publicados no #164. Apenas a ligação ao CSS isolado, reversível, sem alterar conteúdos, ids ou progresso.",
  "files": {
   "index.html": {
-   "base_sha256_lf": "0c0fbf7a2dd68a8505576d216f4218a805fe4e13690ec1713ce19b63ac21ca11",
-   "after_sha256_lf": "70a8aad9dcd53cceb79dc13dbc73a450408980390998b68f997ec58e144b1cad",
+   "base_sha256_lf": "947a1e4c92f1116789f747dea6afd8ada147b2dacef5df2ccb9a0009d6692335",
+   "after_sha256_lf": "d67ce7cbc46d71b4a5671d8d201efc416330301d4dc112aa09b6d7fed162591e",
    "edits": [
     {
      "location": "Camada visual da abertura, acima dos créditos publicados",
