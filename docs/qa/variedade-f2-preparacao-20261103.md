@@ -1,5 +1,13 @@
 # F2: preparação para revisão
 
+## Revisão F2-01, 03/11/2026
+
+A repetição de `montar` corrigia pela posição zero e rejeitava uma rotação expressamente declarada em `aceita`. Cada opção conserva agora sequência, texto e validade calculada contra todas as ordens aceites. A deduplicação mantém o texto e dá preferência à sequência válida quando coincide; a pontuação declarada e o banco original ficam preservados. O pedido passa a escolher uma forma válida, sem pressupor que existe apenas uma.
+
+A regressão reproduziu a rejeição antes da correção. Percorre erro inicial, «Repetir os errados» e seleção da terceira opção, «Iremos ao cinema amanhã.», que tem de dar 1 de 1. Um segundo percurso escolhe a tentativa inválida e exige 0 de 1. Confirma ainda opções sem duplicados e banco intacto. São dois casos adicionais no teste de limites, já incluído no CI. O vídeo de Montar deve ser regravado nesta cabeça; os restantes tipos não mudaram. Continua sem parecer de publicação.
+
+Validação local deste incremento: 21 testes unitários, 72 cenários dos seis tipos, 14 casos limite, oito cenários do adaptador e dois percursos de sequência/repetição aprovados. O CI completo é repetido no pedido; estes números não representam uma nova execução local da bateria integral.
+
 ## Estado de entrega em 03/11/2026
 
 Pedido #167, dependente do #165, em rascunho. Os sete contratos da página final para papel F3 estão fechados funcional e visualmente pelo GPT2: sete casos a 320, 390 e 1366 px e sete PDFs, uma página A4 cada, renderizados e inspecionados. O fundo creme que sobrava na impressão foi corrigido em `1733c4d5`, com teste da cor calculada de `html` e `body`. A prova F3 está em `papel-final/RELATORIO.md` e `RESULTADOS.json` na pasta de artefactos do GPT2; código testado `f3dd84dd`, cabeça documental `a5446d68`.

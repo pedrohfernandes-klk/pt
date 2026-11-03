@@ -52,6 +52,21 @@ def main():
   page=b.new_page();page.route('**/*',router(c));page.goto('https://f2.test/ensaio/?projetar=1');page.keyboard.press('r')
   assert 'Também certo: Ontem, não o vi.' in page.locator('.tm-montar').inner_text()
   print('PASS ordem aceite com pontuação própria',flush=True);page.close()
+  # 03/11/2026: F2-01, uma rotação aceite continua certa na repetição após erro.
+  for selected,expected in [('Iremos ao cinema amanhã.',1),('Iremos amanhã ao cinema.',0)]:
+   c=copy.deepcopy(CARDS[2]);c.update(blocos=['amanhã','iremos','ao','cinema'],distratores=[],aceita=[[[1,2,3,0],'Iremos ao cinema amanhã.']],fim='.')
+   page=b.new_page();page.route('**/*',router(c));page.goto('https://f2.test/ensaio/')
+   escolher(page,c,wrong=True)
+   assert 'Acertaste 4 de 4' not in page.locator('[data-c-folha]').inner_text()
+   page.locator('[data-c-folha] [data-seguinte]').click();page.locator('[data-errados]').click()
+   labels=page.locator('.tm-montar label').all_inner_texts()
+   assert len(labels)==len(set(labels))
+   alternative=page.locator('.tm-montar label').filter(has=page.get_by_text(selected,exact=True)).locator('input')
+   if expected:assert alternative.get_attribute('value')=='2'
+   alternative.check();page.locator('[data-confirmar]').click()
+   assert f'Acertaste {expected} de 1' in page.locator('[data-c-folha]').inner_text()
+   assert page.evaluate('JSON.stringify(CARTOES)===antes')
+   print('PASS repetição de montar',selected,expected,flush=True);page.close()
   c=copy.deepcopy(CARDS[0]);page=b.new_page(viewport={'width':320,'height':240});page.route('**/*',router(c));page.goto('https://f2.test/ensaio/')
   page.locator('[data-espaco="0"]').click()
   assert page.locator('.tm-banco').evaluate('(e)=>e.style.position')=='static'
