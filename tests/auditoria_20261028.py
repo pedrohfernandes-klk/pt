@@ -284,6 +284,17 @@ _VARREDURA_FILES = json.loads(VARREDURA_MANIFEST.read_text('utf-8'))['files']
 
 
 # 02/11/2026: crédito de IA por cima das camadas publicadas, com correspondência estrita.
+# 03/11/2026: reversao estrita da abertura, antes dos creditos.
+_CABECALHO = json.loads((ROOT/'tests/fixtures/cartaz-cabecalho-edits-20261103.json').read_text('utf-8'))['files']
+
+def undo_cabecalho(path, text):
+    for edit in reversed(_CABECALHO.get(_relative(path), {}).get('edits', [])):
+        if text.count(edit['new']) != edit['occurrences']:
+            raise AssertionError(f"Cabeçalho não confere: {path}: {edit['location']}")
+        text = text.replace(edit['new'], edit['old'])
+    return text
+
+
 _CREDITOS_IA = json.loads((ROOT/'tests/fixtures/creditos-grafismos-ia-edits-20261102.json').read_text('utf-8'))['files']
 
 def undo_creditos_ia(path, text):
@@ -295,6 +306,19 @@ def undo_creditos_ia(path, text):
 
 
 _CONTEUDOS_LOTE2_FILES = json.loads((ROOT / 'tests/fixtures/conteudos-lote2-edits-20261101.json').read_text('utf-8'))['files']
+
+
+_M4_PILOTO_FILES = json.loads((ROOT / 'tests/fixtures/cartaz-m4-piloto-edits-20261102.json').read_text('utf-8'))['files']
+
+
+def undo_m4_piloto(path, text):
+    # 02/11/2026: desfaz só a camada visual autorizada, com contagem estrita.
+    relative = _relative(path)
+    for edit in reversed(_M4_PILOTO_FILES.get(relative, {}).get('edits', [])):
+        if text.count(edit['new']) != edit['occurrences']:
+            raise AssertionError(f"Piloto M4 não confere: {relative}: {edit['location']}")
+        text = text.replace(edit['new'], edit['old'])
+    return text
 
 
 _VARIEDADE_F0_FILES = json.loads((ROOT / 'tests/fixtures/variedade-f0-edits-20261102.json').read_text('utf-8'))['files']
@@ -311,6 +335,10 @@ def undo_variedade_f0(path, text):
 
 def undo_conteudos_lote2(path, text):
     # 03/11/2026: desfaz F0 e os créditos publicados, com as mesmas contagens estritas.
+    # 03/11/2026: cabeçalho posterior à F0 publicada.
+    text = undo_cabecalho(path, text)
+    # 03/11/2026: preservar as duas camadas e as contagens estritas.
+    text = undo_m4_piloto(path, text)
     text = undo_variedade_f0(path, text)
     text = undo_creditos_ia(path, text)
     relative = _relative(path)

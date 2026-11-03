@@ -1,4 +1,4 @@
-# 03/11/2026: desfaz F0, créditos publicados e lote 2; asserções intactas.
+# 03/11/2026: desfaz piloto M4, F0, créditos publicados e lote 2; asserções intactas.
 # 02/11/2026: desfaz o lote 2 antes da base publicada; mesmas asserções.
 """01/11/2026: índices Cartaz, preservação e camada literal reversível."""
 import json,re,subprocess,sys,unittest
@@ -37,7 +37,8 @@ class IndicesCartaz(unittest.TestCase):
    self.assertEqual(s.count('<div class="module-entry"><a class="cz-button primary" data-module-next'),1)
    self.assertEqual(s.count('class="module-entry cz-next"'),0);self.assertNotIn('<h2>A seguir</h2>',s);self.assertNotIn('cz-index-status',s)
    # 01/11/2026: a banda fechada identifica a unidade, além do seu número.
-   names=re.findall(r'<span class="cz-fold-t">(.*?)</span>',s)
+   # 03/11/2026: conservar no merge o contrato h2 do piloto M4 aprovado.
+   names=re.findall(r'<h2 class="cz-fold-t"[^>]*>(.*?)</h2>',s) if n==4 else re.findall(r'<span class="cz-fold-t">(.*?)</span>',s)
    self.assertEqual(len(names),len(units))
    self.assertTrue(all(re.sub('<[^>]+>','',name).strip() for name in names))
  def test_adaptador_nao_grava_progresso_e_reutiliza_o_motor(self):
@@ -48,7 +49,7 @@ class IndicesCartaz(unittest.TestCase):
   self.assertNotIn('setAttribute("href"',s)
  def test_camada_aplicada_e_reversivel(self):
   # 02/11/2026: desfaz antes a camada das tarefas individuais, a mais recente.
-  r=subprocess.run([sys.executable,'scripts/aplicar_trocas.py','scripts/cartaz_indices_20261101.json','--manifesto','tests/fixtures/cartaz-indices-edits-20261101.json','--verificar','--desfazer-antes', 'tests/fixtures/variedade-f0-edits-20261102.json', '--desfazer-antes', 'tests/fixtures/creditos-grafismos-ia-edits-20261102.json', '--desfazer-antes', 'tests/fixtures/conteudos-lote2-edits-20261101.json', '--desfazer-antes', 'tests/fixtures/varredura-formatacao-edits-20261101.json', '--desfazer-antes', 'tests/fixtures/calcada-mar-edits-20261102.json','--desfazer-antes','tests/fixtures/tarefas-individuais-edits-20261102.json'],cwd=ROOT,capture_output=True,text=True,encoding='utf8')
+  r=subprocess.run([sys.executable,'scripts/aplicar_trocas.py','scripts/cartaz_indices_20261101.json','--manifesto','tests/fixtures/cartaz-indices-edits-20261101.json','--verificar','--desfazer-antes', 'tests/fixtures/cartaz-cabecalho-edits-20261103.json', '--desfazer-antes', 'tests/fixtures/cartaz-m4-piloto-edits-20261102.json', '--desfazer-antes', 'tests/fixtures/variedade-f0-edits-20261102.json', '--desfazer-antes', 'tests/fixtures/creditos-grafismos-ia-edits-20261102.json', '--desfazer-antes', 'tests/fixtures/conteudos-lote2-edits-20261101.json', '--desfazer-antes', 'tests/fixtures/varredura-formatacao-edits-20261101.json', '--desfazer-antes', 'tests/fixtures/calcada-mar-edits-20261102.json','--desfazer-antes','tests/fixtures/tarefas-individuais-edits-20261102.json'],cwd=ROOT,capture_output=True,text=True,encoding='utf8')
   self.assertEqual(r.returncode,0,r.stdout+r.stderr)
  def test_so_nove_paginas_migram_sobre_a_base_integrada(self):
   # 01/11/2026: o manifesto delimita a camada, sem depender de commits após squash.

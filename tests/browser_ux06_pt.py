@@ -50,8 +50,14 @@ def main():
      if width==320:assert action.bounding_box()['y']+action.bounding_box()['height']<=568,(m,action.bounding_box())
      assert not page.evaluate('document.documentElement.scrollWidth>innerWidth+2')
      # 23/10/2026 (decisão do docente, aulas claras): o M4 é o piloto do percurso como lista simples de aulas, sem passaporte, níveis nem pontos
-     assert page.locator('.module-opening figure.doc').count()==1 and page.locator('.module-progress .passaporte').count()==(0 if m in SEM_PASSAPORTE else 1)
+     # 03/11/2026: a imagem documental do piloto M4 abre nos recursos, pelo teclado.
+     opening='.m4-recursos' if m==4 else '.module-opening'
+     assert page.locator(opening+' figure.doc').count()==1 and page.locator('.module-progress .passaporte').count()==(0 if m in SEM_PASSAPORTE else 1)
+     if m==4:
+      assert not page.locator('figure.doc').is_visible()
+      page.locator('.m4-recursos > summary').focus();page.keyboard.press('Enter')
      assert page.locator('figure.doc').is_visible()
+     if m==4:page.locator('.m4-recursos > summary').press('Enter')
      if m in (1,2):
       OUT.mkdir(parents=True,exist_ok=True);page.screenshot(path=str(OUT/f'm{m}-{width}-depois.png'))
       page.locator('.unidade-pedagogica').first.screenshot(path=str(OUT/f'm{m}-unidade-{width}-depois.png'))
