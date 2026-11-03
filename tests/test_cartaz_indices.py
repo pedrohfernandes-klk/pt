@@ -37,7 +37,8 @@ class IndicesCartaz(unittest.TestCase):
    self.assertEqual(s.count('<div class="module-entry"><a class="cz-button primary" data-module-next'),1)
    self.assertEqual(s.count('class="module-entry cz-next"'),0);self.assertNotIn('<h2>A seguir</h2>',s);self.assertNotIn('cz-index-status',s)
    # 01/11/2026: a banda fechada identifica a unidade, além do seu número.
-   names=re.findall(r'<span class="cz-fold-t">(.*?)</span>',s)
+   # 03/11/2026: conservar no merge o contrato h2 do piloto M4 aprovado.
+   names=re.findall(r'<h2 class="cz-fold-t"[^>]*>(.*?)</h2>',s) if n==4 else re.findall(r'<span class="cz-fold-t">(.*?)</span>',s)
    self.assertEqual(len(names),len(units))
    self.assertTrue(all(re.sub('<[^>]+>','',name).strip() for name in names))
  def test_adaptador_nao_grava_progresso_e_reutiliza_o_motor(self):
