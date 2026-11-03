@@ -1,0 +1,18 @@
+{
+ "base_commit": "123335cf9804a493c003ea03b6806196833d91ef",
+ "_nota": "03/11/2026: camada visual da entrada sobre os créditos publicados no #164. Apenas a ligação ao CSS isolado, reversível, sem alterar conteúdos, ids ou progresso.",
+ "files": {
+  "index.html": {
+   "base_sha256_lf": "0c0fbf7a2dd68a8505576d216f4218a805fe4e13690ec1713ce19b63ac21ca11",
+   "after_sha256_lf": "70a8aad9dcd53cceb79dc13dbc73a450408980390998b68f997ec58e144b1cad",
+   "edits": [
+    {
+     "location": "Camada visual da abertura, acima dos créditos publicados",
+     "old": "<script defer src=\"assets/fundos.js?v=20261102-1\"></script></head>",
+     "new": "<script defer src=\"assets/fundos.js?v=20261102-1\"></script><link rel=\"stylesheet\" href=\"assets/cartaz-cabecalho.css?v=20261103\"></head>",
+     "occurrences": 1
+    }
+   ]
+  }
+ }
+}

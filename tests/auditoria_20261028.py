@@ -284,9 +284,21 @@ _VARREDURA_FILES = json.loads(VARREDURA_MANIFEST.read_text('utf-8'))['files']
 
 
 # 02/11/2026: crédito de IA por cima das camadas publicadas, com correspondência estrita.
+# 03/11/2026: reversao estrita da abertura, antes dos creditos.
+_CABECALHO = json.loads((ROOT/'tests/fixtures/cartaz-cabecalho-edits-20261103.json').read_text('utf-8'))['files']
+
+def undo_cabecalho(path, text):
+    for edit in reversed(_CABECALHO.get(_relative(path), {}).get('edits', [])):
+        if text.count(edit['new']) != edit['occurrences']:
+            raise AssertionError(f"Cabeçalho não confere: {path}: {edit['location']}")
+        text = text.replace(edit['new'], edit['old'])
+    return text
+
+
 _CREDITOS_IA = json.loads((ROOT/'tests/fixtures/creditos-grafismos-ia-edits-20261102.json').read_text('utf-8'))['files']
 
 def undo_creditos_ia(path, text):
+    text = undo_cabecalho(path, text)
     for edit in reversed(_CREDITOS_IA.get(_relative(path), {}).get('edits', [])):
         if text.count(edit['new']) != edit['occurrences']:
             raise AssertionError(f"Créditos de IA não conferem: {path}: {edit['location']}")

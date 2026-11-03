@@ -1,0 +1,10 @@
+[
+  {
+    "ficheiro": "index.html",
+    "local": "Camada visual da abertura, acima dos créditos publicados",
+    "antigo": "<script defer src=\"assets/fundos.js?v=20261102-1\"></script></head>",
+    "novo": "<script defer src=\"assets/fundos.js?v=20261102-1\"></script><link rel=\"stylesheet\" href=\"assets/cartaz-cabecalho.css?v=20261103\"></head>",
+    "ocorrencias": 1,
+    "achado": "03/11/2026: cabeçalho com calçada integrada, intervalo título/subtítulo e correções na projeção real. Créditos, conteúdo, ligações, ids e progresso conservados."
+  }
+]
