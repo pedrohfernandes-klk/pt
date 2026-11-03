@@ -840,6 +840,12 @@ def main():
                 conferencia = texto
                 # 02/11/2026: a camada da calçada da entrada (a mais recente) desfaz-se antes das outras, só para conferir.
                 # 02/11/2026: a atribuição de IA é posterior ao lote 2 publicado.
+                # 03/11/2026: primeiro a camada visual do cabecalho.
+                cabecalho = ROOT / 'tests/fixtures/cartaz-cabecalho-edits-20261103.json'
+                for edit in reversed(json.loads(cabecalho.read_text('utf-8'))['files'].get(rel, {}).get('edits', [])):
+                    if conferencia.count(edit['new']) != edit['occurrences']:
+                        raise ManifestoDesatualizado(f'{rel}: créditos de IA não conferem')
+                    conferencia = conferencia.replace(edit['new'], edit['old'])
                 creditos_ia = ROOT / 'tests/fixtures/creditos-grafismos-ia-edits-20261102.json'
                 for edit in reversed(json.loads(creditos_ia.read_text('utf-8'))['files'].get(rel, {}).get('edits', [])):
                     if conferencia.count(edit['new']) != edit['occurrences']:

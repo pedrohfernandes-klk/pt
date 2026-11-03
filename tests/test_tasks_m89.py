@@ -62,7 +62,7 @@ class TasksM89(unittest.TestCase):
                             'tests/fixtures/tarefas-m89-edits-20261101.json', '--verificar',
                             # 01/11/2026: conservar as três camadas posteriores sem dispensar o predecessor.
                             # 02/11/2026: e a das tarefas individuais e a da calçada, as mais recentes.
-                            '--desfazer-antes', 'tests/fixtures/cartaz-m4-piloto-edits-20261102.json', '--desfazer-antes', 'tests/fixtures/variedade-f0-edits-20261102.json', '--desfazer-antes', 'tests/fixtures/creditos-grafismos-ia-edits-20261102.json', '--desfazer-antes', 'tests/fixtures/conteudos-lote2-edits-20261101.json', '--desfazer-antes', 'tests/fixtures/varredura-formatacao-edits-20261101.json', '--desfazer-antes', 'tests/fixtures/calcada-mar-edits-20261102.json',
+                            '--desfazer-antes', 'tests/fixtures/cartaz-cabecalho-edits-20261103.json', '--desfazer-antes', 'tests/fixtures/cartaz-m4-piloto-edits-20261102.json', '--desfazer-antes', 'tests/fixtures/variedade-f0-edits-20261102.json', '--desfazer-antes', 'tests/fixtures/creditos-grafismos-ia-edits-20261102.json', '--desfazer-antes', 'tests/fixtures/conteudos-lote2-edits-20261101.json', '--desfazer-antes', 'tests/fixtures/varredura-formatacao-edits-20261101.json', '--desfazer-antes', 'tests/fixtures/calcada-mar-edits-20261102.json',
                             '--desfazer-antes','tests/fixtures/tarefas-individuais-edits-20261102.json',
                             '--desfazer-antes','tests/fixtures/cartaz-indices-edits-20261101.json',
                             '--desfazer-antes','tests/fixtures/licoes-m16-edits-20261101.json',
