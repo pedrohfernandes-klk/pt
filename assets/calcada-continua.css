@@ -1,0 +1,45 @@
+/* 03/11/2026: correÃ§Ã£o isolada. Uma imagem por altura, repetida sÃ³ em x.
+   As trÃªs bandas respiram com amplitudes e fases prÃ³prias; nÃ£o hÃ¡ avanÃ§o rÃ­gido.
+   O motor fundos.js conserva a pausa, os dois ciclos e a projeÃ§Ã£o. */
+body[data-site="pt"] .raiz .p-cab[data-fundo="cf"] div.cf-mar{opacity:var(--cf-opacity)}
+body[data-site="pt"] .raiz .p-cab[data-fundo="cf"] .cf-mar::before{
+  content:"";position:absolute;inset:0;opacity:1;filter:grayscale(1);
+  background:url(calcada-clara.svg) repeat-x 0 0/var(--cf-tw) 100%;
+}
+body[data-site="pt"] .raiz .p-cab[data-fundo="cf"] div.cf-pedras{
+  inset:0;width:100%;opacity:1;background:url(calcada-onda-2.svg) repeat-x 0 0/var(--cf-tw) 100%;
+  transform-origin:50% 50%;animation:none;will-change:auto;
+}
+body[data-site="pt"] .raiz .p-cab[data-fundo="cf"] div.cf-pedras::before,
+body[data-site="pt"] .raiz .p-cab[data-fundo="cf"] div.cf-pedras::after{
+  content:"";position:absolute;inset:0;background:url(calcada-onda-1.svg) repeat-x 0 0/var(--cf-tw) 100%;
+  transform-origin:50% 18%;
+}
+body[data-site="pt"] .raiz .p-cab[data-fundo="cf"] div.cf-pedras::after{
+  background-image:url(calcada-onda-3.svg);transform-origin:50% 82%;
+}
+@keyframes cf-respira-centro{
+  0%,100%{transform:translateY(0) scaleY(1)}
+  25%{transform:translateY(-4px) scaleY(1.04)}
+  50%{transform:translateY(0) scaleY(1)}
+  75%{transform:translateY(4px) scaleY(.96)}
+}
+@keyframes cf-respira-alta{
+  0%,100%{transform:translateY(0) scaleY(1)}
+  25%{transform:translateY(7px) scaleY(.94)}
+  50%{transform:translateY(3px) scaleY(1.02)}
+  75%{transform:translateY(-5px) scaleY(1.06)}
+}
+@keyframes cf-respira-baixa{
+  0%,100%{transform:translateY(0) scaleY(1)}
+  25%{transform:translateY(-6px) scaleY(1.06)}
+  50%{transform:translateY(2px) scaleY(1.03)}
+  75%{transform:translateY(5px) scaleY(.95)}
+}
+@media(prefers-reduced-motion:no-preference){
+  html:not(.em-projecao):not(.epi-projection):not([data-cz-projection]):not([data-cz-reduce]) body[data-site="pt"] .raiz .p-cab.cf-anda[data-fundo="cf"] .cf-pedras{animation:cf-respira-centro 40s ease-in-out infinite}
+  html:not(.em-projecao):not(.epi-projection):not([data-cz-projection]):not([data-cz-reduce]) body[data-site="pt"] .raiz .p-cab.cf-anda[data-fundo="cf"] .cf-pedras::before{animation:cf-respira-alta 40s ease-in-out infinite}
+  html:not(.em-projecao):not(.epi-projection):not([data-cz-projection]):not([data-cz-reduce]) body[data-site="pt"] .raiz .p-cab.cf-anda[data-fundo="cf"] .cf-pedras::after{animation:cf-respira-baixa 40s ease-in-out infinite}
+}
+html:not(.em-projecao):not(.epi-projection):not([data-cz-projection]):not([data-cz-reduce]) body[data-site="pt"] .raiz .p-cab.cf-anda.fundo-pausa[data-fundo="cf"] .cf-pedras::before,
+html:not(.em-projecao):not(.epi-projection):not([data-cz-projection]):not([data-cz-reduce]) body[data-site="pt"] .raiz .p-cab.cf-anda.fundo-pausa[data-fundo="cf"] .cf-pedras::after{animation-play-state:paused}
