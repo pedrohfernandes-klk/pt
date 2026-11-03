@@ -1,6 +1,6 @@
 """03/11/2026: implantação comum, sem edição de páginas geradas ou progresso."""
 from pathlib import Path
-import json,subprocess,sys,unittest
+import json,subprocess,sys,unittest,hashlib
 ROOT=Path(__file__).resolve().parents[1]
 class Apoios(unittest.TestCase):
     def test_inventory_reproducible(self):
@@ -15,5 +15,9 @@ class Apoios(unittest.TestCase):
         self.assertIn('nav.appendChild(a)',source)
         self.assertIn("css.addEventListener('load',mount",source)
     def test_published_html_unchanged(self):
-        result=subprocess.run(['git','diff','8a38a69d554dca94e7018b14e7fef581286f5896','--name-only','--','*.html'],cwd=ROOT,capture_output=True,text=True,check=True)
-        self.assertEqual(result.stdout.strip(),'demonstracoes/identidade-comum/index.html')
+        # 03/11/2026: o checkout curto do CI não tem o main histórico. Confere os
+        # 45 HTML por SHA-256; a comparação global por git fica no job com histórico completo.
+        rows=json.loads((ROOT/'tests/fixtures/apoios-paginas-20261103.json').read_text('utf-8'))
+        for row in rows:
+            source=(ROOT/row['path']).read_bytes().replace(b'\r\n',b'\n')
+            self.assertEqual(hashlib.sha256(source).hexdigest(),row['html_sha256'],row['path'])

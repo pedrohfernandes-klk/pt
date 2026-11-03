@@ -1,7 +1,7 @@
 """03/11/2026: inventário dos acessos docentes reais; não reescreve HTML."""
 from pathlib import Path
 from html.parser import HTMLParser
-import argparse,json
+import argparse,json,hashlib
 ROOT=Path(__file__).resolve().parents[1]
 DEST=ROOT/'tests/fixtures/apoios-paginas-20261103.json'
 class Links(HTMLParser):
@@ -26,7 +26,7 @@ def inventory():
         rel=page.relative_to(ROOT)
         if any(part in ('.git','tests','docs','demonstracoes','node_modules') for part in rel.parts):continue
         parser=Links();parser.feed(page.read_text('utf-8'))
-        if parser.links:result.append({'path':rel.as_posix(),'url':'https://pedrohfernandes-klk.github.io/pt/'+rel.as_posix().removesuffix('index.html'),'links':parser.links})
+        if parser.links:result.append({'path':rel.as_posix(),'url':'https://pedrohfernandes-klk.github.io/pt/'+rel.as_posix().removesuffix('index.html'),'links':parser.links,'html_sha256':hashlib.sha256(page.read_bytes().replace(b'\r\n',b'\n')).hexdigest()})
     return result
 if __name__=='__main__':
     ap=argparse.ArgumentParser();ap.add_argument('--check',action='store_true');args=ap.parse_args()

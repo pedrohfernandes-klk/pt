@@ -1,9 +1,9 @@
 name: Português, apoios nas páginas reais
 on:
   pull_request:
-    paths: ['assets/appearance.js', 'assets/apoios-paginas.*', 'scripts/inventariar_apoios_20261103.py', 'tests/*apoios_paginas*', 'tests/browser_cartaz_m4_interacoes.cjs', 'tests/browser_task_contract.py', 'tests/fixtures/apoios-paginas-*', '.github/workflows/apoios-qa.yml']
+    paths: ['assets/appearance.js', 'assets/apoios-paginas.*', 'scripts/inventariar_apoios_20261103.py', 'tests/*apoios_paginas*', 'tests/browser_cartaz_m4_interacoes.cjs', 'tests/browser_task_contract.py', 'tests/browser_unit_routes.py', 'tests/browser_unit_synthesis.py', 'tests/browser_sala_desligada.py', 'tests/fixtures/apoios-paginas-*', '.github/workflows/apoios-qa.yml']
   push:
-    paths: ['assets/appearance.js', 'assets/apoios-paginas.*', 'scripts/inventariar_apoios_20261103.py', 'tests/*apoios_paginas*', 'tests/browser_cartaz_m4_interacoes.cjs', 'tests/browser_task_contract.py', 'tests/fixtures/apoios-paginas-*', '.github/workflows/apoios-qa.yml']
+    paths: ['assets/appearance.js', 'assets/apoios-paginas.*', 'scripts/inventariar_apoios_20261103.py', 'tests/*apoios_paginas*', 'tests/browser_cartaz_m4_interacoes.cjs', 'tests/browser_task_contract.py', 'tests/browser_unit_routes.py', 'tests/browser_unit_synthesis.py', 'tests/browser_sala_desligada.py', 'tests/fixtures/apoios-paginas-*', '.github/workflows/apoios-qa.yml']
 permissions:
   contents: read
 jobs:
@@ -23,6 +23,8 @@ jobs:
       # 03/11/2026: bateria integral e inventário antes das dependências externas.
       - run: python -m unittest discover -s tests -p 'test_*.py' -v
       - run: node --test tests/*.test.cjs
+      # 03/11/2026: preservação global do HTML exige o histórico completo deste job.
+      - run: git diff --exit-code 8a38a69d554dca94e7018b14e7fef581286f5896 -- '*.html' ':!demonstracoes/identidade-comum/index.html'
       - run: python scripts/verificar_camadas.py
       - run: npm install --no-save playwright
       - run: npx playwright install --with-deps chromium
@@ -52,3 +54,6 @@ jobs:
       - run: python -m pip install playwright
       - run: python -m playwright install --with-deps chromium
       - run: python tests/browser_task_lesson_matrix.py
+      - run: python tests/browser_unit_routes.py
+      - run: python tests/browser_unit_synthesis.py
+      - run: python tests/browser_sala_desligada.py
