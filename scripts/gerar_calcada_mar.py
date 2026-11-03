@@ -100,7 +100,7 @@ def svg():
     dados = pedras()
     linhas = [f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {LARGURA} {ALTURA}" width="{LARGURA}" height="{ALTURA}" '
               f'preserveAspectRatio="none">',
-              '<!-- Desenho nosso, EPI, 2026: calçada portuguesa, padrão de ondas «mar largo» (Rossio, Lisboa). '
+              '<!-- Grafismo gerado com recurso a IA, EPI, 2026: calçada portuguesa, padrão de ondas «mar largo» (Rossio, Lisboa). '
               'Gerado por scripts/gerar_calcada_mar.py. -->',
               f'<rect width="{LARGURA}" height="{ALTURA}" fill="{ARGAMASSA}"/>',
               '<g stroke-linejoin="round" stroke-width="1.5">']
