@@ -1,9 +1,9 @@
 name: Cartaz pieces
 on:
   push:
-    paths: ['assets/cartaz-cabecalho.css', 'assets/fundo-calcada.css', 'index.html', 'scripts/cartaz_cabecalho*', 'tests/fixtures/cartaz-cabecalho*', 'assets/cartaz-indices.*', 'assets/cartaz-m4-*', 'assets/fontes/**', 'm[1-9]/index.html', 'scripts/cartaz_indices*', 'scripts/cartaz_m4*', 'tests/fixtures/cartaz-*', 'assets/cartaz-components.*', 'assets/appearance.css', 'demonstracoes/cartaz-animacoes/**', 'tests/*cartaz*', '.github/workflows/cartaz-qa.yml']
+    paths: ['assets/calcada-*', 'scripts/gerar_calcada_continua.py', 'tests/*calcada_continua*', 'assets/cartaz-cabecalho.css', 'assets/fundo-calcada.css', 'index.html', 'scripts/cartaz_cabecalho*', 'tests/fixtures/cartaz-cabecalho*', 'assets/cartaz-indices.*', 'assets/cartaz-m4-*', 'assets/fontes/**', 'm[1-9]/index.html', 'scripts/cartaz_indices*', 'scripts/cartaz_m4*', 'tests/fixtures/cartaz-*', 'assets/cartaz-components.*', 'assets/appearance.css', 'demonstracoes/cartaz-animacoes/**', 'tests/*cartaz*', '.github/workflows/cartaz-qa.yml']
   pull_request:
-    paths: ['assets/cartaz-cabecalho.css', 'assets/fundo-calcada.css', 'index.html', 'scripts/cartaz_cabecalho*', 'tests/fixtures/cartaz-cabecalho*', 'assets/cartaz-indices.*', 'assets/cartaz-m4-*', 'assets/fontes/**', 'm[1-9]/index.html', 'scripts/cartaz_indices*', 'scripts/cartaz_m4*', 'tests/fixtures/cartaz-*', 'assets/cartaz-components.*', 'assets/appearance.css', 'demonstracoes/cartaz-animacoes/**', 'tests/*cartaz*', '.github/workflows/cartaz-qa.yml']
+    paths: ['assets/calcada-*', 'scripts/gerar_calcada_continua.py', 'tests/*calcada_continua*', 'assets/cartaz-cabecalho.css', 'assets/fundo-calcada.css', 'index.html', 'scripts/cartaz_cabecalho*', 'tests/fixtures/cartaz-cabecalho*', 'assets/cartaz-indices.*', 'assets/cartaz-m4-*', 'assets/fontes/**', 'm[1-9]/index.html', 'scripts/cartaz_indices*', 'scripts/cartaz_m4*', 'tests/fixtures/cartaz-*', 'assets/cartaz-components.*', 'assets/appearance.css', 'demonstracoes/cartaz-animacoes/**', 'tests/*cartaz*', '.github/workflows/cartaz-qa.yml']
 jobs:
   pieces:
     runs-on: ubuntu-latest
@@ -18,6 +18,10 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
+      # 03/11/2026: mesma comparação de isolamento; este checkout tem a base histórica.
+      - run: git diff --exit-code 8a38a69d554dca94e7018b14e7fef581286f5896 -- '*.html' 'assets/fundos.js' 'assets/fundos.css' 'assets/appearance.js' 'assets/pt-lessons/' 'assets/task-*' 'assets/cartaz-components.*'
+        # 03/11/2026: contrato deste lote; não congela páginas em futuros pedidos.
+        if: github.head_ref == 'codex/calcada-continua-pt-20261103' || github.ref_name == 'codex/calcada-continua-pt-20261103'
       # 01/11/2026: bateria Python completa, sem excluir famílias.
       - run: python -m unittest discover -s tests -p 'test_*.py' -v
       - run: npm install --no-save playwright
@@ -40,6 +44,10 @@ jobs:
       - run: node tests/browser_cartaz_cabecalho.cjs
         env:
           CABECALHO_OUTPUT: ${{ runner.temp }}/cartaz-indices/cabecalho
+      # 03/11/2026: ciclos reais completos, três ondas, paragem e zoom nativo nos dois temas.
+      - run: node tests/browser_calcada_continua.cjs
+        env:
+          CALCADA_OUTPUT: ${{ runner.temp }}/cartaz-indices/calcada-continua
       # 02/11/2026: piloto M4, incluindo interseções reais e zoom nativo a 200%.
       - run: node tests/browser_cartaz_m4_piloto.cjs
         env:

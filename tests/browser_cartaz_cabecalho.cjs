@@ -48,8 +48,9 @@ function luminance(rgb) { return rgb.map(v => v / 255).map(v => v <= .04045 ? v 
         }
         await frame.evaluate(() => document.fonts.ready);
         row[version] = await frame.evaluate(() => {
+          // 03/11/2026: contraste usa a opacidade composta da calçada em camadas.
           const title = document.querySelector('.p-cab h1'), lead = document.querySelector('.pt-entry-lead'), stones = document.querySelector('.cf-pedras');
-          return { overflow: document.documentElement.scrollWidth - innerWidth, titleHeight: title.offsetHeight, titleLine: parseFloat(getComputedStyle(title).lineHeight), gap: lead.getBoundingClientRect().top - title.getBoundingClientRect().bottom, animations: stones.getAnimations().length, opacity: +getComputedStyle(stones).opacity, ink: getComputedStyle(lead).color, paper: getComputedStyle(document.body).backgroundColor, credit: document.querySelector('.cf-credito').textContent, storage: JSON.stringify(Object.entries(localStorage)) };
+          return { overflow: document.documentElement.scrollWidth - innerWidth, titleHeight: title.offsetHeight, titleLine: parseFloat(getComputedStyle(title).lineHeight), gap: lead.getBoundingClientRect().top - title.getBoundingClientRect().bottom, animations: stones.getAnimations().length, opacity: +getComputedStyle(stones).opacity * +getComputedStyle(stones.parentElement).opacity, ink: getComputedStyle(lead).color, paper: getComputedStyle(document.body).backgroundColor, credit: document.querySelector('.cf-credito').textContent, storage: JSON.stringify(Object.entries(localStorage)) };
         });
         if (out) await (projection ? page.locator('#lesson-frame') : page).screenshot({ fullPage: !projection, path: path.join(out, `${width}-${theme}-${projection ? 'projection' : 'normal'}-${version}.png`) });
         if (version === 'after') {
