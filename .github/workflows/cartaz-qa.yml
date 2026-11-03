@@ -1,9 +1,9 @@
 name: Cartaz pieces
 on:
   push:
-    paths: ['assets/projection-launcher.js', 'demonstracoes/identidade-comum/**', 'tests/browser_identidade_comum.cjs', 'assets/cartaz-indices.*', 'm[1-9]/index.html', 'scripts/cartaz_indices*', 'tests/fixtures/cartaz-indices*', 'assets/cartaz-components.*', 'assets/appearance.css', 'demonstracoes/cartaz-animacoes/**', 'tests/*cartaz*', '.github/workflows/cartaz-qa.yml']
+    paths: ['assets/projection-launcher.js', 'demonstracoes/identidade-comum/**', 'tests/browser_identidade_comum.cjs', 'assets/cartaz-cabecalho.css', 'assets/fundo-calcada.css', 'index.html', 'scripts/cartaz_cabecalho*', 'tests/fixtures/cartaz-cabecalho*', 'assets/cartaz-indices.*', 'assets/cartaz-m4-*', 'assets/fontes/**', 'm[1-9]/index.html', 'scripts/cartaz_indices*', 'scripts/cartaz_m4*', 'tests/fixtures/cartaz-*', 'assets/cartaz-components.*', 'assets/appearance.css', 'demonstracoes/cartaz-animacoes/**', 'tests/*cartaz*', '.github/workflows/cartaz-qa.yml']
   pull_request:
-    paths: ['assets/projection-launcher.js', 'demonstracoes/identidade-comum/**', 'tests/browser_identidade_comum.cjs', 'assets/cartaz-indices.*', 'm[1-9]/index.html', 'scripts/cartaz_indices*', 'tests/fixtures/cartaz-indices*', 'assets/cartaz-components.*', 'assets/appearance.css', 'demonstracoes/cartaz-animacoes/**', 'tests/*cartaz*', '.github/workflows/cartaz-qa.yml']
+    paths: ['assets/projection-launcher.js', 'demonstracoes/identidade-comum/**', 'tests/browser_identidade_comum.cjs', 'assets/cartaz-cabecalho.css', 'assets/fundo-calcada.css', 'index.html', 'scripts/cartaz_cabecalho*', 'tests/fixtures/cartaz-cabecalho*', 'assets/cartaz-indices.*', 'assets/cartaz-m4-*', 'assets/fontes/**', 'm[1-9]/index.html', 'scripts/cartaz_indices*', 'scripts/cartaz_m4*', 'tests/fixtures/cartaz-*', 'assets/cartaz-components.*', 'assets/appearance.css', 'demonstracoes/cartaz-animacoes/**', 'tests/*cartaz*', '.github/workflows/cartaz-qa.yml']
 jobs:
   pieces:
     runs-on: ubuntu-latest
@@ -40,6 +40,21 @@ jobs:
       - run: node tests/browser_identidade_comum.cjs
         env:
           IDENTIDADE_OUTPUT: ${{ runner.temp }}/cartaz-indices/identidade-comum
+      # 03/11/2026: abertura e visor real, nos dois temas e nas tres larguras.
+      - run: node tests/browser_cartaz_cabecalho.cjs
+        env:
+          CABECALHO_OUTPUT: ${{ runner.temp }}/cartaz-indices/cabecalho
+      # 02/11/2026: piloto M4, incluindo interseções reais e zoom nativo a 200%.
+      - run: node tests/browser_cartaz_m4_piloto.cjs
+        env:
+          M4_PILOTO_OUTPUT: ${{ runner.temp }}/cartaz-indices/m4-piloto
+      - run: node tests/browser_cartaz_m4_interacoes.cjs
+        env:
+          M4_PILOTO_OUTPUT: ${{ runner.temp }}/cartaz-indices/m4-piloto
+      # 03/11/2026: M4-02, acento único e palavra inteira nos dois temas e a 200%.
+      - run: node tests/browser_cartaz_m4_acento.cjs
+        env:
+          M4_PILOTO_OUTPUT: ${{ runner.temp }}/cartaz-indices/m4-acento
       # 01/11/2026: provas de revisão fora das páginas publicadas.
       - uses: actions/upload-artifact@v4
         if: always()
