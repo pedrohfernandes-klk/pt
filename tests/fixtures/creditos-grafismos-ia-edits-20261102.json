@@ -1,0 +1,18 @@
+{
+ "base_commit": "bd9ec1ba3e82e0a2e76ab9aac674b0154310d908",
+ "_nota": "02/11/2026: crédito explícito de IA nos grafismos; sem alterar imagens documentais.",
+ "files": {
+  "index.html": {
+   "base_sha256_lf": "2a9ed61575a4dfc833dd3d1ae3b114a437ed11cd31b4468e127a448524421ac4",
+   "after_sha256_lf": "0c0fbf7a2dd68a8505576d216f4218a805fe4e13690ec1713ce19b63ac21ca11",
+   "edits": [
+    {
+     "location": "Crédito do grafismo da calçada",
+     "old": "<p class=\"cf-credito\">Desenho nosso, pedra a pedra, EPI, 2026, a partir do padrão de ondas da calçada portuguesa",
+     "new": "<p class=\"cf-credito\">Grafismo gerado com recurso a IA, EPI, 2026, a partir do padrão de ondas da calçada portuguesa",
+     "occurrences": 1
+    }
+   ]
+  }
+ }
+}

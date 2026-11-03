@@ -1,5 +1,13 @@
 # Variedade F0: ajuda e progresso compatível
 
+## Integração incremental do main publicado, 03/11/2026
+
+O main `123335cf9804a493c003ea03b6806196833d91ef`, com os créditos aprovados do #164, entra por merge sobre a cabeça em revisão `c87d871d2653f68e0c6e31a0bf50201cd6dd44da`. Não entra código da F2. Esta integração não equivale a aprovação da migração nem a autorização de publicação.
+
+Os dez conflitos eram nas listas e funções de reversão. A ordem fica F0, créditos de IA, lote 2 e camadas anteriores. Mantêm-se todas as contagens e asserções estritas; os testes alterados levam comentário de 03/11/2026. O manifesto F0 foi regenerado sobre `123335cf`, com as mesmas 24 trocas e os mesmos 21 destinos. O código de migração, o JSON da camada F0 e os vinte aquecimentos são idênticos, byte a byte, à cabeça anterior: 22 ficheiros conferidos. No índice, a única diferença visível para essa cabeça é o crédito aprovado do #164.
+
+Validação desta integração: 453 testes unitários aprovados, 20/20 camadas, oito ensaios de navegador da migração, 60 casos de ajuda e sete casos de importação. Os registos locais são `f0-pos164-unitarios.log`, `f0-pos164-camadas.log` e `f0-pos164-browser.log`, junto às cópias de trabalho. A confirmação incremental e o CI da nova cabeça ficam a cargo da revisão antes de seguir para a F2.
+
 02/11/2026. Primeiro passo da variedade, antes dos tipos F2/F3. Ramo separado `codex/variedade-f0-20261102`, com a correção PT156-01 integrada por merge. Não inclui o adaptador F2 nem os tipos do GPT2. A publicação depende da revisão e da ordem da fila, incluindo #156 e #164.
 
 ## O que muda

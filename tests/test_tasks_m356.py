@@ -1,4 +1,4 @@
-# 02/11/2026: desfaz F0 antes do lote 2, sem mudar as asserções históricas.
+# 03/11/2026: desfaz F0, créditos publicados e lote 2; asserções intactas.
 # 02/11/2026: desfaz o lote 2 antes da base publicada; mesmas asserções.
 # 01/11/2026: verificar as tarefas após desfazer índices e conteúdos.
 """31/10/2026: decisões 20 a 25 nas tarefas e nos guias do M3, M5 e M6."""
@@ -87,7 +87,7 @@ class TasksM356(unittest.TestCase):
     def test_camada_literal_aplicada_e_reversivel(self):
         r = subprocess.run([sys.executable, 'scripts/aplicar_trocas.py',
                             'scripts/tarefas_m356_20261031.json', '--manifesto',
-                            'tests/fixtures/tarefas-m356-edits-20261031.json', '--verificar', '--desfazer-antes', 'tests/fixtures/variedade-f0-edits-20261102.json', '--desfazer-antes', 'tests/fixtures/conteudos-lote2-edits-20261101.json', '--desfazer-antes', 'tests/fixtures/varredura-formatacao-edits-20261101.json', '--desfazer-antes', 'tests/fixtures/calcada-mar-edits-20261102.json', '--desfazer-antes', 'tests/fixtures/tarefas-individuais-edits-20261102.json', '--desfazer-antes', 'tests/fixtures/cartaz-indices-edits-20261101.json',  '--desfazer-antes', 'tests/fixtures/licoes-m16-edits-20261101.json', '--desfazer-antes', 'tests/fixtures/licoes-m89-edits-20261101.json', '--desfazer-antes', 'tests/fixtures/tarefas-m89-edits-20261101.json'], # 01/11/2026: verificar o predecessor por baixo das duas camadas de lições e da camada M8/M9. 02/11/2026: e das tarefas individuais.
+                            'tests/fixtures/tarefas-m356-edits-20261031.json', '--verificar', '--desfazer-antes', 'tests/fixtures/variedade-f0-edits-20261102.json', '--desfazer-antes', 'tests/fixtures/creditos-grafismos-ia-edits-20261102.json', '--desfazer-antes', 'tests/fixtures/conteudos-lote2-edits-20261101.json', '--desfazer-antes', 'tests/fixtures/varredura-formatacao-edits-20261101.json', '--desfazer-antes', 'tests/fixtures/calcada-mar-edits-20261102.json', '--desfazer-antes', 'tests/fixtures/tarefas-individuais-edits-20261102.json', '--desfazer-antes', 'tests/fixtures/cartaz-indices-edits-20261101.json',  '--desfazer-antes', 'tests/fixtures/licoes-m16-edits-20261101.json', '--desfazer-antes', 'tests/fixtures/licoes-m89-edits-20261101.json', '--desfazer-antes', 'tests/fixtures/tarefas-m89-edits-20261101.json'], # 01/11/2026: verificar o predecessor por baixo das duas camadas de lições e da camada M8/M9. 02/11/2026: e das tarefas individuais.
                            cwd=ROOT, capture_output=True, text=True, encoding='utf-8')
         self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
 
