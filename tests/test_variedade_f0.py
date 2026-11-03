@@ -6,7 +6,7 @@ import subprocess
 import sys
 import unittest
 from pathlib import Path
-from auditoria_20261028 import undo_variedade_f0
+from auditoria_20261028 import undo_variedade_f0, undo_cabecalho
 
 ROOT=Path(__file__).resolve().parents[1]
 
@@ -29,12 +29,13 @@ class F0(unittest.TestCase):
         self.assertEqual(set(m['files']),expected)
         self.assertEqual(sum(len(r['edits']) for r in m['files'].values()),24)
         for rel,r in m['files'].items():
-            now=(ROOT/rel).read_text('utf-8')
+            # 03/11/2026: retirar só a ligação visual antes de conferir os mesmos SHA da F0.
+            now=undo_cabecalho(rel,(ROOT/rel).read_text('utf-8'))
             self.assertEqual(hashlib.sha256(now.encode()).hexdigest(),r['after_sha256_lf'],rel)
             self.assertEqual(hashlib.sha256(undo_variedade_f0(rel,now).encode()).hexdigest(),r['base_sha256_lf'],rel)
 
     def test_verificador_confere_a_camada(self):
-        r=subprocess.run([sys.executable,'scripts/aplicar_trocas.py','scripts/variedade_f0_20261102.json','--manifesto','tests/fixtures/variedade-f0-edits-20261102.json','--verificar'],cwd=ROOT,capture_output=True,text=True,encoding='utf-8')
+        r=subprocess.run([sys.executable,'scripts/aplicar_trocas.py','scripts/variedade_f0_20261102.json','--manifesto','tests/fixtures/variedade-f0-edits-20261102.json','--verificar','--desfazer-antes','tests/fixtures/cartaz-cabecalho-edits-20261103.json'],cwd=ROOT,capture_output=True,text=True,encoding='utf-8')
         self.assertEqual(r.returncode,0,r.stdout+r.stderr)
 
 

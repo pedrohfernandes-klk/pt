@@ -1,9 +1,9 @@
 name: Cartaz pieces
 on:
   push:
-    paths: ['assets/fundo*-m*.svg', 'assets/fundos-modulos.css', 'scripts/*fundos_modulos*', 'tests/*fundos_modulos*', 'tests/fixtures/fundos-modulos-*', 'assets/cartaz-indices.*', 'assets/cartaz-m4-*', 'assets/fontes/**', 'm[1-9]/index.html', 'scripts/cartaz_indices*', 'scripts/cartaz_m4*', 'tests/fixtures/cartaz-*', 'assets/cartaz-components.*', 'assets/appearance.css', 'demonstracoes/cartaz-animacoes/**', 'tests/*cartaz*', '.github/workflows/cartaz-qa.yml']
+    paths: ['assets/fundo*-m*.svg', 'assets/fundos-modulos.css', 'scripts/*fundos_modulos*', 'tests/*fundos_modulos*', 'tests/fixtures/fundos-modulos-*', 'assets/cartaz-cabecalho.css', 'assets/fundo-calcada.css', 'index.html', 'scripts/cartaz_cabecalho*', 'tests/fixtures/cartaz-cabecalho*', 'assets/cartaz-indices.*', 'assets/cartaz-m4-*', 'assets/fontes/**', 'm[1-9]/index.html', 'scripts/cartaz_indices*', 'scripts/cartaz_m4*', 'tests/fixtures/cartaz-*', 'assets/cartaz-components.*', 'assets/appearance.css', 'demonstracoes/cartaz-animacoes/**', 'tests/*cartaz*', '.github/workflows/cartaz-qa.yml']
   pull_request:
-    paths: ['assets/fundo*-m*.svg', 'assets/fundos-modulos.css', 'scripts/*fundos_modulos*', 'tests/*fundos_modulos*', 'tests/fixtures/fundos-modulos-*', 'assets/cartaz-indices.*', 'assets/cartaz-m4-*', 'assets/fontes/**', 'm[1-9]/index.html', 'scripts/cartaz_indices*', 'scripts/cartaz_m4*', 'tests/fixtures/cartaz-*', 'assets/cartaz-components.*', 'assets/appearance.css', 'demonstracoes/cartaz-animacoes/**', 'tests/*cartaz*', '.github/workflows/cartaz-qa.yml']
+    paths: ['assets/fundo*-m*.svg', 'assets/fundos-modulos.css', 'scripts/*fundos_modulos*', 'tests/*fundos_modulos*', 'tests/fixtures/fundos-modulos-*', 'assets/cartaz-cabecalho.css', 'assets/fundo-calcada.css', 'index.html', 'scripts/cartaz_cabecalho*', 'tests/fixtures/cartaz-cabecalho*', 'assets/cartaz-indices.*', 'assets/cartaz-m4-*', 'assets/fontes/**', 'm[1-9]/index.html', 'scripts/cartaz_indices*', 'scripts/cartaz_m4*', 'tests/fixtures/cartaz-*', 'assets/cartaz-components.*', 'assets/appearance.css', 'demonstracoes/cartaz-animacoes/**', 'tests/*cartaz*', '.github/workflows/cartaz-qa.yml']
 jobs:
   pieces:
     runs-on: ubuntu-latest
@@ -36,6 +36,10 @@ jobs:
         if: ${{ !cancelled() }}
         env:
           CARTAZ_INDICES_OUTPUT: ${{ runner.temp }}/cartaz-indices
+      # 03/11/2026: abertura e visor real, nos dois temas e nas tres larguras.
+      - run: node tests/browser_cartaz_cabecalho.cjs
+        env:
+          CABECALHO_OUTPUT: ${{ runner.temp }}/cartaz-indices/cabecalho
       # 02/11/2026: piloto M4, incluindo interseções reais e zoom nativo a 200%.
       - run: node tests/browser_cartaz_m4_piloto.cjs
         env:
