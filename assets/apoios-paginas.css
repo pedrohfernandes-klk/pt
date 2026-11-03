@@ -1,0 +1,16 @@
+/* 03/11/2026: composição própria das páginas reais; sem alterar os motores. */
+@media screen{
+ body.pt-com-apoios{box-sizing:border-box;height:100dvh;overflow:hidden;padding-bottom:calc(88px + env(safe-area-inset-bottom))}
+ /* 03/11/2026: as colunas do piloto também cabem no visor a 200%. */
+ body.pt-com-apoios main[data-m4-piloto] .unit-index a>*{min-width:0;overflow-wrap:anywhere}
+ .pt-apoios-area{box-sizing:border-box;height:100%;overflow:auto;scroll-padding:16px}
+ body.pt-com-apoios .casca{bottom:calc(88px + env(safe-area-inset-bottom));height:calc(var(--vh,100dvh) - 88px - env(safe-area-inset-bottom))}
+}
+.pt-apoios{position:fixed;left:max(16px,env(safe-area-inset-left));bottom:max(16px,env(safe-area-inset-bottom));z-index:40;margin:0;padding:0;border:0;background:transparent;width:48px;font:16px/1.5 Arial,sans-serif;color:var(--tinta,#20201c)}
+.pt-apoios>summary{box-sizing:border-box;display:grid;place-items:center;list-style:none;margin:0;gap:0;width:48px;height:48px;padding:0;border:1px solid currentColor;border-radius:50%;background:var(--papel,#fff);color:inherit;cursor:pointer}
+.pt-apoios>summary::before,.pt-apoios>summary::after{content:none;display:none}
+.pt-apoios>summary::-webkit-details-marker{display:none}.pt-apoios>summary svg{width:28px;height:28px}
+.pt-apoios>nav{box-sizing:border-box;position:absolute;left:0;bottom:60px;width:min(280px,calc(100vw - 32px));max-height:65dvh;overflow:auto;padding:12px;border:1px solid currentColor;background:var(--papel,#fff)}
+.pt-apoios>nav :is(a,button){box-sizing:border-box;position:static;display:flex;align-items:center;min-height:48px;width:100%;height:auto;padding:8px;font:inherit;color:inherit;background:transparent;border:0;text-decoration:none;white-space:normal;overflow-wrap:anywhere;cursor:pointer}
+.pt-apoios>nav a svg{display:none}.pt-apoios :focus-visible{outline:3px solid currentColor;outline-offset:3px}
+@media print{.pt-apoios{display:none}.pt-apoios-area{display:contents}body.pt-com-apoios{height:auto;overflow:visible;padding-bottom:0}}

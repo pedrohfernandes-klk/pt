@@ -305,11 +305,16 @@ def responsive_task_matrix(browser, host):
                     before = learning_storage(page)
                     assert_task_page(page, before)
                     assert_reader_navigation(page)
-                    buoy = page.locator('.teacher-access')
+                    # 03/11/2026: o acesso existente passa à boia comum, com o mesmo destino.
+                    buoy = page.locator('.pt-apoios > summary')
+                    buoy.wait_for(state='visible')
                     assert buoy.count() == 1 and buoy.is_visible()
                     buoy.focus()
                     assert buoy.evaluate('e=>e===document.activeElement')
-                    assert 'lente/docente/' in buoy.get_attribute('href')
+                    buoy.press('Enter')
+                    assert page.locator('.pt-apoios nav a[href*="/docente/"]').is_visible()
+                    buoy.press('Escape')
+                    assert buoy.evaluate('e=>e===document.activeElement')
                     launcher = page.locator('.epi-projection-launcher')
                     if not launcher.is_visible():
                         page.locator('[data-c-menu]').focus(); page.locator('[data-c-menu]').press('Enter')

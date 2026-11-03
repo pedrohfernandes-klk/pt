@@ -1,0 +1,54 @@
+name: Português, apoios nas páginas reais
+on:
+  pull_request:
+    paths: ['assets/appearance.js', 'assets/apoios-paginas.*', 'scripts/inventariar_apoios_20261103.py', 'tests/*apoios_paginas*', 'tests/browser_cartaz_m4_interacoes.cjs', 'tests/browser_task_contract.py', 'tests/fixtures/apoios-paginas-*', '.github/workflows/apoios-qa.yml']
+  push:
+    paths: ['assets/appearance.js', 'assets/apoios-paginas.*', 'scripts/inventariar_apoios_20261103.py', 'tests/*apoios_paginas*', 'tests/browser_cartaz_m4_interacoes.cjs', 'tests/browser_task_contract.py', 'tests/fixtures/apoios-paginas-*', '.github/workflows/apoios-qa.yml']
+permissions:
+  contents: read
+jobs:
+  apoios:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      # 03/11/2026: bateria integral e inventário antes das dependências externas.
+      - run: python -m unittest discover -s tests -p 'test_*.py' -v
+      - run: node --test tests/*.test.cjs
+      - run: python scripts/verificar_camadas.py
+      - run: npm install --no-save playwright
+      - run: npx playwright install --with-deps chromium
+      - run: node tests/browser_apoios_paginas.cjs
+        env:
+          APOIOS_OUTPUT: ${{ runner.temp }}/apoios-paginas
+      # 03/11/2026: os contratos antigos continuam completos com a boia comum.
+      - run: node tests/browser_cartaz_m4_interacoes.cjs
+        env:
+          M4_PILOTO_OUTPUT: ${{ runner.temp }}/apoios-paginas
+      - run: node tests/browser_cartaz_m4_piloto.cjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: apoios-paginas-reais
+          path: ${{ runner.temp }}/apoios-paginas
+
+  tarefas:
+    # 03/11/2026: matriz integral independente para conservar todo o percurso de revisão.
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install playwright
+      - run: python -m playwright install --with-deps chromium
+      - run: python tests/browser_task_lesson_matrix.py
