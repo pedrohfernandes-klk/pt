@@ -1,0 +1,37 @@
+/* 03/11/2026: proposta isolada do cabeçalho. A ligação entra pela camada literal
+   depois da publicação dos créditos (#164). Mantém o SVG e o motor comuns. */
+body[data-site="pt"] .raiz .p-cab[data-fundo="cf"]{
+  --cf-h:440px;--cf-tw:960px;--cf-opacity:.28;
+  isolation:isolate;display:flex;flex-direction:column;align-items:flex-start;
+  justify-content:center;gap:0;min-height:480px;padding:48px 0 104px;
+  margin:0;border:0;
+}
+body[data-site="pt"] .raiz .p-cab[data-fundo="cf"] .p-etiqueta{
+  margin:0 0 24px;font-size:.8125rem;line-height:1.5;letter-spacing:.08em;
+}
+body[data-site="pt"] .raiz .p-cab[data-fundo="cf"] h1{
+  margin:0;line-height:1.05;letter-spacing:-.045em;
+}
+body[data-site="pt"] .raiz .p-cab[data-fundo="cf"] .pt-entry-lead{
+  margin:32px 0 0;font-size:1.25rem;line-height:1.5;max-width:34rem;
+  color:var(--tinta);
+}
+body[data-site="pt"] .raiz .p-cab[data-fundo="cf"] .cf-mar{
+  position:absolute;z-index:-1;inset:0 calc(50% - 50vw);height:auto;
+  margin:0;background:none;box-shadow:none;overflow:hidden;
+  mask-image:linear-gradient(180deg,transparent,rgba(0,0,0,.28) 20%,rgba(0,0,0,.65) 65%,#000 85%,transparent);
+}
+body[data-site="pt"] .raiz .p-cab[data-fundo="cf"] .cf-pedras{
+  top:0;bottom:0;background-size:var(--cf-tw) var(--cf-h);
+  background-repeat:repeat;opacity:var(--cf-opacity);filter:grayscale(1);
+}
+body[data-site="pt"] .raiz .cf-credito{margin:0 0 32px;padding:8px 0;border-bottom:1px solid var(--c-cinza)}
+:root[data-theme="dark"] body[data-site="pt"] .raiz .p-cab[data-fundo="cf"]{--cf-opacity:.2}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]) body[data-site="pt"] .raiz .p-cab[data-fundo="cf"]{--cf-opacity:.2}}
+@media(max-width:639px){
+  body[data-site="pt"] .raiz .p-cab[data-fundo="cf"]{--cf-h:320px;--cf-tw:698.181818px;min-height:376px;padding:24px 0 88px}
+  body[data-site="pt"] .raiz .p-cab[data-fundo="cf"] .p-etiqueta{font-size:.8125rem;max-width:26ch;margin-bottom:24px}
+  body[data-site="pt"] .raiz .p-cab[data-fundo="cf"] h1{font-size:clamp(3.0625rem,14vw,3.8125rem)}
+  body[data-site="pt"] .raiz .p-cab[data-fundo="cf"] .pt-entry-lead{margin-top:24px;font-size:1rem;max-width:28ch}
+}
+@media print{body[data-site="pt"] .raiz .p-cab[data-fundo="cf"]{min-height:0;padding:16px 0}}
