@@ -6,6 +6,8 @@ import sys
 
 ROOT=Path(__file__).resolve().parents[1]
 LAYERS=[
+ # 03/11/2026: piloto M4 acima de F0 publicado, ambos reversíveis.
+ ('cartaz_m4_piloto_20261102','cartaz-m4-piloto-edits-20261102'),
  # 03/11/2026: F0 acima dos créditos publicados, antes do lote 2.
  ('variedade_f0_20261102','variedade-f0-edits-20261102'),
  ('creditos_grafismos_ia_20261102','creditos-grafismos-ia-edits-20261102'),

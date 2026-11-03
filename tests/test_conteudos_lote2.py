@@ -5,7 +5,7 @@ import json,re,sys,unittest
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/'scripts'))
 from opcoes_equilibradas import medir
-from auditoria_20261028 import undo_conteudos_lote2
+from auditoria_20261028 import undo_conteudos_lote2, undo_m4_piloto
 LOG=json.loads((ROOT/'docs/qa/conteudos-lote2-cartoes-20261101.json').read_text('utf-8'))
 
 def cards(text):
@@ -54,6 +54,8 @@ class Lote2(unittest.TestCase):
             rel=f'm{m}/index.html';current=(ROOT/rel).read_text('utf-8')
             # 02/11/2026: verificar os nove índices, incluindo as provas já publicadas pelo Cartaz.
             before=undo_conteudos_lote2(rel,current)
+            # 02/11/2026: comparar o lote de conteúdo antes da camada visual posterior.
+            current=undo_m4_piloto(rel,current)
             # 02/11/2026: M4/M7 já publicam o tipo JSON antes do id; verificar o mesmo conteúdo integral.
             pattern=r'<script (?:type="application/json" )?id="epi-unidades-pedagogicas">(.*?)</script>'
             self.assertEqual(re.search(pattern,before,re.S)[1],re.search(pattern,current,re.S)[1])
