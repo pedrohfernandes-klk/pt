@@ -20,6 +20,8 @@ jobs:
           node-version: '22'
       # 03/11/2026: mesma comparação de isolamento; este checkout tem a base histórica.
       - run: git diff --exit-code 8a38a69d554dca94e7018b14e7fef581286f5896 -- '*.html' 'assets/fundos.js' 'assets/fundos.css' 'assets/appearance.js' 'assets/pt-lessons/' 'assets/task-*' 'assets/cartaz-components.*'
+        # 03/11/2026: contrato deste lote; não congela páginas em futuros pedidos.
+        if: github.head_ref == 'codex/calcada-continua-pt-20261103' || github.ref_name == 'codex/calcada-continua-pt-20261103'
       # 01/11/2026: bateria Python completa, sem excluir famílias.
       - run: python -m unittest discover -s tests -p 'test_*.py' -v
       - run: npm install --no-save playwright
