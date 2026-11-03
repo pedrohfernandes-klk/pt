@@ -4,7 +4,7 @@
    As dobras são details.cz-fold com open no HTML: conteúdo acessível sem JS.
    Crédito externo: data-external e nome acessível que indique saída do sítio. */
 [data-cartaz="2"]{--cz-font-ui:Arial,Helvetica,sans-serif;--cz-font-text:Georgia,serif;--cz-font-poster:'Bebas Neue','Arial Narrow',Arial,sans-serif;--cz-t13:.8125rem;--cz-t16:1rem;--cz-t20:1.25rem;--cz-t25:1.5625rem;--cz-t31:1.9375rem;--cz-t39:2.4375rem;--cz-t49:3.0625rem;--cz-t61:3.8125rem;--cz-s1:8px;--cz-s2:16px;--cz-s3:24px;--cz-s4:32px;--cz-s5:40px;--cz-s6:48px;--cz-s8:64px;--cz-reading:65ch;--cz-wide:1200px;--cz-target:48px;--cz-focus:3px;--cz-rule:2px;--cz-label-ls:.14em}
-[data-cartaz="2"]{--cz-ink:var(--tinta,#000);--cz-paper:var(--papel,#fff);--cz-ground:var(--fundo,#f3f2ee);--cz-muted:var(--suave,#444);--cz-done:var(--mostarda,#d9a520);--cz-current:var(--vermelho,#c8232c)}
+[data-cartaz="2"]{--cz-ink:var(--tinta,#000);--cz-paper:var(--papel,#fff);--cz-ground:var(--fundo,#f3f2ee);--cz-muted:var(--suave,#444);--cz-done:var(--mostarda,#d9a520);--cz-current:var(--vermelho,#c8232c);--cz-positive:var(--certo,#1b7f3b);--cz-negative:var(--errado,#c8232c)}
 
 [data-cartaz="2"] :is([class^="cz-"],[class*=" cz-"]),[data-cartaz="2"] .cz-door>a{box-sizing:border-box}
 [data-cartaz="2"] :is(.cz-button,.cz-row,.cz-door>a,.cz-credit a,.cz-crumbs a,.cz-prose a,.cz-footer a,.cz-fold>summary){color:inherit;touch-action:manipulation}
@@ -112,6 +112,24 @@ html.em-projecao [data-cartaz="2"] [data-personal]{display:none}
 
 /* 01/11/2026: decisão 61, degraus exatos da escala, sem tamanhos intermédios. */
 @media(min-width:640px){[data-cartaz="2"] .cz-title{font-size:var(--cz-t61)}}
+/* 03/11/2026: resultados comuns, também sem movimento; percurso mantém --cz-done. */
+[data-cartaz="2"] :is(.cz-result-positive,.cz-motion-correct){color:var(--cz-positive)}
+[data-cartaz="2"] :is(.cz-result-negative,.cz-motion-error){color:var(--cz-negative)}
+/* 03/11/2026: boia fixa PT/Lente; o molde reserva 88 px fora da leitura, também em projeção. */
+[data-cartaz="2"] .cz-dock{position:fixed;left:max(16px,env(safe-area-inset-left));bottom:max(16px,env(safe-area-inset-bottom));z-index:40;margin:0;width:48px;font:400 1rem/1.5 var(--cz-font-ui)}
+[data-cartaz="2"] .cz-dock>summary{display:grid;place-items:center;list-style:none;width:48px;height:48px;border:1px solid currentColor;border-radius:50%;padding:0;background:var(--cz-paper);color:var(--cz-ink);cursor:pointer}
+[data-cartaz="2"] .cz-dock>summary::-webkit-details-marker{display:none}
+[data-cartaz="2"] .cz-dock>summary svg{width:28px;height:28px}
+[data-cartaz="2"] .cz-dock-panel{position:absolute;bottom:60px;left:0;width:min(280px,calc(100vw - 32px));max-height:65dvh;overflow:auto;padding:12px;background:var(--cz-paper);color:var(--cz-ink);border:2px solid currentColor;z-index:20}
+[data-cartaz="2"] .cz-dock-panel :is(a,button){display:flex;align-items:center;min-height:48px;width:100%;color:inherit;background:transparent;border:0;font:inherit;text-align:left;text-decoration:none;padding:8px;white-space:normal;overflow-wrap:anywhere}
+[data-cartaz="2"] .cz-dock :focus-visible{outline:3px solid currentColor;outline-offset:3px}
+@media print{.cz-dock{display:none}}
+/* 03/11/2026: contrato PT/Lente; tinta no texto, cor apenas na marca e no símbolo. */
+[data-cartaz="2"] .cz-motion-result{position:relative;padding:16px 20px;color:var(--cz-ink)}
+[data-cartaz="2"] .cz-motion-result.cz-result-positive{--cz-result-color:var(--cz-positive);background:var(--certo-fundo,#e2f3e8)}
+[data-cartaz="2"] .cz-motion-result.cz-result-negative{--cz-result-color:var(--cz-negative);background:var(--errado-fundo,#fbe5e3)}
+.cz-motion-result::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--cz-result-color,transparent);transform-origin:top}
+.cz-motion-result [data-cz-result-symbol]{color:var(--cz-result-color)}
 /* 01/11/2026: movimento Cartaz. */
 .cz-motion-part{display:inline-block}
 :is(.cz-motion-line,.cz-motion-point,.cz-motion-correct,.cz-motion-error){position:relative}
@@ -126,12 +144,14 @@ html.em-projecao [data-cartaz="2"] [data-personal]{display:none}
 .cz-motion-digits{display:inline-block;vertical-align:middle;width:3ch;height:1.2em;overflow:hidden;font:700 31px/1.2 Arial,sans-serif;font-variant-numeric:tabular-nums}
 .cz-motion-roll{display:block;transform:translateY(-50%)}
 .cz-motion-roll>b{display:block;height:1.2em;line-height:1.2}
+@keyframes cz-rise{from{transform:scaleY(0)}to{transform:scaleY(1)}}
 @keyframes cz-reveal{from{opacity:.72}to{opacity:1}}
 @keyframes cz-draw{from{transform:scaleX(0)}to{transform:scaleX(1)}}
 @keyframes cz-cue{from{opacity:.3;transform:translateX(-4px)}to{opacity:1;transform:translateX(0)}}
 @keyframes cz-number{from{transform:translateY(0)}to{transform:translateY(-50%)}}
 @media(prefers-reduced-motion:no-preference){
 :is(.cz-motion-part,.cz-motion-fold).cz-motion-active{animation:cz-reveal 180ms ease-out both}
+.cz-motion-result.cz-motion-active::before{animation:cz-rise 180ms ease-out both}
 .cz-motion-line.cz-motion-active::after{animation:cz-draw 350ms ease-out both}
 .cz-motion-point.cz-motion-active::after{animation:cz-reveal 250ms ease-out both}
 .cz-motion-correct.cz-motion-active::after{animation:cz-draw 250ms ease-out both}

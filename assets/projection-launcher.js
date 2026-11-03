@@ -1,3 +1,4 @@
+// 03/11/2026: ícone comum de projeção, ecrã e suporte, sem desenho de QR.
 (function () {
   'use strict';
   if (window.self !== window.top || document.getElementById('epi-projection-launcher-style')) return;
@@ -22,7 +23,7 @@
   link.setAttribute('data-projection-version', '20261019.4');
   link.setAttribute('aria-label', 'Projetar esta página com QR para a turma');
   link.title = 'Projetar esta página com QR para a turma';
-  link.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true" focusable="false"><rect x="2" y="3" width="20" height="14" rx="1"/><path d="M12 17v4m-5 0h10M6 7h4v4H6zm8 0h4v4h-4zM6 13h4m4 0h4"/></svg><span class="epi-projection-label">Projetar esta página · QR para a turma</span>';
+  link.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="13"/><path d="M12 16v5m-5 0h10"/></svg><span class="epi-projection-label">Projetar esta página · QR para a turma</span>';
 
   function target() {
     var url = new URL('projetar/', root);

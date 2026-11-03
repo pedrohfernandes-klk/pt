@@ -1,9 +1,9 @@
 name: Cartaz pieces
 on:
   push:
-    paths: ['assets/cartaz-cabecalho.css', 'assets/fundo-calcada.css', 'index.html', 'scripts/cartaz_cabecalho*', 'tests/fixtures/cartaz-cabecalho*', 'assets/cartaz-indices.*', 'assets/cartaz-m4-*', 'assets/fontes/**', 'm[1-9]/index.html', 'scripts/cartaz_indices*', 'scripts/cartaz_m4*', 'tests/fixtures/cartaz-*', 'assets/cartaz-components.*', 'assets/appearance.css', 'demonstracoes/cartaz-animacoes/**', 'tests/*cartaz*', '.github/workflows/cartaz-qa.yml']
+    paths: ['assets/projection-launcher.js', 'demonstracoes/identidade-comum/**', 'tests/browser_identidade_comum.cjs', 'tests/browser_boia_fixa.cjs', 'assets/cartaz-cabecalho.css', 'assets/fundo-calcada.css', 'index.html', 'scripts/cartaz_cabecalho*', 'tests/fixtures/cartaz-cabecalho*', 'assets/cartaz-indices.*', 'assets/cartaz-m4-*', 'assets/fontes/**', 'm[1-9]/index.html', 'scripts/cartaz_indices*', 'scripts/cartaz_m4*', 'tests/fixtures/cartaz-*', 'assets/cartaz-components.*', 'assets/appearance.css', 'demonstracoes/cartaz-animacoes/**', 'tests/*cartaz*', '.github/workflows/cartaz-qa.yml']
   pull_request:
-    paths: ['assets/cartaz-cabecalho.css', 'assets/fundo-calcada.css', 'index.html', 'scripts/cartaz_cabecalho*', 'tests/fixtures/cartaz-cabecalho*', 'assets/cartaz-indices.*', 'assets/cartaz-m4-*', 'assets/fontes/**', 'm[1-9]/index.html', 'scripts/cartaz_indices*', 'scripts/cartaz_m4*', 'tests/fixtures/cartaz-*', 'assets/cartaz-components.*', 'assets/appearance.css', 'demonstracoes/cartaz-animacoes/**', 'tests/*cartaz*', '.github/workflows/cartaz-qa.yml']
+    paths: ['assets/projection-launcher.js', 'demonstracoes/identidade-comum/**', 'tests/browser_identidade_comum.cjs', 'tests/browser_boia_fixa.cjs', 'assets/cartaz-cabecalho.css', 'assets/fundo-calcada.css', 'index.html', 'scripts/cartaz_cabecalho*', 'tests/fixtures/cartaz-cabecalho*', 'assets/cartaz-indices.*', 'assets/cartaz-m4-*', 'assets/fontes/**', 'm[1-9]/index.html', 'scripts/cartaz_indices*', 'scripts/cartaz_m4*', 'tests/fixtures/cartaz-*', 'assets/cartaz-components.*', 'assets/appearance.css', 'demonstracoes/cartaz-animacoes/**', 'tests/*cartaz*', '.github/workflows/cartaz-qa.yml']
 jobs:
   pieces:
     runs-on: ubuntu-latest
@@ -36,6 +36,14 @@ jobs:
         if: ${{ !cancelled() }}
         env:
           CARTAZ_INDICES_OUTPUT: ${{ runner.temp }}/cartaz-indices
+      # 03/11/2026: resultados, faixa da boia e projeção real.
+      - run: node tests/browser_identidade_comum.cjs
+        env:
+          IDENTIDADE_OUTPUT: ${{ runner.temp }}/cartaz-indices/identidade-comum
+      # 03/11/2026: boia fixa também no visor real e a 200%, sem sobrepor respostas.
+      - run: node tests/browser_boia_fixa.cjs
+        env:
+          IDENTIDADE_OUTPUT: ${{ runner.temp }}/cartaz-indices/identidade-comum
       # 03/11/2026: abertura e visor real, nos dois temas e nas tres larguras.
       - run: node tests/browser_cartaz_cabecalho.cjs
         env:
