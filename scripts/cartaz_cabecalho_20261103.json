@@ -6,5 +6,21 @@
     "novo": "<script defer src=\"assets/fundos.js?v=20261102-1\"></script><link rel=\"stylesheet\" href=\"assets/cartaz-cabecalho.css?v=20261103\"></head>",
     "ocorrencias": 1,
     "achado": "03/11/2026: cabeçalho com calçada integrada, intervalo título/subtítulo e correções na projeção real. Créditos, conteúdo, ligações, ids e progresso conservados."
+  },
+  {
+    "ficheiro": "index.html",
+    "local": "Retira destaque persistente da experiência",
+    "antigo": "<aside class=\"ed-sugestao\" data-sugestao=\"pt\" aria-labelledby=\"ed-sugestao-titulo\"><div><p class=\"ed-etq\">Uma experiência · papel e lápis</p><h2 id=\"ed-sugestao-titulo\">Uma frase. Duas vidas.</h2><p>Experimenta uma revisão curta no papel. <a href=\"https://pedrohfernandes-klk.github.io/lente/narrativas/variantes/#escrita\">Experimentar →</a></p><p><a href=\"https://pedrohfernandes-klk.github.io/lente/ver-para-fazer/\">Ver para fazer: vídeos e propostas →</a></p></div><button type=\"button\" aria-label=\"Dispensar sugestão durante sete dias\" hidden>Fechar</button></aside><button class=\"ed-reabrir\" type=\"button\" data-reabrir hidden>Mostrar sugestão</button>",
+    "novo": "<!-- 03/11/2026: a experiência está nos recursos de Mais. -->",
+    "ocorrencias": 1,
+    "achado": "03/11/2026: decisão do docente; não depende de Fechar nem de localStorage."
+  },
+  {
+    "ficheiro": "index.html",
+    "local": "Conserva os dois destinos nos recursos habituais",
+    "antigo": "<a href=\"como/\">Como se faz</a></span></p>",
+    "novo": "<a id=\"ed-sugestao-titulo\" href=\"https://pedrohfernandes-klk.github.io/lente/narrativas/variantes/#escrita\">Uma frase. Duas vidas: revisão no papel</a><a href=\"https://pedrohfernandes-klk.github.io/lente/ver-para-fazer/\">Ver para fazer: vídeos e propostas</a><a href=\"como/\">Como se faz</a></span></p>",
+    "ocorrencias": 1,
+    "achado": "03/11/2026: mantém atividade, destinos e âncora na lista Mais, sem faixa nem botão de reabertura."
   }
 ]

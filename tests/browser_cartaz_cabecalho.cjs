@@ -51,8 +51,12 @@ function luminance(rgb) { return rgb.map(v => v / 255).map(v => v <= .04045 ? v 
           const title = document.querySelector('.p-cab h1'), lead = document.querySelector('.pt-entry-lead'), stones = document.querySelector('.cf-pedras');
           return { overflow: document.documentElement.scrollWidth - innerWidth, titleHeight: title.offsetHeight, titleLine: parseFloat(getComputedStyle(title).lineHeight), gap: lead.getBoundingClientRect().top - title.getBoundingClientRect().bottom, animations: stones.getAnimations().length, opacity: +getComputedStyle(stones).opacity, ink: getComputedStyle(lead).color, paper: getComputedStyle(document.body).backgroundColor, credit: document.querySelector('.cf-credito').textContent, storage: JSON.stringify(Object.entries(localStorage)) };
         });
-        if (out) await (projection ? page.locator('#lesson-frame') : page).screenshot({ path: path.join(out, `${width}-${theme}-${projection ? 'projection' : 'normal'}-${version}.png`) });
+        if (out) await (projection ? page.locator('#lesson-frame') : page).screenshot({ fullPage: !projection, path: path.join(out, `${width}-${theme}-${projection ? 'projection' : 'normal'}-${version}.png`) });
         if (version === 'after') {
+          // 03/11/2026: nenhum destaque ou reabertura; os destinos continuam em Mais.
+          assert.equal(await frame.locator('aside.ed-sugestao, [data-reabrir]').count(), 0);
+          assert.equal(await frame.locator('.mais-l a[href$="/narrativas/variantes/#escrita"]').count(), 1);
+          assert.equal(await frame.locator('.mais-l a[href$="/ver-para-fazer/"]').count(), 1);
           const result = row.after;
           result.hierarchy = await frame.evaluate(MEASURE);
           for (const rule of ['r1', 'r2', 'r3', 'r5']) assert.deepEqual(result.hierarchy[rule], [], JSON.stringify({ width, theme, projection, rule, cases: result.hierarchy[rule] }));
@@ -75,6 +79,7 @@ function luminance(rgb) { return rgb.map(v => v / 255).map(v => v <= .04045 ? v 
     for (const javaScriptEnabled of [true, false]) {
       const context = await browser.newContext({ javaScriptEnabled, reducedMotion: 'reduce', viewport: { width: 320, height: 900 } }); await local(context);
       const page = await context.newPage(); await page.goto(base + '/pt/'); assert(await page.locator('.pt-entry-lead').isVisible());
+      assert.equal(await page.locator('aside.ed-sugestao, [data-reabrir]').count(), 0);
       assert.equal(await page.locator('.cf-pedras').evaluate(e => e.getAnimations().length), 0);
       await page.emulateMedia({ media: 'print' }); assert(await page.locator('.cf-mar').isHidden()); await context.close();
     }

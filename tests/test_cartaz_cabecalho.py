@@ -2,6 +2,8 @@
 from pathlib import Path
 import hashlib
 import json
+import re
+from collections import Counter
 import subprocess
 import sys
 import unittest
@@ -11,18 +13,28 @@ MANIFEST = ROOT / 'tests/fixtures/cartaz-cabecalho-edits-20261103.json'
 
 
 class CabecalhoCartaz(unittest.TestCase):
-    def test_so_liga_css_com_reversao_estrita(self):
+    # 03/11/2026: três trocas fechadas; retirada autorizada e destinos preservados em Mais.
+    def test_camada_reversivel_e_destinos_preservados(self):
         manifest = json.loads(MANIFEST.read_text('utf-8'))
         self.assertEqual(set(manifest['files']), {'index.html'})
         record = manifest['files']['index.html']
-        self.assertEqual(len(record['edits']), 1)
+        self.assertEqual(len(record['edits']), 3)
         current = (ROOT / 'index.html').read_text('utf-8')
-        edit = record['edits'][0]
-        self.assertEqual(current.count(edit['new']), edit['occurrences'])
-        original = current.replace(edit['new'], edit['old'])
+        original = current
+        for edit in reversed(record['edits']):
+            self.assertEqual(original.count(edit['new']), edit['occurrences'])
+            original = original.replace(edit['new'], edit['old'])
         self.assertEqual(hashlib.sha256(original.encode()).hexdigest(), record['base_sha256_lf'])
-        self.assertEqual(current, original.replace(edit['old'], edit['new']))
-        self.assertEqual(current.replace('<link rel="stylesheet" href="assets/cartaz-cabecalho.css?v=20261103">', ''), original)
+        rebuilt = original
+        for edit in record['edits']:
+            self.assertEqual(rebuilt.count(edit['old']), edit['occurrences'])
+            rebuilt = rebuilt.replace(edit['old'], edit['new'])
+        self.assertEqual(current, rebuilt)
+        self.assertEqual(Counter(re.findall(r'<a\b[^>]*href="([^"]+)"', current)),
+                         Counter(re.findall(r'<a\b[^>]*href="([^"]+)"', original)))
+        self.assertNotIn('<aside class="ed-sugestao"', current)
+        self.assertNotIn('data-reabrir', current)
+        self.assertIn('id="ed-sugestao-titulo"', current)
         self.assertIn('Grafismo gerado com recurso a IA', original)
 
     def test_gerador_idempotente(self):
