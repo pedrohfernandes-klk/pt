@@ -1,3 +1,4 @@
+# 03/11/2026: nova camada desfeita antes dos contratos históricos.
 # 03/11/2026: composicao estrita do piloto M4 com os creditos publicados no main.
 # 02/11/2026: desfazer o piloto M4 antes das camadas históricas, sem mudar asserções.
 # 02/11/2026: crédito de IA acima do lote 2; mesmas asserções.
@@ -51,7 +52,7 @@ class IndicesCartaz(unittest.TestCase):
   self.assertNotIn('setAttribute("href"',s)
  def test_camada_aplicada_e_reversivel(self):
   # 02/11/2026: desfaz antes a camada das tarefas individuais, a mais recente.
-  r=subprocess.run([sys.executable,'scripts/aplicar_trocas.py','scripts/cartaz_indices_20261101.json','--manifesto','tests/fixtures/cartaz-indices-edits-20261101.json','--verificar','--desfazer-antes', 'tests/fixtures/cartaz-m4-piloto-edits-20261102.json', '--desfazer-antes', 'tests/fixtures/creditos-grafismos-ia-edits-20261102.json', '--desfazer-antes', 'tests/fixtures/conteudos-lote2-edits-20261101.json', '--desfazer-antes', 'tests/fixtures/varredura-formatacao-edits-20261101.json', '--desfazer-antes', 'tests/fixtures/calcada-mar-edits-20261102.json','--desfazer-antes','tests/fixtures/tarefas-individuais-edits-20261102.json'],cwd=ROOT,capture_output=True,text=True,encoding='utf8')
+  r=subprocess.run([sys.executable,'scripts/aplicar_trocas.py','scripts/cartaz_indices_20261101.json','--manifesto','tests/fixtures/cartaz-indices-edits-20261101.json','--verificar','--desfazer-antes', 'tests/fixtures/fundos-modulos-edits-20261103.json', '--desfazer-antes', 'tests/fixtures/cartaz-m4-piloto-edits-20261102.json', '--desfazer-antes', 'tests/fixtures/creditos-grafismos-ia-edits-20261102.json', '--desfazer-antes', 'tests/fixtures/conteudos-lote2-edits-20261101.json', '--desfazer-antes', 'tests/fixtures/varredura-formatacao-edits-20261101.json', '--desfazer-antes', 'tests/fixtures/calcada-mar-edits-20261102.json','--desfazer-antes','tests/fixtures/tarefas-individuais-edits-20261102.json'],cwd=ROOT,capture_output=True,text=True,encoding='utf8')
   self.assertEqual(r.returncode,0,r.stdout+r.stderr)
  def test_so_nove_paginas_migram_sobre_a_base_integrada(self):
   # 01/11/2026: o manifesto delimita a camada, sem depender de commits após squash.

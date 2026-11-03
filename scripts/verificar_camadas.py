@@ -6,6 +6,8 @@ import sys
 
 ROOT=Path(__file__).resolve().parents[1]
 LAYERS=[
+ # 03/11/2026: fundos seletivos por cima do piloto M4.
+ ('fundos_modulos_20261103','fundos-modulos-edits-20261103'),
  # 02/11/2026: piloto visual do M4, reversível sobre o main publicado.
  ('cartaz_m4_piloto_20261102','cartaz-m4-piloto-edits-20261102'),
  # 02/11/2026: créditos de IA depois do lote 2 publicado.

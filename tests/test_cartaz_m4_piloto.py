@@ -1,8 +1,9 @@
+# 03/11/2026: contratos do piloto conferidos sob a nova camada, sem os relaxar.
 """02/11/2026: contratos do piloto visual M4, sem relaxar o conteúdo publicado."""
 import hashlib,json,re,subprocess,sys,unittest
 from html.parser import HTMLParser
 from pathlib import Path
-from auditoria_20261028 import undo_m4_piloto
+from auditoria_20261028 import undo_m4_piloto, undo_fundos_modulos
 ROOT=Path(__file__).resolve().parents[1]
 class Inventory(HTMLParser):
  def __init__(self,text):
@@ -18,7 +19,7 @@ class Inventory(HTMLParser):
   if self.in_script:self.scripts[-1][1]+=text
 class M4Piloto(unittest.TestCase):
  def setUp(self):
-  self.after=(ROOT/'m4/index.html').read_text('utf-8');self.before=undo_m4_piloto('m4/index.html',self.after)
+  self.raw=(ROOT/'m4/index.html').read_text('utf-8');self.after=undo_fundos_modulos('m4/index.html',self.raw);self.before=undo_m4_piloto('m4/index.html',self.raw)
  def test_conserva_ids_ligacoes_scripts_e_dados(self):
   a,b=Inventory(self.before),Inventory(self.after)
   self.assertEqual(sorted(a.ids),sorted(b.ids));self.assertEqual(sorted(a.links),sorted(b.links))
@@ -28,7 +29,7 @@ class M4Piloto(unittest.TestCase):
   manifest=json.loads((ROOT/'tests/fixtures/cartaz-m4-piloto-edits-20261102.json').read_text('utf-8'))
   self.assertEqual(list(manifest['files']),['m4/index.html'])
   self.assertEqual(hashlib.sha256(self.before.encode()).hexdigest(),manifest['files']['m4/index.html']['base_sha256_lf'])
-  run=subprocess.run([sys.executable,'scripts/aplicar_trocas.py','scripts/cartaz_m4_piloto_20261102.json','--manifesto','tests/fixtures/cartaz-m4-piloto-edits-20261102.json','--verificar'],cwd=ROOT,capture_output=True,text=True,encoding='utf-8')
+  run=subprocess.run([sys.executable,'scripts/aplicar_trocas.py','scripts/cartaz_m4_piloto_20261102.json','--manifesto','tests/fixtures/cartaz-m4-piloto-edits-20261102.json','--verificar','--desfazer-antes','tests/fixtures/fundos-modulos-edits-20261103.json'],cwd=ROOT,capture_output=True,text=True,encoding='utf-8')
   self.assertEqual(run.returncode,0,run.stdout+run.stderr)
  def test_adesao_exclusiva_e_sem_novo_motor(self):
   for n in range(1,10):

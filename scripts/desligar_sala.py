@@ -847,6 +847,12 @@ def main():
                     conferencia = conferencia.replace(edit['new'], edit['old'])
                 # 02/11/2026: lote 2 por cima da base publicada, só para conferir.
                 # 02/11/2026: o piloto M4 desfaz-se primeiro, apenas em memória.
+                # 03/11/2026: fundos seletivos antes do piloto, apenas para conferir.
+                fundos = ROOT / 'tests/fixtures/fundos-modulos-edits-20261103.json'
+                for edit in reversed(json.loads(fundos.read_text('utf-8'))['files'].get(rel, {}).get('edits', [])):
+                    if conferencia.count(edit['new']) != edit['occurrences']:
+                        raise ManifestoDesatualizado(f'{rel}: fundos dos módulos não conferem')
+                    conferencia = conferencia.replace(edit['new'], edit['old'])
                 piloto = ROOT / 'tests/fixtures/cartaz-m4-piloto-edits-20261102.json'
                 if piloto.is_file():
                     for edit in reversed(json.loads(piloto.read_text('utf-8'))['files'].get(rel, {}).get('edits', [])):

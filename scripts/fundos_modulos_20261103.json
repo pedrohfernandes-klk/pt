@@ -1,0 +1,82 @@
+[
+  {
+    "ficheiro": "m4/index.html",
+    "local": "M4: fundo cardume",
+    "antigo": "</head>",
+    "novo": "<link rel=\"stylesheet\" href=\"../assets/fundos-modulos.css?v=20261103\"><script defer src=\"../assets/fundos.js?v=20261102\"></script></head>",
+    "ocorrencias": 1,
+    "achado": "03/11/2026: piloto isolado, título e ação imóveis; motor comum e crédito explícito."
+  },
+  {
+    "ficheiro": "m4/index.html",
+    "local": "M4: fundo cardume",
+    "antigo": "<header class=\"topo\">",
+    "novo": "<header class=\"topo\" data-fundo=\"fm4\" data-fundo-ciclo=\"32\"><div class=\"fm-desenho fm-cardume\" aria-hidden=\"true\"><span class=\"fm-traco\"></span><span class=\"fm-luz\"></span></div>",
+    "ocorrencias": 1,
+    "achado": "03/11/2026: piloto isolado, título e ação imóveis; motor comum e crédito explícito."
+  },
+  {
+    "ficheiro": "m4/index.html",
+    "local": "M4: fundo cardume",
+    "antigo": "class=\"cz-motion-title\"",
+    "novo": "class=\"fm-titulo\"",
+    "ocorrencias": 1,
+    "achado": "03/11/2026: piloto isolado, título e ação imóveis; motor comum e crédito explícito."
+  },
+  {
+    "ficheiro": "m4/index.html",
+    "local": "M4: fundo cardume",
+    "antigo": "class=\"cz-motion-part\"",
+    "novo": "class=\"fm-titulo-parte\"",
+    "ocorrencias": 1,
+    "achado": "03/11/2026: piloto isolado, título e ação imóveis; motor comum e crédito explícito."
+  },
+  {
+    "ficheiro": "m4/index.html",
+    "local": "M4: fundo cardume",
+    "antigo": "<!-- id=\"podcast\":",
+    "novo": "<div class=\"fm-legenda\"><small>Peixes e escuta, a partir do sermão de Vieira. Grafismo gerado com recurso a IA.</small><button type=\"button\" data-fundo-botao=\"fm4\" hidden>Parar o desenho</button></div><!-- id=\"podcast\":",
+    "ocorrencias": 1,
+    "achado": "03/11/2026: piloto isolado, título e ação imóveis; motor comum e crédito explícito."
+  },
+  {
+    "ficheiro": "m6/index.html",
+    "local": "M6: fundo cidade",
+    "antigo": "</head>",
+    "novo": "<link rel=\"stylesheet\" href=\"../assets/fundos-modulos.css?v=20261103\"><script defer src=\"../assets/fundos.js?v=20261102\"></script></head>",
+    "ocorrencias": 1,
+    "achado": "03/11/2026: piloto isolado, título e ação imóveis; motor comum e crédito explícito."
+  },
+  {
+    "ficheiro": "m6/index.html",
+    "local": "M6: fundo cidade",
+    "antigo": "<header class=\"topo\">",
+    "novo": "<header class=\"topo\" data-fundo=\"fm6\" data-fundo-ciclo=\"32\"><div class=\"fm-desenho fm-cidade\" aria-hidden=\"true\"><span class=\"fm-traco\"></span><span class=\"fm-luz\"></span></div>",
+    "ocorrencias": 1,
+    "achado": "03/11/2026: piloto isolado, título e ação imóveis; motor comum e crédito explícito."
+  },
+  {
+    "ficheiro": "m6/index.html",
+    "local": "M6: fundo cidade",
+    "antigo": "class=\"cz-motion-title\"",
+    "novo": "class=\"fm-titulo\"",
+    "ocorrencias": 1,
+    "achado": "03/11/2026: piloto isolado, título e ação imóveis; motor comum e crédito explícito."
+  },
+  {
+    "ficheiro": "m6/index.html",
+    "local": "M6: fundo cidade",
+    "antigo": "class=\"cz-motion-part\"",
+    "novo": "class=\"fm-titulo-parte\"",
+    "ocorrencias": 1,
+    "achado": "03/11/2026: piloto isolado, título e ação imóveis; motor comum e crédito explícito."
+  },
+  {
+    "ficheiro": "m6/index.html",
+    "local": "M6: fundo cidade",
+    "antigo": "<!-- id=\"podcast\":",
+    "novo": "<div class=\"fm-legenda\"><small>Rua e luz, a partir da poesia de Cesário Verde. Grafismo gerado com recurso a IA.</small><button type=\"button\" data-fundo-botao=\"fm6\" hidden>Parar o desenho</button></div><!-- id=\"podcast\":",
+    "ocorrencias": 1,
+    "achado": "03/11/2026: piloto isolado, título e ação imóveis; motor comum e crédito explícito."
+  }
+]

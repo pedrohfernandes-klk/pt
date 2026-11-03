@@ -1,0 +1,23 @@
+/* 03/11/2026: dois motivos optativos; só as camadas decorativas se movem. */
+main.cz-index .topo[data-fundo]{position:relative;isolation:isolate;}
+.topo[data-fundo] .fm-desenho{position:absolute;inset:0;z-index:-1;overflow:hidden;pointer-events:none;mask-image:linear-gradient(90deg,transparent 5%,#000 85%),linear-gradient(0deg,transparent,#000 18%,#000 85%,transparent);mask-composite:intersect;}
+.fm-traco,.fm-luz{position:absolute;inset:-24px;display:block;}
+.fm-cardume .fm-traco{background:url(fundo-m4-cardume.svg) right center/auto 100% no-repeat;opacity:.38;}
+.fm-cidade .fm-traco{background:url(fundo-m6-cidade.svg) right center/auto 100% no-repeat;opacity:.33;}
+.fm-cidade .fm-luz{background:linear-gradient(115deg,transparent 45%,#b59b6340 52%,transparent 65%);opacity:.5;}
+.topo[data-fundo] .fm-legenda{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px 24px;margin-top:24px;font:400 .8125rem/1.5 Arial;}
+.fm-legenda small{font:inherit;max-width:54ch;color:var(--suave,#55534c);}
+.fm-legenda button{font:inherit;min-height:44px;padding:8px 16px;border:1px solid currentColor;border-radius:0;background:var(--papel,#f6f3eb);color:var(--tinta,#171714);cursor:pointer;}
+.fm-legenda button[hidden]{display:none;}
+.fm-legenda button:focus-visible{outline:3px solid currentColor;outline-offset:4px;}
+@keyframes fm-cardume{0%,100%{transform:translate(0,0)}50%{transform:translate(-20px,6px)}}
+@keyframes fm-luz{0%,100%{transform:translateX(0);opacity:.3}50%{transform:translateX(40px);opacity:.7}}
+@media(prefers-reduced-motion:no-preference){
+ html:not(.epi-projection):not(.em-projecao):not([data-cz-projection]):not([data-cz-reduce]) .fm4-anda .fm-traco{animation:fm-cardume 32s ease-in-out 2;}
+ html:not(.epi-projection):not(.em-projecao):not([data-cz-projection]):not([data-cz-reduce]) .fm6-anda .fm-luz{animation:fm-luz 32s ease-in-out 2;}
+ .topo.fundo-pausa .fm-desenho>span{animation-play-state:paused;}
+}
+:root[data-theme=dark] .fm-traco{filter:brightness(1.8);opacity:.28;}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]) .fm-traco{filter:brightness(1.8);opacity:.28;}}
+@media(max-width:639px){.topo[data-fundo] .fm-desenho{left:-16px;right:-16px;mask-image:linear-gradient(90deg,transparent 30%,#000 100%),linear-gradient(0deg,transparent,#000 20%,#000 85%,transparent);}.fm-cardume .fm-traco{opacity:.25;}.fm-cidade .fm-traco{opacity:.2;}}
+@media print{.topo[data-fundo] .fm-desenho,.topo[data-fundo] .fm-legenda{display:none;}}
