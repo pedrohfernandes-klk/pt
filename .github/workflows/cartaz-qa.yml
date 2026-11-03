@@ -47,6 +47,10 @@ jobs:
       - run: node tests/browser_fundos_modulos.cjs
         env:
           FUNDOS_OUTPUT: ${{ runner.temp }}/cartaz-indices/fundos-modulos
+      # 03/11/2026: M4-02, acento único e palavra inteira nos dois temas e a 200%.
+      - run: node tests/browser_cartaz_m4_acento.cjs
+        env:
+          M4_PILOTO_OUTPUT: ${{ runner.temp }}/cartaz-indices/m4-acento
       # 01/11/2026: provas de revisão fora das páginas publicadas.
       - uses: actions/upload-artifact@v4
         if: always()

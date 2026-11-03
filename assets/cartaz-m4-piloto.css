@@ -66,10 +66,11 @@ body.pt-module-layout main.cz-index[data-m4-piloto] .m4-device [data-appearance-
 body.pt-module-layout main.cz-index[data-m4-piloto] .m4-device .epi-appearance-toggle{min-width:48px;min-height:48px;margin:0;}
 html[data-theme=dark] body:has(main[data-m4-piloto]){--papel:#181916;--tinta:#f5f1e7;--suave:#c2beb4;--fundo:#252722;}
 html[data-theme=light] body:has(main[data-m4-piloto]){--papel:#f6f3eb;--tinta:#171714;--suave:#55534c;--fundo:#ece8de;}
-/* 03/11/2026: a letra permanece na palavra; inline-block criava quebras em romântica. */
-body.pt-module-layout main.cz-index[data-m4-piloto] .m4-acento-retro{display:inline;position:relative;line-height:inherit;color:inherit;}
-body.pt-module-layout main.cz-index[data-m4-piloto] .m4-acento-retro::after{content:"Â" / "";position:absolute;inset:0;color:var(--vermelho,#c8232c);clip-path:inset(-.2em 0 calc(100% - .08em) 0);pointer-events:none;}
-html[data-theme=dark] body.pt-module-layout main.cz-index[data-m4-piloto] .m4-acento-retro::after{color:var(--vermelho,#e4555c);}
+/* 03/11/2026: pintar o glifo original elimina a cópia absoluta e mantém a palavra inteira. */
+body.pt-module-layout main.cz-index[data-m4-piloto] .m4-acento-retro{display:inline;color:inherit;}
+@supports (background-clip:text){
+body.pt-module-layout main.cz-index[data-m4-piloto] .m4-acento-retro{color:transparent;background:linear-gradient(to bottom,var(--vermelho,#c8232c) 20%,var(--tinta) 20%);background-clip:text;}
+}
 body.pt-module-layout main.cz-index[data-m4-piloto] .cabm>.n{font:400 3.8125rem/1 "Cartaz M4",var(--cz-font-poster);color:var(--suave);position:static;border:0;padding:0;background:transparent;}
 body.pt-module-layout main.cz-index[data-m4-piloto] .mod-pergunta .serif{font:inherit;}
 body.pt-module-layout main.cz-index[data-m4-piloto] .unit-index b{color:var(--tinta);}
@@ -123,7 +124,7 @@ body.pt-module-layout main.cz-index[data-m4-piloto]{max-width:none;padding:0;}
 body.pt-module-layout main.cz-index[data-m4-piloto] details.cz-fold{display:block;}
 body.pt-module-layout main.cz-index[data-m4-piloto] .unidade{break-inside:auto;}
 body.pt-module-layout main.cz-index[data-m4-piloto] .cz-fold>summary{break-after:avoid;}
-body.pt-module-layout main.cz-index[data-m4-piloto] .m4-acento-retro::after{display:none;}
+body.pt-module-layout main.cz-index[data-m4-piloto] .m4-acento-retro{color:inherit;background:none;}
 body.pt-module-layout main.cz-index[data-m4-piloto] .cz-fold::details-content{content-visibility:visible;}
 body.pt-module-layout main.cz-index[data-m4-piloto] .cz-fold>summary{display:grid;}
 body.pt-module-layout main.cz-index[data-m4-piloto] .m4-unit-body{display:block;}
