@@ -393,7 +393,9 @@ def grelha_pages(browser, host):
             link = open_task_card(page, 'a[href="grelha/"]')
             link.click(); page.wait_for_url('**/tarefas/' + slug + '/grelha/')
             if pasta == 'correcao':
-                page.locator('footer a[href="../correcao/"]').click(); page.wait_for_url('**/tarefas/' + slug + '/correcao/')
+                # 03/11/2026: a correção conserva o endereço e abre agora pela boia.
+                page.locator('.pt-apoios > summary').click()
+                page.locator('.pt-apoios a[href="../correcao/"]').click(); page.wait_for_url('**/tarefas/' + slug + '/correcao/')
             page.locator('.g-nav a', has_text=texto).click()
             page.wait_for_url(re.compile('/tarefas/' + slug + '/#entregar$'))
             page.locator('[data-task-reader].task-reader-ready').wait_for()
