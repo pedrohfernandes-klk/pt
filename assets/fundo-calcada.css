@@ -1,6 +1,6 @@
 /* 02/11/2026: decisão 139 (docente: «maiores e mais bem feitos; a calçada tem de parecer realmente calçada»). Por baixo do nome
-   do Português, uma faixa larga de calçada portuguesa, padrão de ondas «mar largo» (Rossio, Lisboa): pedra a pedra, basalto e
-   calcário em fiadas que seguem a onda, com a junta à vista. Desenho nosso, gerado por scripts/gerar_calcada_mar.py
+   do Português, uma faixa larga de calçada portuguesa, padrão de ondas «mar largo» (Rossio, Lisboa): basalto e
+   calcário em fiadas que seguem a onda, com a junta à vista. Grafismo gerado com recurso a IA, gerado por scripts/gerar_calcada_mar.py
    (assets/calcada-mar.svg, um ladrilho que se repete sem costura). Parada é o estado de partida: sem JavaScript, com movimento
    reduzido e na projeção fica a calçada inteira; com o motor comum (assets/fundos.js), as ondas correm devagar para a esquerda
    durante dois ciclos e param; o botão «Parar o desenho» pára-as antes. Na impressão, a faixa não sai. */

@@ -8,6 +8,8 @@ ROOT=Path(__file__).resolve().parents[1]
 LAYERS=[
  # 02/11/2026: piloto visual do M4, reversível sobre o main publicado.
  ('cartaz_m4_piloto_20261102','cartaz-m4-piloto-edits-20261102'),
+ # 02/11/2026: créditos de IA depois do lote 2 publicado.
+ ('creditos_grafismos_ia_20261102','creditos-grafismos-ia-edits-20261102'),
  # 02/11/2026: lote 2 reaplicado por cima do main publicado.
  ('conteudos_lote2_20261101','conteudos-lote2-edits-20261101'),
  # 02/11/2026: decisão 139, a calçada «mar largo» na entrada (camada mais recente).

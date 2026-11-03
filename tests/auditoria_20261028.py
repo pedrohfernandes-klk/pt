@@ -1,3 +1,4 @@
+# 03/11/2026: composicao estrita do piloto M4 com os creditos publicados no main.
 """28/10/2026: correções da auditoria do M1 e do M4, autorizadas literalmente.
 
 O manifesto tests/fixtures/auditoria-m1-m4-edits-20261028.json guarda cada troca de texto (antigo, novo,
@@ -283,6 +284,17 @@ VARREDURA_MANIFEST = ROOT / 'tests/fixtures/varredura-formatacao-edits-20261101.
 _VARREDURA_FILES = json.loads(VARREDURA_MANIFEST.read_text('utf-8'))['files']
 
 
+# 02/11/2026: crédito de IA por cima das camadas publicadas, com correspondência estrita.
+_CREDITOS_IA = json.loads((ROOT/'tests/fixtures/creditos-grafismos-ia-edits-20261102.json').read_text('utf-8'))['files']
+
+def undo_creditos_ia(path, text):
+    for edit in reversed(_CREDITOS_IA.get(_relative(path), {}).get('edits', [])):
+        if text.count(edit['new']) != edit['occurrences']:
+            raise AssertionError(f"Créditos de IA não conferem: {path}: {edit['location']}")
+        text = text.replace(edit['new'], edit['old'])
+    return text
+
+
 _CONTEUDOS_LOTE2_FILES = json.loads((ROOT / 'tests/fixtures/conteudos-lote2-edits-20261101.json').read_text('utf-8'))['files']
 
 
@@ -302,6 +314,7 @@ def undo_m4_piloto(path, text):
 def undo_conteudos_lote2(path, text):
     # 02/11/2026: preservar integralmente os contratos anteriores ao piloto visual.
     text = undo_m4_piloto(path, text)
+    text = undo_creditos_ia(path, text)
     relative = _relative(path)
     for edit in reversed(_CONTEUDOS_LOTE2_FILES.get(relative, {}).get('edits', [])):
         if text.count(edit['new']) != edit['occurrences']:
