@@ -78,6 +78,12 @@ class TiposMais(unittest.TestCase):
   self.assertEqual(verificar_recursos('',[{'t':'escolha'}]),[])
 
 class Consumidores(unittest.TestCase):
+ def test_medicao_continua_executavel_pela_linha_de_comandos(self):
+  # 03/11/2026: importar o módulo não exercita a descrição usada por argparse.
+  import subprocess
+  r=subprocess.run([sys.executable,str(ROOT/'scripts/medir_opcoes.py'),'--help'],capture_output=True,text=True,encoding='utf8')
+  self.assertEqual(r.returncode,0,r.stderr)
+  self.assertIn('--regra',r.stdout)
  def test_papel_sem_solucoes_e_sem_mutacao(self):
   from tipos_regras import material_publico,material_html
   forbidden={'certas','certos','espacos','erros','armadilhas','fe','fe_item','fe_razao','fe_ordem','fe_bloco','aceita'}

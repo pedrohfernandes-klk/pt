@@ -26,6 +26,8 @@ No tipo `corrigir`, a contagem distingue a identificação de cada palavra da es
 
 Estas provas não constituem ainda autorização de publicação. A bateria integral da versão candidata passou: 477 testes em 228,025 segundos. As provas locais estão nos ficheiros `f2-unitarios-candidato.log`, `f2-browser-candidato.log` e `f2-limites-candidato.log`, junto às cópias de trabalho. As capturas são atualizadas em `f2-provas-visuais-20261103`, incluindo o documento final para papel.
 
+O primeiro CI confirmou os 477 testes e as 19 camadas, mas revelou uma falha comum a três verificações: o import dos tipos precedia a docstring de `medir_opcoes.py`, usada por `argparse`. A correção repõe a docstring no início, sem alterar limiares. Acrescentou-se uma prova da interface de linha de comandos. A medição `--regra` voltou a verificar 2993 escolhas, com zero denunciadoras. Não se alterou nenhum teste existente para aceitar a falha.
+
 ## O que falta para a entrega completa
 
 1. Rever os casos limite e a qualidade visual das seis peças, incluindo os maiores bancos, as variantes e os estados parciais. Os limites de dados não substituem medir um cartão concreto.

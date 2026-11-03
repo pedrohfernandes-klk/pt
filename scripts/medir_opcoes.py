@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-from tipos_regras import ENTROU, campos_opcoes
 """Mede o comprimento das opções de todas as escolhas múltiplas do sítio (30/10/2026).
 
 Pedido do docente (29/10/2026): «Ainda há demasiadas escolhas múltiplas em que a resposta certa é claramente a de maior
@@ -28,6 +27,8 @@ Uso:
   python3 scripts/medir_opcoes.py --listas PASTA            uma lista de denunciadoras por grupo (m1 … m9, outros)
   python3 scripts/medir_opcoes.py --fora tarefas/m1-u1/     deixa caminhos de fora (pode repetir-se)
 """
+# 03/11/2026: conservar a docstring antes dos imports, usada pela interface CLI.
+from tipos_regras import ENTROU, campos_opcoes
 import argparse
 import collections
 import json
