@@ -1,3 +1,4 @@
+# 03/11/2026: integra a ancestralidade M4/F0 sem alterar as asserções.
 #!/usr/bin/env python3
 """01/11/2026: verifica todas as camadas literais, da mais recente para a mais antiga."""
 from pathlib import Path
@@ -10,6 +11,8 @@ LAYERS=[
  ('fundos_modulos_20261103','fundos-modulos-edits-20261103'),
  # 02/11/2026: piloto visual do M4, reversível sobre o main publicado.
  ('cartaz_m4_piloto_20261102','cartaz-m4-piloto-edits-20261102'),
+ # 03/11/2026: F0 publicada preservada por merge.
+ ('variedade_f0_20261102','variedade-f0-edits-20261102'),
  # 02/11/2026: créditos de IA depois do lote 2 publicado.
  ('creditos_grafismos_ia_20261102','creditos-grafismos-ia-edits-20261102'),
  # 02/11/2026: lote 2 reaplicado por cima do main publicado.

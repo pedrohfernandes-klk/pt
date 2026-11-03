@@ -174,7 +174,7 @@ figure img[tabindex]:focus-visible{outline:3px solid var(--tinta,#000);outline-o
 <p>O que fazes nas lições, nas missões e nos cartões fica guardado só neste telemóvel, sem conta nem nome. Para o levares para outro telemóvel, ou para o mostrares ao docente, guarda-o num ficheiro; para o trazeres de volta, repõe o ficheiro.</p>
 <p class="pf-n" data-pf-conta>A contar os registos…</p>
 <div class="pf-b"><button type="button" data-pf-guardar>Guardar num ficheiro</button><label class="pf-l"><input type="file" accept="application/json,.json" data-pf-repor>Repor de um ficheiro</label></div>
-<p class="pf-e" data-pf-estado aria-live="polite"></p></section><script>
+<p class="pf-e" data-pf-estado aria-live="polite"></p></section><script src="assets/pt-lessons/acrescentos.js?v=20261102-f0"></script><script>
 // 28/10/2026: a Sala de aula está desligada desde 17/10/2026 (decisão do docente); só se apaga o que ela deixou neste aparelho
 (function(){try{["epi-sala","epi-sala-atlas"].forEach(function(k){if(localStorage.getItem(k)!==null)localStorage.removeItem(k)});
 for(var i=localStorage.length-1;i>=0;i--){var k=localStorage.key(i);if(k&&k.indexOf("painel-sala-")===0)localStorage.removeItem(k)}}catch(x){}
@@ -194,9 +194,11 @@ function fundir(a,b){if(ehObj(a)&&ehObj(b)){var o={},k;for(k in a)o[k]=a[k];for(
 if(Array.isArray(a)&&Array.isArray(b)){var vis={},r=[];a.concat(b).forEach(function(x){var s=JSON.stringify(x);if(!vis[s]){vis[s]=1;r.push(x)}});return r}
 if(typeof a==="number"&&typeof b==="number")return Math.max(a,b);if(a===null||a===undefined||a==="")return b;return b===null||b===undefined||b===""?a:b}
 S.querySelector("[data-pf-repor]").addEventListener("change",function(ev){var f=ev.target.files&&ev.target.files[0];if(!f)return;var r=new FileReader();
-r.onload=function(){try{var d=JSON.parse(String(r.result));if(!d||d.formato!=="epi-progresso"||!d.registos)throw new Error("formato");var n=0,novos=0;
-Object.keys(d.registos).forEach(function(k){if(/^(epi-sala|painel-sala-)/.test(k))return;var v=d.registos[k],atual=localStorage.getItem(k);if(atual===null){localStorage.setItem(k,v);novos++;n++;return}
-try{var A=JSON.parse(atual),B=JSON.parse(v);localStorage.setItem(k,JSON.stringify(fundir(A,B)))}catch(x){if(!atual)localStorage.setItem(k,v)}n++});
+r.onload=function(){try{var d=JSON.parse(String(r.result));if(!d||d.formato!=="epi-progresso"||!d.registos)throw new Error("formato");var n=0,novos=0,lotesAntes={};
+Object.keys(d.registos).forEach(function(k){lotesAntes[k]=localStorage.getItem(k+"-acrescentos")});
+Object.keys(d.registos).forEach(function(k){if(!/-acrescentos$/.test(k))return;var base=k.slice(0,-"-acrescentos".length);if(Object.prototype.hasOwnProperty.call(d.registos,base))return;try{var raw=localStorage.getItem(base);if(raw===null)return;var a=JSON.parse(raw),b=EPIAcrescentos.protegerImportacao(a,d.registos[k],localStorage.getItem(k));if(b!==a)localStorage.setItem(base,JSON.stringify(b))}catch(x){}});
+Object.keys(d.registos).forEach(function(k){if(/^(epi-sala|painel-sala-)/.test(k))return;var v=d.registos[k],atual=localStorage.getItem(k);if(lotesAntes[k])try{v=JSON.stringify(EPIAcrescentos.protegerImportacao(JSON.parse(v),lotesAntes[k],d.registos[k+"-acrescentos"]||null))}catch(x){}if(atual===null){localStorage.setItem(k,v);novos++;n++;return}
+try{var A=JSON.parse(atual),B=JSON.parse(v);A=EPIAcrescentos.protegerImportacao(A,d.registos[k+"-acrescentos"]||null,lotesAntes[k]);localStorage.setItem(k,JSON.stringify(fundir(A,B)))}catch(x){if(!atual)localStorage.setItem(k,v)}n++});
 contar();diz("Reposto: "+n+" registos ("+novos+" novos). A página vai recarregar.","ok");setTimeout(function(){location.reload()},1400)}
 catch(x){diz("Este ficheiro não é um progresso guardado aqui.","mal")}};r.readAsText(f);ev.target.value=""});
 contar()})();</script>

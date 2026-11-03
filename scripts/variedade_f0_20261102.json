@@ -1,0 +1,194 @@
+[
+  {
+    "ficheiro": "tarefas/m1-u1/aquecimento/index.html",
+    "local": "F0: ajuda do cartão no cabeçalho",
+    "antigo": "<span class=\"c-modo\" data-c-modo hidden></span>",
+    "novo": "<span class=\"c-modo\" data-c-modo hidden></span><button type=\"button\" class=\"c-ic\" data-c-como aria-label=\"Como se faz\" title=\"Como se faz\" hidden><span class=\"c-roda\">?</span></button>",
+    "ocorrencias": 1,
+    "achado": "Plano variedade F0: botão de ajuda pelo mesmo gerador, sem alterar cartões ou progresso."
+  },
+  {
+    "ficheiro": "tarefas/m1-u2/aquecimento/index.html",
+    "local": "F0: ajuda do cartão no cabeçalho",
+    "antigo": "<span class=\"c-modo\" data-c-modo hidden></span>",
+    "novo": "<span class=\"c-modo\" data-c-modo hidden></span><button type=\"button\" class=\"c-ic\" data-c-como aria-label=\"Como se faz\" title=\"Como se faz\" hidden><span class=\"c-roda\">?</span></button>",
+    "ocorrencias": 1,
+    "achado": "Plano variedade F0: botão de ajuda pelo mesmo gerador, sem alterar cartões ou progresso."
+  },
+  {
+    "ficheiro": "tarefas/m2-u1/aquecimento/index.html",
+    "local": "F0: ajuda do cartão no cabeçalho",
+    "antigo": "<span class=\"c-modo\" data-c-modo hidden></span>",
+    "novo": "<span class=\"c-modo\" data-c-modo hidden></span><button type=\"button\" class=\"c-ic\" data-c-como aria-label=\"Como se faz\" title=\"Como se faz\" hidden><span class=\"c-roda\">?</span></button>",
+    "ocorrencias": 1,
+    "achado": "Plano variedade F0: botão de ajuda pelo mesmo gerador, sem alterar cartões ou progresso."
+  },
+  {
+    "ficheiro": "tarefas/m2-u2/aquecimento/index.html",
+    "local": "F0: ajuda do cartão no cabeçalho",
+    "antigo": "<span class=\"c-modo\" data-c-modo hidden></span>",
+    "novo": "<span class=\"c-modo\" data-c-modo hidden></span><button type=\"button\" class=\"c-ic\" data-c-como aria-label=\"Como se faz\" title=\"Como se faz\" hidden><span class=\"c-roda\">?</span></button>",
+    "ocorrencias": 1,
+    "achado": "Plano variedade F0: botão de ajuda pelo mesmo gerador, sem alterar cartões ou progresso."
+  },
+  {
+    "ficheiro": "tarefas/m3-u1/aquecimento/index.html",
+    "local": "F0: ajuda do cartão no cabeçalho",
+    "antigo": "<span class=\"c-modo\" data-c-modo hidden></span>",
+    "novo": "<span class=\"c-modo\" data-c-modo hidden></span><button type=\"button\" class=\"c-ic\" data-c-como aria-label=\"Como se faz\" title=\"Como se faz\" hidden><span class=\"c-roda\">?</span></button>",
+    "ocorrencias": 1,
+    "achado": "Plano variedade F0: botão de ajuda pelo mesmo gerador, sem alterar cartões ou progresso."
+  },
+  {
+    "ficheiro": "tarefas/m3-u2/aquecimento/index.html",
+    "local": "F0: ajuda do cartão no cabeçalho",
+    "antigo": "<span class=\"c-modo\" data-c-modo hidden></span>",
+    "novo": "<span class=\"c-modo\" data-c-modo hidden></span><button type=\"button\" class=\"c-ic\" data-c-como aria-label=\"Como se faz\" title=\"Como se faz\" hidden><span class=\"c-roda\">?</span></button>",
+    "ocorrencias": 1,
+    "achado": "Plano variedade F0: botão de ajuda pelo mesmo gerador, sem alterar cartões ou progresso."
+  },
+  {
+    "ficheiro": "tarefas/m4-u1/aquecimento/index.html",
+    "local": "F0: ajuda do cartão no cabeçalho",
+    "antigo": "<span class=\"c-modo\" data-c-modo hidden></span>",
+    "novo": "<span class=\"c-modo\" data-c-modo hidden></span><button type=\"button\" class=\"c-ic\" data-c-como aria-label=\"Como se faz\" title=\"Como se faz\" hidden><span class=\"c-roda\">?</span></button>",
+    "ocorrencias": 1,
+    "achado": "Plano variedade F0: botão de ajuda pelo mesmo gerador, sem alterar cartões ou progresso."
+  },
+  {
+    "ficheiro": "tarefas/m4-u2/aquecimento/index.html",
+    "local": "F0: ajuda do cartão no cabeçalho",
+    "antigo": "<span class=\"c-modo\" data-c-modo hidden></span>",
+    "novo": "<span class=\"c-modo\" data-c-modo hidden></span><button type=\"button\" class=\"c-ic\" data-c-como aria-label=\"Como se faz\" title=\"Como se faz\" hidden><span class=\"c-roda\">?</span></button>",
+    "ocorrencias": 1,
+    "achado": "Plano variedade F0: botão de ajuda pelo mesmo gerador, sem alterar cartões ou progresso."
+  },
+  {
+    "ficheiro": "tarefas/m4-u3-discurso/aquecimento/index.html",
+    "local": "F0: ajuda do cartão no cabeçalho",
+    "antigo": "<span class=\"c-modo\" data-c-modo hidden></span>",
+    "novo": "<span class=\"c-modo\" data-c-modo hidden></span><button type=\"button\" class=\"c-ic\" data-c-como aria-label=\"Como se faz\" title=\"Como se faz\" hidden><span class=\"c-roda\">?</span></button>",
+    "ocorrencias": 1,
+    "achado": "Plano variedade F0: botão de ajuda pelo mesmo gerador, sem alterar cartões ou progresso."
+  },
+  {
+    "ficheiro": "tarefas/m5-u1/aquecimento/index.html",
+    "local": "F0: ajuda do cartão no cabeçalho",
+    "antigo": "<span class=\"c-modo\" data-c-modo hidden></span>",
+    "novo": "<span class=\"c-modo\" data-c-modo hidden></span><button type=\"button\" class=\"c-ic\" data-c-como aria-label=\"Como se faz\" title=\"Como se faz\" hidden><span class=\"c-roda\">?</span></button>",
+    "ocorrencias": 1,
+    "achado": "Plano variedade F0: botão de ajuda pelo mesmo gerador, sem alterar cartões ou progresso."
+  },
+  {
+    "ficheiro": "tarefas/m5-u2/aquecimento/index.html",
+    "local": "F0: ajuda do cartão no cabeçalho",
+    "antigo": "<span class=\"c-modo\" data-c-modo hidden></span>",
+    "novo": "<span class=\"c-modo\" data-c-modo hidden></span><button type=\"button\" class=\"c-ic\" data-c-como aria-label=\"Como se faz\" title=\"Como se faz\" hidden><span class=\"c-roda\">?</span></button>",
+    "ocorrencias": 1,
+    "achado": "Plano variedade F0: botão de ajuda pelo mesmo gerador, sem alterar cartões ou progresso."
+  },
+  {
+    "ficheiro": "tarefas/m6-u1/aquecimento/index.html",
+    "local": "F0: ajuda do cartão no cabeçalho",
+    "antigo": "<span class=\"c-modo\" data-c-modo hidden></span>",
+    "novo": "<span class=\"c-modo\" data-c-modo hidden></span><button type=\"button\" class=\"c-ic\" data-c-como aria-label=\"Como se faz\" title=\"Como se faz\" hidden><span class=\"c-roda\">?</span></button>",
+    "ocorrencias": 1,
+    "achado": "Plano variedade F0: botão de ajuda pelo mesmo gerador, sem alterar cartões ou progresso."
+  },
+  {
+    "ficheiro": "tarefas/m6-u2/aquecimento/index.html",
+    "local": "F0: ajuda do cartão no cabeçalho",
+    "antigo": "<span class=\"c-modo\" data-c-modo hidden></span>",
+    "novo": "<span class=\"c-modo\" data-c-modo hidden></span><button type=\"button\" class=\"c-ic\" data-c-como aria-label=\"Como se faz\" title=\"Como se faz\" hidden><span class=\"c-roda\">?</span></button>",
+    "ocorrencias": 1,
+    "achado": "Plano variedade F0: botão de ajuda pelo mesmo gerador, sem alterar cartões ou progresso."
+  },
+  {
+    "ficheiro": "tarefas/m7-u1/aquecimento/index.html",
+    "local": "F0: ajuda do cartão no cabeçalho",
+    "antigo": "<span class=\"c-modo\" data-c-modo hidden></span>",
+    "novo": "<span class=\"c-modo\" data-c-modo hidden></span><button type=\"button\" class=\"c-ic\" data-c-como aria-label=\"Como se faz\" title=\"Como se faz\" hidden><span class=\"c-roda\">?</span></button>",
+    "ocorrencias": 1,
+    "achado": "Plano variedade F0: botão de ajuda pelo mesmo gerador, sem alterar cartões ou progresso."
+  },
+  {
+    "ficheiro": "tarefas/m7-u2/aquecimento/index.html",
+    "local": "F0: ajuda do cartão no cabeçalho",
+    "antigo": "<span class=\"c-modo\" data-c-modo hidden></span>",
+    "novo": "<span class=\"c-modo\" data-c-modo hidden></span><button type=\"button\" class=\"c-ic\" data-c-como aria-label=\"Como se faz\" title=\"Como se faz\" hidden><span class=\"c-roda\">?</span></button>",
+    "ocorrencias": 1,
+    "achado": "Plano variedade F0: botão de ajuda pelo mesmo gerador, sem alterar cartões ou progresso."
+  },
+  {
+    "ficheiro": "tarefas/m7-u3/aquecimento/index.html",
+    "local": "F0: ajuda do cartão no cabeçalho",
+    "antigo": "<span class=\"c-modo\" data-c-modo hidden></span>",
+    "novo": "<span class=\"c-modo\" data-c-modo hidden></span><button type=\"button\" class=\"c-ic\" data-c-como aria-label=\"Como se faz\" title=\"Como se faz\" hidden><span class=\"c-roda\">?</span></button>",
+    "ocorrencias": 1,
+    "achado": "Plano variedade F0: botão de ajuda pelo mesmo gerador, sem alterar cartões ou progresso."
+  },
+  {
+    "ficheiro": "tarefas/m8-u1/aquecimento/index.html",
+    "local": "F0: ajuda do cartão no cabeçalho",
+    "antigo": "<span class=\"c-modo\" data-c-modo hidden></span>",
+    "novo": "<span class=\"c-modo\" data-c-modo hidden></span><button type=\"button\" class=\"c-ic\" data-c-como aria-label=\"Como se faz\" title=\"Como se faz\" hidden><span class=\"c-roda\">?</span></button>",
+    "ocorrencias": 1,
+    "achado": "Plano variedade F0: botão de ajuda pelo mesmo gerador, sem alterar cartões ou progresso."
+  },
+  {
+    "ficheiro": "tarefas/m8-u2/aquecimento/index.html",
+    "local": "F0: ajuda do cartão no cabeçalho",
+    "antigo": "<span class=\"c-modo\" data-c-modo hidden></span>",
+    "novo": "<span class=\"c-modo\" data-c-modo hidden></span><button type=\"button\" class=\"c-ic\" data-c-como aria-label=\"Como se faz\" title=\"Como se faz\" hidden><span class=\"c-roda\">?</span></button>",
+    "ocorrencias": 1,
+    "achado": "Plano variedade F0: botão de ajuda pelo mesmo gerador, sem alterar cartões ou progresso."
+  },
+  {
+    "ficheiro": "tarefas/m9-u1/aquecimento/index.html",
+    "local": "F0: ajuda do cartão no cabeçalho",
+    "antigo": "<span class=\"c-modo\" data-c-modo hidden></span>",
+    "novo": "<span class=\"c-modo\" data-c-modo hidden></span><button type=\"button\" class=\"c-ic\" data-c-como aria-label=\"Como se faz\" title=\"Como se faz\" hidden><span class=\"c-roda\">?</span></button>",
+    "ocorrencias": 1,
+    "achado": "Plano variedade F0: botão de ajuda pelo mesmo gerador, sem alterar cartões ou progresso."
+  },
+  {
+    "ficheiro": "tarefas/m9-u2/aquecimento/index.html",
+    "local": "F0: ajuda do cartão no cabeçalho",
+    "antigo": "<span class=\"c-modo\" data-c-modo hidden></span>",
+    "novo": "<span class=\"c-modo\" data-c-modo hidden></span><button type=\"button\" class=\"c-ic\" data-c-como aria-label=\"Como se faz\" title=\"Como se faz\" hidden><span class=\"c-roda\">?</span></button>",
+    "ocorrencias": 1,
+    "achado": "Plano variedade F0: botão de ajuda pelo mesmo gerador, sem alterar cartões ou progresso."
+  },
+  {
+    "ficheiro": "index.html",
+    "local": "F0: recurso de compatibilidade antes da importação",
+    "antigo": "<script>\n// 28/10/2026: a Sala de aula está desligada desde 17/10/2026 (decisão do docente); só se apaga o que ela deixou neste aparelho\n(function(){try{[\"epi-sala\",\"epi-sala-atlas\"].forEach(function(k){if(localStorage.getItem(k)!==null)localStorage.removeItem(k)});\nfor(var i=localStorage.length-1;i>=0;i--){var k=localStorage.key(i);if(k&&k.indexOf(\"painel-sala-\")===0)localStorage.removeItem(k)}}catch(x){}\ntry{sessionStorage.removeItem(\"epi-atlas-sala\")}catch(x){}})();\n</script>",
+    "novo": "<script src=\"assets/pt-lessons/acrescentos.js?v=20261102-f0\"></script><script>\n// 28/10/2026: a Sala de aula está desligada desde 17/10/2026 (decisão do docente); só se apaga o que ela deixou neste aparelho\n(function(){try{[\"epi-sala\",\"epi-sala-atlas\"].forEach(function(k){if(localStorage.getItem(k)!==null)localStorage.removeItem(k)});\nfor(var i=localStorage.length-1;i>=0;i--){var k=localStorage.key(i);if(k&&k.indexOf(\"painel-sala-\")===0)localStorage.removeItem(k)}}catch(x){}\ntry{sessionStorage.removeItem(\"epi-atlas-sala\")}catch(x){}})();\n</script>",
+    "ocorrencias": 1,
+    "achado": "F0: importação conserva resultados e só junta índices quando os lotes são compatíveis."
+  },
+  {
+    "ficheiro": "index.html",
+    "local": "F0: fotografia dos lotes antes de importar",
+    "antigo": "var n=0,novos=0;\nObject.keys(d.registos).forEach(function(k){",
+    "novo": "var n=0,novos=0,lotesAntes={};\nObject.keys(d.registos).forEach(function(k){lotesAntes[k]=localStorage.getItem(k+\"-acrescentos\")});\nObject.keys(d.registos).forEach(function(k){if(!/-acrescentos$/.test(k))return;var base=k.slice(0,-\"-acrescentos\".length);if(Object.prototype.hasOwnProperty.call(d.registos,base))return;try{var raw=localStorage.getItem(base);if(raw===null)return;var a=JSON.parse(raw),b=EPIAcrescentos.protegerImportacao(a,d.registos[k],localStorage.getItem(k));if(b!==a)localStorage.setItem(base,JSON.stringify(b))}catch(x){}});\nObject.keys(d.registos).forEach(function(k){",
+    "ocorrencias": 1,
+    "achado": "F0: importação conserva resultados e só junta índices quando os lotes são compatíveis."
+  },
+  {
+    "ficheiro": "index.html",
+    "local": "F0: não importar índices anteriores aos lotes locais",
+    "antigo": "var v=d.registos[k],atual=localStorage.getItem(k);if(atual===null){",
+    "novo": "var v=d.registos[k],atual=localStorage.getItem(k);if(lotesAntes[k])try{v=JSON.stringify(EPIAcrescentos.protegerImportacao(JSON.parse(v),lotesAntes[k],d.registos[k+\"-acrescentos\"]||null))}catch(x){}if(atual===null){",
+    "ocorrencias": 1,
+    "achado": "F0: importação conserva resultados e só junta índices quando os lotes são compatíveis."
+  },
+  {
+    "ficheiro": "index.html",
+    "local": "F0: não misturar índices locais anteriores ao ficheiro",
+    "antigo": "var A=JSON.parse(atual),B=JSON.parse(v);localStorage.setItem(k,JSON.stringify(fundir(A,B)))",
+    "novo": "var A=JSON.parse(atual),B=JSON.parse(v);A=EPIAcrescentos.protegerImportacao(A,d.registos[k+\"-acrescentos\"]||null,lotesAntes[k]);localStorage.setItem(k,JSON.stringify(fundir(A,B)))",
+    "ocorrencias": 1,
+    "achado": "F0: importação conserva resultados e só junta índices quando os lotes são compatíveis."
+  }
+]

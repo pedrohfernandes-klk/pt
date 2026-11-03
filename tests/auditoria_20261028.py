@@ -1,4 +1,3 @@
-# 03/11/2026: composicao estrita do piloto M4 com os creditos publicados no main.
 """28/10/2026: correções da auditoria do M1 e do M4, autorizadas literalmente.
 
 O manifesto tests/fixtures/auditoria-m1-m4-edits-20261028.json guarda cada troca de texto (antigo, novo,
@@ -323,9 +322,23 @@ def undo_m4_piloto(path, text):
     return text
 
 
+_VARIEDADE_F0_FILES = json.loads((ROOT / 'tests/fixtures/variedade-f0-edits-20261102.json').read_text('utf-8'))['files']
+
+
+def undo_variedade_f0(path, text):
+    relative = _relative(path)
+    for edit in reversed(_VARIEDADE_F0_FILES.get(relative, {}).get('edits', [])):
+        if text.count(edit['new']) != edit['occurrences']:
+            raise AssertionError(f"F0 não confere: {relative}: {edit['location']}")
+        text = text.replace(edit['new'], edit['old'])
+    return text
+
+
 def undo_conteudos_lote2(path, text):
-    # 02/11/2026: preservar integralmente os contratos anteriores ao piloto visual.
+    # 03/11/2026: desfaz F0 e os créditos publicados, com as mesmas contagens estritas.
+    # 03/11/2026: preservar as duas camadas e as contagens estritas.
     text = undo_m4_piloto(path, text)
+    text = undo_variedade_f0(path, text)
     text = undo_creditos_ia(path, text)
     relative = _relative(path)
     for edit in reversed(_CONTEUDOS_LOTE2_FILES.get(relative, {}).get('edits', [])):
