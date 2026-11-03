@@ -1,7 +1,7 @@
 /* 03/11/2026: proposta isolada do cabeçalho. A ligação entra pela camada literal
    depois da publicação dos créditos (#164). Mantém o SVG e o motor comuns. */
 body[data-site="pt"] .raiz .p-cab[data-fundo="cf"]{
-  --cf-h:440px;--cf-tw:960px;--cf-opacity:.28;
+  --cf-opacity:.28;
   isolation:isolate;display:flex;flex-direction:column;align-items:flex-start;
   justify-content:center;gap:0;min-height:480px;padding:48px 0 104px;
   margin:0;border:0;
@@ -13,7 +13,7 @@ body[data-site="pt"] .raiz .p-cab[data-fundo="cf"] h1{
   margin:0;line-height:1.05;letter-spacing:-.045em;
 }
 body[data-site="pt"] .raiz .p-cab[data-fundo="cf"] .pt-entry-lead{
-  margin:32px 0 0;font-size:1.25rem;line-height:1.5;max-width:34rem;
+  margin:32px 0 0;font-size:1.25rem;line-height:1.5;max-width:40rem;
   color:var(--tinta);
 }
 body[data-site="pt"] .raiz .p-cab[data-fundo="cf"] .cf-mar{
@@ -29,9 +29,15 @@ body[data-site="pt"] .raiz .cf-credito{margin:0 0 32px;padding:8px 0;border-bott
 :root[data-theme="dark"] body[data-site="pt"] .raiz .p-cab[data-fundo="cf"]{--cf-opacity:.2}
 @media(prefers-color-scheme:dark){:root:not([data-theme="light"]) body[data-site="pt"] .raiz .p-cab[data-fundo="cf"]{--cf-opacity:.2}}
 @media(max-width:639px){
-  body[data-site="pt"] .raiz .p-cab[data-fundo="cf"]{--cf-h:320px;--cf-tw:698.181818px;min-height:376px;padding:24px 0 88px}
+  body[data-site="pt"] .raiz .p-cab[data-fundo="cf"]{min-height:376px;padding:24px 0 88px}
   body[data-site="pt"] .raiz .p-cab[data-fundo="cf"] .p-etiqueta{font-size:.8125rem;max-width:26ch;margin-bottom:24px}
-  body[data-site="pt"] .raiz .p-cab[data-fundo="cf"] h1{font-size:clamp(3.0625rem,14vw,3.8125rem)}
-  body[data-site="pt"] .raiz .p-cab[data-fundo="cf"] .pt-entry-lead{margin-top:24px;font-size:1rem;max-width:28ch}
+  body[data-site="pt"] .raiz .p-cab[data-fundo="cf"] h1{font-size:min(3.8125rem,15vw)}
+  body[data-site="pt"] .raiz .p-cab[data-fundo="cf"] .pt-entry-lead{margin-top:24px;font-size:1rem;max-width:100%}
 }
 @media print{body[data-site="pt"] .raiz .p-cab[data-fundo="cf"]{min-height:0;padding:16px 0}}
+/* 03/11/2026: a seta decorativa do Atlas cabe na primeira linha do título
+   na entrada projetada; não se corta conteúdo nem se esconde o transbordo. */
+@media(max-width:639px){
+  html.epi-projection body[data-site="pt"] .raiz .atlas-poster h2{position:relative}
+  html.epi-projection body[data-site="pt"] .raiz .atlas-poster h2>span{position:absolute;top:0;right:0;margin-left:0}
+}
