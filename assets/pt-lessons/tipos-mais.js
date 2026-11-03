@@ -139,9 +139,10 @@
  'use strict';
  var T=root.EPITiposMais, anteriores=new Map();
  function indices(n){return Array.from({length:n},function(_,i){return i});}
- function topo(x,a,dica){return '<p class="q">'+a.it(x.p)+'</p>'+(x.cita?'<p class="tm-cita">'+a.it(x.cita)+'</p>':'')+'<p class="dica">'+a.it(dica)+'</p>';}
+ // 03/11/2026: cita pertence ao cabeçalho do motor; apoio é material criado, sem aspas automáticas.
+ function topo(x,a,dica){return '<p class="q">'+a.it(x.p)+'</p>'+(x.apoio?'<p class="tm-cita">'+a.it(x.apoio)+'</p>':'')+'<p class="dica">'+a.it(dica)+'</p>';}
  function papel(x,a){
-  var h='<h2>'+a.it(x.p)+'</h2>'+(x.cita?'<p>'+a.it(x.cita)+'</p>':''),items=[];
+  var h='<h2>'+a.it(x.p)+'</h2>'+(x.cita?'<p>'+a.it(x.cita)+'</p>':'')+(x.apoio?'<p>'+a.it(x.apoio)+'</p>':''),items=[];
   if(x.t==='lacunas'){h+='<p>'+a.it(x.texto).replace(/\[(\d+)\]/g,'____ ($1)')+'</p>';items=x.espacos.concat(x.distratores).slice().sort();}
   if(x.t==='montar'){items=x.blocos.concat(x.distratores||[]).slice().sort();h+='<p>Escreve a frase e termina com '+a.esc(x.fim)+'</p>';}
   if(x.t==='varias')items=x.o;

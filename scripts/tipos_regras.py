@@ -51,7 +51,7 @@ def validar(x, contexto='licao'):
     for k in ('id', 'p', 'f'):
         exigir(_texto(x.get(k)), k + ': texto obrigatório')
     exigir(isinstance(x.get('id'),str) and bool(re.fullmatch(r'n106-[a-z0-9-]+',x['id'])), 'id: prefixo n106 e identificador estável')
-    for k in ('cita', 'p2'):
+    for k in ('cita', 'apoio', 'p2'):
         if k in x: exigir(_texto(x[k]), k + ': texto não vazio')
     curto = contexto != 'licao'
     if t == 'lacunas':
@@ -172,7 +172,7 @@ def validar(x, contexto='licao'):
 
 
 # IDs, índices, URLs, licenças e chaves de dados não são prosa mostrada ao aluno.
-_CAMPOS = {'p','p2','f','fe','texto','partes','espacos','distratores','fe_bloco','fe_espaco','o','blocos','cita','fe_ordem','itens','razoes','fe_item','fe_razao','armadilhas','alt','autor','obra','data','marcas','fe_parte','fe_corte','fica'}
+_CAMPOS = {'p','p2','f','fe','texto','partes','espacos','distratores','fe_bloco','fe_espaco','o','blocos','cita','apoio','fe_ordem','itens','razoes','fe_item','fe_razao','armadilhas','alt','autor','obra','data','marcas','fe_parte','fe_corte','fica'}
 
 
 def textos_de(x):
@@ -255,6 +255,7 @@ def material_publico(x, semente=''):
         return sorted(copy.deepcopy(xs),key=lambda s:hashlib.sha256((semente+'|'+repr(s)).encode()).hexdigest())
     t=x['t'];m={}
     if 'cita' in x:m['cita']=x['cita']
+    if 'apoio' in x:m['apoio']=x['apoio']
     if t=='lacunas':m.update(texto=x['texto'],banco=misturar(x['espacos']+x['distratores']))
     elif t=='varias':m['o']=copy.deepcopy(x['o'])
     elif t=='montar':
@@ -275,7 +276,7 @@ def material_html(x,semente=''):
         s=re.sub(r'\*\*([^*\n]{1,80})\*\*',r'<b>\1</b>',s)
         return re.sub(r'(^|[^\w/])_([^_\n<>]{1,100})_(?!\w)',r'\1<i>\2</i>',s)
     m=material_publico(x,semente);out=[]
-    for k in ('cita','texto'):
+    for k in ('cita','apoio','texto'):
         if k in m:out.append('<p>'+fmt(m[k])+'</p>')
     for k in ('banco','o','itens','razoes'):
         if k in m:

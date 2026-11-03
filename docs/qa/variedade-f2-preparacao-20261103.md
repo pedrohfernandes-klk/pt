@@ -1,5 +1,13 @@
 # F2: preparação para revisão
 
+## Estado de entrega em 03/11/2026
+
+Pedido #167, dependente do #165, em rascunho. Os sete contratos da página final para papel F3 estão fechados funcional e visualmente pelo GPT2: sete casos a 320, 390 e 1366 px e sete PDFs, uma página A4 cada, renderizados e inspecionados. O fundo creme que sobrava na impressão foi corrigido em `1733c4d5`, com teste da cor calculada de `html` e `body`. A prova F3 está em `papel-final/RELATORIO.md` e `RESULTADOS.json` na pasta de artefactos do GPT2; código testado `f3dd84dd`, cabeça documental `a5446d68`.
+
+Os seis vídeos foram autorizados como versões de revisão, sem aprovação final nem publicação. A conferência detetou apoio duplicado no motor: `cita` já pertence ao cabeçalho comum. A correção deixa a citação apenas nesse cabeçalho e introduz `apoio` para frases ou textos criados, sem aspas automáticas. Ambos são preservados no material para papel. A impressão do cartão também conserva apenas uma ocorrência. Só os vídeos de `montar` e `razao`, afetados, são regravados; cada vídeo identifica a sua cabeça no manifesto.
+
+Os parágrafos seguintes conservam a preparação e as provas anteriores. A confirmação de papel acima substitui a pendência correspondente. Mantêm-se a revisão visual conjunta de interface/vídeos, a coordenação da cópia no Lente e o CI da última cabeça antes de qualquer publicação.
+
 03/11/2026. A F0 está no #165, com 15 verificações aprovadas na cabeça `c87d871d`. A F2 recebeu essa fase por merge e permanece num ramo separado, sem páginas publicadas que carreguem os novos tipos.
 
 ## O que já pode ser ensaiado
@@ -17,7 +25,7 @@ No tipo `corrigir`, a contagem distingue a identificação de cada palavra da es
 ## Provas executadas
 
 - 72 cenários dos seis tipos: quatro larguras, resposta certa, erro deliberado, projeção, teclado a 390 px, revisão e variante.
-- 19 testes dos validadores e consumidores, incluindo dados malformados, retorno por espaço, índices, crédito/licença, pergunta que denuncia o critério, versão de recurso e extração sem soluções.
+- 20 testes dos validadores e consumidores, incluindo dados malformados, retorno por espaço, índices, crédito/licença, pergunta que denuncia o critério, versão de recurso, extração sem soluções e execução pela linha de comandos.
 - 14 testes dos aquecimentos existentes, sem alterar as comparações do gerador.
 - 11 casos limite: seis comparações de impressão inicial/final, duas verificações de miniaturas e zoom, texto projetado com 70 palavras, ordem alternativa com pontuação própria e banco num ecrã baixo com Escape.
 - Dois cenários adicionais: seis tipos em sequência com sete confirmações exatas; falso positivo em `corrigir`, repetindo só a decisão falhada.

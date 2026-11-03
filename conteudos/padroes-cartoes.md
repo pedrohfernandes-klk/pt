@@ -56,6 +56,8 @@ O gerador valida pelo contexto e carrega `tipos-mais.js` e `tipos-mais.css` apen
 
 O material inicial do painel e de papel não inclui índices certos, modelos resolvidos ou retornos. O campo `f` do painel fica separado e só aparece na ação de correção. Um fragmento HTML aprovado não equivale a um documento final impresso aprovado.
 
+`cita` é uma citação, apresentada uma vez pelo cabeçalho do motor. Para frases ou textos criados, usa-se `apoio`, com a indicação «Frase criada» ou «Texto criado»: não recebe aspas automáticas. Ambos acompanham o material para papel e passam pela verificação de língua.
+
 O documento final é gerado por `scripts/cartoes_papel.py`: recebe um JSON com `cartoes` e `titulo`, ou uma lista de cartões, e escreve um HTML autónomo através de `--saida`. Conserva o pedido, a instrução e o material público, sem incluir o banco de respostas. A impressão usa esse documento, não a fotografia da resposta do aluno. As extensões registadas em `tipos_regras` usam o mesmo consumidor.
 
 Antes de inserir cartões, as equipas verificam o raciocínio, a língua, as fontes, as opções, as variantes, o teclado, o telemóvel, a projeção, a impressão e os vídeos. Os primeiros cartões de cada tipo recebem revisão pedagógica. O tempo e os pontos não são prova de aprendizagem: a prova é a resposta sustentada por indícios e capaz de enfrentar uma objeção.

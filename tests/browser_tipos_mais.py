@@ -60,6 +60,10 @@ def main():
      page.locator('[data-confirmar]').wait_for()
      assert page.locator('[data-confirmar]').is_disabled()
      initial=page.locator('[data-tipo-ext]').inner_text()
+     # 03/11/2026: o apoio criado aparece uma vez, sem passar pelo cabeçalho de citação.
+     if 'apoio' in c:
+      assert initial.count(c['apoio'])==1
+      assert page.locator('.cartao > .cita').count()==0
      assert page.locator('[data-tipo-ext]').evaluate('(e)=>e.getAnimations({subtree:true}).length')==0
      assert not page.evaluate('document.documentElement.scrollWidth>innerWidth+1'),(c['t'],width)
      if c['t']=='lacunas' and width==320:assert page.locator('.tm-banco').bounding_box()['height']<=150

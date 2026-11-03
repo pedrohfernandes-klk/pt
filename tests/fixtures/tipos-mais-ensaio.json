@@ -51,7 +51,7 @@
   {
     "t": "montar",
     "p": "Transforma a afirmação em negativa.",
-    "cita": "Frase criada: Vi-o ontem.",
+    "apoio": "Frase criada: Vi-o ontem.",
     "blocos": [
       "não",
       "o",
@@ -115,7 +115,7 @@
   {
     "t": "razao",
     "p": "Que leitura se sustenta, e com que indício?",
-    "cita": "Texto criado: Recusei o convite. Agora ouço a música da festa.",
+    "apoio": "Texto criado: Recusei o convite. Agora ouço a música da festa.",
     "itens": [
       "Quem fala escolheu ficar de fora.",
       "Quem fala foi posto de parte."

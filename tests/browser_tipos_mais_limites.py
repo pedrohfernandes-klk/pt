@@ -57,5 +57,12 @@ def main():
   assert page.locator('.tm-banco').evaluate('(e)=>e.style.position')=='static'
   assert page.locator('.tm-banco').evaluate('(e)=>e.parentElement.classList.contains("tm-texto")')
   page.keyboard.press('Escape');assert page.locator('[data-espaco="0"]').evaluate('(e)=>e===document.activeElement')
-  print('PASS banco em ecrã baixo e Escape',flush=True);page.close();b.close()
+  print('PASS banco em ecrã baixo e Escape',flush=True);page.close()
+  # 03/11/2026: o motor já apresenta cita; o tipo não a pode duplicar.
+  c=copy.deepcopy(CARDS[2]);c.pop('apoio');c['cita']='Passagem de ensaio para verificar a apresentação.'
+  page=b.new_page();page.route('**/*',router(c));page.goto('https://f2.test/ensaio/')
+  assert page.locator('.cartao').inner_text().count(c['cita'])==1
+  page.emulate_media(media='print')
+  assert page.locator('.cartao').inner_text().count(c['cita'])==1
+  print('PASS citação única no ecrã e na impressão',flush=True);page.close();b.close()
 if __name__=='__main__':main()

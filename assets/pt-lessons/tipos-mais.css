@@ -52,6 +52,7 @@ html.epi-projection [data-tipo-ext] .tm-blocos button,html.epi-projection [data-
  .jogo [data-tipo-ext]:has(.tm-impressao)>:not(.tm-impressao){display:none!important}
  .jogo [data-tipo-ext] .tm-impressao{display:block!important;color:var(--tinta)}
  .jogo .cartao:has(.tm-impressao) .f-rev{display:none!important}
+ .jogo .cartao:has(.tm-impressao)>.cita{display:none!important}
 }
 
 html.epi-projection [data-tipo-ext] .dica,html.epi-projection [data-tipo-ext] .tm-conta,html.epi-projection [data-tipo-ext] .tm-passo,html.epi-projection [data-tipo-ext] .tm-credito,
