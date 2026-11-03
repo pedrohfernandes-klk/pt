@@ -1,5 +1,17 @@
 # F2: preparação para revisão
 
+## Revisão F2-03, 03/11/2026
+
+O lançador real de projeção aumenta a letra através da moldura e do CSS injetado. O ensaio anterior com `?projetar=1` não exercitava essa composição. Na cabeça `929cafe2`, a coluna automática da casca chegou a 384,42 px numa moldura de 320 px; o `overflow-x:hidden` do corpo ocultava o excesso sem aumentar o `scrollWidth` do documento.
+
+A correção em `assets/pt-lessons/lesson.css` restringe a coluna projetada com `minmax(0,1fr)` e os filhos com `min-width:0`. O topo e as ações podem repartir-se por linhas; os botões conservam o texto e os alvos, limitando a largura e permitindo quebra. Não se acrescenta ocultação de conteúdo nem se modifica o motor. As regras só se aplicam a `html.epi-projection`, incluindo as lições anteriores. O diff do #168 consultado não incluía estes estilos; não se alterou esse ramo.
+
+O novo `tests/browser_tipos_mais_projecao.py`, incluído no CI F2, abre `/pt/projetar/` e a sua moldura real. Abrange os seis tipos e uma atividade da lição M1-F01, a 320, 390 e 1366 px, nos temas claro e escuro: 42 contextos, cada um antes e depois de mostrar a resposta. Mede caixas e retângulos do texto contra a área visível e os antepassados que recortam, além do `scrollWidth`; exige ações dentro da altura visível e alvos de pelo menos 44 px. Confirma também a preservação do armazenamento e a ausência de erros JavaScript. A nova prova falhou antes da correção nas caixas e no texto recortados de Lacunas.
+
+As capturas e medidas locais ficam em `f2-projecao-real-antes/` e `f2-projecao-real-corrigida/`, junto da cópia de trabalho. São provas de ensaio, não páginas ou materiais publicados. Mantêm-se os testes anteriores e os caminhos reservados às outras equipas.
+
+Validação concluída: 42 contextos na moldura real, 84 estados medidos, 72 cenários F2 anteriores e 14 casos limite aprovados. Inspeção visual por amostragem: início dos seis tipos a 320 px, retorno de Corrigir a 320 px, Lacunas a 1366 px e M1-F01 a 320/390 px, incluindo claro e escuro. Não se apresenta esta amostragem como inspeção individual das 84 capturas. CI e confirmação independente da revisão ainda pendentes.
+
 ## Revisão F2-01, 03/11/2026
 
 A repetição de `montar` corrigia pela posição zero e rejeitava uma rotação expressamente declarada em `aceita`. Cada opção conserva agora sequência, texto e validade calculada contra todas as ordens aceites. A deduplicação mantém o texto e dá preferência à sequência válida quando coincide; a pontuação declarada e o banco original ficam preservados. O pedido passa a escolher uma forma válida, sem pressupor que existe apenas uma.

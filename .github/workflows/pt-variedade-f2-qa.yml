@@ -29,5 +29,7 @@ jobs:
           python tests/browser_tipos_mais_contrato.py
           python tests/browser_tipos_mais.py
           python tests/browser_tipos_mais_limites.py
+          # 03/11/2026: F2-03, lançador real, caixas e texto nos dois temas.
+          python tests/browser_tipos_mais_projecao.py
           python tests/browser_tipos_mais_sequencia.py
           python tests/browser_cartoes_papel.py

@@ -73,6 +73,11 @@ html.com-casca,html.com-casca body{height:100%;overflow:hidden;overscroll-behavi
 html.com-casca body{margin:0}
 .casca{position:fixed;inset:0;display:grid;grid-template-rows:auto auto minmax(0,1fr) auto;height:100vh;height:var(--vh,100dvh);background:var(--fundo,#f3f2ee);color:var(--tinta,#000);z-index:10;font-family:Arial,Helvetica,sans-serif}
 .casca.sobreposta{z-index:40}
+/* 03/11/2026: F2-03, a coluna projetada cabe na moldura; as ações repartem-se sem recortar texto. */
+html.epi-projection .casca{grid-template-columns:minmax(0,1fr)}
+html.epi-projection .casca>*,html.epi-projection .casca-corpo>*{min-width:0}
+html.epi-projection .casca-topo,html.epi-projection .casca-acoes{flex-wrap:wrap}
+html.epi-projection .casca-acoes .c-prim,html.epi-projection .casca-acoes .c-sec{max-width:100%;white-space:normal}
 .casca .casca-faixa{position:static;grid-row:1}.casca>.casca-topo{grid-row:2}.casca>.casca-corpo{grid-row:3}.casca>.casca-acoes{grid-row:4}
 .casca-topo{display:flex;align-items:center;gap:4px;width:100%;max-width:var(--col);margin:0 auto;box-sizing:border-box;min-height:48px;padding:max(2px,env(safe-area-inset-top)) max(6px,env(safe-area-inset-right)) 2px max(10px,env(safe-area-inset-left))}
 .c-marca{font:700 .74rem/1 Arial;letter-spacing:.12em;text-transform:uppercase;color:var(--suave,#444);white-space:nowrap;flex:none;text-decoration:none;display:inline-flex;align-items:center;min-height:44px;padding:0 4px;margin:0 -4px}.c-casa{width:15px;height:15px;margin-right:5px;flex:none;fill:none;stroke:currentColor;stroke-width:1.9;stroke-linejoin:round;stroke-linecap:round}.c-marca:hover{color:var(--tinta,#000);text-decoration:underline}
