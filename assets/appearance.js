@@ -146,3 +146,17 @@
   if (doc.readyState === 'loading') doc.addEventListener('DOMContentLoaded', ready, {once: true});
   else ready();
 }(window, document));
+
+/* 03/11/2026: camada de apoios só onde existe acesso docente; a falha mantém o acesso original. */
+(function(){
+  var script=document.currentScript;
+  if(!script||!script.src)return;
+  var source=new URL('apoios-paginas.js?v=20261103-1',script.src).href;
+  function ready(){
+    if(document.querySelector('.cz-dock,[data-apoios-paginas]'))return;
+    var eligible=Array.from(document.querySelectorAll('a[href]')).some(function(a){return a.classList.contains('teacher-access')||a.getAttribute('href').includes('/docente/')||/^Para o docente(?:\s|:|$)/i.test(a.textContent.trim());});
+    if(!eligible)return;
+    var asset=document.createElement('script');asset.src=source;document.head.appendChild(asset);
+  }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',ready,{once:true});else ready();
+}());

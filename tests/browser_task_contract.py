@@ -305,11 +305,16 @@ def responsive_task_matrix(browser, host):
                     before = learning_storage(page)
                     assert_task_page(page, before)
                     assert_reader_navigation(page)
-                    buoy = page.locator('.teacher-access')
+                    # 03/11/2026: o acesso existente passa à boia comum, com o mesmo destino.
+                    buoy = page.locator('.pt-apoios > summary')
+                    buoy.wait_for(state='visible')
                     assert buoy.count() == 1 and buoy.is_visible()
                     buoy.focus()
                     assert buoy.evaluate('e=>e===document.activeElement')
-                    assert 'lente/docente/' in buoy.get_attribute('href')
+                    buoy.press('Enter')
+                    assert page.locator('.pt-apoios nav a[href*="/docente/"]').is_visible()
+                    buoy.press('Escape')
+                    assert buoy.evaluate('e=>e===document.activeElement')
                     launcher = page.locator('.epi-projection-launcher')
                     if not launcher.is_visible():
                         page.locator('[data-c-menu]').focus(); page.locator('[data-c-menu]').press('Enter')
@@ -388,7 +393,9 @@ def grelha_pages(browser, host):
             link = open_task_card(page, 'a[href="grelha/"]')
             link.click(); page.wait_for_url('**/tarefas/' + slug + '/grelha/')
             if pasta == 'correcao':
-                page.locator('footer a[href="../correcao/"]').click(); page.wait_for_url('**/tarefas/' + slug + '/correcao/')
+                # 03/11/2026: a correção conserva o endereço e abre agora pela boia.
+                page.locator('.pt-apoios > summary').click()
+                page.locator('.pt-apoios a[href="../correcao/"]').click(); page.wait_for_url('**/tarefas/' + slug + '/correcao/')
             page.locator('.g-nav a', has_text=texto).click()
             page.wait_for_url(re.compile('/tarefas/' + slug + '/#entregar$'))
             page.locator('[data-task-reader].task-reader-ready').wait_for()

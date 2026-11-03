@@ -42,8 +42,9 @@ try:
    # 03/11/2026: no piloto M4 os materiais abrem dentro dos recursos nativos.
    if page.locator('.m4-recursos:not([open])').count():
        page.locator('.m4-recursos > summary').click()
-   page.locator('.route-teacher-tools > summary').click()
-   page.locator('.route-teacher-tools a[href="?arquivo=1#arquivo-percurso"]').click()
+   # 03/11/2026: abrir o mesmo arquivo pelo acesso docente recolhido na boia.
+   page.locator('.pt-apoios > summary').click()
+   page.locator('.pt-apoios a[href="?arquivo=1#arquivo-percurso"]').click()
    page.wait_for_url('**/?arquivo=1#arquivo-percurso')
    archive=page.locator('#arquivo-percurso')
    assert archive.is_visible() and '<img src=x>' in archive.inner_text()
