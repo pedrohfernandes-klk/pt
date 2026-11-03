@@ -25,6 +25,16 @@ def main():
   assert page.evaluate('confirmacoes')==7
   print('PASS seis tipos em sequência, sete confirmações exatas',flush=True);page.close()
   c=CARDS[-1];page=b.new_page(viewport={'width':390,'height':900});page.route('**/*',router(c));page.goto('https://f2.test/ensaio/')
+  # 03/11/2026: F2-02, concordância exata em 0/1/2 seleções, sem mudar a confirmação.
+  for index,count in ((0,1),(2,2),(2,1),(0,0)):
+   page.locator(f'[data-palavra="{index}"]').click()
+   message=f'Marcaste {count} '+('palavra.' if count==1 else 'palavras.')
+   assert page.locator('.tm-conta').inner_text()==message
+   assert page.locator('.tm-viva').inner_text()==message
+   assert page.locator('[data-palavra][aria-pressed="true"]').count()==count
+   assert page.locator('[data-confirmar]').is_enabled()==(count>0)
+  assert page.evaluate('JSON.stringify(CARTOES)===antes')
+  print('PASS concordância e confirmação: 0, 1 e 2 palavras',flush=True)
   for i in (0,2,5):page.locator(f'[data-palavra="{i}"]').click()
   page.locator('[data-confirmar]').click()
   for e in c['erros']:page.locator(f'[name="c-{c["id"]}-{e["em"]}"][value="{e["c"]}"]').check()
