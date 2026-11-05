@@ -1,0 +1,250 @@
+[
+ {
+  "ficheiro": "m4/recursos/tpc-entrada.js",
+  "local": "M4-F28 C13, retorno da opção 2",
+  "antigo": "Relê a expressão «não me deixam gozar»:",
+  "novo": "Relê a expressão «me não deixaram gozar»:",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: revisão de 5/11 (pt-conteudos-lote2-1: a citação de Frei Luís de Sousa como está no texto)."
+ },
+ {
+  "ficheiro": "assets/ampliar-documentos.js",
+  "local": "Legenda do leitor ampliado: só o texto visível, com espaço entre parágrafos",
+  "antigo": "function legendaDe(img){var f=img.closest(\"figure\");if(f){var c=f.querySelector(\"figcaption\");if(c)return c.textContent.replace(/\\s+/g,\" \").trim()}return img.getAttribute(\"data-legenda\")||img.alt||\"\"}",
+  "novo": "function legendaDe(img){var f=img.closest(\"figure\");if(f){var c=f.querySelector(\"figcaption\");if(c){var k=c.cloneNode(true);[].forEach.call(k.querySelectorAll(\"details,table,summary,caption\"),function(n){n.parentNode.removeChild(n)});[].forEach.call(k.querySelectorAll(\"p,br,li\"),function(n){n.parentNode.insertBefore(document.createTextNode(\" \"),n)});return k.textContent.replace(/\\s+/g,\" \").trim()}}return img.getAttribute(\"data-legenda\")||img.alt||\"\"}",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: revisão de 5/11 (pt-conteudos-lote2-2: sem a tabela de créditos escondida nem parágrafos colados)."
+ },
+ {
+  "ficheiro": "assets/ampliar-documentos.js",
+  "local": "A função da legenda fica disponível fora do leitor",
+  "antigo": "window.EPIAmpliar={abre:abre,fecha:fecha,rotulo:rotuloAmpliar}})();",
+  "novo": "window.EPIAmpliar={abre:abre,fecha:fecha,rotulo:rotuloAmpliar,legenda:legendaDe}})();",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: revisão de 5/11 (pt-conteudos-lote2-2)."
+ },
+ {
+  "ficheiro": "assets/ampliar-documentos.js",
+  "local": "Documentos: a ligação usa a mesma legenda",
+  "antigo": "EPIAmpliar.abre(img,f.querySelector(\"figcaption\").textContent,a)",
+  "novo": "EPIAmpliar.abre(img,EPIAmpliar.legenda?EPIAmpliar.legenda(img):f.querySelector(\"figcaption\").textContent,a)",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: revisão de 5/11 (pt-conteudos-lote2-2)."
+ },
+ {
+  "ficheiro": "m4/aulas/aula-01/index.html",
+  "local": "«O que se entrega»: a pergunta de produção da lição (C17)",
+  "antigo": "Com a palavra alegoria e uma citação do texto entre aspas.",
+  "novo": "Explica a alegoria, cita a expressão que mostra o que muda e distingue essa mudança de uma desistência da doutrina.",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: revisão de 5/11 (pt-conteudos-lote2-3: a mesma pergunta de produção na lição e no guião)."
+ },
+ {
+  "ficheiro": "m4/aulas/aula-01/index.html",
+  "local": "«Em papel» do minuto a minuto",
+  "antigo": "A resposta que se entrega: quatro a seis linhas, com a palavra alegoria e uma citação do texto entre aspas.",
+  "novo": "A resposta que se entrega: quatro a seis linhas: explica a alegoria, cita a expressão que mostra o que muda e distingue essa mudança de uma desistência da doutrina.",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: revisão de 5/11 (pt-conteudos-lote2-3)."
+ },
+ {
+  "ficheiro": "m1/aulas/aula-10/index.html",
+  "local": "«O que se entrega»: a pergunta de produção da lição (C16)",
+  "antigo": "Com uma informação explícita e uma inferência, cada uma com a sua citação entre aspas.",
+  "novo": "Distingue uma informação explícita de uma inferência, cita a pista que a sustenta e explica o que essa pista não permite concluir.",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: revisão de 5/11 (pt-conteudos-lote2-4: a mesma pergunta de produção na lição e no guião)."
+ },
+ {
+  "ficheiro": "m1/aulas/aula-10/index.html",
+  "local": "«Em papel» do minuto a minuto",
+  "antigo": "A resposta que se entrega: cinco linhas, com uma informação explícita e uma inferência, cada uma com a sua citação entre aspas.",
+  "novo": "A resposta que se entrega: cinco linhas: distingue uma informação explícita de uma inferência, cita a pista que a sustenta e explica o que essa pista não permite concluir.",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: revisão de 5/11 (pt-conteudos-lote2-4)."
+ },
+ {
+  "ficheiro": "m9/painel-m9-f13/index.html",
+  "local": "Estilo da secção com o identificador novo, sem noindex (como os outros 116 painéis)",
+  "antigo": "<style id=\"conteudos-medicao\">h1{font-size:39px}h2{font-size:31px}h3{font-size:25px}h1,h2,h3{text-wrap:balance}h2,h3{line-height:1.2}.medicao-tabela{max-width:100%;overflow-x:auto}#medicao-piloto table{width:100%;border-collapse:collapse;font:13px/1.5 Arial,sans-serif}#medicao-piloto th,#medicao-piloto td{border:1px solid currentColor;padding:8px;text-align:left;vertical-align:top}@media print{#medicao-piloto{break-before:page}#medicao-piloto h3,#medicao-piloto h3+p{break-after:avoid}#medicao-piloto ol,#medicao-piloto .medicao-tabela{break-inside:avoid}.medicao-tabela{overflow:visible}}</style><meta name=\"robots\" content=\"noindex\">",
+  "novo": "<style id=\"conteudos-medicao\">h1{font-size:39px}h2{font-size:31px}h3{font-size:25px}h1,h2,h3{text-wrap:balance}h2,h3{line-height:1.2}.medicao-tabela{max-width:100%;overflow-x:auto}#medicao table{width:100%;border-collapse:collapse;font:13px/1.5 Arial,sans-serif}#medicao th,#medicao td{border:1px solid currentColor;padding:8px;text-align:left;vertical-align:top}@media print{#medicao{break-before:page}#medicao h3,#medicao h3+p{break-after:avoid}#medicao ol,#medicao .medicao-tabela{break-inside:avoid}.medicao-tabela{overflow:visible}}</style>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: revisão de 5/11 (pt-conteudos-lote2-5: decisão 114, versões finais, sem noindex nem linguagem de piloto)."
+ },
+ {
+  "ficheiro": "m9/painel-m9-f13/index.html",
+  "local": "Secção «medicao»",
+  "antigo": "<section id=\"medicao-piloto\">",
+  "novo": "<section id=\"medicao\">",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: revisão de 5/11 (pt-conteudos-lote2-5)."
+ },
+ {
+  "ficheiro": "m9/painel-m9-f13/index.html",
+  "local": "Procedimento praticável por um só docente",
+  "antigo": "Antes de usar, dois revisores classificam o mesmo pequeno conjunto de respostas de exemplo e resolvem as divergências.",
+  "novo": "Antes de usar, aplica a grelha a três respostas de exemplo e regista as dúvidas.",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: revisão de 5/11 (pt-conteudos-lote2-5: o protocolo cabe a um só docente)."
+ },
+ {
+  "ficheiro": "m1/index.html",
+  "local": "Desafio do arquivo: a extensão atual da crónica",
+  "antigo": "\"p\":\"Que peso tem a tarefa da unidade 2 e que extensão tinha a crónica preparada na F10?\",\"frase\":\"A tarefa da unidade 2 vale [1]. A preparação da F10 propunha [2] palavras; na aula de tarefa, segue a extensão do enunciado atual.\",\"lacunas\":[{\"o\":[\"25 %\",\"30 %\",\"35 %\"],\"c\":1},{\"o\":[\"80 a 120\",\"180 a 240\",\"250 a 300\"],\"c\":2}],\"f\":\"A tarefa da unidade 2 vale 30 %. A preparação da F10 propunha 250 a 300 palavras; a tarefa atual pede uma crónica de 160 a 200 palavras, além do núcleo comum.\"",
+  "novo": "\"p\":\"Que peso tem a tarefa da unidade 2 e que extensão pede a crónica?\",\"frase\":\"A tarefa da unidade 2 vale [1] e a crónica tem [2] palavras, além do núcleo comum.\",\"lacunas\":[{\"o\":[\"25 %\",\"30 %\",\"35 %\"],\"c\":1},{\"o\":[\"120 a 160\",\"160 a 200\",\"250 a 300\"],\"c\":1}],\"f\":\"A tarefa da unidade 2 vale 30 %. A crónica da aula de tarefa tem 160 a 200 palavras; os 250 a 300 eram da preparação da F10.\"",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: revisão de 5/11 (pt-conteudos-lote2-6: o aluno recorda a extensão que a tarefa avaliada pede)."
+ },
+ {
+  "ficheiro": "m8/licao-m8-f12/index.html",
+  "local": "M8-F12 C09: o exemplo entre aspas",
+  "antigo": "Exemplo criado: Todas as manhãs, relia a carta. Que valor aspetual destaca a expressão inicial?",
+  "novo": "Exemplo criado: «Todas as manhãs, relia a carta.» Que valor aspetual destaca «todas as manhãs»?",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: revisão de 5/11 (pt-conteudos-lote2-7: o exemplo distingue-se do enunciado; igual nas quatro cópias)."
+ },
+ {
+  "ficheiro": "m8/index.html",
+  "local": "M8-F12 C09: o exemplo entre aspas",
+  "antigo": "Exemplo criado: Todas as manhãs, relia a carta. Que valor aspetual destaca a expressão inicial?",
+  "novo": "Exemplo criado: «Todas as manhãs, relia a carta.» Que valor aspetual destaca «todas as manhãs»?",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: revisão de 5/11 (pt-conteudos-lote2-7: o exemplo distingue-se do enunciado; igual nas quatro cópias)."
+ },
+ {
+  "ficheiro": "m8/painel-m8-f12/index.html",
+  "local": "M8-F12 C09: o exemplo entre aspas",
+  "antigo": "Exemplo criado: Todas as manhãs, relia a carta. Que valor aspetual destaca a expressão inicial?",
+  "novo": "Exemplo criado: «Todas as manhãs, relia a carta.» Que valor aspetual destaca «todas as manhãs»?",
+  "ocorrencias": 2,
+  "achado": "05/11/2026: revisão de 5/11 (pt-conteudos-lote2-7: o exemplo distingue-se do enunciado; igual nas quatro cópias)."
+ },
+ {
+  "ficheiro": "m7/index.html",
+  "local": "Pesos na dobra do índice: o título da tarefa da U2",
+  "antigo": "tarefa da Unidade 2 (a ideia de heterónimo), 35 %",
+  "novo": "tarefa da Unidade 2 («Uma ideia de heterónimo»), 35 %",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: revisão de 5/11 (pt-conteudos-lote2-8: o título como na tarefa)."
+ },
+ {
+  "ficheiro": "m1/licao-m1-f20/index.html",
+  "local": "M1-F20 C09: a opção certa concreta",
+  "antigo": "\"A rapidez e a direção comum fazem a multidão agir como uma figura.\"",
+  "novo": "\"A rapidez e a direção comum fazem a multidão agir como um só corpo.\"",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: revisão de 5/11 (pt-conteudos-lote2-9: a opção diz o que o retorno ensina)."
+ },
+ {
+  "ficheiro": "m3/licao-m3-f02/index.html",
+  "local": "M3-F02 C22: a frase sem a pista da resposta",
+  "antigo": "no _Kit_, o disco que repete põe em causa a [2].",
+  "novo": "no _Kit_, o disco põe em causa a [2].",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: revisão de 5/11 (pt-conteudos-lote2-10: acerta-se lendo a obra, não pela forma)."
+ },
+ {
+  "ficheiro": "m3/licao-m3-f02/index.html",
+  "local": "M3-F02 C22: opções paralelas",
+  "antigo": "\"repetição dos relatos\"",
+  "novo": "\"repetição desses relatos\"",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: revisão de 5/11 (pt-conteudos-lote2-10)."
+ },
+ {
+  "ficheiro": "m3/licao-m3-f02/index.html",
+  "local": "M3-F02 C22: distrator que não deixa a certa mais longa",
+  "antigo": "\"extinção desses relatos\"",
+  "novo": "\"esquecimento desses relatos\"",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: revisão de 5/11 (pt-conteudos-lote2-10: com as opções paralelas, a certa ficava a mais longa; o distrator novo repõe o equilíbrio)."
+ },
+ {
+  "ficheiro": "m3/painel-m3-f02/index.html",
+  "local": "M3-F02 C22: a frase sem a pista da resposta",
+  "antigo": "no _Kit_, o disco que repete põe em causa a [2].",
+  "novo": "no _Kit_, o disco põe em causa a [2].",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: revisão de 5/11 (pt-conteudos-lote2-10: acerta-se lendo a obra, não pela forma)."
+ },
+ {
+  "ficheiro": "m3/painel-m3-f02/index.html",
+  "local": "M3-F02 C22: opções paralelas",
+  "antigo": "\"repetição dos relatos\"",
+  "novo": "\"repetição desses relatos\"",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: revisão de 5/11 (pt-conteudos-lote2-10)."
+ },
+ {
+  "ficheiro": "m3/painel-m3-f02/index.html",
+  "local": "M3-F02 C22: distrator que não deixa a certa mais longa",
+  "antigo": "\"extinção desses relatos\"",
+  "novo": "\"esquecimento desses relatos\"",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: revisão de 5/11 (pt-conteudos-lote2-10: com as opções paralelas, a certa ficava a mais longa; o distrator novo repõe o equilíbrio)."
+ },
+ {
+  "ficheiro": "index.html",
+  "local": "Importação: o recurso dos acrescentos é opcional",
+  "antigo": "var n=0,novos=0,lotesAntes={};",
+  "novo": "var n=0,novos=0,lotesAntes={},EA=window.EPIAcrescentos;",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: revisão de 5/11 (pt-creditos-variedade-2: sem acrescentos.js, a fusão volta às regras anteriores em vez de ignorar o ficheiro)."
+ },
+ {
+  "ficheiro": "index.html",
+  "local": "Importação: acrescentos só com o recurso carregado",
+  "antigo": "var a=JSON.parse(raw),b=EPIAcrescentos.protegerImportacao(a,",
+  "novo": "if(!EA)return;var a=JSON.parse(raw),b=EA.protegerImportacao(a,",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: revisão de 5/11 (pt-creditos-variedade-2)."
+ },
+ {
+  "ficheiro": "index.html",
+  "local": "Importação: lotes antes só com o recurso carregado",
+  "antigo": "if(lotesAntes[k])try{v=JSON.stringify(EPIAcrescentos.protegerImportacao(",
+  "novo": "if(EA&&lotesAntes[k])try{v=JSON.stringify(EA.protegerImportacao(",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: revisão de 5/11 (pt-creditos-variedade-2)."
+ },
+ {
+  "ficheiro": "index.html",
+  "local": "Importação: fusão com o recurso, ou sem ele pelas regras anteriores",
+  "antigo": "A=EPIAcrescentos.protegerImportacao(A,d.registos[k+\"-acrescentos\"]||null,lotesAntes[k]);",
+  "novo": "if(EA)A=EA.protegerImportacao(A,d.registos[k+\"-acrescentos\"]||null,lotesAntes[k]);",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: revisão de 5/11 (pt-creditos-variedade-2)."
+ },
+ {
+  "ficheiro": "assets/pt-lessons/casca.js",
+  "local": "Ajuda «Como se faz»: guarda o foco de onde se veio",
+  "antigo": "function abrirComo(ch){var s=document.createElement(\"div\");",
+  "novo": "function abrirComo(ch){var antes=document.activeElement,s=document.createElement(\"div\");",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: revisão de 5/11 (pt-creditos-variedade-3: o foco volta ao «?» ao fechar)."
+ },
+ {
+  "ficheiro": "assets/pt-lessons/casca.js",
+  "local": "Ajuda «Como se faz»: diálogo modal",
+  "antigo": "<div class=\"cx\" role=\"dialog\" aria-label=\"Como se faz\">",
+  "novo": "<div class=\"cx\" role=\"dialog\" aria-modal=\"true\" aria-label=\"Como se faz\">",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: revisão de 5/11 (pt-creditos-variedade-3)."
+ },
+ {
+  "ficheiro": "assets/pt-lessons/casca.js",
+  "local": "Ajuda «Como se faz»: ao fechar, o foco volta",
+  "antigo": "var f=function(){if(s.parentNode)s.parentNode.removeChild(s);document.removeEventListener(\"keydown\",k)}",
+  "novo": "var f=function(){if(s.parentNode)s.parentNode.removeChild(s);document.removeEventListener(\"keydown\",k);if(antes&&antes.focus&&document.contains(antes))try{antes.focus({preventScroll:true})}catch(e){}}",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: revisão de 5/11 (pt-creditos-variedade-3)."
+ },
+ {
+  "ficheiro": "assets/pt-lessons/casca.js",
+  "local": "Ajuda «Como se faz»: o Tab fica dentro do diálogo",
+  "antigo": "k=function(ev){if(ev.key===\"Escape\"){ev.stopPropagation();f()}}",
+  "novo": "k=function(ev){if(ev.key===\"Escape\"){ev.stopPropagation();f()}else if(ev.key===\"Tab\"){var L=[].slice.call(s.querySelectorAll(\"button,a[href],video[controls]\"));if(!L.length)return;var a0=L[0],z=L[L.length-1],at=document.activeElement;if(!s.contains(at)){ev.preventDefault();a0.focus()}else if(ev.shiftKey&&at===a0){ev.preventDefault();z.focus()}else if(!ev.shiftKey&&at===z){ev.preventDefault();a0.focus()}}}",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: revisão de 5/11 (pt-creditos-variedade-3)."
+ }
+]

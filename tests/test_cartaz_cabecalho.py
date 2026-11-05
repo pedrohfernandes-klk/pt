@@ -7,6 +7,9 @@ from collections import Counter
 import subprocess
 import sys
 import unittest
+# 05/11/2026: a revisão de 5/11 está por cima do cabeçalho.
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from auditoria_20261028 import undo_revisao_0511
 
 ROOT = Path(__file__).resolve().parents[1]
 MANIFEST = ROOT / 'tests/fixtures/cartaz-cabecalho-edits-20261103.json'
@@ -19,7 +22,8 @@ class CabecalhoCartaz(unittest.TestCase):
         self.assertEqual(set(manifest['files']), {'index.html'})
         record = manifest['files']['index.html']
         self.assertEqual(len(record['edits']), 3)
-        current = (ROOT / 'index.html').read_text('utf-8')
+        # 05/11/2026: a revisão de 5/11 (por cima) desfaz-se primeiro, com contagem estrita; o resto fica igual.
+        current = undo_revisao_0511('index.html', (ROOT / 'index.html').read_text('utf-8'))
         original = current
         for edit in reversed(record['edits']):
             self.assertEqual(original.count(edit['new']), edit['occurrences'])
@@ -38,7 +42,8 @@ class CabecalhoCartaz(unittest.TestCase):
         self.assertIn('Grafismo gerado com recurso a IA', original)
 
     def test_gerador_idempotente(self):
-        result = subprocess.run([sys.executable, 'scripts/aplicar_trocas.py', 'scripts/cartaz_cabecalho_20261103.json', '--manifesto', str(MANIFEST), '--verificar'], cwd=ROOT, capture_output=True)
+        # 05/11/2026: a revisão de 5/11 (por cima) desfaz-se antes de conferir o cabeçalho; a conferência fica igual.
+        result = subprocess.run([sys.executable, 'scripts/aplicar_trocas.py', 'scripts/cartaz_cabecalho_20261103.json', '--manifesto', str(MANIFEST), '--verificar', '--desfazer-antes', 'tests/fixtures/revisao-edits-20261105.json'], cwd=ROOT, capture_output=True)
         self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
 
     def test_css_sem_motor_novo_nem_imposicoes(self):

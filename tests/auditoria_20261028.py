@@ -287,7 +287,20 @@ _VARREDURA_FILES = json.loads(VARREDURA_MANIFEST.read_text('utf-8'))['files']
 # 03/11/2026: reversao estrita da abertura, antes dos creditos.
 _CABECALHO = json.loads((ROOT/'tests/fixtures/cartaz-cabecalho-edits-20261103.json').read_text('utf-8'))['files']
 
+# 05/11/2026: revisão de 5/11, camada mais recente: desfaz-se antes do cabeçalho, com contagem estrita.
+_REVISAO_0511 = json.loads((ROOT/'tests/fixtures/revisao-edits-20261105.json').read_text('utf-8'))['files']
+
+def undo_revisao_0511(path, text):
+    for edit in reversed(_REVISAO_0511.get(_relative(path), {}).get('edits', [])):
+        if text.count(edit['new']) != edit['occurrences']:
+            raise AssertionError(f"Revisão de 5/11 não confere: {path}: {edit['location']}")
+        text = text.replace(edit['new'], edit['old'])
+    return text
+
+
 def undo_cabecalho(path, text):
+    # 05/11/2026: primeiro a revisão de 5/11, que está por cima.
+    text = undo_revisao_0511(path, text)
     for edit in reversed(_CABECALHO.get(_relative(path), {}).get('edits', [])):
         if text.count(edit['new']) != edit['occurrences']:
             raise AssertionError(f"Cabeçalho não confere: {path}: {edit['location']}")

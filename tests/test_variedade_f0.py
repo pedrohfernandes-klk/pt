@@ -35,7 +35,8 @@ class F0(unittest.TestCase):
             self.assertEqual(hashlib.sha256(undo_variedade_f0(rel,now).encode()).hexdigest(),r['base_sha256_lf'],rel)
 
     def test_verificador_confere_a_camada(self):
-        r=subprocess.run([sys.executable,'scripts/aplicar_trocas.py','scripts/variedade_f0_20261102.json','--manifesto','tests/fixtures/variedade-f0-edits-20261102.json','--verificar','--desfazer-antes','tests/fixtures/cartaz-cabecalho-edits-20261103.json'],cwd=ROOT,capture_output=True,text=True,encoding='utf-8')
+        # 05/11/2026: a revisão de 5/11 desfaz-se primeiro; as conferências ficam iguais.
+        r=subprocess.run([sys.executable,'scripts/aplicar_trocas.py','scripts/variedade_f0_20261102.json','--manifesto','tests/fixtures/variedade-f0-edits-20261102.json','--verificar','--desfazer-antes','tests/fixtures/revisao-edits-20261105.json','--desfazer-antes','tests/fixtures/cartaz-cabecalho-edits-20261103.json'],cwd=ROOT,capture_output=True,text=True,encoding='utf-8')
         self.assertEqual(r.returncode,0,r.stdout+r.stderr)
 
 

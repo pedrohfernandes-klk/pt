@@ -20,7 +20,7 @@ x.onclick=fecha;ov.addEventListener("click",function(e){if(e.target===ov)fecha()
 // o resto da página fica inerte (nem foco nem leitor de ecrã) enquanto a imagem está aberta
 fundo=[];[].forEach.call(document.body.children,function(n){if(n!==ov&&!n.hasAttribute("inert")&&!/^(SCRIPT|STYLE|TEMPLATE|LINK)$/.test(n.nodeName)){n.setAttribute("inert","");fundo.push(n)}});
 document.documentElement.style.overflow="hidden";x.focus()}
-function legendaDe(img){var f=img.closest("figure");if(f){var c=f.querySelector("figcaption");if(c)return c.textContent.replace(/\s+/g," ").trim()}return img.getAttribute("data-legenda")||img.alt||""}
+function legendaDe(img){var f=img.closest("figure");if(f){var c=f.querySelector("figcaption");if(c){var k=c.cloneNode(true);[].forEach.call(k.querySelectorAll("details,table,summary,caption"),function(n){n.parentNode.removeChild(n)});[].forEach.call(k.querySelectorAll("p,br,li"),function(n){n.parentNode.insertBefore(document.createTextNode(" "),n)});return k.textContent.replace(/\s+/g," ").trim()}}return img.getAttribute("data-legenda")||img.alt||""}
 function elegivel(img){if(!img||img.tagName!=="IMG")return false;if(img.closest("a,button,.amp-ov,.ver-fig,.lp-img,.mf,.cavalo"))return false;if(img.classList.contains("sem-amp"))return false;if(!img.closest("figure")&&!img.hasAttribute("data-ampliar"))return false;return true}
 document.addEventListener("click",function(e){var img=e.target&&e.target.closest?e.target.closest("img"):null;if(!elegivel(img))return;e.preventDefault();abre(img,legendaDe(img),img)});
 // com a imagem aberta: Esc fecha só a imagem; Tab e Shift+Tab andam só dentro do diálogo (fase de captura, antes dos outros)
@@ -31,6 +31,6 @@ document.addEventListener("keydown",function(e){if(ov)return;if((e.key==="Enter"
 function marcar(r){var L=(r||document).querySelectorAll?(r||document).querySelectorAll("figure:not(.ver-fig) img,img[data-ampliar]"):[];for(var k=0;k<L.length;k++){var im=L[k];if(!elegivel(im))continue;if(!im.hasAttribute("tabindex"))im.setAttribute("tabindex","0");if(!im.hasAttribute("role"))im.setAttribute("role","button");if(!im.getAttribute("aria-label"))im.setAttribute("aria-label",rotuloAmpliar(im,legendaDe(im)))}}
 if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",function(){marcar()});else marcar();
 if(window.MutationObserver)new MutationObserver(function(ms){for(var i=0;i<ms.length;i++)for(var j=0;j<ms[i].addedNodes.length;j++){var n=ms[i].addedNodes[j];if(n.nodeType===1&&n!==ov)marcar(n)}}).observe(document.documentElement,{childList:true,subtree:true});
-window.EPIAmpliar={abre:abre,fecha:fecha,rotulo:rotuloAmpliar}})();
+window.EPIAmpliar={abre:abre,fecha:fecha,rotulo:rotuloAmpliar,legenda:legendaDe}})();
 // 02/11/2026: a ligação conserva o destino sem JS e abre o documento no diálogo com JS.
-document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest(".documento > a");if(!a||!window.EPIAmpliar)return;var img=a.querySelector("img"),f=a.closest("figure");if(!img)return;e.preventDefault();EPIAmpliar.abre(img,f.querySelector("figcaption").textContent,a)});
+document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest(".documento > a");if(!a||!window.EPIAmpliar)return;var img=a.querySelector("img"),f=a.closest("figure");if(!img)return;e.preventDefault();EPIAmpliar.abre(img,EPIAmpliar.legenda?EPIAmpliar.legenda(img):f.querySelector("figcaption").textContent,a)});
