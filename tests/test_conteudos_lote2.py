@@ -6,6 +6,8 @@ ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/'scripts'))
 from opcoes_equilibradas import medir
 from auditoria_20261028 import undo_conteudos_lote2, undo_m4_piloto
+# 05/11/2026: a revisão de 5/11 está por cima do lote 2.
+from auditoria_20261028 import undo_revisao_0511
 LOG=json.loads((ROOT/'docs/qa/conteudos-lote2-cartoes-20261101.json').read_text('utf-8'))
 
 def cards(text):
@@ -33,7 +35,8 @@ class Lote2(unittest.TestCase):
         self.assertTrue(all(n<=6 for n in counts.values()),counts)
         self.assertEqual(len(LOG),len({(x['licao'],x['cartao']) for x in LOG}))
         for x in LOG:
-            self.assertEqual(cards((ROOT/x['ficheiro']).read_text('utf-8'))[x['cartao']-1],x['depois'])
+            # 05/11/2026: o cartão do lote 2 confere-se por baixo da revisão de 5/11 (desfeita com contagem estrita).
+            self.assertEqual(cards(undo_revisao_0511(x['ficheiro'],(ROOT/x['ficheiro']).read_text('utf-8')))[x['cartao']-1],x['depois'])
             self.assertNotEqual(x['antes'],x['depois'])
     def test_opcoes_e_retornos_dos_cartoes_tocados(self):
         for x in LOG:

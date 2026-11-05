@@ -7,6 +7,8 @@ import sys
 
 ROOT=Path(__file__).resolve().parents[1]
 LAYERS=[
+ # 05/11/2026: revisão de 5/11, camada mais recente, por cima do cabeçalho.
+ ('revisao_20261105','revisao-edits-20261105'),
  # 02/11/2026: créditos de IA depois do lote 2 publicado.
  # 03/11/2026: abertura visual acima dos creditos publicados.
  ('cartaz_cabecalho_20261103','cartaz-cabecalho-edits-20261103'),

@@ -10,6 +10,8 @@ from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 # 01/11/2026: conferir o conteúdo pendente por baixo da camada visual dos índices.
 from auditoria_20261028 import undo_cartaz_indices, undo_conteudos_lote2
+# 05/11/2026: a revisão de 5/11 está por cima do lote 2; desfaz-se antes de conferir as trocas dele.
+from auditoria_20261028 import undo_revisao_0511
 
 # 01/11/2026: para depois do #144 e do #145.
 APROVADAS_CAMADA_149_20261101 = [{'ficheiro': 'm1/licao-m1-f20/index.html',
@@ -1284,7 +1286,8 @@ class Pendentes149(unittest.TestCase):
                 else:
                     applied=[x for x in layer if x['ficheiro']==e['ficheiro'] and x['antigo']==e['antigo']]
                     self.assertEqual(len(applied),1)
-                    self.assertIn(applied[0]['novo'],(ROOT/e['ficheiro']).read_text('utf-8'))
+                    # 05/11/2026: confere-se o lote 2 por baixo da revisão de 5/11 (desfeita com contagem estrita).
+                    self.assertIn(applied[0]['novo'],undo_revisao_0511(e['ficheiro'],(ROOT/e['ficheiro']).read_text('utf-8')))
         self.assertFalse((ROOT/'scripts/conteudos_lote1_20261101.json').exists())
         self.assertFalse((ROOT/'tests/fixtures/conteudos-lote1-edits-20261101.json').exists())
 

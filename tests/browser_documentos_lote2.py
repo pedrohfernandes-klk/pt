@@ -1,4 +1,5 @@
 """02/11/2026: regressão PT150-01, imagem inteira, zoom, teclado, foco e progresso."""
+import re
 from pathlib import Path
 from playwright.sync_api import sync_playwright
 from browser_licoes_20261101 import local, ROOT
@@ -20,6 +21,13 @@ def main():
                     link.focus();page.keyboard.press('Enter')
                     dialog=page.get_by_role('dialog');dialog.wait_for()
                     assert page.url==url
+                    # 05/11/2026: revisão de 5/11 (pt-conteudos-lote2-2): a legenda do leitor é só o texto visível, sem a tabela
+                    # escondida de créditos nem parágrafos colados.
+                    leg=dialog.locator('.amp-leg').inner_text()
+                    primeiro=page.evaluate('()=>document.querySelector("#baralho .documento figcaption > p").textContent.replace(/\\s+/g," ").trim()')
+                    assert leg.strip()==primeiro,(lesson,leg,primeiro)
+                    assert 'Créditos e fonte da imagem' not in leg and 'Identificação do documento visual' not in leg,(lesson,leg)
+                    assert dialog.locator('.amp-leg').evaluate('(e)=>e.scrollHeight<=e.clientHeight+1'),(lesson,'a legenda rola')
                     im=dialog.locator('img')
                     # 03/11/2026: aguarda a imagem recém-aberta; uma imagem inválida continua a falhar.
                     im.evaluate('(im)=>im.decode()')
