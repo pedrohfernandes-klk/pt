@@ -22,13 +22,16 @@ class TabelaMovimentos(unittest.TestCase):
   html=cards((ROOT/F10).read_text('utf-8'))[2]['html']
   self.assertIn('<h3>Os seis movimentos</h3><table class="apoio-tabela movimentos" role="table">',html)
   t=Tabela(html.split('<table',1)[1].split('</table>',1)[0])
-  self.assertEqual([c['text'] for c in t.rows[0]],['Letra','Movimento','Exemplo','Onde'])
+  self.assertEqual([c['text'] for c in t.rows[0]],['Letra','Movimento','Exemplo'])
   self.assertTrue(all(c['attrs']['scope']=='col' for c in t.rows[0]))
   self.assertEqual([r[0]['text'] for r in t.rows[1:]],['S','N','R','M','P','C'])
   for r in t.rows[1:]:
    self.assertEqual(r[0]['attrs']['scope'],'row')
-   self.assertEqual([c['attrs']['data-label'] for c in r[1:]],['Movimento','Exemplo','Onde'])
+   self.assertEqual([c['attrs']['data-label'] for c in r[1:]],['Movimento','Exemplo'])
+   # O poema e os versos ficam por baixo do exemplo, na linha pequena .mv-fonte.
+   self.assertTrue(r[2]['text'].strip())
    self.assertTrue(all(c['text'].strip() for c in r))
+  self.assertEqual(html.count('<small class="mv-fonte">'),6)
   # Os dois parágrafos que explicam a tarefa ficam depois da tabela, como estavam.
   self.assertIn('</table><p>R e C respondem a quem discorda',html)
  def test_o_texto_da_tabela_e_o_dos_paragrafos(self):
