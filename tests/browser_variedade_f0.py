@@ -36,6 +36,8 @@ def main():
                 assert page.locator('.casca-topo').bounding_box()['width']<=width+1
                 assert not page.evaluate('document.documentElement.scrollWidth>innerWidth+1')
                 page.keyboard.press('Escape');assert modal.count()==0
+                # 05/11/2026: revisão de 5/11 (pt-creditos-variedade-3): ao fechar, o foco volta ao «?» de onde se veio.
+                assert page.evaluate('!!document.activeElement&&document.activeElement.matches("[data-c-como]")')
                 assert page.evaluate('JSON.stringify(localStorage)')==before
                 assert not errors,errors
                 cases+=1;ctx.close()
@@ -76,6 +78,21 @@ def main():
         got=page.evaluate('JSON.parse(localStorage.getItem("licao-m4-f01"))')
         assert got=={'versao':'v','lida':True,'melhor':8,'tentativas':3},got
         print('PASS importação marca recebida sem tentativa, resultados locais preservados',flush=True)
+        ctx.close()
+        # 05/11/2026: revisão de 5/11 (pt-creditos-variedade-2): sem acrescentos.js (404), a importação funde pelas regras
+        # anteriores em vez de ignorar o ficheiro e dizer «Reposto».
+        def sem_acrescentos(route):
+            if route.request.url.split('?')[0].endswith('/assets/pt-lessons/acrescentos.js'):route.fulfill(status=404,body='Not found');return
+            local(route)
+        ctx=browser.new_context();page=ctx.new_page();page.route('**/*',sem_acrescentos)
+        page.goto('https://f0.test/pt/')
+        page.evaluate('localStorage.setItem("licao-m4-f01",JSON.stringify({melhor:3,tentativas:1,exposicoes:{1:1}}))')
+        payload=json.dumps({'formato':'epi-progresso','versao':1,'registos':{'licao-m4-f01':json.dumps({'melhor':9,'tentativas':4,'exposicoes':{'2':3}})}}).encode()
+        page.locator('[data-pf-repor]').set_input_files({'name':'progresso.json','mimeType':'application/json','buffer':payload})
+        page.wait_for_function('JSON.parse(localStorage.getItem("licao-m4-f01")||"{}").tentativas===4')
+        got=page.evaluate('JSON.parse(localStorage.getItem("licao-m4-f01"))')
+        assert got['melhor']==9 and got['tentativas']==4,got
+        print('PASS importação sem acrescentos.js: funde pelas regras anteriores',flush=True)
         ctx.close()
         browser.close()
 

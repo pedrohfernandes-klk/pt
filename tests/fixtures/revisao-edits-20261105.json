@@ -1,0 +1,258 @@
+{
+ "base_commit": "e6906e68db392eba901688d01152d551f0aa746b",
+ "_nota": "05/11/2026: revisão de 5/11 do que foi publicado desde 2/11 (pt #156 e #165): citação de Frei Luís de Sousa, legenda do leitor ampliado, guiões das aulas 1 do M4 e 10 do M1, painel M9-F13 sem noindex nem «piloto», exemplo do M8, título da tarefa do M7, opções do M3-F02, importação sem acrescentos.js e foco da ajuda «Como se faz». Camada no topo, reversível.",
+ "files": {
+  "m4/recursos/tpc-entrada.js": {
+   "base_sha256_lf": "20a62ee4b53ccfe6c242aede06eb597d475c3654255cd5e4565d50ad803c3a92",
+   "after_sha256_lf": "a1d1f9eeac684262ce16319acbfaf206dbce863959e238e16c875d60ac7aa233",
+   "edits": [
+    {
+     "location": "M4-F28 C13, retorno da opção 2",
+     "old": "Relê a expressão «não me deixam gozar»:",
+     "new": "Relê a expressão «me não deixaram gozar»:",
+     "occurrences": 1
+    }
+   ]
+  },
+  "assets/ampliar-documentos.js": {
+   "base_sha256_lf": "9ea59cc4aa08ec722befd2d2127ed7382a02fd6390bf55db0be191555e264f06",
+   "after_sha256_lf": "2b35fedcc2a49827bf223735ead6bd55b7045467f9ac18bbea06776f776b815b",
+   "edits": [
+    {
+     "location": "Legenda do leitor ampliado: o primeiro parágrafo, ou o texto sem a tabela escondida",
+     "old": "function legendaDe(img){var f=img.closest(\"figure\");if(f){var c=f.querySelector(\"figcaption\");if(c)return c.textContent.replace(/\\s+/g,\" \").trim()}return img.getAttribute(\"data-legenda\")||img.alt||\"\"}",
+     "new": "function legendaDe(img){var f=img.closest(\"figure\");if(f){var c=f.querySelector(\"figcaption\");if(c){var p=c.querySelector(\":scope > p\");if(p)return p.textContent.replace(/\\s+/g,\" \").trim();var k=c.cloneNode(true);[].forEach.call(k.querySelectorAll(\"details,table,summary,caption\"),function(n){n.parentNode.removeChild(n)});return k.textContent.replace(/\\s+/g,\" \").trim()}}return img.getAttribute(\"data-legenda\")||img.alt||\"\"}",
+     "occurrences": 1
+    },
+    {
+     "location": "A função da legenda fica disponível fora do leitor",
+     "old": "window.EPIAmpliar={abre:abre,fecha:fecha,rotulo:rotuloAmpliar}})();",
+     "new": "window.EPIAmpliar={abre:abre,fecha:fecha,rotulo:rotuloAmpliar,legenda:legendaDe}})();",
+     "occurrences": 1
+    },
+    {
+     "location": "Documentos: a ligação usa a mesma legenda",
+     "old": "EPIAmpliar.abre(img,f.querySelector(\"figcaption\").textContent,a)",
+     "new": "EPIAmpliar.abre(img,EPIAmpliar.legenda?EPIAmpliar.legenda(img):(img.alt||\"\"),a)",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/aulas/aula-01/index.html": {
+   "base_sha256_lf": "39f1ff5953530e698c8712114464766641666ced5e3a371d952bd49e2a4bba8a",
+   "after_sha256_lf": "619b66ef3e8238546b5fafa4583eeb90bc368874fcaed96038cd60b2c1c9af38",
+   "edits": [
+    {
+     "location": "«O que se entrega»: a pergunta de produção da lição (C17)",
+     "old": "Com a palavra alegoria e uma citação do texto entre aspas.",
+     "new": "Explica a alegoria, cita a expressão que mostra o que muda e distingue essa mudança de uma desistência da doutrina.",
+     "occurrences": 1
+    },
+    {
+     "location": "«Em papel» do minuto a minuto",
+     "old": "A resposta que se entrega: quatro a seis linhas, com a palavra alegoria e uma citação do texto entre aspas.",
+     "new": "A resposta que se entrega: quatro a seis linhas: explica a alegoria, cita a expressão que mostra o que muda e distingue essa mudança de uma desistência da doutrina.",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m1/aulas/aula-10/index.html": {
+   "base_sha256_lf": "b1a2c3f9921f2357e96a55537f8490ef3d0062215c01cedfb826641844370bde",
+   "after_sha256_lf": "af7c020cac7d9dcecf26b484271db30fcb376b35d3e6f7ebcefcb05bfc64c7e2",
+   "edits": [
+    {
+     "location": "«O que se entrega»: a pergunta de produção da lição (C16)",
+     "old": "Com uma informação explícita e uma inferência, cada uma com a sua citação entre aspas.",
+     "new": "Distingue uma informação explícita de uma inferência, cita a pista que a sustenta e explica o que essa pista não permite concluir.",
+     "occurrences": 1
+    },
+    {
+     "location": "«Em papel» do minuto a minuto",
+     "old": "A resposta que se entrega: cinco linhas, com uma informação explícita e uma inferência, cada uma com a sua citação entre aspas.",
+     "new": "A resposta que se entrega: cinco linhas: distingue uma informação explícita de uma inferência, cita a pista que a sustenta e explica o que essa pista não permite concluir.",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m9/painel-m9-f13/index.html": {
+   "base_sha256_lf": "e221643893f5ef55823e62abc030705afea237c16368c4023c8e51303463ecc2",
+   "after_sha256_lf": "d1475aef0c7ffa5358dc4ae1b93f384d5aafe421684c70f7af2b7eebd61df1dd",
+   "edits": [
+    {
+     "location": "Estilo da secção com o identificador novo, sem noindex (como os outros 116 painéis)",
+     "old": "<style id=\"conteudos-medicao\">h1{font-size:39px}h2{font-size:31px}h3{font-size:25px}h1,h2,h3{text-wrap:balance}h2,h3{line-height:1.2}.medicao-tabela{max-width:100%;overflow-x:auto}#medicao-piloto table{width:100%;border-collapse:collapse;font:13px/1.5 Arial,sans-serif}#medicao-piloto th,#medicao-piloto td{border:1px solid currentColor;padding:8px;text-align:left;vertical-align:top}@media print{#medicao-piloto{break-before:page}#medicao-piloto h3,#medicao-piloto h3+p{break-after:avoid}#medicao-piloto ol,#medicao-piloto .medicao-tabela{break-inside:avoid}.medicao-tabela{overflow:visible}}</style><meta name=\"robots\" content=\"noindex\">",
+     "new": "<style id=\"conteudos-medicao\">h1{font-size:39px}h2{font-size:31px}h3{font-size:25px}h1,h2,h3{text-wrap:balance}h2,h3{line-height:1.2}.medicao-tabela{max-width:100%;overflow-x:auto}#medicao table{width:100%;border-collapse:collapse;font:13px/1.5 Arial,sans-serif}#medicao th,#medicao td{border:1px solid currentColor;padding:8px;text-align:left;vertical-align:top}@media print{#medicao{break-before:page}#medicao h3,#medicao h3+p{break-after:avoid}#medicao ol,#medicao .medicao-tabela{break-inside:avoid}.medicao-tabela{overflow:visible}}</style>",
+     "occurrences": 1
+    },
+    {
+     "location": "Secção «medicao»",
+     "old": "<section id=\"medicao-piloto\">",
+     "new": "<section id=\"medicao\">",
+     "occurrences": 1
+    },
+    {
+     "location": "Procedimento praticável por um só docente",
+     "old": "Antes de usar, dois revisores classificam o mesmo pequeno conjunto de respostas de exemplo e resolvem as divergências.",
+     "new": "Antes de usar, aplica a grelha a três respostas de exemplo e regista as dúvidas.",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m8/licao-m8-f12/index.html": {
+   "base_sha256_lf": "490a2d4034ab38f462fee429b03c6d5408d0cc0334639fbb9fcfd8df267248a0",
+   "after_sha256_lf": "773658a08de2f70aba3dacc7d24da70629c8c5d6f48dbec208d64718e4056d5f",
+   "edits": [
+    {
+     "location": "M8-F12 C09: o exemplo entre aspas",
+     "old": "Exemplo criado: Todas as manhãs, relia a carta. Que valor aspetual destaca a expressão inicial?",
+     "new": "Exemplo criado: «Todas as manhãs, relia a carta.» Que valor aspetual destaca «todas as manhãs»?",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m8/index.html": {
+   "base_sha256_lf": "89c552a54b6689d60f2397751f72870e2e9be495fcbd12e08c79292ef2948c60",
+   "after_sha256_lf": "a06f9ac2d520eabb9564e12fc04c8f52f98941b0c230c97de13864ca791f4f7b",
+   "edits": [
+    {
+     "location": "M8-F12 C09: o exemplo entre aspas",
+     "old": "Exemplo criado: Todas as manhãs, relia a carta. Que valor aspetual destaca a expressão inicial?",
+     "new": "Exemplo criado: «Todas as manhãs, relia a carta.» Que valor aspetual destaca «todas as manhãs»?",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m8/painel-m8-f12/index.html": {
+   "base_sha256_lf": "c9ce1c15a099363d5ec461afe2fa1432330b190e1d565c71e503fe710b936cae",
+   "after_sha256_lf": "5f4f4110264192a64e6c6cb999c00343762542428297441201e7ed512ef86e1c",
+   "edits": [
+    {
+     "location": "M8-F12 C09: o exemplo entre aspas",
+     "old": "Exemplo criado: Todas as manhãs, relia a carta. Que valor aspetual destaca a expressão inicial?",
+     "new": "Exemplo criado: «Todas as manhãs, relia a carta.» Que valor aspetual destaca «todas as manhãs»?",
+     "occurrences": 2
+    }
+   ]
+  },
+  "m7/index.html": {
+   "base_sha256_lf": "867b177f737ca9f6e8aec8775ee1d9ca96848805c3640707343777bdc6bef438",
+   "after_sha256_lf": "59ac4667fe5495204d5f0184f971c895db5d22dc32e82ad42e82a07d6848c5a0",
+   "edits": [
+    {
+     "location": "Pesos na dobra do índice: o título da tarefa da U2",
+     "old": "tarefa da Unidade 2 (a ideia de heterónimo), 35 %",
+     "new": "tarefa da Unidade 2 («Uma ideia de heterónimo»), 35 %",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m3/licao-m3-f02/index.html": {
+   "base_sha256_lf": "b289054f0de8c9cfed4f8da2af3abd2284e5337f635e967af3408fed8359142a",
+   "after_sha256_lf": "d1ea892752ee1a47e08a7ba8a6d85391dc638aa790a89be2ebfcc01de873524f",
+   "edits": [
+    {
+     "location": "M3-F02 C22: a frase sem a pista da resposta",
+     "old": "no _Kit_, o disco que repete põe em causa a [2].",
+     "new": "no _Kit_, o disco põe em causa a [2].",
+     "occurrences": 1
+    },
+    {
+     "location": "M3-F02 C22: opções paralelas",
+     "old": "\"repetição dos relatos\"",
+     "new": "\"repetição desses relatos\"",
+     "occurrences": 1
+    },
+    {
+     "location": "M3-F02 C22: distrator que não deixa a certa mais longa",
+     "old": "\"extinção desses relatos\"",
+     "new": "\"esquecimento desses relatos\"",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m3/painel-m3-f02/index.html": {
+   "base_sha256_lf": "e2864eed4afb3aa5d29b5c591648e11b040298647c5da67b54087ff942199319",
+   "after_sha256_lf": "561f5a76d7bb7a7cb15306da2fbf084df4f26e42caf61998e4266ef8cd175eca",
+   "edits": [
+    {
+     "location": "M3-F02 C22: a frase sem a pista da resposta",
+     "old": "no _Kit_, o disco que repete põe em causa a [2].",
+     "new": "no _Kit_, o disco põe em causa a [2].",
+     "occurrences": 1
+    },
+    {
+     "location": "M3-F02 C22: opções paralelas",
+     "old": "\"repetição dos relatos\"",
+     "new": "\"repetição desses relatos\"",
+     "occurrences": 1
+    },
+    {
+     "location": "M3-F02 C22: distrator que não deixa a certa mais longa",
+     "old": "\"extinção desses relatos\"",
+     "new": "\"esquecimento desses relatos\"",
+     "occurrences": 1
+    }
+   ]
+  },
+  "index.html": {
+   "base_sha256_lf": "f4a65c16210e293a67b4add95a1ee1cfa72e892b39ae0612bf2cf6e334d5745e",
+   "after_sha256_lf": "1e0926d402c50fba5b2ce6e735507fdf150e404b9846294c13f38fa3285e6a9d",
+   "edits": [
+    {
+     "location": "Importação: o recurso dos acrescentos é opcional",
+     "old": "var n=0,novos=0,lotesAntes={};",
+     "new": "var n=0,novos=0,lotesAntes={},EA=window.EPIAcrescentos;",
+     "occurrences": 1
+    },
+    {
+     "location": "Importação: acrescentos só com o recurso carregado",
+     "old": "var a=JSON.parse(raw),b=EPIAcrescentos.protegerImportacao(a,",
+     "new": "if(!EA)return;var a=JSON.parse(raw),b=EA.protegerImportacao(a,",
+     "occurrences": 1
+    },
+    {
+     "location": "Importação: lotes antes só com o recurso carregado",
+     "old": "if(lotesAntes[k])try{v=JSON.stringify(EPIAcrescentos.protegerImportacao(",
+     "new": "if(EA&&lotesAntes[k])try{v=JSON.stringify(EA.protegerImportacao(",
+     "occurrences": 1
+    },
+    {
+     "location": "Importação: fusão com o recurso, ou sem ele pelas regras anteriores",
+     "old": "A=EPIAcrescentos.protegerImportacao(A,d.registos[k+\"-acrescentos\"]||null,lotesAntes[k]);",
+     "new": "if(EA)A=EA.protegerImportacao(A,d.registos[k+\"-acrescentos\"]||null,lotesAntes[k]);",
+     "occurrences": 1
+    }
+   ]
+  },
+  "assets/pt-lessons/casca.js": {
+   "base_sha256_lf": "cb55d3be417fa8fbddd27426b22bf8067d94139325884bc98de4c394c9c2895d",
+   "after_sha256_lf": "7e84501974dbdf3543cd0d37cff5b34c6964fff0c12e1314873fd28765bcf2b0",
+   "edits": [
+    {
+     "location": "Ajuda «Como se faz»: guarda o foco de onde se veio",
+     "old": "function abrirComo(ch){var s=document.createElement(\"div\");",
+     "new": "function abrirComo(ch){var antes=document.activeElement,s=document.createElement(\"div\");",
+     "occurrences": 1
+    },
+    {
+     "location": "Ajuda «Como se faz»: diálogo modal",
+     "old": "<div class=\"cx\" role=\"dialog\" aria-label=\"Como se faz\">",
+     "new": "<div class=\"cx\" role=\"dialog\" aria-modal=\"true\" aria-label=\"Como se faz\">",
+     "occurrences": 1
+    },
+    {
+     "location": "Ajuda «Como se faz»: ao fechar, o foco volta",
+     "old": "var f=function(){if(s.parentNode)s.parentNode.removeChild(s);document.removeEventListener(\"keydown\",k)}",
+     "new": "var f=function(){if(s.parentNode)s.parentNode.removeChild(s);document.removeEventListener(\"keydown\",k);if(antes&&antes.focus&&document.contains(antes))try{antes.focus({preventScroll:true})}catch(e){}}",
+     "occurrences": 1
+    },
+    {
+     "location": "Ajuda «Como se faz»: o Tab fica dentro do diálogo",
+     "old": "k=function(ev){if(ev.key===\"Escape\"){ev.stopPropagation();f()}}",
+     "new": "k=function(ev){if(ev.key===\"Escape\"){ev.stopPropagation();f()}else if(ev.key===\"Tab\"){var L=[].slice.call(s.querySelectorAll(\"button,a[href],video[controls]\"));if(!L.length)return;var a0=L[0],z=L[L.length-1],at=document.activeElement;if(!s.contains(at)){ev.preventDefault();a0.focus()}else if(ev.shiftKey&&at===a0){ev.preventDefault();z.focus()}else if(!ev.shiftKey&&at===z){ev.preventDefault();a0.focus()}}}",
+     "occurrences": 1
+    }
+   ]
+  }
+ }
+}
