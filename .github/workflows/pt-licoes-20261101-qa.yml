@@ -7,6 +7,8 @@ on:
       - 'tests/**'
       - 'tools/medir-hierarquia.js'
       - 'docs/pedagogia/percursos-unidades-20261020.json'
+      # 05/11/2026: decisão 153, a peça comum dos créditos atrás de um «i».
+      - 'assets/info-i.*'
       - '.github/workflows/pt-licoes-20261101-qa.yml'
 permissions:
   contents: read
@@ -50,6 +52,11 @@ jobs:
           "$RUNNER_TEMP/pt-hierarquia/node_modules/.bin/playwright" install --with-deps chromium
           ROOT_PT="$GITHUB_WORKSPACE" NODE_PATH="$RUNNER_TEMP/pt-hierarquia/node_modules" node tools/medir-hierarquia.js "$RUNNER_TEMP/hierarquia.json" --sitio pt
           python scripts/verificar_hierarquia_licoes.py "$RUNNER_TEMP/hierarquia.json"
+      - name: Créditos atrás de um «i» (decisão 153)
+        run: |
+          # 05/11/2026: a peça «i» na página de ensaio e nas lições já migradas (P7 e P9): larguras, temas, teclado,
+          # árvore de acessibilidade, projeção, impressão, sem JavaScript e «Parar o desenho» fora do «i».
+          NODE_PATH="$RUNNER_TEMP/pt-hierarquia/node_modules" node tests/browser_creditos_i.cjs
       - uses: actions/upload-artifact@v4
         if: always()
         with:

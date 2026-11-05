@@ -44,7 +44,9 @@ NUNCA = ('.jogo .ler .v:not(.prova-l:not(.estrofe))', '.jogo .ler .v:not(.prova-
          # 30/10/2026 (revisão): o retorno da opção escolhida (.fe) passou a acompanhar a explicação e saiu desta lista; entram
          # o parágrafo com o botão de imprimir dos mapas, as especificações de entrega das guias e a pergunta de abertura a
          # negrito do Pensar devagar
-         'details.sec > p:has(button)', '#arquivo-producoes section.tarefa-c > p:not([class])', '.jogo .ler p.etq-m + p')
+         'details.sec > p:has(button)', '#arquivo-producoes section.tarefa-c > p:not([class])', '.jogo .ler p.etq-m + p',
+         # 05/11/2026: decisão 153, os créditos atrás de um «i» (o «i», o crédito e tudo o que está dentro dele)
+         '.info-i', '.info-i *', '.info-i-texto')
 
 
 # 30/10/2026 (revisão): a 320 px, os questionários já se deslocavam na base (865aa802): o estado de cada questionário

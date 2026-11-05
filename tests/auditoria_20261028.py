@@ -300,7 +300,21 @@ _EXAME_0511 = json.loads((ROOT/'tests/fixtures/exame-licao-edits-20261105.json')
 # camada mais recente: desfaz-se antes da ligação e das notas do Laboratório do exame, com contagem estrita.
 _CONTEXTO_0511 = json.loads((ROOT/'tests/fixtures/exame-contexto-edits-20261105.json').read_text('utf-8'))['files']
 
+# 05/11/2026: decisão 153, os créditos das imagens atrás de um «i» (pedido pt-2), camada mais recente: desfaz-se antes do
+# contexto do Laboratório do exame, com contagem estrita.
+_CREDITOS_I_0511 = json.loads((ROOT/'tests/fixtures/creditos-i-edits-20261105.json').read_text('utf-8'))['files']
+
+def undo_creditos_i_0511(path, text):
+    for edit in reversed(_CREDITOS_I_0511.get(_relative(path), {}).get('edits', [])):
+        if text.count(edit['new']) != edit['occurrences']:
+            raise AssertionError(f"Créditos atrás de um «i» não conferem: {path}: {edit['location']}")
+        text = text.replace(edit['new'], edit['old'])
+    return text
+
+
 def undo_contexto_0511(path, text):
+    # 05/11/2026: primeiro os créditos atrás de um «i», que estão por cima.
+    text = undo_creditos_i_0511(path, text)
     for edit in reversed(_CONTEXTO_0511.get(_relative(path), {}).get('edits', [])):
         if text.count(edit['new']) != edit['occurrences']:
             raise AssertionError(f"Contexto do Laboratório do exame não confere: {path}: {edit['location']}")

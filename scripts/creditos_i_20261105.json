@@ -1,0 +1,594 @@
+[
+ {
+  "ficheiro": "m1/licao-m1-f01/index.html",
+  "local": "P7, crédito puro: Pergaminho Vindel, com cantigas de Martim Codax e a música. Domínio pú",
+  "antigo": "<figure class=\\\"fig inteiro cor\\\"><span class=\\\"moldura\\\"><img src=\\\"../../img/fontes/codax-pergaminho-vindel.jpg\\\" alt=\\\"Duas páginas de pergaminho escritas a duas colunas: linhas de texto com letras iniciais grandes a vermelho e azul e, por cima de algumas linhas, pautas vermelhas com notas de música pretas.\\\" loading=\\\"lazy\\\"></span><figcaption>Pergaminho Vindel, com cantigas de Martim Codax e a música. Domínio público.</figcaption></figure>",
+  "novo": "<figure class=\\\"fig inteiro cor\\\"><div class=\\\"moldura com-i\\\"><img src=\\\"../../img/fontes/codax-pergaminho-vindel.jpg\\\" alt=\\\"Duas páginas de pergaminho escritas a duas colunas: linhas de texto com letras iniciais grandes a vermelho e azul e, por cima de algumas linhas, pautas vermelhas com notas de música pretas.\\\" loading=\\\"lazy\\\"><details class=\\\"info-i\\\" name=\\\"info-i\\\"><summary aria-label=\\\"Créditos da imagem\\\"><span aria-hidden=\\\"true\\\">i</span></summary><p class=\\\"info-i-texto\\\">Pergaminho Vindel, com cantigas de Martim Codax e a música. Domínio público.</p></details></div></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P7 (crédito puro nas lições M1 e M4): o crédito passa inteiro para o «i»; o que diz o que se vê fica à vista."
+ },
+ {
+  "ficheiro": "m1/licao-m1-f01/index.html",
+  "local": "P7, crédito puro: Pergaminho Vindel exposto; fotografia de Luis Miguel Bugallo Sánchez, ",
+  "antigo": "<figure class=\\\"fig inteiro cor\\\"><span class=\\\"moldura\\\"><img src=\\\"../../img/fontes/vindel-pergaminho-2018.jpg\\\" alt=\\\"O Pergaminho Vindel aberto numa vitrina, sobre fundo vermelho: duas páginas com texto e pautas de música.\\\" loading=\\\"lazy\\\"></span><figcaption>Pergaminho Vindel exposto; fotografia de Luis Miguel Bugallo Sánchez, 2017. CC BY-SA 4.0.</figcaption></figure>",
+  "novo": "<figure class=\\\"fig inteiro cor\\\"><div class=\\\"moldura com-i\\\"><img src=\\\"../../img/fontes/vindel-pergaminho-2018.jpg\\\" alt=\\\"O Pergaminho Vindel aberto numa vitrina, sobre fundo vermelho: duas páginas com texto e pautas de música.\\\" loading=\\\"lazy\\\"><details class=\\\"info-i\\\" name=\\\"info-i\\\"><summary aria-label=\\\"Créditos da imagem\\\"><span aria-hidden=\\\"true\\\">i</span></summary><p class=\\\"info-i-texto\\\">Pergaminho Vindel exposto; fotografia de Luis Miguel Bugallo Sánchez, 2017. <a rel=\\\"license\\\" href=\\\"https://creativecommons.org/licenses/by-sa/4.0/deed.pt\\\">CC BY-SA 4.0</a>.</p></details></div></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P7 (crédito puro nas lições M1 e M4): o crédito passa inteiro para o «i»; o que diz o que se vê fica à vista."
+ },
+ {
+  "ficheiro": "m1/licao-m1-f01/index.html",
+  "local": "P7, crédito puro: Cancioneiro da Biblioteca Nacional, cópia do século XVI. Domínio públi",
+  "antigo": "<figure class=\\\"fig recorte\\\"><span class=\\\"moldura\\\"><img src=\\\"../../img/fontes/cancioneiro-biblioteca-nacional.jpg\\\" alt=\\\"Página manuscrita a duas colunas, com estrofes copiadas à mão e números à margem; no alto, à esquerda, um título em letra maior.\\\" loading=\\\"lazy\\\" style=\\\"object-position:50% 12%\\\"></span><figcaption>Cancioneiro da Biblioteca Nacional, cópia do século XVI. Domínio público.</figcaption></figure>",
+  "novo": "<figure class=\\\"fig recorte\\\"><div class=\\\"moldura com-i\\\"><img src=\\\"../../img/fontes/cancioneiro-biblioteca-nacional.jpg\\\" alt=\\\"Página manuscrita a duas colunas, com estrofes copiadas à mão e números à margem; no alto, à esquerda, um título em letra maior.\\\" loading=\\\"lazy\\\" style=\\\"object-position:50% 12%\\\"><details class=\\\"info-i\\\" name=\\\"info-i\\\"><summary aria-label=\\\"Créditos da imagem\\\"><span aria-hidden=\\\"true\\\">i</span></summary><p class=\\\"info-i-texto\\\">Cancioneiro da Biblioteca Nacional, cópia do século XVI. Domínio público.</p></details></div></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P7 (crédito puro nas lições M1 e M4): o crédito passa inteiro para o «i»; o que diz o que se vê fica à vista."
+ },
+ {
+  "ficheiro": "m1/licao-m1-f01/index.html",
+  "local": "A peça comum do «i» (assets/info-i.css e assets/info-i.js)",
+  "antigo": "</head>",
+  "novo": "<link rel=\"stylesheet\" href=\"../../assets/info-i.css?v=20261105\"><script defer src=\"../../assets/info-i.js?v=20261105\"></script></head>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. A página carrega a peça comum do «i», igual no Português e no Lente."
+ },
+ {
+  "ficheiro": "m1/licao-m1-f02/index.html",
+  "local": "P7, crédito puro: Ilha de San Simón, ria de Vigo (Iago Pillado, 2024). CC BY-SA 4.0.",
+  "antigo": "<figure class=\\\"fig inteiro cor\\\"><span class=\\\"moldura\\\"><img src=\\\"../../img/fontes/san-simon-ria-vigo.jpg\\\" alt=\\\"Ilha de San Simón, na ria de Vigo: um ilhéu com árvores e uma casa branca, ligado por uma ponte a outro ilhéu, com a maré baixa à frente.\\\" loading=\\\"lazy\\\"></span><figcaption>Ilha de San Simón, ria de Vigo (Iago Pillado, 2024). CC BY-SA 4.0.</figcaption></figure>",
+  "novo": "<figure class=\\\"fig inteiro cor\\\"><div class=\\\"moldura com-i\\\"><img src=\\\"../../img/fontes/san-simon-ria-vigo.jpg\\\" alt=\\\"Ilha de San Simón, na ria de Vigo: um ilhéu com árvores e uma casa branca, ligado por uma ponte a outro ilhéu, com a maré baixa à frente.\\\" loading=\\\"lazy\\\"><details class=\\\"info-i\\\" name=\\\"info-i\\\"><summary aria-label=\\\"Créditos da imagem\\\"><span aria-hidden=\\\"true\\\">i</span></summary><p class=\\\"info-i-texto\\\">Ilha de San Simón, ria de Vigo (Iago Pillado, 2024). <a rel=\\\"license\\\" href=\\\"https://creativecommons.org/licenses/by-sa/4.0/deed.pt\\\">CC BY-SA 4.0</a>.</p></details></div></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P7 (crédito puro nas lições M1 e M4): o crédito passa inteiro para o «i»; o que diz o que se vê fica à vista."
+ },
+ {
+  "ficheiro": "m1/licao-m1-f02/index.html",
+  "local": "P7, crédito puro: D. Dinis numa gravura de 1594 (Pedro de Mariz, <i>Diálogos de Vária Hi",
+  "antigo": "<figure class=\\\"fig inteiro\\\"><span class=\\\"moldura\\\"><img src=\\\"../../img/fontes/dinis-gravura-1594.jpg\\\" alt=\\\"Gravura de D. Dinis: um homem de barba, com capacete e armadura, segura um livro pequeno na mão, dentro de uma moldura oval com uma inscrição em latim.\\\" loading=\\\"lazy\\\"></span><figcaption>D. Dinis numa gravura de 1594 (Pedro de Mariz, <i>Diálogos de Vária História</i>). Domínio público.</figcaption></figure>",
+  "novo": "<figure class=\\\"fig inteiro\\\"><div class=\\\"moldura com-i\\\"><img src=\\\"../../img/fontes/dinis-gravura-1594.jpg\\\" alt=\\\"Gravura de D. Dinis: um homem de barba, com capacete e armadura, segura um livro pequeno na mão, dentro de uma moldura oval com uma inscrição em latim.\\\" loading=\\\"lazy\\\"><details class=\\\"info-i info-i--linha\\\" name=\\\"info-i\\\"><summary aria-label=\\\"Créditos da imagem\\\"><span aria-hidden=\\\"true\\\">i</span></summary><p class=\\\"info-i-texto\\\">D. Dinis numa gravura de 1594 (Pedro de Mariz, <i>Diálogos de Vária História</i>). Domínio público.</p></details></div></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P7 (crédito puro nas lições M1 e M4): o crédito passa inteiro para o «i»; o que diz o que se vê fica à vista."
+ },
+ {
+  "ficheiro": "m1/licao-m1-f02/index.html",
+  "local": "P7, crédito puro: Ilha de San Simón, ria de Vigo (Iago Pillado, 2024). CC BY-SA 4.0.",
+  "antigo": "<figure class=\\\"fig recorte cor\\\"><span class=\\\"moldura\\\"><img src=\\\"../../img/fontes/san-simon-ria-vigo.jpg\\\" alt=\\\"A ilha de San Simón, com árvores e uma casa branca, e a água da ria à volta.\\\" loading=\\\"lazy\\\" style=\\\"object-position:50% 45%\\\"></span><figcaption>Ilha de San Simón, ria de Vigo (Iago Pillado, 2024). CC BY-SA 4.0.</figcaption></figure>",
+  "novo": "<figure class=\\\"fig recorte cor\\\"><div class=\\\"moldura com-i\\\"><img src=\\\"../../img/fontes/san-simon-ria-vigo.jpg\\\" alt=\\\"A ilha de San Simón, com árvores e uma casa branca, e a água da ria à volta.\\\" loading=\\\"lazy\\\" style=\\\"object-position:50% 45%\\\"><details class=\\\"info-i\\\" name=\\\"info-i\\\"><summary aria-label=\\\"Créditos da imagem\\\"><span aria-hidden=\\\"true\\\">i</span></summary><p class=\\\"info-i-texto\\\">Ilha de San Simón, ria de Vigo (Iago Pillado, 2024). <a rel=\\\"license\\\" href=\\\"https://creativecommons.org/licenses/by-sa/4.0/deed.pt\\\">CC BY-SA 4.0</a>.</p></details></div></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P7 (crédito puro nas lições M1 e M4): o crédito passa inteiro para o «i»; o que diz o que se vê fica à vista."
+ },
+ {
+  "ficheiro": "m1/licao-m1-f02/index.html",
+  "local": "A peça comum do «i» (assets/info-i.css e assets/info-i.js)",
+  "antigo": "</head>",
+  "novo": "<link rel=\"stylesheet\" href=\"../../assets/info-i.css?v=20261105\"><script defer src=\"../../assets/info-i.js?v=20261105\"></script></head>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. A página carrega a peça comum do «i», igual no Português e no Lente."
+ },
+ {
+  "ficheiro": "m1/licao-m1-f04/index.html",
+  "local": "P7, crédito puro: <i>Cancioneiro da Biblioteca Nacional</i>, cópia do século XVI: cantig",
+  "antigo": "<figure class=\\\"fig inteiro cor\\\"><span class=\\\"moldura\\\"><img src=\\\"../../img/fontes/cancioneiro-biblioteca-nacional.jpg\\\" alt=\\\"Página manuscrita a duas colunas, com estrofes copiadas à mão e números à margem; no alto, à esquerda, lê-se «El Rey dom Denis».\\\" loading=\\\"lazy\\\"></span><figcaption><i>Cancioneiro da Biblioteca Nacional</i>, cópia do século XVI: cantigas de D. Dinis. Domínio público.</figcaption></figure>",
+  "novo": "<figure class=\\\"fig inteiro cor\\\"><div class=\\\"moldura com-i\\\"><img src=\\\"../../img/fontes/cancioneiro-biblioteca-nacional.jpg\\\" alt=\\\"Página manuscrita a duas colunas, com estrofes copiadas à mão e números à margem; no alto, à esquerda, lê-se «El Rey dom Denis».\\\" loading=\\\"lazy\\\"><details class=\\\"info-i\\\" name=\\\"info-i\\\"><summary aria-label=\\\"Créditos da imagem\\\"><span aria-hidden=\\\"true\\\">i</span></summary><p class=\\\"info-i-texto\\\"><i>Cancioneiro da Biblioteca Nacional</i>, cópia do século XVI. Domínio público.</p></details></div><figcaption>Cantigas de D. Dinis.</figcaption></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P7 (crédito puro nas lições M1 e M4): o crédito passa inteiro para o «i»; o que diz o que se vê fica à vista."
+ },
+ {
+  "ficheiro": "m1/licao-m1-f04/index.html",
+  "local": "A peça comum do «i» (assets/info-i.css e assets/info-i.js)",
+  "antigo": "</head>",
+  "novo": "<link rel=\"stylesheet\" href=\"../../assets/info-i.css?v=20261105\"><script defer src=\"../../assets/info-i.js?v=20261105\"></script></head>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. A página carrega a peça comum do «i», igual no Português e no Lente."
+ },
+ {
+  "ficheiro": "m1/licao-m1-f05/index.html",
+  "local": "P7, crédito puro: Martim Codax, «Ondas do mar de Vigo», edição de Pedro Vindel, 1915. Do",
+  "antigo": "<figure class=\\\"fig inteiro\\\"><span class=\\\"moldura\\\"><img src=\\\"../../img/fontes/codax-ondas-1915.jpg\\\" alt=\\\"Pergaminho recortado, de letra medieval: no alto, o nome «Martin codax»; por baixo, três pautas com notas de música sobre os primeiros versos, «Ondas do mar de uigo / se uistes meu amigo», e o resto da cantiga escrito sem pautas.\\\" loading=\\\"lazy\\\"></span><figcaption>Martim Codax, «Ondas do mar de Vigo», edição de Pedro Vindel, 1915. Domínio público.</figcaption></figure>",
+  "novo": "<figure class=\\\"fig inteiro\\\"><div class=\\\"moldura com-i\\\"><img src=\\\"../../img/fontes/codax-ondas-1915.jpg\\\" alt=\\\"Pergaminho recortado, de letra medieval: no alto, o nome «Martin codax»; por baixo, três pautas com notas de música sobre os primeiros versos, «Ondas do mar de uigo / se uistes meu amigo», e o resto da cantiga escrito sem pautas.\\\" loading=\\\"lazy\\\"><details class=\\\"info-i info-i--linha\\\" name=\\\"info-i\\\"><summary aria-label=\\\"Créditos da imagem\\\"><span aria-hidden=\\\"true\\\">i</span></summary><p class=\\\"info-i-texto\\\">Martim Codax, «Ondas do mar de Vigo», edição de Pedro Vindel, 1915. Domínio público.</p></details></div></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P7 (crédito puro nas lições M1 e M4): o crédito passa inteiro para o «i»; o que diz o que se vê fica à vista."
+ },
+ {
+  "ficheiro": "m1/licao-m1-f05/index.html",
+  "local": "A peça comum do «i» (assets/info-i.css e assets/info-i.js)",
+  "antigo": "</head>",
+  "novo": "<link rel=\"stylesheet\" href=\"../../assets/info-i.css?v=20261105\"><script defer src=\"../../assets/info-i.js?v=20261105\"></script></head>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. A página carrega a peça comum do «i», igual no Português e no Lente."
+ },
+ {
+  "ficheiro": "m1/licao-m1-f06/index.html",
+  "local": "P7, crédito puro: José de Sousa Azevedo, <i>Morte do Conde Andeiro</i>, c. 1860. Domínio",
+  "antigo": "<figure class=\\\"fig inteiro cor\\\"><span class=\\\"moldura\\\"><img src=\\\"../../img/fontes/morte-conde-andeiro.jpg\\\" alt=\\\"Numa sala de arcos góticos, um homem de gibão claro jaz no chão, de braço estendido. À volta, homens armados de espada na mão, dois com plumas vermelhas no capacete; à direita, outros entram a correr, de braços no ar.\\\" loading=\\\"lazy\\\"></span><figcaption>José de Sousa Azevedo, <i>Morte do Conde Andeiro</i>, c. 1860. Domínio público.</figcaption></figure>",
+  "novo": "<figure class=\\\"fig inteiro cor\\\"><div class=\\\"moldura com-i\\\"><img src=\\\"../../img/fontes/morte-conde-andeiro.jpg\\\" alt=\\\"Numa sala de arcos góticos, um homem de gibão claro jaz no chão, de braço estendido. À volta, homens armados de espada na mão, dois com plumas vermelhas no capacete; à direita, outros entram a correr, de braços no ar.\\\" loading=\\\"lazy\\\"><details class=\\\"info-i\\\" name=\\\"info-i\\\"><summary aria-label=\\\"Créditos da imagem\\\"><span aria-hidden=\\\"true\\\">i</span></summary><p class=\\\"info-i-texto\\\">José de Sousa Azevedo, <i>Morte do Conde Andeiro</i>, <span class=\\\"nb\\\">c. 1860</span>. Domínio público.</p></details></div></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P7 (crédito puro nas lições M1 e M4): o crédito passa inteiro para o «i»; o que diz o que se vê fica à vista."
+ },
+ {
+  "ficheiro": "m1/licao-m1-f06/index.html",
+  "local": "A peça comum do «i» (assets/info-i.css e assets/info-i.js)",
+  "antigo": "</head>",
+  "novo": "<link rel=\"stylesheet\" href=\"../../assets/info-i.css?v=20261105\"><script defer src=\"../../assets/info-i.js?v=20261105\"></script></head>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. A página carrega a peça comum do «i», igual no Português e no Lente."
+ },
+ {
+  "ficheiro": "m1/licao-m1-f07/index.html",
+  "local": "P7, crédito puro: O cerco de Lisboa de 1384, iluminura das <i>Crónicas</i> de Froissart,",
+  "antigo": "<figure class=\\\"fig inteiro cor\\\"><span class=\\\"moldura\\\"><img src=\\\"../../img/fontes/cerco-lisboa-froissart.jpg\\\" alt=\\\"Iluminura: à esquerda, o arraial, com tendas, soldados de armadura, canhões apontados à cidade e dois homens caídos no chão; ao fundo, a água com navios; à direita, Lisboa, com muralhas, torres e uma porta, e lá dentro gente reunida numa praça.\\\" loading=\\\"lazy\\\"></span><figcaption>O cerco de Lisboa de 1384, iluminura das <i>Crónicas</i> de Froissart, século XV. Domínio público.</figcaption></figure>",
+  "novo": "<figure class=\\\"fig inteiro cor\\\"><div class=\\\"moldura com-i\\\"><img src=\\\"../../img/fontes/cerco-lisboa-froissart.jpg\\\" alt=\\\"Iluminura: à esquerda, o arraial, com tendas, soldados de armadura, canhões apontados à cidade e dois homens caídos no chão; ao fundo, a água com navios; à direita, Lisboa, com muralhas, torres e uma porta, e lá dentro gente reunida numa praça.\\\" loading=\\\"lazy\\\"><details class=\\\"info-i\\\" name=\\\"info-i\\\"><summary aria-label=\\\"Créditos da imagem\\\"><span aria-hidden=\\\"true\\\">i</span></summary><p class=\\\"info-i-texto\\\">O cerco de Lisboa de 1384, iluminura das <i>Crónicas</i> de Froissart, século XV. Domínio público.</p></details></div></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P7 (crédito puro nas lições M1 e M4): o crédito passa inteiro para o «i»; o que diz o que se vê fica à vista."
+ },
+ {
+  "ficheiro": "m1/licao-m1-f07/index.html",
+  "local": "P7, crédito puro: <i>Crónicas</i> de Froissart, século XV (pormenor): as muralhas. Domín",
+  "antigo": "<figure class=\\\"fig recorte cor\\\"><span class=\\\"moldura\\\"><img src=\\\"../../img/fontes/cerco-lisboa-froissart.jpg\\\" alt=\\\"Pormenor da iluminura: à direita, Lisboa, com muralhas, torres e uma porta, sem ninguém de guarda à vista; à esquerda, o arraial, com tendas e canhões; ao fundo, a água com navios.\\\" loading=\\\"lazy\\\" style=\\\"object-position:50% 20%\\\"></span><figcaption><i>Crónicas</i> de Froissart, século XV (pormenor): as muralhas. Domínio público.</figcaption></figure>",
+  "novo": "<figure class=\\\"fig recorte cor\\\"><div class=\\\"moldura com-i\\\"><img src=\\\"../../img/fontes/cerco-lisboa-froissart.jpg\\\" alt=\\\"Pormenor da iluminura: à direita, Lisboa, com muralhas, torres e uma porta, sem ninguém de guarda à vista; à esquerda, o arraial, com tendas e canhões; ao fundo, a água com navios.\\\" loading=\\\"lazy\\\" style=\\\"object-position:50% 20%\\\"><details class=\\\"info-i\\\" name=\\\"info-i\\\"><summary aria-label=\\\"Créditos da imagem\\\"><span aria-hidden=\\\"true\\\">i</span></summary><p class=\\\"info-i-texto\\\"><i>Crónicas</i> de Froissart, século XV (pormenor). Domínio público.</p></details></div><figcaption>Pormenor: as muralhas.</figcaption></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P7 (crédito puro nas lições M1 e M4): o crédito passa inteiro para o «i»; o que diz o que se vê fica à vista."
+ },
+ {
+  "ficheiro": "m1/licao-m1-f07/index.html",
+  "local": "P7, crédito puro: <i>Crónicas</i> de Froissart, século XV (pormenor): o arraial. Domínio",
+  "antigo": "<figure class=\\\"fig recorte cor\\\"><span class=\\\"moldura\\\"><img src=\\\"../../img/fontes/cerco-lisboa-froissart.jpg\\\" alt=\\\"Pormenor da iluminura: o arraial castelhano, com tendas, soldados de armadura e lanças, canhões e dois homens caídos no chão.\\\" loading=\\\"lazy\\\" style=\\\"object-position:50% 85%\\\"></span><figcaption><i>Crónicas</i> de Froissart, século XV (pormenor): o arraial. Domínio público.</figcaption></figure>",
+  "novo": "<figure class=\\\"fig recorte cor\\\"><div class=\\\"moldura com-i\\\"><img src=\\\"../../img/fontes/cerco-lisboa-froissart.jpg\\\" alt=\\\"Pormenor da iluminura: o arraial castelhano, com tendas, soldados de armadura e lanças, canhões e dois homens caídos no chão.\\\" loading=\\\"lazy\\\" style=\\\"object-position:50% 85%\\\"><details class=\\\"info-i\\\" name=\\\"info-i\\\"><summary aria-label=\\\"Créditos da imagem\\\"><span aria-hidden=\\\"true\\\">i</span></summary><p class=\\\"info-i-texto\\\"><i>Crónicas</i> de Froissart, século XV (pormenor). Domínio público.</p></details></div><figcaption>Pormenor: o arraial.</figcaption></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P7 (crédito puro nas lições M1 e M4): o crédito passa inteiro para o «i»; o que diz o que se vê fica à vista."
+ },
+ {
+  "ficheiro": "m1/licao-m1-f07/index.html",
+  "local": "A peça comum do «i» (assets/info-i.css e assets/info-i.js)",
+  "antigo": "</head>",
+  "novo": "<link rel=\"stylesheet\" href=\"../../assets/info-i.css?v=20261105\"><script defer src=\"../../assets/info-i.js?v=20261105\"></script></head>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. A página carrega a peça comum do «i», igual no Português e no Lente."
+ },
+ {
+  "ficheiro": "m1/licao-m1-f08/index.html",
+  "local": "P7, crédito puro: José de Sousa Azevedo, <i>Morte do Conde Andeiro</i>, c. 1860. Domínio",
+  "antigo": "<figure class=\\\"fig inteiro cor\\\"><span class=\\\"moldura\\\"><img src=\\\"../../img/fontes/morte-conde-andeiro.jpg\\\" alt=\\\"Numa sala de arcos góticos, um homem de gibão claro jaz no chão, de braço estendido. À volta, homens armados de espada na mão, dois com plumas vermelhas no capacete; à direita, outros entram a correr, de braços no ar.\\\" loading=\\\"lazy\\\"></span><figcaption>José de Sousa Azevedo, <i>Morte do Conde Andeiro</i>, c. 1860. Domínio público.</figcaption></figure>",
+  "novo": "<figure class=\\\"fig inteiro cor\\\"><div class=\\\"moldura com-i\\\"><img src=\\\"../../img/fontes/morte-conde-andeiro.jpg\\\" alt=\\\"Numa sala de arcos góticos, um homem de gibão claro jaz no chão, de braço estendido. À volta, homens armados de espada na mão, dois com plumas vermelhas no capacete; à direita, outros entram a correr, de braços no ar.\\\" loading=\\\"lazy\\\"><details class=\\\"info-i\\\" name=\\\"info-i\\\"><summary aria-label=\\\"Créditos da imagem\\\"><span aria-hidden=\\\"true\\\">i</span></summary><p class=\\\"info-i-texto\\\">José de Sousa Azevedo, <i>Morte do Conde Andeiro</i>, <span class=\\\"nb\\\">c. 1860</span>. Domínio público.</p></details></div></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P7 (crédito puro nas lições M1 e M4): o crédito passa inteiro para o «i»; o que diz o que se vê fica à vista."
+ },
+ {
+  "ficheiro": "m1/licao-m1-f08/index.html",
+  "local": "A peça comum do «i» (assets/info-i.css e assets/info-i.js)",
+  "antigo": "</head>",
+  "novo": "<link rel=\"stylesheet\" href=\"../../assets/info-i.css?v=20261105\"><script defer src=\"../../assets/info-i.js?v=20261105\"></script></head>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. A página carrega a peça comum do «i», igual no Português e no Lente."
+ },
+ {
+  "ficheiro": "m1/licao-m1-f10/index.html",
+  "local": "P7, crédito puro: José de Sousa Azevedo, <i>Morte do Conde Andeiro</i>, c. 1860. Domínio",
+  "antigo": "<figure class=\\\"fig inteiro cor\\\"><span class=\\\"moldura\\\"><img src=\\\"../../img/fontes/morte-conde-andeiro.jpg\\\" alt=\\\"Numa sala de arcos góticos, um homem de gibão claro jaz no chão, de braço estendido. À volta, homens armados, de espada na mão, dois com plumas vermelhas no capacete; à direita, outros entram a correr, de braços no ar.\\\" loading=\\\"lazy\\\"></span><figcaption>José de Sousa Azevedo, <i>Morte do Conde Andeiro</i>, c. 1860. Domínio público.</figcaption></figure>",
+  "novo": "<figure class=\\\"fig inteiro cor\\\"><div class=\\\"moldura com-i\\\"><img src=\\\"../../img/fontes/morte-conde-andeiro.jpg\\\" alt=\\\"Numa sala de arcos góticos, um homem de gibão claro jaz no chão, de braço estendido. À volta, homens armados, de espada na mão, dois com plumas vermelhas no capacete; à direita, outros entram a correr, de braços no ar.\\\" loading=\\\"lazy\\\"><details class=\\\"info-i\\\" name=\\\"info-i\\\"><summary aria-label=\\\"Créditos da imagem\\\"><span aria-hidden=\\\"true\\\">i</span></summary><p class=\\\"info-i-texto\\\">José de Sousa Azevedo, <i>Morte do Conde Andeiro</i>, <span class=\\\"nb\\\">c. 1860</span>. Domínio público.</p></details></div></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P7 (crédito puro nas lições M1 e M4): o crédito passa inteiro para o «i»; o que diz o que se vê fica à vista."
+ },
+ {
+  "ficheiro": "m1/licao-m1-f10/index.html",
+  "local": "P7, crédito puro: O cerco de Lisboa de 1384, nas <i>Crónicas</i> de Froissart, século XV",
+  "antigo": "<figure class=\\\"fig inteiro cor\\\"><span class=\\\"moldura\\\"><img src=\\\"../../img/fontes/cerco-lisboa-froissart.jpg\\\" alt=\\\"Iluminura a cores: à esquerda, tendas e soldados de lança; ao centro, canhões sobre rodas e homens a combater, dois caídos no chão; ao fundo, o mar com navios; à direita, a cidade muralhada, com gente nos terraços.\\\" loading=\\\"lazy\\\"></span><figcaption>O cerco de Lisboa de 1384, nas <i>Crónicas</i> de Froissart, século XV. Domínio público.</figcaption></figure>",
+  "novo": "<figure class=\\\"fig inteiro cor\\\"><div class=\\\"moldura com-i\\\"><img src=\\\"../../img/fontes/cerco-lisboa-froissart.jpg\\\" alt=\\\"Iluminura a cores: à esquerda, tendas e soldados de lança; ao centro, canhões sobre rodas e homens a combater, dois caídos no chão; ao fundo, o mar com navios; à direita, a cidade muralhada, com gente nos terraços.\\\" loading=\\\"lazy\\\"><details class=\\\"info-i\\\" name=\\\"info-i\\\"><summary aria-label=\\\"Créditos da imagem\\\"><span aria-hidden=\\\"true\\\">i</span></summary><p class=\\\"info-i-texto\\\">O cerco de Lisboa de 1384, nas <i>Crónicas</i> de Froissart, século XV. Domínio público.</p></details></div></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P7 (crédito puro nas lições M1 e M4): o crédito passa inteiro para o «i»; o que diz o que se vê fica à vista."
+ },
+ {
+  "ficheiro": "m1/licao-m1-f10/index.html",
+  "local": "A peça comum do «i» (assets/info-i.css e assets/info-i.js)",
+  "antigo": "</head>",
+  "novo": "<link rel=\"stylesheet\" href=\"../../assets/info-i.css?v=20261105\"><script defer src=\"../../assets/info-i.js?v=20261105\"></script></head>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. A página carrega a peça comum do «i», igual no Português e no Lente."
+ },
+ {
+  "ficheiro": "m1/licao-m1-f11/index.html",
+  "local": "P7, crédito puro: Pergaminho Vindel, com cantigas de Martim Codax e a música. Domínio pú",
+  "antigo": "<figure class=\\\"fig inteiro cor\\\"><span class=\\\"moldura\\\"><img src=\\\"../../img/fontes/codax-pergaminho-vindel.jpg\\\" alt=\\\"Duas páginas de pergaminho escritas a duas colunas: linhas de texto com letras iniciais grandes a vermelho e azul e, por cima de algumas linhas, pautas vermelhas com notas de música pretas.\\\" loading=\\\"lazy\\\"></span><figcaption>Pergaminho Vindel, com cantigas de Martim Codax e a música. Domínio público.</figcaption></figure>",
+  "novo": "<figure class=\\\"fig inteiro cor\\\"><div class=\\\"moldura com-i\\\"><img src=\\\"../../img/fontes/codax-pergaminho-vindel.jpg\\\" alt=\\\"Duas páginas de pergaminho escritas a duas colunas: linhas de texto com letras iniciais grandes a vermelho e azul e, por cima de algumas linhas, pautas vermelhas com notas de música pretas.\\\" loading=\\\"lazy\\\"><details class=\\\"info-i\\\" name=\\\"info-i\\\"><summary aria-label=\\\"Créditos da imagem\\\"><span aria-hidden=\\\"true\\\">i</span></summary><p class=\\\"info-i-texto\\\">Pergaminho Vindel, com cantigas de Martim Codax e a música. Domínio público.</p></details></div></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P7 (crédito puro nas lições M1 e M4): o crédito passa inteiro para o «i»; o que diz o que se vê fica à vista."
+ },
+ {
+  "ficheiro": "m1/licao-m1-f11/index.html",
+  "local": "P7, crédito puro: O cerco de Lisboa de 1384, iluminura das <i>Crónicas</i> de Froissart,",
+  "antigo": "<figure class=\\\"fig recorte cor\\\"><span class=\\\"moldura\\\"><img src=\\\"../../img/fontes/cerco-lisboa-froissart.jpg\\\" alt=\\\"Iluminura do cerco: à esquerda, tendas e soldados; em baixo, ao centro, canhões no campo; ao fundo, o mar com navios; à direita, Lisboa, com muralhas, uma porta e torres, e lá dentro, numa praça, um grupo de figuras pequenas.\\\" loading=\\\"lazy\\\" style=\\\"object-position:50% 20%\\\"></span><figcaption>O cerco de Lisboa de 1384, iluminura das <i>Crónicas</i> de Froissart, século XV (pormenor). Domínio público.</figcaption></figure>",
+  "novo": "<figure class=\\\"fig recorte cor\\\"><div class=\\\"moldura com-i\\\"><img src=\\\"../../img/fontes/cerco-lisboa-froissart.jpg\\\" alt=\\\"Iluminura do cerco: à esquerda, tendas e soldados; em baixo, ao centro, canhões no campo; ao fundo, o mar com navios; à direita, Lisboa, com muralhas, uma porta e torres, e lá dentro, numa praça, um grupo de figuras pequenas.\\\" loading=\\\"lazy\\\" style=\\\"object-position:50% 20%\\\"><details class=\\\"info-i\\\" name=\\\"info-i\\\"><summary aria-label=\\\"Créditos da imagem\\\"><span aria-hidden=\\\"true\\\">i</span></summary><p class=\\\"info-i-texto\\\">O cerco de Lisboa de 1384, iluminura das <i>Crónicas</i> de Froissart, século XV (pormenor). Domínio público.</p></details></div></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P7 (crédito puro nas lições M1 e M4): o crédito passa inteiro para o «i»; o que diz o que se vê fica à vista."
+ },
+ {
+  "ficheiro": "m1/licao-m1-f11/index.html",
+  "local": "A peça comum do «i» (assets/info-i.css e assets/info-i.js)",
+  "antigo": "</head>",
+  "novo": "<link rel=\"stylesheet\" href=\"../../assets/info-i.css?v=20261105\"><script defer src=\"../../assets/info-i.js?v=20261105\"></script></head>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. A página carrega a peça comum do «i», igual no Português e no Lente."
+ },
+ {
+  "ficheiro": "m1/licao-m1-f15/index.html",
+  "local": "P7, crédito puro: Ilha de San Simón, ria de Vigo (Iago Pillado, 2024). CC BY-SA 4.0.",
+  "antigo": "<figure class=\\\"fig inteiro cor\\\"><span class=\\\"moldura\\\"><img src=\\\"../../img/fontes/san-simon-ria-vigo.jpg\\\" alt=\\\"Ilha de San Simón, na ria de Vigo: um ilhéu com árvores e uma casa branca, ligado por uma ponte a outro ilhéu, com água à volta e a maré baixa à frente; ao fundo, montes e uma ponte alta.\\\" loading=\\\"lazy\\\"></span><figcaption>Ilha de San Simón, ria de Vigo (Iago Pillado, 2024). CC BY-SA 4.0.</figcaption></figure>",
+  "novo": "<figure class=\\\"fig inteiro cor\\\"><div class=\\\"moldura com-i\\\"><img src=\\\"../../img/fontes/san-simon-ria-vigo.jpg\\\" alt=\\\"Ilha de San Simón, na ria de Vigo: um ilhéu com árvores e uma casa branca, ligado por uma ponte a outro ilhéu, com água à volta e a maré baixa à frente; ao fundo, montes e uma ponte alta.\\\" loading=\\\"lazy\\\"><details class=\\\"info-i\\\" name=\\\"info-i\\\"><summary aria-label=\\\"Créditos da imagem\\\"><span aria-hidden=\\\"true\\\">i</span></summary><p class=\\\"info-i-texto\\\">Ilha de San Simón, ria de Vigo (Iago Pillado, 2024). <a rel=\\\"license\\\" href=\\\"https://creativecommons.org/licenses/by-sa/4.0/deed.pt\\\">CC BY-SA 4.0</a>.</p></details></div></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P7 (crédito puro nas lições M1 e M4): o crédito passa inteiro para o «i»; o que diz o que se vê fica à vista."
+ },
+ {
+  "ficheiro": "m1/licao-m1-f15/index.html",
+  "local": "A peça comum do «i» (assets/info-i.css e assets/info-i.js)",
+  "antigo": "</head>",
+  "novo": "<link rel=\"stylesheet\" href=\"../../assets/info-i.css?v=20261105\"><script defer src=\"../../assets/info-i.js?v=20261105\"></script></head>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. A página carrega a peça comum do «i», igual no Português e no Lente."
+ },
+ {
+  "ficheiro": "m1/licao-m1-f19/index.html",
+  "local": "P7, crédito puro: Pergaminho Vindel, com as cantigas de Martim Codax (Luis Miguel Bugall",
+  "antigo": "<figure class=\\\"fig inteiro cor\\\"><span class=\\\"moldura\\\"><img src=\\\"../../img/fontes/vindel-pergaminho-2018.jpg\\\" alt=\\\"Um pergaminho aberto numa vitrina, sobre fundo vermelho: duas páginas escritas em colunas, com letras grandes a vermelho e azul e, por cima de algumas linhas, pautas com notas de música.\\\" loading=\\\"lazy\\\"></span><figcaption>Pergaminho Vindel, com as cantigas de Martim Codax (Luis Miguel Bugallo Sánchez, 2017). CC BY-SA 4.0.</figcaption></figure>",
+  "novo": "<figure class=\\\"fig inteiro cor\\\"><div class=\\\"moldura com-i\\\"><img src=\\\"../../img/fontes/vindel-pergaminho-2018.jpg\\\" alt=\\\"Um pergaminho aberto numa vitrina, sobre fundo vermelho: duas páginas escritas em colunas, com letras grandes a vermelho e azul e, por cima de algumas linhas, pautas com notas de música.\\\" loading=\\\"lazy\\\"><details class=\\\"info-i\\\" name=\\\"info-i\\\"><summary aria-label=\\\"Créditos da imagem\\\"><span aria-hidden=\\\"true\\\">i</span></summary><p class=\\\"info-i-texto\\\">Pergaminho Vindel, com as cantigas de Martim Codax (Luis Miguel Bugallo Sánchez, 2017). <a rel=\\\"license\\\" href=\\\"https://creativecommons.org/licenses/by-sa/4.0/deed.pt\\\">CC BY-SA 4.0</a>.</p></details></div></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P7 (crédito puro nas lições M1 e M4): o crédito passa inteiro para o «i»; o que diz o que se vê fica à vista."
+ },
+ {
+  "ficheiro": "m1/licao-m1-f19/index.html",
+  "local": "A peça comum do «i» (assets/info-i.css e assets/info-i.js)",
+  "antigo": "</head>",
+  "novo": "<link rel=\"stylesheet\" href=\"../../assets/info-i.css?v=20261105\"><script defer src=\"../../assets/info-i.js?v=20261105\"></script></head>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. A página carrega a peça comum do «i», igual no Português e no Lente."
+ },
+ {
+  "ficheiro": "m1/licao-m1-f20/index.html",
+  "local": "P7, crédito puro: Nuno Gonçalves, <i>Painéis de São Vicente</i>, século XV (pormenor). D",
+  "antigo": "<figure class=\\\"fig recorte\\\"><span class=\\\"moldura\\\"><img src=\\\"../../img/fontes/fernao-lopes-painel.jpg\\\" alt=\\\"Pormenor de uma pintura sobre madeira: rosto de um homem velho, de rugas fundas e olhos cansados, com um barrete alto escuro e roupa escura de gola alta; à esquerda, a ponta de outro rosto e de um manto vermelho.\\\" loading=\\\"lazy\\\" style=\\\"object-position:50% 48%\\\"></span><figcaption>Nuno Gonçalves, <i>Painéis de São Vicente</i>, século XV (pormenor). Domínio público.</figcaption></figure>",
+  "novo": "<figure class=\\\"fig recorte\\\"><div class=\\\"moldura com-i\\\"><img src=\\\"../../img/fontes/fernao-lopes-painel.jpg\\\" alt=\\\"Pormenor de uma pintura sobre madeira: rosto de um homem velho, de rugas fundas e olhos cansados, com um barrete alto escuro e roupa escura de gola alta; à esquerda, a ponta de outro rosto e de um manto vermelho.\\\" loading=\\\"lazy\\\" style=\\\"object-position:50% 48%\\\"><details class=\\\"info-i\\\" name=\\\"info-i\\\"><summary aria-label=\\\"Créditos da imagem\\\"><span aria-hidden=\\\"true\\\">i</span></summary><p class=\\\"info-i-texto\\\">Nuno Gonçalves, <i>Painéis de São Vicente</i>, século XV (pormenor). Domínio público.</p></details></div></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P7 (crédito puro nas lições M1 e M4): o crédito passa inteiro para o «i»; o que diz o que se vê fica à vista."
+ },
+ {
+  "ficheiro": "m1/licao-m1-f20/index.html",
+  "local": "P7, crédito puro: José de Sousa Azevedo, <i>Morte do Conde Andeiro</i>, c. 1860. Domínio",
+  "antigo": "<figure class=\\\"fig inteiro cor\\\"><span class=\\\"moldura\\\"><img src=\\\"../../img/fontes/morte-conde-andeiro.jpg\\\" alt=\\\"Numa sala de arcos góticos, um homem de gibão claro jaz no chão, de braço estendido. À volta, homens armados, de espada na mão, dois com plumas vermelhas no capacete; à direita, outros entram a correr, de braços no ar.\\\" loading=\\\"lazy\\\"></span><figcaption>José de Sousa Azevedo, <i>Morte do Conde Andeiro</i>, c. 1860. Domínio público.</figcaption></figure>",
+  "novo": "<figure class=\\\"fig inteiro cor\\\"><div class=\\\"moldura com-i\\\"><img src=\\\"../../img/fontes/morte-conde-andeiro.jpg\\\" alt=\\\"Numa sala de arcos góticos, um homem de gibão claro jaz no chão, de braço estendido. À volta, homens armados, de espada na mão, dois com plumas vermelhas no capacete; à direita, outros entram a correr, de braços no ar.\\\" loading=\\\"lazy\\\"><details class=\\\"info-i\\\" name=\\\"info-i\\\"><summary aria-label=\\\"Créditos da imagem\\\"><span aria-hidden=\\\"true\\\">i</span></summary><p class=\\\"info-i-texto\\\">José de Sousa Azevedo, <i>Morte do Conde Andeiro</i>, <span class=\\\"nb\\\">c. 1860</span>. Domínio público.</p></details></div></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P7 (crédito puro nas lições M1 e M4): o crédito passa inteiro para o «i»; o que diz o que se vê fica à vista."
+ },
+ {
+  "ficheiro": "m1/licao-m1-f20/index.html",
+  "local": "P7, crédito puro: <i>Painéis de São Vicente</i>, século XV (pormenor). Domínio público.",
+  "antigo": "<figure class=\\\"fig inteiro\\\"><span class=\\\"moldura\\\"><img src=\\\"../../img/fontes/fernao-lopes-painel.jpg\\\" alt=\\\"Um homem velho, de rugas fundas, com um barrete alto escuro e roupa escura de gola alta, num pormenor dos Painéis de São Vicente; à esquerda, a ponta de um manto vermelho.\\\" loading=\\\"lazy\\\"></span><figcaption><i>Painéis de São Vicente</i>, século XV (pormenor). Domínio público.</figcaption></figure>",
+  "novo": "<figure class=\\\"fig inteiro\\\"><div class=\\\"moldura com-i\\\"><img src=\\\"../../img/fontes/fernao-lopes-painel.jpg\\\" alt=\\\"Um homem velho, de rugas fundas, com um barrete alto escuro e roupa escura de gola alta, num pormenor dos Painéis de São Vicente; à esquerda, a ponta de um manto vermelho.\\\" loading=\\\"lazy\\\"><details class=\\\"info-i\\\" name=\\\"info-i\\\"><summary aria-label=\\\"Créditos da imagem\\\"><span aria-hidden=\\\"true\\\">i</span></summary><p class=\\\"info-i-texto\\\"><i>Painéis de São Vicente</i>, século XV (pormenor). Domínio público.</p></details></div></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P7 (crédito puro nas lições M1 e M4): o crédito passa inteiro para o «i»; o que diz o que se vê fica à vista."
+ },
+ {
+  "ficheiro": "m1/licao-m1-f20/index.html",
+  "local": "A peça comum do «i» (assets/info-i.css e assets/info-i.js)",
+  "antigo": "</head>",
+  "novo": "<link rel=\"stylesheet\" href=\"../../assets/info-i.css?v=20261105\"><script defer src=\"../../assets/info-i.js?v=20261105\"></script></head>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. A página carrega a peça comum do «i», igual no Português e no Lente."
+ },
+ {
+  "ficheiro": "m4/licao-m4-f01/index.html",
+  "local": "P7, crédito puro: Garcia Fernandes, <i>Santo António a pregar aos peixes</i>, c. 1535-15",
+  "antigo": "<figure class=\\\"fig inteiro cor\\\"><span class=\\\"moldura\\\"><img src=\\\"../../img/fontes/santo-antonio-peixes-garcia-fernandes.jpg\\\" alt=\\\"Santo António, de hábito de frade e cruz na mão, aponta para a água, onde peixes põem a cabeça de fora. Ao fundo, a cidade e uma multidão na praça; à direita, dois homens observam.\\\" loading=\\\"lazy\\\"></span><figcaption>Garcia Fernandes, <i>Santo António a pregar aos peixes</i>, c. 1535-1540, MNAA. Domínio público.</figcaption></figure>",
+  "novo": "<figure class=\\\"fig inteiro cor\\\"><div class=\\\"moldura com-i\\\"><img src=\\\"../../img/fontes/santo-antonio-peixes-garcia-fernandes.jpg\\\" alt=\\\"Santo António, de hábito de frade e cruz na mão, aponta para a água, onde peixes põem a cabeça de fora. Ao fundo, a cidade e uma multidão na praça; à direita, dois homens observam.\\\" loading=\\\"lazy\\\"><details class=\\\"info-i\\\" name=\\\"info-i\\\"><summary aria-label=\\\"Créditos da imagem\\\"><span aria-hidden=\\\"true\\\">i</span></summary><p class=\\\"info-i-texto\\\">Garcia Fernandes, <i>Santo António a pregar aos peixes</i>, <span class=\\\"nb\\\">c. 1535-1540</span>, MNAA. Domínio público.</p></details></div></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P7 (crédito puro nas lições M1 e M4): o crédito passa inteiro para o «i»; o que diz o que se vê fica à vista."
+ },
+ {
+  "ficheiro": "m4/licao-m4-f01/index.html",
+  "local": "P7, crédito puro: <i>Sermoens</i> de Vieira, Lisboa, 1682: a primeira página do sermão. ",
+  "antigo": "<figure class=\\\"fig recorte\\\"><span class=\\\"moldura\\\"><img src=\\\"../../img/fontes/sermao-1682.jpg\\\" alt=\\\"Primeira página do Sermão de Santo António na edição de 1682: o título, «Pregado na cidade de São Luís do Maranhão, ano de 1654», e por baixo uma nota em itálico com duas frases entre parênteses.\\\" loading=\\\"lazy\\\" style=\\\"object-position:50% 38%\\\"></span><figcaption><i>Sermoens</i> de Vieira, Lisboa, 1682: a primeira página do sermão. Domínio público.</figcaption></figure>",
+  "novo": "<figure class=\\\"fig recorte\\\"><div class=\\\"moldura com-i\\\"><img src=\\\"../../img/fontes/sermao-1682.jpg\\\" alt=\\\"Primeira página do Sermão de Santo António na edição de 1682: o título, «Pregado na cidade de São Luís do Maranhão, ano de 1654», e por baixo uma nota em itálico com duas frases entre parênteses.\\\" loading=\\\"lazy\\\" style=\\\"object-position:50% 38%\\\"><details class=\\\"info-i\\\" name=\\\"info-i\\\"><summary aria-label=\\\"Créditos da imagem\\\"><span aria-hidden=\\\"true\\\">i</span></summary><p class=\\\"info-i-texto\\\"><i>Sermoens</i> de Vieira, Lisboa, 1682. Domínio público.</p></details></div><figcaption>A primeira página do sermão.</figcaption></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P7 (crédito puro nas lições M1 e M4): o crédito passa inteiro para o «i»; o que diz o que se vê fica à vista."
+ },
+ {
+  "ficheiro": "m4/licao-m4-f01/index.html",
+  "local": "P7, crédito puro: <i>Sermoens</i>, Lisboa, 1682: o começo do cap. I. Domínio público.",
+  "antigo": "<figure class=\\\"fig recorte\\\"><span class=\\\"moldura\\\"><img src=\\\"../../img/fontes/sermao-1682.jpg\\\" alt=\\\"Fundo da primeira página do sermão, em 1682: a frase latina «Vos estis sal terrae» e o começo do parágrafo I, com um V maiúsculo ornamentado.\\\" loading=\\\"lazy\\\" style=\\\"object-position:50% 92%\\\"></span><figcaption><i>Sermoens</i>, Lisboa, 1682: o começo do cap. I. Domínio público.</figcaption></figure>",
+  "novo": "<figure class=\\\"fig recorte\\\"><div class=\\\"moldura com-i\\\"><img src=\\\"../../img/fontes/sermao-1682.jpg\\\" alt=\\\"Fundo da primeira página do sermão, em 1682: a frase latina «Vos estis sal terrae» e o começo do parágrafo I, com um V maiúsculo ornamentado.\\\" loading=\\\"lazy\\\" style=\\\"object-position:50% 92%\\\"><details class=\\\"info-i\\\" name=\\\"info-i\\\"><summary aria-label=\\\"Créditos da imagem\\\"><span aria-hidden=\\\"true\\\">i</span></summary><p class=\\\"info-i-texto\\\"><i>Sermoens</i>, Lisboa, 1682. Domínio público.</p></details></div><figcaption>O começo do cap. I.</figcaption></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P7 (crédito puro nas lições M1 e M4): o crédito passa inteiro para o «i»; o que diz o que se vê fica à vista."
+ },
+ {
+  "ficheiro": "m4/licao-m4-f01/index.html",
+  "local": "A peça comum do «i» (assets/info-i.css e assets/info-i.js)",
+  "antigo": "</head>",
+  "novo": "<link rel=\"stylesheet\" href=\"../../assets/info-i.css?v=20261105\"><script defer src=\"../../assets/info-i.js?v=20261105\"></script></head>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. A página carrega a peça comum do «i», igual no Português e no Lente."
+ },
+ {
+  "ficheiro": "m4/licao-m4-f02/index.html",
+  "local": "P7, crédito puro: <i>Sermoens</i> de Vieira, Lisboa, 1682: a primeira página do sermão. ",
+  "antigo": "<figure class=\\\"fig inteiro\\\"><span class=\\\"moldura\\\"><img src=\\\"../../img/fontes/sermao-1682.jpg\\\" alt=\\\"Primeira página do Sermão de Santo António na edição de 1682: o título, uma nota em itálico, uma linha em latim e, por baixo, o § I em duas colunas, a começar por um V grande.\\\" loading=\\\"lazy\\\"></span><figcaption><i>Sermoens</i> de Vieira, Lisboa, 1682: a primeira página do sermão. Domínio público.</figcaption></figure>",
+  "novo": "<figure class=\\\"fig inteiro\\\"><div class=\\\"moldura com-i\\\"><img src=\\\"../../img/fontes/sermao-1682.jpg\\\" alt=\\\"Primeira página do Sermão de Santo António na edição de 1682: o título, uma nota em itálico, uma linha em latim e, por baixo, o § I em duas colunas, a começar por um V grande.\\\" loading=\\\"lazy\\\"><details class=\\\"info-i\\\" name=\\\"info-i\\\"><summary aria-label=\\\"Créditos da imagem\\\"><span aria-hidden=\\\"true\\\">i</span></summary><p class=\\\"info-i-texto\\\"><i>Sermoens</i> de Vieira, Lisboa, 1682. Domínio público.</p></details></div><figcaption>A primeira página do sermão.</figcaption></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P7 (crédito puro nas lições M1 e M4): o crédito passa inteiro para o «i»; o que diz o que se vê fica à vista."
+ },
+ {
+  "ficheiro": "m4/licao-m4-f02/index.html",
+  "local": "P7, crédito puro: <i>Sermoens</i>, Lisboa, 1682: o começo do cap. I. Domínio público.",
+  "antigo": "<figure class=\\\"fig recorte\\\"><span class=\\\"moldura\\\"><img src=\\\"../../img/fontes/sermao-1682.jpg\\\" alt=\\\"Pormenor da primeira página do sermão, em 1682: por baixo da linha em latim, o começo do § I em duas colunas; na da direita, duas frases começam por «Ou».\\\" loading=\\\"lazy\\\" style=\\\"object-position:50% 92%\\\"></span><figcaption><i>Sermoens</i>, Lisboa, 1682: o começo do cap. I. Domínio público.</figcaption></figure>",
+  "novo": "<figure class=\\\"fig recorte\\\"><div class=\\\"moldura com-i\\\"><img src=\\\"../../img/fontes/sermao-1682.jpg\\\" alt=\\\"Pormenor da primeira página do sermão, em 1682: por baixo da linha em latim, o começo do § I em duas colunas; na da direita, duas frases começam por «Ou».\\\" loading=\\\"lazy\\\" style=\\\"object-position:50% 92%\\\"><details class=\\\"info-i\\\" name=\\\"info-i\\\"><summary aria-label=\\\"Créditos da imagem\\\"><span aria-hidden=\\\"true\\\">i</span></summary><p class=\\\"info-i-texto\\\"><i>Sermoens</i>, Lisboa, 1682. Domínio público.</p></details></div><figcaption>O começo do cap. I.</figcaption></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P7 (crédito puro nas lições M1 e M4): o crédito passa inteiro para o «i»; o que diz o que se vê fica à vista."
+ },
+ {
+  "ficheiro": "m4/licao-m4-f02/index.html",
+  "local": "P7, crédito puro: Garcia Fernandes, <i>Santo António a pregar aos peixes</i> (pormenor),",
+  "antigo": "<figure class=\\\"fig recorte cor\\\"><span class=\\\"moldura\\\"><img src=\\\"../../img/fontes/santo-antonio-peixes-garcia-fernandes.jpg\\\" alt=\\\"Pormenor da pintura: Santo António, de hábito de frade e cruz na mão, olha e aponta para baixo; atrás dele fica a praça da cidade, com gente, e à direita dois homens observam.\\\" loading=\\\"lazy\\\" style=\\\"object-position:50% 30%\\\"></span><figcaption>Garcia Fernandes, <i>Santo António a pregar aos peixes</i> (pormenor), c. 1535-1540, MNAA. Domínio público.</figcaption></figure>",
+  "novo": "<figure class=\\\"fig recorte cor\\\"><div class=\\\"moldura com-i\\\"><img src=\\\"../../img/fontes/santo-antonio-peixes-garcia-fernandes.jpg\\\" alt=\\\"Pormenor da pintura: Santo António, de hábito de frade e cruz na mão, olha e aponta para baixo; atrás dele fica a praça da cidade, com gente, e à direita dois homens observam.\\\" loading=\\\"lazy\\\" style=\\\"object-position:50% 30%\\\"><details class=\\\"info-i\\\" name=\\\"info-i\\\"><summary aria-label=\\\"Créditos da imagem\\\"><span aria-hidden=\\\"true\\\">i</span></summary><p class=\\\"info-i-texto\\\">Garcia Fernandes, <i>Santo António a pregar aos peixes</i> (pormenor), <span class=\\\"nb\\\">c. 1535-1540</span>, MNAA. Domínio público.</p></details></div></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P7 (crédito puro nas lições M1 e M4): o crédito passa inteiro para o «i»; o que diz o que se vê fica à vista."
+ },
+ {
+  "ficheiro": "m4/licao-m4-f02/index.html",
+  "local": "A peça comum do «i» (assets/info-i.css e assets/info-i.js)",
+  "antigo": "</head>",
+  "novo": "<link rel=\"stylesheet\" href=\"../../assets/info-i.css?v=20261105\"><script defer src=\"../../assets/info-i.js?v=20261105\"></script></head>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. A página carrega a peça comum do «i», igual no Português e no Lente."
+ },
+ {
+  "ficheiro": "m4/licao-m4-f04/index.html",
+  "local": "P7, crédito puro: José Artur Leitão Bárcia, mercado de peixe na Ribeira Nova, Lisboa, c.",
+  "antigo": "<figure class=\\\"fig inteiro\\\"><span class=\\\"moldura\\\"><img src=\\\"../../img/fontes/varinas-ribeira-nova-1900.jpg\\\" alt=\\\"Fotografia a preto e branco de um mercado ao ar livre: mulheres de saia comprida e avental, homens de chapéu e rapazes juntam-se em roda, de olhos no meio; à esquerda, uma mulher leva um cesto à cabeça; ao fundo, o pavilhão do mercado.\\\" loading=\\\"lazy\\\"></span><figcaption>José Artur Leitão Bárcia, mercado de peixe na Ribeira Nova, Lisboa, c. 1900. Domínio público.</figcaption></figure>",
+  "novo": "<figure class=\\\"fig inteiro\\\"><div class=\\\"moldura com-i\\\"><img src=\\\"../../img/fontes/varinas-ribeira-nova-1900.jpg\\\" alt=\\\"Fotografia a preto e branco de um mercado ao ar livre: mulheres de saia comprida e avental, homens de chapéu e rapazes juntam-se em roda, de olhos no meio; à esquerda, uma mulher leva um cesto à cabeça; ao fundo, o pavilhão do mercado.\\\" loading=\\\"lazy\\\"><details class=\\\"info-i\\\" name=\\\"info-i\\\"><summary aria-label=\\\"Créditos da imagem\\\"><span aria-hidden=\\\"true\\\">i</span></summary><p class=\\\"info-i-texto\\\">José Artur Leitão Bárcia, mercado de peixe na Ribeira Nova, Lisboa, <span class=\\\"nb\\\">c. 1900</span>. Domínio público.</p></details></div></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P7 (crédito puro nas lições M1 e M4): o crédito passa inteiro para o «i»; o que diz o que se vê fica à vista."
+ },
+ {
+  "ficheiro": "m4/licao-m4-f04/index.html",
+  "local": "A peça comum do «i» (assets/info-i.css e assets/info-i.js)",
+  "antigo": "</head>",
+  "novo": "<link rel=\"stylesheet\" href=\"../../assets/info-i.css?v=20261105\"><script defer src=\"../../assets/info-i.js?v=20261105\"></script></head>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. A página carrega a peça comum do «i», igual no Português e no Lente."
+ },
+ {
+  "ficheiro": "m4/licao-m4-f06/index.html",
+  "local": "P7, crédito puro: Allen &amp; Ginter, <i>Peixe-voador</i>, cromolitografia, 1889, The Me",
+  "antigo": "<figure class=\\\"fig inteiro cor\\\"><span class=\\\"moldura\\\"><img src=\\\"../../img/fontes/peixe-voador-1889.jpg\\\" alt=\\\"Gravura a cores de um peixe-voador sobre o mar, de barbatanas abertas como asas; em baixo, aves pousadas numa rocha e outras a voar.\\\" loading=\\\"lazy\\\"></span><figcaption>Allen &amp; Ginter, <i>Peixe-voador</i>, cromolitografia, 1889, The Met. Domínio público.</figcaption></figure>",
+  "novo": "<figure class=\\\"fig inteiro cor\\\"><div class=\\\"moldura com-i\\\"><img src=\\\"../../img/fontes/peixe-voador-1889.jpg\\\" alt=\\\"Gravura a cores de um peixe-voador sobre o mar, de barbatanas abertas como asas; em baixo, aves pousadas numa rocha e outras a voar.\\\" loading=\\\"lazy\\\"><details class=\\\"info-i\\\" name=\\\"info-i\\\"><summary aria-label=\\\"Créditos da imagem\\\"><span aria-hidden=\\\"true\\\">i</span></summary><p class=\\\"info-i-texto\\\">Allen &amp; Ginter, <i>Peixe-voador</i>, cromolitografia, 1889, The Met. Domínio público.</p></details></div></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P7 (crédito puro nas lições M1 e M4): o crédito passa inteiro para o «i»; o que diz o que se vê fica à vista."
+ },
+ {
+  "ficheiro": "m4/licao-m4-f06/index.html",
+  "local": "A peça comum do «i» (assets/info-i.css e assets/info-i.js)",
+  "antigo": "</head>",
+  "novo": "<link rel=\"stylesheet\" href=\"../../assets/info-i.css?v=20261105\"><script defer src=\"../../assets/info-i.js?v=20261105\"></script></head>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. A página carrega a peça comum do «i», igual no Português e no Lente."
+ },
+ {
+  "ficheiro": "m4/licao-m4-f07/index.html",
+  "local": "P7, crédito puro: José Malhoa, <i>Almeida Garrett</i>, 1881, pintado depois da morte do ",
+  "antigo": "<figure class=\\\"fig inteiro cor\\\"><span class=\\\"moldura\\\"><img src=\\\"../../img/fontes/garrett-malhoa-1881.jpg\\\" alt=\\\"Retrato redondo de um homem de meia-idade, de cabelo escuro e pera, casaco preto e laço escuro ao pescoço; assinado «Malhoa 1881».\\\" loading=\\\"lazy\\\"></span><figcaption>José Malhoa, <i>Almeida Garrett</i>, 1881, pintado depois da morte do escritor. Domínio público.</figcaption></figure>",
+  "novo": "<figure class=\\\"fig inteiro cor\\\"><div class=\\\"moldura com-i\\\"><img src=\\\"../../img/fontes/garrett-malhoa-1881.jpg\\\" alt=\\\"Retrato redondo de um homem de meia-idade, de cabelo escuro e pera, casaco preto e laço escuro ao pescoço; assinado «Malhoa 1881».\\\" loading=\\\"lazy\\\"><details class=\\\"info-i\\\" name=\\\"info-i\\\"><summary aria-label=\\\"Créditos da imagem\\\"><span aria-hidden=\\\"true\\\">i</span></summary><p class=\\\"info-i-texto\\\">José Malhoa, <i>Almeida Garrett</i>, 1881, pintado depois da morte do escritor. Domínio público.</p></details></div></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P7 (crédito puro nas lições M1 e M4): o crédito passa inteiro para o «i»; o que diz o que se vê fica à vista."
+ },
+ {
+  "ficheiro": "m4/licao-m4-f07/index.html",
+  "local": "A peça comum do «i» (assets/info-i.css e assets/info-i.js)",
+  "antigo": "</head>",
+  "novo": "<link rel=\"stylesheet\" href=\"../../assets/info-i.css?v=20261105\"><script defer src=\"../../assets/info-i.js?v=20261105\"></script></head>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. A página carrega a peça comum do «i», igual no Português e no Lente."
+ },
+ {
+  "ficheiro": "m4/licao-m4-f08/index.html",
+  "local": "P7, crédito puro: Miguel Ângelo Lupi, <i>D. João de Portugal</i>, 1863. Domínio público.",
+  "antigo": "<figure class=\\\"fig inteiro cor\\\"><span class=\\\"moldura\\\"><img src=\\\"../../img/fontes/joao-de-portugal-lupi.jpg\\\" alt=\\\"Num salão escuro, um velho de barba branca comprida, com uma cruz ao peito, levanta o braço para os retratos da parede. À esquerda, uma figura de costas, de hábito claro e capa escura; à direita, uma figura sentada, de gola de folhos, olha para ele.\\\" loading=\\\"lazy\\\"></span><figcaption>Miguel Ângelo Lupi, <i>D. João de Portugal</i>, 1863. Domínio público.</figcaption></figure>",
+  "novo": "<figure class=\\\"fig inteiro cor\\\"><div class=\\\"moldura com-i\\\"><img src=\\\"../../img/fontes/joao-de-portugal-lupi.jpg\\\" alt=\\\"Num salão escuro, um velho de barba branca comprida, com uma cruz ao peito, levanta o braço para os retratos da parede. À esquerda, uma figura de costas, de hábito claro e capa escura; à direita, uma figura sentada, de gola de folhos, olha para ele.\\\" loading=\\\"lazy\\\"><details class=\\\"info-i\\\" name=\\\"info-i\\\"><summary aria-label=\\\"Créditos da imagem\\\"><span aria-hidden=\\\"true\\\">i</span></summary><p class=\\\"info-i-texto\\\">Miguel Ângelo Lupi, <i>D. João de Portugal</i>, 1863. Domínio público.</p></details></div></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P7 (crédito puro nas lições M1 e M4): o crédito passa inteiro para o «i»; o que diz o que se vê fica à vista."
+ },
+ {
+  "ficheiro": "m4/licao-m4-f08/index.html",
+  "local": "P7, crédito puro: <i>Frei Luiz de Sousa</i>, primeira edição, 1844: a lista de personage",
+  "antigo": "<figure class=\\\"fig recorte\\\"><span class=\\\"moldura\\\"><img src=\\\"../../img/fontes/frei-luis-personagens-1844.jpg\\\" alt=\\\"Lista de personagens da primeira edição, por baixo de PESSOAS: Manuel (Frei Luiz) de Sousa, Dona Magdalena de Vilhena, Dona Maria de Noronha, Frei Jorge-Coutinho, O Romeiro, Telmo-Paes, O Prior de Bemfica, O Irmão Converso, Miranda, O Arcebispo de Lisboa, Dorothea.\\\" loading=\\\"lazy\\\" style=\\\"object-position:50% 52%\\\"></span><figcaption><i>Frei Luiz de Sousa</i>, primeira edição, 1844: a lista de personagens. Domínio público.</figcaption></figure>",
+  "novo": "<figure class=\\\"fig recorte\\\"><div class=\\\"moldura com-i\\\"><img src=\\\"../../img/fontes/frei-luis-personagens-1844.jpg\\\" alt=\\\"Lista de personagens da primeira edição, por baixo de PESSOAS: Manuel (Frei Luiz) de Sousa, Dona Magdalena de Vilhena, Dona Maria de Noronha, Frei Jorge-Coutinho, O Romeiro, Telmo-Paes, O Prior de Bemfica, O Irmão Converso, Miranda, O Arcebispo de Lisboa, Dorothea.\\\" loading=\\\"lazy\\\" style=\\\"object-position:50% 52%\\\"><details class=\\\"info-i\\\" name=\\\"info-i\\\"><summary aria-label=\\\"Créditos da imagem\\\"><span aria-hidden=\\\"true\\\">i</span></summary><p class=\\\"info-i-texto\\\"><i>Frei Luiz de Sousa</i>, primeira edição, 1844. Domínio público.</p></details></div><figcaption>A lista de personagens.</figcaption></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P7 (crédito puro nas lições M1 e M4): o crédito passa inteiro para o «i»; o que diz o que se vê fica à vista."
+ },
+ {
+  "ficheiro": "m4/licao-m4-f08/index.html",
+  "local": "A peça comum do «i» (assets/info-i.css e assets/info-i.js)",
+  "antigo": "</head>",
+  "novo": "<link rel=\"stylesheet\" href=\"../../assets/info-i.css?v=20261105\"><script defer src=\"../../assets/info-i.js?v=20261105\"></script></head>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. A página carrega a peça comum do «i», igual no Português e no Lente."
+ },
+ {
+  "ficheiro": "m4/licao-m4-f09/index.html",
+  "local": "P7, crédito puro: <i>Frei Luiz de Sousa</i>, primeira edição, 1844: a lista das pessoas.",
+  "antigo": "<figure class=\\\"fig recorte\\\"><span class=\\\"moldura\\\"><img src=\\\"../../img/fontes/frei-luis-personagens-1844.jpg\\\" alt=\\\"Página da primeira edição de Frei Luiz de Sousa, drama: por baixo de PESSOAS, a lista das personagens, a começar por Manuel (Frei Luiz) de Sousa, Dona Magdalena de Vilhena e Dona Maria de Noronha; no fim, o coro de frades e o lugar da cena, Almada.\\\" loading=\\\"lazy\\\" style=\\\"object-position:50% 52%\\\"></span><figcaption><i>Frei Luiz de Sousa</i>, primeira edição, 1844: a lista das pessoas. Domínio público.</figcaption></figure>",
+  "novo": "<figure class=\\\"fig recorte\\\"><div class=\\\"moldura com-i\\\"><img src=\\\"../../img/fontes/frei-luis-personagens-1844.jpg\\\" alt=\\\"Página da primeira edição de Frei Luiz de Sousa, drama: por baixo de PESSOAS, a lista das personagens, a começar por Manuel (Frei Luiz) de Sousa, Dona Magdalena de Vilhena e Dona Maria de Noronha; no fim, o coro de frades e o lugar da cena, Almada.\\\" loading=\\\"lazy\\\" style=\\\"object-position:50% 52%\\\"><details class=\\\"info-i\\\" name=\\\"info-i\\\"><summary aria-label=\\\"Créditos da imagem\\\"><span aria-hidden=\\\"true\\\">i</span></summary><p class=\\\"info-i-texto\\\"><i>Frei Luiz de Sousa</i>, primeira edição, 1844. Domínio público.</p></details></div><figcaption>A lista das pessoas.</figcaption></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P7 (crédito puro nas lições M1 e M4): o crédito passa inteiro para o «i»; o que diz o que se vê fica à vista."
+ },
+ {
+  "ficheiro": "m4/licao-m4-f09/index.html",
+  "local": "A peça comum do «i» (assets/info-i.css e assets/info-i.js)",
+  "antigo": "</head>",
+  "novo": "<link rel=\"stylesheet\" href=\"../../assets/info-i.css?v=20261105\"><script defer src=\"../../assets/info-i.js?v=20261105\"></script></head>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. A página carrega a peça comum do «i», igual no Português e no Lente."
+ },
+ {
+  "ficheiro": "m4/licao-m4-f10/index.html",
+  "local": "P7, crédito puro: Cesare Maccari, <i>Cícero denuncia Catilina no Senado</i>, 1889. Domín",
+  "antigo": "<figure class=\\\"fig inteiro cor\\\"><span class=\\\"moldura\\\"><img src=\\\"../../img/fontes/cicero-catilina-maccari.jpg\\\" alt=\\\"Num senado romano em semicírculo, um orador de toga, de pé, estende o braço para a direita, diante dos senadores sentados nas bancadas. À direita, um homem está sentado sozinho, de cabeça baixa, entre bancos vazios.\\\" loading=\\\"lazy\\\"></span><figcaption>Cesare Maccari, <i>Cícero denuncia Catilina no Senado</i>, 1889. Domínio público.</figcaption></figure>",
+  "novo": "<figure class=\\\"fig inteiro cor\\\"><div class=\\\"moldura com-i\\\"><img src=\\\"../../img/fontes/cicero-catilina-maccari.jpg\\\" alt=\\\"Num senado romano em semicírculo, um orador de toga, de pé, estende o braço para a direita, diante dos senadores sentados nas bancadas. À direita, um homem está sentado sozinho, de cabeça baixa, entre bancos vazios.\\\" loading=\\\"lazy\\\"><details class=\\\"info-i\\\" name=\\\"info-i\\\"><summary aria-label=\\\"Créditos da imagem\\\"><span aria-hidden=\\\"true\\\">i</span></summary><p class=\\\"info-i-texto\\\">Cesare Maccari, <i>Cícero denuncia Catilina no Senado</i>, 1889. Domínio público.</p></details></div></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P7 (crédito puro nas lições M1 e M4): o crédito passa inteiro para o «i»; o que diz o que se vê fica à vista."
+ },
+ {
+  "ficheiro": "m4/licao-m4-f10/index.html",
+  "local": "P7, crédito puro: Allen &amp; Ginter, <i>Peixe-voador</i>, cromolitografia, 1889, The Me",
+  "antigo": "<figure class=\\\"fig inteiro cor\\\"><span class=\\\"moldura\\\"><img src=\\\"../../img/fontes/peixe-voador-1889.jpg\\\" alt=\\\"Gravura a cores de um peixe-voador sobre o mar, de barbatanas abertas como asas; em baixo, aves numa rocha.\\\" loading=\\\"lazy\\\"></span><figcaption>Allen &amp; Ginter, <i>Peixe-voador</i>, cromolitografia, 1889, The Met. Domínio público.</figcaption></figure>",
+  "novo": "<figure class=\\\"fig inteiro cor\\\"><div class=\\\"moldura com-i\\\"><img src=\\\"../../img/fontes/peixe-voador-1889.jpg\\\" alt=\\\"Gravura a cores de um peixe-voador sobre o mar, de barbatanas abertas como asas; em baixo, aves numa rocha.\\\" loading=\\\"lazy\\\"><details class=\\\"info-i\\\" name=\\\"info-i\\\"><summary aria-label=\\\"Créditos da imagem\\\"><span aria-hidden=\\\"true\\\">i</span></summary><p class=\\\"info-i-texto\\\">Allen &amp; Ginter, <i>Peixe-voador</i>, cromolitografia, 1889, The Met. Domínio público.</p></details></div></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P7 (crédito puro nas lições M1 e M4): o crédito passa inteiro para o «i»; o que diz o que se vê fica à vista."
+ },
+ {
+  "ficheiro": "m4/licao-m4-f10/index.html",
+  "local": "A peça comum do «i» (assets/info-i.css e assets/info-i.js)",
+  "antigo": "</head>",
+  "novo": "<link rel=\"stylesheet\" href=\"../../assets/info-i.css?v=20261105\"><script defer src=\"../../assets/info-i.js?v=20261105\"></script></head>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. A página carrega a peça comum do «i», igual no Português e no Lente."
+ },
+ {
+  "ficheiro": "m4/licao-m4-f11/index.html",
+  "local": "P7, crédito puro: <i>Sermoens</i> de Vieira, Lisboa, 1682: a nota por baixo do título. D",
+  "antigo": "<figure class=\\\"fig recorte\\\"><span class=\\\"moldura\\\"><img src=\\\"../../img/fontes/sermao-1682.jpg\\\" alt=\\\"Primeira página do sermão na edição de 1682: o título, «Sermão de Santo António», a linha «Pregado na cidade de São Luís do Maranhão, ano de 1654» e, por baixo, a nota em itálico, onde se lê, entre parênteses, «posto que perseguida».\\\" loading=\\\"lazy\\\" style=\\\"object-position:50% 40%\\\"></span><figcaption><i>Sermoens</i> de Vieira, Lisboa, 1682: a nota por baixo do título. Domínio público.</figcaption></figure>",
+  "novo": "<figure class=\\\"fig recorte\\\"><div class=\\\"moldura com-i\\\"><img src=\\\"../../img/fontes/sermao-1682.jpg\\\" alt=\\\"Primeira página do sermão na edição de 1682: o título, «Sermão de Santo António», a linha «Pregado na cidade de São Luís do Maranhão, ano de 1654» e, por baixo, a nota em itálico, onde se lê, entre parênteses, «posto que perseguida».\\\" loading=\\\"lazy\\\" style=\\\"object-position:50% 40%\\\"><details class=\\\"info-i\\\" name=\\\"info-i\\\"><summary aria-label=\\\"Créditos da imagem\\\"><span aria-hidden=\\\"true\\\">i</span></summary><p class=\\\"info-i-texto\\\"><i>Sermoens</i> de Vieira, Lisboa, 1682. Domínio público.</p></details></div><figcaption>A nota por baixo do título.</figcaption></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P7 (crédito puro nas lições M1 e M4): o crédito passa inteiro para o «i»; o que diz o que se vê fica à vista."
+ },
+ {
+  "ficheiro": "m4/licao-m4-f11/index.html",
+  "local": "A peça comum do «i» (assets/info-i.css e assets/info-i.js)",
+  "antigo": "</head>",
+  "novo": "<link rel=\"stylesheet\" href=\"../../assets/info-i.css?v=20261105\"><script defer src=\"../../assets/info-i.js?v=20261105\"></script></head>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. A página carrega a peça comum do «i», igual no Português e no Lente."
+ },
+ {
+  "ficheiro": "m4/licao-m4-f14/index.html",
+  "local": "P7, crédito puro: José Artur Leitão Bárcia, sala das sessões, São Bento, 1909. Domínio p",
+  "antigo": "<figure class=\\\"fig inteiro\\\"><span class=\\\"moldura\\\"><img src=\\\"../../img/fontes/sao-bento-sessoes-1909.jpg\\\" alt=\\\"A sala das sessões de São Bento, vazia: filas de cadeiras em semicírculo viradas para a mesa, à direita, onde está um arranjo de flores; galerias com balaustradas em dois andares e, na parede da direita, uma estátua.\\\" loading=\\\"lazy\\\"></span><figcaption>José Artur Leitão Bárcia, sala das sessões, São Bento, 1909. Domínio público.</figcaption></figure>",
+  "novo": "<figure class=\\\"fig inteiro\\\"><div class=\\\"moldura com-i\\\"><img src=\\\"../../img/fontes/sao-bento-sessoes-1909.jpg\\\" alt=\\\"A sala das sessões de São Bento, vazia: filas de cadeiras em semicírculo viradas para a mesa, à direita, onde está um arranjo de flores; galerias com balaustradas em dois andares e, na parede da direita, uma estátua.\\\" loading=\\\"lazy\\\"><details class=\\\"info-i\\\" name=\\\"info-i\\\"><summary aria-label=\\\"Créditos da imagem\\\"><span aria-hidden=\\\"true\\\">i</span></summary><p class=\\\"info-i-texto\\\">José Artur Leitão Bárcia, sala das sessões, São Bento, 1909. Domínio público.</p></details></div></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P7 (crédito puro nas lições M1 e M4): o crédito passa inteiro para o «i»; o que diz o que se vê fica à vista."
+ },
+ {
+  "ficheiro": "m4/licao-m4-f14/index.html",
+  "local": "A peça comum do «i» (assets/info-i.css e assets/info-i.js)",
+  "antigo": "</head>",
+  "novo": "<link rel=\"stylesheet\" href=\"../../assets/info-i.css?v=20261105\"><script defer src=\"../../assets/info-i.js?v=20261105\"></script></head>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. A página carrega a peça comum do «i», igual no Português e no Lente."
+ },
+ {
+  "ficheiro": "m4/licao-m4-f15/index.html",
+  "local": "P7, crédito puro: <i>Sermoens</i> de Vieira, Lisboa, 1682: a primeira página do sermão. ",
+  "antigo": "<figure class=\\\"fig recorte\\\"><span class=\\\"moldura\\\"><img src=\\\"../../img/fontes/sermao-1682.jpg\\\" alt=\\\"Primeira página do Sermão de Santo António na edição de 1682: o título, «Sermam de S. Antonio», na grafia da época, com «Pregado na Cidade de S. Luís do Maranhão, ano de 1654» por baixo, e depois uma nota em itálico de duas frases; a segunda começa por «E nelle tocou».\\\" loading=\\\"lazy\\\" style=\\\"object-position:50% 36%\\\"></span><figcaption><i>Sermoens</i> de Vieira, Lisboa, 1682: a primeira página do sermão. Domínio público.</figcaption></figure>",
+  "novo": "<figure class=\\\"fig recorte\\\"><div class=\\\"moldura com-i\\\"><img src=\\\"../../img/fontes/sermao-1682.jpg\\\" alt=\\\"Primeira página do Sermão de Santo António na edição de 1682: o título, «Sermam de S. Antonio», na grafia da época, com «Pregado na Cidade de S. Luís do Maranhão, ano de 1654» por baixo, e depois uma nota em itálico de duas frases; a segunda começa por «E nelle tocou».\\\" loading=\\\"lazy\\\" style=\\\"object-position:50% 36%\\\"><details class=\\\"info-i\\\" name=\\\"info-i\\\"><summary aria-label=\\\"Créditos da imagem\\\"><span aria-hidden=\\\"true\\\">i</span></summary><p class=\\\"info-i-texto\\\"><i>Sermoens</i> de Vieira, Lisboa, 1682. Domínio público.</p></details></div><figcaption>A primeira página do sermão.</figcaption></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P7 (crédito puro nas lições M1 e M4): o crédito passa inteiro para o «i»; o que diz o que se vê fica à vista."
+ },
+ {
+  "ficheiro": "m4/licao-m4-f15/index.html",
+  "local": "A peça comum do «i» (assets/info-i.css e assets/info-i.js)",
+  "antigo": "</head>",
+  "novo": "<link rel=\"stylesheet\" href=\"../../assets/info-i.css?v=20261105\"><script defer src=\"../../assets/info-i.js?v=20261105\"></script></head>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. A página carrega a peça comum do «i», igual no Português e no Lente."
+ },
+ {
+  "ficheiro": "m4/licao-m4-f20/index.html",
+  "local": "P7, crédito puro: Miguel Ângelo Lupi, <i>D. João de Portugal</i>, 1863. Domínio público.",
+  "antigo": "<figure class=\\\"fig recorte cor\\\"><span class=\\\"moldura\\\"><img src=\\\"../../img/fontes/joao-de-portugal-lupi.jpg\\\" alt=\\\"Pintura escura. Ao centro, um velho de barba branca, de roupa comprida com uma cruz ao peito, ergue o braço e aponta para os retratos escuros da parede. À esquerda, uma figura de hábito, de costas; à direita, uma mulher sentada, de gola de renda, olha para ele com a mão no queixo.\\\" loading=\\\"lazy\\\" style=\\\"object-position:50% 10%\\\"></span><figcaption>Miguel Ângelo Lupi, <i>D. João de Portugal</i>, 1863. Domínio público.</figcaption></figure>",
+  "novo": "<figure class=\\\"fig recorte cor\\\"><div class=\\\"moldura com-i\\\"><img src=\\\"../../img/fontes/joao-de-portugal-lupi.jpg\\\" alt=\\\"Pintura escura. Ao centro, um velho de barba branca, de roupa comprida com uma cruz ao peito, ergue o braço e aponta para os retratos escuros da parede. À esquerda, uma figura de hábito, de costas; à direita, uma mulher sentada, de gola de renda, olha para ele com a mão no queixo.\\\" loading=\\\"lazy\\\" style=\\\"object-position:50% 10%\\\"><details class=\\\"info-i\\\" name=\\\"info-i\\\"><summary aria-label=\\\"Créditos da imagem\\\"><span aria-hidden=\\\"true\\\">i</span></summary><p class=\\\"info-i-texto\\\">Miguel Ângelo Lupi, <i>D. João de Portugal</i>, 1863. Domínio público.</p></details></div></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P7 (crédito puro nas lições M1 e M4): o crédito passa inteiro para o «i»; o que diz o que se vê fica à vista."
+ },
+ {
+  "ficheiro": "m4/licao-m4-f20/index.html",
+  "local": "P7, crédito puro: Primeira edição de <i>Frei Luiz de Sousa</i>, 1844. Domínio público.",
+  "antigo": "<figure class=\\\"fig recorte\\\"><span class=\\\"moldura\\\"><img src=\\\"../../img/fontes/frei-luis-personagens-1844.jpg\\\" alt=\\\"Página impressa de 1844: no alto, «Frei Luiz de Sousa», «drama», representado pela primeira vez em Lisboa, por uma sociedade particular, no teatro da quinta do Pinheiro, em 1843; por baixo, a lista das pessoas da peça, de Manuel de Sousa a Dorothea.\\\" loading=\\\"lazy\\\" style=\\\"object-position:50% 10%\\\"></span><figcaption>Primeira edição de <i>Frei Luiz de Sousa</i>, 1844. Domínio público.</figcaption></figure>",
+  "novo": "<figure class=\\\"fig recorte\\\"><div class=\\\"moldura com-i\\\"><img src=\\\"../../img/fontes/frei-luis-personagens-1844.jpg\\\" alt=\\\"Página impressa de 1844: no alto, «Frei Luiz de Sousa», «drama», representado pela primeira vez em Lisboa, por uma sociedade particular, no teatro da quinta do Pinheiro, em 1843; por baixo, a lista das pessoas da peça, de Manuel de Sousa a Dorothea.\\\" loading=\\\"lazy\\\" style=\\\"object-position:50% 10%\\\"><details class=\\\"info-i\\\" name=\\\"info-i\\\"><summary aria-label=\\\"Créditos da imagem\\\"><span aria-hidden=\\\"true\\\">i</span></summary><p class=\\\"info-i-texto\\\">Primeira edição de <i>Frei Luiz de Sousa</i>, 1844. Domínio público.</p></details></div></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P7 (crédito puro nas lições M1 e M4): o crédito passa inteiro para o «i»; o que diz o que se vê fica à vista."
+ },
+ {
+  "ficheiro": "m4/licao-m4-f20/index.html",
+  "local": "A peça comum do «i» (assets/info-i.css e assets/info-i.js)",
+  "antigo": "</head>",
+  "novo": "<link rel=\"stylesheet\" href=\"../../assets/info-i.css?v=20261105\"><script defer src=\"../../assets/info-i.js?v=20261105\"></script></head>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. A página carrega a peça comum do «i», igual no Português e no Lente."
+ },
+ {
+  "ficheiro": "m4/licao-m4-f25/index.html",
+  "local": "P7, crédito puro: Allen &amp; Ginter, <i>Peixe-voador</i>, cromolitografia, 1889, The Me",
+  "antigo": "<figure class=\\\"fig inteiro cor\\\"><span class=\\\"moldura\\\"><img src=\\\"../../img/fontes/peixe-voador-1889.jpg\\\" alt=\\\"Gravura a cores de um peixe de barbatanas abertas como asas, a voar por cima do mar; em baixo, fora do quadro, aves pousadas numa rocha e outras a voar.\\\" loading=\\\"lazy\\\"></span><figcaption>Allen &amp; Ginter, <i>Peixe-voador</i>, cromolitografia, 1889, The Met. Domínio público.</figcaption></figure>",
+  "novo": "<figure class=\\\"fig inteiro cor\\\"><div class=\\\"moldura com-i\\\"><img src=\\\"../../img/fontes/peixe-voador-1889.jpg\\\" alt=\\\"Gravura a cores de um peixe de barbatanas abertas como asas, a voar por cima do mar; em baixo, fora do quadro, aves pousadas numa rocha e outras a voar.\\\" loading=\\\"lazy\\\"><details class=\\\"info-i\\\" name=\\\"info-i\\\"><summary aria-label=\\\"Créditos da imagem\\\"><span aria-hidden=\\\"true\\\">i</span></summary><p class=\\\"info-i-texto\\\">Allen &amp; Ginter, <i>Peixe-voador</i>, cromolitografia, 1889, The Met. Domínio público.</p></details></div></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P7 (crédito puro nas lições M1 e M4): o crédito passa inteiro para o «i»; o que diz o que se vê fica à vista."
+ },
+ {
+  "ficheiro": "m4/licao-m4-f25/index.html",
+  "local": "A peça comum do «i» (assets/info-i.css e assets/info-i.js)",
+  "antigo": "</head>",
+  "novo": "<link rel=\"stylesheet\" href=\"../../assets/info-i.css?v=20261105\"><script defer src=\"../../assets/info-i.js?v=20261105\"></script></head>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. A página carrega a peça comum do «i», igual no Português e no Lente."
+ },
+ {
+  "ficheiro": "m4/licao-m4-f26/index.html",
+  "local": "P7, crédito puro: <i>Frei Luiz de Sousa</i>, primeira edição, 1844: a lista das pessoas.",
+  "antigo": "<figure class=\\\"fig recorte\\\"><span class=\\\"moldura\\\"><img src=\\\"../../img/fontes/frei-luis-personagens-1844.jpg\\\" alt=\\\"Página impressa de 1844 com o título «Frei Luiz de Sousa, drama» e, por baixo de PESSOAS, a lista das personagens: Manuel (Frei Luiz) de Sousa, Dona Magdalena de Vilhena, Dona Maria de Noronha, Frei Jorge-Coutinho, O Romeiro, Telmo-Paes, O Prior de Bemfica, O Irmão Converso, Miranda, O Arcebispo de Lisboa, Dorothea.\\\" loading=\\\"lazy\\\" style=\\\"object-position:50% 50%\\\"></span><figcaption><i>Frei Luiz de Sousa</i>, primeira edição, 1844: a lista das pessoas. Domínio público.</figcaption></figure>",
+  "novo": "<figure class=\\\"fig recorte\\\"><div class=\\\"moldura com-i\\\"><img src=\\\"../../img/fontes/frei-luis-personagens-1844.jpg\\\" alt=\\\"Página impressa de 1844 com o título «Frei Luiz de Sousa, drama» e, por baixo de PESSOAS, a lista das personagens: Manuel (Frei Luiz) de Sousa, Dona Magdalena de Vilhena, Dona Maria de Noronha, Frei Jorge-Coutinho, O Romeiro, Telmo-Paes, O Prior de Bemfica, O Irmão Converso, Miranda, O Arcebispo de Lisboa, Dorothea.\\\" loading=\\\"lazy\\\" style=\\\"object-position:50% 50%\\\"><details class=\\\"info-i\\\" name=\\\"info-i\\\"><summary aria-label=\\\"Créditos da imagem\\\"><span aria-hidden=\\\"true\\\">i</span></summary><p class=\\\"info-i-texto\\\"><i>Frei Luiz de Sousa</i>, primeira edição, 1844. Domínio público.</p></details></div><figcaption>A lista das pessoas.</figcaption></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P7 (crédito puro nas lições M1 e M4): o crédito passa inteiro para o «i»; o que diz o que se vê fica à vista."
+ },
+ {
+  "ficheiro": "m4/licao-m4-f26/index.html",
+  "local": "P7, crédito puro: Miguel Ângelo Lupi, <i>D. João de Portugal</i>, 1863 (pormenor). Domín",
+  "antigo": "<figure class=\\\"fig recorte cor\\\"><span class=\\\"moldura\\\"><img src=\\\"../../img/fontes/joao-de-portugal-lupi.jpg\\\" alt=\\\"Pormenor da pintura: o velho de barba branca, com uma cruz ao peito, levanta o braço para os retratos escuros da parede; à esquerda, de costas, uma figura de hábito; à direita, uma figura sentada, de gola de renda, olha para ele com a mão no queixo.\\\" loading=\\\"lazy\\\" style=\\\"object-position:50% 10%\\\"></span><figcaption>Miguel Ângelo Lupi, <i>D. João de Portugal</i>, 1863 (pormenor). Domínio público.</figcaption></figure>",
+  "novo": "<figure class=\\\"fig recorte cor\\\"><div class=\\\"moldura com-i\\\"><img src=\\\"../../img/fontes/joao-de-portugal-lupi.jpg\\\" alt=\\\"Pormenor da pintura: o velho de barba branca, com uma cruz ao peito, levanta o braço para os retratos escuros da parede; à esquerda, de costas, uma figura de hábito; à direita, uma figura sentada, de gola de renda, olha para ele com a mão no queixo.\\\" loading=\\\"lazy\\\" style=\\\"object-position:50% 10%\\\"><details class=\\\"info-i\\\" name=\\\"info-i\\\"><summary aria-label=\\\"Créditos da imagem\\\"><span aria-hidden=\\\"true\\\">i</span></summary><p class=\\\"info-i-texto\\\">Miguel Ângelo Lupi, <i>D. João de Portugal</i>, 1863 (pormenor). Domínio público.</p></details></div></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P7 (crédito puro nas lições M1 e M4): o crédito passa inteiro para o «i»; o que diz o que se vê fica à vista."
+ },
+ {
+  "ficheiro": "m4/licao-m4-f26/index.html",
+  "local": "P7, crédito puro: Cristóvão de Morais, <i>D. Sebastião</i>, c. 1571-1574, MNAA. Domínio ",
+  "antigo": "<figure class=\\\"fig recorte\\\"><span class=\\\"moldura\\\"><img src=\\\"../../img/fontes/d-sebastiao-cristovao-de-morais.jpg\\\" alt=\\\"Retrato de um jovem rei, de cabelo curto e gola de renda, com uma armadura escura de ornatos dourados, contra um fundo negro.\\\" loading=\\\"lazy\\\" style=\\\"object-position:50% 6%\\\"></span><figcaption>Cristóvão de Morais, <i>D. Sebastião</i>, c. 1571-1574, MNAA. Domínio público.</figcaption></figure>",
+  "novo": "<figure class=\\\"fig recorte\\\"><div class=\\\"moldura com-i\\\"><img src=\\\"../../img/fontes/d-sebastiao-cristovao-de-morais.jpg\\\" alt=\\\"Retrato de um jovem rei, de cabelo curto e gola de renda, com uma armadura escura de ornatos dourados, contra um fundo negro.\\\" loading=\\\"lazy\\\" style=\\\"object-position:50% 6%\\\"><details class=\\\"info-i\\\" name=\\\"info-i\\\"><summary aria-label=\\\"Créditos da imagem\\\"><span aria-hidden=\\\"true\\\">i</span></summary><p class=\\\"info-i-texto\\\">Cristóvão de Morais, <i>D. Sebastião</i>, <span class=\\\"nb\\\">c. 1571-1574</span>, MNAA. Domínio público.</p></details></div></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P7 (crédito puro nas lições M1 e M4): o crédito passa inteiro para o «i»; o que diz o que se vê fica à vista."
+ },
+ {
+  "ficheiro": "m4/licao-m4-f26/index.html",
+  "local": "A peça comum do «i» (assets/info-i.css e assets/info-i.js)",
+  "antigo": "</head>",
+  "novo": "<link rel=\"stylesheet\" href=\"../../assets/info-i.css?v=20261105\"><script defer src=\"../../assets/info-i.js?v=20261105\"></script></head>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. A página carrega a peça comum do «i», igual no Português e no Lente."
+ },
+ {
+  "ficheiro": "m4/licao-m4-f27/index.html",
+  "local": "P7, crédito puro: Cesare Maccari, <i>Cícero denuncia Catilina no Senado</i>, 1889. Domín",
+  "antigo": "<figure class=\\\"fig inteiro\\\"><span class=\\\"moldura\\\"><img src=\\\"../../img/fontes/cicero-catilina-maccari.jpg\\\" alt=\\\"Pintura: num senado romano em semicírculo, um orador de toga branca, de pé à esquerda, fala de mão erguida; dezenas de senadores ouvem nos bancos; à direita, um homem está sentado sozinho, de cabeça baixa, com os bancos vazios à volta.\\\" loading=\\\"lazy\\\"></span><figcaption>Cesare Maccari, <i>Cícero denuncia Catilina no Senado</i>, 1889. Domínio público.</figcaption></figure>",
+  "novo": "<figure class=\\\"fig inteiro\\\"><div class=\\\"moldura com-i\\\"><img src=\\\"../../img/fontes/cicero-catilina-maccari.jpg\\\" alt=\\\"Pintura: num senado romano em semicírculo, um orador de toga branca, de pé à esquerda, fala de mão erguida; dezenas de senadores ouvem nos bancos; à direita, um homem está sentado sozinho, de cabeça baixa, com os bancos vazios à volta.\\\" loading=\\\"lazy\\\"><details class=\\\"info-i\\\" name=\\\"info-i\\\"><summary aria-label=\\\"Créditos da imagem\\\"><span aria-hidden=\\\"true\\\">i</span></summary><p class=\\\"info-i-texto\\\">Cesare Maccari, <i>Cícero denuncia Catilina no Senado</i>, 1889. Domínio público.</p></details></div></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P7 (crédito puro nas lições M1 e M4): o crédito passa inteiro para o «i»; o que diz o que se vê fica à vista."
+ },
+ {
+  "ficheiro": "m4/licao-m4-f27/index.html",
+  "local": "P7, crédito puro: Miguel Ângelo Lupi, <i>D. João de Portugal</i>, 1863. Domínio público.",
+  "antigo": "<figure class=\\\"fig recorte cor\\\"><span class=\\\"moldura\\\"><img src=\\\"../../img/fontes/joao-de-portugal-lupi.jpg\\\" alt=\\\"Pintura escura: um velho de barba branca e longa, de hábito claro com uma cruz ao peito, ergue a mão para os retratos pendurados atrás dele. À esquerda, de costas, um homem de cabeça tonsurada; à direita, uma figura sentada, de gola de folhos, olha para ele.\\\" loading=\\\"lazy\\\" style=\\\"object-position:50% 0%\\\"></span><figcaption>Miguel Ângelo Lupi, <i>D. João de Portugal</i>, 1863. Domínio público.</figcaption></figure>",
+  "novo": "<figure class=\\\"fig recorte cor\\\"><div class=\\\"moldura com-i\\\"><img src=\\\"../../img/fontes/joao-de-portugal-lupi.jpg\\\" alt=\\\"Pintura escura: um velho de barba branca e longa, de hábito claro com uma cruz ao peito, ergue a mão para os retratos pendurados atrás dele. À esquerda, de costas, um homem de cabeça tonsurada; à direita, uma figura sentada, de gola de folhos, olha para ele.\\\" loading=\\\"lazy\\\" style=\\\"object-position:50% 0%\\\"><details class=\\\"info-i\\\" name=\\\"info-i\\\"><summary aria-label=\\\"Créditos da imagem\\\"><span aria-hidden=\\\"true\\\">i</span></summary><p class=\\\"info-i-texto\\\">Miguel Ângelo Lupi, <i>D. João de Portugal</i>, 1863. Domínio público.</p></details></div></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P7 (crédito puro nas lições M1 e M4): o crédito passa inteiro para o «i»; o que diz o que se vê fica à vista."
+ },
+ {
+  "ficheiro": "m4/licao-m4-f27/index.html",
+  "local": "A peça comum do «i» (assets/info-i.css e assets/info-i.js)",
+  "antigo": "</head>",
+  "novo": "<link rel=\"stylesheet\" href=\"../../assets/info-i.css?v=20261105\"><script defer src=\"../../assets/info-i.js?v=20261105\"></script></head>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. A página carrega a peça comum do «i», igual no Português e no Lente."
+ }
+]

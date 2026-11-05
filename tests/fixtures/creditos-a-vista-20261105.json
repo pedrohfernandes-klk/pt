@@ -1,0 +1,838 @@
+{
+ "_nota": "05/11/2026: decisões 153 e 162. Lista fechada dos créditos longos que ainda estão à vista fora de um «i» (tests/test_creditos_i.py, test_nenhum_credito_longo_a_vista). Cada entrada tem a página, a classe do elemento, a contagem exata e a razão (a família do plano plano-creditos-i-20261105.md e o pedido que a vai pôr a zero). A contagem só pode descer: cada pedido põe a sua família a zero e tira as entradas dela daqui; um crédito longo novo, fora do «i», faz falhar o teste. Pedido pt-2, fatia 1: P7 (lições M1 e M4) e P9 (documentos visuais) já estão a zero.",
+ "creditos": [
+  {
+   "pagina": "assets/pt-lessons/m3-f18.js",
+   "classe": "figcaption",
+   "contagem": 1,
+   "familia": "P8",
+   "razao": "Legenda mista no «Abre» (identificação, licença, «Fonte» e frase de contexto); pedido pt-3 (legendas mistas: divisão à mão, com a tabela «fica à vista» e «vai para o «i»» revista pelo revisor de pt-PT; montante licao.mjs figura())"
+  },
+  {
+   "pagina": "index.html",
+   "classe": "p.cf-credito",
+   "contagem": 1,
+   "familia": "P1",
+   "razao": "Fundo da calçada na entrada: o botão «Parar o desenho» sai para a .fundo-acoes; pedido pt-1 (decisão 162: depois do desenho do M4 nos nove índices, decisão 148, e da calçada que balança toda junta, decisão 150)"
+  },
+  {
+   "pagina": "index.html",
+   "classe": "p.sp-credit",
+   "contagem": 1,
+   "familia": "P3",
+   "razao": "Fotografia de Muybridge no portal do Lente (o rótulo passa a «Cavalo a galope, 1878», decisão 162); pedido pt-1 (decisão 162: depois do desenho do M4 nos nove índices, decisão 148, e da calçada que balança toda junta, decisão 150)"
+  },
+  {
+   "pagina": "m1/index.html",
+   "classe": "figcaption.cz-credit",
+   "contagem": 1,
+   "familia": "P2",
+   "razao": "Imagem de abertura do índice do módulo; pedido pt-1 (decisão 162: depois do desenho do M4 nos nove índices, decisão 148, e da calçada que balança toda junta, decisão 150)"
+  },
+  {
+   "pagina": "m1/licao-m1-f19/index.html",
+   "classe": "p.rosto-c",
+   "contagem": 2,
+   "familia": "P12",
+   "razao": "Retratos do «Em paralelo» (variante «linha»); pedido pt-2, fatias seguintes da camada creditos_i_20261105"
+  },
+  {
+   "pagina": "m1/m1-promessa-do-cronista/index.html",
+   "classe": "span.fr-cred",
+   "contagem": 1,
+   "familia": "P14",
+   "razao": "«Pensar devagar»: só sai o fr-cred, o fr-leg fica; pedido pt-2, fatias seguintes da camada creditos_i_20261105"
+  },
+  {
+   "pagina": "m1/m1-voz-emprestada/index.html",
+   "classe": "span.fr-cred",
+   "contagem": 1,
+   "familia": "P14",
+   "razao": "«Pensar devagar»: só sai o fr-cred, o fr-leg fica; pedido pt-2, fatias seguintes da camada creditos_i_20261105"
+  },
+  {
+   "pagina": "m1/mapa-do-modulo-m1/index.html",
+   "classe": "figcaption",
+   "contagem": 11,
+   "familia": "P16",
+   "razao": "Galeria «Para ver» do mapa do módulo: a ligação «Lição Mx-Fyy» fica à vista (variante «linha»); pedido pt-2, fatias seguintes da camada creditos_i_20261105"
+  },
+  {
+   "pagina": "m2/index.html",
+   "classe": "figcaption.cz-credit",
+   "contagem": 1,
+   "familia": "P2",
+   "razao": "Imagem de abertura do índice do módulo; pedido pt-1 (decisão 162: depois do desenho do M4 nos nove índices, decisão 148, e da calçada que balança toda junta, decisão 150)"
+  },
+  {
+   "pagina": "m2/licao-m2-f01/index.html",
+   "classe": "figcaption",
+   "contagem": 1,
+   "familia": "P8",
+   "razao": "Legenda mista no «Abre» (identificação, licença, «Fonte» e frase de contexto); pedido pt-3 (legendas mistas: divisão à mão, com a tabela «fica à vista» e «vai para o «i»» revista pelo revisor de pt-PT; montante licao.mjs figura())"
+  },
+  {
+   "pagina": "m2/licao-m2-f02/index.html",
+   "classe": "figcaption",
+   "contagem": 1,
+   "familia": "P8",
+   "razao": "Legenda mista no «Abre» (identificação, licença, «Fonte» e frase de contexto); pedido pt-3 (legendas mistas: divisão à mão, com a tabela «fica à vista» e «vai para o «i»» revista pelo revisor de pt-PT; montante licao.mjs figura())"
+  },
+  {
+   "pagina": "m2/licao-m2-f06/index.html",
+   "classe": "figcaption",
+   "contagem": 1,
+   "familia": "P8",
+   "razao": "Legenda mista no «Abre» (identificação, licença, «Fonte» e frase de contexto); pedido pt-3 (legendas mistas: divisão à mão, com a tabela «fica à vista» e «vai para o «i»» revista pelo revisor de pt-PT; montante licao.mjs figura())"
+  },
+  {
+   "pagina": "m2/licao-m2-f07/index.html",
+   "classe": "figcaption",
+   "contagem": 1,
+   "familia": "P8",
+   "razao": "Legenda mista no «Abre» (identificação, licença, «Fonte» e frase de contexto); pedido pt-3 (legendas mistas: divisão à mão, com a tabela «fica à vista» e «vai para o «i»» revista pelo revisor de pt-PT; montante licao.mjs figura())"
+  },
+  {
+   "pagina": "m2/licao-m2-f08/index.html",
+   "classe": "figcaption",
+   "contagem": 1,
+   "familia": "P8",
+   "razao": "Legenda mista no «Abre» (identificação, licença, «Fonte» e frase de contexto); pedido pt-3 (legendas mistas: divisão à mão, com a tabela «fica à vista» e «vai para o «i»» revista pelo revisor de pt-PT; montante licao.mjs figura())"
+  },
+  {
+   "pagina": "m2/licao-m2-f09/index.html",
+   "classe": "figcaption",
+   "contagem": 1,
+   "familia": "P8",
+   "razao": "Legenda mista no «Abre» (identificação, licença, «Fonte» e frase de contexto); pedido pt-3 (legendas mistas: divisão à mão, com a tabela «fica à vista» e «vai para o «i»» revista pelo revisor de pt-PT; montante licao.mjs figura())"
+  },
+  {
+   "pagina": "m2/licao-m2-f10/index.html",
+   "classe": "figcaption",
+   "contagem": 1,
+   "familia": "P8",
+   "razao": "Legenda mista no «Abre» (identificação, licença, «Fonte» e frase de contexto); pedido pt-3 (legendas mistas: divisão à mão, com a tabela «fica à vista» e «vai para o «i»» revista pelo revisor de pt-PT; montante licao.mjs figura())"
+  },
+  {
+   "pagina": "m2/licao-m2-f11/index.html",
+   "classe": "figcaption",
+   "contagem": 1,
+   "familia": "P8",
+   "razao": "Legenda mista no «Abre» (identificação, licença, «Fonte» e frase de contexto); pedido pt-3 (legendas mistas: divisão à mão, com a tabela «fica à vista» e «vai para o «i»» revista pelo revisor de pt-PT; montante licao.mjs figura())"
+  },
+  {
+   "pagina": "m2/licao-m2-f12/index.html",
+   "classe": "figcaption",
+   "contagem": 1,
+   "familia": "P8",
+   "razao": "Legenda mista no «Abre» (identificação, licença, «Fonte» e frase de contexto); pedido pt-3 (legendas mistas: divisão à mão, com a tabela «fica à vista» e «vai para o «i»» revista pelo revisor de pt-PT; montante licao.mjs figura())"
+  },
+  {
+   "pagina": "m2/licao-m2-f13/index.html",
+   "classe": "figcaption",
+   "contagem": 1,
+   "familia": "P8",
+   "razao": "Legenda mista no «Abre» (identificação, licença, «Fonte» e frase de contexto); pedido pt-3 (legendas mistas: divisão à mão, com a tabela «fica à vista» e «vai para o «i»» revista pelo revisor de pt-PT; montante licao.mjs figura())"
+  },
+  {
+   "pagina": "m2/m2-ines-escolhe-duas-vezes/index.html",
+   "classe": "span.fr-cred",
+   "contagem": 1,
+   "familia": "P14",
+   "razao": "«Pensar devagar»: só sai o fr-cred, o fr-leg fica; pedido pt-2, fatias seguintes da camada creditos_i_20261105"
+  },
+  {
+   "pagina": "m2/m2-maquina-de-rir/index.html",
+   "classe": "span.fr-cred",
+   "contagem": 1,
+   "familia": "P14",
+   "razao": "«Pensar devagar»: só sai o fr-cred, o fr-leg fica; pedido pt-2, fatias seguintes da camada creditos_i_20261105"
+  },
+  {
+   "pagina": "m2/mapa-do-modulo-m2/index.html",
+   "classe": "figcaption",
+   "contagem": 4,
+   "familia": "P16",
+   "razao": "Galeria «Para ver» do mapa do módulo: a ligação «Lição Mx-Fyy» fica à vista (variante «linha»); pedido pt-2, fatias seguintes da camada creditos_i_20261105"
+  },
+  {
+   "pagina": "m3/index.html",
+   "classe": "figcaption.cz-credit",
+   "contagem": 1,
+   "familia": "P2",
+   "razao": "Imagem de abertura do índice do módulo; pedido pt-1 (decisão 162: depois do desenho do M4 nos nove índices, decisão 148, e da calçada que balança toda junta, decisão 150)"
+  },
+  {
+   "pagina": "m3/licao-m3-f02/index.html",
+   "classe": "figcaption",
+   "contagem": 1,
+   "familia": "P8",
+   "razao": "Legenda mista no «Abre» (identificação, licença, «Fonte» e frase de contexto); pedido pt-3 (legendas mistas: divisão à mão, com a tabela «fica à vista» e «vai para o «i»» revista pelo revisor de pt-PT; montante licao.mjs figura())"
+  },
+  {
+   "pagina": "m3/licao-m3-f03/index.html",
+   "classe": "figcaption",
+   "contagem": 1,
+   "familia": "P8",
+   "razao": "Legenda mista no «Abre» (identificação, licença, «Fonte» e frase de contexto); pedido pt-3 (legendas mistas: divisão à mão, com a tabela «fica à vista» e «vai para o «i»» revista pelo revisor de pt-PT; montante licao.mjs figura())"
+  },
+  {
+   "pagina": "m3/licao-m3-f04/index.html",
+   "classe": "figcaption",
+   "contagem": 1,
+   "familia": "P8",
+   "razao": "Legenda mista no «Abre» (identificação, licença, «Fonte» e frase de contexto); pedido pt-3 (legendas mistas: divisão à mão, com a tabela «fica à vista» e «vai para o «i»» revista pelo revisor de pt-PT; montante licao.mjs figura())"
+  },
+  {
+   "pagina": "m3/licao-m3-f05/index.html",
+   "classe": "figcaption",
+   "contagem": 1,
+   "familia": "P8",
+   "razao": "Legenda mista no «Abre» (identificação, licença, «Fonte» e frase de contexto); pedido pt-3 (legendas mistas: divisão à mão, com a tabela «fica à vista» e «vai para o «i»» revista pelo revisor de pt-PT; montante licao.mjs figura())"
+  },
+  {
+   "pagina": "m3/licao-m3-f09/index.html",
+   "classe": "figcaption",
+   "contagem": 1,
+   "familia": "P8",
+   "razao": "Legenda mista no «Abre» (identificação, licença, «Fonte» e frase de contexto); pedido pt-3 (legendas mistas: divisão à mão, com a tabela «fica à vista» e «vai para o «i»» revista pelo revisor de pt-PT; montante licao.mjs figura())"
+  },
+  {
+   "pagina": "m3/licao-m3-f10/index.html",
+   "classe": "figcaption",
+   "contagem": 1,
+   "familia": "P8",
+   "razao": "Legenda mista no «Abre» (identificação, licença, «Fonte» e frase de contexto); pedido pt-3 (legendas mistas: divisão à mão, com a tabela «fica à vista» e «vai para o «i»» revista pelo revisor de pt-PT; montante licao.mjs figura())"
+  },
+  {
+   "pagina": "m3/licao-m3-f11/index.html",
+   "classe": "figcaption",
+   "contagem": 1,
+   "familia": "P8",
+   "razao": "Legenda mista no «Abre» (identificação, licença, «Fonte» e frase de contexto); pedido pt-3 (legendas mistas: divisão à mão, com a tabela «fica à vista» e «vai para o «i»» revista pelo revisor de pt-PT; montante licao.mjs figura())"
+  },
+  {
+   "pagina": "m3/licao-m3-f13/index.html",
+   "classe": "figcaption",
+   "contagem": 1,
+   "familia": "P8",
+   "razao": "Legenda mista no «Abre» (identificação, licença, «Fonte» e frase de contexto); pedido pt-3 (legendas mistas: divisão à mão, com a tabela «fica à vista» e «vai para o «i»» revista pelo revisor de pt-PT; montante licao.mjs figura())"
+  },
+  {
+   "pagina": "m3/licao-m3-f15/index.html",
+   "classe": "figcaption",
+   "contagem": 1,
+   "familia": "P8",
+   "razao": "Legenda mista no «Abre» (identificação, licença, «Fonte» e frase de contexto); pedido pt-3 (legendas mistas: divisão à mão, com a tabela «fica à vista» e «vai para o «i»» revista pelo revisor de pt-PT; montante licao.mjs figura())"
+  },
+  {
+   "pagina": "m3/licao-m3-f16/index.html",
+   "classe": "figcaption",
+   "contagem": 1,
+   "familia": "P8",
+   "razao": "Legenda mista no «Abre» (identificação, licença, «Fonte» e frase de contexto); pedido pt-3 (legendas mistas: divisão à mão, com a tabela «fica à vista» e «vai para o «i»» revista pelo revisor de pt-PT; montante licao.mjs figura())"
+  },
+  {
+   "pagina": "m3/licao-m3-f17/index.html",
+   "classe": "figcaption",
+   "contagem": 1,
+   "familia": "P8",
+   "razao": "Legenda mista no «Abre» (identificação, licença, «Fonte» e frase de contexto); pedido pt-3 (legendas mistas: divisão à mão, com a tabela «fica à vista» e «vai para o «i»» revista pelo revisor de pt-PT; montante licao.mjs figura())"
+  },
+  {
+   "pagina": "m3/m3-soneto-raciocinio/index.html",
+   "classe": "span.fr-cred",
+   "contagem": 1,
+   "familia": "P14",
+   "razao": "«Pensar devagar»: só sai o fr-cred, o fr-leg fica; pedido pt-2, fatias seguintes da camada creditos_i_20261105"
+  },
+  {
+   "pagina": "m3/m3-velho-restelo-juri/index.html",
+   "classe": "span.fr-cred",
+   "contagem": 1,
+   "familia": "P14",
+   "razao": "«Pensar devagar»: só sai o fr-cred, o fr-leg fica; pedido pt-2, fatias seguintes da camada creditos_i_20261105"
+  },
+  {
+   "pagina": "m3/mapa-do-modulo-m3/index.html",
+   "classe": "figcaption",
+   "contagem": 8,
+   "familia": "P16",
+   "razao": "Galeria «Para ver» do mapa do módulo: a ligação «Lição Mx-Fyy» fica à vista (variante «linha»); pedido pt-2, fatias seguintes da camada creditos_i_20261105"
+  },
+  {
+   "pagina": "m4/index.html",
+   "classe": "figcaption.cz-credit",
+   "contagem": 1,
+   "familia": "P2",
+   "razao": "Imagem de abertura do índice do módulo; pedido pt-1 (decisão 162: depois do desenho do M4 nos nove índices, decisão 148, e da calçada que balança toda junta, decisão 150)"
+  },
+  {
+   "pagina": "m4/m4-frei-luis-quem-sabia/index.html",
+   "classe": "span.fr-cred",
+   "contagem": 1,
+   "familia": "P14",
+   "razao": "«Pensar devagar»: só sai o fr-cred, o fr-leg fica; pedido pt-2, fatias seguintes da camada creditos_i_20261105"
+  },
+  {
+   "pagina": "m4/m4-sermao-tribunal/index.html",
+   "classe": "span.fr-cred",
+   "contagem": 1,
+   "familia": "P14",
+   "razao": "«Pensar devagar»: só sai o fr-cred, o fr-leg fica; pedido pt-2, fatias seguintes da camada creditos_i_20261105"
+  },
+  {
+   "pagina": "m4/mapa-do-modulo-m4/index.html",
+   "classe": "figcaption",
+   "contagem": 12,
+   "familia": "P16",
+   "razao": "Galeria «Para ver» do mapa do módulo: a ligação «Lição Mx-Fyy» fica à vista (variante «linha»); pedido pt-2, fatias seguintes da camada creditos_i_20261105"
+  },
+  {
+   "pagina": "m5/index.html",
+   "classe": "figcaption.cz-credit",
+   "contagem": 1,
+   "familia": "P2",
+   "razao": "Imagem de abertura do índice do módulo; pedido pt-1 (decisão 162: depois do desenho do M4 nos nove índices, decisão 148, e da calçada que balança toda junta, decisão 150)"
+  },
+  {
+   "pagina": "m5/licao-m5-f02/index.html",
+   "classe": "figcaption",
+   "contagem": 1,
+   "familia": "P8",
+   "razao": "Legenda mista no «Abre» (identificação, licença, «Fonte» e frase de contexto); pedido pt-3 (legendas mistas: divisão à mão, com a tabela «fica à vista» e «vai para o «i»» revista pelo revisor de pt-PT; montante licao.mjs figura())"
+  },
+  {
+   "pagina": "m5/licao-m5-f04/index.html",
+   "classe": "figcaption",
+   "contagem": 1,
+   "familia": "P8",
+   "razao": "Legenda mista no «Abre» (identificação, licença, «Fonte» e frase de contexto); pedido pt-3 (legendas mistas: divisão à mão, com a tabela «fica à vista» e «vai para o «i»» revista pelo revisor de pt-PT; montante licao.mjs figura())"
+  },
+  {
+   "pagina": "m5/licao-m5-f07/index.html",
+   "classe": "figcaption",
+   "contagem": 1,
+   "familia": "P8",
+   "razao": "Legenda mista no «Abre» (identificação, licença, «Fonte» e frase de contexto); pedido pt-3 (legendas mistas: divisão à mão, com a tabela «fica à vista» e «vai para o «i»» revista pelo revisor de pt-PT; montante licao.mjs figura())"
+  },
+  {
+   "pagina": "m5/licao-m5-f08/index.html",
+   "classe": "figcaption",
+   "contagem": 1,
+   "familia": "P8",
+   "razao": "Legenda mista no «Abre» (identificação, licença, «Fonte» e frase de contexto); pedido pt-3 (legendas mistas: divisão à mão, com a tabela «fica à vista» e «vai para o «i»» revista pelo revisor de pt-PT; montante licao.mjs figura())"
+  },
+  {
+   "pagina": "m5/licao-m5-f09/index.html",
+   "classe": "figcaption",
+   "contagem": 1,
+   "familia": "P8",
+   "razao": "Legenda mista no «Abre» (identificação, licença, «Fonte» e frase de contexto); pedido pt-3 (legendas mistas: divisão à mão, com a tabela «fica à vista» e «vai para o «i»» revista pelo revisor de pt-PT; montante licao.mjs figura())"
+  },
+  {
+   "pagina": "m5/licao-m5-f10/index.html",
+   "classe": "figcaption",
+   "contagem": 1,
+   "familia": "P8",
+   "razao": "Legenda mista no «Abre» (identificação, licença, «Fonte» e frase de contexto); pedido pt-3 (legendas mistas: divisão à mão, com a tabela «fica à vista» e «vai para o «i»» revista pelo revisor de pt-PT; montante licao.mjs figura())"
+  },
+  {
+   "pagina": "m5/licao-m5-f11/index.html",
+   "classe": "figcaption",
+   "contagem": 1,
+   "familia": "P8",
+   "razao": "Legenda mista no «Abre» (identificação, licença, «Fonte» e frase de contexto); pedido pt-3 (legendas mistas: divisão à mão, com a tabela «fica à vista» e «vai para o «i»» revista pelo revisor de pt-PT; montante licao.mjs figura())"
+  },
+  {
+   "pagina": "m5/licao-m5-f12/index.html",
+   "classe": "figcaption",
+   "contagem": 1,
+   "familia": "P8",
+   "razao": "Legenda mista no «Abre» (identificação, licença, «Fonte» e frase de contexto); pedido pt-3 (legendas mistas: divisão à mão, com a tabela «fica à vista» e «vai para o «i»» revista pelo revisor de pt-PT; montante licao.mjs figura())"
+  },
+  {
+   "pagina": "m5/licao-m5-f13/index.html",
+   "classe": "figcaption",
+   "contagem": 1,
+   "familia": "P8",
+   "razao": "Legenda mista no «Abre» (identificação, licença, «Fonte» e frase de contexto); pedido pt-3 (legendas mistas: divisão à mão, com a tabela «fica à vista» e «vai para o «i»» revista pelo revisor de pt-PT; montante licao.mjs figura())"
+  },
+  {
+   "pagina": "m5/licao-m5-f14/index.html",
+   "classe": "figcaption",
+   "contagem": 1,
+   "familia": "P8",
+   "razao": "Legenda mista no «Abre» (identificação, licença, «Fonte» e frase de contexto); pedido pt-3 (legendas mistas: divisão à mão, com a tabela «fica à vista» e «vai para o «i»» revista pelo revisor de pt-PT; montante licao.mjs figura())"
+  },
+  {
+   "pagina": "m5/licao-m5-f15/index.html",
+   "classe": "figcaption",
+   "contagem": 1,
+   "familia": "P8",
+   "razao": "Legenda mista no «Abre» (identificação, licença, «Fonte» e frase de contexto); pedido pt-3 (legendas mistas: divisão à mão, com a tabela «fica à vista» e «vai para o «i»» revista pelo revisor de pt-PT; montante licao.mjs figura())"
+  },
+  {
+   "pagina": "m5/m5-o-pais-ou-eles/index.html",
+   "classe": "span.fr-cred",
+   "contagem": 1,
+   "familia": "P14",
+   "razao": "«Pensar devagar»: só sai o fr-cred, o fr-leg fica; pedido pt-2, fatias seguintes da camada creditos_i_20261105"
+  },
+  {
+   "pagina": "m5/m5-quem-podia-ter-feito-diferente/index.html",
+   "classe": "span.fr-cred",
+   "contagem": 1,
+   "familia": "P14",
+   "razao": "«Pensar devagar»: só sai o fr-cred, o fr-leg fica; pedido pt-2, fatias seguintes da camada creditos_i_20261105"
+  },
+  {
+   "pagina": "m5/mapa-do-modulo-m5/index.html",
+   "classe": "figcaption",
+   "contagem": 7,
+   "familia": "P16",
+   "razao": "Galeria «Para ver» do mapa do módulo: a ligação «Lição Mx-Fyy» fica à vista (variante «linha»); pedido pt-2, fatias seguintes da camada creditos_i_20261105"
+  },
+  {
+   "pagina": "m6/index.html",
+   "classe": "figcaption.cz-credit",
+   "contagem": 1,
+   "familia": "P2",
+   "razao": "Imagem de abertura do índice do módulo; pedido pt-1 (decisão 162: depois do desenho do M4 nos nove índices, decisão 148, e da calçada que balança toda junta, decisão 150)"
+  },
+  {
+   "pagina": "m6/licao-m6-f01/index.html",
+   "classe": "figcaption",
+   "contagem": 1,
+   "familia": "P8",
+   "razao": "Legenda mista no «Abre» (identificação, licença, «Fonte» e frase de contexto); pedido pt-3 (legendas mistas: divisão à mão, com a tabela «fica à vista» e «vai para o «i»» revista pelo revisor de pt-PT; montante licao.mjs figura())"
+  },
+  {
+   "pagina": "m6/licao-m6-f02/index.html",
+   "classe": "figcaption",
+   "contagem": 1,
+   "familia": "P8",
+   "razao": "Legenda mista no «Abre» (identificação, licença, «Fonte» e frase de contexto); pedido pt-3 (legendas mistas: divisão à mão, com a tabela «fica à vista» e «vai para o «i»» revista pelo revisor de pt-PT; montante licao.mjs figura())"
+  },
+  {
+   "pagina": "m6/licao-m6-f04/index.html",
+   "classe": "figcaption",
+   "contagem": 1,
+   "familia": "P8",
+   "razao": "Legenda mista no «Abre» (identificação, licença, «Fonte» e frase de contexto); pedido pt-3 (legendas mistas: divisão à mão, com a tabela «fica à vista» e «vai para o «i»» revista pelo revisor de pt-PT; montante licao.mjs figura())"
+  },
+  {
+   "pagina": "m6/licao-m6-f05/index.html",
+   "classe": "figcaption",
+   "contagem": 1,
+   "familia": "P8",
+   "razao": "Legenda mista no «Abre» (identificação, licença, «Fonte» e frase de contexto); pedido pt-3 (legendas mistas: divisão à mão, com a tabela «fica à vista» e «vai para o «i»» revista pelo revisor de pt-PT; montante licao.mjs figura())"
+  },
+  {
+   "pagina": "m6/licao-m6-f06/index.html",
+   "classe": "figcaption",
+   "contagem": 1,
+   "familia": "P8",
+   "razao": "Legenda mista no «Abre» (identificação, licença, «Fonte» e frase de contexto); pedido pt-3 (legendas mistas: divisão à mão, com a tabela «fica à vista» e «vai para o «i»» revista pelo revisor de pt-PT; montante licao.mjs figura())"
+  },
+  {
+   "pagina": "m6/licao-m6-f07/index.html",
+   "classe": "figcaption",
+   "contagem": 1,
+   "familia": "P8",
+   "razao": "Legenda mista no «Abre» (identificação, licença, «Fonte» e frase de contexto); pedido pt-3 (legendas mistas: divisão à mão, com a tabela «fica à vista» e «vai para o «i»» revista pelo revisor de pt-PT; montante licao.mjs figura())"
+  },
+  {
+   "pagina": "m6/licao-m6-f08/index.html",
+   "classe": "figcaption",
+   "contagem": 1,
+   "familia": "P8",
+   "razao": "Legenda mista no «Abre» (identificação, licença, «Fonte» e frase de contexto); pedido pt-3 (legendas mistas: divisão à mão, com a tabela «fica à vista» e «vai para o «i»» revista pelo revisor de pt-PT; montante licao.mjs figura())"
+  },
+  {
+   "pagina": "m6/licao-m6-f09/index.html",
+   "classe": "figcaption",
+   "contagem": 1,
+   "familia": "P8",
+   "razao": "Legenda mista no «Abre» (identificação, licença, «Fonte» e frase de contexto); pedido pt-3 (legendas mistas: divisão à mão, com a tabela «fica à vista» e «vai para o «i»» revista pelo revisor de pt-PT; montante licao.mjs figura())"
+  },
+  {
+   "pagina": "m6/licao-m6-f11/index.html",
+   "classe": "figcaption",
+   "contagem": 1,
+   "familia": "P8",
+   "razao": "Legenda mista no «Abre» (identificação, licença, «Fonte» e frase de contexto); pedido pt-3 (legendas mistas: divisão à mão, com a tabela «fica à vista» e «vai para o «i»» revista pelo revisor de pt-PT; montante licao.mjs figura())"
+  },
+  {
+   "pagina": "m6/licao-m6-f12/index.html",
+   "classe": "figcaption",
+   "contagem": 1,
+   "familia": "P8",
+   "razao": "Legenda mista no «Abre» (identificação, licença, «Fonte» e frase de contexto); pedido pt-3 (legendas mistas: divisão à mão, com a tabela «fica à vista» e «vai para o «i»» revista pelo revisor de pt-PT; montante licao.mjs figura())"
+  },
+  {
+   "pagina": "m6/licao-m6-f13/index.html",
+   "classe": "figcaption",
+   "contagem": 1,
+   "familia": "P8",
+   "razao": "Legenda mista no «Abre» (identificação, licença, «Fonte» e frase de contexto); pedido pt-3 (legendas mistas: divisão à mão, com a tabela «fica à vista» e «vai para o «i»» revista pelo revisor de pt-PT; montante licao.mjs figura())"
+  },
+  {
+   "pagina": "m6/m6-antero-viagem-ao-nada/index.html",
+   "classe": "span.fr-cred",
+   "contagem": 1,
+   "familia": "P14",
+   "razao": "«Pensar devagar»: só sai o fr-cred, o fr-leg fica; pedido pt-2, fatias seguintes da camada creditos_i_20261105"
+  },
+  {
+   "pagina": "m6/m6-cesario-noite-inteira/index.html",
+   "classe": "span.fr-cred",
+   "contagem": 1,
+   "familia": "P14",
+   "razao": "«Pensar devagar»: só sai o fr-cred, o fr-leg fica; pedido pt-2, fatias seguintes da camada creditos_i_20261105"
+  },
+  {
+   "pagina": "m6/mapa-do-modulo-m6/index.html",
+   "classe": "figcaption",
+   "contagem": 7,
+   "familia": "P16",
+   "razao": "Galeria «Para ver» do mapa do módulo: a ligação «Lição Mx-Fyy» fica à vista (variante «linha»); pedido pt-2, fatias seguintes da camada creditos_i_20261105"
+  },
+  {
+   "pagina": "m7/index.html",
+   "classe": "figcaption.cz-credit",
+   "contagem": 1,
+   "familia": "P2",
+   "razao": "Imagem de abertura do índice do módulo; pedido pt-1 (decisão 162: depois do desenho do M4 nos nove índices, decisão 148, e da calçada que balança toda junta, decisão 150)"
+  },
+  {
+   "pagina": "m7/licao-m7-f01/index.html",
+   "classe": "span.tabela",
+   "contagem": 1,
+   "familia": "P10",
+   "razao": "Pessoa, cerca de 1914 (span.tabela da varredura de formatação); pedido pt-2, fatias seguintes da camada creditos_i_20261105"
+  },
+  {
+   "pagina": "m7/licao-m7-f02/index.html",
+   "classe": "figcaption",
+   "contagem": 1,
+   "familia": "P8",
+   "razao": "Legenda mista no «Abre» (identificação, licença, «Fonte» e frase de contexto); pedido pt-3 (legendas mistas: divisão à mão, com a tabela «fica à vista» e «vai para o «i»» revista pelo revisor de pt-PT; montante licao.mjs figura())"
+  },
+  {
+   "pagina": "m7/licao-m7-f04/index.html",
+   "classe": "figcaption",
+   "contagem": 1,
+   "familia": "P8",
+   "razao": "Legenda mista no «Abre» (identificação, licença, «Fonte» e frase de contexto); pedido pt-3 (legendas mistas: divisão à mão, com a tabela «fica à vista» e «vai para o «i»» revista pelo revisor de pt-PT; montante licao.mjs figura())"
+  },
+  {
+   "pagina": "m7/licao-m7-f05/index.html",
+   "classe": "span.tabela",
+   "contagem": 1,
+   "familia": "P10",
+   "razao": "Pessoa, cerca de 1914 (span.tabela da varredura de formatação); pedido pt-2, fatias seguintes da camada creditos_i_20261105"
+  },
+  {
+   "pagina": "m7/licao-m7-f06/index.html",
+   "classe": "figcaption",
+   "contagem": 1,
+   "familia": "P8",
+   "razao": "Legenda mista no «Abre» (identificação, licença, «Fonte» e frase de contexto); pedido pt-3 (legendas mistas: divisão à mão, com a tabela «fica à vista» e «vai para o «i»» revista pelo revisor de pt-PT; montante licao.mjs figura())"
+  },
+  {
+   "pagina": "m7/licao-m7-f07/index.html",
+   "classe": "figcaption",
+   "contagem": 1,
+   "familia": "P8",
+   "razao": "Legenda mista no «Abre» (identificação, licença, «Fonte» e frase de contexto); pedido pt-3 (legendas mistas: divisão à mão, com a tabela «fica à vista» e «vai para o «i»» revista pelo revisor de pt-PT; montante licao.mjs figura())"
+  },
+  {
+   "pagina": "m7/licao-m7-f08/index.html",
+   "classe": "figcaption",
+   "contagem": 1,
+   "familia": "P8",
+   "razao": "Legenda mista no «Abre» (identificação, licença, «Fonte» e frase de contexto); pedido pt-3 (legendas mistas: divisão à mão, com a tabela «fica à vista» e «vai para o «i»» revista pelo revisor de pt-PT; montante licao.mjs figura())"
+  },
+  {
+   "pagina": "m7/licao-m7-f09/index.html",
+   "classe": "figcaption",
+   "contagem": 1,
+   "familia": "P8",
+   "razao": "Legenda mista no «Abre» (identificação, licença, «Fonte» e frase de contexto); pedido pt-3 (legendas mistas: divisão à mão, com a tabela «fica à vista» e «vai para o «i»» revista pelo revisor de pt-PT; montante licao.mjs figura())"
+  },
+  {
+   "pagina": "m7/licao-m7-f10/index.html",
+   "classe": "figcaption",
+   "contagem": 1,
+   "familia": "P8",
+   "razao": "Legenda mista no «Abre» (identificação, licença, «Fonte» e frase de contexto); pedido pt-3 (legendas mistas: divisão à mão, com a tabela «fica à vista» e «vai para o «i»» revista pelo revisor de pt-PT; montante licao.mjs figura())"
+  },
+  {
+   "pagina": "m7/licao-m7-f11/index.html",
+   "classe": "figcaption",
+   "contagem": 1,
+   "familia": "P8",
+   "razao": "Legenda mista no «Abre» (identificação, licença, «Fonte» e frase de contexto); pedido pt-3 (legendas mistas: divisão à mão, com a tabela «fica à vista» e «vai para o «i»» revista pelo revisor de pt-PT; montante licao.mjs figura())"
+  },
+  {
+   "pagina": "m7/licao-m7-f13/index.html",
+   "classe": "figcaption",
+   "contagem": 1,
+   "familia": "P8",
+   "razao": "Legenda mista no «Abre» (identificação, licença, «Fonte» e frase de contexto); pedido pt-3 (legendas mistas: divisão à mão, com a tabela «fica à vista» e «vai para o «i»» revista pelo revisor de pt-PT; montante licao.mjs figura())"
+  },
+  {
+   "pagina": "m7/licao-m7-f15/index.html",
+   "classe": "figcaption",
+   "contagem": 1,
+   "familia": "P8",
+   "razao": "Legenda mista no «Abre» (identificação, licença, «Fonte» e frase de contexto); pedido pt-3 (legendas mistas: divisão à mão, com a tabela «fica à vista» e «vai para o «i»» revista pelo revisor de pt-PT; montante licao.mjs figura())"
+  },
+  {
+   "pagina": "m7/licao-m7-f23/index.html",
+   "classe": "figcaption",
+   "contagem": 1,
+   "familia": "P8",
+   "razao": "Legenda mista no «Abre» (identificação, licença, «Fonte» e frase de contexto); pedido pt-3 (legendas mistas: divisão à mão, com a tabela «fica à vista» e «vai para o «i»» revista pelo revisor de pt-PT; montante licao.mjs figura())"
+  },
+  {
+   "pagina": "m7/licao-m7-f34/index.html",
+   "classe": "figcaption",
+   "contagem": 1,
+   "familia": "P11",
+   "razao": "Dupla exposição (Chuva Oblíqua): a instrução e os botões ficam à vista, o small do crédito vai para o «i»; pedido pt-2, fatias seguintes da camada creditos_i_20261105"
+  },
+  {
+   "pagina": "m7/licao-m7-f35/index.html",
+   "classe": "figcaption",
+   "contagem": 1,
+   "familia": "P8",
+   "razao": "Legenda mista no «Abre» (identificação, licença, «Fonte» e frase de contexto); pedido pt-3 (legendas mistas: divisão à mão, com a tabela «fica à vista» e «vai para o «i»» revista pelo revisor de pt-PT; montante licao.mjs figura())"
+  },
+  {
+   "pagina": "m7/licao-m7-f36/index.html",
+   "classe": "figcaption",
+   "contagem": 1,
+   "familia": "P8",
+   "razao": "Legenda mista no «Abre» (identificação, licença, «Fonte» e frase de contexto); pedido pt-3 (legendas mistas: divisão à mão, com a tabela «fica à vista» e «vai para o «i»» revista pelo revisor de pt-PT; montante licao.mjs figura())"
+  },
+  {
+   "pagina": "m7/m7-fingidor-maquina/index.html",
+   "classe": "span.fr-cred",
+   "contagem": 1,
+   "familia": "P14",
+   "razao": "«Pensar devagar»: só sai o fr-cred, o fr-leg fica; pedido pt-2, fatias seguintes da camada creditos_i_20261105"
+  },
+  {
+   "pagina": "m7/m7-quatro-vozes-um-problema/index.html",
+   "classe": "span.fr-cred",
+   "contagem": 1,
+   "familia": "P14",
+   "razao": "«Pensar devagar»: só sai o fr-cred, o fr-leg fica; pedido pt-2, fatias seguintes da camada creditos_i_20261105"
+  },
+  {
+   "pagina": "m7/mapa-do-modulo-m7/index.html",
+   "classe": "figcaption",
+   "contagem": 18,
+   "familia": "P16",
+   "razao": "Galeria «Para ver» do mapa do módulo: a ligação «Lição Mx-Fyy» fica à vista (variante «linha»); pedido pt-2, fatias seguintes da camada creditos_i_20261105"
+  },
+  {
+   "pagina": "m7/mapa-do-modulo-m7/index.html",
+   "classe": "span.tabela",
+   "contagem": 1,
+   "familia": "P10",
+   "razao": "Pessoa, cerca de 1914 (span.tabela da varredura de formatação); pedido pt-2, fatias seguintes da camada creditos_i_20261105"
+  },
+  {
+   "pagina": "m8/index.html",
+   "classe": "figcaption.cz-credit",
+   "contagem": 1,
+   "familia": "P2",
+   "razao": "Imagem de abertura do índice do módulo; pedido pt-1 (decisão 162: depois do desenho do M4 nos nove índices, decisão 148, e da calçada que balança toda junta, decisão 150)"
+  },
+  {
+   "pagina": "m8/licao-m8-f01/index.html",
+   "classe": "figcaption",
+   "contagem": 1,
+   "familia": "P8",
+   "razao": "Legenda mista no «Abre» (identificação, licença, «Fonte» e frase de contexto); pedido pt-3 (legendas mistas: divisão à mão, com a tabela «fica à vista» e «vai para o «i»» revista pelo revisor de pt-PT; montante licao.mjs figura())"
+  },
+  {
+   "pagina": "m8/licao-m8-f03/index.html",
+   "classe": "figcaption",
+   "contagem": 1,
+   "familia": "P8",
+   "razao": "Legenda mista no «Abre» (identificação, licença, «Fonte» e frase de contexto); pedido pt-3 (legendas mistas: divisão à mão, com a tabela «fica à vista» e «vai para o «i»» revista pelo revisor de pt-PT; montante licao.mjs figura())"
+  },
+  {
+   "pagina": "m8/licao-m8-f04/index.html",
+   "classe": "figcaption",
+   "contagem": 1,
+   "familia": "P8",
+   "razao": "Legenda mista no «Abre» (identificação, licença, «Fonte» e frase de contexto); pedido pt-3 (legendas mistas: divisão à mão, com a tabela «fica à vista» e «vai para o «i»» revista pelo revisor de pt-PT; montante licao.mjs figura())"
+  },
+  {
+   "pagina": "m8/licao-m8-f05/index.html",
+   "classe": "figcaption",
+   "contagem": 1,
+   "familia": "P8",
+   "razao": "Legenda mista no «Abre» (identificação, licença, «Fonte» e frase de contexto); pedido pt-3 (legendas mistas: divisão à mão, com a tabela «fica à vista» e «vai para o «i»» revista pelo revisor de pt-PT; montante licao.mjs figura())"
+  },
+  {
+   "pagina": "m8/licao-m8-f06/index.html",
+   "classe": "figcaption",
+   "contagem": 1,
+   "familia": "P8",
+   "razao": "Legenda mista no «Abre» (identificação, licença, «Fonte» e frase de contexto); pedido pt-3 (legendas mistas: divisão à mão, com a tabela «fica à vista» e «vai para o «i»» revista pelo revisor de pt-PT; montante licao.mjs figura())"
+  },
+  {
+   "pagina": "m8/licao-m8-f08/index.html",
+   "classe": "figcaption",
+   "contagem": 1,
+   "familia": "P8",
+   "razao": "Legenda mista no «Abre» (identificação, licença, «Fonte» e frase de contexto); pedido pt-3 (legendas mistas: divisão à mão, com a tabela «fica à vista» e «vai para o «i»» revista pelo revisor de pt-PT; montante licao.mjs figura())"
+  },
+  {
+   "pagina": "m8/licao-m8-f09/index.html",
+   "classe": "figcaption",
+   "contagem": 1,
+   "familia": "P8",
+   "razao": "Legenda mista no «Abre» (identificação, licença, «Fonte» e frase de contexto); pedido pt-3 (legendas mistas: divisão à mão, com a tabela «fica à vista» e «vai para o «i»» revista pelo revisor de pt-PT; montante licao.mjs figura())"
+  },
+  {
+   "pagina": "m8/licao-m8-f10/index.html",
+   "classe": "figcaption",
+   "contagem": 1,
+   "familia": "P8",
+   "razao": "Legenda mista no «Abre» (identificação, licença, «Fonte» e frase de contexto); pedido pt-3 (legendas mistas: divisão à mão, com a tabela «fica à vista» e «vai para o «i»» revista pelo revisor de pt-PT; montante licao.mjs figura())"
+  },
+  {
+   "pagina": "m8/licao-m8-f11/index.html",
+   "classe": "figcaption",
+   "contagem": 1,
+   "familia": "P8",
+   "razao": "Legenda mista no «Abre» (identificação, licença, «Fonte» e frase de contexto); pedido pt-3 (legendas mistas: divisão à mão, com a tabela «fica à vista» e «vai para o «i»» revista pelo revisor de pt-PT; montante licao.mjs figura())"
+  },
+  {
+   "pagina": "m8/licao-m8-f12/index.html",
+   "classe": "figcaption",
+   "contagem": 1,
+   "familia": "P8",
+   "razao": "Legenda mista no «Abre» (identificação, licença, «Fonte» e frase de contexto); pedido pt-3 (legendas mistas: divisão à mão, com a tabela «fica à vista» e «vai para o «i»» revista pelo revisor de pt-PT; montante licao.mjs figura())"
+  },
+  {
+   "pagina": "m8/m8-poema-testemunha/index.html",
+   "classe": "span.fr-cred",
+   "contagem": 1,
+   "familia": "P14",
+   "razao": "«Pensar devagar»: só sai o fr-cred, o fr-leg fica; pedido pt-2, fatias seguintes da camada creditos_i_20261105"
+  },
+  {
+   "pagina": "m8/mapa-do-modulo-m8/index.html",
+   "classe": "figcaption",
+   "contagem": 4,
+   "familia": "P16",
+   "razao": "Galeria «Para ver» do mapa do módulo: a ligação «Lição Mx-Fyy» fica à vista (variante «linha»); pedido pt-2, fatias seguintes da camada creditos_i_20261105"
+  },
+  {
+   "pagina": "m9/index.html",
+   "classe": "figcaption.cz-credit",
+   "contagem": 1,
+   "familia": "P2",
+   "razao": "Imagem de abertura do índice do módulo; pedido pt-1 (decisão 162: depois do desenho do M4 nos nove índices, decisão 148, e da calçada que balança toda junta, decisão 150)"
+  },
+  {
+   "pagina": "m9/licao-m9-f01/index.html",
+   "classe": "figcaption",
+   "contagem": 1,
+   "familia": "P8",
+   "razao": "Legenda mista no «Abre» (identificação, licença, «Fonte» e frase de contexto); pedido pt-3 (legendas mistas: divisão à mão, com a tabela «fica à vista» e «vai para o «i»» revista pelo revisor de pt-PT; montante licao.mjs figura())"
+  },
+  {
+   "pagina": "m9/licao-m9-f02/index.html",
+   "classe": "figcaption",
+   "contagem": 1,
+   "familia": "P8",
+   "razao": "Legenda mista no «Abre» (identificação, licença, «Fonte» e frase de contexto); pedido pt-3 (legendas mistas: divisão à mão, com a tabela «fica à vista» e «vai para o «i»» revista pelo revisor de pt-PT; montante licao.mjs figura())"
+  },
+  {
+   "pagina": "m9/licao-m9-f03/index.html",
+   "classe": "figcaption",
+   "contagem": 1,
+   "familia": "P8",
+   "razao": "Legenda mista no «Abre» (identificação, licença, «Fonte» e frase de contexto); pedido pt-3 (legendas mistas: divisão à mão, com a tabela «fica à vista» e «vai para o «i»» revista pelo revisor de pt-PT; montante licao.mjs figura())"
+  },
+  {
+   "pagina": "m9/licao-m9-f04/index.html",
+   "classe": "figcaption",
+   "contagem": 1,
+   "familia": "P8",
+   "razao": "Legenda mista no «Abre» (identificação, licença, «Fonte» e frase de contexto); pedido pt-3 (legendas mistas: divisão à mão, com a tabela «fica à vista» e «vai para o «i»» revista pelo revisor de pt-PT; montante licao.mjs figura())"
+  },
+  {
+   "pagina": "m9/licao-m9-f05/index.html",
+   "classe": "figcaption",
+   "contagem": 1,
+   "familia": "P8",
+   "razao": "Legenda mista no «Abre» (identificação, licença, «Fonte» e frase de contexto); pedido pt-3 (legendas mistas: divisão à mão, com a tabela «fica à vista» e «vai para o «i»» revista pelo revisor de pt-PT; montante licao.mjs figura())"
+  },
+  {
+   "pagina": "m9/licao-m9-f07/index.html",
+   "classe": "figcaption",
+   "contagem": 1,
+   "familia": "P8",
+   "razao": "Legenda mista no «Abre» (identificação, licença, «Fonte» e frase de contexto); pedido pt-3 (legendas mistas: divisão à mão, com a tabela «fica à vista» e «vai para o «i»» revista pelo revisor de pt-PT; montante licao.mjs figura())"
+  },
+  {
+   "pagina": "m9/licao-m9-f10/index.html",
+   "classe": "figcaption",
+   "contagem": 1,
+   "familia": "P8",
+   "razao": "Legenda mista no «Abre» (identificação, licença, «Fonte» e frase de contexto); pedido pt-3 (legendas mistas: divisão à mão, com a tabela «fica à vista» e «vai para o «i»» revista pelo revisor de pt-PT; montante licao.mjs figura())"
+  },
+  {
+   "pagina": "m9/m9-de-quem-e-o-convento/index.html",
+   "classe": "span.fr-cred",
+   "contagem": 1,
+   "familia": "P14",
+   "razao": "«Pensar devagar»: só sai o fr-cred, o fr-leg fica; pedido pt-2, fatias seguintes da camada creditos_i_20261105"
+  },
+  {
+   "pagina": "m9/m9-ver-e-nao-ver/index.html",
+   "classe": "span.fr-cred",
+   "contagem": 1,
+   "familia": "P14",
+   "razao": "«Pensar devagar»: só sai o fr-cred, o fr-leg fica; pedido pt-2, fatias seguintes da camada creditos_i_20261105"
+  },
+  {
+   "pagina": "m9/mapa-do-modulo-m9/index.html",
+   "classe": "figcaption",
+   "contagem": 7,
+   "familia": "P16",
+   "razao": "Galeria «Para ver» do mapa do módulo: a ligação «Lição Mx-Fyy» fica à vista (variante «linha»); pedido pt-2, fatias seguintes da camada creditos_i_20261105"
+  },
+  {
+   "pagina": "m9/recursos/f11.js",
+   "classe": "figcaption",
+   "contagem": 1,
+   "familia": "P8",
+   "razao": "Legenda mista no «Abre» (identificação, licença, «Fonte» e frase de contexto); pedido pt-3 (legendas mistas: divisão à mão, com a tabela «fica à vista» e «vai para o «i»» revista pelo revisor de pt-PT; montante licao.mjs figura())"
+  },
+  {
+   "pagina": "m9/recursos/f12.js",
+   "classe": "figcaption",
+   "contagem": 1,
+   "familia": "P8",
+   "razao": "Legenda mista no «Abre» (identificação, licença, «Fonte» e frase de contexto); pedido pt-3 (legendas mistas: divisão à mão, com a tabela «fica à vista» e «vai para o «i»» revista pelo revisor de pt-PT; montante licao.mjs figura())"
+  },
+  {
+   "pagina": "m9/recursos/f13.js",
+   "classe": "figcaption",
+   "contagem": 1,
+   "familia": "P8",
+   "razao": "Legenda mista no «Abre» (identificação, licença, «Fonte» e frase de contexto); pedido pt-3 (legendas mistas: divisão à mão, com a tabela «fica à vista» e «vai para o «i»» revista pelo revisor de pt-PT; montante licao.mjs figura())"
+  }
+ ]
+}

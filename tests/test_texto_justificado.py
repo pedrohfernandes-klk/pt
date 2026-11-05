@@ -137,8 +137,10 @@ FAMILIAS = [
 # 30/10/2026: #provas sai da lista (o índice das provas deixou de ser área reservada com o #137); .pv- continua (os blocos
 # de cada prova no índice são curtos e ficam à esquerda).
 PROIBIDO_EM_TODO = re.compile(r'\.(v|vl|ln|estrofe|verso|dupla-v|verso-q|frase-toda|prova-l)(?![\w-])|blockquote\.cit(?!\.prosa)|\.pv-')
+# 05/11/2026: decisão 153. Os créditos atrás de um «i» (details.info-i e o seu .info-i-texto) juntam-se às exclusões: nunca se
+# justificam nem se hifenizam (decisão 140), como as legendas e os créditos que estavam à vista.
 PROIBIDO_SUJEITO = re.compile(r'(^|[(,])(li|td|th|dd|dt|tr|table|button|label|figcaption|summary|h[1-6]|input|textarea|select)(?![\w-])'
-                              r'|\.(op|cc-op|fe|resp-proj|fonte|fonte-x|rodape|gl|cita|q|perg|papel-q|c-veredito)(?![\w-])')
+                              r'|\.(op|cc-op|fe|resp-proj|fonte|fonte-x|rodape|gl|cita|q|perg|papel-q|c-veredito|info-i|info-i-texto)(?![\w-])')
 
 
 def sem_condicoes(seletor):
@@ -209,6 +211,9 @@ class TextoJustificado(unittest.TestCase):
         # o próprio teste reconhece o que proíbe
         self.assertIsNotNone(PROIBIDO_EM_TODO.search(sem_condicoes('.jogo .ler .v .ln')))
         self.assertIsNotNone(PROIBIDO_SUJEITO.search(sujeito('.task-page li')))
+        # 05/11/2026: decisão 153, o crédito dentro do «i» também
+        self.assertIsNotNone(PROIBIDO_SUJEITO.search(sujeito('.jogo .ler details.info-i>p.info-i-texto')))
+        self.assertIsNotNone(PROIBIDO_SUJEITO.search(sujeito('.jogo .ler details.info-i')))
         self.assertIsNone(PROIBIDO_SUJEITO.search(sujeito('main:has(>div.regra)>h2+p:not([class])')))
         # os parágrafos com <br> (versos ou linhas soltas) e os marcados como verso ficam fora; nos exercícios de telemóvel,
         # as caixas com botões de escolha (versos com lacuna, casos, itens a classificar) também

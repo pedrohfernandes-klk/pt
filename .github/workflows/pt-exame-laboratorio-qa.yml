@@ -51,8 +51,9 @@ jobs:
           python scripts/provas/opcoes.py --exigir
           # 05/11/2026: a camada do Laboratório do exame confere-se aqui (é a mais recente; nada por cima dela).
           # 05/11/2026: o contexto de cada sessão (lição e excerto, não «recorte») passa a ser a camada mais recente: confere-se aqui sem nada por cima, e desfaz-se antes de conferir a ligação e as notas.
-          python scripts/aplicar_trocas.py scripts/exame_contexto_20261105.json --manifesto tests/fixtures/exame-contexto-edits-20261105.json --verificar
-          python scripts/aplicar_trocas.py scripts/exame_licao_20261105.json --manifesto tests/fixtures/exame-licao-edits-20261105.json --verificar --desfazer-antes tests/fixtures/exame-contexto-edits-20261105.json
+          # 05/11/2026: os créditos atrás de um «i» (decisão 153, pedido pt-2) passam a ser a camada mais recente (não mexem no exame): desfazem-se antes de conferir o contexto, a ligação e as notas, com a mesma exigência.
+          python scripts/aplicar_trocas.py scripts/exame_contexto_20261105.json --manifesto tests/fixtures/exame-contexto-edits-20261105.json --verificar --desfazer-antes tests/fixtures/creditos-i-edits-20261105.json
+          python scripts/aplicar_trocas.py scripts/exame_licao_20261105.json --manifesto tests/fixtures/exame-licao-edits-20261105.json --verificar --desfazer-antes tests/fixtures/creditos-i-edits-20261105.json --desfazer-antes tests/fixtures/exame-contexto-edits-20261105.json
       - name: Preparar navegador
         run: |
           # 05/11/2026: playwright fixado em 1.64.1; a 1.65.0 saiu no npm sem o playwright-core 1.65.0 (ETARGET).
