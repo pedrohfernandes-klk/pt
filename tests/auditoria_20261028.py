@@ -296,7 +296,21 @@ _TABELA_0511 = json.loads((ROOT/'tests/fixtures/tabela-movimentos-edits-20261105
 # 05/11/2026: Laboratório do exame (lição, não «leitura de apoio»), camada mais recente: desfaz-se antes da tabela, com contagem estrita.
 _EXAME_0511 = json.loads((ROOT/'tests/fixtures/exame-licao-edits-20261105.json').read_text('utf-8'))['files']
 
+# 05/11/2026: o texto de contexto de cada sessão do Laboratório do exame (lição e excerto, não «leitura de apoio» nem «recorte»),
+# camada mais recente: desfaz-se antes da ligação e das notas do Laboratório do exame, com contagem estrita.
+_CONTEXTO_0511 = json.loads((ROOT/'tests/fixtures/exame-contexto-edits-20261105.json').read_text('utf-8'))['files']
+
+def undo_contexto_0511(path, text):
+    for edit in reversed(_CONTEXTO_0511.get(_relative(path), {}).get('edits', [])):
+        if text.count(edit['new']) != edit['occurrences']:
+            raise AssertionError(f"Contexto do Laboratório do exame não confere: {path}: {edit['location']}")
+        text = text.replace(edit['new'], edit['old'])
+    return text
+
+
 def undo_exame_0511(path, text):
+    # 05/11/2026: primeiro o contexto de cada sessão do Laboratório do exame, que está por cima.
+    text = undo_contexto_0511(path, text)
     for edit in reversed(_EXAME_0511.get(_relative(path), {}).get('edits', [])):
         if text.count(edit['new']) != edit['occurrences']:
             raise AssertionError(f"Laboratório do exame não confere: {path}: {edit['location']}")

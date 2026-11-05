@@ -7,7 +7,9 @@ import sys
 
 ROOT=Path(__file__).resolve().parents[1]
 LAYERS=[
- # 05/11/2026: Laboratório do exame: a ligação e as notas falam da lição, camada mais recente, por cima da tabela.
+ # 05/11/2026: Laboratório do exame: o texto de contexto de cada sessão fala da lição e do excerto, camada mais recente, por cima da ligação e das notas.
+ ('exame_contexto_20261105','exame-contexto-edits-20261105'),
+ # 05/11/2026: Laboratório do exame: a ligação e as notas falam da lição, por cima da tabela.
  ('exame_licao_20261105','exame-licao-edits-20261105'),
  # 05/11/2026: tabela dos seis movimentos (M7-F10) e intervalos de versos, por cima da revisão.
  ('tabela_movimentos_20261105','tabela-movimentos-edits-20261105'),

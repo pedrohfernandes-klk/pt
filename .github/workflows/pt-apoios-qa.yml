@@ -32,7 +32,8 @@ jobs:
         run: |
           python -m unittest discover -s tests -p 'test_tabela_movimentos.py' -v
           # 05/11/2026: o Laboratório do exame (lição, não «leitura de apoio») é a camada mais recente; desfaz-se antes da tabela dos seis movimentos.
-          python scripts/aplicar_trocas.py scripts/tabela_movimentos_20261105.json --manifesto tests/fixtures/tabela-movimentos-edits-20261105.json --verificar --desfazer-antes tests/fixtures/exame-licao-edits-20261105.json
+          # 05/11/2026: o contexto de cada sessão do Laboratório do exame (lição e excerto, não «recorte») é a camada mais recente; desfaz-se antes da ligação e das notas do Laboratório do exame.
+          python scripts/aplicar_trocas.py scripts/tabela_movimentos_20261105.json --manifesto tests/fixtures/tabela-movimentos-edits-20261105.json --verificar --desfazer-antes tests/fixtures/exame-contexto-edits-20261105.json --desfazer-antes tests/fixtures/exame-licao-edits-20261105.json
           python scripts/verificar_camadas.py
       - name: Instalar Chromium
         run: |
