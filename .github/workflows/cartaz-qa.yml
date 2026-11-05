@@ -24,7 +24,8 @@ jobs:
         if: github.head_ref == 'codex/calcada-continua-pt-20261103' || github.ref_name == 'codex/calcada-continua-pt-20261103'
       # 01/11/2026: bateria Python completa, sem excluir famílias.
       - run: python -m unittest discover -s tests -p 'test_*.py' -v
-      - run: npm install --no-save playwright
+      # 05/11/2026: playwright fixado em 1.64.1; a 1.65.0 saiu no npm sem o playwright-core 1.65.0 (ETARGET).
+      - run: npm install --no-save playwright@1.64.1
       - run: npx playwright install --with-deps chromium
       - run: node --test tests/cartaz.test.cjs tests/appearance.test.cjs tests/cartaz_animacoes.test.cjs
       # 03/11/2026: cabeçalhos compactos, contraste real, projeção e zoom nativo.
