@@ -842,7 +842,13 @@ def main():
                 # 02/11/2026: a atribuição de IA é posterior ao lote 2 publicado.
                 # 03/11/2026: primeiro a camada visual do cabecalho.
                 # 05/11/2026: antes de tudo, a revisão de 5/11, a camada mais recente.
-                # 05/11/2026: e, antes do Laboratório do exame, o contexto de cada sessão, a camada mais recente.
+                # 05/11/2026: antes de tudo, a decisão 154 (os exercícios fazem-se sozinho), a camada mais recente.
+                autonomia = ROOT / 'tests/fixtures/autonomia-154-edits-20261105.json'
+                for edit in reversed(json.loads(autonomia.read_text('utf-8'))['files'].get(rel, {}).get('edits', [])):
+                    if conferencia.count(edit['new']) != edit['occurrences']:
+                        raise ManifestoDesatualizado(f'{rel}: decisão 154 (exercícios a sós) não confere')
+                    conferencia = conferencia.replace(edit['new'], edit['old'])
+                # 05/11/2026: e, antes do Laboratório do exame, o contexto de cada sessão.
                 contexto = ROOT / 'tests/fixtures/exame-contexto-edits-20261105.json'
                 for edit in reversed(json.loads(contexto.read_text('utf-8'))['files'].get(rel, {}).get('edits', [])):
                     if conferencia.count(edit['new']) != edit['occurrences']:

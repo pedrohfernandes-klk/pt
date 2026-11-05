@@ -3,6 +3,8 @@ import hashlib,json,re,subprocess,sys,unittest
 from html.parser import HTMLParser
 from pathlib import Path
 from auditoria_20261028 import undo_m4_piloto
+# 05/11/2026: para desfazer, antes do piloto, as camadas que estão por cima dele (decisão 154).
+from auditoria_20261028 import undo_cabecalho
 ROOT=Path(__file__).resolve().parents[1]
 class Inventory(HTMLParser):
  def __init__(self,text):
@@ -18,7 +20,10 @@ class Inventory(HTMLParser):
   if self.in_script:self.scripts[-1][1]+=text
 class M4Piloto(unittest.TestCase):
  def setUp(self):
-  self.after=(ROOT/'m4/index.html').read_text('utf-8');self.before=undo_m4_piloto('m4/index.html',self.after)
+  # 05/11/2026: a decisão 154 (camada autonomia_154_20261105) muda o passo 16 do percurso do M4, dentro de um bloco do
+  # piloto; o «depois» do piloto é a página com as camadas mais recentes desfeitas (undo_cabecalho desfaz toda a cadeia por
+  # cima do piloto, com contagem estrita). As conferências ficam iguais.
+  self.after=undo_cabecalho('m4/index.html',(ROOT/'m4/index.html').read_text('utf-8'));self.before=undo_m4_piloto('m4/index.html',self.after)
  def test_conserva_ids_ligacoes_scripts_e_dados(self):
   a,b=Inventory(self.before),Inventory(self.after)
   self.assertEqual(sorted(a.ids),sorted(b.ids));self.assertEqual(sorted(a.links),sorted(b.links))
@@ -28,7 +33,10 @@ class M4Piloto(unittest.TestCase):
   manifest=json.loads((ROOT/'tests/fixtures/cartaz-m4-piloto-edits-20261102.json').read_text('utf-8'))
   self.assertEqual(list(manifest['files']),['m4/index.html'])
   self.assertEqual(hashlib.sha256(self.before.encode()).hexdigest(),manifest['files']['m4/index.html']['base_sha256_lf'])
-  run=subprocess.run([sys.executable,'scripts/aplicar_trocas.py','scripts/cartaz_m4_piloto_20261102.json','--manifesto','tests/fixtures/cartaz-m4-piloto-edits-20261102.json','--verificar'],cwd=ROOT,capture_output=True,text=True,encoding='utf-8')
+  # 05/11/2026: a decisão 154 (camada autonomia_154_20261105) é a camada mais recente e muda o m4/index.html; as camadas
+  # por cima do piloto desfazem-se antes, da mais recente para a mais antiga, como em scripts/verificar_camadas.py, com a
+  # mesma exigência.
+  run=subprocess.run([sys.executable,'scripts/aplicar_trocas.py','scripts/cartaz_m4_piloto_20261102.json','--manifesto','tests/fixtures/cartaz-m4-piloto-edits-20261102.json','--verificar','--desfazer-antes','tests/fixtures/autonomia-154-edits-20261105.json','--desfazer-antes','tests/fixtures/exame-contexto-edits-20261105.json','--desfazer-antes','tests/fixtures/exame-licao-edits-20261105.json','--desfazer-antes','tests/fixtures/tabela-movimentos-edits-20261105.json','--desfazer-antes','tests/fixtures/revisao-edits-20261105.json','--desfazer-antes','tests/fixtures/cartaz-cabecalho-edits-20261103.json'],cwd=ROOT,capture_output=True,text=True,encoding='utf-8')
   self.assertEqual(run.returncode,0,run.stdout+run.stderr)
  def test_adesao_exclusiva_e_sem_novo_motor(self):
   for n in range(1,10):

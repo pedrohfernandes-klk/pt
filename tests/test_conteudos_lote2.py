@@ -8,6 +8,8 @@ from opcoes_equilibradas import medir
 from auditoria_20261028 import undo_conteudos_lote2, undo_m4_piloto
 # 05/11/2026: a revisão de 5/11 está por cima do lote 2.
 from auditoria_20261028 import undo_revisao_0511
+# 05/11/2026: a decisão 154 está por cima do piloto M4 (passo 16 do percurso do M4).
+from auditoria_20261028 import undo_cabecalho
 LOG=json.loads((ROOT/'docs/qa/conteudos-lote2-cartoes-20261101.json').read_text('utf-8'))
 
 def cards(text):
@@ -58,7 +60,9 @@ class Lote2(unittest.TestCase):
             # 02/11/2026: verificar os nove índices, incluindo as provas já publicadas pelo Cartaz.
             before=undo_conteudos_lote2(rel,current)
             # 02/11/2026: comparar o lote de conteúdo antes da camada visual posterior.
-            current=undo_m4_piloto(rel,current)
+            # 05/11/2026: a decisão 154 muda o passo 16 do percurso do M4, dentro de um bloco do piloto: desfazem-se antes
+            # as camadas por cima do piloto (undo_cabecalho, contagem estrita); as conferências ficam iguais.
+            current=undo_m4_piloto(rel,undo_cabecalho(rel,current))
             # 02/11/2026: M4/M7 já publicam o tipo JSON antes do id; verificar o mesmo conteúdo integral.
             pattern=r'<script (?:type="application/json" )?id="epi-unidades-pedagogicas">(.*?)</script>'
             self.assertEqual(re.search(pattern,before,re.S)[1],re.search(pattern,current,re.S)[1])
