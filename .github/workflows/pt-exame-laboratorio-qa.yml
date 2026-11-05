@@ -17,6 +17,9 @@ on:
       - 'tests/fixtures/prova-639-*'
       - 'assets/relogio.*'
       - 'tests/browser_relogio.py'
+      # 05/11/2026: a camada do Laboratório do exame (lição, não «leitura de apoio»).
+      - 'scripts/exame_licao_20261105.json'
+      - 'tests/fixtures/exame-licao-edits-20261105.json'
       - '.github/workflows/pt-exame-laboratorio-qa.yml'
 permissions:
   contents: read
@@ -43,6 +46,8 @@ jobs:
           python -m unittest discover -s tests -p 'test_exame*.py' -v
           python -m unittest discover -s tests -p 'test_provas*.py' -v
           python scripts/provas/opcoes.py --exigir
+          # 05/11/2026: a camada do Laboratório do exame confere-se aqui (é a mais recente; nada por cima dela).
+          python scripts/aplicar_trocas.py scripts/exame_licao_20261105.json --manifesto tests/fixtures/exame-licao-edits-20261105.json --verificar
       - name: Preparar navegador
         run: |
           # 05/11/2026: playwright fixado em 1.64.1; a 1.65.0 saiu no npm sem o playwright-core 1.65.0 (ETARGET).
