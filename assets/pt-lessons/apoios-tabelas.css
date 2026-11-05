@@ -21,3 +21,9 @@
  .jogo .ler .apoio-tabela th,.jogo .ler .apoio-tabela td,.jogo .ler .apoio-tabela tbody th{display:table-cell;padding:.4em .6em;border-bottom:1px solid currentColor}
  .jogo .ler .apoio-tabela td[data-label]::before{content:none}
 }
+/* 05/11/2026: pedido do docente. Tabela dos seis movimentos (M7-F10): a letra numa coluna estreita, o verso com mais espaço. */
+.jogo .ler .apoio-tabela.movimentos thead th{overflow-wrap:normal}
+.jogo .ler .apoio-tabela.movimentos thead th:first-child{width:5.6em}
+.jogo .ler .apoio-tabela.movimentos thead th:nth-child(2){width:27%}
+.jogo .ler .apoio-tabela.movimentos thead th:last-child{width:23%}
+.jogo .ler .apoio-tabela.movimentos tbody th{font:700 1.25em/1.3 Georgia,'Times New Roman',serif}

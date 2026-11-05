@@ -1,0 +1,66 @@
+{
+ "base_commit": "ef787bc5840ef06a892738ef26a1470af46f99fd",
+ "_nota": "05/11/2026: tabela dos seis movimentos (M7-F10) e intervalos de versos sem quebra (M1-F02, M1-F19, M7-F10), camada mais recente, por cima da revisão de 5/11.",
+ "files": {
+  "m7/licao-m7-f10/index.html": {
+   "base_sha256_lf": "2c8fffac82d0cf414a4f1f24f7952ce3dea89c3dbabfe27652d5e93a234551b9",
+   "after_sha256_lf": "bffd0cf5ee99a67e7ff0692b7f1449af1976e964c6fba74093fac83b6dc6a4d0",
+   "edits": [
+    {
+     "location": "M7-F10, cabeça: a folha das tabelas de apoio, antes da camada de aparência",
+     "old": "<link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-reading1\">",
+     "new": "<link rel=\"stylesheet\" href=\"../../assets/pt-lessons/apoios-tabelas.css?v=20261105.1\"><link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-reading1\">",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F10 C03 «Para entender»: os seis movimentos numa tabela",
+     "old": "<h3>Os seis movimentos</h3><p><b>S</b>, tese com condição: «Valeu a pena? Tudo vale a pena / Se a alma não é pequena.» («Mar Português», vv. 7-8)</p><p><b>N</b>, condição necessária: «Quem quer passar além do Bojador / Tem que passar além da dor.» («Mar Português», vv. 9-10)</p><p><b>R</b>, aceitar a palavra de quem acusa e redefini-la com uma causal: «Louco, sim, louco, porque quis grandeza / Qual a Sorte a não dá.» («D. Sebastião, Rei de Portugal», vv. 1-2)</p><p><b>M</b>, admitir e contrapor: «Deus ao mar o perigo e o abismo deu, / Mas nele é que espelhou o céu.» («Mar Português», vv. 11-12)</p><p><b>P</b>, a pergunta que obriga a responder: «Sem a loucura que é o homem / Mais que a besta sadia, / Cadáver adiado que procria?» («D. Sebastião, Rei de Portugal», vv. 8-10)</p><p><b>C</b>, conceder com «embora»: é a concessiva da lição «Como se soubesse a verdade» (F07).</p>",
+     "new": "<h3>Os seis movimentos</h3><table class=\\\"apoio-tabela movimentos\\\" role=\\\"table\\\"><thead role=\\\"rowgroup\\\"><tr role=\\\"row\\\"><th scope=\\\"col\\\" role=\\\"columnheader\\\">Letra</th><th scope=\\\"col\\\" role=\\\"columnheader\\\">Movimento</th><th scope=\\\"col\\\" role=\\\"columnheader\\\">Exemplo</th><th scope=\\\"col\\\" role=\\\"columnheader\\\">Onde</th></tr></thead><tbody role=\\\"rowgroup\\\"><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">S</th><td role=\\\"cell\\\" data-label=\\\"Movimento\\\">tese com condição</td><td role=\\\"cell\\\" data-label=\\\"Exemplo\\\">«Valeu a pena? Tudo vale a pena / Se a alma não é pequena.»</td><td role=\\\"cell\\\" data-label=\\\"Onde\\\">«Mar Português», vv. 7–⁠8</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">N</th><td role=\\\"cell\\\" data-label=\\\"Movimento\\\">condição necessária</td><td role=\\\"cell\\\" data-label=\\\"Exemplo\\\">«Quem quer passar além do Bojador / Tem que passar além da dor.»</td><td role=\\\"cell\\\" data-label=\\\"Onde\\\">«Mar Português», vv. 9–⁠10</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">R</th><td role=\\\"cell\\\" data-label=\\\"Movimento\\\">aceitar a palavra de quem acusa e redefini-la com uma causal</td><td role=\\\"cell\\\" data-label=\\\"Exemplo\\\">«Louco, sim, louco, porque quis grandeza / Qual a Sorte a não dá.»</td><td role=\\\"cell\\\" data-label=\\\"Onde\\\">«D. Sebastião, Rei de Portugal», vv. 1–⁠2</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">M</th><td role=\\\"cell\\\" data-label=\\\"Movimento\\\">admitir e contrapor</td><td role=\\\"cell\\\" data-label=\\\"Exemplo\\\">«Deus ao mar o perigo e o abismo deu, / Mas nele é que espelhou o céu.»</td><td role=\\\"cell\\\" data-label=\\\"Onde\\\">«Mar Português», vv. 11–⁠12</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">P</th><td role=\\\"cell\\\" data-label=\\\"Movimento\\\">a pergunta que obriga a responder</td><td role=\\\"cell\\\" data-label=\\\"Exemplo\\\">«Sem a loucura que é o homem / Mais que a besta sadia, / Cadáver adiado que procria?»</td><td role=\\\"cell\\\" data-label=\\\"Onde\\\">«D. Sebastião, Rei de Portugal», vv. 8–⁠10</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">C</th><td role=\\\"cell\\\" data-label=\\\"Movimento\\\">conceder com «embora»</td><td role=\\\"cell\\\" data-label=\\\"Exemplo\\\">a concessiva da lição «Como se soubesse a verdade»</td><td role=\\\"cell\\\" data-label=\\\"Onde\\\">F07</td></tr></tbody></table>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m1/licao-m1-f02/index.html": {
+   "base_sha256_lf": "55cd6e89a62144fbf50be80a7df9be55bad93c696ad9f8fd5f0ae4b1c4cce371",
+   "after_sha256_lf": "34061fa24dc37b08189df994f04b98d63b95ab615457cba80ebeb4d0b8e467ef",
+   "edits": [
+    {
+     "location": "LICAO-M1-F02: intervalo de versos «vv. 2-3 e 11-12» sem quebra de linha",
+     "old": "vv. 2-3 e 11-12",
+     "new": "vv. 2–⁠3 e 11–⁠12",
+     "occurrences": 1
+    },
+    {
+     "location": "LICAO-M1-F02: intervalo de versos «vv. 1-2 e 4-5» sem quebra de linha",
+     "old": "vv. 1-2 e 4-5",
+     "new": "vv. 1–⁠2 e 4–⁠5",
+     "occurrences": 1
+    },
+    {
+     "location": "LICAO-M1-F02: intervalo de versos «vv. 1-3 e 7-8» sem quebra de linha",
+     "old": "vv. 1-3 e 7-8",
+     "new": "vv. 1–⁠3 e 7–⁠8",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m1/licao-m1-f19/index.html": {
+   "base_sha256_lf": "703c7ffddc3667c12ddc895a03fb5dbd82058518342ede595006819a6b348354",
+   "after_sha256_lf": "aa66646922d4974c90890e138a502ea6ec8797494ea4d8b59f57f1dfb76809f4",
+   "edits": [
+    {
+     "location": "LICAO-M1-F19: intervalo de versos «vv. 2-3» sem quebra de linha",
+     "old": "vv. 2-3",
+     "new": "vv. 2–⁠3",
+     "occurrences": 1
+    },
+    {
+     "location": "LICAO-M1-F19: intervalo de versos «vv. 3-6» sem quebra de linha",
+     "old": "vv. 3-6",
+     "new": "vv. 3–⁠6",
+     "occurrences": 1
+    }
+   ]
+  }
+ }
+}
