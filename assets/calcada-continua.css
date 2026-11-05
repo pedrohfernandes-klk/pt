@@ -1,18 +1,21 @@
-/* 03/11/2026: correÃ§Ã£o isolada. Uma imagem por altura, repetida sÃ³ em x.
-   As trÃªs bandas respiram com amplitudes e fases prÃ³prias; nÃ£o hÃ¡ avanÃ§o rÃ­gido.
-   O motor fundos.js conserva a pausa, os dois ciclos e a projeÃ§Ã£o. */
-body[data-site="pt"] .raiz .p-cab[data-fundo="cf"] div.cf-mar{opacity:var(--cf-opacity)}
+/* 03/11/2026: correção isolada. Uma imagem por altura, repetida só em x.
+   As três bandas respiram com amplitudes e fases próprias; não há avanço rígido.
+   O motor fundos.js conserva a pausa, os dois ciclos e a projeção.
+   05/11/2026: comentário regravado em UTF-8 (estava com a codificação estragada). */
+/* 05/11/2026: revisão de 5/11 (pt-entrada-cartaz-3). A região é um contentor de tamanho e cada camada calcula o ladrilho
+   pela altura real (100cqh × 960 / 440): as pedras guardam a proporção do desenho em todas as larguras (decisão 136). */
+body[data-site="pt"] .raiz .p-cab[data-fundo="cf"] div.cf-mar{opacity:var(--cf-opacity);container-type:size}
 body[data-site="pt"] .raiz .p-cab[data-fundo="cf"] .cf-mar::before{
   content:"";position:absolute;inset:0;opacity:1;filter:grayscale(1);
-  background:url(calcada-clara.svg) repeat-x 0 0/var(--cf-tw) 100%;
+  background:url(calcada-clara.svg) repeat-x 0 0/calc(100cqh * 960 / 440) 100%;
 }
 body[data-site="pt"] .raiz .p-cab[data-fundo="cf"] div.cf-pedras{
-  inset:0;width:100%;opacity:1;background:url(calcada-onda-2.svg) repeat-x 0 0/var(--cf-tw) 100%;
+  inset:0;width:100%;opacity:1;background:url(calcada-onda-2.svg) repeat-x 0 0/calc(100cqh * 960 / 440) 100%;
   transform-origin:50% 50%;animation:none;will-change:auto;
 }
 body[data-site="pt"] .raiz .p-cab[data-fundo="cf"] div.cf-pedras::before,
 body[data-site="pt"] .raiz .p-cab[data-fundo="cf"] div.cf-pedras::after{
-  content:"";position:absolute;inset:0;background:url(calcada-onda-1.svg) repeat-x 0 0/var(--cf-tw) 100%;
+  content:"";position:absolute;inset:0;background:url(calcada-onda-1.svg) repeat-x 0 0/calc(100cqh * 960 / 440) 100%;
   transform-origin:50% 18%;
 }
 body[data-site="pt"] .raiz .p-cab[data-fundo="cf"] div.cf-pedras::after{

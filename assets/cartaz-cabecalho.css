@@ -43,3 +43,7 @@ body[data-site="pt"] .raiz .cf-credito{margin:0 0 32px;padding:8px 0;border-bott
   html.epi-projection body[data-site="pt"] .raiz .atlas-poster h2{position:relative;font-size:min(2.6rem,14vw)}
   html.epi-projection body[data-site="pt"] .raiz .atlas-poster h2>span{position:absolute;top:0;right:0;margin-left:0}
 }
+/* 05/11/2026: revisão de 5/11 (pt-entrada-cartaz-2). A calçada vai de ponta a ponta com 100vw, que inclui a barra de
+   deslocamento vertical: com barras clássicas (Windows) a entrada ficava 8 px mais larga do que a janela. O corte lateral
+   impede o deslize sem esconder nada do conteúdo. */
+html:has(body[data-site="pt"] .p-cab[data-fundo="cf"]){overflow-x:clip}
