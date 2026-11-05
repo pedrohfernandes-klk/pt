@@ -1,6 +1,6 @@
 {
  "base_commit": "e6906e68db392eba901688d01152d551f0aa746b",
- "_nota": "05/11/2026: revisão de 5/11 do que foi publicado desde 2/11 (pt #156 e #165): citação de Frei Luís de Sousa, legenda do leitor ampliado, guiões das aulas 1 do M4 e 10 do M1, painel M9-F13 sem noindex nem «piloto», desafio do M1, exemplo do M8, título da tarefa do M7, opções do M1-F20 e do M3-F02, importação sem acrescentos.js e foco da ajuda «Como se faz». Camada no topo, reversível.",
+ "_nota": "05/11/2026: revisão de 5/11 do que foi publicado desde 2/11 (pt #156 e #165): citação de Frei Luís de Sousa, legenda do leitor ampliado, guiões das aulas 1 do M4 e 10 do M1, painel M9-F13 sem noindex nem «piloto», exemplo do M8, título da tarefa do M7, opções do M3-F02, importação sem acrescentos.js e foco da ajuda «Como se faz». Camada no topo, reversível.",
  "files": {
   "m4/recursos/tpc-entrada.js": {
    "base_sha256_lf": "20a62ee4b53ccfe6c242aede06eb597d475c3654255cd5e4565d50ad803c3a92",
@@ -16,12 +16,12 @@
   },
   "assets/ampliar-documentos.js": {
    "base_sha256_lf": "9ea59cc4aa08ec722befd2d2127ed7382a02fd6390bf55db0be191555e264f06",
-   "after_sha256_lf": "03c9a97ba2a31e039c107ed2a34af6140756d13f4e558f426d26c370214d6c26",
+   "after_sha256_lf": "2b35fedcc2a49827bf223735ead6bd55b7045467f9ac18bbea06776f776b815b",
    "edits": [
     {
-     "location": "Legenda do leitor ampliado: só o texto visível, com espaço entre parágrafos",
+     "location": "Legenda do leitor ampliado: o primeiro parágrafo, ou o texto sem a tabela escondida",
      "old": "function legendaDe(img){var f=img.closest(\"figure\");if(f){var c=f.querySelector(\"figcaption\");if(c)return c.textContent.replace(/\\s+/g,\" \").trim()}return img.getAttribute(\"data-legenda\")||img.alt||\"\"}",
-     "new": "function legendaDe(img){var f=img.closest(\"figure\");if(f){var c=f.querySelector(\"figcaption\");if(c){var k=c.cloneNode(true);[].forEach.call(k.querySelectorAll(\"details,table,summary,caption\"),function(n){n.parentNode.removeChild(n)});[].forEach.call(k.querySelectorAll(\"p,br,li\"),function(n){n.parentNode.insertBefore(document.createTextNode(\" \"),n)});return k.textContent.replace(/\\s+/g,\" \").trim()}}return img.getAttribute(\"data-legenda\")||img.alt||\"\"}",
+     "new": "function legendaDe(img){var f=img.closest(\"figure\");if(f){var c=f.querySelector(\"figcaption\");if(c){var p=c.querySelector(\":scope > p\");if(p)return p.textContent.replace(/\\s+/g,\" \").trim();var k=c.cloneNode(true);[].forEach.call(k.querySelectorAll(\"details,table,summary,caption\"),function(n){n.parentNode.removeChild(n)});return k.textContent.replace(/\\s+/g,\" \").trim()}}return img.getAttribute(\"data-legenda\")||img.alt||\"\"}",
      "occurrences": 1
     },
     {
@@ -33,7 +33,7 @@
     {
      "location": "Documentos: a ligação usa a mesma legenda",
      "old": "EPIAmpliar.abre(img,f.querySelector(\"figcaption\").textContent,a)",
-     "new": "EPIAmpliar.abre(img,EPIAmpliar.legenda?EPIAmpliar.legenda(img):f.querySelector(\"figcaption\").textContent,a)",
+     "new": "EPIAmpliar.abre(img,EPIAmpliar.legenda?EPIAmpliar.legenda(img):(img.alt||\"\"),a)",
      "occurrences": 1
     }
    ]
@@ -98,18 +98,6 @@
     }
    ]
   },
-  "m1/index.html": {
-   "base_sha256_lf": "3b5c6772a6939860064950f3f4d1c30846d2eb56f3d7bf2f7c196e8a075bec22",
-   "after_sha256_lf": "84cc0573ea2cf8d3cfe398cb2c42be513792e7001e1c5dda4abab0b61f0b87b1",
-   "edits": [
-    {
-     "location": "Desafio do arquivo: a extensão atual da crónica",
-     "old": "\"p\":\"Que peso tem a tarefa da unidade 2 e que extensão tinha a crónica preparada na F10?\",\"frase\":\"A tarefa da unidade 2 vale [1]. A preparação da F10 propunha [2] palavras; na aula de tarefa, segue a extensão do enunciado atual.\",\"lacunas\":[{\"o\":[\"25 %\",\"30 %\",\"35 %\"],\"c\":1},{\"o\":[\"80 a 120\",\"180 a 240\",\"250 a 300\"],\"c\":2}],\"f\":\"A tarefa da unidade 2 vale 30 %. A preparação da F10 propunha 250 a 300 palavras; a tarefa atual pede uma crónica de 160 a 200 palavras, além do núcleo comum.\"",
-     "new": "\"p\":\"Que peso tem a tarefa da unidade 2 e que extensão pede a crónica?\",\"frase\":\"A tarefa da unidade 2 vale [1] e a crónica tem [2] palavras, além do núcleo comum.\",\"lacunas\":[{\"o\":[\"25 %\",\"30 %\",\"35 %\"],\"c\":1},{\"o\":[\"120 a 160\",\"160 a 200\",\"250 a 300\"],\"c\":1}],\"f\":\"A tarefa da unidade 2 vale 30 %. A crónica da aula de tarefa tem 160 a 200 palavras; os 250 a 300 eram da preparação da F10.\"",
-     "occurrences": 1
-    }
-   ]
-  },
   "m8/licao-m8-f12/index.html": {
    "base_sha256_lf": "490a2d4034ab38f462fee429b03c6d5408d0cc0334639fbb9fcfd8df267248a0",
    "after_sha256_lf": "773658a08de2f70aba3dacc7d24da70629c8c5d6f48dbec208d64718e4056d5f",
@@ -154,18 +142,6 @@
      "location": "Pesos na dobra do índice: o título da tarefa da U2",
      "old": "tarefa da Unidade 2 (a ideia de heterónimo), 35 %",
      "new": "tarefa da Unidade 2 («Uma ideia de heterónimo»), 35 %",
-     "occurrences": 1
-    }
-   ]
-  },
-  "m1/licao-m1-f20/index.html": {
-   "base_sha256_lf": "c06b46c07224ed89de4d6680fdca6cd7b646100344b32741b5ceba2a6f480f5a",
-   "after_sha256_lf": "53757a32348cb3aa1c9e48123a83a529f008c3ce739e7a409cc253783c1d2a0a",
-   "edits": [
-    {
-     "location": "M1-F20 C09: a opção certa concreta",
-     "old": "\"A rapidez e a direção comum fazem a multidão agir como uma figura.\"",
-     "new": "\"A rapidez e a direção comum fazem a multidão agir como um só corpo.\"",
      "occurrences": 1
     }
    ]

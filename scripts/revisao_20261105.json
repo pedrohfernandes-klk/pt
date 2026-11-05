@@ -9,11 +9,11 @@
  },
  {
   "ficheiro": "assets/ampliar-documentos.js",
-  "local": "Legenda do leitor ampliado: só o texto visível, com espaço entre parágrafos",
+  "local": "Legenda do leitor ampliado: o primeiro parágrafo, ou o texto sem a tabela escondida",
   "antigo": "function legendaDe(img){var f=img.closest(\"figure\");if(f){var c=f.querySelector(\"figcaption\");if(c)return c.textContent.replace(/\\s+/g,\" \").trim()}return img.getAttribute(\"data-legenda\")||img.alt||\"\"}",
-  "novo": "function legendaDe(img){var f=img.closest(\"figure\");if(f){var c=f.querySelector(\"figcaption\");if(c){var k=c.cloneNode(true);[].forEach.call(k.querySelectorAll(\"details,table,summary,caption\"),function(n){n.parentNode.removeChild(n)});[].forEach.call(k.querySelectorAll(\"p,br,li\"),function(n){n.parentNode.insertBefore(document.createTextNode(\" \"),n)});return k.textContent.replace(/\\s+/g,\" \").trim()}}return img.getAttribute(\"data-legenda\")||img.alt||\"\"}",
+  "novo": "function legendaDe(img){var f=img.closest(\"figure\");if(f){var c=f.querySelector(\"figcaption\");if(c){var p=c.querySelector(\":scope > p\");if(p)return p.textContent.replace(/\\s+/g,\" \").trim();var k=c.cloneNode(true);[].forEach.call(k.querySelectorAll(\"details,table,summary,caption\"),function(n){n.parentNode.removeChild(n)});return k.textContent.replace(/\\s+/g,\" \").trim()}}return img.getAttribute(\"data-legenda\")||img.alt||\"\"}",
   "ocorrencias": 1,
-  "achado": "05/11/2026: revisão de 5/11 (pt-conteudos-lote2-2: sem a tabela de créditos escondida nem parágrafos colados)."
+  "achado": "05/11/2026: revisão de 5/11 (pt-conteudos-lote2-2, com o acerto do verificador): a legenda do leitor é o primeiro parágrafo da legenda, sem a tabela escondida de créditos nem «Fonte ↗» solto."
  },
  {
   "ficheiro": "assets/ampliar-documentos.js",
@@ -21,15 +21,15 @@
   "antigo": "window.EPIAmpliar={abre:abre,fecha:fecha,rotulo:rotuloAmpliar}})();",
   "novo": "window.EPIAmpliar={abre:abre,fecha:fecha,rotulo:rotuloAmpliar,legenda:legendaDe}})();",
   "ocorrencias": 1,
-  "achado": "05/11/2026: revisão de 5/11 (pt-conteudos-lote2-2)."
+  "achado": "05/11/2026: revisão de 5/11 (pt-conteudos-lote2-2, com o acerto do verificador): a legenda do leitor é o primeiro parágrafo da legenda, sem a tabela escondida de créditos nem «Fonte ↗» solto."
  },
  {
   "ficheiro": "assets/ampliar-documentos.js",
   "local": "Documentos: a ligação usa a mesma legenda",
   "antigo": "EPIAmpliar.abre(img,f.querySelector(\"figcaption\").textContent,a)",
-  "novo": "EPIAmpliar.abre(img,EPIAmpliar.legenda?EPIAmpliar.legenda(img):f.querySelector(\"figcaption\").textContent,a)",
+  "novo": "EPIAmpliar.abre(img,EPIAmpliar.legenda?EPIAmpliar.legenda(img):(img.alt||\"\"),a)",
   "ocorrencias": 1,
-  "achado": "05/11/2026: revisão de 5/11 (pt-conteudos-lote2-2)."
+  "achado": "05/11/2026: revisão de 5/11 (pt-conteudos-lote2-2, com o acerto do verificador): a legenda do leitor é o primeiro parágrafo da legenda, sem a tabela escondida de créditos nem «Fonte ↗» solto."
  },
  {
   "ficheiro": "m4/aulas/aula-01/index.html",
@@ -88,14 +88,6 @@
   "achado": "05/11/2026: revisão de 5/11 (pt-conteudos-lote2-5: o protocolo cabe a um só docente)."
  },
  {
-  "ficheiro": "m1/index.html",
-  "local": "Desafio do arquivo: a extensão atual da crónica",
-  "antigo": "\"p\":\"Que peso tem a tarefa da unidade 2 e que extensão tinha a crónica preparada na F10?\",\"frase\":\"A tarefa da unidade 2 vale [1]. A preparação da F10 propunha [2] palavras; na aula de tarefa, segue a extensão do enunciado atual.\",\"lacunas\":[{\"o\":[\"25 %\",\"30 %\",\"35 %\"],\"c\":1},{\"o\":[\"80 a 120\",\"180 a 240\",\"250 a 300\"],\"c\":2}],\"f\":\"A tarefa da unidade 2 vale 30 %. A preparação da F10 propunha 250 a 300 palavras; a tarefa atual pede uma crónica de 160 a 200 palavras, além do núcleo comum.\"",
-  "novo": "\"p\":\"Que peso tem a tarefa da unidade 2 e que extensão pede a crónica?\",\"frase\":\"A tarefa da unidade 2 vale [1] e a crónica tem [2] palavras, além do núcleo comum.\",\"lacunas\":[{\"o\":[\"25 %\",\"30 %\",\"35 %\"],\"c\":1},{\"o\":[\"120 a 160\",\"160 a 200\",\"250 a 300\"],\"c\":1}],\"f\":\"A tarefa da unidade 2 vale 30 %. A crónica da aula de tarefa tem 160 a 200 palavras; os 250 a 300 eram da preparação da F10.\"",
-  "ocorrencias": 1,
-  "achado": "05/11/2026: revisão de 5/11 (pt-conteudos-lote2-6: o aluno recorda a extensão que a tarefa avaliada pede)."
- },
- {
   "ficheiro": "m8/licao-m8-f12/index.html",
   "local": "M8-F12 C09: o exemplo entre aspas",
   "antigo": "Exemplo criado: Todas as manhãs, relia a carta. Que valor aspetual destaca a expressão inicial?",
@@ -126,14 +118,6 @@
   "novo": "tarefa da Unidade 2 («Uma ideia de heterónimo»), 35 %",
   "ocorrencias": 1,
   "achado": "05/11/2026: revisão de 5/11 (pt-conteudos-lote2-8: o título como na tarefa)."
- },
- {
-  "ficheiro": "m1/licao-m1-f20/index.html",
-  "local": "M1-F20 C09: a opção certa concreta",
-  "antigo": "\"A rapidez e a direção comum fazem a multidão agir como uma figura.\"",
-  "novo": "\"A rapidez e a direção comum fazem a multidão agir como um só corpo.\"",
-  "ocorrencias": 1,
-  "achado": "05/11/2026: revisão de 5/11 (pt-conteudos-lote2-9: a opção diz o que o retorno ensina)."
  },
  {
   "ficheiro": "m3/licao-m3-f02/index.html",
