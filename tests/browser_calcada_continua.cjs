@@ -42,6 +42,11 @@ try{
  // 03/11/2026: zoom nativo, nos dois temas, em sequência temporal CDP de 42 s.
  // viewport:null não fornece um artefacto de vídeo neste navegador; a sequência mede o ciclo inteiro.
  for(let theme of ['light','dark']){let profile=fs.mkdtempSync(path.join(os.tmpdir(),'calcada-zoom-'));fs.mkdirSync(path.join(profile,'Default'));fs.writeFileSync(path.join(profile,'Default','Preferences'),JSON.stringify({partition:{default_zoom_level:{x:Math.log(2)/Math.log(1.2)}}}));let ctx=await chromium.launchPersistentContext(profile,{...options,...(!process.env.CHROME_PATH?{channel:'chromium'}:{}),viewport:null,colorScheme:theme,args:['--window-size=1366,1000']});let saved;try{await local(ctx);let p=await ctx.newPage();await p.goto(base+'/pt/');let zoom=await p.evaluate(()=>({outerWidth,innerWidth,dpr:devicePixelRatio,cssZoom:getComputedStyle(document.documentElement).zoom}));assert.equal(zoom.dpr,2);assert.equal(zoom.cssZoom,'1');assert(Math.abs(zoom.innerWidth-zoom.outerWidth/2)<=10);rows.push({theme,zoom});await p.close();saved=await cycle(ctx,`zoom200-${theme}`);}finally{await ctx.close();}if(saved)fs.copyFileSync(saved.source,saved.destination);}
+ // 05/11/2026: revisão de 5/11 (pt-entrada-cartaz-3). As pedras guardam a proporção do desenho (960 × 440, ±2 %) nas quatro
+ // camadas, a 320, 390, 768 e 1366 px.
+ for(const width of [320,390,768,1366]){let ctx=await b.newContext({viewport:{width,height:1000}});await local(ctx);let p=await ctx.newPage();await p.goto(base+'/pt/');await p.waitForTimeout(300);
+  const r=await p.evaluate(()=>{const m=document.querySelector('.cf-mar'),h=m.getBoundingClientRect().height,c=document.querySelector('.cf-pedras');return [[m,'::before'],[c,null],[c,'::before'],[c,'::after']].map(([e,ps])=>parseFloat(getComputedStyle(e,ps).backgroundSize)/h)});
+  r.forEach(x=>assert(Math.abs(x/(960/440)-1)<=.02,'proporção das pedras a '+width+' px: '+r.join(', ')));await ctx.close();}
  fs.writeFileSync(path.join(out,'ciclos.json'),JSON.stringify(rows,null,2));console.log('PASS 8 ciclos reais completos, 18 contextos parados, teclado e impressão');
 }finally{await b.close();server.closeAllConnections();server.close();}
 })().catch(e=>{console.error(e);process.exitCode=1});
