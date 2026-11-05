@@ -110,6 +110,29 @@ function luminance(rgb) { return rgb.map(v => v / 255).map(v => v <= .04045 ? v 
       assert(path.resolve(profile).startsWith(path.resolve(os.tmpdir()) + path.sep) && path.basename(profile).startsWith('cartaz-cabecalho-zoom-'));
       fs.rmSync(profile, { recursive: true, force: true });
     }
+    // 05/11/2026: revisão de 5/11 (pt-entrada-cartaz-2). Com barras de deslocamento clássicas (Windows), a entrada não fica
+    // mais larga do que a janela a 320, 390 e 1366 px.
+    {
+      const classic = await chromium.launch({ ...options, ignoreDefaultArgs: ['--hide-scrollbars'] });
+      try {
+        for (const width of [320, 390, 1366]) {
+          const context = await classic.newContext({ viewport: { width, height: 900 } });
+          await local(context);
+          const page = await context.newPage();
+          await page.goto(base + '/pt/');
+          await page.waitForTimeout(300);
+          // Sem barra horizontal (a altura útil é a da janela) e sem deslize: a roda e a seta para a direita não mexem a página.
+          const barra = await page.evaluate(() => ({ ih: innerHeight, ch: document.documentElement.clientHeight }));
+          assert.equal(barra.ch, barra.ih, 'barra horizontal a ' + width + ' px com barras clássicas: ' + JSON.stringify(barra));
+          await page.mouse.move(width / 2, 300);
+          await page.mouse.wheel(400, 0);
+          await page.keyboard.press('ArrowRight');
+          await page.waitForTimeout(200);
+          assert.equal(await page.evaluate(() => scrollX), 0, 'a página desliza para o lado a ' + width + ' px com barras clássicas');
+          await context.close();
+        }
+      } finally { await classic.close(); }
+    }
     if (out) fs.writeFileSync(path.join(out, 'medidas.json'), JSON.stringify({ rows, zoom }, null, 2));
     console.log('PASS 24 páginas: normal e visor real, ambos os temas; teclado, contraste, movimento reduzido, sem JS e impressão.');
   } finally { await browser.close(); server.closeAllConnections(); server.close(); }

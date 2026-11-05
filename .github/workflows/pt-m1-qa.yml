@@ -24,7 +24,9 @@ permissions:
 jobs:
   validate:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    # 05/11/2026: a regressão completa já demorava 15 a 18 minutos e passou os 20 duas vezes no #175, sempre a passar
+    # nos testes até ao corte; o limite sobe para 30.
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
         # 01/11/2026: o contrato dos índices compara a base integrada.
