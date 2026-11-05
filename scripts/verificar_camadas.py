@@ -7,7 +7,9 @@ import sys
 
 ROOT=Path(__file__).resolve().parents[1]
 LAYERS=[
- # 05/11/2026: tabela dos seis movimentos (M7-F10) e intervalos de versos, camada mais recente, por cima da revisão.
+ # 05/11/2026: Laboratório do exame: a ligação e as notas falam da lição, camada mais recente, por cima da tabela.
+ ('exame_licao_20261105','exame-licao-edits-20261105'),
+ # 05/11/2026: tabela dos seis movimentos (M7-F10) e intervalos de versos, por cima da revisão.
  ('tabela_movimentos_20261105','tabela-movimentos-edits-20261105'),
  # 05/11/2026: revisão de 5/11, por cima do cabeçalho.
  ('revisao_20261105','revisao-edits-20261105'),

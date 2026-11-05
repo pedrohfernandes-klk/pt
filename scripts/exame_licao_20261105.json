@@ -1,0 +1,50 @@
+[
+ {
+  "ficheiro": "assets/exame/app.js",
+  "local": "Fonte da sessão: a ligação leva à lição do módulo",
+  "antigo": "link({label:'Abrir a leitura de apoio ↗',url:s.source.url})",
+  "novo": "link({label:'Abrir a lição ↗',url:s.source.url})",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: pedido do docente («isto n é uma leitura, é uma lição, e são duas coisas diferentes»), no Laboratório do exame."
+ },
+ {
+  "ficheiro": "assets/exame/app.js",
+  "local": "Fase Aquecer: o que se consulta é o texto da sessão",
+  "antigo": "<details><summary>Consultar leitura de apoio</summary>",
+  "novo": "<details><summary>Consultar o texto</summary>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: pedido do docente («isto n é uma leitura, é uma lição, e são duas coisas diferentes»), no Laboratório do exame."
+ },
+ {
+  "ficheiro": "assets/exame/app.js",
+  "local": "Fase Ler: na projeção, abre-se a lição para o texto completo",
+  "antigo": "Na projeção, abre a leitura de apoio quando precisares do recorte completo.",
+  "novo": "Na projeção, abre a lição quando precisares do texto completo.",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: pedido do docente («isto n é uma leitura, é uma lição, e são duas coisas diferentes»), no Laboratório do exame."
+ },
+ {
+  "ficheiro": "assets/exame/sessoes.json",
+  "local": "Nota das 15 sessões com excerto de uma lição",
+  "antigo": "Recorte de leitura já utilizado no módulo. Abre a lição para o texto, a localização e as fontes completas.",
+  "novo": "Excerto já trabalhado numa lição do módulo. Abre a lição para veres o texto completo, a localização e as fontes.",
+  "ocorrencias": 15,
+  "achado": "05/11/2026: pedido do docente («isto n é uma leitura, é uma lição, e são duas coisas diferentes»), no Laboratório do exame."
+ },
+ {
+  "ficheiro": "assets/exame/sessoes.json",
+  "local": "Nota das 4 sessões com materiais de uma lição",
+  "antigo": "Materiais existentes reciclados; os recortes e as fontes estão identificados na leitura de apoio.",
+  "novo": "Excertos já trabalhados numa lição do módulo; a lição identifica os excertos e as fontes.",
+  "ocorrencias": 4,
+  "achado": "05/11/2026: pedido do docente («isto n é uma leitura, é uma lição, e são duas coisas diferentes»), no Laboratório do exame."
+ },
+ {
+  "ficheiro": "exame/index.html",
+  "local": "Versão do app.js, para os navegadores não usarem a cópia antiga",
+  "antigo": "../assets/exame/app.js?v=20261029-provas-1",
+  "novo": "../assets/exame/app.js?v=20261105-licao-1",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: pedido do docente («isto n é uma leitura, é uma lição, e são duas coisas diferentes»), no Laboratório do exame."
+ }
+]

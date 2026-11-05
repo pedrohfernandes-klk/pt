@@ -31,7 +31,8 @@ jobs:
       - name: Tabela dos seis movimentos e intervalos de versos
         run: |
           python -m unittest discover -s tests -p 'test_tabela_movimentos.py' -v
-          python scripts/aplicar_trocas.py scripts/tabela_movimentos_20261105.json --manifesto tests/fixtures/tabela-movimentos-edits-20261105.json --verificar
+          # 05/11/2026: o Laboratório do exame (lição, não «leitura de apoio») é a camada mais recente; desfaz-se antes da tabela dos seis movimentos.
+          python scripts/aplicar_trocas.py scripts/tabela_movimentos_20261105.json --manifesto tests/fixtures/tabela-movimentos-edits-20261105.json --verificar --desfazer-antes tests/fixtures/exame-licao-edits-20261105.json
           python scripts/verificar_camadas.py
       - name: Instalar Chromium
         run: |

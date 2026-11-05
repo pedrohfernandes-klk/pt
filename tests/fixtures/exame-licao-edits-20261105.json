@@ -1,0 +1,60 @@
+{
+ "base_commit": "10da5a83c3ed1d06af6e376eb23555f8db4a0a4d",
+ "_nota": "05/11/2026: Laboratório do exame: a ligação e as notas falam da lição (não de uma «leitura de apoio»), camada mais recente, por cima da tabela dos seis movimentos.",
+ "files": {
+  "assets/exame/app.js": {
+   "base_sha256_lf": "d3d904b62a6c7861904ea1815e57bda06dde7dccd231b70338dd42162a6f5edb",
+   "after_sha256_lf": "94ed3d78fea64aeeceae5a97837eadf8ee513531c5dd80fc8e7204cdf8a41230",
+   "edits": [
+    {
+     "location": "Fonte da sessão: a ligação leva à lição do módulo",
+     "old": "link({label:'Abrir a leitura de apoio ↗',url:s.source.url})",
+     "new": "link({label:'Abrir a lição ↗',url:s.source.url})",
+     "occurrences": 1
+    },
+    {
+     "location": "Fase Aquecer: o que se consulta é o texto da sessão",
+     "old": "<details><summary>Consultar leitura de apoio</summary>",
+     "new": "<details><summary>Consultar o texto</summary>",
+     "occurrences": 1
+    },
+    {
+     "location": "Fase Ler: na projeção, abre-se a lição para o texto completo",
+     "old": "Na projeção, abre a leitura de apoio quando precisares do recorte completo.",
+     "new": "Na projeção, abre a lição quando precisares do texto completo.",
+     "occurrences": 1
+    }
+   ]
+  },
+  "assets/exame/sessoes.json": {
+   "base_sha256_lf": "894c2e273f1dedf8578f66401aef9679895c880da32d7bd290ad24fde0995355",
+   "after_sha256_lf": "4251e388bfeb91fa7f846f6ca1eeb2b8967e4bf59f14e31794329a0d89729f32",
+   "edits": [
+    {
+     "location": "Nota das 15 sessões com excerto de uma lição",
+     "old": "Recorte de leitura já utilizado no módulo. Abre a lição para o texto, a localização e as fontes completas.",
+     "new": "Excerto já trabalhado numa lição do módulo. Abre a lição para veres o texto completo, a localização e as fontes.",
+     "occurrences": 15
+    },
+    {
+     "location": "Nota das 4 sessões com materiais de uma lição",
+     "old": "Materiais existentes reciclados; os recortes e as fontes estão identificados na leitura de apoio.",
+     "new": "Excertos já trabalhados numa lição do módulo; a lição identifica os excertos e as fontes.",
+     "occurrences": 4
+    }
+   ]
+  },
+  "exame/index.html": {
+   "base_sha256_lf": "4800efab55548dcac4f3cdc61208886eababb779af758b97d17a4228facc3cec",
+   "after_sha256_lf": "50d440828d369e3049ffccbe843abc5bdb11df78fd02fd2b7970c672ba60fef1",
+   "edits": [
+    {
+     "location": "Versão do app.js, para os navegadores não usarem a cópia antiga",
+     "old": "../assets/exame/app.js?v=20261029-provas-1",
+     "new": "../assets/exame/app.js?v=20261105-licao-1",
+     "occurrences": 1
+    }
+   ]
+  }
+ }
+}

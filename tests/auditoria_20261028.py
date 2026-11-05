@@ -293,7 +293,20 @@ _REVISAO_0511 = json.loads((ROOT/'tests/fixtures/revisao-edits-20261105.json').r
 # 05/11/2026: tabela dos seis movimentos, camada mais recente: desfaz-se antes da revisão de 5/11, com contagem estrita.
 _TABELA_0511 = json.loads((ROOT/'tests/fixtures/tabela-movimentos-edits-20261105.json').read_text('utf-8'))['files']
 
+# 05/11/2026: Laboratório do exame (lição, não «leitura de apoio»), camada mais recente: desfaz-se antes da tabela, com contagem estrita.
+_EXAME_0511 = json.loads((ROOT/'tests/fixtures/exame-licao-edits-20261105.json').read_text('utf-8'))['files']
+
+def undo_exame_0511(path, text):
+    for edit in reversed(_EXAME_0511.get(_relative(path), {}).get('edits', [])):
+        if text.count(edit['new']) != edit['occurrences']:
+            raise AssertionError(f"Laboratório do exame não confere: {path}: {edit['location']}")
+        text = text.replace(edit['new'], edit['old'])
+    return text
+
+
 def undo_tabela_0511(path, text):
+    # 05/11/2026: primeiro o Laboratório do exame, que está por cima.
+    text = undo_exame_0511(path, text)
     for edit in reversed(_TABELA_0511.get(_relative(path), {}).get('edits', [])):
         if text.count(edit['new']) != edit['occurrences']:
             raise AssertionError(f"Tabela dos seis movimentos não confere: {path}: {edit['location']}")
