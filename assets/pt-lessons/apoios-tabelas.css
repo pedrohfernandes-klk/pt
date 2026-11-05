@@ -21,3 +21,13 @@
  .jogo .ler .apoio-tabela th,.jogo .ler .apoio-tabela td,.jogo .ler .apoio-tabela tbody th{display:table-cell;padding:.4em .6em;border-bottom:1px solid currentColor}
  .jogo .ler .apoio-tabela td[data-label]::before{content:none}
 }
+/* 05/11/2026: pedido do docente. Tabela dos seis movimentos (M7-F10): a letra numa coluna estreita, o verso com mais espaço. */
+/* 05/11/2026: revisão adversarial. A lição traz th,td{overflow-wrap:anywhere;word-break:break-word}; aqui só se parte nos espaços, e a coluna da letra
+   tem largura fixa em rem, para não crescer com o tamanho de projeção e apertar as outras. */
+.jogo .ler .apoio-tabela.movimentos :is(th,td){overflow-wrap:break-word;word-break:normal}
+.jogo .ler .apoio-tabela.movimentos thead th{overflow-wrap:normal}
+.jogo .ler .apoio-tabela.movimentos thead th:first-child{width:4.5rem}
+.jogo .ler .apoio-tabela.movimentos thead th:nth-child(2){width:32%}
+/* O poema e os versos ficam por baixo do exemplo, em letra pequena e cinzenta, como uma legenda. */
+.jogo .ler .apoio-tabela.movimentos .mv-fonte{display:block;margin-top:.3em;font:.82em/1.4 Arial,Helvetica,sans-serif;color:var(--suave,#444)}
+.jogo .ler .apoio-tabela.movimentos tbody th{font:700 1.25em/1.3 Georgia,'Times New Roman',serif}

@@ -3,6 +3,13 @@ on:
   pull_request:
     paths:
       - 'm7/licao-m7-f15/**'
+      # 05/11/2026: a tabela dos seis movimentos (M7-F10) e os intervalos de versos.
+      - 'm7/licao-m7-f10/**'
+      - 'm1/licao-m1-f02/**'
+      - 'm1/licao-m1-f19/**'
+      - 'tests/test_tabela_movimentos.py'
+      - 'tests/fixtures/tabela-movimentos-*'
+      - 'scripts/tabela_movimentos_*'
       - 'assets/pt-lessons/apoios-tabelas.css'
       - 'tests/*apoios*'
       - 'tests/fixtures/apoios-*'
@@ -20,6 +27,12 @@ jobs:
           python-version: '3.12'
       - name: Confirmar tabela, conteúdo e chaves preservados
         run: python -m unittest discover -s tests -p 'test_apoios_tabelas.py' -v
+      # 05/11/2026: pedido do docente, os seis movimentos numa tabela; a camada confere-se por cima da revisão de 5/11.
+      - name: Tabela dos seis movimentos e intervalos de versos
+        run: |
+          python -m unittest discover -s tests -p 'test_tabela_movimentos.py' -v
+          python scripts/aplicar_trocas.py scripts/tabela_movimentos_20261105.json --manifesto tests/fixtures/tabela-movimentos-edits-20261105.json --verificar
+          python scripts/verificar_camadas.py
       - name: Instalar Chromium
         run: |
           python -m pip install playwright

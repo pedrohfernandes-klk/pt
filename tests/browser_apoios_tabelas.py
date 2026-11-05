@@ -1,4 +1,5 @@
-"""M7-F15 table: real lesson CSS/engine, all rows, review and projection sizes."""
+"""M7-F15 table: real lesson CSS/engine, all rows, review and projection sizes.
+05/11/2026: e a tabela dos seis movimentos da M7-F10 (pedido do docente), sem palavras partidas a meio, também na projeção a 1024 px."""
 from functools import partial
 from http.server import ThreadingHTTPServer
 import sys,threading
@@ -28,6 +29,27 @@ def table_check(scope,width):
  if width<=620:
   assert table.locator('caption').evaluate('e=>e.getBoundingClientRect().width')>=table.evaluate('e=>e.getBoundingClientRect().width')-4
   assert table.locator('tbody th').first.evaluate('e=>e.getBoundingClientRect().width')>=table.evaluate('e=>e.getBoundingClientRect().width')-4
+ assert not scope.locator('html').evaluate('e=>e.scrollWidth>innerWidth+3')
+
+
+# 05/11/2026: tabela dos seis movimentos (M7-F10). Nenhuma palavra se parte a meio (só nos espaços, nos hífenes e nas barras),
+# nada desliza para o lado, e o poema com os versos aparece por baixo de cada exemplo. Mede-se dentro de cada nó de texto:
+# a linha pequena da fonte começa noutra linha de propósito.
+MEIO_DA_PALAVRA='''()=>{
+ const t=document.querySelector('.apoio-tabela.movimentos');if(!t)return ['sem tabela'];const out=[];
+ t.querySelectorAll('th,td').forEach(cell=>{const w=document.createTreeWalker(cell,NodeFilter.SHOW_TEXT);let n,prevTop=null,prevCh='';
+  while(n=w.nextNode()){prevTop=null;prevCh='';for(let i=0;i<n.data.length;i++){const r=document.createRange();r.setStart(n,i);r.setEnd(n,i+1);const rs=r.getClientRects();if(!rs.length)continue;
+   const top=Math.round(rs[0].top),ch=n.data[i];if(prevTop!==null&&top>prevTop+2&&!/\\s/.test(ch)&&!/[\\s\\u00ad\\-\\/]/.test(prevCh))out.push(cell.textContent.trim().slice(0,30)+': '+prevCh+'|'+ch);prevTop=top;prevCh=ch}}});
+ return out}'''
+
+def f10_check(scope):
+ table=scope.locator('table.apoio-tabela.movimentos')
+ assert table.count()==1
+ assert table.locator('thead th[scope="col"]').all_text_contents()==['Letra','Movimento','Exemplo']
+ assert table.locator('tbody th[scope="row"]').all_text_contents()==['S','N','R','M','P','C']
+ assert table.locator('tbody td .mv-fonte').count()==6
+ partidas=scope.locator('html').evaluate(MEIO_DA_PALAVRA)
+ assert partidas==[],partidas
  assert not scope.locator('html').evaluate('e=>e.scrollWidth>innerWidth+3')
 
 def main():
@@ -79,6 +101,29 @@ def main():
      assert frame.locator('.casca-corpo').evaluate('e=>["auto","scroll"].includes(getComputedStyle(e).overflowY)')
      print('PASS projected table:',size,scheme,flush=True)
     assert page.locator('.projection-qr svg').count()==1
+    ctx.close()
+   # 05/11/2026: tabela dos seis movimentos da M7-F10, em larguras normais e na projeção a 1024 px nos três tamanhos.
+   f10=lesson_cards(ROOT/'m7/licao-m7-f10/index.html')[2]
+   for width in (320,390,700,1024,1440):
+    ctx=browser.new_context(viewport={'width':width,'height':900},reduced_motion='reduce');page=ctx.new_page()
+    page.route('**/fonts.googleapis.com/**',lambda r:r.abort());page.route('**/fonts.gstatic.com/**',lambda r:r.abort())
+    page.goto(host+'/m7/licao-m7-f10/',wait_until='networkidle');mount(page,f10);f10_check(page)
+    print('PASS seis movimentos:',width,flush=True);ctx.close()
+   for vw in (1024,1366):
+    ctx=browser.new_context(viewport={'width':vw,'height':900},reduced_motion='reduce');page=ctx.new_page()
+    page.route('**/fonts.googleapis.com/**',lambda r:r.abort());page.route('**/fonts.gstatic.com/**',lambda r:r.abort())
+    def local2(route):
+     response=route.fetch(url=host+route.request.url.split(host+'/pt',1)[1]);route.fulfill(response=response)
+    page.route(host+'/pt/**',local2)
+    page.goto(host+'/pt/projetar/?pagina=%2Fpt%2Fm7%2Flicao-m7-f10%2F',wait_until='networkidle')
+    frame=page.frame_locator('#lesson-frame');frame.locator('#baralho .cartao').wait_for()
+    child=next(f for f in page.frames if '/m7/licao-m7-f10/' in f.url)
+    mount(child,f10)
+    for size in ('small','medium','large'):
+     page.locator(f'[data-projection-size="{size}"]').click()
+     assert page.locator(f'[data-projection-size="{size}"]').get_attribute('aria-pressed')=='true'
+     page.wait_for_timeout(200);f10_check(frame)
+     print('PASS seis movimentos na projeção:',vw,size,flush=True)
     ctx.close()
    browser.close()
  finally:server.shutdown()

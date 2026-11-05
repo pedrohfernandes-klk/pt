@@ -43,7 +43,8 @@ class CabecalhoCartaz(unittest.TestCase):
 
     def test_gerador_idempotente(self):
         # 05/11/2026: a revisão de 5/11 (por cima) desfaz-se antes de conferir o cabeçalho; a conferência fica igual.
-        result = subprocess.run([sys.executable, 'scripts/aplicar_trocas.py', 'scripts/cartaz_cabecalho_20261103.json', '--manifesto', str(MANIFEST), '--verificar', '--desfazer-antes', 'tests/fixtures/revisao-edits-20261105.json'], cwd=ROOT, capture_output=True)
+        # 05/11/2026: a tabela dos seis movimentos é a camada mais recente; desfaz-se antes da revisão, com a mesma exigência.
+        result = subprocess.run([sys.executable, 'scripts/aplicar_trocas.py', 'scripts/cartaz_cabecalho_20261103.json', '--manifesto', str(MANIFEST), '--verificar', '--desfazer-antes', 'tests/fixtures/tabela-movimentos-edits-20261105.json', '--desfazer-antes', 'tests/fixtures/revisao-edits-20261105.json'], cwd=ROOT, capture_output=True)
         self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
 
     def test_css_sem_motor_novo_nem_imposicoes(self):
