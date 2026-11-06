@@ -7,6 +7,8 @@ import sys
 
 ROOT=Path(__file__).resolve().parents[1]
 LAYERS=[
+ # 05/11/2026: Atlas Lusófono, lote 3 (66 figuras, «Imprensa e pensamento», localização aproximada, fotografias e vídeos), camada mais recente, por cima do contexto do Laboratório do exame.
+ ('atlas_lote3_20261105','atlas-lote3-edits-20261105'),
  # 05/11/2026: Laboratório do exame: o texto de contexto de cada sessão fala da lição e do excerto, camada mais recente, por cima da ligação e das notas.
  ('exame_contexto_20261105','exame-contexto-edits-20261105'),
  # 05/11/2026: Laboratório do exame: a ligação e as notas falam da lição, por cima da tabela.

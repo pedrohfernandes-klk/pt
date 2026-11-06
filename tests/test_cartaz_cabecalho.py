@@ -46,7 +46,8 @@ class CabecalhoCartaz(unittest.TestCase):
         # 05/11/2026: a tabela dos seis movimentos é a camada mais recente; desfaz-se antes da revisão, com a mesma exigência.
         # 05/11/2026: o Laboratório do exame (lição, não «leitura de apoio») é a camada mais recente; desfaz-se antes da tabela dos seis movimentos.
         # 05/11/2026: o contexto de cada sessão do Laboratório do exame (lição e excerto, não «recorte») é a camada mais recente; desfaz-se antes da ligação e das notas do Laboratório do exame.
-        result = subprocess.run([sys.executable, 'scripts/aplicar_trocas.py', 'scripts/cartaz_cabecalho_20261103.json', '--manifesto', str(MANIFEST), '--verificar', '--desfazer-antes', 'tests/fixtures/exame-contexto-edits-20261105.json', '--desfazer-antes', 'tests/fixtures/exame-licao-edits-20261105.json', '--desfazer-antes', 'tests/fixtures/tabela-movimentos-edits-20261105.json', '--desfazer-antes', 'tests/fixtures/revisao-edits-20261105.json'], cwd=ROOT, capture_output=True)
+        # 05/11/2026: o lote 3 do Atlas é a camada mais recente; desfaz-se antes do contexto do Laboratório do exame, com a mesma exigência.
+        result = subprocess.run([sys.executable, 'scripts/aplicar_trocas.py', 'scripts/cartaz_cabecalho_20261103.json', '--manifesto', str(MANIFEST), '--verificar', '--desfazer-antes', 'tests/fixtures/atlas-lote3-edits-20261105.json', '--desfazer-antes', 'tests/fixtures/exame-contexto-edits-20261105.json', '--desfazer-antes', 'tests/fixtures/exame-licao-edits-20261105.json', '--desfazer-antes', 'tests/fixtures/tabela-movimentos-edits-20261105.json', '--desfazer-antes', 'tests/fixtures/revisao-edits-20261105.json'], cwd=ROOT, capture_output=True)
         self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
 
     def test_css_sem_motor_novo_nem_imposicoes(self):

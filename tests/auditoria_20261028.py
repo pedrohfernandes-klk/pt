@@ -300,7 +300,21 @@ _EXAME_0511 = json.loads((ROOT/'tests/fixtures/exame-licao-edits-20261105.json')
 # camada mais recente: desfaz-se antes da ligação e das notas do Laboratório do exame, com contagem estrita.
 _CONTEXTO_0511 = json.loads((ROOT/'tests/fixtures/exame-contexto-edits-20261105.json').read_text('utf-8'))['files']
 
+# 05/11/2026: Atlas Lusófono, lote 3 (atlas, entrada e páginas dos anos), camada mais recente: desfaz-se antes do contexto do
+# Laboratório do exame, com contagem estrita.
+_ATLAS_LOTE3_0511 = json.loads((ROOT/'tests/fixtures/atlas-lote3-edits-20261105.json').read_text('utf-8'))['files']
+
+def undo_atlas_lote3_0511(path, text):
+    for edit in reversed(_ATLAS_LOTE3_0511.get(_relative(path), {}).get('edits', [])):
+        if text.count(edit['new']) != edit['occurrences']:
+            raise AssertionError(f"Atlas, lote 3, não confere: {path}: {edit['location']}")
+        text = text.replace(edit['new'], edit['old'])
+    return text
+
+
 def undo_contexto_0511(path, text):
+    # 05/11/2026: primeiro o lote 3 do Atlas, que está por cima.
+    text = undo_atlas_lote3_0511(path, text)
     for edit in reversed(_CONTEXTO_0511.get(_relative(path), {}).get('edits', [])):
         if text.count(edit['new']) != edit['occurrences']:
             raise AssertionError(f"Contexto do Laboratório do exame não confere: {path}: {edit['location']}")
