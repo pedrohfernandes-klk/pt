@@ -1,5 +1,5 @@
 {
- "_nota": "05/11/2026: decisões 153 e 162. Lista fechada dos créditos longos que ainda estão à vista fora de um «i» (tests/test_creditos_i.py, test_nenhum_credito_longo_a_vista). Cada entrada tem a página, a classe do elemento, a contagem exata e a razão (a família do plano plano-creditos-i-20261105.md e o pedido que a vai pôr a zero). A contagem só pode descer: cada pedido põe a sua família a zero e tira as entradas dela daqui; um crédito longo novo, fora do «i», faz falhar o teste. Pedido pt-2, fatia 1: P7 (lições M1 e M4) e P9 (documentos visuais) já estão a zero.",
+ "_nota": "05/11/2026: decisões 153 e 162. Lista fechada dos créditos longos que ainda estão à vista fora de um «i» (tests/test_creditos_i.py, test_nenhum_credito_longo_a_vista). Cada entrada tem a página, a classe do elemento, a contagem exata e a razão (a família do plano plano-creditos-i-20261105.md e o pedido que a vai pôr a zero). A contagem só pode descer: cada pedido põe a sua família a zero e tira as entradas dela daqui; um crédito longo novo, fora do «i», faz falhar o teste. Pedido pt-2, fatia 1: P7 (lições M1 e M4) e P9 (documentos visuais) já estão a zero. Fatia 2: P10 (Pessoa, cerca de 1914), P11 (dupla exposição), P12 (retratos do «Em paralelo») e P13 (crédito colado à explicação, que o varrimento não vê e tests/test_creditos_i.py confere à parte) também.",
  "creditos": [
   {
    "pagina": "assets/pt-lessons/m3-f18.js",
@@ -28,13 +28,6 @@
    "contagem": 1,
    "familia": "P2",
    "razao": "Imagem de abertura do índice do módulo; pedido pt-1 (decisão 162: depois do desenho do M4 nos nove índices, decisão 148, e da calçada que balança toda junta, decisão 150)"
-  },
-  {
-   "pagina": "m1/licao-m1-f19/index.html",
-   "classe": "p.rosto-c",
-   "contagem": 2,
-   "familia": "P12",
-   "razao": "Retratos do «Em paralelo» (variante «linha»); pedido pt-2, fatias seguintes da camada creditos_i_20261105"
   },
   {
    "pagina": "m1/m1-promessa-do-cronista/index.html",
@@ -506,13 +499,6 @@
    "razao": "Imagem de abertura do índice do módulo; pedido pt-1 (decisão 162: depois do desenho do M4 nos nove índices, decisão 148, e da calçada que balança toda junta, decisão 150)"
   },
   {
-   "pagina": "m7/licao-m7-f01/index.html",
-   "classe": "span.tabela",
-   "contagem": 1,
-   "familia": "P10",
-   "razao": "Pessoa, cerca de 1914 (span.tabela da varredura de formatação); pedido pt-2, fatias seguintes da camada creditos_i_20261105"
-  },
-  {
    "pagina": "m7/licao-m7-f02/index.html",
    "classe": "figcaption",
    "contagem": 1,
@@ -525,13 +511,6 @@
    "contagem": 1,
    "familia": "P8",
    "razao": "Legenda mista no «Abre» (identificação, licença, «Fonte» e frase de contexto); pedido pt-3 (legendas mistas: divisão à mão, com a tabela «fica à vista» e «vai para o «i»» revista pelo revisor de pt-PT; montante licao.mjs figura())"
-  },
-  {
-   "pagina": "m7/licao-m7-f05/index.html",
-   "classe": "span.tabela",
-   "contagem": 1,
-   "familia": "P10",
-   "razao": "Pessoa, cerca de 1914 (span.tabela da varredura de formatação); pedido pt-2, fatias seguintes da camada creditos_i_20261105"
   },
   {
    "pagina": "m7/licao-m7-f06/index.html",
@@ -597,13 +576,6 @@
    "razao": "Legenda mista no «Abre» (identificação, licença, «Fonte» e frase de contexto); pedido pt-3 (legendas mistas: divisão à mão, com a tabela «fica à vista» e «vai para o «i»» revista pelo revisor de pt-PT; montante licao.mjs figura())"
   },
   {
-   "pagina": "m7/licao-m7-f34/index.html",
-   "classe": "figcaption",
-   "contagem": 1,
-   "familia": "P11",
-   "razao": "Dupla exposição (Chuva Oblíqua): a instrução e os botões ficam à vista, o small do crédito vai para o «i»; pedido pt-2, fatias seguintes da camada creditos_i_20261105"
-  },
-  {
    "pagina": "m7/licao-m7-f35/index.html",
    "classe": "figcaption",
    "contagem": 1,
@@ -637,13 +609,6 @@
    "contagem": 18,
    "familia": "P16",
    "razao": "Galeria «Para ver» do mapa do módulo: a ligação «Lição Mx-Fyy» fica à vista (variante «linha»); pedido pt-2, fatias seguintes da camada creditos_i_20261105"
-  },
-  {
-   "pagina": "m7/mapa-do-modulo-m7/index.html",
-   "classe": "span.tabela",
-   "contagem": 1,
-   "familia": "P10",
-   "razao": "Pessoa, cerca de 1914 (span.tabela da varredura de formatação); pedido pt-2, fatias seguintes da camada creditos_i_20261105"
   },
   {
    "pagina": "m8/index.html",

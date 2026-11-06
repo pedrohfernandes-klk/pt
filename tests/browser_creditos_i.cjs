@@ -8,6 +8,10 @@
 // Enter abre, Escape fecha e devolve o foco); a árvore de acessibilidade (DisclosureTriangle, nome, expanded); 3:1 do círculo e
 // 4,5:1 do texto aberto; projeção; impressão (o crédito por extenso, sem o «i», com o endereço da licença); sem JavaScript; e
 // «Parar o desenho» sempre fora do «i». Corre com: node tests/browser_creditos_i.cjs
+// 05/11/2026: pedido pt-2, fatia 2: amostras de P10 (Pessoa em M7-F01, «linha») e P11 (dupla exposição em M7-F34, «canto»)
+// no primeiro cartão; e, montados no cartão aberto ou abertos na página, os retratos do «Em paralelo» (P12, «linha», o «i» por
+// baixo do retrato e o crédito com a largura da coluna), a imagem do campo ver de uma lição (P13: o «i» fora da figura que
+// amplia, e a imagem continua a ampliar), o material de um painel (P13, «linha») e a galeria do mapa M7 (P10, «linha»).
 const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),http=require('node:http');
 const {chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright'),root=path.resolve(__dirname,'..');
 const tipos={'.html':'text/html; charset=utf-8','.js':'text/javascript','.css':'text/css','.json':'application/json','.jpg':'image/jpeg','.jpeg':'image/jpeg','.png':'image/png','.webp':'image/webp','.svg':'image/svg+xml','.woff2':'font/woff2'};
@@ -19,12 +23,33 @@ const AMOSTRAS=[
  {url:'/pt/m1/licao-m1-f05/',variante:'linha',familia:'P7'},
  {url:'/pt/m4/licao-m4-f01/',variante:'canto',familia:'P7'},
  {url:'/pt/m3/licao-m3-f19/',variante:'linha',familia:'P9'},
+ {url:'/pt/m7/licao-m7-f01/',variante:'linha',familia:'P10'},
+ {url:'/pt/m7/licao-m7-f34/',variante:'canto',familia:'P11'},
 ];
 const LARGURAS=[320,390,852,1366];
 function lum(c){const m=c.match(/[\d.]+/g).map(Number),f=v=>{v/=255;return v<=.03928?v/12.92:((v+.055)/1.055)**2.4};return .2126*f(m[0])+.7152*f(m[1])+.0722*f(m[2])}
 function contraste(a,b){const x=lum(a),y=lum(b);return (Math.max(x,y)+.05)/(Math.min(x,y)+.05)}
+// 05/11/2026: os dados JSON de um script da página (CARTOES=[…], MATERIAL={…}), a partir do primeiro [ ou { em i.
+function jsonEm(t,i){let n=0,s=false,e=false;for(let k=i;k<t.length;k++){const c=t[k];if(s){if(e)e=false;else if(c==='\\')e=true;else if(c==='"')s=false;continue}
+ if(c==='"')s=true;else if(c==='['||c==='{')n++;else if(c===']'||c==='}'){n--;if(!n)return JSON.parse(t.slice(i,k+1))}}throw new Error('JSON sem fim')}
+// Os casos da fatia 2 que não estão no primeiro cartão: monta-se o cartão (como nos outros testes das lições), abre-se a galeria
+// ou lança-se o material do painel; devolve o seletor onde ficam os «i».
+const CASOS=[
+ {nome:'P12 M4-F01',url:'/pt/m4/licao-m4-f01/',rel:'m4/licao-m4-f01/index.html',cartao:c=>/class="rosto"/.test(c.html||''),variante:'linha',n:2,nomes:['Créditos da imagem: Santo António','Créditos da imagem: António Vieira']},
+ {nome:'P12 M1-F19',url:'/pt/m1/licao-m1-f19/',rel:'m1/licao-m1-f19/index.html',cartao:c=>/class="rosto"/.test(c.html||''),variante:'linha',n:2,nomes:['Créditos da imagem: ilha de San Simón','Créditos da imagem: Pergaminho Vindel']},
+ {nome:'P13 M4-F11',url:'/pt/m4/licao-m4-f11/',rel:'m4/licao-m4-f11/index.html',cartao:c=>/info-i/.test(c.ver||''),variante:'canto',n:1,nomes:['Créditos da imagem']},
+ {nome:'P13 painel M4-F01',url:'/pt/m4/painel-m4-f01/',rel:'m4/painel-m4-f01/index.html',painel:true,variante:'linha',n:1,nomes:['Créditos da imagem']},
+ {nome:'P10 mapa M7',url:'/pt/m7/mapa-do-modulo-m7/',galeria:true,variante:'linha',n:1,nomes:['Créditos da imagem: Fernando Pessoa']},
+];
+async function preparar(p,caso){
+ if(caso.cartao){const t=fs.readFileSync(path.join(root,caso.rel),'utf8'),card=jsonEm(t,t.indexOf('[',t.search(/CARTOES\s*=/))).find(caso.cartao);
+  await p.evaluate(x=>{window.qaCasca=EPICasca.abrir({semVoltar:true});EPIJogo.montar({casca:qaCasca,itens:[x],chave:'qa-creditos-i'})},card);return '.casca.sobreposta'}
+ if(caso.painel){const t=fs.readFileSync(path.join(root,caso.rel),'utf8'),M=jsonEm(t,t.indexOf('{',t.indexOf('MATERIAL='))),k=Object.keys(M).find(k=>/info-i/.test(M[k].ver||''));
+  await p.locator('[data-r-k]').selectOption(k);await p.locator('[data-relampago]').click();return '[data-extra]'}
+ await p.locator('#galeria > summary').click();return '#galeria'}
 // O «i», a imagem que ele acompanha e as caixas de cada um.
-const MEDIR=(sel)=>{const d=document.querySelectorAll('details.info-i')[sel];if(!d)return null;const s=d.querySelector(':scope>summary'),t=d.querySelector(':scope>.info-i-texto');
+// 05/11/2026: sel é o índice do «i» na página, ou {raiz, i} para o i-ésimo «i» dentro de um seletor (cartão montado, galeria).
+const MEDIR=(sel)=>{const d=(typeof sel==='number'?document.querySelectorAll('details.info-i'):document.querySelectorAll(sel.raiz+' details.info-i'))[typeof sel==='number'?sel:sel.i];if(!d)return null;const s=d.querySelector(':scope>summary'),t=d.querySelector(':scope>.info-i-texto');
  const casa=d.closest('.com-i')||d.parentElement,img=casa.querySelector('img')||(d.closest('figure')&&d.closest('figure').querySelector('img'));
  const caixa=e=>{if(!e)return null;const r=e.getBoundingClientRect();return {x:r.left,y:r.top,r:r.right,b:r.bottom,w:r.width,h:r.height}};
  const sp=getComputedStyle(s.querySelector('span')),tt=getComputedStyle(t);
@@ -98,7 +123,7 @@ try{
    assert.deepEqual(await p.locator('details.info-i').evaluateAll(es=>es.map(e=>e.open)),[false,false,false,true,false,false,false],'abrir outro fecha o primeiro');
    // A imagem dentro de uma ligação: o «i» fica fora da ligação e a ligação continua a funcionar.
    assert.equal(await p.locator('[data-caso="ligacao"] a details').count(),0);
-  }else if(alvo.familia==='P7'){
+  }else if(alvo.familia==='P7'||alvo.familia==='P10'){
    // O ampliador das lições continua a abrir a imagem; a legenda dele já não traz o crédito.
    await p.locator('.jogo .ler figure img').first().click({position:{x:20,y:20}});
    const leg=await p.locator('.amp-ov .amp-leg').innerText();assert(!/Domínio público|CC BY/.test(leg),`${alvo.url}: legenda do ampliador sem crédito (${leg})`);
@@ -143,5 +168,37 @@ try{
   await p.locator('[data-caso="fundo"] details.info-i>summary').click();assert(await botao.isVisible(),'com o «i» aberto, o botão continua à vista');
   await botao.click();assert(!(await p.evaluate(()=>document.querySelector('[data-fundo]').classList.contains('ii-anda'))),'o botão para o desenho');
   await ctx.close();cenarios++;}
- console.log(`PASS ${cenarios} cenários da peça «i» (ensaio, P7 e P9)`);
+ // 7. Fatia 2: os casos montados (P12, P13) e abertos na página (P10 na galeria, P13 no painel), nas quatro larguras e nos dois
+ // temas: fechado; alvo de 44 px no sítio da variante; aberto, o crédito no ecrã, legível, e o «i» no mesmo sítio; Escape fecha.
+ for(const caso of CASOS)for(const width of LARGURAS)for(const tema of ['light','dark']){
+  const ctx=await contexto(b,origem,{viewport:{width,height:width>800?800:860},colorScheme:tema}),p=await ctx.newPage(),erros=[];p.on('pageerror',e=>erros.push(String(e)));
+  await p.goto(origem+caso.url,{waitUntil:'networkidle'});const raiz=await preparar(p,caso),sel=raiz+' details.info-i',onde=`${caso.nome} ${width} ${tema}`;
+  await p.locator(sel+'>summary').first().waitFor();assert.equal(await p.locator(sel).count(),caso.n,`${onde}: ${caso.n} «i»`);
+  assert.deepEqual(await p.locator(sel+'>summary').evaluateAll(s=>s.map(x=>x.getAttribute('aria-label'))),caso.nomes,`${onde}: nomes`);
+  const fundoPagina=await p.evaluate(s=>{for(let e=document.querySelector(s);e;e=e.parentElement){const c=getComputedStyle(e).backgroundColor;if(c!=='rgba(0, 0, 0, 0)')return c}return getComputedStyle(document.body).backgroundColor},sel);
+  for(let i=0;i<caso.n;i++){
+   await p.locator(sel+'>summary').nth(i).scrollIntoViewIfNeeded();const m0=await p.evaluate(MEDIR,{raiz,i});
+   assert(!m0.open,`${onde} «i» ${i}: fechado ao carregar`);conferirCaixas(m0,`${onde} «i» ${i}`);assert.equal(m0.linha,caso.variante==='linha',`${onde}: variante ${caso.variante}`);
+   assert(contraste(m0.borda,m0.halo)>=3,`${onde} «i» ${i}: 3:1 do círculo contra o halo`);
+   await p.locator(sel+'>summary').nth(i).click();const m1={...(await p.evaluate(MEDIR,{raiz,i})),fundoPagina};conferirAberto(m1,`${onde} «i» ${i}`);
+   // Em relação à imagem (a página pode rolar quando o crédito abre no fluxo, por baixo).
+   assert(Math.abs((m1.s.x-m1.img.x)-(m0.s.x-m0.img.x))<=.5&&Math.abs((m1.s.y-m1.img.y)-(m0.s.y-m0.img.y))<=.5,`${onde} «i» ${i}: aberto, o «i» fica no mesmo sítio`);
+   if(caso.nome.startsWith('P12'))assert(m1.t.w>m1.img.w+40,`${onde} «i» ${i}: o crédito do retrato abre com a largura da coluna (${m1.t.w} / ${m1.img.w})`);
+   assert.equal(await p.locator('.amp-ov').count(),0,`${onde} «i» ${i}: abrir o «i» não amplia a imagem`);
+   await p.keyboard.press('Escape');assert(!(await p.evaluate(([s,k])=>document.querySelectorAll(s)[k].open,[sel,i])),`${onde} «i» ${i}: Escape fecha`);
+  }
+  if(width===390&&tema==='light'){const ax=await arvore(p);for(const nome of caso.nomes)assert(ax.some(n=>n.nome===nome&&/^DisclosureTriangle/.test(n.papel)&&n.expanded===false),`${onde}: «${nome}» na árvore, fechado`)}
+  if(width===1366&&tema==='light'){await p.emulateMedia({media:'print'});
+   for(let i=0;i<caso.n;i++){const m=await p.evaluate(MEDIR,{raiz,i});if(!m.img||m.img.w===0)continue;
+    assert(!m.sVisivel&&m.tVisivel&&m.t.y>=m.img.b-1,`${onde} «i» ${i}: na impressão, o crédito por baixo da imagem e sem o «i»`)}
+   await p.emulateMedia({media:'screen'})}
+  if(caso.cartao&&caso.variante==='canto'){
+   // P13: o «i» fica fora da figura que amplia (um botão); tocar na imagem continua a ampliar.
+   assert(await p.evaluate(s=>!document.querySelector(s).closest('[role="button"],button,a,figure'),sel),`${onde}: o «i» fora da figura que amplia`);
+   await p.locator(raiz+' .ver-fig').click({position:{x:20,y:20}});assert.equal(await p.locator('.amp-ov').count(),1,`${onde}: a imagem continua a ampliar`);
+   await p.keyboard.press('Escape');assert.equal(await p.locator('.amp-ov').count(),0,`${onde}: Escape fecha o ampliador`);
+  }
+  assert.deepEqual(erros,[],`${onde}: sem erros`);await ctx.close();cenarios++;
+ }
+ console.log(`PASS ${cenarios} cenários da peça «i» (ensaio, P7, P9 a P13)`);
 }finally{await b.close();server.closeAllConnections();server.close()}})().catch(e=>{console.error(e);process.exitCode=1});

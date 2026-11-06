@@ -9,6 +9,9 @@ on:
       - 'docs/pedagogia/percursos-unidades-20261020.json'
       # 05/11/2026: decisão 153, a peça comum dos créditos atrás de um «i».
       - 'assets/info-i.*'
+      # 05/11/2026: pedido pt-2, fatia 2: o «i» dos retratos e da imagem do campo ver depende destes dois.
+      - 'assets/pt-lessons/aula-clara.css'
+      - 'assets/pt-lessons/jogo.js'
       - '.github/workflows/pt-licoes-20261101-qa.yml'
 permissions:
   contents: read

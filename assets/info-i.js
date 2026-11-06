@@ -15,16 +15,17 @@
   }, true);
   // Escape fecha o «i» aberto e devolve o foco ao seu «i». Com um diálogo aberto por cima (o ampliador das imagens, por
   // exemplo), o Escape é desse diálogo: este ouvinte corre na captura, antes dos outros, e deixa-o passar.
-  function dialogoAberto() {
+  // 05/11/2026: um «i» aberto dentro do próprio diálogo (um cartão montado num ecrã sobreposto) fecha-se primeiro; o diálogo
+  // só se fecha com o Escape seguinte.
+  function dialogoPorCima(x) {
     var L = d.querySelectorAll('.amp-ov,[aria-modal="true"]');
-    for (var i = 0; i < L.length; i++) if (L[i].getClientRects().length) return true;
+    for (var i = 0; i < L.length; i++) if (L[i].getClientRects().length && !L[i].contains(x)) return true;
     return false;
   }
   w.addEventListener('keydown', function (e) {
     if (e.key !== 'Escape' && e.key !== 'Esc') return;
-    if (e.defaultPrevented || dialogoAberto()) return;
     var x = abertos()[0];
-    if (!x) return;
+    if (!x || e.defaultPrevented || dialogoPorCima(x)) return;
     var a = d.activeElement, dentro = x.contains(a) || !a || a === d.body || a === html;
     x.open = false;
     if (dentro) { var s = x.querySelector('summary'); if (s) s.focus(); }

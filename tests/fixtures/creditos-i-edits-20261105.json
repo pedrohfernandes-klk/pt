@@ -1,6 +1,6 @@
 {
  "base_commit": "b3ee0f9c67fd94311e2860b2694f9487e34be95a",
- "_nota": "05/11/2026: decisões 153 e 162 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»). Créditos das imagens atrás de um botão «i» (pedido pt-2 do plano plano-creditos-i-20261105.md), camada mais recente, por cima do contexto do Laboratório do exame (exame_contexto_20261105). Gerada por scripts/creditos_i_20261105.py e aplicada por scripts/aplicar_trocas.py: não se edita à mão. Família P7 (crédito puro nas lições M1 e M4): o crédito passa inteiro para dentro de uma <details class=\"info-i\">, na moldura da imagem; o que diz o que se vê fica à vista; cada página carrega assets/info-i.css e assets/info-i.js. Só HTML dos cartões: tipos, ordem, chaves e respostas ficam iguais.",
+ "_nota": "05/11/2026: decisões 153 e 162 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»). Créditos das imagens atrás de um botão «i» (pedido pt-2 do plano plano-creditos-i-20261105.md), camada mais recente, por cima do contexto do Laboratório do exame (exame_contexto_20261105). Gerada por scripts/creditos_i_20261105.py e aplicada por scripts/aplicar_trocas.py: não se edita à mão. Famílias P7 (crédito puro nas lições M1 e M4), P10 (Pessoa, cerca de 1914: M7-F01, M7-F05 e a galeria do mapa M7), P11 (dupla exposição de «Chuva Oblíqua», M7-F34), P12 (retratos do «Em paralelo»: M1-F19, M4-F01, M4-F02 e M4-F11) e P13 (crédito colado à explicação: lições M4-F01, M4-F04 e M4-F11 e os três painéis): o crédito passa inteiro para dentro de uma <details class=\"info-i\">, junto da imagem; o que diz o que se vê fica à vista; cada página carrega assets/info-i.css e assets/info-i.js. Só o HTML dos cartões e do material dos painéis e o fim de três explicações (sai o crédito do campo f): tipos, ordem, chaves e respostas ficam iguais.",
  "files": {
   "m1/licao-m1-f01/index.html": {
    "base_sha256_lf": "93504c75e2dc18471ca2bbbb46827170f9352c69d4ebace8891894b2d70d02c5",
@@ -232,12 +232,24 @@
   },
   "m1/licao-m1-f19/index.html": {
    "base_sha256_lf": "aa66646922d4974c90890e138a502ea6ec8797494ea4d8b59f57f1dfb76809f4",
-   "after_sha256_lf": "9126682e4fb32b326e0b2679b61839f22f7eed3afb8a82ecf778e58fcc75d530",
+   "after_sha256_lf": "6912d1473f06b7036f48d1aeb5ac70d28ea9e17b372b8d46d1a91bfbd280d9eb",
    "edits": [
     {
      "location": "P7, crédito puro: Pergaminho Vindel, com as cantigas de Martim Codax (Luis Miguel Bugall",
      "old": "<figure class=\\\"fig inteiro cor\\\"><span class=\\\"moldura\\\"><img src=\\\"../../img/fontes/vindel-pergaminho-2018.jpg\\\" alt=\\\"Um pergaminho aberto numa vitrina, sobre fundo vermelho: duas páginas escritas em colunas, com letras grandes a vermelho e azul e, por cima de algumas linhas, pautas com notas de música.\\\" loading=\\\"lazy\\\"></span><figcaption>Pergaminho Vindel, com as cantigas de Martim Codax (Luis Miguel Bugallo Sánchez, 2017). CC BY-SA 4.0.</figcaption></figure>",
      "new": "<figure class=\\\"fig inteiro cor\\\"><div class=\\\"moldura com-i\\\"><img src=\\\"../../img/fontes/vindel-pergaminho-2018.jpg\\\" alt=\\\"Um pergaminho aberto numa vitrina, sobre fundo vermelho: duas páginas escritas em colunas, com letras grandes a vermelho e azul e, por cima de algumas linhas, pautas com notas de música.\\\" loading=\\\"lazy\\\"><details class=\\\"info-i\\\" name=\\\"info-i\\\"><summary aria-label=\\\"Créditos da imagem\\\"><span aria-hidden=\\\"true\\\">i</span></summary><p class=\\\"info-i-texto\\\">Pergaminho Vindel, com as cantigas de Martim Codax (Luis Miguel Bugallo Sánchez, 2017). <a rel=\\\"license\\\" href=\\\"https://creativecommons.org/licenses/by-sa/4.0/deed.pt\\\">CC BY-SA 4.0</a>.</p></details></div></figure>",
+     "occurrences": 1
+    },
+    {
+     "location": "P12, retrato do «Em paralelo» (Mendinho): o crédito passa para o «i»",
+     "old": "<p class=\\\"rosto-c\\\">Ilha de San Simón, ria de Vigo (Iago Pillado, 2024). CC BY-SA 4.0.</p><h3>Mendinho</h3>",
+     "new": "<details class=\\\"info-i info-i--linha\\\" name=\\\"info-i\\\"><summary aria-label=\\\"Créditos da imagem: ilha de San Simón\\\"><span aria-hidden=\\\"true\\\">i</span></summary><p class=\\\"info-i-texto\\\">Ilha de San Simón, ria de Vigo (Iago Pillado, 2024). <a rel=\\\"license\\\" href=\\\"https://creativecommons.org/licenses/by-sa/4.0/deed.pt\\\">CC BY-SA 4.0</a>.</p></details><h3>Mendinho</h3>",
+     "occurrences": 1
+    },
+    {
+     "location": "P12, retrato do «Em paralelo» (Martim Codax): o crédito passa para o «i»",
+     "old": "<p class=\\\"rosto-c\\\">Pergaminho Vindel, com «Ondas do mar de Vigo». Domínio público.</p><h3>Martim Codax</h3>",
+     "new": "<details class=\\\"info-i info-i--linha\\\" name=\\\"info-i\\\"><summary aria-label=\\\"Créditos da imagem: Pergaminho Vindel\\\"><span aria-hidden=\\\"true\\\">i</span></summary><p class=\\\"info-i-texto\\\">Pergaminho Vindel, com «Ondas do mar de Vigo». Domínio público.</p></details><h3>Martim Codax</h3>",
      "occurrences": 1
     },
     {
@@ -280,7 +292,7 @@
   },
   "m4/licao-m4-f01/index.html": {
    "base_sha256_lf": "9ece8193e0da88c654c301c9bc09bd65682e3501d3941e4eb5159d996b19f0c2",
-   "after_sha256_lf": "8703e7c05a45154d0409124bd3a0e550f26fd5dfa2349b3b5d8e4b6a756f4c4a",
+   "after_sha256_lf": "3a02eda6213991ee1988ec022b1d9afe0e123f8737c2beca917c74021f0ddf28",
    "edits": [
     {
      "location": "P7, crédito puro: Garcia Fernandes, <i>Santo António a pregar aos peixes</i>, c. 1535-15",
@@ -301,6 +313,30 @@
      "occurrences": 1
     },
     {
+     "location": "P12, retrato do «Em paralelo» (Santo António): o crédito passa para o «i»",
+     "old": "<p class=\\\"rosto-c\\\">Garcia Fernandes (pormenor)</p><h3>Santo António</h3>",
+     "new": "<details class=\\\"info-i info-i--linha\\\" name=\\\"info-i\\\"><summary aria-label=\\\"Créditos da imagem: Santo António\\\"><span aria-hidden=\\\"true\\\">i</span></summary><p class=\\\"info-i-texto\\\">Garcia Fernandes (pormenor)</p></details><h3>Santo António</h3>",
+     "occurrences": 1
+    },
+    {
+     "location": "P12, retrato do «Em paralelo» (António Vieira): o crédito passa para o «i»",
+     "old": "<p class=\\\"rosto-c\\\">Retrato, séc. XVIII (pormenor)</p><h3>António Vieira</h3>",
+     "new": "<details class=\\\"info-i info-i--linha\\\" name=\\\"info-i\\\"><summary aria-label=\\\"Créditos da imagem: António Vieira\\\"><span aria-hidden=\\\"true\\\">i</span></summary><p class=\\\"info-i-texto\\\">Retrato, séc. XVIII (pormenor)</p></details><h3>António Vieira</h3>",
+     "occurrences": 1
+    },
+    {
+     "location": "P13, explicação: o crédito (peixe-voador-1889.jpg) sai do fim do campo f",
+     "old": "\"f\":\"O sermão «todo é alegórico»: o voador é peixe no que se diz e homem no que se quer dizer. Um peixe com asas quer ser ave: vale por quem, em São Luís, quer ser mais do que é. Cromolitografia: Allen & Ginter, _Peixe-voador_ (série _Fish from American Waters_), 1889, The Met. Domínio público.\"",
+     "new": "\"f\":\"O sermão «todo é alegórico»: o voador é peixe no que se diz e homem no que se quer dizer. Um peixe com asas quer ser ave: vale por quem, em São Luís, quer ser mais do que é.\"",
+     "occurrences": 1
+    },
+    {
+     "location": "P13, imagem do campo ver (peixe-voador-1889.jpg): ganha o «i» com o crédito",
+     "old": "\"ver\":\"<img src=\\\"../../img/fontes/peixe-voador-1889.jpg\\\" alt=\\\"Gravura a cores de um peixe-voador sobre o mar, de barbatanas abertas como asas; em baixo, aves numa rocha.\\\" loading=\\\"lazy\\\">\"",
+     "new": "\"ver\":\"<div class=\\\"com-i\\\"><img src=\\\"../../img/fontes/peixe-voador-1889.jpg\\\" alt=\\\"Gravura a cores de um peixe-voador sobre o mar, de barbatanas abertas como asas; em baixo, aves numa rocha.\\\" loading=\\\"lazy\\\"><details class=\\\"info-i\\\" name=\\\"info-i\\\"><summary aria-label=\\\"Créditos da imagem\\\"><span aria-hidden=\\\"true\\\">i</span></summary><p class=\\\"info-i-texto\\\">Cromolitografia: Allen &amp; Ginter, <i>Peixe-voador</i> (série <i>Fish from American Waters</i>), 1889, The Met. Domínio público.</p></details></div>\"",
+     "occurrences": 1
+    },
+    {
      "location": "A peça comum do «i» (assets/info-i.css e assets/info-i.js)",
      "old": "</head>",
      "new": "<link rel=\"stylesheet\" href=\"../../assets/info-i.css?v=20261105\"><script defer src=\"../../assets/info-i.js?v=20261105\"></script></head>",
@@ -310,7 +346,7 @@
   },
   "m4/licao-m4-f02/index.html": {
    "base_sha256_lf": "c9c84ed8afa07c5d6d0752c3e28e53eb731387b53edaef4f689915cac042e477",
-   "after_sha256_lf": "fa23860d0eb5ac7954d41416f57d0d0c72bea56437ab565251bdd39d8f0430f8",
+   "after_sha256_lf": "3fc0abdd4da0c5ce63fc69e3c72d5a8f4fd2d31131accb9321546d2f3955780f",
    "edits": [
     {
      "location": "P7, crédito puro: <i>Sermoens</i> de Vieira, Lisboa, 1682: a primeira página do sermão. ",
@@ -331,6 +367,18 @@
      "occurrences": 1
     },
     {
+     "location": "P12, retrato do «Em paralelo» (Santo António): o crédito passa para o «i»",
+     "old": "<p class=\\\"rosto-c\\\">Garcia Fernandes (pormenor)</p><h3>Santo António</h3>",
+     "new": "<details class=\\\"info-i info-i--linha\\\" name=\\\"info-i\\\"><summary aria-label=\\\"Créditos da imagem: Santo António\\\"><span aria-hidden=\\\"true\\\">i</span></summary><p class=\\\"info-i-texto\\\">Garcia Fernandes (pormenor)</p></details><h3>Santo António</h3>",
+     "occurrences": 1
+    },
+    {
+     "location": "P12, retrato do «Em paralelo» (António Vieira): o crédito passa para o «i»",
+     "old": "<p class=\\\"rosto-c\\\">Retrato, séc. XVIII (pormenor)</p><h3>António Vieira</h3>",
+     "new": "<details class=\\\"info-i info-i--linha\\\" name=\\\"info-i\\\"><summary aria-label=\\\"Créditos da imagem: António Vieira\\\"><span aria-hidden=\\\"true\\\">i</span></summary><p class=\\\"info-i-texto\\\">Retrato, séc. XVIII (pormenor)</p></details><h3>António Vieira</h3>",
+     "occurrences": 1
+    },
+    {
      "location": "A peça comum do «i» (assets/info-i.css e assets/info-i.js)",
      "old": "</head>",
      "new": "<link rel=\"stylesheet\" href=\"../../assets/info-i.css?v=20261105\"><script defer src=\"../../assets/info-i.js?v=20261105\"></script></head>",
@@ -340,12 +388,24 @@
   },
   "m4/licao-m4-f04/index.html": {
    "base_sha256_lf": "fc048c489c38d8f939a48abf8a6f444eadab0112ae59ae79289bb10690014e85",
-   "after_sha256_lf": "3c7387f533a77f1057e9b1e418011f9fc221eb4ca7cc0cd079c076253517fb4a",
+   "after_sha256_lf": "f6a9e66b627d357e363992f9c769eaa31228861f2e1ac981b77b3e3c8300921e",
    "edits": [
     {
      "location": "P7, crédito puro: José Artur Leitão Bárcia, mercado de peixe na Ribeira Nova, Lisboa, c.",
      "old": "<figure class=\\\"fig inteiro\\\"><span class=\\\"moldura\\\"><img src=\\\"../../img/fontes/varinas-ribeira-nova-1900.jpg\\\" alt=\\\"Fotografia a preto e branco de um mercado ao ar livre: mulheres de saia comprida e avental, homens de chapéu e rapazes juntam-se em roda, de olhos no meio; à esquerda, uma mulher leva um cesto à cabeça; ao fundo, o pavilhão do mercado.\\\" loading=\\\"lazy\\\"></span><figcaption>José Artur Leitão Bárcia, mercado de peixe na Ribeira Nova, Lisboa, c. 1900. Domínio público.</figcaption></figure>",
      "new": "<figure class=\\\"fig inteiro\\\"><div class=\\\"moldura com-i\\\"><img src=\\\"../../img/fontes/varinas-ribeira-nova-1900.jpg\\\" alt=\\\"Fotografia a preto e branco de um mercado ao ar livre: mulheres de saia comprida e avental, homens de chapéu e rapazes juntam-se em roda, de olhos no meio; à esquerda, uma mulher leva um cesto à cabeça; ao fundo, o pavilhão do mercado.\\\" loading=\\\"lazy\\\"><details class=\\\"info-i\\\" name=\\\"info-i\\\"><summary aria-label=\\\"Créditos da imagem\\\"><span aria-hidden=\\\"true\\\">i</span></summary><p class=\\\"info-i-texto\\\">José Artur Leitão Bárcia, mercado de peixe na Ribeira Nova, Lisboa, <span class=\\\"nb\\\">c. 1900</span>. Domínio público.</p></details></div></figure>",
+     "occurrences": 1
+    },
+    {
+     "location": "P13, explicação: o crédito (boccioni-cidade-que-sobe-1910.jpg) sai do fim do campo f",
+     "old": "\"f\":\"«Sobem aos andaimes» é trepar; «sobem na vida» é enriquecer, aqui à custa de quem trepa. A mesma palavra com dois sentidos, como em «como hão de comer, e como se hão de comer». Pintura: Umberto Boccioni, _A cidade que sobe_, 1910, MoMA. Domínio público.\"",
+     "new": "\"f\":\"«Sobem aos andaimes» é trepar; «sobem na vida» é enriquecer, aqui à custa de quem trepa. A mesma palavra com dois sentidos, como em «como hão de comer, e como se hão de comer».\"",
+     "occurrences": 1
+    },
+    {
+     "location": "P13, imagem do campo ver (boccioni-cidade-que-sobe-1910.jpg): ganha o «i» com o crédito",
+     "old": "\"ver\":\"<img src=\\\"../../img/fontes/boccioni-cidade-que-sobe-1910.jpg\\\" alt=\\\"Pintura de pinceladas rápidas: um enorme cavalo vermelho arrasta homens que o puxam e tropeçam; ao fundo, prédios com andaimes e chaminés.\\\" loading=\\\"lazy\\\">\"",
+     "new": "\"ver\":\"<div class=\\\"com-i\\\"><img src=\\\"../../img/fontes/boccioni-cidade-que-sobe-1910.jpg\\\" alt=\\\"Pintura de pinceladas rápidas: um enorme cavalo vermelho arrasta homens que o puxam e tropeçam; ao fundo, prédios com andaimes e chaminés.\\\" loading=\\\"lazy\\\"><details class=\\\"info-i\\\" name=\\\"info-i\\\"><summary aria-label=\\\"Créditos da imagem\\\"><span aria-hidden=\\\"true\\\">i</span></summary><p class=\\\"info-i-texto\\\">Pintura: Umberto Boccioni, <i>A cidade que sobe</i>, 1910, MoMA. Domínio público.</p></details></div>\"",
      "occurrences": 1
     },
     {
@@ -460,12 +520,36 @@
   },
   "m4/licao-m4-f11/index.html": {
    "base_sha256_lf": "0201dacd5ee5561e96f53571976a9597fbdf6f57c13367ce50d15a54f3946352",
-   "after_sha256_lf": "44253a3de50e202665113a58328728b54251d6cc754a917bde89bf9fe8f1761e",
+   "after_sha256_lf": "db755988aa23bb45ad8aed9c0349a662301bce97de2700d1b96d9dfe399f1bfd",
    "edits": [
     {
      "location": "P7, crédito puro: <i>Sermoens</i> de Vieira, Lisboa, 1682: a nota por baixo do título. D",
      "old": "<figure class=\\\"fig recorte\\\"><span class=\\\"moldura\\\"><img src=\\\"../../img/fontes/sermao-1682.jpg\\\" alt=\\\"Primeira página do sermão na edição de 1682: o título, «Sermão de Santo António», a linha «Pregado na cidade de São Luís do Maranhão, ano de 1654» e, por baixo, a nota em itálico, onde se lê, entre parênteses, «posto que perseguida».\\\" loading=\\\"lazy\\\" style=\\\"object-position:50% 40%\\\"></span><figcaption><i>Sermoens</i> de Vieira, Lisboa, 1682: a nota por baixo do título. Domínio público.</figcaption></figure>",
      "new": "<figure class=\\\"fig recorte\\\"><div class=\\\"moldura com-i\\\"><img src=\\\"../../img/fontes/sermao-1682.jpg\\\" alt=\\\"Primeira página do sermão na edição de 1682: o título, «Sermão de Santo António», a linha «Pregado na cidade de São Luís do Maranhão, ano de 1654» e, por baixo, a nota em itálico, onde se lê, entre parênteses, «posto que perseguida».\\\" loading=\\\"lazy\\\" style=\\\"object-position:50% 40%\\\"><details class=\\\"info-i\\\" name=\\\"info-i\\\"><summary aria-label=\\\"Créditos da imagem\\\"><span aria-hidden=\\\"true\\\">i</span></summary><p class=\\\"info-i-texto\\\"><i>Sermoens</i> de Vieira, Lisboa, 1682. Domínio público.</p></details></div><figcaption>A nota por baixo do título.</figcaption></figure>",
+     "occurrences": 1
+    },
+    {
+     "location": "P12, retrato do «Em paralelo» (António Vieira): o crédito passa para o «i»",
+     "old": "<p class=\\\"rosto-c\\\">Retrato, séc. XVIII (pormenor)</p><h3>António Vieira</h3>",
+     "new": "<details class=\\\"info-i info-i--linha\\\" name=\\\"info-i\\\"><summary aria-label=\\\"Créditos da imagem: António Vieira\\\"><span aria-hidden=\\\"true\\\">i</span></summary><p class=\\\"info-i-texto\\\">Retrato, séc. XVIII (pormenor)</p></details><h3>António Vieira</h3>",
+     "occurrences": 1
+    },
+    {
+     "location": "P12, retrato do «Em paralelo» (Almeida Garrett): o crédito passa para o «i»",
+     "old": "<p class=\\\"rosto-c\\\">José Malhoa, 1881</p><h3>Almeida Garrett</h3>",
+     "new": "<details class=\\\"info-i info-i--linha\\\" name=\\\"info-i\\\"><summary aria-label=\\\"Créditos da imagem: Almeida Garrett\\\"><span aria-hidden=\\\"true\\\">i</span></summary><p class=\\\"info-i-texto\\\">José Malhoa, 1881</p></details><h3>Almeida Garrett</h3>",
+     "occurrences": 1
+    },
+    {
+     "location": "P13, explicação: o crédito (frei-luis-personagens-1844.jpg) sai do fim do campo f",
+     "old": "\"f\":\"A estreia em 1843 confirma-se na página de 1844, e as tochas estão na didascália: factos. Que o incêndio mostre a recusa do domínio de Castela lê-se nos sinais: interpretação. «O mais forte» julga: opinião. Imagem: _Frei Luiz de Sousa_, primeira edição, 1844. Domínio público.\"",
+     "new": "\"f\":\"A estreia em 1843 confirma-se na página de 1844, e as tochas estão na didascália: factos. Que o incêndio mostre a recusa do domínio de Castela lê-se nos sinais: interpretação. «O mais forte» julga: opinião.\"",
+     "occurrences": 1
+    },
+    {
+     "location": "P13, imagem do campo ver (frei-luis-personagens-1844.jpg): ganha o «i» com o crédito",
+     "old": "\"ver\":\"<img src=\\\"../../img/fontes/frei-luis-personagens-1844.jpg\\\" style=\\\"object-position:50% 18%\\\" alt=\\\"Página impressa de 1844: Frei Luiz de Sousa, drama, representado a primeira vez em Lisboa, no teatro da quinta do Pinheiro, em quatro de julho de 1843, em numeração romana; por baixo, a lista das pessoas da peça.\\\" loading=\\\"lazy\\\">\"",
+     "new": "\"ver\":\"<div class=\\\"com-i\\\"><img src=\\\"../../img/fontes/frei-luis-personagens-1844.jpg\\\" style=\\\"object-position:50% 18%\\\" alt=\\\"Página impressa de 1844: Frei Luiz de Sousa, drama, representado a primeira vez em Lisboa, no teatro da quinta do Pinheiro, em quatro de julho de 1843, em numeração romana; por baixo, a lista das pessoas da peça.\\\" loading=\\\"lazy\\\"><details class=\\\"info-i\\\" name=\\\"info-i\\\"><summary aria-label=\\\"Créditos da imagem\\\"><span aria-hidden=\\\"true\\\">i</span></summary><p class=\\\"info-i-texto\\\">Imagem: <i>Frei Luiz de Sousa</i>, primeira edição, 1844. Domínio público.</p></details></div>\"",
      "occurrences": 1
     },
     {
@@ -598,6 +682,162 @@
      "location": "P7, crédito puro: Miguel Ângelo Lupi, <i>D. João de Portugal</i>, 1863. Domínio público.",
      "old": "<figure class=\\\"fig recorte cor\\\"><span class=\\\"moldura\\\"><img src=\\\"../../img/fontes/joao-de-portugal-lupi.jpg\\\" alt=\\\"Pintura escura: um velho de barba branca e longa, de hábito claro com uma cruz ao peito, ergue a mão para os retratos pendurados atrás dele. À esquerda, de costas, um homem de cabeça tonsurada; à direita, uma figura sentada, de gola de folhos, olha para ele.\\\" loading=\\\"lazy\\\" style=\\\"object-position:50% 0%\\\"></span><figcaption>Miguel Ângelo Lupi, <i>D. João de Portugal</i>, 1863. Domínio público.</figcaption></figure>",
      "new": "<figure class=\\\"fig recorte cor\\\"><div class=\\\"moldura com-i\\\"><img src=\\\"../../img/fontes/joao-de-portugal-lupi.jpg\\\" alt=\\\"Pintura escura: um velho de barba branca e longa, de hábito claro com uma cruz ao peito, ergue a mão para os retratos pendurados atrás dele. À esquerda, de costas, um homem de cabeça tonsurada; à direita, uma figura sentada, de gola de folhos, olha para ele.\\\" loading=\\\"lazy\\\" style=\\\"object-position:50% 0%\\\"><details class=\\\"info-i\\\" name=\\\"info-i\\\"><summary aria-label=\\\"Créditos da imagem\\\"><span aria-hidden=\\\"true\\\">i</span></summary><p class=\\\"info-i-texto\\\">Miguel Ângelo Lupi, <i>D. João de Portugal</i>, 1863. Domínio público.</p></details></div></figure>",
+     "occurrences": 1
+    },
+    {
+     "location": "A peça comum do «i» (assets/info-i.css e assets/info-i.js)",
+     "old": "</head>",
+     "new": "<link rel=\"stylesheet\" href=\"../../assets/info-i.css?v=20261105\"><script defer src=\"../../assets/info-i.js?v=20261105\"></script></head>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/painel-m4-f01/index.html": {
+   "base_sha256_lf": "40ec8808d04ae49561ab216387c35bf561d22830eeb3fe689377df8404699d3f",
+   "after_sha256_lf": "80b023bc5d06f0759cd8605653a2dedb348316925f3ae0f4a0e8af178a0dc1d4",
+   "edits": [
+    {
+     "location": "P13, explicação: o crédito (peixe-voador-1889.jpg) sai do fim do campo f",
+     "old": "\"f\":\"O sermão «todo é alegórico»: o voador é peixe no que se diz e homem no que se quer dizer. Um peixe com asas quer ser ave: vale por quem, em São Luís, quer ser mais do que é. Cromolitografia: Allen & Ginter, _Peixe-voador_ (série _Fish from American Waters_), 1889, The Met. Domínio público.\"",
+     "new": "\"f\":\"O sermão «todo é alegórico»: o voador é peixe no que se diz e homem no que se quer dizer. Um peixe com asas quer ser ave: vale por quem, em São Luís, quer ser mais do que é.\"",
+     "occurrences": 1
+    },
+    {
+     "location": "P13, imagem do campo ver (peixe-voador-1889.jpg): ganha o «i» com o crédito",
+     "old": "\"ver\":\"<img src=\\\"../../img/fontes/peixe-voador-1889.jpg\\\" alt=\\\"Gravura a cores de um peixe-voador sobre o mar, de barbatanas abertas como asas; em baixo, aves numa rocha.\\\" loading=\\\"lazy\\\">\"",
+     "new": "\"ver\":\"<div class=\\\"com-i\\\"><img src=\\\"../../img/fontes/peixe-voador-1889.jpg\\\" alt=\\\"Gravura a cores de um peixe-voador sobre o mar, de barbatanas abertas como asas; em baixo, aves numa rocha.\\\" loading=\\\"lazy\\\"><details class=\\\"info-i info-i--linha\\\" name=\\\"info-i\\\"><summary aria-label=\\\"Créditos da imagem\\\"><span aria-hidden=\\\"true\\\">i<\\/span><\\/summary><p class=\\\"info-i-texto\\\">Cromolitografia: Allen &amp; Ginter, <i>Peixe-voador<\\/i> (série <i>Fish from American Waters<\\/i>), 1889, The Met. Domínio público.<\\/p><\\/details><\\/div>\"",
+     "occurrences": 1
+    },
+    {
+     "location": "A peça comum do «i» (assets/info-i.css e assets/info-i.js)",
+     "old": "</head>",
+     "new": "<link rel=\"stylesheet\" href=\"../../assets/info-i.css?v=20261105\"><script defer src=\"../../assets/info-i.js?v=20261105\"></script><style>/* 05/11/2026: decisão 153. O «i» da imagem do material: a moldura ajusta-se à imagem. */.material .mat-ver>.com-i{width:fit-content;max-width:100%}</style></head>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/painel-m4-f04/index.html": {
+   "base_sha256_lf": "1786aa07417165fc710774b880f32a7619dd7ee975037ecaff36eec0848a9f2b",
+   "after_sha256_lf": "3ff2af4f9679b1abcdbb1601b9b4e6769581af543325e6af8e1b968b43c64da8",
+   "edits": [
+    {
+     "location": "P13, explicação: o crédito (boccioni-cidade-que-sobe-1910.jpg) sai do fim do campo f",
+     "old": "\"f\":\"«Sobem aos andaimes» é trepar; «sobem na vida» é enriquecer, aqui à custa de quem trepa. A mesma palavra com dois sentidos, como em «como hão de comer, e como se hão de comer». Pintura: Umberto Boccioni, _A cidade que sobe_, 1910, MoMA. Domínio público.\"",
+     "new": "\"f\":\"«Sobem aos andaimes» é trepar; «sobem na vida» é enriquecer, aqui à custa de quem trepa. A mesma palavra com dois sentidos, como em «como hão de comer, e como se hão de comer».\"",
+     "occurrences": 1
+    },
+    {
+     "location": "P13, imagem do campo ver (boccioni-cidade-que-sobe-1910.jpg): ganha o «i» com o crédito",
+     "old": "\"ver\":\"<img src=\\\"../../img/fontes/boccioni-cidade-que-sobe-1910.jpg\\\" alt=\\\"Pintura de pinceladas rápidas: um enorme cavalo vermelho arrasta homens que o puxam e tropeçam; ao fundo, prédios com andaimes e chaminés.\\\" loading=\\\"lazy\\\">\"",
+     "new": "\"ver\":\"<div class=\\\"com-i\\\"><img src=\\\"../../img/fontes/boccioni-cidade-que-sobe-1910.jpg\\\" alt=\\\"Pintura de pinceladas rápidas: um enorme cavalo vermelho arrasta homens que o puxam e tropeçam; ao fundo, prédios com andaimes e chaminés.\\\" loading=\\\"lazy\\\"><details class=\\\"info-i info-i--linha\\\" name=\\\"info-i\\\"><summary aria-label=\\\"Créditos da imagem\\\"><span aria-hidden=\\\"true\\\">i<\\/span><\\/summary><p class=\\\"info-i-texto\\\">Pintura: Umberto Boccioni, <i>A cidade que sobe<\\/i>, 1910, MoMA. Domínio público.<\\/p><\\/details><\\/div>\"",
+     "occurrences": 1
+    },
+    {
+     "location": "A peça comum do «i» (assets/info-i.css e assets/info-i.js)",
+     "old": "</head>",
+     "new": "<link rel=\"stylesheet\" href=\"../../assets/info-i.css?v=20261105\"><script defer src=\"../../assets/info-i.js?v=20261105\"></script><style>/* 05/11/2026: decisão 153. O «i» da imagem do material: a moldura ajusta-se à imagem. */.material .mat-ver>.com-i{width:fit-content;max-width:100%}</style></head>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/painel-m4-f11/index.html": {
+   "base_sha256_lf": "a92f9724b9f78ca0ee2898949ea920256300ef1b82fbd2ae8f0466a793b4cca3",
+   "after_sha256_lf": "360a6a0bee78a5389a6adad82e439260fdc665cadddc3feb42389dde9dda963c",
+   "edits": [
+    {
+     "location": "P13, explicação: o crédito (frei-luis-personagens-1844.jpg) sai do fim do campo f",
+     "old": "\"f\":\"A estreia em 1843 confirma-se na página de 1844, e as tochas estão na didascália: factos. Que o incêndio mostre a recusa do domínio de Castela lê-se nos sinais: interpretação. «O mais forte» julga: opinião. Imagem: _Frei Luiz de Sousa_, primeira edição, 1844. Domínio público.\"",
+     "new": "\"f\":\"A estreia em 1843 confirma-se na página de 1844, e as tochas estão na didascália: factos. Que o incêndio mostre a recusa do domínio de Castela lê-se nos sinais: interpretação. «O mais forte» julga: opinião.\"",
+     "occurrences": 1
+    },
+    {
+     "location": "P13, imagem do campo ver (frei-luis-personagens-1844.jpg): ganha o «i» com o crédito",
+     "old": "\"ver\":\"<img src=\\\"../../img/fontes/frei-luis-personagens-1844.jpg\\\" style=\\\"object-position:50% 18%\\\" alt=\\\"Página impressa de 1844: Frei Luiz de Sousa, drama, representado a primeira vez em Lisboa, no teatro da quinta do Pinheiro, em quatro de julho de 1843, em numeração romana; por baixo, a lista das pessoas da peça.\\\" loading=\\\"lazy\\\">\"",
+     "new": "\"ver\":\"<div class=\\\"com-i\\\"><img src=\\\"../../img/fontes/frei-luis-personagens-1844.jpg\\\" style=\\\"object-position:50% 18%\\\" alt=\\\"Página impressa de 1844: Frei Luiz de Sousa, drama, representado a primeira vez em Lisboa, no teatro da quinta do Pinheiro, em quatro de julho de 1843, em numeração romana; por baixo, a lista das pessoas da peça.\\\" loading=\\\"lazy\\\"><details class=\\\"info-i info-i--linha\\\" name=\\\"info-i\\\"><summary aria-label=\\\"Créditos da imagem\\\"><span aria-hidden=\\\"true\\\">i<\\/span><\\/summary><p class=\\\"info-i-texto\\\">Imagem: <i>Frei Luiz de Sousa<\\/i>, primeira edição, 1844. Domínio público.<\\/p><\\/details><\\/div>\"",
+     "occurrences": 1
+    },
+    {
+     "location": "A peça comum do «i» (assets/info-i.css e assets/info-i.js)",
+     "old": "</head>",
+     "new": "<link rel=\"stylesheet\" href=\"../../assets/info-i.css?v=20261105\"><script defer src=\"../../assets/info-i.js?v=20261105\"></script><style>/* 05/11/2026: decisão 153. O «i» da imagem do material: a moldura ajusta-se à imagem. */.material .mat-ver>.com-i{width:fit-content;max-width:100%}</style></head>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m7/licao-m7-f01/index.html": {
+   "base_sha256_lf": "4c4b808e7f1e935221072ef4e89f5b034a4efc2feb35bdc7aa9b9e428c42409f",
+   "after_sha256_lf": "255a95ed5f546e22406b66e37e2d69614ff818647cd93a263ba24b64eab54659",
+   "edits": [
+    {
+     "location": "P10, Pessoa: a moldura da fotografia passa a div.moldura.com-i",
+     "old": "<figure class=\\\"fig\\\"><span class=\\\"moldura\\\"><img src=\\\"data:image/jpeg;base64,",
+     "new": "<figure class=\\\"fig\\\"><div class=\\\"moldura com-i\\\"><img src=\\\"data:image/jpeg;base64,",
+     "occurrences": 1
+    },
+    {
+     "location": "P10, Pessoa: o crédito (span.tabela) passa para o «i»; o rótulo fica",
+     "old": "alt=\\\"Fernando Pessoa de chapéu e óculos, cerca de 1914\\\" loading=\\\"lazy\\\"></span><figcaption>Fernando Pessoa, cerca de 1914.<span class=\\\"tabela\\\">Fotógrafo não identificado; retrato de Fernando Pessoa com chapéu; cerca de 1914 (data incerta); reprodução no Wikimedia Commons, original sem instituição indicada; <a href=\\\"https://commons.wikimedia.org/wiki/File:PessoaChapeu.jpg\\\">domínio público</a>.</span></figcaption></figure>",
+     "new": "alt=\\\"Fernando Pessoa de chapéu e óculos, cerca de 1914\\\" loading=\\\"lazy\\\"><details class=\\\"info-i info-i--linha\\\" name=\\\"info-i\\\"><summary aria-label=\\\"Créditos da imagem\\\"><span aria-hidden=\\\"true\\\">i</span></summary><p class=\\\"info-i-texto\\\">Fotógrafo não identificado; retrato de Fernando Pessoa com chapéu; cerca de 1914 (data incerta); reprodução no Wikimedia Commons, original sem instituição indicada; <a href=\\\"https://commons.wikimedia.org/wiki/File:PessoaChapeu.jpg\\\">domínio público</a>.</p></details></div><figcaption>Fernando Pessoa, cerca de 1914.</figcaption></figure>",
+     "occurrences": 1
+    },
+    {
+     "location": "A peça comum do «i» (assets/info-i.css e assets/info-i.js)",
+     "old": "</head>",
+     "new": "<link rel=\"stylesheet\" href=\"../../assets/info-i.css?v=20261105\"><script defer src=\"../../assets/info-i.js?v=20261105\"></script></head>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m7/licao-m7-f05/index.html": {
+   "base_sha256_lf": "557562933fca9c179cdaa210164e61e52c430909718ec0b146439066934c6f7a",
+   "after_sha256_lf": "072042bf9b6c365aa761b37b1b80a6bed602ae0aa3e7d1390e64e7a6ede7bce4",
+   "edits": [
+    {
+     "location": "P10, Pessoa: a moldura da fotografia passa a div.moldura.com-i",
+     "old": "<figure class=\\\"fig\\\"><span class=\\\"moldura\\\"><img src=\\\"data:image/jpeg;base64,",
+     "new": "<figure class=\\\"fig\\\"><div class=\\\"moldura com-i\\\"><img src=\\\"data:image/jpeg;base64,",
+     "occurrences": 1
+    },
+    {
+     "location": "P10, Pessoa: o crédito (span.tabela) passa para o «i»; o rótulo fica",
+     "old": "alt=\\\"Fernando Pessoa de chapéu e óculos, cerca de 1914\\\" loading=\\\"lazy\\\"></span><figcaption>Fernando Pessoa, cerca de 1914.<span class=\\\"tabela\\\">Fotógrafo não identificado; retrato de Fernando Pessoa com chapéu; cerca de 1914 (data incerta); reprodução no Wikimedia Commons, original sem instituição indicada; <a href=\\\"https://commons.wikimedia.org/wiki/File:PessoaChapeu.jpg\\\">domínio público</a>.</span></figcaption></figure>",
+     "new": "alt=\\\"Fernando Pessoa de chapéu e óculos, cerca de 1914\\\" loading=\\\"lazy\\\"><details class=\\\"info-i info-i--linha\\\" name=\\\"info-i\\\"><summary aria-label=\\\"Créditos da imagem\\\"><span aria-hidden=\\\"true\\\">i</span></summary><p class=\\\"info-i-texto\\\">Fotógrafo não identificado; retrato de Fernando Pessoa com chapéu; cerca de 1914 (data incerta); reprodução no Wikimedia Commons, original sem instituição indicada; <a href=\\\"https://commons.wikimedia.org/wiki/File:PessoaChapeu.jpg\\\">domínio público</a>.</p></details></div><figcaption>Fernando Pessoa, cerca de 1914.</figcaption></figure>",
+     "occurrences": 1
+    },
+    {
+     "location": "A peça comum do «i» (assets/info-i.css e assets/info-i.js)",
+     "old": "</head>",
+     "new": "<link rel=\"stylesheet\" href=\"../../assets/info-i.css?v=20261105\"><script defer src=\"../../assets/info-i.js?v=20261105\"></script></head>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m7/licao-m7-f34/index.html": {
+   "base_sha256_lf": "4c23e571fa3a24cf7850a10d46f74b65626ac77cdad6e2f1f6193d54e59a15f0",
+   "after_sha256_lf": "a72888c0545dc656f2e074f81c609dc0fa45b1b8acc8a5e7004dcf6e0324ec5a",
+   "edits": [
+    {
+     "location": "P11, dupla exposição: o crédito sai do small para o «i»; a instrução fica",
+     "old": "<figure class=\\\"dupla\\\"><div class=\\\"dupla-foto\\\" role=\\\"img\\\" aria-label=\\\"Dupla exposição de duas fotografias antigas de Lisboa: um jardim com uma árvore larga, bancos e um candeeiro, e, por cima, o Tejo com um barco de vela grande e a frente da Praça do Comércio; os caminhos do jardim parecem água e a vela atravessa as árvores.\\\"><img class=\\\"pl-pa\\\" src=\\\"https://pedrohfernandes-klk.github.io/pt/img/arquivo/jardim-1907-arvore-caramanchao.jpg\\\" alt=\\\"\\\" decoding=\\\"async\\\"><img class=\\\"pl-po\\\" src=\\\"https://pedrohfernandes-klk.github.io/pt/img/arquivo/tejo-1910-terreiro-do-paco.jpg\\\" alt=\\\"\\\" decoding=\\\"async\\\"></div><figcaption><span class=\\\"dupla-v\\\"><label class=\\\"dp-pa\\\"><input type=\\\"radio\\\" name=\\\"dupla-plano\\\" value=\\\"pa\\\">Atravessa esta paisagem</label> <label class=\\\"dp-po\\\"><input type=\\\"radio\\\" name=\\\"dupla-plano\\\" value=\\\"po\\\">o meu sonho dum porto infinito</label></span><span class=\\\"dupla-v\\\"><label class=\\\"dp-pa\\\"><input type=\\\"radio\\\" name=\\\"dupla-plano\\\" value=\\\"pa\\\">E a cor das flores é transparente</label> <label class=\\\"dp-po\\\"><input type=\\\"radio\\\" name=\\\"dupla-plano\\\" value=\\\"po\\\">de as velas de grandes navios</label></span><span class=\\\"dupla-ac\\\"><label class=\\\"dp-ambos\\\"><input type=\\\"radio\\\" name=\\\"dupla-plano\\\" value=\\\"ambos\\\">os dois planos</label></span><small>Toca num pedaço do verso: acende-se o seu plano. Duas fotografias sobrepostas: um jardim de Lisboa em 1907 e o Tejo diante da Praça do Comércio, cerca de 1910 (H. C. White Co. e National Photo Company; Biblioteca do Congresso dos EUA, sem restrições conhecidas).</small></figcaption></figure>",
+     "new": "<figure class=\\\"dupla\\\"><div class=\\\"com-i\\\"><div class=\\\"dupla-foto\\\" role=\\\"img\\\" aria-label=\\\"Dupla exposição de duas fotografias antigas de Lisboa: um jardim com uma árvore larga, bancos e um candeeiro, e, por cima, o Tejo com um barco de vela grande e a frente da Praça do Comércio; os caminhos do jardim parecem água e a vela atravessa as árvores.\\\"><img class=\\\"pl-pa\\\" src=\\\"https://pedrohfernandes-klk.github.io/pt/img/arquivo/jardim-1907-arvore-caramanchao.jpg\\\" alt=\\\"\\\" decoding=\\\"async\\\"><img class=\\\"pl-po\\\" src=\\\"https://pedrohfernandes-klk.github.io/pt/img/arquivo/tejo-1910-terreiro-do-paco.jpg\\\" alt=\\\"\\\" decoding=\\\"async\\\"></div><details class=\\\"info-i\\\" name=\\\"info-i\\\"><summary aria-label=\\\"Créditos da imagem\\\"><span aria-hidden=\\\"true\\\">i</span></summary><p class=\\\"info-i-texto\\\">Duas fotografias sobrepostas: um jardim de Lisboa em 1907 e o Tejo diante da Praça do Comércio, cerca de 1910 (H. C. White Co. e National Photo Company; Biblioteca do Congresso dos EUA, sem restrições conhecidas).</p></details></div><figcaption><span class=\\\"dupla-v\\\"><label class=\\\"dp-pa\\\"><input type=\\\"radio\\\" name=\\\"dupla-plano\\\" value=\\\"pa\\\">Atravessa esta paisagem</label> <label class=\\\"dp-po\\\"><input type=\\\"radio\\\" name=\\\"dupla-plano\\\" value=\\\"po\\\">o meu sonho dum porto infinito</label></span><span class=\\\"dupla-v\\\"><label class=\\\"dp-pa\\\"><input type=\\\"radio\\\" name=\\\"dupla-plano\\\" value=\\\"pa\\\">E a cor das flores é transparente</label> <label class=\\\"dp-po\\\"><input type=\\\"radio\\\" name=\\\"dupla-plano\\\" value=\\\"po\\\">de as velas de grandes navios</label></span><span class=\\\"dupla-ac\\\"><label class=\\\"dp-ambos\\\"><input type=\\\"radio\\\" name=\\\"dupla-plano\\\" value=\\\"ambos\\\">os dois planos</label></span><small>Toca num pedaço do verso: acende-se o seu plano.</small></figcaption></figure>",
+     "occurrences": 1
+    },
+    {
+     "location": "A peça comum do «i» (assets/info-i.css e assets/info-i.js)",
+     "old": "</head>",
+     "new": "<link rel=\"stylesheet\" href=\"../../assets/info-i.css?v=20261105\"><script defer src=\"../../assets/info-i.js?v=20261105\"></script><style>/* 05/11/2026: decisão 153. O «i» da dupla exposição: a moldura toma a largura da fotografia. */.dupla>.com-i{max-width:560px;margin:0 auto}</style></head>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m7/mapa-do-modulo-m7/index.html": {
+   "base_sha256_lf": "47414ca258fa7259d46b90812819a75682716925fbb9375146c7e11168238c74",
+   "after_sha256_lf": "25f6e6c2a7553f0b685f5dfb67cc6fff4471c8fee5036ca84fe0d340963da74e",
+   "edits": [
+    {
+     "location": "P10, Pessoa na galeria «Para ver»: o crédito passa para o «i»; o rótulo e «Lição M7-F01» ficam",
+     "old": "alt=\"Fernando Pessoa de chapéu e óculos, cerca de 1914\" loading=\"lazy\"><figcaption>Fernando Pessoa, cerca de 1914. <a href=\"https://pedrohfernandes-klk.github.io/pt/m7/licao-m7-f01/\">Lição M7-F01</a><span class=\"tabela\">Fotógrafo não identificado; retrato de Fernando Pessoa com chapéu; cerca de 1914 (data incerta); reprodução no Wikimedia Commons, original sem instituição indicada; <a href=\"https://commons.wikimedia.org/wiki/File:PessoaChapeu.jpg\">domínio público</a>.</span></figcaption>",
+     "new": "alt=\"Fernando Pessoa de chapéu e óculos, cerca de 1914\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Fernando Pessoa\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Fotógrafo não identificado; retrato de Fernando Pessoa com chapéu; cerca de 1914 (data incerta); reprodução no Wikimedia Commons, original sem instituição indicada; <a href=\"https://commons.wikimedia.org/wiki/File:PessoaChapeu.jpg\">domínio público</a>.</p></details><figcaption>Fernando Pessoa, cerca de 1914. <a href=\"https://pedrohfernandes-klk.github.io/pt/m7/licao-m7-f01/\">Lição M7-F01</a></figcaption>",
      "occurrences": 1
     },
     {

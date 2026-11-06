@@ -36,6 +36,24 @@ MARCAS = ('Domínio público', 'CC BY', 'CC0', 'Wikimedia Commons', 'commons.wik
 CLASSES_CREDITO = {'credito', 'cz-credit', 'fr-cred', 'fa-cred', 'rosto-c', 'yt-cred', 'sp-credit', 'cf-credito', 'lf-credito',
                    'jc-credito', 'ld-credito', 'mr-cred', 'cred', 'tabela'}
 VAZIOS = {'area', 'base', 'br', 'col', 'embed', 'hr', 'img', 'input', 'link', 'meta', 'source', 'track', 'wbr'}
+# 05/11/2026: pedido pt-2, fatia 2. Os créditos de P11 a P13 tal como estavam à vista, letra a letra (o itálico do motor, _…_,
+# mostrava-se sem os traços): o «i» tem de os ter inteiros.
+P11_CREDITO = ('Duas fotografias sobrepostas: um jardim de Lisboa em 1907 e o Tejo diante da Praça do Comércio, cerca de 1910 '
+               '(H. C. White Co. e National Photo Company; Biblioteca do Congresso dos EUA, sem restrições conhecidas).')
+P12_CREDITOS = {
+    'm1/licao-m1-f19/index.html': ['Ilha de San Simón, ria de Vigo (Iago Pillado, 2024). CC BY-SA 4.0.',
+                                   'Pergaminho Vindel, com «Ondas do mar de Vigo». Domínio público.'],
+    'm4/licao-m4-f01/index.html': ['Garcia Fernandes (pormenor)', 'Retrato, séc. XVIII (pormenor)'],
+    'm4/licao-m4-f02/index.html': ['Garcia Fernandes (pormenor)', 'Retrato, séc. XVIII (pormenor)'],
+    'm4/licao-m4-f11/index.html': ['Retrato, séc. XVIII (pormenor)', 'José Malhoa, 1881'],
+}
+_P13_PEIXE = ('peixe-voador-1889.jpg', 'Cromolitografia: Allen & Ginter, _Peixe-voador_ (série _Fish from American Waters_), '
+              '1889, The Met. Domínio público.')
+_P13_BOCCIONI = ('boccioni-cidade-que-sobe-1910.jpg', 'Pintura: Umberto Boccioni, _A cidade que sobe_, 1910, MoMA. Domínio público.')
+_P13_FREI = ('frei-luis-personagens-1844.jpg', 'Imagem: _Frei Luiz de Sousa_, primeira edição, 1844. Domínio público.')
+P13_CREDITOS = {'m4/licao-m4-f01/index.html': _P13_PEIXE, 'm4/painel-m4-f01/index.html': _P13_PEIXE,
+                'm4/licao-m4-f04/index.html': _P13_BOCCIONI, 'm4/painel-m4-f04/index.html': _P13_BOCCIONI,
+                'm4/licao-m4-f11/index.html': _P13_FREI, 'm4/painel-m4-f11/index.html': _P13_FREI}
 
 
 class No:
@@ -144,6 +162,31 @@ def html_em_json(codigo):
         i = fim
         out += [c for c in cadeias(valor) if '<' in c and re.search(r'<[a-z][^>]*>', c)]
     return out
+
+
+def explicacoes(codigo):
+    """05/11/2026: os textos das explicações (campos f e fe) nos dados JSON de um script: cartões e material dos painéis."""
+    decoder, i = json.JSONDecoder(), 0
+    for m in INICIO_JSON.finditer(codigo):
+        k = m.start(1)
+        if k < i:
+            continue
+        try:
+            valor, fim = decoder.raw_decode(codigo, k)
+        except ValueError:
+            continue
+        i = fim
+        pilha = [valor]
+        while pilha:
+            v = pilha.pop()
+            if isinstance(v, dict):
+                for chave, w in v.items():
+                    if chave in ('f', 'fe'):
+                        yield from cadeias(w)
+                    else:
+                        pilha.append(w)
+            elif isinstance(v, list):
+                pilha.extend(v)
 
 
 def fragmentos(rel, texto):
@@ -256,7 +299,8 @@ class CreditosI(unittest.TestCase):
                         self.assertTrue(re.search(r'href="[^"]*assets/info-i\.css(\?[^"]*)?"', texto), 'carrega info-i.css')
                         self.assertTrue(re.search(r'src="[^"]*assets/info-i\.js(\?[^"]*)?"', texto), 'carrega info-i.js')
         # 05/11/2026: pedido pt-2, fatia 1: 47 «i» nas lições M1 e M4 (P7), 6 nos documentos visuais (P9) e 7 na página de ensaio.
-        self.assertGreaterEqual(total, 47 + 6 + 7)
+        # 05/11/2026: fatia 2: mais 3 de Pessoa (P10), 1 da dupla exposição (P11), 8 retratos (P12) e 6 imagens do campo ver (P13).
+        self.assertGreaterEqual(total, 47 + 6 + 7 + 3 + 1 + 8 + 6)
 
     def test_nenhum_credito_longo_a_vista(self):
         lista = json.loads(LISTA.read_text('utf-8'))
@@ -282,6 +326,65 @@ class CreditosI(unittest.TestCase):
         self.assertEqual(creditos_a_vista(raiz), ['figcaption', 'p'])
         self.assertEqual(html_em_json('var K="x",CARTOES=[{"html":"<figcaption>CC BY 4.0</figcaption>"}];'),
                          ['<figcaption>CC BY 4.0</figcaption>'])
+
+    # 05/11/2026: pedido pt-2, fatia 2. O que o varrimento não vê por inteiro: a instrução da dupla exposição que fica à vista
+    # (P11), os retratos do «Em paralelo» letra a letra (P12) e o crédito que vivia no fim da explicação, um texto sem etiquetas
+    # (P13). Cada crédito passa inteiro para o «i»: nada se encurta.
+    def test_p11_a_instrucao_da_dupla_exposicao_fica_a_vista(self):
+        texto = (ROOT / 'm7/licao-m7-f34/index.html').read_text('utf-8')
+        figuras = [n for raiz in fragmentos('m7/licao-m7-f34/index.html', texto) for n in raiz.descendentes()
+                   if n.tag == 'figure' and 'dupla' in n.classes()]
+        self.assertEqual(len(figuras), 1)
+        fig = figuras[0]
+        legenda = [n for n in fig.elementos() if n.tag == 'figcaption'][0]
+        self.assertEqual(legenda.texto().split('os dois planos')[-1], 'Toca num pedaço do verso: acende-se o seu plano.')
+        self.assertEqual(len([n for n in legenda.descendentes() if n.tag == 'input']), 5, 'os botões dos versos ficam')
+        ii = [n for n in fig.descendentes() if e_i(n)]
+        self.assertEqual(len(ii), 1)
+        self.assertEqual(ii[0].pai.elementos()[0].attrs.get('role'), 'img', 'o «i» fica fora do div com role="img"')
+        self.assertEqual(ii[0].texto(lambda n: n.tag == 'summary'), P11_CREDITO)
+
+    def test_p12_retratos_do_em_paralelo_com_i(self):
+        for rel, creditos in P12_CREDITOS.items():
+            texto = (ROOT / rel).read_text('utf-8')
+            with self.subTest(pagina=rel):
+                self.assertNotIn('rosto-c', texto)
+                vistos = []
+                for raiz in fragmentos(rel, texto):
+                    for img in (n for n in raiz.descendentes() if n.tag == 'img' and 'rosto' in n.classes()):
+                        irmaos = img.pai.elementos()
+                        d = irmaos[irmaos.index(img) + 1]
+                        self.assertTrue(e_i(d) and 'info-i--linha' in d.classes(), 'o «i» («linha») logo depois do retrato')
+                        self.assertRegex(d.elementos()[0].attrs.get('aria-label', ''), r'^Créditos da imagem: \S')
+                        vistos.append(re.sub(r'\s', ' ', d.texto(lambda n: n.tag == 'summary')))
+                        if 'CC BY' in vistos[-1]:
+                            self.assertTrue(any(a.tag == 'a' and a.attrs.get('rel') == 'license' and 'creativecommons.org' in
+                                                a.attrs.get('href', '') for a in d.descendentes()), 'a ligação da licença')
+                self.assertEqual(vistos, creditos)
+
+    def test_p13_o_credito_sai_da_explicacao_para_o_i_da_imagem(self):
+        for rel, (imagem, credito) in P13_CREDITOS.items():
+            texto = (ROOT / rel).read_text('utf-8')
+            with self.subTest(pagina=rel):
+                vers = [json.loads('"' + m.group(1) + '"') for m in re.finditer(r'"ver":"((?:[^"\\]|\\.)*)"', texto)
+                        if imagem in m.group(1)]
+                self.assertEqual(len(vers), 1)
+                ii = [n for n in Arvore(vers[0]).raiz.descendentes() if e_i(n)]
+                self.assertEqual(len(ii), 1)
+                # Nas lições, a imagem ocupa a largura do cartão («canto»); nos painéis, tem menos de 240 px numa das larguras
+                # medidas («linha»).
+                self.assertEqual('info-i--linha' in ii[0].classes(), '/painel-' in rel)
+                self.assertIn('com-i', ii[0].pai.classes())
+                self.assertEqual([e.tag for e in ii[0].pai.elementos()], ['img', 'details'])
+                self.assertEqual(ii[0].texto(lambda n: n.tag == 'summary'), credito.replace('_', ''))
+        # Em nenhuma página fica um crédito no texto de uma explicação (campos f e fe dos cartões e do material dos painéis).
+        vistas = 0
+        for rel, texto in paginas():
+            for s in (n for n in Arvore(texto).raiz.descendentes() if n.tag == 'script' and not n.attrs.get('src')):
+                for valor in explicacoes(s.texto()):
+                    vistas += 1
+                    self.assertFalse(any(k in valor for k in MARCAS), (rel, valor[-90:]))
+        self.assertGreater(vistas, 1000)
 
     def test_parar_o_desenho_fora_do_i(self):
         vistos = 0
