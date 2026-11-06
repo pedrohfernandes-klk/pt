@@ -1,4 +1,5 @@
-<!doctype html><html lang="pt-PT" data-appearance-site="pt" data-appearance-family="cards"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Atlas Lusófono · Português EPI</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Special+Elite&display=swap" rel="stylesheet"><style>/* 01/11/2026 (decisões 85 e 88; equipa da Cidadania M1, imagens): visor de ampliação comum aos dois sítios (assets/ampliar.js),
+<!doctype html><html lang="pt-PT" data-appearance-site="pt" data-appearance-family="cards"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Atlas Lusófono · Português EPI</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Special+Elite&display=swap" rel="stylesheet"><style>/* 06/11/2026: cópia do Atlas (atlas.mjs), com classes próprias (epi-ampliar--visor, epi-ampliar--ativo e epi-ampliar--sem-movimento) no lugar das do contrato com a biblioteca de animações do Cartaz (decisão 88), que esta página não carrega. O visor funciona igual. */
+/* 01/11/2026 (decisões 85 e 88; equipa da Cidadania M1, imagens): visor de ampliação comum aos dois sítios (assets/ampliar.js),
    no sistema «Cartaz»: tokens (--tinta, --papel, --suave), cantos retos, sem sombras, contornos de 1,5 px, foco sólido de 3 px,
    alvos de 44 px, letra mínima de 13 px no ecrã e de 17,9 px na projeção (0,8125 rem sobre os 22 px da projeção).
    Exceção escrita (sistema §5, «o preto da região “A seguir” é o único preto grande do ecrã»; D2 diz como se escreve uma
@@ -10,14 +11,14 @@
  background:var(--amp-fundo);color:var(--amp-texto);font:400 1rem/1.4 Arial,Helvetica,sans-serif;opacity:0;outline:none;
  padding:env(safe-area-inset-top,0) env(safe-area-inset-right,0) env(safe-area-inset-bottom,0) env(safe-area-inset-left,0)}
 :root[data-theme="dark"] .epi-ampliar{--amp-fundo:var(--papel,#121210);--amp-texto:var(--tinta,#ecebe5)}
-.epi-ampliar.cz-motion-active{opacity:1}
+.epi-ampliar.epi-ampliar--ativo{opacity:1}
 @media (prefers-reduced-motion:no-preference){
  .epi-ampliar{transition:opacity .2s ease-out}
  .epi-ampliar .epi-ampliar__palco{transform:scale(.98);transition:transform .2s ease-out}
- .epi-ampliar.cz-motion-active .epi-ampliar__palco{transform:none}}
+ .epi-ampliar.epi-ampliar--ativo .epi-ampliar__palco{transform:none}}
 /* em projeção e com movimento reduzido, nada se move: o visor aparece e sai logo */
-.epi-ampliar.cz-motion-sem,.epi-ampliar.cz-motion-sem .epi-ampliar__palco,html.em-projecao .epi-ampliar,html.em-projecao .epi-ampliar .epi-ampliar__palco{transition:none!important;transform:none}
-.epi-ampliar.cz-motion-sem{opacity:1}
+.epi-ampliar.epi-ampliar--sem-movimento,.epi-ampliar.epi-ampliar--sem-movimento .epi-ampliar__palco,html.em-projecao .epi-ampliar,html.em-projecao .epi-ampliar .epi-ampliar__palco{transition:none!important;transform:none}
+.epi-ampliar.epi-ampliar--sem-movimento{opacity:1}
 html.epi-ampliar-aberto,html.epi-ampliar-aberto body{overflow:hidden!important;overscroll-behavior:none}
 /* barra de cima: o nível de ampliação e os quatro botões, encostados à direita (o polegar chega lá) */
 .epi-ampliar__barra{flex:0 0 auto;display:flex;align-items:center;justify-content:flex-end;gap:8px;padding:8px}
@@ -902,7 +903,8 @@ function desenhar(){var p=S.classList.contains("perto")?S.getAttribute("data-r")
  var P=function(n){return n+(n>1?" pessoas":" pessoa")};if(nota)nota.textContent=ex||ap?"Onde nasceram: "+(ex?P(ex)+" com o lugar exato":"")+(ex&&ap?" e "+ap:ap?P(ap):"")+(ap?" só com o país ou a ilha":"")+".":""}
 new MutationObserver(desenhar).observe(S,{attributes:true,attributeFilter:["class","data-r"]});desenhar();
 document.addEventListener("click",function(ev){var b=ev.target&&ev.target.closest?ev.target.closest(".at-v button"):null;if(!b)return;var c=b.parentNode,f=document.createElement("iframe"),yt=c.getAttribute("data-yt"),vm=c.getAttribute("data-vimeo");
- f.src=yt?"https://www.youtube-nocookie.com/embed/"+yt+"?autoplay=1&rel=0&hl=pt-PT":"https://player.vimeo.com/video/"+vm+"?dnt=1&autoplay=1";f.title=c.getAttribute("data-titulo")||"Vídeo";f.allow="autoplay; encrypted-media; picture-in-picture; fullscreen";f.setAttribute("allowfullscreen","");f.referrerPolicy="strict-origin-when-cross-origin";c.textContent="";c.classList.add("on");c.appendChild(f);f.focus()})})();</script><script>/* 01/11/2026 (decisões 85 e 88 do docente; equipa da Cidadania M1, imagens): visor de ampliação comum aos dois sítios. O mesmo
+ f.src=yt?"https://www.youtube-nocookie.com/embed/"+yt+"?autoplay=1&rel=0&hl=pt-PT":"https://player.vimeo.com/video/"+vm+"?dnt=1&autoplay=1";f.title=c.getAttribute("data-titulo")||"Vídeo";f.allow="autoplay; encrypted-media; picture-in-picture; fullscreen";f.setAttribute("allowfullscreen","");f.referrerPolicy="strict-origin-when-cross-origin";c.textContent="";c.classList.add("on");c.appendChild(f);f.focus()})})();</script><script>/* 06/11/2026: cópia do Atlas (atlas.mjs), com classes próprias (epi-ampliar--visor, epi-ampliar--ativo e epi-ampliar--sem-movimento) no lugar das do contrato com a biblioteca de animações do Cartaz (decisão 88), que esta página não carrega. O visor funciona igual. */
+/* 01/11/2026 (decisões 85 e 88 do docente; equipa da Cidadania M1, imagens): visor de ampliação comum aos dois sítios. O mesmo
    ficheiro serve no Lente (assets/ampliar.js) e no Português (assets/ampliar.js, cópia da equipa do Atlas), com assets/ampliar.css,
    sem dependências. A API é a do visor antigo, que vivia em linha nas páginas do gerador antigo (EPIAmpliar.abre(img, legenda, de),
    fecha(), rotulo()), e acrescenta o zoom:
@@ -916,8 +918,8 @@ document.addEventListener("click",function(ev){var b=ev.target&&ev.target.closes
    - legenda e crédito sempre visíveis numa barra de baixo, recolhível;
    - botão Recuar do navegador: fecha só o visor (history.pushState({epiAmpliar:1}) e popstate em captura), sem disputa com a
      casca sobreposta das lições (assets/licoes/casca.js, que confere o estado desde 01/11/2026);
-   - contrato com a biblioteca de animações (decisão 88): raiz .epi-ampliar.cz-motion-viewer (role dialog, aria-modal), imagem em
-     .epi-ampliar__img; ao abrir, a raiz entra no documento e ganha cz-motion-active na moldura seguinte; ao fechar, perde a classe e
+   - contrato com a biblioteca de animações (decisão 88): raiz .epi-ampliar.epi-ampliar--visor (role dialog, aria-modal), imagem em
+     .epi-ampliar__img; ao abrir, a raiz entra no documento e ganha epi-ampliar--ativo na moldura seguinte; ao fechar, perde a classe e
      sai no fim da transição (até 350 ms; logo, em projeção e com movimento reduzido); eventos epi-ampliar-aberto e
      epi-ampliar-fechado no document, com a imagem em detail.img. Sem a biblioteca, nada muda no funcionamento.
    Abre por delegação (toque, clique, Enter ou Espaço) nas imagens de conteúdo: figure img dentro das lições do motor (.jogo) e
@@ -950,7 +952,7 @@ function maiorDoSrcset(ss){var m=null,mw=0;String(ss||"").split(/,\s+/).forEach(
 function fonteGrande(img){if(!eImg(img))return String(img||"");var g=img.getAttribute("data-grande");if(g)return new URL(g,D.baseURI).href;var m=maiorDoSrcset(img.getAttribute("srcset"));return m?new URL(m,D.baseURI).href:(img.currentSrc||img.src)}
 function fonteJa(img){return eImg(img)?(img.currentSrc||img.src):String(img||"")}
 function construir(){
- var r=D.createElement("div");r.className="epi-ampliar cz-motion-viewer";r.setAttribute("role","dialog");r.setAttribute("aria-modal","true");r.tabIndex=-1;
+ var r=D.createElement("div");r.className="epi-ampliar epi-ampliar--visor";r.setAttribute("role","dialog");r.setAttribute("aria-modal","true");r.tabIndex=-1;
  r.innerHTML='<div class="epi-ampliar__barra"><span class="epi-ampliar__nivel" aria-hidden="true">1×</span>'+
   '<button type="button" class="epi-ampliar__b" data-amp="menos" aria-label="Afastar" title="Afastar (−)"><span aria-hidden="true">−</span></button>'+
   '<button type="button" class="epi-ampliar__b" data-amp="mais" aria-label="Aproximar" title="Aproximar (+)"><span aria-hidden="true">+</span></button>'+
@@ -1035,17 +1037,17 @@ function abre(img,legenda,quem,op){if(!img)return;if(aberto)fechaJa(true);op=op|
  preencherLegenda(img,legenda);
  rolagem={x:W.pageXOffset,y:W.pageYOffset};D.documentElement.classList.add("epi-ampliar-aberto");
  D.body.appendChild(raiz);inertizar();aberto=true;
- if(semMovimento())raiz.classList.add("cz-motion-sem");
+ if(semMovimento())raiz.classList.add("epi-ampliar--sem-movimento");
  try{if(!(history.state&&history.state.epiAmpliar)){history.pushState({epiAmpliar:1},"");empurrou=true}else empurrou=false}catch(e){empurrou=false}
  medir(false);if(op.escala){var fx=op.fx==null?0.5:op.fx,fy=op.fy==null?0.5:op.fy;zoomEm(op.escala,tx+fx*fitW,ty+fy*fitH);var sw=palco.clientWidth,sh=palco.clientHeight;tx=sw/2-fx*fitW*s;ty=sh/2-fy*fitH*s;limitar();aplicar()}
  try{raiz.focus({preventScroll:true})}catch(e){}
  // contrato da decisão 88: a classe na moldura seguinte (a biblioteca de animações, se existir, faz a transição a partir dela)
- var r0=raiz;requestAnimationFrame(function(){if(aberto&&raiz===r0)r0.classList.add("cz-motion-active")});
+ var r0=raiz;requestAnimationFrame(function(){if(aberto&&raiz===r0)r0.classList.add("epi-ampliar--ativo")});
  if(grande&&grande!==ja){var im=new Image();im.decoding="async";im.onload=function(){if(!aberto||raiz!==r0)return;natW=im.naturalWidth;natH=im.naturalHeight;vimg.src=grande;r0.setAttribute("data-grande","carregada");medir(true)};im.onerror=function(){if(raiz===r0)r0.setAttribute("data-grande","falhou")};im.src=grande}
  emitir("epi-ampliar-aberto")}
 function fechaJa(semHistorico){fecha(semHistorico,true)}
 function fecha(semHistorico,ja){if(!aberto)return;aberto=false;var r=raiz;clearTimeout(tViva);
- r.classList.remove("cz-motion-active");desinertizar();D.documentElement.classList.remove("epi-ampliar-aberto");
+ r.classList.remove("epi-ampliar--ativo");desinertizar();D.documentElement.classList.remove("epi-ampliar-aberto");
  if(rolagem)try{W.scrollTo(rolagem.x,rolagem.y)}catch(e){}
  if(!semHistorico&&empurrou){try{if(history.state&&history.state.epiAmpliar){engolir=true;history.back()}}catch(e){}}empurrou=false;
  if(de&&de.isConnected&&de.focus)try{de.focus({preventScroll:true})}catch(e){}
