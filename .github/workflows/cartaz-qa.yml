@@ -1,4 +1,5 @@
 name: Cartaz pieces
+# 06/11/2026: decisão 148, assets/cartaz-indice-comum.* nos caminhos.
 on:
   push:
     paths: ['tests/browser_cabecalhos_compactos.cjs', 'assets/calcada-*', 'scripts/gerar_calcada_continua.py', 'tests/*calcada_continua*', 'assets/cartaz-cabecalho.css', 'assets/fundo-calcada.css', 'index.html', 'scripts/cartaz_cabecalho*', 'tests/fixtures/cartaz-cabecalho*', 'assets/cartaz-indices.*', 'assets/cartaz-indice-comum.*', 'assets/cartaz-m4-*', 'assets/fontes/**', 'm[1-9]/index.html', 'scripts/cartaz_indices*', 'scripts/cartaz_m4*', 'tests/fixtures/cartaz-*', 'assets/cartaz-components.*', 'assets/appearance.css', 'demonstracoes/cartaz-animacoes/**', 'tests/*cartaz*', '.github/workflows/cartaz-qa.yml']

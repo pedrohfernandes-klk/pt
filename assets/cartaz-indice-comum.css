@@ -34,7 +34,9 @@ body.pt-module-layout main.cz-index[data-cz-indice] .cz-recursos details.regra>d
 body.pt-module-layout main.cz-index[data-cz-indice] .cz-recursos details.regra p{margin:8px 0 0;}
 body.pt-module-layout main.cz-index[data-cz-indice] .unit-index{margin:0 0 40px;padding:0;border:0;background:none;}
 body.pt-module-layout main.cz-index[data-cz-indice] .unit-index>p{font:700 0.8125rem/1.5 Arial;text-transform:uppercase;letter-spacing:.08em;margin:0 0 8px;}
-body.pt-module-layout main.cz-index[data-cz-indice] .unit-index ol{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr);gap:24px;margin:0;padding:0;list-style:none;}
+/* 06/11/2026: revisão da decisão 148, grid-template-columns:none anula as colunas de 280 px de module-cartaz.css (sem isso,
+   entre 640 e 876 px a terceira coluna de «Neste módulo» saía do ecrã nos módulos de três unidades). */
+body.pt-module-layout main.cz-index[data-cz-indice] .unit-index ol{display:grid;grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr);gap:24px;margin:0;padding:0;list-style:none;}
 body.pt-module-layout main.cz-index[data-cz-indice] .unit-index a{border:0;border-top:2px solid var(--tinta);min-height:88px;padding:16px 0;display:grid;grid-template-columns:24px 1fr;gap:8px;background:none;color:var(--tinta);text-decoration:none;}
 body.pt-module-layout main.cz-index[data-cz-indice] .unit-index a span{font:700 1.25rem/1.3 Arial;}
 body.pt-module-layout main.cz-index[data-cz-indice] .unit-index a b{font:400 1.5625rem/1 "Cartaz Indice",var(--cz-font-poster);}
@@ -109,6 +111,12 @@ html:has(main[data-cz-indice].cz-sala) body.pt-module-layout main.cz-index[data-
 /* 06/11/2026: decisão 148, os botões flutuantes de sempre, com o alvo de 48 px do piloto. */
 body:has(main[data-cz-indice]) .teacher-access{width:48px;height:48px;}
 body:has(main[data-cz-indice]) [data-appearance-floating] .epi-appearance-toggle{width:48px;height:48px;min-width:48px;min-height:48px;}
+/* 06/11/2026: revisão da decisão 148, o contentor do modo noturno também com 48 px, para o botão ficar a 12 px dos cantos,
+   alinhado com o acesso do docente (com 44 px, o botão saía do contentor e ficava a 8 px da direita e a 7 px do fundo). O
+   seletor leva também [data-appearance-control] para passar à frente da regra dos cartões de appearance.css (44 px); a
+   margem de 6 px que a página dá a todos os botões sai deste, que já descia 3 px abaixo do contentor. */
+body:has(main[data-cz-indice])>[data-appearance-floating][data-appearance-control]{width:48px;height:48px;flex-basis:48px;}
+body:has(main[data-cz-indice])>[data-appearance-floating][data-appearance-control]>.epi-appearance-toggle{margin:0;}
 html[data-theme=dark] body:has(main[data-cz-indice]){--papel:#181916;--tinta:#f5f1e7;--suave:#c2beb4;--fundo:#252722;}
 html[data-theme=light] body:has(main[data-cz-indice]){--papel:#f6f3eb;--tinta:#171714;--suave:#55534c;--fundo:#ece8de;}
 /* 03/11/2026 (piloto M4, M4-02): pintar o glifo original elimina a cópia absoluta e mantém a palavra inteira. Só o título do M4 tem este acento. */
@@ -129,6 +137,15 @@ body.pt-module-layout main.cz-index[data-cz-indice] .cz-state:has([data-cz-point
 body.pt-module-layout main.cz-index[data-cz-indice] .cz-state.current [data-cz-point]{border:2px solid var(--tinta);background:var(--cz-current);box-sizing:border-box;}
 @media (prefers-color-scheme:dark){
 body:has(main[data-cz-indice]){--papel:#181916;--tinta:#f5f1e7;--suave:#c2beb4;--fundo:#252722;}
+}
+/* 06/11/2026: revisão da decisão 148, a palavra do módulo no escuro com cor própria: o vermelho do escuro (#e4555c) dava
+   4,13:1 sobre #252722 com 20 px no telemóvel; #f07075 dá 5,23:1 sobre #252722 e 6,12:1 sobre #181916. Só no ecrã: na
+   impressão a palavra continua a preto. */
+@media screen{
+html[data-theme=dark] body.pt-module-layout main.cz-index[data-cz-indice] .cabm>.agua{color:#f07075;}
+}
+@media screen and (prefers-color-scheme:dark){
+html:not([data-theme=light]) body.pt-module-layout main.cz-index[data-cz-indice] .cabm>.agua{color:#f07075;}
 }
 @media (min-width:960px){
 body.pt-module-layout main.cz-index[data-cz-indice] details.cz-fold[open]{display:block;}

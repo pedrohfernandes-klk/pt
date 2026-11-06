@@ -36,7 +36,7 @@ def main():
                         # Full eight-page/card matrix runs in its separate CI driver.
                         visit_task_from_route(page, m, 1, hrefs[0])
                         # The former pools are optional archive practice, never unit gates.
-                        # 03/11/2026: no piloto M4 os materiais abrem dentro dos recursos nativos.
+                        # 03/11/2026: no piloto M4 os materiais abrem dentro dos recursos nativos (06/11/2026: deixou de valer com a decisão 148).
                         # 06/11/2026: decisão 148, o acesso do docente volta a flutuar nos nove, fora de «Recursos do módulo»: abre-se logo, sem exceção.
                         page.locator('.route-teacher-tools > summary').click()
                         page.locator('.route-teacher-tools a[href="?arquivo=1#arquivo-percurso"]').click()

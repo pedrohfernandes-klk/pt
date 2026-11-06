@@ -50,7 +50,7 @@ def main():
      if width==320:assert action.bounding_box()['y']+action.bounding_box()['height']<=568,(m,action.bounding_box())
      assert not page.evaluate('document.documentElement.scrollWidth>innerWidth+2')
      # 23/10/2026 (decisão do docente, aulas claras): o M4 é o piloto do percurso como lista simples de aulas, sem passaporte, níveis nem pontos
-     # 03/11/2026: a imagem documental do piloto M4 abre nos recursos, pelo teclado.
+     # 03/11/2026: a imagem documental do piloto M4 abre nos recursos, pelo teclado (06/11/2026: deixou de valer com a decisão 148).
      # 06/11/2026: decisão 148, volta a exigir-se o mesmo nos nove: uma imagem documental, à vista sem abrir nada, fora de
      # qualquer details, logo a seguir à última unidade (já não há exceção para o M4).
      assert page.locator('main > figure.doc').count()==1 and page.locator('figure.doc').count()==1 and page.locator('.module-progress .passaporte').count()==(0 if m in SEM_PASSAPORTE else 1)
