@@ -231,8 +231,10 @@ class Autonomia154(unittest.TestCase):
                     self.assertTrue(fonte, 'a troca da página gerada tem de estar também nos dados do gerador')
 
     def test_camada_mais_recente_e_registada(self):
+        # 06/11/2026: o lote 3 do Atlas fica por cima da decisão 154 depois de juntar o main; desfaz-se antes, com a mesma exigência.
         r = subprocess.run([sys.executable, 'scripts/aplicar_trocas.py', 'scripts/autonomia_154_20261105.json',
-                            '--manifesto', str(MANIFESTO), '--verificar'],
+                            '--manifesto', str(MANIFESTO), '--verificar',
+                            '--desfazer-antes', 'tests/fixtures/atlas-lote3-edits-20261105.json'],
                            cwd=ROOT, capture_output=True, text=True, encoding='utf-8')
         self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
         sys.path.insert(0, str(ROOT / 'scripts'))
@@ -240,12 +242,19 @@ class Autonomia154(unittest.TestCase):
             import verificar_camadas
         finally:
             sys.path.pop(0)
-        self.assertEqual(verificar_camadas.LAYERS[0], ('autonomia_154_20261105', 'autonomia-154-edits-20261105'))
-        self.assertEqual(verificar_camadas.LAYERS[1], ('exame_contexto_20261105', 'exame-contexto-edits-20261105'))
+        # 06/11/2026: por cima da decisão 154 fica o lote 3 do Atlas (junção com o main); a decisão 154 passa a segunda, logo por baixo dele,
+        # e a cadeia de desfazer chama primeiro o Atlas.
+        self.assertEqual(verificar_camadas.LAYERS[0], ('atlas_lote3_20261105', 'atlas-lote3-edits-20261105'))
+        self.assertEqual(verificar_camadas.LAYERS[1], ('autonomia_154_20261105', 'autonomia-154-edits-20261105'))
+        self.assertEqual(verificar_camadas.LAYERS[2], ('exame_contexto_20261105', 'exame-contexto-edits-20261105'))
         auditoria = ler('tests/auditoria_20261028.py')
         corpo = auditoria[auditoria.index('def undo_contexto_0511'):]
         self.assertLess(corpo.index('undo_autonomia_0511(path, text)'), corpo.index('_CONTEXTO_0511.get('))
-        self.assertIn('autonomia-154-edits-20261105.json', ler('scripts/desligar_sala.py'))
+        corpo = auditoria[auditoria.index('def undo_autonomia_0511'):]
+        self.assertLess(corpo.index('undo_atlas_lote3_0511(path, text)'), corpo.index('_AUTONOMIA_0511.get('))
+        sala = ler('scripts/desligar_sala.py')
+        self.assertIn('autonomia-154-edits-20261105.json', sala)
+        self.assertLess(sala.index('atlas-lote3-edits-20261105.json'), sala.index('autonomia-154-edits-20261105.json'))
 
 
 if __name__ == '__main__':
