@@ -38,8 +38,9 @@ CLASSES_CREDITO = {'credito', 'cz-credit', 'fr-cred', 'fa-cred', 'rosto-c', 'yt-
 VAZIOS = {'area', 'base', 'br', 'col', 'embed', 'hr', 'img', 'input', 'link', 'meta', 'source', 'track', 'wbr'}
 # 05/11/2026: pedido pt-2, fatia 2. Os créditos de P11 a P13 tal como estavam à vista, letra a letra (o itálico do motor, _…_,
 # mostrava-se sem os traços): o «i» tem de os ter inteiros.
+# 06/11/2026: revisão do pedido pt-2. «H. C. White Co.» com espaços inseparáveis (decisão 152): as mesmas letras, sem partir.
 P11_CREDITO = ('Duas fotografias sobrepostas: um jardim de Lisboa em 1907 e o Tejo diante da Praça do Comércio, cerca de 1910 '
-               '(H. C. White Co. e National Photo Company; Biblioteca do Congresso dos EUA, sem restrições conhecidas).')
+               '(H.\u00a0C.\u00a0White\u00a0Co. e National Photo Company; Biblioteca do Congresso dos EUA, sem restrições conhecidas).')
 P12_CREDITOS = {
     'm1/licao-m1-f19/index.html': ['Ilha de San Simón, ria de Vigo (Iago Pillado, 2024). CC BY-SA 4.0.',
                                    'Pergaminho Vindel, com «Ondas do mar de Vigo». Domínio público.'],
@@ -75,7 +76,8 @@ P14_CREDITOS = {
     'm7/m7-fingidor-maquina': 'autor não identificado (fotografia de 1929). Domínio público. commons.wikimedia.org',
     'm7/m7-quatro-vozes-um-problema': 'revista Orpheu. Domínio público. commons.wikimedia.org',
     'm8/m8-poema-testemunha': 'Domínio público. commons.wikimedia.org',
-    'm9/m9-de-quem-e-o-convento': 'CC BY-SA 3.0. commons.wikimedia.org',
+    # 06/11/2026: revisão do pedido pt-2. O autor que a CC BY-SA 3.0 exige, confirmado no Commons (File:Mafra_May_2013-2.jpg).
+    'm9/m9-de-quem-e-o-convento': 'Fotografia de Alvesgaspar, 2013. CC BY-SA 3.0. commons.wikimedia.org',
     'm9/m9-ver-e-nao-ver': 'Bartolomeu de Gusmão (fac-símile). Domínio público. commons.wikimedia.org',
 }
 # Os quatro «Olhar» (P15): o campo credito, com os pontos médios passados a pontos finais (nenhuma palavra sai), e o creditoUrl,
@@ -90,6 +92,15 @@ P15_OLHAR = {
                                  'https://commons.wikimedia.org/w/index.php?curid=39076717'),
     'm7/olhar-pessoa/index.html': ('Fernando Pessoa, fotografia de 1914. Domínio público. Wikimedia Commons.',
                                    'https://commons.wikimedia.org/w/index.php?curid=56775462'),
+}
+# 06/11/2026: revisão do pedido pt-2. As legendas à vista da P16 que não são o começo do crédito, e o começo exato do crédito de
+# cada uma: «retrato imaginado» diz o que se vê; os dois retratos de Antero de Quental distinguem-se pelo autor e pela data; a
+# página do Cancioneiro da Biblioteca Nacional deixa de ficar truncada.
+P16_A_VISTA = {
+    'Fernão Lopes (retrato imaginado).': 'Fernão Lopes (retrato imaginado, Pollini).',
+    'Antero de Quental (fotografia, c. 1887).': 'Antero de Quental (fotografia, c. 1887, publicada em In Memoriam, 1896).',
+    'Antero de Quental (Columbano Bordalo Pinheiro, 1889).': 'Antero de Quental (Columbano Bordalo Pinheiro, 1889, MNAC).',
+    'Uma página do Cancioneiro da Biblioteca Nacional.': 'Cancioneiro da Biblioteca Nacional, página (cópia do século XVI).',
 }
 # As galerias «Para ver» dos nove mapas (P16, mais Pessoa, da P10): figuras e ligações «Lição Mx-Fyy» por mapa.
 P16_GALERIAS = {1: (11, 11), 2: (4, 4), 3: (8, 8), 4: (12, 10), 5: (7, 7), 6: (7, 7), 7: (19, 19), 8: (4, 4), 9: (7, 7)}
@@ -501,7 +512,9 @@ class CreditosI(unittest.TestCase):
                     if 'PessoaChapeu' in str([a.attrs for a in ii.descendentes()]):
                         continue  # Pessoa, cerca de 1914 (P10): os seis campos, conferidos em test_varredura_formatacao.
                     # O crédito começa pela identificação que fica à vista (sem o parêntese final) e acaba na licença (e na Fonte).
-                    self.assertTrue(credito.startswith(visivel[:-1]), (rel, visivel, credito))
+                    # 06/11/2026: revisão do pedido pt-2. Salvo as quatro legendas da lista fechada P16_A_VISTA, cada uma com o começo
+                    # exato do seu crédito (o que diz o que se vê e distingue duas imagens fica à vista; o crédito fica inteiro).
+                    self.assertTrue(credito.startswith(P16_A_VISTA.get(visivel, visivel[:-1])), (rel, visivel, credito))
                     self.assertRegex(credito, r'^[^()]*(\([^()]*\)[^()]*)*' + LICENCA.pattern + r'( Fonte: [^.]+\.)?$')
                     if 'CC BY' in credito:
                         self.assertTrue(any(a.tag == 'a' and a.attrs.get('rel') == 'license' and 'creativecommons.org/licenses/'

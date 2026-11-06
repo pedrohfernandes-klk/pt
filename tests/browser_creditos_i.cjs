@@ -152,6 +152,8 @@ try{
  for(const alvo of [{url:ENSAIO},...AMOSTRAS]){
   const ctx=await contexto(b,origem,{viewport:{width:1366,height:768}}),p=await ctx.newPage();await p.goto(origem+alvo.url+'?projetar=1',{waitUntil:'networkidle'});await p.locator('details.info-i>summary').first().waitFor();
   const m=await p.evaluate(MEDIR,0);assert(!m.open&&m.s.w>=44-1/64&&m.s.h>=44-1/64&&!m.rolagem,`${alvo.url}: projeção ${JSON.stringify(m.s)}`);
+  // 06/11/2026: na projeção, o «i» canto guarda o fundo e o halo; o contraste mede-se contra o halo.
+  if(!m.linha)assert(m.fundoCirculo!=='rgba(0, 0, 0, 0)'&&contraste(m.borda,m.halo)>=3,`${alvo.url}: projeção, o «i» canto com fundo e halo (${m.fundoCirculo} / ${m.borda} / ${m.halo})`);
   assert.equal(await p.evaluate(()=>document.documentElement.hasAttribute('data-ii-projecao')),true,'a marca da projeção');
   if(alvo.url===ENSAIO)assert.equal(await p.locator('[data-fundo-botao]').isVisible(),false,'projeção: «Parar o desenho» escondido');
   await ctx.close();cenarios++;
@@ -232,6 +234,27 @@ try{
    assert.equal(await p.locator(raiz+' figcaption').evaluateAll(fs=>fs.filter(f=>/Domínio público|CC BY|CC0/.test(f.textContent)).length),0,`${onde}: a licença já não está na legenda`);
   }
   assert.deepEqual(erros,[],`${onde}: sem erros`);await ctx.close();cenarios++;
+ }
+ // 8. 06/11/2026: revisão do pedido pt-2 (proximidade). Com o «i» «linha» fechado entre a imagem e a legenda, a legenda fica junto da
+ // sua imagem (figcaption.top − img.bottom ≤ 8 px) e a caixa do «i» não toca no texto da legenda; o toque no centro do «i» chega ao
+ // «i». Nas quatro larguras: P9 (M3-F19), P10 (M7-F01) e as galerias «Para ver» de M1 e M8 (P16).
+ // A legenda do «i»: logo a seguir a ele, ou a seguir à moldura .com-i onde ele vive (P10 nas lições).
+ const CAP="(d=>{const n=d.nextElementSibling,m=d.parentElement.classList.contains('com-i')&&d.parentElement.nextElementSibling;return n&&n.tagName==='FIGCAPTION'?n:m&&m.tagName==='FIGCAPTION'?m:null})";
+ for(const alvo of [{url:'/pt/m3/licao-m3-f19/'},{url:'/pt/m7/licao-m7-f01/'},{url:'/pt/m1/mapa-do-modulo-m1/',galeria:true},{url:'/pt/m8/mapa-do-modulo-m8/',galeria:true}])for(const width of LARGURAS){
+  const ctx=await contexto(b,origem,{viewport:{width,height:860}}),p=await ctx.newPage();await p.goto(origem+alvo.url,{waitUntil:'networkidle'});
+  if(alvo.galeria)await p.locator('#galeria > summary').click();await p.locator('details.info-i--linha>summary').first().waitFor();
+  const n=await p.evaluate(c=>{const capDe=eval(c);return [...document.querySelectorAll('details.info-i--linha')].filter(d=>capDe(d)&&d.checkVisibility()).length},CAP);
+  assert(n>=1,`${alvo.url} ${width}: há «i» «linha» seguidos de legenda`);
+  for(let i=0;i<Math.min(n,4);i++){
+   const r=await p.evaluate(([k,fc])=>{const capDe=eval(fc),d=[...document.querySelectorAll('details.info-i--linha')].filter(d=>capDe(d)&&d.checkVisibility())[k];d.scrollIntoView({block:'center'});
+    const s=d.querySelector(':scope>summary').getBoundingClientRect(),cap=capDe(d),img=d.closest('figure').querySelector('img').getBoundingClientRect(),rg=document.createRange();rg.selectNodeContents(cap);
+    const toca=[...rg.getClientRects()].filter(t=>t.width>0&&t.height>0&&!(t.right<=s.left||t.left>=s.right||t.bottom<=s.top||t.top>=s.bottom)).length,c=document.elementFromPoint(s.left+s.width/2,s.top+s.height/2);
+    const cr=cap.getBoundingClientRect(),lado=cr.left>=img.right-1;
+    return {open:d.open,lado,folga:lado?cr.left-img.right:cr.top-img.bottom,toca,alvo:!!c&&!!c.closest('details.info-i>summary')&&c.closest('details')===d}},[i,CAP]);
+   // Com a legenda ao lado da imagem (a casca das lições, a partir de 1024 × 560 px), a folga mede-se na horizontal (22 px).
+   assert(!r.open&&r.folga<=(r.lado?24:8)&&r.toca===0&&r.alvo,`${alvo.url} ${width} «i» ${i}: proximidade ${JSON.stringify(r)}`);
+  }
+  await ctx.close();cenarios++;
  }
  console.log(`PASS ${cenarios} cenários da peça «i» (ensaio, P7, P9 a P16)`);
 }finally{await b.close();server.closeAllConnections();server.close()}})().catch(e=>{console.error(e);process.exitCode=1});

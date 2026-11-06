@@ -1,7 +1,7 @@
 {
  "_nota": "05/11/2026: decisão 153. O sha256 da peça «i» comum (assets/info-i.css e assets/info-i.js), igual byte a byte no Português e no Lente; este ficheiro é o mesmo nos dois sítios (tests/test_creditos_i.py, test_peca_igual_nos_dois_sitios). Mudar a peça num sítio obriga a mudá-la no outro e a atualizar este registo nos dois.",
  "sha256": {
-  "assets/info-i.css": "ad999eb07b7fa887470239ed7dff5899668367d4f1a7cb66c5dbd860815e54f2",
+  "assets/info-i.css": "2d99eb74c6fbe87272eb8d13884f12175731a53e7e7b9b00c6c161a00d4e4fde",
   "assets/info-i.js": "236a27e30d9b220022a3e36ee3bbc3f0e1d0958bdf19ba774b81724503717d06"
  }
 }

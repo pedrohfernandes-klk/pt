@@ -80,7 +80,10 @@ def com_licenca(credito):
 
 def sem_quebras(credito):
     """Decisão 152: as datas aproximadas e os intervalos de anos não partem ao mudar de linha (span.nb, na peça comum)."""
-    return re.sub(r'(?<![\w>])(c\. \d{3,4}(?:-\d{2,4})?|\d{3,4}-\d{2,4})(?![\w<])', r'<span class="nb">\1</span>', credito)
+    # 06/11/2026: revisão do pedido pt-2. Dentro do span.nb, «c. 1860» leva também o espaço inseparável (como na P15 e na P12):
+    # a data não parte mesmo onde a peça comum não chegue; nenhuma palavra muda.
+    return re.sub(r'(?<![\w>])(c\. \d{3,4}(?:-\d{2,4})?|\d{3,4}-\d{2,4})(?![\w<])',
+                  lambda m: '<span class="nb">' + m.group(1).replace('c. ', 'c.\u00a0') + '</span>', credito)
 
 
 def peca_i(credito, rotulo='Créditos da imagem', linha=False):
@@ -202,7 +205,10 @@ def p10():
 P11_REL = 'm7/licao-m7-f34/index.html'
 P11_INSTRUCAO = 'Toca num pedaço do verso: acende-se o seu plano.'
 P11_ESTILO = ('/* 05/11/2026: decisão 153. O «i» da dupla exposição: a moldura toma a largura da fotografia. */'
-              '.dupla>.com-i{max-width:560px;margin:0 auto}')
+              '.dupla>.com-i{max-width:560px;margin:0 auto}'
+              # 06/11/2026: revisão do pedido pt-2. A moldura da fotografia (div.dupla-foto) tem 1 px de borda: o «i» fica a 9 px da
+              # caixa, para ficar a 8 px da fotografia, como nas outras imagens.
+              '.dupla>.com-i>details.info-i>summary{inset-block-end:9px;inset-inline-end:9px}')
 P11_FAMILIA = ('Família P11 (dupla exposição de «Chuva Oblíqua»): a instrução e os botões ficam à vista; o crédito das duas '
                'fotografias passa inteiro para o «i».')
 
@@ -212,7 +218,8 @@ def p11():
     m = re.search(r'<figure class=\\"dupla\\">(<div class=\\"dupla-foto\\"(?:(?!</div>).)*</div>)<figcaption>'
                   r'((?:(?!</figcaption>).)*)<small>' + re.escape(P11_INSTRUCAO) + r' ((?:(?!</small>).)*)</small>'
                   r'</figcaption></figure>', texto)
-    credito = json.loads('"' + m.group(3) + '"')
+    # 06/11/2026: revisão do pedido pt-2. «H. C. White Co.» não parte ao mudar de linha (decisão 152): espaços inseparáveis.
+    credito = json.loads('"' + m.group(3) + '"').replace('H. C. White Co.', 'H.\u00a0C.\u00a0White\u00a0Co.')
     novo = (f'<figure class=\\"dupla\\"><div class=\\"com-i\\">{m.group(1)}{em_json(peca_i(credito))}</div><figcaption>'
             f'{m.group(2)}<small>{P11_INSTRUCAO}</small></figcaption></figure>')
     confere_json(m.group(0), novo)
@@ -321,6 +328,12 @@ P14_FAMILIA = ('Família P14 («Pensar devagar»): o crédito (fr-cred) passa in
                'vê, fica à vista.')
 
 
+# 06/11/2026: revisão do pedido pt-2. A fotografia de Mafra (File:Mafra_May_2013-2.jpg, CC BY-SA 3.0) não trazia o autor, que a
+# licença exige. Confirmado no Commons a 06/11/2026 (autor e carregamento: Alvesgaspar, 8 de maio de 2013), que é o mesmo crédito
+# da galeria do mapa M9 («fotografia de Alvesgaspar, 2013»): o «i» abre com ele.
+P14_AUTOR = {'m9/m9-de-quem-e-o-convento/index.html': 'Fotografia de Alvesgaspar, 2013. '}
+
+
 def p14_paginas():
     return sorted(p.relative_to(ROOT).as_posix() for p in ROOT.glob('m[1-9]/m[1-9]-*/index.html')
                   if 'class=\\"fr-cred\\"' in base(p.relative_to(ROOT).as_posix()))
@@ -333,7 +346,7 @@ def p14():
         achados = list(P14_FIGURA.finditer(texto))
         assert len(achados) == 1 and texto.count('fr-cred\\"') == 1, (rel, len(achados))
         m = achados[0]
-        credito = maiuscula(json.loads('"' + m.group(4) + '"'))
+        credito = P14_AUTOR.get(rel, '') + maiuscula(json.loads('"' + m.group(4) + '"'))
         novo = (f'<figure class=\\"{m.group(1)}\\"><div class=\\"fr-moldura com-i\\">{m.group(2)}{em_json(peca_i(credito))}'
                 f'</div><figcaption>{m.group(3)}</figcaption></figure>')
         confere_json(m.group(0), novo)
@@ -406,6 +419,33 @@ P16_FAMILIA = ('Família P16 (galeria «Para ver» do mapa do módulo): o crédi
                'ligação «Lição Mx-Fyy» ficam à vista.')
 
 
+# 06/11/2026: revisão do pedido pt-2. Legendas à vista que o parêntese final não pode levar inteiro: «retrato imaginado» diz o que
+# se vê (e corrige uma leitura falsa); os dois retratos de Almeida Garrett (M4) e os dois de Antero de Quental (M6) distinguem-se
+# pelo autor e pela data, que ficam à vista; a página do Cancioneiro da Biblioteca Nacional deixa de ficar truncada. O «i» leva
+# sempre a identificação inteira.
+P16_A_VISTA = {
+    'Fernão Lopes (retrato imaginado, Pollini).': 'Fernão Lopes (retrato imaginado).',
+    'Almeida Garrett (Pedro Augusto Guglielmi, 1844).': 'Almeida Garrett (Pedro Augusto Guglielmi, 1844).',
+    'Almeida Garrett (José Malhoa, 1881).': 'Almeida Garrett (José Malhoa, 1881).',
+    'Antero de Quental (fotografia, c. 1887, publicada em In Memoriam, 1896).': 'Antero de Quental (fotografia, c.\u00a01887).',
+    'Antero de Quental (Columbano Bordalo Pinheiro, 1889, MNAC).': 'Antero de Quental (Columbano Bordalo Pinheiro, 1889).',
+    'Cancioneiro da Biblioteca Nacional, página (cópia do século XVI).': 'Uma página do Cancioneiro da Biblioteca Nacional.',
+}
+# 06/11/2026: revisão do pedido pt-2. Títulos de obras em itálico (regra da casa), na legenda à vista e no «i», como no «i» das
+# lições (P7).
+P16_TITULOS = ('Morte do Conde Andeiro', 'Diálogos de Vária História', 'Cancioneiro da Ajuda',
+               'Copilaçam de todalas obras de Gil Vicente', 'Trachtenbuch', 'Rimas', 'Os Lusíadas', 'Costume of Portugal',
+               'Livro de Lisuarte de Abreu', 'Os Maias', 'Archivo Pittoresco', 'O Livro de Cesário Verde', 'Mensagem', 'Presença',
+               'Orpheu', 'Oeuvres', 'Condução do rebanho', 'Passagem de gado', 'A cidade que sobe', 'Aparição do Adamastor',
+               'Os fuzilamentos de 3 de maio de 1808', 'Fish from American Waters', 'Cancioneiro da Biblioteca Nacional')
+
+
+def p16_italico(html):
+    for titulo in P16_TITULOS:
+        html = re.sub(r'(?<![\w>])' + re.escape(titulo) + r'(?![\w<])', f'<i>{titulo}</i>', html)
+    return html
+
+
 def p16_visivel(ident):
     """A identificação sem o parêntese final (autor, data, acervo, fotógrafo), se o tiver."""
     if not ident.endswith(').'):
@@ -435,10 +475,13 @@ def p16():
             leg = P16_LEGENDA.fullmatch(m.group(2))
             assert leg, (rel, m.group(2))
             figuras.append((m, leg, p16_visivel(leg['ident'])))
-        vistas = [v for _, _, v in figuras]
-        for m, leg, visivel in figuras:
-            nome = sem_etiquetas((visivel if vistas.count(visivel) == 1 else leg['ident'])[:-1])
-            credito = sem_quebras_refs(leg['ident'] + ' ' + leg['lic'] + (' ' + leg['fonte'] if leg['fonte'] else ''))
+        curtas = [v for _, _, v in figuras]
+        for m, leg, curta in figuras:
+            visivel = P16_A_VISTA.get(leg['ident'], curta)
+            nome = sem_etiquetas((visivel if curtas.count(curta) == 1 else leg['ident'])[:-1])
+            visivel = p16_italico(visivel)
+            credito = sem_quebras_refs(p16_italico(leg['ident']) + ' ' + leg['lic']
+                                       + (' ' + leg['fonte'] if leg['fonte'] else ''))
             novo = (m.group(1) + peca_i(credito, f'Créditos da imagem: {nome}', linha=True) + '<figcaption>'
                     + sem_quebras_refs(visivel) + (' ' + leg['licao'] if leg['licao'] else '') + '</figcaption></figure>')
             # A troca leva só a legenda e o fim da imagem (as miniaturas vêm em data:, longas): o alt e o loading.
@@ -455,6 +498,16 @@ FAMILIAS = [p7, p10, p11, p12, p13, p14, p15, p16]
 ESTILOS = {P11_REL: P11_ESTILO, 'm4/painel-m4-f01/index.html': P13_ESTILO_PAINEL,
            'm4/painel-m4-f04/index.html': P13_ESTILO_PAINEL, 'm4/painel-m4-f11/index.html': P13_ESTILO_PAINEL,
            **{rel: P15_ESTILO for rel in P15_PAGINAS}}
+# 06/11/2026: revisão do pedido pt-2 (proximidade). Nas lições em que o «i» «linha» vive na moldura (P7, P10) e a legenda vem a
+# seguir, a legenda sobe para a faixa do «i», à esquerda dele, junto da imagem; aberto, o crédito abre entre a imagem e a legenda.
+# Só quando a legenda fica por baixo da imagem: a partir de 1024 × 560 px, a casca da lição põe a legenda ao lado da imagem
+# (.casca .jogo .ler .fig em flex), e aí a legenda já está junto dela. Na impressão, nada muda.
+LINHA_ESTILO = ('/* 06/11/2026: revisão do pedido pt-2. A legenda junto da imagem, na faixa do «i» fechado. */'
+                '@media screen and (max-width:1023.98px),screen and (max-height:559.98px){'
+                '.jogo .ler .fig>.com-i:has(>details.info-i--linha:not([open])):has(+figcaption){margin-block-end:-44px}'
+                '.jogo .ler .fig>.com-i:has(>details.info-i--linha)+figcaption{min-block-size:44px;padding-inline-end:52px;'
+                'box-sizing:border-box}}')
+LINHA_COM_LEGENDA = re.compile(r'info-i info-i--linha\\?" name=\\?"info-i\\?">(?:(?!</figure>).)*</details></div><figcaption>')
 CABECA = (f'<link rel="stylesheet" href="../../assets/info-i.css?v={VERSAO}">'
           f'<script defer src="../../assets/info-i.js?v={VERSAO}"></script></head>')
 
@@ -470,7 +523,9 @@ def main():
     for rel in ficheiros:
         texto = base(rel)
         assert texto.count('</head>') == 1 and 'assets/info-i.' not in texto, rel
-        cabeca = CABECA.replace('</head>', f'<style>{ESTILOS[rel]}</style></head>') if rel in ESTILOS else CABECA
+        estilo = ESTILOS.get(rel, '') + (LINHA_ESTILO if any(t['ficheiro'] == rel and LINHA_COM_LEGENDA.search(t['novo'])
+                                                          for t in trocas) else '')
+        cabeca = CABECA.replace('</head>', f'<style>{estilo}</style></head>') if estilo else CABECA
         trocas.append({'ficheiro': rel, 'local': 'A peça comum do «i» (assets/info-i.css e assets/info-i.js)',
                        'antigo': '</head>', 'novo': cabeca, 'ocorrencias': 1,
                        'achado': ACHADO.format(familia='A página carrega a peça comum do «i», igual no Português e no Lente.')})

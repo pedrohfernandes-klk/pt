@@ -39,12 +39,19 @@ details.info-i.info-i--linha>summary{position:relative;inset:auto;margin-inline-
 details.info-i.info-i--linha>:is(p,div).info-i-texto{position:static;max-block-size:none;overflow:visible;padding:4px 0 0;border:0;background:none}
 /* Dentro de uma moldura que se ajusta à imagem, o crédito aberto ocupa a largura da imagem e não a alarga. */
 .com-i>details.info-i.info-i--linha[open]{contain:inline-size}
+/* 06/11/2026: revisão do pedido pt-2 (proximidade). No ecrã, com o «i» «linha» fechado entre a imagem e a legenda, a legenda sobe
+   para a faixa do «i», à esquerda dele, junto da sua imagem; aberto, o crédito abre entre a imagem e a legenda e o «i» não muda
+   de sítio. Na impressão, o crédito sai por baixo da imagem e a legenda a seguir (sem esta regra). */
+@media screen{figure:not(.documento)>details.info-i.info-i--linha:not([open]):has(+figcaption){margin-block-end:-44px}figure:not(.documento)>details.info-i.info-i--linha:has(+figcaption)+figcaption{min-block-size:44px;padding-inline-end:52px;box-sizing:border-box}}
 /* Fundos animados: «Parar o desenho» fica ao lado do «i», sempre fora dele. */
 .fundo-acoes{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:0 16px}
 .fundo-acoes>details.info-i.info-i--linha[open]{flex:1 1 100%}
 /* Projeção: fechado e discreto, com o alvo de 44 px; a letra fica no degrau da projeção. O assets/info-i.js marca
    data-ii-projecao nas lições projetadas com ?projetar=1. */
-:is(.em-projecao,.epi-projection,[data-cz-projection],[data-ii-projecao]) details.info-i>summary>span{inline-size:32px;block-size:32px;border-width:1px;background:transparent;box-shadow:none;font-size:1.25rem}
+/* 06/11/2026: revisão do pedido pt-2. O «canto» guarda o fundo de papel e o halo de 2 px da regra de base: pousado na
+   fotografia, sem eles o círculo descia a 1,3:1 contra a imagem. Só a «linha», que fica sobre o papel da página, perde o fundo. */
+:is(.em-projecao,.epi-projection,[data-cz-projection],[data-ii-projecao]) details.info-i>summary>span{inline-size:32px;block-size:32px;border-width:1px;font-size:1.25rem}
+:is(.em-projecao,.epi-projection,[data-cz-projection],[data-ii-projecao]) details.info-i.info-i--linha>summary>span{background:transparent;box-shadow:none}
 :is(.em-projecao,.epi-projection,[data-cz-projection],[data-ii-projecao]) details.info-i[open]>summary>span{background:var(--ii-tinta)}
 :is(.em-projecao,.epi-projection,[data-cz-projection],[data-ii-projecao]) details.info-i>:is(p,div).info-i-texto{font-size:1.125rem}
 @media (prefers-reduced-motion:no-preference){details.info-i[open]>.info-i-texto{animation:ii-abre .16s ease-out}}
