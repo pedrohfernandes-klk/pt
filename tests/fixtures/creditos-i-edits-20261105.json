@@ -1,6 +1,6 @@
 {
- "base_commit": "b3ee0f9c67fd94311e2860b2694f9487e34be95a",
- "_nota": "05/11/2026: decisões 153 e 162 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»). Créditos das imagens atrás de um botão «i» (pedido pt-2 do plano plano-creditos-i-20261105.md), camada mais recente, por cima do contexto do Laboratório do exame (exame_contexto_20261105). Gerada por scripts/creditos_i_20261105.py e aplicada por scripts/aplicar_trocas.py: não se edita à mão. Famílias P7 (crédito puro nas lições M1 e M4), P10 (Pessoa, cerca de 1914: M7-F01, M7-F05 e a galeria do mapa M7), P11 (dupla exposição de «Chuva Oblíqua», M7-F34), P12 (retratos do «Em paralelo»: M1-F19, M4-F01, M4-F02 e M4-F11), P13 (crédito colado à explicação: lições M4-F01, M4-F04 e M4-F11 e os três painéis), P14 («Pensar devagar», 17 páginas: só o fr-cred), P15 (exercícios «Olhar», 4 páginas: o motor imagem() põe o crédito num «i», com a ligação creditoUrl) e P16 (galeria «Para ver» dos nove mapas do módulo, 78 figuras): o crédito passa inteiro para dentro de uma <details class=\"info-i\">, junto da imagem; o que diz o que se vê fica à vista (nas galerias, também a ligação «Lição Mx-Fyy»); cada página carrega assets/info-i.css e assets/info-i.js. Só o HTML das figuras (nos cartões, no material dos painéis e nas galerias), o fim de três explicações (sai o crédito do campo f), a função imagem() e o campo credito dos quatro «Olhar» (os pontos médios passam a pontos finais): tipos, ordem, chaves e respostas ficam iguais.",
+ "base_commit": "5ae7a89a068b8f40a19ccfb97c1b4ab0275fd147",
+ "_nota": "05/11/2026: decisões 153 e 162 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»). Créditos das imagens atrás de um botão «i» (pedido pt-2 do plano plano-creditos-i-20261105.md), camada mais recente, por cima do lote 3 do Atlas (atlas_lote3_20261105), que está por cima da decisão 154 (autonomia_154_20261105) e do contexto do Laboratório do exame (06/11/2026: junção com o main). Gerada por scripts/creditos_i_20261105.py e aplicada por scripts/aplicar_trocas.py: não se edita à mão. Famílias P7 (crédito puro nas lições M1 e M4), P10 (Pessoa, cerca de 1914: M7-F01, M7-F05 e a galeria do mapa M7), P11 (dupla exposição de «Chuva Oblíqua», M7-F34), P12 (retratos do «Em paralelo»: M1-F19, M4-F01, M4-F02 e M4-F11), P13 (crédito colado à explicação: lições M4-F01, M4-F04 e M4-F11 e os três painéis), P14 («Pensar devagar», 17 páginas: só o fr-cred), P15 (exercícios «Olhar», 4 páginas: o motor imagem() põe o crédito num «i», com a ligação creditoUrl) e P16 (galeria «Para ver» dos nove mapas do módulo, 78 figuras): o crédito passa inteiro para dentro de uma <details class=\"info-i\">, junto da imagem; o que diz o que se vê fica à vista (nas galerias, também a ligação «Lição Mx-Fyy»); cada página carrega assets/info-i.css e assets/info-i.js. Só o HTML das figuras (nos cartões, no material dos painéis e nas galerias), o fim de três explicações (sai o crédito do campo f), a função imagem() e o campo credito dos quatro «Olhar» (os pontos médios passam a pontos finais): tipos, ordem, chaves e respostas ficam iguais.",
  "files": {
   "m1/licao-m1-f01/index.html": {
    "base_sha256_lf": "93504c75e2dc18471ca2bbbb46827170f9352c69d4ebace8891894b2d70d02c5",
@@ -63,8 +63,8 @@
    ]
   },
   "m1/licao-m1-f04/index.html": {
-   "base_sha256_lf": "fd6f2419e99252b98b8e1ce4e0af64eb0a4f7cfa3c20a786c5dc14ebda1248bf",
-   "after_sha256_lf": "a4e8f7de70dfac8f00a22e54a8464b6f06abaaf763ab64a9e3b14934e951ea6e",
+   "base_sha256_lf": "7c2235007be033f1872f4f1296354a035c379fea30709cc1d110046d16d04c02",
+   "after_sha256_lf": "4d4f5f00ddb098f767f48dbd146525f7a28c299c2516d857d41d9238ce3f0a86",
    "edits": [
     {
      "location": "P7, crédito puro: <i>Cancioneiro da Biblioteca Nacional</i>, cópia do século XVI: cantig",
@@ -81,8 +81,8 @@
    ]
   },
   "m1/licao-m1-f05/index.html": {
-   "base_sha256_lf": "ff6d47bf9b9a31e71a97a86f3c9ab1a84cd4dd34c2540d366910dc06148ba03c",
-   "after_sha256_lf": "8cabc38f8993e68bf38a7f28359baec1cebf208fea6f0763b72c2c30feea7122",
+   "base_sha256_lf": "c2a34f56343e953ce3646aab508eb5dc9f0e38935152a1e59cc37b39d5df323f",
+   "after_sha256_lf": "769e37ab9b5dc1b497cb415380beafdd1da98280280e2673ce2d3f5f408a2e69",
    "edits": [
     {
      "location": "P7, crédito puro: Martim Codax, «Ondas do mar de Vigo», edição de Pedro Vindel, 1915. Do",
@@ -147,8 +147,8 @@
    ]
   },
   "m1/licao-m1-f08/index.html": {
-   "base_sha256_lf": "8d3818ab2923702bd9943e89cce20cce690dfb7111f0d6d04c848e9bf2a94076",
-   "after_sha256_lf": "5f17023ad4f1296381b5d65808a0a5432429d46156306dc7046c789c6cc9ca6e",
+   "base_sha256_lf": "80d7270509230a654f5715ba52a8c67fee28efcb8e3504cb93cf5e1bfbdbbbb8",
+   "after_sha256_lf": "d4e0c4c9e195ceb8837a8719b9660b49a45a6c8cf9761d942c67389033fc34ab",
    "edits": [
     {
      "location": "P7, crédito puro: José de Sousa Azevedo, <i>Morte do Conde Andeiro</i>, c. 1860. Domínio",
@@ -213,8 +213,8 @@
    ]
   },
   "m1/licao-m1-f15/index.html": {
-   "base_sha256_lf": "fc3e8ae8b6d8ea9ce1faeac1f02896a437a4c456067bc715e90206075bf03205",
-   "after_sha256_lf": "87ea2db49768bed5722382de5ad915f48c87f766b4eecf91e6d729352397395b",
+   "base_sha256_lf": "a1904bc553a8e899140f92d1230fcd027ae0051a1355e521f6e7dfc589890378",
+   "after_sha256_lf": "bcdbe1065b7d49bcaebe23c94ab3694b99f47f0f1f8bc0513b783a5d7cc2cb76",
    "edits": [
     {
      "location": "P7, crédito puro: Ilha de San Simón, ria de Vigo (Iago Pillado, 2024). CC BY-SA 4.0.",
@@ -291,8 +291,8 @@
    ]
   },
   "m1/m1-promessa-do-cronista/index.html": {
-   "base_sha256_lf": "9ce535e6043fe0fbc9f639ef477b8bcb8f8a99b5139fff533c6732eaa938508f",
-   "after_sha256_lf": "1c70820a8c8f9f161ed936d307be53c97c50c277a1103c78160083781e7be28d",
+   "base_sha256_lf": "f4f5b228b2e034415a799befa17e33d7ec9fd4c068b2edaa49d70c354039332f",
+   "after_sha256_lf": "2f6e6cf081411c1f924acfa4b36f7446e1305932679e5586614a9b7f4220dab7",
    "edits": [
     {
      "location": "P14, «Pensar devagar»: o fr-cred passa para o «i»; o fr-leg fica",
@@ -309,8 +309,8 @@
    ]
   },
   "m1/m1-voz-emprestada/index.html": {
-   "base_sha256_lf": "38a2c47b113fe0c2553f77bef1e4b256f2dfdab7dd8bf2279d0d122c93d53cc4",
-   "after_sha256_lf": "c56bb97665e9666bd7a41a81aeeca9ea096ea70b6bf9dd70217db29a5251520a",
+   "base_sha256_lf": "a1b70eafdefd425bc3eaafa21d2c2449959dc6cbe7b3a54c78f2403c5b833ccf",
+   "after_sha256_lf": "087923f46d7d657a24396c6f42713b97dc7d2c3abff40a4e5898f21d9433c41f",
    "edits": [
     {
      "location": "P14, «Pensar devagar»: o fr-cred passa para o «i»; o fr-leg fica",
@@ -453,8 +453,8 @@
    ]
   },
   "m2/m2-ines-escolhe-duas-vezes/index.html": {
-   "base_sha256_lf": "a5780ab792fbf19b15fb1460cae79c0f483099a90d51f635baf8b3474cbd8423",
-   "after_sha256_lf": "4533ff10e18d9c5ec5933489cc937bc22eea9d698ddd239f0dab4bf0c9ee8955",
+   "base_sha256_lf": "3d57bb4e2a0060908f24014b2557072af467f8fe5b558ffa883687bd10a71688",
+   "after_sha256_lf": "ac48153346362cfeddd8d00de02b40df2b49dffb17e791a199d1c010495cedad",
    "edits": [
     {
      "location": "P14, «Pensar devagar»: o fr-cred passa para o «i»; o fr-leg fica",
@@ -471,8 +471,8 @@
    ]
   },
   "m2/m2-maquina-de-rir/index.html": {
-   "base_sha256_lf": "b1f8440d9205d9d3891e46ead3524ee1f3534a7cc2204b5db75ffd61dc4d8df0",
-   "after_sha256_lf": "d82745ec57febd28d992a1f85f9dc9ed4c32268df6b2dc37ee372fc8ed2181f2",
+   "base_sha256_lf": "77ffeaa767e2d97581a109d8626234ce4f1c5b2e2187a83eadbb3b8a48bd4f72",
+   "after_sha256_lf": "a9488a9d9777c4ab330dc57efa34ffdcfb866175e68562730dd7a97aa0c30562",
    "edits": [
     {
      "location": "P14, «Pensar devagar»: o fr-cred passa para o «i»; o fr-leg fica",
@@ -525,8 +525,8 @@
    ]
   },
   "m3/m3-soneto-raciocinio/index.html": {
-   "base_sha256_lf": "ca0e789afa7830d2e32bd4f8a498f64191a94b8388771c0a94192249fbe7037b",
-   "after_sha256_lf": "69723f3c07333c638e34246ebc43c7281ebbdea0b76e0d78dcc1ad1535afcc26",
+   "base_sha256_lf": "3d8c97e21e8171d02439e839fbc7dd35819d0d9a4957a9fadef1ddccee777da2",
+   "after_sha256_lf": "b5b2d56da4aecdf1bd54f94b208061e5cf57c882a972bbf1b875269b48d809f0",
    "edits": [
     {
      "location": "P14, «Pensar devagar»: o fr-cred passa para o «i»; o fr-leg fica",
@@ -543,8 +543,8 @@
    ]
   },
   "m3/m3-velho-restelo-juri/index.html": {
-   "base_sha256_lf": "4b1e7d570173b0549e391fabd74700ec9ba38049b8ee602b7f2682633772213f",
-   "after_sha256_lf": "1f578ac9f3ce9d9494751fddb37234144849fb1cd2ce0aba6d9f4d4bb1eaf77a",
+   "base_sha256_lf": "1c7eadf361d4f3e7d5fa248e4ac992ef91d7670e98afd79207ca6ac3aed0ef05",
+   "after_sha256_lf": "cd15199000cbad0a3a9f0f8c39b42f0799cc511c7d0eb6a6ebe0ec3f0f06194b",
    "edits": [
     {
      "location": "P14, «Pensar devagar»: o fr-cred passa para o «i»; o fr-leg fica",
@@ -621,8 +621,8 @@
    ]
   },
   "m4/licao-m4-f01/index.html": {
-   "base_sha256_lf": "9ece8193e0da88c654c301c9bc09bd65682e3501d3941e4eb5159d996b19f0c2",
-   "after_sha256_lf": "d25d1f22c3ffc0f59d9b74dde6373dcbfa2a06935cb6b930f9e17cc98dbfc80a",
+   "base_sha256_lf": "2e2ef4a462d3b57a47785fbcde8fb36030b3b5cf936379af34ab5f22d86be057",
+   "after_sha256_lf": "843fc177cd645dac7f6d4934ec36433c29e5d7bcdea5b5455c4e7d4e935dd91b",
    "edits": [
     {
      "location": "P7, crédito puro: Garcia Fernandes, <i>Santo António a pregar aos peixes</i>, c. 1535-15",
@@ -675,8 +675,8 @@
    ]
   },
   "m4/licao-m4-f02/index.html": {
-   "base_sha256_lf": "c9c84ed8afa07c5d6d0752c3e28e53eb731387b53edaef4f689915cac042e477",
-   "after_sha256_lf": "99b3fc2a1a5692ae03d1b3025327680600612d2a6e9c7b5aa89aa6e3d699ea4b",
+   "base_sha256_lf": "98a23834b78059915a53fff078cdd3f97a7ef0e380c510b846f0167a9a864da1",
+   "after_sha256_lf": "e6e5fc3a92979124f388b44e70bbca04e6bbd1b4f46e83133869a40b299e3939",
    "edits": [
     {
      "location": "P7, crédito puro: <i>Sermoens</i> de Vieira, Lisboa, 1682: a primeira página do sermão. ",
@@ -717,8 +717,8 @@
    ]
   },
   "m4/licao-m4-f04/index.html": {
-   "base_sha256_lf": "fc048c489c38d8f939a48abf8a6f444eadab0112ae59ae79289bb10690014e85",
-   "after_sha256_lf": "e17a2e8b56781bfe94a0f4bd4f86cbeadaaac23937c40f9a7ddaa0c37dab6043",
+   "base_sha256_lf": "0a0875b424e47e8a6a45e9b441e8a41e95526afcfe3cd49719801fb691436bfe",
+   "after_sha256_lf": "7ba9f9ead862bed9615780c390ac2facd7d401f6a81dac51748d58162abe826e",
    "edits": [
     {
      "location": "P7, crédito puro: José Artur Leitão Bárcia, mercado de peixe na Ribeira Nova, Lisboa, c.",
@@ -747,8 +747,8 @@
    ]
   },
   "m4/licao-m4-f06/index.html": {
-   "base_sha256_lf": "31412d4240951134e908e42ac73a242c499f65c2cf43eecba89f071aa7af1cf4",
-   "after_sha256_lf": "f1e3d5efd20dc385bb2047d1e4f19429e592cd6de557845f312ebd176099dc5f",
+   "base_sha256_lf": "fff0422668e3a874c856e070937e709beae4be1634f61ed2949ef9b2b50a8ec6",
+   "after_sha256_lf": "435edc84616ba7f801e9979bd8a55a6e641c66e3c4f5310b7538bab86fbef818",
    "edits": [
     {
      "location": "P7, crédito puro: Allen &amp; Ginter, <i>Peixe-voador</i>, cromolitografia, 1889, The Me",
@@ -765,8 +765,8 @@
    ]
   },
   "m4/licao-m4-f07/index.html": {
-   "base_sha256_lf": "95325b4c477e52698a6337ada1167756bd0db28804f05e098257abe1b1c835da",
-   "after_sha256_lf": "43083829236878d94269d54af07b6398f3c33ddb3bcb21a79344ff61a69880f2",
+   "base_sha256_lf": "f1ce03f12dab78bb8c2579dcdfcf35ba7cffedda2411113fb0ddef1367c16906",
+   "after_sha256_lf": "b92d52b8ca73a32e846570e4d22fca87dd17b46bc9d89371c2a4b041be9a7187",
    "edits": [
     {
      "location": "P7, crédito puro: José Malhoa, <i>Almeida Garrett</i>, 1881, pintado depois da morte do ",
@@ -783,8 +783,8 @@
    ]
   },
   "m4/licao-m4-f08/index.html": {
-   "base_sha256_lf": "117d1861a18194071f4a5c23f00c674ef346bbafe915aa4758a334b438964418",
-   "after_sha256_lf": "d6a8735cb208af435248ad58e3aae85423f5cac9d8c0b4aec3a5b6a8cf6e7356",
+   "base_sha256_lf": "b113beb9e1e0b939e0310556f04d2b4badb32c9a4ccb6e302eaaa0df27e4dbdc",
+   "after_sha256_lf": "7a061a4b50a1450e127b4d07f8af6125652fa365ec9825c2e7eb5064871d85f4",
    "edits": [
     {
      "location": "P7, crédito puro: Miguel Ângelo Lupi, <i>D. João de Portugal</i>, 1863. Domínio público.",
@@ -849,8 +849,8 @@
    ]
   },
   "m4/licao-m4-f11/index.html": {
-   "base_sha256_lf": "0201dacd5ee5561e96f53571976a9597fbdf6f57c13367ce50d15a54f3946352",
-   "after_sha256_lf": "db755988aa23bb45ad8aed9c0349a662301bce97de2700d1b96d9dfe399f1bfd",
+   "base_sha256_lf": "d636631cc13711fbe032633a4124aa021cdf256e02c45e50b78777832953072d",
+   "after_sha256_lf": "fdcc0e175bf4d2101c78f97dc5c073b49053d8d7aeeed686e390655018c75617",
    "edits": [
     {
      "location": "P7, crédito puro: <i>Sermoens</i> de Vieira, Lisboa, 1682: a nota por baixo do título. D",
@@ -891,8 +891,8 @@
    ]
   },
   "m4/licao-m4-f14/index.html": {
-   "base_sha256_lf": "aacc51a07ebbd4b092d4f68ef287213d4fafb13f2f38600ce5376ae8072948d3",
-   "after_sha256_lf": "c4ce3e74d7a68dd74e0865da459ce393c1780058b5245ad983e5a444035a3f01",
+   "base_sha256_lf": "f12fcfcac93a19b3e3f07f0df2838b427101407759726dcb5c372ee57fc1e9d1",
+   "after_sha256_lf": "0a6a37678b15fd68ae457d490e66f77166ff4f043ed11e76fec3a13eb3998663",
    "edits": [
     {
      "location": "P7, crédito puro: José Artur Leitão Bárcia, sala das sessões, São Bento, 1909. Domínio p",
@@ -909,8 +909,8 @@
    ]
   },
   "m4/licao-m4-f15/index.html": {
-   "base_sha256_lf": "f3f8f4033768f2228570ce878c7471ac7105edc0d8eb96a61049808434ff010c",
-   "after_sha256_lf": "cf85b5b1fcbba3281b03d9649dc8ffe55ab0a07ef0fe3e18aebb57384fb8af73",
+   "base_sha256_lf": "0bed1d00d691a28e2755a582c1473782d40d9f1639d9839186e51ca4f4a83899",
+   "after_sha256_lf": "56985fba785731b5eede951763d53a2a372b0aadff1de1635851f5b18f263be4",
    "edits": [
     {
      "location": "P7, crédito puro: <i>Sermoens</i> de Vieira, Lisboa, 1682: a primeira página do sermão. ",
@@ -927,8 +927,8 @@
    ]
   },
   "m4/licao-m4-f20/index.html": {
-   "base_sha256_lf": "13d8977a87ae3749e400ac547fed8dc25adc0c0ec8f8756ce725d9b441cc11e8",
-   "after_sha256_lf": "ac35cf708537455c045da7606321cd97ad6ea8e815409b783138d55e73aa3e0d",
+   "base_sha256_lf": "05ec8d4902ebf7be74ecab1c0b34a55e7402c0fae8c894b37589d79fb5604c87",
+   "after_sha256_lf": "05d505ba5d25db2a57446eb11eac24537e788838ec9bd3a441da7cebb4095bec",
    "edits": [
     {
      "location": "P7, crédito puro: Miguel Ângelo Lupi, <i>D. João de Portugal</i>, 1863. Domínio público.",
@@ -951,8 +951,8 @@
    ]
   },
   "m4/licao-m4-f25/index.html": {
-   "base_sha256_lf": "750e62f7be7b6454c75517a843238f06f92d9bb7352f1d55e462f3eb96164804",
-   "after_sha256_lf": "b4bdb292c4a160b4b60b5e71482414bd9b214189dde84b33df7e460e305e7ccf",
+   "base_sha256_lf": "c69ce2227094bce4427c2cb3ec5a19c5211eca12c39013f6042c63b9a8e6c7ea",
+   "after_sha256_lf": "6dbe482868bcd515f44e0c8ba25cc279111b550785812f98eea14eb96fce7fb9",
    "edits": [
     {
      "location": "P7, crédito puro: Allen &amp; Ginter, <i>Peixe-voador</i>, cromolitografia, 1889, The Me",
@@ -969,8 +969,8 @@
    ]
   },
   "m4/licao-m4-f26/index.html": {
-   "base_sha256_lf": "e701514b1a4ce38c0e24ddc00635bf1e684071e38e39f923e30d4d924a901146",
-   "after_sha256_lf": "548693d84d504954ce12a76f175081441b3bc0422a627ce159422732eb57f28b",
+   "base_sha256_lf": "e7f4b196acf41d7db6f265401e2195806b36dfa0e0b27c4d20e4c9c48f863f31",
+   "after_sha256_lf": "f316c3eb6ac5a7f20a53661e20b69cf36829eab6ac5f4893bb63bdf3379e7137",
    "edits": [
     {
      "location": "P7, crédito puro: <i>Frei Luiz de Sousa</i>, primeira edição, 1844: a lista das pessoas.",
@@ -1023,8 +1023,8 @@
    ]
   },
   "m4/m4-frei-luis-quem-sabia/index.html": {
-   "base_sha256_lf": "ab469607226250a1acbbc0b01fcf8a783ca60532efffd4f6f04f343241a45e40",
-   "after_sha256_lf": "98a179c7cdb57db55a0cfd031212186b9db452fae8d9b091d6f4955ed2855141",
+   "base_sha256_lf": "61984d38af8d0e3ce8892e19fdcdc3dbe6233e0000411dfe9b5e0eed56702822",
+   "after_sha256_lf": "780058d049037f948acb65aee61e71d9f6d0ab58d548a61a27dd2f60ccbb7e70",
    "edits": [
     {
      "location": "P14, «Pensar devagar»: o fr-cred passa para o «i»; o fr-leg fica",
@@ -1041,8 +1041,8 @@
    ]
   },
   "m4/m4-sermao-tribunal/index.html": {
-   "base_sha256_lf": "4d8dc87f3dbfdd9b14532680f5100d84dcd4f5c5826007bcb04cf7509a3117dc",
-   "after_sha256_lf": "ea4d6cb22cffa3ff838ac6d7fe5ed420dc08229ad088eeddd2b83face89f6af5",
+   "base_sha256_lf": "0af428fa8ae9c10576e09b41ee34b86f8cd2e286b0f8f09c004fc56c11c8492f",
+   "after_sha256_lf": "6167c33c1ba7929ca1cacea79971b308f48e902a336cbb98e3b23ec318eb1b63",
    "edits": [
     {
      "location": "P14, «Pensar devagar»: o fr-cred passa para o «i»; o fr-leg fica",
@@ -1239,8 +1239,8 @@
    ]
   },
   "m5/m5-o-pais-ou-eles/index.html": {
-   "base_sha256_lf": "d7de3cbab0a2748d28b667a848d5b16ebea7381d5f5b961314e59e9943a67855",
-   "after_sha256_lf": "6ca1519b2fe1c5909d9b6ed47defed8c5943ff1e2c87b449142a6e2cb5427d68",
+   "base_sha256_lf": "dd1bf467bab566616a6c3df1f76b99aead9baef3c1761504645c932bcd1b923a",
+   "after_sha256_lf": "33ad9ee4c53a8983512fc2e52e23e5e295458d2304773108cb4f6647e26a2bd4",
    "edits": [
     {
      "location": "P14, «Pensar devagar»: o fr-cred passa para o «i»; o fr-leg fica",
@@ -1257,8 +1257,8 @@
    ]
   },
   "m5/m5-quem-podia-ter-feito-diferente/index.html": {
-   "base_sha256_lf": "a1a1617d286d3449d5cc68bca98da962d06f9f8c1b17460d6c32acbd45381bdf",
-   "after_sha256_lf": "bacd00258d1f867f33d60c23f874fafc6ece417ca13b489a7d978af52b30dc1f",
+   "base_sha256_lf": "48f0e23bbfbc3a30d23804433d1d7a1bba216caf08b2ba283ea146f497df760f",
+   "after_sha256_lf": "9c807fc3cbe14022f6ab32b7dfdbb6c23de92118c0e444309cebf6d06a86aaa8",
    "edits": [
     {
      "location": "P14, «Pensar devagar»: o fr-cred passa para o «i»; o fr-leg fica",
@@ -1329,8 +1329,8 @@
    ]
   },
   "m6/m6-antero-viagem-ao-nada/index.html": {
-   "base_sha256_lf": "c3b08b90a0285555592ecacaa2819200fae70f565b6d2f1f0c1d14d914e618bd",
-   "after_sha256_lf": "4fae29c2a015a3bdaae71e674fb8d1452f8dae23e4f6313708b6b372d457f318",
+   "base_sha256_lf": "7587bcc1c8bdad0287859c5629e52859bef8d4a901fe2c6bf34abd18e0b1a3ba",
+   "after_sha256_lf": "7c02b3eac1237b255da46aaf10c75fc07f073d2d0ca2cf1421b5685604c42f90",
    "edits": [
     {
      "location": "P14, «Pensar devagar»: o fr-cred passa para o «i»; o fr-leg fica",
@@ -1347,8 +1347,8 @@
    ]
   },
   "m6/m6-cesario-noite-inteira/index.html": {
-   "base_sha256_lf": "5eca564dd578ec2d92a604321cc1bb14d3b3e0f6905e1dc0c3e5bea75de82adb",
-   "after_sha256_lf": "bda999a66321c3fc0daba9f13f9fb0f31bcebab521feba3997460888e2099bf0",
+   "base_sha256_lf": "8294f98412f9d4e34801fbadfc15a0c4bd5fba8ae882b28b918af9c8ef32c355",
+   "after_sha256_lf": "89f076d137009814bcc8595f25eb5d74ceb83653353dfc505552ce64bc537575",
    "edits": [
     {
      "location": "P14, «Pensar devagar»: o fr-cred passa para o «i»; o fr-leg fica",
@@ -1467,8 +1467,8 @@
    ]
   },
   "m7/licao-m7-f34/index.html": {
-   "base_sha256_lf": "4c23e571fa3a24cf7850a10d46f74b65626ac77cdad6e2f1f6193d54e59a15f0",
-   "after_sha256_lf": "8aaf0145c093853e6e92f85072a21428248dce3c1ab944500cf1206a104ddedf",
+   "base_sha256_lf": "340f7597781b59652ce6fcc5b97b96ad75d32b72e17419a24746d9bdfaab8855",
+   "after_sha256_lf": "bcda38ca1e6db2ef6067a3b75f80716d8a05c18a8d9a640c3387945289998cfb",
    "edits": [
     {
      "location": "P11, dupla exposição: o crédito sai do small para o «i»; a instrução fica",
@@ -1485,8 +1485,8 @@
    ]
   },
   "m7/m7-fingidor-maquina/index.html": {
-   "base_sha256_lf": "1078f9f732af032cd6ab2b0e011db6f9bd4088f0882869af3d4a30b1be394589",
-   "after_sha256_lf": "f5245020e74996568b4662527e432d9feb66f12d297781087ff4cd14c411c025",
+   "base_sha256_lf": "04c17bdb5d46ef738d977a57ad5b3daedfa805149951244027109d8ea95c77d2",
+   "after_sha256_lf": "407d7680d9a6ff34e885505fe0d2be25abd3cfe816a740f0e3815d99fdc2f89f",
    "edits": [
     {
      "location": "P14, «Pensar devagar»: o fr-cred passa para o «i»; o fr-leg fica",
@@ -1503,8 +1503,8 @@
    ]
   },
   "m7/m7-quatro-vozes-um-problema/index.html": {
-   "base_sha256_lf": "2b8b6bbe6efda569cd14afd19724331da349bde38fb8f0ff684281067a580082",
-   "after_sha256_lf": "31797392674f27c05211d7c4727cc6ea40632b62f7f03b012423089af60c08c1",
+   "base_sha256_lf": "8717f19deeeac713d14ea1950ae1dd56a9aa743b2df8fa88f2c405d085486689",
+   "after_sha256_lf": "a06f6a2754cd3d8159bd44a259b3c2f075e6977ab935376960e123cc145a33f6",
    "edits": [
     {
      "location": "P14, «Pensar devagar»: o fr-cred passa para o «i»; o fr-leg fica",
@@ -1671,8 +1671,8 @@
    ]
   },
   "m8/m8-poema-testemunha/index.html": {
-   "base_sha256_lf": "d4f45e68eb0b2c331a041ac51c32e02424c3a1580c9f4492340ecd8267097242",
-   "after_sha256_lf": "068396fdb25034a7599315b82b229b5b81e91cc790dd3653ab3443f3cd0d1167",
+   "base_sha256_lf": "110344cb9fae371d884d99881e6f2706fd9d3bce750c66d5cd2eb7e866c2ad0d",
+   "after_sha256_lf": "0d9a4e6cdd8ea78d9a782221a97b5967f231cd5a61051e75aa68494939a6b3ff",
    "edits": [
     {
      "location": "P14, «Pensar devagar»: o fr-cred passa para o «i»; o fr-leg fica",
@@ -1725,8 +1725,8 @@
    ]
   },
   "m9/m9-de-quem-e-o-convento/index.html": {
-   "base_sha256_lf": "32fa33017104d277320e0d2608c4a22eb558b86fd6b21bf221e6e85a382890af",
-   "after_sha256_lf": "dc0c9ce0701999f1687db667301f9518f1b6a1845f3de28b289f686585e08fa5",
+   "base_sha256_lf": "2b5b6c7f054db07f91971fa198a27b91937be80f5aff97b2c6c8e0bd2be92023",
+   "after_sha256_lf": "39786b2f5d7e18c6deab8854dfc2d9ca4f997e3639eb6c1ea6b6b8a48a54d015",
    "edits": [
     {
      "location": "P14, «Pensar devagar»: o fr-cred passa para o «i»; o fr-leg fica",
@@ -1743,8 +1743,8 @@
    ]
   },
   "m9/m9-ver-e-nao-ver/index.html": {
-   "base_sha256_lf": "79e585ce5ba54c0b00871924d8073edd7ed96d23d0dc39923b4c24e67984aa02",
-   "after_sha256_lf": "b5799d7a3afcacce8a3dd92727624500253e9c839819135fdff820fd46cb7aef",
+   "base_sha256_lf": "e9b8948e234232f1ce7c256a278e1158e14989d7ebab41f3e0efe3ea37e9e00e",
+   "after_sha256_lf": "ad38fe278c320acbaeb4b645143e7c0a0e2e93a1e98bdb5a08224b4e50904622",
    "edits": [
     {
      "location": "P14, «Pensar devagar»: o fr-cred passa para o «i»; o fr-leg fica",

@@ -842,13 +842,26 @@ def main():
                 # 02/11/2026: a atribuição de IA é posterior ao lote 2 publicado.
                 # 03/11/2026: primeiro a camada visual do cabecalho.
                 # 05/11/2026: antes de tudo, a revisão de 5/11, a camada mais recente.
-                # 05/11/2026: e, antes do contexto do Laboratório do exame, os créditos atrás de um «i» (decisão 153), a camada mais recente.
+                # 06/11/2026: antes de tudo, os créditos atrás de um «i» (decisão 153), a camada mais recente, por cima do lote 3 do
+                # Atlas depois de juntar o main.
                 creditos_i = ROOT / 'tests/fixtures/creditos-i-edits-20261105.json'
                 for edit in reversed(json.loads(creditos_i.read_text('utf-8'))['files'].get(rel, {}).get('edits', [])):
                     if conferencia.count(edit['new']) != edit['occurrences']:
                         raise ManifestoDesatualizado(f'{rel}: créditos atrás de um «i» não conferem')
                     conferencia = conferencia.replace(edit['new'], edit['old'])
-                # 05/11/2026: e, antes do Laboratório do exame, o contexto de cada sessão, a camada mais recente.
+                # 06/11/2026: depois, o lote 3 do Atlas, por cima da decisão 154 depois de juntar o main.
+                atlas3 = ROOT / 'tests/fixtures/atlas-lote3-edits-20261105.json'
+                for edit in reversed(json.loads(atlas3.read_text('utf-8'))['files'].get(rel, {}).get('edits', [])):
+                    if conferencia.count(edit['new']) != edit['occurrences']:
+                        raise ManifestoDesatualizado(f'{rel}: lote 3 do Atlas não confere')
+                    conferencia = conferencia.replace(edit['new'], edit['old'])
+                # 05/11/2026: e, logo a seguir, a decisão 154 (os exercícios fazem-se sozinho).
+                autonomia = ROOT / 'tests/fixtures/autonomia-154-edits-20261105.json'
+                for edit in reversed(json.loads(autonomia.read_text('utf-8'))['files'].get(rel, {}).get('edits', [])):
+                    if conferencia.count(edit['new']) != edit['occurrences']:
+                        raise ManifestoDesatualizado(f'{rel}: decisão 154 (exercícios a sós) não confere')
+                    conferencia = conferencia.replace(edit['new'], edit['old'])
+                # 05/11/2026: e, antes do Laboratório do exame, o contexto de cada sessão.
                 contexto = ROOT / 'tests/fixtures/exame-contexto-edits-20261105.json'
                 for edit in reversed(json.loads(contexto.read_text('utf-8'))['files'].get(rel, {}).get('edits', [])):
                     if conferencia.count(edit['new']) != edit['occurrences']:

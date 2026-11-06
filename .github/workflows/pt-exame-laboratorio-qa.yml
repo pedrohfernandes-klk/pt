@@ -23,6 +23,14 @@ on:
       # 05/11/2026: a camada do contexto de cada sessão do Laboratório do exame (lição e excerto, não «recorte»).
       - 'scripts/exame_contexto_20261105.json'
       - 'tests/fixtures/exame-contexto-edits-20261105.json'
+      # 05/11/2026: a camada da decisão 154 (os exercícios fazem-se sozinho), que também muda obras/memorial e obras/mensagem.
+      - 'scripts/autonomia_154_20261105.json'
+      - 'tests/fixtures/autonomia-154-edits-20261105.json'
+      - 'tests/fixtures/atlas-lote3-edits-20261105.json'
+      # 06/11/2026: os créditos atrás de um «i» (decisão 153, pedido pt-2), a camada mais recente.
+      - 'scripts/creditos_i_20261105.json'
+      - 'tests/fixtures/creditos-i-edits-20261105.json'
+      - 'tests/test_autonomia_154.py'
       - '.github/workflows/pt-exame-laboratorio-qa.yml'
 permissions:
   contents: read
@@ -51,9 +59,13 @@ jobs:
           python scripts/provas/opcoes.py --exigir
           # 05/11/2026: a camada do Laboratório do exame confere-se aqui (é a mais recente; nada por cima dela).
           # 05/11/2026: o contexto de cada sessão (lição e excerto, não «recorte») passa a ser a camada mais recente: confere-se aqui sem nada por cima, e desfaz-se antes de conferir a ligação e as notas.
-          # 05/11/2026: os créditos atrás de um «i» (decisão 153, pedido pt-2) passam a ser a camada mais recente (não mexem no exame): desfazem-se antes de conferir o contexto, a ligação e as notas, com a mesma exigência.
-          python scripts/aplicar_trocas.py scripts/exame_contexto_20261105.json --manifesto tests/fixtures/exame-contexto-edits-20261105.json --verificar --desfazer-antes tests/fixtures/creditos-i-edits-20261105.json
-          python scripts/aplicar_trocas.py scripts/exame_licao_20261105.json --manifesto tests/fixtures/exame-licao-edits-20261105.json --verificar --desfazer-antes tests/fixtures/creditos-i-edits-20261105.json --desfazer-antes tests/fixtures/exame-contexto-edits-20261105.json
+          # 05/11/2026: a decisão 154 (os exercícios fazem-se sozinho) passa a ser a camada mais recente: confere-se aqui sem nada por cima, com o seu teste, e desfaz-se antes do contexto e da ligação e das notas, com a mesma exigência.
+          python -m unittest discover -s tests -p 'test_autonomia_154.py' -v
+          # 06/11/2026: o lote 3 do Atlas fica por cima da decisão 154 depois de juntar o main; confere-se primeiro e desfaz-se antes dela.
+          python scripts/aplicar_trocas.py scripts/atlas_lote3_20261105.json --manifesto tests/fixtures/atlas-lote3-edits-20261105.json --verificar --desfazer-antes tests/fixtures/creditos-i-edits-20261105.json
+          python scripts/aplicar_trocas.py scripts/autonomia_154_20261105.json --manifesto tests/fixtures/autonomia-154-edits-20261105.json --verificar --desfazer-antes tests/fixtures/creditos-i-edits-20261105.json --desfazer-antes tests/fixtures/atlas-lote3-edits-20261105.json
+          python scripts/aplicar_trocas.py scripts/exame_contexto_20261105.json --manifesto tests/fixtures/exame-contexto-edits-20261105.json --verificar --desfazer-antes tests/fixtures/creditos-i-edits-20261105.json --desfazer-antes tests/fixtures/atlas-lote3-edits-20261105.json --desfazer-antes tests/fixtures/autonomia-154-edits-20261105.json
+          python scripts/aplicar_trocas.py scripts/exame_licao_20261105.json --manifesto tests/fixtures/exame-licao-edits-20261105.json --verificar --desfazer-antes tests/fixtures/creditos-i-edits-20261105.json --desfazer-antes tests/fixtures/atlas-lote3-edits-20261105.json --desfazer-antes tests/fixtures/autonomia-154-edits-20261105.json --desfazer-antes tests/fixtures/exame-contexto-edits-20261105.json
       - name: Preparar navegador
         run: |
           # 05/11/2026: playwright fixado em 1.64.1; a 1.65.0 saiu no npm sem o playwright-core 1.65.0 (ETARGET).
