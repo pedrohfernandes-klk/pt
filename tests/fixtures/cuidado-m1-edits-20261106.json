@@ -1,0 +1,2070 @@
+{
+ "base_commit": "8dbcb41967ea1676bc8befbacbc0144ee47caadd",
+ "_nota": "06/11/2026: decisão 152 do docente («cuidado em todas as lições»), módulo M1: os 48 achados CONFIRMADOS da varredura de 6/11 (bordo/cidadania-v3/cuidado-152/m1-confirmados.json): 12 tabelas onde há itens paralelos (A, como na M7-F10 e na M7-F15: class apoio-tabela, th scope, td data-label e os role; cada página com tabela nova carrega assets/pt-lessons/apoios-tabelas.css antes da camada de aparência), 34 referências e números que não se partem entre linhas (B: U+00A0 depois de v., p., pp., cap., caps., séc., c., vol., n.º, D. e S., entre «século» e o numeral, entre ordinal e nome, entre número e unidade e dentro das datas; U+2060 logo a seguir ao traço de intervalo) e 2 casos do mesmo tipo (C: listas). Camada mais recente, por cima dos créditos atrás de um «i» (creditos_i_20261105). Gerada por scripts/cuidado_m1_20261106.py e aplicada por scripts/aplicar_trocas.py: não se edita à mão. O texto visível fica igual, salvo a estrutura das tabelas e das listas e os espaços invisíveis; três achados A (tarefas M1-U1 e M1-U2, guia da tarefa) aplicam-se ao texto de depois da decisão 154. A casca (migalhas e menu) só muda onde o achado o diz: no índice do módulo e no guia da tarefa («1.º ano» nas migalhas); no mapa e no portefólio fica. «c. 1860» já não partia (creditos_i_20261105). As páginas geradas mudam também nos dados dos geradores (docs/pedagogia/tarefas-escolha/m1-u1.json e m1-u2.json, docs/pedagogia/aquecimentos/m1-u1.json, docs/pedagogia/grelhas-tarefas-20261027.json, entradas m1-u1 e m1-u2), que estão nesta camada, e regeneram-se sem diferenças.",
+ "files": {
+  "m1/gram-complementos/index.html": {
+   "base_sha256_lf": "9b215d856633022c0257193e0c44ffb0bcd1385028e177aee3582bf7c2c9eaa0",
+   "after_sha256_lf": "55c028c86b56838f8001b96064b9afeecd816452d568041f89e0cd97dd4442f8",
+   "edits": [
+    {
+     "location": "m1/gram-complementos: «caps. CXVI e CXLVIII» com espaço que não quebra",
+     "old": "caps. CXVI e CXLVIII",
+     "new": "caps. CXVI e CXLVIII",
+     "occurrences": 2
+    },
+    {
+     "location": "m1/gram-complementos: «cap. 148» com espaço que não quebra",
+     "old": "cap. 148",
+     "new": "cap. 148",
+     "occurrences": 2
+    },
+    {
+     "location": "m1/gram-complementos: «cap. 115» com espaço que não quebra",
+     "old": "cap. 115",
+     "new": "cap. 115",
+     "occurrences": 1
+    },
+    {
+     "location": "m1/gram-complementos: «D. João» com espaço que não quebra",
+     "old": "D. João",
+     "new": "D. João",
+     "occurrences": 4
+    },
+    {
+     "location": "m1/gram-complementos: «João I» com espaço que não quebra",
+     "old": "João I",
+     "new": "João I",
+     "occurrences": 4
+    }
+   ]
+  },
+  "m1/gram-coordenadas/index.html": {
+   "base_sha256_lf": "9d16a02db85f2bc231d5ed91650d9fa29e7c26daec854ac2f6e900f2e9e3f6b2",
+   "after_sha256_lf": "68f69ea5175a43935c596d00af358bc36bb22667e15f13f49f50625e6a4c60c4",
+   "edits": [
+    {
+     "location": "m1/gram-coordenadas: «cap. XII» com espaço que não quebra",
+     "old": "cap. XII",
+     "new": "cap. XII",
+     "occurrences": 2
+    },
+    {
+     "location": "m1/gram-coordenadas: «n.º 861» com espaço que não quebra",
+     "old": "n.º 861",
+     "new": "n.º 861",
+     "occurrences": 2
+    },
+    {
+     "location": "m1/gram-coordenadas: «n.º 1520» com espaço que não quebra",
+     "old": "n.º 1520",
+     "new": "n.º 1520",
+     "occurrences": 2
+    },
+    {
+     "location": "m1/gram-coordenadas: «D. João» com espaço que não quebra",
+     "old": "D. João",
+     "new": "D. João",
+     "occurrences": 2
+    },
+    {
+     "location": "m1/gram-coordenadas: «João I» com espaço que não quebra",
+     "old": "João I",
+     "new": "João I",
+     "occurrences": 2
+    }
+   ]
+  },
+  "m1/gram-fonologia/index.html": {
+   "base_sha256_lf": "a08a9d888eaee15ff202191aeb953f161c7a722f45a83601714ade1cec9a1516",
+   "after_sha256_lf": "aef0db0f9465f247db73b8f4b555bc854230fd07f00153537a2eec5abb75c73e",
+   "edits": [
+    {
+     "location": "m1/gram-fonologia, E.passos[0] «Três palavras das cantigas» (details «Consultar o esquema PEP/ASA e experimentar»)",
+     "old": "<ul><li><strong>Entra (PEP):</strong> início, <strong>prótese</strong> (<i>scribere</i> &gt; escrever: vogal inicial); interior, <strong>epêntese</strong> (<i>humile</i> &gt; humilde: [d]); fim, <strong>paragoge</strong> (<i>ante</i> &gt; antes: consoante final).</li><li><strong>Desaparece (ASA):</strong> início, <strong>aférese</strong> (alevantada &gt; levantada: vogal inicial); interior, <strong>síncope</strong> (<i>malu</i> &gt; mau: [l]); fim, <strong>apócope</strong> (<i>amare</i> &gt; amar: vogal final).</li></ul>",
+     "new": "<table class=\\\"apoio-tabela\\\" role=\\\"table\\\"><thead role=\\\"rowgroup\\\"><tr role=\\\"row\\\"><th scope=\\\"col\\\" role=\\\"columnheader\\\">Onde</th><th scope=\\\"col\\\" role=\\\"columnheader\\\">Entra (PEP)</th><th scope=\\\"col\\\" role=\\\"columnheader\\\">Desaparece (ASA)</th></tr></thead><tbody role=\\\"rowgroup\\\"><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">início</th><td role=\\\"cell\\\" data-label=\\\"Entra (PEP)\\\"><strong>prótese</strong> (<i>scribere</i> &gt; escrever: vogal inicial)</td><td role=\\\"cell\\\" data-label=\\\"Desaparece (ASA)\\\"><strong>aférese</strong> (alevantada &gt; levantada: vogal inicial)</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">interior</th><td role=\\\"cell\\\" data-label=\\\"Entra (PEP)\\\"><strong>epêntese</strong> (<i>humile</i> &gt; humilde: [d])</td><td role=\\\"cell\\\" data-label=\\\"Desaparece (ASA)\\\"><strong>síncope</strong> (<i>malu</i> &gt; mau: [l])</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">fim</th><td role=\\\"cell\\\" data-label=\\\"Entra (PEP)\\\"><strong>paragoge</strong> (<i>ante</i> &gt; antes: consoante final)</td><td role=\\\"cell\\\" data-label=\\\"Desaparece (ASA)\\\"><strong>apócope</strong> (<i>amare</i> &gt; amar: vogal final)</td></tr></tbody></table>",
+     "occurrences": 1
+    },
+    {
+     "location": "m1/gram-fonologia, cabeça: a folha das tabelas de apoio, antes da camada de aparência",
+     "old": "<link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-universal-1\">",
+     "new": "<link rel=\"stylesheet\" href=\"../../assets/pt-lessons/apoios-tabelas.css?v=20261106.1\"><link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-universal-1\">",
+     "occurrences": 1
+    },
+    {
+     "location": "m1/gram-fonologia: «p. 244» com espaço que não quebra",
+     "old": "p. 244",
+     "new": "p. 244",
+     "occurrences": 1
+    },
+    {
+     "location": "m1/gram-fonologia: «pp. 5 e 9» com espaço que não quebra",
+     "old": "pp. 5 e 9",
+     "new": "pp. 5 e 9",
+     "occurrences": 1
+    },
+    {
+     "location": "m1/gram-fonologia: «n.º 1308» com espaço que não quebra",
+     "old": "n.º 1308",
+     "new": "n.º 1308",
+     "occurrences": 2
+    },
+    {
+     "location": "m1/gram-fonologia: «9.º ano» com espaço que não quebra",
+     "old": "9.º ano",
+     "new": "9.º ano",
+     "occurrences": 1
+    },
+    {
+     "location": "m1/gram-fonologia: «GTA 16» com espaço que não quebra",
+     "old": "GTA 16",
+     "new": "GTA 16",
+     "occurrences": 1
+    },
+    {
+     "location": "m1/gram-fonologia: «D. Dinis» com espaço que não quebra",
+     "old": "D. Dinis",
+     "new": "D. Dinis",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m1/guia-da-tarefa-m1/index.html": {
+   "base_sha256_lf": "ca0324d8db36875f09a4df8b301d1fce24f441a352969a74d77bbdf4a184eeae",
+   "after_sha256_lf": "42a35a976d35fc750df900d0a0f4c5102bbe3ddb51a166ca3abd3cadc9d116c2",
+   "edits": [
+    {
+     "location": "m1/guia-da-tarefa-m1, guia · «Aulas de tarefa das unidades»",
+     "old": "<p>Cada aula de 90 minutos começa com 10 minutos de aquecimento em cartões, no telemóvel e com consulta. Seguem-se 5 minutos de leitura do enunciado, 60 minutos de produção com consulta e 15 minutos de revisão e entrega.",
+     "new": "<p>Cada aula de 90 minutos:</p><table class=\"apoio-tabela\" role=\"table\"><thead role=\"rowgroup\"><tr role=\"row\"><th scope=\"col\" role=\"columnheader\">Momento</th><th scope=\"col\" role=\"columnheader\">Tempo</th></tr></thead><tbody role=\"rowgroup\"><tr role=\"row\"><th scope=\"row\" role=\"rowheader\">aquecimento em cartões, no telemóvel e com consulta</th><td role=\"cell\" data-label=\"Tempo\">10 minutos</td></tr><tr role=\"row\"><th scope=\"row\" role=\"rowheader\">leitura do enunciado</th><td role=\"cell\" data-label=\"Tempo\">5 minutos</td></tr><tr role=\"row\"><th scope=\"row\" role=\"rowheader\">produção com consulta</th><td role=\"cell\" data-label=\"Tempo\">60 minutos</td></tr><tr role=\"row\"><th scope=\"row\" role=\"rowheader\">revisão e entrega</th><td role=\"cell\" data-label=\"Tempo\">15 minutos</td></tr></tbody></table><p>",
+     "occurrences": 1
+    },
+    {
+     "location": "m1/guia-da-tarefa-m1, cabeça: a folha das tabelas de apoio, antes da camada de aparência",
+     "old": "<link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-universal-1\">",
+     "new": "<link rel=\"stylesheet\" href=\"../../assets/pt-lessons/apoios-tabelas.css?v=20261106.1\"><link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-universal-1\">",
+     "occurrences": 1
+    },
+    {
+     "location": "m1/guia-da-tarefa-m1: «1.º ano» com espaço que não quebra",
+     "old": "1.º ano",
+     "new": "1.º ano",
+     "occurrences": 2
+    },
+    {
+     "location": "m1/guia-da-tarefa-m1: «90 min» com espaço que não quebra (com o contexto «90 min »)",
+     "old": "90 min ",
+     "new": "90 min ",
+     "occurrences": 2
+    },
+    {
+     "location": "m1/guia-da-tarefa-m1: «250 a 300 palavras» com espaço que não quebra",
+     "old": "250 a 300 palavras",
+     "new": "250 a 300 palavras",
+     "occurrences": 2
+    }
+   ]
+  },
+  "m1/guilhade-dona-fea/index.html": {
+   "base_sha256_lf": "e3d7c02ddb853e938fdd3177d4541cf4e64a3e79abe472bee72490687888b513",
+   "after_sha256_lf": "48765162d102f08950c4f023ef65d26d58a2bf682e63a7b5271434c4a78529e2",
+   "edits": [
+    {
+     "location": "m1/guilhade-dona-fea: «séc. XIII» com espaço que não quebra",
+     "old": "séc. XIII",
+     "new": "séc. XIII",
+     "occurrences": 2
+    },
+    {
+     "location": "m1/guilhade-dona-fea: «D. Dinis» com espaço que não quebra",
+     "old": "D. Dinis",
+     "new": "D. Dinis",
+     "occurrences": 7
+    }
+   ]
+  },
+  "m1/index.html": {
+   "base_sha256_lf": "3b5c6772a6939860064950f3f4d1c30846d2eb56f3d7bf2f7c196e8a075bec22",
+   "after_sha256_lf": "fe419589995e4bf8a846ee0b7aafead828cc51a197ec533c02085c1603f5ef92",
+   "edits": [
+    {
+     "location": "m1, página do módulo · «Como se cumpre uma unidade» (p.avaliacao-tarefas)",
+     "old": "<p class=\"avaliacao-tarefas\">Pesos na avaliação: tarefa da Unidade 1, 30 %; tarefa da Unidade 2, 30 %; provas rápidas, 10 %; prova escrita, 30 %. Cada tarefa tem uma grelha /20.</p>",
+     "new": "<p class=\"avaliacao-tarefas\">Pesos na avaliação:</p><table class=\"apoio-tabela\" role=\"table\"><thead role=\"rowgroup\"><tr role=\"row\"><th scope=\"col\" role=\"columnheader\">Componente</th><th scope=\"col\" role=\"columnheader\">Peso</th></tr></thead><tbody role=\"rowgroup\"><tr role=\"row\"><th scope=\"row\" role=\"rowheader\">tarefa da Unidade 1</th><td role=\"cell\" data-label=\"Peso\">30 %</td></tr><tr role=\"row\"><th scope=\"row\" role=\"rowheader\">tarefa da Unidade 2</th><td role=\"cell\" data-label=\"Peso\">30 %</td></tr><tr role=\"row\"><th scope=\"row\" role=\"rowheader\">provas rápidas</th><td role=\"cell\" data-label=\"Peso\">10 %</td></tr><tr role=\"row\"><th scope=\"row\" role=\"rowheader\">prova escrita</th><td role=\"cell\" data-label=\"Peso\">30 %</td></tr></tbody></table><p class=\"avaliacao-tarefas\">Cada tarefa tem uma grelha /20.</p>",
+     "occurrences": 1
+    },
+    {
+     "location": "m1, cabeça: a folha das tabelas de apoio, antes da camada de aparência",
+     "old": "<link rel=\"stylesheet\" href=\"../assets/appearance.css?v=20261025-universal-1\">",
+     "new": "<link rel=\"stylesheet\" href=\"../assets/pt-lessons/apoios-tabelas.css?v=20261106.1\"><link rel=\"stylesheet\" href=\"../assets/appearance.css?v=20261025-universal-1\">",
+     "occurrences": 1
+    },
+    {
+     "location": "m1: «v. 14» com espaço que não quebra",
+     "old": "v. 14",
+     "new": "v. 14",
+     "occurrences": 1
+    },
+    {
+     "location": "m1: «v. 7» com espaço que não quebra",
+     "old": "v. 7",
+     "new": "v. 7",
+     "occurrences": 1
+    },
+    {
+     "location": "m1: «v. 4» com espaço que não quebra",
+     "old": "v. 4",
+     "new": "v. 4",
+     "occurrences": 1
+    },
+    {
+     "location": "m1: «Cap. XII» com espaço que não quebra",
+     "old": "Cap. XII",
+     "new": "Cap. XII",
+     "occurrences": 1
+    },
+    {
+     "location": "m1: «caps. CXVI e CXLVIII» com espaço que não quebra",
+     "old": "caps. CXVI e CXLVIII",
+     "new": "caps. CXVI e CXLVIII",
+     "occurrences": 1
+    },
+    {
+     "location": "m1: «século XVI» com espaço que não quebra",
+     "old": "século XVI",
+     "new": "século XVI",
+     "occurrences": 2
+    },
+    {
+     "location": "m1: «séculos XIII e XIV» com espaço que não quebra",
+     "old": "séculos XIII e XIV",
+     "new": "séculos XIII e XIV",
+     "occurrences": 1
+    },
+    {
+     "location": "m1: «1.º ano» com espaço que não quebra",
+     "old": "1.º ano",
+     "new": "1.º ano",
+     "occurrences": 2
+    },
+    {
+     "location": "m1: «6 de dezembro de 1383» com espaço que não quebra",
+     "old": "6 de dezembro de 1383",
+     "new": "6 de dezembro de 1383",
+     "occurrences": 3
+    },
+    {
+     "location": "m1: «3 de setembro de 1384» com espaço que não quebra",
+     "old": "3 de setembro de 1384",
+     "new": "3 de setembro de 1384",
+     "occurrences": 2
+    },
+    {
+     "location": "m1: «14 de agosto de 1385» com espaço que não quebra",
+     "old": "14 de agosto de 1385",
+     "new": "14 de agosto de 1385",
+     "occurrences": 2
+    },
+    {
+     "location": "m1: «6 de dezembro» com espaço que não quebra (com o contexto «6 de dezembro\"»)",
+     "old": "6 de dezembro\"",
+     "new": "6 de dezembro\"",
+     "occurrences": 1
+    },
+    {
+     "location": "m1: «3 de setembro» com espaço que não quebra (com o contexto «3 de setembro\"»)",
+     "old": "3 de setembro\"",
+     "new": "3 de setembro\"",
+     "occurrences": 1
+    },
+    {
+     "location": "m1: «14 de agosto» com espaço que não quebra (com o contexto «14 de agosto\"»)",
+     "old": "14 de agosto\"",
+     "new": "14 de agosto\"",
+     "occurrences": 1
+    },
+    {
+     "location": "m1: «30 %» com espaço que não quebra (com o contexto «,\"30 %»)",
+     "old": ",\"30 %",
+     "new": ",\"30 %",
+     "occurrences": 1
+    },
+    {
+     "location": "m1: «30 %» com espaço que não quebra (com o contexto «e 30 %»)",
+     "old": "e 30 %",
+     "new": "e 30 %",
+     "occurrences": 1
+    },
+    {
+     "location": "m1: «90 minutos» com espaço que não quebra",
+     "old": "90 minutos",
+     "new": "90 minutos",
+     "occurrences": 4
+    },
+    {
+     "location": "m1: «90 min» com espaço que não quebra (com o contexto «90 min<»)",
+     "old": "90 min<",
+     "new": "90 min<",
+     "occurrences": 4
+    },
+    {
+     "location": "m1: «10 min» com espaço que não quebra",
+     "old": "10 min",
+     "new": "10 min",
+     "occurrences": 2
+    },
+    {
+     "location": "m1: «25 %» com espaço que não quebra",
+     "old": "25 %",
+     "new": "25 %",
+     "occurrences": 1
+    },
+    {
+     "location": "m1: «35 %» com espaço que não quebra",
+     "old": "35 %",
+     "new": "35 %",
+     "occurrences": 1
+    },
+    {
+     "location": "m1: «250 a 300 palavras» com espaço que não quebra",
+     "old": "250 a 300 palavras",
+     "new": "250 a 300 palavras",
+     "occurrences": 1
+    },
+    {
+     "location": "m1: «160 a 200 palavras» com espaço que não quebra",
+     "old": "160 a 200 palavras",
+     "new": "160 a 200 palavras",
+     "occurrences": 1
+    },
+    {
+     "location": "m1: «80 a 120 palavras» com espaço que não quebra",
+     "old": "80 a 120 palavras",
+     "new": "80 a 120 palavras",
+     "occurrences": 1
+    },
+    {
+     "location": "m1: «D. Dinis» com espaço que não quebra",
+     "old": "D. Dinis",
+     "new": "D. Dinis",
+     "occurrences": 4
+    },
+    {
+     "location": "m1: «D. Pedro» com espaço que não quebra",
+     "old": "D. Pedro",
+     "new": "D. Pedro",
+     "occurrences": 4
+    }
+   ]
+  },
+  "m1/licao-m1-f01/index.html": {
+   "base_sha256_lf": "9f54a0b0c3b690bffd150b17871f0b4b8f6588688dc8c2279fe4de7f1bc417f7",
+   "after_sha256_lf": "80793875a772d09f15abe0190607ef16dcee60e81160c54ad22a37c1bd854a36",
+   "edits": [
+    {
+     "location": "M1-F01: «v. 14» com espaço que não quebra",
+     "old": "v. 14",
+     "new": "v. 14",
+     "occurrences": 1
+    },
+    {
+     "location": "M1-F01: «séculos XIII e XIV» com espaço que não quebra",
+     "old": "séculos XIII e XIV",
+     "new": "séculos XIII e XIV",
+     "occurrences": 2
+    },
+    {
+     "location": "M1-F01: «século XVI» com espaço que não quebra",
+     "old": "século XVI",
+     "new": "século XVI",
+     "occurrences": 2
+    },
+    {
+     "location": "M1-F01: «5.ª estrofe» com espaço que não quebra",
+     "old": "5.ª estrofe",
+     "new": "5.ª estrofe",
+     "occurrences": 2
+    },
+    {
+     "location": "M1-F01: «1 min» com espaço que não quebra",
+     "old": "1 min",
+     "new": "1 min",
+     "occurrences": 2
+    },
+    {
+     "location": "M1-F01: «4 min» com espaço que não quebra",
+     "old": "4 min",
+     "new": "4 min",
+     "occurrences": 2
+    },
+    {
+     "location": "M1-F01: «90 minutos» com espaço que não quebra",
+     "old": "90 minutos",
+     "new": "90 minutos",
+     "occurrences": 1
+    },
+    {
+     "location": "M1-F01: «fólio 21r» com espaço que não quebra",
+     "old": "fólio 21r",
+     "new": "fólio 21r",
+     "occurrences": 1
+    },
+    {
+     "location": "M1-F01: «D. Dinis» com espaço que não quebra",
+     "old": "D. Dinis",
+     "new": "D. Dinis",
+     "occurrences": 21
+    }
+   ]
+  },
+  "m1/licao-m1-f02/index.html": {
+   "base_sha256_lf": "b8b50410c0926dcbd014819905857011cda9db51d3818a1b3f27fdcf81a7221c",
+   "after_sha256_lf": "f67f983b88b489e5b3e0c51bc27e082111b0b57aa089af9d38f3565e42361b55",
+   "edits": [
+    {
+     "location": "M1-F02, 15 · Explora «Três hipóteses para o final»",
+     "old": "<p>O perigo é real; é a espera que exagera; ou morrer «fremosa» acusa quem não veio. Mais de uma hipótese tem apoio no texto.</p>",
+     "new": "<ul><li>O perigo é real.</li><li>É a espera que exagera.</li><li>Morrer «fremosa» acusa quem não veio.</li></ul><p>Mais de uma hipótese tem apoio no texto.</p>",
+     "occurrences": 1
+    },
+    {
+     "location": "M1-F02: «v. 2» com espaço que não quebra (com o contexto «v. 2<»)",
+     "old": "v. 2<",
+     "new": "v. 2<",
+     "occurrences": 1
+    },
+    {
+     "location": "M1-F02: «v. 2» com espaço que não quebra (com o contexto «v. 2 »)",
+     "old": "v. 2 ",
+     "new": "v. 2 ",
+     "occurrences": 2
+    },
+    {
+     "location": "M1-F02: «v. 2» com espaço que não quebra (com o contexto «v. 2)»)",
+     "old": "v. 2)",
+     "new": "v. 2)",
+     "occurrences": 1
+    },
+    {
+     "location": "M1-F02: «v. 7» com espaço que não quebra",
+     "old": "v. 7",
+     "new": "v. 7",
+     "occurrences": 4
+    },
+    {
+     "location": "M1-F02: «v. 8» com espaço que não quebra",
+     "old": "v. 8",
+     "new": "v. 8",
+     "occurrences": 2
+    },
+    {
+     "location": "M1-F02: «v. 13» com espaço que não quebra",
+     "old": "v. 13",
+     "new": "v. 13",
+     "occurrences": 2
+    },
+    {
+     "location": "M1-F02: «v. 5» com espaço que não quebra",
+     "old": "v. 5",
+     "new": "v. 5",
+     "occurrences": 1
+    },
+    {
+     "location": "M1-F02: «v. 10» com espaço que não quebra",
+     "old": "v. 10",
+     "new": "v. 10",
+     "occurrences": 1
+    },
+    {
+     "location": "M1-F02: «v. 11» com espaço que não quebra",
+     "old": "v. 11",
+     "new": "v. 11",
+     "occurrences": 1
+    },
+    {
+     "location": "M1-F02: «v. 16» com espaço que não quebra",
+     "old": "v. 16",
+     "new": "v. 16",
+     "occurrences": 1
+    },
+    {
+     "location": "M1-F02: «séc. XIII» com espaço que não quebra",
+     "old": "séc. XIII",
+     "new": "séc. XIII",
+     "occurrences": 3
+    },
+    {
+     "location": "M1-F02: «século XIII» com espaço que não quebra",
+     "old": "século XIII",
+     "new": "século XIII",
+     "occurrences": 1
+    },
+    {
+     "location": "M1-F02: «2.º verso» com espaço que não quebra",
+     "old": "2.º verso",
+     "new": "2.º verso",
+     "occurrences": 6
+    },
+    {
+     "location": "M1-F02: «1.º verso» com espaço que não quebra",
+     "old": "1.º verso",
+     "new": "1.º verso",
+     "occurrences": 3
+    },
+    {
+     "location": "M1-F02: «2.º da» com espaço que não quebra",
+     "old": "2.º da",
+     "new": "2.º da",
+     "occurrences": 1
+    },
+    {
+     "location": "M1-F02: «4 min» com espaço que não quebra",
+     "old": "4 min",
+     "new": "4 min",
+     "occurrences": 2
+    },
+    {
+     "location": "M1-F02: «90 minutos» com espaço que não quebra",
+     "old": "90 minutos",
+     "new": "90 minutos",
+     "occurrences": 1
+    },
+    {
+     "location": "M1-F02: «D. Dinis» com espaço que não quebra",
+     "old": "D. Dinis",
+     "new": "D. Dinis",
+     "occurrences": 6
+    }
+   ]
+  },
+  "m1/licao-m1-f04/index.html": {
+   "base_sha256_lf": "4d4f5f00ddb098f767f48dbd146525f7a28c299c2516d857d41d9238ce3f0a86",
+   "after_sha256_lf": "3a89a50c504dee788322013a4f4ddc7f66140f55a8cf46e7f2db787a53ff7c34",
+   "edits": [
+    {
+     "location": "M1-F04: «caps. V e VI» com espaço que não quebra",
+     "old": "caps. V e VI",
+     "new": "caps. V e VI",
+     "occurrences": 1
+    },
+    {
+     "location": "M1-F04: «cap. V» com espaço que não quebra (com o contexto «cap. V)»)",
+     "old": "cap. V)",
+     "new": "cap. V)",
+     "occurrences": 1
+    },
+    {
+     "location": "M1-F04: «cap. V» com espaço que não quebra (com o contexto «cap. VI»)",
+     "old": "cap. VI",
+     "new": "cap. VI",
+     "occurrences": 1
+    },
+    {
+     "location": "M1-F04: «séc. XIII» com espaço que não quebra",
+     "old": "séc. XIII",
+     "new": "séc. XIII",
+     "occurrences": 1
+    },
+    {
+     "location": "M1-F04: «século XVI» com espaço que não quebra",
+     "old": "século XVI",
+     "new": "século XVI",
+     "occurrences": 2
+    },
+    {
+     "location": "M1-F04: «n.º 544» com espaço que não quebra",
+     "old": "n.º 544",
+     "new": "n.º 544",
+     "occurrences": 1
+    },
+    {
+     "location": "M1-F04: «n.º 1520» com espaço que não quebra",
+     "old": "n.º 1520",
+     "new": "n.º 1520",
+     "occurrences": 1
+    },
+    {
+     "location": "M1-F04: «n.º 1527» com espaço que não quebra",
+     "old": "n.º 1527",
+     "new": "n.º 1527",
+     "occurrences": 1
+    },
+    {
+     "location": "M1-F04: «4 min» com espaço que não quebra",
+     "old": "4 min",
+     "new": "4 min",
+     "occurrences": 4
+    },
+    {
+     "location": "M1-F04: «90 minutos» com espaço que não quebra",
+     "old": "90 minutos",
+     "new": "90 minutos",
+     "occurrences": 1
+    },
+    {
+     "location": "M1-F04: «D. Dinis» com espaço que não quebra",
+     "old": "D. Dinis",
+     "new": "D. Dinis",
+     "occurrences": 24
+    }
+   ]
+  },
+  "m1/licao-m1-f05/index.html": {
+   "base_sha256_lf": "769e37ab9b5dc1b497cb415380beafdd1da98280280e2673ce2d3f5f408a2e69",
+   "after_sha256_lf": "2d567cf1d079e29186cb3011c6ac56629912908dea6b0826bb217695c8be7b28",
+   "edits": [
+    {
+     "location": "M1-F05, 5 · Conceito «Que sons apareceram, e onde?» (details «Um esquema curto e duas tentativas»)",
+     "old": "<ul><li><strong>Entra (PEP):</strong> início, <strong>prótese</strong> (<i>scribere</i> &gt; escrever: vogal inicial); meio, <strong>epêntese</strong> (<i>humile</i> &gt; humilde: [d]); fim, <strong>paragoge</strong> (<i>ante</i> &gt; antes: consoante final).</li><li><strong>Desaparece (ASA):</strong> início, <strong>aférese</strong> (alevantada &gt; levantada: vogal inicial); meio, <strong>síncope</strong> (<i>malu</i> &gt; mau: [l]); fim, <strong>apócope</strong> (<i>amare</i> &gt; amar: vogal final).</li></ul>",
+     "new": "<table class=\\\"apoio-tabela\\\" role=\\\"table\\\"><thead role=\\\"rowgroup\\\"><tr role=\\\"row\\\"><th scope=\\\"col\\\" role=\\\"columnheader\\\">Onde</th><th scope=\\\"col\\\" role=\\\"columnheader\\\">Entra (PEP)</th><th scope=\\\"col\\\" role=\\\"columnheader\\\">Desaparece (ASA)</th></tr></thead><tbody role=\\\"rowgroup\\\"><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">início</th><td role=\\\"cell\\\" data-label=\\\"Entra (PEP)\\\"><strong>prótese</strong> (<i>scribere</i> &gt; escrever: vogal inicial)</td><td role=\\\"cell\\\" data-label=\\\"Desaparece (ASA)\\\"><strong>aférese</strong> (alevantada &gt; levantada: vogal inicial)</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">meio</th><td role=\\\"cell\\\" data-label=\\\"Entra (PEP)\\\"><strong>epêntese</strong> (<i>humile</i> &gt; humilde: [d])</td><td role=\\\"cell\\\" data-label=\\\"Desaparece (ASA)\\\"><strong>síncope</strong> (<i>malu</i> &gt; mau: [l])</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">fim</th><td role=\\\"cell\\\" data-label=\\\"Entra (PEP)\\\"><strong>paragoge</strong> (<i>ante</i> &gt; antes: consoante final)</td><td role=\\\"cell\\\" data-label=\\\"Desaparece (ASA)\\\"><strong>apócope</strong> (<i>amare</i> &gt; amar: vogal final)</td></tr></tbody></table>",
+     "occurrences": 1
+    },
+    {
+     "location": "M1-F05, cabeça: a folha das tabelas de apoio, antes da camada de aparência",
+     "old": "<link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-universal-1\">",
+     "new": "<link rel=\"stylesheet\" href=\"../../assets/pt-lessons/apoios-tabelas.css?v=20261106.1\"><link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-universal-1\">",
+     "occurrences": 1
+    },
+    {
+     "location": "M1-F05: «p. 244» com espaço que não quebra",
+     "old": "p. 244",
+     "new": "p. 244",
+     "occurrences": 1
+    },
+    {
+     "location": "M1-F05: «pp. 5 e 9» com espaço que não quebra",
+     "old": "pp. 5 e 9",
+     "new": "pp. 5 e 9",
+     "occurrences": 1
+    },
+    {
+     "location": "M1-F05: «9.º ano» com espaço que não quebra",
+     "old": "9.º ano",
+     "new": "9.º ano",
+     "occurrences": 1
+    },
+    {
+     "location": "M1-F05: «90 minutos» com espaço que não quebra",
+     "old": "90 minutos",
+     "new": "90 minutos",
+     "occurrences": 1
+    },
+    {
+     "location": "M1-F05: «GTA 16» com espaço que não quebra",
+     "old": "GTA 16",
+     "new": "GTA 16",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m1/licao-m1-f06/index.html": {
+   "base_sha256_lf": "040b4180a6be7d7e23282c56e3e535845d04e901507e9af259fab35ca73d1783",
+   "after_sha256_lf": "08cec4ffa446c8548aadeb96eae21c2bdf9a76be170be6620424e1da716f37a4",
+   "edits": [
+    {
+     "location": "M1-F06: «cap. XII» com espaço que não quebra",
+     "old": "cap. XII",
+     "new": "cap. XII",
+     "occurrences": 9
+    },
+    {
+     "location": "M1-F06: «cap. 11» com espaço que não quebra",
+     "old": "cap. 11",
+     "new": "cap. 11",
+     "occurrences": 3
+    },
+    {
+     "location": "M1-F06: «século XIX» com espaço que não quebra",
+     "old": "século XIX",
+     "new": "século XIX",
+     "occurrences": 2
+    },
+    {
+     "location": "M1-F06: «6 de dezembro de 1383» com espaço que não quebra",
+     "old": "6 de dezembro de 1383",
+     "new": "6 de dezembro de 1383",
+     "occurrences": 2
+    },
+    {
+     "location": "M1-F06: «4 min» com espaço que não quebra",
+     "old": "4 min",
+     "new": "4 min",
+     "occurrences": 4
+    },
+    {
+     "location": "M1-F06: «90 minutos» com espaço que não quebra",
+     "old": "90 minutos",
+     "new": "90 minutos",
+     "occurrences": 1
+    },
+    {
+     "location": "M1-F06: «1383–1385» com espaço que não quebra",
+     "old": "1383–1385",
+     "new": "1383–⁠1385",
+     "occurrences": 1
+    },
+    {
+     "location": "M1-F06: «D. João» com espaço que não quebra",
+     "old": "D. João",
+     "new": "D. João",
+     "occurrences": 9
+    },
+    {
+     "location": "M1-F06: «D. Pedro» com espaço que não quebra",
+     "old": "D. Pedro",
+     "new": "D. Pedro",
+     "occurrences": 5
+    },
+    {
+     "location": "M1-F06: «D. Fernando» com espaço que não quebra",
+     "old": "D. Fernando",
+     "new": "D. Fernando",
+     "occurrences": 2
+    },
+    {
+     "location": "M1-F06: «D. Duarte» com espaço que não quebra",
+     "old": "D. Duarte",
+     "new": "D. Duarte",
+     "occurrences": 1
+    },
+    {
+     "location": "M1-F06: «João I» com espaço que não quebra",
+     "old": "João I",
+     "new": "João I",
+     "occurrences": 9
+    }
+   ]
+  },
+  "m1/licao-m1-f07/index.html": {
+   "base_sha256_lf": "19eff2d95ec8e5b2490332e8594247b4c7b987492e755bf146084fb53b1195aa",
+   "after_sha256_lf": "7f37f0f32796afaac52beaf9daf96c37006e03c09762ec12f100b09b55797b26",
+   "edits": [
+    {
+     "location": "M1-F07: «cap. CXLVIII» com espaço que não quebra",
+     "old": "cap. CXLVIII",
+     "new": "cap. CXLVIII",
+     "occurrences": 4
+    },
+    {
+     "location": "M1-F07: «caps. CXVI e CXLVIII» com espaço que não quebra",
+     "old": "caps. CXVI e CXLVIII",
+     "new": "caps. CXVI e CXLVIII",
+     "occurrences": 2
+    },
+    {
+     "location": "M1-F07: «cap. CXVI» com espaço que não quebra",
+     "old": "cap. CXVI",
+     "new": "cap. CXVI",
+     "occurrences": 2
+    },
+    {
+     "location": "M1-F07: «cap. 115» com espaço que não quebra",
+     "old": "cap. 115",
+     "new": "cap. 115",
+     "occurrences": 1
+    },
+    {
+     "location": "M1-F07: «século XV» com espaço que não quebra",
+     "old": "século XV",
+     "new": "século XV",
+     "occurrences": 4
+    },
+    {
+     "location": "M1-F07: «3 de setembro de 1384» com espaço que não quebra",
+     "old": "3 de setembro de 1384",
+     "new": "3 de setembro de 1384",
+     "occurrences": 1
+    },
+    {
+     "location": "M1-F07: «3 de setembro» com espaço que não quebra (com o contexto «3 de setembro;»)",
+     "old": "3 de setembro;",
+     "new": "3 de setembro;",
+     "occurrences": 1
+    },
+    {
+     "location": "M1-F07: «90 minutos» com espaço que não quebra",
+     "old": "90 minutos",
+     "new": "90 minutos",
+     "occurrences": 1
+    },
+    {
+     "location": "M1-F07: «D. João» com espaço que não quebra",
+     "old": "D. João",
+     "new": "D. João",
+     "occurrences": 6
+    },
+    {
+     "location": "M1-F07: «S. Jorge» com espaço que não quebra",
+     "old": "S. Jorge",
+     "new": "S. Jorge",
+     "occurrences": 1
+    },
+    {
+     "location": "M1-F07: «João I» com espaço que não quebra",
+     "old": "João I",
+     "new": "João I",
+     "occurrences": 6
+    }
+   ]
+  },
+  "m1/licao-m1-f08/index.html": {
+   "base_sha256_lf": "d4e0c4c9e195ceb8837a8719b9660b49a45a6c8cf9761d942c67389033fc34ab",
+   "after_sha256_lf": "5dbc36b2a8f8c503f2f782371df6d42d4ed82a8ee2ece0731991a330b9b9e3f9",
+   "edits": [
+    {
+     "location": "M1-F08, 18 · Agora, em papel «A resposta que entregas» (details «Um exemplo»)",
+     "old": "<p>1. «Acaba a venda do trigo em Lisboa» (sublinhado: «do trigo»). Sem o grupo, «a venda»… de quê? «Venda» é nome: complemento do nome. 2. «Pobres incapazes de comprar trigo» (sublinhado: «de comprar trigo»). Sem o grupo, «incapazes»… de quê? É adjetivo: complemento do adjetivo. 3. «A cidade cercada carece de trigo» (sublinhado: «de trigo»). Sem o grupo, «carece»… de quê? É verbo, e «carece-lhe» não se diz (diz-se «carece dele»): complemento oblíquo.</p>",
+     "new": "<table class=\\\"apoio-tabela\\\" role=\\\"table\\\"><thead role=\\\"rowgroup\\\"><tr role=\\\"row\\\"><th scope=\\\"col\\\" role=\\\"columnheader\\\">Título</th><th scope=\\\"col\\\" role=\\\"columnheader\\\">Sublinhado</th><th scope=\\\"col\\\" role=\\\"columnheader\\\">Sem o grupo</th><th scope=\\\"col\\\" role=\\\"columnheader\\\">Complemento</th></tr></thead><tbody role=\\\"rowgroup\\\"><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">1. «Acaba a venda do trigo em Lisboa»</th><td role=\\\"cell\\\" data-label=\\\"Sublinhado\\\">«do trigo»</td><td role=\\\"cell\\\" data-label=\\\"Sem o grupo\\\">«a venda»… de quê?</td><td role=\\\"cell\\\" data-label=\\\"Complemento\\\">«Venda» é nome: complemento do nome.</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">2. «Pobres incapazes de comprar trigo»</th><td role=\\\"cell\\\" data-label=\\\"Sublinhado\\\">«de comprar trigo»</td><td role=\\\"cell\\\" data-label=\\\"Sem o grupo\\\">«incapazes»… de quê?</td><td role=\\\"cell\\\" data-label=\\\"Complemento\\\">É adjetivo: complemento do adjetivo.</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">3. «A cidade cercada carece de trigo»</th><td role=\\\"cell\\\" data-label=\\\"Sublinhado\\\">«de trigo»</td><td role=\\\"cell\\\" data-label=\\\"Sem o grupo\\\">«carece»… de quê?</td><td role=\\\"cell\\\" data-label=\\\"Complemento\\\">É verbo, e «carece-lhe» não se diz (diz-se «carece dele»): complemento oblíquo.</td></tr></tbody></table>",
+     "occurrences": 1
+    },
+    {
+     "location": "M1-F08, 19 · Para levar",
+     "old": "<p>Tira o grupo: se a palavra fica a pedir, o grupo é complemento. Quem pede dá-lhe o nome: um nome («a guarda dos muros»), um adjetivo («amigas da natureza») ou um verbo, se o grupo tem preposição e não troca por «lhe» («chegar a ele»).</p>",
+     "new": "<p>Tira o grupo: se a palavra fica a pedir, o grupo é complemento. Quem pede dá-lhe o nome:</p><table class=\\\"apoio-tabela\\\" role=\\\"table\\\"><thead role=\\\"rowgroup\\\"><tr role=\\\"row\\\"><th scope=\\\"col\\\" role=\\\"columnheader\\\">Quem pede</th><th scope=\\\"col\\\" role=\\\"columnheader\\\">Complemento</th><th scope=\\\"col\\\" role=\\\"columnheader\\\">Exemplo</th></tr></thead><tbody role=\\\"rowgroup\\\"><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">um nome</th><td role=\\\"cell\\\" data-label=\\\"Complemento\\\">do nome</td><td role=\\\"cell\\\" data-label=\\\"Exemplo\\\">«a guarda dos muros»</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">um adjetivo</th><td role=\\\"cell\\\" data-label=\\\"Complemento\\\">do adjetivo</td><td role=\\\"cell\\\" data-label=\\\"Exemplo\\\">«amigas da natureza»</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">um verbo, se o grupo tem preposição e não troca por «lhe»</th><td role=\\\"cell\\\" data-label=\\\"Complemento\\\">oblíquo</td><td role=\\\"cell\\\" data-label=\\\"Exemplo\\\">«chegar a ele»</td></tr></tbody></table>",
+     "occurrences": 1
+    },
+    {
+     "location": "M1-F08, cabeça: a folha das tabelas de apoio, antes da camada de aparência",
+     "old": "<link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-universal-1\">",
+     "new": "<link rel=\"stylesheet\" href=\"../../assets/pt-lessons/apoios-tabelas.css?v=20261106.1\"><link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-universal-1\">",
+     "occurrences": 1
+    },
+    {
+     "location": "M1-F08: «cap. CXLVIII» com espaço que não quebra",
+     "old": "cap. CXLVIII",
+     "new": "cap. CXLVIII",
+     "occurrences": 3
+    },
+    {
+     "location": "M1-F08: «cap. CXVI» com espaço que não quebra",
+     "old": "cap. CXVI",
+     "new": "cap. CXVI",
+     "occurrences": 2
+    },
+    {
+     "location": "M1-F08: «caps. XII, CXVI, CXLVIII» com espaço que não quebra",
+     "old": "caps. XII, CXVI, CXLVIII",
+     "new": "caps. XII, CXVI, CXLVIII",
+     "occurrences": 1
+    },
+    {
+     "location": "M1-F08: «90 minutos» com espaço que não quebra",
+     "old": "90 minutos",
+     "new": "90 minutos",
+     "occurrences": 1
+    },
+    {
+     "location": "M1-F08: «D. João» com espaço que não quebra",
+     "old": "D. João",
+     "new": "D. João",
+     "occurrences": 4
+    },
+    {
+     "location": "M1-F08: «João I» com espaço que não quebra",
+     "old": "João I",
+     "new": "João I",
+     "occurrences": 4
+    }
+   ]
+  },
+  "m1/licao-m1-f10/index.html": {
+   "base_sha256_lf": "5d6b37ebacf0d61b38559d63d647ae6ee400dc7bc14d7c229ea1d87b41ef167b",
+   "after_sha256_lf": "44d188cee41d2bbcf4977f0e780fa606bf9a53bc6368e34f6bbe5260e3de2f41",
+   "edits": [
+    {
+     "location": "M1-F10, 1 · A encomenda «A tua crónica» (details «Ler mais»)",
+     "old": "<p><b>Figuras e fontes possíveis.</b> Álvaro Pais ou o pajem, a 6 de dezembro de 1383 (Fernão Lopes, cap. XII); Nuno Álvares Pereira em Aljubarrota (Wikipédia, «Batalha de Aljubarrota»); uma pessoa do cerco de 1384 (Fernão Lopes, caps. CXVI e CXLVIII; Wikipédia, «Cerco de Lisboa (1384)»); Inês de Castro (Wikipédia, «Inês de Castro»); ou alguém da área do teu curso, um fotógrafo, um músico, um realizador (Wikipédia e uma entrevista publicada). Sempre duas fontes, identificadas.</p>",
+     "new": "<p><b>Figuras e fontes possíveis.</b> Sempre duas fontes, identificadas.</p><table class=\\\"apoio-tabela\\\" role=\\\"table\\\"><thead role=\\\"rowgroup\\\"><tr role=\\\"row\\\"><th scope=\\\"col\\\" role=\\\"columnheader\\\" style=\\\"width:50%\\\">Figura</th><th scope=\\\"col\\\" role=\\\"columnheader\\\">Fontes</th></tr></thead><tbody role=\\\"rowgroup\\\"><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Álvaro Pais ou o pajem, a 6 de dezembro de 1383</th><td role=\\\"cell\\\" data-label=\\\"Fontes\\\">Fernão Lopes, cap. XII</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Nuno Álvares Pereira em Aljubarrota</th><td role=\\\"cell\\\" data-label=\\\"Fontes\\\">Wikipédia, «Batalha de Aljubarrota»</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">uma pessoa do cerco de 1384</th><td role=\\\"cell\\\" data-label=\\\"Fontes\\\">Fernão Lopes, caps. CXVI e CXLVIII; Wikipédia, «Cerco de Lisboa (1384)»</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Inês de Castro</th><td role=\\\"cell\\\" data-label=\\\"Fontes\\\">Wikipédia, «Inês de Castro»</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">alguém da área do teu curso, um fotógrafo, um músico, um realizador</th><td role=\\\"cell\\\" data-label=\\\"Fontes\\\">Wikipédia e uma entrevista publicada</td></tr></tbody></table>",
+     "occurrences": 1
+    },
+    {
+     "location": "M1-F10, cabeça: a folha das tabelas de apoio, antes da camada de aparência",
+     "old": "<link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-universal-1\">",
+     "new": "<link rel=\"stylesheet\" href=\"../../assets/pt-lessons/apoios-tabelas.css?v=20261106.1\"><link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-universal-1\">",
+     "occurrences": 1
+    },
+    {
+     "location": "M1-F10: «cap. XII» com espaço que não quebra (com o contexto «cap. XII »)",
+     "old": "cap. XII ",
+     "new": "cap. XII ",
+     "occurrences": 4
+    },
+    {
+     "location": "M1-F10: «cap. XII» com espaço que não quebra (com o contexto «cap. XII,»)",
+     "old": "cap. XII,",
+     "new": "cap. XII,",
+     "occurrences": 4
+    },
+    {
+     "location": "M1-F10: «cap. XII» com espaço que não quebra (com o contexto «cap. XII.»)",
+     "old": "cap. XII.",
+     "new": "cap. XII.",
+     "occurrences": 2
+    },
+    {
+     "location": "M1-F10: «cap. XII» com espaço que não quebra (com o contexto «cap. XII:»)",
+     "old": "cap. XII:",
+     "new": "cap. XII:",
+     "occurrences": 1
+    },
+    {
+     "location": "M1-F10: «cap. XII» com espaço que não quebra (com o contexto «cap. XII;»)",
+     "old": "cap. XII;",
+     "new": "cap. XII;",
+     "occurrences": 1
+    },
+    {
+     "location": "M1-F10: «cap. CXVI» com espaço que não quebra",
+     "old": "cap. CXVI",
+     "new": "cap. CXVI",
+     "occurrences": 4
+    },
+    {
+     "location": "M1-F10: «cap. 11» com espaço que não quebra",
+     "old": "cap. 11",
+     "new": "cap. 11",
+     "occurrences": 1
+    },
+    {
+     "location": "M1-F10: «século XV» com espaço que não quebra",
+     "old": "século XV",
+     "new": "século XV",
+     "occurrences": 2
+    },
+    {
+     "location": "M1-F10: «6 de dezembro de 1383» com espaço que não quebra (com o contexto «6 de dezembro de 1383,»)",
+     "old": "6 de dezembro de 1383,",
+     "new": "6 de dezembro de 1383,",
+     "occurrences": 5
+    },
+    {
+     "location": "M1-F10: «14 de agosto de 1385» com espaço que não quebra",
+     "old": "14 de agosto de 1385",
+     "new": "14 de agosto de 1385",
+     "occurrences": 3
+    },
+    {
+     "location": "M1-F10: «250 a 300 palavras» com espaço que não quebra",
+     "old": "250 a 300 palavras",
+     "new": "250 a 300 palavras",
+     "occurrences": 2
+    },
+    {
+     "location": "M1-F10: «90 minutos» com espaço que não quebra",
+     "old": "90 minutos",
+     "new": "90 minutos",
+     "occurrences": 1
+    },
+    {
+     "location": "M1-F10: «30 %» com espaço que não quebra",
+     "old": "30 %",
+     "new": "30 %",
+     "occurrences": 1
+    },
+    {
+     "location": "M1-F10: «160 a 200 palavras» com espaço que não quebra",
+     "old": "160 a 200 palavras",
+     "new": "160 a 200 palavras",
+     "occurrences": 1
+    },
+    {
+     "location": "M1-F10: «D. João» com espaço que não quebra",
+     "old": "D. João",
+     "new": "D. João",
+     "occurrences": 3
+    },
+    {
+     "location": "M1-F10: «João I» com espaço que não quebra",
+     "old": "João I",
+     "new": "João I",
+     "occurrences": 3
+    }
+   ]
+  },
+  "m1/licao-m1-f11/index.html": {
+   "base_sha256_lf": "90af5b000e3df695b2d5d3c285757cf00b65bb68c753738e56bdf19c4a66ef10",
+   "after_sha256_lf": "bfea8ce1f6bdc42ac41470c24f6f55b0b6025840add9d1cb7921d7f412763c07",
+   "edits": [
+    {
+     "location": "M1-F11, 14 · Recorda «Lado a lado: que diz a ligação?»",
+     "old": "<p><b>Coordenação</b>: duas orações lado a lado, nenhuma parte da outra. A <b>copulativa</b> soma (e, nem); a <b>adversativa</b> contraria o que se esperava (mas); a <b>explicativa</b> justifica o que se disse ou mandou (pois, que); a <b>conclusiva</b> tira a consequência (portanto, logo, por isso).</p>",
+     "new": "<p><b>Coordenação</b>: duas orações lado a lado, nenhuma parte da outra.</p><table class=\\\"apoio-tabela\\\" role=\\\"table\\\"><thead role=\\\"rowgroup\\\"><tr role=\\\"row\\\"><th scope=\\\"col\\\" role=\\\"columnheader\\\">Valor</th><th scope=\\\"col\\\" role=\\\"columnheader\\\">O que faz</th><th scope=\\\"col\\\" role=\\\"columnheader\\\">Conjunções</th></tr></thead><tbody role=\\\"rowgroup\\\"><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">copulativa</th><td role=\\\"cell\\\" data-label=\\\"O que faz\\\">soma</td><td role=\\\"cell\\\" data-label=\\\"Conjunções\\\">e, nem</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">adversativa</th><td role=\\\"cell\\\" data-label=\\\"O que faz\\\">contraria o que se esperava</td><td role=\\\"cell\\\" data-label=\\\"Conjunções\\\">mas</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">explicativa</th><td role=\\\"cell\\\" data-label=\\\"O que faz\\\">justifica o que se disse ou mandou</td><td role=\\\"cell\\\" data-label=\\\"Conjunções\\\">pois, que</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">conclusiva</th><td role=\\\"cell\\\" data-label=\\\"O que faz\\\">tira a consequência</td><td role=\\\"cell\\\" data-label=\\\"Conjunções\\\">portanto, logo, por isso</td></tr></tbody></table>",
+     "occurrences": 1
+    },
+    {
+     "location": "M1-F11, cabeça: a folha das tabelas de apoio, antes da camada de aparência",
+     "old": "<link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-reading1\">",
+     "new": "<link rel=\"stylesheet\" href=\"../../assets/pt-lessons/apoios-tabelas.css?v=20261106.1\"><link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-reading1\">",
+     "occurrences": 1
+    },
+    {
+     "location": "M1-F11: «cap. CXLVIII» com espaço que não quebra",
+     "old": "cap. CXLVIII",
+     "new": "cap. CXLVIII",
+     "occurrences": 2
+    },
+    {
+     "location": "M1-F11: «cap. XII» com espaço que não quebra",
+     "old": "cap. XII",
+     "new": "cap. XII",
+     "occurrences": 1
+    },
+    {
+     "location": "M1-F11: «séc. XIII» com espaço que não quebra",
+     "old": "séc. XIII",
+     "new": "séc. XIII",
+     "occurrences": 2
+    },
+    {
+     "location": "M1-F11: «século XV» com espaço que não quebra",
+     "old": "século XV",
+     "new": "século XV",
+     "occurrences": 1
+    },
+    {
+     "location": "M1-F11: «n.º 1308» com espaço que não quebra",
+     "old": "n.º 1308",
+     "new": "n.º 1308",
+     "occurrences": 1
+    },
+    {
+     "location": "M1-F11: «2.º verso» com espaço que não quebra",
+     "old": "2.º verso",
+     "new": "2.º verso",
+     "occurrences": 1
+    },
+    {
+     "location": "M1-F11: «3 de setembro de 1384» com espaço que não quebra",
+     "old": "3 de setembro de 1384",
+     "new": "3 de setembro de 1384",
+     "occurrences": 1
+    },
+    {
+     "location": "M1-F11: «90 minutos» com espaço que não quebra",
+     "old": "90 minutos",
+     "new": "90 minutos",
+     "occurrences": 1
+    },
+    {
+     "location": "M1-F11: «180 e 240 palavras» com espaço que não quebra",
+     "old": "180 e 240 palavras",
+     "new": "180 e 240 palavras",
+     "occurrences": 1
+    },
+    {
+     "location": "M1-F11: «D. João» com espaço que não quebra",
+     "old": "D. João",
+     "new": "D. João",
+     "occurrences": 2
+    },
+    {
+     "location": "M1-F11: «João I» com espaço que não quebra",
+     "old": "João I",
+     "new": "João I",
+     "occurrences": 2
+    }
+   ]
+  },
+  "m1/licao-m1-f15/index.html": {
+   "base_sha256_lf": "bcdbe1065b7d49bcaebe23c94ab3694b99f47f0f1f8bc0513b783a5d7cc2cb76",
+   "after_sha256_lf": "cbf908a0763845a7eb6f690dddc8f2af8f18b7ff311e2254296bfd2a35c1d1f9",
+   "edits": [
+    {
+     "location": "M1-F15, 19 · Para levar",
+     "old": "<p>Entre duas orações lado a lado, a conjunção diz a relação: o «e» soma, o «mas» contraria o que se esperava, o «pois» justifica, o «portanto» tira a consequência. Decide pelo sentido, não pela palavra: faz a troca e ouve.</p>",
+     "new": "<p>Entre duas orações lado a lado, a conjunção diz a relação:</p><table class=\\\"apoio-tabela\\\" role=\\\"table\\\"><thead role=\\\"rowgroup\\\"><tr role=\\\"row\\\"><th scope=\\\"col\\\" role=\\\"columnheader\\\">Conjunção</th><th scope=\\\"col\\\" role=\\\"columnheader\\\">Relação</th><th scope=\\\"col\\\" role=\\\"columnheader\\\">Valor</th></tr></thead><tbody role=\\\"rowgroup\\\"><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">«e»</th><td role=\\\"cell\\\" data-label=\\\"Relação\\\">soma</td><td role=\\\"cell\\\" data-label=\\\"Valor\\\">copulativa (e, nem)</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">«mas»</th><td role=\\\"cell\\\" data-label=\\\"Relação\\\">contraria o que se esperava</td><td role=\\\"cell\\\" data-label=\\\"Valor\\\">adversativa (mas)</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">«pois»</th><td role=\\\"cell\\\" data-label=\\\"Relação\\\">justifica</td><td role=\\\"cell\\\" data-label=\\\"Valor\\\">explicativa (pois, que)</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">«portanto»</th><td role=\\\"cell\\\" data-label=\\\"Relação\\\">tira a consequência</td><td role=\\\"cell\\\" data-label=\\\"Valor\\\">conclusiva (portanto, logo, por isso)</td></tr></tbody></table><p>Decide pelo sentido, não pela palavra: faz a troca e ouve.</p>",
+     "occurrences": 1
+    },
+    {
+     "location": "M1-F15, cabeça: a folha das tabelas de apoio, antes da camada de aparência",
+     "old": "<link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-universal-1\">",
+     "new": "<link rel=\"stylesheet\" href=\"../../assets/pt-lessons/apoios-tabelas.css?v=20261106.1\"><link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-universal-1\">",
+     "occurrences": 1
+    },
+    {
+     "location": "M1-F15: «v. 11» com espaço que não quebra",
+     "old": "v. 11",
+     "new": "v. 11",
+     "occurrences": 1
+    },
+    {
+     "location": "M1-F15: «cap. XII» com espaço que não quebra",
+     "old": "cap. XII",
+     "new": "cap. XII",
+     "occurrences": 5
+    },
+    {
+     "location": "M1-F15: «cap. CXLVIII» com espaço que não quebra",
+     "old": "cap. CXLVIII",
+     "new": "cap. CXLVIII",
+     "occurrences": 1
+    },
+    {
+     "location": "M1-F15: «90 minutos» com espaço que não quebra",
+     "old": "90 minutos",
+     "new": "90 minutos",
+     "occurrences": 1
+    },
+    {
+     "location": "M1-F15: «D. João» com espaço que não quebra",
+     "old": "D. João",
+     "new": "D. João",
+     "occurrences": 3
+    },
+    {
+     "location": "M1-F15: «D. Pedro» com espaço que não quebra",
+     "old": "D. Pedro",
+     "new": "D. Pedro",
+     "occurrences": 1
+    },
+    {
+     "location": "M1-F15: «João I» com espaço que não quebra",
+     "old": "João I",
+     "new": "João I",
+     "occurrences": 3
+    }
+   ]
+  },
+  "m1/licao-m1-f19/index.html": {
+   "base_sha256_lf": "6912d1473f06b7036f48d1aeb5ac70d28ea9e17b372b8d46d1a91bfbd280d9eb",
+   "after_sha256_lf": "5a9ed03bced591254484ed3a9dff07636451f140b143feda4c29840cc5964407",
+   "edits": [
+    {
+     "location": "M1-F19: «caps. V e VI» com espaço que não quebra",
+     "old": "caps. V e VI",
+     "new": "caps. V e VI",
+     "occurrences": 1
+    },
+    {
+     "location": "M1-F19: «séc. XIII» com espaço que não quebra",
+     "old": "séc. XIII",
+     "new": "séc. XIII",
+     "occurrences": 1
+    },
+    {
+     "location": "M1-F19: «2.º verso» com espaço que não quebra",
+     "old": "2.º verso",
+     "new": "2.º verso",
+     "occurrences": 2
+    },
+    {
+     "location": "M1-F19: «3.ª pessoa» com espaço que não quebra",
+     "old": "3.ª pessoa",
+     "new": "3.ª pessoa",
+     "occurrences": 2
+    },
+    {
+     "location": "M1-F19: «4 min» com espaço que não quebra",
+     "old": "4 min",
+     "new": "4 min",
+     "occurrences": 2
+    },
+    {
+     "location": "M1-F19: «90 minutos» com espaço que não quebra",
+     "old": "90 minutos",
+     "new": "90 minutos",
+     "occurrences": 1
+    },
+    {
+     "location": "M1-F19: «D. Dinis» com espaço que não quebra",
+     "old": "D. Dinis",
+     "new": "D. Dinis",
+     "occurrences": 23
+    }
+   ]
+  },
+  "m1/licao-m1-f20/index.html": {
+   "base_sha256_lf": "dba43a2f051ff03e981f1ca0d49bb2b2ad4c13d1ded99969be7c89f7d8b4cebf",
+   "after_sha256_lf": "17220b31cf0773eb8011684e96a1ef1cb5d528ecb5d6337e47c96a5a9b5d7083",
+   "edits": [
+    {
+     "location": "M1-F20, 16 · Para levar",
+     "old": "<p>O grito do pajem é o que uma voz afirma; o relato mostra a cidade a correr. O que se aponta nas palavras é explícito; o que se conclui de pistas é inferência; um sentido com provas é interpretação; um juízo de valor, opinião.</p>",
+     "new": "<p>O grito do pajem é o que uma voz afirma; o relato mostra a cidade a correr.</p><table class=\\\"apoio-tabela\\\" role=\\\"table\\\"><thead role=\\\"rowgroup\\\"><tr role=\\\"row\\\"><th scope=\\\"col\\\" role=\\\"columnheader\\\">Etiqueta</th><th scope=\\\"col\\\" role=\\\"columnheader\\\">O que é</th></tr></thead><tbody role=\\\"rowgroup\\\"><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">explícito</th><td role=\\\"cell\\\" data-label=\\\"O que é\\\">o que se aponta nas palavras</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">inferência</th><td role=\\\"cell\\\" data-label=\\\"O que é\\\">o que se conclui de pistas</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">interpretação</th><td role=\\\"cell\\\" data-label=\\\"O que é\\\">um sentido com provas</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">opinião</th><td role=\\\"cell\\\" data-label=\\\"O que é\\\">um juízo de valor</td></tr></tbody></table>",
+     "occurrences": 1
+    },
+    {
+     "location": "M1-F20, cabeça: a folha das tabelas de apoio, antes da camada de aparência",
+     "old": "<link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-universal-1\">",
+     "new": "<link rel=\"stylesheet\" href=\"../../assets/pt-lessons/apoios-tabelas.css?v=20261106.1\"><link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-universal-1\">",
+     "occurrences": 1
+    },
+    {
+     "location": "M1-F20: «cap. XII» com espaço que não quebra",
+     "old": "cap. XII",
+     "new": "cap. XII",
+     "occurrences": 2
+    },
+    {
+     "location": "M1-F20: «cap. CXLVIII» com espaço que não quebra",
+     "old": "cap. CXLVIII",
+     "new": "cap. CXLVIII",
+     "occurrences": 2
+    },
+    {
+     "location": "M1-F20: «caps. XII, CXVI e CXLVIII» com espaço que não quebra",
+     "old": "caps. XII, CXVI e CXLVIII",
+     "new": "caps. XII, CXVI e CXLVIII",
+     "occurrences": 1
+    },
+    {
+     "location": "M1-F20: «cap. 11» com espaço que não quebra (com o contexto «cap. 11 »)",
+     "old": "cap. 11 ",
+     "new": "cap. 11 ",
+     "occurrences": 1
+    },
+    {
+     "location": "M1-F20: «cap. 11» com espaço que não quebra (com o contexto «cap. 115»)",
+     "old": "cap. 115",
+     "new": "cap. 115",
+     "occurrences": 1
+    },
+    {
+     "location": "M1-F20: «cap. CXVI» com espaço que não quebra",
+     "old": "cap. CXVI",
+     "new": "cap. CXVI",
+     "occurrences": 1
+    },
+    {
+     "location": "M1-F20: «cap. 148» com espaço que não quebra",
+     "old": "cap. 148",
+     "new": "cap. 148",
+     "occurrences": 1
+    },
+    {
+     "location": "M1-F20: «século XV» com espaço que não quebra",
+     "old": "século XV",
+     "new": "século XV",
+     "occurrences": 3
+    },
+    {
+     "location": "M1-F20: «90 minutos» com espaço que não quebra",
+     "old": "90 minutos",
+     "new": "90 minutos",
+     "occurrences": 1
+    },
+    {
+     "location": "M1-F20: «D. João» com espaço que não quebra",
+     "old": "D. João",
+     "new": "D. João",
+     "occurrences": 4
+    },
+    {
+     "location": "M1-F20: «D. Pedro» com espaço que não quebra",
+     "old": "D. Pedro",
+     "new": "D. Pedro",
+     "occurrences": 1
+    },
+    {
+     "location": "M1-F20: «João I» com espaço que não quebra",
+     "old": "João I",
+     "new": "João I",
+     "occurrences": 4
+    }
+   ]
+  },
+  "m1/lisboa-cercada/index.html": {
+   "base_sha256_lf": "0200201c9680ab85616adfddf499c8a0d0b93ba0a91d89de3b6b9b68cb7cf756",
+   "after_sha256_lf": "e6287a20e0d9b341e42a01af3bfa07f7730a628baed099b9e69319410f13ae6d",
+   "edits": [
+    {
+     "location": "m1/lisboa-cercada: «caps. CXVI e CXLVIII» com espaço que não quebra",
+     "old": "caps. CXVI e CXLVIII",
+     "new": "caps. CXVI e CXLVIII",
+     "occurrences": 2
+    },
+    {
+     "location": "m1/lisboa-cercada: «cap. CXVI» com espaço que não quebra",
+     "old": "cap. CXVI",
+     "new": "cap. CXVI",
+     "occurrences": 1
+    },
+    {
+     "location": "m1/lisboa-cercada: «cap. CXLVIII» com espaço que não quebra",
+     "old": "cap. CXLVIII",
+     "new": "cap. CXLVIII",
+     "occurrences": 1
+    },
+    {
+     "location": "m1/lisboa-cercada: «D. João» com espaço que não quebra",
+     "old": "D. João",
+     "new": "D. João",
+     "occurrences": 4
+    },
+    {
+     "location": "m1/lisboa-cercada: «João I» com espaço que não quebra",
+     "old": "João I",
+     "new": "João I",
+     "occurrences": 4
+    }
+   ]
+  },
+  "m1/m1-promessa-do-cronista/index.html": {
+   "base_sha256_lf": "05af5c373c97215ee6eb6e8f7bf20d338e7a649be4d8e77c29d77975e135e7b5",
+   "after_sha256_lf": "b846cc1ca38134eae420b863cf12bfaea08059a066583e961d71b111ece82534",
+   "edits": [
+    {
+     "location": "m1/m1-promessa-do-cronista: «cap. XII» com espaço que não quebra",
+     "old": "cap. XII",
+     "new": "cap. XII",
+     "occurrences": 2
+    },
+    {
+     "location": "m1/m1-promessa-do-cronista: «cap. 11» com espaço que não quebra (com o contexto «cap. 11 »)",
+     "old": "cap. 11 ",
+     "new": "cap. 11 ",
+     "occurrences": 2
+    },
+    {
+     "location": "m1/m1-promessa-do-cronista: «cap. 11» com espaço que não quebra (com o contexto «cap. 115»)",
+     "old": "cap. 115",
+     "new": "cap. 115",
+     "occurrences": 1
+    },
+    {
+     "location": "m1/m1-promessa-do-cronista: «cap. CXVI» com espaço que não quebra",
+     "old": "cap. CXVI",
+     "new": "cap. CXVI",
+     "occurrences": 1
+    },
+    {
+     "location": "m1/m1-promessa-do-cronista: «cap. CXLVIII» com espaço que não quebra",
+     "old": "cap. CXLVIII",
+     "new": "cap. CXLVIII",
+     "occurrences": 1
+    },
+    {
+     "location": "m1/m1-promessa-do-cronista: «cap. 148» com espaço que não quebra",
+     "old": "cap. 148",
+     "new": "cap. 148",
+     "occurrences": 1
+    },
+    {
+     "location": "m1/m1-promessa-do-cronista: «6 de dezembro de 1383» com espaço que não quebra",
+     "old": "6 de dezembro de 1383",
+     "new": "6 de dezembro de 1383",
+     "occurrences": 1
+    },
+    {
+     "location": "m1/m1-promessa-do-cronista: «3 de setembro» com espaço que não quebra",
+     "old": "3 de setembro",
+     "new": "3 de setembro",
+     "occurrences": 1
+    },
+    {
+     "location": "m1/m1-promessa-do-cronista: «22 min» com espaço que não quebra",
+     "old": "22 min",
+     "new": "22 min",
+     "occurrences": 1
+    },
+    {
+     "location": "m1/m1-promessa-do-cronista: «vol. I» com espaço que não quebra",
+     "old": "vol. I",
+     "new": "vol. I",
+     "occurrences": 7
+    },
+    {
+     "location": "m1/m1-promessa-do-cronista: «D. João» com espaço que não quebra",
+     "old": "D. João",
+     "new": "D. João",
+     "occurrences": 8
+    },
+    {
+     "location": "m1/m1-promessa-do-cronista: «D. Pedro» com espaço que não quebra",
+     "old": "D. Pedro",
+     "new": "D. Pedro",
+     "occurrences": 1
+    },
+    {
+     "location": "m1/m1-promessa-do-cronista: «João I» com espaço que não quebra",
+     "old": "João I",
+     "new": "João I",
+     "occurrences": 8
+    }
+   ]
+  },
+  "m1/m1-voz-emprestada/index.html": {
+   "base_sha256_lf": "087923f46d7d657a24396c6f42713b97dc7d2c3abff40a4e5898f21d9433c41f",
+   "after_sha256_lf": "4fef3bc98b3c0f632aba9ac56e54d32fb005ef60416ef59a5583cc485efc81f2",
+   "edits": [
+    {
+     "location": "m1/m1-voz-emprestada: «cap. V» com espaço que não quebra",
+     "old": "cap. V",
+     "new": "cap. V",
+     "occurrences": 1
+    },
+    {
+     "location": "m1/m1-voz-emprestada: «século XIII» com espaço que não quebra",
+     "old": "século XIII",
+     "new": "século XIII",
+     "occurrences": 1
+    },
+    {
+     "location": "m1/m1-voz-emprestada: «22 min» com espaço que não quebra",
+     "old": "22 min",
+     "new": "22 min",
+     "occurrences": 1
+    },
+    {
+     "location": "m1/m1-voz-emprestada: «B 1493» com espaço que não quebra",
+     "old": "B 1493",
+     "new": "B 1493",
+     "occurrences": 1
+    },
+    {
+     "location": "m1/m1-voz-emprestada: «V 1104» com espaço que não quebra",
+     "old": "V 1104",
+     "new": "V 1104",
+     "occurrences": 1
+    },
+    {
+     "location": "m1/m1-voz-emprestada: «D. Dinis» com espaço que não quebra",
+     "old": "D. Dinis",
+     "new": "D. Dinis",
+     "occurrences": 19
+    }
+   ]
+  },
+  "m1/mapa-do-modulo-m1/index.html": {
+   "base_sha256_lf": "08c6988ce2f63ba66d1efeede77ee5dcf9d6160c22aaa0cee7a01f2e036d5945",
+   "after_sha256_lf": "3e7a94c8e6a2b6a5d7cc336175680fb71da37c261682bba60430215b836cbfc5",
+   "edits": [
+    {
+     "location": "m1/mapa-do-modulo-m1: «século XV» com espaço que não quebra (com o contexto «século XVI»)",
+     "old": "século XVI",
+     "new": "século XVI",
+     "occurrences": 2
+    },
+    {
+     "location": "m1/mapa-do-modulo-m1: «século XV» com espaço que não quebra (com o contexto «século XV)»)",
+     "old": "século XV)",
+     "new": "século XV)",
+     "occurrences": 4
+    },
+    {
+     "location": "m1/mapa-do-modulo-m1: «1.º ano» com espaço que não quebra (com o contexto «1.º ano »)",
+     "old": "1.º ano ",
+     "new": "1.º ano ",
+     "occurrences": 1
+    },
+    {
+     "location": "m1/mapa-do-modulo-m1: «6 de dezembro de 1383» com espaço que não quebra",
+     "old": "6 de dezembro de 1383",
+     "new": "6 de dezembro de 1383",
+     "occurrences": 1
+    },
+    {
+     "location": "m1/mapa-do-modulo-m1: «3 de setembro» com espaço que não quebra",
+     "old": "3 de setembro",
+     "new": "3 de setembro",
+     "occurrences": 1
+    },
+    {
+     "location": "m1/mapa-do-modulo-m1: «14 de agosto de 1385» com espaço que não quebra",
+     "old": "14 de agosto de 1385",
+     "new": "14 de agosto de 1385",
+     "occurrences": 1
+    },
+    {
+     "location": "m1/mapa-do-modulo-m1: «30 %» com espaço que não quebra",
+     "old": "30 %",
+     "new": "30 %",
+     "occurrences": 4
+    },
+    {
+     "location": "m1/mapa-do-modulo-m1: «90 min» com espaço que não quebra",
+     "old": "90 min",
+     "new": "90 min",
+     "occurrences": 2
+    },
+    {
+     "location": "m1/mapa-do-modulo-m1: «10 %» com espaço que não quebra",
+     "old": "10 %",
+     "new": "10 %",
+     "occurrences": 1
+    },
+    {
+     "location": "m1/mapa-do-modulo-m1: «45 minutos» com espaço que não quebra",
+     "old": "45 minutos",
+     "new": "45 minutos",
+     "occurrences": 1
+    },
+    {
+     "location": "m1/mapa-do-modulo-m1: «c. 1380» com espaço que não quebra",
+     "old": "c. 1380",
+     "new": "c. 1380",
+     "occurrences": 2
+    },
+    {
+     "location": "m1/mapa-do-modulo-m1: «c. 1460» com espaço que não quebra (com o contexto «1380/1390–c. 1460»)",
+     "old": "1380/1390–c. 1460",
+     "new": "1380/1390–⁠c. 1460",
+     "occurrences": 2
+    },
+    {
+     "location": "m1/mapa-do-modulo-m1: «c. 1860» com espaço que não quebra (com o contexto «c. 1860)»)",
+     "old": "c. 1860)",
+     "new": "c. 1860)",
+     "occurrences": 1
+    },
+    {
+     "location": "m1/mapa-do-modulo-m1: «1279–1325» com espaço que não quebra",
+     "old": "1279–1325",
+     "new": "1279–⁠1325",
+     "occurrences": 2
+    },
+    {
+     "location": "m1/mapa-do-modulo-m1: «fólio 21r» com espaço que não quebra",
+     "old": "fólio 21r",
+     "new": "fólio 21r",
+     "occurrences": 4
+    },
+    {
+     "location": "m1/mapa-do-modulo-m1: «D. Dinis» com espaço que não quebra",
+     "old": "D. Dinis",
+     "new": "D. Dinis",
+     "occurrences": 7
+    },
+    {
+     "location": "m1/mapa-do-modulo-m1: «D. João» com espaço que não quebra",
+     "old": "D. João",
+     "new": "D. João",
+     "occurrences": 1
+    },
+    {
+     "location": "m1/mapa-do-modulo-m1: «João I» com espaço que não quebra",
+     "old": "João I",
+     "new": "João I",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m1/matam-o-mestre/index.html": {
+   "base_sha256_lf": "48447e6c46eb1ff0d3885672195db66d33b3b8f20d6e2d0069f8acad20be367e",
+   "after_sha256_lf": "77b314ac8d3eb5c966fe966da1cf6b1830ecffcd5288643ea4525db12ed487a0",
+   "edits": [
+    {
+     "location": "m1/matam-o-mestre: «cap. XII» com espaço que não quebra",
+     "old": "cap. XII",
+     "new": "cap. XII",
+     "occurrences": 2
+    },
+    {
+     "location": "m1/matam-o-mestre: «6 de dezembro de 1383» com espaço que não quebra",
+     "old": "6 de dezembro de 1383",
+     "new": "6 de dezembro de 1383",
+     "occurrences": 2
+    },
+    {
+     "location": "m1/matam-o-mestre: «D. João» com espaço que não quebra",
+     "old": "D. João",
+     "new": "D. João",
+     "occurrences": 4
+    },
+    {
+     "location": "m1/matam-o-mestre: «João I» com espaço que não quebra",
+     "old": "João I",
+     "new": "João I",
+     "occurrences": 4
+    }
+   ]
+  },
+  "m1/mendinho-ermida/index.html": {
+   "base_sha256_lf": "4960dbf3bdea596ff38aaa7adaf11a82950b0bbee087fb1b0c8497b8af704cfa",
+   "after_sha256_lf": "56f2e42d87107a69433bec5ac9ee23df2ef6321b20626d305d8804768264bf4b",
+   "edits": [
+    {
+     "location": "m1/mendinho-ermida: «séc. XIII» com espaço que não quebra",
+     "old": "séc. XIII",
+     "new": "séc. XIII",
+     "occurrences": 2
+    }
+   ]
+  },
+  "m1/olhar-ajuda/index.html": {
+   "base_sha256_lf": "2c0ac037c8ef7ab3b69427c223c15120e8d736e06712b370cf66425f045a4671",
+   "after_sha256_lf": "87b5118f6c03d265bbcf64dde6608464f46a1b0ccfa58a17ff7e187b6cf8fed7",
+   "edits": [
+    {
+     "location": "m1/olhar-ajuda: «20 segundos» com espaço que não quebra",
+     "old": "20 segundos",
+     "new": "20 segundos",
+     "occurrences": 1
+    },
+    {
+     "location": "m1/olhar-ajuda: «fólio 21r» com espaço que não quebra",
+     "old": "fólio 21r",
+     "new": "fólio 21r",
+     "occurrences": 6
+    }
+   ]
+  },
+  "m1/ondas-vigo/index.html": {
+   "base_sha256_lf": "a88abc7f90da42adb418c31eff813d56888da0cdc5e71df60de127834503cec2",
+   "after_sha256_lf": "38968fb9cd7ebe95c8a4337613ae78198063981fd03e6b71d87eff6c14367e55",
+   "edits": [
+    {
+     "location": "m1/ondas-vigo: «séc. XIII» com espaço que não quebra",
+     "old": "séc. XIII",
+     "new": "séc. XIII",
+     "occurrences": 2
+    },
+    {
+     "location": "m1/ondas-vigo: «n.º 1308» com espaço que não quebra",
+     "old": "n.º 1308",
+     "new": "n.º 1308",
+     "occurrences": 2
+    }
+   ]
+  },
+  "m1/portefolio-do-modulo-m1/index.html": {
+   "base_sha256_lf": "db7ce09e06e6379904cfa56b33082a3d0cf9052ecf3ce2623ac86a1088aca954",
+   "after_sha256_lf": "b0ebf0827a567c9ffabf570c62e2645dfdde3cb74c266fb1612d57717dd39599",
+   "edits": [
+    {
+     "location": "m1/portefolio-do-modulo-m1: «1.º ano» com espaço que não quebra (com o contexto «1.º ano »)",
+     "old": "1.º ano ",
+     "new": "1.º ano ",
+     "occurrences": 1
+    }
+   ]
+  },
+  "tarefas/m1-u1/aquecimento/index.html": {
+   "base_sha256_lf": "82389e7ba1e6f060a54e6a458747f4329f879f63f9b875368fca45c3166021c5",
+   "after_sha256_lf": "d22b20b2382179bdf56770fba0ae75dfbca147dd78a23f8bd3115079140642ba",
+   "edits": [
+    {
+     "location": "tarefas/m1-u1/aquecimento: «século XIII» com espaço que não quebra",
+     "old": "século XIII",
+     "new": "século XIII",
+     "occurrences": 1
+    }
+   ]
+  },
+  "tarefas/m1-u1/correcao/index.html": {
+   "base_sha256_lf": "739e3f2274bd19dc90d474267f22f2b85376d96cec78720f8db4cbdd2367646a",
+   "after_sha256_lf": "72b983e4dc8b165d97f2a6ad19cdad7bfffc1e76b1c046dc236b9b35de372e5c",
+   "edits": [
+    {
+     "location": "tarefas/m1-u1/correcao: «D. Dinis» com espaço que não quebra",
+     "old": "D. Dinis",
+     "new": "D. Dinis",
+     "occurrences": 1
+    }
+   ]
+  },
+  "tarefas/m1-u1/grelha/index.html": {
+   "base_sha256_lf": "9bedd00058b214c0f14cbce2054234c3580912ff582110e6999d67a1ee5b0e97",
+   "after_sha256_lf": "f48871484bcadd831e40f56b9df9e1a3d8971fe9c7a960ae1e516dbf04b02406",
+   "edits": [
+    {
+     "location": "tarefas/m1-u1/grelha, critério 4 «Tema à escolha», nível 6 (dd)",
+     "old": "Tema A: paralelismo; refrão que repete a promessa; o teu verso que desmente a promessa; um verso de Codax citado; uma diferença entre a tua espera e a da cantiga de Codax. Explicação: o que imitaste de Codax. Tema B: imagem em duas frases; dois factos do dossiê (contam como dois); um verso escolhido; o que o cartaz não pode prometer. Explicação: porque escolheste esse verso.</p>",
+     "new": "</p><p><b>Tema A</b>:</p><ul><li>paralelismo;</li><li>refrão que repete a promessa;</li><li>o teu verso que desmente a promessa;</li><li>um verso de Codax citado;</li><li>uma diferença entre a tua espera e a da cantiga de Codax.</li></ul><p>Explicação: o que imitaste de Codax.</p><p><b>Tema B</b>:</p><ul><li>imagem em duas frases;</li><li>dois factos do dossiê (contam como dois);</li><li>um verso escolhido;</li><li>o que o cartaz não pode prometer.</li></ul><p>Explicação: porque escolheste esse verso.</p>",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m1-u1/grelha: «200 e 240 palavras» com espaço que não quebra",
+     "old": "200 e 240 palavras",
+     "new": "200 e 240 palavras",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m1-u1/grelha: «200 a 240 palavras» com espaço que não quebra",
+     "old": "200 a 240 palavras",
+     "new": "200 a 240 palavras",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m1-u1/grelha: «D. Dinis» com espaço que não quebra",
+     "old": "D. Dinis",
+     "new": "D. Dinis",
+     "occurrences": 3
+    }
+   ]
+  },
+  "tarefas/m1-u1/index.html": {
+   "base_sha256_lf": "8bd033a27448d61586766851d605df6edf87b2e62a60ed4549a35af1eee997bc",
+   "after_sha256_lf": "8993f282b16c8a559d14442186451e466a654d767e677acacd4010c534aad12d",
+   "edits": [
+    {
+     "location": "tarefas/m1-u1, página da tarefa · «Aquecer em cartões»",
+     "old": "<p>No início da aula de tarefa: 10 minutos de cartões com consulta, 5 minutos para leres o enunciado, 60 minutos de produção e 15 minutos de revisão e entrega. Total: 90 minutos. O relógio de produção começa depois da leitura.</p>",
+     "new": "<p>No início da aula de tarefa:</p><table class=\"apoio-tabela\" role=\"table\"><thead role=\"rowgroup\"><tr role=\"row\"><th scope=\"col\" role=\"columnheader\">Momento</th><th scope=\"col\" role=\"columnheader\">Tempo</th></tr></thead><tbody role=\"rowgroup\"><tr role=\"row\"><th scope=\"row\" role=\"rowheader\">cartões com consulta</th><td role=\"cell\" data-label=\"Tempo\">10 minutos</td></tr><tr role=\"row\"><th scope=\"row\" role=\"rowheader\">lês o enunciado</th><td role=\"cell\" data-label=\"Tempo\">5 minutos</td></tr><tr role=\"row\"><th scope=\"row\" role=\"rowheader\">produção</th><td role=\"cell\" data-label=\"Tempo\">60 minutos</td></tr><tr role=\"row\"><th scope=\"row\" role=\"rowheader\">revisão e entrega</th><td role=\"cell\" data-label=\"Tempo\">15 minutos</td></tr><tr role=\"row\"><th scope=\"row\" role=\"rowheader\">Total</th><td role=\"cell\" data-label=\"Tempo\">90 minutos</td></tr></tbody></table><p>O relógio de produção começa depois da leitura.</p>",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m1-u1, cabeça: a folha das tabelas de apoio, antes da camada de aparência",
+     "old": "<link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-universal-1\">",
+     "new": "<link rel=\"stylesheet\" href=\"../../assets/pt-lessons/apoios-tabelas.css?v=20261106.1\"><link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-universal-1\">",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m1-u1: «90 minutos» com espaço que não quebra (com o contexto «90 minutos,»)",
+     "old": "90 minutos,",
+     "new": "90 minutos,",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m1-u1: «200 e 240 palavras» com espaço que não quebra",
+     "old": "200 e 240 palavras",
+     "new": "200 e 240 palavras",
+     "occurrences": 2
+    },
+    {
+     "location": "tarefas/m1-u1: «10 min» com espaço que não quebra (com o contexto «10 min »)",
+     "old": "10 min ",
+     "new": "10 min ",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m1-u1: «90 min» com espaço que não quebra (com o contexto «90 min<»)",
+     "old": "90 min<",
+     "new": "90 min<",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m1-u1: «D. Dinis» com espaço que não quebra",
+     "old": "D. Dinis",
+     "new": "D. Dinis",
+     "occurrences": 4
+    }
+   ]
+  },
+  "tarefas/m1-u2/correcao/index.html": {
+   "base_sha256_lf": "30e3e8391cd079f3c10be5842a4fd324db07df18d69c2c9029028567c06bbbe0",
+   "after_sha256_lf": "48f8256b0bf11425b9e3a625ee72b75b84808e5c641f3f5e1e607530880fda75",
+   "edits": [
+    {
+     "location": "tarefas/m1-u2/correcao: «cap. XII» com espaço que não quebra",
+     "old": "cap. XII",
+     "new": "cap. XII",
+     "occurrences": 2
+    },
+    {
+     "location": "tarefas/m1-u2/correcao: «160 a 200 palavras» com espaço que não quebra",
+     "old": "160 a 200 palavras",
+     "new": "160 a 200 palavras",
+     "occurrences": 1
+    }
+   ]
+  },
+  "tarefas/m1-u2/grelha/index.html": {
+   "base_sha256_lf": "1fd9437926092d4941eb0dffd362517f5716385636a5f2bfb05dc6ecf6326451",
+   "after_sha256_lf": "618c4bd02207faad9bb8367c07035658169b21d53eb2827f217fe15f28de3c22",
+   "edits": [
+    {
+     "location": "tarefas/m1-u2/grelha: «cap. XII» com espaço que não quebra",
+     "old": "cap. XII",
+     "new": "cap. XII",
+     "occurrences": 5
+    },
+    {
+     "location": "tarefas/m1-u2/grelha: «160 a 200 palavras» com espaço que não quebra",
+     "old": "160 a 200 palavras",
+     "new": "160 a 200 palavras",
+     "occurrences": 4
+    },
+    {
+     "location": "tarefas/m1-u2/grelha: «40 palavras» com espaço que não quebra",
+     "old": "40 palavras",
+     "new": "40 palavras",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m1-u2/grelha: «90 palavras» com espaço que não quebra",
+     "old": "90 palavras",
+     "new": "90 palavras",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m1-u2/grelha: «D. Dinis» com espaço que não quebra",
+     "old": "D. Dinis",
+     "new": "D. Dinis",
+     "occurrences": 3
+    }
+   ]
+  },
+  "tarefas/m1-u2/index.html": {
+   "base_sha256_lf": "dcd0c46cbb544801e7b485899b46d32c9c8a7efef63b246807686317c1bc9ae2",
+   "after_sha256_lf": "4bd5ddedfde3eb9a851767b7a7160d24b68d1d4057a60cbf28cd2b81c45a1444",
+   "edits": [
+    {
+     "location": "tarefas/m1-u2, página da tarefa · «Aquecer em cartões»",
+     "old": "<p>No início da aula de tarefa: 10 minutos de cartões com consulta, 5 minutos para leres o enunciado, 60 minutos de produção e 15 minutos de revisão e entrega. Total: 90 minutos. O relógio de produção começa depois da leitura.</p>",
+     "new": "<p>No início da aula de tarefa:</p><table class=\"apoio-tabela\" role=\"table\"><thead role=\"rowgroup\"><tr role=\"row\"><th scope=\"col\" role=\"columnheader\">Momento</th><th scope=\"col\" role=\"columnheader\">Tempo</th></tr></thead><tbody role=\"rowgroup\"><tr role=\"row\"><th scope=\"row\" role=\"rowheader\">cartões com consulta</th><td role=\"cell\" data-label=\"Tempo\">10 minutos</td></tr><tr role=\"row\"><th scope=\"row\" role=\"rowheader\">lês o enunciado</th><td role=\"cell\" data-label=\"Tempo\">5 minutos</td></tr><tr role=\"row\"><th scope=\"row\" role=\"rowheader\">produção</th><td role=\"cell\" data-label=\"Tempo\">60 minutos</td></tr><tr role=\"row\"><th scope=\"row\" role=\"rowheader\">revisão e entrega</th><td role=\"cell\" data-label=\"Tempo\">15 minutos</td></tr><tr role=\"row\"><th scope=\"row\" role=\"rowheader\">Total</th><td role=\"cell\" data-label=\"Tempo\">90 minutos</td></tr></tbody></table><p>O relógio de produção começa depois da leitura.</p>",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m1-u2, cabeça: a folha das tabelas de apoio, antes da camada de aparência",
+     "old": "<link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-universal-1\">",
+     "new": "<link rel=\"stylesheet\" href=\"../../assets/pt-lessons/apoios-tabelas.css?v=20261106.1\"><link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-universal-1\">",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m1-u2: «cap. XII» com espaço que não quebra",
+     "old": "cap. XII",
+     "new": "cap. XII",
+     "occurrences": 4
+    },
+    {
+     "location": "tarefas/m1-u2: «cap. CXVI» com espaço que não quebra",
+     "old": "cap. CXVI",
+     "new": "cap. CXVI",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m1-u2: «cap. CXLVIII» com espaço que não quebra",
+     "old": "cap. CXLVIII",
+     "new": "cap. CXLVIII",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m1-u2: «século XIX» com espaço que não quebra",
+     "old": "século XIX",
+     "new": "século XIX",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m1-u2: «século XV» com espaço que não quebra",
+     "old": "século XV",
+     "new": "século XV",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m1-u2: «3 de setembro de 1384» com espaço que não quebra",
+     "old": "3 de setembro de 1384",
+     "new": "3 de setembro de 1384",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m1-u2: «90 minutos» com espaço que não quebra (com o contexto «90 minutos,»)",
+     "old": "90 minutos,",
+     "new": "90 minutos,",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m1-u2: «160 a 200 palavras» com espaço que não quebra",
+     "old": "160 a 200 palavras",
+     "new": "160 a 200 palavras",
+     "occurrences": 2
+    },
+    {
+     "location": "tarefas/m1-u2: «10 min» com espaço que não quebra (com o contexto «10 min »)",
+     "old": "10 min ",
+     "new": "10 min ",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m1-u2: «90 min» com espaço que não quebra (com o contexto «90 min<»)",
+     "old": "90 min<",
+     "new": "90 min<",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m1-u2: «40 palavras» com espaço que não quebra",
+     "old": "40 palavras",
+     "new": "40 palavras",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m1-u2: «250 a 300 palavras» com espaço que não quebra",
+     "old": "250 a 300 palavras",
+     "new": "250 a 300 palavras",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m1-u2: «D. Duarte» com espaço que não quebra",
+     "old": "D. Duarte",
+     "new": "D. Duarte",
+     "occurrences": 1
+    }
+   ]
+  },
+  "docs/pedagogia/tarefas-escolha/m1-u1.json": {
+   "base_sha256_lf": "e85988c2172a382b60cbe4033510944aa54578b12f958e2706085305c3cdfa92",
+   "after_sha256_lf": "b7e11db30a37eeff320ade0a860357d2de18331311eb065390c0f05385880dcc",
+   "edits": [
+    {
+     "location": "Dados da tarefa, aquecimento: os tempos da aula numa tabela («tabela» e «depois»)",
+     "old": "  \"texto\": \"No início da aula de tarefa: 10 minutos de cartões com consulta, 5 minutos para leres o enunciado, 60 minutos de produção e 15 minutos de revisão e entrega. Total: 90 minutos. O relógio de produção começa depois da leitura.\",",
+     "new": "  \"texto\": \"No início da aula de tarefa:\",\n  \"tabela\": {\n   \"colunas\": [\n    \"Momento\",\n    \"Tempo\"\n   ],\n   \"linhas\": [\n    [\n     \"cartões com consulta\",\n     \"10 minutos\"\n    ],\n    [\n     \"lês o enunciado\",\n     \"5 minutos\"\n    ],\n    [\n     \"produção\",\n     \"60 minutos\"\n    ],\n    [\n     \"revisão e entrega\",\n     \"15 minutos\"\n    ],\n    [\n     \"Total\",\n     \"90 minutos\"\n    ]\n   ]\n  },\n  \"depois\": \"O relógio de produção começa depois da leitura.\",",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados da tarefa: «nao_partir», os números do molde com espaço que não quebra",
+     "old": "\n \"unidade\": 1,\n",
+     "new": "\n \"unidade\": 1,\n \"nao_partir\": true,\n",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados m1-u1: «200 e 240 palavras» com espaço que não quebra",
+     "old": "200 e 240 palavras",
+     "new": "200 e 240 palavras",
+     "occurrences": 2
+    },
+    {
+     "location": "Dados m1-u1: «D. Dinis» com espaço que não quebra",
+     "old": "D. Dinis",
+     "new": "D. Dinis",
+     "occurrences": 4
+    }
+   ]
+  },
+  "docs/pedagogia/tarefas-escolha/m1-u2.json": {
+   "base_sha256_lf": "5f2fc6a71a46e3f7b668f870849d5ca90a9821e0db36a67fe32c492a484a20eb",
+   "after_sha256_lf": "f6565e68e37b275621d9707988052312c212e6f37a9a395bf75fe43e049661d5",
+   "edits": [
+    {
+     "location": "Dados da tarefa, aquecimento: os tempos da aula numa tabela («tabela» e «depois»)",
+     "old": "  \"texto\": \"No início da aula de tarefa: 10 minutos de cartões com consulta, 5 minutos para leres o enunciado, 60 minutos de produção e 15 minutos de revisão e entrega. Total: 90 minutos. O relógio de produção começa depois da leitura.\",",
+     "new": "  \"texto\": \"No início da aula de tarefa:\",\n  \"tabela\": {\n   \"colunas\": [\n    \"Momento\",\n    \"Tempo\"\n   ],\n   \"linhas\": [\n    [\n     \"cartões com consulta\",\n     \"10 minutos\"\n    ],\n    [\n     \"lês o enunciado\",\n     \"5 minutos\"\n    ],\n    [\n     \"produção\",\n     \"60 minutos\"\n    ],\n    [\n     \"revisão e entrega\",\n     \"15 minutos\"\n    ],\n    [\n     \"Total\",\n     \"90 minutos\"\n    ]\n   ]\n  },\n  \"depois\": \"O relógio de produção começa depois da leitura.\",",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados da tarefa: «nao_partir», os números do molde com espaço que não quebra",
+     "old": "\n \"unidade\": 2,\n",
+     "new": "\n \"unidade\": 2,\n \"nao_partir\": true,\n",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados m1-u2: «cap. XII» com espaço que não quebra",
+     "old": "cap. XII",
+     "new": "cap. XII",
+     "occurrences": 4
+    },
+    {
+     "location": "Dados m1-u2: «cap. CXVI» com espaço que não quebra",
+     "old": "cap. CXVI",
+     "new": "cap. CXVI",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados m1-u2: «cap. CXLVIII» com espaço que não quebra",
+     "old": "cap. CXLVIII",
+     "new": "cap. CXLVIII",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados m1-u2: «século XIX» com espaço que não quebra",
+     "old": "século XIX",
+     "new": "século XIX",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados m1-u2: «século XV» com espaço que não quebra",
+     "old": "século XV",
+     "new": "século XV",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados m1-u2: «3 de setembro de 1384» com espaço que não quebra",
+     "old": "3 de setembro de 1384",
+     "new": "3 de setembro de 1384",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados m1-u2: «160 a 200 palavras» com espaço que não quebra",
+     "old": "160 a 200 palavras",
+     "new": "160 a 200 palavras",
+     "occurrences": 2
+    },
+    {
+     "location": "Dados m1-u2: «40 palavras» com espaço que não quebra",
+     "old": "40 palavras",
+     "new": "40 palavras",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados m1-u2: «250 a 300 palavras» com espaço que não quebra",
+     "old": "250 a 300 palavras",
+     "new": "250 a 300 palavras",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados m1-u2: «D. Duarte» com espaço que não quebra",
+     "old": "D. Duarte",
+     "new": "D. Duarte",
+     "occurrences": 1
+    }
+   ]
+  },
+  "docs/pedagogia/aquecimentos/m1-u1.json": {
+   "base_sha256_lf": "8c0b78e9c421f81f1e9a4f43c671f9a4c666c56ec0a469cc3188481f36b47986",
+   "after_sha256_lf": "34ce286e5ad259e405a7b4548500c48e5e7fae15eb0fe742ff03f6f7246ef0ab",
+   "edits": [
+    {
+     "location": "Dados m1-u1: «século XIII» com espaço que não quebra",
+     "old": "século XIII",
+     "new": "século XIII",
+     "occurrences": 1
+    }
+   ]
+  },
+  "docs/pedagogia/grelhas-tarefas-20261027.json": {
+   "base_sha256_lf": "9610bac46be6ebe81c0a542c2f8c392317d35428b514d4a3bcbba947118fa82e",
+   "after_sha256_lf": "c478dea4fff6971db353872112a9ca3cdb3dea42e45cb23144d01640ea48ac5e",
+   "edits": [
+    {
+     "location": "Grelha da M1-U1, critério 4, nível 6: os elementos de cada tema em lista («max_em_listas»)",
+     "old": "     \"nome\": \"Tema à escolha (A ou B): cinco elementos e a justificação\",\n     \"max\": 6,\n",
+     "new": "     \"nome\": \"Tema à escolha (A ou B): cinco elementos e a justificação\",\n     \"max\": 6,\n     \"max_em_listas\": true,\n",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados grelhas-tarefas-20261027, m1-u1: «200 e 240 palavras» com espaço que não quebra (com o contexto «   \"produto\": \"Núcleo comum (duas respostas) e um tema à…»)",
+     "old": "   \"produto\": \"Núcleo comum (duas respostas) e um tema à escolha (A ou B), à mão, entre 200 e 240 palavras, mais duas linhas finais que não contam para as palavras. O aquecimento não conta para a nota.\",",
+     "new": "   \"produto\": \"Núcleo comum (duas respostas) e um tema à escolha (A ou B), à mão, entre 200 e 240 palavras, mais duas linhas finais que não contam para as palavras. O aquecimento não conta para a nota.\",",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados grelhas-tarefas-20261027, m1-u1: «200 a 240 palavras» com espaço que não quebra (com o contexto «    {\n     \"nome\": \"Respostas articuladas, extensão e esc…»)",
+     "old": "    {\n     \"nome\": \"Respostas articuladas, extensão e escrita revista\",\n     \"max\": 3,\n     \"niveis\": {\n      \"0\": [\n       \"Respostas soltas, ou muito fora das 200 a 240 palavras.\",\n       \"Três listas de palavras sem frases completas.\"\n      ],\n      \"parcial\": [\n       \"As respostas ligam-se, mas falha uma ou mais destas: a revisão (erros que uma releitura apanhava), a extensão, o tema no topo ou as duas linhas finais com um verso.\",\n       \"Fecho: «Aprendi muitas coisas sobre as cantigas.»\"",
+     "new": "    {\n     \"nome\": \"Respostas articuladas, extensão e escrita revista\",\n     \"max\": 3,\n     \"niveis\": {\n      \"0\": [\n       \"Respostas soltas, ou muito fora das 200 a 240 palavras.\",\n       \"Três listas de palavras sem frases completas.\"\n      ],\n      \"parcial\": [\n       \"As respostas ligam-se, mas falha uma ou mais destas: a revisão (erros que uma releitura apanhava), a extensão, o tema no topo ou as duas linhas finais com um verso.\",\n       \"Fecho: «Aprendi muitas coisas sobre as cantigas.»\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados grelhas-tarefas-20261027, m1-u1: «D. Dinis» com espaço que não quebra (com o contexto «D. Dinis »)",
+     "old": "D. Dinis ",
+     "new": "D. Dinis ",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados grelhas-tarefas-20261027, m1-u2: «cap. XII» com espaço que não quebra",
+     "old": "cap. XII",
+     "new": "cap. XII",
+     "occurrences": 5
+    },
+    {
+     "location": "Dados grelhas-tarefas-20261027, m1-u2: «160 a 200 palavras» com espaço que não quebra",
+     "old": "160 a 200 palavras",
+     "new": "160 a 200 palavras",
+     "occurrences": 4
+    },
+    {
+     "location": "Dados grelhas-tarefas-20261027, m1-u2: «40 palavras» com espaço que não quebra (com o contexto «40 palavras)»)",
+     "old": "40 palavras)",
+     "new": "40 palavras)",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados grelhas-tarefas-20261027, m1-u2: «90 palavras» com espaço que não quebra (com o contexto «nica de 90 palavras, sem tí»)",
+     "old": "nica de 90 palavras, sem tí",
+     "new": "nica de 90 palavras, sem tí",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados grelhas-tarefas-20261027, m1-u2: «D. Dinis» com espaço que não quebra (com o contexto «D. Dinis,»)",
+     "old": "D. Dinis,",
+     "new": "D. Dinis,",
+     "occurrences": 2
+    },
+    {
+     "location": "Dados grelhas-tarefas-20261027, m1-u2: «D. Dinis» com espaço que não quebra (com o contexto «D. Dinis:»)",
+     "old": "D. Dinis:",
+     "new": "D. Dinis:",
+     "occurrences": 1
+    }
+   ]
+  }
+ }
+}

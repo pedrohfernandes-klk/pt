@@ -119,7 +119,10 @@ class M1UnitTasks(unittest.TestCase):
 
     def test_u2_preserves_guide_criteria_and_preconditions(self):
         text = historical_task_source(ROOT / 'tarefas/m1-u2/index.html')
-        guide = (ROOT / 'm1/guia-da-tarefa-m1/index.html').read_text('utf-8')
+        # 06/11/2026: a tarefa histórica compara-se com o guia por baixo da decisão 152 no M1 (cuidado_m1_20261106), que só lhe
+        # pôs espaços que não quebram e a tabela dos tempos; desfaz-se com contagem estrita.
+        from auditoria_20261028 import undo_cuidado_m1_0611
+        guide = undo_cuidado_m1_0611('m1/guia-da-tarefa-m1/index.html', (ROOT / 'm1/guia-da-tarefa-m1/index.html').read_text('utf-8'))
         task = re.search(r'<section[^>]*id="tarefa-3".*?</section>', guide, re.S)[0]
         criteria = re.search(r'<h3>O que conta</h3><ul>(.*?)</ul>', task, re.S)[1]
         for criterion in re.findall(r'<li>(.*?)</li>', criteria):
@@ -167,7 +170,13 @@ class AquecimentoAtualM1(unittest.TestCase):
                 self.assertNotIn('data-task-question="aquecer"', s)
                 self.assertIn('data-max="10"', s)
                 self.assertIn('data-max="60"', s)
-                self.assertIn('Total: 90 minutos', s)
+                # 06/11/2026: decisão 152 no M1: os tempos da aula de tarefa passaram a uma tabela (momento e tempo, com espaço
+                # que não quebra). Confere-se a linha do total e que as quatro linhas antes dela somam 90 minutos.
+                tabela = re.search(r'<table class="apoio-tabela" role="table">(.*?)</table>', s, re.S)[1]
+                linhas = re.findall(r'<th scope="row" role="rowheader">([^<]+)</th><td role="cell" data-label="Tempo">(\d+)\xa0minutos</td>', tabela)
+                self.assertEqual([m for m, _ in linhas], ['cartões com consulta', 'lês o enunciado', 'produção', 'revisão e entrega', 'Total'])
+                self.assertEqual([int(t) for _, t in linhas], [10, 5, 60, 15, 90])
+                self.assertEqual(sum(int(t) for _, t in linhas[:-1]), int(linhas[-1][1]))
                 self.assertEqual(10 + 5 + 60 + 15, 90)
 
 if __name__ == '__main__':

@@ -10,6 +10,8 @@ from auditoria_20261028 import undo_conteudos_lote2, undo_m4_piloto
 from auditoria_20261028 import undo_revisao_0511
 # 05/11/2026: a decisão 154 está por cima do piloto M4 (passo 16 do percurso do M4); desfaz-se só essa camada.
 from auditoria_20261028 import undo_autonomia_0511
+# 06/11/2026: a decisão 152 no M1 (tabelas e espaços que não quebram) está por cima do lote 2; desfaz-se antes, com contagem estrita.
+from auditoria_20261028 import undo_cuidado_m1_0611
 LOG=json.loads((ROOT/'docs/qa/conteudos-lote2-cartoes-20261101.json').read_text('utf-8'))
 
 def cards(text):
@@ -20,7 +22,9 @@ class Lote2(unittest.TestCase):
     def test_tipos_selecao_e_ordem_conservados(self):
         for rel in sorted({x['ficheiro'] for x in LOG}):
             current=(ROOT/rel).read_text('utf-8')
-            before=cards(undo_conteudos_lote2(rel,current));after=cards(current)
+            # 06/11/2026: o «depois» compara-se sem a decisão 152 no M1 (só espaços que não quebram e tabelas), desfeita com contagem
+            # estrita; o «antes» já a desfaz na cadeia (undo_conteudos_lote2 chama-a primeiro).
+            before=cards(undo_conteudos_lote2(rel,current));after=cards(undo_cuidado_m1_0611(rel,current))
             self.assertEqual(len(before),len(after),rel)
             for i,(a,b) in enumerate(zip(before,after)):
                 for key in ('t','mais','g','l','variar','aula'):

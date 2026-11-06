@@ -11,6 +11,13 @@ on:
       - 'tests/fixtures/tabela-movimentos-*'
       - 'scripts/tabela_movimentos_*'
       - 'assets/pt-lessons/apoios-tabelas.css'
+      # 06/11/2026: decisão 152 no M1: as tabelas novas (lições, índice, guia, tarefas, «Ler a fundo») e a sua camada.
+      - 'm1/**'
+      - 'tarefas/m1-u1/**'
+      - 'tarefas/m1-u2/**'
+      - 'scripts/cuidado_m1_20261106.*'
+      - 'tests/fixtures/cuidado-m1-edits-20261106.json'
+      - 'tests/*cuidado_m1*'
       - 'tests/*apoios*'
       - 'tests/fixtures/apoios-*'
       - '.github/workflows/pt-apoios-qa.yml'
@@ -34,11 +41,18 @@ jobs:
           # 05/11/2026: o Laboratório do exame (lição, não «leitura de apoio») é a camada mais recente; desfaz-se antes da tabela dos seis movimentos.
           # 05/11/2026: o contexto de cada sessão do Laboratório do exame (lição e excerto, não «recorte») é a camada mais recente; desfaz-se antes da ligação e das notas do Laboratório do exame.
           # 05/11/2026: a decisão 154 (os exercícios fazem-se sozinho; nada no texto do aluno depende do docente) é a camada mais recente; desfaz-se antes do contexto do Laboratório do exame, com a mesma exigência.
-          python scripts/aplicar_trocas.py scripts/tabela_movimentos_20261105.json --manifesto tests/fixtures/tabela-movimentos-edits-20261105.json --verificar --desfazer-antes tests/fixtures/creditos-i-edits-20261105.json --desfazer-antes tests/fixtures/atlas-lote3-edits-20261105.json --desfazer-antes tests/fixtures/autonomia-154-edits-20261105.json --desfazer-antes tests/fixtures/exame-contexto-edits-20261105.json --desfazer-antes tests/fixtures/exame-licao-edits-20261105.json
+          # 06/11/2026: a decisão 152 no M1 (cuidado_m1_20261106: tabelas e espaços que não quebram) é a camada mais recente, por cima dos créditos atrás de um «i»; desfaz-se primeiro, com a mesma exigência.
+          python scripts/aplicar_trocas.py scripts/tabela_movimentos_20261105.json --manifesto tests/fixtures/tabela-movimentos-edits-20261105.json --verificar --desfazer-antes tests/fixtures/cuidado-m1-edits-20261106.json --desfazer-antes tests/fixtures/creditos-i-edits-20261105.json --desfazer-antes tests/fixtures/atlas-lote3-edits-20261105.json --desfazer-antes tests/fixtures/autonomia-154-edits-20261105.json --desfazer-antes tests/fixtures/exame-contexto-edits-20261105.json --desfazer-antes tests/fixtures/exame-licao-edits-20261105.json
           python scripts/verificar_camadas.py
+      # 06/11/2026: decisão 152 no M1: as tabelas novas, os espaços que não quebram e a camada no topo.
+      - name: Tabelas e referências do M1 (decisão 152)
+        run: python -m unittest discover -s tests -p 'test_cuidado_m1.py' -v
       - name: Instalar Chromium
         run: |
           python -m pip install playwright
           python -m playwright install --with-deps chromium
       - name: Verificar tabela, revisão e projeção
         run: python tests/browser_apoios_tabelas.py
+      # 06/11/2026: decisão 152 no M1: as tabelas novas a 320, 390 e 1366 px, sem deslizar para o lado, também no cartão escuro.
+      - name: Tabelas novas do M1 no navegador
+        run: python tests/browser_cuidado_m1.py

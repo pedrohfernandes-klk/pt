@@ -151,8 +151,9 @@ class M1GrammarPilot(unittest.TestCase):
         # todos fazem (fonologia com o som, o lugar e o processo), e a transferência literária num dos temas.
         expected = {1: ('<i>mare</i> &gt; mar', '<i>malu</i> &gt; mau', 'o som que cai, onde cai e o processo',
                         'Guilhade', 'Chega já', 'Indica uma diferença'),
+                    # 06/11/2026: decisão 152 no M1: «cap. XII» com espaço que não quebra (U+00A0), como em todo o M1.
                     2: ('«pra»', 'o som que cai, onde e o processo', 'documentada', 'imaginada',
-                        'excertos do cap. XII', 'gradação')}
+                        'excertos do cap.\xa0XII', 'gradação')}
         for unit, tokens in expected.items():
             text = validate_task_source(ROOT / f'tarefas/m1-u{unit}/index.html')
             parsed = TaskPage(text)
@@ -172,7 +173,9 @@ class M1GrammarPilot(unittest.TestCase):
                 self.assertIn(token, core, (unit, token))
             self.assertIn('../../m1/licao-m1-f05/', text)
             self.assertIn('duas linhas', text)
-            self.assertIn('90 min', text)
+            # 06/11/2026: decisão 152 no M1: o número e a unidade não se partem (U+00A0); a forma com espaço normal já não está.
+            self.assertIn('90\xa0min', text)
+            self.assertNotIn('90 min', text)
             self.assertNotIn('folhas próprias', text)
             self.assertIn('trabalho em papel', text)
 

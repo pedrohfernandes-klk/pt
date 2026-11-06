@@ -71,12 +71,25 @@ def ler(rel):
     return (ROOT / rel).read_bytes().decode('utf-8')
 
 
+# 06/11/2026: a decisão 152 no M1 (cuidado_m1_20261106: tabelas onde há itens paralelos e espaços que não quebram) está por
+# cima desta camada e mudou três das suas passagens (o aquecimento das tarefas M1-U1 e M1-U2, nos dados e nas páginas, e o
+# guia da tarefa do M1, que passaram a tabela). As passagens da decisão 154 conferem-se com essa camada desfeita (contagem
+# estrita, sys.path com tests/ como nos outros testes da cadeia); a camada nova confere-se em tests/test_cuidado_m1.py.
+sys.path.insert(0, str(ROOT / 'tests'))
+from auditoria_20261028 import undo_cuidado_m1_0611  # noqa: E402
+
+
+def ler_por_baixo(rel):
+    return undo_cuidado_m1_0611(rel, ler(rel))
+
+
 class Autonomia154(unittest.TestCase):
     def test_cada_texto_novo_esta_e_o_antigo_saiu(self):
         # 05/11/2026: correções da revisão: 137 trocas e mais 16 (as trocas antigas que a revisão reescreveu contam uma vez).
         self.assertGreaterEqual(len(TROCAS), 153)
         for troca in TROCAS:
-            texto = ler(troca['ficheiro'])
+            # 06/11/2026: por baixo da decisão 152 no M1 (ver ler_por_baixo).
+            texto = ler_por_baixo(troca['ficheiro'])
             with self.subTest(ficheiro=troca['ficheiro'], local=troca['local']):
                 self.assertEqual(texto.count(troca['novo']), troca['ocorrencias'])
                 # o antigo não pode aparecer fora de uma ocorrência do novo
@@ -206,7 +219,8 @@ class Autonomia154(unittest.TestCase):
             ('m9/m9-de-quem-e-o-convento/index.html', 'Deixa de fora a decisão que a pergunta te pede, e vais ter de a tomar na mesma.', 'o docente vai pedir-ta'),
         ]
         for rel, novo, antigo in casos:
-            texto = ler(rel)
+            # 06/11/2026: por baixo da decisão 152 no M1 (ver ler_por_baixo).
+            texto = ler_por_baixo(rel)
             with self.subTest(ficheiro=rel, novo=novo):
                 self.assertIn(novo, texto)
                 self.assertNotIn(antigo, texto)
@@ -234,6 +248,8 @@ class Autonomia154(unittest.TestCase):
         # 06/11/2026: o lote 3 do Atlas fica por cima da decisão 154 depois de juntar o main; desfaz-se antes, com a mesma exigência.
         r = subprocess.run([sys.executable, 'scripts/aplicar_trocas.py', 'scripts/autonomia_154_20261105.json',
                             '--manifesto', str(MANIFESTO), '--verificar',
+                            # 06/11/2026: por cima de tudo, a decisão 152 no M1 (cuidado_m1_20261106); desfaz-se primeiro.
+                            '--desfazer-antes', 'tests/fixtures/cuidado-m1-edits-20261106.json',
                             # 06/11/2026: por cima de tudo, os créditos atrás de um «i» (decisão 153, pedido pt-2); desfazem-se primeiro.
                             '--desfazer-antes', 'tests/fixtures/creditos-i-edits-20261105.json',
                             '--desfazer-antes', 'tests/fixtures/atlas-lote3-edits-20261105.json'],
@@ -248,19 +264,27 @@ class Autonomia154(unittest.TestCase):
         # e a cadeia de desfazer chama primeiro o Atlas.
         # 06/11/2026: por cima do lote 3 do Atlas ficam os créditos atrás de um «i» (decisão 153, pedido pt-2, junção com o main): o
         # Atlas passa a segundo, a decisão 154 a terceira, e a cadeia de desfazer chama primeiro os créditos, depois o Atlas.
-        self.assertEqual(verificar_camadas.LAYERS[0], ('creditos_i_20261105', 'creditos-i-edits-20261105'))
-        self.assertEqual(verificar_camadas.LAYERS[1], ('atlas_lote3_20261105', 'atlas-lote3-edits-20261105'))
-        self.assertEqual(verificar_camadas.LAYERS[2], ('autonomia_154_20261105', 'autonomia-154-edits-20261105'))
-        self.assertEqual(verificar_camadas.LAYERS[3], ('exame_contexto_20261105', 'exame-contexto-edits-20261105'))
+        # 06/11/2026: por cima dos créditos atrás de um «i» fica a decisão 152 no M1 (cuidado_m1_20261106): os créditos passam a
+        # segundos, o Atlas a terceiro, a decisão 154 a quarta, e a cadeia de desfazer chama primeiro a decisão 152, depois os créditos.
+        self.assertEqual(verificar_camadas.LAYERS[0], ('cuidado_m1_20261106', 'cuidado-m1-edits-20261106'))
+        self.assertEqual(verificar_camadas.LAYERS[1], ('creditos_i_20261105', 'creditos-i-edits-20261105'))
+        self.assertEqual(verificar_camadas.LAYERS[2], ('atlas_lote3_20261105', 'atlas-lote3-edits-20261105'))
+        self.assertEqual(verificar_camadas.LAYERS[3], ('autonomia_154_20261105', 'autonomia-154-edits-20261105'))
+        self.assertEqual(verificar_camadas.LAYERS[4], ('exame_contexto_20261105', 'exame-contexto-edits-20261105'))
         auditoria = ler('tests/auditoria_20261028.py')
         corpo = auditoria[auditoria.index('def undo_contexto_0511'):]
         self.assertLess(corpo.index('undo_autonomia_0511(path, text)'), corpo.index('_CONTEXTO_0511.get('))
         corpo = auditoria[auditoria.index('def undo_atlas_lote3_0511'):]
         self.assertLess(corpo.index('undo_creditos_i_0511(path, text)'), corpo.index('_ATLAS_LOTE3_0511.get('))
+        # 06/11/2026: e os créditos chamam primeiro a decisão 152 no M1.
+        corpo = auditoria[auditoria.index('def undo_creditos_i_0511'):]
+        self.assertLess(corpo.index('undo_cuidado_m1_0611(path, text)'), corpo.index('_CREDITOS_I_0511.get('))
         corpo = auditoria[auditoria.index('def undo_autonomia_0511'):]
         self.assertLess(corpo.index('undo_atlas_lote3_0511(path, text)'), corpo.index('_AUTONOMIA_0511.get('))
         sala = ler('scripts/desligar_sala.py')
         self.assertIn('autonomia-154-edits-20261105.json', sala)
+        # 06/11/2026: no corte da Sala, a decisão 152 no M1 desfaz-se antes dos créditos.
+        self.assertLess(sala.index('cuidado-m1-edits-20261106.json'), sala.index('creditos-i-edits-20261105.json'))
         self.assertLess(sala.index('creditos-i-edits-20261105.json'), sala.index('atlas-lote3-edits-20261105.json'))
         self.assertLess(sala.index('atlas-lote3-edits-20261105.json'), sala.index('autonomia-154-edits-20261105.json'))
 

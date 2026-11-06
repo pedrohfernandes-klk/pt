@@ -205,7 +205,9 @@ class Grelhas(unittest.TestCase):
                     self.assertEqual(self.pares(slug,texto),[])
             # Os exemplos usam outros casos, e a página do aluno di-lo.
             self.assertTrue(t.get('nota'))
-            self.assertIn(t['nota'],paginas[0])
+            # 06/11/2026: decisão 152 no M1: a nota pode trazer espaços que não quebram (U+00A0); junta-se como Texto() junta os da
+            # página (\s+ > um espaço), sem mais nada.
+            self.assertIn(re.sub(r'\s+',' ',t['nota']),paginas[0])
 
     def pares(self,slug,texto):
         achadas=[]

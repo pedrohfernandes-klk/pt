@@ -31,3 +31,37 @@
 /* O poema e os versos ficam por baixo do exemplo, em letra pequena e cinzenta, como uma legenda. */
 .jogo .ler .apoio-tabela.movimentos .mv-fonte{display:block;margin-top:.3em;font:.82em/1.4 Arial,Helvetica,sans-serif;color:var(--suave,#444)}
 .jogo .ler .apoio-tabela.movimentos tbody th{font:700 1.25em/1.3 Georgia,'Times New Roman',serif}
+/* 06/11/2026: decisão 152 (cuidado em todas as lições), M1. No cartão escuro («Para levar» da M1-F08, M1-F15 e M1-F20) o
+   cabeçalho negro sumia no fundo e os rótulos do telemóvel ficavam cinzentos sobre negro: o cabeçalho passa a uma linha da
+   cor do texto e os rótulos herdam essa cor (também no tema escuro, onde o cartão fica claro). */
+.jogo .cartao.escuro .ler .apoio-tabela thead th{background:transparent;color:inherit;border-bottom:2px solid currentColor}
+.jogo .cartao.escuro .ler .apoio-tabela tbody :is(th,td){border-bottom-color:currentColor;border-bottom-color:color-mix(in srgb,currentColor 40%,transparent)}
+@media(max-width:620px){
+ .jogo .cartao.escuro .ler .apoio-tabela tbody :is(th,td){border:0}
+ .jogo .cartao.escuro .ler .apoio-tabela td[data-label]::before{color:inherit}
+}
+/* 06/11/2026: decisão 152, M1. As mesmas tabelas fora das lições (índice do módulo, guia da tarefa, tarefas e páginas «Ler a
+   fundo»), onde não há .jogo .ler. O seletor só apanha as tabelas que não estão numa lição (as das lições ficam com as regras
+   de cima) e ganha às regras gerais de table, th e td de lesson.css (cabeçalhos a negro, em maiúsculas e com moldura). Com
+   duas colunas, a primeira (o momento, o componente) fica com mais espaço do que a segunda (o tempo, o peso). */
+.apoio-tabela:not(.jogo .ler .apoio-tabela){width:100%;table-layout:fixed;border-collapse:collapse;margin:1rem 0;font:inherit;color:inherit}
+.apoio-tabela:not(.jogo .ler .apoio-tabela) :is(th,td){text-align:left;vertical-align:top;padding:.55em .65em;border:0;border-bottom:1px solid var(--c-cinza,#ccc);overflow-wrap:break-word;word-break:normal;letter-spacing:normal}
+.apoio-tabela:not(.jogo .ler .apoio-tabela) thead th{border-bottom:2px solid var(--tinta,#111);background:var(--tinta,#111);color:var(--papel,#fff);font:700 .86em/1.4 Arial,Helvetica,sans-serif;text-transform:none}
+.apoio-tabela:not(.jogo .ler .apoio-tabela) thead th:first-child{width:25%}
+.apoio-tabela:not(.jogo .ler .apoio-tabela) thead th:first-child:nth-last-child(2){width:60%}
+.apoio-tabela:not(.jogo .ler .apoio-tabela) tbody th{font:inherit;font-weight:700;text-transform:none;background:transparent;color:inherit}
+@media(max-width:620px){
+ .apoio-tabela:not(.jogo .ler .apoio-tabela),.apoio-tabela:not(.jogo .ler .apoio-tabela) :is(tbody,tr,tbody th,td){display:block;width:auto}
+ .apoio-tabela:not(.jogo .ler .apoio-tabela) thead{position:absolute;width:1px;height:1px;padding:0;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+ .apoio-tabela:not(.jogo .ler .apoio-tabela) tbody tr{border-top:2px solid currentColor;padding:.7em 0}
+ .apoio-tabela:not(.jogo .ler .apoio-tabela) :is(tbody th,td){border:0;padding:.15em 0}
+ .apoio-tabela:not(.jogo .ler .apoio-tabela) td[data-label]::before{content:attr(data-label) ": ";font:700 .8em/1.4 Arial,Helvetica,sans-serif;color:var(--suave,#444)}
+}
+@media print{
+ .apoio-tabela:not(.jogo .ler .apoio-tabela){display:table}
+ .apoio-tabela:not(.jogo .ler .apoio-tabela) thead{position:static;display:table-header-group;width:auto;height:auto;clip-path:none;white-space:normal}
+ .apoio-tabela:not(.jogo .ler .apoio-tabela) tbody{display:table-row-group}
+ .apoio-tabela:not(.jogo .ler .apoio-tabela) tr{display:table-row;break-inside:avoid}
+ .apoio-tabela:not(.jogo .ler .apoio-tabela) :is(th,td,tbody th){display:table-cell;padding:.4em .6em;border-bottom:1px solid currentColor}
+ .apoio-tabela:not(.jogo .ler .apoio-tabela) td[data-label]::before{content:none}
+}
