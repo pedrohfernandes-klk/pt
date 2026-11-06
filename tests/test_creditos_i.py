@@ -54,6 +54,46 @@ _P13_FREI = ('frei-luis-personagens-1844.jpg', 'Imagem: _Frei Luiz de Sousa_, pr
 P13_CREDITOS = {'m4/licao-m4-f01/index.html': _P13_PEIXE, 'm4/painel-m4-f01/index.html': _P13_PEIXE,
                 'm4/licao-m4-f04/index.html': _P13_BOCCIONI, 'm4/painel-m4-f04/index.html': _P13_BOCCIONI,
                 'm4/licao-m4-f11/index.html': _P13_FREI, 'm4/painel-m4-f11/index.html': _P13_FREI}
+# 05/11/2026: pedido pt-2, fatia 3. Os créditos dos «Pensar devagar» (P14) tal como estavam no span.fr-cred, letra a letra (o
+# texto, com a ligação «commons.wikimedia.org»); no «i», só a primeira letra sobe a maiúscula, porque o crédito o abre sozinho.
+P14_CREDITOS = {
+    'm1/m1-promessa-do-cronista': 'Crónicas de Jean Froissart (iluminura). Domínio público. commons.wikimedia.org',
+    'm1/m1-voz-emprestada': 'Domínio público. commons.wikimedia.org',
+    'm2/m2-ines-escolhe-duas-vezes': 'impressão de João Álvares, 1562 (reprodução de Victorcouto). Domínio público. '
+                                     'commons.wikimedia.org',
+    'm2/m2-maquina-de-rir': 'CC0. commons.wikimedia.org',
+    'm3/m3-soneto-raciocinio': 'página impressa de 1595. Domínio público. commons.wikimedia.org',
+    'm3/m3-velho-restelo-juri': 'Luís de Camões. Academia Brasileira de Letras, via Wikimedia Commons. Domínio público. '
+                                'commons.wikimedia.org',
+    'm4/m4-frei-luis-quem-sabia': 'Almeida Garrett (edição de 1844, BNP). Domínio público. commons.wikimedia.org',
+    'm4/m4-sermao-tribunal': 'Domínio público. commons.wikimedia.org',
+    'm5/m5-o-pais-ou-eles': 'Domínio público. commons.wikimedia.org',
+    'm5/m5-quem-podia-ter-feito-diferente': 'Lucas de Almeida Marrão (BNP). Domínio público. commons.wikimedia.org',
+    'm6/m6-antero-viagem-ao-nada': 'Domínio público. commons.wikimedia.org',
+    'm6/m6-cesario-noite-inteira': 'José Artur Leitão Bárcia (Arquivo Municipal de Lisboa). Domínio público. '
+                                   'commons.wikimedia.org',
+    'm7/m7-fingidor-maquina': 'autor não identificado (fotografia de 1929). Domínio público. commons.wikimedia.org',
+    'm7/m7-quatro-vozes-um-problema': 'revista Orpheu. Domínio público. commons.wikimedia.org',
+    'm8/m8-poema-testemunha': 'Domínio público. commons.wikimedia.org',
+    'm9/m9-de-quem-e-o-convento': 'CC BY-SA 3.0. commons.wikimedia.org',
+    'm9/m9-ver-e-nao-ver': 'Bartolomeu de Gusmão (fac-símile). Domínio público. commons.wikimedia.org',
+}
+# Os quatro «Olhar» (P15): o campo credito, com os pontos médios passados a pontos finais (nenhuma palavra sai), e o creditoUrl,
+# que passa a viver no «i» (ligado a «Wikimedia Commons»).
+P15_OLHAR = {
+    'm1/olhar-ajuda/index.html': ('_Cancioneiro da Ajuda_, fólio 21r. Domínio público. Wikimedia Commons.',
+                                  'https://commons.wikimedia.org/w/index.php?curid=168669'),
+    'm1/olhar-andeiro/index.html': ('José de Sousa Azevedo, _Morte do Conde Andeiro_ (c.\u00a01860), Museu Nacional de Soares dos '
+                                    'Reis, Porto. Domínio público. Wikimedia Commons.',
+                                    'https://commons.wikimedia.org/w/index.php?curid=1539861'),
+    'm4/olhar-lupi/index.html': ('Miguel Ângelo Lupi, _D. João de Portugal_ (1863). Domínio público. Wikimedia Commons.',
+                                 'https://commons.wikimedia.org/w/index.php?curid=39076717'),
+    'm7/olhar-pessoa/index.html': ('Fernando Pessoa, fotografia de 1914. Domínio público. Wikimedia Commons.',
+                                   'https://commons.wikimedia.org/w/index.php?curid=56775462'),
+}
+# As galerias «Para ver» dos nove mapas (P16, mais Pessoa, da P10): figuras e ligações «Lição Mx-Fyy» por mapa.
+P16_GALERIAS = {1: (11, 11), 2: (4, 4), 3: (8, 8), 4: (12, 10), 5: (7, 7), 6: (7, 7), 7: (19, 19), 8: (4, 4), 9: (7, 7)}
+LICENCA = re.compile(r'(Domínio público(?: \(The Met, Open Access\))?|CC0|CC BY(?:-SA)? \d\.\d)\.')
 
 
 class No:
@@ -300,7 +340,9 @@ class CreditosI(unittest.TestCase):
                         self.assertTrue(re.search(r'src="[^"]*assets/info-i\.js(\?[^"]*)?"', texto), 'carrega info-i.js')
         # 05/11/2026: pedido pt-2, fatia 1: 47 «i» nas lições M1 e M4 (P7), 6 nos documentos visuais (P9) e 7 na página de ensaio.
         # 05/11/2026: fatia 2: mais 3 de Pessoa (P10), 1 da dupla exposição (P11), 8 retratos (P12) e 6 imagens do campo ver (P13).
-        self.assertGreaterEqual(total, 47 + 6 + 7 + 3 + 1 + 8 + 6)
+        # 05/11/2026: fatia 3: mais 17 «Pensar devagar» (P14) e 78 figuras das galerias (P16); os quatro «Olhar» (P15) montam o «i»
+        # no motor e conferem-se à parte.
+        self.assertGreaterEqual(total, 47 + 6 + 7 + 3 + 1 + 8 + 6 + 17 + 78)
 
     def test_nenhum_credito_longo_a_vista(self):
         lista = json.loads(LISTA.read_text('utf-8'))
@@ -385,6 +427,87 @@ class CreditosI(unittest.TestCase):
                     vistas += 1
                     self.assertFalse(any(k in valor for k in MARCAS), (rel, valor[-90:]))
         self.assertGreater(vistas, 1000)
+
+    # 05/11/2026: pedido pt-2, fatia 3. P14: o crédito do fr-cred passa inteiro para o «i» da moldura; a legenda (fr-leg) fica à
+    # vista, sozinha no figcaption. P15: o motor dos «Olhar» monta o «i» e liga-o ao creditoUrl. P16: nas galerias «Para ver», cada
+    # figura tem o «i» entre a imagem e a legenda, com o crédito inteiro (a identificação e a licença), e a legenda guarda o que se
+    # vê e a ligação «Lição Mx-Fyy».
+    def test_p14_pensar_devagar_com_i(self):
+        # Todas as páginas com uma figura fig-rev com legenda (o m8-george-tres-idades só tem as regras de estilo).
+        vistas = sorted(p.relative_to(ROOT).parent.as_posix() for p in ROOT.glob('m[1-9]/m[1-9]-*/index.html')
+                        if 'class=\\"fr-leg\\"' in p.read_text('utf-8'))
+        self.assertEqual(vistas, sorted(P14_CREDITOS))
+        for pasta, credito in P14_CREDITOS.items():
+            rel = pasta + '/index.html'
+            texto = (ROOT / rel).read_text('utf-8')
+            with self.subTest(pagina=rel):
+                self.assertNotIn('fr-cred\\"', texto)
+                figuras = [n for raiz in fragmentos(rel, texto) for n in raiz.descendentes()
+                           if n.tag == 'figure' and 'fig-rev' in n.classes()]
+                self.assertEqual(len(figuras), 1)
+                moldura, legenda = figuras[0].elementos()
+                self.assertEqual((moldura.tag, sorted(moldura.classes())), ('div', ['com-i', 'fr-moldura']))
+                self.assertEqual([e.tag for e in moldura.elementos()], ['img', 'details'])
+                ii = moldura.elementos()[1]
+                self.assertTrue(e_i(ii) and 'info-i--linha' not in ii.classes(), 'o «i» («canto») na moldura')
+                self.assertEqual(ii.elementos()[0].attrs.get('aria-label'), 'Créditos da imagem')
+                self.assertEqual(ii.texto(lambda n: n.tag == 'summary'), credito[:1].upper() + credito[1:])
+                if 'CC BY' in credito:
+                    self.assertTrue(any(a.tag == 'a' and a.attrs.get('rel') == 'license' for a in ii.descendentes()))
+                self.assertEqual(legenda.tag, 'figcaption')
+                self.assertEqual([sorted(e.classes()) for e in legenda.elementos()], [['fr-leg']], 'só a legenda fica à vista')
+                self.assertTrue(legenda.texto().strip())
+                self.assertFalse(any(m in legenda.texto() for m in MARCAS))
+
+    def test_p15_olhar_com_i_e_ligacao(self):
+        for rel, (credito, url) in P15_OLHAR.items():
+            texto = (ROOT / rel).read_text('utf-8')
+            with self.subTest(pagina=rel):
+                self.assertNotIn('class="credito"', texto)
+                self.assertEqual(texto.count(f'"credito":"{json.loads(chr(34) + credito + chr(34))}","creditoUrl":"{url}"'), 1)
+                self.assertNotIn('·', json.loads('"' + credito + '"'))
+                motor = re.search(r'function imagem\(\)\{return E\.imagemData\?(.*?)\}', texto).group(1)
+                self.assertIn('<div class="com-i olhar-com-i"><img class="img"', motor)
+                variante = ' info-i--linha' if rel == 'm7/olhar-pessoa/index.html' else ''
+                self.assertIn(f'<details class="info-i{variante}" name="info-i"><summary aria-label="Créditos da imagem"><span '
+                              f'aria-hidden="true">i</span></summary><p class="info-i-texto">\'+creditoI()+\'</p></details></div>',
+                              motor)
+                self.assertRegex(texto, r'function creditoI\(\)\{var c=it\(E\.credito\),u=E\.creditoUrl')
+                self.assertIn('#palco .olhar-com-i{width:fit-content;max-width:100%;margin:0 auto}', texto)
+
+    def test_p16_galerias_para_ver_com_i(self):
+        for n, (figuras_esperadas, licoes_esperadas) in P16_GALERIAS.items():
+            rel = f'm{n}/mapa-do-modulo-m{n}/index.html'
+            texto = (ROOT / rel).read_text('utf-8')
+            with self.subTest(pagina=rel):
+                galeria = [d for d in Arvore(texto).raiz.descendentes() if d.tag == 'div' and 'galeria' in d.classes()]
+                self.assertEqual(len(galeria), 1)
+                figuras = [f for f in galeria[0].elementos() if f.tag == 'figure']
+                self.assertEqual(len(figuras), figuras_esperadas)
+                nomes, licoes = [], 0
+                for f in figuras:
+                    img, ii, legenda = f.elementos()
+                    self.assertEqual((img.tag, legenda.tag), ('img', 'figcaption'), 'a ordem: imagem, «i», legenda')
+                    self.assertTrue(e_i(ii) and 'info-i--linha' in ii.classes(), 'o «i» («linha») entre a imagem e a legenda')
+                    nome = ii.elementos()[0].attrs.get('aria-label', '')
+                    self.assertRegex(nome, r'^Créditos da imagem: \S')
+                    nomes.append(nome)
+                    credito = re.sub(r'\s', ' ', ii.texto(lambda x: x.tag == 'summary'))
+                    links = [a for a in legenda.elementos() if a.tag == 'a']
+                    licoes += len(links)
+                    self.assertTrue(all(re.fullmatch(r'Lição M\d-F\d+', a.texto()) for a in links), 'na legenda, só «Lição Mx-Fyy»')
+                    visivel = re.sub(r'\s', ' ', legenda.texto(lambda x: x.tag == 'a')).strip()
+                    self.assertFalse(any(m in visivel for m in MARCAS) or LICENCA.search(visivel), (rel, visivel))
+                    if 'PessoaChapeu' in str([a.attrs for a in ii.descendentes()]):
+                        continue  # Pessoa, cerca de 1914 (P10): os seis campos, conferidos em test_varredura_formatacao.
+                    # O crédito começa pela identificação que fica à vista (sem o parêntese final) e acaba na licença (e na Fonte).
+                    self.assertTrue(credito.startswith(visivel[:-1]), (rel, visivel, credito))
+                    self.assertRegex(credito, r'^[^()]*(\([^()]*\)[^()]*)*' + LICENCA.pattern + r'( Fonte: [^.]+\.)?$')
+                    if 'CC BY' in credito:
+                        self.assertTrue(any(a.tag == 'a' and a.attrs.get('rel') == 'license' and 'creativecommons.org/licenses/'
+                                            in a.attrs.get('href', '') for a in ii.descendentes()), 'a ligação da licença')
+                self.assertEqual(len(set(nomes)), len(nomes), 'cada «i» da galeria tem o seu nome')
+                self.assertEqual(licoes, licoes_esperadas)
 
     def test_parar_o_desenho_fora_do_i(self):
         vistos = 0

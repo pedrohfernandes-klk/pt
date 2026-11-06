@@ -26,6 +26,9 @@ Famílias desta camada:
 - P12, retratos do «Em paralelo» (p.rosto-c, variante «linha»): M1-F19, M4-F01, M4-F02 e M4-F11 (8 retratos).
 - P13, crédito colado à explicação (fim do campo f): sai da explicação e vai para o «i» da imagem do campo ver, nas
   lições M4-F01, M4-F04 e M4-F11 e nos três painéis (o motor das lições põe o «i» fora da figura que amplia).
+- P14, «Pensar devagar» (17 páginas): só o fr-cred passa para o «i»; o fr-leg fica à vista.
+- P15, exercícios «Olhar» (4 páginas): o motor imagem() põe o crédito num «i», que ganha a ligação creditoUrl.
+- P16, galeria «Para ver» dos mapas do módulo (9 páginas, 78 figuras, variante «linha»): a ligação «Lição Mx-Fyy» fica à vista.
 """
 import json
 import re
@@ -67,8 +70,10 @@ def em_json(html, barra=False):
 
 def com_licenca(credito):
     """A licença CC passa a ligação para o texto da licença (a impressão escreve o endereço por extenso)."""
+    # 05/11/2026: fatia 3. Também quando o crédito já traz outra ligação (a do fr-cred de Mafra, para o Commons); só não se repete
+    # a ligação da licença.
     for nome, url in LICENCAS.items():
-        if nome + '.' in credito and '<a' not in credito:
+        if nome + '.' in credito and 'rel="license"' not in credito:
             credito = credito.replace(nome + '.', f'<a rel="license" href="{url}">{nome}</a>.')
     return credito
 
@@ -293,10 +298,163 @@ def p13():
     return trocas
 
 
-FAMILIAS = [p7, p10, p11, p12, p13]
+def sem_quebras_refs(texto):
+    """Decisão 152: «n.º 39» e «séc. XVIII» não partem ao mudar de linha (espaço inseparável)."""
+    return texto.replace('n.º ', 'n.º ').replace('séc. ', 'séc. ')
+
+
+def maiuscula(texto):
+    """A primeira letra em maiúscula: o crédito que vivia a seguir à legenda («impressão de João Álvares…») abre o «i» sozinho."""
+    return texto[:1].upper() + texto[1:]
+
+
+# ---------------------------------------------------------------------------------------------------------------------
+# P14: «Pensar devagar» (figure.fig-rev > span.fr-moldura + figcaption com span.fr-leg e span.fr-cred), 17 páginas, um crédito
+# cada; montante imagens-comuns.mjs. Só sai o fr-cred: passa letra a letra para o «i» (variante «canto», dentro da moldura, que
+# passa a div.fr-moldura.com-i); a primeira letra sobe a maiúscula, porque o crédito abre o «i» sozinho. O fr-leg diz o que se vê
+# e serve a pergunta: fica à vista, sozinho no figcaption. A imagem ocupa a largura do cartão (240 px ou mais nas quatro larguras
+# medidas).
+P14_FIGURA = re.compile(r'<figure class=\\"(fig-rev[^"\\]*)\\"><span class=\\"fr-moldura\\">(<img [^>]*>)</span><figcaption>'
+                        r'(<span class=\\"fr-leg\\">(?:(?!</span>).)*</span>) <span class=\\"fr-cred\\">((?:(?!</span>).)*)</span>'
+                        r'</figcaption></figure>')
+P14_FAMILIA = ('Família P14 («Pensar devagar»): o crédito (fr-cred) passa inteiro para o «i»; a legenda (fr-leg), que diz o que se '
+               'vê, fica à vista.')
+
+
+def p14_paginas():
+    return sorted(p.relative_to(ROOT).as_posix() for p in ROOT.glob('m[1-9]/m[1-9]-*/index.html')
+                  if 'class=\\"fr-cred\\"' in base(p.relative_to(ROOT).as_posix()))
+
+
+def p14():
+    trocas = []
+    for rel in p14_paginas():
+        texto = base(rel)
+        achados = list(P14_FIGURA.finditer(texto))
+        assert len(achados) == 1 and texto.count('fr-cred\\"') == 1, (rel, len(achados))
+        m = achados[0]
+        credito = maiuscula(json.loads('"' + m.group(4) + '"'))
+        novo = (f'<figure class=\\"{m.group(1)}\\"><div class=\\"fr-moldura com-i\\">{m.group(2)}{em_json(peca_i(credito))}'
+                f'</div><figcaption>{m.group(3)}</figcaption></figure>')
+        confere_json(m.group(0), novo)
+        trocas.append(troca(rel, texto, f'P14, «Pensar devagar»: o fr-cred passa para o «i»; o fr-leg fica', m.group(0), novo,
+                            P14_FAMILIA, texto.count(m.group(0))))
+    return trocas
+
+
+# ---------------------------------------------------------------------------------------------------------------------
+# P15: exercícios «Olhar» (M1 olhar-ajuda e olhar-andeiro, M4 olhar-lupi, M7 olhar-pessoa); montante interativos.mjs. O motor
+# de cada página (imagem()) escrevia o campo credito num p.credito por baixo da imagem e não mostrava o campo creditoUrl. Passa a
+# pôr a imagem e o «i» num div.com-i (que toma a largura da imagem, centrada) e o crédito dentro do «i», com o itálico (_…_) em
+# <i> e as palavras «Wikimedia Commons» a ligar ao creditoUrl (a ligação, que não se via, passa a viver no «i»). No campo
+# credito, os pontos médios passam a pontos finais (as regras da casa não os querem dentro de frases): «X · domínio público ·
+# Wikimedia Commons» passa a «X. Domínio público. Wikimedia Commons.»; nenhuma palavra sai.
+P15_PAGINAS = ('m1/olhar-ajuda/index.html', 'm1/olhar-andeiro/index.html', 'm4/olhar-lupi/index.html',
+               'm7/olhar-pessoa/index.html')
+P15_IMAGEM = ('function imagem(){return E.imagemData?\'<img class="img" alt="\'+esc(E.titulo)+\'" src="\'+E.imagemData+\'">'
+              '<p class="credito">\'+esc(E.credito)+\'</p>\':""}')
+# A imagem tem 245 a 420 px de largura (medida a 320, 390, 852 e 1366 px), salvo o retrato de Pessoa, com 220 a 229 px: aí, o «i»
+# é da variante «linha», por baixo da imagem; nas outras três, «canto».
+P15_LINHA = {'m7/olhar-pessoa/index.html'}
+P15_IMAGEM_NOVA = (
+    '/* 05/11/2026: decisão 153. O crédito da imagem vive num «i» (assets/info-i.css e assets/info-i.js), com a ligação para a '
+    'imagem de origem (creditoUrl). */'
+    'function creditoI(){var c=it(E.credito),u=E.creditoUrl,a;if(!u)return c;a=\'<a href="\'+esc(u)+\'" rel="noopener">\';'
+    'return c.indexOf("Wikimedia Commons")>-1?c.replace("Wikimedia Commons",a+"Wikimedia Commons</a>"):c+" "+a+'
+    'esc(u.replace(/^https?:\\/\\/([^\\/]+).*$/,"$1"))+"</a>"}'
+    'function imagem(){return E.imagemData?\'<div class="com-i olhar-com-i"><img class="img" alt="\'+esc(E.titulo)+\'" src="\''
+    '+E.imagemData+\'"><details class="info-i{linha}" name="info-i"><summary aria-label="Créditos da imagem"><span '
+    'aria-hidden="true">i</span></summary><p class="info-i-texto">\'+creditoI()+\'</p></details></div>\':""}')
+P15_CREDITO = re.compile(r'"credito":"((?:[^"\\]|\\.)*) · domínio público · Wikimedia Commons","creditoUrl":"https://'
+                         r'commons\.wikimedia\.org/[^"]+"')
+P15_ESTILO = ('/* 05/11/2026: decisão 153. O «i» da imagem do exercício: a moldura toma a largura da imagem, centrada. */'
+              '#palco .olhar-com-i{width:fit-content;max-width:100%;margin:0 auto}')
+P15_FAMILIA = ('Família P15 (exercícios «Olhar»): o crédito sai do p.credito para o «i» da imagem, com a ligação creditoUrl, que '
+               'não se via.')
+
+
+def p15():
+    trocas = []
+    for rel in P15_PAGINAS:
+        texto = base(rel)
+        trocas.append(troca(rel, texto, 'P15, motor do «Olhar» (imagem()): a imagem e o «i» com o crédito e a ligação creditoUrl',
+                            P15_IMAGEM, P15_IMAGEM_NOVA.replace('{linha}', ' info-i--linha' if rel in P15_LINHA else ''),
+                            P15_FAMILIA))
+        m = P15_CREDITO.search(texto)
+        antigo = m.group(0)[:m.group(0).index('","creditoUrl"')]
+        # Decisão 152: «c. 1860» não parte ao mudar de linha (espaço inseparável; o motor escreve o texto tal como está).
+        novo = '"credito":"' + re.sub(r'\bc\. (?=\d)', 'c.\u00a0', m.group(1)) + '. Domínio público. Wikimedia Commons.'
+        trocas.append(troca(rel, texto, 'P15, campo credito: os pontos médios passam a pontos finais', antigo, novo, P15_FAMILIA))
+    return trocas
+
+
+# ---------------------------------------------------------------------------------------------------------------------
+# P16: galeria «Para ver» dos mapas do módulo (9 páginas, 78 figuras além de Pessoa, que é da P10). Cada legenda tem a
+# identificação, a licença, às vezes a ligação «Fonte: …» e quase sempre a ligação «Lição Mx-Fyy». O «i» (variante «linha»: as
+# miniaturas têm 150 px ou pouco mais) fica entre a imagem e o figcaption, como o de Pessoa (P10), e leva o crédito inteiro,
+# letra a letra: a identificação, a licença e a ligação «Fonte». À vista ficam o que se vê e a ligação «Lição Mx-Fyy»: a
+# identificação sem o parêntese final, que traz o autor, a data, o acervo e o fotógrafo («D. João III (Anthonis Mor, 1552).» passa
+# a «D. João III.»; secção 1.1 do plano, legendas mistas); sem parêntese final, a identificação inteira. O nome do «i» junta a
+# identificação curta (a legenda à vista); quando duas legendas à vista coincidem na mesma página (dois retratos de Almeida
+# Garrett, dois de Antero de Quental), junta a identificação inteira.
+P16_PAGINAS = tuple(f'm{n}/mapa-do-modulo-m{n}/index.html' for n in range(1, 10))
+P16_FIGURA = re.compile(r'(<figure(?: class="[^"]*")?><img [^>]*>)<figcaption>((?:(?!</figcaption>).)*)</figcaption></figure>')
+P16_LEGENDA = re.compile(r'(?P<ident>.+?\.) (?P<lic>Domínio público(?: \(The Met, Open Access\))?\.|CC0\.|CC BY(?:-SA)? \d\.\d\.)'
+                         r'(?: (?P<fonte><a href=\'[^\']+\'>Fonte: [^<]+</a>))?'
+                         r'(?: (?P<licao><a href="[^"]+">Lição M\d-F\d+</a>))?')
+P16_FAMILIA = ('Família P16 (galeria «Para ver» do mapa do módulo): o crédito passa inteiro para o «i» («linha»); o que se vê e a '
+               'ligação «Lição Mx-Fyy» ficam à vista.')
+
+
+def p16_visivel(ident):
+    """A identificação sem o parêntese final (autor, data, acervo, fotógrafo), se o tiver."""
+    if not ident.endswith(').'):
+        return ident
+    nivel = 0
+    for k in range(len(ident) - 2, -1, -1):
+        nivel += {')': 1, '(': -1}.get(ident[k], 0)
+        if nivel == 0:
+            return ident[:k].rstrip() + '.'
+    raise ValueError(ident)
+
+
+def sem_etiquetas(html):
+    return re.sub(r'<[^>]+>', '', html).replace('"', '&quot;')
+
+
+def p16():
+    trocas = []
+    for rel in P16_PAGINAS:
+        texto = base(rel)
+        i = texto.index('<div class="galeria">')
+        galeria = texto[i:texto.index('</div>', i)]
+        figuras = []
+        for m in P16_FIGURA.finditer(galeria):
+            if 'info-i' in m.group(0) or 'Lição M7-F01</a><span class="tabela">' in m.group(0):
+                continue  # Pessoa, cerca de 1914: P10.
+            leg = P16_LEGENDA.fullmatch(m.group(2))
+            assert leg, (rel, m.group(2))
+            figuras.append((m, leg, p16_visivel(leg['ident'])))
+        vistas = [v for _, _, v in figuras]
+        for m, leg, visivel in figuras:
+            nome = sem_etiquetas((visivel if vistas.count(visivel) == 1 else leg['ident'])[:-1])
+            credito = sem_quebras_refs(leg['ident'] + ' ' + leg['lic'] + (' ' + leg['fonte'] if leg['fonte'] else ''))
+            novo = (m.group(1) + peca_i(credito, f'Créditos da imagem: {nome}', linha=True) + '<figcaption>'
+                    + sem_quebras_refs(visivel) + (' ' + leg['licao'] if leg['licao'] else '') + '</figcaption></figure>')
+            # A troca leva só a legenda e o fim da imagem (as miniaturas vêm em data:, longas): o alt e o loading.
+            fim_img = re.search(r' alt="[^"]*"[^>]*>$', m.group(1)).group(0)
+            antigo = fim_img + m.group(0)[len(m.group(1)):]
+            novo = fim_img + novo[len(m.group(1)):]
+            trocas.append(troca(rel, texto, f'P16, galeria «Para ver»: {re.sub(r"<[^>]+>", "", visivel)[:60]}', antigo, novo,
+                                P16_FAMILIA, texto.count(antigo)))
+    return trocas
+
+
+FAMILIAS = [p7, p10, p11, p12, p13, p14, p15, p16]
 # Estilos próprios de uma página, que entram na cabeça com a peça comum (depois dela, para a acertar àquela página).
 ESTILOS = {P11_REL: P11_ESTILO, 'm4/painel-m4-f01/index.html': P13_ESTILO_PAINEL,
-           'm4/painel-m4-f04/index.html': P13_ESTILO_PAINEL, 'm4/painel-m4-f11/index.html': P13_ESTILO_PAINEL}
+           'm4/painel-m4-f04/index.html': P13_ESTILO_PAINEL, 'm4/painel-m4-f11/index.html': P13_ESTILO_PAINEL,
+           **{rel: P15_ESTILO for rel in P15_PAGINAS}}
 CABECA = (f'<link rel="stylesheet" href="../../assets/info-i.css?v={VERSAO}">'
           f'<script defer src="../../assets/info-i.js?v={VERSAO}"></script></head>')
 

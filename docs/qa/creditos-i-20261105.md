@@ -79,9 +79,136 @@ A peça comum mudou numa coisa: um «i» aberto dentro de um diálogo (um cartã
 
 O montante, nas fontes, fica por fazer como na P7: `aulas-claras/licao_v2.py` (o `rosto-c` do «Em paralelo») e os dados das lições M4 (o campo `f`).
 
+## Família P14: «Pensar devagar» (17 páginas)
+
+Uma figura por página, no primeiro cartão (`figure.fig-rev`, com a imagem pelo endereço publicado). Só sai o `span.fr-cred`: passa letra a letra para um «i» da variante «canto», dentro da moldura (a `span.fr-moldura` passa a `div.fr-moldura.com-i`; a imagem tem 272 px de largura ou mais nas quatro larguras medidas). A primeira letra sobe a maiúscula, porque o crédito abre o «i» sozinho («impressão de João Álvares…» passa a «Impressão de João Álvares…»). O `span.fr-leg`, que diz o que se vê e serve a pergunta, fica à vista, sozinho no `figcaption`; o ampliador mostra só essa legenda. A licença CC de Mafra ganha a ligação (`rel="license"`), também quando o crédito já traz a ligação para o Commons.
+
+| Página | Fica à vista (fr-leg, igual) | Vai para o «i» (fr-cred) |
+| --- | --- | --- |
+| m1-promessa-do-cronista | O cerco de Lisboa de 1384 numa iluminura francesa: … | Crónicas de Jean Froissart (iluminura). Domínio público. commons.wikimedia.org |
+| m1-voz-emprestada | Pergaminho Vindel: as cantigas de Martim Codax com a música. … | Domínio público. commons.wikimedia.org |
+| m2-ines-escolhe-duas-vezes | Copilaçam de todalas obras de Gil Vicente, 1562: … | Impressão de João Álvares, 1562 (reprodução de Victorcouto). Domínio público. commons.wikimedia.org |
+| m2-maquina-de-rir | Hogarth, O público a rir, 1733: … | CC0. commons.wikimedia.org |
+| m3-soneto-raciocinio | Rimas de Camões, 1595: … | Página impressa de 1595. Domínio público. commons.wikimedia.org |
+| m3-velho-restelo-juri | Os Lusíadas, 1572: … | Luís de Camões. Academia Brasileira de Letras, via Wikimedia Commons. Domínio público. commons.wikimedia.org |
+| m4-frei-luis-quem-sabia | Frei Luís de Sousa, 1844: … | Almeida Garrett (edição de 1844, BNP). Domínio público. commons.wikimedia.org |
+| m4-sermao-tribunal | Santo António a pregar aos peixes, Garcia Fernandes, cerca de 1535: … | Domínio público. commons.wikimedia.org |
+| m5-o-pais-ou-eles | O Hotel Central, cerca de 1910: … | Domínio público. commons.wikimedia.org |
+| m5-quem-podia-ter-feito-diferente | A Cadeia da Relação do Porto, 1850: … | Lucas de Almeida Marrão (BNP). Domínio público. commons.wikimedia.org |
+| m6-antero-viagem-ao-nada | Antero de Quental por Columbano, 1889: … | Domínio público. commons.wikimedia.org |
+| m6-cesario-noite-inteira | Varinas na Ribeira Nova, cerca de 1900: … | José Artur Leitão Bárcia (Arquivo Municipal de Lisboa). Domínio público. commons.wikimedia.org |
+| m7-fingidor-maquina | Fernando Pessoa em 1929: o fingidor, fotografado. | Autor não identificado (fotografia de 1929). Domínio público. commons.wikimedia.org |
+| m7-quatro-vozes-um-problema | Orpheu, n.º 2, 1915: … | Revista Orpheu. Domínio público. commons.wikimedia.org |
+| m8-poema-testemunha | Goya, 3 de maio de 1808: … | Domínio público. commons.wikimedia.org |
+| m9-de-quem-e-o-convento | O Palácio-Convento de Mafra: de quem é esta pedra? | CC BY-SA 3.0 (com a ligação para a licença). commons.wikimedia.org |
+| m9-ver-e-nao-ver | A Passarola: o que uns viram voar e outros não viram. | Bartolomeu de Gusmão (fac-símile). Domínio público. commons.wikimedia.org |
+
+A atribuição CC BY-SA 3.0 de Mafra não traz o nome do fotógrafo no `fr-cred` de origem (a galeria do mapa M9 credita uma fotografia da fachada a Alvesgaspar, 2013); nada se acrescentou: fica para confirmar o ficheiro e corrigir o crédito nas fontes. O montante (`imagens-comuns.mjs`, nas fontes) ainda escreve o `fr-cred` à vista.
+
+## Família P15: exercícios «Olhar» (4 páginas)
+
+M1 `olhar-ajuda` e `olhar-andeiro`, M4 `olhar-lupi`, M7 `olhar-pessoa`. O crédito é montado pelo motor de cada página (`imagem()`), a partir dos campos `credito` e `creditoUrl`; o varrimento estático não o vê, e `tests/test_creditos_i.py` e `tests/browser_creditos_i.cjs` conferem-no à parte. O motor passa a pôr a imagem e o «i» num `div.com-i.olhar-com-i`, que toma a largura da imagem, centrada (um `<style>` na cabeça, com a peça), e o crédito dentro do «i», com o itálico (`_…_`) em `<i>` e as palavras «Wikimedia Commons» a ligar ao `creditoUrl`: a ligação, que não se via, passa a viver no «i». O `p.credito` deixa de existir. No campo `credito`, os pontos médios passam a pontos finais (as regras da casa não os querem dentro de frases) e «c. 1860» ganha espaço inseparável; nenhuma palavra sai. Variante «canto», salvo o retrato de Pessoa (220 a 229 px de largura): «linha».
+
+| Exercício | Antes (p.credito, à vista) | No «i» (com a ligação creditoUrl) |
+| --- | --- | --- |
+| olhar-ajuda | _Cancioneiro da Ajuda_, fólio 21r · domínio público · Wikimedia Commons | *Cancioneiro da Ajuda*, fólio 21r. Domínio público. Wikimedia Commons. |
+| olhar-andeiro | José de Sousa Azevedo, _Morte do Conde Andeiro_ (c. 1860), Museu Nacional de Soares dos Reis, Porto · domínio público · Wikimedia Commons | José de Sousa Azevedo, *Morte do Conde Andeiro* (c. 1860), Museu Nacional de Soares dos Reis, Porto. Domínio público. Wikimedia Commons. |
+| olhar-lupi | Miguel Ângelo Lupi, _D. João de Portugal_ (1863) · domínio público · Wikimedia Commons | Miguel Ângelo Lupi, *D. João de Portugal* (1863). Domínio público. Wikimedia Commons. |
+| olhar-pessoa | Fernando Pessoa, fotografia de 1914 · domínio público · Wikimedia Commons | Fernando Pessoa, fotografia de 1914. Domínio público. Wikimedia Commons. |
+
+O montante (`interativos.mjs`, nas fontes) ainda escreve o `p.credito` e os pontos médios.
+
+## Família P16: galeria «Para ver» dos mapas do módulo (9 páginas, 78 figuras)
+
+Cada figura ganha um «i» da variante «linha» entre a imagem e a legenda (as miniaturas têm 150 px ou pouco mais), como o de Pessoa (P10). O «i» leva o crédito inteiro, letra a letra: a identificação, a licença (as CC com a ligação para o texto da licença) e, quando há, a ligação «Fonte: …». À vista ficam o que se vê e a ligação «Lição Mx-Fyy»: a identificação sem o parêntese final, que traz o autor, a data, o acervo e o fotógrafo (secção 1.1 do plano, legendas mistas); sem parêntese final, a identificação inteira. O nome de cada «i» junta a identificação que fica à vista («Créditos da imagem: D. João III»); quando duas legendas à vista coincidem no mesmo mapa (dois retratos de Almeida Garrett no M4, dois de Antero de Quental no M6), junta a identificação inteira. As datas aproximadas e os intervalos de anos não partem (`span.nb`), nem «séc. XVIII» e «n.º 39» (espaço inseparável). As duas figuras do M4 sem ligação para uma lição (Almeida Garrett por Guglielmi e a cabeça de Demóstenes) ficam só com a legenda curta.
+
+| Mapa | Fica à vista | Vai para o «i» |
+| --- | --- | --- |
+| M1 | Pergaminho Vindel: cantigas de Martim Codax. (e «Lição M1-F01») | Pergaminho Vindel: cantigas de Martim Codax. Domínio público. |
+| M1 | Cancioneiro da Ajuda, fólio 21r. (e «Lição M1-F04») | Cancioneiro da Ajuda, fólio 21r. Domínio público. |
+| M1 | Morte do Conde Andeiro. (e «Lição M1-F06») | Morte do Conde Andeiro (José de Sousa Azevedo, c. 1860). Domínio público. |
+| M1 | Fernão Lopes. (e «Lição M1-F06») | Fernão Lopes (retrato imaginado, Pollini). Domínio público. |
+| M1 | Pergaminho Vindel exposto. (e «Lição M1-F01») | Pergaminho Vindel exposto (fotografia de Luis Miguel Bugallo Sánchez, 2017). CC BY-SA 4.0. |
+| M1 | «Ondas do mar de Vigo», transcrição de Pedro Vindel. (e «Lição M1-F01») | «Ondas do mar de Vigo», transcrição de Pedro Vindel (1915). Domínio público. |
+| M1 | Ilha de San Simón, ria de Vigo. (e «Lição M1-F01») | Ilha de San Simón, ria de Vigo (fotografia de Iago Pillado, 2024). CC BY-SA 4.0. |
+| M1 | Cancioneiro da Biblioteca Nacional, página. (e «Lição M1-F01») | Cancioneiro da Biblioteca Nacional, página (cópia do século XVI). Domínio público. |
+| M1 | D. Dinis, gravura em Diálogos de Vária História. (e «Lição M1-F04») | D. Dinis, gravura em Diálogos de Vária História (Pedro de Mariz, 1594). Domínio público. |
+| M1 | Figura identificada como Fernão Lopes, Painéis de São Vicente. (e «Lição M1-F06») | Figura identificada como Fernão Lopes, Painéis de São Vicente (Nuno Gonçalves, século XV). Domínio público. |
+| M1 | O cerco de Lisboa de 1384, iluminura das Crónicas de Froissart. (e «Lição M1-F06») | O cerco de Lisboa de 1384, iluminura das Crónicas de Froissart (século XV). Domínio público. |
+| M2 | Copilaçam de todalas obras de Gil Vicente (Lisboa, 1562), frontispício. (e «Lição M2-F01») | Copilaçam de todalas obras de Gil Vicente (Lisboa, 1562), frontispício. Domínio público. |
+| M2 | Convento de Cristo, Tomar. (e «Lição M2-F01») | Convento de Cristo, Tomar (fotografia de Ingo Mehling, 2022). CC BY-SA 4.0. |
+| M2 | D. João III. (e «Lição M2-F01») | D. João III (Anthonis Mor, 1552). Domínio público. |
+| M2 | Trajes de portugueses, Trachtenbuch. (e «Lição M2-F01») | Trajes de portugueses, Trachtenbuch (Christoph Weiditz, década de 1530). Domínio público. |
+| M3 | Luís de Camões. (e «Lição M3-F02») | Luís de Camões (Fernão Gomes, c. 1577). Domínio público. |
+| M3 | Rimas de Luís de Camões, primeira edição (1595), página de rosto. (e «Lição M3-F02») | Rimas de Luís de Camões, primeira edição (1595), página de rosto. Domínio público. |
+| M3 | Túmulo de Luís de Camões, Mosteiro dos Jerónimos. (e «Lição M3-F02») | Túmulo de Luís de Camões, Mosteiro dos Jerónimos (fotografia de ProtoplasmaKid, 2019). CC BY-SA 4.0. |
+| M3 | Lavadeiras portuguesas, Costume of Portugal. (e «Lição M3-F02») | Lavadeiras portuguesas, Costume of Portugal (Henri L'Evêque, 1814). Domínio público. |
+| M3 | Os Lusíadas, primeira edição (1572), frontispício. (e «Lição M3-F05») | Os Lusíadas, primeira edição (1572), frontispício. Domínio público. Fonte: Academia Brasileira de Letras, via Wikimedia Commons. |
+| M3 | Vasco da Gama, Livro de Lisuarte de Abreu. (e «Lição M3-F05») | Vasco da Gama, Livro de Lisuarte de Abreu (c. 1560). Domínio público. |
+| M3 | Nau São Bento, Livro de Lisuarte de Abreu. (e «Lição M3-F05») | Nau São Bento, Livro de Lisuarte de Abreu (século XVI). Domínio público. |
+| M3 | Prato com esfera armilar e armas de Portugal, porcelana chinesa. (e «Lição M3-F05») | Prato com esfera armilar e armas de Portugal, porcelana chinesa (c. 1520-1540, The Met). Domínio público (The Met, Open Access). |
+| M4 | *Sermão de Santo António aos Peixes*, em *Sermoens*. (e «Lição M4-F01») | *Sermão de Santo António aos Peixes*, em *Sermoens* (Lisboa, 1682). Domínio público. |
+| M4 | Padre António Vieira. (e «Lição M4-F01») | Padre António Vieira (retrato, início do séc. XVIII). Domínio público. |
+| M4 | D. João de Portugal. (e «Lição M4-F08») | D. João de Portugal (Miguel Ângelo Lupi, 1863). Domínio público. |
+| M4 | Almeida Garrett. | Almeida Garrett (Pedro Augusto Guglielmi, 1844). Domínio público. |
+| M4 | Santo António a pregar aos peixes. (e «Lição M4-F01») | Santo António a pregar aos peixes (Garcia Fernandes, c. 1535-1540, MNAA). Domínio público. |
+| M4 | Peixe-voador, cromolitografia da série Fish from American Waters. (e «Lição M4-F01») | Peixe-voador, cromolitografia da série Fish from American Waters (Allen & Ginter, 1889, The Met). Domínio público (The Met, Open Access). |
+| M4 | Almeida Garrett. (e «Lição M4-F07») | Almeida Garrett (José Malhoa, 1881). Domínio público. |
+| M4 | *Frei Luís de Sousa*, lista de personagens da primeira edição. (e «Lição M4-F08») | *Frei Luís de Sousa*, lista de personagens da primeira edição (1844). Domínio público. |
+| M4 | Sala das sessões da Câmara dos Deputados, São Bento. (e «Lição M4-F14») | Sala das sessões da Câmara dos Deputados, São Bento (fotografia de José Artur Leitão Bárcia, 1909). Domínio público. |
+| M4 | Cícero denuncia Catilina no Senado. (e «Lição M4-F10») | Cícero denuncia Catilina no Senado (Cesare Maccari, 1889). Domínio público. |
+| M4 | Cabeça de Demóstenes, mármore, cópia romana. | Cabeça de Demóstenes, mármore, cópia romana (século II d.C., The Met). Domínio público (The Met, Open Access). |
+| M4 | D. Sebastião. (e «Lição M4-F26») | D. Sebastião (Cristóvão de Morais, c. 1571-1574, MNAA). Domínio público. |
+| M5 | Camilo Castelo Branco. (e «Lição M5-F02») | Camilo Castelo Branco (fotografia da União, Photographia da Casa Real, Porto, 1882). Domínio público. |
+| M5 | Interior da Cadeia da Relação do Porto. (e «Lição M5-F02») | Interior da Cadeia da Relação do Porto (Lucas de Almeida Marrão, c. 1850). Domínio público. |
+| M5 | Cadeia da Relação do Porto, hoje Centro Português de Fotografia. (e «Lição M5-F02») | Cadeia da Relação do Porto, hoje Centro Português de Fotografia (fotografia de Reis Quarteu, 2021). CC BY-SA 4.0. |
+| M5 | Eça de Queirós. (e «Lição M5-F10») | Eça de Queirós (Fotografia Guedes, Porto, c. 1895). Domínio público. |
+| M5 | Os Maias, primeira edição (1888), volume 1, página de rosto. (e «Lição M5-F10») | Os Maias, primeira edição (1888), volume 1, página de rosto. Domínio público. Fonte: Wikimedia Commons. |
+| M5 | Praça dos Remolares, Lisboa, gravura do Archivo Pittoresco. (e «Lição M5-F10») | Praça dos Remolares, Lisboa, gravura do Archivo Pittoresco (Francisco Augusto Nogueira da Silva, 1860). Domínio público. |
+| M5 | Hotel Central, Lisboa. (e «Lição M5-F10») | Hotel Central, Lisboa (fotografia de Joshua Benoliel, c. 1910). Domínio público. |
+| M6 | Antero de Quental. (e «Lição M6-F01») | Antero de Quental (fotografia, c. 1887, publicada em In Memoriam, 1896). Domínio público. |
+| M6 | Antero de Quental. (e «Lição M6-F01») | Antero de Quental (Columbano Bordalo Pinheiro, 1889, MNAC). Domínio público. |
+| M6 | Jardim Botânico de Coimbra. (e «Lição M6-F01») | Jardim Botânico de Coimbra (fotografia de J. Lévy & Co, década de 1880). Domínio público. |
+| M6 | Cesário Verde. (e «Lição M6-F07») | Cesário Verde (retrato de Columbano Bordalo Pinheiro em O Livro de Cesário Verde, 1887). Domínio público. |
+| M6 | «O Sentimento dum Ocidental» em O Livro de Cesário Verde (1887), primeira página. (e «Lição M6-F07») | «O Sentimento dum Ocidental» em O Livro de Cesário Verde (1887), primeira página. Domínio público. |
+| M6 | Mercado de peixe na Ribeira Nova, Lisboa. (e «Lição M6-F07») | Mercado de peixe na Ribeira Nova, Lisboa (fotografia de José Artur Leitão Bárcia, c. 1900). Domínio público. |
+| M6 | Estação original do Cais do Sodré. (e «Lição M6-F07») | Estação original do Cais do Sodré (fotografia da década de 1890, publicada pela CP em 1996). Domínio público. |
+| M7 | Casa Fernando Pessoa. (e «Lição M7-F04») | Casa Fernando Pessoa (fotografia de Lijealso, 2008). CC BY 3.0. |
+| M7 | «Tabacaria» na Presença, n.º 39, julho de 1933. (e «Lição M7-F06») | «Tabacaria» na Presença, n.º 39, julho de 1933 (fotografia de Pmms2005). CC BY-SA 4.0. |
+| M7 | Mensagem, 1.ª edição. (e «Lição M7-F08») | Mensagem, 1.ª edição (1934). Domínio público. |
+| M7 | Fernando Pessoa em 1929. (e «Lição M7-F01») | Fernando Pessoa em 1929 (fotografia, autor não identificado). Domínio público. |
+| M7 | Revista Orpheu, n.º 2 (1915), capa. (e «Lição M7-F01») | Revista Orpheu, n.º 2 (1915), capa. Domínio público. |
+| M7 | «Tabacaria» na revista Presença, n.º 39 (julho de 1933), página 2. (e «Lição M7-F06») | «Tabacaria» na revista Presença, n.º 39 (julho de 1933), página 2. Domínio público. |
+| M7 | Café A Brasileira, Chiado. (e «Lição M7-F01») | Café A Brasileira, Chiado (fotografia de dirk.olbertz, 2010). CC BY 2.0. |
+| M7 | Condução do rebanho. (e «Lição M7-F04») | Condução do rebanho (Silva Porto, 1893, Museu Soares dos Reis; fotografia de Joseolgon, 2016). CC BY-SA 4.0. |
+| M7 | Passagem de gado. (e «Lição M7-F04») | Passagem de gado (João Cristino da Silva, 1867, MNAC; fotografia de Pedro Ribeiro Simões, 2019). CC BY 2.0. |
+| M7 | Horácio, gravura no frontispício das Oeuvres. (e «Lição M7-F05») | Horácio, gravura no frontispício das Oeuvres (1735, Rijksmuseum). CC0. |
+| M7 | Busto de Epicuro, Altes Museum, Berlim. (e «Lição M7-F05») | Busto de Epicuro, Altes Museum, Berlim (fotografia de Yair Haklai, 2019). Domínio público. |
+| M7 | Busto do «Pseudo-Séneca», British Museum. (e «Lição M7-F05») | Busto do «Pseudo-Séneca», British Museum (fotografia de Marie-Lan Nguyen, 2011). Domínio público. |
+| M7 | Tavira, ponte sobre o Gilão. (e «Lição M7-F06») | Tavira, ponte sobre o Gilão (fotografia de Marc Ryckaert, 2007). CC BY-SA 4.0. |
+| M7 | A cidade que sobe. (e «Lição M7-F06») | A cidade que sobe (Umberto Boccioni, 1910, MoMA). Domínio público. |
+| M7 | Casa Havaneza, tabacaria do Chiado desde 1864. (e «Lição M7-F06») | Casa Havaneza, tabacaria do Chiado desde 1864 (fotografia de Martapgoncalves, 2020). CC BY-SA 4.0. |
+| M7 | D. Sebastião. (e «Lição M7-F08») | D. Sebastião (Cristóvão de Morais, c. 1571-1574, MNAA). Domínio público. |
+| M7 | Figura identificada como o Infante D. Henrique, Painéis de São Vicente. (e «Lição M7-F08») | Figura identificada como o Infante D. Henrique, Painéis de São Vicente (Nuno Gonçalves, século XV). Domínio público. |
+| M7 | Aparição do Adamastor. (e «Lição M7-F08») | Aparição do Adamastor (Carlos Reis, antes de 1940). Domínio público. |
+| M8 | Os fuzilamentos de 3 de maio de 1808. (e «Lição M8-F01») | Os fuzilamentos de 3 de maio de 1808 (Francisco de Goya, 1814, Museo del Prado). Domínio público. |
+| M8 | Rua do Alecrim, Lisboa. (e «Lição M8-F08») | Rua do Alecrim, Lisboa (fotografia de Roger Wollstadt, 1968). CC BY-SA 2.0. |
+| M8 | Estação do Rossio, Lisboa. (e «Lição M8-F08») | Estação do Rossio, Lisboa (fotografia de Jorge Franganillo, 2024). CC BY 2.0. |
+| M8 | Relógio de bolso. (e «Lição M8-F08») | Relógio de bolso (Robert Roskell, 1820-1821, The Met). Domínio público (The Met, Open Access). |
+| M9 | Palácio-Convento de Mafra, fachada. (e «Lição M9-F01») | Palácio-Convento de Mafra, fachada (fotografia de Alvesgaspar, 2013). CC BY-SA 3.0. |
+| M9 | Biblioteca do Palácio Nacional de Mafra. (e «Lição M9-F01») | Biblioteca do Palácio Nacional de Mafra (fotografia de Hipersyl, 2026). CC BY 4.0. |
+| M9 | D. João V. (e «Lição M9-F01») | D. João V (Domenico Duprà, 1725, Biblioteca Joanina). Domínio público. |
+| M9 | A Passarola de Bartolomeu de Gusmão, desenho do século XVIII. (e «Lição M9-F01») | A Passarola de Bartolomeu de Gusmão, desenho do século XVIII (fac-símile, BNP). Domínio público. |
+| M9 | Casa dos Bicos, Lisboa, sede da Fundação José Saramago. (e «Lição M9-F04») | Casa dos Bicos, Lisboa, sede da Fundação José Saramago (fotografia de Ingo Mehling, 2022). CC BY-SA 4.0. |
+| M9 | José Saramago em 2005. (e «Lição M9-F04») | José Saramago em 2005 (fotografia de Mario Antonio Pena). CC BY-SA 2.0. |
+| M9 | Oliveira milenar, Constância. (e «Lição M9-F04») | Oliveira milenar, Constância (fotografia de GualdimG, 2025). CC BY-SA 4.0. |
+
+A peça comum mudou em duas coisas, as duas vistas nas galerias. Na impressão, o endereço da licença pode partir onde for preciso (numa coluna de 168 px, o endereço inteiro invadia a coluna do lado); o nome da licença continua inteiro. E as ligações dentro do crédito são sempre texto corrido (`display:inline`), mesmo quando a página dá outra caixa às suas ligações: as galerias põem as ligações em `inline-block` (para a ligação «Lição» ter área de toque), e, na impressão, o ponto final depois da licença ficava sozinho numa linha. O sha256 de `assets/info-i.css` mudou em `tests/fixtures/info-i-sha256.json` (a mesma peça vai para o Lente).
+
 ## Testes
 
 - Novos: `tests/test_creditos_i.py` (peça igual nos dois sítios, estrutura de cada «i», nenhum crédito longo à vista fora da lista fechada `tests/fixtures/creditos-a-vista-20261105.json`, «Parar o desenho» fora do «i») e `tests/browser_creditos_i.cjs` (ensaio e uma amostra de P7 e P9, no CI das lições).
 - Mudam, com comentário datado e a mesma exigência no sítio novo: `tests/browser_documentos_lote2.py`, `tests/test_texto_justificado.py` e `tests/browser_texto_justificado.py`.
 - Fatia 2: mudam `tests/test_varredura_formatacao.py` (`test_creditos_declaram_as_lacunas_da_fonte`: os seis campos dentro do «i» de M7-F01, M7-F05 e do mapa M7, nenhum fora; continua a proibir `credito-imagem`) e `tests/browser_varredura_formatacao.py` (o «i» vê-se; aberto, os seis campos com 13,1 px ou menos; «Lição M7-F01» à vista fora do «i»). `tests/test_creditos_i.py` ganha três testes (a instrução da dupla exposição à vista; os oito retratos letra a letra; nenhum crédito no texto de uma explicação em todo o sítio, e o da P13 no «i» da imagem) e `tests/browser_creditos_i.cjs` ganha as amostras de P10 e P11 e os casos montados de P12 e P13 (lição e painel) e a galeria do mapa M7.
 - A camada entra em todas as cadeias: `scripts/verificar_camadas.py`, `tests/auditoria_20261028.py` (`undo_creditos_i_0511` no início de `undo_contexto_0511`), `scripts/desligar_sala.py`, os testes das cadeias e os workflows.
+- Fatia 3: `tests/test_creditos_i.py` sobe o mínimo de «i» para 173 e ganha três testes (P14: o `fr-cred` letra a letra no «i» da moldura e só o `fr-leg` no `figcaption`; P15: o campo `credito` sem pontos médios, o `creditoUrl` e o motor que monta o «i»; P16: em cada galeria, imagem, «i» e legenda, por esta ordem, o crédito a começar pela legenda à vista e a acabar na licença, nenhuma licença na legenda, as ligações «Lição Mx-Fyy» contadas e um nome único por «i»). A lista fechada perde as entradas de P14 e P16 (ficam 88 entradas e 88 créditos: P1 1, P2 9, P3 1, P8 77). `tests/browser_creditos_i.cjs` ganha a amostra da P14 (com o ampliador) e os casos da P15 (M4 «canto» e M7 «linha», com a ligação `creditoUrl`) e da P16 (mapa M8, com as quatro ligações «Lição» à vista, fora do «i»); o caso do mapa M7 passa a olhar só para a figura de Pessoa (a galeria tem agora 19 «i»); as imagens pelo endereço publicado servem-se da árvore local. Na impressão, em todos os casos montados, as ligações do crédito ficam em linha com o texto (`display:inline`).

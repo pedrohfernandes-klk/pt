@@ -1,5 +1,5 @@
 {
- "_nota": "05/11/2026: decisões 153 e 162. Lista fechada dos créditos longos que ainda estão à vista fora de um «i» (tests/test_creditos_i.py, test_nenhum_credito_longo_a_vista). Cada entrada tem a página, a classe do elemento, a contagem exata e a razão (a família do plano plano-creditos-i-20261105.md e o pedido que a vai pôr a zero). A contagem só pode descer: cada pedido põe a sua família a zero e tira as entradas dela daqui; um crédito longo novo, fora do «i», faz falhar o teste. Pedido pt-2, fatia 1: P7 (lições M1 e M4) e P9 (documentos visuais) já estão a zero. Fatia 2: P10 (Pessoa, cerca de 1914), P11 (dupla exposição), P12 (retratos do «Em paralelo») e P13 (crédito colado à explicação, que o varrimento não vê e tests/test_creditos_i.py confere à parte) também.",
+ "_nota": "05/11/2026: decisões 153 e 162. Lista fechada dos créditos longos que ainda estão à vista fora de um «i» (tests/test_creditos_i.py, test_nenhum_credito_longo_a_vista). Cada entrada tem a página, a classe do elemento, a contagem exata e a razão (a família do plano plano-creditos-i-20261105.md e o pedido que a vai pôr a zero). A contagem só pode descer: cada pedido põe a sua família a zero e tira as entradas dela daqui; um crédito longo novo, fora do «i», faz falhar o teste. Pedido pt-2, fatia 1: P7 (lições M1 e M4) e P9 (documentos visuais) já estão a zero. Fatia 2: P10 (Pessoa, cerca de 1914), P11 (dupla exposição), P12 (retratos do «Em paralelo») e P13 (crédito colado à explicação, que o varrimento não vê e tests/test_creditos_i.py confere à parte) também. Fatia 3: P14 («Pensar devagar»), P15 (exercícios «Olhar», crédito montado pelo motor, que o varrimento não vê e tests/test_creditos_i.py confere à parte) e P16 (galerias «Para ver» dos mapas do módulo) também.",
  "creditos": [
   {
    "pagina": "assets/pt-lessons/m3-f18.js",
@@ -28,27 +28,6 @@
    "contagem": 1,
    "familia": "P2",
    "razao": "Imagem de abertura do índice do módulo; pedido pt-1 (decisão 162: depois do desenho do M4 nos nove índices, decisão 148, e da calçada que balança toda junta, decisão 150)"
-  },
-  {
-   "pagina": "m1/m1-promessa-do-cronista/index.html",
-   "classe": "span.fr-cred",
-   "contagem": 1,
-   "familia": "P14",
-   "razao": "«Pensar devagar»: só sai o fr-cred, o fr-leg fica; pedido pt-2, fatias seguintes da camada creditos_i_20261105"
-  },
-  {
-   "pagina": "m1/m1-voz-emprestada/index.html",
-   "classe": "span.fr-cred",
-   "contagem": 1,
-   "familia": "P14",
-   "razao": "«Pensar devagar»: só sai o fr-cred, o fr-leg fica; pedido pt-2, fatias seguintes da camada creditos_i_20261105"
-  },
-  {
-   "pagina": "m1/mapa-do-modulo-m1/index.html",
-   "classe": "figcaption",
-   "contagem": 11,
-   "familia": "P16",
-   "razao": "Galeria «Para ver» do mapa do módulo: a ligação «Lição Mx-Fyy» fica à vista (variante «linha»); pedido pt-2, fatias seguintes da camada creditos_i_20261105"
   },
   {
    "pagina": "m2/index.html",
@@ -126,27 +105,6 @@
    "contagem": 1,
    "familia": "P8",
    "razao": "Legenda mista no «Abre» (identificação, licença, «Fonte» e frase de contexto); pedido pt-3 (legendas mistas: divisão à mão, com a tabela «fica à vista» e «vai para o «i»» revista pelo revisor de pt-PT; montante licao.mjs figura())"
-  },
-  {
-   "pagina": "m2/m2-ines-escolhe-duas-vezes/index.html",
-   "classe": "span.fr-cred",
-   "contagem": 1,
-   "familia": "P14",
-   "razao": "«Pensar devagar»: só sai o fr-cred, o fr-leg fica; pedido pt-2, fatias seguintes da camada creditos_i_20261105"
-  },
-  {
-   "pagina": "m2/m2-maquina-de-rir/index.html",
-   "classe": "span.fr-cred",
-   "contagem": 1,
-   "familia": "P14",
-   "razao": "«Pensar devagar»: só sai o fr-cred, o fr-leg fica; pedido pt-2, fatias seguintes da camada creditos_i_20261105"
-  },
-  {
-   "pagina": "m2/mapa-do-modulo-m2/index.html",
-   "classe": "figcaption",
-   "contagem": 4,
-   "familia": "P16",
-   "razao": "Galeria «Para ver» do mapa do módulo: a ligação «Lição Mx-Fyy» fica à vista (variante «linha»); pedido pt-2, fatias seguintes da camada creditos_i_20261105"
   },
   {
    "pagina": "m3/index.html",
@@ -233,53 +191,11 @@
    "razao": "Legenda mista no «Abre» (identificação, licença, «Fonte» e frase de contexto); pedido pt-3 (legendas mistas: divisão à mão, com a tabela «fica à vista» e «vai para o «i»» revista pelo revisor de pt-PT; montante licao.mjs figura())"
   },
   {
-   "pagina": "m3/m3-soneto-raciocinio/index.html",
-   "classe": "span.fr-cred",
-   "contagem": 1,
-   "familia": "P14",
-   "razao": "«Pensar devagar»: só sai o fr-cred, o fr-leg fica; pedido pt-2, fatias seguintes da camada creditos_i_20261105"
-  },
-  {
-   "pagina": "m3/m3-velho-restelo-juri/index.html",
-   "classe": "span.fr-cred",
-   "contagem": 1,
-   "familia": "P14",
-   "razao": "«Pensar devagar»: só sai o fr-cred, o fr-leg fica; pedido pt-2, fatias seguintes da camada creditos_i_20261105"
-  },
-  {
-   "pagina": "m3/mapa-do-modulo-m3/index.html",
-   "classe": "figcaption",
-   "contagem": 8,
-   "familia": "P16",
-   "razao": "Galeria «Para ver» do mapa do módulo: a ligação «Lição Mx-Fyy» fica à vista (variante «linha»); pedido pt-2, fatias seguintes da camada creditos_i_20261105"
-  },
-  {
    "pagina": "m4/index.html",
    "classe": "figcaption.cz-credit",
    "contagem": 1,
    "familia": "P2",
    "razao": "Imagem de abertura do índice do módulo; pedido pt-1 (decisão 162: depois do desenho do M4 nos nove índices, decisão 148, e da calçada que balança toda junta, decisão 150)"
-  },
-  {
-   "pagina": "m4/m4-frei-luis-quem-sabia/index.html",
-   "classe": "span.fr-cred",
-   "contagem": 1,
-   "familia": "P14",
-   "razao": "«Pensar devagar»: só sai o fr-cred, o fr-leg fica; pedido pt-2, fatias seguintes da camada creditos_i_20261105"
-  },
-  {
-   "pagina": "m4/m4-sermao-tribunal/index.html",
-   "classe": "span.fr-cred",
-   "contagem": 1,
-   "familia": "P14",
-   "razao": "«Pensar devagar»: só sai o fr-cred, o fr-leg fica; pedido pt-2, fatias seguintes da camada creditos_i_20261105"
-  },
-  {
-   "pagina": "m4/mapa-do-modulo-m4/index.html",
-   "classe": "figcaption",
-   "contagem": 12,
-   "familia": "P16",
-   "razao": "Galeria «Para ver» do mapa do módulo: a ligação «Lição Mx-Fyy» fica à vista (variante «linha»); pedido pt-2, fatias seguintes da camada creditos_i_20261105"
   },
   {
    "pagina": "m5/index.html",
@@ -366,27 +282,6 @@
    "razao": "Legenda mista no «Abre» (identificação, licença, «Fonte» e frase de contexto); pedido pt-3 (legendas mistas: divisão à mão, com a tabela «fica à vista» e «vai para o «i»» revista pelo revisor de pt-PT; montante licao.mjs figura())"
   },
   {
-   "pagina": "m5/m5-o-pais-ou-eles/index.html",
-   "classe": "span.fr-cred",
-   "contagem": 1,
-   "familia": "P14",
-   "razao": "«Pensar devagar»: só sai o fr-cred, o fr-leg fica; pedido pt-2, fatias seguintes da camada creditos_i_20261105"
-  },
-  {
-   "pagina": "m5/m5-quem-podia-ter-feito-diferente/index.html",
-   "classe": "span.fr-cred",
-   "contagem": 1,
-   "familia": "P14",
-   "razao": "«Pensar devagar»: só sai o fr-cred, o fr-leg fica; pedido pt-2, fatias seguintes da camada creditos_i_20261105"
-  },
-  {
-   "pagina": "m5/mapa-do-modulo-m5/index.html",
-   "classe": "figcaption",
-   "contagem": 7,
-   "familia": "P16",
-   "razao": "Galeria «Para ver» do mapa do módulo: a ligação «Lição Mx-Fyy» fica à vista (variante «linha»); pedido pt-2, fatias seguintes da camada creditos_i_20261105"
-  },
-  {
    "pagina": "m6/index.html",
    "classe": "figcaption.cz-credit",
    "contagem": 1,
@@ -469,27 +364,6 @@
    "contagem": 1,
    "familia": "P8",
    "razao": "Legenda mista no «Abre» (identificação, licença, «Fonte» e frase de contexto); pedido pt-3 (legendas mistas: divisão à mão, com a tabela «fica à vista» e «vai para o «i»» revista pelo revisor de pt-PT; montante licao.mjs figura())"
-  },
-  {
-   "pagina": "m6/m6-antero-viagem-ao-nada/index.html",
-   "classe": "span.fr-cred",
-   "contagem": 1,
-   "familia": "P14",
-   "razao": "«Pensar devagar»: só sai o fr-cred, o fr-leg fica; pedido pt-2, fatias seguintes da camada creditos_i_20261105"
-  },
-  {
-   "pagina": "m6/m6-cesario-noite-inteira/index.html",
-   "classe": "span.fr-cred",
-   "contagem": 1,
-   "familia": "P14",
-   "razao": "«Pensar devagar»: só sai o fr-cred, o fr-leg fica; pedido pt-2, fatias seguintes da camada creditos_i_20261105"
-  },
-  {
-   "pagina": "m6/mapa-do-modulo-m6/index.html",
-   "classe": "figcaption",
-   "contagem": 7,
-   "familia": "P16",
-   "razao": "Galeria «Para ver» do mapa do módulo: a ligação «Lição Mx-Fyy» fica à vista (variante «linha»); pedido pt-2, fatias seguintes da camada creditos_i_20261105"
   },
   {
    "pagina": "m7/index.html",
@@ -590,27 +464,6 @@
    "razao": "Legenda mista no «Abre» (identificação, licença, «Fonte» e frase de contexto); pedido pt-3 (legendas mistas: divisão à mão, com a tabela «fica à vista» e «vai para o «i»» revista pelo revisor de pt-PT; montante licao.mjs figura())"
   },
   {
-   "pagina": "m7/m7-fingidor-maquina/index.html",
-   "classe": "span.fr-cred",
-   "contagem": 1,
-   "familia": "P14",
-   "razao": "«Pensar devagar»: só sai o fr-cred, o fr-leg fica; pedido pt-2, fatias seguintes da camada creditos_i_20261105"
-  },
-  {
-   "pagina": "m7/m7-quatro-vozes-um-problema/index.html",
-   "classe": "span.fr-cred",
-   "contagem": 1,
-   "familia": "P14",
-   "razao": "«Pensar devagar»: só sai o fr-cred, o fr-leg fica; pedido pt-2, fatias seguintes da camada creditos_i_20261105"
-  },
-  {
-   "pagina": "m7/mapa-do-modulo-m7/index.html",
-   "classe": "figcaption",
-   "contagem": 18,
-   "familia": "P16",
-   "razao": "Galeria «Para ver» do mapa do módulo: a ligação «Lição Mx-Fyy» fica à vista (variante «linha»); pedido pt-2, fatias seguintes da camada creditos_i_20261105"
-  },
-  {
    "pagina": "m8/index.html",
    "classe": "figcaption.cz-credit",
    "contagem": 1,
@@ -688,20 +541,6 @@
    "razao": "Legenda mista no «Abre» (identificação, licença, «Fonte» e frase de contexto); pedido pt-3 (legendas mistas: divisão à mão, com a tabela «fica à vista» e «vai para o «i»» revista pelo revisor de pt-PT; montante licao.mjs figura())"
   },
   {
-   "pagina": "m8/m8-poema-testemunha/index.html",
-   "classe": "span.fr-cred",
-   "contagem": 1,
-   "familia": "P14",
-   "razao": "«Pensar devagar»: só sai o fr-cred, o fr-leg fica; pedido pt-2, fatias seguintes da camada creditos_i_20261105"
-  },
-  {
-   "pagina": "m8/mapa-do-modulo-m8/index.html",
-   "classe": "figcaption",
-   "contagem": 4,
-   "familia": "P16",
-   "razao": "Galeria «Para ver» do mapa do módulo: a ligação «Lição Mx-Fyy» fica à vista (variante «linha»); pedido pt-2, fatias seguintes da camada creditos_i_20261105"
-  },
-  {
    "pagina": "m9/index.html",
    "classe": "figcaption.cz-credit",
    "contagem": 1,
@@ -756,27 +595,6 @@
    "contagem": 1,
    "familia": "P8",
    "razao": "Legenda mista no «Abre» (identificação, licença, «Fonte» e frase de contexto); pedido pt-3 (legendas mistas: divisão à mão, com a tabela «fica à vista» e «vai para o «i»» revista pelo revisor de pt-PT; montante licao.mjs figura())"
-  },
-  {
-   "pagina": "m9/m9-de-quem-e-o-convento/index.html",
-   "classe": "span.fr-cred",
-   "contagem": 1,
-   "familia": "P14",
-   "razao": "«Pensar devagar»: só sai o fr-cred, o fr-leg fica; pedido pt-2, fatias seguintes da camada creditos_i_20261105"
-  },
-  {
-   "pagina": "m9/m9-ver-e-nao-ver/index.html",
-   "classe": "span.fr-cred",
-   "contagem": 1,
-   "familia": "P14",
-   "razao": "«Pensar devagar»: só sai o fr-cred, o fr-leg fica; pedido pt-2, fatias seguintes da camada creditos_i_20261105"
-  },
-  {
-   "pagina": "m9/mapa-do-modulo-m9/index.html",
-   "classe": "figcaption",
-   "contagem": 7,
-   "familia": "P16",
-   "razao": "Galeria «Para ver» do mapa do módulo: a ligação «Lição Mx-Fyy» fica à vista (variante «linha»); pedido pt-2, fatias seguintes da camada creditos_i_20261105"
   },
   {
    "pagina": "m9/recursos/f11.js",

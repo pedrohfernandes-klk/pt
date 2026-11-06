@@ -288,6 +288,358 @@
   "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. A página carrega a peça comum do «i», igual no Português e no Lente."
  },
  {
+  "ficheiro": "m1/m1-promessa-do-cronista/index.html",
+  "local": "P14, «Pensar devagar»: o fr-cred passa para o «i»; o fr-leg fica",
+  "antigo": "<figure class=\\\"fig-rev \\\"><span class=\\\"fr-moldura\\\"><img src=\\\"https://pedrohfernandes-klk.github.io/pt/img/fontes/cerco-lisboa-froissart.jpg\\\" alt=\\\"Lisboa cercada pelos castelhanos, vista por um iluminador francês.\\\" loading=\\\"lazy\\\" decoding=\\\"async\\\" style=\\\"object-position:50% 40%\\\"></span><figcaption><span class=\\\"fr-leg\\\">O cerco de Lisboa de 1384 numa iluminura francesa: outra maneira de contar o mesmo cerco.</span> <span class=\\\"fr-cred\\\">Crónicas de Jean Froissart (iluminura). Domínio público. <a href=\\\"https://commons.wikimedia.org/wiki/File:Siege_of_Lisbon_1384.JPG\\\" rel=\\\"noopener\\\">commons.wikimedia.org</a></span></figcaption></figure>",
+  "novo": "<figure class=\\\"fig-rev \\\"><div class=\\\"fr-moldura com-i\\\"><img src=\\\"https://pedrohfernandes-klk.github.io/pt/img/fontes/cerco-lisboa-froissart.jpg\\\" alt=\\\"Lisboa cercada pelos castelhanos, vista por um iluminador francês.\\\" loading=\\\"lazy\\\" decoding=\\\"async\\\" style=\\\"object-position:50% 40%\\\"><details class=\\\"info-i\\\" name=\\\"info-i\\\"><summary aria-label=\\\"Créditos da imagem\\\"><span aria-hidden=\\\"true\\\">i</span></summary><p class=\\\"info-i-texto\\\">Crónicas de Jean Froissart (iluminura). Domínio público. <a href=\\\"https://commons.wikimedia.org/wiki/File:Siege_of_Lisbon_1384.JPG\\\" rel=\\\"noopener\\\">commons.wikimedia.org</a></p></details></div><figcaption><span class=\\\"fr-leg\\\">O cerco de Lisboa de 1384 numa iluminura francesa: outra maneira de contar o mesmo cerco.</span></figcaption></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P14 («Pensar devagar»): o crédito (fr-cred) passa inteiro para o «i»; a legenda (fr-leg), que diz o que se vê, fica à vista."
+ },
+ {
+  "ficheiro": "m1/m1-promessa-do-cronista/index.html",
+  "local": "A peça comum do «i» (assets/info-i.css e assets/info-i.js)",
+  "antigo": "</head>",
+  "novo": "<link rel=\"stylesheet\" href=\"../../assets/info-i.css?v=20261105\"><script defer src=\"../../assets/info-i.js?v=20261105\"></script></head>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. A página carrega a peça comum do «i», igual no Português e no Lente."
+ },
+ {
+  "ficheiro": "m1/m1-voz-emprestada/index.html",
+  "local": "P14, «Pensar devagar»: o fr-cred passa para o «i»; o fr-leg fica",
+  "antigo": "<figure class=\\\"fig-rev inteira\\\"><span class=\\\"fr-moldura\\\"><img src=\\\"https://pedrohfernandes-klk.github.io/pt/img/fontes/codax-pergaminho-vindel.jpg\\\" alt=\\\"Pergaminho com as cantigas de Martim Codax e a música.\\\" loading=\\\"lazy\\\" decoding=\\\"async\\\"></span><figcaption><span class=\\\"fr-leg\\\">Pergaminho Vindel: as cantigas de Martim Codax com a música. Quem canta não é quem escreveu.</span> <span class=\\\"fr-cred\\\">Domínio público. <a href=\\\"https://commons.wikimedia.org/w/index.php?curid=368265\\\" rel=\\\"noopener\\\">commons.wikimedia.org</a></span></figcaption></figure>",
+  "novo": "<figure class=\\\"fig-rev inteira\\\"><div class=\\\"fr-moldura com-i\\\"><img src=\\\"https://pedrohfernandes-klk.github.io/pt/img/fontes/codax-pergaminho-vindel.jpg\\\" alt=\\\"Pergaminho com as cantigas de Martim Codax e a música.\\\" loading=\\\"lazy\\\" decoding=\\\"async\\\"><details class=\\\"info-i\\\" name=\\\"info-i\\\"><summary aria-label=\\\"Créditos da imagem\\\"><span aria-hidden=\\\"true\\\">i</span></summary><p class=\\\"info-i-texto\\\">Domínio público. <a href=\\\"https://commons.wikimedia.org/w/index.php?curid=368265\\\" rel=\\\"noopener\\\">commons.wikimedia.org</a></p></details></div><figcaption><span class=\\\"fr-leg\\\">Pergaminho Vindel: as cantigas de Martim Codax com a música. Quem canta não é quem escreveu.</span></figcaption></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P14 («Pensar devagar»): o crédito (fr-cred) passa inteiro para o «i»; a legenda (fr-leg), que diz o que se vê, fica à vista."
+ },
+ {
+  "ficheiro": "m1/m1-voz-emprestada/index.html",
+  "local": "A peça comum do «i» (assets/info-i.css e assets/info-i.js)",
+  "antigo": "</head>",
+  "novo": "<link rel=\"stylesheet\" href=\"../../assets/info-i.css?v=20261105\"><script defer src=\"../../assets/info-i.js?v=20261105\"></script></head>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. A página carrega a peça comum do «i», igual no Português e no Lente."
+ },
+ {
+  "ficheiro": "m1/mapa-do-modulo-m1/index.html",
+  "local": "P16, galeria «Para ver»: Pergaminho Vindel: cantigas de Martim Codax.",
+  "antigo": " alt=\"Pergaminho Vindel: cantigas de Martim Codax\" loading=\"lazy\"><figcaption>Pergaminho Vindel: cantigas de Martim Codax. Domínio público. <a href=\"https://pedrohfernandes-klk.github.io/pt/m1/licao-m1-f01/\">Lição M1-F01</a></figcaption></figure>",
+  "novo": " alt=\"Pergaminho Vindel: cantigas de Martim Codax\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Pergaminho Vindel: cantigas de Martim Codax\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Pergaminho Vindel: cantigas de Martim Codax. Domínio público.</p></details><figcaption>Pergaminho Vindel: cantigas de Martim Codax. <a href=\"https://pedrohfernandes-klk.github.io/pt/m1/licao-m1-f01/\">Lição M1-F01</a></figcaption></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P16 (galeria «Para ver» do mapa do módulo): o crédito passa inteiro para o «i» («linha»); o que se vê e a ligação «Lição Mx-Fyy» ficam à vista."
+ },
+ {
+  "ficheiro": "m1/mapa-do-modulo-m1/index.html",
+  "local": "P16, galeria «Para ver»: Cancioneiro da Ajuda, fólio 21r.",
+  "antigo": " alt=\"Cancioneiro da Ajuda, fólio 21r\" loading=\"lazy\"><figcaption>Cancioneiro da Ajuda, fólio 21r. Domínio público. <a href=\"https://pedrohfernandes-klk.github.io/pt/m1/licao-m1-f04/\">Lição M1-F04</a></figcaption></figure>",
+  "novo": " alt=\"Cancioneiro da Ajuda, fólio 21r\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Cancioneiro da Ajuda, fólio 21r\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Cancioneiro da Ajuda, fólio 21r. Domínio público.</p></details><figcaption>Cancioneiro da Ajuda, fólio 21r. <a href=\"https://pedrohfernandes-klk.github.io/pt/m1/licao-m1-f04/\">Lição M1-F04</a></figcaption></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P16 (galeria «Para ver» do mapa do módulo): o crédito passa inteiro para o «i» («linha»); o que se vê e a ligação «Lição Mx-Fyy» ficam à vista."
+ },
+ {
+  "ficheiro": "m1/mapa-do-modulo-m1/index.html",
+  "local": "P16, galeria «Para ver»: Morte do Conde Andeiro.",
+  "antigo": " alt=\"Morte do Conde Andeiro (José de Sousa Azevedo, c. 1860)\" loading=\"lazy\"><figcaption>Morte do Conde Andeiro (José de Sousa Azevedo, c. 1860). Domínio público. <a href=\"https://pedrohfernandes-klk.github.io/pt/m1/licao-m1-f06/\">Lição M1-F06</a></figcaption></figure>",
+  "novo": " alt=\"Morte do Conde Andeiro (José de Sousa Azevedo, c. 1860)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Morte do Conde Andeiro\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Morte do Conde Andeiro (José de Sousa Azevedo, <span class=\"nb\">c. 1860</span>). Domínio público.</p></details><figcaption>Morte do Conde Andeiro. <a href=\"https://pedrohfernandes-klk.github.io/pt/m1/licao-m1-f06/\">Lição M1-F06</a></figcaption></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P16 (galeria «Para ver» do mapa do módulo): o crédito passa inteiro para o «i» («linha»); o que se vê e a ligação «Lição Mx-Fyy» ficam à vista."
+ },
+ {
+  "ficheiro": "m1/mapa-do-modulo-m1/index.html",
+  "local": "P16, galeria «Para ver»: Fernão Lopes.",
+  "antigo": " alt=\"Fernão Lopes (retrato imaginado, Pollini)\" loading=\"lazy\"><figcaption>Fernão Lopes (retrato imaginado, Pollini). Domínio público. <a href=\"https://pedrohfernandes-klk.github.io/pt/m1/licao-m1-f06/\">Lição M1-F06</a></figcaption></figure>",
+  "novo": " alt=\"Fernão Lopes (retrato imaginado, Pollini)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Fernão Lopes\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Fernão Lopes (retrato imaginado, Pollini). Domínio público.</p></details><figcaption>Fernão Lopes. <a href=\"https://pedrohfernandes-klk.github.io/pt/m1/licao-m1-f06/\">Lição M1-F06</a></figcaption></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P16 (galeria «Para ver» do mapa do módulo): o crédito passa inteiro para o «i» («linha»); o que se vê e a ligação «Lição Mx-Fyy» ficam à vista."
+ },
+ {
+  "ficheiro": "m1/mapa-do-modulo-m1/index.html",
+  "local": "P16, galeria «Para ver»: Pergaminho Vindel exposto.",
+  "antigo": " alt=\"Pergaminho Vindel exposto (fotografia de Luis Miguel Bugallo Sánchez, 2017)\" loading=\"lazy\"><figcaption>Pergaminho Vindel exposto (fotografia de Luis Miguel Bugallo Sánchez, 2017). CC BY-SA 4.0. <a href=\"https://pedrohfernandes-klk.github.io/pt/m1/licao-m1-f01/\">Lição M1-F01</a></figcaption></figure>",
+  "novo": " alt=\"Pergaminho Vindel exposto (fotografia de Luis Miguel Bugallo Sánchez, 2017)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Pergaminho Vindel exposto\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Pergaminho Vindel exposto (fotografia de Luis Miguel Bugallo Sánchez, 2017). <a rel=\"license\" href=\"https://creativecommons.org/licenses/by-sa/4.0/deed.pt\">CC BY-SA 4.0</a>.</p></details><figcaption>Pergaminho Vindel exposto. <a href=\"https://pedrohfernandes-klk.github.io/pt/m1/licao-m1-f01/\">Lição M1-F01</a></figcaption></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P16 (galeria «Para ver» do mapa do módulo): o crédito passa inteiro para o «i» («linha»); o que se vê e a ligação «Lição Mx-Fyy» ficam à vista."
+ },
+ {
+  "ficheiro": "m1/mapa-do-modulo-m1/index.html",
+  "local": "P16, galeria «Para ver»: «Ondas do mar de Vigo», transcrição de Pedro Vindel.",
+  "antigo": " alt=\"«Ondas do mar de Vigo», transcrição de Pedro Vindel (1915)\" loading=\"lazy\"><figcaption>«Ondas do mar de Vigo», transcrição de Pedro Vindel (1915). Domínio público. <a href=\"https://pedrohfernandes-klk.github.io/pt/m1/licao-m1-f01/\">Lição M1-F01</a></figcaption></figure>",
+  "novo": " alt=\"«Ondas do mar de Vigo», transcrição de Pedro Vindel (1915)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: «Ondas do mar de Vigo», transcrição de Pedro Vindel\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">«Ondas do mar de Vigo», transcrição de Pedro Vindel (1915). Domínio público.</p></details><figcaption>«Ondas do mar de Vigo», transcrição de Pedro Vindel. <a href=\"https://pedrohfernandes-klk.github.io/pt/m1/licao-m1-f01/\">Lição M1-F01</a></figcaption></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P16 (galeria «Para ver» do mapa do módulo): o crédito passa inteiro para o «i» («linha»); o que se vê e a ligação «Lição Mx-Fyy» ficam à vista."
+ },
+ {
+  "ficheiro": "m1/mapa-do-modulo-m1/index.html",
+  "local": "P16, galeria «Para ver»: Ilha de San Simón, ria de Vigo.",
+  "antigo": " alt=\"Ilha de San Simón, ria de Vigo (fotografia de Iago Pillado, 2024)\" loading=\"lazy\"><figcaption>Ilha de San Simón, ria de Vigo (fotografia de Iago Pillado, 2024). CC BY-SA 4.0. <a href=\"https://pedrohfernandes-klk.github.io/pt/m1/licao-m1-f01/\">Lição M1-F01</a></figcaption></figure>",
+  "novo": " alt=\"Ilha de San Simón, ria de Vigo (fotografia de Iago Pillado, 2024)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Ilha de San Simón, ria de Vigo\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Ilha de San Simón, ria de Vigo (fotografia de Iago Pillado, 2024). <a rel=\"license\" href=\"https://creativecommons.org/licenses/by-sa/4.0/deed.pt\">CC BY-SA 4.0</a>.</p></details><figcaption>Ilha de San Simón, ria de Vigo. <a href=\"https://pedrohfernandes-klk.github.io/pt/m1/licao-m1-f01/\">Lição M1-F01</a></figcaption></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P16 (galeria «Para ver» do mapa do módulo): o crédito passa inteiro para o «i» («linha»); o que se vê e a ligação «Lição Mx-Fyy» ficam à vista."
+ },
+ {
+  "ficheiro": "m1/mapa-do-modulo-m1/index.html",
+  "local": "P16, galeria «Para ver»: Cancioneiro da Biblioteca Nacional, página.",
+  "antigo": " alt=\"Cancioneiro da Biblioteca Nacional, página (cópia do século XVI)\" loading=\"lazy\"><figcaption>Cancioneiro da Biblioteca Nacional, página (cópia do século XVI). Domínio público. <a href=\"https://pedrohfernandes-klk.github.io/pt/m1/licao-m1-f01/\">Lição M1-F01</a></figcaption></figure>",
+  "novo": " alt=\"Cancioneiro da Biblioteca Nacional, página (cópia do século XVI)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Cancioneiro da Biblioteca Nacional, página\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Cancioneiro da Biblioteca Nacional, página (cópia do século XVI). Domínio público.</p></details><figcaption>Cancioneiro da Biblioteca Nacional, página. <a href=\"https://pedrohfernandes-klk.github.io/pt/m1/licao-m1-f01/\">Lição M1-F01</a></figcaption></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P16 (galeria «Para ver» do mapa do módulo): o crédito passa inteiro para o «i» («linha»); o que se vê e a ligação «Lição Mx-Fyy» ficam à vista."
+ },
+ {
+  "ficheiro": "m1/mapa-do-modulo-m1/index.html",
+  "local": "P16, galeria «Para ver»: D. Dinis, gravura em Diálogos de Vária História.",
+  "antigo": " alt=\"D. Dinis, gravura em Diálogos de Vária História (Pedro de Mariz, 1594)\" loading=\"lazy\"><figcaption>D. Dinis, gravura em Diálogos de Vária História (Pedro de Mariz, 1594). Domínio público. <a href=\"https://pedrohfernandes-klk.github.io/pt/m1/licao-m1-f04/\">Lição M1-F04</a></figcaption></figure>",
+  "novo": " alt=\"D. Dinis, gravura em Diálogos de Vária História (Pedro de Mariz, 1594)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: D. Dinis, gravura em Diálogos de Vária História\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">D. Dinis, gravura em Diálogos de Vária História (Pedro de Mariz, 1594). Domínio público.</p></details><figcaption>D. Dinis, gravura em Diálogos de Vária História. <a href=\"https://pedrohfernandes-klk.github.io/pt/m1/licao-m1-f04/\">Lição M1-F04</a></figcaption></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P16 (galeria «Para ver» do mapa do módulo): o crédito passa inteiro para o «i» («linha»); o que se vê e a ligação «Lição Mx-Fyy» ficam à vista."
+ },
+ {
+  "ficheiro": "m1/mapa-do-modulo-m1/index.html",
+  "local": "P16, galeria «Para ver»: Figura identificada como Fernão Lopes, Painéis de São Vicent",
+  "antigo": " alt=\"Figura identificada como Fernão Lopes, Painéis de São Vicente (Nuno Gonçalves, século XV)\" loading=\"lazy\"><figcaption>Figura identificada como Fernão Lopes, Painéis de São Vicente (Nuno Gonçalves, século XV). Domínio público. <a href=\"https://pedrohfernandes-klk.github.io/pt/m1/licao-m1-f06/\">Lição M1-F06</a></figcaption></figure>",
+  "novo": " alt=\"Figura identificada como Fernão Lopes, Painéis de São Vicente (Nuno Gonçalves, século XV)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Figura identificada como Fernão Lopes, Painéis de São Vicente\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Figura identificada como Fernão Lopes, Painéis de São Vicente (Nuno Gonçalves, século XV). Domínio público.</p></details><figcaption>Figura identificada como Fernão Lopes, Painéis de São Vicente. <a href=\"https://pedrohfernandes-klk.github.io/pt/m1/licao-m1-f06/\">Lição M1-F06</a></figcaption></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P16 (galeria «Para ver» do mapa do módulo): o crédito passa inteiro para o «i» («linha»); o que se vê e a ligação «Lição Mx-Fyy» ficam à vista."
+ },
+ {
+  "ficheiro": "m1/mapa-do-modulo-m1/index.html",
+  "local": "P16, galeria «Para ver»: O cerco de Lisboa de 1384, iluminura das Crónicas de Froissa",
+  "antigo": " alt=\"O cerco de Lisboa de 1384, iluminura das Crónicas de Froissart (século XV)\" loading=\"lazy\"><figcaption>O cerco de Lisboa de 1384, iluminura das Crónicas de Froissart (século XV). Domínio público. <a href=\"https://pedrohfernandes-klk.github.io/pt/m1/licao-m1-f06/\">Lição M1-F06</a></figcaption></figure>",
+  "novo": " alt=\"O cerco de Lisboa de 1384, iluminura das Crónicas de Froissart (século XV)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: O cerco de Lisboa de 1384, iluminura das Crónicas de Froissart\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">O cerco de Lisboa de 1384, iluminura das Crónicas de Froissart (século XV). Domínio público.</p></details><figcaption>O cerco de Lisboa de 1384, iluminura das Crónicas de Froissart. <a href=\"https://pedrohfernandes-klk.github.io/pt/m1/licao-m1-f06/\">Lição M1-F06</a></figcaption></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P16 (galeria «Para ver» do mapa do módulo): o crédito passa inteiro para o «i» («linha»); o que se vê e a ligação «Lição Mx-Fyy» ficam à vista."
+ },
+ {
+  "ficheiro": "m1/mapa-do-modulo-m1/index.html",
+  "local": "A peça comum do «i» (assets/info-i.css e assets/info-i.js)",
+  "antigo": "</head>",
+  "novo": "<link rel=\"stylesheet\" href=\"../../assets/info-i.css?v=20261105\"><script defer src=\"../../assets/info-i.js?v=20261105\"></script></head>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. A página carrega a peça comum do «i», igual no Português e no Lente."
+ },
+ {
+  "ficheiro": "m1/olhar-ajuda/index.html",
+  "local": "P15, motor do «Olhar» (imagem()): a imagem e o «i» com o crédito e a ligação creditoUrl",
+  "antigo": "function imagem(){return E.imagemData?'<img class=\"img\" alt=\"'+esc(E.titulo)+'\" src=\"'+E.imagemData+'\"><p class=\"credito\">'+esc(E.credito)+'</p>':\"\"}",
+  "novo": "/* 05/11/2026: decisão 153. O crédito da imagem vive num «i» (assets/info-i.css e assets/info-i.js), com a ligação para a imagem de origem (creditoUrl). */function creditoI(){var c=it(E.credito),u=E.creditoUrl,a;if(!u)return c;a='<a href=\"'+esc(u)+'\" rel=\"noopener\">';return c.indexOf(\"Wikimedia Commons\")>-1?c.replace(\"Wikimedia Commons\",a+\"Wikimedia Commons</a>\"):c+\" \"+a+esc(u.replace(/^https?:\\/\\/([^\\/]+).*$/,\"$1\"))+\"</a>\"}function imagem(){return E.imagemData?'<div class=\"com-i olhar-com-i\"><img class=\"img\" alt=\"'+esc(E.titulo)+'\" src=\"'+E.imagemData+'\"><details class=\"info-i\" name=\"info-i\"><summary aria-label=\"Créditos da imagem\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">'+creditoI()+'</p></details></div>':\"\"}",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P15 (exercícios «Olhar»): o crédito sai do p.credito para o «i» da imagem, com a ligação creditoUrl, que não se via."
+ },
+ {
+  "ficheiro": "m1/olhar-ajuda/index.html",
+  "local": "P15, campo credito: os pontos médios passam a pontos finais",
+  "antigo": "\"credito\":\"_Cancioneiro da Ajuda_, fólio 21r · domínio público · Wikimedia Commons",
+  "novo": "\"credito\":\"_Cancioneiro da Ajuda_, fólio 21r. Domínio público. Wikimedia Commons.",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P15 (exercícios «Olhar»): o crédito sai do p.credito para o «i» da imagem, com a ligação creditoUrl, que não se via."
+ },
+ {
+  "ficheiro": "m1/olhar-ajuda/index.html",
+  "local": "A peça comum do «i» (assets/info-i.css e assets/info-i.js)",
+  "antigo": "</head>",
+  "novo": "<link rel=\"stylesheet\" href=\"../../assets/info-i.css?v=20261105\"><script defer src=\"../../assets/info-i.js?v=20261105\"></script><style>/* 05/11/2026: decisão 153. O «i» da imagem do exercício: a moldura toma a largura da imagem, centrada. */#palco .olhar-com-i{width:fit-content;max-width:100%;margin:0 auto}</style></head>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. A página carrega a peça comum do «i», igual no Português e no Lente."
+ },
+ {
+  "ficheiro": "m1/olhar-andeiro/index.html",
+  "local": "P15, motor do «Olhar» (imagem()): a imagem e o «i» com o crédito e a ligação creditoUrl",
+  "antigo": "function imagem(){return E.imagemData?'<img class=\"img\" alt=\"'+esc(E.titulo)+'\" src=\"'+E.imagemData+'\"><p class=\"credito\">'+esc(E.credito)+'</p>':\"\"}",
+  "novo": "/* 05/11/2026: decisão 153. O crédito da imagem vive num «i» (assets/info-i.css e assets/info-i.js), com a ligação para a imagem de origem (creditoUrl). */function creditoI(){var c=it(E.credito),u=E.creditoUrl,a;if(!u)return c;a='<a href=\"'+esc(u)+'\" rel=\"noopener\">';return c.indexOf(\"Wikimedia Commons\")>-1?c.replace(\"Wikimedia Commons\",a+\"Wikimedia Commons</a>\"):c+\" \"+a+esc(u.replace(/^https?:\\/\\/([^\\/]+).*$/,\"$1\"))+\"</a>\"}function imagem(){return E.imagemData?'<div class=\"com-i olhar-com-i\"><img class=\"img\" alt=\"'+esc(E.titulo)+'\" src=\"'+E.imagemData+'\"><details class=\"info-i\" name=\"info-i\"><summary aria-label=\"Créditos da imagem\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">'+creditoI()+'</p></details></div>':\"\"}",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P15 (exercícios «Olhar»): o crédito sai do p.credito para o «i» da imagem, com a ligação creditoUrl, que não se via."
+ },
+ {
+  "ficheiro": "m1/olhar-andeiro/index.html",
+  "local": "P15, campo credito: os pontos médios passam a pontos finais",
+  "antigo": "\"credito\":\"José de Sousa Azevedo, _Morte do Conde Andeiro_ (c. 1860), Museu Nacional de Soares dos Reis, Porto · domínio público · Wikimedia Commons",
+  "novo": "\"credito\":\"José de Sousa Azevedo, _Morte do Conde Andeiro_ (c. 1860), Museu Nacional de Soares dos Reis, Porto. Domínio público. Wikimedia Commons.",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P15 (exercícios «Olhar»): o crédito sai do p.credito para o «i» da imagem, com a ligação creditoUrl, que não se via."
+ },
+ {
+  "ficheiro": "m1/olhar-andeiro/index.html",
+  "local": "A peça comum do «i» (assets/info-i.css e assets/info-i.js)",
+  "antigo": "</head>",
+  "novo": "<link rel=\"stylesheet\" href=\"../../assets/info-i.css?v=20261105\"><script defer src=\"../../assets/info-i.js?v=20261105\"></script><style>/* 05/11/2026: decisão 153. O «i» da imagem do exercício: a moldura toma a largura da imagem, centrada. */#palco .olhar-com-i{width:fit-content;max-width:100%;margin:0 auto}</style></head>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. A página carrega a peça comum do «i», igual no Português e no Lente."
+ },
+ {
+  "ficheiro": "m2/m2-ines-escolhe-duas-vezes/index.html",
+  "local": "P14, «Pensar devagar»: o fr-cred passa para o «i»; o fr-leg fica",
+  "antigo": "<figure class=\\\"fig-rev inteira\\\"><span class=\\\"fr-moldura\\\"><img src=\\\"https://pedrohfernandes-klk.github.io/pt/img/fontes/gil-vicente-copilacam-1562.jpg\\\" alt=\\\"O livro onde a farsa foi impressa pelos filhos de Gil Vicente.\\\" loading=\\\"lazy\\\" decoding=\\\"async\\\"></span><figcaption><span class=\\\"fr-leg\\\">Copilaçam de todalas obras de Gil Vicente, 1562: a farsa chegou até nós neste livro.</span> <span class=\\\"fr-cred\\\">impressão de João Álvares, 1562 (reprodução de Victorcouto). Domínio público. <a href=\\\"https://commons.wikimedia.org/wiki/File:Imagem160_Gil_Vicente._Compila%C3%A7am_de_todalas_obras._Joam_Alvarez_impressor._Lisboa,_1562.jpg\\\" rel=\\\"noopener\\\">commons.wikimedia.org</a></span></figcaption></figure>",
+  "novo": "<figure class=\\\"fig-rev inteira\\\"><div class=\\\"fr-moldura com-i\\\"><img src=\\\"https://pedrohfernandes-klk.github.io/pt/img/fontes/gil-vicente-copilacam-1562.jpg\\\" alt=\\\"O livro onde a farsa foi impressa pelos filhos de Gil Vicente.\\\" loading=\\\"lazy\\\" decoding=\\\"async\\\"><details class=\\\"info-i\\\" name=\\\"info-i\\\"><summary aria-label=\\\"Créditos da imagem\\\"><span aria-hidden=\\\"true\\\">i</span></summary><p class=\\\"info-i-texto\\\">Impressão de João Álvares, 1562 (reprodução de Victorcouto). Domínio público. <a href=\\\"https://commons.wikimedia.org/wiki/File:Imagem160_Gil_Vicente._Compila%C3%A7am_de_todalas_obras._Joam_Alvarez_impressor._Lisboa,_1562.jpg\\\" rel=\\\"noopener\\\">commons.wikimedia.org</a></p></details></div><figcaption><span class=\\\"fr-leg\\\">Copilaçam de todalas obras de Gil Vicente, 1562: a farsa chegou até nós neste livro.</span></figcaption></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P14 («Pensar devagar»): o crédito (fr-cred) passa inteiro para o «i»; a legenda (fr-leg), que diz o que se vê, fica à vista."
+ },
+ {
+  "ficheiro": "m2/m2-ines-escolhe-duas-vezes/index.html",
+  "local": "A peça comum do «i» (assets/info-i.css e assets/info-i.js)",
+  "antigo": "</head>",
+  "novo": "<link rel=\"stylesheet\" href=\"../../assets/info-i.css?v=20261105\"><script defer src=\"../../assets/info-i.js?v=20261105\"></script></head>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. A página carrega a peça comum do «i», igual no Português e no Lente."
+ },
+ {
+  "ficheiro": "m2/m2-maquina-de-rir/index.html",
+  "local": "P14, «Pensar devagar»: o fr-cred passa para o «i»; o fr-leg fica",
+  "antigo": "<figure class=\\\"fig-rev \\\"><span class=\\\"fr-moldura\\\"><img src=\\\"https://pedrohfernandes-klk.github.io/pt/img/cidadania/publico-hogarth.webp\\\" alt=\\\"William Hogarth, The Laughing Audience, 1733, NGA 30455\\\" loading=\\\"lazy\\\" decoding=\\\"async\\\" style=\\\"object-position:50% 40%\\\"></span><figcaption><span class=\\\"fr-leg\\\">Hogarth, O público a rir, 1733: a máquina de rir só funciona com uma sala.</span> <span class=\\\"fr-cred\\\">CC0. <a href=\\\"https://commons.wikimedia.org/wiki/File:William_Hogarth,_The_Laughing_Audience,_1733,_NGA_30455.jpg\\\" rel=\\\"noopener\\\">commons.wikimedia.org</a></span></figcaption></figure>",
+  "novo": "<figure class=\\\"fig-rev \\\"><div class=\\\"fr-moldura com-i\\\"><img src=\\\"https://pedrohfernandes-klk.github.io/pt/img/cidadania/publico-hogarth.webp\\\" alt=\\\"William Hogarth, The Laughing Audience, 1733, NGA 30455\\\" loading=\\\"lazy\\\" decoding=\\\"async\\\" style=\\\"object-position:50% 40%\\\"><details class=\\\"info-i\\\" name=\\\"info-i\\\"><summary aria-label=\\\"Créditos da imagem\\\"><span aria-hidden=\\\"true\\\">i</span></summary><p class=\\\"info-i-texto\\\">CC0. <a href=\\\"https://commons.wikimedia.org/wiki/File:William_Hogarth,_The_Laughing_Audience,_1733,_NGA_30455.jpg\\\" rel=\\\"noopener\\\">commons.wikimedia.org</a></p></details></div><figcaption><span class=\\\"fr-leg\\\">Hogarth, O público a rir, 1733: a máquina de rir só funciona com uma sala.</span></figcaption></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P14 («Pensar devagar»): o crédito (fr-cred) passa inteiro para o «i»; a legenda (fr-leg), que diz o que se vê, fica à vista."
+ },
+ {
+  "ficheiro": "m2/m2-maquina-de-rir/index.html",
+  "local": "A peça comum do «i» (assets/info-i.css e assets/info-i.js)",
+  "antigo": "</head>",
+  "novo": "<link rel=\"stylesheet\" href=\"../../assets/info-i.css?v=20261105\"><script defer src=\"../../assets/info-i.js?v=20261105\"></script></head>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. A página carrega a peça comum do «i», igual no Português e no Lente."
+ },
+ {
+  "ficheiro": "m2/mapa-do-modulo-m2/index.html",
+  "local": "P16, galeria «Para ver»: Copilaçam de todalas obras de Gil Vicente (Lisboa, 1562), fr",
+  "antigo": " alt=\"Copilaçam de todalas obras de Gil Vicente (Lisboa, 1562), frontispício\" loading=\"lazy\"><figcaption>Copilaçam de todalas obras de Gil Vicente (Lisboa, 1562), frontispício. Domínio público. <a href=\"https://pedrohfernandes-klk.github.io/pt/m2/licao-m2-f01/\">Lição M2-F01</a></figcaption></figure>",
+  "novo": " alt=\"Copilaçam de todalas obras de Gil Vicente (Lisboa, 1562), frontispício\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Copilaçam de todalas obras de Gil Vicente (Lisboa, 1562), frontispício\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Copilaçam de todalas obras de Gil Vicente (Lisboa, 1562), frontispício. Domínio público.</p></details><figcaption>Copilaçam de todalas obras de Gil Vicente (Lisboa, 1562), frontispício. <a href=\"https://pedrohfernandes-klk.github.io/pt/m2/licao-m2-f01/\">Lição M2-F01</a></figcaption></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P16 (galeria «Para ver» do mapa do módulo): o crédito passa inteiro para o «i» («linha»); o que se vê e a ligação «Lição Mx-Fyy» ficam à vista."
+ },
+ {
+  "ficheiro": "m2/mapa-do-modulo-m2/index.html",
+  "local": "P16, galeria «Para ver»: Convento de Cristo, Tomar.",
+  "antigo": " alt=\"Convento de Cristo, Tomar (fotografia de Ingo Mehling, 2022)\" loading=\"lazy\"><figcaption>Convento de Cristo, Tomar (fotografia de Ingo Mehling, 2022). CC BY-SA 4.0. <a href=\"https://pedrohfernandes-klk.github.io/pt/m2/licao-m2-f01/\">Lição M2-F01</a></figcaption></figure>",
+  "novo": " alt=\"Convento de Cristo, Tomar (fotografia de Ingo Mehling, 2022)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Convento de Cristo, Tomar\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Convento de Cristo, Tomar (fotografia de Ingo Mehling, 2022). <a rel=\"license\" href=\"https://creativecommons.org/licenses/by-sa/4.0/deed.pt\">CC BY-SA 4.0</a>.</p></details><figcaption>Convento de Cristo, Tomar. <a href=\"https://pedrohfernandes-klk.github.io/pt/m2/licao-m2-f01/\">Lição M2-F01</a></figcaption></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P16 (galeria «Para ver» do mapa do módulo): o crédito passa inteiro para o «i» («linha»); o que se vê e a ligação «Lição Mx-Fyy» ficam à vista."
+ },
+ {
+  "ficheiro": "m2/mapa-do-modulo-m2/index.html",
+  "local": "P16, galeria «Para ver»: D. João III.",
+  "antigo": " alt=\"D. João III (Anthonis Mor, 1552)\" loading=\"lazy\"><figcaption>D. João III (Anthonis Mor, 1552). Domínio público. <a href=\"https://pedrohfernandes-klk.github.io/pt/m2/licao-m2-f01/\">Lição M2-F01</a></figcaption></figure>",
+  "novo": " alt=\"D. João III (Anthonis Mor, 1552)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: D. João III\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">D. João III (Anthonis Mor, 1552). Domínio público.</p></details><figcaption>D. João III. <a href=\"https://pedrohfernandes-klk.github.io/pt/m2/licao-m2-f01/\">Lição M2-F01</a></figcaption></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P16 (galeria «Para ver» do mapa do módulo): o crédito passa inteiro para o «i» («linha»); o que se vê e a ligação «Lição Mx-Fyy» ficam à vista."
+ },
+ {
+  "ficheiro": "m2/mapa-do-modulo-m2/index.html",
+  "local": "P16, galeria «Para ver»: Trajes de portugueses, Trachtenbuch.",
+  "antigo": " alt=\"Trajes de portugueses, Trachtenbuch (Christoph Weiditz, década de 1530)\" loading=\"lazy\"><figcaption>Trajes de portugueses, Trachtenbuch (Christoph Weiditz, década de 1530). Domínio público. <a href=\"https://pedrohfernandes-klk.github.io/pt/m2/licao-m2-f01/\">Lição M2-F01</a></figcaption></figure>",
+  "novo": " alt=\"Trajes de portugueses, Trachtenbuch (Christoph Weiditz, década de 1530)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Trajes de portugueses, Trachtenbuch\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Trajes de portugueses, Trachtenbuch (Christoph Weiditz, década de 1530). Domínio público.</p></details><figcaption>Trajes de portugueses, Trachtenbuch. <a href=\"https://pedrohfernandes-klk.github.io/pt/m2/licao-m2-f01/\">Lição M2-F01</a></figcaption></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P16 (galeria «Para ver» do mapa do módulo): o crédito passa inteiro para o «i» («linha»); o que se vê e a ligação «Lição Mx-Fyy» ficam à vista."
+ },
+ {
+  "ficheiro": "m2/mapa-do-modulo-m2/index.html",
+  "local": "A peça comum do «i» (assets/info-i.css e assets/info-i.js)",
+  "antigo": "</head>",
+  "novo": "<link rel=\"stylesheet\" href=\"../../assets/info-i.css?v=20261105\"><script defer src=\"../../assets/info-i.js?v=20261105\"></script></head>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. A página carrega a peça comum do «i», igual no Português e no Lente."
+ },
+ {
+  "ficheiro": "m3/m3-soneto-raciocinio/index.html",
+  "local": "P14, «Pensar devagar»: o fr-cred passa para o «i»; o fr-leg fica",
+  "antigo": "<figure class=\\\"fig-rev inteira\\\"><span class=\\\"fr-moldura\\\"><img src=\\\"https://pedrohfernandes-klk.github.io/pt/img/fontes/camoes-rimas-1595.jpg\\\" alt=\\\"O livro da lírica, publicado depois da morte do poeta.\\\" loading=\\\"lazy\\\" decoding=\\\"async\\\"></span><figcaption><span class=\\\"fr-leg\\\">Rimas de Camões, 1595: os sonetos como raciocínios de catorze versos.</span> <span class=\\\"fr-cred\\\">página impressa de 1595. Domínio público. <a href=\\\"https://commons.wikimedia.org/wiki/File:Cam%C3%B5es_-_Rimas_1595.jpg\\\" rel=\\\"noopener\\\">commons.wikimedia.org</a></span></figcaption></figure>",
+  "novo": "<figure class=\\\"fig-rev inteira\\\"><div class=\\\"fr-moldura com-i\\\"><img src=\\\"https://pedrohfernandes-klk.github.io/pt/img/fontes/camoes-rimas-1595.jpg\\\" alt=\\\"O livro da lírica, publicado depois da morte do poeta.\\\" loading=\\\"lazy\\\" decoding=\\\"async\\\"><details class=\\\"info-i\\\" name=\\\"info-i\\\"><summary aria-label=\\\"Créditos da imagem\\\"><span aria-hidden=\\\"true\\\">i</span></summary><p class=\\\"info-i-texto\\\">Página impressa de 1595. Domínio público. <a href=\\\"https://commons.wikimedia.org/wiki/File:Cam%C3%B5es_-_Rimas_1595.jpg\\\" rel=\\\"noopener\\\">commons.wikimedia.org</a></p></details></div><figcaption><span class=\\\"fr-leg\\\">Rimas de Camões, 1595: os sonetos como raciocínios de catorze versos.</span></figcaption></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P14 («Pensar devagar»): o crédito (fr-cred) passa inteiro para o «i»; a legenda (fr-leg), que diz o que se vê, fica à vista."
+ },
+ {
+  "ficheiro": "m3/m3-soneto-raciocinio/index.html",
+  "local": "A peça comum do «i» (assets/info-i.css e assets/info-i.js)",
+  "antigo": "</head>",
+  "novo": "<link rel=\"stylesheet\" href=\"../../assets/info-i.css?v=20261105\"><script defer src=\"../../assets/info-i.js?v=20261105\"></script></head>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. A página carrega a peça comum do «i», igual no Português e no Lente."
+ },
+ {
+  "ficheiro": "m3/m3-velho-restelo-juri/index.html",
+  "local": "P14, «Pensar devagar»: o fr-cred passa para o «i»; o fr-leg fica",
+  "antigo": "<figure class=\\\"fig-rev inteira\\\"><span class=\\\"fr-moldura\\\"><img src=\\\"../../img/fontes/lusiadas-1572-rosto.jpg?v=rosto-20261019\\\" alt=\\\"Página de rosto de Os Lusíadas, Lisboa, 1572.\\\" loading=\\\"lazy\\\" decoding=\\\"async\\\"></span><figcaption><span class=\\\"fr-leg\\\">Os Lusíadas, 1572: o poema onde a voz contra tem onze estâncias.</span> <span class=\\\"fr-cred\\\">Luís de Camões. Academia Brasileira de Letras, via Wikimedia Commons. Domínio público. <a href=\\\"https://commons.wikimedia.org/wiki/File:BookFrontOsLusiadas1572.jpg\\\" rel=\\\"noopener\\\">commons.wikimedia.org</a></span></figcaption></figure>",
+  "novo": "<figure class=\\\"fig-rev inteira\\\"><div class=\\\"fr-moldura com-i\\\"><img src=\\\"../../img/fontes/lusiadas-1572-rosto.jpg?v=rosto-20261019\\\" alt=\\\"Página de rosto de Os Lusíadas, Lisboa, 1572.\\\" loading=\\\"lazy\\\" decoding=\\\"async\\\"><details class=\\\"info-i\\\" name=\\\"info-i\\\"><summary aria-label=\\\"Créditos da imagem\\\"><span aria-hidden=\\\"true\\\">i</span></summary><p class=\\\"info-i-texto\\\">Luís de Camões. Academia Brasileira de Letras, via Wikimedia Commons. Domínio público. <a href=\\\"https://commons.wikimedia.org/wiki/File:BookFrontOsLusiadas1572.jpg\\\" rel=\\\"noopener\\\">commons.wikimedia.org</a></p></details></div><figcaption><span class=\\\"fr-leg\\\">Os Lusíadas, 1572: o poema onde a voz contra tem onze estâncias.</span></figcaption></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P14 («Pensar devagar»): o crédito (fr-cred) passa inteiro para o «i»; a legenda (fr-leg), que diz o que se vê, fica à vista."
+ },
+ {
+  "ficheiro": "m3/m3-velho-restelo-juri/index.html",
+  "local": "A peça comum do «i» (assets/info-i.css e assets/info-i.js)",
+  "antigo": "</head>",
+  "novo": "<link rel=\"stylesheet\" href=\"../../assets/info-i.css?v=20261105\"><script defer src=\"../../assets/info-i.js?v=20261105\"></script></head>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. A página carrega a peça comum do «i», igual no Português e no Lente."
+ },
+ {
+  "ficheiro": "m3/mapa-do-modulo-m3/index.html",
+  "local": "P16, galeria «Para ver»: Luís de Camões.",
+  "antigo": " alt=\"Luís de Camões (Fernão Gomes, c. 1577)\" loading=\"lazy\"><figcaption>Luís de Camões (Fernão Gomes, c. 1577). Domínio público. <a href=\"https://pedrohfernandes-klk.github.io/pt/m3/licao-m3-f02/\">Lição M3-F02</a></figcaption></figure>",
+  "novo": " alt=\"Luís de Camões (Fernão Gomes, c. 1577)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Luís de Camões\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Luís de Camões (Fernão Gomes, <span class=\"nb\">c. 1577</span>). Domínio público.</p></details><figcaption>Luís de Camões. <a href=\"https://pedrohfernandes-klk.github.io/pt/m3/licao-m3-f02/\">Lição M3-F02</a></figcaption></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P16 (galeria «Para ver» do mapa do módulo): o crédito passa inteiro para o «i» («linha»); o que se vê e a ligação «Lição Mx-Fyy» ficam à vista."
+ },
+ {
+  "ficheiro": "m3/mapa-do-modulo-m3/index.html",
+  "local": "P16, galeria «Para ver»: Rimas de Luís de Camões, primeira edição (1595), página de r",
+  "antigo": " alt=\"Rimas de Luís de Camões, primeira edição (1595), página de rosto\" loading=\"lazy\"><figcaption>Rimas de Luís de Camões, primeira edição (1595), página de rosto. Domínio público. <a href=\"https://pedrohfernandes-klk.github.io/pt/m3/licao-m3-f02/\">Lição M3-F02</a></figcaption></figure>",
+  "novo": " alt=\"Rimas de Luís de Camões, primeira edição (1595), página de rosto\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Rimas de Luís de Camões, primeira edição (1595), página de rosto\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Rimas de Luís de Camões, primeira edição (1595), página de rosto. Domínio público.</p></details><figcaption>Rimas de Luís de Camões, primeira edição (1595), página de rosto. <a href=\"https://pedrohfernandes-klk.github.io/pt/m3/licao-m3-f02/\">Lição M3-F02</a></figcaption></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P16 (galeria «Para ver» do mapa do módulo): o crédito passa inteiro para o «i» («linha»); o que se vê e a ligação «Lição Mx-Fyy» ficam à vista."
+ },
+ {
+  "ficheiro": "m3/mapa-do-modulo-m3/index.html",
+  "local": "P16, galeria «Para ver»: Túmulo de Luís de Camões, Mosteiro dos Jerónimos.",
+  "antigo": " alt=\"Túmulo de Luís de Camões, Mosteiro dos Jerónimos (fotografia de ProtoplasmaKid, 2019)\" loading=\"lazy\"><figcaption>Túmulo de Luís de Camões, Mosteiro dos Jerónimos (fotografia de ProtoplasmaKid, 2019). CC BY-SA 4.0. <a href=\"https://pedrohfernandes-klk.github.io/pt/m3/licao-m3-f02/\">Lição M3-F02</a></figcaption></figure>",
+  "novo": " alt=\"Túmulo de Luís de Camões, Mosteiro dos Jerónimos (fotografia de ProtoplasmaKid, 2019)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Túmulo de Luís de Camões, Mosteiro dos Jerónimos\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Túmulo de Luís de Camões, Mosteiro dos Jerónimos (fotografia de ProtoplasmaKid, 2019). <a rel=\"license\" href=\"https://creativecommons.org/licenses/by-sa/4.0/deed.pt\">CC BY-SA 4.0</a>.</p></details><figcaption>Túmulo de Luís de Camões, Mosteiro dos Jerónimos. <a href=\"https://pedrohfernandes-klk.github.io/pt/m3/licao-m3-f02/\">Lição M3-F02</a></figcaption></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P16 (galeria «Para ver» do mapa do módulo): o crédito passa inteiro para o «i» («linha»); o que se vê e a ligação «Lição Mx-Fyy» ficam à vista."
+ },
+ {
+  "ficheiro": "m3/mapa-do-modulo-m3/index.html",
+  "local": "P16, galeria «Para ver»: Lavadeiras portuguesas, Costume of Portugal.",
+  "antigo": " alt=\"Lavadeiras portuguesas, Costume of Portugal (Henri L'Evêque, 1814)\" loading=\"lazy\"><figcaption>Lavadeiras portuguesas, Costume of Portugal (Henri L'Evêque, 1814). Domínio público. <a href=\"https://pedrohfernandes-klk.github.io/pt/m3/licao-m3-f02/\">Lição M3-F02</a></figcaption></figure>",
+  "novo": " alt=\"Lavadeiras portuguesas, Costume of Portugal (Henri L'Evêque, 1814)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Lavadeiras portuguesas, Costume of Portugal\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Lavadeiras portuguesas, Costume of Portugal (Henri L'Evêque, 1814). Domínio público.</p></details><figcaption>Lavadeiras portuguesas, Costume of Portugal. <a href=\"https://pedrohfernandes-klk.github.io/pt/m3/licao-m3-f02/\">Lição M3-F02</a></figcaption></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P16 (galeria «Para ver» do mapa do módulo): o crédito passa inteiro para o «i» («linha»); o que se vê e a ligação «Lição Mx-Fyy» ficam à vista."
+ },
+ {
+  "ficheiro": "m3/mapa-do-modulo-m3/index.html",
+  "local": "P16, galeria «Para ver»: Os Lusíadas, primeira edição (1572), frontispício.",
+  "antigo": " alt=\"Os Lusíadas, primeira edição (1572), frontispício\" loading=\"lazy\"><figcaption>Os Lusíadas, primeira edição (1572), frontispício. Domínio público. <a href='https://commons.wikimedia.org/wiki/File:BookFrontOsLusiadas1572.jpg'>Fonte: Academia Brasileira de Letras, via Wikimedia Commons.</a> <a href=\"https://pedrohfernandes-klk.github.io/pt/m3/licao-m3-f05/\">Lição M3-F05</a></figcaption></figure>",
+  "novo": " alt=\"Os Lusíadas, primeira edição (1572), frontispício\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Os Lusíadas, primeira edição (1572), frontispício\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Os Lusíadas, primeira edição (1572), frontispício. Domínio público. <a href='https://commons.wikimedia.org/wiki/File:BookFrontOsLusiadas1572.jpg'>Fonte: Academia Brasileira de Letras, via Wikimedia Commons.</a></p></details><figcaption>Os Lusíadas, primeira edição (1572), frontispício. <a href=\"https://pedrohfernandes-klk.github.io/pt/m3/licao-m3-f05/\">Lição M3-F05</a></figcaption></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P16 (galeria «Para ver» do mapa do módulo): o crédito passa inteiro para o «i» («linha»); o que se vê e a ligação «Lição Mx-Fyy» ficam à vista."
+ },
+ {
+  "ficheiro": "m3/mapa-do-modulo-m3/index.html",
+  "local": "P16, galeria «Para ver»: Vasco da Gama, Livro de Lisuarte de Abreu.",
+  "antigo": " alt=\"Vasco da Gama, Livro de Lisuarte de Abreu (c. 1560)\" loading=\"lazy\"><figcaption>Vasco da Gama, Livro de Lisuarte de Abreu (c. 1560). Domínio público. <a href=\"https://pedrohfernandes-klk.github.io/pt/m3/licao-m3-f05/\">Lição M3-F05</a></figcaption></figure>",
+  "novo": " alt=\"Vasco da Gama, Livro de Lisuarte de Abreu (c. 1560)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Vasco da Gama, Livro de Lisuarte de Abreu\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Vasco da Gama, Livro de Lisuarte de Abreu (<span class=\"nb\">c. 1560</span>). Domínio público.</p></details><figcaption>Vasco da Gama, Livro de Lisuarte de Abreu. <a href=\"https://pedrohfernandes-klk.github.io/pt/m3/licao-m3-f05/\">Lição M3-F05</a></figcaption></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P16 (galeria «Para ver» do mapa do módulo): o crédito passa inteiro para o «i» («linha»); o que se vê e a ligação «Lição Mx-Fyy» ficam à vista."
+ },
+ {
+  "ficheiro": "m3/mapa-do-modulo-m3/index.html",
+  "local": "P16, galeria «Para ver»: Nau São Bento, Livro de Lisuarte de Abreu.",
+  "antigo": " alt=\"Nau São Bento, Livro de Lisuarte de Abreu (século XVI)\" loading=\"lazy\"><figcaption>Nau São Bento, Livro de Lisuarte de Abreu (século XVI). Domínio público. <a href=\"https://pedrohfernandes-klk.github.io/pt/m3/licao-m3-f05/\">Lição M3-F05</a></figcaption></figure>",
+  "novo": " alt=\"Nau São Bento, Livro de Lisuarte de Abreu (século XVI)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Nau São Bento, Livro de Lisuarte de Abreu\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Nau São Bento, Livro de Lisuarte de Abreu (século XVI). Domínio público.</p></details><figcaption>Nau São Bento, Livro de Lisuarte de Abreu. <a href=\"https://pedrohfernandes-klk.github.io/pt/m3/licao-m3-f05/\">Lição M3-F05</a></figcaption></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P16 (galeria «Para ver» do mapa do módulo): o crédito passa inteiro para o «i» («linha»); o que se vê e a ligação «Lição Mx-Fyy» ficam à vista."
+ },
+ {
+  "ficheiro": "m3/mapa-do-modulo-m3/index.html",
+  "local": "P16, galeria «Para ver»: Prato com esfera armilar e armas de Portugal, porcelana chin",
+  "antigo": " alt=\"Prato com esfera armilar e armas de Portugal, porcelana chinesa (c. 1520-1540, The Met)\" loading=\"lazy\"><figcaption>Prato com esfera armilar e armas de Portugal, porcelana chinesa (c. 1520-1540, The Met). Domínio público (The Met, Open Access). <a href=\"https://pedrohfernandes-klk.github.io/pt/m3/licao-m3-f05/\">Lição M3-F05</a></figcaption></figure>",
+  "novo": " alt=\"Prato com esfera armilar e armas de Portugal, porcelana chinesa (c. 1520-1540, The Met)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Prato com esfera armilar e armas de Portugal, porcelana chinesa\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Prato com esfera armilar e armas de Portugal, porcelana chinesa (<span class=\"nb\">c. 1520-1540</span>, The Met). Domínio público (The Met, Open Access).</p></details><figcaption>Prato com esfera armilar e armas de Portugal, porcelana chinesa. <a href=\"https://pedrohfernandes-klk.github.io/pt/m3/licao-m3-f05/\">Lição M3-F05</a></figcaption></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P16 (galeria «Para ver» do mapa do módulo): o crédito passa inteiro para o «i» («linha»); o que se vê e a ligação «Lição Mx-Fyy» ficam à vista."
+ },
+ {
+  "ficheiro": "m3/mapa-do-modulo-m3/index.html",
+  "local": "A peça comum do «i» (assets/info-i.css e assets/info-i.js)",
+  "antigo": "</head>",
+  "novo": "<link rel=\"stylesheet\" href=\"../../assets/info-i.css?v=20261105\"><script defer src=\"../../assets/info-i.js?v=20261105\"></script></head>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. A página carrega a peça comum do «i», igual no Português e no Lente."
+ },
+ {
   "ficheiro": "m4/licao-m4-f01/index.html",
   "local": "P7, crédito puro: Garcia Fernandes, <i>Santo António a pregar aos peixes</i>, c. 1535-15",
   "antigo": "<figure class=\\\"fig inteiro cor\\\"><span class=\\\"moldura\\\"><img src=\\\"../../img/fontes/santo-antonio-peixes-garcia-fernandes.jpg\\\" alt=\\\"Santo António, de hábito de frade e cruz na mão, aponta para a água, onde peixes põem a cabeça de fora. Ao fundo, a cidade e uma multidão na praça; à direita, dois homens observam.\\\" loading=\\\"lazy\\\"></span><figcaption>Garcia Fernandes, <i>Santo António a pregar aos peixes</i>, c. 1535-1540, MNAA. Domínio público.</figcaption></figure>",
@@ -704,6 +1056,166 @@
   "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. A página carrega a peça comum do «i», igual no Português e no Lente."
  },
  {
+  "ficheiro": "m4/m4-frei-luis-quem-sabia/index.html",
+  "local": "P14, «Pensar devagar»: o fr-cred passa para o «i»; o fr-leg fica",
+  "antigo": "<figure class=\\\"fig-rev inteira\\\"><span class=\\\"fr-moldura\\\"><img src=\\\"https://pedrohfernandes-klk.github.io/pt/img/fontes/frei-luis-personagens-1844.jpg\\\" alt=\\\"As personagens, como apareceram na primeira edição.\\\" loading=\\\"lazy\\\" decoding=\\\"async\\\"></span><figcaption><span class=\\\"fr-leg\\\">Frei Luís de Sousa, 1844: a lista de quem está em cena, e de quem sabe o quê.</span> <span class=\\\"fr-cred\\\">Almeida Garrett (edição de 1844, BNP). Domínio público. <a href=\\\"https://commons.wikimedia.org/wiki/File:Frei_Luiz_de_Sousa,_Dramatis_person%C3%A6_(1844).png\\\" rel=\\\"noopener\\\">commons.wikimedia.org</a></span></figcaption></figure>",
+  "novo": "<figure class=\\\"fig-rev inteira\\\"><div class=\\\"fr-moldura com-i\\\"><img src=\\\"https://pedrohfernandes-klk.github.io/pt/img/fontes/frei-luis-personagens-1844.jpg\\\" alt=\\\"As personagens, como apareceram na primeira edição.\\\" loading=\\\"lazy\\\" decoding=\\\"async\\\"><details class=\\\"info-i\\\" name=\\\"info-i\\\"><summary aria-label=\\\"Créditos da imagem\\\"><span aria-hidden=\\\"true\\\">i</span></summary><p class=\\\"info-i-texto\\\">Almeida Garrett (edição de 1844, BNP). Domínio público. <a href=\\\"https://commons.wikimedia.org/wiki/File:Frei_Luiz_de_Sousa,_Dramatis_person%C3%A6_(1844).png\\\" rel=\\\"noopener\\\">commons.wikimedia.org</a></p></details></div><figcaption><span class=\\\"fr-leg\\\">Frei Luís de Sousa, 1844: a lista de quem está em cena, e de quem sabe o quê.</span></figcaption></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P14 («Pensar devagar»): o crédito (fr-cred) passa inteiro para o «i»; a legenda (fr-leg), que diz o que se vê, fica à vista."
+ },
+ {
+  "ficheiro": "m4/m4-frei-luis-quem-sabia/index.html",
+  "local": "A peça comum do «i» (assets/info-i.css e assets/info-i.js)",
+  "antigo": "</head>",
+  "novo": "<link rel=\"stylesheet\" href=\"../../assets/info-i.css?v=20261105\"><script defer src=\"../../assets/info-i.js?v=20261105\"></script></head>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. A página carrega a peça comum do «i», igual no Português e no Lente."
+ },
+ {
+  "ficheiro": "m4/m4-sermao-tribunal/index.html",
+  "local": "P14, «Pensar devagar»: o fr-cred passa para o «i»; o fr-leg fica",
+  "antigo": "<figure class=\\\"fig-rev \\\"><span class=\\\"fr-moldura\\\"><img src=\\\"https://pedrohfernandes-klk.github.io/pt/img/fontes/santo-antonio-peixes-garcia-fernandes.jpg\\\" alt=\\\"A cena que dá o tema ao sermão, pintada um século antes de Vieira.\\\" loading=\\\"lazy\\\" decoding=\\\"async\\\" style=\\\"object-position:50% 40%\\\"></span><figcaption><span class=\\\"fr-leg\\\">Santo António a pregar aos peixes, Garcia Fernandes, cerca de 1535: o tribunal já estava pintado.</span> <span class=\\\"fr-cred\\\">Domínio público. <a href=\\\"https://commons.wikimedia.org/wiki/File:Garcia_Fernandes_Santo_Ant%C3%B3nio_pregando_aos_peixes_MNAA.jpg\\\" rel=\\\"noopener\\\">commons.wikimedia.org</a></span></figcaption></figure>",
+  "novo": "<figure class=\\\"fig-rev \\\"><div class=\\\"fr-moldura com-i\\\"><img src=\\\"https://pedrohfernandes-klk.github.io/pt/img/fontes/santo-antonio-peixes-garcia-fernandes.jpg\\\" alt=\\\"A cena que dá o tema ao sermão, pintada um século antes de Vieira.\\\" loading=\\\"lazy\\\" decoding=\\\"async\\\" style=\\\"object-position:50% 40%\\\"><details class=\\\"info-i\\\" name=\\\"info-i\\\"><summary aria-label=\\\"Créditos da imagem\\\"><span aria-hidden=\\\"true\\\">i</span></summary><p class=\\\"info-i-texto\\\">Domínio público. <a href=\\\"https://commons.wikimedia.org/wiki/File:Garcia_Fernandes_Santo_Ant%C3%B3nio_pregando_aos_peixes_MNAA.jpg\\\" rel=\\\"noopener\\\">commons.wikimedia.org</a></p></details></div><figcaption><span class=\\\"fr-leg\\\">Santo António a pregar aos peixes, Garcia Fernandes, cerca de 1535: o tribunal já estava pintado.</span></figcaption></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P14 («Pensar devagar»): o crédito (fr-cred) passa inteiro para o «i»; a legenda (fr-leg), que diz o que se vê, fica à vista."
+ },
+ {
+  "ficheiro": "m4/m4-sermao-tribunal/index.html",
+  "local": "A peça comum do «i» (assets/info-i.css e assets/info-i.js)",
+  "antigo": "</head>",
+  "novo": "<link rel=\"stylesheet\" href=\"../../assets/info-i.css?v=20261105\"><script defer src=\"../../assets/info-i.js?v=20261105\"></script></head>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. A página carrega a peça comum do «i», igual no Português e no Lente."
+ },
+ {
+  "ficheiro": "m4/mapa-do-modulo-m4/index.html",
+  "local": "P16, galeria «Para ver»: Sermão de Santo António aos Peixes, em Sermoens.",
+  "antigo": " alt=\"Sermão de Santo António aos Peixes, em Sermoens (Lisboa, 1682)\" loading=\"lazy\"><figcaption><i>Sermão de Santo António aos Peixes</i>, em <i>Sermoens</i> (Lisboa, 1682). Domínio público. <a href=\"https://pedrohfernandes-klk.github.io/pt/m4/licao-m4-f01/\">Lição M4-F01</a></figcaption></figure>",
+  "novo": " alt=\"Sermão de Santo António aos Peixes, em Sermoens (Lisboa, 1682)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Sermão de Santo António aos Peixes, em Sermoens\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\"><i>Sermão de Santo António aos Peixes</i>, em <i>Sermoens</i> (Lisboa, 1682). Domínio público.</p></details><figcaption><i>Sermão de Santo António aos Peixes</i>, em <i>Sermoens</i>. <a href=\"https://pedrohfernandes-klk.github.io/pt/m4/licao-m4-f01/\">Lição M4-F01</a></figcaption></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P16 (galeria «Para ver» do mapa do módulo): o crédito passa inteiro para o «i» («linha»); o que se vê e a ligação «Lição Mx-Fyy» ficam à vista."
+ },
+ {
+  "ficheiro": "m4/mapa-do-modulo-m4/index.html",
+  "local": "P16, galeria «Para ver»: Padre António Vieira.",
+  "antigo": " alt=\"Padre António Vieira (retrato, início do séc. XVIII)\" loading=\"lazy\"><figcaption>Padre António Vieira (retrato, início do séc. XVIII). Domínio público. <a href=\"https://pedrohfernandes-klk.github.io/pt/m4/licao-m4-f01/\">Lição M4-F01</a></figcaption></figure>",
+  "novo": " alt=\"Padre António Vieira (retrato, início do séc. XVIII)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Padre António Vieira\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Padre António Vieira (retrato, início do séc. XVIII). Domínio público.</p></details><figcaption>Padre António Vieira. <a href=\"https://pedrohfernandes-klk.github.io/pt/m4/licao-m4-f01/\">Lição M4-F01</a></figcaption></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P16 (galeria «Para ver» do mapa do módulo): o crédito passa inteiro para o «i» («linha»); o que se vê e a ligação «Lição Mx-Fyy» ficam à vista."
+ },
+ {
+  "ficheiro": "m4/mapa-do-modulo-m4/index.html",
+  "local": "P16, galeria «Para ver»: D. João de Portugal.",
+  "antigo": " alt=\"D. João de Portugal (Miguel Ângelo Lupi, 1863)\" loading=\"lazy\"><figcaption>D. João de Portugal (Miguel Ângelo Lupi, 1863). Domínio público. <a href=\"https://pedrohfernandes-klk.github.io/pt/m4/licao-m4-f08/\">Lição M4-F08</a></figcaption></figure>",
+  "novo": " alt=\"D. João de Portugal (Miguel Ângelo Lupi, 1863)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: D. João de Portugal\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">D. João de Portugal (Miguel Ângelo Lupi, 1863). Domínio público.</p></details><figcaption>D. João de Portugal. <a href=\"https://pedrohfernandes-klk.github.io/pt/m4/licao-m4-f08/\">Lição M4-F08</a></figcaption></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P16 (galeria «Para ver» do mapa do módulo): o crédito passa inteiro para o «i» («linha»); o que se vê e a ligação «Lição Mx-Fyy» ficam à vista."
+ },
+ {
+  "ficheiro": "m4/mapa-do-modulo-m4/index.html",
+  "local": "P16, galeria «Para ver»: Almeida Garrett.",
+  "antigo": " alt=\"Almeida Garrett (Pedro Augusto Guglielmi, 1844)\" loading=\"lazy\"><figcaption>Almeida Garrett (Pedro Augusto Guglielmi, 1844). Domínio público.</figcaption></figure>",
+  "novo": " alt=\"Almeida Garrett (Pedro Augusto Guglielmi, 1844)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Almeida Garrett (Pedro Augusto Guglielmi, 1844)\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Almeida Garrett (Pedro Augusto Guglielmi, 1844). Domínio público.</p></details><figcaption>Almeida Garrett.</figcaption></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P16 (galeria «Para ver» do mapa do módulo): o crédito passa inteiro para o «i» («linha»); o que se vê e a ligação «Lição Mx-Fyy» ficam à vista."
+ },
+ {
+  "ficheiro": "m4/mapa-do-modulo-m4/index.html",
+  "local": "P16, galeria «Para ver»: Santo António a pregar aos peixes.",
+  "antigo": " alt=\"Santo António a pregar aos peixes (Garcia Fernandes, c. 1535-1540, MNAA)\" loading=\"lazy\"><figcaption>Santo António a pregar aos peixes (Garcia Fernandes, c. 1535-1540, MNAA). Domínio público. <a href=\"https://pedrohfernandes-klk.github.io/pt/m4/licao-m4-f01/\">Lição M4-F01</a></figcaption></figure>",
+  "novo": " alt=\"Santo António a pregar aos peixes (Garcia Fernandes, c. 1535-1540, MNAA)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Santo António a pregar aos peixes\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Santo António a pregar aos peixes (Garcia Fernandes, <span class=\"nb\">c. 1535-1540</span>, MNAA). Domínio público.</p></details><figcaption>Santo António a pregar aos peixes. <a href=\"https://pedrohfernandes-klk.github.io/pt/m4/licao-m4-f01/\">Lição M4-F01</a></figcaption></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P16 (galeria «Para ver» do mapa do módulo): o crédito passa inteiro para o «i» («linha»); o que se vê e a ligação «Lição Mx-Fyy» ficam à vista."
+ },
+ {
+  "ficheiro": "m4/mapa-do-modulo-m4/index.html",
+  "local": "P16, galeria «Para ver»: Peixe-voador, cromolitografia da série Fish from American Wa",
+  "antigo": " alt=\"Peixe-voador, cromolitografia da série Fish from American Waters (Allen &amp; Ginter, 1889, The Met)\" loading=\"lazy\"><figcaption>Peixe-voador, cromolitografia da série Fish from American Waters (Allen &amp; Ginter, 1889, The Met). Domínio público (The Met, Open Access). <a href=\"https://pedrohfernandes-klk.github.io/pt/m4/licao-m4-f01/\">Lição M4-F01</a></figcaption></figure>",
+  "novo": " alt=\"Peixe-voador, cromolitografia da série Fish from American Waters (Allen &amp; Ginter, 1889, The Met)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Peixe-voador, cromolitografia da série Fish from American Waters\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Peixe-voador, cromolitografia da série Fish from American Waters (Allen &amp; Ginter, 1889, The Met). Domínio público (The Met, Open Access).</p></details><figcaption>Peixe-voador, cromolitografia da série Fish from American Waters. <a href=\"https://pedrohfernandes-klk.github.io/pt/m4/licao-m4-f01/\">Lição M4-F01</a></figcaption></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P16 (galeria «Para ver» do mapa do módulo): o crédito passa inteiro para o «i» («linha»); o que se vê e a ligação «Lição Mx-Fyy» ficam à vista."
+ },
+ {
+  "ficheiro": "m4/mapa-do-modulo-m4/index.html",
+  "local": "P16, galeria «Para ver»: Almeida Garrett.",
+  "antigo": " alt=\"Almeida Garrett (José Malhoa, 1881)\" loading=\"lazy\"><figcaption>Almeida Garrett (José Malhoa, 1881). Domínio público. <a href=\"https://pedrohfernandes-klk.github.io/pt/m4/licao-m4-f07/\">Lição M4-F07</a></figcaption></figure>",
+  "novo": " alt=\"Almeida Garrett (José Malhoa, 1881)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Almeida Garrett (José Malhoa, 1881)\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Almeida Garrett (José Malhoa, 1881). Domínio público.</p></details><figcaption>Almeida Garrett. <a href=\"https://pedrohfernandes-klk.github.io/pt/m4/licao-m4-f07/\">Lição M4-F07</a></figcaption></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P16 (galeria «Para ver» do mapa do módulo): o crédito passa inteiro para o «i» («linha»); o que se vê e a ligação «Lição Mx-Fyy» ficam à vista."
+ },
+ {
+  "ficheiro": "m4/mapa-do-modulo-m4/index.html",
+  "local": "P16, galeria «Para ver»: Frei Luís de Sousa, lista de personagens da primeira edição.",
+  "antigo": " alt=\"Frei Luís de Sousa, lista de personagens da primeira edição (1844)\" loading=\"lazy\"><figcaption><i>Frei Luís de Sousa</i>, lista de personagens da primeira edição (1844). Domínio público. <a href=\"https://pedrohfernandes-klk.github.io/pt/m4/licao-m4-f08/\">Lição M4-F08</a></figcaption></figure>",
+  "novo": " alt=\"Frei Luís de Sousa, lista de personagens da primeira edição (1844)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Frei Luís de Sousa, lista de personagens da primeira edição\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\"><i>Frei Luís de Sousa</i>, lista de personagens da primeira edição (1844). Domínio público.</p></details><figcaption><i>Frei Luís de Sousa</i>, lista de personagens da primeira edição. <a href=\"https://pedrohfernandes-klk.github.io/pt/m4/licao-m4-f08/\">Lição M4-F08</a></figcaption></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P16 (galeria «Para ver» do mapa do módulo): o crédito passa inteiro para o «i» («linha»); o que se vê e a ligação «Lição Mx-Fyy» ficam à vista."
+ },
+ {
+  "ficheiro": "m4/mapa-do-modulo-m4/index.html",
+  "local": "P16, galeria «Para ver»: Sala das sessões da Câmara dos Deputados, São Bento.",
+  "antigo": " alt=\"Sala das sessões da Câmara dos Deputados, São Bento (fotografia de José Artur Leitão Bárcia, 1909)\" loading=\"lazy\"><figcaption>Sala das sessões da Câmara dos Deputados, São Bento (fotografia de José Artur Leitão Bárcia, 1909). Domínio público. <a href=\"https://pedrohfernandes-klk.github.io/pt/m4/licao-m4-f14/\">Lição M4-F14</a></figcaption></figure>",
+  "novo": " alt=\"Sala das sessões da Câmara dos Deputados, São Bento (fotografia de José Artur Leitão Bárcia, 1909)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Sala das sessões da Câmara dos Deputados, São Bento\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Sala das sessões da Câmara dos Deputados, São Bento (fotografia de José Artur Leitão Bárcia, 1909). Domínio público.</p></details><figcaption>Sala das sessões da Câmara dos Deputados, São Bento. <a href=\"https://pedrohfernandes-klk.github.io/pt/m4/licao-m4-f14/\">Lição M4-F14</a></figcaption></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P16 (galeria «Para ver» do mapa do módulo): o crédito passa inteiro para o «i» («linha»); o que se vê e a ligação «Lição Mx-Fyy» ficam à vista."
+ },
+ {
+  "ficheiro": "m4/mapa-do-modulo-m4/index.html",
+  "local": "P16, galeria «Para ver»: Cícero denuncia Catilina no Senado.",
+  "antigo": " alt=\"Cícero denuncia Catilina no Senado (Cesare Maccari, 1889)\" loading=\"lazy\"><figcaption>Cícero denuncia Catilina no Senado (Cesare Maccari, 1889). Domínio público. <a href=\"https://pedrohfernandes-klk.github.io/pt/m4/licao-m4-f10/\">Lição M4-F10</a></figcaption></figure>",
+  "novo": " alt=\"Cícero denuncia Catilina no Senado (Cesare Maccari, 1889)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Cícero denuncia Catilina no Senado\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Cícero denuncia Catilina no Senado (Cesare Maccari, 1889). Domínio público.</p></details><figcaption>Cícero denuncia Catilina no Senado. <a href=\"https://pedrohfernandes-klk.github.io/pt/m4/licao-m4-f10/\">Lição M4-F10</a></figcaption></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P16 (galeria «Para ver» do mapa do módulo): o crédito passa inteiro para o «i» («linha»); o que se vê e a ligação «Lição Mx-Fyy» ficam à vista."
+ },
+ {
+  "ficheiro": "m4/mapa-do-modulo-m4/index.html",
+  "local": "P16, galeria «Para ver»: Cabeça de Demóstenes, mármore, cópia romana.",
+  "antigo": " alt=\"Cabeça de Demóstenes, mármore, cópia romana (século II d.C., The Met)\" loading=\"lazy\"><figcaption>Cabeça de Demóstenes, mármore, cópia romana (século II d.C., The Met). Domínio público (The Met, Open Access).</figcaption></figure>",
+  "novo": " alt=\"Cabeça de Demóstenes, mármore, cópia romana (século II d.C., The Met)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Cabeça de Demóstenes, mármore, cópia romana\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Cabeça de Demóstenes, mármore, cópia romana (século II d.C., The Met). Domínio público (The Met, Open Access).</p></details><figcaption>Cabeça de Demóstenes, mármore, cópia romana.</figcaption></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P16 (galeria «Para ver» do mapa do módulo): o crédito passa inteiro para o «i» («linha»); o que se vê e a ligação «Lição Mx-Fyy» ficam à vista."
+ },
+ {
+  "ficheiro": "m4/mapa-do-modulo-m4/index.html",
+  "local": "P16, galeria «Para ver»: D. Sebastião.",
+  "antigo": " alt=\"D. Sebastião (Cristóvão de Morais, c. 1571-1574, MNAA)\" loading=\"lazy\"><figcaption>D. Sebastião (Cristóvão de Morais, c. 1571-1574, MNAA). Domínio público. <a href=\"https://pedrohfernandes-klk.github.io/pt/m4/licao-m4-f26/\">Lição M4-F26</a></figcaption></figure>",
+  "novo": " alt=\"D. Sebastião (Cristóvão de Morais, c. 1571-1574, MNAA)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: D. Sebastião\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">D. Sebastião (Cristóvão de Morais, <span class=\"nb\">c. 1571-1574</span>, MNAA). Domínio público.</p></details><figcaption>D. Sebastião. <a href=\"https://pedrohfernandes-klk.github.io/pt/m4/licao-m4-f26/\">Lição M4-F26</a></figcaption></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P16 (galeria «Para ver» do mapa do módulo): o crédito passa inteiro para o «i» («linha»); o que se vê e a ligação «Lição Mx-Fyy» ficam à vista."
+ },
+ {
+  "ficheiro": "m4/mapa-do-modulo-m4/index.html",
+  "local": "A peça comum do «i» (assets/info-i.css e assets/info-i.js)",
+  "antigo": "</head>",
+  "novo": "<link rel=\"stylesheet\" href=\"../../assets/info-i.css?v=20261105\"><script defer src=\"../../assets/info-i.js?v=20261105\"></script></head>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. A página carrega a peça comum do «i», igual no Português e no Lente."
+ },
+ {
+  "ficheiro": "m4/olhar-lupi/index.html",
+  "local": "P15, motor do «Olhar» (imagem()): a imagem e o «i» com o crédito e a ligação creditoUrl",
+  "antigo": "function imagem(){return E.imagemData?'<img class=\"img\" alt=\"'+esc(E.titulo)+'\" src=\"'+E.imagemData+'\"><p class=\"credito\">'+esc(E.credito)+'</p>':\"\"}",
+  "novo": "/* 05/11/2026: decisão 153. O crédito da imagem vive num «i» (assets/info-i.css e assets/info-i.js), com a ligação para a imagem de origem (creditoUrl). */function creditoI(){var c=it(E.credito),u=E.creditoUrl,a;if(!u)return c;a='<a href=\"'+esc(u)+'\" rel=\"noopener\">';return c.indexOf(\"Wikimedia Commons\")>-1?c.replace(\"Wikimedia Commons\",a+\"Wikimedia Commons</a>\"):c+\" \"+a+esc(u.replace(/^https?:\\/\\/([^\\/]+).*$/,\"$1\"))+\"</a>\"}function imagem(){return E.imagemData?'<div class=\"com-i olhar-com-i\"><img class=\"img\" alt=\"'+esc(E.titulo)+'\" src=\"'+E.imagemData+'\"><details class=\"info-i\" name=\"info-i\"><summary aria-label=\"Créditos da imagem\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">'+creditoI()+'</p></details></div>':\"\"}",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P15 (exercícios «Olhar»): o crédito sai do p.credito para o «i» da imagem, com a ligação creditoUrl, que não se via."
+ },
+ {
+  "ficheiro": "m4/olhar-lupi/index.html",
+  "local": "P15, campo credito: os pontos médios passam a pontos finais",
+  "antigo": "\"credito\":\"Miguel Ângelo Lupi, _D. João de Portugal_ (1863) · domínio público · Wikimedia Commons",
+  "novo": "\"credito\":\"Miguel Ângelo Lupi, _D. João de Portugal_ (1863). Domínio público. Wikimedia Commons.",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P15 (exercícios «Olhar»): o crédito sai do p.credito para o «i» da imagem, com a ligação creditoUrl, que não se via."
+ },
+ {
+  "ficheiro": "m4/olhar-lupi/index.html",
+  "local": "A peça comum do «i» (assets/info-i.css e assets/info-i.js)",
+  "antigo": "</head>",
+  "novo": "<link rel=\"stylesheet\" href=\"../../assets/info-i.css?v=20261105\"><script defer src=\"../../assets/info-i.js?v=20261105\"></script><style>/* 05/11/2026: decisão 153. O «i» da imagem do exercício: a moldura toma a largura da imagem, centrada. */#palco .olhar-com-i{width:fit-content;max-width:100%;margin:0 auto}</style></head>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. A página carrega a peça comum do «i», igual no Português e no Lente."
+ },
+ {
   "ficheiro": "m4/painel-m4-f01/index.html",
   "local": "P13, explicação: o crédito (peixe-voador-1889.jpg) sai do fim do campo f",
   "antigo": "\"f\":\"O sermão «todo é alegórico»: o voador é peixe no que se diz e homem no que se quer dizer. Um peixe com asas quer ser ave: vale por quem, em São Luís, quer ser mais do que é. Cromolitografia: Allen & Ginter, _Peixe-voador_ (série _Fish from American Waters_), 1889, The Met. Domínio público.\"",
@@ -776,6 +1288,198 @@
   "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. A página carrega a peça comum do «i», igual no Português e no Lente."
  },
  {
+  "ficheiro": "m5/m5-o-pais-ou-eles/index.html",
+  "local": "P14, «Pensar devagar»: o fr-cred passa para o «i»; o fr-leg fica",
+  "antigo": "<figure class=\\\"fig-rev \\\"><span class=\\\"fr-moldura\\\"><img src=\\\"https://pedrohfernandes-klk.github.io/pt/img/fontes/hotel-central-1910.jpg\\\" alt=\\\"O hotel do capítulo VI, fotografado trinta anos depois do tempo do romance.\\\" loading=\\\"lazy\\\" decoding=\\\"async\\\" style=\\\"object-position:50% 50%\\\"></span><figcaption><span class=\\\"fr-leg\\\">O Hotel Central, cerca de 1910: a mesa do jantar onde o país ia falir entre dois pratos.</span> <span class=\\\"fr-cred\\\">Domínio público. <a href=\\\"https://commons.wikimedia.org/wiki/File:HotelCentral(Lx)1910.jpg\\\" rel=\\\"noopener\\\">commons.wikimedia.org</a></span></figcaption></figure>",
+  "novo": "<figure class=\\\"fig-rev \\\"><div class=\\\"fr-moldura com-i\\\"><img src=\\\"https://pedrohfernandes-klk.github.io/pt/img/fontes/hotel-central-1910.jpg\\\" alt=\\\"O hotel do capítulo VI, fotografado trinta anos depois do tempo do romance.\\\" loading=\\\"lazy\\\" decoding=\\\"async\\\" style=\\\"object-position:50% 50%\\\"><details class=\\\"info-i\\\" name=\\\"info-i\\\"><summary aria-label=\\\"Créditos da imagem\\\"><span aria-hidden=\\\"true\\\">i</span></summary><p class=\\\"info-i-texto\\\">Domínio público. <a href=\\\"https://commons.wikimedia.org/wiki/File:HotelCentral(Lx)1910.jpg\\\" rel=\\\"noopener\\\">commons.wikimedia.org</a></p></details></div><figcaption><span class=\\\"fr-leg\\\">O Hotel Central, cerca de 1910: a mesa do jantar onde o país ia falir entre dois pratos.</span></figcaption></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P14 («Pensar devagar»): o crédito (fr-cred) passa inteiro para o «i»; a legenda (fr-leg), que diz o que se vê, fica à vista."
+ },
+ {
+  "ficheiro": "m5/m5-o-pais-ou-eles/index.html",
+  "local": "A peça comum do «i» (assets/info-i.css e assets/info-i.js)",
+  "antigo": "</head>",
+  "novo": "<link rel=\"stylesheet\" href=\"../../assets/info-i.css?v=20261105\"><script defer src=\"../../assets/info-i.js?v=20261105\"></script></head>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. A página carrega a peça comum do «i», igual no Português e no Lente."
+ },
+ {
+  "ficheiro": "m5/m5-quem-podia-ter-feito-diferente/index.html",
+  "local": "P14, «Pensar devagar»: o fr-cred passa para o «i»; o fr-leg fica",
+  "antigo": "<figure class=\\\"fig-rev \\\"><span class=\\\"fr-moldura\\\"><img src=\\\"https://pedrohfernandes-klk.github.io/pt/img/fontes/cadeia-relacao-interior-1850.jpg\\\" alt=\\\"A cadeia onde Camilo escreveu o romance, na década em que lá esteve preso.\\\" loading=\\\"lazy\\\" decoding=\\\"async\\\" style=\\\"object-position:50% 50%\\\"></span><figcaption><span class=\\\"fr-leg\\\">A Cadeia da Relação do Porto, 1850: onde o assento de Simão foi escrito.</span> <span class=\\\"fr-cred\\\">Lucas de Almeida Marrão (BNP). Domínio público. <a href=\\\"https://commons.wikimedia.org/wiki/File:Vista_interior_dos_quartos_superiores_da_Cadeia_da_Rela%C3%A7%C3%A3o_do_Porto,_c._1850_-_Lucas_de_Almeida_Marr%C3%A3o.png\\\" rel=\\\"noopener\\\">commons.wikimedia.org</a></span></figcaption></figure>",
+  "novo": "<figure class=\\\"fig-rev \\\"><div class=\\\"fr-moldura com-i\\\"><img src=\\\"https://pedrohfernandes-klk.github.io/pt/img/fontes/cadeia-relacao-interior-1850.jpg\\\" alt=\\\"A cadeia onde Camilo escreveu o romance, na década em que lá esteve preso.\\\" loading=\\\"lazy\\\" decoding=\\\"async\\\" style=\\\"object-position:50% 50%\\\"><details class=\\\"info-i\\\" name=\\\"info-i\\\"><summary aria-label=\\\"Créditos da imagem\\\"><span aria-hidden=\\\"true\\\">i</span></summary><p class=\\\"info-i-texto\\\">Lucas de Almeida Marrão (BNP). Domínio público. <a href=\\\"https://commons.wikimedia.org/wiki/File:Vista_interior_dos_quartos_superiores_da_Cadeia_da_Rela%C3%A7%C3%A3o_do_Porto,_c._1850_-_Lucas_de_Almeida_Marr%C3%A3o.png\\\" rel=\\\"noopener\\\">commons.wikimedia.org</a></p></details></div><figcaption><span class=\\\"fr-leg\\\">A Cadeia da Relação do Porto, 1850: onde o assento de Simão foi escrito.</span></figcaption></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P14 («Pensar devagar»): o crédito (fr-cred) passa inteiro para o «i»; a legenda (fr-leg), que diz o que se vê, fica à vista."
+ },
+ {
+  "ficheiro": "m5/m5-quem-podia-ter-feito-diferente/index.html",
+  "local": "A peça comum do «i» (assets/info-i.css e assets/info-i.js)",
+  "antigo": "</head>",
+  "novo": "<link rel=\"stylesheet\" href=\"../../assets/info-i.css?v=20261105\"><script defer src=\"../../assets/info-i.js?v=20261105\"></script></head>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. A página carrega a peça comum do «i», igual no Português e no Lente."
+ },
+ {
+  "ficheiro": "m5/mapa-do-modulo-m5/index.html",
+  "local": "P16, galeria «Para ver»: Camilo Castelo Branco.",
+  "antigo": " alt=\"Camilo Castelo Branco (fotografia da União, Photographia da Casa Real, Porto, 1882)\" loading=\"lazy\"><figcaption>Camilo Castelo Branco (fotografia da União, Photographia da Casa Real, Porto, 1882). Domínio público. <a href=\"https://pedrohfernandes-klk.github.io/pt/m5/licao-m5-f02/\">Lição M5-F02</a></figcaption></figure>",
+  "novo": " alt=\"Camilo Castelo Branco (fotografia da União, Photographia da Casa Real, Porto, 1882)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Camilo Castelo Branco\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Camilo Castelo Branco (fotografia da União, Photographia da Casa Real, Porto, 1882). Domínio público.</p></details><figcaption>Camilo Castelo Branco. <a href=\"https://pedrohfernandes-klk.github.io/pt/m5/licao-m5-f02/\">Lição M5-F02</a></figcaption></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P16 (galeria «Para ver» do mapa do módulo): o crédito passa inteiro para o «i» («linha»); o que se vê e a ligação «Lição Mx-Fyy» ficam à vista."
+ },
+ {
+  "ficheiro": "m5/mapa-do-modulo-m5/index.html",
+  "local": "P16, galeria «Para ver»: Interior da Cadeia da Relação do Porto.",
+  "antigo": " alt=\"Interior da Cadeia da Relação do Porto (Lucas de Almeida Marrão, c. 1850)\" loading=\"lazy\"><figcaption>Interior da Cadeia da Relação do Porto (Lucas de Almeida Marrão, c. 1850). Domínio público. <a href=\"https://pedrohfernandes-klk.github.io/pt/m5/licao-m5-f02/\">Lição M5-F02</a></figcaption></figure>",
+  "novo": " alt=\"Interior da Cadeia da Relação do Porto (Lucas de Almeida Marrão, c. 1850)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Interior da Cadeia da Relação do Porto\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Interior da Cadeia da Relação do Porto (Lucas de Almeida Marrão, <span class=\"nb\">c. 1850</span>). Domínio público.</p></details><figcaption>Interior da Cadeia da Relação do Porto. <a href=\"https://pedrohfernandes-klk.github.io/pt/m5/licao-m5-f02/\">Lição M5-F02</a></figcaption></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P16 (galeria «Para ver» do mapa do módulo): o crédito passa inteiro para o «i» («linha»); o que se vê e a ligação «Lição Mx-Fyy» ficam à vista."
+ },
+ {
+  "ficheiro": "m5/mapa-do-modulo-m5/index.html",
+  "local": "P16, galeria «Para ver»: Cadeia da Relação do Porto, hoje Centro Português de Fotogra",
+  "antigo": " alt=\"Cadeia da Relação do Porto, hoje Centro Português de Fotografia (fotografia de Reis Quarteu, 2021)\" loading=\"lazy\"><figcaption>Cadeia da Relação do Porto, hoje Centro Português de Fotografia (fotografia de Reis Quarteu, 2021). CC BY-SA 4.0. <a href=\"https://pedrohfernandes-klk.github.io/pt/m5/licao-m5-f02/\">Lição M5-F02</a></figcaption></figure>",
+  "novo": " alt=\"Cadeia da Relação do Porto, hoje Centro Português de Fotografia (fotografia de Reis Quarteu, 2021)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Cadeia da Relação do Porto, hoje Centro Português de Fotografia\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Cadeia da Relação do Porto, hoje Centro Português de Fotografia (fotografia de Reis Quarteu, 2021). <a rel=\"license\" href=\"https://creativecommons.org/licenses/by-sa/4.0/deed.pt\">CC BY-SA 4.0</a>.</p></details><figcaption>Cadeia da Relação do Porto, hoje Centro Português de Fotografia. <a href=\"https://pedrohfernandes-klk.github.io/pt/m5/licao-m5-f02/\">Lição M5-F02</a></figcaption></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P16 (galeria «Para ver» do mapa do módulo): o crédito passa inteiro para o «i» («linha»); o que se vê e a ligação «Lição Mx-Fyy» ficam à vista."
+ },
+ {
+  "ficheiro": "m5/mapa-do-modulo-m5/index.html",
+  "local": "P16, galeria «Para ver»: Eça de Queirós.",
+  "antigo": " alt=\"Eça de Queirós (Fotografia Guedes, Porto, c. 1895)\" loading=\"lazy\"><figcaption>Eça de Queirós (Fotografia Guedes, Porto, c. 1895). Domínio público. <a href=\"https://pedrohfernandes-klk.github.io/pt/m5/licao-m5-f10/\">Lição M5-F10</a></figcaption></figure>",
+  "novo": " alt=\"Eça de Queirós (Fotografia Guedes, Porto, c. 1895)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Eça de Queirós\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Eça de Queirós (Fotografia Guedes, Porto, <span class=\"nb\">c. 1895</span>). Domínio público.</p></details><figcaption>Eça de Queirós. <a href=\"https://pedrohfernandes-klk.github.io/pt/m5/licao-m5-f10/\">Lição M5-F10</a></figcaption></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P16 (galeria «Para ver» do mapa do módulo): o crédito passa inteiro para o «i» («linha»); o que se vê e a ligação «Lição Mx-Fyy» ficam à vista."
+ },
+ {
+  "ficheiro": "m5/mapa-do-modulo-m5/index.html",
+  "local": "P16, galeria «Para ver»: Os Maias, primeira edição (1888), volume 1, página de rosto.",
+  "antigo": " alt=\"Os Maias, primeira edição (1888), volume 1, página de rosto\" loading=\"lazy\"><figcaption>Os Maias, primeira edição (1888), volume 1, página de rosto. Domínio público. <a href='https://commons.wikimedia.org/wiki/File:Os_Maias_Book_Cover.jpg'>Fonte: Wikimedia Commons.</a> <a href=\"https://pedrohfernandes-klk.github.io/pt/m5/licao-m5-f10/\">Lição M5-F10</a></figcaption></figure>",
+  "novo": " alt=\"Os Maias, primeira edição (1888), volume 1, página de rosto\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Os Maias, primeira edição (1888), volume 1, página de rosto\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Os Maias, primeira edição (1888), volume 1, página de rosto. Domínio público. <a href='https://commons.wikimedia.org/wiki/File:Os_Maias_Book_Cover.jpg'>Fonte: Wikimedia Commons.</a></p></details><figcaption>Os Maias, primeira edição (1888), volume 1, página de rosto. <a href=\"https://pedrohfernandes-klk.github.io/pt/m5/licao-m5-f10/\">Lição M5-F10</a></figcaption></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P16 (galeria «Para ver» do mapa do módulo): o crédito passa inteiro para o «i» («linha»); o que se vê e a ligação «Lição Mx-Fyy» ficam à vista."
+ },
+ {
+  "ficheiro": "m5/mapa-do-modulo-m5/index.html",
+  "local": "P16, galeria «Para ver»: Praça dos Remolares, Lisboa, gravura do Archivo Pittoresco.",
+  "antigo": " alt=\"Praça dos Remolares, Lisboa, gravura do Archivo Pittoresco (Francisco Augusto Nogueira da Silva, 1860)\" loading=\"lazy\"><figcaption>Praça dos Remolares, Lisboa, gravura do Archivo Pittoresco (Francisco Augusto Nogueira da Silva, 1860). Domínio público. <a href=\"https://pedrohfernandes-klk.github.io/pt/m5/licao-m5-f10/\">Lição M5-F10</a></figcaption></figure>",
+  "novo": " alt=\"Praça dos Remolares, Lisboa, gravura do Archivo Pittoresco (Francisco Augusto Nogueira da Silva, 1860)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Praça dos Remolares, Lisboa, gravura do Archivo Pittoresco\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Praça dos Remolares, Lisboa, gravura do Archivo Pittoresco (Francisco Augusto Nogueira da Silva, 1860). Domínio público.</p></details><figcaption>Praça dos Remolares, Lisboa, gravura do Archivo Pittoresco. <a href=\"https://pedrohfernandes-klk.github.io/pt/m5/licao-m5-f10/\">Lição M5-F10</a></figcaption></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P16 (galeria «Para ver» do mapa do módulo): o crédito passa inteiro para o «i» («linha»); o que se vê e a ligação «Lição Mx-Fyy» ficam à vista."
+ },
+ {
+  "ficheiro": "m5/mapa-do-modulo-m5/index.html",
+  "local": "P16, galeria «Para ver»: Hotel Central, Lisboa.",
+  "antigo": " alt=\"Hotel Central, Lisboa (fotografia de Joshua Benoliel, c. 1910)\" loading=\"lazy\"><figcaption>Hotel Central, Lisboa (fotografia de Joshua Benoliel, c. 1910). Domínio público. <a href=\"https://pedrohfernandes-klk.github.io/pt/m5/licao-m5-f10/\">Lição M5-F10</a></figcaption></figure>",
+  "novo": " alt=\"Hotel Central, Lisboa (fotografia de Joshua Benoliel, c. 1910)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Hotel Central, Lisboa\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Hotel Central, Lisboa (fotografia de Joshua Benoliel, <span class=\"nb\">c. 1910</span>). Domínio público.</p></details><figcaption>Hotel Central, Lisboa. <a href=\"https://pedrohfernandes-klk.github.io/pt/m5/licao-m5-f10/\">Lição M5-F10</a></figcaption></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P16 (galeria «Para ver» do mapa do módulo): o crédito passa inteiro para o «i» («linha»); o que se vê e a ligação «Lição Mx-Fyy» ficam à vista."
+ },
+ {
+  "ficheiro": "m5/mapa-do-modulo-m5/index.html",
+  "local": "A peça comum do «i» (assets/info-i.css e assets/info-i.js)",
+  "antigo": "</head>",
+  "novo": "<link rel=\"stylesheet\" href=\"../../assets/info-i.css?v=20261105\"><script defer src=\"../../assets/info-i.js?v=20261105\"></script></head>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. A página carrega a peça comum do «i», igual no Português e no Lente."
+ },
+ {
+  "ficheiro": "m6/m6-antero-viagem-ao-nada/index.html",
+  "local": "P14, «Pensar devagar»: o fr-cred passa para o «i»; o fr-leg fica",
+  "antigo": "<figure class=\\\"fig-rev \\\"><span class=\\\"fr-moldura\\\"><img src=\\\"https://pedrohfernandes-klk.github.io/pt/img/fontes/antero-columbano-1889.jpg\\\" alt=\\\"O retrato a óleo, dois anos antes da morte do poeta.\\\" loading=\\\"lazy\\\" decoding=\\\"async\\\" style=\\\"object-position:50% 20%\\\"></span><figcaption><span class=\\\"fr-leg\\\">Antero de Quental por Columbano, 1889: o cavaleiro que encontra o nada.</span> <span class=\\\"fr-cred\\\">Domínio público. <a href=\\\"https://commons.wikimedia.org/wiki/File:Retrato_de_Antero_de_Quental_(1889)_-_Columbano_Bordalo_Pinheiro_(MNAC_Inv._1108).png\\\" rel=\\\"noopener\\\">commons.wikimedia.org</a></span></figcaption></figure>",
+  "novo": "<figure class=\\\"fig-rev \\\"><div class=\\\"fr-moldura com-i\\\"><img src=\\\"https://pedrohfernandes-klk.github.io/pt/img/fontes/antero-columbano-1889.jpg\\\" alt=\\\"O retrato a óleo, dois anos antes da morte do poeta.\\\" loading=\\\"lazy\\\" decoding=\\\"async\\\" style=\\\"object-position:50% 20%\\\"><details class=\\\"info-i\\\" name=\\\"info-i\\\"><summary aria-label=\\\"Créditos da imagem\\\"><span aria-hidden=\\\"true\\\">i</span></summary><p class=\\\"info-i-texto\\\">Domínio público. <a href=\\\"https://commons.wikimedia.org/wiki/File:Retrato_de_Antero_de_Quental_(1889)_-_Columbano_Bordalo_Pinheiro_(MNAC_Inv._1108).png\\\" rel=\\\"noopener\\\">commons.wikimedia.org</a></p></details></div><figcaption><span class=\\\"fr-leg\\\">Antero de Quental por Columbano, 1889: o cavaleiro que encontra o nada.</span></figcaption></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P14 («Pensar devagar»): o crédito (fr-cred) passa inteiro para o «i»; a legenda (fr-leg), que diz o que se vê, fica à vista."
+ },
+ {
+  "ficheiro": "m6/m6-antero-viagem-ao-nada/index.html",
+  "local": "A peça comum do «i» (assets/info-i.css e assets/info-i.js)",
+  "antigo": "</head>",
+  "novo": "<link rel=\"stylesheet\" href=\"../../assets/info-i.css?v=20261105\"><script defer src=\"../../assets/info-i.js?v=20261105\"></script></head>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. A página carrega a peça comum do «i», igual no Português e no Lente."
+ },
+ {
+  "ficheiro": "m6/m6-cesario-noite-inteira/index.html",
+  "local": "P14, «Pensar devagar»: o fr-cred passa para o «i»; o fr-leg fica",
+  "antigo": "<figure class=\\\"fig-rev \\\"><span class=\\\"fr-moldura\\\"><img src=\\\"https://pedrohfernandes-klk.github.io/pt/img/fontes/varinas-ribeira-nova-1900.jpg\\\" alt=\\\"As varinas do cais, como as do poema.\\\" loading=\\\"lazy\\\" decoding=\\\"async\\\" style=\\\"object-position:50% 45%\\\"></span><figcaption><span class=\\\"fr-leg\\\">Varinas na Ribeira Nova, cerca de 1900: as mesmas que Cesário viu ao cair da tarde.</span> <span class=\\\"fr-cred\\\">José Artur Leitão Bárcia (Arquivo Municipal de Lisboa). Domínio público. <a href=\\\"https://commons.wikimedia.org/wiki/File:BAR000276_-_Mercado_de_peixe_na_Ribeira_Nova.jpg\\\" rel=\\\"noopener\\\">commons.wikimedia.org</a></span></figcaption></figure>",
+  "novo": "<figure class=\\\"fig-rev \\\"><div class=\\\"fr-moldura com-i\\\"><img src=\\\"https://pedrohfernandes-klk.github.io/pt/img/fontes/varinas-ribeira-nova-1900.jpg\\\" alt=\\\"As varinas do cais, como as do poema.\\\" loading=\\\"lazy\\\" decoding=\\\"async\\\" style=\\\"object-position:50% 45%\\\"><details class=\\\"info-i\\\" name=\\\"info-i\\\"><summary aria-label=\\\"Créditos da imagem\\\"><span aria-hidden=\\\"true\\\">i</span></summary><p class=\\\"info-i-texto\\\">José Artur Leitão Bárcia (Arquivo Municipal de Lisboa). Domínio público. <a href=\\\"https://commons.wikimedia.org/wiki/File:BAR000276_-_Mercado_de_peixe_na_Ribeira_Nova.jpg\\\" rel=\\\"noopener\\\">commons.wikimedia.org</a></p></details></div><figcaption><span class=\\\"fr-leg\\\">Varinas na Ribeira Nova, cerca de 1900: as mesmas que Cesário viu ao cair da tarde.</span></figcaption></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P14 («Pensar devagar»): o crédito (fr-cred) passa inteiro para o «i»; a legenda (fr-leg), que diz o que se vê, fica à vista."
+ },
+ {
+  "ficheiro": "m6/m6-cesario-noite-inteira/index.html",
+  "local": "A peça comum do «i» (assets/info-i.css e assets/info-i.js)",
+  "antigo": "</head>",
+  "novo": "<link rel=\"stylesheet\" href=\"../../assets/info-i.css?v=20261105\"><script defer src=\"../../assets/info-i.js?v=20261105\"></script></head>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. A página carrega a peça comum do «i», igual no Português e no Lente."
+ },
+ {
+  "ficheiro": "m6/mapa-do-modulo-m6/index.html",
+  "local": "P16, galeria «Para ver»: Antero de Quental.",
+  "antigo": " alt=\"Antero de Quental (fotografia, c. 1887, publicada em In Memoriam, 1896)\" loading=\"lazy\"><figcaption>Antero de Quental (fotografia, c. 1887, publicada em In Memoriam, 1896). Domínio público. <a href=\"https://pedrohfernandes-klk.github.io/pt/m6/licao-m6-f01/\">Lição M6-F01</a></figcaption></figure>",
+  "novo": " alt=\"Antero de Quental (fotografia, c. 1887, publicada em In Memoriam, 1896)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Antero de Quental (fotografia, c. 1887, publicada em In Memoriam, 1896)\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Antero de Quental (fotografia, <span class=\"nb\">c. 1887</span>, publicada em In Memoriam, 1896). Domínio público.</p></details><figcaption>Antero de Quental. <a href=\"https://pedrohfernandes-klk.github.io/pt/m6/licao-m6-f01/\">Lição M6-F01</a></figcaption></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P16 (galeria «Para ver» do mapa do módulo): o crédito passa inteiro para o «i» («linha»); o que se vê e a ligação «Lição Mx-Fyy» ficam à vista."
+ },
+ {
+  "ficheiro": "m6/mapa-do-modulo-m6/index.html",
+  "local": "P16, galeria «Para ver»: Antero de Quental.",
+  "antigo": " alt=\"Antero de Quental (Columbano Bordalo Pinheiro, 1889, MNAC)\" loading=\"lazy\"><figcaption>Antero de Quental (Columbano Bordalo Pinheiro, 1889, MNAC). Domínio público. <a href=\"https://pedrohfernandes-klk.github.io/pt/m6/licao-m6-f01/\">Lição M6-F01</a></figcaption></figure>",
+  "novo": " alt=\"Antero de Quental (Columbano Bordalo Pinheiro, 1889, MNAC)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Antero de Quental (Columbano Bordalo Pinheiro, 1889, MNAC)\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Antero de Quental (Columbano Bordalo Pinheiro, 1889, MNAC). Domínio público.</p></details><figcaption>Antero de Quental. <a href=\"https://pedrohfernandes-klk.github.io/pt/m6/licao-m6-f01/\">Lição M6-F01</a></figcaption></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P16 (galeria «Para ver» do mapa do módulo): o crédito passa inteiro para o «i» («linha»); o que se vê e a ligação «Lição Mx-Fyy» ficam à vista."
+ },
+ {
+  "ficheiro": "m6/mapa-do-modulo-m6/index.html",
+  "local": "P16, galeria «Para ver»: Jardim Botânico de Coimbra.",
+  "antigo": " alt=\"Jardim Botânico de Coimbra (fotografia de J. Lévy &amp; Co, década de 1880)\" loading=\"lazy\"><figcaption>Jardim Botânico de Coimbra (fotografia de J. Lévy &amp; Co, década de 1880). Domínio público. <a href=\"https://pedrohfernandes-klk.github.io/pt/m6/licao-m6-f01/\">Lição M6-F01</a></figcaption></figure>",
+  "novo": " alt=\"Jardim Botânico de Coimbra (fotografia de J. Lévy &amp; Co, década de 1880)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Jardim Botânico de Coimbra\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Jardim Botânico de Coimbra (fotografia de J. Lévy &amp; Co, década de 1880). Domínio público.</p></details><figcaption>Jardim Botânico de Coimbra. <a href=\"https://pedrohfernandes-klk.github.io/pt/m6/licao-m6-f01/\">Lição M6-F01</a></figcaption></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P16 (galeria «Para ver» do mapa do módulo): o crédito passa inteiro para o «i» («linha»); o que se vê e a ligação «Lição Mx-Fyy» ficam à vista."
+ },
+ {
+  "ficheiro": "m6/mapa-do-modulo-m6/index.html",
+  "local": "P16, galeria «Para ver»: Cesário Verde.",
+  "antigo": " alt=\"Cesário Verde (retrato de Columbano Bordalo Pinheiro em O Livro de Cesário Verde, 1887)\" loading=\"lazy\"><figcaption>Cesário Verde (retrato de Columbano Bordalo Pinheiro em O Livro de Cesário Verde, 1887). Domínio público. <a href=\"https://pedrohfernandes-klk.github.io/pt/m6/licao-m6-f07/\">Lição M6-F07</a></figcaption></figure>",
+  "novo": " alt=\"Cesário Verde (retrato de Columbano Bordalo Pinheiro em O Livro de Cesário Verde, 1887)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Cesário Verde\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Cesário Verde (retrato de Columbano Bordalo Pinheiro em O Livro de Cesário Verde, 1887). Domínio público.</p></details><figcaption>Cesário Verde. <a href=\"https://pedrohfernandes-klk.github.io/pt/m6/licao-m6-f07/\">Lição M6-F07</a></figcaption></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P16 (galeria «Para ver» do mapa do módulo): o crédito passa inteiro para o «i» («linha»); o que se vê e a ligação «Lição Mx-Fyy» ficam à vista."
+ },
+ {
+  "ficheiro": "m6/mapa-do-modulo-m6/index.html",
+  "local": "P16, galeria «Para ver»: «O Sentimento dum Ocidental» em O Livro de Cesário Verde (18",
+  "antigo": " alt=\"«O Sentimento dum Ocidental» em O Livro de Cesário Verde (1887), primeira página\" loading=\"lazy\"><figcaption>«O Sentimento dum Ocidental» em O Livro de Cesário Verde (1887), primeira página. Domínio público. <a href=\"https://pedrohfernandes-klk.github.io/pt/m6/licao-m6-f07/\">Lição M6-F07</a></figcaption></figure>",
+  "novo": " alt=\"«O Sentimento dum Ocidental» em O Livro de Cesário Verde (1887), primeira página\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: «O Sentimento dum Ocidental» em O Livro de Cesário Verde (1887), primeira página\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">«O Sentimento dum Ocidental» em O Livro de Cesário Verde (1887), primeira página. Domínio público.</p></details><figcaption>«O Sentimento dum Ocidental» em O Livro de Cesário Verde (1887), primeira página. <a href=\"https://pedrohfernandes-klk.github.io/pt/m6/licao-m6-f07/\">Lição M6-F07</a></figcaption></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P16 (galeria «Para ver» do mapa do módulo): o crédito passa inteiro para o «i» («linha»); o que se vê e a ligação «Lição Mx-Fyy» ficam à vista."
+ },
+ {
+  "ficheiro": "m6/mapa-do-modulo-m6/index.html",
+  "local": "P16, galeria «Para ver»: Mercado de peixe na Ribeira Nova, Lisboa.",
+  "antigo": " alt=\"Mercado de peixe na Ribeira Nova, Lisboa (fotografia de José Artur Leitão Bárcia, c. 1900)\" loading=\"lazy\"><figcaption>Mercado de peixe na Ribeira Nova, Lisboa (fotografia de José Artur Leitão Bárcia, c. 1900). Domínio público. <a href=\"https://pedrohfernandes-klk.github.io/pt/m6/licao-m6-f07/\">Lição M6-F07</a></figcaption></figure>",
+  "novo": " alt=\"Mercado de peixe na Ribeira Nova, Lisboa (fotografia de José Artur Leitão Bárcia, c. 1900)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Mercado de peixe na Ribeira Nova, Lisboa\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Mercado de peixe na Ribeira Nova, Lisboa (fotografia de José Artur Leitão Bárcia, <span class=\"nb\">c. 1900</span>). Domínio público.</p></details><figcaption>Mercado de peixe na Ribeira Nova, Lisboa. <a href=\"https://pedrohfernandes-klk.github.io/pt/m6/licao-m6-f07/\">Lição M6-F07</a></figcaption></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P16 (galeria «Para ver» do mapa do módulo): o crédito passa inteiro para o «i» («linha»); o que se vê e a ligação «Lição Mx-Fyy» ficam à vista."
+ },
+ {
+  "ficheiro": "m6/mapa-do-modulo-m6/index.html",
+  "local": "P16, galeria «Para ver»: Estação original do Cais do Sodré.",
+  "antigo": " alt=\"Estação original do Cais do Sodré (fotografia da década de 1890, publicada pela CP em 1996)\" loading=\"lazy\"><figcaption>Estação original do Cais do Sodré (fotografia da década de 1890, publicada pela CP em 1996). Domínio público. <a href=\"https://pedrohfernandes-klk.github.io/pt/m6/licao-m6-f07/\">Lição M6-F07</a></figcaption></figure>",
+  "novo": " alt=\"Estação original do Cais do Sodré (fotografia da década de 1890, publicada pela CP em 1996)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Estação original do Cais do Sodré\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Estação original do Cais do Sodré (fotografia da década de 1890, publicada pela CP em 1996). Domínio público.</p></details><figcaption>Estação original do Cais do Sodré. <a href=\"https://pedrohfernandes-klk.github.io/pt/m6/licao-m6-f07/\">Lição M6-F07</a></figcaption></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P16 (galeria «Para ver» do mapa do módulo): o crédito passa inteiro para o «i» («linha»); o que se vê e a ligação «Lição Mx-Fyy» ficam à vista."
+ },
+ {
+  "ficheiro": "m6/mapa-do-modulo-m6/index.html",
+  "local": "A peça comum do «i» (assets/info-i.css e assets/info-i.js)",
+  "antigo": "</head>",
+  "novo": "<link rel=\"stylesheet\" href=\"../../assets/info-i.css?v=20261105\"><script defer src=\"../../assets/info-i.js?v=20261105\"></script></head>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. A página carrega a peça comum do «i», igual no Português e no Lente."
+ },
+ {
   "ficheiro": "m7/licao-m7-f01/index.html",
   "local": "P10, Pessoa: a moldura da fotografia passa a div.moldura.com-i",
   "antigo": "<figure class=\\\"fig\\\"><span class=\\\"moldura\\\"><img src=\\\"data:image/jpeg;base64,",
@@ -840,6 +1544,38 @@
   "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. A página carrega a peça comum do «i», igual no Português e no Lente."
  },
  {
+  "ficheiro": "m7/m7-fingidor-maquina/index.html",
+  "local": "P14, «Pensar devagar»: o fr-cred passa para o «i»; o fr-leg fica",
+  "antigo": "<figure class=\\\"fig-rev \\\"><span class=\\\"fr-moldura\\\"><img src=\\\"https://pedrohfernandes-klk.github.io/pt/img/fontes/pessoa-1929-copo.jpg\\\" alt=\\\"A fotografia mais conhecida do poeta, seis anos antes de morrer.\\\" loading=\\\"lazy\\\" decoding=\\\"async\\\" style=\\\"object-position:50% 20%\\\"></span><figcaption><span class=\\\"fr-leg\\\">Fernando Pessoa em 1929: o fingidor, fotografado.</span> <span class=\\\"fr-cred\\\">autor não identificado (fotografia de 1929). Domínio público. <a href=\\\"https://commons.wikimedia.org/wiki/File:Pessoacopo.jpg\\\" rel=\\\"noopener\\\">commons.wikimedia.org</a></span></figcaption></figure>",
+  "novo": "<figure class=\\\"fig-rev \\\"><div class=\\\"fr-moldura com-i\\\"><img src=\\\"https://pedrohfernandes-klk.github.io/pt/img/fontes/pessoa-1929-copo.jpg\\\" alt=\\\"A fotografia mais conhecida do poeta, seis anos antes de morrer.\\\" loading=\\\"lazy\\\" decoding=\\\"async\\\" style=\\\"object-position:50% 20%\\\"><details class=\\\"info-i\\\" name=\\\"info-i\\\"><summary aria-label=\\\"Créditos da imagem\\\"><span aria-hidden=\\\"true\\\">i</span></summary><p class=\\\"info-i-texto\\\">Autor não identificado (fotografia de 1929). Domínio público. <a href=\\\"https://commons.wikimedia.org/wiki/File:Pessoacopo.jpg\\\" rel=\\\"noopener\\\">commons.wikimedia.org</a></p></details></div><figcaption><span class=\\\"fr-leg\\\">Fernando Pessoa em 1929: o fingidor, fotografado.</span></figcaption></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P14 («Pensar devagar»): o crédito (fr-cred) passa inteiro para o «i»; a legenda (fr-leg), que diz o que se vê, fica à vista."
+ },
+ {
+  "ficheiro": "m7/m7-fingidor-maquina/index.html",
+  "local": "A peça comum do «i» (assets/info-i.css e assets/info-i.js)",
+  "antigo": "</head>",
+  "novo": "<link rel=\"stylesheet\" href=\"../../assets/info-i.css?v=20261105\"><script defer src=\"../../assets/info-i.js?v=20261105\"></script></head>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. A página carrega a peça comum do «i», igual no Português e no Lente."
+ },
+ {
+  "ficheiro": "m7/m7-quatro-vozes-um-problema/index.html",
+  "local": "P14, «Pensar devagar»: o fr-cred passa para o «i»; o fr-leg fica",
+  "antigo": "<figure class=\\\"fig-rev inteira\\\"><span class=\\\"fr-moldura\\\"><img src=\\\"https://pedrohfernandes-klk.github.io/pt/img/fontes/orpheu-2-1915.jpg\\\" alt=\\\"A revista que trouxe o Modernismo a Portugal.\\\" loading=\\\"lazy\\\" decoding=\\\"async\\\"></span><figcaption><span class=\\\"fr-leg\\\">Orpheu, n.º 2, 1915: a revista onde as vozes saíram juntas.</span> <span class=\\\"fr-cred\\\">revista Orpheu. Domínio público. <a href=\\\"https://commons.wikimedia.org/wiki/File:Orpheu_2_-_1915.jpg\\\" rel=\\\"noopener\\\">commons.wikimedia.org</a></span></figcaption></figure>",
+  "novo": "<figure class=\\\"fig-rev inteira\\\"><div class=\\\"fr-moldura com-i\\\"><img src=\\\"https://pedrohfernandes-klk.github.io/pt/img/fontes/orpheu-2-1915.jpg\\\" alt=\\\"A revista que trouxe o Modernismo a Portugal.\\\" loading=\\\"lazy\\\" decoding=\\\"async\\\"><details class=\\\"info-i\\\" name=\\\"info-i\\\"><summary aria-label=\\\"Créditos da imagem\\\"><span aria-hidden=\\\"true\\\">i</span></summary><p class=\\\"info-i-texto\\\">Revista Orpheu. Domínio público. <a href=\\\"https://commons.wikimedia.org/wiki/File:Orpheu_2_-_1915.jpg\\\" rel=\\\"noopener\\\">commons.wikimedia.org</a></p></details></div><figcaption><span class=\\\"fr-leg\\\">Orpheu, n.º 2, 1915: a revista onde as vozes saíram juntas.</span></figcaption></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P14 («Pensar devagar»): o crédito (fr-cred) passa inteiro para o «i»; a legenda (fr-leg), que diz o que se vê, fica à vista."
+ },
+ {
+  "ficheiro": "m7/m7-quatro-vozes-um-problema/index.html",
+  "local": "A peça comum do «i» (assets/info-i.css e assets/info-i.js)",
+  "antigo": "</head>",
+  "novo": "<link rel=\"stylesheet\" href=\"../../assets/info-i.css?v=20261105\"><script defer src=\"../../assets/info-i.js?v=20261105\"></script></head>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. A página carrega a peça comum do «i», igual no Português e no Lente."
+ },
+ {
   "ficheiro": "m7/mapa-do-modulo-m7/index.html",
   "local": "P10, Pessoa na galeria «Para ver»: o crédito passa para o «i»; o rótulo e «Lição M7-F01» ficam",
   "antigo": "alt=\"Fernando Pessoa de chapéu e óculos, cerca de 1914\" loading=\"lazy\"><figcaption>Fernando Pessoa, cerca de 1914. <a href=\"https://pedrohfernandes-klk.github.io/pt/m7/licao-m7-f01/\">Lição M7-F01</a><span class=\"tabela\">Fotógrafo não identificado; retrato de Fernando Pessoa com chapéu; cerca de 1914 (data incerta); reprodução no Wikimedia Commons, original sem instituição indicada; <a href=\"https://commons.wikimedia.org/wiki/File:PessoaChapeu.jpg\">domínio público</a>.</span></figcaption>",
@@ -849,6 +1585,326 @@
  },
  {
   "ficheiro": "m7/mapa-do-modulo-m7/index.html",
+  "local": "P16, galeria «Para ver»: Casa Fernando Pessoa.",
+  "antigo": " alt=\"Casa Fernando Pessoa (fotografia de Lijealso, 2008)\" loading=\"lazy\"><figcaption>Casa Fernando Pessoa (fotografia de Lijealso, 2008). CC BY 3.0. <a href=\"https://pedrohfernandes-klk.github.io/pt/m7/licao-m7-f04/\">Lição M7-F04</a></figcaption></figure>",
+  "novo": " alt=\"Casa Fernando Pessoa (fotografia de Lijealso, 2008)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Casa Fernando Pessoa\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Casa Fernando Pessoa (fotografia de Lijealso, 2008). <a rel=\"license\" href=\"https://creativecommons.org/licenses/by/3.0/deed.pt\">CC BY 3.0</a>.</p></details><figcaption>Casa Fernando Pessoa. <a href=\"https://pedrohfernandes-klk.github.io/pt/m7/licao-m7-f04/\">Lição M7-F04</a></figcaption></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P16 (galeria «Para ver» do mapa do módulo): o crédito passa inteiro para o «i» («linha»); o que se vê e a ligação «Lição Mx-Fyy» ficam à vista."
+ },
+ {
+  "ficheiro": "m7/mapa-do-modulo-m7/index.html",
+  "local": "P16, galeria «Para ver»: «Tabacaria» na Presença, n.º 39, julho de 1933.",
+  "antigo": " alt=\"«Tabacaria» na Presença, n.º 39, julho de 1933 (fotografia de Pmms2005)\" loading=\"lazy\"><figcaption>«Tabacaria» na Presença, n.º 39, julho de 1933 (fotografia de Pmms2005). CC BY-SA 4.0. <a href=\"https://pedrohfernandes-klk.github.io/pt/m7/licao-m7-f06/\">Lição M7-F06</a></figcaption></figure>",
+  "novo": " alt=\"«Tabacaria» na Presença, n.º 39, julho de 1933 (fotografia de Pmms2005)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: «Tabacaria» na Presença, n.º 39, julho de 1933\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">«Tabacaria» na Presença, n.º 39, julho de 1933 (fotografia de Pmms2005). <a rel=\"license\" href=\"https://creativecommons.org/licenses/by-sa/4.0/deed.pt\">CC BY-SA 4.0</a>.</p></details><figcaption>«Tabacaria» na Presença, n.º 39, julho de 1933. <a href=\"https://pedrohfernandes-klk.github.io/pt/m7/licao-m7-f06/\">Lição M7-F06</a></figcaption></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P16 (galeria «Para ver» do mapa do módulo): o crédito passa inteiro para o «i» («linha»); o que se vê e a ligação «Lição Mx-Fyy» ficam à vista."
+ },
+ {
+  "ficheiro": "m7/mapa-do-modulo-m7/index.html",
+  "local": "P16, galeria «Para ver»: Mensagem, 1.ª edição.",
+  "antigo": " alt=\"Mensagem, 1.ª edição (1934)\" loading=\"lazy\"><figcaption>Mensagem, 1.ª edição (1934). Domínio público. <a href=\"https://pedrohfernandes-klk.github.io/pt/m7/licao-m7-f08/\">Lição M7-F08</a></figcaption></figure>",
+  "novo": " alt=\"Mensagem, 1.ª edição (1934)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Mensagem, 1.ª edição\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Mensagem, 1.ª edição (1934). Domínio público.</p></details><figcaption>Mensagem, 1.ª edição. <a href=\"https://pedrohfernandes-klk.github.io/pt/m7/licao-m7-f08/\">Lição M7-F08</a></figcaption></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P16 (galeria «Para ver» do mapa do módulo): o crédito passa inteiro para o «i» («linha»); o que se vê e a ligação «Lição Mx-Fyy» ficam à vista."
+ },
+ {
+  "ficheiro": "m7/mapa-do-modulo-m7/index.html",
+  "local": "P16, galeria «Para ver»: Fernando Pessoa em 1929.",
+  "antigo": " alt=\"Fernando Pessoa em 1929 (fotografia, autor não identificado)\" loading=\"lazy\"><figcaption>Fernando Pessoa em 1929 (fotografia, autor não identificado). Domínio público. <a href=\"https://pedrohfernandes-klk.github.io/pt/m7/licao-m7-f01/\">Lição M7-F01</a></figcaption></figure>",
+  "novo": " alt=\"Fernando Pessoa em 1929 (fotografia, autor não identificado)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Fernando Pessoa em 1929\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Fernando Pessoa em 1929 (fotografia, autor não identificado). Domínio público.</p></details><figcaption>Fernando Pessoa em 1929. <a href=\"https://pedrohfernandes-klk.github.io/pt/m7/licao-m7-f01/\">Lição M7-F01</a></figcaption></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P16 (galeria «Para ver» do mapa do módulo): o crédito passa inteiro para o «i» («linha»); o que se vê e a ligação «Lição Mx-Fyy» ficam à vista."
+ },
+ {
+  "ficheiro": "m7/mapa-do-modulo-m7/index.html",
+  "local": "P16, galeria «Para ver»: Revista Orpheu, n.º 2 (1915), capa.",
+  "antigo": " alt=\"Revista Orpheu, n.º 2 (1915), capa\" loading=\"lazy\"><figcaption>Revista Orpheu, n.º 2 (1915), capa. Domínio público. <a href=\"https://pedrohfernandes-klk.github.io/pt/m7/licao-m7-f01/\">Lição M7-F01</a></figcaption></figure>",
+  "novo": " alt=\"Revista Orpheu, n.º 2 (1915), capa\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Revista Orpheu, n.º 2 (1915), capa\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Revista Orpheu, n.º 2 (1915), capa. Domínio público.</p></details><figcaption>Revista Orpheu, n.º 2 (1915), capa. <a href=\"https://pedrohfernandes-klk.github.io/pt/m7/licao-m7-f01/\">Lição M7-F01</a></figcaption></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P16 (galeria «Para ver» do mapa do módulo): o crédito passa inteiro para o «i» («linha»); o que se vê e a ligação «Lição Mx-Fyy» ficam à vista."
+ },
+ {
+  "ficheiro": "m7/mapa-do-modulo-m7/index.html",
+  "local": "P16, galeria «Para ver»: «Tabacaria» na revista Presença, n.º 39 (julho de 1933), pág",
+  "antigo": " alt=\"«Tabacaria» na revista Presença, n.º 39 (julho de 1933), página 2\" loading=\"lazy\"><figcaption>«Tabacaria» na revista Presença, n.º 39 (julho de 1933), página 2. Domínio público. <a href=\"https://pedrohfernandes-klk.github.io/pt/m7/licao-m7-f06/\">Lição M7-F06</a></figcaption></figure>",
+  "novo": " alt=\"«Tabacaria» na revista Presença, n.º 39 (julho de 1933), página 2\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: «Tabacaria» na revista Presença, n.º 39 (julho de 1933), página 2\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">«Tabacaria» na revista Presença, n.º 39 (julho de 1933), página 2. Domínio público.</p></details><figcaption>«Tabacaria» na revista Presença, n.º 39 (julho de 1933), página 2. <a href=\"https://pedrohfernandes-klk.github.io/pt/m7/licao-m7-f06/\">Lição M7-F06</a></figcaption></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P16 (galeria «Para ver» do mapa do módulo): o crédito passa inteiro para o «i» («linha»); o que se vê e a ligação «Lição Mx-Fyy» ficam à vista."
+ },
+ {
+  "ficheiro": "m7/mapa-do-modulo-m7/index.html",
+  "local": "P16, galeria «Para ver»: Café A Brasileira, Chiado.",
+  "antigo": " alt=\"Café A Brasileira, Chiado (fotografia de dirk.olbertz, 2010)\" loading=\"lazy\"><figcaption>Café A Brasileira, Chiado (fotografia de dirk.olbertz, 2010). CC BY 2.0. <a href=\"https://pedrohfernandes-klk.github.io/pt/m7/licao-m7-f01/\">Lição M7-F01</a></figcaption></figure>",
+  "novo": " alt=\"Café A Brasileira, Chiado (fotografia de dirk.olbertz, 2010)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Café A Brasileira, Chiado\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Café A Brasileira, Chiado (fotografia de dirk.olbertz, 2010). <a rel=\"license\" href=\"https://creativecommons.org/licenses/by/2.0/deed.pt\">CC BY 2.0</a>.</p></details><figcaption>Café A Brasileira, Chiado. <a href=\"https://pedrohfernandes-klk.github.io/pt/m7/licao-m7-f01/\">Lição M7-F01</a></figcaption></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P16 (galeria «Para ver» do mapa do módulo): o crédito passa inteiro para o «i» («linha»); o que se vê e a ligação «Lição Mx-Fyy» ficam à vista."
+ },
+ {
+  "ficheiro": "m7/mapa-do-modulo-m7/index.html",
+  "local": "P16, galeria «Para ver»: Condução do rebanho.",
+  "antigo": " alt=\"Condução do rebanho (Silva Porto, 1893, Museu Soares dos Reis; fotografia de Joseolgon, 2016)\" loading=\"lazy\"><figcaption>Condução do rebanho (Silva Porto, 1893, Museu Soares dos Reis; fotografia de Joseolgon, 2016). CC BY-SA 4.0. <a href=\"https://pedrohfernandes-klk.github.io/pt/m7/licao-m7-f04/\">Lição M7-F04</a></figcaption></figure>",
+  "novo": " alt=\"Condução do rebanho (Silva Porto, 1893, Museu Soares dos Reis; fotografia de Joseolgon, 2016)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Condução do rebanho\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Condução do rebanho (Silva Porto, 1893, Museu Soares dos Reis; fotografia de Joseolgon, 2016). <a rel=\"license\" href=\"https://creativecommons.org/licenses/by-sa/4.0/deed.pt\">CC BY-SA 4.0</a>.</p></details><figcaption>Condução do rebanho. <a href=\"https://pedrohfernandes-klk.github.io/pt/m7/licao-m7-f04/\">Lição M7-F04</a></figcaption></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P16 (galeria «Para ver» do mapa do módulo): o crédito passa inteiro para o «i» («linha»); o que se vê e a ligação «Lição Mx-Fyy» ficam à vista."
+ },
+ {
+  "ficheiro": "m7/mapa-do-modulo-m7/index.html",
+  "local": "P16, galeria «Para ver»: Passagem de gado.",
+  "antigo": " alt=\"Passagem de gado (João Cristino da Silva, 1867, MNAC; fotografia de Pedro Ribeiro Simões, 2019)\" loading=\"lazy\"><figcaption>Passagem de gado (João Cristino da Silva, 1867, MNAC; fotografia de Pedro Ribeiro Simões, 2019). CC BY 2.0. <a href=\"https://pedrohfernandes-klk.github.io/pt/m7/licao-m7-f04/\">Lição M7-F04</a></figcaption></figure>",
+  "novo": " alt=\"Passagem de gado (João Cristino da Silva, 1867, MNAC; fotografia de Pedro Ribeiro Simões, 2019)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Passagem de gado\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Passagem de gado (João Cristino da Silva, 1867, MNAC; fotografia de Pedro Ribeiro Simões, 2019). <a rel=\"license\" href=\"https://creativecommons.org/licenses/by/2.0/deed.pt\">CC BY 2.0</a>.</p></details><figcaption>Passagem de gado. <a href=\"https://pedrohfernandes-klk.github.io/pt/m7/licao-m7-f04/\">Lição M7-F04</a></figcaption></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P16 (galeria «Para ver» do mapa do módulo): o crédito passa inteiro para o «i» («linha»); o que se vê e a ligação «Lição Mx-Fyy» ficam à vista."
+ },
+ {
+  "ficheiro": "m7/mapa-do-modulo-m7/index.html",
+  "local": "P16, galeria «Para ver»: Horácio, gravura no frontispício das Oeuvres.",
+  "antigo": " alt=\"Horácio, gravura no frontispício das Oeuvres (1735, Rijksmuseum)\" loading=\"lazy\"><figcaption>Horácio, gravura no frontispício das Oeuvres (1735, Rijksmuseum). CC0. <a href=\"https://pedrohfernandes-klk.github.io/pt/m7/licao-m7-f05/\">Lição M7-F05</a></figcaption></figure>",
+  "novo": " alt=\"Horácio, gravura no frontispício das Oeuvres (1735, Rijksmuseum)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Horácio, gravura no frontispício das Oeuvres\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Horácio, gravura no frontispício das Oeuvres (1735, Rijksmuseum). CC0.</p></details><figcaption>Horácio, gravura no frontispício das Oeuvres. <a href=\"https://pedrohfernandes-klk.github.io/pt/m7/licao-m7-f05/\">Lição M7-F05</a></figcaption></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P16 (galeria «Para ver» do mapa do módulo): o crédito passa inteiro para o «i» («linha»); o que se vê e a ligação «Lição Mx-Fyy» ficam à vista."
+ },
+ {
+  "ficheiro": "m7/mapa-do-modulo-m7/index.html",
+  "local": "P16, galeria «Para ver»: Busto de Epicuro, Altes Museum, Berlim.",
+  "antigo": " alt=\"Busto de Epicuro, Altes Museum, Berlim (fotografia de Yair Haklai, 2019)\" loading=\"lazy\"><figcaption>Busto de Epicuro, Altes Museum, Berlim (fotografia de Yair Haklai, 2019). Domínio público. <a href=\"https://pedrohfernandes-klk.github.io/pt/m7/licao-m7-f05/\">Lição M7-F05</a></figcaption></figure>",
+  "novo": " alt=\"Busto de Epicuro, Altes Museum, Berlim (fotografia de Yair Haklai, 2019)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Busto de Epicuro, Altes Museum, Berlim\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Busto de Epicuro, Altes Museum, Berlim (fotografia de Yair Haklai, 2019). Domínio público.</p></details><figcaption>Busto de Epicuro, Altes Museum, Berlim. <a href=\"https://pedrohfernandes-klk.github.io/pt/m7/licao-m7-f05/\">Lição M7-F05</a></figcaption></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P16 (galeria «Para ver» do mapa do módulo): o crédito passa inteiro para o «i» («linha»); o que se vê e a ligação «Lição Mx-Fyy» ficam à vista."
+ },
+ {
+  "ficheiro": "m7/mapa-do-modulo-m7/index.html",
+  "local": "P16, galeria «Para ver»: Busto do «Pseudo-Séneca», British Museum.",
+  "antigo": " alt=\"Busto do «Pseudo-Séneca», British Museum (fotografia de Marie-Lan Nguyen, 2011)\" loading=\"lazy\"><figcaption>Busto do «Pseudo-Séneca», British Museum (fotografia de Marie-Lan Nguyen, 2011). Domínio público. <a href=\"https://pedrohfernandes-klk.github.io/pt/m7/licao-m7-f05/\">Lição M7-F05</a></figcaption></figure>",
+  "novo": " alt=\"Busto do «Pseudo-Séneca», British Museum (fotografia de Marie-Lan Nguyen, 2011)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Busto do «Pseudo-Séneca», British Museum\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Busto do «Pseudo-Séneca», British Museum (fotografia de Marie-Lan Nguyen, 2011). Domínio público.</p></details><figcaption>Busto do «Pseudo-Séneca», British Museum. <a href=\"https://pedrohfernandes-klk.github.io/pt/m7/licao-m7-f05/\">Lição M7-F05</a></figcaption></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P16 (galeria «Para ver» do mapa do módulo): o crédito passa inteiro para o «i» («linha»); o que se vê e a ligação «Lição Mx-Fyy» ficam à vista."
+ },
+ {
+  "ficheiro": "m7/mapa-do-modulo-m7/index.html",
+  "local": "P16, galeria «Para ver»: Tavira, ponte sobre o Gilão.",
+  "antigo": " alt=\"Tavira, ponte sobre o Gilão (fotografia de Marc Ryckaert, 2007)\" loading=\"lazy\"><figcaption>Tavira, ponte sobre o Gilão (fotografia de Marc Ryckaert, 2007). CC BY-SA 4.0. <a href=\"https://pedrohfernandes-klk.github.io/pt/m7/licao-m7-f06/\">Lição M7-F06</a></figcaption></figure>",
+  "novo": " alt=\"Tavira, ponte sobre o Gilão (fotografia de Marc Ryckaert, 2007)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Tavira, ponte sobre o Gilão\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Tavira, ponte sobre o Gilão (fotografia de Marc Ryckaert, 2007). <a rel=\"license\" href=\"https://creativecommons.org/licenses/by-sa/4.0/deed.pt\">CC BY-SA 4.0</a>.</p></details><figcaption>Tavira, ponte sobre o Gilão. <a href=\"https://pedrohfernandes-klk.github.io/pt/m7/licao-m7-f06/\">Lição M7-F06</a></figcaption></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P16 (galeria «Para ver» do mapa do módulo): o crédito passa inteiro para o «i» («linha»); o que se vê e a ligação «Lição Mx-Fyy» ficam à vista."
+ },
+ {
+  "ficheiro": "m7/mapa-do-modulo-m7/index.html",
+  "local": "P16, galeria «Para ver»: A cidade que sobe.",
+  "antigo": " alt=\"A cidade que sobe (Umberto Boccioni, 1910, MoMA)\" loading=\"lazy\"><figcaption>A cidade que sobe (Umberto Boccioni, 1910, MoMA). Domínio público. <a href=\"https://pedrohfernandes-klk.github.io/pt/m7/licao-m7-f06/\">Lição M7-F06</a></figcaption></figure>",
+  "novo": " alt=\"A cidade que sobe (Umberto Boccioni, 1910, MoMA)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: A cidade que sobe\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">A cidade que sobe (Umberto Boccioni, 1910, MoMA). Domínio público.</p></details><figcaption>A cidade que sobe. <a href=\"https://pedrohfernandes-klk.github.io/pt/m7/licao-m7-f06/\">Lição M7-F06</a></figcaption></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P16 (galeria «Para ver» do mapa do módulo): o crédito passa inteiro para o «i» («linha»); o que se vê e a ligação «Lição Mx-Fyy» ficam à vista."
+ },
+ {
+  "ficheiro": "m7/mapa-do-modulo-m7/index.html",
+  "local": "P16, galeria «Para ver»: Casa Havaneza, tabacaria do Chiado desde 1864.",
+  "antigo": " alt=\"Casa Havaneza, tabacaria do Chiado desde 1864 (fotografia de Martapgoncalves, 2020)\" loading=\"lazy\"><figcaption>Casa Havaneza, tabacaria do Chiado desde 1864 (fotografia de Martapgoncalves, 2020). CC BY-SA 4.0. <a href=\"https://pedrohfernandes-klk.github.io/pt/m7/licao-m7-f06/\">Lição M7-F06</a></figcaption></figure>",
+  "novo": " alt=\"Casa Havaneza, tabacaria do Chiado desde 1864 (fotografia de Martapgoncalves, 2020)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Casa Havaneza, tabacaria do Chiado desde 1864\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Casa Havaneza, tabacaria do Chiado desde 1864 (fotografia de Martapgoncalves, 2020). <a rel=\"license\" href=\"https://creativecommons.org/licenses/by-sa/4.0/deed.pt\">CC BY-SA 4.0</a>.</p></details><figcaption>Casa Havaneza, tabacaria do Chiado desde 1864. <a href=\"https://pedrohfernandes-klk.github.io/pt/m7/licao-m7-f06/\">Lição M7-F06</a></figcaption></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P16 (galeria «Para ver» do mapa do módulo): o crédito passa inteiro para o «i» («linha»); o que se vê e a ligação «Lição Mx-Fyy» ficam à vista."
+ },
+ {
+  "ficheiro": "m7/mapa-do-modulo-m7/index.html",
+  "local": "P16, galeria «Para ver»: D. Sebastião.",
+  "antigo": " alt=\"D. Sebastião (Cristóvão de Morais, c. 1571-1574, MNAA)\" loading=\"lazy\"><figcaption>D. Sebastião (Cristóvão de Morais, c. 1571-1574, MNAA). Domínio público. <a href=\"https://pedrohfernandes-klk.github.io/pt/m7/licao-m7-f08/\">Lição M7-F08</a></figcaption></figure>",
+  "novo": " alt=\"D. Sebastião (Cristóvão de Morais, c. 1571-1574, MNAA)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: D. Sebastião\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">D. Sebastião (Cristóvão de Morais, <span class=\"nb\">c. 1571-1574</span>, MNAA). Domínio público.</p></details><figcaption>D. Sebastião. <a href=\"https://pedrohfernandes-klk.github.io/pt/m7/licao-m7-f08/\">Lição M7-F08</a></figcaption></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P16 (galeria «Para ver» do mapa do módulo): o crédito passa inteiro para o «i» («linha»); o que se vê e a ligação «Lição Mx-Fyy» ficam à vista."
+ },
+ {
+  "ficheiro": "m7/mapa-do-modulo-m7/index.html",
+  "local": "P16, galeria «Para ver»: Figura identificada como o Infante D. Henrique, Painéis de S",
+  "antigo": " alt=\"Figura identificada como o Infante D. Henrique, Painéis de São Vicente (Nuno Gonçalves, século XV)\" loading=\"lazy\"><figcaption>Figura identificada como o Infante D. Henrique, Painéis de São Vicente (Nuno Gonçalves, século XV). Domínio público. <a href=\"https://pedrohfernandes-klk.github.io/pt/m7/licao-m7-f08/\">Lição M7-F08</a></figcaption></figure>",
+  "novo": " alt=\"Figura identificada como o Infante D. Henrique, Painéis de São Vicente (Nuno Gonçalves, século XV)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Figura identificada como o Infante D. Henrique, Painéis de São Vicente\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Figura identificada como o Infante D. Henrique, Painéis de São Vicente (Nuno Gonçalves, século XV). Domínio público.</p></details><figcaption>Figura identificada como o Infante D. Henrique, Painéis de São Vicente. <a href=\"https://pedrohfernandes-klk.github.io/pt/m7/licao-m7-f08/\">Lição M7-F08</a></figcaption></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P16 (galeria «Para ver» do mapa do módulo): o crédito passa inteiro para o «i» («linha»); o que se vê e a ligação «Lição Mx-Fyy» ficam à vista."
+ },
+ {
+  "ficheiro": "m7/mapa-do-modulo-m7/index.html",
+  "local": "P16, galeria «Para ver»: Aparição do Adamastor.",
+  "antigo": " alt=\"Aparição do Adamastor (Carlos Reis, antes de 1940)\" loading=\"lazy\"><figcaption>Aparição do Adamastor (Carlos Reis, antes de 1940). Domínio público. <a href=\"https://pedrohfernandes-klk.github.io/pt/m7/licao-m7-f08/\">Lição M7-F08</a></figcaption></figure>",
+  "novo": " alt=\"Aparição do Adamastor (Carlos Reis, antes de 1940)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Aparição do Adamastor\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Aparição do Adamastor (Carlos Reis, antes de 1940). Domínio público.</p></details><figcaption>Aparição do Adamastor. <a href=\"https://pedrohfernandes-klk.github.io/pt/m7/licao-m7-f08/\">Lição M7-F08</a></figcaption></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P16 (galeria «Para ver» do mapa do módulo): o crédito passa inteiro para o «i» («linha»); o que se vê e a ligação «Lição Mx-Fyy» ficam à vista."
+ },
+ {
+  "ficheiro": "m7/mapa-do-modulo-m7/index.html",
+  "local": "A peça comum do «i» (assets/info-i.css e assets/info-i.js)",
+  "antigo": "</head>",
+  "novo": "<link rel=\"stylesheet\" href=\"../../assets/info-i.css?v=20261105\"><script defer src=\"../../assets/info-i.js?v=20261105\"></script></head>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. A página carrega a peça comum do «i», igual no Português e no Lente."
+ },
+ {
+  "ficheiro": "m7/olhar-pessoa/index.html",
+  "local": "P15, motor do «Olhar» (imagem()): a imagem e o «i» com o crédito e a ligação creditoUrl",
+  "antigo": "function imagem(){return E.imagemData?'<img class=\"img\" alt=\"'+esc(E.titulo)+'\" src=\"'+E.imagemData+'\"><p class=\"credito\">'+esc(E.credito)+'</p>':\"\"}",
+  "novo": "/* 05/11/2026: decisão 153. O crédito da imagem vive num «i» (assets/info-i.css e assets/info-i.js), com a ligação para a imagem de origem (creditoUrl). */function creditoI(){var c=it(E.credito),u=E.creditoUrl,a;if(!u)return c;a='<a href=\"'+esc(u)+'\" rel=\"noopener\">';return c.indexOf(\"Wikimedia Commons\")>-1?c.replace(\"Wikimedia Commons\",a+\"Wikimedia Commons</a>\"):c+\" \"+a+esc(u.replace(/^https?:\\/\\/([^\\/]+).*$/,\"$1\"))+\"</a>\"}function imagem(){return E.imagemData?'<div class=\"com-i olhar-com-i\"><img class=\"img\" alt=\"'+esc(E.titulo)+'\" src=\"'+E.imagemData+'\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">'+creditoI()+'</p></details></div>':\"\"}",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P15 (exercícios «Olhar»): o crédito sai do p.credito para o «i» da imagem, com a ligação creditoUrl, que não se via."
+ },
+ {
+  "ficheiro": "m7/olhar-pessoa/index.html",
+  "local": "P15, campo credito: os pontos médios passam a pontos finais",
+  "antigo": "\"credito\":\"Fernando Pessoa, fotografia de 1914 · domínio público · Wikimedia Commons",
+  "novo": "\"credito\":\"Fernando Pessoa, fotografia de 1914. Domínio público. Wikimedia Commons.",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P15 (exercícios «Olhar»): o crédito sai do p.credito para o «i» da imagem, com a ligação creditoUrl, que não se via."
+ },
+ {
+  "ficheiro": "m7/olhar-pessoa/index.html",
+  "local": "A peça comum do «i» (assets/info-i.css e assets/info-i.js)",
+  "antigo": "</head>",
+  "novo": "<link rel=\"stylesheet\" href=\"../../assets/info-i.css?v=20261105\"><script defer src=\"../../assets/info-i.js?v=20261105\"></script><style>/* 05/11/2026: decisão 153. O «i» da imagem do exercício: a moldura toma a largura da imagem, centrada. */#palco .olhar-com-i{width:fit-content;max-width:100%;margin:0 auto}</style></head>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. A página carrega a peça comum do «i», igual no Português e no Lente."
+ },
+ {
+  "ficheiro": "m8/m8-poema-testemunha/index.html",
+  "local": "P14, «Pensar devagar»: o fr-cred passa para o «i»; o fr-leg fica",
+  "antigo": "<figure class=\\\"fig-rev \\\"><span class=\\\"fr-moldura\\\"><img src=\\\"https://pedrohfernandes-klk.github.io/pt/img/fontes/goya-tres-de-maio-1814.jpg\\\" alt=\\\"O quadro de que parte a carta de Jorge de Sena aos filhos.\\\" loading=\\\"lazy\\\" decoding=\\\"async\\\" style=\\\"object-position:45% 45%\\\"></span><figcaption><span class=\\\"fr-leg\\\">Goya, 3 de maio de 1808: a pintura de que parte o poema de Jorge de Sena.</span> <span class=\\\"fr-cred\\\">Domínio público. <a href=\\\"https://commons.wikimedia.org/wiki/File:El_tres_de_mayo_de_1808_en_Madrid.jpg\\\" rel=\\\"noopener\\\">commons.wikimedia.org</a></span></figcaption></figure>",
+  "novo": "<figure class=\\\"fig-rev \\\"><div class=\\\"fr-moldura com-i\\\"><img src=\\\"https://pedrohfernandes-klk.github.io/pt/img/fontes/goya-tres-de-maio-1814.jpg\\\" alt=\\\"O quadro de que parte a carta de Jorge de Sena aos filhos.\\\" loading=\\\"lazy\\\" decoding=\\\"async\\\" style=\\\"object-position:45% 45%\\\"><details class=\\\"info-i\\\" name=\\\"info-i\\\"><summary aria-label=\\\"Créditos da imagem\\\"><span aria-hidden=\\\"true\\\">i</span></summary><p class=\\\"info-i-texto\\\">Domínio público. <a href=\\\"https://commons.wikimedia.org/wiki/File:El_tres_de_mayo_de_1808_en_Madrid.jpg\\\" rel=\\\"noopener\\\">commons.wikimedia.org</a></p></details></div><figcaption><span class=\\\"fr-leg\\\">Goya, 3 de maio de 1808: a pintura de que parte o poema de Jorge de Sena.</span></figcaption></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P14 («Pensar devagar»): o crédito (fr-cred) passa inteiro para o «i»; a legenda (fr-leg), que diz o que se vê, fica à vista."
+ },
+ {
+  "ficheiro": "m8/m8-poema-testemunha/index.html",
+  "local": "A peça comum do «i» (assets/info-i.css e assets/info-i.js)",
+  "antigo": "</head>",
+  "novo": "<link rel=\"stylesheet\" href=\"../../assets/info-i.css?v=20261105\"><script defer src=\"../../assets/info-i.js?v=20261105\"></script></head>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. A página carrega a peça comum do «i», igual no Português e no Lente."
+ },
+ {
+  "ficheiro": "m8/mapa-do-modulo-m8/index.html",
+  "local": "P16, galeria «Para ver»: Os fuzilamentos de 3 de maio de 1808.",
+  "antigo": " alt=\"Os fuzilamentos de 3 de maio de 1808 (Francisco de Goya, 1814, Museo del Prado)\" loading=\"lazy\"><figcaption>Os fuzilamentos de 3 de maio de 1808 (Francisco de Goya, 1814, Museo del Prado). Domínio público. <a href=\"https://pedrohfernandes-klk.github.io/pt/m8/licao-m8-f01/\">Lição M8-F01</a></figcaption></figure>",
+  "novo": " alt=\"Os fuzilamentos de 3 de maio de 1808 (Francisco de Goya, 1814, Museo del Prado)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Os fuzilamentos de 3 de maio de 1808\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Os fuzilamentos de 3 de maio de 1808 (Francisco de Goya, 1814, Museo del Prado). Domínio público.</p></details><figcaption>Os fuzilamentos de 3 de maio de 1808. <a href=\"https://pedrohfernandes-klk.github.io/pt/m8/licao-m8-f01/\">Lição M8-F01</a></figcaption></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P16 (galeria «Para ver» do mapa do módulo): o crédito passa inteiro para o «i» («linha»); o que se vê e a ligação «Lição Mx-Fyy» ficam à vista."
+ },
+ {
+  "ficheiro": "m8/mapa-do-modulo-m8/index.html",
+  "local": "P16, galeria «Para ver»: Rua do Alecrim, Lisboa.",
+  "antigo": " alt=\"Rua do Alecrim, Lisboa (fotografia de Roger Wollstadt, 1968)\" loading=\"lazy\"><figcaption>Rua do Alecrim, Lisboa (fotografia de Roger Wollstadt, 1968). CC BY-SA 2.0. <a href=\"https://pedrohfernandes-klk.github.io/pt/m8/licao-m8-f08/\">Lição M8-F08</a></figcaption></figure>",
+  "novo": " alt=\"Rua do Alecrim, Lisboa (fotografia de Roger Wollstadt, 1968)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Rua do Alecrim, Lisboa\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Rua do Alecrim, Lisboa (fotografia de Roger Wollstadt, 1968). <a rel=\"license\" href=\"https://creativecommons.org/licenses/by-sa/2.0/deed.pt\">CC BY-SA 2.0</a>.</p></details><figcaption>Rua do Alecrim, Lisboa. <a href=\"https://pedrohfernandes-klk.github.io/pt/m8/licao-m8-f08/\">Lição M8-F08</a></figcaption></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P16 (galeria «Para ver» do mapa do módulo): o crédito passa inteiro para o «i» («linha»); o que se vê e a ligação «Lição Mx-Fyy» ficam à vista."
+ },
+ {
+  "ficheiro": "m8/mapa-do-modulo-m8/index.html",
+  "local": "P16, galeria «Para ver»: Estação do Rossio, Lisboa.",
+  "antigo": " alt=\"Estação do Rossio, Lisboa (fotografia de Jorge Franganillo, 2024)\" loading=\"lazy\"><figcaption>Estação do Rossio, Lisboa (fotografia de Jorge Franganillo, 2024). CC BY 2.0. <a href=\"https://pedrohfernandes-klk.github.io/pt/m8/licao-m8-f08/\">Lição M8-F08</a></figcaption></figure>",
+  "novo": " alt=\"Estação do Rossio, Lisboa (fotografia de Jorge Franganillo, 2024)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Estação do Rossio, Lisboa\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Estação do Rossio, Lisboa (fotografia de Jorge Franganillo, 2024). <a rel=\"license\" href=\"https://creativecommons.org/licenses/by/2.0/deed.pt\">CC BY 2.0</a>.</p></details><figcaption>Estação do Rossio, Lisboa. <a href=\"https://pedrohfernandes-klk.github.io/pt/m8/licao-m8-f08/\">Lição M8-F08</a></figcaption></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P16 (galeria «Para ver» do mapa do módulo): o crédito passa inteiro para o «i» («linha»); o que se vê e a ligação «Lição Mx-Fyy» ficam à vista."
+ },
+ {
+  "ficheiro": "m8/mapa-do-modulo-m8/index.html",
+  "local": "P16, galeria «Para ver»: Relógio de bolso.",
+  "antigo": " alt=\"Relógio de bolso (Robert Roskell, 1820-1821, The Met)\" loading=\"lazy\"><figcaption>Relógio de bolso (Robert Roskell, 1820-1821, The Met). Domínio público (The Met, Open Access). <a href=\"https://pedrohfernandes-klk.github.io/pt/m8/licao-m8-f08/\">Lição M8-F08</a></figcaption></figure>",
+  "novo": " alt=\"Relógio de bolso (Robert Roskell, 1820-1821, The Met)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Relógio de bolso\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Relógio de bolso (Robert Roskell, <span class=\"nb\">1820-1821</span>, The Met). Domínio público (The Met, Open Access).</p></details><figcaption>Relógio de bolso. <a href=\"https://pedrohfernandes-klk.github.io/pt/m8/licao-m8-f08/\">Lição M8-F08</a></figcaption></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P16 (galeria «Para ver» do mapa do módulo): o crédito passa inteiro para o «i» («linha»); o que se vê e a ligação «Lição Mx-Fyy» ficam à vista."
+ },
+ {
+  "ficheiro": "m8/mapa-do-modulo-m8/index.html",
+  "local": "A peça comum do «i» (assets/info-i.css e assets/info-i.js)",
+  "antigo": "</head>",
+  "novo": "<link rel=\"stylesheet\" href=\"../../assets/info-i.css?v=20261105\"><script defer src=\"../../assets/info-i.js?v=20261105\"></script></head>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. A página carrega a peça comum do «i», igual no Português e no Lente."
+ },
+ {
+  "ficheiro": "m9/m9-de-quem-e-o-convento/index.html",
+  "local": "P14, «Pensar devagar»: o fr-cred passa para o «i»; o fr-leg fica",
+  "antigo": "<figure class=\\\"fig-rev \\\"><span class=\\\"fr-moldura\\\"><img src=\\\"https://pedrohfernandes-klk.github.io/pt/img/fontes/mafra-palacio-convento.jpg\\\" alt=\\\"O convento que D. João V prometeu e milhares de homens carregaram.\\\" loading=\\\"lazy\\\" decoding=\\\"async\\\" style=\\\"object-position:50% 55%\\\"></span><figcaption><span class=\\\"fr-leg\\\">O Palácio-Convento de Mafra: de quem é esta pedra?</span> <span class=\\\"fr-cred\\\">CC BY-SA 3.0. <a href=\\\"https://commons.wikimedia.org/wiki/File:Mafra_May_2013-2.jpg\\\" rel=\\\"noopener\\\">commons.wikimedia.org</a></span></figcaption></figure>",
+  "novo": "<figure class=\\\"fig-rev \\\"><div class=\\\"fr-moldura com-i\\\"><img src=\\\"https://pedrohfernandes-klk.github.io/pt/img/fontes/mafra-palacio-convento.jpg\\\" alt=\\\"O convento que D. João V prometeu e milhares de homens carregaram.\\\" loading=\\\"lazy\\\" decoding=\\\"async\\\" style=\\\"object-position:50% 55%\\\"><details class=\\\"info-i\\\" name=\\\"info-i\\\"><summary aria-label=\\\"Créditos da imagem\\\"><span aria-hidden=\\\"true\\\">i</span></summary><p class=\\\"info-i-texto\\\"><a rel=\\\"license\\\" href=\\\"https://creativecommons.org/licenses/by-sa/3.0/deed.pt\\\">CC BY-SA 3.0</a>. <a href=\\\"https://commons.wikimedia.org/wiki/File:Mafra_May_2013-2.jpg\\\" rel=\\\"noopener\\\">commons.wikimedia.org</a></p></details></div><figcaption><span class=\\\"fr-leg\\\">O Palácio-Convento de Mafra: de quem é esta pedra?</span></figcaption></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P14 («Pensar devagar»): o crédito (fr-cred) passa inteiro para o «i»; a legenda (fr-leg), que diz o que se vê, fica à vista."
+ },
+ {
+  "ficheiro": "m9/m9-de-quem-e-o-convento/index.html",
+  "local": "A peça comum do «i» (assets/info-i.css e assets/info-i.js)",
+  "antigo": "</head>",
+  "novo": "<link rel=\"stylesheet\" href=\"../../assets/info-i.css?v=20261105\"><script defer src=\"../../assets/info-i.js?v=20261105\"></script></head>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. A página carrega a peça comum do «i», igual no Português e no Lente."
+ },
+ {
+  "ficheiro": "m9/m9-ver-e-nao-ver/index.html",
+  "local": "P14, «Pensar devagar»: o fr-cred passa para o «i»; o fr-leg fica",
+  "antigo": "<figure class=\\\"fig-rev inteira\\\"><span class=\\\"fr-moldura\\\"><img src=\\\"https://pedrohfernandes-klk.github.io/pt/img/fontes/passarola-gusmao.jpg\\\" alt=\\\"A máquina voadora do padre Bartolomeu Lourenço, tal como foi desenhada.\\\" loading=\\\"lazy\\\" decoding=\\\"async\\\"></span><figcaption><span class=\\\"fr-leg\\\">A Passarola: o que uns viram voar e outros não viram.</span> <span class=\\\"fr-cred\\\">Bartolomeu de Gusmão (fac-símile). Domínio público. <a href=\\\"https://commons.wikimedia.org/wiki/File:Reproduction_fac-simil%C3%A9_d%27un_dessin_(page_23_crop).jpg\\\" rel=\\\"noopener\\\">commons.wikimedia.org</a></span></figcaption></figure>",
+  "novo": "<figure class=\\\"fig-rev inteira\\\"><div class=\\\"fr-moldura com-i\\\"><img src=\\\"https://pedrohfernandes-klk.github.io/pt/img/fontes/passarola-gusmao.jpg\\\" alt=\\\"A máquina voadora do padre Bartolomeu Lourenço, tal como foi desenhada.\\\" loading=\\\"lazy\\\" decoding=\\\"async\\\"><details class=\\\"info-i\\\" name=\\\"info-i\\\"><summary aria-label=\\\"Créditos da imagem\\\"><span aria-hidden=\\\"true\\\">i</span></summary><p class=\\\"info-i-texto\\\">Bartolomeu de Gusmão (fac-símile). Domínio público. <a href=\\\"https://commons.wikimedia.org/wiki/File:Reproduction_fac-simil%C3%A9_d%27un_dessin_(page_23_crop).jpg\\\" rel=\\\"noopener\\\">commons.wikimedia.org</a></p></details></div><figcaption><span class=\\\"fr-leg\\\">A Passarola: o que uns viram voar e outros não viram.</span></figcaption></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P14 («Pensar devagar»): o crédito (fr-cred) passa inteiro para o «i»; a legenda (fr-leg), que diz o que se vê, fica à vista."
+ },
+ {
+  "ficheiro": "m9/m9-ver-e-nao-ver/index.html",
+  "local": "A peça comum do «i» (assets/info-i.css e assets/info-i.js)",
+  "antigo": "</head>",
+  "novo": "<link rel=\"stylesheet\" href=\"../../assets/info-i.css?v=20261105\"><script defer src=\"../../assets/info-i.js?v=20261105\"></script></head>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. A página carrega a peça comum do «i», igual no Português e no Lente."
+ },
+ {
+  "ficheiro": "m9/mapa-do-modulo-m9/index.html",
+  "local": "P16, galeria «Para ver»: Palácio-Convento de Mafra, fachada.",
+  "antigo": " alt=\"Palácio-Convento de Mafra, fachada (fotografia de Alvesgaspar, 2013)\" loading=\"lazy\"><figcaption>Palácio-Convento de Mafra, fachada (fotografia de Alvesgaspar, 2013). CC BY-SA 3.0. <a href=\"https://pedrohfernandes-klk.github.io/pt/m9/licao-m9-f01/\">Lição M9-F01</a></figcaption></figure>",
+  "novo": " alt=\"Palácio-Convento de Mafra, fachada (fotografia de Alvesgaspar, 2013)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Palácio-Convento de Mafra, fachada\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Palácio-Convento de Mafra, fachada (fotografia de Alvesgaspar, 2013). <a rel=\"license\" href=\"https://creativecommons.org/licenses/by-sa/3.0/deed.pt\">CC BY-SA 3.0</a>.</p></details><figcaption>Palácio-Convento de Mafra, fachada. <a href=\"https://pedrohfernandes-klk.github.io/pt/m9/licao-m9-f01/\">Lição M9-F01</a></figcaption></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P16 (galeria «Para ver» do mapa do módulo): o crédito passa inteiro para o «i» («linha»); o que se vê e a ligação «Lição Mx-Fyy» ficam à vista."
+ },
+ {
+  "ficheiro": "m9/mapa-do-modulo-m9/index.html",
+  "local": "P16, galeria «Para ver»: Biblioteca do Palácio Nacional de Mafra.",
+  "antigo": " alt=\"Biblioteca do Palácio Nacional de Mafra (fotografia de Hipersyl, 2026)\" loading=\"lazy\"><figcaption>Biblioteca do Palácio Nacional de Mafra (fotografia de Hipersyl, 2026). CC BY 4.0. <a href=\"https://pedrohfernandes-klk.github.io/pt/m9/licao-m9-f01/\">Lição M9-F01</a></figcaption></figure>",
+  "novo": " alt=\"Biblioteca do Palácio Nacional de Mafra (fotografia de Hipersyl, 2026)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Biblioteca do Palácio Nacional de Mafra\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Biblioteca do Palácio Nacional de Mafra (fotografia de Hipersyl, 2026). <a rel=\"license\" href=\"https://creativecommons.org/licenses/by/4.0/deed.pt\">CC BY 4.0</a>.</p></details><figcaption>Biblioteca do Palácio Nacional de Mafra. <a href=\"https://pedrohfernandes-klk.github.io/pt/m9/licao-m9-f01/\">Lição M9-F01</a></figcaption></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P16 (galeria «Para ver» do mapa do módulo): o crédito passa inteiro para o «i» («linha»); o que se vê e a ligação «Lição Mx-Fyy» ficam à vista."
+ },
+ {
+  "ficheiro": "m9/mapa-do-modulo-m9/index.html",
+  "local": "P16, galeria «Para ver»: D. João V.",
+  "antigo": " alt=\"D. João V (Domenico Duprà, 1725, Biblioteca Joanina)\" loading=\"lazy\"><figcaption>D. João V (Domenico Duprà, 1725, Biblioteca Joanina). Domínio público. <a href=\"https://pedrohfernandes-klk.github.io/pt/m9/licao-m9-f01/\">Lição M9-F01</a></figcaption></figure>",
+  "novo": " alt=\"D. João V (Domenico Duprà, 1725, Biblioteca Joanina)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: D. João V\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">D. João V (Domenico Duprà, 1725, Biblioteca Joanina). Domínio público.</p></details><figcaption>D. João V. <a href=\"https://pedrohfernandes-klk.github.io/pt/m9/licao-m9-f01/\">Lição M9-F01</a></figcaption></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P16 (galeria «Para ver» do mapa do módulo): o crédito passa inteiro para o «i» («linha»); o que se vê e a ligação «Lição Mx-Fyy» ficam à vista."
+ },
+ {
+  "ficheiro": "m9/mapa-do-modulo-m9/index.html",
+  "local": "P16, galeria «Para ver»: A Passarola de Bartolomeu de Gusmão, desenho do século XVIII",
+  "antigo": " alt=\"A Passarola de Bartolomeu de Gusmão, desenho do século XVIII (fac-símile, BNP)\" loading=\"lazy\"><figcaption>A Passarola de Bartolomeu de Gusmão, desenho do século XVIII (fac-símile, BNP). Domínio público. <a href=\"https://pedrohfernandes-klk.github.io/pt/m9/licao-m9-f01/\">Lição M9-F01</a></figcaption></figure>",
+  "novo": " alt=\"A Passarola de Bartolomeu de Gusmão, desenho do século XVIII (fac-símile, BNP)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: A Passarola de Bartolomeu de Gusmão, desenho do século XVIII\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">A Passarola de Bartolomeu de Gusmão, desenho do século XVIII (fac-símile, BNP). Domínio público.</p></details><figcaption>A Passarola de Bartolomeu de Gusmão, desenho do século XVIII. <a href=\"https://pedrohfernandes-klk.github.io/pt/m9/licao-m9-f01/\">Lição M9-F01</a></figcaption></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P16 (galeria «Para ver» do mapa do módulo): o crédito passa inteiro para o «i» («linha»); o que se vê e a ligação «Lição Mx-Fyy» ficam à vista."
+ },
+ {
+  "ficheiro": "m9/mapa-do-modulo-m9/index.html",
+  "local": "P16, galeria «Para ver»: Casa dos Bicos, Lisboa, sede da Fundação José Saramago.",
+  "antigo": " alt=\"Casa dos Bicos, Lisboa, sede da Fundação José Saramago (fotografia de Ingo Mehling, 2022)\" loading=\"lazy\"><figcaption>Casa dos Bicos, Lisboa, sede da Fundação José Saramago (fotografia de Ingo Mehling, 2022). CC BY-SA 4.0. <a href=\"https://pedrohfernandes-klk.github.io/pt/m9/licao-m9-f04/\">Lição M9-F04</a></figcaption></figure>",
+  "novo": " alt=\"Casa dos Bicos, Lisboa, sede da Fundação José Saramago (fotografia de Ingo Mehling, 2022)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Casa dos Bicos, Lisboa, sede da Fundação José Saramago\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Casa dos Bicos, Lisboa, sede da Fundação José Saramago (fotografia de Ingo Mehling, 2022). <a rel=\"license\" href=\"https://creativecommons.org/licenses/by-sa/4.0/deed.pt\">CC BY-SA 4.0</a>.</p></details><figcaption>Casa dos Bicos, Lisboa, sede da Fundação José Saramago. <a href=\"https://pedrohfernandes-klk.github.io/pt/m9/licao-m9-f04/\">Lição M9-F04</a></figcaption></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P16 (galeria «Para ver» do mapa do módulo): o crédito passa inteiro para o «i» («linha»); o que se vê e a ligação «Lição Mx-Fyy» ficam à vista."
+ },
+ {
+  "ficheiro": "m9/mapa-do-modulo-m9/index.html",
+  "local": "P16, galeria «Para ver»: José Saramago em 2005.",
+  "antigo": " alt=\"José Saramago em 2005 (fotografia de Mario Antonio Pena)\" loading=\"lazy\"><figcaption>José Saramago em 2005 (fotografia de Mario Antonio Pena). CC BY-SA 2.0. <a href=\"https://pedrohfernandes-klk.github.io/pt/m9/licao-m9-f04/\">Lição M9-F04</a></figcaption></figure>",
+  "novo": " alt=\"José Saramago em 2005 (fotografia de Mario Antonio Pena)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: José Saramago em 2005\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">José Saramago em 2005 (fotografia de Mario Antonio Pena). <a rel=\"license\" href=\"https://creativecommons.org/licenses/by-sa/2.0/deed.pt\">CC BY-SA 2.0</a>.</p></details><figcaption>José Saramago em 2005. <a href=\"https://pedrohfernandes-klk.github.io/pt/m9/licao-m9-f04/\">Lição M9-F04</a></figcaption></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P16 (galeria «Para ver» do mapa do módulo): o crédito passa inteiro para o «i» («linha»); o que se vê e a ligação «Lição Mx-Fyy» ficam à vista."
+ },
+ {
+  "ficheiro": "m9/mapa-do-modulo-m9/index.html",
+  "local": "P16, galeria «Para ver»: Oliveira milenar, Constância.",
+  "antigo": " alt=\"Oliveira milenar, Constância (fotografia de GualdimG, 2025)\" loading=\"lazy\"><figcaption>Oliveira milenar, Constância (fotografia de GualdimG, 2025). CC BY-SA 4.0. <a href=\"https://pedrohfernandes-klk.github.io/pt/m9/licao-m9-f04/\">Lição M9-F04</a></figcaption></figure>",
+  "novo": " alt=\"Oliveira milenar, Constância (fotografia de GualdimG, 2025)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Oliveira milenar, Constância\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Oliveira milenar, Constância (fotografia de GualdimG, 2025). <a rel=\"license\" href=\"https://creativecommons.org/licenses/by-sa/4.0/deed.pt\">CC BY-SA 4.0</a>.</p></details><figcaption>Oliveira milenar, Constância. <a href=\"https://pedrohfernandes-klk.github.io/pt/m9/licao-m9-f04/\">Lição M9-F04</a></figcaption></figure>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»), pedido pt-2 do plano dos créditos. Família P16 (galeria «Para ver» do mapa do módulo): o crédito passa inteiro para o «i» («linha»); o que se vê e a ligação «Lição Mx-Fyy» ficam à vista."
+ },
+ {
+  "ficheiro": "m9/mapa-do-modulo-m9/index.html",
   "local": "A peça comum do «i» (assets/info-i.css e assets/info-i.js)",
   "antigo": "</head>",
   "novo": "<link rel=\"stylesheet\" href=\"../../assets/info-i.css?v=20261105\"><script defer src=\"../../assets/info-i.js?v=20261105\"></script></head>",

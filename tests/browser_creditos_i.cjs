@@ -12,6 +12,10 @@
 // no primeiro cartão; e, montados no cartão aberto ou abertos na página, os retratos do «Em paralelo» (P12, «linha», o «i» por
 // baixo do retrato e o crédito com a largura da coluna), a imagem do campo ver de uma lição (P13: o «i» fora da figura que
 // amplia, e a imagem continua a ampliar), o material de um painel (P13, «linha») e a galeria do mapa M7 (P10, «linha»).
+// 05/11/2026: pedido pt-2, fatia 3: amostra da P14 («Pensar devagar», «canto») no primeiro cartão; e, preparados na página, a
+// imagem de dois exercícios «Olhar» (P15: «canto» em M4, «linha» no retrato de Pessoa em M7; o «i» liga ao creditoUrl) e a
+// galeria «Para ver» do mapa M8 (P16, «linha»; a ligação «Lição Mx-Fyy» fica à vista, fora do «i»). Na galeria do mapa M7 há agora
+// um «i» por figura: o caso da P10 olha só para a figura de Pessoa (a primeira); as outras são da P16, que o teste estático conta.
 const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),http=require('node:http');
 const {chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright'),root=path.resolve(__dirname,'..');
 const tipos={'.html':'text/html; charset=utf-8','.js':'text/javascript','.css':'text/css','.json':'application/json','.jpg':'image/jpeg','.jpeg':'image/jpeg','.png':'image/png','.webp':'image/webp','.svg':'image/svg+xml','.woff2':'font/woff2'};
@@ -25,6 +29,7 @@ const AMOSTRAS=[
  {url:'/pt/m3/licao-m3-f19/',variante:'linha',familia:'P9'},
  {url:'/pt/m7/licao-m7-f01/',variante:'linha',familia:'P10'},
  {url:'/pt/m7/licao-m7-f34/',variante:'canto',familia:'P11'},
+ {url:'/pt/m1/m1-promessa-do-cronista/',variante:'canto',familia:'P14'},
 ];
 const LARGURAS=[320,390,852,1366];
 function lum(c){const m=c.match(/[\d.]+/g).map(Number),f=v=>{v/=255;return v<=.03928?v/12.92:((v+.055)/1.055)**2.4};return .2126*f(m[0])+.7152*f(m[1])+.0722*f(m[2])}
@@ -39,14 +44,21 @@ const CASOS=[
  {nome:'P12 M1-F19',url:'/pt/m1/licao-m1-f19/',rel:'m1/licao-m1-f19/index.html',cartao:c=>/class="rosto"/.test(c.html||''),variante:'linha',n:2,nomes:['Créditos da imagem: ilha de San Simón','Créditos da imagem: Pergaminho Vindel']},
  {nome:'P13 M4-F11',url:'/pt/m4/licao-m4-f11/',rel:'m4/licao-m4-f11/index.html',cartao:c=>/info-i/.test(c.ver||''),variante:'canto',n:1,nomes:['Créditos da imagem']},
  {nome:'P13 painel M4-F01',url:'/pt/m4/painel-m4-f01/',rel:'m4/painel-m4-f01/index.html',painel:true,variante:'linha',n:1,nomes:['Créditos da imagem']},
- {nome:'P10 mapa M7',url:'/pt/m7/mapa-do-modulo-m7/',galeria:true,variante:'linha',n:1,nomes:['Créditos da imagem: Fernando Pessoa']},
+ // 05/11/2026: fatia 3. A galeria do mapa M7 tem agora 19 «i» (P16): este caso olha só para a figura de Pessoa, a primeira.
+ {nome:'P10 mapa M7',url:'/pt/m7/mapa-do-modulo-m7/',galeria:true,raiz:'#galeria .galeria>figure:first-child',variante:'linha',n:1,nomes:['Créditos da imagem: Fernando Pessoa']},
+ {nome:'P15 Olhar M4',url:'/pt/m4/olhar-lupi/',olhar:'https://commons.wikimedia.org/w/index.php?curid=39076717',variante:'canto',n:1,nomes:['Créditos da imagem']},
+ {nome:'P15 Olhar M7',url:'/pt/m7/olhar-pessoa/',olhar:'https://commons.wikimedia.org/w/index.php?curid=56775462',variante:'linha',n:1,nomes:['Créditos da imagem']},
+ {nome:'P16 mapa M8',url:'/pt/m8/mapa-do-modulo-m8/',galeria:true,variante:'linha',n:4,licoes:4,nomes:['Créditos da imagem: Os fuzilamentos de 3 de maio de 1808','Créditos da imagem: Rua do Alecrim, Lisboa','Créditos da imagem: Estação do Rossio, Lisboa','Créditos da imagem: Relógio de bolso']},
 ];
 async function preparar(p,caso){
  if(caso.cartao){const t=fs.readFileSync(path.join(root,caso.rel),'utf8'),card=jsonEm(t,t.indexOf('[',t.search(/CARTOES\s*=/))).find(caso.cartao);
   await p.evaluate(x=>{window.qaCasca=EPICasca.abrir({semVoltar:true});EPIJogo.montar({casca:qaCasca,itens:[x],chave:'qa-creditos-i'})},card);return '.casca.sobreposta'}
  if(caso.painel){const t=fs.readFileSync(path.join(root,caso.rel),'utf8'),M=jsonEm(t,t.indexOf('{',t.indexOf('MATERIAL='))),k=Object.keys(M).find(k=>/info-i/.test(M[k].ver||''));
   await p.locator('[data-r-k]').selectOption(k);await p.locator('[data-relampago]').click();return '[data-extra]'}
- await p.locator('#galeria > summary').click();return '#galeria'}
+ // 05/11/2026: fatia 3. O «Olhar»: «Começar» e «Ver a imagem» (o passo de memória); o relógio para, para a imagem não sumir.
+ if(caso.olhar){await p.locator('#seguir').click();await p.locator('#mostrar').click();await p.locator('#palco .olhar-com-i img').waitFor();
+  await p.clock.pauseAt(await p.evaluate(()=>Date.now()+1000));return '#palco'}
+ await p.locator('#galeria > summary').click();return caso.raiz||'#galeria'}
 // O «i», a imagem que ele acompanha e as caixas de cada um.
 // 05/11/2026: sel é o índice do «i» na página, ou {raiz, i} para o i-ésimo «i» dentro de um seletor (cartão montado, galeria).
 const MEDIR=(sel)=>{const d=(typeof sel==='number'?document.querySelectorAll('details.info-i'):document.querySelectorAll(sel.raiz+' details.info-i'))[typeof sel==='number'?sel:sel.i];if(!d)return null;const s=d.querySelector(':scope>summary'),t=d.querySelector(':scope>.info-i-texto');
@@ -57,7 +69,12 @@ const MEDIR=(sel)=>{const d=(typeof sel==='number'?document.querySelectorAll('de
   borda:sp.borderTopColor,halo:(sp.boxShadow.match(/rgba?\([^)]*\)/)||[sp.backgroundColor])[0],fundoCirculo:sp.backgroundColor,cor:tt.color,fundo:tt.backgroundColor,
   rolagem:document.documentElement.scrollWidth>innerWidth+1,vw:innerWidth,
   justificado:[t,...t.querySelectorAll('*')].filter(e=>{const c=getComputedStyle(e);return c.textAlign==='justify'||c.hyphens==='auto'}).map(e=>e.tagName)}};
-async function contexto(b,origem,opcoes){const ctx=await b.newContext({reducedMotion:'reduce',...opcoes});await ctx.route('**/*',r=>{const u=new URL(r.request().url());return u.origin===origem?r.continue():r.abort()});return ctx}
+// 05/11/2026: fatia 3. As imagens dos «Pensar devagar» vêm pelo endereço publicado (https://pedrohfernandes-klk.github.io/pt/…):
+// servem-se da árvore local, como as outras; o resto de fora continua cortado.
+const PUBLICADO='https://pedrohfernandes-klk.github.io';
+async function contexto(b,origem,opcoes){const ctx=await b.newContext({reducedMotion:'reduce',...opcoes});await ctx.route('**/*',r=>{const u=new URL(r.request().url());
+ if(u.origin===PUBLICADO&&u.pathname.startsWith('/pt/')){const f=path.resolve(root,'.'+decodeURIComponent(u.pathname.slice(3)));return f.startsWith(root)&&fs.existsSync(f)&&fs.statSync(f).isFile()?r.fulfill({path:f}):r.abort()}
+ return u.origin===origem?r.continue():r.abort()});return ctx}
 async function arvore(p){const s=await p.context().newCDPSession(p);const {nodes}=await s.send('Accessibility.getFullAXTree');await s.detach();
  return nodes.filter(n=>n.name&&/^(Créditos|Fonte)/.test(n.name.value||'')).map(n=>({papel:n.role&&n.role.value,nome:n.name.value,expanded:((n.properties||[]).find(x=>x.name==='expanded')||{value:{}}).value.value}))}
 function conferirCaixas(m,onde){
@@ -123,7 +140,7 @@ try{
    assert.deepEqual(await p.locator('details.info-i').evaluateAll(es=>es.map(e=>e.open)),[false,false,false,true,false,false,false],'abrir outro fecha o primeiro');
    // A imagem dentro de uma ligação: o «i» fica fora da ligação e a ligação continua a funcionar.
    assert.equal(await p.locator('[data-caso="ligacao"] a details').count(),0);
-  }else if(alvo.familia==='P7'||alvo.familia==='P10'){
+  }else if(alvo.familia==='P7'||alvo.familia==='P10'||alvo.familia==='P14'){
    // O ampliador das lições continua a abrir a imagem; a legenda dele já não traz o crédito.
    await p.locator('.jogo .ler figure img').first().click({position:{x:20,y:20}});
    const leg=await p.locator('.amp-ov .amp-leg').innerText();assert(!/Domínio público|CC BY/.test(leg),`${alvo.url}: legenda do ampliador sem crédito (${leg})`);
@@ -172,6 +189,7 @@ try{
  // temas: fechado; alvo de 44 px no sítio da variante; aberto, o crédito no ecrã, legível, e o «i» no mesmo sítio; Escape fecha.
  for(const caso of CASOS)for(const width of LARGURAS)for(const tema of ['light','dark']){
   const ctx=await contexto(b,origem,{viewport:{width,height:width>800?800:860},colorScheme:tema}),p=await ctx.newPage(),erros=[];p.on('pageerror',e=>erros.push(String(e)));
+  if(caso.olhar)await p.clock.install();
   await p.goto(origem+caso.url,{waitUntil:'networkidle'});const raiz=await preparar(p,caso),sel=raiz+' details.info-i',onde=`${caso.nome} ${width} ${tema}`;
   await p.locator(sel+'>summary').first().waitFor();assert.equal(await p.locator(sel).count(),caso.n,`${onde}: ${caso.n} «i»`);
   assert.deepEqual(await p.locator(sel+'>summary').evaluateAll(s=>s.map(x=>x.getAttribute('aria-label'))),caso.nomes,`${onde}: nomes`);
@@ -191,6 +209,9 @@ try{
   if(width===1366&&tema==='light'){await p.emulateMedia({media:'print'});
    for(let i=0;i<caso.n;i++){const m=await p.evaluate(MEDIR,{raiz,i});if(!m.img||m.img.w===0)continue;
     assert(!m.sVisivel&&m.tVisivel&&m.t.y>=m.img.b-1,`${onde} «i» ${i}: na impressão, o crédito por baixo da imagem e sem o «i»`)}
+   // 06/11/2026: as ligações do crédito são texto corrido, mesmo onde a página dá outra caixa às suas ligações (as galerias
+   // «Para ver» põem-nas em inline-block, e o ponto final depois da licença ficava sozinho numa linha na impressão).
+   assert.deepEqual(await p.evaluate(r=>[...document.querySelectorAll(r+' .info-i-texto a')].map(a=>getComputedStyle(a).display).filter(d=>d!=='inline'),raiz),[],`${onde}: na impressão, as ligações do crédito seguem a linha do texto`);
    await p.emulateMedia({media:'screen'})}
   if(caso.cartao&&caso.variante==='canto'){
    // P13: o «i» fica fora da figura que amplia (um botão); tocar na imagem continua a ampliar.
@@ -198,7 +219,19 @@ try{
    await p.locator(raiz+' .ver-fig').click({position:{x:20,y:20}});assert.equal(await p.locator('.amp-ov').count(),1,`${onde}: a imagem continua a ampliar`);
    await p.keyboard.press('Escape');assert.equal(await p.locator('.amp-ov').count(),0,`${onde}: Escape fecha o ampliador`);
   }
+  if(caso.olhar){
+   // P15: o crédito já não fica por baixo da imagem (p.credito); dentro do «i», a ligação para a imagem de origem (creditoUrl).
+   assert.equal(await p.locator('#palco p.credito').count(),0,`${onde}: sem p.credito`);
+   assert.deepEqual(await p.locator(sel+' .info-i-texto a').evaluateAll(as=>as.map(a=>[a.getAttribute('href'),a.textContent])),[[caso.olhar,'Wikimedia Commons']],`${onde}: a ligação creditoUrl no «i»`);
+   assert.equal(await p.locator(sel+' .info-i-texto').evaluate(t=>/·/.test(t.textContent)),false,`${onde}: sem pontos médios no crédito`);
+  }
+  if(caso.licoes){
+   // P16: a ligação «Lição Mx-Fyy» fica à vista, na legenda, fora do «i».
+   const licoes=await p.locator(raiz+' figcaption a').evaluateAll(as=>as.filter(a=>/^Lição M\d-F\d+$/.test(a.textContent)&&a.checkVisibility()&&!a.closest('details.info-i')).length);
+   assert.equal(licoes,caso.licoes,`${onde}: as ligações «Lição Mx-Fyy» à vista`);
+   assert.equal(await p.locator(raiz+' figcaption').evaluateAll(fs=>fs.filter(f=>/Domínio público|CC BY|CC0/.test(f.textContent)).length),0,`${onde}: a licença já não está na legenda`);
+  }
   assert.deepEqual(erros,[],`${onde}: sem erros`);await ctx.close();cenarios++;
  }
- console.log(`PASS ${cenarios} cenários da peça «i» (ensaio, P7, P9 a P13)`);
+ console.log(`PASS ${cenarios} cenários da peça «i» (ensaio, P7, P9 a P16)`);
 }finally{await b.close();server.closeAllConnections();server.close()}})().catch(e=>{console.error(e);process.exitCode=1});

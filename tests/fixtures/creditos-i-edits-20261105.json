@@ -1,6 +1,6 @@
 {
  "base_commit": "b3ee0f9c67fd94311e2860b2694f9487e34be95a",
- "_nota": "05/11/2026: decisões 153 e 162 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»). Créditos das imagens atrás de um botão «i» (pedido pt-2 do plano plano-creditos-i-20261105.md), camada mais recente, por cima do contexto do Laboratório do exame (exame_contexto_20261105). Gerada por scripts/creditos_i_20261105.py e aplicada por scripts/aplicar_trocas.py: não se edita à mão. Famílias P7 (crédito puro nas lições M1 e M4), P10 (Pessoa, cerca de 1914: M7-F01, M7-F05 e a galeria do mapa M7), P11 (dupla exposição de «Chuva Oblíqua», M7-F34), P12 (retratos do «Em paralelo»: M1-F19, M4-F01, M4-F02 e M4-F11) e P13 (crédito colado à explicação: lições M4-F01, M4-F04 e M4-F11 e os três painéis): o crédito passa inteiro para dentro de uma <details class=\"info-i\">, junto da imagem; o que diz o que se vê fica à vista; cada página carrega assets/info-i.css e assets/info-i.js. Só o HTML dos cartões e do material dos painéis e o fim de três explicações (sai o crédito do campo f): tipos, ordem, chaves e respostas ficam iguais.",
+ "_nota": "05/11/2026: decisões 153 e 162 (docente: «não quero tanto texto, prefiro um botão com um \"i\" que o user possa abrir»). Créditos das imagens atrás de um botão «i» (pedido pt-2 do plano plano-creditos-i-20261105.md), camada mais recente, por cima do contexto do Laboratório do exame (exame_contexto_20261105). Gerada por scripts/creditos_i_20261105.py e aplicada por scripts/aplicar_trocas.py: não se edita à mão. Famílias P7 (crédito puro nas lições M1 e M4), P10 (Pessoa, cerca de 1914: M7-F01, M7-F05 e a galeria do mapa M7), P11 (dupla exposição de «Chuva Oblíqua», M7-F34), P12 (retratos do «Em paralelo»: M1-F19, M4-F01, M4-F02 e M4-F11), P13 (crédito colado à explicação: lições M4-F01, M4-F04 e M4-F11 e os três painéis), P14 («Pensar devagar», 17 páginas: só o fr-cred), P15 (exercícios «Olhar», 4 páginas: o motor imagem() põe o crédito num «i», com a ligação creditoUrl) e P16 (galeria «Para ver» dos nove mapas do módulo, 78 figuras): o crédito passa inteiro para dentro de uma <details class=\"info-i\">, junto da imagem; o que diz o que se vê fica à vista (nas galerias, também a ligação «Lição Mx-Fyy»); cada página carrega assets/info-i.css e assets/info-i.js. Só o HTML das figuras (nos cartões, no material dos painéis e nas galerias), o fim de três explicações (sai o crédito do campo f), a função imagem() e o campo credito dos quatro «Olhar» (os pontos médios passam a pontos finais): tipos, ordem, chaves e respostas ficam iguais.",
  "files": {
   "m1/licao-m1-f01/index.html": {
    "base_sha256_lf": "93504c75e2dc18471ca2bbbb46827170f9352c69d4ebace8891894b2d70d02c5",
@@ -280,6 +280,336 @@
      "location": "P7, crédito puro: <i>Painéis de São Vicente</i>, século XV (pormenor). Domínio público.",
      "old": "<figure class=\\\"fig inteiro\\\"><span class=\\\"moldura\\\"><img src=\\\"../../img/fontes/fernao-lopes-painel.jpg\\\" alt=\\\"Um homem velho, de rugas fundas, com um barrete alto escuro e roupa escura de gola alta, num pormenor dos Painéis de São Vicente; à esquerda, a ponta de um manto vermelho.\\\" loading=\\\"lazy\\\"></span><figcaption><i>Painéis de São Vicente</i>, século XV (pormenor). Domínio público.</figcaption></figure>",
      "new": "<figure class=\\\"fig inteiro\\\"><div class=\\\"moldura com-i\\\"><img src=\\\"../../img/fontes/fernao-lopes-painel.jpg\\\" alt=\\\"Um homem velho, de rugas fundas, com um barrete alto escuro e roupa escura de gola alta, num pormenor dos Painéis de São Vicente; à esquerda, a ponta de um manto vermelho.\\\" loading=\\\"lazy\\\"><details class=\\\"info-i\\\" name=\\\"info-i\\\"><summary aria-label=\\\"Créditos da imagem\\\"><span aria-hidden=\\\"true\\\">i</span></summary><p class=\\\"info-i-texto\\\"><i>Painéis de São Vicente</i>, século XV (pormenor). Domínio público.</p></details></div></figure>",
+     "occurrences": 1
+    },
+    {
+     "location": "A peça comum do «i» (assets/info-i.css e assets/info-i.js)",
+     "old": "</head>",
+     "new": "<link rel=\"stylesheet\" href=\"../../assets/info-i.css?v=20261105\"><script defer src=\"../../assets/info-i.js?v=20261105\"></script></head>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m1/m1-promessa-do-cronista/index.html": {
+   "base_sha256_lf": "9ce535e6043fe0fbc9f639ef477b8bcb8f8a99b5139fff533c6732eaa938508f",
+   "after_sha256_lf": "1c70820a8c8f9f161ed936d307be53c97c50c277a1103c78160083781e7be28d",
+   "edits": [
+    {
+     "location": "P14, «Pensar devagar»: o fr-cred passa para o «i»; o fr-leg fica",
+     "old": "<figure class=\\\"fig-rev \\\"><span class=\\\"fr-moldura\\\"><img src=\\\"https://pedrohfernandes-klk.github.io/pt/img/fontes/cerco-lisboa-froissart.jpg\\\" alt=\\\"Lisboa cercada pelos castelhanos, vista por um iluminador francês.\\\" loading=\\\"lazy\\\" decoding=\\\"async\\\" style=\\\"object-position:50% 40%\\\"></span><figcaption><span class=\\\"fr-leg\\\">O cerco de Lisboa de 1384 numa iluminura francesa: outra maneira de contar o mesmo cerco.</span> <span class=\\\"fr-cred\\\">Crónicas de Jean Froissart (iluminura). Domínio público. <a href=\\\"https://commons.wikimedia.org/wiki/File:Siege_of_Lisbon_1384.JPG\\\" rel=\\\"noopener\\\">commons.wikimedia.org</a></span></figcaption></figure>",
+     "new": "<figure class=\\\"fig-rev \\\"><div class=\\\"fr-moldura com-i\\\"><img src=\\\"https://pedrohfernandes-klk.github.io/pt/img/fontes/cerco-lisboa-froissart.jpg\\\" alt=\\\"Lisboa cercada pelos castelhanos, vista por um iluminador francês.\\\" loading=\\\"lazy\\\" decoding=\\\"async\\\" style=\\\"object-position:50% 40%\\\"><details class=\\\"info-i\\\" name=\\\"info-i\\\"><summary aria-label=\\\"Créditos da imagem\\\"><span aria-hidden=\\\"true\\\">i</span></summary><p class=\\\"info-i-texto\\\">Crónicas de Jean Froissart (iluminura). Domínio público. <a href=\\\"https://commons.wikimedia.org/wiki/File:Siege_of_Lisbon_1384.JPG\\\" rel=\\\"noopener\\\">commons.wikimedia.org</a></p></details></div><figcaption><span class=\\\"fr-leg\\\">O cerco de Lisboa de 1384 numa iluminura francesa: outra maneira de contar o mesmo cerco.</span></figcaption></figure>",
+     "occurrences": 1
+    },
+    {
+     "location": "A peça comum do «i» (assets/info-i.css e assets/info-i.js)",
+     "old": "</head>",
+     "new": "<link rel=\"stylesheet\" href=\"../../assets/info-i.css?v=20261105\"><script defer src=\"../../assets/info-i.js?v=20261105\"></script></head>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m1/m1-voz-emprestada/index.html": {
+   "base_sha256_lf": "38a2c47b113fe0c2553f77bef1e4b256f2dfdab7dd8bf2279d0d122c93d53cc4",
+   "after_sha256_lf": "c56bb97665e9666bd7a41a81aeeca9ea096ea70b6bf9dd70217db29a5251520a",
+   "edits": [
+    {
+     "location": "P14, «Pensar devagar»: o fr-cred passa para o «i»; o fr-leg fica",
+     "old": "<figure class=\\\"fig-rev inteira\\\"><span class=\\\"fr-moldura\\\"><img src=\\\"https://pedrohfernandes-klk.github.io/pt/img/fontes/codax-pergaminho-vindel.jpg\\\" alt=\\\"Pergaminho com as cantigas de Martim Codax e a música.\\\" loading=\\\"lazy\\\" decoding=\\\"async\\\"></span><figcaption><span class=\\\"fr-leg\\\">Pergaminho Vindel: as cantigas de Martim Codax com a música. Quem canta não é quem escreveu.</span> <span class=\\\"fr-cred\\\">Domínio público. <a href=\\\"https://commons.wikimedia.org/w/index.php?curid=368265\\\" rel=\\\"noopener\\\">commons.wikimedia.org</a></span></figcaption></figure>",
+     "new": "<figure class=\\\"fig-rev inteira\\\"><div class=\\\"fr-moldura com-i\\\"><img src=\\\"https://pedrohfernandes-klk.github.io/pt/img/fontes/codax-pergaminho-vindel.jpg\\\" alt=\\\"Pergaminho com as cantigas de Martim Codax e a música.\\\" loading=\\\"lazy\\\" decoding=\\\"async\\\"><details class=\\\"info-i\\\" name=\\\"info-i\\\"><summary aria-label=\\\"Créditos da imagem\\\"><span aria-hidden=\\\"true\\\">i</span></summary><p class=\\\"info-i-texto\\\">Domínio público. <a href=\\\"https://commons.wikimedia.org/w/index.php?curid=368265\\\" rel=\\\"noopener\\\">commons.wikimedia.org</a></p></details></div><figcaption><span class=\\\"fr-leg\\\">Pergaminho Vindel: as cantigas de Martim Codax com a música. Quem canta não é quem escreveu.</span></figcaption></figure>",
+     "occurrences": 1
+    },
+    {
+     "location": "A peça comum do «i» (assets/info-i.css e assets/info-i.js)",
+     "old": "</head>",
+     "new": "<link rel=\"stylesheet\" href=\"../../assets/info-i.css?v=20261105\"><script defer src=\"../../assets/info-i.js?v=20261105\"></script></head>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m1/mapa-do-modulo-m1/index.html": {
+   "base_sha256_lf": "4b7bec58ef75830b4c542e2977de0e6d92b6e65bc1492a302abfefd74f31a0d8",
+   "after_sha256_lf": "3644acfcba4918dbe2e033724898c8845c6ee3b90ce534af0d6eb40d7babd281",
+   "edits": [
+    {
+     "location": "P16, galeria «Para ver»: Pergaminho Vindel: cantigas de Martim Codax.",
+     "old": " alt=\"Pergaminho Vindel: cantigas de Martim Codax\" loading=\"lazy\"><figcaption>Pergaminho Vindel: cantigas de Martim Codax. Domínio público. <a href=\"https://pedrohfernandes-klk.github.io/pt/m1/licao-m1-f01/\">Lição M1-F01</a></figcaption></figure>",
+     "new": " alt=\"Pergaminho Vindel: cantigas de Martim Codax\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Pergaminho Vindel: cantigas de Martim Codax\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Pergaminho Vindel: cantigas de Martim Codax. Domínio público.</p></details><figcaption>Pergaminho Vindel: cantigas de Martim Codax. <a href=\"https://pedrohfernandes-klk.github.io/pt/m1/licao-m1-f01/\">Lição M1-F01</a></figcaption></figure>",
+     "occurrences": 1
+    },
+    {
+     "location": "P16, galeria «Para ver»: Cancioneiro da Ajuda, fólio 21r.",
+     "old": " alt=\"Cancioneiro da Ajuda, fólio 21r\" loading=\"lazy\"><figcaption>Cancioneiro da Ajuda, fólio 21r. Domínio público. <a href=\"https://pedrohfernandes-klk.github.io/pt/m1/licao-m1-f04/\">Lição M1-F04</a></figcaption></figure>",
+     "new": " alt=\"Cancioneiro da Ajuda, fólio 21r\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Cancioneiro da Ajuda, fólio 21r\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Cancioneiro da Ajuda, fólio 21r. Domínio público.</p></details><figcaption>Cancioneiro da Ajuda, fólio 21r. <a href=\"https://pedrohfernandes-klk.github.io/pt/m1/licao-m1-f04/\">Lição M1-F04</a></figcaption></figure>",
+     "occurrences": 1
+    },
+    {
+     "location": "P16, galeria «Para ver»: Morte do Conde Andeiro.",
+     "old": " alt=\"Morte do Conde Andeiro (José de Sousa Azevedo, c. 1860)\" loading=\"lazy\"><figcaption>Morte do Conde Andeiro (José de Sousa Azevedo, c. 1860). Domínio público. <a href=\"https://pedrohfernandes-klk.github.io/pt/m1/licao-m1-f06/\">Lição M1-F06</a></figcaption></figure>",
+     "new": " alt=\"Morte do Conde Andeiro (José de Sousa Azevedo, c. 1860)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Morte do Conde Andeiro\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Morte do Conde Andeiro (José de Sousa Azevedo, <span class=\"nb\">c. 1860</span>). Domínio público.</p></details><figcaption>Morte do Conde Andeiro. <a href=\"https://pedrohfernandes-klk.github.io/pt/m1/licao-m1-f06/\">Lição M1-F06</a></figcaption></figure>",
+     "occurrences": 1
+    },
+    {
+     "location": "P16, galeria «Para ver»: Fernão Lopes.",
+     "old": " alt=\"Fernão Lopes (retrato imaginado, Pollini)\" loading=\"lazy\"><figcaption>Fernão Lopes (retrato imaginado, Pollini). Domínio público. <a href=\"https://pedrohfernandes-klk.github.io/pt/m1/licao-m1-f06/\">Lição M1-F06</a></figcaption></figure>",
+     "new": " alt=\"Fernão Lopes (retrato imaginado, Pollini)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Fernão Lopes\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Fernão Lopes (retrato imaginado, Pollini). Domínio público.</p></details><figcaption>Fernão Lopes. <a href=\"https://pedrohfernandes-klk.github.io/pt/m1/licao-m1-f06/\">Lição M1-F06</a></figcaption></figure>",
+     "occurrences": 1
+    },
+    {
+     "location": "P16, galeria «Para ver»: Pergaminho Vindel exposto.",
+     "old": " alt=\"Pergaminho Vindel exposto (fotografia de Luis Miguel Bugallo Sánchez, 2017)\" loading=\"lazy\"><figcaption>Pergaminho Vindel exposto (fotografia de Luis Miguel Bugallo Sánchez, 2017). CC BY-SA 4.0. <a href=\"https://pedrohfernandes-klk.github.io/pt/m1/licao-m1-f01/\">Lição M1-F01</a></figcaption></figure>",
+     "new": " alt=\"Pergaminho Vindel exposto (fotografia de Luis Miguel Bugallo Sánchez, 2017)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Pergaminho Vindel exposto\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Pergaminho Vindel exposto (fotografia de Luis Miguel Bugallo Sánchez, 2017). <a rel=\"license\" href=\"https://creativecommons.org/licenses/by-sa/4.0/deed.pt\">CC BY-SA 4.0</a>.</p></details><figcaption>Pergaminho Vindel exposto. <a href=\"https://pedrohfernandes-klk.github.io/pt/m1/licao-m1-f01/\">Lição M1-F01</a></figcaption></figure>",
+     "occurrences": 1
+    },
+    {
+     "location": "P16, galeria «Para ver»: «Ondas do mar de Vigo», transcrição de Pedro Vindel.",
+     "old": " alt=\"«Ondas do mar de Vigo», transcrição de Pedro Vindel (1915)\" loading=\"lazy\"><figcaption>«Ondas do mar de Vigo», transcrição de Pedro Vindel (1915). Domínio público. <a href=\"https://pedrohfernandes-klk.github.io/pt/m1/licao-m1-f01/\">Lição M1-F01</a></figcaption></figure>",
+     "new": " alt=\"«Ondas do mar de Vigo», transcrição de Pedro Vindel (1915)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: «Ondas do mar de Vigo», transcrição de Pedro Vindel\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">«Ondas do mar de Vigo», transcrição de Pedro Vindel (1915). Domínio público.</p></details><figcaption>«Ondas do mar de Vigo», transcrição de Pedro Vindel. <a href=\"https://pedrohfernandes-klk.github.io/pt/m1/licao-m1-f01/\">Lição M1-F01</a></figcaption></figure>",
+     "occurrences": 1
+    },
+    {
+     "location": "P16, galeria «Para ver»: Ilha de San Simón, ria de Vigo.",
+     "old": " alt=\"Ilha de San Simón, ria de Vigo (fotografia de Iago Pillado, 2024)\" loading=\"lazy\"><figcaption>Ilha de San Simón, ria de Vigo (fotografia de Iago Pillado, 2024). CC BY-SA 4.0. <a href=\"https://pedrohfernandes-klk.github.io/pt/m1/licao-m1-f01/\">Lição M1-F01</a></figcaption></figure>",
+     "new": " alt=\"Ilha de San Simón, ria de Vigo (fotografia de Iago Pillado, 2024)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Ilha de San Simón, ria de Vigo\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Ilha de San Simón, ria de Vigo (fotografia de Iago Pillado, 2024). <a rel=\"license\" href=\"https://creativecommons.org/licenses/by-sa/4.0/deed.pt\">CC BY-SA 4.0</a>.</p></details><figcaption>Ilha de San Simón, ria de Vigo. <a href=\"https://pedrohfernandes-klk.github.io/pt/m1/licao-m1-f01/\">Lição M1-F01</a></figcaption></figure>",
+     "occurrences": 1
+    },
+    {
+     "location": "P16, galeria «Para ver»: Cancioneiro da Biblioteca Nacional, página.",
+     "old": " alt=\"Cancioneiro da Biblioteca Nacional, página (cópia do século XVI)\" loading=\"lazy\"><figcaption>Cancioneiro da Biblioteca Nacional, página (cópia do século XVI). Domínio público. <a href=\"https://pedrohfernandes-klk.github.io/pt/m1/licao-m1-f01/\">Lição M1-F01</a></figcaption></figure>",
+     "new": " alt=\"Cancioneiro da Biblioteca Nacional, página (cópia do século XVI)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Cancioneiro da Biblioteca Nacional, página\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Cancioneiro da Biblioteca Nacional, página (cópia do século XVI). Domínio público.</p></details><figcaption>Cancioneiro da Biblioteca Nacional, página. <a href=\"https://pedrohfernandes-klk.github.io/pt/m1/licao-m1-f01/\">Lição M1-F01</a></figcaption></figure>",
+     "occurrences": 1
+    },
+    {
+     "location": "P16, galeria «Para ver»: D. Dinis, gravura em Diálogos de Vária História.",
+     "old": " alt=\"D. Dinis, gravura em Diálogos de Vária História (Pedro de Mariz, 1594)\" loading=\"lazy\"><figcaption>D. Dinis, gravura em Diálogos de Vária História (Pedro de Mariz, 1594). Domínio público. <a href=\"https://pedrohfernandes-klk.github.io/pt/m1/licao-m1-f04/\">Lição M1-F04</a></figcaption></figure>",
+     "new": " alt=\"D. Dinis, gravura em Diálogos de Vária História (Pedro de Mariz, 1594)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: D. Dinis, gravura em Diálogos de Vária História\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">D. Dinis, gravura em Diálogos de Vária História (Pedro de Mariz, 1594). Domínio público.</p></details><figcaption>D. Dinis, gravura em Diálogos de Vária História. <a href=\"https://pedrohfernandes-klk.github.io/pt/m1/licao-m1-f04/\">Lição M1-F04</a></figcaption></figure>",
+     "occurrences": 1
+    },
+    {
+     "location": "P16, galeria «Para ver»: Figura identificada como Fernão Lopes, Painéis de São Vicent",
+     "old": " alt=\"Figura identificada como Fernão Lopes, Painéis de São Vicente (Nuno Gonçalves, século XV)\" loading=\"lazy\"><figcaption>Figura identificada como Fernão Lopes, Painéis de São Vicente (Nuno Gonçalves, século XV). Domínio público. <a href=\"https://pedrohfernandes-klk.github.io/pt/m1/licao-m1-f06/\">Lição M1-F06</a></figcaption></figure>",
+     "new": " alt=\"Figura identificada como Fernão Lopes, Painéis de São Vicente (Nuno Gonçalves, século XV)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Figura identificada como Fernão Lopes, Painéis de São Vicente\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Figura identificada como Fernão Lopes, Painéis de São Vicente (Nuno Gonçalves, século XV). Domínio público.</p></details><figcaption>Figura identificada como Fernão Lopes, Painéis de São Vicente. <a href=\"https://pedrohfernandes-klk.github.io/pt/m1/licao-m1-f06/\">Lição M1-F06</a></figcaption></figure>",
+     "occurrences": 1
+    },
+    {
+     "location": "P16, galeria «Para ver»: O cerco de Lisboa de 1384, iluminura das Crónicas de Froissa",
+     "old": " alt=\"O cerco de Lisboa de 1384, iluminura das Crónicas de Froissart (século XV)\" loading=\"lazy\"><figcaption>O cerco de Lisboa de 1384, iluminura das Crónicas de Froissart (século XV). Domínio público. <a href=\"https://pedrohfernandes-klk.github.io/pt/m1/licao-m1-f06/\">Lição M1-F06</a></figcaption></figure>",
+     "new": " alt=\"O cerco de Lisboa de 1384, iluminura das Crónicas de Froissart (século XV)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: O cerco de Lisboa de 1384, iluminura das Crónicas de Froissart\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">O cerco de Lisboa de 1384, iluminura das Crónicas de Froissart (século XV). Domínio público.</p></details><figcaption>O cerco de Lisboa de 1384, iluminura das Crónicas de Froissart. <a href=\"https://pedrohfernandes-klk.github.io/pt/m1/licao-m1-f06/\">Lição M1-F06</a></figcaption></figure>",
+     "occurrences": 1
+    },
+    {
+     "location": "A peça comum do «i» (assets/info-i.css e assets/info-i.js)",
+     "old": "</head>",
+     "new": "<link rel=\"stylesheet\" href=\"../../assets/info-i.css?v=20261105\"><script defer src=\"../../assets/info-i.js?v=20261105\"></script></head>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m1/olhar-ajuda/index.html": {
+   "base_sha256_lf": "fc2e54ffacf1d446380a5b851b7efe9240f3fbfa7c76320e285aeda27baec8e9",
+   "after_sha256_lf": "2c0ac037c8ef7ab3b69427c223c15120e8d736e06712b370cf66425f045a4671",
+   "edits": [
+    {
+     "location": "P15, motor do «Olhar» (imagem()): a imagem e o «i» com o crédito e a ligação creditoUrl",
+     "old": "function imagem(){return E.imagemData?'<img class=\"img\" alt=\"'+esc(E.titulo)+'\" src=\"'+E.imagemData+'\"><p class=\"credito\">'+esc(E.credito)+'</p>':\"\"}",
+     "new": "/* 05/11/2026: decisão 153. O crédito da imagem vive num «i» (assets/info-i.css e assets/info-i.js), com a ligação para a imagem de origem (creditoUrl). */function creditoI(){var c=it(E.credito),u=E.creditoUrl,a;if(!u)return c;a='<a href=\"'+esc(u)+'\" rel=\"noopener\">';return c.indexOf(\"Wikimedia Commons\")>-1?c.replace(\"Wikimedia Commons\",a+\"Wikimedia Commons</a>\"):c+\" \"+a+esc(u.replace(/^https?:\\/\\/([^\\/]+).*$/,\"$1\"))+\"</a>\"}function imagem(){return E.imagemData?'<div class=\"com-i olhar-com-i\"><img class=\"img\" alt=\"'+esc(E.titulo)+'\" src=\"'+E.imagemData+'\"><details class=\"info-i\" name=\"info-i\"><summary aria-label=\"Créditos da imagem\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">'+creditoI()+'</p></details></div>':\"\"}",
+     "occurrences": 1
+    },
+    {
+     "location": "P15, campo credito: os pontos médios passam a pontos finais",
+     "old": "\"credito\":\"_Cancioneiro da Ajuda_, fólio 21r · domínio público · Wikimedia Commons",
+     "new": "\"credito\":\"_Cancioneiro da Ajuda_, fólio 21r. Domínio público. Wikimedia Commons.",
+     "occurrences": 1
+    },
+    {
+     "location": "A peça comum do «i» (assets/info-i.css e assets/info-i.js)",
+     "old": "</head>",
+     "new": "<link rel=\"stylesheet\" href=\"../../assets/info-i.css?v=20261105\"><script defer src=\"../../assets/info-i.js?v=20261105\"></script><style>/* 05/11/2026: decisão 153. O «i» da imagem do exercício: a moldura toma a largura da imagem, centrada. */#palco .olhar-com-i{width:fit-content;max-width:100%;margin:0 auto}</style></head>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m1/olhar-andeiro/index.html": {
+   "base_sha256_lf": "5745f3248db69a25ec7ddcd1b59d7ab7d31542a90dbd7f7d882f0bb64ad9b8ed",
+   "after_sha256_lf": "1026e0c85f0b27bea48cc708e400c1818a12d40203fa7559ba8f3beac1c8aab9",
+   "edits": [
+    {
+     "location": "P15, motor do «Olhar» (imagem()): a imagem e o «i» com o crédito e a ligação creditoUrl",
+     "old": "function imagem(){return E.imagemData?'<img class=\"img\" alt=\"'+esc(E.titulo)+'\" src=\"'+E.imagemData+'\"><p class=\"credito\">'+esc(E.credito)+'</p>':\"\"}",
+     "new": "/* 05/11/2026: decisão 153. O crédito da imagem vive num «i» (assets/info-i.css e assets/info-i.js), com a ligação para a imagem de origem (creditoUrl). */function creditoI(){var c=it(E.credito),u=E.creditoUrl,a;if(!u)return c;a='<a href=\"'+esc(u)+'\" rel=\"noopener\">';return c.indexOf(\"Wikimedia Commons\")>-1?c.replace(\"Wikimedia Commons\",a+\"Wikimedia Commons</a>\"):c+\" \"+a+esc(u.replace(/^https?:\\/\\/([^\\/]+).*$/,\"$1\"))+\"</a>\"}function imagem(){return E.imagemData?'<div class=\"com-i olhar-com-i\"><img class=\"img\" alt=\"'+esc(E.titulo)+'\" src=\"'+E.imagemData+'\"><details class=\"info-i\" name=\"info-i\"><summary aria-label=\"Créditos da imagem\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">'+creditoI()+'</p></details></div>':\"\"}",
+     "occurrences": 1
+    },
+    {
+     "location": "P15, campo credito: os pontos médios passam a pontos finais",
+     "old": "\"credito\":\"José de Sousa Azevedo, _Morte do Conde Andeiro_ (c. 1860), Museu Nacional de Soares dos Reis, Porto · domínio público · Wikimedia Commons",
+     "new": "\"credito\":\"José de Sousa Azevedo, _Morte do Conde Andeiro_ (c. 1860), Museu Nacional de Soares dos Reis, Porto. Domínio público. Wikimedia Commons.",
+     "occurrences": 1
+    },
+    {
+     "location": "A peça comum do «i» (assets/info-i.css e assets/info-i.js)",
+     "old": "</head>",
+     "new": "<link rel=\"stylesheet\" href=\"../../assets/info-i.css?v=20261105\"><script defer src=\"../../assets/info-i.js?v=20261105\"></script><style>/* 05/11/2026: decisão 153. O «i» da imagem do exercício: a moldura toma a largura da imagem, centrada. */#palco .olhar-com-i{width:fit-content;max-width:100%;margin:0 auto}</style></head>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m2/m2-ines-escolhe-duas-vezes/index.html": {
+   "base_sha256_lf": "a5780ab792fbf19b15fb1460cae79c0f483099a90d51f635baf8b3474cbd8423",
+   "after_sha256_lf": "4533ff10e18d9c5ec5933489cc937bc22eea9d698ddd239f0dab4bf0c9ee8955",
+   "edits": [
+    {
+     "location": "P14, «Pensar devagar»: o fr-cred passa para o «i»; o fr-leg fica",
+     "old": "<figure class=\\\"fig-rev inteira\\\"><span class=\\\"fr-moldura\\\"><img src=\\\"https://pedrohfernandes-klk.github.io/pt/img/fontes/gil-vicente-copilacam-1562.jpg\\\" alt=\\\"O livro onde a farsa foi impressa pelos filhos de Gil Vicente.\\\" loading=\\\"lazy\\\" decoding=\\\"async\\\"></span><figcaption><span class=\\\"fr-leg\\\">Copilaçam de todalas obras de Gil Vicente, 1562: a farsa chegou até nós neste livro.</span> <span class=\\\"fr-cred\\\">impressão de João Álvares, 1562 (reprodução de Victorcouto). Domínio público. <a href=\\\"https://commons.wikimedia.org/wiki/File:Imagem160_Gil_Vicente._Compila%C3%A7am_de_todalas_obras._Joam_Alvarez_impressor._Lisboa,_1562.jpg\\\" rel=\\\"noopener\\\">commons.wikimedia.org</a></span></figcaption></figure>",
+     "new": "<figure class=\\\"fig-rev inteira\\\"><div class=\\\"fr-moldura com-i\\\"><img src=\\\"https://pedrohfernandes-klk.github.io/pt/img/fontes/gil-vicente-copilacam-1562.jpg\\\" alt=\\\"O livro onde a farsa foi impressa pelos filhos de Gil Vicente.\\\" loading=\\\"lazy\\\" decoding=\\\"async\\\"><details class=\\\"info-i\\\" name=\\\"info-i\\\"><summary aria-label=\\\"Créditos da imagem\\\"><span aria-hidden=\\\"true\\\">i</span></summary><p class=\\\"info-i-texto\\\">Impressão de João Álvares, 1562 (reprodução de Victorcouto). Domínio público. <a href=\\\"https://commons.wikimedia.org/wiki/File:Imagem160_Gil_Vicente._Compila%C3%A7am_de_todalas_obras._Joam_Alvarez_impressor._Lisboa,_1562.jpg\\\" rel=\\\"noopener\\\">commons.wikimedia.org</a></p></details></div><figcaption><span class=\\\"fr-leg\\\">Copilaçam de todalas obras de Gil Vicente, 1562: a farsa chegou até nós neste livro.</span></figcaption></figure>",
+     "occurrences": 1
+    },
+    {
+     "location": "A peça comum do «i» (assets/info-i.css e assets/info-i.js)",
+     "old": "</head>",
+     "new": "<link rel=\"stylesheet\" href=\"../../assets/info-i.css?v=20261105\"><script defer src=\"../../assets/info-i.js?v=20261105\"></script></head>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m2/m2-maquina-de-rir/index.html": {
+   "base_sha256_lf": "b1f8440d9205d9d3891e46ead3524ee1f3534a7cc2204b5db75ffd61dc4d8df0",
+   "after_sha256_lf": "d82745ec57febd28d992a1f85f9dc9ed4c32268df6b2dc37ee372fc8ed2181f2",
+   "edits": [
+    {
+     "location": "P14, «Pensar devagar»: o fr-cred passa para o «i»; o fr-leg fica",
+     "old": "<figure class=\\\"fig-rev \\\"><span class=\\\"fr-moldura\\\"><img src=\\\"https://pedrohfernandes-klk.github.io/pt/img/cidadania/publico-hogarth.webp\\\" alt=\\\"William Hogarth, The Laughing Audience, 1733, NGA 30455\\\" loading=\\\"lazy\\\" decoding=\\\"async\\\" style=\\\"object-position:50% 40%\\\"></span><figcaption><span class=\\\"fr-leg\\\">Hogarth, O público a rir, 1733: a máquina de rir só funciona com uma sala.</span> <span class=\\\"fr-cred\\\">CC0. <a href=\\\"https://commons.wikimedia.org/wiki/File:William_Hogarth,_The_Laughing_Audience,_1733,_NGA_30455.jpg\\\" rel=\\\"noopener\\\">commons.wikimedia.org</a></span></figcaption></figure>",
+     "new": "<figure class=\\\"fig-rev \\\"><div class=\\\"fr-moldura com-i\\\"><img src=\\\"https://pedrohfernandes-klk.github.io/pt/img/cidadania/publico-hogarth.webp\\\" alt=\\\"William Hogarth, The Laughing Audience, 1733, NGA 30455\\\" loading=\\\"lazy\\\" decoding=\\\"async\\\" style=\\\"object-position:50% 40%\\\"><details class=\\\"info-i\\\" name=\\\"info-i\\\"><summary aria-label=\\\"Créditos da imagem\\\"><span aria-hidden=\\\"true\\\">i</span></summary><p class=\\\"info-i-texto\\\">CC0. <a href=\\\"https://commons.wikimedia.org/wiki/File:William_Hogarth,_The_Laughing_Audience,_1733,_NGA_30455.jpg\\\" rel=\\\"noopener\\\">commons.wikimedia.org</a></p></details></div><figcaption><span class=\\\"fr-leg\\\">Hogarth, O público a rir, 1733: a máquina de rir só funciona com uma sala.</span></figcaption></figure>",
+     "occurrences": 1
+    },
+    {
+     "location": "A peça comum do «i» (assets/info-i.css e assets/info-i.js)",
+     "old": "</head>",
+     "new": "<link rel=\"stylesheet\" href=\"../../assets/info-i.css?v=20261105\"><script defer src=\"../../assets/info-i.js?v=20261105\"></script></head>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m2/mapa-do-modulo-m2/index.html": {
+   "base_sha256_lf": "18e6eaa4c3d772ed7b7a5c981edb141e73f73f17dcdeb8cc7df556a5b4d2ebe1",
+   "after_sha256_lf": "48c8629e3cd1ea6d8fe798af96ff31f9802ef6d145de866d364295702e82d971",
+   "edits": [
+    {
+     "location": "P16, galeria «Para ver»: Copilaçam de todalas obras de Gil Vicente (Lisboa, 1562), fr",
+     "old": " alt=\"Copilaçam de todalas obras de Gil Vicente (Lisboa, 1562), frontispício\" loading=\"lazy\"><figcaption>Copilaçam de todalas obras de Gil Vicente (Lisboa, 1562), frontispício. Domínio público. <a href=\"https://pedrohfernandes-klk.github.io/pt/m2/licao-m2-f01/\">Lição M2-F01</a></figcaption></figure>",
+     "new": " alt=\"Copilaçam de todalas obras de Gil Vicente (Lisboa, 1562), frontispício\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Copilaçam de todalas obras de Gil Vicente (Lisboa, 1562), frontispício\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Copilaçam de todalas obras de Gil Vicente (Lisboa, 1562), frontispício. Domínio público.</p></details><figcaption>Copilaçam de todalas obras de Gil Vicente (Lisboa, 1562), frontispício. <a href=\"https://pedrohfernandes-klk.github.io/pt/m2/licao-m2-f01/\">Lição M2-F01</a></figcaption></figure>",
+     "occurrences": 1
+    },
+    {
+     "location": "P16, galeria «Para ver»: Convento de Cristo, Tomar.",
+     "old": " alt=\"Convento de Cristo, Tomar (fotografia de Ingo Mehling, 2022)\" loading=\"lazy\"><figcaption>Convento de Cristo, Tomar (fotografia de Ingo Mehling, 2022). CC BY-SA 4.0. <a href=\"https://pedrohfernandes-klk.github.io/pt/m2/licao-m2-f01/\">Lição M2-F01</a></figcaption></figure>",
+     "new": " alt=\"Convento de Cristo, Tomar (fotografia de Ingo Mehling, 2022)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Convento de Cristo, Tomar\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Convento de Cristo, Tomar (fotografia de Ingo Mehling, 2022). <a rel=\"license\" href=\"https://creativecommons.org/licenses/by-sa/4.0/deed.pt\">CC BY-SA 4.0</a>.</p></details><figcaption>Convento de Cristo, Tomar. <a href=\"https://pedrohfernandes-klk.github.io/pt/m2/licao-m2-f01/\">Lição M2-F01</a></figcaption></figure>",
+     "occurrences": 1
+    },
+    {
+     "location": "P16, galeria «Para ver»: D. João III.",
+     "old": " alt=\"D. João III (Anthonis Mor, 1552)\" loading=\"lazy\"><figcaption>D. João III (Anthonis Mor, 1552). Domínio público. <a href=\"https://pedrohfernandes-klk.github.io/pt/m2/licao-m2-f01/\">Lição M2-F01</a></figcaption></figure>",
+     "new": " alt=\"D. João III (Anthonis Mor, 1552)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: D. João III\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">D. João III (Anthonis Mor, 1552). Domínio público.</p></details><figcaption>D. João III. <a href=\"https://pedrohfernandes-klk.github.io/pt/m2/licao-m2-f01/\">Lição M2-F01</a></figcaption></figure>",
+     "occurrences": 1
+    },
+    {
+     "location": "P16, galeria «Para ver»: Trajes de portugueses, Trachtenbuch.",
+     "old": " alt=\"Trajes de portugueses, Trachtenbuch (Christoph Weiditz, década de 1530)\" loading=\"lazy\"><figcaption>Trajes de portugueses, Trachtenbuch (Christoph Weiditz, década de 1530). Domínio público. <a href=\"https://pedrohfernandes-klk.github.io/pt/m2/licao-m2-f01/\">Lição M2-F01</a></figcaption></figure>",
+     "new": " alt=\"Trajes de portugueses, Trachtenbuch (Christoph Weiditz, década de 1530)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Trajes de portugueses, Trachtenbuch\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Trajes de portugueses, Trachtenbuch (Christoph Weiditz, década de 1530). Domínio público.</p></details><figcaption>Trajes de portugueses, Trachtenbuch. <a href=\"https://pedrohfernandes-klk.github.io/pt/m2/licao-m2-f01/\">Lição M2-F01</a></figcaption></figure>",
+     "occurrences": 1
+    },
+    {
+     "location": "A peça comum do «i» (assets/info-i.css e assets/info-i.js)",
+     "old": "</head>",
+     "new": "<link rel=\"stylesheet\" href=\"../../assets/info-i.css?v=20261105\"><script defer src=\"../../assets/info-i.js?v=20261105\"></script></head>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m3/m3-soneto-raciocinio/index.html": {
+   "base_sha256_lf": "ca0e789afa7830d2e32bd4f8a498f64191a94b8388771c0a94192249fbe7037b",
+   "after_sha256_lf": "69723f3c07333c638e34246ebc43c7281ebbdea0b76e0d78dcc1ad1535afcc26",
+   "edits": [
+    {
+     "location": "P14, «Pensar devagar»: o fr-cred passa para o «i»; o fr-leg fica",
+     "old": "<figure class=\\\"fig-rev inteira\\\"><span class=\\\"fr-moldura\\\"><img src=\\\"https://pedrohfernandes-klk.github.io/pt/img/fontes/camoes-rimas-1595.jpg\\\" alt=\\\"O livro da lírica, publicado depois da morte do poeta.\\\" loading=\\\"lazy\\\" decoding=\\\"async\\\"></span><figcaption><span class=\\\"fr-leg\\\">Rimas de Camões, 1595: os sonetos como raciocínios de catorze versos.</span> <span class=\\\"fr-cred\\\">página impressa de 1595. Domínio público. <a href=\\\"https://commons.wikimedia.org/wiki/File:Cam%C3%B5es_-_Rimas_1595.jpg\\\" rel=\\\"noopener\\\">commons.wikimedia.org</a></span></figcaption></figure>",
+     "new": "<figure class=\\\"fig-rev inteira\\\"><div class=\\\"fr-moldura com-i\\\"><img src=\\\"https://pedrohfernandes-klk.github.io/pt/img/fontes/camoes-rimas-1595.jpg\\\" alt=\\\"O livro da lírica, publicado depois da morte do poeta.\\\" loading=\\\"lazy\\\" decoding=\\\"async\\\"><details class=\\\"info-i\\\" name=\\\"info-i\\\"><summary aria-label=\\\"Créditos da imagem\\\"><span aria-hidden=\\\"true\\\">i</span></summary><p class=\\\"info-i-texto\\\">Página impressa de 1595. Domínio público. <a href=\\\"https://commons.wikimedia.org/wiki/File:Cam%C3%B5es_-_Rimas_1595.jpg\\\" rel=\\\"noopener\\\">commons.wikimedia.org</a></p></details></div><figcaption><span class=\\\"fr-leg\\\">Rimas de Camões, 1595: os sonetos como raciocínios de catorze versos.</span></figcaption></figure>",
+     "occurrences": 1
+    },
+    {
+     "location": "A peça comum do «i» (assets/info-i.css e assets/info-i.js)",
+     "old": "</head>",
+     "new": "<link rel=\"stylesheet\" href=\"../../assets/info-i.css?v=20261105\"><script defer src=\"../../assets/info-i.js?v=20261105\"></script></head>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m3/m3-velho-restelo-juri/index.html": {
+   "base_sha256_lf": "4b1e7d570173b0549e391fabd74700ec9ba38049b8ee602b7f2682633772213f",
+   "after_sha256_lf": "1f578ac9f3ce9d9494751fddb37234144849fb1cd2ce0aba6d9f4d4bb1eaf77a",
+   "edits": [
+    {
+     "location": "P14, «Pensar devagar»: o fr-cred passa para o «i»; o fr-leg fica",
+     "old": "<figure class=\\\"fig-rev inteira\\\"><span class=\\\"fr-moldura\\\"><img src=\\\"../../img/fontes/lusiadas-1572-rosto.jpg?v=rosto-20261019\\\" alt=\\\"Página de rosto de Os Lusíadas, Lisboa, 1572.\\\" loading=\\\"lazy\\\" decoding=\\\"async\\\"></span><figcaption><span class=\\\"fr-leg\\\">Os Lusíadas, 1572: o poema onde a voz contra tem onze estâncias.</span> <span class=\\\"fr-cred\\\">Luís de Camões. Academia Brasileira de Letras, via Wikimedia Commons. Domínio público. <a href=\\\"https://commons.wikimedia.org/wiki/File:BookFrontOsLusiadas1572.jpg\\\" rel=\\\"noopener\\\">commons.wikimedia.org</a></span></figcaption></figure>",
+     "new": "<figure class=\\\"fig-rev inteira\\\"><div class=\\\"fr-moldura com-i\\\"><img src=\\\"../../img/fontes/lusiadas-1572-rosto.jpg?v=rosto-20261019\\\" alt=\\\"Página de rosto de Os Lusíadas, Lisboa, 1572.\\\" loading=\\\"lazy\\\" decoding=\\\"async\\\"><details class=\\\"info-i\\\" name=\\\"info-i\\\"><summary aria-label=\\\"Créditos da imagem\\\"><span aria-hidden=\\\"true\\\">i</span></summary><p class=\\\"info-i-texto\\\">Luís de Camões. Academia Brasileira de Letras, via Wikimedia Commons. Domínio público. <a href=\\\"https://commons.wikimedia.org/wiki/File:BookFrontOsLusiadas1572.jpg\\\" rel=\\\"noopener\\\">commons.wikimedia.org</a></p></details></div><figcaption><span class=\\\"fr-leg\\\">Os Lusíadas, 1572: o poema onde a voz contra tem onze estâncias.</span></figcaption></figure>",
+     "occurrences": 1
+    },
+    {
+     "location": "A peça comum do «i» (assets/info-i.css e assets/info-i.js)",
+     "old": "</head>",
+     "new": "<link rel=\"stylesheet\" href=\"../../assets/info-i.css?v=20261105\"><script defer src=\"../../assets/info-i.js?v=20261105\"></script></head>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m3/mapa-do-modulo-m3/index.html": {
+   "base_sha256_lf": "487c39ec26518bf9f289b9deba7b69cfba51b155eee790680afc945b8cf7d37f",
+   "after_sha256_lf": "2c7af4e0a2c611558fb6237a615d000991869bdac40f87b5b5cde09441e4bc29",
+   "edits": [
+    {
+     "location": "P16, galeria «Para ver»: Luís de Camões.",
+     "old": " alt=\"Luís de Camões (Fernão Gomes, c. 1577)\" loading=\"lazy\"><figcaption>Luís de Camões (Fernão Gomes, c. 1577). Domínio público. <a href=\"https://pedrohfernandes-klk.github.io/pt/m3/licao-m3-f02/\">Lição M3-F02</a></figcaption></figure>",
+     "new": " alt=\"Luís de Camões (Fernão Gomes, c. 1577)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Luís de Camões\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Luís de Camões (Fernão Gomes, <span class=\"nb\">c. 1577</span>). Domínio público.</p></details><figcaption>Luís de Camões. <a href=\"https://pedrohfernandes-klk.github.io/pt/m3/licao-m3-f02/\">Lição M3-F02</a></figcaption></figure>",
+     "occurrences": 1
+    },
+    {
+     "location": "P16, galeria «Para ver»: Rimas de Luís de Camões, primeira edição (1595), página de r",
+     "old": " alt=\"Rimas de Luís de Camões, primeira edição (1595), página de rosto\" loading=\"lazy\"><figcaption>Rimas de Luís de Camões, primeira edição (1595), página de rosto. Domínio público. <a href=\"https://pedrohfernandes-klk.github.io/pt/m3/licao-m3-f02/\">Lição M3-F02</a></figcaption></figure>",
+     "new": " alt=\"Rimas de Luís de Camões, primeira edição (1595), página de rosto\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Rimas de Luís de Camões, primeira edição (1595), página de rosto\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Rimas de Luís de Camões, primeira edição (1595), página de rosto. Domínio público.</p></details><figcaption>Rimas de Luís de Camões, primeira edição (1595), página de rosto. <a href=\"https://pedrohfernandes-klk.github.io/pt/m3/licao-m3-f02/\">Lição M3-F02</a></figcaption></figure>",
+     "occurrences": 1
+    },
+    {
+     "location": "P16, galeria «Para ver»: Túmulo de Luís de Camões, Mosteiro dos Jerónimos.",
+     "old": " alt=\"Túmulo de Luís de Camões, Mosteiro dos Jerónimos (fotografia de ProtoplasmaKid, 2019)\" loading=\"lazy\"><figcaption>Túmulo de Luís de Camões, Mosteiro dos Jerónimos (fotografia de ProtoplasmaKid, 2019). CC BY-SA 4.0. <a href=\"https://pedrohfernandes-klk.github.io/pt/m3/licao-m3-f02/\">Lição M3-F02</a></figcaption></figure>",
+     "new": " alt=\"Túmulo de Luís de Camões, Mosteiro dos Jerónimos (fotografia de ProtoplasmaKid, 2019)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Túmulo de Luís de Camões, Mosteiro dos Jerónimos\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Túmulo de Luís de Camões, Mosteiro dos Jerónimos (fotografia de ProtoplasmaKid, 2019). <a rel=\"license\" href=\"https://creativecommons.org/licenses/by-sa/4.0/deed.pt\">CC BY-SA 4.0</a>.</p></details><figcaption>Túmulo de Luís de Camões, Mosteiro dos Jerónimos. <a href=\"https://pedrohfernandes-klk.github.io/pt/m3/licao-m3-f02/\">Lição M3-F02</a></figcaption></figure>",
+     "occurrences": 1
+    },
+    {
+     "location": "P16, galeria «Para ver»: Lavadeiras portuguesas, Costume of Portugal.",
+     "old": " alt=\"Lavadeiras portuguesas, Costume of Portugal (Henri L'Evêque, 1814)\" loading=\"lazy\"><figcaption>Lavadeiras portuguesas, Costume of Portugal (Henri L'Evêque, 1814). Domínio público. <a href=\"https://pedrohfernandes-klk.github.io/pt/m3/licao-m3-f02/\">Lição M3-F02</a></figcaption></figure>",
+     "new": " alt=\"Lavadeiras portuguesas, Costume of Portugal (Henri L'Evêque, 1814)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Lavadeiras portuguesas, Costume of Portugal\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Lavadeiras portuguesas, Costume of Portugal (Henri L'Evêque, 1814). Domínio público.</p></details><figcaption>Lavadeiras portuguesas, Costume of Portugal. <a href=\"https://pedrohfernandes-klk.github.io/pt/m3/licao-m3-f02/\">Lição M3-F02</a></figcaption></figure>",
+     "occurrences": 1
+    },
+    {
+     "location": "P16, galeria «Para ver»: Os Lusíadas, primeira edição (1572), frontispício.",
+     "old": " alt=\"Os Lusíadas, primeira edição (1572), frontispício\" loading=\"lazy\"><figcaption>Os Lusíadas, primeira edição (1572), frontispício. Domínio público. <a href='https://commons.wikimedia.org/wiki/File:BookFrontOsLusiadas1572.jpg'>Fonte: Academia Brasileira de Letras, via Wikimedia Commons.</a> <a href=\"https://pedrohfernandes-klk.github.io/pt/m3/licao-m3-f05/\">Lição M3-F05</a></figcaption></figure>",
+     "new": " alt=\"Os Lusíadas, primeira edição (1572), frontispício\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Os Lusíadas, primeira edição (1572), frontispício\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Os Lusíadas, primeira edição (1572), frontispício. Domínio público. <a href='https://commons.wikimedia.org/wiki/File:BookFrontOsLusiadas1572.jpg'>Fonte: Academia Brasileira de Letras, via Wikimedia Commons.</a></p></details><figcaption>Os Lusíadas, primeira edição (1572), frontispício. <a href=\"https://pedrohfernandes-klk.github.io/pt/m3/licao-m3-f05/\">Lição M3-F05</a></figcaption></figure>",
+     "occurrences": 1
+    },
+    {
+     "location": "P16, galeria «Para ver»: Vasco da Gama, Livro de Lisuarte de Abreu.",
+     "old": " alt=\"Vasco da Gama, Livro de Lisuarte de Abreu (c. 1560)\" loading=\"lazy\"><figcaption>Vasco da Gama, Livro de Lisuarte de Abreu (c. 1560). Domínio público. <a href=\"https://pedrohfernandes-klk.github.io/pt/m3/licao-m3-f05/\">Lição M3-F05</a></figcaption></figure>",
+     "new": " alt=\"Vasco da Gama, Livro de Lisuarte de Abreu (c. 1560)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Vasco da Gama, Livro de Lisuarte de Abreu\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Vasco da Gama, Livro de Lisuarte de Abreu (<span class=\"nb\">c. 1560</span>). Domínio público.</p></details><figcaption>Vasco da Gama, Livro de Lisuarte de Abreu. <a href=\"https://pedrohfernandes-klk.github.io/pt/m3/licao-m3-f05/\">Lição M3-F05</a></figcaption></figure>",
+     "occurrences": 1
+    },
+    {
+     "location": "P16, galeria «Para ver»: Nau São Bento, Livro de Lisuarte de Abreu.",
+     "old": " alt=\"Nau São Bento, Livro de Lisuarte de Abreu (século XVI)\" loading=\"lazy\"><figcaption>Nau São Bento, Livro de Lisuarte de Abreu (século XVI). Domínio público. <a href=\"https://pedrohfernandes-klk.github.io/pt/m3/licao-m3-f05/\">Lição M3-F05</a></figcaption></figure>",
+     "new": " alt=\"Nau São Bento, Livro de Lisuarte de Abreu (século XVI)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Nau São Bento, Livro de Lisuarte de Abreu\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Nau São Bento, Livro de Lisuarte de Abreu (século XVI). Domínio público.</p></details><figcaption>Nau São Bento, Livro de Lisuarte de Abreu. <a href=\"https://pedrohfernandes-klk.github.io/pt/m3/licao-m3-f05/\">Lição M3-F05</a></figcaption></figure>",
+     "occurrences": 1
+    },
+    {
+     "location": "P16, galeria «Para ver»: Prato com esfera armilar e armas de Portugal, porcelana chin",
+     "old": " alt=\"Prato com esfera armilar e armas de Portugal, porcelana chinesa (c. 1520-1540, The Met)\" loading=\"lazy\"><figcaption>Prato com esfera armilar e armas de Portugal, porcelana chinesa (c. 1520-1540, The Met). Domínio público (The Met, Open Access). <a href=\"https://pedrohfernandes-klk.github.io/pt/m3/licao-m3-f05/\">Lição M3-F05</a></figcaption></figure>",
+     "new": " alt=\"Prato com esfera armilar e armas de Portugal, porcelana chinesa (c. 1520-1540, The Met)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Prato com esfera armilar e armas de Portugal, porcelana chinesa\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Prato com esfera armilar e armas de Portugal, porcelana chinesa (<span class=\"nb\">c. 1520-1540</span>, The Met). Domínio público (The Met, Open Access).</p></details><figcaption>Prato com esfera armilar e armas de Portugal, porcelana chinesa. <a href=\"https://pedrohfernandes-klk.github.io/pt/m3/licao-m3-f05/\">Lição M3-F05</a></figcaption></figure>",
      "occurrences": 1
     },
     {
@@ -692,6 +1022,150 @@
     }
    ]
   },
+  "m4/m4-frei-luis-quem-sabia/index.html": {
+   "base_sha256_lf": "ab469607226250a1acbbc0b01fcf8a783ca60532efffd4f6f04f343241a45e40",
+   "after_sha256_lf": "98a179c7cdb57db55a0cfd031212186b9db452fae8d9b091d6f4955ed2855141",
+   "edits": [
+    {
+     "location": "P14, «Pensar devagar»: o fr-cred passa para o «i»; o fr-leg fica",
+     "old": "<figure class=\\\"fig-rev inteira\\\"><span class=\\\"fr-moldura\\\"><img src=\\\"https://pedrohfernandes-klk.github.io/pt/img/fontes/frei-luis-personagens-1844.jpg\\\" alt=\\\"As personagens, como apareceram na primeira edição.\\\" loading=\\\"lazy\\\" decoding=\\\"async\\\"></span><figcaption><span class=\\\"fr-leg\\\">Frei Luís de Sousa, 1844: a lista de quem está em cena, e de quem sabe o quê.</span> <span class=\\\"fr-cred\\\">Almeida Garrett (edição de 1844, BNP). Domínio público. <a href=\\\"https://commons.wikimedia.org/wiki/File:Frei_Luiz_de_Sousa,_Dramatis_person%C3%A6_(1844).png\\\" rel=\\\"noopener\\\">commons.wikimedia.org</a></span></figcaption></figure>",
+     "new": "<figure class=\\\"fig-rev inteira\\\"><div class=\\\"fr-moldura com-i\\\"><img src=\\\"https://pedrohfernandes-klk.github.io/pt/img/fontes/frei-luis-personagens-1844.jpg\\\" alt=\\\"As personagens, como apareceram na primeira edição.\\\" loading=\\\"lazy\\\" decoding=\\\"async\\\"><details class=\\\"info-i\\\" name=\\\"info-i\\\"><summary aria-label=\\\"Créditos da imagem\\\"><span aria-hidden=\\\"true\\\">i</span></summary><p class=\\\"info-i-texto\\\">Almeida Garrett (edição de 1844, BNP). Domínio público. <a href=\\\"https://commons.wikimedia.org/wiki/File:Frei_Luiz_de_Sousa,_Dramatis_person%C3%A6_(1844).png\\\" rel=\\\"noopener\\\">commons.wikimedia.org</a></p></details></div><figcaption><span class=\\\"fr-leg\\\">Frei Luís de Sousa, 1844: a lista de quem está em cena, e de quem sabe o quê.</span></figcaption></figure>",
+     "occurrences": 1
+    },
+    {
+     "location": "A peça comum do «i» (assets/info-i.css e assets/info-i.js)",
+     "old": "</head>",
+     "new": "<link rel=\"stylesheet\" href=\"../../assets/info-i.css?v=20261105\"><script defer src=\"../../assets/info-i.js?v=20261105\"></script></head>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/m4-sermao-tribunal/index.html": {
+   "base_sha256_lf": "4d8dc87f3dbfdd9b14532680f5100d84dcd4f5c5826007bcb04cf7509a3117dc",
+   "after_sha256_lf": "ea4d6cb22cffa3ff838ac6d7fe5ed420dc08229ad088eeddd2b83face89f6af5",
+   "edits": [
+    {
+     "location": "P14, «Pensar devagar»: o fr-cred passa para o «i»; o fr-leg fica",
+     "old": "<figure class=\\\"fig-rev \\\"><span class=\\\"fr-moldura\\\"><img src=\\\"https://pedrohfernandes-klk.github.io/pt/img/fontes/santo-antonio-peixes-garcia-fernandes.jpg\\\" alt=\\\"A cena que dá o tema ao sermão, pintada um século antes de Vieira.\\\" loading=\\\"lazy\\\" decoding=\\\"async\\\" style=\\\"object-position:50% 40%\\\"></span><figcaption><span class=\\\"fr-leg\\\">Santo António a pregar aos peixes, Garcia Fernandes, cerca de 1535: o tribunal já estava pintado.</span> <span class=\\\"fr-cred\\\">Domínio público. <a href=\\\"https://commons.wikimedia.org/wiki/File:Garcia_Fernandes_Santo_Ant%C3%B3nio_pregando_aos_peixes_MNAA.jpg\\\" rel=\\\"noopener\\\">commons.wikimedia.org</a></span></figcaption></figure>",
+     "new": "<figure class=\\\"fig-rev \\\"><div class=\\\"fr-moldura com-i\\\"><img src=\\\"https://pedrohfernandes-klk.github.io/pt/img/fontes/santo-antonio-peixes-garcia-fernandes.jpg\\\" alt=\\\"A cena que dá o tema ao sermão, pintada um século antes de Vieira.\\\" loading=\\\"lazy\\\" decoding=\\\"async\\\" style=\\\"object-position:50% 40%\\\"><details class=\\\"info-i\\\" name=\\\"info-i\\\"><summary aria-label=\\\"Créditos da imagem\\\"><span aria-hidden=\\\"true\\\">i</span></summary><p class=\\\"info-i-texto\\\">Domínio público. <a href=\\\"https://commons.wikimedia.org/wiki/File:Garcia_Fernandes_Santo_Ant%C3%B3nio_pregando_aos_peixes_MNAA.jpg\\\" rel=\\\"noopener\\\">commons.wikimedia.org</a></p></details></div><figcaption><span class=\\\"fr-leg\\\">Santo António a pregar aos peixes, Garcia Fernandes, cerca de 1535: o tribunal já estava pintado.</span></figcaption></figure>",
+     "occurrences": 1
+    },
+    {
+     "location": "A peça comum do «i» (assets/info-i.css e assets/info-i.js)",
+     "old": "</head>",
+     "new": "<link rel=\"stylesheet\" href=\"../../assets/info-i.css?v=20261105\"><script defer src=\"../../assets/info-i.js?v=20261105\"></script></head>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/mapa-do-modulo-m4/index.html": {
+   "base_sha256_lf": "5714358229f9d6392a97bde802b92f99d8d4fa26ceb84126bf7b75b2377e8679",
+   "after_sha256_lf": "7feeddc8eecf704547beb35c3900bffdf4b823c2603073974dbc068ae6b4cd50",
+   "edits": [
+    {
+     "location": "P16, galeria «Para ver»: Sermão de Santo António aos Peixes, em Sermoens.",
+     "old": " alt=\"Sermão de Santo António aos Peixes, em Sermoens (Lisboa, 1682)\" loading=\"lazy\"><figcaption><i>Sermão de Santo António aos Peixes</i>, em <i>Sermoens</i> (Lisboa, 1682). Domínio público. <a href=\"https://pedrohfernandes-klk.github.io/pt/m4/licao-m4-f01/\">Lição M4-F01</a></figcaption></figure>",
+     "new": " alt=\"Sermão de Santo António aos Peixes, em Sermoens (Lisboa, 1682)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Sermão de Santo António aos Peixes, em Sermoens\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\"><i>Sermão de Santo António aos Peixes</i>, em <i>Sermoens</i> (Lisboa, 1682). Domínio público.</p></details><figcaption><i>Sermão de Santo António aos Peixes</i>, em <i>Sermoens</i>. <a href=\"https://pedrohfernandes-klk.github.io/pt/m4/licao-m4-f01/\">Lição M4-F01</a></figcaption></figure>",
+     "occurrences": 1
+    },
+    {
+     "location": "P16, galeria «Para ver»: Padre António Vieira.",
+     "old": " alt=\"Padre António Vieira (retrato, início do séc. XVIII)\" loading=\"lazy\"><figcaption>Padre António Vieira (retrato, início do séc. XVIII). Domínio público. <a href=\"https://pedrohfernandes-klk.github.io/pt/m4/licao-m4-f01/\">Lição M4-F01</a></figcaption></figure>",
+     "new": " alt=\"Padre António Vieira (retrato, início do séc. XVIII)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Padre António Vieira\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Padre António Vieira (retrato, início do séc. XVIII). Domínio público.</p></details><figcaption>Padre António Vieira. <a href=\"https://pedrohfernandes-klk.github.io/pt/m4/licao-m4-f01/\">Lição M4-F01</a></figcaption></figure>",
+     "occurrences": 1
+    },
+    {
+     "location": "P16, galeria «Para ver»: D. João de Portugal.",
+     "old": " alt=\"D. João de Portugal (Miguel Ângelo Lupi, 1863)\" loading=\"lazy\"><figcaption>D. João de Portugal (Miguel Ângelo Lupi, 1863). Domínio público. <a href=\"https://pedrohfernandes-klk.github.io/pt/m4/licao-m4-f08/\">Lição M4-F08</a></figcaption></figure>",
+     "new": " alt=\"D. João de Portugal (Miguel Ângelo Lupi, 1863)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: D. João de Portugal\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">D. João de Portugal (Miguel Ângelo Lupi, 1863). Domínio público.</p></details><figcaption>D. João de Portugal. <a href=\"https://pedrohfernandes-klk.github.io/pt/m4/licao-m4-f08/\">Lição M4-F08</a></figcaption></figure>",
+     "occurrences": 1
+    },
+    {
+     "location": "P16, galeria «Para ver»: Almeida Garrett.",
+     "old": " alt=\"Almeida Garrett (Pedro Augusto Guglielmi, 1844)\" loading=\"lazy\"><figcaption>Almeida Garrett (Pedro Augusto Guglielmi, 1844). Domínio público.</figcaption></figure>",
+     "new": " alt=\"Almeida Garrett (Pedro Augusto Guglielmi, 1844)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Almeida Garrett (Pedro Augusto Guglielmi, 1844)\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Almeida Garrett (Pedro Augusto Guglielmi, 1844). Domínio público.</p></details><figcaption>Almeida Garrett.</figcaption></figure>",
+     "occurrences": 1
+    },
+    {
+     "location": "P16, galeria «Para ver»: Santo António a pregar aos peixes.",
+     "old": " alt=\"Santo António a pregar aos peixes (Garcia Fernandes, c. 1535-1540, MNAA)\" loading=\"lazy\"><figcaption>Santo António a pregar aos peixes (Garcia Fernandes, c. 1535-1540, MNAA). Domínio público. <a href=\"https://pedrohfernandes-klk.github.io/pt/m4/licao-m4-f01/\">Lição M4-F01</a></figcaption></figure>",
+     "new": " alt=\"Santo António a pregar aos peixes (Garcia Fernandes, c. 1535-1540, MNAA)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Santo António a pregar aos peixes\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Santo António a pregar aos peixes (Garcia Fernandes, <span class=\"nb\">c. 1535-1540</span>, MNAA). Domínio público.</p></details><figcaption>Santo António a pregar aos peixes. <a href=\"https://pedrohfernandes-klk.github.io/pt/m4/licao-m4-f01/\">Lição M4-F01</a></figcaption></figure>",
+     "occurrences": 1
+    },
+    {
+     "location": "P16, galeria «Para ver»: Peixe-voador, cromolitografia da série Fish from American Wa",
+     "old": " alt=\"Peixe-voador, cromolitografia da série Fish from American Waters (Allen &amp; Ginter, 1889, The Met)\" loading=\"lazy\"><figcaption>Peixe-voador, cromolitografia da série Fish from American Waters (Allen &amp; Ginter, 1889, The Met). Domínio público (The Met, Open Access). <a href=\"https://pedrohfernandes-klk.github.io/pt/m4/licao-m4-f01/\">Lição M4-F01</a></figcaption></figure>",
+     "new": " alt=\"Peixe-voador, cromolitografia da série Fish from American Waters (Allen &amp; Ginter, 1889, The Met)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Peixe-voador, cromolitografia da série Fish from American Waters\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Peixe-voador, cromolitografia da série Fish from American Waters (Allen &amp; Ginter, 1889, The Met). Domínio público (The Met, Open Access).</p></details><figcaption>Peixe-voador, cromolitografia da série Fish from American Waters. <a href=\"https://pedrohfernandes-klk.github.io/pt/m4/licao-m4-f01/\">Lição M4-F01</a></figcaption></figure>",
+     "occurrences": 1
+    },
+    {
+     "location": "P16, galeria «Para ver»: Almeida Garrett.",
+     "old": " alt=\"Almeida Garrett (José Malhoa, 1881)\" loading=\"lazy\"><figcaption>Almeida Garrett (José Malhoa, 1881). Domínio público. <a href=\"https://pedrohfernandes-klk.github.io/pt/m4/licao-m4-f07/\">Lição M4-F07</a></figcaption></figure>",
+     "new": " alt=\"Almeida Garrett (José Malhoa, 1881)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Almeida Garrett (José Malhoa, 1881)\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Almeida Garrett (José Malhoa, 1881). Domínio público.</p></details><figcaption>Almeida Garrett. <a href=\"https://pedrohfernandes-klk.github.io/pt/m4/licao-m4-f07/\">Lição M4-F07</a></figcaption></figure>",
+     "occurrences": 1
+    },
+    {
+     "location": "P16, galeria «Para ver»: Frei Luís de Sousa, lista de personagens da primeira edição.",
+     "old": " alt=\"Frei Luís de Sousa, lista de personagens da primeira edição (1844)\" loading=\"lazy\"><figcaption><i>Frei Luís de Sousa</i>, lista de personagens da primeira edição (1844). Domínio público. <a href=\"https://pedrohfernandes-klk.github.io/pt/m4/licao-m4-f08/\">Lição M4-F08</a></figcaption></figure>",
+     "new": " alt=\"Frei Luís de Sousa, lista de personagens da primeira edição (1844)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Frei Luís de Sousa, lista de personagens da primeira edição\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\"><i>Frei Luís de Sousa</i>, lista de personagens da primeira edição (1844). Domínio público.</p></details><figcaption><i>Frei Luís de Sousa</i>, lista de personagens da primeira edição. <a href=\"https://pedrohfernandes-klk.github.io/pt/m4/licao-m4-f08/\">Lição M4-F08</a></figcaption></figure>",
+     "occurrences": 1
+    },
+    {
+     "location": "P16, galeria «Para ver»: Sala das sessões da Câmara dos Deputados, São Bento.",
+     "old": " alt=\"Sala das sessões da Câmara dos Deputados, São Bento (fotografia de José Artur Leitão Bárcia, 1909)\" loading=\"lazy\"><figcaption>Sala das sessões da Câmara dos Deputados, São Bento (fotografia de José Artur Leitão Bárcia, 1909). Domínio público. <a href=\"https://pedrohfernandes-klk.github.io/pt/m4/licao-m4-f14/\">Lição M4-F14</a></figcaption></figure>",
+     "new": " alt=\"Sala das sessões da Câmara dos Deputados, São Bento (fotografia de José Artur Leitão Bárcia, 1909)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Sala das sessões da Câmara dos Deputados, São Bento\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Sala das sessões da Câmara dos Deputados, São Bento (fotografia de José Artur Leitão Bárcia, 1909). Domínio público.</p></details><figcaption>Sala das sessões da Câmara dos Deputados, São Bento. <a href=\"https://pedrohfernandes-klk.github.io/pt/m4/licao-m4-f14/\">Lição M4-F14</a></figcaption></figure>",
+     "occurrences": 1
+    },
+    {
+     "location": "P16, galeria «Para ver»: Cícero denuncia Catilina no Senado.",
+     "old": " alt=\"Cícero denuncia Catilina no Senado (Cesare Maccari, 1889)\" loading=\"lazy\"><figcaption>Cícero denuncia Catilina no Senado (Cesare Maccari, 1889). Domínio público. <a href=\"https://pedrohfernandes-klk.github.io/pt/m4/licao-m4-f10/\">Lição M4-F10</a></figcaption></figure>",
+     "new": " alt=\"Cícero denuncia Catilina no Senado (Cesare Maccari, 1889)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Cícero denuncia Catilina no Senado\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Cícero denuncia Catilina no Senado (Cesare Maccari, 1889). Domínio público.</p></details><figcaption>Cícero denuncia Catilina no Senado. <a href=\"https://pedrohfernandes-klk.github.io/pt/m4/licao-m4-f10/\">Lição M4-F10</a></figcaption></figure>",
+     "occurrences": 1
+    },
+    {
+     "location": "P16, galeria «Para ver»: Cabeça de Demóstenes, mármore, cópia romana.",
+     "old": " alt=\"Cabeça de Demóstenes, mármore, cópia romana (século II d.C., The Met)\" loading=\"lazy\"><figcaption>Cabeça de Demóstenes, mármore, cópia romana (século II d.C., The Met). Domínio público (The Met, Open Access).</figcaption></figure>",
+     "new": " alt=\"Cabeça de Demóstenes, mármore, cópia romana (século II d.C., The Met)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Cabeça de Demóstenes, mármore, cópia romana\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Cabeça de Demóstenes, mármore, cópia romana (século II d.C., The Met). Domínio público (The Met, Open Access).</p></details><figcaption>Cabeça de Demóstenes, mármore, cópia romana.</figcaption></figure>",
+     "occurrences": 1
+    },
+    {
+     "location": "P16, galeria «Para ver»: D. Sebastião.",
+     "old": " alt=\"D. Sebastião (Cristóvão de Morais, c. 1571-1574, MNAA)\" loading=\"lazy\"><figcaption>D. Sebastião (Cristóvão de Morais, c. 1571-1574, MNAA). Domínio público. <a href=\"https://pedrohfernandes-klk.github.io/pt/m4/licao-m4-f26/\">Lição M4-F26</a></figcaption></figure>",
+     "new": " alt=\"D. Sebastião (Cristóvão de Morais, c. 1571-1574, MNAA)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: D. Sebastião\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">D. Sebastião (Cristóvão de Morais, <span class=\"nb\">c. 1571-1574</span>, MNAA). Domínio público.</p></details><figcaption>D. Sebastião. <a href=\"https://pedrohfernandes-klk.github.io/pt/m4/licao-m4-f26/\">Lição M4-F26</a></figcaption></figure>",
+     "occurrences": 1
+    },
+    {
+     "location": "A peça comum do «i» (assets/info-i.css e assets/info-i.js)",
+     "old": "</head>",
+     "new": "<link rel=\"stylesheet\" href=\"../../assets/info-i.css?v=20261105\"><script defer src=\"../../assets/info-i.js?v=20261105\"></script></head>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/olhar-lupi/index.html": {
+   "base_sha256_lf": "c1ceb9ca0c0e3aaccf14d19ba287c9776f6b4b048198c63de339030a7faed7f5",
+   "after_sha256_lf": "368645abc9079db9739c8e812ac710f8db6ee7f5ce6be2de82078f807db60f06",
+   "edits": [
+    {
+     "location": "P15, motor do «Olhar» (imagem()): a imagem e o «i» com o crédito e a ligação creditoUrl",
+     "old": "function imagem(){return E.imagemData?'<img class=\"img\" alt=\"'+esc(E.titulo)+'\" src=\"'+E.imagemData+'\"><p class=\"credito\">'+esc(E.credito)+'</p>':\"\"}",
+     "new": "/* 05/11/2026: decisão 153. O crédito da imagem vive num «i» (assets/info-i.css e assets/info-i.js), com a ligação para a imagem de origem (creditoUrl). */function creditoI(){var c=it(E.credito),u=E.creditoUrl,a;if(!u)return c;a='<a href=\"'+esc(u)+'\" rel=\"noopener\">';return c.indexOf(\"Wikimedia Commons\")>-1?c.replace(\"Wikimedia Commons\",a+\"Wikimedia Commons</a>\"):c+\" \"+a+esc(u.replace(/^https?:\\/\\/([^\\/]+).*$/,\"$1\"))+\"</a>\"}function imagem(){return E.imagemData?'<div class=\"com-i olhar-com-i\"><img class=\"img\" alt=\"'+esc(E.titulo)+'\" src=\"'+E.imagemData+'\"><details class=\"info-i\" name=\"info-i\"><summary aria-label=\"Créditos da imagem\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">'+creditoI()+'</p></details></div>':\"\"}",
+     "occurrences": 1
+    },
+    {
+     "location": "P15, campo credito: os pontos médios passam a pontos finais",
+     "old": "\"credito\":\"Miguel Ângelo Lupi, _D. João de Portugal_ (1863) · domínio público · Wikimedia Commons",
+     "new": "\"credito\":\"Miguel Ângelo Lupi, _D. João de Portugal_ (1863). Domínio público. Wikimedia Commons.",
+     "occurrences": 1
+    },
+    {
+     "location": "A peça comum do «i» (assets/info-i.css e assets/info-i.js)",
+     "old": "</head>",
+     "new": "<link rel=\"stylesheet\" href=\"../../assets/info-i.css?v=20261105\"><script defer src=\"../../assets/info-i.js?v=20261105\"></script><style>/* 05/11/2026: decisão 153. O «i» da imagem do exercício: a moldura toma a largura da imagem, centrada. */#palco .olhar-com-i{width:fit-content;max-width:100%;margin:0 auto}</style></head>",
+     "occurrences": 1
+    }
+   ]
+  },
   "m4/painel-m4-f01/index.html": {
    "base_sha256_lf": "40ec8808d04ae49561ab216387c35bf561d22830eeb3fe689377df8404699d3f",
    "after_sha256_lf": "80b023bc5d06f0759cd8605653a2dedb348316925f3ae0f4a0e8af178a0dc1d4",
@@ -764,6 +1238,186 @@
     }
    ]
   },
+  "m5/m5-o-pais-ou-eles/index.html": {
+   "base_sha256_lf": "d7de3cbab0a2748d28b667a848d5b16ebea7381d5f5b961314e59e9943a67855",
+   "after_sha256_lf": "6ca1519b2fe1c5909d9b6ed47defed8c5943ff1e2c87b449142a6e2cb5427d68",
+   "edits": [
+    {
+     "location": "P14, «Pensar devagar»: o fr-cred passa para o «i»; o fr-leg fica",
+     "old": "<figure class=\\\"fig-rev \\\"><span class=\\\"fr-moldura\\\"><img src=\\\"https://pedrohfernandes-klk.github.io/pt/img/fontes/hotel-central-1910.jpg\\\" alt=\\\"O hotel do capítulo VI, fotografado trinta anos depois do tempo do romance.\\\" loading=\\\"lazy\\\" decoding=\\\"async\\\" style=\\\"object-position:50% 50%\\\"></span><figcaption><span class=\\\"fr-leg\\\">O Hotel Central, cerca de 1910: a mesa do jantar onde o país ia falir entre dois pratos.</span> <span class=\\\"fr-cred\\\">Domínio público. <a href=\\\"https://commons.wikimedia.org/wiki/File:HotelCentral(Lx)1910.jpg\\\" rel=\\\"noopener\\\">commons.wikimedia.org</a></span></figcaption></figure>",
+     "new": "<figure class=\\\"fig-rev \\\"><div class=\\\"fr-moldura com-i\\\"><img src=\\\"https://pedrohfernandes-klk.github.io/pt/img/fontes/hotel-central-1910.jpg\\\" alt=\\\"O hotel do capítulo VI, fotografado trinta anos depois do tempo do romance.\\\" loading=\\\"lazy\\\" decoding=\\\"async\\\" style=\\\"object-position:50% 50%\\\"><details class=\\\"info-i\\\" name=\\\"info-i\\\"><summary aria-label=\\\"Créditos da imagem\\\"><span aria-hidden=\\\"true\\\">i</span></summary><p class=\\\"info-i-texto\\\">Domínio público. <a href=\\\"https://commons.wikimedia.org/wiki/File:HotelCentral(Lx)1910.jpg\\\" rel=\\\"noopener\\\">commons.wikimedia.org</a></p></details></div><figcaption><span class=\\\"fr-leg\\\">O Hotel Central, cerca de 1910: a mesa do jantar onde o país ia falir entre dois pratos.</span></figcaption></figure>",
+     "occurrences": 1
+    },
+    {
+     "location": "A peça comum do «i» (assets/info-i.css e assets/info-i.js)",
+     "old": "</head>",
+     "new": "<link rel=\"stylesheet\" href=\"../../assets/info-i.css?v=20261105\"><script defer src=\"../../assets/info-i.js?v=20261105\"></script></head>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m5/m5-quem-podia-ter-feito-diferente/index.html": {
+   "base_sha256_lf": "a1a1617d286d3449d5cc68bca98da962d06f9f8c1b17460d6c32acbd45381bdf",
+   "after_sha256_lf": "bacd00258d1f867f33d60c23f874fafc6ece417ca13b489a7d978af52b30dc1f",
+   "edits": [
+    {
+     "location": "P14, «Pensar devagar»: o fr-cred passa para o «i»; o fr-leg fica",
+     "old": "<figure class=\\\"fig-rev \\\"><span class=\\\"fr-moldura\\\"><img src=\\\"https://pedrohfernandes-klk.github.io/pt/img/fontes/cadeia-relacao-interior-1850.jpg\\\" alt=\\\"A cadeia onde Camilo escreveu o romance, na década em que lá esteve preso.\\\" loading=\\\"lazy\\\" decoding=\\\"async\\\" style=\\\"object-position:50% 50%\\\"></span><figcaption><span class=\\\"fr-leg\\\">A Cadeia da Relação do Porto, 1850: onde o assento de Simão foi escrito.</span> <span class=\\\"fr-cred\\\">Lucas de Almeida Marrão (BNP). Domínio público. <a href=\\\"https://commons.wikimedia.org/wiki/File:Vista_interior_dos_quartos_superiores_da_Cadeia_da_Rela%C3%A7%C3%A3o_do_Porto,_c._1850_-_Lucas_de_Almeida_Marr%C3%A3o.png\\\" rel=\\\"noopener\\\">commons.wikimedia.org</a></span></figcaption></figure>",
+     "new": "<figure class=\\\"fig-rev \\\"><div class=\\\"fr-moldura com-i\\\"><img src=\\\"https://pedrohfernandes-klk.github.io/pt/img/fontes/cadeia-relacao-interior-1850.jpg\\\" alt=\\\"A cadeia onde Camilo escreveu o romance, na década em que lá esteve preso.\\\" loading=\\\"lazy\\\" decoding=\\\"async\\\" style=\\\"object-position:50% 50%\\\"><details class=\\\"info-i\\\" name=\\\"info-i\\\"><summary aria-label=\\\"Créditos da imagem\\\"><span aria-hidden=\\\"true\\\">i</span></summary><p class=\\\"info-i-texto\\\">Lucas de Almeida Marrão (BNP). Domínio público. <a href=\\\"https://commons.wikimedia.org/wiki/File:Vista_interior_dos_quartos_superiores_da_Cadeia_da_Rela%C3%A7%C3%A3o_do_Porto,_c._1850_-_Lucas_de_Almeida_Marr%C3%A3o.png\\\" rel=\\\"noopener\\\">commons.wikimedia.org</a></p></details></div><figcaption><span class=\\\"fr-leg\\\">A Cadeia da Relação do Porto, 1850: onde o assento de Simão foi escrito.</span></figcaption></figure>",
+     "occurrences": 1
+    },
+    {
+     "location": "A peça comum do «i» (assets/info-i.css e assets/info-i.js)",
+     "old": "</head>",
+     "new": "<link rel=\"stylesheet\" href=\"../../assets/info-i.css?v=20261105\"><script defer src=\"../../assets/info-i.js?v=20261105\"></script></head>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m5/mapa-do-modulo-m5/index.html": {
+   "base_sha256_lf": "ee0b13933f73ec3448ab86c871883190dc188c92c9b02a598338de3c8a46fa71",
+   "after_sha256_lf": "8498e84db24d2f3ee305e8c74977daaa793bdae9112785faaf1ed7d5f9ff758a",
+   "edits": [
+    {
+     "location": "P16, galeria «Para ver»: Camilo Castelo Branco.",
+     "old": " alt=\"Camilo Castelo Branco (fotografia da União, Photographia da Casa Real, Porto, 1882)\" loading=\"lazy\"><figcaption>Camilo Castelo Branco (fotografia da União, Photographia da Casa Real, Porto, 1882). Domínio público. <a href=\"https://pedrohfernandes-klk.github.io/pt/m5/licao-m5-f02/\">Lição M5-F02</a></figcaption></figure>",
+     "new": " alt=\"Camilo Castelo Branco (fotografia da União, Photographia da Casa Real, Porto, 1882)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Camilo Castelo Branco\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Camilo Castelo Branco (fotografia da União, Photographia da Casa Real, Porto, 1882). Domínio público.</p></details><figcaption>Camilo Castelo Branco. <a href=\"https://pedrohfernandes-klk.github.io/pt/m5/licao-m5-f02/\">Lição M5-F02</a></figcaption></figure>",
+     "occurrences": 1
+    },
+    {
+     "location": "P16, galeria «Para ver»: Interior da Cadeia da Relação do Porto.",
+     "old": " alt=\"Interior da Cadeia da Relação do Porto (Lucas de Almeida Marrão, c. 1850)\" loading=\"lazy\"><figcaption>Interior da Cadeia da Relação do Porto (Lucas de Almeida Marrão, c. 1850). Domínio público. <a href=\"https://pedrohfernandes-klk.github.io/pt/m5/licao-m5-f02/\">Lição M5-F02</a></figcaption></figure>",
+     "new": " alt=\"Interior da Cadeia da Relação do Porto (Lucas de Almeida Marrão, c. 1850)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Interior da Cadeia da Relação do Porto\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Interior da Cadeia da Relação do Porto (Lucas de Almeida Marrão, <span class=\"nb\">c. 1850</span>). Domínio público.</p></details><figcaption>Interior da Cadeia da Relação do Porto. <a href=\"https://pedrohfernandes-klk.github.io/pt/m5/licao-m5-f02/\">Lição M5-F02</a></figcaption></figure>",
+     "occurrences": 1
+    },
+    {
+     "location": "P16, galeria «Para ver»: Cadeia da Relação do Porto, hoje Centro Português de Fotogra",
+     "old": " alt=\"Cadeia da Relação do Porto, hoje Centro Português de Fotografia (fotografia de Reis Quarteu, 2021)\" loading=\"lazy\"><figcaption>Cadeia da Relação do Porto, hoje Centro Português de Fotografia (fotografia de Reis Quarteu, 2021). CC BY-SA 4.0. <a href=\"https://pedrohfernandes-klk.github.io/pt/m5/licao-m5-f02/\">Lição M5-F02</a></figcaption></figure>",
+     "new": " alt=\"Cadeia da Relação do Porto, hoje Centro Português de Fotografia (fotografia de Reis Quarteu, 2021)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Cadeia da Relação do Porto, hoje Centro Português de Fotografia\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Cadeia da Relação do Porto, hoje Centro Português de Fotografia (fotografia de Reis Quarteu, 2021). <a rel=\"license\" href=\"https://creativecommons.org/licenses/by-sa/4.0/deed.pt\">CC BY-SA 4.0</a>.</p></details><figcaption>Cadeia da Relação do Porto, hoje Centro Português de Fotografia. <a href=\"https://pedrohfernandes-klk.github.io/pt/m5/licao-m5-f02/\">Lição M5-F02</a></figcaption></figure>",
+     "occurrences": 1
+    },
+    {
+     "location": "P16, galeria «Para ver»: Eça de Queirós.",
+     "old": " alt=\"Eça de Queirós (Fotografia Guedes, Porto, c. 1895)\" loading=\"lazy\"><figcaption>Eça de Queirós (Fotografia Guedes, Porto, c. 1895). Domínio público. <a href=\"https://pedrohfernandes-klk.github.io/pt/m5/licao-m5-f10/\">Lição M5-F10</a></figcaption></figure>",
+     "new": " alt=\"Eça de Queirós (Fotografia Guedes, Porto, c. 1895)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Eça de Queirós\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Eça de Queirós (Fotografia Guedes, Porto, <span class=\"nb\">c. 1895</span>). Domínio público.</p></details><figcaption>Eça de Queirós. <a href=\"https://pedrohfernandes-klk.github.io/pt/m5/licao-m5-f10/\">Lição M5-F10</a></figcaption></figure>",
+     "occurrences": 1
+    },
+    {
+     "location": "P16, galeria «Para ver»: Os Maias, primeira edição (1888), volume 1, página de rosto.",
+     "old": " alt=\"Os Maias, primeira edição (1888), volume 1, página de rosto\" loading=\"lazy\"><figcaption>Os Maias, primeira edição (1888), volume 1, página de rosto. Domínio público. <a href='https://commons.wikimedia.org/wiki/File:Os_Maias_Book_Cover.jpg'>Fonte: Wikimedia Commons.</a> <a href=\"https://pedrohfernandes-klk.github.io/pt/m5/licao-m5-f10/\">Lição M5-F10</a></figcaption></figure>",
+     "new": " alt=\"Os Maias, primeira edição (1888), volume 1, página de rosto\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Os Maias, primeira edição (1888), volume 1, página de rosto\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Os Maias, primeira edição (1888), volume 1, página de rosto. Domínio público. <a href='https://commons.wikimedia.org/wiki/File:Os_Maias_Book_Cover.jpg'>Fonte: Wikimedia Commons.</a></p></details><figcaption>Os Maias, primeira edição (1888), volume 1, página de rosto. <a href=\"https://pedrohfernandes-klk.github.io/pt/m5/licao-m5-f10/\">Lição M5-F10</a></figcaption></figure>",
+     "occurrences": 1
+    },
+    {
+     "location": "P16, galeria «Para ver»: Praça dos Remolares, Lisboa, gravura do Archivo Pittoresco.",
+     "old": " alt=\"Praça dos Remolares, Lisboa, gravura do Archivo Pittoresco (Francisco Augusto Nogueira da Silva, 1860)\" loading=\"lazy\"><figcaption>Praça dos Remolares, Lisboa, gravura do Archivo Pittoresco (Francisco Augusto Nogueira da Silva, 1860). Domínio público. <a href=\"https://pedrohfernandes-klk.github.io/pt/m5/licao-m5-f10/\">Lição M5-F10</a></figcaption></figure>",
+     "new": " alt=\"Praça dos Remolares, Lisboa, gravura do Archivo Pittoresco (Francisco Augusto Nogueira da Silva, 1860)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Praça dos Remolares, Lisboa, gravura do Archivo Pittoresco\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Praça dos Remolares, Lisboa, gravura do Archivo Pittoresco (Francisco Augusto Nogueira da Silva, 1860). Domínio público.</p></details><figcaption>Praça dos Remolares, Lisboa, gravura do Archivo Pittoresco. <a href=\"https://pedrohfernandes-klk.github.io/pt/m5/licao-m5-f10/\">Lição M5-F10</a></figcaption></figure>",
+     "occurrences": 1
+    },
+    {
+     "location": "P16, galeria «Para ver»: Hotel Central, Lisboa.",
+     "old": " alt=\"Hotel Central, Lisboa (fotografia de Joshua Benoliel, c. 1910)\" loading=\"lazy\"><figcaption>Hotel Central, Lisboa (fotografia de Joshua Benoliel, c. 1910). Domínio público. <a href=\"https://pedrohfernandes-klk.github.io/pt/m5/licao-m5-f10/\">Lição M5-F10</a></figcaption></figure>",
+     "new": " alt=\"Hotel Central, Lisboa (fotografia de Joshua Benoliel, c. 1910)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Hotel Central, Lisboa\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Hotel Central, Lisboa (fotografia de Joshua Benoliel, <span class=\"nb\">c. 1910</span>). Domínio público.</p></details><figcaption>Hotel Central, Lisboa. <a href=\"https://pedrohfernandes-klk.github.io/pt/m5/licao-m5-f10/\">Lição M5-F10</a></figcaption></figure>",
+     "occurrences": 1
+    },
+    {
+     "location": "A peça comum do «i» (assets/info-i.css e assets/info-i.js)",
+     "old": "</head>",
+     "new": "<link rel=\"stylesheet\" href=\"../../assets/info-i.css?v=20261105\"><script defer src=\"../../assets/info-i.js?v=20261105\"></script></head>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m6/m6-antero-viagem-ao-nada/index.html": {
+   "base_sha256_lf": "c3b08b90a0285555592ecacaa2819200fae70f565b6d2f1f0c1d14d914e618bd",
+   "after_sha256_lf": "4fae29c2a015a3bdaae71e674fb8d1452f8dae23e4f6313708b6b372d457f318",
+   "edits": [
+    {
+     "location": "P14, «Pensar devagar»: o fr-cred passa para o «i»; o fr-leg fica",
+     "old": "<figure class=\\\"fig-rev \\\"><span class=\\\"fr-moldura\\\"><img src=\\\"https://pedrohfernandes-klk.github.io/pt/img/fontes/antero-columbano-1889.jpg\\\" alt=\\\"O retrato a óleo, dois anos antes da morte do poeta.\\\" loading=\\\"lazy\\\" decoding=\\\"async\\\" style=\\\"object-position:50% 20%\\\"></span><figcaption><span class=\\\"fr-leg\\\">Antero de Quental por Columbano, 1889: o cavaleiro que encontra o nada.</span> <span class=\\\"fr-cred\\\">Domínio público. <a href=\\\"https://commons.wikimedia.org/wiki/File:Retrato_de_Antero_de_Quental_(1889)_-_Columbano_Bordalo_Pinheiro_(MNAC_Inv._1108).png\\\" rel=\\\"noopener\\\">commons.wikimedia.org</a></span></figcaption></figure>",
+     "new": "<figure class=\\\"fig-rev \\\"><div class=\\\"fr-moldura com-i\\\"><img src=\\\"https://pedrohfernandes-klk.github.io/pt/img/fontes/antero-columbano-1889.jpg\\\" alt=\\\"O retrato a óleo, dois anos antes da morte do poeta.\\\" loading=\\\"lazy\\\" decoding=\\\"async\\\" style=\\\"object-position:50% 20%\\\"><details class=\\\"info-i\\\" name=\\\"info-i\\\"><summary aria-label=\\\"Créditos da imagem\\\"><span aria-hidden=\\\"true\\\">i</span></summary><p class=\\\"info-i-texto\\\">Domínio público. <a href=\\\"https://commons.wikimedia.org/wiki/File:Retrato_de_Antero_de_Quental_(1889)_-_Columbano_Bordalo_Pinheiro_(MNAC_Inv._1108).png\\\" rel=\\\"noopener\\\">commons.wikimedia.org</a></p></details></div><figcaption><span class=\\\"fr-leg\\\">Antero de Quental por Columbano, 1889: o cavaleiro que encontra o nada.</span></figcaption></figure>",
+     "occurrences": 1
+    },
+    {
+     "location": "A peça comum do «i» (assets/info-i.css e assets/info-i.js)",
+     "old": "</head>",
+     "new": "<link rel=\"stylesheet\" href=\"../../assets/info-i.css?v=20261105\"><script defer src=\"../../assets/info-i.js?v=20261105\"></script></head>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m6/m6-cesario-noite-inteira/index.html": {
+   "base_sha256_lf": "5eca564dd578ec2d92a604321cc1bb14d3b3e0f6905e1dc0c3e5bea75de82adb",
+   "after_sha256_lf": "bda999a66321c3fc0daba9f13f9fb0f31bcebab521feba3997460888e2099bf0",
+   "edits": [
+    {
+     "location": "P14, «Pensar devagar»: o fr-cred passa para o «i»; o fr-leg fica",
+     "old": "<figure class=\\\"fig-rev \\\"><span class=\\\"fr-moldura\\\"><img src=\\\"https://pedrohfernandes-klk.github.io/pt/img/fontes/varinas-ribeira-nova-1900.jpg\\\" alt=\\\"As varinas do cais, como as do poema.\\\" loading=\\\"lazy\\\" decoding=\\\"async\\\" style=\\\"object-position:50% 45%\\\"></span><figcaption><span class=\\\"fr-leg\\\">Varinas na Ribeira Nova, cerca de 1900: as mesmas que Cesário viu ao cair da tarde.</span> <span class=\\\"fr-cred\\\">José Artur Leitão Bárcia (Arquivo Municipal de Lisboa). Domínio público. <a href=\\\"https://commons.wikimedia.org/wiki/File:BAR000276_-_Mercado_de_peixe_na_Ribeira_Nova.jpg\\\" rel=\\\"noopener\\\">commons.wikimedia.org</a></span></figcaption></figure>",
+     "new": "<figure class=\\\"fig-rev \\\"><div class=\\\"fr-moldura com-i\\\"><img src=\\\"https://pedrohfernandes-klk.github.io/pt/img/fontes/varinas-ribeira-nova-1900.jpg\\\" alt=\\\"As varinas do cais, como as do poema.\\\" loading=\\\"lazy\\\" decoding=\\\"async\\\" style=\\\"object-position:50% 45%\\\"><details class=\\\"info-i\\\" name=\\\"info-i\\\"><summary aria-label=\\\"Créditos da imagem\\\"><span aria-hidden=\\\"true\\\">i</span></summary><p class=\\\"info-i-texto\\\">José Artur Leitão Bárcia (Arquivo Municipal de Lisboa). Domínio público. <a href=\\\"https://commons.wikimedia.org/wiki/File:BAR000276_-_Mercado_de_peixe_na_Ribeira_Nova.jpg\\\" rel=\\\"noopener\\\">commons.wikimedia.org</a></p></details></div><figcaption><span class=\\\"fr-leg\\\">Varinas na Ribeira Nova, cerca de 1900: as mesmas que Cesário viu ao cair da tarde.</span></figcaption></figure>",
+     "occurrences": 1
+    },
+    {
+     "location": "A peça comum do «i» (assets/info-i.css e assets/info-i.js)",
+     "old": "</head>",
+     "new": "<link rel=\"stylesheet\" href=\"../../assets/info-i.css?v=20261105\"><script defer src=\"../../assets/info-i.js?v=20261105\"></script></head>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m6/mapa-do-modulo-m6/index.html": {
+   "base_sha256_lf": "1dd6165268d3b5600344ae4528c3a49b6fbb1d1d63630fb44a462494414c15fd",
+   "after_sha256_lf": "705f50e1903679fa4db7c5106c02d654567f5e4c586eea65eb3e5a26b364d361",
+   "edits": [
+    {
+     "location": "P16, galeria «Para ver»: Antero de Quental.",
+     "old": " alt=\"Antero de Quental (fotografia, c. 1887, publicada em In Memoriam, 1896)\" loading=\"lazy\"><figcaption>Antero de Quental (fotografia, c. 1887, publicada em In Memoriam, 1896). Domínio público. <a href=\"https://pedrohfernandes-klk.github.io/pt/m6/licao-m6-f01/\">Lição M6-F01</a></figcaption></figure>",
+     "new": " alt=\"Antero de Quental (fotografia, c. 1887, publicada em In Memoriam, 1896)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Antero de Quental (fotografia, c. 1887, publicada em In Memoriam, 1896)\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Antero de Quental (fotografia, <span class=\"nb\">c. 1887</span>, publicada em In Memoriam, 1896). Domínio público.</p></details><figcaption>Antero de Quental. <a href=\"https://pedrohfernandes-klk.github.io/pt/m6/licao-m6-f01/\">Lição M6-F01</a></figcaption></figure>",
+     "occurrences": 1
+    },
+    {
+     "location": "P16, galeria «Para ver»: Antero de Quental.",
+     "old": " alt=\"Antero de Quental (Columbano Bordalo Pinheiro, 1889, MNAC)\" loading=\"lazy\"><figcaption>Antero de Quental (Columbano Bordalo Pinheiro, 1889, MNAC). Domínio público. <a href=\"https://pedrohfernandes-klk.github.io/pt/m6/licao-m6-f01/\">Lição M6-F01</a></figcaption></figure>",
+     "new": " alt=\"Antero de Quental (Columbano Bordalo Pinheiro, 1889, MNAC)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Antero de Quental (Columbano Bordalo Pinheiro, 1889, MNAC)\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Antero de Quental (Columbano Bordalo Pinheiro, 1889, MNAC). Domínio público.</p></details><figcaption>Antero de Quental. <a href=\"https://pedrohfernandes-klk.github.io/pt/m6/licao-m6-f01/\">Lição M6-F01</a></figcaption></figure>",
+     "occurrences": 1
+    },
+    {
+     "location": "P16, galeria «Para ver»: Jardim Botânico de Coimbra.",
+     "old": " alt=\"Jardim Botânico de Coimbra (fotografia de J. Lévy &amp; Co, década de 1880)\" loading=\"lazy\"><figcaption>Jardim Botânico de Coimbra (fotografia de J. Lévy &amp; Co, década de 1880). Domínio público. <a href=\"https://pedrohfernandes-klk.github.io/pt/m6/licao-m6-f01/\">Lição M6-F01</a></figcaption></figure>",
+     "new": " alt=\"Jardim Botânico de Coimbra (fotografia de J. Lévy &amp; Co, década de 1880)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Jardim Botânico de Coimbra\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Jardim Botânico de Coimbra (fotografia de J. Lévy &amp; Co, década de 1880). Domínio público.</p></details><figcaption>Jardim Botânico de Coimbra. <a href=\"https://pedrohfernandes-klk.github.io/pt/m6/licao-m6-f01/\">Lição M6-F01</a></figcaption></figure>",
+     "occurrences": 1
+    },
+    {
+     "location": "P16, galeria «Para ver»: Cesário Verde.",
+     "old": " alt=\"Cesário Verde (retrato de Columbano Bordalo Pinheiro em O Livro de Cesário Verde, 1887)\" loading=\"lazy\"><figcaption>Cesário Verde (retrato de Columbano Bordalo Pinheiro em O Livro de Cesário Verde, 1887). Domínio público. <a href=\"https://pedrohfernandes-klk.github.io/pt/m6/licao-m6-f07/\">Lição M6-F07</a></figcaption></figure>",
+     "new": " alt=\"Cesário Verde (retrato de Columbano Bordalo Pinheiro em O Livro de Cesário Verde, 1887)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Cesário Verde\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Cesário Verde (retrato de Columbano Bordalo Pinheiro em O Livro de Cesário Verde, 1887). Domínio público.</p></details><figcaption>Cesário Verde. <a href=\"https://pedrohfernandes-klk.github.io/pt/m6/licao-m6-f07/\">Lição M6-F07</a></figcaption></figure>",
+     "occurrences": 1
+    },
+    {
+     "location": "P16, galeria «Para ver»: «O Sentimento dum Ocidental» em O Livro de Cesário Verde (18",
+     "old": " alt=\"«O Sentimento dum Ocidental» em O Livro de Cesário Verde (1887), primeira página\" loading=\"lazy\"><figcaption>«O Sentimento dum Ocidental» em O Livro de Cesário Verde (1887), primeira página. Domínio público. <a href=\"https://pedrohfernandes-klk.github.io/pt/m6/licao-m6-f07/\">Lição M6-F07</a></figcaption></figure>",
+     "new": " alt=\"«O Sentimento dum Ocidental» em O Livro de Cesário Verde (1887), primeira página\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: «O Sentimento dum Ocidental» em O Livro de Cesário Verde (1887), primeira página\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">«O Sentimento dum Ocidental» em O Livro de Cesário Verde (1887), primeira página. Domínio público.</p></details><figcaption>«O Sentimento dum Ocidental» em O Livro de Cesário Verde (1887), primeira página. <a href=\"https://pedrohfernandes-klk.github.io/pt/m6/licao-m6-f07/\">Lição M6-F07</a></figcaption></figure>",
+     "occurrences": 1
+    },
+    {
+     "location": "P16, galeria «Para ver»: Mercado de peixe na Ribeira Nova, Lisboa.",
+     "old": " alt=\"Mercado de peixe na Ribeira Nova, Lisboa (fotografia de José Artur Leitão Bárcia, c. 1900)\" loading=\"lazy\"><figcaption>Mercado de peixe na Ribeira Nova, Lisboa (fotografia de José Artur Leitão Bárcia, c. 1900). Domínio público. <a href=\"https://pedrohfernandes-klk.github.io/pt/m6/licao-m6-f07/\">Lição M6-F07</a></figcaption></figure>",
+     "new": " alt=\"Mercado de peixe na Ribeira Nova, Lisboa (fotografia de José Artur Leitão Bárcia, c. 1900)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Mercado de peixe na Ribeira Nova, Lisboa\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Mercado de peixe na Ribeira Nova, Lisboa (fotografia de José Artur Leitão Bárcia, <span class=\"nb\">c. 1900</span>). Domínio público.</p></details><figcaption>Mercado de peixe na Ribeira Nova, Lisboa. <a href=\"https://pedrohfernandes-klk.github.io/pt/m6/licao-m6-f07/\">Lição M6-F07</a></figcaption></figure>",
+     "occurrences": 1
+    },
+    {
+     "location": "P16, galeria «Para ver»: Estação original do Cais do Sodré.",
+     "old": " alt=\"Estação original do Cais do Sodré (fotografia da década de 1890, publicada pela CP em 1996)\" loading=\"lazy\"><figcaption>Estação original do Cais do Sodré (fotografia da década de 1890, publicada pela CP em 1996). Domínio público. <a href=\"https://pedrohfernandes-klk.github.io/pt/m6/licao-m6-f07/\">Lição M6-F07</a></figcaption></figure>",
+     "new": " alt=\"Estação original do Cais do Sodré (fotografia da década de 1890, publicada pela CP em 1996)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Estação original do Cais do Sodré\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Estação original do Cais do Sodré (fotografia da década de 1890, publicada pela CP em 1996). Domínio público.</p></details><figcaption>Estação original do Cais do Sodré. <a href=\"https://pedrohfernandes-klk.github.io/pt/m6/licao-m6-f07/\">Lição M6-F07</a></figcaption></figure>",
+     "occurrences": 1
+    },
+    {
+     "location": "A peça comum do «i» (assets/info-i.css e assets/info-i.js)",
+     "old": "</head>",
+     "new": "<link rel=\"stylesheet\" href=\"../../assets/info-i.css?v=20261105\"><script defer src=\"../../assets/info-i.js?v=20261105\"></script></head>",
+     "occurrences": 1
+    }
+   ]
+  },
   "m7/licao-m7-f01/index.html": {
    "base_sha256_lf": "4c4b808e7f1e935221072ef4e89f5b034a4efc2feb35bdc7aa9b9e428c42409f",
    "after_sha256_lf": "255a95ed5f546e22406b66e37e2d69614ff818647cd93a263ba24b64eab54659",
@@ -830,14 +1484,326 @@
     }
    ]
   },
+  "m7/m7-fingidor-maquina/index.html": {
+   "base_sha256_lf": "1078f9f732af032cd6ab2b0e011db6f9bd4088f0882869af3d4a30b1be394589",
+   "after_sha256_lf": "f5245020e74996568b4662527e432d9feb66f12d297781087ff4cd14c411c025",
+   "edits": [
+    {
+     "location": "P14, «Pensar devagar»: o fr-cred passa para o «i»; o fr-leg fica",
+     "old": "<figure class=\\\"fig-rev \\\"><span class=\\\"fr-moldura\\\"><img src=\\\"https://pedrohfernandes-klk.github.io/pt/img/fontes/pessoa-1929-copo.jpg\\\" alt=\\\"A fotografia mais conhecida do poeta, seis anos antes de morrer.\\\" loading=\\\"lazy\\\" decoding=\\\"async\\\" style=\\\"object-position:50% 20%\\\"></span><figcaption><span class=\\\"fr-leg\\\">Fernando Pessoa em 1929: o fingidor, fotografado.</span> <span class=\\\"fr-cred\\\">autor não identificado (fotografia de 1929). Domínio público. <a href=\\\"https://commons.wikimedia.org/wiki/File:Pessoacopo.jpg\\\" rel=\\\"noopener\\\">commons.wikimedia.org</a></span></figcaption></figure>",
+     "new": "<figure class=\\\"fig-rev \\\"><div class=\\\"fr-moldura com-i\\\"><img src=\\\"https://pedrohfernandes-klk.github.io/pt/img/fontes/pessoa-1929-copo.jpg\\\" alt=\\\"A fotografia mais conhecida do poeta, seis anos antes de morrer.\\\" loading=\\\"lazy\\\" decoding=\\\"async\\\" style=\\\"object-position:50% 20%\\\"><details class=\\\"info-i\\\" name=\\\"info-i\\\"><summary aria-label=\\\"Créditos da imagem\\\"><span aria-hidden=\\\"true\\\">i</span></summary><p class=\\\"info-i-texto\\\">Autor não identificado (fotografia de 1929). Domínio público. <a href=\\\"https://commons.wikimedia.org/wiki/File:Pessoacopo.jpg\\\" rel=\\\"noopener\\\">commons.wikimedia.org</a></p></details></div><figcaption><span class=\\\"fr-leg\\\">Fernando Pessoa em 1929: o fingidor, fotografado.</span></figcaption></figure>",
+     "occurrences": 1
+    },
+    {
+     "location": "A peça comum do «i» (assets/info-i.css e assets/info-i.js)",
+     "old": "</head>",
+     "new": "<link rel=\"stylesheet\" href=\"../../assets/info-i.css?v=20261105\"><script defer src=\"../../assets/info-i.js?v=20261105\"></script></head>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m7/m7-quatro-vozes-um-problema/index.html": {
+   "base_sha256_lf": "2b8b6bbe6efda569cd14afd19724331da349bde38fb8f0ff684281067a580082",
+   "after_sha256_lf": "31797392674f27c05211d7c4727cc6ea40632b62f7f03b012423089af60c08c1",
+   "edits": [
+    {
+     "location": "P14, «Pensar devagar»: o fr-cred passa para o «i»; o fr-leg fica",
+     "old": "<figure class=\\\"fig-rev inteira\\\"><span class=\\\"fr-moldura\\\"><img src=\\\"https://pedrohfernandes-klk.github.io/pt/img/fontes/orpheu-2-1915.jpg\\\" alt=\\\"A revista que trouxe o Modernismo a Portugal.\\\" loading=\\\"lazy\\\" decoding=\\\"async\\\"></span><figcaption><span class=\\\"fr-leg\\\">Orpheu, n.º 2, 1915: a revista onde as vozes saíram juntas.</span> <span class=\\\"fr-cred\\\">revista Orpheu. Domínio público. <a href=\\\"https://commons.wikimedia.org/wiki/File:Orpheu_2_-_1915.jpg\\\" rel=\\\"noopener\\\">commons.wikimedia.org</a></span></figcaption></figure>",
+     "new": "<figure class=\\\"fig-rev inteira\\\"><div class=\\\"fr-moldura com-i\\\"><img src=\\\"https://pedrohfernandes-klk.github.io/pt/img/fontes/orpheu-2-1915.jpg\\\" alt=\\\"A revista que trouxe o Modernismo a Portugal.\\\" loading=\\\"lazy\\\" decoding=\\\"async\\\"><details class=\\\"info-i\\\" name=\\\"info-i\\\"><summary aria-label=\\\"Créditos da imagem\\\"><span aria-hidden=\\\"true\\\">i</span></summary><p class=\\\"info-i-texto\\\">Revista Orpheu. Domínio público. <a href=\\\"https://commons.wikimedia.org/wiki/File:Orpheu_2_-_1915.jpg\\\" rel=\\\"noopener\\\">commons.wikimedia.org</a></p></details></div><figcaption><span class=\\\"fr-leg\\\">Orpheu, n.º 2, 1915: a revista onde as vozes saíram juntas.</span></figcaption></figure>",
+     "occurrences": 1
+    },
+    {
+     "location": "A peça comum do «i» (assets/info-i.css e assets/info-i.js)",
+     "old": "</head>",
+     "new": "<link rel=\"stylesheet\" href=\"../../assets/info-i.css?v=20261105\"><script defer src=\"../../assets/info-i.js?v=20261105\"></script></head>",
+     "occurrences": 1
+    }
+   ]
+  },
   "m7/mapa-do-modulo-m7/index.html": {
    "base_sha256_lf": "47414ca258fa7259d46b90812819a75682716925fbb9375146c7e11168238c74",
-   "after_sha256_lf": "25f6e6c2a7553f0b685f5dfb67cc6fff4471c8fee5036ca84fe0d340963da74e",
+   "after_sha256_lf": "cffa0845228835b02afa9def4b5f3ec792a801ad5b14acfdbcd167394bc1e552",
    "edits": [
     {
      "location": "P10, Pessoa na galeria «Para ver»: o crédito passa para o «i»; o rótulo e «Lição M7-F01» ficam",
      "old": "alt=\"Fernando Pessoa de chapéu e óculos, cerca de 1914\" loading=\"lazy\"><figcaption>Fernando Pessoa, cerca de 1914. <a href=\"https://pedrohfernandes-klk.github.io/pt/m7/licao-m7-f01/\">Lição M7-F01</a><span class=\"tabela\">Fotógrafo não identificado; retrato de Fernando Pessoa com chapéu; cerca de 1914 (data incerta); reprodução no Wikimedia Commons, original sem instituição indicada; <a href=\"https://commons.wikimedia.org/wiki/File:PessoaChapeu.jpg\">domínio público</a>.</span></figcaption>",
      "new": "alt=\"Fernando Pessoa de chapéu e óculos, cerca de 1914\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Fernando Pessoa\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Fotógrafo não identificado; retrato de Fernando Pessoa com chapéu; cerca de 1914 (data incerta); reprodução no Wikimedia Commons, original sem instituição indicada; <a href=\"https://commons.wikimedia.org/wiki/File:PessoaChapeu.jpg\">domínio público</a>.</p></details><figcaption>Fernando Pessoa, cerca de 1914. <a href=\"https://pedrohfernandes-klk.github.io/pt/m7/licao-m7-f01/\">Lição M7-F01</a></figcaption>",
+     "occurrences": 1
+    },
+    {
+     "location": "P16, galeria «Para ver»: Casa Fernando Pessoa.",
+     "old": " alt=\"Casa Fernando Pessoa (fotografia de Lijealso, 2008)\" loading=\"lazy\"><figcaption>Casa Fernando Pessoa (fotografia de Lijealso, 2008). CC BY 3.0. <a href=\"https://pedrohfernandes-klk.github.io/pt/m7/licao-m7-f04/\">Lição M7-F04</a></figcaption></figure>",
+     "new": " alt=\"Casa Fernando Pessoa (fotografia de Lijealso, 2008)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Casa Fernando Pessoa\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Casa Fernando Pessoa (fotografia de Lijealso, 2008). <a rel=\"license\" href=\"https://creativecommons.org/licenses/by/3.0/deed.pt\">CC BY 3.0</a>.</p></details><figcaption>Casa Fernando Pessoa. <a href=\"https://pedrohfernandes-klk.github.io/pt/m7/licao-m7-f04/\">Lição M7-F04</a></figcaption></figure>",
+     "occurrences": 1
+    },
+    {
+     "location": "P16, galeria «Para ver»: «Tabacaria» na Presença, n.º 39, julho de 1933.",
+     "old": " alt=\"«Tabacaria» na Presença, n.º 39, julho de 1933 (fotografia de Pmms2005)\" loading=\"lazy\"><figcaption>«Tabacaria» na Presença, n.º 39, julho de 1933 (fotografia de Pmms2005). CC BY-SA 4.0. <a href=\"https://pedrohfernandes-klk.github.io/pt/m7/licao-m7-f06/\">Lição M7-F06</a></figcaption></figure>",
+     "new": " alt=\"«Tabacaria» na Presença, n.º 39, julho de 1933 (fotografia de Pmms2005)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: «Tabacaria» na Presença, n.º 39, julho de 1933\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">«Tabacaria» na Presença, n.º 39, julho de 1933 (fotografia de Pmms2005). <a rel=\"license\" href=\"https://creativecommons.org/licenses/by-sa/4.0/deed.pt\">CC BY-SA 4.0</a>.</p></details><figcaption>«Tabacaria» na Presença, n.º 39, julho de 1933. <a href=\"https://pedrohfernandes-klk.github.io/pt/m7/licao-m7-f06/\">Lição M7-F06</a></figcaption></figure>",
+     "occurrences": 1
+    },
+    {
+     "location": "P16, galeria «Para ver»: Mensagem, 1.ª edição.",
+     "old": " alt=\"Mensagem, 1.ª edição (1934)\" loading=\"lazy\"><figcaption>Mensagem, 1.ª edição (1934). Domínio público. <a href=\"https://pedrohfernandes-klk.github.io/pt/m7/licao-m7-f08/\">Lição M7-F08</a></figcaption></figure>",
+     "new": " alt=\"Mensagem, 1.ª edição (1934)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Mensagem, 1.ª edição\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Mensagem, 1.ª edição (1934). Domínio público.</p></details><figcaption>Mensagem, 1.ª edição. <a href=\"https://pedrohfernandes-klk.github.io/pt/m7/licao-m7-f08/\">Lição M7-F08</a></figcaption></figure>",
+     "occurrences": 1
+    },
+    {
+     "location": "P16, galeria «Para ver»: Fernando Pessoa em 1929.",
+     "old": " alt=\"Fernando Pessoa em 1929 (fotografia, autor não identificado)\" loading=\"lazy\"><figcaption>Fernando Pessoa em 1929 (fotografia, autor não identificado). Domínio público. <a href=\"https://pedrohfernandes-klk.github.io/pt/m7/licao-m7-f01/\">Lição M7-F01</a></figcaption></figure>",
+     "new": " alt=\"Fernando Pessoa em 1929 (fotografia, autor não identificado)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Fernando Pessoa em 1929\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Fernando Pessoa em 1929 (fotografia, autor não identificado). Domínio público.</p></details><figcaption>Fernando Pessoa em 1929. <a href=\"https://pedrohfernandes-klk.github.io/pt/m7/licao-m7-f01/\">Lição M7-F01</a></figcaption></figure>",
+     "occurrences": 1
+    },
+    {
+     "location": "P16, galeria «Para ver»: Revista Orpheu, n.º 2 (1915), capa.",
+     "old": " alt=\"Revista Orpheu, n.º 2 (1915), capa\" loading=\"lazy\"><figcaption>Revista Orpheu, n.º 2 (1915), capa. Domínio público. <a href=\"https://pedrohfernandes-klk.github.io/pt/m7/licao-m7-f01/\">Lição M7-F01</a></figcaption></figure>",
+     "new": " alt=\"Revista Orpheu, n.º 2 (1915), capa\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Revista Orpheu, n.º 2 (1915), capa\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Revista Orpheu, n.º 2 (1915), capa. Domínio público.</p></details><figcaption>Revista Orpheu, n.º 2 (1915), capa. <a href=\"https://pedrohfernandes-klk.github.io/pt/m7/licao-m7-f01/\">Lição M7-F01</a></figcaption></figure>",
+     "occurrences": 1
+    },
+    {
+     "location": "P16, galeria «Para ver»: «Tabacaria» na revista Presença, n.º 39 (julho de 1933), pág",
+     "old": " alt=\"«Tabacaria» na revista Presença, n.º 39 (julho de 1933), página 2\" loading=\"lazy\"><figcaption>«Tabacaria» na revista Presença, n.º 39 (julho de 1933), página 2. Domínio público. <a href=\"https://pedrohfernandes-klk.github.io/pt/m7/licao-m7-f06/\">Lição M7-F06</a></figcaption></figure>",
+     "new": " alt=\"«Tabacaria» na revista Presença, n.º 39 (julho de 1933), página 2\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: «Tabacaria» na revista Presença, n.º 39 (julho de 1933), página 2\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">«Tabacaria» na revista Presença, n.º 39 (julho de 1933), página 2. Domínio público.</p></details><figcaption>«Tabacaria» na revista Presença, n.º 39 (julho de 1933), página 2. <a href=\"https://pedrohfernandes-klk.github.io/pt/m7/licao-m7-f06/\">Lição M7-F06</a></figcaption></figure>",
+     "occurrences": 1
+    },
+    {
+     "location": "P16, galeria «Para ver»: Café A Brasileira, Chiado.",
+     "old": " alt=\"Café A Brasileira, Chiado (fotografia de dirk.olbertz, 2010)\" loading=\"lazy\"><figcaption>Café A Brasileira, Chiado (fotografia de dirk.olbertz, 2010). CC BY 2.0. <a href=\"https://pedrohfernandes-klk.github.io/pt/m7/licao-m7-f01/\">Lição M7-F01</a></figcaption></figure>",
+     "new": " alt=\"Café A Brasileira, Chiado (fotografia de dirk.olbertz, 2010)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Café A Brasileira, Chiado\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Café A Brasileira, Chiado (fotografia de dirk.olbertz, 2010). <a rel=\"license\" href=\"https://creativecommons.org/licenses/by/2.0/deed.pt\">CC BY 2.0</a>.</p></details><figcaption>Café A Brasileira, Chiado. <a href=\"https://pedrohfernandes-klk.github.io/pt/m7/licao-m7-f01/\">Lição M7-F01</a></figcaption></figure>",
+     "occurrences": 1
+    },
+    {
+     "location": "P16, galeria «Para ver»: Condução do rebanho.",
+     "old": " alt=\"Condução do rebanho (Silva Porto, 1893, Museu Soares dos Reis; fotografia de Joseolgon, 2016)\" loading=\"lazy\"><figcaption>Condução do rebanho (Silva Porto, 1893, Museu Soares dos Reis; fotografia de Joseolgon, 2016). CC BY-SA 4.0. <a href=\"https://pedrohfernandes-klk.github.io/pt/m7/licao-m7-f04/\">Lição M7-F04</a></figcaption></figure>",
+     "new": " alt=\"Condução do rebanho (Silva Porto, 1893, Museu Soares dos Reis; fotografia de Joseolgon, 2016)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Condução do rebanho\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Condução do rebanho (Silva Porto, 1893, Museu Soares dos Reis; fotografia de Joseolgon, 2016). <a rel=\"license\" href=\"https://creativecommons.org/licenses/by-sa/4.0/deed.pt\">CC BY-SA 4.0</a>.</p></details><figcaption>Condução do rebanho. <a href=\"https://pedrohfernandes-klk.github.io/pt/m7/licao-m7-f04/\">Lição M7-F04</a></figcaption></figure>",
+     "occurrences": 1
+    },
+    {
+     "location": "P16, galeria «Para ver»: Passagem de gado.",
+     "old": " alt=\"Passagem de gado (João Cristino da Silva, 1867, MNAC; fotografia de Pedro Ribeiro Simões, 2019)\" loading=\"lazy\"><figcaption>Passagem de gado (João Cristino da Silva, 1867, MNAC; fotografia de Pedro Ribeiro Simões, 2019). CC BY 2.0. <a href=\"https://pedrohfernandes-klk.github.io/pt/m7/licao-m7-f04/\">Lição M7-F04</a></figcaption></figure>",
+     "new": " alt=\"Passagem de gado (João Cristino da Silva, 1867, MNAC; fotografia de Pedro Ribeiro Simões, 2019)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Passagem de gado\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Passagem de gado (João Cristino da Silva, 1867, MNAC; fotografia de Pedro Ribeiro Simões, 2019). <a rel=\"license\" href=\"https://creativecommons.org/licenses/by/2.0/deed.pt\">CC BY 2.0</a>.</p></details><figcaption>Passagem de gado. <a href=\"https://pedrohfernandes-klk.github.io/pt/m7/licao-m7-f04/\">Lição M7-F04</a></figcaption></figure>",
+     "occurrences": 1
+    },
+    {
+     "location": "P16, galeria «Para ver»: Horácio, gravura no frontispício das Oeuvres.",
+     "old": " alt=\"Horácio, gravura no frontispício das Oeuvres (1735, Rijksmuseum)\" loading=\"lazy\"><figcaption>Horácio, gravura no frontispício das Oeuvres (1735, Rijksmuseum). CC0. <a href=\"https://pedrohfernandes-klk.github.io/pt/m7/licao-m7-f05/\">Lição M7-F05</a></figcaption></figure>",
+     "new": " alt=\"Horácio, gravura no frontispício das Oeuvres (1735, Rijksmuseum)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Horácio, gravura no frontispício das Oeuvres\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Horácio, gravura no frontispício das Oeuvres (1735, Rijksmuseum). CC0.</p></details><figcaption>Horácio, gravura no frontispício das Oeuvres. <a href=\"https://pedrohfernandes-klk.github.io/pt/m7/licao-m7-f05/\">Lição M7-F05</a></figcaption></figure>",
+     "occurrences": 1
+    },
+    {
+     "location": "P16, galeria «Para ver»: Busto de Epicuro, Altes Museum, Berlim.",
+     "old": " alt=\"Busto de Epicuro, Altes Museum, Berlim (fotografia de Yair Haklai, 2019)\" loading=\"lazy\"><figcaption>Busto de Epicuro, Altes Museum, Berlim (fotografia de Yair Haklai, 2019). Domínio público. <a href=\"https://pedrohfernandes-klk.github.io/pt/m7/licao-m7-f05/\">Lição M7-F05</a></figcaption></figure>",
+     "new": " alt=\"Busto de Epicuro, Altes Museum, Berlim (fotografia de Yair Haklai, 2019)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Busto de Epicuro, Altes Museum, Berlim\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Busto de Epicuro, Altes Museum, Berlim (fotografia de Yair Haklai, 2019). Domínio público.</p></details><figcaption>Busto de Epicuro, Altes Museum, Berlim. <a href=\"https://pedrohfernandes-klk.github.io/pt/m7/licao-m7-f05/\">Lição M7-F05</a></figcaption></figure>",
+     "occurrences": 1
+    },
+    {
+     "location": "P16, galeria «Para ver»: Busto do «Pseudo-Séneca», British Museum.",
+     "old": " alt=\"Busto do «Pseudo-Séneca», British Museum (fotografia de Marie-Lan Nguyen, 2011)\" loading=\"lazy\"><figcaption>Busto do «Pseudo-Séneca», British Museum (fotografia de Marie-Lan Nguyen, 2011). Domínio público. <a href=\"https://pedrohfernandes-klk.github.io/pt/m7/licao-m7-f05/\">Lição M7-F05</a></figcaption></figure>",
+     "new": " alt=\"Busto do «Pseudo-Séneca», British Museum (fotografia de Marie-Lan Nguyen, 2011)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Busto do «Pseudo-Séneca», British Museum\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Busto do «Pseudo-Séneca», British Museum (fotografia de Marie-Lan Nguyen, 2011). Domínio público.</p></details><figcaption>Busto do «Pseudo-Séneca», British Museum. <a href=\"https://pedrohfernandes-klk.github.io/pt/m7/licao-m7-f05/\">Lição M7-F05</a></figcaption></figure>",
+     "occurrences": 1
+    },
+    {
+     "location": "P16, galeria «Para ver»: Tavira, ponte sobre o Gilão.",
+     "old": " alt=\"Tavira, ponte sobre o Gilão (fotografia de Marc Ryckaert, 2007)\" loading=\"lazy\"><figcaption>Tavira, ponte sobre o Gilão (fotografia de Marc Ryckaert, 2007). CC BY-SA 4.0. <a href=\"https://pedrohfernandes-klk.github.io/pt/m7/licao-m7-f06/\">Lição M7-F06</a></figcaption></figure>",
+     "new": " alt=\"Tavira, ponte sobre o Gilão (fotografia de Marc Ryckaert, 2007)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Tavira, ponte sobre o Gilão\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Tavira, ponte sobre o Gilão (fotografia de Marc Ryckaert, 2007). <a rel=\"license\" href=\"https://creativecommons.org/licenses/by-sa/4.0/deed.pt\">CC BY-SA 4.0</a>.</p></details><figcaption>Tavira, ponte sobre o Gilão. <a href=\"https://pedrohfernandes-klk.github.io/pt/m7/licao-m7-f06/\">Lição M7-F06</a></figcaption></figure>",
+     "occurrences": 1
+    },
+    {
+     "location": "P16, galeria «Para ver»: A cidade que sobe.",
+     "old": " alt=\"A cidade que sobe (Umberto Boccioni, 1910, MoMA)\" loading=\"lazy\"><figcaption>A cidade que sobe (Umberto Boccioni, 1910, MoMA). Domínio público. <a href=\"https://pedrohfernandes-klk.github.io/pt/m7/licao-m7-f06/\">Lição M7-F06</a></figcaption></figure>",
+     "new": " alt=\"A cidade que sobe (Umberto Boccioni, 1910, MoMA)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: A cidade que sobe\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">A cidade que sobe (Umberto Boccioni, 1910, MoMA). Domínio público.</p></details><figcaption>A cidade que sobe. <a href=\"https://pedrohfernandes-klk.github.io/pt/m7/licao-m7-f06/\">Lição M7-F06</a></figcaption></figure>",
+     "occurrences": 1
+    },
+    {
+     "location": "P16, galeria «Para ver»: Casa Havaneza, tabacaria do Chiado desde 1864.",
+     "old": " alt=\"Casa Havaneza, tabacaria do Chiado desde 1864 (fotografia de Martapgoncalves, 2020)\" loading=\"lazy\"><figcaption>Casa Havaneza, tabacaria do Chiado desde 1864 (fotografia de Martapgoncalves, 2020). CC BY-SA 4.0. <a href=\"https://pedrohfernandes-klk.github.io/pt/m7/licao-m7-f06/\">Lição M7-F06</a></figcaption></figure>",
+     "new": " alt=\"Casa Havaneza, tabacaria do Chiado desde 1864 (fotografia de Martapgoncalves, 2020)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Casa Havaneza, tabacaria do Chiado desde 1864\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Casa Havaneza, tabacaria do Chiado desde 1864 (fotografia de Martapgoncalves, 2020). <a rel=\"license\" href=\"https://creativecommons.org/licenses/by-sa/4.0/deed.pt\">CC BY-SA 4.0</a>.</p></details><figcaption>Casa Havaneza, tabacaria do Chiado desde 1864. <a href=\"https://pedrohfernandes-klk.github.io/pt/m7/licao-m7-f06/\">Lição M7-F06</a></figcaption></figure>",
+     "occurrences": 1
+    },
+    {
+     "location": "P16, galeria «Para ver»: D. Sebastião.",
+     "old": " alt=\"D. Sebastião (Cristóvão de Morais, c. 1571-1574, MNAA)\" loading=\"lazy\"><figcaption>D. Sebastião (Cristóvão de Morais, c. 1571-1574, MNAA). Domínio público. <a href=\"https://pedrohfernandes-klk.github.io/pt/m7/licao-m7-f08/\">Lição M7-F08</a></figcaption></figure>",
+     "new": " alt=\"D. Sebastião (Cristóvão de Morais, c. 1571-1574, MNAA)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: D. Sebastião\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">D. Sebastião (Cristóvão de Morais, <span class=\"nb\">c. 1571-1574</span>, MNAA). Domínio público.</p></details><figcaption>D. Sebastião. <a href=\"https://pedrohfernandes-klk.github.io/pt/m7/licao-m7-f08/\">Lição M7-F08</a></figcaption></figure>",
+     "occurrences": 1
+    },
+    {
+     "location": "P16, galeria «Para ver»: Figura identificada como o Infante D. Henrique, Painéis de S",
+     "old": " alt=\"Figura identificada como o Infante D. Henrique, Painéis de São Vicente (Nuno Gonçalves, século XV)\" loading=\"lazy\"><figcaption>Figura identificada como o Infante D. Henrique, Painéis de São Vicente (Nuno Gonçalves, século XV). Domínio público. <a href=\"https://pedrohfernandes-klk.github.io/pt/m7/licao-m7-f08/\">Lição M7-F08</a></figcaption></figure>",
+     "new": " alt=\"Figura identificada como o Infante D. Henrique, Painéis de São Vicente (Nuno Gonçalves, século XV)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Figura identificada como o Infante D. Henrique, Painéis de São Vicente\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Figura identificada como o Infante D. Henrique, Painéis de São Vicente (Nuno Gonçalves, século XV). Domínio público.</p></details><figcaption>Figura identificada como o Infante D. Henrique, Painéis de São Vicente. <a href=\"https://pedrohfernandes-klk.github.io/pt/m7/licao-m7-f08/\">Lição M7-F08</a></figcaption></figure>",
+     "occurrences": 1
+    },
+    {
+     "location": "P16, galeria «Para ver»: Aparição do Adamastor.",
+     "old": " alt=\"Aparição do Adamastor (Carlos Reis, antes de 1940)\" loading=\"lazy\"><figcaption>Aparição do Adamastor (Carlos Reis, antes de 1940). Domínio público. <a href=\"https://pedrohfernandes-klk.github.io/pt/m7/licao-m7-f08/\">Lição M7-F08</a></figcaption></figure>",
+     "new": " alt=\"Aparição do Adamastor (Carlos Reis, antes de 1940)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Aparição do Adamastor\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Aparição do Adamastor (Carlos Reis, antes de 1940). Domínio público.</p></details><figcaption>Aparição do Adamastor. <a href=\"https://pedrohfernandes-klk.github.io/pt/m7/licao-m7-f08/\">Lição M7-F08</a></figcaption></figure>",
+     "occurrences": 1
+    },
+    {
+     "location": "A peça comum do «i» (assets/info-i.css e assets/info-i.js)",
+     "old": "</head>",
+     "new": "<link rel=\"stylesheet\" href=\"../../assets/info-i.css?v=20261105\"><script defer src=\"../../assets/info-i.js?v=20261105\"></script></head>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m7/olhar-pessoa/index.html": {
+   "base_sha256_lf": "ca02fe60bfad4b6ceec8b43cf04e487062f81a7a117ce8bd9cd251f5ad3f2294",
+   "after_sha256_lf": "6a4d70ce40b01c669aa606f96bb766015269a734359ceabd2768ad9f46dd7b08",
+   "edits": [
+    {
+     "location": "P15, motor do «Olhar» (imagem()): a imagem e o «i» com o crédito e a ligação creditoUrl",
+     "old": "function imagem(){return E.imagemData?'<img class=\"img\" alt=\"'+esc(E.titulo)+'\" src=\"'+E.imagemData+'\"><p class=\"credito\">'+esc(E.credito)+'</p>':\"\"}",
+     "new": "/* 05/11/2026: decisão 153. O crédito da imagem vive num «i» (assets/info-i.css e assets/info-i.js), com a ligação para a imagem de origem (creditoUrl). */function creditoI(){var c=it(E.credito),u=E.creditoUrl,a;if(!u)return c;a='<a href=\"'+esc(u)+'\" rel=\"noopener\">';return c.indexOf(\"Wikimedia Commons\")>-1?c.replace(\"Wikimedia Commons\",a+\"Wikimedia Commons</a>\"):c+\" \"+a+esc(u.replace(/^https?:\\/\\/([^\\/]+).*$/,\"$1\"))+\"</a>\"}function imagem(){return E.imagemData?'<div class=\"com-i olhar-com-i\"><img class=\"img\" alt=\"'+esc(E.titulo)+'\" src=\"'+E.imagemData+'\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">'+creditoI()+'</p></details></div>':\"\"}",
+     "occurrences": 1
+    },
+    {
+     "location": "P15, campo credito: os pontos médios passam a pontos finais",
+     "old": "\"credito\":\"Fernando Pessoa, fotografia de 1914 · domínio público · Wikimedia Commons",
+     "new": "\"credito\":\"Fernando Pessoa, fotografia de 1914. Domínio público. Wikimedia Commons.",
+     "occurrences": 1
+    },
+    {
+     "location": "A peça comum do «i» (assets/info-i.css e assets/info-i.js)",
+     "old": "</head>",
+     "new": "<link rel=\"stylesheet\" href=\"../../assets/info-i.css?v=20261105\"><script defer src=\"../../assets/info-i.js?v=20261105\"></script><style>/* 05/11/2026: decisão 153. O «i» da imagem do exercício: a moldura toma a largura da imagem, centrada. */#palco .olhar-com-i{width:fit-content;max-width:100%;margin:0 auto}</style></head>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m8/m8-poema-testemunha/index.html": {
+   "base_sha256_lf": "d4f45e68eb0b2c331a041ac51c32e02424c3a1580c9f4492340ecd8267097242",
+   "after_sha256_lf": "068396fdb25034a7599315b82b229b5b81e91cc790dd3653ab3443f3cd0d1167",
+   "edits": [
+    {
+     "location": "P14, «Pensar devagar»: o fr-cred passa para o «i»; o fr-leg fica",
+     "old": "<figure class=\\\"fig-rev \\\"><span class=\\\"fr-moldura\\\"><img src=\\\"https://pedrohfernandes-klk.github.io/pt/img/fontes/goya-tres-de-maio-1814.jpg\\\" alt=\\\"O quadro de que parte a carta de Jorge de Sena aos filhos.\\\" loading=\\\"lazy\\\" decoding=\\\"async\\\" style=\\\"object-position:45% 45%\\\"></span><figcaption><span class=\\\"fr-leg\\\">Goya, 3 de maio de 1808: a pintura de que parte o poema de Jorge de Sena.</span> <span class=\\\"fr-cred\\\">Domínio público. <a href=\\\"https://commons.wikimedia.org/wiki/File:El_tres_de_mayo_de_1808_en_Madrid.jpg\\\" rel=\\\"noopener\\\">commons.wikimedia.org</a></span></figcaption></figure>",
+     "new": "<figure class=\\\"fig-rev \\\"><div class=\\\"fr-moldura com-i\\\"><img src=\\\"https://pedrohfernandes-klk.github.io/pt/img/fontes/goya-tres-de-maio-1814.jpg\\\" alt=\\\"O quadro de que parte a carta de Jorge de Sena aos filhos.\\\" loading=\\\"lazy\\\" decoding=\\\"async\\\" style=\\\"object-position:45% 45%\\\"><details class=\\\"info-i\\\" name=\\\"info-i\\\"><summary aria-label=\\\"Créditos da imagem\\\"><span aria-hidden=\\\"true\\\">i</span></summary><p class=\\\"info-i-texto\\\">Domínio público. <a href=\\\"https://commons.wikimedia.org/wiki/File:El_tres_de_mayo_de_1808_en_Madrid.jpg\\\" rel=\\\"noopener\\\">commons.wikimedia.org</a></p></details></div><figcaption><span class=\\\"fr-leg\\\">Goya, 3 de maio de 1808: a pintura de que parte o poema de Jorge de Sena.</span></figcaption></figure>",
+     "occurrences": 1
+    },
+    {
+     "location": "A peça comum do «i» (assets/info-i.css e assets/info-i.js)",
+     "old": "</head>",
+     "new": "<link rel=\"stylesheet\" href=\"../../assets/info-i.css?v=20261105\"><script defer src=\"../../assets/info-i.js?v=20261105\"></script></head>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m8/mapa-do-modulo-m8/index.html": {
+   "base_sha256_lf": "308bf3f70a3738050cbdbac572d8eada1fefb3adcce55d20893e1ffc96af8189",
+   "after_sha256_lf": "4405ed48f86831db444ef7b740f15592c79bf072f6eade344cb51f633c510c8f",
+   "edits": [
+    {
+     "location": "P16, galeria «Para ver»: Os fuzilamentos de 3 de maio de 1808.",
+     "old": " alt=\"Os fuzilamentos de 3 de maio de 1808 (Francisco de Goya, 1814, Museo del Prado)\" loading=\"lazy\"><figcaption>Os fuzilamentos de 3 de maio de 1808 (Francisco de Goya, 1814, Museo del Prado). Domínio público. <a href=\"https://pedrohfernandes-klk.github.io/pt/m8/licao-m8-f01/\">Lição M8-F01</a></figcaption></figure>",
+     "new": " alt=\"Os fuzilamentos de 3 de maio de 1808 (Francisco de Goya, 1814, Museo del Prado)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Os fuzilamentos de 3 de maio de 1808\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Os fuzilamentos de 3 de maio de 1808 (Francisco de Goya, 1814, Museo del Prado). Domínio público.</p></details><figcaption>Os fuzilamentos de 3 de maio de 1808. <a href=\"https://pedrohfernandes-klk.github.io/pt/m8/licao-m8-f01/\">Lição M8-F01</a></figcaption></figure>",
+     "occurrences": 1
+    },
+    {
+     "location": "P16, galeria «Para ver»: Rua do Alecrim, Lisboa.",
+     "old": " alt=\"Rua do Alecrim, Lisboa (fotografia de Roger Wollstadt, 1968)\" loading=\"lazy\"><figcaption>Rua do Alecrim, Lisboa (fotografia de Roger Wollstadt, 1968). CC BY-SA 2.0. <a href=\"https://pedrohfernandes-klk.github.io/pt/m8/licao-m8-f08/\">Lição M8-F08</a></figcaption></figure>",
+     "new": " alt=\"Rua do Alecrim, Lisboa (fotografia de Roger Wollstadt, 1968)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Rua do Alecrim, Lisboa\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Rua do Alecrim, Lisboa (fotografia de Roger Wollstadt, 1968). <a rel=\"license\" href=\"https://creativecommons.org/licenses/by-sa/2.0/deed.pt\">CC BY-SA 2.0</a>.</p></details><figcaption>Rua do Alecrim, Lisboa. <a href=\"https://pedrohfernandes-klk.github.io/pt/m8/licao-m8-f08/\">Lição M8-F08</a></figcaption></figure>",
+     "occurrences": 1
+    },
+    {
+     "location": "P16, galeria «Para ver»: Estação do Rossio, Lisboa.",
+     "old": " alt=\"Estação do Rossio, Lisboa (fotografia de Jorge Franganillo, 2024)\" loading=\"lazy\"><figcaption>Estação do Rossio, Lisboa (fotografia de Jorge Franganillo, 2024). CC BY 2.0. <a href=\"https://pedrohfernandes-klk.github.io/pt/m8/licao-m8-f08/\">Lição M8-F08</a></figcaption></figure>",
+     "new": " alt=\"Estação do Rossio, Lisboa (fotografia de Jorge Franganillo, 2024)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Estação do Rossio, Lisboa\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Estação do Rossio, Lisboa (fotografia de Jorge Franganillo, 2024). <a rel=\"license\" href=\"https://creativecommons.org/licenses/by/2.0/deed.pt\">CC BY 2.0</a>.</p></details><figcaption>Estação do Rossio, Lisboa. <a href=\"https://pedrohfernandes-klk.github.io/pt/m8/licao-m8-f08/\">Lição M8-F08</a></figcaption></figure>",
+     "occurrences": 1
+    },
+    {
+     "location": "P16, galeria «Para ver»: Relógio de bolso.",
+     "old": " alt=\"Relógio de bolso (Robert Roskell, 1820-1821, The Met)\" loading=\"lazy\"><figcaption>Relógio de bolso (Robert Roskell, 1820-1821, The Met). Domínio público (The Met, Open Access). <a href=\"https://pedrohfernandes-klk.github.io/pt/m8/licao-m8-f08/\">Lição M8-F08</a></figcaption></figure>",
+     "new": " alt=\"Relógio de bolso (Robert Roskell, 1820-1821, The Met)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Relógio de bolso\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Relógio de bolso (Robert Roskell, <span class=\"nb\">1820-1821</span>, The Met). Domínio público (The Met, Open Access).</p></details><figcaption>Relógio de bolso. <a href=\"https://pedrohfernandes-klk.github.io/pt/m8/licao-m8-f08/\">Lição M8-F08</a></figcaption></figure>",
+     "occurrences": 1
+    },
+    {
+     "location": "A peça comum do «i» (assets/info-i.css e assets/info-i.js)",
+     "old": "</head>",
+     "new": "<link rel=\"stylesheet\" href=\"../../assets/info-i.css?v=20261105\"><script defer src=\"../../assets/info-i.js?v=20261105\"></script></head>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m9/m9-de-quem-e-o-convento/index.html": {
+   "base_sha256_lf": "32fa33017104d277320e0d2608c4a22eb558b86fd6b21bf221e6e85a382890af",
+   "after_sha256_lf": "81e2cc00b9b5a363315710ace1170746574d4822b7d9f05e864e435c991fd8dd",
+   "edits": [
+    {
+     "location": "P14, «Pensar devagar»: o fr-cred passa para o «i»; o fr-leg fica",
+     "old": "<figure class=\\\"fig-rev \\\"><span class=\\\"fr-moldura\\\"><img src=\\\"https://pedrohfernandes-klk.github.io/pt/img/fontes/mafra-palacio-convento.jpg\\\" alt=\\\"O convento que D. João V prometeu e milhares de homens carregaram.\\\" loading=\\\"lazy\\\" decoding=\\\"async\\\" style=\\\"object-position:50% 55%\\\"></span><figcaption><span class=\\\"fr-leg\\\">O Palácio-Convento de Mafra: de quem é esta pedra?</span> <span class=\\\"fr-cred\\\">CC BY-SA 3.0. <a href=\\\"https://commons.wikimedia.org/wiki/File:Mafra_May_2013-2.jpg\\\" rel=\\\"noopener\\\">commons.wikimedia.org</a></span></figcaption></figure>",
+     "new": "<figure class=\\\"fig-rev \\\"><div class=\\\"fr-moldura com-i\\\"><img src=\\\"https://pedrohfernandes-klk.github.io/pt/img/fontes/mafra-palacio-convento.jpg\\\" alt=\\\"O convento que D. João V prometeu e milhares de homens carregaram.\\\" loading=\\\"lazy\\\" decoding=\\\"async\\\" style=\\\"object-position:50% 55%\\\"><details class=\\\"info-i\\\" name=\\\"info-i\\\"><summary aria-label=\\\"Créditos da imagem\\\"><span aria-hidden=\\\"true\\\">i</span></summary><p class=\\\"info-i-texto\\\"><a rel=\\\"license\\\" href=\\\"https://creativecommons.org/licenses/by-sa/3.0/deed.pt\\\">CC BY-SA 3.0</a>. <a href=\\\"https://commons.wikimedia.org/wiki/File:Mafra_May_2013-2.jpg\\\" rel=\\\"noopener\\\">commons.wikimedia.org</a></p></details></div><figcaption><span class=\\\"fr-leg\\\">O Palácio-Convento de Mafra: de quem é esta pedra?</span></figcaption></figure>",
+     "occurrences": 1
+    },
+    {
+     "location": "A peça comum do «i» (assets/info-i.css e assets/info-i.js)",
+     "old": "</head>",
+     "new": "<link rel=\"stylesheet\" href=\"../../assets/info-i.css?v=20261105\"><script defer src=\"../../assets/info-i.js?v=20261105\"></script></head>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m9/m9-ver-e-nao-ver/index.html": {
+   "base_sha256_lf": "79e585ce5ba54c0b00871924d8073edd7ed96d23d0dc39923b4c24e67984aa02",
+   "after_sha256_lf": "b5799d7a3afcacce8a3dd92727624500253e9c839819135fdff820fd46cb7aef",
+   "edits": [
+    {
+     "location": "P14, «Pensar devagar»: o fr-cred passa para o «i»; o fr-leg fica",
+     "old": "<figure class=\\\"fig-rev inteira\\\"><span class=\\\"fr-moldura\\\"><img src=\\\"https://pedrohfernandes-klk.github.io/pt/img/fontes/passarola-gusmao.jpg\\\" alt=\\\"A máquina voadora do padre Bartolomeu Lourenço, tal como foi desenhada.\\\" loading=\\\"lazy\\\" decoding=\\\"async\\\"></span><figcaption><span class=\\\"fr-leg\\\">A Passarola: o que uns viram voar e outros não viram.</span> <span class=\\\"fr-cred\\\">Bartolomeu de Gusmão (fac-símile). Domínio público. <a href=\\\"https://commons.wikimedia.org/wiki/File:Reproduction_fac-simil%C3%A9_d%27un_dessin_(page_23_crop).jpg\\\" rel=\\\"noopener\\\">commons.wikimedia.org</a></span></figcaption></figure>",
+     "new": "<figure class=\\\"fig-rev inteira\\\"><div class=\\\"fr-moldura com-i\\\"><img src=\\\"https://pedrohfernandes-klk.github.io/pt/img/fontes/passarola-gusmao.jpg\\\" alt=\\\"A máquina voadora do padre Bartolomeu Lourenço, tal como foi desenhada.\\\" loading=\\\"lazy\\\" decoding=\\\"async\\\"><details class=\\\"info-i\\\" name=\\\"info-i\\\"><summary aria-label=\\\"Créditos da imagem\\\"><span aria-hidden=\\\"true\\\">i</span></summary><p class=\\\"info-i-texto\\\">Bartolomeu de Gusmão (fac-símile). Domínio público. <a href=\\\"https://commons.wikimedia.org/wiki/File:Reproduction_fac-simil%C3%A9_d%27un_dessin_(page_23_crop).jpg\\\" rel=\\\"noopener\\\">commons.wikimedia.org</a></p></details></div><figcaption><span class=\\\"fr-leg\\\">A Passarola: o que uns viram voar e outros não viram.</span></figcaption></figure>",
+     "occurrences": 1
+    },
+    {
+     "location": "A peça comum do «i» (assets/info-i.css e assets/info-i.js)",
+     "old": "</head>",
+     "new": "<link rel=\"stylesheet\" href=\"../../assets/info-i.css?v=20261105\"><script defer src=\"../../assets/info-i.js?v=20261105\"></script></head>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m9/mapa-do-modulo-m9/index.html": {
+   "base_sha256_lf": "66183e6a3dcf3fcf2c3337c50bf551da1429a4ef3599b35872134ba532531392",
+   "after_sha256_lf": "47482c3fdea2653a8b1e89836ed613c5fd936e91eefdebf1d0f18a4b84aac094",
+   "edits": [
+    {
+     "location": "P16, galeria «Para ver»: Palácio-Convento de Mafra, fachada.",
+     "old": " alt=\"Palácio-Convento de Mafra, fachada (fotografia de Alvesgaspar, 2013)\" loading=\"lazy\"><figcaption>Palácio-Convento de Mafra, fachada (fotografia de Alvesgaspar, 2013). CC BY-SA 3.0. <a href=\"https://pedrohfernandes-klk.github.io/pt/m9/licao-m9-f01/\">Lição M9-F01</a></figcaption></figure>",
+     "new": " alt=\"Palácio-Convento de Mafra, fachada (fotografia de Alvesgaspar, 2013)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Palácio-Convento de Mafra, fachada\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Palácio-Convento de Mafra, fachada (fotografia de Alvesgaspar, 2013). <a rel=\"license\" href=\"https://creativecommons.org/licenses/by-sa/3.0/deed.pt\">CC BY-SA 3.0</a>.</p></details><figcaption>Palácio-Convento de Mafra, fachada. <a href=\"https://pedrohfernandes-klk.github.io/pt/m9/licao-m9-f01/\">Lição M9-F01</a></figcaption></figure>",
+     "occurrences": 1
+    },
+    {
+     "location": "P16, galeria «Para ver»: Biblioteca do Palácio Nacional de Mafra.",
+     "old": " alt=\"Biblioteca do Palácio Nacional de Mafra (fotografia de Hipersyl, 2026)\" loading=\"lazy\"><figcaption>Biblioteca do Palácio Nacional de Mafra (fotografia de Hipersyl, 2026). CC BY 4.0. <a href=\"https://pedrohfernandes-klk.github.io/pt/m9/licao-m9-f01/\">Lição M9-F01</a></figcaption></figure>",
+     "new": " alt=\"Biblioteca do Palácio Nacional de Mafra (fotografia de Hipersyl, 2026)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Biblioteca do Palácio Nacional de Mafra\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Biblioteca do Palácio Nacional de Mafra (fotografia de Hipersyl, 2026). <a rel=\"license\" href=\"https://creativecommons.org/licenses/by/4.0/deed.pt\">CC BY 4.0</a>.</p></details><figcaption>Biblioteca do Palácio Nacional de Mafra. <a href=\"https://pedrohfernandes-klk.github.io/pt/m9/licao-m9-f01/\">Lição M9-F01</a></figcaption></figure>",
+     "occurrences": 1
+    },
+    {
+     "location": "P16, galeria «Para ver»: D. João V.",
+     "old": " alt=\"D. João V (Domenico Duprà, 1725, Biblioteca Joanina)\" loading=\"lazy\"><figcaption>D. João V (Domenico Duprà, 1725, Biblioteca Joanina). Domínio público. <a href=\"https://pedrohfernandes-klk.github.io/pt/m9/licao-m9-f01/\">Lição M9-F01</a></figcaption></figure>",
+     "new": " alt=\"D. João V (Domenico Duprà, 1725, Biblioteca Joanina)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: D. João V\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">D. João V (Domenico Duprà, 1725, Biblioteca Joanina). Domínio público.</p></details><figcaption>D. João V. <a href=\"https://pedrohfernandes-klk.github.io/pt/m9/licao-m9-f01/\">Lição M9-F01</a></figcaption></figure>",
+     "occurrences": 1
+    },
+    {
+     "location": "P16, galeria «Para ver»: A Passarola de Bartolomeu de Gusmão, desenho do século XVIII",
+     "old": " alt=\"A Passarola de Bartolomeu de Gusmão, desenho do século XVIII (fac-símile, BNP)\" loading=\"lazy\"><figcaption>A Passarola de Bartolomeu de Gusmão, desenho do século XVIII (fac-símile, BNP). Domínio público. <a href=\"https://pedrohfernandes-klk.github.io/pt/m9/licao-m9-f01/\">Lição M9-F01</a></figcaption></figure>",
+     "new": " alt=\"A Passarola de Bartolomeu de Gusmão, desenho do século XVIII (fac-símile, BNP)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: A Passarola de Bartolomeu de Gusmão, desenho do século XVIII\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">A Passarola de Bartolomeu de Gusmão, desenho do século XVIII (fac-símile, BNP). Domínio público.</p></details><figcaption>A Passarola de Bartolomeu de Gusmão, desenho do século XVIII. <a href=\"https://pedrohfernandes-klk.github.io/pt/m9/licao-m9-f01/\">Lição M9-F01</a></figcaption></figure>",
+     "occurrences": 1
+    },
+    {
+     "location": "P16, galeria «Para ver»: Casa dos Bicos, Lisboa, sede da Fundação José Saramago.",
+     "old": " alt=\"Casa dos Bicos, Lisboa, sede da Fundação José Saramago (fotografia de Ingo Mehling, 2022)\" loading=\"lazy\"><figcaption>Casa dos Bicos, Lisboa, sede da Fundação José Saramago (fotografia de Ingo Mehling, 2022). CC BY-SA 4.0. <a href=\"https://pedrohfernandes-klk.github.io/pt/m9/licao-m9-f04/\">Lição M9-F04</a></figcaption></figure>",
+     "new": " alt=\"Casa dos Bicos, Lisboa, sede da Fundação José Saramago (fotografia de Ingo Mehling, 2022)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Casa dos Bicos, Lisboa, sede da Fundação José Saramago\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Casa dos Bicos, Lisboa, sede da Fundação José Saramago (fotografia de Ingo Mehling, 2022). <a rel=\"license\" href=\"https://creativecommons.org/licenses/by-sa/4.0/deed.pt\">CC BY-SA 4.0</a>.</p></details><figcaption>Casa dos Bicos, Lisboa, sede da Fundação José Saramago. <a href=\"https://pedrohfernandes-klk.github.io/pt/m9/licao-m9-f04/\">Lição M9-F04</a></figcaption></figure>",
+     "occurrences": 1
+    },
+    {
+     "location": "P16, galeria «Para ver»: José Saramago em 2005.",
+     "old": " alt=\"José Saramago em 2005 (fotografia de Mario Antonio Pena)\" loading=\"lazy\"><figcaption>José Saramago em 2005 (fotografia de Mario Antonio Pena). CC BY-SA 2.0. <a href=\"https://pedrohfernandes-klk.github.io/pt/m9/licao-m9-f04/\">Lição M9-F04</a></figcaption></figure>",
+     "new": " alt=\"José Saramago em 2005 (fotografia de Mario Antonio Pena)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: José Saramago em 2005\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">José Saramago em 2005 (fotografia de Mario Antonio Pena). <a rel=\"license\" href=\"https://creativecommons.org/licenses/by-sa/2.0/deed.pt\">CC BY-SA 2.0</a>.</p></details><figcaption>José Saramago em 2005. <a href=\"https://pedrohfernandes-klk.github.io/pt/m9/licao-m9-f04/\">Lição M9-F04</a></figcaption></figure>",
+     "occurrences": 1
+    },
+    {
+     "location": "P16, galeria «Para ver»: Oliveira milenar, Constância.",
+     "old": " alt=\"Oliveira milenar, Constância (fotografia de GualdimG, 2025)\" loading=\"lazy\"><figcaption>Oliveira milenar, Constância (fotografia de GualdimG, 2025). CC BY-SA 4.0. <a href=\"https://pedrohfernandes-klk.github.io/pt/m9/licao-m9-f04/\">Lição M9-F04</a></figcaption></figure>",
+     "new": " alt=\"Oliveira milenar, Constância (fotografia de GualdimG, 2025)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Oliveira milenar, Constância\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Oliveira milenar, Constância (fotografia de GualdimG, 2025). <a rel=\"license\" href=\"https://creativecommons.org/licenses/by-sa/4.0/deed.pt\">CC BY-SA 4.0</a>.</p></details><figcaption>Oliveira milenar, Constância. <a href=\"https://pedrohfernandes-klk.github.io/pt/m9/licao-m9-f04/\">Lição M9-F04</a></figcaption></figure>",
      "occurrences": 1
     },
     {
