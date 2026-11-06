@@ -1,0 +1,1524 @@
+{
+ "base_commit": "b3ee0f9c67fd94311e2860b2694f9487e34be95a",
+ "_nota": "05/11/2026: decisão 154 do docente («os exercícios fazem-se sozinho»): nada no texto do aluno depende do docente, e quando o único caminho para acabar precisava de um colega ou da turma, fica um caminho a sós, curto (a decisão 146 mantém-se: o momento «em turma» fica como opção de aula). Camada mais recente, por cima do contexto do Laboratório do exame (exame_contexto_20261105). Gerado por scripts/aplicar_trocas.py a partir de scripts/autonomia_154_20261105.json: não se edita à mão. Só texto; nas tarefas e no aquecimento gerados, a mesma troca está nos dados dos geradores (docs/pedagogia/tarefas-escolha e docs/pedagogia/aquecimentos/m4-u2.json).",
+ "files": {
+  "m4/index.html": {
+   "base_sha256_lf": "d0e57cdf50c6e7caa4de6a02f09292edb5d9730168d91dd3c45e1f0f2a911e03",
+   "after_sha256_lf": "a7f8bbd945a7b783d1e738ec1035aac1729e76dd135a7ff9d2239a74cc50ad82",
+   "edits": [
+    {
+     "location": "Percurso, passo 16 «Trinta dias no abrigo»: lês tu o discurso de 1915",
+     "old": "Ouve o docente ler um discurso de 1915, desmonta-o",
+     "new": "Lê em voz alta um discurso de 1915, desmonta-o",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/licao-m4-f14/index.html": {
+   "base_sha256_lf": "aacc51a07ebbd4b092d4f68ef287213d4fafb13f2f38600ce5376ae8072948d3",
+   "after_sha256_lf": "f12fcfcac93a19b3e3f07f0df2838b427101407759726dcb5c372ee57fc1e9d1",
+   "edits": [
+    {
+     "location": "Linha «Hoje» do cartão Abre: ler em voz alta o discurso de 1915",
+     "old": "ouvir o docente ler o discurso de 1915",
+     "new": "ler em voz alta o discurso de 1915",
+     "occurrences": 1
+    },
+    {
+     "location": "Cartão «Decide»: decide em silêncio, sem a votação de braço no ar",
+     "old": "Decide em silêncio, de braço no ar. Depois abre",
+     "new": "Decide em silêncio. Depois abre",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m3/licao-m3-f11/index.html": {
+   "base_sha256_lf": "0b1be1c2bb736c75ace4f3a5e5b7625ec463b2e7dd67bbeca4be341993465f2d",
+   "after_sha256_lf": "e909289593a2c7c1a876e909b86b2b7a11a15166a104ed9552399d0bdfd80675",
+   "edits": [
+    {
+     "location": "Cartão «Para entender», caixa «Se não houver conferência»: ouves ou lês alguém (o vídeo de Mia Couto está no mesmo cartão)",
+     "old": "<p>O docente traz uma gravação ou um texto de alguém que fale do português no mundo (entrevista, conferência gravada, artigo com autor e data); a turma ouve ou lê como se estivesse lá. As perguntas fazem-se por escrito e leem-se em voz alta.</p>",
+     "new": "<p>Ouve ou lê alguém que fale do português no mundo (entrevista, conferência gravada, artigo com autor e data), como Mia Couto no vídeo abaixo. Escreve a tua pergunta (na aula, lê-se em voz alta).</p>",
+     "occurrences": 1
+    },
+    {
+     "location": "Lacunas «O que muda se não houver conferência?» (lição, arquivo do índice e cópia do painel): ouves ou lês um texto com autor e data",
+     "old": "Se não houver conferência, o docente traz um texto com [1] e data, e as perguntas fazem-se por [2] e leem-se em voz alta.",
+     "new": "Se não houver conferência, ouves ou lês um texto com [1] e data, e a pergunta faz-se por [2].",
+     "occurrences": 1
+    },
+    {
+     "location": "Exercício «Põe por ordem o fim da frase sobre a lição sem conferência»: ouves ou lês, na segunda pessoa",
+     "old": "\"palavras\":[\"a\",\"turma\",\"ouve\",\"ou\",\"lê\",\"como\",\"se\",\"estivesse\",\"na\",\"conferência.\"],\"f\":\"«a turma ouve ou lê como se estivesse na conferência»: os dois verbos primeiro;",
+     "new": "\"palavras\":[\"ouves\",\"ou\",\"lês\",\"como\",\"se\",\"estivesses\",\"na\",\"conferência.\"],\"f\":\"«ouves ou lês como se estivesses na conferência»: os dois verbos primeiro;",
+     "occurrences": 1
+    },
+    {
+     "location": "Retorno das lacunas «O que muda se não houver conferência?» (lição e cópia do painel): a pergunta faz-se por escrito",
+     "old": "Um texto com **autor** e data; perguntas por **escrito**, lidas em voz alta.",
+     "new": "Um texto com **autor** e data; a pergunta faz-se por **escrito** (na aula, lê-se em voz alta).",
+     "occurrences": 1
+    },
+    {
+     "location": "Retorno do verdadeiro ou falso sobre a pergunta em público (lição e cópia do painel): sem conferência, por escrito",
+     "old": "sem conferência, a pergunta faz-se por escrito e lê-se em voz alta.",
+     "new": "sem conferência, a pergunta faz-se por escrito (na aula, lê-se em voz alta).",
+     "occurrences": 1
+    },
+    {
+     "location": "Retorno de erro do verdadeiro ou falso sobre a pergunta em público: sem conferência, por escrito",
+     "old": "(por escrito e lida em voz alta, se não houver conferência)",
+     "new": "(sem conferência, por escrito)",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m3/index.html": {
+   "base_sha256_lf": "3e287d42e3e72d093001f86f17ee6425a5b8a110ae4dbf4db87e564cd1adb32c",
+   "after_sha256_lf": "d0fb7bb8e5606d669d136a516043108dcaf21374a3008df30016e1430c8e1e0b",
+   "edits": [
+    {
+     "location": "Lacunas «O que muda se não houver conferência?» (lição, arquivo do índice e cópia do painel): ouves ou lês um texto com autor e data",
+     "old": "Se não houver conferência, o docente traz um texto com [1] e data, e as perguntas fazem-se por [2] e leem-se em voz alta.",
+     "new": "Se não houver conferência, ouves ou lês um texto com [1] e data, e a pergunta faz-se por [2].",
+     "occurrences": 1
+    },
+    {
+     "location": "Percurso, passo 1 «Duas versões de 1498»: sem «na cópia da aula»",
+     "old": "Lê o <i>Kit</i> de Patrícia Lino na cópia da aula, põe-lhe ao lado",
+     "new": "Lê o <i>Kit</i> de Patrícia Lino, põe-lhe ao lado",
+     "occurrences": 1
+    },
+    {
+     "location": "Exercício de ordenar os passos do processo (lição, arquivo do índice e cópia do painel): mostrar o protótipo a alguém",
+     "old": "Mostrar o protótipo a um colega",
+     "new": "Mostrar o protótipo a alguém",
+     "occurrences": 1
+    },
+    {
+     "location": "Arquivo do índice, pergunta «A quem se mostra o protótipo antes de acabar?»: certa «A alguém»; sai «Ao docente» (ficaria também certa)",
+     "old": "\"p\":\"A quem se mostra o protótipo antes de acabar?\",\"o\":[\"Ao docente\",\"Aos autores de um manual\",\"A um colega\"],\"c\":2,\"f\":\"A um colega: «Protótipo mostrado a um colega» é o terceiro passo do processo.\"",
+     "new": "\"p\":\"A quem se mostra o protótipo antes de acabar?\",\"o\":[\"A ninguém\",\"Aos autores de um manual\",\"A alguém\"],\"c\":2,\"f\":\"A alguém: «Protótipo mostrado a alguém» é o terceiro passo do processo.\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Percurso, passo 7 «Quem disse este verso?»: preparas tu perguntas justas, com resposta e fonte",
+     "old": "Prepara com a turma as doze perguntas do torneio interturmas como extra sem nota.",
+     "new": "Prepara perguntas justas, com resposta e fonte, para o torneio interturmas (extra sem nota).",
+     "occurrences": 1
+    },
+    {
+     "location": "Arquivo do índice, retorno das lacunas «O que muda se não houver conferência?»: a pergunta faz-se por escrito",
+     "old": "Autor e data tornam a fonte verificável; as perguntas escritas leem-se em voz alta na mesma.",
+     "new": "Autor e data tornam a fonte verificável; a pergunta faz-se por escrito (na aula, lê-se em voz alta).",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m3/painel-m3-f11/index.html": {
+   "base_sha256_lf": "0ed8100d8c4f527e907717231ee43602bfd74498fc4064e9388c97f63eea0c15",
+   "after_sha256_lf": "eab2b65650e729ecc433b1b3e16f46a6e304ba3f7f2f8ee4c8ed5e247401f4cd",
+   "edits": [
+    {
+     "location": "Lacunas «O que muda se não houver conferência?» (lição, arquivo do índice e cópia do painel): ouves ou lês um texto com autor e data",
+     "old": "Se não houver conferência, o docente traz um texto com [1] e data, e as perguntas fazem-se por [2] e leem-se em voz alta.",
+     "new": "Se não houver conferência, ouves ou lês um texto com [1] e data, e a pergunta faz-se por [2].",
+     "occurrences": 1
+    },
+    {
+     "location": "Cópia do painel do exercício de ordenar a frase: ouves ou lês, na segunda pessoa",
+     "old": "\"f\":\"«a turma ouve ou lê como se estivesse na conferência»: os dois verbos primeiro; a comparação com «como se» fecha a frase.\",\"palavras\":[\"a\",\"conferência.\",\"estivesse\",\"turma\",\"como\",\"se\",\"na\",\"ou\",\"ouve\",\"lê\"]",
+     "new": "\"f\":\"«ouves ou lês como se estivesses na conferência»: os dois verbos primeiro; a comparação com «como se» fecha a frase.\",\"palavras\":[\"conferência.\",\"estivesses\",\"como\",\"se\",\"na\",\"ou\",\"ouves\",\"lês\"]",
+     "occurrences": 1
+    },
+    {
+     "location": "Retorno das lacunas «O que muda se não houver conferência?» (lição e cópia do painel): a pergunta faz-se por escrito",
+     "old": "Um texto com **autor** e data; perguntas por **escrito**, lidas em voz alta.",
+     "new": "Um texto com **autor** e data; a pergunta faz-se por **escrito** (na aula, lê-se em voz alta).",
+     "occurrences": 1
+    },
+    {
+     "location": "Retorno do verdadeiro ou falso sobre a pergunta em público (lição e cópia do painel): sem conferência, por escrito",
+     "old": "sem conferência, a pergunta faz-se por escrito e lê-se em voz alta.",
+     "new": "sem conferência, a pergunta faz-se por escrito (na aula, lê-se em voz alta).",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m3/licao-m3-f04/index.html": {
+   "base_sha256_lf": "65b2e07da24c060b095120be9d84cc27c7817d8fb08bae397da529dc79c7e2ab",
+   "after_sha256_lf": "81e041ca9bbba0e6fb040c3a2689bdec471c81cd7e624cbe707decb1b963805b",
+   "edits": [
+    {
+     "location": "«O essencial» (e a mesma frase nas pistas): protótipo mostrado a alguém",
+     "old": "protótipo mostrado a um colega, etiqueta revista duas vezes.",
+     "new": "protótipo mostrado a alguém, etiqueta revista duas vezes.",
+     "occurrences": 2
+    },
+    {
+     "location": "Exercício de ordenar os passos do processo (lição, arquivo do índice e cópia do painel): mostrar o protótipo a alguém",
+     "old": "Mostrar o protótipo a um colega",
+     "new": "Mostrar o protótipo a alguém",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m3/painel-m3-f04/index.html": {
+   "base_sha256_lf": "973eadc78de3d06f637588d78e6f231393ab91649769629a0ddc60ce86cde7bb",
+   "after_sha256_lf": "2a397a6427703678305adb838255739a2d6475239175eafa5129dfff1b2dc10f",
+   "edits": [
+    {
+     "location": "Exercício de ordenar os passos do processo (lição, arquivo do índice e cópia do painel): mostrar o protótipo a alguém",
+     "old": "Mostrar o protótipo a um colega",
+     "new": "Mostrar o protótipo a alguém",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m5/index.html": {
+   "base_sha256_lf": "53068c1737ac0f9ee21d7c944e4136a28d1494a8b11e4c6b07d7b16562d638bb",
+   "after_sha256_lf": "4a3ff1a8bed25873b8fa9633db8f7f9328f09a112001ebbbe57488e0bb375537",
+   "edits": [
+    {
+     "location": "Arquivo do índice, unidade 2, lacunas da M5-F14: só a voz da narração (sai «o docente indica os episódios»)",
+     "old": "\"p\":\"Quem indica os episódios e quem interpreta a narração?\",\"frase\":\"Vês os episódios que o [1] indicar; a voz da narração é interpretada por [2].\",\"lacunas\":[{\"o\":[\"realizador\",\"docente\",\"narrador\"],\"c\":1},{\"o\":[\"Vaz de Carvalho\",\"João Botelho\",\"Eça de Queirós\"],\"c\":0}],\"f\":\"O **docente** indica os episódios; **Jorge Vaz de Carvalho** interpreta a voz narrativa.",
+     "new": "\"p\":\"Quem interpreta a voz da narração?\",\"frase\":\"A voz da narração do filme é interpretada por [1].\",\"lacunas\":[{\"o\":[\"Vaz de Carvalho\",\"João Botelho\",\"Eça de Queirós\"],\"c\":0}],\"f\":\"**Jorge Vaz de Carvalho** interpreta a voz narrativa.",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m2/index.html": {
+   "base_sha256_lf": "8f304a9e344c810ab723fdb04052ea9779170d591af1e07ea6e8ce019484c452",
+   "after_sha256_lf": "5eef6b1c0bf5b70d059e7f85fc3ad37dcd414c1d90afdb56b363691ba4a54fb3",
+   "edits": [
+    {
+     "location": "Percurso, passo 5 «Asno ou cavalo, hoje»: o projeto de turma fica entre parênteses",
+     "old": "Propõe um equivalente atual e justifica o conflito que conserva. No projeto de turma, desenvolve a adaptação em vídeo e apresenta as escolhas.",
+     "new": "Propõe um equivalente atual e justifica o conflito que conserva (no projeto de turma, desenvolve a adaptação em vídeo).",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m2/gram-subordinadas/index.html": {
+   "base_sha256_lf": "0203ec8fb312df8a2fad1c4c5c4f838042f6d2e9245bfefe21cac708f67b8b9b",
+   "after_sha256_lf": "6138bc748be4d1715f7200566d3c4d8ecf8bf87b55f86190221d65a3bcabcdea",
+   "edits": [
+    {
+     "location": "Mensagem «Atlas completo»: apresentas a pessoa no caderno",
+     "old": "Escolhe uma pessoa e apresenta-a a alguém da turma em três frases.",
+     "new": "Escolhe uma pessoa e apresenta-a em três frases, no caderno.",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m1/licao-m1-f04/index.html": {
+   "base_sha256_lf": "fd6f2419e99252b98b8e1ce4e0af64eb0a4f7cfa3c20a786c5dc14ebda1248bf",
+   "after_sha256_lf": "7c2235007be033f1872f4f1296354a035c379fea30709cc1d110046d16d04c02",
+   "edits": [
+    {
+     "location": "Cartão «Decide»: decide em silêncio, sem a votação de braço no ar",
+     "old": "Decide em silêncio, de braço no ar. Depois abre",
+     "new": "Decide em silêncio. Depois abre",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m1/licao-m1-f05/index.html": {
+   "base_sha256_lf": "ff6d47bf9b9a31e71a97a86f3c9ab1a84cd4dd34c2540d366910dc06148ba03c",
+   "after_sha256_lf": "c2a34f56343e953ce3646aab508eb5dc9f0e38935152a1e59cc37b39d5df323f",
+   "edits": [
+    {
+     "location": "Cartão «Decide»: decide em silêncio, sem a votação de braço no ar",
+     "old": "Decide em silêncio, de braço no ar. Depois abre",
+     "new": "Decide em silêncio. Depois abre",
+     "occurrences": 1
+    },
+    {
+     "location": "Linha «Hoje» do cartão Abre: praticar, sem pares",
+     "old": "praticar em pares, responder em papel",
+     "new": "praticar, responder em papel",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/licao-m4-f01/index.html": {
+   "base_sha256_lf": "9ece8193e0da88c654c301c9bc09bd65682e3501d3941e4eb5159d996b19f0c2",
+   "after_sha256_lf": "2e2ef4a462d3b57a47785fbcde8fb36030b3b5cf936379af34ab5f22d86be057",
+   "edits": [
+    {
+     "location": "Cartão «Decide»: decide em silêncio, sem a votação de braço no ar",
+     "old": "Decide em silêncio, de braço no ar. Depois abre",
+     "new": "Decide em silêncio. Depois abre",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/licao-m4-f02/index.html": {
+   "base_sha256_lf": "c9c84ed8afa07c5d6d0752c3e28e53eb731387b53edaef4f689915cac042e477",
+   "after_sha256_lf": "98a23834b78059915a53fff078cdd3f97a7ef0e380c510b846f0167a9a864da1",
+   "edits": [
+    {
+     "location": "Cartão «Decide»: decide em silêncio, sem a votação de braço no ar",
+     "old": "Decide em silêncio, de braço no ar. Depois abre",
+     "new": "Decide em silêncio. Depois abre",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/licao-m4-f04/index.html": {
+   "base_sha256_lf": "fc048c489c38d8f939a48abf8a6f444eadab0112ae59ae79289bb10690014e85",
+   "after_sha256_lf": "0a0875b424e47e8a6a45e9b441e8a41e95526afcfe3cd49719801fb691436bfe",
+   "edits": [
+    {
+     "location": "Cartão «Decide»: decide em silêncio, sem a votação de braço no ar",
+     "old": "Decide em silêncio, de braço no ar. Depois abre",
+     "new": "Decide em silêncio. Depois abre",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/licao-m4-f06/index.html": {
+   "base_sha256_lf": "31412d4240951134e908e42ac73a242c499f65c2cf43eecba89f071aa7af1cf4",
+   "after_sha256_lf": "fff0422668e3a874c856e070937e709beae4be1634f61ed2949ef9b2b50a8ec6",
+   "edits": [
+    {
+     "location": "Cartão «Decide»: decide em silêncio, sem a votação de braço no ar",
+     "old": "Decide em silêncio, de braço no ar. Depois abre",
+     "new": "Decide em silêncio. Depois abre",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/licao-m4-f07/index.html": {
+   "base_sha256_lf": "95325b4c477e52698a6337ada1167756bd0db28804f05e098257abe1b1c835da",
+   "after_sha256_lf": "f1ce03f12dab78bb8c2579dcdfcf35ba7cffedda2411113fb0ddef1367c16906",
+   "edits": [
+    {
+     "location": "Cartão «Decide»: decide em silêncio, sem a votação de braço no ar",
+     "old": "Decide em silêncio, de braço no ar. Depois abre",
+     "new": "Decide em silêncio. Depois abre",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/licao-m4-f08/index.html": {
+   "base_sha256_lf": "117d1861a18194071f4a5c23f00c674ef346bbafe915aa4758a334b438964418",
+   "after_sha256_lf": "b113beb9e1e0b939e0310556f04d2b4badb32c9a4ccb6e302eaaa0df27e4dbdc",
+   "edits": [
+    {
+     "location": "Cartão «Decide»: decide em silêncio, sem a votação de braço no ar",
+     "old": "Decide em silêncio, de braço no ar. Depois abre",
+     "new": "Decide em silêncio. Depois abre",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/licao-m4-f11/index.html": {
+   "base_sha256_lf": "0201dacd5ee5561e96f53571976a9597fbdf6f57c13367ce50d15a54f3946352",
+   "after_sha256_lf": "d636631cc13711fbe032633a4124aa021cdf256e02c45e50b78777832953072d",
+   "edits": [
+    {
+     "location": "Cartão «Decide»: decide em silêncio, sem a votação de braço no ar",
+     "old": "Decide em silêncio, de braço no ar. Depois abre",
+     "new": "Decide em silêncio. Depois abre",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/licao-m4-f15/index.html": {
+   "base_sha256_lf": "f3f8f4033768f2228570ce878c7471ac7105edc0d8eb96a61049808434ff010c",
+   "after_sha256_lf": "0bed1d00d691a28e2755a582c1473782d40d9f1639d9839186e51ca4f4a83899",
+   "edits": [
+    {
+     "location": "Cartão «Decide»: decide em silêncio, sem a votação de braço no ar",
+     "old": "Decide em silêncio, de braço no ar. Depois abre",
+     "new": "Decide em silêncio. Depois abre",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/licao-m4-f20/index.html": {
+   "base_sha256_lf": "13d8977a87ae3749e400ac547fed8dc25adc0c0ec8f8756ce725d9b441cc11e8",
+   "after_sha256_lf": "05ec8d4902ebf7be74ecab1c0b34a55e7402c0fae8c894b37589d79fb5604c87",
+   "edits": [
+    {
+     "location": "Cartão «Decide»: decide em silêncio, sem a votação de braço no ar",
+     "old": "Decide em silêncio, de braço no ar. Depois abre",
+     "new": "Decide em silêncio. Depois abre",
+     "occurrences": 1
+    },
+    {
+     "location": "Cartão do texto, «Antes de ler»: lês em voz alta, uma voz para cada personagem, e decides como fazes as didascálias",
+     "old": "Lê em voz alta, com papéis: Manuel, Madalena e quem lê as duas didascálias. Decide como as fazes: em voz alta, com som ou com um gesto.",
+     "new": "Lê em voz alta, com uma voz para Manuel e outra para Madalena. Decide como fazes as duas didascálias: em voz alta, com som ou com um gesto.",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/licao-m4-f25/index.html": {
+   "base_sha256_lf": "750e62f7be7b6454c75517a843238f06f92d9bb7352f1d55e462f3eb96164804",
+   "after_sha256_lf": "c69ce2227094bce4427c2cb3ec5a19c5211eca12c39013f6042c63b9a8e6c7ea",
+   "edits": [
+    {
+     "location": "Cartão «Decide»: decide em silêncio, sem a votação de braço no ar",
+     "old": "Decide em silêncio, de braço no ar. Depois abre",
+     "new": "Decide em silêncio. Depois abre",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/licao-m4-f26/index.html": {
+   "base_sha256_lf": "e701514b1a4ce38c0e24ddc00635bf1e684071e38e39f923e30d4d924a901146",
+   "after_sha256_lf": "e7f4b196acf41d7db6f265401e2195806b36dfa0e0b27c4d20e4c9c48f863f31",
+   "edits": [
+    {
+     "location": "Cartão «Decide»: decide em silêncio, sem a votação de braço no ar",
+     "old": "Decide em silêncio, de braço no ar. Depois abre",
+     "new": "Decide em silêncio. Depois abre",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m1/licao-m1-f08/index.html": {
+   "base_sha256_lf": "8d3818ab2923702bd9943e89cce20cce690dfb7111f0d6d04c848e9bf2a94076",
+   "after_sha256_lf": "80d7270509230a654f5715ba52a8c67fee28efcb8e3504cb93cf5e1bfbdbbbb8",
+   "edits": [
+    {
+     "location": "Linha «Hoje» do cartão Abre: «Ler a fundo» sem pares",
+     "old": "Ler a fundo a pares, títulos em papel",
+     "new": "Ler a fundo, títulos em papel",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m1/licao-m1-f15/index.html": {
+   "base_sha256_lf": "fc3e8ae8b6d8ea9ce1faeac1f02896a437a4c456067bc715e90206075bf03205",
+   "after_sha256_lf": "a1904bc553a8e899140f92d1230fcd027ae0051a1355e521f6e7dfc589890378",
+   "edits": [
+    {
+     "location": "Linha «Hoje» do cartão Abre: «Ler a fundo» sem pares",
+     "old": "Ler a fundo em pares, resposta em papel",
+     "new": "Ler a fundo, resposta em papel",
+     "occurrences": 1
+    }
+   ]
+  },
+  "tarefas/m4-u2/index.html": {
+   "base_sha256_lf": "c0363d90ac54aaf7d90876eb345cf7a2acf22f0cca2045e57d296eee48a7c5cd",
+   "after_sha256_lf": "764bec78115fae9174e3cc3ef16d2bc8af2b078c73973d1504dc2cbfe1115606",
+   "edits": [
+    {
+     "location": "Bloco «Se não foste ao teatro»: lês tu a cena do ato I em voz alta",
+     "old": "Se não foste ao teatro, compara uma cena do ato I lida em voz alta na aula com a tua leitura silenciosa.",
+     "new": "Se não foste ao teatro, lê em voz alta uma cena do ato I e compara essa leitura com a tua leitura silenciosa.",
+     "occurrences": 1
+    }
+   ]
+  },
+  "tarefas/m4-u3/index.html": {
+   "base_sha256_lf": "5f980c9f341b099df8d63b62b3a40dcc3f1f894d28badee729590c2dd03dfea1",
+   "after_sha256_lf": "bd165d29b62fd747d993d20fc56fd93576d466bdfb07934077c7595e5d2fb090",
+   "edits": [
+    {
+     "location": "Apoio de comparação «A palavra contra o poder», organização da aula: o primeiro bloco passa a «Leitura do enunciado» (o enunciado está todo na página)",
+     "old": "<li><b>10 min</b><span>Apresentação pelo docente</span></li>",
+     "new": "<li><b>10 min</b><span>Leitura do enunciado</span></li>",
+     "occurrences": 1
+    },
+    {
+     "location": "Apoio de comparação «A palavra contra o poder», organização da aula: o segundo bloco passa a «Preparação na página»",
+     "old": "<span>Leitura e preparação na página</span>",
+     "new": "<span>Preparação na página</span>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/visita-frei-luis-de-sousa-no-teatro/index.html": {
+   "base_sha256_lf": "570bf4d48f047b5e9568a2aaa4ecfdcbc156258f772080163501550d4c117e98",
+   "after_sha256_lf": "7ff8e2e374906b3306c7432b215687ff8b17877385b6e048f0eba9595def3406",
+   "edits": [
+    {
+     "location": "Caderno de campo, «Não foste à visita?»: lês tu a cena do Ato I em voz alta",
+     "old": "<p>Escolhe uma cena do Ato I lida em voz alta na aula. Compara o que ouviste com o que leste em silêncio, com os mesmos critérios.</p>",
+     "new": "<p>Lê em voz alta uma cena do Ato I e compara essa leitura com a tua leitura silenciosa, com os mesmos critérios.</p>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m2/visita-farsa-de-ines-pereira-no-teatro/index.html": {
+   "base_sha256_lf": "30fd6461a71018cc11d1f70f8dfa5adc46b24aa94a3c2759fcc6f2e8182a824e",
+   "after_sha256_lf": "f8e37ea3cf63c1fe8fc665c98a9149ac3a8cd26a0d6d4cdd48b0879a4b3ab7eb",
+   "edits": [
+    {
+     "location": "Caderno de campo, «Não foste à visita?»: lês tu uma cena em voz alta",
+     "old": "<p>Escreve a apreciação crítica da leitura em voz alta de uma cena feita na aula, com os mesmos critérios.</p>",
+     "new": "<p>Lê uma cena em voz alta e escreve a apreciação crítica dessa leitura, com os mesmos critérios.</p>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/recursos/tpc-entrada.js": {
+   "base_sha256_lf": "a1d1f9eeac684262ce16319acbfaf206dbce863959e238e16c875d60ac7aa233",
+   "after_sha256_lf": "e6f68ce6b63c0faa4621dd1a19f302fdee5641b2b46a13c015636e583d62fc19",
+   "edits": [
+    {
+     "location": "M4-F28, cartão «Criar», 4 min: relês e revês tu",
+     "old": "<b>4 min:</b> um colega identifica a tensão e o sinal que a sustenta; revê um ponto que não tenha ficado claro.",
+     "new": "<b>4 min:</b> relê, identifica a tensão e o sinal que a sustenta e revê um ponto pouco claro.",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F28, cartão «Rever em conjunto»: revês a tua produção (na aula, duas da turma)",
+     "old": "<p>Escolham duas produções, com autorização de quem as fez. Para cada uma:</p>",
+     "new": "<p>Revê a tua produção (na aula, duas da turma, com autorização de quem as fez):</p>",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F28, rótulo do cartão «Rever em conjunto»: «Rever a produção», porque o cartão se faz a sós",
+     "old": "\"rot\":\"Rever em conjunto",
+     "new": "\"rot\":\"Rever a produção",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/licao-m4-f28/index.html": {
+   "base_sha256_lf": "bc1d7cd4c827adf8daad51e33f15982a72ccfff1ce546a964b71563f579db24e",
+   "after_sha256_lf": "d4102a60e254635ef871fc436e2e8820a463467237ecd915ddb4678e5ff10f13",
+   "edits": [
+    {
+     "location": "Versão do tpc-entrada.js, para os navegadores não usarem a cópia antiga",
+     "old": "tpc-entrada.js?v=20261026-ponte1",
+     "new": "tpc-entrada.js?v=20261105-autonomia-1",
+     "occurrences": 1
+    }
+   ]
+  },
+  "tarefas/m4-u2/aquecimento/index.html": {
+   "base_sha256_lf": "4ea947d863fac3fc1c0ac7fd3cedeabeaf09677b60fef17f62513e1b1aa0e55c",
+   "after_sha256_lf": "a1079cefd70c8dfac6866da710c6ee0c8dcc7ece90d3cdccc4ba7a7f39a0ad0c",
+   "edits": [
+    {
+     "location": "Último cartão do aquecimento: «alternativa de leitura», sem «em aula» (gerado por scripts/aquecimentos.py)",
+     "old": "Se usares a alternativa de leitura em aula, identifica essa opção.",
+     "new": "Se usares a alternativa de leitura, identifica essa opção.",
+     "occurrences": 1
+    }
+   ]
+  },
+  "docs/pedagogia/aquecimentos/m4-u2.json": {
+   "base_sha256_lf": "c642847a672b20b59f59f87b64414f0002f02ca03205ef2e027ea0eb86feea4b",
+   "after_sha256_lf": "bab12e65df95ce79dfb4929085f1072764959bc50d37b606a948c5230eb26764",
+   "edits": [
+    {
+     "location": "Dados do aquecimento da M4-U2 (scripts/aquecimentos.py), último cartão: «alternativa de leitura», sem «em aula»",
+     "old": "Se usares a alternativa de leitura em aula, identifica essa opção.",
+     "new": "Se usares a alternativa de leitura, identifica essa opção.",
+     "occurrences": 1
+    }
+   ]
+  },
+  "docs/pedagogia/tarefas-escolha/m1-u1.json": {
+   "base_sha256_lf": "b6fbe2fee0df7d9695f089ac6bb504e5868f32669cd829223246038adbb2c5d4",
+   "after_sha256_lf": "e85988c2172a382b60cbe4033510944aa54578b12f958e2706085305c3cdfa92",
+   "edits": [
+    {
+     "location": "Dados da tarefa M1-U1 (scripts/tarefas_escolha.py), «aquecer»: 5 minutos para leres o enunciado",
+     "old": "5 minutos para o docente apresentar o enunciado, 60 minutos de produção e 15 minutos de revisão e entrega. Total: 90 minutos. O relógio de produção começa depois da apresentação.",
+     "new": "5 minutos para leres o enunciado, 60 minutos de produção e 15 minutos de revisão e entrega. Total: 90 minutos. O relógio de produção começa depois da leitura.",
+     "occurrences": 1
+    }
+   ]
+  },
+  "docs/pedagogia/tarefas-escolha/m1-u2.json": {
+   "base_sha256_lf": "20b17ca1d642276a3ec4428b09b02afa851a544fefce0905fb732c6f18e064ee",
+   "after_sha256_lf": "5f2fc6a71a46e3f7b668f870849d5ca90a9821e0db36a67fe32c492a484a20eb",
+   "edits": [
+    {
+     "location": "Dados da tarefa M1-U2 (scripts/tarefas_escolha.py), «aquecer»: 5 minutos para leres o enunciado",
+     "old": "5 minutos para o docente apresentar o enunciado, 60 minutos de produção e 15 minutos de revisão e entrega. Total: 90 minutos. O relógio de produção começa depois da apresentação.",
+     "new": "5 minutos para leres o enunciado, 60 minutos de produção e 15 minutos de revisão e entrega. Total: 90 minutos. O relógio de produção começa depois da leitura.",
+     "occurrences": 1
+    }
+   ]
+  },
+  "docs/pedagogia/tarefas-escolha/m3-u1.json": {
+   "base_sha256_lf": "ec7c1f8b8dc7d67045c9d5c6fd5e68186cb4e488d0ac36852691bd5eda7a5ce9",
+   "after_sha256_lf": "d3538e8db27e4e1ad1a08a6ccb98fe3d23e852caac69db0e325b7ab251d205e5",
+   "edits": [
+    {
+     "location": "Dados da tarefa M3-U1 (scripts/tarefas_escolha.py), «aquecer»: 5 minutos para leres o enunciado",
+     "old": "5 minutos para o docente apresentar o enunciado, 60 minutos de produção e 15 minutos de revisão e entrega. Total: 90 minutos. O relógio de produção começa depois da apresentação.",
+     "new": "5 minutos para leres o enunciado, 60 minutos de produção e 15 minutos de revisão e entrega. Total: 90 minutos. O relógio de produção começa depois da leitura.",
+     "occurrences": 1
+    }
+   ]
+  },
+  "docs/pedagogia/tarefas-escolha/m3-u2.json": {
+   "base_sha256_lf": "2d692fa50e8960516c17e8bd0d5467750826bf1d277759c7104d9f1b52c36d1b",
+   "after_sha256_lf": "d06f6b62f68df468a43fd30c2de360cfd435f666d14a088b7b760378e9ae4eeb",
+   "edits": [
+    {
+     "location": "Dados da tarefa M3-U2 (scripts/tarefas_escolha.py), «aquecer»: 5 minutos para leres o enunciado",
+     "old": "5 minutos para o docente apresentar o enunciado, 60 minutos de produção e 15 minutos de revisão e entrega. Total: 90 minutos. O relógio de produção começa depois da apresentação.",
+     "new": "5 minutos para leres o enunciado, 60 minutos de produção e 15 minutos de revisão e entrega. Total: 90 minutos. O relógio de produção começa depois da leitura.",
+     "occurrences": 1
+    }
+   ]
+  },
+  "docs/pedagogia/tarefas-escolha/m5-u1.json": {
+   "base_sha256_lf": "2a09bc148e8acb623300c0c9537fefe4c1010b9f01f88385d4986173d22448e2",
+   "after_sha256_lf": "9da67feadfa597cd27bb764bf516e23d5b42fadd6e9fe9766ccdaf8087d79b6c",
+   "edits": [
+    {
+     "location": "Dados da tarefa M5-U1 (scripts/tarefas_escolha.py), «aquecer»: 5 minutos para leres o enunciado",
+     "old": "5 minutos para o docente apresentar o enunciado, 60 minutos de produção e 15 minutos de revisão e entrega. Total: 90 minutos. O relógio de produção começa depois da apresentação.",
+     "new": "5 minutos para leres o enunciado, 60 minutos de produção e 15 minutos de revisão e entrega. Total: 90 minutos. O relógio de produção começa depois da leitura.",
+     "occurrences": 1
+    }
+   ]
+  },
+  "docs/pedagogia/tarefas-escolha/m5-u2.json": {
+   "base_sha256_lf": "7c89a5ea33eae251af74bf5cee0cc56f457a5c3d2b22d645703f53dba6a558a6",
+   "after_sha256_lf": "97e69b8f6b0e835f911b44a603727dc02a4dd918f4fd7401684337f0b48cbc12",
+   "edits": [
+    {
+     "location": "Dados da tarefa M5-U2 (scripts/tarefas_escolha.py), «aquecer»: 5 minutos para leres o enunciado",
+     "old": "5 minutos para o docente apresentar o enunciado, 60 minutos de produção e 15 minutos de revisão e entrega. Total: 90 minutos. O relógio de produção começa depois da apresentação.",
+     "new": "5 minutos para leres o enunciado, 60 minutos de produção e 15 minutos de revisão e entrega. Total: 90 minutos. O relógio de produção começa depois da leitura.",
+     "occurrences": 1
+    }
+   ]
+  },
+  "docs/pedagogia/tarefas-escolha/m6-u1.json": {
+   "base_sha256_lf": "9a1c9eed56c1bf1b460ef0b4b592317e00461feb4148d6e21bdbb7a1c21edb8b",
+   "after_sha256_lf": "2f5c9f599c91e141ade8f535670eaf270a47585eda900b106020919c05b87422",
+   "edits": [
+    {
+     "location": "Dados da tarefa M6-U1 (scripts/tarefas_escolha.py), «aquecer»: 5 minutos para leres o enunciado",
+     "old": "5 minutos para o docente apresentar o enunciado, 60 minutos de produção e 15 minutos de revisão e entrega. Total: 90 minutos. O relógio de produção começa depois da apresentação.",
+     "new": "5 minutos para leres o enunciado, 60 minutos de produção e 15 minutos de revisão e entrega. Total: 90 minutos. O relógio de produção começa depois da leitura.",
+     "occurrences": 1
+    }
+   ]
+  },
+  "docs/pedagogia/tarefas-escolha/m6-u2.json": {
+   "base_sha256_lf": "35a2c88cd501afcb6874dc1c31fefb965bfac529e1f00ea467a13d5ecbf32b9f",
+   "after_sha256_lf": "d20c76250ab17affaf7c7db3c46c964d10e226100687dbc80705c0c078e97815",
+   "edits": [
+    {
+     "location": "Dados da tarefa M6-U2 (scripts/tarefas_escolha.py), «aquecer»: 5 minutos para leres o enunciado",
+     "old": "5 minutos para o docente apresentar o enunciado, 60 minutos de produção e 15 minutos de revisão e entrega. Total: 90 minutos. O relógio de produção começa depois da apresentação.",
+     "new": "5 minutos para leres o enunciado, 60 minutos de produção e 15 minutos de revisão e entrega. Total: 90 minutos. O relógio de produção começa depois da leitura.",
+     "occurrences": 1
+    }
+   ]
+  },
+  "docs/pedagogia/tarefas-escolha/m8-u1.json": {
+   "base_sha256_lf": "c78c5997696b9fffe17f47f3728c4638642a870abf9b706910fa4ff58ad7ae0d",
+   "after_sha256_lf": "e325e983b93f1f20e1558616d96a0eaa503799800859d17ac0b7226e34ae2734",
+   "edits": [
+    {
+     "location": "Dados da tarefa M8-U1 (scripts/tarefas_escolha.py), «aquecer»: depois, lês o enunciado",
+     "old": "Depois, o docente apresenta o enunciado e começam os 60 minutos de produção.",
+     "new": "Depois, lês o enunciado e começam os 60 minutos de produção.",
+     "occurrences": 1
+    }
+   ]
+  },
+  "docs/pedagogia/tarefas-escolha/m8-u2.json": {
+   "base_sha256_lf": "418b59a2bb956d29dc693b5a1f3f3e0e5496ca9eef2ebe828a073dec187bbd72",
+   "after_sha256_lf": "9cc1634efffab11af0dafe8e70662bd6af14ed5e2b800ac28bcbd22df2f79871",
+   "edits": [
+    {
+     "location": "Dados da tarefa M8-U2 (scripts/tarefas_escolha.py), «aquecer»: depois, lês o enunciado",
+     "old": "Depois, o docente apresenta o enunciado e começam os 60 minutos de produção.",
+     "new": "Depois, lês o enunciado e começam os 60 minutos de produção.",
+     "occurrences": 1
+    }
+   ]
+  },
+  "docs/pedagogia/tarefas-escolha/m9-u1.json": {
+   "base_sha256_lf": "d6fcc33e163b767cbae26cc8ea115942cd47e90cf8c5c09f25d983b38c6ca176",
+   "after_sha256_lf": "fecd927333861d90359fb13f039c9b1909b2d4636f8a6d367a98fed74e0a2a7b",
+   "edits": [
+    {
+     "location": "Dados da tarefa M9-U1 (scripts/tarefas_escolha.py), «aquecer»: depois, lês o enunciado",
+     "old": "Depois, o docente apresenta o enunciado e começam os 60 minutos de produção.",
+     "new": "Depois, lês o enunciado e começam os 60 minutos de produção.",
+     "occurrences": 1
+    }
+   ]
+  },
+  "docs/pedagogia/tarefas-escolha/m9-u2.json": {
+   "base_sha256_lf": "d934155e13be2be6c0f69f87fa806580f207ee857bbef5ec3b86bac986833885",
+   "after_sha256_lf": "ff07a5bc0914874f2de2454755a0e49f630c6febb0f0bc88dc4f9ef738d5e13e",
+   "edits": [
+    {
+     "location": "Dados da tarefa M9-U2 (scripts/tarefas_escolha.py), «aquecer»: depois, lês o enunciado",
+     "old": "Depois, o docente apresenta o enunciado e começam os 60 minutos de produção.",
+     "new": "Depois, lês o enunciado e começam os 60 minutos de produção.",
+     "occurrences": 1
+    }
+   ]
+  },
+  "docs/pedagogia/tarefas-escolha/m7-u3.json": {
+   "base_sha256_lf": "519ca4cc18a61a48382427a4031e4879570372500253d67eb94194ebbedec00b",
+   "after_sha256_lf": "284829f710a10698cff4fda0a1fa562d3df826179f786a77ffc85ebff3fb3e17",
+   "edits": [
+    {
+     "location": "Dados da tarefa M7-U3 (scripts/tarefas_escolha.py), «aquecer»: depois, lês a tarefa",
+     "old": "Depois, o docente apresenta a tarefa e começam os 60 minutos de produção.",
+     "new": "Depois, lês a tarefa e começam os 60 minutos de produção.",
+     "occurrences": 1
+    }
+   ]
+  },
+  "tarefas/m1-u1/index.html": {
+   "base_sha256_lf": "69331d7215c5f09b70d9f1b186d20c8cbde11dd5a6cacb125bfc0c37f350063c",
+   "after_sha256_lf": "8bd033a27448d61586766851d605df6edf87b2e62a60ed4549a35af1eee997bc",
+   "edits": [
+    {
+     "location": "Bloco «Aquecer em cartões»: 5 minutos para leres o enunciado; o relógio começa depois da leitura (gerado por scripts/tarefas_escolha.py)",
+     "old": "5 minutos para o docente apresentar o enunciado, 60 minutos de produção e 15 minutos de revisão e entrega. Total: 90 minutos. O relógio de produção começa depois da apresentação.",
+     "new": "5 minutos para leres o enunciado, 60 minutos de produção e 15 minutos de revisão e entrega. Total: 90 minutos. O relógio de produção começa depois da leitura.",
+     "occurrences": 1
+    }
+   ]
+  },
+  "tarefas/m1-u2/index.html": {
+   "base_sha256_lf": "ea87c8c27c51f6adbecf11660150ef7367b567a196fed1d1ddebd46bbc055dbb",
+   "after_sha256_lf": "dcd0c46cbb544801e7b485899b46d32c9c8a7efef63b246807686317c1bc9ae2",
+   "edits": [
+    {
+     "location": "Bloco «Aquecer em cartões»: 5 minutos para leres o enunciado; o relógio começa depois da leitura (gerado por scripts/tarefas_escolha.py)",
+     "old": "5 minutos para o docente apresentar o enunciado, 60 minutos de produção e 15 minutos de revisão e entrega. Total: 90 minutos. O relógio de produção começa depois da apresentação.",
+     "new": "5 minutos para leres o enunciado, 60 minutos de produção e 15 minutos de revisão e entrega. Total: 90 minutos. O relógio de produção começa depois da leitura.",
+     "occurrences": 1
+    }
+   ]
+  },
+  "tarefas/m2-u1/index.html": {
+   "base_sha256_lf": "72afaf773bfce5ba90db93e99d1cc20217f604694d269f881ffaba56dc393cd2",
+   "after_sha256_lf": "d4d480391fe33ec76041986acb992cda499532c162d8e5f383fec8294bc4197f",
+   "edits": [
+    {
+     "location": "Bloco «Aquecer em cartões»: 5 minutos para leres o enunciado; o relógio começa depois da leitura",
+     "old": "5 minutos para o docente apresentar o enunciado, 60 minutos de produção e 15 minutos de revisão e entrega. Total: 90 minutos. O relógio de produção começa depois da apresentação.",
+     "new": "5 minutos para leres o enunciado, 60 minutos de produção e 15 minutos de revisão e entrega. Total: 90 minutos. O relógio de produção começa depois da leitura.",
+     "occurrences": 1
+    }
+   ]
+  },
+  "tarefas/m2-u2/index.html": {
+   "base_sha256_lf": "afe6117e4827ee743db1d53e5e5ce5326021693f46c29aa7692e137c0692c7b3",
+   "after_sha256_lf": "9d2a97bac65f85c723d4ebe10074d62ceae9e9ef2983d911dafc516fd3d63de4",
+   "edits": [
+    {
+     "location": "Bloco «Aquecer em cartões»: 5 minutos para leres o enunciado; o relógio começa depois da leitura",
+     "old": "5 minutos para o docente apresentar o enunciado, 60 minutos de produção e 15 minutos de revisão e entrega. Total: 90 minutos. O relógio de produção começa depois da apresentação.",
+     "new": "5 minutos para leres o enunciado, 60 minutos de produção e 15 minutos de revisão e entrega. Total: 90 minutos. O relógio de produção começa depois da leitura.",
+     "occurrences": 1
+    }
+   ]
+  },
+  "tarefas/m3-u1/index.html": {
+   "base_sha256_lf": "ab94f47b7ea6a27e259fc45a84c9db02f5ab0988a30dffb1e6875d2dcca5a401",
+   "after_sha256_lf": "9aa80190d6d5fb2e5a15be56053af48c01a548acd4d90e0c311de5df8ffe6594",
+   "edits": [
+    {
+     "location": "Bloco «Aquecer em cartões»: 5 minutos para leres o enunciado; o relógio começa depois da leitura (gerado por scripts/tarefas_escolha.py)",
+     "old": "5 minutos para o docente apresentar o enunciado, 60 minutos de produção e 15 minutos de revisão e entrega. Total: 90 minutos. O relógio de produção começa depois da apresentação.",
+     "new": "5 minutos para leres o enunciado, 60 minutos de produção e 15 minutos de revisão e entrega. Total: 90 minutos. O relógio de produção começa depois da leitura.",
+     "occurrences": 1
+    }
+   ]
+  },
+  "tarefas/m3-u2/index.html": {
+   "base_sha256_lf": "5b2ff56624e74b36cc92dc44db88b868acc967c2263acb7a067158f8e2cf6f59",
+   "after_sha256_lf": "e33557753f129c055d833c332d284e4bf1a97aebbfea11510ad91964218a35fe",
+   "edits": [
+    {
+     "location": "Bloco «Aquecer em cartões»: 5 minutos para leres o enunciado; o relógio começa depois da leitura (gerado por scripts/tarefas_escolha.py)",
+     "old": "5 minutos para o docente apresentar o enunciado, 60 minutos de produção e 15 minutos de revisão e entrega. Total: 90 minutos. O relógio de produção começa depois da apresentação.",
+     "new": "5 minutos para leres o enunciado, 60 minutos de produção e 15 minutos de revisão e entrega. Total: 90 minutos. O relógio de produção começa depois da leitura.",
+     "occurrences": 1
+    }
+   ]
+  },
+  "tarefas/m5-u1/index.html": {
+   "base_sha256_lf": "cf72811cf1a05443e08de44a4243bd35984a5948964e185e6cb3a0f9ac37878d",
+   "after_sha256_lf": "00df12d7923d5a8477956a69fcc61141d5b54bc15ca515cd54a966bfc66c2fe8",
+   "edits": [
+    {
+     "location": "Bloco «Aquecer em cartões»: 5 minutos para leres o enunciado; o relógio começa depois da leitura (gerado por scripts/tarefas_escolha.py)",
+     "old": "5 minutos para o docente apresentar o enunciado, 60 minutos de produção e 15 minutos de revisão e entrega. Total: 90 minutos. O relógio de produção começa depois da apresentação.",
+     "new": "5 minutos para leres o enunciado, 60 minutos de produção e 15 minutos de revisão e entrega. Total: 90 minutos. O relógio de produção começa depois da leitura.",
+     "occurrences": 1
+    }
+   ]
+  },
+  "tarefas/m5-u2/index.html": {
+   "base_sha256_lf": "a417f6a18af9cb351bdf6311458c059384a7ba5e060e552e5a1512fa34388270",
+   "after_sha256_lf": "a9d14a2dda54b6c6a4c83b93c2e0ed523478409b2a560b4b32930710f4220291",
+   "edits": [
+    {
+     "location": "Bloco «Aquecer em cartões»: 5 minutos para leres o enunciado; o relógio começa depois da leitura (gerado por scripts/tarefas_escolha.py)",
+     "old": "5 minutos para o docente apresentar o enunciado, 60 minutos de produção e 15 minutos de revisão e entrega. Total: 90 minutos. O relógio de produção começa depois da apresentação.",
+     "new": "5 minutos para leres o enunciado, 60 minutos de produção e 15 minutos de revisão e entrega. Total: 90 minutos. O relógio de produção começa depois da leitura.",
+     "occurrences": 1
+    }
+   ]
+  },
+  "tarefas/m6-u1/index.html": {
+   "base_sha256_lf": "f577bebd69af58771a1578dbd042166d8f37acb350740edd97a11131deb14690",
+   "after_sha256_lf": "cf929c2586c65760b3d2ba0b2c8a3695c34ab16367d1f2a43bb1faec8264506e",
+   "edits": [
+    {
+     "location": "Bloco «Aquecer em cartões»: 5 minutos para leres o enunciado; o relógio começa depois da leitura (gerado por scripts/tarefas_escolha.py)",
+     "old": "5 minutos para o docente apresentar o enunciado, 60 minutos de produção e 15 minutos de revisão e entrega. Total: 90 minutos. O relógio de produção começa depois da apresentação.",
+     "new": "5 minutos para leres o enunciado, 60 minutos de produção e 15 minutos de revisão e entrega. Total: 90 minutos. O relógio de produção começa depois da leitura.",
+     "occurrences": 1
+    }
+   ]
+  },
+  "tarefas/m6-u2/index.html": {
+   "base_sha256_lf": "31b0d242a22f8aa88a035f189c1cd5c49637ecbc5f783dfe151932340a58b7dd",
+   "after_sha256_lf": "67b67fe748c26daf8413009d74c5b83ff4e250227301029d6b0844cbadeb3e3b",
+   "edits": [
+    {
+     "location": "Bloco «Aquecer em cartões»: 5 minutos para leres o enunciado; o relógio começa depois da leitura (gerado por scripts/tarefas_escolha.py)",
+     "old": "5 minutos para o docente apresentar o enunciado, 60 minutos de produção e 15 minutos de revisão e entrega. Total: 90 minutos. O relógio de produção começa depois da apresentação.",
+     "new": "5 minutos para leres o enunciado, 60 minutos de produção e 15 minutos de revisão e entrega. Total: 90 minutos. O relógio de produção começa depois da leitura.",
+     "occurrences": 1
+    }
+   ]
+  },
+  "tarefas/m8-u1/index.html": {
+   "base_sha256_lf": "d882375d06ee2e0bd3bf962638871a37ee4605506769cfa3b361cafd6451fd31",
+   "after_sha256_lf": "3aa00c297c0b978508eabdae557f1fae534538f7d78661c94f918b6b7826647d",
+   "edits": [
+    {
+     "location": "Bloco do aquecimento: depois, lês o enunciado (gerado por scripts/tarefas_escolha.py)",
+     "old": "Depois, o docente apresenta o enunciado e começam os 60 minutos de produção.",
+     "new": "Depois, lês o enunciado e começam os 60 minutos de produção.",
+     "occurrences": 1
+    }
+   ]
+  },
+  "tarefas/m8-u2/index.html": {
+   "base_sha256_lf": "989ff3e004580f6aea903c583f91a0bb6337e91a040335426e3278c78337d454",
+   "after_sha256_lf": "0db37018edb2206e3159cc7a5d49da4e4dceba673fb22d13cfa9dcd907f80085",
+   "edits": [
+    {
+     "location": "Bloco do aquecimento: depois, lês o enunciado (gerado por scripts/tarefas_escolha.py)",
+     "old": "Depois, o docente apresenta o enunciado e começam os 60 minutos de produção.",
+     "new": "Depois, lês o enunciado e começam os 60 minutos de produção.",
+     "occurrences": 1
+    }
+   ]
+  },
+  "tarefas/m9-u1/index.html": {
+   "base_sha256_lf": "bec0283108e17c0fecebd4d893140bd9b3a6cc45a41f922669d2720f067b1f34",
+   "after_sha256_lf": "fd878ad02379a914ac9a6e3bd5fc8a752995ab6a0b48cc665d3f561080e9e8b5",
+   "edits": [
+    {
+     "location": "Bloco do aquecimento: depois, lês o enunciado (gerado por scripts/tarefas_escolha.py)",
+     "old": "Depois, o docente apresenta o enunciado e começam os 60 minutos de produção.",
+     "new": "Depois, lês o enunciado e começam os 60 minutos de produção.",
+     "occurrences": 1
+    }
+   ]
+  },
+  "tarefas/m9-u2/index.html": {
+   "base_sha256_lf": "6cb272b028fa833d279058d8b1030efb16de8acfffa18f464cee9af53ca22d05",
+   "after_sha256_lf": "d5274f4f4d137363bb0d261e2440985f41a0630b91e80e4cf4415668a750c962",
+   "edits": [
+    {
+     "location": "Bloco do aquecimento: depois, lês o enunciado (gerado por scripts/tarefas_escolha.py)",
+     "old": "Depois, o docente apresenta o enunciado e começam os 60 minutos de produção.",
+     "new": "Depois, lês o enunciado e começam os 60 minutos de produção.",
+     "occurrences": 1
+    }
+   ]
+  },
+  "tarefas/m7-u3/index.html": {
+   "base_sha256_lf": "4a18cb48398b09fe1dac0b87d2536c208b8c418164bb966df0b8bcb865d91514",
+   "after_sha256_lf": "ba701f838db410188ea2876f0c38fffc6e32370294b4baedbb12ba299aa8744d",
+   "edits": [
+    {
+     "location": "Bloco do aquecimento: depois, lês a tarefa (gerado por scripts/tarefas_escolha.py)",
+     "old": "Depois, o docente apresenta a tarefa e começam os 60 minutos de produção.",
+     "new": "Depois, lês a tarefa e começam os 60 minutos de produção.",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m3/guia-da-tarefa-m3/index.html": {
+   "base_sha256_lf": "185995b4dc3ee4a021e45ba35f5d7b2dd8f42745d420187667601d8d43e39c75",
+   "after_sha256_lf": "8aeca66f4b64b10929fbeb8e4ab6dd6586f9a052416b7f8f6e1d9097f4ee9b95",
+   "edits": [
+    {
+     "location": "Bloco 2 «Ler o enunciado, 5 min» (no HTML e em BLOCOS): lês tu o núcleo comum e os temas",
+     "old": "O docente apresenta o núcleo comum e os temas A e B.",
+     "new": "Lê o núcleo comum e os temas A e B.",
+     "occurrences": 2
+    },
+    {
+     "location": "Secção «Tarefas das unidades»: 5 minutos de leitura",
+     "old": "Seguem-se 5 minutos de apresentação pelo docente, 60",
+     "new": "Seguem-se 5 minutos de leitura, 60",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m5/guia-da-tarefa-m5/index.html": {
+   "base_sha256_lf": "a0e7f08327edaa15b5fdd4b75846f11ab39de8a3f1d4b8cfe5414a0323651794",
+   "after_sha256_lf": "80bed3352f607329044a4a75ba609df7f96eeec19665fee0c25323a75c5d232c",
+   "edits": [
+    {
+     "location": "Bloco 2 «Ler o enunciado, 5 min» (no HTML e em BLOCOS): lês tu o núcleo comum e os temas",
+     "old": "O docente apresenta o núcleo comum e os temas A e B.",
+     "new": "Lê o núcleo comum e os temas A e B.",
+     "occurrences": 2
+    },
+    {
+     "location": "Secção «Tarefas das unidades»: 5 minutos de leitura",
+     "old": "Seguem-se 5 minutos de apresentação pelo docente, 60",
+     "new": "Seguem-se 5 minutos de leitura, 60",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m6/guia-da-tarefa-m6/index.html": {
+   "base_sha256_lf": "f6bc7f51ee53a2ff0df0f7b303458bee2d9beef41dd12952bb39fce10f351619",
+   "after_sha256_lf": "d02a9b30e3ba9149269b8c62f712ebd7593a479287b5dfe82bd8ae226ff1fb16",
+   "edits": [
+    {
+     "location": "Bloco 2 «Ler o enunciado, 5 min» (no HTML e em BLOCOS): lês tu o núcleo comum e os temas",
+     "old": "O docente apresenta o núcleo comum e os temas A e B.",
+     "new": "Lê o núcleo comum e os temas A e B.",
+     "occurrences": 2
+    },
+    {
+     "location": "Secção «Tarefas das unidades»: 5 minutos de leitura",
+     "old": "Seguem-se 5 minutos de apresentação pelo docente, 60",
+     "new": "Seguem-se 5 minutos de leitura, 60",
+     "occurrences": 1
+    },
+    {
+     "location": "Extra 2 «Cesário Verde nos dias de hoje», último passo: apresentas numa gravação ou na aula",
+     "old": "Apresenta à turma em três minutos e entrega os créditos.",
+     "new": "Apresenta em três minutos, numa gravação ou na aula, e entrega os créditos.",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m8/guia-da-tarefa-m8/index.html": {
+   "base_sha256_lf": "8752ebb4da4c9a7e17497b025ed8c9d534b078516f6b5f4dea85dd7e1875532e",
+   "after_sha256_lf": "96488a61c0bc6e567cb9811c08fd15d0b374ef1d07a93cb5fb0c34feec23f432",
+   "edits": [
+    {
+     "location": "Bloco 2 «Ler o enunciado, 5 min» (no HTML e em BLOCOS): lês tu o núcleo comum e os temas",
+     "old": "O docente apresenta o núcleo comum e os temas A e B.",
+     "new": "Lê o núcleo comum e os temas A e B.",
+     "occurrences": 2
+    },
+    {
+     "location": "Secção «Tarefas das unidades»: 5 minutos de leitura",
+     "old": "Seguem-se 5 minutos de apresentação, 60",
+     "new": "Seguem-se 5 minutos de leitura, 60",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m9/guia-da-tarefa-m9/index.html": {
+   "base_sha256_lf": "6d74a4439d86a4920ec15c5579141df89784c90a6e624f9a9e92301a6f188b01",
+   "after_sha256_lf": "592b7f30cceabddc6b821352c8e43da7d85a129a536392f676d75977713a736d",
+   "edits": [
+    {
+     "location": "Bloco 2 «Ler o enunciado, 5 min» (no HTML e em BLOCOS): lês tu o núcleo comum e os temas",
+     "old": "O docente apresenta o núcleo comum e os temas A e B.",
+     "new": "Lê o núcleo comum e os temas A e B.",
+     "occurrences": 2
+    },
+    {
+     "location": "Secção «Tarefas das unidades»: 5 minutos de leitura",
+     "old": "Seguem-se 5 minutos de apresentação, 60",
+     "new": "Seguem-se 5 minutos de leitura, 60",
+     "occurrences": 1
+    },
+    {
+     "location": "Extra 1 «Os que carregaram a pedra», último passo: apresentas numa gravação ou na aula",
+     "old": "Apresenta à turma e entrega os créditos.",
+     "new": "Apresenta, numa gravação ou na aula, e entrega os créditos.",
+     "occurrences": 1
+    },
+    {
+     "location": "Extra 1 «Os que carregaram a pedra», critério: apresentação gravada ou na aula",
+     "old": "Apresentação à turma; créditos.",
+     "new": "Apresentação, gravada ou na aula; créditos.",
+     "occurrences": 1
+    },
+    {
+     "location": "Extra 1, rubrica «Processo e memória descritiva», nível de topo: uma crítica registada (de um colega ou tua)",
+     "old": "três grupos de anónimos testados, crítica de um colega registada, memória descritiva",
+     "new": "três grupos de anónimos testados, uma crítica registada (de um colega ou tua), memória descritiva",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m7/guia-da-tarefa-m7/index.html": {
+   "base_sha256_lf": "da675ef822c44c8f63c28c87805a41d18e5a73dabd343360c6afd02160293666",
+   "after_sha256_lf": "7738daf9c1a9651769d95d35e231d80918c082a05071c296c7af1f2377c670b7",
+   "edits": [
+    {
+     "location": "Bloco 1 «Aquecer, 15 min» (no HTML e em BLOCOS): os cartões e a leitura da tarefa",
+     "old": "e a apresentação da tarefa pelo docente",
+     "new": "e a leitura da tarefa",
+     "occurrences": 2
+    },
+    {
+     "location": "Rubrica «Apresentação», nível de topo: pergunta feita ou prevista",
+     "old": "responde a uma pergunta (registada numa linha no papel)",
+     "new": "responde a uma pergunta feita ou prevista (registada numa linha no papel)",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m2/guia-da-tarefa-m2/index.html": {
+   "base_sha256_lf": "b8d7b071ccef80a141dd40653bb43f43ebf1865aa5592601c05cf5a70b4f6555",
+   "after_sha256_lf": "4dd5d4c524b8bd4d2251212572b37bfbb89600348c420110fc15a113f2a9e08c",
+   "edits": [
+    {
+     "location": "Bloco 1 «Aquecer, 15 min» (no HTML e em BLOCOS): os cartões e a leitura da tarefa",
+     "old": "e a apresentação da tarefa pelo docente",
+     "new": "e a leitura da tarefa",
+     "occurrences": 2
+    },
+    {
+     "location": "Secção «Tarefas das unidades»: 5 minutos para leres o enunciado",
+     "old": "com consulta, e 5 minutos de apresentação do enunciado pelo docente; depois respondes",
+     "new": "com consulta, e 5 minutos para leres o enunciado; depois respondes",
+     "occurrences": 1
+    },
+    {
+     "location": "Arquivo, Tarefa 1, alternativa de quem faltou ao teatro: lês tu uma cena em voz alta",
+     "old": "Se faltaste à ida ao teatro, escreve a apreciação crítica da leitura em voz alta de uma cena feita na aula, com os mesmos critérios.",
+     "new": "Se faltaste à ida ao teatro, lê uma cena em voz alta e escreve a apreciação crítica dessa leitura, com os mesmos critérios.",
+     "occurrences": 1
+    }
+   ]
+  },
+  "tarefas/m7-u2/index.html": {
+   "base_sha256_lf": "235e1050daf2150472087283aee9836e93c2ba3260c3db9383810f1c68e0caff",
+   "after_sha256_lf": "d45abdfab30b9f0e3e3713a869723b0e573a6d6db332a37095d946b88a88d2fa",
+   "edits": [
+    {
+     "location": "Bloco «Verificar»: regista uma pergunta (a que te fizeram ou uma que prevês) e a tua resposta",
+     "old": "Regista no teu papel, numa linha, a pergunta que te fizeram e o que respondeste; essa linha entra nas fotografias.",
+     "new": "Regista no teu papel, numa linha, uma pergunta (a que te fizeram ou uma que prevês) e a tua resposta; essa linha entra nas fotografias.",
+     "occurrences": 1
+    },
+    {
+     "location": "Enunciado: responde a uma pergunta, feita ou prevista",
+     "old": "Apresenta a voz em dois minutos, lê uma frase e responde a uma pergunta.</p>",
+     "new": "Apresenta a voz em dois minutos, lê uma frase e responde a uma pergunta, feita ou prevista.</p>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m8/licao-m8-f09/index.html": {
+   "base_sha256_lf": "181e5f7ea881423ecf3bca88d35a03163982142b2d2b71675fb16b0684f5123f",
+   "after_sha256_lf": "3eae78d4fdf9be616a9b1fa7cdd7046a3ce63bbd5fbb594e03b0db3a895a9ec1",
+   "edits": [
+    {
+     "location": "«O essencial», 1.º item, e a mesma frase nas pistas: três imagens tiradas ao acaso, de onde o aluno as pode tirar",
+     "old": "três imagens ao acaso, de um conjunto preparado pelo docente, e um conto",
+     "new": "três imagens tiradas ao acaso (de um livro, de uma revista ou da galeria do telemóvel) e um conto",
+     "occurrences": 2
+    },
+    {
+     "location": "Cartão «completar» das três imagens: tiram-se ao acaso",
+     "old": "\"p\":\"De onde vêm as três imagens e o que têm de ser?\",\"p2\":\"Quem prepara o conjunto de imagens, e que condição têm de cumprir na história?\",\"frase\":\"As três imagens vêm de um conjunto preparado pelo [1] e têm de ser [2] à história.\",\"lacunas\":[{\"o\":[\"aluno\",\"colega\",\"docente\",\"narrador\"],\"c\":2},{\"o\":[\"necessárias\",\"decorativas\",\"semelhantes\",\"breves\"],\"c\":0}],\"f\":\"Preparado pelo **docente**; **necessárias**:",
+     "new": "\"p\":\"Como se escolhem as três imagens e o que têm de ser?\",\"p2\":\"Como se tiram as imagens, e que condição têm de cumprir na história?\",\"frase\":\"As três imagens tiram-se [1] e têm de ser [2] à história.\",\"lacunas\":[{\"o\":[\"ao acaso\",\"por tema\",\"pela ordem\"],\"c\":0},{\"o\":[\"necessárias\",\"decorativas\",\"semelhantes\",\"breves\"],\"c\":0}],\"f\":\"**Ao acaso**; **necessárias**:",
+     "occurrences": 1
+    },
+    {
+     "location": "«O essencial», 3.º item, e a mesma frase nas pistas: lês em voz alta",
+     "old": "lês em voz alta a um colega, mudas duas coisas",
+     "new": "lês em voz alta, mudas duas coisas",
+     "occurrences": 2
+    },
+    {
+     "location": "Retorno do cartão «ordenar» «Como se escreve o conto, por ordem» (lição, arquivo do índice e painel): leitura em voz alta",
+     "old": "Três contos, plano, primeira versão, leitura a um colega: o processo",
+     "new": "Três contos, plano, primeira versão, leitura em voz alta: o processo",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m8/index.html": {
+   "base_sha256_lf": "a06f9ac2d520eabb9564e12fc04c8f52f98941b0c230c97de13864ca791f4f7b",
+   "after_sha256_lf": "64b96aeeb1892662a598bdbbf515ab96768aacec6d7889257ae9f9be9564e202",
+   "edits": [
+    {
+     "location": "Arquivo do índice, cartão «completar» das três imagens: tiram-se ao acaso",
+     "old": "\"p\":\"De onde vêm as três imagens e o que têm de ser?\",\"frase\":\"As três imagens vêm de um conjunto preparado pelo [1] e têm de ser [2] à história.\",\"lacunas\":[{\"o\":[\"aluno\",\"colega\",\"docente\"],\"c\":2},",
+     "new": "\"p\":\"Como se escolhem as três imagens e o que têm de ser?\",\"frase\":\"As três imagens tiram-se [1] e têm de ser [2] à história.\",\"lacunas\":[{\"o\":[\"ao acaso\",\"por tema\",\"pela ordem\"],\"c\":0},",
+     "occurrences": 1
+    },
+    {
+     "location": "Retorno do cartão «ordenar» «Como se escreve o conto, por ordem» (lição, arquivo do índice e painel): leitura em voz alta",
+     "old": "Três contos, plano, primeira versão, leitura a um colega: o processo",
+     "new": "Três contos, plano, primeira versão, leitura em voz alta: o processo",
+     "occurrences": 1
+    },
+    {
+     "location": "Arquivo do índice, cartão de escolha da M8-F09: o que fazes depois de leres o conto em voz alta",
+     "old": "\"p\":\"A quem lês o conto em voz alta antes de entregar?\",\"o\":[\"A um colega\",\"Ao docente\",\"À turma\"],\"c\":0,\"f\":\"A um **colega**: lês em voz alta e fazes duas mudanças; o processo também conta.\"",
+     "new": "\"p\":\"Depois de leres o conto em voz alta, o que fazes antes de entregar?\",\"o\":[\"Mudas duas coisas\",\"Entregas logo\",\"Recomeças do zero\"],\"c\":0,\"f\":\"**Mudas duas coisas**: o processo também conta.\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Percurso, lição 10 «Poema com pintura ou álbum»: obra à tua escolha; indicas uma semelhança e uma diferença",
+     "old": "um álbum selecionado pelo docente, com provas do texto; partilha uma semelhança",
+     "new": "um álbum à tua escolha, com provas do texto; indica uma semelhança",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m8/painel-m8-f09/index.html": {
+   "base_sha256_lf": "66c21f848ac7cc1cc0706653270e7401d82cf30e019bc140cb0d85dd231a489d",
+   "after_sha256_lf": "61121735bfce33f69366cc80e98a07db4d8970a6255481fb19bddd2fac398e18",
+   "edits": [
+    {
+     "location": "Painel da M8-F09, pergunta do cartão «completar» (seletor e lista): como se escolhem as três imagens",
+     "old": "De onde vêm as três imagens e o que têm de ser?",
+     "new": "Como se escolhem as três imagens e o que têm de ser?",
+     "occurrences": 2
+    },
+    {
+     "location": "Painel da M8-F09, material do cartão «completar»: tiram-se ao acaso",
+     "old": "\"f\":\"Preparado pelo **docente**; **necessárias**: se tirares uma e a história continuar, estava só a enfeitar.\",\"frase\":\"As três imagens vêm de um conjunto preparado pelo [1] e têm de ser [2] à história.\",\"lac\":[[\"aluno\",\"colega\",\"narrador\",\"docente\"],",
+     "new": "\"f\":\"**Ao acaso**; **necessárias**: se tirares uma e a história continuar, estava só a enfeitar.\",\"frase\":\"As três imagens tiram-se [1] e têm de ser [2] à história.\",\"lac\":[[\"por tema\",\"pela ordem\",\"ao acaso\"],",
+     "occurrences": 1
+    },
+    {
+     "location": "Retorno do cartão «ordenar» «Como se escreve o conto, por ordem» (lição, arquivo do índice e painel): leitura em voz alta",
+     "old": "Três contos, plano, primeira versão, leitura a um colega: o processo",
+     "new": "Três contos, plano, primeira versão, leitura em voz alta: o processo",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m9/index.html": {
+   "base_sha256_lf": "8ec1f9bb677cb5042bfa14c4c2b11b2a59b988df04df644ee69cd0105232426f",
+   "after_sha256_lf": "617235e9a8efbc06502b7440ed97d45c80b3d1a9288f5695a6016e3410b9f51d",
+   "edits": [
+    {
+     "location": "Percurso, passo 2 «De quem é uma obra?»: o debate fica como momento de aula",
+     "old": "Prepara os dois lados da moção com provas do romance, participa no debate e escreve o texto de opinião que responde ao outro lado.",
+     "new": "Prepara os dois lados da moção com provas do romance e escreve o texto de opinião que responde ao outro lado (na aula, debate em turma).",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m1/m1-promessa-do-cronista/index.html": {
+   "base_sha256_lf": "9ce535e6043fe0fbc9f639ef477b8bcb8f8a99b5139fff533c6732eaa938508f",
+   "after_sha256_lf": "f4f5b228b2e034415a799befa17e33d7ec9fd4c068b2edaa49d70c354039332f",
+   "edits": [
+    {
+     "location": "Cartão final «Para levar» do «Pensar devagar»: respondes em voz alta, numa frase",
+     "old": "Responde-lhe agora em voz alta, numa frase, a alguém.",
+     "new": "Responde-lhe agora em voz alta, numa frase.",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m1/m1-voz-emprestada/index.html": {
+   "base_sha256_lf": "38a2c47b113fe0c2553f77bef1e4b256f2dfdab7dd8bf2279d0d122c93d53cc4",
+   "after_sha256_lf": "a1b70eafdefd425bc3eaafa21d2c2449959dc6cbe7b3a54c78f2403c5b833ccf",
+   "edits": [
+    {
+     "location": "Cartão final «Para levar» do «Pensar devagar»: respondes em voz alta, numa frase",
+     "old": "Responde-lhe agora em voz alta, numa frase, a alguém.",
+     "new": "Responde-lhe agora em voz alta, numa frase.",
+     "occurrences": 1
+    },
+    {
+     "location": "Cartão «posicao» do Ato 5 do «Pensar devagar»: justificas a resposta em voz alta, sem precisar de alguém",
+     "old": "Escolhe a resposta que defendes e justifica-a em voz alta a alguém.",
+     "new": "Escolhe a resposta que defendes e justifica-a em voz alta.",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m2/m2-ines-escolhe-duas-vezes/index.html": {
+   "base_sha256_lf": "a5780ab792fbf19b15fb1460cae79c0f483099a90d51f635baf8b3474cbd8423",
+   "after_sha256_lf": "3d57bb4e2a0060908f24014b2557072af467f8fe5b558ffa883687bd10a71688",
+   "edits": [
+    {
+     "location": "Cartão final «Para levar» do «Pensar devagar»: respondes em voz alta, numa frase",
+     "old": "Responde-lhe agora em voz alta, numa frase, a alguém.",
+     "new": "Responde-lhe agora em voz alta, numa frase.",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m2/m2-maquina-de-rir/index.html": {
+   "base_sha256_lf": "b1f8440d9205d9d3891e46ead3524ee1f3534a7cc2204b5db75ffd61dc4d8df0",
+   "after_sha256_lf": "77ffeaa767e2d97581a109d8626234ce4f1c5b2e2187a83eadbb3b8a48bd4f72",
+   "edits": [
+    {
+     "location": "Cartão final «Para levar» do «Pensar devagar»: respondes em voz alta, numa frase",
+     "old": "Responde-lhe agora em voz alta, numa frase, a alguém.",
+     "new": "Responde-lhe agora em voz alta, numa frase.",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m3/m3-soneto-raciocinio/index.html": {
+   "base_sha256_lf": "ca0e789afa7830d2e32bd4f8a498f64191a94b8388771c0a94192249fbe7037b",
+   "after_sha256_lf": "3d8c97e21e8171d02439e839fbc7dd35819d0d9a4957a9fadef1ddccee777da2",
+   "edits": [
+    {
+     "location": "Cartão final «Para levar» do «Pensar devagar»: respondes em voz alta, numa frase",
+     "old": "Responde-lhe agora em voz alta, numa frase, a alguém.",
+     "new": "Responde-lhe agora em voz alta, numa frase.",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m3/m3-velho-restelo-juri/index.html": {
+   "base_sha256_lf": "4b1e7d570173b0549e391fabd74700ec9ba38049b8ee602b7f2682633772213f",
+   "after_sha256_lf": "1c7eadf361d4f3e7d5fa248e4ac992ef91d7670e98afd79207ca6ac3aed0ef05",
+   "edits": [
+    {
+     "location": "Cartão final «Para levar» do «Pensar devagar»: respondes em voz alta, numa frase",
+     "old": "Responde-lhe agora em voz alta, numa frase, a alguém.",
+     "new": "Responde-lhe agora em voz alta, numa frase.",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/m4-frei-luis-quem-sabia/index.html": {
+   "base_sha256_lf": "ab469607226250a1acbbc0b01fcf8a783ca60532efffd4f6f04f343241a45e40",
+   "after_sha256_lf": "61984d38af8d0e3ce8892e19fdcdc3dbe6233e0000411dfe9b5e0eed56702822",
+   "edits": [
+    {
+     "location": "Cartão final «Para levar» do «Pensar devagar»: respondes em voz alta, numa frase",
+     "old": "Responde-lhe agora em voz alta, numa frase, a alguém.",
+     "new": "Responde-lhe agora em voz alta, numa frase.",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/m4-sermao-tribunal/index.html": {
+   "base_sha256_lf": "4d8dc87f3dbfdd9b14532680f5100d84dcd4f5c5826007bcb04cf7509a3117dc",
+   "after_sha256_lf": "0af428fa8ae9c10576e09b41ee34b86f8cd2e286b0f8f09c004fc56c11c8492f",
+   "edits": [
+    {
+     "location": "Cartão final «Para levar» do «Pensar devagar»: respondes em voz alta, numa frase",
+     "old": "Responde-lhe agora em voz alta, numa frase, a alguém.",
+     "new": "Responde-lhe agora em voz alta, numa frase.",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m5/m5-o-pais-ou-eles/index.html": {
+   "base_sha256_lf": "d7de3cbab0a2748d28b667a848d5b16ebea7381d5f5b961314e59e9943a67855",
+   "after_sha256_lf": "dd1bf467bab566616a6c3df1f76b99aead9baef3c1761504645c932bcd1b923a",
+   "edits": [
+    {
+     "location": "Cartão final «Para levar» do «Pensar devagar»: respondes em voz alta, numa frase",
+     "old": "Responde-lhe agora em voz alta, numa frase, a alguém.",
+     "new": "Responde-lhe agora em voz alta, numa frase.",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m5/m5-quem-podia-ter-feito-diferente/index.html": {
+   "base_sha256_lf": "a1a1617d286d3449d5cc68bca98da962d06f9f8c1b17460d6c32acbd45381bdf",
+   "after_sha256_lf": "48f0e23bbfbc3a30d23804433d1d7a1bba216caf08b2ba283ea146f497df760f",
+   "edits": [
+    {
+     "location": "Cartão final «Para levar» do «Pensar devagar»: respondes em voz alta, numa frase",
+     "old": "Responde-lhe agora em voz alta, numa frase, a alguém.",
+     "new": "Responde-lhe agora em voz alta, numa frase.",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m6/m6-antero-viagem-ao-nada/index.html": {
+   "base_sha256_lf": "c3b08b90a0285555592ecacaa2819200fae70f565b6d2f1f0c1d14d914e618bd",
+   "after_sha256_lf": "7587bcc1c8bdad0287859c5629e52859bef8d4a901fe2c6bf34abd18e0b1a3ba",
+   "edits": [
+    {
+     "location": "Cartão final «Para levar» do «Pensar devagar»: respondes em voz alta, numa frase",
+     "old": "Responde-lhe agora em voz alta, numa frase, a alguém.",
+     "new": "Responde-lhe agora em voz alta, numa frase.",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m6/m6-cesario-noite-inteira/index.html": {
+   "base_sha256_lf": "5eca564dd578ec2d92a604321cc1bb14d3b3e0f6905e1dc0c3e5bea75de82adb",
+   "after_sha256_lf": "8294f98412f9d4e34801fbadfc15a0c4bd5fba8ae882b28b918af9c8ef32c355",
+   "edits": [
+    {
+     "location": "Cartão final «Para levar» do «Pensar devagar»: respondes em voz alta, numa frase",
+     "old": "Responde-lhe agora em voz alta, numa frase, a alguém.",
+     "new": "Responde-lhe agora em voz alta, numa frase.",
+     "occurrences": 1
+    },
+    {
+     "location": "Cartão «Toma posição»: dizes a tua posição em voz alta",
+     "old": "Diz a tua posição em voz alta a um colega e justifica-a",
+     "new": "Diz a tua posição em voz alta e justifica-a",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m7/m7-fingidor-maquina/index.html": {
+   "base_sha256_lf": "1078f9f732af032cd6ab2b0e011db6f9bd4088f0882869af3d4a30b1be394589",
+   "after_sha256_lf": "04c17bdb5d46ef738d977a57ad5b3daedfa805149951244027109d8ea95c77d2",
+   "edits": [
+    {
+     "location": "Cartão final «Para levar» do «Pensar devagar»: respondes em voz alta, numa frase",
+     "old": "Responde-lhe agora em voz alta, numa frase, a alguém.",
+     "new": "Responde-lhe agora em voz alta, numa frase.",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m7/m7-quatro-vozes-um-problema/index.html": {
+   "base_sha256_lf": "2b8b6bbe6efda569cd14afd19724331da349bde38fb8f0ff684281067a580082",
+   "after_sha256_lf": "8717f19deeeac713d14ea1950ae1dd56a9aa743b2df8fa88f2c405d085486689",
+   "edits": [
+    {
+     "location": "Cartão final «Para levar» do «Pensar devagar»: respondes em voz alta, numa frase",
+     "old": "Responde-lhe agora em voz alta, numa frase, a alguém.",
+     "new": "Responde-lhe agora em voz alta, numa frase.",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m9/m9-de-quem-e-o-convento/index.html": {
+   "base_sha256_lf": "32fa33017104d277320e0d2608c4a22eb558b86fd6b21bf221e6e85a382890af",
+   "after_sha256_lf": "2b5b6c7f054db07f91971fa198a27b91937be80f5aff97b2c6c8e0bd2be92023",
+   "edits": [
+    {
+     "location": "Cartão final «Para levar» do «Pensar devagar»: respondes em voz alta, numa frase",
+     "old": "Responde-lhe agora em voz alta, numa frase, a alguém.",
+     "new": "Responde-lhe agora em voz alta, numa frase.",
+     "occurrences": 1
+    },
+    {
+     "location": "Ato 4 do «Pensar devagar», comentário da opção «É dos dois…»: a decisão é a que a pergunta pede",
+     "old": "Deixa de fora a decisão que o debate te pede, e o docente vai pedir-ta na mesma.",
+     "new": "Deixa de fora a decisão que a pergunta te pede, e vais ter de a tomar na mesma.",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m9/m9-ver-e-nao-ver/index.html": {
+   "base_sha256_lf": "79e585ce5ba54c0b00871924d8073edd7ed96d23d0dc39923b4c24e67984aa02",
+   "after_sha256_lf": "e9b8948e234232f1ce7c256a278e1158e14989d7ebab41f3e0efe3ea37e9e00e",
+   "edits": [
+    {
+     "location": "Cartão final «Para levar» do «Pensar devagar»: respondes em voz alta, numa frase",
+     "old": "Responde-lhe agora em voz alta, numa frase, a alguém.",
+     "new": "Responde-lhe agora em voz alta, numa frase.",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m8/m8-george-tres-idades/index.html": {
+   "base_sha256_lf": "db5261f8e29902868d163679d6efc553ab5ab031bd181d23aa3b162dedff600a",
+   "after_sha256_lf": "62a6a904c509deb98266fa49f6f2844cced46f288a82aabb4ba13114d7fe4897",
+   "edits": [
+    {
+     "location": "Cartão «Conversa a dois» passa a «Outra leitura»: pensas numa leitura diferente da tua (na aula, a de um colega)",
+     "old": "\"rot\":\"Conversa a dois\",\"titulo\":\"Discordar com uma passagem aberta\",\"html\":\"<p>Troca a tua leitura com um colega. Antes de responder, resume a ideia dele de forma que ele a reconheça.</p>",
+     "new": "\"rot\":\"Outra leitura\",\"titulo\":\"Discordar com uma passagem aberta\",\"html\":\"<p>Pensa numa leitura diferente da tua (na aula, a de um colega) e resume-a de forma que quem a defende a reconheça.</p>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m8/m8-poema-testemunha/index.html": {
+   "base_sha256_lf": "d4f45e68eb0b2c331a041ac51c32e02424c3a1580c9f4492340ecd8267097242",
+   "after_sha256_lf": "110344cb9fae371d884d99881e6f2706fd9d3bce750c66d5cd2eb7e866c2ad0d",
+   "edits": [
+    {
+     "location": "Cartão «Escolhe uma leitura», último parágrafo: comparas com a outra pista",
+     "old": "<p>Compara a tua escolha com a de um colega. Podem chegar a leituras diferentes e ambas terem apoio no texto.</p>",
+     "new": "<p>Compara a tua escolha com a outra pista: duas leituras diferentes podem ter ambas apoio no texto.</p>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "obras/memorial/index.html": {
+   "base_sha256_lf": "7610cdab59e278ac2c3cb2acbdba4390148987d33e507811ebb7979b0c2091d1",
+   "after_sha256_lf": "64a04b5e3133fa4fd722620341d28e5853d10d349cecb8593b7dbdf5ccc13391",
+   "edits": [
+    {
+     "location": "Bloco «Comparar»: lês o excerto em voz alta, com uma voz para cada um",
+     "old": "depois lê-o a duas vozes com um colega.",
+     "new": "depois lê-o em voz alta, com uma voz para cada um.",
+     "occurrences": 1
+    }
+   ]
+  },
+  "obras/mensagem/index.html": {
+   "base_sha256_lf": "e218250710cb5f214b58f6be5aa4c69382466a030540a2c0539d64adee1cbbd2",
+   "after_sha256_lf": "d3320a592d33555a264ffbe8b762db2eb67596a47f34d23218a723bb3dd6d3fa",
+   "edits": [
+    {
+     "location": "Bloco «Comparar»: lês «Mar Português» em voz alta",
+     "old": "Lê «Mar Português» em voz alta a um colega e escolhe",
+     "new": "Lê «Mar Português» em voz alta e escolhe",
+     "occurrences": 1
+    }
+   ]
+  },
+  "atlas/index.html": {
+   "base_sha256_lf": "472ccc5c2ff9b8fa60f379069a7e8258ab8efe1457a6c33f80e6ebf07d18a76b",
+   "after_sha256_lf": "b9afd51229c3eadfec9cab809f65286faf9a62298f68bf429fd7c7077e58457f",
+   "edits": [
+    {
+     "location": "Figura «luis-vicente», «Para ti»: a cena de dois minutos sem «com a tua turma»",
+     "old": "uma cena de dois minutos com a tua turma.",
+     "new": "uma cena de dois minutos.",
+     "occurrences": 1
+    },
+    {
+     "location": "Versões do atlas-editorial.js e do atlas-explorar.js, para os navegadores não usarem a cópia antiga",
+     "old": "atlas-editorial.js?v=20261022-1",
+     "new": "atlas-editorial.js?v=20261105-autonomia-1",
+     "occurrences": 1
+    },
+    {
+     "location": "Versão do atlas-explorar.js, para os navegadores não usarem a cópia antiga",
+     "old": "atlas-explorar.js?v=20261022-2",
+     "new": "atlas-explorar.js?v=20261105-autonomia-1",
+     "occurrences": 1
+    }
+   ]
+  },
+  "assets/atlas-editorial.js": {
+   "base_sha256_lf": "c426b0678ae0685d43a7d6b84807a51b37b6c1c7d584191d1b7a9e6d6efc4f50",
+   "after_sha256_lf": "04065842027c6b81e015f6d977a79564655f466ae636f119fe8f0d2151d17016",
+   "edits": [
+    {
+     "location": "Proposta «jose-craveirinha»: continuas a história noutra voz",
+     "old": "Diz o início de uma história a um colega e deixa-o continuar; depois troquem os papéis.",
+     "new": "Diz o início de uma história e continua-a noutra voz, como se fosses outra pessoa.",
+     "occurrences": 1
+    },
+    {
+     "location": "Proposta «stela-do-patrocinio»: gravas a frase e registas tu",
+     "old": "Diz uma frase tua; pede a um colega que a registe com pausas e mudanças de linha.",
+     "new": "Grava uma frase tua; depois regista-a com pausas e mudanças de linha.",
+     "occurrences": 1
+    },
+    {
+     "location": "Proposta «bispo-do-rosario»: explicas a ordem numa frase",
+     "old": "Dispõe desenhos ou materiais e explica a ordem a um colega.",
+     "new": "Dispõe desenhos ou materiais e explica a ordem numa frase.",
+     "occurrences": 1
+    },
+    {
+     "location": "Proposta «qorpo-santo»: experimentas a fala sem dupla",
+     "old": "Em dupla, experimenta a mesma fala com dois gestos diferentes.",
+     "new": "Experimenta a mesma fala com dois gestos diferentes.",
+     "occurrences": 1
+    }
+   ]
+  },
+  "assets/atlas-explorar.js": {
+   "base_sha256_lf": "0df0e3b474b50718ccf65280deebd87754980e4265b6cde5d58388b28365f78f",
+   "after_sha256_lf": "b875953f411d8fc6b729978790d64c9da4236275b50832d90c6e93254d28727f",
+   "edits": [
+    {
+     "location": "Investigação «O poema muda quando ganha voz?», entrada «Pausa»: gravas e descreves tu",
+     "old": "Diz uma frase tua de duas maneiras, mudando só a pausa. Pede a alguém que descreva o que mudou antes de explicares a tua intenção.",
+     "new": "Grava uma frase tua de duas maneiras, mudando só a pausa. Ouve-as e descreve o que mudou.",
+     "occurrences": 1
+    },
+    {
+     "location": "Investigação «O poema muda quando ganha voz?», «Transforma a descoberta»: lês pela partitura e gravas-te",
+     "old": "Outra pessoa interpreta-a; ajusta um sinal depois de ouvir.",
+     "new": "Lê-a pela partitura e grava-te; ajusta um sinal depois de ouvir.",
+     "occurrences": 1
+    },
+    {
+     "location": "Investigação «O poema muda quando ganha voz?», entrada «Escuta»: sem áudio, lês tu a frase de duas maneiras",
+     "old": "Sem áudio, compara duas leituras da mesma frase em sala.",
+     "new": "Sem áudio, lê a mesma frase de duas maneiras e compara as duas leituras.",
+     "occurrences": 1
+    },
+    {
+     "location": "Investigação «O poema muda quando ganha voz?», bloco «Rever»: na alternativa sem áudio, comparas as tuas duas leituras",
+     "old": "Na alternativa sem áudio, compara a frase dita pelos colegas.",
+     "new": "Na alternativa sem áudio, compara as tuas duas leituras da mesma frase.",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m8/licao-m8-f01/index.html": {
+   "base_sha256_lf": "89662dce6a1e2279c9b253c3ddb905e2fa4b69ab667a8e2ffb84d12b5637e96c",
+   "after_sha256_lf": "5e8679cd667a9083ade5944b20f7bc6190ecd8daa288216d3377e28b250433e4",
+   "edits": [
+    {
+     "location": "«Outra voz: Adília Lopes», sem vídeo: lês o poema, se o tiveres em livro, ou escolhes a pista pela pergunta",
+     "old": "Sem vídeo: pede ao docente uma leitura em voz alta. Podes participar oralmente ou apenas comparar mentalmente.",
+     "new": "Sem vídeo: se tiveres o poema em livro, lê-o em voz alta; se não, escolhe a pista só pela pergunta e volta a ela quando puderes ouvir a leitura. (Na aula, podes participar oralmente ou apenas comparar mentalmente.)",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m7/licao-m7-f34/index.html": {
+   "base_sha256_lf": "4c23e571fa3a24cf7850a10d46f74b65626ac77cdad6e2f1f6193d54e59a15f0",
+   "after_sha256_lf": "340f7597781b59652ce6fcc5b97b96ad75d32b72e17419a24746d9bdfaab8855",
+   "edits": [
+    {
+     "location": "Cartão «Experimentar · VI»: relês ou mostras a alguém",
+     "old": "Mostra ou diz a alguém: consegue reconhecer os dois planos e o ponto em que se cruzam?",
+     "new": "Relê ou mostra a alguém: reconhecem-se os dois planos e o ponto em que se cruzam?",
+     "occurrences": 1
+    },
+    {
+     "location": "Cartão «Para entender», «No caderno: quatro versos em dupla exposição»: lês em voz alta e confirmas tu",
+     "old": "Lê-os a alguém e pergunta-lhe que dois lugares viu.",
+     "new": "Lê-os em voz alta e confirma que se veem os dois lugares.",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m1/guia-da-tarefa-m1/index.html": {
+   "base_sha256_lf": "edbaf3b9fb4a3e01f34d51bf9803bc9c54b2973ac97be0ec29a8e928baa5a623",
+   "after_sha256_lf": "ca0324d8db36875f09a4df8b301d1fce24f441a352969a74d77bbdf4a184eeae",
+   "edits": [
+    {
+     "location": "Secção «Tarefas das unidades»: 5 minutos de leitura do enunciado",
+     "old": "Seguem-se 5 minutos de apresentação do enunciado pelo docente, 60 minutos de produção com consulta",
+     "new": "Seguem-se 5 minutos de leitura do enunciado, 60 minutos de produção com consulta",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/guia-da-tarefa-m4/index.html": {
+   "base_sha256_lf": "6bec1c372c9ac55d7c76188cc4897928f29ac1e30d8300416a95ceb40273d2ca",
+   "after_sha256_lf": "fd3d852795cc29aea1da559bd59dd712c014afaecdd812777ba7d870436c0229",
+   "edits": [
+    {
+     "location": "Arquivo, Tarefa 3, alternativa de quem faltou ao teatro: lês tu uma cena do ato I em voz alta",
+     "old": "escreve a apreciação crítica de uma cena do ato I lida em voz alta na aula: compara o que ouviste com o que leste em silêncio, com os mesmos critérios.",
+     "new": "lê em voz alta uma cena do ato I e escreve a apreciação crítica dessa leitura: compara-a com a tua leitura silenciosa, com os mesmos critérios.",
+     "occurrences": 1
+    }
+   ]
+  }
+ }
+}

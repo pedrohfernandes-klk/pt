@@ -1,0 +1,1226 @@
+[
+ {
+  "ficheiro": "m4/index.html",
+  "local": "Percurso, passo 16 «Trinta dias no abrigo»: lês tu o discurso de 1915",
+  "antigo": "Ouve o docente ler um discurso de 1915, desmonta-o",
+  "novo": "Lê em voz alta um discurso de 1915, desmonta-o",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): o passo só arrancava com a leitura do docente; a lição M4-F14 tem o excerto e já diz «lê-a em voz alta»."
+ },
+ {
+  "ficheiro": "m4/licao-m4-f14/index.html",
+  "local": "Linha «Hoje» do cartão Abre: ler em voz alta o discurso de 1915",
+  "antigo": "ouvir o docente ler o discurso de 1915",
+  "novo": "ler em voz alta o discurso de 1915",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): a linha «Hoje» punha o primeiro passo nas mãos do docente; o cartão do texto já tem o caminho a sós."
+ },
+ {
+  "ficheiro": "m3/licao-m3-f11/index.html",
+  "local": "Cartão «Para entender», caixa «Se não houver conferência»: ouves ou lês alguém (o vídeo de Mia Couto está no mesmo cartão)",
+  "antigo": "<p>O docente traz uma gravação ou um texto de alguém que fale do português no mundo (entrevista, conferência gravada, artigo com autor e data); a turma ouve ou lê como se estivesse lá. As perguntas fazem-se por escrito e leem-se em voz alta.</p>",
+  "novo": "<p>Ouve ou lê alguém que fale do português no mundo (entrevista, conferência gravada, artigo com autor e data), como Mia Couto no vídeo abaixo. Escreve a tua pergunta (na aula, lê-se em voz alta).</p>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): sem conferência, a única saída dependia de o docente trazer o material e de haver turma."
+ },
+ {
+  "ficheiro": "m3/licao-m3-f11/index.html",
+  "local": "Lacunas «O que muda se não houver conferência?» (lição, arquivo do índice e cópia do painel): ouves ou lês um texto com autor e data",
+  "antigo": "Se não houver conferência, o docente traz um texto com [1] e data, e as perguntas fazem-se por [2] e leem-se em voz alta.",
+  "novo": "Se não houver conferência, ouves ou lês um texto com [1] e data, e a pergunta faz-se por [2].",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): o exercício ensinava, como regra, que é o docente quem traz o texto; acompanha a caixa «Se não houver conferência». As respostas («autor», «escrito») mantêm-se."
+ },
+ {
+  "ficheiro": "m3/index.html",
+  "local": "Lacunas «O que muda se não houver conferência?» (lição, arquivo do índice e cópia do painel): ouves ou lês um texto com autor e data",
+  "antigo": "Se não houver conferência, o docente traz um texto com [1] e data, e as perguntas fazem-se por [2] e leem-se em voz alta.",
+  "novo": "Se não houver conferência, ouves ou lês um texto com [1] e data, e a pergunta faz-se por [2].",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): o exercício ensinava, como regra, que é o docente quem traz o texto; acompanha a caixa «Se não houver conferência». As respostas («autor», «escrito») mantêm-se."
+ },
+ {
+  "ficheiro": "m3/painel-m3-f11/index.html",
+  "local": "Lacunas «O que muda se não houver conferência?» (lição, arquivo do índice e cópia do painel): ouves ou lês um texto com autor e data",
+  "antigo": "Se não houver conferência, o docente traz um texto com [1] e data, e as perguntas fazem-se por [2] e leem-se em voz alta.",
+  "novo": "Se não houver conferência, ouves ou lês um texto com [1] e data, e a pergunta faz-se por [2].",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): o exercício ensinava, como regra, que é o docente quem traz o texto; acompanha a caixa «Se não houver conferência». As respostas («autor», «escrito») mantêm-se."
+ },
+ {
+  "ficheiro": "m3/licao-m3-f11/index.html",
+  "local": "Exercício «Põe por ordem o fim da frase sobre a lição sem conferência»: ouves ou lês, na segunda pessoa",
+  "antigo": "\"palavras\":[\"a\",\"turma\",\"ouve\",\"ou\",\"lê\",\"como\",\"se\",\"estivesse\",\"na\",\"conferência.\"],\"f\":\"«a turma ouve ou lê como se estivesse na conferência»: os dois verbos primeiro;",
+  "novo": "\"palavras\":[\"ouves\",\"ou\",\"lês\",\"como\",\"se\",\"estivesses\",\"na\",\"conferência.\"],\"f\":\"«ouves ou lês como se estivesses na conferência»: os dois verbos primeiro;",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): caso em falta, verificado: a frase a ordenar punha a turma a ouvir; acompanha a caixa «Se não houver conferência»."
+ },
+ {
+  "ficheiro": "m3/painel-m3-f11/index.html",
+  "local": "Cópia do painel do exercício de ordenar a frase: ouves ou lês, na segunda pessoa",
+  "antigo": "\"f\":\"«a turma ouve ou lê como se estivesse na conferência»: os dois verbos primeiro; a comparação com «como se» fecha a frase.\",\"palavras\":[\"a\",\"conferência.\",\"estivesse\",\"turma\",\"como\",\"se\",\"na\",\"ou\",\"ouve\",\"lê\"]",
+  "novo": "\"f\":\"«ouves ou lês como se estivesses na conferência»: os dois verbos primeiro; a comparação com «como se» fecha a frase.\",\"palavras\":[\"conferência.\",\"estivesses\",\"como\",\"se\",\"na\",\"ou\",\"ouves\",\"lês\"]",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): a cópia do painel acompanha o exercício da lição (mesmas palavras, baralhadas)."
+ },
+ {
+  "ficheiro": "m3/index.html",
+  "local": "Percurso, passo 1 «Duas versões de 1498»: sem «na cópia da aula»",
+  "antigo": "Lê o <i>Kit</i> de Patrícia Lino na cópia da aula, põe-lhe ao lado",
+  "novo": "Lê o <i>Kit</i> de Patrícia Lino, põe-lhe ao lado",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): a cópia da aula era a única via indicada; a lição M3-F02 descreve os objetos do Kit e mostra o vídeo da autora."
+ },
+ {
+  "ficheiro": "m3/licao-m3-f04/index.html",
+  "local": "«O essencial» (e a mesma frase nas pistas): protótipo mostrado a alguém",
+  "antigo": "protótipo mostrado a um colega, etiqueta revista duas vezes.",
+  "novo": "protótipo mostrado a alguém, etiqueta revista duas vezes.",
+  "ocorrencias": 2,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): um passo obrigatório do processo só se cumpria com um colega; «alguém» mantém a revisão por outra pessoa, a qualquer hora."
+ },
+ {
+  "ficheiro": "m3/licao-m3-f04/index.html",
+  "local": "Exercício de ordenar os passos do processo (lição, arquivo do índice e cópia do painel): mostrar o protótipo a alguém",
+  "antigo": "Mostrar o protótipo a um colega",
+  "novo": "Mostrar o protótipo a alguém",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): acompanha «O essencial» da M3-F04."
+ },
+ {
+  "ficheiro": "m3/index.html",
+  "local": "Exercício de ordenar os passos do processo (lição, arquivo do índice e cópia do painel): mostrar o protótipo a alguém",
+  "antigo": "Mostrar o protótipo a um colega",
+  "novo": "Mostrar o protótipo a alguém",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): acompanha «O essencial» da M3-F04."
+ },
+ {
+  "ficheiro": "m3/painel-m3-f04/index.html",
+  "local": "Exercício de ordenar os passos do processo (lição, arquivo do índice e cópia do painel): mostrar o protótipo a alguém",
+  "antigo": "Mostrar o protótipo a um colega",
+  "novo": "Mostrar o protótipo a alguém",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): acompanha «O essencial» da M3-F04."
+ },
+ {
+  "ficheiro": "m3/index.html",
+  "local": "Arquivo do índice, pergunta «A quem se mostra o protótipo antes de acabar?»: certa «A alguém»; sai «Ao docente» (ficaria também certa)",
+  "antigo": "\"p\":\"A quem se mostra o protótipo antes de acabar?\",\"o\":[\"Ao docente\",\"Aos autores de um manual\",\"A um colega\"],\"c\":2,\"f\":\"A um colega: «Protótipo mostrado a um colega» é o terceiro passo do processo.\"",
+  "novo": "\"p\":\"A quem se mostra o protótipo antes de acabar?\",\"o\":[\"A ninguém\",\"Aos autores de um manual\",\"A alguém\"],\"c\":2,\"f\":\"A alguém: «Protótipo mostrado a alguém» é o terceiro passo do processo.\"",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): acompanha «O essencial» da M3-F04; o distrator «Ao docente» passaria a estar certo e troca por «A ninguém»; a certa fica «A alguém» (a pergunta já diz «antes de acabar», e a certa não pode ser a opção mais longa)."
+ },
+ {
+  "ficheiro": "m3/index.html",
+  "local": "Percurso, passo 7 «Quem disse este verso?»: preparas tu perguntas justas, com resposta e fonte",
+  "antigo": "Prepara com a turma as doze perguntas do torneio interturmas como extra sem nota.",
+  "novo": "Prepara perguntas justas, com resposta e fonte, para o torneio interturmas (extra sem nota).",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): a única ação do passo precisava da turma; na M3-F16 o aluno já escreve, sozinho, perguntas com resposta e fonte."
+ },
+ {
+  "ficheiro": "m5/index.html",
+  "local": "Arquivo do índice, unidade 2, lacunas da M5-F14: só a voz da narração (sai «o docente indica os episódios»)",
+  "antigo": "\"p\":\"Quem indica os episódios e quem interpreta a narração?\",\"frase\":\"Vês os episódios que o [1] indicar; a voz da narração é interpretada por [2].\",\"lacunas\":[{\"o\":[\"realizador\",\"docente\",\"narrador\"],\"c\":1},{\"o\":[\"Vaz de Carvalho\",\"João Botelho\",\"Eça de Queirós\"],\"c\":0}],\"f\":\"O **docente** indica os episódios; **Jorge Vaz de Carvalho** interpreta a voz narrativa.",
+  "novo": "\"p\":\"Quem interpreta a voz da narração?\",\"frase\":\"A voz da narração do filme é interpretada por [1].\",\"lacunas\":[{\"o\":[\"Vaz de Carvalho\",\"João Botelho\",\"Eça de Queirós\"],\"c\":0}],\"f\":\"**Jorge Vaz de Carvalho** interpreta a voz narrativa.",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): o item ensinava que ver o filme depende de o docente indicar os episódios (resposta certa «docente»); a lição M5-F14 já não o diz."
+ },
+ {
+  "ficheiro": "m2/index.html",
+  "local": "Percurso, passo 5 «Asno ou cavalo, hoje»: o projeto de turma fica entre parênteses",
+  "antigo": "Propõe um equivalente atual e justifica o conflito que conserva. No projeto de turma, desenvolve a adaptação em vídeo e apresenta as escolhas.",
+  "novo": "Propõe um equivalente atual e justifica o conflito que conserva (no projeto de turma, desenvolve a adaptação em vídeo).",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): o passo punha o projeto de turma e a apresentação como ações obrigatórias; a M2-F09 diz que se faz individualmente. Revisão: «desenvolve a adaptação», e não «desenvolve-o», que se agarrava a «o conflito»."
+ },
+ {
+  "ficheiro": "m2/gram-subordinadas/index.html",
+  "local": "Mensagem «Atlas completo»: apresentas a pessoa no caderno",
+  "antigo": "Escolhe uma pessoa e apresenta-a a alguém da turma em três frases.",
+  "novo": "Escolhe uma pessoa e apresenta-a em três frases, no caderno.",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): a microatividade de fecho só se fazia com alguém da turma."
+ },
+ {
+  "ficheiro": "m1/licao-m1-f04/index.html",
+  "local": "Cartão «Decide»: decide em silêncio, sem a votação de braço no ar",
+  "antigo": "Decide em silêncio, de braço no ar. Depois abre",
+  "novo": "Decide em silêncio. Depois abre",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): «de braço no ar» é uma votação de turma que o cartão mandava fazer; a M4-F09 e a M4-F10 já usam a forma autónoma."
+ },
+ {
+  "ficheiro": "m1/licao-m1-f05/index.html",
+  "local": "Cartão «Decide»: decide em silêncio, sem a votação de braço no ar",
+  "antigo": "Decide em silêncio, de braço no ar. Depois abre",
+  "novo": "Decide em silêncio. Depois abre",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): «de braço no ar» é uma votação de turma que o cartão mandava fazer; a M4-F09 e a M4-F10 já usam a forma autónoma."
+ },
+ {
+  "ficheiro": "m4/licao-m4-f01/index.html",
+  "local": "Cartão «Decide»: decide em silêncio, sem a votação de braço no ar",
+  "antigo": "Decide em silêncio, de braço no ar. Depois abre",
+  "novo": "Decide em silêncio. Depois abre",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): «de braço no ar» é uma votação de turma que o cartão mandava fazer; a M4-F09 e a M4-F10 já usam a forma autónoma."
+ },
+ {
+  "ficheiro": "m4/licao-m4-f02/index.html",
+  "local": "Cartão «Decide»: decide em silêncio, sem a votação de braço no ar",
+  "antigo": "Decide em silêncio, de braço no ar. Depois abre",
+  "novo": "Decide em silêncio. Depois abre",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): «de braço no ar» é uma votação de turma que o cartão mandava fazer; a M4-F09 e a M4-F10 já usam a forma autónoma."
+ },
+ {
+  "ficheiro": "m4/licao-m4-f04/index.html",
+  "local": "Cartão «Decide»: decide em silêncio, sem a votação de braço no ar",
+  "antigo": "Decide em silêncio, de braço no ar. Depois abre",
+  "novo": "Decide em silêncio. Depois abre",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): «de braço no ar» é uma votação de turma que o cartão mandava fazer; a M4-F09 e a M4-F10 já usam a forma autónoma."
+ },
+ {
+  "ficheiro": "m4/licao-m4-f06/index.html",
+  "local": "Cartão «Decide»: decide em silêncio, sem a votação de braço no ar",
+  "antigo": "Decide em silêncio, de braço no ar. Depois abre",
+  "novo": "Decide em silêncio. Depois abre",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): «de braço no ar» é uma votação de turma que o cartão mandava fazer; a M4-F09 e a M4-F10 já usam a forma autónoma."
+ },
+ {
+  "ficheiro": "m4/licao-m4-f07/index.html",
+  "local": "Cartão «Decide»: decide em silêncio, sem a votação de braço no ar",
+  "antigo": "Decide em silêncio, de braço no ar. Depois abre",
+  "novo": "Decide em silêncio. Depois abre",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): «de braço no ar» é uma votação de turma que o cartão mandava fazer; a M4-F09 e a M4-F10 já usam a forma autónoma."
+ },
+ {
+  "ficheiro": "m4/licao-m4-f08/index.html",
+  "local": "Cartão «Decide»: decide em silêncio, sem a votação de braço no ar",
+  "antigo": "Decide em silêncio, de braço no ar. Depois abre",
+  "novo": "Decide em silêncio. Depois abre",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): «de braço no ar» é uma votação de turma que o cartão mandava fazer; a M4-F09 e a M4-F10 já usam a forma autónoma."
+ },
+ {
+  "ficheiro": "m4/licao-m4-f11/index.html",
+  "local": "Cartão «Decide»: decide em silêncio, sem a votação de braço no ar",
+  "antigo": "Decide em silêncio, de braço no ar. Depois abre",
+  "novo": "Decide em silêncio. Depois abre",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): «de braço no ar» é uma votação de turma que o cartão mandava fazer; a M4-F09 e a M4-F10 já usam a forma autónoma."
+ },
+ {
+  "ficheiro": "m4/licao-m4-f14/index.html",
+  "local": "Cartão «Decide»: decide em silêncio, sem a votação de braço no ar",
+  "antigo": "Decide em silêncio, de braço no ar. Depois abre",
+  "novo": "Decide em silêncio. Depois abre",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): «de braço no ar» é uma votação de turma que o cartão mandava fazer; a M4-F09 e a M4-F10 já usam a forma autónoma."
+ },
+ {
+  "ficheiro": "m4/licao-m4-f15/index.html",
+  "local": "Cartão «Decide»: decide em silêncio, sem a votação de braço no ar",
+  "antigo": "Decide em silêncio, de braço no ar. Depois abre",
+  "novo": "Decide em silêncio. Depois abre",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): «de braço no ar» é uma votação de turma que o cartão mandava fazer; a M4-F09 e a M4-F10 já usam a forma autónoma."
+ },
+ {
+  "ficheiro": "m4/licao-m4-f20/index.html",
+  "local": "Cartão «Decide»: decide em silêncio, sem a votação de braço no ar",
+  "antigo": "Decide em silêncio, de braço no ar. Depois abre",
+  "novo": "Decide em silêncio. Depois abre",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): «de braço no ar» é uma votação de turma que o cartão mandava fazer; a M4-F09 e a M4-F10 já usam a forma autónoma."
+ },
+ {
+  "ficheiro": "m4/licao-m4-f25/index.html",
+  "local": "Cartão «Decide»: decide em silêncio, sem a votação de braço no ar",
+  "antigo": "Decide em silêncio, de braço no ar. Depois abre",
+  "novo": "Decide em silêncio. Depois abre",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): «de braço no ar» é uma votação de turma que o cartão mandava fazer; a M4-F09 e a M4-F10 já usam a forma autónoma."
+ },
+ {
+  "ficheiro": "m4/licao-m4-f26/index.html",
+  "local": "Cartão «Decide»: decide em silêncio, sem a votação de braço no ar",
+  "antigo": "Decide em silêncio, de braço no ar. Depois abre",
+  "novo": "Decide em silêncio. Depois abre",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): «de braço no ar» é uma votação de turma que o cartão mandava fazer; a M4-F09 e a M4-F10 já usam a forma autónoma."
+ },
+ {
+  "ficheiro": "m1/licao-m1-f08/index.html",
+  "local": "Linha «Hoje» do cartão Abre: «Ler a fundo» sem pares",
+  "antigo": "Ler a fundo a pares, títulos em papel",
+  "novo": "Ler a fundo, títulos em papel",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): o plano dizia que o trabalho é a pares; o cartão extra é individual (decisão 146: nada de pares)."
+ },
+ {
+  "ficheiro": "m1/licao-m1-f15/index.html",
+  "local": "Linha «Hoje» do cartão Abre: «Ler a fundo» sem pares",
+  "antigo": "Ler a fundo em pares, resposta em papel",
+  "novo": "Ler a fundo, resposta em papel",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): o plano era o único sítio com pares; o cartão extra é individual."
+ },
+ {
+  "ficheiro": "m1/licao-m1-f05/index.html",
+  "local": "Linha «Hoje» do cartão Abre: praticar, sem pares",
+  "antigo": "praticar em pares, responder em papel",
+  "novo": "praticar, responder em papel",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): o plano mandava praticar em pares; todos os cartões do baralho são individuais."
+ },
+ {
+  "ficheiro": "m4/licao-m4-f20/index.html",
+  "local": "Cartão do texto, «Antes de ler»: lês em voz alta, uma voz para cada personagem, e decides como fazes as didascálias",
+  "antigo": "Lê em voz alta, com papéis: Manuel, Madalena e quem lê as duas didascálias. Decide como as fazes: em voz alta, com som ou com um gesto.",
+  "novo": "Lê em voz alta, com uma voz para Manuel e outra para Madalena. Decide como fazes as duas didascálias: em voz alta, com som ou com um gesto.",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): «com papéis» e «quem lê as didascálias» pressupunham vários leitores, e esta leitura é a alternativa de quem faltou ao teatro. Revisão: a troca abrange a frase seguinte, que deixa escolher como se fazem as didascálias; a primeira já não as manda dizer em voz alta."
+ },
+ {
+  "ficheiro": "tarefas/m4-u2/index.html",
+  "local": "Bloco «Se não foste ao teatro»: lês tu a cena do ato I em voz alta",
+  "antigo": "Se não foste ao teatro, compara uma cena do ato I lida em voz alta na aula com a tua leitura silenciosa.",
+  "novo": "Se não foste ao teatro, lê em voz alta uma cena do ato I e compara essa leitura com a tua leitura silenciosa.",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): a alternativa dependia de uma leitura feita numa aula anterior; quem também faltou a essa aula ficava sem saída. Revisão: «compara essa leitura», e não «compara-a», que se referia à cena."
+ },
+ {
+  "ficheiro": "tarefas/m4-u3/index.html",
+  "local": "Apoio de comparação «A palavra contra o poder», organização da aula: o primeiro bloco passa a «Leitura do enunciado» (o enunciado está todo na página)",
+  "antigo": "<li><b>10 min</b><span>Apresentação pelo docente</span></li>",
+  "novo": "<li><b>10 min</b><span>Leitura do enunciado</span></li>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): a página já não é a aula de tarefa (é apoio de comparação) e abria com a apresentação do docente; os quatro blocos continuam a somar 90 minutos."
+ },
+ {
+  "ficheiro": "m4/visita-frei-luis-de-sousa-no-teatro/index.html",
+  "local": "Caderno de campo, «Não foste à visita?»: lês tu a cena do Ato I em voz alta",
+  "antigo": "<p>Escolhe uma cena do Ato I lida em voz alta na aula. Compara o que ouviste com o que leste em silêncio, com os mesmos critérios.</p>",
+  "novo": "<p>Lê em voz alta uma cena do Ato I e compara essa leitura com a tua leitura silenciosa, com os mesmos critérios.</p>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): caso em falta, verificado: a alternativa dependia de uma leitura feita na aula. Revisão: «compara essa leitura», e não «compara-a», que se referia à cena."
+ },
+ {
+  "ficheiro": "m2/visita-farsa-de-ines-pereira-no-teatro/index.html",
+  "local": "Caderno de campo, «Não foste à visita?»: lês tu uma cena em voz alta",
+  "antigo": "<p>Escreve a apreciação crítica da leitura em voz alta de uma cena feita na aula, com os mesmos critérios.</p>",
+  "novo": "<p>Lê uma cena em voz alta e escreve a apreciação crítica dessa leitura, com os mesmos critérios.</p>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): caso em falta, verificado: a alternativa dependia de uma leitura feita na aula."
+ },
+ {
+  "ficheiro": "m4/recursos/tpc-entrada.js",
+  "local": "M4-F28, cartão «Criar», 4 min: relês e revês tu",
+  "antigo": "<b>4 min:</b> um colega identifica a tensão e o sinal que a sustenta; revê um ponto que não tenha ficado claro.",
+  "novo": "<b>4 min:</b> relê, identifica a tensão e o sinal que a sustenta e revê um ponto pouco claro.",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): caso em falta, verificado: o último passo só se fazia com um colega."
+ },
+ {
+  "ficheiro": "m4/recursos/tpc-entrada.js",
+  "local": "M4-F28, cartão «Rever em conjunto»: revês a tua produção (na aula, duas da turma)",
+  "antigo": "<p>Escolham duas produções, com autorização de quem as fez. Para cada uma:</p>",
+  "novo": "<p>Revê a tua produção (na aula, duas da turma, com autorização de quem as fez):</p>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): caso em falta, verificado: o cartão só se fazia em turma; o resto do cartão já se faz a sós."
+ },
+ {
+  "ficheiro": "m4/licao-m4-f28/index.html",
+  "local": "Versão do tpc-entrada.js, para os navegadores não usarem a cópia antiga",
+  "antigo": "tpc-entrada.js?v=20261026-ponte1",
+  "novo": "tpc-entrada.js?v=20261105-autonomia-1",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): o tpc-entrada.js muda nesta camada."
+ },
+ {
+  "ficheiro": "tarefas/m4-u2/aquecimento/index.html",
+  "local": "Último cartão do aquecimento: «alternativa de leitura», sem «em aula» (gerado por scripts/aquecimentos.py)",
+  "antigo": "Se usares a alternativa de leitura em aula, identifica essa opção.",
+  "novo": "Se usares a alternativa de leitura, identifica essa opção.",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): caso em falta, verificado: acompanha a alternativa da tarefa M4-U2; a mudança está nos dados do gerador (docs/pedagogia/aquecimentos/m4-u2.json)."
+ },
+ {
+  "ficheiro": "docs/pedagogia/aquecimentos/m4-u2.json",
+  "local": "Dados do aquecimento da M4-U2 (scripts/aquecimentos.py), último cartão: «alternativa de leitura», sem «em aula»",
+  "antigo": "Se usares a alternativa de leitura em aula, identifica essa opção.",
+  "novo": "Se usares a alternativa de leitura, identifica essa opção.",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): fonte da página tarefas/m4-u2/aquecimento/, que se regenera a partir daqui."
+ },
+ {
+  "ficheiro": "docs/pedagogia/tarefas-escolha/m1-u1.json",
+  "local": "Dados da tarefa M1-U1 (scripts/tarefas_escolha.py), «aquecer»: 5 minutos para leres o enunciado",
+  "antigo": "5 minutos para o docente apresentar o enunciado, 60 minutos de produção e 15 minutos de revisão e entrega. Total: 90 minutos. O relógio de produção começa depois da apresentação.",
+  "novo": "5 minutos para leres o enunciado, 60 minutos de produção e 15 minutos de revisão e entrega. Total: 90 minutos. O relógio de produção começa depois da leitura.",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): fonte da página tarefas/m1-u1/, que se regenera a partir daqui."
+ },
+ {
+  "ficheiro": "docs/pedagogia/tarefas-escolha/m1-u2.json",
+  "local": "Dados da tarefa M1-U2 (scripts/tarefas_escolha.py), «aquecer»: 5 minutos para leres o enunciado",
+  "antigo": "5 minutos para o docente apresentar o enunciado, 60 minutos de produção e 15 minutos de revisão e entrega. Total: 90 minutos. O relógio de produção começa depois da apresentação.",
+  "novo": "5 minutos para leres o enunciado, 60 minutos de produção e 15 minutos de revisão e entrega. Total: 90 minutos. O relógio de produção começa depois da leitura.",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): fonte da página tarefas/m1-u2/, que se regenera a partir daqui."
+ },
+ {
+  "ficheiro": "docs/pedagogia/tarefas-escolha/m3-u1.json",
+  "local": "Dados da tarefa M3-U1 (scripts/tarefas_escolha.py), «aquecer»: 5 minutos para leres o enunciado",
+  "antigo": "5 minutos para o docente apresentar o enunciado, 60 minutos de produção e 15 minutos de revisão e entrega. Total: 90 minutos. O relógio de produção começa depois da apresentação.",
+  "novo": "5 minutos para leres o enunciado, 60 minutos de produção e 15 minutos de revisão e entrega. Total: 90 minutos. O relógio de produção começa depois da leitura.",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): fonte da página tarefas/m3-u1/, que se regenera a partir daqui."
+ },
+ {
+  "ficheiro": "docs/pedagogia/tarefas-escolha/m3-u2.json",
+  "local": "Dados da tarefa M3-U2 (scripts/tarefas_escolha.py), «aquecer»: 5 minutos para leres o enunciado",
+  "antigo": "5 minutos para o docente apresentar o enunciado, 60 minutos de produção e 15 minutos de revisão e entrega. Total: 90 minutos. O relógio de produção começa depois da apresentação.",
+  "novo": "5 minutos para leres o enunciado, 60 minutos de produção e 15 minutos de revisão e entrega. Total: 90 minutos. O relógio de produção começa depois da leitura.",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): fonte da página tarefas/m3-u2/, que se regenera a partir daqui."
+ },
+ {
+  "ficheiro": "docs/pedagogia/tarefas-escolha/m5-u1.json",
+  "local": "Dados da tarefa M5-U1 (scripts/tarefas_escolha.py), «aquecer»: 5 minutos para leres o enunciado",
+  "antigo": "5 minutos para o docente apresentar o enunciado, 60 minutos de produção e 15 minutos de revisão e entrega. Total: 90 minutos. O relógio de produção começa depois da apresentação.",
+  "novo": "5 minutos para leres o enunciado, 60 minutos de produção e 15 minutos de revisão e entrega. Total: 90 minutos. O relógio de produção começa depois da leitura.",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): fonte da página tarefas/m5-u1/, que se regenera a partir daqui."
+ },
+ {
+  "ficheiro": "docs/pedagogia/tarefas-escolha/m5-u2.json",
+  "local": "Dados da tarefa M5-U2 (scripts/tarefas_escolha.py), «aquecer»: 5 minutos para leres o enunciado",
+  "antigo": "5 minutos para o docente apresentar o enunciado, 60 minutos de produção e 15 minutos de revisão e entrega. Total: 90 minutos. O relógio de produção começa depois da apresentação.",
+  "novo": "5 minutos para leres o enunciado, 60 minutos de produção e 15 minutos de revisão e entrega. Total: 90 minutos. O relógio de produção começa depois da leitura.",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): fonte da página tarefas/m5-u2/, que se regenera a partir daqui."
+ },
+ {
+  "ficheiro": "docs/pedagogia/tarefas-escolha/m6-u1.json",
+  "local": "Dados da tarefa M6-U1 (scripts/tarefas_escolha.py), «aquecer»: 5 minutos para leres o enunciado",
+  "antigo": "5 minutos para o docente apresentar o enunciado, 60 minutos de produção e 15 minutos de revisão e entrega. Total: 90 minutos. O relógio de produção começa depois da apresentação.",
+  "novo": "5 minutos para leres o enunciado, 60 minutos de produção e 15 minutos de revisão e entrega. Total: 90 minutos. O relógio de produção começa depois da leitura.",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): fonte da página tarefas/m6-u1/, que se regenera a partir daqui."
+ },
+ {
+  "ficheiro": "docs/pedagogia/tarefas-escolha/m6-u2.json",
+  "local": "Dados da tarefa M6-U2 (scripts/tarefas_escolha.py), «aquecer»: 5 minutos para leres o enunciado",
+  "antigo": "5 minutos para o docente apresentar o enunciado, 60 minutos de produção e 15 minutos de revisão e entrega. Total: 90 minutos. O relógio de produção começa depois da apresentação.",
+  "novo": "5 minutos para leres o enunciado, 60 minutos de produção e 15 minutos de revisão e entrega. Total: 90 minutos. O relógio de produção começa depois da leitura.",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): fonte da página tarefas/m6-u2/, que se regenera a partir daqui."
+ },
+ {
+  "ficheiro": "docs/pedagogia/tarefas-escolha/m8-u1.json",
+  "local": "Dados da tarefa M8-U1 (scripts/tarefas_escolha.py), «aquecer»: depois, lês o enunciado",
+  "antigo": "Depois, o docente apresenta o enunciado e começam os 60 minutos de produção.",
+  "novo": "Depois, lês o enunciado e começam os 60 minutos de produção.",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): fonte da página tarefas/m8-u1/, que se regenera a partir daqui."
+ },
+ {
+  "ficheiro": "docs/pedagogia/tarefas-escolha/m8-u2.json",
+  "local": "Dados da tarefa M8-U2 (scripts/tarefas_escolha.py), «aquecer»: depois, lês o enunciado",
+  "antigo": "Depois, o docente apresenta o enunciado e começam os 60 minutos de produção.",
+  "novo": "Depois, lês o enunciado e começam os 60 minutos de produção.",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): fonte da página tarefas/m8-u2/, que se regenera a partir daqui."
+ },
+ {
+  "ficheiro": "docs/pedagogia/tarefas-escolha/m9-u1.json",
+  "local": "Dados da tarefa M9-U1 (scripts/tarefas_escolha.py), «aquecer»: depois, lês o enunciado",
+  "antigo": "Depois, o docente apresenta o enunciado e começam os 60 minutos de produção.",
+  "novo": "Depois, lês o enunciado e começam os 60 minutos de produção.",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): fonte da página tarefas/m9-u1/, que se regenera a partir daqui."
+ },
+ {
+  "ficheiro": "docs/pedagogia/tarefas-escolha/m9-u2.json",
+  "local": "Dados da tarefa M9-U2 (scripts/tarefas_escolha.py), «aquecer»: depois, lês o enunciado",
+  "antigo": "Depois, o docente apresenta o enunciado e começam os 60 minutos de produção.",
+  "novo": "Depois, lês o enunciado e começam os 60 minutos de produção.",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): fonte da página tarefas/m9-u2/, que se regenera a partir daqui."
+ },
+ {
+  "ficheiro": "docs/pedagogia/tarefas-escolha/m7-u3.json",
+  "local": "Dados da tarefa M7-U3 (scripts/tarefas_escolha.py), «aquecer»: depois, lês a tarefa",
+  "antigo": "Depois, o docente apresenta a tarefa e começam os 60 minutos de produção.",
+  "novo": "Depois, lês a tarefa e começam os 60 minutos de produção.",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): fonte da página tarefas/m7-u3/, que se regenera a partir daqui."
+ },
+ {
+  "ficheiro": "tarefas/m1-u1/index.html",
+  "local": "Bloco «Aquecer em cartões»: 5 minutos para leres o enunciado; o relógio começa depois da leitura (gerado por scripts/tarefas_escolha.py)",
+  "antigo": "5 minutos para o docente apresentar o enunciado, 60 minutos de produção e 15 minutos de revisão e entrega. Total: 90 minutos. O relógio de produção começa depois da apresentação.",
+  "novo": "5 minutos para leres o enunciado, 60 minutos de produção e 15 minutos de revisão e entrega. Total: 90 minutos. O relógio de produção começa depois da leitura.",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): o enunciado está todo na página, mas o relógio de produção ficava à espera da apresentação do docente. A mudança está nos dados do gerador (docs/pedagogia/tarefas-escolha/m1-u1.json)."
+ },
+ {
+  "ficheiro": "tarefas/m1-u2/index.html",
+  "local": "Bloco «Aquecer em cartões»: 5 minutos para leres o enunciado; o relógio começa depois da leitura (gerado por scripts/tarefas_escolha.py)",
+  "antigo": "5 minutos para o docente apresentar o enunciado, 60 minutos de produção e 15 minutos de revisão e entrega. Total: 90 minutos. O relógio de produção começa depois da apresentação.",
+  "novo": "5 minutos para leres o enunciado, 60 minutos de produção e 15 minutos de revisão e entrega. Total: 90 minutos. O relógio de produção começa depois da leitura.",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): o enunciado está todo na página, mas o relógio de produção ficava à espera da apresentação do docente. A mudança está nos dados do gerador (docs/pedagogia/tarefas-escolha/m1-u2.json)."
+ },
+ {
+  "ficheiro": "tarefas/m2-u1/index.html",
+  "local": "Bloco «Aquecer em cartões»: 5 minutos para leres o enunciado; o relógio começa depois da leitura",
+  "antigo": "5 minutos para o docente apresentar o enunciado, 60 minutos de produção e 15 minutos de revisão e entrega. Total: 90 minutos. O relógio de produção começa depois da apresentação.",
+  "novo": "5 minutos para leres o enunciado, 60 minutos de produção e 15 minutos de revisão e entrega. Total: 90 minutos. O relógio de produção começa depois da leitura.",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): o enunciado está todo na página, mas o relógio de produção ficava à espera da apresentação do docente."
+ },
+ {
+  "ficheiro": "tarefas/m2-u2/index.html",
+  "local": "Bloco «Aquecer em cartões»: 5 minutos para leres o enunciado; o relógio começa depois da leitura",
+  "antigo": "5 minutos para o docente apresentar o enunciado, 60 minutos de produção e 15 minutos de revisão e entrega. Total: 90 minutos. O relógio de produção começa depois da apresentação.",
+  "novo": "5 minutos para leres o enunciado, 60 minutos de produção e 15 minutos de revisão e entrega. Total: 90 minutos. O relógio de produção começa depois da leitura.",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): o enunciado está todo na página, mas o relógio de produção ficava à espera da apresentação do docente."
+ },
+ {
+  "ficheiro": "tarefas/m3-u1/index.html",
+  "local": "Bloco «Aquecer em cartões»: 5 minutos para leres o enunciado; o relógio começa depois da leitura (gerado por scripts/tarefas_escolha.py)",
+  "antigo": "5 minutos para o docente apresentar o enunciado, 60 minutos de produção e 15 minutos de revisão e entrega. Total: 90 minutos. O relógio de produção começa depois da apresentação.",
+  "novo": "5 minutos para leres o enunciado, 60 minutos de produção e 15 minutos de revisão e entrega. Total: 90 minutos. O relógio de produção começa depois da leitura.",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): o enunciado está todo na página, mas o relógio de produção ficava à espera da apresentação do docente. A mudança está nos dados do gerador (docs/pedagogia/tarefas-escolha/m3-u1.json)."
+ },
+ {
+  "ficheiro": "tarefas/m3-u2/index.html",
+  "local": "Bloco «Aquecer em cartões»: 5 minutos para leres o enunciado; o relógio começa depois da leitura (gerado por scripts/tarefas_escolha.py)",
+  "antigo": "5 minutos para o docente apresentar o enunciado, 60 minutos de produção e 15 minutos de revisão e entrega. Total: 90 minutos. O relógio de produção começa depois da apresentação.",
+  "novo": "5 minutos para leres o enunciado, 60 minutos de produção e 15 minutos de revisão e entrega. Total: 90 minutos. O relógio de produção começa depois da leitura.",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): o enunciado está todo na página, mas o relógio de produção ficava à espera da apresentação do docente. A mudança está nos dados do gerador (docs/pedagogia/tarefas-escolha/m3-u2.json)."
+ },
+ {
+  "ficheiro": "tarefas/m5-u1/index.html",
+  "local": "Bloco «Aquecer em cartões»: 5 minutos para leres o enunciado; o relógio começa depois da leitura (gerado por scripts/tarefas_escolha.py)",
+  "antigo": "5 minutos para o docente apresentar o enunciado, 60 minutos de produção e 15 minutos de revisão e entrega. Total: 90 minutos. O relógio de produção começa depois da apresentação.",
+  "novo": "5 minutos para leres o enunciado, 60 minutos de produção e 15 minutos de revisão e entrega. Total: 90 minutos. O relógio de produção começa depois da leitura.",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): o enunciado está todo na página, mas o relógio de produção ficava à espera da apresentação do docente. A mudança está nos dados do gerador (docs/pedagogia/tarefas-escolha/m5-u1.json)."
+ },
+ {
+  "ficheiro": "tarefas/m5-u2/index.html",
+  "local": "Bloco «Aquecer em cartões»: 5 minutos para leres o enunciado; o relógio começa depois da leitura (gerado por scripts/tarefas_escolha.py)",
+  "antigo": "5 minutos para o docente apresentar o enunciado, 60 minutos de produção e 15 minutos de revisão e entrega. Total: 90 minutos. O relógio de produção começa depois da apresentação.",
+  "novo": "5 minutos para leres o enunciado, 60 minutos de produção e 15 minutos de revisão e entrega. Total: 90 minutos. O relógio de produção começa depois da leitura.",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): o enunciado está todo na página, mas o relógio de produção ficava à espera da apresentação do docente. A mudança está nos dados do gerador (docs/pedagogia/tarefas-escolha/m5-u2.json)."
+ },
+ {
+  "ficheiro": "tarefas/m6-u1/index.html",
+  "local": "Bloco «Aquecer em cartões»: 5 minutos para leres o enunciado; o relógio começa depois da leitura (gerado por scripts/tarefas_escolha.py)",
+  "antigo": "5 minutos para o docente apresentar o enunciado, 60 minutos de produção e 15 minutos de revisão e entrega. Total: 90 minutos. O relógio de produção começa depois da apresentação.",
+  "novo": "5 minutos para leres o enunciado, 60 minutos de produção e 15 minutos de revisão e entrega. Total: 90 minutos. O relógio de produção começa depois da leitura.",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): o enunciado está todo na página, mas o relógio de produção ficava à espera da apresentação do docente. A mudança está nos dados do gerador (docs/pedagogia/tarefas-escolha/m6-u1.json)."
+ },
+ {
+  "ficheiro": "tarefas/m6-u2/index.html",
+  "local": "Bloco «Aquecer em cartões»: 5 minutos para leres o enunciado; o relógio começa depois da leitura (gerado por scripts/tarefas_escolha.py)",
+  "antigo": "5 minutos para o docente apresentar o enunciado, 60 minutos de produção e 15 minutos de revisão e entrega. Total: 90 minutos. O relógio de produção começa depois da apresentação.",
+  "novo": "5 minutos para leres o enunciado, 60 minutos de produção e 15 minutos de revisão e entrega. Total: 90 minutos. O relógio de produção começa depois da leitura.",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): o enunciado está todo na página, mas o relógio de produção ficava à espera da apresentação do docente. A mudança está nos dados do gerador (docs/pedagogia/tarefas-escolha/m6-u2.json)."
+ },
+ {
+  "ficheiro": "tarefas/m8-u1/index.html",
+  "local": "Bloco do aquecimento: depois, lês o enunciado (gerado por scripts/tarefas_escolha.py)",
+  "antigo": "Depois, o docente apresenta o enunciado e começam os 60 minutos de produção.",
+  "novo": "Depois, lês o enunciado e começam os 60 minutos de produção.",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): a produção arrancava com a apresentação do docente, com o enunciado já na página. A mudança está nos dados do gerador (docs/pedagogia/tarefas-escolha/m8-u1.json)."
+ },
+ {
+  "ficheiro": "tarefas/m8-u2/index.html",
+  "local": "Bloco do aquecimento: depois, lês o enunciado (gerado por scripts/tarefas_escolha.py)",
+  "antigo": "Depois, o docente apresenta o enunciado e começam os 60 minutos de produção.",
+  "novo": "Depois, lês o enunciado e começam os 60 minutos de produção.",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): a produção arrancava com a apresentação do docente, com o enunciado já na página. A mudança está nos dados do gerador (docs/pedagogia/tarefas-escolha/m8-u2.json)."
+ },
+ {
+  "ficheiro": "tarefas/m9-u1/index.html",
+  "local": "Bloco do aquecimento: depois, lês o enunciado (gerado por scripts/tarefas_escolha.py)",
+  "antigo": "Depois, o docente apresenta o enunciado e começam os 60 minutos de produção.",
+  "novo": "Depois, lês o enunciado e começam os 60 minutos de produção.",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): a produção arrancava com a apresentação do docente, com o enunciado já na página. A mudança está nos dados do gerador (docs/pedagogia/tarefas-escolha/m9-u1.json)."
+ },
+ {
+  "ficheiro": "tarefas/m9-u2/index.html",
+  "local": "Bloco do aquecimento: depois, lês o enunciado (gerado por scripts/tarefas_escolha.py)",
+  "antigo": "Depois, o docente apresenta o enunciado e começam os 60 minutos de produção.",
+  "novo": "Depois, lês o enunciado e começam os 60 minutos de produção.",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): a produção arrancava com a apresentação do docente, com o enunciado já na página. A mudança está nos dados do gerador (docs/pedagogia/tarefas-escolha/m9-u2.json)."
+ },
+ {
+  "ficheiro": "tarefas/m7-u3/index.html",
+  "local": "Bloco do aquecimento: depois, lês a tarefa (gerado por scripts/tarefas_escolha.py)",
+  "antigo": "Depois, o docente apresenta a tarefa e começam os 60 minutos de produção.",
+  "novo": "Depois, lês a tarefa e começam os 60 minutos de produção.",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): o mesmo bloqueio das outras tarefas. A mudança está nos dados do gerador (docs/pedagogia/tarefas-escolha/m7-u3.json)."
+ },
+ {
+  "ficheiro": "m3/guia-da-tarefa-m3/index.html",
+  "local": "Bloco 2 «Ler o enunciado, 5 min» (no HTML e em BLOCOS): lês tu o núcleo comum e os temas",
+  "antigo": "O docente apresenta o núcleo comum e os temas A e B.",
+  "novo": "Lê o núcleo comum e os temas A e B.",
+  "ocorrencias": 2,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): com o relógio do guia, o aluno sozinho ficava 5 minutos à espera da apresentação do docente. Mesmo texto e mesma troca dos guias do M6, M8 e M9."
+ },
+ {
+  "ficheiro": "m5/guia-da-tarefa-m5/index.html",
+  "local": "Bloco 2 «Ler o enunciado, 5 min» (no HTML e em BLOCOS): lês tu o núcleo comum e os temas",
+  "antigo": "O docente apresenta o núcleo comum e os temas A e B.",
+  "novo": "Lê o núcleo comum e os temas A e B.",
+  "ocorrencias": 2,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): com o relógio do guia, o aluno sozinho ficava 5 minutos à espera da apresentação do docente. Mesmo texto e mesma troca dos guias do M6, M8 e M9."
+ },
+ {
+  "ficheiro": "m6/guia-da-tarefa-m6/index.html",
+  "local": "Bloco 2 «Ler o enunciado, 5 min» (no HTML e em BLOCOS): lês tu o núcleo comum e os temas",
+  "antigo": "O docente apresenta o núcleo comum e os temas A e B.",
+  "novo": "Lê o núcleo comum e os temas A e B.",
+  "ocorrencias": 2,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): com o relógio do guia, o aluno sozinho ficava 5 minutos à espera da apresentação do docente."
+ },
+ {
+  "ficheiro": "m8/guia-da-tarefa-m8/index.html",
+  "local": "Bloco 2 «Ler o enunciado, 5 min» (no HTML e em BLOCOS): lês tu o núcleo comum e os temas",
+  "antigo": "O docente apresenta o núcleo comum e os temas A e B.",
+  "novo": "Lê o núcleo comum e os temas A e B.",
+  "ocorrencias": 2,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): com o relógio do guia, o aluno sozinho ficava 5 minutos à espera da apresentação do docente."
+ },
+ {
+  "ficheiro": "m9/guia-da-tarefa-m9/index.html",
+  "local": "Bloco 2 «Ler o enunciado, 5 min» (no HTML e em BLOCOS): lês tu o núcleo comum e os temas",
+  "antigo": "O docente apresenta o núcleo comum e os temas A e B.",
+  "novo": "Lê o núcleo comum e os temas A e B.",
+  "ocorrencias": 2,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): com o relógio do guia, o aluno sozinho ficava 5 minutos à espera da apresentação do docente."
+ },
+ {
+  "ficheiro": "m7/guia-da-tarefa-m7/index.html",
+  "local": "Bloco 1 «Aquecer, 15 min» (no HTML e em BLOCOS): os cartões e a leitura da tarefa",
+  "antigo": "e a apresentação da tarefa pelo docente",
+  "novo": "e a leitura da tarefa",
+  "ocorrencias": 2,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): a apresentação do docente entrava no tempo cronometrado do aluno."
+ },
+ {
+  "ficheiro": "m2/guia-da-tarefa-m2/index.html",
+  "local": "Bloco 1 «Aquecer, 15 min» (no HTML e em BLOCOS): os cartões e a leitura da tarefa",
+  "antigo": "e a apresentação da tarefa pelo docente",
+  "novo": "e a leitura da tarefa",
+  "ocorrencias": 2,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): a apresentação do docente entrava no tempo cronometrado do aluno. Mesmo texto e mesma troca do guia do M7."
+ },
+ {
+  "ficheiro": "m3/guia-da-tarefa-m3/index.html",
+  "local": "Secção «Tarefas das unidades»: 5 minutos de leitura",
+  "antigo": "Seguem-se 5 minutos de apresentação pelo docente, 60",
+  "novo": "Seguem-se 5 minutos de leitura, 60",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): a sequência da aula dependia da apresentação do docente. Mesmo texto e mesma troca do guia do M6."
+ },
+ {
+  "ficheiro": "m5/guia-da-tarefa-m5/index.html",
+  "local": "Secção «Tarefas das unidades»: 5 minutos de leitura",
+  "antigo": "Seguem-se 5 minutos de apresentação pelo docente, 60",
+  "novo": "Seguem-se 5 minutos de leitura, 60",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): a sequência da aula dependia da apresentação do docente. Mesmo texto e mesma troca do guia do M6."
+ },
+ {
+  "ficheiro": "m6/guia-da-tarefa-m6/index.html",
+  "local": "Secção «Tarefas das unidades»: 5 minutos de leitura",
+  "antigo": "Seguem-se 5 minutos de apresentação pelo docente, 60",
+  "novo": "Seguem-se 5 minutos de leitura, 60",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): a sequência da aula dependia da apresentação do docente."
+ },
+ {
+  "ficheiro": "m8/guia-da-tarefa-m8/index.html",
+  "local": "Secção «Tarefas das unidades»: 5 minutos de leitura",
+  "antigo": "Seguem-se 5 minutos de apresentação, 60",
+  "novo": "Seguem-se 5 minutos de leitura, 60",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): os «5 minutos de apresentação» eram a apresentação do enunciado pelo docente (bloco 2 do mesmo guia)."
+ },
+ {
+  "ficheiro": "m9/guia-da-tarefa-m9/index.html",
+  "local": "Secção «Tarefas das unidades»: 5 minutos de leitura",
+  "antigo": "Seguem-se 5 minutos de apresentação, 60",
+  "novo": "Seguem-se 5 minutos de leitura, 60",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): os «5 minutos de apresentação» eram a apresentação do enunciado pelo docente (bloco 2 do mesmo guia)."
+ },
+ {
+  "ficheiro": "m6/guia-da-tarefa-m6/index.html",
+  "local": "Extra 2 «Cesário Verde nos dias de hoje», último passo: apresentas numa gravação ou na aula",
+  "antigo": "Apresenta à turma em três minutos e entrega os créditos.",
+  "novo": "Apresenta em três minutos, numa gravação ou na aula, e entrega os créditos.",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): o último passo só se cumpria diante da turma, e a rubrica pontua a apresentação."
+ },
+ {
+  "ficheiro": "m9/guia-da-tarefa-m9/index.html",
+  "local": "Extra 1 «Os que carregaram a pedra», último passo: apresentas numa gravação ou na aula",
+  "antigo": "Apresenta à turma e entrega os créditos.",
+  "novo": "Apresenta, numa gravação ou na aula, e entrega os créditos.",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): o passo final exigia a turma."
+ },
+ {
+  "ficheiro": "m9/guia-da-tarefa-m9/index.html",
+  "local": "Extra 1 «Os que carregaram a pedra», critério: apresentação gravada ou na aula",
+  "antigo": "Apresentação à turma; créditos.",
+  "novo": "Apresentação, gravada ou na aula; créditos.",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): o critério exigia a turma."
+ },
+ {
+  "ficheiro": "m9/guia-da-tarefa-m9/index.html",
+  "local": "Extra 1, rubrica «Processo e memória descritiva», nível de topo: uma crítica registada (de um colega ou tua)",
+  "antigo": "três grupos de anónimos testados, crítica de um colega registada, memória descritiva",
+  "novo": "três grupos de anónimos testados, uma crítica registada (de um colega ou tua), memória descritiva",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): sem um colega não se chegava ao nível máximo, e a autoavaliação do guia usa esta grelha."
+ },
+ {
+  "ficheiro": "tarefas/m7-u2/index.html",
+  "local": "Bloco «Verificar»: regista uma pergunta (a que te fizeram ou uma que prevês) e a tua resposta",
+  "antigo": "Regista no teu papel, numa linha, a pergunta que te fizeram e o que respondeste; essa linha entra nas fotografias.",
+  "novo": "Regista no teu papel, numa linha, uma pergunta (a que te fizeram ou uma que prevês) e a tua resposta; essa linha entra nas fotografias.",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): a linha obrigatória, que entra nas fotografias, só existia se alguém fizesse a pergunta."
+ },
+ {
+  "ficheiro": "tarefas/m7-u2/index.html",
+  "local": "Enunciado: responde a uma pergunta, feita ou prevista",
+  "antigo": "Apresenta a voz em dois minutos, lê uma frase e responde a uma pergunta.</p>",
+  "novo": "Apresenta a voz em dois minutos, lê uma frase e responde a uma pergunta, feita ou prevista.</p>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): acompanha o bloco «Verificar»."
+ },
+ {
+  "ficheiro": "m7/guia-da-tarefa-m7/index.html",
+  "local": "Rubrica «Apresentação», nível de topo: pergunta feita ou prevista",
+  "antigo": "responde a uma pergunta (registada numa linha no papel)",
+  "novo": "responde a uma pergunta feita ou prevista (registada numa linha no papel)",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): acompanha o bloco «Verificar» da tarefa M7-U2."
+ },
+ {
+  "ficheiro": "m8/licao-m8-f09/index.html",
+  "local": "«O essencial», 1.º item, e a mesma frase nas pistas: três imagens tiradas ao acaso, de onde o aluno as pode tirar",
+  "antigo": "três imagens ao acaso, de um conjunto preparado pelo docente, e um conto",
+  "novo": "três imagens tiradas ao acaso (de um livro, de uma revista ou da galeria do telemóvel) e um conto",
+  "ocorrencias": 2,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): sem o conjunto do docente não se começava o conto; o guia do M8 já diz só «Tira as três imagens ao acaso». Revisão: diz-se de onde se tiram as imagens, porque sem o conjunto do docente o aluno sozinho não tinha de onde as tirar."
+ },
+ {
+  "ficheiro": "m8/licao-m8-f09/index.html",
+  "local": "Cartão «completar» das três imagens: tiram-se ao acaso",
+  "antigo": "\"p\":\"De onde vêm as três imagens e o que têm de ser?\",\"p2\":\"Quem prepara o conjunto de imagens, e que condição têm de cumprir na história?\",\"frase\":\"As três imagens vêm de um conjunto preparado pelo [1] e têm de ser [2] à história.\",\"lacunas\":[{\"o\":[\"aluno\",\"colega\",\"docente\",\"narrador\"],\"c\":2},{\"o\":[\"necessárias\",\"decorativas\",\"semelhantes\",\"breves\"],\"c\":0}],\"f\":\"Preparado pelo **docente**; **necessárias**:",
+  "novo": "\"p\":\"Como se escolhem as três imagens e o que têm de ser?\",\"p2\":\"Como se tiram as imagens, e que condição têm de cumprir na história?\",\"frase\":\"As três imagens tiram-se [1] e têm de ser [2] à história.\",\"lacunas\":[{\"o\":[\"ao acaso\",\"por tema\",\"pela ordem\"],\"c\":0},{\"o\":[\"necessárias\",\"decorativas\",\"semelhantes\",\"breves\"],\"c\":0}],\"f\":\"**Ao acaso**; **necessárias**:",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): o cartão ensinava e avaliava, como resposta certa, que as imagens vêm do docente."
+ },
+ {
+  "ficheiro": "m8/index.html",
+  "local": "Arquivo do índice, cartão «completar» das três imagens: tiram-se ao acaso",
+  "antigo": "\"p\":\"De onde vêm as três imagens e o que têm de ser?\",\"frase\":\"As três imagens vêm de um conjunto preparado pelo [1] e têm de ser [2] à história.\",\"lacunas\":[{\"o\":[\"aluno\",\"colega\",\"docente\"],\"c\":2},",
+  "novo": "\"p\":\"Como se escolhem as três imagens e o que têm de ser?\",\"frase\":\"As três imagens tiram-se [1] e têm de ser [2] à história.\",\"lacunas\":[{\"o\":[\"ao acaso\",\"por tema\",\"pela ordem\"],\"c\":0},",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): o cartão dava como certo que as imagens vêm do docente (o retorno já não falava dele)."
+ },
+ {
+  "ficheiro": "m8/painel-m8-f09/index.html",
+  "local": "Painel da M8-F09, pergunta do cartão «completar» (seletor e lista): como se escolhem as três imagens",
+  "antigo": "De onde vêm as três imagens e o que têm de ser?",
+  "novo": "Como se escolhem as três imagens e o que têm de ser?",
+  "ocorrencias": 2,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): o painel acompanha a pergunta da lição (o mesmo cartão, k 3)."
+ },
+ {
+  "ficheiro": "m8/painel-m8-f09/index.html",
+  "local": "Painel da M8-F09, material do cartão «completar»: tiram-se ao acaso",
+  "antigo": "\"f\":\"Preparado pelo **docente**; **necessárias**: se tirares uma e a história continuar, estava só a enfeitar.\",\"frase\":\"As três imagens vêm de um conjunto preparado pelo [1] e têm de ser [2] à história.\",\"lac\":[[\"aluno\",\"colega\",\"narrador\",\"docente\"],",
+  "novo": "\"f\":\"**Ao acaso**; **necessárias**: se tirares uma e a história continuar, estava só a enfeitar.\",\"frase\":\"As três imagens tiram-se [1] e têm de ser [2] à história.\",\"lac\":[[\"por tema\",\"pela ordem\",\"ao acaso\"],",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): o painel acompanha o cartão da lição (mesmas opções, baralhadas)."
+ },
+ {
+  "ficheiro": "m8/licao-m8-f09/index.html",
+  "local": "«O essencial», 3.º item, e a mesma frase nas pistas: lês em voz alta",
+  "antigo": "lês em voz alta a um colega, mudas duas coisas",
+  "novo": "lês em voz alta, mudas duas coisas",
+  "ocorrencias": 2,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): o passo de revisão só se fazia com um colega; o cartão «ordenar» da mesma lição já diz «Lê em voz alta e muda duas coisas»."
+ },
+ {
+  "ficheiro": "m8/licao-m8-f09/index.html",
+  "local": "Retorno do cartão «ordenar» «Como se escreve o conto, por ordem» (lição, arquivo do índice e painel): leitura em voz alta",
+  "antigo": "Três contos, plano, primeira versão, leitura a um colega: o processo",
+  "novo": "Três contos, plano, primeira versão, leitura em voz alta: o processo",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): fazia da leitura a um colega um passo avaliado do processo."
+ },
+ {
+  "ficheiro": "m8/index.html",
+  "local": "Retorno do cartão «ordenar» «Como se escreve o conto, por ordem» (lição, arquivo do índice e painel): leitura em voz alta",
+  "antigo": "Três contos, plano, primeira versão, leitura a um colega: o processo",
+  "novo": "Três contos, plano, primeira versão, leitura em voz alta: o processo",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): fazia da leitura a um colega um passo avaliado do processo."
+ },
+ {
+  "ficheiro": "m8/painel-m8-f09/index.html",
+  "local": "Retorno do cartão «ordenar» «Como se escreve o conto, por ordem» (lição, arquivo do índice e painel): leitura em voz alta",
+  "antigo": "Três contos, plano, primeira versão, leitura a um colega: o processo",
+  "novo": "Três contos, plano, primeira versão, leitura em voz alta: o processo",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): fazia da leitura a um colega um passo avaliado do processo."
+ },
+ {
+  "ficheiro": "m8/index.html",
+  "local": "Arquivo do índice, cartão de escolha da M8-F09: o que fazes depois de leres o conto em voz alta",
+  "antigo": "\"p\":\"A quem lês o conto em voz alta antes de entregar?\",\"o\":[\"A um colega\",\"Ao docente\",\"À turma\"],\"c\":0,\"f\":\"A um **colega**: lês em voz alta e fazes duas mudanças; o processo também conta.\"",
+  "novo": "\"p\":\"Depois de leres o conto em voz alta, o que fazes antes de entregar?\",\"o\":[\"Mudas duas coisas\",\"Entregas logo\",\"Recomeças do zero\"],\"c\":0,\"f\":\"**Mudas duas coisas**: o processo também conta.\"",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): o cartão dava como certo um passo que exige um colega."
+ },
+ {
+  "ficheiro": "m8/index.html",
+  "local": "Percurso, lição 10 «Poema com pintura ou álbum»: obra à tua escolha; indicas uma semelhança e uma diferença",
+  "antigo": "um álbum selecionado pelo docente, com provas do texto; partilha uma semelhança",
+  "novo": "um álbum à tua escolha, com provas do texto; indica uma semelhança",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): a obra ficava à escolha do docente (a lição M8-F10 fala da «obra escolhida»), e «partilha» supunha ouvintes."
+ },
+ {
+  "ficheiro": "m9/index.html",
+  "local": "Percurso, passo 2 «De quem é uma obra?»: o debate fica como momento de aula",
+  "antigo": "Prepara os dois lados da moção com provas do romance, participa no debate e escreve o texto de opinião que responde ao outro lado.",
+  "novo": "Prepara os dois lados da moção com provas do romance e escreve o texto de opinião que responde ao outro lado (na aula, debate em turma).",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): o debate aparecia como passo obrigatório; pela decisão 146 fica como momento de turma, e a lição já pede «prepara os dois lados»."
+ },
+ {
+  "ficheiro": "m1/m1-promessa-do-cronista/index.html",
+  "local": "Cartão final «Para levar» do «Pensar devagar»: respondes em voz alta, numa frase",
+  "antigo": "Responde-lhe agora em voz alta, numa frase, a alguém.",
+  "novo": "Responde-lhe agora em voz alta, numa frase.",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): o passo de fecho exigia outra pessoa e não tinha alternativa."
+ },
+ {
+  "ficheiro": "m1/m1-voz-emprestada/index.html",
+  "local": "Cartão final «Para levar» do «Pensar devagar»: respondes em voz alta, numa frase",
+  "antigo": "Responde-lhe agora em voz alta, numa frase, a alguém.",
+  "novo": "Responde-lhe agora em voz alta, numa frase.",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): o passo de fecho exigia outra pessoa e não tinha alternativa."
+ },
+ {
+  "ficheiro": "m2/m2-ines-escolhe-duas-vezes/index.html",
+  "local": "Cartão final «Para levar» do «Pensar devagar»: respondes em voz alta, numa frase",
+  "antigo": "Responde-lhe agora em voz alta, numa frase, a alguém.",
+  "novo": "Responde-lhe agora em voz alta, numa frase.",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): o passo de fecho exigia outra pessoa e não tinha alternativa."
+ },
+ {
+  "ficheiro": "m2/m2-maquina-de-rir/index.html",
+  "local": "Cartão final «Para levar» do «Pensar devagar»: respondes em voz alta, numa frase",
+  "antigo": "Responde-lhe agora em voz alta, numa frase, a alguém.",
+  "novo": "Responde-lhe agora em voz alta, numa frase.",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): o passo de fecho exigia outra pessoa e não tinha alternativa."
+ },
+ {
+  "ficheiro": "m3/m3-soneto-raciocinio/index.html",
+  "local": "Cartão final «Para levar» do «Pensar devagar»: respondes em voz alta, numa frase",
+  "antigo": "Responde-lhe agora em voz alta, numa frase, a alguém.",
+  "novo": "Responde-lhe agora em voz alta, numa frase.",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): o passo de fecho exigia outra pessoa e não tinha alternativa."
+ },
+ {
+  "ficheiro": "m3/m3-velho-restelo-juri/index.html",
+  "local": "Cartão final «Para levar» do «Pensar devagar»: respondes em voz alta, numa frase",
+  "antigo": "Responde-lhe agora em voz alta, numa frase, a alguém.",
+  "novo": "Responde-lhe agora em voz alta, numa frase.",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): o passo de fecho exigia outra pessoa e não tinha alternativa."
+ },
+ {
+  "ficheiro": "m4/m4-frei-luis-quem-sabia/index.html",
+  "local": "Cartão final «Para levar» do «Pensar devagar»: respondes em voz alta, numa frase",
+  "antigo": "Responde-lhe agora em voz alta, numa frase, a alguém.",
+  "novo": "Responde-lhe agora em voz alta, numa frase.",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): o passo de fecho exigia outra pessoa e não tinha alternativa."
+ },
+ {
+  "ficheiro": "m4/m4-sermao-tribunal/index.html",
+  "local": "Cartão final «Para levar» do «Pensar devagar»: respondes em voz alta, numa frase",
+  "antigo": "Responde-lhe agora em voz alta, numa frase, a alguém.",
+  "novo": "Responde-lhe agora em voz alta, numa frase.",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): o passo de fecho exigia outra pessoa e não tinha alternativa."
+ },
+ {
+  "ficheiro": "m5/m5-o-pais-ou-eles/index.html",
+  "local": "Cartão final «Para levar» do «Pensar devagar»: respondes em voz alta, numa frase",
+  "antigo": "Responde-lhe agora em voz alta, numa frase, a alguém.",
+  "novo": "Responde-lhe agora em voz alta, numa frase.",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): o passo de fecho exigia outra pessoa e não tinha alternativa."
+ },
+ {
+  "ficheiro": "m5/m5-quem-podia-ter-feito-diferente/index.html",
+  "local": "Cartão final «Para levar» do «Pensar devagar»: respondes em voz alta, numa frase",
+  "antigo": "Responde-lhe agora em voz alta, numa frase, a alguém.",
+  "novo": "Responde-lhe agora em voz alta, numa frase.",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): o passo de fecho exigia outra pessoa e não tinha alternativa."
+ },
+ {
+  "ficheiro": "m6/m6-antero-viagem-ao-nada/index.html",
+  "local": "Cartão final «Para levar» do «Pensar devagar»: respondes em voz alta, numa frase",
+  "antigo": "Responde-lhe agora em voz alta, numa frase, a alguém.",
+  "novo": "Responde-lhe agora em voz alta, numa frase.",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): o passo de fecho exigia outra pessoa e não tinha alternativa."
+ },
+ {
+  "ficheiro": "m6/m6-cesario-noite-inteira/index.html",
+  "local": "Cartão final «Para levar» do «Pensar devagar»: respondes em voz alta, numa frase",
+  "antigo": "Responde-lhe agora em voz alta, numa frase, a alguém.",
+  "novo": "Responde-lhe agora em voz alta, numa frase.",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): o passo de fecho exigia outra pessoa e não tinha alternativa."
+ },
+ {
+  "ficheiro": "m7/m7-fingidor-maquina/index.html",
+  "local": "Cartão final «Para levar» do «Pensar devagar»: respondes em voz alta, numa frase",
+  "antigo": "Responde-lhe agora em voz alta, numa frase, a alguém.",
+  "novo": "Responde-lhe agora em voz alta, numa frase.",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): o passo de fecho exigia outra pessoa e não tinha alternativa."
+ },
+ {
+  "ficheiro": "m7/m7-quatro-vozes-um-problema/index.html",
+  "local": "Cartão final «Para levar» do «Pensar devagar»: respondes em voz alta, numa frase",
+  "antigo": "Responde-lhe agora em voz alta, numa frase, a alguém.",
+  "novo": "Responde-lhe agora em voz alta, numa frase.",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): o passo de fecho exigia outra pessoa e não tinha alternativa."
+ },
+ {
+  "ficheiro": "m9/m9-de-quem-e-o-convento/index.html",
+  "local": "Cartão final «Para levar» do «Pensar devagar»: respondes em voz alta, numa frase",
+  "antigo": "Responde-lhe agora em voz alta, numa frase, a alguém.",
+  "novo": "Responde-lhe agora em voz alta, numa frase.",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): o passo de fecho exigia outra pessoa e não tinha alternativa."
+ },
+ {
+  "ficheiro": "m9/m9-ver-e-nao-ver/index.html",
+  "local": "Cartão final «Para levar» do «Pensar devagar»: respondes em voz alta, numa frase",
+  "antigo": "Responde-lhe agora em voz alta, numa frase, a alguém.",
+  "novo": "Responde-lhe agora em voz alta, numa frase.",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): o passo de fecho exigia outra pessoa e não tinha alternativa."
+ },
+ {
+  "ficheiro": "m6/m6-cesario-noite-inteira/index.html",
+  "local": "Cartão «Toma posição»: dizes a tua posição em voz alta",
+  "antigo": "Diz a tua posição em voz alta a um colega e justifica-a",
+  "novo": "Diz a tua posição em voz alta e justifica-a",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): só havia via com colega; o segundo cartão «Toma posição» da página já se faz a sós."
+ },
+ {
+  "ficheiro": "m8/m8-george-tres-idades/index.html",
+  "local": "Cartão «Conversa a dois» passa a «Outra leitura»: pensas numa leitura diferente da tua (na aula, a de um colega)",
+  "antigo": "\"rot\":\"Conversa a dois\",\"titulo\":\"Discordar com uma passagem aberta\",\"html\":\"<p>Troca a tua leitura com um colega. Antes de responder, resume a ideia dele de forma que ele a reconheça.</p>",
+  "novo": "\"rot\":\"Outra leitura\",\"titulo\":\"Discordar com uma passagem aberta\",\"html\":\"<p>Pensa numa leitura diferente da tua (na aula, a de um colega) e resume-a de forma que quem a defende a reconheça.</p>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): o cartão inteiro dependia de um colega."
+ },
+ {
+  "ficheiro": "m8/m8-poema-testemunha/index.html",
+  "local": "Cartão «Escolhe uma leitura», último parágrafo: comparas com a outra pista",
+  "antigo": "<p>Compara a tua escolha com a de um colega. Podem chegar a leituras diferentes e ambas terem apoio no texto.</p>",
+  "novo": "<p>Compara a tua escolha com a outra pista: duas leituras diferentes podem ter ambas apoio no texto.</p>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): o passo final só se fazia com um colega."
+ },
+ {
+  "ficheiro": "obras/memorial/index.html",
+  "local": "Bloco «Comparar»: lês o excerto em voz alta, com uma voz para cada um",
+  "antigo": "depois lê-o a duas vozes com um colega.",
+  "novo": "depois lê-o em voz alta, com uma voz para cada um.",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): quem fizesse o bloco opcional precisava de um colega."
+ },
+ {
+  "ficheiro": "obras/mensagem/index.html",
+  "local": "Bloco «Comparar»: lês «Mar Português» em voz alta",
+  "antigo": "Lê «Mar Português» em voz alta a um colega e escolhe",
+  "novo": "Lê «Mar Português» em voz alta e escolhe",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): exigia um ouvinte, sem alternativa."
+ },
+ {
+  "ficheiro": "atlas/index.html",
+  "local": "Figura «luis-vicente», «Para ti»: a cena de dois minutos sem «com a tua turma»",
+  "antigo": "uma cena de dois minutos com a tua turma.",
+  "novo": "uma cena de dois minutos.",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): o desafio só se fazia com a turma."
+ },
+ {
+  "ficheiro": "assets/atlas-editorial.js",
+  "local": "Proposta «jose-craveirinha»: continuas a história noutra voz",
+  "antigo": "Diz o início de uma história a um colega e deixa-o continuar; depois troquem os papéis.",
+  "novo": "Diz o início de uma história e continua-a noutra voz, como se fosses outra pessoa.",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): a proposta só funcionava aos pares."
+ },
+ {
+  "ficheiro": "assets/atlas-editorial.js",
+  "local": "Proposta «stela-do-patrocinio»: gravas a frase e registas tu",
+  "antigo": "Diz uma frase tua; pede a um colega que a registe com pausas e mudanças de linha.",
+  "novo": "Grava uma frase tua; depois regista-a com pausas e mudanças de linha.",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): o registo ficava a cargo de um colega."
+ },
+ {
+  "ficheiro": "assets/atlas-editorial.js",
+  "local": "Proposta «bispo-do-rosario»: explicas a ordem numa frase",
+  "antigo": "Dispõe desenhos ou materiais e explica a ordem a um colega.",
+  "novo": "Dispõe desenhos ou materiais e explica a ordem numa frase.",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): a explicação exigia um colega."
+ },
+ {
+  "ficheiro": "assets/atlas-editorial.js",
+  "local": "Proposta «qorpo-santo»: experimentas a fala sem dupla",
+  "antigo": "Em dupla, experimenta a mesma fala com dois gestos diferentes.",
+  "novo": "Experimenta a mesma fala com dois gestos diferentes.",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): só se fazia em dupla."
+ },
+ {
+  "ficheiro": "assets/atlas-explorar.js",
+  "local": "Investigação «O poema muda quando ganha voz?», entrada «Pausa»: gravas e descreves tu",
+  "antigo": "Diz uma frase tua de duas maneiras, mudando só a pausa. Pede a alguém que descreva o que mudou antes de explicares a tua intenção.",
+  "novo": "Grava uma frase tua de duas maneiras, mudando só a pausa. Ouve-as e descreve o que mudou.",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): a entrada só se fazia com outra pessoa."
+ },
+ {
+  "ficheiro": "assets/atlas-explorar.js",
+  "local": "Investigação «O poema muda quando ganha voz?», «Transforma a descoberta»: lês pela partitura e gravas-te",
+  "antigo": "Outra pessoa interpreta-a; ajusta um sinal depois de ouvir.",
+  "novo": "Lê-a pela partitura e grava-te; ajusta um sinal depois de ouvir.",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): o bloco aparece a todos e só se fechava com outra pessoa."
+ },
+ {
+  "ficheiro": "atlas/index.html",
+  "local": "Versões do atlas-editorial.js e do atlas-explorar.js, para os navegadores não usarem a cópia antiga",
+  "antigo": "atlas-editorial.js?v=20261022-1",
+  "novo": "atlas-editorial.js?v=20261105-autonomia-1",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): o atlas-editorial.js muda nesta camada."
+ },
+ {
+  "ficheiro": "atlas/index.html",
+  "local": "Versão do atlas-explorar.js, para os navegadores não usarem a cópia antiga",
+  "antigo": "atlas-explorar.js?v=20261022-2",
+  "novo": "atlas-explorar.js?v=20261105-autonomia-1",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): o atlas-explorar.js muda nesta camada."
+ },
+ {
+  "ficheiro": "m8/licao-m8-f01/index.html",
+  "local": "«Outra voz: Adília Lopes», sem vídeo: lês o poema, se o tiveres em livro, ou escolhes a pista pela pergunta",
+  "antigo": "Sem vídeo: pede ao docente uma leitura em voz alta. Podes participar oralmente ou apenas comparar mentalmente.",
+  "novo": "Sem vídeo: se tiveres o poema em livro, lê-o em voz alta; se não, escolhe a pista só pela pergunta e volta a ela quando puderes ouvir a leitura. (Na aula, podes participar oralmente ou apenas comparar mentalmente.)",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): caso em falta, verificado: a alternativa sem vídeo dependia do docente. Revisão: o poema não está na página (texto protegido), por isso o caminho sem vídeo diz o que fazer sem ele; a frase seguinte fica entre parênteses, como momento de aula."
+ },
+ {
+  "ficheiro": "m7/licao-m7-f34/index.html",
+  "local": "Cartão «Experimentar · VI»: relês ou mostras a alguém",
+  "antigo": "Mostra ou diz a alguém: consegue reconhecer os dois planos e o ponto em que se cruzam?",
+  "novo": "Relê ou mostra a alguém: reconhecem-se os dois planos e o ponto em que se cruzam?",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): caso em falta, verificado: a verificação só se fazia com outra pessoa."
+ },
+ {
+  "ficheiro": "m7/licao-m7-f34/index.html",
+  "local": "Cartão «Para entender», «No caderno: quatro versos em dupla exposição»: lês em voz alta e confirmas tu",
+  "antigo": "Lê-os a alguém e pergunta-lhe que dois lugares viu.",
+  "novo": "Lê-os em voz alta e confirma que se veem os dois lugares.",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): caso em falta, verificado: a verificação só se fazia com outra pessoa."
+ },
+ {
+  "ficheiro": "m1/m1-voz-emprestada/index.html",
+  "local": "Cartão «posicao» do Ato 5 do «Pensar devagar»: justificas a resposta em voz alta, sem precisar de alguém",
+  "antigo": "Escolhe a resposta que defendes e justifica-a em voz alta a alguém.",
+  "novo": "Escolhe a resposta que defendes e justifica-a em voz alta.",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): correção da revisão: só havia o caminho com outra pessoa, na mesma página em que o «Para levar» já deixou de pedir «a alguém»."
+ },
+ {
+  "ficheiro": "m2/guia-da-tarefa-m2/index.html",
+  "local": "Secção «Tarefas das unidades»: 5 minutos para leres o enunciado",
+  "antigo": "com consulta, e 5 minutos de apresentação do enunciado pelo docente; depois respondes",
+  "novo": "com consulta, e 5 minutos para leres o enunciado; depois respondes",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): correção da revisão: o relógio do aluno ficava à espera do docente, e o bloco 1 da mesma página já diz «a leitura da tarefa»."
+ },
+ {
+  "ficheiro": "m1/guia-da-tarefa-m1/index.html",
+  "local": "Secção «Tarefas das unidades»: 5 minutos de leitura do enunciado",
+  "antigo": "Seguem-se 5 minutos de apresentação do enunciado pelo docente, 60 minutos de produção com consulta",
+  "novo": "Seguem-se 5 minutos de leitura do enunciado, 60 minutos de produção com consulta",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): correção da revisão: o mesmo caso dos guias do M3, M5, M6, M8 e M9, que já dizem «5 minutos de leitura»; a frase vem da camada aquecimentos_m1_20261030, que se desfaz depois desta."
+ },
+ {
+  "ficheiro": "assets/atlas-explorar.js",
+  "local": "Investigação «O poema muda quando ganha voz?», entrada «Escuta»: sem áudio, lês tu a frase de duas maneiras",
+  "antigo": "Sem áudio, compara duas leituras da mesma frase em sala.",
+  "novo": "Sem áudio, lê a mesma frase de duas maneiras e compara as duas leituras.",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): correção da revisão: sem áudio, o único caminho era a sala."
+ },
+ {
+  "ficheiro": "assets/atlas-explorar.js",
+  "local": "Investigação «O poema muda quando ganha voz?», bloco «Rever»: na alternativa sem áudio, comparas as tuas duas leituras",
+  "antigo": "Na alternativa sem áudio, compara a frase dita pelos colegas.",
+  "novo": "Na alternativa sem áudio, compara as tuas duas leituras da mesma frase.",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): correção da revisão: acompanha a entrada «Escuta»; sem áudio, o caminho dependia dos colegas."
+ },
+ {
+  "ficheiro": "m3/licao-m3-f11/index.html",
+  "local": "Retorno das lacunas «O que muda se não houver conferência?» (lição e cópia do painel): a pergunta faz-se por escrito",
+  "antigo": "Um texto com **autor** e data; perguntas por **escrito**, lidas em voz alta.",
+  "novo": "Um texto com **autor** e data; a pergunta faz-se por **escrito** (na aula, lê-se em voz alta).",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): correção da revisão: o retorno repetia, como regra, a leitura em voz alta das perguntas; acompanha as lacunas «O que muda se não houver conferência?», que já dizem «a pergunta faz-se por [2]»."
+ },
+ {
+  "ficheiro": "m3/painel-m3-f11/index.html",
+  "local": "Retorno das lacunas «O que muda se não houver conferência?» (lição e cópia do painel): a pergunta faz-se por escrito",
+  "antigo": "Um texto com **autor** e data; perguntas por **escrito**, lidas em voz alta.",
+  "novo": "Um texto com **autor** e data; a pergunta faz-se por **escrito** (na aula, lê-se em voz alta).",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): correção da revisão: o retorno repetia, como regra, a leitura em voz alta das perguntas; acompanha as lacunas «O que muda se não houver conferência?», que já dizem «a pergunta faz-se por [2]»."
+ },
+ {
+  "ficheiro": "m3/index.html",
+  "local": "Arquivo do índice, retorno das lacunas «O que muda se não houver conferência?»: a pergunta faz-se por escrito",
+  "antigo": "Autor e data tornam a fonte verificável; as perguntas escritas leem-se em voz alta na mesma.",
+  "novo": "Autor e data tornam a fonte verificável; a pergunta faz-se por escrito (na aula, lê-se em voz alta).",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): correção da revisão: o retorno repetia, como regra, a leitura em voz alta das perguntas; acompanha as lacunas «O que muda se não houver conferência?», que já dizem «a pergunta faz-se por [2]»."
+ },
+ {
+  "ficheiro": "m3/licao-m3-f11/index.html",
+  "local": "Retorno do verdadeiro ou falso sobre a pergunta em público (lição e cópia do painel): sem conferência, por escrito",
+  "antigo": "sem conferência, a pergunta faz-se por escrito e lê-se em voz alta.",
+  "novo": "sem conferência, a pergunta faz-se por escrito (na aula, lê-se em voz alta).",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): correção da revisão: o retorno do verdadeiro ou falso punha a leitura em voz alta como regra; acompanha a caixa «Se não houver conferência» e as lacunas."
+ },
+ {
+  "ficheiro": "m3/painel-m3-f11/index.html",
+  "local": "Retorno do verdadeiro ou falso sobre a pergunta em público (lição e cópia do painel): sem conferência, por escrito",
+  "antigo": "sem conferência, a pergunta faz-se por escrito e lê-se em voz alta.",
+  "novo": "sem conferência, a pergunta faz-se por escrito (na aula, lê-se em voz alta).",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): correção da revisão: o retorno do verdadeiro ou falso punha a leitura em voz alta como regra; acompanha a caixa «Se não houver conferência» e as lacunas."
+ },
+ {
+  "ficheiro": "m3/licao-m3-f11/index.html",
+  "local": "Retorno de erro do verdadeiro ou falso sobre a pergunta em público: sem conferência, por escrito",
+  "antigo": "(por escrito e lida em voz alta, se não houver conferência)",
+  "novo": "(sem conferência, por escrito)",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): correção da revisão: o retorno do verdadeiro ou falso punha a leitura em voz alta como regra; acompanha a caixa «Se não houver conferência» e as lacunas."
+ },
+ {
+  "ficheiro": "m2/guia-da-tarefa-m2/index.html",
+  "local": "Arquivo, Tarefa 1, alternativa de quem faltou ao teatro: lês tu uma cena em voz alta",
+  "antigo": "Se faltaste à ida ao teatro, escreve a apreciação crítica da leitura em voz alta de uma cena feita na aula, com os mesmos critérios.",
+  "novo": "Se faltaste à ida ao teatro, lê uma cena em voz alta e escreve a apreciação crítica dessa leitura, com os mesmos critérios.",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): correção da revisão: a mesma alternativa já corrigida na página da visita; quem faltou à aula ficava sem caminho."
+ },
+ {
+  "ficheiro": "m4/guia-da-tarefa-m4/index.html",
+  "local": "Arquivo, Tarefa 3, alternativa de quem faltou ao teatro: lês tu uma cena do ato I em voz alta",
+  "antigo": "escreve a apreciação crítica de uma cena do ato I lida em voz alta na aula: compara o que ouviste com o que leste em silêncio, com os mesmos critérios.",
+  "novo": "lê em voz alta uma cena do ato I e escreve a apreciação crítica dessa leitura: compara-a com a tua leitura silenciosa, com os mesmos critérios.",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): correção da revisão: a mesma alternativa já corrigida na tarefa da M4-U2 e na página da visita; quem faltou à aula ficava sem caminho."
+ },
+ {
+  "ficheiro": "m4/recursos/tpc-entrada.js",
+  "local": "M4-F28, rótulo do cartão «Rever em conjunto»: «Rever a produção», porque o cartão se faz a sós",
+  "antigo": "\"rot\":\"Rever em conjunto",
+  "novo": "\"rot\":\"Rever a produção",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): correção da revisão: o corpo do cartão já começa por «Revê a tua produção (na aula, …)», mas o rótulo anunciava trabalho em conjunto a quem está sozinho. O título fica. O rótulo fica «Rever a produção · 10 min», e não «Rever · 10 min»: a troca não pode levar «·» no texto novo, e um texto novo contido no antigo não se distingue de uma troca já aplicada."
+ },
+ {
+  "ficheiro": "m9/m9-de-quem-e-o-convento/index.html",
+  "local": "Ato 4 do «Pensar devagar», comentário da opção «É dos dois…»: a decisão é a que a pergunta pede",
+  "antigo": "Deixa de fora a decisão que o debate te pede, e o docente vai pedir-ta na mesma.",
+  "novo": "Deixa de fora a decisão que a pergunta te pede, e vais ter de a tomar na mesma.",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): correção da revisão: o comentário fazia depender a decisão do debate e do docente."
+ },
+ {
+  "ficheiro": "tarefas/m4-u3/index.html",
+  "local": "Apoio de comparação «A palavra contra o poder», organização da aula: o segundo bloco passa a «Preparação na página»",
+  "antigo": "<span>Leitura e preparação na página</span>",
+  "novo": "<span>Preparação na página</span>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): correção da revisão: com o primeiro bloco a «Leitura do enunciado», ficavam dois blocos seguidos de leitura; o rótulo bate agora com o título «PREPARAR · 10 MIN». Os tempos ficam 10, 10, 60 e 10."
+ }
+]
