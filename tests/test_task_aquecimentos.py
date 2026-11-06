@@ -243,7 +243,10 @@ class Aquecimentos(unittest.TestCase):
         indice = (ROOT / 'm7/index.html').read_text('utf-8')
         aquecimento = (ROOT / 'tarefas/m7-u2/aquecimento/index.html').read_text('utf-8')
         self.assertIn('A apresentação é individual.', tarefa)
-        self.assertIn('Apresenta a voz em dois minutos, lê uma frase e responde a uma pergunta.', tarefa)
+        # 05/11/2026: decisão 154 (os exercícios fazem-se sozinho): a pergunta pode ser feita ou prevista; a frase exata
+        # continua exigida, e a anterior (só a pergunta feita por alguém) não pode voltar.
+        self.assertIn('Apresenta a voz em dois minutos, lê uma frase e responde a uma pergunta, feita ou prevista.', tarefa)
+        self.assertNotIn('responde a uma pergunta.</p>', tarefa)
         self.assertIn('apresentação individual</li>', guia)
         self.assertIn('Apresenta-o em dois minutos e lê uma frase dele.', guia)
         linha_t = re.search(r'<li class="aula-tarefa" data-task-lesson="2".*?</li>', indice).group(0)
@@ -256,8 +259,11 @@ class Aquecimentos(unittest.TestCase):
         # 29/10/2026 (revisão pedagógica): a descrição diz o mesmo (C8), e a resposta à pergunta fica registada no papel,
         # para a Apresentação ter prova (C10).
         self.assertIn('no início da aula de tarefa', dados('m7-u2')['descricao'])
-        self.assertIn('Regista no teu papel, numa linha, a pergunta que te fizeram e o que respondeste', tarefa)
-        self.assertIn('responde a uma pergunta (registada numa linha no papel)', guia)
+        # 05/11/2026: decisão 154: a linha regista uma pergunta feita ou prevista (há caminho a sós); a linha continua
+        # obrigatória e a entrar nas fotografias, e a rubrica do guia diz o mesmo.
+        self.assertIn('Regista no teu papel, numa linha, uma pergunta (a que te fizeram ou uma que prevês) e a tua resposta; essa linha entra nas fotografias.', tarefa)
+        self.assertNotIn('a pergunta que te fizeram e o que respondeste', tarefa)
+        self.assertIn('responde a uma pergunta feita ou prevista (registada numa linha no papel)', guia)
 
     def test_sem_dia_pessoa_e_f10_com_o_titulo_novo(self):
         falso = 'Nesse dia Pessoa escreveu'
