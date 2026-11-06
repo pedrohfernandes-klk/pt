@@ -3,8 +3,8 @@ import hashlib,json,re,subprocess,sys,unittest
 from html.parser import HTMLParser
 from pathlib import Path
 from auditoria_20261028 import undo_m4_piloto
-# 05/11/2026: para desfazer, antes do piloto, as camadas que estão por cima dele (decisão 154).
-from auditoria_20261028 import undo_cabecalho
+# 05/11/2026: para desfazer, antes do piloto, só a camada da decisão 154, que muda o m4/index.html por cima dele.
+from auditoria_20261028 import undo_autonomia_0511
 ROOT=Path(__file__).resolve().parents[1]
 class Inventory(HTMLParser):
  def __init__(self,text):
@@ -20,10 +20,9 @@ class Inventory(HTMLParser):
   if self.in_script:self.scripts[-1][1]+=text
 class M4Piloto(unittest.TestCase):
  def setUp(self):
-  # 05/11/2026: a decisão 154 (camada autonomia_154_20261105) muda o passo 16 do percurso do M4, dentro de um bloco do
-  # piloto; o «depois» do piloto é a página com as camadas mais recentes desfeitas (undo_cabecalho desfaz toda a cadeia por
-  # cima do piloto, com contagem estrita). As conferências ficam iguais.
-  self.after=undo_cabecalho('m4/index.html',(ROOT/'m4/index.html').read_text('utf-8'));self.before=undo_m4_piloto('m4/index.html',self.after)
+  # 05/11/2026: a decisão 154 muda o passo 16 do percurso do M4, dentro de um bloco do piloto; desfaz-se só essa camada
+  # antes do piloto, com contagem estrita, e as conferências continuam a olhar para a página publicada.
+  self.after=(ROOT/'m4/index.html').read_text('utf-8');self.before=undo_m4_piloto('m4/index.html',undo_autonomia_0511('m4/index.html',self.after))
  def test_conserva_ids_ligacoes_scripts_e_dados(self):
   a,b=Inventory(self.before),Inventory(self.after)
   self.assertEqual(sorted(a.ids),sorted(b.ids));self.assertEqual(sorted(a.links),sorted(b.links))

@@ -34,7 +34,7 @@
   },
   "m3/licao-m3-f11/index.html": {
    "base_sha256_lf": "0b1be1c2bb736c75ace4f3a5e5b7625ec463b2e7dd67bbeca4be341993465f2d",
-   "after_sha256_lf": "00959b26565fe5c85bbe0e5b374f64cda9c2315474c0927426565ab9aa7d66a1",
+   "after_sha256_lf": "e909289593a2c7c1a876e909b86b2b7a11a15166a104ed9552399d0bdfd80675",
    "edits": [
     {
      "location": "Cartão «Para entender», caixa «Se não houver conferência»: ouves ou lês alguém (o vídeo de Mia Couto está no mesmo cartão)",
@@ -53,12 +53,30 @@
      "old": "\"palavras\":[\"a\",\"turma\",\"ouve\",\"ou\",\"lê\",\"como\",\"se\",\"estivesse\",\"na\",\"conferência.\"],\"f\":\"«a turma ouve ou lê como se estivesse na conferência»: os dois verbos primeiro;",
      "new": "\"palavras\":[\"ouves\",\"ou\",\"lês\",\"como\",\"se\",\"estivesses\",\"na\",\"conferência.\"],\"f\":\"«ouves ou lês como se estivesses na conferência»: os dois verbos primeiro;",
      "occurrences": 1
+    },
+    {
+     "location": "Retorno das lacunas «O que muda se não houver conferência?» (lição e cópia do painel): a pergunta faz-se por escrito",
+     "old": "Um texto com **autor** e data; perguntas por **escrito**, lidas em voz alta.",
+     "new": "Um texto com **autor** e data; a pergunta faz-se por **escrito** (na aula, lê-se em voz alta).",
+     "occurrences": 1
+    },
+    {
+     "location": "Retorno do verdadeiro ou falso sobre a pergunta em público (lição e cópia do painel): sem conferência, por escrito",
+     "old": "sem conferência, a pergunta faz-se por escrito e lê-se em voz alta.",
+     "new": "sem conferência, a pergunta faz-se por escrito (na aula, lê-se em voz alta).",
+     "occurrences": 1
+    },
+    {
+     "location": "Retorno de erro do verdadeiro ou falso sobre a pergunta em público: sem conferência, por escrito",
+     "old": "(por escrito e lida em voz alta, se não houver conferência)",
+     "new": "(sem conferência, por escrito)",
+     "occurrences": 1
     }
    ]
   },
   "m3/index.html": {
    "base_sha256_lf": "3e287d42e3e72d093001f86f17ee6425a5b8a110ae4dbf4db87e564cd1adb32c",
-   "after_sha256_lf": "ee319b123ae89e06353e6db4c02d28ea89f2b9ec36c54352563b6a1e52642754",
+   "after_sha256_lf": "d0fb7bb8e5606d669d136a516043108dcaf21374a3008df30016e1430c8e1e0b",
    "edits": [
     {
      "location": "Lacunas «O que muda se não houver conferência?» (lição, arquivo do índice e cópia do painel): ouves ou lês um texto com autor e data",
@@ -89,12 +107,18 @@
      "old": "Prepara com a turma as doze perguntas do torneio interturmas como extra sem nota.",
      "new": "Prepara perguntas justas, com resposta e fonte, para o torneio interturmas (extra sem nota).",
      "occurrences": 1
+    },
+    {
+     "location": "Arquivo do índice, retorno das lacunas «O que muda se não houver conferência?»: a pergunta faz-se por escrito",
+     "old": "Autor e data tornam a fonte verificável; as perguntas escritas leem-se em voz alta na mesma.",
+     "new": "Autor e data tornam a fonte verificável; a pergunta faz-se por escrito (na aula, lê-se em voz alta).",
+     "occurrences": 1
     }
    ]
   },
   "m3/painel-m3-f11/index.html": {
    "base_sha256_lf": "0ed8100d8c4f527e907717231ee43602bfd74498fc4064e9388c97f63eea0c15",
-   "after_sha256_lf": "87d0d48c6da812206baf68afaf05f0ae9105657bad8aeed909625a848d225ad0",
+   "after_sha256_lf": "eab2b65650e729ecc433b1b3e16f46a6e304ba3f7f2f8ee4c8ed5e247401f4cd",
    "edits": [
     {
      "location": "Lacunas «O que muda se não houver conferência?» (lição, arquivo do índice e cópia do painel): ouves ou lês um texto com autor e data",
@@ -106,6 +130,18 @@
      "location": "Cópia do painel do exercício de ordenar a frase: ouves ou lês, na segunda pessoa",
      "old": "\"f\":\"«a turma ouve ou lê como se estivesse na conferência»: os dois verbos primeiro; a comparação com «como se» fecha a frase.\",\"palavras\":[\"a\",\"conferência.\",\"estivesse\",\"turma\",\"como\",\"se\",\"na\",\"ou\",\"ouve\",\"lê\"]",
      "new": "\"f\":\"«ouves ou lês como se estivesses na conferência»: os dois verbos primeiro; a comparação com «como se» fecha a frase.\",\"palavras\":[\"conferência.\",\"estivesses\",\"como\",\"se\",\"na\",\"ou\",\"ouves\",\"lês\"]",
+     "occurrences": 1
+    },
+    {
+     "location": "Retorno das lacunas «O que muda se não houver conferência?» (lição e cópia do painel): a pergunta faz-se por escrito",
+     "old": "Um texto com **autor** e data; perguntas por **escrito**, lidas em voz alta.",
+     "new": "Um texto com **autor** e data; a pergunta faz-se por **escrito** (na aula, lê-se em voz alta).",
+     "occurrences": 1
+    },
+    {
+     "location": "Retorno do verdadeiro ou falso sobre a pergunta em público (lição e cópia do painel): sem conferência, por escrito",
+     "old": "sem conferência, a pergunta faz-se por escrito e lê-se em voz alta.",
+     "new": "sem conferência, a pergunta faz-se por escrito (na aula, lê-se em voz alta).",
      "occurrences": 1
     }
    ]
@@ -154,12 +190,12 @@
   },
   "m2/index.html": {
    "base_sha256_lf": "8f304a9e344c810ab723fdb04052ea9779170d591af1e07ea6e8ce019484c452",
-   "after_sha256_lf": "6d10feae0311c9e50ef78a8b6080194378077f91c396b037087bebc95d605442",
+   "after_sha256_lf": "5eef6b1c0bf5b70d059e7f85fc3ad37dcd414c1d90afdb56b363691ba4a54fb3",
    "edits": [
     {
      "location": "Percurso, passo 5 «Asno ou cavalo, hoje»: o projeto de turma fica entre parênteses",
      "old": "Propõe um equivalente atual e justifica o conflito que conserva. No projeto de turma, desenvolve a adaptação em vídeo e apresenta as escolhas.",
-     "new": "Propõe um equivalente atual e justifica o conflito que conserva (no projeto de turma, desenvolve-o em vídeo).",
+     "new": "Propõe um equivalente atual e justifica o conflito que conserva (no projeto de turma, desenvolve a adaptação em vídeo).",
      "occurrences": 1
     }
    ]
@@ -304,7 +340,7 @@
   },
   "m4/licao-m4-f20/index.html": {
    "base_sha256_lf": "13d8977a87ae3749e400ac547fed8dc25adc0c0ec8f8756ce725d9b441cc11e8",
-   "after_sha256_lf": "7d90babb02553d842cb8dca0a1450100fecc3bd6622294e6cff4afcc54732a02",
+   "after_sha256_lf": "05ec8d4902ebf7be74ecab1c0b34a55e7402c0fae8c894b37589d79fb5604c87",
    "edits": [
     {
      "location": "Cartão «Decide»: decide em silêncio, sem a votação de braço no ar",
@@ -313,9 +349,9 @@
      "occurrences": 1
     },
     {
-     "location": "Cartão do texto, «Antes de ler»: lês em voz alta mudando de voz",
-     "old": "Lê em voz alta, com papéis: Manuel, Madalena e quem lê as duas didascálias.",
-     "new": "Lê em voz alta, mudando de voz: Manuel, Madalena e as duas didascálias.",
+     "location": "Cartão do texto, «Antes de ler»: lês em voz alta, uma voz para cada personagem, e decides como fazes as didascálias",
+     "old": "Lê em voz alta, com papéis: Manuel, Madalena e quem lê as duas didascálias. Decide como as fazes: em voz alta, com som ou com um gesto.",
+     "new": "Lê em voz alta, com uma voz para Manuel e outra para Madalena. Decide como fazes as duas didascálias: em voz alta, com som ou com um gesto.",
      "occurrences": 1
     }
    ]
@@ -370,36 +406,42 @@
   },
   "tarefas/m4-u2/index.html": {
    "base_sha256_lf": "c0363d90ac54aaf7d90876eb345cf7a2acf22f0cca2045e57d296eee48a7c5cd",
-   "after_sha256_lf": "61dd4fe2c913daf9b9967233e1a6e320a68a1b0f57018ef22439c0c7b2f4fffe",
+   "after_sha256_lf": "764bec78115fae9174e3cc3ef16d2bc8af2b078c73973d1504dc2cbfe1115606",
    "edits": [
     {
      "location": "Bloco «Se não foste ao teatro»: lês tu a cena do ato I em voz alta",
      "old": "Se não foste ao teatro, compara uma cena do ato I lida em voz alta na aula com a tua leitura silenciosa.",
-     "new": "Se não foste ao teatro, lê em voz alta uma cena do ato I e compara-a com a tua leitura silenciosa.",
+     "new": "Se não foste ao teatro, lê em voz alta uma cena do ato I e compara essa leitura com a tua leitura silenciosa.",
      "occurrences": 1
     }
    ]
   },
   "tarefas/m4-u3/index.html": {
    "base_sha256_lf": "5f980c9f341b099df8d63b62b3a40dcc3f1f894d28badee729590c2dd03dfea1",
-   "after_sha256_lf": "2daca2a9a0b5d1d6416d5a54753c965db16d8217d05ec302ca52e0898cb137b9",
+   "after_sha256_lf": "bd165d29b62fd747d993d20fc56fd93576d466bdfb07934077c7595e5d2fb090",
    "edits": [
     {
      "location": "Apoio de comparação «A palavra contra o poder», organização da aula: o primeiro bloco passa a «Leitura do enunciado» (o enunciado está todo na página)",
      "old": "<li><b>10 min</b><span>Apresentação pelo docente</span></li>",
      "new": "<li><b>10 min</b><span>Leitura do enunciado</span></li>",
      "occurrences": 1
+    },
+    {
+     "location": "Apoio de comparação «A palavra contra o poder», organização da aula: o segundo bloco passa a «Preparação na página»",
+     "old": "<span>Leitura e preparação na página</span>",
+     "new": "<span>Preparação na página</span>",
+     "occurrences": 1
     }
    ]
   },
   "m4/visita-frei-luis-de-sousa-no-teatro/index.html": {
    "base_sha256_lf": "570bf4d48f047b5e9568a2aaa4ecfdcbc156258f772080163501550d4c117e98",
-   "after_sha256_lf": "f90c8bc071e3421bd4879ea13e130d8f0fbec256648954cb806f51653c8f0086",
+   "after_sha256_lf": "7ff8e2e374906b3306c7432b215687ff8b17877385b6e048f0eba9595def3406",
    "edits": [
     {
      "location": "Caderno de campo, «Não foste à visita?»: lês tu a cena do Ato I em voz alta",
      "old": "<p>Escolhe uma cena do Ato I lida em voz alta na aula. Compara o que ouviste com o que leste em silêncio, com os mesmos critérios.</p>",
-     "new": "<p>Lê em voz alta uma cena do Ato I e compara-a com a tua leitura silenciosa, com os mesmos critérios.</p>",
+     "new": "<p>Lê em voz alta uma cena do Ato I e compara essa leitura com a tua leitura silenciosa, com os mesmos critérios.</p>",
      "occurrences": 1
     }
    ]
@@ -418,7 +460,7 @@
   },
   "m4/recursos/tpc-entrada.js": {
    "base_sha256_lf": "a1d1f9eeac684262ce16319acbfaf206dbce863959e238e16c875d60ac7aa233",
-   "after_sha256_lf": "4c7d329dd8f7e60c1cfbf9a47fada951c4db1f8ae687c3e00f760976860046b7",
+   "after_sha256_lf": "e6f68ce6b63c0faa4621dd1a19f302fdee5641b2b46a13c015636e583d62fc19",
    "edits": [
     {
      "location": "M4-F28, cartão «Criar», 4 min: relês e revês tu",
@@ -430,6 +472,12 @@
      "location": "M4-F28, cartão «Rever em conjunto»: revês a tua produção (na aula, duas da turma)",
      "old": "<p>Escolham duas produções, com autorização de quem as fez. Para cada uma:</p>",
      "new": "<p>Revê a tua produção (na aula, duas da turma, com autorização de quem as fez):</p>",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F28, rótulo do cartão «Rever em conjunto»: «Rever a produção», porque o cartão se faz a sós",
+     "old": "\"rot\":\"Rever em conjunto",
+     "new": "\"rot\":\"Rever a produção",
      "occurrences": 1
     }
    ]
@@ -940,13 +988,25 @@
   },
   "m2/guia-da-tarefa-m2/index.html": {
    "base_sha256_lf": "b8d7b071ccef80a141dd40653bb43f43ebf1865aa5592601c05cf5a70b4f6555",
-   "after_sha256_lf": "69a0446b2ff4bbdfcc99dc26518a0400ab16231e658bd97d3b7daaec70f9fcad",
+   "after_sha256_lf": "4dd5d4c524b8bd4d2251212572b37bfbb89600348c420110fc15a113f2a9e08c",
    "edits": [
     {
      "location": "Bloco 1 «Aquecer, 15 min» (no HTML e em BLOCOS): os cartões e a leitura da tarefa",
      "old": "e a apresentação da tarefa pelo docente",
      "new": "e a leitura da tarefa",
      "occurrences": 2
+    },
+    {
+     "location": "Secção «Tarefas das unidades»: 5 minutos para leres o enunciado",
+     "old": "com consulta, e 5 minutos de apresentação do enunciado pelo docente; depois respondes",
+     "new": "com consulta, e 5 minutos para leres o enunciado; depois respondes",
+     "occurrences": 1
+    },
+    {
+     "location": "Arquivo, Tarefa 1, alternativa de quem faltou ao teatro: lês tu uma cena em voz alta",
+     "old": "Se faltaste à ida ao teatro, escreve a apreciação crítica da leitura em voz alta de uma cena feita na aula, com os mesmos critérios.",
+     "new": "Se faltaste à ida ao teatro, lê uma cena em voz alta e escreve a apreciação crítica dessa leitura, com os mesmos critérios.",
+     "occurrences": 1
     }
    ]
   },
@@ -970,12 +1030,12 @@
   },
   "m8/licao-m8-f09/index.html": {
    "base_sha256_lf": "181e5f7ea881423ecf3bca88d35a03163982142b2d2b71675fb16b0684f5123f",
-   "after_sha256_lf": "e0aa8e56f70bedd7b4ac64981bc912a852442300e2ad000cb1262da30c1e6875",
+   "after_sha256_lf": "3eae78d4fdf9be616a9b1fa7cdd7046a3ce63bbd5fbb594e03b0db3a895a9ec1",
    "edits": [
     {
-     "location": "«O essencial», 1.º item, e a mesma frase nas pistas: três imagens tiradas ao acaso",
+     "location": "«O essencial», 1.º item, e a mesma frase nas pistas: três imagens tiradas ao acaso, de onde o aluno as pode tirar",
      "old": "três imagens ao acaso, de um conjunto preparado pelo docente, e um conto",
-     "new": "três imagens tiradas ao acaso e um conto",
+     "new": "três imagens tiradas ao acaso (de um livro, de uma revista ou da galeria do telemóvel) e um conto",
      "occurrences": 2
     },
     {
@@ -1078,12 +1138,18 @@
   },
   "m1/m1-voz-emprestada/index.html": {
    "base_sha256_lf": "38a2c47b113fe0c2553f77bef1e4b256f2dfdab7dd8bf2279d0d122c93d53cc4",
-   "after_sha256_lf": "2340881d2d696583f0a5f006957e154a373ebe0a8c09c27fe43722f972b4004f",
+   "after_sha256_lf": "a1b70eafdefd425bc3eaafa21d2c2449959dc6cbe7b3a54c78f2403c5b833ccf",
    "edits": [
     {
      "location": "Cartão final «Para levar» do «Pensar devagar»: respondes em voz alta, numa frase",
      "old": "Responde-lhe agora em voz alta, numa frase, a alguém.",
      "new": "Responde-lhe agora em voz alta, numa frase.",
+     "occurrences": 1
+    },
+    {
+     "location": "Cartão «posicao» do Ato 5 do «Pensar devagar»: justificas a resposta em voz alta, sem precisar de alguém",
+     "old": "Escolhe a resposta que defendes e justifica-a em voz alta a alguém.",
+     "new": "Escolhe a resposta que defendes e justifica-a em voz alta.",
      "occurrences": 1
     }
    ]
@@ -1240,12 +1306,18 @@
   },
   "m9/m9-de-quem-e-o-convento/index.html": {
    "base_sha256_lf": "32fa33017104d277320e0d2608c4a22eb558b86fd6b21bf221e6e85a382890af",
-   "after_sha256_lf": "db26c1f454365d82c3854e711b191e9c999a2cd76ee4db2ae5e0c9c2138609db",
+   "after_sha256_lf": "2b5b6c7f054db07f91971fa198a27b91937be80f5aff97b2c6c8e0bd2be92023",
    "edits": [
     {
      "location": "Cartão final «Para levar» do «Pensar devagar»: respondes em voz alta, numa frase",
      "old": "Responde-lhe agora em voz alta, numa frase, a alguém.",
      "new": "Responde-lhe agora em voz alta, numa frase.",
+     "occurrences": 1
+    },
+    {
+     "location": "Ato 4 do «Pensar devagar», comentário da opção «É dos dois…»: a decisão é a que a pergunta pede",
+     "old": "Deixa de fora a decisão que o debate te pede, e o docente vai pedir-ta na mesma.",
+     "new": "Deixa de fora a decisão que a pergunta te pede, e vais ter de a tomar na mesma.",
      "occurrences": 1
     }
    ]
@@ -1366,7 +1438,7 @@
   },
   "assets/atlas-explorar.js": {
    "base_sha256_lf": "0df0e3b474b50718ccf65280deebd87754980e4265b6cde5d58388b28365f78f",
-   "after_sha256_lf": "3db0030c6d42862197959096500fbae44017e47f293d80bc57c92f4db70e9ec8",
+   "after_sha256_lf": "b875953f411d8fc6b729978790d64c9da4236275b50832d90c6e93254d28727f",
    "edits": [
     {
      "location": "Investigação «O poema muda quando ganha voz?», entrada «Pausa»: gravas e descreves tu",
@@ -1379,17 +1451,29 @@
      "old": "Outra pessoa interpreta-a; ajusta um sinal depois de ouvir.",
      "new": "Lê-a pela partitura e grava-te; ajusta um sinal depois de ouvir.",
      "occurrences": 1
+    },
+    {
+     "location": "Investigação «O poema muda quando ganha voz?», entrada «Escuta»: sem áudio, lês tu a frase de duas maneiras",
+     "old": "Sem áudio, compara duas leituras da mesma frase em sala.",
+     "new": "Sem áudio, lê a mesma frase de duas maneiras e compara as duas leituras.",
+     "occurrences": 1
+    },
+    {
+     "location": "Investigação «O poema muda quando ganha voz?», bloco «Rever»: na alternativa sem áudio, comparas as tuas duas leituras",
+     "old": "Na alternativa sem áudio, compara a frase dita pelos colegas.",
+     "new": "Na alternativa sem áudio, compara as tuas duas leituras da mesma frase.",
+     "occurrences": 1
     }
    ]
   },
   "m8/licao-m8-f01/index.html": {
    "base_sha256_lf": "89662dce6a1e2279c9b253c3ddb905e2fa4b69ab667a8e2ffb84d12b5637e96c",
-   "after_sha256_lf": "d7ce92d9f70d06546844e9da3c7112bb9d9abaee4cb64eeb001d8e5cb6ef28c7",
+   "after_sha256_lf": "5e8679cd667a9083ade5944b20f7bc6190ecd8daa288216d3377e28b250433e4",
    "edits": [
     {
-     "location": "«Outra voz: Adília Lopes», sem vídeo: lês tu o poema em voz alta",
-     "old": "Sem vídeo: pede ao docente uma leitura em voz alta.",
-     "new": "Sem vídeo: lê o poema em voz alta.",
+     "location": "«Outra voz: Adília Lopes», sem vídeo: lês o poema, se o tiveres em livro, ou escolhes a pista pela pergunta",
+     "old": "Sem vídeo: pede ao docente uma leitura em voz alta. Podes participar oralmente ou apenas comparar mentalmente.",
+     "new": "Sem vídeo: se tiveres o poema em livro, lê-o em voz alta; se não, escolhe a pista só pela pergunta e volta a ela quando puderes ouvir a leitura. (Na aula, podes participar oralmente ou apenas comparar mentalmente.)",
      "occurrences": 1
     }
    ]
@@ -1408,6 +1492,30 @@
      "location": "Cartão «Para entender», «No caderno: quatro versos em dupla exposição»: lês em voz alta e confirmas tu",
      "old": "Lê-os a alguém e pergunta-lhe que dois lugares viu.",
      "new": "Lê-os em voz alta e confirma que se veem os dois lugares.",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m1/guia-da-tarefa-m1/index.html": {
+   "base_sha256_lf": "edbaf3b9fb4a3e01f34d51bf9803bc9c54b2973ac97be0ec29a8e928baa5a623",
+   "after_sha256_lf": "ca0324d8db36875f09a4df8b301d1fce24f441a352969a74d77bbdf4a184eeae",
+   "edits": [
+    {
+     "location": "Secção «Tarefas das unidades»: 5 minutos de leitura do enunciado",
+     "old": "Seguem-se 5 minutos de apresentação do enunciado pelo docente, 60 minutos de produção com consulta",
+     "new": "Seguem-se 5 minutos de leitura do enunciado, 60 minutos de produção com consulta",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/guia-da-tarefa-m4/index.html": {
+   "base_sha256_lf": "6bec1c372c9ac55d7c76188cc4897928f29ac1e30d8300416a95ceb40273d2ca",
+   "after_sha256_lf": "fd3d852795cc29aea1da559bd59dd712c014afaecdd812777ba7d870436c0229",
+   "edits": [
+    {
+     "location": "Arquivo, Tarefa 3, alternativa de quem faltou ao teatro: lês tu uma cena do ato I em voz alta",
+     "old": "escreve a apreciação crítica de uma cena do ato I lida em voz alta na aula: compara o que ouviste com o que leste em silêncio, com os mesmos critérios.",
+     "new": "lê em voz alta uma cena do ato I e escreve a apreciação crítica dessa leitura: compara-a com a tua leitura silenciosa, com os mesmos critérios.",
      "occurrences": 1
     }
    ]

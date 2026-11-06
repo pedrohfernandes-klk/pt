@@ -45,6 +45,20 @@ ACOMPANHAMENTO = {
     'Enunciado: responde a uma pergunta, feita ou prevista',
     'Rubrica «Apresentação», nível de topo: pergunta feita ou prevista',
 }
+# 05/11/2026: correções da revisão. Trocas em que a dependência antiga não tem uma marca que DEPENDENCIA_ANTIGA apanhe
+# (os retornos da M3-F11 que punham a leitura em voz alta como regra, a alternativa «em sala» do Atlas, o rótulo «Rever em
+# conjunto» da M4-F28) ou que só tiram a repetição criada por outra troca (o segundo bloco de leitura da M4-U3). O antigo
+# tem de trazer a marca implícita (MARCA_IMPLICITA), e o texto novo confere-se como o de todas as outras trocas.
+SEM_MARCA_NO_ANTIGO = {
+    'Investigação «O poema muda quando ganha voz?», entrada «Escuta»: sem áudio, lês tu a frase de duas maneiras',
+    'Retorno das lacunas «O que muda se não houver conferência?» (lição e cópia do painel): a pergunta faz-se por escrito',
+    'Arquivo do índice, retorno das lacunas «O que muda se não houver conferência?»: a pergunta faz-se por escrito',
+    'Retorno do verdadeiro ou falso sobre a pergunta em público (lição e cópia do painel): sem conferência, por escrito',
+    'Retorno de erro do verdadeiro ou falso sobre a pergunta em público: sem conferência, por escrito',
+    'M4-F28, rótulo do cartão «Rever em conjunto»: «Rever a produção», porque o cartão se faz a sós',
+    'Apoio de comparação «A palavra contra o poder», organização da aula: o segundo bloco passa a «Preparação na página»',
+}
+MARCA_IMPLICITA = re.compile(r'voz alta|\bem sala\b|em conjunto|Leitura e preparação')
 GERADAS = {
     'tarefas/m1-u1/index.html', 'tarefas/m1-u2/index.html', 'tarefas/m3-u1/index.html', 'tarefas/m3-u2/index.html',
     'tarefas/m5-u1/index.html', 'tarefas/m5-u2/index.html', 'tarefas/m6-u1/index.html', 'tarefas/m6-u2/index.html',
@@ -59,7 +73,8 @@ def ler(rel):
 
 class Autonomia154(unittest.TestCase):
     def test_cada_texto_novo_esta_e_o_antigo_saiu(self):
-        self.assertGreaterEqual(len(TROCAS), 137)
+        # 05/11/2026: correções da revisão: 137 trocas e mais 16 (as trocas antigas que a revisão reescreveu contam uma vez).
+        self.assertGreaterEqual(len(TROCAS), 153)
         for troca in TROCAS:
             texto = ler(troca['ficheiro'])
             with self.subTest(ficheiro=troca['ficheiro'], local=troca['local']):
@@ -72,7 +87,11 @@ class Autonomia154(unittest.TestCase):
             with self.subTest(ficheiro=troca['ficheiro'], local=troca['local']):
                 if troca['local'] in ACOMPANHAMENTO:
                     continue
-                self.assertRegex(troca['antigo'], DEPENDENCIA_ANTIGA)
+                # 05/11/2026: correções da revisão: sem marca no antigo, exige-se a marca implícita; o novo confere-se igual.
+                if troca['local'] in SEM_MARCA_NO_ANTIGO:
+                    self.assertRegex(troca['antigo'], MARCA_IMPLICITA)
+                else:
+                    self.assertRegex(troca['antigo'], DEPENDENCIA_ANTIGA)
                 sem_opcional = OPCIONAL.sub('', troca['novo'])
                 self.assertNotRegex(sem_opcional, DEPENDENCIA_NOVA)
 
@@ -102,21 +121,33 @@ class Autonomia154(unittest.TestCase):
             ('m3/index.html', '"o":["A ninguém","Aos autores de um manual","A alguém"],"c":2', '"Ao docente","Aos autores'),
             ('m3/licao-m3-f04/index.html', 'protótipo mostrado a alguém', 'protótipo mostrado a um colega'),
             ('m5/index.html', '"frase":"A voz da narração do filme é interpretada por [1]."', 'Vês os episódios que o [1] indicar'),
-            ('m2/index.html', '(no projeto de turma, desenvolve-o em vídeo)', 'No projeto de turma, desenvolve a adaptação'),
+            # 05/11/2026: correção da revisão: «desenvolve a adaptação», e não «desenvolve-o», que se agarrava a «o conflito».
+            ('m2/index.html', '(no projeto de turma, desenvolve a adaptação em vídeo)', 'No projeto de turma, desenvolve a adaptação'),
+            ('m2/index.html', 'justifica o conflito que conserva (no projeto de turma, desenvolve a adaptação em vídeo).', 'desenvolve-o em vídeo'),
             ('m2/gram-subordinadas/index.html', 'apresenta-a em três frases, no caderno.', 'a alguém da turma'),
             ('m4/licao-m4-f20/index.html', 'Decide em silêncio. Depois abre os lados.', 'braço no ar'),
             ('m1/licao-m1-f04/index.html', 'Decide em silêncio. Depois abre os três lados.', 'braço no ar'),
             ('m1/licao-m1-f08/index.html', 'Ler a fundo, títulos em papel', 'a pares'),
             ('m1/licao-m1-f15/index.html', 'Ler a fundo, resposta em papel', 'em pares'),
             ('m1/licao-m1-f05/index.html', 'praticar, responder em papel', 'em pares'),
-            ('m4/licao-m4-f20/index.html', 'Lê em voz alta, mudando de voz: Manuel, Madalena e as duas didascálias.', 'com papéis'),
-            ('tarefas/m4-u2/index.html', 'lê em voz alta uma cena do ato I e compara-a com a tua leitura silenciosa.', 'lida em voz alta na aula'),
+            # 05/11/2026: correção da revisão: uma voz para cada personagem; as didascálias fazem-se como o aluno decidir.
+            ('m4/licao-m4-f20/index.html', 'Lê em voz alta, com uma voz para Manuel e outra para Madalena. Decide como fazes as duas didascálias: em voz alta, com som ou com um gesto.', 'com papéis'),
+            ('m4/licao-m4-f20/index.html', 'Decide como fazes as duas didascálias', 'Madalena e as duas didascálias. Decide como as fazes'),
+            # 05/11/2026: correção da revisão: «compara essa leitura», e não «compara-a», que se referia à cena.
+            ('tarefas/m4-u2/index.html', 'lê em voz alta uma cena do ato I e compara essa leitura com a tua leitura silenciosa.', 'lida em voz alta na aula'),
+            ('tarefas/m4-u2/index.html', 'lê em voz alta uma cena do ato I e compara essa leitura', 'e compara-a com a tua leitura silenciosa'),
             ('tarefas/m4-u2/aquecimento/index.html', 'Se usares a alternativa de leitura, identifica essa opção.', 'leitura em aula'),
             ('tarefas/m4-u3/index.html', '<span>Leitura do enunciado</span>', 'Apresentação pelo docente'),
-            ('m4/visita-frei-luis-de-sousa-no-teatro/index.html', 'Lê em voz alta uma cena do Ato I e compara-a com a tua leitura silenciosa', 'lida em voz alta na aula'),
+            # 05/11/2026: correção da revisão: o segundo bloco deixa de repetir a leitura; os tempos ficam 10, 10, 60 e 10.
+            ('tarefas/m4-u3/index.html', '<li><b>10 min</b><span>Leitura do enunciado</span></li><li><b>10 min</b><span>Preparação na página</span></li>', 'Leitura e preparação na página'),
+            # 05/11/2026: correção da revisão: «compara essa leitura», e não «compara-a», que se referia à cena.
+            ('m4/visita-frei-luis-de-sousa-no-teatro/index.html', 'Lê em voz alta uma cena do Ato I e compara essa leitura com a tua leitura silenciosa', 'lida em voz alta na aula'),
+            ('m4/visita-frei-luis-de-sousa-no-teatro/index.html', 'Lê em voz alta uma cena do Ato I e compara essa leitura', 'e compara-a com a tua leitura silenciosa'),
             ('m2/visita-farsa-de-ines-pereira-no-teatro/index.html', 'Lê uma cena em voz alta e escreve a apreciação crítica dessa leitura', 'feita na aula'),
             ('m4/recursos/tpc-entrada.js', 'relê, identifica a tensão e o sinal que a sustenta e revê um ponto pouco claro.', 'um colega identifica'),
             ('m4/recursos/tpc-entrada.js', 'Revê a tua produção (na aula, duas da turma, com autorização de quem as fez):', 'Escolham duas produções'),
+            # 05/11/2026: correção da revisão: o rótulo deixa de anunciar trabalho em conjunto; o título fica.
+            ('m4/recursos/tpc-entrada.js', '"rot":"Rever a produção · 10 min","titulo":"O que já percebemos da peça?"', 'Rever em conjunto'),
             ('tarefas/m1-u1/index.html', '5 minutos para leres o enunciado', 'para o docente apresentar'),
             ('tarefas/m2-u2/index.html', 'O relógio de produção começa depois da leitura.', 'depois da apresentação'),
             ('tarefas/m8-u1/index.html', 'Depois, lês o enunciado e começam os 60 minutos de produção.', 'o docente apresenta'),
@@ -129,7 +160,9 @@ class Autonomia154(unittest.TestCase):
             ('m9/guia-da-tarefa-m9/index.html', 'Apresentação, gravada ou na aula; créditos.', 'Apresentação à turma'),
             ('m9/guia-da-tarefa-m9/index.html', 'uma crítica registada (de um colega ou tua)', 'crítica de um colega registada'),
             ('tarefas/m7-u2/index.html', 'uma pergunta (a que te fizeram ou uma que prevês) e a tua resposta', 'a pergunta que te fizeram e o que respondeste'),
-            ('m8/licao-m8-f09/index.html', 'três imagens tiradas ao acaso e um conto', 'preparado pelo docente'),
+            # 05/11/2026: correção da revisão: diz-se de onde o aluno, sozinho, tira as imagens.
+            ('m8/licao-m8-f09/index.html', 'três imagens tiradas ao acaso (de um livro, de uma revista ou da galeria do telemóvel) e um conto', 'preparado pelo docente'),
+            ('m8/licao-m8-f09/index.html', 'galeria do telemóvel) e um conto de 400 a 600 palavras que', 'três imagens tiradas ao acaso e um conto'),
             ('m8/licao-m8-f09/index.html', '"frase":"As três imagens tiram-se [1] e têm de ser [2] à história.","lacunas":[{"o":["ao acaso","por tema","pela ordem"],"c":0}', 'conjunto preparado pelo [1]'),
             ('m8/licao-m8-f09/index.html', 'lês em voz alta, mudas duas coisas', 'a um colega, mudas'),
             ('m8/index.html', '"o":["Mudas duas coisas","Entregas logo","Recomeças do zero"],"c":0', '"A um colega","Ao docente","À turma"'),
@@ -149,9 +182,28 @@ class Autonomia154(unittest.TestCase):
             ('assets/atlas-editorial.js', 'em palco. Experimenta a mesma fala com dois gestos diferentes.', 'Em dupla'),
             ('assets/atlas-explorar.js', 'Ouve-as e descreve o que mudou.', 'Pede a alguém'),
             ('assets/atlas-explorar.js', 'Lê-a pela partitura e grava-te; ajusta um sinal depois de ouvir.', 'Outra pessoa interpreta-a'),
-            ('m8/licao-m8-f01/index.html', 'Sem vídeo: lê o poema em voz alta.', 'pede ao docente'),
+            # 05/11/2026: correção da revisão: o poema não está na página; sem vídeo, o caminho diz o que fazer sem ele, e a
+            # participação oral fica entre parênteses, como momento de aula.
+            ('m8/licao-m8-f01/index.html', 'Sem vídeo: se tiveres o poema em livro, lê-o em voz alta; se não, escolhe a pista só pela pergunta e volta a ela quando puderes ouvir a leitura. (Na aula, podes participar oralmente ou apenas comparar mentalmente.)', 'pede ao docente'),
+            ('m8/licao-m8-f01/index.html', 'quando puderes ouvir a leitura. (Na aula, podes participar', 'Sem vídeo: lê o poema em voz alta.'),
             ('m7/licao-m7-f34/index.html', 'Relê ou mostra a alguém: reconhecem-se os dois planos', 'consegue reconhecer'),
             ('m7/licao-m7-f34/index.html', 'Lê-os em voz alta e confirma que se veem os dois lugares.', 'pergunta-lhe que dois lugares viu'),
+            # 05/11/2026: correções da revisão: casos nas mesmas páginas (ou no mesmo caso de outras) que ainda dependiam de
+            # alguém, dos colegas, da sala ou do docente.
+            ('m1/m1-voz-emprestada/index.html', 'Escolhe a resposta que defendes e justifica-a em voz alta.","opcoes"', 'justifica-a em voz alta a alguém'),
+            ('m2/guia-da-tarefa-m2/index.html', 'com consulta, e 5 minutos para leres o enunciado; depois respondes', 'apresentação do enunciado pelo docente'),
+            ('m1/guia-da-tarefa-m1/index.html', 'Seguem-se 5 minutos de leitura do enunciado, 60 minutos de produção com consulta', 'apresentação do enunciado pelo docente'),
+            ('assets/atlas-explorar.js', 'Sem áudio, lê a mesma frase de duas maneiras e compara as duas leituras.', 'em sala.'),
+            ('assets/atlas-explorar.js', 'Na alternativa sem áudio, compara as tuas duas leituras da mesma frase.', 'dita pelos colegas'),
+            ('m3/licao-m3-f11/index.html', '"f":"Um texto com **autor** e data; a pergunta faz-se por **escrito** (na aula, lê-se em voz alta)."', 'lidas em voz alta'),
+            ('m3/painel-m3-f11/index.html', '"f":"Um texto com **autor** e data; a pergunta faz-se por **escrito** (na aula, lê-se em voz alta)."', 'lidas em voz alta'),
+            ('m3/index.html', 'Autor e data tornam a fonte verificável; a pergunta faz-se por escrito (na aula, lê-se em voz alta).', 'leem-se em voz alta na mesma'),
+            ('m3/licao-m3-f11/index.html', 'sem conferência, a pergunta faz-se por escrito (na aula, lê-se em voz alta).', 'por escrito e lê-se em voz alta'),
+            ('m3/painel-m3-f11/index.html', 'sem conferência, a pergunta faz-se por escrito (na aula, lê-se em voz alta).', 'por escrito e lê-se em voz alta'),
+            ('m3/licao-m3-f11/index.html', 'fazes uma pergunta em público (sem conferência, por escrito).', 'lida em voz alta, se não houver conferência'),
+            ('m2/guia-da-tarefa-m2/index.html', 'Se faltaste à ida ao teatro, lê uma cena em voz alta e escreve a apreciação crítica dessa leitura, com os mesmos critérios.', 'feita na aula'),
+            ('m4/guia-da-tarefa-m4/index.html', 'Se faltaste à ida ao teatro, lê em voz alta uma cena do ato I e escreve a apreciação crítica dessa leitura: compara-a com a tua leitura silenciosa, com os mesmos critérios.', 'lida em voz alta na aula'),
+            ('m9/m9-de-quem-e-o-convento/index.html', 'Deixa de fora a decisão que a pergunta te pede, e vais ter de a tomar na mesma.', 'o docente vai pedir-ta'),
         ]
         for rel, novo, antigo in casos:
             texto = ler(rel)

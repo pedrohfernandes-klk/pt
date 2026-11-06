@@ -131,9 +131,9 @@
   "ficheiro": "m2/index.html",
   "local": "Percurso, passo 5 «Asno ou cavalo, hoje»: o projeto de turma fica entre parênteses",
   "antigo": "Propõe um equivalente atual e justifica o conflito que conserva. No projeto de turma, desenvolve a adaptação em vídeo e apresenta as escolhas.",
-  "novo": "Propõe um equivalente atual e justifica o conflito que conserva (no projeto de turma, desenvolve-o em vídeo).",
+  "novo": "Propõe um equivalente atual e justifica o conflito que conserva (no projeto de turma, desenvolve a adaptação em vídeo).",
   "ocorrencias": 1,
-  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): o passo punha o projeto de turma e a apresentação como ações obrigatórias; a M2-F09 diz que se faz individualmente."
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): o passo punha o projeto de turma e a apresentação como ações obrigatórias; a M2-F09 diz que se faz individualmente. Revisão: «desenvolve a adaptação», e não «desenvolve-o», que se agarrava a «o conflito»."
  },
  {
   "ficheiro": "m2/gram-subordinadas/index.html",
@@ -281,19 +281,19 @@
  },
  {
   "ficheiro": "m4/licao-m4-f20/index.html",
-  "local": "Cartão do texto, «Antes de ler»: lês em voz alta mudando de voz",
-  "antigo": "Lê em voz alta, com papéis: Manuel, Madalena e quem lê as duas didascálias.",
-  "novo": "Lê em voz alta, mudando de voz: Manuel, Madalena e as duas didascálias.",
+  "local": "Cartão do texto, «Antes de ler»: lês em voz alta, uma voz para cada personagem, e decides como fazes as didascálias",
+  "antigo": "Lê em voz alta, com papéis: Manuel, Madalena e quem lê as duas didascálias. Decide como as fazes: em voz alta, com som ou com um gesto.",
+  "novo": "Lê em voz alta, com uma voz para Manuel e outra para Madalena. Decide como fazes as duas didascálias: em voz alta, com som ou com um gesto.",
   "ocorrencias": 1,
-  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): «com papéis» e «quem lê as didascálias» pressupunham vários leitores, e esta leitura é a alternativa de quem faltou ao teatro."
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): «com papéis» e «quem lê as didascálias» pressupunham vários leitores, e esta leitura é a alternativa de quem faltou ao teatro. Revisão: a troca abrange a frase seguinte, que deixa escolher como se fazem as didascálias; a primeira já não as manda dizer em voz alta."
  },
  {
   "ficheiro": "tarefas/m4-u2/index.html",
   "local": "Bloco «Se não foste ao teatro»: lês tu a cena do ato I em voz alta",
   "antigo": "Se não foste ao teatro, compara uma cena do ato I lida em voz alta na aula com a tua leitura silenciosa.",
-  "novo": "Se não foste ao teatro, lê em voz alta uma cena do ato I e compara-a com a tua leitura silenciosa.",
+  "novo": "Se não foste ao teatro, lê em voz alta uma cena do ato I e compara essa leitura com a tua leitura silenciosa.",
   "ocorrencias": 1,
-  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): a alternativa dependia de uma leitura feita numa aula anterior; quem também faltou a essa aula ficava sem saída."
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): a alternativa dependia de uma leitura feita numa aula anterior; quem também faltou a essa aula ficava sem saída. Revisão: «compara essa leitura», e não «compara-a», que se referia à cena."
  },
  {
   "ficheiro": "tarefas/m4-u3/index.html",
@@ -307,9 +307,9 @@
   "ficheiro": "m4/visita-frei-luis-de-sousa-no-teatro/index.html",
   "local": "Caderno de campo, «Não foste à visita?»: lês tu a cena do Ato I em voz alta",
   "antigo": "<p>Escolhe uma cena do Ato I lida em voz alta na aula. Compara o que ouviste com o que leste em silêncio, com os mesmos critérios.</p>",
-  "novo": "<p>Lê em voz alta uma cena do Ato I e compara-a com a tua leitura silenciosa, com os mesmos critérios.</p>",
+  "novo": "<p>Lê em voz alta uma cena do Ato I e compara essa leitura com a tua leitura silenciosa, com os mesmos critérios.</p>",
   "ocorrencias": 1,
-  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): caso em falta, verificado: a alternativa dependia de uma leitura feita na aula."
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): caso em falta, verificado: a alternativa dependia de uma leitura feita na aula. Revisão: «compara essa leitura», e não «compara-a», que se referia à cena."
  },
  {
   "ficheiro": "m2/visita-farsa-de-ines-pereira-no-teatro/index.html",
@@ -737,11 +737,11 @@
  },
  {
   "ficheiro": "m8/licao-m8-f09/index.html",
-  "local": "«O essencial», 1.º item, e a mesma frase nas pistas: três imagens tiradas ao acaso",
+  "local": "«O essencial», 1.º item, e a mesma frase nas pistas: três imagens tiradas ao acaso, de onde o aluno as pode tirar",
   "antigo": "três imagens ao acaso, de um conjunto preparado pelo docente, e um conto",
-  "novo": "três imagens tiradas ao acaso e um conto",
+  "novo": "três imagens tiradas ao acaso (de um livro, de uma revista ou da galeria do telemóvel) e um conto",
   "ocorrencias": 2,
-  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): sem o conjunto do docente não se começava o conto; o guia do M8 já diz só «Tira as três imagens ao acaso»."
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): sem o conjunto do docente não se começava o conto; o guia do M8 já diz só «Tira as três imagens ao acaso». Revisão: diz-se de onde se tiram as imagens, porque sem o conjunto do docente o aluno sozinho não tinha de onde as tirar."
  },
  {
   "ficheiro": "m8/licao-m8-f09/index.html",
@@ -1073,11 +1073,11 @@
  },
  {
   "ficheiro": "m8/licao-m8-f01/index.html",
-  "local": "«Outra voz: Adília Lopes», sem vídeo: lês tu o poema em voz alta",
-  "antigo": "Sem vídeo: pede ao docente uma leitura em voz alta.",
-  "novo": "Sem vídeo: lê o poema em voz alta.",
+  "local": "«Outra voz: Adília Lopes», sem vídeo: lês o poema, se o tiveres em livro, ou escolhes a pista pela pergunta",
+  "antigo": "Sem vídeo: pede ao docente uma leitura em voz alta. Podes participar oralmente ou apenas comparar mentalmente.",
+  "novo": "Sem vídeo: se tiveres o poema em livro, lê-o em voz alta; se não, escolhe a pista só pela pergunta e volta a ela quando puderes ouvir a leitura. (Na aula, podes participar oralmente ou apenas comparar mentalmente.)",
   "ocorrencias": 1,
-  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): caso em falta, verificado: a alternativa sem vídeo dependia do docente."
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): caso em falta, verificado: a alternativa sem vídeo dependia do docente. Revisão: o poema não está na página (texto protegido), por isso o caminho sem vídeo diz o que fazer sem ele; a frase seguinte fica entre parênteses, como momento de aula."
  },
  {
   "ficheiro": "m7/licao-m7-f34/index.html",
@@ -1094,5 +1094,133 @@
   "novo": "Lê-os em voz alta e confirma que se veem os dois lugares.",
   "ocorrencias": 1,
   "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): caso em falta, verificado: a verificação só se fazia com outra pessoa."
+ },
+ {
+  "ficheiro": "m1/m1-voz-emprestada/index.html",
+  "local": "Cartão «posicao» do Ato 5 do «Pensar devagar»: justificas a resposta em voz alta, sem precisar de alguém",
+  "antigo": "Escolhe a resposta que defendes e justifica-a em voz alta a alguém.",
+  "novo": "Escolhe a resposta que defendes e justifica-a em voz alta.",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): correção da revisão: só havia o caminho com outra pessoa, na mesma página em que o «Para levar» já deixou de pedir «a alguém»."
+ },
+ {
+  "ficheiro": "m2/guia-da-tarefa-m2/index.html",
+  "local": "Secção «Tarefas das unidades»: 5 minutos para leres o enunciado",
+  "antigo": "com consulta, e 5 minutos de apresentação do enunciado pelo docente; depois respondes",
+  "novo": "com consulta, e 5 minutos para leres o enunciado; depois respondes",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): correção da revisão: o relógio do aluno ficava à espera do docente, e o bloco 1 da mesma página já diz «a leitura da tarefa»."
+ },
+ {
+  "ficheiro": "m1/guia-da-tarefa-m1/index.html",
+  "local": "Secção «Tarefas das unidades»: 5 minutos de leitura do enunciado",
+  "antigo": "Seguem-se 5 minutos de apresentação do enunciado pelo docente, 60 minutos de produção com consulta",
+  "novo": "Seguem-se 5 minutos de leitura do enunciado, 60 minutos de produção com consulta",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): correção da revisão: o mesmo caso dos guias do M3, M5, M6, M8 e M9, que já dizem «5 minutos de leitura»; a frase vem da camada aquecimentos_m1_20261030, que se desfaz depois desta."
+ },
+ {
+  "ficheiro": "assets/atlas-explorar.js",
+  "local": "Investigação «O poema muda quando ganha voz?», entrada «Escuta»: sem áudio, lês tu a frase de duas maneiras",
+  "antigo": "Sem áudio, compara duas leituras da mesma frase em sala.",
+  "novo": "Sem áudio, lê a mesma frase de duas maneiras e compara as duas leituras.",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): correção da revisão: sem áudio, o único caminho era a sala."
+ },
+ {
+  "ficheiro": "assets/atlas-explorar.js",
+  "local": "Investigação «O poema muda quando ganha voz?», bloco «Rever»: na alternativa sem áudio, comparas as tuas duas leituras",
+  "antigo": "Na alternativa sem áudio, compara a frase dita pelos colegas.",
+  "novo": "Na alternativa sem áudio, compara as tuas duas leituras da mesma frase.",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): correção da revisão: acompanha a entrada «Escuta»; sem áudio, o caminho dependia dos colegas."
+ },
+ {
+  "ficheiro": "m3/licao-m3-f11/index.html",
+  "local": "Retorno das lacunas «O que muda se não houver conferência?» (lição e cópia do painel): a pergunta faz-se por escrito",
+  "antigo": "Um texto com **autor** e data; perguntas por **escrito**, lidas em voz alta.",
+  "novo": "Um texto com **autor** e data; a pergunta faz-se por **escrito** (na aula, lê-se em voz alta).",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): correção da revisão: o retorno repetia, como regra, a leitura em voz alta das perguntas; acompanha as lacunas «O que muda se não houver conferência?», que já dizem «a pergunta faz-se por [2]»."
+ },
+ {
+  "ficheiro": "m3/painel-m3-f11/index.html",
+  "local": "Retorno das lacunas «O que muda se não houver conferência?» (lição e cópia do painel): a pergunta faz-se por escrito",
+  "antigo": "Um texto com **autor** e data; perguntas por **escrito**, lidas em voz alta.",
+  "novo": "Um texto com **autor** e data; a pergunta faz-se por **escrito** (na aula, lê-se em voz alta).",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): correção da revisão: o retorno repetia, como regra, a leitura em voz alta das perguntas; acompanha as lacunas «O que muda se não houver conferência?», que já dizem «a pergunta faz-se por [2]»."
+ },
+ {
+  "ficheiro": "m3/index.html",
+  "local": "Arquivo do índice, retorno das lacunas «O que muda se não houver conferência?»: a pergunta faz-se por escrito",
+  "antigo": "Autor e data tornam a fonte verificável; as perguntas escritas leem-se em voz alta na mesma.",
+  "novo": "Autor e data tornam a fonte verificável; a pergunta faz-se por escrito (na aula, lê-se em voz alta).",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): correção da revisão: o retorno repetia, como regra, a leitura em voz alta das perguntas; acompanha as lacunas «O que muda se não houver conferência?», que já dizem «a pergunta faz-se por [2]»."
+ },
+ {
+  "ficheiro": "m3/licao-m3-f11/index.html",
+  "local": "Retorno do verdadeiro ou falso sobre a pergunta em público (lição e cópia do painel): sem conferência, por escrito",
+  "antigo": "sem conferência, a pergunta faz-se por escrito e lê-se em voz alta.",
+  "novo": "sem conferência, a pergunta faz-se por escrito (na aula, lê-se em voz alta).",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): correção da revisão: o retorno do verdadeiro ou falso punha a leitura em voz alta como regra; acompanha a caixa «Se não houver conferência» e as lacunas."
+ },
+ {
+  "ficheiro": "m3/painel-m3-f11/index.html",
+  "local": "Retorno do verdadeiro ou falso sobre a pergunta em público (lição e cópia do painel): sem conferência, por escrito",
+  "antigo": "sem conferência, a pergunta faz-se por escrito e lê-se em voz alta.",
+  "novo": "sem conferência, a pergunta faz-se por escrito (na aula, lê-se em voz alta).",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): correção da revisão: o retorno do verdadeiro ou falso punha a leitura em voz alta como regra; acompanha a caixa «Se não houver conferência» e as lacunas."
+ },
+ {
+  "ficheiro": "m3/licao-m3-f11/index.html",
+  "local": "Retorno de erro do verdadeiro ou falso sobre a pergunta em público: sem conferência, por escrito",
+  "antigo": "(por escrito e lida em voz alta, se não houver conferência)",
+  "novo": "(sem conferência, por escrito)",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): correção da revisão: o retorno do verdadeiro ou falso punha a leitura em voz alta como regra; acompanha a caixa «Se não houver conferência» e as lacunas."
+ },
+ {
+  "ficheiro": "m2/guia-da-tarefa-m2/index.html",
+  "local": "Arquivo, Tarefa 1, alternativa de quem faltou ao teatro: lês tu uma cena em voz alta",
+  "antigo": "Se faltaste à ida ao teatro, escreve a apreciação crítica da leitura em voz alta de uma cena feita na aula, com os mesmos critérios.",
+  "novo": "Se faltaste à ida ao teatro, lê uma cena em voz alta e escreve a apreciação crítica dessa leitura, com os mesmos critérios.",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): correção da revisão: a mesma alternativa já corrigida na página da visita; quem faltou à aula ficava sem caminho."
+ },
+ {
+  "ficheiro": "m4/guia-da-tarefa-m4/index.html",
+  "local": "Arquivo, Tarefa 3, alternativa de quem faltou ao teatro: lês tu uma cena do ato I em voz alta",
+  "antigo": "escreve a apreciação crítica de uma cena do ato I lida em voz alta na aula: compara o que ouviste com o que leste em silêncio, com os mesmos critérios.",
+  "novo": "lê em voz alta uma cena do ato I e escreve a apreciação crítica dessa leitura: compara-a com a tua leitura silenciosa, com os mesmos critérios.",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): correção da revisão: a mesma alternativa já corrigida na tarefa da M4-U2 e na página da visita; quem faltou à aula ficava sem caminho."
+ },
+ {
+  "ficheiro": "m4/recursos/tpc-entrada.js",
+  "local": "M4-F28, rótulo do cartão «Rever em conjunto»: «Rever a produção», porque o cartão se faz a sós",
+  "antigo": "\"rot\":\"Rever em conjunto",
+  "novo": "\"rot\":\"Rever a produção",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): correção da revisão: o corpo do cartão já começa por «Revê a tua produção (na aula, …)», mas o rótulo anunciava trabalho em conjunto a quem está sozinho. O título fica. O rótulo fica «Rever a produção · 10 min», e não «Rever · 10 min»: a troca não pode levar «·» no texto novo, e um texto novo contido no antigo não se distingue de uma troca já aplicada."
+ },
+ {
+  "ficheiro": "m9/m9-de-quem-e-o-convento/index.html",
+  "local": "Ato 4 do «Pensar devagar», comentário da opção «É dos dois…»: a decisão é a que a pergunta pede",
+  "antigo": "Deixa de fora a decisão que o debate te pede, e o docente vai pedir-ta na mesma.",
+  "novo": "Deixa de fora a decisão que a pergunta te pede, e vais ter de a tomar na mesma.",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): correção da revisão: o comentário fazia depender a decisão do debate e do docente."
+ },
+ {
+  "ficheiro": "tarefas/m4-u3/index.html",
+  "local": "Apoio de comparação «A palavra contra o poder», organização da aula: o segundo bloco passa a «Preparação na página»",
+  "antigo": "<span>Leitura e preparação na página</span>",
+  "novo": "<span>Preparação na página</span>",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: decisão 154 (o exercício faz-se sozinho; nada no texto do aluno depende do docente nem só de um colega ou da turma): correção da revisão: com o primeiro bloco a «Leitura do enunciado», ficavam dois blocos seguidos de leitura; o rótulo bate agora com o título «PREPARAR · 10 MIN». Os tempos ficam 10, 10, 60 e 10."
  }
 ]
