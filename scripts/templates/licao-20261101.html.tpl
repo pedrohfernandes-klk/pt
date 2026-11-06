@@ -9,6 +9,9 @@
 <link rel="stylesheet" href="../../assets/appearance.css?v=20261025-universal-1">
 <script src="../../assets/appearance.js?v=20261025-universal-1"></script>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;display=swap">
+<!-- 05/11/2026: decisão 153, a peça comum dos créditos atrás de um «i» (igual no Português e no Lente). -->
+<link rel="stylesheet" href="../../assets/info-i.css?v=20261105">
+<script defer src="../../assets/info-i.js?v=20261105"></script>
 <style>
 .jogo .tit,.jogo .q{text-wrap:balance}
 .jogo .pares{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
@@ -25,6 +28,10 @@
 .jogo .ler table{width:100%;border-collapse:collapse;font-size:.9em}
 .jogo .ler th,.jogo .ler td{text-align:left;vertical-align:top;padding:.35em;border-bottom:1px solid currentColor}
 .jogo .ler .fig{margin:1.25rem 0}.jogo .ler .fig img{display:block;margin:auto;max-width:100%;max-height:38vh;width:auto;height:auto;object-fit:contain}.jogo .ler .fig figcaption{font-size:.85em;line-height:1.5}.jogo .ler .fig td{overflow-wrap:anywhere}
+/* 05/11/2026: decisão 153. No documento visual, o «i» fica logo por baixo do canto direito da imagem (a imagem continua centrada e a ligação «Abrir a imagem inteira» continua filha da figura); a tabela de identificação abre por baixo, centrada, com a largura da coluna (até 34rem), e não alarga nem desloca a imagem. */
+.jogo .ler .documento{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);container-type:inline-size}.jogo .ler .documento>a{grid-column:2;min-width:0}.jogo .ler .documento>details.info-i{grid-column:2;justify-self:end}.jogo .ler .documento>details.info-i[open]{justify-self:stretch;contain:inline-size}.jogo .ler .documento>details.info-i[open]>.info-i-texto{inline-size:min(100cqi,34rem);margin-inline-start:calc((100% - min(100cqi,34rem))/2)}.jogo .ler .documento>figcaption{grid-column:1/-1}
+/* 06/11/2026: revisão do pedido pt-2 (proximidade). No ecrã, com o «i» fechado, a legenda sobe para a linha do «i», junto da imagem, e acaba antes dele (52 px antes do canto direito da imagem); aberto, a tabela abre entre a imagem e a legenda. Na impressão, o crédito sai por baixo da imagem e a legenda a seguir. */
+@media screen{.jogo .ler .documento>a{grid-row:1}.jogo .ler .documento>details.info-i{grid-row:2}.jogo .ler .documento>figcaption{grid-row:3}.jogo .ler .documento>details.info-i:not([open])+figcaption{grid-row:2;grid-column:1/3;min-block-size:44px;padding-inline-end:52px;box-sizing:border-box}}
 @media(min-width:1024px){:root{--col:min(850px,100%)}.casca .jogo .ler{font-size:1.24rem;line-height:1.62}.casca .jogo .q{font-size:1.6rem}.casca .jogo .tit{font-size:1.6rem}.casca .jogo .tit.cartaz{font-size:clamp(2.4rem,3.2vw,3rem)}}
 </style>
 </head>

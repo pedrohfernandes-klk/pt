@@ -17,6 +17,26 @@ def main():
                     url=f'https://licoes.test/{lesson[:2]}/licao-{lesson}/{projection}'
                     page.goto(url,wait_until='networkidle')
                     link=page.locator('#baralho .documento > a');link.wait_for()
+                    # 05/11/2026: decisão 153. A ficha («Identificação do documento visual»), a linha da licença com «Fonte ↗» e
+                    # a ligação para a fonte e os direitos passam para o «i» (details.info-i, fechado ao carregar), por baixo da
+                    # imagem; continua a exigir-se a ficha inteira, agora dentro do «i», e nada dela fora; «Abrir a imagem
+                    # inteira» fica igual.
+                    assert link.get_attribute('aria-label')=='Abrir a imagem inteira',lesson
+                    info=page.locator('#baralho .documento > details.info-i')
+                    assert info.count()==1,(lesson,'um «i»')
+                    assert info.evaluate('(d)=>!d.open'),(lesson,'fechado ao carregar')
+                    assert info.locator(':scope > summary').get_attribute('aria-label')=='Créditos da imagem',lesson
+                    ficha=page.evaluate('''()=>{const f=document.querySelector("#baralho .documento"),i=f.querySelector(":scope > details.info-i");
+                      return {dentro:[...i.querySelectorAll("table caption")].map(c=>c.textContent.trim()),
+                        linhas:[...i.querySelectorAll("table th")].map(t=>t.textContent.trim()),
+                        fora:[...f.querySelectorAll("table,details:not(.info-i)")].filter(e=>!i.contains(e)).length,
+                        legenda:[...f.querySelectorAll("figcaption > *")].map(e=>e.tagName),
+                        consultar:[...i.querySelectorAll("a")].some(a=>a.textContent.startsWith("Consultar a fonte e os direitos")),
+                        fonte:[...i.querySelectorAll("a")].some(a=>a.textContent==="Fonte ↗")}}''')
+                    assert ficha['dentro']==['Identificação do documento visual'],(lesson,ficha)
+                    assert ficha['linhas']==['Autor','Obra','Data','Instituição ou acervo','Licença'],(lesson,ficha)
+                    assert ficha['fora']==0 and ficha['legenda']==['P'],(lesson,ficha)
+                    assert ficha['consultar'] and ficha['fonte'],(lesson,ficha)
                     state=page.evaluate('JSON.stringify(localStorage)')
                     link.focus();page.keyboard.press('Enter')
                     dialog=page.get_by_role('dialog');dialog.wait_for()
@@ -27,6 +47,10 @@ def main():
                     primeiro=page.evaluate('()=>document.querySelector("#baralho .documento figcaption > p").textContent.replace(/\\s+/g," ").trim()')
                     assert leg.strip()==primeiro,(lesson,leg,primeiro)
                     assert 'Créditos e fonte da imagem' not in leg and 'Identificação do documento visual' not in leg,(lesson,leg)
+                    # 05/11/2026: decisão 153. A legenda do leitor é a legenda visível, sem nada do «i».
+                    visivel=page.evaluate('()=>document.querySelector("#baralho .documento figcaption").textContent.replace(/\\s+/g," ").trim()')
+                    assert leg.strip()==visivel,(lesson,leg,visivel)
+                    assert not any(x in leg for x in ('Fonte ↗','Consultar a fonte','Reprodução redimensionada','Domínio público','CC BY')),(lesson,leg)
                     assert dialog.locator('.amp-leg').evaluate('(e)=>e.scrollHeight<=e.clientHeight+1'),(lesson,'a legenda rola')
                     im=dialog.locator('img')
                     # 03/11/2026: aguarda a imagem recém-aberta; uma imagem inválida continua a falhar.

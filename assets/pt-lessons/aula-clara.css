@@ -51,6 +51,14 @@
 .jogo .ler .cc-mais:focus-visible{outline:3px solid var(--mostarda,#d9a520);outline-offset:3px}
 .jogo .ler .paralelo .rosto{display:block;width:76px;height:76px;object-fit:cover;border-radius:50%;filter:grayscale(1) contrast(1.05);margin:0 0 4px;background:var(--linha,#d6d4ce)}
 .jogo .ler .paralelo .rosto-c{font:.68rem/1.3 Arial,Helvetica,sans-serif;color:var(--suave);margin:0 0 4px}
+/* 05/11/2026: decisão 153. O crédito do retrato passa para um «i» (variante «linha», assets/info-i.css): logo por baixo do retrato
+   de 76 px, alinhado à direita dele (76 - 44 = 32 px); aberto, o crédito ocupa a largura da coluna e o «i» não muda de sítio. */
+.jogo .ler .paralelo .lado>details.info-i--linha,.jogo .ler .paralelo .lado>details.info-i--linha[open]{inline-size:auto;margin:0 0 4px}
+.jogo .ler .paralelo .lado>details.info-i--linha>summary{margin-inline-start:32px}
+/* 05/11/2026: decisão 153. A imagem do campo ver com o «i» dos créditos (o motor, assets/pt-lessons/jogo.js, junta a figura que
+   amplia e o «i» num .ver-com-i): a margem passa da figura para a moldura, para o «i» ficar no canto da imagem. */
+.jogo .ver-com-i{margin:0 0 12px}
+.jogo .ver-com-i>.ver-fig{margin:0}
 .jogo .ler .papel-q{font:700 1.2rem/1.4 var(--serif,Georgia,serif);margin:0 0 12px}
 @media print{.jogo .ler .ju-video,.jogo .ler .cc-mais{display:none}.jogo .ler .cc-passo[hidden]{display:block!important}}
 @media (min-width:1024px) and (min-height:560px){.casca .jogo .ler .ex-antes,.casca .jogo .ler .ex-depois{font-size:1.12rem}}

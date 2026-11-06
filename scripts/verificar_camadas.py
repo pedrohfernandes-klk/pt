@@ -7,7 +7,9 @@ import sys
 
 ROOT=Path(__file__).resolve().parents[1]
 LAYERS=[
- # 05/11/2026: Atlas Lusófono, lote 3 (66 figuras, «Imprensa e pensamento», localização aproximada, fotografias e vídeos), camada mais recente, por cima da decisão 154 (06/11/2026: correções da revisão do lote 3 na mesma camada, e a camada passa por cima da decisão 154 depois de juntar o main).
+ # 05/11/2026: decisão 153, créditos das imagens atrás de um «i» (pedido pt-2), camada mais recente (06/11/2026: por cima do lote 3 do Atlas e da decisão 154, depois de juntar o main).
+ ('creditos_i_20261105','creditos-i-edits-20261105'),
+ # 05/11/2026: Atlas Lusófono, lote 3 (66 figuras, «Imprensa e pensamento», localização aproximada, fotografias e vídeos), por cima da decisão 154 (06/11/2026: correções da revisão do lote 3 na mesma camada, e a camada passa por cima da decisão 154 depois de juntar o main).
  ('atlas_lote3_20261105','atlas-lote3-edits-20261105'),
  # 05/11/2026: decisão 154 (os exercícios fazem-se sozinho): nada no texto do aluno depende do docente nem só de um colega ou da turma, por cima do contexto do Laboratório do exame.
  ('autonomia_154_20261105','autonomia-154-edits-20261105'),

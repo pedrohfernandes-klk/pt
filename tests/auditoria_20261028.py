@@ -304,7 +304,21 @@ _CONTEXTO_0511 = json.loads((ROOT/'tests/fixtures/exame-contexto-edits-20261105.
 # (06/11/2026: por cima dela, depois de juntar o main), com contagem estrita.
 _ATLAS_LOTE3_0511 = json.loads((ROOT/'tests/fixtures/atlas-lote3-edits-20261105.json').read_text('utf-8'))['files']
 
+# 05/11/2026: decisão 153, os créditos das imagens atrás de um «i» (pedido pt-2), camada mais recente (06/11/2026: por cima do
+# lote 3 do Atlas, depois de juntar o main): desfaz-se antes do Atlas, com contagem estrita.
+_CREDITOS_I_0511 = json.loads((ROOT/'tests/fixtures/creditos-i-edits-20261105.json').read_text('utf-8'))['files']
+
+def undo_creditos_i_0511(path, text):
+    for edit in reversed(_CREDITOS_I_0511.get(_relative(path), {}).get('edits', [])):
+        if text.count(edit['new']) != edit['occurrences']:
+            raise AssertionError(f"Créditos atrás de um «i» não conferem: {path}: {edit['location']}")
+        text = text.replace(edit['new'], edit['old'])
+    return text
+
+
 def undo_atlas_lote3_0511(path, text):
+    # 06/11/2026: primeiro os créditos atrás de um «i», que estão por cima.
+    text = undo_creditos_i_0511(path, text)
     for edit in reversed(_ATLAS_LOTE3_0511.get(_relative(path), {}).get('edits', [])):
         if text.count(edit['new']) != edit['occurrences']:
             raise AssertionError(f"Atlas, lote 3, não confere: {path}: {edit['location']}")

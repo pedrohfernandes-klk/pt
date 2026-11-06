@@ -67,10 +67,24 @@ def main():
                 page.goto(host+'/m7/mapa-do-modulo-m7/',wait_until='load')
                 page.locator('#galeria > summary').click()
                 # 01/11/2026: crédito imediatamente visível, tipografia subordinada e ligação conservada.
-                assert page.locator('#galeria .tabela').is_visible()
-                assert 'não identificado' in page.locator('#galeria .tabela').inner_text()
-                assert page.locator('#galeria .tabela').evaluate('e=>parseFloat(getComputedStyle(e).fontSize)')<=13.1
-                assert page.locator('#galeria figcaption').filter(has_text='Fernando Pessoa, cerca de 1914.').get_by_text('Lição M7-F01').count()==1
+                # 05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um "i" que o user possa abrir»)
+                # substitui o crédito imediatamente visível: o «i» vê-se, fechado; aberto, os seis campos veem-se, com a mesma
+                # tipografia subordinada (13,1 px ou menos) e a ligação conservada; «Lição M7-F01» continua à vista, fora do «i».
+                ii=page.locator('#galeria details.info-i:has(a[href*="File:PessoaChapeu.jpg"])')
+                assert ii.count()==1
+                assert ii.locator('summary').is_visible()
+                assert not ii.evaluate('d=>d.open')
+                ii.locator('summary').click()
+                credito=ii.locator('.info-i-texto')
+                assert credito.is_visible()
+                for field in ('Fotógrafo não identificado;','retrato de Fernando Pessoa com chapéu;','cerca de 1914 (data incerta);',
+                              'original sem instituição indicada;','domínio público'):
+                    assert field in credito.inner_text(),field
+                assert credito.locator('a[href*="File:PessoaChapeu.jpg"]').is_visible()
+                assert credito.evaluate('e=>parseFloat(getComputedStyle(e).fontSize)')<=13.1
+                licao=page.locator('#galeria figcaption').filter(has_text='Fernando Pessoa, cerca de 1914.').get_by_text('Lição M7-F01')
+                assert licao.count()==1 and licao.is_visible()
+                assert licao.evaluate('a=>!a.closest("details.info-i")')
                 assert not page.evaluate('document.documentElement.scrollWidth>innerWidth+2')
                 # 01/11/2026: as palavras tocáveis mantêm o itálico, sem expor os marcadores.
                 page.goto(host+'/m7/licao-m7-f01/',wait_until='load')

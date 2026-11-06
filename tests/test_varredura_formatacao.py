@@ -62,15 +62,26 @@ class Varredura(unittest.TestCase):
         for slug in ('licao-m7-f01', 'licao-m7-f05', 'mapa-do-modulo-m7'):
             s=(ROOT/f'm7/{slug}/index.html').read_text('utf-8').replace('\\"', '"')
             # 01/11/2026: crédito visível na peça .tabela, sem controlo de abertura.
+            # 05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um "i" que o user possa abrir»)
+            # substitui a regra de 01/11: os seis campos do crédito continuam todos, letra a letra, agora dentro do «i»
+            # (details.info-i, família P10 do plano dos créditos), e nenhum fica fora dele; o rótulo «Fernando Pessoa, cerca de
+            # 1914.» fica à vista.
+            blocos=[b for b in re.findall(r'<details class="info-i[^"]*" name="info-i">(?:(?!</details>).)*</details>',s)
+                    if 'PessoaChapeu' in b]
+            self.assertEqual(len(blocos),1,slug)
+            fora=s.replace(blocos[0],'')
             for field in ('Fotógrafo não identificado;', 'retrato de Fernando Pessoa com chapéu;',
                           'cerca de 1914 (data incerta);', 'original sem instituição indicada;',
                           'domínio público', 'File:PessoaChapeu.jpg'):
-                self.assertIn(field,s)
-            self.assertIn('<span class="tabela">',s)
+                self.assertIn(field,blocos[0])
+                self.assertNotIn(field,fora)
+            self.assertIn('<figcaption>Fernando Pessoa, cerca de 1914.',fora)
+            self.assertNotIn('class="tabela"',s)
             self.assertNotIn('credito-imagem',s)
             self.assertIn('alt="Fernando Pessoa de chapéu e óculos, cerca de 1914"',s)
         mapa=(ROOT/'m7/mapa-do-modulo-m7/index.html').read_text('utf-8')
-        self.assertIn('licao-m7-f01/">Lição M7-F01</a><span class="tabela">',mapa)
+        # 05/11/2026: a ligação «Lição M7-F01» fica à vista, na legenda, fora do «i» e logo depois dele.
+        self.assertRegex(mapa,r'</details><figcaption>Fernando Pessoa, cerca de 1914\. <a href="[^"]*licao-m7-f01/">Lição M7-F01</a></figcaption>')
 
     # 01/11/2026: o motor de palavras formata cada peça isoladamente.
     def test_marcadores_de_italico_fecham_em_cada_palavra(self):

@@ -842,7 +842,14 @@ def main():
                 # 02/11/2026: a atribuição de IA é posterior ao lote 2 publicado.
                 # 03/11/2026: primeiro a camada visual do cabecalho.
                 # 05/11/2026: antes de tudo, a revisão de 5/11, a camada mais recente.
-                # 06/11/2026: antes de tudo, o lote 3 do Atlas, a camada mais recente, por cima da decisão 154 depois de juntar o main.
+                # 06/11/2026: antes de tudo, os créditos atrás de um «i» (decisão 153), a camada mais recente, por cima do lote 3 do
+                # Atlas depois de juntar o main.
+                creditos_i = ROOT / 'tests/fixtures/creditos-i-edits-20261105.json'
+                for edit in reversed(json.loads(creditos_i.read_text('utf-8'))['files'].get(rel, {}).get('edits', [])):
+                    if conferencia.count(edit['new']) != edit['occurrences']:
+                        raise ManifestoDesatualizado(f'{rel}: créditos atrás de um «i» não conferem')
+                    conferencia = conferencia.replace(edit['new'], edit['old'])
+                # 06/11/2026: depois, o lote 3 do Atlas, por cima da decisão 154 depois de juntar o main.
                 atlas3 = ROOT / 'tests/fixtures/atlas-lote3-edits-20261105.json'
                 for edit in reversed(json.loads(atlas3.read_text('utf-8'))['files'].get(rel, {}).get('edits', [])):
                     if conferencia.count(edit['new']) != edit['occurrences']:

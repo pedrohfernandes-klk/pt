@@ -85,12 +85,20 @@ def aplicar_imagens(bancos):
         nome,legenda=USOS[item['id']];d=IMAGENS[nome]
         rows=''.join('<tr><th scope="row">'+label+'</th><td>'+(d.get(key+'_html') or escape(d[key]).replace('Vedute di Roma','<i>Vedute di Roma</i>'))+'</td></tr>' for label,key in
                      [('Autor','autor'),('Obra','obra'),('Data','data'),('Instituição ou acervo','instituicao')])
-        rows+='<tr><th scope="row">Licença</th><td><a href="'+d['direitos']+'">'+d['licenca']+'</a></td></tr>'
+        # 05/11/2026: decisão 153. A ligação da licença CC leva rel="license": na impressão sai o endereço por extenso.
+        licenca_rel=' rel="license"' if d['direitos'].startswith('https://creativecommons.org/licenses/') else ''
+        rows+='<tr><th scope="row">Licença</th><td><a'+licenca_rel+' href="'+d['direitos']+'">'+d['licenca']+'</a></td></tr>'
         ficheiro=d.get('ficheiro','../../img/fontes/licoes-20261101/'+nome+'.jpg')
         # 02/11/2026: original conferido no Commons; as outras duas imagens já têm a dimensão máxima disponível.
         original=' data-original="../../img/fontes/antero-de-quental-1887-original.jpg"' if item['id']=='m6-f14' else ''
         opening=item['cards'][0]['html']
+        # 05/11/2026: decisão 153 (docente: «não quero tanto texto, prefiro um botão com um "i" que o user possa abrir»). A
+        # linha da licença com «Fonte ↗», a ficha («Identificação do documento visual») e a ligação para a fonte e os direitos
+        # passam, inteiras, para o «i» (variante «linha», por baixo da imagem: a ficha é uma tabela e estas imagens têm menos
+        # de 240 px de largura no cartão); a legenda que diz o que se vê fica à vista e «Abrir a imagem inteira» fica igual.
         item['cards'][0]['html'] = ('<figure class="fig documento"><a href="'+ficheiro+'" aria-label="Abrir a imagem inteira">'
           '<img'+original+' src="'+ficheiro+'" alt="'+escape(d['alt'],quote=True)+'"></a>'
-          '<figcaption><p>'+legenda+'</p><p>'+d['licenca']+'; <a href="'+d['fonte']+'">Fonte ↗</a></p><details><summary>Créditos e fonte da imagem</summary><table><caption>Identificação do documento visual</caption>'+rows+'</table>'
-          '<p><a href="'+d['fonte']+'">Consultar a fonte e os direitos ↗</a>. Reprodução redimensionada, sem recorte.</p></details></figcaption></figure>')+opening
+          '<details class="info-i info-i--linha" name="info-i"><summary aria-label="Créditos da imagem"><span aria-hidden="true">i</span></summary>'
+          '<div class="info-i-texto"><p>'+d['licenca']+'; <a href="'+d['fonte']+'">Fonte ↗</a></p><table><caption>Identificação do documento visual</caption>'+rows+'</table>'
+          '<p><a href="'+d['fonte']+'">Consultar a fonte e os direitos ↗</a>. Reprodução redimensionada, sem recorte.</p></div></details>'
+          '<figcaption><p>'+legenda+'</p></figcaption></figure>')+opening
