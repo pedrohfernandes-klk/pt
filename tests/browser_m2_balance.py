@@ -35,7 +35,8 @@ try:
    page.goto(host+'/pt/m2/',wait_until='networkidle')
    # 01/11/2026: as novas lições entram nas duas unidades, mantendo todas as verificações do percurso.
    ids=page.locator('.unidade[data-u="2"] li[data-passo]').evaluate_all('(els)=>els.map(e=>e.dataset.passo)');assert ids==['m2-f11','m2-f15','m2-f10','m2-f08','m2-f09']
-   assert page.locator('button[data-desafio]').count()==2;assert page.locator('.module-opening figure.doc').is_visible()
+   # 06/11/2026: decisão 148, a imagem documental passa da abertura para logo a seguir às unidades; continua à vista.
+   assert page.locator('button[data-desafio]').count()==2;assert page.locator('main > section.unidade-pedagogica + figure.doc').is_visible()
    for n,expected in [(1,['m2-f01','m2-f02','m2-f16','m2-f14','m2-f07','m2-f06']),(2,ids)]:
     capture=page.evaluate('''n=>{let captured;const original=EPIJogo.montar;EPIJogo.montar=cfg=>{captured=cfg.itens.map(c=>c._l)};document.querySelector('[data-desafio="'+n+'"]').click();EPIJogo.montar=original;return captured;}''',n)
     assert len(capture)==8 and set(capture)==set(expected),(n,capture)

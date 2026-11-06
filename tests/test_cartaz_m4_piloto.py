@@ -5,6 +5,8 @@ from pathlib import Path
 from auditoria_20261028 import undo_m4_piloto
 # 05/11/2026: para desfazer, antes do piloto, só a camada da decisão 154, que muda o m4/index.html por cima dele.
 from auditoria_20261028 import undo_autonomia_0511
+# 06/11/2026: decisão 148, o desenho comum dos nove índices fica por cima do piloto; estes contratos são os da camada do piloto.
+from auditoria_20261028 import undo_cartaz_148_0611
 ROOT=Path(__file__).resolve().parents[1]
 class Inventory(HTMLParser):
  def __init__(self,text):
@@ -22,7 +24,11 @@ class M4Piloto(unittest.TestCase):
  def setUp(self):
   # 05/11/2026: a decisão 154 muda o passo 16 do percurso do M4, dentro de um bloco do piloto; desfaz-se só essa camada
   # antes do piloto, com contagem estrita, e as conferências continuam a olhar para a página publicada.
-  self.after=(ROOT/'m4/index.html').read_text('utf-8');self.before=undo_m4_piloto('m4/index.html',undo_autonomia_0511('m4/index.html',self.after))
+  # 06/11/2026: decisão 148. O desenho comum dos nove índices (camada cartaz_indices_148_20261106) muda o m4/index.html por cima
+  # do piloto; o «depois» destes contratos é a página com essa camada desfeita (contagem estrita), e o «antes» continua a ser a
+  # página sem o piloto. O desenho comum confere-se em tests/test_cartaz_indices_148.py, nos nove índices.
+  current=(ROOT/'m4/index.html').read_text('utf-8')
+  self.after=undo_cartaz_148_0611('m4/index.html',current);self.before=undo_m4_piloto('m4/index.html',undo_autonomia_0511('m4/index.html',current))
  def test_conserva_ids_ligacoes_scripts_e_dados(self):
   a,b=Inventory(self.before),Inventory(self.after)
   self.assertEqual(sorted(a.ids),sorted(b.ids));self.assertEqual(sorted(a.links),sorted(b.links))
@@ -35,11 +41,14 @@ class M4Piloto(unittest.TestCase):
   # 05/11/2026: a decisão 154 (camada autonomia_154_20261105) é a camada mais recente e muda o m4/index.html; as camadas
   # por cima do piloto desfazem-se antes, da mais recente para a mais antiga, como em scripts/verificar_camadas.py, com a
   # mesma exigência.
-  run=subprocess.run([sys.executable,'scripts/aplicar_trocas.py','scripts/cartaz_m4_piloto_20261102.json','--manifesto','tests/fixtures/cartaz-m4-piloto-edits-20261102.json','--verificar','--desfazer-antes','tests/fixtures/autonomia-154-edits-20261105.json','--desfazer-antes','tests/fixtures/exame-contexto-edits-20261105.json','--desfazer-antes','tests/fixtures/exame-licao-edits-20261105.json','--desfazer-antes','tests/fixtures/tabela-movimentos-edits-20261105.json','--desfazer-antes','tests/fixtures/revisao-edits-20261105.json','--desfazer-antes','tests/fixtures/cartaz-cabecalho-edits-20261103.json'],cwd=ROOT,capture_output=True,text=True,encoding='utf-8')
+  # 06/11/2026: o desenho comum dos nove índices (decisão 148) muda o m4/index.html por cima de tudo; desfaz-se primeiro, com a
+  # mesma exigência.
+  run=subprocess.run([sys.executable,'scripts/aplicar_trocas.py','scripts/cartaz_m4_piloto_20261102.json','--manifesto','tests/fixtures/cartaz-m4-piloto-edits-20261102.json','--verificar','--desfazer-antes','tests/fixtures/cartaz-indices-148-edits-20261106.json','--desfazer-antes','tests/fixtures/autonomia-154-edits-20261105.json','--desfazer-antes','tests/fixtures/exame-contexto-edits-20261105.json','--desfazer-antes','tests/fixtures/exame-licao-edits-20261105.json','--desfazer-antes','tests/fixtures/tabela-movimentos-edits-20261105.json','--desfazer-antes','tests/fixtures/revisao-edits-20261105.json','--desfazer-antes','tests/fixtures/cartaz-cabecalho-edits-20261103.json'],cwd=ROOT,capture_output=True,text=True,encoding='utf-8')
   self.assertEqual(run.returncode,0,run.stdout+run.stderr)
  def test_adesao_exclusiva_e_sem_novo_motor(self):
   for n in range(1,10):
-   text=(ROOT/f'm{n}/index.html').read_text('utf-8')
+   # 06/11/2026: decisão 148. A exclusividade é a da camada do piloto: lê-se cada índice com o desenho comum desfeito.
+   text=undo_cartaz_148_0611(f'm{n}/index.html',(ROOT/f'm{n}/index.html').read_text('utf-8'))
    self.assertEqual('data-m4-piloto=' in text,n==4)
    self.assertEqual('cartaz-m4-piloto.css' in text,n==4)
   js=(ROOT/'assets/cartaz-m4-piloto.js').read_text('utf-8')

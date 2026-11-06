@@ -1,0 +1,188 @@
+/* 06/11/2026: decisão 148. O desenho do índice do M4 (#166) passa aos nove índices do Português. Nasce de
+   assets/cartaz-m4-piloto.css, com os seletores gerais (main[data-cz-indice], .cz-recursos, .cz-unit-body) e as três
+   mudanças da decisão: a palavra do módulo à vista, a imagem documental mais pequena a seguir às unidades e os botões
+   flutuantes de sempre (modo noturno e acesso do docente) fora de «Recursos do módulo». O piloto e
+   assets/cartaz-indices.css ficam como estavam, para a camada se poder desfazer. */
+@font-face{font-family:"Cartaz Indice";src:url("fontes/bebas-neue.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap;}
+body:has(main[data-cz-indice]){--papel:#f6f3eb;--tinta:#171714;--suave:#55534c;--fundo:#ece8de;background:var(--papel);color:var(--tinta);}
+body.pt-module-layout main.cz-index[data-cz-indice]{max-width:1200px;padding:32px 32px 64px;font:1rem/1.5 Arial;}
+body.pt-module-layout main.cz-index[data-cz-indice] .topo{display:block;position:relative;margin:0;padding:0 0 32px;border:0;}
+body.pt-module-layout main.cz-index[data-cz-indice] .marca{font:700 0.8125rem/1.4 Arial;letter-spacing:.08em;}
+body.pt-module-layout main.cz-index[data-cz-indice] .cabm{display:flex;flex-wrap:wrap;align-items:flex-start;gap:8px 24px;margin:24px 0 16px;padding:0;}
+/* 06/11/2026: decisão 148, a palavra do módulo vê-se por cima do número e do título, a vermelho, como o acento do M4. */
+body.pt-module-layout main.cz-index[data-cz-indice] .cabm>.agua{display:block;position:static;flex:0 0 100%;order:-1;margin:0;padding:0;font:400 1.5625rem/1 "Cartaz Indice",var(--cz-font-poster);letter-spacing:.06em;text-transform:uppercase;color:var(--vermelho,#c8232c);opacity:1;animation:none;white-space:normal;max-width:none;}
+body.pt-module-layout main.cz-index[data-cz-indice] h1{font:400 3.8125rem/.98 "Cartaz Indice",var(--cz-font-poster);max-width:20ch;margin:0;letter-spacing:0;text-transform:uppercase;flex:1 1 0;min-width:0;}
+body.pt-module-layout main.cz-index[data-cz-indice] .mod-pergunta{font:400 1.5625rem/1.35 Georgia;max-width:42ch;margin:16px 0;}
+body.pt-module-layout main.cz-index[data-cz-indice] .mod-ambito{font:400 1rem/1.5 Arial;max-width:60ch;margin:16px 0;}
+body.pt-module-layout main.cz-index[data-cz-indice] .module-opening{display:block;margin:24px 0 0;padding:0;}
+body.pt-module-layout main.cz-index[data-cz-indice] .module-entry{margin:0;max-width:560px;}
+body.pt-module-layout main.cz-index[data-cz-indice] [data-module-next]{display:flex;align-items:center;justify-content:space-between;min-height:56px;gap:16px;padding:16px 24px;font:700 1rem/1.5 Arial;background:var(--tinta);color:var(--papel);border:0;text-decoration:none;white-space:normal;}
+body.pt-module-layout main.cz-index[data-cz-indice] .cz-recursos{border-block:1px solid var(--suave);margin:0 0 32px;}
+body.pt-module-layout main.cz-index[data-cz-indice] .cz-recursos>summary{display:flex;align-items:center;justify-content:space-between;min-height:56px;padding:8px 0;font:700 1rem/1.5 Arial;cursor:pointer;list-style:none;}
+body.pt-module-layout main.cz-index[data-cz-indice] .cz-recursos>summary::-webkit-details-marker{display:none;}
+body.pt-module-layout main.cz-index[data-cz-indice] .cz-recursos>summary::after{content:"+";font-size:1.5625rem;}
+body.pt-module-layout main.cz-index[data-cz-indice] .cz-recursos[open]>summary::after{content:"−";}
+body.pt-module-layout main.cz-index[data-cz-indice] .cz-recursos .mod-sec{display:block;margin:0;padding:0 0 16px;}
+body.pt-module-layout main.cz-index[data-cz-indice] .cz-recursos .mod-sec nav.ligas{display:flex;flex-wrap:wrap;gap:8px 24px;margin:0;}
+body.pt-module-layout main.cz-index[data-cz-indice] .cz-recursos .mod-sec nav.ligas a{display:inline-flex;align-items:center;min-height:48px;padding:8px 0;font:700 1rem/1.5 Arial;color:var(--tinta);border:0;background:none;text-decoration:underline;text-underline-offset:5px;}
+body.pt-module-layout main.cz-index[data-cz-indice] .cz-recursos details.regra{margin:0;border:0;}
+body.pt-module-layout main.cz-index[data-cz-indice] .cz-recursos details.regra>summary{display:flex;align-items:center;gap:8px;min-height:48px;padding:8px 0;font:700 1rem/1.5 Arial;cursor:pointer;list-style:none;}
+body.pt-module-layout main.cz-index[data-cz-indice] :is(.cz-recursos details.regra,.unit-complements)>summary::-webkit-details-marker{display:none;}
+body.pt-module-layout main.cz-index[data-cz-indice] :is(.cz-recursos details.regra,.unit-complements)>summary::before{content:"+";display:inline-block;width:16px;font:400 1.25rem/1 Arial;}
+body.pt-module-layout main.cz-index[data-cz-indice] :is(.cz-recursos details.regra,.unit-complements)[open]>summary::before{content:"−";}
+body.pt-module-layout main.cz-index[data-cz-indice] .cz-recursos details.regra>div{font:400 1rem/1.5 Georgia;max-width:68ch;padding:0 0 8px;}
+body.pt-module-layout main.cz-index[data-cz-indice] .cz-recursos details.regra p{margin:8px 0 0;}
+body.pt-module-layout main.cz-index[data-cz-indice] .unit-index{margin:0 0 40px;padding:0;border:0;background:none;}
+body.pt-module-layout main.cz-index[data-cz-indice] .unit-index>p{font:700 0.8125rem/1.5 Arial;text-transform:uppercase;letter-spacing:.08em;margin:0 0 8px;}
+body.pt-module-layout main.cz-index[data-cz-indice] .unit-index ol{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr);gap:24px;margin:0;padding:0;list-style:none;}
+body.pt-module-layout main.cz-index[data-cz-indice] .unit-index a{border:0;border-top:2px solid var(--tinta);min-height:88px;padding:16px 0;display:grid;grid-template-columns:24px 1fr;gap:8px;background:none;color:var(--tinta);text-decoration:none;}
+body.pt-module-layout main.cz-index[data-cz-indice] .unit-index a span{font:700 1.25rem/1.3 Arial;}
+body.pt-module-layout main.cz-index[data-cz-indice] .unit-index a b{font:400 1.5625rem/1 "Cartaz Indice",var(--cz-font-poster);}
+body.pt-module-layout main.cz-index[data-cz-indice] .unit-index small{grid-column:2;font:400 0.8125rem/1.5 Arial;color:var(--suave);}
+/* 06/11/2026: a frase que acompanha as unidades fica à vista nos nove (nenhum texto se perde). */
+body.pt-module-layout main.cz-index[data-cz-indice] .unit-index>span{display:block;max-width:60ch;margin:16px 0 0;font:400 0.8125rem/1.5 Arial;color:var(--suave);}
+/* 06/11/2026: as notas e o progresso que alguns módulos têm entre as unidades e o percurso, no mesmo desenho. */
+body.pt-module-layout main.cz-index[data-cz-indice] p.pequeno{max-width:60ch;margin:0 0 24px;font:400 0.8125rem/1.5 Arial;color:var(--suave);}
+body.pt-module-layout main.cz-index[data-cz-indice] .module-support{margin:0 0 32px;padding:0;border:0;background:none;}
+body.pt-module-layout main.cz-index[data-cz-indice] .module-progress{margin:0;border:0;border-block:1px solid var(--suave);background:none;}
+body.pt-module-layout main.cz-index[data-cz-indice] .module-progress>summary{display:flex;align-items:center;justify-content:space-between;min-height:56px;padding:8px 0;font:700 1rem/1.5 Arial;color:var(--tinta);cursor:pointer;list-style:none;}
+body.pt-module-layout main.cz-index[data-cz-indice] .module-progress>summary::-webkit-details-marker{display:none;}
+body.pt-module-layout main.cz-index[data-cz-indice] .module-support>details>summary::before{content:none;display:none;}
+body.pt-module-layout main.cz-index[data-cz-indice] .module-progress>summary::after{content:"+";font-size:1.5625rem;}
+body.pt-module-layout main.cz-index[data-cz-indice] .module-progress[open]>summary::after{content:"−";}
+body.pt-module-layout main.cz-index[data-cz-indice] .unidade-pedagogica{margin:0;padding:0;border:0;}
+body.pt-module-layout main.cz-index[data-cz-indice] details.cz-fold{border:0;border-top:2px solid var(--tinta);margin:0;padding:0;background:none;max-width:none;}
+body.pt-module-layout main.cz-index[data-cz-indice] .cz-fold>summary{display:grid;grid-template-columns:112px 1fr auto;gap:16px;align-items:center;min-height:88px;height:auto;padding:16px 0;background:none;color:var(--tinta);}
+body.pt-module-layout main.cz-index[data-cz-indice] .cz-fold-k{font:700 0.8125rem/1.4 Arial;color:var(--suave);letter-spacing:0;text-transform:none;}
+body.pt-module-layout main.cz-index[data-cz-indice] h2.cz-fold-t{font:400 2.4375rem/1.1 "Cartaz Indice",var(--cz-font-poster);margin:0;letter-spacing:0;text-transform:none;background:none;padding:0;}
+body.pt-module-layout main.cz-index[data-cz-indice] .cz-index-fold-state{font:700 0.8125rem/1.4 Arial;margin:0;}
+body.pt-module-layout main.cz-index[data-cz-indice] .cz-fold>summary::after{font:400 1.5625rem/1 Arial;margin:0;}
+body.pt-module-layout main.cz-index[data-cz-indice] .grupo-topo{padding:8px 0 24px;margin:0;border:0;}
+body.pt-module-layout main.cz-index[data-cz-indice] .grupo-etq{display:none;}
+body.pt-module-layout main.cz-index[data-cz-indice] .grupo-pergunta{font:400 1.25rem/1.4 Georgia;margin:0 0 16px;max-width:none;}
+body.pt-module-layout main.cz-index[data-cz-indice] .prova-esperada{font:400 1rem/1.5 Georgia;border-left:4px solid var(--tinta);padding:0 0 0 16px;margin:0;max-width:52ch;background:none;}
+body.pt-module-layout main.cz-index[data-cz-indice] .unidade{margin:0;padding:0 0 32px;border:0;max-width:none;}
+body.pt-module-layout main.cz-index[data-cz-indice] .estado{font:700 0.8125rem/1.5 Arial;margin:0 0 16px;color:var(--tinta);}
+/* 06/11/2026: a barra de progresso que o motor desenha nalguns módulos, no desenho do M4 (some na projeção, como antes). */
+body.pt-module-layout main.cz-index[data-cz-indice] .barra{display:block;height:4px;margin:0 0 16px;padding:0;border:0;background:var(--fundo);}
+body.pt-module-layout main.cz-index[data-cz-indice] .barra>b{display:block;height:100%;background:var(--tinta);}
+body.pt-module-layout main.cz-index[data-cz-indice].cz-sala .barra{display:none;}
+body.pt-module-layout main.cz-index[data-cz-indice] ol.passos{padding:0;margin:0;list-style:none;}
+body.pt-module-layout main.cz-index[data-cz-indice] ol.passos::before,body.pt-module-layout main.cz-index[data-cz-indice] ol.passos::after,body.pt-module-layout main.cz-index[data-cz-indice] .cz-motion-line{display:none;}
+body.pt-module-layout main.cz-index[data-cz-indice] ol.passos>li{animation:none;margin:0;padding:0;background:none;border:0;border-top:1px solid var(--suave);}
+body.pt-module-layout main.cz-index[data-cz-indice] ol.passos a.current{border-left:4px solid #c8232c;padding-left:12px;}
+body.pt-module-layout main.cz-index[data-cz-indice] ol.passos .t{display:block;font:700 1.25rem/1.3 Arial;letter-spacing:0;text-decoration:none;}
+body.pt-module-layout main.cz-index[data-cz-indice] ol.passos .f{display:block;font:400 1rem/1.5 Georgia;margin-top:8px;color:var(--suave);}
+body.pt-module-layout main.cz-index[data-cz-indice] ol.passos .chip{grid-column:2;grid-row:2;text-align:left;justify-self:start;font:700 0.8125rem/1.5 Arial;padding:0;border:0;background:transparent;color:var(--tinta);white-space:normal;}
+body.pt-module-layout main.cz-index[data-cz-indice] ol.passos .arrow{grid-column:3;grid-row:1;font:1.25rem/1 Arial;}
+body.pt-module-layout main.cz-index[data-cz-indice] ol.passos .chip:empty{display:none;}
+/* 06/11/2026: as peças que só os outros oito têm (retoma, complementos, botões do M2) no mesmo desenho. */
+body.pt-module-layout main.cz-index[data-cz-indice] .unit-retoma{margin:24px 0 0;padding:16px 0 0;border:0;border-top:2px solid var(--tinta);background:none;font:400 1rem/1.5 Georgia;color:var(--tinta);max-width:none;}
+body.pt-module-layout main.cz-index[data-cz-indice] .unit-retoma p{margin:0 0 8px;}
+body.pt-module-layout main.cz-index[data-cz-indice] .unit-retoma p:first-child{font:700 0.8125rem/1.5 Arial;letter-spacing:.08em;text-transform:uppercase;}
+body.pt-module-layout main.cz-index[data-cz-indice] .unit-retoma ul{margin:0 0 8px;padding:0 0 0 24px;}
+body.pt-module-layout main.cz-index[data-cz-indice] .unit-retoma li{margin:0 0 4px;}
+body.pt-module-layout main.cz-index[data-cz-indice] .unit-complements{margin:16px 0 0;border:0;border-top:1px solid var(--suave);background:none;}
+body.pt-module-layout main.cz-index[data-cz-indice] .unit-complements>summary{display:flex;align-items:center;gap:8px;min-height:48px;padding:8px 0;font:700 1rem/1.5 Arial;color:var(--tinta);cursor:pointer;list-style:none;}
+body.pt-module-layout main.cz-index[data-cz-indice] .unit-complements p{font:400 1rem/1.5 Georgia;margin:0 0 8px;}
+body.pt-module-layout main.cz-index[data-cz-indice] .unit-complements ul{margin:0;padding:0;list-style:none;}
+body.pt-module-layout main.cz-index[data-cz-indice] .unit-complements li{border-top:1px solid var(--suave);padding:0 0 8px;}
+body.pt-module-layout main.cz-index[data-cz-indice] .unit-complements li>a{display:flex;align-items:center;min-height:48px;padding:8px 0;font:700 1.25rem/1.3 Arial;color:var(--tinta);text-decoration:none;}
+body.pt-module-layout main.cz-index[data-cz-indice] .mais{display:flex;flex-wrap:wrap;gap:16px;margin:48px 0 0;padding:0;}
+body.pt-module-layout main.cz-index[data-cz-indice] .mais a{display:inline-flex;align-items:center;gap:16px;min-height:48px;padding:8px 16px;border:2px solid var(--tinta);background:transparent;color:var(--tinta);font:700 1rem/1.5 Arial;text-decoration:none;}
+/* 06/11/2026: decisão 148, a imagem documental vem a seguir às unidades, mais pequena, com o crédito ao lado. */
+body.pt-module-layout main.cz-index[data-cz-indice]>figure.doc{display:flex;align-items:flex-end;gap:24px;max-width:680px;margin:48px 0 0;padding:24px 0 0;border:0;border-top:2px solid var(--tinta);background:none;}
+body.pt-module-layout main.cz-index[data-cz-indice]>figure.doc>a{display:block;flex:none;line-height:0;}
+/* A altura é fixa para a imagem (carregada só quando se aproxima) ter logo o tamanho certo, pela proporção dos atributos. */
+body.pt-module-layout main.cz-index[data-cz-indice]>figure.doc img{display:block;height:200px;max-height:200px;width:auto;max-width:45%;object-fit:contain;object-position:left bottom;filter:none;flex:none;margin:0;}
+body.pt-module-layout main.cz-index[data-cz-indice]>figure.doc>a{max-width:45%;}
+body.pt-module-layout main.cz-index[data-cz-indice]>figure.doc>a img{max-width:none;}
+body.pt-module-layout main.cz-index[data-cz-indice]>figure.doc figcaption{flex:1 1 0;min-width:0;margin:0;padding:0;border:0;font:400 0.8125rem/1.5 Arial;color:var(--suave);}
+body.pt-module-layout main.cz-index[data-cz-indice] .rodape{font:400 0.8125rem/1.5 Arial;margin-top:32px;color:var(--suave);}
+body.pt-module-layout main.cz-index[data-cz-indice] :is(a,summary,button):focus-visible{outline:3px solid var(--tinta);outline-offset:4px;}
+html:has(main[data-cz-indice].cz-sala) body.pt-module-layout main.cz-index[data-cz-indice]{max-width:1200px;}
+html:has(main[data-cz-indice].cz-sala) body.pt-module-layout main.cz-index[data-cz-indice] .f,html:has(main[data-cz-indice].cz-sala) body.pt-module-layout main.cz-index[data-cz-indice] .prova-esperada,html:has(main[data-cz-indice].cz-sala) body.pt-module-layout main.cz-index[data-cz-indice] .mod-ambito{font-size:1.25rem;}
+body.pt-module-layout main.cz-index[data-cz-indice] details.cz-fold>summary h2.cz-fold-t{display:block;white-space:normal;overflow:visible;text-overflow:clip;}
+body.pt-module-layout main.cz-index[data-cz-indice] .cz-fold>summary::before{display:none;}
+html:has(main[data-cz-indice].cz-sala) body.pt-module-layout main.cz-index[data-cz-indice] :is(.marca,.cz-fold-k,.cz-index-fold-state,.estado,.chip,.rodape,.unit-index small,.unit-index>span,.doc figcaption){font-size:1.25rem;}
+html:has(main[data-cz-indice].cz-sala) body.pt-module-layout main.cz-index[data-cz-indice] .cz-recursos>summary,html:has(main[data-cz-indice].cz-sala) body.pt-module-layout main.cz-index[data-cz-indice] [data-module-next]{font-size:1.25rem;}
+/* 06/11/2026: decisão 148, os botões flutuantes de sempre, com o alvo de 48 px do piloto. */
+body:has(main[data-cz-indice]) .teacher-access{width:48px;height:48px;}
+body:has(main[data-cz-indice]) [data-appearance-floating] .epi-appearance-toggle{width:48px;height:48px;min-width:48px;min-height:48px;}
+html[data-theme=dark] body:has(main[data-cz-indice]){--papel:#181916;--tinta:#f5f1e7;--suave:#c2beb4;--fundo:#252722;}
+html[data-theme=light] body:has(main[data-cz-indice]){--papel:#f6f3eb;--tinta:#171714;--suave:#55534c;--fundo:#ece8de;}
+/* 03/11/2026 (piloto M4, M4-02): pintar o glifo original elimina a cópia absoluta e mantém a palavra inteira. Só o título do M4 tem este acento. */
+body.pt-module-layout main.cz-index[data-cz-indice] .m4-acento-retro{display:inline;color:inherit;}
+@supports (background-clip:text){
+body.pt-module-layout main.cz-index[data-cz-indice] .m4-acento-retro{color:transparent;background:linear-gradient(to bottom,var(--vermelho,#c8232c) 20%,var(--tinta) 20%);background-clip:text;}
+}
+body.pt-module-layout main.cz-index[data-cz-indice] .cabm>.n{font:400 3.8125rem/1 "Cartaz Indice",var(--cz-font-poster);color:var(--suave);position:static;border:0;padding:0;background:transparent;}
+body.pt-module-layout main.cz-index[data-cz-indice] .mod-pergunta .serif{font:inherit;}
+body.pt-module-layout main.cz-index[data-cz-indice] .unit-index b{color:var(--tinta);}
+body.pt-module-layout main.cz-index[data-cz-indice] ol.passos a.cz-row{display:grid;grid-template-columns:32px minmax(0,1fr) auto;gap:8px 16px;padding:24px 16px;min-height:88px;border:0;border-radius:0;box-shadow:none;transform:none;background:none;color:var(--tinta);align-items:start;text-decoration:none;}
+body.pt-module-layout main.cz-index[data-cz-indice] ol.passos .n{font:400 1.5625rem/1.1 "Cartaz Indice",var(--cz-font-poster);align-self:start;color:var(--tinta);background:transparent;border:0;padding:0;min-width:0;width:auto;white-space:nowrap;}
+body.pt-module-layout main.cz-index[data-cz-indice] .cz-index-fold-state:not(:empty)::before{content:"";display:inline-block;width:12px;height:12px;margin-right:8px;border:2px solid var(--tinta);box-sizing:border-box;background:var(--cz-current);vertical-align:-1px;}
+body.pt-module-layout main.cz-index[data-cz-indice] .cz-index-fold-state.feita::before{background:var(--cz-done);}
+body.pt-module-layout main.cz-index[data-cz-indice] [data-cz-point]{display:inline-block;position:relative;width:12px;height:12px;flex:none;vertical-align:middle;}
+body.pt-module-layout main.cz-index[data-cz-indice] [data-cz-point].cz-motion-point{background:var(--cz-done);color:var(--tinta);font-size:0;}
+body.pt-module-layout main.cz-index[data-cz-indice] .cz-state:has([data-cz-point])::before{display:none;}
+body.pt-module-layout main.cz-index[data-cz-indice] .cz-state.current [data-cz-point]{border:2px solid var(--tinta);background:var(--cz-current);box-sizing:border-box;}
+@media (prefers-color-scheme:dark){
+body:has(main[data-cz-indice]){--papel:#181916;--tinta:#f5f1e7;--suave:#c2beb4;--fundo:#252722;}
+}
+@media (min-width:960px){
+body.pt-module-layout main.cz-index[data-cz-indice] details.cz-fold[open]{display:block;}
+body.pt-module-layout main.cz-index[data-cz-indice] .cz-unit-body{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:48px;}
+body.pt-module-layout main.cz-index[data-cz-indice] .cz-fold>summary{grid-template-columns:112px minmax(0,1fr) auto 24px;}
+body.pt-module-layout main.cz-index[data-cz-indice] .cz-fold>summary::after{grid-column:4;grid-row:1;}
+}
+/* 06/11/2026: decisão 148, entre 640 e 1279 px a coluna afasta-se dos cantos para os botões flutuantes não taparem texto. */
+@media (min-width:640px) and (max-width:1279px){
+body.pt-module-layout main.cz-index[data-cz-indice]{padding-inline:72px;}
+}
+@media (max-width:639px){
+body.pt-module-layout main.cz-index[data-cz-indice]{padding:24px 16px 48px;}
+body.pt-module-layout main.cz-index[data-cz-indice] .cabm{gap:4px 16px;margin:16px 0;}
+body.pt-module-layout main.cz-index[data-cz-indice] .cabm>.agua{font-size:1.25rem;}
+body.pt-module-layout main.cz-index[data-cz-indice] .cabm>.n{font-size:3.0625rem;}
+body.pt-module-layout main.cz-index[data-cz-indice] h1{font-size:2.4375rem;}
+body.pt-module-layout main.cz-index[data-cz-indice] .mod-pergunta{font-size:1.25rem;}
+body.pt-module-layout main.cz-index[data-cz-indice] .topo{padding-bottom:24px;}
+body.pt-module-layout main.cz-index[data-cz-indice] .module-opening{margin-top:16px;}
+body.pt-module-layout main.cz-index[data-cz-indice] [data-module-next]{padding:12px 16px;}
+body.pt-module-layout main.cz-index[data-cz-indice] .unit-index ol{grid-auto-flow:row;grid-template-columns:1fr;gap:0;}
+body.pt-module-layout main.cz-index[data-cz-indice] .unit-index a{min-height:72px;padding:12px 0;}
+body.pt-module-layout main.cz-index[data-cz-indice] .unit-index a span{font-size:1rem;}
+/* 06/11/2026: decisão 148. No telemóvel, a banda de cada unidade tem 88 px com o título numa linha (72 px abaixo de
+   360 px) e cresce exatamente uma linha do título por cada linha a mais: «Unidade N» e o estado na primeira linha,
+   o título inteiro na segunda, sem cortes. */
+body.pt-module-layout main.cz-index[data-cz-indice] .cz-fold>summary{grid-template-columns:minmax(0,1fr) auto 24px;column-gap:16px;row-gap:.25rem;align-items:center;align-content:center;min-height:0;padding:1rem 0;}
+body.pt-module-layout main.cz-index[data-cz-indice] .cz-fold-k{grid-column:1;grid-row:1;font:700 0.8125rem/1.125rem Arial;}
+body.pt-module-layout main.cz-index[data-cz-indice] .cz-index-fold-state{grid-column:2;grid-row:1;font:700 0.8125rem/1.125rem Arial;white-space:nowrap;}
+body.pt-module-layout main.cz-index[data-cz-indice] details.cz-fold>summary h2.cz-fold-t{grid-column:1/3;grid-row:2;font-size:1.9375rem;line-height:2.125rem;}
+body.pt-module-layout main.cz-index[data-cz-indice] .cz-fold>summary::after{grid-column:3;grid-row:1/3;}
+body.pt-module-layout main.cz-index[data-cz-indice] ol.passos a.cz-row{padding:16px 8px;gap:8px;grid-template-columns:24px minmax(0,1fr) 16px;}
+body.pt-module-layout main.cz-index[data-cz-indice] ol.passos a.current{padding-left:4px;}
+body.pt-module-layout main.cz-index[data-cz-indice]>figure.doc{flex-direction:column;align-items:flex-start;gap:16px;}
+body.pt-module-layout main.cz-index[data-cz-indice]>figure.doc img,body.pt-module-layout main.cz-index[data-cz-indice]>figure.doc>a{max-width:100%;}
+body.pt-module-layout main.cz-index[data-cz-indice]>figure.doc figcaption{flex:none;width:100%;}
+html:has(main[data-cz-indice].cz-sala) body.pt-module-layout main.cz-index[data-cz-indice]{padding-top:16px;}
+html:has(main[data-cz-indice].cz-sala) body.pt-module-layout main.cz-index[data-cz-indice] .cabm{margin:8px 0;}
+}
+@media (max-width:359px){
+body.pt-module-layout main.cz-index[data-cz-indice] .cz-fold>summary{padding:.5rem 0;}
+}
+@media print{
+body.pt-module-layout main.cz-index[data-cz-indice]{max-width:none;padding:0;}
+.cz-recursos,.unit-index,[data-module-next]{display:none;}
+body.pt-module-layout main.cz-index[data-cz-indice] details.cz-fold{display:block;}
+body.pt-module-layout main.cz-index[data-cz-indice] .unidade{break-inside:auto;}
+body.pt-module-layout main.cz-index[data-cz-indice] .cz-fold>summary{break-after:avoid;}
+body.pt-module-layout main.cz-index[data-cz-indice] .m4-acento-retro{color:inherit;background:none;}
+body.pt-module-layout main.cz-index[data-cz-indice] .cz-fold::details-content{content-visibility:visible;}
+body.pt-module-layout main.cz-index[data-cz-indice] .cz-fold>summary{display:grid;}
+body.pt-module-layout main.cz-index[data-cz-indice] .cz-unit-body{display:block;}
+body.pt-module-layout main.cz-index[data-cz-indice] .passos>li{break-inside:avoid;}
+body.pt-module-layout main.cz-index[data-cz-indice]>figure.doc{break-inside:avoid;}
+body.pt-module-layout main.cz-index[data-cz-indice] .cabm>.agua{color:#000;}
+}

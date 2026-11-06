@@ -51,13 +51,12 @@ def main():
      assert not page.evaluate('document.documentElement.scrollWidth>innerWidth+2')
      # 23/10/2026 (decisão do docente, aulas claras): o M4 é o piloto do percurso como lista simples de aulas, sem passaporte, níveis nem pontos
      # 03/11/2026: a imagem documental do piloto M4 abre nos recursos, pelo teclado.
-     opening='.m4-recursos' if m==4 else '.module-opening'
-     assert page.locator(opening+' figure.doc').count()==1 and page.locator('.module-progress .passaporte').count()==(0 if m in SEM_PASSAPORTE else 1)
-     if m==4:
-      assert not page.locator('figure.doc').is_visible()
-      page.locator('.m4-recursos > summary').focus();page.keyboard.press('Enter')
+     # 06/11/2026: decisão 148, volta a exigir-se o mesmo nos nove: uma imagem documental, à vista sem abrir nada, fora de
+     # qualquer details, logo a seguir à última unidade (já não há exceção para o M4).
+     assert page.locator('main > figure.doc').count()==1 and page.locator('figure.doc').count()==1 and page.locator('.module-progress .passaporte').count()==(0 if m in SEM_PASSAPORTE else 1)
+     assert page.evaluate('()=>{const f=document.querySelector("main > figure.doc"),u=[...document.querySelectorAll("main > section.unidade-pedagogica")].pop();return f.previousElementSibling===u&&!f.closest("details")}')
      assert page.locator('figure.doc').is_visible()
-     if m==4:page.locator('.m4-recursos > summary').press('Enter')
+     # 06/11/2026: decisão 148, sai o passo que voltava a fechar os recursos do M4 (a imagem já não está lá dentro).
      if m in (1,2):
       OUT.mkdir(parents=True,exist_ok=True);page.screenshot(path=str(OUT/f'm{m}-{width}-depois.png'))
       page.locator('.unidade-pedagogica').first.screenshot(path=str(OUT/f'm{m}-unidade-{width}-depois.png'))
