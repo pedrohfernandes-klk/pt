@@ -2,17 +2,47 @@
  "slug": "m1-u1",
  "titulo": "Vozes da lírica medieval",
  "unidade": 1,
+ "nao_partir": true,
  "aquecer": {
   "cartoes": "aquecimento/",
   "minutos": 10,
-  "texto": "No início da aula de tarefa: 10 minutos de cartões com consulta, 5 minutos para leres o enunciado, 60 minutos de produção e 15 minutos de revisão e entrega. Total: 90 minutos. O relógio de produção começa depois da leitura.",
+  "texto": "No início da aula de tarefa:",
+  "tabela": {
+   "colunas": [
+    "Momento",
+    "Tempo"
+   ],
+   "linhas": [
+    [
+     "cartões com consulta",
+     "10 minutos"
+    ],
+    [
+     "lês o enunciado",
+     "5 minutos"
+    ],
+    [
+     "produção",
+     "60 minutos"
+    ],
+    [
+     "revisão e entrega",
+     "15 minutos"
+    ],
+    [
+     "Total",
+     "90 minutos"
+    ]
+   ]
+  },
+  "depois": "O relógio de produção começa depois da leitura.",
   "ligacao": "Abrir o aquecimento em cartões",
   "ligacao_enunciado": "Aquecer"
  },
- "lead": "À mão, entre 200 e 240 palavras: aproximadamente 60 por resposta do núcleo e 80 a 120 no tema. Com consulta.",
+ "lead": "À mão, entre 200 e 240 palavras: aproximadamente 60 por resposta do núcleo e 80 a 120 no tema. Com consulta.",
  "nucleo": [
   "Em «Ondas do mar de Vigo», quem fala e a quem? Cita uma repetição. Classifica-a. Explica como faz durar a espera. Em <i>mare</i> &gt; mar e <i>malu</i> &gt; mau, identifica o som que cai, onde cai e o processo.",
-  "D. Dinis e Guilhade prometem louvar uma senhora. Em qual se cumpre a promessa? Comprova com uma passagem de cada cantiga, fora da primeira estrofe. Identifica o recurso que, na outra, a desmente. Mostra, na passagem, como o faz."
+  "D. Dinis e Guilhade prometem louvar uma senhora. Em qual se cumpre a promessa? Comprova com uma passagem de cada cantiga, fora da primeira estrofe. Identifica o recurso que, na outra, a desmente. Mostra, na passagem, como o faz."
  ],
  "temas": [
   {
@@ -29,11 +59,11 @@
  "apoios": [
   {
    "href": "../../m1/licao-m1-f19/",
-   "texto": "As cantigas lado a lado: relê «A. Martim Codax, “Ondas do mar de Vigo”» e «B. D. Dinis e C. Guilhade, lado a lado». Para o tema A, no fim da lição, abre «Para ir mais longe» e procura «A forma de “Ondas do mar de Vigo”»."
+   "texto": "As cantigas lado a lado: relê «A. Martim Codax, “Ondas do mar de Vigo”» e «B. D. Dinis e C. Guilhade, lado a lado». Para o tema A, no fim da lição, abre «Para ir mais longe» e procura «A forma de “Ondas do mar de Vigo”»."
   },
   {
    "href": "../../m1/licao-m1-f04/",
-   "texto": "As cantigas inteiras: relê «A: D. Dinis, “Quer'eu em maneira de proençal”» (a estrofe 2 está em «Ler mais») e «B: João Garcia de Guilhade, “Ai dona fea, fostes-vos queixar”»."
+   "texto": "As cantigas inteiras: relê «A: D. Dinis, “Quer'eu em maneira de proençal”» (a estrofe 2 está em «Ler mais») e «B: João Garcia de Guilhade, “Ai dona fea, fostes-vos queixar”»."
   },
   {
    "href": "../../m1/licao-m1-f02/",
@@ -52,7 +82,7 @@
    "fonte": "«A voz emprestada» (caso em cinco atos), ato 5: «De boca em boca»"
   },
   {
-   "facto": "Chegaram-nos cerca de 1680 cantigas, copiadas à mão em três cancioneiros. A música perdeu-se quase toda: só o Pergaminho Vindel, de Martim Codax, e o Sharrer, de D. Dinis, guardam melodias.",
+   "facto": "Chegaram-nos cerca de 1680 cantigas, copiadas à mão em três cancioneiros. A música perdeu-se quase toda: só o Pergaminho Vindel, de Martim Codax, e o Sharrer, de D. Dinis, guardam melodias.",
    "href": "../../m1/licao-m1-f01/",
    "fonte": "Lição «A língua que se canta»: abertura e «Chegaram as letras»"
   },
@@ -98,7 +128,7 @@
  "criterios": [
   "Núcleo: voz e destinatário; repetição citada, classificada e explicada; som, lugar e processo; passagens e recurso.",
   "Tema A: paralelismo, refrão, verso que desmente, verso de Codax imitado e explicado, uma diferença. Tema B: imagem, dois factos, verso escolhido e explicado, o que o cartaz não pode prometer.",
-  "Respostas articuladas, entre 200 e 240 palavras, com escrita revista."
+  "Respostas articuladas, entre 200 e 240 palavras, com escrita revista."
  ],
  "fecho": "Fecha com duas linhas, fora da contagem de palavras: o que passaste a verificar quando uma cantiga repete ou promete? Aponta o verso que te ajudou."
 }

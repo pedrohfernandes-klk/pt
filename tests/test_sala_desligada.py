@@ -23,6 +23,9 @@ import sys
 import unittest
 
 from auditoria_20261028 import undo_sala, undo_tarefas_m356, undo_tarefas_m89
+# 06/11/2026: a decisão 152 no M1 (cuidado_m1_20261106) pôs espaços que não quebram nas lições do M1, não nos painéis (que não
+# estavam nos achados); o relâmpago compara-se com a lição por baixo dessa camada, com contagem estrita.
+from auditoria_20261028 import undo_cuidado_m1_0611
 
 ROOT = Path(__file__).resolve().parents[1]
 _spec = importlib.util.spec_from_file_location('desligar_sala', ROOT / 'scripts/desligar_sala.py')
@@ -163,7 +166,8 @@ class SalaDesligada(unittest.TestCase):
             texto = ler(rel)
             P, MAT = banco(texto, 'CARTOES='), banco(texto, ',MATERIAL=')
             licao = rel.replace('/painel-', '/licao-')
-            L = banco(ler(licao), 'CARTOES=')
+            # 06/11/2026: por baixo da decisão 152 no M1 (ver o import).
+            L = banco(undo_cuidado_m1_0611(licao, ler(licao)), 'CARTOES=')
             self.assertEqual(set(MAT), {str(c['k']) for c in P}, rel)
             for c in P:
                 x, m = L[c['k']], MAT[str(c['k'])]

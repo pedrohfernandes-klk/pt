@@ -308,7 +308,21 @@ _ATLAS_LOTE3_0511 = json.loads((ROOT/'tests/fixtures/atlas-lote3-edits-20261105.
 # lote 3 do Atlas, depois de juntar o main): desfaz-se antes do Atlas, com contagem estrita.
 _CREDITOS_I_0511 = json.loads((ROOT/'tests/fixtures/creditos-i-edits-20261105.json').read_text('utf-8'))['files']
 
+# 06/11/2026: decisão 152 (cuidado em todas as lições), módulo M1: tabelas onde há itens paralelos e referências e números que
+# não se partem, camada mais recente, por cima dos créditos atrás de um «i»: desfaz-se antes deles, com contagem estrita.
+_CUIDADO_M1_0611 = json.loads((ROOT/'tests/fixtures/cuidado-m1-edits-20261106.json').read_text('utf-8'))['files']
+
+def undo_cuidado_m1_0611(path, text):
+    for edit in reversed(_CUIDADO_M1_0611.get(_relative(path), {}).get('edits', [])):
+        if text.count(edit['new']) != edit['occurrences']:
+            raise AssertionError(f"Decisão 152 no M1 não confere: {path}: {edit['location']}")
+        text = text.replace(edit['new'], edit['old'])
+    return text
+
+
 def undo_creditos_i_0511(path, text):
+    # 06/11/2026: primeiro a decisão 152 no M1, que está por cima.
+    text = undo_cuidado_m1_0611(path, text)
     for edit in reversed(_CREDITOS_I_0511.get(_relative(path), {}).get('edits', [])):
         if text.count(edit['new']) != edit['occurrences']:
             raise AssertionError(f"Créditos atrás de um «i» não conferem: {path}: {edit['location']}")

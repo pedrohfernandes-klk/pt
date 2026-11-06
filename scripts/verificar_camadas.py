@@ -7,6 +7,9 @@ import sys
 
 ROOT=Path(__file__).resolve().parents[1]
 LAYERS=[
+ # 06/11/2026: decisão 152 (cuidado em todas as lições), módulo M1: tabelas onde há itens paralelos e referências e números que
+ # não se partem, camada mais recente, por cima dos créditos atrás de um «i».
+ ('cuidado_m1_20261106','cuidado-m1-edits-20261106'),
  # 05/11/2026: decisão 153, créditos das imagens atrás de um «i» (pedido pt-2), camada mais recente (06/11/2026: por cima do lote 3 do Atlas e da decisão 154, depois de juntar o main).
  ('creditos_i_20261105','creditos-i-edits-20261105'),
  # 05/11/2026: Atlas Lusófono, lote 3 (66 figuras, «Imprensa e pensamento», localização aproximada, fotografias e vídeos), por cima da decisão 154 (06/11/2026: correções da revisão do lote 3 na mesma camada, e a camada passa por cima da decisão 154 depois de juntar o main).

@@ -2,23 +2,53 @@
  "slug": "m1-u2",
  "titulo": "Crónica «Estar lá»",
  "unidade": 2,
+ "nao_partir": true,
  "aquecer": {
   "cartoes": "aquecimento/",
   "minutos": 10,
-  "texto": "No início da aula de tarefa: 10 minutos de cartões com consulta, 5 minutos para leres o enunciado, 60 minutos de produção e 15 minutos de revisão e entrega. Total: 90 minutos. O relógio de produção começa depois da leitura.",
+  "texto": "No início da aula de tarefa:",
+  "tabela": {
+   "colunas": [
+    "Momento",
+    "Tempo"
+   ],
+   "linhas": [
+    [
+     "cartões com consulta",
+     "10 minutos"
+    ],
+    [
+     "lês o enunciado",
+     "5 minutos"
+    ],
+    [
+     "produção",
+     "60 minutos"
+    ],
+    [
+     "revisão e entrega",
+     "15 minutos"
+    ],
+    [
+     "Total",
+     "90 minutos"
+    ]
+   ]
+  },
+  "depois": "O relógio de produção começa depois da leitura.",
   "ligacao": "Abrir o aquecimento em cartões",
   "ligacao_enunciado": "Aquecer"
  },
- "lead": "Núcleo: cerca de 40 palavras por resposta. Crónica: título e 160 a 200 palavras. Abre dentro de um momento. Faz ver com um pormenor. Põe o povo a agir. Inclui uma fala marcada «documentada» ou «imaginada». Marca as tuas inferências e opiniões. Confronta duas fontes. Lista-as no fim. Risca uma frase, sem apagar. Reescreve-a. À mão, com consulta.",
+ "lead": "Núcleo: cerca de 40 palavras por resposta. Crónica: título e 160 a 200 palavras. Abre dentro de um momento. Faz ver com um pormenor. Põe o povo a agir. Inclui uma fala marcada «documentada» ou «imaginada». Marca as tuas inferências e opiniões. Confronta duas fontes. Lista-as no fim. Risca uma frase, sem apagar. Reescreve-a. À mão, com consulta.",
  "nucleo": [
-  "Como transforma Fernão Lopes a cidade numa só figura, quando ela ouve o grito do pajem? Cita uma passagem do cap. XII. Explica o que essa passagem faz ver.",
-  "Num rascunho inventado, o pajem brada, em fala marcada como documentada: «Matam o Mestre! Vamos pra rua!». Identifica o que não está nos excertos do cap. XII. Em «pra», indica o som que cai, onde e o processo. Justifica onde pode ficar «pra»: relato, fala documentada ou imaginada."
+  "Como transforma Fernão Lopes a cidade numa só figura, quando ela ouve o grito do pajem? Cita uma passagem do cap. XII. Explica o que essa passagem faz ver.",
+  "Num rascunho inventado, o pajem brada, em fala marcada como documentada: «Matam o Mestre! Vamos pra rua!». Identifica o que não está nos excertos do cap. XII. Em «pra», indica o som que cai, onde e o processo. Justifica onde pode ficar «pra»: relato, fala documentada ou imaginada."
  ],
  "temas": [
   {
    "letra": "A",
    "nome": "A língua do cronista",
-   "texto": "Conta por dentro o grito do pajem (cap. XII), o sino da quadrilha (cap. CXVI) ou a fome do cerco (cap. CXLVIII). Usa uma gradação tua. Copia letra a letra uma passagem desse capítulo. A segunda fonte é uma imagem do dossiê ou a do teu plano da aula 13."
+   "texto": "Conta por dentro o grito do pajem (cap. XII), o sino da quadrilha (cap. CXVI) ou a fome do cerco (cap. CXLVIII). Usa uma gradação tua. Copia letra a letra uma passagem desse capítulo. A segunda fonte é uma imagem do dossiê ou a do teu plano da aula 13."
   },
   {
    "letra": "B",
@@ -33,7 +63,7 @@
   },
   {
    "href": "../../m1/licao-m1-f10/",
-   "texto": "Estar lá: relê «Um começo, por dentro: onde estás?», «Dois números: qual escreves?» e «Que fala precisa de aviso?». A crónica da aula 13 tinha 250 a 300 palavras; esta tem 160 a 200. A segunda fonte do teu plano da aula 13 só serve ao tema A se for do mesmo momento."
+   "texto": "Estar lá: relê «Um começo, por dentro: onde estás?», «Dois números: qual escreves?» e «Que fala precisa de aviso?». A crónica da aula 13 tinha 250 a 300 palavras; esta tem 160 a 200. A segunda fonte do teu plano da aula 13 só serve ao tema A se for do mesmo momento."
   },
   {
    "href": "../../m1/licao-m1-f05/",
@@ -53,20 +83,20 @@
   {
    "facto": "Por volta de 1860, quase cinco séculos depois, José de Sousa Azevedo pintou a <i>Morte do Conde Andeiro</i>: o conde jaz no chão dos paços da rainha, onde o Mestre acaba de o matar. O pintor não viu a cena: reconstituiu-a, e as espadas, as plumas e a luz são escolha sua.",
    "href": "../../m1/licao-m1-f06/",
-   "fonte": "Lição «Matam o Mestre!», abertura; em «Para ir mais longe», «Uma pintura do século XIX»"
+   "fonte": "Lição «Matam o Mestre!», abertura; em «Para ir mais longe», «Uma pintura do século XIX»"
   },
   {
-   "facto": "Uma iluminura das <i>Crónicas</i> de Froissart, do século XV, mostra o cerco de Lisboa de 1384: o arraial, com tendas, canhões e homens caídos, e as muralhas; lá dentro, só gente numa praça. Não mostra a fome, nem diz de que caíram os homens.",
+   "facto": "Uma iluminura das <i>Crónicas</i> de Froissart, do século XV, mostra o cerco de Lisboa de 1384: o arraial, com tendas, canhões e homens caídos, e as muralhas; lá dentro, só gente numa praça. Não mostra a fome, nem diz de que caíram os homens.",
    "href": "../../m1/licao-m1-f07/",
    "fonte": "Lição «Lisboa cercada»; em «Para ir mais longe», «O arraial de Castela» e «O que a iluminura não mostra»"
   },
   {
-   "facto": "O cerco levantou-se a 3 de setembro de 1384, sobretudo pela peste no exército castelhano: quem cerca também sofre.",
+   "facto": "O cerco levantou-se a 3 de setembro de 1384, sobretudo pela peste no exército castelhano: quem cerca também sofre.",
    "href": "../../m1/licao-m1-f07/",
    "fonte": "Lição «Lisboa cercada»; em «Para ir mais longe», «O arraial de Castela» e «Quem cerca também sofre»"
   },
   {
-   "facto": "Fernão Lopes foi guarda-mor da Torre do Tombo, o arquivo onde se guardavam documentos, e D. Duarte encomendou-lhe as crónicas dos reis. Não diz que viu o que conta: no prólogo, diz que viu «grandes volumes de livros» e «públicas escrituras de muitos cartórios».",
+   "facto": "Fernão Lopes foi guarda-mor da Torre do Tombo, o arquivo onde se guardavam documentos, e D. Duarte encomendou-lhe as crónicas dos reis. Não diz que viu o que conta: no prólogo, diz que viu «grandes volumes de livros» e «públicas escrituras de muitos cartórios».",
    "href": "../../m1/licao-m1-f06/",
    "fonte": "Lição «Matam o Mestre!», «Como sabe o cronista o que conta?»; em «Para ir mais longe», «Quem é Fernão Lopes»"
   },
@@ -100,9 +130,9 @@
   ]
  },
  "criterios": [
-  "Núcleo: passagem do cap. XII explicada; fala e «pra» analisadas.",
+  "Núcleo: passagem do cap. XII explicada; fala e «pra» analisadas.",
   "A: gradação e passagem copiada. B: o que a imagem escolhe e dois factos.",
-  "160 a 200 palavras, título, uma frase riscada e reescrita."
+  "160 a 200 palavras, título, uma frase riscada e reescrita."
  ],
  "fecho": "Fecha com duas linhas, fora da contagem, como o núcleo e as fontes: que escolha de Fernão Lopes usaste na tua crónica (fazer ver, a multidão como uma só figura, a gradação, a fala em discurso direto)? Aponta a tua frase que a mostra."
 }

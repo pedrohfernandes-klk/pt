@@ -844,6 +844,14 @@ def main():
                 # 05/11/2026: antes de tudo, a revisão de 5/11, a camada mais recente.
                 # 06/11/2026: antes de tudo, os créditos atrás de um «i» (decisão 153), a camada mais recente, por cima do lote 3 do
                 # Atlas depois de juntar o main.
+                # 06/11/2026: antes de tudo, a decisão 152 no M1 (tabelas e espaços que não quebram), a camada mais recente, por
+                # cima dos créditos atrás de um «i».
+                cuidado_m1 = ROOT / 'tests/fixtures/cuidado-m1-edits-20261106.json'
+                for edit in reversed(json.loads(cuidado_m1.read_text('utf-8'))['files'].get(rel, {}).get('edits', [])):
+                    if conferencia.count(edit['new']) != edit['occurrences']:
+                        raise ManifestoDesatualizado(f'{rel}: decisão 152 no M1 não confere')
+                    conferencia = conferencia.replace(edit['new'], edit['old'])
+                # 06/11/2026: depois, os créditos atrás de um «i».
                 creditos_i = ROOT / 'tests/fixtures/creditos-i-edits-20261105.json'
                 for edit in reversed(json.loads(creditos_i.read_text('utf-8'))['files'].get(rel, {}).get('edits', [])):
                     if conferencia.count(edit['new']) != edit['occurrences']:

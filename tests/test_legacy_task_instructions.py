@@ -6,6 +6,8 @@ import json
 import re
 import unittest
 from test_task_routes_closure import original_lesson_text
+# 06/11/2026: a decisão 152 no M1 (cuidado_m1_20261106) está por cima destas nove frases; confere-se com ela desfeita.
+from auditoria_20261028 import undo_cuidado_m1_0611
 
 ROOT=Path(__file__).resolve().parents[1]
 MANIFEST=ROOT/'tests/fixtures/task-instruction-edits-20261026.json'
@@ -34,7 +36,8 @@ class LegacyTaskInstructions(unittest.TestCase):
                 frozen=next(module['files'][path] for module in original.values() if path in module['files'])
                 self.assertEqual(item['base_sha256_lf'],frozen)
                 self.assertEqual(hashlib.sha256(original_lesson_text(path).encode()).hexdigest(),frozen)
-                current=(ROOT/path).read_text('utf-8')
+                # 06/11/2026: por baixo da decisão 152 no M1 (espaços que não quebram), com contagem estrita.
+                current=undo_cuidado_m1_0611(path,(ROOT/path).read_text('utf-8'))
                 for edit in item['edits']:
                     self.assertEqual(current.count(edit['new']),edit['occurrences'])
                     self.assertNotIn(edit['old'],current)
