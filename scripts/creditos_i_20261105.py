@@ -116,6 +116,12 @@ P7_A_VISTA = {
     '<i>Frei Luiz de Sousa</i>, primeira edição, 1844: a lista das pessoas. Domínio público.':
         ('A lista das pessoas.', '<i>Frei Luiz de Sousa</i>, primeira edição, 1844. Domínio público.'),
 }
+# 06/11/2026: confirmação final do pedido pt-2. O título da obra em itálico no crédito de M1-F01, como no de M1-F04 (regra da
+# casa); nenhuma palavra muda.
+P7_ITALICO = {
+    'Cancioneiro da Biblioteca Nacional, cópia do século XVI. Domínio público.':
+        '<i>Cancioneiro da Biblioteca Nacional</i>, cópia do século XVI. Domínio público.',
+}
 # Imagens com menos de 240 px de largura no cartão (medidas a 320, 390, 852 e 1366 px: a gravura de D. Dinis tem 229 a
 # 239 px e a cantiga de Codax, 207 a 215 px): variante «linha», com o crédito por baixo da imagem.
 P7_LINHA = {'../../img/fontes/dinis-gravura-1594.jpg', '../../img/fontes/codax-ondas-1915.jpg'}
@@ -131,7 +137,7 @@ def p7():
         for m in P7_FIGURA.finditer(texto):
             classes, img, legenda = m.group(1), m.group(2), json.loads('"' + m.group(3) + '"')
             src = re.search(r'src=\\"([^"\\]+)\\"', img).group(1)
-            visivel, credito = P7_A_VISTA.get(legenda, (None, legenda))
+            visivel, credito = P7_A_VISTA.get(legenda, (None, P7_ITALICO.get(legenda, legenda)))
             novo = ('<figure class="fig' + classes + '"><div class="moldura com-i">' + json.loads('"' + img + '"')
                     + peca_i(credito, linha=src in P7_LINHA) + '</div>'
                     + (f'<figcaption>{visivel}</figcaption>' if visivel else '') + '</figure>')
@@ -332,6 +338,10 @@ P14_FAMILIA = ('Família P14 («Pensar devagar»): o crédito (fr-cred) passa in
 # licença exige. Confirmado no Commons a 06/11/2026 (autor e carregamento: Alvesgaspar, 8 de maio de 2013), que é o mesmo crédito
 # da galeria do mapa M9 («fotografia de Alvesgaspar, 2013»): o «i» abre com ele.
 P14_AUTOR = {'m9/m9-de-quem-e-o-convento/index.html': 'Fotografia de Alvesgaspar, 2013. '}
+# 06/11/2026: confirmação final do pedido pt-2. Os títulos de obras em itálico no crédito (regra da casa, como na P7 e na P16);
+# nenhuma palavra muda. Cada pedaço aparece uma vez no crédito.
+P14_ITALICO = {'m1/m1-promessa-do-cronista/index.html': ('Crónicas de Jean Froissart', '<i>Crónicas</i> de Jean Froissart'),
+               'm7/m7-quatro-vozes-um-problema/index.html': ('Revista Orpheu.', 'Revista <i>Orpheu</i>.')}
 
 
 def p14_paginas():
@@ -347,6 +357,10 @@ def p14():
         assert len(achados) == 1 and texto.count('fr-cred\\"') == 1, (rel, len(achados))
         m = achados[0]
         credito = P14_AUTOR.get(rel, '') + maiuscula(json.loads('"' + m.group(4) + '"'))
+        if rel in P14_ITALICO:
+            redondo, italico = P14_ITALICO[rel]
+            assert credito.count(redondo) == 1, (rel, redondo)
+            credito = credito.replace(redondo, italico)
         novo = (f'<figure class=\\"{m.group(1)}\\"><div class=\\"fr-moldura com-i\\">{m.group(2)}{em_json(peca_i(credito))}'
                 f'</div><figcaption>{m.group(3)}</figcaption></figure>')
         confere_json(m.group(0), novo)
@@ -437,7 +451,11 @@ P16_TITULOS = ('Morte do Conde Andeiro', 'Diálogos de Vária História', 'Canci
                'Copilaçam de todalas obras de Gil Vicente', 'Trachtenbuch', 'Rimas', 'Os Lusíadas', 'Costume of Portugal',
                'Livro de Lisuarte de Abreu', 'Os Maias', 'Archivo Pittoresco', 'O Livro de Cesário Verde', 'Mensagem', 'Presença',
                'Orpheu', 'Oeuvres', 'Condução do rebanho', 'Passagem de gado', 'A cidade que sobe', 'Aparição do Adamastor',
-               'Os fuzilamentos de 3 de maio de 1808', 'Fish from American Waters', 'Cancioneiro da Biblioteca Nacional')
+               'Os fuzilamentos de 3 de maio de 1808', 'Fish from American Waters', 'Cancioneiro da Biblioteca Nacional',
+               # 06/11/2026: confirmação final do pedido pt-2. Os títulos que ainda ficavam em redondo (mapas M1, M4, M6 e M7),
+               # na legenda à vista e no «i»; o nome do «i» continua sem etiquetas.
+               'Painéis de São Vicente', 'Crónicas', 'Santo António a pregar aos peixes', 'Cícero denuncia Catilina no Senado',
+               'In Memoriam')
 
 
 def p16_italico(html):
@@ -502,11 +520,17 @@ ESTILOS = {P11_REL: P11_ESTILO, 'm4/painel-m4-f01/index.html': P13_ESTILO_PAINEL
 # seguir, a legenda sobe para a faixa do «i», à esquerda dele, junto da imagem; aberto, o crédito abre entre a imagem e a legenda.
 # Só quando a legenda fica por baixo da imagem: a partir de 1024 × 560 px, a casca da lição põe a legenda ao lado da imagem
 # (.casca .jogo .ler .fig em flex), e aí a legenda já está junto dela. Na impressão, nada muda.
-LINHA_ESTILO = ('/* 06/11/2026: revisão do pedido pt-2. A legenda junto da imagem, na faixa do «i» fechado. */'
+# 06/11/2026: confirmação final do pedido pt-2. O «i» fica no canto direito da moldura da imagem, mais estreita do que a coluna:
+# com a largura da coluna, a legenda passava por baixo do «i» e perdia a data («Fernando Pessoa, cerca de 1914.»), a 320 a 414 px
+# e em telemóvel deitado. A figura toma a largura da imagem e a legenda não a alarga (contain:inline-size): a legenda parte antes
+# do «i» e fica toda à vista.
+LINHA_ESTILO = ('/* 06/11/2026: revisão do pedido pt-2. A legenda junto da imagem, na faixa do «i» fechado, com a largura da '
+                'imagem: parte antes do «i». */'
                 '@media screen and (max-width:1023.98px),screen and (max-height:559.98px){'
+                '.jogo .ler .fig:has(>.com-i>details.info-i--linha){inline-size:fit-content;max-inline-size:100%}'
                 '.jogo .ler .fig>.com-i:has(>details.info-i--linha:not([open])):has(+figcaption){margin-block-end:-44px}'
                 '.jogo .ler .fig>.com-i:has(>details.info-i--linha)+figcaption{min-block-size:44px;padding-inline-end:52px;'
-                'box-sizing:border-box}}')
+                'box-sizing:border-box;contain:inline-size}}')
 LINHA_COM_LEGENDA = re.compile(r'info-i info-i--linha\\?" name=\\?"info-i\\?">(?:(?!</figure>).)*</details></div><figcaption>')
 CABECA = (f'<link rel="stylesheet" href="../../assets/info-i.css?v={VERSAO}">'
           f'<script defer src="../../assets/info-i.js?v={VERSAO}"></script></head>')

@@ -4,7 +4,7 @@
  "files": {
   "m1/licao-m1-f01/index.html": {
    "base_sha256_lf": "93504c75e2dc18471ca2bbbb46827170f9352c69d4ebace8891894b2d70d02c5",
-   "after_sha256_lf": "9aaf57acae6e89e2efa3af1e42de8da30ab2723fa573cfaeafd9b3f12087c677",
+   "after_sha256_lf": "9f54a0b0c3b690bffd150b17871f0b4b8f6588688dc8c2279fe4de7f1bc417f7",
    "edits": [
     {
      "location": "P7, crédito puro: Pergaminho Vindel, com cantigas de Martim Codax e a música. Domínio pú",
@@ -21,7 +21,7 @@
     {
      "location": "P7, crédito puro: Cancioneiro da Biblioteca Nacional, cópia do século XVI. Domínio públi",
      "old": "<figure class=\\\"fig recorte\\\"><span class=\\\"moldura\\\"><img src=\\\"../../img/fontes/cancioneiro-biblioteca-nacional.jpg\\\" alt=\\\"Página manuscrita a duas colunas, com estrofes copiadas à mão e números à margem; no alto, à esquerda, um título em letra maior.\\\" loading=\\\"lazy\\\" style=\\\"object-position:50% 12%\\\"></span><figcaption>Cancioneiro da Biblioteca Nacional, cópia do século XVI. Domínio público.</figcaption></figure>",
-     "new": "<figure class=\\\"fig recorte\\\"><div class=\\\"moldura com-i\\\"><img src=\\\"../../img/fontes/cancioneiro-biblioteca-nacional.jpg\\\" alt=\\\"Página manuscrita a duas colunas, com estrofes copiadas à mão e números à margem; no alto, à esquerda, um título em letra maior.\\\" loading=\\\"lazy\\\" style=\\\"object-position:50% 12%\\\"><details class=\\\"info-i\\\" name=\\\"info-i\\\"><summary aria-label=\\\"Créditos da imagem\\\"><span aria-hidden=\\\"true\\\">i</span></summary><p class=\\\"info-i-texto\\\">Cancioneiro da Biblioteca Nacional, cópia do século XVI. Domínio público.</p></details></div></figure>",
+     "new": "<figure class=\\\"fig recorte\\\"><div class=\\\"moldura com-i\\\"><img src=\\\"../../img/fontes/cancioneiro-biblioteca-nacional.jpg\\\" alt=\\\"Página manuscrita a duas colunas, com estrofes copiadas à mão e números à margem; no alto, à esquerda, um título em letra maior.\\\" loading=\\\"lazy\\\" style=\\\"object-position:50% 12%\\\"><details class=\\\"info-i\\\" name=\\\"info-i\\\"><summary aria-label=\\\"Créditos da imagem\\\"><span aria-hidden=\\\"true\\\">i</span></summary><p class=\\\"info-i-texto\\\"><i>Cancioneiro da Biblioteca Nacional</i>, cópia do século XVI. Domínio público.</p></details></div></figure>",
      "occurrences": 1
     },
     {
@@ -292,12 +292,12 @@
   },
   "m1/m1-promessa-do-cronista/index.html": {
    "base_sha256_lf": "f4f5b228b2e034415a799befa17e33d7ec9fd4c068b2edaa49d70c354039332f",
-   "after_sha256_lf": "2f6e6cf081411c1f924acfa4b36f7446e1305932679e5586614a9b7f4220dab7",
+   "after_sha256_lf": "05af5c373c97215ee6eb6e8f7bf20d338e7a649be4d8e77c29d77975e135e7b5",
    "edits": [
     {
      "location": "P14, «Pensar devagar»: o fr-cred passa para o «i»; o fr-leg fica",
      "old": "<figure class=\\\"fig-rev \\\"><span class=\\\"fr-moldura\\\"><img src=\\\"https://pedrohfernandes-klk.github.io/pt/img/fontes/cerco-lisboa-froissart.jpg\\\" alt=\\\"Lisboa cercada pelos castelhanos, vista por um iluminador francês.\\\" loading=\\\"lazy\\\" decoding=\\\"async\\\" style=\\\"object-position:50% 40%\\\"></span><figcaption><span class=\\\"fr-leg\\\">O cerco de Lisboa de 1384 numa iluminura francesa: outra maneira de contar o mesmo cerco.</span> <span class=\\\"fr-cred\\\">Crónicas de Jean Froissart (iluminura). Domínio público. <a href=\\\"https://commons.wikimedia.org/wiki/File:Siege_of_Lisbon_1384.JPG\\\" rel=\\\"noopener\\\">commons.wikimedia.org</a></span></figcaption></figure>",
-     "new": "<figure class=\\\"fig-rev \\\"><div class=\\\"fr-moldura com-i\\\"><img src=\\\"https://pedrohfernandes-klk.github.io/pt/img/fontes/cerco-lisboa-froissart.jpg\\\" alt=\\\"Lisboa cercada pelos castelhanos, vista por um iluminador francês.\\\" loading=\\\"lazy\\\" decoding=\\\"async\\\" style=\\\"object-position:50% 40%\\\"><details class=\\\"info-i\\\" name=\\\"info-i\\\"><summary aria-label=\\\"Créditos da imagem\\\"><span aria-hidden=\\\"true\\\">i</span></summary><p class=\\\"info-i-texto\\\">Crónicas de Jean Froissart (iluminura). Domínio público. <a href=\\\"https://commons.wikimedia.org/wiki/File:Siege_of_Lisbon_1384.JPG\\\" rel=\\\"noopener\\\">commons.wikimedia.org</a></p></details></div><figcaption><span class=\\\"fr-leg\\\">O cerco de Lisboa de 1384 numa iluminura francesa: outra maneira de contar o mesmo cerco.</span></figcaption></figure>",
+     "new": "<figure class=\\\"fig-rev \\\"><div class=\\\"fr-moldura com-i\\\"><img src=\\\"https://pedrohfernandes-klk.github.io/pt/img/fontes/cerco-lisboa-froissart.jpg\\\" alt=\\\"Lisboa cercada pelos castelhanos, vista por um iluminador francês.\\\" loading=\\\"lazy\\\" decoding=\\\"async\\\" style=\\\"object-position:50% 40%\\\"><details class=\\\"info-i\\\" name=\\\"info-i\\\"><summary aria-label=\\\"Créditos da imagem\\\"><span aria-hidden=\\\"true\\\">i</span></summary><p class=\\\"info-i-texto\\\"><i>Crónicas</i> de Jean Froissart (iluminura). Domínio público. <a href=\\\"https://commons.wikimedia.org/wiki/File:Siege_of_Lisbon_1384.JPG\\\" rel=\\\"noopener\\\">commons.wikimedia.org</a></p></details></div><figcaption><span class=\\\"fr-leg\\\">O cerco de Lisboa de 1384 numa iluminura francesa: outra maneira de contar o mesmo cerco.</span></figcaption></figure>",
      "occurrences": 1
     },
     {
@@ -328,7 +328,7 @@
   },
   "m1/mapa-do-modulo-m1/index.html": {
    "base_sha256_lf": "4b7bec58ef75830b4c542e2977de0e6d92b6e65bc1492a302abfefd74f31a0d8",
-   "after_sha256_lf": "d0d811746b8d58d21fe7e3a64252e64514ff01768da6e54de21b2683199477a4",
+   "after_sha256_lf": "08c6988ce2f63ba66d1efeede77ee5dcf9d6160c22aaa0cee7a01f2e036d5945",
    "edits": [
     {
      "location": "P16, galeria «Para ver»: Pergaminho Vindel: cantigas de Martim Codax.",
@@ -387,13 +387,13 @@
     {
      "location": "P16, galeria «Para ver»: Figura identificada como Fernão Lopes, Painéis de São Vicent",
      "old": " alt=\"Figura identificada como Fernão Lopes, Painéis de São Vicente (Nuno Gonçalves, século XV)\" loading=\"lazy\"><figcaption>Figura identificada como Fernão Lopes, Painéis de São Vicente (Nuno Gonçalves, século XV). Domínio público. <a href=\"https://pedrohfernandes-klk.github.io/pt/m1/licao-m1-f06/\">Lição M1-F06</a></figcaption></figure>",
-     "new": " alt=\"Figura identificada como Fernão Lopes, Painéis de São Vicente (Nuno Gonçalves, século XV)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Figura identificada como Fernão Lopes, Painéis de São Vicente\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Figura identificada como Fernão Lopes, Painéis de São Vicente (Nuno Gonçalves, século XV). Domínio público.</p></details><figcaption>Figura identificada como Fernão Lopes, Painéis de São Vicente. <a href=\"https://pedrohfernandes-klk.github.io/pt/m1/licao-m1-f06/\">Lição M1-F06</a></figcaption></figure>",
+     "new": " alt=\"Figura identificada como Fernão Lopes, Painéis de São Vicente (Nuno Gonçalves, século XV)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Figura identificada como Fernão Lopes, Painéis de São Vicente\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Figura identificada como Fernão Lopes, <i>Painéis de São Vicente</i> (Nuno Gonçalves, século XV). Domínio público.</p></details><figcaption>Figura identificada como Fernão Lopes, <i>Painéis de São Vicente</i>. <a href=\"https://pedrohfernandes-klk.github.io/pt/m1/licao-m1-f06/\">Lição M1-F06</a></figcaption></figure>",
      "occurrences": 1
     },
     {
      "location": "P16, galeria «Para ver»: O cerco de Lisboa de 1384, iluminura das Crónicas de Froissa",
      "old": " alt=\"O cerco de Lisboa de 1384, iluminura das Crónicas de Froissart (século XV)\" loading=\"lazy\"><figcaption>O cerco de Lisboa de 1384, iluminura das Crónicas de Froissart (século XV). Domínio público. <a href=\"https://pedrohfernandes-klk.github.io/pt/m1/licao-m1-f06/\">Lição M1-F06</a></figcaption></figure>",
-     "new": " alt=\"O cerco de Lisboa de 1384, iluminura das Crónicas de Froissart (século XV)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: O cerco de Lisboa de 1384, iluminura das Crónicas de Froissart\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">O cerco de Lisboa de 1384, iluminura das Crónicas de Froissart (século XV). Domínio público.</p></details><figcaption>O cerco de Lisboa de 1384, iluminura das Crónicas de Froissart. <a href=\"https://pedrohfernandes-klk.github.io/pt/m1/licao-m1-f06/\">Lição M1-F06</a></figcaption></figure>",
+     "new": " alt=\"O cerco de Lisboa de 1384, iluminura das Crónicas de Froissart (século XV)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: O cerco de Lisboa de 1384, iluminura das Crónicas de Froissart\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">O cerco de Lisboa de 1384, iluminura das <i>Crónicas</i> de Froissart (século XV). Domínio público.</p></details><figcaption>O cerco de Lisboa de 1384, iluminura das <i>Crónicas</i> de Froissart. <a href=\"https://pedrohfernandes-klk.github.io/pt/m1/licao-m1-f06/\">Lição M1-F06</a></figcaption></figure>",
      "occurrences": 1
     },
     {
@@ -1060,7 +1060,7 @@
   },
   "m4/mapa-do-modulo-m4/index.html": {
    "base_sha256_lf": "5714358229f9d6392a97bde802b92f99d8d4fa26ceb84126bf7b75b2377e8679",
-   "after_sha256_lf": "295923a44be11d5675e8a292fe9b26a25b7c1961aef8ab04de19317789854023",
+   "after_sha256_lf": "da131690ab4ea79135d37da8032f420217d8636453e6ff7440f7f110359bef52",
    "edits": [
     {
      "location": "P16, galeria «Para ver»: Sermão de Santo António aos Peixes, em Sermoens.",
@@ -1089,7 +1089,7 @@
     {
      "location": "P16, galeria «Para ver»: Santo António a pregar aos peixes.",
      "old": " alt=\"Santo António a pregar aos peixes (Garcia Fernandes, c. 1535-1540, MNAA)\" loading=\"lazy\"><figcaption>Santo António a pregar aos peixes (Garcia Fernandes, c. 1535-1540, MNAA). Domínio público. <a href=\"https://pedrohfernandes-klk.github.io/pt/m4/licao-m4-f01/\">Lição M4-F01</a></figcaption></figure>",
-     "new": " alt=\"Santo António a pregar aos peixes (Garcia Fernandes, c. 1535-1540, MNAA)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Santo António a pregar aos peixes\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Santo António a pregar aos peixes (Garcia Fernandes, <span class=\"nb\">c. 1535-1540</span>, MNAA). Domínio público.</p></details><figcaption>Santo António a pregar aos peixes. <a href=\"https://pedrohfernandes-klk.github.io/pt/m4/licao-m4-f01/\">Lição M4-F01</a></figcaption></figure>",
+     "new": " alt=\"Santo António a pregar aos peixes (Garcia Fernandes, c. 1535-1540, MNAA)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Santo António a pregar aos peixes\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\"><i>Santo António a pregar aos peixes</i> (Garcia Fernandes, <span class=\"nb\">c. 1535-1540</span>, MNAA). Domínio público.</p></details><figcaption><i>Santo António a pregar aos peixes</i>. <a href=\"https://pedrohfernandes-klk.github.io/pt/m4/licao-m4-f01/\">Lição M4-F01</a></figcaption></figure>",
      "occurrences": 1
     },
     {
@@ -1119,7 +1119,7 @@
     {
      "location": "P16, galeria «Para ver»: Cícero denuncia Catilina no Senado.",
      "old": " alt=\"Cícero denuncia Catilina no Senado (Cesare Maccari, 1889)\" loading=\"lazy\"><figcaption>Cícero denuncia Catilina no Senado (Cesare Maccari, 1889). Domínio público. <a href=\"https://pedrohfernandes-klk.github.io/pt/m4/licao-m4-f10/\">Lição M4-F10</a></figcaption></figure>",
-     "new": " alt=\"Cícero denuncia Catilina no Senado (Cesare Maccari, 1889)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Cícero denuncia Catilina no Senado\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Cícero denuncia Catilina no Senado (Cesare Maccari, 1889). Domínio público.</p></details><figcaption>Cícero denuncia Catilina no Senado. <a href=\"https://pedrohfernandes-klk.github.io/pt/m4/licao-m4-f10/\">Lição M4-F10</a></figcaption></figure>",
+     "new": " alt=\"Cícero denuncia Catilina no Senado (Cesare Maccari, 1889)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Cícero denuncia Catilina no Senado\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\"><i>Cícero denuncia Catilina no Senado</i> (Cesare Maccari, 1889). Domínio público.</p></details><figcaption><i>Cícero denuncia Catilina no Senado</i>. <a href=\"https://pedrohfernandes-klk.github.io/pt/m4/licao-m4-f10/\">Lição M4-F10</a></figcaption></figure>",
      "occurrences": 1
     },
     {
@@ -1366,12 +1366,12 @@
   },
   "m6/mapa-do-modulo-m6/index.html": {
    "base_sha256_lf": "1dd6165268d3b5600344ae4528c3a49b6fbb1d1d63630fb44a462494414c15fd",
-   "after_sha256_lf": "1f51d61c4c543d0d43cb2589faf448792666c47abb3a39ef5cee0ab8be778943",
+   "after_sha256_lf": "cd4b8d4487e15b19e6eb31d6bbb1af39a736d09317af0a6ef2fc34a954f6183f",
    "edits": [
     {
      "location": "P16, galeria «Para ver»: Antero de Quental (fotografia, c. 1887).",
      "old": " alt=\"Antero de Quental (fotografia, c. 1887, publicada em In Memoriam, 1896)\" loading=\"lazy\"><figcaption>Antero de Quental (fotografia, c. 1887, publicada em In Memoriam, 1896). Domínio público. <a href=\"https://pedrohfernandes-klk.github.io/pt/m6/licao-m6-f01/\">Lição M6-F01</a></figcaption></figure>",
-     "new": " alt=\"Antero de Quental (fotografia, c. 1887, publicada em In Memoriam, 1896)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Antero de Quental (fotografia, c. 1887, publicada em In Memoriam, 1896)\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Antero de Quental (fotografia, <span class=\"nb\">c. 1887</span>, publicada em In Memoriam, 1896). Domínio público.</p></details><figcaption>Antero de Quental (fotografia, c. 1887). <a href=\"https://pedrohfernandes-klk.github.io/pt/m6/licao-m6-f01/\">Lição M6-F01</a></figcaption></figure>",
+     "new": " alt=\"Antero de Quental (fotografia, c. 1887, publicada em In Memoriam, 1896)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Antero de Quental (fotografia, c. 1887, publicada em In Memoriam, 1896)\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Antero de Quental (fotografia, <span class=\"nb\">c. 1887</span>, publicada em <i>In Memoriam</i>, 1896). Domínio público.</p></details><figcaption>Antero de Quental (fotografia, c. 1887). <a href=\"https://pedrohfernandes-klk.github.io/pt/m6/licao-m6-f01/\">Lição M6-F01</a></figcaption></figure>",
      "occurrences": 1
     },
     {
@@ -1420,7 +1420,7 @@
   },
   "m7/licao-m7-f01/index.html": {
    "base_sha256_lf": "4c4b808e7f1e935221072ef4e89f5b034a4efc2feb35bdc7aa9b9e428c42409f",
-   "after_sha256_lf": "7578c59d4d3e309c797886f69487acfaf11143962c03a85b755388bd9b307d56",
+   "after_sha256_lf": "a73b0afe58577ebd99d16857b435ec4616c31428e970323e5af61cb4349c5307",
    "edits": [
     {
      "location": "P10, Pessoa: a moldura da fotografia passa a div.moldura.com-i",
@@ -1437,14 +1437,14 @@
     {
      "location": "A peça comum do «i» (assets/info-i.css e assets/info-i.js)",
      "old": "</head>",
-     "new": "<link rel=\"stylesheet\" href=\"../../assets/info-i.css?v=20261105\"><script defer src=\"../../assets/info-i.js?v=20261105\"></script><style>/* 06/11/2026: revisão do pedido pt-2. A legenda junto da imagem, na faixa do «i» fechado. */@media screen and (max-width:1023.98px),screen and (max-height:559.98px){.jogo .ler .fig>.com-i:has(>details.info-i--linha:not([open])):has(+figcaption){margin-block-end:-44px}.jogo .ler .fig>.com-i:has(>details.info-i--linha)+figcaption{min-block-size:44px;padding-inline-end:52px;box-sizing:border-box}}</style></head>",
+     "new": "<link rel=\"stylesheet\" href=\"../../assets/info-i.css?v=20261105\"><script defer src=\"../../assets/info-i.js?v=20261105\"></script><style>/* 06/11/2026: revisão do pedido pt-2. A legenda junto da imagem, na faixa do «i» fechado, com a largura da imagem: parte antes do «i». */@media screen and (max-width:1023.98px),screen and (max-height:559.98px){.jogo .ler .fig:has(>.com-i>details.info-i--linha){inline-size:fit-content;max-inline-size:100%}.jogo .ler .fig>.com-i:has(>details.info-i--linha:not([open])):has(+figcaption){margin-block-end:-44px}.jogo .ler .fig>.com-i:has(>details.info-i--linha)+figcaption{min-block-size:44px;padding-inline-end:52px;box-sizing:border-box;contain:inline-size}}</style></head>",
      "occurrences": 1
     }
    ]
   },
   "m7/licao-m7-f05/index.html": {
    "base_sha256_lf": "557562933fca9c179cdaa210164e61e52c430909718ec0b146439066934c6f7a",
-   "after_sha256_lf": "272d1d7881ad3228403eb1b2ba6e72eb034dd34421aef45bdc44db89165a74df",
+   "after_sha256_lf": "2c5ab897f6f3f983f62371d41472817c997532041e1a87bb2817f8d9f3333397",
    "edits": [
     {
      "location": "P10, Pessoa: a moldura da fotografia passa a div.moldura.com-i",
@@ -1461,7 +1461,7 @@
     {
      "location": "A peça comum do «i» (assets/info-i.css e assets/info-i.js)",
      "old": "</head>",
-     "new": "<link rel=\"stylesheet\" href=\"../../assets/info-i.css?v=20261105\"><script defer src=\"../../assets/info-i.js?v=20261105\"></script><style>/* 06/11/2026: revisão do pedido pt-2. A legenda junto da imagem, na faixa do «i» fechado. */@media screen and (max-width:1023.98px),screen and (max-height:559.98px){.jogo .ler .fig>.com-i:has(>details.info-i--linha:not([open])):has(+figcaption){margin-block-end:-44px}.jogo .ler .fig>.com-i:has(>details.info-i--linha)+figcaption{min-block-size:44px;padding-inline-end:52px;box-sizing:border-box}}</style></head>",
+     "new": "<link rel=\"stylesheet\" href=\"../../assets/info-i.css?v=20261105\"><script defer src=\"../../assets/info-i.js?v=20261105\"></script><style>/* 06/11/2026: revisão do pedido pt-2. A legenda junto da imagem, na faixa do «i» fechado, com a largura da imagem: parte antes do «i». */@media screen and (max-width:1023.98px),screen and (max-height:559.98px){.jogo .ler .fig:has(>.com-i>details.info-i--linha){inline-size:fit-content;max-inline-size:100%}.jogo .ler .fig>.com-i:has(>details.info-i--linha:not([open])):has(+figcaption){margin-block-end:-44px}.jogo .ler .fig>.com-i:has(>details.info-i--linha)+figcaption{min-block-size:44px;padding-inline-end:52px;box-sizing:border-box;contain:inline-size}}</style></head>",
      "occurrences": 1
     }
    ]
@@ -1504,12 +1504,12 @@
   },
   "m7/m7-quatro-vozes-um-problema/index.html": {
    "base_sha256_lf": "8717f19deeeac713d14ea1950ae1dd56a9aa743b2df8fa88f2c405d085486689",
-   "after_sha256_lf": "a06f6a2754cd3d8159bd44a259b3c2f075e6977ab935376960e123cc145a33f6",
+   "after_sha256_lf": "d5604cc23821092f3ac4d5968b854ab11305b3174b400834cbaba2e6ff48d05c",
    "edits": [
     {
      "location": "P14, «Pensar devagar»: o fr-cred passa para o «i»; o fr-leg fica",
      "old": "<figure class=\\\"fig-rev inteira\\\"><span class=\\\"fr-moldura\\\"><img src=\\\"https://pedrohfernandes-klk.github.io/pt/img/fontes/orpheu-2-1915.jpg\\\" alt=\\\"A revista que trouxe o Modernismo a Portugal.\\\" loading=\\\"lazy\\\" decoding=\\\"async\\\"></span><figcaption><span class=\\\"fr-leg\\\">Orpheu, n.º 2, 1915: a revista onde as vozes saíram juntas.</span> <span class=\\\"fr-cred\\\">revista Orpheu. Domínio público. <a href=\\\"https://commons.wikimedia.org/wiki/File:Orpheu_2_-_1915.jpg\\\" rel=\\\"noopener\\\">commons.wikimedia.org</a></span></figcaption></figure>",
-     "new": "<figure class=\\\"fig-rev inteira\\\"><div class=\\\"fr-moldura com-i\\\"><img src=\\\"https://pedrohfernandes-klk.github.io/pt/img/fontes/orpheu-2-1915.jpg\\\" alt=\\\"A revista que trouxe o Modernismo a Portugal.\\\" loading=\\\"lazy\\\" decoding=\\\"async\\\"><details class=\\\"info-i\\\" name=\\\"info-i\\\"><summary aria-label=\\\"Créditos da imagem\\\"><span aria-hidden=\\\"true\\\">i</span></summary><p class=\\\"info-i-texto\\\">Revista Orpheu. Domínio público. <a href=\\\"https://commons.wikimedia.org/wiki/File:Orpheu_2_-_1915.jpg\\\" rel=\\\"noopener\\\">commons.wikimedia.org</a></p></details></div><figcaption><span class=\\\"fr-leg\\\">Orpheu, n.º 2, 1915: a revista onde as vozes saíram juntas.</span></figcaption></figure>",
+     "new": "<figure class=\\\"fig-rev inteira\\\"><div class=\\\"fr-moldura com-i\\\"><img src=\\\"https://pedrohfernandes-klk.github.io/pt/img/fontes/orpheu-2-1915.jpg\\\" alt=\\\"A revista que trouxe o Modernismo a Portugal.\\\" loading=\\\"lazy\\\" decoding=\\\"async\\\"><details class=\\\"info-i\\\" name=\\\"info-i\\\"><summary aria-label=\\\"Créditos da imagem\\\"><span aria-hidden=\\\"true\\\">i</span></summary><p class=\\\"info-i-texto\\\">Revista <i>Orpheu</i>. Domínio público. <a href=\\\"https://commons.wikimedia.org/wiki/File:Orpheu_2_-_1915.jpg\\\" rel=\\\"noopener\\\">commons.wikimedia.org</a></p></details></div><figcaption><span class=\\\"fr-leg\\\">Orpheu, n.º 2, 1915: a revista onde as vozes saíram juntas.</span></figcaption></figure>",
      "occurrences": 1
     },
     {
@@ -1522,7 +1522,7 @@
   },
   "m7/mapa-do-modulo-m7/index.html": {
    "base_sha256_lf": "47414ca258fa7259d46b90812819a75682716925fbb9375146c7e11168238c74",
-   "after_sha256_lf": "8e487f15299353a8958823f445fa1b7083bc591226a13089ace5c7fc6b68372f",
+   "after_sha256_lf": "9fcade48153df0f94489e68a1f710000d7ca98fd4a04336da29180a5315afb67",
    "edits": [
     {
      "location": "P10, Pessoa na galeria «Para ver»: o crédito passa para o «i»; o rótulo e «Lição M7-F01» ficam",
@@ -1629,7 +1629,7 @@
     {
      "location": "P16, galeria «Para ver»: Figura identificada como o Infante D. Henrique, Painéis de S",
      "old": " alt=\"Figura identificada como o Infante D. Henrique, Painéis de São Vicente (Nuno Gonçalves, século XV)\" loading=\"lazy\"><figcaption>Figura identificada como o Infante D. Henrique, Painéis de São Vicente (Nuno Gonçalves, século XV). Domínio público. <a href=\"https://pedrohfernandes-klk.github.io/pt/m7/licao-m7-f08/\">Lição M7-F08</a></figcaption></figure>",
-     "new": " alt=\"Figura identificada como o Infante D. Henrique, Painéis de São Vicente (Nuno Gonçalves, século XV)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Figura identificada como o Infante D. Henrique, Painéis de São Vicente\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Figura identificada como o Infante D. Henrique, Painéis de São Vicente (Nuno Gonçalves, século XV). Domínio público.</p></details><figcaption>Figura identificada como o Infante D. Henrique, Painéis de São Vicente. <a href=\"https://pedrohfernandes-klk.github.io/pt/m7/licao-m7-f08/\">Lição M7-F08</a></figcaption></figure>",
+     "new": " alt=\"Figura identificada como o Infante D. Henrique, Painéis de São Vicente (Nuno Gonçalves, século XV)\" loading=\"lazy\"><details class=\"info-i info-i--linha\" name=\"info-i\"><summary aria-label=\"Créditos da imagem: Figura identificada como o Infante D. Henrique, Painéis de São Vicente\"><span aria-hidden=\"true\">i</span></summary><p class=\"info-i-texto\">Figura identificada como o Infante D. Henrique, <i>Painéis de São Vicente</i> (Nuno Gonçalves, século XV). Domínio público.</p></details><figcaption>Figura identificada como o Infante D. Henrique, <i>Painéis de São Vicente</i>. <a href=\"https://pedrohfernandes-klk.github.io/pt/m7/licao-m7-f08/\">Lição M7-F08</a></figcaption></figure>",
      "occurrences": 1
     },
     {

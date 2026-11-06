@@ -214,6 +214,11 @@ A peça comum mudou em duas coisas, as duas vistas nas galerias. Na impressão, 
 - Decisão 152: espaço inseparável em «c. 1860» e nas outras datas aproximadas dentro dos «i» (já em `span.nb`) e em «H. C. White Co.» (P11). Nenhuma palavra muda.
 - P11 (dupla exposição): o «i» passa a 8 px da fotografia (9 px da caixa, por causa do 1 px de borda da moldura). Aberto, o crédito cobre boa parte da fotografia a 320 px (87 %); tocar num verso é um clique fora e fecha o crédito, por isso o exercício não fica preso.
 
+## Confirmação final (06/11/2026)
+
+- P10 (regressão da proximidade): nas lições M7-F01 e M7-F05, o «i» fica no canto direito da moldura da imagem, mais estreita do que a coluna, e a legenda, com a largura da coluna, passava por baixo dele e perdia a data (320 a 414 px, telemóvel deitado, 683 × 384). No estilo da página, a figura toma a largura da imagem (`inline-size:fit-content`) e a legenda não a alarga (`contain:inline-size`): parte antes do «i» e fica toda à vista, a 6 px da imagem. A partir de 1024 × 560 px nada muda (a legenda fica ao lado da imagem). O bloco 9 de `tests/browser_creditos_i.cjs` confere, a 320 × 568, 375 × 667, 390 × 800 e 844 × 390, que nenhuma linha da legenda toca no círculo do «i» nem no alvo de 44 px.
+- Itálico dos títulos: *Painéis de São Vicente*, *Crónicas*, *Santo António a pregar aos peixes*, *Cícero denuncia Catilina no Senado* e *In Memoriam* nas galerias «Para ver» (mapas M1, M4, M6 e M7), à vista e no «i» (o nome do «i» fica sem etiquetas); «Revista *Orpheu*.» e «*Crónicas* de Jean Froissart (iluminura).» nos «i» da P14; «*Cancioneiro da Biblioteca Nacional*, cópia do século XVI.» no «i» de M1-F01 (P7), como em M1-F04. Nenhuma palavra muda. `tests/test_creditos_i.py` confere o itálico onde o há (P14 exatamente; P7, P14 e P16 para estes títulos).
+
 ## Testes
 
 - Novos: `tests/test_creditos_i.py` (peça igual nos dois sítios, estrutura de cada «i», nenhum crédito longo à vista fora da lista fechada `tests/fixtures/creditos-a-vista-20261105.json`, «Parar o desenho» fora do «i») e `tests/browser_creditos_i.cjs` (ensaio e uma amostra de P7 e P9, no CI das lições).

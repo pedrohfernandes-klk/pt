@@ -16,6 +16,8 @@
 // imagem de dois exercícios «Olhar» (P15: «canto» em M4, «linha» no retrato de Pessoa em M7; o «i» liga ao creditoUrl) e a
 // galeria «Para ver» do mapa M8 (P16, «linha»; a ligação «Lição Mx-Fyy» fica à vista, fora do «i»). Na galeria do mapa M7 há agora
 // um «i» por figura: o caso da P10 olha só para a figura de Pessoa (a primeira); as outras são da P16, que o teste estático conta.
+// 06/11/2026: confirmação final do pedido pt-2: nas lições de Pessoa (P10, M7-F01 e M7-F05), a legenda à vista nunca passa por
+// baixo do «i» fechado (secção 9).
 const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),http=require('node:http');
 const {chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright'),root=path.resolve(__dirname,'..');
 const tipos={'.html':'text/html; charset=utf-8','.js':'text/javascript','.css':'text/css','.json':'application/json','.jpg':'image/jpeg','.jpeg':'image/jpeg','.png':'image/png','.webp':'image/webp','.svg':'image/svg+xml','.woff2':'font/woff2'};
@@ -254,6 +256,25 @@ try{
    // Com a legenda ao lado da imagem (a casca das lições, a partir de 1024 × 560 px), a folga mede-se na horizontal (22 px).
    assert(!r.open&&r.folga<=(r.lado?24:8)&&r.toca===0&&r.alvo,`${alvo.url} ${width} «i» ${i}: proximidade ${JSON.stringify(r)}`);
   }
+  await ctx.close();cenarios++;
+ }
+ // 9. 06/11/2026: confirmação final do pedido pt-2 (P10). Nas lições de Pessoa, o «i» fica no canto direito da moldura da imagem,
+ // mais estreita do que a coluna: com o «i» fechado, nenhuma caixa de linha da legenda («Fernando Pessoa, cerca de 1914.») toca no
+ // círculo do «i» nem no seu alvo de 44 px, e a legenda fica inteira, dentro do ecrã e junto da imagem. Em telemóvel de pé (320 × 568,
+ // 375 × 667, 390 × 800) e deitado (844 × 390).
+ for(const url of ['/pt/m7/licao-m7-f01/','/pt/m7/licao-m7-f05/'])for(const [width,height] of [[320,568],[375,667],[390,800],[844,390]]){
+  const ctx=await contexto(b,origem,{viewport:{width,height}}),p=await ctx.newPage(),onde=`${url} ${width}×${height}`;await p.goto(origem+url,{waitUntil:'networkidle'});
+  await p.locator('.jogo .ler .fig details.info-i--linha>summary').first().waitFor();
+  const r=await p.evaluate(()=>{const d=document.querySelector('.jogo .ler .fig details.info-i--linha');d.scrollIntoView({block:'center'});
+   const s=d.querySelector(':scope>summary'),c=s.querySelector(':scope>span').getBoundingClientRect(),a=s.getBoundingClientRect(),cap=d.parentElement.nextElementSibling,img=d.parentElement.querySelector('img').getBoundingClientRect();
+   const rg=document.createRange();rg.selectNodeContents(cap);const linhas=[...rg.getClientRects()].filter(t=>t.width>0&&t.height>0);
+   const toca=z=>linhas.filter(t=>!(t.right<=z.left||t.left>=z.right||t.bottom<=z.top||t.top>=z.bottom)).length;
+   return {open:d.open,tag:cap.tagName,texto:cap.textContent,linhas:linhas.length,circulo:toca(c),alvo:toca(a),dentro:linhas.every(t=>t.left>=-.5&&t.right<=innerWidth+.5),
+    folga:cap.getBoundingClientRect().top-img.bottom,rolagem:document.documentElement.scrollWidth>innerWidth+1}});
+  assert(!r.open&&r.tag==='FIGCAPTION'&&r.texto==='Fernando Pessoa, cerca de 1914.'&&r.linhas>=1,`${onde}: a legenda inteira, com o «i» fechado ${JSON.stringify(r)}`);
+  assert.equal(r.circulo,0,`${onde}: nenhuma linha da legenda toca no círculo do «i» ${JSON.stringify(r)}`);
+  assert.equal(r.alvo,0,`${onde}: nenhuma linha da legenda toca no alvo de 44 px do «i» ${JSON.stringify(r)}`);
+  assert(r.dentro&&!r.rolagem&&r.folga<=8,`${onde}: a legenda dentro do ecrã e junto da imagem ${JSON.stringify(r)}`);
   await ctx.close();cenarios++;
  }
  console.log(`PASS ${cenarios} cenários da peça «i» (ensaio, P7, P9 a P16)`);

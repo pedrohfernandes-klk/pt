@@ -80,6 +80,14 @@ P14_CREDITOS = {
     'm9/m9-de-quem-e-o-convento': 'Fotografia de Alvesgaspar, 2013. CC BY-SA 3.0. commons.wikimedia.org',
     'm9/m9-ver-e-nao-ver': 'Bartolomeu de Gusmão (fac-símile). Domínio público. commons.wikimedia.org',
 }
+# 06/11/2026: confirmação final do pedido pt-2. Os títulos de obras em itálico nos créditos da P14 que os têm (nenhuma palavra
+# muda: as letras continuam as de P14_CREDITOS); nos outros créditos da P14 não há itálico.
+P14_ITALICOS = {'m1/m1-promessa-do-cronista': ['Crónicas'], 'm7/m7-quatro-vozes-um-problema': ['Orpheu']}
+# 06/11/2026: confirmação final do pedido pt-2. Títulos de obras que ficavam em redondo nos créditos alterados (P7, P14 e P16): em
+# cada «i» das lições M1 e M4 (P7), dos «Pensar devagar» (P14) e das galerias «Para ver» (P16), e em cada legenda à vista das
+# galerias, cada ocorrência vive dentro de um <i>.
+TITULOS_ITALICO = ('Painéis de São Vicente', 'Crónicas', 'Santo António a pregar aos peixes', 'Cícero denuncia Catilina no Senado',
+                   'In Memoriam', 'Cancioneiro da Biblioteca Nacional', 'Orpheu')
 # Os quatro «Olhar» (P15): o campo credito, com os pontos médios passados a pontos finais (nenhuma palavra sai), e o creditoUrl,
 # que passa a viver no «i» (ligado a «Wikimedia Commons»).
 P15_OLHAR = {
@@ -284,6 +292,13 @@ def e_credito(no):
     return False
 
 
+def titulos_em_redondo(no):
+    """06/11/2026: os títulos de TITULOS_ITALICO que aparecem no texto de um nó (sem o summary do «i») fora de um <i>."""
+    texto = no.texto(lambda n: n.tag == 'summary')
+    italicos = [n.texto() for n in no.descendentes() if n.tag == 'i']
+    return [t for t in TITULOS_ITALICO if texto.count(t) != sum(i.count(t) for i in italicos)]
+
+
 def creditos_a_vista(raiz):
     """Cada elemento de crédito cujo texto próprio (sem os «i» e sem os elementos de crédito dentro dele) tem uma marca."""
     out = []
@@ -463,6 +478,8 @@ class CreditosI(unittest.TestCase):
                 self.assertTrue(e_i(ii) and 'info-i--linha' not in ii.classes(), 'o «i» («canto») na moldura')
                 self.assertEqual(ii.elementos()[0].attrs.get('aria-label'), 'Créditos da imagem')
                 self.assertEqual(ii.texto(lambda n: n.tag == 'summary'), credito[:1].upper() + credito[1:])
+                # 06/11/2026: confirmação final do pedido pt-2. E o itálico dos títulos, exatamente onde o há.
+                self.assertEqual([n.texto() for n in ii.descendentes() if n.tag == 'i'], P14_ITALICOS.get(pasta, []))
                 if 'CC BY' in credito:
                     self.assertTrue(any(a.tag == 'a' and a.attrs.get('rel') == 'license' for a in ii.descendentes()))
                 self.assertEqual(legenda.tag, 'figcaption')
@@ -516,11 +533,34 @@ class CreditosI(unittest.TestCase):
                     # exato do seu crédito (o que diz o que se vê e distingue duas imagens fica à vista; o crédito fica inteiro).
                     self.assertTrue(credito.startswith(P16_A_VISTA.get(visivel, visivel[:-1])), (rel, visivel, credito))
                     self.assertRegex(credito, r'^[^()]*(\([^()]*\)[^()]*)*' + LICENCA.pattern + r'( Fonte: [^.]+\.)?$')
+                    # 06/11/2026: confirmação final do pedido pt-2. Os títulos de obras em itálico, à vista e no «i»; o nome do «i»
+                    # continua sem etiquetas.
+                    self.assertEqual(titulos_em_redondo(legenda) + titulos_em_redondo(ii), [], (rel, visivel))
+                    self.assertNotRegex(nome, r'[<>]')
                     if 'CC BY' in credito:
                         self.assertTrue(any(a.tag == 'a' and a.attrs.get('rel') == 'license' and 'creativecommons.org/licenses/'
                                             in a.attrs.get('href', '') for a in ii.descendentes()), 'a ligação da licença')
                 self.assertEqual(len(set(nomes)), len(nomes), 'cada «i» da galeria tem o seu nome')
                 self.assertEqual(licoes, licoes_esperadas)
+
+    # 06/11/2026: confirmação final do pedido pt-2. Os títulos de obras em itálico no «i» das lições M1 e M4 (P7, e com elas a P12
+    # e a P13) e dos «Pensar devagar» (P14): «<i>Cancioneiro da Biblioteca Nacional</i>, cópia do século XVI.» em M1-F01, como em
+    # M1-F04; «<i>Crónicas</i> de Jean Froissart» e «Revista <i>Orpheu</i>». As galerias «Para ver» (P16) conferem-se em
+    # test_p16_galerias_para_ver_com_i.
+    def test_titulos_de_obras_em_italico_no_i(self):
+        vistos = set()
+        for rel, texto in paginas():
+            if not re.fullmatch(r'm[14]/licao-m[14]-f\d+/index\.html|m[1-9]/m[1-9]-[^/]+/index\.html', rel):
+                continue
+            for raiz in fragmentos(rel, texto):
+                for d in (n for n in raiz.descendentes() if e_i(n)):
+                    with self.subTest(pagina=rel):
+                        self.assertEqual(titulos_em_redondo(d), [])
+                    vistos.update(t for t in TITULOS_ITALICO if t in d.texto(lambda n: n.tag == 'summary'))
+        # O teste vê todos os títulos da lista, salvo «In Memoriam», que só está na galeria do mapa M6.
+        self.assertEqual(vistos, set(TITULOS_ITALICO) - {'In Memoriam'})
+        texto = (ROOT / 'm1/licao-m1-f01/index.html').read_text('utf-8')
+        self.assertEqual(texto.count('<i>Cancioneiro da Biblioteca Nacional</i>, cópia do século XVI. Domínio público.'), 1)
 
     def test_parar_o_desenho_fora_do_i(self):
         vistos = 0
