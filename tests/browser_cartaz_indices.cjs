@@ -21,7 +21,19 @@ const before=new Map(Object.entries(manifest.files).map(([f,rec])=>{let text=fs.
 const config=n=>JSON.parse(fs.readFileSync(path.join(root,`m${n}/index.html`),'utf8').match(/<script type="application\/json" id="cz-index-route">([\s\S]*?)<\/script>/)[1]);
 const server=http.createServer((q,r)=>{let url=new URL(q.url,'http://local'),isBefore=url.pathname.startsWith('/before/'),rel=decodeURIComponent(url.pathname.replace(/^\/(?:before\/)?pt\//,''));if(rel.endsWith('/'))rel+='index.html';let f=path.resolve(root,rel);if(!f.startsWith(root+path.sep)){r.writeHead(403);return r.end()}try{r.setHeader('content-type',({'.html':'text/html; charset=utf-8','.js':'text/javascript','.css':'text/css','.json':'application/json','.jpg':'image/jpeg','.png':'image/png','.webp':'image/webp','.svg':'image/svg+xml'})[path.extname(f)]||'application/octet-stream');r.end(isBefore&&before.has(rel)?before.get(rel):fs.readFileSync(f))}catch{r.writeHead(404);r.end()}});
 // 06/11/2026: decisão 148, a medida das bandas também lê a altura do título (o <h2> da unidade passou para a banda nos nove).
+// 06/11/2026: decisão 173, cada banda conta as linhas do próprio título de duas maneiras independentes (as caixas de linha do
+// texto, agrupadas pelo topo, e a altura do <h2> a dividir pela altura de linha calculada) e diz se o título está cortado:
+// conteúdo maior do que a caixa (scrollHeight/scrollWidth), reticências, line-clamp, título escondido ou fora da banda.
 function measure(){
+ // 06/11/2026: decisão 173, dentro de measure() para correr na página (page.evaluate só leva esta função).
+ function bandTitle(e){
+  const s=e.querySelector('summary'),t=s.querySelector('h2.cz-fold-t'),sr=s.getBoundingClientRect(),band={open:e.open,height:sr.height,title:null,lines:null,linesByHeight:null,lineHeight:null,clip:['sem título']};if(!t)return band;
+  const c=getComputedStyle(t),tr=t.getBoundingClientRect(),lineHeight=parseFloat(c.lineHeight),tops=[],walk=document.createTreeWalker(t,NodeFilter.SHOW_TEXT);let n;
+  while(n=walk.nextNode()){if(!n.textContent.trim())continue;const range=document.createRange();range.selectNodeContents(n);for(const r of range.getClientRects())if(r.width>0&&r.height>0)tops.push(r.top)}
+  tops.sort((a,b)=>a-b);const lines=[];for(const top of tops)if(!lines.length||top-lines[lines.length-1]>lineHeight/2)lines.push(top);
+  const clip=[];if(!t.checkVisibility({checkOpacity:true,checkVisibilityCSS:true}))clip.push('escondido');if(t.scrollHeight>t.clientHeight+1)clip.push('scrollHeight '+t.scrollHeight+'>'+t.clientHeight);if(t.scrollWidth>t.clientWidth+1)clip.push('scrollWidth '+t.scrollWidth+'>'+t.clientWidth);if(c.textOverflow==='ellipsis')clip.push('reticências');if(c.webkitLineClamp&&c.webkitLineClamp!=='none')clip.push('line-clamp '+c.webkitLineClamp);if(s.scrollHeight>s.clientHeight+1)clip.push('banda: scrollHeight '+s.scrollHeight+'>'+s.clientHeight);if(tr.top<sr.top-1||tr.bottom>sr.bottom+1||tr.left<sr.left-1||tr.right>sr.right+1)clip.push('título fora da banda');
+  return {...band,title:tr.height,lines:lines.length,linesByHeight:Math.round(tr.height/lineHeight),lineHeight,clip};
+ }
  const main=document.querySelector('main'),vis=e=>e.checkVisibility({checkOpacity:true,checkVisibilityCSS:true})&&e.getBoundingClientRect().width>1&&e.getBoundingClientRect().height>1&&!e.closest('[hidden],[aria-hidden="true"],.vh,.sr-only');
  const targets=[...main.querySelectorAll('a,button,summary,[role=button]')].filter(vis),small=targets.filter(e=>{const r=e.getBoundingClientRect();const pseudo=e.matches('.cz-credit a')?getComputedStyle(e,'::before'):null;return pseudo?(parseFloat(pseudo.width)<43.9||parseFloat(pseudo.height)<43.9):(r.width<43.9||r.height<43.9)}).map(e=>({text:e.textContent.trim().slice(0,70),class:e.className,w:e.getBoundingClientRect().width,h:e.getBoundingClientRect().height}));
  const leaves=[...main.querySelectorAll('*')].filter(e=>vis(e)&&[...e.childNodes].some(n=>n.nodeType===3&&n.textContent.trim()));
@@ -36,7 +48,8 @@ function measure(){
 
  const next=main.querySelector('[data-module-next]'),r=next.getBoundingClientRect();
  // 06/11/2026: decisão 148, cada banda devolve também a altura do seu título (para a medida exata das bandas no telemóvel).
- return {rootSize:parseFloat(getComputedStyle(document.documentElement).fontSize),height:document.documentElement.scrollHeight,overflow:Math.max(0,document.documentElement.scrollWidth-innerWidth),small,tiny,contrast,next:{href:next.getAttribute('href'),text:next.textContent.trim(),height:r.height,y:r.y,visible:vis(next)},counts:[...main.querySelectorAll('[data-prog]')].map(e=>e.textContent.replace(/ · /g,', ')),groups:[...main.querySelectorAll('.grupo-topo h2,summary h2.cz-fold-t')].map(e=>parseFloat(getComputedStyle(e).fontSize)),folds:[...main.querySelectorAll('details.cz-fold')].map(e=>({open:e.open,height:e.querySelector('summary').getBoundingClientRect().height,title:e.querySelector('summary h2.cz-fold-t')?.getBoundingClientRect().height??null})),states:[...main.querySelectorAll('[data-chip]')].map(e=>e.textContent.trim().replace(/^✓/,'')),images:[...main.querySelectorAll('img')].filter(vis).every(e=>e.complete&&e.naturalWidth>0)};
+ // 06/11/2026: decisão 173, e também as linhas do título contadas nas duas maneiras e o que o corta (bandTitle, acima).
+ return {rootSize:parseFloat(getComputedStyle(document.documentElement).fontSize),height:document.documentElement.scrollHeight,overflow:Math.max(0,document.documentElement.scrollWidth-innerWidth),small,tiny,contrast,next:{href:next.getAttribute('href'),text:next.textContent.trim(),height:r.height,y:r.y,visible:vis(next)},counts:[...main.querySelectorAll('[data-prog]')].map(e=>e.textContent.replace(/ · /g,', ')),groups:[...main.querySelectorAll('.grupo-topo h2,summary h2.cz-fold-t')].map(e=>parseFloat(getComputedStyle(e).fontSize)),folds:[...main.querySelectorAll('details.cz-fold')].map(bandTitle),states:[...main.querySelectorAll('[data-chip]')].map(e=>e.textContent.trim().replace(/^✓/,'')),images:[...main.querySelectorAll('img')].filter(vis).every(e=>e.complete&&e.naturalWidth>0)};
 }
 (async()=>{await new Promise(r=>server.listen(0,'127.0.0.1',r));const origin='http://127.0.0.1:'+server.address().port,browser=await chromium.launch({headless:true,...(process.env.CHROME_PATH?{executablePath:process.env.CHROME_PATH}:{})}),rows=[],quality=[];if(out)fs.mkdirSync(out,{recursive:true});let cases=0;
 try{
@@ -77,7 +90,11 @@ for(const n of [1,2,3,4,5,6,7,8,9])for(const width of [320,390,768,1024,1366])fo
    if(mode==='projection')assert.equal(await p.evaluate(()=>document.querySelector('main').getAnimations({subtree:true}).length),0,'projeção parada');
    // 06/11/2026: decisão 148, exato nos nove (sem «+34 px por linha»): sai o «>= 88» do M4 e a banda tem 72 px abaixo de 360 px e
    // 88 px a partir daí, em todos os índices, como antes do #166.
-   if(width<640&&mode==='normal')assert(pair.after.folds.every(f=>f.height===(width<360?72:88)),'bandas de 72 ou 88 px: '+JSON.stringify(pair.after.folds));
+   // 06/11/2026: decisão 173, a banda cresce para mostrar o título inteiro, como o M4 publicado: 72 px abaixo de 360 px ou 88 px,
+   // mais exatamente 34 px (a altura de linha do título) por cada linha a mais do título, contada no próprio título.
+   if(width<640&&mode==='normal')assert(pair.after.folds.every(f=>f.lines>=1&&f.lines===f.linesByHeight&&f.lineHeight===34&&f.height===(width<360?72:88)+34*(f.lines-1)),'bandas de 72 ou 88 px, mais 34 px por linha a mais do título: '+JSON.stringify(pair.after.folds));
+   // 06/11/2026: decisão 173, o título da banda nunca é cortado, encurtado com reticências nem escondido, em nenhuma largura nem modo.
+   assert(pair.after.folds.length>0&&pair.after.folds.every(f=>f.title>0&&f.lines>=1&&f.lines===f.linesByHeight&&f.clip.length===0),'título inteiro na banda: '+JSON.stringify(pair.after.folds));
    for(const key of ['small','tiny','contrast'])if(pair.after[key].length)quality.push({n,width,theme,mode,state,key,problems:pair.after[key]});
   }
   await ctx.close();

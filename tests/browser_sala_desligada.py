@@ -265,6 +265,10 @@ def indice_e_desafio(browser, host):
     # 01/11/2026: o desafio do M3 passou ao arquivo; abrir pelo percurso visível, sem dispensar a gravação nem a vigilância da rede.
     # 03/11/2026: no piloto M4 os materiais abrem dentro dos recursos nativos (06/11/2026: deixou de valer com a decisão 148).
     # 06/11/2026: decisão 148, o acesso do docente volta a flutuar nos nove, fora de «Recursos do módulo»: abre-se logo, sem exceção.
+    # 06/11/2026: decisão 173, a 390 px o acesso do docente está no menu «Recursos do módulo», que se abre primeiro.
+    assert page.locator('main > details.cz-recursos .route-teacher-tools').count() == 1
+    assert not page.locator('.cz-recursos').evaluate('e=>e.open')
+    page.locator('.cz-recursos > summary').click()
     page.locator('.route-teacher-tools > summary').click()
     page.locator('.route-teacher-tools a[href="?arquivo=1#arquivo-percurso"]').click()
     page.wait_for_url('**/?arquivo=1#arquivo-percurso')

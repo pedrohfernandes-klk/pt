@@ -203,6 +203,8 @@ class Camada148(unittest.TestCase):
                 self.assertRegex(main[fim:], r'^<figure class="doc">.*?<figcaption class="cz-credit">.*?'
                                              r'(Domínio público|CC BY-SA 2\.0)\.</figcaption></figure>')
                 # O acesso do docente flutua, fora do <main>, como sempre: um só, com os quatro materiais.
+                # 06/11/2026: decisão 173, no HTML continua fora do <main> (e assim fica sem JavaScript); abaixo de 640 px é
+                # cartaz-indice-comum.js que o põe no menu «Recursos do módulo» (ver test_estilos_e_script_comuns).
                 fora = s[s.index('</main>'):]
                 self.assertEqual(s.count('class="route-teacher-tools"'), 1)
                 self.assertEqual(fora.count('<details class="route-teacher-tools"><summary class="teacher-access" '
@@ -226,6 +228,19 @@ class Camada148(unittest.TestCase):
         # Os botões flutuantes de sempre, com 48 px; nenhum lugar para eles dentro dos recursos.
         self.assertIn('body:has(main[data-cz-indice]) .teacher-access{width:48px;height:48px;}', css)
         self.assertNotIn('.cz-recursos .teacher-access', css)
+        # 06/11/2026: decisão 173. Abaixo de 640 px, o script muda de sítio os dois botões que já existem (o modo noturno para a
+        # barra de cima, nav.migalhas; o acesso do docente para .cz-docente, dentro de «Recursos do módulo») e devolve-os ao
+        # sítio de sempre a partir de 640 px, onde voltam a flutuar; o CSS desses lugares é só para o ecrã (a impressão não muda).
+        self.assertIn("window.matchMedia('(max-width: 639px)')", js)
+        self.assertIn("bar.appendChild(slot)", js)
+        self.assertIn("slot.setAttribute('data-appearance-floating', '')", js)
+        self.assertIn("holder.className = 'cz-docente'", js)
+        self.assertIn('resources.appendChild(holder)', js)
+        self.assertIn('@media screen and (max-width:639px){\n', css)
+        self.assertIn('body:has(main[data-cz-indice]) nav.migalhas>[data-appearance-control]>.epi-appearance-toggle{width:48px;'
+                      'height:48px;min-width:48px;min-height:48px;margin:0;border-color:transparent;}', css)
+        self.assertIn('@media screen{\n/* 06/11/2026: decisão 173, o acesso do docente dentro dos recursos', css)
+        self.assertIn('main.cz-index[data-cz-indice] .cz-docente summary.teacher-access{position:relative;', css)
         self.assertNotIn('m4-device', css)
         # A camada do piloto continua a poder desfazer-se: os ficheiros dele ficam como estavam.
         self.assertTrue((ROOT / 'assets/cartaz-m4-piloto.css').is_file())

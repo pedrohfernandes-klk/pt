@@ -189,6 +189,47 @@ html:has(main[data-cz-indice].cz-sala) body.pt-module-layout main.cz-index[data-
 @media (max-width:359px){
 body.pt-module-layout main.cz-index[data-cz-indice] .cz-fold>summary{padding:.5rem 0;}
 }
+/* 06/11/2026: decisão 173. Abaixo de 640 px nada flutua por cima do texto: cartaz-indice-comum.js põe o modo noturno na
+   barra de cima (nav.migalhas, a seguir ao botão de projetar) e o acesso do docente no menu «Recursos do módulo» (dentro de
+   .cz-docente), como no M4 publicado. A partir de 640 px os dois flutuam como antes (as regras acima não mudam). Só no
+   ecrã: a impressão fica como estava. */
+@media screen{
+/* 06/11/2026: decisão 173, o acesso do docente dentro dos recursos: no fluxo, o mesmo botão de 48 px e o mesmo menu dos
+   materiais por baixo dele; no M3, no M5 e no M6, a ligação direta aos guiões fica por baixo do botão, como estava. Sem o
+   fundo de botão flutuante (no escuro, a página tem outro fundo e o quadrado via-se), como as ligações do menu. */
+body.pt-module-layout main.cz-index[data-cz-indice] .cz-docente{position:relative;margin:0 0 16px;}
+body.pt-module-layout main.cz-index[data-cz-indice] .cz-docente>details.route-teacher-tools{margin:0;}
+body.pt-module-layout main.cz-index[data-cz-indice] .cz-docente .teacher-access{background:transparent;}
+body.pt-module-layout main.cz-index[data-cz-indice] .cz-docente summary.teacher-access{position:relative;inset:auto;z-index:1;cursor:pointer;}
+body.pt-module-layout main.cz-index[data-cz-indice] .cz-docente>a.teacher-access{position:absolute;inset:0 auto auto 0;z-index:0;}
+body.pt-module-layout main.cz-index[data-cz-indice] .cz-docente summary.teacher-access+nav{padding:8px 0 0;}
+body.pt-module-layout main.cz-index[data-cz-indice] .cz-docente summary.teacher-access+nav p{margin:0;}
+body.pt-module-layout main.cz-index[data-cz-indice] .cz-docente summary.teacher-access+nav a{display:inline-flex;align-items:center;min-height:48px;padding:8px 0;font:700 1rem/1.5 Arial;color:var(--tinta);text-decoration:underline;text-underline-offset:5px;}
+}
+@media screen and (max-width:639px){
+/* 06/11/2026: decisão 173, o modo noturno na barra de cima, com o alvo de 48 px e o contorno de foco branco da barra. Na
+   barra preta (igual nos dois temas) tem o desenho do botão de projetar que está ao lado: fundo transparente e ícone branco,
+   com o contorno só ao passar o rato; o ponto do «ligado» usa o acento do escuro, que se vê sobre o preto. Mudam só as
+   variáveis de cor dentro do botão (appearance.css continua a mandar no resto). */
+body:has(main[data-cz-indice]) nav.migalhas:has(>[data-appearance-control]){gap:4px;}
+body:has(main[data-cz-indice]) nav.migalhas>[data-appearance-control]{--papel:transparent;--tinta:#fff;--acento:#e0876f;flex:0 0 48px;width:48px;height:48px;margin:0;}
+body:has(main[data-cz-indice]) nav.migalhas>[data-appearance-control]>.epi-appearance-toggle{width:48px;height:48px;min-width:48px;min-height:48px;margin:0;border-color:transparent;}
+body:has(main[data-cz-indice]) nav.migalhas>[data-appearance-control]>.epi-appearance-toggle:hover{border-color:#fff;}
+body:has(main[data-cz-indice]) nav.migalhas>[data-appearance-control]>.epi-appearance-toggle:focus-visible{outline-color:#fff;outline-offset:2px;}
+/* 06/11/2026: decisão 173, sem JavaScript o acesso do docente não muda de sítio: fica no fim da página, no fluxo, sem tapar
+   texto (a ligação direta do M3, do M5 e do M6 por baixo do botão, como estava). */
+body:has(main[data-cz-indice])>details.route-teacher-tools{margin:0 16px 24px;}
+body:has(main[data-cz-indice])>details.route-teacher-tools>summary.teacher-access{position:relative;inset:auto;z-index:1;}
+body:has(main[data-cz-indice])>a.teacher-access{position:relative;inset:auto;z-index:0;margin:0 16px -48px;}
+}
+@media screen and (max-width:359px){
+/* 06/11/2026: decisão 173, abaixo de 360 px as migalhas apertam os separadores e a margem da direita para caberem, numa
+   linha, ao lado do botão de projetar e do modo noturno (a barra continua com 64 px; o texto não muda nem se corta). */
+body:has(main[data-cz-indice]) nav.migalhas:has(>[data-appearance-control]){padding-right:8px;}
+body:has(main[data-cz-indice]) nav.migalhas:has(>[data-appearance-control])>ol{gap:0;}
+body:has(main[data-cz-indice]) nav.migalhas:has(>[data-appearance-control]) li+li::before{padding:0 4px 0 3px;}
+body:has(main[data-cz-indice]) nav.migalhas:has(>[data-appearance-control]) a{gap:4px;}
+}
 @media print{
 body.pt-module-layout main.cz-index[data-cz-indice]{max-width:none;padding:0;}
 .cz-recursos,.unit-index,[data-module-next]{display:none;}
