@@ -18,6 +18,8 @@ from html.parser import HTMLParser
 from pathlib import Path
 
 from auditoria_20261028 import undo_cartaz_148_0611
+# 07/11/2026: por cima desta camada ficam os acertos da decisão 173 (camada indices_acertos_20261107).
+from auditoria_20261028 import undo_acertos_0711
 
 ROOT = Path(__file__).resolve().parents[1]
 CAMADA = ROOT / 'scripts/cartaz_indices_148_20261106.json'
@@ -72,9 +74,12 @@ class Inventario(HTMLParser):
 class Camada148(unittest.TestCase):
     def test_camada_mais_recente_fechada_e_reversivel(self):
         # A camada mais recente confere-se sem nada por cima, com as contagens exatas do manifesto.
+        # 07/11/2026: por cima dela ficam os acertos da decisão 173 (indices_acertos_20261107), que se desfazem primeiro, com a
+        # mesma exigência; as contagens e a reversibilidade desta camada conferem-se como antes.
         r = subprocess.run([sys.executable, 'scripts/aplicar_trocas.py', str(CAMADA.relative_to(ROOT)), '--manifesto',
-                            str(MANIFESTO.relative_to(ROOT)), '--verificar'], cwd=ROOT, capture_output=True, text=True,
-                           encoding='utf-8')
+                            str(MANIFESTO.relative_to(ROOT)), '--verificar',
+                            '--desfazer-antes', 'tests/fixtures/indices-acertos-edits-20261107.json'],  # 07/11/2026: acertos por cima.
+                           cwd=ROOT, capture_output=True, text=True, encoding='utf-8')
         self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
         self.assertIn('92 trocas em 9 ficheiros: 92 aplicadas, 0 por aplicar; manifesto em dia.', r.stdout)
         manifesto = json.loads(MANIFESTO.read_text('utf-8'))
@@ -95,7 +100,8 @@ class Camada148(unittest.TestCase):
             for e in edits:
                 self.assertEqual(refeito.count(e['old']), e['occurrences'], (rel, e['location']))
                 refeito = refeito.replace(e['old'], e['new'])
-            self.assertEqual(refeito, atual, rel)
+            # 07/11/2026: a página publicada com os acertos da decisão 173 desfeitos (a camada por cima desta), letra a letra.
+            self.assertEqual(refeito, undo_acertos_0711(rel, atual), rel)
 
     def test_gerador_da_o_mesmo_json(self):
         spec = importlib.util.spec_from_file_location('cartaz_indices_148', ROOT / 'scripts/cartaz_indices_148_20261106.py')
@@ -109,8 +115,10 @@ class Camada148(unittest.TestCase):
             import verificar_camadas
         finally:
             sys.path.pop(0)
-        self.assertEqual(verificar_camadas.LAYERS[0], ('cartaz_indices_148_20261106', 'cartaz-indices-148-edits-20261106'))
-        self.assertEqual(verificar_camadas.LAYERS[1], ('creditos_i_20261105', 'creditos-i-edits-20261105'))
+        # 07/11/2026: os acertos da decisão 173 ficam por cima (primeira camada); esta passa a segunda, logo por baixo deles.
+        self.assertEqual(verificar_camadas.LAYERS[0], ('indices_acertos_20261107', 'indices-acertos-edits-20261107'))
+        self.assertEqual(verificar_camadas.LAYERS[1], ('cartaz_indices_148_20261106', 'cartaz-indices-148-edits-20261106'))
+        self.assertEqual(verificar_camadas.LAYERS[2], ('creditos_i_20261105', 'creditos-i-edits-20261105'))
         auditoria = ler('tests/auditoria_20261028.py')
         corpo = auditoria[auditoria.index('def undo_creditos_i_0511'):]
         self.assertLess(corpo.index('undo_cartaz_148_0611(path, text)'), corpo.index('_CREDITOS_I_0511.get('))
@@ -130,7 +138,9 @@ class Camada148(unittest.TestCase):
         for rel in NOVE:
             with self.subTest(indice=rel):
                 atual = ler(rel)
-                antes, depois = Inventario(undo_cartaz_148_0611(rel, atual)), Inventario(atual)
+                # 07/11/2026: o «depois» desta camada é a página com os acertos da decisão 173 desfeitos (o que eles mudam confere-se
+                # em tests/test_indices_acertos_20261107.py).
+                antes, depois = Inventario(undo_cartaz_148_0611(rel, atual)), Inventario(undo_acertos_0711(rel, atual))
                 self.assertEqual(antes.ids, depois.ids)
                 estilos = ('cartaz-indices.css', 'cartaz-m4-piloto.css', 'cartaz-indice-comum.css')
                 self.assertEqual(Counter(x for x in antes.hrefs if x.split('?')[0].rsplit('/', 1)[-1] not in estilos),
@@ -168,7 +178,8 @@ class Camada148(unittest.TestCase):
             with self.subTest(indice=rel):
                 main = s[s.index('<main'):s.index('</main>')]
                 self.assertEqual(s.count('<main data-cartaz="2" class="cz-index" data-cz-indice="20261106">'), 1)
-                self.assertEqual(s.count('<link rel="stylesheet" href="../assets/cartaz-indice-comum.css?v=20261106">'), 1)
+                # 07/11/2026: o CSS comum na versão dos acertos da decisão 173 (camada indices_acertos_20261107).
+                self.assertEqual(s.count('<link rel="stylesheet" href="../assets/cartaz-indice-comum.css?v=20261107">'), 1)
                 self.assertEqual(s.count('<script src="../assets/cartaz-indice-comum.js?v=20261106"></script></body>'), 1)
                 for antigo in ('cartaz-indices.css', 'cartaz-m4-piloto', 'data-m4-piloto', 'm4-recursos', 'm4-unit-body',
                                'm4-device', 'm4-resource-links', '<span class="cz-fold-t">', 'data-appearance-control'):
@@ -209,7 +220,10 @@ class Camada148(unittest.TestCase):
                 self.assertEqual(s.count('class="route-teacher-tools"'), 1)
                 self.assertEqual(fora.count('<details class="route-teacher-tools"><summary class="teacher-access" '
                                             'aria-label="Abrir materiais do docente" title="Para o docente">'), 1)
-                self.assertIn('<nav aria-label="Materiais do docente" style="position:fixed;left:12px;bottom:64px;', fora)
+                # 07/11/2026: acertos da decisão 173, o lugar flutuante do menu (position:fixed;left:12px;bottom:64px) passou do style
+                # do HTML para o CSS comum (ver test_estilos_e_script_comuns e tests/test_indices_acertos_20261107.py).
+                self.assertIn('<nav aria-label="Materiais do docente" style="z-index:1001;max-width:calc(100vw - 24px);', fora)
+                self.assertNotIn('position:fixed', re.search(r'<nav aria-label="Materiais do docente" style="([^"]*)"', fora).group(1))
                 self.assertEqual(len(re.findall(r'<nav aria-label="Materiais do docente".*?</nav>', fora, re.S)[0]
                                      .split('<p><a ')), 5)
 
@@ -262,6 +276,11 @@ class Camada148(unittest.TestCase):
                       'height:48px;min-width:48px;min-height:48px;margin:0;border-color:transparent;}', css)
         self.assertIn('@media screen{\n/* 06/11/2026: decisão 173, o acesso do docente dentro dos recursos', css)
         self.assertIn('main.cz-index[data-cz-indice] .cz-docente summary.teacher-access{position:relative;', css)
+        # 07/11/2026: acertos da decisão 173, o lugar flutuante do menu dos materiais no fim do <body> (era o style do HTML) e,
+        # sem JavaScript abaixo de 640 px, o menu no fluxo.
+        self.assertIn('body:has(main[data-cz-indice])>details.route-teacher-tools>summary.teacher-access+nav{position:fixed;left:12px;'
+                      'bottom:64px;}', css)
+        self.assertIn('body:has(main[data-cz-indice])>details.route-teacher-tools>summary.teacher-access+nav{position:static;}', css)
         self.assertNotIn('m4-device', css)
         # A camada do piloto continua a poder desfazer-se: os ficheiros dele ficam como estavam.
         self.assertTrue((ROOT / 'assets/cartaz-m4-piloto.css').is_file())

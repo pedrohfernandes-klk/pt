@@ -312,7 +312,22 @@ _CREDITOS_I_0511 = json.loads((ROOT/'tests/fixtures/creditos-i-edits-20261105.js
 # créditos atrás de um «i»): desfaz-se antes deles, com contagem estrita.
 _CARTAZ_148_0611 = json.loads((ROOT/'tests/fixtures/cartaz-indices-148-edits-20261106.json').read_text('utf-8'))['files']
 
+# 07/11/2026: os três acertos dos índices deixados pela decisão 173 (acesso do docente repetido no M3, no M5 e no M6, «·» nas
+# contagens do M8 e do M9, menu dos materiais sem JavaScript), camada mais recente (por cima do desenho comum dos índices):
+# desfaz-se antes dele, com contagem estrita.
+_ACERTOS_0711 = json.loads((ROOT/'tests/fixtures/indices-acertos-edits-20261107.json').read_text('utf-8'))['files']
+
+def undo_acertos_0711(path, text):
+    for edit in reversed(_ACERTOS_0711.get(_relative(path), {}).get('edits', [])):
+        if text.count(edit['new']) != edit['occurrences']:
+            raise AssertionError(f"Acertos dos índices (decisão 173) não conferem: {path}: {edit['location']}")
+        text = text.replace(edit['new'], edit['old'])
+    return text
+
+
 def undo_cartaz_148_0611(path, text):
+    # 07/11/2026: primeiro os acertos dos índices deixados pela decisão 173, que estão por cima.
+    text = undo_acertos_0711(path, text)
     for edit in reversed(_CARTAZ_148_0611.get(_relative(path), {}).get('edits', [])):
         if text.count(edit['new']) != edit['occurrences']:
             raise AssertionError(f"Desenho comum dos índices (decisão 148) não confere: {path}: {edit['location']}")
