@@ -1,0 +1,265 @@
+{
+  "sessao": "s18",
+  "versao": 1,
+  "titulo": "Conto: o que o texto deixa por dizer",
+  "cartoes": [
+    {
+      "t": "ler",
+      "rot": "Abre",
+      "titulo": "Aquecer",
+      "html": "<p class=\"abre-t\">Conto: o que o texto deixa por dizer</p><p><b>Objetivo:</b> fundamentar inferências em «George».</p><p>Doze cartões, dez minutos. A seguir, voltas à sessão para ler e escrever no caderno.</p>",
+      "recycledFrom": "/pt/exame/",
+      "adaptacao": "Cartão de abertura da sessão (02/11/2026)."
+    },
+    {
+      "p": "O que acontece em «George», conto de Maria Judite de Carvalho?",
+      "f": "Em «George», uma mulher encontra-se com as outras idades de si mesma; a carta aos filhos e a travessia do mar pela paz não pertencem a este conto.",
+      "legacyId": "s18-q1",
+      "recycledFrom": "/pt/m8/licao-m8-f08/",
+      "t": "escolha",
+      "o": [
+        "Uma mulher encontra-se jovem e velha.",
+        "Uma mulher escreve aos filhos adultos.",
+        "Uma mulher atravessa o mar pela paz."
+      ],
+      "c": 0,
+      "fe": [
+        null,
+        "O encontro entre idades não é uma carta aos filhos.",
+        "A viagem marítima não corresponde à situação apresentada no conto."
+      ]
+    },
+    {
+      "t": "emparelhar",
+      "p": "Liga cada traço à idade a que pertence.",
+      "pares": [
+        [
+          "A rapariga que George foi",
+          "Gi"
+        ],
+        [
+          "A velha que George vai ser",
+          "Georgina"
+        ],
+        [
+          "Chega do lado da memória",
+          "Gi"
+        ],
+        [
+          "Chega do lado do futuro",
+          "Georgina"
+        ]
+      ],
+      "f": "Gi é a juventude que ficou para trás; Georgina, a velhice que ainda há de vir; George está no meio.",
+      "recycledFrom": "/pt/m8/licao-m8-f08/",
+      "sourceCard": 4,
+      "fe": "Trocaste as idades. Gi é a rapariga que George foi e chega do lado da memória; Georgina é a velha que George vai ser e chega do lado do futuro."
+    },
+    {
+      "t": "sublinhar",
+      "p": "Toca nos dois nomes das outras idades de George.",
+      "frase": "No conto, George encontra Gi e Georgina.",
+      "certas": [
+        4,
+        6
+      ],
+      "f": "Gi é a rapariga que George foi; Georgina, a velha que vai ser.",
+      "recycledFrom": "/pt/m8/licao-m8-f08/",
+      "sourceCard": 7,
+      "fe": "Marcaste George, que é a mulher do meio. As outras idades são a rapariga que ela foi e a velha que vai ser: os dois nomes que ela encontra."
+    },
+    {
+      "t": "completar",
+      "p": "O que escreveu sobretudo Maria Judite de Carvalho, e como?",
+      "frase": "Maria Judite de Carvalho escreveu sobretudo [1], numa escrita contida que prefere a [2] à explicação.",
+      "lacunas": [
+        {
+          "o": [
+            "narrativas breves",
+            "narrativas extensas",
+            "poesia narrativa"
+          ],
+          "c": 0,
+          "fe": [
+            null,
+            "As narrativas de Maria Judite de Carvalho são breves; o conto, como «George», concentra tempo, espaço e ação.",
+            "Escreveu sobretudo prosa: contos e outras narrativas breves."
+          ]
+        },
+        {
+          "o": [
+            "sugestão",
+            "descrição",
+            "repetição"
+          ],
+          "c": 0,
+          "fe": [
+            null,
+            "A descrição pode estar presente; o que a escrita contida prefere à explicação é sugerir.",
+            "A repetição não é o traço desta escrita; o que ela prefere à explicação é a sugestão."
+          ]
+        }
+      ],
+      "f": "**Narrativas breves**, numa escrita contida que prefere a **sugestão** à explicação.",
+      "recycledFrom": "/pt/m8/licao-m8-f08/",
+      "sourceCard": 8,
+      "fe": "Trocaste o género ou o traço da escrita. Maria Judite de Carvalho escreveu sobretudo narrativas breves, numa escrita contida que sugere em vez de explicar."
+    },
+    {
+      "p": "Ao interpretar uma omissão num conto, qual é o procedimento mais seguro?",
+      "f": "Inferir exige apoio textual. Uma hipótese plausível não deve ser apresentada como uma informação explícita.",
+      "legacyId": "s18-q2",
+      "recycledFrom": "/pt/m8/licao-m8-f08/",
+      "t": "escolha",
+      "o": [
+        "Relacionar pistas e delimitar dúvidas.",
+        "Inventar episódios e tomá-los por factos.",
+        "Ignorar os indícios que o texto sugere."
+      ],
+      "c": 0,
+      "fe": [
+        null,
+        "Uma hipótese tua não se torna um episódio comprovado.",
+        "Omitir não torna irrelevantes as pistas implícitas."
+      ]
+    },
+    {
+      "t": "escolha",
+      "p": "No exemplo inventado _Rita encontrou numa gaveta uma carta que julgava ter queimado. Ficou com ela na mão, sem a abrir._, que leitura não ultrapassa as pistas?",
+      "o": [
+        "Rita achou a carta que julgava destruída; a razão de não a abrir é desconhecida.",
+        "Rita manteve a carta fechada porque se arrependeu de a ter escrito há muitos anos.",
+        "Rita reconheceu imediatamente o conteúdo da carta, sem precisar sequer de a abrir."
+      ],
+      "c": 0,
+      "fe": [
+        null,
+        "A recusa de abrir a carta pode ter várias razões; o arrependimento não é identificado como causa.",
+        "Não abrir a carta não demonstra que Rita conhece o conteúdo. A informação disponível é mais limitada."
+      ],
+      "f": "O texto mostra **a carta encontrada** e o facto de Rita **não a abrir**. O motivo do gesto fica por explicar. Formular hipóteses é legítimo; apresentá-las como factos, sem indícios, não é. É um exemplo criado para o treino, não um excerto de «George».",
+      "recycledFrom": "/pt/m8/licao-m8-f08/",
+      "sourceCard": 8,
+      "adaptacao": "Cartão da lição de origem, no lugar de um cartão repetido ou trivial (02/11/2026)."
+    },
+    {
+      "t": "completar",
+      "p": "Como se chamam as duas maneiras de dar as falas no conto?",
+      "frase": "As palavras da personagem, com travessão ou aspas, são [1]; o narrador a contar o que foi dito é [2].",
+      "lacunas": [
+        {
+          "o": [
+            "discurso direto",
+            "discurso indireto",
+            "monólogo interior"
+          ],
+          "c": 0,
+          "fe": [
+            null,
+            "No indireto é o narrador quem conta o que foi dito; com travessão ou aspas, as palavras são da própria personagem: discurso direto.",
+            "O monólogo interior dá o pensamento sem marcas de fala; com travessão ou aspas, a personagem fala: discurso direto."
+          ]
+        },
+        {
+          "o": [
+            "discurso indireto",
+            "discurso direto",
+            "monólogo interior"
+          ],
+          "c": 0,
+          "fe": [
+            null,
+            "No direto ouve-se a personagem, com travessão ou aspas; quando é o narrador a contar o que foi dito, é discurso indireto.",
+            "O monólogo interior é o pensamento da personagem; o narrador a contar o que foi dito faz discurso indireto."
+          ]
+        }
+      ],
+      "f": "**Direto**: a personagem fala; **indireto**: o narrador conta.",
+      "recycledFrom": "/pt/m8/licao-m8-f08/",
+      "sourceCard": 12,
+      "fe": "Trocaste as duas maneiras de dar as falas. Com travessão ou aspas, fala a personagem; quando o narrador conta o que ela disse, é indireto."
+    },
+    {
+      "t": "completar",
+      "p": "O que significam concentração de tempo e de espaço e unidade de ação?",
+      "frase": "Por concentração de tempo e de espaço entende-se [1] e por unidade de ação entende-se [2] numa narrativa breve.",
+      "lacunas": [
+        {
+          "o": [
+            "pouco tempo, poucos lugares",
+            "muitos anos e muitos lugares",
+            "tempo e espaço sem limites"
+          ],
+          "c": 0,
+          "fe": [
+            null,
+            "Muitos anos e muitos lugares é o romance; o conto concentra: pouco tempo, poucos lugares.",
+            "É o contrário: concentração quer dizer pouco tempo e poucos lugares."
+          ]
+        },
+        {
+          "o": [
+            "uma só linha de acontecimentos",
+            "várias linhas de acontecimentos",
+            "um só narrador do princípio ao fim"
+          ],
+          "c": 0,
+          "fe": [
+            null,
+            "Várias linhas de acontecimentos dispersam a ação; unidade de ação é uma só linha.",
+            "Ter um só narrador é outra coisa; unidade de ação quer dizer uma só linha de acontecimentos."
+          ]
+        }
+      ],
+      "f": "**Pouco tempo e poucos lugares**; **uma só linha de acontecimentos**: duas características do conto.",
+      "recycledFrom": "/pt/m8/licao-m8-f08/",
+      "sourceCard": 13,
+      "fe": "Trocaste as duas características. Concentração de tempo e de espaço é pouco tempo e poucos lugares; unidade de ação é uma só linha de acontecimentos."
+    },
+    {
+      "t": "vf",
+      "p": "«O encontro entre idades é imaginado» é um facto verificável no texto.",
+      "v": false,
+      "f": "Falso: é uma **interpretação**, a defender com provas; o conto sugere, não explica.",
+      "fe": "Não: é uma interpretação, que se defende com provas; o conto não o diz.",
+      "recycledFrom": "/pt/m8/licao-m8-f08/",
+      "sourceCard": 15
+    },
+    {
+      "p": "De que livro é «George»?",
+      "f": "_Seta Despedida_, de 1995; _Ágora_ é de Amaral e _Metamorfoses_ de Sena.",
+      "legacyId": "s18-q3",
+      "recycledFrom": "/pt/m8/licao-m8-f08/",
+      "t": "escolha",
+      "o": [
+        "_Seta Despedida_, de 1995",
+        "_Ágora_, publicado em 2019",
+        "_Metamorfoses_, de 1963"
+      ],
+      "c": 0,
+      "fe": [
+        null,
+        "_Ágora_ (2019) é um livro de poemas de Ana Luísa Amaral; «George» é um conto.",
+        "_Metamorfoses_ (1963) é um livro de poemas de Jorge de Sena; «George» é um conto."
+      ]
+    },
+    {
+      "t": "vf",
+      "p": "Em «George», a autora explica tudo o que liga Gi, George e Georgina.",
+      "v": false,
+      "f": "Falso: a autora **quase não explica**; prefere a sugestão à explicação, e o resto é contigo.",
+      "fe": "Não: a autora quase não explica; o resto fica para o leitor.",
+      "recycledFrom": "/pt/m8/licao-m8-f08/",
+      "sourceCard": 17
+    },
+    {
+      "t": "vf",
+      "p": "O conto deixa perguntas sem resposta: prefere sugerir a explicar.",
+      "v": true,
+      "f": "Verdadeiro: a escrita contida **prefere a sugestão à explicação**; o leitor fica com as perguntas.",
+      "fe": "É verdadeiro: a escrita de Maria Judite de Carvalho prefere a sugestão à explicação; o resto fica contigo.",
+      "recycledFrom": "/pt/m8/licao-m8-f08/",
+      "sourceCard": 19
+    }
+  ]
+}

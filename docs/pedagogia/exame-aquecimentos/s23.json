@@ -1,0 +1,229 @@
+{
+  "sessao": "s23",
+  "versao": 1,
+  "titulo": "Exposição: explicar com uma linha clara",
+  "cartoes": [
+    {
+      "t": "ler",
+      "rot": "Abre",
+      "titulo": "Aquecer",
+      "html": "<p class=\"abre-t\">Exposição: explicar com uma linha clara</p><p><b>Objetivo:</b> organizar conhecimento numa explicação fundamentada.</p><p>Doze cartões, dez minutos. A seguir, voltas à sessão para ler e escrever no caderno.</p>",
+      "recycledFrom": "/pt/exame/",
+      "adaptacao": "Cartão de abertura da sessão (02/11/2026)."
+    },
+    {
+      "p": "Qual destes inícios delimita melhor uma exposição?",
+      "f": "«Duas obras confrontam escolhas e regras» define um eixo que pode ser explicado com exemplos, em vez de anunciar um tema sem limites.",
+      "legacyId": "s23-q1",
+      "recycledFrom": "/pt/m4/licao-m4-f27/",
+      "t": "escolha",
+      "o": [
+        "Duas obras confrontam escolhas e regras.",
+        "Estas obras são belas e muito importantes.",
+        "Este texto tratará de todos os assuntos."
+      ],
+      "c": 0,
+      "fe": [
+        null,
+        "Importância e beleza não delimitam o problema a explicar.",
+        "Prometer tratar de tudo deixa o foco por definir."
+      ]
+    },
+    {
+      "t": "emparelhar",
+      "p": "Numa exposição de treino sobre a casa em _Os Maias_, liga cada frase à função que cumpre.",
+      "pares": [
+        [
+          "_No romance, a casa guarda um passado que pesa sobre as personagens._",
+          "anunciar o foco"
+        ],
+        [
+          "_No fim, o Ramalhete volta a estar «para sempre deshabitado»._",
+          "dar um exemplo"
+        ],
+        [
+          "_A repetição de «tons de ruina» mostra que tudo regressa ao abandono do início._",
+          "explicar o exemplo"
+        ]
+      ],
+      "f": "O foco abre; o exemplo traz a prova; a explicação diz o que a prova mostra. Sem a terceira frase, o exemplo ficava solto.",
+      "fe": "Trocaste exemplo e explicação. Pergunta a cada frase se anuncia o que vais explicar, se cita uma passagem, ou se diz o que essa passagem mostra.",
+      "recycledFrom": "/pt/m4/licao-m4-f27/",
+      "adaptacao": "Cartão novo sobre a operação da sessão, no lugar de um cartão repetido de outra sessão (02/11/2026)."
+    },
+    {
+      "t": "vf",
+      "p": "Numa exposição, uma citação curta bem escolhida pode bastar como prova, se for explicada.",
+      "v": true,
+      "f": "Verdadeiro: o tamanho da citação não decide; decide a ligação. Uma citação curta, explicada, mostra mais do que um parágrafo copiado.",
+      "fe": "Responder «falso» é medir a prova pelo tamanho. O que torna a citação prova é a explicação que a liga à ideia, não o número de linhas.",
+      "recycledFrom": "/pt/m4/licao-m4-f27/",
+      "adaptacao": "Cartão novo sobre a operação da sessão, no lugar de um cartão repetido de outra sessão (02/11/2026)."
+    },
+    {
+      "t": "completar",
+      "p": "Completa o plano de uma explicação apoiada no texto.",
+      "frase": "Começas por uma [1], escolhes uma passagem como [2] e explicas a ligação.",
+      "lacunas": [
+        {
+          "o": [
+            "ideia",
+            "lista",
+            "imagem"
+          ],
+          "c": 0,
+          "fe": [
+            null,
+            "Uma lista enumera sem explicar; a explicação começa por uma ideia, que a passagem vai sustentar.",
+            "Uma imagem pode ilustrar, mas a explicação começa por uma ideia que a passagem vai sustentar."
+          ]
+        },
+        {
+          "o": [
+            "prova",
+            "resumo",
+            "título"
+          ],
+          "c": 0,
+          "fe": [
+            null,
+            "Um resumo conta o texto; a passagem escolhida serve de prova à ideia.",
+            "A passagem não é um título; é a prova que sustenta a ideia."
+          ]
+        }
+      ],
+      "f": "A ideia responde ao pedido; a passagem sustenta-a. Falta sempre tornar explícita a ligação, mesmo quando a citação é correta.",
+      "fe": "Trocaste os passos. Começas pela ideia que responde ao pedido, escolhes a passagem como prova e explicas a ligação entre as duas.",
+      "recycledFrom": "/pt/m4/licao-m4-f27/",
+      "sourceCard": 13,
+      "adaptacao": "Operação da lição aplicada a um recorte ou exemplo indicado no cartão."
+    },
+    {
+      "p": "Depois de um exemplo literário, o que falta normalmente?",
+      "f": "O exemplo só funciona como prova quando se mostra aquilo que permite compreender.",
+      "legacyId": "s23-q2",
+      "recycledFrom": "/pt/m4/licao-m4-f27/",
+      "t": "escolha",
+      "o": [
+        "Ligar o exemplo à ideia em análise.",
+        "Passar a outra obra sem ligação.",
+        "Repetir o título de cada obra já lida."
+      ],
+      "c": 0,
+      "fe": [
+        null,
+        "Mudar de obra não explica a função do exemplo anterior.",
+        "Repetir o título não mostra como o exemplo sustenta a ideia."
+      ]
+    },
+    {
+      "t": "ordenar",
+      "p": "Ordena a construção de um parágrafo explicativo.",
+      "passos": [
+        "Delimitar a ideia do parágrafo",
+        "Escolher um exemplo pertinente",
+        "Explicar o que o exemplo mostra",
+        "Ligar o resultado ao foco da exposição"
+      ],
+      "f": "O exemplo não substitui a explicação. Depois de o apresentar, mostra por que razão sustenta a ideia delimitada.",
+      "fe": "Começaste pelo exemplo. Primeiro delimitas a ideia do parágrafo, depois escolhes o exemplo, explicas o que ele mostra e ligas o resultado ao foco.",
+      "recycledFrom": "/pt/m4/licao-m4-f27/",
+      "sourceCard": 13,
+      "adaptacao": "Operação da lição aplicada a um recorte ou exemplo indicado no cartão."
+    },
+    {
+      "t": "sublinhar",
+      "p": "No exemplo imaginário, toca na expressão que anuncia uma comparação.",
+      "frase": "Nos dois textos, a imagem orienta a atenção do leitor.",
+      "certas": [
+        0,
+        1,
+        2
+      ],
+      "f": "«Nos dois textos» anuncia um critério comum. Nomear dois autores, sem relacionar o que fazem, não constitui comparação.",
+      "fe": "Marcaste o que a imagem faz, não a expressão que junta os textos. Está no início da frase, antes da vírgula.",
+      "recycledFrom": "/pt/m4/licao-m4-f27/",
+      "sourceCard": 15,
+      "adaptacao": "Operação da lição aplicada a um recorte ou exemplo indicado no cartão."
+    },
+    {
+      "t": "vf",
+      "p": "Uma exposição pode juntar dois resumos separados e chamar a isso uma comparação.",
+      "v": false,
+      "f": "Comparar exige um critério aplicado aos dois textos. Procura a frase que relaciona as observações em vez de apenas as encadear.",
+      "fe": "Dois resumos lado a lado descrevem cada texto, mas não os comparam: comparar pede um critério aplicado aos dois.",
+      "recycledFrom": "/pt/m4/licao-m4-f27/",
+      "sourceCard": 15,
+      "adaptacao": "Operação da lição aplicada a um recorte ou exemplo indicado no cartão."
+    },
+    {
+      "p": "Que conclusão corresponde a uma exposição?",
+      "f": "A conclusão deve resultar do desenvolvimento, não abrir um novo conjunto de questões sem resposta.",
+      "legacyId": "s23-q3",
+      "recycledFrom": "/pt/m4/licao-m4-f27/",
+      "t": "escolha",
+      "o": [
+        "Retomar a explicação e o seu alcance.",
+        "Acrescentar uma obra sem a explicar.",
+        "Expressar apenas uma opinião pessoal."
+      ],
+      "c": 0,
+      "fe": [
+        null,
+        "Uma obra nova exige desenvolvimento que a conclusão não forneceu.",
+        "O gosto pessoal não retoma uma explicação."
+      ]
+    },
+    {
+      "t": "emparelhar",
+      "p": "Liga cada problema à revisão necessária.",
+      "pares": [
+        [
+          "O parágrafo só enumera citações",
+          "Explicar a ligação à ideia"
+        ],
+        [
+          "Os textos são descritos separadamente",
+          "Estabelecer um critério comum"
+        ],
+        [
+          "A conclusão introduz um tema novo",
+          "Retomar a explicação construída"
+        ]
+      ],
+      "f": "A revisão responde ao problema detetado. Mais citações não resolvem a falta de explicação, e mais títulos não criam um critério comum.",
+      "fe": "Trocaste problema e revisão. Citações sem explicação pedem a ligação à ideia; textos descritos à parte pedem um critério comum; um tema novo na conclusão pede o regresso ao que foi explicado.",
+      "recycledFrom": "/pt/m4/licao-m4-f27/",
+      "sourceCard": 11,
+      "adaptacao": "Operação da lição aplicada a um recorte ou exemplo indicado no cartão."
+    },
+    {
+      "t": "sublinhar",
+      "p": "No exemplo imaginário, toca na palavra que exige uma explicação a seguir.",
+      "frase": "A escolha é pertinente porque sustenta a ideia apresentada.",
+      "certas": [
+        4
+      ],
+      "f": "«Porque» anuncia uma razão. A continuação deve mostrar a relação concreta, não limitar-se a dizer que a escolha é boa.",
+      "fe": "Marcaste a avaliação, não a palavra que obriga a dar a razão. Procura o conector que vem depois de «pertinente».",
+      "recycledFrom": "/pt/m4/licao-m4-f27/",
+      "sourceCard": 3,
+      "adaptacao": "Operação da lição aplicada a um recorte ou exemplo indicado no cartão."
+    },
+    {
+      "t": "ordenar",
+      "p": "Ordena a revisão global da exposição.",
+      "passos": [
+        "Reler o foco anunciado no início",
+        "Confirmar que cada parágrafo o desenvolve",
+        "Verificar exemplos e ligações",
+        "Confrontar a conclusão com o que foi explicado"
+      ],
+      "f": "Primeiro verifica a unidade do texto; depois os exemplos e a conclusão. Uma conclusão só pode retomar o que foi construído.",
+      "fe": "Começaste pelos pormenores. Primeiro relês o foco anunciado e confirmas que cada parágrafo o desenvolve; depois verificas exemplos e ligações; a conclusão confronta-se no fim.",
+      "recycledFrom": "/pt/m2/licao-m2-f08/",
+      "sourceCard": 18,
+      "adaptacao": "Operação da lição aplicada a um recorte ou exemplo indicado no cartão."
+    }
+  ]
+}

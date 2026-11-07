@@ -1,0 +1,246 @@
+{
+  "sessao": "s19",
+  "versao": 1,
+  "titulo": "Saramago: quem conta e quem faz",
+  "cartoes": [
+    {
+      "t": "ler",
+      "rot": "Abre",
+      "titulo": "Aquecer",
+      "html": "<p class=\"abre-t\">Saramago: quem conta e quem faz</p><p><b>Objetivo:</b> distinguir acontecimentos, voz narrativa e visão da História.</p><p>Doze cartões, dez minutos. O texto de apoio está no cartão seguinte. A seguir, voltas à sessão para ler e escrever no caderno.</p>",
+      "recycledFrom": "/pt/exame/",
+      "adaptacao": "Cartão de abertura da sessão (02/11/2026)."
+    },
+    {
+      "t": "ler",
+      "titulo": "Texto para consultar",
+      "html": "<p>Consulta o texto quando precisares de confirmar uma escolha.</p><details><summary>Abrir o texto de apoio</summary><p class=\"pr\">Resumo nosso do capítulo XXI, até à decisão do rei. D. João V, com medo de morrer antes de ver Mafra sagrada, pergunta se as basílicas se sagram ao domingo e manda saber quando calha a um domingo o seu aniversário, 22 de outubro: em 1730, respondem os secretários. Chamados à pressa de Mafra, Ludovice e Leandro de Melo avisam que a obra não estará pronta a tempo. O rei pede a data seguinte, 1740, faz contas aos anos que terá e acrescenta: «Se ainda for vivo». Durante uns minutos, sente o medo da morte e inveja o filho, que poderia inaugurar Mafra no seu lugar. Depois, decide:</p><p class=\"pr\" data-l=\"0-0\">E então D. João V disse, A sagração da basílica de Mafra será feita no dia vinte e dois de Outubro de mil setecentos e trinta, tanto faz que o tempo sobre como falte, venha sol ou venha chuva, caia a neve ou sopre o vento, nem que se alague o mundo ou lhe dê o tranglomango.</p><p class=\"fonte\">José Saramago, <i>Memorial do Convento</i> (1982), capítulo XXI: o último parágrafo é citação curta, com a grafia da edição; o resto é resumo nosso.</p><p class=\"fonte\"><a href=\"../../../m9/licao-m9-f01/\" target=\"_blank\" rel=\"noopener\">O excerto e as fontes estão na lição de origem</a></p></details>",
+      "recycledFrom": "/pt/m9/licao-m9-f01/",
+      "rot": "Texto de apoio"
+    },
+    {
+      "p": "Em que época se passa a história do _Memorial do Convento_?",
+      "f": "Reinado de D. João V e tempo da Inquisição: início do século XVIII; o século XX é o da escrita.",
+      "legacyId": "s19-q1",
+      "recycledFrom": "/pt/m9/licao-m9-f01/",
+      "t": "escolha",
+      "o": [
+        "No início do século XVIII.",
+        "No começo do século XVI.",
+        "Nos finais do século XVII."
+      ],
+      "c": 0,
+      "fe": [
+        null,
+        "O século XVI não corresponde ao reinado evocado.",
+        "O reinado de D. João V começa em 1706: a ação passa-se no início do século XVIII, não no fim do XVII."
+      ]
+    },
+    {
+      "t": "emparelhar",
+      "p": "Liga cada elemento à dimensão temporal que permite observar.",
+      "pares": [
+        [
+          "A época em que a história se passa",
+          "Tempo histórico"
+        ],
+        [
+          "Recuos, avanços e prolepses",
+          "Organização temporal do relato"
+        ],
+        [
+          "D. João V e a Inquisição",
+          "Tempo histórico"
+        ],
+        [
+          "O «hoje» do comentário sobre os metros, distinto da época narrada",
+          "Tempo da narração"
+        ]
+      ],
+      "f": "A época de D. João V situa a ação historicamente. Os recuos e as antecipações dizem respeito à ordem do relato. Já o «hoje» deste comentário aponta para o presente de quem narra. Distinguir os três evita tratar qualquer comentário posterior como uma prolepse.",
+      "recycledFrom": "/pt/m9/licao-m9-f01/",
+      "sourceCard": 5,
+      "fe": "Trocaste as dimensões do tempo. Pergunta a cada elemento se situa a época da história, se diz a ordem em que o narrador conta, ou se aponta para o presente de quem narra."
+    },
+    {
+      "t": "sublinhar",
+      "p": "Toca nas duas palavras que dizem o que não vence a vaidade e o que a vence.",
+      "frase": "A vaidade não se vence pela humildade, vence-se pelo excesso.",
+      "certas": [
+        6,
+        9
+      ],
+      "f": "«Humildade» e «excesso»: o rei não se encolhe, marca a data falte o tempo que faltar.",
+      "recycledFrom": "/pt/m9/licao-m9-f01/",
+      "sourceCard": 10,
+      "fe": "Marcaste a vaidade ou os verbos, não os dois caminhos opostos. A frase nega um («não se vence pela») e afirma o outro («vence-se pelo»)."
+    },
+    {
+      "t": "completar",
+      "p": "Porque manda o rei construir o Convento de Mafra, e com que dinheiro?",
+      "frase": "O rei manda construir o Convento de Mafra para cumprir [1] e paga a obra com [2] enquanto milhares carregam a pedra.",
+      "lacunas": [
+        {
+          "o": [
+            "uma promessa ligada à sucessão",
+            "uma pena imposta pela Inquisição",
+            "uma ordem vinda do papa de Roma"
+          ],
+          "c": 0,
+          "fe": [
+            null,
+            "A Inquisição não impõe a obra ao rei: o convento nasce de uma promessa do próprio D. João V, ligada ao nascimento de um herdeiro.",
+            "Não é o papa quem pede o convento: é o rei que promete construí-lo se tiver um herdeiro."
+          ]
+        },
+        {
+          "o": [
+            "o ouro e os diamantes do Brasil",
+            "os impostos cobrados ao povo do reino",
+            "os bens confiscados pela Inquisição"
+          ],
+          "c": 0,
+          "fe": [
+            null,
+            "O romance mostra o peso da obra no povo, mas o dinheiro vem sobretudo do ouro e dos diamantes do Brasil.",
+            "A Inquisição aparece no romance, mas não paga Mafra: o dinheiro vem do ouro e dos diamantes do Brasil."
+          ]
+        }
+      ],
+      "f": "A **promessa** liga-se à sucessão do trono; o dinheiro vem do **Brasil**, em ouro e diamantes.",
+      "recycledFrom": "/pt/m9/licao-m9-f01/",
+      "sourceCard": 12,
+      "fe": "Trocaste a razão ou o dinheiro da obra. O convento cumpre uma promessa do rei, ligada à sucessão do trono, e paga-se com o ouro e os diamantes do Brasil."
+    },
+    {
+      "p": "«essa é a medida de hoje, não a da época»: o que mostra este aviso do narrador?",
+      "f": "Neste comentário sobre as unidades de medida, o «hoje» pertence ao presente de quem narra e é contrastado com a época da construção. Isto situa o tempo da narração relativamente aos acontecimentos; não é, por si só, um recuo ou uma antecipação do enredo. A data de publicação do livro é uma informação diferente.",
+      "legacyId": "s19-q2",
+      "recycledFrom": "/pt/m9/licao-m9-f01/",
+      "t": "escolha",
+      "o": [
+        "Separa o presente da voz do passado narrado.",
+        "Situa a voz de quem narra no tempo do rei.",
+        "Denuncia um erro no cálculo dos metros da obra."
+      ],
+      "c": 0,
+      "fe": [
+        null,
+        "A palavra «hoje» distingue a voz narrativa do tempo de D. João V.",
+        "O aviso distingue unidades de medida de épocas diferentes; não denuncia um cálculo errado."
+      ]
+    },
+    {
+      "t": "sublinhar",
+      "p": "Toca nas duas palavras que dizem que o tempo pode sobrar ou faltar.",
+      "frase": "tanto faz que o tempo sobre como falte, venha sol ou venha chuva",
+      "certas": [
+        5,
+        7
+      ],
+      "f": "**Sobre** e **falte**: a data fica, haja tempo de mais ou de menos; o rei não cede à obra.",
+      "fe": "Marcaste o tempo ou o clima, não os verbos que o medem. Procura, logo depois de «o tempo», os dois verbos opostos ligados por «como».",
+      "recycledFrom": "/pt/m9/licao-m9-f01/",
+      "adaptacao": "Cartão novo sobre o texto de apoio da sessão (02/11/2026)."
+    },
+    {
+      "t": "vf",
+      "p": "Quando diz «Se ainda for vivo», o rei admite que pode morrer antes de 1740, e é esse medo que o leva a marcar a sagração para 1730.",
+      "v": true,
+      "f": "Verdadeiro: as contas («terei cinquenta e um anos») acabam no medo da morte, e a decisão vem logo a seguir: Mafra será sagrada em 1730, «tanto faz que o tempo sobre como falte».",
+      "fe": "Responder «falso» é separar a decisão do medo. Relê o texto de apoio: o rei faz contas, diz «Se ainda for vivo» e só depois marca a data.",
+      "recycledFrom": "/pt/m9/licao-m9-f01/",
+      "adaptacao": "Cartão novo sobre o texto de apoio da sessão (02/11/2026)."
+    },
+    {
+      "t": "emparelhar",
+      "p": "Liga cada noção ao que quer dizer.",
+      "pares": [
+        [
+          "Tempo histórico",
+          "a época em que a história se passa"
+        ],
+        [
+          "Organização temporal do relato",
+          "a ordem em que o narrador apresenta os acontecimentos"
+        ],
+        [
+          "Tempo da narração",
+          "o momento de onde a voz conta"
+        ],
+        [
+          "Prolepse",
+          "o narrador adianta o que vai acontecer"
+        ],
+        [
+          "Romance histórico",
+          "ficção numa época real, com figuras dela"
+        ]
+      ],
+      "f": "Tempo histórico situa a época; organização temporal do relato explica a ordem; tempo da narração situa o ato de contar. Prolepse é uma antecipação de acontecimentos. Nenhuma destas distinções transforma a voz narrativa automaticamente no autor real.",
+      "recycledFrom": "/pt/m9/licao-m9-f01/",
+      "sourceCard": 16,
+      "fe": "Trocaste as noções. O tempo histórico é a época; a organização do relato, a ordem em que se conta; o tempo da narração, de onde se conta; a prolepse adianta; o romance histórico põe ficção numa época real."
+    },
+    {
+      "p": "O que antecipa «do Convento», a segunda parte do título?",
+      "f": "«Do Convento» põe a construção no centro, e com ela a crítica ao poder que a mandou fazer.",
+      "legacyId": "s19-q3",
+      "recycledFrom": "/pt/m9/licao-m9-f01/",
+      "t": "escolha",
+      "o": [
+        "A construção ligada à crítica do poder.",
+        "A promessa ligada ao nascimento do filho.",
+        "A vida dos frades depois de sagrado o local."
+      ],
+      "c": 0,
+      "fe": [
+        null,
+        "A promessa faz parte da ação, mas não esgota a função do título.",
+        "O título não limita o centro do romance à vida dos frades depois da sagração."
+      ]
+    },
+    {
+      "t": "completar",
+      "p": "Que palavra diz o contrário de «avanços», na organização temporal do relato?",
+      "frase": "O narrador arruma os acontecimentos com [1] e avanços.",
+      "lacunas": [
+        {
+          "o": [
+            "recuos",
+            "saltos",
+            "elipses"
+          ],
+          "c": 0,
+          "fe": [
+            null,
+            "«Saltos» não diz a direção: o contrário de avançar no tempo é recuar.",
+            "A elipse omite um período de tempo; o contrário de «avanços» é voltar atrás, recuar."
+          ]
+        }
+      ],
+      "f": "**Recuos**: o narrador arruma os acontecimentos com recuos e avanços.",
+      "recycledFrom": "/pt/m9/licao-m9-f01/",
+      "sourceCard": 20,
+      "fe": "Procura o movimento contrário ao de avançar: quando o narrador volta atrás no tempo, faz recuos."
+    },
+    {
+      "t": "vf",
+      "p": "O _Memorial do Convento_ foi publicado em outubro de 1730, no reinado de D. João V.",
+      "v": false,
+      "f": "Falso: foi publicado em **outubro de 1982**; 1730 é a data da sagração, dentro da história.",
+      "fe": "Não: 1730 é o ano da sagração, dentro da história (capítulo XXI); o livro sai em outubro de 1982.",
+      "recycledFrom": "/pt/m9/licao-m9-f01/",
+      "sourceCard": 21
+    },
+    {
+      "t": "vf",
+      "p": "No romance histórico, figuras reais da época, como D. João V, entram na ficção.",
+      "v": true,
+      "f": "Verdadeiro: o romance histórico é **ficção numa época real**, com figuras e factos dela.",
+      "fe": "É verdadeiro: o romance histórico é ficção numa época real; D. João V e a sagração de Mafra vêm da história e entram na ficção.",
+      "recycledFrom": "/pt/m9/licao-m9-f01/",
+      "sourceCard": 26
+    }
+  ]
+}

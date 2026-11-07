@@ -1,0 +1,223 @@
+{
+  "sessao": "s15",
+  "versao": 1,
+  "titulo": "Campos: desejo e desencontro",
+  "cartoes": [
+    {
+      "t": "ler",
+      "rot": "Abre",
+      "titulo": "Aquecer",
+      "html": "<p class=\"abre-t\">Campos: desejo e desencontro</p><p><b>Objetivo:</b> explicar uma tensão sem apagar contradições.</p><p>Doze cartões, dez minutos. O texto de apoio está no cartão seguinte. A seguir, voltas à sessão para ler e escrever no caderno.</p>",
+      "recycledFrom": "/pt/exame/",
+      "adaptacao": "Cartão de abertura da sessão (02/11/2026)."
+    },
+    {
+      "t": "ler",
+      "titulo": "Texto para consultar",
+      "html": "<p>Consulta o texto quando precisares de confirmar uma escolha.</p><details><summary>Abrir o texto de apoio</summary><p class=\"v\"><span class=\"ln\" data-l=\"0-0\">Não sou nada.</span>\n<span class=\"ln\" data-l=\"0-1\">Nunca serei nada.</span>\n<span class=\"ln\" data-l=\"0-2\">Não posso querer ser nada.</span>\n<span class=\"ln\" data-l=\"0-3\">À parte isso, tenho em mim todos os sonhos do mundo.</span></p><p class=\"fonte\">Álvaro de Campos, «Tabacaria» (1928), vv. 1 a 4, Arquivo Pessoa.</p><p class=\"v\"><span class=\"ln\" data-l=\"1-0\">(Come chocolates, pequena;</span>\n<span class=\"ln\" data-l=\"1-1\">Come chocolates!</span>\n<span class=\"ln\" data-l=\"1-2\">Olha que não há mais metafísica no mundo senão chocolates.</span>\n<span class=\"ln\" data-l=\"1-3\">Olha que as religiões todas não ensinam mais que a confeitaria.</span>\n<span class=\"ln\" data-l=\"1-4\">Come, pequena suja, come!</span>\n<span class=\"ln\" data-l=\"1-5\">Pudesse eu comer chocolates com a mesma verdade com que comes!</span>\n<span class=\"ln\" data-l=\"1-6\">Mas eu penso e, ao tirar o papel de prata, que é de folhas de estanho,</span>\n<span class=\"ln\" data-l=\"1-7\">Deito tudo para o chão, como tenho deitado a vida.)</span></p><p class=\"fonte\">Álvaro de Campos, «Tabacaria» (1928), Arquivo Pessoa; os parênteses são do poema.</p><p class=\"v\"><span class=\"ln\" data-l=\"2-0\">Fiz de mim o que não soube,</span>\n<span class=\"ln\" data-l=\"2-1\">E o que podia fazer de mim não o fiz.</span>\n<span class=\"ln\" data-l=\"2-2\">O dominó que vesti era errado.</span>\n<span class=\"ln\" data-l=\"2-3\">Conheceram-me logo por quem não era e não desmenti, e perdi-me.</span>\n<span class=\"ln\" data-l=\"2-4\">Quando quis tirar a máscara,</span>\n<span class=\"ln\" data-l=\"2-5\">Estava pegada à cara.</span>\n<span class=\"ln\" data-l=\"2-6\">Quando a tirei e me vi ao espelho,</span>\n<span class=\"ln\" data-l=\"2-7\">Já tinha envelhecido.</span></p><p class=\"fonte\">Álvaro de Campos, «Tabacaria» (1928), Arquivo Pessoa.</p><p class=\"fonte\"><a href=\"../../../m7/licao-m7-f36/\" target=\"_blank\" rel=\"noopener\">Texto e fontes na lição de origem</a></p></details>",
+      "recycledFrom": "/pt/m7/licao-m7-f36/",
+      "rot": "Texto de apoio"
+    },
+    {
+      "p": "Como progride a negação nos três primeiros versos?",
+      "f": "Três alcances: o que é, o que será, o que pode querer ser. Repete «nada», mas os verbos alargam a negação.",
+      "legacyId": "s15-q1",
+      "recycledFrom": "/pt/m7/licao-m7-f36/",
+      "t": "escolha",
+      "o": [
+        "Nega ser, vir a ser e querer ser.",
+        "Afirma sonhar, agir e realizar-se.",
+        "Repete sempre a negação inicial."
+      ],
+      "c": 0,
+      "fe": [
+        null,
+        "Os três versos negam, em vez de afirmar a realização dos sonhos.",
+        "As formas sou, serei e querer ser não dizem exatamente o mesmo."
+      ]
+    },
+    {
+      "t": "versos",
+      "p": "Põe por ordem os quatro versos da abertura.",
+      "linhas": [
+        "Não sou nada.",
+        "Nunca serei nada.",
+        "Não posso querer ser nada.",
+        "À parte isso, tenho em mim todos os sonhos do mundo."
+      ],
+      "f": "Sou, serei, posso querer ser: a negação cresce; e depois, **todos os sonhos**.",
+      "recycledFrom": "/pt/m7/licao-m7-f36/",
+      "sourceCard": 4,
+      "fe": "Trocaste a ordem da negação. Vai de «Não sou» a «Nunca serei» e a «Não posso querer ser», e só depois vem «À parte isso», com os sonhos."
+    },
+    {
+      "t": "sublinhar",
+      "p": "Toca nas duas palavras que dizem onde estão os sonhos.",
+      "frase": "À parte isso, tenho em mim todos os sonhos do mundo.",
+      "certas": [
+        4,
+        5
+      ],
+      "f": "«**Em mim**»: dentro. O verso diz que os possui, não que os viveu.",
+      "cita": "À parte isso, tenho em mim todos os sonhos do mundo.",
+      "recycledFrom": "/pt/m7/licao-m7-f36/",
+      "sourceCard": 7,
+      "fe": "Marcaste o que tem, não onde. Os sonhos estão num lugar dito por duas palavras, logo depois de «tenho»."
+    },
+    {
+      "t": "completar",
+      "p": "Completa o desejo e o obstáculo.",
+      "frase": "Pudesse eu comer chocolates com a mesma [1] com que comes! / Mas eu [2]",
+      "lacunas": [
+        {
+          "o": [
+            "verdade",
+            "alegria",
+            "simpleza"
+          ],
+          "c": 0,
+          "fe": [
+            null,
+            "A alegria pode estar lá, mas o verso pede outra coisa: comer «com a mesma verdade», sem pensar.",
+            "A ideia anda perto, mas a palavra do verso é «verdade»: comer sem o pensamento por cima."
+          ]
+        },
+        {
+          "o": [
+            "penso",
+            "durmo",
+            "sonho"
+          ],
+          "c": 0,
+          "fe": [
+            null,
+            "Nada no verso fala de dormir; o obstáculo é o pensamento: «Mas eu penso».",
+            "Os sonhos estão no quarto verso do poema; aqui o obstáculo é outro: «Mas eu penso»."
+          ]
+        }
+      ],
+      "f": "«Com a mesma **verdade**» é o desejo; «Mas eu **penso**» é o obstáculo. Entre os dois, um «mas».",
+      "recycledFrom": "/pt/m7/licao-m7-f36/",
+      "sourceCard": 10,
+      "fe": "Trocaste o desejo ou o obstáculo. Relê o fim do parêntese: «com a mesma verdade com que comes!» é o desejo; «Mas eu penso» é o que o impede."
+    },
+    {
+      "p": "«À parte isso, tenho em mim todos os sonhos do mundo»: que relação tem com os três versos anteriores?",
+      "f": "«Tenho em mim», não «realizei»: a plenitude é interior. Não ser nada e ter todos os sonhos ficam lado a lado.",
+      "legacyId": "s15-q2",
+      "recycledFrom": "/pt/m7/licao-m7-f36/",
+      "t": "escolha",
+      "o": [
+        "Contrapõe o sonho à autonegação.",
+        "Desfaz as negações já enunciadas.",
+        "Desvia o tema para outra pessoa."
+      ],
+      "c": 0,
+      "fe": [
+        null,
+        "A amplitude do sonho não apaga as negações anteriores.",
+        "A voz continua a falar de si e da tensão que a constitui."
+      ]
+    },
+    {
+      "t": "vf",
+      "p": "«Fiz de mim o que não soube» diz que o sujeito construiu a vida que queria.",
+      "v": false,
+      "f": "Falso: fez o que **não soube**, e «o que podia fazer de mim não o fiz». O possível e o vivido não coincidem.",
+      "cita": "Fiz de mim o que não soube,",
+      "fe": "É o contrário: fez de si «o que não soube», e «o que podia fazer de mim não o fiz».",
+      "recycledFrom": "/pt/m7/licao-m7-f36/",
+      "sourceCard": 15
+    },
+    {
+      "t": "emparelhar",
+      "p": "Liga cada verso da máscara ao que diz.",
+      "pares": [
+        [
+          "«O dominó que vesti era errado»",
+          "a vida como um disfarce que não era o seu"
+        ],
+        [
+          "«Estava pegada à cara»",
+          "o disfarce tornou-se a pessoa"
+        ],
+        [
+          "«Já tinha envelhecido»",
+          "quando se viu, era tarde"
+        ]
+      ],
+      "f": "Disfarce errado, máscara colada, espelho tardio: **a distância entre o possível e o vivido, contada em três tempos**.",
+      "cita": "Quando quis tirar a máscara,",
+      "recycledFrom": "/pt/m7/licao-m7-f36/",
+      "sourceCard": 16,
+      "fe": "Trocaste os momentos da máscara. Primeiro o disfarce vestido, que era errado; depois a máscara colada à cara; por fim o espelho, que mostra que já era tarde."
+    },
+    {
+      "t": "vf",
+      "p": "O quarto verso da abertura resolve os três primeiros.",
+      "v": false,
+      "f": "Falso: **afirma a plenitude interior, não prova que os sonhos se realizem**; conserva a tensão com a autonegação.",
+      "fe": "Não resolve: o quarto verso diz onde estão os sonhos, não que se cumpriram; o «nada» dos três primeiros versos fica de pé.",
+      "recycledFrom": "/pt/m7/licao-m7-f36/",
+      "sourceCard": 20
+    },
+    {
+      "p": "«Não há mais metafísica no mundo senão chocolates»: o que diz a voz à pequena?",
+      "f": "A experiência imediata posta acima da metafísica e das religiões: é o que a voz inveja na pequena.",
+      "legacyId": "s15-q3",
+      "recycledFrom": "/pt/m7/licao-m7-f36/",
+      "t": "escolha",
+      "o": [
+        "Dá valor à experiência de comer.",
+        "Pede uma reflexão mais filosófica.",
+        "Avisa sobre o perigo do açúcar."
+      ],
+      "c": 0,
+      "fe": [
+        null,
+        "A voz contrapõe comer com verdade à reflexão que a impede de o fazer.",
+        "Não se trata de um conselho alimentar sobre o açúcar."
+      ]
+    },
+    {
+      "t": "vf",
+      "p": "A voz de «Tabacaria», que diz «Não sou nada», não tem o tom eufórico da «Ode Triunfal»: Campos muda de poema para poema.",
+      "v": true,
+      "f": "Verdadeiro: a voz **muda entre poemas** e tem tensões dentro do mesmo poema. A «Ode Triunfal» não é «Tabacaria»; a interpretação localiza a passagem.",
+      "fe": "Responder «falso» é ler Campos como uma voz única. Compara a febre e a euforia da «Ode Triunfal» com «Não sou nada»: o mesmo heterónimo, dois tons.",
+      "recycledFrom": "/pt/m7/licao-m7-f36/",
+      "sourceCard": 22
+    },
+    {
+      "t": "emparelhar",
+      "p": "Liga cada verso do parêntese ao que mostra.",
+      "pares": [
+        [
+          "«Come, pequena suja, come!»",
+          "o apelo a viver sem pensar"
+        ],
+        [
+          "«Olha que as religiões todas não ensinam mais que a confeitaria.»",
+          "a experiência posta acima das religiões"
+        ],
+        [
+          "«Deito tudo para o chão, como tenho deitado a vida.»",
+          "um gesto pequeno que resume uma vida"
+        ]
+      ],
+      "f": "O imperativo «Come» pede à pequena que continue a viver sem pensar; a confeitaria vale tanto como as religiões; e o papel deitado ao chão, «como tenho deitado a vida», faz de um gesto pequeno o resumo de uma vida.",
+      "fe": "Trocaste os versos. Pergunta a cada um se fala à pequena, se compara a confeitaria às religiões, ou se usa o papel de prata para falar da vida do sujeito.",
+      "recycledFrom": "/pt/m7/licao-m7-f36/",
+      "adaptacao": "Cartão novo sobre o texto de apoio da sessão (02/11/2026)."
+    },
+    {
+      "t": "vf",
+      "p": "Em «Tabacaria», o parêntese da pequena dos chocolates interrompe a reflexão do sujeito sobre si mesmo.",
+      "v": true,
+      "f": "Verdadeiro: os parênteses são do poema. Abrem um aparte em que o sujeito fala à pequena e fecham com ele a voltar a si: «como tenho deitado a vida».",
+      "fe": "Responder «falso» é passar por cima dos parênteses, que são do poema: abrem um aparte com a pequena e fecham com o sujeito a falar de si.",
+      "recycledFrom": "/pt/m7/licao-m7-f36/",
+      "adaptacao": "Cartão novo sobre o texto de apoio da sessão (02/11/2026)."
+    }
+  ]
+}

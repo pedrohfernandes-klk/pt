@@ -1,0 +1,263 @@
+{
+  "sessao": "s12",
+  "versao": 1,
+  "titulo": "Pessoa: sentir e construir o poema",
+  "cartoes": [
+    {
+      "t": "ler",
+      "rot": "Abre",
+      "titulo": "Aquecer",
+      "html": "<p class=\"abre-t\">Pessoa: sentir e construir o poema</p><p><b>Objetivo:</b> distinguir experiência, representação e leitura.</p><p>Doze cartões, dez minutos. O texto de apoio está no cartão seguinte. A seguir, voltas à sessão para ler e escrever no caderno.</p>",
+      "recycledFrom": "/pt/exame/",
+      "adaptacao": "Cartão de abertura da sessão (02/11/2026)."
+    },
+    {
+      "t": "ler",
+      "titulo": "Texto para consultar",
+      "html": "<p>Consulta o texto quando precisares de confirmar uma escolha.</p><details><summary>Abrir o texto de apoio</summary><p class=\"v\"><span class=\"ln\" data-l=\"0-0\">O poeta é um fingidor</span>\n<span class=\"ln\" data-l=\"0-1\">Finge tão completamente</span>\n<span class=\"ln\" data-l=\"0-2\">Que chega a fingir que é dor</span>\n<span class=\"ln\" data-l=\"0-3\">A dor que deveras sente.</span></p><p class=\"v\"><span class=\"ln\" data-l=\"0-5\">E os que lêem o que escreve,</span>\n<span class=\"ln\" data-l=\"0-6\">Na dor lida sentem bem,</span>\n<span class=\"ln\" data-l=\"0-7\">Não as duas que ele teve,</span>\n<span class=\"ln\" data-l=\"0-8\">Mas só a que eles não têm.</span></p><p class=\"v\"><span class=\"ln\" data-l=\"0-10\">E assim nas calhas de roda</span>\n<span class=\"ln\" data-l=\"0-11\">Gira, a entreter a razão,</span>\n<span class=\"ln\" data-l=\"0-12\">Esse comboio de corda</span>\n<span class=\"ln\" data-l=\"0-13\">Que se chama coração.</span></p><p class=\"fonte\">Fernando Pessoa, «Autopsicografia», 1.ª publicação na <i>Presença</i>, n.º 36, Coimbra, novembro de 1932; <i>Poesias</i>, Ática, 1942; Arquivo Pessoa, grafia da edição («lêem»).</p><p class=\"v\"><span class=\"ln\" data-l=\"1-0\">Por isso escrevo em meio</span>\n<span class=\"ln\" data-l=\"1-1\">Do que não está ao pé,</span>\n<span class=\"ln\" data-l=\"1-2\">Livre do meu enleio,</span>\n<span class=\"ln\" data-l=\"1-3\">Sério do que não é.</span>\n<span class=\"ln\" data-l=\"1-4\">Sentir? Sinta quem lê!</span></p><p class=\"fonte\">Fernando Pessoa, «Isto», 1.ª publicação na <i>Presença</i>, n.º 38, Coimbra, abril de 1933; Arquivo Pessoa.</p><p class=\"fonte\"><a href=\"../../../m7/licao-m7-f02/\" target=\"_blank\" rel=\"noopener\">Texto e fontes na lição de origem</a></p></details>",
+      "recycledFrom": "/pt/m7/licao-m7-f02/",
+      "rot": "Texto de apoio"
+    },
+    {
+      "p": "Em «Autopsicografia», o que finge o poeta?",
+      "f": "«Que chega a fingir que é dor / A dor que deveras sente»: finge uma dor que é verdadeira.",
+      "legacyId": "s12-q1",
+      "recycledFrom": "/pt/m7/licao-m7-f02/",
+      "t": "escolha",
+      "o": [
+        "Que é dor a dor que deveras sente.",
+        "Que não sente dor nenhuma ao compor.",
+        "Que sente apenas a dor de quem lê."
+      ],
+      "c": 0,
+      "fe": [
+        null,
+        "O poema afirma que há uma dor deveras sentida.",
+        "A dor de quem lê só entra na segunda estrofe."
+      ]
+    },
+    {
+      "t": "versos",
+      "p": "Põe os versos da primeira estrofe de «Autopsicografia» pela ordem do poema.",
+      "linhas": [
+        "O poeta é um fingidor",
+        "Finge tão completamente",
+        "Que chega a fingir que é dor",
+        "A dor que deveras sente."
+      ],
+      "f": "Fingidor, finge, fingir, e só no fim a dor deveras sentida: a estrofe vai do fingimento à dor real.",
+      "recycledFrom": "/pt/m7/licao-m7-f02/",
+      "sourceCard": 4,
+      "fe": "Trocaste a ordem do fingimento. A estrofe vai de «fingidor» a «Finge», depois a «fingir que é dor», e só no último verso chega à dor que «deveras sente»."
+    },
+    {
+      "t": "completar",
+      "p": "Que dor fica para quem lê, na 2.ª estrofe?",
+      "frase": "Na dor lida, os leitores sentem «só a que eles [1]» e não «[2] que ele teve».",
+      "lacunas": [
+        {
+          "o": [
+            "não têm",
+            "não leem",
+            "não veem"
+          ],
+          "c": 0,
+          "fe": [
+            null,
+            "Os leitores leem, é isso que fazem; o que sentem é a dor «que eles não têm».",
+            "O verso não fala de ver; diz que sentem «só a que eles não têm»."
+          ]
+        },
+        {
+          "o": [
+            "as duas",
+            "as três",
+            "todas as"
+          ],
+          "c": 0,
+          "fe": [
+            null,
+            "O poeta teve duas dores, a sentida e a fingida; a terceira, a lida, é a dos leitores.",
+            "O verso conta-as: «Não as duas que ele teve», a sentida e a fingida."
+          ]
+        }
+      ],
+      "f": "Três dores: a sentida, a fingida e a lida; o leitor fica com **a que eles não têm**, e não com **as duas** do poeta.",
+      "recycledFrom": "/pt/m7/licao-m7-f02/",
+      "sourceCard": 8,
+      "fe": "Trocaste as dores. Relê a segunda estrofe: os leitores não sentem as duas dores do poeta, a sentida e a fingida; sentem «só a que eles não têm»."
+    },
+    {
+      "t": "sublinhar",
+      "p": "Toca nas três palavras que dizem onde gira o comboio de corda.",
+      "frase": "E assim nas calhas de roda",
+      "certas": [
+        3,
+        4,
+        5
+      ],
+      "f": "«**Calhas de roda**»: calhas são carris; o comboio de corda gira num circuito fechado.",
+      "cita": "E assim nas calhas de roda",
+      "recycledFrom": "/pt/m7/licao-m7-f02/",
+      "sourceCard": 9,
+      "fe": "Marcaste o modo ou o que gira, não o lugar. Procura, depois de «nas», as três palavras que dizem por onde anda o comboio."
+    },
+    {
+      "p": "Que palavra de «Autopsicografia» quer dizer «realmente»?",
+      "f": "Deveras, realmente: a dor que o poeta deveras sente é a dor real.",
+      "legacyId": "s12-q2",
+      "recycledFrom": "/pt/m7/licao-m7-f02/",
+      "t": "escolha",
+      "o": [
+        "O advérbio «deveras», no verso 4.",
+        "O advérbio «completamente», no verso 2.",
+        "O adjetivo «sério», no poema «Isto»."
+      ],
+      "c": 0,
+      "fe": [
+        null,
+        "«Completamente» diz até onde vai o fingimento, «Finge tão completamente»; não quer dizer «realmente».",
+        "«Sério» pertence ao recorte de «Isto» e não significa «realmente»."
+      ]
+    },
+    {
+      "t": "completar",
+      "p": "Em «Isto», de que escreve o poeta?",
+      "frase": "Em «Isto», o poeta escreve «Sério do que [1]» e «em meio / Do que não está [2]».",
+      "lacunas": [
+        {
+          "o": [
+            "não é",
+            "não há",
+            "já foi"
+          ],
+          "c": 0,
+          "fe": [
+            null,
+            "Quase, mas o verso usa o verbo ser: o poeta leva a sério o que não existe, «o que não é».",
+            "Não se fala do passado: o poeta leva a sério o que não existe, «o que não é»."
+          ]
+        },
+        {
+          "o": [
+            "ao pé",
+            "ao fim",
+            "à mão"
+          ],
+          "c": 0,
+          "fe": [
+            null,
+            "Não é o fim: o poeta escreve «em meio / Do que não está ao pé», do que não está perto.",
+            "O sentido é parecido, mas o verso diz «ao pé»: o que não está perto de quem escreve."
+          ]
+        }
+      ],
+      "f": "«Sério do que **não é**» e «Do que não está **ao pé**»: escreve a partir do que não está perto e leva a sério o que não existe.",
+      "recycledFrom": "/pt/m7/licao-m7-f02/",
+      "sourceCard": 13,
+      "fe": "Trocaste as expressões de «Isto». Relê a estrofe: o poeta escreve «em meio / Do que não está ao pé» e é «Sério do que não é»."
+    },
+    {
+      "t": "sublinhar",
+      "p": "Toca nas duas palavras de «Isto» que dizem quem deve sentir.",
+      "frase": "Sentir? Sinta quem lê!",
+      "certas": [
+        2,
+        3
+      ],
+      "f": "«**Quem lê**»: o sentir fica para o leitor; o poeta escreve livre do seu enleio.",
+      "cita": "Sentir? Sinta quem lê!",
+      "recycledFrom": "/pt/m7/licao-m7-f02/",
+      "sourceCard": 15,
+      "fe": "Marcaste o verbo sentir, não quem deve sentir. A resposta à pergunta «Sentir?» está nas duas últimas palavras."
+    },
+    {
+      "t": "emparelhar",
+      "p": "Liga cada verso ao poema de onde vem.",
+      "pares": [
+        [
+          "«Finge tão completamente»",
+          "«Autopsicografia»"
+        ],
+        [
+          "«Sinta quem lê!»",
+          "«Isto»"
+        ],
+        [
+          "«Esse comboio de corda»",
+          "«Autopsicografia»"
+        ],
+        [
+          "«Livre do meu enleio»",
+          "«Isto»"
+        ]
+      ],
+      "f": "O fingidor e o comboio são de «Autopsicografia»; o enleio e o «Sinta quem lê!» são de «Isto».",
+      "recycledFrom": "/pt/m7/licao-m7-f02/",
+      "sourceCard": 17,
+      "fe": "Trocaste os poemas. O fingidor e o comboio de corda são de «Autopsicografia»; «Sinta quem lê!» e o «enleio» são de «Isto»."
+    },
+    {
+      "p": "«E os que lêem o que escreve»: quem são?",
+      "f": "Os leitores: a segunda estrofe passa do poeta para quem lê o que ele escreve.",
+      "legacyId": "s12-q3",
+      "recycledFrom": "/pt/m7/licao-m7-f02/",
+      "t": "escolha",
+      "o": [
+        "Quem lê o poema escrito.",
+        "Quem compõe outros poemas.",
+        "Quem sente a dor original."
+      ],
+      "c": 0,
+      "fe": [
+        null,
+        "O verso não introduz outros autores.",
+        "A dor original pertence ao poeta; aqui entram os leitores."
+      ]
+    },
+    {
+      "t": "vf",
+      "p": "Fingir, em «Autopsicografia», é o mesmo que mentir.",
+      "v": false,
+      "f": "Falso: fingir é **transformar a emoção numa coisa feita**, com forma, para os outros.",
+      "fe": "Fingir não é enganar: a dor é verdadeira («deveras sente», v. 4) e o poema dá-lhe forma para quem lê («Na dor lida», v. 6).",
+      "recycledFrom": "/pt/m7/licao-m7-f02/",
+      "sourceCard": 18
+    },
+    {
+      "t": "ordenar",
+      "p": "O caminho da dor em «Autopsicografia», do poeta ao leitor:",
+      "passos": [
+        "A dor que o poeta deveras sente",
+        "A dor fingida ao escrever",
+        "A dor que o leitor lê"
+      ],
+      "f": "Do que se sente ao que se escreve e ao que se lê: três dores, nenhuma igual.",
+      "recycledFrom": "/pt/m7/licao-m7-f02/",
+      "sourceCard": 19,
+      "fe": "Trocaste o percurso da dor. Começa na dor que o poeta sente, passa à dor fingida na escrita e acaba na dor que o leitor lê."
+    },
+    {
+      "t": "emparelhar",
+      "p": "Liga cada estrofe de «Autopsicografia» ao que nela acontece.",
+      "pares": [
+        [
+          "1.ª estrofe",
+          "o poeta finge a dor que sente"
+        ],
+        [
+          "2.ª estrofe",
+          "os leitores sentem a dor lida"
+        ],
+        [
+          "3.ª estrofe",
+          "o coração entretém a razão"
+        ]
+      ],
+      "f": "Fingir, ler, girar: o poema vai do poeta ao leitor e acaba no brinquedo do coração.",
+      "recycledFrom": "/pt/m7/licao-m7-f02/",
+      "sourceCard": 21,
+      "fe": "Trocaste as estrofes. A primeira é do poeta que finge, a segunda dos leitores, a terceira do coração que gira como um comboio de corda."
+    }
+  ]
+}

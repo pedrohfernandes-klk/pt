@@ -1,10 +1,10 @@
 {
  "base_commit": "8ee0ba98a868d71d2de36c0ecf02adb26c11c08b",
- "_nota": "05/11/2026: Laboratório do exame: o texto de contexto de cada sessão fala da lição e do excerto (não de uma «leitura de apoio» nem de um «recorte»), camada mais recente, por cima da ligação e das notas (exame_licao_20261105).",
+ "_nota": "05/11/2026: Laboratório do exame: o texto de contexto de cada sessão fala da lição e do excerto (não de uma «leitura de apoio» nem de um «recorte»), camada mais recente, por cima da ligação e das notas (exame_licao_20261105). 01/11/2026: duração das sessões de exame atualizada para 50 minutos (decisão 106); trocas, ocorrências e restantes ficheiros preservados; só os resumos dos ficheiros do exame que o pedido pt #155 muda foram refeitos (07/11/2026: sobre a fusão com o main), sem mudar o base_commit do manifesto, que continua a ser o das bases dos outros ficheiros. 07/11/2026: sessoes.json muda também nas perguntas antigas reescritas pelos achados 8, 23, 30, 31 e 41 e pela revisão de 7/11 (s18-q1, s20-q1, s21-q1 a q3, s22-q1 e q3, s23-q1, s25-q2, s26-q1, s26-q2 e as verificações «Depois da revisão» correspondentes); nenhuma troca das camadas foi tocada.",
  "files": {
   "assets/exame/sessoes.json": {
-   "base_sha256_lf": "4251e388bfeb91fa7f846f6ca1eeb2b8967e4bf59f14e31794329a0d89729f32",
-   "after_sha256_lf": "813d8e073303f6e3471b6627365a1886f348460774cd322dbc95c61b441d15eb",
+   "base_sha256_lf": "15a77322c5e096d5a7e7760cbff06908677ec685194234c61487f85683d3a0c2",
+   "after_sha256_lf": "9fd209c3a3103fe44c115007f3bbe7afac673db0b931fd8303c59d0e020de80e",
    "edits": [
     {
      "location": "Contexto das 16 sessões com excerto de uma lição: abre-se a lição e lê-se o excerto",
@@ -33,8 +33,8 @@
    ]
   },
   "exame/index.html": {
-   "base_sha256_lf": "50d440828d369e3049ffccbe843abc5bdb11df78fd02fd2b7970c672ba60fef1",
-   "after_sha256_lf": "3796eb9a2f6afe2be0e29f58db040412dcc9817cc65ec12e5419d0fec4472389",
+   "base_sha256_lf": "5e13d5518c94d456fb80d6e215f290538ace26316bdd1fa7e2a3661ad9618e15",
+   "after_sha256_lf": "7d48a0f9625320abd5eeb4712c4fd7615d3b79a43c87c8f8602b593bded69c28",
    "edits": [
     {
      "location": "Versão do app.js (também refresca sessoes.json), para os navegadores não usarem a cópia antiga",

@@ -8,9 +8,13 @@ import sys
 ROOT=Path(__file__).resolve().parents[1]
 LAYERS=[
  # 06/11/2026: decisão 152 (cuidado em todas as lições), módulo M1: tabelas onde há itens paralelos e referências e números que
- # não se partem, camada mais recente, por cima dos créditos atrás de um «i».
+ # não se partem, camada mais recente, por cima dos créditos atrás de um «i». 07/11/2026 (fusão do main 29441e6b): por cima dos acertos da decisão 173.
  ('cuidado_m1_20261106','cuidado-m1-edits-20261106'),
- # 05/11/2026: decisão 153, créditos das imagens atrás de um «i» (pedido pt-2), camada mais recente (06/11/2026: por cima do lote 3 do Atlas e da decisão 154, depois de juntar o main).
+ # 07/11/2026: três acertos dos índices deixados pela decisão 173 (acesso do docente repetido no M3, M5 e M6; «·» no M8 e M9; menu dos materiais sem JavaScript), camada mais recente, por cima do desenho comum dos índices.
+ ('indices_acertos_20261107','indices-acertos-edits-20261107'),
+ # 06/11/2026: decisão 148, o desenho do índice do M4 nos nove índices do Português, camada mais recente, por cima dos créditos atrás de um «i» (07/11/2026: por baixo dos acertos da decisão 173).
+ ('cartaz_indices_148_20261106','cartaz-indices-148-edits-20261106'),
+ # 05/11/2026: decisão 153, créditos das imagens atrás de um «i» (pedido pt-2), por cima do lote 3 do Atlas e da decisão 154 (06/11/2026: depois de juntar o main; 06/11/2026: por baixo do desenho comum dos índices, decisão 148).
  ('creditos_i_20261105','creditos-i-edits-20261105'),
  # 05/11/2026: Atlas Lusófono, lote 3 (66 figuras, «Imprensa e pensamento», localização aproximada, fotografias e vídeos), por cima da decisão 154 (06/11/2026: correções da revisão do lote 3 na mesma camada, e a camada passa por cima da decisão 154 depois de juntar o main).
  ('atlas_lote3_20261105','atlas-lote3-edits-20261105'),
