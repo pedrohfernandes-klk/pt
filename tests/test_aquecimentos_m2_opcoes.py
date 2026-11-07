@@ -9,6 +9,7 @@ import unittest
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/'scripts'))
 from auditar_aquecimentos_m1 import auditar
+from aquecimentos_falas_criadas import fala_criada
 from aquecimentos import plano, texto_visivel, validar
 
 SLUGS=('m2-u1','m2-u2')
@@ -55,6 +56,8 @@ class AquecimentosM2(unittest.TestCase):
                 with self.subTest(slug=slug,cartao=n):
                     texto=texto_visivel(c).replace('**','')
                     for q in re.findall('«([^»]+)»',texto):
+                        # 01/11/2026: só as falas criadas identificadas e literais têm fonte própria.
+                        if fala_criada(slug,n,c,q):continue
                         for verso in q.split(' / '):self.assertIn(verso.strip(),fontes)
                     if c['t']!='ler':
                         for r in d['reservadas']:self.assertNotIn(r.casefold(),texto.casefold())

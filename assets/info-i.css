@@ -1,0 +1,66 @@
+/* 05/11/2026: decisão 153. Peça «i» dos créditos, igual byte a byte no Português e no Lente (o sha256 está em
+   tests/fixtures/info-i-sha256.json, que é o mesmo ficheiro nos dois sítios). O crédito acompanha a imagem, fechado;
+   abre com toque, clique, Enter e Espaço (uma <details> nativa); o que diz o que se vê fica à vista, fora do «i».
+   Variante «canto» (por omissão): o «i» fica no canto inferior direito da imagem, dentro de um .com-i, e o crédito sobe
+   por cima do fundo da imagem. Variante «linha» (.info-i--linha): o «i» fica logo por baixo, alinhado à direita, e o
+   crédito abre no fluxo. As cores herdam as de cada casa: --cz-ground e --cz-ink no «Cartaz», --papel e --tinta nos
+   cartões; o tema escuro vem com essas variáveis (o assets/appearance.js acerta-as com a escolha manual).
+   Na impressão o «i» não sai e o crédito sai por extenso, com o endereço da licença (CC BY e CC BY-SA pedem-no). */
+details.info-i{--ii-papel:var(--cz-ground,var(--papel,#fff));--ii-tinta:var(--cz-ink,var(--tinta,#111));position:absolute;inset:0;z-index:auto;box-sizing:border-box;margin:0;padding:0;border:0;background:none;pointer-events:none;text-align:start}
+.com-i{position:relative}
+details.info-i>summary{position:absolute;inset-block-end:8px;inset-inline-end:8px;z-index:2;box-sizing:border-box;inline-size:44px;block-size:44px;min-inline-size:44px;min-block-size:44px;display:grid;place-items:center;gap:0;margin:0;padding:0;border:0;border-radius:50%;background:none;color:var(--ii-tinta);list-style:none;font:400 1rem/1 Arial,Helvetica,sans-serif;cursor:pointer;pointer-events:auto;touch-action:manipulation;-webkit-tap-highlight-color:transparent;-webkit-user-select:none;user-select:none}
+details.info-i>summary::-webkit-details-marker{display:none}
+details.info-i>summary::marker{content:""}
+details.info-i>summary::before,details.info-i>summary::after,details.info-i[open]>summary::before{content:none;display:none}
+details.info-i>summary>span{box-sizing:border-box;inline-size:28px;block-size:28px;display:grid;place-items:center;margin:0;padding:0;border:2px solid var(--ii-tinta);border-radius:50%;background:var(--ii-papel);color:var(--ii-tinta);box-shadow:0 0 0 2px var(--ii-papel);font:italic 700 17px/1 Georgia,"Times New Roman",serif;letter-spacing:0;text-transform:none}
+details.info-i[open]>summary>span{background:var(--ii-tinta);color:var(--ii-papel)}
+details.info-i>summary:focus{outline:none}
+/* Foco: contorno de 3 px desenhado para dentro (a moldura corta o que sai), entre duas faixas da cor do papel, para se ver
+   sobre qualquer fotografia. */
+details.info-i>summary:focus-visible{outline:3px solid var(--ii-tinta);outline-offset:-5px;box-shadow:inset 0 0 0 2px var(--ii-papel)}
+details.info-i>:is(p,div).info-i-texto{--epi-texto-corrido:start;position:absolute;inset-inline:8px;inset-block-end:8px;z-index:1;box-sizing:border-box;max-block-size:calc(100% - 16px);overflow:auto;margin:0;padding:12px 60px 12px 16px;border:1px solid var(--ii-tinta);background:var(--ii-papel);color:var(--ii-tinta);font:400 .8125rem/1.45 Arial,Helvetica,sans-serif;font-style:normal;text-align:start;text-align-last:auto;text-indent:0;-webkit-hyphens:manual;hyphens:manual;word-spacing:normal;letter-spacing:normal;overflow-wrap:break-word;white-space:normal;pointer-events:auto;cursor:auto;-webkit-user-select:text;user-select:text}
+/* 06/11/2026: as ligações do crédito são sempre texto corrido, mesmo quando a página dá outra caixa às suas ligações
+   (as galerias «Para ver» põem as ligações em inline-block, e o ponto final da licença ficava sozinho numa linha). */
+details.info-i .info-i-texto a{display:inline;color:inherit;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:2px}
+/* Decisão 140: o crédito nunca se justifica nem se hifeniza (a variável do texto corrido vale «start» dentro do «i»).
+   Decisão 152: a licença e as datas (span.nb) não partem a meio da linha. */
+details.info-i .info-i-texto :is(a[rel~=license],.nb){white-space:nowrap}
+details.info-i div.info-i-texto>p{margin:0 0 .5em;font:inherit}
+details.info-i div.info-i-texto>p:last-child{margin-bottom:0}
+details.info-i .info-i-texto table{inline-size:100%;margin:.25em 0 .5em;border-collapse:collapse;font:inherit}
+details.info-i .info-i-texto caption{padding:0 0 .25em;font-weight:700;text-align:start}
+details.info-i .info-i-texto :is(th,td){padding:.3em .5em .3em 0;border:0;border-block-end:1px solid currentColor;background:none;color:inherit;font:inherit;letter-spacing:normal;text-transform:none;text-align:start;vertical-align:top;overflow-wrap:anywhere}
+details.info-i .info-i-texto th{inline-size:38%;font-weight:700}
+/* Variante «linha»: imagens pequenas (menos de 240 px de largura ou de 160 px de altura), a linha dos fundos animados e
+   blocos sem imagem. Fechada, ocupa só o «i», à direita; aberta, o crédito fica no fluxo, por baixo. */
+details.info-i.info-i--linha{position:relative;inset:auto;inline-size:fit-content;margin-inline-start:auto;pointer-events:auto}
+details.info-i.info-i--linha[open]{inline-size:auto;margin-inline-start:0}
+details.info-i.info-i--linha>summary{position:relative;inset:auto;margin-inline-start:auto}
+details.info-i.info-i--linha>:is(p,div).info-i-texto{position:static;max-block-size:none;overflow:visible;padding:4px 0 0;border:0;background:none}
+/* Dentro de uma moldura que se ajusta à imagem, o crédito aberto ocupa a largura da imagem e não a alarga. */
+.com-i>details.info-i.info-i--linha[open]{contain:inline-size}
+/* 06/11/2026: revisão do pedido pt-2 (proximidade). No ecrã, com o «i» «linha» fechado entre a imagem e a legenda, a legenda sobe
+   para a faixa do «i», à esquerda dele, junto da sua imagem; aberto, o crédito abre entre a imagem e a legenda e o «i» não muda
+   de sítio. Na impressão, o crédito sai por baixo da imagem e a legenda a seguir (sem esta regra). */
+@media screen{figure:not(.documento)>details.info-i.info-i--linha:not([open]):has(+figcaption){margin-block-end:-44px}figure:not(.documento)>details.info-i.info-i--linha:has(+figcaption)+figcaption{min-block-size:44px;padding-inline-end:52px;box-sizing:border-box}}
+/* Fundos animados: «Parar o desenho» fica ao lado do «i», sempre fora dele. */
+.fundo-acoes{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:0 16px}
+.fundo-acoes>details.info-i.info-i--linha[open]{flex:1 1 100%}
+/* Projeção: fechado e discreto, com o alvo de 44 px; a letra fica no degrau da projeção. O assets/info-i.js marca
+   data-ii-projecao nas lições projetadas com ?projetar=1. */
+/* 06/11/2026: revisão do pedido pt-2. O «canto» guarda o fundo de papel e o halo de 2 px da regra de base: pousado na
+   fotografia, sem eles o círculo descia a 1,3:1 contra a imagem. Só a «linha», que fica sobre o papel da página, perde o fundo. */
+:is(.em-projecao,.epi-projection,[data-cz-projection],[data-ii-projecao]) details.info-i>summary>span{inline-size:32px;block-size:32px;border-width:1px;font-size:1.25rem}
+:is(.em-projecao,.epi-projection,[data-cz-projection],[data-ii-projecao]) details.info-i.info-i--linha>summary>span{background:transparent;box-shadow:none}
+:is(.em-projecao,.epi-projection,[data-cz-projection],[data-ii-projecao]) details.info-i[open]>summary>span{background:var(--ii-tinta)}
+:is(.em-projecao,.epi-projection,[data-cz-projection],[data-ii-projecao]) details.info-i>:is(p,div).info-i-texto{font-size:1.125rem}
+@media (prefers-reduced-motion:no-preference){details.info-i[open]>.info-i-texto{animation:ii-abre .16s ease-out}}
+@keyframes ii-abre{from{opacity:0;transform:translateY(4px)}}
+/* Páginas sem variáveis próprias de tema: papel escuro e tinta clara. */
+@media (prefers-color-scheme:dark){details.info-i{--ii-papel:var(--cz-ground,var(--papel,#121210));--ii-tinta:var(--cz-ink,var(--tinta,#ecebe5))}}
+@media (forced-colors:active){details.info-i>summary>span{forced-color-adjust:none;border-color:CanvasText;background:Canvas;color:CanvasText;box-shadow:0 0 0 2px Canvas}details.info-i[open]>summary>span{border-color:Highlight;background:Highlight;color:HighlightText}details.info-i>summary:focus-visible{outline-color:Highlight}details.info-i>:is(p,div).info-i-texto{border-color:CanvasText}}
+/* Impressão: sem o «i»; o crédito por extenso, por baixo da imagem, a preto, com o endereço da licença. Não depende de JS:
+   ::details-content mostra o conteúdo das <details> fechadas. A linha dos fundos não sai (os desenhos também não). */
+/* 05/11/2026: na impressão, o endereço da licença pode partir onde for preciso (numa coluna estreita, como as galerias «Para ver»,
+   não invade a coluna do lado); o nome da licença continua inteiro (decisão 152). */
+@media print{details.info-i,details.info-i.info-i--linha{position:static;inset:auto;inline-size:auto;margin:0;pointer-events:auto}details.info-i>summary{display:none}details.info-i::details-content{content-visibility:visible;display:block}details.info-i>:is(p,div).info-i-texto,details.info-i.info-i--linha>:is(p,div).info-i-texto{position:static;max-block-size:none;overflow:visible;margin:4pt 0 0;padding:0;border:0;background:none;color:#000;font:8pt/1.3 Arial,Helvetica,sans-serif;animation:none}details.info-i .info-i-texto a[rel~=license]::after{content:" (" attr(href) ")";white-space:normal;overflow-wrap:anywhere}.com-i>details.info-i[open]{contain:none}.fundo-acoes{display:none}}

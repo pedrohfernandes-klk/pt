@@ -1,3 +1,5 @@
+# 03/11/2026: cabeçalho sobre F0 publicada, mantendo reversão e asserções.
+# 03/11/2026: desfazer primeiro a camada visual do cabecalho, com as mesmas assercoes.
 """26/10 decision: task = closure lesson, synthesis inside, old checkpoints archive only."""
 from pathlib import Path
 from html.parser import HTMLParser
@@ -35,7 +37,22 @@ LINGUA_EDITS=ROOT/'tests/fixtures/lingua-pessoa-m7-edits-20261030.json'
 def original_lesson_text(path):
  """Reverse only the explicitly authorized UX strings; retain the frozen LF hash."""
  source=(ROOT/path).read_text('utf-8')
- for manifest_path in (LINGUA_EDITS,OPCOES_EDITS,JUSTIFICADO_EDITS,AQUECIMENTOS_EDITS,SALA_EDITS,AUDIT_EDITS_M4_M7,AUDIT_EDITS,REIS_EDITS,TABLE_EDITS,GRAMMAR_EDITS,INSTRUCTION_EDITS):
+ # 31/10/2026: a camada das tarefas precede todas as anteriores.
+ # 01/11/2026: camada M8/M9 antes das anteriores.
+ # 01/11/2026: desfaz primeiro as duas camadas de lições, conservando os hashes históricos.
+ # 01/11/2026: os índices desfazem-se antes dos conteúdos e das lições.
+ # 02/11/2026: e, antes de todas, as tarefas individuais; antes delas, a calçada da entrada.
+ # 02/11/2026: lote 2 antes das camadas históricas, sem normalizações.
+ # 03/11/2026: piloto M4, F0, créditos e lote 2, com a mesma reversão estrita.
+ # 05/11/2026: a revisão de 5/11 desfaz-se antes de todas.
+ # 05/11/2026: e, antes dela, a tabela dos seis movimentos.
+  # 05/11/2026: o Laboratório do exame (lição, não «leitura de apoio») é a camada mais recente; desfaz-se antes da tabela dos seis movimentos.
+  # 05/11/2026: o contexto de cada sessão do Laboratório do exame (lição e excerto, não «recorte») é a camada mais recente; desfaz-se antes da ligação e das notas do Laboratório do exame.
+  # 05/11/2026: a decisão 154 (os exercícios fazem-se sozinho; nada no texto do aluno depende do docente) é a camada mais recente; desfaz-se antes do contexto do Laboratório do exame, com a mesma exigência.
+ # 06/11/2026: os créditos atrás de um «i» (decisão 153, pedido pt-2) são a camada mais recente, por cima do lote 3 do Atlas e da decisão 154 (junção com o main); desfazem-se primeiro, com a mesma exigência.
+ # 06/11/2026: o desenho comum dos nove índices (decisão 148) é a camada mais recente, por cima dos créditos atrás de um «i»; desfaz-se primeiro, com a mesma exigência.
+ # 07/11/2026: os três acertos dos índices deixados pela decisão 173 são a camada mais recente, por cima do desenho comum dos nove índices; desfazem-se primeiro, com a mesma exigência.
+ for manifest_path in (ROOT/'tests/fixtures/indices-acertos-edits-20261107.json',ROOT/'tests/fixtures/cartaz-indices-148-edits-20261106.json',ROOT/'tests/fixtures/creditos-i-edits-20261105.json',ROOT/'tests/fixtures/autonomia-154-edits-20261105.json',ROOT/'tests/fixtures/exame-contexto-edits-20261105.json',ROOT/'tests/fixtures/exame-licao-edits-20261105.json',ROOT/'tests/fixtures/tabela-movimentos-edits-20261105.json',ROOT/'tests/fixtures/revisao-edits-20261105.json',ROOT/'tests/fixtures/cartaz-cabecalho-edits-20261103.json',ROOT/'tests/fixtures/cartaz-m4-piloto-edits-20261102.json',ROOT/'tests/fixtures/variedade-f0-edits-20261102.json',ROOT/'tests/fixtures/creditos-grafismos-ia-edits-20261102.json',ROOT/'tests/fixtures/conteudos-lote2-edits-20261101.json',ROOT/'tests/fixtures/varredura-formatacao-edits-20261101.json',ROOT/'tests/fixtures/calcada-mar-edits-20261102.json',ROOT/'tests/fixtures/tarefas-individuais-edits-20261102.json',ROOT/'tests/fixtures/cartaz-indices-edits-20261101.json',ROOT/'tests/fixtures/licoes-m16-edits-20261101.json',ROOT/'tests/fixtures/licoes-m89-edits-20261101.json',ROOT/'tests/fixtures/tarefas-m89-edits-20261101.json',ROOT/'tests/fixtures/tarefas-m356-edits-20261031.json',LINGUA_EDITS,OPCOES_EDITS,JUSTIFICADO_EDITS,AQUECIMENTOS_EDITS,SALA_EDITS,AUDIT_EDITS_M4_M7,AUDIT_EDITS,REIS_EDITS,TABLE_EDITS,GRAMMAR_EDITS,INSTRUCTION_EDITS):
   manifest=json.loads(manifest_path.read_text('utf-8'))
   for edit in reversed(manifest['files'].get(path,{}).get('edits',[])):
    if source.count(edit['new'])!=edit['occurrences']:
@@ -71,6 +88,10 @@ class TaskRoutes(unittest.TestCase):
  def test_one_classroom_task_per_unit_no_independent_closure_gate(self):
   # 27/10/2026 (passagem do GPT, tarefas por unidade): o M2 passa ao mesmo modelo, com duas aulas de tarefa.
   expected={1:['m1-u1','m1-u2'],2:['m2-u1','m2-u2'],4:['m4-u1','m4-u2','m4-u3-discurso'],7:['m7-u1','m7-u2','m7-u3']}
+  # 31/10/2026: inclui as seis tarefas aprovadas do M3, M5 e M6.
+  expected.update({3: ['m3-u1', 'm3-u2'], 5: ['m5-u1', 'm5-u2'], 6: ['m6-u1', 'm6-u2']})
+  # 01/11/2026: todos os módulos têm aula de tarefa.
+  expected.update({8:["m8-u1","m8-u2"],9:["m9-u1","m9-u2"]})
   for m,slugs in expected.items():
    s=(ROOT/f'm{m}/index.html').read_text('utf-8');p=Route(s)
    self.assertEqual(len(p.ids),len(set(p.ids)))

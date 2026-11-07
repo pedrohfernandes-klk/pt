@@ -1,3 +1,4 @@
+# 01/11/2026: nove lições no M1/M2/M3/M5/M6 elevam o inventário a 125.
 """Audit embedded lesson card definitions; no browser or external dependencies.
 
 Run: python scripts/audit_cards.py
@@ -101,8 +102,8 @@ def audit(root=ROOT):
                 lessons.append({'path': rel, 'definitions': len(cards), 'types': dict(kinds)})
         except (ValueError, OSError) as error:
             errors.append(f'{rel}: {error}')
-    if len(lessons) != 109:
-        errors.append(f'Expected 109 card banks, found {len(lessons)}; review inventory changes explicitly')
+    if len(lessons) != 125:
+        errors.append(f'Expected 125 card banks, found {len(lessons)}; review inventory changes explicitly')
     return {'lessons': len(lessons), 'definitions': sum(counts.values()),
             'external_banks': sorted(EXTERNAL_BANKS),
             'reading': counts['ler'], 'interactive': sum(counts.values()) - counts['ler'],

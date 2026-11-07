@@ -88,58 +88,57 @@
   },
   {
    "t": "escolha",
-   "p": "No exórdio, Vieira escreve «O efeito do sal é impedir a corrupção». Lida como alegoria, o que cabe aos pregadores?",
-   "p2": "O sal impede que a comida apodreça. Na imagem de Vieira, o que devem impedir os pregadores?",
+   "p": "Antes de releres a síntese, tenta a relação: se o sal impede a corrupção, que ação dos pregadores corresponde a essa função na alegoria?",
+   "p2": "Recupera a relação entre sal, pregadores e corrupção antes de consultares a explicação.",
    "o": [
-    "Impedir que o vício corrompa as pessoas.",
-    "Impedir que se desvie o dinheiro de todos.",
-    "Impedir que o chão de São Luís apodreça."
+    "Contrariar os vícios que corrompem a conduta humana.",
+    "Conservar o alimento que sustenta a vida da comunidade.",
+    "Combater apenas o desvio do dinheiro da comunidade."
    ],
    "c": 0,
    "f": "Na imagem, cada coisa vale por outra: o sal são os pregadores, a terra as pessoas, a corrupção os vícios que nelas apodrecem (F02, cap. I). Na tarefa, mostra a mesma correspondência, ponto por ponto, entre o teu peixe e o comportamento.",
    "fe": [
     null,
-    "É o sentido de hoje, o dos jornais. Em Vieira, corrupção é o que apodrece, como a comida sem sal: os vícios.",
-    "É a leitura à letra. Na imagem, a terra são as pessoas a quem os pregadores falam, não o chão."
+    "Confundes o plano literal com aquilo que ele representa. Relê a correspondência entre sal e pregadores: o que equivale à corrupção?",
+    "Reduzes o sentido moral ao uso financeiro atual da palavra. Relê «impedir a corrupção»: a alegoria limita-se ao dinheiro?"
    ],
    "g": 2
   },
   {
    "t": "completar",
-   "p": "Completa a definição de alegoria da aula F01.",
-   "p2": "Alegoria ou comparação solta? Completa o que distingue a alegoria.",
-   "frase": "Na alegoria, fala-se de uma coisa para dizer outra, [1].",
+   "p": "Caso criado: um jardim representa uma cidade; os cuidados com as plantas representam ações dos habitantes. Que relação sustenta a alegoria?",
+   "p2": "No caso criado do jardim-cidade, o que permite prolongar a imagem como alegoria?",
+   "frase": "A imagem continua porque se ligam [1].",
    "lacunas": [
     {
      "o": [
-      "ponto por ponto, numa imagem que continua",
-      "uma só vez, juntando as duas com «como»",
-      "com animais numa história, com a moral dita"
+      "elementos do jardim e ações dos habitantes",
+      "nomes das plantas e datas dos acontecimentos",
+      "cores do jardim e sons das palavras usadas"
      ],
      "c": 0
     }
    ],
-   "f": "Alegoria: falar de uma coisa para dizer outra, ponto por ponto, numa imagem que continua; no sermão, do princípio ao fim (F01). A comparação solta junta as duas coisas uma vez, com «como»; na fábula, a moral vem dita.",
-   "fe": "Juntar as duas coisas uma vez, com «como», é uma comparação solta; uma história de animais com a moral dita é uma fábula. Na alegoria, a imagem continua e cada parte vale por outra.",
+   "f": "A alegoria constrói correspondências entre planos. No caso criado, jardim e cidade, cuidados e ações permitem continuar a relação. Relê a definição só depois da tentativa: não basta haver plantas ou uma imagem agradável.",
+   "fe": "Confundes características isoladas com uma correspondência entre planos. Relê o caso: o jardim representa a cidade e os cuidados representam ações.",
    "g": 3
   },
   {
    "t": "escolha",
-   "p": "No ensaio com relógio, a tua apresentação chega aos cinco minutos. O que fazes?",
-   "p2": "A apresentação tem de durar três a quatro minutos, e o ensaio deu cinco. Qual é a boa decisão?",
-   "o": [
-    "Cortas o que se repete e voltas a ensaiar.",
-    "Falas mais depressa, para caber tudo no tempo.",
-    "Deixas assim: um minuto a mais não conta."
-   ],
-   "c": 0,
-   "f": "Três a quatro minutos é um critério, e o ensaio com relógio serve para mudares alguma coisa (F10). Corta o que se repete, não a citação, o recurso ou a resposta à objeção.",
+   "p": "Caso criado: o teu ensaio dura cinco minutos. Repetes a mesma ideia, citas Vieira e explicas o efeito da citação. Que revisão conserva o essencial?",
+   "f": "A repetição ocupa tempo sem acrescentar prova. Depois do corte, confirma se ainda explicas a relação entre a citação e a ideia e se cumpres o tempo pedido.",
    "fe": [
-    null,
-    "Falar depressa tira clareza: quem ouve não pode voltar atrás. Ganha tempo a cortar, não a acelerar.",
-    "O tempo conta: são três a quatro minutos. Um ensaio que passa do limite pede uma mudança."
+    "Confundes uma prova com uma repetição dispensável. Relê a citação de Vieira e a frase que repete a ideia: qual delas sustenta a interpretação?",
+    "Confundes a explicação da prova com a repetição da ideia. Relê a ligação entre a citação e o efeito: sem ela, como se percebe o raciocínio?",
+    null
    ],
-   "g": 4
+   "g": 4,
+   "o": [
+    "Cortas a citação de Vieira, manténs a repetição e voltas a medir o tempo.",
+    "Cortas a explicação do efeito, manténs a repetição e voltas a medir o tempo.",
+    "Cortas a ideia repetida, manténs a prova e a sua explicação e medes o tempo."
+   ],
+   "c": 2
   },
   {
    "t": "ordenar",

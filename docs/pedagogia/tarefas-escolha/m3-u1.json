@@ -1,0 +1,119 @@
+{
+ "slug": "m3-u1",
+ "titulo": "Quem canta, quem cala: as vozes de Camões",
+ "unidade": 1,
+ "aquecer": {
+  "cartoes": "aquecimento/",
+  "minutos": 10,
+  "texto": "No início da aula de tarefa: 10 minutos de cartões com consulta, 5 minutos para leres o enunciado, 60 minutos de produção e 15 minutos de revisão e entrega. Total: 90 minutos. O relógio de produção começa depois da leitura.",
+  "ligacao": "Abrir o aquecimento em cartões",
+  "ligacao_enunciado": "Aquecer"
+ },
+ "lead": "À mão, 200 a 240 palavras: cerca de 60 por resposta do núcleo e 80 a 120 no tema. Com consulta.",
+ "nucleo": [
+  "Na Proposição (I, 1 a 3), cita uma expressão que canta quem partiu e outra sobre quem lá vivia. Explica o que um objeto do <i>Kit</i> de Patrícia Lino mostra e a Proposição cala. Escreve um facto e um juízo sobre a Proposição.",
+  "Cita um verso das voltas de «Descalça vai para a fonte» e um de «Alma minha gentil», do verso 3 em diante. Nomeia um recurso de cada e explica o que mostra da amada. Divide-os em sílabas métricas e diz a medida."
+ ],
+ "temas": [
+  {
+   "letra": "A",
+   "nome": "A medida velha, hoje",
+   "texto": "Uma Leonor de hoje vai a pé à escola: escreve-lhe, em redondilha maior, um mote de dois versos e uma volta de cinco que acabe no último verso do mote, com cores e uma hipérbole. Divide dois versos teus em sílabas. Cita o verso de Camões que imitaste, diz o que imitaste e uma diferença entre as Leonores."
+  },
+  {
+   "letra": "B",
+   "nome": "Pedra e verso",
+   "texto": "Numa exposição, legenda a fotografia do túmulo de Camões (lição F04): a imagem em duas frases, dois factos do dossiê, um verso da Proposição ou do Velho do Restelo, com canto e estância, a razão por que o escolheste e o que a legenda não pode afirmar."
+  }
+ ],
+ "apoios": [
+  {
+   "href": "../../m3/licao-m3-f02/",
+   "texto": "Duas versões de 1498 (F02): relê «O texto, 1 de 3», «O texto, 2 de 3» e «O texto, 3 de 3» (a Proposição e o vocabulário) e «Para entender» (os seis objetos do <i>Kit</i>)."
+  },
+  {
+   "href": "../../m3/licao-m3-f05/",
+   "texto": "Leonor e o perdigão (F05): relê «O texto, 1 de 4» e «O texto, 2 de 4» (Leonor), «Para entender» (medida velha, mote e voltas) e «A calçada do verso» (como se contam as sílabas)."
+  },
+  {
+   "href": "../../m3/licao-m3-f09/",
+   "texto": "Uma alma gentil, um «não sei quê» (F09): relê «O texto, 1 de 4» e «O texto, 2 de 4» («Alma minha gentil») e «A calçada do verso» (o decassílabo)."
+  },
+  {
+   "href": "../../m3/licao-m3-f03/",
+   "texto": "Jerónimos: ler um edifício (F03), para o tema B: relê «O texto, 1 de 2» e «O texto, 2 de 2» (o Velho do Restelo, IV, 94 e 95) e «Linha de vida» (o mosteiro). Não precisas de lá ter ido: chega o dossiê."
+  },
+  {
+   "href": "../../m3/licao-m3-f04/",
+   "texto": "Objetos com duas histórias (F04), para o tema B: relê «Abre» (a fotografia do túmulo), «O essencial» (a etiqueta, a fonte verificada e o que não se confirmou) e «Em paralelo» (duas histórias do mesmo objeto)."
+  }
+ ],
+ "exemplos": [
+  {
+   "titulo": "Dividir um verso em sílabas métricas (resolvido)",
+   "html": "<p>«Não há mal que lhe não venha» («Perdigão perdeu a pena»): Não / há / mal / que / lhe / não / ve(nha). Conta-se até à última sílaba tónica, «ve»: sete sílabas, redondilha maior.</p><p>«É tudo quanto sinto um desconcerto» («Tanto de meu estado me acho incerto»): É / tu / do / quan / to / sin / to_um / des / con / cer(to). O «to» e o «um» juntam-se numa só sílaba, e para-se em «cer»: dez sílabas, decassílabo.</p><p>No teu papel, divide assim os versos que citares e marca a última tónica. As divisões em sílabas não contam para as 200 a 240 palavras.</p>"
+  }
+ ],
+ "dossie_titulo": "Dossiê do tema B",
+ "dossie": [
+  {
+   "facto": "No início do século XVI, D. Manuel I manda erguer o Mosteiro de Santa Maria de Belém, entregue à Ordem de São Jerónimo.",
+   "href": "../../m3/licao-m3-f03/",
+   "fonte": "Lição «Jerónimos: ler um edifício», «Linha de vida»"
+  },
+  {
+   "facto": "Na pedra do mosteiro estão a esfera armilar, cordas e a cruz de Cristo: poder, fé, mar.",
+   "href": "../../m3/licao-m3-f03/",
+   "fonte": "Lição «Jerónimos: ler um edifício», «Em paralelo»"
+  },
+  {
+   "facto": "O mosteiro é Monumento Nacional desde 1907 e Património Mundial da UNESCO desde 1983, com a Torre de Belém.",
+   "href": "../../m3/licao-m3-f03/",
+   "fonte": "Lição «Jerónimos: ler um edifício», «Linha de vida»"
+  },
+  {
+   "facto": "Em 2016, o mosteiro passa a Panteão Nacional; Camões tem aí um túmulo.",
+   "href": "../../m3/licao-m3-f03/",
+   "fonte": "Lição «Jerónimos: ler um edifício», «Linha de vida»"
+  },
+  {
+   "facto": "Em <i>Os Lusíadas</i> (1572), o Velho do Restelo fala na praia de Belém, contra a viagem.",
+   "href": "../../m3/licao-m3-f03/",
+   "fonte": "Lição «Jerónimos: ler um edifício», «Linha de vida» e «Em paralelo»"
+  },
+  {
+   "facto": "A fotografia do túmulo de Camões nos Jerónimos que abre a lição é de ProtoplasmaKid (2019), com a licença CC BY-SA 4.0.",
+   "href": "../../m3/licao-m3-f04/",
+   "fonte": "Lição «Objetos com duas histórias», «Abre»"
+  }
+ ],
+ "opcional": {
+  "pergunta": "Em «Amor é fogo que arde sem se ver», quantas sílabas métricas há?",
+  "opcoes": [
+   {
+    "certa": false,
+    "letra": "A",
+    "texto": "Onze: contas cada sílaba, como na gramática.",
+    "resposta": "Na gramática são onze, mas na métrica a vogal do fim de uma palavra junta-se à do início da seguinte: «que» e «ar» de «arde» fazem uma só sílaba."
+   },
+   {
+    "certa": true,
+    "letra": "B",
+    "texto": "Dez: «que» e «ar» juntam-se numa sílaba.",
+    "resposta": "A / mor / é / fo / go / que_ar / de / sem / se / ver: dez, até à última tónica, «ver». É o decassílabo, a medida nova dos sonetos."
+   },
+   {
+    "certa": false,
+    "letra": "C",
+    "texto": "Sete: um verso curto, da medida velha.",
+    "resposta": "Sete sílabas tem a redondilha maior, de Leonor e do perdigão. Este verso abre um soneto: conta-o até «ver»."
+   }
+  ]
+ },
+ "criterios": [
+  "Núcleo: expressões citadas, objeto explicado, facto e juízo; versos citados, recursos explicados, sílabas e medida.",
+  "Tema A: mote, volta, verso que volta, cores, hipérbole, sílabas, imitação e diferença. Tema B: imagem, dois factos, verso localizado e explicado, o que não se pode afirmar.",
+  "Respostas articuladas, 200 a 240 palavras, escrita revista."
+ ],
+ "fecho": "Fecha com duas linhas, fora da contagem de palavras: o que passaste a perguntar quando um poema canta alguém? Aponta o verso que te ajudou."
+}

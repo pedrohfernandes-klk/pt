@@ -262,13 +262,33 @@ def painel(browser, host, caminho, italico, com_atlas):
 def indice_e_desafio(browser, host):
     v = Visita(browser, host, caminho='/pt/m3/')
     page = v.abrir('/pt/m3/')
+    # 01/11/2026: o desafio do M3 passou ao arquivo; abrir pelo percurso visível, sem dispensar a gravação nem a vigilância da rede.
+    # 03/11/2026: no piloto M4 os materiais abrem dentro dos recursos nativos (06/11/2026: deixou de valer com a decisão 148).
+    # 06/11/2026: decisão 148, o acesso do docente volta a flutuar nos nove, fora de «Recursos do módulo»: abre-se logo, sem exceção.
+    # 06/11/2026: decisão 173, a 390 px o acesso do docente está no menu «Recursos do módulo», que se abre primeiro.
+    assert page.locator('main > details.cz-recursos .route-teacher-tools').count() == 1
+    assert not page.locator('.cz-recursos').evaluate('e=>e.open')
+    page.locator('.cz-recursos > summary').click()
+    page.locator('.route-teacher-tools > summary').click()
+    page.locator('.route-teacher-tools a[href="?arquivo=1#arquivo-percurso"]').click()
+    page.wait_for_url('**/?arquivo=1#arquivo-percurso')
+    assert page.locator('#arquivo-percurso').is_visible()
     page.evaluate('''() => { const m = EPIJogo.montar; window.__desafio = null;
-      EPIJogo.montar = cfg => { if (/^Desafio da unidade/.test(cfg.titulo || '')) window.__desafio = cfg; return m(cfg); }; }''')
+      EPIJogo.montar = cfg => { if (cfg.chave === 'desafio-unidade-v2-M3-u1') window.__desafio = cfg; return m(cfg); }; }''')
     page.locator('[data-desafio="1"]').click()
     page.locator('.casca.sobreposta .cartao').wait_for()
-    page.evaluate('() => window.__desafio.fim({certas: 8, total: 8, n: 8})')
+    assert page.evaluate('() => !!window.__desafio')
+    # 01/11/2026: o motor grava a tentativa do arquivo; o callback apenas atualiza o índice.
+    # Responder aos oito cartões verifica a gravação real, sem simular uma antiga aprovação da unidade.
+    page.evaluate('document.querySelector(".casca.sobreposta .jogo-alvo").id="baralho"')
+    for action in range(60):
+        if page.locator('#baralho .cartao.fim').count():
+            break
+        respond(page)
+    else:
+        raise AssertionError('O desafio do arquivo M3 não terminou')
     guardado = page.evaluate('JSON.parse(localStorage.getItem("desafio-unidade-v2-M3-u1") || "null")')
-    assert guardado and guardado.get('ganho') is True and guardado.get('total') == 8, guardado
+    assert guardado and guardado.get('lida') is True and guardado.get('total') == 8 and guardado.get('tentativas') == 1, guardado
     externos = v.confirmar('índice M3 e fim do Desafio')
     v.fechar()
     print('PASS índice M3: fim do Desafio da unidade grava no aparelho e não envia nada:', externos, flush=True)

@@ -835,7 +835,147 @@ def main():
                     contagem['congelada depois do corte (fora do manifesto)'] += 1
                 continue
             try:
-                confirmar_congelada(rel, tipo, texto, reg)
+                # 31/10/2026: a substituição do percurso antigo é uma camada literal posterior.
+                posterior = ROOT / 'tests/fixtures/tarefas-m356-edits-20261031.json'
+                conferencia = texto
+                # 02/11/2026: a camada da calçada da entrada (a mais recente) desfaz-se antes das outras, só para conferir.
+                # 02/11/2026: a atribuição de IA é posterior ao lote 2 publicado.
+                # 03/11/2026: primeiro a camada visual do cabecalho.
+                # 05/11/2026: antes de tudo, a revisão de 5/11, a camada mais recente.
+                # 07/11/2026: antes de tudo, os três acertos dos índices deixados pela decisão 173, a camada mais recente, por
+                # cima do desenho comum dos nove índices.
+                acertos = ROOT / 'tests/fixtures/indices-acertos-edits-20261107.json'
+                for edit in reversed(json.loads(acertos.read_text('utf-8'))['files'].get(rel, {}).get('edits', [])):
+                    if conferencia.count(edit['new']) != edit['occurrences']:
+                        raise ManifestoDesatualizado(f'{rel}: acertos dos índices (decisão 173) não conferem')
+                    conferencia = conferencia.replace(edit['new'], edit['old'])
+                # 06/11/2026: antes de tudo, o desenho comum dos nove índices (decisão 148), a camada mais recente, por cima dos
+                # créditos atrás de um «i» (07/11/2026: logo a seguir aos acertos da decisão 173).
+                indices_148 = ROOT / 'tests/fixtures/cartaz-indices-148-edits-20261106.json'
+                for edit in reversed(json.loads(indices_148.read_text('utf-8'))['files'].get(rel, {}).get('edits', [])):
+                    if conferencia.count(edit['new']) != edit['occurrences']:
+                        raise ManifestoDesatualizado(f'{rel}: desenho comum dos índices (decisão 148) não confere')
+                    conferencia = conferencia.replace(edit['new'], edit['old'])
+                # 06/11/2026: depois, os créditos atrás de um «i» (decisão 153), por cima do lote 3 do Atlas depois de juntar o
+                # main.
+                creditos_i = ROOT / 'tests/fixtures/creditos-i-edits-20261105.json'
+                for edit in reversed(json.loads(creditos_i.read_text('utf-8'))['files'].get(rel, {}).get('edits', [])):
+                    if conferencia.count(edit['new']) != edit['occurrences']:
+                        raise ManifestoDesatualizado(f'{rel}: créditos atrás de um «i» não conferem')
+                    conferencia = conferencia.replace(edit['new'], edit['old'])
+                # 06/11/2026: depois, o lote 3 do Atlas, por cima da decisão 154 depois de juntar o main.
+                atlas3 = ROOT / 'tests/fixtures/atlas-lote3-edits-20261105.json'
+                for edit in reversed(json.loads(atlas3.read_text('utf-8'))['files'].get(rel, {}).get('edits', [])):
+                    if conferencia.count(edit['new']) != edit['occurrences']:
+                        raise ManifestoDesatualizado(f'{rel}: lote 3 do Atlas não confere')
+                    conferencia = conferencia.replace(edit['new'], edit['old'])
+                # 05/11/2026: e, logo a seguir, a decisão 154 (os exercícios fazem-se sozinho).
+                autonomia = ROOT / 'tests/fixtures/autonomia-154-edits-20261105.json'
+                for edit in reversed(json.loads(autonomia.read_text('utf-8'))['files'].get(rel, {}).get('edits', [])):
+                    if conferencia.count(edit['new']) != edit['occurrences']:
+                        raise ManifestoDesatualizado(f'{rel}: decisão 154 (exercícios a sós) não confere')
+                    conferencia = conferencia.replace(edit['new'], edit['old'])
+                # 05/11/2026: e, antes do Laboratório do exame, o contexto de cada sessão.
+                contexto = ROOT / 'tests/fixtures/exame-contexto-edits-20261105.json'
+                for edit in reversed(json.loads(contexto.read_text('utf-8'))['files'].get(rel, {}).get('edits', [])):
+                    if conferencia.count(edit['new']) != edit['occurrences']:
+                        raise ManifestoDesatualizado(f'{rel}: contexto do Laboratório do exame não confere')
+                    conferencia = conferencia.replace(edit['new'], edit['old'])
+                # 05/11/2026: e, antes da tabela, o Laboratório do exame, a camada mais recente.
+                exame = ROOT / 'tests/fixtures/exame-licao-edits-20261105.json'
+                for edit in reversed(json.loads(exame.read_text('utf-8'))['files'].get(rel, {}).get('edits', [])):
+                    if conferencia.count(edit['new']) != edit['occurrences']:
+                        raise ManifestoDesatualizado(f'{rel}: Laboratório do exame não confere')
+                    conferencia = conferencia.replace(edit['new'], edit['old'])
+                # 05/11/2026: e, antes dela, a tabela dos seis movimentos.
+                tabela = ROOT / 'tests/fixtures/tabela-movimentos-edits-20261105.json'
+                for edit in reversed(json.loads(tabela.read_text('utf-8'))['files'].get(rel, {}).get('edits', [])):
+                    if conferencia.count(edit['new']) != edit['occurrences']:
+                        raise ManifestoDesatualizado(f'{rel}: tabela dos seis movimentos não confere')
+                    conferencia = conferencia.replace(edit['new'], edit['old'])
+                revisao = ROOT / 'tests/fixtures/revisao-edits-20261105.json'
+                for edit in reversed(json.loads(revisao.read_text('utf-8'))['files'].get(rel, {}).get('edits', [])):
+                    if conferencia.count(edit['new']) != edit['occurrences']:
+                        raise ManifestoDesatualizado(f'{rel}: revisão de 5/11 não confere')
+                    conferencia = conferencia.replace(edit['new'], edit['old'])
+                cabecalho = ROOT / 'tests/fixtures/cartaz-cabecalho-edits-20261103.json'
+                for edit in reversed(json.loads(cabecalho.read_text('utf-8'))['files'].get(rel, {}).get('edits', [])):
+                    if conferencia.count(edit['new']) != edit['occurrences']:
+                        raise ManifestoDesatualizado(f'{rel}: créditos de IA não conferem')
+                    conferencia = conferencia.replace(edit['new'], edit['old'])
+                creditos_ia = ROOT / 'tests/fixtures/creditos-grafismos-ia-edits-20261102.json'
+                for edit in reversed(json.loads(creditos_ia.read_text('utf-8'))['files'].get(rel, {}).get('edits', [])):
+                    if conferencia.count(edit['new']) != edit['occurrences']:
+                        raise ManifestoDesatualizado(f'{rel}: créditos de IA não conferem')
+                    conferencia = conferencia.replace(edit['new'], edit['old'])
+                # 02/11/2026: lote 2 por cima da base publicada, só para conferir.
+                # 02/11/2026: o piloto M4 desfaz-se primeiro, apenas em memória.
+                piloto = ROOT / 'tests/fixtures/cartaz-m4-piloto-edits-20261102.json'
+                if piloto.is_file():
+                    for edit in reversed(json.loads(piloto.read_text('utf-8'))['files'].get(rel, {}).get('edits', [])):
+                        if conferencia.count(edit['new']) != edit['occurrences']:
+                            raise ManifestoDesatualizado(f'{rel}: camada do piloto M4 não confere')
+                        conferencia = conferencia.replace(edit['new'], edit['old'])
+                lote2 = ROOT / 'tests/fixtures/conteudos-lote2-edits-20261101.json'
+                for edit in reversed(json.loads(lote2.read_text('utf-8'))['files'].get(rel, {}).get('edits', [])):
+                    if conferencia.count(edit['new']) != edit['occurrences']:
+                        raise ManifestoDesatualizado(f'{rel}: lote 2 não confere')
+                    conferencia = conferencia.replace(edit['new'], edit['old'])
+                # 02/11/2026: a varredura de formatação (a mais recente) desfaz-se antes de tudo, só para conferir.
+                varredura = ROOT / 'tests/fixtures/varredura-formatacao-edits-20261101.json'
+                if varredura.is_file():
+                    for edit in reversed(json.loads(varredura.read_text('utf-8'))['files'].get(rel, {}).get('edits', [])):
+                        if conferencia.count(edit['new']) != edit['occurrences']:
+                            raise ManifestoDesatualizado(f'{rel}: camada da varredura não confere')
+                        conferencia = conferencia.replace(edit['new'], edit['old'])
+                # 02/11/2026: a camada da calçada da entrada desfaz-se a seguir, só para conferir.
+                calcada = ROOT / 'tests/fixtures/calcada-mar-edits-20261102.json'
+                if calcada.is_file():
+                    for edit in reversed(json.loads(calcada.read_text('utf-8'))['files'].get(rel, {}).get('edits', [])):
+                        if conferencia.count(edit['new']) != edit['occurrences']:
+                            raise ManifestoDesatualizado(f'{rel}: camada da calçada não confere')
+                        conferencia = conferencia.replace(edit['new'], edit['old'])
+                # 02/11/2026: a camada das tarefas individuais desfaz-se antes dos índices, só para conferir.
+                individuais = ROOT / 'tests/fixtures/tarefas-individuais-edits-20261102.json'
+                if individuais.is_file():
+                    for edit in reversed(json.loads(individuais.read_text('utf-8'))['files'].get(rel, {}).get('edits', [])):
+                        if conferencia.count(edit['new']) != edit['occurrences']:
+                            raise ManifestoDesatualizado(f'{rel}: camada das tarefas individuais não confere')
+                        conferencia = conferencia.replace(edit['new'], edit['old'])
+                # 01/11/2026: o desenho dos índices desfaz-se antes das lições, só para conferir.
+                indices = ROOT / 'tests/fixtures/cartaz-indices-edits-20261101.json'
+                if indices.is_file():
+                    for edit in reversed(json.loads(indices.read_text('utf-8'))['files'].get(rel, {}).get('edits', [])):
+                        if conferencia.count(edit['new']) != edit['occurrences']:
+                            raise ManifestoDesatualizado(f'{rel}: camada dos índices não confere')
+                        conferencia = conferencia.replace(edit['new'], edit['old'])
+                # 01/11/2026: a camada do pedido B precede a do pedido A.
+                novas = ROOT / 'tests/fixtures/licoes-m16-edits-20261101.json'
+                if novas.is_file():
+                    for edit in reversed(json.loads(novas.read_text('utf-8'))['files'].get(rel, {}).get('edits', [])):
+                        if conferencia.count(edit['new']) != edit['occurrences']:
+                            raise ManifestoDesatualizado(f'{rel}: camada das nove lições não confere')
+                        conferencia = conferencia.replace(edit['new'], edit['old'])
+                # 01/11/2026: desfaz as novas lições antes das tarefas do #145.
+                licoes = ROOT / 'tests/fixtures/licoes-m89-edits-20261101.json'
+                if licoes.is_file():
+                    for edit in reversed(json.loads(licoes.read_text('utf-8'))['files'].get(rel, {}).get('edits', [])):
+                        if conferencia.count(edit['new']) != edit['occurrences']:
+                            raise ManifestoDesatualizado(f'{rel}: camada das lições não confere')
+                        conferencia = conferencia.replace(edit['new'], edit['old'])
+                # 01/11/2026: o M8/M9 precede as novas lições.
+                recente = ROOT / 'tests/fixtures/tarefas-m89-edits-20261101.json'
+                if recente.is_file():
+                    for edit in reversed(json.loads(recente.read_text('utf-8'))['files'].get(rel, {}).get('edits', [])):
+                        if conferencia.count(edit['new']) != edit['occurrences']:
+                            raise ManifestoDesatualizado(f'{rel}: camada M8/M9 não confere')
+                        conferencia = conferencia.replace(edit['new'], edit['old'])
+                if posterior.is_file():
+                    for edit in reversed(json.loads(posterior.read_text('utf-8'))['files'].get(rel, {}).get('edits', [])):
+                        if conferencia.count(edit['new']) != edit['occurrences']:
+                            raise ManifestoDesatualizado(f'{rel}: camada das tarefas não confere')
+                        conferencia = conferencia.replace(edit['new'], edit['old'])
+                confirmar_congelada(rel, tipo, conferencia, reg)
             except ManifestoDesatualizado as e:
                 erros['manifesto'].append(str(e))
                 continue

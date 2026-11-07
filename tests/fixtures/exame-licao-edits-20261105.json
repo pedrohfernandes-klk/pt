@@ -1,0 +1,60 @@
+{
+ "base_commit": "10da5a83c3ed1d06af6e376eb23555f8db4a0a4d",
+ "_nota": "05/11/2026: Laboratório do exame: a ligação e as notas falam da lição (não de uma «leitura de apoio»), camada mais recente, por cima da tabela dos seis movimentos. 01/11/2026: duração das sessões de exame atualizada para 50 minutos (decisão 106); trocas, ocorrências e restantes ficheiros preservados; só os resumos dos ficheiros do exame que o pedido pt #155 muda foram refeitos (07/11/2026: sobre a fusão com o main), sem mudar o base_commit do manifesto, que continua a ser o das bases dos outros ficheiros.",
+ "files": {
+  "assets/exame/app.js": {
+   "base_sha256_lf": "cd765c6aee7aa9118896277f41382c76e96dd19f8cc1b65c6e599383f2994127",
+   "after_sha256_lf": "80418250fdcfe7208ca6bb470f330889405f4463701272278e4906f4b4152949",
+   "edits": [
+    {
+     "location": "Fonte da sessão: a ligação leva à lição do módulo",
+     "old": "link({label:'Abrir a leitura de apoio ↗',url:s.source.url})",
+     "new": "link({label:'Abrir a lição ↗',url:s.source.url})",
+     "occurrences": 1
+    },
+    {
+     "location": "Fase Aquecer: o que se consulta é o texto da sessão",
+     "old": "<details><summary>Consultar leitura de apoio</summary>",
+     "new": "<details><summary>Consultar o texto</summary>",
+     "occurrences": 1
+    },
+    {
+     "location": "Fase Ler: na projeção, abre-se a lição para o texto completo",
+     "old": "Na projeção, abre a leitura de apoio quando precisares do recorte completo.",
+     "new": "Na projeção, abre a lição quando precisares do texto completo.",
+     "occurrences": 1
+    }
+   ]
+  },
+  "assets/exame/sessoes.json": {
+   "base_sha256_lf": "2a74a2f0e3e5e0cd66e814cc89e6dcf0d92b001f24e9d5a6bd8807cbcc08c7b6",
+   "after_sha256_lf": "ea19e9b7465718678f7202e4eec7d7adf8e4668de60b138f8ca30f1390dbb055",
+   "edits": [
+    {
+     "location": "Nota das 15 sessões com excerto de uma lição",
+     "old": "Recorte de leitura já utilizado no módulo. Abre a lição para o texto, a localização e as fontes completas.",
+     "new": "Excerto já trabalhado numa lição do módulo. Abre a lição para veres o texto completo, a localização e as fontes.",
+     "occurrences": 15
+    },
+    {
+     "location": "Nota das 4 sessões com materiais de uma lição",
+     "old": "Materiais existentes reciclados; os recortes e as fontes estão identificados na leitura de apoio.",
+     "new": "Excertos já trabalhados numa lição do módulo; a lição identifica os excertos e as fontes.",
+     "occurrences": 4
+    }
+   ]
+  },
+  "exame/index.html": {
+   "base_sha256_lf": "f02b1001b816324da818aa873c92e271f8e0f680c2a4ace1ce96b94aae11eda2",
+   "after_sha256_lf": "5e13d5518c94d456fb80d6e215f290538ace26316bdd1fa7e2a3661ad9618e15",
+   "edits": [
+    {
+     "location": "Versão do app.js, para os navegadores não usarem a cópia antiga",
+     "old": "../assets/exame/app.js?v=20261029-provas-1",
+     "new": "../assets/exame/app.js?v=20261105-licao-1",
+     "occurrences": 1
+    }
+   ]
+  }
+ }
+}

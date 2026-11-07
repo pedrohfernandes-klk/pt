@@ -27,9 +27,11 @@ try:
    ctx,page=new_page(browser,width);errors=[]
    page.on('pageerror',lambda e:errors.append(str(e)))
    page.goto(host+'/',wait_until='networkidle')
+   # 01/11/2026: o mapa troca o travessão por dois pontos; mantém-se a contagem.
    assert '16 lições' in page.locator('li[data-m="M4"]').inner_text().lower()
    page.goto(host+'/mapa/',wait_until='networkidle')
-   assert '16 lições' in page.locator('summary').filter(has_text='M4 —').inner_text().lower()
+   # 01/11/2026: o mapa troca o travessão por dois pontos; mantém-se a contagem.
+   assert '16 lições' in page.locator('summary').filter(has_text='M4:').inner_text().lower()
    page.goto(host+'/m4/',wait_until='networkidle')
    assert page.locator('.cabm .n').inner_text()=='4'
    # 26/10: original lesson numbering/order remains; task lessons have their own T row.
@@ -39,6 +41,11 @@ try:
    steps=page.locator('[data-unidade="2"] .passos > li[data-passo]')
    assert steps.first.get_attribute('id')=='m4-f28'
    assert steps.nth(1).get_attribute('id')=='m4-f07'
+   # 01/11/2026: no telemóvel, abrir a unidade pelo controlo nativo antes da ligação.
+   fold=page.locator('[data-cz-unit="2"]')
+   if fold.count() and fold.get_attribute('open') is None:
+    fold.locator(':scope > summary').press('Enter')
+    assert fold.get_attribute('open') is not None
    steps.first.get_by_role('link').click()
    # 23/10/2026: espera pelo cartão desenhado (lido logo a seguir ao clique, o #baralho ainda vazio dava falsos erros em máquinas lentas)
    page.wait_for_url('**/licao-m4-f28/');page.locator('#baralho .cartao').wait_for()
@@ -53,7 +60,10 @@ try:
    assert 'Almeida Garrett' in page.locator('#baralho').inner_text()
    page.locator('.casca [data-seguinte]').click()
    page.locator('#baralho button[data-j="0"]').press('Enter')
-   assert 'não uma transcrição integral' in page.locator('[data-c-folha]').inner_text()
+   # 02/11/2026: C03 revisto pelo #149 distingue relação temática de repetição do enredo.
+   retorno=page.locator('[data-c-folha]').inner_text()
+   assert 'Confundes relação temática com repetição do enredo' in retorno
+   assert 'Relê as duas situações: um namoro terminado e um marido desaparecido.' in retorno
    page.locator('[data-c-folha] [data-seguinte]').click()
    page.locator('summary').filter(has_text='Ajuda: como sustentar').press('Enter')
    assert 'Procura outro detalhe' in page.locator('#baralho').inner_text()

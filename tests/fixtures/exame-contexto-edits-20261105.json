@@ -1,0 +1,48 @@
+{
+ "base_commit": "8ee0ba98a868d71d2de36c0ecf02adb26c11c08b",
+ "_nota": "05/11/2026: Laboratório do exame: o texto de contexto de cada sessão fala da lição e do excerto (não de uma «leitura de apoio» nem de um «recorte»), camada mais recente, por cima da ligação e das notas (exame_licao_20261105). 01/11/2026: duração das sessões de exame atualizada para 50 minutos (decisão 106); trocas, ocorrências e restantes ficheiros preservados; só os resumos dos ficheiros do exame que o pedido pt #155 muda foram refeitos (07/11/2026: sobre a fusão com o main), sem mudar o base_commit do manifesto, que continua a ser o das bases dos outros ficheiros.",
+ "files": {
+  "assets/exame/sessoes.json": {
+   "base_sha256_lf": "ea19e9b7465718678f7202e4eec7d7adf8e4668de60b138f8ca30f1390dbb055",
+   "after_sha256_lf": "6bc8faf58779155c13500c980f2022b2a091a97c9344b6331fef10d352286a6e",
+   "edits": [
+    {
+     "location": "Contexto das 16 sessões com excerto de uma lição: abre-se a lição e lê-se o excerto",
+     "old": "Abre a leitura de apoio, lê o recorte indicado e identifica duas marcas relevantes antes de responder. O texto de origem está na lição; esta sessão organiza o treino a partir dele.",
+     "new": "Abre a lição, lê o excerto indicado e identifica duas marcas relevantes antes de responder. O texto completo está na lição; esta sessão organiza o treino a partir dele.",
+     "occurrences": 16
+    },
+    {
+     "location": "Contexto da sessão de Cesário (s11): o excerto apresenta «Noite Fechada»",
+     "old": "O recorte apresenta «Noite Fechada».",
+     "new": "O excerto apresenta «Noite Fechada».",
+     "occurrences": 1
+    },
+    {
+     "location": "Contexto da sessão das cantigas (s01): o excerto de D. Dinis",
+     "old": "O recorte de D. Dinis serve",
+     "new": "O excerto de D. Dinis serve",
+     "occurrences": 1
+    },
+    {
+     "location": "Contexto da sessão de Gil Vicente (s03): as duas ligações de apoio são lições (M2-F02 e M2-F06)",
+     "old": "a segunda escolha nas duas leituras de apoio.",
+     "new": "a segunda escolha nas duas lições de apoio.",
+     "occurrences": 1
+    }
+   ]
+  },
+  "exame/index.html": {
+   "base_sha256_lf": "5e13d5518c94d456fb80d6e215f290538ace26316bdd1fa7e2a3661ad9618e15",
+   "after_sha256_lf": "7d48a0f9625320abd5eeb4712c4fd7615d3b79a43c87c8f8602b593bded69c28",
+   "edits": [
+    {
+     "location": "Versão do app.js (também refresca sessoes.json), para os navegadores não usarem a cópia antiga",
+     "old": "../assets/exame/app.js?v=20261105-licao-1",
+     "new": "../assets/exame/app.js?v=20261105-licao-2",
+     "occurrences": 1
+    }
+   ]
+  }
+ }
+}

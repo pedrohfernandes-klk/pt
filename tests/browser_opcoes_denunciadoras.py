@@ -22,7 +22,7 @@ from playwright.sync_api import sync_playwright
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'tests'))
-from auditoria_20261028 import undo_opcoes  # noqa: E402
+from auditoria_20261028 import undo_opcoes, undo_lingua, undo_tarefas_m356, undo_tarefas_m89  # noqa: E402
 
 MANIFESTO = ROOT / 'tests/fixtures/opcoes-denunciadoras-edits-20261030.json'
 # A lição M3-F18 lê os cartões de assets/pt-lessons/m3-f18.js (troca irmã da do arquivo do índice).
@@ -47,9 +47,15 @@ def mudados():
         if '/licao-' not in rel or not rel.endswith('index.html'):
             continue
         texto = (ROOT / rel).read_text('utf-8')
-        antes, depois = cartoes(undo_opcoes(rel, texto)), cartoes(texto)
+        # 02/11/2026: conferir estritamente todas as camadas posteriores antes da camada histórica das opções.
+        # O navegador continua a responder aos cartões publicados, com as opções e os retornos atuais.
+        historico = undo_tarefas_m89(rel, texto)
+        historico = undo_tarefas_m356(rel, historico)
+        historico = undo_lingua(rel, historico)
+        antes, depois = cartoes(undo_opcoes(rel, historico)), cartoes(texto)
         if not depois:
             continue
+        assert len(depois) >= len(antes), (rel, len(antes), len(depois))
         for k, (a, b) in enumerate(zip(antes, depois)):
             if a != b and b.get('t') in ('escolha', 'completar', 'rever'):
                 out.append((rel, k, b))
@@ -122,9 +128,19 @@ def conferir(page, rotulo, esperado, fe):
 def main():
     lista = mudados()
     assert len(lista) >= 40, len(lista)
-    raiz = tempfile.mkdtemp(prefix='opcoes-pt-')
-    os.symlink(ROOT, os.path.join(raiz, 'pt'))
-    server = ThreadingHTTPServer(('127.0.0.1', 0), partial(Quiet, directory=raiz))
+    # 01/11/2026: servir os mesmos ficheiros em /pt sem privilégios de symlink no Windows.
+    class MountedQuiet(Quiet):
+        # 01/11/2026: montagem exclusiva em /pt/, sem aceitar caminhos externos.
+        def send_head(self):
+            from urllib.parse import urlsplit
+            if not urlsplit(self.path).path.startswith('/pt/'):
+                self.send_error(404)
+                return None
+            return super().send_head()
+
+        def translate_path(self, path):
+            return super().translate_path(path[len('/pt'):])
+    server = ThreadingHTTPServer(('127.0.0.1', 0), partial(MountedQuiet, directory=str(ROOT)))
     threading.Thread(target=server.serve_forever, daemon=True).start()
     host = f'http://127.0.0.1:{server.server_port}/pt'
     feitos = 0
@@ -157,8 +173,6 @@ def main():
             browser.close()
     finally:
         server.shutdown()
-        os.unlink(os.path.join(raiz, 'pt'))
-        os.rmdir(raiz)
 
 
 if __name__ == '__main__':

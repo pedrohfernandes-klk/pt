@@ -192,6 +192,334 @@ def undo_lingua(path, text):
     return text
 
 
+# 31/10/2026: camada mais recente, tarefas M3, M5 e M6.
+TAREFAS_M356_MANIFEST = ROOT / 'tests/fixtures/tarefas-m356-edits-20261031.json'
+_TAREFAS_M356_FILES = json.loads(TAREFAS_M356_MANIFEST.read_text('utf-8'))['files']
+
+
+def undo_tarefas_m356(path, text):
+    relative = _relative(path)
+    for edit in reversed(_TAREFAS_M356_FILES.get(relative, {}).get('edits', [])):
+        if text.count(edit['new']) != edit['occurrences']:
+            raise AssertionError(f"Troca de 31/10 não confere: {relative}: {edit['location']}")
+        text = text.replace(edit['new'], edit['old'])
+    return text
+
+
+# 01/11/2026: camada mais recente, tarefas M8 e M9.
+TAREFAS_M89_MANIFEST = ROOT / 'tests/fixtures/tarefas-m89-edits-20261101.json'
+_TAREFAS_M89_FILES = json.loads(TAREFAS_M89_MANIFEST.read_text('utf-8'))['files']
+
+
+# 01/11/2026: as sete lições M8/M9 são a camada mais recente, acima do #145.
+LICOES_M89_MANIFEST = ROOT / 'tests/fixtures/licoes-m89-edits-20261101.json'
+_LICOES_M89_FILES = json.loads(LICOES_M89_MANIFEST.read_text('utf-8'))['files']
+
+
+# 01/11/2026: camada mais recente, nove lições do pedido B, acima do pedido A.
+_LICOES_M16_FILES = json.loads((ROOT / 'tests/fixtures/licoes-m16-edits-20261101.json').read_text('utf-8'))['files']
+
+
+def undo_licoes_m16(path, text):
+    # 01/11/2026: integrar o lote de conteúdos acima dos pedidos de lições.
+    text = undo_cartaz_indices(path, text)
+    relative = _relative(path)
+    for edit in reversed(_LICOES_M16_FILES.get(relative, {}).get('edits', [])):
+        if text.count(edit['new']) != edit['occurrences']:
+            raise AssertionError(f"Lições M1/M6 de 01/11 não conferem: {relative}: {edit['location']}")
+        text = text.replace(edit['new'], edit['old'])
+    return text
+
+
+def undo_licoes_m89(path, text):
+    text = undo_licoes_m16(path, text)
+    relative = _relative(path)
+    for edit in reversed(_LICOES_M89_FILES.get(relative, {}).get('edits', [])):
+        if text.count(edit['new']) != edit['occurrences']:
+            raise AssertionError(f"Lições de 01/11 não conferem: {relative}: {edit['location']}")
+        text = text.replace(edit['new'], edit['old'])
+    return text
+
+
+# 02/11/2026: o fundo animado da entrada (pt #159 e #160) entrou no main sem camada; fica registado como camada própria,
+# abaixo das lições M8/M9 (que foram juntadas por cima dele) e acima das tarefas M8/M9.
+FUNDOS_MANIFEST = ROOT / 'tests/fixtures/fundos-edits-20261102.json'
+_FUNDOS_FILES = json.loads(FUNDOS_MANIFEST.read_text('utf-8'))['files']
+
+
+def undo_fundos(path, text):
+    relative = _relative(path)
+    for edit in reversed(_FUNDOS_FILES.get(relative, {}).get('edits', [])):
+        if text.count(edit['new']) != edit['occurrences']:
+            raise AssertionError(f"Fundo de 02/11 não confere: {relative}: {edit['location']}")
+        text = text.replace(edit['new'], edit['old'])
+    return text
+
+
+def undo_tarefas_m89(path, text):
+    # 01/11/2026: também os contratos que desfazem só esta camada recebem a base correta.
+    text = undo_licoes_m89(path, text)
+    # 02/11/2026: e o fundo da entrada, que está entre as lições M8/M9 e as tarefas M8/M9.
+    text = undo_fundos(path, text)
+    relative = _relative(path)
+    for edit in reversed(_TAREFAS_M89_FILES.get(relative, {}).get('edits', [])):
+        if text.count(edit['new']) != edit['occurrences']:
+            raise AssertionError(f"Troca de 01/11 não confere: {relative}: {edit['location']}")
+        text = text.replace(edit['new'], edit['old'])
+    return text
+
+
+# 02/11/2026: tarefas individuais (pedido do docente: não há tarefas de grupo), camada mais recente, por cima dos índices.
+_TAREFAS_INDIVIDUAIS = json.loads((ROOT / 'tests/fixtures/tarefas-individuais-edits-20261102.json').read_text('utf-8'))['files']
+
+
+# 02/11/2026: decisão 139, a calçada «mar largo» na entrada do Português, camada mais recente, por cima das tarefas individuais.
+_CALCADA_MAR = json.loads((ROOT / 'tests/fixtures/calcada-mar-edits-20261102.json').read_text('utf-8'))['files']
+
+
+# 02/11/2026: a varredura de formatação (pt #152), refeita em trocas mínimas sobre o main, é a camada mais recente,
+# por cima da calçada da entrada.
+VARREDURA_MANIFEST = ROOT / 'tests/fixtures/varredura-formatacao-edits-20261101.json'
+_VARREDURA_FILES = json.loads(VARREDURA_MANIFEST.read_text('utf-8'))['files']
+
+
+# 02/11/2026: crédito de IA por cima das camadas publicadas, com correspondência estrita.
+# 03/11/2026: reversao estrita da abertura, antes dos creditos.
+_CABECALHO = json.loads((ROOT/'tests/fixtures/cartaz-cabecalho-edits-20261103.json').read_text('utf-8'))['files']
+
+# 05/11/2026: revisão de 5/11, camada mais recente: desfaz-se antes do cabeçalho, com contagem estrita.
+_REVISAO_0511 = json.loads((ROOT/'tests/fixtures/revisao-edits-20261105.json').read_text('utf-8'))['files']
+
+# 05/11/2026: tabela dos seis movimentos, camada mais recente: desfaz-se antes da revisão de 5/11, com contagem estrita.
+_TABELA_0511 = json.loads((ROOT/'tests/fixtures/tabela-movimentos-edits-20261105.json').read_text('utf-8'))['files']
+
+# 05/11/2026: Laboratório do exame (lição, não «leitura de apoio»), camada mais recente: desfaz-se antes da tabela, com contagem estrita.
+_EXAME_0511 = json.loads((ROOT/'tests/fixtures/exame-licao-edits-20261105.json').read_text('utf-8'))['files']
+
+# 05/11/2026: o texto de contexto de cada sessão do Laboratório do exame (lição e excerto, não «leitura de apoio» nem «recorte»),
+# camada mais recente: desfaz-se antes da ligação e das notas do Laboratório do exame, com contagem estrita.
+_CONTEXTO_0511 = json.loads((ROOT/'tests/fixtures/exame-contexto-edits-20261105.json').read_text('utf-8'))['files']
+
+# 05/11/2026: Atlas Lusófono, lote 3 (atlas, entrada e páginas dos anos), camada mais recente: desfaz-se antes da decisão 154
+# (06/11/2026: por cima dela, depois de juntar o main), com contagem estrita.
+_ATLAS_LOTE3_0511 = json.loads((ROOT/'tests/fixtures/atlas-lote3-edits-20261105.json').read_text('utf-8'))['files']
+
+# 05/11/2026: decisão 153, os créditos das imagens atrás de um «i» (pedido pt-2), camada mais recente (06/11/2026: por cima do
+# lote 3 do Atlas, depois de juntar o main): desfaz-se antes do Atlas, com contagem estrita.
+_CREDITOS_I_0511 = json.loads((ROOT/'tests/fixtures/creditos-i-edits-20261105.json').read_text('utf-8'))['files']
+
+# 06/11/2026: decisão 148, o desenho do índice do M4 nos nove índices do Português, camada mais recente (por cima dos
+# créditos atrás de um «i»): desfaz-se antes deles, com contagem estrita.
+_CARTAZ_148_0611 = json.loads((ROOT/'tests/fixtures/cartaz-indices-148-edits-20261106.json').read_text('utf-8'))['files']
+
+# 07/11/2026: os três acertos dos índices deixados pela decisão 173 (acesso do docente repetido no M3, no M5 e no M6, «·» nas
+# contagens do M8 e do M9, menu dos materiais sem JavaScript), camada mais recente (por cima do desenho comum dos índices):
+# desfaz-se antes dele, com contagem estrita.
+_ACERTOS_0711 = json.loads((ROOT/'tests/fixtures/indices-acertos-edits-20261107.json').read_text('utf-8'))['files']
+
+def undo_acertos_0711(path, text):
+    for edit in reversed(_ACERTOS_0711.get(_relative(path), {}).get('edits', [])):
+        if text.count(edit['new']) != edit['occurrences']:
+            raise AssertionError(f"Acertos dos índices (decisão 173) não conferem: {path}: {edit['location']}")
+        text = text.replace(edit['new'], edit['old'])
+    return text
+
+
+def undo_cartaz_148_0611(path, text):
+    # 07/11/2026: primeiro os acertos dos índices deixados pela decisão 173, que estão por cima.
+    text = undo_acertos_0711(path, text)
+    for edit in reversed(_CARTAZ_148_0611.get(_relative(path), {}).get('edits', [])):
+        if text.count(edit['new']) != edit['occurrences']:
+            raise AssertionError(f"Desenho comum dos índices (decisão 148) não confere: {path}: {edit['location']}")
+        text = text.replace(edit['new'], edit['old'])
+    return text
+
+
+def undo_creditos_i_0511(path, text):
+    # 06/11/2026: primeiro o desenho comum dos índices (decisão 148), que está por cima.
+    text = undo_cartaz_148_0611(path, text)
+    for edit in reversed(_CREDITOS_I_0511.get(_relative(path), {}).get('edits', [])):
+        if text.count(edit['new']) != edit['occurrences']:
+            raise AssertionError(f"Créditos atrás de um «i» não conferem: {path}: {edit['location']}")
+        text = text.replace(edit['new'], edit['old'])
+    return text
+
+
+def undo_atlas_lote3_0511(path, text):
+    # 06/11/2026: primeiro os créditos atrás de um «i», que estão por cima.
+    text = undo_creditos_i_0511(path, text)
+    for edit in reversed(_ATLAS_LOTE3_0511.get(_relative(path), {}).get('edits', [])):
+        if text.count(edit['new']) != edit['occurrences']:
+            raise AssertionError(f"Atlas, lote 3, não confere: {path}: {edit['location']}")
+        text = text.replace(edit['new'], edit['old'])
+    return text
+
+
+# 05/11/2026: decisão 154 (os exercícios fazem-se sozinho; nada no texto do aluno depende do docente nem só de um colega
+# ou da turma): desfaz-se antes do contexto do Laboratório do exame, com contagem estrita.
+_AUTONOMIA_0511 = json.loads((ROOT/'tests/fixtures/autonomia-154-edits-20261105.json').read_text('utf-8'))['files']
+
+def undo_autonomia_0511(path, text):
+    # 06/11/2026: primeiro o lote 3 do Atlas, que está por cima.
+    text = undo_atlas_lote3_0511(path, text)
+    for edit in reversed(_AUTONOMIA_0511.get(_relative(path), {}).get('edits', [])):
+        if text.count(edit['new']) != edit['occurrences']:
+            raise AssertionError(f"Decisão 154 (exercícios a sós) não confere: {path}: {edit['location']}")
+        text = text.replace(edit['new'], edit['old'])
+    return text
+
+
+def undo_contexto_0511(path, text):
+    # 05/11/2026: primeiro a decisão 154 (exercícios a sós), que está por cima (e, por cima dela, o lote 3 do Atlas).
+    text = undo_autonomia_0511(path, text)
+    for edit in reversed(_CONTEXTO_0511.get(_relative(path), {}).get('edits', [])):
+        if text.count(edit['new']) != edit['occurrences']:
+            raise AssertionError(f"Contexto do Laboratório do exame não confere: {path}: {edit['location']}")
+        text = text.replace(edit['new'], edit['old'])
+    return text
+
+
+def undo_exame_0511(path, text):
+    # 05/11/2026: primeiro o contexto de cada sessão do Laboratório do exame, que está por cima.
+    text = undo_contexto_0511(path, text)
+    for edit in reversed(_EXAME_0511.get(_relative(path), {}).get('edits', [])):
+        if text.count(edit['new']) != edit['occurrences']:
+            raise AssertionError(f"Laboratório do exame não confere: {path}: {edit['location']}")
+        text = text.replace(edit['new'], edit['old'])
+    return text
+
+
+def undo_tabela_0511(path, text):
+    # 05/11/2026: primeiro o Laboratório do exame, que está por cima.
+    text = undo_exame_0511(path, text)
+    for edit in reversed(_TABELA_0511.get(_relative(path), {}).get('edits', [])):
+        if text.count(edit['new']) != edit['occurrences']:
+            raise AssertionError(f"Tabela dos seis movimentos não confere: {path}: {edit['location']}")
+        text = text.replace(edit['new'], edit['old'])
+    return text
+
+
+def undo_revisao_0511(path, text):
+    # 05/11/2026: primeiro a tabela dos seis movimentos, que está por cima.
+    text = undo_tabela_0511(path, text)
+    for edit in reversed(_REVISAO_0511.get(_relative(path), {}).get('edits', [])):
+        if text.count(edit['new']) != edit['occurrences']:
+            raise AssertionError(f"Revisão de 5/11 não confere: {path}: {edit['location']}")
+        text = text.replace(edit['new'], edit['old'])
+    return text
+
+
+def undo_cabecalho(path, text):
+    # 05/11/2026: primeiro a revisão de 5/11, que está por cima.
+    text = undo_revisao_0511(path, text)
+    for edit in reversed(_CABECALHO.get(_relative(path), {}).get('edits', [])):
+        if text.count(edit['new']) != edit['occurrences']:
+            raise AssertionError(f"Cabeçalho não confere: {path}: {edit['location']}")
+        text = text.replace(edit['new'], edit['old'])
+    return text
+
+
+_CREDITOS_IA = json.loads((ROOT/'tests/fixtures/creditos-grafismos-ia-edits-20261102.json').read_text('utf-8'))['files']
+
+def undo_creditos_ia(path, text):
+    for edit in reversed(_CREDITOS_IA.get(_relative(path), {}).get('edits', [])):
+        if text.count(edit['new']) != edit['occurrences']:
+            raise AssertionError(f"Créditos de IA não conferem: {path}: {edit['location']}")
+        text = text.replace(edit['new'], edit['old'])
+    return text
+
+
+_CONTEUDOS_LOTE2_FILES = json.loads((ROOT / 'tests/fixtures/conteudos-lote2-edits-20261101.json').read_text('utf-8'))['files']
+
+
+_M4_PILOTO_FILES = json.loads((ROOT / 'tests/fixtures/cartaz-m4-piloto-edits-20261102.json').read_text('utf-8'))['files']
+
+
+def undo_m4_piloto(path, text):
+    # 02/11/2026: desfaz só a camada visual autorizada, com contagem estrita.
+    relative = _relative(path)
+    for edit in reversed(_M4_PILOTO_FILES.get(relative, {}).get('edits', [])):
+        if text.count(edit['new']) != edit['occurrences']:
+            raise AssertionError(f"Piloto M4 não confere: {relative}: {edit['location']}")
+        text = text.replace(edit['new'], edit['old'])
+    return text
+
+
+_VARIEDADE_F0_FILES = json.loads((ROOT / 'tests/fixtures/variedade-f0-edits-20261102.json').read_text('utf-8'))['files']
+
+
+def undo_variedade_f0(path, text):
+    relative = _relative(path)
+    for edit in reversed(_VARIEDADE_F0_FILES.get(relative, {}).get('edits', [])):
+        if text.count(edit['new']) != edit['occurrences']:
+            raise AssertionError(f"F0 não confere: {relative}: {edit['location']}")
+        text = text.replace(edit['new'], edit['old'])
+    return text
+
+
+def undo_conteudos_lote2(path, text):
+    # 03/11/2026: desfaz F0 e os créditos publicados, com as mesmas contagens estritas.
+    # 03/11/2026: cabeçalho posterior à F0 publicada.
+    text = undo_cabecalho(path, text)
+    # 03/11/2026: preservar as duas camadas e as contagens estritas.
+    text = undo_m4_piloto(path, text)
+    text = undo_variedade_f0(path, text)
+    text = undo_creditos_ia(path, text)
+    relative = _relative(path)
+    for edit in reversed(_CONTEUDOS_LOTE2_FILES.get(relative, {}).get('edits', [])):
+        if text.count(edit['new']) != edit['occurrences']:
+            raise AssertionError(f"Lote 2 não confere: {relative}: {edit['location']}")
+        text = text.replace(edit['new'], edit['old'])
+    return text
+
+
+def undo_varredura(path, text):
+    # 02/11/2026: lote 2 por cima da varredura integrada.
+    text = undo_conteudos_lote2(path, text)
+    relative = _relative(path)
+    for edit in reversed(_VARREDURA_FILES.get(relative, {}).get('edits', [])):
+        if text.count(edit['new']) != edit['occurrences']:
+            raise AssertionError(f"Troca autorizada a 01/11 (formatação) já não confere: {relative}: {edit['location']}")
+        text = text.replace(edit['new'], edit['old'])
+    return text
+
+
+def undo_calcada_mar(path, text):
+    # 02/11/2026: a varredura, mais recente, desfaz-se antes.
+    text = undo_varredura(path, text)
+    relative = _relative(path)
+    for edit in reversed(_CALCADA_MAR.get(relative, {}).get('edits', [])):
+        if text.count(edit['new']) != edit['occurrences']:
+            raise AssertionError(f"Calçada de 02/11 não confere: {relative}: {edit['location']}")
+        text = text.replace(edit['new'], edit['old'])
+    return text
+
+
+def undo_tarefas_individuais(path, text):
+    # 02/11/2026: a camada da calçada, mais recente, desfaz-se antes.
+    text = undo_calcada_mar(path, text)
+    relative = _relative(path)
+    for edit in reversed(_TAREFAS_INDIVIDUAIS.get(relative, {}).get('edits', [])):
+        if text.count(edit['new']) != edit['occurrences']:
+            raise AssertionError(f"Tarefas individuais de 02/11 não conferem: {relative}: {edit['location']}")
+        text = text.replace(edit['new'], edit['old'])
+    return text
+
+
+# 01/11/2026: índices Cartaz, camada mais recente sobre as dependências integradas.
+_CARTAZ_INDICES = json.loads((ROOT / 'tests/fixtures/cartaz-indices-edits-20261101.json').read_text('utf-8'))['files']
+
+def undo_cartaz_indices(path, text):
+    # 02/11/2026: a camada das tarefas individuais, mais recente, desfaz-se antes.
+    text = undo_tarefas_individuais(path, text)
+    relative = _relative(path)
+    for edit in reversed(_CARTAZ_INDICES.get(relative, {}).get('edits', [])):
+        if text.count(edit['new']) != edit['occurrences']:
+            raise AssertionError(f"Índices Cartaz não conferem: {relative}: {edit['location']}")
+        text = text.replace(edit['new'], edit['old'])
+    return text
+
+
 def undo(path, text):
     """Devolve o texto anterior às correções de 28/10 para este ficheiro (ou o mesmo texto, se não as tem).
 
@@ -204,6 +532,10 @@ def undo(path, text):
     """
     # 30/10/2026: antes de tudo, a camada da língua (a mais recente), depois a das opções denunciadoras, a do texto
     # justificado e as dos aquecimentos do M2, do M4 e do M1.
+    # 31/10/2026: desfaz primeiro as tarefas M3, M5 e M6.
+    # 01/11/2026: desfaz primeiro a camada M8/M9.
+    text = undo_tarefas_m89(path, text)
+    text = undo_tarefas_m356(path, text)
     text = undo_lingua(path, text)
     text = undo_opcoes(path, text)
     text = undo_justificado(path, text)

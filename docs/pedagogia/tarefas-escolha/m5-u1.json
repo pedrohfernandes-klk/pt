@@ -1,0 +1,110 @@
+{
+ "slug": "m5-u1",
+ "titulo": "Quem decide por quem: vozes de <i>Amor de Perdição</i>",
+ "unidade": 1,
+ "aquecer": {
+  "cartoes": "aquecimento/",
+  "minutos": 10,
+  "texto": "No início da aula de tarefa: 10 minutos de cartões com consulta, 5 minutos para leres o enunciado, 60 minutos de produção e 15 minutos de revisão e entrega. Total: 90 minutos. O relógio de produção começa depois da leitura.",
+  "ligacao": "Abrir o aquecimento em cartões",
+  "ligacao_enunciado": "Aquecer em cartões"
+ },
+ "lead": "À mão, 200 a 250 palavras: cerca de 50 por resposta do núcleo e 100 a 150 no tema. Com consulta.",
+ "nucleo": [
+  "Cita uma passagem da Introdução e outra do cap. IV em que o narrador não se limita a contar. Identifica um recurso numa delas. Explica o que quer de quem lê, em cada uma.",
+  "Tadeu diz ao sobrinho: «Não te posso dar minha filha, porque já não tenho filha.» Identifica a função sintática de «te» e de «minha filha», com um teste para cada. Explica o que mostram do lugar de Teresa na fala do pai."
+ ],
+ "temas": [
+  {
+   "letra": "A",
+   "nome": "A voz de Simão",
+   "texto": "Na nau, depois da morte de Teresa, Simão responde-lhe. Escreve a carta (90 a 120 palavras): local e data, vocativo, despedida e assinatura; resposta a uma pergunta dela; uma memória dos dois; um recurso expressivo teu; um eco do romance, entre «». Depois, em duas frases, diz que facto do romance respeitaste e o que faz o recurso."
+  },
+  {
+   "letra": "B",
+   "nome": "Uma cadeia que virou museu",
+   "texto": "A antiga Cadeia da Relação é hoje o Centro Português de Fotografia. Escreve o painel da entrada, para quem nunca leu o romance (70 a 100 palavras), com dois factos do dossiê e uma frase curta do romance, entre «». Depois, fora do painel, explica a escolha da frase. Diz o que o painel não pode afirmar sobre Camilo e Simão."
+  }
+ ],
+ "apoios": [
+  {
+   "href": "../../m5/licao-m5-f02/",
+   "texto": "Folheando os livros da cadeia (F02): relê «O texto, 2 de 3» e «O texto, 3 de 3». Para o tema B, a «Linha de vida»."
+  },
+  {
+   "href": "../../m5/licao-m5-f04/",
+   "texto": "A violência de um pai é sempre amor (F04): relê de «O texto, 1 de 7» a «O texto, 7 de 7» e «Para entender» (o amor-paixão)."
+  },
+  {
+   "href": "../../m5/licao-m5-f07/",
+   "texto": "Quem faz o quê a quem (F07): relê «O essencial» (os testes) e a «Árvore da frase»."
+  },
+  {
+   "href": "../../m5/licao-m5-f08/",
+   "texto": "Responder no alto mar (F08): para o tema A, relê «Para entender» (a encomenda, as perguntas de Teresa, os factos e as marcas da carta). A carta da F08 tinha 220 a 300 palavras e respondia a duas perguntas; esta tem 90 a 120 e responde a uma."
+  }
+ ],
+ "exemplos": [
+  {
+   "titulo": "Descobre a função (resolvido)",
+   "html": "<p>Em «Teu primo é um composto de todas as virtudes» (cap. IV), «Teu primo» é o sujeito: responde à pergunta <i>quem é um composto de todas as virtudes?</i>, e o verbo concorda com ele. A expressão «um composto de todas as virtudes» é predicativo do sujeito: com o verbo <i>ser</i>, diz como é o sujeito, e a frase não se aguenta sem ele (lição F07). O que mostram: o sujeito é Baltasar e o predicativo é só elogio; Tadeu vende o noivo à filha.</p><p>Na tarefa, faz o mesmo com a fala de Tadeu ao sobrinho: a função, o teste e o que mostra.</p>"
+  }
+ ],
+ "dossie_titulo": "Dossiê do tema B",
+ "dossie": [
+  {
+   "facto": "Uma imagem de Lucas de Almeida Marrão, de cerca de 1850, mostra o interior da Cadeia da Relação do Porto, a cadeia onde Camilo esteve preso e escreveu <i>Amor de Perdição</i>.",
+   "href": "../../m5/licao-m5-f04/",
+   "fonte": "Lição «A violência de um pai é sempre amor», «Abre» (legenda da imagem)"
+  },
+  {
+   "facto": "Em 1861, Camilo data a dedicatória do romance «Na cadêa da Relação do Porto».",
+   "href": "../../m5/licao-m5-f02/",
+   "fonte": "Lição «Folheando os livros da cadeia», «Linha de vida»"
+  },
+  {
+   "facto": "Em 1862 sai <i>Amor de Perdição</i>, que abre com o assento de Simão, de dezoito anos, no livro de entradas da cadeia de 1803 a 1805.",
+   "href": "../../m5/licao-m5-f02/",
+   "fonte": "Lição «Folheando os livros da cadeia», «Linha de vida»"
+  },
+  {
+   "facto": "No romance, Simão parte degredado para a Índia a 17 de março de 1807; a data está escrita à margem do assento.",
+   "href": "../../m5/licao-m5-f02/",
+   "fonte": "Lição «Folheando os livros da cadeia», «Linha de vida» e «O texto, 2 de 3»"
+  },
+  {
+   "facto": "Uma fotografia de 1882, da Photographia da Casa Real, no Porto, mostra Camilo aos 56 anos, vinte anos depois de <i>Amor de Perdição</i>.",
+   "href": "../../m5/licao-m5-f02/",
+   "fonte": "Lição «Folheando os livros da cadeia», «Abre» (legenda da imagem)"
+  }
+ ],
+ "opcional": {
+  "pergunta": "Numa história inventada, qual destas frases mostra um narrador que não se limita a contar?",
+  "opcoes": [
+   {
+    "certa": false,
+    "letra": "A",
+    "texto": "O senhor contou bem o dinheiro e deu uma moeda ao pobre.",
+    "resposta": "Só conta o que aconteceu: nenhuma palavra julga o senhor nem fala com quem lê."
+   },
+   {
+    "certa": true,
+    "letra": "B",
+    "texto": "O senhor, tão generoso, deu ao pobre a moeda menor.",
+    "resposta": "Tão generoso diz o contrário do que o senhor faz: é ironia. O narrador julga-o, e quem lê percebe-o antes de qualquer explicação."
+   },
+   {
+    "certa": false,
+    "letra": "C",
+    "texto": "O senhor deu uma moeda ao pobre, à porta da velha igreja.",
+    "resposta": "Acrescenta o lugar, mas continua a contar: não há juízo nem pergunta a quem lê."
+   }
+  ]
+ },
+ "criterios": [
+  "Núcleo: passagens do narrador, recurso e efeito; funções, testes e o que mostram.",
+  "Tema: os cinco elementos e a explicação (as duas frases em A, a razão da frase em B).",
+  "Citações exatas, nada contra o romance, extensão e escrita revista."
+ ],
+ "fecho": "Fecha com duas linhas, fora da contagem: quem decide por quem, neste romance? Aponta a passagem que te fez pensar nisso."
+}

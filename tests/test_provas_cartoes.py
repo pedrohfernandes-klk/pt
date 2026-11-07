@@ -655,6 +655,11 @@ class CasoDeProva:
 
 
 class SeccaoEGerador(unittest.TestCase):
+    # 01/11/2026: read_text não pode esconder CRLF na página publicada.
+    def test_paginas_publicadas_usam_lf(self):
+        for page in (ROOT / 'exame/provas').rglob('*.html'):
+            self.assertNotIn(b'\r', page.read_bytes(), str(page))
+
     """O que não é de uma só prova: a secção com todas, as ligações a partir de /exame/ e o gerador."""
 
     def test_ha_pelo_menos_uma_prova_e_cada_uma_tem_fixture_e_dados(self):
@@ -779,7 +784,11 @@ class SeccaoEGerador(unittest.TestCase):
             self.assertEqual(gerados, esperados, 'cada página de exame/provas/ sai do gerador')
             for rel in gerados:
                 with self.subTest(pagina=rel):
-                    self.assertEqual((Path(tmp) / rel).read_bytes(), (ROOT / rel).read_bytes())
+                    # 31/10/2026: compara o texto integral com fins de linha iguais no Windows e no Linux.
+                    # 01/11/2026: LF garantido pelo .gitattributes; comparação byte a byte com a árvore, sem normalizar.
+                    gerado = (Path(tmp) / rel).read_bytes()
+                    self.assertNotIn(b'\r', gerado)
+                    self.assertEqual(gerado, (ROOT / rel).read_bytes())
 
 
 # Um caso por fixture: Prova_2026_1f_v2, …

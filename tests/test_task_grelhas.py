@@ -115,12 +115,20 @@ TEMAS_M7_U3=('Valeu a pena','Bojador','mães','noivas','Sebastião','Alcácer','
              'loucura','Mar Português','nevoeiro')
 
 
+# 31/10/2026: citações dos exemplos públicos revistas pela equipa do M6.
+CITACOES.update({'m6-u1': [('licao-m3-f09', 'Roga a Deus, que teus anos encurtou,', '«Roga a Deus, que teus anos encurtou,»'), ('licao-m6-f02', 'Dorme o teu somno, coração liberto,', '«Dorme o teu somno, coração liberto,»'), ('licao-m6-f02', 'Depuz do Ideal e da Paixão', '«Depuz do Ideal e da Paixão»'), ('licao-m6-f09', 'Eu temo que me avives / Uma paixão defunta', '«Eu temo que me avives / Uma paixão defunta»'), ('licao-m6-f09', 'Eu temo isso', 'Eu temo isso'), ('licao-m6-f06', 'Os filhos que depois naufragam nas tormentas', '«Os filhos que depois naufragam nas tormentas»'), ('licao-m6-f02', 'Desci a passo e passo a escada estreita', '«Desci a passo e passo a escada estreita»'), ('licao-m3-f09', 'Alma minha gentil, que te partiste', '«Alma minha gentil, que te partiste»'), ('licao-m3-f09', 'Repousa lá no céu eternamente,', '«Repousa lá no céu eternamente,»'), ('licao-m3-f09', 'E viva eu cá na terra sempre triste.', '«E viva eu cá na terra sempre triste.»'), ('licao-m3-f02', 'Luís de Camões (Fernão Gomes, c. 1577)', 'Fernão Gomes (c. 1577)'), ('licao-m3-f02', '1595 Rhythmas', None)], 'm6-u2': [('licao-m6-f12', 'Dez horas da manhã', None), ('licao-m6-f12', 'E fere a vista, com brancuras quentes,', '«E fere a vista, com brancuras quentes,»'), ('licao-m6-f12', 'brancuras quentes', '«brancuras quentes»'), ('licao-m6-f12', 'fere a vista', '«fere a vista»'), ('licao-m6-f07', 'Um sopro que arripia os hombros quasi nús.', '«Um sopro que arripia os hombros quasi nús.»'), ('licao-m6-f12', 'Nós levantámos todo aquelle peso', '«Nós levantámos todo aquelle peso»'), ('licao-m6-f05', 'macula-', '_macula-_'), ('licao-m6-f05', '«mácula»', None), ('licao-m6-f07', 'Edade-média', '«Edade-média»'), ('licao-m6-f07', 'oxygenio', '«oxygenio»'), ('licao-m6-f05', 'a vogal inicial fixou-se em', 'a vogal inicial fixou-se em i'), ('licao-m6-f12', 'E rota, pequenina, azafamada,', '«E rota, pequenina, azafamada,»'), ('licao-m3-f05', 'Leva na cabeça o pote,', '«Leva na cabeça o pote,»'), ('licao-m3-f05', 'Vai formosa, e não segura.', '«Vai formosa, e não segura.»'), ('licao-m3-f05', "Lavadeiras portuguesas, Costume of Portugal (Henri L'Evêque, 1814)", "(Henri L'Evêque, 1814)"), ('licao-m3-f05', 'Maria Flor Pedroso (voz), série Camões, Outros 500', 'Maria Flor Pedroso'), ('licao-m6-f07', 'Tornam-se mausoléos as armações fulgentes.', '«Tornam-se mausoléos as armações fulgentes.»')]})
+
+# 31/10/2026: provas das citações dos exemplos públicos, conforme as notas revistas do M3 e M5.
+CITACOES.update({'m3-u1': [('licao-m3-f04', 'A rota das especiarias', 'A rota das especiarias'), ('licao-m3-f04', 'Quem apanhava a pimenta no Malabar', 'Quem apanhava a pimenta no Malabar'), ('licao-m3-f16', 'Olhos sossegados, / Pretos e cansados', 'Olhos sossegados, / Pretos e cansados'), ('licao-m3-f05', 'Perde a pena do voar', 'Perde a pena do voar'), ('licao-m3-f05', 'Perdigão perdeu a pena', 'Perdigão perdeu a pena'), ('licao-m3-f05', 'Perde a pena do voar, / Ganha a pena do tormento', 'Perde a pena do voar, / Ganha a pena do tormento'), ('licao-m3-f05', 'Não há mal que lhe não venha', 'Não há mal que lhe não venha'), ('licao-m3-f13', 'Contra um bicho da terra tão pequeno?', 'Contra um bicho da terra tão pequeno?'), ('licao-m3-f09', 'Vem não sei como, e dói não sei porquê', 'Vem não sei como, e dói não sei porquê'), ('licao-m3-f13', 'Contra um bicho da terra tão pequeno?', 'Contra um bicho da terra tão pequeno?')], 'm3-u2': [('licao-m3-f13', 'Contra um bicho da terra tão pequeno?', 'Contra um bicho da terra tão pequeno?'), ('licao-m3-f13', 'Contra um bicho da terra tão pequeno?', 'Contra um bicho da terra tão pequeno?'), ('licao-m3-f13', 'Onde terá segura a curta vida', 'Onde terá segura a curta vida'), ('licao-m3-f13', 'Na terra tanta guerra, tanto engano', 'Na terra tanta guerra, tanto engano')], 'm5-u1': [('licao-m5-f04', 'Teu primo é um composto de todas as virtudes', 'Teu primo é um composto de todas as virtudes'), ('licao-m5-f04', 'Teu primo', 'Teu primo'), ('licao-m5-f04', 'um composto de todas as virtudes', 'um composto de todas as virtudes'), ('licao-m5-f04', 'Thereza ergueu-se sem lagrimas, e entrou serenamente no seu quarto.', 'Thereza ergueu-se sem lagrimas, e entrou serenamente no seu quarto.'), ('licao-m5-f04', 'a violencia de um pae é sempre amor', 'a violencia de um pae é sempre amor'), ('licao-m2-f02', 'Mais quero asno que me leve que cavalo que me derrube', 'Mais quero asno que me leve que cavalo que me derrube')], 'm5-u2': [('licao-m5-f04', 'Thereza ergueu-se sem lagrimas, e entrou serenamente no seu quarto.', 'Thereza ergueu-se sem lagrimas, e entrou serenamente no seu quarto.'), ('licao-m5-f04', 'mate-me; mas não me force a casar com meu primo!', 'mate-me; mas não me force a casar com meu primo!'), ('licao-m5-f11', 'Sole normande?', 'Sole normande?'), ('licao-m5-f12', "Então Ega perguntou, do fundo do sofá onde se enterrára, se, n'esses ultimos annos, elle não tivera a idéa", "Então Ega perguntou, do fundo do sofá onde se enterrára, se, n'esses ultimos annos, elle não tivera a idéa"), ('licao-m1-f02', "Eu atendendo meu amig', eu a[tendendo]", "Eu atendendo meu amig', eu a[tendendo]")]})
+
 def licao(nome):
     """Texto da lição sem marcas e, a seguir, a fonte inteira (para o que só está na descrição de uma imagem).
 
     29/10/2026: a pasta do módulo sai do nome da lição (licao-m1-…, licao-m7-…).
     """
     s=(ROOT/nome.split('-')[1]/nome/'index.html').read_text('utf-8')
+    # 01/11/2026: a barra com espaços é separador de versos; não se omite texto entre eles.
+    s = s.replace(' / ', ' ')
     return re.sub(r'\s+',' ',html.unescape(re.sub(r'<[^>]+>|\\n',' ',s)))+' '+html.unescape(s)
 
 
@@ -136,6 +144,11 @@ class Texto(HTMLParser):
     def __str__(self):return re.sub(r'\s+',' ',' '.join(self.out))
 
 class Grelhas(unittest.TestCase):
+    # 01/11/2026: read_text não pode esconder CRLF na página publicada.
+    def test_paginas_publicadas_usam_lf(self):
+        for page in (ROOT / 'tarefas').rglob('*.html'):
+            self.assertNotIn(b'\r', page.read_bytes(), str(page))
+
     def test_dados(self):
         self.assertIn('m1-u1',DADOS['tarefas']);self.assertIn('m1-u2',DADOS['tarefas'])
         for slug,t in DADOS['tarefas'].items():
@@ -222,7 +235,8 @@ class Grelhas(unittest.TestCase):
             dados=json.dumps(DADOS['tarefas'][slug],ensure_ascii=False)
             for nome,na_licao,na_grelha in citacoes:
                 with self.subTest(tarefa=slug,licao=nome,citacao=na_licao):
-                    self.assertIn(na_licao,licao(nome))
+                    # 01/11/2026: os versos têm de ser seguidos.
+                    self.assertRegex(licao(nome), r'\s+'.join(map(re.escape, na_licao.split(' / '))), f'{slug}: {nome}')
                     if na_grelha:self.assertIn(na_grelha,dados)
 
     def test_m7_u3_exemplos_noutro_tema(self):
@@ -245,7 +259,8 @@ class Grelhas(unittest.TestCase):
             for slug in DADOS['tarefas']:
                 for pasta in ('grelha','correcao'):
                     with self.subTest(tarefa=slug,pasta=pasta):
-                        self.assertEqual((Path(tmp)/'tarefas'/slug/pasta/'index.html').read_bytes(),(ROOT/'tarefas'/slug/pasta/'index.html').read_bytes())
+                        # 01/11/2026: normaliza apenas as terminações de linha para conferir também no Windows.
+                        self.assertEqual((Path(tmp)/'tarefas'/slug/pasta/'index.html').read_text('utf-8'),(ROOT/'tarefas'/slug/pasta/'index.html').read_text('utf-8'))
                 self.assertFalse((Path(tmp)/'tarefas'/slug/'index.html').exists(),'a ligação à grelha já está na tarefa')
 
 if __name__=='__main__':unittest.main()

@@ -1,12 +1,24 @@
 from functools import partial
 from http.server import ThreadingHTTPServer
-import threading,json,re
+import threading,json,re,mimetypes
+from urllib.parse import urlsplit,unquote
 from playwright.sync_api import sync_playwright
 from browser_m1_and_inventory import QuietHandler,new_page,ROOT
 from browser_m2_complete import respond
 OUT=ROOT.parents[1]/'outputs/m2-coerencia';OUT.mkdir(parents=True,exist_ok=True)
 server=ThreadingHTTPServer(('127.0.0.1',0),partial(QuietHandler,directory=str(ROOT.parent)));threading.Thread(target=server.serve_forever,daemon=True).start();host=f'http://127.0.0.1:{server.server_port}'
 results=[]
+
+# 01/11/2026: serve as rotas absolutas a partir da mesma cópia, sem uma segunda ligação HTTP no Windows.
+# Todas as verificações de destino, visibilidade, cartões e progresso permanecem.
+def local(route):
+ path=(ROOT/unquote(urlsplit(route.request.url).path.removeprefix('/pt/'))).resolve()
+ if not path.is_relative_to(ROOT):
+  route.fulfill(status=403,body='Forbidden');return
+ if path.is_dir():path=path/'index.html'
+ if path.is_file():route.fulfill(path=str(path),content_type=mimetypes.guess_type(path)[0] or 'application/octet-stream')
+ else:route.fulfill(status=404,body='Not found')
+
 def at_task_2(page):
  # 28/10/2026: a ligação #desafio-unidade-2 da F09 (congelada) acaba na aula de tarefa da unidade 2, visível e assinalada.
  page.wait_for_url(re.compile(r'/pt/m2/#(desafio|tarefa)-unidade-2$'));page.wait_for_function('location.hash==="#tarefa-unidade-2"')
@@ -19,18 +31,20 @@ try:
   browser=pw.chromium.launch(headless=True)
   for width in (320,1280):
    ctx,page=new_page(browser,width);errors=[];page.on('pageerror',lambda e:errors.append(str(e)))
-   def local(route):route.fulfill(response=route.fetch(url=route.request.url.replace('https://pedrohfernandes-klk.github.io',host)))
    page.route('https://pedrohfernandes-klk.github.io/pt/**',local)
    page.goto(host+'/pt/m2/',wait_until='networkidle')
-   ids=page.locator('.unidade[data-u="2"] li[data-passo]').evaluate_all('(els)=>els.map(e=>e.dataset.passo)');assert ids==['m2-f11','m2-f10','m2-f08','m2-f09']
-   assert page.locator('button[data-desafio]').count()==2;assert page.locator('.module-opening figure.doc').is_visible()
-   for n,expected in [(1,['m2-f01','m2-f02','m2-f07','m2-f06']),(2,ids)]:
+   # 01/11/2026: as novas lições entram nas duas unidades, mantendo todas as verificações do percurso.
+   ids=page.locator('.unidade[data-u="2"] li[data-passo]').evaluate_all('(els)=>els.map(e=>e.dataset.passo)');assert ids==['m2-f11','m2-f15','m2-f10','m2-f08','m2-f09']
+   # 06/11/2026: decisão 148, a imagem documental passa da abertura para logo a seguir às unidades; continua à vista.
+   assert page.locator('button[data-desafio]').count()==2;assert page.locator('main > section.unidade-pedagogica + figure.doc').is_visible()
+   for n,expected in [(1,['m2-f01','m2-f02','m2-f16','m2-f14','m2-f07','m2-f06']),(2,ids)]:
     capture=page.evaluate('''n=>{let captured;const original=EPIJogo.montar;EPIJogo.montar=cfg=>{captured=cfg.itens.map(c=>c._l)};document.querySelector('[data-desafio="'+n+'"]').click();EPIJogo.montar=original;return captured;}''',n)
     assert len(capture)==8 and set(capture)==set(expected),(n,capture)
    page.locator('[data-unidade="2"]').screenshot(path=str(OUT/f'unidade-2-{width}.png'))
    # Follow the menu links, so order and destinations are tested as rendered.
    page.goto(host+'/pt/m2/licao-m2-f06/',wait_until='networkidle')
-   for target in ['11','10','08','09']:
+   # 01/11/2026: os dois moldes mantêm o mesmo rótulo de navegação.
+   for target in ['11','15','10','08','09']:
     page.locator('[data-c-menu]').first.click();link=page.locator('[data-c-painel] a').filter(has_text=re.compile('^Lição seguinte$')).first;assert link.count()==1;link.click();page.wait_for_url(f'**/licao-m2-f{target}/')
    # 28/10/2026 (revisão do PR #124): antes conferia-se só o URL (**/m2/#desafio-unidade-2), mas esse desafio
    # está no arquivo escondido. O índice leva à aula de tarefa da unidade 2, à vista, pelo menu e pelo botão final.
@@ -71,7 +85,7 @@ try:
    state=page.evaluate("JSON.parse(localStorage.getItem('licao-m2-f07'))");assert state['lida'] and state['melhor']==12 and state['tentativas']==3;assert state['exposicoes']=={'6':2,'11':4,'26':1},state
    if run==0:page.reload(wait_until='networkidle')
   results.append({'legacy_f07':True,'scores_preserved':True,'exposures_mapped_once':True});ctx.close()
-  ctx,page=new_page(browser,1440);page.route('https://pedrohfernandes-klk.github.io/pt/**',lambda route:route.fulfill(response=route.fetch(url=route.request.url.replace('https://pedrohfernandes-klk.github.io',host))))
+  ctx,page=new_page(browser,1440);page.route('https://pedrohfernandes-klk.github.io/pt/**',local)
   page.goto(host+'/pt/projetar/?pagina=/pt/m2/licao-m2-f07/',wait_until='networkidle');frame=page.frame_locator('#lesson-frame');frame.locator('#baralho .cartao').wait_for();page.locator('[data-projection-size="large"]').click();assert frame.locator('html').get_attribute('data-projection-size')=='large'
   for _ in range(35):
    if 'uma ordem e a sua finalidade' in frame.locator('#baralho').inner_text().casefold():break

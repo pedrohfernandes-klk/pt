@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Ensaio da peça «i» | Português</title>
+<!-- 05/11/2026: decisão 153. Página de ensaio da peça «i» (tests/browser_creditos_i.cjs): canto, linha, imagem pequena,
+     imagem dentro de ligação, dentro de um cartão, documento visual com a tabela de identificação e a linha de um fundo animado com
+     «Parar o desenho» fora do «i». Não é uma página do sítio. -->
+<link rel="stylesheet" href="../../assets/fundos.css">
+<link rel="stylesheet" href="../../assets/info-i.css?v=20261105">
+<script defer src="../../assets/fundos.js"></script>
+<script defer src="../../assets/info-i.js?v=20261105"></script>
+<style>
+:root{--papel:#fff;--tinta:#111;--suave:#444;color-scheme:light dark}
+@media (prefers-color-scheme:dark){:root{--papel:#121210;--tinta:#ecebe5;--suave:#b3b1aa}}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;padding:16px;background:var(--papel);color:var(--tinta);font:16px/1.5 Arial,Helvetica,sans-serif}
+main{max-width:680px;margin:0 auto}
+h1{font-size:1.4rem;margin:0 0 16px}
+h2{font-size:1.05rem;margin:32px 0 8px}
+figure{margin:0 0 16px}
+.moldura{display:block;overflow:hidden;width:fit-content;max-width:100%}
+.moldura img{display:block;max-width:100%;height:auto}
+figcaption{font:400 .8rem/1.35 Arial,Helvetica,sans-serif;color:var(--suave);margin-top:6px}
+.pequena img{width:120px}
+.ligacao{display:block;width:fit-content;max-width:100%}
+.ligacao img{display:block;max-width:100%;height:auto}
+.cartao{border:1px solid var(--tinta);padding:16px;background:var(--papel)}
+.cartao .fr-moldura{display:block;overflow:hidden;width:100%}
+.cartao .fr-moldura img{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:cover}
+/* O documento visual como nas lições geradas (scripts/templates/licao-20261101.html.tpl): o «i» logo por baixo do canto
+   direito da imagem centrada; a tabela abre centrada, com a largura da coluna. */
+.documento{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);container-type:inline-size}
+.documento>a{grid-column:2;min-width:0}
+.documento>details.info-i{grid-column:2;justify-self:end}
+.documento>details.info-i[open]{justify-self:stretch;contain:inline-size}
+.documento>details.info-i[open]>.info-i-texto{inline-size:min(100cqi,34rem);margin-inline-start:calc((100% - min(100cqi,34rem))/2)}
+.documento>figcaption{grid-column:1/-1}
+.documento img{display:block;margin:auto;max-width:100%;max-height:300px;width:auto}
+.ii-fundo{height:96px;border:1px solid var(--tinta);overflow:hidden}
+.ii-fundo svg{display:block;width:100%;height:100%}
+.ii-anda .ii-onda{animation:ii-onda 4s linear infinite}
+@keyframes ii-onda{to{transform:translateX(-60px)}}
+</style>
+</head>
+<body>
+<main>
+<h1>Ensaio da peça «i»</h1>
+
+<h2 id="canto">Canto</h2>
+<figure class="fig inteiro" data-caso="canto">
+<div class="moldura com-i"><img src="../../img/fontes/vindel-pergaminho-2018.jpg" width="640" height="373" alt="O Pergaminho Vindel aberto numa vitrina, sobre fundo vermelho: duas páginas com texto e pautas de música."><details class="info-i" name="info-i"><summary aria-label="Créditos da imagem: Pergaminho Vindel"><span aria-hidden="true">i</span></summary><p class="info-i-texto">Pergaminho Vindel exposto; fotografia de Luis Miguel Bugallo Sánchez, 2017. <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.pt">CC BY-SA 4.0</a>.</p></details></div>
+<figcaption>O pergaminho com as sete cantigas, numa vitrina.</figcaption>
+</figure>
+
+<h2 id="linha">Linha (imagem estreita)</h2>
+<figure class="fig" data-caso="linha">
+<div class="moldura com-i"><img src="../../img/fontes/dinis-gravura-1594.jpg" width="200" height="308" alt="Gravura de D. Dinis: um homem de barba, com capacete e armadura, segura um livro pequeno."><details class="info-i info-i--linha" name="info-i"><summary aria-label="Créditos da imagem: D. Dinis"><span aria-hidden="true">i</span></summary><p class="info-i-texto">D. Dinis numa gravura de 1594 (Pedro de Mariz, <i>Diálogos de Vária História</i>). Domínio público.</p></details></div>
+</figure>
+
+<h2 id="pequena">Imagem pequena</h2>
+<figure class="fig pequena" data-caso="pequena">
+<div class="moldura com-i"><img src="../../img/fontes/morte-conde-andeiro.jpg" width="120" height="88" alt="Numa sala de arcos góticos, um homem jaz no chão, rodeado de homens armados."><details class="info-i info-i--linha" name="info-i"><summary aria-label="Créditos da imagem: Morte do Conde Andeiro"><span aria-hidden="true">i</span></summary><p class="info-i-texto">José de Sousa Azevedo, <i>Morte do Conde Andeiro</i>, c. 1860. Domínio público.</p></details></div>
+</figure>
+
+<h2 id="ligacao">Imagem dentro de uma ligação</h2>
+<figure class="fig" data-caso="ligacao">
+<div class="com-i ligacao"><a href="../../img/fontes/morte-conde-andeiro.jpg" aria-label="Abrir a imagem inteira"><img src="../../img/fontes/morte-conde-andeiro.jpg" width="420" height="307" alt="Numa sala de arcos góticos, um homem de gibão claro jaz no chão; à volta, homens armados de espada na mão."></a><details class="info-i" name="info-i"><summary aria-label="Créditos da imagem: Conde Andeiro"><span aria-hidden="true">i</span></summary><p class="info-i-texto">José de Sousa Azevedo, <i>Morte do Conde Andeiro</i>, c. 1860. Domínio público. <a href="https://commons.wikimedia.org/wiki/File:Morte_do_Conde_Andeiro.jpg" data-external>Wikimedia Commons ↗</a></p></details></div>
+</figure>
+
+<h2 id="cartao">Dentro de um cartão</h2>
+<article class="cartao" data-caso="cartao">
+<figure class="fig-rev">
+<div class="fr-moldura com-i"><img src="../../img/fontes/vindel-pergaminho-2018.jpg" width="640" height="373" alt="Um pergaminho aberto numa vitrina, com pautas de música."><details class="info-i" name="info-i"><summary aria-label="Créditos da fotografia"><span aria-hidden="true">i</span></summary><p class="info-i-texto">Fotografia de Luis Miguel Bugallo Sánchez, 2017. <a rel="license" href="https://creativecommons.org/licenses/by/4.0/deed.pt">CC BY 4.0</a>.</p></details></div>
+<figcaption><span class="fr-leg">O que se vê serve a pergunta e fica à vista.</span></figcaption>
+</figure>
+</article>
+
+<h2 id="documento">Documento visual com tabela de identificação</h2>
+<figure class="fig documento" data-caso="documento">
+<a href="../../img/fontes/camoes-rimas-1595.jpg" aria-label="Abrir a imagem inteira"><img src="../../img/fontes/camoes-rimas-1595.jpg" alt="Página de título de Rhythmas, com uma árvore e a data de 1595 em numeração romana."></a><details class="info-i info-i--linha" name="info-i"><summary aria-label="Créditos da imagem: Rhythmas"><span aria-hidden="true">i</span></summary><div class="info-i-texto"><p>Domínio público; <a href="https://commons.wikimedia.org/wiki/File:Cam%C3%B5es_-_Rimas_1595.jpg">Fonte ↗</a></p><table><caption>Identificação do documento visual</caption><tr><th scope="row">Autor</th><td>Luís de Camões; impressão de Manuel de Lira; reprodução anónima</td></tr><tr><th scope="row">Obra</th><td>Rhythmas, página de título</td></tr><tr><th scope="row">Data</th><td>1595</td></tr><tr><th scope="row">Licença</th><td><a href="https://commons.wikimedia.org/wiki/File:Cam%C3%B5es_-_Rimas_1595.jpg">Domínio público</a></td></tr></table><p><a href="https://commons.wikimedia.org/wiki/File:Cam%C3%B5es_-_Rimas_1595.jpg">Consultar a fonte e os direitos ↗</a>. Reprodução redimensionada, sem recorte.</p></div></details>
+<figcaption><p><i>Rhythmas</i>, 1595: página de título da edição póstuma da poesia de Camões.</p></figcaption>
+</figure>
+
+<h2 id="fundo">Fundo animado</h2>
+<div class="ii-fundo" data-fundo="ii" data-fundo-ciclo="40" aria-hidden="true"><svg viewBox="0 0 600 96" preserveAspectRatio="none"><g class="ii-onda"><path d="M0 48 Q30 18 60 48 T120 48 T180 48 T240 48 T300 48 T360 48 T420 48 T480 48 T540 48 T600 48 T660 48" fill="none" stroke="currentColor" stroke-width="2"/></g></svg></div>
+<div class="fundo-acoes" data-caso="fundo">
+<button type="button" class="fundo-botao" data-fundo-botao="ii" hidden>Parar o desenho</button>
+<details class="info-i info-i--linha" name="info-i"><summary aria-label="Créditos do desenho"><span aria-hidden="true">i</span></summary><p class="info-i-texto">Grafismo gerado com recurso a IA, EPI, 2026, a partir do padrão de ondas da calçada portuguesa. Uma linha de ondas que passa da esquerda para a direita.</p></details>
+</div>
+<p id="fora">Texto da página, fora de qualquer «i», para o clique fora.</p>
+</main>
+</body>
+</html>

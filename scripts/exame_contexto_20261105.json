@@ -1,0 +1,42 @@
+[
+ {
+  "ficheiro": "assets/exame/sessoes.json",
+  "local": "Contexto das 16 sessões com excerto de uma lição: abre-se a lição e lê-se o excerto",
+  "antigo": "Abre a leitura de apoio, lê o recorte indicado e identifica duas marcas relevantes antes de responder. O texto de origem está na lição; esta sessão organiza o treino a partir dele.",
+  "novo": "Abre a lição, lê o excerto indicado e identifica duas marcas relevantes antes de responder. O texto completo está na lição; esta sessão organiza o treino a partir dele.",
+  "ocorrencias": 16,
+  "achado": "05/11/2026: pedido do docente («isto n é uma leitura, é uma lição, e são duas coisas diferentes»), no Laboratório do exame: o texto de contexto de cada sessão, que a camada exame_licao_20261105 deixou por mudar."
+ },
+ {
+  "ficheiro": "assets/exame/sessoes.json",
+  "local": "Contexto da sessão de Cesário (s11): o excerto apresenta «Noite Fechada»",
+  "antigo": "O recorte apresenta «Noite Fechada».",
+  "novo": "O excerto apresenta «Noite Fechada».",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: pedido do docente («isto n é uma leitura, é uma lição, e são duas coisas diferentes»), no Laboratório do exame: o texto de contexto de cada sessão, que a camada exame_licao_20261105 deixou por mudar."
+ },
+ {
+  "ficheiro": "assets/exame/sessoes.json",
+  "local": "Contexto da sessão das cantigas (s01): o excerto de D. Dinis",
+  "antigo": "O recorte de D. Dinis serve",
+  "novo": "O excerto de D. Dinis serve",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: pedido do docente («isto n é uma leitura, é uma lição, e são duas coisas diferentes»), no Laboratório do exame: o texto de contexto de cada sessão, que a camada exame_licao_20261105 deixou por mudar."
+ },
+ {
+  "ficheiro": "assets/exame/sessoes.json",
+  "local": "Contexto da sessão de Gil Vicente (s03): as duas ligações de apoio são lições (M2-F02 e M2-F06)",
+  "antigo": "a segunda escolha nas duas leituras de apoio.",
+  "novo": "a segunda escolha nas duas lições de apoio.",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: pedido do docente («isto n é uma leitura, é uma lição, e são duas coisas diferentes»), no Laboratório do exame: o texto de contexto de cada sessão, que a camada exame_licao_20261105 deixou por mudar."
+ },
+ {
+  "ficheiro": "exame/index.html",
+  "local": "Versão do app.js (também refresca sessoes.json), para os navegadores não usarem a cópia antiga",
+  "antigo": "../assets/exame/app.js?v=20261105-licao-1",
+  "novo": "../assets/exame/app.js?v=20261105-licao-2",
+  "ocorrencias": 1,
+  "achado": "05/11/2026: pedido do docente («isto n é uma leitura, é uma lição, e são duas coisas diferentes»), no Laboratório do exame: o texto de contexto de cada sessão, que a camada exame_licao_20261105 deixou por mudar."
+ }
+]

@@ -1,3 +1,5 @@
+# 01/11/2026: os nove módulos fecham agora com a aula de tarefa.
+# 31/10/2026: M3, M5 e M6 passam ao contrato das aulas de tarefa.
 """One meaningful checkpoint per unit; explicit M2 core/complement split."""
 from html.parser import HTMLParser
 from pathlib import Path
@@ -43,7 +45,7 @@ class UnitRoutes(unittest.TestCase):
                 self.assertEqual(numbers, ui.challenges)
                 # 26/10: M1/M4/M7 end in a task lesson; old pools remain optional archive.
                 # 27/10/2026 (passagem do GPT, tarefas por unidade): o M2 passa ao mesmo modelo, com duas aulas de tarefa.
-                if module in (1, 2, 4, 7):
+                if module in tuple(range(1,10)):
                     self.assertEqual(numbers, ui.tasks)
                     self.assertEqual([], ui.responses)
                     self.assertIn('id="arquivo-percurso" hidden', src)
@@ -62,8 +64,9 @@ class UnitRoutes(unittest.TestCase):
     def test_m2_is_two_complete_core_sequences_with_purposeful_complements(self):
         plan = json.loads(PLAN.read_text('utf-8'))[1]
         first, second = plan['units']
-        self.assertEqual(['m2-f01', 'm2-f02', 'm2-f07', 'm2-f06'], first['lessons'])
-        self.assertEqual(['m2-f11', 'm2-f10', 'm2-f08', 'm2-f09'], second['lessons'])
+        # 01/11/2026: as três leituras novas entram sem retirar os complementos.
+        self.assertEqual(['m2-f01', 'm2-f02', 'm2-f16', 'm2-f14', 'm2-f07', 'm2-f06'], first['lessons'])
+        self.assertEqual(['m2-f11', 'm2-f15', 'm2-f10', 'm2-f08', 'm2-f09'], second['lessons'])
         self.assertEqual(['m2-f10', 'm2-f10', 'm2-f11'], [x['after'] for x in second['complements']])
         self.assertEqual(4, sum(len(u['complements']) for u in plan['units']))
         self.assertTrue(all(c['purpose'] for u in plan['units'] for c in u['complements']))
@@ -76,14 +79,14 @@ class UnitRoutes(unittest.TestCase):
         for m in (1, 2, 3, 7):
             text = (ROOT / f'm{m}/index.html').read_text('utf-8')
             # 27/10/2026 (passagem do GPT, tarefas por unidade): o M2 passa ao mesmo modelo, com duas aulas de tarefa.
-            if m in (1, 2, 7):
+            if m in (1, 2, 3, 5, 6, 7):
                 self.assertIn('unit-task-route.js', text)
                 adapter = (ROOT / 'assets/unit-task-route.js').read_text('utf-8')
                 self.assertIn('desafio-unidade-v2-', adapter)
                 self.assertIn('percurso-v2-', adapter)
             else:
                 self.assertIn('K0="desafio-unidade-v2-"', text)
-            if m not in (1, 2, 7):
+            if m not in (1, 2, 3, 5, 6, 7):
                 self.assertIn('"percurso-v2-"+M+"-u"', text)
                 self.assertIn('unit-history.js', text)
         history = (ROOT / 'assets/unit-history.js').read_text('utf-8')

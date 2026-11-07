@@ -26,5 +26,9 @@ class M7Pilot(unittest.TestCase):
  def test_opening_figures_are_outside_details(self):
   for n in range(1,10):
    text=(ROOT/f'm{n}/index.html').read_text('utf-8');figs=Figures(text).figures
-   self.assertEqual(len(figs),1);self.assertNotIn('details',figs[0]);self.assertIn('<figcaption',text)
+   self.assertEqual(len(figs),1);self.assertIn('<figcaption',text)
+   # 02/11/2026: só no piloto M4 a imagem documental integra os recursos nativos (06/11/2026: deixou de valer com a decisão 148).
+   # 06/11/2026: decisão 148, volta a exigir-se o mesmo nos nove: a imagem documental fica fora de qualquer details (a seguir
+   # às unidades, fora de «Recursos do módulo»).
+   self.assertNotIn('details',figs[0])
 if __name__=='__main__':unittest.main()

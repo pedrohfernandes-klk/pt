@@ -1,0 +1,22 @@
+/* 02/11/2026: decisão 139 (docente: «maiores e mais bem feitos; a calçada tem de parecer realmente calçada»). Por baixo do nome
+   do Português, uma faixa larga de calçada portuguesa, padrão de ondas «mar largo» (Rossio, Lisboa): basalto e
+   calcário em fiadas que seguem a onda, com a junta à vista. Grafismo gerado com recurso a IA, gerado por scripts/gerar_calcada_mar.py
+   (assets/calcada-mar.svg, um ladrilho que se repete sem costura). Parada é o estado de partida: sem JavaScript, com movimento
+   reduzido e na projeção fica a calçada inteira; com o motor comum (assets/fundos.js), as ondas correm devagar para a esquerda
+   durante dois ciclos e param; o botão «Parar o desenho» pára-as antes. Na impressão, a faixa não sai. */
+.raiz .cf-mar{--cf-h:clamp(232px,64vw,300px);--cf-tw:calc(var(--cf-h) * 960 / 440);position:relative;height:var(--cf-h);margin:28px 0 0;overflow:hidden;background:#9c958a;pointer-events:none;box-shadow:inset 0 0 0 1px rgba(0,0,0,.18)}
+/* no telemóvel, a calçada vai de uma ponta à outra do ecrã, como um passeio */
+@media(max-width:639px){.raiz .cf-mar{margin-left:calc(50% - 50vw);margin-right:calc(50% - 50vw);box-shadow:none}}
+@media(min-width:640px){.raiz .cf-mar{--cf-h:340px;margin-top:32px}}
+@media(min-width:960px){.raiz .cf-mar{--cf-h:clamp(360px,44vh,440px);margin-top:36px}}
+.raiz .cf-pedras{position:absolute;top:0;bottom:0;left:0;width:calc(100% + var(--cf-tw));background:url(calcada-mar.svg) repeat-x 0 0/var(--cf-tw) 100%}
+/* no escuro, o calcário não acende a página: a pedra baixa de luz, sem mudar de cor */
+:root[data-theme=dark] .raiz .cf-pedras{filter:brightness(.8)}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]) .raiz .cf-pedras{filter:brightness(.8)}}
+.raiz .cf-credito{margin:8px 0 0;font:400 .8125rem/1.4 Arial,Helvetica,sans-serif;color:var(--suave,#444)}
+/* um ciclo: as ondas andam um ladrilho inteiro (dois comprimentos de onda) e voltam ao mesmo desenho, sem salto */
+@keyframes cf-mar{from{transform:translateX(0)}to{transform:translateX(calc(-1 * var(--cf-tw)))}}
+@media(prefers-reduced-motion:no-preference){
+html:not(.em-projecao) .raiz .cf-anda .cf-pedras{animation:cf-mar 40s linear infinite;will-change:transform}
+}
+@media print{.raiz .cf-mar{display:none}}

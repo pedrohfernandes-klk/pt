@@ -19,30 +19,51 @@ ROOT = Path(__file__).resolve().parents[1]
 TIPOS = {'escolha', 'vf', 'emparelhar', 'ordenar', 'sublinhar', 'completar', 'versos'}
 
 
+# 07/11/2026: os ficheiros de main que este pedido muda (duração de 50 minutos, aquecimento de 10 minutos e a
+# ligação para os cartões); as camadas literais que os registam têm de ver os resumos refeitos sobre a árvore atual.
+FICHEIROS_DO_PEDIDO = ('assets/exame/sessoes.json', 'assets/exame/app.js', 'exame/index.html')
+NOTA_50 = (' 01/11/2026: duração das sessões de exame atualizada para 50 minutos (decisão 106); trocas, ocorrências e '
+           'restantes ficheiros preservados; só os resumos dos ficheiros do exame que o pedido pt #155 muda foram '
+           'refeitos (07/11/2026: sobre a fusão com o main), sem mudar o base_commit do manifesto, que continua a ser '
+           'o das bases dos outros ficheiros.')
+
+
 def atualizar_contratos():
-    """01/11/2026: regista os 50 minutos sem mudar as trocas antigas de texto."""
-    from aplicar_trocas import carregar, processar, desfazer_camadas, sha_lf, commit_base
-    relative = 'assets/exame/sessoes.json'
-    language = ROOT / 'tests/fixtures/lingua-pessoa-m7-edits-20261030.json'
-    options = ROOT / 'tests/fixtures/opcoes-denunciadoras-edits-20261030.json'
-    for target, source, layers in (
-        (language, 'scripts/lingua_pessoa_m7_20261030.json', []),
-        (options, 'scripts/opcoes_denunciadoras_20261030.json', [language]),
-    ):
+    """01/11/2026: regista os 50 minutos sem mudar as trocas antigas de texto.
+
+    07/11/2026 (pt #155, achados 9, 43, 60, 61 e 73): a cadeia de camadas é a de scripts/verificar_camadas.py, a mesma
+    do CI (cada camada confere-se com as mais recentes desfeitas antes); só mudam os dois resumos das entradas dos
+    ficheiros do exame que este pedido muda, e só se as trocas da camada estiverem todas aplicadas. O base_commit fica
+    e a nota junta-se uma vez só.
+    """
+    from aplicar_trocas import carregar, processar, desfazer_camadas, sha_lf
+    from verificar_camadas import LAYERS
+    for i, (layer, manifest_name) in enumerate(LAYERS):
+        target = ROOT / 'tests/fixtures' / (manifest_name + '.json')
         manifest = json.loads(target.read_text('utf-8'))
-        _, changes = carregar(str(ROOT / source))
-        text = (ROOT / relative).read_bytes().decode('utf-8')
-        text = desfazer_camadas(relative, text, [(str(p), json.loads(p.read_text('utf-8'))['files']) for p in layers])
-        before, after, states = processar(relative, changes[relative], text)
-        if after != text or any(state != 'aplicada' for state in states):
-            raise ValueError('As trocas anteriores têm de estar todas aplicadas; não se altera o seu conteúdo.')
-        entry = manifest['files'][relative]
-        hashes = {'base_sha256_lf': sha_lf(before), 'after_sha256_lf': sha_lf(after)}
-        if any(entry[k] != value for k, value in hashes.items()):
-            entry.update(hashes)
-            manifest['base_commit'] = commit_base(None)
-            manifest['_nota'] += ' 01/11/2026: duração das sessões de exame atualizada para 50 minutos (decisão 106); trocas, ocorrências e restantes ficheiros preservados.'
+        relevantes = [f for f in FICHEIROS_DO_PEDIDO if f in manifest['files']]
+        if not relevantes:
+            continue
+        _, changes = carregar(str(ROOT / 'scripts' / (layer + '.json')))
+        newer = [ROOT / 'tests/fixtures' / (m + '.json') for _, m in LAYERS[:i]]
+        camadas = [(str(p), json.loads(p.read_text('utf-8'))['files']) for p in newer]
+        mudou = False
+        for relative in relevantes:
+            text = (ROOT / relative).read_bytes().decode('utf-8')
+            text = desfazer_camadas(relative, text, camadas)
+            before, after, states = processar(relative, changes[relative], text)
+            if after != text or any(state != 'aplicada' for state in states):
+                raise ValueError(f'{layer}: {relative}: as trocas têm de estar todas aplicadas; não se altera o seu conteúdo.')
+            entry = manifest['files'][relative]
+            hashes = {'base_sha256_lf': sha_lf(before), 'after_sha256_lf': sha_lf(after)}
+            if any(entry[k] != value for k, value in hashes.items()):
+                entry.update(hashes)
+                mudou = True
+        if mudou:
+            if '(decisão 106)' not in manifest['_nota']:
+                manifest['_nota'] += NOTA_50
             target.write_text(json.dumps(manifest, ensure_ascii=False, indent=1) + '\n', 'utf-8')
+            print('contrato refeito:', target.relative_to(ROOT))
 
 
 def validar(d):

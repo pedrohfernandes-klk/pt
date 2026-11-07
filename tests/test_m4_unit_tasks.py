@@ -37,6 +37,10 @@ class M4UnitTasks(unittest.TestCase):
 
     def test_complete_closing_lesson_and_existing_rubrics(self):
         guide = (ROOT / 'm4/guia-da-tarefa-m4/index.html').read_text('utf-8-sig')
+        # 02/11/2026: os critérios históricos conferem-se no guia anterior à camada das tarefas individuais (que tirou
+        # «todos falam»); essa camada confere-se literalmente em scripts/verificar_camadas.py.
+        from auditoria_20261028 import undo_tarefas_individuais
+        guide = undo_tarefas_individuais('m4/guia-da-tarefa-m4/index.html', guide)
         plain_guide = re.sub(r'\s+', ' ', unescape(re.sub(r'<[^>]+>', ' ', guide)))
         for path in self.pages:
             source = historical_task_source(path)

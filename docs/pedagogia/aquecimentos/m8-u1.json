@@ -1,0 +1,212 @@
+{
+ "slug": "m8-u1",
+ "modulo": "m8",
+ "unidade": 1,
+ "versao": "1",
+ "momento": "No início da aula de tarefa",
+ "titulo": "Comparar sem colar dois resumos",
+ "descricao": "Dez minutos para treinar leitura, fundamentação e revisão com exemplos inventados.",
+ "licoes_das_citacoes": [
+  "m8/licao-m8-f03",
+  "m8/licao-m8-f06",
+  "m8/licao-m8-f10"
+ ],
+ "menu": [
+  [
+   "../../../m8/licao-m8-f03/",
+   "Relembrar F03, Jorge de Sena, poeta testemunha"
+  ],
+  [
+   "../../../m8/licao-m8-f06/",
+   "Relembrar F06, verbos que duram, palavras que apontam"
+  ],
+  [
+   "../../../m8/licao-m8-f10/",
+   "Relembrar F10, poema com pintura ou álbum"
+  ]
+ ],
+ "reservadas": [
+  "Adeus",
+  "tigela"
+ ],
+ "cartoes": [
+  {
+   "t": "ler",
+   "rot": "Abre",
+   "titulo": "Comparar sem colar dois resumos",
+   "html": "<p>Dez minutos com consulta, sem nota. Os exemplos foram inventados para treinar operações de leitura e escrita; não dão as respostas da tarefa.</p><p>Dois textos inventados: A. A janela bebe a manhã. B. A janela mede a manhã. São duas imagens criadas para este aquecimento, não versos de um autor estudado.</p>"
+  },
+  {
+   "t": "escolha",
+   "p": "Nos dois textos inventados, que diferença merece ser explicada?",
+   "p2": "Que diferença entre _bebe_ e _mede_ vale a pena explicar?",
+   "o": [
+    "Beber e medir dão relações distintas ao tempo.",
+    "Beber e medir descrevem horários da mesma rotina.",
+    "Beber e medir narram duas ações físicas da janela."
+   ],
+   "c": 0,
+   "f": "A comparação incide nos verbos e no tipo de relação com a manhã; ainda tens de explicar o efeito.",
+   "fe": [
+    null,
+    "Os verbos criam relações com a manhã, mas não dão horários. Relê a imagem criada sem lhe acrescentar uma rotina.",
+    "A janela não bebe nem mede literalmente. Atribuir-lhe essas ações constrói uma imagem, não relata movimentos físicos."
+   ],
+   "g": "1"
+  },
+  {
+   "t": "emparelhar",
+   "p": "Liga cada função ao elemento do caso.",
+   "p2": "Pormenor, efeito ou comparação? Liga cada um ao caso.",
+   "pares": [
+    [
+     "Pormenor",
+     "o verbo escolhido"
+    ],
+    [
+     "Efeito possível",
+     "o modo de sentir o tempo"
+    ],
+    [
+     "Comparação",
+     "a relação entre os dois efeitos"
+    ]
+   ],
+   "f": "Uma interpretação precisa de observação e de uma relação explicada. Mantém distintas as funções.",
+   "fe": "Volta ao caso: uma coisa é observar, outra é concluir ou propor.",
+   "g": "2"
+  },
+  {
+   "t": "rever",
+   "p": "Revê a conclusão para a ajustar ao caso.",
+   "p2": "Que substituição evita afirmar mais do que o exemplo permite?",
+   "apoio": "Dois textos inventados: A. A janela bebe a manhã. B. A janela mede a manhã. São duas imagens criadas para este aquecimento, não versos de um autor estudado.",
+   "frase": "Os dois textos tratam a janela de modo igual.",
+   "trecho": "de modo igual",
+   "o": [
+    "com gestos diferentes",
+    "sem qualquer diferença",
+    "com idêntico movimento"
+   ],
+   "c": 0,
+   "f": "A revisão ajusta a conclusão aos elementos disponíveis e conserva uma frase completa.",
+   "fe": [
+    null,
+    "Bebe e mede atribuem ações diferentes à janela. A ausência de diferença apaga essa escolha.",
+    "Um movimento idêntico não distingue a absorção sugerida por bebe da medição sugerida por mede."
+   ],
+   "g": "3"
+  },
+  {
+   "t": "vf",
+   "p": "Nos exemplos criados, a janela ocupa a mesma posição na frase, mas recebe ações diferentes.",
+   "p2": "A comparação pode partir da janela comum e distinguir os dois verbos?",
+   "v": true,
+   "f": "A janela é sujeito nas duas frases. _Bebe_ sugere absorção; _mede_ introduz uma relação de medida com a manhã.",
+   "fe": "Confundes uma estrutura comum com um efeito comum. Compara os verbos _bebe_ e _mede_, mantendo a janela.",
+   "g": "4"
+  },
+  {
+   "t": "ordenar",
+   "p": "Ordena uma comparação dos dois exemplos criados.",
+   "p2": "Como passas de dois verbos a uma relação entre os textos?",
+   "passos": [
+    "Observa que a janela recebe os verbos _beber_ e _medir_.",
+    "Relaciona _beber_ com _absorver_ e _medir_ com _delimitar_.",
+    "Explica como a manhã passa de experiência a medida."
+   ],
+   "f": "A comparação tem um elemento comum e uma diferença explicada: não termina em dois resumos separados.",
+   "fe": "Não atribuas o efeito antes de distinguir as ações. Regressa aos dois verbos dados à janela.",
+   "g": "5"
+  },
+  {
+   "t": "escolha",
+   "p": "Que frase explica o contraste entre _beber_ e _medir_?",
+   "p2": "Que diferença de relação com a manhã é sustentada pelos verbos?",
+   "o": [
+    "A manhã vai de alimento a medida.",
+    "A manhã passa de passado a futuro.",
+    "A manhã passa de janela a pessoa."
+   ],
+   "c": 0,
+   "f": "Alimento é uma associação de _beber_; medida é uma associação de _medir_. São imagens possíveis, não objetos presentes numa cena real.",
+   "fe": [
+    null,
+    "Os verbos estão no presente. A oposição entre passado e futuro não aparece nas duas frases.",
+    "A janela mantém-se nas duas frases. A diferença está na ação que lhe é atribuída, não numa substituição por uma pessoa."
+   ],
+   "g": "6"
+  },
+  {
+   "t": "completar",
+   "p": "Completa a comparação sem atribuir uma intenção ao autor.",
+   "p2": "Que palavras desenvolvem as duas imagens sem trocar o seu sentido?",
+   "frase": "Em A, a janela parece [1] a manhã; em B, parece [2] a sua passagem.",
+   "lacunas": [
+    {
+     "o": [
+      "absorver",
+      "recusar",
+      "esconder"
+     ],
+     "c": 0
+    },
+    {
+     "o": [
+      "delimitar",
+      "esquecer",
+      "cancelar"
+     ],
+     "c": 0
+    }
+   ],
+   "f": "As escolhas prolongam as imagens dos verbos. Explicam o efeito possível sem inventar a biografia de quem escreveu.",
+   "fe": "Relê _bebe_ e _mede_: procura ações próximas desses sentidos, não uma rejeição ou um esquecimento.",
+   "g": "7"
+  },
+  {
+   "t": "vf",
+   "p": "Como os dois exemplos mencionam a manhã, a diferença dos verbos é apenas decorativa.",
+   "p2": "A referência comum à manhã torna dispensável interpretar _beber_ e _medir_?",
+   "v": false,
+   "f": "A referência é comum, mas os verbos mudam a relação com ela. A semelhança permite localizar a diferença, não apagá-la.",
+   "fe": "Confundes objeto comum com efeito idêntico. Compara uma manhã absorvida com uma manhã medida.",
+   "g": "8"
+  },
+  {
+   "t": "escolha",
+   "p": "A que voltas para conferir a comparação dos exemplos?",
+   "p2": "A que regressas para verificar o efeito que atribuíste à mudança?",
+   "o": [
+    "À relação de _bebe_ e _mede_ com a manhã.",
+    "À diferença de tamanho entre as frases.",
+    "À posição da janela nas duas frases."
+   ],
+   "c": 0,
+   "f": "Os dois verbos aplicados à manhã sustentam a comparação; a posição ou o tamanho não explicam o contraste semântico.",
+   "fe": [
+    null,
+    "O comprimento não distingue os sentidos. Relê os verbos que ocupam o mesmo lugar nas frases.",
+    "A janela está na mesma posição sintática. É a ação atribuída que muda a relação com a manhã."
+   ],
+   "g": "9"
+  },
+  {
+   "t": "sublinhar",
+   "p": "Na frase criada, toca na palavra que limita a certeza da interpretação.",
+   "p2": "Que palavra mantém como hipótese a interpretação de _beber_?",
+   "frase": "A janela talvez transforme o tempo em alimento.",
+   "certas": [
+    2
+   ],
+   "f": "_Talvez_ assinala uma probabilidade: a associação entre beber e alimento sustenta a leitura, mas a frase não descreve uma refeição.",
+   "fe": "A palavra pedida admite que a leitura é provável, mas pode ser revista. Não é o nome do objeto nem o verbo que descreve o efeito.",
+   "g": "10"
+  },
+  {
+   "t": "ler",
+   "rot": "Para levar",
+   "html": "<p>Na tarefa, relaciona um indício de cada poema: mostra o que têm em comum e explica a diferença que muda a leitura.</p><p><a href=\"../\">Abrir a aula de tarefa</a></p>"
+  }
+ ]
+}

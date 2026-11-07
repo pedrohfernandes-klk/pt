@@ -29,10 +29,14 @@ class F12Review(unittest.TestCase):
             card=self.cards[index]
             copied=next(c for c in self.pool if c['p']==card['p'])
             self.assertEqual(card['f'],copied['f'])
-            self.assertEqual(card['p2'],copied['p2'])
-        self.assertEqual(self.cards[8]['c'],2)
+            # 02/11/2026: o #149 retirou a variante duplicada de C09; exigir a mesma presença ou ausência nas duas cópias.
+            self.assertEqual(card.get('p2'),copied.get('p2'))
+        # 02/11/2026: C09 tem agora as três alternativas confirmadas, com habitual na posição inicial.
+        self.assertEqual(self.cards[8]['o'],['habitual','perfetivo','genérico'])
+        self.assertEqual(self.cards[8]['c'],0)
         self.assertIn('Um hábito também envolve repetição',self.cards[8]['f'])
-        self.assertIn('não é necessária uma contagem exata',self.cards[8]['f'])
+        # 02/11/2026: a formulação confirmada explicita a compatibilidade dos valores.
+        self.assertIn('habitual e iterativo não são rótulos sempre incompatíveis',self.cards[8]['f'])
         self.assertIn('não diz que a pintora parou',self.cards[17]['f'])
 
     def test_challenge_requires_evidence_instead_of_universal_preference(self):
@@ -51,7 +55,8 @@ class F12Review(unittest.TestCase):
         self.assertEqual([v for _,v in reference['pares']],['o conto','a revista','um poema','uma carta'])
         self.assertIn('informação anterior',reference['f'])
         self.assertEqual(len(self.cards),22)
-        self.assertEqual(len(self.units[1]['pool']),53)
+        # 01/11/2026: George acrescenta dois itens ao arquivo da U2.
+        self.assertEqual(len(self.units[1]['pool']),55)
         self.assertEqual(len(self.pool),15)
 
     def test_teacher_only_offers_current_interactive_cards(self):

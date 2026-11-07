@@ -25,8 +25,11 @@ class M2Balance(unittest.TestCase):
   self.assertNotIn('castigo',json.dumps(cards('09'),ensure_ascii=False))
  def test_core_navigation_and_complement_returns(self):
   base='https://pedrohfernandes-klk.github.io/pt/m2/'
-  for n,nxt in [('06','11'),('11','10'),('10','08'),('08','09')]:
+  for n,nxt in [('06','11'),('10','08'),('08','09')]:
    s=(ROOT/f'm2/licao-m2-f{n}/index.html').read_text('utf-8');self.assertIn('seguinte:"'+base+'licao-m2-f'+nxt+'/"',s)
+  # 01/11/2026: a F15 liga a F11 à F10, mantendo os restantes destinos.
+  for n,nxt in [('11','15'),('15','10')]:
+   self.assertIn('seguinte:"../licao-m2-f'+nxt+'/"',(ROOT/f'm2/licao-m2-f{n}/index.html').read_text('utf-8'))
   self.assertIn('seguinte:"../#desafio-unidade-2"',(ROOT/'m2/licao-m2-f09/index.html').read_text('utf-8'))
   for n,target in [('12','10'),('13','11')]:
    s=(ROOT/f'm2/licao-m2-f{n}/index.html').read_text('utf-8');self.assertIn('seguinte:"../licao-m2-f'+target+'/"',s)

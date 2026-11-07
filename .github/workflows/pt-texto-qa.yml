@@ -1,3 +1,6 @@
+# 03/11/2026: cabeçalho sobre F0 publicada, mantendo reversão e asserções.
+# 03/11/2026: desfazer primeiro a camada visual do cabecalho, com as mesmas assercoes.
+# 01/11/2026: desfazer a camada dos índices antes dos contratos históricos.
 name: Português, texto corrido justificado
 # 30/10/2026: texto corrido justificado, com hifenização em português europeu (decisão do docente). A regra está no fim
 # de assets/appearance.css (mais uma linha em cada ficheiro de estilo dos painéis de notas, assets/pt-lessons/notes.css e
@@ -40,7 +43,18 @@ jobs:
           python -m unittest discover -s tests -p 'test_task_routes_closure.py' -v
           python -m unittest discover -s tests -p 'test_appearance_universal.py' -v
           # 30/10/2026: a camada das opções denunciadoras foi aplicada por cima desta; desfaz-se antes de conferir.
-          python scripts/aplicar_trocas.py scripts/texto_justificado_20261030.json --manifesto tests/fixtures/texto-justificado-edits-20261030.json --verificar --desfazer-antes tests/fixtures/lingua-pessoa-m7-edits-20261030.json --desfazer-antes tests/fixtures/opcoes-denunciadoras-edits-20261030.json
+          # 01/11/2026: desfazer primeiro a camada das tarefas M8/M9.
+          # 01/11/2026: desfaz primeiro a camada das sete lições novas.
+          # 01/11/2026: desfaz antes a camada do pedido B.
+          # 02/11/2026: desfaz antes de tudo a varredura, a calçada e as tarefas individuais (as mais recentes).
+          # 03/11/2026: desfaz o piloto M4 e F0 antes dos créditos publicados e do lote 2.
+          # 05/11/2026: a tabela dos seis movimentos desfaz-se antes da revisão de 5/11.
+          # 05/11/2026: o Laboratório do exame (lição, não «leitura de apoio») é a camada mais recente; desfaz-se antes da tabela dos seis movimentos.
+          # 05/11/2026: o contexto de cada sessão do Laboratório do exame (lição e excerto, não «recorte») é a camada mais recente; desfaz-se antes da ligação e das notas do Laboratório do exame.
+          # 05/11/2026: a decisão 154 (os exercícios fazem-se sozinho; nada no texto do aluno depende do docente) é a camada mais recente; desfaz-se antes do contexto do Laboratório do exame, com a mesma exigência.
+          # 06/11/2026: o desenho comum dos nove índices (decisão 148) é a camada mais recente, por cima dos créditos atrás de um «i»; desfaz-se primeiro, com a mesma exigência.
+          # 07/11/2026: os três acertos dos índices deixados pela decisão 173 são a camada mais recente, por cima do desenho comum dos nove índices; desfazem-se primeiro, com a mesma exigência.
+          python scripts/aplicar_trocas.py scripts/texto_justificado_20261030.json --manifesto tests/fixtures/texto-justificado-edits-20261030.json --verificar --desfazer-antes tests/fixtures/indices-acertos-edits-20261107.json --desfazer-antes tests/fixtures/cartaz-indices-148-edits-20261106.json --desfazer-antes tests/fixtures/creditos-i-edits-20261105.json --desfazer-antes tests/fixtures/atlas-lote3-edits-20261105.json --desfazer-antes tests/fixtures/autonomia-154-edits-20261105.json --desfazer-antes tests/fixtures/exame-contexto-edits-20261105.json --desfazer-antes tests/fixtures/exame-licao-edits-20261105.json --desfazer-antes tests/fixtures/tabela-movimentos-edits-20261105.json --desfazer-antes tests/fixtures/revisao-edits-20261105.json --desfazer-antes tests/fixtures/cartaz-cabecalho-edits-20261103.json --desfazer-antes tests/fixtures/cartaz-m4-piloto-edits-20261102.json --desfazer-antes tests/fixtures/variedade-f0-edits-20261102.json --desfazer-antes tests/fixtures/creditos-grafismos-ia-edits-20261102.json --desfazer-antes tests/fixtures/conteudos-lote2-edits-20261101.json --desfazer-antes tests/fixtures/varredura-formatacao-edits-20261101.json --desfazer-antes tests/fixtures/calcada-mar-edits-20261102.json --desfazer-antes tests/fixtures/tarefas-individuais-edits-20261102.json --desfazer-antes tests/fixtures/cartaz-indices-edits-20261101.json --desfazer-antes tests/fixtures/licoes-m16-edits-20261101.json --desfazer-antes tests/fixtures/licoes-m89-edits-20261101.json --desfazer-antes tests/fixtures/tarefas-m89-edits-20261101.json --desfazer-antes tests/fixtures/tarefas-m356-edits-20261031.json --desfazer-antes tests/fixtures/lingua-pessoa-m7-edits-20261030.json --desfazer-antes tests/fixtures/opcoes-denunciadoras-edits-20261030.json
       - uses: actions/setup-node@v4
         with:
           node-version: '20'

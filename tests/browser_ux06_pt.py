@@ -1,3 +1,4 @@
+# 31/10/2026: M3, M5 e M6 passam ao contrato das aulas de tarefa.
 from functools import partial
 from http.server import ThreadingHTTPServer
 from urllib.parse import urlsplit
@@ -8,7 +9,8 @@ PLANS=json.loads((ROOT/'docs/pedagogia/percursos-unidades-20261020.json').read_t
 OUT=ROOT.parents[1]/'outputs/design-pt'
 # 24/10/2026 (aulas claras do M1, como o M4 a 23/10): o percurso do M1 passa a lista simples de aulas, sem passaporte
 # 27/10/2026 (passagem do GPT, tarefas por unidade): o M2 passa ao mesmo modelo, com duas aulas de tarefa.
-SEM_PASSAPORTE={1,2,4,7}
+# 01/11/2026: M8/M9 também têm aula de tarefa; os limites visuais não mudam.
+SEM_PASSAPORTE={1,2,3,4,5,6,7,8,9}
 
 def main():
  server=ThreadingHTTPServer(('127.0.0.1',0),partial(QuietHandler,directory=str(ROOT.parent)))
@@ -20,9 +22,20 @@ def main():
     for plan in PLANS:
      m=plan['module'];
      if os.environ.get('UX_MODULE') and str(m)!=os.environ['UX_MODULE']:continue
-     ctx,page=new_page(browser,width);errors=[];page.on('pageerror',lambda e:errors.append(str(e)))
+     ctx,page=new_page(browser,width);
+     # 01/11/2026: ação inteira no primeiro ecrã real de 320 × 568.
+     if width==320:page.set_viewport_size({'width':320,'height':568})
+     errors=[];page.on('pageerror',lambda e:errors.append(str(e)))
      def local(route):
-      u=urlsplit(route.request.url);response=route.fetch(url=host+u.path+('?' +u.query if u.query else ''));route.fulfill(response=response)
+      # 01/11/2026: mesmos ficheiros locais sem uma segunda ligação HTTP (Windows).
+      from urllib.parse import unquote
+      import mimetypes
+      asset=(ROOT/unquote(urlsplit(route.request.url).path.removeprefix('/pt/'))).resolve()
+      if not asset.is_relative_to(ROOT.resolve()):
+       route.fulfill(status=403,body='Forbidden');return
+      if asset.is_dir():asset=asset/'index.html'
+      if asset.is_file():route.fulfill(path=str(asset),content_type=mimetypes.guess_type(str(asset))[0] or 'application/octet-stream')
+      else:route.fulfill(status=404,body='Not found')
      page.route('https://pedrohfernandes-klk.github.io/pt/**',local)
      page.route('https://pedrohfernandes-klk.github.io/lente/**',lambda r:r.abort())
      first,second=plan['units'][0]['lessons'][:2]
@@ -34,10 +47,16 @@ def main():
      assert action.get_attribute('href').endswith('/licao-'+first+'/')
      assert any(label in action.inner_text() for label in (('Começar:','Continuar:') if m in SEM_PASSAPORTE else ('Começar:',)))
      assert action.bounding_box()['y']<600,(m,width,action.bounding_box())
+     if width==320:assert action.bounding_box()['y']+action.bounding_box()['height']<=568,(m,action.bounding_box())
      assert not page.evaluate('document.documentElement.scrollWidth>innerWidth+2')
      # 23/10/2026 (decisão do docente, aulas claras): o M4 é o piloto do percurso como lista simples de aulas, sem passaporte, níveis nem pontos
-     assert page.locator('.module-opening figure.doc').count()==1 and page.locator('.module-progress .passaporte').count()==(0 if m in SEM_PASSAPORTE else 1)
+     # 03/11/2026: a imagem documental do piloto M4 abre nos recursos, pelo teclado (06/11/2026: deixou de valer com a decisão 148).
+     # 06/11/2026: decisão 148, volta a exigir-se o mesmo nos nove: uma imagem documental, à vista sem abrir nada, fora de
+     # qualquer details, logo a seguir à última unidade (já não há exceção para o M4).
+     assert page.locator('main > figure.doc').count()==1 and page.locator('figure.doc').count()==1 and page.locator('.module-progress .passaporte').count()==(0 if m in SEM_PASSAPORTE else 1)
+     assert page.evaluate('()=>{const f=document.querySelector("main > figure.doc"),u=[...document.querySelectorAll("main > section.unidade-pedagogica")].pop();return f.previousElementSibling===u&&!f.closest("details")}')
      assert page.locator('figure.doc').is_visible()
+     # 06/11/2026: decisão 148, sai o passo que voltava a fechar os recursos do M4 (a imagem já não está lá dentro).
      if m in (1,2):
       OUT.mkdir(parents=True,exist_ok=True);page.screenshot(path=str(OUT/f'm{m}-{width}-depois.png'))
       page.locator('.unidade-pedagogica').first.screenshot(path=str(OUT/f'm{m}-unidade-{width}-depois.png'))
@@ -80,6 +99,9 @@ def main():
    assert page.locator('[data-sintese], #cartao, #copiar-cartao').count()==0
    assert page.locator('button[data-desafio]:visible').count()==0
    task=page.locator('[data-task-lesson="1"] > a')
+   # 01/11/2026: a unidade já lida fica dobrada; reabre-se pelo teclado para a tarefa.
+   from browser_task_contract import open_route_unit
+   open_route_unit(page, 1)
    task.focus();task.press('Enter');page.wait_for_url('**/tarefas/m1-u1/')
    # 30/10/2026 (decisão do docente de 29/10): o aquecimento em papel passou a cartões numa página própria; na tarefa
    # fica só a pergunta opcional.

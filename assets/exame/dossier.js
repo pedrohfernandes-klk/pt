@@ -165,6 +165,7 @@
     }).join('\n\n');
   }
   function studyParts(p) {
+    function visible(v){if(typeof v==='string')return v.replace(/_([^_]+)_/g,'$1');if(Array.isArray(v))return v.map(visible);if(v&&typeof v==='object'){var out={};Object.keys(v).forEach(function(k){out[k]=visible(v[k]);});return out;}return v;}
     var s=p.session, w=s.writing||{}, c=s.correction||{}, source=s.source||{};
     var reading={'Título':source.title,'Autor ou origem':source.author,'Contexto':source.context,'Leitura':readingText(source),'Referência':source.url,'Nota':source.note};
     var writing={'Tarefa':w.prompt,'Tempo de escrita (minutos)':w.minutes,'Extensão':w.target,'Passos':w.instructions,'Critérios':w.criteria};
@@ -172,7 +173,7 @@
     var questions=(Array.isArray(s.warmup)?s.warmup:[]).concat(c.check?[c.check]:[]);
     var answers=questions.filter(function(q){return own(p.answers,q.id);}).map(function(q){var a=p.answers[q.id],choice=a&&Number.isInteger(a.choice)&&Array.isArray(q.options)?q.options[a.choice]:undefined;return {'Pergunta':q.q,'A minha escolha':choice,'Resposta esperada':Array.isArray(q.options)?q.options[q.answer]:undefined,'Explicação':q.feedback};});
     var checks=Array.isArray(w.criteria)?w.criteria.map(function(text,i){return (p.checklist['c'+i]?'Revisto: ':'Por rever: ')+text;}):[];
-    return {reading:reading,writing:writing,correction:correction,answers:answers,checks:checks};
+    return visible({reading:reading,writing:writing,correction:correction,answers:answers,checks:checks});
   }
   function dataURL(blob) { return new Promise(function (resolve, reject) { var reader = new FileReader(); reader.onload = function () { resolve(String(reader.result)); }; reader.onerror = function () { reject(new Error('Não foi possível ler uma fotografia para a cópia.')); }; reader.readAsDataURL(blob); }); }
   async function exportHTML() {

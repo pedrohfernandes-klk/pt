@@ -12,53 +12,21 @@ host=f'http://127.0.0.1:{server.server_port}'
 try:
  with sync_playwright() as pw:
   browser=pw.chromium.launch(headless=True)
-  for mode in ('oral','caderno'):
-   ctx,page=new_page(browser,320)
-   # 27/10/2026 (passagem do GPT, tarefas por unidade): o M2 passou à aula de tarefa, sem síntese separada.
-   # O registo da síntese do modelo anterior continua noutros módulos; verifica-se agora no M3, com a unidade 1 cumprida.
-   page.goto(host+'/m3/',wait_until='networkidle')
-   page.evaluate('''() => { for(const id of ['m3-f02','m3-f03','m3-f04','m3-f05','m3-f09']) {localStorage.setItem('licao-'+id,JSON.stringify({lida:true}));localStorage.setItem('licao-'+id+'-a1',JSON.stringify({lida:true}));} for(const id of ['camoes-leonor','camoes-alma','m3-soneto-raciocinio']) localStorage.setItem('epi-pt-'+id,JSON.stringify({fim:true}));localStorage.setItem('desafio-unidade-v2-M3-u1',JSON.stringify({ganho:true,melhor:8,total:8}));}''')
-   page.reload(wait_until='networkidle')
-   page.locator('[data-fim="1"] > summary').click()
-   box=page.locator('[data-sintese="1"]')
-   box.locator(f'input[value="{mode}"]').check()
-   box.locator('[data-sintese-registar]').click()
-   if mode=='oral':
-    out=ROOT.parents[1]/'outputs/sintese-interpretacao'
-    out.mkdir(parents=True,exist_ok=True)
-    box.screenshot(path=str(out/'sintese-oral-320.png'))
-   # 23/10/2026 (plano de melhoria, fase 0): a síntese já não tem caixa de notas nem botão «Copiar para o Teams».
-   assert page.locator('[data-fim="1"] textarea, [data-fim="1"] [data-copiar], [data-fim="1"] .sintese-notas').count()==0
-   assert page.evaluate('JSON.parse(localStorage.getItem("percurso-M3")).unidades[0].cumprida')
-   assert box.locator('[data-sintese-rever]').evaluate('el=>el===document.activeElement')
-   page.reload(wait_until='networkidle')
-   assert mode in page.evaluate('localStorage.getItem("percurso-sintese-M3-u1")')
-   page.locator('[data-fim="1"] > summary').click()
-   box.locator('[data-sintese-rever]').click()
-   assert not page.evaluate('JSON.parse(localStorage.getItem("percurso-M3")).unidades[0].cumprida')
-   # 23/10/2026 (plano de melhoria, fase 0): sem notas no ecrã, confirma-se só que o «Ainda estou a rever» persiste.
-   page.reload(wait_until='networkidle')
-   assert not page.evaluate('JSON.parse(localStorage.getItem("percurso-sintese-M3-u1")).feita')
-   print('PASS synthesis without on-screen writing, completion, focus, reload and undo:',mode,flush=True)
-   ctx.close()
-  ctx,page=new_page(browser,320)
-  page.goto(host+'/m3/',wait_until='networkidle')
-  page.evaluate("localStorage.removeItem('percurso-sintese-M3-u1-inicializada'); localStorage.setItem('percurso-v2-M3-u1',JSON.stringify(Array(85).fill('anterior').join(' ')))")
-  page.reload(wait_until='networkidle')
-  assert page.evaluate('JSON.parse(localStorage.getItem("percurso-sintese-M3-u1")).modo')=='anterior'
-  print('PASS prior qualifying synthesis migration',flush=True)
-  ctx.close()
+  # 01/11/2026: nenhum módulo mantém a síntese separada; todos têm aula de tarefa.
+  assert TASK_MODULES == set(range(1,10))
   # 26/10: M1/M4/M7 close in the task lesson. Historic notes stay readable,
   # never migrate into a new assessment or become a second synthesis gate.
   for m in sorted(TASK_MODULES):
    ctx,page=new_page(browser,320);errors=[]
    page.on('pageerror',lambda e:errors.append(str(e)))
    page.goto(host+f'/m{m}/',wait_until='networkidle')
+   # 31/10/2026: a primeira lição do M3 é F02; usa a primeira lição real do percurso.
+   first=json.loads(page.locator('#epi-unidades-pedagogicas').text_content())[0]['lessons'][0]
    records={f'percurso-M{m}-u1':'A minha resposta anterior <img src=x>',
             f'percurso-v2-M{m}-u1':' '.join(['anterior']*85),
             f'percurso-sintese-M{m}-u1':json.dumps({'feita':True,'modo':'caderno'}),
             f'desafio-M{m}-u1':json.dumps({'ganho':True,'melhor':8,'total':8}),
-            f'licao-m{m}-f01':json.dumps({'lida':True,'melhor':10,'total':12,'xp':100})}
+            f'licao-{first}':json.dumps({'lida':True,'melhor':10,'total':12,'xp':100})}
    if m==7:records['percurso-M7-u5']='Registo da antiga etapa cinco'
    # 27/10/2026: o M2 tinha quatro etapas antes das unidades; a quarta continua legível no arquivo.
    if m==2:records['percurso-M2-u4']='Registo da antiga etapa quatro'
@@ -68,7 +36,15 @@ try:
    assert page.locator('[data-sintese], [data-sintese-registar], #cartao, #copiar-cartao').count()==0
    assert not page.locator('#arquivo-percurso').is_visible()
    assert page.locator('button[data-desafio]:visible').count()==0
-   assert page.locator(f'#m{m}-f01 [data-chip]').inner_text() == 'feito'
+   # 01/11/2026: um registo antigo sem data lê-se «Feita», sem inventar uma data.
+   assert page.locator(f'#{first} [data-cz-state-text]').inner_text() == 'Feita'
+   assert page.locator(f'#{first} [data-cz-point]').get_attribute('aria-hidden') == 'true'
+   # 03/11/2026: no piloto M4 os materiais abrem dentro dos recursos nativos (06/11/2026: deixou de valer com a decisão 148).
+   # 06/11/2026: decisão 148, o acesso do docente volta a flutuar nos nove, fora de «Recursos do módulo»: abre-se logo, sem exceção.
+   # 06/11/2026: decisão 173, a 320 px o acesso do docente está no menu «Recursos do módulo», que se abre primeiro.
+   assert page.locator('main > details.cz-recursos .route-teacher-tools').count()==1
+   assert not page.locator('.cz-recursos').evaluate('e=>e.open')
+   page.locator('.cz-recursos > summary').click()
    page.locator('.route-teacher-tools > summary').click()
    page.locator('.route-teacher-tools a[href="?arquivo=1#arquivo-percurso"]').click()
    page.wait_for_url('**/?arquivo=1#arquivo-percurso')

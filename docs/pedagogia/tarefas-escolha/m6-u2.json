@@ -1,0 +1,117 @@
+{
+ "slug": "m6-u2",
+ "titulo": "A cidade vista e transfigurada",
+ "unidade": 2,
+ "aquecer": {
+  "cartoes": "aquecimento/",
+  "minutos": 10,
+  "texto": "No início da aula de tarefa: 10 minutos de cartões com consulta, 5 minutos para leres o enunciado, 60 minutos de produção e 15 minutos de revisão e entrega. Total: 90 minutos. O relógio de produção começa depois da leitura.",
+  "ligacao": "Abrir o aquecimento em cartões",
+  "ligacao_enunciado": "Aquecer"
+ },
+ "lead": "À mão, 200 a 240 palavras: cerca de 110 no núcleo e 90 a 130 no tema. Com consulta.",
+ "nucleo": [
+  "Classifica a oração com «que» em «Quizera que o real e a analyse m'o dessem» («Ao Gás»). Na estrofe de «Horas Mortas» terminada em «Amarelladamente, os cães parecem lobos.», que observa o sujeito e em que o transforma? Nomeia dois recursos e explica o efeito. Fica no real ou vai além?",
+  "«Cheio de bellas proporções carnaes» («Num Bairro Moderno») e «O sol, já alto e pleno» («A um poeta»): face ao étimo, que diz a forma de «cheio» e «pleno» sobre a via de cada uma? Passa «bellas» e «Pousára» à grafia de hoje e diz o que mudou."
+ ],
+ "temas": [
+  {
+   "letra": "A",
+   "nome": "À maneira de Cesário",
+   "texto": "Escreve, em prosa, a tua passagem a pé por um lugar, a uma hora certa: duas sensações de sentidos diferentes, um tipo social de hoje com um gesto, uma transfiguração tua. Cita e explica o verso de Cesário que imitaste. Indica uma diferença entre a tua cidade e a dele."
+  },
+  {
+   "letra": "B",
+   "nome": "Cesário nos dias de hoje",
+   "texto": "Escolhe duas partes de «O Sentimento dum Ocidental» e imagina uma fotografia atual para cada parte: descreve-a (lugar e hora) e dá-lhe uma legenda (verso exato e parte). Explica uma relação não literal. Justifica uma escolha com dois factos do dossiê. Indica o que não podes fotografar, e porquê."
+  }
+ ],
+ "apoios": [
+  {
+   "href": "../../m6/licao-m6-f07/",
+   "texto": "Da «Noite Fechada» às «Horas Mortas» (F07): relê «O texto, 6 de 11» (o livro que o sujeito medita), «O texto, 10 de 11» (a estrofe) e «Para entender»."
+  },
+  {
+   "href": "../../m6/licao-m6-f04/",
+   "texto": "Como se ligam as orações (F04): relê «Para entender» (três relações a observar)."
+  },
+  {
+   "href": "../../m6/licao-m6-f12/",
+   "texto": "Um cabaz pode tornar-se um corpo? (F12): relê «Manhã e contraste» e «A hipótese do artista»."
+  },
+  {
+   "href": "../../m6/licao-m6-f05/",
+   "texto": "Palavras com passado (F05): relê «Para entender» (o étimo e as grafias do século XIX)."
+  },
+  {
+   "href": "../../m6/licao-m6-f06/",
+   "texto": "«Ave-Marias» (F06): para o tema A, relê «Para entender» (deambulação, perceção sensorial, transfiguração, tipos sociais)."
+  },
+  {
+   "href": "../../m6/licao-m6-f08/",
+   "texto": "Cesário nos dias de hoje (F08): para o tema B, relê as regras de produção em «Para entender»."
+  }
+ ],
+ "dossie_titulo": "Dossiê do tema B",
+ "dossie": [
+  {
+   "facto": "«O Sentimento dum Ocidental» vai do anoitecer à madrugada, em quatro partes; «Ave-Marias» é a primeira.",
+   "href": "../../m6/licao-m6-f06/",
+   "fonte": "Lição «“Ave-Marias”», «O essencial»"
+  },
+  {
+   "facto": "Em 1887, depois da morte do poeta, o amigo Silva Pinto organiza <i>O Livro de Cesário Verde</i>, com «O Sentimento dum Ocidental»: 200 exemplares, nenhum posto à venda.",
+   "href": "../../m6/licao-m6-f11/",
+   "fonte": "Lição «Quem conta a vida de um poeta», «Linha de vida»"
+  },
+  {
+   "facto": "Na parte II, «a parte que abateu no terremoto» é a Baixa, reconstruída depois de 1755.",
+   "href": "../../m6/licao-m6-f07/",
+   "fonte": "Lição «Da “Noite Fechada” às “Horas Mortas”», «O texto, 4 de 11» (vocabulário)"
+  },
+  {
+   "facto": "Na parte II, o «épico d'outr'ora» que ascende «n'um pilar» é a estátua de Camões.",
+   "href": "../../m6/licao-m6-f07/",
+   "fonte": "Lição «Da “Noite Fechada” às “Horas Mortas”», «O texto, 4 de 11» (vocabulário)"
+  },
+  {
+   "facto": "Segundo o dicionário, «varina» vem de Ovar.",
+   "href": "../../m6/licao-m6-f05/",
+   "fonte": "Lição «Palavras com passado», «Para levar»"
+  },
+  {
+   "facto": "Cerca de 1900, José Artur Leitão Bárcia fotografou o mercado de peixe na Ribeira Nova, em Lisboa; a fotografia está em domínio público.",
+   "href": "../../m6/licao-m6-f08/",
+   "fonte": "Lição «Cesário nos dias de hoje», «Abre»"
+  }
+ ],
+ "opcional": {
+  "pergunta": "Que afirmação sobre Cesário é um facto, e não uma interpretação?",
+  "opcoes": [
+   {
+    "certa": false,
+    "letra": "A",
+    "texto": "Via a cidade assim por trabalhar no comércio.",
+    "resposta": "É uma interpretação: liga a vida aos poemas, e só os versos a podem provar. Num trabalho, assinala-se como leitura."
+   },
+   {
+    "certa": false,
+    "letra": "B",
+    "texto": "Sentia-se sozinho nas ruas de Lisboa, à noite.",
+    "resposta": "O que o poeta sentia não se confirma com datas nem documentos: é uma interpretação, a provar nos poemas."
+   },
+   {
+    "certa": true,
+    "letra": "C",
+    "texto": "Morreu em 1886, aos 31 anos, de tuberculose.",
+    "resposta": "Confirma-se com datas, na lição F11: é um facto. Um facto pode justificar uma escolha, como os do dossiê."
+   }
+  ]
+ },
+ "criterios": [
+  "Núcleo: a oração; o que se vê e em que se transforma, recursos, efeito; forma e via; grafias.",
+  "A: lugar e hora, sensações, tipo social, transfiguração, verso, diferença. B: fotografias legendadas, relação, dois factos, o que não se fotografa.",
+  "200 a 240 palavras, respostas ligadas, escrita revista."
+ ],
+ "fecho": "Fecha com duas linhas, fora da contagem: o que passaste a ver na cidade depois de ler Cesário? Aponta o verso que te ensinou a ver isso."
+}

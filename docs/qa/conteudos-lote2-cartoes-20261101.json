@@ -1,0 +1,1828 @@
+[
+  {
+    "licao": "m1-f01",
+    "cartao": 11,
+    "tipo": "escolha",
+    "intervencao": "P3: limitar uma reconstrução com a natureza da fonte",
+    "antes": {
+      "t": "escolha",
+      "rot": "O que falta a quem lê",
+      "tipo": "reconhecer",
+      "g": "fim",
+      "p": "Abres um cancioneiro e lês uma cantiga. O que te falta para a conheceres como o público a conheceu?",
+      "p2": "Da música das cantigas quase nada sobreviveu. O que te falta, então, quando lês uma?",
+      "o": [
+        "O som: a melodia e o ritmo",
+        "As palavras: as letras perderam-se quase todas",
+        "Os autores: as cantigas chegaram sem nome",
+        "A língua: as cantigas chegaram traduzidas"
+      ],
+      "c": 0,
+      "fe": [
+        "",
+        "As letras são o que chegou: cerca de 1680 cantigas, guardadas em três cancioneiros. O que se perdeu foi a música.",
+        "Conhecem-se perto de 187 autores, D. Dinis entre eles. O que se perdeu foi a música, não os nomes.",
+        "Chegaram em galego-português, a língua em que foram feitas. Falta-lhes a música, não a língua."
+      ],
+      "f": "Era poesia para ser **cantada**: chegam-te as palavras; a melodia, o ritmo e a voz que a cantava tens de os imaginar.",
+      "mais": true
+    },
+    "depois": {
+      "t": "escolha",
+      "rot": "O que falta a quem lê",
+      "tipo": "reconhecer",
+      "g": "fim",
+      "p": "Lês uma cantiga cuja melodia não chegou até nós. Que limite deves reconhecer ao propor uma interpretação cantada?",
+      "p2": "Uma cantiga conserva a letra, mas perdeu a melodia. Que relação pode ter uma interpretação de hoje com a música medieval?",
+      "o": [
+        "A letra permite criar uma versão, sem confirmar a melodia que se perdeu.",
+        "O ritmo da letra permite recuperar a melodia usada na apresentação antiga.",
+        "O género da cantiga permite escolher a melodia que o público antigo ouviu.",
+        "A língua da letra permite reconhecer os instrumentos da execução antiga."
+      ],
+      "c": 0,
+      "fe": [
+        null,
+        "Confundes o ritmo das palavras com uma melodia documentada. Relê «Chegaram as letras»: que parte da música se perdeu?",
+        "Confundes uma classificação literária com um registo musical. Volta aos pergaminhos Vindel e Sharrer: que informação conservam além das palavras?",
+        "Confundes a língua do texto com os meios da apresentação. Relê «Certeza ou hipótese»: o pergaminho indica instrumentos?"
+      ],
+      "f": "Podes interpretar hoje a cantiga, mas a letra não permite confirmar uma melodia perdida. Em «Certeza ou hipótese», palavras, notas e instrumentos exigem provas diferentes.",
+      "mais": true
+    },
+    "medidas": [
+      {
+        "k": 4,
+        "caracteres": [
+          72,
+          74,
+          74,
+          72
+        ],
+        "amplitude": 0.027777777777777776,
+        "vantagem": 0.972972972972973,
+        "certa_mais_longa": false,
+        "certa_sozinha": false,
+        "todas_iguais": false,
+        "certa_25_porcento": false,
+        "amplitude_acima": false
+      }
+    ],
+    "ficheiro": "m1/licao-m1-f01/index.html"
+  },
+  {
+    "licao": "m1-f01",
+    "cartao": 15,
+    "tipo": "escolha",
+    "intervencao": "P4: distinguir o alcance de uma fonte de usos que ela não sustenta",
+    "antes": {
+      "t": "escolha",
+      "rot": "O valor de um tratado",
+      "tipo": "efeito",
+      "g": "fim",
+      "p": "A _Arte de Trovar_ foi escrita no tempo das cantigas. Porque vale tanto para quem as estuda hoje?",
+      "p2": "Porque é tão precioso um tratado anónimo e incompleto, escrito quando ainda se faziam cantigas?",
+      "o": [
+        "Mostra como a própria época pensava os géneros e as regras",
+        "Guarda as melodias de todas as cantigas que os pergaminhos não guardaram",
+        "Dá a lista dos trovadores e jograis do seu tempo",
+        "Reúne num só livro as cantigas que chegaram"
+      ],
+      "c": 0,
+      "fe": [
+        "",
+        "As melodias que restam estão nos pergaminhos Vindel e Sharrer. A _Arte de Trovar_ é teoria: define géneros e regras.",
+        "É um tratado sobre géneros e regras, não uma lista de nomes. E é anónimo: nem o seu autor se conhece.",
+        "Isso fazem os três cancioneiros, coletâneas manuscritas. A _Arte de Trovar_ é um pequeno tratado que abre um deles, o da Biblioteca Nacional."
+      ],
+      "f": "**Teoria escrita na própria época**: quem a escreveu vivia no tempo das cantigas. Define os géneros e as regras, e chegou-nos incompleta.",
+      "mais": true
+    },
+    "depois": {
+      "t": "escolha",
+      "rot": "O valor de um tratado",
+      "tipo": "efeito",
+      "g": "fim",
+      "p": "A _Arte de Trovar_ descreve géneros e regras na época das cantigas. Que uso respeita a natureza deste tratado incompleto?",
+      "p2": "Ao ler uma cantiga, como podes usar a _Arte de Trovar_ sem confundir regras escritas e práticas de apresentação?",
+      "o": [
+        "Confrontar as regras descritas com os traços que encontras numa cantiga.",
+        "Tomar as regras descritas como relato de como se apresentou uma cantiga.",
+        "Usar as regras descritas para atribuir um nome a uma cantiga sem autor.",
+        "Reconstituir pelas regras descritas os instrumentos usados numa cantiga."
+      ],
+      "c": 0,
+      "fe": [
+        null,
+        "Confundes uma regra de composição com o relato de uma apresentação. Relê «Chegaram as letras»: o tratado descreve géneros e regras.",
+        "Confundes classificação e autoria. Relê a apresentação do tratado: uma regra partilhada permite identificar quem compôs?",
+        "Confundes regras literárias e documentação musical. Volta a «Certeza ou hipótese»: que fonte indicaria os instrumentos?"
+      ],
+      "f": "O tratado permite confrontar uma descrição da época com uma cantiga concreta. É uma fonte sobre géneros e regras; não é, só por isso, prova de autoria ou de uma apresentação particular.",
+      "mais": true
+    },
+    "medidas": [
+      {
+        "k": 4,
+        "caracteres": [
+          72,
+          72,
+          71,
+          72
+        ],
+        "amplitude": 0.014084507042253521,
+        "vantagem": 1.0,
+        "certa_mais_longa": true,
+        "certa_sozinha": false,
+        "todas_iguais": false,
+        "certa_25_porcento": false,
+        "amplitude_acima": false
+      }
+    ],
+    "ficheiro": "m1/licao-m1-f01/index.html"
+  },
+  {
+    "licao": "m1-f01",
+    "cartao": 21,
+    "tipo": "ler",
+    "intervencao": "P2: retomar a pergunta com um indício e o seu limite",
+    "antes": {
+      "t": "ler",
+      "rot": "Para levar",
+      "escuro": true,
+      "html": "<p class=\"levar\"><span class=\"ch\" style=\"--i:0\">Q</span><span class=\"ch\" style=\"--i:1\">u</span><span class=\"ch\" style=\"--i:2\">e</span><span class=\"ch\" style=\"--i:3\">m</span><span class=\"ch\" style=\"--i:4\"> </span><span class=\"ch\" style=\"--i:5\">c</span><span class=\"ch\" style=\"--i:6\">o</span><span class=\"ch\" style=\"--i:7\">m</span><span class=\"ch\" style=\"--i:8\">p</span><span class=\"ch\" style=\"--i:9\">õ</span><span class=\"ch\" style=\"--i:10\">e</span><span class=\"ch\" style=\"--i:11\">,</span><span class=\"ch\" style=\"--i:12\"> </span><span class=\"ch\" style=\"--i:13\">q</span><span class=\"ch\" style=\"--i:14\">u</span><span class=\"ch\" style=\"--i:15\">e</span><span class=\"ch\" style=\"--i:16\">m</span><span class=\"ch\" style=\"--i:17\"> </span><span class=\"ch\" style=\"--i:18\">c</span><span class=\"ch\" style=\"--i:19\">a</span><span class=\"ch\" style=\"--i:20\">n</span><span class=\"ch\" style=\"--i:21\">t</span><span class=\"ch\" style=\"--i:22\">a</span><span class=\"ch\" style=\"--i:23\"> </span><span class=\"ch\" style=\"--i:24\">e</span><span class=\"ch\" style=\"--i:25\"> </span><span class=\"ch\" style=\"--i:26\">q</span><span class=\"ch\" style=\"--i:27\">u</span><span class=\"ch\" style=\"--i:28\">e</span><span class=\"ch\" style=\"--i:29\">m</span><span class=\"ch\" style=\"--i:30\"> </span><span class=\"ch\" style=\"--i:31\">d</span><span class=\"ch\" style=\"--i:32\">i</span><span class=\"ch\" style=\"--i:33\">z</span><span class=\"ch\" style=\"--i:34\"> </span><span class=\"ch\" style=\"--i:35\">«</span><span class=\"ch\" style=\"--i:36\">e</span><span class=\"ch\" style=\"--i:37\">u</span><span class=\"ch\" style=\"--i:38\">»</span><span class=\"ch\" style=\"--i:39\"> </span><span class=\"ch\" style=\"--i:40\">p</span><span class=\"ch\" style=\"--i:41\">o</span><span class=\"ch\" style=\"--i:42\">d</span><span class=\"ch\" style=\"--i:43\">e</span><span class=\"ch\" style=\"--i:44\">m</span><span class=\"ch\" style=\"--i:45\"> </span><span class=\"ch\" style=\"--i:46\">s</span><span class=\"ch\" style=\"--i:47\">e</span><span class=\"ch\" style=\"--i:48\">r</span><span class=\"ch\" style=\"--i:49\"> </span><span class=\"ch\" style=\"--i:50\">t</span><span class=\"ch\" style=\"--i:51\">r</span><span class=\"ch\" style=\"--i:52\">ê</span><span class=\"ch\" style=\"--i:53\">s</span><span class=\"ch\" style=\"--i:54\"> </span><span class=\"ch\" style=\"--i:55\">p</span><span class=\"ch\" style=\"--i:56\">e</span><span class=\"ch\" style=\"--i:57\">s</span><span class=\"ch\" style=\"--i:58\">s</span><span class=\"ch\" style=\"--i:59\">o</span><span class=\"ch\" style=\"--i:60\">a</span><span class=\"ch\" style=\"--i:61\">s</span><span class=\"ch\" style=\"--i:62\"> </span><span class=\"ch\" style=\"--i:63\">d</span><span class=\"ch\" style=\"--i:64\">i</span><span class=\"ch\" style=\"--i:65\">f</span><span class=\"ch\" style=\"--i:66\">e</span><span class=\"ch\" style=\"--i:67\">r</span><span class=\"ch\" style=\"--i:68\">e</span><span class=\"ch\" style=\"--i:69\">n</span><span class=\"ch\" style=\"--i:70\">t</span><span class=\"ch\" style=\"--i:71\">e</span><span class=\"ch\" style=\"--i:72\">s</span><span class=\"ch\" style=\"--i:73\">.</span></p><p>O trovador faz a cantiga, letra e música; o jogral leva-a a quem ouve, muitas vezes por paga, e às vezes também compõe. E quem diz «eu» é o sujeito poético: em Mendinho, um homem dá a voz a uma rapariga.</p><details class=\"mais\"><summary>As frases da aula</summary><div><ol><li>Nos séculos XIII e XIV, as cantigas em galego-português eram poesia para ser cantada.</li><li>Chegaram as letras, em três cancioneiros; a música perdeu-se quase toda, e só dois pergaminhos guardam melodias.</li><li>Trovador: quem compõe cantigas, texto e música.</li><li>Jogral: profissional que as apresenta, muitas vezes pago; alguns também compunham.</li><li>Sujeito poético: a voz que diz «eu» no poema; não se confunde com o autor.</li><li>Na cantiga de amigo, um trovador dá a voz a uma rapariga que fala do amigo.</li></ol></div></details>"
+    },
+    "depois": {
+      "t": "ler",
+      "rot": "Para levar",
+      "escuro": true,
+      "html": "<p class=\"levar\"><span class=\"ch\" style=\"--i:0\">Q</span><span class=\"ch\" style=\"--i:1\">u</span><span class=\"ch\" style=\"--i:2\">e</span><span class=\"ch\" style=\"--i:3\">m</span><span class=\"ch\" style=\"--i:4\"> </span><span class=\"ch\" style=\"--i:5\">c</span><span class=\"ch\" style=\"--i:6\">o</span><span class=\"ch\" style=\"--i:7\">m</span><span class=\"ch\" style=\"--i:8\">p</span><span class=\"ch\" style=\"--i:9\">õ</span><span class=\"ch\" style=\"--i:10\">e</span><span class=\"ch\" style=\"--i:11\">,</span><span class=\"ch\" style=\"--i:12\"> </span><span class=\"ch\" style=\"--i:13\">q</span><span class=\"ch\" style=\"--i:14\">u</span><span class=\"ch\" style=\"--i:15\">e</span><span class=\"ch\" style=\"--i:16\">m</span><span class=\"ch\" style=\"--i:17\"> </span><span class=\"ch\" style=\"--i:18\">c</span><span class=\"ch\" style=\"--i:19\">a</span><span class=\"ch\" style=\"--i:20\">n</span><span class=\"ch\" style=\"--i:21\">t</span><span class=\"ch\" style=\"--i:22\">a</span><span class=\"ch\" style=\"--i:23\"> </span><span class=\"ch\" style=\"--i:24\">e</span><span class=\"ch\" style=\"--i:25\"> </span><span class=\"ch\" style=\"--i:26\">q</span><span class=\"ch\" style=\"--i:27\">u</span><span class=\"ch\" style=\"--i:28\">e</span><span class=\"ch\" style=\"--i:29\">m</span><span class=\"ch\" style=\"--i:30\"> </span><span class=\"ch\" style=\"--i:31\">d</span><span class=\"ch\" style=\"--i:32\">i</span><span class=\"ch\" style=\"--i:33\">z</span><span class=\"ch\" style=\"--i:34\"> </span><span class=\"ch\" style=\"--i:35\">«</span><span class=\"ch\" style=\"--i:36\">e</span><span class=\"ch\" style=\"--i:37\">u</span><span class=\"ch\" style=\"--i:38\">»</span><span class=\"ch\" style=\"--i:39\"> </span><span class=\"ch\" style=\"--i:40\">p</span><span class=\"ch\" style=\"--i:41\">o</span><span class=\"ch\" style=\"--i:42\">d</span><span class=\"ch\" style=\"--i:43\">e</span><span class=\"ch\" style=\"--i:44\">m</span><span class=\"ch\" style=\"--i:45\"> </span><span class=\"ch\" style=\"--i:46\">s</span><span class=\"ch\" style=\"--i:47\">e</span><span class=\"ch\" style=\"--i:48\">r</span><span class=\"ch\" style=\"--i:49\"> </span><span class=\"ch\" style=\"--i:50\">t</span><span class=\"ch\" style=\"--i:51\">r</span><span class=\"ch\" style=\"--i:52\">ê</span><span class=\"ch\" style=\"--i:53\">s</span><span class=\"ch\" style=\"--i:54\"> </span><span class=\"ch\" style=\"--i:55\">p</span><span class=\"ch\" style=\"--i:56\">e</span><span class=\"ch\" style=\"--i:57\">s</span><span class=\"ch\" style=\"--i:58\">s</span><span class=\"ch\" style=\"--i:59\">o</span><span class=\"ch\" style=\"--i:60\">a</span><span class=\"ch\" style=\"--i:61\">s</span><span class=\"ch\" style=\"--i:62\"> </span><span class=\"ch\" style=\"--i:63\">d</span><span class=\"ch\" style=\"--i:64\">i</span><span class=\"ch\" style=\"--i:65\">f</span><span class=\"ch\" style=\"--i:66\">e</span><span class=\"ch\" style=\"--i:67\">r</span><span class=\"ch\" style=\"--i:68\">e</span><span class=\"ch\" style=\"--i:69\">n</span><span class=\"ch\" style=\"--i:70\">t</span><span class=\"ch\" style=\"--i:71\">e</span><span class=\"ch\" style=\"--i:72\">s</span><span class=\"ch\" style=\"--i:73\">.</span></p><p>O trovador faz a cantiga, letra e música; o jogral leva-a a quem ouve, muitas vezes por paga, e às vezes também compõe. E quem diz «eu» é o sujeito poético: em Mendinho, um homem dá a voz a uma rapariga.</p><p>Volta à pergunta do início: quem compõe, quem canta e quem diz «eu»? Escolhe uma palavra da cantiga que sustente a atribuição da voz e explica porque é que essa palavra não identifica, por si, quem cantou a cantiga.</p><details class=\"mais\"><summary>As frases da aula</summary><div><ol><li>Nos séculos XIII e XIV, as cantigas em galego-português eram poesia para ser cantada.</li><li>Chegaram as letras, em três cancioneiros; a música perdeu-se quase toda, e só dois pergaminhos guardam melodias.</li><li>Trovador: quem compõe cantigas, texto e música.</li><li>Jogral: profissional que as apresenta, muitas vezes pago; alguns também compunham.</li><li>Sujeito poético: a voz que diz «eu» no poema; não se confunde com o autor.</li><li>Na cantiga de amigo, um trovador dá a voz a uma rapariga que fala do amigo.</li></ol></div></details>"
+    },
+    "medidas": [],
+    "ficheiro": "m1/licao-m1-f01/index.html"
+  },
+  {
+    "licao": "m1-f20",
+    "cartao": 6,
+    "tipo": "escolha",
+    "intervencao": "P4: separar ação narrada, conteúdo de uma fala e intenção inferida",
+    "antes": {
+      "t": "escolha",
+      "rot": "Uma sala que fecha",
+      "tipo": "transferir",
+      "g": "c-explicito-inferencia",
+      "mais": true,
+      "p": "Caso imaginário: «Alguém gritou “A sala vai fechar!”, e muitos saíram.» O que é informação explícita?",
+      "p2": "No relato da sala que ia fechar, o que se pode apontar nas palavras?",
+      "o": [
+        "Que alguém gritou e que muitos saíram",
+        "Que a sala ia mesmo fechar",
+        "Que quem saiu teve medo de ficar fechado",
+        "Que fizeram mal em sair sem confirmar"
+      ],
+      "c": 0,
+      "fe": [
+        "",
+        "É o que o grito afirma: o relato só mostra que foi gritado, como «Matam o Mestre!».",
+        "É uma inferência: o relato não diz o que sentiram; concluis do grito e da saída.",
+        "É uma opinião: «fizeram mal» é um juízo de quem comenta, e não está no relato."
+      ],
+      "f": "O relato mostra o grito e a saída: isso aponta-se. Que a sala fosse fechar é só o que o grito afirma. Como no grito do pajem: o que se diz não prova o que se anuncia."
+    },
+    "depois": {
+      "t": "escolha",
+      "rot": "Uma sala que fecha",
+      "tipo": "transferir",
+      "g": "c-explicito-inferencia",
+      "mais": true,
+      "p": "Caso criado: alguém gritou «A sala vai fechar!», e muitos saíram. Que informação podes verificar nas palavras deste relato?",
+      "p2": "Caso criado: alguém gritou «A sala vai fechar!», e muitos saíram. Que afirmação se apoia diretamente no que foi narrado?",
+      "o": [
+        "Uma pessoa anunciou o fecho e várias pessoas saíram da sala.",
+        "Uma pessoa confirmou o fecho e várias pessoas evitaram ficar.",
+        "Uma pessoa avisou do perigo e várias pessoas saíram com medo.",
+        "Uma pessoa deu uma ordem e várias pessoas decidiram obedecer."
+      ],
+      "c": 0,
+      "fe": [
+        null,
+        "Confundes anunciar um fecho com confirmar que vai acontecer. Relê o verbo «gritou»: o relato confirma a fala, não o seu conteúdo.",
+        "Acrescentas um perigo e um sentimento que o relato não nomeia. Relê «muitos saíram»: a ação revela, por si, o motivo da saída?",
+        "Transformas um anúncio numa ordem e atribuis uma intenção a quem sai. Compara «vai fechar» com «saíram»: o relato diz que obedeceram?"
+      ],
+      "f": "O relato apresenta duas ações: alguém grita e muitas pessoas saem. Como em «Matam o Mestre!», a existência de uma fala não confirma o acontecimento que ela anuncia."
+    },
+    "medidas": [
+      {
+        "k": 4,
+        "caracteres": [
+          60,
+          61,
+          61,
+          61
+        ],
+        "amplitude": 0.016666666666666666,
+        "vantagem": 0.9836065573770492,
+        "certa_mais_longa": false,
+        "certa_sozinha": false,
+        "todas_iguais": false,
+        "certa_25_porcento": false,
+        "amplitude_acima": false
+      }
+    ],
+    "ficheiro": "m1/licao-m1-f20/index.html"
+  },
+  {
+    "licao": "m1-f20",
+    "cartao": 9,
+    "tipo": "escolha",
+    "intervencao": "P5: explicar a relação entre indícios sem atribuir estados interiores",
+    "antes": {
+      "t": "escolha",
+      "rot": "Ao sino da quadrilha",
+      "tipo": "aplicar",
+      "g": 1,
+      "l": "1-0",
+      "mais": true,
+      "cita": "logo todos direitamente corriam pera lá.",
+      "p": "«logo todos direitamente corriam pera lá»: que cidade faz ver esta frase?",
+      "p2": "Ao som do sino, como age a cidade, segundo «logo todos direitamente corriam»?",
+      "o": [
+        "Uma cidade que age como uma só figura, sem demora",
+        "Uma cidade que espera nova ordem do Mestre a cada ataque",
+        "Uma cidade dividida, em que cada um corre para onde quer",
+        "Uma cidade que o cronista elogia com adjetivos"
+      ],
+      "c": 0,
+      "fe": [
+        "",
+        "«Logo» quer dizer imediatamente: ao ouvir o sino, corriam. A ordem já estava dada antes, «com as gentes da cidade».",
+        "Não corre cada um para onde quer: corre ao sino «da sua quadrilha», e «direitamente», sem desvio.",
+        "Não há adjetivos de elogio: o cronista mostra a corrida, «logo» e «direitamente», e a rapidez fala por si."
+      ],
+      "f": "Imediatamente, a direito, cada um ao sino da sua quadrilha, sem esperar ordens: a cidade age como uma **personagem coletiva**. E o cronista não a elogia, fá-la ver: é o visualismo (aula 7)."
+    },
+    "depois": {
+      "t": "escolha",
+      "rot": "Ao sino da quadrilha",
+      "tipo": "aplicar",
+      "g": 1,
+      "l": "1-0",
+      "mais": true,
+      "cita": "logo todos direitamente corriam pera lá.",
+      "p": "«Logo todos direitamente corriam pera lá»: que leitura da ação coletiva se apoia nesta passagem?",
+      "p2": "Que relação entre as palavras «logo», «todos» e «direitamente» explica como o cronista apresenta a reação da cidade?",
+      "o": [
+        "A rapidez e a direção comum fazem a multidão agir como uma figura.",
+        "A rapidez e a direção comum mostram que cada pessoa conhecia o plano.",
+        "A rapidez e a direção comum indicam que todos sentiam o mesmo medo.",
+        "A rapidez e a direção comum revelam que a cidade dispensava ordens."
+      ],
+      "c": 0,
+      "fe": [
+        null,
+        "Confundes a ação conjunta com o conhecimento de cada pessoa. Relê «todos direitamente corriam»: a passagem mostra ações ou pensamentos?",
+        "Atribuis um sentimento comum a partir de movimentos semelhantes. Volta a «logo»: a rapidez nomeia o que cada pessoa sente?",
+        "Generalizas a reação a este sinal para toda a defesa. Relê a indicação do sino «da sua quadrilha»: a corrida faz parte de uma organização."
+      ],
+      "f": "«Logo» marca a rapidez, «todos» reúne a gente e «direitamente» dá uma direção à corrida. A conjugação destes indícios constrói uma personagem coletiva; não revela o pensamento de cada pessoa."
+    },
+    "medidas": [
+      {
+        "k": 4,
+        "caracteres": [
+          66,
+          69,
+          67,
+          67
+        ],
+        "amplitude": 0.045454545454545456,
+        "vantagem": 0.9565217391304348,
+        "certa_mais_longa": false,
+        "certa_sozinha": false,
+        "todas_iguais": false,
+        "certa_25_porcento": false,
+        "amplitude_acima": false
+      }
+    ],
+    "ficheiro": "m1/licao-m1-f20/index.html"
+  },
+  {
+    "licao": "m1-f20",
+    "cartao": 16,
+    "tipo": "ler",
+    "intervencao": "P2/P3: fechar com prova e limite da inferência",
+    "antes": {
+      "t": "ler",
+      "rot": "Agora, em papel",
+      "titulo": "A resposta que entregas",
+      "html": "<p class=\"papel-q\">Um grito, uma reação: o que prova o relato? Responde em cinco linhas, com uma informação explícita e uma inferência, cada uma com a sua citação.</p><p>Em papel, à mão, para entregar no fim da aula. Nada se escreve no telemóvel.</p><details class=\"mais\"><summary>O que conta</summary><div><ol><li>Separa o que o pajem afirma (o grito) do que o relato mostra (o grito dito e a cidade a correr).</li><li>Dá uma informação explícita, com a citação entre aspas.</li><li>Dá uma inferência apoiada e diz de que pistas a tiras, com a citação entre aspas.</li><li>Não chama prova ao grito, nem opinião ao que só não tem apoio no excerto.</li></ol></div></details><details class=\"mais\"><summary>Um exemplo</summary><div><p>O pajem grita «Matam o Mestre!», mas o grito é o que uma personagem afirma: não prova que matassem o Mestre. O que o relato mostra, e posso apontar, é a reação da cidade: «se moveram todos com mão armada». Daí tiro uma inferência apoiada: a cidade acredita no grito, porque corre «pera lhe dar vida e escusar morte». Quem sabe que o grito estava combinado é o leitor, não a cidade.</p></div></details>"
+    },
+    "depois": {
+      "t": "ler",
+      "rot": "Agora, em papel",
+      "titulo": "A resposta que entregas",
+      "html": "<p class=\"papel-q\">Um grito, uma reação: o que prova o relato? Responde em cinco linhas: distingue uma informação explícita de uma inferência, cita a pista que a sustenta e explica o que essa pista não permite concluir.</p><p>Em papel, à mão, para entregar no fim da aula. Nada se escreve no telemóvel.</p><details class=\"mais\"><summary>O que conta</summary><div><ol><li>Separa o que o pajem afirma (o grito) do que o relato mostra (o grito dito e a cidade a correr).</li><li>Dá uma informação explícita, com a citação entre aspas.</li><li>Dá uma inferência apoiada, cita a pista e distingue-a de uma conclusão que essa pista não permite.</li><li>Não chama prova ao grito, nem opinião ao que só não tem apoio no excerto.</li></ol></div></details><details class=\"mais\"><summary>Um exemplo</summary><div><p>O pajem grita «Matam o Mestre!», mas o grito é o que uma personagem afirma: não prova que matassem o Mestre. O que o relato mostra, e posso apontar, é a reação da cidade: «se moveram todos com mão armada». Daí tiro uma inferência apoiada: a cidade acredita no grito, porque corre «pera lhe dar vida e escusar morte». Quem sabe que o grito estava combinado é o leitor, não a cidade.</p></div></details>"
+    },
+    "medidas": [],
+    "ficheiro": "m1/licao-m1-f20/index.html"
+  },
+  {
+    "licao": "m1-f20",
+    "cartao": 14,
+    "tipo": "escolha",
+    "intervencao": "A1: M1-F20 C14 aprovado no #149, identificação e prova",
+    "antes": {
+      "t": "escolha",
+      "rot": "O nome do homem de barrete",
+      "tipo": "transferir",
+      "g": "c-interpretacao-opiniao",
+      "mais": true,
+      "ver": "<img src=\"../../img/fontes/fernao-lopes-painel.jpg\" alt=\"Rosto de um homem velho, de rugas fundas, com um barrete alto escuro e roupa escura, num pormenor dos Painéis de São Vicente.\" loading=\"lazy\" style=\"object-position:50% 38%\">",
+      "p": "Só com esta pintura, que é a frase «Este homem é Fernão Lopes»?",
+      "p2": "Para quem só tem este painel, «É Fernão Lopes» é que tipo de frase?",
+      "o": [
+        "Sem apoio na pintura, e nem por isso uma opinião",
+        "Informação explícita: a pintura mostra-o",
+        "Uma opinião: um juízo de quem olha",
+        "Uma interpretação: o rosto prova o nome"
+      ],
+      "c": 0,
+      "fe": [
+        "",
+        "A pintura mostra um rosto, um barrete e uma roupa escura, e nenhum nome: nada nela diz quem é.",
+        "Não há juízo de valor: dizer quem é não é dizer se é bom ou mau. O que falta é apoio.",
+        "Uma interpretação defende-se com o que se vê, e um rosto não prova um nome: era precisa outra fonte."
+      ],
+      "f": "A pintura não traz nome: «é Fernão Lopes» é o que a tradição afirma. Sem apoio na pintura, não passa por isso a opinião; para o provar, era precisa outra fonte."
+    },
+    "depois": {
+      "t": "escolha",
+      "rot": "O nome do homem de barrete",
+      "tipo": "transferir",
+      "g": "c-interpretacao-opiniao",
+      "mais": true,
+      "ver": "<img src=\"../../img/fontes/fernao-lopes-painel.jpg\" alt=\"Rosto de um homem velho, de rugas fundas, com um barrete alto escuro e roupa escura, num pormenor dos Painéis de São Vicente.\" loading=\"lazy\" style=\"object-position:50% 38%\">",
+      "p": "Só com esta pintura, que é a frase «Este homem é Fernão Lopes»?",
+      "p2": "Para quem só tem este painel, «É Fernão Lopes» é que tipo de frase?",
+      "o": [
+        "Identificação sem prova: o rosto não revela o nome",
+        "Informação explícita: a pintura mostra o nome escrito",
+        "Juízo prudente: o rosto talvez permita dar-lhe nome",
+        "Inferência apoiada: o rosto permite dar-lhe um nome"
+      ],
+      "c": 0,
+      "fe": [
+        null,
+        "Confundes uma figura visível com a sua identificação. Procura no painel uma inscrição que dê o nome: não há nenhuma.",
+        "Confundes uma afirmação com uma hipótese. Relê a frase: «Este homem é Fernão Lopes» não traz «talvez»; afirma um nome que a pintura, sozinha, não sustenta.",
+        "Confundes semelhança com prova de identidade. Volta ao rosto: que fonte permitiria ligar-lhe um nome?"
+      ],
+      "f": "A pintura não traz nome: «é Fernão Lopes» é o que a tradição afirma. Sem apoio na pintura, não passa por isso a opinião; para o provar, era precisa outra fonte."
+    },
+    "medidas": [
+      {
+        "k": 4,
+        "caracteres": [
+          50,
+          53,
+          51,
+          51
+        ],
+        "amplitude": 0.06,
+        "vantagem": 0.9433962264150944,
+        "certa_mais_longa": false,
+        "certa_sozinha": false,
+        "todas_iguais": false,
+        "certa_25_porcento": false,
+        "amplitude_acima": false
+      }
+    ],
+    "ficheiro": "m1/licao-m1-f20/index.html"
+  },
+  {
+    "licao": "m4-f01",
+    "cartao": 11,
+    "tipo": "escolha",
+    "intervencao": "A1: proposta confirmada do #149",
+    "antes": {
+      "t": "escolha",
+      "rot": "Os peixes em ordem",
+      "g": 1,
+      "l": "1-1",
+      "mais": true,
+      "cita": "postos todos por sua ordem com as cabeças de fora da água, António pregava, e eles ouviam.",
+      "p": "Porque conta Vieira que os peixes ouviam assim?",
+      "p2": "Que efeito tem a imagem dos peixes em ordem, de cabeça fora de água?",
+      "o": [
+        "Mostra-os como um auditório atento, o contrário dos homens",
+        "Descreve as espécies do mar de Arimino",
+        "Mostra que os peixes pequenos ficavam à frente",
+        "Prova que os peixes entendiam a doutrina melhor que os homens"
+      ],
+      "c": 0,
+      "fe": [
+        "",
+        "Aqui, Vieira não nomeia espécies: diz só «os grandes, os maiores, os pequenos». O que importa é que todos ouvem.",
+        "O texto diz «por sua ordem», sem dizer quem fica à frente: o que conta é estarem todos a ouvir.",
+        "O texto diz que «ouviam», não que entendiam. O que se opõe aos homens é ouvir: eles não querem."
+      ],
+      "f": "«António pregava, e eles ouviam»: em ordem e de cabeça fora de água, os peixes são o auditório que os homens recusaram ser. A frase opõe-se em silêncio aos homens, que não ouviam."
+    },
+    "depois": {
+      "t": "escolha",
+      "rot": "Os peixes em ordem",
+      "g": 1,
+      "l": "1-1",
+      "cita": "postos todos por sua ordem com as cabeças de fora da água, António pregava, e eles ouviam.",
+      "p": "Que contraste responde melhor à pergunta de abertura: por que razão fala Vieira aos peixes?",
+      "fe": [
+        "A cena não demonstra uma capacidade superior dos peixes nem dispensa os homens como destinatários da crítica. A alegoria faz o que se diz de uns chegar aos outros. Relê «António pregava, e eles ouviam»: o verbo é ouvir, não entender.",
+        "A ordem dos peixes participa na imagem do auditório atento. Não é uma descrição naturalista da vida marinha: tem uma função no argumento. Relê «com as cabeças de fora da água»: que atitude assume o auditório perante quem prega?",
+        null
+      ],
+      "f": "A atenção dos peixes faz sobressair a recusa dos homens. Assim, falar aos peixes continua a ser uma forma de interpelar os homens. No texto, procura a ação que mostra essa atenção.",
+      "o": [
+        "Os peixes entendem; essa capacidade torna desnecessário pregar aos homens.",
+        "Os peixes reúnem-se; essa ordem explica como vivem longe dos homens.",
+        "Os peixes escutam atentos; essa atenção põe em causa a recusa dos homens."
+      ],
+      "c": 2
+    },
+    "medidas": [],
+    "ficheiro": "m4/licao-m4-f01/index.html"
+  },
+  {
+    "licao": "m4-f01",
+    "cartao": 18,
+    "tipo": "ler",
+    "intervencao": "A1: proposta confirmada do #149",
+    "antes": {
+      "t": "ler",
+      "rot": "Para levar",
+      "escuro": true,
+      "html": "<p class=\"levar\"><span class=\"ch\" style=\"--i:0\">A</span><span class=\"ch\" style=\"--i:1\">n</span><span class=\"ch\" style=\"--i:2\">t</span><span class=\"ch\" style=\"--i:3\">ó</span><span class=\"ch\" style=\"--i:4\">n</span><span class=\"ch\" style=\"--i:5\">i</span><span class=\"ch\" style=\"--i:6\">o</span><span class=\"ch\" style=\"--i:7\"> </span><span class=\"ch\" style=\"--i:8\">m</span><span class=\"ch\" style=\"--i:9\">u</span><span class=\"ch\" style=\"--i:10\">d</span><span class=\"ch\" style=\"--i:11\">o</span><span class=\"ch\" style=\"--i:12\">u</span><span class=\"ch\" style=\"--i:13\"> </span><span class=\"ch\" style=\"--i:14\">o</span><span class=\"ch\" style=\"--i:15\"> </span><span class=\"ch\" style=\"--i:16\">a</span><span class=\"ch\" style=\"--i:17\">u</span><span class=\"ch\" style=\"--i:18\">d</span><span class=\"ch\" style=\"--i:19\">i</span><span class=\"ch\" style=\"--i:20\">t</span><span class=\"ch\" style=\"--i:21\">ó</span><span class=\"ch\" style=\"--i:22\">r</span><span class=\"ch\" style=\"--i:23\">i</span><span class=\"ch\" style=\"--i:24\">o</span><span class=\"ch\" style=\"--i:25\">,</span><span class=\"ch\" style=\"--i:26\"> </span><span class=\"ch\" style=\"--i:27\">n</span><span class=\"ch\" style=\"--i:28\">ã</span><span class=\"ch\" style=\"--i:29\">o</span><span class=\"ch\" style=\"--i:30\"> </span><span class=\"ch\" style=\"--i:31\">a</span><span class=\"ch\" style=\"--i:32\"> </span><span class=\"ch\" style=\"--i:33\">d</span><span class=\"ch\" style=\"--i:34\">o</span><span class=\"ch\" style=\"--i:35\">u</span><span class=\"ch\" style=\"--i:36\">t</span><span class=\"ch\" style=\"--i:37\">r</span><span class=\"ch\" style=\"--i:38\">i</span><span class=\"ch\" style=\"--i:39\">n</span><span class=\"ch\" style=\"--i:40\">a</span><span class=\"ch\" style=\"--i:41\">.</span></p><p>Santo António deixou as praças pelas praias, sem mudar o que pregava. Vieira, em São Luís, fala aos peixes para que os homens ouçam: é a alegoria, que diz uma coisa para significar outra, do princípio ao fim do sermão.</p><details class=\"mais\"><summary>As frases da aula</summary><div><ol><li>Em São Luís, em 1654, os colonos escravizavam os indígenas e não queriam ouvir Vieira.</li><li>Vieira conta o que fez Santo António em Arimino para mostrar o que ele próprio vai fazer.</li><li>Calar-se, retirar-se ou dissimular seria prudência ou covardia; o zelo não se rende.</li><li>Para Vieira, mudar de auditório não é desistir: a doutrina fica, muda quem a ouve.</li><li>Alegoria: o que se diz aos peixes vale para os homens, do princípio ao fim do sermão.</li></ol></div></details>"
+    },
+    "depois": {
+      "t": "ler",
+      "rot": "Para levar",
+      "escuro": true,
+      "html": "<p class=\"levar\"><span class=\"ch\" style=\"--i:0\">A</span><span class=\"ch\" style=\"--i:1\">n</span><span class=\"ch\" style=\"--i:2\">t</span><span class=\"ch\" style=\"--i:3\">ó</span><span class=\"ch\" style=\"--i:4\">n</span><span class=\"ch\" style=\"--i:5\">i</span><span class=\"ch\" style=\"--i:6\">o</span><span class=\"ch\" style=\"--i:7\"> </span><span class=\"ch\" style=\"--i:8\">m</span><span class=\"ch\" style=\"--i:9\">u</span><span class=\"ch\" style=\"--i:10\">d</span><span class=\"ch\" style=\"--i:11\">o</span><span class=\"ch\" style=\"--i:12\">u</span><span class=\"ch\" style=\"--i:13\"> </span><span class=\"ch\" style=\"--i:14\">o</span><span class=\"ch\" style=\"--i:15\"> </span><span class=\"ch\" style=\"--i:16\">a</span><span class=\"ch\" style=\"--i:17\">u</span><span class=\"ch\" style=\"--i:18\">d</span><span class=\"ch\" style=\"--i:19\">i</span><span class=\"ch\" style=\"--i:20\">t</span><span class=\"ch\" style=\"--i:21\">ó</span><span class=\"ch\" style=\"--i:22\">r</span><span class=\"ch\" style=\"--i:23\">i</span><span class=\"ch\" style=\"--i:24\">o</span><span class=\"ch\" style=\"--i:25\">,</span><span class=\"ch\" style=\"--i:26\"> </span><span class=\"ch\" style=\"--i:27\">n</span><span class=\"ch\" style=\"--i:28\">ã</span><span class=\"ch\" style=\"--i:29\">o</span><span class=\"ch\" style=\"--i:30\"> </span><span class=\"ch\" style=\"--i:31\">a</span><span class=\"ch\" style=\"--i:32\"> </span><span class=\"ch\" style=\"--i:33\">d</span><span class=\"ch\" style=\"--i:34\">o</span><span class=\"ch\" style=\"--i:35\">u</span><span class=\"ch\" style=\"--i:36\">t</span><span class=\"ch\" style=\"--i:37\">r</span><span class=\"ch\" style=\"--i:38\">i</span><span class=\"ch\" style=\"--i:39\">n</span><span class=\"ch\" style=\"--i:40\">a</span><span class=\"ch\" style=\"--i:41\">.</span></p><p>Santo António deixou as praças pelas praias, sem mudar o que pregava. Vieira, em São Luís, fala aos peixes para que os homens ouçam: é a alegoria, que diz uma coisa para significar outra, do princípio ao fim do sermão.</p><details class=\"mais\"><summary>As frases da aula</summary><div><ol><li>Em São Luís, em 1654, os colonos escravizavam os indígenas e não queriam ouvir Vieira.</li><li>Vieira conta o que fez Santo António em Arimino para mostrar o que ele próprio vai fazer.</li><li>Calar-se, retirar-se ou dissimular seria prudência ou covardia; o zelo não se rende.</li><li>Para Vieira, mudar de auditório não é desistir: a doutrina fica, muda quem a ouve.</li><li>Alegoria: o que se diz aos peixes vale para os homens, do princípio ao fim do sermão.</li></ol></div></details><p>Volta à pergunta do início. Explica oralmente como a atenção dos peixes responde à recusa dos homens e aponta uma expressão que sustente a tua leitura.</p>"
+    },
+    "medidas": [],
+    "ficheiro": "m4/licao-m4-f01/index.html"
+  },
+  {
+    "licao": "m4-f28",
+    "cartao": 3,
+    "tipo": "escolha",
+    "intervencao": "A1: proposta confirmada do #149",
+    "antes": {
+      "t": "escolha",
+      "p": "Laura e Tiago têm de trabalhar juntos; Madalena teme um passado que julgava encerrado. Que pergunta ajuda a comparar os conflitos?",
+      "o": [
+        "As duas obras apresentam exatamente a mesma história?",
+        "Como condiciona uma relação anterior o que as personagens podem fazer agora?",
+        "Que personagem de TPC corresponde obrigatoriamente a Madalena?"
+      ],
+      "c": 1,
+      "f": "A comparação procura uma **relação entre conflitos**, sem apagar diferenças. No TPC, os ex-namorados partilham um trabalho; em Garrett, a dúvida sobre um primeiro marido ameaça a segurança da família.",
+      "g": "m4-tpc",
+      "fe": [
+        "A sinopse apresenta uma recriação a partir de Garrett, não uma transcrição integral nem a mesma história.",
+        null,
+        "Aproximar conflitos não obriga a emparelhar personagens: as situações e as suas consequências são diferentes."
+      ]
+    },
+    "depois": {
+      "t": "escolha",
+      "p": "Laura e Tiago têm de trabalhar juntos; Madalena teme um passado que julgava encerrado. Que pergunta ajuda a comparar os conflitos?",
+      "o": [
+        "Que sequência de acontecimentos se repete nas duas histórias?",
+        "Que relação anterior limita o que podem fazer no presente?",
+        "Que personagem de cada obra ocupa o mesmo lugar na família?"
+      ],
+      "c": 1,
+      "f": "A comparação procura uma **relação entre conflitos**, sem apagar diferenças. No TPC, os ex-namorados partilham um trabalho; em Garrett, a dúvida sobre um primeiro marido ameaça a segurança da família.",
+      "g": "m4-tpc",
+      "fe": [
+        "Confundes relação temática com repetição do enredo. Relê as duas situações: um namoro terminado e um marido desaparecido.",
+        null,
+        "Confundes comparação de conflitos com correspondência entre personagens. Relê quem integra cada grupo antes de procurar pares."
+      ]
+    },
+    "medidas": [],
+    "ficheiro": "m4/recursos/tpc-entrada.js"
+  },
+  {
+    "licao": "m4-f28",
+    "cartao": 5,
+    "tipo": "escolha",
+    "intervencao": "A1: proposta confirmada do #149",
+    "antes": {
+      "t": "escolha",
+      "p": "Madalena fala de «imensa felicidade», mas diz que os «contínuos terrores» não a deixam gozá-la. Que leitura explica melhor a tensão?",
+      "o": [
+        "Madalena já não sente amor pelo marido atual",
+        "O amor existe, mas o medo impede-a de o viver em segurança",
+        "A felicidade só existiu antes de conhecer Manuel"
+      ],
+      "c": 1,
+      "f": "O contraste está **dentro da mesma experiência**: há amor e felicidade, mas o medo impede que sejam vividos plenamente. A hipótese liga a interpretação a palavras concretas da fala.",
+      "g": "m4-tpc",
+      "fe": [
+        "O texto fala em «imensa felicidade» dada pelo amor; o problema é não conseguir gozá-la sem medo.",
+        null,
+        "A fala liga a felicidade ao amor presente. Não a localiza apenas num tempo anterior a Manuel."
+      ]
+    },
+    "depois": {
+      "t": "escolha",
+      "p": "Madalena fala de «imensa felicidade», mas diz que os «contínuos terrores» não a deixam gozá-la. Que leitura explica melhor a tensão?",
+      "o": [
+        "O medo mostra que o amor pelo marido deixou de existir",
+        "O amor existe, mas o medo impede-a de o viver em paz",
+        "A felicidade pertence ao tempo anterior ao amor atual"
+      ],
+      "c": 1,
+      "f": "O contraste está **dentro da mesma experiência**: há amor e felicidade, mas o medo impede que sejam vividos plenamente. A hipótese liga a interpretação a palavras concretas da fala.",
+      "g": "m4-tpc",
+      "fe": [
+        "Confundes impedimento de gozar com ausência de amor. Relê «imensa felicidade» e quem a dava.",
+        null,
+        "Deslocas a felicidade para outro tempo. Relê «que me dava o seu amor»: a tensão está dentro dessa relação."
+      ]
+    },
+    "medidas": [],
+    "ficheiro": "m4/recursos/tpc-entrada.js"
+  },
+  {
+    "licao": "m6-f01",
+    "cartao": 16,
+    "tipo": "escolha",
+    "intervencao": "A1: proposta confirmada do #149",
+    "antes": {
+      "t": "escolha",
+      "p": "O que encontra o cavaleiro quando as portas de ouro se abrem?",
+      "p2": "Que há dentro do palácio, depois do fragor das portas?",
+      "o": [
+        "Silêncio e escuridão, e nada mais",
+        "Uma sala de ouro, sem ninguém à espera",
+        "A Ventura, que o recebe em silêncio",
+        "A luz fulgurante que tinha visto de fora"
+      ],
+      "c": 0,
+      "f": "Lá dentro há só «Silencio e escuridão» e, diz o último verso, «nada mais!» (v. 14): a promessa de luz dá em **vazio**.",
+      "cita": "Silencio e escuridão — e nada mais!",
+      "l": "0-16",
+      "g": 2,
+      "fe": [
+        null,
+        "O ouro é das portas, vistas de fora («portas d'ouro»); dentro não há sala descrita, só «Silencio e escuridão» (v. 14).",
+        "A Ventura não aparece: dentro, o cavaleiro encontra «só» (apenas) «Silencio e escuridão» (v. 13 e 14); ninguém o recebe.",
+        "A luz era a do palácio visto de fora, «fulgurante» (v. 7); ao abrir as portas encontra o contrário, «escuridão» (v. 14)."
+      ]
+    },
+    "depois": {
+      "t": "escolha",
+      "p": "O cavaleiro vê abrirem-se as portas de ouro, mas encontra o vazio. Que pergunta ajuda a explicar esta mudança?",
+      "f": "A promessa de riqueza não coincide com o que o cavaleiro encontra. Procura uma palavra do exterior e outra do interior: a relação entre elas sustenta a interpretação.",
+      "cita": "Silencio e escuridão — e nada mais!",
+      "l": "0-16",
+      "g": 2,
+      "fe": [
+        null,
+        "Confundes a duração da viagem com o contraste do desfecho. Relê o que o poema diz das portas e do que há dentro.",
+        "O poema não identifica quem construiu o palácio. Essa informação não pode servir de prova. Compara o exterior e o interior antes de acrescentares uma causa."
+      ],
+      "o": [
+        "Que contraste liga a promessa exterior ao que encontra dentro?",
+        "Que distância percorreu o cavaleiro antes de chegar à porta?",
+        "Que pessoa mandou construir o palácio para receber o cavaleiro?"
+      ],
+      "c": 0
+    },
+    "medidas": [],
+    "ficheiro": "m6/licao-m6-f01/index.html"
+  },
+  {
+    "licao": "m7-f34",
+    "cartao": 9,
+    "tipo": "escolha",
+    "intervencao": "A1: proposta confirmada do #149",
+    "antes": {
+      "t": "escolha",
+      "p": "No cinema, a «dupla exposição» mostra duas imagens no mesmo sítio, uma através da outra. Que verso faz isso com palavras?",
+      "p2": "Que verso põe duas imagens no mesmo lugar, como dois fotogramas sobrepostos?",
+      "o": [
+        "«os navios passam por dentro dos troncos das árvores»",
+        "«O porto que sonho é sombrio e pálido»",
+        "«Liberto em duplo, abandonei-me da paisagem abaixo...»",
+        "«E esta paisagem é cheia de sol deste lado...»"
+      ],
+      "c": 0,
+      "f": "**Navios e troncos ocupam o mesmo lugar** da imagem. Os outros versos falam de um só plano, ou de nenhuma imagem.",
+      "cita": "E os navios passam por dentro dos troncos das árvores",
+      "l": "0-13",
+      "g": 2,
+      "fe": [
+        null,
+        "Este verso fica só no sonho: o porto «sombrio e pálido» não se mistura aqui com a paisagem.",
+        "«Em duplo» é o poeta desdobrado, não uma imagem; aqui não há duas coisas a ocupar o mesmo lugar.",
+        "Este verso fica só na paisagem, ao sol; nenhuma coisa sonhada entra nele."
+      ]
+    },
+    "depois": {
+      "t": "escolha",
+      "p": "No verso «os navios passam por dentro dos troncos das árvores», que leitura justifica a aproximação à dupla exposição?",
+      "f": "Os navios pertencem a um plano e os troncos a outro. A expressão «por dentro» põe-nos no mesmo espaço imaginado, em vez de apenas alternar duas cenas.",
+      "cita": "E os navios passam por dentro dos troncos das árvores",
+      "l": "0-13",
+      "g": "dupla-exposicao",
+      "fe": [
+        "Alternar cenas seria apresentar uma e depois outra. Aqui, uma atravessa a outra: é essa relação espacial que deves explicar. Relê «por dentro dos troncos»: os espaços sucedem-se ou cruzam-se?",
+        "O verso não descreve uma rota navegável entre árvores. O cruzamento entre planos cria a imagem; tratá-lo como itinerário literal perde esse efeito. Relê «navios» e «troncos»: a expressão põe elementos dos dois planos no mesmo lugar.",
+        null
+      ],
+      "o": [
+        "Dois espaços aparecem um depois do outro; a passagem separa os momentos.",
+        "Dois espaços pertencem à mesma viagem; a passagem descreve uma rota real e possível.",
+        "Dois espaços ocupam a mesma imagem; atravessar os troncos aproxima os planos."
+      ],
+      "c": 2
+    },
+    "medidas": [],
+    "ficheiro": "m7/licao-m7-f34/index.html"
+  },
+  {
+    "licao": "m7-f34",
+    "cartao": 31,
+    "tipo": "escolha",
+    "intervencao": "A1: proposta confirmada do #149",
+    "antes": {
+      "t": "escolha",
+      "g": "escuta-vi-transferencia",
+      "p": "Compara I e VI: «os navios […] são estas árvores» e «Todo o teatro é o meu quintal». O que aproxima estes versos?",
+      "p2": "I: «os navios […] são estas árvores»; VI: «Todo o teatro é o meu quintal». O que fazem os dois versos?",
+      "o": [
+        "Identificam elementos de dois planos, em vez de apenas os colocarem lado a lado",
+        "Narram duas viagens reais, primeiro de barco e depois de comboio",
+        "Apagam o presente para contar só acontecimentos da infância",
+        "Usam uma comparação explícita introduzida por «como»"
+      ],
+      "c": 0,
+      "f": "Em I, **navios e árvores**; em VI, **teatro e quintal**. As formas de «ser» fundem os planos. A VI transporta a mesma técnica para outra relação: presente e memória.",
+      "fe": [
+        null,
+        "Os versos não contam duas viagens: sobrepõem lugares na experiência do sujeito.",
+        "A infância é central em VI, mas não constitui um dos planos de I. Procura uma operação comum aos dois versos.",
+        "Nestes dois versos não aparece «como»: «são» e «é» constroem uma identificação."
+      ]
+    },
+    "depois": {
+      "t": "escolha",
+      "g": "escuta-vi-transferencia",
+      "p": "Compara I e VI: «os navios […] são estas árvores» e «Todo o teatro é o meu quintal». O que aproxima estes versos?",
+      "p2": "I: «os navios […] são estas árvores»; VI: «Todo o teatro é o meu quintal». O que fazem os dois versos?",
+      "o": [
+        "Identificam dois planos distintos, fazendo um passar pelo outro",
+        "Alternam dois planos, descrevendo um lugar depois do outro",
+        "Substituem o presente, deixando no verso apenas o lugar da memória"
+      ],
+      "c": 0,
+      "f": "Em I, **navios e árvores**; em VI, **teatro e quintal**. As formas de «ser» fundem os planos. A VI transporta a mesma técnica para outra relação: presente e memória.",
+      "fe": [
+        null,
+        "Confundes fusão com alternância. Relê «são» e «é»: cada verbo identifica elementos, sem narrar uma passagem entre lugares.",
+        "Confundes cruzamento com apagamento. Relê os dois pares: navios e árvores, teatro e quintal. Os dois planos permanecem reconhecíveis."
+      ]
+    },
+    "medidas": [],
+    "ficheiro": "m7/licao-m7-f34/index.html"
+  },
+  {
+    "licao": "m8-f12",
+    "cartao": 9,
+    "tipo": "escolha",
+    "intervencao": "A1: proposta confirmada do #149",
+    "antes": {
+      "t": "escolha",
+      "p": "Que leitura se destaca em «Todas as manhãs, relia a carta»?",
+      "p2": "Que valor é destacado por «todas as manhãs» nesta frase?",
+      "o": [
+        "iterativo",
+        "perfetivo",
+        "habitual",
+        "genérico"
+      ],
+      "c": 2,
+      "f": "**Habitual**: «todas as manhãs» apresenta a releitura como um costume. Um hábito também envolve repetição. Em «Naquela revisão, releu a carta várias vezes», destaca-se a repetição num episódio; não é necessária uma contagem exata.",
+      "g": "fim",
+      "fe": [
+        "Há repetição, mas «todas as manhãs» apresenta-a como costume, não como um episódio delimitado.",
+        "«Relia», no imperfeito, não apresenta uma releitura concluída; e «todas as manhãs» marca regularidade.",
+        null,
+        "O genérico fala de uma classe em geral («Os contos são narrativas breves»); aqui é o costume de alguém."
+      ]
+    },
+    "depois": {
+      "t": "escolha",
+      "p": "Exemplo criado: Todas as manhãs, relia a carta. Que valor aspetual destaca a expressão inicial?",
+      "g": "fim",
+      "o": [
+        "habitual",
+        "perfetivo",
+        "genérico"
+      ],
+      "c": 0,
+      "f": "**Habitual**: «todas as manhãs» apresenta a releitura como um costume. Um hábito também envolve repetição: habitual e iterativo não são rótulos sempre incompatíveis.",
+      "fe": [
+        null,
+        "Confundes a regularidade de alguém com a conclusão de um ato. Relê «todas as manhãs» e «relia»: que costume apresentam?",
+        "Confundes um costume de alguém com uma verdade geral. Relê «todas as manhãs» e «relia»: a frase descreve uma situação particular."
+      ]
+    },
+    "medidas": [],
+    "ficheiro": "m8/licao-m8-f12/index.html"
+  },
+  {
+    "licao": "m8-f12",
+    "cartao": 17,
+    "tipo": "escolha",
+    "intervencao": "A1: proposta confirmada do #149",
+    "antes": {
+      "t": "vf",
+      "p": "A revisão do módulo vem antes da prova de recuperação e das tarefas.",
+      "p2": "Esta lição de revisão antecede a prova e as tarefas.",
+      "v": true,
+      "f": "Verdadeiro: poesia e conto, valor aspetual, anáfora e catáfora, numa só lição.",
+      "g": "fim",
+      "fe": "É verdadeiro: esta lição junta poesia, conto e gramática antes da prova; «Abre» diz: antes da prova, volta a tudo o que leste."
+    },
+    "depois": {
+      "t": "escolha",
+      "p": "Exemplo criado: um poema retoma uma oração e muda o pedido final. Que pergunta recupera a lente da tradição?",
+      "f": "A lente da tradição pergunta pelo que o texto retoma e transforma. As palavras conservadas e a mudança final permitem testar essa relação.",
+      "g": "fim",
+      "fe": [
+        "Esta pergunta usa as figurações de quem escreve. Não é uma pergunta errada em geral; é uma pergunta diferente da que o caso pede. Relê o que o caso diz: o poema retoma uma oração e muda o pedido final.",
+        null,
+        "Esta pergunta usa a lente do contemporâneo. Pode ser útil noutra leitura, mas não identifica por si o diálogo com a oração. Relê a relação indicada entre a oração e o poema: que palavras e que mudança permitem compará-los?"
+      ],
+      "o": [
+        "Que imagem de quem escreve surge e como se mostra essa voz?",
+        "Que palavras conserva da oração e que efeito produz a mudança?",
+        "Que problema do seu tempo aparece e que pessoas ficam afetadas?"
+      ],
+      "c": 1
+    },
+    "medidas": [],
+    "ficheiro": "m8/licao-m8-f12/index.html"
+  },
+  {
+    "licao": "m8-f12",
+    "cartao": 22,
+    "tipo": "ler",
+    "intervencao": "A1: proposta confirmada do #149",
+    "antes": {
+      "t": "ler",
+      "rot": "Para levar",
+      "escuro": true,
+      "html": "<h2>Experimenta a outra leitura</h2><p>No exemplo inventado da poeta e da editora, muda a frase para deixar claro que foi <b>a poeta</b> a levar o manuscrito. Diz a nova versão ou anota-a no caderno.</p><details><summary>Rever a reformulação</summary><p>«A poeta conversou com a editora. A poeta levou o manuscrito.» Aqui, a repetição resolve a ambiguidade. Também podes reorganizar a informação, desde que conserves quem conversou e quem levou o manuscrito.</p><p>Num texto teu, procura uma retoma: o leitor tem informação para perceber a quem se refere? Se deixaste uma dúvida de propósito, explica a sua função e o indício que a sustenta.</p></details><svg class=\"simbolo tracar\" viewBox=\"0 0 48 48\" aria-hidden=\"true\" data-ico=\"maquina\" data-gesto=\"tecla\"><path d=\"M8 40V28a4 4 0 0 1 4-4h24a4 4 0 0 1 4 4v12z\"/><path d=\"M12 24v-8h24v8\"/><path d=\"M16 12h16\"/><path d=\"M14 32h20M16 36h16\"/><path d=\"M20 20h8\"/></svg><svg class=\"simbolo azulejo canto\" viewBox=\"0 0 48 48\" aria-hidden=\"true\" data-ico=\"azulejo\"><path d=\"M4 4h40v40H4z\"/><path d=\"M24 4v40M4 24h40\"/><path d=\"M24 10l6 14-6 14-6-14z\"/><path d=\"M10 24l14-6 14 6-14 6z\"/><circle cx=\"24\" cy=\"24\" r=\"3\"/><path d=\"M4 4l8 8M44 4l-8 8M4 44l8-8M44 44l-8-8\"/></svg><p class=\"levar\"><span class=\"ch\" style=\"--i:0\">Q</span><span class=\"ch\" style=\"--i:1\">u</span><span class=\"ch\" style=\"--i:2\">e</span><span class=\"ch\" style=\"--i:3\"> </span><span class=\"ch\" style=\"--i:4\">t</span><span class=\"ch\" style=\"--i:5\">e</span><span class=\"ch\" style=\"--i:6\">x</span><span class=\"ch\" style=\"--i:7\">t</span><span class=\"ch\" style=\"--i:8\">o</span><span class=\"ch\" style=\"--i:9\"> </span><span class=\"ch\" style=\"--i:10\">d</span><span class=\"ch\" style=\"--i:11\">o</span><span class=\"ch\" style=\"--i:12\"> </span><span class=\"ch\" style=\"--i:13\">m</span><span class=\"ch\" style=\"--i:14\">ó</span><span class=\"ch\" style=\"--i:15\">d</span><span class=\"ch\" style=\"--i:16\">u</span><span class=\"ch\" style=\"--i:17\">l</span><span class=\"ch\" style=\"--i:18\">o</span><span class=\"ch\" style=\"--i:19\"> </span><span class=\"ch\" style=\"--i:20\">v</span><span class=\"ch\" style=\"--i:21\">a</span><span class=\"ch\" style=\"--i:22\">i</span><span class=\"ch\" style=\"--i:23\">s</span><span class=\"ch\" style=\"--i:24\"> </span><span class=\"ch\" style=\"--i:25\">r</span><span class=\"ch\" style=\"--i:26\">e</span><span class=\"ch\" style=\"--i:27\">l</span><span class=\"ch\" style=\"--i:28\">e</span><span class=\"ch\" style=\"--i:29\">r</span><span class=\"ch\" style=\"--i:30\"> </span><span class=\"ch\" style=\"--i:31\">p</span><span class=\"ch\" style=\"--i:32\">o</span><span class=\"ch\" style=\"--i:33\">r</span><span class=\"ch\" style=\"--i:34\"> </span><span class=\"ch\" style=\"--i:35\">v</span><span class=\"ch\" style=\"--i:36\">o</span><span class=\"ch\" style=\"--i:37\">n</span><span class=\"ch\" style=\"--i:38\">t</span><span class=\"ch\" style=\"--i:39\">a</span><span class=\"ch\" style=\"--i:40\">d</span><span class=\"ch\" style=\"--i:41\">e</span><span class=\"ch\" style=\"--i:42\"> </span><span class=\"ch\" style=\"--i:43\">p</span><span class=\"ch\" style=\"--i:44\">r</span><span class=\"ch\" style=\"--i:45\">ó</span><span class=\"ch\" style=\"--i:46\">p</span><span class=\"ch\" style=\"--i:47\">r</span><span class=\"ch\" style=\"--i:48\">i</span><span class=\"ch\" style=\"--i:49\">a</span><span class=\"ch\" style=\"--i:50\">?</span><span class=\"ch\" style=\"--i:51\"> </span><span class=\"ch\" style=\"--i:52\">S</span><span class=\"ch\" style=\"--i:53\">e</span><span class=\"ch\" style=\"--i:54\"> </span><span class=\"ch\" style=\"--i:55\">a</span><span class=\"ch\" style=\"--i:56\"> </span><span class=\"ch\" style=\"--i:57\">r</span><span class=\"ch\" style=\"--i:58\">e</span><span class=\"ch\" style=\"--i:59\">s</span><span class=\"ch\" style=\"--i:60\">p</span><span class=\"ch\" style=\"--i:61\">o</span><span class=\"ch\" style=\"--i:62\">s</span><span class=\"ch\" style=\"--i:63\">t</span><span class=\"ch\" style=\"--i:64\">a</span><span class=\"ch\" style=\"--i:65\"> </span><span class=\"ch\" style=\"--i:66\">f</span><span class=\"ch\" style=\"--i:67\">o</span><span class=\"ch\" style=\"--i:68\">r</span><span class=\"ch\" style=\"--i:69\"> </span><span class=\"ch\" style=\"--i:70\">n</span><span class=\"ch\" style=\"--i:71\">e</span><span class=\"ch\" style=\"--i:72\">n</span><span class=\"ch\" style=\"--i:73\">h</span><span class=\"ch\" style=\"--i:74\">u</span><span class=\"ch\" style=\"--i:75\">m</span><span class=\"ch\" style=\"--i:76\">,</span><span class=\"ch\" style=\"--i:77\"> </span><span class=\"ch\" style=\"--i:78\">o</span><span class=\"ch\" style=\"--i:79\"> </span><span class=\"ch\" style=\"--i:80\">m</span><span class=\"ch\" style=\"--i:81\">ó</span><span class=\"ch\" style=\"--i:82\">d</span><span class=\"ch\" style=\"--i:83\">u</span><span class=\"ch\" style=\"--i:84\">l</span><span class=\"ch\" style=\"--i:85\">o</span><span class=\"ch\" style=\"--i:86\"> </span><span class=\"ch\" style=\"--i:87\">a</span><span class=\"ch\" style=\"--i:88\">i</span><span class=\"ch\" style=\"--i:89\">n</span><span class=\"ch\" style=\"--i:90\">d</span><span class=\"ch\" style=\"--i:91\">a</span><span class=\"ch\" style=\"--i:92\"> </span><span class=\"ch\" style=\"--i:93\">n</span><span class=\"ch\" style=\"--i:94\">ã</span><span class=\"ch\" style=\"--i:95\">o</span><span class=\"ch\" style=\"--i:96\"> </span><span class=\"ch\" style=\"--i:97\">a</span><span class=\"ch\" style=\"--i:98\">c</span><span class=\"ch\" style=\"--i:99\">a</span><span class=\"ch\" style=\"--i:100\">b</span><span class=\"ch\" style=\"--i:101\">o</span><span class=\"ch\" style=\"--i:102\">u</span><span class=\"ch\" style=\"--i:103\">.</span></p>"
+    },
+    "depois": {
+      "t": "ler",
+      "rot": "Para levar",
+      "escuro": true,
+      "html": "<h2>Experimenta a outra leitura</h2><p>No exemplo inventado da poeta e da editora, muda a frase para deixar claro que foi <b>a poeta</b> a levar o manuscrito. Diz a nova versão ou anota-a no caderno.</p><details><summary>Rever a reformulação</summary><p>«A poeta conversou com a editora. A poeta levou o manuscrito.» Aqui, a repetição resolve a ambiguidade. Também podes reorganizar a informação, desde que conserves quem conversou e quem levou o manuscrito.</p><p>Num texto teu, procura uma retoma: o leitor tem informação para perceber a quem se refere? Se deixaste uma dúvida de propósito, explica a sua função e o indício que a sustenta.</p></details><svg class=\"simbolo tracar\" viewBox=\"0 0 48 48\" aria-hidden=\"true\" data-ico=\"maquina\" data-gesto=\"tecla\"><path d=\"M8 40V28a4 4 0 0 1 4-4h24a4 4 0 0 1 4 4v12z\"/><path d=\"M12 24v-8h24v8\"/><path d=\"M16 12h16\"/><path d=\"M14 32h20M16 36h16\"/><path d=\"M20 20h8\"/></svg><svg class=\"simbolo azulejo canto\" viewBox=\"0 0 48 48\" aria-hidden=\"true\" data-ico=\"azulejo\"><path d=\"M4 4h40v40H4z\"/><path d=\"M24 4v40M4 24h40\"/><path d=\"M24 10l6 14-6 14-6-14z\"/><path d=\"M10 24l14-6 14 6-14 6z\"/><circle cx=\"24\" cy=\"24\" r=\"3\"/><path d=\"M4 4l8 8M44 4l-8 8M4 44l8-8M44 44l-8-8\"/></svg><p class=\"levar\">Que texto compreendes agora de outra maneira? Mostra a passagem que mudou a tua leitura.</p>"
+    },
+    "medidas": [],
+    "ficheiro": "m8/licao-m8-f12/index.html"
+  },
+  {
+    "licao": "m9-f13",
+    "cartao": 2,
+    "tipo": "ler",
+    "intervencao": "A1: proposta confirmada do #149",
+    "antes": {
+      "t": "ler",
+      "rot": "Lê e confronta",
+      "titulo": "Caderno de leitura: quatro estações",
+      "html": "<p>Oficina longa, com o livro aberto, em quatro estações: hipótese inicial; confronto de episódios; contraexemplo e revisão; síntese fundamentada. Entre estações, discute a leitura com um colega e anota a página da edição.</p><p>Hipótese a testar: a liberdade no romance consiste em escapar ao mundo do poder. Não a aceites como resposta final: confronta-a com o voo da passarola (XVI), a violência e a memória dos trabalhadores (XIX) e o reencontro final (XXV).</p>"
+    },
+    "depois": {
+      "t": "ler",
+      "rot": "Lê e confronta",
+      "titulo": "Caderno de leitura: quatro estações",
+      "html": "<p>Oficina longa, com o livro aberto, em quatro estações: hipótese inicial; confronto de episódios; contraexemplo e revisão; síntese fundamentada. Entre estações, confronta a tua leitura com uma passagem do livro e anota a página da edição.</p><p>Hipótese a testar: a liberdade no romance consiste em escapar ao mundo do poder. Não a aceites como resposta final: confronta-a com o voo da passarola (XVI), a violência e a memória dos trabalhadores (XIX) e o reencontro final (XXV).</p><p>O voo prova uma liberdade completa, ou o final obriga-te a mudar essa leitura? Escolhe uma resposta provisória. No fim, vais voltar a ela com duas passagens do livro.</p>"
+    },
+    "medidas": [],
+    "ficheiro": "m9/recursos/f13.js"
+  },
+  {
+    "licao": "m9-f13",
+    "cartao": 10,
+    "tipo": "escolha",
+    "intervencao": "A1: proposta confirmada do #149",
+    "antes": {
+      "t": "escolha",
+      "p": "O nome desconhecido da viúva invalida todo o gesto de memória?",
+      "o": [
+        "Sim: uma narrativa só vale se conseguir dizer tudo sobre todos",
+        "Não: mostra um limite que o próprio gesto de recordar admite",
+        "Sim: prova que a dor da viúva não interessa nada à obra",
+        "Não: autoriza inventar-lhe uma biografia e apresentá-la como facto"
+      ],
+      "c": 1,
+      "f": "O limite é **reconhecido**, não escondido. Recordar pode ser necessário sem ser total. Nem a impossibilidade de contar tudo torna inútil a memória, nem autoriza preencher a falta com uma biografia falsamente atribuída ao romance.",
+      "g": "m9-f13-6",
+      "fe": [
+        "Nenhuma narrativa diz tudo; o romance recupera muito e confessa o nome que lhe falta («Estação 2: a pedra e a viúva»).",
+        null,
+        "O narrador detém-se na viúva para dizer que não lhe sabe o nome: é um limite assumido, não desinteresse («Estação 2»).",
+        "A falta não autoriza inventar: preencher o nome com uma biografia seria atribuir ao romance o que ele não diz."
+      ]
+    },
+    "depois": {
+      "t": "escolha",
+      "p": "O narrador recupera trabalhadores esquecidos, mas não sabe o nome da viúva. Que revisão explica os dois dados?",
+      "f": "A revisão conserva o gesto de recordar e reconhece a falta. Confronta-a com a passagem: recuperar uma vida não implica conhecer todos os seus dados.",
+      "g": "m9-f13-6",
+      "fe": [
+        "Uma lacuna não autoriza apresentar uma invenção como informação do romance. Podes formular uma pergunta sobre a falta; não podes preenchê-la como facto. Relê na Estação 2 a frase em que o narrador diz que não sabe o nome.",
+        null,
+        "A falta do nome não torna dispensável a passagem. O próprio limite faz parte do que a narrativa mostra sobre recordar quem foi esquecido. Relê na Estação 2 a frase em que o narrador diz que não sabe o nome."
+      ],
+      "o": [
+        "A memória recupera vidas, por isso permite completar os nomes que faltam.",
+        "A memória recupera vidas, embora deixe parte do seu percurso por conhecer.",
+        "A memória recupera vidas, por isso o anonimato torna o episódio dispensável."
+      ],
+      "c": 1
+    },
+    "medidas": [],
+    "ficheiro": "m9/recursos/f13.js"
+  },
+  {
+    "licao": "m9-f13",
+    "cartao": 21,
+    "tipo": "escolha",
+    "intervencao": "A1: proposta confirmada do #149",
+    "antes": {
+      "t": "escolha",
+      "p": "Que síntese explica melhor os confrontos realizados?",
+      "o": [
+        "A liberdade é fuga definitiva: no final, o poder desaparece",
+        "Junta liberdade e vínculo à violência e aos limites da memória",
+        "A memória só conta se reproduzir todas as vidas por inteiro",
+        "Como há elementos extraordinários, nenhuma cena apoia uma leitura"
+      ],
+      "c": 1,
+      "f": "A segunda síntese consegue explicar **possibilidades e limites** sem reduzir o romance a um slogan. O voo e o vínculo não apagam a violência; os limites da memória não anulam a tentativa de recordar. A interpretação ganha força por suportar o confronto, não por prometer explicar tudo.",
+      "g": "m9-f13-15",
+      "fe": [
+        "O final não mostra o poder a desaparecer: Baltasar morre num auto de fé («Estação 3»).",
+        null,
+        "A memória pode ter limites e contar: o romance recorda muitos sem saber o nome da viúva («Estação 2»).",
+        "O extraordinário pertence ao mundo ficcional e lê-se com as regras dele; o voo e as vontades apoiam leituras («Estação 1», «Estação 3»)."
+      ]
+    },
+    "depois": {
+      "t": "escolha",
+      "p": "Que revisão da hipótese explica o voo e o reencontro final?",
+      "f": "O voo e o vínculo abrem possibilidades, mas não eliminam a morte de Baltasar. Uma hipótese mais precisa explica tanto a ação de Blimunda como o auto de fé.",
+      "g": "m9-f13-15",
+      "fe": [
+        null,
+        "Confundes persistência do vínculo com vitória sobre a violência. Relê na Estação 3 onde Baltasar morre e o que Blimunda recolhe.",
+        "Confundes a perda com a anulação do que foi vivido. Relê na Estação 3 o gesto de Blimunda: o que conserva apesar da morte?"
+      ],
+      "o": [
+        "O voo afirma liberdade partilhada; o final conserva o vínculo sem apagar a violência.",
+        "O voo afirma liberdade partilhada; o final mostra que ela acaba por vencer a violência.",
+        "O voo afirma liberdade partilhada; o final torna sem valor tudo o que a construiu."
+      ],
+      "c": 0
+    },
+    "medidas": [],
+    "ficheiro": "m9/recursos/f13.js"
+  },
+  {
+    "licao": "m9-f13",
+    "cartao": 23,
+    "tipo": "ler",
+    "intervencao": "A1: proposta confirmada do #149",
+    "antes": {
+      "t": "ler",
+      "rot": "Para levar",
+      "html": "<p class=\"levar\">Uma interpretação melhora quando explica também o que a obriga a mudar.</p><p>No caderno, escreve uma síntese tua: hipótese revista, dois episódios em confronto e uma limitação reconhecida. Revê-a com o livro antes de a usares no comentário ou no debate.</p><p>Fonte da obra e contexto editorial: <a href=\"https://www.josesaramago.org/livro/memorial-do-convento/\" target=\"_blank\" rel=\"noopener\">Fundação José Saramago, Memorial do Convento</a>. As passagens literárias leem-se no livro; a paginação varia entre edições.</p>"
+    },
+    "depois": {
+      "t": "ler",
+      "rot": "Para levar",
+      "html": "<p class=\"levar\">Uma interpretação melhora quando explica também o que a obriga a mudar.</p><p>No caderno, escreve quatro a seis linhas. Retoma a hipótese inicial sobre a liberdade: apresenta a tua leitura agora, uma passagem que a apoia e outra que a limita, com as páginas da tua edição. Explica o que mudou. Se manténs a hipótese, mostra como ela resiste ao contraexemplo. Revê a síntese com o livro.</p><p>Fonte da obra e contexto editorial: <a href=\"https://www.josesaramago.org/livro/memorial-do-convento/\" target=\"_blank\" rel=\"noopener\">Fundação José Saramago, <i>Memorial do Convento</i></a>. As passagens literárias leem-se no livro; a paginação varia entre edições.</p>"
+    },
+    "medidas": [],
+    "ficheiro": "m9/recursos/f13.js"
+  },
+  {
+    "licao": "m4-f01",
+    "cartao": 1,
+    "tipo": "ler",
+    "intervencao": "P2: orientar a leitura para a relação que o fecho pede",
+    "antes": {
+      "t": "ler",
+      "rot": "Abre",
+      "titulo": "Pregar a quem não ouve",
+      "html": "<figure class=\"fig inteiro cor\"><span class=\"moldura\"><img src=\"../../img/fontes/santo-antonio-peixes-garcia-fernandes.jpg\" alt=\"Santo António, de hábito de frade e cruz na mão, aponta para a água, onde peixes põem a cabeça de fora. Ao fundo, a cidade e uma multidão na praça; à direita, dois homens observam.\" loading=\"lazy\"></span><figcaption>Garcia Fernandes, <i>Santo António a pregar aos peixes</i>, c. 1535-1540, MNAA. Domínio público.</figcaption></figure><p class=\"abre-gancho\">Um santo aponta para a água, e os peixes põem a cabeça de fora. Em 1654, em São Luís do Maranhão, o padre António Vieira conta esta cena num sermão e, três dias depois, embarca às escondidas.</p><p class=\"abre-perg\">Porque prega Vieira aos peixes, se quem precisa de ouvir são os homens?</p>",
+      "aula": {
+        "linha": "90 minutos: ler o cap. I, decidir, perceber a alegoria, responder em papel."
+      }
+    },
+    "depois": {
+      "t": "ler",
+      "rot": "Abre",
+      "titulo": "Pregar a quem não ouve",
+      "html": "<figure class=\"fig inteiro cor\"><span class=\"moldura\"><img src=\"../../img/fontes/santo-antonio-peixes-garcia-fernandes.jpg\" alt=\"Santo António, de hábito de frade e cruz na mão, aponta para a água, onde peixes põem a cabeça de fora. Ao fundo, a cidade e uma multidão na praça; à direita, dois homens observam.\" loading=\"lazy\"></span><figcaption>Garcia Fernandes, <i>Santo António a pregar aos peixes</i>, c. 1535-1540, MNAA. Domínio público.</figcaption></figure><p class=\"abre-gancho\">Um santo aponta para a água, e os peixes põem a cabeça de fora. Em 1654, em São Luís do Maranhão, o padre António Vieira conta esta cena num sermão e, três dias depois, embarca às escondidas.</p><p class=\"abre-perg\">Porque prega Vieira aos peixes, se quem precisa de ouvir são os homens? Procura, ao ler, o que a mudança de auditório conserva e o que põe em causa.</p>",
+      "aula": {
+        "linha": "90 minutos: ler o cap. I, decidir, perceber a alegoria, responder em papel."
+      }
+    },
+    "medidas": [],
+    "ficheiro": "m4/licao-m4-f01/index.html"
+  },
+  {
+    "licao": "m4-f01",
+    "cartao": 17,
+    "tipo": "ler",
+    "intervencao": "P2: responder à abertura com prova e distinção de uma leitura próxima",
+    "antes": {
+      "t": "ler",
+      "rot": "Agora, em papel",
+      "titulo": "A resposta que entregas",
+      "html": "<p class=\"papel-q\">Porque prega Vieira aos peixes? Responde em quatro a seis linhas, com a palavra alegoria e uma citação do texto entre aspas.</p><p>Em papel, à mão, para entregar no fim da aula. Nada se escreve no telemóvel.</p><details class=\"mais\"><summary>O que conta</summary><div><ol><li>Responde à pergunta: os colonos de São Luís não o querem ouvir, porque ele defende os indígenas.</li><li>Liga Vieira a Santo António em Arimino.</li><li>Diz que o sermão é uma alegoria: os peixes valem pelos homens.</li><li>Usa uma citação do texto, entre aspas, para mostrar o que António muda e o que não muda.</li></ol></div></details><details class=\"mais\"><summary>Um exemplo</summary><div><p>Vieira prega aos peixes porque os colonos de São Luís não o querem ouvir: escravizam os indígenas, que ele defende. Faz como Santo António em Arimino, que «mudou somente o púlpito e o auditório, mas não desistiu da doutrina». O sermão é uma alegoria: o que diz aos peixes vale para os homens. Para Vieira, falar aos peixes não é desistir: é outra maneira de dizer aos homens o que eles recusam ouvir.</p></div></details>"
+    },
+    "depois": {
+      "t": "ler",
+      "rot": "Agora, em papel",
+      "titulo": "A resposta que entregas",
+      "html": "<p class=\"papel-q\">Porque prega Vieira aos peixes? Responde em quatro a seis linhas: explica a alegoria, cita a expressão que mostra o que muda e distingue essa mudança de uma desistência da doutrina.</p><p>Em papel, à mão, para entregar no fim da aula. Nada se escreve no telemóvel.</p><details class=\"mais\"><summary>O que conta</summary><div><ol><li>Responde à pergunta: os colonos de São Luís não o querem ouvir, porque ele defende os indígenas.</li><li>Liga Vieira a Santo António em Arimino.</li><li>Diz que o sermão é uma alegoria: os peixes valem pelos homens.</li><li>Usa uma citação do texto, entre aspas, para mostrar o que António muda e o que não muda.</li></ol></div></details><details class=\"mais\"><summary>Um exemplo</summary><div><p>Vieira prega aos peixes porque os colonos de São Luís não o querem ouvir: escravizam os indígenas, que ele defende. Faz como Santo António em Arimino, que «mudou somente o púlpito e o auditório, mas não desistiu da doutrina». O sermão é uma alegoria: o que diz aos peixes vale para os homens. Para Vieira, falar aos peixes não é desistir: é outra maneira de dizer aos homens o que eles recusam ouvir.</p></div></details>"
+    },
+    "medidas": [],
+    "ficheiro": "m4/licao-m4-f01/index.html"
+  },
+  {
+    "licao": "m4-f28",
+    "cartao": 13,
+    "tipo": "escolha",
+    "intervencao": "P5: escolher a relação entre provas que distingue duas leituras",
+    "antes": {
+      "t": "escolha",
+      "p": "Um comentário diz «Madalena está muito triste porque se sente mal». Que revisão ajuda a compreender o conflito?",
+      "o": [
+        "Trocar «muito triste» por «profundamente perturbada»",
+        "Ligar «felicidade» a «terrores» e explicar a tensão",
+        "Acrescentar o resumo de toda a peça antes da opinião"
+      ],
+      "c": 1,
+      "f": "A revisão melhora quando mostra **o que está em tensão e como o texto o constrói**. Aqui, as palavras de felicidade e de medo coexistem: não basta trocar um adjetivo ou resumir a história.",
+      "g": "m4-tpc",
+      "fe": [
+        "O vocabulário pode ficar mais formal, mas a explicação continua sem prova do texto.",
+        null,
+        "O resumo não substitui a leitura de uma passagem. Escolhe sinais relevantes e explica a relação entre eles."
+      ]
+    },
+    "depois": {
+      "t": "escolha",
+      "p": "Um comentário diz «Madalena está triste porque se sente mal». Que revisão explica o conflito entre «felicidade» e «terrores»?",
+      "o": [
+        "Ligar a felicidade ao passado e o medo à perda do amor no presente.",
+        "Ligar a felicidade ao amor e o medo à dificuldade de o viver em paz.",
+        "Ligar a felicidade à aparência e o medo à ausência de amor sincero."
+      ],
+      "c": 1,
+      "f": "«Felicidade» e «terrores» pertencem à mesma relação: o amor existe, mas o medo impede Madalena de o gozar em segurança. A prova distingue esta tensão de uma sucessão entre amor passado e desamor presente.",
+      "g": "m4-tpc",
+      "fe": [
+        "Deslocas a felicidade para um tempo que a fala não indica. Relê «imensa felicidade» e o amor que a dava.",
+        null,
+        "Confundes uma felicidade impedida com uma felicidade fingida. Relê a expressão «não me deixam gozar»: o que existe, mas não pode ser vivido em paz?"
+      ]
+    },
+    "medidas": [
+      {
+        "k": 3,
+        "caracteres": [
+          67,
+          68,
+          67
+        ],
+        "amplitude": 0.014925373134328358,
+        "vantagem": 1.0149253731343284,
+        "certa_mais_longa": true,
+        "certa_sozinha": true,
+        "todas_iguais": false,
+        "certa_25_porcento": false,
+        "amplitude_acima": false
+      }
+    ],
+    "ficheiro": "m4/recursos/tpc-entrada.js"
+  },
+  {
+    "licao": "m7-f01",
+    "cartao": 11,
+    "tipo": "completar",
+    "intervencao": "P4/P6: recuperar a distinção entre autor, criação e estatuto da fonte antes de consultar os dados",
+    "antes": {
+      "t": "completar",
+      "p": "Onde nasceu Caeiro e em que ano morreu?",
+      "p2": "Que cidade e que ano de morte deu Pessoa a Alberto Caeiro?",
+      "frase": "Caeiro nasceu em [1] em 1889 e morreu em [2].",
+      "lacunas": [
+        {
+          "o": [
+            "Tavira",
+            "Lisboa",
+            "Porto",
+            "Glasgow"
+          ],
+          "c": 1
+        },
+        {
+          "o": [
+            "1919",
+            "1935",
+            "1915",
+            "1914"
+          ],
+          "c": 2
+        }
+      ],
+      "f": "**Lisboa** e **1915**: uma vida curta, que Pessoa inventou e registou na carta.",
+      "g": "fim"
+    },
+    "depois": {
+      "t": "completar",
+      "p": "Antes de voltares à carta, distingue a vida atribuída a Caeiro da vida de quem a escreve.",
+      "p2": "Que estatuto têm as datas e os lugares que Pessoa atribui a Caeiro na carta?",
+      "frase": "Os dados da vida de Caeiro pertencem a uma [1]; a carta é um [2] de Pessoa sobre a criação dos heterónimos.",
+      "lacunas": [
+        {
+          "o": [
+            "biografia criada",
+            "memória pessoal",
+            "história familiar"
+          ],
+          "c": 0
+        },
+        {
+          "o": [
+            "registo imparcial",
+            "relato do autor",
+            "relato de Caeiro"
+          ],
+          "c": 1
+        }
+      ],
+      "f": "Pessoa atribui a Caeiro nascimento em Lisboa, em 1889, e morte em 1915. Estes dados compõem uma biografia criada. A carta documenta o que Pessoa conta sobre a criação; não transforma Caeiro numa pessoa historicamente independente.",
+      "g": "fim"
+    },
+    "medidas": [
+      {
+        "k": 3,
+        "caracteres": [
+          16,
+          15,
+          17
+        ],
+        "amplitude": 0.13333333333333333,
+        "vantagem": 0.9411764705882353,
+        "certa_mais_longa": false,
+        "certa_sozinha": false,
+        "todas_iguais": false,
+        "certa_25_porcento": false,
+        "amplitude_acima": false
+      },
+      {
+        "k": 3,
+        "caracteres": [
+          17,
+          15,
+          16
+        ],
+        "amplitude": 0.13333333333333333,
+        "vantagem": 0.8823529411764706,
+        "certa_mais_longa": false,
+        "certa_sozinha": false,
+        "todas_iguais": false,
+        "certa_25_porcento": false,
+        "amplitude_acima": false
+      }
+    ],
+    "ficheiro": "m7/licao-m7-f01/index.html"
+  },
+  {
+    "licao": "m2-f01",
+    "cartao": 13,
+    "tipo": "escolha",
+    "intervencao": "P4: distinguir o relato de uma acusação da sua demonstração",
+    "antes": {
+      "t": "escolha",
+      "p": "Dizer que o Autor «furtava de outros autores» é acusá-lo de…",
+      "p2": "De que acusavam Gil Vicente os homens que duvidavam dele?",
+      "o": [
+        "copiar as obras de outros",
+        "pagar a outros para escrever",
+        "representar obras de outros",
+        "assinar as obras do rei"
+      ],
+      "c": 0,
+      "f": "«Furtava» quer dizer **copiava**: a farsa foi a resposta a quem o acusava de copiar.",
+      "cita": "A seguinte farsa de folgar foi representada ao muito alto e mui poderoso rei D.",
+      "l": "0-0",
+      "g": 1,
+      "fe": [
+        null,
+        "A rubrica não fala de dinheiro: «furtava de outros autores» é tirar o que é dos outros (no vocabulário, «furtava» é copiava).",
+        "Representar peças alheias não seria furto; a dúvida é se o Autor «fazia de si mesmo estas obras».",
+        "O rei só assiste à farsa; a dúvida é se o Autor «fazia de si mesmo estas obras, ou se furtava de outros autores»."
+      ]
+    },
+    "depois": {
+      "t": "escolha",
+      "p": "A rubrica diz que alguns homens duvidavam da autoria. Que conclusão distingue a acusação da prova?",
+      "p2": "Que alcance tem «duvidavam» quando a rubrica apresenta a acusação de copiar?",
+      "o": [
+        "Regista uma suspeita de cópia, sem demonstrar que houve cópia.",
+        "Regista uma descoberta de cópia, confirmada pela presença do rei.",
+        "Regista uma admissão de cópia, confirmada pela escolha do tema."
+      ],
+      "c": 0,
+      "f": "«Duvidavam» regista uma suspeita, não a prova de um furto. A rubrica apresenta a composição sobre um tema dado como resposta ao desafio; importa distinguir o que relata do que demonstra.",
+      "cita": "A seguinte farsa de folgar foi representada ao muito alto e mui poderoso rei D.",
+      "l": "0-0",
+      "g": 1,
+      "fe": [
+        null,
+        "Confundes a presença do rei com uma decisão sobre a autoria. Relê «duvidavam»: que certeza exprime o verbo?",
+        "Confundes aceitar um desafio com admitir uma acusação. Relê «lhe deram este tema»: a proposta comprova uma cópia anterior?"
+      ]
+    },
+    "medidas": [],
+    "ficheiro": "m2/licao-m2-f01/index.html"
+  },
+  {
+    "licao": "m2-f13",
+    "cartao": 11,
+    "tipo": "escolha",
+    "intervencao": "P4: três hipóteses próximas sobre a relação entre defesa e acusação",
+    "antes": {
+      "t": "escolha",
+      "p": "Qual das revisões reconhece a falha da defesa sem inventar uma fala de Gil Vicente?",
+      "o": [
+        "Resumo da cena: ouvi missas, logo ninguém pode discutir o meu modo de trabalhar com o povo",
+        "Hipótese de leitura: falar de missas não responde aos enganos; falta enfrentar a acusação",
+        "Citação do autor: quem tem avental está sempre condenado, seja qual for a sua conduta"
+      ],
+      "c": 1,
+      "f": "A hipótese **enfrenta a acusação**, em vez de apresentar um mérito noutra dimensão como absolvição automática. Está identificada como hipótese de leitura: não se atribui a Gil Vicente nem se confunde com uma fala da peça.",
+      "fe": [
+        "É precisamente o salto que o diálogo põe em causa: «Ouvir missa, então roubar, / é caminho per’aqui».",
+        null,
+        "Essa frase não está na fonte: o Diabo acusa o Sapateiro de roubar o povo, não de ter avental."
+      ]
+    },
+    "depois": {
+      "t": "escolha",
+      "p": "Qual das revisões reconhece a falha da defesa sem inventar uma fala de Gil Vicente?",
+      "o": [
+        "Hipótese de leitura: as missas compensam os enganos, mesmo sem os reparar.",
+        "Hipótese de leitura: as missas não respondem ao dano causado por enganos.",
+        "Hipótese de leitura: os enganos tornam a missa o verdadeiro alvo da cena."
+      ],
+      "c": 1,
+      "f": "A hipótese **enfrenta a acusação**, em vez de apresentar um mérito noutra dimensão como absolvição automática. Está identificada como hipótese de leitura: não se atribui a Gil Vicente nem se confunde com uma fala da peça.",
+      "fe": [
+        "Confundes um mérito invocado com reparação do dano. Relê «Ouvir missa, então roubar»: a réplica aceita a compensação?",
+        null,
+        "Confundes o pretexto da defesa com o alvo da acusação. Relê «Tu roubaste»: que ação é censurada?"
+      ]
+    },
+    "medidas": [],
+    "ficheiro": "m2/licao-m2-f13/index.html"
+  },
+  {
+    "licao": "m3-f02",
+    "cartao": 22,
+    "tipo": "completar",
+    "intervencao": "P5/P6: a data fica na consulta; a resposta relaciona indícios e perspetivas",
+    "antes": {
+      "t": "completar",
+      "p": "Quando publicou Patrícia Lino o _Kit_, e de que história pergunta?",
+      "p2": "Que ano marca o _Kit_ de Patrícia Lino, e que chegada põe em causa?",
+      "frase": "Patrícia Lino publicou o _Kit_ em [1]: objetos inventados que perguntam quem conta a história de [2].",
+      "lacunas": [
+        {
+          "o": [
+            "2020",
+            "1572",
+            "1498",
+            "1983"
+          ],
+          "c": 0
+        },
+        {
+          "o": [
+            "1498",
+            "1572",
+            "2020",
+            "1983"
+          ],
+          "c": 0
+        }
+      ],
+      "f": "**2020**: o _Kit_ pergunta quem conta a história de **1498**, a chegada à Índia por mar.",
+      "g": "fim"
+    },
+    "depois": {
+      "t": "completar",
+      "p": "Que indícios distinguem a celebração épica da sátira no confronto com o _Kit_?",
+      "p2": "Completa a comparação pelo que cada obra faz, antes de voltares à síntese.",
+      "frase": "Na Proposição, «memórias gloriosas» integra os feitos numa [1]; no _Kit_, o disco que repete põe em causa a [2].",
+      "lacunas": [
+        {
+          "o": [
+            "celebração",
+            "lamentação",
+            "advertência"
+          ],
+          "c": 0
+        },
+        {
+          "o": [
+            "novidade desses relatos",
+            "repetição dos relatos",
+            "extinção desses relatos"
+          ],
+          "c": 1
+        }
+      ],
+      "f": "«Memórias gloriosas» enquadra os feitos como celebração. O disco que repete torna visível a repetição de uma versão do passado. O _Kit_, publicado em 2020, confronta essa memória; a data situa a obra, mas são os indícios que sustentam a comparação.",
+      "g": "fim"
+    },
+    "medidas": [
+      {
+        "k": 3,
+        "caracteres": [
+          10,
+          10,
+          11
+        ],
+        "amplitude": 0.1,
+        "vantagem": 0.9090909090909091,
+        "certa_mais_longa": false,
+        "certa_sozinha": false,
+        "todas_iguais": false,
+        "certa_25_porcento": false,
+        "amplitude_acima": false
+      },
+      {
+        "k": 3,
+        "caracteres": [
+          23,
+          21,
+          23
+        ],
+        "amplitude": 0.09523809523809523,
+        "vantagem": 0.9130434782608695,
+        "certa_mais_longa": false,
+        "certa_sozinha": false,
+        "todas_iguais": false,
+        "certa_25_porcento": false,
+        "amplitude_acima": false
+      }
+    ],
+    "ficheiro": "m3/licao-m3-f02/index.html"
+  },
+  {
+    "licao": "m3-f18",
+    "cartao": 13,
+    "tipo": "escolha",
+    "intervencao": "P4: distinguir plano narrativo, ordem dos acontecimentos e ato de narrar",
+    "antes": {
+      "t": "escolha",
+      "p": "Um colega chama plano da história de Portugal a toda a partida de Gama só porque aconteceu no passado. Que revisão melhora a análise?",
+      "o": [
+        "Tudo o que está no passado pertence ao mesmo plano",
+        "A partida é do plano da viagem, embora contada em recuo",
+        "Um recuo deixa de ser narrativa e passa a ser opinião",
+        "O número do canto determina por si só o plano narrativo"
+      ],
+      "c": 1,
+      "f": "**Plano** e **posição no tempo** respondem a perguntas diferentes. A partida integra a viagem; nesta apresentação, chega ao leitor através de uma recordação. O simples facto de um acontecimento ser passado não decide o seu plano narrativo.",
+      "g": "epopeia-8"
+    },
+    "depois": {
+      "t": "escolha",
+      "p": "Um colega chama plano da história de Portugal a toda a partida de Gama só porque aconteceu no passado. Que revisão melhora a análise?",
+      "o": [
+        "A partida pertence à história de Portugal por ser anterior ao encontro em Melinde.",
+        "A partida integra a viagem de Gama, embora o relato a apresente em recuo temporal.",
+        "A partida pertence ao tempo do narrador por surgir na fala de quem conta o passado."
+      ],
+      "c": 1,
+      "f": "**Plano** e **posição no tempo** respondem a perguntas diferentes. A partida integra a viagem; nesta apresentação, chega ao leitor através de uma recordação. O simples facto de um acontecimento ser passado não decide o seu plano narrativo.",
+      "g": "epopeia-8",
+      "fe": [
+        "Confundes o plano narrativo com a posição no tempo. Relê as duas ordens: que viagem inclui a partida?",
+        null,
+        "Confundes o acontecimento contado com o ato de o narrar. Compara a partida com a situação em que Gama a recorda."
+      ]
+    },
+    "medidas": [],
+    "ficheiro": "assets/pt-lessons/m3-f18.js"
+  },
+  {
+    "licao": "m5-f02",
+    "cartao": 25,
+    "tipo": "completar",
+    "intervencao": "P3/P4: delimitar a inferência biográfica a partir da dedicatória",
+    "antes": {
+      "t": "completar",
+      "p": "O que liga a dedicatória de Camilo ao romance?",
+      "p2": "Datada «Na cadêa da Relação do Porto», que relação cria a dedicatória entre Camilo e Simão?",
+      "frase": "A dedicatória, datada da mesma cadeia em 1861, liga a vida de [1] ao romance: é [2], não biografia.",
+      "lacunas": [
+        {
+          "o": [
+            "Camilo",
+            "Simão",
+            "Tadeu",
+            "Filippe Moreira Dias"
+          ],
+          "c": 0
+        },
+        {
+          "o": [
+            "sugestão biográfica",
+            "prova documental",
+            "nota à margem",
+            "opinião da leitora"
+          ],
+          "c": 0
+        }
+      ],
+      "f": "A vida de **Camilo** passa pela mesma cadeia de Simão: **sugestão biográfica**, não biografia.",
+      "g": "fim"
+    },
+    "depois": {
+      "t": "completar",
+      "p": "Que conclusão permite a referência à cadeia na dedicatória, sem confundir Camilo e Simão?",
+      "p2": "Completa a relação entre a dedicatória e o romance, distinguindo proximidade e identidade.",
+      "frase": "A referência à mesma cadeia aproxima os percursos por um [1]; não demonstra uma [2] entre autor e personagem.",
+      "lacunas": [
+        {
+          "o": [
+            "lugar partilhado",
+            "destino idêntico",
+            "relato imparcial"
+          ],
+          "c": 0
+        },
+        {
+          "o": [
+            "identidade biográfica",
+            "semelhança de lugares",
+            "aproximação sugerida"
+          ],
+          "c": 0
+        }
+      ],
+      "f": "A indicação do lugar aproxima os percursos e pode orientar a leitura. Não prova que Simão seja Camilo nem que o romance transcreva a vida do autor. Relê a data e o lugar da dedicatória: que dados se podem efetivamente comparar?",
+      "g": "fim"
+    },
+    "medidas": [],
+    "ficheiro": "m5/licao-m5-f02/index.html"
+  },
+  {
+    "licao": "m5-f15",
+    "cartao": 18,
+    "tipo": "escolha",
+    "intervencao": "P5: a mesma expressão não apaga a diferença entre as duas provas",
+    "antes": {
+      "t": "escolha",
+      "p": "Qual destas ideias pode abrir a comparação entre Simão e Carlos?",
+      "p2": "Com que ideia, certa, abres a comparação entre Simão e Carlos?",
+      "o": [
+        "Que os dois perdem a vida de maneiras opostas",
+        "Que Carlos é feliz em Paris e Simão na Índia",
+        "Que Simão e Carlos são o mesmo herói romântico",
+        "Que Camilo escreveu o seu romance depois de Eça"
+      ],
+      "c": 0,
+      "f": "Os dois **perdem a vida, mas de maneiras opostas**: Simão de uma vez, por amor; Carlos aos poucos.",
+      "g": "fim",
+      "fe": [
+        null,
+        "Nenhum é feliz: Simão perde tudo «por amor», e Carlos concorda com Ega que falharam a vida.",
+        "São heróis de tempos opostos: Simão é romântico e morre por amor; Carlos é o diletante que o Realismo ironiza.",
+        "É ao contrário: _Amor de Perdição_ é de 1862 e _Os Maias_ de 1888; Camilo escreveu primeiro."
+      ]
+    },
+    "depois": {
+      "t": "escolha",
+      "p": "Que comparação distingue os sentidos de perder a vida nos dois excertos?",
+      "p2": "Que leitura explica a diferença entre o degredo de Simão e a vida «mais nullo» de Carlos?",
+      "o": [
+        "Simão sofre uma rutura; Carlos reconhece o esvaziamento de uma vida sem realização.",
+        "Simão e Carlos sofrem a mesma rutura; os excertos apenas variam a sua intensidade.",
+        "Simão e Carlos perdem o mesmo amor; os excertos apenas variam o lugar da separação."
+      ],
+      "c": 0,
+      "f": "A expressão «perder a vida» precisa de ser delimitada: o degredo rompe o percurso de Simão; o juízo sobre Carlos aponta para uma existência sem realização. As provas permitem comparar perdas sem as tornar idênticas.",
+      "g": "fim",
+      "fe": [
+        null,
+        "Confundes um critério comum com experiências idênticas. Relê o degredo e «mais nullo»: que perda descreve cada excerto?",
+        "Reduzes a comparação à separação amorosa. Relê «Nada mais inoffensivo, mais nullo»: o juízo limita-se a uma relação?"
+      ]
+    },
+    "medidas": [],
+    "ficheiro": "m5/licao-m5-f15/index.html"
+  },
+  {
+    "licao": "m6-f13",
+    "cartao": 13,
+    "tipo": "escolha",
+    "intervencao": "P5: ligar forma, destinatário e direção do apelo, sem alternativas descartáveis",
+    "antes": {
+      "t": "escolha",
+      "p": "Um comentário diz: «É um poema interventivo porque tem imperativos.» Qual dos desenvolvimentos melhora a justificação?",
+      "o": [
+        "Repetir a etiqueta «interventivo» três vezes, para que a ideia fique bem clara a quem lê",
+        "Acrescentar que «Accorda» e «Escuta» chamam o poeta a aproximar-se das multidões",
+        "Afirmar que todo o imperativo é marca de Antero e, por isso, prova a intervenção",
+        "Substituir os versos por uma opinião sobre o autor e sobre a sua vida política"
+      ],
+      "c": 1,
+      "f": "A forma verbal precisa de ser ligada ao efeito e ao destinatário: os imperativos procuram deslocar o poeta do recolhimento para a vida coletiva. Assim, a prova deixa de ser uma lista de recursos e passa a sustentar uma interpretação.",
+      "g": "m6-f13-12",
+      "fe": [
+        "Repetir a etiqueta não acrescenta prova; falta dizer o que os imperativos fazem: chamam o poeta para junto das multidões.",
+        null,
+        "O imperativo é de toda a língua, não de um autor; o que conta é o efeito aqui: «Accorda!» e «Escuta!» movem o destinatário.",
+        "Sem versos não há prova; a justificação melhora quando liga «Accorda» e «Escuta» ao destinatário e ao efeito."
+      ]
+    },
+    "depois": {
+      "t": "escolha",
+      "p": "Um comentário diz: «É um poema interventivo porque tem imperativos.» Qual dos desenvolvimentos melhora a justificação?",
+      "o": [
+        "Ligar «Accorda» e «Escuta» ao regresso do poeta ao recolhimento do sonho.",
+        "Ligar «Accorda» e «Escuta» à aproximação do poeta à vida das multidões.",
+        "Ligar «Accorda» e «Escuta» à descrição do que o poeta já fez pelas multidões."
+      ],
+      "c": 1,
+      "f": "A forma verbal precisa de ser ligada ao efeito e ao destinatário: os imperativos procuram deslocar o poeta do recolhimento para a vida coletiva. Assim, a prova deixa de ser uma lista de recursos e passa a sustentar uma interpretação.",
+      "g": "m6-f13-12",
+      "fe": [
+        "Inverte-se o movimento pedido ao destinatário. Relê o apelo e a referência às multidões: para onde é chamado?",
+        null,
+        "Confundes uma ação pedida com uma ação já realizada. Relê os imperativos: relatam o passado ou procuram mover alguém?"
+      ]
+    },
+    "medidas": [],
+    "ficheiro": "m6/licao-m6-f13/index.html"
+  },
+  {
+    "licao": "m8-f01",
+    "cartao": 20,
+    "tipo": "escolha",
+    "intervencao": "P4: três perguntas legítimas, com critérios distintos de pertinência",
+    "antes": {
+      "t": "escolha",
+      "p": "Qual destas perguntas a um poeta é aberta e usa uma lente?",
+      "p2": "Escolhe a pergunta que abre a conversa com um poeta, com uma das quatro lentes.",
+      "o": [
+        "«Que poeta antigo retoma, e porquê?»",
+        "«Gosta de escrever?»",
+        "«Nasceu em Lisboa?»",
+        "«Escreve em verso livre, sim ou não?»"
+      ],
+      "c": 0,
+      "f": "**«Que poeta antigo retoma, e porquê?»**: é aberta e olha pela lente da tradição; as outras respondem-se com uma palavra.",
+      "g": "fim",
+      "fe": [
+        null,
+        "Responde-se com «sim» ou «não» e não usa nenhuma das quatro lentes: fecha a conversa em vez de a abrir.",
+        "É um dado biográfico que se responde com uma palavra; não pergunta nada sobre a obra nem usa uma lente.",
+        "Fala da forma, mas o «sim ou não» fecha a pergunta: o poeta não tem de explicar nada."
+      ]
+    },
+    "depois": {
+      "t": "escolha",
+      "p": "Queres perceber como um poema transforma uma forma herdada. Que pergunta aberta segue essa lente?",
+      "p2": "Que pergunta da lente da tradição permite investigar a transformação de uma forma antiga?",
+      "o": [
+        "Que forma antiga retoma o poema e que mudança introduz nela?",
+        "Que conflito atual apresenta o poema e que vozes inclui nele?",
+        "Que imagem de quem escreve surge e que palavras a constroem?"
+      ],
+      "c": 0,
+      "f": "As três perguntas são abertas, mas só a primeira testa a relação com uma forma herdada. A lente escolhe-se pela relação que se quer investigar, não pela mera presença de uma pergunta longa.",
+      "g": "fim",
+      "fe": [
+        null,
+        "Esta pergunta pode ser útil, mas segue o contemporâneo. Relê o objetivo: a investigação incide numa forma herdada.",
+        "Esta pergunta segue as figurações de quem escreve. Relê o objetivo: o que se pretende comparar é a forma antiga e a sua transformação."
+      ]
+    },
+    "medidas": [],
+    "ficheiro": "m8/licao-m8-f01/index.html"
+  },
+  {
+    "licao": "m8-f12",
+    "cartao": 5,
+    "tipo": "completar",
+    "intervencao": "P6: tentar dois casos antes de recuperar a definição",
+    "antes": {
+      "t": "completar",
+      "p": "O que perguntam as lentes do contemporâneo e da tradição?",
+      "p2": "Que pergunta faz cada uma das duas primeiras lentes?",
+      "frase": "A lente do contemporâneo pergunta [1] e a da tradição pergunta [2] ao mesmo poema.",
+      "lacunas": [
+        {
+          "o": [
+            "como se vê quem escreve",
+            "que mundo e que problemas aparecem",
+            "se o poema fala da própria poesia",
+            "que forma e que rima tem"
+          ],
+          "c": 1
+        },
+        {
+          "o": [
+            "que recursos expressivos usa o poema",
+            "a quem dá voz o sujeito poético",
+            "que autores, formas ou mitos retoma",
+            "que mundo do seu tempo aparece"
+          ],
+          "c": 2
+        }
+      ],
+      "f": "Contemporâneo: **o mundo do seu tempo**; tradição: **o que retoma** ou contesta de antes.",
+      "g": "fim"
+    },
+    "depois": {
+      "t": "completar",
+      "p": "Antes de consultar a síntese, escolhe a lente pertinente para cada caso criado.",
+      "p2": "Que lente orienta cada relação nestes dois casos criados?",
+      "frase": "Num poema sobre a precariedade do trabalho, a relação com problemas do seu tempo pede a lente do [1]; num poema que transforma uma oração, essa relação pede a lente da [2].",
+      "lacunas": [
+        {
+          "o": [
+            "contemporâneo",
+            "ato de criação",
+            "retrato da voz"
+          ],
+          "c": 0
+        },
+        {
+          "o": [
+            "figuração de uma voz",
+            "tradição literária",
+            "forma das estrofes"
+          ],
+          "c": 1
+        }
+      ],
+      "f": "No primeiro caso, a relação indicada é com um problema do tempo do poema. No segundo, é com um texto anterior que se transforma. Um poema pode admitir várias lentes; aqui escolhes a que responde à relação explicitamente pedida.",
+      "g": "fim"
+    },
+    "medidas": [],
+    "ficheiro": "m8/licao-m8-f12/index.html"
+  },
+  {
+    "licao": "m8-f12",
+    "cartao": 6,
+    "tipo": "completar",
+    "intervencao": "P6: recuperar pelos indícios dos casos, com consulta disponível",
+    "antes": {
+      "t": "completar",
+      "p": "O que perguntam as lentes das figurações e da arte poética?",
+      "p2": "Que pergunta faz cada uma das duas últimas lentes?",
+      "frase": "Com a lente das figurações perguntas [1] e com a da arte poética perguntas [2] ao poema que lês.",
+      "lacunas": [
+        {
+          "o": [
+            "como se vê quem escreve",
+            "que mitos antigos retoma",
+            "que mundo aparece",
+            "que recursos usa"
+          ],
+          "c": 0
+        },
+        {
+          "o": [
+            "que forma e que rima tem o poema",
+            "a quem dá voz o sujeito poético",
+            "se o poema fala da própria poesia",
+            "que problemas do seu tempo aparecem"
+          ],
+          "c": 2
+        }
+      ],
+      "f": "Figurações: **como se vê quem escreve**; arte poética: **se fala da própria poesia**.",
+      "g": "fim"
+    },
+    "depois": {
+      "t": "completar",
+      "p": "Tenta a relação antes de reler a síntese: que pergunta orienta cada caso criado?",
+      "p2": "Completa as duas perguntas de leitura a partir destes casos criados.",
+      "frase": "Se uma voz se apresenta como alguém que escuta à margem, investigas a [1]; se o poema discute como se escolhem palavras, investigas a [2].",
+      "lacunas": [
+        {
+          "o": [
+            "imagem de quem fala",
+            "época de quem fala",
+            "família de quem fala"
+          ],
+          "c": 0
+        },
+        {
+          "o": [
+            "biografia de quem cria",
+            "reflexão da criação",
+            "receção de quem cria"
+          ],
+          "c": 1
+        }
+      ],
+      "f": "O primeiro caso pede observar a imagem construída pela voz, sem a confundir com uma biografia. O segundo põe em discussão a própria criação: é uma questão de arte poética. Volta à síntese se precisares de recuperar os nomes das lentes.",
+      "g": "fim"
+    },
+    "medidas": [],
+    "ficheiro": "m8/licao-m8-f12/index.html"
+  },
+  {
+    "licao": "m8-f12",
+    "cartao": 16,
+    "tipo": "vf",
+    "intervencao": "P3: substituir extensão administrativa por um limite da comparação",
+    "antes": {
+      "t": "vf",
+      "p": "A resposta de desenvolvimento da revisão tem 60 a 80 palavras.",
+      "p2": "São 60 a 80 as palavras pedidas na resposta de desenvolvimento.",
+      "v": false,
+      "f": "Falso: tem **120 a 150** palavras; 60 a 80 é o parágrafo sobre aspeto, anáfora e catáfora.",
+      "g": "fim",
+      "fe": "Não: a resposta de desenvolvimento tem 120 a 150 palavras («O essencial»); 60 a 80 é o parágrafo de gramática."
+    },
+    "depois": {
+      "t": "vf",
+      "p": "Dois textos deixam algo por explicar; isso basta para concluir que produzem o mesmo efeito.",
+      "p2": "Uma omissão num poema e uma omissão num conto têm o mesmo efeito só por serem omissões.",
+      "v": false,
+      "f": "Falso: o traço comum permite iniciar a comparação, mas o efeito depende das pistas e da situação de cada texto. Procura o que fica por explicar e o trabalho que essa omissão pede ao leitor.",
+      "g": "fim",
+      "fe": "Confundes um procedimento comum com um efeito idêntico. Relê as perguntas do poema e o encontro de «George»: o que fica por explicar em cada um?"
+    },
+    "medidas": [],
+    "ficheiro": "m8/licao-m8-f12/index.html"
+  },
+  {
+    "licao": "m9-f01",
+    "cartao": 14,
+    "tipo": "escolha",
+    "intervencao": "P4: distinguir tempo da narração, tempo da história e antecipação",
+    "antes": {
+      "t": "escolha",
+      "p": "«essa é a medida de hoje, não a da época»: o que mostra este aviso do narrador?",
+      "p2": "Quando o narrador mede em metros e diz «hoje», de que tempo está a falar?",
+      "o": [
+        "Que a voz distingue o seu presente da época dos acontecimentos",
+        "Que o narrador viveu no tempo de D. João V e viu a obra crescer",
+        "Que os alicerces de Mafra foram mal medidos pelos mestres da época",
+        "Que o narrador adianta o que vai acontecer depois da sagração"
+      ],
+      "c": 0,
+      "f": "Neste comentário sobre as unidades de medida, o «hoje» pertence ao presente de quem narra e é contrastado com a época da construção. Isto situa o tempo da narração relativamente aos acontecimentos; não é, por si só, um recuo ou uma antecipação do enredo. A data de publicação do livro é uma informação diferente.",
+      "g": "fim",
+      "fe": [
+        null,
+        "É o contrário: quem conta mede em metros, a medida «de hoje»; fala de séculos depois, não do tempo de D. João V.",
+        "O aviso não aponta erro nenhum: diz que o metro é a medida de hoje, para separar o presente de quem conta da época da obra.",
+        "Adiantar acontecimentos seria uma prolepse; este «hoje» não conta nada do enredo, só situa de onde a voz fala («Em paralelo»)."
+      ]
+    },
+    "depois": {
+      "t": "escolha",
+      "p": "«essa é a medida de hoje, não a da época»: o que mostra este aviso do narrador?",
+      "p2": "Quando o narrador mede em metros e diz «hoje», de que tempo está a falar?",
+      "o": [
+        "A voz distingue o presente de quem conta da época em que a obra é construída.",
+        "A voz passa a narrar a construção como acontecimento do presente de quem conta.",
+        "A voz antecipa um episódio da construção ocorrido depois da passagem citada."
+      ],
+      "c": 0,
+      "f": "Neste comentário sobre as unidades de medida, o «hoje» pertence ao presente de quem narra e é contrastado com a época da construção. Isto situa o tempo da narração relativamente aos acontecimentos; não é, por si só, um recuo ou uma antecipação do enredo. A data de publicação do livro é uma informação diferente.",
+      "g": "fim",
+      "fe": [
+        null,
+        "Confundes a medida usada no comentário com a época da ação. Relê «não a da época»: que distinção mantém o narrador?",
+        "Confundes um comentário sobre medidas com antecipação do enredo. Relê «essa é a medida de hoje»: é anunciado algum acontecimento posterior?"
+      ]
+    },
+    "medidas": [],
+    "ficheiro": "m9/licao-m9-f01/index.html"
+  },
+  {
+    "licao": "m9-f13",
+    "cartao": 3,
+    "tipo": "escolha",
+    "intervencao": "P3: distinguir teste, confirmação seletiva e inversão seletiva",
+    "antes": {
+      "t": "escolha",
+      "p": "Qual dos procedimentos testa a hipótese em vez de procurar apenas confirmá-la?",
+      "o": [
+        "Escolher só as cenas que parecem concordar com ela",
+        "Confrontar uma cena que a apoia com outra que a limite",
+        "Reescrever a hipótese até soar convincente, sem voltar ao texto",
+        "Aceitar a hipótese porque usa um conceito abstrato e elegante"
+      ],
+      "c": 1,
+      "f": "Testar implica procurar **apoio e limite**. O voo pode sustentar a ideia de libertação, mas o fim do romance exige perguntar o que essa liberdade não consegue impedir. Uma hipótese que só admite confirmação protege-se da leitura.",
+      "g": "m9-f13-1",
+      "fe": [
+        "Só confirmar protege a hipótese da leitura: o voo pode apoiá-la, mas o fim do romance pode limitá-la.",
+        null,
+        "Mudar as palavras sem voltar às passagens não testa nada; o teste é pôr a hipótese diante de episódios (XVI, XIX, XXV).",
+        "Um conceito abstrato não prova a hipótese; prova-a ou limita-a uma passagem do livro."
+      ]
+    },
+    "depois": {
+      "t": "escolha",
+      "p": "Qual dos procedimentos testa a hipótese em vez de procurar apenas confirmá-la?",
+      "o": [
+        "Comparar duas cenas favoráveis para confirmar o alcance inicial da hipótese.",
+        "Confrontar uma cena favorável com outra que possa limitar o seu alcance.",
+        "Comparar duas cenas desfavoráveis para substituir a hipótese pela contrária."
+      ],
+      "c": 1,
+      "f": "Testar implica procurar **apoio e limite**. O voo pode sustentar a ideia de libertação, mas o fim do romance exige perguntar o que essa liberdade não consegue impedir. Uma hipótese que só admite confirmação protege-se da leitura.",
+      "g": "m9-f13-1",
+      "fe": [
+        "Apoiar uma hipótese não basta para testar o seu limite. Relê o voo e o fim do romance: que diferença precisa de ser explicada?",
+        null,
+        "Inverter a hipótese sem confrontar o seu apoio repete a seleção parcial. Compara o voo com o fim: o que cada episódio sustenta ou limita?"
+      ]
+    },
+    "medidas": [],
+    "ficheiro": "m9/recursos/f13.js"
+  },
+  {
+    "licao": "m9-f13",
+    "cartao": 19,
+    "tipo": "escolha",
+    "intervencao": "P4: separar atribuição, alvo e alcance da generalização",
+    "antes": {
+      "t": "escolha",
+      "p": "Um colega escreve: Saramago diz que nenhuma instituição pode ter valor. Que revisão é necessária?",
+      "o": [
+        "Reforçar a frase com mais adjetivos de condenação",
+        "Apresentar a frase como citação mesmo sem a localizar",
+        "Distinguir voz, contexto e alcance, com uma passagem",
+        "Tirar as referências ao poder para evitar a discussão"
+      ],
+      "c": 2,
+      "f": "A frase atribui ao autor uma **generalização** que precisa de prova. Primeiro identifica quem fala e a situação; depois delimita o alvo da crítica. Nem uma leitura favorável nem uma leitura desfavorável às instituições pode substituir essa análise.",
+      "g": "m9-f13-13",
+      "fe": [
+        "Mais adjetivos tornam a frase mais forte, não mais provada; falta saber quem fala e onde («Estação 4»).",
+        "Pôr aspas sem localizar a frase é atribuir ao autor o que ele não escreveu; uma citação leva página.",
+        null,
+        "Fugir ao poder não resolve: a crítica existe; o que falta é delimitar o alvo e apoiá-lo numa passagem."
+      ]
+    },
+    "depois": {
+      "t": "escolha",
+      "p": "Um colega escreve: Saramago diz que nenhuma instituição pode ter valor. Que revisão é necessária?",
+      "o": [
+        "Atribuir o juízo ao autor e apoiar a generalização num episódio de abuso.",
+        "Atribuir o juízo à personagem e estendê-lo às outras instituições do livro.",
+        "Identificar a voz e o alvo da crítica, delimitando o juízo pela passagem."
+      ],
+      "c": 2,
+      "f": "A frase atribui ao autor uma **generalização** que precisa de prova. Primeiro identifica quem fala e a situação; depois delimita o alvo da crítica. Nem uma leitura favorável nem uma leitura desfavorável às instituições pode substituir essa análise.",
+      "g": "m9-f13-13",
+      "fe": [
+        "Confundes uma crítica localizada com uma posição geral do autor. Relê a Estação 4: quem fala e que situação é criticada?",
+        "Distinguir a voz não autoriza alargar o alcance. Relê o alvo da crítica na Estação 4: a passagem abrange todas as instituições?",
+        null
+      ]
+    },
+    "medidas": [],
+    "ficheiro": "m9/recursos/f13.js"
+  }
+]

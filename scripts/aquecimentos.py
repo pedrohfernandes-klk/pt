@@ -34,6 +34,7 @@ Uso: python3 scripts/aquecimentos.py [--saida PASTA] [--dados PASTA] [slug ...]
 Idempotente: só reescreve um ficheiro quando o conteúdo muda. --saida escreve noutra raiz, para os testes compararem
 sem mexer na árvore.
 """
+from aquecimentos_falas_criadas import fala_criada
 from html import escape
 from pathlib import Path
 import argparse
@@ -135,6 +136,9 @@ def validar(raiz, d):
         if re.search(r'\w ·|· \w', visivel):
             erros.append(f'cartão {n}: «·» dentro de uma frase')
         for citacao in re.findall(r'«([^»]{12,})»', visivel):
+            # 01/11/2026: falas de casos inventados são conferidas numa lista literal fechada.
+            if fala_criada(d['slug'], n, c, citacao):
+                continue
             for verso in [v.strip() for v in citacao.split(' / ')]:
                 if verso not in fontes:
                     erros.append(f'cartão {n}: citação que não está letra a letra nas lições indicadas: «{verso}»')
@@ -183,6 +187,9 @@ def pagina(raiz, d):
         '<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">'
         f'<title>Aquecer · {escape(simples, quote=False)} · {M}</title>'
         f'<meta name="description" content="{escape(d["descricao"])}">'
+        '<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>'
+        '<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;family=Special+Elite&amp;display=swap" rel="stylesheet">'
+        '<style>.jogo .tit{text-wrap:balance}</style>'
         '<link rel="stylesheet" href="../../../assets/pt-lessons/lesson.css">'
         '<script defer src="../../../assets/pt-lessons/casca.js"></script>'
         f'<script defer src="../../../assets/pt-lessons/jogo.js?v={V_JOGO}"></script>'
@@ -195,6 +202,7 @@ def pagina(raiz, d):
         '<span class="c-num" data-c-num></span><button type="button" class="c-barra" data-c-barra aria-label="Ver os cartões já feitos" disabled>'
         '<svg viewBox="0 0 1 10" preserveAspectRatio="none" aria-hidden="true"></svg></button>'
         '<span class="c-modo" data-c-modo hidden></span>'
+        '<button type="button" class="c-ic" data-c-como aria-label="Como se faz" title="Como se faz" hidden><span class="c-roda">?</span></button>'
         '<button type="button" class="c-ic" data-c-som aria-pressed="false" aria-label="Som"><span class="c-roda">♪</span></button>'
         '<button type="button" class="c-ic" data-c-menu aria-label="Menu" aria-expanded="false"><span class="c-tres"></span></button></header>'
         f'<h1 class="c-sr">Aquecer: {titulo}</h1>'
@@ -241,8 +249,8 @@ def main(argv=None):
         alvo = saida / 'tarefas' / d['slug'] / 'aquecimento' / 'index.html'
         html = pagina(raiz, d)
         alvo.parent.mkdir(parents=True, exist_ok=True)
-        if not alvo.exists() or alvo.read_text('utf-8') != html:
-            alvo.write_text(html, 'utf-8')
+        if not alvo.exists() or alvo.read_bytes() != html.encode('utf-8'):
+            alvo.write_text(html, 'utf-8', newline='\n')
         feitos.append(d['slug'])
     for slug, erros in falhas.items():
         print(f'NÃO GERADO {slug}:', *erros, sep='\n  ', file=sys.stderr)
