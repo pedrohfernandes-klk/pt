@@ -3,8 +3,8 @@
  "_nota": "05/11/2026: Laboratório do exame: a ligação e as notas falam da lição (não de uma «leitura de apoio»), camada mais recente, por cima da tabela dos seis movimentos. 01/11/2026: duração das sessões de exame atualizada para 50 minutos (decisão 106); trocas, ocorrências e restantes ficheiros preservados; só os resumos dos ficheiros do exame que o pedido pt #155 muda foram refeitos (07/11/2026: sobre a fusão com o main), sem mudar o base_commit do manifesto, que continua a ser o das bases dos outros ficheiros.",
  "files": {
   "assets/exame/app.js": {
-   "base_sha256_lf": "cd765c6aee7aa9118896277f41382c76e96dd19f8cc1b65c6e599383f2994127",
-   "after_sha256_lf": "80418250fdcfe7208ca6bb470f330889405f4463701272278e4906f4b4152949",
+   "base_sha256_lf": "82c3f1421227315d4088b22f4cb6cf4e575a90846931513972048202ad7032a3",
+   "after_sha256_lf": "51a7b77770c4dd708d2d3ce11a5df7a579d9ae535b8c871f3a775b1434e4f53e",
    "edits": [
     {
      "location": "Fonte da sessão: a ligação leva à lição do módulo",

@@ -254,7 +254,7 @@ def pagina(d, raiz=ROOT):
 <link rel="stylesheet" href="../../../assets/relogio.css">
 <script defer src="../../../assets/relogio.js"></script>
 {molde(raiz)}
-<link rel="stylesheet" href="../../../assets/exame/aquecimento.css?v=20261102">
+<link rel="stylesheet" href="../../../assets/exame/aquecimento.css?v=20261107">
 <link rel="stylesheet" href="../../../assets/appearance.css?v=20261025-universal-1">
 <script src="../../../assets/appearance.js?v=20261025-universal-1"></script>
 </head><body><div class="casca" data-casca>
@@ -274,7 +274,7 @@ def pagina(d, raiz=ROOT):
 <p class="c-menu-extra">{extra}</p></div></div></div>
 <noscript>Ativa o JavaScript para abrir os cartões. <a href="../../#{sid}/aquecer">Voltar à sessão</a>.</noscript>
 <script id="exame-aquecimento-dados" type="application/json">{dados}</script>
-<script defer src="../../../assets/exame/aquecimento.js?v=20261102"></script>
+<script defer src="../../../assets/exame/aquecimento.js?v=20261107"></script>
 <script defer src="../../../assets/projection-launcher.js?v=20261019.4" data-site="pt"></script>
 </body></html>
 '''

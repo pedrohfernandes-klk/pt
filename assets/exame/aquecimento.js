@@ -7,6 +7,9 @@
   const retorno = '../../' + (projetado ? '?projetar=1' : '') + '#' + d.sessao + '/';
   // O motor pede fe ao fechar o cartão. Nas lacunas, devolvemos só o retorno
   // das alternativas efetivamente escolhidas; f continua a explicar o conjunto.
+  // 07/11/2026 (achado 65): na ronda «Só os que errei», o motor copia os cartões com JSON e o getter avalia-se
+  // nessa altura, sem nenhuma lacuna escolhida; a cópia fica com o retorno próprio do cartão (fallback), que já
+  // não é genérico. Limitação aceite: nessa ronda não há retorno por alternativa.
   d.cartoes.filter(c => c.t === 'completar').forEach(c => {
     const fallback = c.fe;
     Object.defineProperty(c, 'fe', {enumerable: true, get() {
@@ -19,7 +22,25 @@
       return errors.length ? errors.join(' ') : fallback;
     }});
   });
+  // 07/11/2026 (achados 1 e 50): com ?projetar=1, o regresso e a continuação levam «projetar=1» no endereço, e
+  // assets/projection-launcher.js trocava-os todos por «Projetar esta página · QR para a turma». Marcam-se como já
+  // tratados antes de o lançador correr (este script vem antes no documento, e o seu observador também é criado
+  // antes); só as ligações para a sessão (#sNN/…) são marcadas: a de «Projetar» do menu continua a ser do lançador.
+  const paraSessao = 'a[href*="#' + d.sessao + '/"]:not([data-epi-projection-ready])';
+  const marcar = () => document.querySelectorAll(paraSessao).forEach(a => a.setAttribute('data-epi-projection-ready', ''));
   document.querySelectorAll('[data-exame-voltar]').forEach(a => { a.href = retorno + 'aquecer'; });
+  marcar();
+  // 07/11/2026 (achados 13, 58 e 70): aula:true fica, porque conserva a ordem dos bancos (sem ele o motor baralha os
+  // cartões e a abertura deixa de vir primeiro); o fim diz o que acabou: o aquecimento, não a aula nem a lição.
+  const FIM = [
+    ['.cartao.fim .rot span', 'A aula acaba aqui', 'Aquecimento feito'],
+    ['.cartao.fim .grande.lido', 'Fim da lição.', 'Fim do aquecimento.'],
+    ['.cartao.fim p', 'Já respondeste a esta lição', 'Já fizeste este aquecimento']
+  ];
+  const acertarFim = () => FIM.forEach(([sel, antes, depois]) => document.querySelectorAll(sel).forEach(el => {
+    if (el.children.length === 0 && el.textContent.includes(antes)) el.textContent = el.textContent.replace(antes, depois);
+  }));
+  new MutationObserver(() => { marcar(); acertarFim(); }).observe(document.body, {childList: true, subtree: true});
   const relogio = EPIRelogio.criar(document.getElementById('relogio-aquecer'), {
     max: 10, passo: 1, rotulo: 'Tempo para aquecer',
     chave: projetado ? null : 'pt-exame-relogio-v2-' + d.sessao + '-aquecer'

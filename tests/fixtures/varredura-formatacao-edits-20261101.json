@@ -2955,8 +2955,8 @@
    ]
   },
   "assets/exame/app.js": {
-   "base_sha256_lf": "4809ed18871a8d50c2b60baf3960e2a49eb95554dca56c706962ba67e0254377",
-   "after_sha256_lf": "cd765c6aee7aa9118896277f41382c76e96dd19f8cc1b65c6e599383f2994127",
+   "base_sha256_lf": "78ef56115a5c0c207b73405cded93f597b9af8bb9e978ae5254cfa182f889cef",
+   "after_sha256_lf": "82c3f1421227315d4088b22f4cb6cf4e575a90846931513972048202ad7032a3",
    "edits": [
     {
      "location": "Varredura de formatação, troca mínima 1",
