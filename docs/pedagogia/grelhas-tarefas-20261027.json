@@ -5,7 +5,7 @@
    "modulo": "M1",
    "unidade": 1,
    "titulo": "Vozes da lírica medieval",
-   "produto": "Núcleo comum (duas respostas) e um tema à escolha (A ou B), à mão, entre 200 e 240 palavras, mais duas linhas finais que não contam para as palavras. O aquecimento não conta para a nota.",
+   "produto": "Núcleo comum (duas respostas) e um tema à escolha (A ou B), à mão, entre 200 e 240 palavras, mais duas linhas finais que não contam para as palavras. O aquecimento não conta para a nota.",
    "nota": "Os exemplos foram escritos para esta grelha com outros casos do mesmo tipo (outras cantigas, outras palavras, outras frases), nunca com as respostas da tarefa. As citações de cantigas vêm das lições do módulo.",
    "criterios": [
     {
@@ -54,7 +54,7 @@
      ]
     },
     {
-     "nome": "D. Dinis e Guilhade: a promessa, as passagens e o recurso",
+     "nome": "D. Dinis e Guilhade: a promessa, as passagens e o recurso",
      "max": 4,
      "niveis": {
       "0": [
@@ -80,6 +80,7 @@
     {
      "nome": "Tema à escolha (A ou B): cinco elementos e a justificação",
      "max": 6,
+     "max_em_listas": true,
      "niveis": {
       "0": [
        "Conta um ponto por elemento cumprido e mais um pela explicação que o tema pede. Aqui, não cumpres nenhum dos cinco elementos do teu tema.",
@@ -105,7 +106,7 @@
      "max": 3,
      "niveis": {
       "0": [
-       "Respostas soltas, ou muito fora das 200 a 240 palavras.",
+       "Respostas soltas, ou muito fora das 200 a 240 palavras.",
        "Três listas de palavras sem frases completas."
       ],
       "parcial": [
@@ -129,15 +130,15 @@
    "modulo": "M1",
    "unidade": 2,
    "titulo": "Crónica «Estar lá»",
-   "produto": "Núcleo comum (duas respostas de cerca de 40 palavras) e uma crónica à escolha, tema A ou B, de 160 a 200 palavras, com título e fontes no fim. À mão, com consulta. O núcleo, as fontes e o fecho ficam fora da contagem; o aquecimento não conta para a nota.",
-   "nota": "Os exemplos foram escritos para esta grelha com outros casos do mesmo tipo (outra fala, outra imagem, uma manhã na escola), nunca com as respostas da tarefa: são inventados, menos a gravura de D. Dinis, que vem das lições do módulo.",
+   "produto": "Núcleo comum (duas respostas de cerca de 40 palavras) e uma crónica à escolha, tema A ou B, de 160 a 200 palavras, com título e fontes no fim. À mão, com consulta. O núcleo, as fontes e o fecho ficam fora da contagem; o aquecimento não conta para a nota.",
+   "nota": "Os exemplos foram escritos para esta grelha com outros casos do mesmo tipo (outra fala, outra imagem, uma manhã na escola), nunca com as respostas da tarefa: são inventados, menos a gravura de D. Dinis, que vem das lições do módulo.",
    "criterios": [
     {
      "nome": "Núcleo 1: a cidade como uma só figura",
      "max": 3,
      "niveis": {
       "0": [
-       "Não há passagem do cap. XII, ou a resposta fala do Mestre ou do pajem e não da cidade.",
+       "Não há passagem do cap. XII, ou a resposta fala do Mestre ou do pajem e não da cidade.",
        "O Mestre era muito importante e toda a gente gostava dele."
       ],
       "parcial": [
@@ -145,14 +146,14 @@
        "Com uma frase inventada: «Ao toque da campainha, a escola inteira levantou-se e correu para o portão.» A escola estava ansiosa."
       ],
       "max": [
-       "Uma passagem do cap. XII, copiada letra a letra e entre aspas, e a explicação do que ela faz ver da cidade a agir como uma só figura. O termo «personagem coletiva» não é obrigatório para o máximo.",
+       "Uma passagem do cap. XII, copiada letra a letra e entre aspas, e a explicação do que ela faz ver da cidade a agir como uma só figura. O termo «personagem coletiva» não é obrigatório para o máximo.",
        "Com uma frase inventada: em «Ao toque da campainha, a escola inteira levantou-se e correu para o portão.», o sujeito é um só, «a escola inteira», e os verbos vêm no singular: os alunos deixam de se ver um a um e passam a ser um corpo que se levanta e corre."
       ]
      },
      "custa": [
       "Dar a voz de uma só personagem como prova da multidão.",
       "Dizer a emoção («estavam com medo») em vez do que a passagem faz ver.",
-      "Citar uma passagem do cerco: a pergunta pede o cap. XII."
+      "Citar uma passagem do cerco: a pergunta pede o cap. XII."
      ]
     },
     {
@@ -164,11 +165,11 @@
        "A frase está bem, é assim que se fala na rua."
       ],
       "parcial": [
-       "Acertas uma ou duas das três partes: a parte que não está nos excertos do cap. XII, o processo em «pra», o lugar de «pra».",
+       "Acertas uma ou duas das três partes: a parte que não está nos excertos do cap. XII, o processo em «pra», o lugar de «pra».",
        "Outra fala: o jornal da escola cita o diretor, «Bora lá, malta!», e um rascunho escreve, como fala documentada, «Bora lá, malta! Todos ao portão!». Resposta: «“Todos ao portão!” não está no jornal. Em “bora” cai uma letra no fim: apócope.»"
       ],
       "max": [
-       "Apontas a parte da fala que não está nos excertos do cap. XII, dizes em «pra» o som que cai, onde cai e o nome do processo, e justificas onde pode ficar «pra» com a diferença entre o relato, a fala documentada e a fala imaginada.",
+       "Apontas a parte da fala que não está nos excertos do cap. XII, dizes em «pra» o som que cai, onde cai e o nome do processo, e justificas onde pode ficar «pra» com a diferença entre o relato, a fala documentada e a fala imaginada.",
        "A mesma fala do jornal da escola: «“Todos ao portão!” não está no jornal, que só regista “Bora lá, malta!”. Em “bora”, de “embora”, cai o som do início, “em”: aférese. Aqui, “bora” fica na fala documentada, porque é a palavra que o jornal regista; no relato, escrevo “vamos embora”; numa fala imaginada, teria de a marcar como imaginada.»"
       ]
      },
@@ -230,20 +231,20 @@
      "max": 4,
      "niveis": {
       "0": [
-       "Falta o pedido do tema (A: a gradação e a passagem copiada da crónica; B: o que a imagem escolhe e dois factos do dossiê), ou a crónica fica muito longe das 160 a 200 palavras, sem título.",
-       "Crónica de 90 palavras, sem título e sem nada do dossiê."
+       "Falta o pedido do tema (A: a gradação e a passagem copiada da crónica; B: o que a imagem escolhe e dois factos do dossiê), ou a crónica fica muito longe das 160 a 200 palavras, sem título.",
+       "Crónica de 90 palavras, sem título e sem nada do dossiê."
       ],
       "parcial": [
        "O pedido do tema está lá só em parte (A: repetição sem degraus, ou a passagem com palavras mudadas; B: um só facto do dossiê, ou a imagem descrita sem dizer o que nela é escolha), ou há erros que a revisão apanhava. Pontua 1 se faltam dois ou mais elementos do máximo; 2 a 3 se falta um.",
        "A: «Correu, correu, correu.» B: «A gravura é de 1594 e é muito bonita.»"
       ],
       "max": [
-       "A: uma gradação em que cada termo pesa mais e uma passagem do capítulo copiada letra a letra. B: o que na imagem é escolha de quem a fez, dito com dois factos do dossiê. Nos dois, título, 160 a 200 palavras, uma frase riscada e reescrita, à vista, e o fecho de duas linhas.",
-       "A, com outro caso: «Primeiro um aluno, depois uma turma, por fim a escola inteira.» B, com outra imagem, a gravura de D. Dinis: «A gravura de 1594 põe um livro na mão de D. Dinis, rei de 1279 a 1325: foi feita quase três séculos depois dele, e o livro, suponho, é escolha de quem o quis mostrar poeta.»"
+       "A: uma gradação em que cada termo pesa mais e uma passagem do capítulo copiada letra a letra. B: o que na imagem é escolha de quem a fez, dito com dois factos do dossiê. Nos dois, título, 160 a 200 palavras, uma frase riscada e reescrita, à vista, e o fecho de duas linhas.",
+       "A, com outro caso: «Primeiro um aluno, depois uma turma, por fim a escola inteira.» B, com outra imagem, a gravura de D. Dinis: «A gravura de 1594 põe um livro na mão de D. Dinis, rei de 1279 a 1325: foi feita quase três séculos depois dele, e o livro, suponho, é escolha de quem o quis mostrar poeta.»"
       ]
      },
      "custa": [
-      "Contar o núcleo, as fontes ou o fecho nas 160 a 200 palavras da crónica.",
+      "Contar o núcleo, as fontes ou o fecho nas 160 a 200 palavras da crónica.",
       "Apagar em vez de riscar: a frase cortada é a prova da revisão.",
       "Entregar sem o fecho de duas linhas."
      ]

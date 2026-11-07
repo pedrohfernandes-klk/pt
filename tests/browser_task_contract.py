@@ -67,7 +67,8 @@ def assert_task_route(page, module, units):
         assert row.evaluate('(el)=>el===el.parentElement.lastElementChild')
         link = row.locator('a')
         assert link.get_attribute('href').endswith('/tarefas/' + slug + '/')
-        assert '90 min' in row.inner_text()
+        # 06/11/2026: decisão 152 no M1: no índice do M1, o número e a unidade não se partem (U+00A0); nos outros, como estava.
+        assert ('90\xa0min' if module == 1 else '90 min') in row.inner_text()
         hrefs.append(link.get_attribute('href'))
     return hrefs
 

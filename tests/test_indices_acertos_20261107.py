@@ -23,6 +23,8 @@ from pathlib import Path
 
 import test_cartaz_indices_148 as c148
 from auditoria_20261028 import undo_acertos_0711
+# 07/11/2026 (fusão do main 29441e6b no pedido #182): por cima dos acertos fica a decisão 152 no M1 (camada cuidado_m1_20261106).
+from auditoria_20261028 import undo_cuidado_m1_0611
 
 ROOT = Path(__file__).resolve().parents[1]
 CAMADA = ROOT / 'scripts/indices_acertos_20261107.json'
@@ -81,7 +83,9 @@ class Acertos0711(unittest.TestCase):
     def test_camada_mais_recente_fechada_e_reversivel(self):
         # A camada mais recente confere-se sem nada por cima, com as contagens exatas do manifesto.
         r = subprocess.run([sys.executable, 'scripts/aplicar_trocas.py', str(CAMADA.relative_to(ROOT)), '--manifesto',
-                            str(MANIFESTO.relative_to(ROOT)), '--verificar'], cwd=ROOT, capture_output=True, text=True,
+                            str(MANIFESTO.relative_to(ROOT)), '--verificar',
+                            # 07/11/2026 (fusão do main 29441e6b no pedido #182): a decisão 152 no M1 fica por cima; desfaz-se primeiro, com a mesma exigência.
+                            '--desfazer-antes', 'tests/fixtures/cuidado-m1-edits-20261106.json'], cwd=ROOT, capture_output=True, text=True,
                            encoding='utf-8')
         self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
         self.assertIn('25 trocas em 9 ficheiros: 25 aplicadas, 0 por aplicar; manifesto em dia.', r.stdout)
@@ -105,7 +109,8 @@ class Acertos0711(unittest.TestCase):
                     self.assertEqual(refeito.count(e['old']), 1, (rel, e['location']))
                     self.assertEqual(refeito.count(e['new']), 0, (rel, e['location']))
                     refeito = refeito.replace(e['old'], e['new'])
-                self.assertEqual(refeito, atual, rel)
+                # 07/11/2026 (fusão do main 29441e6b no pedido #182): o «depois» desta camada é a página com a decisão 152 no M1 desfeita (a camada por cima), letra a letra.
+                self.assertEqual(refeito, undo_cuidado_m1_0611(rel, atual), rel)
 
     def test_gerador_da_o_mesmo_json(self):
         spec = importlib.util.spec_from_file_location('indices_acertos', ROOT / 'scripts/indices_acertos_20261107.py')
@@ -119,8 +124,10 @@ class Acertos0711(unittest.TestCase):
             import verificar_camadas
         finally:
             sys.path.pop(0)
-        self.assertEqual(verificar_camadas.LAYERS[0], ('indices_acertos_20261107', 'indices-acertos-edits-20261107'))
-        self.assertEqual(verificar_camadas.LAYERS[1], ('cartaz_indices_148_20261106', 'cartaz-indices-148-edits-20261106'))
+        # 07/11/2026 (fusão do main 29441e6b no pedido #182): por cima dos acertos fica a decisão 152 no M1; os acertos passam a segundos, logo por baixo dela.
+        self.assertEqual(verificar_camadas.LAYERS[0], ('cuidado_m1_20261106', 'cuidado-m1-edits-20261106'))
+        self.assertEqual(verificar_camadas.LAYERS[1], ('indices_acertos_20261107', 'indices-acertos-edits-20261107'))
+        self.assertEqual(verificar_camadas.LAYERS[2], ('cartaz_indices_148_20261106', 'cartaz-indices-148-edits-20261106'))
         auditoria = ler('tests/auditoria_20261028.py')
         corpo = auditoria[auditoria.index('def undo_cartaz_148_0611'):]
         self.assertLess(corpo.index('undo_acertos_0711(path, text)'), corpo.index('_CARTAZ_148_0611.get('))
@@ -133,7 +140,8 @@ class Acertos0711(unittest.TestCase):
                 if '--desfazer-antes tests/fixtures/cartaz-indices-148-edits-20261106.json' in linha:
                     cadeias += 1
                     self.assertIn('aplicar_trocas.py', linha, wf)
-                    self.assertIn('--verificar --desfazer-antes tests/fixtures/indices-acertos-edits-20261107.json --desfazer-antes '
+                    # 07/11/2026 (fusão do main 29441e6b no pedido #182): a decisão 152 no M1 desfaz-se antes de tudo, logo a seguir a --verificar.
+                    self.assertIn('--verificar --desfazer-antes tests/fixtures/cuidado-m1-edits-20261106.json --desfazer-antes tests/fixtures/indices-acertos-edits-20261107.json --desfazer-antes '
                                   'tests/fixtures/cartaz-indices-148-edits-20261106.json', linha, wf)
         self.assertEqual(cadeias, 13)
         for wf in ('pt-tarefas-qa.yml', 'pt-exame-laboratorio-qa.yml', 'cartaz-qa.yml'):
@@ -179,7 +187,9 @@ class Acertos0711(unittest.TestCase):
 
     def test_neste_modulo_sem_ponto_medio(self):
         for n, rel in enumerate(NOVE, 1):
-            s, antes = ler(rel), undo_acertos_0711(rel, ler(rel))
+            # 07/11/2026 (fusão do main 29441e6b no pedido #182): confere-se a página com a decisão 152 no M1 desfeita (a camada por cima, que põe espaços que não
+            # quebram, como em «90 min»); o que a decisão 152 muda confere-se em tests/test_cuidado_m1.py.
+            s, antes = undo_cuidado_m1_0611(rel, ler(rel)), undo_acertos_0711(rel, ler(rel))
             with self.subTest(indice=rel):
                 lista = re.search(r'<nav (?:aria-label="Unidades do módulo" class="unit-index"|class="unit-index" '
                                   r'aria-label="Unidades do módulo")><p>Neste módulo</p>(.*?)</nav>', s, re.S).group(1)
@@ -220,7 +230,8 @@ class Acertos0711(unittest.TestCase):
     def test_nada_mais_muda(self):
         for n, rel in enumerate(NOVE, 1):
             s = ler(rel)
-            antes, depois = c148.Inventario(undo_acertos_0711(rel, s)), c148.Inventario(s)
+            # 07/11/2026 (fusão do main 29441e6b no pedido #182): o «depois» é a página com a decisão 152 no M1 desfeita (a camada por cima desta).
+            antes, depois = c148.Inventario(undo_acertos_0711(rel, s)), c148.Inventario(undo_cuidado_m1_0611(rel, s))
             with self.subTest(indice=rel):
                 self.assertEqual(antes.ids, depois.ids)
                 self.assertEqual(antes.imgs, depois.imgs)

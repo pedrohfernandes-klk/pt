@@ -842,7 +842,14 @@ def main():
                 # 02/11/2026: a atribuição de IA é posterior ao lote 2 publicado.
                 # 03/11/2026: primeiro a camada visual do cabecalho.
                 # 05/11/2026: antes de tudo, a revisão de 5/11, a camada mais recente.
-                # 07/11/2026: antes de tudo, os três acertos dos índices deixados pela decisão 173, a camada mais recente, por
+                # 06/11/2026: antes de tudo, a decisão 152 no M1 (tabelas e espaços que não quebram), a camada mais recente, por
+                # cima dos créditos atrás de um «i». 07/11/2026 (fusão do main 29441e6b): por cima dos acertos da decisão 173.
+                cuidado_m1 = ROOT / 'tests/fixtures/cuidado-m1-edits-20261106.json'
+                for edit in reversed(json.loads(cuidado_m1.read_text('utf-8'))['files'].get(rel, {}).get('edits', [])):
+                    if conferencia.count(edit['new']) != edit['occurrences']:
+                        raise ManifestoDesatualizado(f'{rel}: decisão 152 no M1 não confere')
+                    conferencia = conferencia.replace(edit['new'], edit['old'])
+                # 07/11/2026: depois da decisão 152 no M1, os três acertos dos índices deixados pela decisão 173, a camada mais recente, por
                 # cima do desenho comum dos nove índices.
                 acertos = ROOT / 'tests/fixtures/indices-acertos-edits-20261107.json'
                 for edit in reversed(json.loads(acertos.read_text('utf-8'))['files'].get(rel, {}).get('edits', [])):

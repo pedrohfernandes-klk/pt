@@ -24,6 +24,10 @@ import json
 import re
 import unittest
 
+# 06/11/2026: a decisão 152 no M1 (cuidado_m1_20261106) está por cima dos créditos; nas duas passagens que leem o texto exato
+# do crédito (P15 e o itálico da M1-F01), desfaz-se antes, com contagem estrita.
+from auditoria_20261028 import undo_cuidado_m1_0611
+
 ROOT = Path(__file__).resolve().parents[1]
 PECA = ('assets/info-i.css', 'assets/info-i.js')
 SHA = ROOT / 'tests/fixtures/info-i-sha256.json'
@@ -489,7 +493,7 @@ class CreditosI(unittest.TestCase):
 
     def test_p15_olhar_com_i_e_ligacao(self):
         for rel, (credito, url) in P15_OLHAR.items():
-            texto = (ROOT / rel).read_text('utf-8')
+            texto = undo_cuidado_m1_0611(rel, (ROOT / rel).read_text('utf-8'))
             with self.subTest(pagina=rel):
                 self.assertNotIn('class="credito"', texto)
                 self.assertEqual(texto.count(f'"credito":"{json.loads(chr(34) + credito + chr(34))}","creditoUrl":"{url}"'), 1)
@@ -559,7 +563,7 @@ class CreditosI(unittest.TestCase):
                     vistos.update(t for t in TITULOS_ITALICO if t in d.texto(lambda n: n.tag == 'summary'))
         # O teste vê todos os títulos da lista, salvo «In Memoriam», que só está na galeria do mapa M6.
         self.assertEqual(vistos, set(TITULOS_ITALICO) - {'In Memoriam'})
-        texto = (ROOT / 'm1/licao-m1-f01/index.html').read_text('utf-8')
+        texto = undo_cuidado_m1_0611('m1/licao-m1-f01/index.html', (ROOT / 'm1/licao-m1-f01/index.html').read_text('utf-8'))
         self.assertEqual(texto.count('<i>Cancioneiro da Biblioteca Nacional</i>, cópia do século XVI. Domínio público.'), 1)
 
     def test_parar_o_desenho_fora_do_i(self):

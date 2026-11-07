@@ -14,6 +14,11 @@ escondidas aos leitores de ecrã, porque as instruções mandam escrevê-las); o
 aquecimento e a ligação em destaque; não há pergunta «aquecer», só a opcional; o enunciado ganha a mesma ligação. Os
 exemplos resolvidos («exemplos») entram em «Relembrar», depois da lista. O <title> leva o título sem marcas (<i>). As
 páginas sem estas chaves saem iguais, byte a byte.
+06/11/2026: decisão 152 (cuidado em todas as lições), M1: o aquecimento em cartões pode trazer «tabela» ({"colunas": […],
+"linhas": [[…], …]}) e «depois»: o texto, a tabela de apoio (class apoio-tabela, como na M7-F10, com th scope, td data-label
+e os role) e o parágrafo seguinte; a página carrega então assets/pt-lessons/apoios-tabelas.css antes da camada de aparência.
+Com «nao_partir», os números do molde («90 minutos» na descrição, «10 min» do aquecimento e «90 min» do enunciado) levam
+espaço que não quebra (U+00A0). As páginas sem estas chaves saem iguais, byte a byte.
 Uso: python3 scripts/tarefas_escolha.py [--saida PASTA] [slug ...]
 """
 import json
@@ -26,11 +31,14 @@ ROOT = Path(__file__).resolve().parents[1]
 DADOS = ROOT / 'docs' / 'pedagogia' / 'tarefas-escolha'
 GRELHAS = ROOT / 'docs' / 'pedagogia' / 'grelhas-tarefas-20261027.json'
 LIGACAO = '<p class="task-grelha"><a href="grelha/">Grelha /20: como é avaliado e autoavaliação</a></p>\n'
+# 06/11/2026: decisão 152. A folha das tabelas de apoio entra antes da camada de aparência, só nas tarefas com «tabela».
+APARENCIA = '<link rel="stylesheet" href="../../assets/appearance.css?v=20261025-universal-1">'
+FOLHA_TABELAS = '<link rel="stylesheet" href="../../assets/pt-lessons/apoios-tabelas.css?v=20261106.1">'
 V = '20261028-escolha-2'
 HEAD = '''<!doctype html>
 <html lang="pt-PT" data-appearance-site="pt"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Aula de tarefa · {title} · {MOD}</title>
-<meta name="description" content="Aula de tarefa com consulta: aquecimento, núcleo comum e um tema à escolha, em papel, durante 90 minutos, com entrega no Teams.">
+<meta name="description" content="Aula de tarefa com consulta: aquecimento, núcleo comum e um tema à escolha, em papel, durante 90{sep}minutos, com entrega no Teams.">
 <link rel="stylesheet" href="../../assets/pt-lessons/lesson.css?v=20261027-task-reader-1"><link rel="stylesheet" href="../../assets/task-90.css?v=20261027-tarefas-1"><link rel="stylesheet" href="../../assets/docente-access.css?v=20261026.1">
 <script defer src="../../assets/task-90.js?v=20261027-compact-1"></script>
 <link rel="stylesheet" href="../../assets/task-reader.css?v=20261027-task-reader-1"><link rel="stylesheet" href="../../assets/relogio.css?v=20261027-relogio-1"><link rel="stylesheet" href="../../assets/task-choice.css?v={V}"><script defer src="../../assets/relogio.js?v=20261027-relogio-1"></script><script defer src="../../assets/pt-lessons/casca.js?v=20261027-task-reader-1"></script><script defer src="../../assets/task-reader.js?v={V}"></script><link rel="stylesheet" href="../../assets/appearance.css?v=20261025-universal-1"><script src="../../assets/appearance.js?v=20261025-universal-1"></script></head>
@@ -71,25 +79,38 @@ def warmup(slug, instruction, anatomy, claim, qtitle, options):
 '''
 
 
-def warmup_cards(slug, a):
-    """29/10/2026: o aquecimento faz-se em cartões (página própria); não há máquinas nem pergunta «aquecer»."""
+def tabela_apoio(t):
+    """06/11/2026: decisão 152. A tabela de apoio, igual às das lições (M7-F10, M7-F15): cabeçalho com th scope=col, primeira
+    coluna com th scope=row, td data-label com o nome da coluna, e os role, porque no telemóvel a tabela passa a display:block."""
+    cab = ''.join(f'<th scope="col" role="columnheader">{c}</th>' for c in t['colunas'])
+    linhas = ''.join('<tr role="row"><th scope="row" role="rowheader">' + linha[0] + '</th>'
+                     + ''.join(f'<td role="cell" data-label="{t["colunas"][k]}">{v}</td>' for k, v in enumerate(linha[1:], 1))
+                     + '</tr>' for linha in t['linhas'])
+    return (f'<table class="apoio-tabela" role="table"><thead role="rowgroup"><tr role="row">{cab}</tr></thead>'
+            f'<tbody role="rowgroup">{linhas}</tbody></table>')
+
+
+def warmup_cards(slug, a, sep=' '):
+    """29/10/2026: o aquecimento faz-se em cartões (página própria); não há máquinas nem pergunta «aquecer».
+    06/11/2026: decisão 152. Com «tabela», o texto, a tabela dos tempos e «depois»; sep é o espaço do molde (U+00A0 com «nao_partir»)."""
+    texto = f"<p>{a['texto']}</p>" + (tabela_apoio(a['tabela']) + f"<p>{a['depois']}</p>" if 'tabela' in a else '')
     return f'''<section class="task-section task-warmup" id="aquecer" aria-labelledby="aquecer-title" data-task-warm="cartoes">
-<p class="task-warmup-kicker">Antes de escrever · {a['minutos']} min · em cartões, com consulta</p>
+<p class="task-warmup-kicker">Antes de escrever · {a['minutos']}{sep}min · em cartões, com consulta</p>
 <h2 id="aquecer-title">Aquecer em cartões</h2>
-<p>{a['texto']}</p>
+{texto}
 <p class="task-aquecer"><a href="{a['cartoes']}">{a['ligacao']}</a></p>
 <div class="task-relogio" data-relogio data-max="{a['minutos']}" data-passo="1" data-rotulo="Aquecimento" data-chave="pt-relogio:tarefas/{slug}:aquecimento"></div>
 </section>
 '''
 
 
-def header(slug, unit, title, lead, core, themes, aquecer=None):
+def header(slug, unit, title, lead, core, themes, aquecer=None, sep=' '):
     li = ''.join(f'<li>{x}</li>' for x in core)
     # 29/10/2026: com o aquecimento em cartões, o enunciado leva também a ligação em destaque, logo a seguir ao lead.
     link = f'<p class="task-aquecer"><a href="{aquecer["cartoes"]}">{aquecer["ligacao_enunciado"]}</a></p>\n' if aquecer else ''
     # 28/10/2026: «Tema A» / «Tema B» no nome acessível; o fecho manda escrever no topo o tema escolhido.
     th = ''.join(f'<article class="task-theme" data-task-theme="{k}" aria-labelledby="tema-{k}"><h3 id="tema-{k}"><span><span class="sr-only">Tema </span>{k}</span> {name}</h3><p>{text}</p></article>' for k, name, text in themes)
-    return f'''<header><p class="task-kicker">Tarefa individual · Unidade {unit} · 90 min</p><h1>{title}</h1>
+    return f'''<header><p class="task-kicker">Tarefa individual · Unidade {unit} · 90{sep}min</p><h1>{title}</h1>
 <p>{lead}</p>
 {link}<section id="produzir" aria-label="Enunciado">
 <h2 class="task-part">Núcleo comum <small>para todos</small></h2><ol>{li}</ol>
@@ -130,16 +151,22 @@ def tarefa(d, com_grelha, raiz=ROOT):
     cartoes = 'cartoes' in a
     op = lambda xs: [(x['certa'], x['letra'], x['texto'], x['resposta']) for x in xs]
     titulo = escape(re.sub(r'<[^>]+>', '', d['titulo']), quote=False)
-    html = (HEAD.format(title=titulo, unit=unit, V=V, mod=mod, MOD=mod.upper())
-            + (warmup_cards(slug, a) if cartoes else
+    # 06/11/2026: decisão 152. «nao_partir»: os números do molde com espaço que não quebra (só nas tarefas que o pedem).
+    sep = '\xa0' if d.get('nao_partir') else ' '
+    html = (HEAD.format(title=titulo, unit=unit, V=V, mod=mod, MOD=mod.upper(), sep=sep)
+            + (warmup_cards(slug, a, sep) if cartoes else
                warmup(slug, a['instrucao'], [tuple(x) for x in a['anatomia']], a['afirmacao'], a['pergunta'], op(a['opcoes'])))
             + header(slug, unit, d['titulo'], d['lead'], d['nucleo'], [(t['letra'], t['nome'], t['texto']) for t in d['temas']],
-                     a if cartoes else None)
+                     a if cartoes else None, sep)
             + apoios([(x['href'], x['texto']) for x in d['apoios']], d['dossie_titulo'], [(x['facto'], x['href'], x['fonte']) for x in d['dossie']],
                      d['opcional']['pergunta'], op(d['opcional']['opcoes']),
                      [(x['titulo'], x['html']) for x in d.get('exemplos', [])], 1 if cartoes else 2)
             + entregar(d['criterios'], d['fecho'], com_grelha)
             + FOOT)
+    if 'tabela' in a:
+        # 06/11/2026: decisão 152. A folha das tabelas de apoio, antes da camada de aparência.
+        assert html.count(APARENCIA) == 1, slug
+        html = html.replace(APARENCIA, FOLHA_TABELAS + APARENCIA)
     p = raiz / 'tarefas' / slug / 'index.html'
     p.parent.mkdir(parents=True, exist_ok=True)
     if not p.exists() or p.read_bytes() != html.encode('utf-8'):

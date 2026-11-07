@@ -15,6 +15,9 @@ páginas noutra raiz (a tarefa lê-se dessa raiz ou, se lá não estiver, da ár
 sem mexer na árvore.
 29/10/2026 (M7-U3): os títulos de obras escrevem-se nos dados entre _…_ e saem em itálico (<i>); no <title>, sem marcas.
 As grelhas sem _…_ saem iguais, byte a byte.
+06/11/2026: decisão 152 (cuidado em todas as lições), M1: com «max_em_listas» num critério, o descritor do nível máximo da
+página do aluno abre os elementos de cada tema em lista («Tema A: x; y; z. Explicação: … Tema B: …»); a versão de correção
+fica com o texto corrido (está num <small> dentro de uma célula). As grelhas sem a chave saem iguais, byte a byte.
 Idempotente. Uso: python3 scripts/grelhas_tarefas.py [--saida PASTA]
 """
 from html import escape as e
@@ -97,6 +100,19 @@ def casca(titulo, corpo):
             '<script defer src="../../../assets/projection-launcher.js?v=20261019.4" data-site="pt"></script></body></html>\n')
 
 
+def em_listas(desc):
+    """06/11/2026: decisão 152. «Antes. Tema A: x; y; z. Explicação: …. Tema B: u; v. Explicação: ….» passa a um parágrafo, e,
+    por tema, o título, a lista dos elementos (cada um com o «;» ou o «.» que tinha) e a explicação. Só o texto que lá está."""
+    m = re.fullmatch(r'(.*? )(Tema A): (.+?)\. (Explicação: .+?\.) (Tema B): (.+?)\. (Explicação: .+?\.)', desc)
+    assert m, desc
+    html = f'<p>{ital(m[1])}</p>'
+    for titulo, itens, explicacao in ((m[2], m[3], m[4]), (m[5], m[6], m[7])):
+        partes = itens.split('; ')
+        lis = ''.join(f'<li>{ital(p)}{";" if k < len(partes) - 1 else "."}</li>' for k, p in enumerate(partes))
+        html += f'<p><b>{ital(titulo)}</b>:</p><ul>{lis}</ul><p>{ital(explicacao)}</p>'
+    return html
+
+
 def intervalo(c):
     return '1' if c['max'] == 2 else f"1 a {c['max'] - 1}"
 
@@ -118,7 +134,9 @@ def pagina_aluno(slug, t):
         corpo += (f'<section class="g-crit" id="criterio-{i}"><h2><span class="num">{i}</span><span>{ital(c["nome"])}</span><span class="max">máx. {c["max"]}</span></h2><dl class="g-niveis">')
         for chave, rotulo, sub in (('0', '0', 'sem evidência'), ('parcial', intervalo(c), 'evidência incompleta'), ('max', str(c['max']), 'cumprimento consistente')):
             desc, ex = n[chave]
-            corpo += f'<div><dt>{rotulo}<small>{sub}</small></dt><dd><p>{ital(desc)}</p><p class="ex"><b>Exemplo</b>{ital(ex)}</p></dd></div>'
+            # 06/11/2026: decisão 152. Com «max_em_listas», o nível máximo abre os elementos de cada tema em lista.
+            texto = em_listas(desc) if chave == 'max' and c.get('max_em_listas') else f'<p>{ital(desc)}</p>'
+            corpo += f'<div><dt>{rotulo}<small>{sub}</small></dt><dd>{texto}<p class="ex"><b>Exemplo</b>{ital(ex)}</p></dd></div>'
         corpo += '</dl><p class="custa"><b>Custa pontos</b></p><ul>' + ''.join(f'<li>{ital(x)}</li>' for x in c['custa']) + '</ul></section>'
     corpo += ('<section class="g-auto" id="autoavaliacao"><h2>Antes de entregar: dá-te pontos</h2>'
               '<p>Em papel, critério a critério: escreve o número e a passagem do teu texto que o prova. Entrega esta autoavaliação com as fotografias. '

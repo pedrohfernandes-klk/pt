@@ -92,8 +92,15 @@ class ChoiceTasks(unittest.TestCase):
                 # 29/10/2026: com o aquecimento em cartões, o cartão «Aquecer» e o enunciado ligam à página dos cartões.
                 aquecer = (('Aquecer em cartões', 'data-task-warm="cartoes"', '<p class="task-aquecer"><a href="aquecimento/">') if cartoes
                            else ('Descobre o que te pedem', 'Prova ou distração?', 'Verbos', 'Objeto', 'Condição'))
+                # 06/11/2026: decisão 152 no M1: nas tarefas com «nao_partir» nos dados (M1-U1 e M1-U2), «90 min» leva espaço que não
+                # quebra (U+00A0) e a forma com espaço normal já não está; nas outras, como estava.
+                dados = ROOT / 'docs/pedagogia/tarefas-escolha' / f'{slug}.json'
+                nao_partir = dados.is_file() and json.loads(dados.read_text('utf-8')).get('nao_partir')
+                noventa = '90\xa0min' if nao_partir else '90 min'
+                if nao_partir:
+                    self.assertNotIn('90 min', source)
                 for token in aquecer + ('Núcleo comum', 'Escolhe um tema',
-                              ('Textos e condições de consulta' if slug.startswith(('m8-','m9-')) else 'Dossiê do tema B'), 'Tarefa individual', '90 min', 'consulta', 'Teams', 'duas linhas', 'tema que escolheste (A ou B)'):
+                              ('Textos e condições de consulta' if slug.startswith(('m8-','m9-')) else 'Dossiê do tema B'), 'Tarefa individual', noventa, 'consulta', 'Teams', 'duas linhas', 'tema que escolheste (A ou B)'):
                     self.assertIn(token, source)
                 if cartoes:
                     self.assertEqual(source.count('<p class="task-aquecer"><a href="aquecimento/">'), 2)
@@ -203,6 +210,9 @@ class ChoiceTasks(unittest.TestCase):
                 target = flat((path.parent / href / 'index.html').resolve())
                 for name in re.findall(r'«([^»]+)»', text):
                     name = html.unescape(re.sub(r'<[^>]+>', '', name)).replace('“', '«').replace('”', '»')
+                    # 06/11/2026: decisão 152 no M1: o nome pode trazer espaços que não quebram (U+00A0); junta-se como flat() junta
+                    # os da lição (\s+ > um espaço), sem mais nada.
+                    name = re.sub(r'\s+', ' ', name)
                     with self.subTest(task=slug, licao=href, nome=name):
                         self.assertTrue(name in target or name in engine, name)
 
