@@ -1,0 +1,612 @@
+{
+ "base_commit": "8dbcb41967ea1676bc8befbacbc0144ee47caadd",
+ "_nota": "06/11/2026: decisão 148. O desenho do índice do M4 (#166) passa aos nove índices do Português: estilos e script comuns (assets/cartaz-indice-comum.*), «Recursos do módulo» no fluxo, título de cada unidade na banda, prova junto da pergunta, imagem documental mais pequena a seguir às unidades e os botões flutuantes de sempre (no M4, o acesso do docente volta a flutuar e o modo noturno sai dos recursos). Gerado por scripts/cartaz_indices_148_20261106.py e scripts/aplicar_trocas.py: não se edita à mão. Ligações, âncoras, ids, chaves de progresso, dados do motor e textos ficam todos, pela mesma ordem. Reversível sobre o main 8dbcb419; é a camada mais recente e desfaz-se antes dos créditos atrás de um «i».",
+ "files": {
+  "m1/index.html": {
+   "base_sha256_lf": "3b5c6772a6939860064950f3f4d1c30846d2eb56f3d7bf2f7c196e8a075bec22",
+   "after_sha256_lf": "2d1a72a1a762aa8f1d9fd4337dbac95d11b163b7de5bbe749150d636fc0a5609",
+   "edits": [
+    {
+     "location": "M1 estilos comuns dos nove índices",
+     "old": "<link rel=\"stylesheet\" href=\"../assets/cartaz-indices.css?v=20261101\">",
+     "new": "<link rel=\"stylesheet\" href=\"../assets/cartaz-indice-comum.css?v=20261106\">",
+     "occurrences": 1
+    },
+    {
+     "location": "M1 adesão ao desenho comum",
+     "old": "<main data-cartaz=\"2\" class=\"cz-index\">",
+     "new": "<main data-cartaz=\"2\" class=\"cz-index\" data-cz-indice=\"20261106\">",
+     "occurrences": 1
+    },
+    {
+     "location": "M1 abertura: recursos no fluxo e imagem fora da abertura",
+     "old": "<div class=\"module-opening\"><div class=\"module-entry\"><a class=\"cz-button primary\" data-module-next href=\"./licao-m1-f01/\"><span data-module-next-label>Começar: A língua que se canta</span><span aria-hidden=\"true\">→</span></a></div><figure class=\"doc\"><img src=\"https://pedrohfernandes-klk.github.io/pt/img/fontes/cancioneiro-biblioteca-nacional.jpg\" width=\"640\" height=\"872\" alt=\"Cancioneiro da Biblioteca Nacional, página (cópia do século XVI)\" loading=\"lazy\" decoding=\"async\"><figcaption class=\"cz-credit\">Cancioneiro da Biblioteca Nacional, página (cópia do século XVI). Domínio público.</figcaption></figure></div><div class=\"mod-sec\"><nav class=\"ligas\"><a href=\"./mapa-do-modulo-m1/\">Mapa do módulo</a></nav><details class=\"regra\"><summary>Como se cumpre uma unidade</summary><div>Fazes as aulas de leitura e preparação e fechas a unidade na aula de tarefa: produção em papel, uma síntese simples integrada e fotografias no Teams. A avaliação é feita pelo docente. A tarefa organiza a produção prevista para a unidade; não exige repetir uma produção já realizada.<p class=\"avaliacao-tarefas\">Pesos na avaliação: tarefa da Unidade 1, 30 %; tarefa da Unidade 2, 30 %; provas rápidas, 10 %; prova escrita, 30 %. Cada tarefa tem uma grelha /20.</p></div></details></div><!-- id=\"podcast\": o podcast e o mapa já estão nestas ligações; podcasts.mjs não acrescenta a secção --></header>",
+     "new": "<div class=\"module-opening\"><div class=\"module-entry\"><a class=\"cz-button primary\" data-module-next href=\"./licao-m1-f01/\"><span data-module-next-label>Começar: A língua que se canta</span><span aria-hidden=\"true\">→</span></a></div></div><!-- id=\"podcast\": o podcast e o mapa já estão nestas ligações; podcasts.mjs não acrescenta a secção --></header><details class=\"cz-recursos\"><summary>Recursos do módulo</summary><div class=\"mod-sec\"><nav class=\"ligas\"><a href=\"./mapa-do-modulo-m1/\">Mapa do módulo</a></nav><details class=\"regra\"><summary>Como se cumpre uma unidade</summary><div>Fazes as aulas de leitura e preparação e fechas a unidade na aula de tarefa: produção em papel, uma síntese simples integrada e fotografias no Teams. A avaliação é feita pelo docente. A tarefa organiza a produção prevista para a unidade; não exige repetir uma produção já realizada.<p class=\"avaliacao-tarefas\">Pesos na avaliação: tarefa da Unidade 1, 30 %; tarefa da Unidade 2, 30 %; provas rápidas, 10 %; prova escrita, 30 %. Cada tarefa tem uma grelha /20.</p></div></details></div></details>",
+     "occurrences": 1
+    },
+    {
+     "location": "M1 unidade 1: o título passa para a banda",
+     "old": "<span class=\"cz-fold-t\">Vozes da lírica medieval</span>",
+     "new": "<h2 class=\"cz-fold-t\" id=\"unidade-pedagogica-1\">Vozes da lírica medieval</h2>",
+     "occurrences": 1
+    },
+    {
+     "location": "M1 unidade 1: pergunta e prova junto do percurso",
+     "old": "<header class=\"grupo-topo\"><p class=\"grupo-etq\">Unidade 1: 7 passos</p><h2 id=\"unidade-pedagogica-1\">Vozes da lírica medieval</h2><p class=\"grupo-pergunta\">Como se dá voz ao desejo, ao elogio e à crítica?</p></header>",
+     "new": "<div class=\"cz-unit-body\"><header class=\"grupo-topo\"><p class=\"grupo-etq\">Unidade 1: 7 passos</p><p class=\"grupo-pergunta\">Como se dá voz ao desejo, ao elogio e à crítica?</p><p class=\"prova-esperada\">No fim, distingues as vozes das cantigas, explicas o efeito de uma repetição e sustentas a diferença entre louvor e crítica com passagens dos textos.</p></header>",
+     "occurrences": 1
+    },
+    {
+     "location": "M1 unidade 1: fecho do corpo da unidade",
+     "old": "<p class=\"prova-esperada\">No fim, distingues as vozes das cantigas, explicas o efeito de uma repetição e sustentas a diferença entre louvor e crítica com passagens dos textos.</p></section></details></section><section aria-labelledby=\"unidade-pedagogica-2\" class=\"unidade-pedagogica\" data-lesson-count=\"7\" data-unidade=\"2\">",
+     "new": "</section></div></details></section><section aria-labelledby=\"unidade-pedagogica-2\" class=\"unidade-pedagogica\" data-lesson-count=\"7\" data-unidade=\"2\">",
+     "occurrences": 1
+    },
+    {
+     "location": "M1 unidade 2: o título passa para a banda",
+     "old": "<span class=\"cz-fold-t\">A cidade na crónica de Fernão Lopes</span>",
+     "new": "<h2 class=\"cz-fold-t\" id=\"unidade-pedagogica-2\">A cidade na crónica de Fernão Lopes</h2>",
+     "occurrences": 1
+    },
+    {
+     "location": "M1 unidade 2: pergunta e prova junto do percurso",
+     "old": "<header class=\"grupo-topo\"><p class=\"grupo-etq\">Unidade 2: 8 passos</p><h2 id=\"unidade-pedagogica-2\">A cidade na crónica de Fernão Lopes</h2><p class=\"grupo-pergunta\">Como transforma o cronista uma multidão em protagonista?</p></header>",
+     "new": "<div class=\"cz-unit-body\"><header class=\"grupo-topo\"><p class=\"grupo-etq\">Unidade 2: 8 passos</p><p class=\"grupo-pergunta\">Como transforma o cronista uma multidão em protagonista?</p><p class=\"prova-esperada\">No fim, explicas como a crónica faz ver a ação coletiva e escreves uma cena, distinguindo factos, inferências e falas imaginadas.</p></header>",
+     "occurrences": 1
+    },
+    {
+     "location": "M1 unidade 2: fecho do corpo e imagem documental a seguir às unidades",
+     "old": "<p class=\"prova-esperada\">No fim, explicas como a crónica faz ver a ação coletiva e escreves uma cena, distinguindo factos, inferências e falas imaginadas.</p></section></details></section>",
+     "new": "</section></div></details></section><figure class=\"doc\"><img src=\"https://pedrohfernandes-klk.github.io/pt/img/fontes/cancioneiro-biblioteca-nacional.jpg\" width=\"640\" height=\"872\" alt=\"Cancioneiro da Biblioteca Nacional, página (cópia do século XVI)\" loading=\"lazy\" decoding=\"async\"><figcaption class=\"cz-credit\">Cancioneiro da Biblioteca Nacional, página (cópia do século XVI). Domínio público.</figcaption></figure>",
+     "occurrences": 1
+    },
+    {
+     "location": "M1 teclado dos recursos",
+     "old": "</body>",
+     "new": "<script src=\"../assets/cartaz-indice-comum.js?v=20261106\"></script></body>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m2/index.html": {
+   "base_sha256_lf": "5eef6b1c0bf5b70d059e7f85fc3ad37dcd414c1d90afdb56b363691ba4a54fb3",
+   "after_sha256_lf": "44e5ae51c66f2e3f252edfc70717ca8d2afd84d313d734a3354752db3d1d3f6a",
+   "edits": [
+    {
+     "location": "M2 estilos comuns dos nove índices",
+     "old": "<link rel=\"stylesheet\" href=\"../assets/cartaz-indices.css?v=20261101\">",
+     "new": "<link rel=\"stylesheet\" href=\"../assets/cartaz-indice-comum.css?v=20261106\">",
+     "occurrences": 1
+    },
+    {
+     "location": "M2 adesão ao desenho comum",
+     "old": "<main data-cartaz=\"2\" class=\"cz-index\">",
+     "new": "<main data-cartaz=\"2\" class=\"cz-index\" data-cz-indice=\"20261106\">",
+     "occurrences": 1
+    },
+    {
+     "location": "M2 abertura: recursos no fluxo e imagem fora da abertura",
+     "old": "<div class=\"module-opening\"><div class=\"module-entry\"><a class=\"cz-button primary\" data-module-next href=\"./licao-m2-f01/\"><span data-module-next-label>Começar: Deram-lhe um provérbio</span><span aria-hidden=\"true\">→</span></a></div><figure class=\"doc\"><img src=\"https://pedrohfernandes-klk.github.io/pt/img/fontes/gil-vicente-copilacam-1562.jpg\" width=\"598\" height=\"900\" alt=\"Copilaçam de todalas obras de Gil Vicente (Lisboa, 1562), frontispício\" loading=\"lazy\" decoding=\"async\"><figcaption class=\"cz-credit\"><em>Copilaçam de todalas obras de Gil Vicente</em> (Lisboa, 1562), frontispício. Domínio público.</figcaption></figure></div><div class=\"mod-sec\"><nav class=\"ligas\"><a href=\"./mapa-do-modulo-m2/\">Mapa do módulo</a></nav><details class=\"regra\"><summary>Como se cumpre uma unidade</summary><div>Fazes as aulas de leitura e preparação e fechas a unidade na aula de tarefa: aquecimento em cartões (a linha A do percurso), produção em papel, uma síntese simples integrada e fotografias no Teams. A avaliação é feita pelo docente. A tarefa organiza a produção prevista para a unidade; não exige repetir uma produção já realizada.<p class=\"avaliacao-tarefas\">Pesos na avaliação: tarefa da Unidade 1, 30 %; tarefa da Unidade 2, 30 %; provas rápidas, 10 %; prova escrita, 30 %. Cada tarefa tem uma grelha /20.</p></div></details></div><!-- id=\"podcast\": o podcast e o mapa já estão nestas ligações; podcasts.mjs não acrescenta a secção --></header>",
+     "new": "<div class=\"module-opening\"><div class=\"module-entry\"><a class=\"cz-button primary\" data-module-next href=\"./licao-m2-f01/\"><span data-module-next-label>Começar: Deram-lhe um provérbio</span><span aria-hidden=\"true\">→</span></a></div></div><!-- id=\"podcast\": o podcast e o mapa já estão nestas ligações; podcasts.mjs não acrescenta a secção --></header><details class=\"cz-recursos\"><summary>Recursos do módulo</summary><div class=\"mod-sec\"><nav class=\"ligas\"><a href=\"./mapa-do-modulo-m2/\">Mapa do módulo</a></nav><details class=\"regra\"><summary>Como se cumpre uma unidade</summary><div>Fazes as aulas de leitura e preparação e fechas a unidade na aula de tarefa: aquecimento em cartões (a linha A do percurso), produção em papel, uma síntese simples integrada e fotografias no Teams. A avaliação é feita pelo docente. A tarefa organiza a produção prevista para a unidade; não exige repetir uma produção já realizada.<p class=\"avaliacao-tarefas\">Pesos na avaliação: tarefa da Unidade 1, 30 %; tarefa da Unidade 2, 30 %; provas rápidas, 10 %; prova escrita, 30 %. Cada tarefa tem uma grelha /20.</p></div></details></div></details>",
+     "occurrences": 1
+    },
+    {
+     "location": "M2 unidade 1: o título passa para a banda",
+     "old": "<span class=\"cz-fold-t\">Ler a Farsa: desejos, escolhas e consequências</span>",
+     "new": "<h2 class=\"cz-fold-t\" id=\"unidade-pedagogica-1\">Ler a Farsa: desejos, escolhas e consequências</h2>",
+     "occurrences": 1
+    },
+    {
+     "location": "M2 unidade 1: pergunta e prova junto do percurso",
+     "old": "<header class=\"grupo-topo\"><p class=\"grupo-etq\">Unidade 1: 6 passos</p><h2 id=\"unidade-pedagogica-1\">Ler a Farsa: desejos, escolhas e consequências</h2><p class=\"grupo-pergunta\">Como transformam as escolhas de Inês o seu desejo de liberdade?</p></header>",
+     "new": "<div class=\"cz-unit-body\"><header class=\"grupo-topo\"><p class=\"grupo-etq\">Unidade 1: 6 passos</p><p class=\"grupo-pergunta\">Como transformam as escolhas de Inês o seu desejo de liberdade?</p><p class=\"prova-esperada\">No fim, comparas as escolhas de Inês em dois momentos da farsa e mostras, com passagens, o que muda na liberdade que procura.</p></header>",
+     "occurrences": 1
+    },
+    {
+     "location": "M2 unidade 1: fecho do corpo da unidade",
+     "old": "<p class=\"prova-esperada\">No fim, comparas as escolhas de Inês em dois momentos da farsa e mostras, com passagens, o que muda na liberdade que procura.</p></section></details></section><section aria-labelledby=\"unidade-pedagogica-2\" class=\"unidade-pedagogica\" data-lesson-count=\"5\" data-unidade=\"2\">",
+     "new": "</section></div></details></section><section aria-labelledby=\"unidade-pedagogica-2\" class=\"unidade-pedagogica\" data-lesson-count=\"5\" data-unidade=\"2\">",
+     "occurrences": 1
+    },
+    {
+     "location": "M2 unidade 2: o título passa para a banda",
+     "old": "<span class=\"cz-fold-t\">Interpretar e representar: crítica, cena e atualidade</span>",
+     "new": "<h2 class=\"cz-fold-t\" id=\"unidade-pedagogica-2\">Interpretar e representar: crítica, cena e atualidade</h2>",
+     "occurrences": 1
+    },
+    {
+     "location": "M2 unidade 2: pergunta e prova junto do percurso",
+     "old": "<header class=\"grupo-topo\"><p class=\"grupo-etq\">Unidade 2: 5 passos</p><h2 id=\"unidade-pedagogica-2\">Interpretar e representar: crítica, cena e atualidade</h2><p class=\"grupo-pergunta\">Como sustentar uma leitura da Farsa e transformá-la numa proposta de representação?</p></header>",
+     "new": "<div class=\"cz-unit-body\"><header class=\"grupo-topo\"><p class=\"grupo-etq\">Unidade 2: 5 passos</p><p class=\"grupo-pergunta\">Como sustentar uma leitura da Farsa e transformá-la numa proposta de representação?</p><p class=\"prova-esperada\">No fim, caracterizas os pretendentes com falas da farsa e justificas uma escolha de linguagem ou de representação.</p></header>",
+     "occurrences": 1
+    },
+    {
+     "location": "M2 unidade 2: fecho do corpo e imagem documental a seguir às unidades",
+     "old": "<p class=\"prova-esperada\">No fim, caracterizas os pretendentes com falas da farsa e justificas uma escolha de linguagem ou de representação.</p></section></details></section>",
+     "new": "</section></div></details></section><figure class=\"doc\"><img src=\"https://pedrohfernandes-klk.github.io/pt/img/fontes/gil-vicente-copilacam-1562.jpg\" width=\"598\" height=\"900\" alt=\"Copilaçam de todalas obras de Gil Vicente (Lisboa, 1562), frontispício\" loading=\"lazy\" decoding=\"async\"><figcaption class=\"cz-credit\"><em>Copilaçam de todalas obras de Gil Vicente</em> (Lisboa, 1562), frontispício. Domínio público.</figcaption></figure>",
+     "occurrences": 1
+    },
+    {
+     "location": "M2 teclado dos recursos",
+     "old": "</body>",
+     "new": "<script src=\"../assets/cartaz-indice-comum.js?v=20261106\"></script></body>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m3/index.html": {
+   "base_sha256_lf": "d0fb7bb8e5606d669d136a516043108dcaf21374a3008df30016e1430c8e1e0b",
+   "after_sha256_lf": "50e5e3a82ff853110125f28700a673087521f6624316464ab1ac4a84063238fd",
+   "edits": [
+    {
+     "location": "M3 estilos comuns dos nove índices",
+     "old": "<link rel=\"stylesheet\" href=\"../assets/cartaz-indices.css?v=20261101\">",
+     "new": "<link rel=\"stylesheet\" href=\"../assets/cartaz-indice-comum.css?v=20261106\">",
+     "occurrences": 1
+    },
+    {
+     "location": "M3 adesão ao desenho comum",
+     "old": "<main data-cartaz=\"2\" class=\"cz-index\">",
+     "new": "<main data-cartaz=\"2\" class=\"cz-index\" data-cz-indice=\"20261106\">",
+     "occurrences": 1
+    },
+    {
+     "location": "M3 abertura: recursos no fluxo e imagem fora da abertura",
+     "old": "<div class=\"module-opening\"><div class=\"module-entry\"><a class=\"cz-button primary\" data-module-next href=\"./licao-m3-f02/\"><span data-module-next-label>Começar: Duas versões de 1498</span><span aria-hidden=\"true\">→</span></a></div><figure class=\"doc\"><a href=\"../img/fontes/lusiadas-1572-rosto.jpg?v=rosto-20261019\" aria-label=\"Ver a folha de rosto em tamanho completo\"><img src=\"../img/fontes/lusiadas-1572-rosto.jpg?v=rosto-20261019\" width=\"389\" height=\"565\" alt=\"Folha de rosto de Os Lusíadas, Lisboa, 1572: título e moldura ornamental.\" loading=\"lazy\" decoding=\"async\"></a><figcaption class=\"cz-credit\">Fonte: Academia Brasileira de Letras, via <a href=\"https://commons.wikimedia.org/wiki/File:BookFrontOsLusiadas1572.jpg\">Wikimedia Commons <span aria-hidden=\"true\">↗</span></a>. Domínio público.</figcaption></figure></div><p class=\"lead mod-pergunta\"><span class=\"vh\">A palavra do módulo é fama. </span><span class=\"serif\">«De quem é que já ouviste falar, e porquê?»</span></p>\n<p class=\"lead mod-ambito\">Duas unidades com lições, dois exercícios longos e duas aulas de tarefa.</p>\n\n<div class=\"mod-sec\"><nav class=\"ligas\"><a href=\"./mapa-do-modulo-m3/\">Mapa do módulo</a></nav><details class=\"regra\"><summary>Como se cumpre uma unidade</summary><div>Fazes as lições e fechas cada unidade numa aula de tarefa de 90 minutos: aquecimento em cartões, núcleo comum, tema A ou B, revisão e fotografias no Teams. A síntese integra a produção. A avaliação é feita pelo docente.<p class=\"avaliacao-tarefas\">Pesos na avaliação: tarefa da Unidade 1, 30 %; tarefa da Unidade 2, 30 %; provas rápidas, 10 %; prova escrita, 30 %. Cada tarefa tem uma grelha /20. Na primeira recuperação, fazes a tarefa da unidade em falta, com a mesma grelha /20.</p></div></details></div><!-- id=\"podcast\": o podcast e o mapa já estão nestas ligações; podcasts.mjs não acrescenta a secção --></header>",
+     "new": "<p class=\"lead mod-pergunta\"><span class=\"vh\">A palavra do módulo é fama. </span><span class=\"serif\">«De quem é que já ouviste falar, e porquê?»</span></p>\n<p class=\"lead mod-ambito\">Duas unidades com lições, dois exercícios longos e duas aulas de tarefa.</p>\n\n<div class=\"module-opening\"><div class=\"module-entry\"><a class=\"cz-button primary\" data-module-next href=\"./licao-m3-f02/\"><span data-module-next-label>Começar: Duas versões de 1498</span><span aria-hidden=\"true\">→</span></a></div></div><!-- id=\"podcast\": o podcast e o mapa já estão nestas ligações; podcasts.mjs não acrescenta a secção --></header><details class=\"cz-recursos\"><summary>Recursos do módulo</summary><div class=\"mod-sec\"><nav class=\"ligas\"><a href=\"./mapa-do-modulo-m3/\">Mapa do módulo</a></nav><details class=\"regra\"><summary>Como se cumpre uma unidade</summary><div>Fazes as lições e fechas cada unidade numa aula de tarefa de 90 minutos: aquecimento em cartões, núcleo comum, tema A ou B, revisão e fotografias no Teams. A síntese integra a produção. A avaliação é feita pelo docente.<p class=\"avaliacao-tarefas\">Pesos na avaliação: tarefa da Unidade 1, 30 %; tarefa da Unidade 2, 30 %; provas rápidas, 10 %; prova escrita, 30 %. Cada tarefa tem uma grelha /20. Na primeira recuperação, fazes a tarefa da unidade em falta, com a mesma grelha /20.</p></div></details></div></details>",
+     "occurrences": 1
+    },
+    {
+     "location": "M3 unidade 1: o título passa para a banda",
+     "old": "<span class=\"cz-fold-t\">Camões: o mundo e a voz</span>",
+     "new": "<h2 class=\"cz-fold-t\" id=\"unidade-pedagogica-1\">Camões: o mundo e a voz</h2>",
+     "occurrences": 1
+    },
+    {
+     "location": "M3 unidade 1: pergunta e prova junto do percurso",
+     "old": "<header class=\"grupo-topo\"><p class=\"grupo-etq\">Unidade 1: 7 passos</p><h2 id=\"unidade-pedagogica-1\">Camões: o mundo e a voz</h2><p class=\"grupo-pergunta\">Como se relacionam o contexto de uma obra e as vozes que ela constrói?</p></header>",
+     "new": "<div class=\"cz-unit-body\"><header class=\"grupo-topo\"><p class=\"grupo-etq\">Unidade 1: 7 passos</p><p class=\"grupo-pergunta\">Como se relacionam o contexto de uma obra e as vozes que ela constrói?</p><p class=\"prova-esperada\">No fim, comparas as vozes de Camões, explicas um recurso expressivo com versos e distingues o que a Proposição de <em>Os Lusíadas</em> celebra do que deixa por dizer.</p></header>",
+     "occurrences": 1
+    },
+    {
+     "location": "M3 unidade 1: fecho do corpo da unidade",
+     "old": "<p class=\"prova-esperada\">No fim, comparas as vozes de Camões, explicas um recurso expressivo com versos e distingues o que a Proposição de <em>Os Lusíadas</em> celebra do que deixa por dizer.</p></section></details></section><section aria-labelledby=\"unidade-pedagogica-2\" class=\"unidade-pedagogica\" data-lesson-count=\"7\" data-unidade=\"2\">",
+     "new": "</section></div></details></section><section aria-labelledby=\"unidade-pedagogica-2\" class=\"unidade-pedagogica\" data-lesson-count=\"7\" data-unidade=\"2\">",
+     "occurrences": 1
+    },
+    {
+     "location": "M3 unidade 2: o título passa para a banda",
+     "old": "<span class=\"cz-fold-t\">Dentro da epopeia: celebrar e questionar</span>",
+     "new": "<h2 class=\"cz-fold-t\" id=\"unidade-pedagogica-2\">Dentro da epopeia: celebrar e questionar</h2>",
+     "occurrences": 1
+    },
+    {
+     "location": "M3 unidade 2: pergunta e prova junto do percurso",
+     "old": "<header class=\"grupo-topo\"><p class=\"grupo-etq\">Unidade 2: 8 passos</p><h2 id=\"unidade-pedagogica-2\">Dentro da epopeia: celebrar e questionar</h2><p class=\"grupo-pergunta\">Como pode a mesma epopeia celebrar a viagem e pôr em causa os seus motivos?</p></header>",
+     "new": "<div class=\"cz-unit-body\"><header class=\"grupo-topo\"><p class=\"grupo-etq\">Unidade 2: 8 passos</p><p class=\"grupo-pergunta\">Como pode a mesma epopeia celebrar a viagem e pôr em causa os seus motivos?</p><p class=\"prova-esperada\">No fim, defendes uma tese sobre a mudança entre o canto alto e o silêncio, com uma citação localizada de cada passagem.</p></header>",
+     "occurrences": 1
+    },
+    {
+     "location": "M3 unidade 2: fecho do corpo e imagem documental a seguir às unidades",
+     "old": "<p class=\"prova-esperada\">No fim, defendes uma tese sobre a mudança entre o canto alto e o silêncio, com uma citação localizada de cada passagem.</p></section></details></section>",
+     "new": "</section></div></details></section><figure class=\"doc\"><a href=\"../img/fontes/lusiadas-1572-rosto.jpg?v=rosto-20261019\" aria-label=\"Ver a folha de rosto em tamanho completo\"><img src=\"../img/fontes/lusiadas-1572-rosto.jpg?v=rosto-20261019\" width=\"389\" height=\"565\" alt=\"Folha de rosto de Os Lusíadas, Lisboa, 1572: título e moldura ornamental.\" loading=\"lazy\" decoding=\"async\"></a><figcaption class=\"cz-credit\">Fonte: Academia Brasileira de Letras, via <a href=\"https://commons.wikimedia.org/wiki/File:BookFrontOsLusiadas1572.jpg\">Wikimedia Commons <span aria-hidden=\"true\">↗</span></a>. Domínio público.</figcaption></figure>",
+     "occurrences": 1
+    },
+    {
+     "location": "M3 teclado dos recursos",
+     "old": "</body>",
+     "new": "<script src=\"../assets/cartaz-indice-comum.js?v=20261106\"></script></body>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/index.html": {
+   "base_sha256_lf": "a7f8bbd945a7b783d1e738ec1035aac1729e76dd135a7ff9d2239a74cc50ad82",
+   "after_sha256_lf": "8e2574ceec5bf2f46a1162e5a9b7f6d48d48d387b3493ac58dec47a03339d506",
+   "edits": [
+    {
+     "location": "M4 estilos comuns dos nove índices",
+     "old": "<link rel=\"stylesheet\" href=\"../assets/cartaz-m4-piloto.css?v=20261102\">",
+     "new": "<link rel=\"stylesheet\" href=\"../assets/cartaz-indice-comum.css?v=20261106\">",
+     "occurrences": 1
+    },
+    {
+     "location": "M4 adesão ao desenho comum",
+     "old": "<main data-cartaz=\"2\" class=\"cz-index\" data-m4-piloto=\"20261102\">",
+     "new": "<main data-cartaz=\"2\" class=\"cz-index\" data-cz-indice=\"20261106\">",
+     "occurrences": 1
+    },
+    {
+     "location": "M4 recursos só com o mapa e a regra; imagem, docente e modo noturno saem",
+     "old": "<details class=\"m4-recursos\"><summary>Recursos do módulo</summary><div class=\"mod-sec\"><nav class=\"m4-resource-links\"><a href=\"./mapa-do-modulo-m4/\">Mapa do módulo</a></nav><details class=\"regra\"><summary>Como se cumpre uma unidade</summary><div>Fazes as aulas de leitura e preparação e fechas a unidade na aula de tarefa: aquecimento em cartões (a linha A do percurso), produção em papel, uma síntese simples integrada e fotografias no Teams. A avaliação é feita pelo docente. A tarefa organiza a produção prevista para a unidade; não exige repetir uma produção já realizada.<p class=\"avaliacao-tarefas\">Pesos na avaliação: tarefas das Unidades 1, 2 e 3, 25 % cada; provas rápidas, 10 %; prova escrita, 15 %. Cada tarefa tem uma grelha /20.</p></div></details></div><figure class=\"doc\"><img alt=\"Sermão de Santo António aos Peixes, em Sermoens (Lisboa, 1682)\" decoding=\"async\" height=\"575\" loading=\"lazy\" src=\"https://pedrohfernandes-klk.github.io/pt/img/fontes/sermao-1682.jpg\" width=\"420\"/><figcaption class=\"cz-credit\"><em>Sermão de Santo António aos Peixes</em>, em <em>Sermoens</em> (Lisboa, 1682). Domínio público.</figcaption></figure><details class=\"route-teacher-tools\"><summary aria-label=\"Abrir materiais do docente\" class=\"teacher-access\" title=\"Para o docente\"><svg aria-hidden=\"true\" height=\"30\" viewbox=\"0 0 40 40\" width=\"30\"><circle cx=\"20\" cy=\"20\" fill=\"none\" r=\"15\" stroke=\"currentColor\" stroke-width=\"2.5\"></circle><circle cx=\"20\" cy=\"20\" fill=\"none\" r=\"8\" stroke=\"currentColor\" stroke-width=\"2.5\"></circle><path d=\"m9.5 9.5 5 5m11 11 5 5m-21 0 5-5m11-11 5-5\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"5\"></path></svg><span>Materiais do docente</span></summary><nav aria-label=\"Materiais do docente\"><p><a href=\"https://pedrohfernandes-klk.github.io/lente/docente/#portugues\">Guiões do docente</a></p><p><a href=\"./guia-da-tarefa-m4/\">Tarefas e critérios</a></p><p><a href=\"./portefolio-do-modulo-m4/\">Portefólio</a></p><p><a href=\"?arquivo=1#arquivo-percurso\">Arquivo anterior</a></p></nav></details><div class=\"m4-device\"><span>Neste aparelho</span><span data-appearance-control=\"\"></span></div></details>",
+     "new": "<details class=\"cz-recursos\"><summary>Recursos do módulo</summary><div class=\"mod-sec\"><nav class=\"ligas\"><a href=\"./mapa-do-modulo-m4/\">Mapa do módulo</a></nav><details class=\"regra\"><summary>Como se cumpre uma unidade</summary><div>Fazes as aulas de leitura e preparação e fechas a unidade na aula de tarefa: aquecimento em cartões (a linha A do percurso), produção em papel, uma síntese simples integrada e fotografias no Teams. A avaliação é feita pelo docente. A tarefa organiza a produção prevista para a unidade; não exige repetir uma produção já realizada.<p class=\"avaliacao-tarefas\">Pesos na avaliação: tarefas das Unidades 1, 2 e 3, 25 % cada; provas rápidas, 10 %; prova escrita, 15 %. Cada tarefa tem uma grelha /20.</p></div></details></div></details>",
+     "occurrences": 1
+    },
+    {
+     "location": "M4 o acesso do docente volta a flutuar",
+     "old": "<!-- Materiais do docente reunidos nos recursos do M4. -->",
+     "new": "<details class=\"route-teacher-tools\"><summary class=\"teacher-access\" aria-label=\"Abrir materiais do docente\" title=\"Para o docente\"><svg viewBox=\"0 0 40 40\" width=\"30\" height=\"30\" aria-hidden=\"true\"><circle cx=\"20\" cy=\"20\" r=\"15\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\"/><circle cx=\"20\" cy=\"20\" r=\"8\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\"/><path d=\"m9.5 9.5 5 5m11 11 5 5m-21 0 5-5m11-11 5-5\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"5\"/></svg></summary><nav aria-label=\"Materiais do docente\" style=\"position:fixed;left:12px;bottom:64px;z-index:1001;max-width:calc(100vw - 24px);padding:12px 16px;background:var(--papel,#fff);color:var(--tinta,#171715);border:1px solid currentColor\"><p><a href=\"https://pedrohfernandes-klk.github.io/lente/docente/#portugues\">Guiões do docente</a></p><p><a href=\"./guia-da-tarefa-m4/\">Tarefas e critérios</a></p><p><a href=\"./portefolio-do-modulo-m4/\">Portefólio</a></p><p><a href=\"?arquivo=1#arquivo-percurso\">Arquivo anterior</a></p></nav></details>",
+     "occurrences": 1
+    },
+    {
+     "location": "M4 unidade 1: corpo comum",
+     "old": "<div class=\"m4-unit-body\"><header class=\"grupo-topo\"><p class=\"grupo-etq\">Unidade 1, aulas de leitura e preparação, aula de tarefa</p>",
+     "new": "<div class=\"cz-unit-body\"><header class=\"grupo-topo\"><p class=\"grupo-etq\">Unidade 1, aulas de leitura e preparação, aula de tarefa</p>",
+     "occurrences": 1
+    },
+    {
+     "location": "M4 unidade 2: corpo comum",
+     "old": "<div class=\"m4-unit-body\"><header class=\"grupo-topo\"><p class=\"grupo-etq\">Unidade 2, aulas de leitura e preparação, aula de tarefa</p>",
+     "new": "<div class=\"cz-unit-body\"><header class=\"grupo-topo\"><p class=\"grupo-etq\">Unidade 2, aulas de leitura e preparação, aula de tarefa</p>",
+     "occurrences": 1
+    },
+    {
+     "location": "M4 unidade 3: corpo comum",
+     "old": "<div class=\"m4-unit-body\"><header class=\"grupo-topo\"><p class=\"grupo-etq\">Unidade 3, aulas de leitura e preparação, aula de tarefa</p>",
+     "new": "<div class=\"cz-unit-body\"><header class=\"grupo-topo\"><p class=\"grupo-etq\">Unidade 3, aulas de leitura e preparação, aula de tarefa</p>",
+     "occurrences": 1
+    },
+    {
+     "location": "M4 imagem documental a seguir às unidades",
+     "old": "<li class=\"aula-tarefa\" data-task-lesson=\"3\" id=\"tarefa-unidade-3\"><a class=\"cz-row\" href=\"../tarefas/m4-u3-discurso/\"><span class=\"n\">T</span><span><span class=\"t\">Tarefa da Unidade 3: Discurso no abrigo</span><span class=\"f\">Aula de 90 minutos com consulta: aquecimento em cartões, discurso em papel, apresentação individual e fotografias no Teams.</span></span><span class=\"chip\">90 min</span><span aria-hidden=\"true\" class=\"arrow\">→</span></a></li></ol></section></div></details></section>",
+     "new": "<li class=\"aula-tarefa\" data-task-lesson=\"3\" id=\"tarefa-unidade-3\"><a class=\"cz-row\" href=\"../tarefas/m4-u3-discurso/\"><span class=\"n\">T</span><span><span class=\"t\">Tarefa da Unidade 3: Discurso no abrigo</span><span class=\"f\">Aula de 90 minutos com consulta: aquecimento em cartões, discurso em papel, apresentação individual e fotografias no Teams.</span></span><span class=\"chip\">90 min</span><span aria-hidden=\"true\" class=\"arrow\">→</span></a></li></ol></section></div></details></section><figure class=\"doc\"><img alt=\"Sermão de Santo António aos Peixes, em Sermoens (Lisboa, 1682)\" decoding=\"async\" height=\"575\" loading=\"lazy\" src=\"https://pedrohfernandes-klk.github.io/pt/img/fontes/sermao-1682.jpg\" width=\"420\"/><figcaption class=\"cz-credit\"><em>Sermão de Santo António aos Peixes</em>, em <em>Sermoens</em> (Lisboa, 1682). Domínio público.</figcaption></figure>",
+     "occurrences": 1
+    },
+    {
+     "location": "M4 teclado dos recursos",
+     "old": "<script src=\"../assets/cartaz-m4-piloto.js?v=20261102\"></script></body>",
+     "new": "<script src=\"../assets/cartaz-indice-comum.js?v=20261106\"></script></body>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m5/index.html": {
+   "base_sha256_lf": "4a3ff1a8bed25873b8fa9633db8f7f9328f09a112001ebbbe57488e0bb375537",
+   "after_sha256_lf": "2120843a6b0c23d74074e00b520077e5a93cea20aea1e6d90c42498e8c6afa78",
+   "edits": [
+    {
+     "location": "M5 estilos comuns dos nove índices",
+     "old": "<link rel=\"stylesheet\" href=\"../assets/cartaz-indices.css?v=20261101\">",
+     "new": "<link rel=\"stylesheet\" href=\"../assets/cartaz-indice-comum.css?v=20261106\">",
+     "occurrences": 1
+    },
+    {
+     "location": "M5 adesão ao desenho comum",
+     "old": "<main data-cartaz=\"2\" class=\"cz-index\">",
+     "new": "<main data-cartaz=\"2\" class=\"cz-index\" data-cz-indice=\"20261106\">",
+     "occurrences": 1
+    },
+    {
+     "location": "M5 abertura: recursos no fluxo e imagem fora da abertura",
+     "old": "<div class=\"module-opening\"><div class=\"module-entry\"><a class=\"cz-button primary\" data-module-next href=\"./licao-m5-f02/\"><span data-module-next-label>Começar: Folheando os livros da cadeia</span><span aria-hidden=\"true\">→</span></a></div><figure class=\"doc\"><a href=\"../img/fontes/os-maias-1888.jpg?v=rosto-20261019\" aria-label=\"Ver a folha de rosto em tamanho completo\"><img src=\"../img/fontes/os-maias-1888.jpg?v=rosto-20261019\" width=\"442\" height=\"740\" alt=\"Folha de rosto do volume I de Os Maias, Porto, 1888, com o subtítulo Episódios da vida romântica.\" loading=\"lazy\" decoding=\"async\"></a><figcaption class=\"cz-credit\">Fonte: <a href=\"https://commons.wikimedia.org/wiki/File:Os_Maias_Book_Cover.jpg\">Wikimedia Commons <span aria-hidden=\"true\">↗</span></a>. Domínio público.</figcaption></figure></div><p class=\"lead mod-pergunta\"><span class=\"vh\">A palavra do módulo é herança. </span><span class=\"serif\">«O que é que herdaste sem ter escolhido?»</span></p>\n<p class=\"lead mod-ambito\">Onze lições em duas unidades, com dois exercícios longos.</p>\n\n<div class=\"mod-sec\"><nav class=\"ligas\"><a href=\"./mapa-do-modulo-m5/\">Mapa do módulo</a></nav><details class=\"regra\"><summary>Como se cumpre uma unidade</summary><div>Fazes as lições e fechas cada unidade numa aula de tarefa de 90 minutos: aquecimento em cartões, núcleo comum, tema A ou B, revisão e fotografias no Teams. A síntese integra a produção. A avaliação é feita pelo docente.<p class=\"avaliacao-tarefas\">Pesos na avaliação: tarefa da Unidade 1, 30 %; tarefa da Unidade 2, 30 %; provas rápidas, 10 %; prova escrita, 30 %. Cada tarefa tem uma grelha /20. Na primeira recuperação, fazes a tarefa da unidade em falta, com a mesma grelha /20.</p></div></details></div><!-- id=\"podcast\": o podcast e o mapa já estão nestas ligações; podcasts.mjs não acrescenta a secção --></header>",
+     "new": "<p class=\"lead mod-pergunta\"><span class=\"vh\">A palavra do módulo é herança. </span><span class=\"serif\">«O que é que herdaste sem ter escolhido?»</span></p>\n<p class=\"lead mod-ambito\">Onze lições em duas unidades, com dois exercícios longos.</p>\n\n<div class=\"module-opening\"><div class=\"module-entry\"><a class=\"cz-button primary\" data-module-next href=\"./licao-m5-f02/\"><span data-module-next-label>Começar: Folheando os livros da cadeia</span><span aria-hidden=\"true\">→</span></a></div></div><!-- id=\"podcast\": o podcast e o mapa já estão nestas ligações; podcasts.mjs não acrescenta a secção --></header><details class=\"cz-recursos\"><summary>Recursos do módulo</summary><div class=\"mod-sec\"><nav class=\"ligas\"><a href=\"./mapa-do-modulo-m5/\">Mapa do módulo</a></nav><details class=\"regra\"><summary>Como se cumpre uma unidade</summary><div>Fazes as lições e fechas cada unidade numa aula de tarefa de 90 minutos: aquecimento em cartões, núcleo comum, tema A ou B, revisão e fotografias no Teams. A síntese integra a produção. A avaliação é feita pelo docente.<p class=\"avaliacao-tarefas\">Pesos na avaliação: tarefa da Unidade 1, 30 %; tarefa da Unidade 2, 30 %; provas rápidas, 10 %; prova escrita, 30 %. Cada tarefa tem uma grelha /20. Na primeira recuperação, fazes a tarefa da unidade em falta, com a mesma grelha /20.</p></div></details></div></details>",
+     "occurrences": 1
+    },
+    {
+     "location": "M5 unidade 1: o título passa para a banda",
+     "old": "<span class=\"cz-fold-t\">Um amor contra duas famílias</span>",
+     "new": "<h2 class=\"cz-fold-t\" id=\"unidade-pedagogica-1\">Um amor contra duas famílias</h2>",
+     "occurrences": 1
+    },
+    {
+     "location": "M5 unidade 1: pergunta e prova junto do percurso",
+     "old": "<header class=\"grupo-topo\"><p class=\"grupo-etq\">Unidade 1: 7 passos</p><h2 id=\"unidade-pedagogica-1\">Um amor contra duas famílias</h2><p class=\"grupo-pergunta\">Quem decide por quem, quando se ama?</p></header>",
+     "new": "<div class=\"cz-unit-body\"><header class=\"grupo-topo\"><p class=\"grupo-etq\">Unidade 1: 7 passos</p><p class=\"grupo-pergunta\">Quem decide por quem, quando se ama?</p><p class=\"prova-esperada\">No fim, explicas como o narrador intervém no conflito e sustentas uma leitura das relações entre personagens com passagens do romance.</p></header>",
+     "occurrences": 1
+    },
+    {
+     "location": "M5 unidade 1: fecho do corpo da unidade",
+     "old": "<p class=\"prova-esperada\">No fim, explicas como o narrador intervém no conflito e sustentas uma leitura das relações entre personagens com passagens do romance.</p></section></details></section><section aria-labelledby=\"unidade-pedagogica-2\" class=\"unidade-pedagogica\" data-lesson-count=\"7\" data-unidade=\"2\">",
+     "new": "</section></div></details></section><section aria-labelledby=\"unidade-pedagogica-2\" class=\"unidade-pedagogica\" data-lesson-count=\"7\" data-unidade=\"2\">",
+     "occurrences": 1
+    },
+    {
+     "location": "M5 unidade 2: o título passa para a banda",
+     "old": "<span class=\"cz-fold-t\">A casa dos Maias</span>",
+     "new": "<h2 class=\"cz-fold-t\" id=\"unidade-pedagogica-2\">A casa dos Maias</h2>",
+     "occurrences": 1
+    },
+    {
+     "location": "M5 unidade 2: pergunta e prova junto do percurso",
+     "old": "<header class=\"grupo-topo\"><p class=\"grupo-etq\">Unidade 2: 8 passos</p><h2 id=\"unidade-pedagogica-2\">A casa dos Maias</h2><p class=\"grupo-pergunta\">Falha-se a vida, ou deixa-se falhar?</p></header>",
+     "new": "<div class=\"cz-unit-body\"><header class=\"grupo-topo\"><p class=\"grupo-etq\">Unidade 2: 8 passos</p><p class=\"grupo-pergunta\">Falha-se a vida, ou deixa-se falhar?</p><p class=\"prova-esperada\">No fim, relacionas o princípio e o fim do romance, distingues as vozes do relato e explicas como um pormenor constrói a crítica.</p></header>",
+     "occurrences": 1
+    },
+    {
+     "location": "M5 unidade 2: fecho do corpo e imagem documental a seguir às unidades",
+     "old": "<p class=\"prova-esperada\">No fim, relacionas o princípio e o fim do romance, distingues as vozes do relato e explicas como um pormenor constrói a crítica.</p></section></details></section>",
+     "new": "</section></div></details></section><figure class=\"doc\"><a href=\"../img/fontes/os-maias-1888.jpg?v=rosto-20261019\" aria-label=\"Ver a folha de rosto em tamanho completo\"><img src=\"../img/fontes/os-maias-1888.jpg?v=rosto-20261019\" width=\"442\" height=\"740\" alt=\"Folha de rosto do volume I de Os Maias, Porto, 1888, com o subtítulo Episódios da vida romântica.\" loading=\"lazy\" decoding=\"async\"></a><figcaption class=\"cz-credit\">Fonte: <a href=\"https://commons.wikimedia.org/wiki/File:Os_Maias_Book_Cover.jpg\">Wikimedia Commons <span aria-hidden=\"true\">↗</span></a>. Domínio público.</figcaption></figure>",
+     "occurrences": 1
+    },
+    {
+     "location": "M5 teclado dos recursos",
+     "old": "</body>",
+     "new": "<script src=\"../assets/cartaz-indice-comum.js?v=20261106\"></script></body>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m6/index.html": {
+   "base_sha256_lf": "e5908795528e51761ca59ef2de6ede54c2b96e1643ecf41603b34da84aa2bcc2",
+   "after_sha256_lf": "02260926b383d566a52c27825de4dceced5d9b3884c928211a4f34eb6074b090",
+   "edits": [
+    {
+     "location": "M6 estilos comuns dos nove índices",
+     "old": "<link rel=\"stylesheet\" href=\"../assets/cartaz-indices.css?v=20261101\">",
+     "new": "<link rel=\"stylesheet\" href=\"../assets/cartaz-indice-comum.css?v=20261106\">",
+     "occurrences": 1
+    },
+    {
+     "location": "M6 adesão ao desenho comum",
+     "old": "<main data-cartaz=\"2\" class=\"cz-index\">",
+     "new": "<main data-cartaz=\"2\" class=\"cz-index\" data-cz-indice=\"20261106\">",
+     "occurrences": 1
+    },
+    {
+     "location": "M6 abertura: recursos no fluxo e imagem fora da abertura",
+     "old": "<div class=\"module-opening\"><div class=\"module-entry\"><a class=\"cz-button primary\" data-module-next href=\"./licao-m6-f01/\"><span data-module-next-label>Começar: O cavaleiro que encontra o nada</span><span aria-hidden=\"true\">→</span></a></div><figure class=\"doc\"><img src=\"https://pedrohfernandes-klk.github.io/pt/img/fontes/sentimento-ocidental-1887.jpg\" width=\"640\" height=\"890\" alt=\"«O Sentimento dum Ocidental» em O Livro de Cesário Verde (1887), primeira página\" loading=\"lazy\" decoding=\"async\"><figcaption class=\"cz-credit\">«O Sentimento dum Ocidental» em <em>O Livro de Cesário Verde</em> (1887), primeira página. Domínio público.</figcaption></figure></div><p class=\"lead mod-pergunta\"><span class=\"vh\">A palavra do módulo é cidade. </span><span class=\"serif\">«O que é que a tua cidade te mostra quando vens para a escola?»</span></p>\n<p class=\"lead mod-ambito\">Onze lições em duas unidades, com dois exercícios longos.</p>\n\n<div class=\"mod-sec\"><nav class=\"ligas\"><a href=\"./mapa-do-modulo-m6/\">Mapa do módulo</a></nav><details class=\"regra\"><summary>Como se cumpre uma unidade</summary><div>Fazes as lições e fechas cada unidade numa aula de tarefa de 90 minutos: aquecimento em cartões, núcleo comum, tema A ou B, revisão e fotografias no Teams. A síntese integra a produção. A avaliação é feita pelo docente.<p class=\"avaliacao-tarefas\">Pesos na avaliação: tarefa da Unidade 1, 30 %; tarefa da Unidade 2, 30 %; provas rápidas, 10 %; prova escrita, 30 %. Cada tarefa tem uma grelha /20. Na primeira recuperação, fazes a tarefa da unidade em falta, com a mesma grelha /20.</p></div></details></div><!-- id=\"podcast\": o podcast e o mapa já estão nestas ligações; podcasts.mjs não acrescenta a secção --></header>",
+     "new": "<p class=\"lead mod-pergunta\"><span class=\"vh\">A palavra do módulo é cidade. </span><span class=\"serif\">«O que é que a tua cidade te mostra quando vens para a escola?»</span></p>\n<p class=\"lead mod-ambito\">Onze lições em duas unidades, com dois exercícios longos.</p>\n\n<div class=\"module-opening\"><div class=\"module-entry\"><a class=\"cz-button primary\" data-module-next href=\"./licao-m6-f01/\"><span data-module-next-label>Começar: O cavaleiro que encontra o nada</span><span aria-hidden=\"true\">→</span></a></div></div><!-- id=\"podcast\": o podcast e o mapa já estão nestas ligações; podcasts.mjs não acrescenta a secção --></header><details class=\"cz-recursos\"><summary>Recursos do módulo</summary><div class=\"mod-sec\"><nav class=\"ligas\"><a href=\"./mapa-do-modulo-m6/\">Mapa do módulo</a></nav><details class=\"regra\"><summary>Como se cumpre uma unidade</summary><div>Fazes as lições e fechas cada unidade numa aula de tarefa de 90 minutos: aquecimento em cartões, núcleo comum, tema A ou B, revisão e fotografias no Teams. A síntese integra a produção. A avaliação é feita pelo docente.<p class=\"avaliacao-tarefas\">Pesos na avaliação: tarefa da Unidade 1, 30 %; tarefa da Unidade 2, 30 %; provas rápidas, 10 %; prova escrita, 30 %. Cada tarefa tem uma grelha /20. Na primeira recuperação, fazes a tarefa da unidade em falta, com a mesma grelha /20.</p></div></details></div></details>",
+     "occurrences": 1
+    },
+    {
+     "location": "M6 unidade 1: o título passa para a banda",
+     "old": "<span class=\"cz-fold-t\">O ideal e a rua</span>",
+     "new": "<h2 class=\"cz-fold-t\" id=\"unidade-pedagogica-1\">O ideal e a rua</h2>",
+     "occurrences": 1
+    },
+    {
+     "location": "M6 unidade 1: pergunta e prova junto do percurso",
+     "old": "<header class=\"grupo-topo\"><p class=\"grupo-etq\">Unidade 1: 8 passos</p><h2 id=\"unidade-pedagogica-1\">O ideal e a rua</h2><p class=\"grupo-pergunta\">Para que serve um ideal que não se alcança?</p></header>",
+     "new": "<div class=\"cz-unit-body\"><header class=\"grupo-topo\"><p class=\"grupo-etq\">Unidade 1: 8 passos</p><p class=\"grupo-pergunta\">Para que serve um ideal que não se alcança?</p><p class=\"prova-esperada\">No fim, explicas a tensão entre ideal e realidade num poema, mostras como a linguagem a constrói e justificas uma leitura com versos.</p></header>",
+     "occurrences": 1
+    },
+    {
+     "location": "M6 unidade 1: fecho do corpo da unidade",
+     "old": "<p class=\"prova-esperada\">No fim, explicas a tensão entre ideal e realidade num poema, mostras como a linguagem a constrói e justificas uma leitura com versos.</p></section></details></section><section aria-labelledby=\"unidade-pedagogica-2\" class=\"unidade-pedagogica\" data-lesson-count=\"6\" data-unidade=\"2\">",
+     "new": "</section></div></details></section><section aria-labelledby=\"unidade-pedagogica-2\" class=\"unidade-pedagogica\" data-lesson-count=\"6\" data-unidade=\"2\">",
+     "occurrences": 1
+    },
+    {
+     "location": "M6 unidade 2: o título passa para a banda",
+     "old": "<span class=\"cz-fold-t\">A cidade inteira</span>",
+     "new": "<h2 class=\"cz-fold-t\" id=\"unidade-pedagogica-2\">A cidade inteira</h2>",
+     "occurrences": 1
+    },
+    {
+     "location": "M6 unidade 2: pergunta e prova junto do percurso",
+     "old": "<header class=\"grupo-topo\"><p class=\"grupo-etq\">Unidade 2: 7 passos</p><h2 id=\"unidade-pedagogica-2\">A cidade inteira</h2><p class=\"grupo-pergunta\">A cidade que Cesário viu ainda é a nossa?</p></header>",
+     "new": "<div class=\"cz-unit-body\"><header class=\"grupo-topo\"><p class=\"grupo-etq\">Unidade 2: 7 passos</p><p class=\"grupo-pergunta\">A cidade que Cesário viu ainda é a nossa?</p><p class=\"prova-esperada\">No fim, distingues observação e transfiguração em Cesário, explicas o efeito de dois recursos e justificas uma aproximação à cidade de hoje.</p></header>",
+     "occurrences": 1
+    },
+    {
+     "location": "M6 unidade 2: fecho do corpo e imagem documental a seguir às unidades",
+     "old": "<p class=\"prova-esperada\">No fim, distingues observação e transfiguração em Cesário, explicas o efeito de dois recursos e justificas uma aproximação à cidade de hoje.</p></section></details></section>",
+     "new": "</section></div></details></section><figure class=\"doc\"><img src=\"https://pedrohfernandes-klk.github.io/pt/img/fontes/sentimento-ocidental-1887.jpg\" width=\"640\" height=\"890\" alt=\"«O Sentimento dum Ocidental» em O Livro de Cesário Verde (1887), primeira página\" loading=\"lazy\" decoding=\"async\"><figcaption class=\"cz-credit\">«O Sentimento dum Ocidental» em <em>O Livro de Cesário Verde</em> (1887), primeira página. Domínio público.</figcaption></figure>",
+     "occurrences": 1
+    },
+    {
+     "location": "M6 teclado dos recursos",
+     "old": "</body>",
+     "new": "<script src=\"../assets/cartaz-indice-comum.js?v=20261106\"></script></body>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m7/index.html": {
+   "base_sha256_lf": "59ac4667fe5495204d5f0184f971c895db5d22dc32e82ad42e82a07d6848c5a0",
+   "after_sha256_lf": "35cfc67367e70252d64a19029e8e3188530d920a9c0512fec4389e5c0a08e9e8",
+   "edits": [
+    {
+     "location": "M7 estilos comuns dos nove índices",
+     "old": "<link rel=\"stylesheet\" href=\"../assets/cartaz-indices.css?v=20261101\">",
+     "new": "<link rel=\"stylesheet\" href=\"../assets/cartaz-indice-comum.css?v=20261106\">",
+     "occurrences": 1
+    },
+    {
+     "location": "M7 adesão ao desenho comum",
+     "old": "<main data-cartaz=\"2\" class=\"cz-index\">",
+     "new": "<main data-cartaz=\"2\" class=\"cz-index\" data-cz-indice=\"20261106\">",
+     "occurrences": 1
+    },
+    {
+     "location": "M7 abertura: recursos no fluxo e imagem fora da abertura",
+     "old": "<div class=\"module-opening\"><div class=\"module-entry\"><a class=\"cz-button primary\" data-module-next href=\"./licao-m7-f01/\"><span data-module-next-label>Começar: Quantos somos?</span><span aria-hidden=\"true\">→</span></a></div><figure class=\"doc\"><img src=\"https://pedrohfernandes-klk.github.io/pt/img/fontes/orpheu-2-1915.jpg\" width=\"640\" height=\"858\" alt=\"Revista Orpheu, n.º 2 (1915), capa\" loading=\"lazy\" decoding=\"async\"><figcaption class=\"cz-credit\">Revista <em>Orpheu</em>, n.º 2 (1915), capa. Domínio público.</figcaption></figure></div><div class=\"mod-sec\"><nav class=\"ligas\"><a href=\"./mapa-do-modulo-m7/\">Mapa do módulo</a></nav><details class=\"regra\"><summary>Como se cumpre uma unidade</summary><div>Fazes as aulas de leitura e preparação e fechas a unidade na aula de tarefa: aquecimento em cartões (a linha A do percurso), produção em papel, uma síntese simples integrada e fotografias no Teams. A avaliação é feita pelo docente. A tarefa organiza a produção prevista para a unidade; não exige repetir uma produção já realizada.<p class=\"avaliacao-tarefas\">Pesos na avaliação: tarefa da Unidade 2 («Uma ideia de heterónimo»), 35 %; tarefa da Unidade 3 («Louco, sim»), 25 %; provas rápidas, 10 %; prova escrita, 30 %. Cada tarefa tem uma grelha /20.</p></div></details></div><!-- id=\"podcast\": o podcast e o mapa já estão nestas ligações; podcasts.mjs não acrescenta a secção --></header>",
+     "new": "<div class=\"module-opening\"><div class=\"module-entry\"><a class=\"cz-button primary\" data-module-next href=\"./licao-m7-f01/\"><span data-module-next-label>Começar: Quantos somos?</span><span aria-hidden=\"true\">→</span></a></div></div><!-- id=\"podcast\": o podcast e o mapa já estão nestas ligações; podcasts.mjs não acrescenta a secção --></header><details class=\"cz-recursos\"><summary>Recursos do módulo</summary><div class=\"mod-sec\"><nav class=\"ligas\"><a href=\"./mapa-do-modulo-m7/\">Mapa do módulo</a></nav><details class=\"regra\"><summary>Como se cumpre uma unidade</summary><div>Fazes as aulas de leitura e preparação e fechas a unidade na aula de tarefa: aquecimento em cartões (a linha A do percurso), produção em papel, uma síntese simples integrada e fotografias no Teams. A avaliação é feita pelo docente. A tarefa organiza a produção prevista para a unidade; não exige repetir uma produção já realizada.<p class=\"avaliacao-tarefas\">Pesos na avaliação: tarefa da Unidade 2 («Uma ideia de heterónimo»), 35 %; tarefa da Unidade 3 («Louco, sim»), 25 %; provas rápidas, 10 %; prova escrita, 30 %. Cada tarefa tem uma grelha /20.</p></div></details></div></details>",
+     "occurrences": 1
+    },
+    {
+     "location": "M7 unidade 1: o título passa para a banda",
+     "old": "<span class=\"cz-fold-t\">Pessoa: fingimento, memória e identidade</span>",
+     "new": "<h2 class=\"cz-fold-t\" id=\"unidade-pedagogica-1\">Pessoa: fingimento, memória e identidade</h2>",
+     "occurrences": 1
+    },
+    {
+     "location": "M7 unidade 1: pergunta e prova junto do percurso",
+     "old": "<header class=\"grupo-topo\"><p class=\"grupo-etq\">Unidade 1, aulas de leitura e preparação, aula de tarefa</p><h2 id=\"unidade-pedagogica-1\">Pessoa: fingimento, memória e identidade</h2><p class=\"grupo-pergunta\">Como constrói o poema uma voz que não coincide simplesmente com a vida do autor?</p></header>",
+     "new": "<div class=\"cz-unit-body\"><header class=\"grupo-topo\"><p class=\"grupo-etq\">Unidade 1, aulas de leitura e preparação, aula de tarefa</p><p class=\"grupo-pergunta\">Como constrói o poema uma voz que não coincide simplesmente com a vida do autor?</p><p class=\"prova-esperada\">No fim, comparas o que dois poemas afirmam e desejam, com uma passagem de cada, sem confundir a voz poética com a vida do autor.</p></header>",
+     "occurrences": 1
+    },
+    {
+     "location": "M7 unidade 1: fecho do corpo da unidade",
+     "old": "<p class=\"prova-esperada\">No fim, comparas o que dois poemas afirmam e desejam, com uma passagem de cada, sem confundir a voz poética com a vida do autor.</p></section></details></section><section class=\"unidade-pedagogica\" data-unidade=\"2\" data-lesson-count=\"7\" aria-labelledby=\"unidade-pedagogica-2\">",
+     "new": "</section></div></details></section><section class=\"unidade-pedagogica\" data-unidade=\"2\" data-lesson-count=\"7\" aria-labelledby=\"unidade-pedagogica-2\">",
+     "occurrences": 1
+    },
+    {
+     "location": "M7 unidade 2: o título passa para a banda",
+     "old": "<span class=\"cz-fold-t\">Heterónimos: modos de ver e de viver</span>",
+     "new": "<h2 class=\"cz-fold-t\" id=\"unidade-pedagogica-2\">Heterónimos: modos de ver e de viver</h2>",
+     "occurrences": 1
+    },
+    {
+     "location": "M7 unidade 2: pergunta e prova junto do percurso",
+     "old": "<header class=\"grupo-topo\"><p class=\"grupo-etq\">Unidade 2, aulas de leitura e preparação, aula de tarefa</p><h2 id=\"unidade-pedagogica-2\">Heterónimos: modos de ver e de viver</h2><p class=\"grupo-pergunta\">O que muda quando Caeiro, Reis e Campos olham para o mesmo mundo?</p></header>",
+     "new": "<div class=\"cz-unit-body\"><header class=\"grupo-topo\"><p class=\"grupo-etq\">Unidade 2, aulas de leitura e preparação, aula de tarefa</p><p class=\"grupo-pergunta\">O que muda quando Caeiro, Reis e Campos olham para o mesmo mundo?</p><p class=\"prova-esperada\">No fim, crias uma voz ficcional com uma maneira própria de ver e justificas duas escolhas de linguagem com exemplos do teu texto.</p></header>",
+     "occurrences": 1
+    },
+    {
+     "location": "M7 unidade 2: fecho do corpo da unidade",
+     "old": "<p class=\"prova-esperada\">No fim, crias uma voz ficcional com uma maneira própria de ver e justificas duas escolhas de linguagem com exemplos do teu texto.</p></section></details></section><section class=\"unidade-pedagogica\" data-unidade=\"3\" data-lesson-count=\"4\" aria-labelledby=\"unidade-pedagogica-3\">",
+     "new": "</section></div></details></section><section class=\"unidade-pedagogica\" data-unidade=\"3\" data-lesson-count=\"4\" aria-labelledby=\"unidade-pedagogica-3\">",
+     "occurrences": 1
+    },
+    {
+     "location": "M7 unidade 3: o título passa para a banda",
+     "old": "<span class=\"cz-fold-t\"><em>Mensagem</em>: imaginar o país e confrontar as vozes</span>",
+     "new": "<h2 class=\"cz-fold-t\" id=\"unidade-pedagogica-3\"><em>Mensagem</em>: imaginar o país e confrontar as vozes</h2>",
+     "occurrences": 1
+    },
+    {
+     "location": "M7 unidade 3: pergunta e prova junto do percurso",
+     "old": "<header class=\"grupo-topo\"><p class=\"grupo-etq\">Unidade 3, aulas de leitura e preparação, aula de tarefa</p><h2 id=\"unidade-pedagogica-3\"><em>Mensagem</em>: imaginar o país e confrontar as vozes</h2><p class=\"grupo-pergunta\">Como transforma a poesia o passado em desejo de futuro?</p></header>",
+     "new": "<div class=\"cz-unit-body\"><header class=\"grupo-topo\"><p class=\"grupo-etq\">Unidade 3, aulas de leitura e preparação, aula de tarefa</p><p class=\"grupo-pergunta\">Como transforma a poesia o passado em desejo de futuro?</p><p class=\"prova-esperada\">No fim, defendes uma tese com um verso de <em>Mensagem</em> explicado no contexto, distingues facto e interpretação e respondes a um contra-argumento.</p></header>",
+     "occurrences": 1
+    },
+    {
+     "location": "M7 unidade 3: fecho do corpo e imagem documental a seguir às unidades",
+     "old": "<p class=\"prova-esperada\">No fim, defendes uma tese com um verso de <em>Mensagem</em> explicado no contexto, distingues facto e interpretação e respondes a um contra-argumento.</p></section></details></section>",
+     "new": "</section></div></details></section><figure class=\"doc\"><img src=\"https://pedrohfernandes-klk.github.io/pt/img/fontes/orpheu-2-1915.jpg\" width=\"640\" height=\"858\" alt=\"Revista Orpheu, n.º 2 (1915), capa\" loading=\"lazy\" decoding=\"async\"><figcaption class=\"cz-credit\">Revista <em>Orpheu</em>, n.º 2 (1915), capa. Domínio público.</figcaption></figure>",
+     "occurrences": 1
+    },
+    {
+     "location": "M7 teclado dos recursos",
+     "old": "</body>",
+     "new": "<script src=\"../assets/cartaz-indice-comum.js?v=20261106\"></script></body>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m8/index.html": {
+   "base_sha256_lf": "64b96aeeb1892662a598bdbbf515ab96768aacec6d7889257ae9f9be9564e202",
+   "after_sha256_lf": "65e268841168340dabc0bdace7a71f4ca9fb0661de605dd499e67ecb9ade7097",
+   "edits": [
+    {
+     "location": "M8 estilos comuns dos nove índices",
+     "old": "<link rel=\"stylesheet\" href=\"../assets/cartaz-indices.css?v=20261101\">",
+     "new": "<link rel=\"stylesheet\" href=\"../assets/cartaz-indice-comum.css?v=20261106\">",
+     "occurrences": 1
+    },
+    {
+     "location": "M8 adesão ao desenho comum",
+     "old": "<main data-cartaz=\"2\" class=\"cz-index\">",
+     "new": "<main data-cartaz=\"2\" class=\"cz-index\" data-cz-indice=\"20261106\">",
+     "occurrences": 1
+    },
+    {
+     "location": "M8 abertura: recursos no fluxo e imagem fora da abertura",
+     "old": "<div class=\"module-opening\"><div class=\"module-entry\"><a class=\"cz-button primary\" data-module-next href=\"./licao-m8-f01/\"><span data-module-next-label>Começar: Três vozes, um século</span><span aria-hidden=\"true\">→</span></a></div><figure class=\"doc\"><img src=\"https://pedrohfernandes-klk.github.io/pt/img/fontes/rua-do-alecrim-1968.jpg\" width=\"640\" height=\"431\" alt=\"Rua do Alecrim, Lisboa (fotografia de Roger Wollstadt, 1968)\" loading=\"lazy\" decoding=\"async\"><figcaption class=\"cz-credit\">Rua do Alecrim, Lisboa (fotografia de Roger Wollstadt, 1968). CC BY-SA 2.0.</figcaption></figure></div><div class=\"mod-sec\"><nav class=\"ligas\"><a href=\"./mapa-do-modulo-m8/\">Mapa do módulo</a></nav><details class=\"regra\"><summary>Como se cumpre uma unidade</summary><div>Fazes as lições e fechas cada unidade numa aula de tarefa de 90 minutos: aquecimento em cartões, planificação, tema A ou B, revisão e fotografias no Teams. A síntese integra a produção. A avaliação é feita pelo docente.<p class=\"avaliacao-tarefas\">Pesos na avaliação: tarefa da Unidade 1, 30 %; tarefa da Unidade 2, 30 %; provas rápidas, 10 %; prova escrita, 30 %. Cada tarefa tem uma grelha /20. Na primeira recuperação, fazes a tarefa da unidade em falta, com a mesma grelha /20.</p></div></details></div><!-- id=\"podcast\": o podcast e o mapa já estão nestas ligações; podcasts.mjs não acrescenta a secção --></header>",
+     "new": "<div class=\"module-opening\"><div class=\"module-entry\"><a class=\"cz-button primary\" data-module-next href=\"./licao-m8-f01/\"><span data-module-next-label>Começar: Três vozes, um século</span><span aria-hidden=\"true\">→</span></a></div></div><!-- id=\"podcast\": o podcast e o mapa já estão nestas ligações; podcasts.mjs não acrescenta a secção --></header><details class=\"cz-recursos\"><summary>Recursos do módulo</summary><div class=\"mod-sec\"><nav class=\"ligas\"><a href=\"./mapa-do-modulo-m8/\">Mapa do módulo</a></nav><details class=\"regra\"><summary>Como se cumpre uma unidade</summary><div>Fazes as lições e fechas cada unidade numa aula de tarefa de 90 minutos: aquecimento em cartões, planificação, tema A ou B, revisão e fotografias no Teams. A síntese integra a produção. A avaliação é feita pelo docente.<p class=\"avaliacao-tarefas\">Pesos na avaliação: tarefa da Unidade 1, 30 %; tarefa da Unidade 2, 30 %; provas rápidas, 10 %; prova escrita, 30 %. Cada tarefa tem uma grelha /20. Na primeira recuperação, fazes a tarefa da unidade em falta, com a mesma grelha /20.</p></div></details></div></details>",
+     "occurrences": 1
+    },
+    {
+     "location": "M8 unidade 1: o título passa para a banda",
+     "old": "<span class=\"cz-fold-t\">Três vozes, um século</span>",
+     "new": "<h2 class=\"cz-fold-t\" id=\"unidade-pedagogica-1\">Três vozes, um século</h2>",
+     "occurrences": 1
+    },
+    {
+     "location": "M8 unidade 1: pergunta e prova junto do percurso",
+     "old": "<header class=\"grupo-topo\"><p class=\"grupo-etq\">Unidade 1: 10 passos</p><h2 id=\"unidade-pedagogica-1\">Três vozes, um século</h2><p class=\"grupo-pergunta\">O que pode um poema que uma notícia não pode?</p></header>",
+     "new": "<div class=\"cz-unit-body\"><header class=\"grupo-topo\"><p class=\"grupo-etq\">Unidade 1: 10 passos</p><p class=\"grupo-pergunta\">O que pode um poema que uma notícia não pode?</p><p class=\"prova-esperada\">No fim, comparas dois poemas, explicas a relação entre os seus efeitos e sustentas uma apreciação crítica com um indício de cada texto.</p></header>",
+     "occurrences": 1
+    },
+    {
+     "location": "M8 unidade 1: fecho do corpo da unidade",
+     "old": "<p class=\"prova-esperada\">No fim, comparas dois poemas, explicas a relação entre os seus efeitos e sustentas uma apreciação crítica com um indício de cada texto.</p></section></details></section><section aria-labelledby=\"unidade-pedagogica-2\" class=\"unidade-pedagogica\" data-lesson-count=\"5\" data-unidade=\"2\">",
+     "new": "</section></div></details></section><section aria-labelledby=\"unidade-pedagogica-2\" class=\"unidade-pedagogica\" data-lesson-count=\"5\" data-unidade=\"2\">",
+     "occurrences": 1
+    },
+    {
+     "location": "M8 unidade 2: o título passa para a banda",
+     "old": "<span class=\"cz-fold-t\">O que cabe num conto</span>",
+     "new": "<h2 class=\"cz-fold-t\" id=\"unidade-pedagogica-2\">O que cabe num conto</h2>",
+     "occurrences": 1
+    },
+    {
+     "location": "M8 unidade 2: pergunta e prova junto do percurso",
+     "old": "<header class=\"grupo-topo\"><p class=\"grupo-etq\">Unidade 2: 6 passos</p><h2 id=\"unidade-pedagogica-2\">O que cabe num conto</h2><p class=\"grupo-pergunta\">O que dirias à pessoa que foste, e o que te diria a pessoa que vais ser?</p></header>",
+     "new": "<div class=\"cz-unit-body\"><header class=\"grupo-topo\"><p class=\"grupo-etq\">Unidade 2: 6 passos</p><p class=\"grupo-pergunta\">O que dirias à pessoa que foste, e o que te diria a pessoa que vais ser?</p><p class=\"prova-esperada\">No fim, defendes uma leitura da personagem George com dois momentos do conto e respondes a uma objeção, distinguindo o que observas do que inferes.</p></header>",
+     "occurrences": 1
+    },
+    {
+     "location": "M8 unidade 2: fecho do corpo e imagem documental a seguir às unidades",
+     "old": "<p class=\"prova-esperada\">No fim, defendes uma leitura da personagem George com dois momentos do conto e respondes a uma objeção, distinguindo o que observas do que inferes.</p></section></details></section>",
+     "new": "</section></div></details></section><figure class=\"doc\"><img src=\"https://pedrohfernandes-klk.github.io/pt/img/fontes/rua-do-alecrim-1968.jpg\" width=\"640\" height=\"431\" alt=\"Rua do Alecrim, Lisboa (fotografia de Roger Wollstadt, 1968)\" loading=\"lazy\" decoding=\"async\"><figcaption class=\"cz-credit\">Rua do Alecrim, Lisboa (fotografia de Roger Wollstadt, 1968). CC BY-SA 2.0.</figcaption></figure>",
+     "occurrences": 1
+    },
+    {
+     "location": "M8 teclado dos recursos",
+     "old": "</body>",
+     "new": "<script src=\"../assets/cartaz-indice-comum.js?v=20261106\"></script></body>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m9/index.html": {
+   "base_sha256_lf": "617235e9a8efbc06502b7440ed97d45c80b3d1a9288f5695a6016e3410b9f51d",
+   "after_sha256_lf": "80c270fbd249606868c8d73672f2e1dba0fdd9bd23f0e0dca422f046e664b105",
+   "edits": [
+    {
+     "location": "M9 estilos comuns dos nove índices",
+     "old": "<link rel=\"stylesheet\" href=\"../assets/cartaz-indices.css?v=20261101\">",
+     "new": "<link rel=\"stylesheet\" href=\"../assets/cartaz-indice-comum.css?v=20261106\">",
+     "occurrences": 1
+    },
+    {
+     "location": "M9 adesão ao desenho comum",
+     "old": "<main data-cartaz=\"2\" class=\"cz-index\">",
+     "new": "<main data-cartaz=\"2\" class=\"cz-index\" data-cz-indice=\"20261106\">",
+     "occurrences": 1
+    },
+    {
+     "location": "M9 abertura: recursos no fluxo e imagem fora da abertura",
+     "old": "<div class=\"module-opening\"><div class=\"module-entry\"><a class=\"cz-button primary\" data-module-next href=\"./licao-m9-f01/\"><span data-module-next-label>Começar: Um convento, uma promessa</span><span aria-hidden=\"true\">→</span></a></div><figure class=\"doc\"><img src=\"https://pedrohfernandes-klk.github.io/pt/img/fontes/passarola-gusmao.jpg\" width=\"638\" height=\"900\" alt=\"A Passarola de Bartolomeu de Gusmão, desenho do século XVIII (fac-símile, BNP)\" loading=\"lazy\" decoding=\"async\"><figcaption class=\"cz-credit\">A Passarola de Bartolomeu de Gusmão, desenho do século XVIII (fac-símile, BNP). Domínio público.</figcaption></figure></div><div class=\"mod-sec\"><nav class=\"ligas\"><a href=\"./mapa-do-modulo-m9/\">Mapa do módulo</a></nav><details class=\"regra\"><summary>Como se cumpre uma unidade</summary><div>Fazes as lições e fechas cada unidade numa aula de tarefa de 90 minutos: aquecimento em cartões, planificação, tema A ou B, revisão e fotografias no Teams. A síntese integra a produção. A avaliação é feita pelo docente.<p class=\"avaliacao-tarefas\">Pesos na avaliação: tarefa da Unidade 1, 30 %; tarefa da Unidade 2, 30 %; provas rápidas, 10 %; prova escrita, 30 %. Cada tarefa tem uma grelha /20. Na primeira recuperação, fazes a tarefa da unidade em falta, com a mesma grelha /20.</p></div></details></div><!-- id=\"podcast\": o podcast e o mapa já estão nestas ligações; podcasts.mjs não acrescenta a secção --></header>",
+     "new": "<div class=\"module-opening\"><div class=\"module-entry\"><a class=\"cz-button primary\" data-module-next href=\"./licao-m9-f01/\"><span data-module-next-label>Começar: Um convento, uma promessa</span><span aria-hidden=\"true\">→</span></a></div></div><!-- id=\"podcast\": o podcast e o mapa já estão nestas ligações; podcasts.mjs não acrescenta a secção --></header><details class=\"cz-recursos\"><summary>Recursos do módulo</summary><div class=\"mod-sec\"><nav class=\"ligas\"><a href=\"./mapa-do-modulo-m9/\">Mapa do módulo</a></nav><details class=\"regra\"><summary>Como se cumpre uma unidade</summary><div>Fazes as lições e fechas cada unidade numa aula de tarefa de 90 minutos: aquecimento em cartões, planificação, tema A ou B, revisão e fotografias no Teams. A síntese integra a produção. A avaliação é feita pelo docente.<p class=\"avaliacao-tarefas\">Pesos na avaliação: tarefa da Unidade 1, 30 %; tarefa da Unidade 2, 30 %; provas rápidas, 10 %; prova escrita, 30 %. Cada tarefa tem uma grelha /20. Na primeira recuperação, fazes a tarefa da unidade em falta, com a mesma grelha /20.</p></div></details></div></details>",
+     "occurrences": 1
+    },
+    {
+     "location": "M9 unidade 1: o título passa para a banda",
+     "old": "<span class=\"cz-fold-t\">A pedra e o sonho</span>",
+     "new": "<h2 class=\"cz-fold-t\" id=\"unidade-pedagogica-1\">A pedra e o sonho</h2>",
+     "occurrences": 1
+    },
+    {
+     "location": "M9 unidade 1: pergunta e prova junto do percurso",
+     "old": "<header class=\"grupo-topo\"><p class=\"grupo-etq\">Unidade 1: 8 passos</p><h2 id=\"unidade-pedagogica-1\">A pedra e o sonho</h2><p class=\"grupo-pergunta\">Que memórias guarda este livro?</p></header>",
+     "new": "<div class=\"cz-unit-body\"><header class=\"grupo-topo\"><p class=\"grupo-etq\">Unidade 1: 8 passos</p><p class=\"grupo-pergunta\">Que memórias guarda este livro?</p><p class=\"prova-esperada\">No fim, fazes a apreciação crítica de um episódio do romance, apoiada em dois pormenores, e explicas como um procedimento de escrita transforma a imagem do poder.</p></header>",
+     "occurrences": 1
+    },
+    {
+     "location": "M9 unidade 1: fecho do corpo da unidade",
+     "old": "<p class=\"prova-esperada\">No fim, fazes a apreciação crítica de um episódio do romance, apoiada em dois pormenores, e explicas como um procedimento de escrita transforma a imagem do poder.</p></section></details></section><section aria-labelledby=\"unidade-pedagogica-2\" class=\"unidade-pedagogica\" data-lesson-count=\"6\" data-unidade=\"2\">",
+     "new": "</section></div></details></section><section aria-labelledby=\"unidade-pedagogica-2\" class=\"unidade-pedagogica\" data-lesson-count=\"6\" data-unidade=\"2\">",
+     "occurrences": 1
+    },
+    {
+     "location": "M9 unidade 2: o título passa para a banda",
+     "old": "<span class=\"cz-fold-t\">Quem fala e quem faz a obra</span>",
+     "new": "<h2 class=\"cz-fold-t\" id=\"unidade-pedagogica-2\">Quem fala e quem faz a obra</h2>",
+     "occurrences": 1
+    },
+    {
+     "location": "M9 unidade 2: pergunta e prova junto do percurso",
+     "old": "<header class=\"grupo-topo\"><p class=\"grupo-etq\">Unidade 2: 7 passos</p><h2 id=\"unidade-pedagogica-2\">Quem fala e quem faz a obra</h2><p class=\"grupo-pergunta\">De quem é uma obra: de quem a manda fazer ou de quem a faz?</p></header>",
+     "new": "<div class=\"cz-unit-body\"><header class=\"grupo-topo\"><p class=\"grupo-etq\">Unidade 2: 7 passos</p><p class=\"grupo-pergunta\">De quem é uma obra: de quem a manda fazer ou de quem a faz?</p><p class=\"prova-esperada\">No fim, propões uma decisão pública apoiada em duas situações do romance, respondes a uma objeção e explicas o limite da comparação com o presente.</p></header>",
+     "occurrences": 1
+    },
+    {
+     "location": "M9 unidade 2: fecho do corpo e imagem documental a seguir às unidades",
+     "old": "<p class=\"prova-esperada\">No fim, propões uma decisão pública apoiada em duas situações do romance, respondes a uma objeção e explicas o limite da comparação com o presente.</p></section></details></section>",
+     "new": "</section></div></details></section><figure class=\"doc\"><img src=\"https://pedrohfernandes-klk.github.io/pt/img/fontes/passarola-gusmao.jpg\" width=\"638\" height=\"900\" alt=\"A Passarola de Bartolomeu de Gusmão, desenho do século XVIII (fac-símile, BNP)\" loading=\"lazy\" decoding=\"async\"><figcaption class=\"cz-credit\">A Passarola de Bartolomeu de Gusmão, desenho do século XVIII (fac-símile, BNP). Domínio público.</figcaption></figure>",
+     "occurrences": 1
+    },
+    {
+     "location": "M9 teclado dos recursos",
+     "old": "</body>",
+     "new": "<script src=\"../assets/cartaz-indice-comum.js?v=20261106\"></script></body>",
+     "occurrences": 1
+    }
+   ]
+  }
+ }
+}

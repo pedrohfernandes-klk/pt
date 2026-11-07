@@ -842,8 +842,15 @@ def main():
                 # 02/11/2026: a atribuição de IA é posterior ao lote 2 publicado.
                 # 03/11/2026: primeiro a camada visual do cabecalho.
                 # 05/11/2026: antes de tudo, a revisão de 5/11, a camada mais recente.
-                # 06/11/2026: antes de tudo, os créditos atrás de um «i» (decisão 153), a camada mais recente, por cima do lote 3 do
-                # Atlas depois de juntar o main.
+                # 06/11/2026: antes de tudo, o desenho comum dos nove índices (decisão 148), a camada mais recente, por cima dos
+                # créditos atrás de um «i».
+                indices_148 = ROOT / 'tests/fixtures/cartaz-indices-148-edits-20261106.json'
+                for edit in reversed(json.loads(indices_148.read_text('utf-8'))['files'].get(rel, {}).get('edits', [])):
+                    if conferencia.count(edit['new']) != edit['occurrences']:
+                        raise ManifestoDesatualizado(f'{rel}: desenho comum dos índices (decisão 148) não confere')
+                    conferencia = conferencia.replace(edit['new'], edit['old'])
+                # 06/11/2026: depois, os créditos atrás de um «i» (decisão 153), por cima do lote 3 do Atlas depois de juntar o
+                # main.
                 creditos_i = ROOT / 'tests/fixtures/creditos-i-edits-20261105.json'
                 for edit in reversed(json.loads(creditos_i.read_text('utf-8'))['files'].get(rel, {}).get('edits', [])):
                     if conferencia.count(edit['new']) != edit['occurrences']:
