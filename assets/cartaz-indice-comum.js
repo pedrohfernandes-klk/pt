@@ -15,7 +15,11 @@
      projetar que projection-launcher.js lá põe) e o acesso do docente passa para o menu «Recursos do módulo», como no M4
      publicado; nada flutua por cima do texto. A partir de 640 px, os dois voltam ao sítio de sempre, a flutuar no fim do
      <body>. Só se mudam de lugar elementos que já existem (os mesmos rótulos, a mesma ordem entre eles); nada se escreve. */
-  const phone = window.matchMedia('(max-width: 639px)');
+  /* 06/11/2026: decisão 173, revisão de 6/11: telemóvel é tudo o que não cumpre (min-width: 640px), o mesmo limite do CSS;
+     com (max-width: 639px), uma janela com zoom (639,2 px a 125 %) não cumpria nenhum dos dois e os botões flutuavam por
+     cima do texto. */
+  const desktop = window.matchMedia('(min-width: 640px)');
+  function phone() { return !desktop.matches; }
   const bar = document.querySelector('body > nav.migalhas');
   const tools = document.querySelector('body > details.route-teacher-tools');
   /* No M3, no M5 e no M6 há, logo antes, a ligação direta aos guiões (a.teacher-access), no mesmo canto: acompanha o menu e
@@ -39,7 +43,7 @@
 
   function placeTeacher() {
     if (!tools) return;
-    if (phone.matches) {
+    if (phone()) { // 06/11/2026: decisão 173, revisão de 6/11 (era phone.matches).
       if (holder.parentNode === resources) return;
       if (twin) holder.appendChild(twin);
       holder.appendChild(tools);
@@ -58,7 +62,7 @@
   function placeNight() {
     const slot = document.querySelector('[data-appearance-control]');
     if (!slot || !bar) return;
-    if (phone.matches) {
+    if (phone()) { // 06/11/2026: decisão 173, revisão de 6/11 (era phone.matches).
       if (slot.parentNode === bar) return;
       slot.removeAttribute('data-appearance-floating');
       bar.appendChild(slot);
@@ -76,6 +80,7 @@
   placeTeacher();
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', placeNight, {once: true});
   else placeNight();
-  if (phone.addEventListener) phone.addEventListener('change', place);
-  else if (phone.addListener) phone.addListener(place);
+  /* 06/11/2026: decisão 173, revisão de 6/11: a mudança ouve-se no (min-width: 640px). */
+  if (desktop.addEventListener) desktop.addEventListener('change', place);
+  else if (desktop.addListener) desktop.addListener(place);
 }());

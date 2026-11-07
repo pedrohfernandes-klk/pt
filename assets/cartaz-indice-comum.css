@@ -154,10 +154,25 @@ body.pt-module-layout main.cz-index[data-cz-indice] .cz-fold>summary{grid-templa
 body.pt-module-layout main.cz-index[data-cz-indice] .cz-fold>summary::after{grid-column:4;grid-row:1;}
 }
 /* 06/11/2026: decisão 148, entre 640 e 1279 px a coluna afasta-se dos cantos para os botões flutuantes não taparem texto. */
-@media (min-width:640px) and (max-width:1279px){
+/* 06/11/2026: decisão 173, revisão de 6/11: os limites completam-se («not all and (min-width:…)» em vez de max-width:639px,
+   359px ou 1279px), para não haver larguras fracionárias de zoom (639,2 px a 125 %, 359,33 px a 150 %) sem nenhuma regra. */
+@media (min-width:640px){
+@media not all and (min-width:1280px){
 body.pt-module-layout main.cz-index[data-cz-indice]{padding-inline:72px;}
 }
-@media (max-width:639px){
+/* 06/11/2026: decisão 173, revisão de 6/11: em projeção, abaixo de 880 px, «Neste módulo» com três unidades (M4 e M7) fica numa
+   unidade por linha, como no telemóvel: em três colunas, cada uma ficava com menos de 230 px e «leitura/preparação,» (199 px
+   com o número) saía da coluna e, na terceira, passava por baixo do modo noturno, entre 640 e 748 px. Fora da projeção, o
+   mesmo abaixo de 720 px: «Heterónimos:» (162 px com o número) saía uns 13 px da segunda coluna do M7 entre 640 e 676 px. */
+@media not all and (min-width:720px){
+body.pt-module-layout main.cz-index[data-cz-indice] .unit-index ol:has(>li:nth-child(3)){grid-auto-flow:row;grid-template-columns:1fr;gap:0;}
+}
+@media not all and (min-width:880px){
+html:has(main[data-cz-indice].cz-sala) body.pt-module-layout main.cz-index[data-cz-indice] .unit-index ol:has(>li:nth-child(3)){grid-auto-flow:row;grid-template-columns:1fr;gap:0;}
+}
+}
+/* 06/11/2026: decisão 173, revisão de 6/11, abaixo de 640 px (era max-width:639px). */
+@media not all and (min-width:640px){
 body.pt-module-layout main.cz-index[data-cz-indice]{padding:24px 16px 48px;}
 body.pt-module-layout main.cz-index[data-cz-indice] .cabm{gap:4px 16px;margin:16px 0;}
 body.pt-module-layout main.cz-index[data-cz-indice] .cabm>.agua{font-size:1.25rem;}
@@ -186,7 +201,8 @@ body.pt-module-layout main.cz-index[data-cz-indice]>figure.doc figcaption{flex:n
 html:has(main[data-cz-indice].cz-sala) body.pt-module-layout main.cz-index[data-cz-indice]{padding-top:16px;}
 html:has(main[data-cz-indice].cz-sala) body.pt-module-layout main.cz-index[data-cz-indice] .cabm{margin:8px 0;}
 }
-@media (max-width:359px){
+/* 06/11/2026: decisão 173, revisão de 6/11, abaixo de 360 px (era max-width:359px). */
+@media not all and (min-width:360px){
 body.pt-module-layout main.cz-index[data-cz-indice] .cz-fold>summary{padding:.5rem 0;}
 }
 /* 06/11/2026: decisão 173. Abaixo de 640 px nada flutua por cima do texto: cartaz-indice-comum.js põe o modo noturno na
@@ -206,7 +222,10 @@ body.pt-module-layout main.cz-index[data-cz-indice] .cz-docente summary.teacher-
 body.pt-module-layout main.cz-index[data-cz-indice] .cz-docente summary.teacher-access+nav p{margin:0;}
 body.pt-module-layout main.cz-index[data-cz-indice] .cz-docente summary.teacher-access+nav a{display:inline-flex;align-items:center;min-height:48px;padding:8px 0;font:700 1rem/1.5 Arial;color:var(--tinta);text-decoration:underline;text-underline-offset:5px;}
 }
-@media screen and (max-width:639px){
+/* 06/11/2026: decisão 173, revisão de 6/11: só no ecrã e abaixo de 640 px (era screen and (max-width:639px)), com o limite
+   que completa o (min-width:640px) acima e o do script. */
+@media screen{
+@media not all and (min-width:640px){
 /* 06/11/2026: decisão 173, o modo noturno na barra de cima, com o alvo de 48 px e o contorno de foco branco da barra. Na
    barra preta (igual nos dois temas) tem o desenho do botão de projetar que está ao lado: fundo transparente e ícone branco,
    com o contorno só ao passar o rato; o ponto do «ligado» usa o acento do escuro, que se vê sobre o preto. Mudam só as
@@ -218,17 +237,23 @@ body:has(main[data-cz-indice]) nav.migalhas>[data-appearance-control]>.epi-appea
 body:has(main[data-cz-indice]) nav.migalhas>[data-appearance-control]>.epi-appearance-toggle:focus-visible{outline-color:#fff;outline-offset:2px;}
 /* 06/11/2026: decisão 173, sem JavaScript o acesso do docente não muda de sítio: fica no fim da página, no fluxo, sem tapar
    texto (a ligação direta do M3, do M5 e do M6 por baixo do botão, como estava). */
-body:has(main[data-cz-indice])>details.route-teacher-tools{margin:0 16px 24px;}
+/* 06/11/2026: decisão 173, revisão de 6/11: 12 px por baixo (eram 24 px), para o menu dos materiais, que o HTML põe a 64 px do
+   fundo do ecrã, abrir pelo menos 4 px acima do botão sempre que o botão se vê inteiro, como a flutuar (tapava 8 px dele). */
+body:has(main[data-cz-indice])>details.route-teacher-tools{margin:0 16px 12px;}
 body:has(main[data-cz-indice])>details.route-teacher-tools>summary.teacher-access{position:relative;inset:auto;z-index:1;}
 body:has(main[data-cz-indice])>a.teacher-access{position:relative;inset:auto;z-index:0;margin:0 16px -48px;}
 }
-@media screen and (max-width:359px){
+}
+/* 06/11/2026: decisão 173, revisão de 6/11, abaixo de 360 px (era screen and (max-width:359px)). */
+@media screen{
+@media not all and (min-width:360px){
 /* 06/11/2026: decisão 173, abaixo de 360 px as migalhas apertam os separadores e a margem da direita para caberem, numa
    linha, ao lado do botão de projetar e do modo noturno (a barra continua com 64 px; o texto não muda nem se corta). */
 body:has(main[data-cz-indice]) nav.migalhas:has(>[data-appearance-control]){padding-right:8px;}
 body:has(main[data-cz-indice]) nav.migalhas:has(>[data-appearance-control])>ol{gap:0;}
 body:has(main[data-cz-indice]) nav.migalhas:has(>[data-appearance-control]) li+li::before{padding:0 4px 0 3px;}
 body:has(main[data-cz-indice]) nav.migalhas:has(>[data-appearance-control]) a{gap:4px;}
+}
 }
 @media print{
 body.pt-module-layout main.cz-index[data-cz-indice]{max-width:none;padding:0;}

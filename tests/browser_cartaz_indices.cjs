@@ -32,6 +32,12 @@ function measure(){
   while(n=walk.nextNode()){if(!n.textContent.trim())continue;const range=document.createRange();range.selectNodeContents(n);for(const r of range.getClientRects())if(r.width>0&&r.height>0)tops.push(r.top)}
   tops.sort((a,b)=>a-b);const lines=[];for(const top of tops)if(!lines.length||top-lines[lines.length-1]>lineHeight/2)lines.push(top);
   const clip=[];if(!t.checkVisibility({checkOpacity:true,checkVisibilityCSS:true}))clip.push('escondido');if(t.scrollHeight>t.clientHeight+1)clip.push('scrollHeight '+t.scrollHeight+'>'+t.clientHeight);if(t.scrollWidth>t.clientWidth+1)clip.push('scrollWidth '+t.scrollWidth+'>'+t.clientWidth);if(c.textOverflow==='ellipsis')clip.push('reticências');if(c.webkitLineClamp&&c.webkitLineClamp!=='none')clip.push('line-clamp '+c.webkitLineClamp);if(s.scrollHeight>s.clientHeight+1)clip.push('banda: scrollHeight '+s.scrollHeight+'>'+s.clientHeight);if(tr.top<sr.top-1||tr.bottom>sr.bottom+1||tr.left<sr.left-1||tr.right>sr.right+1)clip.push('título fora da banda');
+  // 06/11/2026: decisão 173, revisão de 6/11: cada linha do título tem de se ver no seu centro (elementFromPoint dá o próprio
+  // título ou uma parte dele), com o título a meio do ecrã; apanha também um corte ou uma cobertura que venham de um antepassado
+  // (overflow, clip-path, max-height no details ou no main) ou de outro elemento. O deslize volta a ficar onde estava.
+  const x0=scrollX,y0=scrollY;scrollTo({left:x0,top:y0+tr.top+tr.height/2-innerHeight/2,behavior:'instant'});const seen=document.createTreeWalker(t,NodeFilter.SHOW_TEXT);let m;
+  while(m=seen.nextNode()){if(!m.textContent.trim())continue;const range=document.createRange();range.selectNodeContents(m);for(const r of range.getClientRects()){if(!(r.width>0&&r.height>0))continue;const hit=document.elementFromPoint(r.left+r.width/2,r.top+r.height/2);if(!hit||!t.contains(hit))clip.push('linha tapada ou cortada: '+m.textContent.trim().slice(0,40))}}
+  scrollTo({left:x0,top:y0,behavior:'instant'});
   return {...band,title:tr.height,lines:lines.length,linesByHeight:Math.round(tr.height/lineHeight),lineHeight,clip};
  }
  const main=document.querySelector('main'),vis=e=>e.checkVisibility({checkOpacity:true,checkVisibilityCSS:true})&&e.getBoundingClientRect().width>1&&e.getBoundingClientRect().height>1&&!e.closest('[hidden],[aria-hidden="true"],.vh,.sr-only');
@@ -58,6 +64,9 @@ try{
 // 06/11/2026: revisão da decisão 148, a sonda da palavra do módulo: o vermelho do escuro (#e4555c, 4,13:1 sobre #252722) com 20 px
 // falha, com 24 px passa (texto grande); #f07075 com 20 px passa.
 {const p=await browser.newPage();for(const [style,bad] of [['font:20px Arial;color:rgb(228,85,92)',true],['font:24px Arial;color:rgb(228,85,92)',false],['font:20px Arial;color:rgb(240,112,117)',false]]){await p.setContent(`<body style="background:rgb(37,39,34)"><main><header class="cabm"><span class="agua" aria-hidden="true" style="${style}">voz</span><h1>Título</h1></header><a data-module-next href="#">Continuar</a></main></body>`);assert.equal((await p.evaluate(measure)).contrast.some(x=>x.class==='agua'),bad,style)}await p.close();console.log('PASS contraste: a palavra do módulo também se mede')}
+// 06/11/2026: decisão 173, revisão de 6/11, a sonda do corte vindo de fora do título: um clip-path ou um overflow com max-height
+// no details da banda escondem a segunda linha sem mexer no título nem na banda, e a medição tem de o apanhar; sem eles, não.
+{const p=await browser.newPage();await p.setViewportSize({width:320,height:600});for(const [style,bad] of [['clip-path:inset(0 0 50% 0)',true],['overflow:hidden;max-height:60px',true],['',false]]){await p.setContent(`<main><details class="cz-fold" style="${style}"><summary style="display:block;padding:16px 0"><h2 class="cz-fold-t" style="margin:0;font:31px/34px Arial">Um título que se parte em mais linhas</h2></summary></details><a data-module-next href="#">Continuar</a></main>`);const f=(await p.evaluate(measure)).folds[0];assert(f.lines>=2,JSON.stringify(f));assert.equal(f.clip.some(c=>c.startsWith('linha tapada ou cortada')),bad,style+' '+JSON.stringify(f))}await p.close();console.log('PASS título: o corte vindo de um antepassado também se apanha')}
 // 06/11/2026: revisão da decisão 148, também a 768 px (entre 640 e 876 px a terceira coluna de «Neste módulo» chegou a sair do ecrã).
 for(const n of [1,2,3,4,5,6,7,8,9])for(const width of [320,390,768,1024,1366])for(const theme of ['light','dark'])for(const mode of ['normal','projection'])for(const state of ['none','half','all']){
  const steps=config(n).flatMap(u=>u.passos),count=state==='all'?steps.length:state==='half'?Math.floor(steps.length/2):0,seed={};
@@ -101,6 +110,18 @@ for(const n of [1,2,3,4,5,6,7,8,9])for(const width of [320,390,768,1024,1366])fo
  }
  rows.push(pair);cases++;console.log(`PASS M${n} ${width} ${theme} ${mode} ${state}`);
 }
+// 06/11/2026: decisão 173, revisão de 6/11: as bandas também em larguras fracionárias, com o zoom nativo do Chromium completo (o
+// «headless shell» ignora o zoom do perfil): uma janela de 539 px a 150 % dá 359,33 px CSS (abaixo de 360 px: 72 px mais 34 px por
+// linha a mais) e uma de 799 px a 125 % dá 639,2 px (88 px mais 34 px por linha a mais). Com (max-width:359px) e (max-width:639px),
+// estas larguras ficavam sem regra (no M3, a 359,33 px, as bandas davam 88 e 122 px).
+const os=require('node:os');
+for(const [factor,janela,base,top] of [[1.5,539,72,360],[1.25,799,88,640]]){const profile=fs.mkdtempSync(path.join(os.tmpdir(),'cartaz-indices-zoom-'));fs.mkdirSync(path.join(profile,'Default'));fs.writeFileSync(path.join(profile,'Default','Preferences'),JSON.stringify({partition:{default_zoom_level:{x:Math.log(factor)/Math.log(1.2)}}}));const z=await chromium.launchPersistentContext(profile,{headless:true,...(process.env.CHROME_PATH?{executablePath:process.env.CHROME_PATH}:{channel:'chromium'}),viewport:null,args:[`--window-size=${janela},900`]});
+ try{await z.route('**/*',async route=>{const u=new URL(route.request().url());if(u.origin===origin)return route.continue();if(u.hostname==='pedrohfernandes-klk.github.io'&&u.pathname.startsWith('/pt/')){const response=await z.request.get(origin+u.pathname+u.search);return route.fulfill({response})}return route.abort()});const p=await z.newPage(),errors=[];p.on('pageerror',e=>errors.push(String(e)));
+  for(const n of [1,2,3,4,5,6,7,8,9]){await p.goto(origin+`/pt/m${n}/`,{waitUntil:'load'});await p.evaluate(()=>document.fonts.ready);await p.evaluate(()=>window.EPICartaz?.motion?.stop());const w=await p.evaluate(()=>visualViewport.width),m=await p.evaluate(measure),at=`M${n} zoom ${factor*100} % ${w} px`;
+   assert(w>top-1&&w<top,at+': largura fracionária');assert.equal(m.overflow,0,at+' deslize');
+   assert(m.folds.length>0&&m.folds.every(f=>f.lines>=1&&f.lines===f.linesByHeight&&f.lineHeight===34&&f.height===base+34*(f.lines-1)),at+': bandas de '+base+' px, mais 34 px por linha a mais do título: '+JSON.stringify(m.folds));
+   assert(m.folds.every(f=>f.title>0&&f.clip.length===0),at+': título inteiro na banda: '+JSON.stringify(m.folds));console.log('PASS bandas',at)}
+  assert.deepEqual(errors,[])}finally{await z.close();assert(path.resolve(profile).startsWith(path.resolve(os.tmpdir())+path.sep)&&path.basename(profile).startsWith('cartaz-indices-zoom-'));fs.rmSync(profile,{recursive:true,force:true})}}
 if(out)fs.writeFileSync(path.join(out,'medidas.json'),JSON.stringify(rows,null,2));
 assert.deepEqual(quality,[],JSON.stringify(quality));
 console.log(`PASS ${cases} pares antes/depois; progresso e continuação preservados.`);

@@ -231,12 +231,33 @@ class Camada148(unittest.TestCase):
         # 06/11/2026: decisão 173. Abaixo de 640 px, o script muda de sítio os dois botões que já existem (o modo noturno para a
         # barra de cima, nav.migalhas; o acesso do docente para .cz-docente, dentro de «Recursos do módulo») e devolve-os ao
         # sítio de sempre a partir de 640 px, onde voltam a flutuar; o CSS desses lugares é só para o ecrã (a impressão não muda).
-        self.assertIn("window.matchMedia('(max-width: 639px)')", js)
+        # 06/11/2026: decisão 173, revisão de 6/11: o telemóvel é o que não cumpre (min-width: 640px), o mesmo limite do CSS (com
+        # max-width: 639px, 639,2 px a 125 % de zoom não cumpria nenhum dos dois e os botões flutuavam por cima do texto).
+        self.assertIn("const desktop = window.matchMedia('(min-width: 640px)');", js)
+        self.assertIn('function phone() { return !desktop.matches; }', js)
+        self.assertNotIn("matchMedia('(max-width", js)
         self.assertIn("bar.appendChild(slot)", js)
         self.assertIn("slot.setAttribute('data-appearance-floating', '')", js)
         self.assertIn("holder.className = 'cz-docente'", js)
         self.assertIn('resources.appendChild(holder)', js)
-        self.assertIn('@media screen and (max-width:639px){\n', css)
+        # 06/11/2026: decisão 173, revisão de 6/11: limites que se completam no CSS (sem max-width:639px, 359px nem 1279px, que
+        # deixavam sem regra as larguras fracionárias do zoom); as regras do ecrã abaixo de 640 px ficam dentro de @media screen.
+        self.assertIn('@media screen{\n@media not all and (min-width:640px){\n', css)
+        self.assertIn('@media screen{\n@media not all and (min-width:360px){\n', css)
+        self.assertIn('@media not all and (min-width:640px){\nbody.pt-module-layout main.cz-index[data-cz-indice]{padding:24px 16px 48px;}', css)
+        self.assertIn('@media not all and (min-width:360px){\nbody.pt-module-layout main.cz-index[data-cz-indice] .cz-fold>summary{padding:.5rem 0;}', css)
+        self.assertIn('@media (min-width:640px){\n@media not all and (min-width:1280px){\nbody.pt-module-layout main.cz-index[data-cz-indice]{padding-inline:72px;}', css)
+        self.assertNotRegex(css, r'@media[^{]*max-width:\s*(?:639|359|1279)(?:\.\d+)?px')
+        # 06/11/2026: decisão 173, revisão de 6/11: em projeção, abaixo de 880 px, «Neste módulo» com três unidades numa unidade por
+        # linha (em três colunas, «leitura/preparação,» saía da coluna e passava por baixo do modo noturno, no M4 e no M7); fora
+        # da projeção, o mesmo abaixo de 720 px («Heterónimos:» saía da segunda coluna do M7).
+        self.assertIn('@media not all and (min-width:720px){\nbody.pt-module-layout main.cz-index[data-cz-indice] .unit-index '
+                      'ol:has(>li:nth-child(3)){grid-auto-flow:row;grid-template-columns:1fr;gap:0;}', css)
+        self.assertIn('@media not all and (min-width:880px){\nhtml:has(main[data-cz-indice].cz-sala) body.pt-module-layout '
+                      'main.cz-index[data-cz-indice] .unit-index ol:has(>li:nth-child(3)){grid-auto-flow:row;'
+                      'grid-template-columns:1fr;gap:0;}', css)
+        # 06/11/2026: decisão 173, revisão de 6/11: cada { tem o seu } (as regras novas estão aninhadas em @media).
+        self.assertEqual(css.count('{'), css.count('}'))
         self.assertIn('body:has(main[data-cz-indice]) nav.migalhas>[data-appearance-control]>.epi-appearance-toggle{width:48px;'
                       'height:48px;min-width:48px;min-height:48px;margin:0;border-color:transparent;}', css)
         self.assertIn('@media screen{\n/* 06/11/2026: decisão 173, o acesso do docente dentro dos recursos', css)
