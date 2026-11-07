@@ -6,6 +6,10 @@ on:
       - 'assets/exame/**'
       - 'assets/pt-lessons/**'
       - 'scripts/audit_cards.py'
+      # 01/11/2026: os bancos e o gerador dos 27 aquecimentos também acionam a verificação.
+      - 'scripts/exame_aquecimentos.py'
+      - 'scripts/aquecimentos.py'
+      - 'docs/pedagogia/exame-aquecimentos/**'
       - 'scripts/provas/**'
       # 30/10/2026: a medição única das opções equilibradas (também dos aquecimentos) e as páginas obras/ cujo título as
       # lições das provas leem (scripts/provas/gerar.py); mudá-las sem correr estes testes deixava as provas desatualizadas
@@ -58,6 +62,9 @@ jobs:
         run: |
           node --check assets/exame/laboratorio.js
           node --check assets/exame/app.js
+          node --check assets/exame/aquecimento.js
+          python scripts/exame_aquecimentos.py --check
+          node tests/exame-catalogo.cjs
           node --check assets/exame/dossier.js
           node --check assets/relogio.js
           node --check assets/exame/provas.js
@@ -94,6 +101,7 @@ jobs:
           node tests/browser_exame_laboratorio.cjs
           node tests/browser_exame_oficina_revisao.cjs
           python tests/browser_exame_cache.py
+          python tests/browser_exame_aquecimentos.py
           python tests/browser_exame_alignment.py
           python tests/browser_relogio.py
           # 01/11/2026: decisão 61; os títulos do exame (entrada, provas e laboratório) ficam na ordem certa a 390 e a 1366 px

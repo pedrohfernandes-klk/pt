@@ -11,8 +11,9 @@ class ExamVideo(unittest.TestCase):
 
     def test_duration_comprehension_and_writing(self):
         s = self.session
-        self.assertEqual(s['durationMinutes'], 45)
-        self.assertEqual(5+8+s['writing']['minutes']+(27-s['writing']['minutes'])+5, 45)
+        # 01/11/2026: dez minutos de aquecimento, preservando leitura e escrita.
+        self.assertEqual(s['durationMinutes'], 50)
+        self.assertEqual(10+8+s['writing']['minutes']+(27-s['writing']['minutes'])+5, 50)
         self.assertEqual(s['writing']['minutes'], 15)
         self.assertEqual(len(s['video']['questions']), 4)
         all_questions = s['warmup']+s['video']['questions']+[s['correction']['check']]

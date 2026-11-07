@@ -1,0 +1,21 @@
+/* As duas colunas conservam a ligação visual, mesmo com palavras longas a 320 px. */
+#baralho .pares { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+#baralho .pares .col, #baralho .pares .tx { min-width: 0; }
+/* 07/11/2026 (achado 38): parte as palavras longas com hífen (a página é pt-PT), nunca a meio sem hífen. */
+#baralho .pares .tx { overflow-wrap: break-word; hyphens: auto; -webkit-hyphens: auto; }
+#baralho .lacuna select, #baralho select { max-width: 100%; }
+/* 07/11/2026 (achados 4 e 66): no telemóvel estreito, nos cartões de classificar, os itens a tocar vêm antes das
+   colunas vazias, para a primeira ação ficar no primeiro ecrã; o motor não muda. */
+@media (max-width: 400px) {
+  #baralho .cartao:has(> .classes) { display: flex; flex-direction: column; }
+  #baralho .cartao:has(> .classes) > .soltos-t, #baralho .cartao:has(> .classes) > .ops.soltos { order: 1; }
+  #baralho .cartao:has(> .classes) > .classes { order: 2; }
+}
+/* 07/11/2026 (achado 66): no fim, a 320 px, os botões passam a duas linhas inteiras em vez de partirem o rótulo. */
+.casca-acoes { flex-wrap: wrap; }
+.casca-acoes a, .casca-acoes button { white-space: nowrap; }
+/* 07/11/2026 (achado 11): o texto de apoio fica almofadado dentro do desdobrável; os versos partidos recuam (recuo
+   francês) para não parecerem versos novos; a prosa não passa das 66 letras por linha. */
+#baralho details p.v { white-space: normal; }
+#baralho details p.v .ln { display: block; padding-left: 1em; text-indent: -1em; }
+#baralho details .pr { max-width: 66ch; }

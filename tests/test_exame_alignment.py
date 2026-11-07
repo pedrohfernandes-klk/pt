@@ -21,6 +21,22 @@ class ExamAlignment(unittest.TestCase):
      self.assertEqual(q['options'][q['answer']],answer,q['id'])
      self.assertEqual(q['feedback'],c['f'].replace('**',''),q['id']);matches+=1
   self.assertGreaterEqual(matches,30)
+ def test_s18_q1_conserva_a_resposta_da_licao(self):
+  # 07/11/2026: o enunciado de s18-q1 passou a nomear o conto e a autora (pt #155, achado 41) e deixou de ser igual ao da
+  # lição m8-f08, por isso o teste anterior já não o conferia (48 perguntas em vez de 49). Confere-se aqui pela pergunta
+  # da lição: a resposta, na pergunta e na verificação «Depois da revisão», tem de ser a mesma; a explicação fica de fora,
+  # porque mudou de propósito (a da lição remete para o resumo-modelo, que não está no exame).
+  s=next(x for x in self.sessions if x['id']=='s18')
+  cards=lesson_cards(ROOT/s['source']['url'].removeprefix('/pt/')/'index.html')
+  licao=[c for c in cards if c.get('p')=='O que acontece em «George»?' and c['t']=='escolha']
+  self.assertEqual(len(licao),1)
+  resposta=licao[0]['o'][licao[0]['c']]
+  q=next(x for x in s['warmup'] if x['id']=='s18-q1')
+  self.assertEqual(q['q'],'O que acontece em «George», conto de Maria Judite de Carvalho?')
+  self.assertEqual(q['options'][q['answer']],resposta)
+  check=s['correction']['check']
+  self.assertEqual(check['q'],'Depois da revisão: '+q['q'])
+  self.assertEqual(check['options'][check['answer']],resposta)
  def test_support_targets_exist_and_cantigas_supply_mendinho(self):
   for s in self.sessions:
    for ref in [s['source']]+s['resources']:

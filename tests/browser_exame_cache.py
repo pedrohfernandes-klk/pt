@@ -19,25 +19,31 @@ try:
    app=next(u for u in requests if '/exame/app.js?' in u)
    req=next(u for u in requests if '/sessoes.json?' in u)
    assert parse_qs(urlparse(app).query)==parse_qs(urlparse(req).query)
-   ids=[q['id'] for q in data['sessions'][0]['warmup']]
-   state=page.evaluate('JSON.parse(localStorage.getItem("pt-exame-sessao-s01"))')
-   assert len(state['warm'])==2 and len(set(state['warm']))==2
-   unseen=state['remaining'][:]
-   assert unseen
+   # 01/11/2026: o banco completo substitui os pares aleatórios; recomeçar preserva o melhor e as chaves anteriores.
+   page.evaluate("localStorage.setItem('pt-exame-sessao-s01',JSON.stringify({warm:['antigo'],remaining:['guardado']}));localStorage.setItem('aquecimento-exame-s01',JSON.stringify({lida:true,melhor:12,totalMelhor:12,tentativas:2,versao:1}))")
+   old=page.evaluate("localStorage.getItem('pt-exame-sessao-s01')")
+   page.locator('[data-aquecimento]').click()
+   page.locator('#baralho .cartao').wait_for()
+   # 07/11/2026: o rótulo do fim concorda com «aquecimento» (revisão de 7/11, ponto 15): «Já feito», e nunca «Já feita».
+   feito=page.locator('#baralho').text_content()
+   assert 'Já feito' in feito and 'Já feita' not in feito,feito[:250]
+   page.locator('[data-exame-voltar]').first.click()
    page.locator('[data-action="another"]').click()
-   state=page.evaluate('JSON.parse(localStorage.getItem("pt-exame-sessao-s01"))')
-   assert state['warm'][:len(unseen)]==unseen
-   assert len(set(state['warm']))==2
-   saved=state['warm']
-   page.reload(wait_until='networkidle');page.locator('[data-action="another"]').wait_for()
-   assert page.evaluate('JSON.parse(localStorage.getItem("pt-exame-sessao-s01")).warm')==saved
-   for _ in range(5):
-    page.locator('[data-action="another"]').click()
-    state=page.evaluate('JSON.parse(localStorage.getItem("pt-exame-sessao-s01"))')
-    assert len(set(state['warm']))==2 and set(state['warm'])<=set(ids)
+   page.locator('#baralho .cartao').wait_for()
+   assert 'recomecar=1' in page.url
+   # 07/11/2026: «Já feito» (antes «Já feita»), nem uma forma nem a outra depois de recomeçar.
+   assert all(t not in page.locator('#baralho').text_content() for t in ('Já feito','Já feita'))
+   assert page.evaluate("localStorage.getItem('pt-exame-sessao-s01')")==old
+   assert page.evaluate("JSON.parse(localStorage.getItem('aquecimento-exame-s01')).melhor")==12
+   page.reload(wait_until='networkidle')
+   # 07/11/2026: «Já feito» (antes «Já feita»), nem uma forma nem a outra depois de recomeçar.
+   assert all(t not in page.locator('#baralho').text_content() for t in ('Já feito','Já feita'))
+   bank=page.evaluate("JSON.parse(document.getElementById('exame-aquecimento-dados').textContent)")
+   assert len([c for c in bank['cartoes'] if c['t']!='ler'])==12
+   assert {c.get('legacyId') for c in bank['cartoes'] if c.get('legacyId')}=={q['id'] for q in data['sessions'][0]['warmup']}
    assert not errors,errors
    assert page.evaluate('document.documentElement.scrollWidth<=innerWidth+1')
-   print('PASS versioned data request; unseen question first; unique pairs; reload; layout',width,flush=True)
+   print('PASS versioned data request; full bank; restart preserves previous progress; reload; layout',width,flush=True)
    ctx.close()
   browser.close()
 finally:server.shutdown()
