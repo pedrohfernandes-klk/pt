@@ -77,9 +77,13 @@ def main():
             page.locator('#baralho .op[data-j="1"]').click()
             assert fazer[0]['fe'][1] in page.locator('[data-c-folha]').text_content()
             page.locator('[data-c-folha] [data-seguinte]').click()
-            for k, c in enumerate(fazer[1:5], 1):
-                responder(page, k, c, 'retorno s20')
-            c = fazer[5]
+            # 07/11/2026: com os bancos reordenados (nunca três seguidos do mesmo tipo), o primeiro completar com duas
+            # lacunas de s20 deixou de ser o sexto cartão; procura-se pela posição, com as mesmas asserções.
+            assert fazer[0]['t'] == 'escolha'
+            j = next(i for i, x in enumerate(fazer) if x['t'] == 'completar' and len(x['lacunas']) >= 2)
+            for k, c in enumerate(fazer[1:j], 1):
+                responder(page, len(leitura) + k, c, 'retorno s20')
+            c = fazer[j]
             assert c['t'] == 'completar'
             page.locator('select[data-k="0"]').select_option('1')
             page.locator('select[data-k="1"]').select_option('0')
