@@ -842,8 +842,15 @@ def main():
                 # 02/11/2026: a atribuição de IA é posterior ao lote 2 publicado.
                 # 03/11/2026: primeiro a camada visual do cabecalho.
                 # 05/11/2026: antes de tudo, a revisão de 5/11, a camada mais recente.
+                # 07/11/2026: antes de tudo, os três acertos dos índices deixados pela decisão 173, a camada mais recente, por
+                # cima do desenho comum dos nove índices.
+                acertos = ROOT / 'tests/fixtures/indices-acertos-edits-20261107.json'
+                for edit in reversed(json.loads(acertos.read_text('utf-8'))['files'].get(rel, {}).get('edits', [])):
+                    if conferencia.count(edit['new']) != edit['occurrences']:
+                        raise ManifestoDesatualizado(f'{rel}: acertos dos índices (decisão 173) não conferem')
+                    conferencia = conferencia.replace(edit['new'], edit['old'])
                 # 06/11/2026: antes de tudo, o desenho comum dos nove índices (decisão 148), a camada mais recente, por cima dos
-                # créditos atrás de um «i».
+                # créditos atrás de um «i» (07/11/2026: logo a seguir aos acertos da decisão 173).
                 indices_148 = ROOT / 'tests/fixtures/cartaz-indices-148-edits-20261106.json'
                 for edit in reversed(json.loads(indices_148.read_text('utf-8'))['files'].get(rel, {}).get('edits', [])):
                     if conferencia.count(edit['new']) != edit['occurrences']:

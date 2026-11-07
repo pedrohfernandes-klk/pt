@@ -234,6 +234,8 @@ class Autonomia154(unittest.TestCase):
         # 06/11/2026: o lote 3 do Atlas fica por cima da decisão 154 depois de juntar o main; desfaz-se antes, com a mesma exigência.
         r = subprocess.run([sys.executable, 'scripts/aplicar_trocas.py', 'scripts/autonomia_154_20261105.json',
                             '--manifesto', str(MANIFESTO), '--verificar',
+                            # 07/11/2026: por cima de tudo, os três acertos dos índices deixados pela decisão 173; desfazem-se primeiro, com a mesma exigência.
+                            '--desfazer-antes', 'tests/fixtures/indices-acertos-edits-20261107.json',
                             # 06/11/2026: por cima de tudo, o desenho comum dos nove índices (decisão 148); desfaz-se primeiro, com a mesma exigência.
                             '--desfazer-antes', 'tests/fixtures/cartaz-indices-148-edits-20261106.json',
                             # 06/11/2026: por cima de tudo, os créditos atrás de um «i» (decisão 153, pedido pt-2); desfazem-se primeiro.
@@ -252,12 +254,19 @@ class Autonomia154(unittest.TestCase):
         # Atlas passa a segundo, a decisão 154 a terceira, e a cadeia de desfazer chama primeiro os créditos, depois o Atlas.
         # 06/11/2026: por cima dos créditos atrás de um «i» fica o desenho comum dos nove índices (decisão 148): os créditos passam
         # a segundos, o Atlas a terceiro, a decisão 154 a quarta, e a cadeia de desfazer chama primeiro o desenho comum.
-        self.assertEqual(verificar_camadas.LAYERS[0], ('cartaz_indices_148_20261106', 'cartaz-indices-148-edits-20261106'))
-        self.assertEqual(verificar_camadas.LAYERS[1], ('creditos_i_20261105', 'creditos-i-edits-20261105'))
-        self.assertEqual(verificar_camadas.LAYERS[2], ('atlas_lote3_20261105', 'atlas-lote3-edits-20261105'))
-        self.assertEqual(verificar_camadas.LAYERS[3], ('autonomia_154_20261105', 'autonomia-154-edits-20261105'))
-        self.assertEqual(verificar_camadas.LAYERS[4], ('exame_contexto_20261105', 'exame-contexto-edits-20261105'))
+        # 07/11/2026: por cima do desenho comum dos nove índices ficam os três acertos deixados pela decisão 173: o desenho comum
+        # passa a segundo, os créditos a terceiros, o Atlas a quarto, a decisão 154 a quinta, e a cadeia de desfazer chama primeiro
+        # os acertos.
+        self.assertEqual(verificar_camadas.LAYERS[0], ('indices_acertos_20261107', 'indices-acertos-edits-20261107'))
+        self.assertEqual(verificar_camadas.LAYERS[1], ('cartaz_indices_148_20261106', 'cartaz-indices-148-edits-20261106'))
+        self.assertEqual(verificar_camadas.LAYERS[2], ('creditos_i_20261105', 'creditos-i-edits-20261105'))
+        self.assertEqual(verificar_camadas.LAYERS[3], ('atlas_lote3_20261105', 'atlas-lote3-edits-20261105'))
+        self.assertEqual(verificar_camadas.LAYERS[4], ('autonomia_154_20261105', 'autonomia-154-edits-20261105'))
+        self.assertEqual(verificar_camadas.LAYERS[5], ('exame_contexto_20261105', 'exame-contexto-edits-20261105'))
         auditoria = ler('tests/auditoria_20261028.py')
+        # 07/11/2026: o desenho comum dos índices desfaz primeiro os acertos da decisão 173.
+        corpo = auditoria[auditoria.index('def undo_cartaz_148_0611'):]
+        self.assertLess(corpo.index('undo_acertos_0711(path, text)'), corpo.index('_CARTAZ_148_0611.get('))
         # 06/11/2026: os créditos desfazem primeiro o desenho comum dos índices (decisão 148).
         corpo = auditoria[auditoria.index('def undo_creditos_i_0511'):]
         self.assertLess(corpo.index('undo_cartaz_148_0611(path, text)'), corpo.index('_CREDITOS_I_0511.get('))
@@ -271,6 +280,8 @@ class Autonomia154(unittest.TestCase):
         self.assertIn('autonomia-154-edits-20261105.json', sala)
         # 06/11/2026: na Sala desligada, o desenho comum dos índices (decisão 148) desfaz-se antes dos créditos atrás de um «i».
         self.assertLess(sala.index('cartaz-indices-148-edits-20261106.json'), sala.index('creditos-i-edits-20261105.json'))
+        # 07/11/2026: e, antes dele, os acertos dos índices deixados pela decisão 173.
+        self.assertLess(sala.index('indices-acertos-edits-20261107.json'), sala.index('cartaz-indices-148-edits-20261106.json'))
         self.assertLess(sala.index('creditos-i-edits-20261105.json'), sala.index('atlas-lote3-edits-20261105.json'))
         self.assertLess(sala.index('atlas-lote3-edits-20261105.json'), sala.index('autonomia-154-edits-20261105.json'))
 

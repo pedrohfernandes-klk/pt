@@ -1,0 +1,202 @@
+[
+ {
+  "ficheiro": "m1/index.html",
+  "local": "M1 CSS comum na versão dos acertos",
+  "antigo": "<link rel=\"stylesheet\" href=\"../assets/cartaz-indice-comum.css?v=20261106\">",
+  "novo": "<link rel=\"stylesheet\" href=\"../assets/cartaz-indice-comum.css?v=20261107\">",
+  "ocorrencias": 1,
+  "achado": "07/11/2026: três acertos dos índices deixados pela decisão 173 (acesso do docente repetido no M3, no M5 e no M6, «·» nas contagens do M8 e do M9, menu dos materiais sem JavaScript no telemóvel). M1 CSS comum na versão dos acertos."
+ },
+ {
+  "ficheiro": "m1/index.html",
+  "local": "M1 menu dos materiais sem o lugar flutuante no HTML (passa para o CSS comum)",
+  "antigo": "<nav aria-label=\"Materiais do docente\" style=\"position:fixed;left:12px;bottom:64px;z-index:1001;",
+  "novo": "<nav aria-label=\"Materiais do docente\" style=\"z-index:1001;",
+  "ocorrencias": 1,
+  "achado": "07/11/2026: três acertos dos índices deixados pela decisão 173 (acesso do docente repetido no M3, no M5 e no M6, «·» nas contagens do M8 e do M9, menu dos materiais sem JavaScript no telemóvel). M1 menu dos materiais sem o lugar flutuante no HTML (passa para o CSS comum)."
+ },
+ {
+  "ficheiro": "m2/index.html",
+  "local": "M2 CSS comum na versão dos acertos",
+  "antigo": "<link rel=\"stylesheet\" href=\"../assets/cartaz-indice-comum.css?v=20261106\">",
+  "novo": "<link rel=\"stylesheet\" href=\"../assets/cartaz-indice-comum.css?v=20261107\">",
+  "ocorrencias": 1,
+  "achado": "07/11/2026: três acertos dos índices deixados pela decisão 173 (acesso do docente repetido no M3, no M5 e no M6, «·» nas contagens do M8 e do M9, menu dos materiais sem JavaScript no telemóvel). M2 CSS comum na versão dos acertos."
+ },
+ {
+  "ficheiro": "m2/index.html",
+  "local": "M2 menu dos materiais sem o lugar flutuante no HTML (passa para o CSS comum)",
+  "antigo": "<nav aria-label=\"Materiais do docente\" style=\"position:fixed;left:12px;bottom:64px;z-index:1001;",
+  "novo": "<nav aria-label=\"Materiais do docente\" style=\"z-index:1001;",
+  "ocorrencias": 1,
+  "achado": "07/11/2026: três acertos dos índices deixados pela decisão 173 (acesso do docente repetido no M3, no M5 e no M6, «·» nas contagens do M8 e do M9, menu dos materiais sem JavaScript no telemóvel). M2 menu dos materiais sem o lugar flutuante no HTML (passa para o CSS comum)."
+ },
+ {
+  "ficheiro": "m3/index.html",
+  "local": "M3 CSS comum na versão dos acertos",
+  "antigo": "<link rel=\"stylesheet\" href=\"../assets/cartaz-indice-comum.css?v=20261106\">",
+  "novo": "<link rel=\"stylesheet\" href=\"../assets/cartaz-indice-comum.css?v=20261107\">",
+  "ocorrencias": 1,
+  "achado": "07/11/2026: três acertos dos índices deixados pela decisão 173 (acesso do docente repetido no M3, no M5 e no M6, «·» nas contagens do M8 e do M9, menu dos materiais sem JavaScript no telemóvel). M3 CSS comum na versão dos acertos."
+ },
+ {
+  "ficheiro": "m3/index.html",
+  "local": "M3 sai a ligação repetida aos guiões (o destino fica no menu dos materiais)",
+  "antigo": "</script><a class=\"teacher-access\" href=\"https://pedrohfernandes-klk.github.io/lente/docente/#portugues\" aria-label=\"Guiões e materiais do docente\" title=\"Para o docente\"><svg viewBox=\"0 0 40 40\" width=\"30\" height=\"30\" aria-hidden=\"true\"><circle cx=\"20\" cy=\"20\" r=\"15\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\"/><circle cx=\"20\" cy=\"20\" r=\"8\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\"/><path d=\"m9.5 9.5 5 5m11 11 5 5m-21 0 5-5m11-11 5-5\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"5\"/></svg></a><details class=\"route-teacher-tools\">",
+  "novo": "</script><details class=\"route-teacher-tools\">",
+  "ocorrencias": 1,
+  "achado": "07/11/2026: três acertos dos índices deixados pela decisão 173 (acesso do docente repetido no M3, no M5 e no M6, «·» nas contagens do M8 e do M9, menu dos materiais sem JavaScript no telemóvel). M3 sai a ligação repetida aos guiões (o destino fica no menu dos materiais)."
+ },
+ {
+  "ficheiro": "m3/index.html",
+  "local": "M3 menu dos materiais sem o lugar flutuante no HTML (passa para o CSS comum)",
+  "antigo": "<nav aria-label=\"Materiais do docente\" style=\"position:fixed;left:12px;bottom:64px;z-index:1001;",
+  "novo": "<nav aria-label=\"Materiais do docente\" style=\"z-index:1001;",
+  "ocorrencias": 1,
+  "achado": "07/11/2026: três acertos dos índices deixados pela decisão 173 (acesso do docente repetido no M3, no M5 e no M6, «·» nas contagens do M8 e do M9, menu dos materiais sem JavaScript no telemóvel). M3 menu dos materiais sem o lugar flutuante no HTML (passa para o CSS comum)."
+ },
+ {
+  "ficheiro": "m4/index.html",
+  "local": "M4 CSS comum na versão dos acertos",
+  "antigo": "<link rel=\"stylesheet\" href=\"../assets/cartaz-indice-comum.css?v=20261106\">",
+  "novo": "<link rel=\"stylesheet\" href=\"../assets/cartaz-indice-comum.css?v=20261107\">",
+  "ocorrencias": 1,
+  "achado": "07/11/2026: três acertos dos índices deixados pela decisão 173 (acesso do docente repetido no M3, no M5 e no M6, «·» nas contagens do M8 e do M9, menu dos materiais sem JavaScript no telemóvel). M4 CSS comum na versão dos acertos."
+ },
+ {
+  "ficheiro": "m4/index.html",
+  "local": "M4 menu dos materiais sem o lugar flutuante no HTML (passa para o CSS comum)",
+  "antigo": "<nav aria-label=\"Materiais do docente\" style=\"position:fixed;left:12px;bottom:64px;z-index:1001;",
+  "novo": "<nav aria-label=\"Materiais do docente\" style=\"z-index:1001;",
+  "ocorrencias": 1,
+  "achado": "07/11/2026: três acertos dos índices deixados pela decisão 173 (acesso do docente repetido no M3, no M5 e no M6, «·» nas contagens do M8 e do M9, menu dos materiais sem JavaScript no telemóvel). M4 menu dos materiais sem o lugar flutuante no HTML (passa para o CSS comum)."
+ },
+ {
+  "ficheiro": "m5/index.html",
+  "local": "M5 CSS comum na versão dos acertos",
+  "antigo": "<link rel=\"stylesheet\" href=\"../assets/cartaz-indice-comum.css?v=20261106\">",
+  "novo": "<link rel=\"stylesheet\" href=\"../assets/cartaz-indice-comum.css?v=20261107\">",
+  "ocorrencias": 1,
+  "achado": "07/11/2026: três acertos dos índices deixados pela decisão 173 (acesso do docente repetido no M3, no M5 e no M6, «·» nas contagens do M8 e do M9, menu dos materiais sem JavaScript no telemóvel). M5 CSS comum na versão dos acertos."
+ },
+ {
+  "ficheiro": "m5/index.html",
+  "local": "M5 sai a ligação repetida aos guiões (o destino fica no menu dos materiais)",
+  "antigo": "</script><a class=\"teacher-access\" href=\"https://pedrohfernandes-klk.github.io/lente/docente/#portugues\" aria-label=\"Guiões e materiais do docente\" title=\"Para o docente\"><svg viewBox=\"0 0 40 40\" width=\"30\" height=\"30\" aria-hidden=\"true\"><circle cx=\"20\" cy=\"20\" r=\"15\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\"/><circle cx=\"20\" cy=\"20\" r=\"8\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\"/><path d=\"m9.5 9.5 5 5m11 11 5 5m-21 0 5-5m11-11 5-5\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"5\"/></svg></a><details class=\"route-teacher-tools\">",
+  "novo": "</script><details class=\"route-teacher-tools\">",
+  "ocorrencias": 1,
+  "achado": "07/11/2026: três acertos dos índices deixados pela decisão 173 (acesso do docente repetido no M3, no M5 e no M6, «·» nas contagens do M8 e do M9, menu dos materiais sem JavaScript no telemóvel). M5 sai a ligação repetida aos guiões (o destino fica no menu dos materiais)."
+ },
+ {
+  "ficheiro": "m5/index.html",
+  "local": "M5 menu dos materiais sem o lugar flutuante no HTML (passa para o CSS comum)",
+  "antigo": "<nav aria-label=\"Materiais do docente\" style=\"position:fixed;left:12px;bottom:64px;z-index:1001;",
+  "novo": "<nav aria-label=\"Materiais do docente\" style=\"z-index:1001;",
+  "ocorrencias": 1,
+  "achado": "07/11/2026: três acertos dos índices deixados pela decisão 173 (acesso do docente repetido no M3, no M5 e no M6, «·» nas contagens do M8 e do M9, menu dos materiais sem JavaScript no telemóvel). M5 menu dos materiais sem o lugar flutuante no HTML (passa para o CSS comum)."
+ },
+ {
+  "ficheiro": "m6/index.html",
+  "local": "M6 CSS comum na versão dos acertos",
+  "antigo": "<link rel=\"stylesheet\" href=\"../assets/cartaz-indice-comum.css?v=20261106\">",
+  "novo": "<link rel=\"stylesheet\" href=\"../assets/cartaz-indice-comum.css?v=20261107\">",
+  "ocorrencias": 1,
+  "achado": "07/11/2026: três acertos dos índices deixados pela decisão 173 (acesso do docente repetido no M3, no M5 e no M6, «·» nas contagens do M8 e do M9, menu dos materiais sem JavaScript no telemóvel). M6 CSS comum na versão dos acertos."
+ },
+ {
+  "ficheiro": "m6/index.html",
+  "local": "M6 sai a ligação repetida aos guiões (o destino fica no menu dos materiais)",
+  "antigo": "</script><a class=\"teacher-access\" href=\"https://pedrohfernandes-klk.github.io/lente/docente/#portugues\" aria-label=\"Guiões e materiais do docente\" title=\"Para o docente\"><svg viewBox=\"0 0 40 40\" width=\"30\" height=\"30\" aria-hidden=\"true\"><circle cx=\"20\" cy=\"20\" r=\"15\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\"/><circle cx=\"20\" cy=\"20\" r=\"8\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\"/><path d=\"m9.5 9.5 5 5m11 11 5 5m-21 0 5-5m11-11 5-5\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"5\"/></svg></a><details class=\"route-teacher-tools\">",
+  "novo": "</script><details class=\"route-teacher-tools\">",
+  "ocorrencias": 1,
+  "achado": "07/11/2026: três acertos dos índices deixados pela decisão 173 (acesso do docente repetido no M3, no M5 e no M6, «·» nas contagens do M8 e do M9, menu dos materiais sem JavaScript no telemóvel). M6 sai a ligação repetida aos guiões (o destino fica no menu dos materiais)."
+ },
+ {
+  "ficheiro": "m6/index.html",
+  "local": "M6 menu dos materiais sem o lugar flutuante no HTML (passa para o CSS comum)",
+  "antigo": "<nav aria-label=\"Materiais do docente\" style=\"position:fixed;left:12px;bottom:64px;z-index:1001;",
+  "novo": "<nav aria-label=\"Materiais do docente\" style=\"z-index:1001;",
+  "ocorrencias": 1,
+  "achado": "07/11/2026: três acertos dos índices deixados pela decisão 173 (acesso do docente repetido no M3, no M5 e no M6, «·» nas contagens do M8 e do M9, menu dos materiais sem JavaScript no telemóvel). M6 menu dos materiais sem o lugar flutuante no HTML (passa para o CSS comum)."
+ },
+ {
+  "ficheiro": "m7/index.html",
+  "local": "M7 CSS comum na versão dos acertos",
+  "antigo": "<link rel=\"stylesheet\" href=\"../assets/cartaz-indice-comum.css?v=20261106\">",
+  "novo": "<link rel=\"stylesheet\" href=\"../assets/cartaz-indice-comum.css?v=20261107\">",
+  "ocorrencias": 1,
+  "achado": "07/11/2026: três acertos dos índices deixados pela decisão 173 (acesso do docente repetido no M3, no M5 e no M6, «·» nas contagens do M8 e do M9, menu dos materiais sem JavaScript no telemóvel). M7 CSS comum na versão dos acertos."
+ },
+ {
+  "ficheiro": "m7/index.html",
+  "local": "M7 menu dos materiais sem o lugar flutuante no HTML (passa para o CSS comum)",
+  "antigo": "<nav aria-label=\"Materiais do docente\" style=\"position:fixed;left:12px;bottom:64px;z-index:1001;",
+  "novo": "<nav aria-label=\"Materiais do docente\" style=\"z-index:1001;",
+  "ocorrencias": 1,
+  "achado": "07/11/2026: três acertos dos índices deixados pela decisão 173 (acesso do docente repetido no M3, no M5 e no M6, «·» nas contagens do M8 e do M9, menu dos materiais sem JavaScript no telemóvel). M7 menu dos materiais sem o lugar flutuante no HTML (passa para o CSS comum)."
+ },
+ {
+  "ficheiro": "m8/index.html",
+  "local": "M8 CSS comum na versão dos acertos",
+  "antigo": "<link rel=\"stylesheet\" href=\"../assets/cartaz-indice-comum.css?v=20261106\">",
+  "novo": "<link rel=\"stylesheet\" href=\"../assets/cartaz-indice-comum.css?v=20261107\">",
+  "ocorrencias": 1,
+  "achado": "07/11/2026: três acertos dos índices deixados pela decisão 173 (acesso do docente repetido no M3, no M5 e no M6, «·» nas contagens do M8 e do M9, menu dos materiais sem JavaScript no telemóvel). M8 CSS comum na versão dos acertos."
+ },
+ {
+  "ficheiro": "m8/index.html",
+  "local": "M8 «Neste módulo», unidade 1: «, » em vez de « · »",
+  "antigo": "<small>10 aulas de leitura/preparação · tarefa 90 min</small>",
+  "novo": "<small>10 aulas de leitura/preparação, tarefa 90 min</small>",
+  "ocorrencias": 1,
+  "achado": "07/11/2026: três acertos dos índices deixados pela decisão 173 (acesso do docente repetido no M3, no M5 e no M6, «·» nas contagens do M8 e do M9, menu dos materiais sem JavaScript no telemóvel). M8 «Neste módulo», unidade 1: «, » em vez de « · »."
+ },
+ {
+  "ficheiro": "m8/index.html",
+  "local": "M8 «Neste módulo», unidade 2: «, » em vez de « · »",
+  "antigo": "<small>6 aulas de leitura/preparação · tarefa 90 min</small>",
+  "novo": "<small>6 aulas de leitura/preparação, tarefa 90 min</small>",
+  "ocorrencias": 1,
+  "achado": "07/11/2026: três acertos dos índices deixados pela decisão 173 (acesso do docente repetido no M3, no M5 e no M6, «·» nas contagens do M8 e do M9, menu dos materiais sem JavaScript no telemóvel). M8 «Neste módulo», unidade 2: «, » em vez de « · »."
+ },
+ {
+  "ficheiro": "m8/index.html",
+  "local": "M8 menu dos materiais sem o lugar flutuante no HTML (passa para o CSS comum)",
+  "antigo": "<nav aria-label=\"Materiais do docente\" style=\"position:fixed;left:12px;bottom:64px;z-index:1001;",
+  "novo": "<nav aria-label=\"Materiais do docente\" style=\"z-index:1001;",
+  "ocorrencias": 1,
+  "achado": "07/11/2026: três acertos dos índices deixados pela decisão 173 (acesso do docente repetido no M3, no M5 e no M6, «·» nas contagens do M8 e do M9, menu dos materiais sem JavaScript no telemóvel). M8 menu dos materiais sem o lugar flutuante no HTML (passa para o CSS comum)."
+ },
+ {
+  "ficheiro": "m9/index.html",
+  "local": "M9 CSS comum na versão dos acertos",
+  "antigo": "<link rel=\"stylesheet\" href=\"../assets/cartaz-indice-comum.css?v=20261106\">",
+  "novo": "<link rel=\"stylesheet\" href=\"../assets/cartaz-indice-comum.css?v=20261107\">",
+  "ocorrencias": 1,
+  "achado": "07/11/2026: três acertos dos índices deixados pela decisão 173 (acesso do docente repetido no M3, no M5 e no M6, «·» nas contagens do M8 e do M9, menu dos materiais sem JavaScript no telemóvel). M9 CSS comum na versão dos acertos."
+ },
+ {
+  "ficheiro": "m9/index.html",
+  "local": "M9 «Neste módulo», unidade 1: «, » em vez de « · »",
+  "antigo": "<small>8 aulas de leitura/preparação · tarefa 90 min</small>",
+  "novo": "<small>8 aulas de leitura/preparação, tarefa 90 min</small>",
+  "ocorrencias": 1,
+  "achado": "07/11/2026: três acertos dos índices deixados pela decisão 173 (acesso do docente repetido no M3, no M5 e no M6, «·» nas contagens do M8 e do M9, menu dos materiais sem JavaScript no telemóvel). M9 «Neste módulo», unidade 1: «, » em vez de « · »."
+ },
+ {
+  "ficheiro": "m9/index.html",
+  "local": "M9 «Neste módulo», unidade 2: «, » em vez de « · »",
+  "antigo": "<small>7 aulas de leitura/preparação · tarefa 90 min</small>",
+  "novo": "<small>7 aulas de leitura/preparação, tarefa 90 min</small>",
+  "ocorrencias": 1,
+  "achado": "07/11/2026: três acertos dos índices deixados pela decisão 173 (acesso do docente repetido no M3, no M5 e no M6, «·» nas contagens do M8 e do M9, menu dos materiais sem JavaScript no telemóvel). M9 «Neste módulo», unidade 2: «, » em vez de « · »."
+ },
+ {
+  "ficheiro": "m9/index.html",
+  "local": "M9 menu dos materiais sem o lugar flutuante no HTML (passa para o CSS comum)",
+  "antigo": "<nav aria-label=\"Materiais do docente\" style=\"position:fixed;left:12px;bottom:64px;z-index:1001;",
+  "novo": "<nav aria-label=\"Materiais do docente\" style=\"z-index:1001;",
+  "ocorrencias": 1,
+  "achado": "07/11/2026: três acertos dos índices deixados pela decisão 173 (acesso do docente repetido no M3, no M5 e no M6, «·» nas contagens do M8 e do M9, menu dos materiais sem JavaScript no telemóvel). M9 menu dos materiais sem o lugar flutuante no HTML (passa para o CSS comum)."
+ }
+]

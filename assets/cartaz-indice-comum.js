@@ -24,11 +24,16 @@
   const tools = document.querySelector('body > details.route-teacher-tools');
   /* No M3, no M5 e no M6 há, logo antes, a ligação direta aos guiões (a.teacher-access), no mesmo canto: acompanha o menu e
      fica por baixo do botão, como estava (sai num pedido próprio, decisão 173). */
+  /* 07/11/2026: acertos da decisão 173, a ligação repetida saiu do M3, do M5 e do M6 (camada indices_acertos_20261107): twin
+     fica null nos nove; o código fica para as páginas com a camada desfeita. */
   const twin = tools && tools.previousElementSibling && tools.previousElementSibling.matches('a.teacher-access')
     ? tools.previousElementSibling : null;
   const home = tools ? tools.nextSibling : null;
   const menu = tools ? tools.querySelector(':scope > nav') : null;
   /* O menu dos materiais traz no HTML o lugar flutuante (position:fixed); dentro dos recursos fica no fluxo. */
+  /* 07/11/2026: acertos da decisão 173, o lugar flutuante (position:fixed;left:12px;bottom:64px) passou do style do HTML para
+     cartaz-indice-comum.css (só quando o menu está no fim do <body>); o style que fica (camada, largura máxima, espaço interior,
+     fundo, cor e contorno) tira-se e repõe-se como antes, e com JavaScript o menu fica onde estava, em todas as larguras. */
   const floatingStyle = menu ? menu.getAttribute('style') : null;
   const holder = document.createElement('div');
   holder.className = 'cz-docente';

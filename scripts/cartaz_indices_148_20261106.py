@@ -41,6 +41,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 CAMADA = ROOT / 'scripts/cartaz_indices_148_20261106.json'
 MANIFESTO = ROOT / 'tests/fixtures/cartaz-indices-148-edits-20261106.json'
+# 07/11/2026: a camada que fica por cima desta (os acertos da decisão 173); base() desfá-la primeiro.
+ACERTOS = ROOT / 'tests/fixtures/indices-acertos-edits-20261107.json'
 VERSAO = '20261106'
 ACHADO = ('06/11/2026: decisão 148 (o desenho do índice do M4 passa aos nove, com a palavra do módulo, a imagem documental '
           'mais pequena a seguir às unidades e os botões flutuantes de sempre). {o}')
@@ -57,6 +59,11 @@ COMENTARIO_PILOTO = next(t['novo'] for t in PILOTO if t['local'] == 'M4 retirar 
 def base(rel):
     """O texto da página sem esta camada (desfeita pelo manifesto, da última troca para a primeira)."""
     texto = (ROOT / rel).read_bytes().decode('utf-8')
+    # 07/11/2026: antes, os acertos da decisão 173 (camada indices_acertos_20261107), que estão por cima desta, com contagem estrita.
+    for edit in reversed(json.loads(ACERTOS.read_text('utf-8'))['files'].get(rel, {}).get('edits', []) if ACERTOS.is_file() else []):
+        if texto.count(edit['new']) != edit['occurrences']:
+            raise SystemExit(f'{rel}: os acertos da decisão 173 já não conferem ({edit["location"]})')
+        texto = texto.replace(edit['new'], edit['old'])
     if MANIFESTO.is_file():
         for edit in reversed(json.loads(MANIFESTO.read_text('utf-8'))['files'].get(rel, {}).get('edits', [])):
             if texto.count(edit['new']) != edit['occurrences']:

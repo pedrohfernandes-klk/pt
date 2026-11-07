@@ -7,7 +7,9 @@ import sys
 
 ROOT=Path(__file__).resolve().parents[1]
 LAYERS=[
- # 06/11/2026: decisão 148, o desenho do índice do M4 nos nove índices do Português, camada mais recente, por cima dos créditos atrás de um «i».
+ # 07/11/2026: três acertos dos índices deixados pela decisão 173 (acesso do docente repetido no M3, M5 e M6; «·» no M8 e M9; menu dos materiais sem JavaScript), camada mais recente, por cima do desenho comum dos índices.
+ ('indices_acertos_20261107','indices-acertos-edits-20261107'),
+ # 06/11/2026: decisão 148, o desenho do índice do M4 nos nove índices do Português, camada mais recente, por cima dos créditos atrás de um «i» (07/11/2026: por baixo dos acertos da decisão 173).
  ('cartaz_indices_148_20261106','cartaz-indices-148-edits-20261106'),
  # 05/11/2026: decisão 153, créditos das imagens atrás de um «i» (pedido pt-2), por cima do lote 3 do Atlas e da decisão 154 (06/11/2026: depois de juntar o main; 06/11/2026: por baixo do desenho comum dos índices, decisão 148).
  ('creditos_i_20261105','creditos-i-edits-20261105'),

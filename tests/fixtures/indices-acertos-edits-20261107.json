@@ -1,0 +1,210 @@
+{
+ "base_commit": "93907af1fb2481cb537df27ad6a777d0a87c3f8a",
+ "_nota": "07/11/2026: três acertos dos índices do Português que a decisão 173 deixou para um pedido próprio (decisão 48), por cima do desenho comum dos nove índices (decisão 148). No M3, no M5 e no M6 sai a ligação a.teacher-access («Guiões e materiais do docente»), que ficava por baixo do botão dos materiais e recebia o foco sem se ver; o destino continua no menu dos materiais da mesma página («Guiões do docente»). No M8 e no M9, « · » passa a «, » nas quatro legendas de «Neste módulo», como nos outros sete. Nos nove, o lugar flutuante do menu dos materiais (position:fixed;left:12px;bottom:64px) sai do style do HTML para assets/cartaz-indice-comum.css, que o mantém igual com JavaScript e a partir de 640 px e, sem JavaScript abaixo de 640 px, abre o menu no fluxo, por baixo do botão; o CSS comum passa à versão 20261107. Gerado por scripts/aplicar_trocas.py a partir de scripts/indices_acertos_20261107.json (construído por scripts/indices_acertos_20261107.py): não se edita à mão. Desfaz-se antes de todas as outras camadas: é a mais recente.",
+ "files": {
+  "m1/index.html": {
+   "base_sha256_lf": "2d1a72a1a762aa8f1d9fd4337dbac95d11b163b7de5bbe749150d636fc0a5609",
+   "after_sha256_lf": "14b5342581ed03ed36ffc0bd1f3c7ddc58423b30db420aae5cae04f25b3e4900",
+   "edits": [
+    {
+     "location": "M1 CSS comum na versão dos acertos",
+     "old": "<link rel=\"stylesheet\" href=\"../assets/cartaz-indice-comum.css?v=20261106\">",
+     "new": "<link rel=\"stylesheet\" href=\"../assets/cartaz-indice-comum.css?v=20261107\">",
+     "occurrences": 1
+    },
+    {
+     "location": "M1 menu dos materiais sem o lugar flutuante no HTML (passa para o CSS comum)",
+     "old": "<nav aria-label=\"Materiais do docente\" style=\"position:fixed;left:12px;bottom:64px;z-index:1001;",
+     "new": "<nav aria-label=\"Materiais do docente\" style=\"z-index:1001;",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m2/index.html": {
+   "base_sha256_lf": "44e5ae51c66f2e3f252edfc70717ca8d2afd84d313d734a3354752db3d1d3f6a",
+   "after_sha256_lf": "6dbeaf5f1201e0c600c3ab0b4e93a7060832500018716051dee21527e57fcc6f",
+   "edits": [
+    {
+     "location": "M2 CSS comum na versão dos acertos",
+     "old": "<link rel=\"stylesheet\" href=\"../assets/cartaz-indice-comum.css?v=20261106\">",
+     "new": "<link rel=\"stylesheet\" href=\"../assets/cartaz-indice-comum.css?v=20261107\">",
+     "occurrences": 1
+    },
+    {
+     "location": "M2 menu dos materiais sem o lugar flutuante no HTML (passa para o CSS comum)",
+     "old": "<nav aria-label=\"Materiais do docente\" style=\"position:fixed;left:12px;bottom:64px;z-index:1001;",
+     "new": "<nav aria-label=\"Materiais do docente\" style=\"z-index:1001;",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m3/index.html": {
+   "base_sha256_lf": "50e5e3a82ff853110125f28700a673087521f6624316464ab1ac4a84063238fd",
+   "after_sha256_lf": "2461ac1af3a4cb24a5318691a8857bfa8e79c7d7759c8d3851c1ee982557e4ad",
+   "edits": [
+    {
+     "location": "M3 CSS comum na versão dos acertos",
+     "old": "<link rel=\"stylesheet\" href=\"../assets/cartaz-indice-comum.css?v=20261106\">",
+     "new": "<link rel=\"stylesheet\" href=\"../assets/cartaz-indice-comum.css?v=20261107\">",
+     "occurrences": 1
+    },
+    {
+     "location": "M3 sai a ligação repetida aos guiões (o destino fica no menu dos materiais)",
+     "old": "</script><a class=\"teacher-access\" href=\"https://pedrohfernandes-klk.github.io/lente/docente/#portugues\" aria-label=\"Guiões e materiais do docente\" title=\"Para o docente\"><svg viewBox=\"0 0 40 40\" width=\"30\" height=\"30\" aria-hidden=\"true\"><circle cx=\"20\" cy=\"20\" r=\"15\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\"/><circle cx=\"20\" cy=\"20\" r=\"8\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\"/><path d=\"m9.5 9.5 5 5m11 11 5 5m-21 0 5-5m11-11 5-5\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"5\"/></svg></a><details class=\"route-teacher-tools\">",
+     "new": "</script><details class=\"route-teacher-tools\">",
+     "occurrences": 1
+    },
+    {
+     "location": "M3 menu dos materiais sem o lugar flutuante no HTML (passa para o CSS comum)",
+     "old": "<nav aria-label=\"Materiais do docente\" style=\"position:fixed;left:12px;bottom:64px;z-index:1001;",
+     "new": "<nav aria-label=\"Materiais do docente\" style=\"z-index:1001;",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/index.html": {
+   "base_sha256_lf": "8e2574ceec5bf2f46a1162e5a9b7f6d48d48d387b3493ac58dec47a03339d506",
+   "after_sha256_lf": "021a102e496f9e145b7d08c5e94e1c175a806cdfaf4bbd0113da124ccc3aace1",
+   "edits": [
+    {
+     "location": "M4 CSS comum na versão dos acertos",
+     "old": "<link rel=\"stylesheet\" href=\"../assets/cartaz-indice-comum.css?v=20261106\">",
+     "new": "<link rel=\"stylesheet\" href=\"../assets/cartaz-indice-comum.css?v=20261107\">",
+     "occurrences": 1
+    },
+    {
+     "location": "M4 menu dos materiais sem o lugar flutuante no HTML (passa para o CSS comum)",
+     "old": "<nav aria-label=\"Materiais do docente\" style=\"position:fixed;left:12px;bottom:64px;z-index:1001;",
+     "new": "<nav aria-label=\"Materiais do docente\" style=\"z-index:1001;",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m5/index.html": {
+   "base_sha256_lf": "2120843a6b0c23d74074e00b520077e5a93cea20aea1e6d90c42498e8c6afa78",
+   "after_sha256_lf": "1f62df076c50dcc2a167d8b4407da95c996b32adfc8d1f935484cf6f3473001d",
+   "edits": [
+    {
+     "location": "M5 CSS comum na versão dos acertos",
+     "old": "<link rel=\"stylesheet\" href=\"../assets/cartaz-indice-comum.css?v=20261106\">",
+     "new": "<link rel=\"stylesheet\" href=\"../assets/cartaz-indice-comum.css?v=20261107\">",
+     "occurrences": 1
+    },
+    {
+     "location": "M5 sai a ligação repetida aos guiões (o destino fica no menu dos materiais)",
+     "old": "</script><a class=\"teacher-access\" href=\"https://pedrohfernandes-klk.github.io/lente/docente/#portugues\" aria-label=\"Guiões e materiais do docente\" title=\"Para o docente\"><svg viewBox=\"0 0 40 40\" width=\"30\" height=\"30\" aria-hidden=\"true\"><circle cx=\"20\" cy=\"20\" r=\"15\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\"/><circle cx=\"20\" cy=\"20\" r=\"8\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\"/><path d=\"m9.5 9.5 5 5m11 11 5 5m-21 0 5-5m11-11 5-5\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"5\"/></svg></a><details class=\"route-teacher-tools\">",
+     "new": "</script><details class=\"route-teacher-tools\">",
+     "occurrences": 1
+    },
+    {
+     "location": "M5 menu dos materiais sem o lugar flutuante no HTML (passa para o CSS comum)",
+     "old": "<nav aria-label=\"Materiais do docente\" style=\"position:fixed;left:12px;bottom:64px;z-index:1001;",
+     "new": "<nav aria-label=\"Materiais do docente\" style=\"z-index:1001;",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m6/index.html": {
+   "base_sha256_lf": "02260926b383d566a52c27825de4dceced5d9b3884c928211a4f34eb6074b090",
+   "after_sha256_lf": "622e8a40e4313925459c5cb2fbc2eb296480e9d1268410e4b960598018ff7f44",
+   "edits": [
+    {
+     "location": "M6 CSS comum na versão dos acertos",
+     "old": "<link rel=\"stylesheet\" href=\"../assets/cartaz-indice-comum.css?v=20261106\">",
+     "new": "<link rel=\"stylesheet\" href=\"../assets/cartaz-indice-comum.css?v=20261107\">",
+     "occurrences": 1
+    },
+    {
+     "location": "M6 sai a ligação repetida aos guiões (o destino fica no menu dos materiais)",
+     "old": "</script><a class=\"teacher-access\" href=\"https://pedrohfernandes-klk.github.io/lente/docente/#portugues\" aria-label=\"Guiões e materiais do docente\" title=\"Para o docente\"><svg viewBox=\"0 0 40 40\" width=\"30\" height=\"30\" aria-hidden=\"true\"><circle cx=\"20\" cy=\"20\" r=\"15\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\"/><circle cx=\"20\" cy=\"20\" r=\"8\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\"/><path d=\"m9.5 9.5 5 5m11 11 5 5m-21 0 5-5m11-11 5-5\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"5\"/></svg></a><details class=\"route-teacher-tools\">",
+     "new": "</script><details class=\"route-teacher-tools\">",
+     "occurrences": 1
+    },
+    {
+     "location": "M6 menu dos materiais sem o lugar flutuante no HTML (passa para o CSS comum)",
+     "old": "<nav aria-label=\"Materiais do docente\" style=\"position:fixed;left:12px;bottom:64px;z-index:1001;",
+     "new": "<nav aria-label=\"Materiais do docente\" style=\"z-index:1001;",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m7/index.html": {
+   "base_sha256_lf": "35cfc67367e70252d64a19029e8e3188530d920a9c0512fec4389e5c0a08e9e8",
+   "after_sha256_lf": "41f753fc9631091e163c60814429b17bcfdf172ea342192f1139d208bc87e124",
+   "edits": [
+    {
+     "location": "M7 CSS comum na versão dos acertos",
+     "old": "<link rel=\"stylesheet\" href=\"../assets/cartaz-indice-comum.css?v=20261106\">",
+     "new": "<link rel=\"stylesheet\" href=\"../assets/cartaz-indice-comum.css?v=20261107\">",
+     "occurrences": 1
+    },
+    {
+     "location": "M7 menu dos materiais sem o lugar flutuante no HTML (passa para o CSS comum)",
+     "old": "<nav aria-label=\"Materiais do docente\" style=\"position:fixed;left:12px;bottom:64px;z-index:1001;",
+     "new": "<nav aria-label=\"Materiais do docente\" style=\"z-index:1001;",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m8/index.html": {
+   "base_sha256_lf": "65e268841168340dabc0bdace7a71f4ca9fb0661de605dd499e67ecb9ade7097",
+   "after_sha256_lf": "9404591371a8e88e9bec6924b84ec78bac8936b2d7a62d0334ca0988d82d7f23",
+   "edits": [
+    {
+     "location": "M8 CSS comum na versão dos acertos",
+     "old": "<link rel=\"stylesheet\" href=\"../assets/cartaz-indice-comum.css?v=20261106\">",
+     "new": "<link rel=\"stylesheet\" href=\"../assets/cartaz-indice-comum.css?v=20261107\">",
+     "occurrences": 1
+    },
+    {
+     "location": "M8 «Neste módulo», unidade 1: «, » em vez de « · »",
+     "old": "<small>10 aulas de leitura/preparação · tarefa 90 min</small>",
+     "new": "<small>10 aulas de leitura/preparação, tarefa 90 min</small>",
+     "occurrences": 1
+    },
+    {
+     "location": "M8 «Neste módulo», unidade 2: «, » em vez de « · »",
+     "old": "<small>6 aulas de leitura/preparação · tarefa 90 min</small>",
+     "new": "<small>6 aulas de leitura/preparação, tarefa 90 min</small>",
+     "occurrences": 1
+    },
+    {
+     "location": "M8 menu dos materiais sem o lugar flutuante no HTML (passa para o CSS comum)",
+     "old": "<nav aria-label=\"Materiais do docente\" style=\"position:fixed;left:12px;bottom:64px;z-index:1001;",
+     "new": "<nav aria-label=\"Materiais do docente\" style=\"z-index:1001;",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m9/index.html": {
+   "base_sha256_lf": "80c270fbd249606868c8d73672f2e1dba0fdd9bd23f0e0dca422f046e664b105",
+   "after_sha256_lf": "ae0f04c74b917e2596b5395acc2a5505302bb4099b32058080deed8129f1554f",
+   "edits": [
+    {
+     "location": "M9 CSS comum na versão dos acertos",
+     "old": "<link rel=\"stylesheet\" href=\"../assets/cartaz-indice-comum.css?v=20261106\">",
+     "new": "<link rel=\"stylesheet\" href=\"../assets/cartaz-indice-comum.css?v=20261107\">",
+     "occurrences": 1
+    },
+    {
+     "location": "M9 «Neste módulo», unidade 1: «, » em vez de « · »",
+     "old": "<small>8 aulas de leitura/preparação · tarefa 90 min</small>",
+     "new": "<small>8 aulas de leitura/preparação, tarefa 90 min</small>",
+     "occurrences": 1
+    },
+    {
+     "location": "M9 «Neste módulo», unidade 2: «, » em vez de « · »",
+     "old": "<small>7 aulas de leitura/preparação · tarefa 90 min</small>",
+     "new": "<small>7 aulas de leitura/preparação, tarefa 90 min</small>",
+     "occurrences": 1
+    },
+    {
+     "location": "M9 menu dos materiais sem o lugar flutuante no HTML (passa para o CSS comum)",
+     "old": "<nav aria-label=\"Materiais do docente\" style=\"position:fixed;left:12px;bottom:64px;z-index:1001;",
+     "new": "<nav aria-label=\"Materiais do docente\" style=\"z-index:1001;",
+     "occurrences": 1
+    }
+   ]
+  }
+ }
+}

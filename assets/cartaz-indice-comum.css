@@ -110,6 +110,12 @@ html:has(main[data-cz-indice].cz-sala) body.pt-module-layout main.cz-index[data-
 html:has(main[data-cz-indice].cz-sala) body.pt-module-layout main.cz-index[data-cz-indice] .cz-recursos>summary,html:has(main[data-cz-indice].cz-sala) body.pt-module-layout main.cz-index[data-cz-indice] [data-module-next]{font-size:1.25rem;}
 /* 06/11/2026: decisão 148, os botões flutuantes de sempre, com o alvo de 48 px do piloto. */
 body:has(main[data-cz-indice]) .teacher-access{width:48px;height:48px;}
+/* 07/11/2026: acertos da decisão 173 (camada indices_acertos_20261107). O lugar flutuante do menu dos materiais do docente
+   (position:fixed;left:12px;bottom:64px) sai do style do HTML e fica aqui, igual, sempre que o menu está no fim do <body>: com
+   JavaScript a partir de 640 px (abaixo, cartaz-indice-comum.js leva-o para «Recursos do módulo» e tira-lhe o style) e sem
+   JavaScript a partir de 640 px. Sem JavaScript abaixo de 640 px, a regra do fim deste ficheiro abre-o no fluxo, por baixo do
+   botão. Sem media, para a impressão ficar como estava. */
+body:has(main[data-cz-indice])>details.route-teacher-tools>summary.teacher-access+nav{position:fixed;left:12px;bottom:64px;}
 body:has(main[data-cz-indice]) [data-appearance-floating] .epi-appearance-toggle{width:48px;height:48px;min-width:48px;min-height:48px;}
 /* 06/11/2026: revisão da decisão 148, o contentor do modo noturno também com 48 px, para o botão ficar a 12 px dos cantos,
    alinhado com o acesso do docente (com 44 px, o botão saía do contentor e ficava a 8 px da direita e a 7 px do fundo). O
@@ -217,6 +223,8 @@ body.pt-module-layout main.cz-index[data-cz-indice] .cz-docente{position:relativ
 body.pt-module-layout main.cz-index[data-cz-indice] .cz-docente>details.route-teacher-tools{margin:0;}
 body.pt-module-layout main.cz-index[data-cz-indice] .cz-docente .teacher-access{background:transparent;}
 body.pt-module-layout main.cz-index[data-cz-indice] .cz-docente summary.teacher-access{position:relative;inset:auto;z-index:1;cursor:pointer;}
+/* 07/11/2026: acertos da decisão 173, a ligação direta do M3, do M5 e do M6 saiu das páginas (camada
+   indices_acertos_20261107); a regra fica para as páginas com a camada desfeita. */
 body.pt-module-layout main.cz-index[data-cz-indice] .cz-docente>a.teacher-access{position:absolute;inset:0 auto auto 0;z-index:0;}
 body.pt-module-layout main.cz-index[data-cz-indice] .cz-docente summary.teacher-access+nav{padding:8px 0 0;}
 body.pt-module-layout main.cz-index[data-cz-indice] .cz-docente summary.teacher-access+nav p{margin:0;}
@@ -239,9 +247,18 @@ body:has(main[data-cz-indice]) nav.migalhas>[data-appearance-control]>.epi-appea
    texto (a ligação direta do M3, do M5 e do M6 por baixo do botão, como estava). */
 /* 06/11/2026: decisão 173, revisão de 6/11: 12 px por baixo (eram 24 px), para o menu dos materiais, que o HTML põe a 64 px do
    fundo do ecrã, abrir pelo menos 4 px acima do botão sempre que o botão se vê inteiro, como a flutuar (tapava 8 px dele). */
+/* 07/11/2026: acertos da decisão 173, o menu dos materiais já não abre acima do botão: abre-se por baixo dele, no fluxo (regra
+   no fim deste bloco); os 12 px ficam como margem do fim da página. */
 body:has(main[data-cz-indice])>details.route-teacher-tools{margin:0 16px 12px;}
 body:has(main[data-cz-indice])>details.route-teacher-tools>summary.teacher-access{position:relative;inset:auto;z-index:1;}
+/* 07/11/2026: acertos da decisão 173, a ligação repetida do M3, do M5 e do M6 saiu das páginas (camada
+   indices_acertos_20261107); a regra fica para as páginas com a camada desfeita. */
 body:has(main[data-cz-indice])>a.teacher-access{position:relative;inset:auto;z-index:0;margin:0 16px -48px;}
+/* 07/11/2026: acertos da decisão 173. Sem JavaScript, o menu dos materiais abre-se no fluxo, logo por baixo do botão, e
+   desliza com a página: já não fica fixo por cima do texto quando se sobe a página com ele aberto. O lugar flutuante já não
+   vem do style do HTML (camada indices_acertos_20261107); esta regra ganha à do início do ficheiro por vir depois, com o mesmo
+   seletor. Com JavaScript, abaixo de 640 px o menu está dentro de «Recursos do módulo» e esta regra não lhe toca. */
+body:has(main[data-cz-indice])>details.route-teacher-tools>summary.teacher-access+nav{position:static;}
 }
 }
 /* 06/11/2026: decisão 173, revisão de 6/11, abaixo de 360 px (era screen and (max-width:359px)). */
