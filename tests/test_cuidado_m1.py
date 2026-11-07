@@ -313,24 +313,40 @@ class CuidadoM1(unittest.TestCase):
         self.assertEqual(achados, {x['i'] for x in C.ACHADOS_AC} | {x['i'] for x in C.ACHADOS_B})
         # No topo da cadeia.
         self.assertEqual(verificar_camadas.LAYERS[0], ('cuidado_m1_20261106', 'cuidado-m1-edits-20261106'))
-        self.assertEqual(verificar_camadas.LAYERS[1], ('creditos_i_20261105', 'creditos-i-edits-20261105'))
+        # 07/11/2026 (fusão do main 29441e6b no pedido #182): esta camada fica por cima dos acertos da decisão 173, que ficam por cima do desenho comum dos índices
+        # (decisão 148), por cima dos créditos atrás de um «i».
+        self.assertEqual(verificar_camadas.LAYERS[1], ('indices_acertos_20261107', 'indices-acertos-edits-20261107'))
+        self.assertEqual(verificar_camadas.LAYERS[2], ('cartaz_indices_148_20261106', 'cartaz-indices-148-edits-20261106'))
+        self.assertEqual(verificar_camadas.LAYERS[3], ('creditos_i_20261105', 'creditos-i-edits-20261105'))
         auditoria = ler('tests/auditoria_20261028.py')
-        corpo = auditoria[auditoria.index('def undo_creditos_i_0511'):]
-        self.assertLess(corpo.index('undo_cuidado_m1_0611(path, text)'), corpo.index('_CREDITOS_I_0511.get('))
+        # 07/11/2026 (fusão do main 29441e6b no pedido #182): quem chama primeiro esta camada é a função dos acertos (os créditos chamam o desenho comum, que chama os acertos).
+        corpo = auditoria[auditoria.index('def undo_acertos_0711'):]
+        self.assertLess(corpo.index('undo_cuidado_m1_0611(path, text)'), corpo.index('_ACERTOS_0711.get('))
         sala = ler('scripts/desligar_sala.py')
         self.assertLess(sala.index('cuidado-m1-edits-20261106.json'), sala.index('creditos-i-edits-20261105.json'))
+        self.assertLess(sala.index('cuidado-m1-edits-20261106.json'), sala.index('indices-acertos-edits-20261107.json'))
         # Onde a camada dos créditos se desfaz antes de conferir outra (fluxos e testes da cadeia), esta desfaz-se primeiro.
+        # 07/11/2026 (fusão do main 29441e6b no pedido #182): a regra é a mesma (onde se desfazem os créditos, esta camada desfaz-se
+        # primeiro), mas entre esta e os créditos ficam agora os acertos da decisão 173 e o desenho comum dos índices (decisão 148),
+        # por esta ordem: a cadeia inteira tem de aparecer, sem nada pelo meio.
         creditos = '--desfazer-antes tests/fixtures/creditos-i-edits-20261105.json'
+        cadeia = ('--desfazer-antes tests/fixtures/cuidado-m1-edits-20261106.json --desfazer-antes tests/fixtures/indices-acertos-edits-20261107.json '
+                  '--desfazer-antes tests/fixtures/cartaz-indices-148-edits-20261106.json ' + creditos)
         for p in sorted((ROOT / '.github/workflows').glob('*.yml')) + sorted((ROOT / 'tests').glob('test_*.py')):
             if p.name == 'test_cuidado_m1.py':
+                continue
+            # 07/11/2026 (fusão do main 29441e6b no pedido #182): como este, os testes das camadas do desenho comum e dos acertos
+            # conferem as cadeias com frases (if '…' in linha, assertIn), não as correm; ficam de fora pela mesma razão.
+            if p.name in ('test_cartaz_indices_148.py', 'test_indices_acertos_20261107.py'):
                 continue
             # Sem as linhas de comentário, e com as listas de argumentos («'a', 'b'») juntas numa linha de comando.
             texto = '\n'.join(l for l in p.read_text('utf-8').split('\n') if not l.lstrip().startswith('#'))
             plano = re.sub(r"['\"]\s*,\s*['\"]", ' ', texto)
             with self.subTest(ficheiro=p.name):
-                self.assertEqual(plano.count(creditos), plano.count('--desfazer-antes tests/fixtures/cuidado-m1-edits-20261106.json ' + creditos))
+                self.assertEqual(plano.count(creditos), plano.count(cadeia))
         rotas = ler('tests/test_task_routes_closure.py')
-        self.assertIn("(ROOT/'tests/fixtures/cuidado-m1-edits-20261106.json',ROOT/'tests/fixtures/creditos-i-edits-20261105.json',", rotas)
+        # 07/11/2026 (fusão do main 29441e6b no pedido #182): na cadeia das rotas, esta camada vem logo antes dos acertos da decisão 173.
+        self.assertIn("(ROOT/'tests/fixtures/cuidado-m1-edits-20261106.json',ROOT/'tests/fixtures/indices-acertos-edits-20261107.json',", rotas)
 
     def test_paginas_geradas_saem_iguais_dos_dados(self):
         with tempfile.TemporaryDirectory() as tmp:

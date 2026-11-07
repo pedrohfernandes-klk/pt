@@ -304,12 +304,12 @@ class Autonomia154(unittest.TestCase):
         self.assertLess(corpo.index('undo_atlas_lote3_0511(path, text)'), corpo.index('_AUTONOMIA_0511.get('))
         sala = ler('scripts/desligar_sala.py')
         self.assertIn('autonomia-154-edits-20261105.json', sala)
+        # 07/11/2026 (fusão do main 29441e6b no pedido #182): antes de tudo, a decisão 152 no M1 (antes dos acertos da decisão 173).
+        self.assertLess(sala.index('cuidado-m1-edits-20261106.json'), sala.index('indices-acertos-edits-20261107.json'))
         # 06/11/2026: na Sala desligada, o desenho comum dos índices (decisão 148) desfaz-se antes dos créditos atrás de um «i».
         self.assertLess(sala.index('cartaz-indices-148-edits-20261106.json'), sala.index('creditos-i-edits-20261105.json'))
         # 07/11/2026: e, antes dele, os acertos dos índices deixados pela decisão 173.
         self.assertLess(sala.index('indices-acertos-edits-20261107.json'), sala.index('cartaz-indices-148-edits-20261106.json'))
-        # 07/11/2026 (fusão do main 29441e6b no pedido #182): e, antes de tudo, a decisão 152 no M1.
-        self.assertLess(sala.index('cuidado-m1-edits-20261106.json'), sala.index('indices-acertos-edits-20261107.json'))
         self.assertLess(sala.index('creditos-i-edits-20261105.json'), sala.index('atlas-lote3-edits-20261105.json'))
         self.assertLess(sala.index('atlas-lote3-edits-20261105.json'), sala.index('autonomia-154-edits-20261105.json'))
 
