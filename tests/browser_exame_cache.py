@@ -24,16 +24,20 @@ try:
    old=page.evaluate("localStorage.getItem('pt-exame-sessao-s01')")
    page.locator('[data-aquecimento]').click()
    page.locator('#baralho .cartao').wait_for()
-   assert 'Já feita' in page.locator('#baralho').text_content()
+   # 07/11/2026: o rótulo do fim concorda com «aquecimento» (revisão de 7/11, ponto 15): «Já feito», e nunca «Já feita».
+   feito=page.locator('#baralho').text_content()
+   assert 'Já feito' in feito and 'Já feita' not in feito,feito[:250]
    page.locator('[data-exame-voltar]').first.click()
    page.locator('[data-action="another"]').click()
    page.locator('#baralho .cartao').wait_for()
    assert 'recomecar=1' in page.url
-   assert 'Já feita' not in page.locator('#baralho').text_content()
+   # 07/11/2026: «Já feito» (antes «Já feita»), nem uma forma nem a outra depois de recomeçar.
+   assert all(t not in page.locator('#baralho').text_content() for t in ('Já feito','Já feita'))
    assert page.evaluate("localStorage.getItem('pt-exame-sessao-s01')")==old
    assert page.evaluate("JSON.parse(localStorage.getItem('aquecimento-exame-s01')).melhor")==12
    page.reload(wait_until='networkidle')
-   assert 'Já feita' not in page.locator('#baralho').text_content()
+   # 07/11/2026: «Já feito» (antes «Já feita»), nem uma forma nem a outra depois de recomeçar.
+   assert all(t not in page.locator('#baralho').text_content() for t in ('Já feito','Já feita'))
    bank=page.evaluate("JSON.parse(document.getElementById('exame-aquecimento-dados').textContent)")
    assert len([c for c in bank['cartoes'] if c['t']!='ler'])==12
    assert {c.get('legacyId') for c in bank['cartoes'] if c.get('legacyId')}=={q['id'] for q in data['sessions'][0]['warmup']}

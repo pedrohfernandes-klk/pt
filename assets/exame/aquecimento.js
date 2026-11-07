@@ -30,10 +30,15 @@
   const marcar = () => document.querySelectorAll(paraSessao).forEach(a => a.setAttribute('data-epi-projection-ready', ''));
   document.querySelectorAll('[data-exame-voltar]').forEach(a => { a.href = retorno + 'aquecer'; });
   marcar();
-  // 07/11/2026 (achados 13, 58 e 70): aula:true fica, porque conserva a ordem dos bancos (sem ele o motor baralha os
-  // cartões e a abertura deixa de vir primeiro); o fim diz o que acabou: o aquecimento, não a aula nem a lição.
+  // 07/11/2026 (achados 13, 58 e 70): aula:true fica, porque conserva a ordem dos bancos: sem ele, o motor baralha os
+  // cartões de fazer entre os de leitura (estes ficam no seu lugar) e as opções sem semente, e perdia-se a ordem que o
+  // banco garante (nunca três cartões seguidos do mesmo tipo, perguntas antigas intercaladas, a mesma ordem na projeção e
+  // nos telemóveis); o fim diz o que acabou: o aquecimento, não a aula nem a lição.
+  // 07/11/2026 (revisão de 7/11, ponto 15): ao voltar depois de feito, o motor escreve «Já feita» (a lição); aqui é o
+  // aquecimento, «Já feito».
   const FIM = [
     ['.cartao.fim .rot span', 'A aula acaba aqui', 'Aquecimento feito'],
+    ['.cartao.fim .rot span', 'Já feita', 'Já feito'],
     ['.cartao.fim .grande.lido', 'Fim da lição.', 'Fim do aquecimento.'],
     ['.cartao.fim p', 'Já respondeste a esta lição', 'Já fizeste este aquecimento']
   ];

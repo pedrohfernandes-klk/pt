@@ -55,10 +55,13 @@ def main():
                     page.reload(wait_until='networkidle')
                     # 01/11/2026: aguardar o desenho do motor antes de verificar o estado guardado.
                     page.locator('#baralho .cartao').wait_for()
-                    assert 'Já feita' in page.locator('#baralho').text_content(), (sid, page.locator('#baralho').text_content()[:250], page.evaluate('(k)=>localStorage.getItem(k)', 'aquecimento-exame-'+sid))
+                    # 07/11/2026: o rótulo do fim concorda com «aquecimento» (revisão de 7/11, ponto 15): «Já feito», e nunca «Já feita».
+                    feito = page.locator('#baralho').text_content()
+                    assert 'Já feito' in feito and 'Já feita' not in feito, (sid, feito[:250], page.evaluate('(k)=>localStorage.getItem(k)', 'aquecimento-exame-'+sid))
                     page.goto(target+'?recomecar=1', wait_until='networkidle')
                     page.locator('#baralho .cartao').wait_for()
-                    assert 'Já feita' not in page.locator('#baralho').text_content()
+                    # 07/11/2026: «Já feito» (antes «Já feita»), nem uma forma nem a outra depois de recomeçar.
+                    assert all(t not in page.locator('#baralho').text_content() for t in ('Já feito', 'Já feita'))
                     assert page.evaluate('(k)=>JSON.parse(localStorage.getItem(k)).melhor', 'aquecimento-exame-'+sid) == 12
                     print('PASS', sid, width, '12 cartões, ajuda e progresso', flush=True)
                 assert not errors, errors
