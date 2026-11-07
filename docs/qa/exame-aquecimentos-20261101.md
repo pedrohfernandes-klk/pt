@@ -5,7 +5,7 @@ Ramo: `codex/exame-aquecimentos-20261101`. Integração apenas por revisão da e
 
 ## O que muda
 
-Cada sessão passa a ter 12 cartões de fazer, num total de 324. Conservam-se as 81 perguntas anteriores, com as opções reequilibradas e os títulos em itálico. Os dados antigos de `sessoes.json` mantêm-se para rastreabilidade; nesse ficheiro só muda a duração das sessões.
+Cada sessão passa a ter 12 cartões de fazer, num total de 324. Conservam-se as 81 perguntas anteriores, com as opções reequilibradas e os títulos em itálico. Os dados antigos de `sessoes.json` mantêm-se para rastreabilidade; nesse ficheiro mudam a duração das sessões e, desde a correção de 7/11/2026, as perguntas antigas reescritas pela revisão (s18-q1, s20-q1, s21-q1 a q3, s22-q1 e q3, s23-q1, s25-q2, s26-q1 e s26-q2, com as verificações «Depois da revisão» correspondentes).
 
 Os bancos ficam em `docs/pedagogia/exame-aquecimentos/s01.json` a `s27.json`. Cada cartão indica `recycledFrom` e, nos acrescentos, `sourceCard`; `adaptacao` identifica transferências para exemplos de treino. Os textos primários são consultáveis, sem glossários nem modelos de resposta. Nas sessões 20 e 27, a consulta inclui também o texto original de treino da sessão, necessário para interpretar as perguntas anteriores. Os exemplos inventados identificam-se como treino ou caso imaginário.
 
@@ -15,27 +15,29 @@ O aquecimento passa a 10 minutos e a sessão a 50. Leitura, escrita, correção 
 
 ## Cartões por sessão
 
+Contagem refeita a 7/11/2026 sobre os bancos corrigidos (a mesma que `python scripts/exame_aquecimentos.py --check` escreve), pela ordem em que cada tipo aparece.
+
 | Sessão | Foco | Fazer | Tipos |
 |---|---|---:|---|
-| s01 | Cantigas: comparar sem confundir | 12 | 2 escolha, 4 vf, 2 emparelhar, 2 sublinhar, 1 completar, 1 ordenar |
-| s02 | Fernão Lopes: uma multidão em ação | 12 | 3 vf, 2 escolha, 3 emparelhar, 2 sublinhar, 1 completar, 1 ordenar |
+| s01 | Cantigas: comparar sem confundir | 12 | 2 escolha, 2 emparelhar, 4 vf, 2 sublinhar, 1 completar, 1 ordenar |
+| s02 | Fernão Lopes: uma multidão em ação | 12 | 3 vf, 2 emparelhar, 2 escolha, 3 sublinhar, 1 completar, 1 ordenar |
 | s03 | Gil Vicente: desejo, escolha e sátira | 12 | 3 escolha, 2 emparelhar, 1 ordenar, 3 sublinhar, 3 completar |
 | s04 | Camões lírico: o que a forma faz sentir | 12 | 3 escolha, 2 sublinhar, 1 completar, 1 versos, 3 vf, 2 emparelhar |
 | s05 | Os Lusíadas: celebrar e interrogar | 12 | 3 escolha, 2 versos, 2 sublinhar, 2 completar, 2 vf, 1 emparelhar |
-| s06 | Vieira: os peixes são o argumento | 12 | 2 escolha, 3 vf, 3 emparelhar, 2 sublinhar, 1 completar, 1 ordenar |
-| s07 | Frei Luís de Sousa: o que a cena revela | 12 | 2 escolha, 3 vf, 3 emparelhar, 2 sublinhar, 1 completar, 1 ordenar |
-| s08 | Prosa romântica: paixão e condicionamento | 12 | 2 escolha, 3 vf, 2 sublinhar, 1 completar, 1 versos, 2 emparelhar, 1 ordenar |
-| s09 | Eça: ver a crítica nos pormenores | 12 | 1 escolha, 3 vf, 2 completar, 4 sublinhar, 1 emparelhar, 1 ordenar |
-| s10 | Antero: procurar, negar, descansar | 12 | 2 escolha, 3 vf, 2 sublinhar, 2 completar, 1 versos, 1 emparelhar, 1 ordenar |
+| s06 | Vieira: os peixes são o argumento | 12 | 2 escolha, 3 emparelhar, 3 vf, 2 sublinhar, 1 completar, 1 ordenar |
+| s07 | Frei Luís de Sousa: o que a cena revela | 12 | 2 escolha, 2 emparelhar, 4 vf, 2 sublinhar, 1 completar, 1 ordenar |
+| s08 | Prosa romântica: paixão e condicionamento | 12 | 2 escolha, 2 sublinhar, 1 completar, 3 vf, 2 ordenar, 2 emparelhar |
+| s09 | Eça: ver a crítica nos pormenores | 12 | 1 escolha, 2 completar, 4 sublinhar, 3 vf, 1 emparelhar, 1 ordenar |
+| s10 | Antero: procurar, negar, descansar | 12 | 2 escolha, 2 sublinhar, 2 completar, 3 vf, 1 versos, 1 emparelhar, 1 ordenar |
 | s11 | Cesário: uma cidade em transformação | 12 | 3 escolha, 2 versos, 1 completar, 2 sublinhar, 2 vf, 2 emparelhar |
 | s12 | Pessoa: sentir e construir o poema | 12 | 3 escolha, 1 versos, 2 completar, 2 sublinhar, 2 emparelhar, 1 vf, 1 ordenar |
 | s13 | Caeiro: o rio e a medida do olhar | 12 | 3 escolha, 2 sublinhar, 1 emparelhar, 3 vf, 1 completar, 1 versos, 1 ordenar |
-| s14 | Reis: a disciplina do instante | 12 | 2 escolha, 3 vf, 2 emparelhar, 2 versos, 2 completar, 1 sublinhar |
-| s15 | Campos: desejo e desencontro | 12 | 3 escolha, 1 versos, 1 sublinhar, 1 completar, 3 vf, 2 emparelhar, 1 ordenar |
-| s16 | Mensagem: mito, história e apelo | 12 | 2 escolha, 3 vf, 2 sublinhar, 2 versos, 2 completar, 1 emparelhar |
-| s17 | Poesia contemporânea: três modos de dizer | 12 | 3 escolha, 2 emparelhar, 2 completar, 2 sublinhar, 2 vf, 1 ordenar |
-| s18 | Conto: o que o texto deixa por dizer | 12 | 3 escolha, 1 emparelhar, 2 sublinhar, 3 completar, 3 vf |
-| s19 | Saramago: quem conta e quem faz | 12 | 3 escolha, 2 emparelhar, 1 sublinhar, 2 completar, 1 versos, 1 ordenar, 2 vf |
+| s14 | Reis: a disciplina do instante | 12 | 2 escolha, 2 emparelhar, 2 versos, 2 completar, 3 vf, 1 sublinhar |
+| s15 | Campos: desejo e desencontro | 12 | 3 escolha, 1 versos, 1 sublinhar, 1 completar, 4 vf, 2 emparelhar |
+| s16 | Mensagem: mito, história e apelo | 12 | 2 escolha, 2 sublinhar, 2 versos, 2 completar, 3 vf, 1 emparelhar |
+| s17 | Poesia contemporânea: três modos de dizer | 12 | 4 escolha, 4 vf, 1 completar, 1 emparelhar, 2 ordenar |
+| s18 | Conto: o que o texto deixa por dizer | 12 | 4 escolha, 1 emparelhar, 1 sublinhar, 3 completar, 3 vf |
+| s19 | Saramago: quem conta e quem faz | 12 | 3 escolha, 2 emparelhar, 2 sublinhar, 2 completar, 3 vf |
 | s20 | Ler informação e escrever uma síntese | 12 | 3 escolha, 2 emparelhar, 2 sublinhar, 1 completar, 2 ordenar, 2 vf |
 | s21 | Gramática: funções e relações entre orações | 12 | 3 escolha, 2 completar, 2 sublinhar, 1 ordenar, 2 vf, 2 emparelhar |
 | s22 | Gramática: ligar, retomar e situar | 12 | 3 escolha, 2 emparelhar, 2 sublinhar, 3 completar, 1 vf, 1 ordenar |
@@ -43,7 +45,7 @@ O aquecimento passa a 10 minutos e a sessão a 50. Leitura, escrita, correção 
 | s24 | Opinião: uma posição que resiste à revisão | 12 | 3 escolha, 2 emparelhar, 3 completar, 1 sublinhar, 2 vf, 1 ordenar |
 | s25 | Apreciação crítica: julgar mostrando | 12 | 3 escolha, 2 emparelhar, 1 completar, 1 ordenar, 3 vf, 2 sublinhar |
 | s26 | Oficina final: transformar uma resposta | 12 | 3 escolha, 2 vf, 2 emparelhar, 3 sublinhar, 1 completar, 1 ordenar |
-| s27 | Ver, compreender, estudar melhor | 12 | 3 escolha, 2 emparelhar, 2 vf, 2 sublinhar, 1 completar, 2 ordenar |
+| s27 | Ver, compreender, estudar melhor | 12 | 3 escolha, 1 emparelhar, 2 vf, 3 sublinhar, 1 completar, 2 ordenar |
 
 Todos os bancos têm pelo menos cinco tipos e pelo menos um cartão de completar com várias lacunas. Os cartões de leitura não entram na contagem dos 12.
 
@@ -51,7 +53,7 @@ Todos os bancos têm pelo menos cinco tipos e pelo menos um cartão de completar
 
 As escolhas têm retorno alinhado com cada alternativa. Nas lacunas, o controlador fornece ao motor apenas o retorno das alternativas erradas selecionadas, conservando a explicação geral. Não foi alterado o motor partilhado.
 
-O gerador exige diferença máxima de 20 % em caracteres visíveis, sem margem mínima de caracteres, tanto nas escolhas como nas lacunas. Exige também que a resposta certa nunca seja a única mais longa. Resultado: 156 conjuntos (71 escolhas e 85 lacunas), amplitude máxima de 20 %, zero conjuntos fora dos 20 %, zero certas como única opção mais longa. Há 44 cartões de completar, 41 com várias lacunas. Os tipos por sessão variam entre cinco e sete. `tests/test_opcoes_equilibradas.py`: cinco testes aprovados, também no CI.
+O gerador mede as opções com a medição única do sítio (`scripts/opcoes_equilibradas.py`, função `avaliar`, empates contam): em cada pergunta, no máximo 20 % de diferença em carateres visíveis entre a opção mais curta e a mais longa, e a certa nunca 25 % ou mais acima da maior errada; no conjunto, a certa é a mais longa (empatada ou sozinha) em não mais de uma de cada três perguntas de três opções. Exige também, em cada pergunta, que a certa nunca seja a única mais longa, e, em cada lacuna, pelo menos três opções. Resultado a 7/11/2026: 156 conjuntos (73 escolhas e 83 lacunas), todos com 3 opções; amplitude máxima de 20 %; zero erros da medição; a certa é a mais longa, contando os empates, em 28 dos 156 (o limite é 52). Há 43 cartões de completar, 40 com várias lacunas, e 36 verdadeiros em 70 cartões de verdadeiro ou falso (51 %; `validar_conjunto()` exige entre 40 % e 60 %). Os tipos por sessão variam entre cinco e sete. `tests/test_opcoes_equilibradas.py`: cinco testes aprovados, também no CI.
 
 ## Progresso e projeção
 

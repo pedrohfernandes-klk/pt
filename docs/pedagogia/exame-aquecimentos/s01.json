@@ -208,19 +208,15 @@
     },
     {
       "t": "sublinhar",
-      "p": "Neste exemplo imaginário, toca nas palavras que contradizem o elogio.",
-      "frase": "Depois de uma hora à espera, alguém diz: «Que rapidez!»",
+      "p": "No refrão, toca na palavra que diz quando a rapariga espera o amigo.",
+      "frase": "e ai Deus, se verrá cedo?",
       "certas": [
-        2,
-        3,
-        4,
         5
       ],
-      "f": "**Uma hora à espera** contradiz «rapidez». Sem a situação, as palavras poderiam ser um elogio literal.",
-      "fe": "A ironia está no choque entre a frase e a situação: toca na situação que desmente «Que rapidez!», não na frase.",
+      "f": "**Cedo**: a rapariga quer o amigo de volta em breve; a pergunta repete-se no fim das quatro estrofes, e a espera cresce.",
+      "fe": "Marcaste a invocação ou o verbo, não o tempo. A última palavra do refrão diz quando ela espera que ele venha.",
       "recycledFrom": "/pt/m1/licao-m1-f19/",
-      "sourceCard": 16,
-      "adaptacao": "Operação da lição aplicada a um recorte ou exemplo indicado no cartão."
+      "adaptacao": "Cartão novo sobre o refrão da cantiga do texto de apoio, no lugar de um segundo caso imaginário (07/11/2026)."
     }
   ]
 }

@@ -1,6 +1,6 @@
 {
  "base_commit": "d1f343535901b0bb0045032196f3f09c398a8c4e",
- "_nota": "02/11/2026: lote 2 sobre a varredura publicada; alterações de estrutura apenas nas três decisões confirmadas do #149, com âncoras e progresso conservados. 01/11/2026: duração das sessões de exame atualizada para 50 minutos (decisão 106); trocas, ocorrências e restantes ficheiros preservados; só os resumos dos ficheiros do exame que o pedido pt #155 muda foram refeitos (07/11/2026: sobre a fusão com o main), sem mudar o base_commit do manifesto, que continua a ser o das bases dos outros ficheiros.",
+ "_nota": "02/11/2026: lote 2 sobre a varredura publicada; alterações de estrutura apenas nas três decisões confirmadas do #149, com âncoras e progresso conservados. 01/11/2026: duração das sessões de exame atualizada para 50 minutos (decisão 106); trocas, ocorrências e restantes ficheiros preservados; só os resumos dos ficheiros do exame que o pedido pt #155 muda foram refeitos (07/11/2026: sobre a fusão com o main), sem mudar o base_commit do manifesto, que continua a ser o das bases dos outros ficheiros. 07/11/2026: sessoes.json muda também nas perguntas antigas reescritas pelos achados 8, 23, 30, 31 e 41 e pela revisão de 7/11 (s18-q1, s20-q1, s21-q1 a q3, s22-q1 e q3, s23-q1, s25-q2, s26-q1, s26-q2 e as verificações «Depois da revisão» correspondentes); nenhuma troca das camadas foi tocada.",
  "files": {
   "m1/licao-m1-f01/index.html": {
    "base_sha256_lf": "273b3bad9310e8e6dafa3330b7ad7d516937c20ebc8a896b5841530c520d1790",
@@ -1041,8 +1041,8 @@
    ]
   },
   "assets/exame/sessoes.json": {
-   "base_sha256_lf": "8edb1bc5309c5900f9093f9d8a7dda355b722c6414086fa46675d894ec0805c4",
-   "after_sha256_lf": "57f29bb7eb29f31f8b246809f362cc60105b22347592e0335981a0e5cefbb594",
+   "base_sha256_lf": "2d074b3a71d1e95718bf914e967c37b7394e2b8728c6fb5cc51ecadc3a839b33",
+   "after_sha256_lf": "3ba2f76c532e11161a754b487fec1cec007be3e0c40368a8a3bda21038e36188",
    "edits": [
     {
      "location": "Aquecimento: cópia de M9-F01 C14",

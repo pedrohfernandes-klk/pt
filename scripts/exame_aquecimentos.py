@@ -25,10 +25,15 @@ EXTENSO = {10: 'Dez', 11: 'Onze', 12: 'Doze', 13: 'Treze', 14: 'Catorze'}
 # 07/11/2026: os ficheiros de main que este pedido muda (duração de 50 minutos, aquecimento de 10 minutos e a
 # ligação para os cartões); as camadas literais que os registam têm de ver os resumos refeitos sobre a árvore atual.
 FICHEIROS_DO_PEDIDO = ('assets/exame/sessoes.json', 'assets/exame/app.js', 'exame/index.html')
-NOTA_50 = (' 01/11/2026: duração das sessões de exame atualizada para 50 minutos (decisão 106); trocas, ocorrências e '
-           'restantes ficheiros preservados; só os resumos dos ficheiros do exame que o pedido pt #155 muda foram '
-           'refeitos (07/11/2026: sobre a fusão com o main), sem mudar o base_commit do manifesto, que continua a ser '
-           'o das bases dos outros ficheiros.')
+NOTA_50_ANTIGA = (' 01/11/2026: duração das sessões de exame atualizada para 50 minutos (decisão 106); trocas, ocorrências e '
+                  'restantes ficheiros preservados; só os resumos dos ficheiros do exame que o pedido pt #155 muda foram '
+                  'refeitos (07/11/2026: sobre a fusão com o main), sem mudar o base_commit do manifesto, que continua a ser '
+                  'o das bases dos outros ficheiros.')
+# 07/11/2026 (revisão de 7/11, ponto 6): a nota diz também o que mudou em sessoes.json além dos 50 minutos.
+NOTA_50 = NOTA_50_ANTIGA + (' 07/11/2026: sessoes.json muda também nas perguntas antigas reescritas pelos achados 8, 23, 30, '
+                            '31 e 41 e pela revisão de 7/11 (s18-q1, s20-q1, s21-q1 a q3, s22-q1 e q3, s23-q1, s25-q2, '
+                            's26-q1, s26-q2 e as verificações «Depois da revisão» correspondentes); nenhuma troca das '
+                            'camadas foi tocada.')
 
 
 def atualizar_contratos():
@@ -62,9 +67,10 @@ def atualizar_contratos():
             if any(entry[k] != value for k, value in hashes.items()):
                 entry.update(hashes)
                 mudou = True
-        if mudou:
-            if '(decisão 106)' not in manifest['_nota']:
-                manifest['_nota'] += NOTA_50
+        # 07/11/2026: a nota antiga (só os 50 minutos) passa à nova, que procura a frase nova e não «(decisão 106)».
+        if mudou or (NOTA_50_ANTIGA in manifest['_nota'] and NOTA_50 not in manifest['_nota']):
+            if NOTA_50 not in manifest['_nota']:
+                manifest['_nota'] = manifest['_nota'].replace(NOTA_50_ANTIGA, '') + NOTA_50
             target.write_text(json.dumps(manifest, ensure_ascii=False, indent=1) + '\n', 'utf-8')
             print('contrato refeito:', target.relative_to(ROOT))
 

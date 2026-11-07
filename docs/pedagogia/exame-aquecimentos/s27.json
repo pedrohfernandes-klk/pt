@@ -102,12 +102,12 @@
     {
       "t": "sublinhar",
       "p": "No exemplo de treino, toca no grupo que o verbo seleciona como complemento direto.",
-      "frase": "A leitora encontrou provas no texto.",
+      "frase": "Na segunda leitura, a leitora encontrou provas no texto.",
       "certas": [
-        3
+        6
       ],
-      "f": "«Provas» é o que a leitora encontrou. «No texto» situa a ação, mas não responde à pergunta sobre o que foi encontrado.",
-      "fe": "Marcaste o lugar, não o que a leitora encontrou. Pergunta ao verbo: encontrou o quê? A resposta é o complemento direto.",
+      "f": "«Provas» é o que a leitora encontrou. «Na segunda leitura» e «no texto» situam a ação, mas não respondem à pergunta sobre o que foi encontrado.",
+      "fe": "Marcaste o tempo ou o lugar, não o que a leitora encontrou. Pergunta ao verbo: encontrou o quê? A resposta é o complemento direto.",
       "recycledFrom": "/pt/m5/licao-m5-f07/",
       "sourceCard": 3,
       "adaptacao": "Operação da lição aplicada a um recorte ou exemplo indicado no cartão."

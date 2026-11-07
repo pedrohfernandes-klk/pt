@@ -12,7 +12,7 @@
       "adaptacao": "Cartão de abertura da sessão (02/11/2026)."
     },
     {
-      "p": "Qual deve ser a primeira pergunta ao rever uma resposta?",
+      "p": "Que pergunta deve vir primeiro ao rever uma resposta?",
       "f": "A revisão começa pela adequação ao pedido e pelo conteúdo. Uma frase correta não compensa uma resposta a outra pergunta.",
       "legacyId": "s26-q1",
       "recycledFrom": "/pt/m9/licao-m9-f07/",
@@ -212,9 +212,9 @@
     {
       "t": "sublinhar",
       "p": "No exemplo imaginário, toca na palavra que generaliza para além de uma única cena.",
-      "frase": "A personagem hesitou nesta cena, logo mente sempre.",
+      "frase": "A personagem hesitou só nesta cena e, logo, mente sempre.",
       "certas": [
-        7
+        9
       ],
       "f": "«Sempre» alarga uma observação a todas as situações. Uma hesitação nesta cena não prova mentira constante.",
       "fe": "Marcaste a conclusão, não a palavra que a estende a todas as cenas. Está no fim da frase.",

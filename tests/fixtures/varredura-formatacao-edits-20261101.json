@@ -1,6 +1,6 @@
 {
  "base_commit": "fe2d829e53a384c76fd00e77833bd0593d117841",
- "_nota": "01/11/2026: varredura editorial autorizada (títulos, versos, aspas, vocabulário, pontuação e créditos, sem alterar respostas nem progresso). 02/11/2026: refeita em trocas mínimas sobre o main, depois do #144, #145, #148, #150, #154, #161 e #162; as páginas de aquecimento ficam com o gerador. Depois do #152: sai a nota da barra dos versos da M2-F12, que já não tem barras. 01/11/2026: duração das sessões de exame atualizada para 50 minutos (decisão 106); trocas, ocorrências e restantes ficheiros preservados; só os resumos dos ficheiros do exame que o pedido pt #155 muda foram refeitos (07/11/2026: sobre a fusão com o main), sem mudar o base_commit do manifesto, que continua a ser o das bases dos outros ficheiros.",
+ "_nota": "01/11/2026: varredura editorial autorizada (títulos, versos, aspas, vocabulário, pontuação e créditos, sem alterar respostas nem progresso). 02/11/2026: refeita em trocas mínimas sobre o main, depois do #144, #145, #148, #150, #154, #161 e #162; as páginas de aquecimento ficam com o gerador. Depois do #152: sai a nota da barra dos versos da M2-F12, que já não tem barras. 01/11/2026: duração das sessões de exame atualizada para 50 minutos (decisão 106); trocas, ocorrências e restantes ficheiros preservados; só os resumos dos ficheiros do exame que o pedido pt #155 muda foram refeitos (07/11/2026: sobre a fusão com o main), sem mudar o base_commit do manifesto, que continua a ser o das bases dos outros ficheiros. 07/11/2026: sessoes.json muda também nas perguntas antigas reescritas pelos achados 8, 23, 30, 31 e 41 e pela revisão de 7/11 (s18-q1, s20-q1, s21-q1 a q3, s22-q1 e q3, s23-q1, s25-q2, s26-q1, s26-q2 e as verificações «Depois da revisão» correspondentes); nenhuma troca das camadas foi tocada.",
  "files": {
   "1/todos/index.html": {
    "base_sha256_lf": "1df692c28f655feeefc929260757bf35972a4ad34d47ec59cf3422e69c7b60ff",
@@ -75,8 +75,8 @@
    ]
   },
   "assets/exame/sessoes.json": {
-   "base_sha256_lf": "80b199771690ecfced67302ed46af88f70c2bcc0eb1c8f17f2eabfc0365d1ace",
-   "after_sha256_lf": "8edb1bc5309c5900f9093f9d8a7dda355b722c6414086fa46675d894ec0805c4",
+   "base_sha256_lf": "d8faa23d45076a5c8fabd282b035efa713391d824ad9bd001c6de05c2eaae1ef",
+   "after_sha256_lf": "2d074b3a71d1e95718bf914e967c37b7394e2b8728c6fb5cc51ecadc3a839b33",
    "edits": [
     {
      "location": "Varredura de formatação, troca mínima 1",
@@ -2955,8 +2955,8 @@
    ]
   },
   "assets/exame/app.js": {
-   "base_sha256_lf": "78ef56115a5c0c207b73405cded93f597b9af8bb9e978ae5254cfa182f889cef",
-   "after_sha256_lf": "82c3f1421227315d4088b22f4cb6cf4e575a90846931513972048202ad7032a3",
+   "base_sha256_lf": "f65aec6c85d8487cef442bd626c65bb134deb8df472c56e76ba303461718ddd9",
+   "after_sha256_lf": "128c6c1988c558c307568ee7a50516e4175a57e6661e8b267c1e04e8a09bb933",
    "edits": [
     {
      "location": "Varredura de formatação, troca mínima 1",

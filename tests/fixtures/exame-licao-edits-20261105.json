@@ -1,10 +1,10 @@
 {
  "base_commit": "10da5a83c3ed1d06af6e376eb23555f8db4a0a4d",
- "_nota": "05/11/2026: Laboratório do exame: a ligação e as notas falam da lição (não de uma «leitura de apoio»), camada mais recente, por cima da tabela dos seis movimentos. 01/11/2026: duração das sessões de exame atualizada para 50 minutos (decisão 106); trocas, ocorrências e restantes ficheiros preservados; só os resumos dos ficheiros do exame que o pedido pt #155 muda foram refeitos (07/11/2026: sobre a fusão com o main), sem mudar o base_commit do manifesto, que continua a ser o das bases dos outros ficheiros.",
+ "_nota": "05/11/2026: Laboratório do exame: a ligação e as notas falam da lição (não de uma «leitura de apoio»), camada mais recente, por cima da tabela dos seis movimentos. 01/11/2026: duração das sessões de exame atualizada para 50 minutos (decisão 106); trocas, ocorrências e restantes ficheiros preservados; só os resumos dos ficheiros do exame que o pedido pt #155 muda foram refeitos (07/11/2026: sobre a fusão com o main), sem mudar o base_commit do manifesto, que continua a ser o das bases dos outros ficheiros. 07/11/2026: sessoes.json muda também nas perguntas antigas reescritas pelos achados 8, 23, 30, 31 e 41 e pela revisão de 7/11 (s18-q1, s20-q1, s21-q1 a q3, s22-q1 e q3, s23-q1, s25-q2, s26-q1, s26-q2 e as verificações «Depois da revisão» correspondentes); nenhuma troca das camadas foi tocada.",
  "files": {
   "assets/exame/app.js": {
-   "base_sha256_lf": "82c3f1421227315d4088b22f4cb6cf4e575a90846931513972048202ad7032a3",
-   "after_sha256_lf": "51a7b77770c4dd708d2d3ce11a5df7a579d9ae535b8c871f3a775b1434e4f53e",
+   "base_sha256_lf": "128c6c1988c558c307568ee7a50516e4175a57e6661e8b267c1e04e8a09bb933",
+   "after_sha256_lf": "2ef0863b93309096d1edb91bc21f0276f82f4d8a0a7a8aadf399dc790a9c1e2e",
    "edits": [
     {
      "location": "Fonte da sessão: a ligação leva à lição do módulo",
@@ -27,8 +27,8 @@
    ]
   },
   "assets/exame/sessoes.json": {
-   "base_sha256_lf": "57f29bb7eb29f31f8b246809f362cc60105b22347592e0335981a0e5cefbb594",
-   "after_sha256_lf": "232367908f4ec6616a65880f8af618ea2539260a179b0d095f4e4d9140ef115a",
+   "base_sha256_lf": "3ba2f76c532e11161a754b487fec1cec007be3e0c40368a8a3bda21038e36188",
+   "after_sha256_lf": "15a77322c5e096d5a7e7760cbff06908677ec685194234c61487f85683d3a0c2",
    "edits": [
     {
      "location": "Nota das 15 sessões com excerto de uma lição",

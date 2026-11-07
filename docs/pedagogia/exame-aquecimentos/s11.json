@@ -77,7 +77,7 @@
           "c": 0,
           "fe": [
             null,
-            "Os estancos são lojas de tabaco, de outra estrofe; diante do palácio está um casebre, a casa pobre.",
+            "Nestes versos não há estanco (loja de tabaco); diante do palácio está um casebre, a casa pobre.",
             "Não há hospital neste verso; o contraste é entre o palácio e o casebre."
           ]
         }
@@ -114,7 +114,7 @@
       "fe": [
         null,
         "«Épico» designa aqui o poeta representado, não um soldado.",
-        "O forjador pertence a outra imagem do texto."
+        "Nenhum forjador aparece nestes versos: quem «ascende, n'um pilar» é uma figura «Bronzeo, monumental», um poeta épico."
       ]
     },
     {
@@ -187,52 +187,52 @@
       "p": "Liga cada verso à reportagem ou ao sonho.",
       "pares": [
         [
-          "«Um cheiro salutar e honesto a pão no forno»",
+          "«Collocam-se taipaes, rangem as fechaduras»",
           "A reportagem"
         ],
         [
-          "«Enleva-me a chimera azul de transmigrar»",
+          "«Se eu não morresse, nunca! E eternamente»",
           "O sonho"
         ],
         [
-          "«Pelas vitrines ólha um ratoneiro imberbe»",
+          "«Pede-me sempre esmola um homemzinho idoso»",
           "A reportagem"
         ],
         [
-          "«Nós vamos explorar todos os continentes»",
+          "«Que aninhem em mansões de vidro transparente!»",
           "O sonho"
         ]
       ],
-      "f": "O pão e o ratoneiro pertencem à cidade percebida em «Ao Gás»; a chimera e os continentes pertencem ao sonho de «Horas Mortas». Esta distinção não torna a observação neutra: o pão «honesto» já contém uma valorização do trabalho.",
+      "f": "As fechaduras que rangem e o velho mestre de latim a pedir esmola pertencem à cidade percebida; não morrer e as mansões de vidro pertencem ao sonho de «Horas Mortas».",
       "recycledFrom": "/pt/m6/licao-m6-f07/",
       "sourceCard": 30,
-      "fe": "Trocaste reportagem e sonho. Pergunta a cada verso se descreve o que o sujeito vê na rua, como o pão ou o ratoneiro, ou se imagina outra vida, como a quimera e os continentes."
+      "fe": "Trocaste reportagem e sonho. Pergunta a cada verso se descreve o que o sujeito vê e ouve na rua, como as fechaduras ou o homenzinho, ou se imagina outra vida, como não morrer e as mansões de vidro."
     },
     {
       "t": "emparelhar",
-      "p": "Liga cada palavra de «Horas Mortas» ao seu sentido.",
+      "p": "Liga cada palavra do texto de apoio ao seu sentido.",
       "pares": [
         [
-          "emparedados",
-          "fechados entre paredes"
+          "aljube",
+          "prisão"
         ],
         [
-          "chimera",
-          "sonho impossível"
+          "nodoa",
+          "mancha"
         ],
         [
-          "transmigrar",
-          "mudar de vida, renascer"
+          "taipaes",
+          "tábuas que fecham as lojas"
         ],
         [
-          "fel",
-          "amargura"
+          "exiguas",
+          "pequenas, escassas"
         ]
       ],
-      "f": "Emparedados, chimera, transmigrar, fel: a prisão, o sonho e a Dor de «Horas Mortas».",
+      "f": "Aljube, nodoa, taipaes, exiguas: a prisão, a mancha, o fecho das lojas, a pequenez da cidade à noite.",
       "recycledFrom": "/pt/m6/licao-m6-f07/",
       "sourceCard": 32,
-      "fe": "Trocaste os sentidos. Lê a palavra dentro do verso: «emparedados» vem de parede, «transmigrar» é passar a outra vida, «chimera» é o sonho impossível, «fel» é o amargo."
+      "fe": "Trocaste os sentidos. Lê a palavra dentro do verso: o «aljube» encerra pessoas, a «nodoa» é negra, os «taipaes» colocam-se quando a cidade fecha, as pimenteiras são «exiguas»."
     }
   ]
 }

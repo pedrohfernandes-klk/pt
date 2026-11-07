@@ -4548,7 +4548,7 @@
       "warmup": [
         {
           "id": "s26-q1",
-          "q": "Qual deve ser a primeira pergunta ao rever uma resposta?",
+          "q": "Que pergunta deve vir primeiro ao rever uma resposta?",
           "options": [
             "Usei palavras difíceis?",
             "Respondi ao que foi pedido?",
@@ -4620,7 +4620,7 @@
         ],
         "check": {
           "id": "s26-check",
-          "q": "Depois da revisão: Qual deve ser a primeira pergunta ao rever uma resposta?",
+          "q": "Depois da revisão: Que pergunta deve vir primeiro ao rever uma resposta?",
           "options": [
             "Usei palavras difíceis?",
             "Respondi ao que foi pedido?",
