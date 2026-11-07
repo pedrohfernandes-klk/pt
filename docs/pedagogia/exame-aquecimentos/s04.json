@@ -5,12 +5,21 @@
   "cartoes": [
     {
       "t": "ler",
-      "titulo": "Texto para consultar",
-      "html": "<p>Consulta o texto quando precisares de confirmar uma escolha.</p><details><summary>Abrir o texto de apoio</summary><p class=\"v\"><span class=\"ln\" data-l=\"0-0\">Alma minha gentil, que te partiste</span>\n<span class=\"ln\" data-l=\"0-1\">Tão cedo desta vida descontente,</span>\n<span class=\"ln\" data-l=\"0-2\">Repousa lá no céu eternamente,</span>\n<span class=\"ln\" data-l=\"0-3\">E viva eu cá na terra sempre triste.</span>\n<span class=\"ln\" data-l=\"0-5\">Se lá no assento etéreo, onde subiste,</span>\n<span class=\"ln\" data-l=\"0-6\">Memória desta vida se consente,</span>\n<span class=\"ln\" data-l=\"0-7\">Não te esqueças daquele amor ardente</span>\n<span class=\"ln\" data-l=\"0-8\">Que já nos olhos meus tão puro viste.</span>\n<span class=\"ln\" data-l=\"0-10\">E se vires que pode merecer-te</span>\n<span class=\"ln\" data-l=\"0-11\">Alguma cousa a dor que me ficou</span>\n<span class=\"ln\" data-l=\"0-12\">Da mágoa, sem remédio, de perder-te,</span></p><p class=\"v\"><span class=\"ln\" data-l=\"0-14\">Roga a Deus, que teus anos encurtou,</span>\n<span class=\"ln\" data-l=\"0-15\">Que tão cedo de cá me leve a ver-te,</span>\n<span class=\"ln\" data-l=\"0-16\">Quão cedo de meus olhos te levou.</span></p><p class=\"fonte\">Luís de Camões, <i>Rhythmas</i> (1595), soneto XIII (grafia modernizada).</p><p class=\"v\"><span class=\"ln\" data-l=\"1-0\">Busque Amor novas artes, novo engenho,</span>\n<span class=\"ln\" data-l=\"1-1\">Para matar-me, e novas esquivanças;</span>\n<span class=\"ln\" data-l=\"1-2\">Que não pode tirar-me as esperanças,</span>\n<span class=\"ln\" data-l=\"1-3\">Pois mal me tirará o que eu não tenho.</span>\n<span class=\"ln\" data-l=\"1-5\">Olhai de que esperanças me mantenho!</span>\n<span class=\"ln\" data-l=\"1-6\">Vede que perigosas seguranças!</span>\n<span class=\"ln\" data-l=\"1-7\">Pois não temo contrastes nem mudanças,</span>\n<span class=\"ln\" data-l=\"1-8\">Andando em bravo mar, perdido o lenho.</span>\n<span class=\"ln\" data-l=\"1-10\">Mas, conquanto não pode haver desgosto</span>\n<span class=\"ln\" data-l=\"1-11\">Onde esperança falta, lá me esconde</span>\n<span class=\"ln\" data-l=\"1-12\">Amor um mal, que mata e não se vê.</span></p><p class=\"v\"><span class=\"ln\" data-l=\"1-14\">Que dias há que na alma me tem posto</span>\n<span class=\"ln\" data-l=\"1-15\">Um não sei quê, que nasce não sei onde,</span>\n<span class=\"ln\" data-l=\"1-16\">Vem não sei como, e dói não sei porquê.</span></p><p class=\"fonte\">Luís de Camões, sonetos (edição de 1843).</p><p class=\"fonte\"><a href=\"../../../m3/licao-m3-f09/\">Texto e fontes na lição de origem</a></p></details>",
-      "recycledFrom": "/pt/m3/licao-m3-f09/"
+      "rot": "Abre",
+      "titulo": "Aquecer",
+      "html": "<p class=\"abre-t\">Camões lírico: o que a forma faz sentir</p><p><b>Objetivo:</b> relacionar construção formal e experiência amorosa.</p><p>Doze cartões, dez minutos. O texto de apoio está no cartão seguinte. A seguir, voltas à sessão para ler e escrever no caderno.</p>",
+      "recycledFrom": "/pt/exame/",
+      "adaptacao": "Cartão de abertura da sessão (02/11/2026)."
     },
     {
-      "p": "Em «_Alma minha gentil_», «gentil» significa, neste contexto…",
+      "t": "ler",
+      "titulo": "Texto para consultar",
+      "html": "<p>Consulta o texto quando precisares de confirmar uma escolha.</p><details><summary>Abrir o texto de apoio</summary><p class=\"v\"><span class=\"ln\" data-l=\"0-0\">Alma minha gentil, que te partiste</span>\n<span class=\"ln\" data-l=\"0-1\">Tão cedo desta vida descontente,</span>\n<span class=\"ln\" data-l=\"0-2\">Repousa lá no céu eternamente,</span>\n<span class=\"ln\" data-l=\"0-3\">E viva eu cá na terra sempre triste.</span></p><p class=\"v\"><span class=\"ln\" data-l=\"0-5\">Se lá no assento etéreo, onde subiste,</span>\n<span class=\"ln\" data-l=\"0-6\">Memória desta vida se consente,</span>\n<span class=\"ln\" data-l=\"0-7\">Não te esqueças daquele amor ardente</span>\n<span class=\"ln\" data-l=\"0-8\">Que já nos olhos meus tão puro viste.</span></p><p class=\"v\"><span class=\"ln\" data-l=\"0-10\">E se vires que pode merecer-te</span>\n<span class=\"ln\" data-l=\"0-11\">Alguma cousa a dor que me ficou</span>\n<span class=\"ln\" data-l=\"0-12\">Da mágoa, sem remédio, de perder-te,</span></p><p class=\"v\"><span class=\"ln\" data-l=\"0-14\">Roga a Deus, que teus anos encurtou,</span>\n<span class=\"ln\" data-l=\"0-15\">Que tão cedo de cá me leve a ver-te,</span>\n<span class=\"ln\" data-l=\"0-16\">Quão cedo de meus olhos te levou.</span></p><p class=\"fonte\">Luís de Camões, <i>Rhythmas</i> (1595), soneto XIII (grafia modernizada).</p><p class=\"v\"><span class=\"ln\" data-l=\"1-0\">Busque Amor novas artes, novo engenho,</span>\n<span class=\"ln\" data-l=\"1-1\">Para matar-me, e novas esquivanças;</span>\n<span class=\"ln\" data-l=\"1-2\">Que não pode tirar-me as esperanças,</span>\n<span class=\"ln\" data-l=\"1-3\">Pois mal me tirará o que eu não tenho.</span></p><p class=\"v\"><span class=\"ln\" data-l=\"1-5\">Olhai de que esperanças me mantenho!</span>\n<span class=\"ln\" data-l=\"1-6\">Vede que perigosas seguranças!</span>\n<span class=\"ln\" data-l=\"1-7\">Pois não temo contrastes nem mudanças,</span>\n<span class=\"ln\" data-l=\"1-8\">Andando em bravo mar, perdido o lenho.</span></p><p class=\"v\"><span class=\"ln\" data-l=\"1-10\">Mas, conquanto não pode haver desgosto</span>\n<span class=\"ln\" data-l=\"1-11\">Onde esperança falta, lá me esconde</span>\n<span class=\"ln\" data-l=\"1-12\">Amor um mal, que mata e não se vê.</span></p><p class=\"v\"><span class=\"ln\" data-l=\"1-14\">Que dias há que na alma me tem posto</span>\n<span class=\"ln\" data-l=\"1-15\">Um não sei quê, que nasce não sei onde,</span>\n<span class=\"ln\" data-l=\"1-16\">Vem não sei como, e dói não sei porquê.</span></p><p class=\"fonte\">Luís de Camões, sonetos (edição de 1843).</p><p class=\"fonte\"><a href=\"../../../m3/licao-m3-f09/\" target=\"_blank\" rel=\"noopener\">Texto e fontes na lição de origem</a></p></details>",
+      "recycledFrom": "/pt/m3/licao-m3-f09/",
+      "rot": "Texto de apoio"
+    },
+    {
+      "p": "Em «Alma minha gentil», «gentil» significa, neste contexto…",
       "f": "O adjetivo valoriza a pessoa evocada e participa na sua idealização; deve ser lido no contexto elegíaco.",
       "legacyId": "s04-q1",
       "recycledFrom": "/pt/m3/licao-m3-f09/",
@@ -24,43 +33,7 @@
       "fe": [
         null,
         "Aqui não se avaliam regras de conversa.",
-        "Gentil não informa sobre despreocupação."
-      ]
-    },
-    {
-      "p": "A quem se dirige a voz em «Alma minha gentil, que te partiste»?",
-      "f": "A apóstrofe «_Alma minha gentil_» dirige-se à amada ausente pela morte. A voz fala-lhe; não se confunde automaticamente com o autor real.",
-      "legacyId": "s04-q2",
-      "recycledFrom": "/pt/m3/licao-m3-f09/",
-      "t": "escolha",
-      "o": [
-        "À amada que deixou a vida.",
-        "A Deus que responde à voz.",
-        "Ao leitor que surge no verso."
-      ],
-      "c": 0,
-      "fe": [
-        null,
-        "Deus é mencionado depois, mas não é o destinatário desta abertura.",
-        "O verso interpela a amada, não nomeia um leitor."
-      ]
-    },
-    {
-      "p": "«Que tão cedo de cá me leve a ver-te, / Quão cedo de meus olhos te levou»: que recurso é?",
-      "f": "Paralelismo: a mesma construção em dois versos; pede morrer tão depressa como ela.",
-      "legacyId": "s04-q3",
-      "recycledFrom": "/pt/m3/licao-m3-f09/",
-      "t": "escolha",
-      "o": [
-        "Um paralelismo sintático.",
-        "Uma interpelação ao leitor.",
-        "Uma comparação de lugares."
-      ],
-      "c": 0,
-      "fe": [
-        null,
-        "A pergunta pede a relação entre as construções dos dois versos.",
-        "Não se comparam dois lugares: repete-se uma construção sintática."
+        "«Gentil» não fala de idade nem de alegria: elogia a nobreza da alma."
       ]
     },
     {
@@ -76,7 +49,7 @@
       "cita": "E viva eu cá na terra sempre triste.",
       "recycledFrom": "/pt/m3/licao-m3-f09/",
       "sourceCard": 6,
-      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder."
+      "fe": "Marcaste o estado do sujeito, não o lugar. A antítese opõe dois lugares: «lá no céu», onde está a amada, e o sítio onde ele fica."
     },
     {
       "t": "completar",
@@ -86,31 +59,34 @@
         {
           "o": [
             "não se esqueça do amor dele",
-            "volte do céu para viver com ele"
+            "volte do céu para viver com ele",
+            "rogue a Deus que o leve depressa"
           ],
           "c": 0,
           "fe": [
             null,
-            "Nesta lacuna, volte do céu para viver com ele não corresponde à relação pedida."
+            "O sujeito não pede que ela volte: pede memória, «Não te esqueças daquele amor ardente».",
+            "Rogar a Deus vem no último terceto; nestes versos, o pedido é outro: «Não te esqueças daquele amor ardente»."
           ]
         },
         {
           "o": [
             "novas maneiras de o matar",
-            "novas esperanças para lhe dar"
+            "novas esperanças para lhe dar",
+            "novos amores para o curar"
           ],
           "c": 0,
           "fe": [
             null,
-            "Nesta lacuna, novas esperanças para lhe dar não corresponde à relação pedida."
+            "Amor não traz esperanças: «não pode tirar-me as esperanças» porque ele já não as tem.",
+            "Amor procura matar, não curar: «novas artes, novo engenho, / Para matar-me»."
           ]
         }
       ],
       "f": "Se no céu se permite a memória, **que não se esqueça** «daquele amor ardente» que viu nos olhos dele. **Novas maneiras de o matar**: novas artes, novo engenho e novas esquivanças, desdéns.",
-      "cita": "Se lá no assento etéreo, onde subiste,",
       "recycledFrom": "/pt/m3/licao-m3-f09/",
       "sourceCard": 7,
-      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder.",
+      "fe": "Trocaste os dois pedidos. Relê «Memória desta vida se consente»: o primeiro soneto pede memória; no segundo, as «novas artes» de Amor servem «Para matar-me».",
       "sourceCards": [
         7,
         12
@@ -118,17 +94,34 @@
     },
     {
       "t": "versos",
-      "p": "Põe o primeiro terceto de A pela ordem do soneto.",
+      "p": "Põe o primeiro terceto de «Alma minha gentil» pela ordem do soneto.",
       "linhas": [
         "E se vires que pode merecer-te",
         "Alguma cousa a dor que me ficou",
         "Da mágoa, sem remédio, de perder-te,"
       ],
       "f": "Se a dor merecer alguma coisa; a dor que ficou; da mágoa de a perder: o primeiro terceto.",
-      "cita": "E se vires que pode merecer-te",
       "recycledFrom": "/pt/m3/licao-m3-f09/",
       "sourceCard": 8,
-      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder."
+      "fe": "Trocaste a ordem da condição. O terceto começa pelo «se» («E se vires…»), diz o que pode merecer («Alguma cousa a dor») e só no fim de onde vem a dor («Da mágoa…»)."
+    },
+    {
+      "p": "A quem se dirige a voz em «Alma minha gentil, que te partiste»?",
+      "f": "A apóstrofe «Alma minha gentil» dirige-se à amada ausente pela morte. A voz fala-lhe; não se confunde automaticamente com o autor real.",
+      "legacyId": "s04-q2",
+      "recycledFrom": "/pt/m3/licao-m3-f09/",
+      "t": "escolha",
+      "o": [
+        "À amada que deixou a vida.",
+        "A Deus que responde à voz.",
+        "Ao leitor que surge no verso."
+      ],
+      "c": 0,
+      "fe": [
+        null,
+        "Deus é mencionado depois, mas não é o destinatário desta abertura.",
+        "O verso interpela a amada, não nomeia um leitor."
+      ]
     },
     {
       "t": "vf",
@@ -152,11 +145,11 @@
       "cita": "Andando em bravo mar, perdido o lenho.",
       "recycledFrom": "/pt/m3/licao-m3-f09/",
       "sourceCard": 14,
-      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder."
+      "fe": "Marcaste a perda do barco, não o lugar. Repara no par de nome e adjetivo depois de «Andando em»: é por aí que ele anda."
     },
     {
       "t": "vf",
-      "p": "Segundo B, onde falta a esperança não pode haver desgosto, e no entanto Amor esconde lá um mal.",
+      "p": "Segundo «Busque Amor novas artes», onde falta a esperança não pode haver desgosto, e no entanto Amor esconde lá um mal.",
       "v": true,
       "f": "Verdadeiro: «conquanto», embora, não possa haver desgosto, Amor esconde **um mal que mata e não se vê**.",
       "cita": "Mas, conquanto não pode haver desgosto",
@@ -165,52 +158,70 @@
       "sourceCard": 15
     },
     {
+      "p": "«Que tão cedo de cá me leve a ver-te, / Quão cedo de meus olhos te levou»: que recurso é?",
+      "f": "Paralelismo: a mesma construção em dois versos; pede morrer tão depressa como ela.",
+      "legacyId": "s04-q3",
+      "recycledFrom": "/pt/m3/licao-m3-f09/",
+      "t": "escolha",
+      "o": [
+        "Um paralelismo sintático.",
+        "Uma interpelação ao leitor.",
+        "Uma comparação de lugares."
+      ],
+      "c": 0,
+      "fe": [
+        null,
+        "Os versos falam à amada e pedem-lhe que rogue a Deus; não interpelam o leitor. Compara «tão cedo… me leve» com «quão cedo… te levou».",
+        "Não se comparam dois lugares: repete-se uma construção sintática."
+      ]
+    },
+    {
       "t": "emparelhar",
       "p": "Liga cada verso ao soneto de onde vem.",
       "pares": [
         [
           "«Roga a Deus, que teus anos encurtou»",
-          "«_Alma minha gentil_»"
+          "«Alma minha gentil»"
         ],
         [
           "«Vem não sei como, e dói não sei porquê»",
-          "«_Busque Amor novas artes_»"
+          "«Busque Amor novas artes»"
         ],
         [
           "«Repousa lá no céu eternamente»",
-          "«_Alma minha gentil_»"
+          "«Alma minha gentil»"
         ],
         [
           "«Olhai de que esperanças me mantenho!»",
-          "«_Busque Amor novas artes_»"
+          "«Busque Amor novas artes»"
         ]
       ],
-      "f": "Em A, a amada morta e o céu; em B, o mal de amor que não se sabe dizer.",
+      "f": "Em «Alma minha gentil», a amada morta e o céu; em «Busque Amor novas artes», o mal de amor que não se sabe dizer.",
       "recycledFrom": "/pt/m3/licao-m3-f09/",
       "sourceCard": 20,
-      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder."
+      "fe": "Trocaste os sonetos. Pergunta a cada verso se fala da amada morta e do céu, no primeiro soneto, ou do mal de amor sem nome e das esperanças perdidas, no segundo."
     },
     {
       "t": "emparelhar",
       "p": "Liga cada poema à forma como representa a amada ou o amor.",
       "pares": [
         [
-          "«_Descalça vai para a fonte_»",
+          "«Descalça vai para a fonte»",
           "Leonor: roupa e cores"
         ],
         [
-          "«_Alma minha gentil_»",
+          "«Alma minha gentil»",
           "a amada: alma, sem corpo"
         ],
         [
-          "«_Busque Amor novas artes_»",
+          "«Busque Amor novas artes»",
           "o amor: um não sei quê sem nome"
         ]
       ],
-      "f": "Leonor de roupa e cores, na lição «Leonor e o perdigão»; a amada que é só alma; o amor que não tem nome.",
+      "f": "Leonor de roupa e cores; a amada que é só alma; o amor que não tem nome.",
       "recycledFrom": "/pt/m3/licao-m3-f09/",
       "sourceCard": 22,
-      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder."
+      "fe": "Trocaste as representações. «Descalça vai para a fonte» mostra Leonor por fora, com roupa e cores; «Alma minha gentil» fala a uma alma sem corpo; «Busque Amor» não consegue dar nome ao mal."
     },
     {
       "t": "vf",

@@ -4,6 +4,14 @@
   "titulo": "Opinião: uma posição que resiste à revisão",
   "cartoes": [
     {
+      "t": "ler",
+      "rot": "Abre",
+      "titulo": "Aquecer",
+      "html": "<p class=\"abre-t\">Opinião: uma posição que resiste à revisão</p><p><b>Objetivo:</b> defender uma tese com razões, exemplos e ponderação.</p><p>Doze cartões, dez minutos. A seguir, voltas à sessão para ler e escrever no caderno.</p>",
+      "recycledFrom": "/pt/exame/",
+      "adaptacao": "Cartão de abertura da sessão (02/11/2026)."
+    },
+    {
       "p": "Qual destas frases formula uma tese discutível?",
       "f": "Uma tese estabelece uma posição que pode ser defendida, questionada e precisada com argumentos.",
       "legacyId": "s24-q1",
@@ -22,6 +30,82 @@
       ]
     },
     {
+      "t": "emparelhar",
+      "p": "Liga cada verso de _Mensagem_ ao movimento que faz.",
+      "pares": [
+        [
+          "«Valeu a pena? Tudo vale a pena / Se a alma não é pequena.»",
+          "tese com condição"
+        ],
+        [
+          "«Quem quer passar além do Bojador / Tem que passar além da dor.»",
+          "condição necessária"
+        ],
+        [
+          "«Louco, sim, louco, porque quis grandeza»",
+          "aceitar a palavra e redefini-la"
+        ],
+        [
+          "«Deus ao mar o perigo e o abismo deu, / Mas nele é que espelhou o céu.»",
+          "admitir e contrapor"
+        ]
+      ],
+      "f": "«Se» diz em que caso a tese é verdade; «Tem que» diz o preço que não se pode evitar; «sim» e «porque» aceitam a palavra de quem acusa e mudam-lhe o valor; «Mas» admite o custo e contrapõe.",
+      "fe": "Procura a marca de cada verso: «Se» põe a condição, «Tem que» diz o preço, «sim» e «porque» viram a acusação, «Mas» traz o contrapeso.",
+      "recycledFrom": "/pt/m7/licao-m7-f10/",
+      "sourceCard": 4
+    },
+    {
+      "t": "completar",
+      "p": "Que oração dá a condição à tese de «Mar Português»?",
+      "frase": "Em «Tudo vale a pena / Se a alma não é pequena», a oração com «Se» é subordinada adverbial [1] e diz em que [2] a tese é verdade.",
+      "lacunas": [
+        {
+          "o": [
+            "condicional",
+            "comparativa",
+            "conformativa"
+          ],
+          "c": 0,
+          "fe": [
+            null,
+            "A comparativa compara, como «como se»; a oração com «Se» põe a condição de que a tese depende: condicional.",
+            "A conformativa diz de acordo com quê, com «conforme» ou «segundo»; «Se a alma não é pequena» diz em que caso a tese vale: condicional."
+          ]
+        },
+        {
+          "o": [
+            "caso",
+            "modo",
+            "hora"
+          ],
+          "c": 0,
+          "fe": [
+            null,
+            "O modo seria «como»; a oração com «Se» diz em que caso a tese é verdade.",
+            "Não se trata de tempo: a oração com «Se» diz em que caso a tese vale."
+          ]
+        }
+      ],
+      "f": "Oração subordinada adverbial **condicional**: diz em que **caso** a tese vale. Uma tese com condição é mais difícil de atacar do que um «tudo» sem limites.",
+      "fe": "Repara em «Se»: a oração diz em que caso «Tudo vale a pena». É subordinada adverbial condicional.",
+      "recycledFrom": "/pt/m7/licao-m7-f10/",
+      "sourceCard": 5
+    },
+    {
+      "t": "sublinhar",
+      "p": "Toca nas duas palavras que fazem do preço uma obrigação.",
+      "frase": "Quem quer passar além do Bojador Tem que passar além da dor.",
+      "certas": [
+        6,
+        7
+      ],
+      "f": "«**Tem que**»: é a condição necessária. Quem quer uma coisa tem de pagar outra; no teu texto, «tem de» faz o mesmo trabalho.",
+      "fe": "Procura a obrigação, e não o lugar nem a dor: são duas palavras seguidas, no início do segundo verso.",
+      "recycledFrom": "/pt/m7/licao-m7-f10/",
+      "sourceCard": 6
+    },
+    {
       "p": "Qual é a função de uma objeção bem trabalhada?",
       "f": "Considerar uma dificuldade permite delimitar a tese e responder a uma perspetiva diferente.",
       "legacyId": "s24-q2",
@@ -30,7 +114,7 @@
       "o": [
         "Tornar mais rigorosa a posição defendida.",
         "Apagar por completo os argumentos usados.",
-        "Mudar de tema para prolongar a resposta."
+        "Mudar de tema só para prolongar a resposta."
       ],
       "c": 0,
       "fe": [
@@ -38,6 +122,82 @@
         "Tratar uma objeção não exige apagar os argumentos anteriores.",
         "Mudar de tema evita enfrentar a objeção."
       ]
+    },
+    {
+      "t": "vf",
+      "p": "Em «Louco, sim, louco, porque quis grandeza», a oração com «porque» é concessiva.",
+      "v": false,
+      "f": "Falso: é **causal**, dá a razão. A concessiva vem com «**embora**», como em «embora não saiba a verdade».",
+      "fe": "«Porque» dá a causa; «embora» concede. No verso, «louco» é aceite e redefinido por uma causa, não por uma concessão.",
+      "recycledFrom": "/pt/m7/licao-m7-f10/",
+      "sourceCard": 8
+    },
+    {
+      "t": "completar",
+      "p": "O que faz cada verso no fim de «Mar Português»?",
+      "frase": "«Deus ao mar o perigo e o abismo deu, / Mas nele é que espelhou o céu.»: o primeiro verso [1] o custo; o «Mas» traz o [2].",
+      "lacunas": [
+        {
+          "o": [
+            "admite",
+            "esconde",
+            "exagera"
+          ],
+          "c": 0,
+          "fe": [
+            null,
+            "O verso não esconde o custo: di-lo às claras, «o perigo e o abismo».",
+            "O verso não exagera o custo: nomeia-o, «o perigo e o abismo», e admite-o."
+          ]
+        },
+        {
+          "o": [
+            "contrapeso",
+            "fundamento",
+            "justificação"
+          ],
+          "c": 0,
+          "fe": [
+            null,
+            "O «Mas» não fundamenta o custo: opõe-lhe outra coisa, o céu espelhado no mar.",
+            "O «Mas» não justifica o custo: põe do outro lado o céu espelhado no mar, o contrapeso."
+          ]
+        }
+      ],
+      "f": "O primeiro verso **admite** o perigo e o abismo; o «Mas» traz o **contrapeso**, e «é que» põe-no em realce. É o movimento de admitir o custo e contrapor.",
+      "fe": "Relê os dois versos: o primeiro nomeia o custo, «o perigo e o abismo», e admite-o; o «Mas» põe do outro lado o céu espelhado.",
+      "recycledFrom": "/pt/m7/licao-m7-f10/",
+      "sourceCard": 9
+    },
+    {
+      "t": "emparelhar",
+      "p": "Liga cada conector ao movimento que costuma abrir.",
+      "pares": [
+        [
+          "se",
+          "tese com condição"
+        ],
+        [
+          "tem que",
+          "condição necessária"
+        ],
+        [
+          "porque",
+          "aceitar a palavra e redefini-la"
+        ],
+        [
+          "mas",
+          "admitir e contrapor"
+        ],
+        [
+          "embora",
+          "conceder"
+        ]
+      ],
+      "f": "**Se** põe a condição, **tem que** diz o preço, **porque** redefine, **mas** contrapõe, **embora** concede.",
+      "fe": "Pergunta o que faz cada palavra: põe um caso, diz uma obrigação, dá uma razão, opõe, ou admite uma oposição?",
+      "recycledFrom": "/pt/m7/licao-m7-f10/",
+      "sourceCard": 11
     },
     {
       "p": "Qual é o uso mais forte de um exemplo?",
@@ -58,152 +218,8 @@
       ]
     },
     {
-      "t": "emparelhar",
-      "p": "Liga cada verso de _Mensagem_ ao movimento que faz.",
-      "pares": [
-        [
-          "«Valeu a pena? Tudo vale a pena / Se a alma não é pequena.»",
-          "S, tese com condição"
-        ],
-        [
-          "«Quem quer passar além do Bojador / Tem que passar além da dor.»",
-          "N, condição necessária"
-        ],
-        [
-          "«Louco, sim, louco, porque quis grandeza»",
-          "R, aceitar a palavra e redefini-la"
-        ],
-        [
-          "«Deus ao mar o perigo e o abismo deu, / Mas nele é que espelhou o céu.»",
-          "M, admitir e contrapor"
-        ]
-      ],
-      "f": "**S** diz em que caso a tese é verdade; **N** diz o preço que não se pode evitar; **R** aceita a palavra de quem acusa e muda-lhe o valor; **M** admite o custo e contrapõe com «Mas».",
-      "fe": "Procura a marca de cada verso: «Se» põe a condição, «Tem que» diz o preço, «sim» e «porque» viram a acusação, «Mas» traz o contrapeso.",
-      "recycledFrom": "/pt/m7/licao-m7-f10/",
-      "sourceCard": 4
-    },
-    {
-      "t": "completar",
-      "p": "Que oração dá a condição à tese de «_Mar Português_»?",
-      "frase": "Em «Tudo vale a pena / Se a alma não é pequena», a oração com «Se» é subordinada adverbial [1] e diz em que [2] a tese é verdade.",
-      "lacunas": [
-        {
-          "o": [
-            "condicional",
-            "comparativa"
-          ],
-          "c": 0,
-          "fe": [
-            null,
-            "Nesta lacuna, comparativa não corresponde à relação pedida."
-          ]
-        },
-        {
-          "o": [
-            "caso",
-            "modo"
-          ],
-          "c": 0,
-          "fe": [
-            null,
-            "Nesta lacuna, modo não corresponde à relação pedida."
-          ]
-        }
-      ],
-      "f": "Oração subordinada adverbial **condicional**: diz em que **caso** a tese vale. Uma tese com condição é mais difícil de atacar do que um «tudo» sem limites.",
-      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder.",
-      "recycledFrom": "/pt/m7/licao-m7-f10/",
-      "sourceCard": 5
-    },
-    {
-      "t": "sublinhar",
-      "p": "Toca nas duas palavras que fazem do preço uma obrigação.",
-      "frase": "Quem quer passar além do Bojador Tem que passar além da dor.",
-      "certas": [
-        6,
-        7
-      ],
-      "f": "«**Tem que**»: é a condição necessária. Quem quer uma coisa tem de pagar outra; no teu texto, «tem de» faz o mesmo trabalho.",
-      "fe": "Procura a obrigação, e não o lugar nem a dor: são duas palavras seguidas, no início do segundo verso.",
-      "recycledFrom": "/pt/m7/licao-m7-f10/",
-      "sourceCard": 6
-    },
-    {
-      "t": "vf",
-      "p": "Em «Louco, sim, louco, porque quis grandeza», a oração com «porque» é concessiva.",
-      "v": false,
-      "f": "Falso: é **causal**, dá a razão. A concessiva vem com «**embora**», como em «embora não saiba a verdade» (lição F07): é o movimento C, não o R.",
-      "fe": "«Porque» dá a causa; «embora» concede. R redefine a palavra com uma causal; C admite com «embora» e segue em frente.",
-      "recycledFrom": "/pt/m7/licao-m7-f10/",
-      "sourceCard": 8
-    },
-    {
-      "t": "completar",
-      "p": "O que faz cada verso no fim de «_Mar Português_»?",
-      "frase": "«Deus ao mar o perigo e o abismo deu, / Mas nele é que espelhou o céu.»: o primeiro verso [1] o custo; o «Mas» traz o [2].",
-      "lacunas": [
-        {
-          "o": [
-            "admite",
-            "esconde"
-          ],
-          "c": 0,
-          "fe": [
-            null,
-            "Nesta lacuna, esconde não corresponde à relação pedida."
-          ]
-        },
-        {
-          "o": [
-            "contrapeso",
-            "fundamento"
-          ],
-          "c": 0,
-          "fe": [
-            null,
-            "Nesta lacuna, fundamento não corresponde à relação pedida."
-          ]
-        }
-      ],
-      "f": "O primeiro verso **admite** o perigo e o abismo; o «Mas» traz o **contrapeso**, e «é que» põe-no em realce. É o movimento M: admitir o custo e contrapor.",
-      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder.",
-      "recycledFrom": "/pt/m7/licao-m7-f10/",
-      "sourceCard": 9
-    },
-    {
-      "t": "emparelhar",
-      "p": "Liga cada conector ao movimento que costuma abrir.",
-      "pares": [
-        [
-          "se",
-          "S, tese com condição"
-        ],
-        [
-          "tem que",
-          "N, condição necessária"
-        ],
-        [
-          "porque",
-          "R, redefinir com uma causal"
-        ],
-        [
-          "mas",
-          "M, admitir e contrapor"
-        ],
-        [
-          "embora",
-          "C, conceder"
-        ]
-      ],
-      "f": "**Se** põe a condição, **tem que** diz o preço, **porque** redefine, **mas** contrapõe, **embora** concede. P não precisa de conector: é a pergunta.",
-      "fe": "Pergunta o que faz cada palavra: põe um caso, diz uma obrigação, dá uma razão, opõe, ou admite uma oposição?",
-      "recycledFrom": "/pt/m7/licao-m7-f10/",
-      "sourceCard": 11
-    },
-    {
       "t": "ordenar",
-      "p": "Põe por ordem os passos do movimento R, como no verso do rei.",
+      "p": "Põe por ordem os passos de quem aceita uma acusação e a redefine, como em «Louco, sim, louco, porque quis grandeza».",
       "passos": [
         "Dizes a palavra de quem te acusa",
         "Aceita-la com «sim»",
@@ -223,34 +239,38 @@
         {
           "o": [
             "tese com condição",
-            "biografia do autor"
+            "citação de um poema",
+            "pergunta retórica"
           ],
           "c": 0,
           "fe": [
             null,
-            "Nesta lacuna, biografia do autor não corresponde à relação pedida."
+            "Um texto de opinião não abre com uma citação solta: abre com a tese, de preferência com a condição em que vale.",
+            "Uma pergunta retórica pode chamar a atenção, mas a primeira frase deve dizer a tua posição: a tese."
           ]
         },
         {
           "o": [
             "volta à tese",
-            "resume o poema"
+            "resume o poema",
+            "muda de tema"
           ],
           "c": 0,
           "fe": [
             null,
-            "Nesta lacuna, resume o poema não corresponde à relação pedida."
+            "A conclusão não resume o poema: volta à tese, com outras palavras, para mostrar onde chegaste.",
+            "Mudar de tema no fim desfaz o texto; a conclusão volta à tese sem a copiar."
           ]
         }
       ],
       "f": "Abre com a **tese com condição** e fecha com uma conclusão que **volta à tese**, com outras palavras: quem lê sabe onde começaste e onde chegaste.",
-      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder.",
+      "fe": "Trocaste o lugar da tese ou o papel da conclusão. A tese abre o texto; a conclusão regressa a ela com outras palavras.",
       "recycledFrom": "/pt/m7/licao-m7-f10/",
       "sourceCard": 14
     },
     {
       "t": "vf",
-      "p": "A «_Tabacaria_» tem a data de 15-1-1928, e nela a voz diz «Não sou nada.»: as duas coisas são factos da vida de quem a escreveu.",
+      "p": "A «Tabacaria» tem a data de 15-1-1928, e nela a voz diz «Não sou nada.»: as duas coisas são factos da vida de quem a escreveu.",
       "v": false,
       "f": "Falso: a **data** é um facto; «Não sou nada.» é o que a **voz** diz, o sentido. Num texto de opinião, o facto diz o que aconteceu e confirma-se fora do poema; o verso diz o que a voz pensa ou sente, e não se dá como facto.",
       "fe": "A data confirma-se no Arquivo Pessoa; a frase é da voz do poema e não documenta a vida de ninguém.",

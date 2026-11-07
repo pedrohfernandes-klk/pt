@@ -4,6 +4,14 @@
   "titulo": "Apreciação crítica: julgar mostrando",
   "cartoes": [
     {
+      "t": "ler",
+      "rot": "Abre",
+      "titulo": "Aquecer",
+      "html": "<p class=\"abre-t\">Apreciação crítica: julgar mostrando</p><p><b>Objetivo:</b> distinguir gosto, análise e juízo fundamentado.</p><p>Doze cartões, dez minutos. A seguir, voltas à sessão para ler e escrever no caderno.</p>",
+      "recycledFrom": "/pt/exame/",
+      "adaptacao": "Cartão de abertura da sessão (02/11/2026)."
+    },
+    {
       "p": "O que distingue uma apreciação crítica de um resumo?",
       "f": "Uma apreciação seleciona características, analisa-as e sustenta uma avaliação; não se limita a contar o conteúdo.",
       "legacyId": "s25-q1",
@@ -11,50 +19,14 @@
       "t": "escolha",
       "o": [
         "O juízo apoiado em características.",
-        "O tamanho atribuído ao título final.",
+        "A extensão maior do texto produzido.",
         "A ausência de referências ao objeto."
       ],
       "c": 0,
       "fe": [
         null,
-        "A extensão do título não distingue os dois géneros.",
+        "O tamanho não distingue os géneros: um resumo pode ser longo e uma apreciação curta.",
         "A apreciação precisa de referências ao objeto para sustentar o juízo."
-      ]
-    },
-    {
-      "p": "Como tornar útil a frase «a adaptação simplifica o conflito»?",
-      "f": "A reserva precisa de ser demonstrada num exemplo reconhecível e relacionada com um critério.",
-      "legacyId": "s25-q2",
-      "recycledFrom": "/pt/m5/licao-m5-f14/",
-      "t": "escolha",
-      "o": [
-        "Indicar uma escolha e explicar o efeito.",
-        "Repetir que o livro é superior ao filme.",
-        "Juntar adjetivos sem analisar a escolha."
-      ],
-      "c": 0,
-      "fe": [
-        null,
-        "A superioridade declarada não identifica a escolha nem o seu efeito.",
-        "Mais adjetivos não substituem a análise da adaptação."
-      ]
-    },
-    {
-      "p": "Uma reserva numa apreciação crítica…",
-      "f": "Um juízo pode reconhecer qualidades e limites. O que importa é que a avaliação seja coerente e fundamentada.",
-      "legacyId": "s25-q3",
-      "recycledFrom": "/pt/m5/licao-m5-f14/",
-      "t": "escolha",
-      "o": [
-        "pode precisar uma apreciação favorável",
-        "torna sempre contraditória a apreciação",
-        "obriga sempre a rejeitar o objeto inteiro"
-      ],
-      "c": 0,
-      "fe": [
-        null,
-        "Reconhecer um limite pode tornar o juízo mais preciso.",
-        "Uma reserva parcial não obriga a rejeitar a obra por inteiro."
       ]
     },
     {
@@ -81,44 +53,48 @@
       "f": "O livro, de 1888, descreve em palavras; o filme, de 2014, decide plano, luz, som e voz.",
       "recycledFrom": "/pt/m5/licao-m5-f14/",
       "sourceCard": 4,
-      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder."
+      "fe": "Trocaste livro e filme. O livro é de 1888 e descreve em palavras; o filme estreou em 2014 e decide plano, luz, som e a voz em _off_."
     },
     {
       "t": "completar",
-      "p": "O que vai em cada coluna do guião?",
-      "frase": "Na coluna «No ecrã» registas [1]; na coluna «Escolha e efeito» dizes [2] em cada momento.",
+      "p": "O que registas ao comparar o filme com o livro?",
+      "frase": "Ao ver um excerto do filme, registas [1]; depois dizes [2] em cada momento.",
       "lacunas": [
         {
           "o": [
             "plano, luz, som, voz",
-            "o resumo do capítulo"
+            "o resumo do capítulo",
+            "o que achaste do filme"
           ],
           "c": 0,
           "fe": [
             null,
-            "Nesta lacuna, o resumo do capítulo não corresponde à relação pedida."
+            "O resumo do capítulo é do livro; ao ver o filme registas o que se vê e ouve: plano, luz, som, voz.",
+            "O que achas vem depois e tem de se apoiar no que registaste: plano, luz, som, voz."
           ]
         },
         {
           "o": [
             "o efeito, com indícios",
-            "a data da estreia do filme"
+            "a data da estreia do filme",
+            "o teu gosto, sem razões"
           ],
           "c": 0,
           "fe": [
             null,
-            "Nesta lacuna, a data da estreia do filme não corresponde à relação pedida."
+            "A data da estreia não muda de momento para momento; o que dizes em cada um é o efeito da escolha, com indícios.",
+            "Gosto sem razões não é apreciação; em cada momento dizes o efeito da escolha e o indício que o mostra."
           ]
         }
       ],
       "f": "**Plano, luz, som, voz** são observações; **o efeito, com indícios**, é uma interpretação a justificar. Regista versão e marca temporal. Não tens de inventar uma perda para equilibrar a resposta: explica o que consegues sustentar.",
       "recycledFrom": "/pt/m5/licao-m5-f14/",
       "sourceCard": 8,
-      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder."
+      "fe": "Trocaste observação e juízo. Primeiro registas o que se vê e ouve, plano, luz, som, voz; depois dizes o efeito de cada escolha, com indícios."
     },
     {
       "t": "ordenar",
-      "p": "Como se preenche o guião de visionamento, por ordem:",
+      "p": "Como comparas um momento do livro com o filme, por ordem:",
       "passos": [
         "Relê o momento nos excertos e escolhe uma citação curta",
         "Identifica a versão e localiza o excerto no ecrã",
@@ -128,23 +104,41 @@
       "f": "Passagem do romance, excerto identificado, observação, juízo fundamentado. Se não consegues localizar um indício, limita ou revê a conclusão.",
       "recycledFrom": "/pt/m5/licao-m5-f14/",
       "sourceCard": 9,
-      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder."
+      "fe": "Trocaste a ordem. Partes do livro, com uma citação curta; localizas o excerto no filme; registas plano, luz, som e voz; e só então relacionas a escolha com um efeito."
+    },
+    {
+      "p": "Como tornar útil a frase de treino _a adaptação simplifica o conflito_?",
+      "f": "A reserva precisa de ser demonstrada num exemplo reconhecível e relacionada com um critério.",
+      "legacyId": "s25-q2",
+      "recycledFrom": "/pt/m5/licao-m5-f14/",
+      "t": "escolha",
+      "o": [
+        "Indicar uma escolha e explicar o efeito.",
+        "Repetir que o livro é superior ao filme.",
+        "Juntar adjetivos sem analisar a escolha."
+      ],
+      "c": 0,
+      "fe": [
+        null,
+        "A superioridade declarada não identifica a escolha nem o seu efeito.",
+        "Mais adjetivos não substituem a análise da adaptação."
+      ]
     },
     {
       "t": "vf",
-      "p": "Uma adaptação só é boa se mostrar tudo o que está no livro.",
-      "v": false,
-      "f": "Falso: adaptar é **decidir, encurtar e mudar**; cada escolha julga-se pelo que ganha e perde.",
-      "fe": "Não: adaptar é decidir, encurtar e mudar; um filme não cabe no romance inteiro, e cada escolha julga-se pelo que ganha e perde.",
+      "p": "Uma adaptação pode ser boa mesmo deixando de fora partes do livro.",
+      "v": true,
+      "f": "Verdadeiro: adaptar é **decidir, encurtar e mudar**; cada escolha julga-se pelo que ganha e perde.",
+      "fe": "Responder «falso» é medir a adaptação pela quantidade. Um filme não cabe no romance inteiro; cada corte julga-se pelo que ganha e pelo que perde.",
       "recycledFrom": "/pt/m5/licao-m5-f14/",
       "sourceCard": 10
     },
     {
       "t": "vf",
-      "p": "No filme de Botelho, o narrador de Eça desaparece: só se ouvem as personagens.",
+      "p": "No filme de João Botelho, o narrador de Eça é substituído pelas falas das personagens.",
       "v": false,
       "f": "Falso: há narração, dita por **Jorge Vaz de Carvalho**, que retoma trechos do romance. A presença da voz é verificável; o seu efeito na ironia ou no ritmo precisa de análise.",
-      "fe": "Não desaparece: há narração em voz _off_, dita por Jorge Vaz de Carvalho, que retoma trechos do romance.",
+      "fe": "Não é substituído: há narração em voz _off_, dita por Jorge Vaz de Carvalho, que retoma trechos do romance.",
       "recycledFrom": "/pt/m5/licao-m5-f14/",
       "sourceCard": 16
     },
@@ -158,20 +152,38 @@
       "f": "**Narrador**: a adaptação retoma passagens narrativas do romance. Jorge Vaz de Carvalho dá voz à narração; o intérprete e a voz narrativa não são a mesma categoria. O efeito depende da leitura vocal, da imagem e da montagem.",
       "recycledFrom": "/pt/m5/licao-m5-f14/",
       "sourceCard": 13,
-      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder."
+      "fe": "Marcaste o autor ou a forma de dizer, não quem conta. A palavra está logo a seguir ao artigo, antes de «de Eça»."
+    },
+    {
+      "p": "Uma reserva numa apreciação crítica…",
+      "f": "Um juízo pode reconhecer qualidades e limites. O que importa é que a avaliação seja coerente e fundamentada.",
+      "legacyId": "s25-q3",
+      "recycledFrom": "/pt/m5/licao-m5-f14/",
+      "t": "escolha",
+      "o": [
+        "pode precisar uma apreciação favorável",
+        "torna sempre contraditória a apreciação",
+        "obriga sempre a rejeitar o objeto inteiro"
+      ],
+      "c": 0,
+      "fe": [
+        null,
+        "Reconhecer um limite pode tornar o juízo mais preciso.",
+        "Uma reserva parcial não obriga a rejeitar a obra por inteiro."
+      ]
     },
     {
       "t": "sublinhar",
-      "p": "Toca nas duas palavras que dizem o que julgas de cada escolha da adaptação.",
-      "frase": "Na última, diz o que a escolha ganha e o que perde.",
+      "p": "Toca nas duas palavras que dizem o que julgas em cada escolha da adaptação.",
+      "frase": "Para cada escolha da adaptação, diz o que ganha e o que perde.",
       "certas": [
-        7,
-        11
+        8,
+        12
       ],
       "f": "**Ganha** e **perde** orientam a comparação, mas não obrigam a inventar dois efeitos simétricos. Explica o que a decisão torna visível, audível ou menos saliente, com prova no excerto.",
       "recycledFrom": "/pt/m5/licao-m5-f14/",
       "sourceCard": 14,
-      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder."
+      "fe": "Marcaste a escolha ou o verbo dizer, não o que julgas. São os dois verbos opostos que fecham cada metade da frase."
     },
     {
       "t": "emparelhar",
@@ -193,11 +205,11 @@
       "f": "Estes registos dão pontos de partida. A classificação não decide o efeito: uma pausa pode ter funções diferentes. Explica o que acontece naquele excerto antes de concluir que ganha ironia ou perde ritmo.",
       "recycledFrom": "/pt/m5/licao-m5-f14/",
       "sourceCard": 15,
-      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder."
+      "fe": "Trocaste os aspetos. A voz que repete o romance liga palavra escrita e dita; o plano que dura na pausa liga duração, voz e montagem; a fachada no enquadramento é seleção visual do espaço."
     },
     {
       "t": "vf",
-      "p": "Na coluna do livro, a citação deve ser longa, para ser fiel.",
+      "p": "Ao comparar com o filme, a citação do livro deve ser longa, para ser fiel.",
       "v": false,
       "f": "Falso: uma **citação curta e contextualizada** permite localizar a comparação. Ser curta não garante rigor: identifica a passagem e explica a relação com o que se vê ou ouve.",
       "fe": "Não: pede-se uma citação curta, que localize o momento; o rigor vem de identificar a passagem e explicá-la, não do tamanho.",

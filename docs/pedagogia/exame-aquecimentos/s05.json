@@ -5,9 +5,18 @@
   "cartoes": [
     {
       "t": "ler",
+      "rot": "Abre",
+      "titulo": "Aquecer",
+      "html": "<p class=\"abre-t\"><i>Os Lusíadas</i>: celebrar e interrogar</p><p><b>Objetivo:</b> explicar o sentido de uma reflexão do Poeta.</p><p>Doze cartões, dez minutos. O texto de apoio está no cartão seguinte. A seguir, voltas à sessão para ler e escrever no caderno.</p>",
+      "recycledFrom": "/pt/exame/",
+      "adaptacao": "Cartão de abertura da sessão (02/11/2026)."
+    },
+    {
+      "t": "ler",
       "titulo": "Texto para consultar",
-      "html": "<p>Consulta o texto quando precisares de confirmar uma escolha.</p><details><summary>Abrir o texto de apoio</summary><p class=\"v\"><span class=\"ln\" data-l=\"0-0\">No mar tanta tormenta, e tanto dano,</span>\n<span class=\"ln\" data-l=\"0-1\">Tantas vezes a morte apercebida!</span>\n<span class=\"ln\" data-l=\"0-2\">Na terra tanta guerra, tanto engano,</span>\n<span class=\"ln\" data-l=\"0-3\">Tanta necessidade avorrecida!</span>\n<span class=\"ln\" data-l=\"0-4\">Onde pode acolher-se um fraco humano,</span>\n<span class=\"ln\" data-l=\"0-5\">Onde terá segura a curta vida,</span>\n<span class=\"ln\" data-l=\"0-6\">Que não se arme, e se indigne o Céu sereno</span>\n<span class=\"ln\" data-l=\"0-7\">Contra um bicho da terra tão pequeno?</span></p><p class=\"fonte\">Luís de Camões, <i>Os Lusíadas</i> (1572), I, 106.</p><p class=\"v\"><span class=\"ln\" data-l=\"1-0\">Nas naus estar se deixa vagaroso,</span>\n<span class=\"ln\" data-l=\"1-1\">Até ver o que o tempo lhe descobre:</span>\n<span class=\"ln\" data-l=\"1-2\">Que não se fia já do cobiçoso</span>\n<span class=\"ln\" data-l=\"1-3\">Regedor corrompido e pouco nobre.</span>\n<span class=\"ln\" data-l=\"1-4\">Veja agora o juízo curioso</span>\n<span class=\"ln\" data-l=\"1-5\">Quanto no rico, assim como no pobre,</span>\n<span class=\"ln\" data-l=\"1-6\">Pode o vil interesse e sede inimiga</span>\n<span class=\"ln\" data-l=\"1-7\">Do dinheiro, que a tudo nos obriga.</span></p><p class=\"v\"><span class=\"ln\" data-l=\"1-9\">A Polidoro mata o Rei Treício,</span>\n<span class=\"ln\" data-l=\"1-10\">Só por ficar senhor do grão tesouro;</span>\n<span class=\"ln\" data-l=\"1-11\">Entra, pelo fortíssimo edifício,</span>\n<span class=\"ln\" data-l=\"1-12\">Com a filha de Acriso a chuva d'ouro;</span>\n<span class=\"ln\" data-l=\"1-13\">Pode tanto em Tarpeia avaro vício,</span>\n<span class=\"ln\" data-l=\"1-14\">Que, a troco do metal luzente e louro,</span>\n<span class=\"ln\" data-l=\"1-15\">Entrega aos inimigos a alta torre,</span>\n<span class=\"ln\" data-l=\"1-16\">Do qual quase afogada em pago morre.</span></p><p class=\"v\"><span class=\"ln\" data-l=\"1-18\">Este rende munidas fortalezas,</span>\n<span class=\"ln\" data-l=\"1-19\">Faz tredores e falsos os amigos:</span>\n<span class=\"ln\" data-l=\"1-20\">Este a mais nobres faz fazer vilezas,</span>\n<span class=\"ln\" data-l=\"1-21\">E entrega Capitães aos inimigos;</span>\n<span class=\"ln\" data-l=\"1-22\">Este corrompe virginais purezas,</span>\n<span class=\"ln\" data-l=\"1-23\">Sem temer de honra ou fama alguns perigos:</span>\n<span class=\"ln\" data-l=\"1-24\">Este deprava às vezes as ciências,</span>\n<span class=\"ln\" data-l=\"1-25\">Os juízos cegando e as consciências;</span></p><p class=\"v\"><span class=\"ln\" data-l=\"1-27\">Este interpreta mais que sutilmente</span>\n<span class=\"ln\" data-l=\"1-28\">Os textos; este faz e desfaz leis;</span>\n<span class=\"ln\" data-l=\"1-29\">Este causa os perjúrios entre a gente,</span>\n<span class=\"ln\" data-l=\"1-30\">E mil vezes tiranos torna os Reis.</span>\n<span class=\"ln\" data-l=\"1-31\">Até os que só a Deus Onipotente</span>\n<span class=\"ln\" data-l=\"1-32\">Se dedicam, mil vezes ouvireis</span>\n<span class=\"ln\" data-l=\"1-33\">Que corrompe este encantador, e ilude;</span>\n<span class=\"ln\" data-l=\"1-34\">Mas não sem cor, contudo, de virtude.</span></p><p class=\"fonte\">Luís de Camões, <i>Os Lusíadas</i> (1572), VIII, 96 a 99.</p><p class=\"fonte\"><a href=\"../../../m3/licao-m3-f13/\">Texto e fontes na lição de origem</a></p></details>",
-      "recycledFrom": "/pt/m3/licao-m3-f13/"
+      "html": "<p>Consulta o texto quando precisares de confirmar uma escolha.</p><details><summary>Abrir o texto de apoio</summary><p class=\"v\"><span class=\"ln\" data-l=\"0-0\">No mar tanta tormenta, e tanto dano,</span>\n<span class=\"ln\" data-l=\"0-1\">Tantas vezes a morte apercebida!</span>\n<span class=\"ln\" data-l=\"0-2\">Na terra tanta guerra, tanto engano,</span>\n<span class=\"ln\" data-l=\"0-3\">Tanta necessidade avorrecida!</span>\n<span class=\"ln\" data-l=\"0-4\">Onde pode acolher-se um fraco humano,</span>\n<span class=\"ln\" data-l=\"0-5\">Onde terá segura a curta vida,</span>\n<span class=\"ln\" data-l=\"0-6\">Que não se arme, e se indigne o Céu sereno</span>\n<span class=\"ln\" data-l=\"0-7\">Contra um bicho da terra tão pequeno?</span></p><p class=\"fonte\">Luís de Camões, <i>Os Lusíadas</i> (1572), I, 106.</p><p class=\"v\"><span class=\"ln\" data-l=\"1-0\">Nas naus estar se deixa vagaroso,</span>\n<span class=\"ln\" data-l=\"1-1\">Até ver o que o tempo lhe descobre:</span>\n<span class=\"ln\" data-l=\"1-2\">Que não se fia já do cobiçoso</span>\n<span class=\"ln\" data-l=\"1-3\">Regedor corrompido e pouco nobre.</span>\n<span class=\"ln\" data-l=\"1-4\">Veja agora o juízo curioso</span>\n<span class=\"ln\" data-l=\"1-5\">Quanto no rico, assim como no pobre,</span>\n<span class=\"ln\" data-l=\"1-6\">Pode o vil interesse e sede inimiga</span>\n<span class=\"ln\" data-l=\"1-7\">Do dinheiro, que a tudo nos obriga.</span></p><p class=\"v\"><span class=\"ln\" data-l=\"1-9\">A Polidoro mata o Rei Treício,</span>\n<span class=\"ln\" data-l=\"1-10\">Só por ficar senhor do grão tesouro;</span>\n<span class=\"ln\" data-l=\"1-11\">Entra, pelo fortíssimo edifício,</span>\n<span class=\"ln\" data-l=\"1-12\">Com a filha de Acriso a chuva d'ouro;</span>\n<span class=\"ln\" data-l=\"1-13\">Pode tanto em Tarpeia avaro vício,</span>\n<span class=\"ln\" data-l=\"1-14\">Que, a troco do metal luzente e louro,</span>\n<span class=\"ln\" data-l=\"1-15\">Entrega aos inimigos a alta torre,</span>\n<span class=\"ln\" data-l=\"1-16\">Do qual quase afogada em pago morre.</span></p><p class=\"v\"><span class=\"ln\" data-l=\"1-18\">Este rende munidas fortalezas,</span>\n<span class=\"ln\" data-l=\"1-19\">Faz tredores e falsos os amigos:</span>\n<span class=\"ln\" data-l=\"1-20\">Este a mais nobres faz fazer vilezas,</span>\n<span class=\"ln\" data-l=\"1-21\">E entrega Capitães aos inimigos;</span>\n<span class=\"ln\" data-l=\"1-22\">Este corrompe virginais purezas,</span>\n<span class=\"ln\" data-l=\"1-23\">Sem temer de honra ou fama alguns perigos:</span>\n<span class=\"ln\" data-l=\"1-24\">Este deprava às vezes as ciências,</span>\n<span class=\"ln\" data-l=\"1-25\">Os juízos cegando e as consciências;</span></p><p class=\"v\"><span class=\"ln\" data-l=\"1-27\">Este interpreta mais que sutilmente</span>\n<span class=\"ln\" data-l=\"1-28\">Os textos; este faz e desfaz leis;</span>\n<span class=\"ln\" data-l=\"1-29\">Este causa os perjúrios entre a gente,</span>\n<span class=\"ln\" data-l=\"1-30\">E mil vezes tiranos torna os Reis.</span>\n<span class=\"ln\" data-l=\"1-31\">Até os que só a Deus Omnipotente</span>\n<span class=\"ln\" data-l=\"1-32\">Se dedicam, mil vezes ouvireis</span>\n<span class=\"ln\" data-l=\"1-33\">Que corrompe este encantador, e ilude;</span>\n<span class=\"ln\" data-l=\"1-34\">Mas não sem cor, contudo, de virtude.</span></p><p class=\"fonte\">Luís de Camões, <i>Os Lusíadas</i> (1572), VIII, 96 a 99.</p><p class=\"fonte\"><a href=\"../../../m3/licao-m3-f13/\" target=\"_blank\" rel=\"noopener\">Texto e fontes na lição de origem</a></p></details>",
+      "recycledFrom": "/pt/m3/licao-m3-f13/",
+      "rot": "Texto de apoio"
     },
     {
       "p": "«No mar tanta tormenta» e «Na terra tanta guerra»: que recurso opõe os dois versos?",
@@ -17,50 +26,14 @@
       "t": "escolha",
       "o": [
         "A antítese entre mar e terra.",
-        "A metáfora entre céu e bicho.",
+        "A metáfora entre o céu e o bicho.",
         "A apóstrofe dirigida ao mar."
       ],
       "c": 0,
       "fe": [
         null,
-        "Bicho pertence a outra imagem da estância.",
+        "«Bicho» pertence a outra imagem da estância.",
         "Estes versos não se dirigem ao mar como interlocutor."
-      ]
-    },
-    {
-      "p": "«Onde pode acolher-se um fraco humano, / Onde terá segura a curta vida»: que tipo de frase é?",
-      "f": "Interrogação retórica: pergunta que não espera resposta.",
-      "legacyId": "s05-q2",
-      "recycledFrom": "/pt/m3/licao-m3-f13/",
-      "t": "escolha",
-      "o": [
-        "Uma interrogação retórica.",
-        "Uma enumeração de perigos.",
-        "Uma comparação com o mar."
-      ],
-      "c": 0,
-      "fe": [
-        null,
-        "A repetição de onde organiza perguntas, não apenas uma lista.",
-        "A frase interroga a possibilidade de abrigo, sem comparar mar e terra."
-      ]
-    },
-    {
-      "p": "«Do dinheiro, que a tudo nos obriga»: o que diz o verso do dinheiro?",
-      "f": "A tudo, no rico como no pobre: a «sede inimiga» do dinheiro obriga toda a gente.",
-      "legacyId": "s05-q3",
-      "recycledFrom": "/pt/m3/licao-m3-f13/",
-      "t": "escolha",
-      "o": [
-        "Que obriga toda a gente a tudo.",
-        "Que obriga apenas os pobres a tudo.",
-        "Que liberta de tudo quem o possui."
-      ],
-      "c": 0,
-      "fe": [
-        null,
-        "A tudo não restringe a obrigação aos pobres.",
-        "Libertar é o contrário do que afirma obriga."
       ]
     },
     {
@@ -73,10 +46,9 @@
         "Tanta necessidade avorrecida!"
       ],
       "f": "Mar com tormenta e dano, morte à espreita, terra com guerra e engano, necessidade detestável.",
-      "cita": "No mar tanta tormenta, e tanto dano,",
       "recycledFrom": "/pt/m3/licao-m3-f13/",
       "sourceCard": 4,
-      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder."
+      "fe": "Trocaste a ordem dos espaços. A estância começa no mar («tormenta», «dano») e só depois passa à terra («guerra», «engano»); cada espaço tem dois versos."
     },
     {
       "t": "sublinhar",
@@ -89,7 +61,7 @@
       "cita": "Que não se arme, e se indigne o Céu sereno",
       "recycledFrom": "/pt/m3/licao-m3-f13/",
       "sourceCard": 8,
-      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder."
+      "fe": "Marcaste um verbo ou um nome, não o adjetivo. Pergunta como é o Céu antes de se armar: a palavra que o descreve vem logo depois de «Céu»."
     },
     {
       "t": "completar",
@@ -99,31 +71,52 @@
         {
           "o": [
             "naus",
-            "ruas"
+            "ruas",
+            "cais"
           ],
           "c": 0,
           "fe": [
             null,
-            "Nesta lacuna, ruas não corresponde à relação pedida."
+            "O Gama não anda pelas ruas de Calecute: «Nas naus estar se deixa vagaroso», à espera do que o tempo descobre.",
+            "Não fica no cais: fica a bordo, «Nas naus», porque não se fia do Regedor."
           ]
         },
         {
           "o": [
             "Regedor",
-            "Capitão"
+            "Capitão",
+            "Samorim"
           ],
           "c": 0,
           "fe": [
             null,
-            "Nesta lacuna, Capitão não corresponde à relação pedida."
+            "O Capitão é o próprio Gama; quem lhe merece desconfiança é o «Regedor corrompido e pouco nobre».",
+            "O Samorim é o rei de Calecute; a desconfiança vai para o «Regedor», o Catual que pede subornos."
           ]
         }
       ],
       "f": "Fica nas **naus**, vagaroso, porque não se fia do **Regedor**, o Catual que exige subornos.",
-      "cita": "Nas naus estar se deixa vagaroso,",
       "recycledFrom": "/pt/m3/licao-m3-f13/",
       "sourceCard": 10,
-      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder."
+      "fe": "Trocaste o lugar ou a pessoa. Relê VIII, 96: o Gama «Nas naus estar se deixa» porque «não se fia já do cobiçoso / Regedor»."
+    },
+    {
+      "p": "«Onde pode acolher-se um fraco humano, / Onde terá segura a curta vida»: que tipo de frase é?",
+      "f": "Interrogação retórica: pergunta que não espera resposta.",
+      "legacyId": "s05-q2",
+      "recycledFrom": "/pt/m3/licao-m3-f13/",
+      "t": "escolha",
+      "o": [
+        "Uma interrogação retórica.",
+        "Uma enumeração dos perigos.",
+        "Uma comparação com o mar."
+      ],
+      "c": 0,
+      "fe": [
+        null,
+        "A repetição de «onde» organiza perguntas, não apenas uma lista.",
+        "A frase interroga a possibilidade de abrigo, sem comparar mar e terra."
+      ]
     },
     {
       "t": "sublinhar",
@@ -137,7 +130,7 @@
       "cita": "Veja agora o juízo curioso",
       "recycledFrom": "/pt/m3/licao-m3-f13/",
       "sourceCard": 11,
-      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder."
+      "fe": "Marcaste o que o leitor deve fazer, não o nome que lhe dá. O Poeta chama ao leitor atento um nome e um adjetivo, logo a seguir ao artigo."
     },
     {
       "t": "completar",
@@ -147,20 +140,21 @@
         {
           "o": [
             "vence muralhas e compra amigos",
-            "constrói fortalezas e faz amigos"
+            "constrói fortalezas e faz amigos",
+            "defende fortalezas e une amigos"
           ],
           "c": 0,
           "fe": [
             null,
-            "Nesta lacuna, constrói fortalezas e faz amigos não corresponde à relação pedida."
+            "Não constrói nada: «rende» quer dizer que as fortalezas se entregam, e os amigos ficam «tredores».",
+            "É o contrário: as fortalezas «rendem-se» e os amigos tornam-se «tredores e falsos»."
           ]
         }
       ],
       "f": "Fortalezas **munidas**, fortificadas, rendem-se, e os amigos ficam **tredores**, traidores: nem muralhas nem amigos resistem.",
-      "cita": "Este rende munidas fortalezas,",
       "recycledFrom": "/pt/m3/licao-m3-f13/",
       "sourceCard": 16,
-      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder."
+      "fe": "Leste «rende» e «faz» no sentido de hoje. Aqui, as fortalezas «munidas» rendem-se ao dinheiro, e os amigos ficam «tredores», isto é, traidores."
     },
     {
       "t": "versos",
@@ -172,10 +166,27 @@
         "Os juízos cegando e as consciências;"
       ],
       "f": "Purezas corrompidas, sem temer a honra, ciências depravadas, juízos e consciências cegos.",
-      "cita": "Este corrompe virginais purezas,",
       "recycledFrom": "/pt/m3/licao-m3-f13/",
       "sourceCard": 17,
-      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder."
+      "fe": "Trocaste a ordem das anáforas. Cada «Este» abre um par de versos: primeiro as «purezas» e a honra, depois as «ciências» e as «consciências»."
+    },
+    {
+      "p": "«Do dinheiro, que a tudo nos obriga»: o que diz o verso do dinheiro?",
+      "f": "_A tudo_, no rico como no pobre: a «sede inimiga» do dinheiro obriga toda a gente.",
+      "legacyId": "s05-q3",
+      "recycledFrom": "/pt/m3/licao-m3-f13/",
+      "t": "escolha",
+      "o": [
+        "Que obriga toda a gente a tudo.",
+        "Que obriga apenas os pobres a tudo.",
+        "Que liberta de tudo quem o possui."
+      ],
+      "c": 0,
+      "fe": [
+        null,
+        "«A tudo» não restringe a obrigação aos pobres.",
+        "O verso diz que o dinheiro «obriga», o contrário de libertar."
+      ]
     },
     {
       "t": "vf",
@@ -189,7 +200,7 @@
     },
     {
       "t": "emparelhar",
-      "p": "Liga cada verso ou recurso à reflexão certa.",
+      "p": "Liga cada verso ou contexto à reflexão a que pertence.",
       "pares": [
         [
           "«Contra um bicho da terra tão pequeno?»",
@@ -208,17 +219,17 @@
           "Canto I, 106"
         ]
       ],
-      "f": "No canto I, o homem pequeno diante do Céu; no canto VIII, o dinheiro «com cor de virtude».",
+      "f": "No canto I, o homem pequeno diante do Céu; no canto VIII, o dinheiro que corrompe «não sem cor, contudo, de virtude».",
       "recycledFrom": "/pt/m3/licao-m3-f13/",
       "sourceCard": 22,
-      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder."
+      "fe": "Trocaste os cantos. Pergunta a cada verso se fala do homem pequeno e da vida curta, no fim do canto I, ou do dinheiro que corrompe, no fim do canto VIII."
     },
     {
       "t": "vf",
-      "p": "As reflexões do Poeta aparecem normalmente no início dos cantos.",
-      "v": false,
-      "f": "Falso: aparecem normalmente **no fim dos cantos**, como I, 106, que fecha o canto I.",
-      "fe": "Procura onde estão as reflexões que leste: I, 106 fecha o canto I; VIII, 96 a 99 fecham o canto VIII.",
+      "p": "As reflexões do Poeta aparecem normalmente no fim dos cantos.",
+      "v": true,
+      "f": "Verdadeiro: aparecem normalmente **no fim dos cantos**, como I, 106, que fecha o canto I.",
+      "fe": "Responder «falso» é esquecer onde estão as reflexões que leste: I, 106 fecha o canto I; VIII, 96 a 99 fecham o canto VIII.",
       "recycledFrom": "/pt/m3/licao-m3-f13/",
       "sourceCard": 25
     }

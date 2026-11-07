@@ -5,13 +5,22 @@
   "cartoes": [
     {
       "t": "ler",
+      "rot": "Abre",
+      "titulo": "Aquecer",
+      "html": "<p class=\"abre-t\">Ler informação e escrever uma síntese</p><p><b>Objetivo:</b> selecionar, hierarquizar e reformular informação.</p><p>Doze cartões, dez minutos. O texto de apoio está no cartão seguinte. A seguir, voltas à sessão para ler e escrever no caderno.</p>",
+      "recycledFrom": "/pt/exame/",
+      "adaptacao": "Cartão de abertura da sessão (02/11/2026)."
+    },
+    {
+      "t": "ler",
       "titulo": "Texto para consultar",
       "html": "<p>Consulta o texto quando precisares de confirmar uma escolha.</p><details><summary>Abrir o texto de apoio</summary><p>A consulta digital permite encontrar documentos com rapidez e aproximar leitores de obras que antes estavam longe. Contudo, a abundância de resultados cria também dificuldades de seleção. Uma lista extensa pode repetir a mesma origem ou misturar informação verificada e interpretação. A biblioteca ajuda a organizar esse universo: identifica fontes, oferece critérios e apoia quem procura. Estudar exige, por isso, comparar documentos e perceber as relações entre as ideias. Copiar fragmentos para uma pasta não equivale a compreender. A rapidez de acesso é uma vantagem quando é acompanhada pelo tempo necessário para ler, interrogar e reformular. O objetivo não é acumular resultados, mas construir conhecimento que possa ser explicado e usado com responsabilidade.</p><p class=\"fonte\">Texto e proposta produzidos para este treino.</p></details>",
       "recycledFrom": "/pt/exame/",
-      "sourceSession": "s20"
+      "sourceSession": "s20",
+      "rot": "Texto de apoio"
     },
     {
-      "p": "Qual deve ser preservado numa síntese?",
+      "p": "O que deve uma síntese preservar?",
       "f": "A síntese mantém a informação essencial e as relações que a organizam; não acrescenta uma avaliação pessoal.",
       "legacyId": "s20-q1",
       "recycledFrom": "/pt/m9/licao-m9-f07/",
@@ -26,42 +35,6 @@
         null,
         "Exemplos secundários podem sair; a organização das ideias não.",
         "Uma síntese não substitui a posição do texto pela tua opinião."
-      ]
-    },
-    {
-      "p": "Qual destas operações é reformulação?",
-      "f": "Reformular exige compreender a ideia e construir outra expressão para o mesmo sentido, sem disfarçar cópia.",
-      "legacyId": "s20-q2",
-      "recycledFrom": "/pt/m9/licao-m9-f07/",
-      "t": "escolha",
-      "o": [
-        "Dizer a ideia de outro modo, sem a alterar.",
-        "Copiar a mesma ideia sem indicar de quem ela é.",
-        "Trocar uma palavra, copiando todo o resto."
-      ],
-      "c": 0,
-      "fe": [
-        null,
-        "Retirar a autoria de uma cópia não a transforma numa reformulação.",
-        "Trocar uma palavra pode deixar toda a estrutura copiada."
-      ]
-    },
-    {
-      "p": "No texto de apoio, que relação se estabelece entre rapidez e estudo?",
-      "f": "A ideia é uma condição, não uma rejeição do acesso digital: a vantagem precisa de ser acompanhada por leitura crítica.",
-      "legacyId": "s20-q3",
-      "recycledFrom": "/pt/m9/licao-m9-f07/",
-      "t": "escolha",
-      "o": [
-        "Ajuda, mas não substitui a compreensão.",
-        "Dispensa compreender o que se encontra.",
-        "Impede sempre compreender o que se lê."
-      ],
-      "c": 0,
-      "fe": [
-        null,
-        "Encontrar rapidamente não dispensa compreender.",
-        "O texto reconhece utilidade à rapidez; não a apresenta como impedimento absoluto."
       ]
     },
     {
@@ -82,23 +55,23 @@
         ]
       ],
       "f": "Selecionar não é copiar tudo; reformular não é alterar o sentido. Verifica também como as ideias se ligam.",
-      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder.",
+      "fe": "Trocaste as operações. Selecionar é encontrar a ideia que organiza; reformular é dizê-la por outras palavras; manter a organização é conservar a relação entre as ideias.",
       "recycledFrom": "/pt/m4/licao-m4-f27/",
       "sourceCard": 13,
       "adaptacao": "Operação da lição aplicada a um recorte ou exemplo indicado no cartão."
     },
     {
       "t": "sublinhar",
-      "p": "No exemplo criado para este treino, toca na palavra que impede tratar a relação como causa.",
-      "frase": "A consulta é rápida, mas compreender exige relacionar ideias.",
+      "p": "No texto de apoio, toca na palavra que põe uma condição à vantagem da rapidez.",
+      "frase": "A rapidez de acesso é uma vantagem quando é acompanhada pelo tempo necessário para ler, interrogar e reformular.",
       "certas": [
-        4
+        7
       ],
-      "f": "Mas opõe a rapidez à exigência de compreender. Uma síntese que o trocasse por porque alteraria a relação entre as ideias.",
-      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder.",
+      "f": "**Quando** limita a vantagem: a rapidez só ajuda se vier com tempo para ler, interrogar e reformular. Uma síntese que dissesse «a rapidez é uma vantagem» apagava a condição.",
+      "fe": "Marcaste a vantagem ou o que a acompanha, não a palavra que a condiciona. Procura o conector que abre a segunda parte da frase.",
       "recycledFrom": "/pt/m7/licao-m7-f07/",
       "sourceCard": 4,
-      "adaptacao": "Operação da lição aplicada a um recorte ou exemplo indicado no cartão."
+      "adaptacao": "Cartão novo sobre o texto de apoio da sessão (02/11/2026)."
     },
     {
       "t": "completar",
@@ -108,31 +81,53 @@
         {
           "o": [
             "palavras",
-            "citações"
+            "citações",
+            "opiniões"
           ],
           "c": 0,
           "fe": [
             null,
-            "Nesta lacuna, citações não corresponde à relação pedida."
+            "Numa reformulação não se trocam citações: mudam as palavras de quem reformula, e o sentido fica.",
+            "Reformular não muda opiniões: muda a forma de dizer, e a ideia fica a mesma."
           ]
         },
         {
           "o": [
             "sentido",
-            "tamanho"
+            "tamanho",
+            "discurso"
           ],
           "c": 0,
           "fe": [
             null,
-            "Nesta lacuna, tamanho não corresponde à relação pedida."
+            "Conservar o número de palavras não garante que a ideia se mantenha; o que se conserva é o sentido.",
+            "Conservar o discurso seria repetir a passagem; reformular muda a expressão e conserva o sentido."
           ]
         }
       ],
       "f": "Reformular altera a expressão, não o sentido. Conservar o número de palavras não garante que a ideia se mantenha.",
-      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder.",
+      "fe": "Trocaste o que muda e o que fica. Na reformulação mudam as palavras; o sentido da passagem tem de ser o mesmo.",
       "recycledFrom": "/pt/m4/licao-m4-f27/",
       "sourceCard": 13,
       "adaptacao": "Operação da lição aplicada a um recorte ou exemplo indicado no cartão."
+    },
+    {
+      "p": "Qual destas operações é reformulação?",
+      "f": "Reformular exige compreender a ideia e construir outra expressão para o mesmo sentido, sem disfarçar cópia.",
+      "legacyId": "s20-q2",
+      "recycledFrom": "/pt/m9/licao-m9-f07/",
+      "t": "escolha",
+      "o": [
+        "Dizer a ideia de outro modo, sem a alterar.",
+        "Copiar a mesma ideia sem indicar de quem ela é.",
+        "Trocar uma palavra, copiando todo o resto."
+      ],
+      "c": 0,
+      "fe": [
+        null,
+        "Retirar a autoria de uma cópia não a transforma numa reformulação.",
+        "Trocar uma palavra pode deixar toda a estrutura copiada."
+      ]
     },
     {
       "t": "ordenar",
@@ -144,7 +139,7 @@
         "Reformular e confrontar com o original"
       ],
       "f": "Não comeces por cortar frases ao acaso. Lê o conjunto, seleciona e verifica se a versão breve conserva as relações.",
-      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder.",
+      "fe": "Começaste a cortar antes de ler o conjunto. Lês o texto inteiro, separas ideias centrais de exemplos, registas como se ligam e só depois reformulas e confrontas com o original.",
       "recycledFrom": "/pt/m9/licao-m9-f07/",
       "sourceCard": 15,
       "adaptacao": "Operação da lição aplicada a um recorte ou exemplo indicado no cartão."
@@ -153,8 +148,8 @@
       "t": "vf",
       "p": "Uma citação correta pode ser insuficiente para explicar uma ideia.",
       "v": true,
-      "f": "A lição distingue ideia, prova e explicação. Repara se a resposta apenas transcreve ou se mostra como a passagem apoia a ideia.",
-      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder.",
+      "f": "Uma resposta precisa de ideia, prova e explicação. Repara se a resposta apenas transcreve ou se mostra como a passagem apoia a ideia.",
+      "fe": "Responder «falso» é tomar a citação pela explicação. Uma citação correta prova que a passagem existe; falta mostrar como apoia a ideia.",
       "recycledFrom": "/pt/m4/licao-m4-f27/",
       "sourceCard": 11,
       "adaptacao": "Operação da lição aplicada a um recorte ou exemplo indicado no cartão."
@@ -177,30 +172,48 @@
         ]
       ],
       "f": "O verbo do pedido orienta a resposta. Dar um nome não substitui explicar a ligação entre a prova e a ideia.",
-      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder.",
+      "fe": "Trocaste os verbos. Dar o nome é identificar; mostrar como um indício apoia uma ideia é fundamentar; relacionar textos por um critério é comparar.",
       "recycledFrom": "/pt/m4/licao-m4-f27/",
       "sourceCard": 14,
       "adaptacao": "Operação da lição aplicada a um recorte ou exemplo indicado no cartão."
     },
     {
-      "t": "sublinhar",
-      "p": "No exemplo imaginário, toca na palavra que limita o alcance da afirmação.",
-      "frase": "Alguns leitores confundem rapidez de consulta com compreensão.",
-      "certas": [
-        0
+      "p": "No texto de apoio, que relação se estabelece entre rapidez e estudo?",
+      "f": "A ideia é uma condição, não uma rejeição do acesso digital: a vantagem precisa de ser acompanhada por leitura crítica.",
+      "legacyId": "s20-q3",
+      "recycledFrom": "/pt/m9/licao-m9-f07/",
+      "t": "escolha",
+      "o": [
+        "Ajuda, mas não substitui a compreensão.",
+        "Dispensa compreender tudo o que se encontra.",
+        "Impede sempre compreender o que se lê."
       ],
-      "f": "Alguns limita o conjunto. Uma síntese que dissesse todos acrescentaria uma generalização que a frase não autoriza.",
-      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder.",
+      "c": 0,
+      "fe": [
+        null,
+        "Encontrar rapidamente não dispensa compreender.",
+        "O texto reconhece utilidade à rapidez; não a apresenta como impedimento absoluto."
+      ]
+    },
+    {
+      "t": "sublinhar",
+      "p": "No texto de apoio, toca na palavra que impede ler esta frase como uma regra para todas as listas.",
+      "frase": "Uma lista extensa pode repetir a mesma origem ou misturar informação verificada e interpretação.",
+      "certas": [
+        3
+      ],
+      "f": "**Pode** limita o alcance: uma lista extensa às vezes repete a origem, não sempre. Uma síntese que escrevesse «repete» transformava uma possibilidade numa regra.",
+      "fe": "Marcaste o que a lista faz, não a palavra que o torna só possível. Procura o verbo que vem antes de «repetir».",
       "recycledFrom": "/pt/m2/licao-m2-f08/",
       "sourceCard": 7,
-      "adaptacao": "Operação da lição aplicada a um recorte ou exemplo indicado no cartão."
+      "adaptacao": "Cartão novo sobre o texto de apoio da sessão (02/11/2026)."
     },
     {
       "t": "vf",
-      "p": "Um exemplo secundário deve ocupar sempre tanto espaço como a ideia central numa síntese.",
-      "v": false,
-      "f": "A seleção depende da função de cada informação. Repara no que organiza o texto e no que apenas ilustra essa ideia.",
-      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder.",
+      "p": "Numa síntese, um exemplo secundário pode ocupar menos espaço do que a ideia central, ou até sair.",
+      "v": true,
+      "f": "Verdadeiro: a seleção depende da função de cada informação. Repara no que organiza o texto e no que apenas ilustra essa ideia.",
+      "fe": "Responder «falso» é dar a todos os elementos o mesmo peso. Numa síntese, um exemplo secundário pode encolher ou sair; a ideia central não.",
       "recycledFrom": "/pt/m9/licao-m9-f07/",
       "sourceCard": 15,
       "adaptacao": "Operação da lição aplicada a um recorte ou exemplo indicado no cartão."
@@ -215,7 +228,7 @@
         "Retirar repetições dispensáveis"
       ],
       "f": "Revê o sentido antes do tamanho. Alterar um quantificador ou um conector pode mudar a ideia mesmo numa frase curta.",
-      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder.",
+      "fe": "Começaste pela forma. Revês primeiro o sentido, confrontando com o original; depois o alcance das afirmações, os conectores e os referentes; as repetições ficam para o fim.",
       "recycledFrom": "/pt/m2/licao-m2-f08/",
       "sourceCard": 18,
       "adaptacao": "Operação da lição aplicada a um recorte ou exemplo indicado no cartão."

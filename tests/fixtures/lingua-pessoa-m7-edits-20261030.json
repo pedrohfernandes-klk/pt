@@ -1,10 +1,10 @@
 {
- "base_commit": "5bf8b757bb80f4b8b0ce72aba2c48dca813b9c61",
- "_nota": "30/10/2026: perguntas em português europeu («Qual das…», «Que…», nunca «Qual» seguido de nome; pedido do docente), M7-F13 com os versos 12 e 14 como na Athena, n.º 3, 1924, em grafia atualizada («p'ra», «'stá»; decisão 4b; o verso 20 mantém «Ó canção» com maiúscula, por decisão do docente de 30/10), M7-U2 com aquecimento fixo de 10 minutos (decisão 3a) e pesos do M7 no mapa (U3 a 25 %, prova escrita a 30 %; decisões 3b e 3c). Gerado por scripts/aplicar_trocas.py a partir de scripts/lingua_pessoa_m7_20261030.json: não se edita à mão. Só texto: ordem, tipos, chaves e respostas certas dos cartões ficam iguais. É a camada mais recente: desfaz-se antes da das opções denunciadoras. 01/11/2026: duração das sessões de exame atualizada para 50 minutos (decisão 106); trocas, ocorrências e restantes ficheiros preservados.",
+ "base_commit": "f648b22dd4f0a9a852fa2299cfa1e353e401dc94",
+ "_nota": "30/10/2026: perguntas em português europeu («Qual das…», «Que…», nunca «Qual» seguido de nome; pedido do docente), M7-F13 com os versos 12 e 14 como na Athena, n.º 3, 1924, em grafia atualizada («p'ra», «'stá»; decisão 4b; o verso 20 mantém «Ó canção» com maiúscula, por decisão do docente de 30/10), M7-U2 com aquecimento fixo de 10 minutos (decisão 3a) e pesos do M7 no mapa (U3 a 25 %, prova escrita a 30 %; decisões 3b e 3c). Gerado por scripts/aplicar_trocas.py a partir de scripts/lingua_pessoa_m7_20261030.json: não se edita à mão. Só texto: ordem, tipos, chaves e respostas certas dos cartões ficam iguais. É a camada mais recente: desfaz-se antes da das opções denunciadoras. 01/11/2026: duração das sessões de exame atualizada para 50 minutos (decisão 106); trocas, ocorrências e restantes ficheiros preservados; só os resumos dos ficheiros do exame que o pedido pt #155 muda foram refeitos (07/11/2026: sobre a fusão com o main), sem mudar o base_commit do manifesto, que continua a ser o das bases dos outros ficheiros.",
  "files": {
   "assets/exame/sessoes.json": {
-   "base_sha256_lf": "77a341fcac47a13802e070df06601ea07dcc5532312ba5114fd1ccca70f43806",
-   "after_sha256_lf": "222bc9cd3ce1ada407aeced15df41930c114736cda86dde4884993647ff6637c",
+   "base_sha256_lf": "d915a39495f9db556328b16299838974ddc4cc09d1447d96474e8c321a547347",
+   "after_sha256_lf": "80b199771690ecfced67302ed46af88f70c2bcc0eb1c8f17f2eabfc0365d1ace",
    "edits": [
     {
      "location": "«Qual + nome» (pedido do docente de 30/10/2026",

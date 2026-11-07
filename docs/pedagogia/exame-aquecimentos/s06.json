@@ -5,9 +5,18 @@
   "cartoes": [
     {
       "t": "ler",
+      "rot": "Abre",
+      "titulo": "Aquecer",
+      "html": "<p class=\"abre-t\">Vieira: os peixes são o argumento</p><p><b>Objetivo:</b> explicar a crítica e a estratégia de persuasão.</p><p>Doze cartões, dez minutos. O texto de apoio está no cartão seguinte. A seguir, voltas à sessão para ler e escrever no caderno.</p>",
+      "recycledFrom": "/pt/exame/",
+      "adaptacao": "Cartão de abertura da sessão (02/11/2026)."
+    },
+    {
+      "t": "ler",
       "titulo": "Texto para consultar",
-      "html": "<p>Consulta o texto quando precisares de confirmar uma escolha.</p><details><summary>Abrir o texto de apoio</summary><p class=\"pr\" data-l=\"0-0\"><b>[1]</b> Ou é porque o sal não salga, e os pregadores não pregam a verdadeira doutrina; ou porque a terra se não deixa salgar, e os ouvintes, sendo verdadeira a doutrina que lhes dão, a não querem receber.</p><p class=\"pr\" data-l=\"0-1\"><b>[2]</b> Enfim, que havemos de pregar hoje aos peixes? Nunca pior auditório. Ao menos têm os peixes duas boas qualidades de ouvintes: ouvem e não falam.</p><p class=\"pr\" data-l=\"0-2\"><b>[3]</b> Uma é louvar o bem, outra repreender o mal: louvar o bem para o conservar e repreender o mal para preservar dele.</p><p class=\"fonte\">Vieira, <i>Sermão de Santo António</i> (1654), caps. I e II, ortografia atualizada.</p><p class=\"pr\" data-l=\"1-0\"><b>[1]</b> É possível que, sendo vós uns peixinhos tão pequenos, haveis de ser as roncas do mar?</p><p class=\"pr\" data-l=\"1-1\"><b>[2]</b> Pegadores chamam-se estes de que agora falo, e com grande propriedade, porque, sendo pequenos, não só se chegam a outros maiores, mas de tal sorte se lhes pegam aos costados, que nunca os desferram. […] e assim lhes sustenta o peso e mais a fome.</p><p class=\"pr\" data-l=\"1-2\"><b>[3]</b> Dizei-me, voadores, não vos fez Deus peixes? Pois porque vos quereis ser aves? […] ao voador mata-o a vaidade de voar, e a sua isca é o vento.</p><p class=\"fonte\">Vieira, <i>Sermão de Santo António</i> (1654), cap. V, ortografia atualizada.</p><p class=\"pr\" data-l=\"2-0\"><b>[4]</b> O polvo, com aquele seu capelo na cabeça, parece um monge; com aqueles seus raios estendidos, parece uma estrela; como não tem osso nem espinha, parece a mesma brandura, a mesma mansidão. […] o outro peixe, inocente da traição, vai passando desacautelado, e o salteador, que está de emboscada dentro do seu próprio engano, lança-lhe os braços de repente, e fá-lo prisioneiro.</p><p class=\"fonte\">Vieira, <i>Sermão de Santo António</i> (1654), cap. V, ortografia atualizada.</p><p class=\"fonte\"><a href=\"../../../m4/licao-m4-f25/\">Texto e fontes na lição de origem</a></p></details>",
-      "recycledFrom": "/pt/m4/licao-m4-f25/"
+      "html": "<p>Consulta o texto quando precisares de confirmar uma escolha.</p><details><summary>Abrir o texto de apoio</summary><p class=\"pr\" data-l=\"0-0\"><b>[1]</b> Ou é porque o sal não salga, e os pregadores não pregam a verdadeira doutrina; ou porque a terra se não deixa salgar, e os ouvintes, sendo verdadeira a doutrina que lhes dão, a não querem receber.</p><p class=\"pr\" data-l=\"0-1\"><b>[2]</b> Enfim, que havemos de pregar hoje aos peixes? Nunca pior auditório. Ao menos têm os peixes duas boas qualidades de ouvintes: ouvem e não falam.</p><p class=\"fonte\">Vieira, <i>Sermão de Santo António</i> (1654), caps. I e II, ortografia atualizada.</p><p class=\"pr\" data-l=\"1-0\"><b>[1]</b> É possível que, sendo vós uns peixinhos tão pequenos, haveis de ser as roncas do mar?</p><p class=\"pr\" data-l=\"1-2\"><b>[3]</b> Dizei-me, voadores, não vos fez Deus peixes? Pois porque vos quereis ser aves? […] ao voador mata-o a vaidade de voar, e a sua isca é o vento.</p><p class=\"fonte\">Vieira, <i>Sermão de Santo António</i> (1654), cap. V, ortografia atualizada.</p><p class=\"pr\" data-l=\"2-0\"><b>[4]</b> O polvo, com aquele seu capelo na cabeça, parece um monge; com aqueles seus raios estendidos, parece uma estrela; como não tem osso nem espinha, parece a mesma brandura, a mesma mansidão. […] o outro peixe, inocente da traição, vai passando desacautelado, e o salteador, que está de emboscada dentro do seu próprio engano, lança-lhe os braços de repente, e fá-lo prisioneiro.</p><p class=\"fonte\">Vieira, <i>Sermão de Santo António</i> (1654), cap. V, ortografia atualizada.</p><p class=\"fonte\"><a href=\"../../../m4/licao-m4-f25/\" target=\"_blank\" rel=\"noopener\">Texto e fontes na lição de origem</a></p></details>",
+      "recycledFrom": "/pt/m4/licao-m4-f25/",
+      "rot": "Texto de apoio"
     },
     {
       "p": "Na alegoria do sal, quem pode falhar?",
@@ -23,35 +32,8 @@
       "c": 0,
       "fe": [
         null,
-        "A primeira alternativa do sermão responsabiliza quem prega.",
-        "A segunda alternativa responsabiliza quem recusa ouvir."
-      ]
-    },
-    {
-      "p": "Louvar os peixes por ouvirem calados é também uma crítica aos homens.",
-      "f": "Verdadeiro: o contraste faz a qualidade dos peixes corrigir os homens, que falam e não ouvem. «Nunca pior auditório» é irónico.",
-      "legacyId": "s06-q2",
-      "recycledFrom": "/pt/m4/licao-m4-f25/",
-      "t": "vf",
-      "v": true,
-      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder."
-    },
-    {
-      "p": "«Haveis de ser as roncas do mar?»: que contraste faz a censura?",
-      "f": "Pequenez contra ruído: a pergunta retórica já contém o juízo. Não se quer medir o som; censura-se o fanfarrão.",
-      "legacyId": "s06-q3",
-      "recycledFrom": "/pt/m4/licao-m4-f25/",
-      "t": "escolha",
-      "o": [
-        "Pouco tamanho e muita fanfarronice.",
-        "Grande tamanho e excessiva timidez.",
-        "Pouco tamanho e excessiva modéstia."
-      ],
-      "c": 0,
-      "fe": [
-        null,
-        "A censura refere o pequeno tamanho, não a grandeza.",
-        "O contraste é entre pequenez e ruído, não entre pequenez e modéstia."
+        "Vieira também culpa quem prega: «o sal não salga, e os pregadores não pregam a verdadeira doutrina».",
+        "Vieira também culpa quem ouve: «a terra se não deixa salgar»."
       ]
     },
     {
@@ -108,12 +90,21 @@
     },
     {
       "t": "vf",
-      "p": "Uma resposta cheia de citações está necessariamente bem fundamentada.",
-      "v": false,
-      "f": "Falso: **uma citação só apoia a ideia quando explicas a ligação**, respeitas o contexto e não escondes uma objeção decisiva. Uma prova explicada vale mais do que cinco copiadas.",
-      "fe": "É falso: uma citação só apoia a ideia quando explicas a ligação; cinco citações copiadas não valem uma explicada.",
+      "p": "Uma resposta com cinco citações copiadas e nenhuma explicada está menos fundamentada do que outra com uma só citação, explicada.",
+      "v": true,
+      "f": "Verdadeiro: **uma citação só apoia a ideia quando explicas a ligação**, respeitas o contexto e não escondes uma objeção decisiva. Uma prova explicada vale mais do que cinco copiadas.",
+      "fe": "Responder «falso» é contar citações em vez de ver o que fazem. Uma citação sem explicação não mostra como apoia a ideia; a que é explicada mostra.",
       "recycledFrom": "/pt/m4/licao-m4-f27/",
       "sourceCard": 11
+    },
+    {
+      "p": "Louvar os peixes por ouvirem calados é também uma crítica aos homens.",
+      "f": "Verdadeiro: o contraste faz a qualidade dos peixes corrigir os homens, que falam e não ouvem. «Nunca pior auditório» é irónico.",
+      "legacyId": "s06-q2",
+      "recycledFrom": "/pt/m4/licao-m4-f25/",
+      "t": "vf",
+      "v": true,
+      "fe": "Responder «falso» é ler o elogio só à letra. Repara em «ouvem e não falam»: a qualidade dos peixes aponta para ouvintes que falam e não ouvem."
     },
     {
       "t": "emparelhar",
@@ -132,7 +123,7 @@
           "explica"
         ],
         [
-          "«Nos dois, alguém orienta o olhar: Vieira para a cidade, Maria para o retrato.»",
+          "«Nos dois, alguém orienta o olhar: Vieira para a cidade, Maria, em _Frei Luís de Sousa_, para o retrato.»",
           "compara"
         ]
       ],
@@ -151,7 +142,7 @@
         2
       ],
       "f": "Perder o autocarro contraria o elogio à sorte. A ironia depende da relação entre a fala e a situação.",
-      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder.",
+      "fe": "Marcaste a fala, não o facto. A ironia reconhece-se pela situação: procura o que aconteceu antes de «e dizes».",
       "recycledFrom": "/pt/m4/licao-m4-f25/",
       "sourceCard": 8,
       "adaptacao": "Operação da lição aplicada a um recorte ou exemplo indicado no cartão."
@@ -164,31 +155,53 @@
         {
           "o": [
             "afirma",
-            "sugere"
+            "sugere",
+            "esconde"
           ],
           "c": 0,
           "fe": [
             null,
-            "Nesta lacuna, sugere não corresponde à relação pedida."
+            "O primeiro teste lê a fala à letra: o que ela afirma. O que sugere só aparece quando a comparas com a situação.",
+            "Na ironia ninguém esconde nada: a fala afirma uma coisa e a situação mostra o contrário, para que se perceba."
           ]
         },
         {
           "o": [
             "contraria",
-            "corrobora"
+            "confirma",
+            "esclarece"
           ],
           "c": 0,
           "fe": [
             null,
-            "Nesta lacuna, corrobora não corresponde à relação pedida."
+            "Se a situação confirmasse o sentido literal, a frase seria dita à letra, como com a rifa ganha.",
+            "Esclarecer não basta: na ironia, a situação desmente o que a fala diz."
           ]
         }
       ],
       "f": "Na ironia, o sentido literal é contrariado pela situação. Não basta haver uma frase falsa: importa que o destinatário reconheça o contraste.",
-      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder.",
+      "fe": "Trocaste a ordem ou o resultado dos testes. Primeiro lês o que a fala diz à letra; depois vês se a situação o desmente, como o autocarro perdido desmente «Que sorte a minha!».",
       "recycledFrom": "/pt/m4/licao-m4-f25/",
       "sourceCard": 8,
       "adaptacao": "Operação da lição aplicada a um recorte ou exemplo indicado no cartão."
+    },
+    {
+      "p": "«Haveis de ser as roncas do mar?»: que contraste faz a censura?",
+      "f": "Pequenez contra ruído: a pergunta retórica já contém o juízo. Não se quer medir o som; censura-se o fanfarrão.",
+      "legacyId": "s06-q3",
+      "recycledFrom": "/pt/m4/licao-m4-f25/",
+      "t": "escolha",
+      "o": [
+        "Pouco tamanho e muita fanfarronice.",
+        "Grande tamanho e uma excessiva timidez.",
+        "Pouco tamanho e excessiva modéstia."
+      ],
+      "c": 0,
+      "fe": [
+        null,
+        "A censura refere o pequeno tamanho, não a grandeza.",
+        "O contraste é entre pequenez e ruído, não entre pequenez e modéstia."
+      ]
     },
     {
       "t": "ordenar",
@@ -196,37 +209,38 @@
       "passos": [
         "Localizar a imagem no excerto",
         "Identificar a relação que a imagem apresenta",
-        "Relacionar essa relação com o comportamento humano",
+        "Ligar essa relação ao comportamento humano",
         "Explicar o efeito da imagem na crítica"
       ],
       "f": "Nomear alegoria não explica a crítica. Parte da relação apresentada e mostra como ela passa dos peixes aos homens.",
-      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder.",
+      "fe": "Começaste pelo efeito ou pela crítica. Primeiro localizas a imagem e dizes que relação mostra entre os peixes; só depois a passas para os homens e explicas o efeito.",
       "recycledFrom": "/pt/m4/licao-m4-f27/",
       "sourceCard": 3,
       "adaptacao": "Operação da lição aplicada a um recorte ou exemplo indicado no cartão."
     },
     {
       "t": "vf",
-      "p": "Dizer apenas que há uma alegoria explica por completo a crítica de Vieira.",
+      "p": "Dizer apenas que há uma alegoria explica a crítica de Vieira.",
       "v": false,
-      "f": "Alegoria dá o nome do recurso. Falta mostrar que relação existe na imagem e que comportamento humano ela permite criticar.",
-      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder.",
+      "f": "Dizer «alegoria» dá o nome do recurso. Falta mostrar que relação existe na imagem e que comportamento humano ela permite criticar.",
+      "fe": "Responder «verdadeiro» é confundir nomear com explicar: «alegoria» dá o nome; falta dizer que relação há entre os peixes e que comportamento humano critica.",
       "recycledFrom": "/pt/m4/licao-m4-f27/",
       "sourceCard": 3,
       "adaptacao": "Operação da lição aplicada a um recorte ou exemplo indicado no cartão."
     },
     {
       "t": "sublinhar",
-      "p": "No exemplo imaginário, toca na palavra que exige uma justificação da ligação.",
-      "frase": "A imagem aproxima os dois comportamentos porque partilham a mesma relação.",
+      "p": "No parágrafo [4], toca nas três vezes em que Vieira insiste na aparência do polvo.",
+      "frase": "com aquele seu capelo na cabeça, parece um monge; com aqueles seus raios estendidos, parece uma estrela; como não tem osso nem espinha, parece a mesma brandura",
       "certas": [
-        6
+        6,
+        14,
+        23
       ],
-      "f": "Porque anuncia uma razão. Depois dele, a resposta tem de explicar a relação, não apenas repetir o nome do recurso.",
-      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder.",
-      "recycledFrom": "/pt/m4/licao-m4-f27/",
-      "sourceCard": 3,
-      "adaptacao": "Operação da lição aplicada a um recorte ou exemplo indicado no cartão."
+      "f": "**Parece**, três vezes: monge, estrela, brandura. A repetição prepara o golpe, porque o que parece manso «lança-lhe os braços de repente». É a traição com cara de bondade.",
+      "fe": "Marcaste o que o polvo parece, não a palavra que se repete. Há um verbo que volta antes de «um monge», «uma estrela» e «a mesma brandura».",
+      "recycledFrom": "/pt/m4/licao-m4-f25/",
+      "adaptacao": "Cartão novo sobre o texto de apoio da sessão (02/11/2026)."
     }
   ]
 }

@@ -5,9 +5,18 @@
   "cartoes": [
     {
       "t": "ler",
+      "rot": "Abre",
+      "titulo": "Aquecer",
+      "html": "<p class=\"abre-t\">Fernão Lopes: uma multidão em ação</p><p><b>Objetivo:</b> ler o movimento coletivo na crónica.</p><p>Doze cartões, dez minutos. O texto de apoio está no cartão seguinte. A seguir, voltas à sessão para ler e escrever no caderno.</p>",
+      "recycledFrom": "/pt/exame/",
+      "adaptacao": "Cartão de abertura da sessão (02/11/2026)."
+    },
+    {
+      "t": "ler",
       "titulo": "Texto para consultar",
-      "html": "<p>Consulta o texto quando precisares de confirmar uma escolha.</p><details><summary>Abrir o texto de apoio</summary><p class=\"pr\" data-l=\"0-0\"><b>[1]</b> O pajem do Mestre, que estava à porta, como lhe disseram que fosse pela vila, segundo já era percebido, começou d'ir rijamente e ao galope […], dizendo a altas vozes, bradando pela rua: «Matam o Mestre! Matam o Mestre nos paços da rainha! Acorrei ao Mestre, que o matam!»</p><p class=\"pr\" data-l=\"0-1\"><b>[2]</b> […] Soaram as vozes do arruído pela cidade, ouvindo todos bradar que matavam o Mestre, e […] se moveram todos com mão armada, correndo à pressa para hu diziam que se esto fazia, pera lhe dar vida e escusar morte. […]</p><p class=\"fonte\">Fernão Lopes, <i>Crónica de D. João I</i> (edição de 1897), cap. XII (cap. 11 na numeração habitual), grafia atualizada; cortes marcados com […].</p><p class=\"pr\" data-l=\"1-0\"><b>B</b> Ordenou o Mestre com as gentes da cidade, que fosse repartida a guarda dos muros pelos fidalgos e cidadãos […], e em cada uma quadrilha havia um sino pera repicar, quando tal cousa viesse, e como cada um ouvia o sino da sua quadrilha, logo todos direitamente corriam pera lá […].</p><p class=\"pr\" data-l=\"1-1\"><b>C</b> No lugar onde costumavam a vender o trigo, andavam homens e moços esgravatando a terra, e se achavam algum grão de trigo metiam-no na boca, sem tendo outro mantimento.</p><p class=\"fonte\">Fernão Lopes, <i>Crónica de D. João I</i> (edição de 1897): B, cap. CXVI (cap. 115 na numeração habitual); C, cap. CXLVIII (cap. 148 na numeração habitual). Grafia atualizada; cortes marcados com […].</p><p class=\"fonte\"><a href=\"../../../m1/licao-m1-f20/\">Texto e fontes na lição de origem</a></p></details>",
-      "recycledFrom": "/pt/m1/licao-m1-f20/"
+      "html": "<p>Consulta o texto quando precisares de confirmar uma escolha.</p><details><summary>Abrir o texto de apoio</summary><p class=\"pr\" data-l=\"0-0\"><b>[1]</b> O pajem do Mestre, que estava à porta, como lhe disseram que fosse pela vila, segundo já era percebido, começou d'ir rijamente e ao galope […], dizendo a altas vozes, bradando pela rua: «Matam o Mestre! Matam o Mestre nos paços da rainha! Acorrei ao Mestre, que o matam!»</p><p class=\"pr\" data-l=\"0-1\"><b>[2]</b> […] Soaram as vozes do arruído pela cidade, ouvindo todos bradar que matavam o Mestre, e […] se moveram todos com mão armada, correndo à pressa para hu diziam que se esto fazia, pera lhe dar vida e escusar morte. […]</p><p class=\"fonte\">Fernão Lopes, <i>Crónica de D. João I</i> (edição de 1897), cap. XII (cap. 11 na numeração habitual), grafia atualizada; cortes marcados com […].</p><p class=\"pr\" data-l=\"1-0\"><b>B</b> Ordenou o Mestre com as gentes da cidade, que fosse repartida a guarda dos muros pelos fidalgos e cidadãos […], e em cada uma quadrilha havia um sino pera repicar, quando tal cousa viesse, e como cada um ouvia o sino da sua quadrilha, logo todos direitamente corriam pera lá […].</p><p class=\"pr\" data-l=\"1-1\"><b>C</b> No lugar onde costumavam a vender o trigo, andavam homens e moços esgravatando a terra, e se achavam algum grão de trigo metiam-no na boca, sem tendo outro mantimento.</p><p class=\"fonte\">Fernão Lopes, <i>Crónica de D. João I</i> (edição de 1897): B, cap. CXVI (cap. 115 na numeração habitual); C, cap. CXLVIII (cap. 148 na numeração habitual). Grafia atualizada; cortes marcados com […].</p><p class=\"fonte\"><a href=\"../../../m1/licao-m1-f20/\" target=\"_blank\" rel=\"noopener\">Texto e fontes na lição de origem</a></p></details>",
+      "recycledFrom": "/pt/m1/licao-m1-f20/",
+      "rot": "Texto de apoio"
     },
     {
       "p": "Como o pajem grita «Matam o Mestre!», fica provado que o Mestre estava a ser morto.",
@@ -16,43 +25,7 @@
       "recycledFrom": "/pt/m1/licao-m1-f20/",
       "t": "vf",
       "v": false,
-      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder."
-    },
-    {
-      "p": "«pera lhe dar vida e escusar morte»: que inferência sobre a gente da cidade tem mais apoio?",
-      "f": "Dar vida, evitar a morte: o objetivo dito apoia a inferência. A cidade age como se o perigo fosse certo.",
-      "legacyId": "s02-q2",
-      "recycledFrom": "/pt/m1/licao-m1-f20/",
-      "t": "escolha",
-      "o": [
-        "Crê no perigo e quer salvar o Mestre.",
-        "Sabe do plano e quer deter o Mestre.",
-        "Teme o alarme e quer fugir da cidade."
-      ],
-      "c": 0,
-      "fe": [
-        null,
-        "Conhecer o plano não é o motivo declarado para correr.",
-        "Fugir não corresponde ao objetivo de dar vida e evitar a morte."
-      ]
-    },
-    {
-      "p": "«Ordenou o Mestre com as gentes da cidade»: o que mostra o «com» sobre a defesa?",
-      "f": "«Ordenou o Mestre com as gentes»: a defesa é combinada com o povo, e a guarda repartida por fidalgos e cidadãos.",
-      "legacyId": "s02-q3",
-      "recycledFrom": "/pt/m1/licao-m1-f20/",
-      "t": "escolha",
-      "o": [
-        "Uma defesa combinada com a cidade.",
-        "Uma defesa imposta contra a cidade.",
-        "Uma defesa entregue só aos nobres."
-      ],
-      "c": 0,
-      "fe": [
-        null,
-        "Contra inverte a relação expressa por com.",
-        "A frase inclui as gentes da cidade, não apenas os nobres."
-      ]
+      "fe": "Um grito é a fala de uma personagem, não uma prova. Relê «como lhe disseram» e «segundo já era percebido»: o pajem cumpre uma ordem combinada."
     },
     {
       "t": "vf",
@@ -117,6 +90,24 @@
       "sourceCard": 15
     },
     {
+      "p": "«pera lhe dar vida e escusar morte»: que inferência sobre a gente da cidade tem mais apoio?",
+      "f": "Dar vida, evitar a morte: o objetivo dito apoia a inferência. A cidade age como se o perigo fosse certo.",
+      "legacyId": "s02-q2",
+      "recycledFrom": "/pt/m1/licao-m1-f20/",
+      "t": "escolha",
+      "o": [
+        "Crê no perigo e quer salvar o Mestre.",
+        "Sabe do plano e quer deter o Mestre.",
+        "Teme o alarme e decide fugir da cidade."
+      ],
+      "c": 0,
+      "fe": [
+        null,
+        "Conhecer o plano não é o motivo declarado para correr.",
+        "Fugir não corresponde ao objetivo de dar vida e evitar a morte."
+      ]
+    },
+    {
       "t": "sublinhar",
       "p": "Neste começo de crónica, toca na fala que terias de marcar «imaginada».",
       "frase": "O pajem brada: «Matam o Mestre!» Um ferreiro larga o martelo: «Que gritam?» Álvaro Pais responde: «Acorramos ao Mestre, amigos!»",
@@ -127,7 +118,7 @@
       "f": "«Que gritam?» não vem de fonte nenhuma: o ferreiro foi criado por quem escreveu (o começo foi feito para o exercício). O grito do pajem e o brado de Álvaro Pais estão no cap. XII: são documentados.",
       "recycledFrom": "/pt/m1/licao-m1-f10/",
       "sourceCard": 9,
-      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder."
+      "fe": "Marcaste uma fala documentada. Relê o parágrafo [1]: o grito do pajem está na crónica; nenhum ferreiro aparece no capítulo, por isso «Que gritam?» foi criado para o exercício."
     },
     {
       "t": "completar",
@@ -137,28 +128,32 @@
         {
           "o": [
             "explícita",
-            "implícita"
+            "implícita",
+            "secundária"
           ],
           "c": 0,
           "fe": [
             null,
-            "Nesta lacuna, implícita não corresponde à relação pedida."
+            "Implícita é a informação que tens de deduzir; uma frase que está escrita no texto é informação explícita.",
+            "Secundária fala da importância, não do modo: o que está escrito no texto é informação explícita, seja ou não central."
           ]
         },
         {
           "o": [
             "implícita",
-            "explícita"
+            "explícita",
+            "hipotética"
           ],
           "c": 0,
           "fe": [
             null,
-            "Nesta lacuna, explícita não corresponde à relação pedida."
+            "Explícita é a informação dita por palavras no texto; uma conclusão tirada de indícios é implícita.",
+            "Apoiada em indícios, a conclusão deixa de ser só hipótese: é informação implícita, que o texto sustenta sem a dizer."
           ]
         }
       ],
       "f": "Explícita é o que está dito; implícita exige uma inferência. Procura primeiro a passagem: não confundas a tua conclusão com as palavras do cronista.",
-      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder.",
+      "fe": "Confundiste o que o texto diz com o que concluis dele. Pergunta-te se a informação se lê no excerto ou se se deduz de pistas como «esgravatando a terra».",
       "recycledFrom": "/pt/m1/licao-m1-f20/",
       "sourceCard": 13,
       "adaptacao": "Operação da lição aplicada a um recorte ou exemplo indicado no cartão."
@@ -173,56 +168,64 @@
         "Retirar o que os indícios não permitem concluir"
       ],
       "f": "A conclusão vem depois dos indícios. Uma frase plausível não se torna comprovada só por combinar com a história.",
-      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder.",
+      "fe": "Puseste a conclusão antes das provas. Primeiro lês a afirmação e procuras os indícios no excerto; só depois explicas a ligação e cortas o que eles não permitem concluir.",
+      "recycledFrom": "/pt/m1/licao-m1-f20/",
+      "sourceCard": 15,
+      "adaptacao": "Operação da lição aplicada a um recorte ou exemplo indicado no cartão."
+    },
+    {
+      "p": "«Ordenou o Mestre com as gentes da cidade»: o que mostra o «com» sobre a defesa?",
+      "f": "«Ordenou o Mestre com as gentes»: a defesa é combinada com o povo, e a guarda repartida por fidalgos e cidadãos.",
+      "legacyId": "s02-q3",
+      "recycledFrom": "/pt/m1/licao-m1-f20/",
+      "t": "escolha",
+      "o": [
+        "Uma defesa combinada com a cidade.",
+        "Uma defesa imposta contra a cidade.",
+        "Uma defesa entregue só aos nobres."
+      ],
+      "c": 0,
+      "fe": [
+        null,
+        "«Contra» inverte a relação expressa por «com».",
+        "A frase inclui as gentes da cidade, não apenas os nobres."
+      ]
+    },
+    {
+      "t": "sublinhar",
+      "p": "Em B, toca nas duas palavras que mostram que cada um acode ao sino de imediato e sem desvio.",
+      "frase": "e como cada um ouvia o sino da sua quadrilha, logo todos direitamente corriam pera lá",
+      "certas": [
+        10,
+        12
+      ],
+      "f": "**Logo** e **direitamente**: mal ouvem o sino, correm a direito para o seu posto. A defesa funciona porque a cidade se organizou antes do perigo.",
+      "fe": "Marcaste quem corre ou para onde, não o modo. Relê o fim de B: antes de «corriam» há duas palavras que dizem «de imediato» e «a direito».",
+      "recycledFrom": "/pt/m1/licao-m1-f20/",
+      "adaptacao": "Cartão novo sobre o texto de apoio da sessão (02/11/2026)."
+    },
+    {
+      "t": "vf",
+      "p": "Uma opinião sobre a crónica passa a facto quando se lhe acrescenta uma citação.",
+      "v": false,
+      "f": "Citar não muda a natureza de uma avaliação. Na expressão «a cena mais bonita», «bonita» continua a ser um juízo de quem lê.",
+      "fe": "Uma citação mostra de onde vem a avaliação, mas não a torna facto: em «a cena mais bonita», «bonita» continua a ser o juízo de quem lê.",
       "recycledFrom": "/pt/m1/licao-m1-f20/",
       "sourceCard": 15,
       "adaptacao": "Operação da lição aplicada a um recorte ou exemplo indicado no cartão."
     },
     {
       "t": "sublinhar",
-      "p": "Nesta apreciação, toca na palavra que exprime uma avaliação.",
-      "frase": "É a cena mais bonita da crónica.",
+      "p": "Em C, toca nas duas palavras que mostram que a fome atinge todas as idades.",
+      "frase": "andavam homens e moços esgravatando a terra, e se achavam algum grão de trigo metiam-no na boca",
       "certas": [
-        4
+        1,
+        3
       ],
-      "f": "Bonita exprime uma apreciação, não um acontecimento narrado. Olha para o adjetivo usado para avaliar a cena.",
-      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder.",
+      "f": "**Homens e moços**: a fome não poupa idades. O cronista não fala do povo em geral: mostra quem esgravata a terra, e é isso que move a compaixão de quem lê.",
+      "fe": "Marcaste o gesto, não quem o faz. Relê o começo de C: antes de «esgravatando» vêm as duas palavras que dizem quem são, os homens feitos e os rapazes.",
       "recycledFrom": "/pt/m1/licao-m1-f20/",
-      "sourceCard": 15,
-      "adaptacao": "Operação da lição aplicada a um recorte ou exemplo indicado no cartão."
-    },
-    {
-      "t": "vf",
-      "p": "Uma opinião sobre a crónica passa a facto quando se lhe acrescenta uma citação.",
-      "v": false,
-      "f": "Citar não muda a natureza de uma avaliação. Na expressão «a cena mais bonita», bonita continua a ser um juízo de quem lê.",
-      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder.",
-      "recycledFrom": "/pt/m1/licao-m1-f20/",
-      "sourceCard": 15,
-      "adaptacao": "Operação da lição aplicada a um recorte ou exemplo indicado no cartão."
-    },
-    {
-      "t": "emparelhar",
-      "p": "Distingue o alcance destas três frases sobre a cidade. ",
-      "pares": [
-        [
-          "O pajem bradou pela rua.",
-          "Ação narrada"
-        ],
-        [
-          "A cidade esperava ataques.",
-          "Inferência sobre a defesa"
-        ],
-        [
-          "A cena é a mais bonita.",
-          "Avaliação de quem lê"
-        ]
-      ],
-      "f": "Bradar é uma ação; esperar ataques é uma conclusão tirada da preparação; bonita avalia. Procura o que cada frase acrescenta à descrição.",
-      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder.",
-      "recycledFrom": "/pt/m1/licao-m1-f20/",
-      "sourceCard": 15,
-      "adaptacao": "Operação da lição aplicada a um recorte ou exemplo indicado no cartão."
+      "adaptacao": "Cartão novo sobre o texto de apoio da sessão (02/11/2026)."
     }
   ]
 }

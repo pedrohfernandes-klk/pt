@@ -5,9 +5,18 @@
   "cartoes": [
     {
       "t": "ler",
+      "rot": "Abre",
+      "titulo": "Aquecer",
+      "html": "<p class=\"abre-t\">Prosa romântica: paixão e condicionamento</p><p><b>Objetivo:</b> relacionar escolhas individuais e regras sociais.</p><p>Doze cartões, dez minutos. O texto de apoio está no cartão seguinte. A seguir, voltas à sessão para ler e escrever no caderno.</p>",
+      "recycledFrom": "/pt/exame/",
+      "adaptacao": "Cartão de abertura da sessão (02/11/2026)."
+    },
+    {
+      "t": "ler",
       "titulo": "Texto para consultar",
-      "html": "<p>Consulta o texto quando precisares de confirmar uma escolha.</p><details><summary>Abrir o texto de apoio</summary><p class=\"pr\" data-l=\"0-0\"><b>[1]</b> Folheando os livros de antigos assentamentos, no cartorio das cadêas da Relação do Porto, li, no das entradas dos presos desde 1803 a 1805, a folhas 232, o seguinte:</p><p class=\"pr\" data-l=\"0-1\"><b>[2]</b> <i>Simão Antonio Botelho, que assim disse chamar-se, ser solteiro, e estudante na Universidade de Coimbra, natural da cidade de Lisboa, e assistente na occasião de sua prisão na cidade de Vizeu, idade de dezoito annos, filho de Domingos José Correia Botelho e de D. Rita Preciosa Caldeirão Castello-Branco, estatura ordinaria, cara redonda, olhos castanhos, cabello e barba preta, vestido com jaqueta de baetão azul, collête de fustão pintado e calça de panno pedrez. E fiz este assento, que assignei.</i></p><p class=\"pr\" data-l=\"0-2\"><b>[3]</b> <i>Filippe Moreira Dias</i>.</p><p class=\"pr\" data-l=\"0-3\"><b>[4]</b> Á margem esquerda d'este assento está escripto: <i>Foi para a India em 17 de Março de 1807</i>.</p><p class=\"pr\" data-l=\"0-4\"><b>[5]</b> Não será fiar demasiadamente na sensibilidade do leitor, se cuido que o degredo de um moço de dezoito annos lhe havia de fazer dó.</p><p class=\"pr\" data-l=\"0-5\"><b>[6]</b> Dezoito annos! O arrebol dourado e escarlate da manhã da vida! As louçanias do coração que ainda não sonha em fructos, e todo se embalsama no perfume das flôres! Dezoito annos! O amor d'aquella idade! A passagem do seio da familia, dos braços de mãe, dos beijos das irmãs para as caricias mais dôces da virgem, que se lhe abre ao lado como flôr da mesma sazão e dos mesmos aromas, e á mesma hora da vida! Dezoito annos!... E degradado da patria, do amor, e da familia! Nunca mais o ceo de Portugal, nem liberdade, nem irmãos, nem mãe, nem rehabilitação, nem dignidade, nem um amigo!... É triste!</p><p class=\"pr\" data-l=\"0-6\"><b>[7]</b> O leitor de certo se compungia; e a leitora se lhe dissessem, em menos de uma linha, a historia d'aquelles dezoito annos, choraria! Pois não? A olhos enchutos poderia ouvil-a a mulher, a creatura mais bem formada das branduras da piedade, a que por vezes traz comsigo do ceo um reflexo da divina misericordia, essa, a minha leitora, a carinhosa amiga de todos os infelizes não choraria se lhe dissessem que o pobre moço perdêra honra, rehabilitação, patria, liberdade, irmãs, mãe, tudo, por amor da primeira mulher que o despertou do seu dormir de innocentes desejos?!</p><p class=\"fonte\">Camilo Castelo Branco, <i>Amor de Perdição</i> (1862) (grafia da edição).</p><p class=\"fonte\"><a href=\"../../../m5/licao-m5-f02/\">Texto e fontes na lição de origem</a></p></details>",
-      "recycledFrom": "/pt/m5/licao-m5-f02/"
+      "html": "<p>Consulta o texto quando precisares de confirmar uma escolha.</p><details><summary>Abrir o texto de apoio</summary><p class=\"pr\" data-l=\"0-0\"><b>[1]</b> Folheando os livros de antigos assentamentos, no cartorio das cadêas da Relação do Porto, li, no das entradas dos presos desde 1803 a 1805, a folhas 232, o seguinte:</p><p class=\"pr\" data-l=\"0-1\"><b>[2]</b> <i>Simão Antonio Botelho, que assim disse chamar-se, ser solteiro, e estudante na Universidade de Coimbra, natural da cidade de Lisboa, e assistente na occasião de sua prisão na cidade de Vizeu, idade de dezoito annos, filho de Domingos José Correia Botelho e de D. Rita Preciosa Caldeirão Castello-Branco, estatura ordinaria, cara redonda, olhos castanhos, cabello e barba preta, vestido com jaqueta de baetão azul, collête de fustão pintado e calça de panno pedrez. E fiz este assento, que assignei.</i></p><p class=\"pr\" data-l=\"0-2\"><b>[3]</b> <i>Filippe Moreira Dias</i>.</p><p class=\"pr\" data-l=\"0-3\"><b>[4]</b> Á margem esquerda d'este assento está escripto: <i>Foi para a India em 17 de Março de 1807</i>.</p><p class=\"pr\" data-l=\"0-4\"><b>[5]</b> Não será fiar demasiadamente na sensibilidade do leitor, se cuido que o degredo de um moço de dezoito annos lhe havia de fazer dó.</p><p class=\"pr\" data-l=\"0-5\"><b>[6]</b> Dezoito annos! O arrebol dourado e escarlate da manhã da vida! As louçanias do coração que ainda não sonha em fructos, e todo se embalsama no perfume das flôres! Dezoito annos! O amor d'aquella idade! A passagem do seio da familia, dos braços de mãe, dos beijos das irmãs para as caricias mais dôces da virgem, que se lhe abre ao lado como flôr da mesma sazão e dos mesmos aromas, e á mesma hora da vida! Dezoito annos!... E degradado da patria, do amor, e da familia! Nunca mais o ceo de Portugal, nem liberdade, nem irmãos, nem mãe, nem rehabilitação, nem dignidade, nem um amigo!... É triste!</p><p class=\"fonte\">Camilo Castelo Branco, <i>Amor de Perdição</i> (1862) (grafia da edição).</p><p class=\"fonte\"><a href=\"../../../m5/licao-m5-f02/\" target=\"_blank\" rel=\"noopener\">Texto e fontes na lição de origem</a></p></details>",
+      "recycledFrom": "/pt/m5/licao-m5-f02/",
+      "rot": "Texto de apoio"
     },
     {
       "p": "«natural da cidade de Lisboa, e assistente na occasião de sua prisão na cidade de Vizeu»: o que diz?",
@@ -28,33 +37,6 @@
       ]
     },
     {
-      "p": "A nota sobre a ida para a Índia está escrita no fim do assento, depois da assinatura.",
-      "f": "Falso: está «á margem esquerda d'este assento», escrita depois, à parte; o assento acaba na assinatura.",
-      "legacyId": "s08-q2",
-      "recycledFrom": "/pt/m5/licao-m5-f02/",
-      "t": "vf",
-      "v": false,
-      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder."
-    },
-    {
-      "p": "«o degredo de um moço de dezoito annos lhe havia de fazer dó»: que reação espera o narrador?",
-      "f": "Dó: o narrador aposta na sensibilidade de quem lê antes de contar uma linha da história.",
-      "legacyId": "s08-q3",
-      "recycledFrom": "/pt/m5/licao-m5-f02/",
-      "t": "escolha",
-      "o": [
-        "Compaixão pelo jovem degredado.",
-        "Desconfiança do registo prisional.",
-        "Condenação do jovem prisioneiro."
-      ],
-      "c": 0,
-      "fe": [
-        null,
-        "Fazer dó indica compaixão, não suspeita da fonte.",
-        "O narrador pede uma reação ao sofrimento, não uma sentença judicial."
-      ]
-    },
-    {
       "t": "sublinhar",
       "p": "Toca na palavra que mostra que é o narrador quem leu o livro da cadeia.",
       "frase": "no cartorio das cadêas da Relação do Porto, li, no das entradas dos presos",
@@ -65,7 +47,7 @@
       "cita": "Folheando os livros de antigos assentamentos, no cartorio das cadêas da Relação do Porto, li, no das entradas dos presos desde 1803 a 1805, a folhas…",
       "recycledFrom": "/pt/m5/licao-m5-f02/",
       "sourceCard": 5,
-      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder."
+      "fe": "Marcaste o lugar ou o livro, não a ação de quem conta. Procura o verbo na primeira pessoa: é ele que põe o narrador dentro do arquivo."
     },
     {
       "t": "completar",
@@ -75,31 +57,34 @@
         {
           "o": [
             "neutro",
-            "emotivo"
+            "emotivo",
+            "irónico"
           ],
           "c": 0,
           "fe": [
             null,
-            "Nesta lacuna, emotivo não corresponde à relação pedida."
+            "Emotivo é o tom do narrador, nas exclamações; o assento regista dados sem os comentar: tom neutro.",
+            "Nada no assento diz o contrário do que pensa: lista filiação, idade e roupa num tom neutro, de documento."
           ]
         },
         {
           "o": [
             "juízo",
-            "número"
+            "número",
+            "facto"
           ],
           "c": 0,
           "fe": [
             null,
-            "Nesta lacuna, número não corresponde à relação pedida."
+            "O assento tem números, como a idade; o que lhe falta é um juízo sobre Simão.",
+            "O assento é feito de factos; o que lhe falta é um juízo, uma avaliação de quem escreve."
           ]
         }
       ],
       "f": "Tom **neutro**, de documento: descreve Simão de fora, sem um **juízo**; a emoção fica para o narrador.",
-      "cita": "Simão Antonio Botelho, que assim disse chamar-se, ser solteiro, e estudante na Universidade de Coimbra, natural da cidade de Lisboa, e assistente na…",
       "recycledFrom": "/pt/m5/licao-m5-f02/",
       "sourceCard": 7,
-      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder."
+      "fe": "Confundiste o tom do documento com o do narrador. O assento lista filiação, idade e roupa sem comentar; as exclamações e a pena vêm depois, na voz de quem conta."
     },
     {
       "t": "sublinhar",
@@ -113,22 +98,31 @@
       "cita": "Dezoito annos! O arrebol dourado e escarlate da manhã da vida!",
       "recycledFrom": "/pt/m5/licao-m5-f02/",
       "sourceCard": 11,
-      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder."
+      "fe": "Marcaste a flor ou a estação, não a comparação inteira. Procura a palavra que liga a virgem à flor e a flor que vem logo a seguir."
     },
     {
-      "t": "versos",
+      "p": "A nota sobre a ida para a Índia está escrita no fim do assento, depois da assinatura.",
+      "f": "Falso: está «á margem esquerda d'este assento», escrita depois, à parte; o assento acaba na assinatura.",
+      "legacyId": "s08-q2",
+      "recycledFrom": "/pt/m5/licao-m5-f02/",
+      "t": "vf",
+      "v": false,
+      "fe": "A nota não está no fim: relê «Á margem esquerda d'este assento está escripto». O assento acaba na assinatura de Filippe Moreira Dias."
+    },
+    {
+      "t": "ordenar",
       "p": "Põe pela ordem do texto estas quatro frases do narrador.",
-      "linhas": [
-        "As louçanias do coração que ainda não sonha em fructos",
-        "O amor d'aquella idade!",
-        "E degradado da patria, do amor, e da familia!",
-        "É triste!"
-      ],
       "f": "Primeiro o viço e o amor da idade, depois o degredo e, a fechar, o juízo: «É triste!».",
       "cita": "Dezoito annos! O arrebol dourado e escarlate da manhã da vida!",
       "recycledFrom": "/pt/m5/licao-m5-f02/",
       "sourceCard": 13,
-      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder."
+      "fe": "Trocaste a ordem das exclamações. O narrador começa no viço («As louçanias do coração»), passa ao amor da idade, depois ao degredo, e só no fim julga: «É triste!».",
+      "passos": [
+        "As louçanias do coração que ainda não sonha em fructos",
+        "O amor d'aquella idade!",
+        "E degradado da patria, do amor, e da familia!",
+        "É triste!"
+      ]
     },
     {
       "t": "emparelhar",
@@ -154,7 +148,7 @@
       "f": "O assento descreve Simão sem um juízo; o narrador exclama e fala à leitora para a comover.",
       "recycledFrom": "/pt/m5/licao-m5-f02/",
       "sourceCard": 19,
-      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder."
+      "fe": "Trocaste as vozes. Pergunta a cada expressão se regista um dado sem comentar, como o assento, ou se exclama e julga, como o narrador."
     },
     {
       "t": "vf",
@@ -164,6 +158,24 @@
       "fe": "É ao contrário: o assento é uma frase longa e neutra («estatura ordinaria, cara redonda»); as exclamações curtas, como «Dezoito annos!», são do narrador.",
       "recycledFrom": "/pt/m5/licao-m5-f02/",
       "sourceCard": 21
+    },
+    {
+      "p": "«o degredo de um moço de dezoito annos lhe havia de fazer dó»: que reação espera o narrador?",
+      "f": "Dó: o narrador aposta na sensibilidade de quem lê antes de contar uma linha da história.",
+      "legacyId": "s08-q3",
+      "recycledFrom": "/pt/m5/licao-m5-f02/",
+      "t": "escolha",
+      "o": [
+        "Compaixão pelo jovem degredado.",
+        "Desconfiança do registo prisional.",
+        "Condenação do jovem prisioneiro."
+      ],
+      "c": 0,
+      "fe": [
+        null,
+        "«Fazer dó» indica compaixão, não suspeita da fonte.",
+        "O narrador pede uma reação ao sofrimento, não uma sentença judicial."
+      ]
     },
     {
       "t": "emparelhar",
@@ -189,7 +201,7 @@
       "f": "O assento descreve e dá credibilidade; o narrador exclama e comove: dois registos na mesma página.",
       "recycledFrom": "/pt/m5/licao-m5-f02/",
       "sourceCard": 22,
-      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder."
+      "fe": "Trocaste os efeitos. O assento, com a sua descrição exterior, dá credibilidade ao que se conta; o narrador, com o juízo em exclamação, procura comover."
     },
     {
       "t": "ordenar",
@@ -203,7 +215,7 @@
       "f": "Primeiro o documento e a sua margem, depois a voz, por fim a distinção: o papel é real, a história é ficção.",
       "recycledFrom": "/pt/m5/licao-m5-f02/",
       "sourceCard": 23,
-      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder."
+      "fe": "Começaste pela conclusão. Primeiro lês o assento como documento e reparas na nota à margem; depois ouves a voz que exclama; só no fim distingues o documento da ficção."
     },
     {
       "t": "vf",

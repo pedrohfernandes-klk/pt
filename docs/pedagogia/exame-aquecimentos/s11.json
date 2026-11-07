@@ -5,12 +5,21 @@
   "cartoes": [
     {
       "t": "ler",
-      "titulo": "Texto para consultar",
-      "html": "<p>Consulta o texto quando precisares de confirmar uma escolha.</p><details><summary>Abrir o texto de apoio</summary><p class=\"v\"><span class=\"ln\" data-l=\"0-0\">Toca-se as grades, nas cadeias. Som</span>\n<span class=\"ln\" data-l=\"0-1\">Que mortifica e deixa umas loucuras mansas!</span>\n<span class=\"ln\" data-l=\"0-2\">O aljube, em que hoje estão velhinhas e creanças,</span>\n<span class=\"ln\" data-l=\"0-3\">Bem raramente encerra uma mulher de «dom»!</span>\n<span class=\"ln\" data-l=\"0-5\">E eu desconfio, até, de um aneurisma</span>\n<span class=\"ln\" data-l=\"0-6\">Tão morbido me sinto, ao accender das luzes;</span>\n<span class=\"ln\" data-l=\"0-7\">Á vista das prisões, da velha sé, das cruzes,</span>\n<span class=\"ln\" data-l=\"0-8\">Chora-me o coração que se enche e que se abysma.</span>\n<span class=\"ln\" data-l=\"0-10\">A espaços, illuminam-se os andares,</span>\n<span class=\"ln\" data-l=\"0-11\">E as tascas, os cafés, as tendas, os estancos</span>\n<span class=\"ln\" data-l=\"0-12\">Alastram em lençol os seus reflexos brancos;</span>\n<span class=\"ln\" data-l=\"0-13\">E a lua lembra o circo e os jogos malabares.</span></p><p class=\"v\"><span class=\"ln\" data-l=\"0-15\">Duas egrejas, n'um saudoso largo,</span>\n<span class=\"ln\" data-l=\"0-16\">Lançam a nodoa negra e funebre do clero:</span>\n<span class=\"ln\" data-l=\"0-17\">N'ellas esfumo um ermo inquisidor severo,</span>\n<span class=\"ln\" data-l=\"0-18\">Assim que pela Historia eu me aventuro e alargo.</span>\n<span class=\"ln\" data-l=\"0-20\">Na parte que abateu no terremoto,</span>\n<span class=\"ln\" data-l=\"0-21\">Muram-se as construcções rectas, eguaes, crescidas;</span>\n<span class=\"ln\" data-l=\"0-22\">Affrontam-me, no resto, as ingremes subidas,</span>\n<span class=\"ln\" data-l=\"0-23\">E os sinos d'um tanger monastico e devoto.</span>\n<span class=\"ln\" data-l=\"0-25\">Mas, n'um recinto publico e vulgar,</span>\n<span class=\"ln\" data-l=\"0-26\">Com bancos de namoro e exiguas pimenteiras,</span>\n<span class=\"ln\" data-l=\"0-27\">Bronzeo, monumental, de proporções guerreiras,</span>\n<span class=\"ln\" data-l=\"0-28\">Um épico d'outr'ora ascende, n'um pilar!</span></p><p class=\"v\"><span class=\"ln\" data-l=\"0-30\">E eu sonho o Colera, imagina a Febre,</span>\n<span class=\"ln\" data-l=\"0-31\">N'esta accumulação de corpos enfezados;</span>\n<span class=\"ln\" data-l=\"0-32\">Sombrios e espectraes recolhem os soldados;</span>\n<span class=\"ln\" data-l=\"0-33\">Inflamma-se um palacio em face de um casebre.</span>\n<span class=\"ln\" data-l=\"0-35\">Partem patrulhas de cavallaria</span>\n<span class=\"ln\" data-l=\"0-36\">Dos arcos dos quarteis que foram já conventos;</span>\n<span class=\"ln\" data-l=\"0-37\">Edade-média! A pé, outras, a passos lentos,</span>\n<span class=\"ln\" data-l=\"0-38\">Derramam-se por toda a capital, que esfria.</span>\n<span class=\"ln\" data-l=\"0-40\">Triste cidade! Eu temo que me avives</span>\n<span class=\"ln\" data-l=\"0-41\">Uma paixão defunta! Aos lampeões distantes,</span>\n<span class=\"ln\" data-l=\"0-42\">Enlutam-me, alvejando, as tuas elegantes,</span>\n<span class=\"ln\" data-l=\"0-43\">Curvadas a sorrir ás montras dos ourives.</span></p><p class=\"v\"><span class=\"ln\" data-l=\"0-45\">E mais: as costureiras, as floristas</span>\n<span class=\"ln\" data-l=\"0-46\">Descem dos magasins, causam-me sobresaltos;</span>\n<span class=\"ln\" data-l=\"0-47\">Custa-lhes a elevar os seus pescoços altos</span>\n<span class=\"ln\" data-l=\"0-48\">E muitas d'ellas são comparsas ou coristas.</span>\n<span class=\"ln\" data-l=\"0-50\">E eu, de luneta de uma lente só,</span>\n<span class=\"ln\" data-l=\"0-51\">Eu acho sempre assumpto a quadros revoltados:</span>\n<span class=\"ln\" data-l=\"0-52\">Entro na brasserie; ás mesas de emigrados,</span>\n<span class=\"ln\" data-l=\"0-53\">Ao riso e á crua luz joga-se o dominó.</span></p><p class=\"fonte\">Cesário Verde, «O Sentimento dum Ocidental», <i>O Livro de Cesário Verde</i> (1887) (grafia da edição).</p><p class=\"v\"><span class=\"ln\" data-l=\"1-0\">E saio. A noite peza, esmaga. Nos</span>\n<span class=\"ln\" data-l=\"1-1\">Passeios de lagedo arrastam-se as impuras.</span>\n<span class=\"ln\" data-l=\"1-2\">Ó molles hospitaes! Sae das embocaduras</span>\n<span class=\"ln\" data-l=\"1-3\">Um sopro que arripia os hombros quasi nús.</span>\n<span class=\"ln\" data-l=\"1-4\">[…]</span>\n<span class=\"ln\" data-l=\"1-5\">N'um cutileiro, de avental, ao torno,</span>\n<span class=\"ln\" data-l=\"1-6\">Um forjador maneja um malho, rubramente;</span>\n<span class=\"ln\" data-l=\"1-7\">E de uma padaria exhala-se, inda quente,</span>\n<span class=\"ln\" data-l=\"1-8\">Um cheiro salutar e honesto a pão no forno.</span></p><p class=\"v\"><span class=\"ln\" data-l=\"1-10\">E eu que medito um livro que exarcebe,</span>\n<span class=\"ln\" data-l=\"1-11\">Quizera que o real e a analyse m'o dessem;</span>\n<span class=\"ln\" data-l=\"1-12\">Casas de confecções e modas resplandecem;</span>\n<span class=\"ln\" data-l=\"1-13\">Pelas vitrines ólha um ratoneiro imberbe.</span>\n<span class=\"ln\" data-l=\"1-14\">[…]</span>\n<span class=\"ln\" data-l=\"1-15\">Mas tudo cança! Apagam-se nas frentes</span>\n<span class=\"ln\" data-l=\"1-16\">Os candelabros, como estrellas, pouco a pouco;</span>\n<span class=\"ln\" data-l=\"1-17\">Da solidão regouga um cauteleiro rouco;</span>\n<span class=\"ln\" data-l=\"1-18\">Tornam-se mausoléos as armações fulgentes.</span></p><p class=\"v\"><span class=\"ln\" data-l=\"1-20\">«Dó da miseria!... Compaixão de mim!...»</span>\n<span class=\"ln\" data-l=\"1-21\">E, nas esquinas, calvo, eterno, sem repouso,</span>\n<span class=\"ln\" data-l=\"1-22\">Pede-me sempre esmola um homemzinho idoso,</span>\n<span class=\"ln\" data-l=\"1-23\">Meu velho professor nas aulas de latim!</span></p><p class=\"fonte\">Cesário Verde, «O Sentimento dum Ocidental», <i>O Livro de Cesário Verde</i> (1887) (grafia da edição).</p><p class=\"v\"><span class=\"ln\" data-l=\"2-0\">O tecto fundo de oxygenio, d'ar,</span>\n<span class=\"ln\" data-l=\"2-1\">Estende-se ao comprido, ao meio das trapeiras;</span>\n<span class=\"ln\" data-l=\"2-2\">Vem lagrimas de luz dos astros com olheiras,</span>\n<span class=\"ln\" data-l=\"2-3\">Enleva-me a chimera azul de transmigrar.</span>\n<span class=\"ln\" data-l=\"2-5\">Por baixo, que portões! Que arruamentos!</span>\n<span class=\"ln\" data-l=\"2-6\">Um parafuso cáe nas lages, ás escuras:</span>\n<span class=\"ln\" data-l=\"2-7\">Collocam-se taipaes, rangem as fechaduras,</span>\n<span class=\"ln\" data-l=\"2-8\">E os olhos d'um caleche espantam-me, sangrentos.</span>\n<span class=\"ln\" data-l=\"2-10\">E eu sigo, como as linhas de uma pauta</span>\n<span class=\"ln\" data-l=\"2-11\">A dupla correnteza augusta das fachadas;</span>\n<span class=\"ln\" data-l=\"2-12\">Pois sobem, no silencio, infaustas e trinadas,</span>\n<span class=\"ln\" data-l=\"2-13\">As notas pastoris de uma longiqua flauta.</span></p><p class=\"v\"><span class=\"ln\" data-l=\"2-15\">Se eu não morresse, nunca! E eternamente</span>\n<span class=\"ln\" data-l=\"2-16\">Buscasse e conseguisse a perfeição das cousas!</span>\n<span class=\"ln\" data-l=\"2-17\">Esqueço-me a prever castissimas esposas,</span>\n<span class=\"ln\" data-l=\"2-18\">Que aninhem em mansões de vidro transparente!</span>\n<span class=\"ln\" data-l=\"2-20\">Ó nossos filhos! Que de sonhos ageis,</span>\n<span class=\"ln\" data-l=\"2-21\">Pousando, vos trarão a nitidez ás vidas!</span>\n<span class=\"ln\" data-l=\"2-22\">Eu quero as vossas mães e irmãs estremecidas,</span>\n<span class=\"ln\" data-l=\"2-23\">N'umas habitações translucidas e frageis.</span>\n<span class=\"ln\" data-l=\"2-25\">Ah! Como a raça ruiva do porvir,</span>\n<span class=\"ln\" data-l=\"2-26\">E as frótas dos avós, e os nómadas ardentes,</span>\n<span class=\"ln\" data-l=\"2-27\">Nós vamos explorar todos os continentes</span>\n<span class=\"ln\" data-l=\"2-28\">E pelas vastidões aquaticas seguir!</span></p><p class=\"v\"><span class=\"ln\" data-l=\"2-30\">Mas se vivemos, os emparedados,</span>\n<span class=\"ln\" data-l=\"2-31\">Sem arvores, no valle escuro das muralhas!...</span>\n<span class=\"ln\" data-l=\"2-32\">Julgo avistar, na treva, as folhas das navalhas</span>\n<span class=\"ln\" data-l=\"2-33\">E os gritos de soccorro ouvir estrangulados.</span>\n<span class=\"ln\" data-l=\"2-35\">E n'estes nebulosos corredores</span>\n<span class=\"ln\" data-l=\"2-36\">Nauseam-me, surgindo, os ventres das tabernas;</span>\n<span class=\"ln\" data-l=\"2-37\">Na volta, com saudade, e aos bordos sobre as pernas,</span>\n<span class=\"ln\" data-l=\"2-38\">Cantam, de braço dado, uns tristes bebedores.</span>\n<span class=\"ln\" data-l=\"2-40\">Eu não receio, todavia, os roubos;</span>\n<span class=\"ln\" data-l=\"2-41\">Afastam-se, a distancia, os dubios caminhantes;</span>\n<span class=\"ln\" data-l=\"2-42\">E sujos, sem ladrar, osseos, febris, errantes,</span>\n<span class=\"ln\" data-l=\"2-43\">Amarelladamente, os cães parecem lobos.</span></p><p class=\"v\"><span class=\"ln\" data-l=\"2-45\">E os guardas, que revistam as escadas,</span>\n<span class=\"ln\" data-l=\"2-46\">Caminham de lanterna e servem de chaveiros;</span>\n<span class=\"ln\" data-l=\"2-47\">Por cima, as immoraes, nos seus roupões ligeiros,</span>\n<span class=\"ln\" data-l=\"2-48\">Tossem, fumando sobre a pedra das sacadas.</span>\n<span class=\"ln\" data-l=\"2-50\">E, enorme, n'esta massa irregular</span>\n<span class=\"ln\" data-l=\"2-51\">De predios sepulchraes, com dimensões de montes,</span>\n<span class=\"ln\" data-l=\"2-52\">A Dôr humana busca os amplos horisontes,</span>\n<span class=\"ln\" data-l=\"2-53\">E tem marés, de fel, como um sinistro mar!</span></p><p class=\"fonte\">Cesário Verde, «O Sentimento dum Ocidental», <i>O Livro de Cesário Verde</i> (1887) (grafia da edição).</p><p class=\"fonte\"><a href=\"../../../m6/licao-m6-f07/\">Texto e fontes na lição de origem</a></p></details>",
-      "recycledFrom": "/pt/m6/licao-m6-f07/"
+      "rot": "Abre",
+      "titulo": "Aquecer",
+      "html": "<p class=\"abre-t\">Cesário: uma cidade em transformação</p><p><b>Objetivo:</b> relacionar perceção, percurso e crítica social.</p><p>Doze cartões, dez minutos. O texto de apoio está no cartão seguinte. A seguir, voltas à sessão para ler e escrever no caderno.</p>",
+      "recycledFrom": "/pt/exame/",
+      "adaptacao": "Cartão de abertura da sessão (02/11/2026)."
     },
     {
-      "p": "Como abre «_Noite Fechada_» e que imagem dá da cidade?",
+      "t": "ler",
+      "titulo": "Texto para consultar",
+      "html": "<p>Consulta o texto quando precisares de confirmar uma escolha.</p><details><summary>Abrir o texto de apoio</summary><p class=\"v\"><span class=\"ln\" data-l=\"0-0\">Toca-se as grades, nas cadeias. Som</span>\n<span class=\"ln\" data-l=\"0-1\">Que mortifica e deixa umas loucuras mansas!</span>\n<span class=\"ln\" data-l=\"0-2\">O aljube, em que hoje estão velhinhas e creanças,</span>\n<span class=\"ln\" data-l=\"0-3\">Bem raramente encerra uma mulher de «dom»!</span></p><p class=\"v\"><span class=\"ln\">[…]</span></p><p class=\"v\"><span class=\"ln\" data-l=\"0-15\">Duas egrejas, n'um saudoso largo,</span>\n<span class=\"ln\" data-l=\"0-16\">Lançam a nodoa negra e funebre do clero:</span>\n<span class=\"ln\" data-l=\"0-17\">N'ellas esfumo um ermo inquisidor severo,</span>\n<span class=\"ln\" data-l=\"0-18\">Assim que pela Historia eu me aventuro e alargo.</span></p><p class=\"v\"><span class=\"ln\">[…]</span></p><p class=\"v\"><span class=\"ln\" data-l=\"0-25\">Mas, n'um recinto publico e vulgar,</span>\n<span class=\"ln\" data-l=\"0-26\">Com bancos de namoro e exiguas pimenteiras,</span>\n<span class=\"ln\" data-l=\"0-27\">Bronzeo, monumental, de proporções guerreiras,</span>\n<span class=\"ln\" data-l=\"0-28\">Um épico d'outr'ora ascende, n'um pilar!</span></p><p class=\"v\"><span class=\"ln\" data-l=\"0-30\">E eu sonho o Colera, imagina a Febre,</span>\n<span class=\"ln\" data-l=\"0-31\">N'esta accumulação de corpos enfezados;</span>\n<span class=\"ln\" data-l=\"0-32\">Sombrios e espectraes recolhem os soldados;</span>\n<span class=\"ln\" data-l=\"0-33\">Inflamma-se um palacio em face de um casebre.</span></p><p class=\"v\"><span class=\"ln\" data-l=\"0-35\">Partem patrulhas de cavallaria</span>\n<span class=\"ln\" data-l=\"0-36\">Dos arcos dos quarteis que foram já conventos;</span>\n<span class=\"ln\" data-l=\"0-37\">Edade-média! A pé, outras, a passos lentos,</span>\n<span class=\"ln\" data-l=\"0-38\">Derramam-se por toda a capital, que esfria.</span></p><p class=\"v\"><span class=\"ln\" data-l=\"0-40\">Triste cidade! Eu temo que me avives</span>\n<span class=\"ln\" data-l=\"0-41\">Uma paixão defunta! Aos lampeões distantes,</span>\n<span class=\"ln\" data-l=\"0-42\">Enlutam-me, alvejando, as tuas elegantes,</span>\n<span class=\"ln\" data-l=\"0-43\">Curvadas a sorrir ás montras dos ourives.</span></p><p class=\"fonte\">Cesário Verde, «O Sentimento dum Ocidental», II. «Noite Fechada», <i>O Livro de Cesário Verde</i> (1887) (grafia da edição); estrofes escolhidas, cortes marcados com […].</p><p class=\"v\"><span class=\"ln\" data-l=\"1-20\">«Dó da miseria!... Compaixão de mim!...»</span>\n<span class=\"ln\" data-l=\"1-21\">E, nas esquinas, calvo, eterno, sem repouso,</span>\n<span class=\"ln\" data-l=\"1-22\">Pede-me sempre esmola um homemzinho idoso,</span>\n<span class=\"ln\" data-l=\"1-23\">Meu velho professor nas aulas de latim!</span></p><p class=\"fonte\">Cesário Verde, «O Sentimento dum Ocidental», III. «Ao Gás», <i>O Livro de Cesário Verde</i> (1887) (grafia da edição); uma estrofe.</p><p class=\"v\"><span class=\"ln\" data-l=\"2-5\">Por baixo, que portões! Que arruamentos!</span>\n<span class=\"ln\" data-l=\"2-6\">Um parafuso cáe nas lages, ás escuras:</span>\n<span class=\"ln\" data-l=\"2-7\">Collocam-se taipaes, rangem as fechaduras,</span>\n<span class=\"ln\" data-l=\"2-8\">E os olhos d'um caleche espantam-me, sangrentos.</span></p><p class=\"v\"><span class=\"ln\">[…]</span></p><p class=\"v\"><span class=\"ln\" data-l=\"2-15\">Se eu não morresse, nunca! E eternamente</span>\n<span class=\"ln\" data-l=\"2-16\">Buscasse e conseguisse a perfeição das cousas!</span>\n<span class=\"ln\" data-l=\"2-17\">Esqueço-me a prever castissimas esposas,</span>\n<span class=\"ln\" data-l=\"2-18\">Que aninhem em mansões de vidro transparente!</span></p><p class=\"fonte\">Cesário Verde, «O Sentimento dum Ocidental», IV. «Horas Mortas», <i>O Livro de Cesário Verde</i> (1887) (grafia da edição); estrofes escolhidas, cortes marcados com […].</p><p class=\"fonte\"><a href=\"../../../m6/licao-m6-f07/\" target=\"_blank\" rel=\"noopener\">Texto e fontes na lição de origem</a></p></details>",
+      "recycledFrom": "/pt/m6/licao-m6-f07/",
+      "rot": "Texto de apoio"
+    },
+    {
+      "p": "Como abre «Noite Fechada» e que imagem dá da cidade?",
       "f": "«Toca-se as grades, nas cadeias»: a noite fecha-se e a cidade ganha grades.",
       "legacyId": "s11-q1",
       "recycledFrom": "/pt/m6/licao-m6-f07/",
@@ -28,6 +37,69 @@
       ]
     },
     {
+      "t": "versos",
+      "p": "Põe os versos da estrofe das duas igrejas pela ordem.",
+      "linhas": [
+        "Duas egrejas, n'um saudoso largo,",
+        "Lançam a nodoa negra e funebre do clero:",
+        "N'ellas esfumo um ermo inquisidor severo,",
+        "Assim que pela Historia eu me aventuro e alargo."
+      ],
+      "f": "As igrejas, a nódoa do clero, o inquisidor imaginado, a viagem pela História.",
+      "recycledFrom": "/pt/m6/licao-m6-f07/",
+      "sourceCard": 7,
+      "fe": "Trocaste a ordem da estrofe. Primeiro as duas igrejas no largo, depois a «nodoa» do clero, a seguir o inquisidor que o sujeito imagina, e só no fim a viagem pela História."
+    },
+    {
+      "t": "completar",
+      "p": "Que antítese social fecha a estrofe do Cólera e da Febre?",
+      "frase": "A luz de um [1] diante de um [2] põe riqueza e miséria lado a lado.",
+      "lacunas": [
+        {
+          "o": [
+            "palácio",
+            "convento",
+            "quartel"
+          ],
+          "c": 0,
+          "fe": [
+            null,
+            "Os conventos aparecem noutra estrofe, já transformados em quartéis; aqui é um palácio que se acende.",
+            "Os quartéis vêm noutra estrofe; a luz que se acende é a de um palácio, «em face de um casebre»."
+          ]
+        },
+        {
+          "o": [
+            "casebre",
+            "estanco",
+            "hospital"
+          ],
+          "c": 0,
+          "fe": [
+            null,
+            "Os estancos são lojas de tabaco, de outra estrofe; diante do palácio está um casebre, a casa pobre.",
+            "Não há hospital neste verso; o contraste é entre o palácio e o casebre."
+          ]
+        }
+      ],
+      "f": "«Inflamma-se um **palacio** em face de um **casebre**»: desigualdade numa só imagem.",
+      "recycledFrom": "/pt/m6/licao-m6-f07/",
+      "sourceCard": 10,
+      "fe": "Trocaste os termos da antítese. Relê o último verso da estrofe que começa em «E eu sonho o Colera»: a casa rica e a casa pobre ficam frente a frente."
+    },
+    {
+      "t": "sublinhar",
+      "p": "Toca na palavra que diz o que os quartéis foram antes.",
+      "frase": "Dos arcos dos quarteis que foram já conventos;",
+      "certas": [
+        7
+      ],
+      "f": "«Conventos»: os quartéis guardam o passado nas pedras, «Edade-média!».",
+      "recycledFrom": "/pt/m6/licao-m6-f07/",
+      "sourceCard": 11,
+      "fe": "Marcaste o que os quartéis são hoje, não o que foram. A palavra está depois de «que foram já»."
+    },
+    {
       "p": "«Um épico d'outr'ora ascende, n'um pilar!»: quem é este épico?",
       "f": "O «épico d'outr'ora» é a estátua de Camões, «Bronzeo, monumental», segundo o glossário.",
       "legacyId": "s11-q2",
@@ -41,9 +113,42 @@
       "c": 0,
       "fe": [
         null,
-        "Épico designa aqui o poeta representado, não um soldado.",
+        "«Épico» designa aqui o poeta representado, não um soldado.",
         "O forjador pertence a outra imagem do texto."
       ]
+    },
+    {
+      "t": "sublinhar",
+      "p": "Toca nas duas palavras com que o sujeito chama a cidade.",
+      "frase": "Triste cidade! Eu temo que me avives",
+      "certas": [
+        0,
+        1
+      ],
+      "f": "«Triste cidade!»: o sujeito fala à cidade como a uma pessoa, antes de temer a paixão.",
+      "recycledFrom": "/pt/m6/licao-m6-f07/",
+      "sourceCard": 12,
+      "fe": "Marcaste o que o sujeito teme, não o modo como chama a cidade. A apóstrofe abre o verso, antes do ponto de exclamação."
+    },
+    {
+      "t": "vf",
+      "p": "O homem idoso que pede esmola nas esquinas ensinou latim ao sujeito.",
+      "v": true,
+      "f": "Verdadeiro: o verso seguinte revela-o: quem lhe ensinou latim, agora calvo, eterno, sem repouso.",
+      "cita": "Pede-me sempre esmola um homemzinho idoso,",
+      "fe": "É verdadeiro: o verso seguinte diz quem é o homenzinho: o seu velho mestre «nas aulas de latim».",
+      "recycledFrom": "/pt/m6/licao-m6-f07/",
+      "sourceCard": 19
+    },
+    {
+      "t": "vf",
+      "p": "Os «olhos» do caleche que espantam o sujeito são vermelhos, «sangrentos».",
+      "v": true,
+      "f": "Verdadeiro: «E os olhos d'um caleche espantam-me, sangrentos»: os «olhos» da carruagem, que se podem ler como as suas lanternas, vermelhos na escuridão.",
+      "cita": "E os olhos d'um caleche espantam-me, sangrentos.",
+      "fe": "É verdadeiro: «E os olhos d'um caleche espantam-me, sangrentos»: as lanternas do caleche, vermelhas na escuridão.",
+      "recycledFrom": "/pt/m6/licao-m6-f07/",
+      "sourceCard": 21
     },
     {
       "p": "Em «Um cheiro salutar e honesto a pão no forno», «honesto» é…",
@@ -59,109 +164,13 @@
       "c": 0,
       "fe": [
         null,
-        "Salutar e honesto não formam um par de ideias opostas.",
-        "Honesto não liga duas épocas: desloca uma qualidade moral."
+        "«Salutar» e «honesto» não formam um par de ideias opostas.",
+        "«Honesto» não liga duas épocas: desloca uma qualidade moral."
       ]
     },
     {
       "t": "versos",
-      "p": "Põe os versos da estrofe das duas igrejas pela ordem.",
-      "linhas": [
-        "Duas egrejas, n'um saudoso largo,",
-        "Lançam a nodoa negra e funebre do clero:",
-        "N'ellas esfumo um ermo inquisidor severo,",
-        "Assim que pela Historia eu me aventuro e alargo."
-      ],
-      "f": "As igrejas, a nódoa do clero, o inquisidor imaginado, a viagem pela História.",
-      "cita": "Duas egrejas, n'um saudoso largo,",
-      "recycledFrom": "/pt/m6/licao-m6-f07/",
-      "sourceCard": 7,
-      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder."
-    },
-    {
-      "t": "completar",
-      "p": "Que antítese social há em «Inflamma-se um palacio em face de um casebre»?",
-      "frase": "A luz de um [1] diante de um [2] põe riqueza e miséria lado a lado.",
-      "lacunas": [
-        {
-          "o": [
-            "palácio",
-            "convento"
-          ],
-          "c": 0,
-          "fe": [
-            null,
-            "Nesta lacuna, convento não corresponde à relação pedida."
-          ]
-        },
-        {
-          "o": [
-            "casebre",
-            "estanco"
-          ],
-          "c": 0,
-          "fe": [
-            null,
-            "Nesta lacuna, estanco não corresponde à relação pedida."
-          ]
-        }
-      ],
-      "f": "«Inflamma-se um **palacio** em face de um **casebre**»: desigualdade numa só imagem.",
-      "cita": "Inflamma-se um palacio em face de um casebre.",
-      "recycledFrom": "/pt/m6/licao-m6-f07/",
-      "sourceCard": 10,
-      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder."
-    },
-    {
-      "t": "sublinhar",
-      "p": "Toca na palavra que diz o que os quartéis foram antes.",
-      "frase": "Dos arcos dos quarteis que foram já conventos;",
-      "certas": [
-        7
-      ],
-      "f": "«Conventos»: os quartéis guardam o passado nas pedras, «Edade-média!».",
-      "cita": "Dos arcos dos quarteis que foram já conventos;",
-      "recycledFrom": "/pt/m6/licao-m6-f07/",
-      "sourceCard": 11,
-      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder."
-    },
-    {
-      "t": "sublinhar",
-      "p": "Toca nas duas palavras com que o sujeito chama a cidade.",
-      "frase": "Triste cidade! Eu temo que me avives",
-      "certas": [
-        0,
-        1
-      ],
-      "f": "«Triste cidade!»: o sujeito fala à cidade como a uma pessoa, antes de temer a paixão.",
-      "cita": "Triste cidade! Eu temo que me avives",
-      "recycledFrom": "/pt/m6/licao-m6-f07/",
-      "sourceCard": 12,
-      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder."
-    },
-    {
-      "t": "vf",
-      "p": "O homem idoso que pede esmola nas esquinas ensinou latim ao sujeito.",
-      "v": true,
-      "f": "Verdadeiro: o verso seguinte revela-o: quem lhe ensinou latim, agora calvo, eterno, sem repouso.",
-      "cita": "Pede-me sempre esmola um homemzinho idoso,",
-      "fe": "É verdadeiro: o verso 66 diz quem é o homenzinho que pede esmola: o seu velho mestre «nas aulas de latim».",
-      "recycledFrom": "/pt/m6/licao-m6-f07/",
-      "sourceCard": 19
-    },
-    {
-      "t": "vf",
-      "p": "Os «olhos» do caleche que espantam o sujeito são vermelhos, «sangrentos».",
-      "v": true,
-      "f": "Verdadeiro: «E os olhos d'um caleche espantam-me, sangrentos»: os «olhos» da carruagem, que se podem ler como as suas lanternas, vermelhos na escuridão.",
-      "cita": "E os olhos d'um caleche espantam-me, sangrentos.",
-      "fe": "É verdadeiro: o verso 74 diz «E os olhos d'um caleche espantam-me, sangrentos»: vermelhos na escuridão.",
-      "recycledFrom": "/pt/m6/licao-m6-f07/",
-      "sourceCard": 21
-    },
-    {
-      "t": "versos",
-      "p": "Põe os versos do sonho de «_Horas Mortas_» pela ordem.",
+      "p": "Põe os versos do sonho de «Horas Mortas» pela ordem.",
       "linhas": [
         "Se eu não morresse, nunca! E eternamente",
         "Buscasse e conseguisse a perfeição das cousas!",
@@ -169,10 +178,9 @@
         "Que aninhem em mansões de vidro transparente!"
       ],
       "f": "Não morrer, buscar a perfeição, prever esposas em mansões de vidro: o sonho antes do «Mas».",
-      "cita": "Se eu não morresse, nunca! E eternamente",
       "recycledFrom": "/pt/m6/licao-m6-f07/",
       "sourceCard": 23,
-      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder."
+      "fe": "Trocaste a ordem do sonho. Começa na condição («Se eu não morresse»), segue para a perfeição das coisas e só depois imagina as esposas nas mansões de vidro."
     },
     {
       "t": "emparelhar",
@@ -195,14 +203,14 @@
           "O sonho"
         ]
       ],
-      "f": "O pão e o ratoneiro pertencem à cidade percebida em «Ao Gás»; a chimera e os continentes pertencem ao sonho de «_Horas Mortas_». Esta distinção não torna a observação neutra: o pão «honesto» já contém uma valorização do trabalho.",
+      "f": "O pão e o ratoneiro pertencem à cidade percebida em «Ao Gás»; a chimera e os continentes pertencem ao sonho de «Horas Mortas». Esta distinção não torna a observação neutra: o pão «honesto» já contém uma valorização do trabalho.",
       "recycledFrom": "/pt/m6/licao-m6-f07/",
       "sourceCard": 30,
-      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder."
+      "fe": "Trocaste reportagem e sonho. Pergunta a cada verso se descreve o que o sujeito vê na rua, como o pão ou o ratoneiro, ou se imagina outra vida, como a quimera e os continentes."
     },
     {
       "t": "emparelhar",
-      "p": "Liga cada palavra de «_Horas Mortas_» ao seu sentido.",
+      "p": "Liga cada palavra de «Horas Mortas» ao seu sentido.",
       "pares": [
         [
           "emparedados",
@@ -221,10 +229,10 @@
           "amargura"
         ]
       ],
-      "f": "Emparedados, chimera, transmigrar, fel: a prisão, o sonho e a Dor de «_Horas Mortas_».",
+      "f": "Emparedados, chimera, transmigrar, fel: a prisão, o sonho e a Dor de «Horas Mortas».",
       "recycledFrom": "/pt/m6/licao-m6-f07/",
       "sourceCard": 32,
-      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder."
+      "fe": "Trocaste os sentidos. Lê a palavra dentro do verso: «emparedados» vem de parede, «transmigrar» é passar a outra vida, «chimera» é o sonho impossível, «fel» é o amargo."
     }
   ]
 }

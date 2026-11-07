@@ -5,9 +5,18 @@
   "cartoes": [
     {
       "t": "ler",
+      "rot": "Abre",
+      "titulo": "Aquecer",
+      "html": "<p class=\"abre-t\">Eça: ver a crítica nos pormenores</p><p><b>Objetivo:</b> passar da descrição à interpretação crítica.</p><p>Doze cartões, dez minutos. O texto de apoio está no cartão seguinte. A seguir, voltas à sessão para ler e escrever no caderno.</p>",
+      "recycledFrom": "/pt/exame/",
+      "adaptacao": "Cartão de abertura da sessão (02/11/2026)."
+    },
+    {
+      "t": "ler",
       "titulo": "Texto para consultar",
-      "html": "<p>Consulta o texto quando precisares de confirmar uma escolha.</p><details><summary>Abrir o texto de apoio</summary><p class=\"pr\" data-l=\"0-0\"><b>[1]</b> A casa que os Maias vieram habitar em Lisboa, no outono de 1875, era conhecida na visinhança da rua de S. Francisco de Paula, e em todo o bairro das Janellas Verdes, pela <i>casa do Ramalhete</i> ou simplesmente o <i>Ramalhete</i>. Apesar d'este fresco nome de vivenda campestre, o <i>Ramalhete</i>, sombrio casarão de paredes severas, com um renque de estreitas varandas de ferro no primeiro andar, e por cima uma timida fila de janellinhas abrigadas á beira do telhado, tinha o aspecto tristonho de Residencia Ecclesiastica que competia a uma edificação do reinado da sr.ª D. Maria I: com uma sineta e com uma cruz no topo assimilhar-se-hia a um Collegio de Jesuitas. O nome de Ramalhete provinha de certo d'um revestimento quadrado de azulejos fazendo painel no logar heraldico do Escudo d'Armas, que nunca chegara a ser collocado, e representando um grande ramo de girasoes atado por uma fita onde se distinguiam letras e numeros d'uma data.</p><p class=\"pr\" data-l=\"0-1\"><b>[2]</b> Longos annos o Ramalhete permanecera deshabitado, com teias d'aranha pelas grades dos postigos terreos, e cobrindo-se de tons de ruina. Em 1858 Monsenhor Buccarini, Nuncio de S. Santidade, visitara-o com idéa d'installar lá a Nunciatura, seduzido pela gravidade clerical do edificio e pela paz dormente do bairro: e o interior do casarão agradara-lhe tambem, com a sua disposição apalaçada, os tectos apainelados, as paredes cobertas de <i>frescos</i> onde já desmaiavam as rosas das grinaldas e as faces dos Cupidinhos. Mas Monsenhor, com os seus habitos de rico prelado romano, necessitava na sua vivenda os arvoredos e as agoas d'um jardim de luxo: e o Ramalhete possuia apenas, ao fundo d'um terraço de tijolo, um pobre quintal inculto, abandonado ás hervas bravas, com um cypreste, um cedro, uma cascatasinha secca, um tanque entulhado, e uma estatua de marmore (onde Monsenhor reconheceu logo Venus Citherêa) ennegrecendo a um canto na lenta humidade das ramagens silvestres. Além d'isso, a renda que pedio o velho Villaça, procurador dos Maias, pareceu tão exagerada a Monsenhor, que lhe perguntou sorrindo se ainda julgava a Egreja nos tempos de Leão X. Villaça respondeu — que tambem a nobreza não estava nos tempos do sr. D. João V. E o Ramalhete continuou deshabitado.</p><p class=\"fonte\">Eça de Queirós, <i>Os Maias</i> (1888), cap. I (grafia da edição).</p><p class=\"pr\" data-l=\"1-0\"><b>[1]</b> Depois na rua Carlos parou, deu um longo olhar ao sombrio casarão, que n'aquella primeira penumbra tomava um aspecto mais carregado de residencia ecclesiastica, com as suas paredes severas, a sua fila de janellinhas fechadas, as grades dos postigos terreos cheias de treva, mudo, para sempre deshabitado, cobrindo-se já de tons de ruina.</p><p class=\"pr\" data-l=\"1-1\"><b>[2]</b> Uma commoção passou-lhe n'alma, murmurou, travando do braço do Ega:</p><p class=\"pr\" data-l=\"1-2\"><b>[3]</b> — É curioso! Só vivi dois annos n'esta casa, e é n'ella que me parece estar mettida a minha vida inteira!</p><p class=\"pr\" data-l=\"1-3\"><b>[4]</b> Ega não se admirava. Só alli no Ramalhete elle vivera realmente d'aquillo que dá sabôr e relevo á vida — a paixão.</p><p class=\"fonte\">Eça de Queirós, <i>Os Maias</i> (1888), último capítulo (grafia da edição).</p><p class=\"fonte\"><a href=\"../../../m5/licao-m5-f10/\">Texto e fontes na lição de origem</a></p></details>",
-      "recycledFrom": "/pt/m5/licao-m5-f10/"
+      "html": "<p>Consulta o texto quando precisares de confirmar uma escolha.</p><details><summary>Abrir o texto de apoio</summary><p class=\"pr\" data-l=\"0-0\"><b>[1]</b> A casa que os Maias vieram habitar em Lisboa, no outono de 1875, era conhecida na visinhança da rua de S. Francisco de Paula, e em todo o bairro das Janellas Verdes, pela <i>casa do Ramalhete</i> ou simplesmente o <i>Ramalhete</i>. Apesar d'este fresco nome de vivenda campestre, o <i>Ramalhete</i>, sombrio casarão de paredes severas, com um renque de estreitas varandas de ferro no primeiro andar, e por cima uma timida fila de janellinhas abrigadas á beira do telhado, tinha o aspecto tristonho de Residencia Ecclesiastica que competia a uma edificação do reinado da sr.ª D. Maria I: com uma sineta e com uma cruz no topo assimilhar-se-hia a um Collegio de Jesuitas. O nome de Ramalhete provinha de certo d'um revestimento quadrado de azulejos fazendo painel no logar heraldico do Escudo d'Armas, que nunca chegara a ser collocado, e representando um grande ramo de girasoes atado por uma fita onde se distinguiam letras e numeros d'uma data.</p><p class=\"pr\" data-l=\"0-1\"><b>[2]</b> Longos annos o Ramalhete permanecera deshabitado, com teias d'aranha pelas grades dos postigos terreos, e cobrindo-se de tons de ruina. Em 1858 Monsenhor Buccarini, Nuncio de S. Santidade, visitara-o com idéa d'installar lá a Nunciatura […]. Mas Monsenhor […] necessitava na sua vivenda os arvoredos e as agoas d'um jardim de luxo: e o Ramalhete possuia apenas, ao fundo d'um terraço de tijolo, um pobre quintal inculto, abandonado ás hervas bravas, com um cypreste, um cedro, uma cascatasinha secca, um tanque entulhado, e uma estatua de marmore […] ennegrecendo a um canto na lenta humidade das ramagens silvestres. […]</p><p class=\"fonte\">Eça de Queirós, <i>Os Maias</i> (1888), cap. I (grafia da edição); cortes marcados com […].</p><p class=\"pr\" data-l=\"1-0\"><b>[1]</b> Depois na rua Carlos parou, deu um longo olhar ao sombrio casarão, que n'aquella primeira penumbra tomava um aspecto mais carregado de residencia ecclesiastica, com as suas paredes severas, a sua fila de janellinhas fechadas, as grades dos postigos terreos cheias de treva, mudo, para sempre deshabitado, cobrindo-se já de tons de ruina.</p><p class=\"pr\" data-l=\"1-1\"><b>[2]</b> Uma commoção passou-lhe n'alma, murmurou, travando do braço do Ega:</p><p class=\"pr\" data-l=\"1-2\"><b>[3]</b> — É curioso! Só vivi dois annos n'esta casa, e é n'ella que me parece estar mettida a minha vida inteira!</p><p class=\"pr\" data-l=\"1-3\"><b>[4]</b> Ega não se admirava. Só alli no Ramalhete elle vivera realmente d'aquillo que dá sabôr e relevo á vida — a paixão.</p><p class=\"fonte\">Eça de Queirós, <i>Os Maias</i> (1888), último capítulo (grafia da edição).</p><p class=\"fonte\"><a href=\"../../../m5/licao-m5-f10/\" target=\"_blank\" rel=\"noopener\">Texto e fontes na lição de origem</a></p></details>",
+      "recycledFrom": "/pt/m5/licao-m5-f10/",
+      "rot": "Texto de apoio"
     },
     {
       "p": "De onde vem o nome «Ramalhete»?",
@@ -17,7 +26,7 @@
       "t": "escolha",
       "o": [
         "Do painel de azulejos com girassóis.",
-        "Do brasão de armas colocado na casa.",
+        "Do brasão de armas colocado na fachada.",
         "Do cipreste e do cedro no quintal."
       ],
       "c": 0,
@@ -28,24 +37,6 @@
       ]
     },
     {
-      "p": "Apesar do nome fresco, o Ramalhete tem o aspeto tristonho de uma casa de padres.",
-      "f": "Verdadeiro: «sombrio casarão de paredes severas», com «o aspecto tristonho de Residencia Ecclesiastica»; o nome é fresco, a casa não.",
-      "legacyId": "s09-q2",
-      "recycledFrom": "/pt/m5/licao-m5-f10/",
-      "t": "vf",
-      "v": true,
-      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder."
-    },
-    {
-      "p": "O quintal do Ramalhete é um jardim de luxo, com arvoredos e águas, como o Núncio queria.",
-      "f": "Falso: «um pobre quintal inculto», com cipreste, cascata seca, tanque entulhado e Vénus a enegrecer.",
-      "legacyId": "s09-q3",
-      "recycledFrom": "/pt/m5/licao-m5-f10/",
-      "t": "vf",
-      "v": false,
-      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder."
-    },
-    {
       "t": "completar",
       "p": "Quando chegam os Maias e onde fica o Ramalhete?",
       "frase": "Os Maias chegam ao Ramalhete no outono de [1]; a casa fica em [2] e é conhecida no bairro das Janelas Verdes.",
@@ -53,31 +44,34 @@
         {
           "o": [
             "1875",
-            "1858"
+            "1858",
+            "1888"
           ],
           "c": 0,
           "fe": [
             null,
-            "Nesta lacuna, 1858 não corresponde à relação pedida."
+            "1858 é o ano em que o Núncio visitou a casa; os Maias chegam «no outono de 1875».",
+            "1888 é a data de publicação do romance; a chegada dos Maias é «no outono de 1875»."
           ]
         },
         {
           "o": [
             "Lisboa",
-            "Sintra"
+            "Sintra",
+            "Coimbra"
           ],
           "c": 0,
           "fe": [
             null,
-            "Nesta lacuna, Sintra não corresponde à relação pedida."
+            "Sintra aparece noutros capítulos do romance; o Ramalhete fica em Lisboa, no bairro das Janelas Verdes.",
+            "Coimbra é onde Carlos estuda; a casa que os Maias vêm habitar fica em Lisboa."
           ]
         }
       ],
       "f": "«No outono de **1875**», em **Lisboa**; 1858 é a visita do Núncio, 1888 a data do romance.",
-      "cita": "A casa que os Maias vieram habitar em Lisboa, no outono de 1875, era conhecida na visinhança da rua de S.",
       "recycledFrom": "/pt/m5/licao-m5-f10/",
       "sourceCard": 5,
-      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder."
+      "fe": "Trocaste uma data ou um lugar. Relê a primeira frase do capítulo: «A casa que os Maias vieram habitar em Lisboa, no outono de 1875»."
     },
     {
       "t": "sublinhar",
@@ -88,10 +82,9 @@
         5
       ],
       "f": "**«sineta»** e **«cruz»**: a casa já parece de padres; só lhe falta o sino e a cruz.",
-      "cita": "A casa que os Maias vieram habitar em Lisboa, no outono de 1875, era conhecida na visinhança da rua de S.",
       "recycledFrom": "/pt/m5/licao-m5-f10/",
       "sourceCard": 6,
-      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder."
+      "fe": "Marcaste o que a casa seria, não o que lhe falta. Procura os dois objetos que, «no topo», a fariam parecer um colégio de jesuítas."
     },
     {
       "t": "completar",
@@ -101,31 +94,43 @@
         {
           "o": [
             "brasão",
-            "relógio"
+            "relógio",
+            "portão"
           ],
           "c": 0,
           "fe": [
             null,
-            "Nesta lacuna, relógio não corresponde à relação pedida."
+            "Não há relógio na fachada: o painel ocupa o «logar heraldico do Escudo d'Armas», o lugar do brasão.",
+            "O painel não está sobre o portão: está no lugar do «Escudo d'Armas», o brasão que nunca chegou."
           ]
         },
         {
           "o": [
             "colocado",
-            "desenhado"
+            "desenhado",
+            "comprado"
           ],
           "c": 0,
           "fe": [
             null,
-            "Nesta lacuna, desenhado não corresponde à relação pedida."
+            "O texto não fala de desenho: o escudo «nunca chegara a ser collocado».",
+            "Não se trata de compra: o escudo «nunca chegara a ser collocado», e o painel ficou no seu lugar."
           ]
         }
       ],
       "f": "No lugar do **brasão** («Escudo d'Armas»), que nunca chegou a ser **colocado**: a casa tem nome fresco e nenhum escudo.",
-      "cita": "A casa que os Maias vieram habitar em Lisboa, no outono de 1875, era conhecida na visinhança da rua de S.",
       "recycledFrom": "/pt/m5/licao-m5-f10/",
       "sourceCard": 8,
-      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder."
+      "fe": "Trocaste o lugar do painel. Relê o fim do parágrafo [1]: os azulejos fazem painel «no logar heraldico do Escudo d'Armas, que nunca chegara a ser collocado»."
+    },
+    {
+      "p": "Apesar do nome fresco, o Ramalhete tem o aspeto tristonho de uma casa de padres.",
+      "f": "Verdadeiro: «sombrio casarão de paredes severas», com «o aspecto tristonho de Residencia Ecclesiastica»; o nome é fresco, a casa não.",
+      "legacyId": "s09-q2",
+      "recycledFrom": "/pt/m5/licao-m5-f10/",
+      "t": "vf",
+      "v": true,
+      "fe": "Responder «falso» é ficar pelo nome. Relê «sombrio casarão de paredes severas» e «Residencia Ecclesiastica»: a casa parece de padres."
     },
     {
       "t": "sublinhar",
@@ -135,10 +140,9 @@
         7
       ],
       "f": "**«procurador»**: o administrador dos Maias; a renda que pediu afastou o Núncio.",
-      "cita": "Longos annos o Ramalhete permanecera deshabitado, com teias d'aranha pelas grades dos postigos terreos, e cobrindo-se de tons de ruina.",
       "recycledFrom": "/pt/m5/licao-m5-f10/",
       "sourceCard": 14,
-      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder."
+      "fe": "Marcaste a renda ou o nome, não a função. Procura a palavra, entre vírgulas, que diz o que Villaça faz pelos Maias."
     },
     {
       "t": "sublinhar",
@@ -148,20 +152,27 @@
         3
       ],
       "f": "**«penumbra»**: no início a luz era neutra; no fim há penumbra e treva.",
-      "cita": "Depois na rua Carlos parou, deu um longo olhar ao sombrio casarão, que n'aquella primeira penumbra tomava um aspecto mais carregado de residencia…",
       "recycledFrom": "/pt/m5/licao-m5-f10/",
       "sourceCard": 17,
-      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder."
+      "fe": "Marcaste o aspeto da casa, não a luz. Procura o nome que, depois de «primeira», diz como estava a luz ao fim do dia."
     },
     {
       "t": "vf",
       "p": "Quem murmura «Só vivi dois annos n'esta casa» é Ega, ao Carlos.",
       "v": false,
       "f": "Falso: é **Carlos**, «travando do braço do Ega», ao dar o último olhar ao casarão.",
-      "cita": "— É curioso! Só vivi dois annos n'esta casa, e é n'ella que me parece estar mettida a minha vida inteira!",
-      "fe": "Não é Ega: é Carlos que murmura, «travando do braço do Ega», ao dar o último olhar ao casarão (parágrafo 2 do excerto B).",
+      "fe": "Não é Ega: é Carlos que murmura, «travando do braço do Ega», ao dar o último olhar ao casarão, no excerto do último capítulo.",
       "recycledFrom": "/pt/m5/licao-m5-f10/",
       "sourceCard": 18
+    },
+    {
+      "p": "O quintal do Ramalhete é um jardim de luxo, com arvoredos e águas, como o Núncio queria.",
+      "f": "Falso: «um pobre quintal inculto», com cipreste, cascata seca, tanque entulhado e Vénus a enegrecer.",
+      "legacyId": "s09-q3",
+      "recycledFrom": "/pt/m5/licao-m5-f10/",
+      "t": "vf",
+      "v": false,
+      "fe": "Era o que o Núncio queria, não o que encontrou. Relê «um pobre quintal inculto, abandonado ás hervas bravas»."
     },
     {
       "t": "sublinhar",
@@ -172,10 +183,9 @@
         7
       ],
       "f": "**«sabôr» e «relevo»**: só no Ramalhete Carlos vivera a paixão; o resto foi vida sem gosto.",
-      "cita": "Ega não se admirava. Só alli no Ramalhete elle vivera realmente d'aquillo que dá sabôr e relevo á vida — a paixão.",
       "recycledFrom": "/pt/m5/licao-m5-f10/",
       "sourceCard": 20,
-      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder."
+      "fe": "Marcaste o verbo ou a vida, não o que a paixão lhe dá. São dois nomes ligados por «e», antes de «á vida»."
     },
     {
       "t": "emparelhar",
@@ -201,20 +211,20 @@
       "f": "No início há esperança e janelas tímidas; no fim, as mesmas paredes, fechadas e cheias de treva.",
       "recycledFrom": "/pt/m5/licao-m5-f10/",
       "sourceCard": 22,
-      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder."
+      "fe": "Trocaste início e fim. Pergunta a cada pormenor se é da chegada dos Maias, em 1875, ou do último olhar de Carlos, com as janelas fechadas e a treva."
     },
     {
       "t": "ordenar",
       "p": "Para comparar o início e o fim do Ramalhete, por ordem:",
       "passos": [
-        "Sublinha em B as expressões que já estavam em A",
-        "Sublinha o que B acrescenta",
+        "Procura no fim as expressões que já estavam no início",
+        "Repara no que o fim acrescenta",
         "Diz o que a repetição faz"
       ],
       "f": "Primeiro o que se repete, depois o que se agrava, por fim o sentido: tudo voltou à ruína inicial.",
       "recycledFrom": "/pt/m5/licao-m5-f10/",
       "sourceCard": 24,
-      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder."
+      "fe": "Saltaste um passo. Primeiro encontras no fim o que já estava no início, como «tons de ruina»; depois o que o fim acrescenta; só então dizes o que a repetição faz."
     }
   ]
 }

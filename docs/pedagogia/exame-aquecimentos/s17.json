@@ -4,6 +4,14 @@
   "titulo": "Poesia contemporânea: três modos de dizer",
   "cartoes": [
     {
+      "t": "ler",
+      "rot": "Abre",
+      "titulo": "Aquecer",
+      "html": "<p class=\"abre-t\">Poesia contemporânea: três modos de dizer</p><p><b>Objetivo:</b> comparar dois poemas de Jorge de Sena, Eugénio de Andrade ou Ana Luísa Amaral.</p><p>Doze cartões, dez minutos. A seguir, voltas à sessão para ler e escrever no caderno.</p>",
+      "recycledFrom": "/pt/exame/",
+      "adaptacao": "Cartão de abertura da sessão (02/11/2026)."
+    },
+    {
       "p": "Que comparação entre dois poemas é mais fundamentada?",
       "f": "O eixo comum permite comparar; as marcas de cada poema permitem reconhecer as diferenças.",
       "legacyId": "s17-q1",
@@ -20,6 +28,72 @@
         "Datas situam os autores, mas não analisam as marcas dos poemas.",
         "Atribuir a mesma ideia a tudo apaga diferenças que precisas de observar."
       ]
+    },
+    {
+      "t": "vf",
+      "p": "Uma pergunta aberta, que não se responde com «sim» ou «não», abre melhor a conversa com um poeta.",
+      "v": true,
+      "f": "Verdadeiro: as perguntas a um poeta funcionam melhor **abertas**, uma por lente, nada que se responda com «sim» ou «não».",
+      "fe": "Responder «falso» é esquecer o que um «sim» ou um «não» faz à conversa: fecha-a. Uma pergunta aberta, com «como», «porquê» ou «o quê», obriga o poeta a explicar.",
+      "recycledFrom": "/pt/m8/licao-m8-f01/",
+      "sourceCard": 17,
+      "adaptacao": "Cartão da lição de origem, no lugar de um cartão repetido ou trivial (02/11/2026)."
+    },
+    {
+      "t": "completar",
+      "p": "O que pergunta cada uma destas duas lentes?",
+      "frase": "A lente da [1] pergunta o que o poema retoma; a da arte poética pergunta se o poema fala de [2].",
+      "lacunas": [
+        {
+          "o": [
+            "tradição",
+            "biografia",
+            "história"
+          ],
+          "c": 0,
+          "fe": [
+            null,
+            "A biografia situa o poeta, mas não é uma lente de leitura do poema; perguntar o que o poema retoma é a lente da tradição.",
+            "A história do seu tempo é a lente do contemporâneo; o que o poema retoma de autores e formas antigas é a tradição."
+          ]
+        },
+        {
+          "o": [
+            "poesia",
+            "pintura",
+            "música"
+          ],
+          "c": 0,
+          "fe": [
+            null,
+            "Falar de pintura é relacionar artes; a arte poética pergunta se o poema fala da própria poesia.",
+            "A música pode estar no ritmo, mas a lente da arte poética pergunta se o poema fala da própria poesia."
+          ]
+        }
+      ],
+      "f": "A **tradição** olha o que se retoma; a arte poética, se o poema fala de **poesia**.",
+      "recycledFrom": "/pt/m8/licao-m8-f01/",
+      "sourceCard": 8,
+      "fe": "Trocaste as perguntas das lentes. A tradição pergunta o que o poema retoma de antes; a arte poética, se o poema fala da própria poesia."
+    },
+    {
+      "t": "escolha",
+      "p": "Qual destas perguntas a um poeta é aberta e usa uma lente?",
+      "o": [
+        "«Que poeta antigo retoma, e porquê?»",
+        "«Em que cidade nasceu e cresceu?»",
+        "«Escreve em verso livre, sim ou não?»"
+      ],
+      "c": 0,
+      "fe": [
+        null,
+        "É aberta, mas fica na biografia: não usa nenhuma das quatro lentes nem pergunta nada sobre a obra.",
+        "Fala da forma, mas o «sim ou não» fecha a pergunta: o poeta não tem de explicar nada."
+      ],
+      "f": "**«Que poeta antigo retoma, e porquê?»**: é aberta e olha pela lente da tradição; as outras ficam na biografia ou respondem-se com uma palavra.",
+      "recycledFrom": "/pt/m8/licao-m8-f01/",
+      "sourceCard": 19,
+      "adaptacao": "Cartão da lição de origem, no lugar de um cartão repetido ou trivial (02/11/2026)."
     },
     {
       "p": "Quando um poema reflete sobre o fazer poético, pode ser lido como…",
@@ -40,128 +114,14 @@
       ]
     },
     {
-      "p": "Que pergunta ajuda a estudar a relação entre poesia e mundo?",
-      "f": "Importa analisar o que o poema torna visível e os procedimentos que constroem essa visão.",
-      "legacyId": "s17-q3",
+      "t": "vf",
+      "p": "A lente das figurações do poeta pergunta que mundo e que problemas aparecem no poema.",
+      "v": false,
+      "f": "Falso: as figurações perguntam **como se vê quem escreve**; que mundo aparece é a lente do contemporâneo.",
+      "fe": "Trocaste duas lentes. Que mundo e que problemas aparecem é a pergunta do contemporâneo; as figurações perguntam como se vê, no poema, quem escreve.",
       "recycledFrom": "/pt/m8/licao-m8-f01/",
-      "t": "escolha",
-      "o": [
-        "Como transforma a linguagem o mundo?",
-        "Quantas letras tem o nome do poeta?",
-        "Como opino sem ter lido estes versos?"
-      ],
-      "c": 0,
-      "fe": [
-        null,
-        "Contar letras do nome não analisa a relação entre poema e mundo.",
-        "Opinar sem ler dispensa precisamente as provas que a análise exige."
-      ]
-    },
-    {
-      "t": "emparelhar",
-      "p": "Liga cada dado ao poeta a que pertence.",
-      "pares": [
-        [
-          "Morre na Califórnia, em 1978",
-          "Jorge de Sena"
-        ],
-        [
-          "Doutorou-se sobre Emily Dickinson",
-          "Ana Luísa Amaral"
-        ],
-        [
-          "Naturalizado brasileiro em 1963",
-          "Jorge de Sena"
-        ],
-        [
-          "Ensinou na Faculdade de Letras do Porto",
-          "Ana Luísa Amaral"
-        ]
-      ],
-      "f": "Sena deixou Portugal em 1959 e morreu na Califórnia; _Metamorfoses_, com a «_Carta_», sai em 1963, o ano em que se naturaliza brasileiro. Amaral estudou outras escritoras (Emily Dickinson, as _Novas Cartas Portuguesas_) e interroga tradições, como faz com a prece. A vida situa; a leitura prova-se no poema.",
-      "recycledFrom": "/pt/m8/licao-m8-f01/",
-      "sourceCard": 5,
-      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder."
-    },
-    {
-      "t": "completar",
-      "p": "O que perguntam a lente da tradição e a da arte poética?",
-      "frase": "A lente da [1] pergunta o que o poema retoma; a da arte poética pergunta se o poema fala de [2].",
-      "lacunas": [
-        {
-          "o": [
-            "tradição",
-            "biografia"
-          ],
-          "c": 0,
-          "fe": [
-            null,
-            "Nesta lacuna, biografia não corresponde à relação pedida."
-          ]
-        },
-        {
-          "o": [
-            "poesia",
-            "guerra"
-          ],
-          "c": 0,
-          "fe": [
-            null,
-            "Nesta lacuna, guerra não corresponde à relação pedida."
-          ]
-        }
-      ],
-      "f": "A **tradição** olha o que se retoma; a arte poética, se o poema fala de **poesia**.",
-      "recycledFrom": "/pt/m8/licao-m8-f01/",
-      "sourceCard": 8,
-      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder."
-    },
-    {
-      "t": "sublinhar",
-      "p": "Na leitura de Sena, toca nas três palavras que identificam a forma do poema e os seus destinatários.",
-      "frase": "Um quadro inspira a carta aos filhos.",
-      "certas": [
-        4,
-        5,
-        6
-      ],
-      "f": "«Carta aos filhos»: Sena parte de uma pintura, mas dirige palavras a alguém. Ao comparar as duas obras, observa o que a imagem mostra e o que o poema acrescenta.",
-      "recycledFrom": "/pt/m8/licao-m8-f01/",
-      "sourceCard": 9,
-      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder."
-    },
-    {
-      "t": "completar",
-      "p": "Que duas relações vais investigar nas leituras de Sena e Amaral?",
-      "frase": "Na «_Carta_», Sena relaciona a escrita com [1]; na «_Prece_», Amaral transforma uma [2].",
-      "lacunas": [
-        {
-          "o": [
-            "a pintura",
-            "o desenho"
-          ],
-          "c": 0,
-          "fe": [
-            null,
-            "Nesta lacuna, o desenho não corresponde à relação pedida."
-          ]
-        },
-        {
-          "o": [
-            "oração",
-            "receita"
-          ],
-          "c": 0,
-          "fe": [
-            null,
-            "Nesta lacuna, receita não corresponde à relação pedida."
-          ]
-        }
-      ],
-      "f": "Sena parte de uma **pintura**; Amaral retoma uma **oração**. Estas relações orientam a procura de indícios: não dispensam ler os poemas.",
-      "recycledFrom": "/pt/m8/licao-m8-f01/",
-      "sourceCard": 11,
-      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder."
+      "sourceCard": 21,
+      "adaptacao": "Cartão da lição de origem, no lugar de um cartão repetido ou trivial (02/11/2026)."
     },
     {
       "t": "emparelhar",
@@ -187,45 +147,63 @@
       "f": "Quatro portas: o mundo do seu tempo, o que retoma de antes, como se vê quem escreve, se fala de poesia.",
       "recycledFrom": "/pt/m8/licao-m8-f01/",
       "sourceCard": 15,
-      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder."
+      "fe": "Trocaste as lentes. O contemporâneo olha o mundo do seu tempo; a tradição, o que se retoma; as figurações, como se vê quem escreve; a arte poética, se o poema fala de poesia."
     },
     {
       "t": "vf",
       "p": "As lentes olham, mas é o poema que se lê.",
       "v": true,
       "f": "Verdadeiro: as lentes são portas; o que se lê é **o poema, com a sua forma e os seus recursos**.",
-      "fe": "É verdadeiro: as lentes só fazem perguntas; quem responde é o poema, com a sua forma e os seus recursos (vê «O essencial»).",
+      "fe": "É verdadeiro: as lentes só fazem perguntas; quem responde é o poema, com a sua forma e os seus recursos.",
       "recycledFrom": "/pt/m8/licao-m8-f01/",
       "sourceCard": 16
+    },
+    {
+      "p": "Que pergunta ajuda a estudar a relação entre poesia e mundo?",
+      "f": "Importa analisar o que o poema torna visível e os procedimentos que constroem essa visão.",
+      "legacyId": "s17-q3",
+      "recycledFrom": "/pt/m8/licao-m8-f01/",
+      "t": "escolha",
+      "o": [
+        "Como transforma a linguagem o mundo?",
+        "Que acontecimentos viveu o poeta?",
+        "Quantas estrofes e versos tem o poema?"
+      ],
+      "c": 0,
+      "fe": [
+        null,
+        "A biografia situa o poeta, mas não mostra como o poema transforma o mundo.",
+        "Contar estrofes descreve a forma; falta perguntar o que essa forma faz ao mundo representado."
+      ]
     },
     {
       "t": "vf",
       "p": "Perguntar porque é que um poeta de 1960 escreve um soneto, uma forma antiga, é olhar pela lente da tradição.",
       "v": true,
       "f": "Verdadeiro: pedir emprestada uma forma ou discutir com quem a usou antes é olhar pela **tradição**.",
-      "fe": "É verdadeiro: o soneto é uma forma antiga; perguntar porque um poeta de 1960 a usa é perguntar o que o poema retoma, a pergunta da tradição («O essencial»).",
+      "fe": "É verdadeiro: o soneto é uma forma antiga; perguntar porque um poeta de 1960 a usa é perguntar o que o poema retoma, a pergunta da tradição.",
       "recycledFrom": "/pt/m8/licao-m8-f01/",
       "sourceCard": 17
     },
     {
-      "t": "sublinhar",
-      "p": "Toca nas três palavras que dizem a que se atende sempre, além das lentes.",
-      "frase": "E sempre: forma (estrofes, métrica, rima ou verso livre) e recursos expressivos.",
-      "certas": [
-        2,
-        10,
-        11
+      "t": "ordenar",
+      "p": "Para comparar dois poemas, por ordem:",
+      "passos": [
+        "Escolhe um eixo comum aos dois poemas",
+        "Procura em cada um a passagem que o mostra",
+        "Diz o que se mantém e o que muda",
+        "Conclui o que a diferença revela"
       ],
-      "f": "«Forma» e «recursos expressivos»: além das lentes, olha-se sempre para estrofes, métrica, rima ou verso livre, e para os recursos.",
+      "f": "Sem eixo, a comparação vira duas descrições lado a lado. O eixo diz o que procurar; as passagens provam; a conclusão diz o que a diferença revela.",
+      "fe": "Começaste pelas passagens soltas ou pela conclusão. Primeiro escolhes o eixo; com ele procuras a passagem em cada poema, comparas e só então concluis.",
       "recycledFrom": "/pt/m8/licao-m8-f01/",
-      "sourceCard": 19,
-      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder."
+      "adaptacao": "Operação da sessão (comparar dois poemas), no lugar de um cartão trivial (02/11/2026)."
     },
     {
       "t": "ordenar",
       "p": "Como se faz a entrevista a um poeta, por ordem:",
       "passos": [
-        "Imagina que entrevistas um dos três poetas",
+        "Imagina que entrevistas Jorge de Sena ou Ana Luísa Amaral",
         "Escreve três perguntas, uma por lente",
         "Escolhe a que abre melhor a conversa",
         "Justifica a escolha"
@@ -233,7 +211,7 @@
       "f": "Três perguntas abertas, cada uma com uma lente, e a melhor escolhida com razão.",
       "recycledFrom": "/pt/m8/licao-m8-f01/",
       "sourceCard": 21,
-      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder."
+      "fe": "Trocaste a ordem da preparação. Primeiro escolhes o poeta, depois escreves três perguntas, uma por lente, escolhes a que abre melhor a conversa e só no fim justificas."
     }
   ]
 }

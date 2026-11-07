@@ -4,6 +4,22 @@
   "titulo": "Gil Vicente: desejo, escolha e sátira",
   "cartoes": [
     {
+      "t": "ler",
+      "rot": "Abre",
+      "titulo": "Aquecer",
+      "html": "<p class=\"abre-t\">Gil Vicente: desejo, escolha e sátira</p><p><b>Objetivo:</b> interpretar o conflito na <i>Farsa de Inês Pereira</i>.</p><p>Doze cartões, dez minutos. O texto de apoio está no cartão seguinte. A seguir, voltas à sessão para ler e escrever no caderno.</p>",
+      "recycledFrom": "/pt/exame/",
+      "adaptacao": "Cartão de abertura da sessão (02/11/2026)."
+    },
+    {
+      "t": "ler",
+      "titulo": "Texto para consultar",
+      "html": "<p>Consulta o texto quando precisares de confirmar uma escolha.</p><details><summary>Abrir o texto de apoio</summary><p class=\"v\"><span class=\"ln\" data-l=\"0-0\">Coitada, assi hei-de estar</span>\n<span class=\"ln\" data-l=\"0-1\">Encerrada nesta casa</span>\n<span class=\"ln\" data-l=\"0-2\">Inês, como panela sem asa,</span>\n<span class=\"ln\" data-l=\"0-3\">Que sempre está num lugar?</span></p><p class=\"v\"><span class=\"ln\">[…]</span></p><p class=\"v\"><span class=\"ln\" data-l=\"0-5\">Todas folgam, e eu não,</span>\n<span class=\"ln\" data-l=\"0-6\">Todas vêm e todas vão</span>\n<span class=\"ln\" data-l=\"0-7\">Onde querem, senão eu.</span></p><p class=\"fonte\">Gil Vicente, <i>Farsa de Inês Pereira</i> (1523), cena inicial, vv. 10 a 13 e 23 a 25 (grafia da edição); <i>assi</i>, assim; <i>folgam</i>, divertem-se.</p><p class=\"v\"><span class=\"ln\" data-l=\"1-0\">Inês: Não! já esse tempo passou.</span>\n<span class=\"ln\" data-l=\"1-1\">Sobre quantos mestres são</span>\n<span class=\"ln\" data-l=\"1-2\">Experiência dá lição.</span></p><p class=\"v\"><span class=\"ln\">[…]</span></p><p class=\"v\"><span class=\"ln\" data-l=\"1-4\">Por usar de siso mero,</span>\n<span class=\"ln\" data-l=\"1-5\">Quero asno que me leve,</span>\n<span class=\"ln\" data-l=\"1-6\">E não cavalo folão.</span></p><p class=\"fonte\">Gil Vicente, <i>Farsa de Inês Pereira</i> (1523), desfecho, vv. 63 a 65 e 74 a 76 (grafia da edição); <i>siso mero</i>, puro juízo; <i>folão</i>, fogoso, que derruba.</p><p class=\"fonte\"><a href=\"../../../m2/licao-m2-f02/\" target=\"_blank\" rel=\"noopener\">Cena inicial na lição de origem</a></p><p class=\"fonte\"><a href=\"../../../m2/licao-m2-f06/\" target=\"_blank\" rel=\"noopener\">Desfecho na lição de origem</a></p></details>",
+      "recycledFrom": "/pt/m2/licao-m2-f02/",
+      "adaptacao": "Falas citadas nos cartões, do texto integral das lições M2-F02 e M2-F06 (02/11/2026).",
+      "rot": "Texto de apoio"
+    },
+    {
       "p": "«Coitada, assi hei-de estar / Encerrada nesta casa» prova…",
       "f": "Inês, sozinha a lavrar, queixa-se do encerramento: é a prova do desejo de liberdade, no início.",
       "legacyId": "s03-q1",
@@ -19,42 +35,6 @@
         null,
         "A fala pertence ao começo, antes da escolha final.",
         "Quem se queixa é Inês, não a Mãe."
-      ]
-    },
-    {
-      "p": "«Quero asno que me leve, / E não cavalo folão»: quem fala e quando?",
-      "f": "Inês, já viúva e sozinha em cena, decide a frio: a citação prova a escolha calculada.",
-      "legacyId": "s03-q2",
-      "recycledFrom": "/pt/m2/licao-m2-f08/",
-      "t": "escolha",
-      "o": [
-        "Inês, viúva, ao escolher Pêro Marques",
-        "Inês, solteira, ao recusar Pêro Marques",
-        "Inês, casada, ao pedir a Pêro que a leve"
-      ],
-      "c": 0,
-      "fe": [
-        null,
-        "A recusa de solteira é anterior a esta escolha.",
-        "A decisão de escolher Pêro antecede a vida de casada com ele."
-      ]
-    },
-    {
-      "p": "O provérbio «mais quero asno que me leve que cavalo que me derrube» orienta a farsa. Que leitura evita reduzir a peça a uma simples moral?",
-      "f": "A sátira constrói-se nas ações e nos contrastes. O provérbio é um eixo de leitura, não substitui a análise da peça.",
-      "legacyId": "s03-q3",
-      "recycledFrom": "/pt/m2/licao-m2-f08/",
-      "t": "escolha",
-      "o": [
-        "Ligar o provérbio às decisões de Inês.",
-        "Limitar o provérbio ao mundo animal.",
-        "Atribuir a mesma moral a toda a gente."
-      ],
-      "c": 0,
-      "fe": [
-        null,
-        "A leitura literal dos animais deixa de fora as decisões humanas.",
-        "O provérbio não torna iguais as posições das personagens."
       ]
     },
     {
@@ -81,7 +61,7 @@
       "f": "No **início**, Inês queixa-se da casa e do lavrar; no **fim**, escolhe a frio e manda.",
       "recycledFrom": "/pt/m2/licao-m2-f08/",
       "sourceCard": 4,
-      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder."
+      "fe": "Trocaste o momento da farsa. Relê o texto de apoio: as queixas da casa e das outras que folgam são da cena inicial; «Quero asno» e «Experiência dá lição» vêm depois, já viúva."
     },
     {
       "t": "ordenar",
@@ -95,7 +75,7 @@
       "f": "Introdução, dois desenvolvimentos descritivos, o juízo com citações e a conclusão com atualidade.",
       "recycledFrom": "/pt/m2/licao-m2-f08/",
       "sourceCard": 6,
-      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder."
+      "fe": "Começaste pelo juízo antes de apresentar e descrever. A apreciação identifica primeiro a obra e a personagem, descreve Inês no início e a mudança, e só depois aprecia com citações."
     },
     {
       "t": "sublinhar",
@@ -107,40 +87,62 @@
       "f": "**Sempre** alarga a conclusão à vida inteira. A fala sustenta a queixa de encerramento neste momento; não comprova todas as situações anteriores ou posteriores. Uma interpretação ganha precisão quando delimita o alcance da prova.",
       "recycledFrom": "/pt/m2/licao-m2-f08/",
       "sourceCard": 7,
-      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder."
+      "fe": "Marcaste o que a fala diz, não o que a conclusão acrescenta. «Encerrada nesta casa» prova a queixa daquele momento; procura a palavra que a estende à vida inteira."
+    },
+    {
+      "p": "«Quero asno que me leve, / E não cavalo folão»: quem fala e quando?",
+      "f": "Inês, já viúva e sozinha em cena, decide a frio: a citação prova a escolha calculada.",
+      "legacyId": "s03-q2",
+      "recycledFrom": "/pt/m2/licao-m2-f08/",
+      "t": "escolha",
+      "o": [
+        "Inês, viúva, ao escolher Pêro Marques",
+        "Inês, solteira, ao recusar Pêro Marques",
+        "Inês, casada, ao pedir a Pêro que a leve"
+      ],
+      "c": 0,
+      "fe": [
+        null,
+        "A recusa de solteira é anterior a esta escolha.",
+        "A decisão de escolher Pêro antecede a vida de casada com ele."
+      ]
     },
     {
       "t": "completar",
       "p": "Como se chega à tese da apreciação?",
-      "frase": "Uma tese é uma frase que se pode [1] e escreves [2] antes de escolher a melhor.",
+      "frase": "Uma tese é uma frase que se pode [1]; antes de escolheres a melhor, escreves [2].",
       "lacunas": [
         {
           "o": [
             "provar com citações do texto",
-            "copiar do «essencial» da lição"
+            "repetir sem consultar o texto",
+            "defender só com a tua opinião"
           ],
           "c": 0,
           "fe": [
             null,
-            "Nesta lacuna, copiar do «essencial» da lição não corresponde à relação pedida."
+            "Repetir sem consultar o texto é o contrário de uma tese: a tese escolhe-se por ter provas na farsa.",
+            "Uma tese defendida só com opinião não chega a ser apreciação: precisa de passagens da farsa que a provem."
           ]
         },
         {
           "o": [
             "três",
-            "duas"
+            "duas",
+            "seis"
           ],
           "c": 0,
           "fe": [
             null,
-            "Nesta lacuna, duas não corresponde à relação pedida."
+            "Duas teses dão pouca escolha; o procedimento pede três, de natureza diferente, para ficares com a que tem mais provas.",
+            "Seis teses dispersam o trabalho; o procedimento pede três, e fica a que tem mais e melhores provas no texto."
           ]
         }
       ],
       "f": "**Três** teses de natureza diferente; fica a que tem mais e melhores **provas no texto**.",
       "recycledFrom": "/pt/m2/licao-m2-f08/",
       "sourceCard": 8,
-      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder."
+      "fe": "Confundiste o que define uma tese com o modo de a escolher. Uma tese prova-se com citações da farsa; escreves várias, de natureza diferente, e ficas com a que tem mais provas."
     },
     {
       "t": "completar",
@@ -150,30 +152,34 @@
         {
           "o": [
             "adjetivos e advérbios",
-            "numerais e determinantes"
+            "numerais e determinantes",
+            "conectores e preposições"
           ],
           "c": 0,
           "fe": [
             null,
-            "Nesta lacuna, numerais e determinantes não corresponde à relação pedida."
+            "Numerais e determinantes quantificam e delimitam; não exprimem juízo. As palavras de juízo são adjetivos e advérbios.",
+            "Conectores e preposições ligam as ideias; o juízo marca-se com palavras que avaliam, como adjetivos e advérbios."
           ]
         },
         {
           "o": [
             "formal",
-            "poético"
+            "poético",
+            "íntimo"
           ],
           "c": 0,
           "fe": [
             null,
-            "Nesta lacuna, poético não corresponde à relação pedida."
+            "O registo poético pertence ao texto literário que analisas; a tua apreciação fala dele em registo formal.",
+            "Um registo íntimo serve o diário ou a carta; a apreciação é um texto público e pede registo formal do princípio ao fim."
           ]
         }
       ],
       "f": "Apreciar é dizer o que se pensa com palavras de juízo, **adjetivos e advérbios**, em registo **formal**.",
       "recycledFrom": "/pt/m2/licao-m2-f08/",
       "sourceCard": 11,
-      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder."
+      "fe": "Misturaste as palavras do juízo com as que servem outras funções. Para apreciar, avalias com adjetivos, advérbios e verbos de opinião, sempre em registo formal."
     },
     {
       "t": "emparelhar",
@@ -195,32 +201,50 @@
       "f": "A **citação** recupera palavras; a **interpretação** explica o seu alcance; os **dez anos** acrescentam uma informação ausente. Não basta colocar uma citação ao lado de qualquer afirmação.",
       "recycledFrom": "/pt/m2/licao-m2-f08/",
       "sourceCard": 12,
-      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder."
+      "fe": "Trocaste interpretação e invenção. Pergunta a cada frase se repete as palavras de Inês, se explica o que elas permitem discutir, ou se acrescenta um dado, como os «dez anos», que a fala não dá."
+    },
+    {
+      "p": "O provérbio «mais quero asno que me leve que cavalo que me derrube» orienta a farsa. Que leitura evita reduzir a peça a uma simples moral?",
+      "f": "A sátira constrói-se nas ações e nos contrastes. O provérbio é um eixo de leitura, não substitui a análise da peça.",
+      "legacyId": "s03-q3",
+      "recycledFrom": "/pt/m2/licao-m2-f08/",
+      "t": "escolha",
+      "o": [
+        "Ligar o provérbio às decisões de Inês.",
+        "Limitar o provérbio ao mundo animal.",
+        "Atribuir a mesma moral a toda a gente."
+      ],
+      "c": 0,
+      "fe": [
+        null,
+        "A leitura literal dos animais deixa de fora as decisões humanas.",
+        "O provérbio não torna iguais as posições das personagens."
+      ]
     },
     {
       "t": "sublinhar",
-      "p": "No parágrafo modelo, toca na palavra que diz que mais ninguém cumpre o que diz.",
-      "frase": "é o único que cumpre o que diz.",
+      "p": "Na frase de treino, toca na palavra que diz que mais ninguém cumpre o que diz.",
+      "frase": "Esta personagem é a única que cumpre o que diz.",
       "certas": [
-        2
+        4
       ],
-      "f": "«Único» exprime exclusividade no modelo. Para aceitar esse juízo, é preciso confrontar promessas e comportamentos das várias personagens: esta palavra, sozinha, não é uma prova.",
+      "f": "«Única» exprime exclusividade. Para aceitar esse juízo, é preciso confrontar promessas e comportamentos das várias personagens: esta palavra, sozinha, não é uma prova.",
       "recycledFrom": "/pt/m2/licao-m2-f08/",
       "sourceCard": 13,
-      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder."
+      "fe": "Marcaste quem cumpre ou o que faz, não a palavra que afasta todas as outras personagens. Repara no adjetivo que torna a afirmação exclusiva."
     },
     {
       "t": "sublinhar",
-      "p": "Toca nas duas palavras que a tese modelo nega sobre Inês.",
-      "frase": "Inês não é uma vítima passiva: é ela quem escolhe, duas vezes,",
+      "p": "Nesta tese de treino, toca nas duas palavras que a tese nega sobre Inês.",
+      "frase": "Inês não é uma vítima passiva: é ela quem escolhe, duas vezes.",
       "certas": [
         4,
         5
       ],
-      "f": "«Vítima passiva» são as palavras negadas pela tese do modelo. Identificar essa negação não obriga a aceitar toda a tese: discute as escolhas de Inês e as restrições que sofreu com passagens concretas.",
+      "f": "«Vítima passiva» são as palavras negadas pela tese. Identificar essa negação não obriga a aceitar toda a tese: discute as escolhas de Inês e as restrições que sofreu com passagens concretas.",
       "recycledFrom": "/pt/m2/licao-m2-f08/",
       "sourceCard": 16,
-      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder."
+      "fe": "Marcaste o que a tese afirma, não o que nega. Lê o que vem logo a seguir a «não é uma»: são essas as palavras recusadas."
     },
     {
       "t": "completar",
@@ -230,30 +254,34 @@
         {
           "o": [
             "voz alta",
+            "diagonal",
             "voz baixa"
           ],
           "c": 0,
           "fe": [
             null,
-            "Nesta lacuna, voz baixa não corresponde à relação pedida."
+            "Ler em diagonal salta palavras; para notar frases difíceis e repetições, lês em voz alta.",
+            "Em voz baixa, o ouvido não apanha as frases que tropeçam; a releitura em voz alta mostra-as."
           ]
         },
         {
           "o": [
             "repete",
-            "aprecia"
+            "aprecia",
+            "explica"
           ],
           "c": 0,
           "fe": [
             null,
-            "Nesta lacuna, aprecia não corresponde à relação pedida."
+            "O que aprecia é o centro do texto: corta-se o que repete, não o juízo.",
+            "A explicação liga as provas à tese; o que se corta na releitura é o que repete."
           ]
         }
       ],
       "f": "Ler em voz alta ajuda a notar frases difíceis; cortar o que repete torna a resposta mais precisa.",
       "recycledFrom": "/pt/m2/licao-m2-f08/",
       "sourceCard": 18,
-      "fe": "Confere o indício e a relação pedidos, antes de voltares a responder."
+      "fe": "Confundiste o que a releitura procura. Ler em voz alta faz ouvir as frases que tropeçam, e o que se corta é a repetição, não o juízo nem a explicação."
     }
   ]
 }

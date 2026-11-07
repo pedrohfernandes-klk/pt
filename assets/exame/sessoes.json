@@ -3619,7 +3619,7 @@
       "warmup": [
         {
           "id": "s18-q1",
-          "q": "O que acontece em «George»?",
+          "q": "O que acontece em «George», conto de Maria Judite de Carvalho?",
           "options": [
             "Uma mulher escreve aos filhos sobre o mundo deles",
             "Uma mulher encontra a jovem que foi e a velha que será",
@@ -3627,7 +3627,7 @@
             "Uma mulher encontra uma chave sem porta"
           ],
           "answer": 1,
-          "feedback": "Em «George», uma mulher encontra-se com as outras idades; as outras histórias são de Sena, de Amaral e do resumo-modelo.",
+          "feedback": "Em «George», uma mulher encontra-se com as outras idades de si mesma; a carta aos filhos e a travessia do mar pela paz não pertencem a este conto.",
           "recycledFrom": "/pt/m8/licao-m8-f08/"
         },
         {
@@ -3695,7 +3695,7 @@
         ],
         "check": {
           "id": "s18-check",
-          "q": "Depois da revisão: O que acontece em «George»?",
+          "q": "Depois da revisão: O que acontece em «George», conto de Maria Judite de Carvalho?",
           "options": [
             "Uma mulher escreve aos filhos sobre o mundo deles",
             "Uma mulher encontra a jovem que foi e a velha que será",
@@ -3703,7 +3703,7 @@
             "Uma mulher encontra uma chave sem porta"
           ],
           "answer": 1,
-          "feedback": "Em «George», uma mulher encontra-se com as outras idades; as outras histórias são de Sena, de Amaral e do resumo-modelo.",
+          "feedback": "Em «George», uma mulher encontra-se com as outras idades de si mesma; a carta aos filhos e a travessia do mar pela paz não pertencem a este conto.",
           "recycledFrom": "/pt/m8/licao-m8-f08/"
         },
         "kind": "Orientação de correção"
@@ -3875,7 +3875,7 @@
       "warmup": [
         {
           "id": "s20-q1",
-          "q": "Qual deve ser preservado numa síntese?",
+          "q": "O que deve uma síntese preservar?",
           "options": [
             "A opinião pessoal do aluno",
             "A relação entre as ideias centrais",
@@ -3947,7 +3947,7 @@
         ],
         "check": {
           "id": "s20-check",
-          "q": "Depois da revisão: Qual deve ser preservado numa síntese?",
+          "q": "Depois da revisão: O que deve uma síntese preservar?",
           "options": [
             "A opinião pessoal do aluno",
             "A relação entre as ideias centrais",
@@ -3987,7 +3987,7 @@
       "warmup": [
         {
           "id": "s21-q1",
-          "q": "Em «Os leitores procuram provas», qual é o complemento direto?",
+          "q": "Na frase de treino _Os leitores procuram provas_, qual é o complemento direto?",
           "options": [
             "Os leitores",
             "procuram",
@@ -3998,7 +3998,7 @@
         },
         {
           "id": "s21-q2",
-          "q": "Em «Revi a resposta porque o referente era ambíguo», que relação introduz «porque»?",
+          "q": "Na frase de treino _Revi a resposta porque o referente era ambíguo_, que relação introduz «porque»?",
           "options": [
             "Causa",
             "Consequência",
@@ -4009,7 +4009,7 @@
         },
         {
           "id": "s21-q3",
-          "q": "Em «O poema que analisámos apresenta um contraste», a relativa permite…",
+          "q": "Na frase de treino _O poema que analisámos apresenta um contraste_, a relativa permite…",
           "options": [
             "apresentar uma hipótese",
             "identificar o poema de que se fala",
@@ -4059,7 +4059,7 @@
         ],
         "check": {
           "id": "s21-check",
-          "q": "Depois da revisão: Em «Os leitores procuram provas», qual é o complemento direto?",
+          "q": "Depois da revisão: Na frase de treino _Os leitores procuram provas_, qual é o complemento direto?",
           "options": [
             "Os leitores",
             "procuram",
@@ -4100,7 +4100,7 @@
       "warmup": [
         {
           "id": "s22-q1",
-          "q": "Em «Inês viu a mãe quando ela entrou», o que convém rever?",
+          "q": "Na frase de treino _Inês viu a mãe quando ela entrou_, o que convém rever?",
           "options": [
             "A extensão da frase, obrigatoriamente",
             "A identidade do referente de «ela»",
@@ -4122,7 +4122,7 @@
         },
         {
           "id": "s22-q3",
-          "q": "Em «Talvez a personagem reconheça o erro», «talvez» apresenta…",
+          "q": "Na frase de treino _Talvez a personagem reconheça o erro_, «talvez» apresenta…",
           "options": [
             "certeza absoluta",
             "uma ordem ao leitor",
@@ -4172,7 +4172,7 @@
         ],
         "check": {
           "id": "s22-check",
-          "q": "Depois da revisão: Em «Inês viu a mãe quando ela entrou», o que convém rever?",
+          "q": "Depois da revisão: Na frase de treino _Inês viu a mãe quando ela entrou_, o que convém rever?",
           "options": [
             "A extensão da frase, obrigatoriamente",
             "A identidade do referente de «ela»",
@@ -4219,7 +4219,7 @@
             "As obras são importantes e bonitas"
           ],
           "answer": 1,
-          "feedback": "O segundo início define um eixo que pode ser explicado com exemplos, em vez de anunciar um tema sem limites."
+          "feedback": "«Duas obras confrontam escolhas e regras» define um eixo que pode ser explicado com exemplos, em vez de anunciar um tema sem limites."
         },
         {
           "id": "s23-q2",
@@ -4291,7 +4291,7 @@
             "As obras são importantes e bonitas"
           ],
           "answer": 1,
-          "feedback": "O segundo início define um eixo que pode ser explicado com exemplos, em vez de anunciar um tema sem limites."
+          "feedback": "«Duas obras confrontam escolhas e regras» define um eixo que pode ser explicado com exemplos, em vez de anunciar um tema sem limites."
         },
         "kind": "Resposta exemplificativa"
       },
@@ -4447,7 +4447,7 @@
         },
         {
           "id": "s25-q2",
-          "q": "Como tornar útil a frase «a adaptação simplifica o conflito»?",
+          "q": "Como tornar útil a frase de treino _a adaptação simplifica o conflito_?",
           "options": [
             "Apontando uma escolha concreta e explicando o seu efeito",
             "Acrescentando «muito»",
@@ -4566,7 +4566,7 @@
             "Explicitei o antecedente para eliminar uma leitura ambígua"
           ],
           "answer": 2,
-          "feedback": "A terceira nota identifica a operação e o efeito que produziu na leitura."
+          "feedback": "«Nomeei o antecedente e desfiz a ambiguidade» identifica a operação e o efeito que produziu na leitura."
         },
         {
           "id": "s26-q3",
