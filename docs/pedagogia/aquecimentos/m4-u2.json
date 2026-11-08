@@ -135,12 +135,12 @@
   },
   {
    "t": "escolha",
-   "p": "Peça inventada, ato II, cena IV. A personagem diz: _Fica a cadeira._ Que cópia conserva as palavras e a localização?",
-   "p2": "No ato II, cena IV, da peça inventada, uma personagem diz _Fica a cadeira._ Que cópia está exata, com o lugar certo?",
+   "p": "Peça inventada, ato II, cena IV. A personagem diz: _Fica a cadeira._ Que cópia conserva as palavras e a localização?",
+   "p2": "No ato II, cena IV, da peça inventada, uma personagem diz _Fica a cadeira._ Que cópia está exata, com o lugar certo?",
    "o": [
-    "_Fica essa cadeira._ (ato II, cena IV)",
-    "_Fica a cadeira._ (ato III, cena IV)",
-    "_Fica a cadeira._ (ato II, cena IV)"
+    "_Fica essa cadeira._ (ato II, cena IV)",
+    "_Fica a cadeira._ (ato III, cena IV)",
+    "_Fica a cadeira._ (ato II, cena IV)"
    ],
    "c": 2,
    "f": "A cópia conserva as palavras e o lugar. Aqui, o itálico só marca a fala inventada: na tua apreciação, a citação curta de Garrett vai entre aspas, com o ato e a cena entre parênteses (lição F20).",
@@ -171,7 +171,7 @@
    "p2": "Texto da peça, desenho de luz, cenografia ou marcação? Liga cada pormenor da cena inventada.",
    "pares": [
     [
-     "A didascália do ato II, cena IV pede uma cadeira.",
+     "A didascália do ato II, cena IV pede uma cadeira.",
      "Texto da peça"
     ],
     [
@@ -242,11 +242,11 @@
    "fe": [
     null,
     "A didascália só pede uma cadeira: o vidro não está no texto. Não atribuas à peça uma escolha de quem encena.",
-    "A didascália do ato II, cena IV pede uma cadeira: a encenação não a inventa, escolhe-lhe o material."
+    "A didascália do ato II, cena IV pede uma cadeira: a encenação não a inventa, escolhe-lhe o material."
    ],
    "frase": "O autor da peça pôs em palco uma cadeira de vidro.",
    "trecho": "O autor da peça pôs em palco uma cadeira de vidro.",
-   "apoio": "Didascália da peça inventada, ato II, cena IV: pede uma cadeira. Na recriação, a cadeira é de vidro. Nada disto descreve o espetáculo visto pela turma.",
+   "apoio": "Didascália da peça inventada, ato II, cena IV: pede uma cadeira. Na recriação, a cadeira é de vidro. Nada disto descreve o espetáculo visto pela turma.",
    "g": 9
   },
   {

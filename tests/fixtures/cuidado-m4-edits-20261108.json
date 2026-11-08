@@ -1,0 +1,2688 @@
+{
+ "base_commit": "e0057725ef24acd7ee02d578f980051870bc86dc",
+ "_nota": "08/11/2026: decisão 152 do docente («cuidado em todas as lições»), módulo M4: os 38 achados CONFIRMADOS da varredura de 6/11 (bordo/cidadania-v3/cuidado-152/m4-confirmados.json; os 9 recusados, 5, 6, 7, 8, 9, 10, 11, 12 e 17, não entram): 6 achados A (tabelas onde há itens paralelos, como na M7-F10, na M7-F15, no M1, no M2 e no M3: class apoio-tabela, th scope, td data-label e os role, nas lições F06 e F25, nos cartões escuros «Para levar», com a lista a fechar antes da tabela e a reabrir com start, na F10, nos quatro peixes do «Recorda» e nas passagens das aulas do «Decide», na F14, no plano do exemplo, e no guia da tarefa, no guião de exemplo, dentro de um div.ex e com a primeira coluna estreita; cada página com tabela nova carrega assets/pt-lessons/apoios-tabelas.css antes da camada de aparência, na versão do M1, que já tem as regras do cartão escuro e as de fora das lições), 29 de referências e números que não se partem entre linhas (B: U+00A0 em capítulo, ato e cena com o número romano, «séc.», «c.», «n.º», «§», ordinal e nome, número e unidade, datas, intervalos «N a M palavras», «aula» e «aulas» com o número, nas formas da proposta final, que deixam partir nas datas entre o mês e o «de» do ano e nas listas à volta das vírgulas e antes do «e»; U+2060 logo a seguir ao traço de intervalo e ao hífen da sigla «M4-Fxx» fora das lições; o hífen de «c. 1535-1540» e de «c. 1571-1574» passa a traço de intervalo) e 3 casos do mesmo tipo (C: na F10, «O que conta» do cartão 3 passa a lista numerada; no mapa, cada termo junto da sua definição; no portefólio, os nove nomes de ficheiro que faltavam em <code>, sem partir, e os cabeçalhos com scope). Camada mais recente, por cima da decisão 152 no M3 (cuidado_m3_20261108). Gerada por scripts/cuidado_m4_20261108.py e aplicada por scripts/aplicar_trocas.py: não se edita à mão. O texto visível fica igual, salvo a estrutura das tabelas e das listas, as correções da proposta final e os espaços invisíveis. A casca das lições (migalhas «2.º ano», «Estás em: Lição M4-Fxx», o título escondido e a sigla do rodapé) não muda aqui, ficheiro a ficheiro: muda no molde, como no M1, no M2 e no M3; as fontes do rodapé mudam, como no M1; nas outras páginas (índice, guia, mapa, portefólio e os dois exercícios longos «Pensar devagar»), as migalhas mudam onde o achado o diz. Mudam também as ocorrências que se veem na linha «Hoje», no cartão extra do fim e nas pistas, e o data-dur dos vídeos da F01 e da F10 (de onde aula-clara.js refaz o botão). Ficam de fora os «alt» (e aria-label, href, title, content e data-titulo), o <title>, o texto dos desenhos (SVG), a «frase» dos cartões sublinhar e o que outra camada já tinha posto com U+00A0 (os créditos do «i»; nos que estão em <span class=\"nb\">, só o hífen passa a traço de intervalo). Os aquecimentos da M4-U1, da M4-U2 e da M4-U3 (discurso) mudam também nos dados do gerador (docs/pedagogia/aquecimentos/m4-u1.json, m4-u2.json e m4-u3-discurso.json), que estão nesta camada, e regeneram-se sem diferenças. Os painéis do docente das lições F01, F09 e F11 (m4/painel-m4-fxx) seguem os enunciados dos cartões: onde um enunciado mudou, muda igual na lista do painel e no seletor.",
+ "files": {
+  "m4/guia-da-tarefa-m4/index.html": {
+   "base_sha256_lf": "fd3d852795cc29aea1da559bd59dd712c014afaecdd812777ba7d870436c0229",
+   "after_sha256_lf": "d4a66eea140297c02c0cdfb551c449f22449b55a7c60ef3f7eef7307690b4e1a",
+   "edits": [
+    {
+     "location": "m4/guia-da-tarefa-m4, Tarefa 1 (arquivo), «Um exemplo: Os pegadores» (o guião da apresentação)",
+     "old": "<p class=\"ex\">Abertura: «Quem aqui já viu alguém subir agarrado a outro?» Vieira, no capítulo V, repreende os pegadores: peixes pequenos que se colam aos grandes e vivem do que eles comem; o recurso é a antítese entre o grande que trabalha e o pequeno que só se agarra. Hoje: a conta que cresce a repetir o que outra conta diz, sem fazer nada de seu. Objeção que a turma pode fazer: «mas partilhar também é trabalho». Resposta: Vieira distingue quem nada ao lado de quem se cola; partilhar com nome e ideia própria é nadar ao lado. Fecho: a pergunta do princípio, agora com o peixe à vista. Imagens: a gravura do peixe, uma captura de ecrã sem nomes, a frase de Vieira.</p>",
+     "new": "<div class=\"ex\"><table class=\"apoio-tabela\" role=\"table\"><thead role=\"rowgroup\"><tr role=\"row\"><th scope=\"col\" role=\"columnheader\" style=\"width:25%\">Parte</th><th scope=\"col\" role=\"columnheader\" style=\"width:auto\">No guião</th></tr></thead><tbody role=\"rowgroup\"><tr role=\"row\"><th scope=\"row\" role=\"rowheader\">Abertura</th><td role=\"cell\" data-label=\"No guião\">«Quem aqui já viu alguém subir agarrado a outro?»</td></tr><tr role=\"row\"><th scope=\"row\" role=\"rowheader\">Vieira</th><td role=\"cell\" data-label=\"No guião\">no capítulo V, repreende os pegadores: peixes pequenos que se colam aos grandes e vivem do que eles comem; o recurso é a antítese entre o grande que trabalha e o pequeno que só se agarra.</td></tr><tr role=\"row\"><th scope=\"row\" role=\"rowheader\">Hoje</th><td role=\"cell\" data-label=\"No guião\">a conta que cresce a repetir o que outra conta diz, sem fazer nada de seu.</td></tr><tr role=\"row\"><th scope=\"row\" role=\"rowheader\">Objeção</th><td role=\"cell\" data-label=\"No guião\">«mas partilhar também é trabalho».</td></tr><tr role=\"row\"><th scope=\"row\" role=\"rowheader\">Resposta</th><td role=\"cell\" data-label=\"No guião\">Vieira distingue quem nada ao lado de quem se cola; partilhar com nome e ideia própria é nadar ao lado.</td></tr><tr role=\"row\"><th scope=\"row\" role=\"rowheader\">Fecho</th><td role=\"cell\" data-label=\"No guião\">a pergunta do princípio, agora com o peixe à vista.</td></tr><tr role=\"row\"><th scope=\"row\" role=\"rowheader\">Imagens</th><td role=\"cell\" data-label=\"No guião\">a gravura do peixe, uma captura de ecrã sem nomes, a frase de Vieira.</td></tr></tbody></table></div>",
+     "occurrences": 1
+    },
+    {
+     "location": "m4/guia-da-tarefa-m4, cabeça: a folha das tabelas de apoio, antes da camada de aparência",
+     "old": "<link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-universal-1\">",
+     "new": "<link rel=\"stylesheet\" href=\"../../assets/pt-lessons/apoios-tabelas.css?v=20261106.1\"><link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-universal-1\">",
+     "occurrences": 1
+    },
+    {
+     "location": "m4/guia-da-tarefa-m4: «ato I» que não se parte (com o contexto «ato I »)",
+     "old": "ato I ",
+     "new": "ato I ",
+     "occurrences": 1
+    },
+    {
+     "location": "m4/guia-da-tarefa-m4: «ato II» que não se parte",
+     "old": "ato II",
+     "new": "ato II",
+     "occurrences": 1
+    },
+    {
+     "location": "m4/guia-da-tarefa-m4: «90 min» que não se parte",
+     "old": "90 min",
+     "new": "90 min",
+     "occurrences": 3
+    },
+    {
+     "location": "m4/guia-da-tarefa-m4: «150 a 200 palavras» que não se parte",
+     "old": "150 a 200 palavras",
+     "new": "150 a 200 palavras",
+     "occurrences": 1
+    },
+    {
+     "location": "m4/guia-da-tarefa-m4: «3 minutos» que não se parte",
+     "old": "3 minutos",
+     "new": "3 minutos",
+     "occurrences": 1
+    },
+    {
+     "location": "m4/guia-da-tarefa-m4: «220 a 280 palavras» que não se parte",
+     "old": "220 a 280 palavras",
+     "new": "220 a 280 palavras",
+     "occurrences": 2
+    },
+    {
+     "location": "m4/guia-da-tarefa-m4: «180 a 240 palavras» que não se parte",
+     "old": "180 a 240 palavras",
+     "new": "180 a 240 palavras",
+     "occurrences": 2
+    },
+    {
+     "location": "m4/guia-da-tarefa-m4: «2.º ano» que não se parte",
+     "old": "2.º ano",
+     "new": "2.º ano",
+     "occurrences": 2
+    },
+    {
+     "location": "m4/guia-da-tarefa-m4: «aulas 1 a 8» que não se parte",
+     "old": "aulas 1 a 8",
+     "new": "aulas 1 a 8",
+     "occurrences": 1
+    },
+    {
+     "location": "m4/guia-da-tarefa-m4: «aulas 9 a 15» que não se parte",
+     "old": "aulas 9 a 15",
+     "new": "aulas 9 a 15",
+     "occurrences": 1
+    },
+    {
+     "location": "m4/guia-da-tarefa-m4: «aulas 16 a 18» que não se parte",
+     "old": "aulas 16 a 18",
+     "new": "aulas 16 a 18",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/index.html": {
+   "base_sha256_lf": "5ed16fac731463c466bb92bbf0657086a13d2a938e8ec386b103106f4739e6d2",
+   "after_sha256_lf": "a6214ed4d24de766e9d1c9399b773e2bba25a0b8d292a2035d80ef2e8b049bb8",
+   "edits": [
+    {
+     "location": "m4: «cap. I» que não se parte",
+     "old": "cap. I",
+     "new": "cap. I",
+     "occurrences": 5
+    },
+    {
+     "location": "m4: «ato I» que não se parte (com o contexto «ato I »)",
+     "old": "ato I ",
+     "new": "ato I ",
+     "occurrences": 2
+    },
+    {
+     "location": "m4: «ato II» que não se parte (com o contexto «ato II.»)",
+     "old": "ato II.",
+     "new": "ato II.",
+     "occurrences": 2
+    },
+    {
+     "location": "m4: «ato II» que não se parte (com o contexto «ato II?»)",
+     "old": "ato II?",
+     "new": "ato II?",
+     "occurrences": 1
+    },
+    {
+     "location": "m4: «ato II» que não se parte (com o contexto «ato II »)",
+     "old": "ato II ",
+     "new": "ato II ",
+     "occurrences": 3
+    },
+    {
+     "location": "m4: «ato II» que não se parte (com o contexto «ato II,»)",
+     "old": "ato II,",
+     "new": "ato II,",
+     "occurrences": 2
+    },
+    {
+     "location": "m4: «cena XI» que não se parte",
+     "old": "cena XI",
+     "new": "cena XI",
+     "occurrences": 1
+    },
+    {
+     "location": "m4: «ato III» que não se parte",
+     "old": "ato III",
+     "new": "ato III",
+     "occurrences": 2
+    },
+    {
+     "location": "m4: «cena I» que não se parte",
+     "old": "cena I",
+     "new": "cena I",
+     "occurrences": 1
+    },
+    {
+     "location": "m4: «cena XV» que não se parte",
+     "old": "cena XV",
+     "new": "cena XV",
+     "occurrences": 2
+    },
+    {
+     "location": "m4: «13 de junho de 1654» que não se parte",
+     "old": "13 de junho de 1654",
+     "new": "13 de junho de 1654",
+     "occurrences": 2
+    },
+    {
+     "location": "m4: «5 de outubro de 1915» que não se parte",
+     "old": "5 de outubro de 1915",
+     "new": "5 de outubro de 1915",
+     "occurrences": 1
+    },
+    {
+     "location": "m4: «90 minutos» que não se parte",
+     "old": "90 minutos",
+     "new": "90 minutos",
+     "occurrences": 6
+    },
+    {
+     "location": "m4: «25 %» que não se parte",
+     "old": "25 %",
+     "new": "25 %",
+     "occurrences": 1
+    },
+    {
+     "location": "m4: «10 %» que não se parte",
+     "old": "10 %",
+     "new": "10 %",
+     "occurrences": 1
+    },
+    {
+     "location": "m4: «15 %» que não se parte",
+     "old": "15 %",
+     "new": "15 %",
+     "occurrences": 1
+    },
+    {
+     "location": "m4: «90 min» que não se parte (com o contexto «90 min<»)",
+     "old": "90 min<",
+     "new": "90 min<",
+     "occurrences": 6
+    },
+    {
+     "location": "m4: «10 min» que não se parte",
+     "old": "10 min",
+     "new": "10 min",
+     "occurrences": 3
+    },
+    {
+     "location": "m4: «150 a 200 palavras» que não se parte",
+     "old": "150 a 200 palavras",
+     "new": "150 a 200 palavras",
+     "occurrences": 1
+    },
+    {
+     "location": "m4: «100 a 140 palavras» que não se parte",
+     "old": "100 a 140 palavras",
+     "new": "100 a 140 palavras",
+     "occurrences": 1
+    },
+    {
+     "location": "m4: «2.º ano» que não se parte",
+     "old": "2.º ano",
+     "new": "2.º ano",
+     "occurrences": 2
+    },
+    {
+     "location": "m4: «1665–1667» que não se parte",
+     "old": "1665–1667",
+     "new": "1665–⁠1667",
+     "occurrences": 1
+    },
+    {
+     "location": "m4: «Mateus 5, 13» que não se parte",
+     "old": "Mateus 5, 13",
+     "new": "Mateus 5, 13",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/licao-m4-f01/index.html": {
+   "base_sha256_lf": "7283725496814a7069275242d50334fa1e6af9417436a0b21df57c24447de65b",
+   "after_sha256_lf": "f5f108c3de73dabd8630759075ddc706e858ca1588dbcb6c11d62f86c4d3fa4b",
+   "edits": [
+    {
+     "location": "M4-F01: «cap. I» que não se parte (com o contexto «cap. I;»)",
+     "old": "cap. I;",
+     "new": "cap. I;",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F01: «cap. I» que não se parte (com o contexto «cap. I,»)",
+     "old": "cap. I,",
+     "new": "cap. I,",
+     "occurrences": 5
+    },
+    {
+     "location": "M4-F01: «cap. I» que não se parte (com o contexto «cap. I »)",
+     "old": "cap. I ",
+     "new": "cap. I ",
+     "occurrences": 3
+    },
+    {
+     "location": "M4-F01: «cap. I» que não se parte (com o contexto «cap. I\"»)",
+     "old": "cap. I\"",
+     "new": "cap. I\"",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F01: «cap. I» que não se parte (com o contexto «cap. I:»)",
+     "old": "cap. I:",
+     "new": "cap. I:",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F01: «cap. I» que não se parte (com o contexto «cap. I<»)",
+     "old": "cap. I<",
+     "new": "cap. I<",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F01: «cap. VI» que não se parte",
+     "old": "cap. VI",
+     "new": "cap. VI",
+     "occurrences": 2
+    },
+    {
+     "location": "M4-F01: «caps. II e III» que não se parte",
+     "old": "caps. II e III",
+     "new": "caps. II e III",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F01: «caps. IV e V» que não se parte",
+     "old": "caps. IV e V",
+     "new": "caps. IV e V",
+     "occurrences": 2
+    },
+    {
+     "location": "M4-F01: «13 de junho de 1654» que não se parte",
+     "old": "13 de junho de 1654",
+     "new": "13 de junho de 1654",
+     "occurrences": 2
+    },
+    {
+     "location": "M4-F01: «90 minutos» que não se parte",
+     "old": "90 minutos",
+     "new": "90 minutos",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F01: «1 min» que não se parte",
+     "old": "1 min",
+     "new": "1 min",
+     "occurrences": 2
+    },
+    {
+     "location": "M4-F01: «1.º sermão» que não se parte",
+     "old": "1.º sermão",
+     "new": "1.º sermão",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F01: «1.º tomo» que não se parte",
+     "old": "1.º tomo",
+     "new": "1.º tomo",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F01: «Mateus 5,13» que não se parte",
+     "old": "Mateus 5,13",
+     "new": "Mateus 5,13",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F01: «aula 2» que não se parte",
+     "old": "aula 2",
+     "new": "aula 2",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F01: «c. 1535-1540» que não se parte",
+     "old": "c. 1535-1540",
+     "new": "c. 1535–⁠1540",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/licao-m4-f02/index.html": {
+   "base_sha256_lf": "32f82b4237fd73e117f5089a6d6acd6a65faffc743787bd4e8fb26273d6fe6b6",
+   "after_sha256_lf": "8342bec306b7d7264af7f629bfc41aaf70ec6d556e02ce0325052bde5556e487",
+   "edits": [
+    {
+     "location": "M4-F02: «cap. I» que não se parte (com o contexto «cap. I; »)",
+     "old": "cap. I; ",
+     "new": "cap. I; ",
+     "occurrences": 3
+    },
+    {
+     "location": "M4-F02: «cap. I» que não se parte (com o contexto «cap. I, »)",
+     "old": "cap. I, ",
+     "new": "cap. I, ",
+     "occurrences": 4
+    },
+    {
+     "location": "M4-F02: «cap. I» que não se parte (com o contexto «cap. I</»)",
+     "old": "cap. I</",
+     "new": "cap. I</",
+     "occurrences": 3
+    },
+    {
+     "location": "M4-F02: «cap. I» que não se parte (com o contexto «cap. I.\"»)",
+     "old": "cap. I.\"",
+     "new": "cap. I.\"",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F02: «cap. I» que não se parte (com o contexto «cap. I: »)",
+     "old": "cap. I: ",
+     "new": "cap. I: ",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F02: «cap. I» que não se parte (com o contexto «cap. I i»)",
+     "old": "cap. I i",
+     "new": "cap. I i",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F02: «cap. VI» que não se parte",
+     "old": "cap. VI",
+     "new": "cap. VI",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F02: «caps. II e III» que não se parte",
+     "old": "caps. II e III",
+     "new": "caps. II e III",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F02: «13 de junho de 1654» que não se parte",
+     "old": "13 de junho de 1654",
+     "new": "13 de junho de 1654",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F02: «13 de junho» que não se parte (com o contexto «13 de junho;»)",
+     "old": "13 de junho;",
+     "new": "13 de junho;",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F02: «90 minutos» que não se parte",
+     "old": "90 minutos",
+     "new": "90 minutos",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F02: «Mateus 5, 13» que não se parte",
+     "old": "Mateus 5, 13",
+     "new": "Mateus 5, 13",
+     "occurrences": 3
+    },
+    {
+     "location": "M4-F02: «§ I» que não se parte (com o contexto «§ I,»)",
+     "old": "§ I,",
+     "new": "§ I,",
+     "occurrences": 3
+    },
+    {
+     "location": "M4-F02: «(IV e V)» que não se parte",
+     "old": "(IV e V)",
+     "new": "(IV e V)",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F02: «aula 1» que não se parte",
+     "old": "aula 1",
+     "new": "aula 1",
+     "occurrences": 4
+    },
+    {
+     "location": "M4-F02: «c. 1535-1540» que não se parte",
+     "old": "c. 1535-1540",
+     "new": "c. 1535–⁠1540",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/licao-m4-f04/index.html": {
+   "base_sha256_lf": "48303ae0b9b8cbb237258616dbceec649aeee3cb621febebbf7bf1f0a757a037",
+   "after_sha256_lf": "d2813931da905d26bd4a14a050de5204ad2c368bf5d24a27a575794e33942293",
+   "edits": [
+    {
+     "location": "M4-F04: «cap. IV» que não se parte",
+     "old": "cap. IV",
+     "new": "cap. IV",
+     "occurrences": 11
+    },
+    {
+     "location": "M4-F04: «caps. II e III» que não se parte",
+     "old": "caps. II e III",
+     "new": "caps. II e III",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F04: «cap. V» que não se parte",
+     "old": "cap. V",
+     "new": "cap. V",
+     "occurrences": 2
+    },
+    {
+     "location": "M4-F04: «caps. I e V» que não se parte",
+     "old": "caps. I e V",
+     "new": "caps. I e V",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F04: «cap. I» que não se parte (com o contexto «cap. I,»)",
+     "old": "cap. I,",
+     "new": "cap. I,",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F04: «90 minutos» que não se parte",
+     "old": "90 minutos",
+     "new": "90 minutos",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/licao-m4-f06/index.html": {
+   "base_sha256_lf": "bd08848d658e42ef0ae812ef218aede4b94f47fa24e618471f807d7d7552b58d",
+   "after_sha256_lf": "0800f8290f0cd7c7da17a23f6787956adfb2bdd6383fd428c9efd99ff10c0a6b",
+   "edits": [
+    {
+     "location": "M4-F06, cartão 16, Para levar (As frases da aula, itens 2 a 5)",
+     "old": "<li>Assertivo: afirma, e pode ser verdadeiro ou falso. Diretivo: leva quem ouve a fazer alguma coisa.</li><li>Expressivo: mostra o que sente quem fala, como «Oh…!» ou «Quem me dera…».</li><li>Compromissivo: obriga quem fala («trago-te»); o diretivo obriga quem ouve («traz-me»).</li><li>Declarativo: muda a realidade quando o diz quem tem autoridade; não é o mesmo que frase declarativa.</li>",
+     "new": "</ol><table class=\\\"apoio-tabela\\\" role=\\\"table\\\"><caption>Os cinco atos de fala</caption><thead role=\\\"rowgroup\\\"><tr role=\\\"row\\\"><th scope=\\\"col\\\" role=\\\"columnheader\\\" style=\\\"width:11em\\\">Ato</th><th scope=\\\"col\\\" role=\\\"columnheader\\\">O que faz</th><th scope=\\\"col\\\" role=\\\"columnheader\\\">Exemplo</th></tr></thead><tbody role=\\\"rowgroup\\\"><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Assertivo</th><td role=\\\"cell\\\" data-label=\\\"O que faz\\\">afirma, e pode ser verdadeiro ou falso</td><td role=\\\"cell\\\" data-label=\\\"Exemplo\\\">«os grandes comem os pequenos»</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Diretivo</th><td role=\\\"cell\\\" data-label=\\\"O que faz\\\">leva quem ouve a fazer alguma coisa; obriga quem ouve</td><td role=\\\"cell\\\" data-label=\\\"Exemplo\\\">«Olhai, peixes»; «traz-me»</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Expressivo</th><td role=\\\"cell\\\" data-label=\\\"O que faz\\\">mostra o que sente quem fala</td><td role=\\\"cell\\\" data-label=\\\"Exemplo\\\">«Oh…!»; «Quem me dera…»</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Compromissivo</th><td role=\\\"cell\\\" data-label=\\\"O que faz\\\">obriga quem fala</td><td role=\\\"cell\\\" data-label=\\\"Exemplo\\\">«trago-te»</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Declarativo</th><td role=\\\"cell\\\" data-label=\\\"O que faz\\\">muda a realidade quando o diz quem tem autoridade; não é o mesmo que frase declarativa</td><td role=\\\"cell\\\" data-label=\\\"Exemplo\\\">«Declaro eleita delegada de turma a Marta.»</td></tr></tbody></table><ol start=\\\"2\\\">",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F06, cabeça: a folha das tabelas de apoio, antes da camada de aparência",
+     "old": "<link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-universal-1\">",
+     "new": "<link rel=\"stylesheet\" href=\"../../assets/pt-lessons/apoios-tabelas.css?v=20261106.1\"><link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-universal-1\">",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F06: «caps. II, IV, V e VI» que não se parte",
+     "old": "caps. II, IV, V e VI",
+     "new": "caps. II, IV, V e VI",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F06: «cap. V» que não se parte",
+     "old": "cap. V",
+     "new": "cap. V",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F06: «cap. IV» que não se parte",
+     "old": "cap. IV",
+     "new": "cap. IV",
+     "occurrences": 3
+    },
+    {
+     "location": "M4-F06: «90 minutos» que não se parte",
+     "old": "90 minutos",
+     "new": "90 minutos",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/licao-m4-f07/index.html": {
+   "base_sha256_lf": "0cc77bbfdf7acbbf8030de5ffe65595c3ebb667076ca0bdb709b4b64446368c3",
+   "after_sha256_lf": "073dbeec4989d354616b16fb6bad3498ac4d02e1e4c286c31a168fd251534752",
+   "edits": [
+    {
+     "location": "M4-F07: «século XVI» que não se parte",
+     "old": "século XVI",
+     "new": "século XVI",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F07: «ato I» que não se parte (com o contexto «ato I,»)",
+     "old": "ato I,",
+     "new": "ato I,",
+     "occurrences": 8
+    },
+    {
+     "location": "M4-F07: «ato I» que não se parte (com o contexto «ato I.»)",
+     "old": "ato I.",
+     "new": "ato I.",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F07: «ato I» que não se parte (com o contexto «ato I<»)",
+     "old": "ato I<",
+     "new": "ato I<",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F07: «cenas XI e XII» que não se parte",
+     "old": "cenas XI e XII",
+     "new": "cenas XI e XII",
+     "occurrences": 3
+    },
+    {
+     "location": "M4-F07: «cena XI» que não se parte (com o contexto «cena XI,»)",
+     "old": "cena XI,",
+     "new": "cena XI,",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F07: «cena XI» que não se parte (com o contexto «cena XI:»)",
+     "old": "cena XI:",
+     "new": "cena XI:",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F07: «cena XI» que não se parte (com o contexto «cena XI)»)",
+     "old": "cena XI)",
+     "new": "cena XI)",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F07: «cena V» que não se parte (com o contexto «cena V)»)",
+     "old": "cena V)",
+     "new": "cena V)",
+     "occurrences": 2
+    },
+    {
+     "location": "M4-F07: «cenas VII e VIII» que não se parte",
+     "old": "cenas VII e VIII",
+     "new": "cenas VII e VIII",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F07: «cena IX» que não se parte",
+     "old": "cena IX",
+     "new": "cena IX",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F07: «Ato I» que não se parte (com o contexto «Ato I,»)",
+     "old": "Ato I,",
+     "new": "Ato I,",
+     "occurrences": 2
+    },
+    {
+     "location": "M4-F07: «cena XII» que não se parte (com o contexto «cena XII)»)",
+     "old": "cena XII)",
+     "new": "cena XII)",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F07: «cena VIII» que não se parte (com o contexto «cena VIII,»)",
+     "old": "cena VIII,",
+     "new": "cena VIII,",
+     "occurrences": 2
+    },
+    {
+     "location": "M4-F07: «cena VIII» que não se parte (com o contexto «cena VIII »)",
+     "old": "cena VIII ",
+     "new": "cena VIII ",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F07: «cena VIII» que não se parte (com o contexto «cena VIII)»)",
+     "old": "cena VIII)",
+     "new": "cena VIII)",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F07: «cena VIII» que não se parte (com o contexto «cena VIII.»)",
+     "old": "cena VIII.",
+     "new": "cena VIII.",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F07: «cena VII» que não se parte (com o contexto «cena VII,»)",
+     "old": "cena VII,",
+     "new": "cena VII,",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F07: «cena VII» que não se parte (com o contexto «cena VII.»)",
+     "old": "cena VII.",
+     "new": "cena VII.",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F07: «cena VII» que não se parte (com o contexto «cena VII)»)",
+     "old": "cena VII)",
+     "new": "cena VII)",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F07: «Cena XII» que não se parte (com o contexto «>Cena XII»)",
+     "old": ">Cena XII",
+     "new": ">Cena XII",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F07: «Ato II» que não se parte",
+     "old": "Ato II",
+     "new": "Ato II",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F07: «cena I» que não se parte (com o contexto «cena I<»)",
+     "old": "cena I<",
+     "new": "cena I<",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F07: «cena I» que não se parte (com o contexto «cena I,»)",
+     "old": "cena I,",
+     "new": "cena I,",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F07: «cena I» que não se parte (com o contexto «cena I)»)",
+     "old": "cena I)",
+     "new": "cena I)",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F07: «cena IV» que não se parte",
+     "old": "cena IV",
+     "new": "cena IV",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F07: «ato II» que não se parte",
+     "old": "ato II",
+     "new": "ato II",
+     "occurrences": 2
+    },
+    {
+     "location": "M4-F07: «90 minutos» que não se parte",
+     "old": "90 minutos",
+     "new": "90 minutos",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F07: «aula 4» que não se parte",
+     "old": "aula 4",
+     "new": "aula 4",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/licao-m4-f08/index.html": {
+   "base_sha256_lf": "3a0124d479f2d6eb26bc748e154e913b834e2c11cd0373d30cfc44fd00f32a25",
+   "after_sha256_lf": "43f7c0d7987186c4d25a7822033dfaaaaafcfd425db7fdd47973813c751466b8",
+   "edits": [
+    {
+     "location": "M4-F08: «ato II» que não se parte (com o contexto «ato II,»)",
+     "old": "ato II,",
+     "new": "ato II,",
+     "occurrences": 9
+    },
+    {
+     "location": "M4-F08: «ato II» que não se parte (com o contexto «ato II<»)",
+     "old": "ato II<",
+     "new": "ato II<",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F08: «cenas I, XIV e XV» que não se parte",
+     "old": "cenas I, XIV e XV",
+     "new": "cenas I, XIV e XV",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F08: «cena I» que não se parte (com o contexto «cena I,»)",
+     "old": "cena I,",
+     "new": "cena I,",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F08: «cena I» que não se parte (com o contexto «cena I:»)",
+     "old": "cena I:",
+     "new": "cena I:",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F08: «cena I» que não se parte (com o contexto «cena I.»)",
+     "old": "cena I.",
+     "new": "cena I.",
+     "occurrences": 2
+    },
+    {
+     "location": "M4-F08: «cena I» que não se parte (com o contexto «cena I<»)",
+     "old": "cena I<",
+     "new": "cena I<",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F08: «Ato II» que não se parte",
+     "old": "Ato II",
+     "new": "Ato II",
+     "occurrences": 2
+    },
+    {
+     "location": "M4-F08: «cena II» que não se parte",
+     "old": "cena II",
+     "new": "cena II",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F08: «ato I» que não se parte (com o contexto «ato I »)",
+     "old": "ato I ",
+     "new": "ato I ",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F08: «cenas XIV e XV» que não se parte",
+     "old": "cenas XIV e XV",
+     "new": "cenas XIV e XV",
+     "occurrences": 3
+    },
+    {
+     "location": "M4-F08: «cena XV» que não se parte",
+     "old": "cena XV",
+     "new": "cena XV",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F08: «Cena XIV» que não se parte",
+     "old": "Cena XIV",
+     "new": "Cena XIV",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F08: «Cena XV» que não se parte",
+     "old": "Cena XV",
+     "new": "Cena XV",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F08: «cenas I e XIV» que não se parte",
+     "old": "cenas I e XIV",
+     "new": "cenas I e XIV",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F08: «ato III» que não se parte",
+     "old": "ato III",
+     "new": "ato III",
+     "occurrences": 2
+    },
+    {
+     "location": "M4-F08: «cena V» que não se parte",
+     "old": "cena V",
+     "new": "cena V",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F08: «90 minutos» que não se parte",
+     "old": "90 minutos",
+     "new": "90 minutos",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/licao-m4-f09/index.html": {
+   "base_sha256_lf": "4c001fae51f8875f48cda5706b2a4b922dc493260186be71ded9ee9cb462d295",
+   "after_sha256_lf": "8fe05396c9d96ccf209f8b875c4520e171fa61cd0c9fd8ac3c783525c5f9a1b3",
+   "edits": [
+    {
+     "location": "M4-F09: «ato III» que não se parte (com o contexto «, ato III, »)",
+     "old": ", ato III, ",
+     "new": ", ato III, ",
+     "occurrences": 7
+    },
+    {
+     "location": "M4-F09: «ato III» que não se parte (com o contexto «o ato III, »)",
+     "old": "o ato III, ",
+     "new": "o ato III, ",
+     "occurrences": 6
+    },
+    {
+     "location": "M4-F09: «ato III» que não se parte (com o contexto «, ato III</»)",
+     "old": ", ato III</",
+     "new": ", ato III</",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F09: «cena XI» que não se parte (com o contexto «cena XI.»)",
+     "old": "cena XI.",
+     "new": "cena XI.",
+     "occurrences": 2
+    },
+    {
+     "location": "M4-F09: «cena XI» que não se parte (com o contexto «cena XI »)",
+     "old": "cena XI ",
+     "new": "cena XI ",
+     "occurrences": 3
+    },
+    {
+     "location": "M4-F09: «cena XI» que não se parte (com o contexto «cena XI,»)",
+     "old": "cena XI,",
+     "new": "cena XI,",
+     "occurrences": 5
+    },
+    {
+     "location": "M4-F09: «cena XI» que não se parte (com o contexto «cena XI:»)",
+     "old": "cena XI:",
+     "new": "cena XI:",
+     "occurrences": 4
+    },
+    {
+     "location": "M4-F09: «ato II» que não se parte (com o contexto « no ato II não»)",
+     "old": " no ato II não",
+     "new": " no ato II não",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F09: «ato II» que não se parte (com o contexto « no ato II exi»)",
+     "old": " no ato II exi",
+     "new": " no ato II exi",
+     "occurrences": 2
+    },
+    {
+     "location": "M4-F09: «ato II» que não se parte (com o contexto «>No ato II, er»)",
+     "old": ">No ato II, er",
+     "new": ">No ato II, er",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F09: «ato II» que não se parte (com o contexto «>No ato II, ce»)",
+     "old": ">No ato II, ce",
+     "new": ">No ato II, ce",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F09: «ato II» que não se parte (com o contexto «ia, ato II, ce»)",
+     "old": "ia, ato II, ce",
+     "new": "ia, ato II, ce",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F09: «ato II» que não se parte (com o contexto « do ato II, ce»)",
+     "old": " do ato II, ce",
+     "new": " do ato II, ce",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F09: «ato II» que não se parte (com o contexto «\"No ato II, Ma»)",
+     "old": "\"No ato II, Ma",
+     "new": "\"No ato II, Ma",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F09: «ato II» que não se parte (com o contexto « no ato II, co»)",
+     "old": " no ato II, co",
+     "new": " no ato II, co",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F09: «ato II» que não se parte (com o contexto « no ato II, ac»)",
+     "old": " no ato II, ac",
+     "new": " no ato II, ac",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F09: «ato II» que não se parte (com o contexto « no ato II, nã»)",
+     "old": " no ato II, nã",
+     "new": " no ato II, nã",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F09: «ato II» que não se parte (com o contexto «\"No ato II, a »)",
+     "old": "\"No ato II, a ",
+     "new": "\"No ato II, a ",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F09: «ato II» que não se parte (com o contexto « no ato II: «M»)",
+     "old": " no ato II: «M",
+     "new": " no ato II: «M",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F09: «ato II» que não se parte (com o contexto «m o ato II (a »)",
+     "old": "m o ato II (a ",
+     "new": "m o ato II (a ",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F09: «ato II» que não se parte (com o contexto « No ato II, ex»)",
+     "old": " No ato II, ex",
+     "new": " No ato II, ex",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F09: «ato II» que não se parte (com o contexto «>No ato II, a »)",
+     "old": ">No ato II, a ",
+     "new": ">No ato II, a ",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F09: «cenas X e XI» que não se parte",
+     "old": "cenas X e XI",
+     "new": "cenas X e XI",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F09: «cena I» que não se parte",
+     "old": "cena I",
+     "new": "cena I",
+     "occurrences": 7
+    },
+    {
+     "location": "M4-F09: «Ato III» que não se parte",
+     "old": "Ato III",
+     "new": "Ato III",
+     "occurrences": 4
+    },
+    {
+     "location": "M4-F09: «ato I» que não se parte (com o contexto «ato I,»)",
+     "old": "ato I,",
+     "new": "ato I,",
+     "occurrences": 2
+    },
+    {
+     "location": "M4-F09: «cena VIII» que não se parte",
+     "old": "cena VIII",
+     "new": "cena VIII",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F09: «cenas I e VIII» que não se parte",
+     "old": "cenas I e VIII",
+     "new": "cenas I e VIII",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F09: «cena XII» que não se parte",
+     "old": "cena XII",
+     "new": "cena XII",
+     "occurrences": 3
+    },
+    {
+     "location": "M4-F09: «cena V» que não se parte (com o contexto «cena V,»)",
+     "old": "cena V,",
+     "new": "cena V,",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F09: «cena V» que não se parte (com o contexto «cena V »)",
+     "old": "cena V ",
+     "new": "cena V ",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F09: «90 minutos» que não se parte",
+     "old": "90 minutos",
+     "new": "90 minutos",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F09: «aula 1» que não se parte (com o contexto «aula 1,»)",
+     "old": "aula 1,",
+     "new": "aula 1,",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F09: «aula 4» que não se parte",
+     "old": "aula 4",
+     "new": "aula 4",
+     "occurrences": 3
+    },
+    {
+     "location": "M4-F09: «aula 10» que não se parte",
+     "old": "aula 10",
+     "new": "aula 10",
+     "occurrences": 2
+    },
+    {
+     "location": "M4-F09: «aula 12» que não se parte",
+     "old": "aula 12",
+     "new": "aula 12",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/licao-m4-f10/index.html": {
+   "base_sha256_lf": "ae429618b7a937a6dbeb5ab5738602214786c132f3457586c0f58336b5624a39",
+   "after_sha256_lf": "4fcccfbbe2aa0323bc0283ba9a83f2a07475ed3b80a0fe8442c79c84fc91974c",
+   "edits": [
+    {
+     "location": "M4-F10, cartão 13, Recorda («Quatro peixes, quatro traços»)",
+     "old": "Procura na lista a frase em que Vieira lhe pergunta porquê.</p><ul><li><b>Roncadores</b>: pequenos e barulhentos, «as roncas do mar»; fazer mais ruído do que se vale.</li><li><b>Pegadores</b>: «nunca os desferram»; viver à custa de quem tem poder.</li><li><b>Voadores</b>: «porque vos quereis ser aves?»; querer ser mais do que se é.</li><li><b>Polvo</b>: «parece» manso e ataca de emboscada; trair com cara de bondade.</li></ul>",
+     "new": "Procura na tabela a frase em que Vieira lhe pergunta porquê.</p><table class=\\\"apoio-tabela\\\" role=\\\"table\\\"><thead role=\\\"rowgroup\\\"><tr role=\\\"row\\\"><th scope=\\\"col\\\" role=\\\"columnheader\\\">Peixe</th><th scope=\\\"col\\\" role=\\\"columnheader\\\">No texto</th><th scope=\\\"col\\\" role=\\\"columnheader\\\">Traço</th></tr></thead><tbody role=\\\"rowgroup\\\"><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Roncadores</th><td role=\\\"cell\\\" data-label=\\\"No texto\\\">pequenos e barulhentos, «as roncas do mar»</td><td role=\\\"cell\\\" data-label=\\\"Traço\\\">fazer mais ruído do que se vale</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Pegadores</th><td role=\\\"cell\\\" data-label=\\\"No texto\\\">«nunca os desferram»</td><td role=\\\"cell\\\" data-label=\\\"Traço\\\">viver à custa de quem tem poder</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Voadores</th><td role=\\\"cell\\\" data-label=\\\"No texto\\\">«porque vos quereis ser aves?»</td><td role=\\\"cell\\\" data-label=\\\"Traço\\\">querer ser mais do que se é</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Polvo</th><td role=\\\"cell\\\" data-label=\\\"No texto\\\">«parece» manso e ataca de emboscada</td><td role=\\\"cell\\\" data-label=\\\"Traço\\\">trair com cara de bondade</td></tr></tbody></table>",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F10, cartão 8, Decide (Ler mais: as passagens das aulas)",
+     "old": "<p>Passagens das aulas da unidade que servem a resposta: aula 1, «Mudou somente o púlpito e o auditório, mas não desistiu da doutrina» e «faltou pouco, para que lhe não tirassem a vida»; aulas 2 e 4, «os ouvintes, sendo verdadeira a doutrina que lhes dão, a não querem receber»; aula 3, «para a cidade é que haveis de olhar»; aula 4, «Ao menos têm os peixes duas boas qualidades de ouvintes: ouvem e não falam»; aula 5, «A vossa bruteza é melhor que a minha razão»; aulas 5 e 6, «Oh que boa doutrina era esta para a terra, se eu não pregara para o mar!».</p>",
+     "new": "<p>Passagens das aulas da unidade que servem a resposta:</p><table class=\\\"apoio-tabela\\\" role=\\\"table\\\"><thead role=\\\"rowgroup\\\"><tr role=\\\"row\\\"><th scope=\\\"col\\\" role=\\\"columnheader\\\">Aula</th><th scope=\\\"col\\\" role=\\\"columnheader\\\">Passagem</th></tr></thead><tbody role=\\\"rowgroup\\\"><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">aula 1</th><td role=\\\"cell\\\" data-label=\\\"Passagem\\\">«Mudou somente o púlpito e o auditório, mas não desistiu da doutrina»; «faltou pouco, para que lhe não tirassem a vida»</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">aulas 2 e 4</th><td role=\\\"cell\\\" data-label=\\\"Passagem\\\">«os ouvintes, sendo verdadeira a doutrina que lhes dão, a não querem receber»</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">aula 3</th><td role=\\\"cell\\\" data-label=\\\"Passagem\\\">«para a cidade é que haveis de olhar»</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">aula 4</th><td role=\\\"cell\\\" data-label=\\\"Passagem\\\">«Ao menos têm os peixes duas boas qualidades de ouvintes: ouvem e não falam»</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">aula 5</th><td role=\\\"cell\\\" data-label=\\\"Passagem\\\">«A vossa bruteza é melhor que a minha razão»</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">aulas 5 e 6</th><td role=\\\"cell\\\" data-label=\\\"Passagem\\\">«Oh que boa doutrina era esta para a terra, se eu não pregara para o mar!»</td></tr></tbody></table>",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F10, cartão 3, A encomenda (Ler mais, 2.º parágrafo)",
+     "old": "<p>O que conta: a citação certa e localizada, o recurso nomeado e explicado, o comportamento de hoje sem visar ninguém, a objeção respondida com prova no texto, três a quatro minutos, imagens com crédito. Conta também o processo: três aberturas de 20 segundos",
+     "new": "<p>O que conta:</p><ol><li>A citação certa e localizada.</li><li>O recurso nomeado e explicado.</li><li>O comportamento de hoje sem visar ninguém.</li><li>A objeção respondida com prova no texto.</li><li>Três a quatro minutos.</li><li>Imagens com crédito.</li></ol><p>Conta também o processo: três aberturas de 20 segundos",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F10, cabeça: a folha das tabelas de apoio, antes da camada de aparência",
+     "old": "<link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-universal-1\">",
+     "new": "<link rel=\"stylesheet\" href=\"../../assets/pt-lessons/apoios-tabelas.css?v=20261106.1\"><link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-universal-1\">",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F10: «cap. V» que não se parte (com o contexto «cap. V;»)",
+     "old": "cap. V;",
+     "new": "cap. V;",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F10: «cap. V» que não se parte (com o contexto «cap. V,»)",
+     "old": "cap. V,",
+     "new": "cap. V,",
+     "occurrences": 2
+    },
+    {
+     "location": "M4-F10: «cap. V» que não se parte (com o contexto «cap. V.»)",
+     "old": "cap. V.",
+     "new": "cap. V.",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F10: «cap. V» que não se parte (com o contexto «cap. V<»)",
+     "old": "cap. V<",
+     "new": "cap. V<",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F10: «cap. IV» que não se parte",
+     "old": "cap. IV",
+     "new": "cap. IV",
+     "occurrences": 2
+    },
+    {
+     "location": "M4-F10: «cap. I» que não se parte (com o contexto «cap. I.»)",
+     "old": "cap. I.",
+     "new": "cap. I.",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F10: «cap. I» que não se parte (com o contexto «cap. I:»)",
+     "old": "cap. I:",
+     "new": "cap. I:",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F10: «cap. VI» que não se parte",
+     "old": "cap. VI",
+     "new": "cap. VI",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F10: «capítulo V» que não se parte",
+     "old": "capítulo V",
+     "new": "capítulo V",
+     "occurrences": 2
+    },
+    {
+     "location": "M4-F10: «90 minutos» que não se parte",
+     "old": "90 minutos",
+     "new": "90 minutos",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F10: «20 segundos» que não se parte (com o contexto «20 segundos sob»)",
+     "old": "20 segundos sob",
+     "new": "20 segundos sob",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F10: «20 segundos» que não se parte (com o contexto «20 segundos, en»)",
+     "old": "20 segundos, en",
+     "new": "20 segundos, en",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F10: «150 a 200 palavras» que não se parte",
+     "old": "150 a 200 palavras",
+     "new": "150 a 200 palavras",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F10: «1 min» que não se parte",
+     "old": "1 min",
+     "new": "1 min",
+     "occurrences": 2
+    },
+    {
+     "location": "M4-F10: «aula 1» que não se parte (com o contexto «aula 1)»)",
+     "old": "aula 1)",
+     "new": "aula 1)",
+     "occurrences": 2
+    },
+    {
+     "location": "M4-F10: «aula 4» que não se parte (com o contexto «aula 4 »)",
+     "old": "aula 4 ",
+     "new": "aula 4 ",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/licao-m4-f11/index.html": {
+   "base_sha256_lf": "e913e04f3f823a73f480afc63a1607498f77c58d4233a2be32b354d7a39a58d5",
+   "after_sha256_lf": "96f567a5df6e2200e746f930fb9d2ac680168c68c56a77610835e81ab2721018",
+   "edits": [
+    {
+     "location": "M4-F11: «cap. I» que não se parte (com o contexto «o cap. I.<»)",
+     "old": "o cap. I.<",
+     "new": "o cap. I.<",
+     "occurrences": 2
+    },
+    {
+     "location": "M4-F11: «cap. I» que não se parte (com o contexto «o cap. I.\"»)",
+     "old": "o cap. I.\"",
+     "new": "o cap. I.\"",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F11: «cap. I» que não se parte (com o contexto «: cap. I, »)",
+     "old": ": cap. I, ",
+     "new": ": cap. I, ",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F11: «caps. II e III» que não se parte (com o contexto «; caps. II e III»)",
+     "old": "; caps. II e III",
+     "new": "; caps. II e III",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F11: «caps. IV e V» que não se parte (com o contexto «; caps. IV e V»)",
+     "old": "; caps. IV e V",
+     "new": "; caps. IV e V",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F11: «cap. VI» que não se parte (com o contexto «; cap. VI»)",
+     "old": "; cap. VI",
+     "new": "; cap. VI",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F11: «ato I» que não se parte (com o contexto «, ato I, »)",
+     "old": ", ato I, ",
+     "new": ", ato I, ",
+     "occurrences": 2
+    },
+    {
+     "location": "M4-F11: «cenas XI e XII» que não se parte",
+     "old": "cenas XI e XII",
+     "new": "cenas XI e XII",
+     "occurrences": 2
+    },
+    {
+     "location": "M4-F11: «cena XI» que não se parte (com o contexto «cena XI,»)",
+     "old": "cena XI,",
+     "new": "cena XI,",
+     "occurrences": 2
+    },
+    {
+     "location": "M4-F11: «cena XII» que não se parte",
+     "old": "cena XII",
+     "new": "cena XII",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F11: «ato III» que não se parte (com o contexto «ato III, di»)",
+     "old": "ato III, di",
+     "new": "ato III, di",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F11: «ato III» que não se parte (com o contexto «ato III, ce»)",
+     "old": "ato III, ce",
+     "new": "ato III, ce",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F11: «ato III» que não se parte (com o contexto «ato III.\",\"»)",
+     "old": "ato III.\",\"",
+     "new": "ato III.\",\"",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F11: «cena V» que não se parte",
+     "old": "cena V",
+     "new": "cena V",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F11: «13 de junho de 1654» que não se parte",
+     "old": "13 de junho de 1654",
+     "new": "13 de junho de 1654",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F11: «90 minutos» que não se parte",
+     "old": "90 minutos",
+     "new": "90 minutos",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F11: «100 a 140 palavras» que não se parte",
+     "old": "100 a 140 palavras",
+     "new": "100 a 140 palavras",
+     "occurrences": 4
+    },
+    {
+     "location": "M4-F11: «140 palavras» que não se parte (com o contexto «e 140 palavras»)",
+     "old": "e 140 palavras",
+     "new": "e 140 palavras",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F11: «131 palavras» que não se parte",
+     "old": "131 palavras",
+     "new": "131 palavras",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/licao-m4-f14/index.html": {
+   "base_sha256_lf": "b8b7a91da1ab4bacb266bf64f66a4aa6915d9ea2c712ff2812f9e5764f3e78dd",
+   "after_sha256_lf": "bdfbc1dbbf381fd64c721eca26d427662d5d467d8dd7dee678728ec58a9c4ed9",
+   "edits": [
+    {
+     "location": "M4-F14, cartão 16, Agora, em papel (Um exemplo)",
+     "old": "<p>Regra: comemos todos à mesma mesa, três vezes por dia, à mesma hora. Argumento 1: a comida chega para todos se for repartida às claras; ontem à noite a caixa das bolachas ficou vazia e hoje de manhã ninguém sabia quem as tinha comido. Argumento 2: à mesa fala-se; a discussão de terça sobre o gerador acabou ao jantar, com toda a gente sentada. Objeção: «E quem tem fome fora de horas?» Resposta: cada um guarda uma peça de fruta com o seu nome na prateleira; ninguém passa fome, só não se come o que é dos outros. Apelo: votem a mesa comum.</p>",
+     "new": "<table class=\\\"apoio-tabela\\\" role=\\\"table\\\"><thead role=\\\"rowgroup\\\"><tr role=\\\"row\\\"><th scope=\\\"col\\\" role=\\\"columnheader\\\">Peça</th><th scope=\\\"col\\\" role=\\\"columnheader\\\">No exemplo</th></tr></thead><tbody role=\\\"rowgroup\\\"><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Regra</th><td role=\\\"cell\\\" data-label=\\\"No exemplo\\\">comemos todos à mesma mesa, três vezes por dia, à mesma hora.</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Argumento 1</th><td role=\\\"cell\\\" data-label=\\\"No exemplo\\\">a comida chega para todos se for repartida às claras; ontem à noite a caixa das bolachas ficou vazia e hoje de manhã ninguém sabia quem as tinha comido.</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Argumento 2</th><td role=\\\"cell\\\" data-label=\\\"No exemplo\\\">à mesa fala-se; a discussão de terça sobre o gerador acabou ao jantar, com toda a gente sentada.</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Objeção</th><td role=\\\"cell\\\" data-label=\\\"No exemplo\\\">«E quem tem fome fora de horas?»</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Resposta</th><td role=\\\"cell\\\" data-label=\\\"No exemplo\\\">cada um guarda uma peça de fruta com o seu nome na prateleira; ninguém passa fome, só não se come o que é dos outros.</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Apelo</th><td role=\\\"cell\\\" data-label=\\\"No exemplo\\\">votem a mesa comum.</td></tr></tbody></table>",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F14, cabeça: a folha das tabelas de apoio, antes da camada de aparência",
+     "old": "<link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-universal-1\">",
+     "new": "<link rel=\"stylesheet\" href=\"../../assets/pt-lessons/apoios-tabelas.css?v=20261106.1\"><link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-universal-1\">",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F14: «5 de outubro de 1915» que não se parte",
+     "old": "5 de outubro de 1915",
+     "new": "5 de outubro de 1915",
+     "occurrences": 4
+    },
+    {
+     "location": "M4-F14: «5 de outubro de 1910» que não se parte",
+     "old": "5 de outubro de 1910",
+     "new": "5 de outubro de 1910",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F14: «14 de maio» que não se parte",
+     "old": "14 de maio",
+     "new": "14 de maio",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F14: «9 de março de 1916» que não se parte",
+     "old": "9 de março de 1916",
+     "new": "9 de março de 1916",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F14: «90 minutos» que não se parte",
+     "old": "90 minutos",
+     "new": "90 minutos",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F14: «3.º parágrafo» que não se parte",
+     "old": "3.º parágrafo",
+     "new": "3.º parágrafo",
+     "occurrences": 2
+    },
+    {
+     "location": "M4-F14: «5.º aniversário» que não se parte",
+     "old": "5.º aniversário",
+     "new": "5.º aniversário",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F14: «1.ª frase» que não se parte",
+     "old": "1.ª frase",
+     "new": "1.ª frase",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F14: «2.ª frase» que não se parte",
+     "old": "2.ª frase",
+     "new": "2.ª frase",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F14: «n.º 7» que não se parte",
+     "old": "n.º 7",
+     "new": "n.º 7",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F14: «aula 8» que não se parte",
+     "old": "aula 8",
+     "new": "aula 8",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/licao-m4-f15/index.html": {
+   "base_sha256_lf": "7d72edbbbc4bc3dec2f4b9c7031e00007c2928b952b95f41d80fa3e6fb204697",
+   "after_sha256_lf": "5102e5d63c59e37c58a2ba47e4b86327a87d8742ac45afe995bfbfb1dc4f6b80",
+   "edits": [
+    {
+     "location": "M4-F15: «cap. IV» que não se parte",
+     "old": "cap. IV",
+     "new": "cap. IV",
+     "occurrences": 11
+    },
+    {
+     "location": "M4-F15: «90 minutos» que não se parte",
+     "old": "90 minutos",
+     "new": "90 minutos",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F15: «aula 3» que não se parte",
+     "old": "aula 3",
+     "new": "aula 3",
+     "occurrences": 2
+    },
+    {
+     "location": "M4-F15: «aula 12» que não se parte",
+     "old": "aula 12",
+     "new": "aula 12",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/licao-m4-f20/index.html": {
+   "base_sha256_lf": "2e755798a1311d0f00a1e25a6482fe2de4a2762d2b760c8b5a245ee86d4acd73",
+   "after_sha256_lf": "27986c24834770b45b54e179a73f62a448450c96f5808fce0c0375f23e57bd41",
+   "edits": [
+    {
+     "location": "M4-F20: «Cena XI» que não se parte (com o contexto «Cena XI:»)",
+     "old": "Cena XI:",
+     "new": "Cena XI:",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F20: «Cena XII» que não se parte",
+     "old": "Cena XII",
+     "new": "Cena XII",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F20: «ato I» que não se parte",
+     "old": "ato I",
+     "new": "ato I",
+     "occurrences": 5
+    },
+    {
+     "location": "M4-F20: «cena XI» que não se parte (com o contexto «cena XI)»)",
+     "old": "cena XI)",
+     "new": "cena XI)",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F20: «cena XI» que não se parte (com o contexto «cena XI,»)",
+     "old": "cena XI,",
+     "new": "cena XI,",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F20: «cena XII» que não se parte",
+     "old": "cena XII",
+     "new": "cena XII",
+     "occurrences": 5
+    },
+    {
+     "location": "M4-F20: «90 minutos» que não se parte",
+     "old": "90 minutos",
+     "new": "90 minutos",
+     "occurrences": 2
+    }
+   ]
+  },
+  "m4/licao-m4-f25/index.html": {
+   "base_sha256_lf": "7dacd0bdfe704b10de56c5b8c12f5584563e1eafdd3899eb1790e57df64ec1c3",
+   "after_sha256_lf": "f95b06793c8919463f0363ea010dff3c86fd03a768232c0fa97dcf599654d0a9",
+   "edits": [
+    {
+     "location": "M4-F25, cartão 17, Para levar (As frases da aula, itens 3 e 4)",
+     "old": "<li>Roncadores: pequenos e barulhentos, «as roncas do mar». Pegadores: «nunca os desferram» e vivem à custa do maior.</li><li>Voadores: querem ser aves, e ao voador «mata-o a vaidade de voar». Polvo: «parece um monge» e ataca de emboscada.</li>",
+     "new": "</ol><table class=\\\"apoio-tabela\\\" role=\\\"table\\\"><caption>Quatro peixes repreendidos, quatro vícios</caption><thead role=\\\"rowgroup\\\"><tr role=\\\"row\\\"><th scope=\\\"col\\\" role=\\\"columnheader\\\">Peixe</th><th scope=\\\"col\\\" role=\\\"columnheader\\\">Traço e palavras</th><th scope=\\\"col\\\" role=\\\"columnheader\\\">Vício dos homens</th></tr></thead><tbody role=\\\"rowgroup\\\"><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Roncadores</th><td role=\\\"cell\\\" data-label=\\\"Traço e palavras\\\">pequenos e barulhentos, «as roncas do mar»</td><td role=\\\"cell\\\" data-label=\\\"Vício dos homens\\\">barulho sem valor</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Pegadores</th><td role=\\\"cell\\\" data-label=\\\"Traço e palavras\\\">«nunca os desferram» e vivem à custa do maior</td><td role=\\\"cell\\\" data-label=\\\"Vício dos homens\\\">viver à custa dos poderosos</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Voadores</th><td role=\\\"cell\\\" data-label=\\\"Traço e palavras\\\">querem ser aves, e ao voador «mata-o a vaidade de voar»</td><td role=\\\"cell\\\" data-label=\\\"Vício dos homens\\\">presunção</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Polvo</th><td role=\\\"cell\\\" data-label=\\\"Traço e palavras\\\">«parece um monge» e ataca de emboscada</td><td role=\\\"cell\\\" data-label=\\\"Vício dos homens\\\">traição com cara mansa</td></tr></tbody></table><ol start=\\\"3\\\">",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F25, cabeça: a folha das tabelas de apoio, antes da camada de aparência",
+     "old": "<link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-universal-1\">",
+     "new": "<link rel=\"stylesheet\" href=\"../../assets/pt-lessons/apoios-tabelas.css?v=20261106.1\"><link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-universal-1\">",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F25: «caps. I, II e V» que não se parte",
+     "old": "caps. I, II e V",
+     "new": "caps. I, II e V",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F25: «cap. IV» que não se parte",
+     "old": "cap. IV",
+     "new": "cap. IV",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F25: «caps. I e II» que não se parte",
+     "old": "caps. I e II",
+     "new": "caps. I e II",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F25: «cap. I» que não se parte (com o contexto «cap. I,»)",
+     "old": "cap. I,",
+     "new": "cap. I,",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F25: «cap. II» que não se parte",
+     "old": "cap. II",
+     "new": "cap. II",
+     "occurrences": 3
+    },
+    {
+     "location": "M4-F25: «caps. II e III» que não se parte",
+     "old": "caps. II e III",
+     "new": "caps. II e III",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F25: «caps. IV e V» que não se parte",
+     "old": "caps. IV e V",
+     "new": "caps. IV e V",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F25: «cap. V» que não se parte",
+     "old": "cap. V",
+     "new": "cap. V",
+     "occurrences": 6
+    },
+    {
+     "location": "M4-F25: «90 minutos» que não se parte",
+     "old": "90 minutos",
+     "new": "90 minutos",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F25: «aula 1» que não se parte",
+     "old": "aula 1",
+     "new": "aula 1",
+     "occurrences": 2
+    },
+    {
+     "location": "M4-F25: «aula 2» que não se parte",
+     "old": "aula 2",
+     "new": "aula 2",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F25: «aula 6» que não se parte",
+     "old": "aula 6",
+     "new": "aula 6",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/licao-m4-f26/index.html": {
+   "base_sha256_lf": "d6f763d48daa8ee7c999e8ac059dcf57777bf9d62cef606982042edd58983142",
+   "after_sha256_lf": "2159f4654f431618f641b04e1355938feddd3e7960a2ff0654e8e9db9c573f3d",
+   "edits": [
+    {
+     "location": "M4-F26: «ato I» que não se parte (com o contexto «ato I,»)",
+     "old": "ato I,",
+     "new": "ato I,",
+     "occurrences": 3
+    },
+    {
+     "location": "M4-F26: «cenas XI e XII» que não se parte",
+     "old": "cenas XI e XII",
+     "new": "cenas XI e XII",
+     "occurrences": 3
+    },
+    {
+     "location": "M4-F26: «ato II» que não se parte (com o contexto «ato II, ce»)",
+     "old": "ato II, ce",
+     "new": "ato II, ce",
+     "occurrences": 6
+    },
+    {
+     "location": "M4-F26: «ato II» que não se parte (com o contexto «ato II o R»)",
+     "old": "ato II o R",
+     "new": "ato II o R",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F26: «ato II» que não se parte (com o contexto «ato II: ad»)",
+     "old": "ato II: ad",
+     "new": "ato II: ad",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F26: «ato II» que não se parte (com o contexto «ato II põe»)",
+     "old": "ato II põe",
+     "new": "ato II põe",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F26: «ato II» que não se parte (com o contexto «ato II, Ma»)",
+     "old": "ato II, Ma",
+     "new": "ato II, Ma",
+     "occurrences": 2
+    },
+    {
+     "location": "M4-F26: «ato II» que não se parte (com o contexto «ato II, Te»)",
+     "old": "ato II, Te",
+     "new": "ato II, Te",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F26: «cenas I, XIV e XV» que não se parte",
+     "old": "cenas I, XIV e XV",
+     "new": "cenas I, XIV e XV",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F26: «ato III» que não se parte (com o contexto «ato III, ce»)",
+     "old": "ato III, ce",
+     "new": "ato III, ce",
+     "occurrences": 2
+    },
+    {
+     "location": "M4-F26: «ato III» que não se parte (com o contexto «ato III, Jo»)",
+     "old": "ato III, Jo",
+     "new": "ato III, Jo",
+     "occurrences": 2
+    },
+    {
+     "location": "M4-F26: «ato III» que não se parte (com o contexto «ato III, o »)",
+     "old": "ato III, o ",
+     "new": "ato III, o ",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F26: «ato III» que não se parte (com o contexto «ato III, a »)",
+     "old": "ato III, a ",
+     "new": "ato III, a ",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F26: «cena XI» que não se parte (com o contexto «cena XI »)",
+     "old": "cena XI ",
+     "new": "cena XI ",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F26: «cena XI» que não se parte (com o contexto «cena XI,»)",
+     "old": "cena XI,",
+     "new": "cena XI,",
+     "occurrences": 2
+    },
+    {
+     "location": "M4-F26: «cena XI» que não se parte (com o contexto «cena XI)»)",
+     "old": "cena XI)",
+     "new": "cena XI)",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F26: «cena VIII» que não se parte",
+     "old": "cena VIII",
+     "new": "cena VIII",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F26: «cena XII» que não se parte",
+     "old": "cena XII",
+     "new": "cena XII",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F26: «cena I» que não se parte (com o contexto «cena I<»)",
+     "old": "cena I<",
+     "new": "cena I<",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F26: «cena I» que não se parte (com o contexto «cena I,»)",
+     "old": "cena I,",
+     "new": "cena I,",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F26: «cena II» que não se parte",
+     "old": "cena II",
+     "new": "cena II",
+     "occurrences": 5
+    },
+    {
+     "location": "M4-F26: «cenas XIV e XV» que não se parte",
+     "old": "cenas XIV e XV",
+     "new": "cenas XIV e XV",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F26: «cena XV» que não se parte",
+     "old": "cena XV",
+     "new": "cena XV",
+     "occurrences": 3
+    },
+    {
+     "location": "M4-F26: «cena XIV» que não se parte",
+     "old": "cena XIV",
+     "new": "cena XIV",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F26: «90 minutos» que não se parte",
+     "old": "90 minutos",
+     "new": "90 minutos",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F26: «c. 1571-1574» que não se parte",
+     "old": "c. 1571-1574",
+     "new": "c. 1571–⁠1574",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/licao-m4-f27/index.html": {
+   "base_sha256_lf": "3e4b37bbc73ee7d258aec38c066aed756492665eeedb757d000081eb70b58664",
+   "after_sha256_lf": "f2439c71c5ddfdd99b63fbb63c4aaded1907ca2c710d65d1f6843c545f8a411b",
+   "edits": [
+    {
+     "location": "M4-F27: «cap. IV» que não se parte",
+     "old": "cap. IV",
+     "new": "cap. IV",
+     "occurrences": 2
+    },
+    {
+     "location": "M4-F27: «ato II» que não se parte",
+     "old": "ato II",
+     "new": "ato II",
+     "occurrences": 5
+    },
+    {
+     "location": "M4-F27: «cena I» que não se parte (com o contexto «cena I »)",
+     "old": "cena I ",
+     "new": "cena I ",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F27: «cena I» que não se parte (com o contexto «cena I,»)",
+     "old": "cena I,",
+     "new": "cena I,",
+     "occurrences": 2
+    },
+    {
+     "location": "M4-F27: «cena I» que não se parte (com o contexto «cena I.»)",
+     "old": "cena I.",
+     "new": "cena I.",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F27: «ato I» que não se parte (com o contexto «ato I,»)",
+     "old": "ato I,",
+     "new": "ato I,",
+     "occurrences": 2
+    },
+    {
+     "location": "M4-F27: «cena II» que não se parte",
+     "old": "cena II",
+     "new": "cena II",
+     "occurrences": 2
+    },
+    {
+     "location": "M4-F27: «90 minutos» que não se parte",
+     "old": "90 minutos",
+     "new": "90 minutos",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F27: «aula 3» que não se parte",
+     "old": "aula 3",
+     "new": "aula 3",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/m4-frei-luis-quem-sabia/index.html": {
+   "base_sha256_lf": "780058d049037f948acb65aee61e71d9f6d0ab58d548a61a27dd2f60ccbb7e70",
+   "after_sha256_lf": "9420c09666be57ba482534e7dd106ea22d998643116280d9e9463936cc16d053",
+   "edits": [
+    {
+     "location": "m4/m4-frei-luis-quem-sabia: «ato I» que não se parte (com o contexto «ato I,»)",
+     "old": "ato I,",
+     "new": "ato I,",
+     "occurrences": 10
+    },
+    {
+     "location": "m4/m4-frei-luis-quem-sabia: «ato I» que não se parte (com o contexto «ato I »)",
+     "old": "ato I ",
+     "new": "ato I ",
+     "occurrences": 2
+    },
+    {
+     "location": "m4/m4-frei-luis-quem-sabia: «Ato I» que não se parte (com o contexto «Ato I,»)",
+     "old": "Ato I,",
+     "new": "Ato I,",
+     "occurrences": 1
+    },
+    {
+     "location": "m4/m4-frei-luis-quem-sabia: «cena II» que não se parte",
+     "old": "cena II",
+     "new": "cena II",
+     "occurrences": 1
+    },
+    {
+     "location": "m4/m4-frei-luis-quem-sabia: «ato II» que não se parte (com o contexto «ato II »)",
+     "old": "ato II ",
+     "new": "ato II ",
+     "occurrences": 2
+    },
+    {
+     "location": "m4/m4-frei-luis-quem-sabia: «ato II» que não se parte (com o contexto «ato II,»)",
+     "old": "ato II,",
+     "new": "ato II,",
+     "occurrences": 3
+    },
+    {
+     "location": "m4/m4-frei-luis-quem-sabia: «ato II» que não se parte (com o contexto «ato II.»)",
+     "old": "ato II.",
+     "new": "ato II.",
+     "occurrences": 1
+    },
+    {
+     "location": "m4/m4-frei-luis-quem-sabia: «ato II» que não se parte (com o contexto «ato II;»)",
+     "old": "ato II;",
+     "new": "ato II;",
+     "occurrences": 1
+    },
+    {
+     "location": "m4/m4-frei-luis-quem-sabia: «cena I» que não se parte (com o contexto «cena I.»)",
+     "old": "cena I.",
+     "new": "cena I.",
+     "occurrences": 1
+    },
+    {
+     "location": "m4/m4-frei-luis-quem-sabia: «cena I» que não se parte (com o contexto «cena I,»)",
+     "old": "cena I,",
+     "new": "cena I,",
+     "occurrences": 2
+    },
+    {
+     "location": "m4/m4-frei-luis-quem-sabia: «cena VIII» que não se parte",
+     "old": "cena VIII",
+     "new": "cena VIII",
+     "occurrences": 2
+    },
+    {
+     "location": "m4/m4-frei-luis-quem-sabia: «Ato II» que não se parte (com o contexto «Ato II,»)",
+     "old": "Ato II,",
+     "new": "Ato II,",
+     "occurrences": 1
+    },
+    {
+     "location": "m4/m4-frei-luis-quem-sabia: «cena XIV» que não se parte",
+     "old": "cena XIV",
+     "new": "cena XIV",
+     "occurrences": 2
+    },
+    {
+     "location": "m4/m4-frei-luis-quem-sabia: «cenas XIV e XV» que não se parte",
+     "old": "cenas XIV e XV",
+     "new": "cenas XIV e XV",
+     "occurrences": 1
+    },
+    {
+     "location": "m4/m4-frei-luis-quem-sabia: «cena XV» que não se parte",
+     "old": "cena XV",
+     "new": "cena XV",
+     "occurrences": 1
+    },
+    {
+     "location": "m4/m4-frei-luis-quem-sabia: «ato III» que não se parte",
+     "old": "ato III",
+     "new": "ato III",
+     "occurrences": 6
+    },
+    {
+     "location": "m4/m4-frei-luis-quem-sabia: «Ato III» que não se parte",
+     "old": "Ato III",
+     "new": "Ato III",
+     "occurrences": 1
+    },
+    {
+     "location": "m4/m4-frei-luis-quem-sabia: «cena XI» que não se parte (com o contexto «cena XI,»)",
+     "old": "cena XI,",
+     "new": "cena XI,",
+     "occurrences": 1
+    },
+    {
+     "location": "m4/m4-frei-luis-quem-sabia: «25 min» que não se parte",
+     "old": "25 min",
+     "new": "25 min",
+     "occurrences": 1
+    },
+    {
+     "location": "m4/m4-frei-luis-quem-sabia: «2.º ano» que não se parte",
+     "old": "2.º ano",
+     "new": "2.º ano",
+     "occurrences": 1
+    },
+    {
+     "location": "m4/m4-frei-luis-quem-sabia: «n.º 17591» que não se parte",
+     "old": "n.º 17591",
+     "new": "n.º 17591",
+     "occurrences": 6
+    }
+   ]
+  },
+  "m4/m4-sermao-tribunal/index.html": {
+   "base_sha256_lf": "6167c33c1ba7929ca1cacea79971b308f48e902a336cbb98e3b23ec318eb1b63",
+   "after_sha256_lf": "7048c5fbb5724ed4219d07e4cb10dc15715332d3756b58da2f0bdaeb6e33f3ac",
+   "edits": [
+    {
+     "location": "m4/m4-sermao-tribunal: «Cap. I» que não se parte (com o contexto «Cap. I,»)",
+     "old": "Cap. I,",
+     "new": "Cap. I,",
+     "occurrences": 1
+    },
+    {
+     "location": "m4/m4-sermao-tribunal: «Cap. IV» que não se parte",
+     "old": "Cap. IV",
+     "new": "Cap. IV",
+     "occurrences": 1
+    },
+    {
+     "location": "m4/m4-sermao-tribunal: «cap. V» que não se parte",
+     "old": "cap. V",
+     "new": "cap. V",
+     "occurrences": 1
+    },
+    {
+     "location": "m4/m4-sermao-tribunal: «Cap. V» que não se parte (com o contexto «Cap. V,»)",
+     "old": "Cap. V,",
+     "new": "Cap. V,",
+     "occurrences": 1
+    },
+    {
+     "location": "m4/m4-sermao-tribunal: «Cap. VI» que não se parte",
+     "old": "Cap. VI",
+     "new": "Cap. VI",
+     "occurrences": 1
+    },
+    {
+     "location": "m4/m4-sermao-tribunal: «capítulo IV» que não se parte",
+     "old": "capítulo IV",
+     "new": "capítulo IV",
+     "occurrences": 3
+    },
+    {
+     "location": "m4/m4-sermao-tribunal: «capítulo V» que não se parte",
+     "old": "capítulo V",
+     "new": "capítulo V",
+     "occurrences": 2
+    },
+    {
+     "location": "m4/m4-sermao-tribunal: «13 de junho de 1654» que não se parte",
+     "old": "13 de junho de 1654",
+     "new": "13 de junho de 1654",
+     "occurrences": 1
+    },
+    {
+     "location": "m4/m4-sermao-tribunal: «25 min» que não se parte",
+     "old": "25 min",
+     "new": "25 min",
+     "occurrences": 1
+    },
+    {
+     "location": "m4/m4-sermao-tribunal: «2.º ano» que não se parte",
+     "old": "2.º ano",
+     "new": "2.º ano",
+     "occurrences": 1
+    },
+    {
+     "location": "m4/m4-sermao-tribunal: «a objeção do Ato 4» que não se parte",
+     "old": "a objeção do Ato 4",
+     "new": "a objeção do Ato 4",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/mapa-do-modulo-m4/index.html": {
+   "base_sha256_lf": "da131690ab4ea79135d37da8032f420217d8636453e6ff7440f7f110359bef52",
+   "after_sha256_lf": "54502853fc194ffbe6ad8a26db68afe5c2d69092fc800bf3f6ff9d7e22b617ca",
+   "edits": [
+    {
+     "location": "m4/mapa-do-modulo-m4, «Palavras que tens de saber»: a entrada «apóstrofe, anáfora, antítese, gradação»",
+     "old": "<dd>chamar («irmãos peixes»); repetir no início; opor contrários; subir degrau a degrau.</dd>",
+     "new": "<dd>apóstrofe, chamar («irmãos peixes»); anáfora, repetir no início; antítese, opor contrários; gradação, subir degrau a degrau.</dd>",
+     "occurrences": 1
+    },
+    {
+     "location": "m4/mapa-do-modulo-m4, «Palavras que tens de saber»: a entrada «presságio, revelação, catástrofe»",
+     "old": "<dd>os passos da tragédia: os sinais, a verdade que se descobre, a queda.</dd>",
+     "new": "<dd>os passos da tragédia: presságio, os sinais; revelação, a verdade que se descobre; catástrofe, a queda.</dd>",
+     "occurrences": 1
+    },
+    {
+     "location": "m4/mapa-do-modulo-m4: «cap. I» que não se parte",
+     "old": "cap. I",
+     "new": "cap. I",
+     "occurrences": 1
+    },
+    {
+     "location": "m4/mapa-do-modulo-m4: «caps. II e III» que não se parte",
+     "old": "caps. II e III",
+     "new": "caps. II e III",
+     "occurrences": 1
+    },
+    {
+     "location": "m4/mapa-do-modulo-m4: «caps. IV e V» que não se parte",
+     "old": "caps. IV e V",
+     "new": "caps. IV e V",
+     "occurrences": 1
+    },
+    {
+     "location": "m4/mapa-do-modulo-m4: «século II d.C.» que não se parte (com o contexto «, cópia romana (século II d.C., The Met). Domí»)",
+     "old": ", cópia romana (século II d.C., The Met). Domí",
+     "new": ", cópia romana (século II d.C., The Met). Domí",
+     "occurrences": 1
+    },
+    {
+     "location": "m4/mapa-do-modulo-m4: «13 de junho de 1654» que não se parte",
+     "old": "13 de junho de 1654",
+     "new": "13 de junho de 1654",
+     "occurrences": 2
+    },
+    {
+     "location": "m4/mapa-do-modulo-m4: «4 de agosto de 1578» que não se parte",
+     "old": "4 de agosto de 1578",
+     "new": "4 de agosto de 1578",
+     "occurrences": 1
+    },
+    {
+     "location": "m4/mapa-do-modulo-m4: «90 min» que não se parte",
+     "old": "90 min",
+     "new": "90 min",
+     "occurrences": 3
+    },
+    {
+     "location": "m4/mapa-do-modulo-m4: «25 %» que não se parte",
+     "old": "25 %",
+     "new": "25 %",
+     "occurrences": 4
+    },
+    {
+     "location": "m4/mapa-do-modulo-m4: «10 %» que não se parte",
+     "old": "10 %",
+     "new": "10 %",
+     "occurrences": 1
+    },
+    {
+     "location": "m4/mapa-do-modulo-m4: «45 minutos» que não se parte",
+     "old": "45 minutos",
+     "new": "45 minutos",
+     "occurrences": 1
+    },
+    {
+     "location": "m4/mapa-do-modulo-m4: «15 %» que não se parte",
+     "old": "15 %",
+     "new": "15 %",
+     "occurrences": 1
+    },
+    {
+     "location": "m4/mapa-do-modulo-m4: «2.º ano» que não se parte",
+     "old": "2.º ano",
+     "new": "2.º ano",
+     "occurrences": 2
+    },
+    {
+     "location": "m4/mapa-do-modulo-m4: «1608 – Bahia» que não se parte",
+     "old": "1608 – Bahia",
+     "new": "1608 – Bahia",
+     "occurrences": 1
+    },
+    {
+     "location": "m4/mapa-do-modulo-m4: «1799 – Lisboa» que não se parte",
+     "old": "1799 – Lisboa",
+     "new": "1799 – Lisboa",
+     "occurrences": 1
+    },
+    {
+     "location": "m4/mapa-do-modulo-m4: «aulas 1 a 8» que não se parte",
+     "old": "aulas 1 a 8",
+     "new": "aulas 1 a 8",
+     "occurrences": 1
+    },
+    {
+     "location": "m4/mapa-do-modulo-m4: «aulas 9 a 15» que não se parte",
+     "old": "aulas 9 a 15",
+     "new": "aulas 9 a 15",
+     "occurrences": 1
+    },
+    {
+     "location": "m4/mapa-do-modulo-m4: «aulas 16 a 18» que não se parte",
+     "old": "aulas 16 a 18",
+     "new": "aulas 16 a 18",
+     "occurrences": 1
+    },
+    {
+     "location": "m4/mapa-do-modulo-m4: «M4-F01» que não se parte",
+     "old": "M4-F01",
+     "new": "M4-⁠F01",
+     "occurrences": 5
+    },
+    {
+     "location": "m4/mapa-do-modulo-m4: «M4-F08» que não se parte",
+     "old": "M4-F08",
+     "new": "M4-⁠F08",
+     "occurrences": 3
+    },
+    {
+     "location": "m4/mapa-do-modulo-m4: «M4-F07» que não se parte",
+     "old": "M4-F07",
+     "new": "M4-⁠F07",
+     "occurrences": 1
+    },
+    {
+     "location": "m4/mapa-do-modulo-m4: «M4-F14» que não se parte",
+     "old": "M4-F14",
+     "new": "M4-⁠F14",
+     "occurrences": 1
+    },
+    {
+     "location": "m4/mapa-do-modulo-m4: «M4-F10» que não se parte",
+     "old": "M4-F10",
+     "new": "M4-⁠F10",
+     "occurrences": 1
+    },
+    {
+     "location": "m4/mapa-do-modulo-m4: «M4-F26» que não se parte",
+     "old": "M4-F26",
+     "new": "M4-⁠F26",
+     "occurrences": 1
+    },
+    {
+     "location": "m4/mapa-do-modulo-m4: «c. 1535-1540» que não se parte",
+     "old": "c. 1535-1540",
+     "new": "c. 1535–⁠1540",
+     "occurrences": 1
+    },
+    {
+     "location": "m4/mapa-do-modulo-m4: «c. 1571-1574» que não se parte",
+     "old": "c. 1571-1574",
+     "new": "c. 1571–⁠1574",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/portefolio-do-modulo-m4/index.html": {
+   "base_sha256_lf": "0d46a92ca4f776f000eba6c6d5aaea6358f592b14382683e85ad3cf8a16eb447",
+   "after_sha256_lf": "5c4f731b55d969ab8e154d198316095a221c9be6bf475a20c14ed05264730a16",
+   "edits": [
+    {
+     "location": "m4/portefolio-do-modulo-m4, «A lista de verificação»: os cabeçalhos",
+     "old": "<th style=\"width:36%\">Nome do ficheiro</th><th>O que é</th>",
+     "new": "<th scope=\"col\">Nome do ficheiro</th><th scope=\"col\">O que é</th>",
+     "occurrences": 1
+    },
+    {
+     "location": "m4/portefolio-do-modulo-m4, «A lista de verificação»: M4_U1_folha_&lt;dia-mês&gt; em <code>",
+     "old": "<td>M4_U1_folha_&lt;dia-mês&gt;</td>",
+     "new": "<td><code>M4_U1_folha_&lt;dia-mês&gt;</code></td>",
+     "occurrences": 1
+    },
+    {
+     "location": "m4/portefolio-do-modulo-m4, «A lista de verificação»: M4_U1_pergunta em <code>",
+     "old": "<td>M4_U1_pergunta</td>",
+     "new": "<td><code>M4_U1_pergunta</code></td>",
+     "occurrences": 1
+    },
+    {
+     "location": "m4/portefolio-do-modulo-m4, «A lista de verificação»: M4_U1_o-que-aprendi em <code>",
+     "old": "<td>M4_U1_o-que-aprendi</td>",
+     "new": "<td><code>M4_U1_o-que-aprendi</code></td>",
+     "occurrences": 1
+    },
+    {
+     "location": "m4/portefolio-do-modulo-m4, «A lista de verificação»: M4_U2_folha_&lt;dia-mês&gt; em <code>",
+     "old": "<td>M4_U2_folha_&lt;dia-mês&gt;</td>",
+     "new": "<td><code>M4_U2_folha_&lt;dia-mês&gt;</code></td>",
+     "occurrences": 1
+    },
+    {
+     "location": "m4/portefolio-do-modulo-m4, «A lista de verificação»: M4_U2_pergunta em <code>",
+     "old": "<td>M4_U2_pergunta</td>",
+     "new": "<td><code>M4_U2_pergunta</code></td>",
+     "occurrences": 1
+    },
+    {
+     "location": "m4/portefolio-do-modulo-m4, «A lista de verificação»: M4_U2_o-que-aprendi em <code>",
+     "old": "<td>M4_U2_o-que-aprendi</td>",
+     "new": "<td><code>M4_U2_o-que-aprendi</code></td>",
+     "occurrences": 1
+    },
+    {
+     "location": "m4/portefolio-do-modulo-m4, «A lista de verificação»: M4_U3_folha_&lt;dia-mês&gt; em <code>",
+     "old": "<td>M4_U3_folha_&lt;dia-mês&gt;</td>",
+     "new": "<td><code>M4_U3_folha_&lt;dia-mês&gt;</code></td>",
+     "occurrences": 1
+    },
+    {
+     "location": "m4/portefolio-do-modulo-m4, «A lista de verificação»: M4_U3_pergunta em <code>",
+     "old": "<td>M4_U3_pergunta</td>",
+     "new": "<td><code>M4_U3_pergunta</code></td>",
+     "occurrences": 1
+    },
+    {
+     "location": "m4/portefolio-do-modulo-m4, «A lista de verificação»: M4_U3_o-que-aprendi em <code>",
+     "old": "<td>M4_U3_o-que-aprendi</td>",
+     "new": "<td><code>M4_U3_o-que-aprendi</code></td>",
+     "occurrences": 1
+    },
+    {
+     "location": "m4/portefolio-do-modulo-m4, a folha da página: os nomes em <code> não se partem",
+     "old": "code{font:.85rem Consolas,\"Courier New\",monospace;border:1px solid var(--tinta);padding:1px 4px}\n",
+     "new": "code{font:.85rem Consolas,\"Courier New\",monospace;border:1px solid var(--tinta);padding:1px 4px}\ntd code{white-space:nowrap}\n",
+     "occurrences": 1
+    },
+    {
+     "location": "m4/portefolio-do-modulo-m4: «2.º ano» que não se parte",
+     "old": "2.º ano",
+     "new": "2.º ano",
+     "occurrences": 2
+    },
+    {
+     "location": "m4/portefolio-do-modulo-m4: «aulas 1 a 8» que não se parte",
+     "old": "aulas 1 a 8",
+     "new": "aulas 1 a 8",
+     "occurrences": 1
+    },
+    {
+     "location": "m4/portefolio-do-modulo-m4: «aulas 9 a 15» que não se parte",
+     "old": "aulas 9 a 15",
+     "new": "aulas 9 a 15",
+     "occurrences": 1
+    },
+    {
+     "location": "m4/portefolio-do-modulo-m4: «aulas 16 a 18» que não se parte",
+     "old": "aulas 16 a 18",
+     "new": "aulas 16 a 18",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/recursos/tpc-entrada.js": {
+   "base_sha256_lf": "e6f68ce6b63c0faa4621dd1a19f302fdee5641b2b46a13c015636e583d62fc19",
+   "after_sha256_lf": "d2bc9aaa29c64d594f92c8ab6fa4e59a9b8c5ba336ede06a4449b904e3e2ec01",
+   "edits": [
+    {
+     "location": "M4-F28 (banco de cartões): «ato I» que não se parte",
+     "old": "ato I",
+     "new": "ato I",
+     "occurrences": 4
+    },
+    {
+     "location": "M4-F28 (banco de cartões): «cena II» que não se parte",
+     "old": "cena II",
+     "new": "cena II",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F28 (banco de cartões): «cena I» que não se parte (com o contexto «cena I;»)",
+     "old": "cena I;",
+     "new": "cena I;",
+     "occurrences": 2
+    },
+    {
+     "location": "M4-F28 (banco de cartões): «cena I» que não se parte (com o contexto «cena I)»)",
+     "old": "cena I)",
+     "new": "cena I)",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F28 (banco de cartões): «5 min» que não se parte (com o contexto « 5 min»)",
+     "old": " 5 min",
+     "new": " 5 min",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F28 (banco de cartões): «45 minutos» que não se parte",
+     "old": "45 minutos",
+     "new": "45 minutos",
+     "occurrences": 3
+    },
+    {
+     "location": "M4-F28 (banco de cartões): «15 minutos» que não se parte",
+     "old": "15 minutos",
+     "new": "15 minutos",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F28 (banco de cartões): «8 min» que não se parte",
+     "old": "8 min",
+     "new": "8 min",
+     "occurrences": 2
+    },
+    {
+     "location": "M4-F28 (banco de cartões): «7 min» que não se parte",
+     "old": "7 min",
+     "new": "7 min",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F28 (banco de cartões): «15 min» que não se parte (com o contexto «15 min\"»)",
+     "old": "15 min\"",
+     "new": "15 min\"",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F28 (banco de cartões): «3 min» que não se parte",
+     "old": "3 min",
+     "new": "3 min",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F28 (banco de cartões): «80 a 120 palavras» que não se parte",
+     "old": "80 a 120 palavras",
+     "new": "80 a 120 palavras",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F28 (banco de cartões): «60 segundos» que não se parte",
+     "old": "60 segundos",
+     "new": "60 segundos",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F28 (banco de cartões): «4 min» que não se parte",
+     "old": "4 min",
+     "new": "4 min",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F28 (banco de cartões): «10 min» que não se parte",
+     "old": "10 min",
+     "new": "10 min",
+     "occurrences": 1
+    },
+    {
+     "location": "M4-F28 (banco de cartões): «1799–1854» que não se parte",
+     "old": "1799–1854",
+     "new": "1799–⁠1854",
+     "occurrences": 1
+    }
+   ]
+  },
+  "tarefas/m4-u1/aquecimento/index.html": {
+   "base_sha256_lf": "c77222b7e1650fccf55e15654123103ebc26df613e9426dd75b6a68cda25a9fa",
+   "after_sha256_lf": "b70023de0d94fbd617d326955e193b8363dfdebe83a6862198fb31d7f3cc23e8",
+   "edits": [
+    {
+     "location": "tarefas/m4-u1/aquecimento: «cap. I» que não se parte",
+     "old": "cap. I",
+     "new": "cap. I",
+     "occurrences": 4
+    },
+    {
+     "location": "tarefas/m4-u1/aquecimento: «cap. V» que não se parte",
+     "old": "cap. V",
+     "new": "cap. V",
+     "occurrences": 2
+    }
+   ]
+  },
+  "tarefas/m4-u1/index.html": {
+   "base_sha256_lf": "e2ec11f85bf0197da3619cb29a4a1aab7bc6e09bf8c3b87a07c8cb89438d3931",
+   "after_sha256_lf": "52bb15d24eb77a14ddef6ea49b4d07164dfb1c5c75674abc2d91f336a1c3a9fc",
+   "edits": [
+    {
+     "location": "tarefas/m4-u1: «90 min» que não se parte",
+     "old": "90 min",
+     "new": "90 min",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m4-u1: «10 minutos» que não se parte",
+     "old": "10 minutos",
+     "new": "10 minutos",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m4-u1: «150 a 200 palavras» que não se parte",
+     "old": "150 a 200 palavras",
+     "new": "150 a 200 palavras",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m4-u1: «3 a 4 minutos» que não se parte",
+     "old": "3 a 4 minutos",
+     "new": "3 a 4 minutos",
+     "occurrences": 1
+    }
+   ]
+  },
+  "tarefas/m4-u2/aquecimento/index.html": {
+   "base_sha256_lf": "a1079cefd70c8dfac6866da710c6ee0c8dcc7ece90d3cdccc4ba7a7f39a0ad0c",
+   "after_sha256_lf": "a0a6d2d461319a70ac01b67f11188c8bb389caf232cb704fbf8da8fccc1d1098",
+   "edits": [
+    {
+     "location": "tarefas/m4-u2/aquecimento: «ato III» que não se parte",
+     "old": "ato III",
+     "new": "ato III",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m4-u2/aquecimento: «ato II» que não se parte (com o contexto «ato II,»)",
+     "old": "ato II,",
+     "new": "ato II,",
+     "occurrences": 7
+    },
+    {
+     "location": "tarefas/m4-u2/aquecimento: «cena IV» que não se parte",
+     "old": "cena IV",
+     "new": "cena IV",
+     "occurrences": 8
+    }
+   ]
+  },
+  "tarefas/m4-u2/index.html": {
+   "base_sha256_lf": "764bec78115fae9174e3cc3ef16d2bc8af2b078c73973d1504dc2cbfe1115606",
+   "after_sha256_lf": "7509fbd56be034165a84f19661efb271c09e76eb3fae497f7318f7b72a5b99ca",
+   "edits": [
+    {
+     "location": "tarefas/m4-u2: «Ato I» que não se parte",
+     "old": "Ato I",
+     "new": "Ato I",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m4-u2: «ato I» que não se parte",
+     "old": "ato I",
+     "new": "ato I",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m4-u2: «90 min» que não se parte",
+     "old": "90 min",
+     "new": "90 min",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m4-u2: «10 minutos» que não se parte",
+     "old": "10 minutos",
+     "new": "10 minutos",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m4-u2: «180 a 240 palavras» que não se parte",
+     "old": "180 a 240 palavras",
+     "new": "180 a 240 palavras",
+     "occurrences": 1
+    }
+   ]
+  },
+  "tarefas/m4-u3-discurso/aquecimento/index.html": {
+   "base_sha256_lf": "8c52b55554e9e62a704854161ae9c03f1a47e16fa4ed961da1b3bde4f1496995",
+   "after_sha256_lf": "fe8b877dfc602d6ec2c1377c4e76e1ffcae20e0a711795d8f9acdbb40d7c1137",
+   "edits": [
+    {
+     "location": "tarefas/m4-u3-discurso/aquecimento: «350 palavras» que não se parte",
+     "old": "350 palavras",
+     "new": "350 palavras",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m4-u3-discurso/aquecimento: «220 a 280 palavras» que não se parte",
+     "old": "220 a 280 palavras",
+     "new": "220 a 280 palavras",
+     "occurrences": 2
+    },
+    {
+     "location": "tarefas/m4-u3-discurso/aquecimento: «7.º B» que não se parte",
+     "old": "7.º B",
+     "new": "7.º B",
+     "occurrences": 1
+    }
+   ]
+  },
+  "tarefas/m4-u3-discurso/index.html": {
+   "base_sha256_lf": "83673d6a3d599036eaa0e7096207436969236fab300c86be9bc7440a0cfe7acb",
+   "after_sha256_lf": "d0860d19b51492f166c39eef61137784fcddc7727ef2368eac0cf74454b404d7",
+   "edits": [
+    {
+     "location": "tarefas/m4-u3-discurso: «90 min» que não se parte",
+     "old": "90 min",
+     "new": "90 min",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m4-u3-discurso: «10 minutos» que não se parte",
+     "old": "10 minutos",
+     "new": "10 minutos",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m4-u3-discurso: «220 a 280 palavras» que não se parte",
+     "old": "220 a 280 palavras",
+     "new": "220 a 280 palavras",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m4-u3-discurso: «2 minutos» que não se parte",
+     "old": "2 minutos",
+     "new": "2 minutos",
+     "occurrences": 1
+    }
+   ]
+  },
+  "tarefas/m4-u3/index.html": {
+   "base_sha256_lf": "bd165d29b62fd747d993d20fc56fd93576d466bdfb07934077c7595e5d2fb090",
+   "after_sha256_lf": "6971f691fc74d152f0a9565c8440f13d26738afcdf46cf948322ddb50ac50dbf",
+   "edits": [
+    {
+     "location": "tarefas/m4-u3: «ato I» que não se parte",
+     "old": "ato I",
+     "new": "ato I",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m4-u3: «cena XII» que não se parte",
+     "old": "cena XII",
+     "new": "cena XII",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m4-u3: «100 a 140 palavras» que não se parte (com o contexto «100 a 140 palavras,»)",
+     "old": "100 a 140 palavras,",
+     "new": "100 a 140 palavras,",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m4-u3: «100 a 140 palavras» que não se parte (com o contexto «100 a 140 palavras:»)",
+     "old": "100 a 140 palavras:",
+     "new": "100 a 140 palavras:",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m4-u3: «10 min» que não se parte",
+     "old": "10 min",
+     "new": "10 min",
+     "occurrences": 4
+    },
+    {
+     "location": "tarefas/m4-u3: «60 min» que não se parte",
+     "old": "60 min",
+     "new": "60 min",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m4-u3: «30 min» que não se parte",
+     "old": "30 min",
+     "new": "30 min",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m4-u3: «15 min» que não se parte",
+     "old": "15 min",
+     "new": "15 min",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m4-u3: «5 min» que não se parte (com o contexto «>5 min»)",
+     "old": ">5 min",
+     "new": ">5 min",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m4-u3: «140 palavras» que não se parte (com o contexto «e 140 palavras»)",
+     "old": "e 140 palavras",
+     "new": "e 140 palavras",
+     "occurrences": 2
+    },
+    {
+     "location": "tarefas/m4-u3: «M4-F11» que não se parte",
+     "old": "M4-F11",
+     "new": "M4-⁠F11",
+     "occurrences": 3
+    }
+   ]
+  },
+  "docs/pedagogia/aquecimentos/m4-u1.json": {
+   "base_sha256_lf": "911d75ce8c0c70d74ead66b67be8d0c1c50c25340901f82a55393685de919b5c",
+   "after_sha256_lf": "49125a4ee0d95ebf042692ae7a9533fee1fc48495dc0da6c637dcb1cc7ab0525",
+   "edits": [
+    {
+     "location": "Dados aquecimentos/m4-u1.json: «cap. I» que não se parte",
+     "old": "cap. I",
+     "new": "cap. I",
+     "occurrences": 4
+    },
+    {
+     "location": "Dados aquecimentos/m4-u1.json: «cap. V» que não se parte",
+     "old": "cap. V",
+     "new": "cap. V",
+     "occurrences": 2
+    }
+   ]
+  },
+  "docs/pedagogia/aquecimentos/m4-u2.json": {
+   "base_sha256_lf": "bab12e65df95ce79dfb4929085f1072764959bc50d37b606a948c5230eb26764",
+   "after_sha256_lf": "de624b5a88fa8ac514b809f1d3612000b8b1a0a41f1305a720140ae0db058715",
+   "edits": [
+    {
+     "location": "Dados aquecimentos/m4-u2.json: «ato III» que não se parte",
+     "old": "ato III",
+     "new": "ato III",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados aquecimentos/m4-u2.json: «ato II» que não se parte (com o contexto «ato II,»)",
+     "old": "ato II,",
+     "new": "ato II,",
+     "occurrences": 7
+    },
+    {
+     "location": "Dados aquecimentos/m4-u2.json: «cena IV» que não se parte",
+     "old": "cena IV",
+     "new": "cena IV",
+     "occurrences": 8
+    }
+   ]
+  },
+  "docs/pedagogia/aquecimentos/m4-u3-discurso.json": {
+   "base_sha256_lf": "aabe022075d78fc7669144c53d063a3397a05e166787371e9661c14cd58c137a",
+   "after_sha256_lf": "90c6218ed726e8c4a06b1078bb5cca329b95bbeb5b94fa441c78a51eed5738bd",
+   "edits": [
+    {
+     "location": "Dados aquecimentos/m4-u3-discurso.json: «350 palavras» que não se parte",
+     "old": "350 palavras",
+     "new": "350 palavras",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados aquecimentos/m4-u3-discurso.json: «220 a 280 palavras» que não se parte",
+     "old": "220 a 280 palavras",
+     "new": "220 a 280 palavras",
+     "occurrences": 2
+    },
+    {
+     "location": "Dados aquecimentos/m4-u3-discurso.json: «7.º B» que não se parte",
+     "old": "7.º B",
+     "new": "7.º B",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/painel-m4-f01/index.html": {
+   "base_sha256_lf": "80b023bc5d06f0759cd8605653a2dedb348316925f3ae0f4a0e8af178a0dc1d4",
+   "after_sha256_lf": "bfa884441ed1bc154d4cd1a51ef873f064a5b0311f875577aca8cb4949e30b43",
+   "edits": [
+    {
+     "location": "m4/painel-m4-f01: o enunciado do cartão 15 igual ao da lição, em a lista do painel",
+     "old": "{\"k\":15,\"t\":\"emparelhar\",\"p\":\"Que fim serve cada passo do cap. I: ensinar, deleitar ou comover?\"}",
+     "new": "{\"k\":15,\"t\":\"emparelhar\",\"p\":\"Que fim serve cada passo do cap. I: ensinar, deleitar ou comover?\"}",
+     "occurrences": 1
+    },
+    {
+     "location": "m4/painel-m4-f01: o enunciado do cartão 15 igual ao da lição, em o seletor",
+     "old": "<option value=\"15\">Que fim serve cada passo do cap. I: ensinar, deleitar ou comover?</option>",
+     "new": "<option value=\"15\">Que fim serve cada passo do cap. I: ensinar, deleitar ou comover?</option>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/painel-m4-f09/index.html": {
+   "base_sha256_lf": "5c1eac91fa606fb46463f4093ea2493142a4c54cdada622ff66c1ae8a072739c",
+   "after_sha256_lf": "d02a3cc011d15d3e708d99f227f5aed5b3a27a55bfde2cfbe1b20b98efbf7e42",
+   "edits": [
+    {
+     "location": "m4/painel-m4-f09: o enunciado do cartão 14 igual ao da lição, em a lista do painel",
+     "old": "{\"k\":14,\"t\":\"escolha\",\"p\":\"No ato II, Maria exigia a verdade toda; no ato III, pede uma mentira. O que mostra isso?\"}",
+     "new": "{\"k\":14,\"t\":\"escolha\",\"p\":\"No ato II, Maria exigia a verdade toda; no ato III, pede uma mentira. O que mostra isso?\"}",
+     "occurrences": 1
+    },
+    {
+     "location": "m4/painel-m4-f09: o enunciado do cartão 14 igual ao da lição, em o seletor",
+     "old": "<option value=\"14\">No ato II, Maria exigia a verdade toda; no ato III, pede uma mentira. O que mostra isso?</option>",
+     "new": "<option value=\"14\">No ato II, Maria exigia a verdade toda; no ato III, pede uma mentira. O que mostra isso?</option>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/painel-m4-f11/index.html": {
+   "base_sha256_lf": "360a6a0bee78a5389a6adad82e439260fdc665cadddc3feb42389dde9dda963c",
+   "after_sha256_lf": "73104228fbe6ba51e11ecd1f7fbacd6091e4f4dd694e4ef215cb1b6d6919982f",
+   "edits": [
+    {
+     "location": "m4/painel-m4-f11: o enunciado do cartão 8 igual ao da lição, em a lista do painel",
+     "old": "{\"k\":8,\"t\":\"ordenar\",\"p\":\"O texto de 100 a 140 palavras, por ordem:\"}",
+     "new": "{\"k\":8,\"t\":\"ordenar\",\"p\":\"O texto de 100 a 140 palavras, por ordem:\"}",
+     "occurrences": 1
+    },
+    {
+     "location": "m4/painel-m4-f11: o enunciado do cartão 8 igual ao da lição, em o seletor",
+     "old": "<option value=\"8\">O texto de 100 a 140 palavras, por ordem:</option>",
+     "new": "<option value=\"8\">O texto de 100 a 140 palavras, por ordem:</option>",
+     "occurrences": 1
+    }
+   ]
+  }
+ }
+}

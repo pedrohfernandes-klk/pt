@@ -54,7 +54,7 @@
      "Dá uma razão"
     ],
     [
-     "No dia de experiência, o 7.º B entrevistou a cozinheira.",
+     "No dia de experiência, o 7.º B entrevistou a cozinheira.",
      "Dá um exemplo concreto"
     ],
     [
@@ -222,10 +222,10 @@
   },
   {
    "t": "vf",
-   "p": "Na tarefa, um discurso de 350 palavras serve, desde que o leias depressa para caber em dois minutos.",
+   "p": "Na tarefa, um discurso de 350 palavras serve, desde que o leias depressa para caber em dois minutos.",
    "p2": "Ensaias em voz alta e passas dos dois minutos: basta ler mais depressa.",
    "v": false,
-   "f": "Falso. A tarefa pede 220 a 280 palavras ditas em dois minutos. Se passas, corta repetições e pormenores e mantém a regra, os dois argumentos, a objeção com resposta e o apelo.",
+   "f": "Falso. A tarefa pede 220 a 280 palavras ditas em dois minutos. Se passas, corta repetições e pormenores e mantém a regra, os dois argumentos, a objeção com resposta e o apelo.",
    "fe": "Quem ouve não pode voltar atrás na página (F15): ler depressa tira-lhe as pausas de que precisa para seguir as razões. Corta, em vez de acelerar.",
    "g": 10
   },
@@ -233,7 +233,7 @@
    "t": "ler",
    "rot": "Para levar",
    "titulo": "Agora, a regra é tua",
-   "html": "<p>No abrigo, a regra, os exemplos e a objeção são teus. Abre com a regra numa frase; dá dois argumentos, cada um com um exemplo do abrigo; diz a objeção mais forte e responde-lhe sem excluir nem humilhar ninguém; fecha com um apelo, não com um resumo. Lê em voz alta e cronometra: 220 a 280 palavras, dois minutos.</p>"
+   "html": "<p>No abrigo, a regra, os exemplos e a objeção são teus. Abre com a regra numa frase; dá dois argumentos, cada um com um exemplo do abrigo; diz a objeção mais forte e responde-lhe sem excluir nem humilhar ninguém; fecha com um apelo, não com um resumo. Lê em voz alta e cronometra: 220 a 280 palavras, dois minutos.</p>"
   }
  ]
 }

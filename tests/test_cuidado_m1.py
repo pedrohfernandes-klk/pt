@@ -297,7 +297,8 @@ class CuidadoM1(unittest.TestCase):
                             # também mexe no índice e nas lições do M1: a frase da sugestão «continua»); desfaz-se antes, com a mesma exigência.
                             # 08/11/2026: a decisão 152 no M2 (cuidado_m2_20261108: tabelas onde há itens paralelos e espaços que não quebram nas lições e páginas do M2, incluindo o índice do módulo) passa a camada mais recente, por cima do cartaz «Ler a cidade» e do nome novo da secção; desfaz-se primeiro, com a mesma exigência.
                             # 08/11/2026: a decisão 152 no M3 (cuidado_m3_20261108: tabelas onde há itens paralelos e espaços que não quebram nas lições e páginas do M3, incluindo o índice, o guia e o mapa do módulo) passa a camada mais recente, por cima da decisão 152 no M2; desfaz-se primeiro, com a mesma exigência.
-                            '--desfazer-antes', 'tests/fixtures/cuidado-m3-edits-20261108.json', '--desfazer-antes', 'tests/fixtures/cuidado-m2-edits-20261108.json', '--desfazer-antes', 'tests/fixtures/cidade-cartaz-edits-20261108.json',
+                            # 08/11/2026: a decisão 152 no M4 (cuidado_m4_20261108: tabelas onde há itens paralelos e espaços que não quebram nas lições e páginas do M4, incluindo o índice, o guia, o mapa e o portefólio do módulo) passa a camada mais recente, por cima da decisão 152 no M3; desfaz-se primeiro, com a mesma exigência.
+                            '--desfazer-antes', 'tests/fixtures/cuidado-m4-edits-20261108.json', '--desfazer-antes', 'tests/fixtures/cuidado-m3-edits-20261108.json', '--desfazer-antes', 'tests/fixtures/cuidado-m2-edits-20261108.json', '--desfazer-antes', 'tests/fixtures/cidade-cartaz-edits-20261108.json',
                             '--desfazer-antes', 'tests/fixtures/creditos-i-pt1-edits-20261107.json'],
                            cwd=ROOT, capture_output=True, text=True, encoding='utf-8')
         self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
@@ -331,16 +332,19 @@ class CuidadoM1(unittest.TestCase):
         # 08/11/2026: por cima do cartaz «Ler a cidade» fica a decisão 152 no M2 (cuidado_m2_20261108); a ordem ganha mais uma
         # posição e esta camada passa a quarta.
         # 08/11/2026: por cima da decisão 152 no M2 fica a decisão 152 no M3 (cuidado_m3_20261108); a ordem ganha mais uma posição e esta camada passa a quinta.
-        self.assertEqual(verificar_camadas.LAYERS[0], ('cuidado_m3_20261108', 'cuidado-m3-edits-20261108'))
-        self.assertEqual(verificar_camadas.LAYERS[1], ('cuidado_m2_20261108', 'cuidado-m2-edits-20261108'))
-        self.assertEqual(verificar_camadas.LAYERS[2], ('cidade_cartaz_20261108', 'cidade-cartaz-edits-20261108'))
-        self.assertEqual(verificar_camadas.LAYERS[3], ('creditos_i_pt1_20261107', 'creditos-i-pt1-edits-20261107'))
-        self.assertEqual(verificar_camadas.LAYERS[4], ('cuidado_m1_20261106', 'cuidado-m1-edits-20261106'))
+        # 08/11/2026: por cima da decisão 152 no M3 fica a decisão 152 no M4 (cuidado_m4_20261108): a ordem ganha mais uma posição, com a mesma exigência.
+        self.assertEqual(verificar_camadas.LAYERS[0], ('cuidado_m4_20261108', 'cuidado-m4-edits-20261108'))
+        self.assertEqual(verificar_camadas.LAYERS[1], ('cuidado_m3_20261108', 'cuidado-m3-edits-20261108'))
+        self.assertEqual(verificar_camadas.LAYERS[2], ('cuidado_m2_20261108', 'cuidado-m2-edits-20261108'))
+        self.assertEqual(verificar_camadas.LAYERS[3], ('cidade_cartaz_20261108', 'cidade-cartaz-edits-20261108'))
+        self.assertEqual(verificar_camadas.LAYERS[4], ('creditos_i_pt1_20261107', 'creditos-i-pt1-edits-20261107'))
+        self.assertEqual(verificar_camadas.LAYERS[5], ('cuidado_m1_20261106', 'cuidado-m1-edits-20261106'))
         # 07/11/2026 (fusão do main 29441e6b no pedido #182): esta camada fica por cima dos acertos da decisão 173, que ficam por cima do desenho comum dos índices
         # (decisão 148), por cima dos créditos atrás de um «i».
-        self.assertEqual(verificar_camadas.LAYERS[5], ('indices_acertos_20261107', 'indices-acertos-edits-20261107'))
-        self.assertEqual(verificar_camadas.LAYERS[6], ('cartaz_indices_148_20261106', 'cartaz-indices-148-edits-20261106'))
-        self.assertEqual(verificar_camadas.LAYERS[7], ('creditos_i_20261105', 'creditos-i-edits-20261105'))
+        # 08/11/2026: com a decisão 152 no M4 por cima de todas, cada uma destas desce uma posição.
+        self.assertEqual(verificar_camadas.LAYERS[6], ('indices_acertos_20261107', 'indices-acertos-edits-20261107'))
+        self.assertEqual(verificar_camadas.LAYERS[7], ('cartaz_indices_148_20261106', 'cartaz-indices-148-edits-20261106'))
+        self.assertEqual(verificar_camadas.LAYERS[8], ('creditos_i_20261105', 'creditos-i-edits-20261105'))
         auditoria = ler('tests/auditoria_20261028.py')
         # 07/11/2026 (fusão do main 29441e6b no pedido #182): quem chama primeiro esta camada é a função dos acertos (os créditos chamam o desenho comum, que chama os acertos).
         corpo = auditoria[auditoria.index('def undo_acertos_0711'):]
@@ -359,6 +363,8 @@ class CuidadoM1(unittest.TestCase):
         self.assertLess(sala.index('cuidado-m2-edits-20261108.json'), sala.index('cidade-cartaz-edits-20261108.json'))
         # 08/11/2026: e, antes da do M2, a decisão 152 no M3, a camada mais recente.
         self.assertLess(sala.index('cuidado-m3-edits-20261108.json'), sala.index('cuidado-m2-edits-20261108.json'))
+        # 08/11/2026: e, antes da do M3, a decisão 152 no M4, a camada mais recente.
+        self.assertLess(sala.index('cuidado-m4-edits-20261108.json'), sala.index('cuidado-m3-edits-20261108.json'))
         # Onde a camada dos créditos se desfaz antes de conferir outra (fluxos e testes da cadeia), esta desfaz-se primeiro.
         # 07/11/2026 (fusão do main 29441e6b no pedido #182): a regra é a mesma (onde se desfazem os créditos, esta camada desfaz-se
         # primeiro), mas entre esta e os créditos ficam agora os acertos da decisão 173 e o desenho comum dos índices (decisão 148),
@@ -370,7 +376,9 @@ class CuidadoM1(unittest.TestCase):
         # com a mesma exigência: nada pelo meio.
         # 08/11/2026: e começa agora pela decisão 152 no M2 (cuidado_m2_20261108), por cima do cartaz, com a mesma exigência: nada pelo meio.
         # 08/11/2026: e começa agora pela decisão 152 no M3 (cuidado_m3_20261108), por cima da do M2, com a mesma exigência: nada pelo meio.
-        cadeia = ('--desfazer-antes tests/fixtures/cuidado-m3-edits-20261108.json '
+        # 08/11/2026: e começa agora pela decisão 152 no M4 (cuidado_m4_20261108), por cima da do M3, com a mesma exigência: nada pelo meio.
+        cadeia = ('--desfazer-antes tests/fixtures/cuidado-m4-edits-20261108.json '
+                  '--desfazer-antes tests/fixtures/cuidado-m3-edits-20261108.json '
                   '--desfazer-antes tests/fixtures/cuidado-m2-edits-20261108.json '
                   '--desfazer-antes tests/fixtures/cidade-cartaz-edits-20261108.json '
                   '--desfazer-antes tests/fixtures/creditos-i-pt1-edits-20261107.json '
@@ -394,7 +402,8 @@ class CuidadoM1(unittest.TestCase):
         # 08/11/2026: e, antes de todas, a do cartaz «Ler a cidade» e do nome novo da secção.
         # 08/11/2026: e, antes de todas, a da decisão 152 no M2.
         # 08/11/2026: e, antes de todas, a da decisão 152 no M3 (cuidado_m3_20261108), por cima da do M2.
-        self.assertIn("(ROOT/'tests/fixtures/cuidado-m3-edits-20261108.json',ROOT/'tests/fixtures/cuidado-m2-edits-20261108.json',ROOT/'tests/fixtures/cidade-cartaz-edits-20261108.json',"
+        # 08/11/2026: e, antes da do M3, a decisão 152 no M4 (cuidado_m4_20261108), a camada mais recente, sem nada pelo meio.
+        self.assertIn("(ROOT/'tests/fixtures/cuidado-m4-edits-20261108.json',ROOT/'tests/fixtures/cuidado-m3-edits-20261108.json',ROOT/'tests/fixtures/cuidado-m2-edits-20261108.json',ROOT/'tests/fixtures/cidade-cartaz-edits-20261108.json',"
                       "ROOT/'tests/fixtures/creditos-i-pt1-edits-20261107.json',"
                       "ROOT/'tests/fixtures/cuidado-m1-edits-20261106.json',ROOT/'tests/fixtures/indices-acertos-edits-20261107.json',", rotas)
 
