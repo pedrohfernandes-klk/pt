@@ -139,8 +139,10 @@ RELEITURAS_B={
  17:'Trocas a ordem das estrofes ou fazes do final uma repetição da abertura. Relê o soneto inteiro e associa cada passo ao quarteto ou ao terceto onde se encontra.'},
 'm5-f16':{
  1:'Confundes caracterização com retrato direto de cada pessoa. Regressa à descrição do Ramalhete na F10 e recupera uma relação entre o espaço e a história da família.',
- 5:'Tomas uma prioridade educativa por uma recusa de toda a leitura. Relê «O latim era um luxo d’erudito» e o resumo do capítulo III: Brown adia o latim, não o proíbe.',
- 6:'Misturas quem aprende, quem orienta e quem avalia. Relê o resumo dos capítulos I e III e separa o aluno, o educador e o adulto que defende o método.',
+ # 08/11/2026: decisão 152 no M5 (achado 39, camada cuidado_m5_20261108): as referências aos capítulos não se partem (U+00A0), como na página.
+ 5:'Tomas uma prioridade educativa por uma recusa de toda a leitura. Relê «O latim era um luxo d’erudito» e o resumo do capítulo\xa0III: Brown adia o latim, não o proíbe.',
+ # 08/11/2026: decisão 152 no M5 (achado 39, camada cuidado_m5_20261108): as referências aos capítulos não se partem (U+00A0), como na página.
+ 6:'Misturas quem aprende, quem orienta e quem avalia. Relê o resumo dos capítulos\xa0I e\xa0III e separa o aluno, o educador e o adulto que defende o método.',
  8:'Tomas a carreira projetada pela família por um facto ou por uma conclusão do narrador. Relê «havia de ser primeiro bacharel» e repara no tempo verbal que a projeta no futuro.',
  9:'Pões a conclusão sobre a vida posterior antes das provas que a sustentam. Relê o modelo completo: as práticas, a cartilha, a chuva e o pão, vêm antes das avaliações atribuídas a Vasques, Brown e Afonso.',
  10:'Escolhes uma palavra que não diz quem traçou o futuro. Relê a frase e procura o particípio que apresenta a carreira como decidida por outros antes de a criança escolher.',
@@ -151,14 +153,16 @@ RELEITURAS_B={
 'm5-f17':{
  1:'Confundes o que se escreve com o que o destinatário chega a conhecer. Regressa à situação das cartas na F04 e distingue quem escreve, a quem se dirige e o que fica conhecido.',
  5:'Pensas que a falta de resposta basta para provar uma recusa. Relê, em «O essencial», que uma interferência pode impedir o contacto sem que o destinatário o saiba.',
- 6:'Confundes quem escreve, a quem se dirige e o que interrompe o percurso. Relê, em «O essencial», as noções de emissor, destinatário e canal, e aplica-as ao recorte do capítulo XII.',
+ # 08/11/2026: decisão 152 no M5 (achado 40, camada cuidado_m5_20261108): a referência ao capítulo não se parte (U+00A0), como na página.
+ 6:'Confundes quem escreve, a quem se dirige e o que interrompe o percurso. Relê, em «O essencial», as noções de emissor, destinatário e canal, e aplica-as ao recorte do capítulo\xa0XII.',
  8:'Trocas o que se observa pelo que se conclui sobre sentimentos. Relê o modelo completo: a mãe observa a ausência de resposta e só depois a atribui ao filho.',
  9:'Segues a ordem em que o recorte conta, e não a ordem em que tudo aconteceu. Relê o recorte e repara que a retirada das cartas no correio só é revelada no fim, «anos depois».',
  10:'Escolhes palavras que dizem onde estavam as cartas, e não quando foram encontradas. Relê «anos depois, vimos entre os papéis de meu pai todas as cartas» e procura a indicação de tempo.',
  12:'Atribuis a Simão uma recusa que o recorte não narra. Relê «Já se vê que o pai as fazia tirar no correio»: as cartas não lhe chegaram.',
  14:'Misturas o que aconteceu às cartas, o que a mãe pensava e o momento em que o leitor sabe. Relê os resumos didáticos A e B: os acontecimentos são os mesmos e muda a ordem de revelação.',
  16:'Deixas que a nova prova fixe ou negue mais do que pode. Relê, em «Para entender», que a descoberta modifica a explicação do silêncio sem revelar todos os sentimentos de Simão.',
- 17:'Trocas a ordem dos acontecimentos ou acrescentas uma reação de Simão que o texto não narra. Relê o recorte do capítulo XII e separa o que a mãe faz, o que o pai faz e o que só se descobre «anos depois».'},
+ # 08/11/2026: decisão 152 no M5 (achado 40, camada cuidado_m5_20261108): a referência ao capítulo não se parte (U+00A0), como na página.
+ 17:'Trocas a ordem dos acontecimentos ou acrescentas uma reação de Simão que o texto não narra. Relê o recorte do capítulo\xa0XII e separa o que a mãe faz, o que o pai faz e o que só se descobre «anos depois».'},
 'm6-f14':{
  1:'Deixas que a confiança em quem fala substitua a razão apresentada. Regressa às lições anteriores sobre Antero e procura, em cada tese, a razão que a sustenta.',
  5:'Pensas que recusar impor uma opinião obriga a abandonar a tese. Relê «não pretendemos impor as nossas opiniões, mas simplesmente expô-las»: expor é ainda defender uma posição.',

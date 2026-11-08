@@ -45,6 +45,22 @@ on:
       - 'scripts/cuidado_m4_20261108.*'
       - 'tests/fixtures/cuidado-m4-edits-20261108.json'
       - 'tests/*cuidado_m4*'
+      # 08/11/2026: decisão 152 no M5: as tabelas novas (lições F11 e F13, os pesos no índice, no guia e no mapa e os tempos da aula
+      # de tarefa nas duas unidades), os casos do mesmo tipo (listas, vocabulário, portefólio e grelhas), os geradores e a sua camada.
+      - 'm5/**'
+      - 'tarefas/m5-u1/**'
+      - 'tarefas/m5-u2/**'
+      - 'docs/pedagogia/aquecimentos/m5-*'
+      - 'docs/pedagogia/tarefas-escolha/m5-*'
+      - 'docs/pedagogia/grelhas-tarefas-20261027.json'
+      - 'scripts/tarefas_escolha.py'
+      - 'scripts/grelhas_tarefas.py'
+      - 'scripts/licoes_m1_m6_20261101.py'
+      - 'scripts/revisao_confirmacao_m16_20261101.py'
+      - 'scripts/imagens_licoes_20261101.py'
+      - 'scripts/cuidado_m5_20261108.*'
+      - 'tests/fixtures/cuidado-m5-edits-20261108.json'
+      - 'tests/*cuidado_m5*'
       - 'tests/*apoios*'
       - 'tests/fixtures/apoios-*'
       - '.github/workflows/pt-apoios-qa.yml'
@@ -76,7 +92,8 @@ jobs:
           # 08/11/2026: a decisão 152 no M2 (cuidado_m2_20261108: tabelas onde há itens paralelos e espaços que não quebram nas lições e páginas do M2, incluindo o índice do módulo) passa a camada mais recente, por cima do cartaz «Ler a cidade» e do nome novo da secção; desfaz-se primeiro, com a mesma exigência.
           # 08/11/2026: a decisão 152 no M3 (cuidado_m3_20261108: tabelas onde há itens paralelos e espaços que não quebram nas lições e páginas do M3, incluindo o índice, o guia e o mapa do módulo) passa a camada mais recente, por cima da decisão 152 no M2; desfaz-se primeiro, com a mesma exigência.
           # 08/11/2026: a decisão 152 no M4 (cuidado_m4_20261108: tabelas onde há itens paralelos e espaços que não quebram nas lições e páginas do M4, incluindo o índice, o guia, o mapa e o portefólio do módulo) passa a camada mais recente, por cima da decisão 152 no M3; desfaz-se primeiro, com a mesma exigência.
-          python scripts/aplicar_trocas.py scripts/tabela_movimentos_20261105.json --manifesto tests/fixtures/tabela-movimentos-edits-20261105.json --verificar --desfazer-antes tests/fixtures/cuidado-m4-edits-20261108.json --desfazer-antes tests/fixtures/cuidado-m3-edits-20261108.json --desfazer-antes tests/fixtures/cuidado-m2-edits-20261108.json --desfazer-antes tests/fixtures/cidade-cartaz-edits-20261108.json --desfazer-antes tests/fixtures/creditos-i-pt1-edits-20261107.json --desfazer-antes tests/fixtures/cuidado-m1-edits-20261106.json --desfazer-antes tests/fixtures/indices-acertos-edits-20261107.json --desfazer-antes tests/fixtures/cartaz-indices-148-edits-20261106.json --desfazer-antes tests/fixtures/creditos-i-edits-20261105.json --desfazer-antes tests/fixtures/atlas-lote3-edits-20261105.json --desfazer-antes tests/fixtures/autonomia-154-edits-20261105.json --desfazer-antes tests/fixtures/exame-contexto-edits-20261105.json --desfazer-antes tests/fixtures/exame-licao-edits-20261105.json
+          # 08/11/2026: a decisão 152 no M5 (cuidado_m5_20261108: tabelas onde há itens paralelos e espaços que não quebram nas lições e páginas do M5, incluindo o índice, o guia, o mapa e o portefólio do módulo, e nas tarefas, nos aquecimentos e nas grelhas das suas unidades) passa a camada mais recente, por cima da decisão 152 no M4; desfaz-se primeiro, com a mesma exigência.
+          python scripts/aplicar_trocas.py scripts/tabela_movimentos_20261105.json --manifesto tests/fixtures/tabela-movimentos-edits-20261105.json --verificar --desfazer-antes tests/fixtures/cuidado-m5-edits-20261108.json --desfazer-antes tests/fixtures/cuidado-m4-edits-20261108.json --desfazer-antes tests/fixtures/cuidado-m3-edits-20261108.json --desfazer-antes tests/fixtures/cuidado-m2-edits-20261108.json --desfazer-antes tests/fixtures/cidade-cartaz-edits-20261108.json --desfazer-antes tests/fixtures/creditos-i-pt1-edits-20261107.json --desfazer-antes tests/fixtures/cuidado-m1-edits-20261106.json --desfazer-antes tests/fixtures/indices-acertos-edits-20261107.json --desfazer-antes tests/fixtures/cartaz-indices-148-edits-20261106.json --desfazer-antes tests/fixtures/creditos-i-edits-20261105.json --desfazer-antes tests/fixtures/atlas-lote3-edits-20261105.json --desfazer-antes tests/fixtures/autonomia-154-edits-20261105.json --desfazer-antes tests/fixtures/exame-contexto-edits-20261105.json --desfazer-antes tests/fixtures/exame-licao-edits-20261105.json
           python scripts/verificar_camadas.py
       # 06/11/2026: decisão 152 no M1: as tabelas novas, os espaços que não quebram e a camada no topo.
       - name: Tabelas e referências do M1 (decisão 152)
@@ -90,6 +107,10 @@ jobs:
       # 08/11/2026: decisão 152 no M4: as tabelas novas, os casos do mesmo tipo, os espaços que não quebram e a camada no topo.
       - name: Tabelas e referências do M4 (decisão 152)
         run: python -m unittest discover -s tests -p 'test_cuidado_m4.py' -v
+      # 08/11/2026: decisão 152 no M5: as tabelas novas, os casos do mesmo tipo, os espaços que não quebram, as páginas geradas
+      # (tarefas, aquecimentos, grelhas, lições F16 e F17) iguais aos dados e a camada no topo.
+      - name: Tabelas e referências do M5 (decisão 152)
+        run: python -m unittest discover -s tests -p 'test_cuidado_m5.py' -v
       - name: Instalar Chromium
         run: |
           python -m pip install playwright
@@ -111,3 +132,8 @@ jobs:
       # com o rótulo da coluna, também nos cartões escuros), os nomes do portefólio sem partir e as referências do M4 sem se partirem.
       - name: Tabelas e referências do M4 no navegador
         run: python tests/browser_cuidado_m4.py
+      # 08/11/2026: decisão 152 no M5: as tabelas novas a 360 e 900 px, nos dois temas, sem transbordar (no telemóvel, empilhadas e
+      # com o rótulo da coluna; os pesos com a coluna do número estreita), as listas novas, os nomes do portefólio só a mudar de
+      # linha nos pontos marcados e as referências do M5 sem se partirem.
+      - name: Tabelas e referências do M5 no navegador
+        run: python tests/browser_cuidado_m5.py

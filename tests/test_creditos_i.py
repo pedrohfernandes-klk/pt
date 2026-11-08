@@ -530,7 +530,9 @@ class CreditosI(unittest.TestCase):
                     # 08/11/2026: decisão 152 no M2 (achado 28): no mapa do M2, a sigla leva a junção (U+2060) depois do hífen, para não
                     # se partir entre linhas; nos outros mapas, como estava.
                     # 08/11/2026: decisão 152 no M4 (achado 45): também no mapa do M4, com a mesma exigência.
-                    sigla = (r'Lição M\d-\u2060F\d+' if rel in ('m2/mapa-do-modulo-m2/index.html', 'm4/mapa-do-modulo-m4/index.html')
+                    # 08/11/2026: decisão 152 no M5 (achado 43): também no mapa do M5, com a mesma exigência.
+                    sigla = (r'Lição M\d-\u2060F\d+' if rel in ('m2/mapa-do-modulo-m2/index.html', 'm4/mapa-do-modulo-m4/index.html',
+                                                                 'm5/mapa-do-modulo-m5/index.html')
                              else r'Lição M\d-F\d+')
                     self.assertTrue(all(re.fullmatch(sigla, a.texto()) for a in links), 'na legenda, só «Lição Mx-Fyy»')
                     visivel = re.sub(r'\s', ' ', legenda.texto(lambda x: x.tag == 'a')).strip()

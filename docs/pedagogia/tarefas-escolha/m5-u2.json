@@ -2,28 +2,58 @@
  "slug": "m5-u2",
  "titulo": "Uma casa, um jantar, uma frase: <i>Os Maias</i>",
  "unidade": 2,
+ "nao_partir": true,
  "aquecer": {
   "cartoes": "aquecimento/",
   "minutos": 10,
-  "texto": "No início da aula de tarefa: 10 minutos de cartões com consulta, 5 minutos para leres o enunciado, 60 minutos de produção e 15 minutos de revisão e entrega. Total: 90 minutos. O relógio de produção começa depois da leitura.",
+  "texto": "No início da aula de tarefa:",
+  "tabela": {
+   "colunas": [
+    "Momento",
+    "Tempo"
+   ],
+   "linhas": [
+    [
+     "Cartões com consulta",
+     "10 minutos"
+    ],
+    [
+     "Lês o enunciado",
+     "5 minutos"
+    ],
+    [
+     "Produção",
+     "60 minutos"
+    ],
+    [
+     "Revisão e entrega",
+     "15 minutos"
+    ],
+    [
+     "Total",
+     "90 minutos"
+    ]
+   ]
+  },
+  "depois": "O relógio de produção começa depois da leitura.",
   "ligacao": "Abrir o aquecimento em cartões",
   "ligacao_enunciado": "Aquecer em cartões"
  },
  "lead": "À mão, 200 a 250 palavras: cerca de 50 por resposta do núcleo e 100 a 150 no tema. Com consulta.",
  "nucleo": [
-  "No último capítulo, Carlos diz do Ramalhete: «é n'ella que me parece estar mettida a minha vida inteira!» Da descrição antes da fala, cita uma expressão que vem do cap. I e outra nova. Nomeia a estrutura. Explica o que dizem dessa vida.",
-  "No cap. VI, Alencar «supplicou que se não discutisse» o realismo; logo a seguir: «Alli todos eram homens d'aceio, de sala, hein?». Identifica o modo de relato de cada passagem. Prova o segundo com duas marcas. Reescreve a pergunta em discurso direto."
+  "No último capítulo, Carlos diz do Ramalhete: «é n'ella que me parece estar mettida a minha vida inteira!» Da descrição antes da fala, cita uma expressão que vem do cap. I e outra nova. Nomeia a estrutura. Explica o que dizem dessa vida.",
+  "No cap. VI, Alencar «supplicou que se não discutisse» o realismo; logo a seguir: «Alli todos eram homens d'aceio, de sala, hein?». Identifica o modo de relato de cada passagem. Prova o segundo com duas marcas. Reescreve a pergunta em discurso direto."
  ],
  "temas": [
   {
    "letra": "A",
    "nome": "À mesa, à maneira de Eça",
-   "texto": "Narra na 3.ª pessoa (70 a 100 palavras) uma mesa de hoje onde uma coisa banal corta uma conversa séria, como o «Sole normande?» no Hotel Central. Inclui uma fala em discurso direto e um pensamento em indireto livre. Depois, em duas frases, diz o que imitaste de Eça e o que criticas."
+   "texto": "Narra na 3.ª pessoa (70 a 100 palavras) uma mesa de hoje onde uma coisa banal corta uma conversa séria, como o «Sole normande?» no Hotel Central. Inclui uma fala em discurso direto e um pensamento em indireto livre. Depois, em duas frases, diz o que imitaste de Eça e o que criticas."
   },
   {
    "letra": "B",
    "nome": "Falhámos a vida, hoje?",
-   "texto": "<i>Os Maias</i> chegou ao ecrã mais de um século depois. O «Falhámos a vida, menino!» de Ega diz alguma coisa a quem tem a tua idade? Num parágrafo de opinião (100 a 130 palavras): tese na primeira frase; outra citação do último capítulo, explicada; um facto datado do dossiê, ligado à tese; contra-argumento e refutação; conclusão."
+   "texto": "<i>Os Maias</i> chegou ao ecrã mais de um século depois. O «Falhámos a vida, menino!» de Ega diz alguma coisa a quem tem a tua idade? Num parágrafo de opinião (100 a 130 palavras):</p><ol><li>tese na primeira frase;</li><li>outra citação do último capítulo, explicada;</li><li>um facto datado do dossiê, ligado à tese;</li><li>contra-argumento e refutação;</li><li>conclusão.</li></ol><p>"
   }
  ],
  "apoios": [
@@ -62,7 +92,7 @@
    "fonte": "Lição «Sombrio casarão», «Linha de vida»"
   },
   {
-   "facto": "Por volta de 1910, Joshua Benoliel fotografa o Hotel Central, em Lisboa, o hotel do cap. VI, trinta anos depois do tempo do romance.",
+   "facto": "Por volta de 1910, Joshua Benoliel fotografa o Hotel Central, em Lisboa, o hotel do cap. VI, trinta anos depois do tempo do romance.",
    "href": "../../m5/licao-m5-f11/",
    "fonte": "Lição «Jantar no Hotel Central», «Abre» (legenda da imagem)"
   },
@@ -72,12 +102,12 @@
    "fonte": "Lição «Do livro ao ecrã», «O essencial»"
   },
   {
-   "facto": "A 28 de dezembro de 2015, a RTP1 exibe a minissérie; narra Jorge Vaz de Carvalho, em voz <i>off</i>.",
+   "facto": "A 28 de dezembro de 2015, a RTP1 exibe a minissérie; narra Jorge Vaz de Carvalho, em voz <i>off</i>.",
    "href": "../../m5/licao-m5-f10/",
    "fonte": "Lição «Sombrio casarão», «Linha de vida»"
   },
   {
-   "facto": "A 8 de janeiro de 2025, Eça recebe honras de Panteão.",
+   "facto": "A 8 de janeiro de 2025, Eça recebe honras de Panteão.",
    "href": "../../m5/licao-m5-f15/",
    "fonte": "Lição «Dois modos de perder a vida», «O essencial» (o vídeo de Teresa Pinto Coelho)"
   }

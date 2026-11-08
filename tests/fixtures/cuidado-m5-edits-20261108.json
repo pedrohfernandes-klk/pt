@@ -1,0 +1,1518 @@
+{
+ "base_commit": "c08631983dbe552afba3689202d7ed9e8cf5074b",
+ "_nota": "08/11/2026: decisão 152 do docente («cuidado em todas as lições»), módulo M5: os 52 achados CONFIRMADOS da varredura de 6/11 (bordo/cidadania-v3/cuidado-152/m5-confirmados.json; os 11 recusados, 2, 3, 4, 5, 7, 8, 10, 11, 16, 17 e 19, não entram): 7 achados A (tabelas onde há itens paralelos, como na M7-F10, na M7-F15 e do M1 ao M4: class apoio-tabela, th scope, td data-label e os role, nas lições F11, «Quem está à mesa», e F13, as peças do texto de opinião; os pesos da avaliação no índice, no guia e no mapa do módulo, como no M3, com o rótulo num parágrafo antes da tabela e a coluna do peso estreita; e os tempos da aula de tarefa da M5-U1 e da M5-U2, pelo gerador das tarefas, como no M1; cada página com tabela nova carrega assets/pt-lessons/apoios-tabelas.css antes da camada de aparência, na versão do M1), 35 de referências e números que não se partem entre linhas (B: U+00A0 nos espaços que a proposta final prende, no contexto que a proposta dá, e U+2060 logo a seguir ao traço de intervalo e ao hífen da sigla «M5-Fxx»; nas datas, o espaço entre o mês e o «de» do ano fica; «Séc. XIX» do guia passa a «século XIX», como na proposta) e 10 casos do mesmo tipo (C: listas na F08, em «Três antes de mim» do guia e nos temas A da M5-U1 e B da M5-U2; os nomes do vocabulário a negrito, ligados com «e», na F11, na F12 e na F13; no portefólio, os nomes dos ficheiros todos em <code>, sem partir nos hífenes e com <wbr> a seguir a cada «_» nos longos; e os elementos de cada tema em listas no critério 3 das grelhas, pelo gerador, com «max_em_listas», como no M1). Camada mais recente, por cima da decisão 152 no M4 (cuidado_m4_20261108). Gerada por scripts/cuidado_m5_20261108.py e aplicada por scripts/aplicar_trocas.py: não se edita à mão. O texto visível fica igual, salvo a estrutura das tabelas e das listas, as correções da proposta final e os espaços invisíveis. A casca das lições (migalhas «2.º ano» e «Narrativa do século XIX», «Estás em: Lição M5-Fxx», o título escondido e a sigla do rodapé) não muda aqui, ficheiro a ficheiro: muda no molde, como do M1 ao M4 (o achado 30, só da casca da F07, fica sem troca); as fontes do rodapé mudam, como no M1; nas outras páginas (índice, guia, mapa e portefólio), as migalhas mudam onde o achado o diz. Ficam de fora os «alt» (e aria-label, href, title, content e data-titulo, que vira o title do leitor dos vídeos), o <title>, o texto dos desenhos (SVG), a «frase» dos cartões sublinhar e o que outra camada já tinha posto com U+00A0 (os créditos do «i», em <span class=\"nb\">); muda o crédito do «i» do mapa que repete a legenda da primeira edição de Os Maias (camada de 7/11, depois da varredura). As páginas geradas mudam também nos dados, que estão nesta camada, e regeneram-se sem diferenças: as tarefas da M5-U1 e da M5-U2 (docs/pedagogia/tarefas-escolha/m5-u1.json e m5-u2.json: «nao_partir», como no M1 e no M3, que também prende a meta descrição, a tabela dos tempos, as listas dos temas e os achados B), os aquecimentos (docs/pedagogia/aquecimentos/m5-u1.json e m5-u2.json) e as grelhas e a correção (docs/pedagogia/grelhas-tarefas-20261027.json, entradas m5-u1 e m5-u2). Os geradores mudam fora da camada: scripts/tarefas_escolha.py tira o parágrafo vazio no fim de um tema que acaba numa lista, e scripts/grelhas_tarefas.py aceita «Conclusão:» no fecho de um tema. As lições geradas F16 e F17 mudam nas fontes, fora da camada (scripts/licoes_m1_m6_20261101.py, revisao_confirmacao_m16_20261101.py e imagens_licoes_20261101.py), e a lição e as notas do docente (m5/painel-m5-f16 e f17) mudam aqui e saem iguais do gerador. O painel do docente da F10 segue o enunciado do cartão que mudou.",
+ "files": {
+  "docs/pedagogia/aquecimentos/m5-u1.json": {
+   "base_sha256_lf": "2d4758f8b7902f8e6020beb4fa001a34f45e61d3e6ce225e13a1ea96d0719bca",
+   "after_sha256_lf": "ce0ac4938bb18d7bb7f2b713cf2da0b6f42d01afb2823651b2ea63e2cc9babc3",
+   "edits": [
+    {
+     "location": "Dados aquecimentos/m5-u1.json: «na Introdução e no cap. IV;» que não se parte (com o contexto «cap. IV;»)",
+     "old": "cap. IV;",
+     "new": "cap. IV;",
+     "occurrences": 1
+    }
+   ]
+  },
+  "docs/pedagogia/aquecimentos/m5-u2.json": {
+   "base_sha256_lf": "4ac7a88eb4652b5d688fb16aa73fe9009d9ecb5060cb1c9340b54c356b4c99ec",
+   "after_sha256_lf": "ba9e272c730e82646e43c2994afb899a8762b5c33462d9c829ab5104aa874477",
+   "edits": [
+    {
+     "location": "Dados aquecimentos/m5-u2.json: «no cap. I, há uma» que não se parte (com o contexto «cap. I,»)",
+     "old": "cap. I,",
+     "new": "cap. I,",
+     "occurrences": 1
+    }
+   ]
+  },
+  "docs/pedagogia/grelhas-tarefas-20261027.json": {
+   "base_sha256_lf": "b67c29759efd59e0c1edb9c22501afc2fd5810ddc9957c0118fe7dad4b395092",
+   "after_sha256_lf": "1929e09d55eb65bd4d708cdf5b06dabd84397ca17773f0444b8643cd05cb87cc",
+   "edits": [
+    {
+     "location": "Dados das grelhas, m5-u1: «max_em_listas» no critério 3",
+     "old": "\"max\": 6,\n     \"niveis\": {\n      \"0\": [\n       \"Conta um ponto por elemento cumprido e mais um pela explicação que o tema pede. Aqui, não cumpres nenhum dos cinco elementos do teu tema.\",\n       \"A (u",
+     "new": "\"max\": 6,\n     \"max_em_listas\": true,\n     \"niveis\": {\n      \"0\": [\n       \"Conta um ponto por elemento cumprido e mais um pela explicação que o tema pede. Aqui, não cumpres nenhum dos cinco elementos do teu tema.\",\n       \"A (u",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados das grelhas, m5-u2: «max_em_listas» no critério 3",
+     "old": "\"max\": 6,\n     \"niveis\": {\n      \"0\": [\n       \"Conta um ponto por elemento cumprido e mais um pela explicação (",
+     "new": "\"max\": 6,\n     \"max_em_listas\": true,\n     \"niveis\": {\n      \"0\": [\n       \"Conta um ponto por elemento cumprido e mais um pela explicação (",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados pedagogia/grelhas-tarefas-20261027.json, m5-u1: «outra do cap. IV em que» que não se parte (com o contexto «cap. IV»)",
+     "old": "cap. IV",
+     "new": "cap. IV",
+     "occurrences": 4
+    },
+    {
+     "location": "Dados pedagogia/grelhas-tarefas-20261027.json, m5-u2: «o que vem do cap. I e o que é novo» que não se parte (com o contexto «cap. I »)",
+     "old": "cap. I ",
+     "new": "cap. I ",
+     "occurrences": 2
+    },
+    {
+     "location": "Dados pedagogia/grelhas-tarefas-20261027.json, m5-u2: «narrada na 3.ª pessoa;» que não se parte (com o contexto «3.ª pessoa»)",
+     "old": "3.ª pessoa",
+     "new": "3.ª pessoa",
+     "occurrences": 1
+    }
+   ]
+  },
+  "docs/pedagogia/tarefas-escolha/m5-u1.json": {
+   "base_sha256_lf": "9da67feadfa597cd27bb764bf516e23d5b42fadd6e9fe9766ccdaf8087d79b6c",
+   "after_sha256_lf": "585b979f9f2ad73177ac72441e6da2f8d184fa01492dcecb1e892de24b0c4849",
+   "edits": [
+    {
+     "location": "Dados da tarefa: «nao_partir», os números do molde com espaço que não quebra",
+     "old": "\n \"unidade\": 1,\n",
+     "new": "\n \"unidade\": 1,\n \"nao_partir\": true,\n",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados da tarefa: o aquecimento com a tabela dos tempos («texto», «tabela» e «depois», como na M1-U1)",
+     "old": "  \"texto\": \"No início da aula de tarefa: 10 minutos de cartões com consulta, 5 minutos para leres o enunciado, 60 minutos de produção e 15 minutos de revisão e entrega. Total: 90 minutos. O relógio de produção começa depois da leitura.\",\n",
+     "new": "  \"texto\": \"No início da aula de tarefa:\",\n  \"tabela\": {\n   \"colunas\": [\n    \"Momento\",\n    \"Tempo\"\n   ],\n   \"linhas\": [\n    [\n     \"Cartões com consulta\",\n     \"10 minutos\"\n    ],\n    [\n     \"Lês o enunciado\",\n     \"5 minutos\"\n    ],\n    [\n     \"Produção\",\n     \"60 minutos\"\n    ],\n    [\n     \"Revisão e entrega\",\n     \"15 minutos\"\n    ],\n    [\n     \"Total\",\n     \"90 minutos\"\n    ]\n   ]\n  },\n  \"depois\": \"O relógio de produção começa depois da leitura.\",\n",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados da tarefa: o tema A com os cinco elementos da carta numa lista numerada",
+     "old": "Escreve a carta (90 a 120 palavras): local e data, vocativo, despedida e assinatura; resposta a uma pergunta dela; uma memória dos dois; um recurso expressivo teu; um eco do romance, entre «». Depois,",
+     "new": "Escreve a carta (90 a 120 palavras):</p><ol><li>local e data, vocativo, despedida e assinatura;</li><li>resposta a uma pergunta dela;</li><li>uma memória dos dois;</li><li>um recurso expressivo teu;</li><li>um eco do romance, entre «».</li></ol><p>Depois,",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados tarefas-escolha/m5-u1.json: «outra do cap. IV em que» que não se parte (com o contexto «cap. IV»)",
+     "old": "cap. IV",
+     "new": "cap. IV",
+     "occurrences": 2
+    },
+    {
+     "location": "Dados tarefas-escolha/m5-u1.json: «a 17 de março de 1807;» que não se parte (com o contexto «17 de março de 1807»)",
+     "old": "17 de março de 1807",
+     "new": "17 de março de 1807",
+     "occurrences": 1
+    }
+   ]
+  },
+  "docs/pedagogia/tarefas-escolha/m5-u2.json": {
+   "base_sha256_lf": "97e69b8f6b0e835f911b44a603727dc02a4dd918f4fd7401684337f0b48cbc12",
+   "after_sha256_lf": "aa3a62fefbdc4b9a1e9934f59b9102481444b2a7127d198c61141e809f550ff6",
+   "edits": [
+    {
+     "location": "Dados da tarefa: «nao_partir», os números do molde com espaço que não quebra",
+     "old": "\n \"unidade\": 2,\n",
+     "new": "\n \"unidade\": 2,\n \"nao_partir\": true,\n",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados da tarefa: o aquecimento com a tabela dos tempos («texto», «tabela» e «depois», como na M1-U1)",
+     "old": "  \"texto\": \"No início da aula de tarefa: 10 minutos de cartões com consulta, 5 minutos para leres o enunciado, 60 minutos de produção e 15 minutos de revisão e entrega. Total: 90 minutos. O relógio de produção começa depois da leitura.\",\n",
+     "new": "  \"texto\": \"No início da aula de tarefa:\",\n  \"tabela\": {\n   \"colunas\": [\n    \"Momento\",\n    \"Tempo\"\n   ],\n   \"linhas\": [\n    [\n     \"Cartões com consulta\",\n     \"10 minutos\"\n    ],\n    [\n     \"Lês o enunciado\",\n     \"5 minutos\"\n    ],\n    [\n     \"Produção\",\n     \"60 minutos\"\n    ],\n    [\n     \"Revisão e entrega\",\n     \"15 minutos\"\n    ],\n    [\n     \"Total\",\n     \"90 minutos\"\n    ]\n   ]\n  },\n  \"depois\": \"O relógio de produção começa depois da leitura.\",\n",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados da tarefa: o tema B com os cinco elementos do parágrafo numa lista numerada (o texto acaba em «<p>»)",
+     "old": "Num parágrafo de opinião (100 a 130 palavras): tese na primeira frase; outra citação do último capítulo, explicada; um facto datado do dossiê, ligado à tese; contra-argumento e refutação; conclusão.\"",
+     "new": "Num parágrafo de opinião (100 a 130 palavras):</p><ol><li>tese na primeira frase;</li><li>outra citação do último capítulo, explicada;</li><li>um facto datado do dossiê, ligado à tese;</li><li>contra-argumento e refutação;</li><li>conclusão.</li></ol><p>\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados tarefas-escolha/m5-u2.json: «que vem do cap. I e outra nova.» que não se parte (com o contexto «cap. I»)",
+     "old": "cap. I",
+     "new": "cap. I",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados tarefas-escolha/m5-u2.json: «No cap. VI, Alencar» que não se parte (com o contexto «cap. VI»)",
+     "old": "cap. VI",
+     "new": "cap. VI",
+     "occurrences": 2
+    },
+    {
+     "location": "Dados tarefas-escolha/m5-u2.json: «Narra na 3.ª pessoa» que não se parte (com o contexto «3.ª pessoa»)",
+     "old": "3.ª pessoa",
+     "new": "3.ª pessoa",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados tarefas-escolha/m5-u2.json: «A 28 de dezembro de 2015, a RTP1» que não se parte (com o contexto «28 de dezembro de 2015»)",
+     "old": "28 de dezembro de 2015",
+     "new": "28 de dezembro de 2015",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados tarefas-escolha/m5-u2.json: «A 8 de janeiro de 2025, Eça» que não se parte (com o contexto «8 de janeiro de 2025»)",
+     "old": "8 de janeiro de 2025",
+     "new": "8 de janeiro de 2025",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m5/camilo-assento/index.html": {
+   "base_sha256_lf": "20ea1fa9c8e8630cbd7572ce5458cabe37c4b9ebac407e314fab08a8f5684f0e",
+   "after_sha256_lf": "b46277465c3c894b9a81e7ef9de89741a76ddce5d699f4f42a3d93b90e617eb8",
+   "edits": [
+    {
+     "location": "m5/camilo-assento: «Gutenberg n.º 16425)» que não se parte (com o contexto «n.º 16425»)",
+     "old": "n.º 16425",
+     "new": "n.º 16425",
+     "occurrences": 2
+    },
+    {
+     "location": "m5/camilo-assento: «folhas 232» que não se parte",
+     "old": "folhas 232",
+     "new": "folhas 232",
+     "occurrences": 3
+    },
+    {
+     "location": "m5/camilo-assento: «na página 232» que não se parte (com o contexto «página 232»)",
+     "old": "página 232",
+     "new": "página 232",
+     "occurrences": 1
+    },
+    {
+     "location": "m5/camilo-assento: «17 de Março de 1807» que não se parte",
+     "old": "17 de Março de 1807",
+     "new": "17 de Março de 1807",
+     "occurrences": 2
+    }
+   ]
+  },
+  "m5/camilo-carta/index.html": {
+   "base_sha256_lf": "71b34f880143f0394e3e09903b6e88cf0f9c6c9c063d9ebeb1a4a5c1a76760c3",
+   "after_sha256_lf": "610caf0ebb8af813c2aa8cc4927b068b28304507fd86083c78e770dba037d861",
+   "edits": [
+    {
+     "location": "m5/camilo-carta: «Gutenberg n.º 16425)» que não se parte (com o contexto «n.º 16425»)",
+     "old": "n.º 16425",
+     "new": "n.º 16425",
+     "occurrences": 2
+    }
+   ]
+  },
+  "m5/camilo-pai/index.html": {
+   "base_sha256_lf": "a1007b2c28c4446353a54a7bae88d501422d974154ea0e4d88143ecb217f998a",
+   "after_sha256_lf": "4f316eb06113d653adcff54ee483945d8f8a20748483e76d57a35627a8a975c7",
+   "edits": [
+    {
+     "location": "m5/camilo-pai: «Gutenberg n.º 16425)» que não se parte (com o contexto «n.º 16425»)",
+     "old": "n.º 16425",
+     "new": "n.º 16425",
+     "occurrences": 2
+    },
+    {
+     "location": "m5/camilo-pai: «1862, cap. IV» que não se parte (com o contexto «cap. IV»)",
+     "old": "cap. IV",
+     "new": "cap. IV",
+     "occurrences": 2
+    }
+   ]
+  },
+  "m5/eca-falhamos/index.html": {
+   "base_sha256_lf": "9263f6fec3ae58378452c903ba644d403ca659ff4d5bc7b7c3fa5ed752c89e5d",
+   "after_sha256_lf": "737ba0174df97954c739222520010900ceda01149acf9c43b40aaa9caac4d3f0",
+   "edits": [
+    {
+     "location": "m5/eca-falhamos: «Gutenberg n.º 40409)» que não se parte (com o contexto «n.º 40409»)",
+     "old": "n.º 40409",
+     "new": "n.º 40409",
+     "occurrences": 2
+    }
+   ]
+  },
+  "m5/eca-hotel/index.html": {
+   "base_sha256_lf": "80e62ad848db619793785280dbd758f4dad03b017d4d45766d87750e138036aa",
+   "after_sha256_lf": "bd05b6d2910b9fd2d834cd793d5430396a3b96880842ea57e4ebe74ca02fef51",
+   "edits": [
+    {
+     "location": "m5/eca-hotel: «Gutenberg n.º 40409)» que não se parte (com o contexto «n.º 40409»)",
+     "old": "n.º 40409",
+     "new": "n.º 40409",
+     "occurrences": 2
+    },
+    {
+     "location": "m5/eca-hotel: «1888, cap. VI» que não se parte (com o contexto «cap. VI»)",
+     "old": "cap. VI",
+     "new": "cap. VI",
+     "occurrences": 2
+    }
+   ]
+  },
+  "m5/eca-ramalhete/index.html": {
+   "base_sha256_lf": "ad598e9457f65e5e1b803bafc97d6520226b8cd23da704ac5f5a628c0fa1a959",
+   "after_sha256_lf": "cee6bb141249adfc29414f93784bff16736a657ebf959c34a46939dc72c737f8",
+   "edits": [
+    {
+     "location": "m5/eca-ramalhete: «Gutenberg n.º 40409)» que não se parte (com o contexto «n.º 40409»)",
+     "old": "n.º 40409",
+     "new": "n.º 40409",
+     "occurrences": 2
+    },
+    {
+     "location": "m5/eca-ramalhete: «1888, cap. I e último» que não se parte (com o contexto «cap. I»)",
+     "old": "cap. I",
+     "new": "cap. I",
+     "occurrences": 2
+    },
+    {
+     "location": "m5/eca-ramalhete: «sr.ª D. Maria I:» que não se parte (com o contexto «sr.ª D. Maria I»)",
+     "old": "sr.ª D. Maria I",
+     "new": "sr.ª D. Maria I",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m5/gram-dil/index.html": {
+   "base_sha256_lf": "a77479c7380b75d5aab7c3e7f45a76ecb151ea8532cb0a53afc12ef881d10cd1",
+   "after_sha256_lf": "fadaf023ebdae2a0e8d593134d9ba6357a184aa21f7cf8524fc95b6aa33fd0c1",
+   "edits": [
+    {
+     "location": "m5/gram-dil: «Gutenberg n.º 40409)» que não se parte (com o contexto «n.º 40409»)",
+     "old": "n.º 40409",
+     "new": "n.º 40409",
+     "occurrences": 3
+    }
+   ]
+  },
+  "m5/gram-funcoes/index.html": {
+   "base_sha256_lf": "65168b1e545a714347034805da9f4ce3cabfc947a8ec984429fbb065a3d2a5a1",
+   "after_sha256_lf": "bec3d2df4fe376e263ca7d4ba47626d6c702dbaca536602ee1798c9c1b558983",
+   "edits": [
+    {
+     "location": "m5/gram-funcoes: «Gutenberg n.º 16425)» que não se parte (com o contexto «n.º 16425»)",
+     "old": "n.º 16425",
+     "new": "n.º 16425",
+     "occurrences": 3
+    }
+   ]
+  },
+  "m5/guia-da-tarefa-m5/index.html": {
+   "base_sha256_lf": "80bed3352f607329044a4a75ba609df7f96eeec19665fee0c25323a75c5d232c",
+   "after_sha256_lf": "ec9604ed33e0889ad7618fa77eff6d3c93273941c251c03b5394e64529fe9fa9",
+   "edits": [
+    {
+     "location": "m5/guia-da-tarefa-m5, secção «Tarefas das unidades» (p.avaliacao-tarefas)",
+     "old": "<p class=\"avaliacao-tarefas\">Avaliação: tarefa da Unidade 1, 30 %; tarefa da Unidade 2, 30 %; provas rápidas, 10 %; prova escrita, 30 %. ",
+     "new": "<p>Avaliação:</p><table class=\"apoio-tabela\" role=\"table\"><thead role=\"rowgroup\"><tr role=\"row\"><th scope=\"col\" role=\"columnheader\" style=\"width:auto\">Elemento</th><th scope=\"col\" role=\"columnheader\" style=\"width:5.5rem\">Peso</th></tr></thead><tbody role=\"rowgroup\"><tr role=\"row\"><th scope=\"row\" role=\"rowheader\">Tarefa da Unidade 1</th><td role=\"cell\" data-label=\"Peso\">30 %</td></tr><tr role=\"row\"><th scope=\"row\" role=\"rowheader\">Tarefa da Unidade 2</th><td role=\"cell\" data-label=\"Peso\">30 %</td></tr><tr role=\"row\"><th scope=\"row\" role=\"rowheader\">Provas rápidas</th><td role=\"cell\" data-label=\"Peso\">10 %</td></tr><tr role=\"row\"><th scope=\"row\" role=\"rowheader\">Prova escrita</th><td role=\"cell\" data-label=\"Peso\">30 %</td></tr></tbody></table><p class=\"avaliacao-tarefas\">",
+     "occurrences": 1
+    },
+    {
+     "location": "m5/guia-da-tarefa-m5, «Três antes de mim» (div.regra)",
+     "old": "<div class=\"regra\"><b>Três antes de mim.</b> Antes de chamares o docente: 1) relê o enunciado; 2) vê a rubrica; 3) pergunta ao teu par de trabalho. Só depois levantas o braço.</div>",
+     "new": "<div class=\"regra\"><b>Três antes de mim.</b> Antes de chamares o docente:<ol><li>relê o enunciado;</li><li>vê a rubrica;</li><li>pergunta ao teu par de trabalho.</li></ol>Só depois levantas o braço.</div>",
+     "occurrences": 1
+    },
+    {
+     "location": "m5/guia-da-tarefa-m5, cabeça: a folha das tabelas de apoio, antes da camada de aparência",
+     "old": "<link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-universal-1\">",
+     "new": "<link rel=\"stylesheet\" href=\"../../assets/pt-lessons/apoios-tabelas.css?v=20261106.1\"><link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-universal-1\">",
+     "occurrences": 1
+    },
+    {
+     "location": "m5/guia-da-tarefa-m5: «Narrativa do Séc. XIX»",
+     "old": "Narrativa do Séc. XIX",
+     "new": "Narrativa do século XIX",
+     "occurrences": 1
+    },
+    {
+     "location": "m5/guia-da-tarefa-m5: «tarefa de 90 minutos, com aquecimento» que não se parte (com o contexto «90 minutos»)",
+     "old": "90 minutos",
+     "new": "90 minutos",
+     "occurrences": 1
+    },
+    {
+     "location": "m5/guia-da-tarefa-m5: «em cartões (10 minutos). Seguem-se 5 minutos de» que não se parte (com o contexto «10 minutos»)",
+     "old": "10 minutos",
+     "new": "10 minutos",
+     "occurrences": 1
+    },
+    {
+     "location": "m5/guia-da-tarefa-m5: «em cartões (10 minutos). Seguem-se 5 minutos de» que não se parte (com o contexto «5 minutos»)",
+     "old": "5 minutos",
+     "new": "5 minutos",
+     "occurrences": 1
+    },
+    {
+     "location": "m5/guia-da-tarefa-m5: «</a><br>30 %, individual» que não se parte (com o contexto «30 %,»)",
+     "old": "30 %,",
+     "new": "30 %,",
+     "occurrences": 2
+    },
+    {
+     "location": "m5/guia-da-tarefa-m5: «<b>Aquecer, 10 min</b>» que não se parte (com o contexto «10 min<»)",
+     "old": "10 min<",
+     "new": "10 min<",
+     "occurrences": 1
+    },
+    {
+     "location": "m5/guia-da-tarefa-m5: «<b>Ler o enunciado, 5 min</b>» que não se parte (com o contexto « 5 min<»)",
+     "old": " 5 min<",
+     "new": " 5 min<",
+     "occurrences": 1
+    },
+    {
+     "location": "m5/guia-da-tarefa-m5: «<b>Produzir, 60 min</b>» que não se parte (com o contexto «60 min»)",
+     "old": "60 min",
+     "new": "60 min",
+     "occurrences": 1
+    },
+    {
+     "location": "m5/guia-da-tarefa-m5: «<b>Rever e entregar, 15 min</b>» que não se parte (com o contexto «15 min»)",
+     "old": "15 min",
+     "new": "15 min",
+     "occurrences": 1
+    },
+    {
+     "location": "m5/guia-da-tarefa-m5: «2.º ano» que não se parte",
+     "old": "2.º ano",
+     "new": "2.º ano",
+     "occurrences": 2
+    }
+   ]
+  },
+  "m5/index.html": {
+   "base_sha256_lf": "3a0bd943c39b8079c8aae4560aedfe4b7ad4611b29987ccc30f220e0bfb6b673",
+   "after_sha256_lf": "9277e05fa4325d272dbc1aab74d1b1d2af973350069b10764840937a1f0ba45c",
+   "edits": [
+    {
+     "location": "m5, secção «Como se cumpre uma unidade» (p.avaliacao-tarefas)",
+     "old": "<p class=\"avaliacao-tarefas\">Pesos na avaliação: tarefa da Unidade 1, 30 %; tarefa da Unidade 2, 30 %; provas rápidas, 10 %; prova escrita, 30 %. ",
+     "new": "<p>Pesos na avaliação:</p><table class=\"apoio-tabela\" role=\"table\"><thead role=\"rowgroup\"><tr role=\"row\"><th scope=\"col\" role=\"columnheader\" style=\"width:auto\">Elemento</th><th scope=\"col\" role=\"columnheader\" style=\"width:5.5rem\">Peso</th></tr></thead><tbody role=\"rowgroup\"><tr role=\"row\"><th scope=\"row\" role=\"rowheader\">Tarefa da Unidade 1</th><td role=\"cell\" data-label=\"Peso\">30 %</td></tr><tr role=\"row\"><th scope=\"row\" role=\"rowheader\">Tarefa da Unidade 2</th><td role=\"cell\" data-label=\"Peso\">30 %</td></tr><tr role=\"row\"><th scope=\"row\" role=\"rowheader\">Provas rápidas</th><td role=\"cell\" data-label=\"Peso\">10 %</td></tr><tr role=\"row\"><th scope=\"row\" role=\"rowheader\">Prova escrita</th><td role=\"cell\" data-label=\"Peso\">30 %</td></tr></tbody></table><p class=\"avaliacao-tarefas\">",
+     "occurrences": 1
+    },
+    {
+     "location": "m5, cabeça: a folha das tabelas de apoio, antes da camada de aparência",
+     "old": "<link rel=\"stylesheet\" href=\"../assets/appearance.css?v=20261025-universal-1\">",
+     "new": "<link rel=\"stylesheet\" href=\"../assets/pt-lessons/apoios-tabelas.css?v=20261106.1\"><link rel=\"stylesheet\" href=\"../assets/appearance.css?v=20261025-universal-1\">",
+     "occurrences": 1
+    },
+    {
+     "location": "m5: «aula de tarefa de 90 minutos: aquecimento» que não se parte (com o contexto «90 minutos»)",
+     "old": "90 minutos",
+     "new": "90 minutos",
+     "occurrences": 3
+    },
+    {
+     "location": "m5: «tarefa 90 min</small>» que não se parte (com o contexto «90 min<»)",
+     "old": "90 min<",
+     "new": "90 min<",
+     "occurrences": 4
+    },
+    {
+     "location": "m5: «cerca de 25 min, sem nada» que não se parte (com o contexto «25 min»)",
+     "old": "25 min",
+     "new": "25 min",
+     "occurrences": 2
+    },
+    {
+     "location": "m5: «<span class=\"chip\">10 min</span>» que não se parte (com o contexto «10 min»)",
+     "old": "10 min",
+     "new": "10 min",
+     "occurrences": 2
+    },
+    {
+     "location": "m5: «Grelha /20; 30 %.» que não se parte (com o contexto «30 %.<»)",
+     "old": "30 %.<",
+     "new": "30 %.<",
+     "occurrences": 2
+    },
+    {
+     "location": "m5: «Narrativa do século XIX</span></h1>» que não se parte (com o contexto «século XIX</sp»)",
+     "old": "século XIX</sp",
+     "new": "século XIX</sp",
+     "occurrences": 1
+    },
+    {
+     "location": "m5: «Narrativa do século XIX</span></h1>» que não se parte (com o contexto «século XIX. Na»)",
+     "old": "século XIX. Na",
+     "new": "século XIX. Na",
+     "occurrences": 1
+    },
+    {
+     "location": "m5: «2.º ano» que não se parte",
+     "old": "2.º ano",
+     "new": "2.º ano",
+     "occurrences": 2
+    },
+    {
+     "location": "m5: «a folhas 232.» que não se parte (com o contexto «folhas 232»)",
+     "old": "folhas 232",
+     "new": "folhas 232",
+     "occurrences": 1
+    },
+    {
+     "location": "m5: «17 de Março de 1807» que não se parte",
+     "old": "17 de Março de 1807",
+     "new": "17 de Março de 1807",
+     "occurrences": 2
+    },
+    {
+     "location": "m5: «26 de Setembro de 1861» que não se parte",
+     "old": "26 de Setembro de 1861",
+     "new": "26 de Setembro de 1861",
+     "occurrences": 2
+    },
+    {
+     "location": "m5: «capítulo IV» que não se parte",
+     "old": "capítulo IV",
+     "new": "capítulo IV",
+     "occurrences": 3
+    },
+    {
+     "location": "m5: «17 de março de 1807» que não se parte",
+     "old": "17 de março de 1807",
+     "new": "17 de março de 1807",
+     "occurrences": 6
+    },
+    {
+     "location": "m5: «26 de setembro de 1861» que não se parte",
+     "old": "26 de setembro de 1861",
+     "new": "26 de setembro de 1861",
+     "occurrences": 2
+    },
+    {
+     "location": "m5: «28 de dezembro de 1815» que não se parte",
+     "old": "28 de dezembro de 1815",
+     "new": "28 de dezembro de 1815",
+     "occurrences": 1
+    },
+    {
+     "location": "m5: «no capítulo VI?» que não se parte (com o contexto «capítulo VI»)",
+     "old": "capítulo VI",
+     "new": "capítulo VI",
+     "occurrences": 1
+    },
+    {
+     "location": "m5: «.ª pessoa» que não se parte (com o contexto «3.ª pessoa»)",
+     "old": "3.ª pessoa",
+     "new": "3.ª pessoa",
+     "occurrences": 7
+    },
+    {
+     "location": "m5: «.ª pessoa» que não se parte (com o contexto «1.ª pessoa»)",
+     "old": "1.ª pessoa",
+     "new": "1.ª pessoa",
+     "occurrences": 3
+    },
+    {
+     "location": "m5: «.ª pessoa» que não se parte (com o contexto «2.ª pessoa»)",
+     "old": "2.ª pessoa",
+     "new": "2.ª pessoa",
+     "occurrences": 2
+    },
+    {
+     "location": "m5: «28 de dezembro de 2015» que não se parte",
+     "old": "28 de dezembro de 2015",
+     "new": "28 de dezembro de 2015",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m5/licao-m5-f02/index.html": {
+   "base_sha256_lf": "08604407ed43f5b0c53e9e3f11d7dcaf3c5c2253bba3e8c4ce733cf7dd56288d",
+   "after_sha256_lf": "bb3400850ee7eb91d4de1d241ac1caa250ee20f68f6cdebebad44529416fcb9d",
+   "edits": [
+    {
+     "location": "M5-F02: «A 17 de março, Simão parte» que não se parte (com o contexto «17 de m»)",
+     "old": "17 de m",
+     "new": "17 de m",
+     "occurrences": 1
+    },
+    {
+     "location": "M5-F02: «>a folhas 232</b>, o seguinte» que não se parte (com o contexto «folhas 232»)",
+     "old": "folhas 232",
+     "new": "folhas 232",
+     "occurrences": 2
+    },
+    {
+     "location": "M5-F02: «<b>a folhas 232</b>, na página 232» que não se parte (com o contexto «página 232;»)",
+     "old": "página 232;",
+     "new": "página 232;",
+     "occurrences": 1
+    },
+    {
+     "location": "M5-F02: «lida por Sónia Pedro (5 min)» que não se parte (com o contexto «5 min)<»)",
+     "old": "5 min)<",
+     "new": "5 min)<",
+     "occurrences": 1
+    },
+    {
+     "location": "M5-F02: «<i>Foi para a India em 17 de Março de 1807</i>» que não se parte (com o contexto «17 de Março de 1807»)",
+     "old": "17 de Março de 1807",
+     "new": "17 de Março de 1807",
+     "occurrences": 3
+    },
+    {
+     "location": "M5-F02: «Ensina RTP (1 min)» que não se parte (com o contexto «1 min)<»)",
+     "old": "1 min)<",
+     "new": "1 min)<",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m5/licao-m5-f04/index.html": {
+   "base_sha256_lf": "5909bfe3594c935eedf78e7508994d336bf01bef50d3b12264400c6d29742d7e",
+   "after_sha256_lf": "1c8f12a018a411ce7aa0f5b4830f88d1ed45e2966d5090400a195b30df98b8bb",
+   "edits": [
+    {
+     "location": "M5-F04: «primeira parte, cap. IV.» que não se parte (com o contexto «cap. IV»)",
+     "old": "cap. IV",
+     "new": "cap. IV",
+     "occurrences": 3
+    },
+    {
+     "location": "M5-F04: «Lucas de Almeida Marrão, c. 1850)» que não se parte (com o contexto «c. 1850).»)",
+     "old": "c. 1850).",
+     "new": "c. 1850).",
+     "occurrences": 1
+    },
+    {
+     "location": "M5-F04: «\"titulo\":\"Capítulo IV\"» que não se parte (com o contexto «Capítulo IV»)",
+     "old": "Capítulo IV",
+     "new": "Capítulo IV",
+     "occurrences": 1
+    },
+    {
+     "location": "M5-F04: «Ler o capítulo IV na Wikisource» que não se parte (com o contexto «capítulo IV»)",
+     "old": "capítulo IV",
+     "new": "capítulo IV",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m5/licao-m5-f08/index.html": {
+   "base_sha256_lf": "3d23fbcf6cefd0e7235fad8760da775fff0d6bfdf389d5f19eb46ca49a05e110",
+   "after_sha256_lf": "1c6e954f4cfccc2a6a70f0842743395e00677cb9cfcbc9829897ee13812dcbba",
+   "edits": [
+    {
+     "location": "M5-F08, cartão 2, Para entender («Recorda: o que Simão sabe nesta noite»)",
+     "old": "<p><b>As perguntas de Teresa:</b> podias tu com a desesperança e com a vida? Que farias da vida sem a tua companheira? Nunca hás de amar outra vez?</p><p><b>Os factos:</b> Simão matou Baltasar e vai degredado para a Índia; a nau saiu do Porto a 17 de março de 1807; Teresa morreu no convento de Monchique; Mariana, a filha do ferrador, vai a bordo com ele.</p>",
+     "new": "<p><b>As perguntas de Teresa:</b></p><ul><li>Podias tu com a desesperança e com a vida?</li><li>Que farias da vida sem a tua companheira?</li><li>Nunca hás de amar outra vez?</li></ul><p><b>Os factos:</b></p><ul><li>Simão matou Baltasar e vai degredado para a Índia;</li><li>a nau saiu do Porto a 17 de março de 1807;</li><li>Teresa morreu no convento de Monchique;</li><li>Mariana, a filha do ferrador, vai a bordo com ele.</li></ul>",
+     "occurrences": 1
+    },
+    {
+     "location": "M5-F08: «Lucas de Almeida Marrão, c. 1850)» que não se parte (com o contexto «c. 1850).»)",
+     "old": "c. 1850).",
+     "new": "c. 1850).",
+     "occurrences": 1
+    },
+    {
+     "location": "M5-F08: «17 de março de 1807» que não se parte (com o contexto «17 de março de 1807.»)",
+     "old": "17 de março de 1807.",
+     "new": "17 de março de 1807.",
+     "occurrences": 2
+    },
+    {
+     "location": "M5-F08: «17 de março de 1807» que não se parte (com o contexto «17 de março de 1807\"»)",
+     "old": "17 de março de 1807\"",
+     "new": "17 de março de 1807\"",
+     "occurrences": 1
+    },
+    {
+     "location": "M5-F08: «17 de março de 1807» que não se parte (com o contexto «17 de março de 1807*»)",
+     "old": "17 de março de 1807*",
+     "new": "17 de março de 1807*",
+     "occurrences": 1
+    },
+    {
+     "location": "M5-F08: «17 de março de 1807» que não se parte (com o contexto «17 de março de 1807,»)",
+     "old": "17 de março de 1807,",
+     "new": "17 de março de 1807,",
+     "occurrences": 2
+    },
+    {
+     "location": "M5-F08: «26 de setembro de 1861» que não se parte",
+     "old": "26 de setembro de 1861",
+     "new": "26 de setembro de 1861",
+     "occurrences": 2
+    },
+    {
+     "location": "M5-F08: «A 28 de dezembro de 1815» que não se parte (com o contexto «28 de dezembro de 1815»)",
+     "old": "28 de dezembro de 1815",
+     "new": "28 de dezembro de 1815",
+     "occurrences": 1
+    },
+    {
+     "location": "M5-F08: «(primeiros 4 min)» que não se parte (com o contexto «4 min)<»)",
+     "old": "4 min)<",
+     "new": "4 min)<",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m5/licao-m5-f09/index.html": {
+   "base_sha256_lf": "a3031a9c1acbf5fb94fc89b9e3437745258348a3048dc2c63ac50f0bb74d16f9",
+   "after_sha256_lf": "3c898c5c812de01b87ce546c6e17131aeccc5f09f54f9e4054e03a4210f05bed",
+   "edits": [
+    {
+     "location": "M5-F09: «(3 min)» que não se parte (com o contexto «3 min)<»)",
+     "old": "3 min)<",
+     "new": "3 min)<",
+     "occurrences": 1
+    },
+    {
+     "location": "M5-F09: «(2 min)» que não se parte (com o contexto «2 min)<»)",
+     "old": "2 min)<",
+     "new": "2 min)<",
+     "occurrences": 1
+    },
+    {
+     "location": "M5-F09: «aos 26 de Setembro de 1861» que não se parte (com o contexto «26 de Setembro de 1861»)",
+     "old": "26 de Setembro de 1861",
+     "new": "26 de Setembro de 1861",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m5/licao-m5-f10/index.html": {
+   "base_sha256_lf": "41eabdbdfd06f6894caacf9966d9f321b46ed4ab00920d6eca8bfeb51a914825",
+   "after_sha256_lf": "40c6ebaa1f91927b3ddc26693e7dbc44d9414598a0c68aaf09c52664b1438c67",
+   "edits": [
+    {
+     "location": "M5-F10: «(1888), cap. I e último» que não se parte (com o contexto «cap. I»)",
+     "old": "cap. I",
+     "new": "cap. I",
+     "occurrences": 5
+    },
+    {
+     "location": "M5-F10: «(1888), volume 1, página» que não se parte (com o contexto «volume 1»)",
+     "old": "volume 1",
+     "new": "volume 1",
+     "occurrences": 1
+    },
+    {
+     "location": "M5-F10: «aparece logo no capítulo I.» que não se parte (com o contexto «capítulo I»)",
+     "old": "capítulo I",
+     "new": "capítulo I",
+     "occurrences": 1
+    },
+    {
+     "location": "M5-F10: «A 28 de dezembro, a RTP1» que não se parte (com o contexto «28 de»)",
+     "old": "28 de",
+     "new": "28 de",
+     "occurrences": 1
+    },
+    {
+     "location": "M5-F10: «Ensina RTP (1 min)» que não se parte (com o contexto «1 min)<»)",
+     "old": "1 min)<",
+     "new": "1 min)<",
+     "occurrences": 1
+    },
+    {
+     "location": "M5-F10: «sr.ª</b> D. Maria I:» que não se parte (com o contexto «D. Maria I»)",
+     "old": "D. Maria I",
+     "new": "D. Maria I",
+     "occurrences": 1
+    },
+    {
+     "location": "M5-F10: «papa rico do século XVI\\\">Leão X</b>» que não se parte (com o contexto «século XVI»)",
+     "old": "século XVI",
+     "new": "século XVI",
+     "occurrences": 2
+    },
+    {
+     "location": "M5-F10: «papa rico do século XVI\\\">Leão X</b>» que não se parte (com o contexto «Leão X»)",
+     "old": "Leão X",
+     "new": "Leão X",
+     "occurrences": 2
+    },
+    {
+     "location": "M5-F10: «sr. D. João V.» que não se parte (com o contexto «sr. D. João V»)",
+     "old": "sr. D. João V",
+     "new": "sr. D. João V",
+     "occurrences": 1
+    },
+    {
+     "location": "M5-F10: «Sónia Pedro (3 min)» que não se parte (com o contexto «3 min)<»)",
+     "old": "3 min)<",
+     "new": "3 min)<",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m5/licao-m5-f11/index.html": {
+   "base_sha256_lf": "8a8aba61f2f7fea153fd4c6d3b127234e38eafe45d6ca0fc77cd0294b3df0df8",
+   "after_sha256_lf": "0cf929b315b0cd5f4adce8d3d17c133aa293e4f64c4aa2468c5efd8076153de7",
+   "edits": [
+    {
+     "location": "M5-F11, cartão 23, Para entender («Quem está à mesa»)",
+     "old": "<p><b>Ega</b>, amigo de Carlos, defende o naturalismo. <b>Alencar</b> é um poeta romântico, mais velho. <b>Craft</b> é um inglês rico, colecionador de arte. <b>Cohen</b> é um homem das finanças. <b>Dâmaso</b> imita o que lhe parece elegante.</p>",
+     "new": "<table class=\\\"apoio-tabela\\\" role=\\\"table\\\"><thead role=\\\"rowgroup\\\"><tr role=\\\"row\\\"><th scope=\\\"col\\\" role=\\\"columnheader\\\">Personagem</th><th scope=\\\"col\\\" role=\\\"columnheader\\\">Quem é</th></tr></thead><tbody role=\\\"rowgroup\\\"><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Ega</th><td role=\\\"cell\\\" data-label=\\\"Quem é\\\">amigo de Carlos, defende o naturalismo</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Alencar</th><td role=\\\"cell\\\" data-label=\\\"Quem é\\\">um poeta romântico, mais velho</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Craft</th><td role=\\\"cell\\\" data-label=\\\"Quem é\\\">um inglês rico, colecionador de arte</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Cohen</th><td role=\\\"cell\\\" data-label=\\\"Quem é\\\">um homem das finanças</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Dâmaso</th><td role=\\\"cell\\\" data-label=\\\"Quem é\\\">imita o que lhe parece elegante</td></tr></tbody></table>",
+     "occurrences": 1
+    },
+    {
+     "location": "M5-F11, cartão 20, O texto, 6 de 6 (vocabulário: a entrada «Claude Bernard»)",
+     "old": "<b>Claude Bernard</b>, Stuart Mill, Darwin, cientistas",
+     "new": "<b>Claude Bernard</b>, <b>Stuart Mill</b> e <b>Darwin</b>, cientistas",
+     "occurrences": 1
+    },
+    {
+     "location": "M5-F11, cabeça: a folha das tabelas de apoio, antes da camada de aparência",
+     "old": "<link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-reading1\">",
+     "new": "<link rel=\"stylesheet\" href=\"../../assets/pt-lessons/apoios-tabelas.css?v=20261106.1\"><link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-reading1\">",
+     "occurrences": 1
+    },
+    {
+     "location": "M5-F11: «(cap. VI). O que marcas» que não se parte (com o contexto «cap. VI»)",
+     "old": "cap. VI",
+     "new": "cap. VI",
+     "occurrences": 3
+    },
+    {
+     "location": "M5-F11: «Benoliel, c. 1910)» que não se parte (com o contexto «c. 1910»)",
+     "old": "c. 1910",
+     "new": "c. 1910",
+     "occurrences": 1
+    },
+    {
+     "location": "M5-F11: «O hotel do capítulo VI,» que não se parte (com o contexto «capítulo VI»)",
+     "old": "capítulo VI",
+     "new": "capítulo VI",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m5/licao-m5-f12/index.html": {
+   "base_sha256_lf": "c73e610d3dba6652915a1cfd9195d29aefd5080e095390a6e08e11b9ee8162f0",
+   "after_sha256_lf": "44eb16e835b98f02661839277a3172c3558e11c600b07e39be12d1dddcb0b48c",
+   "edits": [
+    {
+     "location": "M5-F12, cartão 2, O texto (vocabulário: a entrada «Gremio»)",
+     "old": "<b>Gremio</b>, Casa Havaneza, locais de convívio",
+     "new": "<b>Gremio</b> e <b>Casa Havaneza</b>, locais de convívio",
+     "occurrences": 1
+    },
+    {
+     "location": "M5-F12: «(1888), cap. VI e último» que não se parte (com o contexto «cap. VI»)",
+     "old": "cap. VI",
+     "new": "cap. VI",
+     "occurrences": 1
+    },
+    {
+     "location": "M5-F12: «1.ª pessoa» que não se parte",
+     "old": "1.ª pessoa",
+     "new": "1.ª pessoa",
+     "occurrences": 3
+    },
+    {
+     "location": "M5-F12: «3.ª pessoa» que não se parte",
+     "old": "3.ª pessoa",
+     "new": "3.ª pessoa",
+     "occurrences": 7
+    }
+   ]
+  },
+  "m5/licao-m5-f13/index.html": {
+   "base_sha256_lf": "d3b076a92e2d651e1f69d83e99fadc96e84e170530c8f9ed2c1da5414e30b4af",
+   "after_sha256_lf": "03a0f0da5a40a2fe9dfd514d30e964af91c39cef8903a65595ae561c6769da27",
+   "edits": [
+    {
+     "location": "M5-F13, cartão 19, Para entender («Recorda: as peças de um texto de opinião»)",
+     "old": "<p><b>Tese</b>: a tua posição, numa frase. <b>Argumento</b>: uma razão que a prova, com um exemplo. <b>Contra-argumento</b>: o que dirá quem discorda; <b>refutação</b>: a tua resposta. <b>Modalização</b>: as palavras que mostram o grau de certeza («talvez», «sem dúvida», «parece-me»). Para a crítica social, junta a este excerto o jantar do Hotel Central: uma elite que sabe que o país vai falir e muda de assunto.</p>",
+     "new": "<table class=\\\"apoio-tabela\\\" role=\\\"table\\\"><thead role=\\\"rowgroup\\\"><tr role=\\\"row\\\"><th scope=\\\"col\\\" role=\\\"columnheader\\\">Peça</th><th scope=\\\"col\\\" role=\\\"columnheader\\\">O que é</th></tr></thead><tbody role=\\\"rowgroup\\\"><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Tese</th><td role=\\\"cell\\\" data-label=\\\"O que é\\\">a tua posição, numa frase</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Argumento</th><td role=\\\"cell\\\" data-label=\\\"O que é\\\">uma razão que a prova, com um exemplo</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Contra-argumento</th><td role=\\\"cell\\\" data-label=\\\"O que é\\\">o que dirá quem discorda</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Refutação</th><td role=\\\"cell\\\" data-label=\\\"O que é\\\">a tua resposta</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Modalização</th><td role=\\\"cell\\\" data-label=\\\"O que é\\\">as palavras que mostram o grau de certeza («talvez», «sem dúvida», «parece-me»)</td></tr></tbody></table><p>Para a crítica social, junta a este excerto o jantar do Hotel Central: uma elite que sabe que o país vai falir e muda de assunto.</p>",
+     "occurrences": 1
+    },
+    {
+     "location": "M5-F13, cartão 15, O texto, 5 de 5 (vocabulário: a entrada «Gremio»)",
+     "old": "<b>Gremio</b>, Casa Havaneza, clube e tabacaria do Chiado",
+     "new": "<b>Gremio</b> e <b>Casa Havaneza</b>, clube e tabacaria do Chiado",
+     "occurrences": 1
+    },
+    {
+     "location": "M5-F13, cartão 15, O texto, 5 de 5 (vocabulário: a entrada «Bois»)",
+     "old": "<b>Bois</b>, Bignon, Trouville, Saint-Cloud, lugares",
+     "new": "<b>Bois</b>, <b>Bignon</b>, <b>Trouville</b> e <b>Saint-Cloud</b>, lugares",
+     "occurrences": 1
+    },
+    {
+     "location": "M5-F13, cabeça: a folha das tabelas de apoio, antes da camada de aparência",
+     "old": "<link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-reading1\">",
+     "new": "<link rel=\"stylesheet\" href=\"../../assets/pt-lessons/apoios-tabelas.css?v=20261106.1\"><link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-reading1\">",
+     "occurrences": 1
+    },
+    {
+     "location": "M5-F13: «Porto, c. 1895)» que não se parte (com o contexto «c. 1895).»)",
+     "old": "c. 1895).",
+     "new": "c. 1895).",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m5/licao-m5-f14/index.html": {
+   "base_sha256_lf": "d8742a7aaa75400fb57c0653b8637dde3dd598de6add6f944f5a0fc1a8f2ba91",
+   "after_sha256_lf": "b0a81d56175a7073626542cbd8273d0df95a64455b372797581d8494dd58aa26",
+   "edits": [
+    {
+     "location": "M5-F14: «Benoliel, c. 1910)» que não se parte (com o contexto «c. 1910).»)",
+     "old": "c. 1910).",
+     "new": "c. 1910).",
+     "occurrences": 1
+    },
+    {
+     "location": "M5-F14: «O hotel do capítulo VI,» que não se parte (com o contexto «capítulo VI»)",
+     "old": "capítulo VI",
+     "new": "capítulo VI",
+     "occurrences": 1
+    },
+    {
+     "location": "M5-F14: «(2 min)» que não se parte (com o contexto «2 min)<»)",
+     "old": "2 min)<",
+     "new": "2 min)<",
+     "occurrences": 2
+    },
+    {
+     "location": "M5-F14: «(capítulo I; retoma» que não se parte (com o contexto «capítulo I»)",
+     "old": "capítulo I",
+     "new": "capítulo I",
+     "occurrences": 1
+    },
+    {
+     "location": "M5-F14: «>M5-F10</a>» que não se parte (com o contexto «M5-F10»)",
+     "old": "M5-F10",
+     "new": "M5-⁠F10",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m5/licao-m5-f15/index.html": {
+   "base_sha256_lf": "c862645e70a75fd22aaa167017e799fd73ec8e8e2fca90f442719b2b78ae4574",
+   "after_sha256_lf": "6e04aad3c3b4475db49e38ed6e64454ec5b0818d2343a2ad024aff2fc101d18b",
+   "edits": [
+    {
+     "location": "M5-F15: «(1888), volume 1, página» que não se parte (com o contexto «as</i>, primeira edição (1888), volume 1, página de rosto…»)",
+     "old": "as</i>, primeira edição (1888), volume 1, página de rosto. Domínio públi",
+     "new": "as</i>, primeira edição (1888), volume 1, página de rosto. Domínio públi",
+     "occurrences": 1
+    },
+    {
+     "location": "M5-F15: «(primeiros 4 min)» que não se parte (com o contexto «4 min)<»)",
+     "old": "4 min)<",
+     "new": "4 min)<",
+     "occurrences": 1
+    },
+    {
+     "location": "M5-F15: «(8 de janeiro de 2025)» que não se parte (com o contexto «8 de janeiro de 2025»)",
+     "old": "8 de janeiro de 2025",
+     "new": "8 de janeiro de 2025",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m5/licao-m5-f16/index.html": {
+   "base_sha256_lf": "b06d8a9e6dfdb11647a990cda4f3159c1c157ab1608d3d969c69f7ccff79abf7",
+   "after_sha256_lf": "92ea9882ab7cc27507f12232657453d8ed04fd70215a314931f5a8797612655f",
+   "edits": [
+    {
+     "location": "M5-F16: «No capítulo I, o padre» que não se parte (com o contexto «capítulo I,»)",
+     "old": "capítulo I,",
+     "new": "capítulo I,",
+     "occurrences": 1
+    },
+    {
+     "location": "M5-F16: «No capítulo I, o padre» que não se parte (com o contexto «capítulo I »)",
+     "old": "capítulo I ",
+     "new": "capítulo I ",
+     "occurrences": 1
+    },
+    {
+     "location": "M5-F16: «No capítulo III, Brown» que não se parte (com o contexto «capítulo III»)",
+     "old": "capítulo III",
+     "new": "capítulo III",
+     "occurrences": 5
+    },
+    {
+     "location": "M5-F16: «vol. I, Porto» que não se parte (com o contexto «vol. I»)",
+     "old": "vol. I",
+     "new": "vol. I",
+     "occurrences": 1
+    },
+    {
+     "location": "M5-F16: «do capítulo I (pp. 18–19)» que não se parte (com o contexto «pp. 18–19»)",
+     "old": "pp. 18–19",
+     "new": "pp. 18–⁠19",
+     "occurrences": 1
+    },
+    {
+     "location": "M5-F16: «do capítulo III (pp. 82–83)» que não se parte (com o contexto «pp. 82–83»)",
+     "old": "pp. 82–83",
+     "new": "pp. 82–⁠83",
+     "occurrences": 1
+    },
+    {
+     "location": "M5-F16: «capítulos I e III» que não se parte",
+     "old": "capítulos I e III",
+     "new": "capítulos I e III",
+     "occurrences": 1
+    },
+    {
+     "location": "M5-F16: «capítulo III, p. 90.» que não se parte (com o contexto «p. 90»)",
+     "old": "p. 90",
+     "new": "p. 90",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m5/licao-m5-f17/index.html": {
+   "base_sha256_lf": "7c639e55ef1c9ab624799113eb30c65a260b0d8868150e96e28ecc7cfcdb192d",
+   "after_sha256_lf": "08cb86ec717178ea94bb70adb236c1816630376ac15e688e1f429af4a963dff7",
+   "edits": [
+    {
+     "location": "M5-F17: «7 de março de 1882» que não se parte",
+     "old": "7 de março de 1882",
+     "new": "7 de março de 1882",
+     "occurrences": 1
+    },
+    {
+     "location": "M5-F17: «capítulo XII, edição de Ivo Castro» que não se parte (com o contexto «capítulo XII, ed»)",
+     "old": "capítulo XII, ed",
+     "new": "capítulo XII, ed",
+     "occurrences": 1
+    },
+    {
+     "location": "M5-F17: «capítulo XII, edição de Ivo Castro» que não se parte (com o contexto «capítulo XII.\"},»)",
+     "old": "capítulo XII.\"},",
+     "new": "capítulo XII.\"},",
+     "occurrences": 1
+    },
+    {
+     "location": "M5-F17: «capítulo XII, edição de Ivo Castro» que não se parte (com o contexto «capítulo XII e s»)",
+     "old": "capítulo XII e s",
+     "new": "capítulo XII e s",
+     "occurrences": 1
+    },
+    {
+     "location": "M5-F17: «2020, p. 120.» que não se parte (com o contexto «p. 120»)",
+     "old": "p. 120",
+     "new": "p. 120",
+     "occurrences": 1
+    },
+    {
+     "location": "M5-F17: «Procura o capítulo XII e a página impressa 120.» que não se parte (com o contexto «capítulo XII e a página impressa 120»)",
+     "old": "capítulo XII e a página impressa 120",
+     "new": "capítulo XII e a página impressa 120",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m5/m5-o-pais-ou-eles/index.html": {
+   "base_sha256_lf": "33ad9ee4c53a8983512fc2e52e23e5e295458d2304773108cb4f6647e26a2bd4",
+   "after_sha256_lf": "f2ef77d3aaaf272a28219b29db05435e50ab10d1f440eb1d3ef10762e65f9315",
+   "edits": [
+    {
+     "location": "m5/m5-o-pais-ou-eles: «cerca de 25 min</p>» que não se parte (com o contexto «25 min»)",
+     "old": "25 min",
+     "new": "25 min",
+     "occurrences": 1
+    },
+    {
+     "location": "m5/m5-o-pais-ou-eles: «</i>, cap. VI, o jantar» que não se parte (com o contexto «cap. VI»)",
+     "old": "cap. VI",
+     "new": "cap. VI",
+     "occurrences": 2
+    },
+    {
+     "location": "m5/m5-o-pais-ou-eles: «</i>, cap. IV, uma vida» que não se parte (com o contexto «cap. IV»)",
+     "old": "cap. IV",
+     "new": "cap. IV",
+     "occurrences": 1
+    },
+    {
+     "location": "m5/m5-o-pais-ou-eles: «Gutenberg n.º 40409» que não se parte (com o contexto «n.º 40409»)",
+     "old": "n.º 40409",
+     "new": "n.º 40409",
+     "occurrences": 5
+    },
+    {
+     "location": "m5/m5-o-pais-ou-eles: «no capítulo IV: resoluções» que não se parte (com o contexto «capítulo IV»)",
+     "old": "capítulo IV",
+     "new": "capítulo IV",
+     "occurrences": 2
+    }
+   ]
+  },
+  "m5/m5-quem-podia-ter-feito-diferente/index.html": {
+   "base_sha256_lf": "9c807fc3cbe14022f6ab32b7dfdbb6c23de92118c0e444309cebf6d06a86aaa8",
+   "after_sha256_lf": "5ef47bcc5d83f76921bb76a8c4e3415ec16a022829ed03d477357b94da04c5d0",
+   "edits": [
+    {
+     "location": "m5/m5-quem-podia-ter-feito-diferente: «cerca de 25 min</p>» que não se parte (com o contexto «25 min»)",
+     "old": "25 min",
+     "new": "25 min",
+     "occurrences": 1
+    },
+    {
+     "location": "m5/m5-quem-podia-ter-feito-diferente: «a folhas 232, o seguinte» que não se parte (com o contexto «folhas 232»)",
+     "old": "folhas 232",
+     "new": "folhas 232",
+     "occurrences": 1
+    },
+    {
+     "location": "m5/m5-quem-podia-ter-feito-diferente: «em 17 de Março de 1807» que não se parte (com o contexto «17 de Março de 1807»)",
+     "old": "17 de Março de 1807",
+     "new": "17 de Março de 1807",
+     "occurrences": 1
+    },
+    {
+     "location": "m5/m5-quem-podia-ter-feito-diferente: «</i>, Capítulo IV (o retrato» que não se parte (com o contexto «Capítulo IV»)",
+     "old": "Capítulo IV",
+     "new": "Capítulo IV",
+     "occurrences": 2
+    },
+    {
+     "location": "m5/m5-quem-podia-ter-feito-diferente: «Gutenberg n.º 16425» que não se parte (com o contexto «n.º 16425»)",
+     "old": "n.º 16425",
+     "new": "n.º 16425",
+     "occurrences": 5
+    }
+   ]
+  },
+  "m5/mapa-do-modulo-m5/index.html": {
+   "base_sha256_lf": "57945c4f8dbd5ebf8f4489aaeb5d44dcfc1293c481c59e05cc296e8cd4d0f71c",
+   "after_sha256_lf": "37e9726067599cb79343d0db68bdfad8c638c6bb439e5557c949b6122969c9de",
+   "edits": [
+    {
+     "location": "m5/mapa-do-modulo-m5, secção «As tarefas do Teams» (p.avaliacao-tarefas)",
+     "old": "<p class=\"avaliacao-tarefas\">Avaliação: tarefa da Unidade 1, 30 %; tarefa da Unidade 2, 30 %; provas rápidas, 10 %; prova escrita, 30 %. ",
+     "new": "<p>Avaliação:</p><table class=\"apoio-tabela\" role=\"table\"><thead role=\"rowgroup\"><tr role=\"row\"><th scope=\"col\" role=\"columnheader\" style=\"width:auto\">Elemento</th><th scope=\"col\" role=\"columnheader\" style=\"width:5.5rem\">Peso</th></tr></thead><tbody role=\"rowgroup\"><tr role=\"row\"><th scope=\"row\" role=\"rowheader\">Tarefa da Unidade 1</th><td role=\"cell\" data-label=\"Peso\">30 %</td></tr><tr role=\"row\"><th scope=\"row\" role=\"rowheader\">Tarefa da Unidade 2</th><td role=\"cell\" data-label=\"Peso\">30 %</td></tr><tr role=\"row\"><th scope=\"row\" role=\"rowheader\">Provas rápidas</th><td role=\"cell\" data-label=\"Peso\">10 %</td></tr><tr role=\"row\"><th scope=\"row\" role=\"rowheader\">Prova escrita</th><td role=\"cell\" data-label=\"Peso\">30 %</td></tr></tbody></table><p class=\"avaliacao-tarefas\">",
+     "occurrences": 1
+    },
+    {
+     "location": "m5/mapa-do-modulo-m5, cabeça: a folha das tabelas de apoio, antes da camada de aparência",
+     "old": "<link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-universal-1\">",
+     "new": "<link rel=\"stylesheet\" href=\"../../assets/pt-lessons/apoios-tabelas.css?v=20261106.1\"><link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-universal-1\">",
+     "occurrences": 1
+    },
+    {
+     "location": "m5/mapa-do-modulo-m5: «Camilo Castelo Branco (1825–1890)» que não se parte (com o contexto «1825–1890»)",
+     "old": "1825–1890",
+     "new": "1825–⁠1890",
+     "occurrences": 1
+    },
+    {
+     "location": "m5/mapa-do-modulo-m5: «Eça de Queirós (1845–1900)» que não se parte (com o contexto «1845–1900»)",
+     "old": "1845–1900",
+     "new": "1845–⁠1900",
+     "occurrences": 1
+    },
+    {
+     "location": "m5/mapa-do-modulo-m5: «individual, 90 minutos, 30 %.» que não se parte (com o contexto «90 minutos»)",
+     "old": "90 minutos",
+     "new": "90 minutos",
+     "occurrences": 3
+    },
+    {
+     "location": "m5/mapa-do-modulo-m5: «individual, 90 minutos, 30 %.» que não se parte (com o contexto «30 %. <a»)",
+     "old": "30 %. <a",
+     "new": "30 %. <a",
+     "occurrences": 2
+    },
+    {
+     "location": "m5/mapa-do-modulo-m5: «(1888), volume 1, página» que não se parte (com o contexto «as</i>, primeira edição (1888), volume 1, página de rosto…»)",
+     "old": "as</i>, primeira edição (1888), volume 1, página de rosto. Domínio públi",
+     "new": "as</i>, primeira edição (1888), volume 1, página de rosto. Domínio públi",
+     "occurrences": 1
+    },
+    {
+     "location": "m5/mapa-do-modulo-m5: «(1888), volume 1, página» que não se parte (com o contexto «as</i>, primeira edição (1888), volume 1, página de rosto…»)",
+     "old": "as</i>, primeira edição (1888), volume 1, página de rosto. <a href=\"http",
+     "new": "as</i>, primeira edição (1888), volume 1, página de rosto. <a href=\"http",
+     "occurrences": 1
+    },
+    {
+     "location": "m5/mapa-do-modulo-m5: «\">Lição M5-F» que não se parte (com o contexto «M5-F02»)",
+     "old": "M5-F02",
+     "new": "M5-⁠F02",
+     "occurrences": 4
+    },
+    {
+     "location": "m5/mapa-do-modulo-m5: «\">Lição M5-F» que não se parte (com o contexto «M5-F10»)",
+     "old": "M5-F10",
+     "new": "M5-⁠F10",
+     "occurrences": 5
+    },
+    {
+     "location": "m5/mapa-do-modulo-m5: «\">lição M5-F» que não se parte (com o contexto «M5-F11»)",
+     "old": "M5-F11",
+     "new": "M5-⁠F11",
+     "occurrences": 1
+    },
+    {
+     "location": "m5/mapa-do-modulo-m5: «\">lição M5-F» que não se parte (com o contexto «M5-F14»)",
+     "old": "M5-F14",
+     "new": "M5-⁠F14",
+     "occurrences": 1
+    },
+    {
+     "location": "m5/mapa-do-modulo-m5: «<h1>Narrativa do século XIX</h1>» que não se parte (com o contexto «século XIX</h1»)",
+     "old": "século XIX</h1",
+     "new": "século XIX</h1",
+     "occurrences": 1
+    },
+    {
+     "location": "m5/mapa-do-modulo-m5: «2.º ano» que não se parte",
+     "old": "2.º ano",
+     "new": "2.º ano",
+     "occurrences": 2
+    }
+   ]
+  },
+  "m5/painel-m5-f10/index.html": {
+   "base_sha256_lf": "89032aabcc87867c443c43abda6e973d5a9f5ad2de6d8e4b3643600c1f4aff48",
+   "after_sha256_lf": "a1f59df9e87768069cabca54a069809187b552e7108083e25efb7d9bb8122072",
+   "edits": [
+    {
+     "location": "M5-F10 (notas do docente): o enunciado do cartão 24 igual ao da lição, em a lista do painel",
+     "old": "{\"k\":24,\"t\":\"frase\",\"p\":\"Põe por ordem o começo do segundo parágrafo do cap. I.\"}",
+     "new": "{\"k\":24,\"t\":\"frase\",\"p\":\"Põe por ordem o começo do segundo parágrafo do cap. I.\"}",
+     "occurrences": 1
+    },
+    {
+     "location": "M5-F10 (notas do docente): o enunciado do cartão 24 igual ao da lição, em o seletor",
+     "old": "<option value=\"24\">Põe por ordem o começo do segundo parágrafo do cap. I.</option>",
+     "new": "<option value=\"24\">Põe por ordem o começo do segundo parágrafo do cap. I.</option>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m5/painel-m5-f16/index.html": {
+   "base_sha256_lf": "e8c6655356467dba11e0987d7ce8151ce3513870fe96fe80cabba86d09269ec7",
+   "after_sha256_lf": "b3b65dfce03f491728961d35d2bd485b530fb2e171e7384e5889af3558b1e028",
+   "edits": [
+    {
+     "location": "M5-F16 (notas do docente): «capítulos I e III» que não se parte",
+     "old": "capítulos I e III",
+     "new": "capítulos I e III",
+     "occurrences": 1
+    },
+    {
+     "location": "M5-F16 (notas do docente): «resumo do capítulo III:» que não se parte (com o contexto «capítulo III»)",
+     "old": "capítulo III",
+     "new": "capítulo III",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m5/painel-m5-f17/index.html": {
+   "base_sha256_lf": "9d599faefeaee382b99149b2c9fd6b47013ecf10b7355d4a3377f340e01ab66c",
+   "after_sha256_lf": "3cb748a25bcf3ee66e032182c81dc0ee8aa0692701e962ebf08142dca8056ba1",
+   "edits": [
+    {
+     "location": "M5-F17 (notas do docente): «recorte do capítulo XII.» que não se parte (com o contexto «capítulo XII»)",
+     "old": "capítulo XII",
+     "new": "capítulo XII",
+     "occurrences": 2
+    }
+   ]
+  },
+  "m5/portefolio-do-modulo-m5/index.html": {
+   "base_sha256_lf": "ad1356f562b66d5641a5650323fdd4df895c616e63843527fa0525ffdd827cfc",
+   "after_sha256_lf": "c55e2b3c0ddfaeb84a541867162d001b5cbd92b766094f2f370bf52391544071",
+   "edits": [
+    {
+     "location": "m5/portefolio-do-modulo-m5, «A lista de verificação»: M5_U1_registo_&lt;dia-mês&gt; em <code>",
+     "old": "<td>M5_U1_registo_&lt;dia-mês&gt;</td>",
+     "new": "<td><code>M5_<wbr>U1_<wbr>registo_<wbr>&lt;dia-mês&gt;</code></td>",
+     "occurrences": 1
+    },
+    {
+     "location": "m5/portefolio-do-modulo-m5, «A lista de verificação»: M5_U1_pergunta em <code>",
+     "old": "<td>M5_U1_pergunta</td>",
+     "new": "<td><code>M5_<wbr>U1_<wbr>pergunta</code></td>",
+     "occurrences": 1
+    },
+    {
+     "location": "m5/portefolio-do-modulo-m5, «A lista de verificação»: M5_U1_o-que-aprendi em <code>",
+     "old": "<td>M5_U1_o-que-aprendi</td>",
+     "new": "<td><code>M5_<wbr>U1_<wbr>o-que-aprendi</code></td>",
+     "occurrences": 1
+    },
+    {
+     "location": "m5/portefolio-do-modulo-m5, «A lista de verificação»: M5_U2_registo_&lt;dia-mês&gt; em <code>",
+     "old": "<td>M5_U2_registo_&lt;dia-mês&gt;</td>",
+     "new": "<td><code>M5_<wbr>U2_<wbr>registo_<wbr>&lt;dia-mês&gt;</code></td>",
+     "occurrences": 1
+    },
+    {
+     "location": "m5/portefolio-do-modulo-m5, «A lista de verificação»: M5_U2_pergunta em <code>",
+     "old": "<td>M5_U2_pergunta</td>",
+     "new": "<td><code>M5_<wbr>U2_<wbr>pergunta</code></td>",
+     "occurrences": 1
+    },
+    {
+     "location": "m5/portefolio-do-modulo-m5, «A lista de verificação»: M5_U2_o-que-aprendi em <code>",
+     "old": "<td>M5_U2_o-que-aprendi</td>",
+     "new": "<td><code>M5_<wbr>U2_<wbr>o-que-aprendi</code></td>",
+     "occurrences": 1
+    },
+    {
+     "location": "m5/portefolio-do-modulo-m5, «A lista de verificação»: M5_cartao-do-percurso, um ponto para mudar de linha",
+     "old": "<td><code>M5_cartao-do-percurso</code></td>",
+     "new": "<td><code>M5_<wbr>cartao-do-percurso</code></td>",
+     "occurrences": 1
+    },
+    {
+     "location": "m5/portefolio-do-modulo-m5, «A lista de verificação»: M5_Prova-escrita, um ponto para mudar de linha",
+     "old": "<td><code>M5_Prova-escrita</code></td>",
+     "new": "<td><code>M5_<wbr>Prova-escrita</code></td>",
+     "occurrences": 1
+    },
+    {
+     "location": "m5/portefolio-do-modulo-m5, a folha da página: os nomes em <code> não se partem",
+     "old": "code{font:.85rem Consolas,\"Courier New\",monospace;border:1px solid var(--tinta);padding:1px 4px}\n",
+     "new": "code{font:.85rem Consolas,\"Courier New\",monospace;border:1px solid var(--tinta);padding:1px 4px}\ntd code{white-space:nowrap}\n",
+     "occurrences": 1
+    },
+    {
+     "location": "m5/portefolio-do-modulo-m5: «tarefa de 90 minutos, com grelha» que não se parte (com o contexto «90 minutos»)",
+     "old": "90 minutos",
+     "new": "90 minutos",
+     "occurrences": 1
+    },
+    {
+     "location": "m5/portefolio-do-modulo-m5: «(40 %)» que não se parte (com o contexto «40 %»)",
+     "old": "40 %",
+     "new": "40 %",
+     "occurrences": 1
+    },
+    {
+     "location": "m5/portefolio-do-modulo-m5: «2.º ano» que não se parte",
+     "old": "2.º ano",
+     "new": "2.º ano",
+     "occurrences": 2
+    },
+    {
+     "location": "m5/portefolio-do-modulo-m5: «Narrativa do século XIX.</p>» que não se parte (com o contexto «século XIX»)",
+     "old": "século XIX",
+     "new": "século XIX",
+     "occurrences": 1
+    }
+   ]
+  },
+  "tarefas/m5-u1/aquecimento/index.html": {
+   "base_sha256_lf": "08d897bb0b564c3bbf3f787088753ad6ac838118241895132f875622f166fa15",
+   "after_sha256_lf": "8bffa4e17506ba957834804180c7d48f7d30b1fe2814705ec14d7ff44ef080d7",
+   "edits": [
+    {
+     "location": "tarefas/m5-u1/aquecimento: «na Introdução e no cap. IV;» que não se parte (com o contexto «cap. IV»)",
+     "old": "cap. IV",
+     "new": "cap. IV",
+     "occurrences": 1
+    }
+   ]
+  },
+  "tarefas/m5-u1/correcao/index.html": {
+   "base_sha256_lf": "d1ffa3ebb197593d2eef99aaeeb47d80cac14f46931fea830561a1f39d6309f8",
+   "after_sha256_lf": "6a530c65dffcdaf4158f5fbad48a188db3d055fba3440303a88444ae9a9b8e12",
+   "edits": [
+    {
+     "location": "tarefas/m5-u1/correcao: «outra do cap. IV em que» que não se parte (com o contexto «cap. IV»)",
+     "old": "cap. IV",
+     "new": "cap. IV",
+     "occurrences": 1
+    }
+   ]
+  },
+  "tarefas/m5-u1/grelha/index.html": {
+   "base_sha256_lf": "8abd9f6ee0fe63070cfa24c9a8ed61a514eab0c74b9bdd9402a1ead62db17201",
+   "after_sha256_lf": "fe7e571f40e6d1dd858e2c5371994cbc4f7e5e729131555471ab72f78804d316",
+   "edits": [
+    {
+     "location": "tarefas/m5-u1/grelha, critério 3, nível 6 («cumprimento consistente»): os elementos de cada tema em listas",
+     "old": "<p>Cumpres os cinco elementos do teu tema (um ponto cada) e a explicação (mais um ponto). Tema A: as marcas da carta (local e data, vocativo, despedida e assinatura); a resposta a uma pergunta de Teresa; uma memória dos dois; um recurso expressivo teu; um eco do romance, entre «». Explicação: o facto do romance que a carta respeita e o que faz o recurso. Tema B: um painel para quem nunca leu o romance; dois factos do dossiê (contam como dois); uma frase curta do romance, entre «»; o que o painel não pode afirmar. Explicação: porque escolheste a frase.</p>",
+     "new": "<p>Cumpres os cinco elementos do teu tema (um ponto cada) e a explicação (mais um ponto). </p><p><b>Tema A</b>:</p><ul><li>as marcas da carta (local e data, vocativo, despedida e assinatura);</li><li>a resposta a uma pergunta de Teresa;</li><li>uma memória dos dois;</li><li>um recurso expressivo teu;</li><li>um eco do romance, entre «».</li></ul><p>Explicação: o facto do romance que a carta respeita e o que faz o recurso.</p><p><b>Tema B</b>:</p><ul><li>um painel para quem nunca leu o romance;</li><li>dois factos do dossiê (contam como dois);</li><li>uma frase curta do romance, entre «»;</li><li>o que o painel não pode afirmar.</li></ul><p>Explicação: porque escolheste a frase.</p>",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m5-u1/grelha: «outra do cap. IV em que» que não se parte (com o contexto «cap. IV»)",
+     "old": "cap. IV",
+     "new": "cap. IV",
+     "occurrences": 3
+    }
+   ]
+  },
+  "tarefas/m5-u1/index.html": {
+   "base_sha256_lf": "00df12d7923d5a8477956a69fcc61141d5b54bc15ca515cd54a966bfc66c2fe8",
+   "after_sha256_lf": "698fffecc64018793a3111f006a243797f4c85ffd2b3371068abb322adb2c6bb",
+   "edits": [
+    {
+     "location": "tarefas/m5-u1, «Aquecer em cartões» (os tempos da aula de tarefa)",
+     "old": "<p>No início da aula de tarefa: 10 minutos de cartões com consulta, 5 minutos para leres o enunciado, 60 minutos de produção e 15 minutos de revisão e entrega. Total: 90 minutos. O relógio de produção começa depois da leitura.</p>",
+     "new": "<p>No início da aula de tarefa:</p><table class=\"apoio-tabela\" role=\"table\"><thead role=\"rowgroup\"><tr role=\"row\"><th scope=\"col\" role=\"columnheader\">Momento</th><th scope=\"col\" role=\"columnheader\">Tempo</th></tr></thead><tbody role=\"rowgroup\"><tr role=\"row\"><th scope=\"row\" role=\"rowheader\">Cartões com consulta</th><td role=\"cell\" data-label=\"Tempo\">10 minutos</td></tr><tr role=\"row\"><th scope=\"row\" role=\"rowheader\">Lês o enunciado</th><td role=\"cell\" data-label=\"Tempo\">5 minutos</td></tr><tr role=\"row\"><th scope=\"row\" role=\"rowheader\">Produção</th><td role=\"cell\" data-label=\"Tempo\">60 minutos</td></tr><tr role=\"row\"><th scope=\"row\" role=\"rowheader\">Revisão e entrega</th><td role=\"cell\" data-label=\"Tempo\">15 minutos</td></tr><tr role=\"row\"><th scope=\"row\" role=\"rowheader\">Total</th><td role=\"cell\" data-label=\"Tempo\">90 minutos</td></tr></tbody></table><p>O relógio de produção começa depois da leitura.</p>",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m5-u1, tema A, «A voz de Simão»: os cinco elementos da carta",
+     "old": "Escreve a carta (90 a 120 palavras): local e data, vocativo, despedida e assinatura; resposta a uma pergunta dela; uma memória dos dois; um recurso expressivo teu; um eco do romance, entre «». Depois,",
+     "new": "Escreve a carta (90 a 120 palavras):</p><ol><li>local e data, vocativo, despedida e assinatura;</li><li>resposta a uma pergunta dela;</li><li>uma memória dos dois;</li><li>um recurso expressivo teu;</li><li>um eco do romance, entre «».</li></ol><p>Depois,",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m5-u1, cabeça: a folha das tabelas de apoio, antes da camada de aparência",
+     "old": "<link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-universal-1\">",
+     "new": "<link rel=\"stylesheet\" href=\"../../assets/pt-lessons/apoios-tabelas.css?v=20261106.1\"><link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-universal-1\">",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m5-u1: «durante 90 minutos, com entrega»",
+     "old": "durante 90 minutos, com entrega",
+     "new": "durante 90 minutos, com entrega",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m5-u1: «Antes de escrever · 10 min ·» que não se parte (com o contexto «10 min »)",
+     "old": "10 min ",
+     "new": "10 min ",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m5-u1: «Unidade 1 · 90 min» que não se parte (com o contexto «90 min<»)",
+     "old": "90 min<",
+     "new": "90 min<",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m5-u1: «outra do cap. IV em que» que não se parte (com o contexto «cap. IV»)",
+     "old": "cap. IV",
+     "new": "cap. IV",
+     "occurrences": 2
+    },
+    {
+     "location": "tarefas/m5-u1: «a 17 de março de 1807;» que não se parte (com o contexto «17 de março de 1807»)",
+     "old": "17 de março de 1807",
+     "new": "17 de março de 1807",
+     "occurrences": 1
+    }
+   ]
+  },
+  "tarefas/m5-u2/aquecimento/index.html": {
+   "base_sha256_lf": "a567ca148416bfbc64556055270710734c814a6683a2f017d67567c36ebd01ef",
+   "after_sha256_lf": "258caecc1d592c492d014665c59bc37072e55332515284da16f4cb1b82de86af",
+   "edits": [
+    {
+     "location": "tarefas/m5-u2/aquecimento: «no cap. I, há uma» que não se parte (com o contexto «cap. I»)",
+     "old": "cap. I",
+     "new": "cap. I",
+     "occurrences": 1
+    }
+   ]
+  },
+  "tarefas/m5-u2/correcao/index.html": {
+   "base_sha256_lf": "c0806cbfe51209959b43285d2b90afea2e520ba5299ff5231c68ae70797aae3a",
+   "after_sha256_lf": "044c87f6a566d1b1e4616594186127cf7ed07dfd36503432293405d1df320d7b",
+   "edits": [
+    {
+     "location": "tarefas/m5-u2/correcao: «já estava no cap. I e outra» que não se parte (com o contexto «cap. I»)",
+     "old": "cap. I",
+     "new": "cap. I",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m5-u2/correcao: «narrada na 3.ª pessoa;» que não se parte (com o contexto «3.ª pessoa»)",
+     "old": "3.ª pessoa",
+     "new": "3.ª pessoa",
+     "occurrences": 1
+    }
+   ]
+  },
+  "tarefas/m5-u2/grelha/index.html": {
+   "base_sha256_lf": "348d4c4a9a5397a052b74f61a74630170c81d6183492c362d0bf01df9840fcb4",
+   "after_sha256_lf": "5aa598cb666c353880c4da6e6c6fe43245691e739b4e262b724c0722bb8391f9",
+   "edits": [
+    {
+     "location": "tarefas/m5-u2/grelha, critério 3, nível 6 («cumprimento consistente»): os elementos de cada tema em listas",
+     "old": "<p>Cumpres os cinco elementos do teu tema (um ponto cada) e a explicação ou a conclusão (mais um ponto). Tema A: uma mesa de hoje narrada na 3.ª pessoa; uma conversa séria; uma coisa banal que a corta ou desmonta; uma fala em discurso direto; um pensamento em indireto livre. Explicação: o que imitaste de Eça e o que critica a tua interrupção. Tema B: a tese na primeira frase; outra citação do último capítulo, explicada; um facto datado do dossiê, ligado à tese; um contra-argumento; a tua refutação. Conclusão: volta à tese com outras palavras.</p>",
+     "new": "<p>Cumpres os cinco elementos do teu tema (um ponto cada) e a explicação ou a conclusão (mais um ponto). </p><p><b>Tema A</b>:</p><ul><li>uma mesa de hoje narrada na 3.ª pessoa;</li><li>uma conversa séria;</li><li>uma coisa banal que a corta ou desmonta;</li><li>uma fala em discurso direto;</li><li>um pensamento em indireto livre.</li></ul><p>Explicação: o que imitaste de Eça e o que critica a tua interrupção.</p><p><b>Tema B</b>:</p><ul><li>a tese na primeira frase;</li><li>outra citação do último capítulo, explicada;</li><li>um facto datado do dossiê, ligado à tese;</li><li>um contra-argumento;</li><li>a tua refutação.</li></ul><p>Conclusão: volta à tese com outras palavras.</p>",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m5-u2/grelha: «o que vem do cap. I e o que é novo» que não se parte (com o contexto «cap. I »)",
+     "old": "cap. I ",
+     "new": "cap. I ",
+     "occurrences": 2
+    },
+    {
+     "location": "tarefas/m5-u2/grelha: «primo!» (cap. IV de» que não se parte (com o contexto «cap. IV»)",
+     "old": "cap. IV",
+     "new": "cap. IV",
+     "occurrences": 1
+    }
+   ]
+  },
+  "tarefas/m5-u2/index.html": {
+   "base_sha256_lf": "a9d14a2dda54b6c6a4c83b93c2e0ed523478409b2a560b4b32930710f4220291",
+   "after_sha256_lf": "3f2801cc924029075d1db7a7645afab05d4ca06b3fb83159c9c5f805cf537298",
+   "edits": [
+    {
+     "location": "tarefas/m5-u2, «Aquecer em cartões» (os tempos da aula de tarefa)",
+     "old": "<p>No início da aula de tarefa: 10 minutos de cartões com consulta, 5 minutos para leres o enunciado, 60 minutos de produção e 15 minutos de revisão e entrega. Total: 90 minutos. O relógio de produção começa depois da leitura.</p>",
+     "new": "<p>No início da aula de tarefa:</p><table class=\"apoio-tabela\" role=\"table\"><thead role=\"rowgroup\"><tr role=\"row\"><th scope=\"col\" role=\"columnheader\">Momento</th><th scope=\"col\" role=\"columnheader\">Tempo</th></tr></thead><tbody role=\"rowgroup\"><tr role=\"row\"><th scope=\"row\" role=\"rowheader\">Cartões com consulta</th><td role=\"cell\" data-label=\"Tempo\">10 minutos</td></tr><tr role=\"row\"><th scope=\"row\" role=\"rowheader\">Lês o enunciado</th><td role=\"cell\" data-label=\"Tempo\">5 minutos</td></tr><tr role=\"row\"><th scope=\"row\" role=\"rowheader\">Produção</th><td role=\"cell\" data-label=\"Tempo\">60 minutos</td></tr><tr role=\"row\"><th scope=\"row\" role=\"rowheader\">Revisão e entrega</th><td role=\"cell\" data-label=\"Tempo\">15 minutos</td></tr><tr role=\"row\"><th scope=\"row\" role=\"rowheader\">Total</th><td role=\"cell\" data-label=\"Tempo\">90 minutos</td></tr></tbody></table><p>O relógio de produção começa depois da leitura.</p>",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m5-u2, tema B, «Falhámos a vida, hoje?»: os cinco elementos do parágrafo",
+     "old": "Num parágrafo de opinião (100 a 130 palavras): tese na primeira frase; outra citação do último capítulo, explicada; um facto datado do dossiê, ligado à tese; contra-argumento e refutação; conclusão.</p>",
+     "new": "Num parágrafo de opinião (100 a 130 palavras):</p><ol><li>tese na primeira frase;</li><li>outra citação do último capítulo, explicada;</li><li>um facto datado do dossiê, ligado à tese;</li><li>contra-argumento e refutação;</li><li>conclusão.</li></ol>",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m5-u2, cabeça: a folha das tabelas de apoio, antes da camada de aparência",
+     "old": "<link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-universal-1\">",
+     "new": "<link rel=\"stylesheet\" href=\"../../assets/pt-lessons/apoios-tabelas.css?v=20261106.1\"><link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-universal-1\">",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m5-u2: «durante 90 minutos, com entrega»",
+     "old": "durante 90 minutos, com entrega",
+     "new": "durante 90 minutos, com entrega",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m5-u2: «Antes de escrever · 10 min ·» que não se parte (com o contexto «10 min »)",
+     "old": "10 min ",
+     "new": "10 min ",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m5-u2: «Unidade 2 · 90 min» que não se parte (com o contexto «90 min<»)",
+     "old": "90 min<",
+     "new": "90 min<",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m5-u2: «que vem do cap. I e outra nova.» que não se parte (com o contexto «cap. I»)",
+     "old": "cap. I",
+     "new": "cap. I",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m5-u2: «No cap. VI, Alencar» que não se parte (com o contexto «cap. VI»)",
+     "old": "cap. VI",
+     "new": "cap. VI",
+     "occurrences": 2
+    },
+    {
+     "location": "tarefas/m5-u2: «Narra na 3.ª pessoa» que não se parte (com o contexto «3.ª pessoa»)",
+     "old": "3.ª pessoa",
+     "new": "3.ª pessoa",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m5-u2: «A 28 de dezembro de 2015, a RTP1» que não se parte (com o contexto «28 de dezembro de 2015»)",
+     "old": "28 de dezembro de 2015",
+     "new": "28 de dezembro de 2015",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m5-u2: «A 8 de janeiro de 2025, Eça» que não se parte (com o contexto «8 de janeiro de 2025»)",
+     "old": "8 de janeiro de 2025",
+     "new": "8 de janeiro de 2025",
+     "occurrences": 1
+    }
+   ]
+  }
+ }
+}
