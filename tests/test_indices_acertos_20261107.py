@@ -87,7 +87,8 @@ class Acertos0711(unittest.TestCase):
                             # 07/11/2026 (fusão do main 29441e6b no pedido #182): a decisão 152 no M1 fica por cima; desfaz-se primeiro, com a mesma exigência.
                             # 07/11/2026: os créditos atrás de um «i» na entrada, nos índices e no Atlas (creditos_i_pt1_20261107, pedido pt-1) passam a camada mais recente, por cima da decisão 152 no M1; desfazem-se primeiro, com a mesma exigência.
                             # 08/11/2026: o cartaz «Ler a cidade» na entrada e o nome novo da secção nas páginas publicadas (cidade_cartaz_20261108) passam a camada mais recente, por cima dos créditos atrás de um «i» do pedido pt-1 (e mudam páginas desta cadeia: a entrada, os índices e a frase da sugestão «continua»); desfazem-se primeiro, com a mesma exigência.
-                            '--desfazer-antes', 'tests/fixtures/cidade-cartaz-edits-20261108.json', '--desfazer-antes', 'tests/fixtures/creditos-i-pt1-edits-20261107.json', '--desfazer-antes', 'tests/fixtures/cuidado-m1-edits-20261106.json'], cwd=ROOT, capture_output=True, text=True,
+                            # 08/11/2026: a decisão 152 no M2 (cuidado_m2_20261108: tabelas onde há itens paralelos e espaços que não quebram nas lições e páginas do M2, incluindo o índice do módulo) passa a camada mais recente, por cima do cartaz «Ler a cidade» e do nome novo da secção; desfaz-se primeiro, com a mesma exigência.
+                            '--desfazer-antes', 'tests/fixtures/cuidado-m2-edits-20261108.json', '--desfazer-antes', 'tests/fixtures/cidade-cartaz-edits-20261108.json', '--desfazer-antes', 'tests/fixtures/creditos-i-pt1-edits-20261107.json', '--desfazer-antes', 'tests/fixtures/cuidado-m1-edits-20261106.json'], cwd=ROOT, capture_output=True, text=True,
                            encoding='utf-8')
         self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
         self.assertIn('25 trocas em 9 ficheiros: 25 aplicadas, 0 por aplicar; manifesto em dia.', r.stdout)
@@ -131,11 +132,14 @@ class Acertos0711(unittest.TestCase):
         # acertos passam a terceiros.
         # 08/11/2026: por cima dos créditos do pedido pt-1 fica o cartaz «Ler a cidade» e o nome novo da secção
         # (cidade_cartaz_20261108); a ordem ganha mais uma posição e os acertos passam a quartos.
-        self.assertEqual(verificar_camadas.LAYERS[0], ('cidade_cartaz_20261108', 'cidade-cartaz-edits-20261108'))
-        self.assertEqual(verificar_camadas.LAYERS[1], ('creditos_i_pt1_20261107', 'creditos-i-pt1-edits-20261107'))
-        self.assertEqual(verificar_camadas.LAYERS[2], ('cuidado_m1_20261106', 'cuidado-m1-edits-20261106'))
-        self.assertEqual(verificar_camadas.LAYERS[3], ('indices_acertos_20261107', 'indices-acertos-edits-20261107'))
-        self.assertEqual(verificar_camadas.LAYERS[4], ('cartaz_indices_148_20261106', 'cartaz-indices-148-edits-20261106'))
+        # 08/11/2026: por cima do cartaz «Ler a cidade» fica a decisão 152 no M2 (cuidado_m2_20261108); a ordem ganha mais uma
+        # posição e os acertos passam a quintos.
+        self.assertEqual(verificar_camadas.LAYERS[0], ('cuidado_m2_20261108', 'cuidado-m2-edits-20261108'))
+        self.assertEqual(verificar_camadas.LAYERS[1], ('cidade_cartaz_20261108', 'cidade-cartaz-edits-20261108'))
+        self.assertEqual(verificar_camadas.LAYERS[2], ('creditos_i_pt1_20261107', 'creditos-i-pt1-edits-20261107'))
+        self.assertEqual(verificar_camadas.LAYERS[3], ('cuidado_m1_20261106', 'cuidado-m1-edits-20261106'))
+        self.assertEqual(verificar_camadas.LAYERS[4], ('indices_acertos_20261107', 'indices-acertos-edits-20261107'))
+        self.assertEqual(verificar_camadas.LAYERS[5], ('cartaz_indices_148_20261106', 'cartaz-indices-148-edits-20261106'))
         auditoria = ler('tests/auditoria_20261028.py')
         corpo = auditoria[auditoria.index('def undo_cartaz_148_0611'):]
         self.assertLess(corpo.index('undo_acertos_0711(path, text)'), corpo.index('_CARTAZ_148_0611.get('))
@@ -152,7 +156,9 @@ class Acertos0711(unittest.TestCase):
                     # 07/11/2026: antes dela, logo a seguir a --verificar, os créditos atrás de um «i» do pedido pt-1 (a camada mais recente).
                     # 08/11/2026: e, antes deles, logo a seguir a --verificar, o cartaz «Ler a cidade» e o nome novo da secção
                     # (cidade_cartaz_20261108), a camada mais recente; a cadeia de baixo fica igual, sem nada pelo meio.
-                    self.assertIn('--verificar --desfazer-antes tests/fixtures/cidade-cartaz-edits-20261108.json --desfazer-antes tests/fixtures/creditos-i-pt1-edits-20261107.json --desfazer-antes tests/fixtures/cuidado-m1-edits-20261106.json --desfazer-antes tests/fixtures/indices-acertos-edits-20261107.json --desfazer-antes '
+                    # 08/11/2026: e, antes do cartaz, logo a seguir a --verificar, a decisão 152 no M2 (cuidado_m2_20261108), a camada
+                    # mais recente; a cadeia de baixo fica igual, sem nada pelo meio.
+                    self.assertIn('--verificar --desfazer-antes tests/fixtures/cuidado-m2-edits-20261108.json --desfazer-antes tests/fixtures/cidade-cartaz-edits-20261108.json --desfazer-antes tests/fixtures/creditos-i-pt1-edits-20261107.json --desfazer-antes tests/fixtures/cuidado-m1-edits-20261106.json --desfazer-antes tests/fixtures/indices-acertos-edits-20261107.json --desfazer-antes '
                                   'tests/fixtures/cartaz-indices-148-edits-20261106.json', linha, wf)
         self.assertEqual(cadeias, 13)
         for wf in ('pt-tarefas-qa.yml', 'pt-exame-laboratorio-qa.yml', 'cartaz-qa.yml'):

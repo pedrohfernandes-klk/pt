@@ -15,10 +15,13 @@ const manifesto=JSON.parse(fs.readFileSync(path.join(root,'tests/fixtures/credit
 // 08/11/2026: por cima desta camada fica o cartaz «Ler a cidade» e o nome novo da secção (camada cidade_cartaz_20261108, que muda
 // a entrada e os nove índices): desfaz-se primeiro, com contagem estrita, e as conferências ficam iguais.
 const cidadeCartaz=JSON.parse(fs.readFileSync(path.join(root,'tests/fixtures/cidade-cartaz-edits-20261108.json'),'utf8')).files;
+// 08/11/2026: e, por cima do cartaz, a decisão 152 no M2 (camada cuidado_m2_20261108: espaços que não quebram no índice do M2):
+// desfaz-se antes dele, com contagem estrita, e as conferências ficam iguais.
+const cuidadoM2=JSON.parse(fs.readFileSync(path.join(root,'tests/fixtures/cuidado-m2-edits-20261108.json'),'utf8')).files;
 // 08/11/2026 (revisão do cartaz «Ler a cidade»): a entrada ganha um terceiro «i», o da fotografia do cartaz (camada de cima, conferido
 // em tests/browser_cidade_cartaz.cjs); aqui contam-se e medem-se os desta camada, os que não estão dentro do cartaz.
 // A página sem esta camada (desfeita da última troca para a primeira, com contagem estrita).
-function antes(rel){let t=fs.readFileSync(path.join(root,rel),'utf8');for(const e of [...((cidadeCartaz[rel]||{}).edits||[])].reverse()){assert.equal(t.split(e.new).length-1,e.occurrences,rel+' cartaz «Ler a cidade» '+e.location);t=t.split(e.new).join(e.old)}for(const e of [...manifesto[rel].edits].reverse()){assert.equal(t.split(e.new).length-1,e.occurrences,rel+' '+e.location);t=t.split(e.new).join(e.old)}return t}
+function antes(rel){let t=fs.readFileSync(path.join(root,rel),'utf8');for(const e of [...((cuidadoM2[rel]||{}).edits||[])].reverse()){assert.equal(t.split(e.new).length-1,e.occurrences,rel+' decisão 152 no M2 '+e.location);t=t.split(e.new).join(e.old)}for(const e of [...((cidadeCartaz[rel]||{}).edits||[])].reverse()){assert.equal(t.split(e.new).length-1,e.occurrences,rel+' cartaz «Ler a cidade» '+e.location);t=t.split(e.new).join(e.old)}for(const e of [...manifesto[rel].edits].reverse()){assert.equal(t.split(e.new).length-1,e.occurrences,rel+' '+e.location);t=t.split(e.new).join(e.old)}return t}
 const um=(s,re)=>{const m=s.match(re);assert.ok(m,String(re));return m[1]};
 const LICENCA_M8='https://creativecommons.org/licenses/by-sa/2.0/deed.pt';
 // Para cada página: os «i» novos, pela ordem da página, com o crédito antigo (HTML), o nome, as ligações a mais e a imagem.

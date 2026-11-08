@@ -35,6 +35,8 @@ import sys
 import unittest
 
 from auditoria_20261028 import undo_cidade_cartaz_0811, undo_creditos_i_pt1_0711
+# 08/11/2026: por cima desta camada fica a decisão 152 no M2 (camada cuidado_m2_20261108).
+from auditoria_20261028 import undo_cuidado_m2_0811
 
 ROOT = Path(__file__).resolve().parents[1]
 CAMADA = ROOT / 'scripts/cidade_cartaz_20261108.json'
@@ -148,8 +150,11 @@ class CidadeCartaz(unittest.TestCase):
 
     def test_camada_aplicada_fechada_e_reversivel(self):
         # A camada mais recente confere-se sem nada por cima, com as contagens exatas do manifesto.
+        # 08/11/2026: por cima dela fica agora a decisão 152 no M2 (cuidado_m2_20261108, que também mexe nas lições e no índice do
+        # M2); desfaz-se primeiro, com a mesma exigência, e as contagens são as mesmas.
         r = subprocess.run([sys.executable, 'scripts/aplicar_trocas.py', str(CAMADA.relative_to(ROOT)), '--manifesto', MANIFESTO_REL,
-                            '--verificar'], cwd=ROOT, capture_output=True, text=True, encoding='utf-8')
+                            '--verificar', '--desfazer-antes', 'tests/fixtures/cuidado-m2-edits-20261108.json'], cwd=ROOT,
+                           capture_output=True, text=True, encoding='utf-8')
         self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
         self.assertIn('246 trocas em 242 ficheiros: 246 aplicadas, 0 por aplicar; manifesto em dia.', r.stdout)
         m = self.manifesto
@@ -165,9 +170,11 @@ class CidadeCartaz(unittest.TestCase):
         for rel, registo in m['files'].items():
             with self.subTest(pagina=rel):
                 self.assertEqual(set(registo), {'base_sha256_lf', 'after_sha256_lf', 'edits'})
-                atual = ler(rel)
+                # 08/11/2026: a página como esta camada a deixou: com a camada de cima (cuidado_m2_20261108) desfeita, com contagem
+                # estrita; undo_cidade_cartaz_0811 desfaz as duas, a partir da página inteira.
+                atual = undo_cuidado_m2_0811(rel, ler(rel))
                 self.assertEqual(sha_lf(atual), registo['after_sha256_lf'])
-                base = undo_cidade_cartaz_0811(rel, atual)
+                base = undo_cidade_cartaz_0811(rel, ler(rel))
                 self.assertEqual(sha_lf(base), registo['base_sha256_lf'])
                 # Ida e volta: refazer as trocas sobre a base devolve a página, letra a letra.
                 refeito = base
@@ -180,7 +187,8 @@ class CidadeCartaz(unittest.TestCase):
                     self.assertEqual(atual.count(e['new']), e['occurrences'], (rel, e['location']))
                     self.assertEqual(atual.replace(e['new'], '\0').count(e['old']), 0, (rel, e['location']))
                 # A camada de baixo (os créditos do pedido pt-1) continua a desfazer-se por baixo desta.
-                undo_creditos_i_pt1_0711(rel, atual)
+                # 08/11/2026: na página inteira, porque a cadeia de desfazer começa agora pela decisão 152 no M2.
+                undo_creditos_i_pt1_0711(rel, ler(rel))
 
     def test_gerador_da_o_mesmo_json(self):
         spec = importlib.util.spec_from_file_location('cidade_cartaz', ROOT / 'scripts/cidade_cartaz_20261108.py')
@@ -203,26 +211,36 @@ class CidadeCartaz(unittest.TestCase):
             import verificar_camadas
         finally:
             sys.path.pop(0)
-        self.assertEqual(verificar_camadas.LAYERS[0], ('cidade_cartaz_20261108', 'cidade-cartaz-edits-20261108'))
-        self.assertEqual(verificar_camadas.LAYERS[1], ('creditos_i_pt1_20261107', 'creditos-i-pt1-edits-20261107'))
+        # 08/11/2026: por cima desta camada fica a decisão 152 no M2 (cuidado_m2_20261108): esta passa a segunda, logo por baixo
+        # dela, e em cada cadeia desfaz-se logo a seguir a ela, sem nada pelo meio.
+        self.assertEqual(verificar_camadas.LAYERS[0], ('cuidado_m2_20261108', 'cuidado-m2-edits-20261108'))
+        self.assertEqual(verificar_camadas.LAYERS[1], ('cidade_cartaz_20261108', 'cidade-cartaz-edits-20261108'))
+        self.assertEqual(verificar_camadas.LAYERS[2], ('creditos_i_pt1_20261107', 'creditos-i-pt1-edits-20261107'))
         auditoria = ler('tests/auditoria_20261028.py')
         corpo = auditoria[auditoria.index('def undo_creditos_i_pt1_0711'):]
         self.assertLess(corpo.index('undo_cidade_cartaz_0811(path, text)'), corpo.index('_CREDITOS_I_PT1_0711.get('))
+        # 08/11/2026: e esta camada desfaz primeiro a da decisão 152 no M2, que está por cima dela.
+        corpo = auditoria[auditoria.index('def undo_cidade_cartaz_0811'):]
+        self.assertLess(corpo.index('undo_cuidado_m2_0811(path, text)'), corpo.index('_CIDADE_CARTAZ_0811.get('))
         sala = ler('scripts/desligar_sala.py')
         self.assertLess(sala.index('cidade-cartaz-edits-20261108.json'), sala.index('creditos-i-pt1-edits-20261107.json'))
+        self.assertLess(sala.index('cuidado-m2-edits-20261108.json'), sala.index('cidade-cartaz-edits-20261108.json'))
         # Em cada cadeia dos workflows, esta camada desfaz-se primeiro, logo a seguir a --verificar, e logo antes do pt-1.
+        # 08/11/2026: logo a seguir à decisão 152 no M2, que se desfaz primeiro, logo a seguir a --verificar.
         meu, pt1 = MANIFESTO_REL, 'tests/fixtures/creditos-i-pt1-edits-20261107.json'
+        m2 = 'tests/fixtures/cuidado-m2-edits-20261108.json'
         cadeias = 0
         for wf in sorted(glob.glob(str(ROOT / '.github/workflows/*.yml'))):
             for linha in Path(wf).read_text('utf-8').splitlines():
                 if linha.lstrip().startswith('#') or '--desfazer-antes ' + pt1 not in linha:
                     continue
                 cadeias += 1
-                self.assertIn(f'--verificar --desfazer-antes {meu} --desfazer-antes {pt1}', linha, wf)
+                self.assertIn(f'--verificar --desfazer-antes {m2} --desfazer-antes {meu} --desfazer-antes {pt1}', linha, wf)
         # As 13 cadeias de antes e a da decisão 152 no M1.
         self.assertEqual(cadeias, 14)
         # O pt-1, que no workflow dos cartazes se conferia sem nada por cima, desfaz primeiro esta camada.
-        self.assertIn(f'scripts/creditos_i_pt1_20261107.json --manifesto {pt1} --verificar --desfazer-antes {meu}\n',
+        # 08/11/2026: e, antes desta, a decisão 152 no M2.
+        self.assertIn(f'scripts/creditos_i_pt1_20261107.json --manifesto {pt1} --verificar --desfazer-antes {m2} --desfazer-antes {meu}\n',
                       ler('.github/workflows/cartaz-qa.yml'))
         # Nas cadeias dos testes, esta camada vem logo antes da do pt-1, sem outra pelo meio.
         for p in sorted((ROOT / 'tests').glob('test_*.py')):
@@ -233,24 +251,34 @@ class CidadeCartaz(unittest.TestCase):
             texto = '\n'.join(l for l in p.read_text('utf-8').split('\n') if not l.lstrip().startswith('#'))
             plano = re.sub(r"['\"]\s*,\s*['\"]", ' ', texto).replace("',ROOT/'", ' ')
             with self.subTest(teste=p.name):
-                self.assertEqual(plano.count('--desfazer-antes ' + pt1), plano.count(f'--desfazer-antes {meu} --desfazer-antes {pt1}'))
-        self.assertIn(f"(ROOT/'{meu}',ROOT/'{pt1}',", ler('tests/test_task_routes_closure.py'))
+                # 08/11/2026: e a cadeia começa pela decisão 152 no M2, logo antes desta, sem nada pelo meio.
+                self.assertEqual(plano.count('--desfazer-antes ' + pt1),
+                                 plano.count(f'--desfazer-antes {m2} --desfazer-antes {meu} --desfazer-antes {pt1}'))
+        # 08/11/2026: nas rotas, a decisão 152 no M2 vem primeiro, logo antes desta.
+        self.assertIn(f"(ROOT/'{m2}',ROOT/'{meu}',ROOT/'{pt1}',", ler('tests/test_task_routes_closure.py'))
         # Os testes de navegador que montam o «antes» da entrada e dos índices desfazem-na primeiro.
         for rel in ('tests/browser_cartaz_indices.cjs', 'tests/browser_cartaz_m4_piloto.cjs'):
             texto = ler(rel)
             with self.subTest(teste=rel):
                 self.assertLess(texto.index('((cidadeCartaz['), texto.index('((creditosPt1['))
+                # 08/11/2026: e, antes desta, a decisão 152 no M2 (que mexe no índice do M2).
+                self.assertLess(texto.index('((cuidadoM2['), texto.index('((cidadeCartaz['))
         texto = ler('tests/browser_cartaz_cabecalho.cjs')
         self.assertLess(texto.index("cidadeCartaz.files['index.html']"), texto.index("creditosPt1.files['index.html']"))
         texto = ler('tests/browser_creditos_i_pt1.cjs')
         corpo = texto[texto.index('function antes(rel)'):]
         self.assertLess(corpo.index('((cidadeCartaz[rel]'), corpo.index('manifesto[rel].edits'))
+        # 08/11/2026: e, antes desta, a decisão 152 no M2.
+        self.assertLess(corpo.index('((cuidadoM2[rel]'), corpo.index('((cidadeCartaz[rel]'))
         gerador = ler('scripts/cartaz_indices_148_20261106.py')
         self.assertLess(gerador.index('CIDADE_CARTAZ.read_text'), gerador.index('CREDITOS_PT1.read_text'))
+        # 08/11/2026: e, antes desta, a decisão 152 no M2.
+        self.assertLess(gerador.index('CUIDADO_M2.read_text'), gerador.index('CIDADE_CARTAZ.read_text'))
         # O workflow dos cartazes confere-a sem nada por cima e corre o seu teste de navegador; os caminhos levam-na.
+        # 08/11/2026: confere-a com a decisão 152 no M2, a única por cima, desfeita antes.
         cartaz = ler('.github/workflows/cartaz-qa.yml')
         self.assertIn('      - run: python scripts/aplicar_trocas.py scripts/cidade_cartaz_20261108.json --manifesto '
-                      f'{meu} --verificar\n', cartaz)
+                      f'{meu} --verificar --desfazer-antes {m2}\n', cartaz)
         self.assertIn('      - run: node tests/browser_cidade_cartaz.cjs\n', cartaz)
         self.assertLess(cartaz.index('node tests/browser_creditos_i_pt1.cjs'), cartaz.index('node tests/browser_cidade_cartaz.cjs'))
         for caminho in ('scripts/cidade_cartaz_20261108.*', meu, 'tests/*cidade_cartaz*', 'assets/retro-portals.css', 'index.html'):

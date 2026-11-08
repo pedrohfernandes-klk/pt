@@ -321,7 +321,22 @@ _CREDITOS_I_PT1_0711 = json.loads((ROOT/'tests/fixtures/creditos-i-pt1-edits-202
 # pt-1: desfaz-se antes deles, com contagem estrita.
 _CIDADE_CARTAZ_0811 = json.loads((ROOT/'tests/fixtures/cidade-cartaz-edits-20261108.json').read_text('utf-8'))['files']
 
+# 08/11/2026: decisão 152 (cuidado em todas as lições), módulo M2: tabelas onde há itens paralelos e referências e números que
+# não se partem, camada mais recente, por cima do cartaz «Ler a cidade» e do nome novo da secção: desfaz-se antes deles, com
+# contagem estrita.
+_CUIDADO_M2_0811 = json.loads((ROOT/'tests/fixtures/cuidado-m2-edits-20261108.json').read_text('utf-8'))['files']
+
+def undo_cuidado_m2_0811(path, text):
+    for edit in reversed(_CUIDADO_M2_0811.get(_relative(path), {}).get('edits', [])):
+        if text.count(edit['new']) != edit['occurrences']:
+            raise AssertionError(f"Decisão 152 no M2 não confere: {path}: {edit['location']}")
+        text = text.replace(edit['new'], edit['old'])
+    return text
+
+
 def undo_cidade_cartaz_0811(path, text):
+    # 08/11/2026: primeiro a decisão 152 no M2, que está por cima.
+    text = undo_cuidado_m2_0811(path, text)
     for edit in reversed(_CIDADE_CARTAZ_0811.get(_relative(path), {}).get('edits', [])):
         if text.count(edit['new']) != edit['occurrences']:
             raise AssertionError(f"Cartaz «Ler a cidade» e nome novo da secção não conferem: {path}: {edit['location']}")

@@ -1,0 +1,882 @@
+{
+ "base_commit": "17966724925640704eb568644a90f87f1ece2917",
+ "_nota": "08/11/2026: decisão 152 do docente («cuidado em todas as lições»), módulo M2: os 29 achados CONFIRMADOS da varredura de 6/11 (bordo/cidadania-v3/cuidado-152/m2-confirmados.json; os 7 recusados, 4, 5, 6, 7, 9, 10 e 13, não entram): 5 achados de tabela onde há itens paralelos (A, como na M7-F10, na M7-F15 e no M1: class apoio-tabela, th scope, td data-label e os role; cada página com tabela nova, as lições F02, F06, F07 e F09 e a página «Pensar devagar» A máquina de rir, carrega assets/pt-lessons/apoios-tabelas.css antes da camada de aparência, na versão do M1), 20 de referências e números que não se partem entre linhas (B: U+00A0 em «D. João III» e «D. Maria II», depois de «c.», entre ordinal e nome, entre número e unidade, dentro dos intervalos «N a M palavras» e das datas; U+2060 logo a seguir ao traço de intervalo e no hífen de «M2-F01» no mapa) e 4 casos do mesmo tipo (C: o vocabulário e a glosa de «Señores, por caridad» na F06; a lista dos ficheiros do portefólio com cabeçalho, nomes inteiros e linhas que empilham no telemóvel; os exemplos A, B e C da F14 em lista; os versos da F07 com a marcação de verso das outras lições do M2). Camada mais recente, por cima do cartaz «Ler a cidade» e do nome novo da secção (cidade_cartaz_20261108). Gerada por scripts/cuidado_m2_20261108.py e aplicada por scripts/aplicar_trocas.py: não se edita à mão. O texto visível fica igual, salvo a estrutura das tabelas e das listas e os espaços invisíveis. A casca das lições (migalhas, «Estás em», rodapé: achado 16) não muda aqui, ficheiro a ficheiro: muda no molde, como no M1; nas outras páginas, as migalhas mudam onde o achado o diz (índice do módulo, guia, mapa, portefólio e as duas páginas «Pensar devagar»). Ficam de fora a «frase» dos cartões sublinhar (as palavras contam-se por espaços) e os «alt» das imagens. Os aquecimentos da M2-U1 e da M2-U2 mudam também nos dados do gerador (docs/pedagogia/aquecimentos/m2-u1.json e m2-u2.json), que estão nesta camada, e regeneram-se sem diferenças.",
+ "files": {
+  "m2/guia-da-tarefa-m2/index.html": {
+   "base_sha256_lf": "4dd5d4c524b8bd4d2251212572b37bfbb89600348c420110fc15a113f2a9e08c",
+   "after_sha256_lf": "38dc09398d0478b88f791f6b7a1748ad65f09e48f5d1dd71684ddef7e2d7e5be",
+   "edits": [
+    {
+     "location": "m2/guia-da-tarefa-m2: «90 minutos» com espaço que não quebra",
+     "old": "90 minutos",
+     "new": "90 minutos",
+     "occurrences": 1
+    },
+    {
+     "location": "m2/guia-da-tarefa-m2: «90 min» com espaço que não quebra (com o contexto «90 min »)",
+     "old": "90 min ",
+     "new": "90 min ",
+     "occurrences": 2
+    },
+    {
+     "location": "m2/guia-da-tarefa-m2: «10 minutos» com espaço que não quebra",
+     "old": "10 minutos",
+     "new": "10 minutos",
+     "occurrences": 1
+    },
+    {
+     "location": "m2/guia-da-tarefa-m2: «5 minutos» com espaço que não quebra (com o contexto «5 minutos p»)",
+     "old": "5 minutos p",
+     "new": "5 minutos p",
+     "occurrences": 1
+    },
+    {
+     "location": "m2/guia-da-tarefa-m2: «5 minutos» com espaço que não quebra (com o contexto «3 a 5 minutos»)",
+     "old": "3 a 5 minutos",
+     "new": "3 a 5 minutos",
+     "occurrences": 2
+    },
+    {
+     "location": "m2/guia-da-tarefa-m2: «15 min» com espaço que não quebra",
+     "old": "15 min",
+     "new": "15 min",
+     "occurrences": 2
+    },
+    {
+     "location": "m2/guia-da-tarefa-m2: «60 min» com espaço que não quebra",
+     "old": "60 min",
+     "new": "60 min",
+     "occurrences": 1
+    },
+    {
+     "location": "m2/guia-da-tarefa-m2: «220 a 280 palavras» com espaço que não quebra",
+     "old": "220 a 280 palavras",
+     "new": "220 a 280 palavras",
+     "occurrences": 2
+    },
+    {
+     "location": "m2/guia-da-tarefa-m2: «180 a 240 palavras» com espaço que não quebra",
+     "old": "180 a 240 palavras",
+     "new": "180 a 240 palavras",
+     "occurrences": 1
+    },
+    {
+     "location": "m2/guia-da-tarefa-m2: «80 a 120 palavras» com espaço que não quebra",
+     "old": "80 a 120 palavras",
+     "new": "80 a 120 palavras",
+     "occurrences": 1
+    },
+    {
+     "location": "m2/guia-da-tarefa-m2: «100 a 130 palavras» com espaço que não quebra",
+     "old": "100 a 130 palavras",
+     "new": "100 a 130 palavras",
+     "occurrences": 4
+    },
+    {
+     "location": "m2/guia-da-tarefa-m2: «1.º ano» com espaço que não quebra",
+     "old": "1.º ano",
+     "new": "1.º ano",
+     "occurrences": 2
+    }
+   ]
+  },
+  "m2/index.html": {
+   "base_sha256_lf": "0cb5a0ba0073407ca9d8ce29e6d3bc520f1c34a9baad1fad51ea587dcee70b3e",
+   "after_sha256_lf": "b51d86ab27432a507493fbd11e58d796f96a443c3c8c8cec6270518ad776244c",
+   "edits": [
+    {
+     "location": "m2: «90 minutos» com espaço que não quebra",
+     "old": "90 minutos",
+     "new": "90 minutos",
+     "occurrences": 4
+    },
+    {
+     "location": "m2: «90 min» com espaço que não quebra (com o contexto «90 min<»)",
+     "old": "90 min<",
+     "new": "90 min<",
+     "occurrences": 4
+    },
+    {
+     "location": "m2: «10 min» com espaço que não quebra",
+     "old": "10 min",
+     "new": "10 min",
+     "occurrences": 2
+    },
+    {
+     "location": "m2: «25 por cento» com espaço que não quebra",
+     "old": "25 por cento",
+     "new": "25 por cento",
+     "occurrences": 1
+    },
+    {
+     "location": "m2: «30 segundos» com espaço que não quebra",
+     "old": "30 segundos",
+     "new": "30 segundos",
+     "occurrences": 1
+    },
+    {
+     "location": "m2: «1.º ano» com espaço que não quebra (com o contexto «hfernandes-klk.github.io/pt/1/\">1.º ano</a></li><li><span…»)",
+     "old": "hfernandes-klk.github.io/pt/1/\">1.º ano</a></li><li><span aria-current=",
+     "new": "hfernandes-klk.github.io/pt/1/\">1.º ano</a></li><li><span aria-current=",
+     "occurrences": 1
+    },
+    {
+     "location": "m2: «1.º ano» com espaço que não quebra (com o contexto «\"><div class=\"marca\">Português, 1.º ano, percurso do módu…»)",
+     "old": "\"><div class=\"marca\">Português, 1.º ano, percurso do módulo</div><div c",
+     "new": "\"><div class=\"marca\">Português, 1.º ano, percurso do módulo</div><div c",
+     "occurrences": 1
+    },
+    {
+     "location": "m2: «1.º ano» com espaço que não quebra (com o contexto «escolha\",\"p\":\"«Trinta alunos do 1.º ano viram, no Teatro…»)",
+     "old": "escolha\",\"p\":\"«Trinta alunos do 1.º ano viram, no Teatro da Escola, a 3",
+     "new": "escolha\",\"p\":\"«Trinta alunos do 1.º ano viram, no Teatro da Escola, a 3",
+     "occurrences": 1
+    },
+    {
+     "location": "m2: «D. João III» com espaço que não quebra",
+     "old": "D. João III",
+     "new": "D. João III",
+     "occurrences": 3
+    },
+    {
+     "location": "m2: «3 de março» com espaço que não quebra (com o contexto «3 de março, »)",
+     "old": "3 de março, ",
+     "new": "3 de março, ",
+     "occurrences": 1
+    },
+    {
+     "location": "m2: «3 de março» com espaço que não quebra (com o contexto «3 de março»,»)",
+     "old": "3 de março»,",
+     "new": "3 de março»,",
+     "occurrences": 1
+    },
+    {
+     "location": "m2: «30 %» com espaço que não quebra",
+     "old": "30 %",
+     "new": "30 %",
+     "occurrences": 3
+    },
+    {
+     "location": "m2: «10 %» com espaço que não quebra",
+     "old": "10 %",
+     "new": "10 %",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m2/licao-m2-f01/index.html": {
+   "base_sha256_lf": "c7c0d28cb1a1fc73f1d0e7cccff4981eb0e4d33022b4ad69551a7a659de0ac14",
+   "after_sha256_lf": "87c4e9d668c01bea9721a1de97f6a840f143f3e62d3aa70e2fec78f4866c5349",
+   "edits": [
+    {
+     "location": "M2-F01: «(4 min)» com espaço que não quebra",
+     "old": "(4 min)",
+     "new": "(4 min)",
+     "occurrences": 2
+    },
+    {
+     "location": "M2-F01: «D. João III» com espaço que não quebra",
+     "old": "D. João III",
+     "new": "D. João III",
+     "occurrences": 5
+    }
+   ]
+  },
+  "m2/licao-m2-f02/index.html": {
+   "base_sha256_lf": "66c027a69cee52773da8ad5e3c5ac07bb332a9f61eb8c811b521fce0cd74cc9b",
+   "after_sha256_lf": "ae3b58441054b61a4637351d61ba919cf6a2cb563bfc73cd61171e7d2ef710ba",
+   "edits": [
+    {
+     "location": "M2-F02, cartão 23, Para entender (caixa «Recorda: cinco recursos»)",
+     "old": "<p><b>Comparação</b>: aproxima duas coisas com «como» («Licença, como a bugia»). <b>Metáfora</b>: dá a uma coisa o nome de outra, sem «como» («cativa / Em poder de desfiados»). <b>Enumeração</b>: acumula termos numa lista («Rico, honrado, conhecido», diz Lianor Vaz). <b>Antítese</b>: põe frente a frente dois opostos («sam aguçosa / E vós dais-vos de vagar»). <b>Interrogação retórica</b>: pergunta que não espera resposta («Ou cuidas que é dia santo?»).</p>",
+     "new": "<table class=\\\"apoio-tabela\\\" role=\\\"table\\\"><thead role=\\\"rowgroup\\\"><tr role=\\\"row\\\"><th scope=\\\"col\\\" role=\\\"columnheader\\\">Recurso</th><th scope=\\\"col\\\" role=\\\"columnheader\\\">O que faz</th><th scope=\\\"col\\\" role=\\\"columnheader\\\">Exemplo</th></tr></thead><tbody role=\\\"rowgroup\\\"><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Comparação</th><td role=\\\"cell\\\" data-label=\\\"O que faz\\\">aproxima duas coisas com «como»</td><td role=\\\"cell\\\" data-label=\\\"Exemplo\\\">«Licença, como a bugia»</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Metáfora</th><td role=\\\"cell\\\" data-label=\\\"O que faz\\\">dá a uma coisa o nome de outra, sem «como»</td><td role=\\\"cell\\\" data-label=\\\"Exemplo\\\">«cativa / Em poder de desfiados»</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Enumeração</th><td role=\\\"cell\\\" data-label=\\\"O que faz\\\">acumula termos numa lista</td><td role=\\\"cell\\\" data-label=\\\"Exemplo\\\">«Rico, honrado, conhecido», diz Lianor Vaz</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Antítese</th><td role=\\\"cell\\\" data-label=\\\"O que faz\\\">põe frente a frente dois opostos</td><td role=\\\"cell\\\" data-label=\\\"Exemplo\\\">«sam aguçosa / E vós dais-vos de vagar»</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Interrogação retórica</th><td role=\\\"cell\\\" data-label=\\\"O que faz\\\">pergunta que não espera resposta</td><td role=\\\"cell\\\" data-label=\\\"Exemplo\\\">«Ou cuidas que é dia santo?»</td></tr></tbody></table>",
+     "occurrences": 1
+    },
+    {
+     "location": "M2-F02, cabeça: a folha das tabelas de apoio, antes da camada de aparência",
+     "old": "<link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-reading1\">",
+     "new": "<link rel=\"stylesheet\" href=\"../../assets/pt-lessons/apoios-tabelas.css?v=20261106.1\"><link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-reading1\">",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m2/licao-m2-f06/index.html": {
+   "base_sha256_lf": "2ca920f0aa6da8255e565fbdef354fb6acb5e228c09d1a06889b0b3c566618bd",
+   "after_sha256_lf": "7c99138870819f5662ab20d804abf5922109f2a1ec2a5011e6f717dd921053c9",
+   "edits": [
+    {
+     "location": "M2-F06, cartão 28, Para entender (caixa «Recorda»)",
+     "old": "<p><b>Anáfora</b>: a mesma palavra a abrir versos seguidos. <b>Antítese</b>: duas ideias opostas lado a lado. <b>Provérbio</b>: frase feita que guarda um saber comum. <b>Duplo sentido</b>: a frase diz uma coisa a quem está em cena e outra ao público.</p>",
+     "new": "<table class=\\\"apoio-tabela\\\" role=\\\"table\\\"><thead role=\\\"rowgroup\\\"><tr role=\\\"row\\\"><th scope=\\\"col\\\" role=\\\"columnheader\\\">Recurso</th><th scope=\\\"col\\\" role=\\\"columnheader\\\">O que é</th></tr></thead><tbody role=\\\"rowgroup\\\"><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Anáfora</th><td role=\\\"cell\\\" data-label=\\\"O que é\\\">a mesma palavra a abrir versos seguidos.</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Antítese</th><td role=\\\"cell\\\" data-label=\\\"O que é\\\">duas ideias opostas lado a lado.</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Provérbio</th><td role=\\\"cell\\\" data-label=\\\"O que é\\\">frase feita que guarda um saber comum.</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Duplo sentido</th><td role=\\\"cell\\\" data-label=\\\"O que é\\\">a frase diz uma coisa a quem está em cena e outra ao público.</td></tr></tbody></table>",
+     "occurrences": 1
+    },
+    {
+     "location": "M2-F06, cartão 15, o verso 80 («Señores, por caridad»): a glosa ao toque cobre o termo inteiro",
+     "old": "<b class=\\\"gt\\\" data-s=\\\"por caridad, senhores, por caridade\\\">Señores</b>, por caridad</span>",
+     "new": "<b class=\\\"gt\\\" data-s=\\\"senhores, por caridade\\\">Señores, por caridad</b></span>",
+     "occurrences": 1
+    },
+    {
+     "location": "M2-F06, cartão 18, Vocabulário: o termo «Señores, por caridad» inteiro a negrito",
+     "old": "<b>Señores</b>, por caridad, senhores, por caridade;",
+     "new": "<b>Señores, por caridad</b>, senhores, por caridade;",
+     "occurrences": 1
+    },
+    {
+     "location": "M2-F06, cartão 18, Vocabulário: o termo «haced que el tiempo pasado no se cuente por perdido» a negrito, como os outros",
+     "old": "; haced que el tiempo pasado no se cuente por perdido, fazei",
+     "new": "; <b>haced que el tiempo pasado no se cuente por perdido</b>, fazei",
+     "occurrences": 1
+    },
+    {
+     "location": "M2-F06, cabeça: a folha das tabelas de apoio, antes da camada de aparência",
+     "old": "<link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-reading1\">",
+     "new": "<link rel=\"stylesheet\" href=\"../../assets/pt-lessons/apoios-tabelas.css?v=20261106.1\"><link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-reading1\">",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m2/licao-m2-f07/index.html": {
+   "base_sha256_lf": "5e836417ab48f7d66f1fa9c5692216d00b0d0fe2066eb1b80b61b0545cee3532",
+   "after_sha256_lf": "d1f2286e6d5fccf170950c573bd56f222e942abff91d69a1c3da83d56e95a7d4",
+   "edits": [
+    {
+     "location": "M2-F07, cartão 7, Para entender (detalhe «Consultar os tipos de orações e os conectores», caixa «Coordenadas»)",
+     "old": "<p><b>Coordenadas</b> (as orações ligam-se sem que nenhuma esteja dentro da outra): copulativas (e, nem), adversativas (mas; também porém, contudo, todavia, que são advérbios de ligação), disjuntivas (ou), conclusivas (logo; também portanto e por isso, advérbios de ligação), explicativas (pois, que).</p>",
+     "new": "<p><b>Coordenadas</b> (as orações ligam-se sem que nenhuma esteja dentro da outra):</p><table class=\\\"apoio-tabela\\\" role=\\\"table\\\"><thead role=\\\"rowgroup\\\"><tr role=\\\"row\\\"><th scope=\\\"col\\\" role=\\\"columnheader\\\">Tipo</th><th scope=\\\"col\\\" role=\\\"columnheader\\\">Conectores</th></tr></thead><tbody role=\\\"rowgroup\\\"><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">copulativas</th><td role=\\\"cell\\\" data-label=\\\"Conectores\\\">e, nem</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">adversativas</th><td role=\\\"cell\\\" data-label=\\\"Conectores\\\">mas; também porém, contudo, todavia, que são advérbios de ligação</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">disjuntivas</th><td role=\\\"cell\\\" data-label=\\\"Conectores\\\">ou</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">conclusivas</th><td role=\\\"cell\\\" data-label=\\\"Conectores\\\">logo; também portanto e por isso, advérbios de ligação</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">explicativas</th><td role=\\\"cell\\\" data-label=\\\"Conectores\\\">pois, que</td></tr></tbody></table>",
+     "occurrences": 1
+    },
+    {
+     "location": "M2-F07, cartão 7, Para entender (detalhe «Consultar os tipos de orações e os conectores», caixa «Subordinadas»)",
+     "old": "<p><b>Subordinadas</b> (uma ocupa um lugar dentro da outra): <b>substantivas</b> completivas (que, se) ou relativas sem antecedente; <b>adjetivas relativas</b> restritivas ou explicativas; <b>adverbiais</b> causais (porque), temporais (quando), condicionais (se), finais (para que), concessivas (embora), consecutivas (tão… que), comparativas (como).</p>",
+     "new": "<p><b>Subordinadas</b> (uma ocupa um lugar dentro da outra): <b>substantivas</b> completivas (que, se) ou relativas sem antecedente; <b>adjetivas relativas</b> restritivas ou explicativas; <b>adverbiais</b>:</p><table class=\\\"apoio-tabela\\\" role=\\\"table\\\"><thead role=\\\"rowgroup\\\"><tr role=\\\"row\\\"><th scope=\\\"col\\\" role=\\\"columnheader\\\">Tipo</th><th scope=\\\"col\\\" role=\\\"columnheader\\\">Conector</th></tr></thead><tbody role=\\\"rowgroup\\\"><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">causais</th><td role=\\\"cell\\\" data-label=\\\"Conector\\\">porque</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">temporais</th><td role=\\\"cell\\\" data-label=\\\"Conector\\\">quando</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">condicionais</th><td role=\\\"cell\\\" data-label=\\\"Conector\\\">se</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">finais</th><td role=\\\"cell\\\" data-label=\\\"Conector\\\">para que</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">concessivas</th><td role=\\\"cell\\\" data-label=\\\"Conector\\\">embora</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">consecutivas</th><td role=\\\"cell\\\" data-label=\\\"Conector\\\">tão… que</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">comparativas</th><td role=\\\"cell\\\" data-label=\\\"Conector\\\">como</td></tr></tbody></table>",
+     "occurrences": 1
+    },
+    {
+     "location": "M2-F07, cartão 2, Ler a cena: o bloco «Mãe: Tomai aquela cadeira.» com a marcação de verso",
+     "old": "<p><i>Mãe: Tomai aquela cadeira.<br>Pêro Marques: E que val aqui uma destas?<br>Inês (à parte): Ó Jesu! que João das bestas!<br>Olhai aquela canseira!</i></p>",
+     "new": "<p class=\\\"v\\\"><span class=\\\"ln\\\"><span class=\\\"n\\\"></span>Mãe: Tomai aquela cadeira.</span>\\n<span class=\\\"ln\\\"><span class=\\\"n\\\"></span>Pêro Marques: E que val aqui uma destas?</span>\\n<span class=\\\"ln\\\"><span class=\\\"n\\\"></span>Inês (à parte): Ó Jesu! que João das bestas!</span>\\n<span class=\\\"ln\\\"><span class=\\\"n\\\"></span>Olhai aquela canseira!</span></p>",
+     "occurrences": 1
+    },
+    {
+     "location": "M2-F07, cartão 2, Ler a cena: o bloco «Rubrica: Assentou-se com as costas pera elas, e diz:» com a marcação de verso",
+     "old": "<p><i>Rubrica: Assentou-se com as costas pera elas, e diz:</i></p>",
+     "new": "<p class=\\\"v\\\"><span class=\\\"ln\\\"><span class=\\\"n\\\"></span>Rubrica: Assentou-se com as costas pera elas, e diz:</span></p>",
+     "occurrences": 1
+    },
+    {
+     "location": "M2-F07, cartão 2, Ler a cena: o bloco «Pêro Marques: Eu cuido que não estou bem...» com a marcação de verso",
+     "old": "<p><i>Pêro Marques: Eu cuido que não estou bem...</i></p>",
+     "new": "<p class=\\\"v\\\"><span class=\\\"ln\\\"><span class=\\\"n\\\"></span>Pêro Marques: Eu cuido que não estou bem...</span></p>",
+     "occurrences": 1
+    },
+    {
+     "location": "M2-F07, cartão 2, Ler a cena: o bloco «Cuido que lhe trago aqui» com a marcação de verso",
+     "old": "<p><i>Cuido que lhe trago aqui<br>Pêras da minha pereira...<br>Hão-de estar na derradeira.<br>Tende ora, Inês, per i.<br>Inês: E isso hei-de ter na mão?<br>Pêro Marques: Deitae as peas no chão.<br>Inês: As perlas pera enfiar..<br>Três chocalhos e um novelo...<br>E as peias no capelo...<br>E as pêras? Onde estão?<br>Pêro Marques: Nunca tal me aconteceu!<br>Algum rapaz m'as comeu...</i></p>",
+     "new": "<p class=\\\"v\\\"><span class=\\\"ln\\\"><span class=\\\"n\\\"></span>Cuido que lhe trago aqui</span>\\n<span class=\\\"ln\\\"><span class=\\\"n\\\"></span>Pêras da minha pereira...</span>\\n<span class=\\\"ln\\\"><span class=\\\"n\\\"></span>Hão-de estar na derradeira.</span>\\n<span class=\\\"ln\\\"><span class=\\\"n\\\"></span>Tende ora, Inês, per i.</span>\\n<span class=\\\"ln\\\"><span class=\\\"n\\\"></span>Inês: E isso hei-de ter na mão?</span>\\n<span class=\\\"ln\\\"><span class=\\\"n\\\"></span>Pêro Marques: Deitae as peas no chão.</span>\\n<span class=\\\"ln\\\"><span class=\\\"n\\\"></span>Inês: As perlas pera enfiar..</span>\\n<span class=\\\"ln\\\"><span class=\\\"n\\\"></span>Três chocalhos e um novelo...</span>\\n<span class=\\\"ln\\\"><span class=\\\"n\\\"></span>E as peias no capelo...</span>\\n<span class=\\\"ln\\\"><span class=\\\"n\\\"></span>E as pêras? Onde estão?</span>\\n<span class=\\\"ln\\\"><span class=\\\"n\\\"></span>Pêro Marques: Nunca tal me aconteceu!</span>\\n<span class=\\\"ln\\\"><span class=\\\"n\\\"></span>Algum rapaz m'as comeu...</span></p>",
+     "occurrences": 1
+    },
+    {
+     "location": "M2-F07, cartão 3, Ler a cena: o bloco «Vidal: Esperai, aguardai ora!» com a marcação de verso",
+     "old": "<p><i>Vidal: Esperai, aguardai ora!<br>Soubemos dum escudeiro<br>De feição d'atafoneiro<br>Que virá logo essora,<br>Que fala... e com' ora fala!<br>Estrugirá esta sala.<br>E tange... e com' ora tange!</i></p>",
+     "new": "<p class=\\\"v\\\"><span class=\\\"ln\\\"><span class=\\\"n\\\"></span>Vidal: Esperai, aguardai ora!</span>\\n<span class=\\\"ln\\\"><span class=\\\"n\\\"></span>Soubemos dum escudeiro</span>\\n<span class=\\\"ln\\\"><span class=\\\"n\\\"></span>De feição d'atafoneiro</span>\\n<span class=\\\"ln\\\"><span class=\\\"n\\\"></span>Que virá logo essora,</span>\\n<span class=\\\"ln\\\"><span class=\\\"n\\\"></span>Que fala... e com' ora fala!</span>\\n<span class=\\\"ln\\\"><span class=\\\"n\\\"></span>Estrugirá esta sala.</span>\\n<span class=\\\"ln\\\"><span class=\\\"n\\\"></span>E tange... e com' ora tange!</span></p>",
+     "occurrences": 1
+    },
+    {
+     "location": "M2-F07, cartão 3, Ler a cena: o bloco «Escudeiro: E se me vires mentir» com a marcação de verso",
+     "old": "<p><i>Escudeiro: E se me vires mentir<br>Gabando-me de privado,<br>Está tu dissimulado,<br>Ou sai-te pera fora a rir<br>Isto te aviso daqui,<br>Faze-o por amor de mi.<br>Moço: Porém, senhor digo eu<br>Que mau calçado é o meu<br>Pera estas vistas assi.<br>Escudeiro: Que farei, que o sapateiro<br>Não tem solas nem tem pele?<br>Moço: Sapatos me daria ele,<br>Se me vós désseis dinheiro...<br>Escudeiro: Eu o haverei agora.<br>E mais calças te prometo.<br>Moço (à parte): Homem que não tem nem preto,<br>Casa muito na má hora.</i></p>",
+     "new": "<p class=\\\"v\\\"><span class=\\\"ln\\\"><span class=\\\"n\\\"></span>Escudeiro: E se me vires mentir</span>\\n<span class=\\\"ln\\\"><span class=\\\"n\\\"></span>Gabando-me de privado,</span>\\n<span class=\\\"ln\\\"><span class=\\\"n\\\"></span>Está tu dissimulado,</span>\\n<span class=\\\"ln\\\"><span class=\\\"n\\\"></span>Ou sai-te pera fora a rir</span>\\n<span class=\\\"ln\\\"><span class=\\\"n\\\"></span>Isto te aviso daqui,</span>\\n<span class=\\\"ln\\\"><span class=\\\"n\\\"></span>Faze-o por amor de mi.</span>\\n<span class=\\\"ln\\\"><span class=\\\"n\\\"></span>Moço: Porém, senhor digo eu</span>\\n<span class=\\\"ln\\\"><span class=\\\"n\\\"></span>Que mau calçado é o meu</span>\\n<span class=\\\"ln\\\"><span class=\\\"n\\\"></span>Pera estas vistas assi.</span>\\n<span class=\\\"ln\\\"><span class=\\\"n\\\"></span>Escudeiro: Que farei, que o sapateiro</span>\\n<span class=\\\"ln\\\"><span class=\\\"n\\\"></span>Não tem solas nem tem pele?</span>\\n<span class=\\\"ln\\\"><span class=\\\"n\\\"></span>Moço: Sapatos me daria ele,</span>\\n<span class=\\\"ln\\\"><span class=\\\"n\\\"></span>Se me vós désseis dinheiro...</span>\\n<span class=\\\"ln\\\"><span class=\\\"n\\\"></span>Escudeiro: Eu o haverei agora.</span>\\n<span class=\\\"ln\\\"><span class=\\\"n\\\"></span>E mais calças te prometo.</span>\\n<span class=\\\"ln\\\"><span class=\\\"n\\\"></span>Moço (à parte): Homem que não tem nem preto,</span>\\n<span class=\\\"ln\\\"><span class=\\\"n\\\"></span>Casa muito na má hora.</span></p>",
+     "occurrences": 1
+    },
+    {
+     "location": "M2-F07, cartão 4, Ler a cena: o bloco «Escudeiro: Vós cantais, Inês Pereira?» com a marcação de verso",
+     "old": "<p><i>Escudeiro: Vós cantais, Inês Pereira?<br>Em vodas m'andáveis vós?<br>Juro ao corpo de Deus<br>Que esta seja a derradeira!</i></p>",
+     "new": "<p class=\\\"v\\\"><span class=\\\"ln\\\"><span class=\\\"n\\\"></span>Escudeiro: Vós cantais, Inês Pereira?</span>\\n<span class=\\\"ln\\\"><span class=\\\"n\\\"></span>Em vodas m'andáveis vós?</span>\\n<span class=\\\"ln\\\"><span class=\\\"n\\\"></span>Juro ao corpo de Deus</span>\\n<span class=\\\"ln\\\"><span class=\\\"n\\\"></span>Que esta seja a derradeira!</span></p>",
+     "occurrences": 1
+    },
+    {
+     "location": "M2-F07, cartão 4, Ler a cena: o bloco «Vós não haveis de falar» com a marcação de verso",
+     "old": "<p><i>Vós não haveis de falar<br>Com homem nem mulher que seja;<br>Nem somente ir à igreja<br>Não vos quero eu leixar<br>Já vos preguei as janelas,<br>Por que não vos ponhais nelas.<br>Estareis aqui encerrada<br>Nesta casa, tão fechada<br>Como freira d'Oudivelas.</i></p>",
+     "new": "<p class=\\\"v\\\"><span class=\\\"ln\\\"><span class=\\\"n\\\"></span>Vós não haveis de falar</span>\\n<span class=\\\"ln\\\"><span class=\\\"n\\\"></span>Com homem nem mulher que seja;</span>\\n<span class=\\\"ln\\\"><span class=\\\"n\\\"></span>Nem somente ir à igreja</span>\\n<span class=\\\"ln\\\"><span class=\\\"n\\\"></span>Não vos quero eu leixar</span>\\n<span class=\\\"ln\\\"><span class=\\\"n\\\"></span>Já vos preguei as janelas,</span>\\n<span class=\\\"ln\\\"><span class=\\\"n\\\"></span>Por que não vos ponhais nelas.</span>\\n<span class=\\\"ln\\\"><span class=\\\"n\\\"></span>Estareis aqui encerrada</span>\\n<span class=\\\"ln\\\"><span class=\\\"n\\\"></span>Nesta casa, tão fechada</span>\\n<span class=\\\"ln\\\"><span class=\\\"n\\\"></span>Como freira d'Oudivelas.</span></p>",
+     "occurrences": 1
+    },
+    {
+     "location": "M2-F07, cartão 4, Ler a cena: o bloco «Inês: Que pecado foi o meu?» com a marcação de verso",
+     "old": "<p><i>Inês: Que pecado foi o meu?<br>Porque me dais tal prisão?<br>Escudeiro: Vós buscastes discrição,<br>Que culpa vos tenho eu?<br>Pode ser maior aviso,<br>Maior discrição e siso<br>Que guardar o meu tisouro?<br>Não sois vós, mulher meu ouro?<br>Que mal faço em guardar isso?</i></p>",
+     "new": "<p class=\\\"v\\\"><span class=\\\"ln\\\"><span class=\\\"n\\\"></span>Inês: Que pecado foi o meu?</span>\\n<span class=\\\"ln\\\"><span class=\\\"n\\\"></span>Porque me dais tal prisão?</span>\\n<span class=\\\"ln\\\"><span class=\\\"n\\\"></span>Escudeiro: Vós buscastes discrição,</span>\\n<span class=\\\"ln\\\"><span class=\\\"n\\\"></span>Que culpa vos tenho eu?</span>\\n<span class=\\\"ln\\\"><span class=\\\"n\\\"></span>Pode ser maior aviso,</span>\\n<span class=\\\"ln\\\"><span class=\\\"n\\\"></span>Maior discrição e siso</span>\\n<span class=\\\"ln\\\"><span class=\\\"n\\\"></span>Que guardar o meu tisouro?</span>\\n<span class=\\\"ln\\\"><span class=\\\"n\\\"></span>Não sois vós, mulher meu ouro?</span>\\n<span class=\\\"ln\\\"><span class=\\\"n\\\"></span>Que mal faço em guardar isso?</span></p>",
+     "occurrences": 1
+    },
+    {
+     "location": "M2-F07, cabeça: a folha das tabelas de apoio, antes da camada de aparência",
+     "old": "<link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-reading1\">",
+     "new": "<link rel=\"stylesheet\" href=\"../../assets/pt-lessons/apoios-tabelas.css?v=20261106.1\"><link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-reading1\">",
+     "occurrences": 1
+    },
+    {
+     "location": "M2-F07: «<figcaption>D. João III» com espaço que não quebra",
+     "old": "<figcaption>D. João III",
+     "new": "<figcaption>D. João III",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m2/licao-m2-f08/index.html": {
+   "base_sha256_lf": "8a769c5d9a3a49148ee87dbfacd93f5f4f7fa374e34f531b216ea6be22a7b080",
+   "after_sha256_lf": "a896b90194664af79430de80142ed5082176043082620437c73b149a84653ba4",
+   "edits": [
+    {
+     "location": "M2-F08: «180 a 240 palavras» com espaço que não quebra",
+     "old": "180 a 240 palavras",
+     "new": "180 a 240 palavras",
+     "occurrences": 1
+    },
+    {
+     "location": "M2-F08: «25 %» com espaço que não quebra",
+     "old": "25 %",
+     "new": "25 %",
+     "occurrences": 1
+    },
+    {
+     "location": "M2-F08: «D. Maria II» com espaço que não quebra",
+     "old": "D. Maria II",
+     "new": "D. Maria II",
+     "occurrences": 3
+    },
+    {
+     "location": "M2-F08: «(5 min)» com espaço que não quebra",
+     "old": "(5 min)",
+     "new": "(5 min)",
+     "occurrences": 2
+    },
+    {
+     "location": "M2-F08: «180–240 palavras» com espaço que não quebra",
+     "old": "180–240 palavras",
+     "new": "180–⁠240 palavras",
+     "occurrences": 1
+    },
+    {
+     "location": "M2-F08: «25 por cento» com espaço que não quebra",
+     "old": "25 por cento",
+     "new": "25 por cento",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m2/licao-m2-f09/index.html": {
+   "base_sha256_lf": "4b8d4fd80177b43f5f6e9a8247f204542f4440d9b048aea0085a9f2a6aae53ad",
+   "after_sha256_lf": "cba3ed3e887fc30ce0e70141fa192843716e63304723827a6ea98e73a32a73dc",
+   "edits": [
+    {
+     "location": "M2-F09, cartão 2, Para entender (detalhe «Desenvolver a proposta no projeto de turma», caixa «Roteiro da apresentação oral»)",
+     "old": "<p><b>Cinco minutos, quatro passos.</b> 1) O provérbio e o par asno/cavalo que escolheste (meio minuto). 2) O mapa: em que se transformou cada momento da farsa, e uma escolha de que te orgulhas (dois minutos). 3) Uma dificuldade e como a resolveste (um minuto). 4) A tua resposta à pergunta do módulo: <b>o que é que escolheste mudar na tua recontagem, e porquê?</b> (um minuto). Sobra meio minuto para uma pergunta da turma.</p>",
+     "new": "<p><b>Cinco minutos, quatro passos.</b></p><table class=\\\"apoio-tabela\\\" role=\\\"table\\\"><thead role=\\\"rowgroup\\\"><tr role=\\\"row\\\"><th scope=\\\"col\\\" role=\\\"columnheader\\\">Passo</th><th scope=\\\"col\\\" role=\\\"columnheader\\\">Conteúdo</th><th scope=\\\"col\\\" role=\\\"columnheader\\\">Tempo</th></tr></thead><tbody role=\\\"rowgroup\\\"><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">1</th><td role=\\\"cell\\\" data-label=\\\"Conteúdo\\\">O provérbio e o par asno/cavalo que escolheste</td><td role=\\\"cell\\\" data-label=\\\"Tempo\\\">meio minuto</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">2</th><td role=\\\"cell\\\" data-label=\\\"Conteúdo\\\">O mapa: em que se transformou cada momento da farsa, e uma escolha de que te orgulhas</td><td role=\\\"cell\\\" data-label=\\\"Tempo\\\">dois minutos</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">3</th><td role=\\\"cell\\\" data-label=\\\"Conteúdo\\\">Uma dificuldade e como a resolveste</td><td role=\\\"cell\\\" data-label=\\\"Tempo\\\">um minuto</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">4</th><td role=\\\"cell\\\" data-label=\\\"Conteúdo\\\">A tua resposta à pergunta do módulo: <b>o que é que escolheste mudar na tua recontagem, e porquê?</b></td><td role=\\\"cell\\\" data-label=\\\"Tempo\\\">um minuto</td></tr></tbody></table><p>Sobra meio minuto para uma pergunta da turma.</p>",
+     "occurrences": 1
+    },
+    {
+     "location": "M2-F09, cabeça: a folha das tabelas de apoio, antes da camada de aparência",
+     "old": "<link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-reading1\">",
+     "new": "<link rel=\"stylesheet\" href=\"../../assets/pt-lessons/apoios-tabelas.css?v=20261106.1\"><link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-reading1\">",
+     "occurrences": 1
+    },
+    {
+     "location": "M2-F09: «30 segundos» com espaço que não quebra",
+     "old": "30 segundos",
+     "new": "30 segundos",
+     "occurrences": 1
+    },
+    {
+     "location": "M2-F09: «(30 s)» com espaço que não quebra",
+     "old": "(30 s)",
+     "new": "(30 s)",
+     "occurrences": 2
+    },
+    {
+     "location": "M2-F09: «D. Maria II» com espaço que não quebra",
+     "old": "D. Maria II",
+     "new": "D. Maria II",
+     "occurrences": 2
+    },
+    {
+     "location": "M2-F09: «<figcaption>D. João III» com espaço que não quebra",
+     "old": "<figcaption>D. João III",
+     "new": "<figcaption>D. João III",
+     "occurrences": 1
+    },
+    {
+     "location": "M2-F09: «25 por cento» com espaço que não quebra",
+     "old": "25 por cento",
+     "new": "25 por cento",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m2/licao-m2-f10/index.html": {
+   "base_sha256_lf": "4146fece52b6be0193d7204f65491065c9e7f18db2824b86a060b7545eae90ed",
+   "after_sha256_lf": "43b1eb5398be4ea3ae15c65201744aa49ca682658423b9584e03f18f11b37fc5",
+   "edits": [
+    {
+     "location": "M2-F10: «3 de março» com espaço que não quebra (com o contexto «3 de março»»)",
+     "old": "3 de março»",
+     "new": "3 de março»",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m2/licao-m2-f11/index.html": {
+   "base_sha256_lf": "a2f863011abf8253968300522217af09b6ff311326347ff6ebe2ad43b8a4b79f",
+   "after_sha256_lf": "5dd0e39a638076cf0764d8e5029b1e730501e5026851c4dd499b0eee58c9bde2",
+   "edits": [
+    {
+     "location": "M2-F11: «100 a 130 palavras» com espaço que não quebra",
+     "old": "100 a 130 palavras",
+     "new": "100 a 130 palavras",
+     "occurrences": 2
+    }
+   ]
+  },
+  "m2/licao-m2-f12/index.html": {
+   "base_sha256_lf": "cb08ff0c730fe6cce6d5f35cf5876d237eae764cc5be1cf0050e2aeea9ebc629",
+   "after_sha256_lf": "a45cd6122b86bd0262178cbc02537aca5db6a766bfe787c0374dcfcf0312b76b",
+   "edits": [
+    {
+     "location": "M2-F12: «(3 min)» com espaço que não quebra",
+     "old": "(3 min)",
+     "new": "(3 min)",
+     "occurrences": 2
+    },
+    {
+     "location": "M2-F12: «(1 min)» com espaço que não quebra",
+     "old": "(1 min)",
+     "new": "(1 min)",
+     "occurrences": 2
+    }
+   ]
+  },
+  "m2/licao-m2-f13/index.html": {
+   "base_sha256_lf": "cd9b461fc29907b6d754fc5dd0f96ac37552cace72ff9194d578d9b608065a40",
+   "after_sha256_lf": "47dc95457e97a316ceb811d2a286e45164845e0451a69faecc2d5028c29344c5",
+   "edits": [
+    {
+     "location": "M2-F13: «(1 min)» com espaço que não quebra",
+     "old": "(1 min)",
+     "new": "(1 min)",
+     "occurrences": 2
+    }
+   ]
+  },
+  "m2/licao-m2-f14/index.html": {
+   "base_sha256_lf": "9dc7b1df41a6fd419bc300ddff238a958375b16e130c01517296a17cb432de98",
+   "after_sha256_lf": "c2119afd0558aa63bd7724736c0764cf5b59d64e5132b94998561e4c73900079",
+   "edits": [
+    {
+     "location": "M2-F14, cartão 12, Compara «A mesma forma, outros efeitos»: os exemplos A, B e C em lista",
+     "old": "<p>Exemplos criados para esta lição. A: Guardei a casinha de madeira da maqueta. B: A nossa casinha acolheu toda a família. C: É só uma casinha, não merece atenção.<\\/p>",
+     "new": "<p>Exemplos criados para esta lição.<\\/p><ul><li><b>A:<\\/b> Guardei a casinha de madeira da maqueta.<\\/li><li><b>B:<\\/b> A nossa casinha acolheu toda a família.<\\/li><li><b>C:<\\/b> É só uma casinha, não merece atenção.<\\/li><\\/ul>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m2/licao-m2-f15/index.html": {
+   "base_sha256_lf": "d9f9e0e41d372385f91b09129c9de1ef94482d36fdeebf05452d4461ec5eae3b",
+   "after_sha256_lf": "1fab061f572e32db77c1ce11b809e9529a348d0cb0cfb77235167312f77ee65a",
+   "edits": [
+    {
+     "location": "M2-F15: «17 de janeiro de 2023» com espaço que não quebra",
+     "old": "17 de janeiro de 2023",
+     "new": "17 de janeiro de 2023",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m2/m2-ines-escolhe-duas-vezes/index.html": {
+   "base_sha256_lf": "ac48153346362cfeddd8d00de02b40df2b49dffb17e791a199d1c010495cedad",
+   "after_sha256_lf": "e45892a7847024386edc0e15b0bc07fc78f569aebd207fcece9e51cc1c4d37f5",
+   "edits": [
+    {
+     "location": "m2/m2-ines-escolhe-duas-vezes: «22 min» com espaço que não quebra",
+     "old": "22 min",
+     "new": "22 min",
+     "occurrences": 1
+    },
+    {
+     "location": "m2/m2-ines-escolhe-duas-vezes: «1.º ano» com espaço que não quebra",
+     "old": "1.º ano",
+     "new": "1.º ano",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m2/m2-maquina-de-rir/index.html": {
+   "base_sha256_lf": "a9488a9d9777c4ab330dc57efa34ffdcfb866175e68562730dd7a97aa0c30562",
+   "after_sha256_lf": "80db98f00a6fc98463bf2b7878ebf07a4dcb069fe77dd8313f356961e9fbc68e",
+   "edits": [
+    {
+     "location": "m2/m2-maquina-de-rir, item 6, Ato 2 «As peças da máquina»",
+     "old": "<p>As peças têm nome nas lições. A personagem-tipo: cada figura é um tipo social, o lavrador rico e simples, o fidalgo pobre que se gaba, a alcoviteira que vende, o falso religioso, e entra vestida do que é. A rubrica, texto secundário, manda o gesto: «Assentou-se com as costas pera elas».</p><p>O aparte: a fala que só a sala ouve, «Ó Jesu! que João das bestas!». O monólogo: a fala de quem está só em cena. O duplo sentido: a palavra que uma personagem ouve de uma maneira e a sala de outra, como «mor gado» e «morgado». Lê a fala de Pêro com estas peças na cabeça.</p>",
+     "new": "<p>As peças têm nome nas lições.</p><table class=\\\"apoio-tabela\\\" role=\\\"table\\\"><thead role=\\\"rowgroup\\\"><tr role=\\\"row\\\"><th scope=\\\"col\\\" role=\\\"columnheader\\\">Peça</th><th scope=\\\"col\\\" role=\\\"columnheader\\\">O que faz</th><th scope=\\\"col\\\" role=\\\"columnheader\\\">Exemplo</th></tr></thead><tbody role=\\\"rowgroup\\\"><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">A personagem-tipo</th><td role=\\\"cell\\\" data-label=\\\"O que faz\\\">cada figura é um tipo social e entra vestida do que é</td><td role=\\\"cell\\\" data-label=\\\"Exemplo\\\">o lavrador rico e simples, o fidalgo pobre que se gaba, a alcoviteira que vende, o falso religioso</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">A rubrica</th><td role=\\\"cell\\\" data-label=\\\"O que faz\\\">texto secundário, manda o gesto</td><td role=\\\"cell\\\" data-label=\\\"Exemplo\\\">«Assentou-se com as costas pera elas»</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">O aparte</th><td role=\\\"cell\\\" data-label=\\\"O que faz\\\">a fala que só a sala ouve</td><td role=\\\"cell\\\" data-label=\\\"Exemplo\\\">«Ó Jesu! que João das bestas!»</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">O monólogo</th><td role=\\\"cell\\\" data-label=\\\"O que faz\\\">a fala de quem está só em cena</td><td role=\\\"cell\\\"></td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">O duplo sentido</th><td role=\\\"cell\\\" data-label=\\\"O que faz\\\">a palavra que uma personagem ouve de uma maneira e a sala de outra</td><td role=\\\"cell\\\" data-label=\\\"Exemplo\\\">«mor gado» e «morgado»</td></tr></tbody></table><p>Lê a fala de Pêro com estas peças na cabeça.</p>",
+     "occurrences": 1
+    },
+    {
+     "location": "m2/m2-maquina-de-rir, cabeça: a folha das tabelas de apoio, antes da camada de aparência",
+     "old": "<link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-universal-1\">",
+     "new": "<link rel=\"stylesheet\" href=\"../../assets/pt-lessons/apoios-tabelas.css?v=20261106.1\"><link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-universal-1\">",
+     "occurrences": 1
+    },
+    {
+     "location": "m2/m2-maquina-de-rir: «20 min» com espaço que não quebra",
+     "old": "20 min",
+     "new": "20 min",
+     "occurrences": 1
+    },
+    {
+     "location": "m2/m2-maquina-de-rir: «1.º ano» com espaço que não quebra",
+     "old": "1.º ano",
+     "new": "1.º ano",
+     "occurrences": 1
+    },
+    {
+     "location": "m2/m2-maquina-de-rir: «D. João III» com espaço que não quebra",
+     "old": "D. João III",
+     "new": "D. João III",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m2/mapa-do-modulo-m2/index.html": {
+   "base_sha256_lf": "4b8c496d97b9dcd2ac92c72e843cc83824fa2cd2bb61b6a71a30eaaeff28245b",
+   "after_sha256_lf": "7932f08188f699f8a06432ff6c90803d8561d6a4dfb8e6fae8f4465e18e4ced5",
+   "edits": [
+    {
+     "location": "m2/mapa-do-modulo-m2: «90 min» com espaço que não quebra",
+     "old": "90 min",
+     "new": "90 min",
+     "occurrences": 2
+    },
+    {
+     "location": "m2/mapa-do-modulo-m2: «45 minutos» com espaço que não quebra",
+     "old": "45 minutos",
+     "new": "45 minutos",
+     "occurrences": 1
+    },
+    {
+     "location": "m2/mapa-do-modulo-m2: «30 %» com espaço que não quebra",
+     "old": "30 %",
+     "new": "30 %",
+     "occurrences": 4
+    },
+    {
+     "location": "m2/mapa-do-modulo-m2: «10 %» com espaço que não quebra",
+     "old": "10 %",
+     "new": "10 %",
+     "occurrences": 1
+    },
+    {
+     "location": "m2/mapa-do-modulo-m2: «1.º ano» com espaço que não quebra",
+     "old": "1.º ano",
+     "new": "1.º ano",
+     "occurrences": 2
+    },
+    {
+     "location": "m2/mapa-do-modulo-m2: «Lição M2-F01</a>» com espaço que não quebra",
+     "old": "Lição M2-F01</a>",
+     "new": "Lição M2-⁠F01</a>",
+     "occurrences": 4
+    },
+    {
+     "location": "m2/mapa-do-modulo-m2: «perante D. João III» com espaço que não quebra",
+     "old": "perante D. João III",
+     "new": "perante D. João III",
+     "occurrences": 2
+    },
+    {
+     "location": "m2/mapa-do-modulo-m2: «<p class=\"info-i-texto\">D. João III» com espaço que não quebra",
+     "old": "<p class=\"info-i-texto\">D. João III",
+     "new": "<p class=\"info-i-texto\">D. João III",
+     "occurrences": 1
+    },
+    {
+     "location": "m2/mapa-do-modulo-m2: «<figcaption>D. João III» com espaço que não quebra",
+     "old": "<figcaption>D. João III",
+     "new": "<figcaption>D. João III",
+     "occurrences": 1
+    },
+    {
+     "location": "m2/mapa-do-modulo-m2: «c. 1465–c. 1536» com espaço que não quebra",
+     "old": "c. 1465–c. 1536",
+     "new": "c. 1465–⁠c. 1536",
+     "occurrences": 2
+    }
+   ]
+  },
+  "m2/portefolio-do-modulo-m2/index.html": {
+   "base_sha256_lf": "0b64f3383f8bf97715d5c1cd9b0d7c38cdff07283676394080dcc7be25f08520",
+   "after_sha256_lf": "0a0b34cab62119c385fb4b08997eeab41b907294f60220ddf8ee4e6c5e890da1",
+   "edits": [
+    {
+     "location": "m2/portefolio-do-modulo-m2, secção «A lista de verificação»: a tabela dos ficheiros com cabeçalho, nomes inteiros e linhas que empilham no telemóvel",
+     "old": "<table><tr><th style=\"width:36%\">Nome do ficheiro</th><th>O que é</th></tr><tr><td><code>M2_capa</code></td><td>Capa: nome, turma, módulo, data de início e de fim.</td></tr><tr><td><code>M2_cartao-do-percurso</code></td><td>Registo anterior, facultativo. Se já o guardaste, conserva-o; não é preciso gerar outro cartão.</td></tr><tr><td>M2_U1_folha_&lt;dia-mês&gt;</td><td>Unidade 1, «Ler a Farsa: desejos, escolhas e consequências»: registo da aula, com nome e data.</td></tr><tr><td>M2_U1_pergunta</td><td>Como transformam as escolhas de Inês o seu desejo de liberdade? Síntese de duas linhas no papel da aula de tarefa, fotografada com o trabalho. Recupera essa entrega, sem fazer outra síntese.</td></tr><tr><td>M2_U1_o-que-aprendi</td><td>Recupera a síntese da aula de tarefa. Conserva outras reflexões já feitas, sem produzir uma nova.</td></tr><tr><td>M2_U2_folha_&lt;dia-mês&gt;</td><td>Unidade 2, «Interpretar e representar: crítica, cena e atualidade»: registo da aula, com nome e data.</td></tr><tr><td>M2_U2_pergunta</td><td>Como sustentar uma leitura da Farsa e transformá-la numa proposta de representação? Síntese de duas linhas no papel da aula de tarefa, fotografada com o trabalho. Recupera essa entrega, sem fazer outra síntese.</td></tr><tr><td>M2_U2_o-que-aprendi</td><td>Recupera a síntese da aula de tarefa. Conserva outras reflexões já feitas, sem produzir uma nova.</td></tr><tr><td><code>M2_Tarefa1</code></td><td>Tarefa 1, «Apreciação crítica da <i>Farsa de Inês Pereira</i> no teatro»: o produto entregue (ou a ligação) e uma linha: o que fiz, o que corrigi depois da devolução.</td></tr><tr><td><code>M2_Tarefa2</code></td><td>Tarefa 2, «Recontagem contemporânea da farsa em vídeo»: o teu produto, ou a ligação para ele.</td></tr><tr><td><code>M2_Tarefa3</code></td><td>Tarefa 3, «Dois anúncios de casamento»: o teu produto, ou a ligação para ele.</td></tr><tr><td><code>M2_Revisao1</code></td><td>A Revisão 1, corrigida e somada, fotografada na própria aula.</td></tr><tr><td><code>M2_Revisao2</code></td><td>A Revisão 2, corrigida e somada, fotografada na própria aula.</td></tr><tr><td><code>M2_Prova-escrita</code></td><td>A prova escrita, corrigida, fotografada quando te for devolvida.</td></tr><tr><td><code>M2_balanco</code></td><td>Usa os trabalhos já entregues se o docente pedir o balanço previsto. Os registos anteriores são facultativos; mantêm-se os parâmetros e as ponderações.</td></tr></table>",
+     "new": "<table class=\"lista-ficheiros\"><thead><tr><th scope=\"col\">Nome do ficheiro</th><th scope=\"col\">O que é</th></tr></thead><tbody><tr><td data-th=\"Nome do ficheiro\"><code>M2_capa</code></td><td data-th=\"O que é\">Capa: nome, turma, módulo, data de início e de fim.</td></tr><tr><td data-th=\"Nome do ficheiro\"><code>M2_cartao-do-percurso</code></td><td data-th=\"O que é\">Registo anterior, facultativo. Se já o guardaste, conserva-o; não é preciso gerar outro cartão.</td></tr><tr><td data-th=\"Nome do ficheiro\"><code>M2_U1_folha_&lt;dia-mês&gt;</code></td><td data-th=\"O que é\">Unidade 1, «Ler a Farsa: desejos, escolhas e consequências»: registo da aula, com nome e data.</td></tr><tr><td data-th=\"Nome do ficheiro\"><code>M2_U1_pergunta</code></td><td data-th=\"O que é\">Como transformam as escolhas de Inês o seu desejo de liberdade? Síntese de duas linhas no papel da aula de tarefa, fotografada com o trabalho. Recupera essa entrega, sem fazer outra síntese.</td></tr><tr><td data-th=\"Nome do ficheiro\"><code>M2_U1_o-que-aprendi</code></td><td data-th=\"O que é\">Recupera a síntese da aula de tarefa. Conserva outras reflexões já feitas, sem produzir uma nova.</td></tr><tr><td data-th=\"Nome do ficheiro\"><code>M2_U2_folha_&lt;dia-mês&gt;</code></td><td data-th=\"O que é\">Unidade 2, «Interpretar e representar: crítica, cena e atualidade»: registo da aula, com nome e data.</td></tr><tr><td data-th=\"Nome do ficheiro\"><code>M2_U2_pergunta</code></td><td data-th=\"O que é\">Como sustentar uma leitura da Farsa e transformá-la numa proposta de representação? Síntese de duas linhas no papel da aula de tarefa, fotografada com o trabalho. Recupera essa entrega, sem fazer outra síntese.</td></tr><tr><td data-th=\"Nome do ficheiro\"><code>M2_U2_o-que-aprendi</code></td><td data-th=\"O que é\">Recupera a síntese da aula de tarefa. Conserva outras reflexões já feitas, sem produzir uma nova.</td></tr><tr><td data-th=\"Nome do ficheiro\"><code>M2_Tarefa1</code></td><td data-th=\"O que é\">Tarefa 1, «Apreciação crítica da <i>Farsa de Inês Pereira</i> no teatro»: o produto entregue (ou a ligação) e uma linha: o que fiz, o que corrigi depois da devolução.</td></tr><tr><td data-th=\"Nome do ficheiro\"><code>M2_Tarefa2</code></td><td data-th=\"O que é\">Tarefa 2, «Recontagem contemporânea da farsa em vídeo»: o teu produto, ou a ligação para ele.</td></tr><tr><td data-th=\"Nome do ficheiro\"><code>M2_Tarefa3</code></td><td data-th=\"O que é\">Tarefa 3, «Dois anúncios de casamento»: o teu produto, ou a ligação para ele.</td></tr><tr><td data-th=\"Nome do ficheiro\"><code>M2_Revisao1</code></td><td data-th=\"O que é\">A Revisão 1, corrigida e somada, fotografada na própria aula.</td></tr><tr><td data-th=\"Nome do ficheiro\"><code>M2_Revisao2</code></td><td data-th=\"O que é\">A Revisão 2, corrigida e somada, fotografada na própria aula.</td></tr><tr><td data-th=\"Nome do ficheiro\"><code>M2_Prova-escrita</code></td><td data-th=\"O que é\">A prova escrita, corrigida, fotografada quando te for devolvida.</td></tr><tr><td data-th=\"Nome do ficheiro\"><code>M2_balanco</code></td><td data-th=\"O que é\">Usa os trabalhos já entregues se o docente pedir o balanço previsto. Os registos anteriores são facultativos; mantêm-se os parâmetros e as ponderações.</td></tr></tbody></table>",
+     "occurrences": 1
+    },
+    {
+     "location": "m2/portefolio-do-modulo-m2, cabeça (<style> da página): as regras da lista dos ficheiros",
+     "old": "code{font:.85rem Consolas,\"Courier New\",monospace;border:1px solid var(--tinta);padding:1px 4px}\n",
+     "new": "code{font:.85rem Consolas,\"Courier New\",monospace;border:1px solid var(--tinta);padding:1px 4px}\n.lista-ficheiros code{white-space:nowrap}@media (max-width:560px){.lista-ficheiros,.lista-ficheiros tbody,.lista-ficheiros tr,.lista-ficheiros td{display:block;width:auto}.lista-ficheiros thead{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}.lista-ficheiros tr{border-top:2px solid currentColor;padding:6px 0}.lista-ficheiros td{border:0;padding:2px 0}}\n",
+     "occurrences": 1
+    },
+    {
+     "location": "m2/portefolio-do-modulo-m2: «1.º ano» com espaço que não quebra",
+     "old": "1.º ano",
+     "new": "1.º ano",
+     "occurrences": 2
+    }
+   ]
+  },
+  "tarefas/m2-u1/aquecimento/index.html": {
+   "base_sha256_lf": "a45d690cf5bbaad14bddb5341c46d0efc7367e619c69144ea9c3cf918eb1464e",
+   "after_sha256_lf": "a492ba0e6fffe799f8e888316e2a9494f172197e91eff640cb653255dacf2a15",
+   "edits": [
+    {
+     "location": "tarefas/m2-u1/aquecimento: «180 a 240 palavras» com espaço que não quebra",
+     "old": "180 a 240 palavras",
+     "new": "180 a 240 palavras",
+     "occurrences": 1
+    }
+   ]
+  },
+  "tarefas/m2-u1/index.html": {
+   "base_sha256_lf": "d4d480391fe33ec76041986acb992cda499532c162d8e5f383fec8294bc4197f",
+   "after_sha256_lf": "31e838c4024a406e2fb3da907cf308f384399ca95ddb95b4eb152d54c5ad80ca",
+   "edits": [
+    {
+     "location": "tarefas/m2-u1: «10 min» com espaço que não quebra (com o contexto «10 min »)",
+     "old": "10 min ",
+     "new": "10 min ",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m2-u1: «10 min» com espaço que não quebra (com o contexto «10 minutos»)",
+     "old": "10 minutos",
+     "new": "10 minutos",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m2-u1: «5 minutos» com espaço que não quebra (com o contexto « 5 minutos»)",
+     "old": " 5 minutos",
+     "new": " 5 minutos",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m2-u1: «5 minutos» com espaço que não quebra (com o contexto «15 minutos»)",
+     "old": "15 minutos",
+     "new": "15 minutos",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m2-u1: «60 minutos» com espaço que não quebra",
+     "old": "60 minutos",
+     "new": "60 minutos",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m2-u1: «90 minutos» com espaço que não quebra",
+     "old": "90 minutos",
+     "new": "90 minutos",
+     "occurrences": 2
+    },
+    {
+     "location": "tarefas/m2-u1: «90 min» com espaço que não quebra (com o contexto «90 min<»)",
+     "old": "90 min<",
+     "new": "90 min<",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m2-u1: «180 a 240 palavras» com espaço que não quebra",
+     "old": "180 a 240 palavras",
+     "new": "180 a 240 palavras",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m2-u1: «80 a 140» com espaço que não quebra",
+     "old": "80 a 140",
+     "new": "80 a 140",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m2-u1: «180 e 240 palavras» com espaço que não quebra",
+     "old": "180 e 240 palavras",
+     "new": "180 e 240 palavras",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m2-u1: «D. João III» com espaço que não quebra",
+     "old": "D. João III",
+     "new": "D. João III",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m2-u1: «D. Maria II» com espaço que não quebra",
+     "old": "D. Maria II",
+     "new": "D. Maria II",
+     "occurrences": 1
+    }
+   ]
+  },
+  "tarefas/m2-u2/aquecimento/index.html": {
+   "base_sha256_lf": "d4a665bb6a3e775f9488bd430fa3c5e05c7df8e3155a9ed09ffa45fe830466b7",
+   "after_sha256_lf": "19a89a2e6149f5440940adf01c04b68b38d5b36726f1b9a3df9006de0aef704d",
+   "edits": [
+    {
+     "location": "tarefas/m2-u2/aquecimento: «230 palavras» com espaço que não quebra",
+     "old": "230 palavras",
+     "new": "230 palavras",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m2-u2/aquecimento: «70 palavras» com espaço que não quebra",
+     "old": "70 palavras",
+     "new": "70 palavras",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m2-u2/aquecimento: «200 a 260 palavras» com espaço que não quebra",
+     "old": "200 a 260 palavras",
+     "new": "200 a 260 palavras",
+     "occurrences": 2
+    },
+    {
+     "location": "tarefas/m2-u2/aquecimento: «50 a 80» com espaço que não quebra",
+     "old": "50 a 80",
+     "new": "50 a 80",
+     "occurrences": 2
+    }
+   ]
+  },
+  "tarefas/m2-u2/index.html": {
+   "base_sha256_lf": "9d2a97bac65f85c723d4ebe10074d62ceae9e9ef2983d911dafc516fd3d63de4",
+   "after_sha256_lf": "ff8c8752b03c5b77d280dddf3463995c5ccc898003a231130a75c8b74debc033",
+   "edits": [
+    {
+     "location": "tarefas/m2-u2: «10 min» com espaço que não quebra (com o contexto «10 min »)",
+     "old": "10 min ",
+     "new": "10 min ",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m2-u2: «10 min» com espaço que não quebra (com o contexto «10 minutos»)",
+     "old": "10 minutos",
+     "new": "10 minutos",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m2-u2: «5 minutos» com espaço que não quebra (com o contexto « 5 minutos»)",
+     "old": " 5 minutos",
+     "new": " 5 minutos",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m2-u2: «5 minutos» com espaço que não quebra (com o contexto «15 minutos»)",
+     "old": "15 minutos",
+     "new": "15 minutos",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m2-u2: «60 minutos» com espaço que não quebra",
+     "old": "60 minutos",
+     "new": "60 minutos",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m2-u2: «90 minutos» com espaço que não quebra",
+     "old": "90 minutos",
+     "new": "90 minutos",
+     "occurrences": 2
+    },
+    {
+     "location": "tarefas/m2-u2: «90 min» com espaço que não quebra (com o contexto «90 min<»)",
+     "old": "90 min<",
+     "new": "90 min<",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m2-u2: «200 a 260 palavras» com espaço que não quebra",
+     "old": "200 a 260 palavras",
+     "new": "200 a 260 palavras",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m2-u2: «100 a 160» com espaço que não quebra",
+     "old": "100 a 160",
+     "new": "100 a 160",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m2-u2: «50 a 80 palavras» com espaço que não quebra",
+     "old": "50 a 80 palavras",
+     "new": "50 a 80 palavras",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m2-u2: «200 e 260 palavras» com espaço que não quebra",
+     "old": "200 e 260 palavras",
+     "new": "200 e 260 palavras",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m2-u2: «D. João III» com espaço que não quebra",
+     "old": "D. João III",
+     "new": "D. João III",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m2-u2: «D. Maria II» com espaço que não quebra",
+     "old": "D. Maria II",
+     "new": "D. Maria II",
+     "occurrences": 2
+    }
+   ]
+  },
+  "docs/pedagogia/aquecimentos/m2-u1.json": {
+   "base_sha256_lf": "56ad90550e93399b6ab7869f0b09b9ec1e0c5602f92f589afaffd7f039f7fcd8",
+   "after_sha256_lf": "6ff6c999abc202b2201b5f20ea5bcce1d50c1c83b0015460585aad9bc10b03f7",
+   "edits": [
+    {
+     "location": "Dados aquecimentos/m2-u1.json: «180 a 240 palavras» com espaço que não quebra",
+     "old": "180 a 240 palavras",
+     "new": "180 a 240 palavras",
+     "occurrences": 1
+    }
+   ]
+  },
+  "docs/pedagogia/aquecimentos/m2-u2.json": {
+   "base_sha256_lf": "71efca3f5d62b50c70cf5836c0c6385ff4e604eadf27d0a9f473bf911680d5cf",
+   "after_sha256_lf": "a251c0651060e3f4e295990e178d7224beacf634bc54267760a9e3901626b25f",
+   "edits": [
+    {
+     "location": "Dados aquecimentos/m2-u2.json: «230 palavras» com espaço que não quebra",
+     "old": "230 palavras",
+     "new": "230 palavras",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados aquecimentos/m2-u2.json: «70 palavras» com espaço que não quebra",
+     "old": "70 palavras",
+     "new": "70 palavras",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados aquecimentos/m2-u2.json: «200 a 260 palavras» com espaço que não quebra",
+     "old": "200 a 260 palavras",
+     "new": "200 a 260 palavras",
+     "occurrences": 2
+    },
+    {
+     "location": "Dados aquecimentos/m2-u2.json: «50 a 80» com espaço que não quebra",
+     "old": "50 a 80",
+     "new": "50 a 80",
+     "occurrences": 2
+    }
+   ]
+  }
+ }
+}
