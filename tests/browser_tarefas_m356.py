@@ -36,8 +36,11 @@ def main():
                     page.locator('#arquivo-producoes summary').click()
                     page.locator('button.tarefa').first.click()
                     page.locator('#rota').wait_for(state='visible')
+                    # 08/11/2026: decisão 152 no M3 (achado 43): no guia do M3, o número e a unidade não se partem (U+00A0); nos
+                    # outros, como estava. Os mesmos quatro blocos, pela mesma ordem.
+                    sep = '\xa0' if m == 3 else ' '
                     assert page.locator('#blocos .bloco b').all_inner_texts() == [
-                        'Aquecer, 10 min', 'Ler o enunciado, 5 min', 'Produzir, 60 min', 'Rever e entregar, 15 min']
+                        f'Aquecer, 10{sep}min', f'Ler o enunciado, 5{sep}min', f'Produzir, 60{sep}min', f'Rever e entregar, 15{sep}min']
                     assert page.locator('#r-exemplo').is_hidden()
                     sem_deslizar(page, f'm{m} guia {width}')
                     assert not errors, errors

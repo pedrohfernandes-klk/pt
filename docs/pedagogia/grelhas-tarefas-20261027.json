@@ -378,6 +378,7 @@
   "m3-u1": {
    "modulo": "M3",
    "unidade": 1,
+   "nao_partir": true,
    "titulo": "Quem canta, quem cala: as vozes de Camões",
    "produto": "Núcleo comum (duas respostas) e um tema à escolha (A ou B), à mão, entre 200 e 240 palavras, mais duas linhas finais que não contam para as palavras. O aquecimento em cartões não conta para a nota.",
    "nota": "Os exemplos foram escritos para esta grelha com outros casos do mesmo tipo (a pimenta, o perdigão, a redondilha de Bárbara, outro soneto, um autocarro, o frontispício da primeira edição da epopeia), nunca com as passagens nem com os factos da tarefa. As citações entre «» vêm das lições do módulo; as frases e os versos sem «» foram escritos para esta grelha, e os factos que usam vêm das lições F04, F13 e F16.",
@@ -465,7 +466,7 @@
       ],
       "max": [
        "Cumpres os cinco elementos do teu tema (um ponto cada) e dás a explicação (mais um ponto). Tema A: um mote de dois versos e uma volta de cinco, em redondilha maior; a volta acaba no último verso do mote; um retrato com cores e uma hipérbole; dois versos divididos em sílabas; uma diferença entre a tua Leonor e a de Camões. Explicação: o verso de Camões que imitaste, citado, e o que imitaste dele. Tema B: a imagem descrita em duas frases; dois factos do dossiê (contam como dois); um verso da Proposição ou do Velho do Restelo, com canto e estância; o que a legenda não pode afirmar. Explicação: a razão por que puseste esse verso ao lado da imagem.",
-       "A, com outra figura e outro modelo (um autocarro, à maneira de «Perdigão perdeu a pena»): Vem o autocarro das sete, / e ninguém o vê chegar. // Traz o tejadilho cinza, / as portas cor de limão, / demora mais do que um século / a subir o quarteirão; / e ninguém o vê chegar. Divisões: As / por / tas / cor / de / li / mão, sete; De / mo / ra / mais / do / que_um / sé(culo), sete. Imitei a forma de «Perdigão perdeu a pena»: um mote de dois versos, e o último a fechar a volta. A diferença: o perdigão cai por querer subir alto; o meu autocarro nem consegue subir a rua. B, com outra imagem (o frontispício da primeira edição de _Os Lusíadas_, que abre a lição F13): Uma página de rosto antiga, com o título ao centro, entre duas colunas torcidas, e uma ave de asas abertas no alto. Em baixo, a data, 1572. Factos: é a epopeia tal como saiu em 1572; a imagem está em domínio público e vem da Academia Brasileira de Letras. Ao lado, «Contra um bicho da terra tão pequeno?» (I, 106), porque um livro solene guarda um verso que faz o homem pequeno. O que a legenda não pode afirmar: que este exemplar foi de Camões, porque nenhuma das fontes o diz."
+       "A, com outra figura e outro modelo (um autocarro, à maneira de «Perdigão perdeu a pena»): Vem o autocarro das sete, / e ninguém o vê chegar. // Traz o tejadilho cinza, / as portas cor de limão, / demora mais do que um século / a subir o quarteirão; / e ninguém o vê chegar. Divisões: As / por / tas / cor / de / li / mão, sete; De / mo / ra / mais / do / que_um / sé(culo), sete. Imitei a forma de «Perdigão perdeu a pena»: um mote de dois versos, e o último a fechar a volta. A diferença: o perdigão cai por querer subir alto; o meu autocarro nem consegue subir a rua. B, com outra imagem (o frontispício da primeira edição de _Os Lusíadas_, que abre a lição F13): Uma página de rosto antiga, com o título ao centro, entre duas colunas torcidas, e uma ave de asas abertas no alto. Em baixo, a data, 1572. Factos: é a epopeia tal como saiu em 1572; a imagem está em domínio público e vem da Academia Brasileira de Letras. Ao lado, «Contra um bicho da terra tão pequeno?» (I, 106), porque um livro solene guarda um verso que faz o homem pequeno. O que a legenda não pode afirmar: que este exemplar foi de Camões, porque nenhuma das fontes o diz."
       ]
      },
      "custa": [
@@ -479,7 +480,7 @@
      "max": 3,
      "niveis": {
       "0": [
-       "Respostas soltas, ou muito fora das 200 a 240 palavras.",
+       "Respostas soltas, ou muito fora das 200 a 240 palavras.",
        "Três listas de palavras sem frases completas."
       ],
       "parcial": [
@@ -502,9 +503,10 @@
   "m3-u2": {
    "modulo": "M3",
    "unidade": 2,
+   "nao_partir": true,
    "titulo": "Nô mais: do canto alto ao silêncio",
    "produto": "Núcleo comum (duas respostas) e um tema à escolha (A ou B), à mão, entre 200 e 250 palavras, mais duas linhas finais que não contam para as palavras. O aquecimento em cartões não conta para a nota.",
-   "nota": "Os exemplos foram escritos para esta grelha com outros casos do mesmo tipo (I, 106 e IX, 92, «Tanto de meu estado me acho incerto», uma frase inventada, uma reflexão sobre o barulho, a voz de I, 106 contra uma partida inventada de outro século), nunca com as passagens, os versos nem os factos da tarefa. As citações entre «» vêm das lições do módulo; as frases e as linhas sem «» foram escritas para esta grelha, e a data que usam vem das lições.",
+   "nota": "Os exemplos foram escritos para esta grelha com outros casos do mesmo tipo (I, 106 e IX, 92, «Tanto de meu estado me acho incerto», uma frase inventada, uma reflexão sobre o barulho, a voz de I, 106 contra uma partida inventada de outro século), nunca com as passagens, os versos nem os factos da tarefa. As citações entre «» vêm das lições do módulo; as frases e as linhas sem «» foram escritas para esta grelha, e a data que usam vem das lições.",
    "criterios": [
     {
      "nome": "Tese na primeira frase",
@@ -512,15 +514,15 @@
      "niveis": {
       "0": [
        "Não há tese, ou a primeira frase não diz o que defendes.",
-       "Noutro caso: Neste texto vou falar de I, 106."
+       "Noutro caso: Neste texto vou falar de I, 106."
       ],
       "parcial": [
        "Há uma tese, mas é um facto ou um resumo, ou não está na primeira frase, ou a resposta não a prova.",
-       "Noutro caso: Em I, 106, o Poeta fala do mar e da terra."
+       "Noutro caso: Em I, 106, o Poeta fala do mar e da terra."
       ],
       "max": [
        "A primeira frase defende uma leitura que outra pessoa poderia contestar com versos, e o resto da resposta prova-a.",
-       "Noutro par de passagens: O Poeta encolhe o homem em I, 106 e manda-o crescer em IX, 92: a pequenez é o ponto de partida da fama."
+       "Noutro par de passagens: O Poeta encolhe o homem em I, 106 e manda-o crescer em IX, 92: a pequenez é o ponto de partida da fama."
       ]
      },
      "custa": [
@@ -543,7 +545,7 @@
       ],
       "max": [
        "Uma citação de cada passagem, letra a letra e entre «», com o canto e a estância, e explicada: o que o verso mostra e como prova a tese.",
-       "Noutro par: «Contra um bicho da terra tão pequeno?» (I, 106): a metáfora tira ao homem a grandeza da viagem. «Despertai já do sono do ócio ignavo» (IX, 92): o imperativo manda-o acordar. O homem pequeno é o que ainda não fez obras; a fama começa quando acorda."
+       "Noutro par: «Contra um bicho da terra tão pequeno?» (I, 106): a metáfora tira ao homem a grandeza da viagem. «Despertai já do sono do ócio ignavo» (IX, 92): o imperativo manda-o acordar. O homem pequeno é o que ainda não fez obras; a fama começa quando acorda."
       ]
      },
      "custa": [
@@ -588,12 +590,12 @@
        "A: quatro linhas que começam por O barulho, sem disfarce no fim e sem verso imitado. B: um só argumento, sem estância, e uma resposta que fala de outra coisa."
       ],
       "max": [
-       "Cumpres os cinco elementos do teu tema (um ponto cada) e a ligação (mais um ponto). Tema A: seis linhas que param uma cena e julgam uma coisa de hoje; «Este» ou «Esta» a abrir quatro linhas; uma enumeração do que essa coisa faz; um disfarce na última linha; o verso de VIII, 98 ou 99 que imitaste, citado. Ligação: o que imitaste do verso citado e o que retoma o teu «Este». Tema B: uma partida de hoje que é uma coisa, nunca uma pessoa; dois argumentos do Velho transpostos, cada um com a expressão de Camões citada e a estância (contam como dois); um facto do dossiê; a resposta de quem parte, em duas frases. Ligação: essa resposta responde mesmo a um dos argumentos, e não a outra coisa.",
-       "A, com outro modelo e outra palavra (o barulho, à maneira de «Agora espero, agora desconfio»): A cena para no meio da rua. / O barulho acorda quem dorme, / o barulho cala a conversa, / o barulho enche a noite, / o barulho entra pela janela / e chama alegria ao que é só ruído. Imitei «Agora espero, agora desconfio»: a mesma palavra a abrir, a juntar o que o barulho faz. Aqui, o barulho retoma-se pela repetição do nome, e essa repetição é também a figura. B, com outra voz e uma partida inventada, de outro século (o Poeta de I, 106 contra uma caravana que atravessa o deserto sem água de reserva): Partem sem água e chamam a isso coragem. «Onde terá segura a curta vida» (I, 106) quem atravessa a areia assim? E não é só o corpo: «Na terra tanta guerra, tanto engano» (I, 106), e no deserto também. Já em 1572 o poema sabia que o homem é pequeno. Resposta de quem parte: Pequenos, sim; é por isso que vamos juntos e devagar. A tua pergunta não nos trava: lembra-nos de levar mais água."
+       "Cumpres os cinco elementos do teu tema (um ponto cada) e a ligação (mais um ponto). Tema A: seis linhas que param uma cena e julgam uma coisa de hoje; «Este» ou «Esta» a abrir quatro linhas; uma enumeração do que essa coisa faz; um disfarce na última linha; o verso de VIII, 98 ou 99 que imitaste, citado. Ligação: o que imitaste do verso citado e o que retoma o teu «Este». Tema B: uma partida de hoje que é uma coisa, nunca uma pessoa; dois argumentos do Velho transpostos, cada um com a expressão de Camões citada e a estância (contam como dois); um facto do dossiê; a resposta de quem parte, em duas frases. Ligação: essa resposta responde mesmo a um dos argumentos, e não a outra coisa.",
+       "A, com outro modelo e outra palavra (o barulho, à maneira de «Agora espero, agora desconfio»): A cena para no meio da rua. / O barulho acorda quem dorme, / o barulho cala a conversa, / o barulho enche a noite, / o barulho entra pela janela / e chama alegria ao que é só ruído. Imitei «Agora espero, agora desconfio»: a mesma palavra a abrir, a juntar o que o barulho faz. Aqui, o barulho retoma-se pela repetição do nome, e essa repetição é também a figura. B, com outra voz e uma partida inventada, de outro século (o Poeta de I, 106 contra uma caravana que atravessa o deserto sem água de reserva): Partem sem água e chamam a isso coragem. «Onde terá segura a curta vida» (I, 106) quem atravessa a areia assim? E não é só o corpo: «Na terra tanta guerra, tanto engano» (I, 106), e no deserto também. Já em 1572 o poema sabia que o homem é pequeno. Resposta de quem parte: Pequenos, sim; é por isso que vamos juntos e devagar. A tua pergunta não nos trava: lembra-nos de levar mais água."
       ]
      },
      "custa": [
-      "Tema A: linhas que começam por «Este» sem enumerar o que a coisa faz; última linha sem disfarce; um verso citado que não é de VIII, 98 ou 99.",
+      "Tema A: linhas que começam por «Este» sem enumerar o que a coisa faz; última linha sem disfarce; um verso citado que não é de VIII, 98 ou 99.",
       "Tema B: falar contra uma pessoa; argumentos sem a expressão de Camões ou sem a estância; um facto que não está no dossiê; uma resposta que fala de outra coisa.",
       "Nos dois temas: cumprir os elementos sem a ligação que o tema pede."
      ]
@@ -603,7 +605,7 @@
      "max": 3,
      "niveis": {
       "0": [
-       "Respostas soltas, ou muito fora das 200 a 250 palavras.",
+       "Respostas soltas, ou muito fora das 200 a 250 palavras.",
        "Três listas de palavras sem frases completas."
       ],
       "parcial": [

@@ -2,23 +2,24 @@
  "slug": "m3-u2",
  "titulo": "Nô mais: do canto alto ao silêncio",
  "unidade": 2,
+ "nao_partir": true,
  "aquecer": {
   "cartoes": "aquecimento/",
   "minutos": 10,
-  "texto": "No início da aula de tarefa: 10 minutos de cartões com consulta, 5 minutos para leres o enunciado, 60 minutos de produção e 15 minutos de revisão e entrega. Total: 90 minutos. O relógio de produção começa depois da leitura.",
+  "texto": "No início da aula de tarefa: 10 minutos de cartões com consulta, 5 minutos para leres o enunciado, 60 minutos de produção e 15 minutos de revisão e entrega. Total: 90 minutos. O relógio de produção começa depois da leitura.",
   "ligacao": "Abrir o aquecimento em cartões",
   "ligacao_enunciado": "Aquecer"
  },
- "lead": "À mão, 200 a 250 palavras: 110 no núcleo e 90 a 140 no tema. Com consulta.",
+ "lead": "À mão, 200 a 250 palavras: 110 no núcleo e 90 a 140 no tema. Com consulta.",
  "nucleo": [
-  "O Poeta pede às Tágides um canto alto (I, 4 e 5) e manda calar a Musa (X, 145). Abre com uma tese discutível sobre essa mudança e prova-a com uma citação explicada de cada passagem, com canto e estância.",
-  "Em «Veja agora o juízo curioso» (VIII, 96), que modalidade há, com que valor, e que palavra a marca? Em «O favor com que mais se acende o engenho / Não no dá a pátria» (X, 145), que palavra retoma «O favor», e por que meio?"
+  "O Poeta pede às Tágides um canto alto (I, 4 e 5) e manda calar a Musa (X, 145). Abre com uma tese discutível sobre essa mudança e prova-a com uma citação explicada de cada passagem, com canto e estância.",
+  "Em «Veja agora o juízo curioso» (VIII, 96), que modalidade há, com que valor, e que palavra a marca? Em «O favor com que mais se acende o engenho / Não no dá a pátria» (X, 145), que palavra retoma «O favor», e por que meio?"
  ],
  "temas": [
   {
    "letra": "A",
    "nome": "A voz que suspende a ação",
-   "texto": "A cena congela e uma voz <i>off</i> julga algo de hoje, como o Poeta em VIII, 96 a 99: seis linhas, quatro a abrir com «Este» ou «Esta», uma enumeração e um disfarce no fim. Cita o verso de VIII, 98 ou 99 que imitaste, diz o que imitaste e o que retoma o teu «Este»."
+   "texto": "A cena congela e uma voz <i>off</i> julga algo de hoje, como o Poeta em VIII, 96 a 99: seis linhas, quatro a abrir com «Este» ou «Esta», uma enumeração e um disfarce no fim. Cita o verso de VIII, 98 ou 99 que imitaste, diz o que imitaste e o que retoma o teu «Este»."
   },
   {
    "letra": "B",
@@ -29,7 +30,7 @@
  "apoios": [
   {
    "href": "../../m3/licao-m3-f10/",
-   "texto": "Quem é a Musa? (F10): relê «O texto, 1 de 3», «O texto, 2 de 3» e «O texto, 3 de 3» (I, 4 e 5 e X, 145, com o vocabulário) e «Para entender» (a pergunta, a tese e as citações com canto e estância; aqui não há fontes e as palavras são as do enunciado)."
+   "texto": "Quem é a Musa? (F10): relê «O texto, 1 de 3», «O texto, 2 de 3» e «O texto, 3 de 3» (I, 4 e 5 e X, 145, com o vocabulário) e «Para entender» (a pergunta, a tese e as citações com canto e estância; aqui não há fontes e as palavras são as do enunciado)."
   },
   {
    "href": "../../m3/licao-m3-f15/",
@@ -37,11 +38,11 @@
   },
   {
    "href": "../../m3/licao-m3-f13/",
-   "texto": "Um bicho da terra tão pequeno (F13): relê «O texto, 2 de 5» (VIII, 96) e, para o tema A, «O texto, 4 de 5» e «O texto, 5 de 5» (VIII, 98 e 99) e «Para entender»."
+   "texto": "Um bicho da terra tão pequeno (F13): relê «O texto, 2 de 5» (VIII, 96) e, para o tema A, «O texto, 4 de 5» e «O texto, 5 de 5» (VIII, 98 e 99) e «Para entender»."
   },
   {
    "href": "../../m3/licao-m3-f03/",
-   "texto": "Jerónimos: ler um edifício (F03), para o tema B: relê «O texto, 1 de 2» e «O texto, 2 de 2» (IV, 94 e 95, com o vocabulário)."
+   "texto": "Jerónimos: ler um edifício (F03), para o tema B: relê «O texto, 1 de 2» e «O texto, 2 de 2» (IV, 94 e 95, com o vocabulário)."
   },
   {
    "href": "../../m3/m3-velho-restelo-juri/",
@@ -51,7 +52,7 @@
  "exemplos": [
   {
    "titulo": "Citar com canto e estância (resolvido, noutra passagem)",
-   "html": "<p>Em VIII, 97, o Poeta junta três histórias antigas, e uma delas diz: «Pode tanto em Tarpeia avaro vício» (VIII, 97). O verso mostra que o crime por dinheiro não é de agora: a avareza já levava Tarpeia a entregar a torre aos inimigos.</p><p>A citação entra na frase, letra a letra e entre «», com o canto e a estância logo a seguir; a explicação diz o que o verso mostra e para que serve na tua tese.</p>"
+   "html": "<p>Em VIII, 97, o Poeta junta três histórias antigas, e uma delas diz: «Pode tanto em Tarpeia avaro vício» (VIII, 97). O verso mostra que o crime por dinheiro não é de agora: a avareza já levava Tarpeia a entregar a torre aos inimigos.</p><p>A citação entra na frase, letra a letra e entre «», com o canto e a estância logo a seguir; a explicação diz o que o verso mostra e para que serve na tua tese.</p>"
   }
  ],
  "dossie_titulo": "Dossiê do tema B",
@@ -62,7 +63,7 @@
    "fonte": "«A voz contra, dentro do poema» (Pensar devagar), «Ato 1»"
   },
   {
-   "facto": "O Velho surge em IV, 94 e fala de IV, 95 a 104: dez estâncias de discurso.",
+   "facto": "O Velho surge em IV, 94 e fala de IV, 95 a 104: dez estâncias de discurso.",
    "href": "../../m3/m3-velho-restelo-juri/",
    "fonte": "«A voz contra, dentro do poema» (Pensar devagar), «Ato 3»"
   },
@@ -95,7 +96,7 @@
     "certa": true,
     "letra": "B",
     "texto": "A pergunta de «Amor é fogo» é uma conclusão, não uma fuga.",
-    "resposta": "Defende uma leitura que outra pessoa pode contestar com versos, por exemplo com o «Mas» do verso 12. É uma tese."
+    "resposta": "Defende uma leitura que outra pessoa pode contestar com versos, por exemplo com o «Mas» do verso 12. É uma tese."
    },
    {
     "certa": false,
@@ -108,7 +109,7 @@
  "criterios": [
   "Núcleo: tese discutível na primeira frase, duas citações localizadas e explicadas; modalidade, valor, marca; retoma e meio.",
   "Tema A: seis linhas, anáfora, enumeração, disfarce, verso citado, imitação e retoma. Tema B: partida que é uma coisa, dois argumentos localizados, facto, resposta que responde.",
-  "Respostas articuladas, 200 a 250 palavras, escrita revista."
+  "Respostas articuladas, 200 a 250 palavras, escrita revista."
  ],
  "fecho": "Fecha com duas linhas, fora da contagem de palavras: quando um poema celebra, que pergunta lhe vais passar a fazer? Aponta o verso que te ensinou essa pergunta."
 }

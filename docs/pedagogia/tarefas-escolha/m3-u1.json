@@ -2,17 +2,18 @@
  "slug": "m3-u1",
  "titulo": "Quem canta, quem cala: as vozes de Camões",
  "unidade": 1,
+ "nao_partir": true,
  "aquecer": {
   "cartoes": "aquecimento/",
   "minutos": 10,
-  "texto": "No início da aula de tarefa: 10 minutos de cartões com consulta, 5 minutos para leres o enunciado, 60 minutos de produção e 15 minutos de revisão e entrega. Total: 90 minutos. O relógio de produção começa depois da leitura.",
+  "texto": "No início da aula de tarefa: 10 minutos de cartões com consulta, 5 minutos para leres o enunciado, 60 minutos de produção e 15 minutos de revisão e entrega. Total: 90 minutos. O relógio de produção começa depois da leitura.",
   "ligacao": "Abrir o aquecimento em cartões",
   "ligacao_enunciado": "Aquecer"
  },
- "lead": "À mão, 200 a 240 palavras: cerca de 60 por resposta do núcleo e 80 a 120 no tema. Com consulta.",
+ "lead": "À mão, 200 a 240 palavras: cerca de 60 por resposta do núcleo e 80 a 120 no tema. Com consulta.",
  "nucleo": [
-  "Na Proposição (I, 1 a 3), cita uma expressão que canta quem partiu e outra sobre quem lá vivia. Explica o que um objeto do <i>Kit</i> de Patrícia Lino mostra e a Proposição cala. Escreve um facto e um juízo sobre a Proposição.",
-  "Cita um verso das voltas de «Descalça vai para a fonte» e um de «Alma minha gentil», do verso 3 em diante. Nomeia um recurso de cada e explica o que mostra da amada. Divide-os em sílabas métricas e diz a medida."
+  "Na Proposição (I, 1 a 3), cita uma expressão que canta quem partiu e outra sobre quem lá vivia. Explica o que um objeto do <i>Kit</i> de Patrícia Lino mostra e a Proposição cala. Escreve um facto e um juízo sobre a Proposição.",
+  "Cita um verso das voltas de «Descalça vai para a fonte» e um de «Alma minha gentil», do verso 3 em diante. Nomeia um recurso de cada e explica o que mostra da amada. Divide-os em sílabas métricas e diz a medida."
  ],
  "temas": [
   {
@@ -41,7 +42,7 @@
   },
   {
    "href": "../../m3/licao-m3-f03/",
-   "texto": "Jerónimos: ler um edifício (F03), para o tema B: relê «O texto, 1 de 2» e «O texto, 2 de 2» (o Velho do Restelo, IV, 94 e 95) e «Linha de vida» (o mosteiro). Não precisas de lá ter ido: chega o dossiê."
+   "texto": "Jerónimos: ler um edifício (F03), para o tema B: relê «O texto, 1 de 2» e «O texto, 2 de 2» (o Velho do Restelo, IV, 94 e 95) e «Linha de vida» (o mosteiro). Não precisas de lá ter ido: chega o dossiê."
   },
   {
    "href": "../../m3/licao-m3-f04/",
@@ -51,13 +52,13 @@
  "exemplos": [
   {
    "titulo": "Dividir um verso em sílabas métricas (resolvido)",
-   "html": "<p>«Não há mal que lhe não venha» («Perdigão perdeu a pena»): Não / há / mal / que / lhe / não / ve(nha). Conta-se até à última sílaba tónica, «ve»: sete sílabas, redondilha maior.</p><p>«É tudo quanto sinto um desconcerto» («Tanto de meu estado me acho incerto»): É / tu / do / quan / to / sin / to_um / des / con / cer(to). O «to» e o «um» juntam-se numa só sílaba, e para-se em «cer»: dez sílabas, decassílabo.</p><p>No teu papel, divide assim os versos que citares e marca a última tónica. As divisões em sílabas não contam para as 200 a 240 palavras.</p>"
+   "html": "<p>«Não há mal que lhe não venha» («Perdigão perdeu a pena»): Não / há / mal / que / lhe / não / ve(nha). Conta-se até à última sílaba tónica, «ve»: sete sílabas, redondilha maior.</p><p>«É tudo quanto sinto um desconcerto» («Tanto de meu estado me acho incerto»): É / tu / do / quan / to / sin / to_um / des / con / cer(to). O «to» e o «um» juntam-se numa só sílaba, e para-se em «cer»: dez sílabas, decassílabo.</p><p>No teu papel, divide assim os versos que citares e marca a última tónica. As divisões em sílabas não contam para as 200 a 240 palavras.</p>"
   }
  ],
  "dossie_titulo": "Dossiê do tema B",
  "dossie": [
   {
-   "facto": "No início do século XVI, D. Manuel I manda erguer o Mosteiro de Santa Maria de Belém, entregue à Ordem de São Jerónimo.",
+   "facto": "No início do século XVI, D. Manuel I manda erguer o Mosteiro de Santa Maria de Belém, entregue à Ordem de São Jerónimo.",
    "href": "../../m3/licao-m3-f03/",
    "fonte": "Lição «Jerónimos: ler um edifício», «Linha de vida»"
   },
@@ -113,7 +114,7 @@
  "criterios": [
   "Núcleo: expressões citadas, objeto explicado, facto e juízo; versos citados, recursos explicados, sílabas e medida.",
   "Tema A: mote, volta, verso que volta, cores, hipérbole, sílabas, imitação e diferença. Tema B: imagem, dois factos, verso localizado e explicado, o que não se pode afirmar.",
-  "Respostas articuladas, 200 a 240 palavras, escrita revista."
+  "Respostas articuladas, 200 a 240 palavras, escrita revista."
  ],
  "fecho": "Fecha com duas linhas, fora da contagem de palavras: o que passaste a perguntar quando um poema canta alguém? Aponta o verso que te ajudou."
 }
