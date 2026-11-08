@@ -9,6 +9,14 @@ const MEASURE = require('node:vm').runInNewContext('(' + measurement + ')');
 const options = { headless: true, ...(process.env.CHROME_PATH ? { executablePath: process.env.CHROME_PATH } : {}) };
 const manifest = JSON.parse(fs.readFileSync(path.join(root, 'tests/fixtures/cartaz-cabecalho-edits-20261103.json'), 'utf8'));
 let before = fs.readFileSync(path.join(root, 'index.html'), 'utf8').replace(/\r\n/g, '\n');
+// 07/11/2026: decisões 153, 176 e 177 (pedido pt-1). A camada dos créditos atrás de um «i» (creditos_i_pt1_20261107) fica por cima
+// desta e muda a mesma linha da cabeça (o motor dos fundos com versão nova): o «antes» desfá-la primeiro, com contagem estrita, e as
+// conferências ficam iguais.
+const creditosPt1 = JSON.parse(fs.readFileSync(path.join(root, 'tests/fixtures/creditos-i-pt1-edits-20261107.json'), 'utf8'));
+for (const edit of [...creditosPt1.files['index.html'].edits].reverse()) {
+  assert.equal(before.split(edit.new).length - 1, edit.occurrences, 'créditos atrás de um «i» (pt-1): ' + edit.location);
+  before = before.split(edit.new).join(edit.old);
+}
 for (const edit of [...manifest.files['index.html'].edits].reverse()) {
   assert.equal(before.split(edit.new).length - 1, edit.occurrences);
   before = before.split(edit.new).join(edit.old);

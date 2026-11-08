@@ -7,6 +7,9 @@ import sys
 
 ROOT=Path(__file__).resolve().parents[1]
 LAYERS=[
+ # 07/11/2026: decisões 153, 176 e 177, créditos atrás de um «i» na entrada, nos nove índices e no Atlas (pedido pt-1), camada
+ # mais recente, por cima da decisão 152 no M1.
+ ('creditos_i_pt1_20261107','creditos-i-pt1-edits-20261107'),
  # 06/11/2026: decisão 152 (cuidado em todas as lições), módulo M1: tabelas onde há itens paralelos e referências e números que
  # não se partem, camada mais recente, por cima dos créditos atrás de um «i». 07/11/2026 (fusão do main 29441e6b): por cima dos acertos da decisão 173.
  ('cuidado_m1_20261106','cuidado-m1-edits-20261106'),

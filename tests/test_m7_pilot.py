@@ -1,6 +1,8 @@
 from pathlib import Path
 import json,re,unittest
 from html.parser import HTMLParser
+# 07/11/2026: a camada dos créditos atrás de um «i» do pedido pt-1 desfaz-se para conferir o figcaption de antes.
+from auditoria_20261028 import undo_creditos_i_pt1_0711
 class Figures(HTMLParser):
  def __init__(self,text):super().__init__();self.stack=[];self.figures=[];self.feed(text)
  def handle_starttag(self,tag,attrs):
@@ -26,7 +28,11 @@ class M7Pilot(unittest.TestCase):
  def test_opening_figures_are_outside_details(self):
   for n in range(1,10):
    text=(ROOT/f'm{n}/index.html').read_text('utf-8');figs=Figures(text).figures
-   self.assertEqual(len(figs),1);self.assertIn('<figcaption',text)
+   # 07/11/2026: decisões 153, 176 e 177 (pedido pt-1). O crédito da imagem documental passa para trás de um «i» e o figcaption
+   # sai (camada creditos_i_pt1_20261107, por cima, conferida em tests/test_creditos_i_pt1.py): o figcaption de antes confere-se
+   # na página com essa camada desfeita, e a imagem continua com o seu crédito, agora no «i» da sua moldura.
+   self.assertEqual(len(figs),1);self.assertIn('<figcaption',undo_creditos_i_pt1_0711(f'm{n}/index.html',text))
+   self.assertIn('<details class="info-i" name="info-i">',text[text.index('<figure class="doc">'):text.index('</figure>',text.index('<figure class="doc">'))])
    # 02/11/2026: só no piloto M4 a imagem documental integra os recursos nativos (06/11/2026: deixou de valer com a decisão 148).
    # 06/11/2026: decisão 148, volta a exigir-se o mesmo nos nove: a imagem documental fica fora de qualquer details (a seguir
    # às unidades, fora de «Recursos do módulo»).

@@ -1,5 +1,5 @@
 {
- "_nota": "05/11/2026: decisões 153 e 162. Lista fechada dos créditos longos que ainda estão à vista fora de um «i» (tests/test_creditos_i.py, test_nenhum_credito_longo_a_vista). Cada entrada tem a página, a classe do elemento, a contagem exata e a razão (a família do plano plano-creditos-i-20261105.md e o pedido que a vai pôr a zero). A contagem só pode descer: cada pedido põe a sua família a zero e tira as entradas dela daqui; um crédito longo novo, fora do «i», faz falhar o teste. Pedido pt-2, fatia 1: P7 (lições M1 e M4) e P9 (documentos visuais) já estão a zero. Fatia 2: P10 (Pessoa, cerca de 1914), P11 (dupla exposição), P12 (retratos do «Em paralelo») e P13 (crédito colado à explicação, que o varrimento não vê e tests/test_creditos_i.py confere à parte) também. Fatia 3: P14 («Pensar devagar»), P15 (exercícios «Olhar», crédito montado pelo motor, que o varrimento não vê e tests/test_creditos_i.py confere à parte) e P16 (galerias «Para ver» dos mapas do módulo) também.",
+ "_nota": "05/11/2026: decisões 153 e 162. Lista fechada dos créditos longos que ainda estão à vista fora de um «i» (tests/test_creditos_i.py, test_nenhum_credito_longo_a_vista). Cada entrada tem a página, a classe do elemento, a contagem exata e a razão (a família do plano plano-creditos-i-20261105.md e o pedido que a vai pôr a zero). A contagem só pode descer: cada pedido põe a sua família a zero e tira as entradas dela daqui; um crédito longo novo, fora do «i», faz falhar o teste. Pedido pt-2, fatia 1: P7 (lições M1 e M4) e P9 (documentos visuais) já estão a zero. Fatia 2: P10 (Pessoa, cerca de 1914), P11 (dupla exposição), P12 (retratos do «Em paralelo») e P13 (crédito colado à explicação, que o varrimento não vê e tests/test_creditos_i.py confere à parte) também. Fatia 3: P14 («Pensar devagar»), P15 (exercícios «Olhar», crédito montado pelo motor, que o varrimento não vê e tests/test_creditos_i.py confere à parte) e P16 (galerias «Para ver» dos mapas do módulo) também. 07/11/2026: pedido pt-1 (decisões 153, 176 e 177): P1 (fundo da calçada na entrada), P2 (imagem documental dos nove índices) e P3 (fotografia de Muybridge no portal do Lente) também ficam a zero e saem da lista; o crédito do mapa do Atlas (P4, p.credito) não tinha marca que o varrimento visse e confere-se em tests/test_creditos_i_pt1.py.",
  "creditos": [
   {
    "pagina": "assets/pt-lessons/m3-f18.js",
@@ -7,34 +7,6 @@
    "contagem": 1,
    "familia": "P8",
    "razao": "Legenda mista no «Abre» (identificação, licença, «Fonte» e frase de contexto); pedido pt-3 (legendas mistas: divisão à mão, com a tabela «fica à vista» e «vai para o «i»» revista pelo revisor de pt-PT; montante licao.mjs figura())"
-  },
-  {
-   "pagina": "index.html",
-   "classe": "p.cf-credito",
-   "contagem": 1,
-   "familia": "P1",
-   "razao": "Fundo da calçada na entrada: o botão «Parar o desenho» sai para a .fundo-acoes; pedido pt-1 (decisão 162: depois do desenho do M4 nos nove índices, decisão 148, e da calçada que balança toda junta, decisão 150)"
-  },
-  {
-   "pagina": "index.html",
-   "classe": "p.sp-credit",
-   "contagem": 1,
-   "familia": "P3",
-   "razao": "Fotografia de Muybridge no portal do Lente (o rótulo passa a «Cavalo a galope, 1878», decisão 162); pedido pt-1 (decisão 162: depois do desenho do M4 nos nove índices, decisão 148, e da calçada que balança toda junta, decisão 150)"
-  },
-  {
-   "pagina": "m1/index.html",
-   "classe": "figcaption.cz-credit",
-   "contagem": 1,
-   "familia": "P2",
-   "razao": "Imagem de abertura do índice do módulo; pedido pt-1 (decisão 162: depois do desenho do M4 nos nove índices, decisão 148, e da calçada que balança toda junta, decisão 150)"
-  },
-  {
-   "pagina": "m2/index.html",
-   "classe": "figcaption.cz-credit",
-   "contagem": 1,
-   "familia": "P2",
-   "razao": "Imagem de abertura do índice do módulo; pedido pt-1 (decisão 162: depois do desenho do M4 nos nove índices, decisão 148, e da calçada que balança toda junta, decisão 150)"
   },
   {
    "pagina": "m2/licao-m2-f01/index.html",
@@ -105,13 +77,6 @@
    "contagem": 1,
    "familia": "P8",
    "razao": "Legenda mista no «Abre» (identificação, licença, «Fonte» e frase de contexto); pedido pt-3 (legendas mistas: divisão à mão, com a tabela «fica à vista» e «vai para o «i»» revista pelo revisor de pt-PT; montante licao.mjs figura())"
-  },
-  {
-   "pagina": "m3/index.html",
-   "classe": "figcaption.cz-credit",
-   "contagem": 1,
-   "familia": "P2",
-   "razao": "Imagem de abertura do índice do módulo; pedido pt-1 (decisão 162: depois do desenho do M4 nos nove índices, decisão 148, e da calçada que balança toda junta, decisão 150)"
   },
   {
    "pagina": "m3/licao-m3-f02/index.html",
@@ -191,20 +156,6 @@
    "razao": "Legenda mista no «Abre» (identificação, licença, «Fonte» e frase de contexto); pedido pt-3 (legendas mistas: divisão à mão, com a tabela «fica à vista» e «vai para o «i»» revista pelo revisor de pt-PT; montante licao.mjs figura())"
   },
   {
-   "pagina": "m4/index.html",
-   "classe": "figcaption.cz-credit",
-   "contagem": 1,
-   "familia": "P2",
-   "razao": "Imagem de abertura do índice do módulo; pedido pt-1 (decisão 162: depois do desenho do M4 nos nove índices, decisão 148, e da calçada que balança toda junta, decisão 150)"
-  },
-  {
-   "pagina": "m5/index.html",
-   "classe": "figcaption.cz-credit",
-   "contagem": 1,
-   "familia": "P2",
-   "razao": "Imagem de abertura do índice do módulo; pedido pt-1 (decisão 162: depois do desenho do M4 nos nove índices, decisão 148, e da calçada que balança toda junta, decisão 150)"
-  },
-  {
    "pagina": "m5/licao-m5-f02/index.html",
    "classe": "figcaption",
    "contagem": 1,
@@ -282,13 +233,6 @@
    "razao": "Legenda mista no «Abre» (identificação, licença, «Fonte» e frase de contexto); pedido pt-3 (legendas mistas: divisão à mão, com a tabela «fica à vista» e «vai para o «i»» revista pelo revisor de pt-PT; montante licao.mjs figura())"
   },
   {
-   "pagina": "m6/index.html",
-   "classe": "figcaption.cz-credit",
-   "contagem": 1,
-   "familia": "P2",
-   "razao": "Imagem de abertura do índice do módulo; pedido pt-1 (decisão 162: depois do desenho do M4 nos nove índices, decisão 148, e da calçada que balança toda junta, decisão 150)"
-  },
-  {
    "pagina": "m6/licao-m6-f01/index.html",
    "classe": "figcaption",
    "contagem": 1,
@@ -364,13 +308,6 @@
    "contagem": 1,
    "familia": "P8",
    "razao": "Legenda mista no «Abre» (identificação, licença, «Fonte» e frase de contexto); pedido pt-3 (legendas mistas: divisão à mão, com a tabela «fica à vista» e «vai para o «i»» revista pelo revisor de pt-PT; montante licao.mjs figura())"
-  },
-  {
-   "pagina": "m7/index.html",
-   "classe": "figcaption.cz-credit",
-   "contagem": 1,
-   "familia": "P2",
-   "razao": "Imagem de abertura do índice do módulo; pedido pt-1 (decisão 162: depois do desenho do M4 nos nove índices, decisão 148, e da calçada que balança toda junta, decisão 150)"
   },
   {
    "pagina": "m7/licao-m7-f02/index.html",
@@ -464,13 +401,6 @@
    "razao": "Legenda mista no «Abre» (identificação, licença, «Fonte» e frase de contexto); pedido pt-3 (legendas mistas: divisão à mão, com a tabela «fica à vista» e «vai para o «i»» revista pelo revisor de pt-PT; montante licao.mjs figura())"
   },
   {
-   "pagina": "m8/index.html",
-   "classe": "figcaption.cz-credit",
-   "contagem": 1,
-   "familia": "P2",
-   "razao": "Imagem de abertura do índice do módulo; pedido pt-1 (decisão 162: depois do desenho do M4 nos nove índices, decisão 148, e da calçada que balança toda junta, decisão 150)"
-  },
-  {
    "pagina": "m8/licao-m8-f01/index.html",
    "classe": "figcaption",
    "contagem": 1,
@@ -539,13 +469,6 @@
    "contagem": 1,
    "familia": "P8",
    "razao": "Legenda mista no «Abre» (identificação, licença, «Fonte» e frase de contexto); pedido pt-3 (legendas mistas: divisão à mão, com a tabela «fica à vista» e «vai para o «i»» revista pelo revisor de pt-PT; montante licao.mjs figura())"
-  },
-  {
-   "pagina": "m9/index.html",
-   "classe": "figcaption.cz-credit",
-   "contagem": 1,
-   "familia": "P2",
-   "razao": "Imagem de abertura do índice do módulo; pedido pt-1 (decisão 162: depois do desenho do M4 nos nove índices, decisão 148, e da calçada que balança toda junta, decisão 150)"
   },
   {
    "pagina": "m9/licao-m9-f01/index.html",
@@ -622,7 +545,7 @@
    "classe": "span.fa-cred",
    "contagem": 8,
    "familia": "P4",
-   "razao": "06/11/2026: Atlas, lote 3 (pt #180), que entrou no main depois do levantamento: os créditos das fotografias das figuras novas, à vista no cartão de cada figura. Fica para o pedido pt-1, com o Atlas (P4; decisão 162), como o resto da página."
+   "razao": "06/11/2026: Atlas, lote 3 (pt #180), que entrou no main depois do levantamento: os créditos das fotografias das figuras novas, à vista no cartão de cada figura. Fica para o pedido pt-1, com o Atlas (P4; decisão 162), como o resto da página. 07/11/2026: o pedido pt-1 ficou pelo crédito do mapa (P4, o p.credito, decisão 162), como o pedido o define; estes créditos das fotografias e dos vídeos das figuras esperam pedido próprio, com a mesma contagem."
   }
  ]
 }

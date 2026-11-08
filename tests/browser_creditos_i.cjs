@@ -184,7 +184,9 @@ try{
  {const ctx=await contexto(b,origem,{viewport:{width:390,height:860},reducedMotion:'no-preference'}),p=await ctx.newPage();await p.goto(origem+ENSAIO,{waitUntil:'networkidle'});
   const botao=p.locator('[data-fundo-botao="ii"]');await botao.waitFor({state:'visible'});
   assert.equal(await botao.evaluate(e=>!!e.closest('details.info-i')),false,'«Parar o desenho» fora do «i»');
-  assert.equal(await botao.innerText(),'Parar o desenho');assert(await p.evaluate(()=>document.querySelector('[data-fundo]').classList.contains('ii-anda')),'o desenho anda');
+  // 07/11/2026: decisão 177 (pedido pt-1). O motor comum (assets/fundos.js, igual no Lente) escreve agora «Parar a animação» (era
+  // «Parar o desenho»); o resto da exigência fica igual.
+  assert.equal(await botao.innerText(),'Parar a animação');assert(await p.evaluate(()=>document.querySelector('[data-fundo]').classList.contains('ii-anda')),'o desenho anda');
   const r=await botao.boundingBox();assert(r.height>=44-1/64,'alvo do botão');
   await p.locator('[data-caso="fundo"] details.info-i>summary').click();assert(await botao.isVisible(),'com o «i» aberto, o botão continua à vista');
   await botao.click();assert(!(await p.evaluate(()=>document.querySelector('[data-fundo]').classList.contains('ii-anda'))),'o botão para o desenho');

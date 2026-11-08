@@ -8,16 +8,26 @@ const quiet=()=>{const main=document.querySelector('main'),bad=[];for(const e of
 async function context(options){const ctx=await b.newContext(options);await ctx.route('**/*',async r=>{const u=new URL(r.request().url());if(u.origin===origin)return r.continue();if(u.hostname==='pedrohfernandes-klk.github.io'&&u.pathname.startsWith('/pt/')){const response=await ctx.request.get(origin+u.pathname+u.search);return r.fulfill({response})}return r.abort()});return ctx}
 for(let n=1;n<=9;n++){
  // 02/11/2026: o crédito usa o alvo das peças, sem sair da coluna nem separar pontuação.
- if(n===3||n===5)for(const width of [320,390,801,852,1366,1440])for(const theme of ['light','dark']){
+ // 07/11/2026: decisões 153, 176 e 177 (pedido pt-1). O crédito passa do figcaption para trás de um «i» no canto da imagem
+ // (camada creditos_i_pt1_20261107): fechado ao carregar, com alvo de 44 × 44 px dentro da caixa da imagem; depois de aberto, por
+ // clique e por Enter, a exigência de antes, agora no texto do «i» (que leva a classe cz-credit da casa): a ligação «Wikimedia
+ // Commons ↗», numa linha, dentro da caixa do crédito, com alvo de 44 × 44 px nos quatro cantos, e nenhuma pontuação no início da
+ // linha; nas mesmas seis larguras e nos dois temas.
+ if(n===3||n===5)for(const width of [320,390,801,852,1366,1440])for(const theme of ['light','dark'])for(const abrir of ['clique','Enter']){
   const ctx=await context({viewport:{width,height:900},colorScheme:theme,reducedMotion:'reduce'}),p=await ctx.newPage();await p.goto(`${origin}/pt/m${n}/`,{waitUntil:'load'});
-  const result=await p.locator('figcaption.cz-credit').evaluate(c=>{
+  const ii=p.locator('main>figure.doc details.info-i'),resumo=ii.locator(':scope>summary');await resumo.scrollIntoViewIfNeeded();
+  const fechado=await ii.evaluate(d=>{const s=d.querySelector(':scope>summary').getBoundingClientRect(),img=d.parentElement.querySelector('img').getBoundingClientRect();return {open:d.open,w:s.width,h:s.height,dentro:s.left>=img.left-.5&&s.right<=img.right+.5&&s.top>=img.top-.5&&s.bottom<=img.bottom+.5}});
+  assert.equal(fechado.open,false,`M${n} ${width}: o «i» fechado ao carregar`);assert(fechado.w>=44-1/64&&fechado.h>=44-1/64,`M${n} ${width}: alvo do «i»`);assert(fechado.dentro,`M${n} ${width}: o «i» no canto da imagem`);
+  if(abrir==='clique')await resumo.click();else{await resumo.focus();await p.keyboard.press('Enter');}
+  assert(await ii.evaluate(d=>d.open),`M${n} ${width}: o «i» abre (${abrir})`);
+  const result=await p.locator('main>figure.doc .info-i-texto.cz-credit').evaluate(c=>{
    const bad=[],box=c.getBoundingClientRect(),walker=document.createTreeWalker(c,NodeFilter.SHOW_TEXT);let text;
    while(text=walker.nextNode())for(let i=0;i<text.length;i++)if(/[.,;:!?]/.test(text.data[i])){const range=document.createRange();range.setStart(text,i);range.setEnd(text,i+1);const r=range.getBoundingClientRect();if(r.width&&Math.abs(r.left-box.left)<1)bad.push(text.data[i]);}
    const links=[...c.querySelectorAll('a')].map(a=>{const r=a.getBoundingClientRect();return {text:a.textContent.trim(),inside:r.left>=box.left-.1&&r.right<=box.right+.1,rects:a.getClientRects().length}});
    return {bad,links};
   });
   assert.deepEqual(result.bad,[],`M${n} ${width}: pontuação no início da linha`);assert.equal(result.links.length,1);assert(result.links.every(a=>a.inside&&a.rects===1&&a.text==='Wikimedia Commons ↗'),JSON.stringify(result));
-  const targets=await p.locator('figcaption.cz-credit a').evaluateAll(es=>es.map(a=>{a.scrollIntoView({block:'center'});const r=a.getBoundingClientRect(),s=getComputedStyle(a,'::before'),cx=(r.left+r.right)/2,cy=(r.top+r.bottom)/2;return {width:parseFloat(s.width),height:parseFloat(s.height),hits:[[-21,-21],[21,-21],[-21,21],[21,21]].map(([x,y])=>{const hit=document.elementFromPoint(cx+x,cy+y);return hit===a||a.contains(hit)})}}));
+  const targets=await p.locator('main>figure.doc .info-i-texto.cz-credit a').evaluateAll(es=>es.map(a=>{a.scrollIntoView({block:'center'});const r=a.getBoundingClientRect(),s=getComputedStyle(a,'::before'),cx=(r.left+r.right)/2,cy=(r.top+r.bottom)/2;return {width:parseFloat(s.width),height:parseFloat(s.height),hits:[[-21,-21],[21,-21],[-21,21],[21,21]].map(([x,y])=>{const hit=document.elementFromPoint(cx+x,cy+y);return hit===a||a.contains(hit)})}}));
   for(const t of targets){assert(t.width>=44-1/64&&t.height>=44-1/64);assert.deepEqual(t.hits,[true,true,true,true]);}
   await ctx.close();scenarios++;
  }
