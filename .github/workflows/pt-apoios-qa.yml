@@ -34,6 +34,17 @@ on:
       - 'scripts/cuidado_m3_20261108.*'
       - 'tests/fixtures/cuidado-m3-edits-20261108.json'
       - 'tests/*cuidado_m3*'
+      # 08/11/2026: decisão 152 no M4: as tabelas novas (lições F06, F10, F14 e F25 e o guião de exemplo do guia), os casos do mesmo
+      # tipo (a F10, o mapa e o portefólio) e a sua camada.
+      - 'm4/**'
+      - 'tarefas/m4-u1/**'
+      - 'tarefas/m4-u2/**'
+      - 'tarefas/m4-u3/**'
+      - 'tarefas/m4-u3-discurso/**'
+      - 'docs/pedagogia/aquecimentos/m4-*'
+      - 'scripts/cuidado_m4_20261108.*'
+      - 'tests/fixtures/cuidado-m4-edits-20261108.json'
+      - 'tests/*cuidado_m4*'
       - 'tests/*apoios*'
       - 'tests/fixtures/apoios-*'
       - '.github/workflows/pt-apoios-qa.yml'
@@ -64,7 +75,8 @@ jobs:
           # 08/11/2026: o cartaz «Ler a cidade» na entrada e o nome novo da secção nas páginas publicadas (cidade_cartaz_20261108, que também muda a frase da sugestão «continua» das lições e dos índices) passam a camada mais recente, por cima dos créditos atrás de um «i» do pedido pt-1; desfazem-se primeiro, com a mesma exigência.
           # 08/11/2026: a decisão 152 no M2 (cuidado_m2_20261108: tabelas onde há itens paralelos e espaços que não quebram nas lições e páginas do M2, incluindo o índice do módulo) passa a camada mais recente, por cima do cartaz «Ler a cidade» e do nome novo da secção; desfaz-se primeiro, com a mesma exigência.
           # 08/11/2026: a decisão 152 no M3 (cuidado_m3_20261108: tabelas onde há itens paralelos e espaços que não quebram nas lições e páginas do M3, incluindo o índice, o guia e o mapa do módulo) passa a camada mais recente, por cima da decisão 152 no M2; desfaz-se primeiro, com a mesma exigência.
-          python scripts/aplicar_trocas.py scripts/tabela_movimentos_20261105.json --manifesto tests/fixtures/tabela-movimentos-edits-20261105.json --verificar --desfazer-antes tests/fixtures/cuidado-m3-edits-20261108.json --desfazer-antes tests/fixtures/cuidado-m2-edits-20261108.json --desfazer-antes tests/fixtures/cidade-cartaz-edits-20261108.json --desfazer-antes tests/fixtures/creditos-i-pt1-edits-20261107.json --desfazer-antes tests/fixtures/cuidado-m1-edits-20261106.json --desfazer-antes tests/fixtures/indices-acertos-edits-20261107.json --desfazer-antes tests/fixtures/cartaz-indices-148-edits-20261106.json --desfazer-antes tests/fixtures/creditos-i-edits-20261105.json --desfazer-antes tests/fixtures/atlas-lote3-edits-20261105.json --desfazer-antes tests/fixtures/autonomia-154-edits-20261105.json --desfazer-antes tests/fixtures/exame-contexto-edits-20261105.json --desfazer-antes tests/fixtures/exame-licao-edits-20261105.json
+          # 08/11/2026: a decisão 152 no M4 (cuidado_m4_20261108: tabelas onde há itens paralelos e espaços que não quebram nas lições e páginas do M4, incluindo o índice, o guia, o mapa e o portefólio do módulo) passa a camada mais recente, por cima da decisão 152 no M3; desfaz-se primeiro, com a mesma exigência.
+          python scripts/aplicar_trocas.py scripts/tabela_movimentos_20261105.json --manifesto tests/fixtures/tabela-movimentos-edits-20261105.json --verificar --desfazer-antes tests/fixtures/cuidado-m4-edits-20261108.json --desfazer-antes tests/fixtures/cuidado-m3-edits-20261108.json --desfazer-antes tests/fixtures/cuidado-m2-edits-20261108.json --desfazer-antes tests/fixtures/cidade-cartaz-edits-20261108.json --desfazer-antes tests/fixtures/creditos-i-pt1-edits-20261107.json --desfazer-antes tests/fixtures/cuidado-m1-edits-20261106.json --desfazer-antes tests/fixtures/indices-acertos-edits-20261107.json --desfazer-antes tests/fixtures/cartaz-indices-148-edits-20261106.json --desfazer-antes tests/fixtures/creditos-i-edits-20261105.json --desfazer-antes tests/fixtures/atlas-lote3-edits-20261105.json --desfazer-antes tests/fixtures/autonomia-154-edits-20261105.json --desfazer-antes tests/fixtures/exame-contexto-edits-20261105.json --desfazer-antes tests/fixtures/exame-licao-edits-20261105.json
           python scripts/verificar_camadas.py
       # 06/11/2026: decisão 152 no M1: as tabelas novas, os espaços que não quebram e a camada no topo.
       - name: Tabelas e referências do M1 (decisão 152)
@@ -75,6 +87,9 @@ jobs:
       # 08/11/2026: decisão 152 no M3: as tabelas novas, os casos do mesmo tipo, os espaços que não quebram e a camada no topo.
       - name: Tabelas e referências do M3 (decisão 152)
         run: python -m unittest discover -s tests -p 'test_cuidado_m3.py' -v
+      # 08/11/2026: decisão 152 no M4: as tabelas novas, os casos do mesmo tipo, os espaços que não quebram e a camada no topo.
+      - name: Tabelas e referências do M4 (decisão 152)
+        run: python -m unittest discover -s tests -p 'test_cuidado_m4.py' -v
       - name: Instalar Chromium
         run: |
           python -m pip install playwright
@@ -92,3 +107,7 @@ jobs:
       # com o rótulo da coluna), e as referências do M3 sem se partirem.
       - name: Tabelas e referências do M3 no navegador
         run: python tests/browser_cuidado_m3.py
+      # 08/11/2026: decisão 152 no M4: as tabelas novas a 360 e 900 px, nos dois temas, sem transbordar (no telemóvel, empilhadas e
+      # com o rótulo da coluna, também nos cartões escuros), os nomes do portefólio sem partir e as referências do M4 sem se partirem.
+      - name: Tabelas e referências do M4 no navegador
+        run: python tests/browser_cuidado_m4.py

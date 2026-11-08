@@ -16,7 +16,8 @@ class PonteTPC(unittest.TestCase):
   self.assertIn('K="licao-m4-f28"',s)
   self.assertIn('save(K+"-a1"',s)
   self.assertNotIn('versao:',s)
-  self.assertEqual(self.cards[0]['aula']['tempo'],'45 minutos.')
+  # 08/11/2026: decisão 152 no M4 (achado 33): o número e a unidade não se partem (U+00A0); o mesmo tempo.
+  self.assertEqual(self.cards[0]['aula']['tempo'],'45\xa0minutos.')
   self.assertNotIn('Lupi',self.cards[0]['aula']['entrega'])
  def test_o_caso_e_o_modelo_conduzem_ao_conflito_de_garrett(self):
   self.assertIn('data-cc-op',self.cards[0]['html'])

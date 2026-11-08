@@ -118,7 +118,8 @@ try:
   ctx,page=new_page(browser,1440)
   page.goto(host+'/projetar/?pagina=/pt/m4/licao-m4-f28/',wait_until='networkidle')
   frame=page.frame_locator('#lesson-frame')
-  assert '45 minutos' in frame.locator('#baralho').inner_text()
+  # 08/11/2026: decisão 152 no M4 (achado 33): o número e a unidade não se partem (U+00A0); o mesmo tempo.
+  assert '45\xa0minutos' in frame.locator('#baralho').inner_text()
   page.locator('[data-projection-size="large"]').click()
   frame.locator('.casca [data-seguinte]').click()
   assert frame.locator('html').get_attribute('data-projection-size')=='large'

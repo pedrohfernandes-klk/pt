@@ -70,7 +70,8 @@ def assert_task_route(page, module, units):
         # 06/11/2026: decisão 152 no M1: no índice do M1, o número e a unidade não se partem (U+00A0); nos outros, como estava.
         # 08/11/2026: decisão 152 no M2 (achado 26): também no índice do M2.
         # 08/11/2026: decisão 152 no M3 (achado 34): também no índice do M3.
-        assert ('90\xa0min' if module in (1, 2, 3) else '90 min') in row.inner_text()
+        # 08/11/2026: decisão 152 no M4 (achado 34): também no índice do M4.
+        assert ('90\xa0min' if module in (1, 2, 3, 4) else '90 min') in row.inner_text()
         hrefs.append(link.get_attribute('href'))
     return hrefs
 
@@ -147,7 +148,9 @@ def assert_task_page(page, before):
         assert not page.locator('[data-task-optional-preparation]').evaluate('e=>e.open')
     assert page.locator('textarea, input[type="text"], [data-sintese-registar]').count() == 0
     if not compact:
-        assert page.locator('.task-clock b').all_text_contents() == ['10 min', '10 min', '60 min', '10 min']
+        # 08/11/2026: decisão 152 no M4 (achado 38): no apoio de comparação da M4-U3 (a única página com o relógio da aula), o número
+        # e a unidade não se partem (U+00A0); os mesmos quatro tempos.
+        assert page.locator('.task-clock b').all_text_contents() == ['10\xa0min', '10\xa0min', '60\xa0min', '10\xa0min']
     text = page.locator('main.task-page').text_content()
     assert ('consulta' if compact else 'durante toda a tarefa') in text.lower()
     assert 'duas linhas' in text and 'síntese' in text.lower()

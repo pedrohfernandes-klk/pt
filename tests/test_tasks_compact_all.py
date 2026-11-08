@@ -13,6 +13,8 @@ ROOT=Path(__file__).resolve().parents[1]
 # cartões; sai deste contrato compacto (o dela está em test_task_choice.py) e o retrato compacto de 27/10 continua
 # autorizado em tests/task_source_contract.py (compact_task_source).
 SLUGS=['m4-u1','m4-u2','m4-u3-discurso','m7-u1','m7-u2']
+# 08/11/2026: o módulo de cada tarefa (decisão 152 no M4).
+def module_of(slug): return slug.split('-')[0]
 class CompactTasks(unittest.TestCase):
  def test_live_concision_optional_recall_and_individual_production(self):
   for slug in SLUGS:
@@ -23,7 +25,9 @@ class CompactTasks(unittest.TestCase):
     self.assertEqual(p.questions,['1','2']);self.assertEqual(p.optional,[True,True])
     self.assertEqual(p.criteria_items,3)
     self.assertLessEqual(len(' '.join(p.header+p.criteria).split()),180)
-    for token in ('Tarefa individual','90 min','consulta','Teams','duas linhas'):
+    # 08/11/2026: decisão 152 no M4 (achados 35, 36 e 37): nas tarefas do M4, o número e a unidade não se partem (U+00A0);
+    # nas do M7, como estava.
+    for token in ('Tarefa individual','90\xa0min' if module_of(slug)=='m4' else '90 min','consulta','Teams','duas linhas'):
      self.assertIn(token,text)
     for token in ('task-clock','em grupo','rondas','docente cria','10/10/60/10'):
      self.assertNotIn(token,text)

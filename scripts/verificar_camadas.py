@@ -7,6 +7,9 @@ import sys
 
 ROOT=Path(__file__).resolve().parents[1]
 LAYERS=[
+ # 08/11/2026: decisão 152 (cuidado em todas as lições), módulo M4: tabelas onde há itens paralelos e referências e números que
+ # não se partem, camada mais recente, por cima da decisão 152 no M3.
+ ('cuidado_m4_20261108','cuidado-m4-edits-20261108'),
  # 08/11/2026: decisão 152 (cuidado em todas as lições), módulo M3: tabelas onde há itens paralelos e referências e números que
  # não se partem, camada mais recente, por cima da decisão 152 no M2.
  ('cuidado_m3_20261108','cuidado-m3-edits-20261108'),

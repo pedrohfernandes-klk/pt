@@ -58,7 +58,8 @@ class TaskNinety(unittest.TestCase):
  def test_preparation_is_short_and_paper_has_the_majority_of_time(self):
   page=(ROOT/'tarefas/m4-u3/index.html').read_text('utf-8')
   clock=re.search(r'<ol class="task-clock".*?</ol>',page,re.S).group()
-  times=list(map(int,re.findall(r'<b>(\d+) min</b>',clock)))
+  # 08/11/2026: decisão 152 no M4 (achado 38): o número e a unidade não se partem (U+00A0); os mesmos quatro tempos.
+  times=list(map(int,re.findall(r'<b>(\d+)\xa0min</b>',clock)))
   self.assertEqual(times,[10,10,60,10]);self.assertEqual(sum(times),90)
   questions=re.findall(r'<article class="task-question".*?</article>',page,re.S)
   self.assertEqual(len(questions),4)
