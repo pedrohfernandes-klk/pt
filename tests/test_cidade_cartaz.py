@@ -1,4 +1,4 @@
-"""2026-11-08: cartaz «Ler a cidade» na entrada do Português e nome novo da secção nas páginas publicadas.
+"""08/11/2026: cartaz «Ler a cidade» na entrada do Português e nome novo da secção nas páginas publicadas.
 
 Pedido do utilizador: «quero que [Ler a cidade] tenha um banner em português». Camada literal fechada cidade_cartaz_20261108
 (scripts/cidade_cartaz_20261108.py constrói scripts/cidade_cartaz_20261108.json; o manifesto é
@@ -10,8 +10,12 @@ tests/fixtures/cidade-cartaz-edits-20261108.json). Este teste confere que:
   nas cadeias de desfazer de tests/auditoria_20261028.py e de scripts/desligar_sala.py, nas cadeias dos workflows e dos testes e
   nos testes de navegador que montam o «antes» da entrada e dos índices; o workflow dos cartazes confere-a e corre o seu teste de
   navegador;
-* o cartaz vem logo a seguir ao do Atlas, com as classes dele, o texto exato, as duas ligações para o Lente e os 14 números das
-  missões pela ordem; a linha pequena «Português × Cidadania · Ler a cidade: …» saiu;
+* o cartaz vem logo a seguir ao do Atlas, com o texto exato e as duas ligações para o Lente; a linha pequena «Português ×
+  Cidadania · Ler a cidade: …» saiu;
+* 08/11/2026 (revisão): o utilizador achou a primeira versão «visualmente igual ao do Atlas... estranho e mau». O cartaz deixa as
+  classes do cartaz do Atlas e a grelha dos 14 números (essas conferências saem) e passa a ter cara própria: a fotografia de Lisboa
+  vista do Tejo em 1907 (src, width, height e o alt exatos, os do cartão «Ler a cidade.» da entrada do Lente), a etiqueta, e o
+  crédito exato num «i» com a ligação da Biblioteca do Congresso; as regras do cartaz só tocam as classes dele;
 * não sobra nenhuma ocorrência do nome antigo («A cidade antes da aula», em qualquer caixa) nas páginas publicadas (HTML e JS),
   fora da página do endereço antigo (bairro/index.html), que fica como estava; a frase da sugestão «continua» diz o nome novo;
 * o texto novo segue as regras da casa: nenhum «·» novo dentro de frases, nenhum travessão «—», e nada de «jogar», «jogo»,
@@ -38,22 +42,28 @@ MANIFESTO = ROOT / 'tests/fixtures/cidade-cartaz-edits-20261108.json'
 MANIFESTO_REL = 'tests/fixtures/cidade-cartaz-edits-20261108.json'
 BASE_COMMIT = '4833c23655061e0cc2a366edee1b2b21eaea6237'
 LENTE = 'https://pedrohfernandes-klk.github.io/lente/cidade/'
-NUMEROS = ['01', '02', '03', '04', '05', '06', '08', '10', '11', '12', '15', '16', '17', '18']
 FRASE_ANTIGA = 'A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno'
 FRASE_NOVA = 'Ler a cidade: {nmissoes} missões feitas, relê o teu caderno'
-ESTILO = ('<style>.atlas-poster-art.cidade-poster-art{grid-template-columns:repeat(4,minmax(0,1fr));font-size:1.15rem}'
-          '@media(max-width:760px){.atlas-poster-art.cidade-poster-art{grid-template-columns:repeat(3,minmax(0,1fr));font-size:.9rem}'
-          '.cidade-poster-art span{min-height:36px;padding:4px}}@media(max-width:520px){.atlas-poster-art.cidade-poster-art{'
-          'grid-template-columns:repeat(7,minmax(0,1fr));font-size:.85rem}}</style>')
+# 08/11/2026 (revisão): o cartaz com fotografia e desenho próprios, letra a letra (sem a folha, que se confere à parte). A fotografia,
+# o alt, a etiqueta e o crédito são os do cartão «Ler a cidade.» da entrada do Lente (os da revisão do Lente); o «i» tem o formato
+# do da fotografia de Muybridge na entrada do Português (a ligação diz «Library of Congress», com o ponto final).
+FOTO = 'img/arquivo/tejo-1907-vela-e-cidade.jpg'
+ALT = 'Barco à vela no Tejo; atrás, o cais e a cidade.'
+ETIQUETA = 'Lisboa vista do Tejo, 1907'
+FONTE = 'https://www.loc.gov/item/2021640928/'
+CREDITO = ('Metade de um estereograma de 1907, com direitos de J. J. Killelea &amp; Co. e publicado por H. C. White Co. Domínio '
+           f'público. <a href="{FONTE}">Library of Congress</a>.')
+I_CREDITO = ('<details class="info-i info-i--linha" name="info-i"><summary aria-label="Créditos da fotografia: Lisboa vista do Tejo">'
+             f'<span aria-hidden="true">i</span></summary><p class="info-i-texto">{CREDITO}</p></details>')
 CARTAZ = (
-    '<section class="atlas-poster cidade-poster" aria-labelledby="cidade-poster-title"><div class="atlas-poster-copy"><p '
-    'class="portal-kicker">Português × Cidadania</p><h2 id="cidade-poster-title">Ler a<br>cidade<span aria-hidden="true">↗</span>'
-    '</h2><p>Uma rua pode ser lida como um texto e discutida como um espaço de todos. São 14 missões, no bairro ou a partir das '
-    'fotografias.</p><nav aria-label="Entradas de Ler a cidade"><a href="https://pedrohfernandes-klk.github.io/lente/cidade/">'
-    'Entrar na cidade <span aria-hidden="true">→</span></a><a href="https://pedrohfernandes-klk.github.io/lente/cidade/#m01">Ver '
-    'as missões <span aria-hidden="true">→</span></a></nav></div><div class="atlas-poster-art cidade-poster-art" '
-    'aria-hidden="true"><span>01</span><span>02</span><span>03</span><span>04</span><span>05</span><span>06</span><span>08</span>'
-    '<span>10</span><span>11</span><span>12</span><span>15</span><span>16</span><span>17</span><span>18</span></div></section>')
+    '<section class="cidade-cartaz" aria-labelledby="cidade-cartaz-titulo"><div class="cidade-cartaz-foto"><div '
+    f'class="cidade-cartaz-imagem"><img src="{FOTO}" alt="{ALT}" width="1160" height="773" loading="lazy" decoding="async"><span '
+    f'class="cidade-cartaz-etiqueta">{ETIQUETA}</span></div>{I_CREDITO}</div><div class="cidade-cartaz-texto"><p '
+    'class="portal-kicker">Português × Cidadania</p><h2 id="cidade-cartaz-titulo">Ler a cidade</h2><p>Uma rua pode ser lida como '
+    'um texto e discutida como um espaço de todos. São 14 missões, no bairro ou a partir das fotografias.</p><nav '
+    'aria-label="Entradas de Ler a cidade"><a href="https://pedrohfernandes-klk.github.io/lente/cidade/">Entrar na cidade <span '
+    'aria-hidden="true">→</span></a><a href="https://pedrohfernandes-klk.github.io/lente/cidade/#m01">Ver as missões <span '
+    'aria-hidden="true">→</span></a></nav></div></section>')
 LINHA = ('<p class="sp-credit"><strong>Português × Cidadania</strong> · <a href="https://pedrohfernandes-klk.github.io/lente/cidade/">'
          'Ler a cidade: observar, criar e discutir o espaço comum →</a></p>')
 PROIBIDAS = re.compile(r'\b(jogar|jogos?|fichas?|folhas?|professor\w*)\b', re.IGNORECASE)
@@ -80,54 +90,53 @@ def publicadas():
 
 
 class Seccao(HTMLParser):
-    """O texto e as ligações de um elemento (pelo id ou pela classe), com o texto escondido aos leitores de ecrã à parte."""
+    """08/11/2026 (revisão): o que um leitor encontra numa secção (pela classe): o texto à vista (sem o que é decorativo, com
+    aria-hidden, e sem o crédito dentro do «i»), o texto do crédito, as ligações (com o sítio onde estão), as imagens e as classes
+    de todos os elementos. Era o parser dos 14 números da primeira versão."""
+    VAZIOS = {'area', 'base', 'br', 'col', 'embed', 'hr', 'img', 'input', 'link', 'meta', 'source', 'track', 'wbr'}
 
     def __init__(self, classe):
         super().__init__(convert_charrefs=True)
-        self.classe, self.dentro, self.pilha, self.texto, self.ligacoes, self.numeros, self.na_arte = classe, 0, [], [], [], [], 0
+        self.classe, self.pilha, self.texto, self.credito, self.ligacoes, self.imagens, self.classes = classe, [], [], [], [], [], []
         self.ligacao = None
 
     def handle_starttag(self, tag, attrs):
         a = dict(attrs)
-        if self.dentro:
-            # (cada elemento separa as palavras, como no ecrã: «Cidadania» e «Ler» não se colam)
-            self.texto.append(' ')
-            self.dentro += 1
-            self.pilha.append((tag, a))
-            if 'cidade-poster-art' in (a.get('class') or '').split():
-                self.na_arte = self.dentro
-            if tag == 'a':
-                self.ligacao = [a.get('href'), '']
-            if tag == 'br':
-                self.dentro -= 1
-                self.pilha.pop()
-                self.texto.append(' ')
-        elif tag == 'section' and self.classe in (a.get('class') or '').split():
-            self.dentro = 1
-            self.pilha.append((tag, a))
+        if not self.pilha:
+            if tag == 'section' and self.classe in (a.get('class') or '').split():
+                self.pilha.append((tag, a))
+                self.classes += (a.get('class') or '').split()
+            return
+        # (cada elemento separa as palavras, como no ecrã: «Cidadania» e «Ler» não se colam)
+        self.texto.append(' ')
+        self.classes += (a.get('class') or '').split()
+        if tag == 'img':
+            self.imagens.append(a)
+        if tag in self.VAZIOS:
+            return
+        self.pilha.append((tag, a))
+        if tag == 'a':
+            self.ligacao = [a.get('href'), '', any(t == 'details' for t, _ in self.pilha)]
 
     def handle_endtag(self, tag):
-        if not self.dentro:
+        if not self.pilha or tag in self.VAZIOS:
             return
         self.texto.append(' ')
         if tag == 'a' and self.ligacao:
-            self.ligacoes.append((self.ligacao[0], re.sub(r'\s+', ' ', self.ligacao[1]).strip()))
+            self.ligacoes.append((self.ligacao[0], re.sub(r'\s+', ' ', self.ligacao[1]).strip(), self.ligacao[2]))
             self.ligacao = None
-        if self.na_arte == self.dentro:
-            self.na_arte = 0
-        self.dentro -= 1
         self.pilha.pop()
 
     def handle_data(self, data):
-        if not self.dentro:
+        if not self.pilha:
             return
-        escondido = any(a.get('aria-hidden') == 'true' for _, a in self.pilha)
-        if self.na_arte and self.pilha[-1][0] == 'span':
-            self.numeros.append(data)
-        if not escondido:
+        if any(t == 'details' for t, _ in self.pilha):
+            if not any(t == 'summary' for t, _ in self.pilha):
+                self.credito.append(data)
+        elif not any(a.get('aria-hidden') == 'true' for _, a in self.pilha):
             self.texto.append(data)
-            if self.ligacao:
-                self.ligacao[1] += data
+        if self.ligacao and not any(a.get('aria-hidden') == 'true' for _, a in self.pilha):
+            self.ligacao[1] += data
 
 
 class CidadeCartaz(unittest.TestCase):
@@ -252,27 +261,55 @@ class CidadeCartaz(unittest.TestCase):
                 self.assertIn(f"'{caminho}'", texto, wf)
 
     def test_cartaz_logo_a_seguir_ao_do_atlas_com_o_texto_exato(self):
+        # 08/11/2026 (revisão): o cartaz com fotografia e desenho próprios; saem as conferências das classes do cartaz do Atlas e dos
+        # 14 números, e entram a fotografia, a etiqueta e o crédito no «i».
         s = self.entrada
         self.assertEqual(s.count(CARTAZ), 1)
-        self.assertEqual(s.count(ESTILO + CARTAZ), 1)
-        # Logo a seguir ao fim do cartaz do Atlas e logo antes do portal do Lente.
-        self.assertEqual(s.count('<span>TL</span></div></section>' + ESTILO + CARTAZ
-                                 + '<nav class="site-portal-wrap" aria-label="Explorar o Lente">'), 1)
-        self.assertEqual(len(re.findall(r'<section class="atlas-poster[ "]', s)), 2)
-        self.assertEqual(s.count('id="cidade-poster-title"'), 1)
-        # As regras próprias só tocam a grelha dos números do cartaz novo.
-        regras = re.findall(r'([^{}]+)\{[^{}]*\}', re.sub(r'@media\([^)]*\)\{', '', ESTILO[len('<style>'):-len('</style>')]))
-        self.assertTrue(regras)
-        self.assertTrue(all('cidade-poster-art' in r for r in regras), regras)
-        p = Seccao('cidade-poster')
+        # A folha do cartaz vem logo antes dele e o cartaz logo a seguir ao fim do cartaz do Atlas e antes do portal do Lente.
+        m = re.search(r'<span>TL</span></div></section>(<style>[^<]*</style>)' + re.escape(CARTAZ)
+                      + re.escape('<nav class="site-portal-wrap" aria-label="Explorar o Lente">'), s)
+        self.assertIsNotNone(m, 'Atlas, folha do cartaz, cartaz «Ler a cidade», portal do Lente')
+        self.assertEqual(len(re.findall(r'<section class="atlas-poster[ "]', s)), 1)
+        self.assertEqual(s.count('<section class="cidade-cartaz"'), 1)
+        self.assertEqual(s.count('id="cidade-cartaz-titulo"'), 1)
+        self.assertNotIn('cidade-poster', s)
+        # As regras da folha só tocam o cartaz (as classes cidade-cartaz*), em todos os temas e larguras.
+        folha = m.group(1)[len('<style>'):-len('</style>')]
+        regras = re.findall(r'([^{}]+)\{[^{}]*\}', re.sub(r'@media[^{]*\{', '', folha))
+        self.assertGreater(len(regras), 10)
+        for r in regras:
+            for seletor in r.split(','):
+                self.assertIn('.cidade-cartaz', seletor, r)
+        self.assertNotIn('atlas', folha)
+        # O título em Georgia itálico de peso normal; o tema escuro pelo data-theme e, sem ele, pela preferência do sistema.
+        self.assertIn('font:italic 400 clamp(2.4rem,5.5vw,4rem)/1 Georgia,', folha)
+        self.assertIn(':root[data-theme="dark"] .cidade-cartaz{', folha)
+        self.assertIn('(prefers-color-scheme:dark){:root:not([data-theme]) .cidade-cartaz{', folha)
+        self.assertIn('@media(forced-colors:active){', folha)
+        p = Seccao('cidade-cartaz')
         p.feed(s)
-        texto = re.sub(r'\s+', ' ', ''.join(p.texto)).strip()
-        self.assertEqual(texto, 'Português × Cidadania Ler a cidade Uma rua pode ser lida como um texto e discutida como um espaço de '
-                                'todos. São 14 missões, no bairro ou a partir das fotografias. Entrar na cidade Ver as missões')
-        self.assertEqual(p.ligacoes, [(LENTE, 'Entrar na cidade'), (LENTE + '#m01', 'Ver as missões')])
-        self.assertEqual(p.numeros, NUMEROS)
-        self.assertEqual(len(p.numeros), 14)
-        self.assertEqual(sorted(p.numeros, key=int), NUMEROS)
+        self.assertEqual(re.sub(r'\s+', ' ', ''.join(p.texto)).strip(),
+                         'Lisboa vista do Tejo, 1907 Português × Cidadania Ler a cidade Uma rua pode ser lida como um texto e discutida '
+                         'como um espaço de todos. São 14 missões, no bairro ou a partir das fotografias. Entrar na cidade Ver as missões')
+        self.assertEqual(p.ligacoes, [(FONTE, 'Library of Congress', True), (LENTE, 'Entrar na cidade', False),
+                                      (LENTE + '#m01', 'Ver as missões', False)])
+        # Sem nada do cartaz do Atlas: nem as classes, nem a grelha dos números.
+        self.assertFalse([c for c in p.classes if 'atlas' in c or 'poster' in c], p.classes)
+        self.assertEqual(p.classes[0], 'cidade-cartaz')
+        # A fotografia: a do cartão «Ler a cidade.» da entrada do Lente, com o alt e as medidas exatas; o ficheiro está no sítio.
+        self.assertEqual(p.imagens, [{'src': FOTO, 'alt': ALT, 'width': '1160', 'height': '773', 'loading': 'lazy', 'decoding': 'async'}])
+        jpg = (ROOT / FOTO).read_bytes()
+        i = 2
+        while jpg[i + 1] not in (0xC0, 0xC2):
+            i += 2 + int.from_bytes(jpg[i + 2:i + 4], 'big')
+        self.assertEqual((int.from_bytes(jpg[i + 7:i + 9], 'big'), int.from_bytes(jpg[i + 5:i + 7], 'big')), (1160, 773))
+        self.assertLessEqual(abs(1160 / 773 / 1.5 - 1), .02)
+        # A etiqueta no canto da imagem, dentro da moldura dela, e o crédito inteiro no «i», depois da imagem.
+        self.assertIn(f'<span class="cidade-cartaz-etiqueta">{ETIQUETA}</span></div>{I_CREDITO}', s)
+        self.assertEqual(re.sub(r'\s+', ' ', ''.join(p.credito)).strip(),
+                         'Metade de um estereograma de 1907, com direitos de J. J. Killelea & Co. e publicado por H. C. White Co. '
+                         'Domínio público. Library of Congress.')
+        self.assertEqual(s.count(I_CREDITO), 1)
 
     def test_a_linha_pequena_saiu(self):
         self.assertNotIn(LINHA, self.entrada)
@@ -324,9 +361,11 @@ class CidadeCartaz(unittest.TestCase):
             self.assertEqual(ler(f'{ano}/todos/index.html').count(f'<a href="{LENTE}">Ler a cidade<small>percurso extra'), 1, ano)
 
     def test_regras_do_texto_novo(self):
-        p = Seccao('cidade-poster')
+        # 08/11/2026 (revisão): a secção chama-se agora cidade-cartaz; o texto novo inclui a etiqueta e o crédito do «i».
+        p = Seccao('cidade-cartaz')
         p.feed(self.entrada)
-        visivel = ''.join(p.texto)
+        visivel = ''.join(p.texto) + ' ' + ''.join(p.credito)
+        self.assertIn('Library of Congress', visivel)
         # No cartaz, nenhum «·» (o pré-título usa «×», como «Português × Cidadania» de antes).
         self.assertNotIn('·', visivel)
         for t in self.trocas:

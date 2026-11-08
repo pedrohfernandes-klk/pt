@@ -250,7 +250,7 @@ class Autonomia154(unittest.TestCase):
                             '--manifesto', str(MANIFESTO), '--verificar',
                             # 06/11/2026: por cima de tudo, a decisão 152 no M1 (cuidado_m1_20261106); desfaz-se primeiro. 07/11/2026 (fusão do main 29441e6b): por cima dos acertos da decisão 173.
                             # 07/11/2026: os créditos atrás de um «i» na entrada, nos índices e no Atlas (creditos_i_pt1_20261107, pedido pt-1) passam a camada mais recente, por cima da decisão 152 no M1; desfazem-se primeiro, com a mesma exigência.
-                            # 2026-11-08: o cartaz «Ler a cidade» e o nome novo da secção (cidade_cartaz_20261108) passam a camada mais recente, por cima dos créditos do pedido pt-1, e mudam páginas desta camada (a frase da sugestão «continua»); desfazem-se primeiro, com a mesma exigência.
+                            # 08/11/2026: o cartaz «Ler a cidade» e o nome novo da secção (cidade_cartaz_20261108) passam a camada mais recente, por cima dos créditos do pedido pt-1, e mudam páginas desta camada (a frase da sugestão «continua»); desfazem-se primeiro, com a mesma exigência.
                             '--desfazer-antes', 'tests/fixtures/cidade-cartaz-edits-20261108.json',
                             '--desfazer-antes', 'tests/fixtures/creditos-i-pt1-edits-20261107.json', '--desfazer-antes', 'tests/fixtures/cuidado-m1-edits-20261106.json',
                             # 07/11/2026: por cima de tudo, os três acertos dos índices deixados pela decisão 173; desfazem-se primeiro, com a mesma exigência.
@@ -282,7 +282,7 @@ class Autonomia154(unittest.TestCase):
         # 07/11/2026: por cima da decisão 152 no M1 ficam os créditos atrás de um «i» do pedido pt-1 (creditos_i_pt1_20261107): a
         # ordem ganha uma posição (a decisão 152 passa a segunda, os acertos a terceiros, o desenho comum a quarto, os créditos do
         # pt-2 a quintos, o Atlas a sexto, a decisão 154 a sétima), e a cadeia de desfazer chama primeiro o pt-1.
-        # 2026-11-08: por cima dos créditos do pedido pt-1 fica o cartaz «Ler a cidade» e o nome novo da secção
+        # 08/11/2026: por cima dos créditos do pedido pt-1 fica o cartaz «Ler a cidade» e o nome novo da secção
         # (cidade_cartaz_20261108): a ordem ganha mais uma posição (o pt-1 passa a segundo, a decisão 154 a oitava), e a cadeia de
         # desfazer chama primeiro esta camada.
         self.assertEqual(verificar_camadas.LAYERS[0], ('cidade_cartaz_20261108', 'cidade-cartaz-edits-20261108'))
@@ -314,7 +314,7 @@ class Autonomia154(unittest.TestCase):
         # 07/11/2026: e a decisão 152 no M1 chama primeiro os créditos atrás de um «i» do pedido pt-1, que estão por cima dela.
         corpo = auditoria[auditoria.index('def undo_cuidado_m1_0611'):]
         self.assertLess(corpo.index('undo_creditos_i_pt1_0711(path, text)'), corpo.index('_CUIDADO_M1_0611.get('))
-        # 2026-11-08: e os créditos do pedido pt-1 chamam primeiro o cartaz «Ler a cidade» e o nome novo da secção, que estão por cima.
+        # 08/11/2026: e os créditos do pedido pt-1 chamam primeiro o cartaz «Ler a cidade» e o nome novo da secção, que estão por cima.
         corpo = auditoria[auditoria.index('def undo_creditos_i_pt1_0711'):]
         self.assertLess(corpo.index('undo_cidade_cartaz_0811(path, text)'), corpo.index('_CREDITOS_I_PT1_0711.get('))
         corpo = auditoria[auditoria.index('def undo_autonomia_0511'):]
@@ -323,7 +323,7 @@ class Autonomia154(unittest.TestCase):
         self.assertIn('autonomia-154-edits-20261105.json', sala)
         # 07/11/2026: antes de tudo, os créditos atrás de um «i» do pedido pt-1, a camada mais recente (antes da decisão 152 no M1).
         self.assertLess(sala.index('creditos-i-pt1-edits-20261107.json'), sala.index('cuidado-m1-edits-20261106.json'))
-        # 2026-11-08: e, antes deles, o cartaz «Ler a cidade» e o nome novo da secção, a camada mais recente.
+        # 08/11/2026: e, antes deles, o cartaz «Ler a cidade» e o nome novo da secção, a camada mais recente.
         self.assertLess(sala.index('cidade-cartaz-edits-20261108.json'), sala.index('creditos-i-pt1-edits-20261107.json'))
         # 07/11/2026 (fusão do main 29441e6b no pedido #182): antes de tudo, a decisão 152 no M1 (antes dos acertos da decisão 173).
         self.assertLess(sala.index('cuidado-m1-edits-20261106.json'), sala.index('indices-acertos-edits-20261107.json'))

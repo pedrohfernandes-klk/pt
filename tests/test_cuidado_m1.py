@@ -293,7 +293,7 @@ class CuidadoM1(unittest.TestCase):
                             '--manifesto', 'tests/fixtures/cuidado-m1-edits-20261106.json', '--verificar',
                             # 07/11/2026: por cima desta camada ficam os créditos atrás de um «i» do pedido pt-1 (creditos_i_pt1_20261107,
                             # que também mexe no índice do M1); desfazem-se primeiro, com a mesma exigência.
-                            # 2026-11-08: e, por cima deles, o cartaz «Ler a cidade» e o nome novo da secção (cidade_cartaz_20261108, que
+                            # 08/11/2026: e, por cima deles, o cartaz «Ler a cidade» e o nome novo da secção (cidade_cartaz_20261108, que
                             # também mexe no índice e nas lições do M1: a frase da sugestão «continua»); desfaz-se antes, com a mesma exigência.
                             '--desfazer-antes', 'tests/fixtures/cidade-cartaz-edits-20261108.json',
                             '--desfazer-antes', 'tests/fixtures/creditos-i-pt1-edits-20261107.json'],
@@ -302,7 +302,7 @@ class CuidadoM1(unittest.TestCase):
         self.assertIn('manifesto em dia', r.stdout)
         for t in TROCAS:
             # 07/11/2026: cada troca confere-se na página com a camada do pedido pt-1 desfeita (a camada por cima desta).
-            # 2026-11-08: a mesma função desfaz antes o cartaz «Ler a cidade» e o nome novo da secção, que estão por cima do pt-1.
+            # 08/11/2026: a mesma função desfaz antes o cartaz «Ler a cidade» e o nome novo da secção, que estão por cima do pt-1.
             texto = undo_creditos_i_pt1_0711(t['ficheiro'], ler(t['ficheiro']))
             with self.subTest(ficheiro=t['ficheiro'], local=t['local']):
                 self.assertEqual(texto.count(t['novo']), t['ocorrencias'])
@@ -324,7 +324,7 @@ class CuidadoM1(unittest.TestCase):
         # No topo da cadeia.
         # 07/11/2026: logo por baixo do topo, que passa a ser dos créditos atrás de um «i» do pedido pt-1 (creditos_i_pt1_20261107);
         # a ordem ganha uma posição.
-        # 2026-11-08: por cima do pt-1 fica o cartaz «Ler a cidade» e o nome novo da secção (cidade_cartaz_20261108); a ordem ganha
+        # 08/11/2026: por cima do pt-1 fica o cartaz «Ler a cidade» e o nome novo da secção (cidade_cartaz_20261108); a ordem ganha
         # mais uma posição e esta camada passa a terceira.
         self.assertEqual(verificar_camadas.LAYERS[0], ('cidade_cartaz_20261108', 'cidade-cartaz-edits-20261108'))
         self.assertEqual(verificar_camadas.LAYERS[1], ('creditos_i_pt1_20261107', 'creditos-i-pt1-edits-20261107'))
@@ -346,7 +346,7 @@ class CuidadoM1(unittest.TestCase):
         self.assertLess(sala.index('cuidado-m1-edits-20261106.json'), sala.index('indices-acertos-edits-20261107.json'))
         # 07/11/2026: na Sala desligada, a camada do pedido pt-1 desfaz-se antes desta.
         self.assertLess(sala.index('creditos-i-pt1-edits-20261107.json'), sala.index('cuidado-m1-edits-20261106.json'))
-        # 2026-11-08: e, antes dela, o cartaz «Ler a cidade» e o nome novo da secção, a camada mais recente.
+        # 08/11/2026: e, antes dela, o cartaz «Ler a cidade» e o nome novo da secção, a camada mais recente.
         self.assertLess(sala.index('cidade-cartaz-edits-20261108.json'), sala.index('creditos-i-pt1-edits-20261107.json'))
         # Onde a camada dos créditos se desfaz antes de conferir outra (fluxos e testes da cadeia), esta desfaz-se primeiro.
         # 07/11/2026 (fusão do main 29441e6b no pedido #182): a regra é a mesma (onde se desfazem os créditos, esta camada desfaz-se
@@ -355,7 +355,7 @@ class CuidadoM1(unittest.TestCase):
         creditos = '--desfazer-antes tests/fixtures/creditos-i-edits-20261105.json'
         # 07/11/2026: a cadeia inteira passa a começar pelos créditos atrás de um «i» do pedido pt-1 (a camada mais recente, por cima
         # desta), com a mesma exigência: nada pelo meio.
-        # 2026-11-08: e começa agora pelo cartaz «Ler a cidade» e pelo nome novo da secção (cidade_cartaz_20261108), por cima do pt-1,
+        # 08/11/2026: e começa agora pelo cartaz «Ler a cidade» e pelo nome novo da secção (cidade_cartaz_20261108), por cima do pt-1,
         # com a mesma exigência: nada pelo meio.
         cadeia = ('--desfazer-antes tests/fixtures/cidade-cartaz-edits-20261108.json '
                   '--desfazer-antes tests/fixtures/creditos-i-pt1-edits-20261107.json '
@@ -376,7 +376,7 @@ class CuidadoM1(unittest.TestCase):
         rotas = ler('tests/test_task_routes_closure.py')
         # 07/11/2026 (fusão do main 29441e6b no pedido #182): na cadeia das rotas, esta camada vem logo antes dos acertos da decisão 173.
         # 07/11/2026: e, antes dela, a do pedido pt-1, a primeira da cadeia.
-        # 2026-11-08: e, antes de todas, a do cartaz «Ler a cidade» e do nome novo da secção.
+        # 08/11/2026: e, antes de todas, a do cartaz «Ler a cidade» e do nome novo da secção.
         self.assertIn("(ROOT/'tests/fixtures/cidade-cartaz-edits-20261108.json',ROOT/'tests/fixtures/creditos-i-pt1-edits-20261107.json',"
                       "ROOT/'tests/fixtures/cuidado-m1-edits-20261106.json',ROOT/'tests/fixtures/indices-acertos-edits-20261107.json',", rotas)
 

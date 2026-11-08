@@ -82,7 +82,7 @@ class Camada148(unittest.TestCase):
                             str(MANIFESTO.relative_to(ROOT)), '--verificar',
                             # 07/11/2026 (fusão do main 29441e6b no pedido #182): por cima de tudo, a decisão 152 no M1; desfaz-se primeiro, com a mesma exigência.
                             # 07/11/2026: os créditos atrás de um «i» na entrada, nos índices e no Atlas (creditos_i_pt1_20261107, pedido pt-1) passam a camada mais recente, por cima da decisão 152 no M1; desfazem-se primeiro, com a mesma exigência.
-                            # 2026-11-08: o cartaz «Ler a cidade» na entrada e o nome novo da secção nas páginas publicadas (cidade_cartaz_20261108) passam a camada mais recente, por cima dos créditos atrás de um «i» do pedido pt-1 (e mudam páginas desta cadeia: a entrada, os índices e a frase da sugestão «continua»); desfazem-se primeiro, com a mesma exigência.
+                            # 08/11/2026: o cartaz «Ler a cidade» na entrada e o nome novo da secção nas páginas publicadas (cidade_cartaz_20261108) passam a camada mais recente, por cima dos créditos atrás de um «i» do pedido pt-1 (e mudam páginas desta cadeia: a entrada, os índices e a frase da sugestão «continua»); desfazem-se primeiro, com a mesma exigência.
                             '--desfazer-antes', 'tests/fixtures/cidade-cartaz-edits-20261108.json', '--desfazer-antes', 'tests/fixtures/creditos-i-pt1-edits-20261107.json', '--desfazer-antes', 'tests/fixtures/cuidado-m1-edits-20261106.json',
                             '--desfazer-antes', 'tests/fixtures/indices-acertos-edits-20261107.json'],  # 07/11/2026: acertos por cima.
                            cwd=ROOT, capture_output=True, text=True, encoding='utf-8')
@@ -125,7 +125,7 @@ class Camada148(unittest.TestCase):
         # 07/11/2026 (fusão do main 29441e6b no pedido #182): por cima dos acertos fica a decisão 152 no M1; os acertos passam a segundos e esta camada a terceira.
         # 07/11/2026: por cima da decisão 152 no M1 ficam os créditos atrás de um «i» do pedido pt-1; a ordem ganha uma posição e
         # esta camada passa a quarta.
-        # 2026-11-08: por cima dos créditos do pedido pt-1 fica o cartaz «Ler a cidade» e o nome novo da secção
+        # 08/11/2026: por cima dos créditos do pedido pt-1 fica o cartaz «Ler a cidade» e o nome novo da secção
         # (cidade_cartaz_20261108); a ordem ganha mais uma posição e esta camada passa a quinta.
         self.assertEqual(verificar_camadas.LAYERS[0], ('cidade_cartaz_20261108', 'cidade-cartaz-edits-20261108'))
         self.assertEqual(verificar_camadas.LAYERS[1], ('creditos_i_pt1_20261107', 'creditos-i-pt1-edits-20261107'))

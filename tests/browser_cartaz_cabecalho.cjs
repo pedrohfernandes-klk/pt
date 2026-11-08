@@ -12,7 +12,7 @@ let before = fs.readFileSync(path.join(root, 'index.html'), 'utf8').replace(/\r\
 // 07/11/2026: decisões 153, 176 e 177 (pedido pt-1). A camada dos créditos atrás de um «i» (creditos_i_pt1_20261107) fica por cima
 // desta e muda a mesma linha da cabeça (o motor dos fundos com versão nova): o «antes» desfá-la primeiro, com contagem estrita, e as
 // conferências ficam iguais.
-// 2026-11-08: por cima dos créditos do pedido pt-1 fica o cartaz «Ler a cidade» (camada cidade_cartaz_20261108, que muda a
+// 08/11/2026: por cima dos créditos do pedido pt-1 fica o cartaz «Ler a cidade» (camada cidade_cartaz_20261108, que muda a
 // entrada): o «antes» desfá-lo primeiro, com contagem estrita, e as conferências ficam iguais.
 const cidadeCartaz = JSON.parse(fs.readFileSync(path.join(root, 'tests/fixtures/cidade-cartaz-edits-20261108.json'), 'utf8'));
 for (const edit of [...cidadeCartaz.files['index.html'].edits].reverse()) {
