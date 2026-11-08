@@ -848,6 +848,13 @@ def main():
                 # e 177, pedido pt-1), a camada mais recente, por cima da decisão 152 no M1.
                 # 08/11/2026: antes de tudo, o cartaz «Ler a cidade» na entrada e o nome novo da secção nas páginas publicadas
                 # (frase da sugestão «continua» incluída), a camada mais recente, por cima dos créditos atrás de um «i» do pedido pt-1.
+                # 08/11/2026: antes de tudo, a decisão 152 no M2 (tabelas e espaços que não quebram), a camada mais recente, por
+                # cima do cartaz «Ler a cidade» e do nome novo da secção.
+                cuidado_m2 = ROOT / 'tests/fixtures/cuidado-m2-edits-20261108.json'
+                for edit in reversed(json.loads(cuidado_m2.read_text('utf-8'))['files'].get(rel, {}).get('edits', [])):
+                    if conferencia.count(edit['new']) != edit['occurrences']:
+                        raise ManifestoDesatualizado(f'{rel}: decisão 152 no M2 não confere')
+                    conferencia = conferencia.replace(edit['new'], edit['old'])
                 cidade_cartaz = ROOT / 'tests/fixtures/cidade-cartaz-edits-20261108.json'
                 for edit in reversed(json.loads(cidade_cartaz.read_text('utf-8'))['files'].get(rel, {}).get('edits', [])):
                     if conferencia.count(edit['new']) != edit['occurrences']:

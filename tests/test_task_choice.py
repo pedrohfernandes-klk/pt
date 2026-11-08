@@ -96,6 +96,9 @@ class ChoiceTasks(unittest.TestCase):
                 # quebra (U+00A0) e a forma com espaço normal já não está; nas outras, como estava.
                 dados = ROOT / 'docs/pedagogia/tarefas-escolha' / f'{slug}.json'
                 nao_partir = dados.is_file() and json.loads(dados.read_text('utf-8')).get('nao_partir')
+                # 08/11/2026: decisão 152 no M2 (achados 30 e 31): as tarefas da M2-U1 e da M2-U2 (o piloto, sem dados do gerador)
+                # também levam «90 min» com espaço que não quebra, com a mesma exigência (a forma com espaço normal já não está).
+                nao_partir = nao_partir or slug in ('m2-u1', 'm2-u2')
                 noventa = '90\xa0min' if nao_partir else '90 min'
                 if nao_partir:
                     self.assertNotIn('90 min', source)

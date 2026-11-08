@@ -145,7 +145,7 @@
     },
     {
       "t": "ordenar",
-      "p": "Ordena este ciclo de revisão: partes do rascunho e terminas com a confirmação de que o texto cabe no intervalo de 180 a 240 palavras.",
+      "p": "Ordena este ciclo de revisão: partes do rascunho e terminas com a confirmação de que o texto cabe no intervalo de 180 a 240 palavras.",
       "p2": "Se a primeira contagem mostrar que o texto está curto ou longo, em que sequência verificas e corriges a extensão?",
       "passos": [
         "Contar as palavras do rascunho",

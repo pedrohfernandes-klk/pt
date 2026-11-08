@@ -49,6 +49,8 @@ CUIDADO = ROOT / 'tests/fixtures/cuidado-m1-edits-20261106.json'
 CREDITOS_PT1 = ROOT / 'tests/fixtures/creditos-i-pt1-edits-20261107.json'
 # 08/11/2026: por cima dos créditos do pedido pt-1 fica o cartaz «Ler a cidade» e o nome novo da secção (a frase da sugestão dos índices).
 CIDADE_CARTAZ = ROOT / 'tests/fixtures/cidade-cartaz-edits-20261108.json'
+# 08/11/2026: por cima do cartaz «Ler a cidade» fica a decisão 152 no M2 (os espaços que não quebram no índice do M2).
+CUIDADO_M2 = ROOT / 'tests/fixtures/cuidado-m2-edits-20261108.json'
 VERSAO = '20261106'
 ACHADO = ('06/11/2026: decisão 148 (o desenho do índice do M4 passa aos nove, com a palavra do módulo, a imagem documental '
           'mais pequena a seguir às unidades e os botões flutuantes de sempre). {o}')
@@ -65,6 +67,11 @@ COMENTARIO_PILOTO = next(t['novo'] for t in PILOTO if t['local'] == 'M4 retirar 
 def base(rel):
     """O texto da página sem esta camada (desfeita pelo manifesto, da última troca para a primeira)."""
     texto = (ROOT / rel).read_bytes().decode('utf-8')
+    # 08/11/2026: antes de tudo, a decisão 152 no M2 (camada cuidado_m2_20261108), a mais recente, com contagem estrita.
+    for edit in reversed(json.loads(CUIDADO_M2.read_text('utf-8'))['files'].get(rel, {}).get('edits', []) if CUIDADO_M2.is_file() else []):
+        if texto.count(edit['new']) != edit['occurrences']:
+            raise SystemExit(f'{rel}: a decisão 152 no M2 já não confere ({edit["location"]})')
+        texto = texto.replace(edit['new'], edit['old'])
     # 08/11/2026: antes de tudo, o cartaz «Ler a cidade» e o nome novo da secção (camada cidade_cartaz_20261108), a mais recente, com contagem estrita.
     for edit in reversed(json.loads(CIDADE_CARTAZ.read_text('utf-8'))['files'].get(rel, {}).get('edits', []) if CIDADE_CARTAZ.is_file() else []):
         if texto.count(edit['new']) != edit['occurrences']:

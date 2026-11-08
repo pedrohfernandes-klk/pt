@@ -8,8 +8,17 @@ def extra(name):
 class M2Balance(unittest.TestCase):
  def test_middle_scenes_precede_grammar_and_desfecho(self):
   a=cards('07');self.assertEqual(28,len(a))
+  # 08/11/2026: decisão 152 no M2 (achado 15, camada cuidado_m2_20261108): os versos destes três cartões passam à marcação de verso
+  # das outras lições do M2 (p.v, um span.ln com span.n por verso, sem itálico). A cópia da cena confere-se, letra a letra, com essa
+  # camada desfeita (contagem estrita); e cada verso da cena continua no cartão, pela mesma ordem, um por linha.
+  from auditoria_20261028 import undo_cuidado_m2_0811
+  antes=json.JSONDecoder().raw_decode(undo_cuidado_m2_0811('m2/licao-m2-f07/index.html',(ROOT/'m2/licao-m2-f07/index.html').read_text('utf-8')).split('CARTOES=',1)[1].lstrip())[0]
   for pos,name in zip([2,3,4],['pero-visita','escudeiro-fala','janelas-pregadas']):
-   self.assertEqual('ler',a[pos]['t']);self.assertIn(extra(name)['passos'][0]['html'],a[pos]['html'])
+   self.assertEqual('ler',a[pos]['t']);self.assertIn(extra(name)['passos'][0]['html'],antes[pos]['html'])
+   versos=[v for bloco in re.findall(r'<p><i>(.*?)</i></p>',extra(name)['passos'][0]['html']) for v in bloco.split('<br>')]
+   self.assertTrue(versos)
+   self.assertEqual(versos,re.findall(r'<span class="ln"><span class="n"></span>(.*?)</span>',a[pos]['html']))
+   self.assertNotIn('<p><i>',a[pos]['html'])
   self.assertEqual('escolha',a[5]['t']);self.assertIn('Está tu dissimulado',a[5]['f'])
   self.assertIn('Retomar a distinção',a[7]['html']);self.assertIn('Para o desfecho',a[-1]['html'])
  def test_complements_use_their_own_passages(self):

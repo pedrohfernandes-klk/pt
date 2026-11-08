@@ -12,7 +12,8 @@ class RevisionActivities(unittest.TestCase):
    self.assertEqual(len(x['o']),len(x['fe']))
  def test_no_extra_cards_or_delivery_rules_removed(self):
   a,b=bank(ROOT/'m2/licao-m2-f08/index.html'),bank(ROOT/'m2/licao-m2-f09/index.html')
-  self.assertEqual([22,20],[len(a),len(b)]);self.assertIn('180–240',a[4]['html']);self.assertIn('etapa 2',a[4]['html']);self.assertIn('Encomenda por curso',b[2]['html'])
+  # 08/11/2026: decisão 152 no M2 (achado 18): o intervalo leva a junção (U+2060) depois do traço, para não se partir entre linhas.
+  self.assertEqual([22,20],[len(a),len(b)]);self.assertIn('180–\u2060240',a[4]['html']);self.assertIn('etapa 2',a[4]['html']);self.assertIn('Encomenda por curso',b[2]['html'])
   self.assertEqual('sublinhar',a[6]['t']);self.assertEqual('emparelhar',a[11]['t']);self.assertEqual('ordenar',b[12]['t']);self.assertIn('não uma receita única',b[12]['f'])
  def test_panels_match_current_lesson_indices(self):
   for n in ['08','09']:

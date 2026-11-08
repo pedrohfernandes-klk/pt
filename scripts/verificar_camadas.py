@@ -7,6 +7,9 @@ import sys
 
 ROOT=Path(__file__).resolve().parents[1]
 LAYERS=[
+ # 08/11/2026: decisão 152 (cuidado em todas as lições), módulo M2: tabelas onde há itens paralelos e referências e números que
+ # não se partem, camada mais recente, por cima do cartaz «Ler a cidade» e do nome novo da secção.
+ ('cuidado_m2_20261108','cuidado-m2-edits-20261108'),
  # 08/11/2026: cartaz «Ler a cidade» na entrada do Português e nome novo da secção nas páginas publicadas (pedido do
  # utilizador: «quero que [Ler a cidade] tenha um banner em português»), camada mais recente, por cima dos créditos atrás de um
  # «i» do pedido pt-1.
