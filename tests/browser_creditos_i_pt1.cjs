@@ -12,8 +12,11 @@ const fs=require('fs'),path=require('path'),http=require('http'),assert=require(
 const {chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright');
 const root=path.resolve(__dirname,'..'),out=process.env.CREDITOS_I_PT1_OUTPUT;if(out)fs.mkdirSync(out,{recursive:true});
 const manifesto=JSON.parse(fs.readFileSync(path.join(root,'tests/fixtures/creditos-i-pt1-edits-20261107.json'),'utf8')).files;
+// 2026-11-08: por cima desta camada fica o cartaz «Ler a cidade» e o nome novo da secção (camada cidade_cartaz_20261108, que muda
+// a entrada e os nove índices): desfaz-se primeiro, com contagem estrita, e as conferências ficam iguais.
+const cidadeCartaz=JSON.parse(fs.readFileSync(path.join(root,'tests/fixtures/cidade-cartaz-edits-20261108.json'),'utf8')).files;
 // A página sem esta camada (desfeita da última troca para a primeira, com contagem estrita).
-function antes(rel){let t=fs.readFileSync(path.join(root,rel),'utf8');for(const e of [...manifesto[rel].edits].reverse()){assert.equal(t.split(e.new).length-1,e.occurrences,rel+' '+e.location);t=t.split(e.new).join(e.old)}return t}
+function antes(rel){let t=fs.readFileSync(path.join(root,rel),'utf8');for(const e of [...((cidadeCartaz[rel]||{}).edits||[])].reverse()){assert.equal(t.split(e.new).length-1,e.occurrences,rel+' cartaz «Ler a cidade» '+e.location);t=t.split(e.new).join(e.old)}for(const e of [...manifesto[rel].edits].reverse()){assert.equal(t.split(e.new).length-1,e.occurrences,rel+' '+e.location);t=t.split(e.new).join(e.old)}return t}
 const um=(s,re)=>{const m=s.match(re);assert.ok(m,String(re));return m[1]};
 const LICENCA_M8='https://creativecommons.org/licenses/by-sa/2.0/deed.pt';
 // Para cada página: os «i» novos, pela ordem da página, com o crédito antigo (HTML), o nome, as ligações a mais e a imagem.

@@ -1,0 +1,2934 @@
+{
+ "base_commit": "4833c23655061e0cc2a366edee1b2b21eaea6237",
+ "_nota": "08/11/2026: pedido do utilizador, «quero que [Ler a cidade] tenha um banner em português»: cartaz «Ler a cidade» na entrada do Português, logo a seguir ao cartaz do Atlas e com as classes dele, e nome novo da secção nas páginas publicadas (famílias C1 a C3). Gerado por scripts/aplicar_trocas.py a partir de scripts/cidade_cartaz_20261108.json (que scripts/cidade_cartaz_20261108.py constrói): não se edita à mão. Camada mais recente, por cima dos créditos atrás de um «i» do pedido pt-1 (creditos_i_pt1_20261107): desfaz-se antes de todas as outras, com contagem estrita. Na entrada, a linha pequena «Português × Cidadania · Ler a cidade: …» sai, porque passa a repetir o cartaz (a troca ancora-se no fim do «i» da fotografia e no fim do portal do Lente). A frase da sugestão «continua» (238 páginas) e as outras formas do nome antigo (título, marca e rótulo do cartão de sugestão antigo, ligação das listas «todos») passam a «Ler a cidade». A página do endereço antigo (bairro/index.html) fica como está, e os JSON e manifestos das camadas antigas também.",
+ "files": {
+  "1/index.html": {
+   "base_sha256_lf": "844d2fd24cf87fcd6eb113eb9590409ef6af0e9944677f1a1c8992e6d5166e8c",
+   "after_sha256_lf": "902f0e672cf00c5b2e390829fa554f933ed8722493c7c08dd5ca40ab2fc4f68e",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "1/todos/index.html": {
+   "base_sha256_lf": "da3597d65e58ab1bb5f823860f797cb03c31022194e5a078ab0e143c453b3c38",
+   "after_sha256_lf": "3de56e9a8dc5161e17b150c7bdb5b59fa5626cbd89fb7e5d4c8dcdba7aace78d",
+   "edits": [
+    {
+     "location": "C3, lista «todos» do ano: a ligação para a secção",
+     "old": "<a href=\"https://pedrohfernandes-klk.github.io/lente/cidade/\">A cidade antes da aula<small>percurso extra",
+     "new": "<a href=\"https://pedrohfernandes-klk.github.io/lente/cidade/\">Ler a cidade<small>percurso extra",
+     "occurrences": 1
+    }
+   ]
+  },
+  "2/index.html": {
+   "base_sha256_lf": "7adbe2532538283539563ce39459b22ffabaef05e410cf5cb23658c92a8ecfbf",
+   "after_sha256_lf": "62b77c825e3993344c7f0b15582f97bb0b29eb61aa539307ea69d62abae2c333",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "2/todos/index.html": {
+   "base_sha256_lf": "ef35e6f3978f2397fcec5e0b5a58f1d92cf3a88d61d579f951e69fb8d15f786a",
+   "after_sha256_lf": "9547dd1316d4e6476d86220703939ec0b228088d947b0ff675fb9ef5aaf911e5",
+   "edits": [
+    {
+     "location": "C3, lista «todos» do ano: a ligação para a secção",
+     "old": "<a href=\"https://pedrohfernandes-klk.github.io/lente/cidade/\">A cidade antes da aula<small>percurso extra",
+     "new": "<a href=\"https://pedrohfernandes-klk.github.io/lente/cidade/\">Ler a cidade<small>percurso extra",
+     "occurrences": 1
+    }
+   ]
+  },
+  "3/index.html": {
+   "base_sha256_lf": "37c6af51bd27fc89f90a1c5a5c815a64fe79db53b5f910c0daa339f9b0ed3575",
+   "after_sha256_lf": "8ecfc01aa9eb2dd02505e5accb070d50773c17a35f6964891e4a680c8a5bb515",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "3/todos/index.html": {
+   "base_sha256_lf": "63bebfb6d990440be891826dc0a80ae00a3e01dd60c5aaf7fa930a66b608433b",
+   "after_sha256_lf": "7052da8949aebdc9d43d1cb4455d753b039ef107b9bfbf1ac4fd46718e964f35",
+   "edits": [
+    {
+     "location": "C3, lista «todos» do ano: a ligação para a secção",
+     "old": "<a href=\"https://pedrohfernandes-klk.github.io/lente/cidade/\">A cidade antes da aula<small>percurso extra",
+     "new": "<a href=\"https://pedrohfernandes-klk.github.io/lente/cidade/\">Ler a cidade<small>percurso extra",
+     "occurrences": 1
+    }
+   ]
+  },
+  "c/candide-jardim/index.html": {
+   "base_sha256_lf": "6c872e7a786ccf5bb4ffe5850bb1aded40065e3b000b805fb990f276a7d7faf5",
+   "after_sha256_lf": "d59e7fffeb80508fe28eb278bc4ec7f680616e75e002696e5f6bcc5e10ae2c1d",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "c/capitao-romance/index.html": {
+   "base_sha256_lf": "eaa0db843518d1ddcd0b27299625ee8fb70836b7d8286f89a1d6a40f0fa26a03",
+   "after_sha256_lf": "5e413307cd25d44c4fb9e7e5f36601659560286986da4968e2fc84701c516dfa",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "c/casmurro-titulo/index.html": {
+   "base_sha256_lf": "ac00080b11b279024b29f7885955c575aece94f70cb27e825eaf908c3df40b3d",
+   "after_sha256_lf": "dc194a25745d161eee682ce2d69385eab071bcb4ef265b85283e78fec05d00a3",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "c/compasso-rimas/index.html": {
+   "base_sha256_lf": "a4f95f05a693280c40faf2bd4429336a08f9e15c288072c0c6e28a206f6c296b",
+   "after_sha256_lf": "5bcc7e8ed6cabeeb58db9df8e37691d6c91d437635f4cdabbc76f83e732bfd62",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "c/duas-legendas/index.html": {
+   "base_sha256_lf": "6790622ece3908b0b723429154bdfef9ecba4078678f4bb40a88b8b157ba2be7",
+   "after_sha256_lf": "14bfdcf1ac0e0d8a1071e48f5ed97e52675e4a5cfbca72dc852c6766bbfd51a6",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "c/espelho-machado/index.html": {
+   "base_sha256_lf": "4b6992c9a29603fcf92504f1c36d2aacc7a34877c022c1e132c42ab2f5e14d9a",
+   "after_sha256_lf": "4a3d95d1e943c783265d65826593b827a2eb86d85f027c9850f47dae50a3f751",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "c/habitos-cinco/index.html": {
+   "base_sha256_lf": "97ab4121cd1aec524c0041a2b457a65dd39da1c9eb7550d23286cb848434b788",
+   "after_sha256_lf": "ff87020702aaeea3d3b759f0903fa3c1a6ba922bbe4ccf11c1361c351f3ba393",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "c/kafka-acordar/index.html": {
+   "base_sha256_lf": "056b018bf07eb65817c7d55771e09100369f3795757d050ebe8eda6815d6fa3f",
+   "after_sha256_lf": "07b7ed43f6e9ef5b0c77a3b317574018c70394a2fe1fd97b4859f3d7f27956fc",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "c/oficina-cortar/index.html": {
+   "base_sha256_lf": "c191fd3aa236cc804cdbc1ae521939a471d5f8d365abdd34191629f010de5618",
+   "after_sha256_lf": "8d7ccad9d61e517904ff235d79567c6f3c17a09d07a7d1855dbfcb59b616c178",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "c/oficina-escada/index.html": {
+   "base_sha256_lf": "e262037966f556fa5db5887b38d0a4b15cfa59b4829456bea0b50b22819bc31a",
+   "after_sha256_lf": "77f724bd60492e901e78e9a8f6bb4365a8d8bae26ad83ed2f2d490d7858b56b5",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "c/oficina-frase-manda/index.html": {
+   "base_sha256_lf": "2bb2a571fa846c02296977bdbf59244156bc5d0f365bf46144cad68fb17ba2b0",
+   "after_sha256_lf": "105e18a82076d8498852f2b9898ea0e67d3ef713e4351da130f4ed45417101b6",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "c/ouvi-dizer/index.html": {
+   "base_sha256_lf": "150468a512b8f9a161a0cd15b021041b5f2943b5020fc9f0b7d284e2ba8c30e3",
+   "after_sha256_lf": "5a9582f58f78752da4dd6e5e1034db172a851e714f822729649e7f0bdea244a9",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "c/palavras-dobretes/index.html": {
+   "base_sha256_lf": "ecc76938774f171111fea6c8533194a94cd378eeef486a9825d06786930780a0",
+   "after_sha256_lf": "0014a39edc3694a7f039422efb102bf0dea1780fa54f7eb1abb37f91c23b60b0",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "c/palma-vida/index.html": {
+   "base_sha256_lf": "3babf96fb9d6166c84c0724c6ba0c1467089da1b7b6ca6e7312d08ba1d5f976c",
+   "after_sha256_lf": "9ba6b921bad23e9f480391ed01b8f361405a9d95e661ee375121b7d26e2b39f0",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "c/posse-1923/index.html": {
+   "base_sha256_lf": "dd586992419f5cf2d38e87bbc7f3068ae081a6539edcd67ede19835e32e16ee9",
+   "after_sha256_lf": "fac7f93d7f51fbf60807e65239c2079f51131669a4dcc63faeecb61a10a6d6be",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "c/quinta-mandamentos/index.html": {
+   "base_sha256_lf": "c6396c38a8e65ef4de887107b4d890e740ebf9c18e763a42f5b70b473e64db2e",
+   "after_sha256_lf": "d8121a6980baf1220e401a7860989bc9e1962ba7d8ac70ebabb24775ad2c621c",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "c/responder-verbo/index.html": {
+   "base_sha256_lf": "0552ce8ba2307254bf73167b3f2be3f29f8ca55c4db57bbd2556d3d28e9ccac1",
+   "after_sha256_lf": "0bba6b7ac5e2766394f39596d483e92696788a87d66f2697a8c9b9dd865cfc8f",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "c/terra-firme/index.html": {
+   "base_sha256_lf": "287cfb28ebef4413691a1f7b8e7274aba66a02f4e9330f15eaf7f27af38f07e1",
+   "after_sha256_lf": "f4f760b72bb5ed7882c7306cd49006242ab643f913374e28a861419904fa45c5",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "c/todagente-jardim/index.html": {
+   "base_sha256_lf": "65c2401d3fdd3284c62a95d918cee2e143450aa070c09160d2589b1812619400",
+   "after_sha256_lf": "3cb0c6f55d4471396b7b1055643526b91011040793c40c7b785b9db694bc4a49",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "index.html": {
+   "base_sha256_lf": "755eca173f75c0f5228b04b6b50a1bc97cdc72225cd95a8765091dc205424158",
+   "after_sha256_lf": "e9eda513b66d8deffe35268ad10863a09429b38a7ecc326fc600647d7e49e22d",
+   "edits": [
+    {
+     "location": "C1, entrada: o cartaz «Ler a cidade», logo a seguir ao cartaz do Atlas",
+     "old": "</div></section><nav class=\"site-portal-wrap\" aria-label=\"Explorar o Lente\">",
+     "new": "</div></section><style>.atlas-poster-art.cidade-poster-art{grid-template-columns:repeat(4,minmax(0,1fr));font-size:1.15rem}@media(max-width:760px){.atlas-poster-art.cidade-poster-art{grid-template-columns:repeat(3,minmax(0,1fr));font-size:.9rem}.cidade-poster-art span{min-height:36px;padding:4px}}@media(max-width:520px){.atlas-poster-art.cidade-poster-art{grid-template-columns:repeat(7,minmax(0,1fr));font-size:.85rem}}</style><section class=\"atlas-poster cidade-poster\" aria-labelledby=\"cidade-poster-title\"><div class=\"atlas-poster-copy\"><p class=\"portal-kicker\">Português × Cidadania</p><h2 id=\"cidade-poster-title\">Ler a<br>cidade<span aria-hidden=\"true\">↗</span></h2><p>Uma rua pode ser lida como um texto e discutida como um espaço de todos. São 14 missões, no bairro ou a partir das fotografias.</p><nav aria-label=\"Entradas de Ler a cidade\"><a href=\"https://pedrohfernandes-klk.github.io/lente/cidade/\">Entrar na cidade <span aria-hidden=\"true\">→</span></a><a href=\"https://pedrohfernandes-klk.github.io/lente/cidade/#m01\">Ver as missões <span aria-hidden=\"true\">→</span></a></nav></div><div class=\"atlas-poster-art cidade-poster-art\" aria-hidden=\"true\"><span>01</span><span>02</span><span>03</span><span>04</span><span>05</span><span>06</span><span>08</span><span>10</span><span>11</span><span>12</span><span>15</span><span>16</span><span>17</span><span>18</span></div></section><nav class=\"site-portal-wrap\" aria-label=\"Explorar o Lente\">",
+     "occurrences": 1
+    },
+    {
+     "location": "C1, entrada: sai a linha pequena «Português × Cidadania · Ler a cidade: …», que o cartaz repete",
+     "old": "</details><p class=\"sp-credit\"><strong>Português × Cidadania</strong> · <a href=\"https://pedrohfernandes-klk.github.io/lente/cidade/\">Ler a cidade: observar, criar e discutir o espaço comum →</a></p></nav>",
+     "new": "</details></nav>",
+     "occurrences": 1
+    },
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m1/flores-verde-pino/index.html": {
+   "base_sha256_lf": "8a9093184fc7241e2a9024430a23976e9f49028108f75a259449ac22fb61e3ce",
+   "after_sha256_lf": "12f49247420c80aaf09771424629f6d766616246862cac05b43f138aa2b89394",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m1/gram-complementos/index.html": {
+   "base_sha256_lf": "55c028c86b56838f8001b96064b9afeecd816452d568041f89e0cd97dd4442f8",
+   "after_sha256_lf": "b29cbc0126da4308e986f7cfa6c34b6881aa83a17c1baf1954337937dcf9d53c",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m1/gram-coordenadas/index.html": {
+   "base_sha256_lf": "68f69ea5175a43935c596d00af358bc36bb22667e15f13f49f50625e6a4c60c4",
+   "after_sha256_lf": "a832748ec0f761bf5d1fe6d518e1a9c1be52681ed7e62d8719a4fcb957f04be0",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m1/gram-fonologia/index.html": {
+   "base_sha256_lf": "aef0db0f9465f247db73b8f4b555bc854230fd07f00153537a2eec5abb75c73e",
+   "after_sha256_lf": "dc7d9c8fd4592762e23ed631ee313c0ac3bb056508b522a5b8a7fe6e4f0355e4",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m1/guilhade-dona-fea/index.html": {
+   "base_sha256_lf": "48765162d102f08950c4f023ef65d26d58a2bf682e63a7b5271434c4a78529e2",
+   "after_sha256_lf": "de870e0cc7182c00e92a0d824747039fe437256cfa48fee6eb6bc60e1d9562cf",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m1/index.html": {
+   "base_sha256_lf": "94646cf5d1ebd7646bc12b307a7788e79040954effebe3d54bd0e60c32e5542f",
+   "after_sha256_lf": "1d1524d22bc1de778c79c86d1dfc85ea675bddb98e53b1402126980616b2956c",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m1/licao-m1-f01/index.html": {
+   "base_sha256_lf": "80793875a772d09f15abe0190607ef16dcee60e81160c54ad22a37c1bd854a36",
+   "after_sha256_lf": "d53304b1543ccad53d8cd93afb16ce8ca03006f86bf9ebb2e9503902937a9dc5",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m1/licao-m1-f02/index.html": {
+   "base_sha256_lf": "f67f983b88b489e5b3e0c51bc27e082111b0b57aa089af9d38f3565e42361b55",
+   "after_sha256_lf": "ace352db6733337b577eadc4c205681ac1cea399e36a5413ced50e3e5c726a7a",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m1/licao-m1-f04/index.html": {
+   "base_sha256_lf": "3a89a50c504dee788322013a4f4ddc7f66140f55a8cf46e7f2db787a53ff7c34",
+   "after_sha256_lf": "81536df22965f53830303895b6000dc5e12ff8fa9a1317c9bc9c0d601f90d90c",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m1/licao-m1-f05/index.html": {
+   "base_sha256_lf": "2d567cf1d079e29186cb3011c6ac56629912908dea6b0826bb217695c8be7b28",
+   "after_sha256_lf": "b4ec2530536349949259e2b4e875c3839df8d4bbb31604288677b1f2fcb8cc47",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m1/licao-m1-f06/index.html": {
+   "base_sha256_lf": "08cec4ffa446c8548aadeb96eae21c2bdf9a76be170be6620424e1da716f37a4",
+   "after_sha256_lf": "f579ba82cd6ae630cfa748381e7b6c149be8ec57fff37e194bf99188b940cb2c",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m1/licao-m1-f07/index.html": {
+   "base_sha256_lf": "7f37f0f32796afaac52beaf9daf96c37006e03c09762ec12f100b09b55797b26",
+   "after_sha256_lf": "6c59a93234a2f3f8c2ea439d96d98b861df29e6323233b5649e9c28c35c48186",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m1/licao-m1-f08/index.html": {
+   "base_sha256_lf": "5dbc36b2a8f8c503f2f782371df6d42d4ed82a8ee2ece0731991a330b9b9e3f9",
+   "after_sha256_lf": "a92f1796e5f51c48e62e58bfc19800adf3be57fb9afd7c0d2cbe52e8135ae99c",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m1/licao-m1-f10/index.html": {
+   "base_sha256_lf": "44d188cee41d2bbcf4977f0e780fa606bf9a53bc6368e34f6bbe5260e3de2f41",
+   "after_sha256_lf": "8582c02214be123aefaf21f986375279f5f874ac85ce76f577fa15772a0d1c4d",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m1/licao-m1-f11/index.html": {
+   "base_sha256_lf": "bfea8ce1f6bdc42ac41470c24f6f55b0b6025840add9d1cb7921d7f412763c07",
+   "after_sha256_lf": "9c01407fdc96f661812ab262567497fb7cfd73abe925c06d846fb230f04901c8",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m1/licao-m1-f15/index.html": {
+   "base_sha256_lf": "cbf908a0763845a7eb6f690dddc8f2af8f18b7ff311e2254296bfd2a35c1d1f9",
+   "after_sha256_lf": "aeef4a501f1896fd7d8b499fb4efd9cc9b61afea666d5d3522ba65b848e64ded",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m1/licao-m1-f19/index.html": {
+   "base_sha256_lf": "5a9ed03bced591254484ed3a9dff07636451f140b143feda4c29840cc5964407",
+   "after_sha256_lf": "79c7ec84b7f35842f73bf41443144cc02e5b7c23084f861bdf8b2447d7c2c14d",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m1/licao-m1-f20/index.html": {
+   "base_sha256_lf": "17220b31cf0773eb8011684e96a1ef1cb5d528ecb5d6337e47c96a5a9b5d7083",
+   "after_sha256_lf": "85b2f064d7972ce8fb7826829c5320473923265bd55b81e2a3f8d3b2e94070cc",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m1/lisboa-cercada/index.html": {
+   "base_sha256_lf": "e6287a20e0d9b341e42a01af3bfa07f7730a628baed099b9e69319410f13ae6d",
+   "after_sha256_lf": "7b1b383ec62e0b60725cef311e86f706a1c022b62ca475b68d7e63566961ace0",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m1/lopes-matam-o-mestre/index.html": {
+   "base_sha256_lf": "3c44c5da011606d7d600dfed2facfc269fcfba686938436b8cd73e90f1faa4e0",
+   "after_sha256_lf": "9fc440bfb1ce07e955057024b0985760fd4fe5eb1d534f3e42e287af5d89884a",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m1/matam-o-mestre/index.html": {
+   "base_sha256_lf": "77b314ac8d3eb5c966fe966da1cf6b1830ecffcd5288643ea4525db12ed487a0",
+   "after_sha256_lf": "714a61b261e5d691d4286ac2ade7faeceedcc4726087e8737086203869d4ecc7",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m1/mendinho-ermida/index.html": {
+   "base_sha256_lf": "56f2e42d87107a69433bec5ac9ee23df2ef6321b20626d305d8804768264bf4b",
+   "after_sha256_lf": "1b74b64dd7e1f3bef6b34b48f3c4a38ad89d0214b456e5a17c36b9786ffb4061",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m1/olhar-ajuda/index.html": {
+   "base_sha256_lf": "87b5118f6c03d265bbcf64dde6608464f46a1b0ccfa58a17ff7e187b6cf8fed7",
+   "after_sha256_lf": "ddf443c7df3ab5821221bb685011cb3d59c98c2f8bcbc04c1149b07f827e5e9d",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m1/olhar-andeiro/index.html": {
+   "base_sha256_lf": "1026e0c85f0b27bea48cc708e400c1818a12d40203fa7559ba8f3beac1c8aab9",
+   "after_sha256_lf": "c653c4849413f0ce719624d55803d33a004fa60995d79458bae67058e962a3da",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m1/ondas-vigo/index.html": {
+   "base_sha256_lf": "38968fb9cd7ebe95c8a4337613ae78198063981fd03e6b71d87eff6c14367e55",
+   "after_sha256_lf": "5fc682d3e481d34e992e722ead395121509172dcca6abd6d7cf3eaaa48e21c23",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m1/tempo-da-flor/index.html": {
+   "base_sha256_lf": "7966bb8282377b4b9ea5700963fedcc7a0a19fb201bfe0b86661c7c4e545005d",
+   "after_sha256_lf": "250b90a5bd656d35966b98bf28181e4ae431c1b9102bec661dd97b0b392358cd",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m1/zeca-homem-comum/index.html": {
+   "base_sha256_lf": "c812c225764650a53a4b49d9fa9073e3871466ef33afb757cd7799b8373ffdf1",
+   "after_sha256_lf": "9088cd6ed635fd7a126a2e7c76354428d6bb05431aca8a1cd8f06399c56f28c9",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m2/escudeiro-fala/index.html": {
+   "base_sha256_lf": "a9afd563f58d198a427309d2915c60ec5e2cceb338e54e21b040222e8b4e5562",
+   "after_sha256_lf": "7366b38a6d753e75584c025436a84c9acd9ea0f267e6ac696d09603d8e1ba736",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m2/gram-formacao/index.html": {
+   "base_sha256_lf": "e1fca7a3c3d20430a1305679a677ea4b8d94094d7bb756b4a239882f5504ba53",
+   "after_sha256_lf": "9cd027e877dcf09cfda34ddd5f69db71dc0977c7a62dc7cbdb55e40f06e38dc5",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m2/gram-oracoes-farsa/index.html": {
+   "base_sha256_lf": "b4720cbd48f240e0ea0a69ee1df04fa0810c696102270447c7f22061bfbe1c51",
+   "after_sha256_lf": "05bff08de7132fe2d8f9b7d4477a7a37cef85fc08ed57fffcdd34e9eaf914dbd",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m2/gram-subordinadas/index.html": {
+   "base_sha256_lf": "6138bc748be4d1715f7200566d3c4d8ecf8bf87b55f86190221d65a3bcabcdea",
+   "after_sha256_lf": "0d48c53ece86c794f20d424a18947f9c41898321135a37b31db10aae82bb1c73",
+   "edits": [
+    {
+     "location": "C3, cartão de sugestão (versão antiga): o título",
+     "old": "{\"titulo\":\"A cidade antes da aula\",\"texto\":\"Um mapa do bairro",
+     "new": "{\"titulo\":\"Ler a cidade\",\"texto\":\"Um mapa do bairro",
+     "occurrences": 1
+    },
+    {
+     "location": "C3, cartão de sugestão (versão antiga): a marca",
+     "old": "\"A EPI · a cidade antes da aula\"",
+     "new": "\"A EPI · Ler a cidade\"",
+     "occurrences": 1
+    },
+    {
+     "location": "C3, cartão de sugestão (versão antiga): o rótulo «Sugestão: …» lido em voz alta",
+     "old": "\"Atlas Lusófono\":\"A cidade antes da aula\")",
+     "new": "\"Atlas Lusófono\":\"Ler a cidade\")",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m2/index.html": {
+   "base_sha256_lf": "28af25f2214c6c3403900fc87194fb7dc5b5884c10b572bef175ef605af14b64",
+   "after_sha256_lf": "0cb5a0ba0073407ca9d8ce29e6d3bc520f1c34a9baad1fad51ea587dcee70b3e",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m2/ines-escolhe/index.html": {
+   "base_sha256_lf": "ad6b9afaf81c477b8e8f72c79485303f6d17965ac3c8bbdb2e02f93a76a079ba",
+   "after_sha256_lf": "6fc84c132c80dc5dfcf366fc384de3a5ed4ba0f512344415785652e22a413796",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m2/ines-escolher/index.html": {
+   "base_sha256_lf": "bf33bd992df1e6ea4f89262674b6d162e30771df1055d6c32ad50473fb853617",
+   "after_sha256_lf": "5cb7608c8130a12d0340ab1215c99be214d680c7f6855aa486b2679f0037e8ba",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m2/ines-panela/index.html": {
+   "base_sha256_lf": "c6ee2cba9543582b2ccad5f349d327ce960007957cffccfe9803850d61a980fd",
+   "after_sha256_lf": "718261645d2c4a61e3830ae8bd17ed04839024ebaeddf2af9a0e0673e9de9c8e",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m2/janelas-pregadas/index.html": {
+   "base_sha256_lf": "e35f412da9db0ee9a05b24b2ee4e2c778ccd97cd5059caa7dcbf95bb6b4f0f89",
+   "after_sha256_lf": "b0d758a49a07fb6c88bb5cd907b6246c9bd13b135ed33bf66f40371b292e28a6",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m2/licao-m2-f01/index.html": {
+   "base_sha256_lf": "2a2a5832a5e182fb98081b503ce03395c0e7c77c8e59818fd315b0c3e0c98721",
+   "after_sha256_lf": "c7c0d28cb1a1fc73f1d0e7cccff4981eb0e4d33022b4ad69551a7a659de0ac14",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m2/licao-m2-f02/index.html": {
+   "base_sha256_lf": "bf0ebfc8a8391ef3d6e480257644881d0b7c87b8f391a1e6ae5ff6068436f094",
+   "after_sha256_lf": "66c027a69cee52773da8ad5e3c5ac07bb332a9f61eb8c811b521fce0cd74cc9b",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m2/licao-m2-f06/index.html": {
+   "base_sha256_lf": "7b0e8f6b313687b76c3515860c22b733e08a7a5f945ffd5e1345db13a26d1702",
+   "after_sha256_lf": "2ca920f0aa6da8255e565fbdef354fb6acb5e228c09d1a06889b0b3c566618bd",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m2/licao-m2-f07/index.html": {
+   "base_sha256_lf": "ebaff2451292e0a1024e14ee75dcea9c9995aaee1af26557de0d6b1eeb428e73",
+   "after_sha256_lf": "5e836417ab48f7d66f1fa9c5692216d00b0d0fe2066eb1b80b61b0545cee3532",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m2/licao-m2-f08/index.html": {
+   "base_sha256_lf": "f318d32d835b1e9f3cef254cfac20bd2df3fd999bb816295560a545d41730a2e",
+   "after_sha256_lf": "8a769c5d9a3a49148ee87dbfacd93f5f4f7fa374e34f531b216ea6be22a7b080",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m2/licao-m2-f09/index.html": {
+   "base_sha256_lf": "1678b67c33a67774229164084e8aa672be256f0e62afaf8565c33e0576e197ba",
+   "after_sha256_lf": "4b8d4fd80177b43f5f6e9a8247f204542f4440d9b048aea0085a9f2a6aae53ad",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m2/licao-m2-f10/index.html": {
+   "base_sha256_lf": "b289c5f99538a7bf310c0161b8e30b5604da8e7fde0761058b42b5c70721f963",
+   "after_sha256_lf": "4146fece52b6be0193d7204f65491065c9e7f18db2824b86a060b7545eae90ed",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m2/licao-m2-f11/index.html": {
+   "base_sha256_lf": "b9581bcb7baa6afe38a687e73f2ddda5d8c686adfcc6147aa3b5093762484c2b",
+   "after_sha256_lf": "a2f863011abf8253968300522217af09b6ff311326347ff6ebe2ad43b8a4b79f",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m2/pero-visita/index.html": {
+   "base_sha256_lf": "657cf65f099005eb1c4d15ec506b24c087ad428370d2110618a8aeb494d2aa51",
+   "after_sha256_lf": "79c34c1ce140cf0d41a3b9d8c5030584bc92d900b682c569ec114d563e95eb07",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m3/amalia-camoes/index.html": {
+   "base_sha256_lf": "7566c597db48774bce611a5fe26d5ce7d354856abb4fc34ed93783ded678824e",
+   "after_sha256_lf": "e54682b561581ec977a023de87c3bd74892e926f28e61be47d2a192408d53cc0",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m3/arte-estima/index.html": {
+   "base_sha256_lf": "2bde878ddc992739b2636bbc65dceffc033153f94ec77c6c25384b1dff73895d",
+   "after_sha256_lf": "ffa471bedd37bb7577d38f5efd1840c01e13cf478590662737c4fd2372cdb083",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m3/bicho-da-terra/index.html": {
+   "base_sha256_lf": "c4f8b8d2d5348542b34c8f6383cceab9dbe913207fc891483c7df2a29522c211",
+   "after_sha256_lf": "7ce58e67668cbb283df3b84466d907e596c9fbf0bccaf179d94ee157dab2e93e",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m3/camoes-alma/index.html": {
+   "base_sha256_lf": "5ea5c5bd3b6af553f8b3f22889577c5b776cdd7cb0b30558bdba62b64c8c1439",
+   "after_sha256_lf": "6130f73c16d21f6c289dd33a497b8f8a7e445ca3506c82e40141ed167ea2a7d8",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m3/camoes-barbara/index.html": {
+   "base_sha256_lf": "cf069cb601d82dd696795aa92f9ede478e6ba9282d97be2f06de741feb168ac7",
+   "after_sha256_lf": "d62084e182da08e22ced8bb7e29c40ea58942f76d6770ce6c371e3e8cafc2dc2",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m3/camoes-desconcerto/index.html": {
+   "base_sha256_lf": "37d909893e82cbe520182e61dc30e292d7836b7e5b89728b8961a40d29ceef32",
+   "after_sha256_lf": "29785d0f26655239c8e6f0306f2303bc26d71cf4dcee85423dae87d253ca2f30",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m3/camoes-invocacoes/index.html": {
+   "base_sha256_lf": "bff21f59dff11dc5b6d8652f11f83142ade5925aa1ca00e5d175e3b3531f4c01",
+   "after_sha256_lf": "4b7da9dbfafdfb3a7387753c7a83976c9f833aef86b2c32a7ea223c7e944a689",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m3/camoes-leonor/index.html": {
+   "base_sha256_lf": "04319112787cbdcb4c8af5b6e9e10b4cf52ebf0091d183c932111b0a6065cd4c",
+   "after_sha256_lf": "688103dcad9ddaeda9bc9fa7232663b13e4e1f2025836bf15640e379ca0e39c3",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m3/camoes-mudanca/index.html": {
+   "base_sha256_lf": "3a4ed71ce17b6af4ad7f1609e73a674c43d7666228d51d67355e221034822d63",
+   "after_sha256_lf": "d91b6a14c1239033016ac51bba9cfa96f6cae198529c54c4b17658e75d7abd34",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m3/camoes-perdigao/index.html": {
+   "base_sha256_lf": "002e2736d827163766b947cdfc40edad11fccc544e7ebfce52446da25f5770a4",
+   "after_sha256_lf": "c49603d5d98618e536f185346f342450469b75c9485cc7e0a0e1e43529fa440f",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m3/camoes-restelo-ramos/index.html": {
+   "base_sha256_lf": "a7926a96105dd9e659dcb1023fa5f9eecd48877e8927ec9f3035358d41646437",
+   "after_sha256_lf": "d46d5e9154bd399b918ce5335d6a39da37e8f7fb2882ab3570f5c63e618e84d3",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m3/camoes-sobolos/index.html": {
+   "base_sha256_lf": "8ce23b7aa36b6a3f0df2959b3687601ac31e692b8a4c3a9bc831206b1e9787df",
+   "after_sha256_lf": "905368dfed42cc8b005716d44bd1abc08ce9f71c61e7f90c3099e5dbcfc3df2e",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m3/espada-pena/index.html": {
+   "base_sha256_lf": "a40f596593b692fdafb7ab63e0f8d30b075cee4bf57620d95cc0e80fbf66d6b6",
+   "after_sha256_lf": "bf6b7a7268ad843f1d0562538158ab7a6aa26a58bec7be27f92d5d65c61a732a",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m3/gram-anafora/index.html": {
+   "base_sha256_lf": "253191c55eef31d74f81f288af835c2ccce3973bef621379e36fbab23c3c63a8",
+   "after_sha256_lf": "6f27c07cfd3b40fc38a9a038e217756088e8ff923d00e667f91e653981a988ee",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m3/gram-modalidade/index.html": {
+   "base_sha256_lf": "8210ac784de59bc3beafd061ea4137a25f86602914ecca73d289efda7996db8a",
+   "after_sha256_lf": "1aafbdf4bc8dd67d0d6c6dff8d0ad4e598f05a816b52b5cfa6b845928f2fb2cd",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m3/index.html": {
+   "base_sha256_lf": "e38a9fd430e5d0f34f1e88aa5b0988fe2fe24a2653f84b6e1f0e0011b80a009c",
+   "after_sha256_lf": "bf5681513aeba99d3a3f5622dc81a9c1ebbed567129033d214000cb1362e9e4c",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m3/licao-m3-f02/index.html": {
+   "base_sha256_lf": "d1ea892752ee1a47e08a7ba8a6d85391dc638aa790a89be2ebfcc01de873524f",
+   "after_sha256_lf": "cee35ea4c15ca7d0d61df780712f54d086744627ef16b7bee71ac08504c1b144",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m3/licao-m3-f03/index.html": {
+   "base_sha256_lf": "cf828791d1bd686d6d45a48aee6258f786d42a8c1121c394dc56ed4394949072",
+   "after_sha256_lf": "f0373f443172c1a5a2efb889f645dee8c7a506528c1c63fe4e95277fd31761a4",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m3/licao-m3-f04/index.html": {
+   "base_sha256_lf": "81e041ca9bbba0e6fb040c3a2689bdec471c81cd7e624cbe707decb1b963805b",
+   "after_sha256_lf": "14570ec28020843a3b521fe227b057b043d4685fa856f5541a29791493995e8e",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m3/licao-m3-f05/index.html": {
+   "base_sha256_lf": "e85865e065bdc6ca17bda3c971c729f957fff6b7c15c859e34623fb95d9cf1a7",
+   "after_sha256_lf": "1351382f4e7989ccc357a4e32b5f8111561fe838ecf0e854a3b0ef5167f2c21e",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m3/licao-m3-f09/index.html": {
+   "base_sha256_lf": "a98bd0d841ff4dd0ed8f095262955603777be530c4df8d81488712288747b790",
+   "after_sha256_lf": "a89a70ca38b43e9f4c0463310e2492e73fc6cfb0b6cbbd7d6448eee1abf225c7",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m3/licao-m3-f10/index.html": {
+   "base_sha256_lf": "a12319b7abeb17e6ac3d52b554655fb6a7ae54bc15f464162684a6921eabef6a",
+   "after_sha256_lf": "cfd5da86f3019edd6e1a6fb05fa5f8719c00f3757533402288aeff9f06c1845b",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m3/licao-m3-f11/index.html": {
+   "base_sha256_lf": "e909289593a2c7c1a876e909b86b2b7a11a15166a104ed9552399d0bdfd80675",
+   "after_sha256_lf": "7ce02043f9e49fd7103e153f919d3a01918f78a7ada2673010587388b6ac0733",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m3/licao-m3-f13/index.html": {
+   "base_sha256_lf": "432d96330a444a7730b03dc4622ecf4147f0be498db8d4b6ac45852a683f6a0c",
+   "after_sha256_lf": "aff3b0f4f32b0a4b185c0f807524c0148ad5dac198ec76c8a9c7dd5b1b1a960c",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m3/licao-m3-f15/index.html": {
+   "base_sha256_lf": "871796965289448f51732f03bf8ef25b94e695dfcaa91b589b216fadcf8b5a44",
+   "after_sha256_lf": "e0eb68ac934b61028a5cefc469dc51e59d46c7541311075eb979661a78e44fbf",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m3/licao-m3-f16/index.html": {
+   "base_sha256_lf": "19c8d1741244d2f03dfcb65807cb18e2be818d52f626a4c93c034a98eb214236",
+   "after_sha256_lf": "6701c72a2baca4f924477773e566b3df63afd471438a76d3fd1a80d46bbc24b0",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m3/licao-m3-f17/index.html": {
+   "base_sha256_lf": "26f877678241a96dbfc2519bea5f940c98131efc0ee0bef9efbeb2c5d73aca11",
+   "after_sha256_lf": "b6bbab655ae1ab0b59bc3f9a0eb8010d02fd3d14c1803e9c9153433bc34ca1a2",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m3/maquina-mundo/index.html": {
+   "base_sha256_lf": "6836af9c42339b4250d2b3f049cc6a4fb7ca78fa43549d7a7ac59a4a050f2c04",
+   "after_sha256_lf": "b54e4abca974c8157068f0c2615b58950ebc1de06f4a26d2292fe98045e78042",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/frei-luis-ninguem/index.html": {
+   "base_sha256_lf": "376e5d9124b29cf661a62f4a6c43818166cd681e82bbdd2022d8b6f4cfb94b07",
+   "after_sha256_lf": "e701c474df2f341dfc2451630a44ec842feae8770d6172a00045f70866bf720e",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/frei-luis-ramos/index.html": {
+   "base_sha256_lf": "691715ac91b1b2cdb00c1a6513ba069b484b7906e58c6e573b455e48fe79023c",
+   "after_sha256_lf": "1e8bc489b09920d2d08b3815967f2468ef4f46e8e45649873e06663e3ceb4c94",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/garrett-fogo/index.html": {
+   "base_sha256_lf": "aefb68d6c4fdd6a1825e6dc63786cebfed6d06fc717456ee1133938343d511bd",
+   "after_sha256_lf": "cc453274e6632852099b1651beb0424286164446e6deb24c93e4a3edb8eb9499",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/garrett-nome/index.html": {
+   "base_sha256_lf": "464dee6b666741712a08acd2b7fae205bc2d452297e114f72f6022a29604a61c",
+   "after_sha256_lf": "d185266512cb2064e7a00f4253c08a6cd7b3eda9982d0bf57d493fa2a46cc4fe",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/gram-atos-fala/index.html": {
+   "base_sha256_lf": "c47ce6ee18dd75e478e47aa6135ed41182d0a347cf7273c3dbc6d167ecd6d7fe",
+   "after_sha256_lf": "39a2980c1be18584ccba12e783501979bdbbd60b69320c346f8fa76a7c479bb7",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/gram-coesao/index.html": {
+   "base_sha256_lf": "763ce6f9635c9c8a7b842c95aa6150d39ae9fc4b992dc2533f4571e384249c48",
+   "after_sha256_lf": "e2f0820dc71f9673f243f900ba661d70d890222446c4de863777869af1ac5a41",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/gram-deiticos/index.html": {
+   "base_sha256_lf": "c3aadad35d89b41bafcb60625ae7eb5b708b841695955553ef368a29fa122e5b",
+   "after_sha256_lf": "3a7ea6d7e7f25a16411008cd486f67ca0fc72a35d1a77c0965cf1d65ece690f4",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/index.html": {
+   "base_sha256_lf": "05a8ceab055b03b831185df357bf8f71cd05576339acadf1a924e47d5117a965",
+   "after_sha256_lf": "5ed16fac731463c466bb92bbf0657086a13d2a938e8ec386b103106f4739e6d2",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/licao-m4-f01/index.html": {
+   "base_sha256_lf": "843fc177cd645dac7f6d4934ec36433c29e5d7bcdea5b5455c4e7d4e935dd91b",
+   "after_sha256_lf": "7283725496814a7069275242d50334fa1e6af9417436a0b21df57c24447de65b",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/licao-m4-f02/index.html": {
+   "base_sha256_lf": "e6e5fc3a92979124f388b44e70bbca04e6bbd1b4f46e83133869a40b299e3939",
+   "after_sha256_lf": "32f82b4237fd73e117f5089a6d6acd6a65faffc743787bd4e8fb26273d6fe6b6",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/licao-m4-f04/index.html": {
+   "base_sha256_lf": "7ba9f9ead862bed9615780c390ac2facd7d401f6a81dac51748d58162abe826e",
+   "after_sha256_lf": "48303ae0b9b8cbb237258616dbceec649aeee3cb621febebbf7bf1f0a757a037",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/licao-m4-f06/index.html": {
+   "base_sha256_lf": "435edc84616ba7f801e9979bd8a55a6e641c66e3c4f5310b7538bab86fbef818",
+   "after_sha256_lf": "bd08848d658e42ef0ae812ef218aede4b94f47fa24e618471f807d7d7552b58d",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/licao-m4-f07/index.html": {
+   "base_sha256_lf": "b92d52b8ca73a32e846570e4d22fca87dd17b46bc9d89371c2a4b041be9a7187",
+   "after_sha256_lf": "0cc77bbfdf7acbbf8030de5ffe65595c3ebb667076ca0bdb709b4b64446368c3",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/licao-m4-f08/index.html": {
+   "base_sha256_lf": "7a061a4b50a1450e127b4d07f8af6125652fa365ec9825c2e7eb5064871d85f4",
+   "after_sha256_lf": "3a0124d479f2d6eb26bc748e154e913b834e2c11cd0373d30cfc44fd00f32a25",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/licao-m4-f09/index.html": {
+   "base_sha256_lf": "888f933b3e396070bddaf0aea31bb2c27acdcb28e59210476b2c5f7a82558795",
+   "after_sha256_lf": "4c001fae51f8875f48cda5706b2a4b922dc493260186be71ded9ee9cb462d295",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/licao-m4-f10/index.html": {
+   "base_sha256_lf": "7b31b7336fa257280dcbe85e98d0e5151bd4792c39f8ee370ef9c7404fbe825f",
+   "after_sha256_lf": "ae429618b7a937a6dbeb5ab5738602214786c132f3457586c0f58336b5624a39",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/licao-m4-f11/index.html": {
+   "base_sha256_lf": "fdcc0e175bf4d2101c78f97dc5c073b49053d8d7aeeed686e390655018c75617",
+   "after_sha256_lf": "e913e04f3f823a73f480afc63a1607498f77c58d4233a2be32b354d7a39a58d5",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/licao-m4-f14/index.html": {
+   "base_sha256_lf": "0a6a37678b15fd68ae457d490e66f77166ff4f043ed11e76fec3a13eb3998663",
+   "after_sha256_lf": "b8b7a91da1ab4bacb266bf64f66a4aa6915d9ea2c712ff2812f9e5764f3e78dd",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/licao-m4-f15/index.html": {
+   "base_sha256_lf": "56985fba785731b5eede951763d53a2a372b0aadff1de1635851f5b18f263be4",
+   "after_sha256_lf": "7d72edbbbc4bc3dec2f4b9c7031e00007c2928b952b95f41d80fa3e6fb204697",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/licao-m4-f20/index.html": {
+   "base_sha256_lf": "05d505ba5d25db2a57446eb11eac24537e788838ec9bd3a441da7cebb4095bec",
+   "after_sha256_lf": "2e755798a1311d0f00a1e25a6482fe2de4a2762d2b760c8b5a245ee86d4acd73",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/licao-m4-f25/index.html": {
+   "base_sha256_lf": "6dbe482868bcd515f44e0c8ba25cc279111b550785812f98eea14eb96fce7fb9",
+   "after_sha256_lf": "7dacd0bdfe704b10de56c5b8c12f5584563e1eafdd3899eb1790e57df64ec1c3",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/licao-m4-f26/index.html": {
+   "base_sha256_lf": "f316c3eb6ac5a7f20a53661e20b69cf36829eab6ac5f4893bb63bdf3379e7137",
+   "after_sha256_lf": "d6f763d48daa8ee7c999e8ac059dcf57777bf9d62cef606982042edd58983142",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/licao-m4-f27/index.html": {
+   "base_sha256_lf": "7cbcb2fdc1744c3cc158f0850ff9af4683d6eacd5ae79497baf2a3ecf70d88b2",
+   "after_sha256_lf": "3e4b37bbc73ee7d258aec38c066aed756492665eeedb757d000081eb70b58664",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/olhar-lupi/index.html": {
+   "base_sha256_lf": "368645abc9079db9739c8e812ac710f8db6ee7f5ce6be2de82078f807db60f06",
+   "after_sha256_lf": "1d98e9923ceba8c1b017c860ee1f7210158e314ebbc01c43fce55726b5cce4a7",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/tradutor-detetive/index.html": {
+   "base_sha256_lf": "6aa45bb19c3b448fc3c40cbe64ed6a8ee366c71531618ad85d92061f4f760ffb",
+   "after_sha256_lf": "c63e9047de6cbf2bcecea3f59700575d81ef4e4a28b3b07aa2bdd349ef3f58fe",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/vieira-auditorio/index.html": {
+   "base_sha256_lf": "4ec0500cc9aad67f42a8cdb0ad4e0751889e89427a35e4aafdaa4e82c7afefe8",
+   "after_sha256_lf": "646cb06f72f2aa137585bc6600262ba9b07c1eb81bd063c31ea1c46927704f93",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/vieira-grandes/index.html": {
+   "base_sha256_lf": "b74e505e9fb898270e50aaa38317fee9d7236218276817a2148db6dc985132eb",
+   "after_sha256_lf": "7198115b058974f674d7acd5319cbc97218b52dc8ddafb8979f89b970c8196ce",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/vieira-peixes/index.html": {
+   "base_sha256_lf": "7930ceaff7fb1846a322db8490b1cd6bf8cb55a48ecd1ab8ea50afb9dcd435f2",
+   "after_sha256_lf": "3334af0777006f5d8f4572776aaa931c2a65d12bce7588f200de604dd61a2d0a",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/vieira-praia/index.html": {
+   "base_sha256_lf": "63e5e68b887b696954c5847efe1fd6f92d642a61fb294f4b17a949501f0d6a80",
+   "after_sha256_lf": "1d6453decec8c2fb7a53c51b40065d03493f0af00098ded311230192e22de9d6",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/vieira-sal/index.html": {
+   "base_sha256_lf": "edaa82836b42a758dcbdf317f7ca5577e0a1bde1dc7ef420e0d9cce6f3d83798",
+   "after_sha256_lf": "1c49aa9de99c3bd1d036a98fba3654de3daca554e84be30043b1e3a3cbdeac4d",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m5/camilo-assento/index.html": {
+   "base_sha256_lf": "61a046738f7c7e6c494af9d56322791483c554da86e78fbea72798e45cc81ec9",
+   "after_sha256_lf": "20ea1fa9c8e8630cbd7572ce5458cabe37c4b9ebac407e314fab08a8f5684f0e",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m5/camilo-carta/index.html": {
+   "base_sha256_lf": "4234e3be4384abc5a253624fb35f04e65ce18f808f86a0c5364232cfffbf6920",
+   "after_sha256_lf": "71b34f880143f0394e3e09903b6e88cf0f9c6c9c063d9ebeb1a4a5c1a76760c3",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m5/camilo-mariana/index.html": {
+   "base_sha256_lf": "23c22063b7569251b9de5e495f892707e10d5e778975b5712f05324753588b6c",
+   "after_sha256_lf": "d26b8d2621cbb97ce621b742e54dd54847a57c5c850ff75d1e986781bc5dca0c",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m5/camilo-pai/index.html": {
+   "base_sha256_lf": "31a620bf51de748e5fbc2c7528a1bce84b59d2864742731dc58c66a75fb410f3",
+   "after_sha256_lf": "a1007b2c28c4446353a54a7bae88d501422d974154ea0e4d88143ecb217f998a",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m5/camilo-seculo/index.html": {
+   "base_sha256_lf": "36c7fb23bdd423f28221966487c0abfc7f1ab6b5e5631747aec81e1243a0f75a",
+   "after_sha256_lf": "a024491a1eb15887094965b8d50986bde338122273811ef1f7ddcfebe81c7db7",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m5/camilo-simao-ramos/index.html": {
+   "base_sha256_lf": "fd473501f0a12523fc893894a510a420b548900d42742ed255a0f40eafad3aa5",
+   "after_sha256_lf": "aaaf434305b32cd63345cc3c663cbaf53834ac2b46ac4f95d27c80b4d11f5cd1",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m5/eca-falhamos/index.html": {
+   "base_sha256_lf": "a8dbb8e857c6ca271d3f943dbf70e87fdae31e58fa7d6b74331b343581ceeb72",
+   "after_sha256_lf": "9263f6fec3ae58378452c903ba644d403ca659ff4d5bc7b7c3fa5ed752c89e5d",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m5/eca-hotel/index.html": {
+   "base_sha256_lf": "c96b4b757aec341c157b65d36513aadd71acc1a4ad49eb5953ced9eddb601f5a",
+   "after_sha256_lf": "80e62ad848db619793785280dbd758f4dad03b017d4d45766d87750e138036aa",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m5/eca-ramalhete/index.html": {
+   "base_sha256_lf": "1d150107101ab48169f3c1b4716a2fc64342a651d3b2f2517dc9e0a2dd6cd112",
+   "after_sha256_lf": "ad598e9457f65e5e1b803bafc97d6520226b8cd23da704ac5f5a628c0fa1a959",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m5/gram-dil/index.html": {
+   "base_sha256_lf": "4d83abf7af5c2962bbb5142860df6dffe671e6e5a759552a7725859fc8234a5f",
+   "after_sha256_lf": "a77479c7380b75d5aab7c3e7f45a76ecb151ea8532cb0a53afc12ef881d10cd1",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m5/gram-funcoes/index.html": {
+   "base_sha256_lf": "26b366bf514d4dac123cd66b3741344800835af957d9bb2e48f593ccb7d55033",
+   "after_sha256_lf": "65168b1e545a714347034805da9f4ce3cabfc947a8ec984429fbb065a3d2a5a1",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m5/gramatica-maias/index.html": {
+   "base_sha256_lf": "d9d6fb2614b69ab59ef374dce4495e3b91e01bb4305061e241bcb0a8ad929a3f",
+   "after_sha256_lf": "b0ddcec817dfbe1763ecd26f133cb8bb61cc6968aa53d2e0ed0d67e9b47bb922",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m5/index.html": {
+   "base_sha256_lf": "f8837f4261deca33c23b015e2453211e06452abee23f23d8c6f08ef76b3bb3bd",
+   "after_sha256_lf": "3a0bd943c39b8079c8aae4560aedfe4b7ad4611b29987ccc30f220e0bfb6b673",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m5/licao-m5-f02/index.html": {
+   "base_sha256_lf": "da6123e248565989eb7b55a7447f249dbf29adb74f281e010ffc98510fb872d5",
+   "after_sha256_lf": "08604407ed43f5b0c53e9e3f11d7dcaf3c5c2253bba3e8c4ce733cf7dd56288d",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m5/licao-m5-f04/index.html": {
+   "base_sha256_lf": "84b3324c42b0137ee02bda4d0779bb00b4dc3e8f391e1dbdf74825c9373fa100",
+   "after_sha256_lf": "5909bfe3594c935eedf78e7508994d336bf01bef50d3b12264400c6d29742d7e",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m5/licao-m5-f07/index.html": {
+   "base_sha256_lf": "0241a95303552ea1395fbb9f06e71a945cf975e967dbecd8e653bf122aba073f",
+   "after_sha256_lf": "5d87f88d1dc673ac1a566834c32016156d5ab95da72b6c1c60f6912c83e70a3e",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m5/licao-m5-f08/index.html": {
+   "base_sha256_lf": "7fd024c540f536d5897a48566712c4680f5c39bc1708e7c8a334149e6b22b617",
+   "after_sha256_lf": "3d23fbcf6cefd0e7235fad8760da775fff0d6bfdf389d5f19eb46ca49a05e110",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m5/licao-m5-f09/index.html": {
+   "base_sha256_lf": "3cb0347076bf64b87f91f5a1d317c7eb7ae7789a8c707298993dbed88899537d",
+   "after_sha256_lf": "a3031a9c1acbf5fb94fc89b9e3437745258348a3048dc2c63ac50f0bb74d16f9",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m5/licao-m5-f10/index.html": {
+   "base_sha256_lf": "fe0925a30814af673e0efe65e4c7015bc85b85e592a9c34bde4b00d1f3d1d978",
+   "after_sha256_lf": "41eabdbdfd06f6894caacf9966d9f321b46ed4ab00920d6eca8bfeb51a914825",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m5/licao-m5-f11/index.html": {
+   "base_sha256_lf": "20d4815f00df39f8abd643daaca83181d11e35da0f7ce03f19e40766c0885480",
+   "after_sha256_lf": "8a8aba61f2f7fea153fd4c6d3b127234e38eafe45d6ca0fc77cd0294b3df0df8",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m5/licao-m5-f12/index.html": {
+   "base_sha256_lf": "bff68b96278847cc5285fb3ca91ee35e747c91be006ad6dd111314c771f60bd1",
+   "after_sha256_lf": "c73e610d3dba6652915a1cfd9195d29aefd5080e095390a6e08e11b9ee8162f0",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m5/licao-m5-f13/index.html": {
+   "base_sha256_lf": "5179c10c4f84a53e61c83df5a7553336777ca86d3b9357a52453bd733916e069",
+   "after_sha256_lf": "d3b076a92e2d651e1f69d83e99fadc96e84e170530c8f9ed2c1da5414e30b4af",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m5/licao-m5-f14/index.html": {
+   "base_sha256_lf": "c99abc0461f464b9941e757b06ef34ba197b3c9ed2c474fdaaa4f1850ff2a72d",
+   "after_sha256_lf": "d8742a7aaa75400fb57c0653b8637dde3dd598de6add6f944f5a0fc1a8f2ba91",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m5/licao-m5-f15/index.html": {
+   "base_sha256_lf": "a3d456e8138473206056548af6d7092e3c148b32b98e51fe9a9addfc5823c53e",
+   "after_sha256_lf": "c862645e70a75fd22aaa167017e799fd73ec8e8e2fca90f442719b2b78ae4574",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m5/padre-amaro-rego/index.html": {
+   "base_sha256_lf": "78dca8e488938e6ad9f3608df36d2f4fb58f5787651759f56002d1f353f64767",
+   "after_sha256_lf": "f8314ebb2918e83c9d4e42d33c74d947ae2eb7852d9525d4ea8e314324a591f3",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m6/antero-deus/index.html": {
+   "base_sha256_lf": "400c61da99cf81ef4337e88c35329006333131dcaa8734429895265c79af6b85",
+   "after_sha256_lf": "8f5451df769729900e9cc6eb30cdcb8a0d0872d22f4333a4a6b04a4e2525b20d",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m6/antero-palacio/index.html": {
+   "base_sha256_lf": "e031e1789e3ff00802bf36eadf152b9d7bee67cb1a259fdab8861b6d1ff48b0b",
+   "after_sha256_lf": "e510da3188df49fd095d7493c582b32f10a813087b758824dfee3145334c44a1",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m6/cesario-avemarias/index.html": {
+   "base_sha256_lf": "d0f4558c7adb44001ba76e69ad45475b24e85ce0f52e2fee908c85514fcc429f",
+   "after_sha256_lf": "06eded6d82f102205fd3caacb6c5c847dd4f9610bcb1280e32fe6a10fabdf0bb",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m6/cesario-gas/index.html": {
+   "base_sha256_lf": "85d1755c02377c492760f316f29d0786e83c77490f69e56f600722d278d93241",
+   "after_sha256_lf": "efd120fbe48a97e5ec55d80734f06cc59fdaa61581c13bed5046067b4b64f5b6",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m6/cesario-noite-ramos/index.html": {
+   "base_sha256_lf": "e636a5095b24fb713636422236174592515fac4463f7c90c9429169166617226",
+   "after_sha256_lf": "b5877012837e0a6a551a360aeb6bf6fee6d02608815d3824ec3c9cc28e466088",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m6/cesario-noite/index.html": {
+   "base_sha256_lf": "4ff1d13bf464a62fa08c0c73ac96c9608e0141c9b5dca4d46154e7f75dd84357",
+   "after_sha256_lf": "2cae9a3bad4fb099e82c11d9b488f2bfc2cd132996d5091edcb1f0ddb82bf790",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m6/gram-oracoes-rua/index.html": {
+   "base_sha256_lf": "6e747467884396e8d2e29bd14bd5b5d846a4d4bff8af3758f006d92c03a2c41d",
+   "after_sha256_lf": "e827daedf6be721959ce404e3c2753d3d314cc859116d167853ed8e73aed75f8",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m6/index.html": {
+   "base_sha256_lf": "d9751a5799f16005475352d33e59a500d58da1acc9a508cf48f1643b2e62755c",
+   "after_sha256_lf": "2a590815bb62f7bd2504ff5f66278d641b6b83778eb9dd90cc6ec375c4f1be0b",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m6/licao-m6-f01/index.html": {
+   "base_sha256_lf": "fa2891b0b12e2d72cee188c7d2b1dfedfa3d1c596a811639995fd62d5f3279f9",
+   "after_sha256_lf": "4535c1ec230879a4d0cdfadbdd8685bb51c350040bb2fedb173377e5f3f34e59",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m6/licao-m6-f02/index.html": {
+   "base_sha256_lf": "e58a9c337385f0ce8e1146c819f467a43880ca0cb313137b74b909090be20656",
+   "after_sha256_lf": "82c08a7a6ccea1248fce52cd01ee2446186b15dd9758b143b2a8f153ec85fc2d",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m6/licao-m6-f04/index.html": {
+   "base_sha256_lf": "76ee46cc5d18a3a65c723f0c102fca1bc41815fad2a05622b48d3a1b83e4a369",
+   "after_sha256_lf": "5346ed413f16350ac83063b9d39fa442dfa166079790851d0141f7f439f94bf0",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m6/licao-m6-f05/index.html": {
+   "base_sha256_lf": "188f7c20d574ca151bb52450955b85326e08a66948510289602a725f3c9c95be",
+   "after_sha256_lf": "cc896ef158f7824636fe0dd907700c20fe64f312e3c834c5f805101762e95caa",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m6/licao-m6-f06/index.html": {
+   "base_sha256_lf": "49c2425385635ff9f3fcbebd5dc3a14e8ac35db89f5e2172781ad37c17bada29",
+   "after_sha256_lf": "20534bc723e3999c38dba5e06536911b49c1a9d38af378dd6692bd448da4c50f",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m6/licao-m6-f07/index.html": {
+   "base_sha256_lf": "3927f7a3019da0e7bfb60e8f451692525f0765a7e899d455c17cead3205ecf0f",
+   "after_sha256_lf": "7fa6b29c65819832108c8c9798ccbda0b97a346414f07dfdb7342eb93085966e",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m6/licao-m6-f08/index.html": {
+   "base_sha256_lf": "75b29748702ff0db5a2af2d9d98d4dfe9e6e7d0be253b10f79c6337bc2bb79f9",
+   "after_sha256_lf": "24009b7a3fbc5b55db821639546f2e7c55ab6b681f0dc4f7578d09e1ffb3448b",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m6/licao-m6-f09/index.html": {
+   "base_sha256_lf": "30a2ff3442287391aa0ead4c4f753739a96815de65557b875d53c17b678a6da6",
+   "after_sha256_lf": "a9e539823de8f519e558c38e1fb2b9c453eefc8425673521d21cee842779aa0a",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m6/licao-m6-f11/index.html": {
+   "base_sha256_lf": "d5c30a37e6305087c6daea1108a202642d1765a4b2aeaec709031f89f383f2f3",
+   "after_sha256_lf": "a03a7789eb2478597fdd7d8d9748f6ee5bfbfa9aa1e5b1f484e74fb4944a69e7",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m6/sam-chelas/index.html": {
+   "base_sha256_lf": "1c4edf59b68d9536fad1dcda2dcce9862d0a267d82f323ff0ada5cc18dfd3746",
+   "after_sha256_lf": "93a3f9d3191310c6154a9230b168b3c6bcbdb5bb09e837e6ac9cdb50c8a0e8fe",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m7/caeiro-olhar/index.html": {
+   "base_sha256_lf": "d1ef5737b7012a92d696d5ddf2c9ad9c9ef2e04d30efdf4a7fd48e65520b98fe",
+   "after_sha256_lf": "39a951e560d0a155f19c3bbaaf80dedf08e1a8673bf836a5b9d411eac35d7947",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m7/campos-aniversario/index.html": {
+   "base_sha256_lf": "b0426e1d07f617fba34f80c098ae59ca70f72a41fd4f146c475d80e54bf533ec",
+   "after_sha256_lf": "075229661ff0d5253654c552afc6adf0bbacd095925bfbe3a3d02a46feef178e",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m7/campos-maquina/index.html": {
+   "base_sha256_lf": "304cd032832badc5e260e6003c21b677cb189dff6c831b69ae8adfe930077473",
+   "after_sha256_lf": "c356e57aba02200ccc44893da016b35c4b6747ea3f6e58ad758796f375ceb55b",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m7/gram-valores-pessoa/index.html": {
+   "base_sha256_lf": "9901e3cc157df4794aa477f3a63df7a3391eb4b6f1cfd4d16d35a0d95a513ec5",
+   "after_sha256_lf": "8661a4fd458c8af0cda6adf9dbef89d88a355c43cf71a05c71639e55136f3eb7",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m7/index.html": {
+   "base_sha256_lf": "02cfb1fd69ca1c49b616252e273d22a3cb1b58fa029990b4ae20ecf263efa1cc",
+   "after_sha256_lf": "9c5d0ddcd0bcb636cebb1fc335e512503038c442c32345678b12dd74e5e48669",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m7/licao-m7-f01/index.html": {
+   "base_sha256_lf": "a73b0afe58577ebd99d16857b435ec4616c31428e970323e5af61cb4349c5307",
+   "after_sha256_lf": "73bb2fd655f1b8c6be85e262eaca19ac333d1d6e7f267574df9ac1d88af7c4eb",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m7/licao-m7-f02/index.html": {
+   "base_sha256_lf": "85dd1e095ab732ae0aa26dedd0b8de09361487f23888af41b456626fb3270078",
+   "after_sha256_lf": "737eebf1d28f64aeef03affd938f2d98769352421b1c32cdfcd9c749fcbd2d3b",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m7/licao-m7-f04/index.html": {
+   "base_sha256_lf": "59c1c2bf6ac3163150d0eeef91ce562d0b5db14dc4adb98bc4242135c4e3a4b0",
+   "after_sha256_lf": "c15fed16d863694f40c49ccab7a6c41d08b0630b4b3c3c36d24422d79d9da6f2",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m7/licao-m7-f05/index.html": {
+   "base_sha256_lf": "2c5ab897f6f3f983f62371d41472817c997532041e1a87bb2817f8d9f3333397",
+   "after_sha256_lf": "9ca8fde21b11973e110cedfd38fc42fe9f4989cdeaa97b2f960a7ac2dfd05ac0",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m7/licao-m7-f06/index.html": {
+   "base_sha256_lf": "80e4d7c28267db8d4677a9af427c23944c99678e97c46256386b52b333aa5043",
+   "after_sha256_lf": "67bbfc36c9d4e6f2c8c793d4f6f8b1e0afb613bde407c8cb53c43e07ec48d9cc",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m7/licao-m7-f07/index.html": {
+   "base_sha256_lf": "35258546f83d9271caf7dfc8853c295025ba0a29d2f475799c0579532e1f2d25",
+   "after_sha256_lf": "49c34edef5c4bfdac70e6fe1e27bd01b965d685887e2b6d8a91f8f85713c2a5b",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m7/licao-m7-f08/index.html": {
+   "base_sha256_lf": "f97de8451fec86d0d145588d452a8f89ab9be9c423696b2f2d613e1198a546cc",
+   "after_sha256_lf": "3ee97c8249f84f4c71883af7412ae396d29e15c219f5b06d2e111932ac201707",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m7/licao-m7-f09/index.html": {
+   "base_sha256_lf": "4c768bebfc89cd7023b01ce6cd0161abc7143281f6f677720ed1cf8b81e5222b",
+   "after_sha256_lf": "36bdc24b1ec5c52f677bd77443fb8d79fbc5d6343f9721d43014f7d3131ee07b",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m7/licao-m7-f10/index.html": {
+   "base_sha256_lf": "2077fe16090fa7171b2ea4f8a6ba9fbea65cd148d2329daa020faeb30f50a4e3",
+   "after_sha256_lf": "4020b6f203f687fab84cf92fbc403e23a91eced5d0c506f6e29c31e40577226a",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m7/licao-m7-f11/index.html": {
+   "base_sha256_lf": "929ff79cb05efd49ebca118e5060064aea1d1a7c9eb3b4350657d3e0bb586f14",
+   "after_sha256_lf": "f3d0a765815bdf647bea7de150f53d1380a2fa4b3f5202f91dccdee545408cc4",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m7/licao-m7-f13/index.html": {
+   "base_sha256_lf": "fb0a7fc41a332522ad32d3147809177988b0e7145cee2bcf2cf7351f3632f8e1",
+   "after_sha256_lf": "56bacdaa494d764d872d8de8b9b18923ad0b960bc2a56948fd692c6bb108d555",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m7/licao-m7-f14/index.html": {
+   "base_sha256_lf": "886635be145f2cea748bdba5c8e9ab85513a31b14e524d244064b9f4fdf2c918",
+   "after_sha256_lf": "0a5c730c48c0a4e22868ff358b1be7678b6dc39bb054a1b9d9e5cacc3c89a6fe",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m7/licao-m7-f15/index.html": {
+   "base_sha256_lf": "42d44605714235153438d1cd08bacc6b401369646f73077091403787c78edf4c",
+   "after_sha256_lf": "6bf9467385147c69def07f14dc5cfaa9a620aa80ccdec81ff7ea3f944757db77",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m7/licao-m7-f23/index.html": {
+   "base_sha256_lf": "70e4ae9e440dae22c36ca0a5bc7423d7e53dd2819f191ac3faa62275111388f8",
+   "after_sha256_lf": "1ae5ce11d8e2e59a945c5bde149837c77754661b5b5c8ca68acbf1990206d339",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m7/licao-m7-f34/index.html": {
+   "base_sha256_lf": "bcda38ca1e6db2ef6067a3b75f80716d8a05c18a8d9a640c3387945289998cfb",
+   "after_sha256_lf": "321198bd1de7f41d05258aaec614ec3cb0e9415db959f3a0f4b6bd575891fda3",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m7/licao-m7-f35/index.html": {
+   "base_sha256_lf": "5644f4fff3e66b3f11db502e9aba3867034e83639935d9c9e65ac35532c4c0de",
+   "after_sha256_lf": "dacebf4c25d82e29bd91ebb478e1e82642e87d80092d610063577fc5688bd715",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m7/licao-m7-f36/index.html": {
+   "base_sha256_lf": "ce626e5b9f214e79f40ad936ebf45089683b9a51ff5294d5608e9b3153670621",
+   "after_sha256_lf": "22aa68279b5c0cdf1cc86a1054b44940b5d132e545f37cb689ff7e53e5fca00b",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m7/lima-orpheu/index.html": {
+   "base_sha256_lf": "d6c4eb5e53740172294a9c1e3ebac89534d084d66d6f413065750002b99c8c57",
+   "after_sha256_lf": "5cde3d3df069c15c0e1626427d942c85aaf9014485de55ab1432facbb043d788",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m7/mensagem-mar/index.html": {
+   "base_sha256_lf": "65a479eea532385efa70ef547c66bac6fee7fdd01b477a35082e4d64f2141c6e",
+   "after_sha256_lf": "5f297e1a392557a97844532c92ae63a16a5204011f1a260c56060fdc3548b930",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m7/mensagem-mostrengo/index.html": {
+   "base_sha256_lf": "444fdd58d52d6be39151f7f8e576864f50802d695f0e5c7737cc3ad48b6a58d8",
+   "after_sha256_lf": "c47415334d0d82b04ef7c0fe6301a53802cbf073b34ed45f6661bc17c4d1fe3d",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m7/mensagem-nevoeiro/index.html": {
+   "base_sha256_lf": "9de3caf2081141f2f58fa85864c516e7978f9131c5408f7198ed5312e2f2d2d7",
+   "after_sha256_lf": "9c25192ff556f218a21e57ab26e997280921bbeb7d353322b5418c479b7e9a93",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m7/mostrengo-leme-ramos/index.html": {
+   "base_sha256_lf": "abf098a484f5adbd7a2edb6ad06a6e029de1015674d115e7f20c5169e2596d09",
+   "after_sha256_lf": "1830371edea19d21a46e269e993db453a139d6de01aff49ee1dcaa9d3900aa25",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m7/olhar-pessoa/index.html": {
+   "base_sha256_lf": "6a4d70ce40b01c669aa606f96bb766015269a734359ceabd2768ad9f46dd7b08",
+   "after_sha256_lf": "caacd7d1a06b1f509fa442ff93240e31a23a4874468050712db87ad408ba39bf",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m7/pessoa-almas/index.html": {
+   "base_sha256_lf": "d11ff103a3c9def6c52e8dbd5dc6e5434ca7c5381d63b814c5c557b6321ceef2",
+   "after_sha256_lf": "a84c5fb2eb646df352e482664fb02ea872a361c221e6f2e2803a0c76fb5f29d7",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m7/pessoa-ceifeira/index.html": {
+   "base_sha256_lf": "072b07ffa674ca4db2debfc26637c48e66f18cff8b44f6135833829b1a064538",
+   "after_sha256_lf": "5cb9c72d2e3c8d46670b014a1ea49ad0b7e42c66b6d55329969d8bfe1a4c61f9",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m7/pessoa-fingir/index.html": {
+   "base_sha256_lf": "de37f5359dabc7134d63a070429ba47b24fc626bd103141f3ef73391f496e7fa",
+   "after_sha256_lf": "a9a8d6c0490b1a29c5771c15729c298cb00dc0e3fbec849e0784c1ff0127d74f",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m7/pessoa-ilha/index.html": {
+   "base_sha256_lf": "247c02e7e06a51eea2b58cb8ea519bb35201cf6e78e691f3cdbd2bb4dbac498b",
+   "after_sha256_lf": "e810e42f4fa86721732f0079b4c1b0f426bdfa88941a34bd68931205dcdedeff",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m7/pessoa-infancia/index.html": {
+   "base_sha256_lf": "64f872613ed674a9a0d20f54d4890c5710775fb947e4dc59ea0d059e3a61211b",
+   "after_sha256_lf": "9ba9bb88c534882567e24b89f954a966d2a528d4afa5f1f2660fb0ea811ffbbc",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m7/reis-lidia/index.html": {
+   "base_sha256_lf": "d0d52c752061c4cb04ef88a60cceaf0203b9ac9b6e29b55d3291c22c3f509fa6",
+   "after_sha256_lf": "d0a4d80897e014f7ea1ce48057af0f80ef9d23489bb0b97c30835527402571ec",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m7/reis-se-todo/index.html": {
+   "base_sha256_lf": "2e125b1e701142abb76ebcc691945571c5a9ff0ed54ea4169ce247fe44a39be8",
+   "after_sha256_lf": "4bafe63ed30c67c483d629c62f76823fabd49d89523ef07e0b7896c6b145140c",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m7/santa-rita-fato/index.html": {
+   "base_sha256_lf": "7924d202dafe55bbc3ceb28b1304da31e3d0e258143705803a72753603b22d1e",
+   "after_sha256_lf": "6b0cf048627a3f6888452e44da557168852d2e410694c4f8b8a8cef6b7edf417",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m7/sebastiana-nevoeiro/index.html": {
+   "base_sha256_lf": "890b95c11b0a6cbd7db9c5f29b4a0b748b0b4c4e2746ac8e9eda6c6001761a92",
+   "after_sha256_lf": "8a1f859ccae7d8ca340a31b59e5a55eb60a2388e85e54bee33d1277491184099",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m7/variacoes-rotulos/index.html": {
+   "base_sha256_lf": "20621c09e433e171df8408c96960d553a8383e18f3ee1edd204203f4aa02c12c",
+   "after_sha256_lf": "5c7d9b40562ac11359d9352635bd0b9159f268f724f7a6101bf99fb325391aaa",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m8/anafora-catafora/index.html": {
+   "base_sha256_lf": "3ef6a131e4b6ff93f1ceee75d93fe8fe8994016c9bd18af03a0bbf854656d3dd",
+   "after_sha256_lf": "f2e8f3839c7e85e894412a27aa42cb9e283fecde97f1cbcfa367eec45d3a2154",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m8/conto-perguntas/index.html": {
+   "base_sha256_lf": "e28c91b81ed21a37cc6d36b989f0bec2d89c3f85be1236044dcb5536ebae05b2",
+   "after_sha256_lf": "1017564e75a56ae54e22e464b12fd4fe87a17eb10df63da9c103a34beaa324a2",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m8/gramatica-aspeto/index.html": {
+   "base_sha256_lf": "3b4e19dc4a820fd32b8df69e3f38e84968cbe933537088393dd8320054d14726",
+   "after_sha256_lf": "970b98a33a842d75e21d7cdb36066ccd617fb0c8c576c761ed6f3994e6625c19",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m8/index.html": {
+   "base_sha256_lf": "495ac3fc43bad203572ac0e3086472b9bf7b75b930ef60ea5408d8f90f57b826",
+   "after_sha256_lf": "da65c157c5a21431f71b6fc85ee13d9a5b98ca455be225d072983b6b2e434736",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m8/lentes-poema/index.html": {
+   "base_sha256_lf": "42e41acc6ae5c1cef5a6d3fc36ac3356babb6d31e4b7b2a3b83a6f7982fff3f7",
+   "after_sha256_lf": "453c959ad2166708b0e888532a4974fafa428ec4fd97f615401071160c289a13",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m8/licao-m8-f01/index.html": {
+   "base_sha256_lf": "5e8679cd667a9083ade5944b20f7bc6190ecd8daa288216d3377e28b250433e4",
+   "after_sha256_lf": "a7c6bc657cf5546b46397a6d3130cb7a67095c8eff02261f7746f3f04751e4b3",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m8/licao-m8-f03/index.html": {
+   "base_sha256_lf": "6737aaff422f57d376ed628047f4f1ea29b7486e280324b9a17bcac22a22c6c1",
+   "after_sha256_lf": "99177dbb360212a894bd763f39a9aec9170ed5dc268122f0eec82d0c6bdddb66",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m8/licao-m8-f04/index.html": {
+   "base_sha256_lf": "3a163382711961afde7f2b2af96cf211d42a810c91871c895660808594c334c1",
+   "after_sha256_lf": "b4e920894047e0a0b70ca847a8fb6f139a9d985bc3a60936116b8ba89e5abc85",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m8/licao-m8-f05/index.html": {
+   "base_sha256_lf": "4149661274ef4f88cede8c519655d891ad387c3a0c0563e2d4a284b991569186",
+   "after_sha256_lf": "d062b4ec5be2cf8694ddd4b53b2995a17dad1c330005252dd637a9cba7a6dbda",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m8/licao-m8-f06/index.html": {
+   "base_sha256_lf": "35c1ad11f504b92a29a029446c7a5a8a6ca077d04541488e3d55343a1c0ab343",
+   "after_sha256_lf": "1e1ff019ee4d484beee38acbc3c89b8ff3c17afb18c563fa7da64b66176b8996",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m8/licao-m8-f08/index.html": {
+   "base_sha256_lf": "f8aadedda1761ef26216e618d3153cbac65b0cf706b919fc807f617932d8bafb",
+   "after_sha256_lf": "a54ce300330c854a04c238cf4e770e9cbf210e0cb9b0399053b7d18afd618285",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m8/licao-m8-f09/index.html": {
+   "base_sha256_lf": "3eae78d4fdf9be616a9b1fa7cdd7046a3ce63bbd5fbb594e03b0db3a895a9ec1",
+   "after_sha256_lf": "0e6e193eb48f6ee6b2244bb49371b4422ec947bb535da4ed384962e214469be0",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m8/licao-m8-f10/index.html": {
+   "base_sha256_lf": "a86b209aca6b69b3f461fe5c2cec0b5403689a381e8b1633ea66c39da959b41b",
+   "after_sha256_lf": "63c1a9736108ec27cc9079c5cfd9fdf7e655ef9539cbd09e003f3898e067daa9",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m8/licao-m8-f11/index.html": {
+   "base_sha256_lf": "fceaae66c1c658f2813338fcdbc3a134f6285c80ac120f430ecc4731e4aa4364",
+   "after_sha256_lf": "ea7841ac4523f037749b59dc2b87814a9946e34b319de5bb7b87e26554070a5d",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m8/licao-m8-f12/index.html": {
+   "base_sha256_lf": "773658a08de2f70aba3dacc7d24da70629c8c5d6f48dbec208d64718e4056d5f",
+   "after_sha256_lf": "e7d71c7d09ea7a181a5309af9774682c0db754c6e6745c9c13324ba15982be94",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m8/oficina-sugerir/index.html": {
+   "base_sha256_lf": "e1a0401a96c7ccb69ce8e98a44f186406fd3d72e7a25e338c8e19b13fc814bb2",
+   "after_sha256_lf": "1fec9d2a2f1b4135888e466813fcf4390fce9ee59363348f64f5875bfd39e80a",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m8/opiniao-ramos/index.html": {
+   "base_sha256_lf": "65f3d1ef191fced1364d4c3d8cf6745cf62a43cc9b6836ae3e61915be5c1b9a1",
+   "after_sha256_lf": "3e7100eba010a835239bef3e2d09418d1b1fcbc659346f4e44e19464c7f1d780",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m8/pastelaria/index.html": {
+   "base_sha256_lf": "66a19f7c5146432eeae1c6d635d06713058be0345ec270a24a3c89c638584df7",
+   "after_sha256_lf": "8f4d98a3c4412679ca05b6fb827175c3c2533c57b3fbcc46162c573f3a36042e",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m9/biblioteca-fogo/index.html": {
+   "base_sha256_lf": "48dde035fed811018737a36f65ed4087e50928958e6a1aa7936190d2d85598fa",
+   "after_sha256_lf": "b83f33761135f515bd5f02915590f8309f0cf828c07a715fa46034c88ef15cca",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m9/gram-aspeto-memorial/index.html": {
+   "base_sha256_lf": "7f46f48418743e31260b561a90a835d49e0b0c0b563798565005c2c6eebf0ae6",
+   "after_sha256_lf": "7e3c450a554fede443825cf0450afec674bd4411937e68acabedbe1b2d5bda8e",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m9/gramatica-saramago/index.html": {
+   "base_sha256_lf": "df1661cf9f4e7215289e487d28db682bc46cfd7bf8bb7113d175d83b3d58b1ea",
+   "after_sha256_lf": "1d5a61521575ff953e79546f87e37fc2205a767e5825f2f8dc242b69757d1408",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m9/index.html": {
+   "base_sha256_lf": "1397c25f4a2198ea40739b6fc60fb40c616f0a38c635d7fd47a74947e281af2e",
+   "after_sha256_lf": "78f37e43f898930665cb8dabd502a3ef27a8c9af8ceeeb3e345c3625b626e0f1",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m9/licao-m9-f01/index.html": {
+   "base_sha256_lf": "e64765c2ffabe0d94f9aac21318b17decb46230c0c4fd0a6ab548f55c7e89351",
+   "after_sha256_lf": "4d3edfdc134792584e6b87a17c19e257ad76a67fb082b64800d80fa02b0daed2",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m9/licao-m9-f02/index.html": {
+   "base_sha256_lf": "19615de321042a9010b49e08e4651ce27d104122e4588058d267b97372182a97",
+   "after_sha256_lf": "3b80613342dc7a4fc009bad73dd6749f2298b01ae98381769d1e20e349c2f4cf",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m9/licao-m9-f03/index.html": {
+   "base_sha256_lf": "f0353a7d0c511af69f24cce7894de562c455cbf4e783ffea829fdc2e41745d7a",
+   "after_sha256_lf": "ec32d4ebe09b5e24d325e2aee4dfac862ed109c7c4241c66e27b3d0708708eab",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m9/licao-m9-f04/index.html": {
+   "base_sha256_lf": "8049890c948c2dbb19fa751df690a4ad641e26381ddaba8e57860c3e3d50dc58",
+   "after_sha256_lf": "6a235938a4543d2eca0651895e5966199f4d726373fd1f34a0c1774fff5ae255",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m9/licao-m9-f05/index.html": {
+   "base_sha256_lf": "0c7dff507d4f185303ea2a4b50bdcfaa273717f09f99a53ae8bbdba2cafccfac",
+   "after_sha256_lf": "3f4a7ca743e1a83fe5350444ee19ed3a1f2f66936d35e1c2aeaba9c05c12a5cb",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m9/licao-m9-f07/index.html": {
+   "base_sha256_lf": "cd35aabf606f550413ed036685885a51fcb2010068b5c80661fcdd2d8e247500",
+   "after_sha256_lf": "4dffc34f15f7d99b94309eec90737b57b3db953aff0916fcf443f4c029013e12",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m9/licao-m9-f10/index.html": {
+   "base_sha256_lf": "9b04dd9aafa31b477f5c00842220746250ef388a847116df24ff1879e1e249d5",
+   "after_sha256_lf": "d4064d1c065453e316132a21082ca8ee8567b85463a7c90ac24f235fbc0fa296",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m9/memorial-promessa/index.html": {
+   "base_sha256_lf": "49d108ae64873bd14b2b0c20f983992766ae6af8a0c162ea69c3b68326052b17",
+   "after_sha256_lf": "14bf75824c8ace6e0dd4bc6a1ff7799f5a4fd715f47b11fd52bea74c407c52fa",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m9/passarola-ramos/index.html": {
+   "base_sha256_lf": "4aebb87fd52942e29ba91abc913d1177511045799ec149c7b5f3b44225897be4",
+   "after_sha256_lf": "e3df4691111c098ce36794ce864c5583d1b3efa5dae70c1828cb32688739f150",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m9/reis-regresso/index.html": {
+   "base_sha256_lf": "e70abe6c92dc20ab75800cff4a232468efd1c0fec97d4c1c67f157939cbce118",
+   "after_sha256_lf": "e864e8ed73c952f68c8899901fed6e2681a2bf63db3200851ac3ab587c5941b9",
+   "edits": [
+    {
+     "location": "C2, frase da sugestão «continua» (cidade, missões todas feitas): o nome novo",
+     "old": "A cidade antes da aula: {nmissoes} missões feitas, relê o teu caderno",
+     "new": "Ler a cidade: {nmissoes} missões feitas, relê o teu caderno",
+     "occurrences": 1
+    }
+   ]
+  }
+ }
+}

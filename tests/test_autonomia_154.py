@@ -250,6 +250,8 @@ class Autonomia154(unittest.TestCase):
                             '--manifesto', str(MANIFESTO), '--verificar',
                             # 06/11/2026: por cima de tudo, a decisão 152 no M1 (cuidado_m1_20261106); desfaz-se primeiro. 07/11/2026 (fusão do main 29441e6b): por cima dos acertos da decisão 173.
                             # 07/11/2026: os créditos atrás de um «i» na entrada, nos índices e no Atlas (creditos_i_pt1_20261107, pedido pt-1) passam a camada mais recente, por cima da decisão 152 no M1; desfazem-se primeiro, com a mesma exigência.
+                            # 2026-11-08: o cartaz «Ler a cidade» e o nome novo da secção (cidade_cartaz_20261108) passam a camada mais recente, por cima dos créditos do pedido pt-1, e mudam páginas desta camada (a frase da sugestão «continua»); desfazem-se primeiro, com a mesma exigência.
+                            '--desfazer-antes', 'tests/fixtures/cidade-cartaz-edits-20261108.json',
                             '--desfazer-antes', 'tests/fixtures/creditos-i-pt1-edits-20261107.json', '--desfazer-antes', 'tests/fixtures/cuidado-m1-edits-20261106.json',
                             # 07/11/2026: por cima de tudo, os três acertos dos índices deixados pela decisão 173; desfazem-se primeiro, com a mesma exigência.
                             '--desfazer-antes', 'tests/fixtures/indices-acertos-edits-20261107.json',
@@ -280,14 +282,18 @@ class Autonomia154(unittest.TestCase):
         # 07/11/2026: por cima da decisão 152 no M1 ficam os créditos atrás de um «i» do pedido pt-1 (creditos_i_pt1_20261107): a
         # ordem ganha uma posição (a decisão 152 passa a segunda, os acertos a terceiros, o desenho comum a quarto, os créditos do
         # pt-2 a quintos, o Atlas a sexto, a decisão 154 a sétima), e a cadeia de desfazer chama primeiro o pt-1.
-        self.assertEqual(verificar_camadas.LAYERS[0], ('creditos_i_pt1_20261107', 'creditos-i-pt1-edits-20261107'))
-        self.assertEqual(verificar_camadas.LAYERS[1], ('cuidado_m1_20261106', 'cuidado-m1-edits-20261106'))
-        self.assertEqual(verificar_camadas.LAYERS[2], ('indices_acertos_20261107', 'indices-acertos-edits-20261107'))
-        self.assertEqual(verificar_camadas.LAYERS[3], ('cartaz_indices_148_20261106', 'cartaz-indices-148-edits-20261106'))
-        self.assertEqual(verificar_camadas.LAYERS[4], ('creditos_i_20261105', 'creditos-i-edits-20261105'))
-        self.assertEqual(verificar_camadas.LAYERS[5], ('atlas_lote3_20261105', 'atlas-lote3-edits-20261105'))
-        self.assertEqual(verificar_camadas.LAYERS[6], ('autonomia_154_20261105', 'autonomia-154-edits-20261105'))
-        self.assertEqual(verificar_camadas.LAYERS[7], ('exame_contexto_20261105', 'exame-contexto-edits-20261105'))
+        # 2026-11-08: por cima dos créditos do pedido pt-1 fica o cartaz «Ler a cidade» e o nome novo da secção
+        # (cidade_cartaz_20261108): a ordem ganha mais uma posição (o pt-1 passa a segundo, a decisão 154 a oitava), e a cadeia de
+        # desfazer chama primeiro esta camada.
+        self.assertEqual(verificar_camadas.LAYERS[0], ('cidade_cartaz_20261108', 'cidade-cartaz-edits-20261108'))
+        self.assertEqual(verificar_camadas.LAYERS[1], ('creditos_i_pt1_20261107', 'creditos-i-pt1-edits-20261107'))
+        self.assertEqual(verificar_camadas.LAYERS[2], ('cuidado_m1_20261106', 'cuidado-m1-edits-20261106'))
+        self.assertEqual(verificar_camadas.LAYERS[3], ('indices_acertos_20261107', 'indices-acertos-edits-20261107'))
+        self.assertEqual(verificar_camadas.LAYERS[4], ('cartaz_indices_148_20261106', 'cartaz-indices-148-edits-20261106'))
+        self.assertEqual(verificar_camadas.LAYERS[5], ('creditos_i_20261105', 'creditos-i-edits-20261105'))
+        self.assertEqual(verificar_camadas.LAYERS[6], ('atlas_lote3_20261105', 'atlas-lote3-edits-20261105'))
+        self.assertEqual(verificar_camadas.LAYERS[7], ('autonomia_154_20261105', 'autonomia-154-edits-20261105'))
+        self.assertEqual(verificar_camadas.LAYERS[8], ('exame_contexto_20261105', 'exame-contexto-edits-20261105'))
         auditoria = ler('tests/auditoria_20261028.py')
         # 07/11/2026: o desenho comum dos índices desfaz primeiro os acertos da decisão 173.
         corpo = auditoria[auditoria.index('def undo_cartaz_148_0611'):]
@@ -308,12 +314,17 @@ class Autonomia154(unittest.TestCase):
         # 07/11/2026: e a decisão 152 no M1 chama primeiro os créditos atrás de um «i» do pedido pt-1, que estão por cima dela.
         corpo = auditoria[auditoria.index('def undo_cuidado_m1_0611'):]
         self.assertLess(corpo.index('undo_creditos_i_pt1_0711(path, text)'), corpo.index('_CUIDADO_M1_0611.get('))
+        # 2026-11-08: e os créditos do pedido pt-1 chamam primeiro o cartaz «Ler a cidade» e o nome novo da secção, que estão por cima.
+        corpo = auditoria[auditoria.index('def undo_creditos_i_pt1_0711'):]
+        self.assertLess(corpo.index('undo_cidade_cartaz_0811(path, text)'), corpo.index('_CREDITOS_I_PT1_0711.get('))
         corpo = auditoria[auditoria.index('def undo_autonomia_0511'):]
         self.assertLess(corpo.index('undo_atlas_lote3_0511(path, text)'), corpo.index('_AUTONOMIA_0511.get('))
         sala = ler('scripts/desligar_sala.py')
         self.assertIn('autonomia-154-edits-20261105.json', sala)
         # 07/11/2026: antes de tudo, os créditos atrás de um «i» do pedido pt-1, a camada mais recente (antes da decisão 152 no M1).
         self.assertLess(sala.index('creditos-i-pt1-edits-20261107.json'), sala.index('cuidado-m1-edits-20261106.json'))
+        # 2026-11-08: e, antes deles, o cartaz «Ler a cidade» e o nome novo da secção, a camada mais recente.
+        self.assertLess(sala.index('cidade-cartaz-edits-20261108.json'), sala.index('creditos-i-pt1-edits-20261107.json'))
         # 07/11/2026 (fusão do main 29441e6b no pedido #182): antes de tudo, a decisão 152 no M1 (antes dos acertos da decisão 173).
         self.assertLess(sala.index('cuidado-m1-edits-20261106.json'), sala.index('indices-acertos-edits-20261107.json'))
         # 06/11/2026: na Sala desligada, o desenho comum dos índices (decisão 148) desfaz-se antes dos créditos atrás de um «i».

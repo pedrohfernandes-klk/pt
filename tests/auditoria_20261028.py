@@ -316,7 +316,22 @@ _CUIDADO_M1_0611 = json.loads((ROOT/'tests/fixtures/cuidado-m1-edits-20261106.js
 # recente, por cima da decisão 152 no M1: desfaz-se antes dela, com contagem estrita.
 _CREDITOS_I_PT1_0711 = json.loads((ROOT/'tests/fixtures/creditos-i-pt1-edits-20261107.json').read_text('utf-8'))['files']
 
+# 2026-11-08: cartaz «Ler a cidade» na entrada do Português e nome novo da secção nas páginas publicadas (pedido do utilizador:
+# «quero que [Ler a cidade] tenha um banner em português»), camada mais recente, por cima dos créditos atrás de um «i» do pedido
+# pt-1: desfaz-se antes deles, com contagem estrita.
+_CIDADE_CARTAZ_0811 = json.loads((ROOT/'tests/fixtures/cidade-cartaz-edits-20261108.json').read_text('utf-8'))['files']
+
+def undo_cidade_cartaz_0811(path, text):
+    for edit in reversed(_CIDADE_CARTAZ_0811.get(_relative(path), {}).get('edits', [])):
+        if text.count(edit['new']) != edit['occurrences']:
+            raise AssertionError(f"Cartaz «Ler a cidade» e nome novo da secção não conferem: {path}: {edit['location']}")
+        text = text.replace(edit['new'], edit['old'])
+    return text
+
+
 def undo_creditos_i_pt1_0711(path, text):
+    # 2026-11-08: primeiro o cartaz «Ler a cidade» e o nome novo da secção, que estão por cima.
+    text = undo_cidade_cartaz_0811(path, text)
     for edit in reversed(_CREDITOS_I_PT1_0711.get(_relative(path), {}).get('edits', [])):
         if text.count(edit['new']) != edit['occurrences']:
             raise AssertionError(f"Créditos atrás de um «i» (pedido pt-1) não conferem: {path}: {edit['location']}")

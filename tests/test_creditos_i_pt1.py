@@ -27,6 +27,8 @@ import sys
 import unittest
 
 from auditoria_20261028 import undo_creditos_i_pt1_0711, undo_cuidado_m1_0611
+# 2026-11-08: por cima desta camada fica o cartaz «Ler a cidade» e o nome novo da secção (camada cidade_cartaz_20261108).
+from auditoria_20261028 import undo_cidade_cartaz_0811
 
 ROOT = Path(__file__).resolve().parents[1]
 CAMADA = ROOT / 'scripts/creditos_i_pt1_20261107.json'
@@ -62,6 +64,11 @@ VAZIOS = {'area', 'base', 'br', 'col', 'embed', 'hr', 'img', 'input', 'link', 'm
 
 def ler(rel):
     return (ROOT / rel).read_bytes().decode('utf-8')
+
+
+def sem_cidade(rel):
+    """2026-11-08: a página como esta camada a deixou: com a camada de cima (cidade_cartaz_20261108) desfeita, com contagem estrita."""
+    return undo_cidade_cartaz_0811(rel, ler(rel))
 
 
 class No:
@@ -156,8 +163,11 @@ def inventario(html):
 class CreditosIPt1(unittest.TestCase):
     def test_camada_mais_recente_fechada_e_reversivel(self):
         # A camada mais recente confere-se sem nada por cima, com as contagens exatas do manifesto.
+        # 2026-11-08: por cima dela fica agora o cartaz «Ler a cidade» e o nome novo da secção (cidade_cartaz_20261108, que também
+        # mexe na entrada e nos nove índices); desfaz-se primeiro, com a mesma exigência, e as contagens são as mesmas.
         r = subprocess.run([sys.executable, 'scripts/aplicar_trocas.py', str(CAMADA.relative_to(ROOT)), '--manifesto',
-                            str(MANIFESTO.relative_to(ROOT)), '--verificar'], cwd=ROOT, capture_output=True, text=True,
+                            str(MANIFESTO.relative_to(ROOT)), '--verificar',
+                            '--desfazer-antes', 'tests/fixtures/cidade-cartaz-edits-20261108.json'], cwd=ROOT, capture_output=True, text=True,
                            encoding='utf-8')
         self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
         # 08/11/2026: decisão 162 do docente (revisão do pt-1): mais uma troca (o rótulo da fotografia do portal), 26 em vez de 25.
@@ -172,8 +182,9 @@ class CreditosIPt1(unittest.TestCase):
         self.assertTrue(all(t['achado'].startswith('07/11/2026: decisões 153, 176 e 177') for t in trocas))
         for rel in PAGINAS:
             with self.subTest(pagina=rel):
-                atual = ler(rel)
-                base = undo_creditos_i_pt1_0711(rel, atual)
+                # 2026-11-08: a página com a camada de cima (cidade_cartaz_20261108) desfeita; undo_creditos_i_pt1_0711 desfaz as duas.
+                atual = sem_cidade(rel)
+                base = undo_creditos_i_pt1_0711(rel, ler(rel))
                 refeito = base
                 for e in manifesto['files'][rel]['edits']:
                     self.assertEqual(refeito.count(e['old']), 1, (rel, e['location']))
@@ -181,7 +192,8 @@ class CreditosIPt1(unittest.TestCase):
                     refeito = refeito.replace(e['old'], e['new'])
                 self.assertEqual(refeito, atual, rel)
                 # A camada de baixo (a decisão 152 no M1) continua a desfazer-se por cima desta base.
-                undo_cuidado_m1_0611(rel, atual)
+                # 2026-11-08: na página inteira, porque a cadeia de desfazer começa agora pela camada do cartaz «Ler a cidade».
+                undo_cuidado_m1_0611(rel, ler(rel))
 
     def test_gerador_da_o_mesmo_json(self):
         spec = importlib.util.spec_from_file_location('creditos_i_pt1', ROOT / 'scripts/creditos_i_pt1_20261107.py')
@@ -195,25 +207,36 @@ class CreditosIPt1(unittest.TestCase):
             import verificar_camadas
         finally:
             sys.path.pop(0)
-        self.assertEqual(verificar_camadas.LAYERS[0], ('creditos_i_pt1_20261107', 'creditos-i-pt1-edits-20261107'))
-        self.assertEqual(verificar_camadas.LAYERS[1], ('cuidado_m1_20261106', 'cuidado-m1-edits-20261106'))
+        # 2026-11-08: por cima desta camada fica o cartaz «Ler a cidade» e o nome novo da secção (cidade_cartaz_20261108): esta passa a
+        # segunda, logo por baixo dela, e em cada cadeia desfaz-se logo a seguir a ela, sem nada pelo meio.
+        self.assertEqual(verificar_camadas.LAYERS[0], ('cidade_cartaz_20261108', 'cidade-cartaz-edits-20261108'))
+        self.assertEqual(verificar_camadas.LAYERS[1], ('creditos_i_pt1_20261107', 'creditos-i-pt1-edits-20261107'))
+        self.assertEqual(verificar_camadas.LAYERS[2], ('cuidado_m1_20261106', 'cuidado-m1-edits-20261106'))
         auditoria = ler('tests/auditoria_20261028.py')
         corpo = auditoria[auditoria.index('def undo_cuidado_m1_0611'):]
         self.assertLess(corpo.index('undo_creditos_i_pt1_0711(path, text)'), corpo.index('_CUIDADO_M1_0611.get('))
+        # 2026-11-08: e esta camada desfaz primeiro a do cartaz «Ler a cidade», que está por cima dela.
+        corpo = auditoria[auditoria.index('def undo_creditos_i_pt1_0711'):]
+        self.assertLess(corpo.index('undo_cidade_cartaz_0811(path, text)'), corpo.index('_CREDITOS_I_PT1_0711.get('))
         sala = ler('scripts/desligar_sala.py')
         self.assertLess(sala.index('creditos-i-pt1-edits-20261107.json'), sala.index('cuidado-m1-edits-20261106.json'))
+        self.assertLess(sala.index('cidade-cartaz-edits-20261108.json'), sala.index('creditos-i-pt1-edits-20261107.json'))
         # Em cada cadeia dos workflows, esta camada desfaz-se primeiro, logo a seguir a --verificar.
+        # 2026-11-08: logo a seguir à camada do cartaz «Ler a cidade», que se desfaz primeiro, logo a seguir a --verificar.
         cadeias = 0
         for wf in sorted(glob.glob(str(ROOT / '.github/workflows/*.yml'))):
             for linha in Path(wf).read_text('utf-8').splitlines():
                 if linha.lstrip().startswith('#') or '--desfazer-antes tests/fixtures/cuidado-m1-edits-20261106.json' not in linha:
                     continue
                 cadeias += 1
-                self.assertIn('--verificar --desfazer-antes tests/fixtures/creditos-i-pt1-edits-20261107.json --desfazer-antes '
+                self.assertIn('--verificar --desfazer-antes tests/fixtures/cidade-cartaz-edits-20261108.json '
+                              '--desfazer-antes tests/fixtures/creditos-i-pt1-edits-20261107.json --desfazer-antes '
                               'tests/fixtures/cuidado-m1-edits-20261106.json', linha, wf)
         self.assertEqual(cadeias, 13)
         # A decisão 152 no M1, que se conferia sem nada por cima, desfaz primeiro esta camada.
+        # 2026-11-08: e, antes dela, a do cartaz «Ler a cidade».
         self.assertIn('scripts/cuidado_m1_20261106.json --manifesto tests/fixtures/cuidado-m1-edits-20261106.json --verificar '
+                      '--desfazer-antes tests/fixtures/cidade-cartaz-edits-20261108.json '
                       '--desfazer-antes tests/fixtures/creditos-i-pt1-edits-20261107.json', ler('.github/workflows/pt-tarefas-qa.yml'))
         # Nas cadeias dos testes, esta camada vem logo antes da decisão 152 no M1, sem outra pelo meio.
         for p in sorted((ROOT / 'tests').glob('test_*.py')):
@@ -224,24 +247,33 @@ class CreditosIPt1(unittest.TestCase):
             plano = re.sub(r"['\"]\s*,\s*['\"]", ' ', texto)
             plano = plano.replace("',ROOT/'", ' ')
             with self.subTest(teste=p.name):
+                # 2026-11-08: a cadeia começa agora pela camada do cartaz «Ler a cidade», sem nada pelo meio.
                 self.assertEqual(plano.count('--desfazer-antes tests/fixtures/cuidado-m1-edits-20261106.json'),
-                                 plano.count('--desfazer-antes tests/fixtures/creditos-i-pt1-edits-20261107.json --desfazer-antes '
+                                 plano.count('--desfazer-antes tests/fixtures/cidade-cartaz-edits-20261108.json '
+                                             '--desfazer-antes tests/fixtures/creditos-i-pt1-edits-20261107.json --desfazer-antes '
                                              'tests/fixtures/cuidado-m1-edits-20261106.json'))
-        self.assertIn("(ROOT/'tests/fixtures/creditos-i-pt1-edits-20261107.json',ROOT/'tests/fixtures/cuidado-m1-edits-20261106.json',",
-                      ler('tests/test_task_routes_closure.py'))
+        # 2026-11-08: nas rotas, a camada do cartaz «Ler a cidade» vem primeiro, logo antes desta.
+        self.assertIn("(ROOT/'tests/fixtures/cidade-cartaz-edits-20261108.json',ROOT/'tests/fixtures/creditos-i-pt1-edits-20261107.json',"
+                      "ROOT/'tests/fixtures/cuidado-m1-edits-20261106.json',", ler('tests/test_task_routes_closure.py'))
         # Os testes de navegador que montam o «antes» dos índices desfazem-na primeiro.
         for rel in ('tests/browser_cartaz_indices.cjs', 'tests/browser_cartaz_m4_piloto.cjs'):
             texto = ler(rel)
             with self.subTest(teste=rel):
                 self.assertLess(texto.index('((creditosPt1['), texto.index('((cuidado['))
+                # 2026-11-08: e, antes desta, a do cartaz «Ler a cidade».
+                self.assertLess(texto.index('((cidadeCartaz['), texto.index('((creditosPt1['))
         # O gerador do desenho comum dos índices também (calcula a sua base desfazendo as camadas de cima).
         gerador = ler('scripts/cartaz_indices_148_20261106.py')
         self.assertLess(gerador.index('CREDITOS_PT1.read_text'), gerador.index('CUIDADO.read_text'))
+        # 2026-11-08: e, antes desta, a do cartaz «Ler a cidade».
+        self.assertLess(gerador.index('CIDADE_CARTAZ.read_text'), gerador.index('CREDITOS_PT1.read_text'))
         # O workflow dos testes de navegador dos índices corre o teste de navegador desta camada e confere-a sem nada por cima.
+        # 2026-11-08: confere-a com a camada do cartaz «Ler a cidade», a única por cima, desfeita antes.
         cartaz = ler('.github/workflows/cartaz-qa.yml')
         self.assertIn('node tests/browser_creditos_i_pt1.cjs', cartaz)
         self.assertIn('python scripts/aplicar_trocas.py scripts/creditos_i_pt1_20261107.json --manifesto '
-                      'tests/fixtures/creditos-i-pt1-edits-20261107.json --verificar', cartaz)
+                      'tests/fixtures/creditos-i-pt1-edits-20261107.json --verificar '
+                      '--desfazer-antes tests/fixtures/cidade-cartaz-edits-20261108.json\n', cartaz)
         for caminho in ('scripts/creditos_i_pt1_20261107.*', 'tests/fixtures/creditos-i-pt1-edits-20261107.json',
                         'tests/*creditos_i_pt1*', 'atlas/index.html', 'assets/fundos.js', 'assets/info-i.*'):
             self.assertIn(f"'{caminho}'", cartaz)
@@ -249,8 +281,10 @@ class CreditosIPt1(unittest.TestCase):
     def test_nada_do_conteudo_se_perde(self):
         for rel in PAGINAS:
             with self.subTest(pagina=rel):
-                atual = ler(rel)
-                antes, depois = inventario(undo_creditos_i_pt1_0711(rel, atual)), inventario(atual)
+                # 2026-11-08: o «depois» é a página com a camada de cima (o cartaz «Ler a cidade», que tests/test_cidade_cartaz.py
+                # confere) desfeita; undo_creditos_i_pt1_0711 desfaz as duas.
+                atual = sem_cidade(rel)
+                antes, depois = inventario(undo_creditos_i_pt1_0711(rel, ler(rel))), inventario(atual)
                 # As imagens são as mesmas, pela mesma ordem, com o mesmo alt.
                 self.assertEqual(antes['imgs'], depois['imgs'])
                 # As ligações também; só entram a peça comum, a licença do M8 e a versão nova do motor dos fundos.
@@ -302,7 +336,11 @@ class CreditosIPt1(unittest.TestCase):
                 for nome in PECA:
                     self.assertEqual(s.count(nome), 1, nome)
         # P1: o crédito do fundo no «i» («linha»); o botão fora dele, na .fundo-acoes, com o texto novo e escondido sem JavaScript.
-        inv = inventario(ler('index.html'))
+        # 2026-11-08: a entrada confere-se como esta camada a deixou, com a camada de cima desfeita: o cartaz «Ler a cidade»
+        # (cidade_cartaz_20261108) tira a linha p.sp-credit que vinha a seguir ao «i» do portal (tests/test_cidade_cartaz.py confere-o).
+        # Os dois «i» da entrada atual conferem-se no ciclo de cima e são os mesmos.
+        inv = inventario(sem_cidade('index.html'))
+        self.assertEqual([d.html_interior() for d in inv['ii']], [d.html_interior() for d in inventario(ler('index.html'))['ii']])
         calcada, portal = inv['ii']
         self.assertEqual(calcada.classes(), {'info-i', 'info-i--linha'})
         self.assertEqual(calcada.elementos()[0].attrs['aria-label'], 'Créditos do desenho')
@@ -326,7 +364,8 @@ class CreditosIPt1(unittest.TestCase):
         # 08/11/2026: decisão 162 do docente (revisão do pt-1): o rótulo passa a «Cavalo a galope, 1878».
         self.assertIn('<span class="sp-image-label">Cavalo a galope, 1878</span>', ler('index.html'))
         self.assertNotIn('Eadweard Muybridge · 1878', ler('index.html'))
-        self.assertEqual(ler('index.html').count('class="sp-credit"'), 1)
+        # 2026-11-08: a linha p.sp-credit conta-se na entrada como esta camada a deixou (a camada de cima tira-a).
+        self.assertEqual(sem_cidade('index.html').count('class="sp-credit"'), 1)
         # P2: a imagem documental de cada índice; o crédito inteiro no «i» no canto da imagem, o figcaption sai.
         for rel, credito in CREDITOS_INDICES.items():
             with self.subTest(indice=rel):

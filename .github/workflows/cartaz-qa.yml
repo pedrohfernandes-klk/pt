@@ -2,11 +2,12 @@ name: Cartaz pieces
 # 06/11/2026: decisão 148, assets/cartaz-indice-comum.* nos caminhos.
 # 07/11/2026: acertos da decisão 173, a camada indices_acertos_20261107 e o seu teste nos caminhos.
 # 07/11/2026: decisões 153, 176 e 177 (pedido pt-1), a camada creditos_i_pt1_20261107, os seus testes, o Atlas, o motor dos fundos e a peça «i» nos caminhos.
+# 08/11/2026: cartaz «Ler a cidade» na entrada, a camada cidade_cartaz_20261108, os seus testes e a folha dos cartazes (assets/retro-portals.css) nos caminhos.
 on:
   push:
-    paths: ['tests/browser_cabecalhos_compactos.cjs', 'assets/calcada-*', 'scripts/gerar_calcada_continua.py', 'tests/*calcada_continua*', 'assets/cartaz-cabecalho.css', 'assets/fundo-calcada.css', 'index.html', 'scripts/cartaz_cabecalho*', 'tests/fixtures/cartaz-cabecalho*', 'assets/cartaz-indices.*', 'assets/cartaz-indice-comum.*', 'assets/cartaz-m4-*', 'assets/fontes/**', 'm[1-9]/index.html', 'scripts/cartaz_indices*', 'scripts/indices_acertos_20261107.*', 'tests/fixtures/indices-acertos-edits-20261107.json', 'tests/test_indices_acertos_20261107.py', 'scripts/creditos_i_pt1_20261107.*', 'tests/fixtures/creditos-i-pt1-edits-20261107.json', 'tests/*creditos_i_pt1*', 'atlas/index.html', 'assets/fundos.js', 'assets/info-i.*', 'scripts/cartaz_m4*', 'tests/fixtures/cartaz-*', 'assets/cartaz-components.*', 'assets/appearance.css', 'demonstracoes/cartaz-animacoes/**', 'tests/*cartaz*', '.github/workflows/cartaz-qa.yml']
+    paths: ['tests/browser_cabecalhos_compactos.cjs', 'assets/calcada-*', 'scripts/gerar_calcada_continua.py', 'tests/*calcada_continua*', 'assets/cartaz-cabecalho.css', 'assets/fundo-calcada.css', 'index.html', 'scripts/cartaz_cabecalho*', 'tests/fixtures/cartaz-cabecalho*', 'assets/cartaz-indices.*', 'assets/cartaz-indice-comum.*', 'assets/cartaz-m4-*', 'assets/fontes/**', 'm[1-9]/index.html', 'scripts/cartaz_indices*', 'scripts/indices_acertos_20261107.*', 'tests/fixtures/indices-acertos-edits-20261107.json', 'tests/test_indices_acertos_20261107.py', 'scripts/creditos_i_pt1_20261107.*', 'tests/fixtures/creditos-i-pt1-edits-20261107.json', 'tests/*creditos_i_pt1*', 'scripts/cidade_cartaz_20261108.*', 'tests/fixtures/cidade-cartaz-edits-20261108.json', 'tests/*cidade_cartaz*', 'assets/retro-portals.css', 'atlas/index.html', 'assets/fundos.js', 'assets/info-i.*', 'scripts/cartaz_m4*', 'tests/fixtures/cartaz-*', 'assets/cartaz-components.*', 'assets/appearance.css', 'demonstracoes/cartaz-animacoes/**', 'tests/*cartaz*', '.github/workflows/cartaz-qa.yml']
   pull_request:
-    paths: ['tests/browser_cabecalhos_compactos.cjs', 'assets/calcada-*', 'scripts/gerar_calcada_continua.py', 'tests/*calcada_continua*', 'assets/cartaz-cabecalho.css', 'assets/fundo-calcada.css', 'index.html', 'scripts/cartaz_cabecalho*', 'tests/fixtures/cartaz-cabecalho*', 'assets/cartaz-indices.*', 'assets/cartaz-indice-comum.*', 'assets/cartaz-m4-*', 'assets/fontes/**', 'm[1-9]/index.html', 'scripts/cartaz_indices*', 'scripts/indices_acertos_20261107.*', 'tests/fixtures/indices-acertos-edits-20261107.json', 'tests/test_indices_acertos_20261107.py', 'scripts/creditos_i_pt1_20261107.*', 'tests/fixtures/creditos-i-pt1-edits-20261107.json', 'tests/*creditos_i_pt1*', 'atlas/index.html', 'assets/fundos.js', 'assets/info-i.*', 'scripts/cartaz_m4*', 'tests/fixtures/cartaz-*', 'assets/cartaz-components.*', 'assets/appearance.css', 'demonstracoes/cartaz-animacoes/**', 'tests/*cartaz*', '.github/workflows/cartaz-qa.yml']
+    paths: ['tests/browser_cabecalhos_compactos.cjs', 'assets/calcada-*', 'scripts/gerar_calcada_continua.py', 'tests/*calcada_continua*', 'assets/cartaz-cabecalho.css', 'assets/fundo-calcada.css', 'index.html', 'scripts/cartaz_cabecalho*', 'tests/fixtures/cartaz-cabecalho*', 'assets/cartaz-indices.*', 'assets/cartaz-indice-comum.*', 'assets/cartaz-m4-*', 'assets/fontes/**', 'm[1-9]/index.html', 'scripts/cartaz_indices*', 'scripts/indices_acertos_20261107.*', 'tests/fixtures/indices-acertos-edits-20261107.json', 'tests/test_indices_acertos_20261107.py', 'scripts/creditos_i_pt1_20261107.*', 'tests/fixtures/creditos-i-pt1-edits-20261107.json', 'tests/*creditos_i_pt1*', 'scripts/cidade_cartaz_20261108.*', 'tests/fixtures/cidade-cartaz-edits-20261108.json', 'tests/*cidade_cartaz*', 'assets/retro-portals.css', 'atlas/index.html', 'assets/fundos.js', 'assets/info-i.*', 'scripts/cartaz_m4*', 'tests/fixtures/cartaz-*', 'assets/cartaz-components.*', 'assets/appearance.css', 'demonstracoes/cartaz-animacoes/**', 'tests/*cartaz*', '.github/workflows/cartaz-qa.yml']
 jobs:
   pieces:
     runs-on: ubuntu-latest
@@ -58,11 +59,21 @@ jobs:
       # Atlas, a mais recente, confere-se sem nada por cima; cada «i» novo abre por teclado e por toque, a 390 e a 1366 px, nos dois
       # temas, com o texto completo, sem tapar nada e sem deslocamento lateral; impressão por extenso, projeção e o botão do fundo
       # com o texto novo («Parar a animação» e «Retomar a animação»).
-      - run: python scripts/aplicar_trocas.py scripts/creditos_i_pt1_20261107.json --manifesto tests/fixtures/creditos-i-pt1-edits-20261107.json --verificar
+      # 08/11/2026: por cima dela fica agora o cartaz «Ler a cidade» e o nome novo da secção (cidade_cartaz_20261108, que também mexe
+      # na entrada e nos nove índices); desfaz-se primeiro, com a mesma exigência.
+      - run: python scripts/aplicar_trocas.py scripts/creditos_i_pt1_20261107.json --manifesto tests/fixtures/creditos-i-pt1-edits-20261107.json --verificar --desfazer-antes tests/fixtures/cidade-cartaz-edits-20261108.json
       - run: node tests/browser_creditos_i_pt1.cjs
         if: ${{ !cancelled() }}
         env:
           CREDITOS_I_PT1_OUTPUT: ${{ runner.temp }}/cartaz-indices/creditos-i-pt1
+      # 08/11/2026: cartaz «Ler a cidade» na entrada. A camada, a mais recente, confere-se sem nada por cima; a 320, 390, 768 e
+      # 1280 px (e a 390 e 1280 px no tema escuro, e a 1280 px na projeção), a página não rola para o lado, cada número cabe no seu
+      # quadrado, o título não transborda e as ligações têm 44 px de altura ou mais.
+      - run: python scripts/aplicar_trocas.py scripts/cidade_cartaz_20261108.json --manifesto tests/fixtures/cidade-cartaz-edits-20261108.json --verificar
+      - run: node tests/browser_cidade_cartaz.cjs
+        if: ${{ !cancelled() }}
+        env:
+          CIDADE_CARTAZ_OUTPUT: ${{ runner.temp }}/cartaz-indices/cidade-cartaz
       # 03/11/2026: abertura e visor real, nos dois temas e nas tres larguras.
       - run: node tests/browser_cartaz_cabecalho.cjs
         env:
