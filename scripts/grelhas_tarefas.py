@@ -18,6 +18,8 @@ As grelhas sem _…_ saem iguais, byte a byte.
 06/11/2026: decisão 152 (cuidado em todas as lições), M1: com «max_em_listas» num critério, o descritor do nível máximo da
 página do aluno abre os elementos de cada tema em lista («Tema A: x; y; z. Explicação: … Tema B: …»); a versão de correção
 fica com o texto corrido (está num <small> dentro de uma célula). As grelhas sem a chave saem iguais, byte a byte.
+08/11/2026: decisão 152, M3: com «nao_partir» numa grelha, o intervalo do nível parcial («1 a 3») leva espaços que não quebram
+(U+00A0), para não se partir entre linhas. As grelhas sem a chave saem iguais, byte a byte.
 Idempotente. Uso: python3 scripts/grelhas_tarefas.py [--saida PASTA]
 """
 from html import escape as e
@@ -113,8 +115,9 @@ def em_listas(desc):
     return html
 
 
-def intervalo(c):
-    return '1' if c['max'] == 2 else f"1 a {c['max'] - 1}"
+def intervalo(c, sep=' '):
+    # 08/11/2026: decisão 152, M3. sep é o espaço do intervalo (U+00A0 com «nao_partir» na grelha).
+    return '1' if c['max'] == 2 else f"1{sep}a{sep}{c['max'] - 1}"
 
 
 def pagina_aluno(slug, t):
@@ -129,10 +132,12 @@ def pagina_aluno(slug, t):
     for i, c in enumerate(t['criterios'], 1):
         corpo += f'<tr><td><a href="#criterio-{i}">{ital(c["nome"])}</a></td><td class="n">{c["max"]}</td></tr>'
     corpo += '<tr class="total"><th>Total</th><td class="n">20</td></tr></tbody></table></div>'
+    # 08/11/2026: decisão 152, M3. «nao_partir»: o intervalo do nível parcial com espaços que não quebram.
+    sep = '\xa0' if t.get('nao_partir') else ' '
     for i, c in enumerate(t['criterios'], 1):
         n = c['niveis']
         corpo += (f'<section class="g-crit" id="criterio-{i}"><h2><span class="num">{i}</span><span>{ital(c["nome"])}</span><span class="max">máx. {c["max"]}</span></h2><dl class="g-niveis">')
-        for chave, rotulo, sub in (('0', '0', 'sem evidência'), ('parcial', intervalo(c), 'evidência incompleta'), ('max', str(c['max']), 'cumprimento consistente')):
+        for chave, rotulo, sub in (('0', '0', 'sem evidência'), ('parcial', intervalo(c, sep), 'evidência incompleta'), ('max', str(c['max']), 'cumprimento consistente')):
             desc, ex = n[chave]
             # 06/11/2026: decisão 152. Com «max_em_listas», o nível máximo abre os elementos de cada tema em lista.
             texto = em_listas(desc) if chave == 'max' and c.get('max_em_listas') else f'<p>{ital(desc)}</p>'

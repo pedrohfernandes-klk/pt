@@ -1,0 +1,3180 @@
+{
+ "base_commit": "77ad2feab4d15150274a8b12082d8f2a84e80098",
+ "_nota": "08/11/2026: decisão 152 do docente («cuidado em todas as lições»), módulo M3: os 44 achados CONFIRMADOS da varredura de 6/11 (bordo/cidadania-v3/cuidado-152/m3-confirmados.json; os 9 recusados, 4, 6, 7, 8, 9, 10, 12, 13 e 21, não entram): 10 achados A (9 tabelas onde há itens paralelos, como na M7-F10, na M7-F15, no M1 e no M2: class apoio-tabela, th scope, td data-label e os role, nas lições F05, F09, F13, F15 e F18, esta no baralho assets/pt-lessons/m3-f18.js, na página «Ler a fundo» da modalidade e nos pesos da avaliação do índice, do guia e do mapa, com a coluna do peso estreita e o rótulo num parágrafo antes da tabela, como no índice do M1; cada página com tabela nova carrega assets/pt-lessons/apoios-tabelas.css antes da camada de aparência, na versão do M1; e a entrada «Polidoro» do vocabulário da F13 com os quatro nomes a negrito), 31 de referências e números que não se partem entre linhas (B: U+00A0 em canto e estância, «c.», «séc.», «t.», «n.º», «est.», «vv.», «D.» e o nome, ordinal e nome, número e unidade, datas e intervalos «N a M» e «N e M»; U+2060 logo a seguir ao traço de intervalo; o hífen de «c. 1520-1540» passa a traço de intervalo) e 3 casos do mesmo tipo (C: os dois sentidos de «pena» na F05; na F10, a referência da estância sai do primeiro verso e do «cita» e passa ao título do cartão; na F13, os cartões das estâncias 97, 98 e 99 dizem a estância que mostram). Camada mais recente, por cima da decisão 152 no M2 (cuidado_m2_20261108). Gerada por scripts/cuidado_m3_20261108.py e aplicada por scripts/aplicar_trocas.py: não se edita à mão. O texto visível fica igual, salvo a estrutura das tabelas, as correções dos achados C e da entrada da F13 e os espaços invisíveis. A casca das lições (migalhas «1.º ano», «Estás em: Lição M3-Fxx» e a sigla do rodapé) não muda aqui, ficheiro a ficheiro: muda no molde, como no M1 e no M2; as fontes do rodapé mudam, como no M1; nas outras páginas (índice, guia, mapa, portefólio, «Ler a fundo» e os dois exercícios longos), as migalhas mudam onde o achado o diz. Ficam de fora os «alt», a «frase» dos cartões sublinhar e o que outra camada já tinha posto com U+00A0 (os créditos do «i» do mapa). As tarefas, os aquecimentos, as grelhas e a correção da M3-U1 e da M3-U2 mudam também nos dados dos geradores (docs/pedagogia/tarefas-escolha/m3-u1.json e m3-u2.json, com «nao_partir»; docs/pedagogia/aquecimentos/m3-u1.json e m3-u2.json; docs/pedagogia/grelhas-tarefas-20261027.json, só nas entradas m3-u1 e m3-u2, com «nao_partir», que scripts/grelhas_tarefas.py passa a ler), que estão nesta camada, e regeneram-se sem diferenças. O título e o botão do vídeo de Sá de Miranda da F17 mudam também nos dados de scripts/videos_escolhidos_pt.py (docs/pedagogia/videos-escolhidos-pt-20261028.json). Os painéis do docente das lições F02, F03, F10, F11, F13, F15 e F17 (m3/painel-m3-fxx) seguem os enunciados dos cartões: onde um enunciado mudou, muda igual na lista do painel e no seletor.",
+ "files": {
+  "assets/pt-lessons/m3-f18.js": {
+   "base_sha256_lf": "6ba5e7214d24907534b416b520d0faa7575d567403aaab7d331fc4ac7d4bd2cc",
+   "after_sha256_lf": "335336d2f3c609da33a4fe0803c6cbd15ccd86c66f00d8218bc70874c19bbc93",
+   "edits": [
+    {
+     "location": "M3-F18 (baralho), cartão 10, Quatro funções («Planos que se articulam»)",
+     "old": "<p>A <b>viagem</b> acompanha os navegantes. A <b>história de Portugal</b> alarga o relato ao passado do povo. A <b>mitologia</b> introduz deuses e conflitos divinos. As <b>reflexões do Poeta</b> interrompem a ação para julgar.</p>",
+     "new": "<table class=\\\"apoio-tabela\\\" role=\\\"table\\\"><thead role=\\\"rowgroup\\\"><tr role=\\\"row\\\"><th scope=\\\"col\\\" role=\\\"columnheader\\\">Plano</th><th scope=\\\"col\\\" role=\\\"columnheader\\\">O que faz</th></tr></thead><tbody role=\\\"rowgroup\\\"><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Viagem</th><td role=\\\"cell\\\" data-label=\\\"O que faz\\\">acompanha os navegantes</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">História de Portugal</th><td role=\\\"cell\\\" data-label=\\\"O que faz\\\">alarga o relato ao passado do povo</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Mitologia</th><td role=\\\"cell\\\" data-label=\\\"O que faz\\\">introduz deuses e conflitos divinos</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Reflexões do Poeta</th><td role=\\\"cell\\\" data-label=\\\"O que faz\\\">interrompem a ação para julgar</td></tr></tbody></table>",
+     "occurrences": 1
+    },
+    {
+     "location": "M3-F18 (baralho): «II, 109–110» que não se parte",
+     "old": "II, 109–110",
+     "new": "II, 109–⁠110",
+     "occurrences": 2
+    },
+    {
+     "location": "M3-F18 (baralho): «IV, 84–93» que não se parte",
+     "old": "IV, 84–93",
+     "new": "IV, 84–⁠93",
+     "occurrences": 2
+    },
+    {
+     "location": "M3-F18 (baralho): «canto III» que não se parte",
+     "old": "canto III",
+     "new": "canto III",
+     "occurrences": 5
+    },
+    {
+     "location": "M3-F18 (baralho): «I, 19–20» que não se parte",
+     "old": "I, 19–20",
+     "new": "I, 19–⁠20",
+     "occurrences": 3
+    },
+    {
+     "location": "M3-F18 (baralho): «III, 3–5» que não se parte",
+     "old": "III, 3–5",
+     "new": "III, 3–⁠5",
+     "occurrences": 2
+    },
+    {
+     "location": "M3-F18 (baralho): «canto IV» que não se parte",
+     "old": "canto IV",
+     "new": "canto IV",
+     "occurrences": 2
+    },
+    {
+     "location": "M3-F18 (baralho): «III, 1–5» que não se parte",
+     "old": "III, 1–5",
+     "new": "III, 1–⁠5",
+     "occurrences": 3
+    },
+    {
+     "location": "M3-F18 (baralho): «verso 1» que não se parte",
+     "old": "verso 1",
+     "new": "verso 1",
+     "occurrences": 1
+    },
+    {
+     "location": "M3-F18 (baralho): «canto I» que não se parte (com o contexto «canto I »)",
+     "old": "canto I ",
+     "new": "canto I ",
+     "occurrences": 1
+    },
+    {
+     "location": "M3-F18 (baralho): «III, 3» que não se parte (com o contexto «III, 3,»)",
+     "old": "III, 3,",
+     "new": "III, 3,",
+     "occurrences": 1
+    },
+    {
+     "location": "M3-F18 (baralho): «I, 106» que não se parte",
+     "old": "I, 106",
+     "new": "I, 106",
+     "occurrences": 1
+    },
+    {
+     "location": "M3-F18 (baralho): «I, 19» que não se parte (com o contexto «I, 19.»)",
+     "old": "I, 19.",
+     "new": "I, 19.",
+     "occurrences": 1
+    },
+    {
+     "location": "M3-F18 (baralho): «I, 19» que não se parte (com o contexto «I, 19,»)",
+     "old": "I, 19,",
+     "new": "I, 19,",
+     "occurrences": 1
+    },
+    {
+     "location": "M3-F18 (baralho): «I, 19» que não se parte (com o contexto «I, 19:»)",
+     "old": "I, 19:",
+     "new": "I, 19:",
+     "occurrences": 1
+    },
+    {
+     "location": "M3-F18 (baralho): «I, 19» que não se parte (com o contexto «I, 19\"»)",
+     "old": "I, 19\"",
+     "new": "I, 19\"",
+     "occurrences": 2
+    },
+    {
+     "location": "M3-F18 (baralho): «4 min» que não se parte",
+     "old": "4 min",
+     "new": "4 min",
+     "occurrences": 2
+    },
+    {
+     "location": "M3-F18 (baralho): «2 min» que não se parte",
+     "old": "2 min",
+     "new": "2 min",
+     "occurrences": 2
+    }
+   ]
+  },
+  "m3/bicho-da-terra/index.html": {
+   "base_sha256_lf": "7ce58e67668cbb283df3b84466d907e596c9fbf0bccaf179d94ee157dab2e93e",
+   "after_sha256_lf": "69f7af900643d65f64e19ad0327bc5447b65d23852663df2e260ee0dd7fdad8b",
+   "edits": [
+    {
+     "location": "m3/bicho-da-terra: «Canto VIII, 98» que não se parte",
+     "old": "Canto VIII, 98",
+     "new": "Canto VIII, 98",
+     "occurrences": 2
+    },
+    {
+     "location": "m3/bicho-da-terra: «Canto I, 106» que não se parte",
+     "old": "Canto I, 106",
+     "new": "Canto I, 106",
+     "occurrences": 2
+    },
+    {
+     "location": "m3/bicho-da-terra: «VIII, 98» que não se parte (com o contexto «, VIII, 98»)",
+     "old": ", VIII, 98",
+     "new": ", VIII, 98",
+     "occurrences": 2
+    },
+    {
+     "location": "m3/bicho-da-terra: «VIII, 98» que não se parte (com o contexto «e VIII, 98»)",
+     "old": "e VIII, 98",
+     "new": "e VIII, 98",
+     "occurrences": 2
+    },
+    {
+     "location": "m3/bicho-da-terra: «VIII, 98» que não se parte (com o contexto « (VIII, 98»)",
+     "old": " (VIII, 98",
+     "new": " (VIII, 98",
+     "occurrences": 1
+    },
+    {
+     "location": "m3/bicho-da-terra: «1.º ano» que não se parte",
+     "old": "1.º ano",
+     "new": "1.º ano",
+     "occurrences": 1
+    },
+    {
+     "location": "m3/bicho-da-terra: «I, 106» que não se parte (com o contexto «, I, 106»)",
+     "old": ", I, 106",
+     "new": ", I, 106",
+     "occurrences": 4
+    },
+    {
+     "location": "m3/bicho-da-terra: «I, 106» que não se parte (com o contexto « (I, 106»)",
+     "old": " (I, 106",
+     "new": " (I, 106",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m3/camoes-alma/index.html": {
+   "base_sha256_lf": "6130f73c16d21f6c289dd33a497b8f8a7e445ca3506c82e40141ed167ea2a7d8",
+   "after_sha256_lf": "8e156d5b04f04e5c7ed651de3d2df69fd40d5d656113a4a2635808dc2de4f243",
+   "edits": [
+    {
+     "location": "m3/camoes-alma: «soneto XIII» que não se parte",
+     "old": "soneto XIII",
+     "new": "soneto XIII",
+     "occurrences": 3
+    },
+    {
+     "location": "m3/camoes-alma: «1.º ano» que não se parte",
+     "old": "1.º ano",
+     "new": "1.º ano",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m3/camoes-invocacoes/index.html": {
+   "base_sha256_lf": "4b7da9dbfafdfb3a7387753c7a83976c9f833aef86b2c32a7ea223c7e944a689",
+   "after_sha256_lf": "e563527bd13180d94da16ee89be5dedf8fa4faa9d4b5b2ad994f087069026ea2",
+   "edits": [
+    {
+     "location": "m3/camoes-invocacoes: «estância X, 145» que não se parte",
+     "old": "estância X, 145",
+     "new": "estância X, 145",
+     "occurrences": 1
+    },
+    {
+     "location": "m3/camoes-invocacoes: «estância I, 4» que não se parte",
+     "old": "estância I, 4",
+     "new": "estância I, 4",
+     "occurrences": 1
+    },
+    {
+     "location": "m3/camoes-invocacoes: «estância 145» que não se parte",
+     "old": "estância 145",
+     "new": "estância 145",
+     "occurrences": 1
+    },
+    {
+     "location": "m3/camoes-invocacoes: «estância 4» que não se parte",
+     "old": "estância 4",
+     "new": "estância 4",
+     "occurrences": 1
+    },
+    {
+     "location": "m3/camoes-invocacoes: «est. 145» que não se parte",
+     "old": "est. 145",
+     "new": "est. 145",
+     "occurrences": 2
+    },
+    {
+     "location": "m3/camoes-invocacoes: «1.º ano» que não se parte",
+     "old": "1.º ano",
+     "new": "1.º ano",
+     "occurrences": 1
+    },
+    {
+     "location": "m3/camoes-invocacoes: «canto I» que não se parte",
+     "old": "canto I",
+     "new": "canto I",
+     "occurrences": 3
+    },
+    {
+     "location": "m3/camoes-invocacoes: «canto X» que não se parte",
+     "old": "canto X",
+     "new": "canto X",
+     "occurrences": 3
+    },
+    {
+     "location": "m3/camoes-invocacoes: «est. 4» que não se parte",
+     "old": "est. 4",
+     "new": "est. 4",
+     "occurrences": 2
+    }
+   ]
+  },
+  "m3/camoes-leonor/index.html": {
+   "base_sha256_lf": "688103dcad9ddaeda9bc9fa7232663b13e4e1f2025836bf15640e379ca0e39c3",
+   "after_sha256_lf": "4d7959330cab5dec1a20d8a173a3226db6cf388a5f85f4e08049e3efd3deda26",
+   "edits": [
+    {
+     "location": "m3/camoes-leonor: «n.º 37192» que não se parte",
+     "old": "n.º 37192",
+     "new": "n.º 37192",
+     "occurrences": 3
+    },
+    {
+     "location": "m3/camoes-leonor: «1.º ano» que não se parte",
+     "old": "1.º ano",
+     "new": "1.º ano",
+     "occurrences": 1
+    },
+    {
+     "location": "m3/camoes-leonor: «t. III» que não se parte",
+     "old": "t. III",
+     "new": "t. III",
+     "occurrences": 3
+    }
+   ]
+  },
+  "m3/camoes-mudanca/index.html": {
+   "base_sha256_lf": "d91b6a14c1239033016ac51bba9cfa96f6cae198529c54c4b17658e75d7abd34",
+   "after_sha256_lf": "6dd818c8ea0593386f58c3f3dd85166f8c3ae1715906020aac162b7df850a3a4",
+   "edits": [
+    {
+     "location": "m3/camoes-mudanca: «1.º ano» que não se parte",
+     "old": "1.º ano",
+     "new": "1.º ano",
+     "occurrences": 1
+    },
+    {
+     "location": "m3/camoes-mudanca: «t. II» que não se parte",
+     "old": "t. II",
+     "new": "t. II",
+     "occurrences": 2
+    }
+   ]
+  },
+  "m3/gram-modalidade/index.html": {
+   "base_sha256_lf": "1aafbdf4bc8dd67d0d6c6dff8d0ad4e598f05a816b52b5cfa6b845928f2fb2cd",
+   "after_sha256_lf": "ef1bbd0eafd4450f6adaa969d16f80d6b7f744d11eaeca89f14a2f266b9f5a17",
+   "edits": [
+    {
+     "location": "m3/gram-modalidade, passo 0, «Três frases, três tons» (a nota das três modalidades)",
+     "old": "<p class=\\\"nota\\\"><b>epistémica</b>: grau de certeza (talvez, deve estar, é certo que)<br><b>deôntica</b>: obrigação, permissão, pedido, ordem (tem de, pode, dai-me)<br><b>apreciativa</b>: avaliação de quem fala (infelizmente, que belo!)</p>",
+     "new": "<div class=\\\"nota\\\"><table class=\\\"apoio-tabela\\\" role=\\\"table\\\"><thead role=\\\"rowgroup\\\"><tr role=\\\"row\\\"><th scope=\\\"col\\\" role=\\\"columnheader\\\">Modalidade</th><th scope=\\\"col\\\" role=\\\"columnheader\\\">O que marca</th><th scope=\\\"col\\\" role=\\\"columnheader\\\">Exemplos</th></tr></thead><tbody role=\\\"rowgroup\\\"><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">epistémica</th><td role=\\\"cell\\\" data-label=\\\"O que marca\\\">grau de certeza</td><td role=\\\"cell\\\" data-label=\\\"Exemplos\\\">talvez, deve estar, é certo que</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">deôntica</th><td role=\\\"cell\\\" data-label=\\\"O que marca\\\">obrigação, permissão, pedido, ordem</td><td role=\\\"cell\\\" data-label=\\\"Exemplos\\\">tem de, pode, dai-me</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">apreciativa</th><td role=\\\"cell\\\" data-label=\\\"O que marca\\\">avaliação de quem fala</td><td role=\\\"cell\\\" data-label=\\\"Exemplos\\\">infelizmente, que belo!</td></tr></tbody></table></div>",
+     "occurrences": 1
+    },
+    {
+     "location": "m3/gram-modalidade, cabeça: a folha das tabelas de apoio, antes da camada de aparência",
+     "old": "<link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-universal-1\">",
+     "new": "<link rel=\"stylesheet\" href=\"../../assets/pt-lessons/apoios-tabelas.css?v=20261106.1\"><link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-universal-1\">",
+     "occurrences": 1
+    },
+    {
+     "location": "m3/gram-modalidade: «1.º ano» que não se parte",
+     "old": "1.º ano",
+     "new": "1.º ano",
+     "occurrences": 1
+    },
+    {
+     "location": "m3/gram-modalidade: «I, 4» que não se parte",
+     "old": "I, 4",
+     "new": "I, 4",
+     "occurrences": 4
+    }
+   ]
+  },
+  "m3/guia-da-tarefa-m3/index.html": {
+   "base_sha256_lf": "8aeca66f4b64b10929fbeb8e4ab6dd6586f9a052416b7f8f6e1d9097f4ee9b95",
+   "after_sha256_lf": "8a1be4a9508cc6f4a95865f7c16ea606532c732cad8f7c06d5fcc6dc94f2e276",
+   "edits": [
+    {
+     "location": "m3/guia-da-tarefa-m3, secção «Tarefas das unidades» (p.avaliacao-tarefas)",
+     "old": "<p class=\"avaliacao-tarefas\">Avaliação: tarefa da Unidade 1, 30 %; tarefa da Unidade 2, 30 %; provas rápidas, 10 %; prova escrita, 30 %. ",
+     "new": "<p>Avaliação:</p><table class=\"apoio-tabela\" role=\"table\"><thead role=\"rowgroup\"><tr role=\"row\"><th scope=\"col\" role=\"columnheader\" style=\"width:auto\">Componente</th><th scope=\"col\" role=\"columnheader\" style=\"width:5.5rem\">Peso</th></tr></thead><tbody role=\"rowgroup\"><tr role=\"row\"><th scope=\"row\" role=\"rowheader\">Tarefa da Unidade 1</th><td role=\"cell\" data-label=\"Peso\">30 %</td></tr><tr role=\"row\"><th scope=\"row\" role=\"rowheader\">Tarefa da Unidade 2</th><td role=\"cell\" data-label=\"Peso\">30 %</td></tr><tr role=\"row\"><th scope=\"row\" role=\"rowheader\">Provas rápidas</th><td role=\"cell\" data-label=\"Peso\">10 %</td></tr><tr role=\"row\"><th scope=\"row\" role=\"rowheader\">Prova escrita</th><td role=\"cell\" data-label=\"Peso\">30 %</td></tr></tbody></table><p class=\"avaliacao-tarefas\">",
+     "occurrences": 1
+    },
+    {
+     "location": "m3/guia-da-tarefa-m3, cabeça: a folha das tabelas de apoio, antes da camada de aparência",
+     "old": "<link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-universal-1\">",
+     "new": "<link rel=\"stylesheet\" href=\"../../assets/pt-lessons/apoios-tabelas.css?v=20261106.1\"><link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-universal-1\">",
+     "occurrences": 1
+    },
+    {
+     "location": "m3/guia-da-tarefa-m3: «300 a 400 palavras» que não se parte",
+     "old": "300 a 400 palavras",
+     "new": "300 a 400 palavras",
+     "occurrences": 3
+    },
+    {
+     "location": "m3/guia-da-tarefa-m3: «150 a 200 palavras» que não se parte",
+     "old": "150 a 200 palavras",
+     "new": "150 a 200 palavras",
+     "occurrences": 2
+    },
+    {
+     "location": "m3/guia-da-tarefa-m3: «80 a 120 palavras» que não se parte",
+     "old": "80 a 120 palavras",
+     "new": "80 a 120 palavras",
+     "occurrences": 4
+    },
+    {
+     "location": "m3/guia-da-tarefa-m3: «90 minutos» que não se parte",
+     "old": "90 minutos",
+     "new": "90 minutos",
+     "occurrences": 1
+    },
+    {
+     "location": "m3/guia-da-tarefa-m3: «10 minutos» que não se parte",
+     "old": "10 minutos",
+     "new": "10 minutos",
+     "occurrences": 1
+    },
+    {
+     "location": "m3/guia-da-tarefa-m3: «5 minutos» que não se parte",
+     "old": "5 minutos",
+     "new": "5 minutos",
+     "occurrences": 1
+    },
+    {
+     "location": "m3/guia-da-tarefa-m3: «300 a 400» que não se parte (com o contexto «300 a 400.»)",
+     "old": "300 a 400.",
+     "new": "300 a 400.",
+     "occurrences": 1
+    },
+    {
+     "location": "m3/guia-da-tarefa-m3: «canto IV» que não se parte",
+     "old": "canto IV",
+     "new": "canto IV",
+     "occurrences": 1
+    },
+    {
+     "location": "m3/guia-da-tarefa-m3: «1.º ano» que não se parte",
+     "old": "1.º ano",
+     "new": "1.º ano",
+     "occurrences": 2
+    },
+    {
+     "location": "m3/guia-da-tarefa-m3: «10 min» que não se parte (com o contexto «10 min<»)",
+     "old": "10 min<",
+     "new": "10 min<",
+     "occurrences": 1
+    },
+    {
+     "location": "m3/guia-da-tarefa-m3: «60 min» que não se parte",
+     "old": "60 min",
+     "new": "60 min",
+     "occurrences": 1
+    },
+    {
+     "location": "m3/guia-da-tarefa-m3: «15 min» que não se parte",
+     "old": "15 min",
+     "new": "15 min",
+     "occurrences": 1
+    },
+    {
+     "location": "m3/guia-da-tarefa-m3: «5 min» que não se parte (com o contexto « 5 min<»)",
+     "old": " 5 min<",
+     "new": " 5 min<",
+     "occurrences": 1
+    },
+    {
+     "location": "m3/guia-da-tarefa-m3: «30 %» que não se parte (com o contexto «30 %,»)",
+     "old": "30 %,",
+     "new": "30 %,",
+     "occurrences": 2
+    }
+   ]
+  },
+  "m3/index.html": {
+   "base_sha256_lf": "bf5681513aeba99d3a3f5622dc81a9c1ebbed567129033d214000cb1362e9e4c",
+   "after_sha256_lf": "16fbb3b44586ed3eacd5cece0c56a722319a2a54abb3a04c78335414c4be5cff",
+   "edits": [
+    {
+     "location": "m3, secção «Como se cumpre uma unidade» (p.avaliacao-tarefas)",
+     "old": "<p class=\"avaliacao-tarefas\">Pesos na avaliação: tarefa da Unidade 1, 30 %; tarefa da Unidade 2, 30 %; provas rápidas, 10 %; prova escrita, 30 %. ",
+     "new": "<p>Pesos na avaliação:</p><table class=\"apoio-tabela\" role=\"table\"><thead role=\"rowgroup\"><tr role=\"row\"><th scope=\"col\" role=\"columnheader\" style=\"width:auto\">Componente</th><th scope=\"col\" role=\"columnheader\" style=\"width:5.5rem\">Peso</th></tr></thead><tbody role=\"rowgroup\"><tr role=\"row\"><th scope=\"row\" role=\"rowheader\">Tarefa da Unidade 1</th><td role=\"cell\" data-label=\"Peso\">30 %</td></tr><tr role=\"row\"><th scope=\"row\" role=\"rowheader\">Tarefa da Unidade 2</th><td role=\"cell\" data-label=\"Peso\">30 %</td></tr><tr role=\"row\"><th scope=\"row\" role=\"rowheader\">Provas rápidas</th><td role=\"cell\" data-label=\"Peso\">10 %</td></tr><tr role=\"row\"><th scope=\"row\" role=\"rowheader\">Prova escrita</th><td role=\"cell\" data-label=\"Peso\">30 %</td></tr></tbody></table><p class=\"avaliacao-tarefas\">",
+     "occurrences": 1
+    },
+    {
+     "location": "m3, cabeça: a folha das tabelas de apoio, antes da camada de aparência",
+     "old": "<link rel=\"stylesheet\" href=\"../assets/appearance.css?v=20261025-universal-1\">",
+     "new": "<link rel=\"stylesheet\" href=\"../assets/pt-lessons/apoios-tabelas.css?v=20261106.1\"><link rel=\"stylesheet\" href=\"../assets/appearance.css?v=20261025-universal-1\">",
+     "occurrences": 1
+    },
+    {
+     "location": "m3: «25 de novembro de 2019» que não se parte",
+     "old": "25 de novembro de 2019",
+     "new": "25 de novembro de 2019",
+     "occurrences": 3
+    },
+    {
+     "location": "m3: «300 a 400 palavras» que não se parte",
+     "old": "300 a 400 palavras",
+     "new": "300 a 400 palavras",
+     "occurrences": 2
+    },
+    {
+     "location": "m3: «120 a 150 palavras» que não se parte",
+     "old": "120 a 150 palavras",
+     "new": "120 a 150 palavras",
+     "occurrences": 1
+    },
+    {
+     "location": "m3: «80 a 100 palavras» que não se parte",
+     "old": "80 a 100 palavras",
+     "new": "80 a 100 palavras",
+     "occurrences": 2
+    },
+    {
+     "location": "m3: «estâncias 98 e 99» que não se parte",
+     "old": "estâncias 98 e 99",
+     "new": "estâncias 98 e 99",
+     "occurrences": 1
+    },
+    {
+     "location": "m3: «até 25 palavras» que não se parte",
+     "old": "até 25 palavras",
+     "new": "até 25 palavras",
+     "occurrences": 2
+    },
+    {
+     "location": "m3: «VIII, 96 a 99» que não se parte",
+     "old": "VIII, 96 a 99",
+     "new": "VIII, 96 a 99",
+     "occurrences": 2
+    },
+    {
+     "location": "m3: «VIII, 98 e 99» que não se parte",
+     "old": "VIII, 98 e 99",
+     "new": "VIII, 98 e 99",
+     "occurrences": 1
+    },
+    {
+     "location": "m3: «D. Sebastião» que não se parte",
+     "old": "D. Sebastião",
+     "new": "D. Sebastião",
+     "occurrences": 6
+    },
+    {
+     "location": "m3: «IV, 94 a 104» que não se parte",
+     "old": "IV, 94 a 104",
+     "new": "IV, 94 a 104",
+     "occurrences": 1
+    },
+    {
+     "location": "m3: «IV, 94 e 95» que não se parte",
+     "old": "IV, 94 e 95",
+     "new": "IV, 94 e 95",
+     "occurrences": 2
+    },
+    {
+     "location": "m3: «D. Manuel I» que não se parte",
+     "old": "D. Manuel I",
+     "new": "D. Manuel I",
+     "occurrences": 4
+    },
+    {
+     "location": "m3: «90 segundos» que não se parte",
+     "old": "90 segundos",
+     "new": "90 segundos",
+     "occurrences": 1
+    },
+    {
+     "location": "m3: «estância 96» que não se parte",
+     "old": "estância 96",
+     "new": "estância 96",
+     "occurrences": 1
+    },
+    {
+     "location": "m3: «estância 99» que não se parte",
+     "old": "estância 99",
+     "new": "estância 99",
+     "occurrences": 1
+    },
+    {
+     "location": "m3: «30 segundos» que não se parte",
+     "old": "30 segundos",
+     "new": "30 segundos",
+     "occurrences": 3
+    },
+    {
+     "location": "m3: «90 minutos» que não se parte",
+     "old": "90 minutos",
+     "new": "90 minutos",
+     "occurrences": 3
+    },
+    {
+     "location": "m3: «120 a 150» que não se parte (com o contexto «120 a 150\"»)",
+     "old": "120 a 150\"",
+     "new": "120 a 150\"",
+     "occurrences": 1
+    },
+    {
+     "location": "m3: «vv. 3 e 4» que não se parte",
+     "old": "vv. 3 e 4",
+     "new": "vv. 3 e 4",
+     "occurrences": 1
+    },
+    {
+     "location": "m3: «5 de maio» que não se parte",
+     "old": "5 de maio",
+     "new": "5 de maio",
+     "occurrences": 4
+    },
+    {
+     "location": "m3: «I, 1 a 3» que não se parte",
+     "old": "I, 1 a 3",
+     "new": "I, 1 a 3",
+     "occurrences": 2
+    },
+    {
+     "location": "m3: «I, 4 e 5» que não se parte",
+     "old": "I, 4 e 5",
+     "new": "I, 4 e 5",
+     "occurrences": 2
+    },
+    {
+     "location": "m3: «VIII, 96» que não se parte (com o contexto «VIII, 96,»)",
+     "old": "VIII, 96,",
+     "new": "VIII, 96,",
+     "occurrences": 1
+    },
+    {
+     "location": "m3: «VIII, 98» que não se parte (com o contexto «VIII, 98 p»)",
+     "old": "VIII, 98 p",
+     "new": "VIII, 98 p",
+     "occurrences": 1
+    },
+    {
+     "location": "m3: «1.º ano» que não se parte",
+     "old": "1.º ano",
+     "new": "1.º ano",
+     "occurrences": 2
+    },
+    {
+     "location": "m3: «canto I» que não se parte",
+     "old": "canto I",
+     "new": "canto I",
+     "occurrences": 1
+    },
+    {
+     "location": "m3: «canto X» que não se parte",
+     "old": "canto X",
+     "new": "canto X",
+     "occurrences": 1
+    },
+    {
+     "location": "m3: «90 min» que não se parte (com o contexto «90 min<»)",
+     "old": "90 min<",
+     "new": "90 min<",
+     "occurrences": 4
+    },
+    {
+     "location": "m3: «20 min» que não se parte",
+     "old": "20 min",
+     "new": "20 min",
+     "occurrences": 2
+    },
+    {
+     "location": "m3: «10 min» que não se parte",
+     "old": "10 min",
+     "new": "10 min",
+     "occurrences": 2
+    },
+    {
+     "location": "m3: «I, 106» que não se parte",
+     "old": "I, 106",
+     "new": "I, 106",
+     "occurrences": 4
+    },
+    {
+     "location": "m3: «X, 145» que não se parte",
+     "old": "X, 145",
+     "new": "X, 145",
+     "occurrences": 9
+    },
+    {
+     "location": "m3: «IV, 94» que não se parte (com o contexto «IV, 94: »)",
+     "old": "IV, 94: ",
+     "new": "IV, 94: ",
+     "occurrences": 1
+    },
+    {
+     "location": "m3: «IV, 94» que não se parte (com o contexto «IV, 94 p»)",
+     "old": "IV, 94 p",
+     "new": "IV, 94 p",
+     "occurrences": 1
+    },
+    {
+     "location": "m3: «IV, 95» que não se parte",
+     "old": "IV, 95",
+     "new": "IV, 95",
+     "occurrences": 4
+    },
+    {
+     "location": "m3: «IX, 89» que não se parte",
+     "old": "IX, 89",
+     "new": "IX, 89",
+     "occurrences": 1
+    },
+    {
+     "location": "m3: «V, 97» que não se parte",
+     "old": "V, 97",
+     "new": "V, 97",
+     "occurrences": 1
+    },
+    {
+     "location": "m3: «30 %» que não se parte (com o contexto «30 %.<»)",
+     "old": "30 %.<",
+     "new": "30 %.<",
+     "occurrences": 2
+    },
+    {
+     "location": "m3: «I, 1» que não se parte (com o contexto «(I, 1)»)",
+     "old": "(I, 1)",
+     "new": "(I, 1)",
+     "occurrences": 1
+    },
+    {
+     "location": "m3: «I, 1» que não se parte (com o contexto «\"I, 1 »)",
+     "old": "\"I, 1 ",
+     "new": "\"I, 1 ",
+     "occurrences": 1
+    },
+    {
+     "location": "m3: «I, 4» que não se parte (com o contexto «I, 4,»)",
+     "old": "I, 4,",
+     "new": "I, 4,",
+     "occurrences": 1
+    },
+    {
+     "location": "m3: «I, 4» que não se parte (com o contexto «I, 4»»)",
+     "old": "I, 4»",
+     "new": "I, 4»",
+     "occurrences": 1
+    },
+    {
+     "location": "m3: «I, 5» que não se parte",
+     "old": "I, 5",
+     "new": "I, 5",
+     "occurrences": 4
+    }
+   ]
+  },
+  "m3/licao-m3-f02/index.html": {
+   "base_sha256_lf": "cee35ea4c15ca7d0d61df780712f54d086744627ef16b7bee71ac08504c1b144",
+   "after_sha256_lf": "d09a9420952aa7bafb22e5aca47245951381a8f38a931b4bc896875431c56073",
+   "edits": [
+    {
+     "location": "M3-F02: «I, 1 a 3» que não se parte",
+     "old": "I, 1 a 3",
+     "new": "I, 1 a 3",
+     "occurrences": 5
+    },
+    {
+     "location": "M3-F02: «D. Sebastião» que não se parte",
+     "old": "D. Sebastião",
+     "new": "D. Sebastião",
+     "occurrences": 1
+    },
+    {
+     "location": "M3-F02: «estância 3» que não se parte",
+     "old": "estância 3",
+     "new": "estância 3",
+     "occurrences": 1
+    },
+    {
+     "location": "M3-F02: «D. Manuel» que não se parte",
+     "old": "D. Manuel",
+     "new": "D. Manuel",
+     "occurrences": 1
+    },
+    {
+     "location": "M3-F02: «120 a 150» que não se parte",
+     "old": "120 a 150",
+     "new": "120 a 150",
+     "occurrences": 1
+    },
+    {
+     "location": "M3-F02: «c. 1577» que não se parte (com o contexto «c. 1577).»)",
+     "old": "c. 1577).",
+     "new": "c. 1577).",
+     "occurrences": 1
+    },
+    {
+     "location": "M3-F02: «verso 6» que não se parte",
+     "old": "verso 6",
+     "new": "verso 6",
+     "occurrences": 1
+    },
+    {
+     "location": "M3-F02: «3 min» que não se parte",
+     "old": "3 min",
+     "new": "3 min",
+     "occurrences": 2
+    },
+    {
+     "location": "M3-F02: «1 min» que não se parte",
+     "old": "1 min",
+     "new": "1 min",
+     "occurrences": 2
+    }
+   ]
+  },
+  "m3/licao-m3-f03/index.html": {
+   "base_sha256_lf": "f0373f443172c1a5a2efb889f645dee8c7a506528c1c63fe4e95277fd31761a4",
+   "after_sha256_lf": "8892588c3bcc4a25af1009e30eaffdadfef85ae1b6c7a217c98b1cc4e667e194",
+   "edits": [
+    {
+     "location": "M3-F03: «estâncias 94 e 95» que não se parte",
+     "old": "estâncias 94 e 95",
+     "new": "estâncias 94 e 95",
+     "occurrences": 1
+    },
+    {
+     "location": "M3-F03: «estâncias 94» que não se parte (com o contexto «estâncias 94 e s»)",
+     "old": "estâncias 94 e s",
+     "new": "estâncias 94 e s",
+     "occurrences": 2
+    },
+    {
+     "location": "M3-F03: «D. Sebastião» que não se parte",
+     "old": "D. Sebastião",
+     "new": "D. Sebastião",
+     "occurrences": 2
+    },
+    {
+     "location": "M3-F03: «IV, 94 e 95» que não se parte",
+     "old": "IV, 94 e 95",
+     "new": "IV, 94 e 95",
+     "occurrences": 6
+    },
+    {
+     "location": "M3-F03: «D. Manuel I» que não se parte",
+     "old": "D. Manuel I",
+     "new": "D. Manuel I",
+     "occurrences": 9
+    },
+    {
+     "location": "M3-F03: «estância 95» que não se parte",
+     "old": "estância 95",
+     "new": "estância 95",
+     "occurrences": 1
+    },
+    {
+     "location": "M3-F03: «século XVI» que não se parte",
+     "old": "século XVI",
+     "new": "século XVI",
+     "occurrences": 3
+    },
+    {
+     "location": "M3-F03: «séc. XVI» que não se parte",
+     "old": "séc. XVI",
+     "new": "séc. XVI",
+     "occurrences": 1
+    },
+    {
+     "location": "M3-F03: «verso 2» que não se parte",
+     "old": "verso 2",
+     "new": "verso 2",
+     "occurrences": 1
+    },
+    {
+     "location": "M3-F03: «IV, 95» que não se parte",
+     "old": "IV, 95",
+     "new": "IV, 95",
+     "occurrences": 3
+    },
+    {
+     "location": "M3-F03: «IV, 94» que não se parte (com o contexto «IV, 94.»)",
+     "old": "IV, 94.",
+     "new": "IV, 94.",
+     "occurrences": 1
+    },
+    {
+     "location": "M3-F03: «3 min» que não se parte",
+     "old": "3 min",
+     "new": "3 min",
+     "occurrences": 4
+    }
+   ]
+  },
+  "m3/licao-m3-f04/index.html": {
+   "base_sha256_lf": "14570ec28020843a3b521fe227b057b043d4685fa856f5541a29791493995e8e",
+   "after_sha256_lf": "1930db7a855c55d8697721be442a912cc0b1ee2b4533112525e7ca3cefb009d0",
+   "edits": [
+    {
+     "location": "M3-F04: «120 a 150 palavras» que não se parte",
+     "old": "120 a 150 palavras",
+     "new": "120 a 150 palavras",
+     "occurrences": 2
+    },
+    {
+     "location": "M3-F04: «300 a 400 palavras» que não se parte",
+     "old": "300 a 400 palavras",
+     "new": "300 a 400 palavras",
+     "occurrences": 2
+    },
+    {
+     "location": "M3-F04: «80 a 100 palavras» que não se parte",
+     "old": "80 a 100 palavras",
+     "new": "80 a 100 palavras",
+     "occurrences": 5
+    },
+    {
+     "location": "M3-F04: «60 a 90 palavras» que não se parte",
+     "old": "60 a 90 palavras",
+     "new": "60 a 90 palavras",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m3/licao-m3-f05/index.html": {
+   "base_sha256_lf": "1351382f4e7989ccc357a4e32b5f8111561fe838ecf0e854a3b0ef5167f2c21e",
+   "after_sha256_lf": "95d2839ba5d29a4616bb598965bd9c254f4612d68c96bb397d48532de4a9d3ec",
+   "edits": [
+    {
+     "location": "M3-F05, cartão 20, Para entender («Recorda»)",
+     "old": "<p><b>Medida velha</b>: os versos curtos da tradição peninsular. <b>Redondilha maior</b>: verso de sete sílabas; <b>menor</b>, de cinco. <b>Mote</b>: os versos de abertura, que dão o tema. <b>Voltas</b>: as estrofes que desenvolvem o mote e voltam ao seu último verso. <b>Hipérbole</b>: exagero que engrandece.</p>",
+     "new": "<table class=\\\"apoio-tabela\\\" role=\\\"table\\\"><thead role=\\\"rowgroup\\\"><tr role=\\\"row\\\"><th scope=\\\"col\\\" role=\\\"columnheader\\\">Termo</th><th scope=\\\"col\\\" role=\\\"columnheader\\\">O que é</th></tr></thead><tbody role=\\\"rowgroup\\\"><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Medida velha</th><td role=\\\"cell\\\" data-label=\\\"O que é\\\">os versos curtos da tradição peninsular</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Redondilha maior</th><td role=\\\"cell\\\" data-label=\\\"O que é\\\">verso de sete sílabas</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Redondilha menor</th><td role=\\\"cell\\\" data-label=\\\"O que é\\\">verso de cinco sílabas</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Mote</th><td role=\\\"cell\\\" data-label=\\\"O que é\\\">os versos de abertura, que dão o tema</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Voltas</th><td role=\\\"cell\\\" data-label=\\\"O que é\\\">as estrofes que desenvolvem o mote e voltam ao seu último verso</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Hipérbole</th><td role=\\\"cell\\\" data-label=\\\"O que é\\\">exagero que engrandece</td></tr></tbody></table>",
+     "occurrences": 1
+    },
+    {
+     "location": "M3-F05, cartão 15, O texto, 4 de 4 (vocabulário: a entrada «pena»)",
+     "old": "<b>pena</b>, pluma; sofrimento;",
+     "new": "<b>pena</b>, pluma e sofrimento (duplo sentido);",
+     "occurrences": 1
+    },
+    {
+     "location": "M3-F05, cabeça: a folha das tabelas de apoio, antes da camada de aparência",
+     "old": "<link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-reading1\">",
+     "new": "<link rel=\"stylesheet\" href=\"../../assets/pt-lessons/apoios-tabelas.css?v=20261106.1\"><link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-reading1\">",
+     "occurrences": 1
+    },
+    {
+     "location": "M3-F05: «versos 3 e 4» que não se parte",
+     "old": "versos 3 e 4",
+     "new": "versos 3 e 4",
+     "occurrences": 1
+    },
+    {
+     "location": "M3-F05: «t. III» que não se parte",
+     "old": "t. III",
+     "new": "t. III",
+     "occurrences": 3
+    },
+    {
+     "location": "M3-F05: «1 min» que não se parte",
+     "old": "1 min",
+     "new": "1 min",
+     "occurrences": 4
+    }
+   ]
+  },
+  "m3/licao-m3-f09/index.html": {
+   "base_sha256_lf": "a89a70ca38b43e9f4c0463310e2492e73fc6cfb0b6cbbd7d6448eee1abf225c7",
+   "after_sha256_lf": "a7053b617710d7e5b7d9f0aec7efdf6f9232bf82b4bd444cbc4be7bbdd395c07",
+   "edits": [
+    {
+     "location": "M3-F09, cartão 20, Para entender («Recorda», primeira caixa)",
+     "old": "<p><b>Apóstrofe</b>: chamar alguém e falar-lhe, mesmo que não possa ouvir. <b>Antítese</b>: duas ideias opostas lado a lado. <b>Paralelismo</b>: a mesma construção repetida em dois versos. <b>Sujeito poético</b>: a voz que fala no poema.</p>",
+     "new": "<table class=\\\"apoio-tabela\\\" role=\\\"table\\\"><thead role=\\\"rowgroup\\\"><tr role=\\\"row\\\"><th scope=\\\"col\\\" role=\\\"columnheader\\\">Termo</th><th scope=\\\"col\\\" role=\\\"columnheader\\\">O que é</th></tr></thead><tbody role=\\\"rowgroup\\\"><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Apóstrofe</th><td role=\\\"cell\\\" data-label=\\\"O que é\\\">chamar alguém e falar-lhe, mesmo que não possa ouvir</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Antítese</th><td role=\\\"cell\\\" data-label=\\\"O que é\\\">duas ideias opostas lado a lado</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Paralelismo</th><td role=\\\"cell\\\" data-label=\\\"O que é\\\">a mesma construção repetida em dois versos</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Sujeito poético</th><td role=\\\"cell\\\" data-label=\\\"O que é\\\">a voz que fala no poema</td></tr></tbody></table>",
+     "occurrences": 1
+    },
+    {
+     "location": "M3-F09, cabeça: a folha das tabelas de apoio, antes da camada de aparência",
+     "old": "<link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-reading1\">",
+     "new": "<link rel=\"stylesheet\" href=\"../../assets/pt-lessons/apoios-tabelas.css?v=20261106.1\"><link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-reading1\">",
+     "occurrences": 1
+    },
+    {
+     "location": "M3-F09: «soneto XIII» que não se parte",
+     "old": "soneto XIII",
+     "new": "soneto XIII",
+     "occurrences": 1
+    },
+    {
+     "location": "M3-F09: «c. 1577» que não se parte (com o contexto «c. 1577).»)",
+     "old": "c. 1577).",
+     "new": "c. 1577).",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m3/licao-m3-f10/index.html": {
+   "base_sha256_lf": "cfd5da86f3019edd6e1a6fb05fa5f8719c00f3757533402288aeff9f06c1845b",
+   "after_sha256_lf": "031caae163f2d04352b963e872bb7c310107358b4f724fc911a702547b992e04",
+   "edits": [
+    {
+     "location": "M3-F10, cartão 2, O texto, 1 de 3: a referência sai do primeiro verso",
+     "old": "<span class=\\\"n\\\"></span>I, 4 · E vós,",
+     "new": "<span class=\\\"n\\\"></span>E vós,",
+     "occurrences": 1
+    },
+    {
+     "location": "M3-F10, cartão 6, O texto, 2 de 3: a referência sai do primeiro verso",
+     "old": "<span class=\\\"n\\\"></span>I, 5 · Dai-me uma",
+     "new": "<span class=\\\"n\\\"></span>Dai-me uma",
+     "occurrences": 1
+    },
+    {
+     "location": "M3-F10, cartão 10, O texto, 3 de 3: a referência sai do primeiro verso",
+     "old": "<span class=\\\"n\\\"></span>X, 145 · <b class=\\\"gt\\\" data-s=\\\"não mais\\\">Nô mais</b>",
+     "new": "<span class=\\\"n\\\"></span><b class=\\\"gt\\\" data-s=\\\"não mais\\\">Nô mais</b>",
+     "occurrences": 1
+    },
+    {
+     "location": "M3-F10, cartão 3, sublinhar: o «cita» sem a referência",
+     "old": "\"cita\":\"I, 4 · E vós, Tágides minhas, pois criado\"",
+     "new": "\"cita\":\"E vós, Tágides minhas, pois criado\"",
+     "occurrences": 1
+    },
+    {
+     "location": "M3-F10, cartão 11, versos: o «cita» sem a referência",
+     "old": "\"cita\":\"X, 145 · Nô mais, Musa, nô mais, que a Lira tenho\"",
+     "new": "\"cita\":\"Nô mais, Musa, nô mais, que a Lira tenho\"",
+     "occurrences": 1
+    },
+    {
+     "location": "M3-F10, cartão 2, O texto, 1 de 3: a estância no título",
+     "old": "\"rot\":\"O texto, 1 de 3\",\"titulo\":\"Duas invocações, dois tons\"",
+     "new": "\"rot\":\"O texto, 1 de 3\",\"titulo\":\"Canto I, 4\"",
+     "occurrences": 1
+    },
+    {
+     "location": "M3-F10, cartão 6, O texto, 2 de 3: a estância no título",
+     "old": "\"rot\":\"O texto, 2 de 3\",\"titulo\":\"\"",
+     "new": "\"rot\":\"O texto, 2 de 3\",\"titulo\":\"Canto I, 5\"",
+     "occurrences": 1
+    },
+    {
+     "location": "M3-F10, cartão 10, O texto, 3 de 3: a estância no título",
+     "old": "\"rot\":\"O texto, 3 de 3\",\"titulo\":\"\"",
+     "new": "\"rot\":\"O texto, 3 de 3\",\"titulo\":\"Canto X, 145\"",
+     "occurrences": 1
+    },
+    {
+     "location": "M3-F10: «300 a 400 palavras» que não se parte",
+     "old": "300 a 400 palavras",
+     "new": "300 a 400 palavras",
+     "occurrences": 1
+    },
+    {
+     "location": "M3-F10: «estâncias 4 e 5» que não se parte",
+     "old": "estâncias 4 e 5",
+     "new": "estâncias 4 e 5",
+     "occurrences": 1
+    },
+    {
+     "location": "M3-F10: «Canto I, 4 e 5» que não se parte",
+     "old": "Canto I, 4 e 5",
+     "new": "Canto I, 4 e 5",
+     "occurrences": 3
+    },
+    {
+     "location": "M3-F10: «canto VII, 78» que não se parte",
+     "old": "canto VII, 78",
+     "new": "canto VII, 78",
+     "occurrences": 1
+    },
+    {
+     "location": "M3-F10: «c. 1520-1540» que não se parte (com o contexto «celana chinesa (c. 1520-1540, The Met). Domí»)",
+     "old": "celana chinesa (c. 1520-1540, The Met). Domí",
+     "new": "celana chinesa (c. 1520–⁠1540, The Met). Domí",
+     "occurrences": 1
+    },
+    {
+     "location": "M3-F10: «Canto X, 145» que não se parte (com o contexto «Canto X, 145</»)",
+     "old": "Canto X, 145</",
+     "new": "Canto X, 145</",
+     "occurrences": 1
+    },
+    {
+     "location": "M3-F10: «Canto X, 145» que não se parte (com o contexto «Canto X, 145\"]»)",
+     "old": "Canto X, 145\"]",
+     "new": "Canto X, 145\"]",
+     "occurrences": 2
+    },
+    {
+     "location": "M3-F10: «D. Sebastião» que não se parte",
+     "old": "D. Sebastião",
+     "new": "D. Sebastião",
+     "occurrences": 1
+    },
+    {
+     "location": "M3-F10: «canto V, 97» que não se parte",
+     "old": "canto V, 97",
+     "new": "canto V, 97",
+     "occurrences": 1
+    },
+    {
+     "location": "M3-F10: «estância 5» que não se parte",
+     "old": "estância 5",
+     "new": "estância 5",
+     "occurrences": 1
+    },
+    {
+     "location": "M3-F10: «I, 4 e 5» que não se parte (com o contexto «I, 4 e 5 »)",
+     "old": "I, 4 e 5 ",
+     "new": "I, 4 e 5 ",
+     "occurrences": 3
+    },
+    {
+     "location": "M3-F10: «I, 4 e 5» que não se parte (com o contexto «I, 4 e 5;»)",
+     "old": "I, 4 e 5;",
+     "new": "I, 4 e 5;",
+     "occurrences": 1
+    },
+    {
+     "location": "M3-F10: «canto I» que não se parte",
+     "old": "canto I",
+     "new": "canto I",
+     "occurrences": 5
+    },
+    {
+     "location": "M3-F10: «canto X» que não se parte",
+     "old": "canto X",
+     "new": "canto X",
+     "occurrences": 4
+    },
+    {
+     "location": "M3-F10: «Canto I» que não se parte (com o contexto «Canto I »)",
+     "old": "Canto I ",
+     "new": "Canto I ",
+     "occurrences": 1
+    },
+    {
+     "location": "M3-F10: «verso 7» que não se parte",
+     "old": "verso 7",
+     "new": "verso 7",
+     "occurrences": 1
+    },
+    {
+     "location": "M3-F10: «I, 4–5» que não se parte",
+     "old": "I, 4–5",
+     "new": "I, 4–⁠5",
+     "occurrences": 1
+    },
+    {
+     "location": "M3-F10: «X, 145» que não se parte (com o contexto « X, 145.»)",
+     "old": " X, 145.",
+     "new": " X, 145.",
+     "occurrences": 2
+    },
+    {
+     "location": "M3-F10: «X, 145» que não se parte (com o contexto « X, 145 »)",
+     "old": " X, 145 ",
+     "new": " X, 145 ",
+     "occurrences": 4
+    },
+    {
+     "location": "M3-F10: «X, 145» que não se parte (com o contexto « X, 145,»)",
+     "old": " X, 145,",
+     "new": " X, 145,",
+     "occurrences": 2
+    },
+    {
+     "location": "M3-F10: «X, 145» que não se parte (com o contexto ««X, 145»»)",
+     "old": "«X, 145»",
+     "new": "«X, 145»",
+     "occurrences": 1
+    },
+    {
+     "location": "M3-F10: «X, 145» que não se parte (com o contexto « X, 145)»)",
+     "old": " X, 145)",
+     "new": " X, 145)",
+     "occurrences": 1
+    },
+    {
+     "location": "M3-F10: «4 min» que não se parte",
+     "old": "4 min",
+     "new": "4 min",
+     "occurrences": 2
+    },
+    {
+     "location": "M3-F10: «I, 4» que não se parte (com o contexto «I, 4,»)",
+     "old": "I, 4,",
+     "new": "I, 4,",
+     "occurrences": 1
+    },
+    {
+     "location": "M3-F10: «I, 4» que não se parte (com o contexto «I, 4?»)",
+     "old": "I, 4?",
+     "new": "I, 4?",
+     "occurrences": 1
+    },
+    {
+     "location": "M3-F10: «I, 4» que não se parte (com o contexto «I, 4»»)",
+     "old": "I, 4»",
+     "new": "I, 4»",
+     "occurrences": 1
+    },
+    {
+     "location": "M3-F10: «I, 4» que não se parte (com o contexto «I, 4;»)",
+     "old": "I, 4;",
+     "new": "I, 4;",
+     "occurrences": 1
+    },
+    {
+     "location": "M3-F10: «I, 4» que não se parte (com o contexto «I, 4.»)",
+     "old": "I, 4.",
+     "new": "I, 4.",
+     "occurrences": 1
+    },
+    {
+     "location": "M3-F10: «I, 5» que não se parte (com o contexto «I, 5,»)",
+     "old": "I, 5,",
+     "new": "I, 5,",
+     "occurrences": 3
+    }
+   ]
+  },
+  "m3/licao-m3-f11/index.html": {
+   "base_sha256_lf": "7ce02043f9e49fd7103e153f919d3a01918f78a7ada2673010587388b6ac0733",
+   "after_sha256_lf": "ba544924a819063ae0e4637ffc1d0919d8826b47fca6bbadf08423614c047bb0",
+   "edits": [
+    {
+     "location": "M3-F11: «25 de novembro de 2019» que não se parte",
+     "old": "25 de novembro de 2019",
+     "new": "25 de novembro de 2019",
+     "occurrences": 1
+    },
+    {
+     "location": "M3-F11: «até 25 palavras» que não se parte",
+     "old": "até 25 palavras",
+     "new": "até 25 palavras",
+     "occurrences": 3
+    },
+    {
+     "location": "M3-F11: «25 de novembro» que não se parte (com o contexto «\"Em 25 de novembro»)",
+     "old": "\"Em 25 de novembro",
+     "new": "\"Em 25 de novembro",
+     "occurrences": 1
+    },
+    {
+     "location": "M3-F11: «artigo 13.º» que não se parte",
+     "old": "artigo 13.º",
+     "new": "artigo 13.º",
+     "occurrences": 1
+    },
+    {
+     "location": "M3-F11: «século XVI» que não se parte (com o contexto «século XVI).»)",
+     "old": "século XVI).",
+     "new": "século XVI).",
+     "occurrences": 1
+    },
+    {
+     "location": "M3-F11: «5 de maio» que não se parte",
+     "old": "5 de maio",
+     "new": "5 de maio",
+     "occurrences": 7
+    },
+    {
+     "location": "M3-F11: «1 min» que não se parte",
+     "old": "1 min",
+     "new": "1 min",
+     "occurrences": 2
+    },
+    {
+     "location": "M3-F11: «2 min» que não se parte",
+     "old": "2 min",
+     "new": "2 min",
+     "occurrences": 2
+    }
+   ]
+  },
+  "m3/licao-m3-f13/index.html": {
+   "base_sha256_lf": "aff3b0f4f32b0a4b185c0f807524c0148ad5dac198ec76c8a9c7dd5b1b1a960c",
+   "after_sha256_lf": "7fa693aa697039e987ddf10946a9c2a7412778ba4069eb353528db7c046e7c9f",
+   "edits": [
+    {
+     "location": "M3-F13, cartão 22, Para entender («Recorda»)",
+     "old": "<p><b>Reflexão do Poeta</b>: o narrador para a ação e fala em nome próprio. <b>Interrogação retórica</b>: pergunta que não espera resposta. <b>Metáfora</b>: dá a uma coisa o nome de outra. <b>Anáfora</b>: a mesma palavra a abrir versos seguidos.</p>",
+     "new": "<table class=\\\"apoio-tabela\\\" role=\\\"table\\\"><thead role=\\\"rowgroup\\\"><tr role=\\\"row\\\"><th scope=\\\"col\\\" role=\\\"columnheader\\\">Termo</th><th scope=\\\"col\\\" role=\\\"columnheader\\\">O que é</th></tr></thead><tbody role=\\\"rowgroup\\\"><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Reflexão do Poeta</th><td role=\\\"cell\\\" data-label=\\\"O que é\\\">o narrador para a ação e fala em nome próprio</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Interrogação retórica</th><td role=\\\"cell\\\" data-label=\\\"O que é\\\">pergunta que não espera resposta</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Metáfora</th><td role=\\\"cell\\\" data-label=\\\"O que é\\\">dá a uma coisa o nome de outra</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Anáfora</th><td role=\\\"cell\\\" data-label=\\\"O que é\\\">a mesma palavra a abrir versos seguidos</td></tr></tbody></table>",
+     "occurrences": 1
+    },
+    {
+     "location": "M3-F13, cartão 17, O texto, 5 de 5 (vocabulário: a entrada «Polidoro»)",
+     "old": "<b>Polidoro</b>, Rei Treício, Acriso, Tarpeia, exemplos antigos de crimes por dinheiro;",
+     "new": "<b>Polidoro</b>, <b>Rei Treício</b>, <b>Acriso</b> e <b>Tarpeia</b>, exemplos antigos de crimes por dinheiro;",
+     "occurrences": 1
+    },
+    {
+     "location": "M3-F13, cartão 12, O texto, 3 de 5: a estância no título",
+     "old": "\"rot\":\"O texto, 3 de 5\",\"titulo\":\"\"",
+     "new": "\"rot\":\"O texto, 3 de 5\",\"titulo\":\"Canto VIII, 97\"",
+     "occurrences": 1
+    },
+    {
+     "location": "M3-F13, cartão 14, O texto, 4 de 5: a estância no título",
+     "old": "\"rot\":\"O texto, 4 de 5\",\"titulo\":\"\"",
+     "new": "\"rot\":\"O texto, 4 de 5\",\"titulo\":\"Canto VIII, 98\"",
+     "occurrences": 1
+    },
+    {
+     "location": "M3-F13, cartão 17, O texto, 5 de 5: a estância no título",
+     "old": "\"rot\":\"O texto, 5 de 5\",\"titulo\":\"\"",
+     "new": "\"rot\":\"O texto, 5 de 5\",\"titulo\":\"Canto VIII, 99\"",
+     "occurrences": 1
+    },
+    {
+     "location": "M3-F13, cabeça: a folha das tabelas de apoio, antes da camada de aparência",
+     "old": "<link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-reading1\">",
+     "new": "<link rel=\"stylesheet\" href=\"../../assets/pt-lessons/apoios-tabelas.css?v=20261106.1\"><link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-reading1\">",
+     "occurrences": 1
+    },
+    {
+     "location": "M3-F13: «estâncias 100 a 106» que não se parte",
+     "old": "estâncias 100 a 106",
+     "new": "estâncias 100 a 106",
+     "occurrences": 2
+    },
+    {
+     "location": "M3-F13: «Canto VIII, 96 a 99» que não se parte",
+     "old": "Canto VIII, 96 a 99",
+     "new": "Canto VIII, 96 a 99",
+     "occurrences": 4
+    },
+    {
+     "location": "M3-F13: «VIII, 96 a 99» que não se parte (com o contexto «VIII, 96 a 99.»)",
+     "old": "VIII, 96 a 99.",
+     "new": "VIII, 96 a 99.",
+     "occurrences": 3
+    },
+    {
+     "location": "M3-F13: «VIII, 96 a 99» que não se parte (com o contexto «VIII, 96 a 99,»)",
+     "old": "VIII, 96 a 99,",
+     "new": "VIII, 96 a 99,",
+     "occurrences": 2
+    },
+    {
+     "location": "M3-F13: «VIII, 96 a 99» que não se parte (com o contexto «VIII, 96 a 99 »)",
+     "old": "VIII, 96 a 99 ",
+     "new": "VIII, 96 a 99 ",
+     "occurrences": 1
+    },
+    {
+     "location": "M3-F13: «Canto I, 106» que não se parte",
+     "old": "Canto I, 106",
+     "new": "Canto I, 106",
+     "occurrences": 4
+    },
+    {
+     "location": "M3-F13: «estância 106» que não se parte",
+     "old": "estância 106",
+     "new": "estância 106",
+     "occurrences": 2
+    },
+    {
+     "location": "M3-F13: «estância 96» que não se parte",
+     "old": "estância 96",
+     "new": "estância 96",
+     "occurrences": 1
+    },
+    {
+     "location": "M3-F13: «estância 97» que não se parte",
+     "old": "estância 97",
+     "new": "estância 97",
+     "occurrences": 1
+    },
+    {
+     "location": "M3-F13: «estância 99» que não se parte",
+     "old": "estância 99",
+     "new": "estância 99",
+     "occurrences": 1
+    },
+    {
+     "location": "M3-F13: «canto VIII» que não se parte",
+     "old": "canto VIII",
+     "new": "canto VIII",
+     "occurrences": 3
+    },
+    {
+     "location": "M3-F13: «VIII, 96» que não se parte (com o contexto «VIII, 96?»)",
+     "old": "VIII, 96?",
+     "new": "VIII, 96?",
+     "occurrences": 1
+    },
+    {
+     "location": "M3-F13: «VIII, 96» que não se parte (com o contexto «VIII, 96,»)",
+     "old": "VIII, 96,",
+     "new": "VIII, 96,",
+     "occurrences": 1
+    },
+    {
+     "location": "M3-F13: «VIII, 97» que não se parte (com o contexto «VIII, 97?»)",
+     "old": "VIII, 97?",
+     "new": "VIII, 97?",
+     "occurrences": 1
+    },
+    {
+     "location": "M3-F13: «VIII, 98» que não se parte (com o contexto «VIII, 98?»)",
+     "old": "VIII, 98?",
+     "new": "VIII, 98?",
+     "occurrences": 2
+    },
+    {
+     "location": "M3-F13: «VIII, 98» que não se parte (com o contexto «VIII, 98 »)",
+     "old": "VIII, 98 ",
+     "new": "VIII, 98 ",
+     "occurrences": 1
+    },
+    {
+     "location": "M3-F13: «VIII, 98» que não se parte (com o contexto «VIII, 98<»)",
+     "old": "VIII, 98<",
+     "new": "VIII, 98<",
+     "occurrences": 1
+    },
+    {
+     "location": "M3-F13: «VIII, 99» que não se parte (com o contexto «VIII, 99 »)",
+     "old": "VIII, 99 ",
+     "new": "VIII, 99 ",
+     "occurrences": 2
+    },
+    {
+     "location": "M3-F13: «VIII, 99» que não se parte (com o contexto «VIII, 99:»)",
+     "old": "VIII, 99:",
+     "new": "VIII, 99:",
+     "occurrences": 1
+    },
+    {
+     "location": "M3-F13: «Canto I» que não se parte (com o contexto «Canto I »)",
+     "old": "Canto I ",
+     "new": "Canto I ",
+     "occurrences": 1
+    },
+    {
+     "location": "M3-F13: «canto I» que não se parte",
+     "old": "canto I",
+     "new": "canto I",
+     "occurrences": 3
+    },
+    {
+     "location": "M3-F13: «I, 106» que não se parte (com o contexto «: I, 106; »)",
+     "old": ": I, 106; ",
+     "new": ": I, 106; ",
+     "occurrences": 1
+    },
+    {
+     "location": "M3-F13: «I, 106» que não se parte (com o contexto «m I, 106, »)",
+     "old": "m I, 106, ",
+     "new": "m I, 106, ",
+     "occurrences": 2
+    },
+    {
+     "location": "M3-F13: «I, 106» que não se parte (com o contexto «, I, 106.<»)",
+     "old": ", I, 106.<",
+     "new": ", I, 106.<",
+     "occurrences": 1
+    },
+    {
+     "location": "M3-F13: «I, 106» que não se parte (com o contexto «e I, 106 p»)",
+     "old": "e I, 106 p",
+     "new": "e I, 106 p",
+     "occurrences": 1
+    },
+    {
+     "location": "M3-F13: «I, 106» que não se parte (com o contexto «e I, 106?\"»)",
+     "old": "e I, 106?\"",
+     "new": "e I, 106?\"",
+     "occurrences": 1
+    },
+    {
+     "location": "M3-F13: «I, 106» que não se parte (com o contexto «m I, 106?\"»)",
+     "old": "m I, 106?\"",
+     "new": "m I, 106?\"",
+     "occurrences": 1
+    },
+    {
+     "location": "M3-F13: «I, 106» que não se parte (com o contexto «e I, 106 q»)",
+     "old": "e I, 106 q",
+     "new": "e I, 106 q",
+     "occurrences": 1
+    },
+    {
+     "location": "M3-F13: «I, 106» que não se parte (com o contexto «m I, 106 e»)",
+     "old": "m I, 106 e",
+     "new": "m I, 106 e",
+     "occurrences": 1
+    },
+    {
+     "location": "M3-F13: «I, 106» que não se parte (com o contexto «o I, 106, »)",
+     "old": "o I, 106, ",
+     "new": "o I, 106, ",
+     "occurrences": 1
+    },
+    {
+     "location": "M3-F13: «I, 106» que não se parte (com o contexto «: I, 106 f»)",
+     "old": ": I, 106 f",
+     "new": ": I, 106 f",
+     "occurrences": 1
+    },
+    {
+     "location": "M3-F13: «I, 106» que não se parte (com o contexto «e I, 106.\"»)",
+     "old": "e I, 106.\"",
+     "new": "e I, 106.\"",
+     "occurrences": 1
+    },
+    {
+     "location": "M3-F13: «I, 106» que não se parte (com o contexto «, I, 106\",»)",
+     "old": ", I, 106\",",
+     "new": ", I, 106\",",
+     "occurrences": 2
+    },
+    {
+     "location": "M3-F13: «I, 106» que não se parte (com o contexto «, I, 106 e»)",
+     "old": ", I, 106 e",
+     "new": ", I, 106 e",
+     "occurrences": 1
+    },
+    {
+     "location": "M3-F13: «4 min» que não se parte",
+     "old": "4 min",
+     "new": "4 min",
+     "occurrences": 2
+    },
+    {
+     "location": "M3-F13: «2 min» que não se parte",
+     "old": "2 min",
+     "new": "2 min",
+     "occurrences": 2
+    }
+   ]
+  },
+  "m3/licao-m3-f15/index.html": {
+   "base_sha256_lf": "e0eb68ac934b61028a5cefc469dc51e59d46c7541311075eb979661a78e44fbf",
+   "after_sha256_lf": "2cd5a1729e0e9e8ab6228f1aabb55ee00057f26a991d56ee424c44898911b164",
+   "edits": [
+    {
+     "location": "M3-F15, cartão 4, Para entender («As três modalidades»)",
+     "old": "<p><b>Modalidade epistémica</b>: grau de certeza (valor de certeza ou probabilidade: «talvez», «deve estar», «é certo que»). <b>Deôntica</b>: obrigação ou permissão («tem de», «pode sair»); o pedido e a ordem também são deônticos. <b>Apreciativa</b>: avaliação ou emoção do locutor («Infelizmente», «Que belo!»). Marcas: verbos modais, advérbios, adjetivos, modos verbais, tipos de frase.</p>",
+     "new": "<table class=\\\"apoio-tabela\\\" role=\\\"table\\\"><thead role=\\\"rowgroup\\\"><tr role=\\\"row\\\"><th scope=\\\"col\\\" role=\\\"columnheader\\\">Modalidade</th><th scope=\\\"col\\\" role=\\\"columnheader\\\">O que exprime</th><th scope=\\\"col\\\" role=\\\"columnheader\\\">Exemplos</th></tr></thead><tbody role=\\\"rowgroup\\\"><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Epistémica</th><td role=\\\"cell\\\" data-label=\\\"O que exprime\\\">grau de certeza (valor de certeza ou probabilidade)</td><td role=\\\"cell\\\" data-label=\\\"Exemplos\\\">«talvez», «deve estar», «é certo que»</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Deôntica</th><td role=\\\"cell\\\" data-label=\\\"O que exprime\\\">obrigação ou permissão; o pedido e a ordem também são deônticos</td><td role=\\\"cell\\\" data-label=\\\"Exemplos\\\">«tem de», «pode sair»</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Apreciativa</th><td role=\\\"cell\\\" data-label=\\\"O que exprime\\\">avaliação ou emoção do locutor</td><td role=\\\"cell\\\" data-label=\\\"Exemplos\\\">«Infelizmente», «Que belo!»</td></tr></tbody></table><p>Marcas: verbos modais, advérbios, adjetivos, modos verbais, tipos de frase.</p>",
+     "occurrences": 1
+    },
+    {
+     "location": "M3-F15, cabeça: a folha das tabelas de apoio, antes da camada de aparência",
+     "old": "<link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-reading1\">",
+     "new": "<link rel=\"stylesheet\" href=\"../../assets/pt-lessons/apoios-tabelas.css?v=20261106.1\"><link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-reading1\">",
+     "occurrences": 1
+    },
+    {
+     "location": "M3-F15: «estância 98» que não se parte",
+     "old": "estância 98",
+     "new": "estância 98",
+     "occurrences": 2
+    },
+    {
+     "location": "M3-F15: «estância 96» que não se parte",
+     "old": "estância 96",
+     "new": "estância 96",
+     "occurrences": 1
+    },
+    {
+     "location": "M3-F15: «VIII, 98» que não se parte",
+     "old": "VIII, 98",
+     "new": "VIII, 98",
+     "occurrences": 4
+    },
+    {
+     "location": "M3-F15: «c. 1560» que não se parte (com o contexto «c. 1560).»)",
+     "old": "c. 1560).",
+     "new": "c. 1560).",
+     "occurrences": 1
+    },
+    {
+     "location": "M3-F15: «I, 106» que não se parte",
+     "old": "I, 106",
+     "new": "I, 106",
+     "occurrences": 1
+    },
+    {
+     "location": "M3-F15: «X, 145» que não se parte",
+     "old": "X, 145",
+     "new": "X, 145",
+     "occurrences": 2
+    },
+    {
+     "location": "M3-F15: «IX, 89» que não se parte",
+     "old": "IX, 89",
+     "new": "IX, 89",
+     "occurrences": 1
+    },
+    {
+     "location": "M3-F15: «V, 97» que não se parte",
+     "old": "V, 97",
+     "new": "V, 97",
+     "occurrences": 1
+    },
+    {
+     "location": "M3-F15: «2 min» que não se parte",
+     "old": "2 min",
+     "new": "2 min",
+     "occurrences": 4
+    }
+   ]
+  },
+  "m3/licao-m3-f16/index.html": {
+   "base_sha256_lf": "6701c72a2baca4f924477773e566b3df63afd471438a76d3fd1a80d46bbc24b0",
+   "after_sha256_lf": "a0c5163dc75db1655248fd9ebc3890c3e98d26bb37699d1d03e2189e23a1f405",
+   "edits": [
+    {
+     "location": "M3-F16: «30 segundos» que não se parte",
+     "old": "30 segundos",
+     "new": "30 segundos",
+     "occurrences": 5
+    },
+    {
+     "location": "M3-F16: «2 min» que não se parte",
+     "old": "2 min",
+     "new": "2 min",
+     "occurrences": 2
+    },
+    {
+     "location": "M3-F16: «4 min» que não se parte",
+     "old": "4 min",
+     "new": "4 min",
+     "occurrences": 2
+    }
+   ]
+  },
+  "m3/licao-m3-f17/index.html": {
+   "base_sha256_lf": "b6bbab655ae1ab0b59bc3f9a0eb8010d02fd3d14c1803e9c9153433bc34ca1a2",
+   "after_sha256_lf": "c80d90fabd3be72fdd6039dba96ff60d448ac826f327276079b2260d99a76025",
+   "edits": [
+    {
+     "location": "M3-F17: «120 a 150 palavras» que não se parte",
+     "old": "120 a 150 palavras",
+     "new": "120 a 150 palavras",
+     "occurrences": 4
+    },
+    {
+     "location": "M3-F17: «300 a 400 palavras» que não se parte",
+     "old": "300 a 400 palavras",
+     "new": "300 a 400 palavras",
+     "occurrences": 2
+    },
+    {
+     "location": "M3-F17: «D. Sebastião» que não se parte",
+     "old": "D. Sebastião",
+     "new": "D. Sebastião",
+     "occurrences": 1
+    },
+    {
+     "location": "M3-F17: «300 a 400» que não se parte (com o contexto «300 a 400 é»)",
+     "old": "300 a 400 é",
+     "new": "300 a 400 é",
+     "occurrences": 1
+    },
+    {
+     "location": "M3-F17: «120 a 150» que não se parte (com o contexto «120 a 150.»)",
+     "old": "120 a 150.",
+     "new": "120 a 150.",
+     "occurrences": 1
+    },
+    {
+     "location": "M3-F17: «c. 1560» que não se parte (com o contexto «c. 1560).»)",
+     "old": "c. 1560).",
+     "new": "c. 1560).",
+     "occurrences": 1
+    },
+    {
+     "location": "M3-F17: «120–150» que não se parte",
+     "old": "120–150",
+     "new": "120–⁠150",
+     "occurrences": 1
+    },
+    {
+     "location": "M3-F17: «t. III» que não se parte",
+     "old": "t. III",
+     "new": "t. III",
+     "occurrences": 1
+    },
+    {
+     "location": "M3-F17: «4 min» que não se parte",
+     "old": "4 min",
+     "new": "4 min",
+     "occurrences": 2
+    },
+    {
+     "location": "M3-F17: «2 min» que não se parte",
+     "old": "2 min",
+     "new": "2 min",
+     "occurrences": 2
+    },
+    {
+     "location": "M3-F17: «30 %» que não se parte",
+     "old": "30 %",
+     "new": "30 %",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m3/licao-m3-f18/index.html": {
+   "base_sha256_lf": "3eadc62c0b6f6e14d18380b19623582f81b46df8de69646f71ed008cbc06b975",
+   "after_sha256_lf": "688926fdfd044a42c174f34bff63031814b26b582974ef3dbcf1a21d34c3508c",
+   "edits": [
+    {
+     "location": "M3-F18, cabeça: a folha das tabelas de apoio, antes da camada de aparência",
+     "old": "<link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-universal-1\">",
+     "new": "<link rel=\"stylesheet\" href=\"../../assets/pt-lessons/apoios-tabelas.css?v=20261106.1\"><link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-universal-1\">",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m3/m3-soneto-raciocinio/index.html": {
+   "base_sha256_lf": "b5b2d56da4aecdf1bd54f94b208061e5cf57c882a972bbf1b875269b48d809f0",
+   "after_sha256_lf": "01da2082b021bbe407ae739e2c7e26372a85db78767c17ea20f03a94233dadbd",
+   "edits": [
+    {
+     "location": "m3/m3-soneto-raciocinio: «n.º 31509» que não se parte",
+     "old": "n.º 31509",
+     "new": "n.º 31509",
+     "occurrences": 2
+    },
+    {
+     "location": "m3/m3-soneto-raciocinio: «n.º 37192» que não se parte",
+     "old": "n.º 37192",
+     "new": "n.º 37192",
+     "occurrences": 1
+    },
+    {
+     "location": "m3/m3-soneto-raciocinio: «verso 12» que não se parte",
+     "old": "verso 12",
+     "new": "verso 12",
+     "occurrences": 1
+    },
+    {
+     "location": "m3/m3-soneto-raciocinio: «verso 11» que não se parte",
+     "old": "verso 11",
+     "new": "verso 11",
+     "occurrences": 1
+    },
+    {
+     "location": "m3/m3-soneto-raciocinio: «1.º ano» que não se parte",
+     "old": "1.º ano",
+     "new": "1.º ano",
+     "occurrences": 1
+    },
+    {
+     "location": "m3/m3-soneto-raciocinio: «verso 1» que não se parte (com o contexto «verso 1 »)",
+     "old": "verso 1 ",
+     "new": "verso 1 ",
+     "occurrences": 2
+    },
+    {
+     "location": "m3/m3-soneto-raciocinio: «verso 1» que não se parte (com o contexto «verso 1,»)",
+     "old": "verso 1,",
+     "new": "verso 1,",
+     "occurrences": 1
+    },
+    {
+     "location": "m3/m3-soneto-raciocinio: «verso 5» que não se parte",
+     "old": "verso 5",
+     "new": "verso 5",
+     "occurrences": 1
+    },
+    {
+     "location": "m3/m3-soneto-raciocinio: «verso 9» que não se parte",
+     "old": "verso 9",
+     "new": "verso 9",
+     "occurrences": 1
+    },
+    {
+     "location": "m3/m3-soneto-raciocinio: «20 min» que não se parte",
+     "old": "20 min",
+     "new": "20 min",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m3/m3-velho-restelo-juri/index.html": {
+   "base_sha256_lf": "cd15199000cbad0a3a9f0f8c39b42f0799cc511c7d0eb6a6ebe0ec3f0f06194b",
+   "after_sha256_lf": "cc6506bd0420dd6c0ac9dee49ccb4d8636aca0ffdeb4fd95b54144420327fd21",
+   "edits": [
+    {
+     "location": "m3/m3-velho-restelo-juri: «estâncias 95 a 104» que não se parte",
+     "old": "estâncias 95 a 104",
+     "new": "estâncias 95 a 104",
+     "occurrences": 1
+    },
+    {
+     "location": "m3/m3-velho-restelo-juri: «estância IX, 92» que não se parte",
+     "old": "estância IX, 92",
+     "new": "estância IX, 92",
+     "occurrences": 1
+    },
+    {
+     "location": "m3/m3-velho-restelo-juri: «IV, 95 a 104» que não se parte",
+     "old": "IV, 95 a 104",
+     "new": "IV, 95 a 104",
+     "occurrences": 1
+    },
+    {
+     "location": "m3/m3-velho-restelo-juri: «estância 106» que não se parte",
+     "old": "estância 106",
+     "new": "estância 106",
+     "occurrences": 1
+    },
+    {
+     "location": "m3/m3-velho-restelo-juri: «estância 145» que não se parte",
+     "old": "estância 145",
+     "new": "estância 145",
+     "occurrences": 1
+    },
+    {
+     "location": "m3/m3-velho-restelo-juri: «estância 95» que não se parte",
+     "old": "estância 95",
+     "new": "estância 95",
+     "occurrences": 2
+    },
+    {
+     "location": "m3/m3-velho-restelo-juri: «estância 94» que não se parte",
+     "old": "estância 94",
+     "new": "estância 94",
+     "occurrences": 1
+    },
+    {
+     "location": "m3/m3-velho-restelo-juri: «estância 96» que não se parte",
+     "old": "estância 96",
+     "new": "estância 96",
+     "occurrences": 1
+    },
+    {
+     "location": "m3/m3-velho-restelo-juri: «estância 92» que não se parte",
+     "old": "estância 92",
+     "new": "estância 92",
+     "occurrences": 1
+    },
+    {
+     "location": "m3/m3-velho-restelo-juri: «estância 1» que não se parte (com o contexto «estância 1 »)",
+     "old": "estância 1 ",
+     "new": "estância 1 ",
+     "occurrences": 1
+    },
+    {
+     "location": "m3/m3-velho-restelo-juri: «canto VIII» que não se parte",
+     "old": "canto VIII",
+     "new": "canto VIII",
+     "occurrences": 1
+    },
+    {
+     "location": "m3/m3-velho-restelo-juri: «Canto IV» que não se parte",
+     "old": "Canto IV",
+     "new": "Canto IV",
+     "occurrences": 1
+    },
+    {
+     "location": "m3/m3-velho-restelo-juri: «canto IV» que não se parte",
+     "old": "canto IV",
+     "new": "canto IV",
+     "occurrences": 7
+    },
+    {
+     "location": "m3/m3-velho-restelo-juri: «est. 145» que não se parte",
+     "old": "est. 145",
+     "new": "est. 145",
+     "occurrences": 1
+    },
+    {
+     "location": "m3/m3-velho-restelo-juri: «VIII, 96» que não se parte",
+     "old": "VIII, 96",
+     "new": "VIII, 96",
+     "occurrences": 2
+    },
+    {
+     "location": "m3/m3-velho-restelo-juri: «canto IX» que não se parte",
+     "old": "canto IX",
+     "new": "canto IX",
+     "occurrences": 3
+    },
+    {
+     "location": "m3/m3-velho-restelo-juri: «1.º ano» que não se parte",
+     "old": "1.º ano",
+     "new": "1.º ano",
+     "occurrences": 1
+    },
+    {
+     "location": "m3/m3-velho-restelo-juri: «est. 94» que não se parte",
+     "old": "est. 94",
+     "new": "est. 94",
+     "occurrences": 1
+    },
+    {
+     "location": "m3/m3-velho-restelo-juri: «est. 95» que não se parte",
+     "old": "est. 95",
+     "new": "est. 95",
+     "occurrences": 1
+    },
+    {
+     "location": "m3/m3-velho-restelo-juri: «canto X» que não se parte",
+     "old": "canto X",
+     "new": "canto X",
+     "occurrences": 8
+    },
+    {
+     "location": "m3/m3-velho-restelo-juri: «canto I» que não se parte (com o contexto «canto I »)",
+     "old": "canto I ",
+     "new": "canto I ",
+     "occurrences": 1
+    },
+    {
+     "location": "m3/m3-velho-restelo-juri: «canto I» que não se parte (com o contexto «canto I,»)",
+     "old": "canto I,",
+     "new": "canto I,",
+     "occurrences": 2
+    },
+    {
+     "location": "m3/m3-velho-restelo-juri: «est. 92» que não se parte",
+     "old": "est. 92",
+     "new": "est. 92",
+     "occurrences": 1
+    },
+    {
+     "location": "m3/m3-velho-restelo-juri: «20 min» que não se parte",
+     "old": "20 min",
+     "new": "20 min",
+     "occurrences": 1
+    },
+    {
+     "location": "m3/m3-velho-restelo-juri: «IV, 95» que não se parte (com o contexto «IV, 95?\"»)",
+     "old": "IV, 95?\"",
+     "new": "IV, 95?\"",
+     "occurrences": 1
+    },
+    {
+     "location": "m3/m3-velho-restelo-juri: «IV, 95» que não se parte (com o contexto «IV, 95, »)",
+     "old": "IV, 95, ",
+     "new": "IV, 95, ",
+     "occurrences": 1
+    },
+    {
+     "location": "m3/m3-velho-restelo-juri: «IV, 95» que não se parte (com o contexto «IV, 95)\"»)",
+     "old": "IV, 95)\"",
+     "new": "IV, 95)\"",
+     "occurrences": 2
+    },
+    {
+     "location": "m3/m3-velho-restelo-juri: «IV, 95» que não se parte (com o contexto «IV, 95) »)",
+     "old": "IV, 95) ",
+     "new": "IV, 95) ",
+     "occurrences": 1
+    },
+    {
+     "location": "m3/m3-velho-restelo-juri: «IV, 95» que não se parte (com o contexto «IV, 95. »)",
+     "old": "IV, 95. ",
+     "new": "IV, 95. ",
+     "occurrences": 1
+    },
+    {
+     "location": "m3/m3-velho-restelo-juri: «IV, 95» que não se parte (com o contexto «IV, 95 e»)",
+     "old": "IV, 95 e",
+     "new": "IV, 95 e",
+     "occurrences": 1
+    },
+    {
+     "location": "m3/m3-velho-restelo-juri: «X, 145» que não se parte",
+     "old": "X, 145",
+     "new": "X, 145",
+     "occurrences": 9
+    },
+    {
+     "location": "m3/m3-velho-restelo-juri: «I, 106» que não se parte",
+     "old": "I, 106",
+     "new": "I, 106",
+     "occurrences": 2
+    },
+    {
+     "location": "m3/m3-velho-restelo-juri: «IV, 94» que não se parte",
+     "old": "IV, 94",
+     "new": "IV, 94",
+     "occurrences": 2
+    },
+    {
+     "location": "m3/m3-velho-restelo-juri: «IX, 92» que não se parte (com o contexto «e IX, 92»)",
+     "old": "e IX, 92",
+     "new": "e IX, 92",
+     "occurrences": 4
+    },
+    {
+     "location": "m3/m3-velho-restelo-juri: «IX, 92» que não se parte (com o contexto « (IX, 92»)",
+     "old": " (IX, 92",
+     "new": " (IX, 92",
+     "occurrences": 1
+    },
+    {
+     "location": "m3/m3-velho-restelo-juri: «IX, 92» que não se parte (com o contexto «ê IX, 92»)",
+     "old": "ê IX, 92",
+     "new": "ê IX, 92",
+     "occurrences": 1
+    },
+    {
+     "location": "m3/m3-velho-restelo-juri: «IX, 92» que não se parte (com o contexto «m IX, 92»)",
+     "old": "m IX, 92",
+     "new": "m IX, 92",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m3/mapa-do-modulo-m3/index.html": {
+   "base_sha256_lf": "02ec19604e33b6e8dbea74383a0161229a0507e4f2482e040750190de9f878b3",
+   "after_sha256_lf": "6147014965ed2cfe0af70b5cc000052dabc81ef6c5b487e0bd04a48675790857",
+   "edits": [
+    {
+     "location": "m3/mapa-do-modulo-m3, secção «As tarefas do Teams» (p.avaliacao-tarefas)",
+     "old": "<p class=\"avaliacao-tarefas\">Avaliação: tarefa da Unidade 1, 30 %; tarefa da Unidade 2, 30 %; provas rápidas, 10 %; prova escrita, 30 %. ",
+     "new": "<p>Avaliação:</p><table class=\"apoio-tabela\" role=\"table\"><thead role=\"rowgroup\"><tr role=\"row\"><th scope=\"col\" role=\"columnheader\" style=\"width:auto\">Componente</th><th scope=\"col\" role=\"columnheader\" style=\"width:5.5rem\">Peso</th></tr></thead><tbody role=\"rowgroup\"><tr role=\"row\"><th scope=\"row\" role=\"rowheader\">Tarefa da Unidade 1</th><td role=\"cell\" data-label=\"Peso\">30 %</td></tr><tr role=\"row\"><th scope=\"row\" role=\"rowheader\">Tarefa da Unidade 2</th><td role=\"cell\" data-label=\"Peso\">30 %</td></tr><tr role=\"row\"><th scope=\"row\" role=\"rowheader\">Provas rápidas</th><td role=\"cell\" data-label=\"Peso\">10 %</td></tr><tr role=\"row\"><th scope=\"row\" role=\"rowheader\">Prova escrita</th><td role=\"cell\" data-label=\"Peso\">30 %</td></tr></tbody></table><p class=\"avaliacao-tarefas\">",
+     "occurrences": 1
+    },
+    {
+     "location": "m3/mapa-do-modulo-m3, cabeça: a folha das tabelas de apoio, antes da camada de aparência",
+     "old": "<link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-universal-1\">",
+     "new": "<link rel=\"stylesheet\" href=\"../../assets/pt-lessons/apoios-tabelas.css?v=20261106.1\"><link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-universal-1\">",
+     "occurrences": 1
+    },
+    {
+     "location": "m3/mapa-do-modulo-m3: «versos 1 e 2» que não se parte",
+     "old": "versos 1 e 2",
+     "new": "versos 1 e 2",
+     "occurrences": 1
+    },
+    {
+     "location": "m3/mapa-do-modulo-m3: «c. 1524–1580» que não se parte",
+     "old": "c. 1524–1580",
+     "new": "c. 1524–⁠1580",
+     "occurrences": 1
+    },
+    {
+     "location": "m3/mapa-do-modulo-m3: «90 minutos» que não se parte",
+     "old": "90 minutos",
+     "new": "90 minutos",
+     "occurrences": 3
+    },
+    {
+     "location": "m3/mapa-do-modulo-m3: «século XVI» que não se parte (com o contexto «século XVI).»)",
+     "old": "século XVI).",
+     "new": "século XVI).",
+     "occurrences": 1
+    },
+    {
+     "location": "m3/mapa-do-modulo-m3: «1497–1499» que não se parte",
+     "old": "1497–1499",
+     "new": "1497–⁠1499",
+     "occurrences": 2
+    },
+    {
+     "location": "m3/mapa-do-modulo-m3: «1.º ano» que não se parte",
+     "old": "1.º ano",
+     "new": "1.º ano",
+     "occurrences": 2
+    },
+    {
+     "location": "m3/mapa-do-modulo-m3: «canto I» que não se parte",
+     "old": "canto I",
+     "new": "canto I",
+     "occurrences": 1
+    },
+    {
+     "location": "m3/mapa-do-modulo-m3: «c. 1524» que não se parte (com o contexto «c. 1524<»)",
+     "old": "c. 1524<",
+     "new": "c. 1524<",
+     "occurrences": 1
+    },
+    {
+     "location": "m3/mapa-do-modulo-m3: «canto X» que não se parte",
+     "old": "canto X",
+     "new": "canto X",
+     "occurrences": 1
+    },
+    {
+     "location": "m3/mapa-do-modulo-m3: «30 %» que não se parte (com o contexto «30 %. <a»)",
+     "old": "30 %. <a",
+     "new": "30 %. <a",
+     "occurrences": 2
+    },
+    {
+     "location": "m3/mapa-do-modulo-m3: «c. 1520-1540» que não se parte",
+     "old": "c. 1520-1540",
+     "new": "c. 1520–⁠1540",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m3/portefolio-do-modulo-m3/index.html": {
+   "base_sha256_lf": "0e05f306c6474774801119109b141a9461ed65ee780159ed1f3616943b0e88d2",
+   "after_sha256_lf": "6e3b267bc643e3abe6350a84055e49c2122038bd47f51be49d2e2a3e0f6bdba0",
+   "edits": [
+    {
+     "location": "m3/portefolio-do-modulo-m3: «90 minutos» que não se parte",
+     "old": "90 minutos",
+     "new": "90 minutos",
+     "occurrences": 1
+    },
+    {
+     "location": "m3/portefolio-do-modulo-m3: «1.º ano» que não se parte",
+     "old": "1.º ano",
+     "new": "1.º ano",
+     "occurrences": 2
+    },
+    {
+     "location": "m3/portefolio-do-modulo-m3: «0 a 20» que não se parte",
+     "old": "0 a 20",
+     "new": "0 a 20",
+     "occurrences": 1
+    },
+    {
+     "location": "m3/portefolio-do-modulo-m3: «40 %» que não se parte",
+     "old": "40 %",
+     "new": "40 %",
+     "occurrences": 1
+    }
+   ]
+  },
+  "tarefas/m3-u1/aquecimento/index.html": {
+   "base_sha256_lf": "415049da57db838b252b04b6806b2d4e28dccf2e163cfa7d3c8991cd484954f9",
+   "after_sha256_lf": "f491a4e0b5d03535be1062533000359058cad999789814c71b4aa4080dd7d67a",
+   "edits": [
+    {
+     "location": "tarefas/m3-u1/aquecimento: «200 a 240 palavras» que não se parte",
+     "old": "200 a 240 palavras",
+     "new": "200 a 240 palavras",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m3-u1/aquecimento: «200 a 240» que não se parte (com o contexto «200 a 240\"»)",
+     "old": "200 a 240\"",
+     "new": "200 a 240\"",
+     "occurrences": 1
+    }
+   ]
+  },
+  "tarefas/m3-u1/grelha/index.html": {
+   "base_sha256_lf": "5d282e5fddd8b207473ae2dd92d612aa3d2f6c3a0ffeb0b7fc7bef92009abc61",
+   "after_sha256_lf": "a8618117e46c82bd95460ee1f81f186f4324920e34b30ef2c7c52491127d30c4",
+   "edits": [
+    {
+     "location": "tarefas/m3-u1/grelha: «200 a 240 palavras» que não se parte",
+     "old": "200 a 240 palavras",
+     "new": "200 a 240 palavras",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m3-u1/grelha: «I, 106» que não se parte",
+     "old": "I, 106",
+     "new": "I, 106",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m3-u1/grelha: «1 a 3» que não se parte",
+     "old": "1 a 3",
+     "new": "1 a 3",
+     "occurrences": 2
+    },
+    {
+     "location": "tarefas/m3-u1/grelha: «1 a 2» que não se parte",
+     "old": "1 a 2",
+     "new": "1 a 2",
+     "occurrences": 2
+    },
+    {
+     "location": "tarefas/m3-u1/grelha: «1 a 5» que não se parte",
+     "old": "1 a 5",
+     "new": "1 a 5",
+     "occurrences": 1
+    }
+   ]
+  },
+  "tarefas/m3-u1/index.html": {
+   "base_sha256_lf": "9aa80190d6d5fb2e5a15be56053af48c01a548acd4d90e0c311de5df8ffe6594",
+   "after_sha256_lf": "ef0d30ec1a05d3422948f86bf376930432ef6d2871a534620d87ba1111e522f9",
+   "edits": [
+    {
+     "location": "tarefas/m3-u1: «200 a 240 palavras» que não se parte",
+     "old": "200 a 240 palavras",
+     "new": "200 a 240 palavras",
+     "occurrences": 3
+    },
+    {
+     "location": "tarefas/m3-u1: «IV, 94 e 95» que não se parte",
+     "old": "IV, 94 e 95",
+     "new": "IV, 94 e 95",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m3-u1: «D. Manuel I» que não se parte",
+     "old": "D. Manuel I",
+     "new": "D. Manuel I",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m3-u1: «90 minutos» que não se parte",
+     "old": "90 minutos",
+     "new": "90 minutos",
+     "occurrences": 2
+    },
+    {
+     "location": "tarefas/m3-u1: «10 minutos» que não se parte",
+     "old": "10 minutos",
+     "new": "10 minutos",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m3-u1: «60 minutos» que não se parte",
+     "old": "60 minutos",
+     "new": "60 minutos",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m3-u1: «15 minutos» que não se parte",
+     "old": "15 minutos",
+     "new": "15 minutos",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m3-u1: «século XVI» que não se parte",
+     "old": "século XVI",
+     "new": "século XVI",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m3-u1: «5 minutos» que não se parte (com o contexto « 5 minutos»)",
+     "old": " 5 minutos",
+     "new": " 5 minutos",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m3-u1: «80 a 120» que não se parte",
+     "old": "80 a 120",
+     "new": "80 a 120",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m3-u1: «I, 1 a 3» que não se parte",
+     "old": "I, 1 a 3",
+     "new": "I, 1 a 3",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m3-u1: «verso 3» que não se parte",
+     "old": "verso 3",
+     "new": "verso 3",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m3-u1: «10 min» que não se parte (com o contexto «10 min »)",
+     "old": "10 min ",
+     "new": "10 min ",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m3-u1: «90 min» que não se parte (com o contexto «90 min<»)",
+     "old": "90 min<",
+     "new": "90 min<",
+     "occurrences": 1
+    }
+   ]
+  },
+  "tarefas/m3-u2/aquecimento/index.html": {
+   "base_sha256_lf": "7417f85aad89028d979f01541a326e245dbf0908329a46e18f69eac4de179d12",
+   "after_sha256_lf": "78d5faa2ed5cad0b027d5a715ba1a40df837af68e2bff2cdd83a666013a40928",
+   "edits": [
+    {
+     "location": "tarefas/m3-u2/aquecimento: «200 a 250 palavras» que não se parte",
+     "old": "200 a 250 palavras",
+     "new": "200 a 250 palavras",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m3-u2/aquecimento: «estância I, 106» que não se parte",
+     "old": "estância I, 106",
+     "new": "estância I, 106",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m3-u2/aquecimento: «I, 4 e 5» que não se parte",
+     "old": "I, 4 e 5",
+     "new": "I, 4 e 5",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m3-u2/aquecimento: «VIII, 99» que não se parte",
+     "old": "VIII, 99",
+     "new": "VIII, 99",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m3-u2/aquecimento: «canto I» que não se parte",
+     "old": "canto I",
+     "new": "canto I",
+     "occurrences": 4
+    },
+    {
+     "location": "tarefas/m3-u2/aquecimento: «X, 145» que não se parte",
+     "old": "X, 145",
+     "new": "X, 145",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m3-u2/aquecimento: «I, 106» que não se parte (com o contexto «I, 106, »)",
+     "old": "I, 106, ",
+     "new": "I, 106, ",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m3-u2/aquecimento: «I, 106» que não se parte (com o contexto «I, 106.\"»)",
+     "old": "I, 106.\"",
+     "new": "I, 106.\"",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m3-u2/aquecimento: «I, 106» que não se parte (com o contexto «I, 106 e»)",
+     "old": "I, 106 e",
+     "new": "I, 106 e",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m3-u2/aquecimento: «I, 106» que não se parte (com o contexto «I, 106 é»)",
+     "old": "I, 106 é",
+     "new": "I, 106 é",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m3-u2/aquecimento: «I, 106» que não se parte (com o contexto «I, 106 f»)",
+     "old": "I, 106 f",
+     "new": "I, 106 f",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m3-u2/aquecimento: «I, 106» que não se parte (com o contexto «I, 106: »)",
+     "old": "I, 106: ",
+     "new": "I, 106: ",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m3-u2/aquecimento: «I, 106» que não se parte (com o contexto «I, 106)\"»)",
+     "old": "I, 106)\"",
+     "new": "I, 106)\"",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m3-u2/aquecimento: «I, 106» que não se parte (com o contexto «I, 106\",»)",
+     "old": "I, 106\",",
+     "new": "I, 106\",",
+     "occurrences": 1
+    }
+   ]
+  },
+  "tarefas/m3-u2/correcao/index.html": {
+   "base_sha256_lf": "9358504dc495fb2bae51ff144897f9f9d7e453658ad31cdae8dafaaba19047a6",
+   "after_sha256_lf": "63aaebbb7005d4308cd6f766a5c88ea7d34dd97b7c221c02759efa49fc4352ee",
+   "edits": [
+    {
+     "location": "tarefas/m3-u2/correcao: «VIII, 98» que não se parte",
+     "old": "VIII, 98",
+     "new": "VIII, 98",
+     "occurrences": 1
+    }
+   ]
+  },
+  "tarefas/m3-u2/grelha/index.html": {
+   "base_sha256_lf": "b3405fc5c22a4ebd8fa7678064aa681b1ba4f28258e8e5051ccf65a85fa5933e",
+   "after_sha256_lf": "6d61d494b52957751a6f07f048bc527c5acf853c884cf3e9c38dac9d36b00714",
+   "edits": [
+    {
+     "location": "tarefas/m3-u2/grelha: «200 a 250 palavras» que não se parte",
+     "old": "200 a 250 palavras",
+     "new": "200 a 250 palavras",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m3-u2/grelha: «VIII, 98» que não se parte",
+     "old": "VIII, 98",
+     "new": "VIII, 98",
+     "occurrences": 2
+    },
+    {
+     "location": "tarefas/m3-u2/grelha: «I, 106» que não se parte",
+     "old": "I, 106",
+     "new": "I, 106",
+     "occurrences": 9
+    },
+    {
+     "location": "tarefas/m3-u2/grelha: «IX, 92» que não se parte",
+     "old": "IX, 92",
+     "new": "IX, 92",
+     "occurrences": 3
+    },
+    {
+     "location": "tarefas/m3-u2/grelha: «1 a 2» que não se parte",
+     "old": "1 a 2",
+     "new": "1 a 2",
+     "occurrences": 2
+    },
+    {
+     "location": "tarefas/m3-u2/grelha: «1 a 3» que não se parte",
+     "old": "1 a 3",
+     "new": "1 a 3",
+     "occurrences": 2
+    },
+    {
+     "location": "tarefas/m3-u2/grelha: «1 a 5» que não se parte",
+     "old": "1 a 5",
+     "new": "1 a 5",
+     "occurrences": 1
+    }
+   ]
+  },
+  "tarefas/m3-u2/index.html": {
+   "base_sha256_lf": "e33557753f129c055d833c332d284e4bf1a97aebbfea11510ad91964218a35fe",
+   "after_sha256_lf": "d235c76bedeb0c19b59e9080e3c690f9cf2377a18e181f31ab2a8ae1f1acee96",
+   "edits": [
+    {
+     "location": "tarefas/m3-u2: «200 a 250 palavras» que não se parte",
+     "old": "200 a 250 palavras",
+     "new": "200 a 250 palavras",
+     "occurrences": 2
+    },
+    {
+     "location": "tarefas/m3-u2: «VIII, 96 a 99» que não se parte",
+     "old": "VIII, 96 a 99",
+     "new": "VIII, 96 a 99",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m3-u2: «VIII, 98 e 99» que não se parte",
+     "old": "VIII, 98 e 99",
+     "new": "VIII, 98 e 99",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m3-u2: «IV, 95 a 104» que não se parte",
+     "old": "IV, 95 a 104",
+     "new": "IV, 95 a 104",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m3-u2: «IV, 94 e 95» que não se parte",
+     "old": "IV, 94 e 95",
+     "new": "IV, 94 e 95",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m3-u2: «90 minutos» que não se parte",
+     "old": "90 minutos",
+     "new": "90 minutos",
+     "occurrences": 2
+    },
+    {
+     "location": "tarefas/m3-u2: «10 minutos» que não se parte",
+     "old": "10 minutos",
+     "new": "10 minutos",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m3-u2: «60 minutos» que não se parte",
+     "old": "60 minutos",
+     "new": "60 minutos",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m3-u2: «15 minutos» que não se parte",
+     "old": "15 minutos",
+     "new": "15 minutos",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m3-u2: «5 minutos» que não se parte (com o contexto « 5 minutos»)",
+     "old": " 5 minutos",
+     "new": " 5 minutos",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m3-u2: «90 a 140» que não se parte",
+     "old": "90 a 140",
+     "new": "90 a 140",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m3-u2: «I, 4 e 5» que não se parte",
+     "old": "I, 4 e 5",
+     "new": "I, 4 e 5",
+     "occurrences": 2
+    },
+    {
+     "location": "tarefas/m3-u2: «VIII, 96» que não se parte (com o contexto «VIII, 96)»)",
+     "old": "VIII, 96)",
+     "new": "VIII, 96)",
+     "occurrences": 2
+    },
+    {
+     "location": "tarefas/m3-u2: «VIII, 98» que não se parte (com o contexto « VIII, 98»)",
+     "old": " VIII, 98",
+     "new": " VIII, 98",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m3-u2: «VIII, 97» que não se parte",
+     "old": "VIII, 97",
+     "new": "VIII, 97",
+     "occurrences": 2
+    },
+    {
+     "location": "tarefas/m3-u2: «verso 12» que não se parte",
+     "old": "verso 12",
+     "new": "verso 12",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m3-u2: «10 min» que não se parte (com o contexto «10 min »)",
+     "old": "10 min ",
+     "new": "10 min ",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m3-u2: «90 min» que não se parte (com o contexto «90 min<»)",
+     "old": "90 min<",
+     "new": "90 min<",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m3-u2: «X, 145» que não se parte",
+     "old": "X, 145",
+     "new": "X, 145",
+     "occurrences": 3
+    },
+    {
+     "location": "tarefas/m3-u2: «IV, 94» que não se parte (com o contexto « IV, 94»)",
+     "old": " IV, 94",
+     "new": " IV, 94",
+     "occurrences": 1
+    }
+   ]
+  },
+  "docs/pedagogia/tarefas-escolha/m3-u1.json": {
+   "base_sha256_lf": "d3538e8db27e4e1ad1a08a6ccb98fe3d23e852caac69db0e325b7ab251d205e5",
+   "after_sha256_lf": "1ade9b31d56f932aa2e0ff1bd74a88743a7a0507d4230126836af8cdd8225cbb",
+   "edits": [
+    {
+     "location": "Dados da tarefa: «nao_partir», os números do molde com espaço que não quebra",
+     "old": "\n \"unidade\": 1,\n",
+     "new": "\n \"unidade\": 1,\n \"nao_partir\": true,\n",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados tarefas-escolha/m3-u1.json: «200 a 240 palavras» que não se parte",
+     "old": "200 a 240 palavras",
+     "new": "200 a 240 palavras",
+     "occurrences": 3
+    },
+    {
+     "location": "Dados tarefas-escolha/m3-u1.json: «IV, 94 e 95» que não se parte",
+     "old": "IV, 94 e 95",
+     "new": "IV, 94 e 95",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados tarefas-escolha/m3-u1.json: «D. Manuel I» que não se parte",
+     "old": "D. Manuel I",
+     "new": "D. Manuel I",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados tarefas-escolha/m3-u1.json: «90 minutos» que não se parte",
+     "old": "90 minutos",
+     "new": "90 minutos",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados tarefas-escolha/m3-u1.json: «10 minutos» que não se parte",
+     "old": "10 minutos",
+     "new": "10 minutos",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados tarefas-escolha/m3-u1.json: «60 minutos» que não se parte",
+     "old": "60 minutos",
+     "new": "60 minutos",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados tarefas-escolha/m3-u1.json: «15 minutos» que não se parte",
+     "old": "15 minutos",
+     "new": "15 minutos",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados tarefas-escolha/m3-u1.json: «século XVI» que não se parte",
+     "old": "século XVI",
+     "new": "século XVI",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados tarefas-escolha/m3-u1.json: «5 minutos» que não se parte (com o contexto « 5 minutos»)",
+     "old": " 5 minutos",
+     "new": " 5 minutos",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados tarefas-escolha/m3-u1.json: «80 a 120» que não se parte",
+     "old": "80 a 120",
+     "new": "80 a 120",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados tarefas-escolha/m3-u1.json: «I, 1 a 3» que não se parte",
+     "old": "I, 1 a 3",
+     "new": "I, 1 a 3",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados tarefas-escolha/m3-u1.json: «verso 3» que não se parte",
+     "old": "verso 3",
+     "new": "verso 3",
+     "occurrences": 1
+    }
+   ]
+  },
+  "docs/pedagogia/tarefas-escolha/m3-u2.json": {
+   "base_sha256_lf": "d06f6b62f68df468a43fd30c2de360cfd435f666d14a088b7b760378e9ae4eeb",
+   "after_sha256_lf": "432bcfeadf7fb4c40524ef17558d8b7a00fcd2437043d1bfe0983b255e0277cb",
+   "edits": [
+    {
+     "location": "Dados da tarefa: «nao_partir», os números do molde com espaço que não quebra",
+     "old": "\n \"unidade\": 2,\n",
+     "new": "\n \"unidade\": 2,\n \"nao_partir\": true,\n",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados tarefas-escolha/m3-u2.json: «200 a 250 palavras» que não se parte",
+     "old": "200 a 250 palavras",
+     "new": "200 a 250 palavras",
+     "occurrences": 2
+    },
+    {
+     "location": "Dados tarefas-escolha/m3-u2.json: «VIII, 96 a 99» que não se parte",
+     "old": "VIII, 96 a 99",
+     "new": "VIII, 96 a 99",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados tarefas-escolha/m3-u2.json: «VIII, 98 e 99» que não se parte",
+     "old": "VIII, 98 e 99",
+     "new": "VIII, 98 e 99",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados tarefas-escolha/m3-u2.json: «IV, 95 a 104» que não se parte",
+     "old": "IV, 95 a 104",
+     "new": "IV, 95 a 104",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados tarefas-escolha/m3-u2.json: «IV, 94 e 95» que não se parte",
+     "old": "IV, 94 e 95",
+     "new": "IV, 94 e 95",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados tarefas-escolha/m3-u2.json: «90 minutos» que não se parte",
+     "old": "90 minutos",
+     "new": "90 minutos",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados tarefas-escolha/m3-u2.json: «10 minutos» que não se parte",
+     "old": "10 minutos",
+     "new": "10 minutos",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados tarefas-escolha/m3-u2.json: «60 minutos» que não se parte",
+     "old": "60 minutos",
+     "new": "60 minutos",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados tarefas-escolha/m3-u2.json: «15 minutos» que não se parte",
+     "old": "15 minutos",
+     "new": "15 minutos",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados tarefas-escolha/m3-u2.json: «5 minutos» que não se parte (com o contexto « 5 minutos»)",
+     "old": " 5 minutos",
+     "new": " 5 minutos",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados tarefas-escolha/m3-u2.json: «90 a 140» que não se parte",
+     "old": "90 a 140",
+     "new": "90 a 140",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados tarefas-escolha/m3-u2.json: «I, 4 e 5» que não se parte",
+     "old": "I, 4 e 5",
+     "new": "I, 4 e 5",
+     "occurrences": 2
+    },
+    {
+     "location": "Dados tarefas-escolha/m3-u2.json: «VIII, 96» que não se parte (com o contexto «VIII, 96)»)",
+     "old": "VIII, 96)",
+     "new": "VIII, 96)",
+     "occurrences": 2
+    },
+    {
+     "location": "Dados tarefas-escolha/m3-u2.json: «VIII, 98» que não se parte (com o contexto « VIII, 98»)",
+     "old": " VIII, 98",
+     "new": " VIII, 98",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados tarefas-escolha/m3-u2.json: «VIII, 97» que não se parte",
+     "old": "VIII, 97",
+     "new": "VIII, 97",
+     "occurrences": 2
+    },
+    {
+     "location": "Dados tarefas-escolha/m3-u2.json: «verso 12» que não se parte",
+     "old": "verso 12",
+     "new": "verso 12",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados tarefas-escolha/m3-u2.json: «X, 145» que não se parte",
+     "old": "X, 145",
+     "new": "X, 145",
+     "occurrences": 3
+    },
+    {
+     "location": "Dados tarefas-escolha/m3-u2.json: «IV, 94» que não se parte (com o contexto « IV, 94»)",
+     "old": " IV, 94",
+     "new": " IV, 94",
+     "occurrences": 1
+    }
+   ]
+  },
+  "docs/pedagogia/aquecimentos/m3-u1.json": {
+   "base_sha256_lf": "3201c41771a927be8b30547818d501e9652afda82dc5916498d9ccc7944839c2",
+   "after_sha256_lf": "d96e3b9fe5f8267e5ae6daae561b2c539f414028c154e08cf33cd94b2a9ab434",
+   "edits": [
+    {
+     "location": "Dados aquecimentos/m3-u1.json: «200 a 240 palavras» que não se parte",
+     "old": "200 a 240 palavras",
+     "new": "200 a 240 palavras",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados aquecimentos/m3-u1.json: «200 a 240» que não se parte (com o contexto «200 a 240\"»)",
+     "old": "200 a 240\"",
+     "new": "200 a 240\"",
+     "occurrences": 1
+    }
+   ]
+  },
+  "docs/pedagogia/aquecimentos/m3-u2.json": {
+   "base_sha256_lf": "aa864c2faf22057e1b91e6c9748e179f9d672cfaff8b0a4f07f71ed3c1414b58",
+   "after_sha256_lf": "e78101bbe742ee41f63a7eb1642ef2212bde75143f25150af82c79d6aab40651",
+   "edits": [
+    {
+     "location": "Dados aquecimentos/m3-u2.json: «200 a 250 palavras» que não se parte",
+     "old": "200 a 250 palavras",
+     "new": "200 a 250 palavras",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados aquecimentos/m3-u2.json: «estância I, 106» que não se parte",
+     "old": "estância I, 106",
+     "new": "estância I, 106",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados aquecimentos/m3-u2.json: «I, 4 e 5» que não se parte (com o contexto «I, 4 e 5)»)",
+     "old": "I, 4 e 5)",
+     "new": "I, 4 e 5)",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados aquecimentos/m3-u2.json: «VIII, 99» que não se parte",
+     "old": "VIII, 99",
+     "new": "VIII, 99",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados aquecimentos/m3-u2.json: «canto I» que não se parte",
+     "old": "canto I",
+     "new": "canto I",
+     "occurrences": 4
+    },
+    {
+     "location": "Dados aquecimentos/m3-u2.json: «X, 145» que não se parte (com o contexto «X, 145)»)",
+     "old": "X, 145)",
+     "new": "X, 145)",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados aquecimentos/m3-u2.json: «I, 106» que não se parte (com o contexto «m I, 106»)",
+     "old": "m I, 106",
+     "new": "m I, 106",
+     "occurrences": 2
+    },
+    {
+     "location": "Dados aquecimentos/m3-u2.json: «I, 106» que não se parte (com o contexto «o I, 106»)",
+     "old": "o I, 106",
+     "new": "o I, 106",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados aquecimentos/m3-u2.json: «I, 106» que não se parte (com o contexto « \"I, 106»)",
+     "old": " \"I, 106",
+     "new": " \"I, 106",
+     "occurrences": 2
+    },
+    {
+     "location": "Dados aquecimentos/m3-u2.json: «I, 106» que não se parte (com o contexto «e I, 106»)",
+     "old": "e I, 106",
+     "new": "e I, 106",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados aquecimentos/m3-u2.json: «I, 106» que não se parte (com o contexto «, I, 106»)",
+     "old": ", I, 106",
+     "new": ", I, 106",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados aquecimentos/m3-u2.json: «I, 106» que não se parte (com o contexto « (I, 106»)",
+     "old": " (I, 106",
+     "new": " (I, 106",
+     "occurrences": 1
+    }
+   ]
+  },
+  "docs/pedagogia/grelhas-tarefas-20261027.json": {
+   "base_sha256_lf": "c478dea4fff6971db353872112a9ca3cdb3dea42e45cb23144d01640ea48ac5e",
+   "after_sha256_lf": "b67c29759efd59e0c1edb9c22501afc2fd5810ddc9957c0118fe7dad4b395092",
+   "edits": [
+    {
+     "location": "Dados das grelhas, m3-u1: «nao_partir», os intervalos dos níveis com espaço que não quebra",
+     "old": "\n   \"modulo\": \"M3\",\n   \"unidade\": 1,\n",
+     "new": "\n   \"modulo\": \"M3\",\n   \"unidade\": 1,\n   \"nao_partir\": true,\n",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados das grelhas, m3-u2: «nao_partir», os intervalos dos níveis com espaço que não quebra",
+     "old": "\n   \"modulo\": \"M3\",\n   \"unidade\": 2,\n",
+     "new": "\n   \"modulo\": \"M3\",\n   \"unidade\": 2,\n   \"nao_partir\": true,\n",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados pedagogia/grelhas-tarefas-20261027.json, m3-u1: «200 a 240 palavras» que não se parte (com o contexto «    {\n     \"nome\": \"Respostas articuladas, extensão e esc…»)",
+     "old": "    {\n     \"nome\": \"Respostas articuladas, extensão e escrita revista\",\n     \"max\": 3,\n     \"niveis\": {\n      \"0\": [\n       \"Respostas soltas, ou muito fora das 200 a 240 palavras.\",\n       \"Três listas de palavras sem frases completas.\"\n      ],\n      \"parcial\": [\n       \"As respostas ligam-se, mas falha uma ou mais destas: a revisão (erros que uma releitura apanhava), a extensão, o tema no topo ou as duas linhas finais com um verso.\",\n       \"Fecho: Aprendi muitas coisas sobre Camões.\"",
+     "new": "    {\n     \"nome\": \"Respostas articuladas, extensão e escrita revista\",\n     \"max\": 3,\n     \"niveis\": {\n      \"0\": [\n       \"Respostas soltas, ou muito fora das 200 a 240 palavras.\",\n       \"Três listas de palavras sem frases completas.\"\n      ],\n      \"parcial\": [\n       \"As respostas ligam-se, mas falha uma ou mais destas: a revisão (erros que uma releitura apanhava), a extensão, o tema no topo ou as duas linhas finais com um verso.\",\n       \"Fecho: Aprendi muitas coisas sobre Camões.\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados pedagogia/grelhas-tarefas-20261027.json, m3-u1: «I, 106» que não se parte (com o contexto «I, 106), p»)",
+     "old": "I, 106), p",
+     "new": "I, 106), p",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados pedagogia/grelhas-tarefas-20261027.json, m3-u2: «200 a 250 palavras» que não se parte (com o contexto «200 a 250 palavras.»)",
+     "old": "200 a 250 palavras.",
+     "new": "200 a 250 palavras.",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados pedagogia/grelhas-tarefas-20261027.json, m3-u2: «VIII, 98» que não se parte",
+     "old": "VIII, 98",
+     "new": "VIII, 98",
+     "occurrences": 2
+    },
+    {
+     "location": "Dados pedagogia/grelhas-tarefas-20261027.json, m3-u2: «I, 106» que não se parte (com o contexto «I, 106 e I»)",
+     "old": "I, 106 e I",
+     "new": "I, 106 e I",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados pedagogia/grelhas-tarefas-20261027.json, m3-u2: «I, 106» que não se parte (com o contexto «I, 106 con»)",
+     "old": "I, 106 con",
+     "new": "I, 106 con",
+     "occurrences": 2
+    },
+    {
+     "location": "Dados pedagogia/grelhas-tarefas-20261027.json, m3-u2: «I, 106» que não se parte (com o contexto «I, 106.\"\n »)",
+     "old": "I, 106.\"\n ",
+     "new": "I, 106.\"\n ",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados pedagogia/grelhas-tarefas-20261027.json, m3-u2: «I, 106» que não se parte (com o contexto «I, 106, o »)",
+     "old": "I, 106, o ",
+     "new": "I, 106, o ",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados pedagogia/grelhas-tarefas-20261027.json, m3-u2: «I, 106» que não se parte (com o contexto «I, 106 e m»)",
+     "old": "I, 106 e m",
+     "new": "I, 106 e m",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados pedagogia/grelhas-tarefas-20261027.json, m3-u2: «I, 106» que não se parte (com o contexto «I, 106): a»)",
+     "old": "I, 106): a",
+     "new": "I, 106): a",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados pedagogia/grelhas-tarefas-20261027.json, m3-u2: «I, 106» que não se parte (com o contexto «I, 106) qu»)",
+     "old": "I, 106) qu",
+     "new": "I, 106) qu",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados pedagogia/grelhas-tarefas-20261027.json, m3-u2: «I, 106» que não se parte (com o contexto «I, 106), e»)",
+     "old": "I, 106), e",
+     "new": "I, 106), e",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados pedagogia/grelhas-tarefas-20261027.json, m3-u2: «IX, 92» que não se parte",
+     "old": "IX, 92",
+     "new": "IX, 92",
+     "occurrences": 3
+    }
+   ]
+  },
+  "docs/pedagogia/videos-escolhidos-pt-20261028.json": {
+   "base_sha256_lf": "828f0384064497e3d8ee12658eb7e0ada70f4e32b34e8baea3df55b0ec428d17",
+   "after_sha256_lf": "8a15c2714bc572fca312764bbf7439510a66acac69276604aedfbbadca847a8c",
+   "edits": [
+    {
+     "location": "Dados pedagogia/videos-escolhidos-pt-20261028.json: «2 min» que não se parte",
+     "old": "2 min",
+     "new": "2 min",
+     "occurrences": 2
+    }
+   ]
+  },
+  "m3/painel-m3-f02/index.html": {
+   "base_sha256_lf": "561f5a76d7bb7a7cb15306da2fbf084df4f26e42caf61998e4266ef8cd175eca",
+   "after_sha256_lf": "62eadad5a9fd24b905f4265062c7dda0c55a07f6426018331caeb82eb3eb6428",
+   "edits": [
+    {
+     "location": "m3/painel-m3-f02: o enunciado do cartão 25 igual ao da lição, em a lista do painel",
+     "old": "{\"k\":25,\"t\":\"frase\",\"p\":\"Põe por ordem o verso 6 da primeira estância.\"}",
+     "new": "{\"k\":25,\"t\":\"frase\",\"p\":\"Põe por ordem o verso 6 da primeira estância.\"}",
+     "occurrences": 1
+    },
+    {
+     "location": "m3/painel-m3-f02: o enunciado do cartão 25 igual ao da lição, em o seletor",
+     "old": "<option value=\"25\">Põe por ordem o verso 6 da primeira estância.</option>",
+     "new": "<option value=\"25\">Põe por ordem o verso 6 da primeira estância.</option>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m3/painel-m3-f03/index.html": {
+   "base_sha256_lf": "7e624d1d980e3f254fcddb8b3b88e5f515f6d349ca2b412f3765ada29c9f81f2",
+   "after_sha256_lf": "380c717ce330c38acf47ebf533109cc2f6a8502c44b1e7aa4653398fe52dbbee",
+   "edits": [
+    {
+     "location": "m3/painel-m3-f03: o enunciado do cartão 8 igual ao da lição, em a lista do painel",
+     "old": "{\"k\":8,\"t\":\"completar\",\"p\":\"Como começa o discurso do Velho, em IV, 95?\"}",
+     "new": "{\"k\":8,\"t\":\"completar\",\"p\":\"Como começa o discurso do Velho, em IV, 95?\"}",
+     "occurrences": 1
+    },
+    {
+     "location": "m3/painel-m3-f03: o enunciado do cartão 8 igual ao da lição, em o seletor",
+     "old": "<option value=\"8\">Como começa o discurso do Velho, em IV, 95?</option>",
+     "new": "<option value=\"8\">Como começa o discurso do Velho, em IV, 95?</option>",
+     "occurrences": 1
+    },
+    {
+     "location": "m3/painel-m3-f03: o enunciado do cartão 12 igual ao da lição, em a lista do painel",
+     "old": "{\"k\":12,\"t\":\"vf\",\"p\":\"Em IV, 95, o Velho enumera «mortes», «perigos», «tormentas» e «crueldades» como obra da Fama.\"}",
+     "new": "{\"k\":12,\"t\":\"vf\",\"p\":\"Em IV, 95, o Velho enumera «mortes», «perigos», «tormentas» e «crueldades» como obra da Fama.\"}",
+     "occurrences": 1
+    },
+    {
+     "location": "m3/painel-m3-f03: o enunciado do cartão 12 igual ao da lição, em o seletor",
+     "old": "<option value=\"12\">Em IV, 95, o Velho enumera «mortes», «perigos», «tormentas» e «cruelda</option>",
+     "new": "<option value=\"12\">Em IV, 95, o Velho enumera «mortes», «perigos», «tormentas» e «cruelda</option>",
+     "occurrences": 1
+    },
+    {
+     "location": "m3/painel-m3-f03: o enunciado do cartão 23 igual ao da lição, em a lista do painel",
+     "old": "{\"k\":23,\"t\":\"frase\",\"p\":\"Põe por ordem o verso 2 de IV, 94.\"}",
+     "new": "{\"k\":23,\"t\":\"frase\",\"p\":\"Põe por ordem o verso 2 de IV, 94.\"}",
+     "occurrences": 1
+    },
+    {
+     "location": "m3/painel-m3-f03: o enunciado do cartão 23 igual ao da lição, em o seletor",
+     "old": "<option value=\"23\">Põe por ordem o verso 2 de IV, 94.</option>",
+     "new": "<option value=\"23\">Põe por ordem o verso 2 de IV, 94.</option>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m3/painel-m3-f10/index.html": {
+   "base_sha256_lf": "3a0f56131508deea05bf4add5df9c4263995f2ba284ed84402b8b104473145c5",
+   "after_sha256_lf": "97da0652ac4293beea011334be8f6ecfd19293fd2096c9f814277a0aa4abc378",
+   "edits": [
+    {
+     "location": "m3/painel-m3-f10: o enunciado do cartão 5 igual ao da lição, em a lista do painel",
+     "old": "{\"k\":5,\"t\":\"completar\",\"p\":\"Que som e que estilo pede o Poeta em I, 4?\"}",
+     "new": "{\"k\":5,\"t\":\"completar\",\"p\":\"Que som e que estilo pede o Poeta em I, 4?\"}",
+     "occurrences": 1
+    },
+    {
+     "location": "m3/painel-m3-f10: o enunciado do cartão 5 igual ao da lição, em o seletor",
+     "old": "<option value=\"5\">Que som e que estilo pede o Poeta em I, 4?</option>",
+     "new": "<option value=\"5\">Que som e que estilo pede o Poeta em I, 4?</option>",
+     "occurrences": 1
+    },
+    {
+     "location": "m3/painel-m3-f10: o enunciado do cartão 9 igual ao da lição, em a lista do painel",
+     "old": "{\"k\":9,\"t\":\"vf\",\"p\":\"Em I, 5, o Poeta quer que o canto «se espalhe e se cante no universo».\"}",
+     "new": "{\"k\":9,\"t\":\"vf\",\"p\":\"Em I, 5, o Poeta quer que o canto «se espalhe e se cante no universo».\"}",
+     "occurrences": 1
+    },
+    {
+     "location": "m3/painel-m3-f10: o enunciado do cartão 9 igual ao da lição, em o seletor",
+     "old": "<option value=\"9\">Em I, 5, o Poeta quer que o canto «se espalhe e se cante no universo».</option>",
+     "new": "<option value=\"9\">Em I, 5, o Poeta quer que o canto «se espalhe e se cante no universo».</option>",
+     "occurrences": 1
+    },
+    {
+     "location": "m3/painel-m3-f10: o enunciado do cartão 11 igual ao da lição, em a lista do painel",
+     "old": "{\"k\":11,\"t\":\"versos\",\"p\":\"Põe os primeiros versos de X, 145 pela ordem do poema.\"}",
+     "new": "{\"k\":11,\"t\":\"versos\",\"p\":\"Põe os primeiros versos de X, 145 pela ordem do poema.\"}",
+     "occurrences": 1
+    },
+    {
+     "location": "m3/painel-m3-f10: o enunciado do cartão 11 igual ao da lição, em o seletor",
+     "old": "<option value=\"11\">Põe os primeiros versos de X, 145 pela ordem do poema.</option>",
+     "new": "<option value=\"11\">Põe os primeiros versos de X, 145 pela ordem do poema.</option>",
+     "occurrences": 1
+    },
+    {
+     "location": "m3/painel-m3-f10: o enunciado do cartão 17 igual ao da lição, em a lista do painel",
+     "old": "{\"k\":17,\"t\":\"completar\",\"p\":\"O que é a «fúria» que o Poeta pede em I, 5, segundo o glossário?\"}",
+     "new": "{\"k\":17,\"t\":\"completar\",\"p\":\"O que é a «fúria» que o Poeta pede em I, 5, segundo o glossário?\"}",
+     "occurrences": 1
+    },
+    {
+     "location": "m3/painel-m3-f10: o enunciado do cartão 17 igual ao da lição, em o seletor",
+     "old": "<option value=\"17\">O que é a «fúria» que o Poeta pede em I, 5, segundo o glossário?</option>",
+     "new": "<option value=\"17\">O que é a «fúria» que o Poeta pede em I, 5, segundo o glossário?</option>",
+     "occurrences": 1
+    },
+    {
+     "location": "m3/painel-m3-f10: o enunciado do cartão 20 igual ao da lição, em a lista do painel",
+     "old": "{\"k\":20,\"t\":\"vf\",\"p\":\"No ensaio, cada citação de _Os Lusíadas_ leva o canto e a estância, como «X, 145».\"}",
+     "new": "{\"k\":20,\"t\":\"vf\",\"p\":\"No ensaio, cada citação de _Os Lusíadas_ leva o canto e a estância, como «X, 145».\"}",
+     "occurrences": 1
+    },
+    {
+     "location": "m3/painel-m3-f10: o enunciado do cartão 20 igual ao da lição, em o seletor",
+     "old": "<option value=\"20\">No ensaio, cada citação de Os Lusíadas leva o canto e a estância, como «X, 145».</option>",
+     "new": "<option value=\"20\">No ensaio, cada citação de Os Lusíadas leva o canto e a estância, como «X, 145».</option>",
+     "occurrences": 1
+    },
+    {
+     "location": "m3/painel-m3-f10: o enunciado do cartão 23 igual ao da lição, em a lista do painel",
+     "old": "{\"k\":23,\"t\":\"frase\",\"p\":\"Põe por ordem o verso 7 de I, 4.\"}",
+     "new": "{\"k\":23,\"t\":\"frase\",\"p\":\"Põe por ordem o verso 7 de I, 4.\"}",
+     "occurrences": 1
+    },
+    {
+     "location": "m3/painel-m3-f10: o enunciado do cartão 23 igual ao da lição, em o seletor",
+     "old": "<option value=\"23\">Põe por ordem o verso 7 de I, 4.</option>",
+     "new": "<option value=\"23\">Põe por ordem o verso 7 de I, 4.</option>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m3/painel-m3-f11/index.html": {
+   "base_sha256_lf": "eab2b65650e729ecc433b1b3e16f46a6e304ba3f7f2f8ee4c8ed5e247401f4cd",
+   "after_sha256_lf": "e3b1707d52f1c71f4c296454a22c8e3158c65179d477f310e1ad1ec55637c93e",
+   "edits": [
+    {
+     "location": "m3/painel-m3-f11: o enunciado do cartão 3 igual ao da lição, em a lista do painel",
+     "old": "{\"k\":3,\"t\":\"escolha\",\"p\":\"Quem criou o 5 de maio como Dia da Língua Portuguesa e da Cultura, e quando?\"}",
+     "new": "{\"k\":3,\"t\":\"escolha\",\"p\":\"Quem criou o 5 de maio como Dia da Língua Portuguesa e da Cultura, e quando?\"}",
+     "occurrences": 1
+    },
+    {
+     "location": "m3/painel-m3-f11: o enunciado do cartão 3 igual ao da lição, em o seletor",
+     "old": "<option value=\"3\">Quem criou o 5 de maio como Dia da Língua Portuguesa e da Cultura, e quando?</option>",
+     "new": "<option value=\"3\">Quem criou o 5 de maio como Dia da Língua Portuguesa e da Cultura, e quando?</option>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m3/painel-m3-f13/index.html": {
+   "base_sha256_lf": "cd14b837bb01c12eadac65e61e1e04dea55690332d248b42266e5ccb783f9d03",
+   "after_sha256_lf": "c730bc4cc1661b253bccea5b09d4ce3fd4342a6d356068a1e0b2e911a3ad04dc",
+   "edits": [
+    {
+     "location": "m3/painel-m3-f13: o enunciado do cartão 3 igual ao da lição, em a lista do painel",
+     "old": "{\"k\":3,\"t\":\"versos\",\"p\":\"Põe os primeiros versos de I, 106 pela ordem do poema.\"}",
+     "new": "{\"k\":3,\"t\":\"versos\",\"p\":\"Põe os primeiros versos de I, 106 pela ordem do poema.\"}",
+     "occurrences": 1
+    },
+    {
+     "location": "m3/painel-m3-f13: o enunciado do cartão 3 igual ao da lição, em o seletor",
+     "old": "<option value=\"3\">Põe os primeiros versos de I, 106 pela ordem do poema.</option>",
+     "new": "<option value=\"3\">Põe os primeiros versos de I, 106 pela ordem do poema.</option>",
+     "occurrences": 1
+    },
+    {
+     "location": "m3/painel-m3-f13: o enunciado do cartão 13 igual ao da lição, em a lista do painel",
+     "old": "{\"k\":13,\"t\":\"escolha\",\"p\":\"Polidoro, a filha de Acriso, Tarpeia: o que mostram estes exemplos antigos de VIII, 97?\"}",
+     "new": "{\"k\":13,\"t\":\"escolha\",\"p\":\"Polidoro, a filha de Acriso, Tarpeia: o que mostram estes exemplos antigos de VIII, 97?\"}",
+     "occurrences": 1
+    },
+    {
+     "location": "m3/painel-m3-f13: o enunciado do cartão 13 igual ao da lição, em o seletor",
+     "old": "<option value=\"13\">Polidoro, a filha de Acriso, Tarpeia: o que mostram estes exemplos antigos de VIII, 97?</option>",
+     "new": "<option value=\"13\">Polidoro, a filha de Acriso, Tarpeia: o que mostram estes exemplos antigos de VIII, 97?</option>",
+     "occurrences": 1
+    },
+    {
+     "location": "m3/painel-m3-f13: o enunciado do cartão 15 igual ao da lição, em a lista do painel",
+     "old": "{\"k\":15,\"t\":\"completar\",\"p\":\"O que diz o Poeta do dinheiro nos dois primeiros versos de VIII, 98?\"}",
+     "new": "{\"k\":15,\"t\":\"completar\",\"p\":\"O que diz o Poeta do dinheiro nos dois primeiros versos de VIII, 98?\"}",
+     "occurrences": 1
+    },
+    {
+     "location": "m3/painel-m3-f13: o enunciado do cartão 15 igual ao da lição, em o seletor",
+     "old": "<option value=\"15\">O que diz o Poeta do dinheiro nos dois primeiros versos de VIII, 98?</option>",
+     "new": "<option value=\"15\">O que diz o Poeta do dinheiro nos dois primeiros versos de VIII, 98?</option>",
+     "occurrences": 1
+    },
+    {
+     "location": "m3/painel-m3-f13: o enunciado do cartão 16 igual ao da lição, em a lista do painel",
+     "old": "{\"k\":16,\"t\":\"versos\",\"p\":\"Põe os últimos versos de VIII, 98 pela ordem do poema.\"}",
+     "new": "{\"k\":16,\"t\":\"versos\",\"p\":\"Põe os últimos versos de VIII, 98 pela ordem do poema.\"}",
+     "occurrences": 1
+    },
+    {
+     "location": "m3/painel-m3-f13: o enunciado do cartão 16 igual ao da lição, em o seletor",
+     "old": "<option value=\"16\">Põe os últimos versos de VIII, 98 pela ordem do poema.</option>",
+     "new": "<option value=\"16\">Põe os últimos versos de VIII, 98 pela ordem do poema.</option>",
+     "occurrences": 1
+    },
+    {
+     "location": "m3/painel-m3-f13: o enunciado do cartão 19 igual ao da lição, em a lista do painel",
+     "old": "{\"k\":19,\"t\":\"vf\",\"p\":\"Segundo a estância 99, o dinheiro corrompe às claras, sem se disfarçar.\"}",
+     "new": "{\"k\":19,\"t\":\"vf\",\"p\":\"Segundo a estância 99, o dinheiro corrompe às claras, sem se disfarçar.\"}",
+     "occurrences": 1
+    },
+    {
+     "location": "m3/painel-m3-f13: o enunciado do cartão 19 igual ao da lição, em o seletor",
+     "old": "<option value=\"19\">Segundo a estância 99, o dinheiro corrompe às claras, sem se disfarçar</option>",
+     "new": "<option value=\"19\">Segundo a estância 99, o dinheiro corrompe às claras, sem se disfarçar</option>",
+     "occurrences": 1
+    },
+    {
+     "location": "m3/painel-m3-f13: o enunciado do cartão 25 igual ao da lição, em a lista do painel",
+     "old": "{\"k\":25,\"t\":\"frase\",\"p\":\"Põe por ordem o último verso de I, 106.\"}",
+     "new": "{\"k\":25,\"t\":\"frase\",\"p\":\"Põe por ordem o último verso de I, 106.\"}",
+     "occurrences": 1
+    },
+    {
+     "location": "m3/painel-m3-f13: o enunciado do cartão 25 igual ao da lição, em o seletor",
+     "old": "<option value=\"25\">Põe por ordem o último verso de I, 106.</option>",
+     "new": "<option value=\"25\">Põe por ordem o último verso de I, 106.</option>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m3/painel-m3-f15/index.html": {
+   "base_sha256_lf": "b924018f106246cdf63369dc6560b7ffe27ec71bfa4de986663bfa9a04fff3df",
+   "after_sha256_lf": "6b58e31b2de0e97bcd2fe1d90063de3ab375c9727cd59a63f63874b4f0400301",
+   "edits": [
+    {
+     "location": "m3/painel-m3-f15: o enunciado do cartão 9 igual ao da lição, em a lista do painel",
+     "old": "{\"k\":9,\"t\":\"escolha\",\"p\":\"«O favor com que mais se acende o engenho» (X, 145): que palavra de Camões quer dizer «talento»?\"}",
+     "new": "{\"k\":9,\"t\":\"escolha\",\"p\":\"«O favor com que mais se acende o engenho» (X, 145): que palavra de Camões quer dizer «talento»?\"}",
+     "occurrences": 1
+    },
+    {
+     "location": "m3/painel-m3-f15: o enunciado do cartão 9 igual ao da lição, em o seletor",
+     "old": "<option value=\"9\">«O favor com que mais se acende o engenho» (X, 145): que palavra de Camões quer dizer «talento»?</option>",
+     "new": "<option value=\"9\">«O favor com que mais se acende o engenho» (X, 145): que palavra de Camões quer dizer «talento»?</option>",
+     "occurrences": 1
+    },
+    {
+     "location": "m3/painel-m3-f15: o enunciado do cartão 15 igual ao da lição, em a lista do painel",
+     "old": "{\"k\":15,\"t\":\"vf\",\"p\":\"Na estância 98 de VIII, quatro versos começam por «Este»: é a anáfora como figura de estilo.\"}",
+     "new": "{\"k\":15,\"t\":\"vf\",\"p\":\"Na estância 98 de VIII, quatro versos começam por «Este»: é a anáfora como figura de estilo.\"}",
+     "occurrences": 1
+    },
+    {
+     "location": "m3/painel-m3-f15: o enunciado do cartão 15 igual ao da lição, em o seletor",
+     "old": "<option value=\"15\">Na estância 98 de VIII, quatro versos começam por «Este»: é a anáfora como figura de estilo.</option>",
+     "new": "<option value=\"15\">Na estância 98 de VIII, quatro versos começam por «Este»: é a anáfora como figura de estilo.</option>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m3/painel-m3-f17/index.html": {
+   "base_sha256_lf": "453b0ae3d7b3dc185384173b448040bcf46623b7b85c7a90f42e0a1ef81b5ec7",
+   "after_sha256_lf": "f48d19cc0b2030c6af04b7f37a9963918a44b088aa3477ee9a6ba142e4d24773",
+   "edits": [
+    {
+     "location": "m3/painel-m3-f17: o enunciado do cartão 16 igual ao da lição, em a lista do painel",
+     "old": "{\"k\":16,\"t\":\"vf\",\"p\":\"O comentário sobre Camões tem 300 a 400 palavras.\"}",
+     "new": "{\"k\":16,\"t\":\"vf\",\"p\":\"O comentário sobre Camões tem 300 a 400 palavras.\"}",
+     "occurrences": 1
+    },
+    {
+     "location": "m3/painel-m3-f17: o enunciado do cartão 16 igual ao da lição, em o seletor",
+     "old": "<option value=\"16\">O comentário sobre Camões tem 300 a 400 palavras.</option>",
+     "new": "<option value=\"16\">O comentário sobre Camões tem 300 a 400 palavras.</option>",
+     "occurrences": 1
+    }
+   ]
+  }
+ }
+}
