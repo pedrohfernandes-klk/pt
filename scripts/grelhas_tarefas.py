@@ -20,6 +20,8 @@ página do aluno abre os elementos de cada tema em lista («Tema A: x; y; z. Exp
 fica com o texto corrido (está num <small> dentro de uma célula). As grelhas sem a chave saem iguais, byte a byte.
 08/11/2026: decisão 152, M3: com «nao_partir» numa grelha, o intervalo do nível parcial («1 a 3») leva espaços que não quebram
 (U+00A0), para não se partir entre linhas. As grelhas sem a chave saem iguais, byte a byte.
+08/11/2026: decisão 152, M5: com «max_em_listas», o fecho de cada tema pode ser «Explicação: …» ou «Conclusão: …» (o tema B da
+M5-U2 fecha com a conclusão do parágrafo de opinião). As grelhas que já tinham a chave saem iguais, byte a byte.
 Idempotente. Uso: python3 scripts/grelhas_tarefas.py [--saida PASTA]
 """
 from html import escape as e
@@ -105,7 +107,8 @@ def casca(titulo, corpo):
 def em_listas(desc):
     """06/11/2026: decisão 152. «Antes. Tema A: x; y; z. Explicação: …. Tema B: u; v. Explicação: ….» passa a um parágrafo, e,
     por tema, o título, a lista dos elementos (cada um com o «;» ou o «.» que tinha) e a explicação. Só o texto que lá está."""
-    m = re.fullmatch(r'(.*? )(Tema A): (.+?)\. (Explicação: .+?\.) (Tema B): (.+?)\. (Explicação: .+?\.)', desc)
+    # 08/11/2026: decisão 152, M5. O fecho de cada tema pode ser a explicação ou a conclusão (o tema B da M5-U2).
+    m = re.fullmatch(r'(.*? )(Tema A): (.+?)\. ((?:Explicação|Conclusão): .+?\.) (Tema B): (.+?)\. ((?:Explicação|Conclusão): .+?\.)', desc)
     assert m, desc
     html = f'<p>{ital(m[1])}</p>'
     for titulo, itens, explicacao in ((m[2], m[3], m[4]), (m[5], m[6], m[7])):

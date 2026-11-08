@@ -19,6 +19,8 @@ páginas sem estas chaves saem iguais, byte a byte.
 e os role) e o parágrafo seguinte; a página carrega então assets/pt-lessons/apoios-tabelas.css antes da camada de aparência.
 Com «nao_partir», os números do molde («90 minutos» na descrição, «10 min» do aquecimento e «90 min» do enunciado) levam
 espaço que não quebra (U+00A0). As páginas sem estas chaves saem iguais, byte a byte.
+08/11/2026: decisão 152, M5: o texto de um tema pode acabar numa lista (fecha o parágrafo, abre a lista e termina em «<p>»); o
+parágrafo vazio que sobra no fim («<p></p>») sai. As páginas sem listas no fim de um tema saem iguais, byte a byte.
 Uso: python3 scripts/tarefas_escolha.py [--saida PASTA] [slug ...]
 """
 import json
@@ -109,7 +111,9 @@ def header(slug, unit, title, lead, core, themes, aquecer=None, sep=' '):
     # 29/10/2026: com o aquecimento em cartões, o enunciado leva também a ligação em destaque, logo a seguir ao lead.
     link = f'<p class="task-aquecer"><a href="{aquecer["cartoes"]}">{aquecer["ligacao_enunciado"]}</a></p>\n' if aquecer else ''
     # 28/10/2026: «Tema A» / «Tema B» no nome acessível; o fecho manda escrever no topo o tema escolhido.
-    th = ''.join(f'<article class="task-theme" data-task-theme="{k}" aria-labelledby="tema-{k}"><h3 id="tema-{k}"><span><span class="sr-only">Tema </span>{k}</span> {name}</h3><p>{text}</p></article>' for k, name, text in themes)
+    # 08/11/2026: decisão 152, M5. Um tema cujo texto acaba numa lista não deixa um parágrafo vazio no fim.
+    corpo = lambda text: re.sub(r'<p></p>$', '', f'<p>{text}</p>')
+    th = ''.join(f'<article class="task-theme" data-task-theme="{k}" aria-labelledby="tema-{k}"><h3 id="tema-{k}"><span><span class="sr-only">Tema </span>{k}</span> {name}</h3>{corpo(text)}</article>' for k, name, text in themes)
     return f'''<header><p class="task-kicker">Tarefa individual · Unidade {unit} · 90{sep}min</p><h1>{title}</h1>
 <p>{lead}</p>
 {link}<section id="produzir" aria-label="Enunciado">

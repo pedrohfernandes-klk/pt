@@ -2,23 +2,53 @@
  "slug": "m5-u1",
  "titulo": "Quem decide por quem: vozes de <i>Amor de Perdição</i>",
  "unidade": 1,
+ "nao_partir": true,
  "aquecer": {
   "cartoes": "aquecimento/",
   "minutos": 10,
-  "texto": "No início da aula de tarefa: 10 minutos de cartões com consulta, 5 minutos para leres o enunciado, 60 minutos de produção e 15 minutos de revisão e entrega. Total: 90 minutos. O relógio de produção começa depois da leitura.",
+  "texto": "No início da aula de tarefa:",
+  "tabela": {
+   "colunas": [
+    "Momento",
+    "Tempo"
+   ],
+   "linhas": [
+    [
+     "Cartões com consulta",
+     "10 minutos"
+    ],
+    [
+     "Lês o enunciado",
+     "5 minutos"
+    ],
+    [
+     "Produção",
+     "60 minutos"
+    ],
+    [
+     "Revisão e entrega",
+     "15 minutos"
+    ],
+    [
+     "Total",
+     "90 minutos"
+    ]
+   ]
+  },
+  "depois": "O relógio de produção começa depois da leitura.",
   "ligacao": "Abrir o aquecimento em cartões",
   "ligacao_enunciado": "Aquecer em cartões"
  },
  "lead": "À mão, 200 a 250 palavras: cerca de 50 por resposta do núcleo e 100 a 150 no tema. Com consulta.",
  "nucleo": [
-  "Cita uma passagem da Introdução e outra do cap. IV em que o narrador não se limita a contar. Identifica um recurso numa delas. Explica o que quer de quem lê, em cada uma.",
+  "Cita uma passagem da Introdução e outra do cap. IV em que o narrador não se limita a contar. Identifica um recurso numa delas. Explica o que quer de quem lê, em cada uma.",
   "Tadeu diz ao sobrinho: «Não te posso dar minha filha, porque já não tenho filha.» Identifica a função sintática de «te» e de «minha filha», com um teste para cada. Explica o que mostram do lugar de Teresa na fala do pai."
  ],
  "temas": [
   {
    "letra": "A",
    "nome": "A voz de Simão",
-   "texto": "Na nau, depois da morte de Teresa, Simão responde-lhe. Escreve a carta (90 a 120 palavras): local e data, vocativo, despedida e assinatura; resposta a uma pergunta dela; uma memória dos dois; um recurso expressivo teu; um eco do romance, entre «». Depois, em duas frases, diz que facto do romance respeitaste e o que faz o recurso."
+   "texto": "Na nau, depois da morte de Teresa, Simão responde-lhe. Escreve a carta (90 a 120 palavras):</p><ol><li>local e data, vocativo, despedida e assinatura;</li><li>resposta a uma pergunta dela;</li><li>uma memória dos dois;</li><li>um recurso expressivo teu;</li><li>um eco do romance, entre «».</li></ol><p>Depois, em duas frases, diz que facto do romance respeitaste e o que faz o recurso."
   },
   {
    "letra": "B",
@@ -47,7 +77,7 @@
  "exemplos": [
   {
    "titulo": "Descobre a função (resolvido)",
-   "html": "<p>Em «Teu primo é um composto de todas as virtudes» (cap. IV), «Teu primo» é o sujeito: responde à pergunta <i>quem é um composto de todas as virtudes?</i>, e o verbo concorda com ele. A expressão «um composto de todas as virtudes» é predicativo do sujeito: com o verbo <i>ser</i>, diz como é o sujeito, e a frase não se aguenta sem ele (lição F07). O que mostram: o sujeito é Baltasar e o predicativo é só elogio; Tadeu vende o noivo à filha.</p><p>Na tarefa, faz o mesmo com a fala de Tadeu ao sobrinho: a função, o teste e o que mostra.</p>"
+   "html": "<p>Em «Teu primo é um composto de todas as virtudes» (cap. IV), «Teu primo» é o sujeito: responde à pergunta <i>quem é um composto de todas as virtudes?</i>, e o verbo concorda com ele. A expressão «um composto de todas as virtudes» é predicativo do sujeito: com o verbo <i>ser</i>, diz como é o sujeito, e a frase não se aguenta sem ele (lição F07). O que mostram: o sujeito é Baltasar e o predicativo é só elogio; Tadeu vende o noivo à filha.</p><p>Na tarefa, faz o mesmo com a fala de Tadeu ao sobrinho: a função, o teste e o que mostra.</p>"
   }
  ],
  "dossie_titulo": "Dossiê do tema B",
@@ -68,7 +98,7 @@
    "fonte": "Lição «Folheando os livros da cadeia», «Linha de vida»"
   },
   {
-   "facto": "No romance, Simão parte degredado para a Índia a 17 de março de 1807; a data está escrita à margem do assento.",
+   "facto": "No romance, Simão parte degredado para a Índia a 17 de março de 1807; a data está escrita à margem do assento.",
    "href": "../../m5/licao-m5-f02/",
    "fonte": "Lição «Folheando os livros da cadeia», «Linha de vida» e «O texto, 2 de 3»"
   },

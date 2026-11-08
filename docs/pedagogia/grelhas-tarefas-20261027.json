@@ -645,7 +645,7 @@
        "Numa história inventada, uma só passagem: Ainda não sabia que nunca mais voltaria àquela casa. Aqui o narrador fala do futuro."
       ],
       "max": [
-       "Citas, entre «», uma passagem da Introdução e outra do cap. IV em que o narrador comenta, julga ou fala com quem lê; identificas um recurso pelo nome; e explicas, para cada passagem, o que o narrador quer provocar em quem lê.",
+       "Citas, entre «», uma passagem da Introdução e outra do cap. IV em que o narrador comenta, julga ou fala com quem lê; identificas um recurso pelo nome; e explicas, para cada passagem, o que o narrador quer provocar em quem lê.",
        "Numa história inventada, com outras passagens. Primeira: Ainda não sabia que nunca mais voltaria àquela casa. O narrador antecipa o fim e quer que quem lê siga a cena já com medo. Segunda: O senhor, homem de muita honra, contou o dinheiro duas vezes antes de dar a esmola. A ironia (homem de muita honra) julga a personagem e quer que quem lê se ria dela."
       ]
      },
@@ -669,7 +669,7 @@
       ],
       "max": [
        "Identificas as duas funções, provas cada uma com um teste da lição (trocar por um pronome, perguntar, cortar, passar à passiva) e explicas o que essas funções mostram da personagem na frase.",
-       "Em «Teu primo é um composto de todas as virtudes» (cap. IV), «Teu primo» é o sujeito: responde à pergunta _quem é um composto de todas as virtudes?_, e o verbo concorda com ele. A expressão «um composto de todas as virtudes» é predicativo do sujeito: com _ser_, diz como é o sujeito, e a frase não se aguenta sem ele. O sujeito é Baltasar e o predicativo é só elogio: Tadeu vende o noivo à filha."
+       "Em «Teu primo é um composto de todas as virtudes» (cap. IV), «Teu primo» é o sujeito: responde à pergunta _quem é um composto de todas as virtudes?_, e o verbo concorda com ele. A expressão «um composto de todas as virtudes» é predicativo do sujeito: com _ser_, diz como é o sujeito, e a frase não se aguenta sem ele. O sujeito é Baltasar e o predicativo é só elogio: Tadeu vende o noivo à filha."
       ]
      },
      "custa": [
@@ -681,6 +681,7 @@
     {
      "nome": "Tema à escolha (A ou B): cinco elementos e a explicação",
      "max": 6,
+     "max_em_listas": true,
      "niveis": {
       "0": [
        "Conta um ponto por elemento cumprido e mais um pela explicação que o tema pede. Aqui, não cumpres nenhum dos cinco elementos do teu tema.",
@@ -715,7 +716,7 @@
       ],
       "max": [
        "Todas as citações estão letra a letra, com a grafia da edição, entre «» e com o lugar (Introdução ou capítulo); nada contradiz o romance; o que é ficção fica separado do que é história.",
-       "«a violencia de um pae é sempre amor» (cap. IV): copio violencia e pae como estão na edição, sem os corrigir."
+       "«a violencia de um pae é sempre amor» (cap. IV): copio violencia e pae como estão na edição, sem os corrigir."
       ]
      },
      "custa": [
@@ -761,7 +762,7 @@
      "max": 4,
      "niveis": {
       "0": [
-       "Não citas nenhuma expressão da descrição, ou citas sem dizer o que vem do cap. I e o que é novo.",
+       "Não citas nenhuma expressão da descrição, ou citas sem dizer o que vem do cap. I e o que é novo.",
        "Mendinho repete muitas vezes o mesmo verso."
       ],
       "parcial": [
@@ -769,7 +770,7 @@
        "Em Mendinho, «Eu atendendo meu amig', eu a[tendendo]» volta no fim das estrofes. É uma repetição."
       ],
       "max": [
-       "Citas, entre «», uma expressão que já estava no cap. I e outra que a descrição final traz de novo; dás nome à estrutura; e explicas o que a repetição e a diferença dizem da vida que, para Carlos, ficou metida na casa.",
+       "Citas, entre «», uma expressão que já estava no cap. I e outra que a descrição final traz de novo; dás nome à estrutura; e explicas o que a repetição e a diferença dizem da vida que, para Carlos, ficou metida na casa.",
        "Noutra obra, com outra repetição: em Mendinho, «Eu atendendo meu amig', eu a[tendendo]» volta igual no fim de todas as estrofes, enquanto o mar sobe à volta da rapariga. O que volta é a espera; o que muda é o perigo. É o refrão, e diz que a espera não cede, mesmo quando já não há saída."
       ]
      },
@@ -805,6 +806,7 @@
     {
      "nome": "Tema à escolha (A ou B): cinco elementos e a explicação ou a conclusão",
      "max": 6,
+     "max_em_listas": true,
      "niveis": {
       "0": [
        "Conta um ponto por elemento cumprido e mais um pela explicação (A) ou pela conclusão (B). Aqui, não cumpres nenhum dos cinco elementos do teu tema.",
@@ -815,7 +817,7 @@
        "A: À mesa do café, a Joana falou do estágio e o Rui olhou para o relógio. (Não há interrupção, fala em discurso direto nem pensamento em indireto livre.) B, noutro tema: Fotografar tudo ajuda a lembrar, desde que se volte a olhar para as fotografias. Dir-me-ão que quem fotografa não vê o que tem à frente. (Faltam a citação explicada, o facto datado, a refutação e a conclusão.)"
       ],
       "max": [
-       "Cumpres os cinco elementos do teu tema (um ponto cada) e a explicação ou a conclusão (mais um ponto). Tema A: uma mesa de hoje narrada na 3.ª pessoa; uma conversa séria; uma coisa banal que a corta ou desmonta; uma fala em discurso direto; um pensamento em indireto livre. Explicação: o que imitaste de Eça e o que critica a tua interrupção. Tema B: a tese na primeira frase; outra citação do último capítulo, explicada; um facto datado do dossiê, ligado à tese; um contra-argumento; a tua refutação. Conclusão: volta à tese com outras palavras.",
+       "Cumpres os cinco elementos do teu tema (um ponto cada) e a explicação ou a conclusão (mais um ponto). Tema A: uma mesa de hoje narrada na 3.ª pessoa; uma conversa séria; uma coisa banal que a corta ou desmonta; uma fala em discurso direto; um pensamento em indireto livre. Explicação: o que imitaste de Eça e o que critica a tua interrupção. Tema B: a tese na primeira frase; outra citação do último capítulo, explicada; um facto datado do dossiê, ligado à tese; um contra-argumento; a tua refutação. Conclusão: volta à tese com outras palavras.",
        "A, noutro espaço (uma paragem de autocarro): Na paragem, a Inês contava à mãe que o estágio tinha acabado sem contrato. A mãe perguntou: «E agora?» O autocarro apareceu ao fundo da rua e as duas correram para ele. A Inês sentou-se à janela. Contrato? Isso ficava para amanhã. Imitei o «Sole normande?»: uma coisa banal, o autocarro, corta a conversa séria e ninguém volta a ela. Critico as duas, que adiam o problema à primeira desculpa. B, noutro tema: Fotografar tudo ajuda a lembrar, desde que se volte a olhar para as fotografias. [tese] Dir-me-ão que quem fotografa não vê o que tem à frente. [contra-argumento] Respondo que o problema não é a câmara, é guardar sem escolher. [refutação] Por isso, a fotografia só ajuda a memória de quem a escolhe e a revê. [conclusão] A citação e o facto faltam de propósito: no teu texto, a citação do último capítulo entra depois da tese e o facto do dossiê antes do contra-argumento. As marcas entre parênteses retos não se escrevem."
       ]
      },
@@ -839,7 +841,7 @@
       ],
       "max": [
        "Todas as citações estão letra a letra, com a grafia da edição, entre «» e com o lugar; o facto vem do dossiê, com a data; nada do que escreves contradiz o romance.",
-       "Noutra obra: «mate-me; mas não me force a casar com meu primo!» (cap. IV de _Amor de Perdição_), copiado como está, e o filme de Mário Barroso, com a data, 2008."
+       "Noutra obra: «mate-me; mas não me force a casar com meu primo!» (cap. IV de _Amor de Perdição_), copiado como está, e o filme de Mário Barroso, com a data, 2008."
       ]
      },
      "custa": [

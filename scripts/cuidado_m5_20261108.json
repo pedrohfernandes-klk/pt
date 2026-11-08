@@ -1,0 +1,1682 @@
+[
+ {
+  "ficheiro": "docs/pedagogia/aquecimentos/m5-u1.json",
+  "local": "Dados aquecimentos/m5-u1.json: «na Introdução e no cap. IV;» que não se parte (com o contexto «cap. IV;»)",
+  "antigo": "cap. IV;",
+  "novo": "cap. IV;",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 47 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla). Nos dados do gerador, que passam iguais para as páginas."
+ },
+ {
+  "ficheiro": "docs/pedagogia/aquecimentos/m5-u2.json",
+  "local": "Dados aquecimentos/m5-u2.json: «no cap. I, há uma» que não se parte (com o contexto «cap. I,»)",
+  "antigo": "cap. I,",
+  "novo": "cap. I,",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 48 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla). Nos dados do gerador, que passam iguais para as páginas."
+ },
+ {
+  "ficheiro": "docs/pedagogia/grelhas-tarefas-20261027.json",
+  "local": "Dados das grelhas, m5-u1: «max_em_listas» no critério 3",
+  "antigo": "\"max\": 6,\n     \"niveis\": {\n      \"0\": [\n       \"Conta um ponto por elemento cumprido e mais um pela explicação que o tema pede. Aqui, não cumpres nenhum dos cinco elementos do teu tema.\",\n       \"A (u",
+  "novo": "\"max\": 6,\n     \"max_em_listas\": true,\n     \"niveis\": {\n      \"0\": [\n       \"Conta um ponto por elemento cumprido e mais um pela explicação que o tema pede. Aqui, não cumpres nenhum dos cinco elementos do teu tema.\",\n       \"A (u",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 24 (C). Caso do mesmo tipo. O descritor do nível máximo do critério 3 abre os elementos de cada tema em listas, pelo gerador das grelhas (scripts/grelhas_tarefas.py), como no M1; a versão de correção fica com o texto corrido."
+ },
+ {
+  "ficheiro": "docs/pedagogia/grelhas-tarefas-20261027.json",
+  "local": "Dados das grelhas, m5-u2: «max_em_listas» no critério 3",
+  "antigo": "\"max\": 6,\n     \"niveis\": {\n      \"0\": [\n       \"Conta um ponto por elemento cumprido e mais um pela explicação (",
+  "novo": "\"max\": 6,\n     \"max_em_listas\": true,\n     \"niveis\": {\n      \"0\": [\n       \"Conta um ponto por elemento cumprido e mais um pela explicação (",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 26 (C). Caso do mesmo tipo. O descritor do nível máximo do critério 3 abre os elementos de cada tema em listas, pelo gerador das grelhas (scripts/grelhas_tarefas.py), como no M1; a versão de correção fica com o texto corrido."
+ },
+ {
+  "ficheiro": "docs/pedagogia/grelhas-tarefas-20261027.json",
+  "local": "Dados pedagogia/grelhas-tarefas-20261027.json, m5-u1: «outra do cap. IV em que» que não se parte (com o contexto «cap. IV»)",
+  "antigo": "cap. IV",
+  "novo": "cap. IV",
+  "ocorrencias": 4,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 49/51/50/52 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla). Nos dados do gerador, que passam iguais para as páginas. A troca leva as ocorrências das entradas m5-u1 e m5-u2."
+ },
+ {
+  "ficheiro": "docs/pedagogia/grelhas-tarefas-20261027.json",
+  "local": "Dados pedagogia/grelhas-tarefas-20261027.json, m5-u2: «o que vem do cap. I e o que é novo» que não se parte (com o contexto «cap. I »)",
+  "antigo": "cap. I ",
+  "novo": "cap. I ",
+  "ocorrencias": 2,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 50/52 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla). Nos dados do gerador, que passam iguais para as páginas."
+ },
+ {
+  "ficheiro": "docs/pedagogia/grelhas-tarefas-20261027.json",
+  "local": "Dados pedagogia/grelhas-tarefas-20261027.json, m5-u2: «narrada na 3.ª pessoa;» que não se parte (com o contexto «3.ª pessoa»)",
+  "antigo": "3.ª pessoa",
+  "novo": "3.ª pessoa",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 50/52 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla). Nos dados do gerador, que passam iguais para as páginas."
+ },
+ {
+  "ficheiro": "docs/pedagogia/tarefas-escolha/m5-u1.json",
+  "local": "Dados da tarefa: «nao_partir», os números do molde com espaço que não quebra",
+  "antigo": "\n \"unidade\": 1,\n",
+  "novo": "\n \"unidade\": 1,\n \"nao_partir\": true,\n",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 45 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla). Os números do molde da tarefa («90 minutos» na descrição, «10 min» e «90 min» nos cabeçalhos) levam o espaço que não quebra pelo gerador (scripts/tarefas_escolha.py), como no M1 e no M3."
+ },
+ {
+  "ficheiro": "docs/pedagogia/tarefas-escolha/m5-u1.json",
+  "local": "Dados da tarefa: o aquecimento com a tabela dos tempos («texto», «tabela» e «depois», como na M1-U1)",
+  "antigo": "  \"texto\": \"No início da aula de tarefa: 10 minutos de cartões com consulta, 5 minutos para leres o enunciado, 60 minutos de produção e 15 minutos de revisão e entrega. Total: 90 minutos. O relógio de produção começa depois da leitura.\",\n",
+  "novo": "  \"texto\": \"No início da aula de tarefa:\",\n  \"tabela\": {\n   \"colunas\": [\n    \"Momento\",\n    \"Tempo\"\n   ],\n   \"linhas\": [\n    [\n     \"Cartões com consulta\",\n     \"10 minutos\"\n    ],\n    [\n     \"Lês o enunciado\",\n     \"5 minutos\"\n    ],\n    [\n     \"Produção\",\n     \"60 minutos\"\n    ],\n    [\n     \"Revisão e entrega\",\n     \"15 minutos\"\n    ],\n    [\n     \"Total\",\n     \"90 minutos\"\n    ]\n   ]\n  },\n  \"depois\": \"O relógio de produção começa depois da leitura.\",\n",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 13 (A). Itens paralelos que pedem tabela passam a tabela (como na M7-F10, na M7-F15 e do M1 ao M4). Nos dados do gerador das tarefas, que passam iguais para a página."
+ },
+ {
+  "ficheiro": "docs/pedagogia/tarefas-escolha/m5-u1.json",
+  "local": "Dados da tarefa: o tema A com os cinco elementos da carta numa lista numerada",
+  "antigo": "Escreve a carta (90 a 120 palavras): local e data, vocativo, despedida e assinatura; resposta a uma pergunta dela; uma memória dos dois; um recurso expressivo teu; um eco do romance, entre «». Depois,",
+  "novo": "Escreve a carta (90 a 120 palavras):</p><ol><li>local e data, vocativo, despedida e assinatura;</li><li>resposta a uma pergunta dela;</li><li>uma memória dos dois;</li><li>um recurso expressivo teu;</li><li>um eco do romance, entre «».</li></ol><p>Depois,",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 25 (C). Caso do mesmo tipo. Nos dados do gerador das tarefas, que passam iguais para a página."
+ },
+ {
+  "ficheiro": "docs/pedagogia/tarefas-escolha/m5-u1.json",
+  "local": "Dados tarefas-escolha/m5-u1.json: «outra do cap. IV em que» que não se parte (com o contexto «cap. IV»)",
+  "antigo": "cap. IV",
+  "novo": "cap. IV",
+  "ocorrencias": 2,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 45 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla). Nos dados do gerador, que passam iguais para as páginas."
+ },
+ {
+  "ficheiro": "docs/pedagogia/tarefas-escolha/m5-u1.json",
+  "local": "Dados tarefas-escolha/m5-u1.json: «a 17 de março de 1807;» que não se parte (com o contexto «17 de março de 1807»)",
+  "antigo": "17 de março de 1807",
+  "novo": "17 de março de 1807",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 45 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla). Nos dados do gerador, que passam iguais para as páginas."
+ },
+ {
+  "ficheiro": "docs/pedagogia/tarefas-escolha/m5-u2.json",
+  "local": "Dados da tarefa: «nao_partir», os números do molde com espaço que não quebra",
+  "antigo": "\n \"unidade\": 2,\n",
+  "novo": "\n \"unidade\": 2,\n \"nao_partir\": true,\n",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 46 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla). Os números do molde da tarefa («90 minutos» na descrição, «10 min» e «90 min» nos cabeçalhos) levam o espaço que não quebra pelo gerador (scripts/tarefas_escolha.py), como no M1 e no M3."
+ },
+ {
+  "ficheiro": "docs/pedagogia/tarefas-escolha/m5-u2.json",
+  "local": "Dados da tarefa: o aquecimento com a tabela dos tempos («texto», «tabela» e «depois», como na M1-U1)",
+  "antigo": "  \"texto\": \"No início da aula de tarefa: 10 minutos de cartões com consulta, 5 minutos para leres o enunciado, 60 minutos de produção e 15 minutos de revisão e entrega. Total: 90 minutos. O relógio de produção começa depois da leitura.\",\n",
+  "novo": "  \"texto\": \"No início da aula de tarefa:\",\n  \"tabela\": {\n   \"colunas\": [\n    \"Momento\",\n    \"Tempo\"\n   ],\n   \"linhas\": [\n    [\n     \"Cartões com consulta\",\n     \"10 minutos\"\n    ],\n    [\n     \"Lês o enunciado\",\n     \"5 minutos\"\n    ],\n    [\n     \"Produção\",\n     \"60 minutos\"\n    ],\n    [\n     \"Revisão e entrega\",\n     \"15 minutos\"\n    ],\n    [\n     \"Total\",\n     \"90 minutos\"\n    ]\n   ]\n  },\n  \"depois\": \"O relógio de produção começa depois da leitura.\",\n",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 14 (A). Itens paralelos que pedem tabela passam a tabela (como na M7-F10, na M7-F15 e do M1 ao M4). Nos dados do gerador das tarefas, que passam iguais para a página."
+ },
+ {
+  "ficheiro": "docs/pedagogia/tarefas-escolha/m5-u2.json",
+  "local": "Dados da tarefa: o tema B com os cinco elementos do parágrafo numa lista numerada (o texto acaba em «<p>»)",
+  "antigo": "Num parágrafo de opinião (100 a 130 palavras): tese na primeira frase; outra citação do último capítulo, explicada; um facto datado do dossiê, ligado à tese; contra-argumento e refutação; conclusão.\"",
+  "novo": "Num parágrafo de opinião (100 a 130 palavras):</p><ol><li>tese na primeira frase;</li><li>outra citação do último capítulo, explicada;</li><li>um facto datado do dossiê, ligado à tese;</li><li>contra-argumento e refutação;</li><li>conclusão.</li></ol><p>\"",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 27 (C). Caso do mesmo tipo. Nos dados do gerador das tarefas, que passam iguais para a página."
+ },
+ {
+  "ficheiro": "docs/pedagogia/tarefas-escolha/m5-u2.json",
+  "local": "Dados tarefas-escolha/m5-u2.json: «que vem do cap. I e outra nova.» que não se parte (com o contexto «cap. I»)",
+  "antigo": "cap. I",
+  "novo": "cap. I",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 46 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla). Nos dados do gerador, que passam iguais para as páginas."
+ },
+ {
+  "ficheiro": "docs/pedagogia/tarefas-escolha/m5-u2.json",
+  "local": "Dados tarefas-escolha/m5-u2.json: «No cap. VI, Alencar» que não se parte (com o contexto «cap. VI»)",
+  "antigo": "cap. VI",
+  "novo": "cap. VI",
+  "ocorrencias": 2,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 46 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla). Nos dados do gerador, que passam iguais para as páginas."
+ },
+ {
+  "ficheiro": "docs/pedagogia/tarefas-escolha/m5-u2.json",
+  "local": "Dados tarefas-escolha/m5-u2.json: «Narra na 3.ª pessoa» que não se parte (com o contexto «3.ª pessoa»)",
+  "antigo": "3.ª pessoa",
+  "novo": "3.ª pessoa",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 46 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla). Nos dados do gerador, que passam iguais para as páginas."
+ },
+ {
+  "ficheiro": "docs/pedagogia/tarefas-escolha/m5-u2.json",
+  "local": "Dados tarefas-escolha/m5-u2.json: «A 28 de dezembro de 2015, a RTP1» que não se parte (com o contexto «28 de dezembro de 2015»)",
+  "antigo": "28 de dezembro de 2015",
+  "novo": "28 de dezembro de 2015",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 46 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla). Nos dados do gerador, que passam iguais para as páginas."
+ },
+ {
+  "ficheiro": "docs/pedagogia/tarefas-escolha/m5-u2.json",
+  "local": "Dados tarefas-escolha/m5-u2.json: «A 8 de janeiro de 2025, Eça» que não se parte (com o contexto «8 de janeiro de 2025»)",
+  "antigo": "8 de janeiro de 2025",
+  "novo": "8 de janeiro de 2025",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 46 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla). Nos dados do gerador, que passam iguais para as páginas."
+ },
+ {
+  "ficheiro": "m5/camilo-assento/index.html",
+  "local": "m5/camilo-assento: «Gutenberg n.º 16425)» que não se parte (com o contexto «n.º 16425»)",
+  "antigo": "n.º 16425",
+  "novo": "n.º 16425",
+  "ocorrencias": 2,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 53 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m5/camilo-assento/index.html",
+  "local": "m5/camilo-assento: «folhas 232» que não se parte",
+  "antigo": "folhas 232",
+  "novo": "folhas 232",
+  "ocorrencias": 3,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 53 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m5/camilo-assento/index.html",
+  "local": "m5/camilo-assento: «na página 232» que não se parte (com o contexto «página 232»)",
+  "antigo": "página 232",
+  "novo": "página 232",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 53 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m5/camilo-assento/index.html",
+  "local": "m5/camilo-assento: «17 de Março de 1807» que não se parte",
+  "antigo": "17 de Março de 1807",
+  "novo": "17 de Março de 1807",
+  "ocorrencias": 2,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 53 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m5/camilo-carta/index.html",
+  "local": "m5/camilo-carta: «Gutenberg n.º 16425)» que não se parte (com o contexto «n.º 16425»)",
+  "antigo": "n.º 16425",
+  "novo": "n.º 16425",
+  "ocorrencias": 2,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 54 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m5/camilo-pai/index.html",
+  "local": "m5/camilo-pai: «Gutenberg n.º 16425)» que não se parte (com o contexto «n.º 16425»)",
+  "antigo": "n.º 16425",
+  "novo": "n.º 16425",
+  "ocorrencias": 2,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 55 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m5/camilo-pai/index.html",
+  "local": "m5/camilo-pai: «1862, cap. IV» que não se parte (com o contexto «cap. IV»)",
+  "antigo": "cap. IV",
+  "novo": "cap. IV",
+  "ocorrencias": 2,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 55 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m5/eca-falhamos/index.html",
+  "local": "m5/eca-falhamos: «Gutenberg n.º 40409)» que não se parte (com o contexto «n.º 40409»)",
+  "antigo": "n.º 40409",
+  "novo": "n.º 40409",
+  "ocorrencias": 2,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 57 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m5/eca-hotel/index.html",
+  "local": "m5/eca-hotel: «Gutenberg n.º 40409)» que não se parte (com o contexto «n.º 40409»)",
+  "antigo": "n.º 40409",
+  "novo": "n.º 40409",
+  "ocorrencias": 2,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 58 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m5/eca-hotel/index.html",
+  "local": "m5/eca-hotel: «1888, cap. VI» que não se parte (com o contexto «cap. VI»)",
+  "antigo": "cap. VI",
+  "novo": "cap. VI",
+  "ocorrencias": 2,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 58 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m5/eca-ramalhete/index.html",
+  "local": "m5/eca-ramalhete: «Gutenberg n.º 40409)» que não se parte (com o contexto «n.º 40409»)",
+  "antigo": "n.º 40409",
+  "novo": "n.º 40409",
+  "ocorrencias": 2,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 59 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m5/eca-ramalhete/index.html",
+  "local": "m5/eca-ramalhete: «1888, cap. I e último» que não se parte (com o contexto «cap. I»)",
+  "antigo": "cap. I",
+  "novo": "cap. I",
+  "ocorrencias": 2,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 59 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m5/eca-ramalhete/index.html",
+  "local": "m5/eca-ramalhete: «sr.ª D. Maria I:» que não se parte (com o contexto «sr.ª D. Maria I»)",
+  "antigo": "sr.ª D. Maria I",
+  "novo": "sr.ª D. Maria I",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 59 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m5/gram-dil/index.html",
+  "local": "m5/gram-dil: «Gutenberg n.º 40409)» que não se parte (com o contexto «n.º 40409»)",
+  "antigo": "n.º 40409",
+  "novo": "n.º 40409",
+  "ocorrencias": 3,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 60 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m5/gram-funcoes/index.html",
+  "local": "m5/gram-funcoes: «Gutenberg n.º 16425)» que não se parte (com o contexto «n.º 16425»)",
+  "antigo": "n.º 16425",
+  "novo": "n.º 16425",
+  "ocorrencias": 3,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 56 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m5/guia-da-tarefa-m5/index.html",
+  "local": "m5/guia-da-tarefa-m5, secção «Tarefas das unidades» (p.avaliacao-tarefas)",
+  "antigo": "<p class=\"avaliacao-tarefas\">Avaliação: tarefa da Unidade 1, 30 %; tarefa da Unidade 2, 30 %; provas rápidas, 10 %; prova escrita, 30 %. ",
+  "novo": "<p>Avaliação:</p><table class=\"apoio-tabela\" role=\"table\"><thead role=\"rowgroup\"><tr role=\"row\"><th scope=\"col\" role=\"columnheader\" style=\"width:auto\">Elemento</th><th scope=\"col\" role=\"columnheader\" style=\"width:5.5rem\">Peso</th></tr></thead><tbody role=\"rowgroup\"><tr role=\"row\"><th scope=\"row\" role=\"rowheader\">Tarefa da Unidade 1</th><td role=\"cell\" data-label=\"Peso\">30 %</td></tr><tr role=\"row\"><th scope=\"row\" role=\"rowheader\">Tarefa da Unidade 2</th><td role=\"cell\" data-label=\"Peso\">30 %</td></tr><tr role=\"row\"><th scope=\"row\" role=\"rowheader\">Provas rápidas</th><td role=\"cell\" data-label=\"Peso\">10 %</td></tr><tr role=\"row\"><th scope=\"row\" role=\"rowheader\">Prova escrita</th><td role=\"cell\" data-label=\"Peso\">30 %</td></tr></tbody></table><p class=\"avaliacao-tarefas\">",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 0 (A). Itens paralelos que pedem tabela passam a tabela (como na M7-F10, na M7-F15 e do M1 ao M4). Como no M3: o rótulo «Avaliação:» num parágrafo antes da tabela (sem <caption>), a coluna do peso estreita e só a classe apoio-tabela (a proposta pedia também avaliacao-pesos, com estilo próprio nos nove guias); o resto do parágrafo fica no mesmo p.avaliacao-tarefas. Só no M5 (este pedido é do M5)."
+ },
+ {
+  "ficheiro": "m5/guia-da-tarefa-m5/index.html",
+  "local": "m5/guia-da-tarefa-m5, «Três antes de mim» (div.regra)",
+  "antigo": "<div class=\"regra\"><b>Três antes de mim.</b> Antes de chamares o docente: 1) relê o enunciado; 2) vê a rubrica; 3) pergunta ao teu par de trabalho. Só depois levantas o braço.</div>",
+  "novo": "<div class=\"regra\"><b>Três antes de mim.</b> Antes de chamares o docente:<ol><li>relê o enunciado;</li><li>vê a rubrica;</li><li>pergunta ao teu par de trabalho.</li></ol>Só depois levantas o braço.</div>",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 15 (C). Caso do mesmo tipo. Os três passos numa lista ordenada, só no M5 (este pedido é do M5)."
+ },
+ {
+  "ficheiro": "m5/guia-da-tarefa-m5/index.html",
+  "local": "m5/guia-da-tarefa-m5, cabeça: a folha das tabelas de apoio, antes da camada de aparência",
+  "antigo": "<link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-universal-1\">",
+  "novo": "<link rel=\"stylesheet\" href=\"../../assets/pt-lessons/apoios-tabelas.css?v=20261106.1\"><link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-universal-1\">",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 0 (A). A guia da tarefa passa a carregar as tabelas de apoio, antes da camada de aparência."
+ },
+ {
+  "ficheiro": "m5/guia-da-tarefa-m5/index.html",
+  "local": "m5/guia-da-tarefa-m5: «Narrativa do Séc. XIX»",
+  "antigo": "Narrativa do Séc. XIX",
+  "novo": "Narrativa do século XIX",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 42 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla). «Séc. XIX» passa a «século XIX», como na proposta (é a única forma abreviada do M5), já com o espaço que não quebra."
+ },
+ {
+  "ficheiro": "m5/guia-da-tarefa-m5/index.html",
+  "local": "m5/guia-da-tarefa-m5: «tarefa de 90 minutos, com aquecimento» que não se parte (com o contexto «90 minutos»)",
+  "antigo": "90 minutos",
+  "novo": "90 minutos",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 42 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m5/guia-da-tarefa-m5/index.html",
+  "local": "m5/guia-da-tarefa-m5: «em cartões (10 minutos). Seguem-se 5 minutos de» que não se parte (com o contexto «10 minutos»)",
+  "antigo": "10 minutos",
+  "novo": "10 minutos",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 42 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m5/guia-da-tarefa-m5/index.html",
+  "local": "m5/guia-da-tarefa-m5: «em cartões (10 minutos). Seguem-se 5 minutos de» que não se parte (com o contexto «5 minutos»)",
+  "antigo": "5 minutos",
+  "novo": "5 minutos",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 42 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m5/guia-da-tarefa-m5/index.html",
+  "local": "m5/guia-da-tarefa-m5: «</a><br>30 %, individual» que não se parte (com o contexto «30 %,»)",
+  "antigo": "30 %,",
+  "novo": "30 %,",
+  "ocorrencias": 2,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 42 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m5/guia-da-tarefa-m5/index.html",
+  "local": "m5/guia-da-tarefa-m5: «<b>Aquecer, 10 min</b>» que não se parte (com o contexto «10 min<»)",
+  "antigo": "10 min<",
+  "novo": "10 min<",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 42 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m5/guia-da-tarefa-m5/index.html",
+  "local": "m5/guia-da-tarefa-m5: «<b>Ler o enunciado, 5 min</b>» que não se parte (com o contexto « 5 min<»)",
+  "antigo": " 5 min<",
+  "novo": " 5 min<",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 42 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m5/guia-da-tarefa-m5/index.html",
+  "local": "m5/guia-da-tarefa-m5: «<b>Produzir, 60 min</b>» que não se parte (com o contexto «60 min»)",
+  "antigo": "60 min",
+  "novo": "60 min",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 42 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m5/guia-da-tarefa-m5/index.html",
+  "local": "m5/guia-da-tarefa-m5: «<b>Rever e entregar, 15 min</b>» que não se parte (com o contexto «15 min»)",
+  "antigo": "15 min",
+  "novo": "15 min",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 42 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m5/guia-da-tarefa-m5/index.html",
+  "local": "m5/guia-da-tarefa-m5: «2.º ano» que não se parte",
+  "antigo": "2.º ano",
+  "novo": "2.º ano",
+  "ocorrencias": 2,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 42 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m5/index.html",
+  "local": "m5, secção «Como se cumpre uma unidade» (p.avaliacao-tarefas)",
+  "antigo": "<p class=\"avaliacao-tarefas\">Pesos na avaliação: tarefa da Unidade 1, 30 %; tarefa da Unidade 2, 30 %; provas rápidas, 10 %; prova escrita, 30 %. ",
+  "novo": "<p>Pesos na avaliação:</p><table class=\"apoio-tabela\" role=\"table\"><thead role=\"rowgroup\"><tr role=\"row\"><th scope=\"col\" role=\"columnheader\" style=\"width:auto\">Elemento</th><th scope=\"col\" role=\"columnheader\" style=\"width:5.5rem\">Peso</th></tr></thead><tbody role=\"rowgroup\"><tr role=\"row\"><th scope=\"row\" role=\"rowheader\">Tarefa da Unidade 1</th><td role=\"cell\" data-label=\"Peso\">30 %</td></tr><tr role=\"row\"><th scope=\"row\" role=\"rowheader\">Tarefa da Unidade 2</th><td role=\"cell\" data-label=\"Peso\">30 %</td></tr><tr role=\"row\"><th scope=\"row\" role=\"rowheader\">Provas rápidas</th><td role=\"cell\" data-label=\"Peso\">10 %</td></tr><tr role=\"row\"><th scope=\"row\" role=\"rowheader\">Prova escrita</th><td role=\"cell\" data-label=\"Peso\">30 %</td></tr></tbody></table><p class=\"avaliacao-tarefas\">",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 1 (A). Itens paralelos que pedem tabela passam a tabela (como na M7-F10, na M7-F15 e do M1 ao M4). Como no M3 e no achado 0; o resto do parágrafo fica no mesmo p.avaliacao-tarefas, que continua a ser um só dentro de details.regra."
+ },
+ {
+  "ficheiro": "m5/index.html",
+  "local": "m5, cabeça: a folha das tabelas de apoio, antes da camada de aparência",
+  "antigo": "<link rel=\"stylesheet\" href=\"../assets/appearance.css?v=20261025-universal-1\">",
+  "novo": "<link rel=\"stylesheet\" href=\"../assets/pt-lessons/apoios-tabelas.css?v=20261106.1\"><link rel=\"stylesheet\" href=\"../assets/appearance.css?v=20261025-universal-1\">",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 1 (A). A índice do módulo passa a carregar as tabelas de apoio, antes da camada de aparência."
+ },
+ {
+  "ficheiro": "m5/index.html",
+  "local": "m5: «aula de tarefa de 90 minutos: aquecimento» que não se parte (com o contexto «90 minutos»)",
+  "antigo": "90 minutos",
+  "novo": "90 minutos",
+  "ocorrencias": 3,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 41 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m5/index.html",
+  "local": "m5: «tarefa 90 min</small>» que não se parte (com o contexto «90 min<»)",
+  "antigo": "90 min<",
+  "novo": "90 min<",
+  "ocorrencias": 4,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 41 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m5/index.html",
+  "local": "m5: «cerca de 25 min, sem nada» que não se parte (com o contexto «25 min»)",
+  "antigo": "25 min",
+  "novo": "25 min",
+  "ocorrencias": 2,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 41 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m5/index.html",
+  "local": "m5: «<span class=\"chip\">10 min</span>» que não se parte (com o contexto «10 min»)",
+  "antigo": "10 min",
+  "novo": "10 min",
+  "ocorrencias": 2,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 41 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m5/index.html",
+  "local": "m5: «Grelha /20; 30 %.» que não se parte (com o contexto «30 %.<»)",
+  "antigo": "30 %.<",
+  "novo": "30 %.<",
+  "ocorrencias": 2,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 41 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m5/index.html",
+  "local": "m5: «Narrativa do século XIX</span></h1>» que não se parte (com o contexto «século XIX</sp»)",
+  "antigo": "século XIX</sp",
+  "novo": "século XIX</sp",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 41 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m5/index.html",
+  "local": "m5: «Narrativa do século XIX</span></h1>» que não se parte (com o contexto «século XIX. Na»)",
+  "antigo": "século XIX. Na",
+  "novo": "século XIX. Na",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 41 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m5/index.html",
+  "local": "m5: «2.º ano» que não se parte",
+  "antigo": "2.º ano",
+  "novo": "2.º ano",
+  "ocorrencias": 2,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 41 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m5/index.html",
+  "local": "m5: «a folhas 232.» que não se parte (com o contexto «folhas 232»)",
+  "antigo": "folhas 232",
+  "novo": "folhas 232",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 41 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m5/index.html",
+  "local": "m5: «17 de Março de 1807» que não se parte",
+  "antigo": "17 de Março de 1807",
+  "novo": "17 de Março de 1807",
+  "ocorrencias": 2,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 41 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m5/index.html",
+  "local": "m5: «26 de Setembro de 1861» que não se parte",
+  "antigo": "26 de Setembro de 1861",
+  "novo": "26 de Setembro de 1861",
+  "ocorrencias": 2,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 41 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m5/index.html",
+  "local": "m5: «capítulo IV» que não se parte",
+  "antigo": "capítulo IV",
+  "novo": "capítulo IV",
+  "ocorrencias": 3,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 41 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m5/index.html",
+  "local": "m5: «17 de março de 1807» que não se parte",
+  "antigo": "17 de março de 1807",
+  "novo": "17 de março de 1807",
+  "ocorrencias": 6,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 41 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m5/index.html",
+  "local": "m5: «26 de setembro de 1861» que não se parte",
+  "antigo": "26 de setembro de 1861",
+  "novo": "26 de setembro de 1861",
+  "ocorrencias": 2,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 41 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m5/index.html",
+  "local": "m5: «28 de dezembro de 1815» que não se parte",
+  "antigo": "28 de dezembro de 1815",
+  "novo": "28 de dezembro de 1815",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 41 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m5/index.html",
+  "local": "m5: «no capítulo VI?» que não se parte (com o contexto «capítulo VI»)",
+  "antigo": "capítulo VI",
+  "novo": "capítulo VI",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 41 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m5/index.html",
+  "local": "m5: «.ª pessoa» que não se parte (com o contexto «3.ª pessoa»)",
+  "antigo": "3.ª pessoa",
+  "novo": "3.ª pessoa",
+  "ocorrencias": 7,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 41 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m5/index.html",
+  "local": "m5: «.ª pessoa» que não se parte (com o contexto «1.ª pessoa»)",
+  "antigo": "1.ª pessoa",
+  "novo": "1.ª pessoa",
+  "ocorrencias": 3,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 41 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m5/index.html",
+  "local": "m5: «.ª pessoa» que não se parte (com o contexto «2.ª pessoa»)",
+  "antigo": "2.ª pessoa",
+  "novo": "2.ª pessoa",
+  "ocorrencias": 2,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 41 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m5/index.html",
+  "local": "m5: «28 de dezembro de 2015» que não se parte",
+  "antigo": "28 de dezembro de 2015",
+  "novo": "28 de dezembro de 2015",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 41 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m5/licao-m5-f02/index.html",
+  "local": "M5-F02: «A 17 de março, Simão parte» que não se parte (com o contexto «17 de m»)",
+  "antigo": "17 de m",
+  "novo": "17 de m",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 28 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m5/licao-m5-f02/index.html",
+  "local": "M5-F02: «>a folhas 232</b>, o seguinte» que não se parte (com o contexto «folhas 232»)",
+  "antigo": "folhas 232",
+  "novo": "folhas 232",
+  "ocorrencias": 2,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 28 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m5/licao-m5-f02/index.html",
+  "local": "M5-F02: «<b>a folhas 232</b>, na página 232» que não se parte (com o contexto «página 232;»)",
+  "antigo": "página 232;",
+  "novo": "página 232;",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 28 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m5/licao-m5-f02/index.html",
+  "local": "M5-F02: «lida por Sónia Pedro (5 min)» que não se parte (com o contexto «5 min)<»)",
+  "antigo": "5 min)<",
+  "novo": "5 min)<",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 28 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m5/licao-m5-f02/index.html",
+  "local": "M5-F02: «<i>Foi para a India em 17 de Março de 1807</i>» que não se parte (com o contexto «17 de Março de 1807»)",
+  "antigo": "17 de Março de 1807",
+  "novo": "17 de Março de 1807",
+  "ocorrencias": 3,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 28 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m5/licao-m5-f02/index.html",
+  "local": "M5-F02: «Ensina RTP (1 min)» que não se parte (com o contexto «1 min)<»)",
+  "antigo": "1 min)<",
+  "novo": "1 min)<",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 28 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m5/licao-m5-f04/index.html",
+  "local": "M5-F04: «primeira parte, cap. IV.» que não se parte (com o contexto «cap. IV»)",
+  "antigo": "cap. IV",
+  "novo": "cap. IV",
+  "ocorrencias": 3,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 29 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m5/licao-m5-f04/index.html",
+  "local": "M5-F04: «Lucas de Almeida Marrão, c. 1850)» que não se parte (com o contexto «c. 1850).»)",
+  "antigo": "c. 1850).",
+  "novo": "c. 1850).",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 29 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m5/licao-m5-f04/index.html",
+  "local": "M5-F04: «\"titulo\":\"Capítulo IV\"» que não se parte (com o contexto «Capítulo IV»)",
+  "antigo": "Capítulo IV",
+  "novo": "Capítulo IV",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 29 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m5/licao-m5-f04/index.html",
+  "local": "M5-F04: «Ler o capítulo IV na Wikisource» que não se parte (com o contexto «capítulo IV»)",
+  "antigo": "capítulo IV",
+  "novo": "capítulo IV",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 29 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m5/licao-m5-f08/index.html",
+  "local": "M5-F08, cartão 2, Para entender («Recorda: o que Simão sabe nesta noite»)",
+  "antigo": "<p><b>As perguntas de Teresa:</b> podias tu com a desesperança e com a vida? Que farias da vida sem a tua companheira? Nunca hás de amar outra vez?</p><p><b>Os factos:</b> Simão matou Baltasar e vai degredado para a Índia; a nau saiu do Porto a 17 de março de 1807; Teresa morreu no convento de Monchique; Mariana, a filha do ferrador, vai a bordo com ele.</p>",
+  "novo": "<p><b>As perguntas de Teresa:</b></p><ul><li>Podias tu com a desesperança e com a vida?</li><li>Que farias da vida sem a tua companheira?</li><li>Nunca hás de amar outra vez?</li></ul><p><b>Os factos:</b></p><ul><li>Simão matou Baltasar e vai degredado para a Índia;</li><li>a nau saiu do Porto a 17 de março de 1807;</li><li>Teresa morreu no convento de Monchique;</li><li>Mariana, a filha do ferrador, vai a bordo com ele.</li></ul>",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 18 (C). Caso do mesmo tipo. As três perguntas e os quatro factos em listas; «Podias» passa a ter maiúscula por abrir item. A data dos factos já leva os espaços que não quebram (achado 31). «As marcas de uma carta» fica em linha."
+ },
+ {
+  "ficheiro": "m5/licao-m5-f08/index.html",
+  "local": "M5-F08: «Lucas de Almeida Marrão, c. 1850)» que não se parte (com o contexto «c. 1850).»)",
+  "antigo": "c. 1850).",
+  "novo": "c. 1850).",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 31 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m5/licao-m5-f08/index.html",
+  "local": "M5-F08: «17 de março de 1807» que não se parte (com o contexto «17 de março de 1807.»)",
+  "antigo": "17 de março de 1807.",
+  "novo": "17 de março de 1807.",
+  "ocorrencias": 2,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 31 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m5/licao-m5-f08/index.html",
+  "local": "M5-F08: «17 de março de 1807» que não se parte (com o contexto «17 de março de 1807\"»)",
+  "antigo": "17 de março de 1807\"",
+  "novo": "17 de março de 1807\"",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 31 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m5/licao-m5-f08/index.html",
+  "local": "M5-F08: «17 de março de 1807» que não se parte (com o contexto «17 de março de 1807*»)",
+  "antigo": "17 de março de 1807*",
+  "novo": "17 de março de 1807*",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 31 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m5/licao-m5-f08/index.html",
+  "local": "M5-F08: «17 de março de 1807» que não se parte (com o contexto «17 de março de 1807,»)",
+  "antigo": "17 de março de 1807,",
+  "novo": "17 de março de 1807,",
+  "ocorrencias": 2,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 31 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m5/licao-m5-f08/index.html",
+  "local": "M5-F08: «26 de setembro de 1861» que não se parte",
+  "antigo": "26 de setembro de 1861",
+  "novo": "26 de setembro de 1861",
+  "ocorrencias": 2,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 31 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m5/licao-m5-f08/index.html",
+  "local": "M5-F08: «A 28 de dezembro de 1815» que não se parte (com o contexto «28 de dezembro de 1815»)",
+  "antigo": "28 de dezembro de 1815",
+  "novo": "28 de dezembro de 1815",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 31 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m5/licao-m5-f08/index.html",
+  "local": "M5-F08: «(primeiros 4 min)» que não se parte (com o contexto «4 min)<»)",
+  "antigo": "4 min)<",
+  "novo": "4 min)<",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 31 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m5/licao-m5-f09/index.html",
+  "local": "M5-F09: «(3 min)» que não se parte (com o contexto «3 min)<»)",
+  "antigo": "3 min)<",
+  "novo": "3 min)<",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 32 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m5/licao-m5-f09/index.html",
+  "local": "M5-F09: «(2 min)» que não se parte (com o contexto «2 min)<»)",
+  "antigo": "2 min)<",
+  "novo": "2 min)<",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 32 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m5/licao-m5-f09/index.html",
+  "local": "M5-F09: «aos 26 de Setembro de 1861» que não se parte (com o contexto «26 de Setembro de 1861»)",
+  "antigo": "26 de Setembro de 1861",
+  "novo": "26 de Setembro de 1861",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 32 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m5/licao-m5-f10/index.html",
+  "local": "M5-F10: «(1888), cap. I e último» que não se parte (com o contexto «cap. I»)",
+  "antigo": "cap. I",
+  "novo": "cap. I",
+  "ocorrencias": 5,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 33 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m5/licao-m5-f10/index.html",
+  "local": "M5-F10: «(1888), volume 1, página» que não se parte (com o contexto «volume 1»)",
+  "antigo": "volume 1",
+  "novo": "volume 1",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 33 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m5/licao-m5-f10/index.html",
+  "local": "M5-F10: «aparece logo no capítulo I.» que não se parte (com o contexto «capítulo I»)",
+  "antigo": "capítulo I",
+  "novo": "capítulo I",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 33 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m5/licao-m5-f10/index.html",
+  "local": "M5-F10: «A 28 de dezembro, a RTP1» que não se parte (com o contexto «28 de»)",
+  "antigo": "28 de",
+  "novo": "28 de",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 33 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m5/licao-m5-f10/index.html",
+  "local": "M5-F10: «Ensina RTP (1 min)» que não se parte (com o contexto «1 min)<»)",
+  "antigo": "1 min)<",
+  "novo": "1 min)<",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 33 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m5/licao-m5-f10/index.html",
+  "local": "M5-F10: «sr.ª</b> D. Maria I:» que não se parte (com o contexto «D. Maria I»)",
+  "antigo": "D. Maria I",
+  "novo": "D. Maria I",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 33 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m5/licao-m5-f10/index.html",
+  "local": "M5-F10: «papa rico do século XVI\\\">Leão X</b>» que não se parte (com o contexto «século XVI»)",
+  "antigo": "século XVI",
+  "novo": "século XVI",
+  "ocorrencias": 2,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 33 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m5/licao-m5-f10/index.html",
+  "local": "M5-F10: «papa rico do século XVI\\\">Leão X</b>» que não se parte (com o contexto «Leão X»)",
+  "antigo": "Leão X",
+  "novo": "Leão X",
+  "ocorrencias": 2,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 33 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m5/licao-m5-f10/index.html",
+  "local": "M5-F10: «sr. D. João V.» que não se parte (com o contexto «sr. D. João V»)",
+  "antigo": "sr. D. João V",
+  "novo": "sr. D. João V",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 33 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m5/licao-m5-f10/index.html",
+  "local": "M5-F10: «Sónia Pedro (3 min)» que não se parte (com o contexto «3 min)<»)",
+  "antigo": "3 min)<",
+  "novo": "3 min)<",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 33 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m5/licao-m5-f11/index.html",
+  "local": "M5-F11, cartão 23, Para entender («Quem está à mesa»)",
+  "antigo": "<p><b>Ega</b>, amigo de Carlos, defende o naturalismo. <b>Alencar</b> é um poeta romântico, mais velho. <b>Craft</b> é um inglês rico, colecionador de arte. <b>Cohen</b> é um homem das finanças. <b>Dâmaso</b> imita o que lhe parece elegante.</p>",
+  "novo": "<table class=\\\"apoio-tabela\\\" role=\\\"table\\\"><thead role=\\\"rowgroup\\\"><tr role=\\\"row\\\"><th scope=\\\"col\\\" role=\\\"columnheader\\\">Personagem</th><th scope=\\\"col\\\" role=\\\"columnheader\\\">Quem é</th></tr></thead><tbody role=\\\"rowgroup\\\"><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Ega</th><td role=\\\"cell\\\" data-label=\\\"Quem é\\\">amigo de Carlos, defende o naturalismo</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Alencar</th><td role=\\\"cell\\\" data-label=\\\"Quem é\\\">um poeta romântico, mais velho</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Craft</th><td role=\\\"cell\\\" data-label=\\\"Quem é\\\">um inglês rico, colecionador de arte</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Cohen</th><td role=\\\"cell\\\" data-label=\\\"Quem é\\\">um homem das finanças</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Dâmaso</th><td role=\\\"cell\\\" data-label=\\\"Quem é\\\">imita o que lhe parece elegante</td></tr></tbody></table>",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 6 (A). Itens paralelos que pedem tabela passam a tabela (como na M7-F10, na M7-F15 e do M1 ao M4). As células usam o texto do cartão, sem o verbo «é»; o parágrafo do realismo e do naturalismo fica."
+ },
+ {
+  "ficheiro": "m5/licao-m5-f11/index.html",
+  "local": "M5-F11, cartão 20, O texto, 6 de 6 (vocabulário: a entrada «Claude Bernard»)",
+  "antigo": "<b>Claude Bernard</b>, Stuart Mill, Darwin, cientistas",
+  "novo": "<b>Claude Bernard</b>, <b>Stuart Mill</b> e <b>Darwin</b>, cientistas",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 20 (C). Caso do mesmo tipo. A conferência recusou a lista (achado 16): os três nomes a negrito, o último ligado com «e», como no M3."
+ },
+ {
+  "ficheiro": "m5/licao-m5-f11/index.html",
+  "local": "M5-F11, cabeça: a folha das tabelas de apoio, antes da camada de aparência",
+  "antigo": "<link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-reading1\">",
+  "novo": "<link rel=\"stylesheet\" href=\"../../assets/pt-lessons/apoios-tabelas.css?v=20261106.1\"><link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-reading1\">",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 6 (A). A lição passa a carregar as tabelas de apoio, antes da camada de aparência."
+ },
+ {
+  "ficheiro": "m5/licao-m5-f11/index.html",
+  "local": "M5-F11: «(cap. VI). O que marcas» que não se parte (com o contexto «cap. VI»)",
+  "antigo": "cap. VI",
+  "novo": "cap. VI",
+  "ocorrencias": 3,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 34 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m5/licao-m5-f11/index.html",
+  "local": "M5-F11: «Benoliel, c. 1910)» que não se parte (com o contexto «c. 1910»)",
+  "antigo": "c. 1910",
+  "novo": "c. 1910",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 34 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m5/licao-m5-f11/index.html",
+  "local": "M5-F11: «O hotel do capítulo VI,» que não se parte (com o contexto «capítulo VI»)",
+  "antigo": "capítulo VI",
+  "novo": "capítulo VI",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 34 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m5/licao-m5-f12/index.html",
+  "local": "M5-F12, cartão 2, O texto (vocabulário: a entrada «Gremio»)",
+  "antigo": "<b>Gremio</b>, Casa Havaneza, locais de convívio",
+  "novo": "<b>Gremio</b> e <b>Casa Havaneza</b>, locais de convívio",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 21 (C). Caso do mesmo tipo. Os dois nomes a negrito, ligados com «e»."
+ },
+ {
+  "ficheiro": "m5/licao-m5-f12/index.html",
+  "local": "M5-F12: «(1888), cap. VI e último» que não se parte (com o contexto «cap. VI»)",
+  "antigo": "cap. VI",
+  "novo": "cap. VI",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 35 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m5/licao-m5-f12/index.html",
+  "local": "M5-F12: «1.ª pessoa» que não se parte",
+  "antigo": "1.ª pessoa",
+  "novo": "1.ª pessoa",
+  "ocorrencias": 3,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 35 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m5/licao-m5-f12/index.html",
+  "local": "M5-F12: «3.ª pessoa» que não se parte",
+  "antigo": "3.ª pessoa",
+  "novo": "3.ª pessoa",
+  "ocorrencias": 7,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 35 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m5/licao-m5-f13/index.html",
+  "local": "M5-F13, cartão 19, Para entender («Recorda: as peças de um texto de opinião»)",
+  "antigo": "<p><b>Tese</b>: a tua posição, numa frase. <b>Argumento</b>: uma razão que a prova, com um exemplo. <b>Contra-argumento</b>: o que dirá quem discorda; <b>refutação</b>: a tua resposta. <b>Modalização</b>: as palavras que mostram o grau de certeza («talvez», «sem dúvida», «parece-me»). Para a crítica social, junta a este excerto o jantar do Hotel Central: uma elite que sabe que o país vai falir e muda de assunto.</p>",
+  "novo": "<table class=\\\"apoio-tabela\\\" role=\\\"table\\\"><thead role=\\\"rowgroup\\\"><tr role=\\\"row\\\"><th scope=\\\"col\\\" role=\\\"columnheader\\\">Peça</th><th scope=\\\"col\\\" role=\\\"columnheader\\\">O que é</th></tr></thead><tbody role=\\\"rowgroup\\\"><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Tese</th><td role=\\\"cell\\\" data-label=\\\"O que é\\\">a tua posição, numa frase</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Argumento</th><td role=\\\"cell\\\" data-label=\\\"O que é\\\">uma razão que a prova, com um exemplo</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Contra-argumento</th><td role=\\\"cell\\\" data-label=\\\"O que é\\\">o que dirá quem discorda</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Refutação</th><td role=\\\"cell\\\" data-label=\\\"O que é\\\">a tua resposta</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Modalização</th><td role=\\\"cell\\\" data-label=\\\"O que é\\\">as palavras que mostram o grau de certeza («talvez», «sem dúvida», «parece-me»)</td></tr></tbody></table><p>Para a crítica social, junta a este excerto o jantar do Hotel Central: uma elite que sabe que o país vai falir e muda de assunto.</p>",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 9 (A). Itens paralelos que pedem tabela passam a tabela (como na M7-F10, na M7-F15 e do M1 ao M4). «refutação» passa a ter maiúscula por abrir linha; a última frase fica num parágrafo a seguir à tabela."
+ },
+ {
+  "ficheiro": "m5/licao-m5-f13/index.html",
+  "local": "M5-F13, cartão 15, O texto, 5 de 5 (vocabulário: a entrada «Gremio»)",
+  "antigo": "<b>Gremio</b>, Casa Havaneza, clube e tabacaria do Chiado",
+  "novo": "<b>Gremio</b> e <b>Casa Havaneza</b>, clube e tabacaria do Chiado",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 22 (C). Caso do mesmo tipo. Os nomes a negrito, o último ligado com «e»."
+ },
+ {
+  "ficheiro": "m5/licao-m5-f13/index.html",
+  "local": "M5-F13, cartão 15, O texto, 5 de 5 (vocabulário: a entrada «Bois»)",
+  "antigo": "<b>Bois</b>, Bignon, Trouville, Saint-Cloud, lugares",
+  "novo": "<b>Bois</b>, <b>Bignon</b>, <b>Trouville</b> e <b>Saint-Cloud</b>, lugares",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 22 (C). Caso do mesmo tipo."
+ },
+ {
+  "ficheiro": "m5/licao-m5-f13/index.html",
+  "local": "M5-F13, cabeça: a folha das tabelas de apoio, antes da camada de aparência",
+  "antigo": "<link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-reading1\">",
+  "novo": "<link rel=\"stylesheet\" href=\"../../assets/pt-lessons/apoios-tabelas.css?v=20261106.1\"><link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-reading1\">",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 9 (A). A lição passa a carregar as tabelas de apoio, antes da camada de aparência."
+ },
+ {
+  "ficheiro": "m5/licao-m5-f13/index.html",
+  "local": "M5-F13: «Porto, c. 1895)» que não se parte (com o contexto «c. 1895).»)",
+  "antigo": "c. 1895).",
+  "novo": "c. 1895).",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 36 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m5/licao-m5-f14/index.html",
+  "local": "M5-F14: «Benoliel, c. 1910)» que não se parte (com o contexto «c. 1910).»)",
+  "antigo": "c. 1910).",
+  "novo": "c. 1910).",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 37 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m5/licao-m5-f14/index.html",
+  "local": "M5-F14: «O hotel do capítulo VI,» que não se parte (com o contexto «capítulo VI»)",
+  "antigo": "capítulo VI",
+  "novo": "capítulo VI",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 37 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m5/licao-m5-f14/index.html",
+  "local": "M5-F14: «(2 min)» que não se parte (com o contexto «2 min)<»)",
+  "antigo": "2 min)<",
+  "novo": "2 min)<",
+  "ocorrencias": 2,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 37 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m5/licao-m5-f14/index.html",
+  "local": "M5-F14: «(capítulo I; retoma» que não se parte (com o contexto «capítulo I»)",
+  "antigo": "capítulo I",
+  "novo": "capítulo I",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 37 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m5/licao-m5-f14/index.html",
+  "local": "M5-F14: «>M5-F10</a>» que não se parte (com o contexto «M5-F10»)",
+  "antigo": "M5-F10",
+  "novo": "M5-⁠F10",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 37 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m5/licao-m5-f15/index.html",
+  "local": "M5-F15: «(1888), volume 1, página» que não se parte (com o contexto «as</i>, primeira edição (1888), volume 1, página de rosto…»)",
+  "antigo": "as</i>, primeira edição (1888), volume 1, página de rosto. Domínio públi",
+  "novo": "as</i>, primeira edição (1888), volume 1, página de rosto. Domínio públi",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 38 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m5/licao-m5-f15/index.html",
+  "local": "M5-F15: «(primeiros 4 min)» que não se parte (com o contexto «4 min)<»)",
+  "antigo": "4 min)<",
+  "novo": "4 min)<",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 38 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m5/licao-m5-f15/index.html",
+  "local": "M5-F15: «(8 de janeiro de 2025)» que não se parte (com o contexto «8 de janeiro de 2025»)",
+  "antigo": "8 de janeiro de 2025",
+  "novo": "8 de janeiro de 2025",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 38 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m5/licao-m5-f16/index.html",
+  "local": "M5-F16: «No capítulo I, o padre» que não se parte (com o contexto «capítulo I,»)",
+  "antigo": "capítulo I,",
+  "novo": "capítulo I,",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 39 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m5/licao-m5-f16/index.html",
+  "local": "M5-F16: «No capítulo I, o padre» que não se parte (com o contexto «capítulo I »)",
+  "antigo": "capítulo I ",
+  "novo": "capítulo I ",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 39 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m5/licao-m5-f16/index.html",
+  "local": "M5-F16: «No capítulo III, Brown» que não se parte (com o contexto «capítulo III»)",
+  "antigo": "capítulo III",
+  "novo": "capítulo III",
+  "ocorrencias": 5,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 39 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m5/licao-m5-f16/index.html",
+  "local": "M5-F16: «vol. I, Porto» que não se parte (com o contexto «vol. I»)",
+  "antigo": "vol. I",
+  "novo": "vol. I",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 39 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m5/licao-m5-f16/index.html",
+  "local": "M5-F16: «do capítulo I (pp. 18–19)» que não se parte (com o contexto «pp. 18–19»)",
+  "antigo": "pp. 18–19",
+  "novo": "pp. 18–⁠19",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 39 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m5/licao-m5-f16/index.html",
+  "local": "M5-F16: «do capítulo III (pp. 82–83)» que não se parte (com o contexto «pp. 82–83»)",
+  "antigo": "pp. 82–83",
+  "novo": "pp. 82–⁠83",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 39 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m5/licao-m5-f16/index.html",
+  "local": "M5-F16: «capítulos I e III» que não se parte",
+  "antigo": "capítulos I e III",
+  "novo": "capítulos I e III",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 39 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m5/licao-m5-f16/index.html",
+  "local": "M5-F16: «capítulo III, p. 90.» que não se parte (com o contexto «p. 90»)",
+  "antigo": "p. 90",
+  "novo": "p. 90",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 39 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m5/licao-m5-f17/index.html",
+  "local": "M5-F17: «7 de março de 1882» que não se parte",
+  "antigo": "7 de março de 1882",
+  "novo": "7 de março de 1882",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 40 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m5/licao-m5-f17/index.html",
+  "local": "M5-F17: «capítulo XII, edição de Ivo Castro» que não se parte (com o contexto «capítulo XII, ed»)",
+  "antigo": "capítulo XII, ed",
+  "novo": "capítulo XII, ed",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 40 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m5/licao-m5-f17/index.html",
+  "local": "M5-F17: «capítulo XII, edição de Ivo Castro» que não se parte (com o contexto «capítulo XII.\"},»)",
+  "antigo": "capítulo XII.\"},",
+  "novo": "capítulo XII.\"},",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 40 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m5/licao-m5-f17/index.html",
+  "local": "M5-F17: «capítulo XII, edição de Ivo Castro» que não se parte (com o contexto «capítulo XII e s»)",
+  "antigo": "capítulo XII e s",
+  "novo": "capítulo XII e s",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 40 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m5/licao-m5-f17/index.html",
+  "local": "M5-F17: «2020, p. 120.» que não se parte (com o contexto «p. 120»)",
+  "antigo": "p. 120",
+  "novo": "p. 120",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 40 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m5/licao-m5-f17/index.html",
+  "local": "M5-F17: «Procura o capítulo XII e a página impressa 120.» que não se parte (com o contexto «capítulo XII e a página impressa 120»)",
+  "antigo": "capítulo XII e a página impressa 120",
+  "novo": "capítulo XII e a página impressa 120",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 40 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m5/m5-o-pais-ou-eles/index.html",
+  "local": "m5/m5-o-pais-ou-eles: «cerca de 25 min</p>» que não se parte (com o contexto «25 min»)",
+  "antigo": "25 min",
+  "novo": "25 min",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 62 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m5/m5-o-pais-ou-eles/index.html",
+  "local": "m5/m5-o-pais-ou-eles: «</i>, cap. VI, o jantar» que não se parte (com o contexto «cap. VI»)",
+  "antigo": "cap. VI",
+  "novo": "cap. VI",
+  "ocorrencias": 2,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 62 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m5/m5-o-pais-ou-eles/index.html",
+  "local": "m5/m5-o-pais-ou-eles: «</i>, cap. IV, uma vida» que não se parte (com o contexto «cap. IV»)",
+  "antigo": "cap. IV",
+  "novo": "cap. IV",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 62 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m5/m5-o-pais-ou-eles/index.html",
+  "local": "m5/m5-o-pais-ou-eles: «Gutenberg n.º 40409» que não se parte (com o contexto «n.º 40409»)",
+  "antigo": "n.º 40409",
+  "novo": "n.º 40409",
+  "ocorrencias": 5,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 62 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m5/m5-o-pais-ou-eles/index.html",
+  "local": "m5/m5-o-pais-ou-eles: «no capítulo IV: resoluções» que não se parte (com o contexto «capítulo IV»)",
+  "antigo": "capítulo IV",
+  "novo": "capítulo IV",
+  "ocorrencias": 2,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 62 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m5/m5-quem-podia-ter-feito-diferente/index.html",
+  "local": "m5/m5-quem-podia-ter-feito-diferente: «cerca de 25 min</p>» que não se parte (com o contexto «25 min»)",
+  "antigo": "25 min",
+  "novo": "25 min",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 61 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m5/m5-quem-podia-ter-feito-diferente/index.html",
+  "local": "m5/m5-quem-podia-ter-feito-diferente: «a folhas 232, o seguinte» que não se parte (com o contexto «folhas 232»)",
+  "antigo": "folhas 232",
+  "novo": "folhas 232",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 61 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m5/m5-quem-podia-ter-feito-diferente/index.html",
+  "local": "m5/m5-quem-podia-ter-feito-diferente: «em 17 de Março de 1807» que não se parte (com o contexto «17 de Março de 1807»)",
+  "antigo": "17 de Março de 1807",
+  "novo": "17 de Março de 1807",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 61 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m5/m5-quem-podia-ter-feito-diferente/index.html",
+  "local": "m5/m5-quem-podia-ter-feito-diferente: «</i>, Capítulo IV (o retrato» que não se parte (com o contexto «Capítulo IV»)",
+  "antigo": "Capítulo IV",
+  "novo": "Capítulo IV",
+  "ocorrencias": 2,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 61 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m5/m5-quem-podia-ter-feito-diferente/index.html",
+  "local": "m5/m5-quem-podia-ter-feito-diferente: «Gutenberg n.º 16425» que não se parte (com o contexto «n.º 16425»)",
+  "antigo": "n.º 16425",
+  "novo": "n.º 16425",
+  "ocorrencias": 5,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 61 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m5/mapa-do-modulo-m5/index.html",
+  "local": "m5/mapa-do-modulo-m5, secção «As tarefas do Teams» (p.avaliacao-tarefas)",
+  "antigo": "<p class=\"avaliacao-tarefas\">Avaliação: tarefa da Unidade 1, 30 %; tarefa da Unidade 2, 30 %; provas rápidas, 10 %; prova escrita, 30 %. ",
+  "novo": "<p>Avaliação:</p><table class=\"apoio-tabela\" role=\"table\"><thead role=\"rowgroup\"><tr role=\"row\"><th scope=\"col\" role=\"columnheader\" style=\"width:auto\">Elemento</th><th scope=\"col\" role=\"columnheader\" style=\"width:5.5rem\">Peso</th></tr></thead><tbody role=\"rowgroup\"><tr role=\"row\"><th scope=\"row\" role=\"rowheader\">Tarefa da Unidade 1</th><td role=\"cell\" data-label=\"Peso\">30 %</td></tr><tr role=\"row\"><th scope=\"row\" role=\"rowheader\">Tarefa da Unidade 2</th><td role=\"cell\" data-label=\"Peso\">30 %</td></tr><tr role=\"row\"><th scope=\"row\" role=\"rowheader\">Provas rápidas</th><td role=\"cell\" data-label=\"Peso\">10 %</td></tr><tr role=\"row\"><th scope=\"row\" role=\"rowheader\">Prova escrita</th><td role=\"cell\" data-label=\"Peso\">30 %</td></tr></tbody></table><p class=\"avaliacao-tarefas\">",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 12 (A). Itens paralelos que pedem tabela passam a tabela (como na M7-F10, na M7-F15 e do M1 ao M4). Como no M3 e no achado 0; o resto do parágrafo fica no mesmo p.avaliacao-tarefas."
+ },
+ {
+  "ficheiro": "m5/mapa-do-modulo-m5/index.html",
+  "local": "m5/mapa-do-modulo-m5, cabeça: a folha das tabelas de apoio, antes da camada de aparência",
+  "antigo": "<link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-universal-1\">",
+  "novo": "<link rel=\"stylesheet\" href=\"../../assets/pt-lessons/apoios-tabelas.css?v=20261106.1\"><link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-universal-1\">",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 12 (A). A mapa do módulo passa a carregar as tabelas de apoio, antes da camada de aparência."
+ },
+ {
+  "ficheiro": "m5/mapa-do-modulo-m5/index.html",
+  "local": "m5/mapa-do-modulo-m5: «Camilo Castelo Branco (1825–1890)» que não se parte (com o contexto «1825–1890»)",
+  "antigo": "1825–1890",
+  "novo": "1825–⁠1890",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 43 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m5/mapa-do-modulo-m5/index.html",
+  "local": "m5/mapa-do-modulo-m5: «Eça de Queirós (1845–1900)» que não se parte (com o contexto «1845–1900»)",
+  "antigo": "1845–1900",
+  "novo": "1845–⁠1900",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 43 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m5/mapa-do-modulo-m5/index.html",
+  "local": "m5/mapa-do-modulo-m5: «individual, 90 minutos, 30 %.» que não se parte (com o contexto «90 minutos»)",
+  "antigo": "90 minutos",
+  "novo": "90 minutos",
+  "ocorrencias": 3,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 43 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m5/mapa-do-modulo-m5/index.html",
+  "local": "m5/mapa-do-modulo-m5: «individual, 90 minutos, 30 %.» que não se parte (com o contexto «30 %. <a»)",
+  "antigo": "30 %. <a",
+  "novo": "30 %. <a",
+  "ocorrencias": 2,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 43 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m5/mapa-do-modulo-m5/index.html",
+  "local": "m5/mapa-do-modulo-m5: «(1888), volume 1, página» que não se parte (com o contexto «as</i>, primeira edição (1888), volume 1, página de rosto…»)",
+  "antigo": "as</i>, primeira edição (1888), volume 1, página de rosto. Domínio públi",
+  "novo": "as</i>, primeira edição (1888), volume 1, página de rosto. Domínio públi",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 43 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m5/mapa-do-modulo-m5/index.html",
+  "local": "m5/mapa-do-modulo-m5: «(1888), volume 1, página» que não se parte (com o contexto «as</i>, primeira edição (1888), volume 1, página de rosto…»)",
+  "antigo": "as</i>, primeira edição (1888), volume 1, página de rosto. <a href=\"http",
+  "novo": "as</i>, primeira edição (1888), volume 1, página de rosto. <a href=\"http",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 43 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m5/mapa-do-modulo-m5/index.html",
+  "local": "m5/mapa-do-modulo-m5: «\">Lição M5-F» que não se parte (com o contexto «M5-F02»)",
+  "antigo": "M5-F02",
+  "novo": "M5-⁠F02",
+  "ocorrencias": 4,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 43 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m5/mapa-do-modulo-m5/index.html",
+  "local": "m5/mapa-do-modulo-m5: «\">Lição M5-F» que não se parte (com o contexto «M5-F10»)",
+  "antigo": "M5-F10",
+  "novo": "M5-⁠F10",
+  "ocorrencias": 5,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 43 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m5/mapa-do-modulo-m5/index.html",
+  "local": "m5/mapa-do-modulo-m5: «\">lição M5-F» que não se parte (com o contexto «M5-F11»)",
+  "antigo": "M5-F11",
+  "novo": "M5-⁠F11",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 43 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m5/mapa-do-modulo-m5/index.html",
+  "local": "m5/mapa-do-modulo-m5: «\">lição M5-F» que não se parte (com o contexto «M5-F14»)",
+  "antigo": "M5-F14",
+  "novo": "M5-⁠F14",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 43 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m5/mapa-do-modulo-m5/index.html",
+  "local": "m5/mapa-do-modulo-m5: «<h1>Narrativa do século XIX</h1>» que não se parte (com o contexto «século XIX</h1»)",
+  "antigo": "século XIX</h1",
+  "novo": "século XIX</h1",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 43 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m5/mapa-do-modulo-m5/index.html",
+  "local": "m5/mapa-do-modulo-m5: «2.º ano» que não se parte",
+  "antigo": "2.º ano",
+  "novo": "2.º ano",
+  "ocorrencias": 2,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 43 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m5/painel-m5-f10/index.html",
+  "local": "M5-F10 (notas do docente): o enunciado do cartão 24 igual ao da lição, em a lista do painel",
+  "antigo": "{\"k\":24,\"t\":\"frase\",\"p\":\"Põe por ordem o começo do segundo parágrafo do cap. I.\"}",
+  "novo": "{\"k\":24,\"t\":\"frase\",\"p\":\"Põe por ordem o começo do segundo parágrafo do cap. I.\"}",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 33 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla). No painel do docente, que segue os enunciados dos cartões da lição."
+ },
+ {
+  "ficheiro": "m5/painel-m5-f10/index.html",
+  "local": "M5-F10 (notas do docente): o enunciado do cartão 24 igual ao da lição, em o seletor",
+  "antigo": "<option value=\"24\">Põe por ordem o começo do segundo parágrafo do cap. I.</option>",
+  "novo": "<option value=\"24\">Põe por ordem o começo do segundo parágrafo do cap. I.</option>",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 33 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla). No painel do docente, que segue os enunciados dos cartões da lição."
+ },
+ {
+  "ficheiro": "m5/painel-m5-f16/index.html",
+  "local": "M5-F16 (notas do docente): «capítulos I e III» que não se parte",
+  "antigo": "capítulos I e III",
+  "novo": "capítulos I e III",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 39 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla). Nas notas do docente, geradas a partir dos cartões da lição (scripts/gerar_licoes_20261101.py)."
+ },
+ {
+  "ficheiro": "m5/painel-m5-f16/index.html",
+  "local": "M5-F16 (notas do docente): «resumo do capítulo III:» que não se parte (com o contexto «capítulo III»)",
+  "antigo": "capítulo III",
+  "novo": "capítulo III",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 39 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla). Nas notas do docente, geradas a partir dos cartões da lição (scripts/gerar_licoes_20261101.py)."
+ },
+ {
+  "ficheiro": "m5/painel-m5-f17/index.html",
+  "local": "M5-F17 (notas do docente): «recorte do capítulo XII.» que não se parte (com o contexto «capítulo XII»)",
+  "antigo": "capítulo XII",
+  "novo": "capítulo XII",
+  "ocorrencias": 2,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 40 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla). Nas notas do docente, geradas a partir dos cartões da lição (scripts/gerar_licoes_20261101.py)."
+ },
+ {
+  "ficheiro": "m5/portefolio-do-modulo-m5/index.html",
+  "local": "m5/portefolio-do-modulo-m5, «A lista de verificação»: M5_U1_registo_&lt;dia-mês&gt; em <code>",
+  "antigo": "<td>M5_U1_registo_&lt;dia-mês&gt;</td>",
+  "novo": "<td><code>M5_<wbr>U1_<wbr>registo_<wbr>&lt;dia-mês&gt;</code></td>",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 23 (C). Caso do mesmo tipo. Como nas outras linhas da lista, com um ponto onde o nome pode mudar de linha (<wbr>) depois de cada «_»."
+ },
+ {
+  "ficheiro": "m5/portefolio-do-modulo-m5/index.html",
+  "local": "m5/portefolio-do-modulo-m5, «A lista de verificação»: M5_U1_pergunta em <code>",
+  "antigo": "<td>M5_U1_pergunta</td>",
+  "novo": "<td><code>M5_<wbr>U1_<wbr>pergunta</code></td>",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 23 (C). Caso do mesmo tipo."
+ },
+ {
+  "ficheiro": "m5/portefolio-do-modulo-m5/index.html",
+  "local": "m5/portefolio-do-modulo-m5, «A lista de verificação»: M5_U1_o-que-aprendi em <code>",
+  "antigo": "<td>M5_U1_o-que-aprendi</td>",
+  "novo": "<td><code>M5_<wbr>U1_<wbr>o-que-aprendi</code></td>",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 23 (C). Caso do mesmo tipo."
+ },
+ {
+  "ficheiro": "m5/portefolio-do-modulo-m5/index.html",
+  "local": "m5/portefolio-do-modulo-m5, «A lista de verificação»: M5_U2_registo_&lt;dia-mês&gt; em <code>",
+  "antigo": "<td>M5_U2_registo_&lt;dia-mês&gt;</td>",
+  "novo": "<td><code>M5_<wbr>U2_<wbr>registo_<wbr>&lt;dia-mês&gt;</code></td>",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 23 (C). Caso do mesmo tipo."
+ },
+ {
+  "ficheiro": "m5/portefolio-do-modulo-m5/index.html",
+  "local": "m5/portefolio-do-modulo-m5, «A lista de verificação»: M5_U2_pergunta em <code>",
+  "antigo": "<td>M5_U2_pergunta</td>",
+  "novo": "<td><code>M5_<wbr>U2_<wbr>pergunta</code></td>",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 23 (C). Caso do mesmo tipo."
+ },
+ {
+  "ficheiro": "m5/portefolio-do-modulo-m5/index.html",
+  "local": "m5/portefolio-do-modulo-m5, «A lista de verificação»: M5_U2_o-que-aprendi em <code>",
+  "antigo": "<td>M5_U2_o-que-aprendi</td>",
+  "novo": "<td><code>M5_<wbr>U2_<wbr>o-que-aprendi</code></td>",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 23 (C). Caso do mesmo tipo."
+ },
+ {
+  "ficheiro": "m5/portefolio-do-modulo-m5/index.html",
+  "local": "m5/portefolio-do-modulo-m5, «A lista de verificação»: M5_cartao-do-percurso, um ponto para mudar de linha",
+  "antigo": "<td><code>M5_cartao-do-percurso</code></td>",
+  "novo": "<td><code>M5_<wbr>cartao-do-percurso</code></td>",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 23 (C). Caso do mesmo tipo."
+ },
+ {
+  "ficheiro": "m5/portefolio-do-modulo-m5/index.html",
+  "local": "m5/portefolio-do-modulo-m5, «A lista de verificação»: M5_Prova-escrita, um ponto para mudar de linha",
+  "antigo": "<td><code>M5_Prova-escrita</code></td>",
+  "novo": "<td><code>M5_<wbr>Prova-escrita</code></td>",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 23 (C). Caso do mesmo tipo."
+ },
+ {
+  "ficheiro": "m5/portefolio-do-modulo-m5/index.html",
+  "local": "m5/portefolio-do-modulo-m5, a folha da página: os nomes em <code> não se partem",
+  "antigo": "code{font:.85rem Consolas,\"Courier New\",monospace;border:1px solid var(--tinta);padding:1px 4px}\n",
+  "novo": "code{font:.85rem Consolas,\"Courier New\",monospace;border:1px solid var(--tinta);padding:1px 4px}\ntd code{white-space:nowrap}\n",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 23 (C). Caso do mesmo tipo. O aluno copia estes nomes à letra: na tabela, não partem nos hífenes (só nos <wbr>)."
+ },
+ {
+  "ficheiro": "m5/portefolio-do-modulo-m5/index.html",
+  "local": "m5/portefolio-do-modulo-m5: «tarefa de 90 minutos, com grelha» que não se parte (com o contexto «90 minutos»)",
+  "antigo": "90 minutos",
+  "novo": "90 minutos",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 44 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m5/portefolio-do-modulo-m5/index.html",
+  "local": "m5/portefolio-do-modulo-m5: «(40 %)» que não se parte (com o contexto «40 %»)",
+  "antigo": "40 %",
+  "novo": "40 %",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 44 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m5/portefolio-do-modulo-m5/index.html",
+  "local": "m5/portefolio-do-modulo-m5: «2.º ano» que não se parte",
+  "antigo": "2.º ano",
+  "novo": "2.º ano",
+  "ocorrencias": 2,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 44 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m5/portefolio-do-modulo-m5/index.html",
+  "local": "m5/portefolio-do-modulo-m5: «Narrativa do século XIX.</p>» que não se parte (com o contexto «século XIX»)",
+  "antigo": "século XIX",
+  "novo": "século XIX",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 44 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "tarefas/m5-u1/aquecimento/index.html",
+  "local": "tarefas/m5-u1/aquecimento: «na Introdução e no cap. IV;» que não se parte (com o contexto «cap. IV»)",
+  "antigo": "cap. IV",
+  "novo": "cap. IV",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 47 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "tarefas/m5-u1/correcao/index.html",
+  "local": "tarefas/m5-u1/correcao: «outra do cap. IV em que» que não se parte (com o contexto «cap. IV»)",
+  "antigo": "cap. IV",
+  "novo": "cap. IV",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 51 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "tarefas/m5-u1/grelha/index.html",
+  "local": "tarefas/m5-u1/grelha, critério 3, nível 6 («cumprimento consistente»): os elementos de cada tema em listas",
+  "antigo": "<p>Cumpres os cinco elementos do teu tema (um ponto cada) e a explicação (mais um ponto). Tema A: as marcas da carta (local e data, vocativo, despedida e assinatura); a resposta a uma pergunta de Teresa; uma memória dos dois; um recurso expressivo teu; um eco do romance, entre «». Explicação: o facto do romance que a carta respeita e o que faz o recurso. Tema B: um painel para quem nunca leu o romance; dois factos do dossiê (contam como dois); uma frase curta do romance, entre «»; o que o painel não pode afirmar. Explicação: porque escolheste a frase.</p>",
+  "novo": "<p>Cumpres os cinco elementos do teu tema (um ponto cada) e a explicação (mais um ponto). </p><p><b>Tema A</b>:</p><ul><li>as marcas da carta (local e data, vocativo, despedida e assinatura);</li><li>a resposta a uma pergunta de Teresa;</li><li>uma memória dos dois;</li><li>um recurso expressivo teu;</li><li>um eco do romance, entre «».</li></ul><p>Explicação: o facto do romance que a carta respeita e o que faz o recurso.</p><p><b>Tema B</b>:</p><ul><li>um painel para quem nunca leu o romance;</li><li>dois factos do dossiê (contam como dois);</li><li>uma frase curta do romance, entre «»;</li><li>o que o painel não pode afirmar.</li></ul><p>Explicação: porque escolheste a frase.</p>",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 24 (C). Caso do mesmo tipo. Pelo gerador das grelhas, com «max_em_listas» no critério 3 (nos dados desta camada), como no M1: na forma do gerador («<b>Tema A</b>:», a proposta tinha «<b>Tema A:</b>»), com <ul> e o fecho de cada tema num parágrafo; a versão de correção fica com o texto corrido (está num <small> dentro de uma célula)."
+ },
+ {
+  "ficheiro": "tarefas/m5-u1/grelha/index.html",
+  "local": "tarefas/m5-u1/grelha: «outra do cap. IV em que» que não se parte (com o contexto «cap. IV»)",
+  "antigo": "cap. IV",
+  "novo": "cap. IV",
+  "ocorrencias": 3,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 49 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "tarefas/m5-u1/index.html",
+  "local": "tarefas/m5-u1, «Aquecer em cartões» (os tempos da aula de tarefa)",
+  "antigo": "<p>No início da aula de tarefa: 10 minutos de cartões com consulta, 5 minutos para leres o enunciado, 60 minutos de produção e 15 minutos de revisão e entrega. Total: 90 minutos. O relógio de produção começa depois da leitura.</p>",
+  "novo": "<p>No início da aula de tarefa:</p><table class=\"apoio-tabela\" role=\"table\"><thead role=\"rowgroup\"><tr role=\"row\"><th scope=\"col\" role=\"columnheader\">Momento</th><th scope=\"col\" role=\"columnheader\">Tempo</th></tr></thead><tbody role=\"rowgroup\"><tr role=\"row\"><th scope=\"row\" role=\"rowheader\">Cartões com consulta</th><td role=\"cell\" data-label=\"Tempo\">10 minutos</td></tr><tr role=\"row\"><th scope=\"row\" role=\"rowheader\">Lês o enunciado</th><td role=\"cell\" data-label=\"Tempo\">5 minutos</td></tr><tr role=\"row\"><th scope=\"row\" role=\"rowheader\">Produção</th><td role=\"cell\" data-label=\"Tempo\">60 minutos</td></tr><tr role=\"row\"><th scope=\"row\" role=\"rowheader\">Revisão e entrega</th><td role=\"cell\" data-label=\"Tempo\">15 minutos</td></tr><tr role=\"row\"><th scope=\"row\" role=\"rowheader\">Total</th><td role=\"cell\" data-label=\"Tempo\">90 minutos</td></tr></tbody></table><p>O relógio de produção começa depois da leitura.</p>",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 13 (A). Itens paralelos que pedem tabela passam a tabela (como na M7-F10, na M7-F15 e do M1 ao M4). Pelo gerador das tarefas, como no M1 («tabela» e «depois» nos dados, que estão nesta camada). O texto atual diz «para leres o enunciado» e «depois da leitura»: a linha é «Lês o enunciado» (a proposta citava o texto antigo, «O docente apresenta o enunciado»). O total fica numa linha do corpo da tabela (a proposta punha-o num <tfoot>, que a folha comum não empilha no telemóvel), e o estilo é o da folha comum (a proposta pedia regras próprias em task-90.css)."
+ },
+ {
+  "ficheiro": "tarefas/m5-u1/index.html",
+  "local": "tarefas/m5-u1, tema A, «A voz de Simão»: os cinco elementos da carta",
+  "antigo": "Escreve a carta (90 a 120 palavras): local e data, vocativo, despedida e assinatura; resposta a uma pergunta dela; uma memória dos dois; um recurso expressivo teu; um eco do romance, entre «». Depois,",
+  "novo": "Escreve a carta (90 a 120 palavras):</p><ol><li>local e data, vocativo, despedida e assinatura;</li><li>resposta a uma pergunta dela;</li><li>uma memória dos dois;</li><li>um recurso expressivo teu;</li><li>um eco do romance, entre «».</li></ol><p>Depois,",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 25 (C). Caso do mesmo tipo. Pelo gerador das tarefas (temas[0].texto, nos dados desta camada): os cinco elementos numa lista numerada."
+ },
+ {
+  "ficheiro": "tarefas/m5-u1/index.html",
+  "local": "tarefas/m5-u1, cabeça: a folha das tabelas de apoio, antes da camada de aparência",
+  "antigo": "<link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-universal-1\">",
+  "novo": "<link rel=\"stylesheet\" href=\"../../assets/pt-lessons/apoios-tabelas.css?v=20261106.1\"><link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-universal-1\">",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 13 (A). A tarefa da unidade (gerada, como no M1) passa a carregar as tabelas de apoio, antes da camada de aparência."
+ },
+ {
+  "ficheiro": "tarefas/m5-u1/index.html",
+  "local": "tarefas/m5-u1: «durante 90 minutos, com entrega»",
+  "antigo": "durante 90 minutos, com entrega",
+  "novo": "durante 90 minutos, com entrega",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 45 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla). A meta descrição muda com «nao_partir» (o gerador prende os três números do molde, como no M1 e no M3); a conferência tirou-a da lista porque não se vê."
+ },
+ {
+  "ficheiro": "tarefas/m5-u1/index.html",
+  "local": "tarefas/m5-u1: «Antes de escrever · 10 min ·» que não se parte (com o contexto «10 min »)",
+  "antigo": "10 min ",
+  "novo": "10 min ",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 45 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "tarefas/m5-u1/index.html",
+  "local": "tarefas/m5-u1: «Unidade 1 · 90 min» que não se parte (com o contexto «90 min<»)",
+  "antigo": "90 min<",
+  "novo": "90 min<",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 45 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "tarefas/m5-u1/index.html",
+  "local": "tarefas/m5-u1: «outra do cap. IV em que» que não se parte (com o contexto «cap. IV»)",
+  "antigo": "cap. IV",
+  "novo": "cap. IV",
+  "ocorrencias": 2,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 45 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "tarefas/m5-u1/index.html",
+  "local": "tarefas/m5-u1: «a 17 de março de 1807;» que não se parte (com o contexto «17 de março de 1807»)",
+  "antigo": "17 de março de 1807",
+  "novo": "17 de março de 1807",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 45 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "tarefas/m5-u2/aquecimento/index.html",
+  "local": "tarefas/m5-u2/aquecimento: «no cap. I, há uma» que não se parte (com o contexto «cap. I»)",
+  "antigo": "cap. I",
+  "novo": "cap. I",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 48 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "tarefas/m5-u2/correcao/index.html",
+  "local": "tarefas/m5-u2/correcao: «já estava no cap. I e outra» que não se parte (com o contexto «cap. I»)",
+  "antigo": "cap. I",
+  "novo": "cap. I",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 52 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "tarefas/m5-u2/correcao/index.html",
+  "local": "tarefas/m5-u2/correcao: «narrada na 3.ª pessoa;» que não se parte (com o contexto «3.ª pessoa»)",
+  "antigo": "3.ª pessoa",
+  "novo": "3.ª pessoa",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 52 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "tarefas/m5-u2/grelha/index.html",
+  "local": "tarefas/m5-u2/grelha, critério 3, nível 6 («cumprimento consistente»): os elementos de cada tema em listas",
+  "antigo": "<p>Cumpres os cinco elementos do teu tema (um ponto cada) e a explicação ou a conclusão (mais um ponto). Tema A: uma mesa de hoje narrada na 3.ª pessoa; uma conversa séria; uma coisa banal que a corta ou desmonta; uma fala em discurso direto; um pensamento em indireto livre. Explicação: o que imitaste de Eça e o que critica a tua interrupção. Tema B: a tese na primeira frase; outra citação do último capítulo, explicada; um facto datado do dossiê, ligado à tese; um contra-argumento; a tua refutação. Conclusão: volta à tese com outras palavras.</p>",
+  "novo": "<p>Cumpres os cinco elementos do teu tema (um ponto cada) e a explicação ou a conclusão (mais um ponto). </p><p><b>Tema A</b>:</p><ul><li>uma mesa de hoje narrada na 3.ª pessoa;</li><li>uma conversa séria;</li><li>uma coisa banal que a corta ou desmonta;</li><li>uma fala em discurso direto;</li><li>um pensamento em indireto livre.</li></ul><p>Explicação: o que imitaste de Eça e o que critica a tua interrupção.</p><p><b>Tema B</b>:</p><ul><li>a tese na primeira frase;</li><li>outra citação do último capítulo, explicada;</li><li>um facto datado do dossiê, ligado à tese;</li><li>um contra-argumento;</li><li>a tua refutação.</li></ul><p>Conclusão: volta à tese com outras palavras.</p>",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 26 (C). Caso do mesmo tipo. Pelo gerador das grelhas, com «max_em_listas» no critério 3 (nos dados desta camada), como no M1: na forma do gerador («<b>Tema A</b>:», a proposta tinha «<b>Tema A:</b>»), com <ul> e o fecho de cada tema num parágrafo; a versão de correção fica com o texto corrido (está num <small> dentro de uma célula). O tema B fecha com «Conclusão:» (o gerador passa a aceitá-la). «3.ª pessoa» já leva o espaço que não quebra (achado 50)."
+ },
+ {
+  "ficheiro": "tarefas/m5-u2/grelha/index.html",
+  "local": "tarefas/m5-u2/grelha: «o que vem do cap. I e o que é novo» que não se parte (com o contexto «cap. I »)",
+  "antigo": "cap. I ",
+  "novo": "cap. I ",
+  "ocorrencias": 2,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 50 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "tarefas/m5-u2/grelha/index.html",
+  "local": "tarefas/m5-u2/grelha: «primo!» (cap. IV de» que não se parte (com o contexto «cap. IV»)",
+  "antigo": "cap. IV",
+  "novo": "cap. IV",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 50 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "tarefas/m5-u2/index.html",
+  "local": "tarefas/m5-u2, «Aquecer em cartões» (os tempos da aula de tarefa)",
+  "antigo": "<p>No início da aula de tarefa: 10 minutos de cartões com consulta, 5 minutos para leres o enunciado, 60 minutos de produção e 15 minutos de revisão e entrega. Total: 90 minutos. O relógio de produção começa depois da leitura.</p>",
+  "novo": "<p>No início da aula de tarefa:</p><table class=\"apoio-tabela\" role=\"table\"><thead role=\"rowgroup\"><tr role=\"row\"><th scope=\"col\" role=\"columnheader\">Momento</th><th scope=\"col\" role=\"columnheader\">Tempo</th></tr></thead><tbody role=\"rowgroup\"><tr role=\"row\"><th scope=\"row\" role=\"rowheader\">Cartões com consulta</th><td role=\"cell\" data-label=\"Tempo\">10 minutos</td></tr><tr role=\"row\"><th scope=\"row\" role=\"rowheader\">Lês o enunciado</th><td role=\"cell\" data-label=\"Tempo\">5 minutos</td></tr><tr role=\"row\"><th scope=\"row\" role=\"rowheader\">Produção</th><td role=\"cell\" data-label=\"Tempo\">60 minutos</td></tr><tr role=\"row\"><th scope=\"row\" role=\"rowheader\">Revisão e entrega</th><td role=\"cell\" data-label=\"Tempo\">15 minutos</td></tr><tr role=\"row\"><th scope=\"row\" role=\"rowheader\">Total</th><td role=\"cell\" data-label=\"Tempo\">90 minutos</td></tr></tbody></table><p>O relógio de produção começa depois da leitura.</p>",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 14 (A). Itens paralelos que pedem tabela passam a tabela (como na M7-F10, na M7-F15 e do M1 ao M4). Como no achado 13, pelo gerador das tarefas."
+ },
+ {
+  "ficheiro": "tarefas/m5-u2/index.html",
+  "local": "tarefas/m5-u2, tema B, «Falhámos a vida, hoje?»: os cinco elementos do parágrafo",
+  "antigo": "Num parágrafo de opinião (100 a 130 palavras): tese na primeira frase; outra citação do último capítulo, explicada; um facto datado do dossiê, ligado à tese; contra-argumento e refutação; conclusão.</p>",
+  "novo": "Num parágrafo de opinião (100 a 130 palavras):</p><ol><li>tese na primeira frase;</li><li>outra citação do último capítulo, explicada;</li><li>um facto datado do dossiê, ligado à tese;</li><li>contra-argumento e refutação;</li><li>conclusão.</li></ol>",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 27 (C). Caso do mesmo tipo. Pelo gerador das tarefas (temas[1].texto, nos dados desta camada); o gerador tira o parágrafo vazio que sobrava no fim (scripts/tarefas_escolha.py, 08/11/2026)."
+ },
+ {
+  "ficheiro": "tarefas/m5-u2/index.html",
+  "local": "tarefas/m5-u2, cabeça: a folha das tabelas de apoio, antes da camada de aparência",
+  "antigo": "<link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-universal-1\">",
+  "novo": "<link rel=\"stylesheet\" href=\"../../assets/pt-lessons/apoios-tabelas.css?v=20261106.1\"><link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-universal-1\">",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 14 (A). A tarefa da unidade (gerada, como no M1) passa a carregar as tabelas de apoio, antes da camada de aparência."
+ },
+ {
+  "ficheiro": "tarefas/m5-u2/index.html",
+  "local": "tarefas/m5-u2: «durante 90 minutos, com entrega»",
+  "antigo": "durante 90 minutos, com entrega",
+  "novo": "durante 90 minutos, com entrega",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 46 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla). A meta descrição muda com «nao_partir» (o gerador prende os três números do molde, como no M1 e no M3); a conferência tirou-a da lista porque não se vê."
+ },
+ {
+  "ficheiro": "tarefas/m5-u2/index.html",
+  "local": "tarefas/m5-u2: «Antes de escrever · 10 min ·» que não se parte (com o contexto «10 min »)",
+  "antigo": "10 min ",
+  "novo": "10 min ",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 46 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "tarefas/m5-u2/index.html",
+  "local": "tarefas/m5-u2: «Unidade 2 · 90 min» que não se parte (com o contexto «90 min<»)",
+  "antigo": "90 min<",
+  "novo": "90 min<",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 46 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "tarefas/m5-u2/index.html",
+  "local": "tarefas/m5-u2: «que vem do cap. I e outra nova.» que não se parte (com o contexto «cap. I»)",
+  "antigo": "cap. I",
+  "novo": "cap. I",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 46 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "tarefas/m5-u2/index.html",
+  "local": "tarefas/m5-u2: «No cap. VI, Alencar» que não se parte (com o contexto «cap. VI»)",
+  "antigo": "cap. VI",
+  "novo": "cap. VI",
+  "ocorrencias": 2,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 46 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "tarefas/m5-u2/index.html",
+  "local": "tarefas/m5-u2: «Narra na 3.ª pessoa» que não se parte (com o contexto «3.ª pessoa»)",
+  "antigo": "3.ª pessoa",
+  "novo": "3.ª pessoa",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 46 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "tarefas/m5-u2/index.html",
+  "local": "tarefas/m5-u2: «A 28 de dezembro de 2015, a RTP1» que não se parte (com o contexto «28 de dezembro de 2015»)",
+  "antigo": "28 de dezembro de 2015",
+  "novo": "28 de dezembro de 2015",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 46 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "tarefas/m5-u2/index.html",
+  "local": "tarefas/m5-u2: «A 8 de janeiro de 2025, Eça» que não se parte (com o contexto «8 de janeiro de 2025»)",
+  "antigo": "8 de janeiro de 2025",
+  "novo": "8 de janeiro de 2025",
+  "ocorrencias": 1,
+  "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M5, achado 46 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ }
+]

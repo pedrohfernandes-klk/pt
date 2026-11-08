@@ -56,7 +56,8 @@ documento('os-maias-1888', 'Eça de Queirós; edição da Livraria Internacional
  'Página de título de Os Maias, volume I, com o nome de Eça de Queirós e a edição do Porto de 1888.',
  '<i>Os Maias</i>, volume I, página de título')
 documento('camilo-1882', 'União, Photographia da Casa Real, Porto',
- 'Retrato de Camilo Castelo Branco', '7 de março de 1882',
+ # 08/11/2026: decisão 152 no M5 (achado 40, camada cuidado_m5_20261108): a data da fotografia não se parte (U+00A0; o espaço entre o mês e o «de» do ano fica), como na página.
+ 'Retrato de Camilo Castelo Branco', '7\xa0de março de\xa01882',
  'Wikimedia Commons. Coleção original não indicada.',
  'https://commons.wikimedia.org/wiki/File:Camilo_Castelo_Branco_(1882)_-_Uni%C3%A3o_%E2%80%93_Photographia_da_Casa_Real-Porto.png',
  'Fotografia de Camilo Castelo Branco sentado, com óculos e bigode.')
