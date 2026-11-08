@@ -35,6 +35,8 @@ import unittest
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'tests'))
 from auditoria_20261028 import undo_cuidado_m5_0811, undo_cuidado_m4_0811  # noqa: E402
+# 08/11/2026: por cima desta camada fica a decisão 152 no M6 (camada cuidado_m6_20261108).
+from auditoria_20261028 import undo_cuidado_m6_0811  # noqa: E402
 
 CAMADA = ROOT / 'scripts/cuidado_m5_20261108.json'
 MANIFESTO_REL = 'tests/fixtures/cuidado-m5-edits-20261108.json'
@@ -607,8 +609,11 @@ class CuidadoM5(unittest.TestCase):
                 self.assertIsNone(PARTE.search(re.sub(r'\b(?:alt|title|data-titulo)=\\?"[^"]*', '', C.j(novo)) + '0'), novo)
 
     def test_camada_fechada_reversivel_e_no_topo(self):
+        # 08/11/2026: por cima desta camada fica agora a decisão 152 no M6 (cuidado_m6_20261108, que só partilha com esta os dados das
+        # grelhas, nas entradas m6); desfaz-se primeiro, com a mesma exigência, e as contagens são as mesmas.
         r = subprocess.run([sys.executable, 'scripts/aplicar_trocas.py', 'scripts/cuidado_m5_20261108.json', '--manifesto', MANIFESTO_REL,
-                            '--verificar'], cwd=ROOT, capture_output=True, text=True, encoding='utf-8')
+                            '--verificar', '--desfazer-antes', 'tests/fixtures/cuidado-m6-edits-20261108.json'], cwd=ROOT,
+                           capture_output=True, text=True, encoding='utf-8')
         self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
         self.assertIn(f'{len(TROCAS)} trocas em {len(MANIFESTO["files"])} ficheiros: {len(TROCAS)} aplicadas, 0 por aplicar; manifesto em dia.',
                       r.stdout)
@@ -624,9 +629,11 @@ class CuidadoM5(unittest.TestCase):
         for rel, registo in m['files'].items():
             with self.subTest(pagina=rel):
                 self.assertEqual(set(registo), {'base_sha256_lf', 'after_sha256_lf', 'edits'})
-                atual = ler(rel)
+                # 08/11/2026: a página como esta camada a deixou: com a camada de cima (cuidado_m6_20261108) desfeita, com contagem
+                # estrita; undo_cuidado_m5_0811 desfaz as duas, a partir da página inteira.
+                atual = undo_cuidado_m6_0811(rel, ler(rel))
                 self.assertEqual(sha_lf(atual), registo['after_sha256_lf'])
-                b = undo_cuidado_m5_0811(rel, atual)
+                b = undo_cuidado_m5_0811(rel, ler(rel))
                 self.assertEqual(sha_lf(b), registo['base_sha256_lf'])
                 # Ida e volta: refazer as trocas sobre a base devolve a página, letra a letra.
                 refeito = b
@@ -638,7 +645,8 @@ class CuidadoM5(unittest.TestCase):
                     self.assertEqual(atual.count(e['new']), e['occurrences'], (rel, e['location']))
                     self.assertEqual(atual.replace(e['new'], '\0').count(e['old']), 0, (rel, e['location']))
                 # A camada de baixo (a decisão 152 no M4) continua a desfazer-se por baixo desta.
-                undo_cuidado_m4_0811(rel, atual)
+                # 08/11/2026: na página inteira, porque a cadeia de desfazer começa agora pela decisão 152 no M6.
+                undo_cuidado_m4_0811(rel, ler(rel))
         # Os 52 achados confirmados estão todos na camada, salvo o 30 (só a casca, que fica para o molde); nenhum recusado.
         achados = {int(n) for t in TROCAS for n in re.findall(r'\d+', t['achado'].split('achado ', 1)[1].split(' (')[0])}
         self.assertEqual(achados, CONFIRMADOS - SO_CASCA)
@@ -656,50 +664,72 @@ class CuidadoM5(unittest.TestCase):
             import verificar_camadas
         finally:
             sys.path.pop(0)
-        self.assertEqual(verificar_camadas.LAYERS[0], ('cuidado_m5_20261108', 'cuidado-m5-edits-20261108'))
-        self.assertEqual(verificar_camadas.LAYERS[1], ('cuidado_m4_20261108', 'cuidado-m4-edits-20261108'))
+        # 08/11/2026: por cima da decisão 152 no M5 fica a decisão 152 no M6 (cuidado_m6_20261108): a ordem ganha mais uma posição, com a mesma exigência.
+        self.assertEqual(verificar_camadas.LAYERS[0], ('cuidado_m6_20261108', 'cuidado-m6-edits-20261108'))
+        self.assertEqual(verificar_camadas.LAYERS[1], ('cuidado_m5_20261108', 'cuidado-m5-edits-20261108'))
+        self.assertEqual(verificar_camadas.LAYERS[2], ('cuidado_m4_20261108', 'cuidado-m4-edits-20261108'))
         auditoria = ler('tests/auditoria_20261028.py')
         corpo = auditoria[auditoria.index('def undo_cuidado_m4_0811'):]
         self.assertLess(corpo.index('undo_cuidado_m5_0811(path, text)'), corpo.index('_CUIDADO_M4_0811.get('))
+        # 08/11/2026: e a decisão 152 no M5 chama primeiro a decisão 152 no M6, que está por cima.
+        corpo = auditoria[auditoria.index('def undo_cuidado_m5_0811'):]
+        self.assertLess(corpo.index('undo_cuidado_m6_0811(path, text)'), corpo.index('_CUIDADO_M5_0811.get('))
         sala = ler('scripts/desligar_sala.py')
         self.assertLess(sala.index('cuidado-m5-edits-20261108.json'), sala.index('cuidado-m4-edits-20261108.json'))
+        # 08/11/2026: e, antes da do M5, a decisão 152 no M6, agora a mais recente.
+        self.assertLess(sala.index('cuidado-m6-edits-20261108.json'), sala.index('cuidado-m5-edits-20261108.json'))
         # Em cada cadeia dos fluxos e dos testes, esta camada desfaz-se logo antes da decisão 152 no M4, logo a seguir a --verificar.
         meu, m4 = MANIFESTO_REL, 'tests/fixtures/cuidado-m4-edits-20261108.json'
+        # 08/11/2026: e logo a seguir à decisão 152 no M6, que se desfaz primeiro, logo a seguir a --verificar, sem nada pelo meio.
+        m6 = 'tests/fixtures/cuidado-m6-edits-20261108.json'
         linhas = 0
         for wf in sorted(glob.glob(str(ROOT / '.github/workflows/*.yml'))):
             for linha in Path(wf).read_text('utf-8').splitlines():
                 if linha.lstrip().startswith('#') or '--desfazer-antes ' + m4 not in linha:
                     continue
                 linhas += 1
-                self.assertIn(f'--verificar --desfazer-antes {meu} --desfazer-antes {m4}', linha, wf)
+                self.assertIn(f'--verificar --desfazer-antes {m6} --desfazer-antes {meu} --desfazer-antes {m4}', linha, wf)
         # As 17 cadeias da decisão 152 no M4 e a da decisão 152 no M3 em pt-tarefas-qa.
         self.assertEqual(linhas, 18)
         tarefas, apoios = ler('.github/workflows/pt-tarefas-qa.yml'), ler('.github/workflows/pt-apoios-qa.yml')
-        self.assertIn(f'python scripts/aplicar_trocas.py scripts/cuidado_m4_20261108.json --manifesto {m4} --verificar --desfazer-antes {meu}\n',
-                      tarefas)
+        # 08/11/2026: a decisão 152 no M4 desfaz primeiro a do M6 e depois esta.
+        self.assertIn(f'python scripts/aplicar_trocas.py scripts/cuidado_m4_20261108.json --manifesto {m4} --verificar --desfazer-antes {m6} '
+                      f'--desfazer-antes {meu}\n', tarefas)
         cartaz = ler('.github/workflows/cartaz-qa.yml')
+        # 08/11/2026: o cartaz «Ler a cidade» desfaz primeiro a decisão 152 no M6, depois esta e a do M4.
         self.assertIn(f'scripts/cidade_cartaz_20261108.json --manifesto tests/fixtures/cidade-cartaz-edits-20261108.json --verificar '
-                      f'--desfazer-antes {meu} --desfazer-antes {m4} --desfazer-antes tests/fixtures/cuidado-m3-edits-20261108.json', cartaz)
+                      f'--desfazer-antes {m6} --desfazer-antes {meu} --desfazer-antes {m4} --desfazer-antes tests/fixtures/cuidado-m3-edits-20261108.json', cartaz)
         for p in sorted((ROOT / 'tests').glob('test_*.py')):
             # Como este, os testes do pedido pt-1 e da decisão 152 no M1 conferem as cadeias com frases partidas em várias linhas (e já
             # exigem esta camada à cabeça); ficam de fora pela mesma razão.
-            if p.name in ('test_cuidado_m5.py', 'test_creditos_i_pt1.py', 'test_cuidado_m1.py'):
+            # 08/11/2026: e o teste da decisão 152 no M6, pela mesma razão.
+            if p.name in ('test_cuidado_m5.py', 'test_creditos_i_pt1.py', 'test_cuidado_m1.py', 'test_cuidado_m6.py'):
                 continue
             texto = '\n'.join(l for l in p.read_text('utf-8').split('\n') if not l.lstrip().startswith('#'))
             plano = re.sub(r"['\"]\s*,\s*['\"]", ' ', texto).replace("',ROOT/'", ' ')
             with self.subTest(teste=p.name):
-                self.assertEqual(plano.count('--desfazer-antes ' + m4), plano.count(f'--desfazer-antes {meu} --desfazer-antes {m4}'))
-        self.assertIn(f"(ROOT/'{meu}',ROOT/'{m4}',", ler('tests/test_task_routes_closure.py'))
+                # 08/11/2026: e, antes desta, a decisão 152 no M6, sem nada pelo meio.
+                self.assertEqual(plano.count('--desfazer-antes ' + m4), plano.count(f'--desfazer-antes {m6} --desfazer-antes {meu} --desfazer-antes {m4}'))
+        # 08/11/2026: nas rotas, a decisão 152 no M6 vem primeiro, logo antes desta.
+        self.assertIn(f"(ROOT/'{m6}',ROOT/'{meu}',ROOT/'{m4}',", ler('tests/test_task_routes_closure.py'))
         for rel in ('tests/browser_cartaz_indices.cjs', 'tests/browser_cartaz_m4_piloto.cjs'):
             texto = ler(rel)
             self.assertLess(texto.index('((cuidadoM5['), texto.index('((cuidadoM4['), rel)
+            # 08/11/2026: e, antes da do M5, a decisão 152 no M6 (que mexe no índice do M6).
+            self.assertLess(texto.index('((cuidadoM6['), texto.index('((cuidadoM5['), rel)
         texto = ler('tests/browser_creditos_i_pt1.cjs')
         corpo = texto[texto.index('function antes(rel)'):]
         self.assertLess(corpo.index('((cuidadoM5[rel]'), corpo.index('((cuidadoM4[rel]'))
+        # 08/11/2026: e, antes da do M5, a decisão 152 no M6.
+        self.assertLess(corpo.index('((cuidadoM6[rel]'), corpo.index('((cuidadoM5[rel]'))
         gerador_148 = ler('scripts/cartaz_indices_148_20261106.py')
         self.assertLess(gerador_148.index('CUIDADO_M5.read_text'), gerador_148.index('CUIDADO_M4.read_text'))
+        # 08/11/2026: e, antes da do M5, a decisão 152 no M6.
+        self.assertLess(gerador_148.index('CUIDADO_M6.read_text'), gerador_148.index('CUIDADO_M5.read_text'))
         # Os fluxos conferem a camada sem nada por cima e correm os testes deste pedido, onde estão os do M1 ao M4.
-        self.assertIn(f'python scripts/aplicar_trocas.py scripts/cuidado_m5_20261108.json --manifesto {meu} --verificar\n', tarefas)
+        # 08/11/2026: conferem-na com a decisão 152 no M6, a única por cima, desfeita antes.
+        self.assertIn(f'python scripts/aplicar_trocas.py scripts/cuidado_m5_20261108.json --manifesto {meu} --verificar --desfazer-antes {m6}\n',
+                      tarefas)
         for wf in (tarefas, apoios):
             self.assertIn("python -m unittest discover -s tests -p 'test_cuidado_m5.py' -v", wf)
         self.assertIn('python tests/browser_cuidado_m5.py', apoios)

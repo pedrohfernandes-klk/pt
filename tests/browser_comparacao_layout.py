@@ -40,7 +40,9 @@ try:
     if 'class="paralelo"' in card.get('html',''):examples.append(card)
   # 24/10/2026, aulas claras do M4: as lições do M4 refeitas têm 3 cartões «Em paralelo» (eram 11); o mínimo passa de 71 para 62
   # 24/10/2026, aulas claras do M1: as lições do M1 refeitas têm 3 (eram 7); o mínimo passa de 62 para 59
-  assert len(examples)>=59
+  # 08/11/2026: decisão 152 no M6 (achados 0 a 4 e 16): seis cartões «Em paralelo» do M6 (F02, F04, F05, F06, F07 e F09) passam a
+  # tabela de apoio (conferidas em tests/test_cuidado_m6.py e tests/browser_cuidado_m6.py); ficam 53, e o mínimo passa de 59 para 53.
+  assert len(examples)>=53
   for width in (320,900):
    ctx,page=new_page(browser,width)
    page.goto(host+'/m4/licao-m4-f28/',wait_until='networkidle')

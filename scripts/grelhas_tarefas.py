@@ -22,6 +22,9 @@ fica com o texto corrido (está num <small> dentro de uma célula). As grelhas s
 (U+00A0), para não se partir entre linhas. As grelhas sem a chave saem iguais, byte a byte.
 08/11/2026: decisão 152, M5: com «max_em_listas», o fecho de cada tema pode ser «Explicação: …» ou «Conclusão: …» (o tema B da
 M5-U2 fecha com a conclusão do parágrafo de opinião). As grelhas que já tinham a chave saem iguais, byte a byte.
+08/11/2026: decisão 152, M6: com «nao_partir_valores» numa grelha, «20 valores em cinco critérios» leva espaço que não quebra
+(U+00A0) entre o número e «valores»; e a ligação à grelha pode estar já com «Grelha /20» preso (U+00A0, a tarefa com
+«nao_partir_grelha», scripts/tarefas_escolha.py), e então não se repete. As grelhas e as tarefas sem as chaves saem iguais, byte a byte.
 Idempotente. Uso: python3 scripts/grelhas_tarefas.py [--saida PASTA]
 """
 from html import escape as e
@@ -33,6 +36,8 @@ import sys
 ROOT = Path(__file__).resolve().parents[1]
 DADOS = ROOT / 'docs/pedagogia/grelhas-tarefas-20261027.json'
 LIGACAO = '<p class="task-grelha"><a href="grelha/">Grelha /20: como é avaliado e autoavaliação</a></p>\n'
+# 08/11/2026: decisão 152, M6. A mesma ligação, com «Grelha /20» preso (U+00A0), como a escreve scripts/tarefas_escolha.py.
+LIGACAO_NAO_PARTE = LIGACAO.replace('Grelha /20', 'Grelha\xa0/20')
 ANCORA = '<p>Fecha com duas linhas'
 # 28/10/2026: voltar à tarefa leva ao cartão «Verificar e entregar», onde está a ligação à grelha.
 VOLTAR = '../#entregar'
@@ -125,10 +130,12 @@ def intervalo(c, sep=' '):
 
 def pagina_aluno(slug, t):
     m = t['modulo'].lower()
+    # 08/11/2026: decisão 152, M6. «nao_partir_valores»: «20 valores» com espaço que não quebra.
+    valores = '\xa0' if t.get('nao_partir_valores') else ' '
     corpo = (f'<nav class="g-nav" aria-label="Navegação"><a href="{VOLTAR}">← Voltar à tarefa</a><a href="../../../{m}/">Módulo {t["modulo"][1:]}</a>'
              '<button type="button" data-print hidden>Imprimir</button></nav>'
              f'<header><p class="rot">{e(t["modulo"])} · Unidade {t["unidade"]} · Como é avaliado</p><h1>{ital(t["titulo"])}</h1>'
-             '<p class="lead">20 valores em cinco critérios. Lê antes de começar e volta aqui antes de entregar.</p>'
+             f'<p class="lead">20{valores}valores em cinco critérios. Lê antes de começar e volta aqui antes de entregar.</p>'
              f'<p>{ital(t["produto"])}</p>'
              + (f'<p class="g-nota">{ital(t["nota"])}</p>' if t.get('nota') else '') + '</header>'
              f'<div class="g-tab" {REGIAO.format("Os cinco critérios")}><table class="g-resumo"><caption>Os cinco critérios</caption><thead><tr><th>Critério</th><th class="n">Máximo</th></tr></thead><tbody>')
@@ -191,7 +198,8 @@ def main():
                 p.write_text(html, 'utf-8', newline='\n')
         tarefa = base / 'index.html'
         s = (tarefa if tarefa.exists() else ROOT / 'tarefas' / slug / 'index.html').read_text('utf-8')
-        if LIGACAO not in s:
+        # 08/11/2026: decisão 152, M6. A ligação com «Grelha /20» preso também conta (não se acrescenta outra).
+        if LIGACAO not in s and LIGACAO_NAO_PARTE not in s:
             assert s.count(ANCORA) == 1, slug
             s = s.replace(ANCORA, LIGACAO + ANCORA)
             tarefa.write_text(s, 'utf-8', newline='\n')

@@ -6,7 +6,8 @@ class OracoesContexto(unittest.TestCase):
  def test_teaches_relation_and_limits(self):
   c=bank('m6-f04');self.assertEqual(len(c),24);self.assertIn('não é um teste seguro',c[1]['html']);self.assertIn('frases didáticas inventadas',c[4]['html']);self.assertIn('substantiva relativa',c[4]['html']);self.assertIn('gerundiva',c[4]['html']);self.assertIn('antecedente',c[12]['lacunas'][1]['o'])
  def test_pois_has_context_and_cause_is_not_contrast(self):
-  c=bank('m6-f04');self.assertIn('E eu sigo',c[10]['p']);self.assertIn('M6-F07',c[4]['html']);self.assertIn('didático',c[19]['f']);self.assertIn('não estabelece',c[19]['f']);self.assertIn('coordenação',c[18]['p']);self.assertIn('sujeito subentendido',c[22]['f'])
+  # 08/11/2026: decisão 152 no M6 (achado 24): a sigla da ligação leva a junção (U+2060) depois do hífen, para não se partir.
+  c=bank('m6-f04');self.assertIn('E eu sigo',c[10]['p']);self.assertIn('M6-\u2060F07',c[4]['html']);self.assertIn('didático',c[19]['f']);self.assertIn('não estabelece',c[19]['f']);self.assertIn('coordenação',c[18]['p']);self.assertIn('sujeito subentendido',c[22]['f'])
  def test_companion_and_panel_match(self):
   d=bank('m6-f09');self.assertEqual(len(d),21);self.assertIn('Exemplo didático',d[13]['pares'][2][0]);self.assertIn('antecedente',d[13]['f'])
   for key in ['m6-f04','m6-f09']:

@@ -299,7 +299,8 @@ class CuidadoM1(unittest.TestCase):
                             # 08/11/2026: a decisão 152 no M3 (cuidado_m3_20261108: tabelas onde há itens paralelos e espaços que não quebram nas lições e páginas do M3, incluindo o índice, o guia e o mapa do módulo) passa a camada mais recente, por cima da decisão 152 no M2; desfaz-se primeiro, com a mesma exigência.
                             # 08/11/2026: a decisão 152 no M4 (cuidado_m4_20261108: tabelas onde há itens paralelos e espaços que não quebram nas lições e páginas do M4, incluindo o índice, o guia, o mapa e o portefólio do módulo) passa a camada mais recente, por cima da decisão 152 no M3; desfaz-se primeiro, com a mesma exigência.
                             # 08/11/2026: a decisão 152 no M5 (cuidado_m5_20261108: tabelas onde há itens paralelos e espaços que não quebram nas lições e páginas do M5, incluindo o índice, o guia, o mapa e o portefólio do módulo, e nas tarefas, nos aquecimentos e nas grelhas das suas unidades) passa a camada mais recente, por cima da decisão 152 no M4; desfaz-se primeiro, com a mesma exigência.
-                            '--desfazer-antes', 'tests/fixtures/cuidado-m5-edits-20261108.json', '--desfazer-antes', 'tests/fixtures/cuidado-m4-edits-20261108.json', '--desfazer-antes', 'tests/fixtures/cuidado-m3-edits-20261108.json', '--desfazer-antes', 'tests/fixtures/cuidado-m2-edits-20261108.json', '--desfazer-antes', 'tests/fixtures/cidade-cartaz-edits-20261108.json',
+                            # 08/11/2026: a decisão 152 no M6 (cuidado_m6_20261108: tabelas onde há itens paralelos e espaços que não quebram nas lições e páginas do M6, incluindo o índice, o guia, o mapa e o portefólio do módulo, as páginas «Ler a fundo» e «Pensar devagar», e nas tarefas, nos aquecimentos e nas grelhas das suas unidades) passa a camada mais recente, por cima da decisão 152 no M5; desfaz-se primeiro, com a mesma exigência.
+                            '--desfazer-antes', 'tests/fixtures/cuidado-m6-edits-20261108.json', '--desfazer-antes', 'tests/fixtures/cuidado-m5-edits-20261108.json', '--desfazer-antes', 'tests/fixtures/cuidado-m4-edits-20261108.json', '--desfazer-antes', 'tests/fixtures/cuidado-m3-edits-20261108.json', '--desfazer-antes', 'tests/fixtures/cuidado-m2-edits-20261108.json', '--desfazer-antes', 'tests/fixtures/cidade-cartaz-edits-20261108.json',
                             '--desfazer-antes', 'tests/fixtures/creditos-i-pt1-edits-20261107.json'],
                            cwd=ROOT, capture_output=True, text=True, encoding='utf-8')
         self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
@@ -335,19 +336,21 @@ class CuidadoM1(unittest.TestCase):
         # 08/11/2026: por cima da decisão 152 no M2 fica a decisão 152 no M3 (cuidado_m3_20261108); a ordem ganha mais uma posição e esta camada passa a quinta.
         # 08/11/2026: por cima da decisão 152 no M3 fica a decisão 152 no M4 (cuidado_m4_20261108): a ordem ganha mais uma posição, com a mesma exigência.
         # 08/11/2026: por cima da decisão 152 no M4 fica a decisão 152 no M5 (cuidado_m5_20261108): a ordem ganha mais uma posição, com a mesma exigência.
-        self.assertEqual(verificar_camadas.LAYERS[0], ('cuidado_m5_20261108', 'cuidado-m5-edits-20261108'))
-        self.assertEqual(verificar_camadas.LAYERS[1], ('cuidado_m4_20261108', 'cuidado-m4-edits-20261108'))
-        self.assertEqual(verificar_camadas.LAYERS[2], ('cuidado_m3_20261108', 'cuidado-m3-edits-20261108'))
-        self.assertEqual(verificar_camadas.LAYERS[3], ('cuidado_m2_20261108', 'cuidado-m2-edits-20261108'))
-        self.assertEqual(verificar_camadas.LAYERS[4], ('cidade_cartaz_20261108', 'cidade-cartaz-edits-20261108'))
-        self.assertEqual(verificar_camadas.LAYERS[5], ('creditos_i_pt1_20261107', 'creditos-i-pt1-edits-20261107'))
-        self.assertEqual(verificar_camadas.LAYERS[6], ('cuidado_m1_20261106', 'cuidado-m1-edits-20261106'))
+        # 08/11/2026: por cima da decisão 152 no M5 fica a decisão 152 no M6 (cuidado_m6_20261108): a ordem ganha mais uma posição, com a mesma exigência.
+        self.assertEqual(verificar_camadas.LAYERS[0], ('cuidado_m6_20261108', 'cuidado-m6-edits-20261108'))
+        self.assertEqual(verificar_camadas.LAYERS[1], ('cuidado_m5_20261108', 'cuidado-m5-edits-20261108'))
+        self.assertEqual(verificar_camadas.LAYERS[2], ('cuidado_m4_20261108', 'cuidado-m4-edits-20261108'))
+        self.assertEqual(verificar_camadas.LAYERS[3], ('cuidado_m3_20261108', 'cuidado-m3-edits-20261108'))
+        self.assertEqual(verificar_camadas.LAYERS[4], ('cuidado_m2_20261108', 'cuidado-m2-edits-20261108'))
+        self.assertEqual(verificar_camadas.LAYERS[5], ('cidade_cartaz_20261108', 'cidade-cartaz-edits-20261108'))
+        self.assertEqual(verificar_camadas.LAYERS[6], ('creditos_i_pt1_20261107', 'creditos-i-pt1-edits-20261107'))
+        self.assertEqual(verificar_camadas.LAYERS[7], ('cuidado_m1_20261106', 'cuidado-m1-edits-20261106'))
         # 07/11/2026 (fusão do main 29441e6b no pedido #182): esta camada fica por cima dos acertos da decisão 173, que ficam por cima do desenho comum dos índices
         # (decisão 148), por cima dos créditos atrás de um «i».
         # 08/11/2026: com a decisão 152 no M4 por cima de todas, cada uma destas desce uma posição.
-        self.assertEqual(verificar_camadas.LAYERS[7], ('indices_acertos_20261107', 'indices-acertos-edits-20261107'))
-        self.assertEqual(verificar_camadas.LAYERS[8], ('cartaz_indices_148_20261106', 'cartaz-indices-148-edits-20261106'))
-        self.assertEqual(verificar_camadas.LAYERS[9], ('creditos_i_20261105', 'creditos-i-edits-20261105'))
+        self.assertEqual(verificar_camadas.LAYERS[8], ('indices_acertos_20261107', 'indices-acertos-edits-20261107'))
+        self.assertEqual(verificar_camadas.LAYERS[9], ('cartaz_indices_148_20261106', 'cartaz-indices-148-edits-20261106'))
+        self.assertEqual(verificar_camadas.LAYERS[10], ('creditos_i_20261105', 'creditos-i-edits-20261105'))
         auditoria = ler('tests/auditoria_20261028.py')
         # 07/11/2026 (fusão do main 29441e6b no pedido #182): quem chama primeiro esta camada é a função dos acertos (os créditos chamam o desenho comum, que chama os acertos).
         corpo = auditoria[auditoria.index('def undo_acertos_0711'):]
@@ -370,6 +373,8 @@ class CuidadoM1(unittest.TestCase):
         self.assertLess(sala.index('cuidado-m4-edits-20261108.json'), sala.index('cuidado-m3-edits-20261108.json'))
         # 08/11/2026: e, antes da do M4, a decisão 152 no M5, agora a mais recente.
         self.assertLess(sala.index('cuidado-m5-edits-20261108.json'), sala.index('cuidado-m4-edits-20261108.json'))
+        # 08/11/2026: e, antes da do M5, a decisão 152 no M6, agora a mais recente.
+        self.assertLess(sala.index('cuidado-m6-edits-20261108.json'), sala.index('cuidado-m5-edits-20261108.json'))
         # Onde a camada dos créditos se desfaz antes de conferir outra (fluxos e testes da cadeia), esta desfaz-se primeiro.
         # 07/11/2026 (fusão do main 29441e6b no pedido #182): a regra é a mesma (onde se desfazem os créditos, esta camada desfaz-se
         # primeiro), mas entre esta e os créditos ficam agora os acertos da decisão 173 e o desenho comum dos índices (decisão 148),
@@ -383,7 +388,8 @@ class CuidadoM1(unittest.TestCase):
         # 08/11/2026: e começa agora pela decisão 152 no M3 (cuidado_m3_20261108), por cima da do M2, com a mesma exigência: nada pelo meio.
         # 08/11/2026: e começa agora pela decisão 152 no M4 (cuidado_m4_20261108), por cima da do M3, com a mesma exigência: nada pelo meio.
         # 08/11/2026: e começa agora pela decisão 152 no M5 (cuidado_m5_20261108), por cima da do M4, com a mesma exigência: nada pelo meio.
-        cadeia = ('--desfazer-antes tests/fixtures/cuidado-m5-edits-20261108.json '
+        # 08/11/2026: e, antes da do M5, a decisão 152 no M6 (cuidado_m6_20261108), agora a mais recente, sem nada pelo meio.
+        cadeia = ('--desfazer-antes tests/fixtures/cuidado-m6-edits-20261108.json --desfazer-antes tests/fixtures/cuidado-m5-edits-20261108.json '
                   '--desfazer-antes tests/fixtures/cuidado-m4-edits-20261108.json '
                   '--desfazer-antes tests/fixtures/cuidado-m3-edits-20261108.json '
                   '--desfazer-antes tests/fixtures/cuidado-m2-edits-20261108.json '
@@ -411,7 +417,8 @@ class CuidadoM1(unittest.TestCase):
         # 08/11/2026: e, antes de todas, a da decisão 152 no M3 (cuidado_m3_20261108), por cima da do M2.
         # 08/11/2026: e, antes da do M3, a decisão 152 no M4 (cuidado_m4_20261108), a camada mais recente, sem nada pelo meio.
         # 08/11/2026: e, antes da do M4, a decisão 152 no M5 (cuidado_m5_20261108), agora a mais recente, sem nada pelo meio.
-        self.assertIn("(ROOT/'tests/fixtures/cuidado-m5-edits-20261108.json',ROOT/'tests/fixtures/cuidado-m4-edits-20261108.json',ROOT/'tests/fixtures/cuidado-m3-edits-20261108.json',ROOT/'tests/fixtures/cuidado-m2-edits-20261108.json',ROOT/'tests/fixtures/cidade-cartaz-edits-20261108.json',"
+        # 08/11/2026: e, antes da do M5, a decisão 152 no M6 (cuidado_m6_20261108), agora a mais recente, sem nada pelo meio.
+        self.assertIn("(ROOT/'tests/fixtures/cuidado-m6-edits-20261108.json',ROOT/'tests/fixtures/cuidado-m5-edits-20261108.json',ROOT/'tests/fixtures/cuidado-m4-edits-20261108.json',ROOT/'tests/fixtures/cuidado-m3-edits-20261108.json',ROOT/'tests/fixtures/cuidado-m2-edits-20261108.json',ROOT/'tests/fixtures/cidade-cartaz-edits-20261108.json',"
                       "ROOT/'tests/fixtures/creditos-i-pt1-edits-20261107.json',"
                       "ROOT/'tests/fixtures/cuidado-m1-edits-20261106.json',ROOT/'tests/fixtures/indices-acertos-edits-20261107.json',", rotas)
 
@@ -442,7 +449,9 @@ class CuidadoM1(unittest.TestCase):
             # (os números do molde com espaço que não quebra), mas não a tabela dos tempos; as outras ficam como estavam.
             # 08/11/2026: decisão 152 no M5 (camada cuidado_m5_20261108): as tarefas da M5-U1 e da M5-U2 levam «nao_partir» e a tabela
             # dos tempos (como as do M1, com as mesmas colunas); as outras ficam como estavam.
-            if p.name in ('m3-u1.json', 'm3-u2.json', 'm5-u1.json', 'm5-u2.json'):
+            # 08/11/2026: decisão 152 no M6 (camada cuidado_m6_20261108): as tarefas da M6-U1 e da M6-U2 também levam «nao_partir» (e
+            # «nao_partir_grelha», conferida em test_cuidado_m6.py), mas não a tabela dos tempos (a conferência recusou-a).
+            if p.name in ('m3-u1.json', 'm3-u2.json', 'm5-u1.json', 'm5-u2.json', 'm6-u1.json', 'm6-u2.json'):
                 self.assertIs(d['nao_partir'], True, p.name)
             else:
                 self.assertNotIn('nao_partir', d, p.name)

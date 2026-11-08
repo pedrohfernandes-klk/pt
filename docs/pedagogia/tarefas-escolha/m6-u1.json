@@ -2,14 +2,16 @@
  "slug": "m6-u1",
  "titulo": "Um ideal que não se alcança",
  "unidade": 1,
+ "nao_partir": true,
+ "nao_partir_grelha": true,
  "aquecer": {
   "cartoes": "aquecimento/",
   "minutos": 10,
-  "texto": "No início da aula de tarefa: 10 minutos de cartões com consulta, 5 minutos para leres o enunciado, 60 minutos de produção e 15 minutos de revisão e entrega. Total: 90 minutos. O relógio de produção começa depois da leitura.",
+  "texto": "No início da aula de tarefa: 10 minutos de cartões com consulta, 5 minutos para leres o enunciado, 60 minutos de produção e 15 minutos de revisão e entrega. Total: 90 minutos. O relógio de produção começa depois da leitura.",
   "ligacao": "Abrir o aquecimento em cartões",
   "ligacao_enunciado": "Aquecer"
  },
- "lead": "À mão, 200 a 240 palavras: cerca de 110 no núcleo e 90 a 130 no tema. Com consulta.",
+ "lead": "À mão, 200 a 240 palavras: cerca de 110 no núcleo e 90 a 130 no tema. Com consulta.",
  "nucleo": [
   "«Ideal» e «A um poeta», de Antero: a quem fala a voz e o que é o sonho? Cita um verso dos tercetos de cada. Indica uma semelhança e explica o que muda: para que serve o sonho em cada um?",
   "Em «Ave-Marias»: «Singram soberbas naus que eu não verei jámais!» Divide o verso em orações e classifica-as. Justifica com o papel de «que» na sua oração. Explica o que essa oração acrescenta ao verso."
@@ -111,7 +113,7 @@
  "criterios": [
   "Núcleo: voz e sonho de cada soneto, com verso; semelhança e mudança; orações e papel de «que».",
   "A: ideal e lugar, viagem, frase final, figura, diferença, verso imitado e explicado. B: planos com verso, último plano, dois factos, limite do vídeo.",
-  "200 a 240 palavras, respostas ligadas, escrita revista."
+  "200 a 240 palavras, respostas ligadas, escrita revista."
  ],
  "fecho": "Fecha com duas linhas, fora da contagem: o que passaste a procurar quando um poema fala de um sonho? Aponta o verso que te ajudou."
 }

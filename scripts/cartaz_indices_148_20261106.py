@@ -57,6 +57,8 @@ CUIDADO_M3 = ROOT / 'tests/fixtures/cuidado-m3-edits-20261108.json'
 CUIDADO_M4 = ROOT / 'tests/fixtures/cuidado-m4-edits-20261108.json'
 # 08/11/2026: por cima da decisão 152 no M4 fica a decisão 152 no M5 (a tabela dos pesos e os espaços que não quebram no índice do M5).
 CUIDADO_M5 = ROOT / 'tests/fixtures/cuidado-m5-edits-20261108.json'
+# 08/11/2026: por cima da decisão 152 no M5 fica a decisão 152 no M6 (os espaços que não quebram no índice do M6).
+CUIDADO_M6 = ROOT / 'tests/fixtures/cuidado-m6-edits-20261108.json'
 VERSAO = '20261106'
 ACHADO = ('06/11/2026: decisão 148 (o desenho do índice do M4 passa aos nove, com a palavra do módulo, a imagem documental '
           'mais pequena a seguir às unidades e os botões flutuantes de sempre). {o}')
@@ -73,6 +75,11 @@ COMENTARIO_PILOTO = next(t['novo'] for t in PILOTO if t['local'] == 'M4 retirar 
 def base(rel):
     """O texto da página sem esta camada (desfeita pelo manifesto, da última troca para a primeira)."""
     texto = (ROOT / rel).read_bytes().decode('utf-8')
+    # 08/11/2026: antes de tudo, a decisão 152 no M6 (camada cuidado_m6_20261108), a mais recente, com contagem estrita.
+    for edit in reversed(json.loads(CUIDADO_M6.read_text('utf-8'))['files'].get(rel, {}).get('edits', []) if CUIDADO_M6.is_file() else []):
+        if texto.count(edit['new']) != edit['occurrences']:
+            raise SystemExit(f'{rel}: a decisão 152 no M6 já não confere ({edit["location"]})')
+        texto = texto.replace(edit['new'], edit['old'])
     # 08/11/2026: antes de tudo, a decisão 152 no M5 (camada cuidado_m5_20261108), a mais recente, com contagem estrita.
     for edit in reversed(json.loads(CUIDADO_M5.read_text('utf-8'))['files'].get(rel, {}).get('edits', []) if CUIDADO_M5.is_file() else []):
         if texto.count(edit['new']) != edit['occurrences']:
