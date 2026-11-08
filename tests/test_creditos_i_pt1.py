@@ -5,7 +5,7 @@ muito mal. "parar animação", ou assim, é melhor». Confere, sem navegador, a 
 (scripts/creditos_i_pt1_20261107.json, gerada por scripts/creditos_i_pt1_20261107.py; manifesto
 tests/fixtures/creditos-i-pt1-edits-20261107.json):
 
-* a camada é fechada e reversível: 25 trocas literais em 11 páginas, cada uma com a contagem exata; desfeita, dá a página de
+* a camada é fechada e reversível: 26 trocas literais em 11 páginas (08/11/2026: mais o rótulo do portal, decisão 162), cada uma com a contagem exata; desfeita, dá a página de
   baixo letra a letra, e refeita, a de agora; o gerador dá o mesmo JSON;
 * fica registada como a camada mais recente (por cima da decisão 152 no M1) em scripts/verificar_camadas.py, nas cadeias de
   desfazer de tests/auditoria_20261028.py e de scripts/desligar_sala.py, nas cadeias dos workflows e dos testes e nos testes de
@@ -53,7 +53,8 @@ TITULOS = {'m1/index.html': ['Cancioneiro da Biblioteca Nacional'], 'm2/index.ht
 P1_CREDITO = ('Grafismo gerado com recurso a IA, EPI, 2026, a partir do padrão de ondas da calçada portuguesa (o «mar largo» do '
               'Rossio, Lisboa).')
 P3_ANTES = 'Estudo do movimento · domínio público · Library of Congress'
-P3_AGORA = 'Estudo do movimento. Domínio público. Library of Congress.'
+# 08/11/2026: decisão 162 do docente (revisão do pt-1): o nome de Muybridge sai do rótulo e passa para o «i» do crédito.
+P3_AGORA = 'Eadweard Muybridge. Estudo do movimento. Domínio público. Library of Congress.'
 P4_CREDITO = ('Mapa: Natural Earth (domínio público), projeção Equal Earth; pontos de passagem: © contribuidores do '
               'OpenStreetMap')
 VAZIOS = {'area', 'base', 'br', 'col', 'embed', 'hr', 'img', 'input', 'link', 'meta', 'source', 'track', 'wbr'}
@@ -159,12 +160,14 @@ class CreditosIPt1(unittest.TestCase):
                             str(MANIFESTO.relative_to(ROOT)), '--verificar'], cwd=ROOT, capture_output=True, text=True,
                            encoding='utf-8')
         self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
-        self.assertIn('25 trocas em 11 ficheiros: 25 aplicadas, 0 por aplicar; manifesto em dia.', r.stdout)
+        # 08/11/2026: decisão 162 do docente (revisão do pt-1): mais uma troca (o rótulo da fotografia do portal), 26 em vez de 25.
+        self.assertIn('26 trocas em 11 ficheiros: 26 aplicadas, 0 por aplicar; manifesto em dia.', r.stdout)
         manifesto = json.loads(MANIFESTO.read_text('utf-8'))
         self.assertEqual(sorted(manifesto['files']), PAGINAS)
         trocas = json.loads(CAMADA.read_text('utf-8'))
         self.assertEqual(Counter(t['ficheiro'] for t in trocas),
-                         Counter({'index.html': 3, 'atlas/index.html': 4, **{rel: 2 for rel in INDICES}}))
+                         Counter({'index.html': 4, 'atlas/index.html': 4,  # 08/11/2026: decisão 162, a troca do rótulo do portal.
+                                   **{rel: 2 for rel in INDICES}}))
         self.assertTrue(all(t['ocorrencias'] == 1 for t in trocas))
         self.assertTrue(all(t['achado'].startswith('07/11/2026: decisões 153, 176 e 177') for t in trocas))
         for rel in PAGINAS:
@@ -270,7 +273,9 @@ class CreditosIPt1(unittest.TestCase):
                 ganhas = palavras(depois['raiz']) - palavras(antes['raiz'])
                 if rel == 'index.html':
                     self.assertEqual(perdidas, Counter({'o': 1, 'desenho': 1}))
-                    self.assertEqual(ganhas, Counter({'i': 2, 'a': 1, 'animação': 1}))
+                    # 08/11/2026: decisão 162 do docente (revisão do pt-1): o rótulo do portal passa a «Cavalo a galope, 1878»; «Eadweard
+                    # Muybridge» muda do rótulo para o crédito (não se perde nem se ganha) e entram «cavalo», «a» e «galope».
+                    self.assertEqual(ganhas, Counter({'i': 2, 'a': 2, 'animação': 1, 'cavalo': 1, 'galope': 1}))
                 elif rel == 'atlas/index.html':
                     self.assertEqual(perdidas, Counter())
                     self.assertEqual(ganhas, Counter({'i': 1, '©': 1, 'openstreetmap': 1}))
@@ -312,12 +317,15 @@ class CreditosIPt1(unittest.TestCase):
         self.assertEqual(portal.classes(), {'info-i', 'info-i--linha', 'sp-i'})
         self.assertEqual(portal.elementos()[0].attrs['aria-label'], 'Créditos da fotografia')
         self.assertEqual(norm(portal.elementos()[1].texto()), P3_AGORA)
-        self.assertEqual(re.sub(r'[^\w ]', '', P3_ANTES.lower()).split(), re.sub(r'[^\w ]', '', P3_AGORA.lower()).split())
+        # 08/11/2026: decisão 162: as palavras do crédito são as de antes, mais o nome de Muybridge, que veio do rótulo.
+        self.assertEqual(['eadweard', 'muybridge'] + re.sub(r'[^\w ]', '', P3_ANTES.lower()).split(), re.sub(r'[^\w ]', '', P3_AGORA.lower()).split())
         self.assertIn('<a href="https://www.loc.gov/item/2005684184/">Library of Congress</a>', portal.elementos()[1].html_interior())
         irmaos = portal.pai.elementos()
         self.assertEqual(irmaos[irmaos.index(portal) - 1].attrs.get('class'), 'site-portal portal-lente')
         self.assertEqual(irmaos[irmaos.index(portal) + 1].attrs.get('class'), 'sp-credit')
-        self.assertIn('<span class="sp-image-label">Eadweard Muybridge · 1878</span>', ler('index.html'))
+        # 08/11/2026: decisão 162 do docente (revisão do pt-1): o rótulo passa a «Cavalo a galope, 1878».
+        self.assertIn('<span class="sp-image-label">Cavalo a galope, 1878</span>', ler('index.html'))
+        self.assertNotIn('Eadweard Muybridge · 1878', ler('index.html'))
         self.assertEqual(ler('index.html').count('class="sp-credit"'), 1)
         # P2: a imagem documental de cada índice; o crédito inteiro no «i» no canto da imagem, o figcaption sai.
         for rel, credito in CREDITOS_INDICES.items():

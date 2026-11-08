@@ -95,7 +95,10 @@ P3_FAMILIA = ('Família P3 (fotografia de Muybridge no portal do Lente): o créd
 P3_LIGACAO = '<a href="https://www.loc.gov/item/2005684184/">Library of Congress</a>'
 P3_ANTIGO = f'<p class="sp-credit">Estudo do movimento · domínio público · {P3_LIGACAO}</p>'
 # Os «·» passam a pontos finais (nunca «·» dentro de frases); nenhuma palavra sai e a ligação fica igual.
-P3_NOVO = peca_i(f'Estudo do movimento. Domínio público. {P3_LIGACAO}.', 'Créditos da fotografia', 'info-i info-i--linha sp-i')
+# 08/11/2026 (revisão): decisão 162 do docente, o nome de Muybridge vai para o «i» e o rótulo passa a «Cavalo a galope, 1878».
+P3_ROTULO_ANTIGO = '<span class="sp-image-label">Eadweard Muybridge · 1878</span>'
+P3_ROTULO_NOVO = '<span class="sp-image-label">Cavalo a galope, 1878</span>'
+P3_NOVO = peca_i(f'Eadweard Muybridge. Estudo do movimento. Domínio público. {P3_LIGACAO}.', 'Créditos da fotografia', 'info-i info-i--linha sp-i')
 ENTRADA_ESTILO = (
     '/* 07/11/2026: decisões 153, 176 e 177 (pedido pt-1). Créditos atrás do «i» (assets/info-i.css). O botão do fundo fica fora '
     'do crédito, sempre à vista, na mesma linha do «i» do desenho; aberto, o crédito abre por baixo dos dois e o botão continua '
@@ -107,7 +110,9 @@ ENTRADA_ESTILO = (
     '.raiz .fundo-acoes>.fundo-botao:not([hidden])+details.info-i[open]{margin-block-start:-44px;pointer-events:none}'
     '.raiz .fundo-acoes>details.info-i>.info-i-texto{padding-block-end:6px;color:var(--suave,#444);max-inline-size:60rem}'
     '.site-portal-wrap>details.sp-i{margin-block-start:4px}'
-    '.site-portal-wrap>details.sp-i>.info-i-texto{color:var(--suave,#555)}')
+    '.site-portal-wrap>details.sp-i>.info-i-texto{color:var(--suave,#555)}'
+    # 08/11/2026 (revisão): a partir de 640 px, o crédito do portal abre alinhado à direita, junto do seu «i» e da fotografia.
+    '@media (min-width:640px){.site-portal-wrap>details.sp-i>.info-i-texto{text-align:end}}')
 
 
 def entrada():
@@ -123,6 +128,9 @@ def entrada():
               'A página carrega a peça comum do «i» e o motor dos fundos com o botão novo («Parar a animação»).'),
         troca(rel, texto, 'P1, fundo da calçada: o crédito no «i», o botão fora dele', P1_ANTIGO, P1_NOVO, P1_FAMILIA),
         troca(rel, texto, 'P3, fotografia de Muybridge: o crédito no «i»', P3_ANTIGO, P3_NOVO, P3_FAMILIA),
+        troca(rel, texto, 'P3, rótulo da fotografia de Muybridge (decisão 162)', P3_ROTULO_ANTIGO, P3_ROTULO_NOVO,
+              'Decisão 162 do docente: o rótulo da fotografia do portal do Lente passa a «Cavalo a galope, 1878»; o nome de Muybridge '
+              'vai para o «i».'),
     ]
 
 
@@ -220,13 +228,16 @@ P4_ESTILO = (
     'direita; o nome do país escolhido fica à esquerda do «i»; à vista, no canto de baixo à esquerda, o «© OpenStreetMap» curto, que '
     'se esconde, com o nome do país, enquanto o crédito inteiro está aberto por cima deles. */'
     '.mapa-quadro.com-i .mapa-nome{right:60px}'
+    # 08/11/2026 (revisão): abaixo de 640 px, o nome do país sobe acima do «© OpenStreetMap», que fica sempre à vista (ODbL).
+    '@media (max-width:639.98px){.mapa-quadro.com-i .mapa-nome{bottom:24px}}'
     '.mapa-osm{position:absolute;left:8px;bottom:4px;z-index:1;margin:0;padding:0 4px;font:.7rem/1.35 var(--sans);'
     'color:var(--suave);pointer-events:none;text-shadow:0 0 3px var(--papel),0 0 3px var(--papel),0 0 6px var(--papel)}'
     '@media screen{.mapa-quadro>details.info-i>.info-i-texto{font:.8125rem/1.45 var(--sans)}}'
     # Aberto, o crédito inteiro (que já diz «© contribuidores do OpenStreetMap») fica por cima do fundo do mapa: a linha curta e o
     # nome do país, que vivem nesse fundo, escondem-se enquanto ele está aberto, para nada ficar tapado.
     '.mapa-quadro:has(>details.info-i[open]) :is(.mapa-osm,.mapa-nome){visibility:hidden}'
-    '@media print{.mapa-osm{position:static;display:block}}')
+    # 08/11/2026 (revisão): na impressão sai só o crédito inteiro (que já diz «© contribuidores do OpenStreetMap»), centrado.
+    '@media print{.mapa-osm{display:none}.mapa-quadro>details.info-i>.info-i-texto{padding-inline:8px;text-align:center}}')
 
 
 def atlas():

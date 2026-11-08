@@ -21,7 +21,8 @@ const PAGINAS=[
  {p:'',rel:'index.html',is:(()=>{const s=antes('index.html');return [
   {html:um(s,/<p class="cf-credito">(.*?) <button /),nome:'Créditos do desenho',visual:'.cf-mar'},
   // O crédito do portal: os «·» passam a pontos finais (nunca «·» dentro de frases); as palavras e a ligação são as mesmas.
-  {html:um(s,/<p class="sp-credit">(Estudo do movimento.*?)<\/p>/),nome:'Créditos da fotografia',visual:'.sp-image img',soPalavras:true}]})()},
+  // 08/11/2026: decisão 162: o nome de Muybridge sai do rótulo e entra no crédito, antes das palavras de antes.
+  {html:'Eadweard Muybridge · '+um(s,/<p class="sp-credit">(Estudo do movimento.*?)<\/p>/),nome:'Créditos da fotografia',visual:'.sp-image img',soPalavras:true}]})()},
  ...[1,2,3,4,5,6,7,8,9].map(n=>({p:`m${n}/`,rel:`m${n}/index.html`,is:[{html:um(antes(`m${n}/index.html`),/<figcaption class="cz-credit">(.*?)<\/figcaption><\/figure>/),
   nome:'Créditos da imagem',visual:'main>figure.doc img',mais:n===8?[LICENCA_M8]:[]}]})),
  {p:'atlas/',rel:'atlas/index.html',is:[{html:um(antes('atlas/index.html'),/<p class="credito">(.*?)<\/p>/),nome:'Créditos do mapa',visual:'svg.mundo-c'}]},
@@ -146,5 +147,13 @@ function medir([n,htmlAntigo]){
   if(out)await page.screenshot({path:path.join(out,`entrada-botao-${width}.png`)});
   await ctx.close();cenarios++;
  }
+ // 08/11/2026 (revisão do pt-1): no Atlas, a 320 e a 390 px, o nome de um país comprido não tapa o «© OpenStreetMap», que fica
+ // sempre à vista (ODbL); o nome é posto como o mapa o põe (no p.mapa-nome) e mede-se a sobreposição das duas caixas.
+ for(const width of [320,390]){const ctx=await browser.newContext({viewport:{width,height:800}});const page=await ctx.newPage();
+  await page.goto(origin+'/pt/atlas/',{waitUntil:'load'});
+  for(const nome of ['São Tomé e Príncipe','Guiné-Bissau']){
+   const sobre=await page.evaluate(n=>{const e=document.querySelector('.mapa-nome');e.textContent=n;const a=e.getBoundingClientRect(),b=document.querySelector('.mapa-osm').getBoundingClientRect();return a.width>0&&b.width>0&&!(a.right<=b.left||b.right<=a.left||a.bottom<=b.top||b.bottom<=a.top)},nome);
+   assert.equal(sobre,false,width+': «'+nome+'» não tapa o «© OpenStreetMap»');}
+  await ctx.close();cenarios++;}
  console.log(`Créditos atrás do «i» (pt-1): ${n} «i» abertos por teclado e por toque, a 390 e 1366 px, nos dois temas, sem tapar texto, sem deslocamento, com impressão; ${cenarios} cenários com projeção e o botão do fundo.`);
  }finally{await browser.close();server.closeAllConnections();server.close();}})().catch(e=>{console.error(e);process.exitCode=1;server.closeAllConnections();server.close();});
