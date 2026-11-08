@@ -846,6 +846,13 @@ def main():
                 # cima dos créditos atrás de um «i». 07/11/2026 (fusão do main 29441e6b): por cima dos acertos da decisão 173.
                 # 07/11/2026: antes de tudo, os créditos atrás de um «i» na entrada, nos nove índices e no Atlas (decisões 153, 176
                 # e 177, pedido pt-1), a camada mais recente, por cima da decisão 152 no M1.
+                # 08/11/2026: antes de tudo, o cartaz «Ler a cidade» na entrada e o nome novo da secção nas páginas publicadas
+                # (frase da sugestão «continua» incluída), a camada mais recente, por cima dos créditos atrás de um «i» do pedido pt-1.
+                cidade_cartaz = ROOT / 'tests/fixtures/cidade-cartaz-edits-20261108.json'
+                for edit in reversed(json.loads(cidade_cartaz.read_text('utf-8'))['files'].get(rel, {}).get('edits', [])):
+                    if conferencia.count(edit['new']) != edit['occurrences']:
+                        raise ManifestoDesatualizado(f'{rel}: cartaz «Ler a cidade» e nome novo da secção não conferem')
+                    conferencia = conferencia.replace(edit['new'], edit['old'])
                 creditos_i_pt1 = ROOT / 'tests/fixtures/creditos-i-pt1-edits-20261107.json'
                 for edit in reversed(json.loads(creditos_i_pt1.read_text('utf-8'))['files'].get(rel, {}).get('edits', [])):
                     if conferencia.count(edit['new']) != edit['occurrences']:

@@ -7,6 +7,10 @@ import sys
 
 ROOT=Path(__file__).resolve().parents[1]
 LAYERS=[
+ # 08/11/2026: cartaz «Ler a cidade» na entrada do Português e nome novo da secção nas páginas publicadas (pedido do
+ # utilizador: «quero que [Ler a cidade] tenha um banner em português»), camada mais recente, por cima dos créditos atrás de um
+ # «i» do pedido pt-1.
+ ('cidade_cartaz_20261108','cidade-cartaz-edits-20261108'),
  # 07/11/2026: decisões 153, 176 e 177, créditos atrás de um «i» na entrada, nos nove índices e no Atlas (pedido pt-1), camada
  # mais recente, por cima da decisão 152 no M1.
  ('creditos_i_pt1_20261107','creditos-i-pt1-edits-20261107'),

@@ -12,8 +12,13 @@ const fs=require('fs'),path=require('path'),http=require('http'),assert=require(
 const {chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright');
 const root=path.resolve(__dirname,'..'),out=process.env.CREDITOS_I_PT1_OUTPUT;if(out)fs.mkdirSync(out,{recursive:true});
 const manifesto=JSON.parse(fs.readFileSync(path.join(root,'tests/fixtures/creditos-i-pt1-edits-20261107.json'),'utf8')).files;
+// 08/11/2026: por cima desta camada fica o cartaz «Ler a cidade» e o nome novo da secção (camada cidade_cartaz_20261108, que muda
+// a entrada e os nove índices): desfaz-se primeiro, com contagem estrita, e as conferências ficam iguais.
+const cidadeCartaz=JSON.parse(fs.readFileSync(path.join(root,'tests/fixtures/cidade-cartaz-edits-20261108.json'),'utf8')).files;
+// 08/11/2026 (revisão do cartaz «Ler a cidade»): a entrada ganha um terceiro «i», o da fotografia do cartaz (camada de cima, conferido
+// em tests/browser_cidade_cartaz.cjs); aqui contam-se e medem-se os desta camada, os que não estão dentro do cartaz.
 // A página sem esta camada (desfeita da última troca para a primeira, com contagem estrita).
-function antes(rel){let t=fs.readFileSync(path.join(root,rel),'utf8');for(const e of [...manifesto[rel].edits].reverse()){assert.equal(t.split(e.new).length-1,e.occurrences,rel+' '+e.location);t=t.split(e.new).join(e.old)}return t}
+function antes(rel){let t=fs.readFileSync(path.join(root,rel),'utf8');for(const e of [...((cidadeCartaz[rel]||{}).edits||[])].reverse()){assert.equal(t.split(e.new).length-1,e.occurrences,rel+' cartaz «Ler a cidade» '+e.location);t=t.split(e.new).join(e.old)}for(const e of [...manifesto[rel].edits].reverse()){assert.equal(t.split(e.new).length-1,e.occurrences,rel+' '+e.location);t=t.split(e.new).join(e.old)}return t}
 const um=(s,re)=>{const m=s.match(re);assert.ok(m,String(re));return m[1]};
 const LICENCA_M8='https://creativecommons.org/licenses/by-sa/2.0/deed.pt';
 // Para cada página: os «i» novos, pela ordem da página, com o crédito antigo (HTML), o nome, as ligações a mais e a imagem.
@@ -35,7 +40,7 @@ async function contexto(b,origem,opcoes){const ctx=await b.newContext(opcoes);aw
  return u.origin===origem?r.continue():r.abort()});return ctx}
 // Medidas dentro da página: o «i» n, aberto ou fechado.
 function medir([n,htmlAntigo]){
- const d=document.querySelectorAll('details.info-i[name="info-i"]')[n],s=d.querySelector(':scope>summary'),t=d.querySelector(':scope>.info-i-texto');
+ const d=document.querySelectorAll('details.info-i[name="info-i"]:not(.cidade-cartaz details)')[n],s=d.querySelector(':scope>summary'),t=d.querySelector(':scope>.info-i-texto');
  const norm=x=>x.replace(/\s+/g,' ').trim(),palavras=x=>x.toLowerCase().replace(/[^\p{L}\p{N}©↗]+/gu,' ').trim(),tpl=document.createElement('template');tpl.innerHTML=htmlAntigo;
  // (checkVisibility: o conteúdo de um «i» fechado não se vê)
  const visivel=e=>e.getClientRects().length>0&&e.checkVisibility({visibilityProperty:true,contentVisibilityAuto:true,opacityProperty:true});
@@ -69,7 +74,7 @@ function medir([n,htmlAntigo]){
   for(const pg of PAGINAS){
    const page=await ctx.newPage(),errors=[];page.on('pageerror',e=>errors.push(e.message));
    await page.goto(origin+'/pt/'+pg.p,{waitUntil:'load'});await page.evaluate(()=>document.fonts.ready);
-   const sel='details.info-i[name="info-i"]',todos=page.locator(sel);
+   const sel='details.info-i[name="info-i"]:not(.cidade-cartaz details)',todos=page.locator(sel);
    assert.equal(await todos.count(),pg.is.length,pg.p+': número de «i»');
    for(const [k,info] of pg.is.entries()){
     const rot=`${width} px, ${tema}, /pt/${pg.p} «i» ${k+1}`,d=todos.nth(k),s=d.locator(':scope>summary');
@@ -103,7 +108,7 @@ function medir([n,htmlAntigo]){
    }
    // impressão: o «i» não sai; o crédito sai por extenso sempre que sai a imagem a que pertence; a licença leva o endereço
    await page.emulateMedia({media:'print'});
-   const imp=await page.evaluate(vis=>{const ds=[...document.querySelectorAll('details.info-i[name="info-i"]')];const v=e=>!!e&&e.getClientRects().length>0&&e.checkVisibility({visibilityProperty:true,contentVisibilityAuto:true});
+   const imp=await page.evaluate(vis=>{const ds=[...document.querySelectorAll('details.info-i[name="info-i"]:not(.cidade-cartaz details)')];const v=e=>!!e&&e.getClientRects().length>0&&e.checkVisibility({visibilityProperty:true,contentVisibilityAuto:true});
     return {lado:document.documentElement.scrollWidth-innerWidth,is:ds.map((d,i)=>({texto:v(d.querySelector('.info-i-texto')),inteiro:getComputedStyle(d.querySelector('.info-i-texto')).overflowY==='visible'||d.querySelector('.info-i-texto').scrollHeight<=d.querySelector('.info-i-texto').clientHeight+1,i:v(d.querySelector('summary')),imagem:v(document.querySelector(vis[i])),
      licenca:[...d.querySelectorAll('a[rel~=license]')].map(a=>getComputedStyle(a,'::after').content)}))};},pg.is.map(x=>x.visual));
    imp.is.forEach((x,i)=>{const rot=`${width} px, ${tema}, /pt/${pg.p} «i» ${i+1}, impressão`;assert.equal(x.i,false,rot+': sem o botão «i»');assert.equal(x.texto,x.imagem,rot+': o crédito acompanha a imagem');
@@ -122,7 +127,7 @@ function medir([n,htmlAntigo]){
   for(const pg of PAGINAS){
    const page=await ctx.newPage(),errors=[];page.on('pageerror',e=>errors.push(e.message));
    await page.goto(origin+'/pt/'+pg.p+'?projetar=1',{waitUntil:'load'});
-   const ds=page.locator('details.info-i[name="info-i"]');
+   const ds=page.locator('details.info-i[name="info-i"]:not(.cidade-cartaz details)');
    for(let k=0;k<pg.is.length;k++){const rot=`projeção ${width} px, /pt/${pg.p} «i» ${k+1}`,s=ds.nth(k).locator(':scope>summary');await s.scrollIntoViewIfNeeded();
     let m=await page.evaluate(medir,[k,pg.is[k].html]);assert.equal(m.open,false,rot+': fechado');assert.ok(m.alvo[0]>=44&&m.alvo[1]>=44,rot+': alvo de 44 px');assert.ok(m.lado<=0,rot+': sem transbordo');
     // (com movimento, o crédito aparece em 160 ms, a partir da opacidade 0: mede-se depois)
