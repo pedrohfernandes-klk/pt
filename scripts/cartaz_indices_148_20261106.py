@@ -45,6 +45,8 @@ MANIFESTO = ROOT / 'tests/fixtures/cartaz-indices-148-edits-20261106.json'
 ACERTOS = ROOT / 'tests/fixtures/indices-acertos-edits-20261107.json'
 # 07/11/2026 (fusão do main 29441e6b no pedido #182): por cima dos acertos fica a decisão 152 no M1.
 CUIDADO = ROOT / 'tests/fixtures/cuidado-m1-edits-20261106.json'
+# 07/11/2026: por cima da decisão 152 no M1 ficam os créditos atrás de um «i» do pedido pt-1 (a imagem documental dos índices).
+CREDITOS_PT1 = ROOT / 'tests/fixtures/creditos-i-pt1-edits-20261107.json'
 VERSAO = '20261106'
 ACHADO = ('06/11/2026: decisão 148 (o desenho do índice do M4 passa aos nove, com a palavra do módulo, a imagem documental '
           'mais pequena a seguir às unidades e os botões flutuantes de sempre). {o}')
@@ -61,6 +63,11 @@ COMENTARIO_PILOTO = next(t['novo'] for t in PILOTO if t['local'] == 'M4 retirar 
 def base(rel):
     """O texto da página sem esta camada (desfeita pelo manifesto, da última troca para a primeira)."""
     texto = (ROOT / rel).read_bytes().decode('utf-8')
+    # 07/11/2026: antes de tudo, os créditos atrás de um «i» do pedido pt-1 (camada creditos_i_pt1_20261107), a mais recente, com contagem estrita.
+    for edit in reversed(json.loads(CREDITOS_PT1.read_text('utf-8'))['files'].get(rel, {}).get('edits', []) if CREDITOS_PT1.is_file() else []):
+        if texto.count(edit['new']) != edit['occurrences']:
+            raise SystemExit(f'{rel}: os créditos atrás de um «i» do pedido pt-1 já não conferem ({edit["location"]})')
+        texto = texto.replace(edit['new'], edit['old'])
     # 07/11/2026 (fusão do main 29441e6b no pedido #182): antes de tudo, a decisão 152 no M1 (camada cuidado_m1_20261106), a mais recente, com contagem estrita.
     for edit in reversed(json.loads(CUIDADO.read_text('utf-8'))['files'].get(rel, {}).get('edits', []) if CUIDADO.is_file() else []):
         if texto.count(edit['new']) != edit['occurrences']:

@@ -56,13 +56,22 @@ class FundoCalcada(unittest.TestCase):
     def test_credito_e_texto_inalterados(self):
         # 02/11/2026: decisão 137. O crédito leva o botão «Parar o desenho», escondido sem script (WCAG 2.2.2).
         # 02/11/2026: nova instrução editorial do docente, crédito explícito de IA sem atribuição manual.
-        self.assertIn('<p class="cf-credito">Grafismo gerado com recurso a IA, EPI, 2026, a partir do padrão de ondas da calçada portuguesa '
-                      '(o «mar largo» do Rossio, Lisboa). <button type="button" class="fundo-botao" data-fundo-botao="cf" hidden>Parar o desenho</button></p>', HTML)
-        credito=HTML[HTML.index('<p class="cf-credito">'):HTML.index('</p>', HTML.index('<p class="cf-credito">'))]
+        # 07/11/2026: decisões 153, 176 e 177 (pedido pt-1). O crédito passa para o «i»; continua a exigir o texto completo, letra a
+        # letra, agora dentro de details.info-i, e o botão de parar fora dela, na .fundo-acoes (sempre à vista), com o texto novo
+        # «Parar a animação» (decisão 177) e escondido sem script (WCAG 2.2.2).
+        self.assertIn('<div class="fundo-acoes cf-credito"><button type="button" class="fundo-botao" data-fundo-botao="cf" hidden>Parar a animação'
+                      '</button><details class="info-i info-i--linha" name="info-i"><summary aria-label="Créditos do desenho"><span '
+                      'aria-hidden="true">i</span></summary><p class="info-i-texto">Grafismo gerado com recurso a IA, EPI, 2026, a partir do '
+                      'padrão de ondas da calçada portuguesa (o «mar largo» do Rossio, Lisboa).</p></details></div>', HTML)
+        self.assertNotIn('<p class="cf-credito">', HTML)
+        self.assertNotIn('Parar o desenho', HTML)
+        inicio = HTML.index('<div class="fundo-acoes cf-credito">')
+        credito = HTML[inicio:HTML.index('</div>', inicio)]
+        self.assertLess(credito.index('</button>'), credito.index('<details'), 'o botão fica fora do «i»')
         self.assertNotIn('pedra a pedra', credito)
         self.assertNotIn('Desenho nosso', credito)
         self.assertIn('Grafismo gerado com recurso a IA, EPI, 2026:', (ROOT/'assets/calcada-mar.svg').read_text('utf-8'))
-        self.assertNotIn('a traço', HTML[HTML.index('<p class="cf-credito">'):HTML.index('</p>', HTML.index('<p class="cf-credito">'))])
+        self.assertNotIn('a traço', credito)
         self.assertIn('<h1 aria-label="Português">', HTML)
         # 02/11/2026: decisão 139. O texto da entrada não muda; a faixa vem logo depois dele.
         self.assertIn('<p class="pt-entry-lead">Ler com atenção. Relacionar ideias. Experimentar outras vozes.</p><div class="cf-mar"', HTML)
@@ -88,6 +97,10 @@ class FundoCalcada(unittest.TestCase):
 
     def test_script_respeita_projecao_e_movimento_reduzido(self):
         self.assertIn("matchMedia('(prefers-reduced-motion: no-preference)')", JS)
+        # 07/11/2026: decisão 177. O motor comum escreve «Parar a animação» e, parado, «Retomar a animação» (era «Parar o desenho»
+        # e «Pôr o desenho a andar»), igual no Lente.
+        self.assertIn("botao.textContent = anda() ? 'Parar a animação' : 'Retomar a animação';", JS)
+        self.assertNotIn('Parar o desenho\'', JS)
         # 02/11/2026: decisão 137. As mesmas condições, escritas no motor comum, que liga <prefixo>-anda (aqui cf-anda), pausa com o
         # separador escondido, pára ao fim de dois ciclos e desliga-se se a moldura de projeção marcar a página depois de carregar.
         self.assertIn('window.self !== window.top', JS)

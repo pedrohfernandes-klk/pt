@@ -20,6 +20,8 @@ from pathlib import Path
 from auditoria_20261028 import undo_cartaz_148_0611
 # 07/11/2026: por cima desta camada ficam os acertos da decisão 173 (camada indices_acertos_20261107).
 from auditoria_20261028 import undo_acertos_0711
+# 07/11/2026: por cima de tudo ficam os créditos atrás de um «i» do pedido pt-1 (camada creditos_i_pt1_20261107).
+from auditoria_20261028 import undo_creditos_i_pt1_0711
 
 ROOT = Path(__file__).resolve().parents[1]
 CAMADA = ROOT / 'scripts/cartaz_indices_148_20261106.json'
@@ -79,7 +81,8 @@ class Camada148(unittest.TestCase):
         r = subprocess.run([sys.executable, 'scripts/aplicar_trocas.py', str(CAMADA.relative_to(ROOT)), '--manifesto',
                             str(MANIFESTO.relative_to(ROOT)), '--verificar',
                             # 07/11/2026 (fusão do main 29441e6b no pedido #182): por cima de tudo, a decisão 152 no M1; desfaz-se primeiro, com a mesma exigência.
-                            '--desfazer-antes', 'tests/fixtures/cuidado-m1-edits-20261106.json',
+                            # 07/11/2026: os créditos atrás de um «i» na entrada, nos índices e no Atlas (creditos_i_pt1_20261107, pedido pt-1) passam a camada mais recente, por cima da decisão 152 no M1; desfazem-se primeiro, com a mesma exigência.
+                            '--desfazer-antes', 'tests/fixtures/creditos-i-pt1-edits-20261107.json', '--desfazer-antes', 'tests/fixtures/cuidado-m1-edits-20261106.json',
                             '--desfazer-antes', 'tests/fixtures/indices-acertos-edits-20261107.json'],  # 07/11/2026: acertos por cima.
                            cwd=ROOT, capture_output=True, text=True, encoding='utf-8')
         self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
@@ -119,10 +122,13 @@ class Camada148(unittest.TestCase):
             sys.path.pop(0)
         # 07/11/2026: os acertos da decisão 173 ficam por cima (primeira camada); esta passa a segunda, logo por baixo deles.
         # 07/11/2026 (fusão do main 29441e6b no pedido #182): por cima dos acertos fica a decisão 152 no M1; os acertos passam a segundos e esta camada a terceira.
-        self.assertEqual(verificar_camadas.LAYERS[0], ('cuidado_m1_20261106', 'cuidado-m1-edits-20261106'))
-        self.assertEqual(verificar_camadas.LAYERS[1], ('indices_acertos_20261107', 'indices-acertos-edits-20261107'))
-        self.assertEqual(verificar_camadas.LAYERS[2], ('cartaz_indices_148_20261106', 'cartaz-indices-148-edits-20261106'))
-        self.assertEqual(verificar_camadas.LAYERS[3], ('creditos_i_20261105', 'creditos-i-edits-20261105'))
+        # 07/11/2026: por cima da decisão 152 no M1 ficam os créditos atrás de um «i» do pedido pt-1; a ordem ganha uma posição e
+        # esta camada passa a quarta.
+        self.assertEqual(verificar_camadas.LAYERS[0], ('creditos_i_pt1_20261107', 'creditos-i-pt1-edits-20261107'))
+        self.assertEqual(verificar_camadas.LAYERS[1], ('cuidado_m1_20261106', 'cuidado-m1-edits-20261106'))
+        self.assertEqual(verificar_camadas.LAYERS[2], ('indices_acertos_20261107', 'indices-acertos-edits-20261107'))
+        self.assertEqual(verificar_camadas.LAYERS[3], ('cartaz_indices_148_20261106', 'cartaz-indices-148-edits-20261106'))
+        self.assertEqual(verificar_camadas.LAYERS[4], ('creditos_i_20261105', 'creditos-i-edits-20261105'))
         auditoria = ler('tests/auditoria_20261028.py')
         corpo = auditoria[auditoria.index('def undo_creditos_i_0511'):]
         self.assertLess(corpo.index('undo_cartaz_148_0611(path, text)'), corpo.index('_CREDITOS_I_0511.get('))
@@ -215,8 +221,14 @@ class Camada148(unittest.TestCase):
                 self.assertEqual(main.count('<figure class="doc">'), 1)
                 fim = main.rindex('</section></div></details></section>') + len('</section></div></details></section>')
                 self.assertTrue(main[fim:].startswith('<figure class="doc">'), main[fim:fim + 80])
-                self.assertRegex(main[fim:], r'^<figure class="doc">.*?<figcaption class="cz-credit">.*?'
-                                             r'(Domínio público|CC BY-SA 2\.0)\.</figcaption></figure>')
+                # 07/11/2026: o crédito da imagem passa para trás de um «i» (camada creditos_i_pt1_20261107, por cima desta, que
+                # tests/test_creditos_i_pt1.py confere); a imagem documental desta camada confere-se como antes, letra a letra, na
+                # página com essa camada desfeita.
+                antes_pt1 = undo_creditos_i_pt1_0711(rel, s)
+                main_pt1 = antes_pt1[antes_pt1.index('<main'):antes_pt1.index('</main>')]
+                fim_pt1 = main_pt1.rindex('</section></div></details></section>') + len('</section></div></details></section>')
+                self.assertRegex(main_pt1[fim_pt1:], r'^<figure class="doc">.*?<figcaption class="cz-credit">.*?'
+                                                     r'(Domínio público|CC BY-SA 2\.0)\.</figcaption></figure>')
                 # O acesso do docente flutua, fora do <main>, como sempre: um só, com os quatro materiais.
                 # 06/11/2026: decisão 173, no HTML continua fora do <main> (e assim fica sem JavaScript); abaixo de 640 px é
                 # cartaz-indice-comum.js que o põe no menu «Recursos do módulo» (ver test_estilos_e_script_comuns).

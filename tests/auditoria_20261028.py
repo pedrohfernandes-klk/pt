@@ -312,7 +312,21 @@ _CREDITOS_I_0511 = json.loads((ROOT/'tests/fixtures/creditos-i-edits-20261105.js
 # não se partem, camada mais recente, por cima dos créditos atrás de um «i»: desfaz-se antes deles, com contagem estrita. 07/11/2026 (fusão do main 29441e6b): por cima dos acertos da decisão 173.
 _CUIDADO_M1_0611 = json.loads((ROOT/'tests/fixtures/cuidado-m1-edits-20261106.json').read_text('utf-8'))['files']
 
+# 07/11/2026: decisões 153, 176 e 177, créditos atrás de um «i» na entrada, nos nove índices e no Atlas (pedido pt-1), camada mais
+# recente, por cima da decisão 152 no M1: desfaz-se antes dela, com contagem estrita.
+_CREDITOS_I_PT1_0711 = json.loads((ROOT/'tests/fixtures/creditos-i-pt1-edits-20261107.json').read_text('utf-8'))['files']
+
+def undo_creditos_i_pt1_0711(path, text):
+    for edit in reversed(_CREDITOS_I_PT1_0711.get(_relative(path), {}).get('edits', [])):
+        if text.count(edit['new']) != edit['occurrences']:
+            raise AssertionError(f"Créditos atrás de um «i» (pedido pt-1) não conferem: {path}: {edit['location']}")
+        text = text.replace(edit['new'], edit['old'])
+    return text
+
+
 def undo_cuidado_m1_0611(path, text):
+    # 07/11/2026: primeiro os créditos atrás de um «i» do pedido pt-1, que estão por cima.
+    text = undo_creditos_i_pt1_0711(path, text)
     for edit in reversed(_CUIDADO_M1_0611.get(_relative(path), {}).get('edits', [])):
         if text.count(edit['new']) != edit['occurrences']:
             raise AssertionError(f"Decisão 152 no M1 não confere: {path}: {edit['location']}")
