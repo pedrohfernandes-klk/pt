@@ -276,7 +276,7 @@ class CidadeCartaz(unittest.TestCase):
         # 08/11/2026: e, antes da do M2, a decisão 152 no M3.
         # 08/11/2026: e, antes da do M3, a decisão 152 no M4, sem nada pelo meio.
         # 08/11/2026: e, antes da do M4, a do M5, sem nada pelo meio.
-        self.assertIn(f'scripts/creditos_i_pt1_20261107.json --manifesto {pt1} --verificar --desfazer-antes {m5} --desfazer-antes {m4} --desfazer-antes {m3} '
+        self.assertIn(f'scripts/creditos_i_pt1_20261107.json --manifesto {pt1} --verificar --desfazer-antes tests/fixtures/tarefas-claras-edits-20261110.json --desfazer-antes {m5} --desfazer-antes {m4} --desfazer-antes {m3} '
                       f'--desfazer-antes {m2} --desfazer-antes {meu}\n', ler('.github/workflows/cartaz-qa.yml'))
         # Nas cadeias dos testes, esta camada vem logo antes da do pt-1, sem outra pelo meio.
         for p in sorted((ROOT / 'tests').glob('test_*.py')):
@@ -342,7 +342,7 @@ class CidadeCartaz(unittest.TestCase):
         self.assertIn('      - run: python scripts/aplicar_trocas.py scripts/cidade_cartaz_20261108.json --manifesto '
                       # 08/11/2026: e, antes da do M3, a decisão 152 no M4, sem nada pelo meio.
                       # 08/11/2026: e, antes da do M4, a do M5, sem nada pelo meio.
-                      f'{meu} --verificar --desfazer-antes {m5} --desfazer-antes {m4} --desfazer-antes {m3} --desfazer-antes {m2}\n', cartaz)
+                      f'{meu} --verificar --desfazer-antes tests/fixtures/tarefas-claras-edits-20261110.json --desfazer-antes {m5} --desfazer-antes {m4} --desfazer-antes {m3} --desfazer-antes {m2}\n', cartaz)
         self.assertIn('      - run: node tests/browser_cidade_cartaz.cjs\n', cartaz)
         self.assertLess(cartaz.index('node tests/browser_creditos_i_pt1.cjs'), cartaz.index('node tests/browser_cidade_cartaz.cjs'))
         for caminho in ('scripts/cidade_cartaz_20261108.*', meu, 'tests/*cidade_cartaz*', 'assets/retro-portals.css', 'index.html'):
