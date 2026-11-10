@@ -256,7 +256,7 @@ class CreditosIPt1(unittest.TestCase):
                 # 08/11/2026: e, antes da do M2, pela decisão 152 no M3, sem nada pelo meio.
                 # 08/11/2026: e, antes da do M3, pela decisão 152 no M4, sem nada pelo meio.
                 # 08/11/2026: e, antes da do M4, a decisão 152 no M5 (cuidado_m5_20261108), agora a mais recente, sem nada pelo meio.
-                self.assertIn('--verificar --desfazer-antes tests/fixtures/cuidado-m5-edits-20261108.json '
+                self.assertIn('--verificar --desfazer-antes tests/fixtures/tarefas-claras-edits-20261110.json --desfazer-antes tests/fixtures/cuidado-m5-edits-20261108.json '
                               '--desfazer-antes tests/fixtures/cuidado-m4-edits-20261108.json '
                               '--desfazer-antes tests/fixtures/cuidado-m3-edits-20261108.json '
                               '--desfazer-antes tests/fixtures/cuidado-m2-edits-20261108.json '
@@ -270,7 +270,7 @@ class CreditosIPt1(unittest.TestCase):
         # 08/11/2026: e, antes da do M2, a decisão 152 no M3.
         # 08/11/2026: e, antes da do M3, a decisão 152 no M4 (cuidado_m4_20261108), a camada mais recente, sem nada pelo meio.
         # 08/11/2026: e, antes da do M4, a decisão 152 no M5 (cuidado_m5_20261108), agora a mais recente, sem nada pelo meio.
-        self.assertIn('scripts/cuidado_m1_20261106.json --manifesto tests/fixtures/cuidado-m1-edits-20261106.json --verificar '
+        self.assertIn('scripts/cuidado_m1_20261106.json --manifesto tests/fixtures/cuidado-m1-edits-20261106.json --verificar --desfazer-antes tests/fixtures/tarefas-claras-edits-20261110.json '
                       '--desfazer-antes tests/fixtures/cuidado-m5-edits-20261108.json '
                       '--desfazer-antes tests/fixtures/cuidado-m4-edits-20261108.json '
                       '--desfazer-antes tests/fixtures/cuidado-m3-edits-20261108.json '
@@ -345,7 +345,7 @@ class CreditosIPt1(unittest.TestCase):
         # 08/11/2026: e, antes da do M3, a decisão 152 no M4 (cuidado_m4_20261108), a camada mais recente, sem nada pelo meio.
         # 08/11/2026: e, antes da do M4, a decisão 152 no M5 (cuidado_m5_20261108), agora a mais recente, sem nada pelo meio.
         self.assertIn('python scripts/aplicar_trocas.py scripts/creditos_i_pt1_20261107.json --manifesto '
-                      'tests/fixtures/creditos-i-pt1-edits-20261107.json --verificar '
+                      'tests/fixtures/creditos-i-pt1-edits-20261107.json --verificar --desfazer-antes tests/fixtures/tarefas-claras-edits-20261110.json '
                       '--desfazer-antes tests/fixtures/cuidado-m5-edits-20261108.json '
                       '--desfazer-antes tests/fixtures/cuidado-m4-edits-20261108.json '
                       '--desfazer-antes tests/fixtures/cuidado-m3-edits-20261108.json '
