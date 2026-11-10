@@ -682,7 +682,7 @@ class CuidadoM5(unittest.TestCase):
         self.assertIn(f'python scripts/aplicar_trocas.py scripts/cuidado_m4_20261108.json --manifesto {m4} --verificar --desfazer-antes tests/fixtures/tarefas-claras-edits-20261110.json --desfazer-antes {meu}\n',
                       tarefas)
         cartaz = ler('.github/workflows/cartaz-qa.yml')
-        self.assertIn(f'scripts/cidade_cartaz_20261108.json --manifesto tests/fixtures/cidade-cartaz-edits-20261108.json --verificar '
+        self.assertIn(f'scripts/cidade_cartaz_20261108.json --manifesto tests/fixtures/cidade-cartaz-edits-20261108.json --verificar --desfazer-antes tests/fixtures/tarefas-claras-edits-20261110.json '
                       f'--desfazer-antes {meu} --desfazer-antes {m4} --desfazer-antes tests/fixtures/cuidado-m3-edits-20261108.json', cartaz)
         for p in sorted((ROOT / 'tests').glob('test_*.py')):
             # Como este, os testes do pedido pt-1 e da decisão 152 no M1 conferem as cadeias com frases partidas em várias linhas (e já

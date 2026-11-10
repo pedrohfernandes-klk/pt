@@ -615,7 +615,7 @@ class CuidadoM3(unittest.TestCase):
         cartaz = ler('.github/workflows/cartaz-qa.yml')
         # 08/11/2026: o cartaz «Ler a cidade» desfaz primeiro a decisão 152 no M4, depois esta e a do M2.
         # 08/11/2026: e, antes da do M4, a do M5.
-        self.assertIn(f'scripts/cidade_cartaz_20261108.json --manifesto tests/fixtures/cidade-cartaz-edits-20261108.json --verificar '
+        self.assertIn(f'scripts/cidade_cartaz_20261108.json --manifesto tests/fixtures/cidade-cartaz-edits-20261108.json --verificar --desfazer-antes tests/fixtures/tarefas-claras-edits-20261110.json '
                       f'--desfazer-antes {m5} --desfazer-antes {m4} --desfazer-antes {meu} --desfazer-antes {m2}\n', cartaz)
         for p in sorted((ROOT / 'tests').glob('test_*.py')):
             # Como este, os testes do pedido pt-1 e da decisão 152 no M1 conferem as cadeias com frases partidas em várias linhas
