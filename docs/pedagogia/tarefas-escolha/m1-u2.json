@@ -39,21 +39,21 @@
   "ligacao": "Abrir o aquecimento em cartões",
   "ligacao_enunciado": "Aquecer"
  },
- "lead": "Núcleo: cerca de 40 palavras por resposta. Crónica: título e 160 a 200 palavras. Abre dentro de um momento. Faz ver com um pormenor. Põe o povo a agir. Inclui uma fala marcada «documentada» ou «imaginada». Marca as tuas inferências e opiniões. Confronta duas fontes. Lista-as no fim. Risca uma frase, sem apagar. Reescreve-a. À mão, com consulta.",
+ "lead": "À mão, com consulta. Perguntas: cerca de <strong>40 palavras por resposta</strong>. Crónica: título e <strong>160 a 200 palavras</strong>. As respostas, as fontes e as duas linhas finais ficam fora dessa contagem.",
  "nucleo": [
-  "Como transforma Fernão Lopes a cidade numa só figura, quando ela ouve o grito do pajem? Cita uma passagem do cap. XII. Explica o que essa passagem faz ver.",
-  "Num rascunho inventado, o pajem brada, em fala marcada como documentada: «Matam o Mestre! Vamos pra rua!». Identifica o que não está nos excertos do cap. XII. Em «pra», indica o som que cai, onde e o processo. Justifica onde pode ficar «pra»: relato, fala documentada ou imaginada."
+  "<strong>A cidade como personagem.</strong><br/>Como mostra Fernão Lopes a cidade a agir em conjunto, depois do grito do pajem? Cita uma passagem do capítulo XII e explica o que ela faz ver.",
+  "<strong>O que pode ser apresentado como documentado?</strong><br/>Um rascunho inventado atribui ao pajem esta fala documentada: «Matam o Mestre! Vamos pra rua!». Identifica o que não aparece nos excertos do capítulo XII. Em «pra», indica o som que cai, a posição e o processo. Justifica se essa forma pode ficar no relato, numa fala documentada ou numa fala imaginada."
  ],
  "temas": [
   {
    "letra": "A",
    "nome": "A língua do cronista",
-   "texto": "Conta por dentro o grito do pajem (cap. XII), o sino da quadrilha (cap. CXVI) ou a fome do cerco (cap. CXLVIII). Usa uma gradação tua. Copia letra a letra uma passagem desse capítulo. A segunda fonte é uma imagem do dossiê ou a do teu plano da aula 13."
+   "texto": "Conta um destes momentos: o grito do pajem (cap. XII), o sino da quadrilha (cap. CXVI) ou a fome do cerco (cap. CXLVIII).</p><ol><li>Inclui uma gradação criada por ti e uma passagem copiada exatamente do capítulo escolhido.</li><li>Como segunda fonte, usa uma imagem do dossiê ou a fonte do teu plano da aula 13.</li></ol><p>"
   },
   {
    "letra": "B",
    "nome": "A crónica e a imagem",
-   "texto": "Conta o dia do grito ou o cerco; podes começar hoje, num lugar do passeio ou noutro que observaste. Confronta a crónica com a imagem desse momento: o que uma mostra e a outra cala, e o que a imagem escolhe. Usa dois factos do dossiê."
+   "texto": "Conta o dia do grito ou o cerco. Podes começar num lugar de hoje que tenhas observado.</p><ol><li>Compara a crónica com uma imagem desse momento: o que cada uma mostra ou deixa de fora e o que a imagem escolhe destacar.</li><li>Usa dois factos do dossiê.</li></ol><p>"
   }
  ],
  "apoios": [
@@ -134,5 +134,15 @@
   "A: gradação e passagem copiada. B: o que a imagem escolhe e dois factos.",
   "160 a 200 palavras, título, uma frase riscada e reescrita."
  ],
- "fecho": "Fecha com duas linhas, fora da contagem, como o núcleo e as fontes: que escolha de Fernão Lopes usaste na tua crónica (fazer ver, a multidão como uma só figura, a gradação, a fala em discurso direto)? Aponta a tua frase que a mostra."
+ "fecho": "Fecha com duas linhas, fora da contagem, como o núcleo e as fontes: que escolha de Fernão Lopes usaste na tua crónica (fazer ver, a multidão como uma só figura, a gradação, a fala em discurso direto)? Aponta a tua frase que a mostra.",
+ "clareza": {
+  "produto": "Responde às duas perguntas e escreve <strong>uma crónica</strong>, escolhendo o tema A ou B.",
+  "etapa": "1. Responde às duas perguntas",
+  "entrega": "Escreve o tema escolhido (A ou B) no topo. Fotografa as respostas, o tema escolhido e as duas linhas finais. Confirma que as fotografias mostram o trabalho completo e entrega-as na tarefa do Teams.",
+  "incluir": [
+   "Começa dentro da ação, mostra um pormenor e põe a população a agir.",
+   "Inclui uma fala identificada como «documentada» ou «imaginada». Assinala as tuas inferências e opiniões.",
+   "Confronta duas fontes e lista-as no fim. Risca uma frase sem a apagar e escreve uma versão melhor."
+  ]
+ }
 }

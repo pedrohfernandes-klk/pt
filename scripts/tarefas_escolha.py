@@ -106,7 +106,7 @@ def warmup_cards(slug, a, sep=' '):
 '''
 
 
-def header(slug, unit, title, lead, core, themes, aquecer=None, sep=' '):
+def header(slug, unit, title, lead, core, themes, aquecer=None, sep=' ', clareza=None):
     li = ''.join(f'<li>{x}</li>' for x in core)
     # 29/10/2026: com o aquecimento em cartões, o enunciado leva também a ligação em destaque, logo a seguir ao lead.
     link = f'<p class="task-aquecer"><a href="{aquecer["cartoes"]}">{aquecer["ligacao_enunciado"]}</a></p>\n' if aquecer else ''
@@ -114,11 +114,18 @@ def header(slug, unit, title, lead, core, themes, aquecer=None, sep=' '):
     # 08/11/2026: decisão 152, M5. Um tema cujo texto acaba numa lista não deixa um parágrafo vazio no fim.
     corpo = lambda text: re.sub(r'<p></p>$', '', f'<p>{text}</p>')
     th = ''.join(f'<article class="task-theme" data-task-theme="{k}" aria-labelledby="tema-{k}"><h3 id="tema-{k}"><span><span class="sr-only">Tema </span>{k}</span> {name}</h3>{corpo(text)}</article>' for k, name, text in themes)
+    clareza = clareza or {}
+    produto = ('<h2 class="task-part">O que vais fazer</h2><p>' + clareza['produto'] + '</p>\n') if clareza else ''
+    comum = clareza.get('etapa', 'Núcleo comum')
+    escolha = '2. Escolhe A ou B' if clareza else 'Escolhe um tema'
+    requisitos = ('<h3>O teu texto deve incluir</h3><ul>' + ''.join('<li>' + x + '</li>' for x in clareza['incluir']) + '</ul>') if clareza.get('incluir') else ''
+    partes = f'<h2 class="task-part">{comum} <small>para todos</small></h2><ol>{li}</ol>\n<h2 class="task-part">{escolha} <small>só um</small></h2><div class="task-themes">{th}</div>{requisitos}'
+    if clareza.get('escolha_primeiro'):
+        partes = f'<h2 class="task-part">1. Escolhe A ou B <small>só um</small></h2><div class="task-themes">{th}</div>\n<h2 class="task-part">{comum} <small>para todos</small></h2><ol>{li}</ol>{requisitos}'
     return f'''<header><p class="task-kicker">Tarefa individual · Unidade {unit} · 90{sep}min</p><h1>{title}</h1>
-<p>{lead}</p>
+{produto}<p>{lead}</p>
 {link}<section id="produzir" aria-label="Enunciado">
-<h2 class="task-part">Núcleo comum <small>para todos</small></h2><ol>{li}</ol>
-<h2 class="task-part">Escolhe um tema <small>só um</small></h2><div class="task-themes">{th}</div>
+{partes}
 </section><div class="task-relogio" data-relogio data-max="60" data-passo="5" data-rotulo="Produção em papel" data-chave="pt-relogio:tarefas/{slug}:producao"></div></header>
 '''
 
@@ -138,8 +145,14 @@ def apoios(links, dossier_title, facts, qtitle, options, examples=(), questions=
 '''
 
 
-def entregar(criteria, close, grelha):
+def entregar(criteria, close, grelha, clareza=None):
     cr = ''.join(f'<li>{c}</li>' for c in criteria)
+    if clareza:
+        return f'''<section class="task-section" id="entregar" aria-labelledby="entregar-title"><h2 id="entregar-title">3. Revê e entrega</h2>
+<h3>Fecha o trabalho</h3><p>{close}</p>
+<h3 id="criterios">Antes de entregar, verifica</h3><ul class="task-criteria">{cr}</ul>
+{LIGACAO if grelha else ''}<h3>Entrega no Teams</h3><p>{clareza['entrega']}</p></section>
+'''
     return f'''<section class="task-section" id="entregar" aria-labelledby="entregar-title"><h2 id="entregar-title">Verificar e entregar</h2>
 <h3 id="criterios">O que conta</h3><ul class="task-criteria">{cr}</ul>
 {LIGACAO if grelha else ''}<p>{close}</p>
@@ -161,11 +174,11 @@ def tarefa(d, com_grelha, raiz=ROOT):
             + (warmup_cards(slug, a, sep) if cartoes else
                warmup(slug, a['instrucao'], [tuple(x) for x in a['anatomia']], a['afirmacao'], a['pergunta'], op(a['opcoes'])))
             + header(slug, unit, d['titulo'], d['lead'], d['nucleo'], [(t['letra'], t['nome'], t['texto']) for t in d['temas']],
-                     a if cartoes else None, sep)
+                     a if cartoes else None, sep, d.get('clareza'))
             + apoios([(x['href'], x['texto']) for x in d['apoios']], d['dossie_titulo'], [(x['facto'], x['href'], x['fonte']) for x in d['dossie']],
                      d['opcional']['pergunta'], op(d['opcional']['opcoes']),
                      [(x['titulo'], x['html']) for x in d.get('exemplos', [])], 1 if cartoes else 2)
-            + entregar(d['criterios'], d['fecho'], com_grelha)
+            + entregar(d['criterios'], d['fecho'], com_grelha, d.get('clareza'))
             + FOOT)
     if 'tabela' in a:
         # 06/11/2026: decisão 152. A folha das tabelas de apoio, antes da camada de aparência.

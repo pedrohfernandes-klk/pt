@@ -232,7 +232,7 @@ class Aquecimentos(unittest.TestCase):
             if 'Frei Luís de Sousa' not in facto['facto']:
                 with self.subTest(facto=facto['facto']):
                     self.assertRegex(facto['facto'], r'\b1[0-9]{3}\b')
-        self.assertIn('o facto que usares tem de ter data', tarefa['temas'][1]['texto'])
+        self.assertIn('Se usares um facto, indica a data', tarefa['temas'][1]['texto'])
 
     def test_u2_apresentacao_individual(self):
         # Decisão 5 do docente: a tarefa, o guia e a linha do percurso dizem o mesmo.
@@ -244,8 +244,9 @@ class Aquecimentos(unittest.TestCase):
         aquecimento = (ROOT / 'tarefas/m7-u2/aquecimento/index.html').read_text('utf-8')
         self.assertIn('A apresentação é individual.', tarefa)
         # 05/11/2026: decisão 154 (os exercícios fazem-se sozinho): a pergunta pode ser feita ou prevista; a frase exata
-        # continua exigida, e a anterior (só a pergunta feita por alguém) não pode voltar.
-        self.assertIn('Apresenta a voz em dois minutos, lê uma frase e responde a uma pergunta, feita ou prevista.', tarefa)
+        # mantém o mesmo requisito na redação mais clara do enunciado.
+        self.assertIn('Apresenta em dois minutos:', tarefa)
+        self.assertIn('lê uma frase e responde a uma pergunta feita ou prevista.', tarefa)
         self.assertNotIn('responde a uma pergunta.</p>', tarefa)
         self.assertIn('apresentação individual</li>', guia)
         self.assertIn('Apresenta-o em dois minutos e lê uma frase dele.', guia)
@@ -261,7 +262,8 @@ class Aquecimentos(unittest.TestCase):
         self.assertIn('no início da aula de tarefa', dados('m7-u2')['descricao'])
         # 05/11/2026: decisão 154: a linha regista uma pergunta feita ou prevista (há caminho a sós); a linha continua
         # obrigatória e a entrar nas fotografias, e a rubrica do guia diz o mesmo.
-        self.assertIn('Regista no teu papel, numa linha, uma pergunta (a que te fizeram ou uma que prevês) e a tua resposta; essa linha entra nas fotografias.', tarefa)
+        self.assertIn('Regista a pergunta e a resposta numa linha.', tarefa)
+        self.assertIn('a pergunta com resposta e as duas linhas finais', tarefa)
         self.assertNotIn('a pergunta que te fizeram e o que respondeste', tarefa)
         self.assertIn('responde a uma pergunta feita ou prevista (registada numa linha no papel)', guia)
 

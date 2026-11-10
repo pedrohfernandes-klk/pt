@@ -10,21 +10,21 @@
   "ligacao": "Abrir o aquecimento em cartões",
   "ligacao_enunciado": "Aquecer"
  },
- "lead": "À mão, 200 a 240 palavras: cerca de 60 por resposta do núcleo e 80 a 120 no tema. Com consulta.",
+ "lead": "À mão, com consulta: <strong>200 a 240 palavras no total</strong>. Orientação: cerca de 60 por resposta e 80 a 120 no tema.",
  "nucleo": [
-  "Na Proposição (I, 1 a 3), cita uma expressão que canta quem partiu e outra sobre quem lá vivia. Explica o que um objeto do <i>Kit</i> de Patrícia Lino mostra e a Proposição cala. Escreve um facto e um juízo sobre a Proposição.",
-  "Cita um verso das voltas de «Descalça vai para a fonte» e um de «Alma minha gentil», do verso 3 em diante. Nomeia um recurso de cada e explica o que mostra da amada. Divide-os em sílabas métricas e diz a medida."
+  "<strong>Quem é celebrado e quem fica de fora?</strong><br/>Na Proposição (I, 1 a 3), cita uma expressão sobre quem partiu e outra sobre quem lá vivia. Explica o que um objeto do Kit de Patrícia Lino mostra e a Proposição cala. Escreve um facto e um juízo sobre a Proposição.",
+  "<strong>Duas imagens da amada.</strong><br/>Escolhe um verso das voltas de «Descalça vai para a fonte» e outro de «Alma minha gentil», a partir do verso 3. Para cada um: cita-o, identifica um recurso e explica o que mostra da amada; divide-o em sílabas métricas e indica a medida."
  ],
  "temas": [
   {
    "letra": "A",
    "nome": "A medida velha, hoje",
-   "texto": "Uma Leonor de hoje vai a pé à escola: escreve-lhe, em redondilha maior, um mote de dois versos e uma volta de cinco que acabe no último verso do mote, com cores e uma hipérbole. Divide dois versos teus em sílabas. Cita o verso de Camões que imitaste, diz o que imitaste e uma diferença entre as Leonores."
+   "texto": "Imagina uma Leonor de hoje a caminho da escola.</p><ol><li>Escreve um mote de dois versos e uma volta de cinco, em redondilha maior. Termina a volta com o último verso do mote. Inclui cores e uma hipérbole.</li><li>Divide dois dos teus versos em sílabas métricas.</li><li>Cita o verso de Camões que imitaste, explica a imitação e indica uma diferença entre as duas Leonores.</li></ol><p>"
   },
   {
    "letra": "B",
    "nome": "Pedra e verso",
-   "texto": "Numa exposição, legenda a fotografia do túmulo de Camões (lição F04): a imagem em duas frases, dois factos do dossiê, um verso da Proposição ou do Velho do Restelo, com canto e estância, a razão por que o escolheste e o que a legenda não pode afirmar."
+   "texto": "Escreve uma legenda de exposição para a fotografia do túmulo de Camões, na lição F04.</p><ol><li>Descreve a imagem em duas frases e inclui dois factos do dossiê.</li><li>Escolhe um verso da Proposição ou do Velho do Restelo. Indica canto e estância e explica a escolha.</li><li>Diz o que a legenda não pode afirmar.</li></ol><p>"
   }
  ],
  "apoios": [
@@ -116,5 +116,10 @@
   "Tema A: mote, volta, verso que volta, cores, hipérbole, sílabas, imitação e diferença. Tema B: imagem, dois factos, verso localizado e explicado, o que não se pode afirmar.",
   "Respostas articuladas, 200 a 240 palavras, escrita revista."
  ],
- "fecho": "Fecha com duas linhas, fora da contagem de palavras: o que passaste a perguntar quando um poema canta alguém? Aponta o verso que te ajudou."
+ "fecho": "Fecha com duas linhas, fora da contagem de palavras: o que passaste a perguntar quando um poema canta alguém? Aponta o verso que te ajudou.",
+ "clareza": {
+  "produto": "Responde às duas perguntas e escolhe <strong>um tema</strong>: escrever versos (A) ou uma legenda de exposição (B).",
+  "etapa": "1. Responde às duas perguntas",
+  "entrega": "Escreve o tema escolhido (A ou B) no topo. Fotografa as respostas, o tema escolhido e as duas linhas finais. Confirma que as fotografias mostram o trabalho completo e entrega-as na tarefa do Teams."
+ }
 }

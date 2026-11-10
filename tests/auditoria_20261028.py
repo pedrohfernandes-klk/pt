@@ -338,7 +338,12 @@ _CUIDADO_M4_0811 = json.loads((ROOT/'tests/fixtures/cuidado-m4-edits-20261108.js
 # não se partem, camada mais recente, por cima da decisão 152 no M4: desfaz-se antes dela, com contagem estrita.
 _CUIDADO_M5_0811 = json.loads((ROOT/'tests/fixtures/cuidado-m5-edits-20261108.json').read_text('utf-8'))['files']
 
+_TAREFAS_CLARAS = json.loads((ROOT/'tests/fixtures/tarefas-claras-edits-20261110.json').read_text('utf-8'))['files']
+
 def undo_cuidado_m5_0811(path, text):
+    for edit in reversed(_TAREFAS_CLARAS.get(_relative(path), {}).get('edits', [])):
+        assert text.count(edit['new']) == edit['occurrences'], f"Enunciado revisto não confere: {path}"
+        text = text.replace(edit['new'], edit['old'])
     for edit in reversed(_CUIDADO_M5_0811.get(_relative(path), {}).get('edits', [])):
         if text.count(edit['new']) != edit['occurrences']:
             raise AssertionError(f"Decisão 152 no M5 não confere: {path}: {edit['location']}")

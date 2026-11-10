@@ -39,21 +39,21 @@
   "ligacao": "Abrir o aquecimento em cartões",
   "ligacao_enunciado": "Aquecer em cartões"
  },
- "lead": "À mão, 200 a 250 palavras: cerca de 50 por resposta do núcleo e 100 a 150 no tema. Com consulta.",
+ "lead": "À mão, com consulta: <strong>200 a 250 palavras no total</strong>. Orientação: cerca de 50 por resposta e 100 a 150 no tema, incluindo a explicação final.",
  "nucleo": [
-  "Cita uma passagem da Introdução e outra do cap. IV em que o narrador não se limita a contar. Identifica um recurso numa delas. Explica o que quer de quem lê, em cada uma.",
-  "Tadeu diz ao sobrinho: «Não te posso dar minha filha, porque já não tenho filha.» Identifica a função sintática de «te» e de «minha filha», com um teste para cada. Explica o que mostram do lugar de Teresa na fala do pai."
+  "<strong>A intervenção do narrador.</strong><br/>Cita uma passagem da Introdução e outra do capítulo IV em que o narrador comenta o que conta. Identifica um recurso numa delas. Explica o efeito de cada passagem em quem lê.",
+  "<strong>A fala de Tadeu.</strong><br/>Em «Não te posso dar minha filha, porque já não tenho filha.», identifica as funções sintáticas de «te» e «minha filha». Apresenta um teste para cada função e explica o que a frase mostra sobre o lugar de Teresa na visão do pai."
  ],
  "temas": [
   {
    "letra": "A",
    "nome": "A voz de Simão",
-   "texto": "Na nau, depois da morte de Teresa, Simão responde-lhe. Escreve a carta (90 a 120 palavras):</p><ol><li>local e data, vocativo, despedida e assinatura;</li><li>resposta a uma pergunta dela;</li><li>uma memória dos dois;</li><li>um recurso expressivo teu;</li><li>um eco do romance, entre «».</li></ol><p>Depois, em duas frases, diz que facto do romance respeitaste e o que faz o recurso."
+   "texto": "Imagina a carta que Simão escreveria a Teresa, na nau, depois da morte dela.</p><ol><li>Escreve 90 a 120 palavras, com local, data, vocativo, despedida e assinatura.</li><li>Responde a uma pergunta de Teresa. Inclui uma memória dos dois, um recurso expressivo teu e uma expressão do romance entre «».</li><li>Depois da carta, escreve duas frases: que facto do romance respeitaste e que efeito produz o teu recurso expressivo.</li></ol><p>"
   },
   {
    "letra": "B",
    "nome": "Uma cadeia que virou museu",
-   "texto": "A antiga Cadeia da Relação é hoje o Centro Português de Fotografia. Escreve o painel da entrada, para quem nunca leu o romance (70 a 100 palavras), com dois factos do dossiê e uma frase curta do romance, entre «». Depois, fora do painel, explica a escolha da frase. Diz o que o painel não pode afirmar sobre Camilo e Simão."
+   "texto": "Escreve o painel de entrada da antiga Cadeia da Relação, hoje Centro Português de Fotografia, para quem nunca leu o romance.</p><ol><li>O painel tem 70 a 100 palavras, dois factos do dossiê e uma frase curta do romance entre «».</li><li>Depois do painel, explica por que escolheste essa frase.</li><li>Indica o que o painel não pode afirmar sobre Camilo e Simão.</li></ol><p>"
   }
  ],
  "apoios": [
@@ -136,5 +136,10 @@
   "Tema: os cinco elementos e a explicação (as duas frases em A, a razão da frase em B).",
   "Citações exatas, nada contra o romance, extensão e escrita revista."
  ],
- "fecho": "Fecha com duas linhas, fora da contagem: quem decide por quem, neste romance? Aponta a passagem que te fez pensar nisso."
+ "fecho": "Fecha com duas linhas, fora da contagem: quem decide por quem, neste romance? Aponta a passagem que te fez pensar nisso.",
+ "clareza": {
+  "produto": "Responde às duas perguntas e escolhe <strong>um tema</strong>: uma carta de Simão (A) ou um painel de museu (B).",
+  "etapa": "1. Responde às duas perguntas",
+  "entrega": "Escreve o tema escolhido (A ou B) no topo. Fotografa as respostas, o tema escolhido e as duas linhas finais. Confirma que as fotografias mostram o trabalho completo e entrega-as na tarefa do Teams."
+ }
 }

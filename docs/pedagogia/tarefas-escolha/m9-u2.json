@@ -30,25 +30,25 @@
    }
   ]
  },
- "fecho": "Fecha com duas linhas, fora da contagem, como o núcleo: que limite da analogia te levou a ajustar a decisão? Indica a passagem do romance que manténs como apoio.",
+ "fecho": "Fecha com duas linhas, fora da contagem do texto: que diferença entre a época do romance e o presente te levou a ajustar a decisão? Indica a passagem do romance que manténs como apoio.",
  "slug": "m9-u2",
  "titulo": "O que vale preservar",
  "unidade": 2,
- "lead": "Escreve um texto de opinião, em 220 a 260 palavras, que proponha uma decisão pública com apoio em <i>Memorial do Convento</i>. Trabalha individualmente, à mão, com consulta. Conta as palavras.",
+ "lead": "Individual, à mão e com consulta. Texto: <strong>220 a 260 palavras</strong>; escreve o total no fim. O plano e as duas linhas finais ficam fora da contagem.",
  "nucleo": [
-  "Antes do texto, regista o tema, uma decisão concreta e duas situações localizadas do romance.",
-  "Anota uma objeção e uma diferença entre épocas. No texto, justifica a decisão, responde à objeção e explica o limite da comparação com o presente."
+  "Regista a opção e a decisão concreta que propões. Indica duas situações de <i>Memorial do Convento</i> que a apoiem e onde se encontram.",
+  "Anota uma objeção e uma diferença entre a época do romance e o presente. No texto, justifica a decisão, responde à objeção e explica até onde a comparação entre as épocas funciona."
  ],
  "temas": [
   {
    "letra": "A",
    "nome": "Apresentar um monumento",
-   "texto": "Ao apresentar um monumento, que lugar devem ter as vidas de quem o construiu? Propõe uma decisão de apresentação pública, relacionando a nomeação dos trabalhadores com o episódio de Francisco Marques."
+   "texto": "Como devem aparecer as vidas dos construtores na apresentação pública de um monumento? Propõe uma decisão, relacionando a nomeação dos trabalhadores com o episódio de Francisco Marques."
   },
   {
    "letra": "B",
    "nome": "Apresentar uma invenção",
-   "texto": "Ao apresentar uma invenção, que lugar devem ter o cuidado e a arte que a tornaram possível? Propõe uma decisão de apresentação pública, relacionando Blimunda e a intervenção de Scarlatti."
+   "texto": "Como devem aparecer o cuidado e a arte na apresentação pública de uma invenção? Propõe uma decisão, relacionando o papel de Blimunda com a intervenção de Scarlatti."
   }
  ],
  "apoios": [
@@ -99,5 +99,11 @@
   "Decisão concreta e duas situações do romance usadas com rigor.",
   "Argumento, objeção, resposta e uma diferença entre os contextos explicada.",
   "Organização, correção linguística, extensão, núcleo e síntese revistos."
- ]
+ ],
+ "clareza": {
+  "produto": "Escolhe <strong>um tema</strong> e propõe uma decisão sobre como apresentar publicamente um monumento ou uma invenção. Entregas o plano, o texto de opinião e duas linhas finais.",
+  "etapa": "2. Faz um plano breve",
+  "entrega": "Escreve o tema escolhido (A ou B) no topo. Fotografa o plano, o texto e as duas linhas finais. Confirma que as fotografias mostram o trabalho completo e entrega-as na tarefa do Teams.",
+  "escolha_primeiro": true
+ }
 }

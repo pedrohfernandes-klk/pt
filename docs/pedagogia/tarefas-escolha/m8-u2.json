@@ -30,25 +30,25 @@
    }
   ]
  },
- "fecho": "Fecha com duas linhas, fora da contagem, como o núcleo: que objeção te obrigou a precisar a tua posição? Mostra o momento do conto a que voltaste.",
+ "fecho": "Fecha com duas linhas, fora da contagem do texto: que objeção te obrigou a precisar a tua posição? Mostra o momento do conto a que voltaste.",
  "slug": "m8-u2",
  "titulo": "Uma vida, outra leitura",
  "unidade": 2,
- "lead": "Escreve um texto de opinião literária sobre «George», em 200 a 240 palavras. Trabalha individualmente, à mão, com consulta. Conta as palavras do texto.",
+ "lead": "Individual, à mão e com consulta. Texto: <strong>200 a 240 palavras</strong>; escreve o total no fim. O plano e as duas linhas finais ficam fora da contagem.",
  "nucleo": [
-  "Antes do texto, regista o tema, a tua posição provisória e dois momentos localizados do conto.",
-  "Anota uma dificuldade para essa posição. No texto, desenvolve a tua leitura e responde a uma objeção, sem transformar a interpretação em certeza biográfica."
+  "Regista a opção escolhida e a tua posição. Indica dois momentos do conto que a apoiem e onde se encontram.",
+  "Anota uma dificuldade para a tua posição. No texto, desenvolve os argumentos, apresenta uma objeção e responde-lhe com apoio no conto. Distingue a tua interpretação do que o conto permite afirmar sobre a personagem."
  ],
  "temas": [
   {
    "letra": "A",
    "nome": "Partir",
-   "texto": "A partida de George é libertação, perda ou uma combinação? Defende a tua leitura e considera uma passagem que a dificulte."
+   "texto": "Partir é, para George, libertação, perda ou ambas? Defende a tua leitura e considera uma passagem que a ponha em causa."
   },
   {
    "letra": "B",
    "nome": "Encontrar o futuro",
-   "texto": "O encontro com a mulher mais velha abre uma possibilidade ou parece fechar o futuro? Defende a tua leitura e distingue o que o conto mostra do que inferes."
+   "texto": "O encontro com a mulher mais velha abre uma possibilidade ou parece fechar o futuro? Defende a tua leitura, distinguindo o que o conto diz do que tu concluis."
   }
  ],
  "apoios": [
@@ -90,5 +90,11 @@
   "Posição clara e dois momentos do conto localizados e bem interpretados.",
   "Argumentos desenvolvidos, uma objeção pertinente e resposta fundamentada.",
   "Organização, correção linguística, extensão, núcleo e síntese revistos."
- ]
+ ],
+ "clareza": {
+  "produto": "Escolhe <strong>uma pergunta sobre «George»</strong> e escreve um texto de opinião. Entregas o plano, o texto e duas linhas finais.",
+  "etapa": "2. Faz um plano breve",
+  "entrega": "Escreve o tema escolhido (A ou B) no topo. Fotografa o plano, o texto e as duas linhas finais. Confirma que as fotografias mostram o trabalho completo e entrega-as na tarefa do Teams.",
+  "escolha_primeiro": true
+ }
 }

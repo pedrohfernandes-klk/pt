@@ -223,7 +223,7 @@ class Grelhas(unittest.TestCase):
         for slug,guardadas in NA_TAREFA.items():
             fonte=(ROOT/'tarefas'/slug/'index.html').read_text('utf-8')
             texto=str(Texto(fonte))+' '+' '.join(html.unescape(x) for x in re.findall(r'data-response="([^"]*)"',fonte))
-            self.assertIn(h('Escolhe um tema'),grupos(texto))
+            self.assertIn(h('Escolhe A ou B'),grupos(texto))
             with self.subTest(tarefa=slug):
                 self.assertEqual(grupos(texto)&guardadas,set())
                 self.assertEqual(self.pares(slug,texto),[])

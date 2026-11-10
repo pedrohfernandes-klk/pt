@@ -10,21 +10,21 @@
   "ligacao": "Abrir o aquecimento em cartões",
   "ligacao_enunciado": "Aquecer"
  },
- "lead": "À mão, 200 a 250 palavras: 110 no núcleo e 90 a 140 no tema. Com consulta.",
+ "lead": "À mão, com consulta: <strong>200 a 250 palavras no total</strong>. Orientação: 110 nas respostas e 90 a 140 no tema.",
  "nucleo": [
-  "O Poeta pede às Tágides um canto alto (I, 4 e 5) e manda calar a Musa (X, 145). Abre com uma tese discutível sobre essa mudança e prova-a com uma citação explicada de cada passagem, com canto e estância.",
-  "Em «Veja agora o juízo curioso» (VIII, 96), que modalidade há, com que valor, e que palavra a marca? Em «O favor com que mais se acende o engenho / Não no dá a pátria» (X, 145), que palavra retoma «O favor», e por que meio?"
+  "<strong>Do canto ao silêncio.</strong><br/>Compara o pedido às Tágides (I, 4 e 5) com a ordem de calar a Musa (X, 145). Começa por uma interpretação que possa ser discutida. Sustenta-a com uma citação de cada passagem, indicando canto e estância e explicando as citações.",
+  "<strong>Modalidade e retoma.</strong><br/>Em «Veja agora o juízo curioso» (VIII, 96), identifica a modalidade, o valor e a palavra que a marca. Em «O favor com que mais se acende o engenho / Não no dá a pátria» (X, 145), identifica a palavra que retoma «O favor» e o processo usado."
  ],
  "temas": [
   {
    "letra": "A",
    "nome": "A voz que suspende a ação",
-   "texto": "A cena congela e uma voz <i>off</i> julga algo de hoje, como o Poeta em VIII, 96 a 99: seis linhas, quatro a abrir com «Este» ou «Esta», uma enumeração e um disfarce no fim. Cita o verso de VIII, 98 ou 99 que imitaste, diz o que imitaste e o que retoma o teu «Este»."
+   "texto": "Imagina uma cena atual que para enquanto uma voz off a comenta, à maneira de VIII, 96 a 99.</p><ol><li>Escreve seis linhas: quatro começam por «Este» ou «Esta». Inclui uma enumeração e termina com algo que se apresenta como uma coisa, mas é outra.</li><li>Cita o verso de VIII, 98 ou 99 que imitaste e explica o que imitaste.</li><li>Indica o que o teu «Este» retoma.</li></ol><p>"
   },
   {
    "letra": "B",
    "nome": "O Velho do Restelo, hoje",
-   "texto": "Dá voz a um Velho do Restelo de hoje contra uma partida atual (como um projeto ou uma viagem; nunca uma pessoa). Transpõe dois argumentos, citando a expressão e a estância de cada um. Usa um facto do dossiê. Fecha com duas frases de quem parte, respondendo a um deles."
+   "texto": "Escreve a intervenção de um Velho do Restelo de hoje contra um projeto ou uma viagem, nunca contra uma pessoa.</p><ol><li>Adapta dois argumentos do Velho. Cita a expressão e a estância de cada um.</li><li>Inclui um facto do dossiê.</li><li>Termina com duas frases de quem parte, respondendo a um dos argumentos.</li></ol><p>"
   }
  ],
  "apoios": [
@@ -111,5 +111,10 @@
   "Tema A: seis linhas, anáfora, enumeração, disfarce, verso citado, imitação e retoma. Tema B: partida que é uma coisa, dois argumentos localizados, facto, resposta que responde.",
   "Respostas articuladas, 200 a 250 palavras, escrita revista."
  ],
- "fecho": "Fecha com duas linhas, fora da contagem de palavras: quando um poema celebra, que pergunta lhe vais passar a fazer? Aponta o verso que te ensinou essa pergunta."
+ "fecho": "Fecha com duas linhas, fora da contagem de palavras: quando um poema celebra, que pergunta lhe vais passar a fazer? Aponta o verso que te ensinou essa pergunta.",
+ "clareza": {
+  "produto": "Responde às duas perguntas e escolhe <strong>um tema</strong>: uma voz off (A) ou um Velho do Restelo de hoje (B).",
+  "etapa": "1. Responde às duas perguntas",
+  "entrega": "Escreve o tema escolhido (A ou B) no topo. Fotografa as respostas, o tema escolhido e as duas linhas finais. Confirma que as fotografias mostram o trabalho completo e entrega-as na tarefa do Teams."
+ }
 }

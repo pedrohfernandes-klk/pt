@@ -592,7 +592,7 @@ class CuidadoM4(unittest.TestCase):
         # 08/11/2026: por cima desta camada fica agora a decisão 152 no M5 (cuidado_m5_20261108, que não mexe em nenhuma página do
         # M4); desfaz-se primeiro, com a mesma exigência, e as contagens são as mesmas.
         r = subprocess.run([sys.executable, 'scripts/aplicar_trocas.py', 'scripts/cuidado_m4_20261108.json', '--manifesto', MANIFESTO_REL,
-                            '--verificar', '--desfazer-antes', 'tests/fixtures/cuidado-m5-edits-20261108.json'], cwd=ROOT,
+                            '--verificar', '--desfazer-antes', 'tests/fixtures/tarefas-claras-edits-20261110.json', '--desfazer-antes', 'tests/fixtures/cuidado-m5-edits-20261108.json'], cwd=ROOT,
                            capture_output=True, text=True, encoding='utf-8')
         self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
         self.assertIn(f'{len(TROCAS)} trocas em {len(MANIFESTO["files"])} ficheiros: {len(TROCAS)} aplicadas, 0 por aplicar; manifesto em dia.',
