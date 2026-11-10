@@ -703,7 +703,7 @@ class CuidadoM5(unittest.TestCase):
         gerador_148 = ler('scripts/cartaz_indices_148_20261106.py')
         self.assertLess(gerador_148.index('CUIDADO_M5.read_text'), gerador_148.index('CUIDADO_M4.read_text'))
         # Os fluxos conferem a camada sem nada por cima e correm os testes deste pedido, onde estão os do M1 ao M4.
-        self.assertIn(f'python scripts/aplicar_trocas.py scripts/cuidado_m5_20261108.json --manifesto {meu} --verificar\n', tarefas)
+        self.assertIn(f'python scripts/aplicar_trocas.py scripts/cuidado_m5_20261108.json --manifesto {meu} --verificar --desfazer-antes tests/fixtures/tarefas-claras-edits-20261110.json\n', tarefas)
         for wf in (tarefas, apoios):
             self.assertIn("python -m unittest discover -s tests -p 'test_cuidado_m5.py' -v", wf)
         self.assertIn('python tests/browser_cuidado_m5.py', apoios)
