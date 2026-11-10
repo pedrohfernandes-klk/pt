@@ -6,4 +6,4 @@ Revistas as 20 tarefas ativas: o produto aparece primeiro, as instruções estã
 
 Preservados: conteúdos e exigências, opções, critérios e grelhas, apoios, ligações, aquecimentos, tempos, lições e organização dos módulos. A antiga tarefa m4-u3, arquivada, não foi alterada. O gerador e as fontes acompanham os enunciados para permitir regeneração idempotente. Os ajustes nos testes e nos manifestos mantêm as verificações históricas.
 
-Validação: 86 testes de tarefas aprovados; comparação das 20 páginas confirmou critérios, apoios, aquecimentos, temporizadores, recursos e ligações inalterados. Inspeção visual em 390 e 1366 px. A camada literal permite reconstruir integralmente os 33 ficheiros de conteúdo anteriores.
+Validação: 86 testes de tarefas aprovados; comparação das 20 páginas confirmou critérios, apoios, aquecimentos, temporizadores, recursos e ligações inalterados. 80 verificações de apresentação (20 tarefas, 390/1366 px, claro/escuro), leitura alternativa das 20 tarefas e grelhas em ecrã e impressão aprovadas. Inspeção visual em 390 e 1366 px. A camada literal permite reconstruir integralmente os 33 ficheiros de conteúdo anteriores.

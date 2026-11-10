@@ -33,6 +33,9 @@ import tempfile
 import unittest
 
 ROOT = Path(__file__).resolve().parents[1]
+import sys
+sys.path.insert(0, str(ROOT / 'scripts'))
+from tarefas_claras_historico import desfazer as desfazer_enunciados
 sys.path.insert(0, str(ROOT / 'tests'))
 from auditoria_20261028 import undo_cuidado_m3_0811, undo_cuidado_m2_0811  # noqa: E402
 # 08/11/2026: por cima desta camada fica a decisão 152 no M4 (camada cuidado_m4_20261108).
@@ -110,7 +113,7 @@ PARTE = re.compile(
 
 
 def ler(rel):
-    return (ROOT / rel).read_bytes().decode('utf-8')
+    return desfazer_enunciados(rel, (ROOT / rel).read_bytes().decode('utf-8'))
 
 
 def sha_lf(texto):
@@ -573,10 +576,11 @@ class CuidadoM3(unittest.TestCase):
             sys.path.pop(0)
         # 08/11/2026: por cima desta camada fica a decisão 152 no M4 (cuidado_m4_20261108): esta passa a segunda, logo por baixo dela.
         # 08/11/2026: por cima da decisão 152 no M4 fica a decisão 152 no M5 (cuidado_m5_20261108): a ordem ganha mais uma posição, com a mesma exigência.
-        self.assertEqual(verificar_camadas.LAYERS[0], ('cuidado_m5_20261108', 'cuidado-m5-edits-20261108'))
-        self.assertEqual(verificar_camadas.LAYERS[1], ('cuidado_m4_20261108', 'cuidado-m4-edits-20261108'))
-        self.assertEqual(verificar_camadas.LAYERS[2], ('cuidado_m3_20261108', 'cuidado-m3-edits-20261108'))
-        self.assertEqual(verificar_camadas.LAYERS[3], ('cuidado_m2_20261108', 'cuidado-m2-edits-20261108'))
+        self.assertEqual(verificar_camadas.LAYERS[0], ('tarefas_claras_20261110', 'tarefas-claras-edits-20261110'))
+        self.assertEqual(verificar_camadas.LAYERS[1], ('cuidado_m5_20261108', 'cuidado-m5-edits-20261108'))
+        self.assertEqual(verificar_camadas.LAYERS[2], ('cuidado_m4_20261108', 'cuidado-m4-edits-20261108'))
+        self.assertEqual(verificar_camadas.LAYERS[3], ('cuidado_m3_20261108', 'cuidado-m3-edits-20261108'))
+        self.assertEqual(verificar_camadas.LAYERS[4], ('cuidado_m2_20261108', 'cuidado-m2-edits-20261108'))
         auditoria = ler('tests/auditoria_20261028.py')
         corpo = auditoria[auditoria.index('def undo_cuidado_m2_0811'):]
         self.assertLess(corpo.index('undo_cuidado_m3_0811(path, text)'), corpo.index('_CUIDADO_M2_0811.get('))
@@ -601,7 +605,7 @@ class CuidadoM3(unittest.TestCase):
                 if linha.lstrip().startswith('#') or '--desfazer-antes ' + m2 not in linha:
                     continue
                 linhas += 1
-                self.assertIn(f'--verificar --desfazer-antes {m5} --desfazer-antes {m4} --desfazer-antes {meu} --desfazer-antes {m2}', linha, wf)
+                self.assertIn(f'--verificar --desfazer-antes tests/fixtures/tarefas-claras-edits-20261110.json --desfazer-antes {m5} --desfazer-antes {m4} --desfazer-antes {meu} --desfazer-antes {m2}', linha, wf)
         self.assertEqual(linhas, 16)
         tarefas, apoios = ler('.github/workflows/pt-tarefas-qa.yml'), ler('.github/workflows/pt-apoios-qa.yml')
         # 08/11/2026: a decisão 152 no M2 desfaz primeiro a do M4 e depois esta.

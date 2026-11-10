@@ -33,6 +33,9 @@ import tempfile
 import unittest
 
 ROOT = Path(__file__).resolve().parents[1]
+import sys
+sys.path.insert(0, str(ROOT / 'scripts'))
+from tarefas_claras_historico import desfazer as desfazer_enunciados
 sys.path.insert(0, str(ROOT / 'tests'))
 from auditoria_20261028 import undo_cuidado_m5_0811, undo_cuidado_m4_0811  # noqa: E402
 
@@ -163,7 +166,7 @@ PARTE = re.compile(
 
 
 def ler(rel):
-    return (ROOT / rel).read_bytes().decode('utf-8')
+    return desfazer_enunciados(rel, (ROOT / rel).read_bytes().decode('utf-8'))
 
 
 def sha_lf(texto):
@@ -608,7 +611,7 @@ class CuidadoM5(unittest.TestCase):
 
     def test_camada_fechada_reversivel_e_no_topo(self):
         r = subprocess.run([sys.executable, 'scripts/aplicar_trocas.py', 'scripts/cuidado_m5_20261108.json', '--manifesto', MANIFESTO_REL,
-                            '--verificar'], cwd=ROOT, capture_output=True, text=True, encoding='utf-8')
+                            '--verificar', '--desfazer-antes', 'tests/fixtures/tarefas-claras-edits-20261110.json'], cwd=ROOT, capture_output=True, text=True, encoding='utf-8')
         self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
         self.assertIn(f'{len(TROCAS)} trocas em {len(MANIFESTO["files"])} ficheiros: {len(TROCAS)} aplicadas, 0 por aplicar; manifesto em dia.',
                       r.stdout)
@@ -656,8 +659,9 @@ class CuidadoM5(unittest.TestCase):
             import verificar_camadas
         finally:
             sys.path.pop(0)
-        self.assertEqual(verificar_camadas.LAYERS[0], ('cuidado_m5_20261108', 'cuidado-m5-edits-20261108'))
-        self.assertEqual(verificar_camadas.LAYERS[1], ('cuidado_m4_20261108', 'cuidado-m4-edits-20261108'))
+        self.assertEqual(verificar_camadas.LAYERS[0], ('tarefas_claras_20261110', 'tarefas-claras-edits-20261110'))
+        self.assertEqual(verificar_camadas.LAYERS[1], ('cuidado_m5_20261108', 'cuidado-m5-edits-20261108'))
+        self.assertEqual(verificar_camadas.LAYERS[2], ('cuidado_m4_20261108', 'cuidado-m4-edits-20261108'))
         auditoria = ler('tests/auditoria_20261028.py')
         corpo = auditoria[auditoria.index('def undo_cuidado_m4_0811'):]
         self.assertLess(corpo.index('undo_cuidado_m5_0811(path, text)'), corpo.index('_CUIDADO_M4_0811.get('))
@@ -671,7 +675,7 @@ class CuidadoM5(unittest.TestCase):
                 if linha.lstrip().startswith('#') or '--desfazer-antes ' + m4 not in linha:
                     continue
                 linhas += 1
-                self.assertIn(f'--verificar --desfazer-antes {meu} --desfazer-antes {m4}', linha, wf)
+                self.assertIn(f'--verificar --desfazer-antes tests/fixtures/tarefas-claras-edits-20261110.json --desfazer-antes {meu} --desfazer-antes {m4}', linha, wf)
         # As 17 cadeias da decisão 152 no M4 e a da decisão 152 no M3 em pt-tarefas-qa.
         self.assertEqual(linhas, 18)
         tarefas, apoios = ler('.github/workflows/pt-tarefas-qa.yml'), ler('.github/workflows/pt-apoios-qa.yml')

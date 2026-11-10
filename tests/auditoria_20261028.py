@@ -57,6 +57,8 @@ from pathlib import Path
 import json
 
 ROOT = Path(__file__).resolve().parents[1]
+import sys
+sys.path.insert(0, str(ROOT / 'scripts'))
 # 28/10/2026: o mais recente primeiro (o segundo lote foi aplicado por cima do #128).
 MANIFESTS = (
     ROOT / 'tests/fixtures/auditoria-m4-m7-edits-20261028.json',
@@ -341,9 +343,8 @@ _CUIDADO_M5_0811 = json.loads((ROOT/'tests/fixtures/cuidado-m5-edits-20261108.js
 _TAREFAS_CLARAS = json.loads((ROOT/'tests/fixtures/tarefas-claras-edits-20261110.json').read_text('utf-8'))['files']
 
 def undo_cuidado_m5_0811(path, text):
-    for edit in reversed(_TAREFAS_CLARAS.get(_relative(path), {}).get('edits', [])):
-        assert text.count(edit['new']) == edit['occurrences'], f"Enunciado revisto não confere: {path}"
-        text = text.replace(edit['new'], edit['old'])
+    from tarefas_claras_historico import desfazer
+    text = desfazer(path, text)
     for edit in reversed(_CUIDADO_M5_0811.get(_relative(path), {}).get('edits', [])):
         if text.count(edit['new']) != edit['occurrences']:
             raise AssertionError(f"Decisão 152 no M5 não confere: {path}: {edit['location']}")
