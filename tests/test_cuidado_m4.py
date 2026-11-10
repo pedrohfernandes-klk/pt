@@ -676,7 +676,7 @@ class CuidadoM4(unittest.TestCase):
         self.assertEqual(linhas, 17)
         tarefas, apoios = ler('.github/workflows/pt-tarefas-qa.yml'), ler('.github/workflows/pt-apoios-qa.yml')
         # 08/11/2026: a decisão 152 no M3 e a do M2 desfazem primeiro a do M5 e depois esta.
-        self.assertIn(f'python scripts/aplicar_trocas.py scripts/cuidado_m3_20261108.json --manifesto {m3} --verificar --desfazer-antes {m5} '
+        self.assertIn(f'python scripts/aplicar_trocas.py scripts/cuidado_m3_20261108.json --manifesto {m3} --verificar --desfazer-antes tests/fixtures/tarefas-claras-edits-20261110.json --desfazer-antes {m5} '
                       f'--desfazer-antes {meu}\n', tarefas)
         self.assertIn('python scripts/aplicar_trocas.py scripts/cuidado_m2_20261108.json --manifesto tests/fixtures/cuidado-m2-edits-20261108.json '
                       f'--verificar --desfazer-antes tests/fixtures/tarefas-claras-edits-20261110.json --desfazer-antes {m5} --desfazer-antes {meu} --desfazer-antes {m3}\n', tarefas)
@@ -712,7 +712,7 @@ class CuidadoM4(unittest.TestCase):
         self.assertLess(gerador_148.index('CUIDADO_M5.read_text'), gerador_148.index('CUIDADO_M4.read_text'))
         # Os fluxos conferem a camada sem nada por cima e correm os testes deste pedido, onde estão os do M1, do M2 e do M3.
         # 08/11/2026: conferem-na com a decisão 152 no M5, a única por cima, desfeita antes.
-        self.assertIn(f'python scripts/aplicar_trocas.py scripts/cuidado_m4_20261108.json --manifesto {meu} --verificar --desfazer-antes {m5}\n',
+        self.assertIn(f'python scripts/aplicar_trocas.py scripts/cuidado_m4_20261108.json --manifesto {meu} --verificar --desfazer-antes tests/fixtures/tarefas-claras-edits-20261110.json --desfazer-antes {m5}\n',
                       tarefas)
         for wf in (tarefas, apoios):
             self.assertIn("python -m unittest discover -s tests -p 'test_cuidado_m4.py' -v", wf)

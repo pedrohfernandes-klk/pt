@@ -610,7 +610,7 @@ class CuidadoM3(unittest.TestCase):
         tarefas, apoios = ler('.github/workflows/pt-tarefas-qa.yml'), ler('.github/workflows/pt-apoios-qa.yml')
         # 08/11/2026: a decisão 152 no M2 desfaz primeiro a do M4 e depois esta.
         # 08/11/2026: e, antes da do M4, a do M5.
-        self.assertIn(f'python scripts/aplicar_trocas.py scripts/cuidado_m2_20261108.json --manifesto {m2} --verificar --desfazer-antes {m5} '
+        self.assertIn(f'python scripts/aplicar_trocas.py scripts/cuidado_m2_20261108.json --manifesto {m2} --verificar --desfazer-antes tests/fixtures/tarefas-claras-edits-20261110.json --desfazer-antes {m5} '
                       f'--desfazer-antes {m4} --desfazer-antes {meu}\n', tarefas)
         cartaz = ler('.github/workflows/cartaz-qa.yml')
         # 08/11/2026: o cartaz «Ler a cidade» desfaz primeiro a decisão 152 no M4, depois esta e a do M2.
@@ -654,7 +654,7 @@ class CuidadoM3(unittest.TestCase):
         # Os fluxos conferem a camada sem nada por cima e correm os testes deste pedido, onde estão os do M1 e do M2.
         # 08/11/2026: conferem-na com a decisão 152 no M4, a única por cima, desfeita antes.
         # 08/11/2026: e, antes dela, a decisão 152 no M5 (as duas por cima, desfeitas antes, a mais recente primeiro).
-        self.assertIn(f'python scripts/aplicar_trocas.py scripts/cuidado_m3_20261108.json --manifesto {meu} --verificar --desfazer-antes {m5} '
+        self.assertIn(f'python scripts/aplicar_trocas.py scripts/cuidado_m3_20261108.json --manifesto {meu} --verificar --desfazer-antes tests/fixtures/tarefas-claras-edits-20261110.json --desfazer-antes {m5} '
                       f'--desfazer-antes {m4}\n', tarefas)
         for wf in (tarefas, apoios):
             self.assertIn("python -m unittest discover -s tests -p 'test_cuidado_m3.py' -v", wf)

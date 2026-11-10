@@ -530,7 +530,7 @@ class CuidadoM2(unittest.TestCase):
         # 08/11/2026: o cartaz «Ler a cidade» desfaz primeiro a decisão 152 no M3 e depois esta.
         # 08/11/2026: e, antes da do M3, a decisão 152 no M4, sem nada pelo meio.
         # 08/11/2026: e, antes da do M4, a do M5, sem nada pelo meio.
-        self.assertIn(f'scripts/cidade_cartaz_20261108.json --manifesto {cidade} --verificar --desfazer-antes {m5} --desfazer-antes {m4} --desfazer-antes {m3} '
+        self.assertIn(f'scripts/cidade_cartaz_20261108.json --manifesto {cidade} --verificar --desfazer-antes tests/fixtures/tarefas-claras-edits-20261110.json --desfazer-antes {m5} --desfazer-antes {m4} --desfazer-antes {m3} '
                       f'--desfazer-antes {meu}\n', cartaz)
         for p in sorted((ROOT / 'tests').glob('test_*.py')):
             # Como este, os testes do pedido pt-1 e da decisão 152 no M1 conferem as cadeias com frases partidas em várias linhas.
@@ -579,7 +579,7 @@ class CuidadoM2(unittest.TestCase):
         tarefas, apoios = ler('.github/workflows/pt-tarefas-qa.yml'), ler('.github/workflows/pt-apoios-qa.yml')
         # 08/11/2026: e, antes da do M3, a decisão 152 no M4, sem nada pelo meio.
         # 08/11/2026: e, antes da do M4, a do M5, sem nada pelo meio.
-        self.assertIn(f'python scripts/aplicar_trocas.py scripts/cuidado_m2_20261108.json --manifesto {meu} --verificar --desfazer-antes {m5} --desfazer-antes {m4} '
+        self.assertIn(f'python scripts/aplicar_trocas.py scripts/cuidado_m2_20261108.json --manifesto {meu} --verificar --desfazer-antes tests/fixtures/tarefas-claras-edits-20261110.json --desfazer-antes {m5} --desfazer-antes {m4} '
                       f'--desfazer-antes {m3}\n', tarefas)
         for wf in (tarefas, apoios):
             self.assertIn("python -m unittest discover -s tests -p 'test_cuidado_m2.py' -v", wf)

@@ -679,7 +679,7 @@ class CuidadoM5(unittest.TestCase):
         # As 17 cadeias da decisão 152 no M4 e a da decisão 152 no M3 em pt-tarefas-qa.
         self.assertEqual(linhas, 18)
         tarefas, apoios = ler('.github/workflows/pt-tarefas-qa.yml'), ler('.github/workflows/pt-apoios-qa.yml')
-        self.assertIn(f'python scripts/aplicar_trocas.py scripts/cuidado_m4_20261108.json --manifesto {m4} --verificar --desfazer-antes {meu}\n',
+        self.assertIn(f'python scripts/aplicar_trocas.py scripts/cuidado_m4_20261108.json --manifesto {m4} --verificar --desfazer-antes tests/fixtures/tarefas-claras-edits-20261110.json --desfazer-antes {meu}\n',
                       tarefas)
         cartaz = ler('.github/workflows/cartaz-qa.yml')
         self.assertIn(f'scripts/cidade_cartaz_20261108.json --manifesto tests/fixtures/cidade-cartaz-edits-20261108.json --verificar '
