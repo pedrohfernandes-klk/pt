@@ -88,7 +88,9 @@ class ChoiceTasks(unittest.TestCase):
                 cartoes = slug in CARTOES_NO_AQUECER
                 self.assertEqual(p.machines, [] if cartoes else ['1', '2'])
                 self.assertEqual(p.themes, ['A', 'B'])
-                self.assertEqual(len(re.findall(r'<li>', source.split('id="produzir"')[1].split('task-themes')[0])), 2)
+                common = re.search(r'<h2 class="task-part">[^<]+ <small>para todos</small></h2><ol>(.*?)</ol>', source, re.S)
+                self.assertIsNotNone(common)
+                self.assertEqual(common[1].count('<li>'), 2)
                 # 29/10/2026: com o aquecimento em cartões, o cartão «Aquecer» e o enunciado ligam à página dos cartões.
                 aquecer = (('Aquecer em cartões', 'data-task-warm="cartoes"', '<p class="task-aquecer"><a href="aquecimento/">') if cartoes
                            else ('Descobre o que te pedem', 'Prova ou distração?', 'Verbos', 'Objeto', 'Condição'))
@@ -102,8 +104,8 @@ class ChoiceTasks(unittest.TestCase):
                 noventa = '90\xa0min' if nao_partir else '90 min'
                 if nao_partir:
                     self.assertNotIn('90 min', source)
-                for token in aquecer + ('Núcleo comum', 'Escolhe um tema',
-                              ('Textos e condições de consulta' if slug.startswith(('m8-','m9-')) else 'Dossiê do tema B'), 'Tarefa individual', noventa, 'consulta', 'Teams', 'duas linhas', 'tema que escolheste (A ou B)'):
+                for token in aquecer + ('O que vais fazer', 'Escolhe A ou B',
+                              ('Textos e condições de consulta' if slug.startswith(('m8-','m9-')) else 'Dossiê do tema B'), 'Tarefa individual', noventa, 'consulta', 'Teams', 'duas linhas', '(A ou B)'):
                     self.assertIn(token, source)
                 if cartoes:
                     self.assertEqual(source.count('<p class="task-aquecer"><a href="aquecimento/">'), 2)
@@ -111,7 +113,8 @@ class ChoiceTasks(unittest.TestCase):
                 for token in ('task-clock', 'em grupo', 'rondas', '10/10/60/10', 'ficha', 'folha', '—', 'professor'):
                     self.assertNotIn(token, source)
                 self.assertEqual(p.criteria, 3)
-                self.assertLessEqual(len(' '.join(p.text['header'] + p.text['criteria']).split()), 300)
+                # The same requirements are now split into named steps, with the product and word count explicit.
+                self.assertLessEqual(len(' '.join(p.text['header'] + p.text['criteria']).split()), 380)
                 # Uma pergunta de aquecimento e uma opcional; três opções, uma certa, explicações diferentes.
                 # 29/10/2026: com o aquecimento em cartões, só a opcional.
                 self.assertEqual(p.questions, [('1', True)] if cartoes else [('aquecer', False), ('1', True)])
@@ -134,7 +137,8 @@ class ChoiceTasks(unittest.TestCase):
                 self.assertNotIn('aria-hidden="true">A</span>', source)
                 self.assertEqual(len(re.findall(r'<span class="task-letter">[ABC]<span class="sr-only">:</span></span> ', source)), 3 if cartoes else 6)
                 self.assertEqual(len(re.findall(r'<h3 id="tema-([AB])"><span><span class="sr-only">Tema </span>\1</span> ', source)), 2)
-                self.assertIn('incluindo a síntese (as duas linhas finais)', source)
+                self.assertIn('duas linhas finais', source)
+                self.assertIn('Entrega no Teams', source)
 
     def test_dossier_facts_carry_sources_and_links_exist(self):
         for slug in CHOICE:

@@ -39,21 +39,21 @@
   "ligacao": "Abrir o aquecimento em cartões",
   "ligacao_enunciado": "Aquecer"
  },
- "lead": "À mão, entre 200 e 240 palavras: aproximadamente 60 por resposta do núcleo e 80 a 120 no tema. Com consulta.",
+ "lead": "Escreve à mão, com consulta: <strong>200 a 240 palavras no total</strong>. Orientação: cerca de 60 por resposta e 80 a 120 no tema escolhido.",
  "nucleo": [
-  "Em «Ondas do mar de Vigo», quem fala e a quem? Cita uma repetição. Classifica-a. Explica como faz durar a espera. Em <i>mare</i> &gt; mar e <i>malu</i> &gt; mau, identifica o som que cai, onde cai e o processo.",
-  "D. Dinis e Guilhade prometem louvar uma senhora. Em qual se cumpre a promessa? Comprova com uma passagem de cada cantiga, fora da primeira estrofe. Identifica o recurso que, na outra, a desmente. Mostra, na passagem, como o faz."
+  "<strong>Codax: voz, repetição e sons.</strong><br/>Em «Ondas do mar de Vigo», identifica quem fala e a quem. Cita uma repetição, classifica-a e explica como prolonga a espera. Em <i>mare</i> &gt; mar e <i>malu</i> &gt; mau, indica o som que cai, a sua posição e o nome do processo.",
+  "<strong>D. Dinis e Guilhade: louvor ou crítica?</strong><br/>Indica quem cumpre a promessa de louvar. Usa uma passagem de cada cantiga, fora da primeira estrofe. Na cantiga que não cumpre a promessa, identifica o recurso expressivo e explica como funciona."
  ],
  "temas": [
   {
    "letra": "A",
    "nome": "A forma de Codax, hoje",
-   "texto": "Uma aplicação promete «Chega já» e adia a entrega. Escreve duas estrofes de três versos à maneira de Codax, com paralelismo e um refrão que repete a promessa. Num dos versos, desmente a promessa. Cita um verso de Codax que imitaste. Explica o que imitaste dele. Indica uma diferença entre a tua espera e a da cantiga de Codax."
+   "texto": "Uma aplicação promete «Chega já», mas adia a entrega.</p><ol><li>Escreve duas estrofes de três versos, com paralelismo e um refrão que repita a promessa. Num verso, mostra que a promessa não se cumpre.</li><li>Cita um verso de Codax e explica o que imitaste.</li><li>Indica uma diferença entre a espera que inventaste e a da cantiga.</li></ol><p>"
   },
   {
    "letra": "B",
    "nome": "A cantiga e o seu público",
-   "texto": "A escola recebe um concerto com «Ondas do mar de Vigo» e pede-te o cartaz. Descreve a imagem em duas frases. Justifica-a com dois factos do dossiê. Escolhe um verso para o cartaz. Explica a escolha. Indica o que o cartaz não pode prometer a quem vai ouvir."
+   "texto": "Imagina um cartaz para um concerto de «Ondas do mar de Vigo». Entregas a proposta escrita do cartaz.</p><ol><li>Descreve a imagem em duas frases e justifica-a com dois factos do dossiê.</li><li>Escolhe um verso para o cartaz e explica a escolha.</li><li>Indica o que o cartaz não pode prometer a quem vai ouvir.</li></ol><p>"
   }
  ],
  "apoios": [
@@ -130,5 +130,10 @@
   "Tema A: paralelismo, refrão, verso que desmente, verso de Codax imitado e explicado, uma diferença. Tema B: imagem, dois factos, verso escolhido e explicado, o que o cartaz não pode prometer.",
   "Respostas articuladas, entre 200 e 240 palavras, com escrita revista."
  ],
- "fecho": "Fecha com duas linhas, fora da contagem de palavras: o que passaste a verificar quando uma cantiga repete ou promete? Aponta o verso que te ajudou."
+ "fecho": "Fecha com duas linhas, fora da contagem de palavras: o que passaste a verificar quando uma cantiga repete ou promete? Aponta o verso que te ajudou.",
+ "clareza": {
+  "produto": "Responde às duas perguntas e faz <strong>apenas um</strong> dos temas: uma pequena cantiga (A) ou a proposta de um cartaz (B).",
+  "etapa": "1. Responde às duas perguntas",
+  "entrega": "Escreve o tema escolhido (A ou B) no topo. Fotografa as respostas, o tema escolhido e as duas linhas finais. Confirma que as fotografias mostram o trabalho completo e entrega-as na tarefa do Teams."
+ }
 }

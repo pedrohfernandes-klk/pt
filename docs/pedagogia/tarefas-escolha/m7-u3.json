@@ -9,21 +9,21 @@
   "ligacao": "Abrir o aquecimento em cartões",
   "ligacao_enunciado": "Antes de começar: aquecer em cartões, 10 minutos"
  },
- "lead": "Um texto de opinião à mão, com 180 a 220 palavras e o número escrito no fim. Individual, com consulta das lições e dos apontamentos.",
+ "lead": "Individual, à mão e com consulta: <strong>180 a 220 palavras</strong>. Escreve o total no fim. As duas linhas de reflexão final ficam fora da contagem.",
  "nucleo": [
-  "Na primeira frase, escreve a tua tese com uma condição (S). Usa um movimento que dá razão ao outro lado e vira (R ou C) e mais um à tua escolha (N, M ou P). Fecha com uma conclusão que volta à tese sem a copiar. Marca na margem a letra de cada movimento; a conclusão não leva letra.",
-  "Cita um verso exato de <i>Mensagem</i>, entre «», com o poema indicado, e explica-o no contexto. Junta um facto datado das lições, separado do sentido que o poema lhe dá, ou o confronto com Garrett (<i>Frei Luís de Sousa</i>) ou com Reis."
+  "<strong>Defende a tua posição.</strong><br/>Começa por uma opinião com uma condição (S). Responde a quem discorda: aceita uma acusação e muda-lhe o sentido (R), ou admite uma dificuldade com «embora» (C). Acrescenta uma condição necessária (N), um contraste com «mas» (M) ou uma pergunta que leve a pensar (P). Conclui retomando a posição sem a copiar. Marca as letras na margem; a conclusão não leva letra.",
+  "<strong>Apoia a opinião nos textos.</strong><br/>Cita um verso exato de <i>Mensagem</i>, entre «», indica o poema e explica o verso no seu contexto. Acrescenta um facto datado das lições, distinguindo-o da interpretação do poema, ou compara com Garrett (<i>Frei Luís de Sousa</i>) ou Reis. No tema B, o facto escolhido tem de ter data: 1578, 1933 ou 1934."
  ],
  "temas": [
   {
    "letra": "A",
    "nome": "Valeu a pena?",
-   "texto": "«Valeu a pena? Tudo vale a pena / Se a alma não é pequena.» Concordas, quando o preço de um sonho grande é pago por outros, como as mães, os filhos e as noivas da primeira estrofe?"
+   "texto": "«Valeu a pena? Tudo vale a pena / Se a alma não é pequena.» Concordas quando são outras pessoas a pagar o preço do sonho? Considera as mães, os filhos e as noivas da primeira estrofe."
   },
   {
    "letra": "B",
    "nome": "Por quem, ou pelo quê, ainda esperamos?",
-   "texto": "Esperar que alguém volte e resolva dá força a um país ou tira-lha? Usa o dossiê do tema B: o facto que usares tem de ter data (1578, 1933 ou 1934)."
+   "texto": "Esperar que alguém volte para resolver os problemas dá força a um país ou tira-lha? Usa o dossiê B. Se usares um facto, indica a data: 1578, 1933 ou 1934."
   }
  ],
  "apoios": [
@@ -114,5 +114,11 @@
   "Verso de <i>Mensagem</i> exato, com o poema indicado e explicado; facto datado separado do sentido, ou outra voz.",
   "180 a 220 palavras, conectores certos, texto revisto e as duas linhas."
  ],
- "fecho": "Fecha com duas linhas, fora da contagem: que movimento vais voltar a usar, e onde? Aponta o verso ou a frase que to ensinou."
+ "fecho": "Fecha com duas linhas, fora da contagem: que movimento vais voltar a usar, e onde? Aponta o verso ou a frase que to ensinou.",
+ "clareza": {
+  "produto": "Escolhe <strong>um tema</strong> e escreve um texto de opinião. As instruções abaixo fazem parte desse único texto.",
+  "etapa": "2. Organiza o teu texto",
+  "entrega": "Escreve o tema escolhido (A ou B) no topo. Fotografa o texto e as duas linhas finais. Confirma que as fotografias mostram o trabalho completo e entrega-as na tarefa do Teams.",
+  "escolha_primeiro": true
+ }
 }

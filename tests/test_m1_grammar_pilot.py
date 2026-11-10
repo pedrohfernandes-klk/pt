@@ -155,7 +155,10 @@ class M1GrammarPilot(unittest.TestCase):
                     2: ('«pra»', 'o som que cai, onde e o processo', 'documentada', 'imaginada',
                         'excertos do cap.\xa0XII', 'gradação')}
         for unit, tokens in expected.items():
-            text = validate_task_source(ROOT / f'tarefas/m1-u{unit}/index.html')
+            # Confere o contrato gramatical anterior após validar a revisão literal.
+            from tarefas_claras_historico import desfazer
+            path = ROOT / f'tarefas/m1-u{unit}/index.html'
+            text = desfazer(path, validate_task_source(path))
             parsed = TaskPage(text)
             self.assertEqual(parsed.errors, [])
             # 30/10/2026: o aquecimento em papel (a pergunta «aquecer» com três opções) passou a cartões, numa página

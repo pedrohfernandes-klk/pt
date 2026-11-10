@@ -9,21 +9,21 @@
   "ligacao": "Abrir o aquecimento em cartões",
   "ligacao_enunciado": "Aquecer"
  },
- "lead": "À mão, 200 a 240 palavras: cerca de 110 no núcleo e 90 a 130 no tema. Com consulta.",
+ "lead": "À mão, com consulta: <strong>200 a 240 palavras no total</strong>. Orientação: cerca de 110 nas respostas e 90 a 130 no tema.",
  "nucleo": [
-  "«Ideal» e «A um poeta», de Antero: a quem fala a voz e o que é o sonho? Cita um verso dos tercetos de cada. Indica uma semelhança e explica o que muda: para que serve o sonho em cada um?",
-  "Em «Ave-Marias»: «Singram soberbas naus que eu não verei jámais!» Divide o verso em orações e classifica-as. Justifica com o papel de «que» na sua oração. Explica o que essa oração acrescenta ao verso."
+  "<strong>O sonho em dois sonetos.</strong><br/>Em «Ideal» e «A um poeta», indica a quem se dirige a voz e para que serve o sonho. Cita um verso dos tercetos de cada poema. Aponta uma semelhança e explica uma diferença.",
+  "<strong>Uma oração no verso.</strong><br/>Divide «Singram soberbas naus que eu não verei jámais!» («Ave-Marias») em orações e classifica-as. Justifica com a função de «que» na sua oração e explica o que essa oração acrescenta."
  ],
  "temas": [
   {
    "letra": "A",
    "nome": "Um ideal de hoje",
-   "texto": "Reescreve «O Palacio da Ventura» em prosa, como texto de hoje: ideal e lugar concretos; a procura, a chegada, a porta aberta; uma última frase que vira o que prometia. Usa uma anáfora ou uma antítese tua; não copies versos. Cita e explica o verso de Antero que imitaste. Indica uma diferença entre o teu ideal e o do cavaleiro."
+   "texto": "Reconta «O Palacio da Ventura» em prosa, numa situação atual.</p><ol><li>Escolhe um ideal e um lugar concretos. Conta a procura, a chegada e a abertura da porta. A última frase deve contrariar o que se esperava.</li><li>Cria uma anáfora ou uma antítese, sem copiar versos para a tua narrativa.</li><li>Depois, cita e explica o verso de Antero que imitaste e indica uma diferença entre o teu ideal e o do cavaleiro.</li></ol><p>"
   },
   {
    "letra": "B",
    "nome": "O soneto num minuto",
-   "texto": "O canal da escola pede um vídeo de um minuto com «O Palacio da Ventura». Descreve três planos, com o verso exato de cada. Diz se o último ilustra, contraria ou acrescenta algo ao verso, e porquê. Justifica uma escolha com dois factos do dossiê. Indica o que o vídeo não pode dar como facto."
+   "texto": "Planeia um vídeo de um minuto sobre «O Palacio da Ventura». Entregas a descrição escrita dos planos.</p><ol><li>Descreve três planos e associa um verso exato a cada um.</li><li>Explica se o último plano ilustra, contraria ou acrescenta algo ao verso. Justifica uma escolha com dois factos do dossiê.</li><li>Indica o que o vídeo não pode apresentar como facto.</li></ol><p>"
   }
  ],
  "apoios": [
@@ -113,5 +113,10 @@
   "A: ideal e lugar, viagem, frase final, figura, diferença, verso imitado e explicado. B: planos com verso, último plano, dois factos, limite do vídeo.",
   "200 a 240 palavras, respostas ligadas, escrita revista."
  ],
- "fecho": "Fecha com duas linhas, fora da contagem: o que passaste a procurar quando um poema fala de um sonho? Aponta o verso que te ajudou."
+ "fecho": "Fecha com duas linhas, fora da contagem: o que passaste a procurar quando um poema fala de um sonho? Aponta o verso que te ajudou.",
+ "clareza": {
+  "produto": "Responde às duas perguntas e escolhe <strong>um tema</strong>: recontar um poema (A) ou planear um vídeo (B).",
+  "etapa": "1. Responde às duas perguntas",
+  "entrega": "Escreve o tema escolhido (A ou B) no topo. Fotografa as respostas, o tema escolhido e as duas linhas finais. Confirma que as fotografias mostram o trabalho completo e entrega-as na tarefa do Teams."
+ }
 }

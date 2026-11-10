@@ -154,7 +154,7 @@ def assert_task_page(page, before):
         assert page.locator('.task-clock b').all_text_contents() == ['10\xa0min', '10\xa0min', '60\xa0min', '10\xa0min']
     text = page.locator('main.task-page').text_content()
     assert ('consulta' if compact else 'durante toda a tarefa') in text.lower()
-    assert 'duas linhas' in text and 'síntese' in text.lower()
+    assert 'duas linhas' in text and ('síntese' in text.lower() or 'Fecha o trabalho' in text)
     assert 'Teams' in page.locator('#entregar').text_content()
     # Next/previous and the free index work without answering anything.
     page.locator('[data-task-reader-next]').focus(); page.locator('[data-task-reader-next]').press('Enter')
