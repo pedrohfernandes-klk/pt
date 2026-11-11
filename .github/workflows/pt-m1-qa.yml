@@ -19,6 +19,10 @@ on:
       - 'tests/**'
       - 'docs/pedagogia/**'
       - '.github/workflows/pt-m1-qa.yml'
+  # 11/11/2026: arranque à mão. As verificações do pedido do M6 ficaram em fila sem arrancar depois de uma avaria do
+  # GitHub Actions (20:22 a 20:48 UTC) e não se deixavam cancelar nem repetir; com isto, a regressão pode ser lançada
+  # no separador Actions para qualquer ramo, sem depender do evento do pedido.
+  workflow_dispatch:
 permissions:
   contents: read
 jobs:
