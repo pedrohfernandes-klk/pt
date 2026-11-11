@@ -13,7 +13,7 @@ SESSOES = {s['id']: s for s in json.load(open(ROOT + '/assets/exame/sessoes.json
 # versões dos ficheiros partilhados (as mesmas das páginas vizinhas do exame) e dos dois ficheiros dos treinos
 V_APARENCIA = '20261025-universal-1'
 V_PROJETAR = '20261019.4'
-V_TREINO = '20261111-treinos-1'
+V_TREINO = '20261111-treinos-2'
 
 URL = {
     'e1': 'https://eduqa.pt/wp-content/uploads/2026/06/portugues_prova_639_v2_enunciado.pdf',

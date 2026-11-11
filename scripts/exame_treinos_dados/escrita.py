@@ -166,7 +166,7 @@ TREINO = {
                      {'t': 'O Parágrafo A: não começa por um conector.',
                       'pista': '<p>Procura a palavra «conector» nos excertos dos critérios, aqui em cima. O que lá está é «mecanismos de articulação interfrásica». Vê se o Parágrafo A tem algum.</p>'},
                      {'t': 'O Parágrafo B: está na primeira pessoa e conta um caso da vida de quem escreve.',
-                      'pista': '<p>Relê o enunciado: pede uma «perspetiva pessoal» e exemplos «significativos». Procura nos excertos alguma frase que proíba a primeira pessoa ou os casos vividos.</p>'},
+                      'pista': '<p>Relê o enunciado: pede uma «perspetiva pessoal» e, para cada argumento, «um exemplo significativo». Procura nos excertos alguma frase que proíba a primeira pessoa ou os casos vividos.</p>'},
                      {'t': 'O Parágrafo A: o exemplo é geral e não mostra de que maneira a experiência muda a visão do mundo.', 'pista': ''},
                      {'t': 'O Parágrafo A: dá uma opinião («toda a gente devia viajar mais»).',
                       'pista': '<p>Vê o segundo ponto da lista do enunciado. Um juízo de valor é um defeito ou é o que se pede?</p>'},

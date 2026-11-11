@@ -43,7 +43,7 @@ tem(L1, 26, 26, 'ligeiramente distorcido pelos sistemas de amplificação de áu
 tem(L2, 1, 1, 'revela-se mais difícil mobilizar as crianças para a aprendizagem')
 
 FONTE1 = '<p class="fonte">' + md(T1['fonte']) + ' Texto do Grupo II da Prova 639, 2026, 1.ª fase (enunciado, pp. 10-11), com a numeração de linhas da prova. Aqui estão só as linhas de que precisas; o texto completo está no ' + lig('e1', 'PDF da prova (eduqa.pt)') + '.</p>'
-FONTE2 = '<p class="fonte">' + md(T2['fonte']) + ' Texto do Grupo II da Prova 639, 2026, 2.ª fase (enunciado, p. 6), com a numeração de linhas da prova. Aqui está só o primeiro parágrafo; o texto completo está no ' + lig('e2', 'PDF da prova (eduqa.pt)') + '.</p>'
+FONTE2 = '<p class="fonte">' + md(T2['fonte']) + ' Texto do Grupo II da Prova 639, 2026, 2.ª fase (enunciado, p. 6), com a numeração de linhas da prova. Aqui estão só as linhas 1 a 5; o texto completo está no ' + lig('e2', 'PDF da prova (eduqa.pt)') + '.</p>'
 
 AP_OF = ('<p class="texto-t">Miguel Marcelino, «Paisagem sonora»</p><p class="texto-a">Linhas 20 a 22, 30 a 31 e 35 a 36. Os realces a amarelo são nossos: marcam as quatro expressões do item.</p>'
          + linhas(L1, [(20, 22), (30, 31), (35, 36)], ['pela Ásia', 'pelas inúmeras embarcações', 'pelo urbanismo tradicional de edifícios', 'pelo automóvel ou pelo'])
@@ -52,7 +52,7 @@ AP_OF = ('<p class="texto-t">Miguel Marcelino, «Paisagem sonora»</p><p class="
 AP_TR = ('<p class="texto-t">Miguel Marcelino, «Paisagem sonora»</p><p class="texto-a">Linhas 23 a 26, do mesmo texto da prova. Os realces a amarelo são nossos.</p>'
          + linhas(L1, [(23, 26)], ['pelos bairros', 'pelos sistemas de amplificação de áudio']) + FONTE1)
 AP_LIM = ('<p class="texto-t">Frase de treino</p><ol class="prosa"><li><span class="n"></span><span>Entrou serenamente no seu quarto.</span></li></ol>'
-          '<p class="fonte">Frase de treino do aquecimento antigo (s21), feita a partir de <i>Amor de Perdição</i>, de Camilo Castelo Branco. Não é uma citação.</p>'
+          '<p class="fonte">Frase de treino do aquecimento da sessão 21, feita a partir de <i>Amor de Perdição</i>, de Camilo Castelo Branco. Não é uma citação.</p>'
           '<p class="texto-t espaco">Elsa de Barros, «As virtudes do pensamento lento»</p><p class="texto-a">Linhas 1 a 5. O realce a amarelo é nosso.</p>'
           + linhas(L2, [(1, 5)], ['mobilizar as crianças para a aprendizagem']) + FONTE2)
 
@@ -177,10 +177,10 @@ TREINO = {
             'o': 'Nenhum teste serve para tudo. Dois contrastes: um com o teste de cortar, outro com a pergunta «o quê?».',
             'blocos': [
                 {'t': 'html', 'h': '<div class="caixa tr">' + etq('treino') +
-                 '<p>O aquecimento antigo dizia: «o que se corta sem estragar a frase é modificador do grupo verbal». Experimenta na mesma frase de treino.</p>'
+                 '<p>O aquecimento da sessão 21 diz: «o que se corta sem estragar a frase é modificador do grupo verbal». Experimenta na mesma frase de treino.</p>'
                  '<ul class="top"><li>Sem «serenamente»: «Entrou no seu quarto.»</li><li>Sem «no seu quarto»: «Entrou serenamente.»</li></ul>'
                  '<p>As duas ficam bem formadas.</p>'
-                 '<p class="pag">A frase é a do aquecimento antigo (s21, n.º 11); a pergunta é nova. Não é um item de exame.</p></div>'},
+                 '<p class="pag">A frase é a do aquecimento da sessão 21 (n.º 11); a pergunta é nova. Não é um item de exame.</p></div>'},
                 {'t': 'escolha', 'id': 'p2-cortar', 'curto': 'O que o teste de cortar prova e o que não prova',
                  'p': 'O que se pode concluir?',
                  'o': [
@@ -189,7 +189,10 @@ TREINO = {
                      {'t': 'Nenhuma das duas é modificador, porque a frase perde informação quando se cortam.',
                       'pista': '<p>Qualquer corte tira informação. A pergunta é outra: compara «entrar em algum sítio» com «entrar de alguma maneira». Qual das duas coisas faz parte do que o verbo «entrar» pede?</p>'},
                      {'t': 'Poder cortar não chega para dizer que é modificador: é preciso ver se o verbo seleciona a expressão.', 'pista': ''},
+                     {'t': 'Só «serenamente» é modificador do grupo verbal, porque é a única das duas que se pode cortar.',
+                      'pista': '<p>Volta às duas frases cortadas, aqui em cima. As duas ficam bem formadas. O teste de cortar deu resultados diferentes nas duas expressões?</p>'},
                  ], 'c': 2,
+                 'pista2': '<p>O corte deu o mesmo resultado nas duas expressões. Deixa-o de lado e olha para o verbo: compara «entrar em algum sítio» com «entrar de alguma maneira». Vê qual das duas expressões o verbo «entrar» seleciona.</p>',
                  'f': '<p>«no seu quarto» é <b>complemento oblíquo</b>: o verbo «entrar» seleciona o lugar (entra-se em algum sítio) e a expressão não se troca por «lhe». «serenamente» é <b>modificador do grupo verbal</b>: o verbo não pede a maneira.</p>'
                       '<p>O <i>Dicionário Terminológico</i> define o modificador assim: ' + DT_MOD + ' ' + (DT_REF % 'Modificador') + ' E o complemento oblíquo como ' + DT_OBL + ' ' + (DT_REF % 'Complemento oblíquo') + '</p>'
                       '<p>Repara na ordem das ideias: o modificador pode cortar-se <b>porque</b> não é selecionado («geralmente», diz a definição). Não é modificador <b>por</b> se poder cortar. Um complemento também pode ficar por dizer, como aqui. O teste de cortar deu o mesmo resultado nas duas expressões; por isso, por si só, não as separa.</p>'},
@@ -244,7 +247,7 @@ TREINO = {
                  '<li><b>Trocar por «o», «a» ou por «lhe»</b> identifica o complemento direto e o indireto. Limite: o predicativo do sujeito também se troca por «o» («difícil, é-o»); com verbos copulativos, a troca não prova que há complemento direto.</li>'
                  '<li><b>Cortar</b> mostra o que pode ficar por dizer. Limite: não separa o modificador de um complemento que também se pode omitir.</li>'
                  '<li><b>Perguntar «o quê?»</b> ajuda a encontrar o que o verbo pede. Limite: não separa o sujeito do complemento direto. A posição também não: uma oração que vem depois do verbo pode ser sujeito. Se não se troca por «o» e se troca por «isso» antes do verbo, é sujeito (foi o caso do passo 4).</li></ul></div>'
-                 '<p class="pag"><b>Termos conferidos.</b> Os nomes das funções são os do <i>Dicionário Terminológico</i> (B.4.2), na grafia atual. Cinco deles aparecem nos itens 7 do Grupo II de 2026: complemento agente da passiva (1.ª fase); sujeito, complemento direto, complemento do adjetivo e predicativo do sujeito (2.ª fase). Os restantes (modificador, complemento oblíquo, complemento indireto) são usados na nossa análise e não vêm nesses itens. No <i>Dicionário Terminológico</i>, as entradas chamam-se «Modificador restritivo» e «Modificador apositivo». Os critérios de 2026 escrevem «modificador do nome apositivo» (p. 3); o aquecimento antigo escrevia «modificador apositivo do nome».</p>'},
+                 '<p class="pag"><b>Termos conferidos.</b> Os nomes das funções são os do <i>Dicionário Terminológico</i> (B.4.2), na grafia atual. Cinco deles aparecem nos itens 7 do Grupo II de 2026: complemento agente da passiva (1.ª fase); sujeito, complemento direto, complemento do adjetivo e predicativo do sujeito (2.ª fase). Os restantes (modificador, complemento oblíquo, complemento indireto) são usados na nossa análise e não vêm nesses itens. No <i>Dicionário Terminológico</i>, as entradas chamam-se «Modificador restritivo» e «Modificador apositivo». Os critérios de 2026 escrevem «modificador do nome apositivo» (p. 3); o aquecimento da sessão 21 escreve «modificador apositivo do nome».</p>'},
             ],
         },
         {

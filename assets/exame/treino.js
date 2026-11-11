@@ -55,9 +55,15 @@ function etq(t){return t?el('span',{'class':'etq '+t,text:ETQ[t]}):null;}
 /* traz um elemento para a parte do ecrã que o texto de apoio fixo não tapa */
 function aVista(e){
   try{
-    var r=e.getBoundingClientRect(),topo=parseInt(document.documentElement.style.scrollPaddingTop,10)||12,vh=window.innerHeight,d=0;
+    var r=e.getBoundingClientRect(),topo=parseInt(document.documentElement.style.scrollPaddingTop,10)||12,vh=window.innerHeight,d=0,base=8;
+    /* o controlo flutuante do tema fica no canto de baixo: o elemento pára por cima dele, para nenhuma letra ficar tapada */
+    var ct=document.querySelector('[data-appearance-floating] .epi-appearance-toggle');
+    if(ct){
+      var rc=ct.getBoundingClientRect();
+      if(rc.height&&rc.top>vh/2&&rc.left<r.right&&rc.right>r.left){base=Math.max(base,vh-rc.top+8);}
+    }
     if(r.top<topo){d=r.top-topo;}
-    else if(r.bottom>vh-8){d=Math.min(r.bottom-vh+8,r.top-topo);}
+    else if(r.bottom>vh-base){d=Math.min(r.bottom-vh+base,r.top-topo);}
     if(d){window.scrollBy(0,d);}
   }catch(x){}
 }
@@ -554,7 +560,9 @@ btZ.addEventListener('click',function(){
 function passoDoEndereco(){var m=/^#passo-(\d+)$/.exec(window.location.hash||'');return m?parseInt(m[1],10)-1:-1;}
 window.addEventListener('popstate',function(ev){
   var i=(ev.state&&typeof ev.state.passo==='number')?ev.state.passo:passoDoEndereco();
-  if(i>=0&&i<P.passos.length&&i!==S.passo){mostraPasso(i,true,true);}
+  if(i>=0&&i<P.passos.length&&!trancado(i)){if(i!==S.passo){mostraPasso(i,true,true);}}
+  /* passo trancado ou que não existe (por exemplo, depois de recomeçar): o endereço volta a dizer o passo que está à vista */
+  else{hist(S.passo,true);}
 });
 var ini=passoDoEndereco();
 if(ini<0||ini>=P.passos.length||trancado(ini))ini=S.passo||0;

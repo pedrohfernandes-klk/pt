@@ -30,7 +30,18 @@ for(const [w,h] of [[390,844],[1280,900]]) for(const cs of ['light','dark']){
   const semDeslize=async(onde)=>{const r=await p.evaluate(()=>[document.documentElement.scrollWidth,window.innerWidth]);ok(r[0]<=r[1],tag+' deslize horizontal em '+onde+' '+r);};
   const passo=async(n)=>{await p.click('#passos li:nth-child('+n+') button');await p.waitForTimeout(80);await semDeslize('passo '+n);};
   const Q=(id)=>p.locator('.q',{has:p.locator('#p-'+id)});
-  const ret=async(id)=>({cls:await Q(id).locator('.retorno').getAttribute('class'),txt:await Q(id).locator('.retorno').innerText()});
+  // 11/11/2026: cada leitura do retorno confere também que nenhuma letra dele fica por baixo do controlo flutuante do tema.
+  // Única exceção: um retorno mais alto do que o espaço livre entre o texto de apoio e o controlo; esse tem de começar no cimo do espaço livre.
+  const tapadas=(loc)=>loc.evaluate((e)=>{const ct=document.querySelector('.epi-appearance-toggle');if(!ct)return null;const c=ct.getBoundingClientRect();if(!c.height)return null;
+    const ap=document.getElementById('apoio'),q0=e.getBoundingClientRect(),topo=(ap&&!ap.hidden&&window.innerWidth<980)?ap.getBoundingClientRect().bottom:0;
+    if(q0.height>c.top-topo-20&&q0.top>=topo-1&&q0.top<=topo+14)return '';
+    const w=document.createTreeWalker(e,NodeFilter.SHOW_TEXT);let n,fora='';const rg=document.createRange();
+    while((n=w.nextNode())){const t=n.nodeValue;for(let i=0;i<t.length;i++){if(/\s/.test(t[i]))continue;rg.setStart(n,i);rg.setEnd(n,i+1);
+      for(const q of rg.getClientRects()){if(q.width&&q.height&&q.left<c.right-0.5&&q.right>c.left+0.5&&q.top<c.bottom-0.5&&q.bottom>c.top+0.5){fora+=t[i];break;}}}}
+    return fora;});
+  const ret=async(id)=>{const L=Q(id).locator('.retorno');const tp=await tapadas(L);
+    ok(tp==='',tag+' retorno de '+id+': nenhuma letra por baixo do controlo do tema (tapadas: «'+tp+'»)');
+    return {cls:await L.getAttribute('class'),txt:await L.innerText()};};
   const op=async(id,i)=>{await Q(id).locator('.op').nth(i).click();};
   const tk=async(id,txts)=>{for(const t of txts){await Q(id).locator('.tk',{hasText:t}).first().click();}};
   const verif=async(id)=>{await Q(id).locator('button',{hasText:'Verificar'}).click();};
@@ -262,8 +273,11 @@ for(const [w,h] of [[390,844],[1280,900]]) for(const cs of ['light','dark']){
   await op('p2-teste',3);r=await ret('p2-teste');ok(/expl/.test(r.cls)&&/três tentativas/i.test(r.txt)&&/frase activa com o mesmo significado/.test(r.txt),tag+' p2 explicação à terceira falha');
   await cap('2-gramatica-06-explicacao');
   await passo(4);await juntos('p2-cortar','p2 passo 4');
-  await op('p2-cortar',0);r=await ret('p2-cortar');ok(/pista/.test(r.cls)&&/pede o lugar/.test(r.txt)&&/mais uma tentativa/.test(r.txt),tag+' p2 cortar (três opções) pista, resta uma tentativa');
-  if(estreito){await op('p2-cortar',1);r=await ret('p2-cortar');ok(/expl/.test(r.cls)&&/duas tentativas/i.test(r.txt),tag+' p2 cortar: com três opções, explicação à segunda falha');}
+  // 11/11/2026: a pergunta passou a ter quatro opções, para dar três tentativas e duas pistas como as outras; a explicação só vem à terceira falha
+  ok(await Q('p2-cortar').locator('.op').count()===4,tag+' p2 cortar tem quatro opções');
+  await op('p2-cortar',0);r=await ret('p2-cortar');ok(/pista/.test(r.cls)&&/^PISTA/i.test(r.txt)&&/pede o lugar/.test(r.txt)&&/mais duas tentativas/.test(r.txt),tag+' p2 cortar pista do erro, restam duas tentativas');
+  if(estreito){await op('p2-cortar',1);r=await ret('p2-cortar');ok(/pista/.test(r.cls)&&/^SEGUNDA PISTA/i.test(r.txt)&&/mesmo resultado nas duas/.test(r.txt)&&/mais uma tentativa/.test(r.txt)&&!/complemento oblíquo/.test(r.txt),tag+' p2 cortar segunda pista, sem a resposta, resta uma tentativa');
+    await op('p2-cortar',3);r=await ret('p2-cortar');ok(/expl/.test(r.cls)&&/três tentativas/i.test(r.txt)&&!/duas tentativas/i.test(r.txt)&&/complemento oblíquo/.test(r.txt),tag+' p2 cortar: explicação só à terceira falha');}
   else{await op('p2-cortar',2);r=await ret('p2-cortar');ok(/certo/.test(r.cls)&&/complemento oblíquo/.test(r.txt),tag+' p2 cortar certo');}
   await juntos('p2-sujeito','p2 passo 4 item 2.ª fase');
   await op('p2-sujeito',1);r=await ret('p2-sujeito');ok(/pista/.test(r.cls)&&/isso/.test(r.txt),tag+' p2 sujeito pista');
@@ -357,10 +371,26 @@ for(const [w,h] of [[390,844],[1280,900]]) for(const cs of ['light','dark']){
   // recolher o texto de apoio
   await p.click('#apoio-bt');ok(await p.locator('#apoio-corpo').isHidden()&&await p.getAttribute('#apoio-bt','aria-expanded')==='false',tag+' texto de apoio recolhe');await p.click('#apoio-bt');
   ok(erros.length===0,tag+' p3 erros de JavaScript: '+erros.join(' | '));erros.length=0;
+  // 11/11/2026: nenhuma pergunta de escolha tem menos de quatro opções (três tentativas e duas pistas em todas, como diz a entrada)
+  for(const pg of ['interpretacao','gramatica','escrita']){
+    await p.goto(BASE+pg+'/');
+    const n=await p.evaluate(()=>{const d=JSON.parse(document.querySelector('script[type="application/json"]').textContent);const m=[];
+      (function v(x){if(Array.isArray(x)){x.forEach(v);}else if(x&&typeof x==='object'){if(x.t==='escolha'){m.push([x.id,x.o.length,!!x.pista2]);}Object.keys(x).forEach(function(k){v(x[k]);});}})(d);return m;});
+    ok(n.length>0&&n.every(x=>x[1]>=4&&x[2]),tag+' '+pg+': todas as escolhas com quatro opções ou mais e segunda pista '+JSON.stringify(n.filter(x=>!(x[1]>=4&&x[2]))));
+  }
   // índice com estado
   await p.goto(BASE);ok(/primeira versão guardada; versão revista guardada/.test(await p.locator('[data-estado="escrita"]').innerText()),tag+' índice mostra o estado');
   // legenda coerente com as caixas
   ok(/os títulos e as frases de ligação são nossos/.test(await p.locator('.legenda').innerText())&&!/sem cortes/.test(await p.content()),tag+' legenda da etiqueta «Item oficial» ajustada');
+  // 11/11/2026: depois de recomeçar, voltar atrás no navegador não deixa no endereço um passo que voltou a estar trancado
+  await p.goto(BASE+'escrita/');await passo(6);
+  ok(/#passo-6$/.test(p.url())&&/Passo 6 de 6/i.test(await p.locator('.passo-n').innerText()),tag+' p3 antes de recomeçar: passo 6 no endereço e na página');
+  await p.click('#recomecar');await p.click('#recomecar');await p.waitForTimeout(120);
+  ok(/Passo 1 de 6/i.test(await p.locator('.passo-n').innerText())&&/#passo-1$/.test(p.url())&&await p.locator('#passos li:nth-child(6) button').isDisabled(),tag+' p3 recomeçar volta ao passo 1 e tranca o passo 6');
+  await p.goBack();await p.waitForTimeout(150);
+  ok(/escrita\/#passo-1$/.test(p.url())&&/Passo 1 de 6/i.test(await p.locator('.passo-n').innerText()),tag+' p3 voltar atrás depois de recomeçar: endereço e página no passo 1 ('+p.url()+')');
+  ok(await p.evaluate(()=>!!(history.state&&history.state.passo===0)),tag+' p3 voltar atrás depois de recomeçar: estado do histórico no passo 1');
+  ok(erros.length===0,tag+' p3 recomeçar: erros de JavaScript: '+erros.join(' | '));erros.length=0;
   await c.close();
 
   /* ===== armazenamento indisponível ===== */
