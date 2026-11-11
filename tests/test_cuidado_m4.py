@@ -35,6 +35,9 @@ import tempfile
 import unittest
 
 ROOT = Path(__file__).resolve().parents[1]
+import sys
+sys.path.insert(0, str(ROOT / 'scripts'))
+from tarefas_claras_historico import desfazer as desfazer_enunciados
 sys.path.insert(0, str(ROOT / 'tests'))
 from auditoria_20261028 import undo_cuidado_m4_0811, undo_cuidado_m3_0811  # noqa: E402
 # 08/11/2026: por cima desta camada fica a decisão 152 no M5 (camada cuidado_m5_20261108).
@@ -191,7 +194,7 @@ PARTE = re.compile(
 
 
 def ler(rel):
-    return (ROOT / rel).read_bytes().decode('utf-8')
+    return desfazer_enunciados(rel, (ROOT / rel).read_bytes().decode('utf-8'))
 
 
 def sha_lf(texto):
@@ -593,7 +596,8 @@ class CuidadoM4(unittest.TestCase):
         # M4); desfaz-se primeiro, com a mesma exigência, e as contagens são as mesmas.
         r = subprocess.run([sys.executable, 'scripts/aplicar_trocas.py', 'scripts/cuidado_m4_20261108.json', '--manifesto', MANIFESTO_REL,
                             # 08/11/2026: a decisão 152 no M6 (cuidado_m6_20261108: tabelas onde há itens paralelos e espaços que não quebram nas lições e páginas do M6, incluindo o índice, o guia, o mapa e o portefólio do módulo, as páginas «Ler a fundo» e «Pensar devagar», e nas tarefas, nos aquecimentos e nas grelhas das suas unidades) passa a camada mais recente, por cima da decisão 152 no M5; desfaz-se primeiro, com a mesma exigência.
-                            '--verificar', '--desfazer-antes', 'tests/fixtures/cuidado-m6-edits-20261108.json', '--desfazer-antes', 'tests/fixtures/cuidado-m5-edits-20261108.json'], cwd=ROOT,
+                            # 11/11/2026 (fusão do main 4bf4a053 no pedido #191): a revisão dos enunciados das tarefas (tarefas_claras_20261110, #192) fica entre a decisão 152 no M6, que continua a mais recente e se desfaz primeiro, e a decisão 152 no M5.
+                            '--verificar', '--desfazer-antes', 'tests/fixtures/cuidado-m6-edits-20261108.json', '--desfazer-antes', 'tests/fixtures/tarefas-claras-edits-20261110.json', '--desfazer-antes', 'tests/fixtures/cuidado-m5-edits-20261108.json'], cwd=ROOT,
                            capture_output=True, text=True, encoding='utf-8')
         self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
         self.assertIn(f'{len(TROCAS)} trocas em {len(MANIFESTO["files"])} ficheiros: {len(TROCAS)} aplicadas, 0 por aplicar; manifesto em dia.',
@@ -647,9 +651,11 @@ class CuidadoM4(unittest.TestCase):
         # 08/11/2026: por cima da decisão 152 no M4 fica a decisão 152 no M5 (cuidado_m5_20261108): a ordem ganha mais uma posição, com a mesma exigência.
         # 08/11/2026: por cima da decisão 152 no M5 fica a decisão 152 no M6 (cuidado_m6_20261108): a ordem ganha mais uma posição, com a mesma exigência.
         self.assertEqual(verificar_camadas.LAYERS[0], ('cuidado_m6_20261108', 'cuidado-m6-edits-20261108'))
-        self.assertEqual(verificar_camadas.LAYERS[1], ('cuidado_m5_20261108', 'cuidado-m5-edits-20261108'))
-        self.assertEqual(verificar_camadas.LAYERS[2], ('cuidado_m4_20261108', 'cuidado-m4-edits-20261108'))
-        self.assertEqual(verificar_camadas.LAYERS[3], ('cuidado_m3_20261108', 'cuidado-m3-edits-20261108'))
+        # 11/11/2026 (fusão do main 4bf4a053 no pedido #191): logo abaixo da decisão 152 no M6 fica a revisão dos enunciados das tarefas (tarefas_claras_20261110, #192), por cima da decisão 152 no M5; as posições seguintes descem uma.
+        self.assertEqual(verificar_camadas.LAYERS[1], ('tarefas_claras_20261110', 'tarefas-claras-edits-20261110'))
+        self.assertEqual(verificar_camadas.LAYERS[2], ('cuidado_m5_20261108', 'cuidado-m5-edits-20261108'))
+        self.assertEqual(verificar_camadas.LAYERS[3], ('cuidado_m4_20261108', 'cuidado-m4-edits-20261108'))
+        self.assertEqual(verificar_camadas.LAYERS[4], ('cuidado_m3_20261108', 'cuidado-m3-edits-20261108'))
         auditoria = ler('tests/auditoria_20261028.py')
         corpo = auditoria[auditoria.index('def undo_cuidado_m3_0811'):]
         self.assertLess(corpo.index('undo_cuidado_m4_0811(path, text)'), corpo.index('_CUIDADO_M3_0811.get('))
@@ -678,22 +684,24 @@ class CuidadoM4(unittest.TestCase):
                     continue
                 linhas += 1
                 # 08/11/2026: e, antes da do M5, a decisão 152 no M6 (cuidado_m6_20261108), agora a mais recente, sem nada pelo meio.
-                self.assertIn(f'--verificar --desfazer-antes {m6} --desfazer-antes {m5} --desfazer-antes {meu} --desfazer-antes {m3}', linha, wf)
+                # 11/11/2026 (fusão do main 4bf4a053 no pedido #191): a revisão dos enunciados das tarefas (tarefas_claras_20261110, #192) fica entre a decisão 152 no M6, que continua a mais recente e se desfaz primeiro, e a decisão 152 no M5.
+                self.assertIn(f'--verificar --desfazer-antes {m6} --desfazer-antes tests/fixtures/tarefas-claras-edits-20261110.json --desfazer-antes {m5} --desfazer-antes {meu} --desfazer-antes {m3}', linha, wf)
         # As 16 cadeias da decisão 152 no M3 e a da decisão 152 no M2 em pt-tarefas-qa.
         self.assertEqual(linhas, 17)
         tarefas, apoios = ler('.github/workflows/pt-tarefas-qa.yml'), ler('.github/workflows/pt-apoios-qa.yml')
         # 08/11/2026: a decisão 152 no M3 e a do M2 desfazem primeiro a do M5 e depois esta.
         # 08/11/2026: e, antes da do M5, a decisão 152 no M6 (cuidado_m6_20261108), agora a mais recente, sem nada pelo meio.
-        self.assertIn(f'python scripts/aplicar_trocas.py scripts/cuidado_m3_20261108.json --manifesto {m3} --verificar --desfazer-antes {m6} --desfazer-antes {m5} '
+        # 11/11/2026 (fusão do main 4bf4a053 no pedido #191): a revisão dos enunciados das tarefas (tarefas_claras_20261110, #192) fica entre a decisão 152 no M6, que continua a mais recente e se desfaz primeiro, e a decisão 152 no M5.
+        self.assertIn(f'python scripts/aplicar_trocas.py scripts/cuidado_m3_20261108.json --manifesto {m3} --verificar --desfazer-antes {m6} --desfazer-antes tests/fixtures/tarefas-claras-edits-20261110.json --desfazer-antes {m5} '
                       f'--desfazer-antes {meu}\n', tarefas)
         self.assertIn('python scripts/aplicar_trocas.py scripts/cuidado_m2_20261108.json --manifesto tests/fixtures/cuidado-m2-edits-20261108.json '
                       # 08/11/2026: e, antes da do M5, a decisão 152 no M6 (cuidado_m6_20261108), agora a mais recente, sem nada pelo meio.
-                      f'--verificar --desfazer-antes {m6} --desfazer-antes {m5} --desfazer-antes {meu} --desfazer-antes {m3}\n', tarefas)
+                      f'--verificar --desfazer-antes {m6} --desfazer-antes tests/fixtures/tarefas-claras-edits-20261110.json --desfazer-antes {m5} --desfazer-antes {meu} --desfazer-antes {m3}\n', tarefas)
         cartaz = ler('.github/workflows/cartaz-qa.yml')
         # 08/11/2026: o cartaz «Ler a cidade» desfaz primeiro a decisão 152 no M5, depois esta, a do M3 e a do M2.
         self.assertIn(f'scripts/cidade_cartaz_20261108.json --manifesto tests/fixtures/cidade-cartaz-edits-20261108.json --verificar '
                       # 08/11/2026: e, antes da do M5, a decisão 152 no M6 (cuidado_m6_20261108), agora a mais recente, sem nada pelo meio.
-                      f'--desfazer-antes {m6} --desfazer-antes {m5} --desfazer-antes {meu} --desfazer-antes {m3} --desfazer-antes tests/fixtures/cuidado-m2-edits-20261108.json\n', cartaz)
+                      f'--desfazer-antes {m6} --desfazer-antes tests/fixtures/tarefas-claras-edits-20261110.json --desfazer-antes {m5} --desfazer-antes {meu} --desfazer-antes {m3} --desfazer-antes tests/fixtures/cuidado-m2-edits-20261108.json\n', cartaz)
         for p in sorted((ROOT / 'tests').glob('test_*.py')):
             # Como este, os testes do pedido pt-1 e da decisão 152 no M1 conferem as cadeias com frases partidas em várias linhas
             # (e já exigem esta camada à cabeça); ficam de fora pela mesma razão.
@@ -731,7 +739,8 @@ class CuidadoM4(unittest.TestCase):
         # Os fluxos conferem a camada sem nada por cima e correm os testes deste pedido, onde estão os do M1, do M2 e do M3.
         # 08/11/2026: conferem-na com a decisão 152 no M5, a única por cima, desfeita antes.
         # 08/11/2026: e, antes da do M5, a decisão 152 no M6 (cuidado_m6_20261108), agora a mais recente, sem nada pelo meio.
-        self.assertIn(f'python scripts/aplicar_trocas.py scripts/cuidado_m4_20261108.json --manifesto {meu} --verificar --desfazer-antes {m6} --desfazer-antes {m5}\n',
+        # 11/11/2026 (fusão do main 4bf4a053 no pedido #191): a revisão dos enunciados das tarefas (tarefas_claras_20261110, #192) fica entre a decisão 152 no M6, que continua a mais recente e se desfaz primeiro, e a decisão 152 no M5.
+        self.assertIn(f'python scripts/aplicar_trocas.py scripts/cuidado_m4_20261108.json --manifesto {meu} --verificar --desfazer-antes {m6} --desfazer-antes tests/fixtures/tarefas-claras-edits-20261110.json --desfazer-antes {m5}\n',
                       tarefas)
         for wf in (tarefas, apoios):
             self.assertIn("python -m unittest discover -s tests -p 'test_cuidado_m4.py' -v", wf)

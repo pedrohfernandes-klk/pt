@@ -11,21 +11,21 @@
   "ligacao": "Abrir o aquecimento em cartões",
   "ligacao_enunciado": "Aquecer"
  },
- "lead": "À mão, 200 a 240 palavras: cerca de 110 no núcleo e 90 a 130 no tema. Com consulta.",
+ "lead": "À mão, com consulta: <strong>200 a 240 palavras no total</strong>. Orientação: cerca de 110 nas respostas e 90 a 130 no tema.",
  "nucleo": [
-  "Classifica a oração com «que» em «Quizera que o real e a analyse m'o dessem» («Ao Gás»). Na estrofe de «Horas Mortas» terminada em «Amarelladamente, os cães parecem lobos.», que observa o sujeito e em que o transforma? Nomeia dois recursos e explica o efeito. Fica no real ou vai além?",
-  "«Cheio de bellas proporções carnaes» («Num Bairro Moderno») e «O sol, já alto e pleno» («A um poeta»): face ao étimo, que diz a forma de «cheio» e «pleno» sobre a via de cada uma? Passa «bellas» e «Pousára» à grafia de hoje e diz o que mudou."
+  "<strong>Observar e transformar.</strong><br/>Classifica a oração com «que» em «Quizera que o real e a analyse m'o dessem» («Ao Gás»). Na estrofe de «Horas Mortas» que termina em «Amarelladamente, os cães parecem lobos.», distingue o que o sujeito observa daquilo em que o transforma. Identifica dois recursos, explica os efeitos e diz se o olhar ultrapassa o real.",
+  "<strong>A história das palavras.</strong><br/>Compara «cheio» («Cheio de bellas proporções carnaes») e «pleno» («O sol, já alto e pleno») com o étimo: que via seguiu cada palavra? Escreve «bellas» e «Pousára» na grafia atual e explica as mudanças."
  ],
  "temas": [
   {
    "letra": "A",
    "nome": "À maneira de Cesário",
-   "texto": "Escreve, em prosa, a tua passagem a pé por um lugar, a uma hora certa: duas sensações de sentidos diferentes, um tipo social de hoje com um gesto, uma transfiguração tua. Cita e explica o verso de Cesário que imitaste. Indica uma diferença entre a tua cidade e a dele."
+   "texto": "Narra em prosa a tua passagem a pé por um lugar, a uma hora definida.</p><ol><li>Inclui duas sensações de sentidos diferentes e uma figura social atual, caracterizada por um gesto.</li><li>Transforma pela imaginação algo que observas, à maneira de Cesário.</li><li>Cita e explica o verso que imitaste e indica uma diferença entre a tua cidade e a dele.</li></ol><p>"
   },
   {
    "letra": "B",
    "nome": "Cesário nos dias de hoje",
-   "texto": "Escolhe duas partes de «O Sentimento dum Ocidental» e imagina uma fotografia atual para cada parte: descreve-a (lugar e hora) e dá-lhe uma legenda (verso exato e parte). Explica uma relação não literal. Justifica uma escolha com dois factos do dossiê. Indica o que não podes fotografar, e porquê."
+   "texto": "Escolhe duas partes de «O Sentimento dum Ocidental» e imagina uma fotografia atual para cada uma. Entregas as descrições e legendas.</p><ol><li>Descreve cada fotografia, com lugar e hora. Legenda-a com um verso exato e o nome da parte do poema.</li><li>Explica uma relação entre imagem e verso que vá além de mostrar literalmente as mesmas coisas. Justifica uma escolha com dois factos do dossiê.</li><li>Indica algo que não podes fotografar e explica porquê.</li></ol><p>"
   }
  ],
  "apoios": [
@@ -115,5 +115,10 @@
   "A: lugar e hora, sensações, tipo social, transfiguração, verso, diferença. B: fotografias legendadas, relação, dois factos, o que não se fotografa.",
   "200 a 240 palavras, respostas ligadas, escrita revista."
  ],
- "fecho": "Fecha com duas linhas, fora da contagem: o que passaste a ver na cidade depois de ler Cesário? Aponta o verso que te ensinou a ver isso."
+ "fecho": "Fecha com duas linhas, fora da contagem: o que passaste a ver na cidade depois de ler Cesário? Aponta o verso que te ensinou a ver isso.",
+ "clareza": {
+  "produto": "Responde às duas perguntas e escolhe <strong>um tema</strong>: um percurso narrado (A) ou duas fotografias imaginadas (B).",
+  "etapa": "1. Responde às duas perguntas",
+  "entrega": "Escreve o tema escolhido (A ou B) no topo. Fotografa as respostas, o tema escolhido e as duas linhas finais. Confirma que as fotografias mostram o trabalho completo e entrega-as na tarefa do Teams."
+ }
 }

@@ -61,6 +61,9 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+import sys
+sys.path.insert(0, str(ROOT / 'scripts'))
+from tarefas_claras_historico import desfazer as desfazer_enunciados
 sys.path.insert(0, str(ROOT / 'scripts'))
 from aplicar_trocas import processar, TrocaFalhou  # noqa: E402
 
@@ -420,7 +423,7 @@ def alvo(seq):
 nao_parte = alvo
 
 def ler(rel):
-    return (ROOT / rel).read_bytes().decode('utf-8')
+    return desfazer_enunciados(rel, (ROOT / rel).read_bytes().decode('utf-8'))
 
 
 def base(rel):

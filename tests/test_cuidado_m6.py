@@ -1,6 +1,8 @@
 """08/11/2026: decisão 152 do docente («cuidado em todas as lições»), módulo M6. Camada literal cuidado_m6_20261108
 (scripts/cuidado_m6_20261108.json, gerada por scripts/cuidado_m6_20261108.py; manifesto tests/fixtures/cuidado-m6-edits-20261108.json),
 a mais recente, por cima da decisão 152 no M5 (cuidado_m5_20261108).
+11/11/2026 (fusão do main 4bf4a053 no pedido #191): entre as duas fica a revisão dos enunciados das tarefas (tarefas_claras_20261110,
+pedido #192); esta camada foi refeita sobre ela e continua a mais recente.
 
 Este teste confere, no modelo de tests/test_cuidado_m1.py a tests/test_cuidado_m5.py:
 * que a camada está aplicada, fechada e reversível letra a letra (o manifesto, as contagens, os hashes e a ida e volta), que o
@@ -42,7 +44,8 @@ CAMADA = ROOT / 'scripts/cuidado_m6_20261108.json'
 MANIFESTO_REL = 'tests/fixtures/cuidado-m6-edits-20261108.json'
 TROCAS = json.loads(CAMADA.read_text('utf-8'))
 MANIFESTO = json.loads((ROOT / MANIFESTO_REL).read_text('utf-8'))
-BASE_COMMIT = 'eab393887cc5b97b197530015399c443d18ae281'
+# 11/11/2026 (fusão do main 4bf4a053 no pedido #191): a camada foi refeita sobre o main com a revisão dos enunciados das tarefas (#192).
+BASE_COMMIT = '4bf4a0538cd5f883448d179973ef016023a58f86'
 NBSP, WJ = '\xa0', '⁠'
 N = NBSP
 FOLHA = 'assets/pt-lessons/apoios-tabelas.css?v=20261106.1'
@@ -768,29 +771,38 @@ class CuidadoM6(unittest.TestCase):
         finally:
             sys.path.pop(0)
         self.assertEqual(verificar_camadas.LAYERS[0], ('cuidado_m6_20261108', 'cuidado-m6-edits-20261108'))
-        self.assertEqual(verificar_camadas.LAYERS[1], ('cuidado_m5_20261108', 'cuidado-m5-edits-20261108'))
+        # 11/11/2026 (fusão do main 4bf4a053 no pedido #191): logo abaixo da decisão 152 no M6 fica a revisão dos enunciados das tarefas (tarefas_claras_20261110, #192), por cima da decisão 152 no M5; as posições seguintes descem uma.
+        self.assertEqual(verificar_camadas.LAYERS[1], ('tarefas_claras_20261110', 'tarefas-claras-edits-20261110'))
+        self.assertEqual(verificar_camadas.LAYERS[2], ('cuidado_m5_20261108', 'cuidado-m5-edits-20261108'))
         auditoria = ler('tests/auditoria_20261028.py')
         corpo = auditoria[auditoria.index('def undo_cuidado_m5_0811'):]
         self.assertLess(corpo.index('undo_cuidado_m6_0811(path, text)'), corpo.index('_CUIDADO_M5_0811.get('))
+        # 11/11/2026 (fusão do main 4bf4a053 no pedido #191): entre as duas desfaz-se a revisão dos enunciados das tarefas (#192): primeiro
+        # esta camada, depois a dos enunciados, depois a do M5.
+        self.assertLess(corpo.index('undo_cuidado_m6_0811(path, text)'), corpo.index('text = desfazer(path, text)'))
+        self.assertLess(corpo.index('text = desfazer(path, text)'), corpo.index('_CUIDADO_M5_0811.get('))
         sala = ler('scripts/desligar_sala.py')
         self.assertLess(sala.index('cuidado-m6-edits-20261108.json'), sala.index('cuidado-m5-edits-20261108.json'))
         # Em cada cadeia dos fluxos e dos testes, esta camada desfaz-se logo antes da decisão 152 no M5, logo a seguir a --verificar.
         meu, m5 = MANIFESTO_REL, 'tests/fixtures/cuidado-m5-edits-20261108.json'
+        # 11/11/2026 (fusão do main 4bf4a053 no pedido #191): entre esta camada e a do M5 fica a revisão dos enunciados das tarefas
+        # (tarefas_claras_20261110, #192): em cada cadeia dos fluxos, esta desfaz-se primeiro, a dos enunciados a seguir, e só depois a do M5.
+        claras = 'tests/fixtures/tarefas-claras-edits-20261110.json'
         linhas = 0
         for wf in sorted(glob.glob(str(ROOT / '.github/workflows/*.yml'))):
             for linha in Path(wf).read_text('utf-8').splitlines():
                 if linha.lstrip().startswith('#') or '--desfazer-antes ' + m5 not in linha:
                     continue
                 linhas += 1
-                self.assertIn(f'--verificar --desfazer-antes {meu} --desfazer-antes {m5}', linha, wf)
+                self.assertIn(f'--verificar --desfazer-antes {meu} --desfazer-antes {claras} --desfazer-antes {m5}', linha, wf)
         # As 18 cadeias da decisão 152 no M5 e a da decisão 152 no M4 em pt-tarefas-qa.
         self.assertEqual(linhas, 19)
         tarefas, apoios = ler('.github/workflows/pt-tarefas-qa.yml'), ler('.github/workflows/pt-apoios-qa.yml')
-        self.assertIn(f'python scripts/aplicar_trocas.py scripts/cuidado_m5_20261108.json --manifesto {m5} --verificar --desfazer-antes {meu}\n',
+        self.assertIn(f'python scripts/aplicar_trocas.py scripts/cuidado_m5_20261108.json --manifesto {m5} --verificar --desfazer-antes {meu} --desfazer-antes {claras}\n',
                       tarefas)
         cartaz = ler('.github/workflows/cartaz-qa.yml')
         self.assertIn(f'scripts/cidade_cartaz_20261108.json --manifesto tests/fixtures/cidade-cartaz-edits-20261108.json --verificar '
-                      f'--desfazer-antes {meu} --desfazer-antes {m5} --desfazer-antes tests/fixtures/cuidado-m4-edits-20261108.json', cartaz)
+                      f'--desfazer-antes {meu} --desfazer-antes {claras} --desfazer-antes {m5} --desfazer-antes tests/fixtures/cuidado-m4-edits-20261108.json', cartaz)
         for p in sorted((ROOT / 'tests').glob('test_*.py')):
             # Como este, os testes do pedido pt-1 e da decisão 152 no M1 conferem as cadeias com frases partidas em várias linhas (e já
             # exigem esta camada à cabeça); ficam de fora pela mesma razão.
@@ -798,6 +810,10 @@ class CuidadoM6(unittest.TestCase):
                 continue
             texto = '\n'.join(l for l in p.read_text('utf-8').split('\n') if not l.lstrip().startswith('#'))
             plano = re.sub(r"['\"]\s*,\s*['\"]", ' ', texto).replace("',ROOT/'", ' ')
+            # 11/11/2026 (fusão do main 4bf4a053 no pedido #191): entre a decisão 152 no M6 e a do M5 fica a revisão dos enunciados das tarefas
+            # (tarefas_claras_20261110), nas cadeias onde o #192 a pôs; nas que o #192 não mudou (test_cartaz_m4_piloto.py e test_variedade_f0.py),
+            # a do M5 continua logo a seguir à do M6. A contagem lê as duas formas como uma só; nada mais cabe entre as duas.
+            plano = plano.replace('--desfazer-antes ' + meu + ' --desfazer-antes tests/fixtures/tarefas-claras-edits-20261110.json ', '--desfazer-antes ' + meu + ' ')
             with self.subTest(teste=p.name):
                 self.assertEqual(plano.count('--desfazer-antes ' + m5), plano.count(f'--desfazer-antes {meu} --desfazer-antes {m5}'))
         self.assertIn(f"(ROOT/'{meu}',ROOT/'{m5}',", ler('tests/test_task_routes_closure.py'))

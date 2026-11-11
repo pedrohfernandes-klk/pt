@@ -24,6 +24,9 @@ import tempfile
 import unittest
 
 ROOT = Path(__file__).resolve().parents[1]
+import sys
+sys.path.insert(0, str(ROOT / 'scripts'))
+from tarefas_claras_historico import desfazer as desfazer_enunciados
 sys.path.insert(0, str(ROOT / 'tests'))
 from auditoria_20261028 import undo_cuidado_m1_0611  # noqa: E402
 # 07/11/2026: por cima desta camada ficam os créditos atrás de um «i» do pedido pt-1 (camada creditos_i_pt1_20261107).
@@ -92,7 +95,7 @@ PARTE = re.compile(
 
 
 def ler(rel):
-    return (ROOT / rel).read_bytes().decode('utf-8')
+    return desfazer_enunciados(rel, (ROOT / rel).read_bytes().decode('utf-8'))
 
 
 def cartoes(texto):
@@ -300,7 +303,8 @@ class CuidadoM1(unittest.TestCase):
                             # 08/11/2026: a decisão 152 no M4 (cuidado_m4_20261108: tabelas onde há itens paralelos e espaços que não quebram nas lições e páginas do M4, incluindo o índice, o guia, o mapa e o portefólio do módulo) passa a camada mais recente, por cima da decisão 152 no M3; desfaz-se primeiro, com a mesma exigência.
                             # 08/11/2026: a decisão 152 no M5 (cuidado_m5_20261108: tabelas onde há itens paralelos e espaços que não quebram nas lições e páginas do M5, incluindo o índice, o guia, o mapa e o portefólio do módulo, e nas tarefas, nos aquecimentos e nas grelhas das suas unidades) passa a camada mais recente, por cima da decisão 152 no M4; desfaz-se primeiro, com a mesma exigência.
                             # 08/11/2026: a decisão 152 no M6 (cuidado_m6_20261108: tabelas onde há itens paralelos e espaços que não quebram nas lições e páginas do M6, incluindo o índice, o guia, o mapa e o portefólio do módulo, as páginas «Ler a fundo» e «Pensar devagar», e nas tarefas, nos aquecimentos e nas grelhas das suas unidades) passa a camada mais recente, por cima da decisão 152 no M5; desfaz-se primeiro, com a mesma exigência.
-                            '--desfazer-antes', 'tests/fixtures/cuidado-m6-edits-20261108.json', '--desfazer-antes', 'tests/fixtures/cuidado-m5-edits-20261108.json', '--desfazer-antes', 'tests/fixtures/cuidado-m4-edits-20261108.json', '--desfazer-antes', 'tests/fixtures/cuidado-m3-edits-20261108.json', '--desfazer-antes', 'tests/fixtures/cuidado-m2-edits-20261108.json', '--desfazer-antes', 'tests/fixtures/cidade-cartaz-edits-20261108.json',
+                            # 11/11/2026 (fusão do main 4bf4a053 no pedido #191): a revisão dos enunciados das tarefas (tarefas_claras_20261110, #192) fica entre a decisão 152 no M6, que continua a mais recente e se desfaz primeiro, e a decisão 152 no M5.
+                            '--desfazer-antes', 'tests/fixtures/cuidado-m6-edits-20261108.json', '--desfazer-antes', 'tests/fixtures/tarefas-claras-edits-20261110.json', '--desfazer-antes', 'tests/fixtures/cuidado-m5-edits-20261108.json', '--desfazer-antes', 'tests/fixtures/cuidado-m4-edits-20261108.json', '--desfazer-antes', 'tests/fixtures/cuidado-m3-edits-20261108.json', '--desfazer-antes', 'tests/fixtures/cuidado-m2-edits-20261108.json', '--desfazer-antes', 'tests/fixtures/cidade-cartaz-edits-20261108.json',
                             '--desfazer-antes', 'tests/fixtures/creditos-i-pt1-edits-20261107.json'],
                            cwd=ROOT, capture_output=True, text=True, encoding='utf-8')
         self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
@@ -338,19 +342,21 @@ class CuidadoM1(unittest.TestCase):
         # 08/11/2026: por cima da decisão 152 no M4 fica a decisão 152 no M5 (cuidado_m5_20261108): a ordem ganha mais uma posição, com a mesma exigência.
         # 08/11/2026: por cima da decisão 152 no M5 fica a decisão 152 no M6 (cuidado_m6_20261108): a ordem ganha mais uma posição, com a mesma exigência.
         self.assertEqual(verificar_camadas.LAYERS[0], ('cuidado_m6_20261108', 'cuidado-m6-edits-20261108'))
-        self.assertEqual(verificar_camadas.LAYERS[1], ('cuidado_m5_20261108', 'cuidado-m5-edits-20261108'))
-        self.assertEqual(verificar_camadas.LAYERS[2], ('cuidado_m4_20261108', 'cuidado-m4-edits-20261108'))
-        self.assertEqual(verificar_camadas.LAYERS[3], ('cuidado_m3_20261108', 'cuidado-m3-edits-20261108'))
-        self.assertEqual(verificar_camadas.LAYERS[4], ('cuidado_m2_20261108', 'cuidado-m2-edits-20261108'))
-        self.assertEqual(verificar_camadas.LAYERS[5], ('cidade_cartaz_20261108', 'cidade-cartaz-edits-20261108'))
-        self.assertEqual(verificar_camadas.LAYERS[6], ('creditos_i_pt1_20261107', 'creditos-i-pt1-edits-20261107'))
-        self.assertEqual(verificar_camadas.LAYERS[7], ('cuidado_m1_20261106', 'cuidado-m1-edits-20261106'))
+        # 11/11/2026 (fusão do main 4bf4a053 no pedido #191): logo abaixo da decisão 152 no M6 fica a revisão dos enunciados das tarefas (tarefas_claras_20261110, #192), por cima da decisão 152 no M5; as posições seguintes descem uma.
+        self.assertEqual(verificar_camadas.LAYERS[1], ('tarefas_claras_20261110', 'tarefas-claras-edits-20261110'))
+        self.assertEqual(verificar_camadas.LAYERS[2], ('cuidado_m5_20261108', 'cuidado-m5-edits-20261108'))
+        self.assertEqual(verificar_camadas.LAYERS[3], ('cuidado_m4_20261108', 'cuidado-m4-edits-20261108'))
+        self.assertEqual(verificar_camadas.LAYERS[4], ('cuidado_m3_20261108', 'cuidado-m3-edits-20261108'))
+        self.assertEqual(verificar_camadas.LAYERS[5], ('cuidado_m2_20261108', 'cuidado-m2-edits-20261108'))
+        self.assertEqual(verificar_camadas.LAYERS[6], ('cidade_cartaz_20261108', 'cidade-cartaz-edits-20261108'))
+        self.assertEqual(verificar_camadas.LAYERS[7], ('creditos_i_pt1_20261107', 'creditos-i-pt1-edits-20261107'))
+        self.assertEqual(verificar_camadas.LAYERS[8], ('cuidado_m1_20261106', 'cuidado-m1-edits-20261106'))
         # 07/11/2026 (fusão do main 29441e6b no pedido #182): esta camada fica por cima dos acertos da decisão 173, que ficam por cima do desenho comum dos índices
         # (decisão 148), por cima dos créditos atrás de um «i».
         # 08/11/2026: com a decisão 152 no M4 por cima de todas, cada uma destas desce uma posição.
-        self.assertEqual(verificar_camadas.LAYERS[8], ('indices_acertos_20261107', 'indices-acertos-edits-20261107'))
-        self.assertEqual(verificar_camadas.LAYERS[9], ('cartaz_indices_148_20261106', 'cartaz-indices-148-edits-20261106'))
-        self.assertEqual(verificar_camadas.LAYERS[10], ('creditos_i_20261105', 'creditos-i-edits-20261105'))
+        self.assertEqual(verificar_camadas.LAYERS[9], ('indices_acertos_20261107', 'indices-acertos-edits-20261107'))
+        self.assertEqual(verificar_camadas.LAYERS[10], ('cartaz_indices_148_20261106', 'cartaz-indices-148-edits-20261106'))
+        self.assertEqual(verificar_camadas.LAYERS[11], ('creditos_i_20261105', 'creditos-i-edits-20261105'))
         auditoria = ler('tests/auditoria_20261028.py')
         # 07/11/2026 (fusão do main 29441e6b no pedido #182): quem chama primeiro esta camada é a função dos acertos (os créditos chamam o desenho comum, que chama os acertos).
         corpo = auditoria[auditoria.index('def undo_acertos_0711'):]
@@ -407,6 +413,10 @@ class CuidadoM1(unittest.TestCase):
             # Sem as linhas de comentário, e com as listas de argumentos («'a', 'b'») juntas numa linha de comando.
             texto = '\n'.join(l for l in p.read_text('utf-8').split('\n') if not l.lstrip().startswith('#'))
             plano = re.sub(r"['\"]\s*,\s*['\"]", ' ', texto)
+            # 11/11/2026 (fusão do main 4bf4a053 no pedido #191): entre a decisão 152 no M6 e a do M5 fica a revisão dos enunciados das tarefas
+            # (tarefas_claras_20261110), nas cadeias onde o #192 a pôs; nas que o #192 não mudou (test_cartaz_m4_piloto.py e test_variedade_f0.py),
+            # a do M5 continua logo a seguir à do M6. A contagem lê as duas formas como uma só; nada mais cabe entre as duas.
+            plano = plano.replace('--desfazer-antes tests/fixtures/cuidado-m6-edits-20261108.json' + ' --desfazer-antes tests/fixtures/tarefas-claras-edits-20261110.json ', '--desfazer-antes tests/fixtures/cuidado-m6-edits-20261108.json' + ' ')
             with self.subTest(ficheiro=p.name):
                 self.assertEqual(plano.count(creditos), plano.count(cadeia))
         rotas = ler('tests/test_task_routes_closure.py')

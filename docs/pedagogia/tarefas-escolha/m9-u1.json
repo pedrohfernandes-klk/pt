@@ -30,25 +30,25 @@
    }
   ]
  },
- "fecho": "Fecha com duas linhas, fora da contagem, como o núcleo: como muda a tua leitura do episódio quando distingues o que acontece da maneira como é contado? Localiza o pormenor decisivo.",
+ "fecho": "Fecha com duas linhas, fora da contagem do texto: como muda a tua leitura do episódio quando distingues o que acontece da maneira como é contado? Localiza o pormenor decisivo.",
  "slug": "m9-u1",
  "titulo": "O poder em cena",
  "unidade": 1,
- "lead": "Escreve uma apreciação crítica de um episódio de <i>Memorial do Convento</i>, em 200 a 240 palavras. Trabalha individualmente, à mão, com consulta. Conta as palavras do texto.",
+ "lead": "Individual, à mão e com consulta. Texto: <strong>200 a 240 palavras</strong>; escreve o total no fim. O plano e as duas linhas finais ficam fora da contagem.",
  "nucleo": [
-  "Antes do texto, regista o tema, um juízo provisório e dois pormenores localizados do episódio.",
-  "Anota um procedimento de escrita e uma dificuldade da tua leitura. No texto, explica como esse procedimento produz um efeito; não basta dar-lhe um nome."
+  "Regista a opção escolhida, a tua opinião inicial e dois pormenores do episódio. Indica onde se encontram.",
+  "Escolhe um procedimento de escrita e anota uma dificuldade da tua leitura. No texto, explica o efeito desse procedimento com exemplos; identificá-lo não chega."
  ],
  "temas": [
   {
    "letra": "A",
    "nome": "O rei e a miniatura",
-   "texto": "Aprecia como a descrição da miniatura da basílica de São Pedro, no capítulo I, transforma a imagem do rei. Distingue os gestos do rei da maneira como são contados."
+   "texto": "No capítulo I, como transforma a descrição da miniatura da basílica de São Pedro a imagem do rei? Aprecia o episódio, distinguindo os gestos do rei da forma como o narrador os conta."
   },
   {
    "letra": "B",
    "nome": "A cerimónia e o olhar",
-   "texto": "Aprecia como a representação do auto de fé, no capítulo V, transforma a imagem da cerimónia. Distingue a perspetiva da assistência da crítica construída pelo narrador."
+   "texto": "No capítulo V, como transforma o narrador a imagem do auto de fé? Aprecia o episódio, distinguindo o olhar da assistência da crítica construída pela narração."
   }
  ],
  "apoios": [
@@ -95,5 +95,11 @@
   "Juízo crítico centrado no episódio e dois pormenores textuais contextualizados.",
   "Procedimento narrativo identificado e efeito explicado com apoio no texto.",
   "Organização, correção linguística, extensão, núcleo e síntese revistos."
- ]
+ ],
+ "clareza": {
+  "produto": "Escolhe <strong>um episódio de <i>Memorial do Convento</i></strong> e escreve uma apreciação crítica. Entregas o plano, o texto e duas linhas finais.",
+  "etapa": "2. Faz um plano breve",
+  "entrega": "Escreve o tema escolhido (A ou B) no topo. Fotografa o plano, o texto e as duas linhas finais. Confirma que as fotografias mostram o trabalho completo e entrega-as na tarefa do Teams.",
+  "escolha_primeiro": true
+ }
 }

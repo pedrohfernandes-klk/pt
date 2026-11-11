@@ -30,25 +30,25 @@
    }
   ]
  },
- "fecho": "Fecha com duas linhas, fora da contagem, como o núcleo: que diferença entre os poemas mais alterou a tua leitura? Indica o indício que a sustenta.",
+ "fecho": "Fecha com duas linhas, fora da contagem do texto: que diferença entre os poemas mais alterou a tua leitura? Indica o indício que a sustenta.",
  "slug": "m8-u1",
  "titulo": "O que as palavras conseguem",
  "unidade": 1,
- "lead": "Escreve uma apreciação crítica comparativa de dois poemas do mesmo autor, em 200 a 240 palavras. Trabalha individualmente, à mão, com consulta. Conta as palavras do texto.",
+ "lead": "Individual, à mão e com consulta. Texto: <strong>200 a 240 palavras</strong>; escreve o total no fim. O plano e as duas linhas finais ficam fora da contagem.",
  "nucleo": [
-  "Antes do texto, regista o tema, um juízo provisório e uma dificuldade que a comparação terá de resolver.",
-  "Localiza um indício de cada poema. No texto, explica o efeito e a relação entre ambos; não juntes dois resumos."
+  "Regista a opção escolhida, a tua opinião inicial e uma dificuldade que a comparação terá de resolver.",
+  "Escolhe um indício de cada poema e indica onde está. No texto, explica o efeito de cada um e relaciona-os: compara os poemas, em vez de escrever dois resumos."
  ],
  "temas": [
   {
    "letra": "A",
    "nome": "Eugénio de Andrade",
-   "texto": "Compara «As Palavras» e «Adeus». Aprecia como a linguagem ganha ou perde força em cada situação, considerando uma diferença entre os poemas."
+   "texto": "Compara «As Palavras» e «Adeus», de Eugénio de Andrade. Explica como a linguagem ganha ou perde força em cada poema. Apoia a tua apreciação numa diferença entre eles."
   },
   {
    "letra": "B",
    "nome": "Ana Luísa Amaral",
-   "texto": "Compara «Prece no Mediterrâneo» e «A verdade histórica». Aprecia como uma forma reconhecível, a prece ou o relato doméstico, altera a atenção dada a uma experiência."
+   "texto": "Compara «Prece no Mediterrâneo» e «A verdade histórica», de Ana Luísa Amaral. Explica como a forma de prece ou de relato doméstico nos faz prestar atenção à experiência apresentada."
   }
  ],
  "apoios": [
@@ -100,5 +100,11 @@
   "Juízo crítico sustentado e leitura rigorosa dos dois poemas.",
   "Comparação explicada com um indício localizado de cada poema.",
   "Organização, correção linguística, extensão, núcleo e síntese revistos."
- ]
+ ],
+ "clareza": {
+  "produto": "Escolhe <strong>um par de poemas</strong> e escreve uma apreciação que os compare. Entregas o plano, o texto e duas linhas finais.",
+  "etapa": "2. Faz um plano breve",
+  "entrega": "Escreve o tema escolhido (A ou B) no topo. Fotografa o plano, o texto e as duas linhas finais. Confirma que as fotografias mostram o trabalho completo e entrega-as na tarefa do Teams.",
+  "escolha_primeiro": true
+ }
 }

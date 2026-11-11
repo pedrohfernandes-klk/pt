@@ -39,21 +39,21 @@
   "ligacao": "Abrir o aquecimento em cartões",
   "ligacao_enunciado": "Aquecer em cartões"
  },
- "lead": "À mão, 200 a 250 palavras: cerca de 50 por resposta do núcleo e 100 a 150 no tema. Com consulta.",
+ "lead": "À mão, com consulta: <strong>200 a 250 palavras no total</strong>. Orientação: cerca de 50 por resposta e 100 a 150 no tema, incluindo a explicação final quando pedida.",
  "nucleo": [
-  "No último capítulo, Carlos diz do Ramalhete: «é n'ella que me parece estar mettida a minha vida inteira!» Da descrição antes da fala, cita uma expressão que vem do cap. I e outra nova. Nomeia a estrutura. Explica o que dizem dessa vida.",
-  "No cap. VI, Alencar «supplicou que se não discutisse» o realismo; logo a seguir: «Alli todos eram homens d'aceio, de sala, hein?». Identifica o modo de relato de cada passagem. Prova o segundo com duas marcas. Reescreve a pergunta em discurso direto."
+  "<strong>O Ramalhete no início e no fim.</strong><br/>No último capítulo, antes de Carlos dizer «é n'ella que me parece estar mettida a minha vida inteira!», encontra uma expressão repetida do capítulo I e outra nova. Cita-as, identifica a estrutura do romance que esta repetição revela e explica o que mostram sobre a vida de Carlos.",
+  "<strong>Quem fala na narração?</strong><br/>No capítulo VI, Alencar «supplicou que se não discutisse» o realismo; depois lê-se «Alli todos eram homens d'aceio, de sala, hein?». Identifica o modo de relato em cada passagem. Justifica o segundo com duas marcas e reescreve a pergunta em discurso direto."
  ],
  "temas": [
   {
    "letra": "A",
    "nome": "À mesa, à maneira de Eça",
-   "texto": "Narra na 3.ª pessoa (70 a 100 palavras) uma mesa de hoje onde uma coisa banal corta uma conversa séria, como o «Sole normande?» no Hotel Central. Inclui uma fala em discurso direto e um pensamento em indireto livre. Depois, em duas frases, diz o que imitaste de Eça e o que criticas."
+   "texto": "Imagina uma conversa séria à mesa, nos dias de hoje, interrompida por algo banal, como no Hotel Central.</p><ol><li>Narra a cena na 3.ª pessoa, em 70 a 100 palavras.</li><li>Inclui uma fala em discurso direto e um pensamento em discurso indireto livre.</li><li>Depois, escreve duas frases: o que imitaste de Eça e o que criticas.</li></ol><p>"
   },
   {
    "letra": "B",
    "nome": "Falhámos a vida, hoje?",
-   "texto": "<i>Os Maias</i> chegou ao ecrã mais de um século depois. O «Falhámos a vida, menino!» de Ega diz alguma coisa a quem tem a tua idade? Num parágrafo de opinião (100 a 130 palavras):</p><ol><li>tese na primeira frase;</li><li>outra citação do último capítulo, explicada;</li><li>um facto datado do dossiê, ligado à tese;</li><li>contra-argumento e refutação;</li><li>conclusão.</li></ol><p>"
+   "texto": "«Falhámos a vida, menino!» ainda diz alguma coisa a alguém da tua idade?</p><ol><li>Escreve um parágrafo de opinião de 100 a 130 palavras. Começa pela tua posição.</li><li>Usa outra citação do último capítulo, explicada, e um facto datado do dossiê ligado à tua posição.</li><li>Apresenta uma ideia contrária à tua, responde-lhe e termina com uma conclusão.</li></ol><p>"
   }
  ],
  "apoios": [
@@ -140,5 +140,10 @@
   "Tema: os cinco elementos e o remate (as duas frases em A, a conclusão em B).",
   "Citações exatas, factos do dossiê, extensão e escrita revista."
  ],
- "fecho": "Fecha com duas linhas, fora da contagem: falha-se a vida, ou deixa-se falhar? Aponta a passagem de <i>Os Maias</i> que te fez pensar nisso."
+ "fecho": "Fecha com duas linhas, fora da contagem: falha-se a vida, ou deixa-se falhar? Aponta a passagem de <i>Os Maias</i> que te fez pensar nisso.",
+ "clareza": {
+  "produto": "Responde às duas perguntas e escolhe <strong>um tema</strong>: uma cena atual à maneira de Eça (A) ou um parágrafo de opinião (B).",
+  "etapa": "1. Responde às duas perguntas",
+  "entrega": "Escreve o tema escolhido (A ou B) no topo. Fotografa as respostas, o tema escolhido e as duas linhas finais. Confirma que as fotografias mostram o trabalho completo e entrega-as na tarefa do Teams."
+ }
 }

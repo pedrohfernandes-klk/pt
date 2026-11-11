@@ -9,7 +9,11 @@ A camada aplica-se com scripts/aplicar_trocas.py e o manifesto fica em tests/fix
 
   python3 scripts/cuidado_m6_20261108.py
   python3 scripts/aplicar_trocas.py scripts/cuidado_m6_20261108.json --manifesto tests/fixtures/cuidado-m6-edits-20261108.json \\
-      --base-commit eab393887cc5b97b197530015399c443d18ae281 --nota "…"
+      --base-commit 4bf4a0538cd5f883448d179973ef016023a58f86 --nota "…"
+
+11/11/2026 (fusão do main 4bf4a053 no pedido #191): a camada foi refeita sobre o main com a revisão dos enunciados das tarefas
+(tarefas_claras_20261110, pedido #192), e fica por cima dela. As trocas das tarefas da M6-U1 e da M6-U2 (dados e páginas) são as
+mesmas, agora sobre os enunciados novos; o gerador das tarefas junta «clareza» (#192) e «nao_partir_grelha» (esta camada).
 
 Segue o modelo da camada do M5 (scripts/cuidado_m5_20261108.py), com as mesmas regras:
 - A: os itens paralelos que pedem tabela passam a tabela, como na M7-F10, na M7-F15 e do M1 ao M5: class apoio-tabela, th
