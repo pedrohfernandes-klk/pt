@@ -190,6 +190,10 @@ class ChoiceTasks(unittest.TestCase):
                     continue
                 target = flat((path.parent / href / 'index.html').resolve())
                 text = html.unescape(re.sub(r'<[^>]+>', '', fact))
+                # 11/11/2026: decisão 152 no M7 (achado 73): os factos do dossiê da M7-U3 levam espaço que não quebra (U+00A0) em
+                # «D. Sebastião»; a página ligada lê-se com os espaços juntos (flat junta-os, U+00A0 incluído), e cada citação do
+                # facto compara-se da mesma maneira, letra a letra.
+                text = re.sub(r'\s+', ' ', text)
                 for piece in re.findall(r'«([^»]+)»', text) + re.findall(r'\b\d{3,4}\b', text):
                     with self.subTest(task=slug, fonte=href, facto=piece):
                         self.assertIn(piece, target)

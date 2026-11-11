@@ -82,7 +82,8 @@ def main():
                     assert field in credito.inner_text(),field
                 assert credito.locator('a[href*="File:PessoaChapeu.jpg"]').is_visible()
                 assert credito.evaluate('e=>parseFloat(getComputedStyle(e).fontSize)')<=13.1
-                licao=page.locator('#galeria figcaption').filter(has_text='Fernando Pessoa, cerca de 1914.').get_by_text('Lição M7-F01')
+                # 11/11/2026: decisão 152 no M7 (achado 36): a sigla da ligação leva a junção (U+2060) depois do hífen, para não se partir.
+                licao=page.locator('#galeria figcaption').filter(has_text='Fernando Pessoa, cerca de 1914.').get_by_text('Lição M7-\u2060F01')
                 assert licao.count()==1 and licao.is_visible()
                 assert licao.evaluate('a=>!a.closest("details.info-i")')
                 assert not page.evaluate('document.documentElement.scrollWidth>innerWidth+2')

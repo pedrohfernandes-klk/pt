@@ -1,0 +1,3060 @@
+{
+ "base_commit": "2900616656378e4fb39d93747a5c7c450a38179f",
+ "_nota": "11/11/2026: decisão 152 do docente («cuidado em todas as lições»), módulo M7: dos 66 achados CONFIRMADOS da varredura do M7 (bordo/cidadania-v3/cuidado-152/m7-confirmados.json, refeita a 9/11 e conferida a 11/11 sobre o main 4bf4a053), entram 61; ficam de fora, por decisão já tomada para todos os módulos, como do M1 ao M5, os 5 achados B dos diapositivos (4), das provas rápidas (56, 57 e 58) e dos questionários (59), e os 9 recusados (0, 3, 5, 20, 28, 34, 35, 47 e 63) não entram. São 3 achados A (tabelas onde há itens paralelos, como na M7-F10, na M7-F15 e do M1 ao M6: class apoio-tabela, th scope, td data-label e os role; os pesos da avaliação no índice do módulo, como no índice do M5, com a coluna do peso em 5,5 rem; as três vidas da carta na dobra do «O essencial» da F01; e os quatro termos da caixa «Recorda» da F23, com a frase final num parágrafo a seguir; cada página com tabela nova carrega assets/pt-lessons/apoios-tabelas.css antes da camada de aparência, na versão do M1), 55 de referências e números que não se partem entre linhas (B: U+00A0 nos espaços que a proposta final prende, com a palavra inteira e fora das cadeias maiores dos outros pares da página, e U+2060 logo a seguir ao traço de intervalo e ao hífen da sigla «M7-Fxx»; nas datas, o dia preso ao «de» e o ano ao «de», como no M5) e 3 casos do mesmo tipo (C: «Três antes de mim» em lista numerada no guia, como no M5; o plano do texto da F10, ponto a ponto, numa lista; e, no portefólio, os nove nomes de ficheiro que estavam em texto simples em <code>, com <wbr> depois de «M7_», de «U1_» e de «aula_» e «td code{white-space:nowrap}» na página, como no portefólio do M5). Camada mais recente, por cima da decisão 152 no M6 (cuidado_m6_20261108, ramo do pedido #191 com o main 4bf4a053 dentro, commit 29006166), que não toca nas páginas do M7; as duas só partilham os dados das grelhas, em entradas diferentes. Gerada por scripts/cuidado_m7_20261111.py e aplicada por scripts/aplicar_trocas.py: não se edita à mão. O texto visível fica igual, salvo a estrutura das tabelas e das listas e os espaços invisíveis. A casca das lições (migalhas «3.º ano», «Estás em: Lição M7-Fxx», o título escondido e a sigla do rodapé) não muda aqui, ficheiro a ficheiro: muda no molde, como do M1 ao M6; nas outras páginas, as migalhas contam, como na proposta final, e o «3.º ano» fica preso nas migalhas e no cabeçalho. Ficam de fora os «alt» (e aria-label, href, title, content e data-titulo, que vira o title do leitor dos vídeos), o <title>, o texto dos desenhos (SVG), a «frase» dos cartões sublinhar, as «palavras» dos cartões frase, os «passos» dos cartões ordenar, duas citações literais entre «» de «O leme e o retrato» e o título do poema no menu «Relembrar» do aquecimento da M7-U3. As páginas geradas mudam também nos dados, que estão nesta camada, e regeneram-se sem diferenças: a tarefa da M7-U3 (docs/pedagogia/tarefas-escolha/m7-u3.json: «nao_partir», como do M1 ao M6, que também prende a meta descrição, e os achados B), os três aquecimentos (docs/pedagogia/aquecimentos/m7-u1.json, m7-u2.json e m7-u3.json) e a grelha e a correção da M7-U3 (docs/pedagogia/grelhas-tarefas-20261027.json, entrada m7-u3); os geradores não mudam. As tarefas da M7-U1 e da M7-U2 não têm gerador e mudam aqui. Os painéis de projeção da F01, F02, F04, F05, F06, F09, F10, F13, F14, F15, F23 e F34 seguem os enunciados dos cartões que mudaram (a lista e o seletor); o material do relâmpago segue a lição antes das camadas de cuidado, como do M1 ao M6. As cópias dos cartões no banco das provas rápidas do índice (var U) mudam como as lições de onde vêm.",
+ "files": {
+  "docs/pedagogia/aquecimentos/m7-u1.json": {
+   "base_sha256_lf": "9f117d9e37185e7677881f2c4abb0aeb199938cf3181121a14862249b1d3e5d0",
+   "after_sha256_lf": "b92fd1dde217b659b4cbcde274f6a332ed1ffd788706e22519db722ee2aa7bf5",
+   "edits": [
+    {
+     "location": "Dados aquecimentos/m7-u1.json: «80 a 120 palavras» que não se parte",
+     "old": "80 a 120 palavras",
+     "new": "80 a 120 palavras",
+     "occurrences": 2
+    },
+    {
+     "location": "Dados aquecimentos/m7-u1.json: «60 minutos» que não se parte",
+     "old": "60 minutos",
+     "new": "60 minutos",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados aquecimentos/m7-u1.json: «1.º verso» que não se parte",
+     "old": "1.º verso",
+     "new": "1.º verso",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados aquecimentos/m7-u1.json: «4.ª estrofe» que não se parte",
+     "old": "4.ª estrofe",
+     "new": "4.ª estrofe",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados aquecimentos/m7-u1.json: «1.ª pessoa» que não se parte",
+     "old": "1.ª pessoa",
+     "new": "1.ª pessoa",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados aquecimentos/m7-u1.json: «40 a 60» que não se parte",
+     "old": "40 a 60",
+     "new": "40 a 60",
+     "occurrences": 2
+    },
+    {
+     "location": "Dados aquecimentos/m7-u1.json: «150 a 200» que não se parte",
+     "old": "150 a 200",
+     "new": "150 a 200",
+     "occurrences": 2
+    },
+    {
+     "location": "Dados aquecimentos/m7-u1.json: «80 a 120» que não se parte (com o contexto «80 a 120\"»)",
+     "old": "80 a 120\"",
+     "new": "80 a 120\"",
+     "occurrences": 1
+    }
+   ]
+  },
+  "docs/pedagogia/aquecimentos/m7-u2.json": {
+   "base_sha256_lf": "a57fbaba47ecaa8bb91fe4edbe9fa5cc4b75522d20e50c2f3ed5c0d487f7c954",
+   "after_sha256_lf": "b6314c126a14e2523b189c89735c92c64348ccd5e495f97969c86fb302c57005",
+   "edits": [
+    {
+     "location": "Dados aquecimentos/m7-u2.json: «13 de janeiro de 1935» que não se parte",
+     "old": "13 de janeiro de 1935",
+     "new": "13 de janeiro de 1935",
+     "occurrences": 3
+    },
+    {
+     "location": "Dados aquecimentos/m7-u2.json: «M8-F01» que não se parte",
+     "old": "M8-F01",
+     "new": "M8-⁠F01",
+     "occurrences": 1
+    }
+   ]
+  },
+  "docs/pedagogia/aquecimentos/m7-u3.json": {
+   "base_sha256_lf": "4b20aea9da1d2458a36fa817c2a4651d73b3cfee8d21abf61d99da31bb88052f",
+   "after_sha256_lf": "292fdb41f8187354381951c3f7018e1829645fb879b9842eb63c7d6dfb401318",
+   "edits": [
+    {
+     "location": "Dados aquecimentos/m7-u3.json: «180 a 220 palavras» que não se parte",
+     "old": "180 a 220 palavras",
+     "new": "180 a 220 palavras",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados aquecimentos/m7-u3.json: «1.º verso» que não se parte",
+     "old": "1.º verso",
+     "new": "1.º verso",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados aquecimentos/m7-u3.json: «2.º ano» que não se parte",
+     "old": "2.º ano",
+     "new": "2.º ano",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados aquecimentos/m7-u3.json: «verso de «D. Sebastião» que não se parte (com o contexto «de «D. Sebastião»)",
+     "old": "de «D. Sebastião",
+     "new": "de «D. Sebastião",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados aquecimentos/m7-u3.json: «verso de «D. Sebastião» que não se parte (com o contexto «_, «D. Sebastião»)",
+     "old": "_, «D. Sebastião",
+     "new": "_, «D. Sebastião",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados aquecimentos/m7-u3.json: «verso de «D. Sebastião» que não se parte (com o contexto « e «D. Sebastião»)",
+     "old": " e «D. Sebastião",
+     "new": " e «D. Sebastião",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados aquecimentos/m7-u3.json: «D. João» que não se parte",
+     "old": "D. João",
+     "new": "D. João",
+     "occurrences": 2
+    }
+   ]
+  },
+  "docs/pedagogia/grelhas-tarefas-20261027.json": {
+   "base_sha256_lf": "cb1501c2159bdce196d9506b3f7a5d2a37fc4d9d6260a07cc925d570e3f3c2be",
+   "after_sha256_lf": "f8a0bc8d9801356ff212ded6fd43bc5f8130c4722fc323601364a97ca6a258cb",
+   "edits": [
+    {
+     "location": "Dados pedagogia/grelhas-tarefas-20261027.json, m7-u3: «180 a 220 palavras» que não se parte",
+     "old": "180 a 220 palavras",
+     "new": "180 a 220 palavras",
+     "occurrences": 3
+    },
+    {
+     "location": "Dados pedagogia/grelhas-tarefas-20261027.json, m7-u3: «90 palavras» que não se parte (com o contexto «exto de 90 palavras, sem co»)",
+     "old": "exto de 90 palavras, sem co",
+     "new": "exto de 90 palavras, sem co",
+     "occurrences": 1
+    }
+   ]
+  },
+  "docs/pedagogia/tarefas-escolha/m7-u3.json": {
+   "base_sha256_lf": "03b0940d605e245955ad910008c6bc42e8a3e5797ee355db07d2a9c189a0e9ff",
+   "after_sha256_lf": "8c9ba74d68a28018994c218ee667bb554629ee47faebd192fbefd52ec2d7690b",
+   "edits": [
+    {
+     "location": "Dados da tarefa: «nao_partir», os números do molde com espaço que não quebra",
+     "old": "\n \"unidade\": 3,\n ",
+     "new": "\n \"unidade\": 3,\n \"nao_partir\": true,\n ",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados tarefas-escolha/m7-u3.json: «60 minutos» que não se parte",
+     "old": "60 minutos",
+     "new": "60 minutos",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados tarefas-escolha/m7-u3.json: «180 a 220 palavras» que não se parte",
+     "old": "180 a 220 palavras",
+     "new": "180 a 220 palavras",
+     "occurrences": 2
+    },
+    {
+     "location": "Dados tarefas-escolha/m7-u3.json: «10 minutos» que não se parte",
+     "old": "10 minutos",
+     "new": "10 minutos",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados tarefas-escolha/m7-u3.json: «4 de agosto de 1578» que não se parte",
+     "old": "4 de agosto de 1578",
+     "new": "4 de agosto de 1578",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados tarefas-escolha/m7-u3.json: «20 de fevereiro de 1933» que não se parte",
+     "old": "20 de fevereiro de 1933",
+     "new": "20 de fevereiro de 1933",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados tarefas-escolha/m7-u3.json: «v. 1» que não se parte",
+     "old": "v. 1",
+     "new": "v. 1",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados tarefas-escolha/m7-u3.json: «D. Sebastião» que não se parte",
+     "old": "D. Sebastião",
+     "new": "D. Sebastião",
+     "occurrences": 3
+    },
+    {
+     "location": "Dados tarefas-escolha/m7-u3.json: «D. João» que não se parte",
+     "old": "D. João",
+     "new": "D. João",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m7/caeiro-olhar/index.html": {
+   "base_sha256_lf": "39a951e560d0a155f19c3bbaaf80dedf08e1a8673bf836a5b9d411eac35d7947",
+   "after_sha256_lf": "ce6fd878de290284622df5d90f74d2da241b5b955e3ebc22cbd63c9e89a75a42",
+   "edits": [
+    {
+     "location": "m7/caeiro-olhar: «poema II» que não se parte",
+     "old": "poema II",
+     "new": "poema II",
+     "occurrences": 1
+    },
+    {
+     "location": "m7/caeiro-olhar: «poema IX» que não se parte",
+     "old": "poema IX",
+     "new": "poema IX",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m7/campos-aniversario/index.html": {
+   "base_sha256_lf": "075229661ff0d5253654c552afc6adf0bbacd095925bfbe3a3d02a46feef178e",
+   "after_sha256_lf": "89caf80d4ca773d5ac26af13db3db0b722b8660abc16245257046c7f29da5037",
+   "edits": [
+    {
+     "location": "m7/campos-aniversario: «8 palavras» que não se parte",
+     "old": "8 palavras",
+     "new": "8 palavras",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m7/guia-da-tarefa-m7/index.html": {
+   "base_sha256_lf": "7738daf9c1a9651769d95d35e231d80918c082a05071c296c7af1f2377c670b7",
+   "after_sha256_lf": "7350cfeb8eabc404b5d69d675516b7c4cbd357c7243cea44396e70587348d533",
+   "edits": [
+    {
+     "location": "m7/guia-da-tarefa-m7, «Três antes de mim» (div.regra)",
+     "old": "Antes de chamares o docente: 1) relê o enunciado; 2) vê a rubrica; 3) pergunta ao teu par de trabalho. Só depois levantas o braço.</div>",
+     "new": "Antes de chamares o docente:<ol><li>relê o enunciado;</li><li>vê a rubrica;</li><li>pergunta ao teu par de trabalho.</li></ol>Só depois levantas o braço.</div>",
+     "occurrences": 1
+    },
+    {
+     "location": "m7/guia-da-tarefa-m7: «90 minutos» que não se parte",
+     "old": "90 minutos",
+     "new": "90 minutos",
+     "occurrences": 1
+    },
+    {
+     "location": "m7/guia-da-tarefa-m7: «90 min» que não se parte (com o contexto «90 min »)",
+     "old": "90 min ",
+     "new": "90 min ",
+     "occurrences": 3
+    },
+    {
+     "location": "m7/guia-da-tarefa-m7: «15 min» que não se parte",
+     "old": "15 min",
+     "new": "15 min",
+     "occurrences": 2
+    },
+    {
+     "location": "m7/guia-da-tarefa-m7: «60 min» que não se parte",
+     "old": "60 min",
+     "new": "60 min",
+     "occurrences": 1
+    },
+    {
+     "location": "m7/guia-da-tarefa-m7: «10 minutos» que não se parte",
+     "old": "10 minutos",
+     "new": "10 minutos",
+     "occurrences": 2
+    },
+    {
+     "location": "m7/guia-da-tarefa-m7: «100 a 150 palavras» que não se parte",
+     "old": "100 a 150 palavras",
+     "new": "100 a 150 palavras",
+     "occurrences": 4
+    },
+    {
+     "location": "m7/guia-da-tarefa-m7: «80 a 120 palavras» que não se parte",
+     "old": "80 a 120 palavras",
+     "new": "80 a 120 palavras",
+     "occurrences": 1
+    },
+    {
+     "location": "m7/guia-da-tarefa-m7: «180 a 220 palavras» que não se parte",
+     "old": "180 a 220 palavras",
+     "new": "180 a 220 palavras",
+     "occurrences": 3
+    },
+    {
+     "location": "m7/guia-da-tarefa-m7: «150 a 180 palavras» que não se parte",
+     "old": "150 a 180 palavras",
+     "new": "150 a 180 palavras",
+     "occurrences": 3
+    },
+    {
+     "location": "m7/guia-da-tarefa-m7: «12 a 16 versos» que não se parte",
+     "old": "12 a 16 versos",
+     "new": "12 a 16 versos",
+     "occurrences": 3
+    },
+    {
+     "location": "m7/guia-da-tarefa-m7: «3.º ano» que não se parte",
+     "old": "3.º ano",
+     "new": "3.º ano",
+     "occurrences": 2
+    },
+    {
+     "location": "m7/guia-da-tarefa-m7: «D. Sebastião» que não se parte",
+     "old": "D. Sebastião",
+     "new": "D. Sebastião",
+     "occurrences": 2
+    }
+   ]
+  },
+  "m7/index.html": {
+   "base_sha256_lf": "9c5d0ddcd0bcb636cebb1fc335e512503038c442c32345678b12dd74e5e48669",
+   "after_sha256_lf": "d141c8e4ddc5b231613fdf5077ea229c9e1e7e3b309a30074518426c048892c9",
+   "edits": [
+    {
+     "location": "m7, «Como se cumpre uma unidade»: os pesos na avaliação",
+     "old": "<p class=\"avaliacao-tarefas\">Pesos na avaliação: tarefa da Unidade 2 («Uma ideia de heterónimo»), 35 %; tarefa da Unidade 3 («Louco, sim»), 25 %; provas rápidas, 10 %; prova escrita, 30 %. Cada tarefa tem uma grelha /20.</p>",
+     "new": "<p>Pesos na avaliação:</p><table class=\"apoio-tabela\" role=\"table\"><thead role=\"rowgroup\"><tr role=\"row\"><th scope=\"col\" role=\"columnheader\" style=\"width:auto\">Elemento</th><th scope=\"col\" role=\"columnheader\" style=\"width:5.5rem\">Peso</th></tr></thead><tbody role=\"rowgroup\"><tr role=\"row\"><th scope=\"row\" role=\"rowheader\">Tarefa da Unidade 2 («Uma ideia de heterónimo»)</th><td role=\"cell\" data-label=\"Peso\">35 %</td></tr><tr role=\"row\"><th scope=\"row\" role=\"rowheader\">Tarefa da Unidade 3 («Louco, sim»)</th><td role=\"cell\" data-label=\"Peso\">25 %</td></tr><tr role=\"row\"><th scope=\"row\" role=\"rowheader\">Provas rápidas</th><td role=\"cell\" data-label=\"Peso\">10 %</td></tr><tr role=\"row\"><th scope=\"row\" role=\"rowheader\">Prova escrita</th><td role=\"cell\" data-label=\"Peso\">30 %</td></tr></tbody></table><p class=\"avaliacao-tarefas\">Cada tarefa tem uma grelha /20.</p>",
+     "occurrences": 1
+    },
+    {
+     "location": "m7, cabeça: a folha das tabelas de apoio, antes da camada de aparência",
+     "old": "<link rel=\"stylesheet\" href=\"../assets/appearance.css?v=20261025-universal-1\">",
+     "new": "<link rel=\"stylesheet\" href=\"../assets/pt-lessons/apoios-tabelas.css?v=20261106.1\"><link rel=\"stylesheet\" href=\"../assets/appearance.css?v=20261025-universal-1\">",
+     "occurrences": 1
+    },
+    {
+     "location": "m7: «90 minutos» que não se parte",
+     "old": "90 minutos",
+     "new": "90 minutos",
+     "occurrences": 5
+    },
+    {
+     "location": "m7: «90 min» que não se parte (com o contexto «90 min<»)",
+     "old": "90 min<",
+     "new": "90 min<",
+     "occurrences": 6
+    },
+    {
+     "location": "m7: «22 min» que não se parte",
+     "old": "22 min",
+     "new": "22 min",
+     "occurrences": 1
+    },
+    {
+     "location": "m7: «10 a 15 min» que não se parte",
+     "old": "10 a 15 min",
+     "new": "10 a 15 min",
+     "occurrences": 1
+    },
+    {
+     "location": "m7: «23 min» que não se parte",
+     "old": "23 min",
+     "new": "23 min",
+     "occurrences": 1
+    },
+    {
+     "location": "m7: «10 min» que não se parte",
+     "old": "10 min",
+     "new": "10 min",
+     "occurrences": 2
+    },
+    {
+     "location": "m7: «13 de janeiro de 1935» que não se parte",
+     "old": "13 de janeiro de 1935",
+     "new": "13 de janeiro de 1935",
+     "occurrences": 2
+    },
+    {
+     "location": "m7: «8 de março de 1914» que não se parte",
+     "old": "8 de março de 1914",
+     "new": "8 de março de 1914",
+     "occurrences": 2
+    },
+    {
+     "location": "m7: «4 de agosto de 1578» que não se parte",
+     "old": "4 de agosto de 1578",
+     "new": "4 de agosto de 1578",
+     "occurrences": 1
+    },
+    {
+     "location": "m7: «15 de outubro de 1890» que não se parte",
+     "old": "15 de outubro de 1890",
+     "new": "15 de outubro de 1890",
+     "occurrences": 1
+    },
+    {
+     "location": "m7: «3.º ano» que não se parte",
+     "old": "3.º ano",
+     "new": "3.º ano",
+     "occurrences": 2
+    },
+    {
+     "location": "m7: «2.ª estrofe» que não se parte",
+     "old": "2.ª estrofe",
+     "new": "2.ª estrofe",
+     "occurrences": 14
+    },
+    {
+     "location": "m7: «3.ª estrofe» que não se parte (com o contexto «3.ª estrofe;»)",
+     "old": "3.ª estrofe;",
+     "new": "3.ª estrofe;",
+     "occurrences": 3
+    },
+    {
+     "location": "m7: «3.ª estrofe» que não se parte (com o contexto «3.ª estrofe,»)",
+     "old": "3.ª estrofe,",
+     "new": "3.ª estrofe,",
+     "occurrences": 3
+    },
+    {
+     "location": "m7: «3.ª estrofe» que não se parte (com o contexto «3.ª estrofe »)",
+     "old": "3.ª estrofe ",
+     "new": "3.ª estrofe ",
+     "occurrences": 2
+    },
+    {
+     "location": "m7: «3.ª estrofe» que não se parte (com o contexto «3.ª estrofe?»)",
+     "old": "3.ª estrofe?",
+     "new": "3.ª estrofe?",
+     "occurrences": 2
+    },
+    {
+     "location": "m7: «3.ª estrofe» que não se parte (com o contexto «3.ª estrofe)»)",
+     "old": "3.ª estrofe)",
+     "new": "3.ª estrofe)",
+     "occurrences": 2
+    },
+    {
+     "location": "m7: «3.ª estrofe» que não se parte (com o contexto «3.ª estrofe.»)",
+     "old": "3.ª estrofe.",
+     "new": "3.ª estrofe.",
+     "occurrences": 1
+    },
+    {
+     "location": "m7: «5.ª estrofe» que não se parte",
+     "old": "5.ª estrofe",
+     "new": "5.ª estrofe",
+     "occurrences": 4
+    },
+    {
+     "location": "m7: «6.ª estrofe» que não se parte",
+     "old": "6.ª estrofe",
+     "new": "6.ª estrofe",
+     "occurrences": 1
+    },
+    {
+     "location": "m7: «4.ª estrofe» que não se parte",
+     "old": "4.ª estrofe",
+     "new": "4.ª estrofe",
+     "occurrences": 8
+    },
+    {
+     "location": "m7: «1.ª estrofe» que não se parte",
+     "old": "1.ª estrofe",
+     "new": "1.ª estrofe",
+     "occurrences": 2
+    },
+    {
+     "location": "m7: «6.º verso» que não se parte",
+     "old": "6.º verso",
+     "new": "6.º verso",
+     "occurrences": 2
+    },
+    {
+     "location": "m7: «1.ª pessoa» que não se parte",
+     "old": "1.ª pessoa",
+     "new": "1.ª pessoa",
+     "occurrences": 3
+    },
+    {
+     "location": "m7: «3.ª estrofes» que não se parte",
+     "old": "3.ª estrofes",
+     "new": "3.ª estrofes",
+     "occurrences": 1
+    },
+    {
+     "location": "m7: «4.º verso» que não se parte",
+     "old": "4.º verso",
+     "new": "4.º verso",
+     "occurrences": 1
+    },
+    {
+     "location": "m7: «5.º verso» que não se parte",
+     "old": "5.º verso",
+     "new": "5.º verso",
+     "occurrences": 1
+    },
+    {
+     "location": "m7: «3.ª pessoa» que não se parte",
+     "old": "3.ª pessoa",
+     "new": "3.ª pessoa",
+     "occurrences": 2
+    },
+    {
+     "location": "m7: «2.ª pessoa» que não se parte",
+     "old": "2.ª pessoa",
+     "new": "2.ª pessoa",
+     "occurrences": 1
+    },
+    {
+     "location": "m7: «1.º verso» que não se parte",
+     "old": "1.º verso",
+     "new": "1.º verso",
+     "occurrences": 2
+    },
+    {
+     "location": "m7: «poemas II e IX» que não se parte",
+     "old": "poemas II e IX",
+     "new": "poemas II e IX",
+     "occurrences": 1
+    },
+    {
+     "location": "m7: «poema XX» que não se parte",
+     "old": "poema XX",
+     "new": "poema XX",
+     "occurrences": 2
+    },
+    {
+     "location": "m7: «v. 4» que não se parte",
+     "old": "v. 4",
+     "new": "v. 4",
+     "occurrences": 2
+    },
+    {
+     "location": "m7: «vv. 3 e 4» que não se parte",
+     "old": "vv. 3 e 4",
+     "new": "vv. 3 e 4",
+     "occurrences": 1
+    },
+    {
+     "location": "m7: «v. 2» que não se parte",
+     "old": "v. 2",
+     "new": "v. 2",
+     "occurrences": 1
+    },
+    {
+     "location": "m7: «poema I» que não se parte (com o contexto «poema I »)",
+     "old": "poema I ",
+     "new": "poema I ",
+     "occurrences": 2
+    },
+    {
+     "location": "m7: «poema I» que não se parte (com o contexto «poema I.»)",
+     "old": "poema I.",
+     "new": "poema I.",
+     "occurrences": 1
+    },
+    {
+     "location": "m7: «poema II» que não se parte",
+     "old": "poema II",
+     "new": "poema II",
+     "occurrences": 6
+    },
+    {
+     "location": "m7: «poema IX» que não se parte",
+     "old": "poema IX",
+     "new": "poema IX",
+     "occurrences": 1
+    },
+    {
+     "location": "m7: «v. 1» que não se parte (com o contexto «v. 1 »)",
+     "old": "v. 1 ",
+     "new": "v. 1 ",
+     "occurrences": 3
+    },
+    {
+     "location": "m7: «v. 8» que não se parte",
+     "old": "v. 8",
+     "new": "v. 8",
+     "occurrences": 4
+    },
+    {
+     "location": "m7: «v. 7» que não se parte",
+     "old": "v. 7",
+     "new": "v. 7",
+     "occurrences": 1
+    },
+    {
+     "location": "m7: «v. 10» que não se parte",
+     "old": "v. 10",
+     "new": "v. 10",
+     "occurrences": 1
+    },
+    {
+     "location": "m7: «v. 3» que não se parte (com o contexto «v. 3)»)",
+     "old": "v. 3)",
+     "new": "v. 3)",
+     "occurrences": 1
+    },
+    {
+     "location": "m7: «v. 5» que não se parte",
+     "old": "v. 5",
+     "new": "v. 5",
+     "occurrences": 2
+    },
+    {
+     "location": "m7: «D. Sebastião» que não se parte",
+     "old": "D. Sebastião",
+     "new": "D. Sebastião",
+     "occurrences": 10
+    },
+    {
+     "location": "m7: «D. João» que não se parte",
+     "old": "D. João",
+     "new": "D. João",
+     "occurrences": 3
+    },
+    {
+     "location": "m7: «M7-F10» que não se parte",
+     "old": "M7-F10",
+     "new": "M7-⁠F10",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m7/licao-m7-f01/index.html": {
+   "base_sha256_lf": "73bb2fd655f1b8c6be85e262eaca19ac333d1d6e7f267574df9ac1d88af7c4eb",
+   "after_sha256_lf": "ec885f869bf8dbdd8662017451c4af34842012209a13203d7d5d1abe813118e6",
+   "edits": [
+    {
+     "location": "M7-F01, cartão 2, O essencial (dobra «As três vidas, segundo a carta»)",
+     "old": "<p><b>Caeiro</b>: Lisboa, 1889; morre em 1915; vive quase sempre no campo, sem profissão. <b>Reis</b>: Porto, 1887; médico e latinista; vive no Brasil. <b>Campos</b>: Tavira, 1890; engenheiro naval formado em Glasgow.</p>",
+     "new": "<table class=\\\"apoio-tabela\\\" role=\\\"table\\\"><thead role=\\\"rowgroup\\\"><tr role=\\\"row\\\"><th scope=\\\"col\\\" role=\\\"columnheader\\\">Heterónimo</th><th scope=\\\"col\\\" role=\\\"columnheader\\\">Vida</th></tr></thead><tbody role=\\\"rowgroup\\\"><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Caeiro</th><td role=\\\"cell\\\" data-label=\\\"Vida\\\">Lisboa, 1889; morre em 1915; vive quase sempre no campo, sem profissão</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Reis</th><td role=\\\"cell\\\" data-label=\\\"Vida\\\">Porto, 1887; médico e latinista; vive no Brasil</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Campos</th><td role=\\\"cell\\\" data-label=\\\"Vida\\\">Tavira, 1890; engenheiro naval formado em Glasgow</td></tr></tbody></table>",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F01, cabeça: a folha das tabelas de apoio, antes da camada de aparência",
+     "old": "<link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-reading1\">",
+     "new": "<link rel=\"stylesheet\" href=\"../../assets/pt-lessons/apoios-tabelas.css?v=20261106.1\"><link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-reading1\">",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F01: «13 de janeiro de 1935» que não se parte (com o contexto «13 de janeiro de 1935).»)",
+     "old": "13 de janeiro de 1935).",
+     "new": "13 de janeiro de 1935).",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F01: «13 de janeiro de 1935» que não se parte (com o contexto «13 de janeiro de 1935) »)",
+     "old": "13 de janeiro de 1935) ",
+     "new": "13 de janeiro de 1935) ",
+     "occurrences": 2
+    },
+    {
+     "location": "M7-F01: «13 de janeiro de 1935» que não se parte (com o contexto «13 de janeiro de 1935, »)",
+     "old": "13 de janeiro de 1935, ",
+     "new": "13 de janeiro de 1935, ",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F01: «13 de janeiro de 1935» que não se parte (com o contexto «13 de janeiro de 1935: »)",
+     "old": "13 de janeiro de 1935: ",
+     "new": "13 de janeiro de 1935: ",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F01: «8 de março» que não se parte (com o contexto «>8 de»)",
+     "old": ">8 de",
+     "new": ">8 de",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F01: «8 de março de 1914» que não se parte",
+     "old": "8 de março de 1914",
+     "new": "8 de março de 1914",
+     "occurrences": 3
+    }
+   ]
+  },
+  "m7/licao-m7-f02/index.html": {
+   "base_sha256_lf": "737eebf1d28f64aeef03affd938f2d98769352421b1c32cdfcd9c749fcbd2d3b",
+   "after_sha256_lf": "e170d908f0e616003c4d3b866f63f1e9b0b1406be246c8c3b583abe55fcc2312",
+   "edits": [
+    {
+     "location": "M7-F02: «30 s» que não se parte (com o contexto «30 s)<»)",
+     "old": "30 s)<",
+     "new": "30 s)<",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F02: «1.ª publicação» que não se parte",
+     "old": "1.ª publicação",
+     "new": "1.ª publicação",
+     "occurrences": 2
+    },
+    {
+     "location": "M7-F02: «2.ª estrofe» que não se parte",
+     "old": "2.ª estrofe",
+     "new": "2.ª estrofe",
+     "occurrences": 6
+    },
+    {
+     "location": "M7-F02: «3.ª estrofe» que não se parte",
+     "old": "3.ª estrofe",
+     "new": "3.ª estrofe",
+     "occurrences": 3
+    },
+    {
+     "location": "M7-F02: «1.ª estrofe» que não se parte",
+     "old": "1.ª estrofe",
+     "new": "1.ª estrofe",
+     "occurrences": 2
+    },
+    {
+     "location": "M7-F02: «n.º 36» que não se parte",
+     "old": "n.º 36",
+     "new": "n.º 36",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F02: «v. 4» que não se parte",
+     "old": "v. 4",
+     "new": "v. 4",
+     "occurrences": 5
+    },
+    {
+     "location": "M7-F02: «vv. 3 e 4» que não se parte",
+     "old": "vv. 3 e 4",
+     "new": "vv. 3 e 4",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F02: «v. 2» que não se parte",
+     "old": "v. 2",
+     "new": "v. 2",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F02: «n.º 38» que não se parte",
+     "old": "n.º 38",
+     "new": "n.º 38",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F02: «v. 6» que não se parte",
+     "old": "v. 6",
+     "new": "v. 6",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F02: «v. 10» que não se parte",
+     "old": "v. 10",
+     "new": "v. 10",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F02: «versos 2 e 3» que não se parte",
+     "old": "versos 2 e 3",
+     "new": "versos 2 e 3",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m7/licao-m7-f04/index.html": {
+   "base_sha256_lf": "c15fed16d863694f40c49ccab7a6c41d08b0630b4b3c3c36d24422d79d9da6f2",
+   "after_sha256_lf": "018f13d04535e59ae9b37916087bbd35bac997bf77c22b7bb236515b449e9b69",
+   "edits": [
+    {
+     "location": "M7-F04: «8 de março» que não se parte (com o contexto «>8 de»)",
+     "old": ">8 de",
+     "new": ">8 de",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F04: «Poema II» que não se parte",
+     "old": "Poema II",
+     "new": "Poema II",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F04: «v. 1» que não se parte",
+     "old": "v. 1",
+     "new": "v. 1",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F04: «verso 14» que não se parte",
+     "old": "verso 14",
+     "new": "verso 14",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F04: «verso 15» que não se parte",
+     "old": "verso 15",
+     "new": "verso 15",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F04: «poema IX» que não se parte",
+     "old": "poema IX",
+     "new": "poema IX",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F04: «poema II» que não se parte",
+     "old": "poema II",
+     "new": "poema II",
+     "occurrences": 3
+    }
+   ]
+  },
+  "m7/licao-m7-f05/index.html": {
+   "base_sha256_lf": "9ca8fde21b11973e110cedfd38fc42fe9f4989cdeaa97b2f960a7ac2dfd05ac0",
+   "after_sha256_lf": "d0ffd5625366cfbeb3f3d8f4865457fa1754b1504e1f0930890a7c93ef17c870",
+   "edits": [
+    {
+     "location": "M7-F05: «1 min» que não se parte (com o contexto «1 min)<»)",
+     "old": "1 min)<",
+     "new": "1 min)<",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F05: «12 de junho» que não se parte (com o contexto «12 de»)",
+     "old": "12 de",
+     "new": "12 de",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F05: «1 de julho» que não se parte (com o contexto «1 de j»)",
+     "old": "1 de j",
+     "new": "1 de j",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F05: «1.ª pessoa» que não se parte",
+     "old": "1.ª pessoa",
+     "new": "1.ª pessoa",
+     "occurrences": 2
+    },
+    {
+     "location": "M7-F05: «2.ª estrofe» que não se parte",
+     "old": "2.ª estrofe",
+     "new": "2.ª estrofe",
+     "occurrences": 2
+    },
+    {
+     "location": "M7-F05: «3.ª estrofe» que não se parte (com o contexto «3.ª estrofe,»)",
+     "old": "3.ª estrofe,",
+     "new": "3.ª estrofe,",
+     "occurrences": 3
+    },
+    {
+     "location": "M7-F05: «3.ª estrofe» que não se parte (com o contexto «3.ª estrofe.»)",
+     "old": "3.ª estrofe.",
+     "new": "3.ª estrofe.",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F05: «4.ª estrofe» que não se parte",
+     "old": "4.ª estrofe",
+     "new": "4.ª estrofe",
+     "occurrences": 3
+    },
+    {
+     "location": "M7-F05: «5.ª estrofe» que não se parte",
+     "old": "5.ª estrofe",
+     "new": "5.ª estrofe",
+     "occurrences": 2
+    },
+    {
+     "location": "M7-F05: «3.ª estrofes» que não se parte",
+     "old": "3.ª estrofes",
+     "new": "3.ª estrofes",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F05: «1.ª estrofe» que não se parte",
+     "old": "1.ª estrofe",
+     "new": "1.ª estrofe",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F05: «n.º 1» que não se parte",
+     "old": "n.º 1",
+     "new": "n.º 1",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F05: «estrofes 1 a 5» que não se parte",
+     "old": "estrofes 1 a 5",
+     "new": "estrofes 1 a 5",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F05: «v. 1» que não se parte (com o contexto «v. 1 »)",
+     "old": "v. 1 ",
+     "new": "v. 1 ",
+     "occurrences": 3
+    },
+    {
+     "location": "M7-F05: «v. 1» que não se parte (com o contexto «v. 1.»)",
+     "old": "v. 1.",
+     "new": "v. 1.",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F05: «v. 8» que não se parte",
+     "old": "v. 8",
+     "new": "v. 8",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F05: «v. 7» que não se parte",
+     "old": "v. 7",
+     "new": "v. 7",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F05: «vv. 11 e 12» que não se parte",
+     "old": "vv. 11 e 12",
+     "new": "vv. 11 e 12",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F05: «vv. 19 e 20» que não se parte",
+     "old": "vv. 19 e 20",
+     "new": "vv. 19 e 20",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m7/licao-m7-f06/index.html": {
+   "base_sha256_lf": "67bbfc36c9d4e6f2c8c793d4f6f8b1e0afb613bde407c8cb53c43e07ec48d9cc",
+   "after_sha256_lf": "ad3441b0597ab96a923f1a3964219c70e9fd6c321a58381d7a4d9a9f652a0cab",
+   "edits": [
+    {
+     "location": "M7-F06: «1 min» que não se parte (com o contexto «1 min)<»)",
+     "old": "1 min)<",
+     "new": "1 min)<",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F06: «15 de outubro» que não se parte (com o contexto «15 de»)",
+     "old": "15 de",
+     "new": "15 de",
+     "occurrences": 2
+    },
+    {
+     "location": "M7-F06: «4.º verso» que não se parte",
+     "old": "4.º verso",
+     "new": "4.º verso",
+     "occurrences": 2
+    },
+    {
+     "location": "M7-F06: «5.º verso» que não se parte",
+     "old": "5.º verso",
+     "new": "5.º verso",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F06: «n.º 39» que não se parte (com o contexto «aption>«Tabacaria» na Presença, n.º 39, julho de 1933 (fo…»)",
+     "old": "aption>«Tabacaria» na Presença, n.º 39, julho de 1933 (fotografia de P",
+     "new": "aption>«Tabacaria» na Presença, n.º 39, julho de 1933 (fotografia de P",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m7/licao-m7-f08/index.html": {
+   "base_sha256_lf": "3ee97c8249f84f4c71883af7412ae396d29e15c219f5b06d2e111932ac201707",
+   "after_sha256_lf": "9981b9fe402cc6e841ad464ac4122867c89a9f3f6ba5360fc06a8c0012224fea",
+   "edits": [
+    {
+     "location": "M7-F08: «3 min» que não se parte (com o contexto «3 min)<»)",
+     "old": "3 min)<",
+     "new": "3 min)<",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F08: «4 de agosto» que não se parte (com o contexto «4 de»)",
+     "old": "4 de",
+     "new": "4 de",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F08: «10 de dezembro» que não se parte (com o contexto «10 de»)",
+     "old": "10 de",
+     "new": "10 de",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F08: «20 de fevereiro» que não se parte (com o contexto «20 de»)",
+     "old": "20 de",
+     "new": "20 de",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F08: «1.ª edição» que não se parte (com o contexto «nsagem, 1.ª edição (1934).»)",
+     "old": "nsagem, 1.ª edição (1934).",
+     "new": "nsagem, 1.ª edição (1934).",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F08: «3.º verso» que não se parte",
+     "old": "3.º verso",
+     "new": "3.º verso",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F08: «1.ª estrofe» que não se parte",
+     "old": "1.ª estrofe",
+     "new": "1.ª estrofe",
+     "occurrences": 2
+    },
+    {
+     "location": "M7-F08: «2.ª estrofe» que não se parte",
+     "old": "2.ª estrofe",
+     "new": "2.ª estrofe",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F08: «v. 1» que não se parte (com o contexto «v. 1 »)",
+     "old": "v. 1 ",
+     "new": "v. 1 ",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F08: «v. 8» que não se parte",
+     "old": "v. 8",
+     "new": "v. 8",
+     "occurrences": 3
+    },
+    {
+     "location": "M7-F08: «v. 10» que não se parte",
+     "old": "v. 10",
+     "new": "v. 10",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F08: «D. Sebastião» que não se parte",
+     "old": "D. Sebastião",
+     "new": "D. Sebastião",
+     "occurrences": 2
+    }
+   ]
+  },
+  "m7/licao-m7-f09/index.html": {
+   "base_sha256_lf": "36bdc24b1ec5c52f677bd77443fb8d79fbc5d6343f9721d43014f7d3131ee07b",
+   "after_sha256_lf": "c137c887482a50a72052f46848c0bd350c4e205d4493c70248d4ee79d3ba3885",
+   "edits": [
+    {
+     "location": "M7-F09: «4 de agosto de 1578» que não se parte",
+     "old": "4 de agosto de 1578",
+     "new": "4 de agosto de 1578",
+     "occurrences": 2
+    },
+    {
+     "location": "M7-F09: «1.ª pessoa» que não se parte",
+     "old": "1.ª pessoa",
+     "new": "1.ª pessoa",
+     "occurrences": 5
+    },
+    {
+     "location": "M7-F09: «3.ª pessoa» que não se parte",
+     "old": "3.ª pessoa",
+     "new": "3.ª pessoa",
+     "occurrences": 2
+    },
+    {
+     "location": "M7-F09: «2.ª pessoa» que não se parte",
+     "old": "2.ª pessoa",
+     "new": "2.ª pessoa",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F09: «1.ª estrofe» que não se parte",
+     "old": "1.ª estrofe",
+     "new": "1.ª estrofe",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F09: «2.ª estrofe» que não se parte",
+     "old": "2.ª estrofe",
+     "new": "2.ª estrofe",
+     "occurrences": 3
+    },
+    {
+     "location": "M7-F09: «6.º verso» que não se parte",
+     "old": "6.º verso",
+     "new": "6.º verso",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F09: «2.º ano» que não se parte",
+     "old": "2.º ano",
+     "new": "2.º ano",
+     "occurrences": 2
+    },
+    {
+     "location": "M7-F09: «v. 3» que não se parte",
+     "old": "v. 3",
+     "new": "v. 3",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F09: «vv. 4 e 5» que não se parte",
+     "old": "vv. 4 e 5",
+     "new": "vv. 4 e 5",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F09: «v. 4» que não se parte (com o contexto « v. 4»)",
+     "old": " v. 4",
+     "new": " v. 4",
+     "occurrences": 2
+    },
+    {
+     "location": "M7-F09: «v. 5» que não se parte",
+     "old": "v. 5",
+     "new": "v. 5",
+     "occurrences": 2
+    },
+    {
+     "location": "M7-F09: «v. 11» que não se parte",
+     "old": "v. 11",
+     "new": "v. 11",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F09: «v. 15» que não se parte",
+     "old": "v. 15",
+     "new": "v. 15",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F09: «D. Sebastião» que não se parte (com o contexto «n>D. Sebastião»)",
+     "old": "n>D. Sebastião",
+     "new": "n>D. Sebastião",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F09: «D. Sebastião» que não se parte (com o contexto «>«D. Sebastião»)",
+     "old": ">«D. Sebastião",
+     "new": ">«D. Sebastião",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F09: «D. Sebastião» que não se parte (com o contexto « «D. Sebastião»)",
+     "old": " «D. Sebastião",
+     "new": " «D. Sebastião",
+     "occurrences": 4
+    },
+    {
+     "location": "M7-F09: «D. Sebastião» que não se parte (com o contexto «**D. Sebastião»)",
+     "old": "**D. Sebastião",
+     "new": "**D. Sebastião",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F09: «D. Sebastião» que não se parte (com o contexto «e D. Sebastião»)",
+     "old": "e D. Sebastião",
+     "new": "e D. Sebastião",
+     "occurrences": 3
+    },
+    {
+     "location": "M7-F09: «D. Sebastião» que não se parte (com o contexto «u D. Sebastião»)",
+     "old": "u D. Sebastião",
+     "new": "u D. Sebastião",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F09: «D. Sebastião» que não se parte (com o contexto «:\"D. Sebastião»)",
+     "old": ":\"D. Sebastião",
+     "new": ":\"D. Sebastião",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F09: «D. Sebastião» que não se parte (com o contexto «,\"D. Sebastião»)",
+     "old": ",\"D. Sebastião",
+     "new": ",\"D. Sebastião",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F09: «D. João» que não se parte",
+     "old": "D. João",
+     "new": "D. João",
+     "occurrences": 5
+    },
+    {
+     "location": "M7-F09: «c. 1571-1574» que não se parte (com o contexto «óvão de Morais, c. 1571-1574, MNAA). Do»)",
+     "old": "óvão de Morais, c. 1571-1574, MNAA). Do",
+     "new": "óvão de Morais, c. 1571-1574, MNAA). Do",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m7/licao-m7-f10/index.html": {
+   "base_sha256_lf": "4020b6f203f687fab84cf92fbc403e23a91eced5d0c506f6e29c31e40577226a",
+   "after_sha256_lf": "3d81dce551979f71c8a7c034451f6c2ad94594e5ae45f2bd70ea23586c2c329e",
+   "edits": [
+    {
+     "location": "M7-F10, cartão 1, O essencial (dobra «O plano do texto, ponto a ponto»)",
+     "old": "<p>A tese com condição na primeira frase; um movimento que dá razão ao outro lado e vira (R ou C); mais um movimento (N, M ou P); um verso exato de <i>Mensagem</i>, explicado; um facto datado separado do sentido que o poema lhe dá, ou o confronto com Garrett ou com Reis; uma conclusão que volta à tese sem a copiar; as letras dos movimentos na margem.</p>",
+     "new": "<ul><li>A tese com condição na primeira frase;</li><li>um movimento que dá razão ao outro lado e vira (R ou C);</li><li>mais um movimento (N, M ou P);</li><li>um verso exato de <i>Mensagem</i>, explicado;</li><li>um facto datado separado do sentido que o poema lhe dá, ou o confronto com Garrett ou com Reis;</li><li>uma conclusão que volta à tese sem a copiar;</li><li>as letras dos movimentos na margem.</li></ul>",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F10: «25 %» que não se parte",
+     "old": "25 %",
+     "new": "25 %",
+     "occurrences": 2
+    },
+    {
+     "location": "M7-F10: «180 a 220 palavras» que não se parte",
+     "old": "180 a 220 palavras",
+     "new": "180 a 220 palavras",
+     "occurrences": 2
+    },
+    {
+     "location": "M7-F10: «1.º verso» que não se parte",
+     "old": "1.º verso",
+     "new": "1.º verso",
+     "occurrences": 2
+    },
+    {
+     "location": "M7-F10: «século XV» que não se parte (com o contexto «século XV).»)",
+     "old": "século XV).",
+     "new": "século XV).",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F10: «D. Henrique» que não se parte (com o contexto «><figcaption>Figura identificada como o Infante D. Henrique»)",
+     "old": "><figcaption>Figura identificada como o Infante D. Henrique",
+     "new": "><figcaption>Figura identificada como o Infante D. Henrique",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F10: «D. Sebastião» que não se parte",
+     "old": "D. Sebastião",
+     "new": "D. Sebastião",
+     "occurrences": 5
+    },
+    {
+     "location": "M7-F10: «D. João» que não se parte",
+     "old": "D. João",
+     "new": "D. João",
+     "occurrences": 2
+    },
+    {
+     "location": "M7-F10: «M7-F07» que não se parte",
+     "old": "M7-F07",
+     "new": "M7-⁠F07",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m7/licao-m7-f11/index.html": {
+   "base_sha256_lf": "f3d0a765815bdf647bea7de150f53d1380a2fa4b3f5202f91dccdee545408cc4",
+   "after_sha256_lf": "694f493a9c3863514fad7803a72faf5ce485736620919236a6eded54340204e4",
+   "edits": [
+    {
+     "location": "M7-F11: «15 de outubro de 1890» que não se parte",
+     "old": "15 de outubro de 1890",
+     "new": "15 de outubro de 1890",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F11: «D. Sebastião» que não se parte",
+     "old": "D. Sebastião",
+     "new": "D. Sebastião",
+     "occurrences": 2
+    }
+   ]
+  },
+  "m7/licao-m7-f13/index.html": {
+   "base_sha256_lf": "56bacdaa494d764d872d8de8b9b18923ad0b960bc2a56948fd692c6bb108d555",
+   "after_sha256_lf": "423831906e3552c16dfe46a0cf39982064dfac82104b54b188de9b5ce5685fce",
+   "edits": [
+    {
+     "location": "M7-F13: «do 3.º ano de Vídeo» que não se parte (com o contexto «3.º ano »)",
+     "old": "3.º ano ",
+     "new": "3.º ano ",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F13: «3.ª estrofe» que não se parte",
+     "old": "3.ª estrofe",
+     "new": "3.ª estrofe",
+     "occurrences": 7
+    },
+    {
+     "location": "M7-F13: «2.ª estrofe» que não se parte",
+     "old": "2.ª estrofe",
+     "new": "2.ª estrofe",
+     "occurrences": 3
+    },
+    {
+     "location": "M7-F13: «4.ª estrofe» que não se parte",
+     "old": "4.ª estrofe",
+     "new": "4.ª estrofe",
+     "occurrences": 3
+    },
+    {
+     "location": "M7-F13: «5.ª estrofe» que não se parte",
+     "old": "5.ª estrofe",
+     "new": "5.ª estrofe",
+     "occurrences": 4
+    },
+    {
+     "location": "M7-F13: «n.º 3» que não se parte",
+     "old": "n.º 3",
+     "new": "n.º 3",
+     "occurrences": 2
+    },
+    {
+     "location": "M7-F13: «n.º 2» que não se parte (com o contexto «Revista Orpheu, n.º 2 (1915), capa. D»)",
+     "old": "Revista Orpheu, n.º 2 (1915), capa. D",
+     "new": "Revista Orpheu, n.º 2 (1915), capa. D",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F13: «v. 2» que não se parte",
+     "old": "v. 2",
+     "new": "v. 2",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m7/licao-m7-f14/index.html": {
+   "base_sha256_lf": "0a5c730c48c0a4e22868ff358b1be7678b6dc39bb054a1b9d9e5cacc3c89a6fe",
+   "after_sha256_lf": "3f063ad8e2064146f09317b1e008637c0cfcedbe55ddbd6fae33bcfc45dbeb8d",
+   "edits": [
+    {
+     "location": "M7-F14: «1.ª estrofe» que não se parte",
+     "old": "1.ª estrofe",
+     "new": "1.ª estrofe",
+     "occurrences": 3
+    },
+    {
+     "location": "M7-F14: «4.º verso» que não se parte",
+     "old": "4.º verso",
+     "new": "4.º verso",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F14: «3.ª estrofe» que não se parte",
+     "old": "3.ª estrofe",
+     "new": "3.ª estrofe",
+     "occurrences": 13
+    },
+    {
+     "location": "M7-F14: «2.ª estrofe» que não se parte",
+     "old": "2.ª estrofe",
+     "new": "2.ª estrofe",
+     "occurrences": 5
+    },
+    {
+     "location": "M7-F14: «2.º verso» que não se parte",
+     "old": "2.º verso",
+     "new": "2.º verso",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F14: «4.ª estrofe» que não se parte",
+     "old": "4.ª estrofe",
+     "new": "4.ª estrofe",
+     "occurrences": 5
+    },
+    {
+     "location": "M7-F14: «6.º verso» que não se parte",
+     "old": "6.º verso",
+     "new": "6.º verso",
+     "occurrences": 2
+    }
+   ]
+  },
+  "m7/licao-m7-f15/index.html": {
+   "base_sha256_lf": "6bf9467385147c69def07f14dc5cfaa9a620aa80ccdec81ff7ea3f944757db77",
+   "after_sha256_lf": "c874524ca186eff85fba417e7c1de5a122e63ab7faa6282f4bada9b512ab3856",
+   "edits": [
+    {
+     "location": "M7-F15: «2.ª estrofe» que não se parte",
+     "old": "2.ª estrofe",
+     "new": "2.ª estrofe",
+     "occurrences": 4
+    },
+    {
+     "location": "M7-F15: «v. 2» que não se parte",
+     "old": "v. 2",
+     "new": "v. 2",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F15: «v. 9» que não se parte (com o contexto «v. 9)»)",
+     "old": "v. 9)",
+     "new": "v. 9)",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F15: «v. 10» que não se parte",
+     "old": "v. 10",
+     "new": "v. 10",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F15: «v. 11» que não se parte",
+     "old": "v. 11",
+     "new": "v. 11",
+     "occurrences": 2
+    },
+    {
+     "location": "M7-F15: «vv. 9 a 11» que não se parte",
+     "old": "vv. 9 a 11",
+     "new": "vv. 9 a 11",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m7/licao-m7-f23/index.html": {
+   "base_sha256_lf": "1ae5ce11d8e2e59a945c5bde149837c77754661b5b5c8ca68acbf1990206d339",
+   "after_sha256_lf": "74f994d4d473cbbbfe9d131441b35a91f0c0756de0336ef5c71ea50447ee8266",
+   "edits": [
+    {
+     "location": "M7-F23, cartão 14, Para entender («Recorda»)",
+     "old": "<p><b>Ode</b>: poema de tom elevado, em estrofes regulares; Reis segue o modelo do poeta latino Horácio. <b>Epicurismo</b>: procurar a tranquilidade com prazeres simples, sem excessos, e sem temer a morte. <b>Estoicismo</b>: dominar as paixões e aceitar a ordem do mundo, incluindo a morte. <b><i>Carpe diem</i></b>: expressão latina que manda aproveitar o dia de hoje. Na lição «À beira do rio» viste esta maneira de viver; aqui dás-lhe nome. <span class=\\\"sub\\\">Fonte: Wikipédia, «Ricardo Reis».</span></p>",
+     "new": "<table class=\\\"apoio-tabela\\\" role=\\\"table\\\"><thead role=\\\"rowgroup\\\"><tr role=\\\"row\\\"><th scope=\\\"col\\\" role=\\\"columnheader\\\">Termo</th><th scope=\\\"col\\\" role=\\\"columnheader\\\">O que é</th></tr></thead><tbody role=\\\"rowgroup\\\"><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Ode</th><td role=\\\"cell\\\" data-label=\\\"O que é\\\">poema de tom elevado, em estrofes regulares; Reis segue o modelo do poeta latino Horácio</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Epicurismo</th><td role=\\\"cell\\\" data-label=\\\"O que é\\\">procurar a tranquilidade com prazeres simples, sem excessos, e sem temer a morte</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Estoicismo</th><td role=\\\"cell\\\" data-label=\\\"O que é\\\">dominar as paixões e aceitar a ordem do mundo, incluindo a morte</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\"><i>Carpe diem</i></th><td role=\\\"cell\\\" data-label=\\\"O que é\\\">expressão latina que manda aproveitar o dia de hoje</td></tr></tbody></table><p>Na lição «À beira do rio» viste esta maneira de viver; aqui dás-lhe nome. <span class=\\\"sub\\\">Fonte: Wikipédia, «Ricardo Reis».</span></p>",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F23, cabeça: a folha das tabelas de apoio, antes da camada de aparência",
+     "old": "<link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-reading1\">",
+     "new": "<link rel=\"stylesheet\" href=\"../../assets/pt-lessons/apoios-tabelas.css?v=20261106.1\"><link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-reading1\">",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F23: «1.ª publicação» que não se parte",
+     "old": "1.ª publicação",
+     "new": "1.ª publicação",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F23: «2.ª estrofe» que não se parte",
+     "old": "2.ª estrofe",
+     "new": "2.ª estrofe",
+     "occurrences": 2
+    },
+    {
+     "location": "M7-F23: «3.ª estrofe» que não se parte",
+     "old": "3.ª estrofe",
+     "new": "3.ª estrofe",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F23: «n.º 1» que não se parte",
+     "old": "n.º 1",
+     "new": "n.º 1",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F23: «vv. 3 e 4» que não se parte",
+     "old": "vv. 3 e 4",
+     "new": "vv. 3 e 4",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F23: «v. 1» que não se parte",
+     "old": "v. 1",
+     "new": "v. 1",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F23: «v. 9» que não se parte",
+     "old": "v. 9",
+     "new": "v. 9",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m7/licao-m7-f34/index.html": {
+   "base_sha256_lf": "321198bd1de7f41d05258aaec614ec3cb0e9415db959f3a0f4b6bd575891fda3",
+   "after_sha256_lf": "624f45baea63100c29b403ab38bb7fbaf43786fc90b8396ae9364ae37349b0ab",
+   "edits": [
+    {
+     "location": "M7-F34: «n.º 2» que não se parte",
+     "old": "n.º 2",
+     "new": "n.º 2",
+     "occurrences": 6
+    },
+    {
+     "location": "M7-F34: «Poema I» que não se parte (com o contexto «Poema I:»)",
+     "old": "Poema I:",
+     "new": "Poema I:",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F34: «parte VI» que não se parte",
+     "old": "parte VI",
+     "new": "parte VI",
+     "occurrences": 4
+    },
+    {
+     "location": "M7-F34: «partes I e II» que não se parte",
+     "old": "partes I e II",
+     "new": "partes I e II",
+     "occurrences": 2
+    },
+    {
+     "location": "M7-F34: «poema I» que não se parte (com o contexto «poema I »)",
+     "old": "poema I ",
+     "new": "poema I ",
+     "occurrences": 2
+    },
+    {
+     "location": "M7-F34: «poema I» que não se parte (com o contexto «poema I,»)",
+     "old": "poema I,",
+     "new": "poema I,",
+     "occurrences": 2
+    },
+    {
+     "location": "M7-F34: «poema I» que não se parte (com o contexto «poema I\"»)",
+     "old": "poema I\"",
+     "new": "poema I\"",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F34: «poema I» que não se parte (com o contexto «poema I;»)",
+     "old": "poema I;",
+     "new": "poema I;",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F34: «Poema II» que não se parte",
+     "old": "Poema II",
+     "new": "Poema II",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F34: «poema II» que não se parte",
+     "old": "poema II",
+     "new": "poema II",
+     "occurrences": 8
+    },
+    {
+     "location": "M7-F34: «parte I» que não se parte (com o contexto «parte I.»)",
+     "old": "parte I.",
+     "new": "parte I.",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F34: «parte II» que não se parte",
+     "old": "parte II",
+     "new": "parte II",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F34: «Orpheu_ 2» que não se parte (com o contexto «> 2,»)",
+     "old": "> 2,",
+     "new": "> 2,",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F34: «Orpheu_ 2» que não se parte (com o contexto «_ 2,»)",
+     "old": "_ 2,",
+     "new": "_ 2,",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m7/licao-m7-f35/index.html": {
+   "base_sha256_lf": "dacebf4c25d82e29bd91ebb478e1e82642e87d80092d610063577fc5688bd715",
+   "after_sha256_lf": "6ef96ef5dd5a73bea6672d98cb5de3a66f27b12f846f06be08401ee16d722d96",
+   "edits": [
+    {
+     "location": "M7-F35: «2 min» que não se parte (com o contexto «2 min)<»)",
+     "old": "2 min)<",
+     "new": "2 min)<",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F35: «v. 3» que não se parte",
+     "old": "v. 3",
+     "new": "v. 3",
+     "occurrences": 2
+    },
+    {
+     "location": "M7-F35: «verso 3» que não se parte",
+     "old": "verso 3",
+     "new": "verso 3",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F35: «v. 6» que não se parte",
+     "old": "v. 6",
+     "new": "v. 6",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F35: «v. 4» que não se parte",
+     "old": "v. 4",
+     "new": "v. 4",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F35: «v. 7» que não se parte",
+     "old": "v. 7",
+     "new": "v. 7",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F35: «v. 14» que não se parte",
+     "old": "v. 14",
+     "new": "v. 14",
+     "occurrences": 2
+    },
+    {
+     "location": "M7-F35: «v. 21» que não se parte",
+     "old": "v. 21",
+     "new": "v. 21",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F35: «poemas II e IX» que não se parte",
+     "old": "poemas II e IX",
+     "new": "poemas II e IX",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F35: «poema XX» que não se parte",
+     "old": "poema XX",
+     "new": "poema XX",
+     "occurrences": 4
+    },
+    {
+     "location": "M7-F35: «poema II» que não se parte",
+     "old": "poema II",
+     "new": "poema II",
+     "occurrences": 3
+    }
+   ]
+  },
+  "m7/licao-m7-f36/index.html": {
+   "base_sha256_lf": "22aa68279b5c0cdf1cc86a1054b44940b5d132e545f37cb689ff7e53e5fca00b",
+   "after_sha256_lf": "2404760e0e2a03152c1e9ff5b18a8117ca9bd0d57bda845fbc4ad58a8d8486d7",
+   "edits": [
+    {
+     "location": "M7-F36: «2 de fevereiro de 1991» que não se parte",
+     "old": "2 de fevereiro de 1991",
+     "new": "2 de fevereiro de 1991",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F36: «n.º 39» que não se parte (com o contexto «o em 1928, publicado na revista <i>Presença</i> n.º 39»)",
+     "old": "o em 1928, publicado na revista <i>Presença</i> n.º 39",
+     "new": "o em 1928, publicado na revista <i>Presença</i> n.º 39",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F36: «n.º 39» que não se parte (com o contexto «an><figcaption>«Tabacaria» na revista Presença, n.º 39»)",
+     "old": "an><figcaption>«Tabacaria» na revista Presença, n.º 39",
+     "new": "an><figcaption>«Tabacaria» na revista Presença, n.º 39",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F36: «página 2» que não se parte (com o contexto «página 2.»)",
+     "old": "página 2.",
+     "new": "página 2.",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F36: «vv. 1 a 4» que não se parte",
+     "old": "vv. 1 a 4",
+     "new": "vv. 1 a 4",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m7/lima-orpheu/index.html": {
+   "base_sha256_lf": "5cde3d3df069c15c0e1626427d942c85aaf9014485de55ab1432facbb043d788",
+   "after_sha256_lf": "41ce5e72601571fabf449bd400067ae522b0ba413365c48d2083bda347e77d54",
+   "edits": [
+    {
+     "location": "m7/lima-orpheu: «n.º 23621» que não se parte",
+     "old": "n.º 23621",
+     "new": "n.º 23621",
+     "occurrences": 2
+    },
+    {
+     "location": "m7/lima-orpheu: «número 2» que não se parte",
+     "old": "número 2",
+     "new": "número 2",
+     "occurrences": 1
+    },
+    {
+     "location": "m7/lima-orpheu: «Orpheu 2» que não se parte",
+     "old": "Orpheu 2",
+     "new": "Orpheu 2",
+     "occurrences": 4
+    }
+   ]
+  },
+  "m7/m7-fingidor-maquina/index.html": {
+   "base_sha256_lf": "407d7680d9a6ff34e885505fe0d2be25abd3cfe816a740f0e3815d99fdc2f89f",
+   "after_sha256_lf": "495e6f3f75eaf1f50246b1d57f39d4e12fe8df1dc9e3a760ccb0a35372f627f0",
+   "edits": [
+    {
+     "location": "m7/m7-fingidor-maquina: «22 min» que não se parte",
+     "old": "22 min",
+     "new": "22 min",
+     "occurrences": 1
+    },
+    {
+     "location": "m7/m7-fingidor-maquina: «1.ª publ» que não se parte",
+     "old": "1.ª publ",
+     "new": "1.ª publ",
+     "occurrences": 4
+    },
+    {
+     "location": "m7/m7-fingidor-maquina: «n.º 36» que não se parte",
+     "old": "n.º 36",
+     "new": "n.º 36",
+     "occurrences": 3
+    },
+    {
+     "location": "m7/m7-fingidor-maquina: «n.º 38» que não se parte",
+     "old": "n.º 38",
+     "new": "n.º 38",
+     "occurrences": 1
+    },
+    {
+     "location": "m7/m7-fingidor-maquina: «estrofes 1 e 2» que não se parte",
+     "old": "estrofes 1 e 2",
+     "new": "estrofes 1 e 2",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m7/m7-quatro-vozes-um-problema/index.html": {
+   "base_sha256_lf": "d5604cc23821092f3ac4d5968b854ab11305b3174b400834cbaba2e6ff48d05c",
+   "after_sha256_lf": "e321f91b12acded3a9f2647497a24ca9287711c1e2014a5a7358d59a8bc7d49b",
+   "edits": [
+    {
+     "location": "m7/m7-quatro-vozes-um-problema: «23 min» que não se parte",
+     "old": "23 min",
+     "new": "23 min",
+     "occurrences": 1
+    },
+    {
+     "location": "m7/m7-quatro-vozes-um-problema: «13 de janeiro de 1935» que não se parte",
+     "old": "13 de janeiro de 1935",
+     "new": "13 de janeiro de 1935",
+     "occurrences": 2
+    },
+    {
+     "location": "m7/m7-quatro-vozes-um-problema: «n.º 2» que não se parte",
+     "old": "n.º 2",
+     "new": "n.º 2",
+     "occurrences": 1
+    },
+    {
+     "location": "m7/m7-quatro-vozes-um-problema: «estrofes 1» que não se parte",
+     "old": "estrofes 1",
+     "new": "estrofes 1",
+     "occurrences": 1
+    },
+    {
+     "location": "m7/m7-quatro-vozes-um-problema: «poema X» que não se parte",
+     "old": "poema X",
+     "new": "poema X",
+     "occurrences": 2
+    },
+    {
+     "location": "m7/m7-quatro-vozes-um-problema: «poema IX» que não se parte",
+     "old": "poema IX",
+     "new": "poema IX",
+     "occurrences": 1
+    },
+    {
+     "location": "m7/m7-quatro-vozes-um-problema: «1–3» que não se parte",
+     "old": "1–3",
+     "new": "1–⁠3",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m7/mapa-do-modulo-m7/index.html": {
+   "base_sha256_lf": "9fcade48153df0f94489e68a1f710000d7ca98fd4a04336da29180a5315afb67",
+   "after_sha256_lf": "8c3a34251e0f637d8bde5bab343d9f4aad8090192b9b4fd2c2775860de64b06e",
+   "edits": [
+    {
+     "location": "m7/mapa-do-modulo-m7: «90 min» que não se parte",
+     "old": "90 min",
+     "new": "90 min",
+     "occurrences": 3
+    },
+    {
+     "location": "m7/mapa-do-modulo-m7: «35 %» que não se parte",
+     "old": "35 %",
+     "new": "35 %",
+     "occurrences": 2
+    },
+    {
+     "location": "m7/mapa-do-modulo-m7: «25 %» que não se parte",
+     "old": "25 %",
+     "new": "25 %",
+     "occurrences": 2
+    },
+    {
+     "location": "m7/mapa-do-modulo-m7: «10 %» que não se parte",
+     "old": "10 %",
+     "new": "10 %",
+     "occurrences": 1
+    },
+    {
+     "location": "m7/mapa-do-modulo-m7: «45 minutos» que não se parte",
+     "old": "45 minutos",
+     "new": "45 minutos",
+     "occurrences": 1
+    },
+    {
+     "location": "m7/mapa-do-modulo-m7: «30 %» que não se parte",
+     "old": "30 %",
+     "new": "30 %",
+     "occurrences": 1
+    },
+    {
+     "location": "m7/mapa-do-modulo-m7: «13 de junho de 1888» que não se parte",
+     "old": "13 de junho de 1888",
+     "new": "13 de junho de 1888",
+     "occurrences": 2
+    },
+    {
+     "location": "m7/mapa-do-modulo-m7: «30 de novembro de 1935» que não se parte",
+     "old": "30 de novembro de 1935",
+     "new": "30 de novembro de 1935",
+     "occurrences": 2
+    },
+    {
+     "location": "m7/mapa-do-modulo-m7: «15 de outubro de 1890» que não se parte",
+     "old": "15 de outubro de 1890",
+     "new": "15 de outubro de 1890",
+     "occurrences": 1
+    },
+    {
+     "location": "m7/mapa-do-modulo-m7: «8 de março de 1914» que não se parte",
+     "old": "8 de março de 1914",
+     "new": "8 de março de 1914",
+     "occurrences": 1
+    },
+    {
+     "location": "m7/mapa-do-modulo-m7: «13 de janeiro de 1935» que não se parte",
+     "old": "13 de janeiro de 1935",
+     "new": "13 de janeiro de 1935",
+     "occurrences": 1
+    },
+    {
+     "location": "m7/mapa-do-modulo-m7: «3.º ano» que não se parte",
+     "old": "3.º ano",
+     "new": "3.º ano",
+     "occurrences": 2
+    },
+    {
+     "location": "m7/mapa-do-modulo-m7: «1.ª edição» que não se parte (com o contexto «i>, 1.ª edição»)",
+     "old": "i>, 1.ª edição",
+     "new": "i>, 1.ª edição",
+     "occurrences": 2
+    },
+    {
+     "location": "m7/mapa-do-modulo-m7: «página 2» que não se parte (com o contexto «página 2.»)",
+     "old": "página 2.",
+     "new": "página 2.",
+     "occurrences": 2
+    },
+    {
+     "location": "m7/mapa-do-modulo-m7: «século XV» que não se parte (com o contexto «século XV).»)",
+     "old": "século XV).",
+     "new": "século XV).",
+     "occurrences": 1
+    },
+    {
+     "location": "m7/mapa-do-modulo-m7: «D. Sebastião» que não se parte (com o contexto «>D. Sebastião»)",
+     "old": ">D. Sebastião",
+     "new": ">D. Sebastião",
+     "occurrences": 2
+    },
+    {
+     "location": "m7/mapa-do-modulo-m7: «D. Henrique» que não se parte (com o contexto «D. Henrique, <i»)",
+     "old": "D. Henrique, <i",
+     "new": "D. Henrique, <i",
+     "occurrences": 2
+    },
+    {
+     "location": "m7/mapa-do-modulo-m7: «M7-F01» que não se parte",
+     "old": "M7-F01",
+     "new": "M7-⁠F01",
+     "occurrences": 4
+    },
+    {
+     "location": "m7/mapa-do-modulo-m7: «M7-F04» que não se parte",
+     "old": "M7-F04",
+     "new": "M7-⁠F04",
+     "occurrences": 3
+    },
+    {
+     "location": "m7/mapa-do-modulo-m7: «M7-F06» que não se parte",
+     "old": "M7-F06",
+     "new": "M7-⁠F06",
+     "occurrences": 6
+    },
+    {
+     "location": "m7/mapa-do-modulo-m7: «M7-F08» que não se parte",
+     "old": "M7-F08",
+     "new": "M7-⁠F08",
+     "occurrences": 4
+    },
+    {
+     "location": "m7/mapa-do-modulo-m7: «M7-F05» que não se parte",
+     "old": "M7-F05",
+     "new": "M7-⁠F05",
+     "occurrences": 3
+    },
+    {
+     "location": "m7/mapa-do-modulo-m7: «M7-F11» que não se parte",
+     "old": "M7-F11",
+     "new": "M7-⁠F11",
+     "occurrences": 1
+    },
+    {
+     "location": "m7/mapa-do-modulo-m7: «M7-F34» que não se parte",
+     "old": "M7-F34",
+     "new": "M7-⁠F34",
+     "occurrences": 1
+    },
+    {
+     "location": "m7/mapa-do-modulo-m7: «Orpheu</i> 2» que não se parte (com o contexto «> 2»)",
+     "old": "> 2",
+     "new": "> 2",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m7/mensagem-mostrengo/index.html": {
+   "base_sha256_lf": "c47415334d0d82b04ef7c0fe6301a53802cbf073b34ed45f6661bc17c4d1fe3d",
+   "after_sha256_lf": "356ef1f67b9f59f4ba380d0b9d38af70e8b518836864aa6f085577be0360d342",
+   "edits": [
+    {
+     "location": "m7/mensagem-mostrengo: «D. João II» que não se parte",
+     "old": "D. João II",
+     "new": "D. João II",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m7/mostrengo-leme-ramos/index.html": {
+   "base_sha256_lf": "1830371edea19d21a46e269e993db453a139d6de01aff49ee1dcaa9d3900aa25",
+   "after_sha256_lf": "6a5568840741db33af202095bb3bc84c8c2c7b48e04215366bec8dceffae3ecc",
+   "edits": [
+    {
+     "location": "m7/mostrengo-leme-ramos: «ato III» que não se parte",
+     "old": "ato III",
+     "new": "ato III",
+     "occurrences": 1
+    },
+    {
+     "location": "m7/mostrengo-leme-ramos: «século XVI» que não se parte",
+     "old": "século XVI",
+     "new": "século XVI",
+     "occurrences": 1
+    },
+    {
+     "location": "m7/mostrengo-leme-ramos: «do retrato de D. João» que não se parte (com o contexto «e D. João»)",
+     "old": "e D. João",
+     "new": "e D. João",
+     "occurrences": 2
+    },
+    {
+     "location": "m7/mostrengo-leme-ramos: «do retrato de D. João» que não se parte (com o contexto «ó D. João»)",
+     "old": "ó D. João",
+     "new": "ó D. João",
+     "occurrences": 1
+    },
+    {
+     "location": "m7/mostrengo-leme-ramos: «do retrato de D. João» que não se parte (com o contexto «: D. João»)",
+     "old": ": D. João",
+     "new": ": D. João",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m7/olhar-pessoa/index.html": {
+   "base_sha256_lf": "caacd7d1a06b1f509fa442ff93240e31a23a4874468050712db87ad408ba39bf",
+   "after_sha256_lf": "4a89885854fa630380ff83bdfa161ff0c22508379ba632d56db9ed481492b6cc",
+   "edits": [
+    {
+     "location": "m7/olhar-pessoa: «15 segundos» que não se parte",
+     "old": "15 segundos",
+     "new": "15 segundos",
+     "occurrences": 1
+    },
+    {
+     "location": "m7/olhar-pessoa: «8 de março» que não se parte (com o contexto «8 de»)",
+     "old": "8 de",
+     "new": "8 de",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m7/painel-m7-f01/index.html": {
+   "base_sha256_lf": "269c0017c6eda45df3928c9b1152d28d8c07df86b3a25ae870344dc686ca0cda",
+   "after_sha256_lf": "9785f6c43f84bd6579ce617fd3f511d87527e10d4357e5705dfc8f61ed29677e",
+   "edits": [
+    {
+     "location": "M7-F01 (painel de projeção): o enunciado do cartão 6 igual ao da lição, em a lista do painel",
+     "old": "{\"k\":6,\"t\":\"escolha\",\"p\":\"Na carta de 13 de janeiro de 1935, a quem escreve Pessoa sobre os heterónimos?\"}",
+     "new": "{\"k\":6,\"t\":\"escolha\",\"p\":\"Na carta de 13 de janeiro de 1935, a quem escreve Pessoa sobre os heterónimos?\"}",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F01 (painel de projeção): o enunciado do cartão 6 igual ao da lição, em o seletor",
+     "old": "<option value=\"6\">Na carta de 13 de janeiro de 1935, a quem escreve Pessoa sobre os hete</option>",
+     "new": "<option value=\"6\">Na carta de 13 de janeiro de 1935, a quem escreve Pessoa sobre os hete</option>",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F01 (painel de projeção): o enunciado do cartão 15 igual ao da lição, em a lista do painel",
+     "old": "{\"k\":15,\"t\":\"escolha\",\"p\":\"O que aconteceu no «dia triunfal», 8 de março de 1914?\"}",
+     "new": "{\"k\":15,\"t\":\"escolha\",\"p\":\"O que aconteceu no «dia triunfal», 8 de março de 1914?\"}",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F01 (painel de projeção): o enunciado do cartão 15 igual ao da lição, em o seletor",
+     "old": "<option value=\"15\">O que aconteceu no «dia triunfal», 8 de março de 1914?</option>",
+     "new": "<option value=\"15\">O que aconteceu no «dia triunfal», 8 de março de 1914?</option>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m7/painel-m7-f02/index.html": {
+   "base_sha256_lf": "403a065c6282a0ca61946f1f947a5ad653cbc133ae9d1cc7465e145cf267c653",
+   "after_sha256_lf": "897a5d698cf3d65c4536abd4836f8138f3cf80dd2e6e59994fb257a5e0619e1d",
+   "edits": [
+    {
+     "location": "M7-F02 (painel de projeção): o enunciado do cartão 7 igual ao da lição, em a lista do painel",
+     "old": "{\"k\":7,\"t\":\"completar\",\"p\":\"Que dor fica para quem lê, na 2.ª estrofe?\"}",
+     "new": "{\"k\":7,\"t\":\"completar\",\"p\":\"Que dor fica para quem lê, na 2.ª estrofe?\"}",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F02 (painel de projeção): o enunciado do cartão 7 igual ao da lição, em o seletor",
+     "old": "<option value=\"7\">Que dor fica para quem lê, na 2.ª estrofe?</option>",
+     "new": "<option value=\"7\">Que dor fica para quem lê, na 2.ª estrofe?</option>",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F02 (painel de projeção): o enunciado do cartão 10 igual ao da lição, em a lista do painel",
+     "old": "{\"k\":10,\"t\":\"escolha\",\"p\":\"Na 3.ª estrofe, o que é o «comboio de corda»?\"}",
+     "new": "{\"k\":10,\"t\":\"escolha\",\"p\":\"Na 3.ª estrofe, o que é o «comboio de corda»?\"}",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F02 (painel de projeção): o enunciado do cartão 10 igual ao da lição, em o seletor",
+     "old": "<option value=\"10\">Na 3.ª estrofe, o que é o «comboio de corda»?</option>",
+     "new": "<option value=\"10\">Na 3.ª estrofe, o que é o «comboio de corda»?</option>",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F02 (painel de projeção): o enunciado do cartão 21 igual ao da lição, em a lista do painel",
+     "old": "{\"k\":21,\"t\":\"frase\",\"p\":\"Põe por ordem os versos 2 e 3 da última estrofe de «Autopsicografia».\"}",
+     "new": "{\"k\":21,\"t\":\"frase\",\"p\":\"Põe por ordem os versos 2 e 3 da última estrofe de «Autopsicografia».\"}",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F02 (painel de projeção): o enunciado do cartão 21 igual ao da lição, em o seletor",
+     "old": "<option value=\"21\">Põe por ordem os versos 2 e 3 da última estrofe de «Autopsicografia».</option>",
+     "new": "<option value=\"21\">Põe por ordem os versos 2 e 3 da última estrofe de «Autopsicografia».</option>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m7/painel-m7-f04/index.html": {
+   "base_sha256_lf": "c091f3138072c75005a6b42ee8751d79aec736ff1a3e9e371f5f3455a88e2871",
+   "after_sha256_lf": "03d3116dbf15f20ac65c141d6e27e9232d8a0cf1a6254b2f25dd1ba213781085",
+   "edits": [
+    {
+     "location": "M7-F04 (painel de projeção): o enunciado do cartão 7 igual ao da lição, em a lista do painel",
+     "old": "{\"k\":7,\"t\":\"sublinhar\",\"p\":\"Toca nas duas palavras que dizem o que pensar é, segundo o verso 15.\"}",
+     "new": "{\"k\":7,\"t\":\"sublinhar\",\"p\":\"Toca nas duas palavras que dizem o que pensar é, segundo o verso 15.\"}",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F04 (painel de projeção): o enunciado do cartão 7 igual ao da lição, em o seletor",
+     "old": "<option value=\"7\">Toca nas duas palavras que dizem o que pensar é, segundo o verso 15.</option>",
+     "new": "<option value=\"7\">Toca nas duas palavras que dizem o que pensar é, segundo o verso 15.</option>",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F04 (painel de projeção): o enunciado do cartão 11 igual ao da lição, em a lista do painel",
+     "old": "{\"k\":11,\"t\":\"versos\",\"p\":\"Põe os primeiros versos do poema IX pela ordem do texto.\"}",
+     "new": "{\"k\":11,\"t\":\"versos\",\"p\":\"Põe os primeiros versos do poema IX pela ordem do texto.\"}",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F04 (painel de projeção): o enunciado do cartão 11 igual ao da lição, em o seletor",
+     "old": "<option value=\"11\">Põe os primeiros versos do poema IX pela ordem do texto.</option>",
+     "new": "<option value=\"11\">Põe os primeiros versos do poema IX pela ordem do texto.</option>",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F04 (painel de projeção): o enunciado do cartão 21 igual ao da lição, em a lista do painel",
+     "old": "{\"k\":21,\"t\":\"ordenar\",\"p\":\"O raciocínio do poema II, pela ordem do excerto:\"}",
+     "new": "{\"k\":21,\"t\":\"ordenar\",\"p\":\"O raciocínio do poema II, pela ordem do excerto:\"}",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F04 (painel de projeção): o enunciado do cartão 21 igual ao da lição, em o seletor",
+     "old": "<option value=\"21\">O raciocínio do poema II, pela ordem do excerto:</option>",
+     "new": "<option value=\"21\">O raciocínio do poema II, pela ordem do excerto:</option>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m7/painel-m7-f05/index.html": {
+   "base_sha256_lf": "a9c4862e53dc4debbbff7a528bd1cb0fc0a8be822a7eaf4d4a689ac4bb5ab3c3",
+   "after_sha256_lf": "b32cc9bb820873b112511e8c5c6d501845c8d714315e03e84637f1cf18409850",
+   "edits": [
+    {
+     "location": "M7-F05 (painel de projeção): o enunciado do cartão 8 igual ao da lição, em a lista do painel",
+     "old": "{\"k\":8,\"t\":\"completar\",\"p\":\"Como chama Reis a si e a Lídia, e o que faz a vida, na 2.ª estrofe?\"}",
+     "new": "{\"k\":8,\"t\":\"completar\",\"p\":\"Como chama Reis a si e a Lídia, e o que faz a vida, na 2.ª estrofe?\"}",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F05 (painel de projeção): o enunciado do cartão 8 igual ao da lição, em o seletor",
+     "old": "<option value=\"8\">Como chama Reis a si e a Lídia, e o que faz a vida, na 2.ª estrofe?</option>",
+     "new": "<option value=\"8\">Como chama Reis a si e a Lídia, e o que faz a vida, na 2.ª estrofe?</option>",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F05 (painel de projeção): o enunciado do cartão 9 igual ao da lição, em a lista do painel",
+     "old": "{\"k\":9,\"t\":\"escolha\",\"p\":\"Para onde vai a vida, na 2.ª estrofe?\"}",
+     "new": "{\"k\":9,\"t\":\"escolha\",\"p\":\"Para onde vai a vida, na 2.ª estrofe?\"}",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F05 (painel de projeção): o enunciado do cartão 9 igual ao da lição, em o seletor",
+     "old": "<option value=\"9\">Para onde vai a vida, na 2.ª estrofe?</option>",
+     "new": "<option value=\"9\">Para onde vai a vida, na 2.ª estrofe?</option>",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F05 (painel de projeção): o enunciado do cartão 14 igual ao da lição, em a lista do painel",
+     "old": "{\"k\":14,\"t\":\"escolha\",\"p\":\"Na 4.ª estrofe, a vida deve ficar sem…\"}",
+     "new": "{\"k\":14,\"t\":\"escolha\",\"p\":\"Na 4.ª estrofe, a vida deve ficar sem…\"}",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F05 (painel de projeção): o enunciado do cartão 14 igual ao da lição, em o seletor",
+     "old": "<option value=\"14\">Na 4.ª estrofe, a vida deve ficar sem…</option>",
+     "new": "<option value=\"14\">Na 4.ª estrofe, a vida deve ficar sem…</option>",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F05 (painel de projeção): o enunciado do cartão 24 igual ao da lição, em a lista do painel",
+     "old": "{\"k\":24,\"t\":\"frase\",\"p\":\"Põe por ordem os dois últimos versos da 3.ª estrofe.\"}",
+     "new": "{\"k\":24,\"t\":\"frase\",\"p\":\"Põe por ordem os dois últimos versos da 3.ª estrofe.\"}",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F05 (painel de projeção): o enunciado do cartão 24 igual ao da lição, em o seletor",
+     "old": "<option value=\"24\">Põe por ordem os dois últimos versos da 3.ª estrofe.</option>",
+     "new": "<option value=\"24\">Põe por ordem os dois últimos versos da 3.ª estrofe.</option>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m7/painel-m7-f06/index.html": {
+   "base_sha256_lf": "7b30eef5af81bda62f4c682cb6c83a9644f4ce7693a5101d1226762204c438b8",
+   "after_sha256_lf": "779edb182070ae2542ff8d1a76948b003af83f174b84612da025645952acec4d",
+   "edits": [
+    {
+     "location": "M7-F06 (painel de projeção): o enunciado do cartão 11 igual ao da lição, em a lista do painel",
+     "old": "{\"k\":11,\"t\":\"completar\",\"p\":\"Como vira o 4.º verso da «Tabacaria»?\"}",
+     "new": "{\"k\":11,\"t\":\"completar\",\"p\":\"Como vira o 4.º verso da «Tabacaria»?\"}",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F06 (painel de projeção): o enunciado do cartão 11 igual ao da lição, em o seletor",
+     "old": "<option value=\"11\">Como vira o 4.º verso da «Tabacaria»?</option>",
+     "new": "<option value=\"11\">Como vira o 4.º verso da «Tabacaria»?</option>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m7/painel-m7-f09/index.html": {
+   "base_sha256_lf": "8997962c238615f6ed0e6cedc70ba9edd7f0d15608a1f9c600fae232b4a0d359",
+   "after_sha256_lf": "777400df924c903a36ffb16460101bc18fdf63114dad2d463087a15d083b2230",
+   "edits": [
+    {
+     "location": "M7-F09 (painel de projeção): o enunciado do cartão 3 igual ao da lição, em a lista do painel",
+     "old": "{\"k\":3,\"t\":\"escolha\",\"p\":\"Em «D. Sebastião, Rei de Portugal», quem fala?\"}",
+     "new": "{\"k\":3,\"t\":\"escolha\",\"p\":\"Em «D. Sebastião, Rei de Portugal», quem fala?\"}",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F09 (painel de projeção): o enunciado do cartão 3 igual ao da lição, em o seletor",
+     "old": "<option value=\"3\">Em «D. Sebastião, Rei de Portugal», quem fala?</option>",
+     "new": "<option value=\"3\">Em «D. Sebastião, Rei de Portugal», quem fala?</option>",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F09 (painel de projeção): o enunciado do cartão 7 igual ao da lição, em a lista do painel",
+     "old": "{\"k\":7,\"t\":\"completar\",\"p\":\"O que é o homem sem a loucura, na 2.ª estrofe?\"}",
+     "new": "{\"k\":7,\"t\":\"completar\",\"p\":\"O que é o homem sem a loucura, na 2.ª estrofe?\"}",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F09 (painel de projeção): o enunciado do cartão 7 igual ao da lição, em o seletor",
+     "old": "<option value=\"7\">O que é o homem sem a loucura, na 2.ª estrofe?</option>",
+     "new": "<option value=\"7\">O que é o homem sem a loucura, na 2.ª estrofe?</option>",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F09 (painel de projeção): o enunciado do cartão 20 igual ao da lição, em a lista do painel",
+     "old": "{\"k\":20,\"t\":\"completar\",\"p\":\"Onde desapareceu D. Sebastião e como se chama a crença no seu regresso?\"}",
+     "new": "{\"k\":20,\"t\":\"completar\",\"p\":\"Onde desapareceu D. Sebastião e como se chama a crença no seu regresso?\"}",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F09 (painel de projeção): o enunciado do cartão 20 igual ao da lição, em o seletor",
+     "old": "<option value=\"20\">Onde desapareceu D. Sebastião e como se chama a crença no seu regresso</option>",
+     "new": "<option value=\"20\">Onde desapareceu D. Sebastião e como se chama a crença no seu regresso</option>",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F09 (painel de projeção): o enunciado do cartão 21 igual ao da lição, em a lista do painel",
+     "old": "{\"k\":21,\"t\":\"vf\",\"p\":\"O corpo de D. Sebastião foi reconhecido por todos depois da batalha.\"}",
+     "new": "{\"k\":21,\"t\":\"vf\",\"p\":\"O corpo de D. Sebastião foi reconhecido por todos depois da batalha.\"}",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F09 (painel de projeção): o enunciado do cartão 21 igual ao da lição, em o seletor",
+     "old": "<option value=\"21\">O corpo de D. Sebastião foi reconhecido por todos depois da batalha.</option>",
+     "new": "<option value=\"21\">O corpo de D. Sebastião foi reconhecido por todos depois da batalha.</option>",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F09 (painel de projeção): o enunciado do cartão 22 igual ao da lição, em a lista do painel",
+     "old": "{\"k\":22,\"t\":\"vf\",\"p\":\"Em _Frei Luís de Sousa_, o regresso de D. João de Portugal renova uma família: é mito.\"}",
+     "new": "{\"k\":22,\"t\":\"vf\",\"p\":\"Em _Frei Luís de Sousa_, o regresso de D. João de Portugal renova uma família: é mito.\"}",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F09 (painel de projeção): o enunciado do cartão 22 igual ao da lição, em o seletor",
+     "old": "<option value=\"22\">Em <i>Frei Luís de Sousa</i>, o regresso de D. João de Portugal renova uma </option>",
+     "new": "<option value=\"22\">Em <i>Frei Luís de Sousa</i>, o regresso de D. João de Portugal renova uma </option>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m7/painel-m7-f10/index.html": {
+   "base_sha256_lf": "3b1e0e6b78ba2c05df65250348b8068bd796f0782867f5f8fe173cfc764c74a8",
+   "after_sha256_lf": "b944083a18e1183ab15a338b9ec0c6109ca4192af704a68f769692cf0c8c5531",
+   "edits": [
+    {
+     "location": "M7-F10 (painel de projeção): o enunciado do cartão 16 igual ao da lição, em a lista do painel",
+     "old": "{\"k\":16,\"t\":\"vf\",\"p\":\"Em _Frei Luís de Sousa_, o regresso de D. João de Portugal faz renascer a família de Madalena.\"}",
+     "new": "{\"k\":16,\"t\":\"vf\",\"p\":\"Em _Frei Luís de Sousa_, o regresso de D. João de Portugal faz renascer a família de Madalena.\"}",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F10 (painel de projeção): o enunciado do cartão 16 igual ao da lição, em o seletor",
+     "old": "<option value=\"16\">Em Frei Luís de Sousa, o regresso de D. João de Portugal faz renascer a família de Madalena.</option>",
+     "new": "<option value=\"16\">Em Frei Luís de Sousa, o regresso de D. João de Portugal faz renascer a família de Madalena.</option>",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F10 (painel de projeção): o enunciado do cartão 18 igual ao da lição, em a lista do painel",
+     "old": "{\"k\":18,\"t\":\"frase\",\"p\":\"Põe por ordem o 1.º verso de «D. Sebastião, Rei de Portugal».\"}",
+     "new": "{\"k\":18,\"t\":\"frase\",\"p\":\"Põe por ordem o 1.º verso de «D. Sebastião, Rei de Portugal».\"}",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F10 (painel de projeção): o enunciado do cartão 18 igual ao da lição, em o seletor",
+     "old": "<option value=\"18\">Põe por ordem o 1.º verso de «D. Sebastião, Rei de Portugal».</option>",
+     "new": "<option value=\"18\">Põe por ordem o 1.º verso de «D. Sebastião, Rei de Portugal».</option>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m7/painel-m7-f13/index.html": {
+   "base_sha256_lf": "812d2c5452e86a6f199453c7653e716bb4a2edd700cde9743f6e0e7a47bcdbe9",
+   "after_sha256_lf": "7523644f263d997c920eace5b4ea1451d4d92abd6f339f09a57dd17adea2f678",
+   "edits": [
+    {
+     "location": "M7-F13 (painel de projeção): o enunciado do cartão 6 igual ao da lição, em a lista do painel",
+     "old": "{\"k\":6,\"t\":\"completar\",\"p\":\"Com que compara o poema a voz, na 2.ª estrofe?\"}",
+     "new": "{\"k\":6,\"t\":\"completar\",\"p\":\"Com que compara o poema a voz, na 2.ª estrofe?\"}",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F13 (painel de projeção): o enunciado do cartão 6 igual ao da lição, em o seletor",
+     "old": "<option value=\"6\">Com que compara o poema a voz, na 2.ª estrofe?</option>",
+     "new": "<option value=\"6\">Com que compara o poema a voz, na 2.ª estrofe?</option>",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F13 (painel de projeção): o enunciado do cartão 14 igual ao da lição, em a lista do painel",
+     "old": "{\"k\":14,\"t\":\"completar\",\"p\":\"Que paradoxo pede o poeta na 5.ª estrofe?\"}",
+     "new": "{\"k\":14,\"t\":\"completar\",\"p\":\"Que paradoxo pede o poeta na 5.ª estrofe?\"}",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F13 (painel de projeção): o enunciado do cartão 14 igual ao da lição, em o seletor",
+     "old": "<option value=\"14\">Que paradoxo pede o poeta na 5.ª estrofe?</option>",
+     "new": "<option value=\"14\">Que paradoxo pede o poeta na 5.ª estrofe?</option>",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F13 (painel de projeção): o enunciado do cartão 15 igual ao da lição, em a lista do painel",
+     "old": "{\"k\":15,\"t\":\"vf\",\"p\":\"«Ciência», na 5.ª estrofe, quer dizer o saber, a consciência.\"}",
+     "new": "{\"k\":15,\"t\":\"vf\",\"p\":\"«Ciência», na 5.ª estrofe, quer dizer o saber, a consciência.\"}",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F13 (painel de projeção): o enunciado do cartão 15 igual ao da lição, em o seletor",
+     "old": "<option value=\"15\">«Ciência», na 5.ª estrofe, quer dizer o saber, a consciência.</option>",
+     "new": "<option value=\"15\">«Ciência», na 5.ª estrofe, quer dizer o saber, a consciência.</option>",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F13 (painel de projeção): o enunciado do cartão 22 igual ao da lição, em a lista do painel",
+     "old": "{\"k\":22,\"t\":\"frase\",\"p\":\"Põe por ordem o primeiro verso da 5.ª estrofe.\"}",
+     "new": "{\"k\":22,\"t\":\"frase\",\"p\":\"Põe por ordem o primeiro verso da 5.ª estrofe.\"}",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F13 (painel de projeção): o enunciado do cartão 22 igual ao da lição, em o seletor",
+     "old": "<option value=\"22\">Põe por ordem o primeiro verso da 5.ª estrofe.</option>",
+     "new": "<option value=\"22\">Põe por ordem o primeiro verso da 5.ª estrofe.</option>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m7/painel-m7-f14/index.html": {
+   "base_sha256_lf": "5c6017a5abd4d3aa1c0a5909d6a014d8accf88afc89b64c893dc64472ba1e2d5",
+   "after_sha256_lf": "d7bd65cab7678e506e9e0fbf234b879c8f0eef1cd52888cd24e7e7c9f1414c55",
+   "edits": [
+    {
+     "location": "M7-F14 (painel de projeção): o enunciado do cartão 4 igual ao da lição, em a lista do painel",
+     "old": "{\"k\":4,\"t\":\"completar\",\"p\":\"Que expressão da 1.ª estrofe quer dizer «se esquece»?\"}",
+     "new": "{\"k\":4,\"t\":\"completar\",\"p\":\"Que expressão da 1.ª estrofe quer dizer «se esquece»?\"}",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F14 (painel de projeção): o enunciado do cartão 4 igual ao da lição, em o seletor",
+     "old": "<option value=\"4\">Que expressão da 1.ª estrofe quer dizer «se esquece»?</option>",
+     "new": "<option value=\"4\">Que expressão da 1.ª estrofe quer dizer «se esquece»?</option>",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F14 (painel de projeção): o enunciado do cartão 5 igual ao da lição, em a lista do painel",
+     "old": "{\"k\":5,\"t\":\"escolha\",\"p\":\"Como é a vida na terra da 1.ª estrofe?\"}",
+     "new": "{\"k\":5,\"t\":\"escolha\",\"p\":\"Como é a vida na terra da 1.ª estrofe?\"}",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F14 (painel de projeção): o enunciado do cartão 5 igual ao da lição, em o seletor",
+     "old": "<option value=\"5\">Como é a vida na terra da 1.ª estrofe?</option>",
+     "new": "<option value=\"5\">Como é a vida na terra da 1.ª estrofe?</option>",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F14 (painel de projeção): o enunciado do cartão 7 igual ao da lição, em a lista do painel",
+     "old": "{\"k\":7,\"t\":\"completar\",\"p\":\"Onde está a dúvida da 2.ª estrofe?\"}",
+     "new": "{\"k\":7,\"t\":\"completar\",\"p\":\"Onde está a dúvida da 2.ª estrofe?\"}",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F14 (painel de projeção): o enunciado do cartão 7 igual ao da lição, em o seletor",
+     "old": "<option value=\"7\">Onde está a dúvida da 2.ª estrofe?</option>",
+     "new": "<option value=\"7\">Onde está a dúvida da 2.ª estrofe?</option>",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F14 (painel de projeção): o enunciado do cartão 10 igual ao da lição, em a lista do painel",
+     "old": "{\"k\":10,\"t\":\"completar\",\"p\":\"O que estraga o sonho, na 3.ª estrofe?\"}",
+     "new": "{\"k\":10,\"t\":\"completar\",\"p\":\"O que estraga o sonho, na 3.ª estrofe?\"}",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F14 (painel de projeção): o enunciado do cartão 10 igual ao da lição, em o seletor",
+     "old": "<option value=\"10\">O que estraga o sonho, na 3.ª estrofe?</option>",
+     "new": "<option value=\"10\">O que estraga o sonho, na 3.ª estrofe?</option>",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F14 (painel de projeção): o enunciado do cartão 12 igual ao da lição, em a lista do painel",
+     "old": "{\"k\":12,\"t\":\"completar\",\"p\":\"Que diz a 3.ª estrofe sobre o mal e o bem nesta terra?\"}",
+     "new": "{\"k\":12,\"t\":\"completar\",\"p\":\"Que diz a 3.ª estrofe sobre o mal e o bem nesta terra?\"}",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F14 (painel de projeção): o enunciado do cartão 12 igual ao da lição, em o seletor",
+     "old": "<option value=\"12\">Que diz a 3.ª estrofe sobre o mal e o bem nesta terra?</option>",
+     "new": "<option value=\"12\">Que diz a 3.ª estrofe sobre o mal e o bem nesta terra?</option>",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F14 (painel de projeção): o enunciado do cartão 14 igual ao da lição, em a lista do painel",
+     "old": "{\"k\":14,\"t\":\"escolha\",\"p\":\"Qual é a conclusão da 4.ª estrofe?\"}",
+     "new": "{\"k\":14,\"t\":\"escolha\",\"p\":\"Qual é a conclusão da 4.ª estrofe?\"}",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F14 (painel de projeção): o enunciado do cartão 14 igual ao da lição, em o seletor",
+     "old": "<option value=\"14\">Qual é a conclusão da 4.ª estrofe?</option>",
+     "new": "<option value=\"14\">Qual é a conclusão da 4.ª estrofe?</option>",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F14 (painel de projeção): o enunciado do cartão 15 igual ao da lição, em a lista do painel",
+     "old": "{\"k\":15,\"t\":\"escolha\",\"p\":\"O 6.º verso e o último repetem «a vida é jovem e o amor sorri». O que mudou?\"}",
+     "new": "{\"k\":15,\"t\":\"escolha\",\"p\":\"O 6.º verso e o último repetem «a vida é jovem e o amor sorri». O que mudou?\"}",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F14 (painel de projeção): o enunciado do cartão 15 igual ao da lição, em o seletor",
+     "old": "<option value=\"15\">O 6.º verso e o último repetem «a vida é jovem e o amor sorri». O que mudou?</option>",
+     "new": "<option value=\"15\">O 6.º verso e o último repetem «a vida é jovem e o amor sorri». O que mudou?</option>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m7/painel-m7-f15/index.html": {
+   "base_sha256_lf": "9d43c4bc7520917ed3038593953c221333c36f7f5d523060d32a31451ad2182f",
+   "after_sha256_lf": "b296f42107096e6398ce13fbea47c7c7ff43c068bc87381d8b665ee1132b6148",
+   "edits": [
+    {
+     "location": "M7-F15 (painel de projeção): o enunciado do cartão 6 igual ao da lição, em a lista do painel",
+     "old": "{\"k\":6,\"t\":\"completar\",\"p\":\"Que infância vem ao sujeito, na 2.ª estrofe?\"}",
+     "new": "{\"k\":6,\"t\":\"completar\",\"p\":\"Que infância vem ao sujeito, na 2.ª estrofe?\"}",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F15 (painel de projeção): o enunciado do cartão 6 igual ao da lição, em o seletor",
+     "old": "<option value=\"6\">Que infância vem ao sujeito, na 2.ª estrofe?</option>",
+     "new": "<option value=\"6\">Que infância vem ao sujeito, na 2.ª estrofe?</option>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m7/painel-m7-f23/index.html": {
+   "base_sha256_lf": "3eb164704c004413afbf11f971de6aea4a72e889098841884d381affe69806ab",
+   "after_sha256_lf": "ad48834e9f9f1b2b3a9ed2189c2e04dc0e09d1b5f18d883e6fd4c5ab3edc7b9b",
+   "edits": [
+    {
+     "location": "M7-F23 (painel de projeção): o enunciado do cartão 8 igual ao da lição, em a lista do painel",
+     "old": "{\"k\":8,\"t\":\"completar\",\"p\":\"Porque é a luz eterna para as rosas, na 2.ª estrofe?\"}",
+     "new": "{\"k\":8,\"t\":\"completar\",\"p\":\"Porque é a luz eterna para as rosas, na 2.ª estrofe?\"}",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F23 (painel de projeção): o enunciado do cartão 8 igual ao da lição, em o seletor",
+     "old": "<option value=\"8\">Porque é a luz eterna para as rosas, na 2.ª estrofe?</option>",
+     "new": "<option value=\"8\">Porque é a luz eterna para as rosas, na 2.ª estrofe?</option>",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F23 (painel de projeção): o enunciado do cartão 21 igual ao da lição, em a lista do painel",
+     "old": "{\"k\":21,\"t\":\"frase\",\"p\":\"Põe por ordem os dois últimos versos da 2.ª estrofe.\"}",
+     "new": "{\"k\":21,\"t\":\"frase\",\"p\":\"Põe por ordem os dois últimos versos da 2.ª estrofe.\"}",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F23 (painel de projeção): o enunciado do cartão 21 igual ao da lição, em o seletor",
+     "old": "<option value=\"21\">Põe por ordem os dois últimos versos da 2.ª estrofe.</option>",
+     "new": "<option value=\"21\">Põe por ordem os dois últimos versos da 2.ª estrofe.</option>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m7/painel-m7-f34/index.html": {
+   "base_sha256_lf": "c6ac25840e4e49345a2af4047788823744be427a12f664f5939fe19cace41c62",
+   "after_sha256_lf": "779d01327d2910eb39c5c5be659f16aa1f9fdfcba825d1ec97b82cab389e4076",
+   "edits": [
+    {
+     "location": "M7-F34 (painel de projeção): o enunciado do cartão 3 igual ao da lição, em a lista do painel",
+     "old": "{\"k\":3,\"t\":\"versos\",\"p\":\"Põe os versos da primeira estrofe do poema I pela ordem do poema.\"}",
+     "new": "{\"k\":3,\"t\":\"versos\",\"p\":\"Põe os versos da primeira estrofe do poema I pela ordem do poema.\"}",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F34 (painel de projeção): o enunciado do cartão 3 igual ao da lição, em o seletor",
+     "old": "<option value=\"3\">Põe os versos da primeira estrofe do poema I pela ordem do poema.</option>",
+     "new": "<option value=\"3\">Põe os versos da primeira estrofe do poema I pela ordem do poema.</option>",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F34 (painel de projeção): o enunciado do cartão 11 igual ao da lição, em a lista do painel",
+     "old": "{\"k\":11,\"t\":\"escolha\",\"p\":\"Que palavra do poema I quer dizer «fila, fileira»?\"}",
+     "new": "{\"k\":11,\"t\":\"escolha\",\"p\":\"Que palavra do poema I quer dizer «fila, fileira»?\"}",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F34 (painel de projeção): o enunciado do cartão 11 igual ao da lição, em o seletor",
+     "old": "<option value=\"11\">Que palavra do poema I quer dizer «fila, fileira»?</option>",
+     "new": "<option value=\"11\">Que palavra do poema I quer dizer «fila, fileira»?</option>",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F34 (painel de projeção): o enunciado do cartão 13 igual ao da lição, em a lista do painel",
+     "old": "{\"k\":13,\"t\":\"completar\",\"p\":\"No poema II, a vela de dentro diz-se com uma coisa de fora. Completa.\"}",
+     "new": "{\"k\":13,\"t\":\"completar\",\"p\":\"No poema II, a vela de dentro diz-se com uma coisa de fora. Completa.\"}",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F34 (painel de projeção): o enunciado do cartão 13 igual ao da lição, em o seletor",
+     "old": "<option value=\"13\">No poema II, a vela de dentro diz-se com uma coisa de fora. Completa.</option>",
+     "new": "<option value=\"13\">No poema II, a vela de dentro diz-se com uma coisa de fora. Completa.</option>",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F34 (painel de projeção): o enunciado do cartão 14 igual ao da lição, em a lista do painel",
+     "old": "{\"k\":14,\"t\":\"emparelhar\",\"p\":\"Liga cada pedaço do poema II ao lugar de onde vem.\"}",
+     "new": "{\"k\":14,\"t\":\"emparelhar\",\"p\":\"Liga cada pedaço do poema II ao lugar de onde vem.\"}",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F34 (painel de projeção): o enunciado do cartão 14 igual ao da lição, em o seletor",
+     "old": "<option value=\"14\">Liga cada pedaço do poema II ao lugar de onde vem.</option>",
+     "new": "<option value=\"14\">Liga cada pedaço do poema II ao lugar de onde vem.</option>",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F34 (painel de projeção): o enunciado do cartão 19 igual ao da lição, em a lista do painel",
+     "old": "{\"k\":19,\"t\":\"versos\",\"p\":\"Ordena o final do poema II, do vento à chuva que cessa.\"}",
+     "new": "{\"k\":19,\"t\":\"versos\",\"p\":\"Ordena o final do poema II, do vento à chuva que cessa.\"}",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F34 (painel de projeção): o enunciado do cartão 19 igual ao da lição, em o seletor",
+     "old": "<option value=\"19\">Ordena o final do poema II, do vento à chuva que cessa.</option>",
+     "new": "<option value=\"19\">Ordena o final do poema II, do vento à chuva que cessa.</option>",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F34 (painel de projeção): o enunciado do cartão 28 igual ao da lição, em a lista do painel",
+     "old": "{\"k\":28,\"t\":\"escolha\",\"p\":\"Na parte VI ouvida no vídeo, que dois planos se cruzam?\"}",
+     "new": "{\"k\":28,\"t\":\"escolha\",\"p\":\"Na parte VI ouvida no vídeo, que dois planos se cruzam?\"}",
+     "occurrences": 1
+    },
+    {
+     "location": "M7-F34 (painel de projeção): o enunciado do cartão 28 igual ao da lição, em o seletor",
+     "old": "<option value=\"28\">Na parte VI ouvida no vídeo, que dois planos se cruzam?</option>",
+     "new": "<option value=\"28\">Na parte VI ouvida no vídeo, que dois planos se cruzam?</option>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m7/pessoa-ceifeira/index.html": {
+   "base_sha256_lf": "5cb9c72d2e3c8d46670b014a1ea49ad0b7e42c66b6d55329969d8bfe1a4c61f9",
+   "after_sha256_lf": "2ceeba578d66def356f7fa3b83241f58fe76d2f6374eebffc3aae5293b90569c",
+   "edits": [
+    {
+     "location": "m7/pessoa-ceifeira: «n.º 3» que não se parte",
+     "old": "n.º 3",
+     "new": "n.º 3",
+     "occurrences": 2
+    }
+   ]
+  },
+  "m7/portefolio-do-modulo-m7/index.html": {
+   "base_sha256_lf": "e9715d0f3df07ca3e759fe2bdec68fc26037faf6fc35167cc324ef05d3d18b9a",
+   "after_sha256_lf": "3e5f6ab3ee25073bb0634838c5ac1a2e1aa1c55f1e51aa056173be3e6a947bc4",
+   "edits": [
+    {
+     "location": "m7/portefolio-do-modulo-m7, «A lista de verificação»: o nome M7_U1_aula_<dia-mês> em <code>",
+     "old": "<td>M7_U1_aula_&lt;dia-mês&gt;</td>",
+     "new": "<td><code>M7_<wbr>U1_<wbr>aula_<wbr>&lt;dia-mês&gt;</code></td>",
+     "occurrences": 1
+    },
+    {
+     "location": "m7/portefolio-do-modulo-m7, «A lista de verificação»: o nome M7_U1_pergunta em <code>",
+     "old": "<td>M7_U1_pergunta</td>",
+     "new": "<td><code>M7_<wbr>U1_<wbr>pergunta</code></td>",
+     "occurrences": 1
+    },
+    {
+     "location": "m7/portefolio-do-modulo-m7, «A lista de verificação»: o nome M7_U1_o-que-aprendi em <code>",
+     "old": "<td>M7_U1_o-que-aprendi</td>",
+     "new": "<td><code>M7_<wbr>U1_<wbr>o-que-aprendi</code></td>",
+     "occurrences": 1
+    },
+    {
+     "location": "m7/portefolio-do-modulo-m7, «A lista de verificação»: o nome M7_U2_aula_<dia-mês> em <code>",
+     "old": "<td>M7_U2_aula_&lt;dia-mês&gt;</td>",
+     "new": "<td><code>M7_<wbr>U2_<wbr>aula_<wbr>&lt;dia-mês&gt;</code></td>",
+     "occurrences": 1
+    },
+    {
+     "location": "m7/portefolio-do-modulo-m7, «A lista de verificação»: o nome M7_U2_pergunta em <code>",
+     "old": "<td>M7_U2_pergunta</td>",
+     "new": "<td><code>M7_<wbr>U2_<wbr>pergunta</code></td>",
+     "occurrences": 1
+    },
+    {
+     "location": "m7/portefolio-do-modulo-m7, «A lista de verificação»: o nome M7_U2_o-que-aprendi em <code>",
+     "old": "<td>M7_U2_o-que-aprendi</td>",
+     "new": "<td><code>M7_<wbr>U2_<wbr>o-que-aprendi</code></td>",
+     "occurrences": 1
+    },
+    {
+     "location": "m7/portefolio-do-modulo-m7, «A lista de verificação»: o nome M7_U3_aula_<dia-mês> em <code>",
+     "old": "<td>M7_U3_aula_&lt;dia-mês&gt;</td>",
+     "new": "<td><code>M7_<wbr>U3_<wbr>aula_<wbr>&lt;dia-mês&gt;</code></td>",
+     "occurrences": 1
+    },
+    {
+     "location": "m7/portefolio-do-modulo-m7, «A lista de verificação»: o nome M7_U3_pergunta em <code>",
+     "old": "<td>M7_U3_pergunta</td>",
+     "new": "<td><code>M7_<wbr>U3_<wbr>pergunta</code></td>",
+     "occurrences": 1
+    },
+    {
+     "location": "m7/portefolio-do-modulo-m7, «A lista de verificação»: o nome M7_U3_o-que-aprendi em <code>",
+     "old": "<td>M7_U3_o-que-aprendi</td>",
+     "new": "<td><code>M7_<wbr>U3_<wbr>o-que-aprendi</code></td>",
+     "occurrences": 1
+    },
+    {
+     "location": "m7/portefolio-do-modulo-m7, «A lista de verificação»: o nome M7_cartao-do-percurso pode mudar de linha depois de «M7_»",
+     "old": "<td><code>M7_cartao-do-percurso</code></td>",
+     "new": "<td><code>M7_<wbr>cartao-do-percurso</code></td>",
+     "occurrences": 1
+    },
+    {
+     "location": "m7/portefolio-do-modulo-m7, «A lista de verificação»: o nome M7_Prova-escrita pode mudar de linha depois de «M7_»",
+     "old": "<td><code>M7_Prova-escrita</code></td>",
+     "new": "<td><code>M7_<wbr>Prova-escrita</code></td>",
+     "occurrences": 1
+    },
+    {
+     "location": "m7/portefolio-do-modulo-m7, a folha da página: os nomes só mudam de linha onde podem",
+     "old": "code{font:.85rem Consolas,\"Courier New\",monospace;border:1px solid var(--tinta);padding:1px 4px}\n",
+     "new": "code{font:.85rem Consolas,\"Courier New\",monospace;border:1px solid var(--tinta);padding:1px 4px}\ntd code{white-space:nowrap}\n",
+     "occurrences": 1
+    },
+    {
+     "location": "m7/portefolio-do-modulo-m7: «3.º ano» que não se parte",
+     "old": "3.º ano",
+     "new": "3.º ano",
+     "occurrences": 2
+    }
+   ]
+  },
+  "m7/santa-rita-fato/index.html": {
+   "base_sha256_lf": "6b0cf048627a3f6888452e44da557168852d2e410694c4f8b8a8cef6b7edf417",
+   "after_sha256_lf": "2e7d46240efd70076cc64177c1f7062214e900d5da36fddd6ad90fce5e0fcefc",
+   "edits": [
+    {
+     "location": "m7/santa-rita-fato: «n.º 46» que não se parte",
+     "old": "n.º 46",
+     "new": "n.º 46",
+     "occurrences": 3
+    },
+    {
+     "location": "m7/santa-rita-fato: «Orpheu 2» que não se parte",
+     "old": "Orpheu 2",
+     "new": "Orpheu 2",
+     "occurrences": 2
+    },
+    {
+     "location": "m7/santa-rita-fato: «Orpheu_ 2» que não se parte (com o contexto «> 2»)",
+     "old": "> 2",
+     "new": "> 2",
+     "occurrences": 1
+    },
+    {
+     "location": "m7/santa-rita-fato: «Orpheu_ 2» que não se parte (com o contexto «_ 2»)",
+     "old": "_ 2",
+     "new": "_ 2",
+     "occurrences": 5
+    },
+    {
+     "location": "m7/santa-rita-fato: «1889–1918» que não se parte",
+     "old": "1889–1918",
+     "new": "1889–⁠1918",
+     "occurrences": 2
+    }
+   ]
+  },
+  "m7/sebastiana-nevoeiro/index.html": {
+   "base_sha256_lf": "8a1f859ccae7d8ca340a31b59e5a55eb60a2388e85e54bee33d1277491184099",
+   "after_sha256_lf": "f49b17ffa21bb412f71f653a173743f6b67e38ec41f71e60eb10af4144308ac2",
+   "edits": [
+    {
+     "location": "m7/sebastiana-nevoeiro: «D. Sebastião» que não se parte",
+     "old": "D. Sebastião",
+     "new": "D. Sebastião",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m7/tabacaria/index.html": {
+   "base_sha256_lf": "e5661d8e0a9d714c87d1a677b7cd24046af47fe9eca997bcc23f0db777281e23",
+   "after_sha256_lf": "91745fe7eb869e71f89197fc5798062767a460b62c6c79bc9e0fbf7841519e2e",
+   "edits": [
+    {
+     "location": "m7/tabacaria: «15 de janeiro de 1928» que não se parte",
+     "old": "15 de janeiro de 1928",
+     "new": "15 de janeiro de 1928",
+     "occurrences": 1
+    },
+    {
+     "location": "m7/tabacaria: «3.º ano» que não se parte",
+     "old": "3.º ano",
+     "new": "3.º ano",
+     "occurrences": 2
+    },
+    {
+     "location": "m7/tabacaria: «2.º ano» que não se parte",
+     "old": "2.º ano",
+     "new": "2.º ano",
+     "occurrences": 1
+    },
+    {
+     "location": "m7/tabacaria: «1.ª publ» que não se parte",
+     "old": "1.ª publ",
+     "new": "1.ª publ",
+     "occurrences": 1
+    },
+    {
+     "location": "m7/tabacaria: «século XIX» que não se parte",
+     "old": "século XIX",
+     "new": "século XIX",
+     "occurrences": 2
+    },
+    {
+     "location": "m7/tabacaria: «n.º 39» que não se parte",
+     "old": "n.º 39",
+     "new": "n.º 39",
+     "occurrences": 2
+    }
+   ]
+  },
+  "m7/variacoes-rotulos/index.html": {
+   "base_sha256_lf": "5c7d9b40562ac11359d9352635bd0b9159f268f724f7a6101bf99fb325391aaa",
+   "after_sha256_lf": "faa2da87195442702edfb6dc73e5c91758cd65203c9a6768dbf33e5537b13863",
+   "edits": [
+    {
+     "location": "m7/variacoes-rotulos: «21 de setembro de 2019» que não se parte",
+     "old": "21 de setembro de 2019",
+     "new": "21 de setembro de 2019",
+     "occurrences": 2
+    },
+    {
+     "location": "m7/variacoes-rotulos: «10 de setembro de 2017» que não se parte",
+     "old": "10 de setembro de 2017",
+     "new": "10 de setembro de 2017",
+     "occurrences": 2
+    },
+    {
+     "location": "m7/variacoes-rotulos: «12 de junho de 2018» que não se parte",
+     "old": "12 de junho de 2018",
+     "new": "12 de junho de 2018",
+     "occurrences": 3
+    },
+    {
+     "location": "m7/variacoes-rotulos: «1944–1984» que não se parte",
+     "old": "1944–1984",
+     "new": "1944–⁠1984",
+     "occurrences": 2
+    }
+   ]
+  },
+  "m7/visita-casa-fernando-pessoa/index.html": {
+   "base_sha256_lf": "f9f8f244e550d4650d40d73953f778557fd2a72324369ce7ed04af1ad18cb334",
+   "after_sha256_lf": "91fcdf92d48297626941234c4fa06bf91edf5bf2268d6160168678d8503e4874",
+   "edits": [
+    {
+     "location": "m7/visita-casa-fernando-pessoa: «5 de novembro» que não se parte (com o contexto «5 de»)",
+     "old": "5 de",
+     "new": "5 de",
+     "occurrences": 1
+    },
+    {
+     "location": "m7/visita-casa-fernando-pessoa: «3.º ano» que não se parte",
+     "old": "3.º ano",
+     "new": "3.º ano",
+     "occurrences": 2
+    }
+   ]
+  },
+  "tarefas/m7-u1/aquecimento/index.html": {
+   "base_sha256_lf": "1cc0ef982f8d15d1a69c35c09789c80a65f83cbb92ce1aa5a0cb43addf134ac4",
+   "after_sha256_lf": "df7fa4a0a7fed37989961c04c46a9b3badd20783dcd626ab3ed2855427c9ddcd",
+   "edits": [
+    {
+     "location": "tarefas/m7-u1/aquecimento: «80 a 120 palavras» que não se parte",
+     "old": "80 a 120 palavras",
+     "new": "80 a 120 palavras",
+     "occurrences": 2
+    },
+    {
+     "location": "tarefas/m7-u1/aquecimento: «60 minutos» que não se parte",
+     "old": "60 minutos",
+     "new": "60 minutos",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m7-u1/aquecimento: «1.º verso» que não se parte",
+     "old": "1.º verso",
+     "new": "1.º verso",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m7-u1/aquecimento: «4.ª estrofe» que não se parte",
+     "old": "4.ª estrofe",
+     "new": "4.ª estrofe",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m7-u1/aquecimento: «1.ª pessoa» que não se parte",
+     "old": "1.ª pessoa",
+     "new": "1.ª pessoa",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m7-u1/aquecimento: «40 a 60» que não se parte",
+     "old": "40 a 60",
+     "new": "40 a 60",
+     "occurrences": 2
+    },
+    {
+     "location": "tarefas/m7-u1/aquecimento: «150 a 200» que não se parte",
+     "old": "150 a 200",
+     "new": "150 a 200",
+     "occurrences": 2
+    },
+    {
+     "location": "tarefas/m7-u1/aquecimento: «80 a 120» que não se parte (com o contexto «80 a 120\"»)",
+     "old": "80 a 120\"",
+     "new": "80 a 120\"",
+     "occurrences": 1
+    }
+   ]
+  },
+  "tarefas/m7-u1/index.html": {
+   "base_sha256_lf": "d23c617c3d4bb39d81ad10bc34d96b2ac36c19fd7f760bfbd1fedc66b992c14a",
+   "after_sha256_lf": "75f7e06bd0464f9493fc12d242c6480afe9a8a9242738c3f6497e422b94a0f95",
+   "edits": [
+    {
+     "location": "tarefas/m7-u1: «90 min» que não se parte (com o contexto «90 min<»)",
+     "old": "90 min<",
+     "new": "90 min<",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m7-u1: «80 a 120 palavras» que não se parte",
+     "old": "80 a 120 palavras",
+     "new": "80 a 120 palavras",
+     "occurrences": 2
+    },
+    {
+     "location": "tarefas/m7-u1: «10 a 15 minutos» que não se parte",
+     "old": "10 a 15 minutos",
+     "new": "10 a 15 minutos",
+     "occurrences": 1
+    }
+   ]
+  },
+  "tarefas/m7-u2/aquecimento/index.html": {
+   "base_sha256_lf": "974647960d41a6d795bbd31e7c133edae78dab451a262561759bc81ce2c60dc6",
+   "after_sha256_lf": "168dd429bd03d0bfba2abfc5011322b42f74cd68f91e2cb7cd88eece53e037d5",
+   "edits": [
+    {
+     "location": "tarefas/m7-u2/aquecimento: «13 de janeiro de 1935» que não se parte",
+     "old": "13 de janeiro de 1935",
+     "new": "13 de janeiro de 1935",
+     "occurrences": 3
+    },
+    {
+     "location": "tarefas/m7-u2/aquecimento: «M8-F01» que não se parte",
+     "old": "M8-F01",
+     "new": "M8-⁠F01",
+     "occurrences": 1
+    }
+   ]
+  },
+  "tarefas/m7-u2/index.html": {
+   "base_sha256_lf": "158a4bcede1f15ce5ca36e2c738bcc70a929219fe2df02fd54f0b3773fc9c464",
+   "after_sha256_lf": "884944d6adef753e39779c3655f53a0f3289011ace50405146c16901c0d3e171",
+   "edits": [
+    {
+     "location": "tarefas/m7-u2: «90 min» que não se parte (com o contexto «90 min<»)",
+     "old": "90 min<",
+     "new": "90 min<",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m7-u2: «100 a 150 palavras» que não se parte",
+     "old": "100 a 150 palavras",
+     "new": "100 a 150 palavras",
+     "occurrences": 2
+    },
+    {
+     "location": "tarefas/m7-u2: «10 minutos» que não se parte",
+     "old": "10 minutos",
+     "new": "10 minutos",
+     "occurrences": 1
+    }
+   ]
+  },
+  "tarefas/m7-u3/aquecimento/index.html": {
+   "base_sha256_lf": "75104378a31ea67100f686ceddbb5041ce7e2ad86a23fadb852901cac83a2c11",
+   "after_sha256_lf": "b8e63900e2b1ee7b983386ba5ab3f0727e0a1a302c915efa4eca76d28a4cb1fe",
+   "edits": [
+    {
+     "location": "tarefas/m7-u3/aquecimento: «180 a 220 palavras» que não se parte",
+     "old": "180 a 220 palavras",
+     "new": "180 a 220 palavras",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m7-u3/aquecimento: «1.º verso» que não se parte",
+     "old": "1.º verso",
+     "new": "1.º verso",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m7-u3/aquecimento: «2.º ano» que não se parte",
+     "old": "2.º ano",
+     "new": "2.º ano",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m7-u3/aquecimento: «verso de «D. Sebastião» que não se parte (com o contexto «de «D. Sebastião»)",
+     "old": "de «D. Sebastião",
+     "new": "de «D. Sebastião",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m7-u3/aquecimento: «verso de «D. Sebastião» que não se parte (com o contexto «_, «D. Sebastião»)",
+     "old": "_, «D. Sebastião",
+     "new": "_, «D. Sebastião",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m7-u3/aquecimento: «verso de «D. Sebastião» que não se parte (com o contexto « e «D. Sebastião»)",
+     "old": " e «D. Sebastião",
+     "new": " e «D. Sebastião",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m7-u3/aquecimento: «D. João» que não se parte",
+     "old": "D. João",
+     "new": "D. João",
+     "occurrences": 2
+    }
+   ]
+  },
+  "tarefas/m7-u3/correcao/index.html": {
+   "base_sha256_lf": "4f09874a470ec2c45f821e7d104f729f2f040dbc4fe24871bc0e8f7cfcbd397a",
+   "after_sha256_lf": "ce305ae66723f87bee89a3cd34e1c4ea61eaf073308b4476c58a2e31bd8e825b",
+   "edits": [
+    {
+     "location": "tarefas/m7-u3/correcao: «180 a 220 palavras» que não se parte",
+     "old": "180 a 220 palavras",
+     "new": "180 a 220 palavras",
+     "occurrences": 1
+    }
+   ]
+  },
+  "tarefas/m7-u3/grelha/index.html": {
+   "base_sha256_lf": "abde5e65fca373d4a2d58909d20a7d89c87209a630382a148bd54a6b3fe9061d",
+   "after_sha256_lf": "53160c80861056fafd3b9d7df59741f9a7d2bdd0f9a86c518ae9fd3303bec607",
+   "edits": [
+    {
+     "location": "tarefas/m7-u3/grelha: «180 a 220 palavras» que não se parte",
+     "old": "180 a 220 palavras",
+     "new": "180 a 220 palavras",
+     "occurrences": 3
+    },
+    {
+     "location": "tarefas/m7-u3/grelha: «90 palavras» que não se parte",
+     "old": "90 palavras",
+     "new": "90 palavras",
+     "occurrences": 1
+    }
+   ]
+  },
+  "tarefas/m7-u3/index.html": {
+   "base_sha256_lf": "11cc019faa58171c9eab3989cca5612e989da39807a7c161d79dcbfae3b790a3",
+   "after_sha256_lf": "dee77903ed14887408abe8189d4921f141e7c74073f5f676db4dcdbdc2c0aaca",
+   "edits": [
+    {
+     "location": "tarefas/m7-u3: «durante 90 minutos, com entrega»",
+     "old": "durante 90 minutos, com entrega",
+     "new": "durante 90 minutos, com entrega",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m7-u3: «10 min» que não se parte (com o contexto «10 min »)",
+     "old": "10 min ",
+     "new": "10 min ",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m7-u3: «60 minutos» que não se parte",
+     "old": "60 minutos",
+     "new": "60 minutos",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m7-u3: «90 min» que não se parte (com o contexto «90 min<»)",
+     "old": "90 min<",
+     "new": "90 min<",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m7-u3: «180 a 220 palavras» que não se parte",
+     "old": "180 a 220 palavras",
+     "new": "180 a 220 palavras",
+     "occurrences": 2
+    },
+    {
+     "location": "tarefas/m7-u3: «10 minutos» que não se parte",
+     "old": "10 minutos",
+     "new": "10 minutos",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m7-u3: «4 de agosto de 1578» que não se parte",
+     "old": "4 de agosto de 1578",
+     "new": "4 de agosto de 1578",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m7-u3: «20 de fevereiro de 1933» que não se parte",
+     "old": "20 de fevereiro de 1933",
+     "new": "20 de fevereiro de 1933",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m7-u3: «v. 1» que não se parte",
+     "old": "v. 1",
+     "new": "v. 1",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m7-u3: «D. Sebastião» que não se parte",
+     "old": "D. Sebastião",
+     "new": "D. Sebastião",
+     "occurrences": 3
+    },
+    {
+     "location": "tarefas/m7-u3: «D. João» que não se parte",
+     "old": "D. João",
+     "new": "D. João",
+     "occurrences": 1
+    }
+   ]
+  }
+ }
+}

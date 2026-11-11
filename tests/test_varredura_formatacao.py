@@ -81,7 +81,8 @@ class Varredura(unittest.TestCase):
             self.assertIn('alt="Fernando Pessoa de chapéu e óculos, cerca de 1914"',s)
         mapa=(ROOT/'m7/mapa-do-modulo-m7/index.html').read_text('utf-8')
         # 05/11/2026: a ligação «Lição M7-F01» fica à vista, na legenda, fora do «i» e logo depois dele.
-        self.assertRegex(mapa,r'</details><figcaption>Fernando Pessoa, cerca de 1914\. <a href="[^"]*licao-m7-f01/">Lição M7-F01</a></figcaption>')
+        # 11/11/2026: decisão 152 no M7 (achado 36): a sigla da ligação leva a junção (U+2060) depois do hífen, para não se partir.
+        self.assertRegex(mapa,r'</details><figcaption>Fernando Pessoa, cerca de 1914\. <a href="[^"]*licao-m7-f01/">Lição M7-\u2060F01</a></figcaption>')
 
     # 01/11/2026: o motor de palavras formata cada peça isoladamente.
     def test_marcadores_de_italico_fecham_em_cada_palavra(self):

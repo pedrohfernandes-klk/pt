@@ -104,7 +104,9 @@ class UnitRoutes(unittest.TestCase):
                         self.assertIn(unit['title'], text)
                     self.assertNotIn('as etapas mantêm os seus desafios', text)
                     if role == 'portefolio-do-modulo':
-                        numbers = set(re.findall(r'M' + str(m) + r'_U(\d+)_', text))
+                        # 11/11/2026: decisão 152 no M7 (achado 54): os nomes do portefólio do M7 levam <wbr> depois de «M7_» e de
+                        # «U1_» (o ponto onde o nome pode mudar de linha, como no M5); o nome lê-se sem ele, com a mesma exigência.
+                        numbers = set(re.findall(r'M' + str(m) + r'_U(\d+)_', text.replace('<wbr>', '')))
                         self.assertEqual({str(u['number']) for u in plan['units']}, numbers)
 
 

@@ -21,7 +21,8 @@ class M7Pilot(unittest.TestCase):
   self.assertIn('oralmente ou no caderno',b[20]['html']);self.assertIn('várias respostas sustentadas',b[20]['html'])
   self.assertNotIn('<input',b[20]['html']);self.assertNotIn('<textarea',b[20]['html'])
  def test_reaction_precedes_direct_address(self):
-  b=cards('13');self.assertIn('3.ª estrofe',b[11]['f']);self.assertIn('interpela',b[11]['p2'])
+  # 11/11/2026: decisão 152 no M7 (achado 22): «3.ª estrofe» leva espaço que não quebra (U+00A0) no retorno.
+  b=cards('13');self.assertIn('3.ª\xa0estrofe',b[11]['f']);self.assertIn('interpela',b[11]['p2'])
   self.assertNotIn('Ó céu',b[8]['p']);self.assertIn('emoções contrárias',b[8]['lacunas'][1]['o'])
   s=(ROOT/'m7/index.html').read_text('utf-8');u=json.JSONDecoder().raw_decode(s[re.search(r'\bU\s*=\s*(\[)',s).start(1):])[0]
   pool=[c for x in u for c in x['pool'] if c.get('_l')=='m7-f13'];self.assertFalse(any('passa a reagir' in c.get('p','') for c in pool))

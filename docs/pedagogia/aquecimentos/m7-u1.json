@@ -93,20 +93,20 @@
     },
     {
      "o": [
-      "80 a 120",
-      "40 a 60",
-      "150 a 200"
+      "80 a 120",
+      "40 a 60",
+      "150 a 200"
      ],
      "c": 0
     }
    ],
-   "f": "A instrução abre com **«Compara»** e pede **uma passagem de cada poema**; o terceiro critério fixa **80 a 120 palavras**. E o «o que» de «o que os finais afirmam ou desejam» pede conteúdo: as palavras do verso, não só um rótulo.",
-   "fe": "Volta à instrução: «Compara», «uma passagem de cada poema», «Escreves 80 a 120 palavras». Resumir ou ilustrar não é comparar; um poema inteiro não é uma passagem, e uma só deixa um poema de fora; 40 a 60 fica abaixo do limite e 150 a 200 passa dele."
+   "f": "A instrução abre com **«Compara»** e pede **uma passagem de cada poema**; o terceiro critério fixa **80 a 120 palavras**. E o «o que» de «o que os finais afirmam ou desejam» pede conteúdo: as palavras do verso, não só um rótulo.",
+   "fe": "Volta à instrução: «Compara», «uma passagem de cada poema», «Escreves 80 a 120 palavras». Resumir ou ilustrar não é comparar; um poema inteiro não é uma passagem, e uma só deixa um poema de fora; 40 a 60 fica abaixo do limite e 150 a 200 passa dele."
   },
   {
    "t": "ordenar",
    "g": 3,
-   "p": "Põe por ordem o plano dos 60 minutos de produção em papel.",
+   "p": "Põe por ordem o plano dos 60 minutos de produção em papel.",
    "p2": "Cada passo usa o que o anterior produziu. Do primeiro ao último: ordena.",
    "passos": [
     "Relês os dois poemas e escolhes uma passagem de cada",
@@ -148,7 +148,7 @@
    "t": "escolha",
    "g": 5,
    "p": "«Ela canta, pobre ceifeira» e «Ah, canta, canta sem razão!»: o que muda de um «canta» para o outro?",
-   "p2": "O verbo «canta» está no 1.º verso e abre a 4.ª estrofe, repetido. O que faz a voz em cada caso?",
+   "p2": "O verbo «canta» está no 1.º verso e abre a 4.ª estrofe, repetido. O que faz a voz em cada caso?",
    "o": [
     "No primeiro, a voz diz o que a ceifeira faz; no segundo, pede-lhe que cante. Muda o ato, não a palavra.",
     "Nada muda: nas duas vezes, a voz afirma que a ceifeira está a cantar.",
@@ -187,7 +187,7 @@
    "t": "vf",
    "g": 7,
    "p": "«Ah, poder ser tu, sendo eu!» prova que Fernando Pessoa quis, na vida dele, ser a ceifeira sem deixar de ser quem era.",
-   "p2": "Um verso na 1.ª pessoa, como «Ah, poder ser tu, sendo eu!», é um documento da vida de Pessoa.",
+   "p2": "Um verso na 1.ª pessoa, como «Ah, poder ser tu, sendo eu!», é um documento da vida de Pessoa.",
    "v": false,
    "f": "Falso: quem diz «eu» é **a voz do poema**; o verso mostra o desejo dessa voz, não um facto da vida do autor. Fingir não é mentir (lição F02), e a infância «Que não tive» também não prova a vida de Pessoa (lição F15).",
    "fe": "O poema constrói uma voz que ouve e deseja. Para saber o que Pessoa quis na vida seria precisa outra fonte, e um verso não é essa fonte."

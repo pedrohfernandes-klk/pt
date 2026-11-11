@@ -73,7 +73,8 @@ def assert_task_route(page, module, units):
         # 08/11/2026: decisão 152 no M4 (achado 34): também no índice do M4.
         # 08/11/2026: decisão 152 no M5 (achado 41): também no índice do M5.
         # 08/11/2026: decisão 152 no M6 (achado 32): também no índice do M6.
-        assert ('90\xa0min' if module in (1, 2, 3, 4, 5, 6) else '90 min') in row.inner_text()
+        # 11/11/2026: decisão 152 no M7 (achado 9): também no índice do M7.
+        assert ('90\xa0min' if module in (1, 2, 3, 4, 5, 6, 7) else '90 min') in row.inner_text()
         hrefs.append(link.get_attribute('href'))
     return hrefs
 

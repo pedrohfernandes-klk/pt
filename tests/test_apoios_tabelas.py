@@ -4,6 +4,8 @@ from html.parser import HTMLParser
 import hashlib,json,unittest
 from test_task_routes_closure import original_lesson_text
 from auditoria_20261028 import undo as undo_audit_20261028, undo_opcoes
+# 11/11/2026: decisão 152 no M7 (camada cuidado_m7_20261111): os espaços que não quebram da M7-F15 (achado 24) desfazem-se antes.
+from auditoria_20261028 import undo_cuidado_m7_1111
 ROOT=Path(__file__).resolve().parents[1]
 PATH='m7/licao-m7-f15/index.html'
 class Table(HTMLParser):
@@ -31,7 +33,9 @@ class TableAid(unittest.TestCase):
   # 30/10/2026: as opções denunciadoras (pedido do docente de 29/10) mudam a lacuna [1] do cartão 18 (camada literal
   # tests/fixtures/opcoes-denunciadoras-edits-20261030.json, que original_lesson_text() desfaz); os cartões comparam-se
   # com a página real sem essa camada.
-  old,new=cards(before),cards(undo_opcoes(PATH,source))
+  # 11/11/2026: a decisão 152 no M7 prende referências em seis cartões da F15 (U+00A0, achado 24, camada cuidado_m7_20261111, a
+  # mais recente); desfaz-se primeiro, com contagem estrita, e os cartões comparam-se como antes, campo a campo.
+  old,new=cards(before),cards(undo_opcoes(PATH,undo_cuidado_m7_1111(PATH,source)))
   self.assertEqual(len(old),len(new));self.assertEqual(len(new),21)
   for index,(a,b) in enumerate(zip(old,new)):
    if index==11:

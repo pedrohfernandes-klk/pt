@@ -238,7 +238,8 @@ def guia(browser, host):
     assert '_Mensagem_' not in rota and 'M7_Tarefa3_Opiniao' in rota, rota[:400]  # os nomes de ficheiro guardam o «_»
     assert page.locator('#r-criterios i').first.inner_text() == 'Mensagem'
     blocos = page.locator('#blocos .bloco b').all_inner_texts()
-    assert blocos == ['Aquecer, 15 min', 'Produzir, 60 min', 'Rever, apresentar e entregar, 15 min'], blocos
+    # 11/11/2026: decisão 152 no M7 (achado 7): o tempo de cada bloco leva espaço que não quebra (U+00A0) entre o número e «min».
+    assert blocos == ['Aquecer, 15\xa0min', 'Produzir, 60\xa0min', 'Rever, apresentar e entregar, 15\xa0min'], blocos
     assert page.locator('#relogio').inner_text() == '15:00'
     sem_deslizar(page, 'guia m7')
     assert not errors, errors

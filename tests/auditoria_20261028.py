@@ -344,7 +344,21 @@ _CUIDADO_M5_0811 = json.loads((ROOT/'tests/fixtures/cuidado-m5-edits-20261108.js
 # não se partem, camada mais recente, por cima da decisão 152 no M5: desfaz-se antes dela, com contagem estrita.
 _CUIDADO_M6_0811 = json.loads((ROOT/'tests/fixtures/cuidado-m6-edits-20261108.json').read_text('utf-8'))['files']
 
+# 11/11/2026: decisão 152 (cuidado em todas as lições), módulo M7: tabelas onde há itens paralelos e referências e números que
+# não se partem, camada mais recente, por cima da decisão 152 no M6: desfaz-se antes dela, com contagem estrita.
+_CUIDADO_M7_1111 = json.loads((ROOT/'tests/fixtures/cuidado-m7-edits-20261111.json').read_text('utf-8'))['files']
+
+def undo_cuidado_m7_1111(path, text):
+    for edit in reversed(_CUIDADO_M7_1111.get(_relative(path), {}).get('edits', [])):
+        if text.count(edit['new']) != edit['occurrences']:
+            raise AssertionError(f"Decisão 152 no M7 não confere: {path}: {edit['location']}")
+        text = text.replace(edit['new'], edit['old'])
+    return text
+
+
 def undo_cuidado_m6_0811(path, text):
+    # 11/11/2026: primeiro a decisão 152 no M7, que está por cima.
+    text = undo_cuidado_m7_1111(path, text)
     for edit in reversed(_CUIDADO_M6_0811.get(_relative(path), {}).get('edits', [])):
         if text.count(edit['new']) != edit['occurrences']:
             raise AssertionError(f"Decisão 152 no M6 não confere: {path}: {edit['location']}")
