@@ -103,6 +103,10 @@ assert [(i['numero'], i['verbo_instrucional'], i['tipo']) for i in PA1['itens'][
     ('I.1', 'Explicite', 'construção: resposta restrita'), ('I.2', 'Compare', 'construção: resposta restrita')]
 assert PA1['itens'][2]['tipo'].startswith('seleção')
 assert [t['autor'] for t in PA1['textos']] == ['José Saramago', 'José Saramago']
+# 12/11/2026 (revisão): o item 7 da 1.ª fase também é de resposta restrita e trata de romances, mas sem excerto dado na prova
+PC1 = F1['grupos'][0]['partes'][2]
+assert [(i['numero'], i['tipo']) for i in PC1['itens']] == [('I.7', 'construção: resposta restrita (breve exposição)')] and not PC1.get('textos')
+assert 'obras de José Saramago' in PC1['itens'][0]['enunciado'][0] and '_Memorial do Convento_' in ' '.join(PC1['itens'][0]['enunciado'])
 IT1 = PA1['itens'][0]
 assert IT1['cotacao'] == 13 and len(IT1['enunciado']) == 2
 
@@ -179,9 +183,9 @@ RESP_B = ('George é frontal na maneira de nomear as coisas. A mulher que tem à
           'O recorte não permite concluir o que George sente pela mulher nem pela velhice: mostra apenas a relação dela com uma maneira de dizer.')
 EX = [
     ('George é frontal na maneira de nomear o que vê.',
-     'Começa pelo traço, com uma palavra que o recorte não usa: é isso que faz dele uma inferência. Não tem parágrafo de introdução: este pedido não o exige e, sem pedido expresso, os critérios também não (p. 2).'),
+     'Começa pelo traço. É uma inferência porque passa de uma atitude perante as palavras, que o recorte mostra, para uma maneira de ser, que o recorte não escreve. Trocar uma palavra por um sinónimo não chegava. Não tem parágrafo de introdução: este pedido não o exige e, sem pedido expresso, os critérios também não (p. 2).'),
     ('A mulher que tem à frente é apresentada como «uma senhora de idade», mas a expressão é logo recusada, «De idade não», e trocada por uma designação direta: «uma mulher velha».',
-     'Primeiro elemento textual e o que ele mostra. Usa a palavra em que tocaste no passo 2. Falta o número da linha, que a lição não dá: na prova, ou a partir do manual, indica-o.'),
+     'Primeiro elemento textual e o que ele mostra. Usa a palavra em que tocaste no passo 2. Falta o número da linha, que a lição não dá. Juntá-lo é um hábito nosso (os critérios oficiais dão a linha nos tópicos, mas os níveis não a exigem): se tiveres o manual, indica-o.'),
     ('Esta exigência não vale só para o que se diz em voz alta: segundo a narração, George detesta eufemismos «mesmo só pensados».',
      'Segundo elemento, pela mesma ordem. Separa quem conta (a narração) de quem pensa (George): a correção não é uma fala.'),
     ('O recorte mostra, assim, a relação de George com uma maneira de dizer; não permite concluir o que ela sente pela mulher que a olha, nem pela velhice.',
@@ -211,20 +215,21 @@ TREINO = {
                  '<p><b>O que é diferente.</b> O texto da prova é dramático, um excerto de <i>Frei Luís de Sousa</i>, de Almeida Garrett: só tem falas e didascálias, e é delas que se infere. '
                  '«George» é um conto: há um narrador, e é pela narração que ficas a saber o que George pensa. A prova pede dois traços. O pedido de treino pede um, porque o recorte só tem duas frases, '
                  'e junta-lhe um limite, que a prova não pede.</p>'
-                 '<p>Em 2026, os itens de resposta restrita sobre texto narrativo são os itens 1 e 2 da 1.ª fase, sobre dois excertos de romances de José Saramago. Usam outros verbos, «Explicite» e «Compare». O primeiro diz assim:</p>'
+                 '<p>Em 2026, os itens de resposta restrita sobre um excerto narrativo dado na prova são os itens 1 e 2 da 1.ª fase, com dois excertos de romances de José Saramago. Usam outros verbos, «Explicite» e «Compare». '
+                 'O item 7 da mesma fase pede uma breve exposição sobre um romance do mesmo autor, sem excerto. O item 1 diz assim:</p>'
                  '<div class="caixa of">' + etq('oficial') + '<p class="enun">' + md(IT1['enunciado'][0]) + '</p><p class="enun">' + md(IT1['enunciado'][1]) + '</p>'
                  '<p class="pag">Prova 639, 2026, 1.ª fase, Grupo I, Parte A, item 1 (13 pontos). ' + lig('e1', 'Enunciado, p. 3 (PDF em eduqa.pt)') + '; ' + lig('c1', 'critérios, pp. 4-5 (PDF em eduqa.pt)') + '.</p></div>'
                  '<p>No Grupo I das duas fases, o verbo «Infira» só aparece no item 4 da 2.ª fase. Nenhum item de 2026 manda inferir a partir de um conto.</p>'},
                 {'t': 'escolha', 'id': 'p5-pedido', 'etq': 'treino', 'curto': 'O que o pedido de treino manda fazer',
                  'p': 'O que tem de aparecer na tua resposta para o pedido de treino ficar cumprido?',
                  'o': [
-                     {'t': 'Um resumo do conto «George», do princípio ao fim.',
+                     {'t': 'Um resumo do conto «George», do princípio ao fim, com tudo o que acontece às três figuras.',
                       'pista': '<p>Relê o primeiro verbo do pedido de treino e o que vem logo a seguir. Um resumo conta o que acontece. Vê se o pedido fala do que acontece ou de como George é.</p>'},
-                     {'t': 'Um traço de George que o recorte não escreve mas sustenta, dois elementos textuais que o apoiem e uma conclusão que o recorte não permite.',
+                     {'t': 'Um traço de George que o recorte sustenta, dois elementos textuais que o apoiem e uma conclusão que o recorte não permite.',
                       'pista': ''},
-                     {'t': 'A tua opinião sobre George: se gostas dela ou não, e porquê.',
+                     {'t': 'A tua opinião sobre George: se gostas dela ou não, e porquê, com dois exemplos do que tu farias no lugar dela.',
                       'pista': '<p>Procura no pedido de treino as palavras que dizem onde tem de estar o traço: «evidenciado no recorte». Vê se uma opinião tua está no recorte.</p>'},
-                     {'t': 'Dois traços da personalidade de George, cada um com a sua transcrição, e mais nada.',
+                     {'t': 'Dois traços da personalidade de George, cada um com a sua transcrição do recorte, e mais nada.',
                       'pista': '<p>Estás a responder ao item oficial, que pede dois traços de Manuel. Relê o pedido de treino e conta: quantos traços, quantos elementos textuais, e o que pede a segunda frase.</p>'},
                  ], 'c': 1,
                  'pista2': '<p>Lê o pedido de treino aos bocados. Primeiro, o verbo e o que ele pede. Depois, o que vem a seguir a «fundamentando a tua resposta com». Por fim, a segunda frase. A opção adequada traz as três partes e mais nada.</p>',
@@ -249,7 +254,7 @@ TREINO = {
                      {'se': [3, 4, 5, 6], 'x': '<p>«uma senhora de idade» é a primeira maneira de dizer a idade. A pergunta é pela palavra que a afasta: procura na segunda frase.</p>'},
                      {'se': [22, 23, 24], 'x': '<p>«uma mulher velha» é a maneira de dizer que fica no fim. Antes dela, há uma palavra que afasta a primeira: procura no início da segunda frase.</p>'},
                      {'se': [16, 17, 18], 'x': '<p>«George detesta eufemismos» dá a razão da troca. A pergunta é pela palavra que faz a recusa, antes da razão.</p>'},
-                     {'se': [19, 20, 21], 'x': '<p>«mesmo só pensados» diz onde tudo isto se passa. Guarda estas palavras para a pergunta seguinte. Agora procura a palavra que recusa.</p>'},
+                     {'se': [19, 20, 21], 'x': '<p>Essas palavras não recusam nenhuma expressão. A pergunta é pela palavra que afasta a primeira maneira de dizer a idade: procura no início da segunda frase.</p>'},
                      {'se': [0, 1, 2, 7, 8, 9, 10, 11, 12], 'x': '<p>Essas palavras são da primeira frase, que apresenta a mulher. A recusa está na segunda frase.</p>'},
                  ],
                  'falta': '<p>Procura, no início da segunda frase, a palavra que recusa a expressão da primeira.</p>',
@@ -285,7 +290,7 @@ TREINO = {
                       'pista': '<p>Procura estas palavras no recorte. Se lá estão, o texto di-lo: não precisas de inferir. Inferir é dar um passo a partir do que está escrito.</p>'},
                      {'t': 'George tem medo de envelhecer.',
                       'pista': '<p>Procura no recorte uma palavra de medo, ou um gesto que o mostre. Vê se o que encontras é sobre a velhice ou sobre uma maneira de a nomear.</p>'},
-                     {'t': 'George é frontal na maneira de nomear: troca a expressão suave pela direta, até em pensamento.',
+                     {'t': 'George é frontal na maneira de nomear as coisas.',
                       'pista': ''},
                      {'t': 'George diz à mulher, em voz alta, que ela é velha.',
                       'pista': '<p>Volta às palavras em que tocaste no passo 2, entre as duas últimas vírgulas. Vê se a correção chega a sair em voz alta.</p>'},
@@ -293,7 +298,8 @@ TREINO = {
                  'pista2': '<p>Faz duas perguntas a cada afirmação. Primeira: está escrita no recorte, com estas palavras? Se está, o texto di-lo. Segunda: que palavras do recorte a sustentam? '
                            'Se não encontras nenhuma, és tu que a acrescentas. Sobra uma afirmação: a que não está escrita e tem palavras que a sustentam.</p>',
                  'f': '<ul class="top"><li><b>O recorte diz.</b> «George detesta eufemismos» está lá, com todas as letras. Copiar não é inferir.</li>'
-                      '<li><b>O recorte sugere.</b> A palavra «frontal» não está no recorte, mas a correção («De idade não», «uma mulher velha») e o lugar onde ela se passa («mesmo só pensados») sustentam-na. É uma inferência com apoio.</li>'
+                      '<li><b>O recorte sugere.</b> O recorte escreve uma atitude perante as palavras («George detesta eufemismos») e mostra um gesto: a correção («De idade não», «uma mulher velha»), que se passa no pensamento («mesmo só pensados»). '
+                      'Daí a uma maneira de ser, a de quem é frontal, vai um passo que o recorte não escreve mas sustenta. É uma inferência com apoio. Dizer o mesmo por outras palavras não chegava.</li>'
                       '<li><b>Tu acrescentas.</b> O medo de envelhecer não tem nenhuma palavra do recorte a sustentá-lo. A lição M8-F16 avisa: o recorte mostra a relação de George com uma palavra, e não dá a conhecer tudo o que ela sente sobre o envelhecimento.</li>'
                       '<li><b>O recorte contraria.</b> A correção não é dita em voz alta: os eufemismos são recusados «mesmo só pensados».</li></ul>'
                       '<p>Os critérios do item oficial fazem o mesmo caminho: dão o nome de um traço que o excerto não escreve e, logo a seguir, o que no texto o mostra. Um dos tópicos começa assim: «' + T_RAC + '», '
@@ -348,7 +354,7 @@ TREINO = {
                 {'t': 'ver1', 'de': 'p5-resposta'},
                 {'t': 'html', 'h': '<div class="caixa tr">' + etq('treino') +
                  '<p><b>Tópicos de resposta</b> (feitos por nós, à maneira dos critérios oficiais).</p><ul class="top">'
-                 '<li><b>O traço.</b> Frontalidade na maneira de nomear, exigência com as palavras ou recusa de atenuar o que vê. Vale outro nome, se o recorte o sustentar.</li>'
+                 '<li><b>O traço.</b> Exigência com as palavras, até consigo mesma; frontalidade na maneira de nomear; ou recusa de atenuar o que vê. Vale outro nome, se o recorte o sustentar.</li>'
                  '<li><b>Primeiro elemento.</b> A correção: «uma senhora de idade» é recusada, «De idade não», e trocada por «uma mulher velha».</li>'
                  '<li><b>Segundo elemento.</b> «mesmo só pensados»: a exigência vale até no pensamento, e a correção não é dita à mulher. Em alternativa, «George detesta eufemismos», que atribui a atitude a George.</li>'
                  '<li><b>O limite.</b> O recorte não permite concluir, por exemplo, o que George sente pela velhice, o que sente pela mulher que a olha, quem é essa mulher, ou que haja hostilidade entre as duas.</li></ul>'
@@ -358,7 +364,7 @@ TREINO = {
                 {'t': 'lista', 'id': 'p5-conf', 'titulo': 'Confere a tua primeira versão',
                  'intro': '<p class="ajuda">Marca o que já está na tua resposta. O que ficar por marcar é o que vais rever no passo seguinte.</p>',
                  'itens': [
-                     'Dei um nome ao traço de George, com uma palavra ou expressão minha, que não copiei do recorte.',
+                     'Dei um nome ao traço de George: uma maneira de ser que o recorte não escreve, e não só outra palavra para o que lá está.',
                      'Apoiei o traço em dois elementos textuais, entre aspas, copiados letra a letra.',
                      'Cada elemento vem acompanhado do que ele mostra.',
                      'Não dei como inferência o que o recorte já diz com todas as letras.',
@@ -398,7 +404,7 @@ CAB = (
     '<div><dt>Item oficial a que se liga</dt><dd>Prova 639, 2026, 2.ª fase, Grupo I, Parte B, item 4 (resposta restrita, 13 pontos): inferir dois traços da personalidade de uma personagem, com elementos textuais. '
     + lig('e2', 'Enunciado, pp. 4-5 (PDF em eduqa.pt)') + '; ' + lig('c2', 'critérios, pp. 8-9 (PDF em eduqa.pt)') + '. Critérios definitivos, publicados a 31/07/2026.</dd></div>'
     '<div><dt>O que é igual e o que é diferente</dt><dd>Igual: o verbo «Infira», uma personagem, o apoio em elementos textuais. Diferente: o texto da prova é dramático (um excerto de <i>Frei Luís de Sousa</i>), não narrativo; a prova pede dois traços e o treino pede um, com um limite. '
-    'Em 2026, os itens de resposta restrita sobre texto narrativo são os itens 1 e 2 da 1.ª fase (' + lig('e1', 'enunciado, p. 3') + '; ' + lig('c1', 'critérios, pp. 4-7') + '), com os verbos «Explicite» e «Compare». Nenhum item de 2026 manda inferir a partir de um conto.</dd></div>'
+    'Em 2026, os itens de resposta restrita sobre um excerto narrativo dado na prova são os itens 1 e 2 da 1.ª fase (' + lig('e1', 'enunciado, p. 3') + '; ' + lig('c1', 'critérios, pp. 4-7') + '), com os verbos «Explicite» e «Compare». Nenhum item de 2026 manda inferir a partir de um conto.</dd></div>'
     '<div><dt>O texto</dt><dd>O conto tem direitos de autor. A página mostra só um recorte de duas frases, o que a lição M8-F16 já traz, e indica onde ler o conto inteiro: no manual.</dd></div>'
     '<div><dt>O que é de quem</dt><dd>' + LEGENDA + '</dd></div>'
     '</dl>'

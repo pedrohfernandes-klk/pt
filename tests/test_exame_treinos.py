@@ -382,6 +382,52 @@ class TreinosExame(unittest.TestCase):
         self.assertEqual({'cit'}, {ps['apoio'] for ps in d['passos']})
         self.assertEqual(7, len(d['passos']))
 
+    def test_achados_da_revisao_de_12_11(self):
+        # 12/11/2026: teste novo, com o que a revisão independente dos treinos 4 e 5 apanhou
+        # a opção adequada não se reconhece pelo tamanho: nunca passa de 1,4 vezes a mais longa das outras
+        for T in (T1, T2, T3, T4, T5):
+            for ps in T.TREINO['passos']:
+                for b in ps['blocos']:
+                    if b['t'] != 'escolha':
+                        continue
+                    tam = [len(o['t']) for o in b['o']]
+                    outras = max(t for i, t in enumerate(tam) if i != b['c'])
+                    with self.subTest(pergunta=b['id']):
+                        self.assertLessEqual(tam[b['c']] / outras, 1.4, tam)
+        # no passo 3 do conto, as quatro afirmações têm a mesma forma: nenhuma traz a justificação depois de dois pontos
+        sep = [b for ps in T5.TREINO['passos'] for b in ps['blocos'] if b.get('id') == 'p5-separar'][0]
+        self.assertEqual(4, len(sep['o']))
+        for o in sep['o']:
+            self.assertNotIn(':', o['t'])
+            self.assertRegex(o['t'], r'^George [^;()«»]+\.$')
+        # nenhuma pista da primeira busca do conto entrega as palavras que a segunda busca pede
+        rec, pen = [b for ps in T5.TREINO['passos'] for b in ps['blocos'] if b.get('id') in ('p5-recusa', 'p5-pensados')]
+        self.assertEqual(('p5-recusa', 'p5-pensados'), (rec['id'], pen['id']))
+        pistas1 = ' '.join(x['x'] for x in rec['pistas']) + rec['falta'] + rec['pista2']
+        self.assertNotRegex(pistas1, r'pensad|pergunta seguinte|[Gg]uarda')
+        for T in (T1, T2, T3, T4, T5):
+            self.assertNotIn('pergunta seguinte', json.dumps(T.TREINO, ensure_ascii=False))
+        # a página da poesia não afirma por conta própria que a citação é o último verso de «Uma pequenina luz»
+        self.assertNotRegex(T4.NOSSO, r'(?i)\bfech(o|a)\b')
+        self.assertIn('Vem no fim do poema, segundo a <a href="../../../m8/licao-m8-f03/">', T4.APOIO)
+        # o número do verso ou da linha é hábito nosso, e as duas páginas dizem-no
+        for T in (T4, T5):
+            self.assertNotRegex(json.dumps(T.TREINO, ensure_ascii=False), r'na prova, ou a partir do manual|copiada do manual, com o número|copia-o do manual')
+        self.assertIn('Se copiei do manual, juntei o número do verso (hábito nosso, não é exigência dos critérios).', self.texto['exame/treinos/poesia-contemporanea/index.html'] + json.dumps(T4.TREINO, ensure_ascii=False))
+        self.assertIn('Juntá-lo é um hábito nosso', json.dumps(T4.TREINO, ensure_ascii=False))
+        self.assertIn('Juntá-lo é um hábito nosso', json.dumps(T5.TREINO, ensure_ascii=False))
+        # o descritor «um dos sujeitos poéticos» vem depois da ponte que diz que a Resposta A cumpria a estrutura do item oficial
+        t4 = json.dumps(T4.TREINO, ensure_ascii=False)
+        self.assertLess(t4.index('lá, uma resposta como a A cumpria a estrutura pedida'), t4.index(T4.D_UM))
+        # o conto: os itens 1 e 2 da 1.ª fase são os de excerto narrativo dado na prova (o item 7 é resposta restrita sem excerto)
+        h5 = self.html['exame/treinos/conto/index.html']
+        self.assertEqual(2, h5.count('os itens de resposta restrita sobre um excerto narrativo dado na prova são os itens 1 e 2 da 1.ª fase'))
+        self.assertNotIn('itens de resposta restrita sobre texto narrativo', h5)
+        # e uma inferência não é uma palavra nova para o que o recorte já escreve
+        t5 = json.dumps(T5.TREINO, ensure_ascii=False)
+        self.assertNotRegex(t5, r'com uma palavra que o recorte não usa|que não copiei do recorte')
+        self.assertIn('Trocar uma palavra por um sinónimo não chegava.', t5)
+
     def test_ligacoes_oficiais_em_eduqa(self):
         self.assertEqual(EDUQA, set(B.URL.values()))
         for p in PAGINAS[1:]:

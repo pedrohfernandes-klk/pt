@@ -460,10 +460,11 @@ for(const [w,h] of [[390,844],[1280,900]]) for(const cs of ['light','dark']){
   await passo(5);
   ok((await p.locator('#v1-p4-resposta').innerText()).includes('Primeira versão do aluno')&&await p.locator('.alt:visible').count()===0,tag+' p4 primeira versão à vista na conferência, sem aviso');
   await semDeslize('p4 passo 5 com palavra muito longa');
+  // 12/11/2026: a lista do treino 4 passa de 9 para 10 aspetos (a transcrição e o número do verso ficam em aspetos separados; o número é hábito nosso); a contagem continua exata e confere-se o texto dos dois
   { const t=await p.locator('#passo').innerText();
     ok(/Tópicos de resposta/.test(t)&&/O que se mantém e o que muda/.test(t)&&/se o texto te mostrar outra coisa, vale o texto/.test(t)&&/igualdade de circunstâncias/.test(t)&&/ou outros igualmente relevantes/.test(t),tag+' p4 tópicos nossos e regra oficial das outras formulações');
     ok(/Um exemplo comentado/.test(t)&&/Uma maneira de organizar \(é nossa, não é exigência do exame\)/.test(t)&&await p.locator('#passo .anot').count()===4,tag+' p4 exemplo comentado e «Uma maneira de organizar»');
-    ok(await p.locator('#passo input[type=number]').count()===0&&await p.locator('#passo input[type=radio]').count()===0&&await p.locator('#passo .marca-l input[type=checkbox]').count()===9&&!/a tua classificação|pontos obtidos/i.test(t)&&/Não há classificação automática/.test(t),tag+' p4 sem classificação automática: só marcação aspeto a aspeto (9 aspetos)'); }
+    ok(await p.locator('#passo input[type=number]').count()===0&&await p.locator('#passo input[type=radio]').count()===0&&await p.locator('#passo .marca-l input[type=checkbox]').count()===10&&/copiada letra a letra\./.test(t)&&/Se copiei do manual, juntei o número do verso \(hábito nosso, não é exigência dos critérios\)\./.test(t)&&!/a tua classificação|pontos obtidos/i.test(t)&&/Não há classificação automática/.test(t),tag+' p4 sem classificação automática: só marcação aspeto a aspeto (10 aspetos)'); }
   await p.click('text=Alterar a primeira versão');
   await p.fill('#e-p4-resposta',V1+' Acrescento.');
   ok(/alterada depois de veres os critérios/.test(await p.locator('.alt:visible').innerText()),tag+' p4 aviso «alterada depois de veres os critérios» junto da versão');

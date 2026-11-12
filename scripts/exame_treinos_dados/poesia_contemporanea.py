@@ -23,7 +23,7 @@ for _c, (_p, _l) in CITACOES.items():
 # o que se diz dos poemas além das citações é resumo das lições: as frases de apoio têm de lá estar
 for _s in ('Uma luz pequena e trémula, no meio das pessoas', 'Há quem sopre com raiva para a apagar', 'A luz não aquece, não ilumina os rostos, não custa dinheiro',
            'No fim de «Uma pequenina luz», «Apenas como elas. / Mas brilha.»', 'A luz é comparada à **exatidão, à firmeza e à justiça**',
-           'Jorge de Sena, «Uma pequenina luz», Fidelidade (1958)', '«Uma pequenina luz»: no manual', 'É o fecho do primeiro poema, «Uma pequenina luz»'):
+           'Jorge de Sena, «Uma pequenina luz», Fidelidade (1958)', '«Uma pequenina luz»: no manual', '«Mas brilha», como «elas»: a que é comparada a luz no fim do poema?'):
     assert _s in L3, ('lição M8-F03', _s)
 for _s in ('O poema abre com uma comparação: «São como um cristal, / as palavras.»', 'navegam sem segurança', 'São frágeis e inocentes',
            'O poema acaba com duas perguntas, que ficam sem resposta: quem as ouve, e quem as recolhe', 'as palavras podem perder-se, e o poema pergunta quem as recolhe',
@@ -126,7 +126,7 @@ APOIO = (
     '<p class="texto-a">Os dois poemas têm direitos de autor. Aqui ficam só as duas citações que as lições do módulo 8 já trazem. Os poemas inteiros estão no manual.</p>'
     '<p class="notas-t">Jorge de Sena, «Uma pequenina luz»</p>'
     '<p class="cit">«' + C_SENA + '»</p>'
-    '<p class="fonte">É o fecho do poema. Citação da ' + LIG3 + '. A barra separa dois versos.</p>'
+    '<p class="fonte">Vem no fim do poema, segundo a ' + LIG3 + ', de onde é a citação. A barra separa dois versos.</p>'
     '<ul class="notas"><li><b>O que a lição diz do poema</b> (resumo, não são versos): a luz é pequena e trémula e está no meio das pessoas; não aquece, não ilumina os rostos, não custa dinheiro; há quem sopre com raiva para a apagar.</li>'
     '<li><b>elas</b>: segundo a lição, a exatidão, a firmeza e a justiça, a que a luz é comparada.</li></ul>'
     '<p class="notas-t">Eugénio de Andrade, «As Palavras»</p>'
@@ -145,14 +145,14 @@ CX_PEDIDO = '<div class="caixa tr">' + etq('treino') + '<p class="enun">' + PEDI
 RESP_A = ('Em «As Palavras», de Eugénio de Andrade, as palavras são frágeis: «São como um cristal, / as palavras.» '
           'Em «Uma pequenina luz», de Jorge de Sena, a luz é pequena, mas não se apaga: «Mas brilha.»')
 RESP_B = ('Os dois poemas apresentam uma coisa frágil e os dois a comparam a outra. Em «As Palavras», a comparação vem na abertura, «São como um cristal, / as palavras.», '
-          'e o poema acaba em perguntas que ficam sem resposta. Em «Uma pequenina luz», a comparação vem no fecho, «Apenas como elas.», e é seguida de uma afirmação: «Mas brilha.» '
+          'e o poema acaba em perguntas que ficam sem resposta. Em «Uma pequenina luz», a comparação vem no fim, «Apenas como elas.», e é seguida de uma afirmação: «Mas brilha.» '
           'Nos dois a coisa frágil corre perigo, mas só o poema de Jorge de Sena acaba a dizer que ela resiste.')
 EX = [
     ('«As Palavras», de Eugénio de Andrade, e «Uma pequenina luz», de Jorge de Sena, dão valor a uma coisa frágil, e os dois a dizem por comparação.',
      'Começa pelo eixo: diz logo o que os dois poemas têm em comum. Não tem parágrafo de introdução: este pedido não o exige e, sem pedido expresso, os critérios também não (p. 2).'),
     ('No poema de Eugénio de Andrade, a comparação abre o texto, «São como um cristal, / as palavras.», e a fragilidade fica em aberto: o poema termina com duas perguntas a que ninguém responde.',
-     'Primeiro poema: a ideia, a transcrição e o que ela mostra. Falta o número dos versos, que as lições não dão: na tua resposta, copia-o do manual.'),
-    ('No poema de Jorge de Sena, a comparação vem no fecho, «Apenas como elas.», e é logo seguida de uma oposição: «Mas brilha.»',
+     'Primeiro poema: a ideia, a transcrição e o que ela mostra. Falta o número dos versos, que as lições não dão. Juntá-lo é um hábito nosso, que os níveis dos critérios não exigem: se copiares do manual, indica-o.'),
+    ('No poema de Jorge de Sena, a comparação vem no fim, «Apenas como elas.», e é logo seguida de uma oposição: «Mas brilha.»',
      'Segundo poema, pela mesma ordem. Usa a palavra em que tocaste no passo 2 e diz o que ela faz: opõe.'),
     ('Assim, os dois poemas mostram uma coisa frágil, mas não a deixam no mesmo ponto: em «As Palavras», não se sabe se alguém a recolhe; em «Uma pequenina luz», ela resiste.',
      'Diz o que se mantém e o que muda. É esta frase que faz da resposta uma comparação: sem ela, ficavam duas descrições, como na Resposta A.'),
@@ -215,7 +215,7 @@ TREINO = {
                  ],
                  'falta': '<p>Procura, no segundo verso da citação, a palavra que marca uma oposição.</p>',
                  'pista2': '<p>Fica só no segundo verso da citação, que tem duas palavras. Uma diz o que a luz faz. A outra é uma conjunção: liga este verso ao que vem antes e opõe-no a ele.</p>',
-                 'f': '<p>«Mas» é uma conjunção coordenativa adversativa: opõe o brilho a tudo o que vem antes. Segundo a lição M8-F03, a luz é pequena e trémula, não aquece, não ilumina os rostos, e há quem sopre com raiva para a apagar. O poema fecha com uma afirmação curta: «Mas brilha.» Guarda esta palavra: vais precisar dela na tua resposta.</p>'},
+                 'f': '<p>«Mas» é uma conjunção coordenativa adversativa: opõe o brilho a tudo o que vem antes. Segundo a lição M8-F03, a luz é pequena e trémula, não aquece, não ilumina os rostos, e há quem sopre com raiva para a apagar. No fim, o poema afirma, em duas palavras: «Mas brilha.» Guarda esta palavra: vais precisar dela na tua resposta.</p>'},
                 {'t': 'tocar', 'id': 'p4-eugenio', 'etq': 'treino', 'modo': 'palavras', 'curto': 'A palavra que diz a que são comparadas as palavras',
                  'p': 'Na citação de «As Palavras», toca na palavra que diz a que são comparadas as palavras. Depois toca em «Verificar».',
                  'tokens': TOK_E,
@@ -229,7 +229,7 @@ TREINO = {
                  ],
                  'falta': '<p>Procura o nome que vem depois de «como».</p>',
                  'pista2': '<p>Fica no primeiro verso da citação. Uma comparação tem dois termos e uma palavra que os liga. O primeiro termo está no segundo verso; a palavra que liga é «como». Toca no que sobra: o nome do segundo termo.</p>',
-                 'f': '<p>«cristal»: a lição M8-F04 lê nesta comparação uma coisa frágil, que também pode ferir. Repara que as duas citações têm «como»: os dois poemas comparam. Em «As Palavras», a comparação abre o poema; em «Uma pequenina luz», a citação é o fecho.</p>'
+                 'f': '<p>«cristal»: a lição M8-F04 lê nesta comparação uma coisa frágil, que também pode ferir. Repara que as duas citações têm «como»: os dois poemas comparam. Em «As Palavras», a comparação abre o poema; em «Uma pequenina luz», segundo a lição M8-F03, a comparação vem no fim.</p>'
                       '<p class="pag">Duas citações não são dois poemas. Antes de escreveres, lê os poemas inteiros no manual.</p>'},
             ],
         }),
@@ -255,7 +255,8 @@ TREINO = {
                  'pista2': '<p>Procura, em cada resposta, as palavras que ligam um poema ao outro: «os dois», «nos dois», «mas só». Vê qual das respostas as tem e qual fala de um poema e depois do outro, sem ligação.</p>',
                  'f': '<p>A Resposta A não erra: cada frase traz a sua transcrição. Mas são duas descrições lado a lado. Falta dizer o que se mantém e o que muda de um poema para o outro, e é isso que «Compara» pede.</p>'
                       '<p>No item oficial com o verbo «Compare» (1.ª fase, item 2), os tópicos dos critérios juntam sempre os dois textos na mesma frase. O primeiro começa assim: «' + T_AMBOS + '», e continua com «no mercado do peixe» de um lado e «enquanto, no mercado da Praça da Figueira» do outro <span class="pag">(critérios da 1.ª fase, p. 6)</span>.</p>'
-                      '<p>No item oficial dos dois poemas (2.ª fase, item 2), quem só trata um dos poemas não passa do nível 3, que vale 6 dos 10 pontos: «' + D_UM + '» <span class="pag">(critérios da 2.ª fase, p. 7)</span>.</p>'
+                      '<p>No item oficial dos dois poemas (2.ª fase, item 2), o verbo é «Explique» e os critérios pedem um tópico por poema: lá, uma resposta como a A cumpria a estrutura pedida. É o verbo «Compara», do pedido de treino, que a deixa aquém.</p>'
+                      '<p>Nos dois casos, os dois poemas têm de ser tratados. Lá, quem só trata um não passa do nível 3, que vale 6 dos 10 pontos: «' + D_UM + '» <span class="pag">(critérios da 2.ª fase, p. 7)</span>.</p>'
                       '<p class="pag">Usar estes critérios em dois poemas que não saíram na prova é leitura nossa.</p>'},
             ],
         }),
@@ -280,8 +281,8 @@ TREINO = {
                  '<p><b>Tópicos de resposta</b> (feitos por nós, à maneira dos critérios oficiais).</p><ul class="top">'
                  '<li><b>O eixo.</b> Os dois poemas apresentam uma coisa frágil e dão-lhe valor: as palavras, em «As Palavras»; uma luz pequena, em «Uma pequenina luz».</li>'
                  '<li><b>«As Palavras».</b> As palavras são comparadas a um cristal logo na abertura: «São como um cristal, / as palavras.» Segundo a lição M8-F04, são frágeis, navegam sem segurança e podem perder-se: o poema acaba com duas perguntas que ficam sem resposta.</li>'
-                 '<li><b>«Uma pequenina luz».</b> Segundo a lição M8-F03, a luz é pequena e trémula, e há quem sopre com raiva para a apagar. O poema fecha com «Apenas como elas. / Mas brilha.»: a luz é comparada à exatidão, à firmeza e à justiça e, apesar de tudo, brilha.</li>'
-                 '<li><b>O que se mantém e o que muda.</b> Mantém-se a coisa frágil, dita por comparação e em perigo. Muda o fecho: «As Palavras» acaba em pergunta; «Uma pequenina luz» acaba em afirmação. '
+                 '<li><b>«Uma pequenina luz».</b> Segundo a lição M8-F03, a luz é pequena e trémula, e há quem sopre com raiva para a apagar. No fim do poema, segundo a mesma lição, vem «Apenas como elas. / Mas brilha.»: a luz é comparada à exatidão, à firmeza e à justiça e, apesar de tudo, brilha.</li>'
+                 '<li><b>O que se mantém e o que muda.</b> Mantém-se a coisa frágil, dita por comparação e em perigo. Muda o fim: «As Palavras» acaba em pergunta; «Uma pequenina luz» acaba a afirmar que a luz brilha. '
                  'Muda também aquilo de que se fala: da própria poesia, num caso (a lição chama-lhe arte poética); de uma luz posta ao lado da justiça, no outro (a lição vê aí o poeta como testemunha).</li></ul>'
                  '<p class="pag">Estes tópicos apoiam-se nas lições M8-F03 e M8-F04 e nas duas citações. Confere-os com os poemas inteiros, no manual: se o texto te mostrar outra coisa, vale o texto.</p></div>'
                  '<div class="caixa of">' + etq('oficial') + '<p><b>Outras formulações também contam.</b> ' + REGRA_P2 + ' <span class="pag">(critérios gerais, p. 2)</span></p>'
@@ -292,7 +293,8 @@ TREINO = {
                      'Disse o eixo: o que os dois poemas têm em comum.',
                      'Disse o que cada poema faz com a coisa frágil (a luz, num; as palavras, no outro).',
                      'Disse pelo menos uma diferença entre os dois poemas, e não só duas descrições seguidas.',
-                     'Usei uma transcrição de cada poema, entre aspas, copiada do manual, com o número do verso.',
+                     'Usei uma transcrição de cada poema, entre aspas, copiada letra a letra.',
+                     'Se copiei do manual, juntei o número do verso (hábito nosso, não é exigência dos critérios).',
                      'Cada transcrição vem acompanhada do que ela mostra.',
                      'Não atribuí aos poemas o que eles não dizem: o que afirmei confere com o texto do manual.',
                      'Escrevi «o sujeito poético» ou «o poema» para quem fala, sem confundir a voz do poema com a vida do poeta.',
@@ -346,6 +348,8 @@ for _s in [md(IT['enunciado'][0]), md(IT1['enunciado'][0]), md(IT1['enunciado'][
     assert _s in NOSSO
     NOSSO = NOSSO.replace(json.dumps(_s, ensure_ascii=False)[1:-1], '').replace(_s, '')
 cita_ok(NOSSO)
+# 12/11/2026 (revisão): a lição M8-F03 põe a citação «no fim» do poema; a página não diz por conta própria que é o último verso
+assert not re.search(r'(?i)\bfech(o|a)\b', NOSSO), 'a página não afirma que a citação fecha o poema'
 
 
 def construir():
