@@ -7,6 +7,19 @@ import sys
 
 ROOT=Path(__file__).resolve().parents[1]
 LAYERS=[
+ # 12/11/2026: a ligação «Treinos» na navegação da página principal do Exame (exame/index.html), camada mais recente, por cima da
+ # decisão 152 no Exame e nas páginas transversais (que passa a ser a segunda).
+ ('exame_ligacao_treinos_20261112','exame-ligacao-treinos-edits-20261112'),
+ # 12/11/2026: decisão 152 (cuidado em todas as lições), Exame e páginas transversais (as sessões, o laboratório, as provas em
+ # cartões e os aquecimentos do Exame, as obras, as páginas dos anos, o mapa e a entrada): uma tabela onde havia itens paralelos e
+ # referências e números que não se partem, camada mais recente, por cima da decisão 152 no M9.
+ ('cuidado_exame_20261112','cuidado-exame-edits-20261112'),
+ # 12/11/2026: decisão 152 (cuidado em todas as lições), módulo M9: tabelas onde há itens paralelos e referências e números que
+ # não se partem, por cima da decisão 152 no M8 (a mais recente passou a ser a do Exame e das páginas transversais, acima).
+ ('cuidado_m9_20261112','cuidado-m9-edits-20261112'),
+ # 12/11/2026: decisão 152 (cuidado em todas as lições), módulo M8: tabelas onde há itens paralelos e referências e números que
+ # não se partem, camada mais recente, por cima da decisão 152 no M7.
+ ('cuidado_m8_20261112','cuidado-m8-edits-20261112'),
  # 11/11/2026: decisão 152 (cuidado em todas as lições), módulo M7: tabelas onde há itens paralelos e referências e números que
  # não se partem, camada mais recente, por cima da decisão 152 no M6.
  ('cuidado_m7_20261111','cuidado-m7-edits-20261111'),

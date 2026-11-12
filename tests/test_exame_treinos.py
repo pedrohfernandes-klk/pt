@@ -523,6 +523,8 @@ class TreinosExame(unittest.TestCase):
     def test_entrada_dos_treinos_ligada_a_partir_do_exame(self):
         # exame/index.html está registado em camadas literais e não se muda aqui: os treinos ligam-se a partir das provas em
         # cartões e do laboratório, que têm a navegação da preparação no cabeçalho
+        # 12/11/2026: a ligação na página principal do Exame entrou depois, pela camada literal exame_ligacao_treinos_20261112
+        # (conferida em tests/test_exame_ligacao_treinos.py); as asserções daqui ficam como estavam
         for p in ('exame/provas/index.html', 'exame/laboratorio/index.html'):
             with self.subTest(pagina=p):
                 h = (ROOT / p).read_text('utf-8')

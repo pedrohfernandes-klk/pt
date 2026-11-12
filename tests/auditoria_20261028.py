@@ -349,7 +349,80 @@ _CUIDADO_M6_0811 = json.loads((ROOT/'tests/fixtures/cuidado-m6-edits-20261108.js
 # não se partem, camada mais recente, por cima da decisão 152 no M6: desfaz-se antes dela, com contagem estrita.
 _CUIDADO_M7_1111 = json.loads((ROOT/'tests/fixtures/cuidado-m7-edits-20261111.json').read_text('utf-8'))['files']
 
+# 12/11/2026: decisão 152 (cuidado em todas as lições), módulo M8: tabelas onde há itens paralelos e referências e números que
+# não se partem, camada mais recente, por cima da decisão 152 no M7: desfaz-se antes dela, com contagem estrita.
+_CUIDADO_M8_1112 = json.loads((ROOT/'tests/fixtures/cuidado-m8-edits-20261112.json').read_text('utf-8'))['files']
+
+# 12/11/2026: decisão 152 (cuidado em todas as lições), módulo M9: tabelas onde há itens paralelos e referências e números que
+# não se partem, camada mais recente, por cima da decisão 152 no M8: desfaz-se antes dela, com contagem estrita.
+_CUIDADO_M9_1112 = json.loads((ROOT/'tests/fixtures/cuidado-m9-edits-20261112.json').read_text('utf-8'))['files']
+
+# 12/11/2026: decisão 152 (cuidado em todas as lições), Exame e páginas transversais: uma tabela onde havia itens paralelos e
+# referências e números que não se partem, camada mais recente, por cima da decisão 152 no M9: desfaz-se antes dela, com contagem
+# estrita. Não toca nas tarefas das unidades: não precisa da exceção da revisão dos enunciados.
+_CUIDADO_EXAME_1112 = json.loads((ROOT/'tests/fixtures/cuidado-exame-edits-20261112.json').read_text('utf-8'))['files']
+
+# 12/11/2026: a ligação «Treinos» na navegação da página principal do Exame (exame/index.html), camada mais recente, por cima da
+# decisão 152 no Exame e nas páginas transversais: desfaz-se antes dela, com contagem estrita. Só toca em exame/index.html.
+_EXAME_LIGACAO_TREINOS_1112 = json.loads((ROOT/'tests/fixtures/exame-ligacao-treinos-edits-20261112.json').read_text('utf-8'))['files']
+
+def undo_exame_ligacao_treinos_1112(path, text):
+    for edit in reversed(_EXAME_LIGACAO_TREINOS_1112.get(_relative(path), {}).get('edits', [])):
+        if text.count(edit['new']) != edit['occurrences']:
+            raise AssertionError(f"Ligação «Treinos» na página principal do Exame não confere: {path}: {edit['location']}")
+        text = text.replace(edit['new'], edit['old'])
+    return text
+
+
+def undo_cuidado_exame_1112(path, text):
+    # 12/11/2026: primeiro a ligação «Treinos» na página principal do Exame, que está por cima.
+    text = undo_exame_ligacao_treinos_1112(path, text)
+    for edit in reversed(_CUIDADO_EXAME_1112.get(_relative(path), {}).get('edits', [])):
+        if text.count(edit['new']) != edit['occurrences']:
+            raise AssertionError(f"Decisão 152 no Exame e nas páginas transversais não confere: {path}: {edit['location']}")
+        text = text.replace(edit['new'], edit['old'])
+    return text
+
+
+def undo_cuidado_m9_1112(path, text):
+    # 12/11/2026: primeiro a decisão 152 no Exame e nas páginas transversais, que está por cima.
+    text = undo_cuidado_exame_1112(path, text)
+    # 12/11/2026: a mesma exceção das camadas do M6, do M7 e do M8, pela mesma razão. As tarefas da M9-U1 e da M9-U2 (as páginas e
+    # os dados) estão nesta camada e na revisão dos enunciados (#192); quem as lê como eram antes da revisão
+    # (scripts/tarefas_claras_historico.py desfaz esta camada e a dos enunciados, por esta ordem) entrega exatamente a base da
+    # revisão (o hash do seu manifesto): esta camada já saiu e não há nada a desfazer. Em qualquer outro caso, a contagem continua
+    # estrita.
+    claras = _TAREFAS_CLARAS.get(_relative(path))
+    if claras and hashlib.sha256(text.replace('\r\n', '\n').encode('utf-8')).hexdigest() == claras['base_sha256_lf']:
+        return text
+    for edit in reversed(_CUIDADO_M9_1112.get(_relative(path), {}).get('edits', [])):
+        if text.count(edit['new']) != edit['occurrences']:
+            raise AssertionError(f"Decisão 152 no M9 não confere: {path}: {edit['location']}")
+        text = text.replace(edit['new'], edit['old'])
+    return text
+
+
+def undo_cuidado_m8_1112(path, text):
+    # 12/11/2026: primeiro a decisão 152 no M9, que está por cima.
+    text = undo_cuidado_m9_1112(path, text)
+    # 12/11/2026: a mesma exceção das camadas do M6 e do M7, pela mesma razão. As tarefas da M8-U1 e da M8-U2 (as páginas e os
+    # dados) estão nesta camada e na revisão dos enunciados (#192); quem as lê como eram antes da revisão
+    # (scripts/tarefas_claras_historico.py desfaz esta camada e a dos enunciados, por esta ordem) entrega exatamente a base da
+    # revisão (o hash do seu manifesto): esta camada já saiu e não há nada a desfazer. Em qualquer outro caso, a contagem continua
+    # estrita.
+    claras = _TAREFAS_CLARAS.get(_relative(path))
+    if claras and hashlib.sha256(text.replace('\r\n', '\n').encode('utf-8')).hexdigest() == claras['base_sha256_lf']:
+        return text
+    for edit in reversed(_CUIDADO_M8_1112.get(_relative(path), {}).get('edits', [])):
+        if text.count(edit['new']) != edit['occurrences']:
+            raise AssertionError(f"Decisão 152 no M8 não confere: {path}: {edit['location']}")
+        text = text.replace(edit['new'], edit['old'])
+    return text
+
+
 def undo_cuidado_m7_1111(path, text):
+    # 12/11/2026: primeiro a decisão 152 no M8, que está por cima.
+    text = undo_cuidado_m8_1112(path, text)
     # 12/11/2026 (junção do ramo do M6 49871e08 no do M7): a mesma exceção que o M6 trouxe para a sua camada, pela mesma razão. As
     # tarefas da M7-U1, da M7-U2 e da M7-U3 estão nesta camada e na revisão dos enunciados (#192); quem as lê como eram antes da
     # revisão (scripts/tarefas_claras_historico.py desfaz esta camada e a dos enunciados, por esta ordem) entrega exatamente a base

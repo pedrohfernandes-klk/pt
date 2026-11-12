@@ -30,6 +30,13 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 CAMADA = ROOT / 'scripts/indices_acertos_20261107.json'
 MANIFESTO = ROOT / 'tests/fixtures/indices-acertos-edits-20261107.json'
+# 12/11/2026: por cima fica a decisão 152 no M8 (os espaços que não quebram no índice do M8), que se desfaz antes.
+CUIDADO_M8 = ROOT / 'tests/fixtures/cuidado-m8-edits-20261112.json'
+# 12/11/2026: por cima fica também a decisão 152 no M9 (os espaços que não quebram no índice do M9), que se desfaz antes.
+CUIDADO_M9 = ROOT / 'tests/fixtures/cuidado-m9-edits-20261112.json'
+# 12/11/2026: por cima fica a decisão 152 no Exame e nas páginas transversais (os espaços que não quebram na entrada do Português e
+# nas páginas dos anos), que se desfaz antes de todas.
+CUIDADO_EXAME = ROOT / 'tests/fixtures/cuidado-exame-edits-20261112.json'
 ACHADO = ('07/11/2026: três acertos dos índices deixados pela decisão 173 (acesso do docente repetido no M3, no M5 e no M6, '
           '«·» nas contagens do M8 e do M9, menu dos materiais sem JavaScript no telemóvel). {o}')
 GUIOES = 'https://pedrohfernandes-klk.github.io/lente/docente/#portugues'
@@ -44,6 +51,27 @@ PONTO_MEDIO = (8, 9)
 def base(rel):
     """O texto da página sem esta camada (desfeita pelo manifesto, da última troca para a primeira)."""
     texto = (ROOT / rel).read_bytes().decode('utf-8')
+    # 12/11/2026: antes de tudo, a decisão 152 no Exame e nas páginas transversais (camada cuidado_exame_20261112), a mais recente,
+    # com contagem estrita.
+    if CUIDADO_EXAME.is_file():
+        for edit in reversed(json.loads(CUIDADO_EXAME.read_text('utf-8'))['files'].get(rel, {}).get('edits', [])):
+            if texto.count(edit['new']) != edit['occurrences']:
+                raise SystemExit(f'{rel}: a decisão 152 no Exame e nas páginas transversais já não confere ({edit["location"]})')
+            texto = texto.replace(edit['new'], edit['old'])
+    # 12/11/2026: antes de tudo, a decisão 152 no M9 (camada cuidado_m9_20261112), a mais recente, com contagem estrita: prende
+    # «90 min» nas contagens do índice do M9, dentro do texto que este acerto mudou («, » em vez de « · »).
+    if CUIDADO_M9.is_file():
+        for edit in reversed(json.loads(CUIDADO_M9.read_text('utf-8'))['files'].get(rel, {}).get('edits', [])):
+            if texto.count(edit['new']) != edit['occurrences']:
+                raise SystemExit(f'{rel}: a decisão 152 no M9 já não confere ({edit["location"]})')
+            texto = texto.replace(edit['new'], edit['old'])
+    # 12/11/2026: a seguir, a decisão 152 no M8 (camada cuidado_m8_20261112), com contagem estrita: prende
+    # «90 min» nas contagens do índice do M8, dentro do texto que este acerto mudou («, » em vez de « · »).
+    if CUIDADO_M8.is_file():
+        for edit in reversed(json.loads(CUIDADO_M8.read_text('utf-8'))['files'].get(rel, {}).get('edits', [])):
+            if texto.count(edit['new']) != edit['occurrences']:
+                raise SystemExit(f'{rel}: a decisão 152 no M8 já não confere ({edit["location"]})')
+            texto = texto.replace(edit['new'], edit['old'])
     if MANIFESTO.is_file():
         for edit in reversed(json.loads(MANIFESTO.read_text('utf-8'))['files'].get(rel, {}).get('edits', [])):
             if texto.count(edit['new']) != edit['occurrences']:

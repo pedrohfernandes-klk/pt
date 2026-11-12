@@ -2,9 +2,9 @@
  "aquecer": {
   "cartoes": "aquecimento/",
   "minutos": 10,
-  "texto": "Dez minutos com casos inventados para treinar. Depois, lês o enunciado e começam os 60 minutos de produção.",
+  "texto": "Dez minutos com casos inventados para treinar. Depois, lês o enunciado e começam os 60 minutos de produção.",
   "ligacao": "Abrir o aquecimento em cartões",
-  "ligacao_enunciado": "Antes de começar: aquecer em cartões, 10 minutos"
+  "ligacao_enunciado": "Antes de começar: aquecer em cartões, 10 minutos"
  },
  "dossie_titulo": "Textos e condições de consulta",
  "opcional": {
@@ -34,6 +34,7 @@
  "slug": "m8-u1",
  "titulo": "O que as palavras conseguem",
  "unidade": 1,
+ "nao_partir": true,
  "lead": "Individual, à mão e com consulta. Texto: <strong>200 a 240 palavras</strong>; escreve o total no fim. O plano e as duas linhas finais ficam fora da contagem.",
  "nucleo": [
   "Regista a opção escolhida, a tua opinião inicial e uma dificuldade que a comparação terá de resolver.",
@@ -81,12 +82,12 @@
    "fonte": "RTP Ensina, «Adeus»"
   },
   {
-   "facto": "Tema B: Ana Luísa Amaral, «Prece no Mediterrâneo», em <i>Ágora</i>, Assírio & Alvim, 2019. Reprodução na Seara Nova, 7 de agosto de 2023.",
+   "facto": "Tema B: Ana Luísa Amaral, «Prece no Mediterrâneo», em <i>Ágora</i>, Assírio & Alvim, 2019. Reprodução na Seara Nova, 7 de agosto de 2023.",
    "href": "https://searanova.publ.pt/2023/08/07/poesia-prece-no-mediterraneo/",
    "fonte": "Seara Nova"
   },
   {
-   "facto": "Tema B: Ana Luísa Amaral, «A verdade histórica», em <i>PÁ: Poesia & Outras Artes</i>, n.º 0, Casa Comum/U.Porto Press, setembro de 2023, pp. 14–15. Publicação autorizada pela Assírio & Alvim.",
+   "facto": "Tema B: Ana Luísa Amaral, «A verdade histórica», em <i>PÁ: Poesia & Outras Artes</i>, n.º 0, Casa Comum/U.Porto Press, setembro de 2023, pp. 14–⁠15. Publicação autorizada pela Assírio & Alvim.",
    "href": "https://www.up.pt/casacomum/wp-content/uploads/sites/520/2023/11/pa_versao_final-1.pdf#page=14",
    "fonte": "Casa Comum, <i>PÁ</i>"
   },

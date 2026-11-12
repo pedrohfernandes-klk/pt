@@ -83,6 +83,50 @@ on:
       - 'scripts/cuidado_m7_20261111.*'
       - 'tests/fixtures/cuidado-m7-edits-20261111.json'
       - 'tests/*cuidado_m7*'
+      # 12/11/2026: decisão 152 no M8: as tabelas novas (os pesos do índice, do guia e do mapa, as noções da F04, da F05 e da F08,
+      # os termos da F15 e os valores aspetuais), os casos do mesmo tipo (as listas e os nomes do portefólio), os geradores e a sua camada.
+      - 'm8/**'
+      - 'tarefas/m8-u1/**'
+      - 'tarefas/m8-u2/**'
+      - 'docs/pedagogia/tarefas-escolha/m8-*'
+      - 'scripts/licoes_20261101.py'
+      - 'scripts/imagens_licoes_20261101.py'
+      - 'scripts/gerar_licoes_20261101.py'
+      - 'scripts/cuidado_m8_20261112.*'
+      - 'tests/fixtures/cuidado-m8-edits-20261112.json'
+      - 'tests/*cuidado_m8*'
+      # 12/11/2026: decisão 152 no M9: as tabelas novas (os pesos do índice, do guia e do mapa, as noções da F01, da F02 e da F03 e os
+      # termos da F10), os casos do mesmo tipo (as listas e os nomes do portefólio), os geradores e a sua camada.
+      - 'm9/**'
+      - 'tarefas/m9-u1/**'
+      - 'tarefas/m9-u2/**'
+      - 'docs/pedagogia/tarefas-escolha/m9-*'
+      - 'scripts/revisao_confirmacao_20261101.py'
+      - 'scripts/cuidado_m9_20261112.*'
+      - 'tests/fixtures/cuidado-m9-edits-20261112.json'
+      - 'tests/*cuidado_m9*'
+      # 12/11/2026: decisão 152 no Exame e nas páginas transversais: a tabela nova (as fases da sessão), os espaços que não quebram
+      # nas sessões, no laboratório, nas provas em cartões e nos aquecimentos do Exame, nas obras, nas páginas dos anos, no mapa e na
+      # entrada, os geradores e a sua camada.
+      - 'exame/**'
+      - 'assets/exame/**'
+      - 'obras/**'
+      - '1/index.html'
+      - '2/index.html'
+      - '3/index.html'
+      - 'mapa/**'
+      - 'index.html'
+      - 'docs/pedagogia/exame-aquecimentos/**'
+      - 'scripts/exame_aquecimentos.py'
+      - 'scripts/provas/**'
+      - 'scripts/cuidado_exame_20261112.*'
+      - 'tests/fixtures/cuidado-exame-edits-20261112.json'
+      - 'tests/*cuidado_exame*'
+      # 12/11/2026: a ligação «Treinos» na navegação da página principal do Exame (exame_ligacao_treinos_20261112), a camada mais
+      # recente, que se desfaz primeiro na cadeia deste fluxo.
+      - 'scripts/exame_ligacao_treinos_20261112.*'
+      - 'tests/fixtures/exame-ligacao-treinos-edits-20261112.json'
+      - 'tests/*exame_ligacao_treinos*'
       - 'tests/*apoios*'
       - 'tests/fixtures/apoios-*'
       - '.github/workflows/pt-apoios-qa.yml'
@@ -118,7 +162,11 @@ jobs:
           # 08/11/2026: a decisão 152 no M6 (cuidado_m6_20261108: tabelas onde há itens paralelos e espaços que não quebram nas lições e páginas do M6, incluindo o índice, o guia, o mapa e o portefólio do módulo, as páginas «Ler a fundo» e «Pensar devagar», e nas tarefas, nos aquecimentos e nas grelhas das suas unidades) passa a camada mais recente, por cima da decisão 152 no M5; desfaz-se primeiro, com a mesma exigência.
           # 11/11/2026 (fusão do main 4bf4a053 no pedido #191): a revisão dos enunciados das tarefas (tarefas_claras_20261110, #192) fica entre a decisão 152 no M6, que continua a mais recente e se desfaz primeiro, e a decisão 152 no M5.
           # 11/11/2026: a decisão 152 no M7 (cuidado_m7_20261111: tabelas onde há itens paralelos e espaços que não quebram nas lições e páginas do M7, incluindo o índice, o guia, o mapa e o portefólio do módulo, as páginas «Ler a fundo», «Olhar» e «Pensar devagar», e nas tarefas, nos aquecimentos e na grelha das suas unidades) passa a camada mais recente, por cima da decisão 152 no M6; desfaz-se primeiro, com a mesma exigência.
-          python scripts/aplicar_trocas.py scripts/tabela_movimentos_20261105.json --manifesto tests/fixtures/tabela-movimentos-edits-20261105.json --verificar --desfazer-antes tests/fixtures/cuidado-m7-edits-20261111.json --desfazer-antes tests/fixtures/cuidado-m6-edits-20261108.json --desfazer-antes tests/fixtures/tarefas-claras-edits-20261110.json --desfazer-antes tests/fixtures/cuidado-m5-edits-20261108.json --desfazer-antes tests/fixtures/cuidado-m4-edits-20261108.json --desfazer-antes tests/fixtures/cuidado-m3-edits-20261108.json --desfazer-antes tests/fixtures/cuidado-m2-edits-20261108.json --desfazer-antes tests/fixtures/cidade-cartaz-edits-20261108.json --desfazer-antes tests/fixtures/creditos-i-pt1-edits-20261107.json --desfazer-antes tests/fixtures/cuidado-m1-edits-20261106.json --desfazer-antes tests/fixtures/indices-acertos-edits-20261107.json --desfazer-antes tests/fixtures/cartaz-indices-148-edits-20261106.json --desfazer-antes tests/fixtures/creditos-i-edits-20261105.json --desfazer-antes tests/fixtures/atlas-lote3-edits-20261105.json --desfazer-antes tests/fixtures/autonomia-154-edits-20261105.json --desfazer-antes tests/fixtures/exame-contexto-edits-20261105.json --desfazer-antes tests/fixtures/exame-licao-edits-20261105.json
+          # 12/11/2026: a decisão 152 no M8 (cuidado_m8_20261112: tabelas onde há itens paralelos e espaços que não quebram nas lições e páginas do M8, incluindo o índice, o guia, o mapa e o portefólio do módulo, as atividades de gramática e de escrita e as tarefas das suas unidades) passa a camada mais recente, por cima da decisão 152 no M7; desfaz-se primeiro, com a mesma exigência.
+          # 12/11/2026: a decisão 152 no M9 (cuidado_m9_20261112: tabelas onde há itens paralelos e espaços que não quebram nas lições e páginas do M9, incluindo o índice, o guia, o mapa e o portefólio do módulo, as páginas «Ler a fundo» e «Pensar devagar», as atividades e as tarefas das suas unidades) passa a camada mais recente, por cima da decisão 152 no M8; desfaz-se primeiro, com a mesma exigência.
+          # 12/11/2026: a decisão 152 no Exame e nas páginas transversais (cuidado_exame_20261112: uma tabela onde havia itens paralelos e espaços que não quebram nas sessões, no laboratório, nas provas em cartões e nos aquecimentos do Exame, nas obras, nas páginas dos anos, no mapa e na entrada) passa a camada mais recente, por cima da decisão 152 no M9; desfaz-se primeiro, com a mesma exigência.
+          # 12/11/2026: a ligação «Treinos» na página principal do Exame (exame_ligacao_treinos_20261112: só a navegação de exame/index.html) passa a camada mais recente, por cima da decisão 152 no Exame e nas páginas transversais; desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
+          python scripts/aplicar_trocas.py scripts/tabela_movimentos_20261105.json --manifesto tests/fixtures/tabela-movimentos-edits-20261105.json --verificar --desfazer-antes tests/fixtures/exame-ligacao-treinos-edits-20261112.json --desfazer-antes tests/fixtures/cuidado-exame-edits-20261112.json --desfazer-antes tests/fixtures/cuidado-m9-edits-20261112.json --desfazer-antes tests/fixtures/cuidado-m8-edits-20261112.json --desfazer-antes tests/fixtures/cuidado-m7-edits-20261111.json --desfazer-antes tests/fixtures/cuidado-m6-edits-20261108.json --desfazer-antes tests/fixtures/tarefas-claras-edits-20261110.json --desfazer-antes tests/fixtures/cuidado-m5-edits-20261108.json --desfazer-antes tests/fixtures/cuidado-m4-edits-20261108.json --desfazer-antes tests/fixtures/cuidado-m3-edits-20261108.json --desfazer-antes tests/fixtures/cuidado-m2-edits-20261108.json --desfazer-antes tests/fixtures/cidade-cartaz-edits-20261108.json --desfazer-antes tests/fixtures/creditos-i-pt1-edits-20261107.json --desfazer-antes tests/fixtures/cuidado-m1-edits-20261106.json --desfazer-antes tests/fixtures/indices-acertos-edits-20261107.json --desfazer-antes tests/fixtures/cartaz-indices-148-edits-20261106.json --desfazer-antes tests/fixtures/creditos-i-edits-20261105.json --desfazer-antes tests/fixtures/atlas-lote3-edits-20261105.json --desfazer-antes tests/fixtures/autonomia-154-edits-20261105.json --desfazer-antes tests/fixtures/exame-contexto-edits-20261105.json --desfazer-antes tests/fixtures/exame-licao-edits-20261105.json
           python scripts/verificar_camadas.py
       # 06/11/2026: decisão 152 no M1: as tabelas novas, os espaços que não quebram e a camada no topo.
       - name: Tabelas e referências do M1 (decisão 152)
@@ -144,6 +192,20 @@ jobs:
       # (tarefa, aquecimentos, grelha e correção) iguais aos dados, os painéis e o banco a seguir as lições e a camada no topo.
       - name: Tabelas e referências do M7 (decisão 152)
         run: python -m unittest discover -s tests -p 'test_cuidado_m7.py' -v
+      # 12/11/2026: decisão 152 no M8: as tabelas novas, os casos do mesmo tipo, os espaços que não quebram, as páginas geradas
+      # (as duas tarefas e as lições F13 a F16) iguais à origem, o painel e o banco a seguir as lições e a camada no topo.
+      - name: Tabelas e referências do M8 (decisão 152)
+        run: python -m unittest discover -s tests -p 'test_cuidado_m8.py' -v
+      # 12/11/2026: decisão 152 no M9: as tabelas novas, os casos do mesmo tipo, os espaços que não quebram, as páginas geradas
+      # (as duas tarefas, as lições F14 a F16 e as notas do docente da F14) iguais à origem, os painéis e o banco a seguir as lições
+      # e a camada no topo.
+      - name: Tabelas e referências do M9 (decisão 152)
+        run: python -m unittest discover -s tests -p 'test_cuidado_m9.py' -v
+      # 12/11/2026: decisão 152 no Exame e nas páginas transversais: a tabela nova, os espaços que não quebram, as páginas geradas
+      # (os aquecimentos e as provas em cartões) iguais à origem, o texto oficial das provas e o das obras como estava e a camada
+      # no topo.
+      - name: Tabela e referências do Exame e das páginas transversais (decisão 152)
+        run: python -m unittest discover -s tests -p 'test_cuidado_exame.py' -v
       - name: Instalar Chromium
         run: |
           python -m pip install playwright
@@ -180,3 +242,18 @@ jobs:
       # a mudar de linha nos pontos marcados e as referências do M7 sem se partirem.
       - name: Tabelas e referências do M7 no navegador
         run: python tests/browser_cuidado_m7.py
+      # 12/11/2026: decisão 152 no M8: as tabelas novas a 360 e 900 px, nos dois temas, sem transbordar (no telemóvel, empilhadas e
+      # com o rótulo da coluna; os pesos com a coluna do número estreita), as listas novas, os nomes do portefólio só a mudar de
+      # linha nos pontos marcados e as referências do M8 sem se partirem.
+      - name: Tabelas e referências do M8 no navegador
+        run: python tests/browser_cuidado_m8.py
+      # 12/11/2026: decisão 152 no M9: as tabelas novas a 360 e 900 px, nos dois temas, sem transbordar (no telemóvel, empilhadas e
+      # com o rótulo da coluna; os pesos com a coluna do número estreita), as listas novas, os nomes do portefólio só a mudar de
+      # linha nos pontos marcados e as referências do M9 sem se partirem.
+      - name: Tabelas e referências do M9 no navegador
+        run: python tests/browser_cuidado_m9.py
+      # 12/11/2026: decisão 152 no Exame e nas páginas transversais: a tabela das fases da sessão a 360 e 900 px, nos dois temas,
+      # sem transbordar, as quatro listas novas das provas em cartões à vista, com os itens todos, dentro do cartão, e as
+      # referências sem se partirem (também nos cartões das provas e dos aquecimentos do Exame).
+      - name: Tabela e referências do Exame e das páginas transversais no navegador
+        run: python tests/browser_cuidado_exame.py

@@ -53,6 +53,12 @@ def render(item, units):
     if item['id'] in ('m3-f19','m5-f17','m6-f14'):
         text=text.replace('</head>','<link rel="stylesheet" href="../../assets/ampliar-documentos.css"></head>')
         text=text.replace('</body>','<script src="../../assets/ampliar-documentos.js"></script></body>')
+    # 12/11/2026: decisão 152 no M8 (achado 6, camada cuidado_m8_20261112): a M8-F15 passa a ter uma tabela de apoio no «O essencial»
+    # e carrega a folha das tabelas antes da camada de aparência, na versão do M1, como as outras lições com tabela.
+    if item['id'] == 'm8-f15':
+        aparencia = '<link rel="stylesheet" href="../../assets/appearance.css?v=20261025-universal-1">'
+        assert text.count(aparencia) == 1, item['id']
+        text = text.replace(aparencia, '<link rel="stylesheet" href="../../assets/pt-lessons/apoios-tabelas.css?v=20261106.1">' + aparencia)
     return text
 
 

@@ -12,16 +12,16 @@
       parts: [['verbo', 'Explica'], ['objeto', 'de que modo o alargamento do horário respondeu a uma necessidade dos alunos'], ['condicao', 'fundamentando a resposta no texto']],
       command: ['Explicar a relação entre a medida e a necessidade, apoiando-a no texto.', 'Enumerar as cores do edifício.', 'Dar uma opinião sobre todas as bibliotecas.'],
       evidence: 1,
-      why: 'A linha 2 mostra a utilização das mesas por alunos que antes estudavam no corredor: é uma consequência concreta da medida. A cor da fachada não explica a necessidade.',
+      why: 'A linha 2 mostra a utilização das mesas por alunos que antes estudavam no corredor: é uma consequência concreta da medida. A cor da fachada não explica a necessidade.',
       hint: 'Procura uma mudança nas condições de estudo, e não apenas uma informação verdadeira.',
-      model: 'O alargamento do horário deu aos alunos acesso a um espaço adequado para estudar durante mais tempo. As mesas passaram a ser ocupadas por quem antes estudava no corredor (linha 2), o que mostra a necessidade de espaço e de acesso à biblioteca.',
+      model: 'O alargamento do horário deu aos alunos acesso a um espaço adequado para estudar durante mais tempo. As mesas passaram a ser ocupadas por quem antes estudava no corredor (linha 2), o que mostra a necessidade de espaço e de acesso à biblioteca.',
       weak: 'A biblioteca era azul e ficou aberta. Eu gosto de bibliotecas porque têm muitos livros.',
       marks: [['A biblioteca era azul', 'verdadeiro, mas irrelevante para a necessidade'], ['Eu gosto de bibliotecas porque têm muitos livros.', 'opinião pessoal: desvia do pedido']],
-      missing: 'Falta a informação decisiva da linha 2.',
-      review: 'A resposta menciona a medida, mas não explica a necessidade dos alunos nem mobiliza a informação decisiva da linha 2. A opinião pessoal e a cor da fachada desviam o foco. Uma redação sem erros não compensa esta insuficiência de conteúdo.',
-      reviewCED: 'Não explica a necessidade dos alunos nem usa a linha 2; a opinião e a cor da fachada desviam o foco.',
+      missing: 'Falta a informação decisiva da linha 2.',
+      review: 'A resposta menciona a medida, mas não explica a necessidade dos alunos nem mobiliza a informação decisiva da linha 2. A opinião pessoal e a cor da fachada desviam o foco. Uma redação sem erros não compensa esta insuficiência de conteúdo.',
+      reviewCED: 'Não explica a necessidade dos alunos nem usa a linha 2; a opinião e a cor da fachada desviam o foco.',
       reviewCL: 'Sem erros relevantes. Uma redação correta não compensa a insuficiência de conteúdo.',
-      targets: ['Explicar o acesso a um espaço adequado durante mais tempo.', 'Relacionar a ocupação das mesas com o estudo anterior no corredor (linha 2).']
+      targets: ['Explicar o acesso a um espaço adequado durante mais tempo.', 'Relacionar a ocupação das mesas com o estudo anterior no corredor (linha 2).']
     },
     {
       title: 'O regresso',
@@ -30,16 +30,16 @@
       parts: [['verbo', 'Explica'], ['objeto', 'a ambivalência de Leonor no momento do regresso'], ['condicao', 'relacionando dois elementos do texto']],
       command: ['Explicar sentimentos em tensão, relacionando dois elementos do texto.', 'Recontar a infância de Leonor sem recorrer ao texto.', 'Identificar apenas o local da ação.'],
       evidence: 3,
-      why: 'O sorriso e a demora em afastar a mão (linha 4) sustentam uma leitura de afeto e dificuldade em partir. O contrato (linha 2) permite relacionar essa ligação ao passado com a partida iminente. A porta fechada, isoladamente, não prova rejeição.',
+      why: 'O sorriso e a demora em afastar a mão (linha 4) sustentam uma leitura de afeto e dificuldade em partir. O contrato (linha 2) permite relacionar essa ligação ao passado com a partida iminente. A porta fechada, isoladamente, não prova rejeição.',
       hint: 'Relaciona a partida anunciada com os gestos finais; evita inventar acontecimentos da infância.',
-      model: 'Leonor manifesta afeto pelo lugar da infância, visível no sorriso ao reconhecer a sua marca na escola. Ao mesmo tempo, a demora em afastar a mão sugere dificuldade em se despedir, num momento em que o contrato de trabalho anuncia uma partida iminente (linhas 2–4).',
+      model: 'Leonor manifesta afeto pelo lugar da infância, visível no sorriso ao reconhecer a sua marca na escola. Ao mesmo tempo, a demora em afastar a mão sugere dificuldade em se despedir, num momento em que o contrato de trabalho anuncia uma partida iminente (linhas 2–⁠4).',
       weak: 'Leonor voltou para a aldeia porque perdeu o emprego. A escola recusou a sua entrada e ela ficou zangada.',
       marks: [['porque perdeu o emprego', 'inventado: o texto fala de um contrato de trabalho'], ['A escola recusou a sua entrada', 'inventado: a porta fechada não prova recusa'], ['ela ficou zangada', 'sem apoio: o texto mostra um sorriso']],
-      missing: 'Falta o afeto e a dificuldade da despedida (linhas 2 a 4).',
+      missing: 'Falta o afeto e a dificuldade da despedida (linhas 2 a 4).',
       review: 'A resposta inventa a perda do emprego e a recusa da escola. O texto anuncia um contrato e não sustenta a zanga. É necessário reconhecer o afeto e a dificuldade da despedida, relacionando os gestos finais com a partida.',
       reviewCED: 'Inventa a perda do emprego e a recusa da escola; não reconhece o afeto nem a dificuldade da despedida.',
       reviewCL: 'A redação está correta: o problema é de conteúdo, não de língua.',
-      targets: ['Reconhecer o afeto pela escola e a dificuldade da despedida nos gestos de Leonor.', 'Relacionar esses gestos com a partida iminente anunciada pelo contrato (linhas 2–4).']
+      targets: ['Reconhecer o afeto pela escola e a dificuldade da despedida nos gestos de Leonor.', 'Relacionar esses gestos com a partida iminente anunciada pelo contrato (linhas 2–⁠4).']
     }
   ];
 
@@ -55,8 +55,8 @@
   // Relógio do aluno (27/10/2026): máximo por máquina, em minutos; o aluno escolhe a duração, de 30 em 30 s.
   const MAX_MINUTES = [1, 2, 2, 3];
   const EVIDENCE_NOTES = [
-    ['A linha 1 apresenta a medida, mas não mostra a necessidade a que respondeu.', 'A linha 2 liga a ocupação das mesas à falta de um espaço de estudo adequado.', 'A cor da fachada é uma informação verdadeira, mas não explica a necessidade dos alunos.', 'Prolongar a experiência mostra uma decisão da direção; não explica, por si só, as condições de estudo dos alunos.'],
-    ['A chegada à escola situa a ação; isoladamente, não demonstra sentimentos em tensão.', 'O contrato é uma evidência relevante da partida. Para explicar a ambivalência, relaciona-o com o sorriso e a demora da despedida na linha 4.', 'A marca reconhecida pode apoiar a ligação à infância; a porta fechada não prova rejeição nem zanga.', 'O sorriso e a demora permitem interpretar o afeto e a dificuldade da despedida. Relaciona-os com a partida anunciada na linha 2.']
+    ['A linha 1 apresenta a medida, mas não mostra a necessidade a que respondeu.', 'A linha 2 liga a ocupação das mesas à falta de um espaço de estudo adequado.', 'A cor da fachada é uma informação verdadeira, mas não explica a necessidade dos alunos.', 'Prolongar a experiência mostra uma decisão da direção; não explica, por si só, as condições de estudo dos alunos.'],
+    ['A chegada à escola situa a ação; isoladamente, não demonstra sentimentos em tensão.', 'O contrato é uma evidência relevante da partida. Para explicar a ambivalência, relaciona-o com o sorriso e a demora da despedida na linha 4.', 'A marca reconhecida pode apoiar a ligação à infância; a porta fechada não prova rejeição nem zanga.', 'O sorriso e a demora permitem interpretar o afeto e a dificuldade da despedida. Relaciona-os com a partida anunciada na linha 2.']
   ];
 
   const host = document.querySelector('#exercise');
@@ -316,7 +316,7 @@
       '<section class="of-p-texto"><p class="of-p-rotulo">Texto · ' + esc(t.title) + '</p><ol>' + t.lines.map((l, i) => '<li><b>L' + (i + 1) + '</b>' + esc(l) + '</li>').join('') + '</ol></section>' +
       '<section class="of-p-instrucao"><p class="of-p-rotulo">Instrução</p><p>' + esc(t.prompt) + '</p></section>' + task +
       '<div class="answer-lines" aria-hidden="true"></div><p class="of-p-nome">Nome ______________________ Data ____ / ____</p>' + supports +
-      '<p class="print-meta">Treino autoral (formativo). Referência: Prova 639, 2026, 1.ª fase, critérios definitivos, pp. 1–3. https://eduqa.pt/wp-content/uploads/2026/07/portugues_prova_639_cc.pdf</p>';
+      '<p class="print-meta">Treino autoral (formativo). Referência: Prova 639, 2026, 1.ª fase, critérios definitivos, pp. 1–⁠3. https://eduqa.pt/wp-content/uploads/2026/07/portugues_prova_639_cc.pdf</p>';
     window.print();
   }
   document.querySelector('#papel').onclick = () => print(false);
