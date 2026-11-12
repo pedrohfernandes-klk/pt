@@ -878,8 +878,9 @@
   "m6-u1": {
    "modulo": "M6",
    "unidade": 1,
+   "nao_partir_valores": true,
    "titulo": "Um ideal que não se alcança",
-   "produto": "Núcleo comum (duas respostas) e um tema à escolha (A ou B), à mão, entre 200 e 240 palavras, mais duas linhas finais que não contam para as palavras. O aquecimento em cartões não conta para a nota.",
+   "produto": "Núcleo comum (duas respostas) e um tema à escolha (A ou B), à mão, entre 200 e 240 palavras, mais duas linhas finais que não contam para as palavras. O aquecimento em cartões não conta para a nota.",
    "nota": "Os exemplos foram escritos para esta grelha com outros casos do mesmo tipo (outro par de sonetos, outro verso, outro soneto para reescrever, outro poema para filmar), nunca com os sonetos, o verso ou o soneto da tarefa. As citações vêm das lições do M3 e do M6.",
    "criterios": [
     {
@@ -954,6 +955,7 @@
     {
      "nome": "Tema à escolha (A ou B): cinco elementos e a explicação",
      "max": 6,
+     "max_em_listas": true,
      "niveis": {
       "0": [
        "Conta um ponto por elemento cumprido e mais um pela explicação que o tema pede. Aqui, não cumpres nenhum dos cinco elementos do teu tema.",
@@ -965,7 +967,7 @@
       ],
       "max": [
        "Cumpres os cinco elementos do teu tema (um ponto cada) e explicas o que o tema pede (mais um ponto). Tema A: um ideal de hoje num lugar concreto; a procura, a chegada e a porta aberta; uma última frase que vira o que o texto prometia; uma anáfora ou uma antítese tua; uma diferença entre o teu ideal e o do cavaleiro. Explicação: o verso de Antero que imitaste, citado e explicado. Tema B: três planos; um verso exato em cada um; dois factos do dossiê (contam como dois); o que o vídeo não pode dar como facto. Explicação: se o último plano ilustra, contraria ou acrescenta algo ao verso, e porquê.",
-       "A, com outro soneto, «Na mão de Deus» (texto inventado): Às onze da noite, no último andar da residência, desliguei o telemóvel. Desci as escadas devagar, degrau a degrau. Deixei no corredor a lista dos festivais que nunca me escolheram, como quem deixa um casaco que já não serve. Contei os anos, contei as recusas, contei as noites; depois deixei de contar. Dorme, cabeça, que amanhã não há candidatura. Imitei «Desci a passo e passo a escada estreita»: também começo por descer, devagar, de um lugar alto. A diferença: no soneto, o coração descansa na mão de Deus; eu descanso porque larguei uma lista. B, com outro poema, «Alma minha gentil», de Camões: plano 1, um quarto vazio de manhã, com «Alma minha gentil, que te partiste»; plano 2, um lençol dobrado, com «Repousa lá no céu eternamente,»; plano 3, uma janela aberta para o céu e alguém de costas para ela, com «E viva eu cá na terra sempre triste.». Abro com o retrato de Camões por Fernão Gomes (c. 1577), que está em domínio público; o soneto vem nas _Rhythmas_, de 1595, e a legenda di-lo. O vídeo não pode dizer quem era a amada: o soneto não o diz. O último plano acrescenta algo ao verso: o verso diz só a terra «sempre triste»; a imagem junta-lhe o gesto de virar as costas ao céu, onde a amada repousa."
+       "A, com outro soneto, «Na mão de Deus» (texto inventado): Às onze da noite, no último andar da residência, desliguei o telemóvel. Desci as escadas devagar, degrau a degrau. Deixei no corredor a lista dos festivais que nunca me escolheram, como quem deixa um casaco que já não serve. Contei os anos, contei as recusas, contei as noites; depois deixei de contar. Dorme, cabeça, que amanhã não há candidatura. Imitei «Desci a passo e passo a escada estreita»: também começo por descer, devagar, de um lugar alto. A diferença: no soneto, o coração descansa na mão de Deus; eu descanso porque larguei uma lista. B, com outro poema, «Alma minha gentil», de Camões: plano 1, um quarto vazio de manhã, com «Alma minha gentil, que te partiste»; plano 2, um lençol dobrado, com «Repousa lá no céu eternamente,»; plano 3, uma janela aberta para o céu e alguém de costas para ela, com «E viva eu cá na terra sempre triste.». Abro com o retrato de Camões por Fernão Gomes (c. 1577), que está em domínio público; o soneto vem nas _Rhythmas_, de 1595, e a legenda di-lo. O vídeo não pode dizer quem era a amada: o soneto não o diz. O último plano acrescenta algo ao verso: o verso diz só a terra «sempre triste»; a imagem junta-lhe o gesto de virar as costas ao céu, onde a amada repousa."
       ]
      },
      "custa": [
@@ -979,7 +981,7 @@
      "max": 3,
      "niveis": {
       "0": [
-       "Respostas soltas, ou muito fora das 200 a 240 palavras.",
+       "Respostas soltas, ou muito fora das 200 a 240 palavras.",
        "Três listas de palavras sem frases completas."
       ],
       "parcial": [
@@ -1002,8 +1004,9 @@
   "m6-u2": {
    "modulo": "M6",
    "unidade": 2,
+   "nao_partir_valores": true,
    "titulo": "A cidade vista e transfigurada",
-   "produto": "Núcleo comum (duas respostas) e um tema à escolha (A ou B), à mão, entre 200 e 240 palavras, mais duas linhas finais que não contam para as palavras. O aquecimento em cartões não conta para a nota.",
+   "produto": "Núcleo comum (duas respostas) e um tema à escolha (A ou B), à mão, entre 200 e 240 palavras, mais duas linhas finais que não contam para as palavras. O aquecimento em cartões não conta para a nota.",
    "nota": "Os exemplos foram escritos para esta grelha com outros casos do mesmo tipo (outra estrofe, outro verso, outras palavras de 1887, outro poema para fotografar), nunca com a estrofe, os versos ou as palavras que a tarefa pede. As citações vêm das lições do M3 e do M6.",
    "criterios": [
     {
@@ -1078,6 +1081,7 @@
     {
      "nome": "Tema à escolha (A ou B): cinco elementos e a explicação",
      "max": 6,
+     "max_em_listas": true,
      "niveis": {
       "0": [
        "Conta um ponto por elemento cumprido e mais um pela explicação que o tema pede. Aqui, não cumpres nenhum dos cinco elementos do teu tema.",
@@ -1103,7 +1107,7 @@
      "max": 3,
      "niveis": {
       "0": [
-       "Respostas soltas, ou muito fora das 200 a 240 palavras.",
+       "Respostas soltas, ou muito fora das 200 a 240 palavras.",
        "Três listas de palavras sem frases completas."
       ],
       "parcial": [

@@ -21,6 +21,8 @@ Com «nao_partir», os números do molde («90 minutos» na descrição, «10 mi
 espaço que não quebra (U+00A0). As páginas sem estas chaves saem iguais, byte a byte.
 08/11/2026: decisão 152, M5: o texto de um tema pode acabar numa lista (fecha o parágrafo, abre a lista e termina em «<p>»); o
 parágrafo vazio que sobra no fim («<p></p>») sai. As páginas sem listas no fim de um tema saem iguais, byte a byte.
+08/11/2026: decisão 152, M6: com «nao_partir_grelha», a ligação à grelha («Grelha /20: como é avaliado…») leva espaço que não
+quebra (U+00A0) entre «Grelha» e «/20». As páginas sem a chave saem iguais, byte a byte.
 Uso: python3 scripts/tarefas_escolha.py [--saida PASTA] [slug ...]
 """
 import json
@@ -33,6 +35,8 @@ ROOT = Path(__file__).resolve().parents[1]
 DADOS = ROOT / 'docs' / 'pedagogia' / 'tarefas-escolha'
 GRELHAS = ROOT / 'docs' / 'pedagogia' / 'grelhas-tarefas-20261027.json'
 LIGACAO = '<p class="task-grelha"><a href="grelha/">Grelha /20: como é avaliado e autoavaliação</a></p>\n'
+# 08/11/2026: decisão 152, M6. A mesma ligação, com «Grelha /20» preso (U+00A0), nas tarefas com «nao_partir_grelha».
+LIGACAO_NAO_PARTE = LIGACAO.replace('Grelha /20', 'Grelha\xa0/20')
 # 06/11/2026: decisão 152. A folha das tabelas de apoio entra antes da camada de aparência, só nas tarefas com «tabela».
 APARENCIA = '<link rel="stylesheet" href="../../assets/appearance.css?v=20261025-universal-1">'
 FOLHA_TABELAS = '<link rel="stylesheet" href="../../assets/pt-lessons/apoios-tabelas.css?v=20261106.1">'
@@ -180,6 +184,10 @@ def tarefa(d, com_grelha, raiz=ROOT):
                      [(x['titulo'], x['html']) for x in d.get('exemplos', [])], 1 if cartoes else 2)
             + entregar(d['criterios'], d['fecho'], com_grelha, d.get('clareza'))
             + FOOT)
+    if d.get('nao_partir_grelha') and com_grelha:
+        # 08/11/2026: decisão 152, M6. «Grelha /20» da ligação à grelha não se parte entre linhas.
+        assert html.count(LIGACAO) == 1, slug
+        html = html.replace(LIGACAO, LIGACAO_NAO_PARTE)
     if 'tabela' in a:
         # 06/11/2026: decisão 152. A folha das tabelas de apoio, antes da camada de aparência.
         assert html.count(APARENCIA) == 1, slug

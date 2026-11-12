@@ -39,7 +39,8 @@ def main():
                     # 08/11/2026: decisão 152 no M3 (achado 43): no guia do M3, o número e a unidade não se partem (U+00A0); nos
                     # outros, como estava. Os mesmos quatro blocos, pela mesma ordem.
                     # 08/11/2026: decisão 152 no M5 (achado 42): também no guia do M5, com a mesma exigência.
-                    sep = '\xa0' if m in (3, 5) else ' '
+                    # 08/11/2026: decisão 152 no M6 (achado 33): também no guia do M6, com a mesma exigência.
+                    sep = '\xa0' if m in (3, 5, 6) else ' '
                     assert page.locator('#blocos .bloco b').all_inner_texts() == [
                         f'Aquecer, 10{sep}min', f'Ler o enunciado, 5{sep}min', f'Produzir, 60{sep}min', f'Rever e entregar, 15{sep}min']
                     assert page.locator('#r-exemplo').is_hidden()

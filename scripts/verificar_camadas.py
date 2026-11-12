@@ -7,6 +7,11 @@ import sys
 
 ROOT=Path(__file__).resolve().parents[1]
 LAYERS=[
+ # 08/11/2026: decisão 152 (cuidado em todas as lições), módulo M6: tabelas onde há itens paralelos e referências e números que
+ # não se partem, camada mais recente, por cima da decisão 152 no M5.
+ ('cuidado_m6_20261108','cuidado-m6-edits-20261108'),
+ # 11/11/2026 (fusão do main 4bf4a053 no pedido #191): a revisão dos enunciados das tarefas (#192) fica logo abaixo da decisão 152
+ # no M6, que foi refeita sobre ela e continua a camada mais recente.
  ('tarefas_claras_20261110','tarefas-claras-edits-20261110'),
  # 08/11/2026: decisão 152 (cuidado em todas as lições), módulo M5: tabelas onde há itens paralelos e referências e números que
  # não se partem, camada mais recente, por cima da decisão 152 no M4.

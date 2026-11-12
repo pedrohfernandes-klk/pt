@@ -1,0 +1,2070 @@
+{
+ "base_commit": "4bf4a0538cd5f883448d179973ef016023a58f86",
+ "_nota": "08/11/2026: decisão 152 do docente («cuidado em todas as lições»), módulo M6: os 43 achados CONFIRMADOS da varredura de 6/11 (bordo/cidadania-v3/cuidado-152/m6-confirmados.json; os 7 recusados, 9, 11, 12, 13, 14, 15 e 21, não entram: os pesos da avaliação e os tempos da aula de tarefa ficam em frase e «Três antes de mim» fica como está): 11 achados A (tabelas onde há itens paralelos, como na M7-F10, na M7-F15 e do M1 ao M5: class apoio-tabela, th scope, td data-label e os role; os seis cartões «Em paralelo» das lições F02, F04, F05, F06, F07 e F09, as caixas de termos «Recorda» e «Para entender» da F02, da F04, da F06 e da F07, a primeira coluna das de termos da F02 e da F06 com 30 %, e os três testes de «Frases da rua», num div.nota, como no M3; cada página com tabela nova carrega assets/pt-lessons/apoios-tabelas.css antes da camada de aparência, na versão do M1), 28 de referências e números que não se partem entre linhas (B: U+00A0 nos espaços que a proposta final prende, no contexto que a proposta dá, e U+2060 logo a seguir ao traço de intervalo e ao hífen da sigla «M6-Fxx»; nas datas, todos os espaços, como na proposta do M6; os intervalos de versos «(v. 1 a 4)», «(v. 1 e 2)», «(v. 9 e 10)», «(v. 13 e 14)» e «(v. 16 e 17)» passam à forma da M7-F10, «(vv. 1–4)», como na proposta) e 4 casos do mesmo tipo (C: a lista das regras de produção da F08; no portefólio, os nomes dos ficheiros todos em <code> e sem partir, e a tabela com cabeçalho, os role e o rótulo da coluna em cada célula, empilhada no telemóvel pelo estilo da página; e os elementos de cada tema em listas no critério 4 das grelhas, pelo gerador, com «max_em_listas», como no M1 e no M5). Camada mais recente, por cima da revisão dos enunciados das tarefas (tarefas_claras_20261110, pedido #192), que fica por cima da decisão 152 no M5 (cuidado_m5_20261108). 11/11/2026: refeita sobre o main 4bf4a053, que trouxe essa revisão; as trocas das tarefas da M6-U1 e da M6-U2 (dados e páginas) são as mesmas, aplicadas aos enunciados novos, e nada do #192 se desfaz. Gerada por scripts/cuidado_m6_20261108.py e aplicada por scripts/aplicar_trocas.py: não se edita à mão. O texto visível fica igual, salvo a estrutura das tabelas e das listas, as correções da proposta final e os espaços invisíveis. A casca das lições (migalhas «2.º ano», «Estás em: Lição M6-Fxx», o título escondido e a sigla do rodapé) não muda aqui, ficheiro a ficheiro: muda no molde, como do M1 ao M5 (o achado 29, só da casca da F09, fica sem troca); nas outras páginas (índice, guia, mapa e portefólio), muda o «2.º ano» do cabeçalho e as migalhas ficam, como na proposta final. Ficam de fora os «alt» (e aria-label, href, title, content e data-titulo, que vira o title do leitor dos vídeos), o <title>, o texto dos desenhos (SVG), a «frase» dos cartões sublinhar, as «palavras» dos cartões frase, os «passos» dos cartões ordenar e o que outra camada já tinha posto com U+00A0 (as legendas e os créditos do «i» do mapa). As páginas geradas mudam também nos dados, que estão nesta camada, e regeneram-se sem diferenças: as tarefas da M6-U1 e da M6-U2 (docs/pedagogia/tarefas-escolha/m6-u1.json e m6-u2.json: «nao_partir», como do M1 ao M5, que também prende a meta descrição, «nao_partir_grelha», nova, para «Grelha /20» da ligação à grelha, e os achados B), os aquecimentos (docs/pedagogia/aquecimentos/m6-u1.json e m6-u2.json) e as grelhas (docs/pedagogia/grelhas-tarefas-20261027.json, entradas m6-u1 e m6-u2: «max_em_listas» no critério 4, «nao_partir_valores», nova, para «20 valores», e os achados B); a correção sai igual. Os geradores mudam fora da camada: scripts/tarefas_escolha.py lê «nao_partir_grelha» e scripts/grelhas_tarefas.py lê «nao_partir_valores» e aceita a ligação com «Grelha /20» preso. A lição gerada F14 muda na fonte, fora da camada (scripts/licoes_m1_m6_20261101.py), e a lição muda aqui e sai igual do gerador. Os painéis de projeção da F01, da F06, da F08 e da F11 seguem os enunciados dos cartões que mudaram (a lista e o seletor); o material do relâmpago segue a lição antes das camadas de cuidado, como do M1 ao M5. As cópias dos cartões no banco das provas rápidas do índice (var U) mudam como as lições de onde vêm, e também a cópia do retorno de um cartão da F01 nas sessões do Exame (assets/exame/sessoes.json, sessão s10), que tests/test_exame_alignment.py compara com a lição. 11/11/2026 (reposição, no mesmo pedido #191): a camada repõe também os espaços que não quebram (U+00A0) que o #192 tirou às tarefas do M1, do M3, do M4 e do M5 ao reescrever os enunciados (a verificação «tables» falhava em tests/browser_cuidado_m3.py, também no main). São 23 trocas «(R)» em 13 ficheiros, só de espaços, sem mudar mais nenhuma letra do texto do #192: onde a mesma referência continua, o espaço volta (M3-U1: «(I, 1 a 3)»; M3-U2: «(I, 4 e 5)», «(X, 145)» duas vezes, «(VIII, 96)», «VIII, 96 a 99» e «VIII, 98»; M4-U1: «3 a 4 minutos»; M4-U2: «180 a 240 palavras»; M4-U3, discurso: «2 minutos»); onde o #192 trocou «cap.» por «capítulo», a abreviatura já não existe e a referência nova, do mesmo tipo, fica presa como no M4 e no M5 (M1-U2: «capítulo XII» duas vezes; M5-U1: «capítulo IV»; M5-U2: «capítulo I» e «capítulo VI»). Nas tarefas geradas (M1-U2, M3-U1, M3-U2, M5-U1 e M5-U2) a troca faz-se nos dados (docs/pedagogia/tarefas-escolha/) e na página, que sai igual do gerador; as do M4 não têm gerador. Para os contratos históricos do M1 ao M5, que leem estas páginas como eram antes do #192, scripts/tarefas_claras_historico.py desfaz primeiro esta camada, quando o texto ainda a traz, e só depois a dos enunciados.",
+ "files": {
+  "docs/pedagogia/aquecimentos/m6-u1.json": {
+   "base_sha256_lf": "2257e2bb301a065b3870dce457f53c77446c565999e8f616fa38e7fe65571af5",
+   "after_sha256_lf": "074cb938481a25e0eb9240ed67712761d2e8ad6c5f6db0d7c9f854e50b3ba637",
+   "edits": [
+    {
+     "location": "Dados aquecimentos/m6-u1.json: «À mão, 200 a 240 palavras.» que não se parte (com o contexto «200 a 240 palavras»)",
+     "old": "200 a 240 palavras",
+     "new": "200 a 240 palavras",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados aquecimentos/m6-u1.json: «4 + 4 + 3 + 3 (lição F01)» que não se parte (com o contexto «, 4 »)",
+     "old": ", 4 ",
+     "new": ", 4 ",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados aquecimentos/m6-u1.json: «4 + 4 + 3 + 3 (lição F01)» que não se parte (com o contexto «+ 4 »)",
+     "old": "+ 4 ",
+     "new": "+ 4 ",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados aquecimentos/m6-u1.json: «4 + 4 + 3 + 3 (lição F01)» que não se parte (com o contexto « 3 +»)",
+     "old": " 3 +",
+     "new": " 3 +",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados aquecimentos/m6-u1.json: «4 + 4 + 3 + 3 (lição F01)» que não se parte (com o contexto « 3 (»)",
+     "old": " 3 (",
+     "new": " 3 (",
+     "occurrences": 1
+    }
+   ]
+  },
+  "docs/pedagogia/aquecimentos/m6-u2.json": {
+   "base_sha256_lf": "45cd98ac4518c86852bc9f8471928afa453130a2a9c48810b56eda461696ef7a",
+   "after_sha256_lf": "c8649750fb8c62e5df1f51a60ac83e3278cd4c4f8c09b28bff9c9413c5ecf0f9",
+   "edits": [
+    {
+     "location": "Dados aquecimentos/m6-u2.json: «À mão, 200 a 240 palavras.» que não se parte (com o contexto «200 a 240 palavras»)",
+     "old": "200 a 240 palavras",
+     "new": "200 a 240 palavras",
+     "occurrences": 1
+    }
+   ]
+  },
+  "docs/pedagogia/grelhas-tarefas-20261027.json": {
+   "base_sha256_lf": "1929e09d55eb65bd4d708cdf5b06dabd84397ca17773f0444b8643cd05cb87cc",
+   "after_sha256_lf": "cb1501c2159bdce196d9506b3f7a5d2a37fc4d9d6260a07cc925d570e3f3c2be",
+   "edits": [
+    {
+     "location": "Dados das grelhas, m6-u1: «nao_partir_valores», os números do molde com espaço que não quebra",
+     "old": "   \"unidade\": 1,\n   \"titulo\": \"U",
+     "new": "   \"unidade\": 1,\n   \"nao_partir_valores\": true,\n   \"titulo\": \"U",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados das grelhas, m6-u1: «max_em_listas» no critério 4",
+     "old": "\"max\": 6,\n     \"niveis\": {\n      \"0\": [\n       \"Conta um ponto por elemento cumprido e mais um pela explicação que o tema pede. Aqui, não cumpres nenhum dos cinco elementos do teu tema.\",\n       \"A: Q",
+     "new": "\"max\": 6,\n     \"max_em_listas\": true,\n     \"niveis\": {\n      \"0\": [\n       \"Conta um ponto por elemento cumprido e mais um pela explicação que o tema pede. Aqui, não cumpres nenhum dos cinco elementos do teu tema.\",\n       \"A: Q",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados das grelhas, m6-u2: «nao_partir_valores», os números do molde com espaço que não quebra",
+     "old": "   \"unidade\": 2,\n   \"titulo\": \"A",
+     "new": "   \"unidade\": 2,\n   \"nao_partir_valores\": true,\n   \"titulo\": \"A",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados das grelhas, m6-u2: «max_em_listas» no critério 4",
+     "old": "\"max\": 6,\n     \"niveis\": {\n      \"0\": [\n       \"Conta um ponto por elemento cumprido e mais um pela explicação que o tema pede. Aqui, não cumpres nenhum dos cinco elementos do teu tema.\",\n       \"A: P",
+     "new": "\"max\": 6,\n     \"max_em_listas\": true,\n     \"niveis\": {\n      \"0\": [\n       \"Conta um ponto por elemento cumprido e mais um pela explicação que o tema pede. Aqui, não cumpres nenhum dos cinco elementos do teu tema.\",\n       \"A: P",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados pedagogia/grelhas-tarefas-20261027.json, m6-u1: «entre 200 e 240 palavras» que não se parte (com o contexto «   \"titulo\": \"Um ideal que não se alcança\",\n   \"produto\":…»)",
+     "old": "   \"titulo\": \"Um ideal que não se alcança\",\n   \"produto\": \"Núcleo comum (duas respostas) e um tema à escolha (A ou B), à mão, entre 200 e 240 palavras, mais duas linhas finais que não contam para as palavras. O aquecimento em cartões não conta para a nota.\",\n   \"nota\": \"Os exemplos foram escritos para esta grelha com outros casos do mesmo tipo (outro par de sonetos, outro verso, outro soneto para reescrever, outro poema para filmar), nunca com os sonetos, o verso ou o soneto da tarefa. As citações vêm das lições do M3 e do M6.\",",
+     "new": "   \"titulo\": \"Um ideal que não se alcança\",\n   \"produto\": \"Núcleo comum (duas respostas) e um tema à escolha (A ou B), à mão, entre 200 e 240 palavras, mais duas linhas finais que não contam para as palavras. O aquecimento em cartões não conta para a nota.\",\n   \"nota\": \"Os exemplos foram escritos para esta grelha com outros casos do mesmo tipo (outro par de sonetos, outro verso, outro soneto para reescrever, outro poema para filmar), nunca com os sonetos, o verso ou o soneto da tarefa. As citações vêm das lições do M3 e do M6.\",",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados pedagogia/grelhas-tarefas-20261027.json, m6-u1: «entre 200 e 240 palavras» que não se parte (com o contexto «   \"titulo\": \"A cidade vista e transfigurada\",\n   \"produt…»)",
+     "old": "   \"titulo\": \"A cidade vista e transfigurada\",\n   \"produto\": \"Núcleo comum (duas respostas) e um tema à escolha (A ou B), à mão, entre 200 e 240 palavras, mais duas linhas finais que não contam para as palavras. O aquecimento em cartões não conta para a nota.\",\n   \"nota\": \"Os exemplos foram escritos para esta grelha com outros casos do mesmo tipo (outra estrofe, outro verso, outras palavras de 1887, outro poema para fotografar), nunca com a estrofe, os versos ou as palavras que a tarefa pede. As citações vêm das lições do M3 e do M6.\",",
+     "new": "   \"titulo\": \"A cidade vista e transfigurada\",\n   \"produto\": \"Núcleo comum (duas respostas) e um tema à escolha (A ou B), à mão, entre 200 e 240 palavras, mais duas linhas finais que não contam para as palavras. O aquecimento em cartões não conta para a nota.\",\n   \"nota\": \"Os exemplos foram escritos para esta grelha com outros casos do mesmo tipo (outra estrofe, outro verso, outras palavras de 1887, outro poema para fotografar), nunca com a estrofe, os versos ou as palavras que a tarefa pede. As citações vêm das lições do M3 e do M6.\",",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados pedagogia/grelhas-tarefas-20261027.json, m6-u1: «das 200 a 240 palavras» que não se parte (com o contexto «    {\n     \"nome\": \"Respostas articuladas, extensão e esc…»)",
+     "old": "    {\n     \"nome\": \"Respostas articuladas, extensão e escrita revista\",\n     \"max\": 3,\n     \"niveis\": {\n      \"0\": [\n       \"Respostas soltas, ou muito fora das 200 a 240 palavras.\",\n       \"Três listas de palavras sem frases completas.\"\n      ],\n      \"parcial\": [\n       \"As respostas ligam-se, mas falha uma ou mais destas: a revisão (erros que uma releitura apanhava), a extensão, o tema no topo ou as duas linhas finais com um verso.\",\n       \"Fecho: Aprendi muitas coisas sobre Antero.\"",
+     "new": "    {\n     \"nome\": \"Respostas articuladas, extensão e escrita revista\",\n     \"max\": 3,\n     \"niveis\": {\n      \"0\": [\n       \"Respostas soltas, ou muito fora das 200 a 240 palavras.\",\n       \"Três listas de palavras sem frases completas.\"\n      ],\n      \"parcial\": [\n       \"As respostas ligam-se, mas falha uma ou mais destas: a revisão (erros que uma releitura apanhava), a extensão, o tema no topo ou as duas linhas finais com um verso.\",\n       \"Fecho: Aprendi muitas coisas sobre Antero.\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados pedagogia/grelhas-tarefas-20261027.json, m6-u1: «das 200 a 240 palavras» que não se parte (com o contexto «    {\n     \"nome\": \"Respostas articuladas, extensão e esc…»)",
+     "old": "    {\n     \"nome\": \"Respostas articuladas, extensão e escrita revista\",\n     \"max\": 3,\n     \"niveis\": {\n      \"0\": [\n       \"Respostas soltas, ou muito fora das 200 a 240 palavras.\",\n       \"Três listas de palavras sem frases completas.\"\n      ],\n      \"parcial\": [\n       \"As respostas ligam-se, mas falha uma ou mais destas: a revisão (erros que uma releitura apanhava), a extensão, o tema no topo ou as duas linhas finais com um verso.\",\n       \"Fecho: Gostei muito de Cesário.\"",
+     "new": "    {\n     \"nome\": \"Respostas articuladas, extensão e escrita revista\",\n     \"max\": 3,\n     \"niveis\": {\n      \"0\": [\n       \"Respostas soltas, ou muito fora das 200 a 240 palavras.\",\n       \"Três listas de palavras sem frases completas.\"\n      ],\n      \"parcial\": [\n       \"As respostas ligam-se, mas falha uma ou mais destas: a revisão (erros que uma releitura apanhava), a extensão, o tema no topo ou as duas linhas finais com um verso.\",\n       \"Fecho: Gostei muito de Cesário.\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados pedagogia/grelhas-tarefas-20261027.json, m6-u1: «(c. 1577)» que não se parte (com o contexto «c. 1577»)",
+     "old": "c. 1577",
+     "new": "c. 1577",
+     "occurrences": 1
+    }
+   ]
+  },
+  "docs/pedagogia/tarefas-escolha/m1-u2.json": {
+   "base_sha256_lf": "f9d6f7379149bd68e4f62b56d7cfb456392c109c894f36eabeede31804d221a7",
+   "after_sha256_lf": "af7737ca3c743829955eca90f376bcaa8dc805e369085da39fad35631a352360",
+   "edits": [
+    {
+     "location": "Dados da tarefa M1-U2: «capítulo XII» que não se parte",
+     "old": "capítulo XII",
+     "new": "capítulo XII",
+     "occurrences": 2
+    }
+   ]
+  },
+  "docs/pedagogia/tarefas-escolha/m3-u1.json": {
+   "base_sha256_lf": "b760013558466760338ac596433ba60174a886fc60bb37c6c2a2dd8c50bfda88",
+   "after_sha256_lf": "d0d0f600adf161396066e95602417f354ae9bc6b4f4fbb39c7ce85353e7b1311",
+   "edits": [
+    {
+     "location": "Dados da tarefa M3-U1: «(I, 1 a 3)» que não se parte",
+     "old": "(I, 1 a 3)",
+     "new": "(I, 1 a 3)",
+     "occurrences": 1
+    }
+   ]
+  },
+  "docs/pedagogia/tarefas-escolha/m3-u2.json": {
+   "base_sha256_lf": "45df231e309b7a95a48b539a1b56a65db7c348644b32a5709ab71551837359d6",
+   "after_sha256_lf": "2a38ad6bf2babdda7f688ebba3d8c53dac2afdd7e98ffc9d1f55913bfd74409c",
+   "edits": [
+    {
+     "location": "Dados da tarefa M3-U2: «(I, 4 e 5)» que não se parte",
+     "old": "(I, 4 e 5)",
+     "new": "(I, 4 e 5)",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados da tarefa M3-U2: «(X, 145)» que não se parte",
+     "old": "(X, 145)",
+     "new": "(X, 145)",
+     "occurrences": 2
+    },
+    {
+     "location": "Dados da tarefa M3-U2: «curioso» (VIII, 96)» que não se parte",
+     "old": "curioso» (VIII, 96)",
+     "new": "curioso» (VIII, 96)",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados da tarefa M3-U2: «VIII, 96 a 99» que não se parte",
+     "old": "VIII, 96 a 99",
+     "new": "VIII, 96 a 99",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados da tarefa M3-U2: «VIII, 98 ou 99» que não se parte",
+     "old": "VIII, 98 ou 99",
+     "new": "VIII, 98 ou 99",
+     "occurrences": 1
+    }
+   ]
+  },
+  "docs/pedagogia/tarefas-escolha/m5-u1.json": {
+   "base_sha256_lf": "db2fa624a82ddc9bc4ef6a2fd5609bd93d9b655a517e6376ca0cf4ed9ec45c3f",
+   "after_sha256_lf": "672deed4e830b3b8626896ccec539596d79cb78ccf026b2777b0edbdb0004831",
+   "edits": [
+    {
+     "location": "Dados da tarefa M5-U1: «do capítulo IV em que» que não se parte",
+     "old": "do capítulo IV em que",
+     "new": "do capítulo IV em que",
+     "occurrences": 1
+    }
+   ]
+  },
+  "docs/pedagogia/tarefas-escolha/m5-u2.json": {
+   "base_sha256_lf": "4661174ff67f09f0e36ac33a250d2ad38ec606e7c9fef063833d378dac4b9045",
+   "after_sha256_lf": "60b7dd3c9f2a5c4131dc0f403a3185eecf6a281cfd28cec6f1e54e011843cc5c",
+   "edits": [
+    {
+     "location": "Dados da tarefa M5-U2: «do capítulo I e outra nova» que não se parte",
+     "old": "do capítulo I e outra nova",
+     "new": "do capítulo I e outra nova",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados da tarefa M5-U2: «No capítulo VI,» que não se parte",
+     "old": "No capítulo VI,",
+     "new": "No capítulo VI,",
+     "occurrences": 1
+    }
+   ]
+  },
+  "docs/pedagogia/tarefas-escolha/m6-u1.json": {
+   "base_sha256_lf": "e1b19a40641edcbc2caa7bed7ac5948f911144b5e235faa9d30041541a3779c3",
+   "after_sha256_lf": "d03ff7c3a1ee1561aaf47d6b318576e5b1b0121a0e8e1543e34033ee16edbe76",
+   "edits": [
+    {
+     "location": "Dados da tarefa: «nao_partir», «nao_partir_grelha», os números do molde com espaço que não quebra",
+     "old": "\n \"unidade\": 1,\n ",
+     "new": "\n \"unidade\": 1,\n \"nao_partir\": true,\n \"nao_partir_grelha\": true,\n ",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados tarefas-escolha/m6-u1.json: «10 minutos de cartões» que não se parte (com o contexto «10 minutos»)",
+     "old": "10 minutos",
+     "new": "10 minutos",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados tarefas-escolha/m6-u1.json: «5 minutos para» que não se parte (com o contexto « 5 minutos»)",
+     "old": " 5 minutos",
+     "new": " 5 minutos",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados tarefas-escolha/m6-u1.json: «60 minutos de» que não se parte (com o contexto «60 minutos»)",
+     "old": "60 minutos",
+     "new": "60 minutos",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados tarefas-escolha/m6-u1.json: «15 minutos de» que não se parte (com o contexto «15 minutos»)",
+     "old": "15 minutos",
+     "new": "15 minutos",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados tarefas-escolha/m6-u1.json: «Total: 90 minutos» que não se parte (com o contexto «90 minutos»)",
+     "old": "90 minutos",
+     "new": "90 minutos",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados tarefas-escolha/m6-u1.json: «200 a 240 palavras» que não se parte",
+     "old": "200 a 240 palavras",
+     "new": "200 a 240 palavras",
+     "occurrences": 2
+    },
+    {
+     "location": "Dados tarefas-escolha/m6-u1.json: «90 a 130 no tema» que não se parte (com o contexto «90 a 130»)",
+     "old": "90 a 130",
+     "new": "90 a 130",
+     "occurrences": 1
+    }
+   ]
+  },
+  "docs/pedagogia/tarefas-escolha/m6-u2.json": {
+   "base_sha256_lf": "bf57fc0bc69741a36cd0e8aec5371c5fb14cdd0d0154f95d095ccd1b7013bf3b",
+   "after_sha256_lf": "021ab1239c4a4c197fe8c9314c689d7941543866da00a6edb35e0818b07c5df2",
+   "edits": [
+    {
+     "location": "Dados da tarefa: «nao_partir», «nao_partir_grelha», os números do molde com espaço que não quebra",
+     "old": "\n \"unidade\": 2,\n ",
+     "new": "\n \"unidade\": 2,\n \"nao_partir\": true,\n \"nao_partir_grelha\": true,\n ",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados tarefas-escolha/m6-u2.json: «10 minutos de cartões» que não se parte (com o contexto «10 minutos»)",
+     "old": "10 minutos",
+     "new": "10 minutos",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados tarefas-escolha/m6-u2.json: «5 minutos para» que não se parte (com o contexto « 5 minutos»)",
+     "old": " 5 minutos",
+     "new": " 5 minutos",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados tarefas-escolha/m6-u2.json: «60 minutos de» que não se parte (com o contexto «60 minutos»)",
+     "old": "60 minutos",
+     "new": "60 minutos",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados tarefas-escolha/m6-u2.json: «15 minutos de» que não se parte (com o contexto «15 minutos»)",
+     "old": "15 minutos",
+     "new": "15 minutos",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados tarefas-escolha/m6-u2.json: «Total: 90 minutos» que não se parte (com o contexto «90 minutos»)",
+     "old": "90 minutos",
+     "new": "90 minutos",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados tarefas-escolha/m6-u2.json: «200 a 240 palavras» que não se parte",
+     "old": "200 a 240 palavras",
+     "new": "200 a 240 palavras",
+     "occurrences": 2
+    },
+    {
+     "location": "Dados tarefas-escolha/m6-u2.json: «90 a 130 no tema» que não se parte (com o contexto «90 a 130»)",
+     "old": "90 a 130",
+     "new": "90 a 130",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados tarefas-escolha/m6-u2.json: «grafias do século XIX» que não se parte (com o contexto «século XIX»)",
+     "old": "século XIX",
+     "new": "século XIX",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados tarefas-escolha/m6-u2.json: «Na parte II,» que não se parte (com o contexto «parte II»)",
+     "old": "parte II",
+     "new": "parte II",
+     "occurrences": 2
+    },
+    {
+     "location": "Dados tarefas-escolha/m6-u2.json: «200 exemplares» que não se parte",
+     "old": "200 exemplares",
+     "new": "200 exemplares",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados tarefas-escolha/m6-u2.json: «aos 31 anos» que não se parte (com o contexto «31 anos»)",
+     "old": "31 anos",
+     "new": "31 anos",
+     "occurrences": 1
+    }
+   ]
+  },
+  "assets/exame/sessoes.json": {
+   "base_sha256_lf": "9fd209c3a3103fe44c115007f3bbe7afac673db0b931fd8303c59d0e020de80e",
+   "after_sha256_lf": "6751f2d8f39137c69602b2dbe028c4609c7b74730ad13a97c737aa2f7e93743e",
+   "edits": [
+    {
+     "location": "assets/exame/sessoes.json: «andante» (v. 1): o sujeito» que não se parte (com o contexto «v. 1)»)",
+     "old": "v. 1)",
+     "new": "v. 1)",
+     "occurrences": 2
+    }
+   ]
+  },
+  "m6/antero-deus/index.html": {
+   "base_sha256_lf": "8f5451df769729900e9cc6eb30cdcb8a0d0872d22f4333a4a6b04a4e2525b20d",
+   "after_sha256_lf": "08b1a0cbac26b0d4438b4a20ba1b48dd4a42224c6a38fc8085d8e4b871f00d68",
+   "edits": [
+    {
+     "location": "m6/antero-deus: «n.º 20142» que não se parte",
+     "old": "n.º 20142",
+     "new": "n.º 20142",
+     "occurrences": 3
+    },
+    {
+     "location": "m6/antero-deus: «até 25 palavras» que não se parte (com o contexto «25 palavras»)",
+     "old": "25 palavras",
+     "new": "25 palavras",
+     "occurrences": 2
+    }
+   ]
+  },
+  "m6/antero-palacio/index.html": {
+   "base_sha256_lf": "e510da3188df49fd095d7493c582b32f10a813087b758824dfee3145334c44a1",
+   "after_sha256_lf": "a927ed40026c8e3d53585be1be87636e6874a341c72ac8c0b1217c0d384294fe",
+   "edits": [
+    {
+     "location": "m6/antero-palacio: «(1842–1891)» que não se parte (com o contexto «1842–1891»)",
+     "old": "1842–1891",
+     "new": "1842–⁠1891",
+     "occurrences": 1
+    },
+    {
+     "location": "m6/antero-palacio: «(v. 7)» que não se parte (com o contexto «v. 7»)",
+     "old": "v. 7",
+     "new": "v. 7",
+     "occurrences": 1
+    },
+    {
+     "location": "m6/antero-palacio: «(v. 14)» que não se parte (com o contexto «v. 14»)",
+     "old": "v. 14",
+     "new": "v. 14",
+     "occurrences": 1
+    },
+    {
+     "location": "m6/antero-palacio: «até 15 palavras» que não se parte (com o contexto «15 palavras»)",
+     "old": "15 palavras",
+     "new": "15 palavras",
+     "occurrences": 1
+    },
+    {
+     "location": "m6/antero-palacio: «n.º 20142» que não se parte",
+     "old": "n.º 20142",
+     "new": "n.º 20142",
+     "occurrences": 2
+    }
+   ]
+  },
+  "m6/cesario-avemarias/index.html": {
+   "base_sha256_lf": "06eded6d82f102205fd3caacb6c5c847dd4f9610bcb1280e32fe6a10fabdf0bb",
+   "after_sha256_lf": "4f33a9eb9ab35f94be7338e0ab30ee1be16319d09fd568b11df1cf2a32716ac8",
+   "edits": [
+    {
+     "location": "m6/cesario-avemarias: «n.º 8698» que não se parte",
+     "old": "n.º 8698",
+     "new": "n.º 8698",
+     "occurrences": 3
+    },
+    {
+     "location": "m6/cesario-avemarias: «num verso de 16 palavras» que não se parte (com o contexto «16 palavras»)",
+     "old": "16 palavras",
+     "new": "16 palavras",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m6/cesario-noite/index.html": {
+   "base_sha256_lf": "2cae9a3bad4fb099e82c11d9b488f2bfc2cd132996d5091edcb1f0ddb82bf790",
+   "after_sha256_lf": "6d76340c126c76ddd71c0a9449186a9cf7d493a7e4fcd905b1a5a00b67bd8744",
+   "edits": [
+    {
+     "location": "m6/cesario-noite: «n.º 8698» que não se parte",
+     "old": "n.º 8698",
+     "new": "n.º 8698",
+     "occurrences": 3
+    },
+    {
+     "location": "m6/cesario-noite: «os momentos da parte IV.» que não se parte (com o contexto «parte IV»)",
+     "old": "parte IV",
+     "new": "parte IV",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m6/gram-oracoes-rua/index.html": {
+   "base_sha256_lf": "e827daedf6be721959ce404e3c2753d3d314cc859116d167853ed8e73aed75f8",
+   "after_sha256_lf": "b71ec79e99fd16e134d1fda495ab3a5c7dabd7121bf817b0de447982b22cb07f",
+   "edits": [
+    {
+     "location": "m6/gram-oracoes-rua, passo 0, «Três versos, três testes» (a nota dos três testes)",
+     "old": "<p class=\\\"nota\\\"><b>teste do «isso»</b>: se a oração se troca por «isso», é substantiva<br><b>teste do «o qual»</b>: se «que» se troca por «o qual», «os quais», é relativa<br><b>teste da pergunta</b>: se responde a «quando?», «porquê?» ou «com que resultado?», é adverbial</p>",
+     "new": "<div class=\\\"nota\\\"><table class=\\\"apoio-tabela\\\" role=\\\"table\\\"><thead role=\\\"rowgroup\\\"><tr role=\\\"row\\\"><th scope=\\\"col\\\" role=\\\"columnheader\\\">Teste</th><th scope=\\\"col\\\" role=\\\"columnheader\\\">Condição</th><th scope=\\\"col\\\" role=\\\"columnheader\\\">A oração é</th></tr></thead><tbody role=\\\"rowgroup\\\"><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">teste do «isso»</th><td role=\\\"cell\\\" data-label=\\\"Condição\\\">se a oração se troca por «isso»</td><td role=\\\"cell\\\" data-label=\\\"A oração é\\\">substantiva</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">teste do «o qual»</th><td role=\\\"cell\\\" data-label=\\\"Condição\\\">se «que» se troca por «o qual», «os quais»</td><td role=\\\"cell\\\" data-label=\\\"A oração é\\\">relativa</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">teste da pergunta</th><td role=\\\"cell\\\" data-label=\\\"Condição\\\">se responde a «quando?», «porquê?» ou «com que resultado?»</td><td role=\\\"cell\\\" data-label=\\\"A oração é\\\">adverbial</td></tr></tbody></table></div>",
+     "occurrences": 1
+    },
+    {
+     "location": "m6/gram-oracoes-rua, cabeça: a folha das tabelas de apoio, antes da camada de aparência",
+     "old": "<link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-universal-1\">",
+     "new": "<link rel=\"stylesheet\" href=\"../../assets/pt-lessons/apoios-tabelas.css?v=20261106.1\"><link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-universal-1\">",
+     "occurrences": 1
+    },
+    {
+     "location": "m6/gram-oracoes-rua: «n.º 8698» que não se parte",
+     "old": "n.º 8698",
+     "new": "n.º 8698",
+     "occurrences": 3
+    },
+    {
+     "location": "m6/gram-oracoes-rua: «n.º 20142» que não se parte",
+     "old": "n.º 20142",
+     "new": "n.º 20142",
+     "occurrences": 3
+    }
+   ]
+  },
+  "m6/guia-da-tarefa-m6/index.html": {
+   "base_sha256_lf": "d02a9b30e3ba9149269b8c62f712ebd7593a479287b5dfe82bd8ae226ff1fb16",
+   "after_sha256_lf": "a53ae72b7803912f92a5bb4911320aa01c32e3785e9962dac048ca8d2a632b8e",
+   "edits": [
+    {
+     "location": "m6/guia-da-tarefa-m6: «aula de tarefa de 90 minutos» que não se parte (com o contexto «90 minutos»)",
+     "old": "90 minutos",
+     "new": "90 minutos",
+     "occurrences": 1
+    },
+    {
+     "location": "m6/guia-da-tarefa-m6: «(10 minutos)» que não se parte (com o contexto «10 minutos»)",
+     "old": "10 minutos",
+     "new": "10 minutos",
+     "occurrences": 1
+    },
+    {
+     "location": "m6/guia-da-tarefa-m6: «Seguem-se 5 minutos» que não se parte (com o contexto «5 minutos»)",
+     "old": "5 minutos",
+     "new": "5 minutos",
+     "occurrences": 1
+    },
+    {
+     "location": "m6/guia-da-tarefa-m6: «30 %» que não se parte",
+     "old": "30 %",
+     "new": "30 %",
+     "occurrences": 5
+    },
+    {
+     "location": "m6/guia-da-tarefa-m6: «10 %» que não se parte",
+     "old": "10 %",
+     "new": "10 %",
+     "occurrences": 1
+    },
+    {
+     "location": "m6/guia-da-tarefa-m6: «grelha /20» que não se parte (com o contexto «grelha »)",
+     "old": "grelha ",
+     "new": "grelha ",
+     "occurrences": 7
+    },
+    {
+     "location": "m6/guia-da-tarefa-m6: «<b>Aquecer, 10 min</b>» que não se parte (com o contexto «10 min<»)",
+     "old": "10 min<",
+     "new": "10 min<",
+     "occurrences": 1
+    },
+    {
+     "location": "m6/guia-da-tarefa-m6: «<b>Ler o enunciado, 5 min</b>» que não se parte (com o contexto « 5 min<»)",
+     "old": " 5 min<",
+     "new": " 5 min<",
+     "occurrences": 1
+    },
+    {
+     "location": "m6/guia-da-tarefa-m6: «<b>Produzir, 60 min</b>» que não se parte (com o contexto «60 min»)",
+     "old": "60 min",
+     "new": "60 min",
+     "occurrences": 1
+    },
+    {
+     "location": "m6/guia-da-tarefa-m6: «<b>Rever e entregar, 15 min</b>» que não se parte (com o contexto «15 min»)",
+     "old": "15 min",
+     "new": "15 min",
+     "occurrences": 1
+    },
+    {
+     "location": "m6/guia-da-tarefa-m6: «Guia da tarefa, 2.º ano» que não se parte (com o contexto « 2.º ano»)",
+     "old": " 2.º ano",
+     "new": " 2.º ano",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m6/index.html": {
+   "base_sha256_lf": "2a590815bb62f7bd2504ff5f66278d641b6b83778eb9dd90cc6ec375c4f1be0b",
+   "after_sha256_lf": "4f6a4c88ba87a8701737ff79bfea32ba268b82a488e0e24eae8d21ba922fdaf3",
+   "edits": [
+    {
+     "location": "m6: «(v. 1 a 4)»",
+     "old": "(v. 1 a 4)",
+     "new": "(vv. 1–⁠4)",
+     "occurrences": 1
+    },
+    {
+     "location": "m6: «(v. 13 e 14)»",
+     "old": "(v. 13 e 14)",
+     "new": "(vv. 13–⁠14)",
+     "occurrences": 1
+    },
+    {
+     "location": "m6: «aula de tarefa de 90 minutos» que não se parte (com o contexto «90 minutos»)",
+     "old": "90 minutos",
+     "new": "90 minutos",
+     "occurrences": 3
+    },
+    {
+     "location": "m6: «tarefa 90 min</small>» que não se parte (com o contexto « 90 min<»)",
+     "old": " 90 min<",
+     "new": " 90 min<",
+     "occurrences": 2
+    },
+    {
+     "location": "m6: «cerca de 22 min» que não se parte (com o contexto «22 min»)",
+     "old": "22 min",
+     "new": "22 min",
+     "occurrences": 2
+    },
+    {
+     "location": "m6: «30 %» que não se parte",
+     "old": "30 %",
+     "new": "30 %",
+     "occurrences": 5
+    },
+    {
+     "location": "m6: «10 %» que não se parte",
+     "old": "10 %",
+     "new": "10 %",
+     "occurrences": 1
+    },
+    {
+     "location": "m6: «grelha /20» que não se parte (com o contexto «grelha /»)",
+     "old": "grelha /",
+     "new": "grelha /",
+     "occurrences": 2
+    },
+    {
+     "location": "m6: «Grelha /20» que não se parte (com o contexto «Grelha »)",
+     "old": "Grelha ",
+     "new": "Grelha ",
+     "occurrences": 2
+    },
+    {
+     "location": "m6: «Português, 2.º ano, percurso do módulo» que não se parte (com o contexto «2.º ano,»)",
+     "old": "2.º ano,",
+     "new": "2.º ano,",
+     "occurrences": 1
+    },
+    {
+     "location": "m6: «(v. 1)» que não se parte (com o contexto «v. 1)»)",
+     "old": "v. 1)",
+     "new": "v. 1)",
+     "occurrences": 4
+    },
+    {
+     "location": "m6: «(v. 5)» que não se parte (com o contexto «v. 5»)",
+     "old": "v. 5",
+     "new": "v. 5",
+     "occurrences": 1
+    },
+    {
+     "location": "m6: «(v. 7)» que não se parte (com o contexto «v. 7»)",
+     "old": "v. 7",
+     "new": "v. 7",
+     "occurrences": 4
+    },
+    {
+     "location": "m6: «(v. 8)» que não se parte (com o contexto «v. 8»)",
+     "old": "v. 8",
+     "new": "v. 8",
+     "occurrences": 1
+    },
+    {
+     "location": "m6: «(v. 9)» que não se parte (com o contexto «v. 9»)",
+     "old": "v. 9",
+     "new": "v. 9",
+     "occurrences": 1
+    },
+    {
+     "location": "m6: «(v. 10)» que não se parte (com o contexto «v. 10»)",
+     "old": "v. 10",
+     "new": "v. 10",
+     "occurrences": 3
+    },
+    {
+     "location": "m6: «(v. 14)» que não se parte (com o contexto «v. 14»)",
+     "old": "v. 14",
+     "new": "v. 14",
+     "occurrences": 4
+    },
+    {
+     "location": "m6: «verso 36» que não se parte",
+     "old": "verso 36",
+     "new": "verso 36",
+     "occurrences": 1
+    },
+    {
+     "location": "m6: «4 + 4 + 3 + 3» que não se parte (com o contexto «: 4 »)",
+     "old": ": 4 ",
+     "new": ": 4 ",
+     "occurrences": 1
+    },
+    {
+     "location": "m6: «4 + 4 + 3 + 3» que não se parte (com o contexto «+ 4 »)",
+     "old": "+ 4 ",
+     "new": "+ 4 ",
+     "occurrences": 1
+    },
+    {
+     "location": "m6: «4 + 4 + 3 + 3» que não se parte (com o contexto « 3 +»)",
+     "old": " 3 +",
+     "new": " 3 +",
+     "occurrences": 1
+    },
+    {
+     "location": "m6: «4 + 4 + 3 + 3» que não se parte (com o contexto « 3.»)",
+     "old": " 3.",
+     "new": " 3.",
+     "occurrences": 1
+    },
+    {
+     "location": "m6: «S. Petersburgo» que não se parte",
+     "old": "S. Petersburgo",
+     "new": "S. Petersburgo",
+     "occurrences": 1
+    },
+    {
+     "location": "m6: «parte I» que não se parte",
+     "old": "parte I",
+     "new": "parte I",
+     "occurrences": 1
+    },
+    {
+     "location": "m6: «século XIX» que não se parte",
+     "old": "século XIX",
+     "new": "século XIX",
+     "occurrences": 3
+    },
+    {
+     "location": "m6: «31 anos» que não se parte",
+     "old": "31 anos",
+     "new": "31 anos",
+     "occurrences": 4
+    },
+    {
+     "location": "m6: «200 exemplares» que não se parte",
+     "old": "200 exemplares",
+     "new": "200 exemplares",
+     "occurrences": 4
+    },
+    {
+     "location": "m6: «25 de fevereiro de 1855» que não se parte",
+     "old": "25 de fevereiro de 1855",
+     "new": "25 de fevereiro de 1855",
+     "occurrences": 1
+    },
+    {
+     "location": "m6: «19 de julho de 1886» que não se parte",
+     "old": "19 de julho de 1886",
+     "new": "19 de julho de 1886",
+     "occurrences": 1
+    },
+    {
+     "location": "m6: «45 minutos» que não se parte",
+     "old": "45 minutos",
+     "new": "45 minutos",
+     "occurrences": 1
+    },
+    {
+     "location": "m6: «de 100 a 130 palavras» que não se parte (com o contexto « 100 a 130 palavras»)",
+     "old": " 100 a 130 palavras",
+     "new": " 100 a 130 palavras",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m6/licao-m6-f01/index.html": {
+   "base_sha256_lf": "4535c1ec230879a4d0cdfadbdd8685bb51c350040bb2fedb173377e5f3f34e59",
+   "after_sha256_lf": "20f1e30b8326214ed08a59520e36a0a112d6115933c197ed2dd324e5efd2d3cc",
+   "edits": [
+    {
+     "location": "M6-F01: «(v. 1)» que não se parte (com o contexto «v. 1)»)",
+     "old": "v. 1)",
+     "new": "v. 1)",
+     "occurrences": 3
+    },
+    {
+     "location": "M6-F01: «v. 6 corrigido» que não se parte (com o contexto «v. 6»)",
+     "old": "v. 6",
+     "new": "v. 6",
+     "occurrences": 1
+    },
+    {
+     "location": "M6-F01: «(v. 7)» que não se parte (com o contexto «v. 7»)",
+     "old": "v. 7",
+     "new": "v. 7",
+     "occurrences": 2
+    },
+    {
+     "location": "M6-F01: «(v. 9)» que não se parte (com o contexto «v. 9»)",
+     "old": "v. 9",
+     "new": "v. 9",
+     "occurrences": 3
+    },
+    {
+     "location": "M6-F01: «(v. 10)» que não se parte (com o contexto «v. 10»)",
+     "old": "v. 10",
+     "new": "v. 10",
+     "occurrences": 1
+    },
+    {
+     "location": "M6-F01: «(v. 11)» que não se parte (com o contexto «v. 11»)",
+     "old": "v. 11",
+     "new": "v. 11",
+     "occurrences": 1
+    },
+    {
+     "location": "M6-F01: «(v. 12)» que não se parte (com o contexto «v. 12»)",
+     "old": "v. 12",
+     "new": "v. 12",
+     "occurrences": 1
+    },
+    {
+     "location": "M6-F01: «(v. 14)» que não se parte (com o contexto «v. 14»)",
+     "old": "v. 14",
+     "new": "v. 14",
+     "occurrences": 3
+    },
+    {
+     "location": "M6-F01: «(c. 1887)» que não se parte (com o contexto «c. 1887)»)",
+     "old": "c. 1887)",
+     "new": "c. 1887)",
+     "occurrences": 1
+    },
+    {
+     "location": "M6-F01: «(1842 a 1891)» que não se parte (com o contexto «1842 a 1891»)",
+     "old": "1842 a 1891",
+     "new": "1842 a 1891",
+     "occurrences": 1
+    },
+    {
+     "location": "M6-F01: «(1842–1891)» que não se parte (com o contexto «1842–1891»)",
+     "old": "1842–1891",
+     "new": "1842–⁠1891",
+     "occurrences": 1
+    },
+    {
+     "location": "M6-F01: «4 + 4 + 3 + 3» que não se parte (com o contexto «: 4 »)",
+     "old": ": 4 ",
+     "new": ": 4 ",
+     "occurrences": 2
+    },
+    {
+     "location": "M6-F01: «4 + 4 + 3 + 3» que não se parte (com o contexto «+ 4 »)",
+     "old": "+ 4 ",
+     "new": "+ 4 ",
+     "occurrences": 2
+    },
+    {
+     "location": "M6-F01: «4 + 4 + 3 + 3» que não se parte (com o contexto « 3 +»)",
+     "old": " 3 +",
+     "new": " 3 +",
+     "occurrences": 2
+    },
+    {
+     "location": "M6-F01: «4 + 4 + 3 + 3» que não se parte (com o contexto « 3.»)",
+     "old": " 3.",
+     "new": " 3.",
+     "occurrences": 2
+    }
+   ]
+  },
+  "m6/licao-m6-f02/index.html": {
+   "base_sha256_lf": "82c08a7a6ccea1248fce52cd01ee2446186b15dd9758b143b2a8f153ec85fc2d",
+   "after_sha256_lf": "01d3e1ca54e32c1c669cb4053670e7697b8d36885a7426710ed0f23ab063dc7b",
+   "edits": [
+    {
+     "location": "M6-F02, cartão 18, Em paralelo («Da procura ao descanso»)",
+     "old": "<div class=\\\"paralelo\\\"><div class=\\\"lado\\\"><span class=\\\"ic\\\"><svg class=\\\"simbolo\\\" viewBox=\\\"0 0 48 48\\\" aria-hidden=\\\"true\\\" data-ico=\\\"rosa\\\"><circle cx=\\\"24\\\" cy=\\\"24\\\" r=\\\"17\\\"/><path d=\\\"M24 6l3 15 15 3-15 3-3 15-3-15-15-3 15-3z\\\"/><path d=\\\"M24 11v26M11 24h26\\\"/><path d=\\\"M14 14l20 20M34 14L14 34\\\"/></svg></span><h3>«Ideal»</h3><ul><li>O Ideal: visão sem nome, miragem, «Nuvem, sonho impalpavel»</li><li>O sujeito inquieto: «A mim mesmo pergunto, e não atino»</li><li>Anáfora e enumeração negativa: não é Vénus, Circe, Amazona</li></ul></div><svg class=\\\"onda\\\" viewBox=\\\"0 0 12 240\\\" preserveAspectRatio=\\\"none\\\" aria-hidden=\\\"true\\\"><path d=\\\"M6 0c7 20-7 40 0 60s-7 40 0 60-7 40 0 60-7 40 0 60\\\"/></svg><div class=\\\"lado\\\"><span class=\\\"ic\\\"><svg class=\\\"simbolo\\\" viewBox=\\\"0 0 48 48\\\" aria-hidden=\\\"true\\\" data-ico=\\\"mao\\\"><path d=\\\"M8 30c4 0 8 2 12 4h12c3 0 4-3 1-4l-9-2\\\"/><path d=\\\"M8 26h6l10 4\\\"/><path d=\\\"M4 24h4v14H4z\\\"/><path d=\\\"M14 38h18c4 0 8-4 12-8\\\"/></svg></span><h3>«Na mão de Deus»</h3><ul><li>O Ideal: «forma transitoria e imperfeita» que o sujeito depõe</li><li>O sujeito em repouso: «Descançou a final meu coração»</li><li>Comparação da criança ao colo e apóstrofe ao coração</li></ul></div></div>",
+     "new": "<table class=\\\"apoio-tabela\\\" role=\\\"table\\\"><thead role=\\\"rowgroup\\\"><tr role=\\\"row\\\"><th scope=\\\"col\\\" role=\\\"columnheader\\\">Aspeto</th><th scope=\\\"col\\\" role=\\\"columnheader\\\">«Ideal»</th><th scope=\\\"col\\\" role=\\\"columnheader\\\">«Na mão de Deus»</th></tr></thead><tbody role=\\\"rowgroup\\\"><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">O Ideal</th><td role=\\\"cell\\\" data-label=\\\"«Ideal»\\\">visão sem nome, miragem, «Nuvem, sonho impalpavel»</td><td role=\\\"cell\\\" data-label=\\\"«Na mão de Deus»\\\">«forma transitoria e imperfeita» que o sujeito depõe</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">O sujeito</th><td role=\\\"cell\\\" data-label=\\\"«Ideal»\\\">inquieto: «A mim mesmo pergunto, e não atino»</td><td role=\\\"cell\\\" data-label=\\\"«Na mão de Deus»\\\">em repouso: «Descançou a final meu coração»</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Recursos</th><td role=\\\"cell\\\" data-label=\\\"«Ideal»\\\">anáfora e enumeração negativa: não é Vénus, Circe, Amazona</td><td role=\\\"cell\\\" data-label=\\\"«Na mão de Deus»\\\">comparação da criança ao colo e apóstrofe ao coração</td></tr></tbody></table>",
+     "occurrences": 1
+    },
+    {
+     "location": "M6-F02, cartão 20, Para entender («Recorda»)",
+     "old": "<p>Os exemplos vêm de «O Palácio da Ventura». <b>Apóstrofe</b>: chamar alguém ou alguma coisa («Abri-vos, portas d'ouro»). <b>Metáfora</b>: dizer uma coisa por outra («Paladino do amor»). <b>Personificação</b>: dar gesto ou voz de pessoa a uma coisa ou a uma ideia (as portas, a que o cavaleiro fala como se fossem pessoas). <b>Comparação</b>: aproximar duas coisas com «como». <b>Anáfora</b>: repetir a mesma palavra no princípio de versos ou frases («Por desertos, por sóes, por noite escura»).</p>",
+     "new": "<p>Os exemplos vêm de «O Palácio da Ventura»; o da comparação, de «Na mão de Deus».</p><table class=\\\"apoio-tabela\\\" role=\\\"table\\\"><thead role=\\\"rowgroup\\\"><tr role=\\\"row\\\"><th scope=\\\"col\\\" role=\\\"columnheader\\\" style=\\\"width:30%\\\">Recurso</th><th scope=\\\"col\\\" role=\\\"columnheader\\\">O que é</th><th scope=\\\"col\\\" role=\\\"columnheader\\\">Exemplo</th></tr></thead><tbody role=\\\"rowgroup\\\"><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Apóstrofe</th><td role=\\\"cell\\\" data-label=\\\"O que é\\\">chamar alguém ou alguma coisa</td><td role=\\\"cell\\\" data-label=\\\"Exemplo\\\">«Abri-vos, portas d'ouro»</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Metáfora</th><td role=\\\"cell\\\" data-label=\\\"O que é\\\">dizer uma coisa por outra</td><td role=\\\"cell\\\" data-label=\\\"Exemplo\\\">«Paladino do amor»</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Personificação</th><td role=\\\"cell\\\" data-label=\\\"O que é\\\">dar gesto ou voz de pessoa a uma coisa ou a uma ideia</td><td role=\\\"cell\\\" data-label=\\\"Exemplo\\\">as portas, a que o cavaleiro fala como se fossem pessoas</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Comparação</th><td role=\\\"cell\\\" data-label=\\\"O que é\\\">aproximar duas coisas com «como»</td><td role=\\\"cell\\\" data-label=\\\"Exemplo\\\">«Como criança, em lobrega jornada»</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Anáfora</th><td role=\\\"cell\\\" data-label=\\\"O que é\\\">repetir a mesma palavra no princípio de versos ou frases</td><td role=\\\"cell\\\" data-label=\\\"Exemplo\\\">«Por desertos, por sóes, por noite escura»</td></tr></tbody></table>",
+     "occurrences": 1
+    },
+    {
+     "location": "M6-F02, cabeça: a folha das tabelas de apoio, antes da camada de aparência",
+     "old": "<link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-reading1\">",
+     "new": "<link rel=\"stylesheet\" href=\"../../assets/pt-lessons/apoios-tabelas.css?v=20261106.1\"><link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-reading1\">",
+     "occurrences": 1
+    },
+    {
+     "location": "M6-F02: «(v. 1 a 4)»",
+     "old": "(v. 1 a 4)",
+     "new": "(vv. 1–⁠4)",
+     "occurrences": 1
+    },
+    {
+     "location": "M6-F02: «(v. 1 e 2)»",
+     "old": "(v. 1 e 2)",
+     "new": "(vv. 1–⁠2)",
+     "occurrences": 1
+    },
+    {
+     "location": "M6-F02: «(v. 9 e 10)»",
+     "old": "(v. 9 e 10)",
+     "new": "(vv. 9–⁠10)",
+     "occurrences": 2
+    },
+    {
+     "location": "M6-F02: «(v. 4)» que não se parte (com o contexto «v. 4»)",
+     "old": "v. 4",
+     "new": "v. 4",
+     "occurrences": 1
+    },
+    {
+     "location": "M6-F02: «(v. 5)» que não se parte (com o contexto «v. 5»)",
+     "old": "v. 5",
+     "new": "v. 5",
+     "occurrences": 1
+    },
+    {
+     "location": "M6-F02: «(v. 6)» que não se parte (com o contexto «v. 6»)",
+     "old": "v. 6",
+     "new": "v. 6",
+     "occurrences": 1
+    },
+    {
+     "location": "M6-F02: «(v. 7)» que não se parte (com o contexto «v. 7»)",
+     "old": "v. 7",
+     "new": "v. 7",
+     "occurrences": 1
+    },
+    {
+     "location": "M6-F02: «(v. 8)» que não se parte (com o contexto «v. 8»)",
+     "old": "v. 8",
+     "new": "v. 8",
+     "occurrences": 1
+    },
+    {
+     "location": "M6-F02: «v. 14 corrigido» que não se parte (com o contexto «v. 14»)",
+     "old": "v. 14",
+     "new": "v. 14",
+     "occurrences": 1
+    },
+    {
+     "location": "M6-F02: «de Antero, com imagens (2 min)» que não se parte (com o contexto «2 min)<»)",
+     "old": "2 min)<",
+     "new": "2 min)<",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m6/licao-m6-f04/index.html": {
+   "base_sha256_lf": "5346ed413f16350ac83063b9d39fa442dfa166079790851d0141f7f439f94bf0",
+   "after_sha256_lf": "447a10a6776d4bdee8a17b8a236a84a4c886830dc01c2343c28475c5b6be3e9a",
+   "edits": [
+    {
+     "location": "M6-F04, cartão 2, Em paralelo («Coordenar ou subordinar»)",
+     "old": "<div class=\\\"paralelo\\\"><div class=\\\"lado\\\"><span class=\\\"ic\\\"><svg class=\\\"simbolo\\\" viewBox=\\\"0 0 48 48\\\" aria-hidden=\\\"true\\\" data-ico=\\\"ponte\\\"><path d=\\\"M4 34h40\\\"/><path d=\\\"M8 34c4-14 28-14 32 0\\\"/><path d=\\\"M12 34V22M20 34v-9M28 34v-9M36 34V22\\\"/><path d=\\\"M4 26h40\\\"/></svg></span><h3>Coordenação</h3><ul><li>Liga orações sem dependência sintática entre si</li><li>Conectores: e, mas, ou, pois (confirma a relação na frase)</li><li>«Abrem-se as portas de ouro» e «Mas dentro encontro só»</li></ul></div><svg class=\\\"onda\\\" viewBox=\\\"0 0 12 240\\\" preserveAspectRatio=\\\"none\\\" aria-hidden=\\\"true\\\"><path d=\\\"M6 0c7 20-7 40 0 60s-7 40 0 60-7 40 0 60-7 40 0 60\\\"/></svg><div class=\\\"lado\\\"><span class=\\\"ic\\\"><svg class=\\\"simbolo\\\" viewBox=\\\"0 0 48 48\\\" aria-hidden=\\\"true\\\" data-ico=\\\"engrenagem\\\" data-gesto=\\\"gira\\\"><circle cx=\\\"24\\\" cy=\\\"24\\\" r=\\\"6\\\"/><circle cx=\\\"24\\\" cy=\\\"24\\\" r=\\\"14\\\"/><path d=\\\"M24 4v6M24 38v6M4 24h6M38 24h6M10 10l4 4M34 34l4 4M38 10l-4 4M14 34l-4 4\\\"/></svg></span><h3>Subordinação</h3><ul><li>Uma oração depende de outra, a subordinante</li><li>Conectores: que, quando, se, porque, como (decide a construção)</li><li>«Sonho» e «que sou um cavaleiro andante», substantiva completiva</li></ul></div></div>",
+     "new": "<table class=\\\"apoio-tabela\\\" role=\\\"table\\\"><thead role=\\\"rowgroup\\\"><tr role=\\\"row\\\"><th scope=\\\"col\\\" role=\\\"columnheader\\\">Aspeto</th><th scope=\\\"col\\\" role=\\\"columnheader\\\">Coordenação</th><th scope=\\\"col\\\" role=\\\"columnheader\\\">Subordinação</th></tr></thead><tbody role=\\\"rowgroup\\\"><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">O que faz</th><td role=\\\"cell\\\" data-label=\\\"Coordenação\\\">liga orações sem dependência sintática entre si</td><td role=\\\"cell\\\" data-label=\\\"Subordinação\\\">uma oração depende de outra, a subordinante</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Conectores</th><td role=\\\"cell\\\" data-label=\\\"Coordenação\\\">e, mas, ou, pois (confirma a relação na frase)</td><td role=\\\"cell\\\" data-label=\\\"Subordinação\\\">que, quando, se, porque, como (decide a construção)</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Exemplo</th><td role=\\\"cell\\\" data-label=\\\"Coordenação\\\">«Abrem-se as portas de ouro» e «Mas dentro encontro só»</td><td role=\\\"cell\\\" data-label=\\\"Subordinação\\\">«Sonho» e «que sou um cavaleiro andante», substantiva completiva</td></tr></tbody></table>",
+     "occurrences": 1
+    },
+    {
+     "location": "M6-F04, cartão 4, Para entender («Três relações a observar»)",
+     "old": "<ul><li><b>Completiva:</b> em «Sonho que sou um cavaleiro», a oração completa o verbo; «Sonho isso» ajuda a verificar.</li><li><b>Relativa com antecedente:</b> em «os filhos que depois naufragam», «que» retoma «filhos» e é sujeito de «naufragam».</li><li><b>Adverbial:</b> «tal… que» pode apresentar uma consequência; confirma-se na frase, não na palavra «que» isolada.</li></ul>",
+     "new": "<table class=\\\"apoio-tabela\\\" role=\\\"table\\\"><thead role=\\\"rowgroup\\\"><tr role=\\\"row\\\"><th scope=\\\"col\\\" role=\\\"columnheader\\\">Relação</th><th scope=\\\"col\\\" role=\\\"columnheader\\\">Exemplo</th><th scope=\\\"col\\\" role=\\\"columnheader\\\">O que observar</th></tr></thead><tbody role=\\\"rowgroup\\\"><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Completiva</th><td role=\\\"cell\\\" data-label=\\\"Exemplo\\\">«Sonho que sou um cavaleiro»</td><td role=\\\"cell\\\" data-label=\\\"O que observar\\\">a oração completa o verbo; «Sonho isso» ajuda a verificar.</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Relativa com antecedente</th><td role=\\\"cell\\\" data-label=\\\"Exemplo\\\">«os filhos que depois naufragam»</td><td role=\\\"cell\\\" data-label=\\\"O que observar\\\">«que» retoma «filhos» e é sujeito de «naufragam».</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Adverbial</th><td role=\\\"cell\\\" data-label=\\\"Exemplo\\\">«tal… que»</td><td role=\\\"cell\\\" data-label=\\\"O que observar\\\">pode apresentar uma consequência; confirma-se na frase, não na palavra «que» isolada.</td></tr></tbody></table>",
+     "occurrences": 1
+    },
+    {
+     "location": "M6-F04, cabeça: a folha das tabelas de apoio, antes da camada de aparência",
+     "old": "<link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-reading1\">",
+     "new": "<link rel=\"stylesheet\" href=\"../../assets/pt-lessons/apoios-tabelas.css?v=20261106.1\"><link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-reading1\">",
+     "occurrences": 1
+    },
+    {
+     "location": "M6-F04: «>M6-F07</a>» que não se parte (com o contexto «M6-F07»)",
+     "old": "M6-F07",
+     "new": "M6-⁠F07",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m6/licao-m6-f05/index.html": {
+   "base_sha256_lf": "cc896ef158f7824636fe0dd907700c20fe64f312e3c834c5f805101762e95caa",
+   "after_sha256_lf": "406450b5d8433c90c24a5b08e370f6ac2327c8ac732d7344beedcca4fff17127",
+   "edits": [
+    {
+     "location": "M6-F05, cartão 2, Em paralelo («Um étimo, dois caminhos»)",
+     "old": "<div class=\\\"paralelo\\\"><div class=\\\"lado\\\"><span class=\\\"ic\\\"><svg class=\\\"simbolo\\\" viewBox=\\\"0 0 48 48\\\" aria-hidden=\\\"true\\\" data-ico=\\\"calcada\\\"><path d=\\\"M4 13c5-5 10-5 15 0s10 5 15 0 10-5 10 0\\\"/><path d=\\\"M4 24c5-5 10-5 15 0s10 5 15 0 10-5 10 0\\\"/><path d=\\\"M4 35c5-5 10-5 15 0s10 5 15 0 10-5 10 0\\\"/><path d=\\\"M9 17h4v4H9zM25 17h4v4h-4zM17 28h4v4h-4zM33 28h4v4h-4zM9 39h4v4H9zM25 39h4v4h-4z\\\"/></svg></span><h3>Via popular</h3><ul><li>Evolução fonética lenta</li><li><i>plenu-</i> dá «cheio»</li><li><i>clave-</i> dá «chave»; <i>macula-</i>, «mancha» ou «malha»</li></ul></div><svg class=\\\"onda\\\" viewBox=\\\"0 0 12 240\\\" preserveAspectRatio=\\\"none\\\" aria-hidden=\\\"true\\\"><path d=\\\"M6 0c7 20-7 40 0 60s-7 40 0 60-7 40 0 60-7 40 0 60\\\"/></svg><div class=\\\"lado\\\"><span class=\\\"ic\\\"><svg class=\\\"simbolo\\\" viewBox=\\\"0 0 48 48\\\" aria-hidden=\\\"true\\\" data-ico=\\\"pergaminho\\\"><path d=\\\"M12 10h22a4 4 0 0 1 4 4v24a4 4 0 0 1-4 4H12\\\"/><path d=\\\"M12 10a4 4 0 0 0-4 4v2h8\\\"/><path d=\\\"M16 20h16M16 26h16M16 32h10\\\"/></svg></span><h3>Via erudita</h3><ul><li>Tomada mais tarde, próxima do latim</li><li><i>plenu-</i> dá «pleno»</li><li><i>clave-</i> dá «clave»; <i>macula-</i>, «mácula»</li></ul></div></div>",
+     "new": "<p><b>Via popular</b>: evolução fonética lenta. <b>Via erudita</b>: tomada mais tarde, próxima do latim.</p><table class=\\\"apoio-tabela\\\" role=\\\"table\\\"><thead role=\\\"rowgroup\\\"><tr role=\\\"row\\\"><th scope=\\\"col\\\" role=\\\"columnheader\\\">Étimo</th><th scope=\\\"col\\\" role=\\\"columnheader\\\">Via popular</th><th scope=\\\"col\\\" role=\\\"columnheader\\\">Via erudita</th></tr></thead><tbody role=\\\"rowgroup\\\"><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\"><i>plenu-</i></th><td role=\\\"cell\\\" data-label=\\\"Via popular\\\">«cheio»</td><td role=\\\"cell\\\" data-label=\\\"Via erudita\\\">«pleno»</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\"><i>clave-</i></th><td role=\\\"cell\\\" data-label=\\\"Via popular\\\">«chave»</td><td role=\\\"cell\\\" data-label=\\\"Via erudita\\\">«clave»</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\"><i>macula-</i></th><td role=\\\"cell\\\" data-label=\\\"Via popular\\\">«mancha» ou «malha»</td><td role=\\\"cell\\\" data-label=\\\"Via erudita\\\">«mácula»</td></tr></tbody></table>",
+     "occurrences": 1
+    },
+    {
+     "location": "M6-F05, cabeça: a folha das tabelas de apoio, antes da camada de aparência",
+     "old": "<link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-reading1\">",
+     "new": "<link rel=\"stylesheet\" href=\"../../assets/pt-lessons/apoios-tabelas.css?v=20261106.1\"><link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-reading1\">",
+     "occurrences": 1
+    },
+    {
+     "location": "M6-F05: «século XIX» que não se parte (com o contexto «. As edições do século XIX mostram grafias»)",
+     "old": ". As edições do século XIX mostram grafias",
+     "new": ". As edições do século XIX mostram grafias",
+     "occurrences": 1
+    },
+    {
+     "location": "M6-F05: «século XIX» que não se parte (com o contexto «alavra tinha no século XIX\",\"O sinónimo ma»)",
+     "old": "alavra tinha no século XIX\",\"O sinónimo ma",
+     "new": "alavra tinha no século XIX\",\"O sinónimo ma",
+     "occurrences": 1
+    },
+    {
+     "location": "M6-F05: «século XIX» que não se parte (com o contexto «é uma grafia do século XIX); o étimo é a p»)",
+     "old": "é uma grafia do século XIX); o étimo é a p",
+     "new": "é uma grafia do século XIX); o étimo é a p",
+     "occurrences": 1
+    },
+    {
+     "location": "M6-F05: «século XIX» que não se parte (com o contexto «as»: grafias do século XIX que as reformas»)",
+     "old": "as»: grafias do século XIX que as reformas",
+     "new": "as»: grafias do século XIX que as reformas",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m6/licao-m6-f06/index.html": {
+   "base_sha256_lf": "20534bc723e3999c38dba5e06536911b49c1a9d38af378dd6692bd448da4c50f",
+   "after_sha256_lf": "777f3561ee498a9737e1db124b8a0e7bde7ec1ecd94fa240c74b83691e2d8412",
+   "edits": [
+    {
+     "location": "M6-F06, cartão 20, Em paralelo («O que vê e o que evoca»)",
+     "old": "<div class=\\\"paralelo\\\"><div class=\\\"lado\\\"><span class=\\\"ic\\\"><svg class=\\\"simbolo\\\" viewBox=\\\"0 0 48 48\\\" aria-hidden=\\\"true\\\" data-ico=\\\"oculos\\\"><circle cx=\\\"15\\\" cy=\\\"26\\\" r=\\\"7\\\"/><circle cx=\\\"33\\\" cy=\\\"26\\\" r=\\\"7\\\"/><path d=\\\"M22 26h4\\\"/><path d=\\\"M8 24l-3-3M40 24l3-3\\\"/></svg></span><h3>O que vê</h3><ul><li>Barcos: os botes atracados e os escaleres de um couraçado</li><li>Gente: calafates «enfarruscados, seccos»</li><li>Tempo: o fim da tarde que «inspira» e «incommoda»</li></ul></div><svg class=\\\"onda\\\" viewBox=\\\"0 0 12 240\\\" preserveAspectRatio=\\\"none\\\" aria-hidden=\\\"true\\\"><path d=\\\"M6 0c7 20-7 40 0 60s-7 40 0 60-7 40 0 60-7 40 0 60\\\"/></svg><div class=\\\"lado\\\"><span class=\\\"ic\\\"><svg class=\\\"simbolo\\\" viewBox=\\\"0 0 48 48\\\" aria-hidden=\\\"true\\\" data-ico=\\\"nau\\\" data-gesto=\\\"balanca\\\"><path d=\\\"M6 32h36l-6 8H12z\\\"/><path d=\\\"M24 32V8\\\"/><path d=\\\"M24 10h12l-12 14z\\\"/><path d=\\\"M24 12H14l10 12z\\\"/></svg></span><h3>O que evoca</h3><ul><li>Barcos: «soberbas naus que eu não verei jámais!»</li><li>Gente: «Mouros, baixeis, heroes», Camões a nado</li><li>Tempo: o passado das «chronicas navaes»</li></ul></div></div>",
+     "new": "<table class=\\\"apoio-tabela\\\" role=\\\"table\\\"><thead role=\\\"rowgroup\\\"><tr role=\\\"row\\\"><th scope=\\\"col\\\" role=\\\"columnheader\\\">Elemento</th><th scope=\\\"col\\\" role=\\\"columnheader\\\">O que vê</th><th scope=\\\"col\\\" role=\\\"columnheader\\\">O que evoca</th></tr></thead><tbody role=\\\"rowgroup\\\"><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Barcos</th><td role=\\\"cell\\\" data-label=\\\"O que vê\\\">os botes atracados e os escaleres de um couraçado</td><td role=\\\"cell\\\" data-label=\\\"O que evoca\\\">«soberbas naus que eu não verei jámais!»</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Gente</th><td role=\\\"cell\\\" data-label=\\\"O que vê\\\">calafates «enfarruscados, seccos»</td><td role=\\\"cell\\\" data-label=\\\"O que evoca\\\">«Mouros, baixeis, heroes», Camões a nado</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Tempo</th><td role=\\\"cell\\\" data-label=\\\"O que vê\\\">o fim da tarde que «inspira» e «incommoda»</td><td role=\\\"cell\\\" data-label=\\\"O que evoca\\\">o passado das «chronicas navaes»</td></tr></tbody></table>",
+     "occurrences": 1
+    },
+    {
+     "location": "M6-F06, cartão 22, Para entender («Recorda»)",
+     "old": "<p><b>Deambulação</b>: andar pela cidade sem destino, a ver. <b>Perceção sensorial</b>: o que chega pelos sentidos (ver, ouvir, cheirar, sentir na pele). <b>Transfiguração do real</b>: o que se vê torna-se outra coisa pela imaginação. <b>Tipos sociais</b>: figuras que valem por um grupo inteiro, como um ofício. <b>Imaginário épico</b>: as imagens que a epopeia deixou (naus, heróis, mares).</p>",
+     "new": "<table class=\\\"apoio-tabela\\\" role=\\\"table\\\"><thead role=\\\"rowgroup\\\"><tr role=\\\"row\\\"><th scope=\\\"col\\\" role=\\\"columnheader\\\" style=\\\"width:30%\\\">Conceito</th><th scope=\\\"col\\\" role=\\\"columnheader\\\">O que é</th></tr></thead><tbody role=\\\"rowgroup\\\"><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Deambulação</th><td role=\\\"cell\\\" data-label=\\\"O que é\\\">andar pela cidade sem destino, a ver.</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Perceção sensorial</th><td role=\\\"cell\\\" data-label=\\\"O que é\\\">o que chega pelos sentidos (ver, ouvir, cheirar, sentir na pele).</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Transfiguração do real</th><td role=\\\"cell\\\" data-label=\\\"O que é\\\">o que se vê torna-se outra coisa pela imaginação.</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Tipos sociais</th><td role=\\\"cell\\\" data-label=\\\"O que é\\\">figuras que valem por um grupo inteiro, como um ofício.</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Imaginário épico</th><td role=\\\"cell\\\" data-label=\\\"O que é\\\">as imagens que a epopeia deixou (naus, heróis, mares).</td></tr></tbody></table>",
+     "occurrences": 1
+    },
+    {
+     "location": "M6-F06, cabeça: a folha das tabelas de apoio, antes da camada de aparência",
+     "old": "<link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-reading1\">",
+     "new": "<link rel=\"stylesheet\" href=\"../../assets/pt-lessons/apoios-tabelas.css?v=20261106.1\"><link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-reading1\">",
+     "occurrences": 1
+    },
+    {
+     "location": "M6-F06: «(v. 16 e 17)»",
+     "old": "(v. 16 e 17)",
+     "new": "(vv. 16–⁠17)",
+     "occurrences": 1
+    },
+    {
+     "location": "M6-F06: «(v. 3)» que não se parte (com o contexto «v. 3)»)",
+     "old": "v. 3)",
+     "new": "v. 3)",
+     "occurrences": 1
+    },
+    {
+     "location": "M6-F06: «(v. 5)» que não se parte (com o contexto «v. 5»)",
+     "old": "v. 5",
+     "new": "v. 5",
+     "occurrences": 2
+    },
+    {
+     "location": "M6-F06: «(v. 7)» que não se parte (com o contexto «v. 7»)",
+     "old": "v. 7",
+     "new": "v. 7",
+     "occurrences": 2
+    },
+    {
+     "location": "M6-F06: «(v. 8)» que não se parte (com o contexto «v. 8»)",
+     "old": "v. 8",
+     "new": "v. 8",
+     "occurrences": 1
+    },
+    {
+     "location": "M6-F06: «(v. 9)» que não se parte (com o contexto «v. 9»)",
+     "old": "v. 9",
+     "new": "v. 9",
+     "occurrences": 1
+    },
+    {
+     "location": "M6-F06: «(v. 10)» que não se parte (com o contexto «v. 10»)",
+     "old": "v. 10",
+     "new": "v. 10",
+     "occurrences": 2
+    },
+    {
+     "location": "M6-F06: «(v. 16)» que não se parte (com o contexto «v. 16)»)",
+     "old": "v. 16)",
+     "new": "v. 16)",
+     "occurrences": 1
+    },
+    {
+     "location": "M6-F06: «(v. 17)» que não se parte (com o contexto «v. 17»)",
+     "old": "v. 17",
+     "new": "v. 17",
+     "occurrences": 1
+    },
+    {
+     "location": "M6-F06: «(v. 20)» que não se parte (com o contexto «v. 20»)",
+     "old": "v. 20",
+     "new": "v. 20",
+     "occurrences": 1
+    },
+    {
+     "location": "M6-F06: «(v. 23)» que não se parte (com o contexto «v. 23»)",
+     "old": "v. 23",
+     "new": "v. 23",
+     "occurrences": 1
+    },
+    {
+     "location": "M6-F06: «(v. 24)» que não se parte (com o contexto «v. 24»)",
+     "old": "v. 24",
+     "new": "v. 24",
+     "occurrences": 1
+    },
+    {
+     "location": "M6-F06: «(v. 29)» que não se parte (com o contexto «v. 29»)",
+     "old": "v. 29",
+     "new": "v. 29",
+     "occurrences": 1
+    },
+    {
+     "location": "M6-F06: «(v. 32)» que não se parte (com o contexto «v. 32»)",
+     "old": "v. 32",
+     "new": "v. 32",
+     "occurrences": 1
+    },
+    {
+     "location": "M6-F06: «(v. 44)» que não se parte (com o contexto «v. 44»)",
+     "old": "v. 44",
+     "new": "v. 44",
+     "occurrences": 2
+    },
+    {
+     "location": "M6-F06: «os versos 27 e 28» que não se parte (com o contexto «27 e 28»)",
+     "old": "27 e 28",
+     "new": "27 e 28",
+     "occurrences": 1
+    },
+    {
+     "location": "M6-F06: «no verso 28» que não se parte (com o contexto «verso 28»)",
+     "old": "verso 28",
+     "new": "verso 28",
+     "occurrences": 1
+    },
+    {
+     "location": "M6-F06: «parte I» que não se parte",
+     "old": "parte I",
+     "new": "parte I",
+     "occurrences": 3
+    },
+    {
+     "location": "M6-F06: «S. Petersburgo» que não se parte",
+     "old": "S. Petersburgo",
+     "new": "S. Petersburgo",
+     "occurrences": 3
+    },
+    {
+     "location": "M6-F06: «Tiago Barbosa (3 min)» que não se parte (com o contexto «3 min)<»)",
+     "old": "3 min)<",
+     "new": "3 min)<",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m6/licao-m6-f07/index.html": {
+   "base_sha256_lf": "7fa6b29c65819832108c8c9798ccbda0b97a346414f07dfdb7342eb93085966e",
+   "after_sha256_lf": "4b6b4dd0c049b34ba59790d7435bebe923adf7cc4dadcebcba20ebb35d5975f3",
+   "edits": [
+    {
+     "location": "M6-F07, cartão 28, Em paralelo («Reportagem e sonho»)",
+     "old": "<div class=\\\"paralelo\\\"><div class=\\\"lado\\\"><span class=\\\"ic\\\"><svg class=\\\"simbolo\\\" viewBox=\\\"0 0 48 48\\\" aria-hidden=\\\"true\\\" data-ico=\\\"lampiao\\\"><path d=\\\"M18 10h12l2 6H16z\\\"/><path d=\\\"M16 16h16v14H16z\\\"/><path d=\\\"M20 30h8v4h-8z\\\"/><path d=\\\"M24 34v8\\\"/><path d=\\\"M20 42h8\\\"/><path d=\\\"M24 4v6\\\"/></svg></span><h3>A reportagem</h3><ul><li>Programa: «o real e a analyse», um livro feito do observado</li><li>Gente: o forjador ao torno, o ratoneiro imberbe, o cauteleiro rouco</li><li>Lugar: «Sem arvores, no valle escuro das muralhas»</li></ul></div><svg class=\\\"onda\\\" viewBox=\\\"0 0 12 240\\\" preserveAspectRatio=\\\"none\\\" aria-hidden=\\\"true\\\"><path d=\\\"M6 0c7 20-7 40 0 60s-7 40 0 60-7 40 0 60-7 40 0 60\\\"/></svg><div class=\\\"lado\\\"><span class=\\\"ic\\\"><svg class=\\\"simbolo\\\" viewBox=\\\"0 0 48 48\\\" aria-hidden=\\\"true\\\" data-ico=\\\"estrela\\\" data-gesto=\\\"brilha\\\"><path d=\\\"M24 6l5 12 13 1-10 8 3 13-11-7-11 7 3-13L6 19l13-1z\\\"/></svg></span><h3>O sonho</h3><ul><li>Programa: «a chimera azul de transmigrar», mudar de vida</li><li>Gente: «castissimas esposas», filhos, «mansões de vidro transparente»</li><li>Lugar: «todos os continentes» e «as vastidões aquaticas»</li></ul></div></div>",
+     "new": "<table class=\\\"apoio-tabela\\\" role=\\\"table\\\"><thead role=\\\"rowgroup\\\"><tr role=\\\"row\\\"><th scope=\\\"col\\\" role=\\\"columnheader\\\">Elemento</th><th scope=\\\"col\\\" role=\\\"columnheader\\\">A reportagem</th><th scope=\\\"col\\\" role=\\\"columnheader\\\">O sonho</th></tr></thead><tbody role=\\\"rowgroup\\\"><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Programa</th><td role=\\\"cell\\\" data-label=\\\"A reportagem\\\">«o real e a analyse», um livro feito do observado</td><td role=\\\"cell\\\" data-label=\\\"O sonho\\\">«a chimera azul de transmigrar», mudar de vida</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Gente</th><td role=\\\"cell\\\" data-label=\\\"A reportagem\\\">o forjador ao torno, o ratoneiro imberbe, o cauteleiro rouco</td><td role=\\\"cell\\\" data-label=\\\"O sonho\\\">«castissimas esposas», filhos, «mansões de vidro transparente»</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Lugar</th><td role=\\\"cell\\\" data-label=\\\"A reportagem\\\">«Sem arvores, no valle escuro das muralhas»</td><td role=\\\"cell\\\" data-label=\\\"O sonho\\\">«todos os continentes» e «as vastidões aquaticas»</td></tr></tbody></table>",
+     "occurrences": 1
+    },
+    {
+     "location": "M6-F07, cartão 30, Para entender («Recorda»)",
+     "old": "<p><b>Antítese</b>: duas ideias opostas lado a lado. <b>Sinestesia</b>: mistura de sentidos na mesma expressão, como em «um silêncio frio». <b>Hipálage</b>: dar a uma coisa a qualidade que pertence a uma pessoa, como em «a cadeira cansada».</p>",
+     "new": "<table class=\\\"apoio-tabela\\\" role=\\\"table\\\"><thead role=\\\"rowgroup\\\"><tr role=\\\"row\\\"><th scope=\\\"col\\\" role=\\\"columnheader\\\">Recurso</th><th scope=\\\"col\\\" role=\\\"columnheader\\\">O que é</th><th scope=\\\"col\\\" role=\\\"columnheader\\\">Exemplo</th></tr></thead><tbody role=\\\"rowgroup\\\"><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Antítese</th><td role=\\\"cell\\\" data-label=\\\"O que é\\\">duas ideias opostas lado a lado</td><td role=\\\"cell\\\" data-label=\\\"Exemplo\\\">«Inflamma-se um palacio em face de um casebre» (v. 28)</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Sinestesia</th><td role=\\\"cell\\\" data-label=\\\"O que é\\\">mistura de sentidos na mesma expressão</td><td role=\\\"cell\\\" data-label=\\\"Exemplo\\\">«um silêncio frio»</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Hipálage</th><td role=\\\"cell\\\" data-label=\\\"O que é\\\">dar a uma coisa a qualidade que pertence a uma pessoa</td><td role=\\\"cell\\\" data-label=\\\"Exemplo\\\">«a cadeira cansada»</td></tr></tbody></table>",
+     "occurrences": 1
+    },
+    {
+     "location": "M6-F07, cabeça: a folha das tabelas de apoio, antes da camada de aparência",
+     "old": "<link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-reading1\">",
+     "new": "<link rel=\"stylesheet\" href=\"../../assets/pt-lessons/apoios-tabelas.css?v=20261106.1\"><link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-reading1\">",
+     "occurrences": 1
+    },
+    {
+     "location": "M6-F07: «(v. 1)» que não se parte (com o contexto «v. 1)»)",
+     "old": "v. 1)",
+     "new": "v. 1)",
+     "occurrences": 1
+    },
+    {
+     "location": "M6-F07: «(v. 7)» que não se parte (com o contexto «v. 7»)",
+     "old": "v. 7",
+     "new": "v. 7",
+     "occurrences": 1
+    },
+    {
+     "location": "M6-F07: «(v. 10)» que não se parte (com o contexto «v. 10»)",
+     "old": "v. 10",
+     "new": "v. 10",
+     "occurrences": 1
+    },
+    {
+     "location": "M6-F07: «(v. 15)» que não se parte (com o contexto «v. 15»)",
+     "old": "v. 15",
+     "new": "v. 15",
+     "occurrences": 1
+    },
+    {
+     "location": "M6-F07: «(v. 23)» que não se parte (com o contexto «v. 23»)",
+     "old": "v. 23",
+     "new": "v. 23",
+     "occurrences": 2
+    },
+    {
+     "location": "M6-F07: «(v. 28)» que não se parte (com o contexto «v. 28) »)",
+     "old": "v. 28) ",
+     "new": "v. 28) ",
+     "occurrences": 1
+    },
+    {
+     "location": "M6-F07: «(v. 29)» que não se parte (com o contexto «v. 29»)",
+     "old": "v. 29",
+     "new": "v. 29",
+     "occurrences": 1
+    },
+    {
+     "location": "M6-F07: «(v. 51)» que não se parte (com o contexto «v. 51»)",
+     "old": "v. 51",
+     "new": "v. 51",
+     "occurrences": 1
+    },
+    {
+     "location": "M6-F07: «verso 36» que não se parte",
+     "old": "verso 36",
+     "new": "verso 36",
+     "occurrences": 1
+    },
+    {
+     "location": "M6-F07: «verso 66» que não se parte",
+     "old": "verso 66",
+     "new": "verso 66",
+     "occurrences": 1
+    },
+    {
+     "location": "M6-F07: «verso 74» que não se parte",
+     "old": "verso 74",
+     "new": "verso 74",
+     "occurrences": 1
+    },
+    {
+     "location": "M6-F07: «parte II» que não se parte",
+     "old": "parte II",
+     "new": "parte II",
+     "occurrences": 1
+    },
+    {
+     "location": "M6-F07: «parte IV» que não se parte",
+     "old": "parte IV",
+     "new": "parte IV",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m6/licao-m6-f08/index.html": {
+   "base_sha256_lf": "24009b7a3fbc5b55db821639546f2e7c55ab6b681f0dc4f7578d09e1ffb3448b",
+   "after_sha256_lf": "4edae45738d2e17bc71eba5dd5d73a2994e20213c473be7fe7538b08f295f8ee",
+   "edits": [
+    {
+     "location": "M6-F08, cartão 2, Para entender («Regras de produção»)",
+     "old": "<p>Pedir autorização a quem aparece reconhecível; não fotografar pessoas em situação vulnerável sem consentimento (sem-abrigo, crianças); nada de fotografar às escondidas; sair em grupo e dentro do horário combinado; música e sons próprios ou livres de direitos.</p>",
+     "new": "<ul><li>Pedir autorização a quem aparece reconhecível.</li><li>Não fotografar pessoas em situação vulnerável sem consentimento (sem-abrigo, crianças).</li><li>Nada de fotografar às escondidas.</li><li>Sair em grupo e dentro do horário combinado.</li><li>Música e sons próprios ou livres de direitos.</li></ul>",
+     "occurrences": 1
+    },
+    {
+     "location": "M6-F08: «Bárcia, c. 1900)» que não se parte (com o contexto «c. 1900).»)",
+     "old": "c. 1900).",
+     "new": "c. 1900).",
+     "occurrences": 1
+    },
+    {
+     "location": "M6-F08: «(parte I)» que não se parte (com o contexto «parte I»)",
+     "old": "parte I",
+     "new": "parte I",
+     "occurrences": 2
+    },
+    {
+     "location": "M6-F08: «Villas Boas (4 min)» que não se parte (com o contexto «4 min)<»)",
+     "old": "4 min)<",
+     "new": "4 min)<",
+     "occurrences": 1
+    },
+    {
+     "location": "M6-F08: «100 a 130 palavras» que não se parte",
+     "old": "100 a 130 palavras",
+     "new": "100 a 130 palavras",
+     "occurrences": 2
+    },
+    {
+     "location": "M6-F08: «30 a 60 segundos» que não se parte",
+     "old": "30 a 60 segundos",
+     "new": "30 a 60 segundos",
+     "occurrences": 1
+    },
+    {
+     "location": "M6-F08: «peça 3 min» que não se parte (com o contexto «3 min, li»)",
+     "old": "3 min, li",
+     "new": "3 min, li",
+     "occurrences": 1
+    },
+    {
+     "location": "M6-F08: «curta 2 a 3 min» que não se parte (com o contexto «2 a 3 min»)",
+     "old": "2 a 3 min",
+     "new": "2 a 3 min",
+     "occurrences": 1
+    },
+    {
+     "location": "M6-F08: «45 minutos» que não se parte",
+     "old": "45 minutos",
+     "new": "45 minutos",
+     "occurrences": 2
+    },
+    {
+     "location": "M6-F08: «grelha /20» que não se parte (com o contexto «grelha /»)",
+     "old": "grelha /",
+     "new": "grelha /",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m6/licao-m6-f09/index.html": {
+   "base_sha256_lf": "a9e539823de8f519e558c38e1fb2b9c453eefc8425673521d21cee842779aa0a",
+   "after_sha256_lf": "6fa444be68bb4cf6078395312a48873156c10c50c49f2409a6f9be081a19b902",
+   "edits": [
+    {
+     "location": "M6-F09, cartão 2, Em paralelo («Fora do mundo, dentro da cidade»)",
+     "old": "<div class=\\\"paralelo\\\"><div class=\\\"lado\\\"><span class=\\\"ic\\\"><svg class=\\\"simbolo\\\" viewBox=\\\"0 0 48 48\\\" aria-hidden=\\\"true\\\" data-ico=\\\"antero\\\" data-gesto=\\\"pisca\\\"><path d=\\\"M24 4l4 10 11 1-8 7 2 11-9-6-9 6 2-11-8-7 11-1z\\\"/><path d=\\\"M14 44c4-8 16-8 20 0\\\"/><path d=\\\"M18 40c3-3 9-3 12 0\\\"/></svg></span><h3>Antero</h3><ul><li>Temas: angústia existencial, o Ideal, a morte, Deus</li><li>Forma: o soneto, com chave de ouro</li><li>Real pensado: «O palacio encantado da Ventura»</li></ul></div><svg class=\\\"onda\\\" viewBox=\\\"0 0 12 240\\\" preserveAspectRatio=\\\"none\\\" aria-hidden=\\\"true\\\"><path d=\\\"M6 0c7 20-7 40 0 60s-7 40 0 60-7 40 0 60-7 40 0 60\\\"/></svg><div class=\\\"lado\\\"><span class=\\\"ic\\\"><svg class=\\\"simbolo\\\" viewBox=\\\"0 0 48 48\\\" aria-hidden=\\\"true\\\" data-ico=\\\"cesario\\\" data-gesto=\\\"pisca\\\"><path d=\\\"M18 10h12l2 6H16z\\\"/><path d=\\\"M16 16h16v14H16z\\\"/><path d=\\\"M20 30h8v4h-8z\\\"/><path d=\\\"M24 34v10\\\"/><path d=\\\"M8 44h32\\\"/><path d=\\\"M36 18l8-2M36 24h8\\\"/></svg></span><h3>Cesário</h3><ul><li>Temas: a cidade, os tipos sociais, o trabalho</li><li>Forma: quadras de alexandrinos e decassílabos</li><li>Real observado e transfigurado: «a pão no forno»</li></ul></div></div>",
+     "new": "<table class=\\\"apoio-tabela\\\" role=\\\"table\\\"><thead role=\\\"rowgroup\\\"><tr role=\\\"row\\\"><th scope=\\\"col\\\" role=\\\"columnheader\\\">Aspeto</th><th scope=\\\"col\\\" role=\\\"columnheader\\\">Antero</th><th scope=\\\"col\\\" role=\\\"columnheader\\\">Cesário</th></tr></thead><tbody role=\\\"rowgroup\\\"><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Temas</th><td role=\\\"cell\\\" data-label=\\\"Antero\\\">angústia existencial, o Ideal, a morte, Deus</td><td role=\\\"cell\\\" data-label=\\\"Cesário\\\">a cidade, os tipos sociais, o trabalho</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Forma</th><td role=\\\"cell\\\" data-label=\\\"Antero\\\">o soneto, com chave de ouro</td><td role=\\\"cell\\\" data-label=\\\"Cesário\\\">quadras de alexandrinos e decassílabos</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Real</th><td role=\\\"cell\\\" data-label=\\\"Antero\\\">pensado: «O palacio encantado da Ventura»</td><td role=\\\"cell\\\" data-label=\\\"Cesário\\\">observado e transfigurado: «a pão no forno»</td></tr></tbody></table>",
+     "occurrences": 1
+    },
+    {
+     "location": "M6-F09, cabeça: a folha das tabelas de apoio, antes da camada de aparência",
+     "old": "<link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-reading1\">",
+     "new": "<link rel=\"stylesheet\" href=\"../../assets/pt-lessons/apoios-tabelas.css?v=20261106.1\"><link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-reading1\">",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m6/licao-m6-f11/index.html": {
+   "base_sha256_lf": "a03a7789eb2478597fdd7d8d9748f6ee5bfbfa9aa1e5b1f484e74fb4944a69e7",
+   "after_sha256_lf": "dff1a10bda70baa1b81827e8747f645233377c4f04fe99431b4ec900681da2e1",
+   "edits": [
+    {
+     "location": "M6-F11: «31 anos» que não se parte",
+     "old": "31 anos",
+     "new": "31 anos",
+     "occurrences": 9
+    },
+    {
+     "location": "M6-F11: «200 exemplares» que não se parte",
+     "old": "200 exemplares",
+     "new": "200 exemplares",
+     "occurrences": 5
+    },
+    {
+     "location": "M6-F11: «a 25 de fevereiro.» que não se parte (com o contexto «25 de fevereiro.»)",
+     "old": "25 de fevereiro.",
+     "new": "25 de fevereiro.",
+     "occurrences": 1
+    },
+    {
+     "location": "M6-F11: «Morre a 19 de julho,» que não se parte (com o contexto «19 de julho,»)",
+     "old": "19 de julho,",
+     "new": "19 de julho,",
+     "occurrences": 1
+    },
+    {
+     "location": "M6-F11: «19 de julho de 1886» que não se parte",
+     "old": "19 de julho de 1886",
+     "new": "19 de julho de 1886",
+     "occurrences": 2
+    },
+    {
+     "location": "M6-F11: «19 de julho de **1886**» que não se parte (com o contexto «19 de julho de *»)",
+     "old": "19 de julho de *",
+     "new": "19 de julho de *",
+     "occurrences": 1
+    },
+    {
+     "location": "M6-F11: «25 de fevereiro de 1855» que não se parte",
+     "old": "25 de fevereiro de 1855",
+     "new": "25 de fevereiro de 1855",
+     "occurrences": 2
+    },
+    {
+     "location": "M6-F11: «(Lisboa, 1855 a 1886)» que não se parte (com o contexto «1855 a 1886»)",
+     "old": "1855 a 1886",
+     "new": "1855 a 1886",
+     "occurrences": 1
+    },
+    {
+     "location": "M6-F11: «Ensina RTP (1 min)» que não se parte (com o contexto «1 min)<»)",
+     "old": "1 min)<",
+     "new": "1 min)<",
+     "occurrences": 1
+    },
+    {
+     "location": "M6-F11: «(54 segundos)» que não se parte (com o contexto «54 segundos»)",
+     "old": "54 segundos",
+     "new": "54 segundos",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m6/licao-m6-f14/index.html": {
+   "base_sha256_lf": "64e844256f3c41fad968aaf283960023322417707d1b180dae959f4d73e5cb6c",
+   "after_sha256_lf": "c4221ac7dc062e30dd721edb871ad0ff585635c9428b9ad0d3c0872a28d1be61",
+   "edits": [
+    {
+     "location": "M6-F14: «conferência de 27 de maio de 1871» que não se parte (com o contexto «27 de maio de 1871»)",
+     "old": "27 de maio de 1871",
+     "new": "27 de maio de 1871",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m6/m6-antero-viagem-ao-nada/index.html": {
+   "base_sha256_lf": "7c02b3eac1237b255da46aaf10c75fc07f073d2d0ca2cf1421b5685604c42f90",
+   "after_sha256_lf": "b01087dd78016163c83347f665dd6d641fe9da0dcc8970a7e473ba7d8b225047",
+   "edits": [
+    {
+     "location": "m6/m6-antero-viagem-ao-nada: «n.º 20142» que não se parte",
+     "old": "n.º 20142",
+     "new": "n.º 20142",
+     "occurrences": 6
+    },
+    {
+     "location": "m6/m6-antero-viagem-ao-nada: «prefácio, parte I.» que não se parte (com o contexto «parte I»)",
+     "old": "parte I",
+     "new": "parte I",
+     "occurrences": 1
+    },
+    {
+     "location": "m6/m6-antero-viagem-ao-nada: «cerca de 22 min» que não se parte (com o contexto «22 min»)",
+     "old": "22 min",
+     "new": "22 min",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m6/m6-cesario-noite-inteira/index.html": {
+   "base_sha256_lf": "89f076d137009814bcc8595f25eb5d74ceb83653353dfc505552ce64bc537575",
+   "after_sha256_lf": "c37664be77112dbb87c5730dffec17843c932c165facc781632a7a6f2b598ac1",
+   "edits": [
+    {
+     "location": "m6/m6-cesario-noite-inteira: «n.º 8698» que não se parte",
+     "old": "n.º 8698",
+     "new": "n.º 8698",
+     "occurrences": 7
+    },
+    {
+     "location": "m6/m6-cesario-noite-inteira: «fecham a parte I.» que não se parte (com o contexto «parte I.»)",
+     "old": "parte I.",
+     "new": "parte I.",
+     "occurrences": 1
+    },
+    {
+     "location": "m6/m6-cesario-noite-inteira: «da parte III.» que não se parte (com o contexto «parte III»)",
+     "old": "parte III",
+     "new": "parte III",
+     "occurrences": 1
+    },
+    {
+     "location": "m6/m6-cesario-noite-inteira: «S. Petersburgo» que não se parte",
+     "old": "S. Petersburgo",
+     "new": "S. Petersburgo",
+     "occurrences": 1
+    },
+    {
+     "location": "m6/m6-cesario-noite-inteira: «cerca de 22 min» que não se parte (com o contexto «22 min»)",
+     "old": "22 min",
+     "new": "22 min",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m6/mapa-do-modulo-m6/index.html": {
+   "base_sha256_lf": "cd4b8d4487e15b19e6eb31d6bbb1af39a736d09317af0a6ef2fc34a954f6183f",
+   "after_sha256_lf": "7b5ede0259be364c0eb340d4195d147e93e91e08e095bb6a7f58e20b3c7dc0f3",
+   "edits": [
+    {
+     "location": "m6/mapa-do-modulo-m6: «versos 1 a 3» que não se parte (com o contexto «1 a 3»)",
+     "old": "1 a 3",
+     "new": "1 a 3",
+     "occurrences": 1
+    },
+    {
+     "location": "m6/mapa-do-modulo-m6: «1842–1891» que não se parte",
+     "old": "1842–1891",
+     "new": "1842–⁠1891",
+     "occurrences": 1
+    },
+    {
+     "location": "m6/mapa-do-modulo-m6: «1855–1886» que não se parte",
+     "old": "1855–1886",
+     "new": "1855–⁠1886",
+     "occurrences": 1
+    },
+    {
+     "location": "m6/mapa-do-modulo-m6: «século XX» que não se parte",
+     "old": "século XX",
+     "new": "século XX",
+     "occurrences": 1
+    },
+    {
+     "location": "m6/mapa-do-modulo-m6: «30 %» que não se parte",
+     "old": "30 %",
+     "new": "30 %",
+     "occurrences": 5
+    },
+    {
+     "location": "m6/mapa-do-modulo-m6: «10 %» que não se parte",
+     "old": "10 %",
+     "new": "10 %",
+     "occurrences": 1
+    },
+    {
+     "location": "m6/mapa-do-modulo-m6: «90 minutos» que não se parte",
+     "old": "90 minutos",
+     "new": "90 minutos",
+     "occurrences": 3
+    },
+    {
+     "location": "m6/mapa-do-modulo-m6: «grelha /20» que não se parte (com o contexto «grelha »)",
+     "old": "grelha ",
+     "new": "grelha ",
+     "occurrences": 3
+    },
+    {
+     "location": "m6/mapa-do-modulo-m6: «Grelha /20» que não se parte (com o contexto «Grelha »)",
+     "old": "Grelha ",
+     "new": "Grelha ",
+     "occurrences": 2
+    },
+    {
+     "location": "m6/mapa-do-modulo-m6: «\">Lição M6-F» que não se parte (com o contexto «M6-F01»)",
+     "old": "M6-F01",
+     "new": "M6-⁠F01",
+     "occurrences": 3
+    },
+    {
+     "location": "m6/mapa-do-modulo-m6: «\">Lição M6-F» que não se parte (com o contexto «M6-F07»)",
+     "old": "M6-F07",
+     "new": "M6-⁠F07",
+     "occurrences": 5
+    },
+    {
+     "location": "m6/mapa-do-modulo-m6: «Português · 2.º ano · Mapa do módulo» que não se parte (com o contexto «2.º ano »)",
+     "old": "2.º ano ",
+     "new": "2.º ano ",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m6/painel-m6-f01/index.html": {
+   "base_sha256_lf": "7c26f2acc2b0eda6aeae7bd8c5f294aeaffe1801e851b77fa242839b29db7440",
+   "after_sha256_lf": "20de085a01e73e1e2e9583e39eccffd3d456d8bf02b096b63fb2b61774b3e3d2",
+   "edits": [
+    {
+     "location": "M6-F01 (painel de projeção): o enunciado do cartão 16 igual ao da lição, em a lista do painel",
+     "old": "{\"k\":16,\"t\":\"completar\",\"p\":\"Que recurso opõe «fulgurante» (v. 7) a «Silencio e escuridão» (v. 14)?\"}",
+     "new": "{\"k\":16,\"t\":\"completar\",\"p\":\"Que recurso opõe «fulgurante» (v. 7) a «Silencio e escuridão» (v. 14)?\"}",
+     "occurrences": 1
+    },
+    {
+     "location": "M6-F01 (painel de projeção): o enunciado do cartão 16 igual ao da lição, em o seletor",
+     "old": "<option value=\"16\">Que recurso opõe «fulgurante» (v. 7) a «Silencio e escuridão» (v. 14)?</option>",
+     "new": "<option value=\"16\">Que recurso opõe «fulgurante» (v. 7) a «Silencio e escuridão» (v. 14)?</option>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m6/painel-m6-f06/index.html": {
+   "base_sha256_lf": "7e500971829242f5ac33a5366fd8f4aad7f0cb580aaa0d06bad7ad2265d2a872",
+   "after_sha256_lf": "5c70c0642d49446d263c2d1886975f383f1a5c3f45ece8ee6e43b45f18a4c40a",
+   "edits": [
+    {
+     "location": "M6-F06 (painel de projeção): o enunciado do cartão 6 igual ao da lição, em a lista do painel",
+     "old": "{\"k\":6,\"t\":\"escolha\",\"p\":\"O que revela a lista «Madrid, Paris, Berlim, S. Petersburgo, o mundo!»?\"}",
+     "new": "{\"k\":6,\"t\":\"escolha\",\"p\":\"O que revela a lista «Madrid, Paris, Berlim, S. Petersburgo, o mundo!»?\"}",
+     "occurrences": 1
+    },
+    {
+     "location": "M6-F06 (painel de projeção): o enunciado do cartão 6 igual ao da lição, em o seletor",
+     "old": "<option value=\"6\">O que revela a lista «Madrid, Paris, Berlim, S. Petersburgo, o mundo!»?</option>",
+     "new": "<option value=\"6\">O que revela a lista «Madrid, Paris, Berlim, S. Petersburgo, o mundo!»?</option>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m6/painel-m6-f08/index.html": {
+   "base_sha256_lf": "0f710ac1faef9de35fe774ee5c6c969ef571cd0641c9a83ae3d0ffa7219589c4",
+   "after_sha256_lf": "d07edaaccb593ccdae4330f4533f6dcf515544d028ee2d9410974ea5ff58aa5e",
+   "edits": [
+    {
+     "location": "M6-F08 (painel de projeção): o enunciado do cartão 11 igual ao da lição, em a lista do painel",
+     "old": "{\"k\":11,\"t\":\"escolha\",\"p\":\"Como se chama o texto individual, de 100 a 130 palavras, que explica uma escolha tua?\"}",
+     "new": "{\"k\":11,\"t\":\"escolha\",\"p\":\"Como se chama o texto individual, de 100 a 130 palavras, que explica uma escolha tua?\"}",
+     "occurrences": 1
+    },
+    {
+     "location": "M6-F08 (painel de projeção): o enunciado do cartão 11 igual ao da lição, em o seletor",
+     "old": "<option value=\"11\">Como se chama o texto individual, de 100 a 130 palavras, que explica uma escolha tua?</option>",
+     "new": "<option value=\"11\">Como se chama o texto individual, de 100 a 130 palavras, que explica uma escolha tua?</option>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m6/painel-m6-f11/index.html": {
+   "base_sha256_lf": "df92843236b4d9fc7e3e41597cfdff188d7278c396c641f9da6fd9dcc9045fca",
+   "after_sha256_lf": "a1a065cb2ad8abe9ddf95f9060229d08a1208bf36fdcb7261197e9593a221607",
+   "edits": [
+    {
+     "location": "M6-F11 (painel de projeção): o enunciado do cartão 12 igual ao da lição, em a lista do painel",
+     "old": "{\"k\":12,\"t\":\"vf\",\"p\":\"Que Cesário morreu em 1886, aos 31 anos, confirma-se em fontes biográficas, com datas e documentos.\"}",
+     "new": "{\"k\":12,\"t\":\"vf\",\"p\":\"Que Cesário morreu em 1886, aos 31 anos, confirma-se em fontes biográficas, com datas e documentos.\"}",
+     "occurrences": 1
+    },
+    {
+     "location": "M6-F11 (painel de projeção): o enunciado do cartão 12 igual ao da lição, em o seletor",
+     "old": "<option value=\"12\">Que Cesário morreu em 1886, aos 31 anos, confirma-se em fontes biográficas, com datas e documentos.</option>",
+     "new": "<option value=\"12\">Que Cesário morreu em 1886, aos 31 anos, confirma-se em fontes biográficas, com datas e documentos.</option>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m6/portefolio-do-modulo-m6/index.html": {
+   "base_sha256_lf": "c9f66f90274e20bd7dd595af3f7cab3b8d435ce5a8dcc249aa70748b83f8050c",
+   "after_sha256_lf": "7c0111f1f1640390aafdce4933973628963d4bff3067de888995fadf6a33a77e",
+   "edits": [
+    {
+     "location": "m6/portefolio-do-modulo-m6, «A lista de verificação»: a tabela com cabeçalho, os nomes em <code>",
+     "old": "<table><tr><th style=\"width:36%\">Nome do ficheiro</th><th>O que é</th></tr><tr><td><code>M6_capa</code></td><td>Capa: nome, turma, módulo, data de início e de fim.</td></tr><tr><td><code>M6_cartao-do-percurso</code></td><td>O cartão do percurso, copiado da página do percurso no fim do módulo (arquivo facultativo do percurso anterior, sem nota).</td></tr><tr><td>M6_U1_registo_&lt;dia-mês&gt;</td><td>Unidade 1, «O ideal e a rua»: registo da aula, com nome e data.</td></tr><tr><td>M6_U1_pergunta</td><td>Para que serve um ideal que não se alcança? Síntese oral ou no caderno, com duas passagens relacionadas e explicadas. O registo da realização não substitui a apreciação do docente.</td></tr><tr><td>M6_U1_o-que-aprendi</td><td>O que compreendi, a prova que me fez rever uma ideia e a dificuldade que ainda preciso de esclarecer.</td></tr><tr><td>M6_U2_registo_&lt;dia-mês&gt;</td><td>Unidade 2, «A cidade inteira»: registo da aula, com nome e data.</td></tr><tr><td>M6_U2_pergunta</td><td>A cidade que Cesário viu ainda é a nossa? Síntese oral ou no caderno, com duas passagens relacionadas e explicadas. O registo da realização não substitui a apreciação do docente.</td></tr><tr><td>M6_U2_o-que-aprendi</td><td>O que compreendi, a prova que me fez rever uma ideia e a dificuldade que ainda preciso de esclarecer.</td></tr><tr><td><code>M6_U1_Tarefa</code></td><td><a href=\"../../tarefas/m6-u1/\">«Um ideal que não se alcança»</a>: fotografias do trabalho individual em papel, tema A ou B identificado e uma linha sobre o que melhoraste após o retorno do docente. Grelha /20.</td></tr><tr><td><code>M6_U2_Tarefa</code></td><td><a href=\"../../tarefas/m6-u2/\">«A cidade vista e transfigurada»</a>: fotografias do trabalho individual em papel, tema A ou B identificado e uma linha sobre o que melhoraste após o retorno do docente. Grelha /20.</td></tr><tr><td><code>M6_Extras</code></td><td>Facultativo, sem nota: <a href=\"../guia-da-tarefa-m6/#arquivo-producoes\">produções anteriores</a>.</td></tr><tr><td><code>M6_Revisao1</code></td><td>A Revisão 1, corrigida e somada, fotografada na própria aula.</td></tr><tr><td><code>M6_Revisao2</code></td><td>A Revisão 2, corrigida e somada, fotografada na própria aula.</td></tr><tr><td><code>M6_Prova-escrita</code></td><td>A prova escrita, corrigida, fotografada quando te for devolvida.</td></tr><tr><td><code>M6_balanco</code></td><td>O cartão do percurso (passaporte, selos, desafios e respostas das unidades), copiado do Percurso do módulo, e a tua autoavaliação de 0 a 20 por parâmetro, com razões.</td></tr></table>",
+     "new": "<table role=\"table\"><thead role=\"rowgroup\"><tr role=\"row\"><th scope=\"col\" role=\"columnheader\">Nome do ficheiro</th><th scope=\"col\" role=\"columnheader\">O que é</th></tr></thead><tbody role=\"rowgroup\"><tr role=\"row\"><td role=\"cell\" data-label=\"Nome do ficheiro\"><code>M6_capa</code></td><td role=\"cell\" data-label=\"O que é\">Capa: nome, turma, módulo, data de início e de fim.</td></tr><tr role=\"row\"><td role=\"cell\" data-label=\"Nome do ficheiro\"><code>M6_cartao-do-percurso</code></td><td role=\"cell\" data-label=\"O que é\">O cartão do percurso, copiado da página do percurso no fim do módulo (arquivo facultativo do percurso anterior, sem nota).</td></tr><tr role=\"row\"><td role=\"cell\" data-label=\"Nome do ficheiro\"><code>M6_U1_registo_&lt;dia-mês&gt;</code></td><td role=\"cell\" data-label=\"O que é\">Unidade 1, «O ideal e a rua»: registo da aula, com nome e data.</td></tr><tr role=\"row\"><td role=\"cell\" data-label=\"Nome do ficheiro\"><code>M6_U1_pergunta</code></td><td role=\"cell\" data-label=\"O que é\">Para que serve um ideal que não se alcança? Síntese oral ou no caderno, com duas passagens relacionadas e explicadas. O registo da realização não substitui a apreciação do docente.</td></tr><tr role=\"row\"><td role=\"cell\" data-label=\"Nome do ficheiro\"><code>M6_U1_o-que-aprendi</code></td><td role=\"cell\" data-label=\"O que é\">O que compreendi, a prova que me fez rever uma ideia e a dificuldade que ainda preciso de esclarecer.</td></tr><tr role=\"row\"><td role=\"cell\" data-label=\"Nome do ficheiro\"><code>M6_U2_registo_&lt;dia-mês&gt;</code></td><td role=\"cell\" data-label=\"O que é\">Unidade 2, «A cidade inteira»: registo da aula, com nome e data.</td></tr><tr role=\"row\"><td role=\"cell\" data-label=\"Nome do ficheiro\"><code>M6_U2_pergunta</code></td><td role=\"cell\" data-label=\"O que é\">A cidade que Cesário viu ainda é a nossa? Síntese oral ou no caderno, com duas passagens relacionadas e explicadas. O registo da realização não substitui a apreciação do docente.</td></tr><tr role=\"row\"><td role=\"cell\" data-label=\"Nome do ficheiro\"><code>M6_U2_o-que-aprendi</code></td><td role=\"cell\" data-label=\"O que é\">O que compreendi, a prova que me fez rever uma ideia e a dificuldade que ainda preciso de esclarecer.</td></tr><tr role=\"row\"><td role=\"cell\" data-label=\"Nome do ficheiro\"><code>M6_U1_Tarefa</code></td><td role=\"cell\" data-label=\"O que é\"><a href=\"../../tarefas/m6-u1/\">«Um ideal que não se alcança»</a>: fotografias do trabalho individual em papel, tema A ou B identificado e uma linha sobre o que melhoraste após o retorno do docente. Grelha /20.</td></tr><tr role=\"row\"><td role=\"cell\" data-label=\"Nome do ficheiro\"><code>M6_U2_Tarefa</code></td><td role=\"cell\" data-label=\"O que é\"><a href=\"../../tarefas/m6-u2/\">«A cidade vista e transfigurada»</a>: fotografias do trabalho individual em papel, tema A ou B identificado e uma linha sobre o que melhoraste após o retorno do docente. Grelha /20.</td></tr><tr role=\"row\"><td role=\"cell\" data-label=\"Nome do ficheiro\"><code>M6_Extras</code></td><td role=\"cell\" data-label=\"O que é\">Facultativo, sem nota: <a href=\"../guia-da-tarefa-m6/#arquivo-producoes\">produções anteriores</a>.</td></tr><tr role=\"row\"><td role=\"cell\" data-label=\"Nome do ficheiro\"><code>M6_Revisao1</code></td><td role=\"cell\" data-label=\"O que é\">A Revisão 1, corrigida e somada, fotografada na própria aula.</td></tr><tr role=\"row\"><td role=\"cell\" data-label=\"Nome do ficheiro\"><code>M6_Revisao2</code></td><td role=\"cell\" data-label=\"O que é\">A Revisão 2, corrigida e somada, fotografada na própria aula.</td></tr><tr role=\"row\"><td role=\"cell\" data-label=\"Nome do ficheiro\"><code>M6_Prova-escrita</code></td><td role=\"cell\" data-label=\"O que é\">A prova escrita, corrigida, fotografada quando te for devolvida.</td></tr><tr role=\"row\"><td role=\"cell\" data-label=\"Nome do ficheiro\"><code>M6_balanco</code></td><td role=\"cell\" data-label=\"O que é\">O cartão do percurso (passaporte, selos, desafios e respostas das unidades), copiado do Percurso do módulo, e a tua autoavaliação de 0 a 20 por parâmetro, com razões.</td></tr></tbody></table>",
+     "occurrences": 1
+    },
+    {
+     "location": "m6/portefolio-do-modulo-m6, a folha da página: os nomes não se partem e a tabela empilha no telemóvel",
+     "old": "code{font:.85rem Consolas,\"Courier New\",monospace;border:1px solid var(--tinta);padding:1px 4px}\n",
+     "new": "code{font:.85rem Consolas,\"Courier New\",monospace;border:1px solid var(--tinta);padding:1px 4px}\ncode{white-space:nowrap}\n@media(max-width:620px){table,tbody,tr,td{display:block;width:auto}thead{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}tr{border-top:2px solid var(--tinta)}td[data-label]::before{content:attr(data-label) \": \";font-weight:700}}\n",
+     "occurrences": 1
+    },
+    {
+     "location": "m6/portefolio-do-modulo-m6: «aula de tarefa de 90 minutos» que não se parte (com o contexto «90 minutos»)",
+     "old": "90 minutos",
+     "new": "90 minutos",
+     "occurrences": 1
+    },
+    {
+     "location": "m6/portefolio-do-modulo-m6: «(40 %)» que não se parte (com o contexto «40 %»)",
+     "old": "40 %",
+     "new": "40 %",
+     "occurrences": 1
+    },
+    {
+     "location": "m6/portefolio-do-modulo-m6: «grelha /20» que não se parte (com o contexto «grelha »)",
+     "old": "grelha ",
+     "new": "grelha ",
+     "occurrences": 1
+    },
+    {
+     "location": "m6/portefolio-do-modulo-m6: «Português · 2.º ano · Módulo 6» que não se parte (com o contexto «2.º ano »)",
+     "old": "2.º ano ",
+     "new": "2.º ano ",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m6/sam-chelas/index.html": {
+   "base_sha256_lf": "93a3f9d3191310c6154a9230b168b3c6bcbdb5bb09e837e6ac9cdb50c8a0e8fe",
+   "after_sha256_lf": "b0a42a22189426d1727f053bdf52d1be01f30650f4d0d4e3bc3f9b3cd86cd34d",
+   "edits": [
+    {
+     "location": "m6/sam-chelas: «9 de abril de 2021» que não se parte",
+     "old": "9 de abril de 2021",
+     "new": "9 de abril de 2021",
+     "occurrences": 3
+    },
+    {
+     "location": "m6/sam-chelas: «3 de julho de 2021» que não se parte",
+     "old": "3 de julho de 2021",
+     "new": "3 de julho de 2021",
+     "occurrences": 3
+    }
+   ]
+  },
+  "tarefas/m1-u2/index.html": {
+   "base_sha256_lf": "74040889e21e54e531ece1389cccc6844498d5699071fd0d8001c908bc26ffb9",
+   "after_sha256_lf": "45d7e04b40d2b0cb663724cc55fe4e2f534613635761165276b610db4deff6d7",
+   "edits": [
+    {
+     "location": "Tarefa M1-U2: «capítulo XII» que não se parte",
+     "old": "capítulo XII",
+     "new": "capítulo XII",
+     "occurrences": 2
+    }
+   ]
+  },
+  "tarefas/m3-u1/index.html": {
+   "base_sha256_lf": "58b81521cb9cff393a6de675b7bbe848a784f357433f4e3a3f723fbca998c740",
+   "after_sha256_lf": "9bce0af4ff7ef8ea798e494a765aafb3d8e6665fbdc13ecc920e5f4359a87468",
+   "edits": [
+    {
+     "location": "Tarefa M3-U1: «(I, 1 a 3)» que não se parte",
+     "old": "(I, 1 a 3)",
+     "new": "(I, 1 a 3)",
+     "occurrences": 1
+    }
+   ]
+  },
+  "tarefas/m3-u2/index.html": {
+   "base_sha256_lf": "c62b000e177a737a4d0fbbe58272f55901414e4211b76e0ac76eb34608674061",
+   "after_sha256_lf": "3ea25defb7dade0daf671e5eed059ca0ea4dc2ec771d7f425d13fd8507dcdb60",
+   "edits": [
+    {
+     "location": "Tarefa M3-U2: «(I, 4 e 5)» que não se parte",
+     "old": "(I, 4 e 5)",
+     "new": "(I, 4 e 5)",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefa M3-U2: «(X, 145)» que não se parte",
+     "old": "(X, 145)",
+     "new": "(X, 145)",
+     "occurrences": 2
+    },
+    {
+     "location": "Tarefa M3-U2: «curioso» (VIII, 96)» que não se parte",
+     "old": "curioso» (VIII, 96)",
+     "new": "curioso» (VIII, 96)",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefa M3-U2: «VIII, 96 a 99» que não se parte",
+     "old": "VIII, 96 a 99",
+     "new": "VIII, 96 a 99",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefa M3-U2: «VIII, 98 ou 99» que não se parte",
+     "old": "VIII, 98 ou 99",
+     "new": "VIII, 98 ou 99",
+     "occurrences": 1
+    }
+   ]
+  },
+  "tarefas/m4-u1/index.html": {
+   "base_sha256_lf": "f2c82a37474b2158fac27a78d407418363bbcc12887f842806e49b9f77f38170",
+   "after_sha256_lf": "f08c74be6f9c8803e1e8affa40664a78367249152ceb348c0fe0d369723116ed",
+   "edits": [
+    {
+     "location": "Tarefa M4-U1: «<strong>3 a 4 minutos</strong>» que não se parte",
+     "old": "<strong>3 a 4 minutos</strong>",
+     "new": "<strong>3 a 4 minutos</strong>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "tarefas/m4-u2/index.html": {
+   "base_sha256_lf": "e107f1764bfae4dcb36665fdd4fec5d3d6f147b934b566a31643aa8ff8578e34",
+   "after_sha256_lf": "8411b5fa47fec884b518e8564d353a2879834d6df3d51ea9ffc773d714279314",
+   "edits": [
+    {
+     "location": "Tarefa M4-U2: «<strong>180 a 240 palavras</strong>» que não se parte",
+     "old": "<strong>180 a 240 palavras</strong>",
+     "new": "<strong>180 a 240 palavras</strong>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "tarefas/m4-u3-discurso/index.html": {
+   "base_sha256_lf": "f10583905c3319bbdc29c25761872ce61c8c586479119f4019f913268d13d790",
+   "after_sha256_lf": "95d203af7b3e7bb5e0f75b8f0fbc1718a802debfee3ac6d3b8a23cb6ba5c2bc1",
+   "edits": [
+    {
+     "location": "Tarefa M4-U3-DISCURSO: «<strong>2 minutos</strong>» que não se parte",
+     "old": "<strong>2 minutos</strong>",
+     "new": "<strong>2 minutos</strong>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "tarefas/m5-u1/index.html": {
+   "base_sha256_lf": "747862e737beeac138798126fd05c2dd21370ed83103455ce429b85c43e071af",
+   "after_sha256_lf": "813bb60dd4af55bd469ca0d36f4a84dcc4be9621ffaf2179a67395cddc58111b",
+   "edits": [
+    {
+     "location": "Tarefa M5-U1: «do capítulo IV em que» que não se parte",
+     "old": "do capítulo IV em que",
+     "new": "do capítulo IV em que",
+     "occurrences": 1
+    }
+   ]
+  },
+  "tarefas/m5-u2/index.html": {
+   "base_sha256_lf": "1a2c1ae1619439227e51d3dce827e650ed3f662c65f874aec5b262c7d5919bb3",
+   "after_sha256_lf": "434cf1b325ff16eddc7d2d72756171a6c62a53361711bc23c9d4adb4b40f09cf",
+   "edits": [
+    {
+     "location": "Tarefa M5-U2: «do capítulo I e outra nova» que não se parte",
+     "old": "do capítulo I e outra nova",
+     "new": "do capítulo I e outra nova",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefa M5-U2: «No capítulo VI,» que não se parte",
+     "old": "No capítulo VI,",
+     "new": "No capítulo VI,",
+     "occurrences": 1
+    }
+   ]
+  },
+  "tarefas/m6-u1/aquecimento/index.html": {
+   "base_sha256_lf": "b95cdd7da2da206c63e2877011be22f3af1bd1ea54ff7ec1f4245800f986691a",
+   "after_sha256_lf": "9fb296a43ad793c7b063a2c602ffba949bed8779db0a7e2a7730159199ba00c9",
+   "edits": [
+    {
+     "location": "tarefas/m6-u1/aquecimento: «À mão, 200 a 240 palavras.» que não se parte (com o contexto «200 a 240 palavras»)",
+     "old": "200 a 240 palavras",
+     "new": "200 a 240 palavras",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m6-u1/aquecimento: «4 + 4 + 3 + 3 (lição F01)» que não se parte (com o contexto «, 4 »)",
+     "old": ", 4 ",
+     "new": ", 4 ",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m6-u1/aquecimento: «4 + 4 + 3 + 3 (lição F01)» que não se parte (com o contexto «+ 4 »)",
+     "old": "+ 4 ",
+     "new": "+ 4 ",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m6-u1/aquecimento: «4 + 4 + 3 + 3 (lição F01)» que não se parte (com o contexto « 3 +»)",
+     "old": " 3 +",
+     "new": " 3 +",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m6-u1/aquecimento: «4 + 4 + 3 + 3 (lição F01)» que não se parte (com o contexto « 3 (»)",
+     "old": " 3 (",
+     "new": " 3 (",
+     "occurrences": 1
+    }
+   ]
+  },
+  "tarefas/m6-u1/grelha/index.html": {
+   "base_sha256_lf": "3e84f612f8ca1be2e1d7c94475f4c18f8e9bfae92eae3e381314de32fa4cf97a",
+   "after_sha256_lf": "322c0e708bc0d6cbe57a2b6beec7d8a63f4c305f15590d91e62f5782234e682c",
+   "edits": [
+    {
+     "location": "tarefas/m6-u1/grelha, critério 4, nível 6 («cumprimento consistente»): os elementos de cada tema em listas",
+     "old": "<p>Cumpres os cinco elementos do teu tema (um ponto cada) e explicas o que o tema pede (mais um ponto). Tema A: um ideal de hoje num lugar concreto; a procura, a chegada e a porta aberta; uma última frase que vira o que o texto prometia; uma anáfora ou uma antítese tua; uma diferença entre o teu ideal e o do cavaleiro. Explicação: o verso de Antero que imitaste, citado e explicado. Tema B: três planos; um verso exato em cada um; dois factos do dossiê (contam como dois); o que o vídeo não pode dar como facto. Explicação: se o último plano ilustra, contraria ou acrescenta algo ao verso, e porquê.</p>",
+     "new": "<p>Cumpres os cinco elementos do teu tema (um ponto cada) e explicas o que o tema pede (mais um ponto). </p><p><b>Tema A</b>:</p><ul><li>um ideal de hoje num lugar concreto;</li><li>a procura, a chegada e a porta aberta;</li><li>uma última frase que vira o que o texto prometia;</li><li>uma anáfora ou uma antítese tua;</li><li>uma diferença entre o teu ideal e o do cavaleiro.</li></ul><p>Explicação: o verso de Antero que imitaste, citado e explicado.</p><p><b>Tema B</b>:</p><ul><li>três planos;</li><li>um verso exato em cada um;</li><li>dois factos do dossiê (contam como dois);</li><li>o que o vídeo não pode dar como facto.</li></ul><p>Explicação: se o último plano ilustra, contraria ou acrescenta algo ao verso, e porquê.</p>",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m6-u1/grelha: «20 valores em cinco critérios» que não se parte (com o contexto «20 valores»)",
+     "old": "20 valores",
+     "new": "20 valores",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m6-u1/grelha: «entre 200 e 240 palavras» que não se parte (com o contexto «200 e 240 palavras»)",
+     "old": "200 e 240 palavras",
+     "new": "200 e 240 palavras",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m6-u1/grelha: «das 200 a 240 palavras» que não se parte (com o contexto «200 a 240 palavras»)",
+     "old": "200 a 240 palavras",
+     "new": "200 a 240 palavras",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m6-u1/grelha: «(c. 1577)» que não se parte (com o contexto «c. 1577»)",
+     "old": "c. 1577",
+     "new": "c. 1577",
+     "occurrences": 1
+    }
+   ]
+  },
+  "tarefas/m6-u1/index.html": {
+   "base_sha256_lf": "c1df1b540c93b29f5ee9d6a2ea898ca403741e7a146846434dfd5f236a510459",
+   "after_sha256_lf": "3b3aa47f4eaa8f3e0f1befc4c61dab47a3a0f5eb7adf351ba2d5dc43491fab11",
+   "edits": [
+    {
+     "location": "tarefas/m6-u1: «durante 90 minutos, com entrega»",
+     "old": "durante 90 minutos, com entrega",
+     "new": "durante 90 minutos, com entrega",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m6-u1: «Antes de escrever · 10 min ·» que não se parte (com o contexto «10 min »)",
+     "old": "10 min ",
+     "new": "10 min ",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m6-u1: «Unidade 1 · 90 min» que não se parte (com o contexto «90 min<»)",
+     "old": "90 min<",
+     "new": "90 min<",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m6-u1: «10 minutos de cartões» que não se parte (com o contexto «10 minutos»)",
+     "old": "10 minutos",
+     "new": "10 minutos",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m6-u1: «5 minutos para» que não se parte (com o contexto « 5 minutos»)",
+     "old": " 5 minutos",
+     "new": " 5 minutos",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m6-u1: «60 minutos de» que não se parte (com o contexto «60 minutos»)",
+     "old": "60 minutos",
+     "new": "60 minutos",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m6-u1: «15 minutos de» que não se parte (com o contexto «15 minutos»)",
+     "old": "15 minutos",
+     "new": "15 minutos",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m6-u1: «Total: 90 minutos» que não se parte (com o contexto «90 minutos.»)",
+     "old": "90 minutos.",
+     "new": "90 minutos.",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m6-u1: «200 a 240 palavras» que não se parte",
+     "old": "200 a 240 palavras",
+     "new": "200 a 240 palavras",
+     "occurrences": 2
+    },
+    {
+     "location": "tarefas/m6-u1: «90 a 130 no tema» que não se parte (com o contexto «90 a 130»)",
+     "old": "90 a 130",
+     "new": "90 a 130",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m6-u1: «Grelha /20: como» que não se parte (com o contexto «Grelha »)",
+     "old": "Grelha ",
+     "new": "Grelha ",
+     "occurrences": 1
+    }
+   ]
+  },
+  "tarefas/m6-u2/aquecimento/index.html": {
+   "base_sha256_lf": "8b3c15cb6853b9885936ac9e8e3d1b2759498dae1b382a1c977e9dc71fe30501",
+   "after_sha256_lf": "75befc3fc9920107358054e424490f558d75c89b34e99a0c7b932f2821a28e46",
+   "edits": [
+    {
+     "location": "tarefas/m6-u2/aquecimento: «À mão, 200 a 240 palavras.» que não se parte (com o contexto «200 a 240 palavras»)",
+     "old": "200 a 240 palavras",
+     "new": "200 a 240 palavras",
+     "occurrences": 1
+    }
+   ]
+  },
+  "tarefas/m6-u2/grelha/index.html": {
+   "base_sha256_lf": "badef6527ba8c57f2b280be8615065cf3f80eefc2b4a226e7bdfdcf867880469",
+   "after_sha256_lf": "0bb07532ea3c8d4205f73804fca4f3198e1ed8137b25e59947699d206a46b3a6",
+   "edits": [
+    {
+     "location": "tarefas/m6-u2/grelha, critério 4, nível 6 («cumprimento consistente»): os elementos de cada tema em listas",
+     "old": "<p>Cumpres os cinco elementos do teu tema (um ponto cada) e explicas o que o tema pede (mais um ponto). Tema A: um lugar e uma hora, percorridos a pé; duas sensações de sentidos diferentes; um tipo social de hoje com um gesto; uma transfiguração tua; uma diferença entre a tua cidade e a dele. Explicação: o verso de Cesário que imitaste, citado e explicado. Tema B: duas fotografias, cada uma com lugar e hora; em cada uma, a legenda com um verso exato e a parte; dois factos do dossiê (contam como dois); o que não podes fotografar, e porquê. Explicação: a relação, não literal, entre uma fotografia e o seu verso.</p>",
+     "new": "<p>Cumpres os cinco elementos do teu tema (um ponto cada) e explicas o que o tema pede (mais um ponto). </p><p><b>Tema A</b>:</p><ul><li>um lugar e uma hora, percorridos a pé;</li><li>duas sensações de sentidos diferentes;</li><li>um tipo social de hoje com um gesto;</li><li>uma transfiguração tua;</li><li>uma diferença entre a tua cidade e a dele.</li></ul><p>Explicação: o verso de Cesário que imitaste, citado e explicado.</p><p><b>Tema B</b>:</p><ul><li>duas fotografias, cada uma com lugar e hora;</li><li>em cada uma, a legenda com um verso exato e a parte;</li><li>dois factos do dossiê (contam como dois);</li><li>o que não podes fotografar, e porquê.</li></ul><p>Explicação: a relação, não literal, entre uma fotografia e o seu verso.</p>",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m6-u2/grelha: «20 valores em cinco critérios» que não se parte (com o contexto «20 valores»)",
+     "old": "20 valores",
+     "new": "20 valores",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m6-u2/grelha: «entre 200 e 240 palavras» que não se parte (com o contexto «200 e 240 palavras»)",
+     "old": "200 e 240 palavras",
+     "new": "200 e 240 palavras",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m6-u2/grelha: «das 200 a 240 palavras» que não se parte (com o contexto «200 a 240 palavras»)",
+     "old": "200 a 240 palavras",
+     "new": "200 a 240 palavras",
+     "occurrences": 1
+    }
+   ]
+  },
+  "tarefas/m6-u2/index.html": {
+   "base_sha256_lf": "afbb530dfe37a375bc58252dd700c60453f6f4bf3128dc55198226113d4645d6",
+   "after_sha256_lf": "bd75f3ba364ae70befdbeaa43516097b0a1ecd4104b5e83928fa0727c16d3b52",
+   "edits": [
+    {
+     "location": "tarefas/m6-u2: «durante 90 minutos, com entrega»",
+     "old": "durante 90 minutos, com entrega",
+     "new": "durante 90 minutos, com entrega",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m6-u2: «Antes de escrever · 10 min ·» que não se parte (com o contexto «10 min »)",
+     "old": "10 min ",
+     "new": "10 min ",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m6-u2: «Unidade 2 · 90 min» que não se parte (com o contexto «90 min<»)",
+     "old": "90 min<",
+     "new": "90 min<",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m6-u2: «10 minutos de cartões» que não se parte (com o contexto «10 minutos»)",
+     "old": "10 minutos",
+     "new": "10 minutos",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m6-u2: «5 minutos para» que não se parte (com o contexto « 5 minutos»)",
+     "old": " 5 minutos",
+     "new": " 5 minutos",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m6-u2: «60 minutos de» que não se parte (com o contexto «60 minutos»)",
+     "old": "60 minutos",
+     "new": "60 minutos",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m6-u2: «15 minutos de» que não se parte (com o contexto «15 minutos»)",
+     "old": "15 minutos",
+     "new": "15 minutos",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m6-u2: «Total: 90 minutos» que não se parte (com o contexto «90 minutos.»)",
+     "old": "90 minutos.",
+     "new": "90 minutos.",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m6-u2: «200 a 240 palavras» que não se parte",
+     "old": "200 a 240 palavras",
+     "new": "200 a 240 palavras",
+     "occurrences": 2
+    },
+    {
+     "location": "tarefas/m6-u2: «90 a 130 no tema» que não se parte (com o contexto «90 a 130»)",
+     "old": "90 a 130",
+     "new": "90 a 130",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m6-u2: «grafias do século XIX» que não se parte (com o contexto «século XIX»)",
+     "old": "século XIX",
+     "new": "século XIX",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m6-u2: «Na parte II,» que não se parte (com o contexto «parte II»)",
+     "old": "parte II",
+     "new": "parte II",
+     "occurrences": 2
+    },
+    {
+     "location": "tarefas/m6-u2: «200 exemplares» que não se parte",
+     "old": "200 exemplares",
+     "new": "200 exemplares",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m6-u2: «aos 31 anos» que não se parte (com o contexto «31 anos»)",
+     "old": "31 anos",
+     "new": "31 anos",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m6-u2: «Grelha /20: como» que não se parte (com o contexto «Grelha »)",
+     "old": "Grelha ",
+     "new": "Grelha ",
+     "occurrences": 1
+    }
+   ]
+  }
+ }
+}

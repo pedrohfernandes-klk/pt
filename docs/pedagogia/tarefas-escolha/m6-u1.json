@@ -2,14 +2,16 @@
  "slug": "m6-u1",
  "titulo": "Um ideal que não se alcança",
  "unidade": 1,
+ "nao_partir": true,
+ "nao_partir_grelha": true,
  "aquecer": {
   "cartoes": "aquecimento/",
   "minutos": 10,
-  "texto": "No início da aula de tarefa: 10 minutos de cartões com consulta, 5 minutos para leres o enunciado, 60 minutos de produção e 15 minutos de revisão e entrega. Total: 90 minutos. O relógio de produção começa depois da leitura.",
+  "texto": "No início da aula de tarefa: 10 minutos de cartões com consulta, 5 minutos para leres o enunciado, 60 minutos de produção e 15 minutos de revisão e entrega. Total: 90 minutos. O relógio de produção começa depois da leitura.",
   "ligacao": "Abrir o aquecimento em cartões",
   "ligacao_enunciado": "Aquecer"
  },
- "lead": "À mão, com consulta: <strong>200 a 240 palavras no total</strong>. Orientação: cerca de 110 nas respostas e 90 a 130 no tema.",
+ "lead": "À mão, com consulta: <strong>200 a 240 palavras no total</strong>. Orientação: cerca de 110 nas respostas e 90 a 130 no tema.",
  "nucleo": [
   "<strong>O sonho em dois sonetos.</strong><br/>Em «Ideal» e «A um poeta», indica a quem se dirige a voz e para que serve o sonho. Cita um verso dos tercetos de cada poema. Aponta uma semelhança e explica uma diferença.",
   "<strong>Uma oração no verso.</strong><br/>Divide «Singram soberbas naus que eu não verei jámais!» («Ave-Marias») em orações e classifica-as. Justifica com a função de «que» na sua oração e explica o que essa oração acrescenta."
@@ -111,7 +113,7 @@
  "criterios": [
   "Núcleo: voz e sonho de cada soneto, com verso; semelhança e mudança; orações e papel de «que».",
   "A: ideal e lugar, viagem, frase final, figura, diferença, verso imitado e explicado. B: planos com verso, último plano, dois factos, limite do vídeo.",
-  "200 a 240 palavras, respostas ligadas, escrita revista."
+  "200 a 240 palavras, respostas ligadas, escrita revista."
  ],
  "fecho": "Fecha com duas linhas, fora da contagem: o que passaste a procurar quando um poema fala de um sonho? Aponta o verso que te ajudou.",
  "clareza": {
