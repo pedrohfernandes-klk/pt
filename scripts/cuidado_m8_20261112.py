@@ -12,7 +12,7 @@ scripts/aplicar_trocas.py e o manifesto fica em tests/fixtures/cuidado-m8-edits-
 
   python3 scripts/cuidado_m8_20261112.py
   python3 scripts/aplicar_trocas.py scripts/cuidado_m8_20261112.json --manifesto tests/fixtures/cuidado-m8-edits-20261112.json \\
-      --base-commit 399a9ce37df64e2dc3d0b62856d85b1b3c00de99 --nota "…"
+      --base-commit 40f9505c53c6125cf3faa9d219a965d22c42bd27 --nota "…"
 
 Fica por cima da decisão 152 no M7 (cuidado_m7_20261111, no ramo do pedido #194, commit 399a9ce3, com o main a7a16f2d já
 dentro), que não toca em nenhum ficheiro desta camada.
@@ -70,6 +70,8 @@ repetem nenhum trecho mudado. O painel de projeção da F11 segue o enunciado do
 o material do relâmpago (MATERIAL) segue a lição antes das camadas de cuidado (tests/test_sala_desligada.py compara-o com ela)
 e não muda, como do M1 ao M7. As cópias dos cartões no banco das provas rápidas do índice (var U) mudam como as lições de onde
 vêm (estão nos pares do achado 22).
+
+12/11/2026: o M7 foi publicado no main em 40f9505c (#194), com a mesma árvore de 399a9ce3; a base passa a ser esse commit do main, sem mudar resumos nem trocas.
 """
 import html
 import json
