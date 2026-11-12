@@ -850,7 +850,14 @@ def main():
                 # (frase da sugestão «continua» incluída), a camada mais recente, por cima dos créditos atrás de um «i» do pedido pt-1.
                 # 08/11/2026: antes de tudo, a decisão 152 no M2 (tabelas e espaços que não quebram), a camada mais recente, por
                 # cima do cartaz «Ler a cidade» e do nome novo da secção.
-                # 12/11/2026: antes de tudo, a decisão 152 no M9 (tabelas e espaços que não quebram), a camada mais recente, por
+                # 12/11/2026: antes de tudo, a decisão 152 no Exame e nas páginas transversais (uma tabela e espaços que não quebram),
+                # a camada mais recente, por cima da decisão 152 no M9.
+                cuidado_exame = ROOT / 'tests/fixtures/cuidado-exame-edits-20261112.json'
+                for edit in reversed(json.loads(cuidado_exame.read_text('utf-8'))['files'].get(rel, {}).get('edits', [])):
+                    if conferencia.count(edit['new']) != edit['occurrences']:
+                        raise ManifestoDesatualizado(f'{rel}: decisão 152 no Exame e nas páginas transversais não confere')
+                    conferencia = conferencia.replace(edit['new'], edit['old'])
+                # 12/11/2026: a seguir, a decisão 152 no M9 (tabelas e espaços que não quebram), por
                 # cima da decisão 152 no M8.
                 cuidado_m9 = ROOT / 'tests/fixtures/cuidado-m9-edits-20261112.json'
                 for edit in reversed(json.loads(cuidado_m9.read_text('utf-8'))['files'].get(rel, {}).get('edits', [])):

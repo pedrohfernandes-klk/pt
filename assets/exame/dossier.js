@@ -60,7 +60,7 @@
   async function validatePhoto(p) {
     allow(p, PHOTO_KEYS, 'Fotografia');
     id(p.id, 'Fotografia'); photoName(p.name);
-    if (TYPES.indexOf(p.type) < 0 || !(p.blob instanceof Blob) || p.blob.type !== p.type || !Number.isSafeInteger(p.size) || p.size !== p.blob.size || p.size < 12 || p.size > PHOTO_LIMIT) fail('Fotografia inválida: usa JPEG, PNG ou WebP, até 8 MiB.');
+    if (TYPES.indexOf(p.type) < 0 || !(p.blob instanceof Blob) || p.blob.type !== p.type || !Number.isSafeInteger(p.size) || p.size !== p.blob.size || p.size < 12 || p.size > PHOTO_LIMIT) fail('Fotografia inválida: usa JPEG, PNG ou WebP, até 8 MiB.');
     var h = new Uint8Array(await p.blob.slice(0, 16).arrayBuffer()), real = '';
     if (h[0] === 255 && h[1] === 216 && h[2] === 255) real = 'image/jpeg';
     if (h[0] === 137 && h[1] === 80 && h[2] === 78 && h[3] === 71 && h[4] === 13 && h[5] === 10 && h[6] === 26 && h[7] === 10) real = 'image/png';
@@ -82,7 +82,7 @@
       count += new Blob([JSON.stringify(m)]).size;
       (e.photos || []).forEach(function (p) { count += p.size; });
     });
-    if (count > TOTAL_LIMIT) fail('O dossiê ultrapassa 64 MiB. Remove fotografias antes de guardar.');
+    if (count > TOTAL_LIMIT) fail('O dossiê ultrapassa 64 MiB. Remove fotografias antes de guardar.');
     return count;
   }
   function db() {
@@ -222,7 +222,7 @@
       var e = metadata(raw); if (seen[e.sessionId]) fail('Sessão repetida no ficheiro.'); seen[e.sessionId] = true;
       // Bound the decoded data before retaining all image Blobs.
       raw.photos.forEach(function (p) { if (!Number.isSafeInteger(p.size) || p.size < 0) fail('Tamanho de fotografia inválido.'); total += p.size; });
-      total += new Blob([JSON.stringify(e)]).size; if (total > TOTAL_LIMIT) fail('O ficheiro ultrapassa 64 MiB de dados.');
+      total += new Blob([JSON.stringify(e)]).size; if (total > TOTAL_LIMIT) fail('O ficheiro ultrapassa 64 MiB de dados.');
       e.photos = await validatePhotos(raw.photos.map(decodePhoto)); entries.push(e);
     }
     bytes(entries);

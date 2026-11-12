@@ -42,6 +42,9 @@ CAMADA = ROOT / 'scripts/creditos_i_pt1_20261107.json'
 MANIFESTO = ROOT / 'tests/fixtures/creditos-i-pt1-edits-20261107.json'
 # 12/11/2026: por cima fica a decisão 152 no M9 (os espaços que não quebram no índice do M9), que se desfaz antes.
 CUIDADO_M9 = ROOT / 'tests/fixtures/cuidado-m9-edits-20261112.json'
+# 12/11/2026: por cima fica a decisão 152 no Exame e nas páginas transversais (os espaços que não quebram na entrada do Português e
+# nas páginas dos anos), que se desfaz antes de todas.
+CUIDADO_EXAME = ROOT / 'tests/fixtures/cuidado-exame-edits-20261112.json'
 # A peça comum com a versão do pt-2 (a mesma folha e o mesmo script em cache); o motor dos fundos com a versão desta camada.
 VERSAO_I = '20261105'
 VERSAO_FUNDOS = '20261107'
@@ -54,6 +57,13 @@ INDICES = tuple(f'm{n}/index.html' for n in range(1, 10))
 def base(rel):
     """O texto da página sem esta camada (desfeita pelo manifesto, da última troca para a primeira)."""
     texto = (ROOT / rel).read_bytes().decode('utf-8')
+    # 12/11/2026: antes de tudo, a decisão 152 no Exame e nas páginas transversais (camada cuidado_exame_20261112), a mais recente,
+    # com contagem estrita.
+    if CUIDADO_EXAME.is_file():
+        for edit in reversed(json.loads(CUIDADO_EXAME.read_text('utf-8'))['files'].get(rel, {}).get('edits', [])):
+            if texto.count(edit['new']) != edit['occurrences']:
+                raise SystemExit(f'{rel}: a decisão 152 no Exame e nas páginas transversais já não confere ({edit["location"]})')
+            texto = texto.replace(edit['new'], edit['old'])
     # 12/11/2026: antes de tudo, a decisão 152 no M9 (camada cuidado_m9_20261112), a mais recente, com contagem estrita: prende
     # «século XVIII» no crédito da imagem documental do índice do M9, dentro do texto que esta camada pôs atrás do «i».
     if CUIDADO_M9.is_file():
