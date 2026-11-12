@@ -19,8 +19,8 @@
    nodes.forEach(function(node){move(node,box);});
    cards.push({el:box,label:label,kind:kind||"reading"});return box;
   }
-  // 12/11/2026 (piloto das tarefas mais fáceis de fazer, m3-u1): uma página pode dar o nome do primeiro cartão
-  // (data-task-opening no <main>) e o de cada cartão (data-task-card na secção), e pedir o índice sem números
+  // 12/11/2026 (tarefas mais fáceis de fazer, m3-u1 e m3-u2): uma página pode dar o nome do primeiro cartão
+  // (data-task-opening no <main>) e o de cada cartão (data-task-card-name na secção; data-task-card é o número que o leitor põe), e pedir o índice sem números
   // (data-task-index="nomes"). As páginas sem estes atributos ficam como estavam.
   var opening=card(page.getAttribute("data-task-opening")||(compact?"Enunciado":"A aula de tarefa"),[]);
   var before=Array.from(page.children);
@@ -31,7 +31,7 @@
    if(!compact&&node.id==="preparacao"){
     card("Preparar · leitura e modelo",[node]);
     questions.forEach(function(question,i){card("Preparar · pergunta "+(i+1),[question],"question");});
-   }else card(node.getAttribute("data-task-card")||(compact?(node.id==="aquecer"?"Aquecer":node.id==="apoios"?"Relembrar":node.id==="entregar"?"Verificar":label):label),[node],node.id==="aquecer"?"warmup":node.id==="apoios"?"support":node.id==="produzir"?"production":node.id==="entregar"?"delivery":"reading");
+   }else card(node.getAttribute("data-task-card-name")||(compact?(node.id==="aquecer"?"Aquecer":node.id==="apoios"?"Relembrar":node.id==="entregar"?"Verificar":label):label),[node],node.id==="aquecer"?"warmup":node.id==="apoios"?"support":node.id==="produzir"?"production":node.id==="entregar"?"delivery":"reading");
   });
   // 28/10/2026: nas tarefas com aquecimento, o aquecimento é o primeiro cartão; o enunciado vem a seguir.
   var warm=cards.findIndex(function(item){return item.kind==="warmup";});

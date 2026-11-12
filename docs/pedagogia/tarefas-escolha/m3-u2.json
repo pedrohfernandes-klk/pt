@@ -116,5 +116,622 @@
   "produto": "Responde às duas perguntas e escolhe <strong>um tema</strong>: uma voz off (A) ou um Velho do Restelo de hoje (B).",
   "etapa": "1. Responde às duas perguntas",
   "entrega": "Escreve o tema escolhido (A ou B) no topo. Fotografa as respostas, o tema escolhido e as duas linhas finais. Confirma que as fotografias mostram o trabalho completo e entrega-as na tarefa do Teams."
+ },
+ "facil": {
+  "_nota": "12/11/2026: a página da tarefa sai só desta chave (scripts/tarefa_facil.py) e de «titulo», «unidade», «aquecer» (ligação e minutos), «dossie», «dossie_titulo», «opcional». As outras chaves antigas («aquecer.texto», «lead», «nucleo», «temas», «apoios», «criterios», «fecho», «clareza», «exemplos») já não aparecem na página: ficam como estavam para a leitura histórica das camadas de baixo.",
+  "kicker": "Tarefa individual, 90 minutos",
+  "fazer": [
+   "Faz o aquecimento (10 minutos).",
+   "Responde a duas perguntas.",
+   "Escolhe um tema: uma voz <i>off</i> (A) ou um Velho do Restelo de hoje (B).",
+   "Escreve duas linhas finais.",
+   "Revê e entrega no Teams."
+  ],
+  "modo": "Trabalhas à mão. O aquecimento e a tarefa são com consulta: podes usar as lições do site, o caderno e o dicionário.",
+  "producao_minutos": 55,
+  "grelha_nota": "A autoavaliação da grelha é só para ti: não se entrega.",
+  "entregas": {
+   "intro": "Fotografias do teu trabalho em papel, na tarefa do Teams."
+  },
+  "quadro": {
+   "titulo": "Tempo e tamanho",
+   "colunas": [
+    "Tempo",
+    "O que fazes",
+    "Palavras"
+   ],
+   "linhas": [
+    [
+     "10 min",
+     "Aquecimento em cartões",
+     ""
+    ],
+    [
+     "10 min",
+     "Leitura do enunciado",
+     ""
+    ],
+    [
+     {
+      "t": "55 min",
+      "linhas": 3
+     },
+     "Pergunta 1",
+     {
+      "t": "orientação: cerca de 110 nas duas perguntas",
+      "linhas": 2
+     }
+    ],
+    [
+     null,
+     "Pergunta 2",
+     null
+    ],
+    [
+     null,
+     "Tema A ou B",
+     "orientação: 90 a 140"
+    ],
+    [
+     "15 min",
+     "Revisão e entrega",
+     ""
+    ],
+    [
+     "90 min",
+     "Total",
+     "200 a 250"
+    ]
+   ],
+   "notas": [
+    "Nos 10 minutos de leitura, lê as duas perguntas e os passos dos dois temas. Os textos<span class=\"tf-so-ecra\"> e os exemplos</span> são para consultares enquanto escreves.",
+    "Não contam para as palavras: os versos citados ou copiados e as duas linhas finais."
+   ]
+  },
+  "aquecer": {
+   "titulo": "Relógio do aquecimento"
+  },
+  "textos": [
+   {
+    "id": "texto-1",
+    "rotulo": "Texto 1",
+    "titulo": "<i>Os Lusíadas</i>, canto I, estâncias 4 e 5 (o pedido às Tágides), e canto X, estância 145 (a ordem de calar a Musa), de Luís de Camões",
+    "numerar": 5,
+    "estrofes": [
+     {
+      "versos": [
+       "E vós, Tágides minhas, pois criado",
+       "Tendes em mim um novo engenho ardente,",
+       "Se sempre em verso humilde celebrado",
+       "Foi de mim vosso rio alegremente,",
+       "Dai-me agora um som alto e sublimado,",
+       "Um estilo grandíloquo e corrente,",
+       "Porque de vossas águas, Febo ordene",
+       "Que não tenham inveja às de Hipocrene."
+      ],
+      "rotulo": "Canto I, estância 4"
+     },
+     {
+      "versos": [
+       "Dai-me uma fúria grande e sonorosa,",
+       "E não de agreste avena ou frauta ruda,",
+       "Mas de tuba canora e belicosa,",
+       "Que o peito acende e a cor ao gesto muda;",
+       "Dai-me igual canto aos feitos da famosa",
+       "Gente vossa, que a Marte tanto ajuda;",
+       "Que se espalhe e se cante no universo,",
+       "Se tão sublime preço cabe em verso."
+      ],
+      "rotulo": "Canto I, estância 5"
+     },
+     {
+      "versos": [
+       "Nô mais, Musa, nô mais, que a Lira tenho",
+       "Destemperada e a voz enrouquecida,",
+       "E não do canto, mas de ver que venho",
+       "Cantar a gente surda e endurecida.",
+       "O favor com que mais se acende o engenho",
+       "Não no dá a pátria, não, que está metida",
+       "No gosto da cobiça e na rudeza",
+       "Dũa austera, apagada e vil tristeza."
+      ],
+      "rotulo": "Canto X, estância 145"
+     }
+    ],
+    "glossario": [
+     [
+      "Tágides",
+      "ninfas do Tejo"
+     ],
+     [
+      "engenho",
+      "talento"
+     ],
+     [
+      "grandíloquo",
+      "elevado, solene"
+     ],
+     [
+      "Febo",
+      "Apolo, deus da poesia"
+     ],
+     [
+      "Hipocrene",
+      "fonte das Musas"
+     ],
+     [
+      "fúria",
+      "inspiração arrebatada"
+     ],
+     [
+      "avena",
+      "flauta de pastor"
+     ],
+     [
+      "frauta ruda",
+      "flauta rústica"
+     ],
+     [
+      "tuba canora",
+      "trombeta de som claro"
+     ],
+     [
+      "Marte",
+      "deus da guerra"
+     ],
+     [
+      "nô mais",
+      "não mais"
+     ],
+     [
+      "destemperada",
+      "desafinada"
+     ]
+    ],
+    "fonte": "Luís de Camões, <i>Os Lusíadas</i> (1572): I, 4 e 5; X, 145.",
+    "origem": "m3/licao-m3-f10/index.html, linha 431, cartões 3, 7, 11 (copiado letra a letra)"
+   },
+   {
+    "id": "texto-2",
+    "rotulo": "Texto 2",
+    "titulo": "<i>Os Lusíadas</i>, canto VIII, estâncias 96 a 99, de Luís de Camões",
+    "numerar": 5,
+    "estrofes": [
+     {
+      "versos": [
+       "Nas naus estar se deixa vagaroso,",
+       "Até ver o que o tempo lhe descobre:",
+       "Que não se fia já do cobiçoso",
+       "Regedor corrompido e pouco nobre.",
+       "Veja agora o juízo curioso",
+       "Quanto no rico, assim como no pobre,",
+       "Pode o vil interesse e sede inimiga",
+       "Do dinheiro, que a tudo nos obriga."
+      ],
+      "rotulo": "Canto VIII, estância 96"
+     },
+     {
+      "versos": [
+       "A Polidoro mata o Rei Treício,",
+       "Só por ficar senhor do grão tesouro;",
+       "Entra, pelo fortíssimo edifício,",
+       "Com a filha de Acriso a chuva d'ouro;",
+       "Pode tanto em Tarpeia avaro vício,",
+       "Que, a troco do metal luzente e louro,",
+       "Entrega aos inimigos a alta torre,",
+       "Do qual quase afogada em pago morre."
+      ],
+      "rotulo": "Canto VIII, estância 97"
+     },
+     {
+      "versos": [
+       "Este rende munidas fortalezas,",
+       "Faz tredores e falsos os amigos:",
+       "Este a mais nobres faz fazer vilezas,",
+       "E entrega Capitães aos inimigos;",
+       "Este corrompe virginais purezas,",
+       "Sem temer de honra ou fama alguns perigos:",
+       "Este deprava às vezes as ciências,",
+       "Os juízos cegando e as consciências;"
+      ],
+      "rotulo": "Canto VIII, estância 98"
+     },
+     {
+      "versos": [
+       "Este interpreta mais que sutilmente",
+       "Os textos; este faz e desfaz leis;",
+       "Este causa os perjúrios entre a gente,",
+       "E mil vezes tiranos torna os Reis.",
+       "Até os que só a Deus Onipotente",
+       "Se dedicam, mil vezes ouvireis",
+       "Que corrompe este encantador, e ilude;",
+       "Mas não sem cor, contudo, de virtude."
+      ],
+      "rotulo": "Canto VIII, estância 99"
+     }
+    ],
+    "glossario": [
+     [
+      "vagaroso",
+      "sem pressa"
+     ],
+     [
+      "regedor",
+      "governante (o Catual, que exige subornos ao Gama)"
+     ],
+     [
+      "juízo curioso",
+      "leitor atento"
+     ],
+     [
+      "Polidoro</b>, <b>Rei Treício</b>, <b>Acriso</b> e <b>Tarpeia",
+      "exemplos antigos de crimes por dinheiro"
+     ],
+     [
+      "grão",
+      "grande"
+     ],
+     [
+      "rende",
+      "faz render-se"
+     ],
+     [
+      "munidas",
+      "fortificadas"
+     ],
+     [
+      "tredores",
+      "traidores"
+     ],
+     [
+      "deprava",
+      "corrompe"
+     ],
+     [
+      "perjúrios",
+      "juras falsas"
+     ],
+     [
+      "cor de virtude",
+      "aparência de virtude"
+     ]
+    ],
+    "fonte": "Luís de Camões, <i>Os Lusíadas</i> (1572), VIII, 96 a 99.",
+    "origem": "m3/licao-m3-f13/index.html, linha 431, cartões 9, 13, 15, 18 (copiado letra a letra)",
+    "escolher": {
+     "de": 17,
+     "ate": 32,
+     "frase": "A barra ao lado marca as estâncias 98 e 99, para o tema A."
+    }
+   },
+   {
+    "id": "texto-3",
+    "rotulo": "Texto 3",
+    "titulo": "<i>Os Lusíadas</i>, canto IV, estâncias 94 e 95 (o Velho do Restelo), de Luís de Camões",
+    "numerar": 5,
+    "estrofes": [
+     {
+      "versos": [
+       "Mas um velho d'aspeito venerando,",
+       "Que ficava nas praias, entre a gente,",
+       "Postos em nós os olhos, meneando",
+       "Três vezes a cabeça, descontente,",
+       "A voz pesada um pouco alevantando,",
+       "Que nós no mar ouvimos claramente,",
+       "C'um saber só de experiências feito,",
+       "Tais palavras tirou do experto peito:"
+      ],
+      "rotulo": "Canto IV, estância 94"
+     },
+     {
+      "versos": [
+       "Ó glória de mandar! Ó vã cobiça",
+       "Desta vaidade, a quem chamamos Fama!",
+       "Ó fraudulento gosto, que se atiça",
+       "C'uma aura popular, que honra se chama!",
+       "Que castigo tamanho e que justiça",
+       "Fazes no peito vão que muito te ama!",
+       "Que mortes, que perigos, que tormentas,",
+       "Que crueldades neles experimentas!"
+      ],
+      "rotulo": "Canto IV, estância 95"
+     }
+    ],
+    "glossario": [
+     [
+      "aspeito venerando",
+      "aspeto respeitável"
+     ],
+     [
+      "meneando",
+      "abanando"
+     ],
+     [
+      "alevantando",
+      "levantando"
+     ],
+     [
+      "experto",
+      "experiente"
+     ],
+     [
+      "se atiça",
+      "se acende"
+     ],
+     [
+      "aura popular",
+      "o aplauso do povo"
+     ],
+     [
+      "peito vão",
+      "coração vaidoso"
+     ]
+    ],
+    "fonte": "Luís de Camões, <i>Os Lusíadas</i> (1572), IV, 94 e 95 (grafia modernizada).",
+    "origem": "m3/licao-m3-f03/index.html, linha 431, cartões 4, 8 (copiado letra a letra)"
+   }
+  ],
+  "perguntas": [
+   {
+    "titulo": "Do canto ao silêncio.",
+    "meta": "Orientação: cerca de 110 palavras nas duas perguntas.",
+    "relogio": "Começa este relógio depois da leitura.",
+    "textos": [
+     "texto-1"
+    ],
+    "pedido_titulo": "O que fazes",
+    "antes": "Compara duas passagens do Texto 1:",
+    "escolhas": [
+     "o pedido às Tágides (I, 4 e 5);",
+     "a ordem de calar a Musa (X, 145)."
+    ],
+    "alineas": [
+     "Começa pela tua tese: uma interpretação que possa ser discutida.",
+     "Sustenta a tese com uma citação de I, 4 ou 5.",
+     "Sustenta-a também com uma citação de X, 145.",
+     "Indica o canto e a estância de cada citação.",
+     "Explica cada citação."
+    ],
+    "citar": "Copia as palavras exatas do texto. Põe-nas entre aspas: «…». A seguir, escreve o canto e a estância, assim: (I, 106).",
+    "exemplos": [
+     {
+      "titulo": "Outro par de passagens: I, 106 e IX, 92",
+      "paragrafos": [
+       {
+        "al": "Alínea a), a tese:",
+        "t": "O Poeta encolhe o homem em I, 106 e manda-o crescer em IX, 92: a pequenez é o ponto de partida da fama."
+       },
+       {
+        "al": "Alíneas b) a e), duas citações com canto e estância, explicadas:",
+        "t": "«Contra um bicho da terra tão pequeno?» (I, 106): a metáfora tira ao homem a grandeza da viagem. «Despertai já do sono do ócio ignavo» (IX, 92): o imperativo manda-o acordar. O homem pequeno é o que ainda não fez obras; a fama começa quando acorda."
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "titulo": "Modalidade e retoma.",
+    "meta": "Orientação: cerca de 110 palavras nas duas perguntas.",
+    "textos": [
+     "texto-2"
+    ],
+    "pedido_titulo": "O que fazes",
+    "grupos": [
+     {
+      "intro": "No verso «Veja agora o juízo curioso» (VIII, 96, no <a href=\"#texto-2\">Texto 2</a>):",
+      "alineas": [
+       "Identifica a modalidade.",
+       "Identifica o valor.",
+       "Identifica a palavra que a marca."
+      ]
+     },
+     {
+      "intro": "Nos versos «O favor com que mais se acende o engenho / Não no dá a pátria» (X, 145, no <a href=\"#texto-1\">Texto 1</a>):",
+      "alineas": [
+       "Identifica a palavra que retoma «O favor».",
+       "Identifica o processo usado."
+      ]
+     }
+    ],
+    "ajudas": [
+     "As três modalidades: epistémica, deôntica e apreciativa.",
+     "Retoma-se por pronome, demonstrativo, repetição ou sinónimo."
+    ],
+    "exemplos": [
+     {
+      "titulo": "Outro verso: a modalidade, o valor e a marca",
+      "paragrafos": [
+       {
+        "al": "Alíneas a), b) e c):",
+        "t": "Em «Respondo que não sei; porém suspeito», a modalidade é epistémica, com valor de probabilidade, e a marca é o verbo «suspeito»."
+       }
+      ]
+     },
+     {
+      "titulo": "Uma frase inventada: a retoma e o processo",
+      "paragrafos": [
+       {
+        "al": "Alíneas d) e e):",
+        "t": "Na frase inventada O rapaz tinha medo do mar; o receio não o deixava dormir, a palavra receio retoma medo por um sinónimo: outra palavra para a mesma coisa."
+       }
+      ]
+     }
+    ],
+    "apoios": [
+     {
+      "titulo": "Ver o quadro das três modalidades, como está na lição F15",
+      "quadro": {
+       "titulo": "As três modalidades",
+       "colunas": [
+        "Modalidade",
+        "O que exprime",
+        "Exemplos"
+       ],
+       "linhas": [
+        [
+         "Epistémica",
+         "grau de certeza (valor de certeza ou probabilidade)",
+         "«talvez», «deve estar», «é certo que»"
+        ],
+        [
+         "Deôntica",
+         "obrigação ou permissão; o pedido e a ordem também são deônticos",
+         "«tem de», «pode sair»"
+        ],
+        [
+         "Apreciativa",
+         "avaliação ou emoção do locutor",
+         "«Infelizmente», «Que belo!»"
+        ]
+       ]
+      },
+      "notas": [
+       "Marcas: verbos modais, advérbios, adjetivos, modos verbais, tipos de frase."
+      ],
+      "origem": "m3/licao-m3-f15/index.html, linha 431, cartões «Para entender» e «Em paralelo»"
+     }
+    ]
+   }
+  ],
+  "temas_titulo": "Escolhe um tema: A ou B",
+  "temas_nota": "Orientação: 90 a 140 palavras.",
+  "temas_topo": "Escreve a letra do teu tema (A ou B) no topo.",
+  "temas": [
+   {
+    "letra": "A",
+    "nome": "A voz que suspende a ação",
+    "intro": "Imagina uma cena atual que para enquanto uma voz <i>off</i> a comenta, à maneira de VIII, 96 a 99.",
+    "antes": [
+     "As estâncias VIII, 96 a 99 estão no <a href=\"#texto-2\">Texto 2</a>, na pergunta 2. Uma barra ao lado marca as estâncias 98 e 99."
+    ],
+    "passos": [
+     {
+      "t": "Escreve seis linhas. As tuas linhas cumprem tudo isto:",
+      "sub": [
+       "quatro começam por «Este» ou «Esta»;",
+       "incluem uma enumeração;",
+       "terminam com algo que se apresenta como uma coisa, mas é outra."
+      ]
+     },
+     "Cita o verso de VIII, 98 ou 99 que imitaste.",
+     "Explica o que imitaste.",
+     "Indica o que o teu «Este» retoma."
+    ],
+    "material": {
+     "exemplos": [
+      {
+       "titulo": "Outro modelo e outra palavra: o barulho, à maneira de «Agora espero, agora desconfio»",
+       "paragrafos": [
+        {
+         "al": "Passo 1, as seis linhas:",
+         "t": "A cena para no meio da rua. / O barulho acorda quem dorme, / o barulho cala a conversa, / o barulho enche a noite, / o barulho entra pela janela / e chama alegria ao que é só ruído."
+        },
+        {
+         "al": "Passos 2 e 3, o verso citado e o que se imitou:",
+         "t": "Imitei «Agora espero, agora desconfio»: a mesma palavra a abrir, a juntar o que o barulho faz."
+        },
+        {
+         "al": "Passo 4, a retoma:",
+         "t": "Aqui, o barulho retoma-se pela repetição do nome, e essa repetição é também a figura."
+        }
+       ]
+      }
+     ]
+    }
+   },
+   {
+    "letra": "B",
+    "nome": "O Velho do Restelo, hoje",
+    "intro": "Escreve a intervenção de um Velho do Restelo de hoje contra um projeto ou uma viagem, nunca contra uma pessoa.",
+    "antes": [
+     "O Velho do Restelo de Camões está no <a href=\"#texto-3\">Texto 3</a>."
+    ],
+    "passos": [
+     "Adapta dois argumentos do Velho.",
+     "Para cada argumento, cita a expressão do Velho.",
+     "Para cada argumento, indica a estância.",
+     "Inclui um facto do <a href=\"#dossie\">dossiê</a>.",
+     "Termina com duas frases de quem parte. Essas frases respondem a um dos argumentos."
+    ],
+    "material": {
+     "titulo": "Só para o tema B: o dossiê e o Texto 3",
+     "dossie": true,
+     "textos": [
+      "texto-3"
+     ],
+     "exemplos": [
+      {
+       "titulo": "Outra voz e outra partida: o Poeta de I, 106 contra uma caravana que atravessa o deserto sem água de reserva",
+       "paragrafos": [
+        {
+         "al": "Passos 1 a 4, dois argumentos com a expressão e a estância, e um facto:",
+         "t": "Partem sem água e chamam a isso coragem. «Onde terá segura a curta vida» (I, 106) quem atravessa a areia assim? E não é só o corpo: «Na terra tanta guerra, tanto engano» (I, 106), e no deserto também. Já em 1572 o poema sabia que o homem é pequeno."
+        },
+        {
+         "al": "Passo 5, a resposta de quem parte:",
+         "t": "Pequenos, sim; é por isso que vamos juntos e devagar. A tua pergunta não nos trava: lembra-nos de levar mais água."
+        }
+       ]
+      }
+     ]
+    }
+   }
+  ],
+  "finais": {
+   "titulo": "Duas linhas finais",
+   "passos": [
+    "Responde: quando um poema celebra, que pergunta lhe vais passar a fazer?",
+    "Aponta o verso que te ensinou essa pergunta."
+   ]
+  },
+  "verificar_titulo": "Antes de entregar, verifica",
+  "verificar_texto": "Responde sim ou não. Se for não, completa o teu trabalho.",
+  "verificar": [
+   "Na pergunta 1, comecei pela minha tese?",
+   "Tenho uma citação de cada passagem, com o canto e a estância?",
+   "Expliquei as duas citações?",
+   "Respondi às cinco alíneas da pergunta 2?",
+   "Fiz todos os passos do meu tema?",
+   "As respostas ligam-se (não estão soltas)?",
+   "Tenho 200 a 250 palavras?",
+   "Revi a escrita?",
+   "As duas linhas finais apontam um verso?",
+   "A letra do meu tema (A ou B) está no topo?"
+  ],
+  "exemplo_titulo": [
+   "Ver um exemplo com outro caso",
+   "Ver dois exemplos com outros casos"
+  ],
+  "entrega_titulo": "Entrega no Teams",
+  "entrega": [
+   "Fotografa as respostas, o texto do teu tema e as duas linhas finais.",
+   "Confirma que as fotografias mostram o trabalho completo.",
+   "Entrega as fotografias na tarefa do Teams."
+  ],
+  "rever_titulo": "Se precisares de rever",
+  "rever_texto": "Os textos já estão nesta página. As lições servem para rever a matéria.",
+  "rever": [
+   {
+    "para": "Pergunta 1",
+    "texto": "Lição F10, <a href=\"../../m3/licao-m3-f10/\">Quem é a Musa?</a> Relê «Em paralelo» (duas invocações, dois tons) e «Para entender» (a tese e as citações)."
+   },
+   {
+    "para": "Pergunta 2",
+    "texto": "Lição F15, <a href=\"../../m3/licao-m3-f15/\">Poder, dever, querer</a>. Relê «Para entender» (as três modalidades e a anáfora como retoma) e «Em paralelo» (a anáfora é duas coisas)."
+   },
+   {
+    "para": "Tema A",
+    "texto": "Lição F13, <a href=\"../../m3/licao-m3-f13/\">Um bicho da terra tão pequeno</a>. Relê «Em paralelo» (duas reflexões do Poeta) e «Para entender»."
+   },
+   {
+    "para": "Tema B",
+    "texto": "Lição F03, <a href=\"../../m3/licao-m3-f03/\">Jerónimos: ler um edifício</a>. Relê «Em paralelo»: a pedra e o Velho."
+   },
+   {
+    "para": "Tema B",
+    "texto": "Pensar devagar, <a href=\"../../m3/m3-velho-restelo-juri/\">A voz contra, dentro do poema</a>. Relê o «Ato 2» (o que diz o Velho) e o «Ato 4» (a melhor objeção)."
+   }
+  ],
+  "opcional_titulo": "Experimentar uma pergunta"
  }
 }

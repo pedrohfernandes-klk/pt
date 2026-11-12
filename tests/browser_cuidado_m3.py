@@ -38,15 +38,22 @@ FORA = ['m3/gram-modalidade/index.html', 'm3/index.html', 'm3/guia-da-tarefa-m3/
 PAGINAS = {
     'm3/index.html': ['1.º' + N + 'ano', '90' + N + 'minutos', '90' + N + 'min', '10' + N + 'min', '20' + N + 'min', '30' + N + '%',
                       'I,' + N + '106', 'VIII,' + N + '96' + N + 'a' + N + '99', 'X,' + N + '145'],
+    # 12/11/2026: no guia, a produção passa a 55 minutos (decisão do docente, camada tarefas_faceis_m3_20261112): a mesma referência,
+    # com o número novo, continua sem se partir.
     'm3/guia-da-tarefa-m3/index.html': ['1.º' + N + 'ano', '90' + N + 'minutos', '10' + N + 'minutos', '30' + N + '%', '10' + N + 'min',
-                                        '60' + N + 'min'],
+                                        '55' + N + 'min'],
     'm3/mapa-do-modulo-m3/index.html': ['1.º' + N + 'ano', 'c.' + N + '1524–' + J + '1580', '1497–' + J + '1499', '90' + N + 'minutos',
                                         '30' + N + '%', 'versos' + N + '1' + N + 'e' + N + '2', 'c.' + N + '1524'],
     'm3/portefolio-do-modulo-m3/index.html': ['1.º' + N + 'ano', '90' + N + 'minutos', '0' + N + 'a' + N + '20', '40' + N + '%'],
     'tarefas/m3-u1/index.html': ['90' + N + 'min', '10' + N + 'min', '200' + N + 'a' + N + '240' + N + 'palavras', '80' + N + 'a' + N + '120',
                                  'D.' + N + 'Manuel' + N + 'I', 'I,' + N + '1' + N + 'a' + N + '3', '90' + N + 'minutos', 'século' + N + 'XVI'],
     'tarefas/m3-u2/index.html': ['90' + N + 'min', '10' + N + 'min', '200' + N + 'a' + N + '250' + N + 'palavras', '90' + N + 'a' + N + '140',
-                                 'I,' + N + '4' + N + 'e' + N + '5', 'X,' + N + '145', 'VIII,' + N + '97', 'IV,' + N + '95' + N + 'a' + N + '104'],
+                                 # 12/11/2026: no molde «mais fácil de fazer» (camada tarefas_faceis_m3_20261112) sai o exemplo com VIII, 97;
+                                 # ficam, presas da mesma maneira, as referências a VIII, 96, a VIII, 96 a 99 e a VIII, 98 ou 99, e as novas
+                                 # («55 min», «Texto 1», «Pergunta 2», «canto VIII», «estância 145»).
+                                 'I,' + N + '4' + N + 'e' + N + '5', 'X,' + N + '145', 'VIII,' + N + '96', 'VIII,' + N + '96' + N + 'a' + N + '99',
+                                 'VIII,' + N + '98' + N + 'ou' + N + '99', 'IV,' + N + '95' + N + 'a' + N + '104', '55' + N + 'min', 'Texto' + N + '1',
+                                 'Pergunta' + N + '2', 'Canto' + N + 'VIII', 'estância' + N + '145'],
     'tarefas/m3-u1/grelha/index.html': ['1' + N + 'a' + N + '3', '1' + N + 'a' + N + '2', '1' + N + 'a' + N + '5',
                                         '200' + N + 'a' + N + '240' + N + 'palavras', 'I,' + N + '106'],
     'tarefas/m3-u2/grelha/index.html': ['1' + N + 'a' + N + '3', '1' + N + 'a' + N + '2', 'IX,' + N + '92', 'VIII,' + N + '98'],

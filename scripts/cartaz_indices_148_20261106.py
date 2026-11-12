@@ -68,6 +68,8 @@ CUIDADO_M9 = ROOT / 'tests/fixtures/cuidado-m9-edits-20261112.json'
 # 12/11/2026: por cima fica a decisão 152 no Exame e nas páginas transversais (os espaços que não quebram na entrada do Português e
 # nas páginas dos anos), que se desfaz antes de todas.
 CUIDADO_EXAME = ROOT / 'tests/fixtures/cuidado-exame-edits-20261112.json'
+# 12/11/2026: por cima de todas, as tarefas do M3 mais fáceis de fazer (muda o índice do M3: «duas perguntas»).
+TAREFAS_FACEIS_M3 = ROOT / 'tests/fixtures/tarefas-faceis-m3-edits-20261112.json'
 VERSAO = '20261106'
 ACHADO = ('06/11/2026: decisão 148 (o desenho do índice do M4 passa aos nove, com a palavra do módulo, a imagem documental '
           'mais pequena a seguir às unidades e os botões flutuantes de sempre). {o}')
@@ -84,7 +86,14 @@ COMENTARIO_PILOTO = next(t['novo'] for t in PILOTO if t['local'] == 'M4 retirar 
 def base(rel):
     """O texto da página sem esta camada (desfeita pelo manifesto, da última troca para a primeira)."""
     texto = (ROOT / rel).read_bytes().decode('utf-8')
-    # 12/11/2026: antes de tudo, a decisão 152 no Exame e nas páginas transversais (camada cuidado_exame_20261112), a mais recente,
+    # 12/11/2026: antes de tudo, as tarefas do M3 mais fáceis de fazer (camada tarefas_faceis_m3_20261112, a mais recente, que muda
+    # o índice do M3), com contagem estrita.
+    if TAREFAS_FACEIS_M3.is_file():
+        for edit in reversed(json.loads(TAREFAS_FACEIS_M3.read_text('utf-8'))['files'].get(rel, {}).get('edits', [])):
+            if texto.count(edit['new']) != edit['occurrences']:
+                raise SystemExit(f'{rel}: as tarefas do M3 mais fáceis de fazer já não conferem ({edit["location"]})')
+            texto = texto.replace(edit['new'], edit['old'])
+    # 12/11/2026: a seguir, a decisão 152 no Exame e nas páginas transversais (camada cuidado_exame_20261112), a mais recente,
     # com contagem estrita.
     if CUIDADO_EXAME.is_file():
         for edit in reversed(json.loads(CUIDADO_EXAME.read_text('utf-8'))['files'].get(rel, {}).get('edits', [])):

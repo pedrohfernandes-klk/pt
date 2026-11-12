@@ -123,6 +123,7 @@
   "entrega": "Escreve o tema escolhido (A ou B) no topo. Fotografa as respostas, o tema escolhido e as duas linhas finais. Confirma que as fotografias mostram o trabalho completo e entrega-as na tarefa do Teams."
  },
  "facil": {
+  "_nota": "12/11/2026: a página da tarefa sai só desta chave (scripts/tarefa_facil.py) e de «titulo», «unidade», «aquecer» (ligação e minutos), «dossie», «dossie_titulo», «opcional» e «exemplos». As outras chaves antigas («aquecer.texto», «lead», «nucleo», «temas», «apoios», «criterios», «fecho», «clareza») já não aparecem na página: ficam como estavam para a leitura histórica das camadas de baixo.",
   "kicker": "Tarefa individual, 90 minutos",
   "fazer": [
    "Faz o aquecimento (10 minutos).",

@@ -40,6 +40,8 @@ from test_provas_cartoes import OFICIAL, PALAVRAS_PROIBIDAS, segmentos, sem_ofic
 CAMADA_REL = 'scripts/exame_provas_oficial_20261112.json'
 MANIFESTO_REL = 'tests/fixtures/exame-provas-oficial-edits-20261112.json'
 LT = 'tests/fixtures/exame-ligacao-treinos-edits-20261112.json'
+# 12/11/2026: o manifesto da camada que fica por cima desta (as duas tarefas do M3 mais fáceis de fazer).
+TF = 'tests/fixtures/tarefas-faceis-m3-edits-20261112.json'
 EX = 'tests/fixtures/cuidado-exame-edits-20261112.json'
 BASE_COMMIT = '41c77a868c3291cfafb6ac754a50565f01fa78a1'
 N, WJ = '\xa0', '⁠'
@@ -564,11 +566,14 @@ class ExameProvasOficial(unittest.TestCase):
                 if rel in ex:
                     self.assertEqual(sha_lf(undo_cuidado_exame_1112(rel, atual)), ex[rel]['base_sha256_lf'])
         # No topo das camadas.
-        self.assertEqual(verificar_camadas.LAYERS[0], ('exame_provas_oficial_20261112', 'exame-provas-oficial-edits-20261112'))
-        self.assertEqual(verificar_camadas.LAYERS[1], ('exame_ligacao_treinos_20261112', 'exame-ligacao-treinos-edits-20261112'))
-        self.assertEqual(verificar_camadas.LAYERS[2], ('cuidado_exame_20261112', 'cuidado-exame-edits-20261112'))
-        self.assertEqual(len(verificar_camadas.LAYERS), 46)
-        self.assertEqual(len(set(verificar_camadas.LAYERS)), 46)
+        # 12/11/2026: por cima das provas em cartões com os documentos oficiais ficam as duas tarefas do M3 mais fáceis de fazer (tarefas_faceis_m3_20261112): a ordem ganha mais uma posição, com a mesma exigência.
+        self.assertEqual(verificar_camadas.LAYERS[0], ('tarefas_faceis_m3_20261112', 'tarefas-faceis-m3-edits-20261112'))
+        self.assertEqual(verificar_camadas.LAYERS[1], ('exame_provas_oficial_20261112', 'exame-provas-oficial-edits-20261112'))
+        self.assertEqual(verificar_camadas.LAYERS[2], ('exame_ligacao_treinos_20261112', 'exame-ligacao-treinos-edits-20261112'))
+        self.assertEqual(verificar_camadas.LAYERS[3], ('cuidado_exame_20261112', 'cuidado-exame-edits-20261112'))
+        # 12/11/2026: com as duas tarefas do M3 mais fáceis de fazer (tarefas_faceis_m3_20261112) no topo, as camadas passam de 46 a 47, todas diferentes.
+        self.assertEqual(len(verificar_camadas.LAYERS), 47)
+        self.assertEqual(len(set(verificar_camadas.LAYERS)), 47)
         # As duas camadas de baixo que mexem nestes ficheiros continuam a conferir, com as de cima desfeitas (esta primeiro).
         for camada, manifesto in (('cuidado_exame_20261112', 'cuidado-exame-edits-20261112'), ('conteudos_lote2_20261101', 'conteudos-lote2-edits-20261101')):
             with self.subTest(camada=camada):
@@ -603,21 +608,28 @@ class ExameProvasOficial(unittest.TestCase):
             plano_ = re.sub(r"['\"]\s*,\s*['\"]", ' ', texto)
             with self.subTest(ficheiro=p.name):
                 self.assertEqual(plano_.count('--desfazer-antes ' + LT), plano_.count(f'--desfazer-antes {meu} --desfazer-antes {LT}'))
-                self.assertEqual(plano_.count('--desfazer-antes {lt}'), plano_.count('--desfazer-antes {po} --desfazer-antes {lt}'))
-                self.assertEqual(plano_.count('--desfazer-antes {LT}'), plano_.count('--desfazer-antes {PO} --desfazer-antes {LT}'))
-                self.assertEqual(plano_.count(f"ROOT/'{LT}',"), plano_.count(f"(ROOT/'{meu}',ROOT/'{LT}',"))
+                # 12/11/2026: as duas tarefas do M3 mais fáceis de fazer e «tudo junto» no M3 (tarefas_faceis_m3_20261112: os enunciados, as grelhas, as correções e os aquecimentos da m3-u1 e da m3-u2, os seus dados, e o guia, o índice e o mapa do M3) passam a camada mais recente, por cima das provas em cartões com os documentos oficiais; desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
+                self.assertEqual(plano_.count('--desfazer-antes {lt}'), plano_.count('--desfazer-antes {tf} --desfazer-antes {po} --desfazer-antes {lt}'))
+                # 12/11/2026: as duas tarefas do M3 mais fáceis de fazer e «tudo junto» no M3 (tarefas_faceis_m3_20261112: os enunciados, as grelhas, as correções e os aquecimentos da m3-u1 e da m3-u2, os seus dados, e o guia, o índice e o mapa do M3) passam a camada mais recente, por cima das provas em cartões com os documentos oficiais; desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
+                self.assertEqual(plano_.count('--desfazer-antes {LT}'), plano_.count('--desfazer-antes {TF} --desfazer-antes {PO} --desfazer-antes {LT}'))
+                # 12/11/2026: as duas tarefas do M3 mais fáceis de fazer (tarefas_faceis_m3_20261112) passam a camada mais recente, por cima das provas em cartões com os documentos oficiais; desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
+                self.assertEqual(plano_.count(f"ROOT/'{LT}',"), plano_.count(f"(ROOT/'{TF}',ROOT/'{meu}',ROOT/'{LT}',"))
                 # Nenhuma cadeia dos fluxos desfaz esta camada sem ser à cabeça.
                 if p.suffix == '.yml':
-                    self.assertEqual(plano_.count('--desfazer-antes ' + meu), plano_.count('--verificar --desfazer-antes ' + meu))
+                    # 12/11/2026: as duas tarefas do M3 mais fáceis de fazer (tarefas_faceis_m3_20261112) passam a camada mais recente, por cima das provas em cartões com os documentos oficiais; desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
+                    self.assertEqual(plano_.count('--desfazer-antes ' + meu), plano_.count('--verificar --desfazer-antes ' + TF + ' --desfazer-antes ' + meu))
                 cadeias += plano_.count(f'--desfazer-antes {meu} --desfazer-antes {LT}')
         self.assertGreater(cadeias, 40)
         tarefas = ler('.github/workflows/pt-tarefas-qa.yml')
         exame = ler('.github/workflows/pt-exame-laboratorio-qa.yml')
-        proprio = f'python scripts/aplicar_trocas.py scripts/exame_provas_oficial_20261112.json --manifesto {meu} --verificar\n'
+        # 12/11/2026: as duas tarefas do M3 mais fáceis de fazer (tarefas_faceis_m3_20261112) passam a camada mais recente, por cima das provas em cartões com os documentos oficiais; desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
+        proprio = f'python scripts/aplicar_trocas.py scripts/exame_provas_oficial_20261112.json --manifesto {meu} --verificar --desfazer-antes {TF}\n'
         self.assertIn(proprio, tarefas)
         self.assertIn(proprio, exame)
-        self.assertIn(f'python scripts/aplicar_trocas.py scripts/exame_ligacao_treinos_20261112.json --manifesto {LT} --verificar --desfazer-antes {meu}\n', tarefas)
-        self.assertIn(f'python scripts/aplicar_trocas.py scripts/cuidado_exame_20261112.json --manifesto {EX} --verificar --desfazer-antes {meu} --desfazer-antes {LT}\n', tarefas)
+        # 12/11/2026: as duas tarefas do M3 mais fáceis de fazer (tarefas_faceis_m3_20261112) passam a camada mais recente, por cima das provas em cartões com os documentos oficiais; desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
+        self.assertIn(f'python scripts/aplicar_trocas.py scripts/exame_ligacao_treinos_20261112.json --manifesto {LT} --verificar --desfazer-antes {TF} --desfazer-antes {meu}\n', tarefas)
+        # 12/11/2026: as duas tarefas do M3 mais fáceis de fazer (tarefas_faceis_m3_20261112) passam a camada mais recente, por cima das provas em cartões com os documentos oficiais; desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
+        self.assertIn(f'python scripts/aplicar_trocas.py scripts/cuidado_exame_20261112.json --manifesto {EX} --verificar --desfazer-antes {TF} --desfazer-antes {meu} --desfazer-antes {LT}\n', tarefas)
         self.assertIn("python -m unittest discover -s tests -p 'test_exame_provas_oficial.py' -v", tarefas)
         # No fluxo do Exame, o teste corre com os outros do exame, e o de navegador a seguir ao da ligação «Treinos».
         self.assertIn("python -m unittest discover -s tests -p 'test_exame*.py' -v", exame)

@@ -179,8 +179,17 @@ class Aquecimentos(unittest.TestCase):
             tarefa = (ROOT / 'tarefas' / slug / 'index.html').read_text('utf-8')
             with self.subTest(tarefa=slug):
                 header = tarefa.split('<header>', 1)[1].split('</header>', 1)[0]
-                self.assertIn('<p class="task-aquecer"><a href="aquecimento/">', header)
-                self.assertLess(header.index('task-aquecer'), header.index('id="produzir"'))
+                # 12/11/2026: nas duas tarefas do M3 (molde «mais fácil de fazer», camada tarefas_faceis_m3_20261112), o aquecimento é o
+                # passo 1 de «O que vais fazer» e leva a única ligação da página (decisão do docente): está no primeiro cartão, antes
+                # da primeira pergunta, e não se repete. Nas outras tarefas, a ligação do enunciado, como estava.
+                if slug in ('m3-u1', 'm3-u2'):
+                    self.assertIn('<ol class="tf-fazer"><li>Faz o aquecimento (10\xa0minutos).<span class="task-aquecer tf-abrir"><a href="aquecimento/">', header)
+                    self.assertEqual(tarefa.count('<a href="aquecimento/">'), 1)
+                    self.assertNotIn('id="produzir"', header)
+                    self.assertLess(tarefa.index('task-aquecer'), tarefa.index('id="produzir"'))
+                else:
+                    self.assertIn('<p class="task-aquecer"><a href="aquecimento/">', header)
+                    self.assertLess(header.index('task-aquecer'), header.index('id="produzir"'))
                 ids = [a.get('id') for a in items]
                 a, t = ids.index(f'aquecimento-unidade-{n}'), ids.index(f'tarefa-unidade-{n}')
                 self.assertEqual(a + 1, t)

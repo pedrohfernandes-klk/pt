@@ -23,7 +23,8 @@ espaço que não quebra (U+00A0). As páginas sem estas chaves saem iguais, byte
 parágrafo vazio que sobra no fim («<p></p>») sai. As páginas sem listas no fim de um tema saem iguais, byte a byte.
 08/11/2026: decisão 152, M6: com «nao_partir_grelha», a ligação à grelha («Grelha /20: como é avaliado…») leva espaço que não
 quebra (U+00A0) entre «Grelha» e «/20». As páginas sem a chave saem iguais, byte a byte.
-12/11/2026: PILOTO por aprovar pelo docente (m3-u1): com a chave opcional «facil», a página sai do molde «mais fácil de fazer»
+12/11/2026: molde «mais fácil de fazer» (piloto na m3-u1, aprovado pelo docente a 12/11/2026; a seguir, o M3 inteiro, com a m3-u2;
+camada tarefas_faceis_m3_20261112): com a chave opcional «facil», a página sai do molde «mais fácil de fazer»
 (scripts/tarefa_facil.py: os textos para análise completos junto de cada pergunta, um pedido por alínea, o que se entrega à vista,
 verificação em perguntas de sim ou não). A tarefa é a mesma. As páginas sem a chave saem iguais, byte a byte.
 Uso: python3 scripts/tarefas_escolha.py [--saida PASTA] [slug ...]
@@ -178,7 +179,7 @@ def tarefa(d, com_grelha, raiz=ROOT):
     # 06/11/2026: decisão 152. «nao_partir»: os números do molde com espaço que não quebra (só nas tarefas que o pedem).
     sep = '\xa0' if d.get('nao_partir') else ' '
     if 'facil' in d:
-        # 12/11/2026: piloto do molde «mais fácil de fazer» (só as tarefas com a chave «facil»).
+        # 12/11/2026: molde «mais fácil de fazer» (só as tarefas com a chave «facil»).
         if str(Path(__file__).resolve().parent) not in sys.path:
             sys.path.insert(0, str(Path(__file__).resolve().parent))
         import tarefa_facil

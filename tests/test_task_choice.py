@@ -36,6 +36,22 @@ WARM_LESSONS.update({'m3': ('licao-m3-f02', 'licao-m3-f03', 'licao-m3-f04', 'lic
 WARM_LESSONS.update({m: tuple(p.name for p in sorted((ROOT/m).glob('licao-*'))) for m in ('m8','m9')})
 
 
+# 12/11/2026: as duas tarefas do M3 saem do molde «mais fácil de fazer» (camada tarefas_faceis_m3_20261112, no topo da pilha). O
+# contrato deste ficheiro é o do molde de 28/10 (aquecimento, núcleo comum e dois temas, «Relembrar», dossiê no fim): nessas duas
+# tarefas confere-se, com as mesmas exigências, na página como estava por baixo da camada (desfeita pelo manifesto, com contagem
+# estrita). A página nova tem o seu contrato, mais apertado, em tests/test_tarefas_faceis_m3.py: os mesmos temas, totais e critérios,
+# os factos do dossiê com fonte e ligação que existe, as citações e os números de cada facto na lição para onde aponta, os nomes
+# das secções tal como estão nas lições ligadas, uma só pergunta opcional com três opções e os dois relógios.
+sys.path.insert(0, str(ROOT / 'tests'))
+from auditoria_20261028 import undo_tarefas_faceis_m3_1112  # noqa: E402
+FACEIS = ('m3-u1', 'm3-u2')
+
+
+def molde_de_2810(path):
+    """A página da tarefa no molde de 28/10: nas duas tarefas do M3, com a camada do molde novo desfeita; nas outras, a da árvore."""
+    return undo_tarefas_faceis_m3_1112(path, Path(path).read_text('utf-8'))
+
+
 def flat(path):
     """Texto de uma página do sítio, sem marcas nem entidades, com os espaços juntos."""
     source = Path(path).read_text('utf-8')
@@ -80,7 +96,9 @@ class ChoiceTasks(unittest.TestCase):
 
     def test_warmup_core_and_two_themes(self):
         for slug in CHOICE:
-            source = (ROOT / 'tarefas' / slug / 'index.html').read_text('utf-8'); p = Page(source)
+            # 12/11/2026: nas duas tarefas do M3, a página no molde de 28/10 (ver molde_de_2810); a exigência é a mesma.
+            source = molde_de_2810(ROOT / 'tarefas' / slug / 'index.html'); p = Page(source)
+            self.assertEqual(source != (ROOT / 'tarefas' / slug / 'index.html').read_text('utf-8'), slug in FACEIS)
             with self.subTest(task=slug):
                 self.assertIn('data-task-compact data-task-choice', source)
                 self.assertEqual([t for t, _ in p.root], ['nav', 'section', 'header', 'section', 'section'])
@@ -142,7 +160,8 @@ class ChoiceTasks(unittest.TestCase):
 
     def test_dossier_facts_carry_sources_and_links_exist(self):
         for slug in CHOICE:
-            path = ROOT / 'tarefas' / slug / 'index.html'; source = path.read_text('utf-8'); p = Page(source)
+            # 12/11/2026: nas duas tarefas do M3, a página no molde de 28/10 (ver molde_de_2810); a exigência é a mesma.
+            path = ROOT / 'tarefas' / slug / 'index.html'; source = molde_de_2810(path); p = Page(source)
             with self.subTest(task=slug):
                 facts = re.findall(r'<section class="task-dossier".*?</section>', source, re.S)[0]
                 self.assertGreaterEqual(facts.count('<li>'), 3)
@@ -173,7 +192,8 @@ class ChoiceTasks(unittest.TestCase):
         # 28/10/2026: cada facto do dossiê está escrito na lição para onde aponta. Confere-se cada citação
         # entre «» e cada número (anos, quantidades) no texto da página ligada pela fonte do facto.
         for slug in CHOICE:
-            path = ROOT / 'tarefas' / slug / 'index.html'; source = path.read_text('utf-8')
+            # 12/11/2026: nas duas tarefas do M3, a página no molde de 28/10 (ver molde_de_2810); a exigência é a mesma.
+            path = ROOT / 'tarefas' / slug / 'index.html'; source = molde_de_2810(path)
             dossier = re.findall(r'<section class="task-dossier".*?</section>', source, re.S)[0]
             facts = re.findall(r'<li>(.*?) <a class="task-fonte" href="([^"]+)"', dossier)
             self.assertEqual(len(facts), dossier.count('<li>'))
@@ -203,7 +223,8 @@ class ChoiceTasks(unittest.TestCase):
         # lição ligada (aspas interiores “ ” = « »). «Para ir mais longe» é o botão do motor das lições.
         engine = flat(ROOT / 'assets/pt-lessons/jogo.js')
         for slug in CHOICE:
-            path = ROOT / 'tarefas' / slug / 'index.html'; source = path.read_text('utf-8')
+            # 12/11/2026: nas duas tarefas do M3, a página no molde de 28/10 (ver molde_de_2810); a exigência é a mesma.
+            path = ROOT / 'tarefas' / slug / 'index.html'; source = molde_de_2810(path)
             support = re.search(r'id="apoios".*?<ul>(.*?)</ul>', source, re.S)[1]
             items = re.findall(r'<li><a href="([^"]+)">(.*?)</a></li>', support)
             self.assertGreaterEqual(len(items), 3)

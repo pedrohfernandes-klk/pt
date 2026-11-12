@@ -109,8 +109,14 @@ def tarefas(browser, host):
             page.goto(f'{host}/tarefas/{slug}/', wait_until='networkidle')
             page.locator('[data-task-reader].task-reader-ready').wait_for()
             enunciado = page.locator('#produzir').evaluate('e=>+e.closest("[data-task-card]").dataset.taskCard')
-            ligacao = page.locator(f'[data-task-card="{enunciado}"] header .task-aquecer a[href="aquecimento/"]')
+            # 12/11/2026: nas duas tarefas do M3 (molde «mais fácil de fazer», camada tarefas_faceis_m3_20261112), o cabeçalho com a
+            # ligação está no primeiro cartão («Começar»), antes do cartão da primeira pergunta, e é a única ligação ao aquecimento.
+            facil = page.locator('main[data-task-facil]').count() == 1
+            assert facil == (slug in ('m3-u1', 'm3-u2')), slug
+            ligacao = page.locator(f'[data-task-card="{0 if facil else enunciado}"] header .task-aquecer a[href="aquecimento/"]')
             assert ligacao.count() == 1, slug
+            if facil:
+                assert page.locator('a[href="aquecimento/"]').count() == 1, slug
             # 30/10/2026: aquecimento em cartões (decisão do docente)
             # 30/10/2026: as tarefas do M2 também passam ao formato com o cartão «Aquecer» em cartões.
             # 31/10/2026: as seis tarefas novas usam o mesmo contrato de escolha.

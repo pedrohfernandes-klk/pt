@@ -126,8 +126,14 @@ def assert_task_page(page, before):
     count = (1 if cards_warm else 2) if compact else 4
     question_ids = (['1'] if cards_warm else ['aquecer', '1']) if choice else [str(i) for i in range(1, count + 1)]
     assert page.locator('[data-task-question]').count() == count
+    # 12/11/2026: as duas tarefas do M3 saem do molde «mais fácil de fazer» (camada tarefas_faceis_m3_20261112, main[data-task-facil]):
+    # seis cartões com nome em vez de quatro (Começar, Pergunta 1, Pergunta 2, Tema A ou B, Fechar e entregar, Rever a matéria); o
+    # aquecimento é o passo 1 do primeiro cartão e leva a única ligação da página; os temas têm o seu cartão. O resto do contrato é o
+    # mesmo, e o que é só do molde novo confere-se em tests/browser_tarefas_faceis_m3.py.
+    facil = page.locator('main[data-task-facil]').count() == 1
+    assert facil == (slug in ('m3-u1', 'm3-u2')) or not slug, slug
     if choice:
-        assert page.locator('[data-task-card]').count() == 4
+        assert page.locator('[data-task-card]').count() == (6 if facil else 4)
         assert page.locator('[data-task-card="0"] #aquecer').count() == 1
         assert page.locator('[data-task-card="1"] #produzir').count() == 1
         assert page.locator('[data-task-theme]').count() == 2
@@ -136,18 +142,19 @@ def assert_task_page(page, before):
         if cards_warm:
             # 29/10/2026: o cartão «Aquecer» e o enunciado levam a ligação em destaque à página dos cartões.
             assert page.locator('[data-task-card="0"] .task-aquecer a[href="aquecimento/"]').count() == 1
-            assert page.locator('[data-task-card="1"] .task-aquecer a[href="aquecimento/"]').count() == 1
+            assert page.locator('[data-task-card="1"] .task-aquecer a[href="aquecimento/"]').count() == (0 if facil else 1)
+            assert page.locator('.task-aquecer a[href="aquecimento/"]').count() == (1 if facil else 2)
             assert page.locator('[data-relogio][data-chave$=":aquecimento"][data-max="10"]').count() == 1
         else:
             warm = page.locator('[data-task-question="aquecer"]')
             for letter in 'ABC':
                 assert warm.get_by_role('button', name=re.compile('^' + letter + r'\s?: \S')).count() == 1, letter
-        open_task_card(page, '#produzir')
+        open_task_card(page, '#tema' if facil else '#produzir')
         for letter in 'AB':
             assert page.get_by_role('heading', name=re.compile('^Tema ' + letter + ' ')).count() == 1, letter
         open_task_card(page, '[data-task-card="0"]')
     if compact:
-        assert page.locator('[data-task-card]').count() == (4 if choice else 3)
+        assert page.locator('[data-task-card]').count() == (6 if facil else 4 if choice else 3)
         assert page.locator('.task-clock').count() == 0
         assert 'Tarefa individual' in page.locator('.task-kicker').first.text_content()
         assert not page.locator('[data-task-optional-preparation]').evaluate('e=>e.open')
@@ -158,7 +165,7 @@ def assert_task_page(page, before):
         assert page.locator('.task-clock b').all_text_contents() == ['10\xa0min', '10\xa0min', '60\xa0min', '10\xa0min']
     text = page.locator('main.task-page').text_content()
     assert ('consulta' if compact else 'durante toda a tarefa') in text.lower()
-    assert 'duas linhas' in text and ('síntese' in text.lower() or 'Fecha o trabalho' in text)
+    assert 'duas linhas' in text and ('síntese' in text.lower() or 'Fecha o trabalho' in text or (facil and 'Duas linhas finais' in page.locator('#entregar').text_content()))
     assert 'Teams' in page.locator('#entregar').text_content()
     # Next/previous and the free index work without answering anything.
     page.locator('[data-task-reader-next]').focus(); page.locator('[data-task-reader-next]').press('Enter')
@@ -258,12 +265,25 @@ def assert_reader_navigation(page):
     assert page.evaluate('document.documentElement.scrollWidth <= innerWidth + 3')
     page.evaluate('window.dispatchEvent(new Event("beforeprint"))')
     page.emulate_media(media='print')
-    assert page.locator('[data-task-card]:visible').count() == page.locator('[data-task-card]').count()
+    # 12/11/2026: no molde «mais fácil de fazer» (as duas tarefas do M3, camada tarefas_faceis_m3_20261112), em papel sai só o que é
+    # preciso para fazer a tarefa: saem todos os cartões menos o último, «Rever a matéria» (o que tem #apoios). Nos outros, todos.
+    if page.locator('main[data-task-facil]').count():
+        assert page.locator('[data-task-card]:visible').count() == page.locator('[data-task-card]').count() - 1 == 5
+        assert not page.locator('#apoios').is_visible()
+        assert page.locator('[data-task-card]:not(:visible) #apoios').count() == 1
+    else:
+        assert page.locator('[data-task-card]:visible').count() == page.locator('[data-task-card]').count()
     # 28/10/2026 (revisão do PR #122): o aquecimento faz-se em papel; impressa, a máquina 02 mostra a pergunta e as
     # três passagens. Não saem a explicação da escolha nem o estado das respostas exploradas.
     if page.locator('main[data-task-choice]').count() and page.locator(WARM_CARDS).count():
         # 29/10/2026: com o aquecimento em cartões, o papel leva o cartão «Aquecer» sem a ligação (não se abre no papel).
-        assert page.locator('#aquecer').is_visible() and not page.locator('#aquecer .task-aquecer').is_visible()
+        # 12/11/2026: no molde «mais fácil de fazer» (as duas tarefas do M3), o papel leva o passo «Faz o aquecimento» na lista do
+        # primeiro cartão, sem a ligação nem o relógio (em papel sai só o que é preciso para fazer a tarefa).
+        if page.locator('main[data-task-facil]').count():
+            assert page.locator('.tf-fazer > li').first.is_visible() and 'Faz o aquecimento' in page.locator('.tf-fazer > li').first.inner_text()
+            assert not page.locator('.task-aquecer').is_visible() and not page.locator('#aquecer').is_visible()
+        else:
+            assert page.locator('#aquecer').is_visible() and not page.locator('#aquecer .task-aquecer').is_visible()
         assert not page.locator('[data-task-feedback]:visible').count()
         assert not page.locator('[data-task-status]:visible').count()
     elif page.locator('main[data-task-choice]').count():
@@ -361,7 +381,13 @@ def fallback_task_pages(browser, host):
             # 29/10/2026: com o aquecimento em cartões, não há pergunta de aquecimento, e a ligação fica à vista.
             cards_warm = page.locator(WARM_CARDS).count() == 1
             if cards_warm:
-                assert page.locator('#aquecer .task-aquecer a[href="aquecimento/"]').is_visible()
+                # 12/11/2026: no molde «mais fácil de fazer» (as duas tarefas do M3), a ligação fica à vista no passo 1 de «O que vais
+                # fazer», logo antes do relógio do aquecimento (a única ligação da página); nas outras, dentro do cartão «Aquecer».
+                if page.locator('main[data-task-facil]').count():
+                    assert page.locator('header .tf-fazer > li:first-child .task-aquecer a[href="aquecimento/"]').is_visible()
+                    assert page.locator('#aquecer').is_visible() and page.locator('a[href="aquecimento/"]').count() == 1
+                else:
+                    assert page.locator('#aquecer .task-aquecer a[href="aquecimento/"]').is_visible()
             if compact:
                 # 28/10/2026: no formato com escolha, a pergunta do aquecimento está sempre à vista.
                 assert page.locator('[data-task-question]:visible').count() == (1 if choice and not cards_warm else 0)
