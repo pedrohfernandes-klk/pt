@@ -185,7 +185,7 @@
     ]
    ],
    "notas": [
-    "Nos 10 minutos de leitura, lê as duas perguntas e os passos dos dois temas. Os textos e os exemplos são para consultares enquanto escreves.",
+    "Nos 10 minutos de leitura, lê as duas perguntas e os passos dos dois temas. Os textos<span class=\"tf-so-ecra\"> e os exemplos</span> são para consultares enquanto escreves.",
     "Não contam para as palavras: os versos citados ou copiados, as divisões em sílabas e as duas linhas finais."
    ]
   },
@@ -496,7 +496,7 @@
    {
     "titulo": "Quem é celebrado e quem fica de fora?",
     "meta": "Orientação: cerca de 60 palavras.",
-    "relogio": "Começa este relógio depois da leitura. Vale para as duas perguntas e para o tema.",
+    "relogio": "Começa este relógio depois da leitura.",
     "textos": [
      "texto-1"
     ],
@@ -504,9 +504,9 @@
      "id": "kit",
      "titulo": "Onde está o texto: o <i>Kit</i> de Patrícia Lino",
      "frases": [
-      "O <i>Kit</i> tem direitos de autor. Por isso não está copiado aqui.",
-      "Lê os excertos no livro ou na cópia da aula."
+      "O <i>Kit</i> tem direitos de autor. Por isso não está copiado aqui."
      ],
+     "ordem": "Lê os excertos no livro ou na cópia da aula.",
      "nomes_titulo": "Os seis objetos:",
      "nomes": [
       "Frasquinho de Mar Português;",
@@ -577,7 +577,7 @@
     "barra": "Nos textos, uma barra ao lado marca esses versos.",
     "para_cada": "Para cada verso, faz isto:",
     "alineas": [
-     "Cita o verso.",
+     "Cita o verso, entre aspas.",
      "Identifica um recurso.",
      "Explica o que esse recurso mostra da amada.",
      "Divide o verso em sílabas métricas.",
@@ -585,9 +585,8 @@
     ],
     "ajudas": [
      "Um recurso pode mostrar como a amada é vista, onde está ou o que a voz lhe diz.",
-     "Ao dividir, marca a última sílaba tónica."
+     "Divide assim (outro verso): Não / há / mal / que / lhe / não / ve(nha). Para na última sílaba tónica: sete sílabas, redondilha maior."
     ],
-    "citar": "Copia o verso letra a letra. Põe-no entre aspas: «…».",
     "exemplos": [
      {
       "titulo": "Outro poema, «Perdigão perdeu a pena»: citar, identificar e explicar",
@@ -601,13 +600,15 @@
      {
       "de": "exemplos",
       "n": 0,
+      "desde": 1,
       "ate": 2
      }
     ]
    }
   ],
   "temas_titulo": "Escolhe um tema: A ou B",
-  "temas_nota": "Faz só um tema. Orientação: 80 a 120 palavras.",
+  "temas_nota": "Orientação: 80 a 120 palavras.",
+  "temas_topo": "Escreve a letra do teu tema (A ou B) no topo.",
   "temas": [
    {
     "letra": "A",
@@ -642,6 +643,10 @@
         "Vem o autocarro das sete, / e ninguém o vê chegar.",
         "Traz o tejadilho cinza, / as portas cor de limão, / demora mais do que um século / a subir o quarteirão; / e ninguém o vê chegar.",
         "Divisões: As / por / tas / cor / de / li / mão, sete; De / mo / ra / mais / do / que_um / sé(culo), sete.",
+        {
+         "al": "Passo 4, o verso citado:",
+         "t": "«Subiu a um alto lugar» (das voltas de «Perdigão perdeu a pena»)."
+        },
         "Imitei a forma de «Perdigão perdeu a pena»: um mote de dois versos, e o último a fechar a volta.",
         "A diferença: o perdigão cai por querer subir alto; o meu autocarro nem consegue subir a rua."
        ]
@@ -664,8 +669,8 @@
     },
     "passos": [
      "Descreve a imagem em duas frases.",
-     "Inclui dois factos do dossiê.",
-     "Escolhe um verso da Proposição (<a href=\"#texto-1\">Texto 1</a>) ou do Velho do Restelo (Texto 4).",
+     "Inclui dois factos do <a href=\"#dossie\">dossiê</a>.",
+     "Escolhe um verso da Proposição (<a href=\"#texto-1\">Texto 1</a>) ou do Velho do Restelo (<a href=\"#texto-4\">Texto 4</a>).",
      "Indica o canto e a estância desse verso.",
      "Explica a escolha.",
      "Diz o que a legenda não pode afirmar."
@@ -692,7 +697,6 @@
   ],
   "finais": {
    "titulo": "Duas linhas finais",
-   "texto": "Fecha com duas linhas.",
    "passos": [
     "Responde: o que passaste a perguntar quando um poema canta alguém?",
     "Aponta o verso que te ajudou."
@@ -717,7 +721,6 @@
   ],
   "entrega_titulo": "Entrega no Teams",
   "entrega": [
-   "Escreve a letra do teu tema (A ou B) no topo.",
    "Fotografa as respostas, o texto do teu tema e as duas linhas finais.",
    "Confirma que as fotografias mostram o trabalho completo.",
    "Entrega as fotografias na tarefa do Teams."

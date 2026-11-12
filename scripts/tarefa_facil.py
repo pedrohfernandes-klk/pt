@@ -16,6 +16,11 @@ dossie e dossie_titulo, opcional, e a ligação à grelha, igual à de scripts/g
 Ordem de cada cartão de pergunta: o relógio de produção (só na primeira), o pedido, os exemplos com outros casos e, por
 fim, os textos. Num tema, «figura» e «antes» ficam à vista antes dos passos; um passo {"t", "sub"} leva as suas condições.
 
+Quarta versão (achados de duas revisões): um modelo de divisão em sílabas à vista na pergunta 2; a letra do tema pede-se no
+cartão do tema («temas_topo»), antes da verificação; no tema B, «dossiê» e «Texto 4» são ligações que abrem o desdobrável,
+que fica antes do exemplo; em papel a fotografia sai larga, com uma só legenda (o crédito por extenso), e a nota da leitura
+não fala dos exemplos; a descrição da página diz «duas perguntas».
+
 Terceira versão (decisões do docente de 12/11/2026 e emagrecimento): «producao_minutos» dá a duração do relógio de produção;
 «grelha_nota» fica por baixo da ligação à grelha; os exemplos ficam junto do pedido, num desdobrável fechado no ecrã que
 não sai em papel (como as descrições do Kit); a verificação é uma só lista de perguntas de sim ou não; em papel sai só o que
@@ -29,13 +34,14 @@ import re
 from html import escape
 
 LIGACAO = '<p class="task-grelha"><a href="grelha/">Grelha /20: como é avaliado e autoavaliação</a></p>\n'
-V_FACIL = '20261112-facil-3'
+V_FACIL = '20261112-facil-4'
 FOLHAS = ('<link rel="stylesheet" href="../../assets/info-i.css?v=20261105">'
           f'<link rel="stylesheet" href="../../assets/task-textos.css?v={V_FACIL}">'
           '<script defer src="../../assets/info-i.js?v=20261105"></script>')
 MAIN = '<main class="task-page task-choice-page" data-task-compact data-task-choice>'
 MAIN_FACIL = ('<main class="task-page task-choice-page" data-task-compact data-task-choice data-task-facil '
               'data-task-opening="Começar" data-task-index="nomes">')
+DESCRICAO = ('aquecimento, núcleo comum e um tema à escolha', 'aquecimento, duas perguntas e um tema à escolha')
 CURTO = 24  # até aqui, o texto sai inteiro numa página em papel (não se parte entre estrofes)
 IMPRIMIR = ('<script>document.querySelectorAll("[data-task-print]").forEach(function(b){b.hidden=false;'
             'b.onclick=function(){window.print()}})</script>\n')
@@ -94,6 +100,7 @@ def onde_esta(o):
     À vista ficam só os nomes («nomes»); as descrições das lições («lista») ficam num desdobrável, que não sai em papel."""
     return (f'<section class="tt-onde" id="{o["id"]}" aria-labelledby="{o["id"]}-titulo"><h3 id="{o["id"]}-titulo">{o["titulo"]}</h3>'
             + ''.join(f'<p class="tf-p">{p}</p>' for p in o['frases'])
+            + (f'<p class="tf-p tf-ordem">{o["ordem"]}</p>' if o.get('ordem') else '')
             + f'<p class="tf-p"><b>{o["nomes_titulo"]}</b></p>' + lista(o['nomes'], 'ul', 'tt-nomes')
             + f'<details class="tf-so-tema tf-mais tf-so-ecra"><summary>{o["lista_titulo"]}</summary><div>{lista(o["lista"], "ul")}</div></details>'
             + f'<p class="tt-fonte">{o["fonte"]}</p></section>\n')
@@ -147,6 +154,9 @@ def pagina(d, com_grelha, head, foot, raiz):
     head = head.replace(MAIN, MAIN_FACIL).replace('<link rel="stylesheet" href="../../assets/appearance.css', FOLHAS + '<link rel="stylesheet" href="../../assets/appearance.css')
     assert head.count('assets/task-reader.js?v=') == 1, slug
     head = re.sub(r'assets/task-reader\.js\?v=[^"]+', 'assets/task-reader.js?v=' + V_FACIL, head)
+    # A descrição da página usa as palavras do enunciado novo («duas perguntas», não «núcleo comum»).
+    assert head.count(DESCRICAO[0]) == 1, slug
+    head = head.replace(*DESCRICAO)
 
     # Cartão 1, «Começar»: o que se faz (o passo 1 é o aquecimento e leva a única ligação), o relógio do aquecimento,
     # o que se entrega e o quadro.
@@ -174,8 +184,8 @@ def pagina(d, com_grelha, head, foot, raiz):
         exs = [x for x in p['exemplos']]
         for x in exs:
             if x.get('de') == 'exemplos':  # o exemplo resolvido que a página já tinha (chave antiga «exemplos»)
-                ps = re.findall(r'<p>.*?</p>', d['exemplos'][x['n']]['html'])  # «ate»: só os primeiros parágrafos (os casos resolvidos)
-                x['titulo'], x['html'] = d['exemplos'][x['n']]['titulo'], ''.join(ps[:x.get('ate')]).replace('<p>', '<p class="tf-p">')
+                ps = re.findall(r'<p>.*?</p>', d['exemplos'][x['n']]['html'])  # «desde» e «ate»: só alguns parágrafos (os casos resolvidos)
+                x['titulo'], x['html'] = d['exemplos'][x['n']]['titulo'], ''.join(ps[x.get('desde', 0):x.get('ate')]).replace('<p>', '<p class="tf-p">')
         perguntas += (f'<section class="task-section tf-pergunta" id="{ident}" data-task-card="Pergunta {k}" aria-labelledby="pergunta-{k}-titulo">'
                       f'<h2 id="pergunta-{k}-titulo"><span class="tf-n">Pergunta\xa0{k}</span> {p["titulo"]}</h2>\n'
                       f'<p class="tf-meta">{p["meta"]}</p>\n{relogio}'
@@ -185,14 +195,15 @@ def pagina(d, com_grelha, head, foot, raiz):
                       + (f'<p class="tf-p">{p["para_cada"]}</p>' if p.get('para_cada') else '')
                       + lista(p['alineas'], 'ol', 'tf-alineas')
                       + ''.join(f'<p class="tf-ajuda">{x}</p>' for x in p.get('ajudas', []))
-                      + f'<p class="tf-citar"><b>Como citar.</b> {p["citar"]}</p></div>\n'
+                      + (f'<p class="tf-citar"><b>Como citar.</b> {p["citar"]}</p>' if p.get('citar') else '') + '</div>\n'
                       + exemplos(exs, f['exemplo_titulo'])
                       + (f'<p class="tf-p tf-ler">{p["ler"]}</p>\n' if p.get('ler') else '')
                       + ''.join(bloco_texto(textos[i]) for i in p['textos'])
                       + (onde_esta(p['onde_esta']) if p.get('onde_esta') else '') + '</section>\n')
 
-    # Cartão «Tema A ou B»: a fotografia do tema (se houver), as remissões e os passos à vista; logo a seguir, o exemplo
-    # (desdobrável que não sai em papel) e o material que é só de um tema (desdobrável fechado no ecrã, aberto em papel).
+    # Cartão «Tema A ou B»: a fotografia do tema (se houver), as remissões e os passos à vista; logo a seguir, o material
+    # que é só de um tema (desdobrável fechado no ecrã, aberto em papel; as ligações dos passos abrem-no) e o exemplo
+    # (desdobrável que não sai em papel).
     temas = ''
     for t in f['temas']:
         m = t['material']
@@ -205,10 +216,11 @@ def pagina(d, com_grelha, head, foot, raiz):
                   + (figura(t['figura'], raiz) if t.get('figura') else '')
                   + ''.join(f'<p class="tf-p tf-antes">{x}</p>' for x in t.get('antes', []))
                   + f'{lista(t["passos"], "ol", "tf-passos")}'
-                  + exemplos(m.get('exemplos', []), f['exemplo_titulo'])
-                  + (f'<details class="tf-so-tema"><summary>{m["titulo"]}</summary><div>{dentro}</div></details>' if dentro else '') + '</article>')
+                  + (f'<details class="tf-so-tema"><summary>{m["titulo"]}</summary><div>{dentro}</div></details>' if dentro else '')
+                  + exemplos(m.get('exemplos', []), f['exemplo_titulo']) + '</article>')
     tema = (f'<section class="task-section tf-tema" id="tema" data-task-card="Tema A ou B" aria-labelledby="tema-titulo">'
-            f'<h2 id="tema-titulo">{f["temas_titulo"]}</h2><p class="tf-meta">{f["temas_nota"]}</p>\n'
+            f'<h2 id="tema-titulo">{f["temas_titulo"]}</h2><p class="tf-meta">{f["temas_nota"]}</p>'
+            + (f'<p class="tf-p tf-topo">{f["temas_topo"]}</p>' if f.get('temas_topo') else '') + '\n'
             f'<div class="task-themes">{temas}</div></section>\n')
 
     # Cartão «Fechar e entregar»: duas linhas finais, verificação (uma só lista de perguntas de sim ou não), entrega em passos.
@@ -216,7 +228,7 @@ def pagina(d, com_grelha, head, foot, raiz):
     grupos = ('<fieldset class="task-checklist" aria-labelledby="entregar-title">'
               + ''.join(f'<label><input type="checkbox"> <span>{x}</span></label>' for x in f['verificar']) + '</fieldset>')
     fechar = (f'<section class="task-section" id="entregar" data-task-card="Fechar e entregar" aria-labelledby="entregar-title">'
-              f'<h2 id="finais-titulo">{fi["titulo"]}</h2><p class="tf-p">{fi["texto"]}</p>{lista(fi["passos"], "ol", "tf-passos")}\n'
+              f'<h2 id="finais-titulo">{fi["titulo"]}</h2>' + (f'<p class="tf-p">{fi["texto"]}</p>' if fi.get('texto') else '') + f'{lista(fi["passos"], "ol", "tf-passos")}\n'
               f'<h2 id="entregar-title">{f["verificar_titulo"]}</h2><p class="tf-p" id="criterios">{f["verificar_texto"]}</p>\n{grupos}\n'
               f'<h2>{f["entrega_titulo"]}</h2>{lista(f["entrega"], "ol", "tf-passos")}</section>\n')
 
