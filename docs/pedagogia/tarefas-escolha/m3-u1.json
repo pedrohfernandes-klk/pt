@@ -125,21 +125,17 @@
  "facil": {
   "kicker": "Tarefa individual, 90 minutos",
   "fazer": [
-   "Faz o aquecimento: 10 minutos, com consulta.",
+   "Faz o aquecimento (10 minutos).",
    "Responde a duas perguntas.",
    "Escolhe um tema: escrever versos (A) ou uma legenda de exposição (B).",
    "Escreve duas linhas finais.",
    "Revê e entrega no Teams."
   ],
-  "modo": "Trabalhas à mão, com consulta.",
+  "modo": "Trabalhas à mão. O aquecimento e a tarefa são com consulta: podes usar as lições do site, o caderno e o dicionário.",
+  "producao_minutos": 55,
+  "grelha_nota": "A autoavaliação da grelha é só para ti: não se entrega.",
   "entregas": {
-   "intro": "Fotografias do teu trabalho em papel, na tarefa do Teams. As fotografias mostram:",
-   "itens": [
-    "a letra do teu tema (A ou B), no topo;",
-    "as respostas às perguntas 1 e 2;",
-    "o texto do teu tema;",
-    "as duas linhas finais."
-   ]
+   "intro": "Fotografias do teu trabalho em papel, na tarefa do Teams."
   },
   "quadro": {
    "titulo": "Tempo e tamanho",
@@ -151,17 +147,17 @@
    "linhas": [
     [
      "10 min",
-     "Aquecimento em cartões, com consulta",
+     "Aquecimento em cartões",
      ""
     ],
     [
-     "5 min",
+     "10 min",
      "Leitura do enunciado",
      ""
     ],
     [
      {
-      "t": "60 min",
+      "t": "55 min",
       "linhas": 3
      },
      "Pergunta 1",
@@ -189,9 +185,8 @@
     ]
    ],
    "notas": [
-    "Nos 5 minutos de leitura, lê as duas perguntas e os passos dos dois temas. Os textos e os exemplos são para consultares enquanto escreves.",
-    "O total é 200 a 240 palavras. Os números de cada parte são uma orientação.",
-    "As duas linhas finais e as divisões em sílabas não contam para as palavras."
+    "Nos 10 minutos de leitura, lê as duas perguntas e os passos dos dois temas. Os textos e os exemplos são para consultares enquanto escreves.",
+    "Não contam para as palavras: os versos citados ou copiados, as divisões em sílabas e as duas linhas finais."
    ]
   },
   "aquecer": {
@@ -365,8 +360,7 @@
     "origem": "m3/licao-m3-f05/index.html, linha 431, cartões 3, 8 (copiado letra a letra)",
     "escolher": {
      "de": 4,
-     "ate": 17,
-     "frase": "Escolhe o teu verso na parte com a barra: as voltas (versos 4 a 17)."
+     "ate": 17
     }
    },
    {
@@ -428,8 +422,7 @@
     "origem": "m3/licao-m3-f09/index.html, linha 431, cartões 3, 9 (copiado letra a letra)",
     "escolher": {
      "de": 3,
-     "ate": 14,
-     "frase": "Escolhe o teu verso na parte com a barra: do verso 3 ao verso 14."
+     "ate": 14
     }
    },
    {
@@ -503,8 +496,7 @@
    {
     "titulo": "Quem é celebrado e quem fica de fora?",
     "meta": "Orientação: cerca de 60 palavras.",
-    "relogio": "O relógio de produção começa depois da leitura. Vale para as duas perguntas e para o tema. Depois de começar, o tempo que falta aparece no cimo de todos os cartões.",
-    "ler": "Já leste este texto nas lições. Está aqui para consultares e citares.",
+    "relogio": "Começa este relógio depois da leitura. Vale para as duas perguntas e para o tema.",
     "textos": [
      "texto-1"
     ],
@@ -513,8 +505,7 @@
      "titulo": "Onde está o texto: o <i>Kit</i> de Patrícia Lino",
      "frases": [
       "O <i>Kit</i> tem direitos de autor. Por isso não está copiado aqui.",
-      "Lê os excertos no livro ou na cópia da aula.",
-      "Também podes rever os objetos na <a href=\"../../m3/licao-m3-f02/\">lição F02</a>, em «Para entender»."
+      "Lê os excertos no livro ou na cópia da aula."
      ],
      "nomes_titulo": "Os seis objetos:",
      "nomes": [
@@ -547,14 +538,12 @@
      "Escreve um juízo sobre a Proposição."
     ],
     "ajudas": [
-     "Um facto confirma-se. Um juízo discute-se.",
-     "O exemplo logo abaixo mostra as alíneas a), b), e) e f) com outro caso."
+     "Um facto confirma-se. Um juízo discute-se."
     ],
     "citar": "Copia as palavras exatas do texto. Põe-nas entre aspas: «…».",
     "exemplos": [
      {
-      "titulo": "Exemplo com outro caso: a etiqueta da pimenta",
-      "contexto": "Na lição F04, em «Em paralelo», a pimenta tem duas histórias: a história oficial e a que ficou por contar. Aqui, quem responde faz com uma etiqueta da pimenta o que tu fazes com a Proposição.",
+      "titulo": "Outro caso: uma etiqueta da pimenta (lição F04, «Em paralelo»)",
       "paragrafos": [
        {
         "al": "Alíneas a) e b), duas expressões citadas:",
@@ -574,8 +563,7 @@
    },
    {
     "titulo": "Duas imagens da amada.",
-    "meta": "Orientação: cerca de 60 palavras. As divisões em sílabas não contam.",
-    "ler": "Já leste estes textos nas lições. Estão aqui para consultares e citares.",
+    "meta": "Orientação: cerca de 60 palavras.",
     "textos": [
      "texto-2",
      "texto-3"
@@ -586,6 +574,7 @@
      "um verso do Texto 2, nas voltas (versos 4 a 17);",
      "outro verso do Texto 3, a partir do verso 3."
     ],
+    "barra": "Nos textos, uma barra ao lado marca esses versos.",
     "para_cada": "Para cada verso, faz isto:",
     "alineas": [
      "Cita o verso.",
@@ -596,12 +585,12 @@
     ],
     "ajudas": [
      "Um recurso pode mostrar como a amada é vista, onde está ou o que a voz lhe diz.",
-     "Há dois exemplos logo abaixo, com outros poemas. O primeiro mostra as alíneas a), b) e c). O segundo mostra as alíneas d) e e)."
+     "Ao dividir, marca a última sílaba tónica."
     ],
     "citar": "Copia o verso letra a letra. Põe-no entre aspas: «…».",
     "exemplos": [
      {
-      "titulo": "Exemplo com outro poema, «Perdigão perdeu a pena»: citar, identificar e explicar",
+      "titulo": "Outro poema, «Perdigão perdeu a pena»: citar, identificar e explicar",
       "paragrafos": [
        {
         "al": "Alíneas a), b) e c):",
@@ -611,7 +600,8 @@
      },
      {
       "de": "exemplos",
-      "n": 0
+      "n": 0,
+      "ate": 2
      }
     ]
    }
@@ -622,11 +612,9 @@
    {
     "letra": "A",
     "nome": "A medida velha, hoje",
-    "resumo": "Escreves versos.",
     "intro": "Imagina uma Leonor de hoje a caminho da escola.",
     "antes": [
-     "A Leonor de Camões está no <a href=\"#texto-2\">Texto 2</a>, na pergunta 2.",
-     "Lê os passos todos antes de escreveres."
+     "A Leonor de Camões está no <a href=\"#texto-2\">Texto 2</a>, na pergunta 2."
     ],
     "passos": [
      "Escolhe um verso de Camões para imitar.",
@@ -647,10 +635,9 @@
      "Indica uma diferença entre as duas Leonores (a tua e a de Camões)."
     ],
     "material": {
-     "titulo": "Só para o tema A: um exemplo com outro caso",
      "exemplos": [
       {
-       "titulo": "Exemplo com outra figura e outro modelo: um autocarro, à maneira de «Perdigão perdeu a pena»",
+       "titulo": "Outra figura e outro modelo: um autocarro, à maneira de «Perdigão perdeu a pena»",
        "paragrafos": [
         "Vem o autocarro das sete, / e ninguém o vê chegar.",
         "Traz o tejadilho cinza, / as portas cor de limão, / demora mais do que um século / a subir o quarteirão; / e ninguém o vê chegar.",
@@ -665,11 +652,7 @@
    {
     "letra": "B",
     "nome": "Pedra e verso",
-    "resumo": "Escreves uma legenda de exposição.",
     "intro": "Escreve uma legenda de exposição para a fotografia do túmulo de Camões.",
-    "antes": [
-     "O dossiê e o Texto 4 estão logo a seguir aos passos."
-    ],
     "figura": {
      "de": "m3/licao-m3-f04/index.html",
      "alt": "Túmulo de Luís de Camões, Mosteiro dos Jerónimos (fotografia de ProtoplasmaKid, 2019)",
@@ -688,17 +671,14 @@
      "Diz o que a legenda não pode afirmar."
     ],
     "material": {
-     "titulo": "Só para o tema B: o dossiê, o Texto 4 e um exemplo com outro caso",
+     "titulo": "Só para o tema B: o dossiê e o Texto 4",
      "dossie": true,
      "textos": [
       "texto-4"
      ],
-     "notas": [
-      "O Texto 1 (a Proposição) está na <a href=\"#texto-1\">pergunta 1</a>."
-     ],
      "exemplos": [
       {
-       "titulo": "Exemplo com outra imagem: o frontispício da primeira edição de <i>Os Lusíadas</i>",
+       "titulo": "Outra imagem: o frontispício da primeira edição de <i>Os Lusíadas</i>",
        "paragrafos": [
         "Uma página de rosto antiga, com o título ao centro, entre duas colunas torcidas, e uma ave de asas abertas no alto. Em baixo, a data, 1572.",
         "Factos: é a epopeia tal como saiu em 1572; a imagem está em domínio público e vem da Academia Brasileira de Letras.",
@@ -712,65 +692,28 @@
   ],
   "finais": {
    "titulo": "Duas linhas finais",
-   "texto": "Fecha com duas linhas. Não contam para as palavras.",
+   "texto": "Fecha com duas linhas.",
    "passos": [
     "Responde: o que passaste a perguntar quando um poema canta alguém?",
     "Aponta o verso que te ajudou."
    ]
   },
   "verificar_titulo": "Antes de entregar, verifica",
-  "verificar_texto": "Responde sim ou não a cada pergunta. Se for não, completa o teu trabalho.",
+  "verificar_texto": "Responde sim ou não. Se for não, completa o teu trabalho.",
   "verificar": [
-   {
-    "titulo": "Pergunta 1",
-    "itens": [
-     "Citei uma expressão sobre quem partiu e outra sobre quem lá vivia?",
-     "Expliquei o que um objeto do <i>Kit</i> mostra e a Proposição cala?",
-     "Escrevi um facto e um juízo sobre a Proposição?"
-    ]
-   },
-   {
-    "titulo": "Pergunta 2",
-    "itens": [
-     "Citei um verso das voltas do Texto 2 e um verso do Texto 3, a partir do verso 3?",
-     "Identifiquei um recurso em cada verso?",
-     "Expliquei o que cada recurso mostra da amada?",
-     "Dividi os dois versos em sílabas métricas e indiquei a medida?"
-    ]
-   },
-   {
-    "titulo": "Tema A",
-    "so": "Só se fizeste o tema A",
-    "itens": [
-     "Tenho um mote de dois versos e uma volta de cinco, em redondilha maior?",
-     "A volta termina com o último verso do mote?",
-     "Incluí cores e uma hipérbole?",
-     "Dividi dois dos meus versos em sílabas métricas?",
-     "Citei o verso de Camões que imitei e expliquei a imitação?",
-     "Indiquei uma diferença entre as duas Leonores?"
-    ]
-   },
-   {
-    "titulo": "Tema B",
-    "so": "Só se fizeste o tema B",
-    "itens": [
-     "Descrevi a imagem em duas frases?",
-     "Incluí dois factos do dossiê?",
-     "Escolhi um verso da Proposição ou do Velho do Restelo e indiquei canto e estância?",
-     "Expliquei a escolha?",
-     "Disse o que a legenda não pode afirmar?"
-    ]
-   },
-   {
-    "titulo": "O trabalho todo",
-    "itens": [
-     "As respostas ligam-se (não estão soltas)?",
-     "Tenho 200 a 240 palavras?",
-     "Revi a escrita?",
-     "Escrevi as duas linhas finais?",
-     "Escrevi a letra do meu tema (A ou B) no topo?"
-    ]
-   }
+   "Respondi às seis alíneas da pergunta 1?",
+   "Na pergunta 2, citei dois versos e expliquei um recurso em cada um?",
+   "Dividi os dois versos em sílabas métricas e indiquei a medida?",
+   "Fiz todos os passos do meu tema?",
+   "As respostas ligam-se (não estão soltas)?",
+   "Tenho 200 a 240 palavras?",
+   "Revi a escrita?",
+   "As duas linhas finais apontam um verso?",
+   "A letra do meu tema (A ou B) está no topo?"
+  ],
+  "exemplo_titulo": [
+   "Ver um exemplo com outro caso",
+   "Ver dois exemplos com outros casos"
   ],
   "entrega_titulo": "Entrega no Teams",
   "entrega": [

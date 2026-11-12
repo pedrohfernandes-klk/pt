@@ -38,7 +38,9 @@ main.task-page.task-choice-page[data-task-facil] :is(p,li,td,th,dd,figcaption,la
 [data-task-facil] .tf-alineas{list-style:lower-alpha;padding-left:1.7em}
 [data-task-facil] .tf-alineas>li::marker{font-weight:700}
 [data-task-facil] .tf-ajuda,[data-task-facil] .tf-citar{font-size:1rem;max-width:60ch;margin:8px 0;padding-top:8px;border-top:1px solid var(--cinza)}
-[data-task-facil] .tf-exemplo{margin:16px 0;padding:10px 16px;border-left:4px solid var(--cinza);background:var(--fundo)}
+[data-task-facil] .tf-exemplo{margin:10px 0;padding:10px 16px;border-left:4px solid var(--cinza);background:var(--fundo)}
+[data-task-facil] details.tf-exemplos{border-width:1px}
+[data-task-facil] .tf-grelha-nota{margin-top:-4px}
 [data-task-facil] .tf-exemplo h4{margin:0 0 6px;font:700 1rem/1.4 Arial,Helvetica,sans-serif}
 [data-task-facil] .tf-exemplo p{font-size:1rem;margin:6px 0}
 [data-task-facil] .tf-exemplo .tf-contexto{font-size:.94rem;color:var(--suave);max-width:60ch}
@@ -106,7 +108,6 @@ main.task-page.task-choice-page[data-task-facil] :is(p,li,td,th,dd,figcaption,la
 [data-task-facil] .task-section>h2:not(:first-child){margin-top:30px}
 [data-task-facil] .task-checklist{margin:12px 0}
 [data-task-facil] .task-checklist label{margin:2px 0}
-[data-task-facil] details.tf-so-tema .task-checklist legend{position:absolute;width:1px;height:1px;margin:-1px;overflow:hidden;clip:rect(0,0,0,0)}
 [data-task-facil] .tf-rever-lista{list-style:none;padding:0}
 [data-task-facil] .tf-rever-lista li{padding:8px 0;border-top:1px solid var(--cinza)}
 
@@ -131,45 +132,65 @@ main.task-page.task-choice-page[data-task-facil] :is(p,li,td,th,dd,figcaption,la
  [data-task-facil] .task-theme .tt-rotulo{margin-left:1.45rem}
 }
 
-/* Em papel: o enunciado com os textos, sem relógios nem ligações de apoio; os desdobráveis saem abertos. */
+/* Em papel sai só o que é preciso para fazer a tarefa: o primeiro cartão sem relógios, as perguntas com os seus textos, os dois
+   temas com o material, as duas linhas finais, a verificação e a entrega. Não saem os exemplos nem as descrições do Kit
+   (.tf-so-ecra). Não há páginas novas forçadas; nenhum poema se parte entre páginas. */
 @media print{
- [data-task-facil] .task-relogio,[data-task-facil] .tf-relogio-nota,[data-task-facil] .tf-aquecer,[data-task-facil] .tf-imprimir,[data-task-facil] .task-grelha,[data-task-facil] .tf-rever,[data-task-facil] [data-task-card="Rever a matéria"]{display:none!important}
+ [data-task-facil] .task-relogio,[data-task-facil] .tf-relogio-nota,[data-task-facil] .tf-aquecer,[data-task-facil] .tf-imprimir,[data-task-facil] .task-grelha,[data-task-facil] .tf-grelha-nota,[data-task-facil] .tf-rever,[data-task-facil] [data-task-card="Rever a matéria"],[data-task-facil] .tf-so-ecra{display:none!important}
  .task-reader [data-task-facil] .task-reader-card:has(>.tf-rever){display:none!important}
  [data-task-facil] details.tf-so-tema::details-content{content-visibility:visible;display:block}
  [data-task-facil] details.tf-so-tema>summary::before{display:none}
- [data-task-facil] details.tf-so-tema{border-width:1px}
+ [data-task-facil] details.tf-so-tema{border:0;border-top:1px solid #000}
+ [data-task-facil] :is(h2,h3,h4){break-inside:avoid}
+ [data-task-facil] .tf-meta{display:table}
  [data-task-facil] details.info-i>summary{display:none!important}
- main[data-task-facil]{font-size:11pt;line-height:1.45}
- [data-task-facil] li{margin-bottom:3pt}
- [data-task-facil] .task-checklist label{min-height:0;margin:3pt 0}
- [data-task-facil] .tt-texto,[data-task-facil] .tt-onde{margin:10pt 0;padding:8pt 10pt}
- [data-task-facil] .tt-estrofe{margin-bottom:8pt}
+ main[data-task-facil]{font-size:11pt;line-height:1.35}
+ .task-reader [data-task-facil] .task-reader-card,.task-reader [data-task-facil] .task-reader-card[hidden]{margin-bottom:8pt}
+ [data-task-facil] h1{font-size:18pt;margin:0 0 4pt}
+ [data-task-facil] .task-kicker{margin:0 0 2pt}
+ [data-task-facil] .tf-pergunta>h2,[data-task-facil] .tf-tema>h2,[data-task-facil] .task-section>h2{font-size:13pt;margin:6pt 0 4pt}
+ [data-task-facil] .tf-meta{margin:0 0 4pt;padding:1pt 6pt}
+ [data-task-facil] .tf-ajuda,[data-task-facil] .tf-citar{margin:3pt 0;padding-top:3pt}
+ [data-task-facil] .task-theme{padding:6pt 10pt}
+ [data-task-facil] .tf-dossie{margin:4pt 0;padding:4pt 10pt}
+ [data-task-facil] .tf-origem{font-size:8.5pt}
+ [data-task-facil] details.tf-so-tema{margin:6pt 0 2pt}
+ [data-task-facil] details.tf-so-tema>summary{min-height:0;padding:4pt 0}
+ [data-task-facil] details.tf-so-tema>div{padding:0;border-top:0}
+ [data-task-facil] .tt-gloss{font-size:9.5pt;line-height:1.3}
+ [data-task-facil] .tt-fonte{margin-top:4pt;font-size:8.5pt}
+ [data-task-facil] .tt-rotulo{margin:6pt 0 2pt 2.4rem}
+ [data-task-facil] li{margin-bottom:1pt}
+ [data-task-facil] :is(.tf-p,.tf-nota,.tf-ajuda,.tf-citar){max-width:80ch}
+ [data-task-facil] .task-theme>.tf-p,[data-task-facil] #criterios{break-after:avoid}
+ [data-task-facil] #entregar{break-inside:avoid}
+ [data-task-facil] :is(ol,ul){margin:4pt 0}
+ [data-task-facil] .tf-p{margin:4pt 0}
+ [data-task-facil] .task-checklist{margin:4pt 0}
+ [data-task-facil] .task-checklist label{min-height:0;margin:0;padding:2pt 0}
+ [data-task-facil] .tt-texto,[data-task-facil] .tt-onde{margin:6pt 0;padding:5pt 10pt}
+ [data-task-facil] .tt-estrofe,[data-task-facil] .task-theme .tt-estrofe{margin-bottom:5pt}
  [data-task-facil] .task-section{break-inside:auto}
- /* Cada pergunta e o cartão dos temas começam em página nova; o tema B também, para a fotografia ficar com os passos. */
- [data-task-facil] :is(.tf-pergunta,.tf-tema){break-before:page}
  [data-task-facil] .task-themes{display:block}
- [data-task-facil] .task-theme+.task-theme{break-before:page;margin-top:0}
- /* Um texto curto (até 24 versos) não se parte: sai inteiro, com o vocabulário, na mesma página. */
- [data-task-facil] .tt-texto.tt-curto{break-inside:avoid}
+ [data-task-facil] .task-theme+.task-theme{margin-top:10pt}
+ /* Nenhum texto se parte: sai inteiro, com o vocabulário, na mesma página. */
+ [data-task-facil] .tt-texto{break-inside:avoid}
  [data-task-facil] :is(p,li){orphans:2;widows:2}
- [data-task-facil] .tt-onde li,[data-task-facil] .tf-dossie li,[data-task-facil] .tf-passos>li,[data-task-facil] .tf-alineas>li{break-inside:avoid}
+ [data-task-facil] .tt-onde,[data-task-facil] .tf-dossie li,[data-task-facil] .tf-passos>li,[data-task-facil] .tf-alineas>li{break-inside:avoid}
  [data-task-facil] .tt-gloss ul{columns:3 11rem}
- [data-task-facil] .tf-contexto{color:#000}
- [data-task-facil] .task-part{margin:12pt 0 4pt}
- [data-task-facil] .tf-quadro :is(th,td){padding:3pt 6pt}
+ [data-task-facil] .task-part{margin:8pt 0 2pt}
+ [data-task-facil] .tf-quadro :is(th,td){padding:1pt 6pt}
+ [data-task-facil] .tf-quadro{margin:4pt 0;line-height:1.3}
  [data-task-facil] .tf-quadro{max-width:none}
  [data-task-facil] .tf-nota{margin:3pt 0}
- [data-task-facil] .tf-ler,[data-task-facil] .tt-onde .tf-p{break-after:avoid}
- [data-task-facil] .tf-pedido{margin:10pt 0 8pt;padding:8pt 10pt 4pt}
- [data-task-facil] .tf-exemplo{margin:8pt 0;padding:6pt 10pt}
- [data-task-facil] :is(.tf-pedido,.tf-exemplo,.task-checklist,.tf-fig,.tt-gloss,.tf-quadro){break-inside:avoid}
- [data-task-facil] :is(h2,h3,h4,summary,.tt-rotulo,.tt-escolher){break-after:avoid}
+ [data-task-facil] .tf-pedido{margin:6pt 0;padding:5pt 10pt 3pt}
+ [data-task-facil] :is(.tf-pedido,.task-checklist,.tf-fig,.tt-gloss,.tf-quadro){break-inside:avoid}
+ [data-task-facil] :is(h2,h3,h4,summary,.tt-rotulo,.tf-meta,.tf-antes,.tf-fig){break-after:avoid}
+ [data-task-facil] .task-section>h2:not(:first-child){margin-top:12pt}
  [data-task-facil] .task-themes{grid-template-columns:1fr}
- [data-task-facil] .tt-versos{font-size:11pt;line-height:1.4}
+ [data-task-facil] .tt-versos,[data-task-facil] .task-theme .tt-versos{font-size:11pt;line-height:1.3}
  [data-task-facil] .tt-num,[data-task-facil] .task-theme .tt-num{background:none;color:#000;border:1px solid #000}
- [data-task-facil] .task-theme .tt-texto{break-inside:avoid}
- [data-task-facil] .tf-exemplo{background:none}
- [data-task-facil] .tf-fig{max-width:9cm}
+ [data-task-facil] .tf-fig{max-width:7.5cm;margin:4pt 0}
  [data-task-facil] header{padding-top:0}
  [data-task-facil] a{text-decoration:none}
 }

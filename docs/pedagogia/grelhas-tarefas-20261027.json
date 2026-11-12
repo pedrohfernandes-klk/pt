@@ -379,6 +379,14 @@
    "modulo": "M3",
    "unidade": 1,
    "nao_partir": true,
+   "autoavaliacao_so_tua": true,
+   "trocas_aluno": [
+    ["Núcleo comum (duas respostas) e um tema à escolha (A ou B)", "Duas perguntas e um tema à escolha (A ou B)"],
+    ["Respostas articuladas", "Respostas ligadas"],
+    ["o tema no topo", "a letra do tema no topo"],
+    ["o tema escolhido está no topo", "a letra do teu tema está no topo"],
+    ["Não escrever no topo o tema escolhido (A ou B).", "Não escrever no topo a letra do teu tema (A ou B)."]
+   ],
    "titulo": "Quem canta, quem cala: as vozes de Camões",
    "produto": "Núcleo comum (duas respostas) e um tema à escolha (A ou B), à mão, entre 200 e 240 palavras, mais duas linhas finais que não contam para as palavras. O aquecimento em cartões não conta para a nota.",
    "nota": "Os exemplos foram escritos para esta grelha com outros casos do mesmo tipo (a pimenta, o perdigão, a redondilha de Bárbara, outro soneto, um autocarro, o frontispício da primeira edição da epopeia), nunca com as passagens nem com os factos da tarefa. As citações entre «» vêm das lições do módulo; as frases e os versos sem «» foram escritos para esta grelha, e os factos que usam vêm das lições F04, F13 e F16.",

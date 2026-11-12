@@ -16,6 +16,11 @@ dossie e dossie_titulo, opcional, e a ligação à grelha, igual à de scripts/g
 Ordem de cada cartão de pergunta: o relógio de produção (só na primeira), o pedido, os exemplos com outros casos e, por
 fim, os textos. Num tema, «figura» e «antes» ficam à vista antes dos passos; um passo {"t", "sub"} leva as suas condições.
 
+Terceira versão (decisões do docente de 12/11/2026 e emagrecimento): «producao_minutos» dá a duração do relógio de produção;
+«grelha_nota» fica por baixo da ligação à grelha; os exemplos ficam junto do pedido, num desdobrável fechado no ecrã que
+não sai em papel (como as descrições do Kit); a verificação é uma só lista de perguntas de sim ou não; em papel sai só o que
+é preciso para fazer a tarefa, sem páginas novas forçadas e sem partir um poema.
+
 Textos: «estrofes» é uma lista de {"rotulo": opcional, "versos": [...]}; os versos numeram-se de «numerar» em «numerar»,
 contando só versos (nunca rótulos como «Mote» e «Voltas»); «escolher» {"de", "ate", "frase"} marca com uma barra os versos
 de onde se pode escolher. A fotografia («figura») lê-se da lição que a publica (chave «de»), para ser a mesma imagem.
@@ -24,7 +29,7 @@ import re
 from html import escape
 
 LIGACAO = '<p class="task-grelha"><a href="grelha/">Grelha /20: como é avaliado e autoavaliação</a></p>\n'
-V_FACIL = '20261112-facil-2'
+V_FACIL = '20261112-facil-3'
 FOLHAS = ('<link rel="stylesheet" href="../../assets/info-i.css?v=20261105">'
           f'<link rel="stylesheet" href="../../assets/task-textos.css?v={V_FACIL}">'
           '<script defer src="../../assets/info-i.js?v=20261105"></script>')
@@ -75,7 +80,7 @@ def bloco_texto(t):
             versos.append(f'<span class="tt-v{marca}"><span class="tt-n">{n if n % passo == 0 else ""}</span>'
                           f'<span class="tt-l">{escape(v, quote=False)}</span></span>')
         partes.append('<p class="tt-estrofe">' + '\n'.join(versos) + '</p>')
-    frase = f'<p class="tt-escolher">{esc["frase"]}</p>' if esc else ''
+    frase = f'<p class="tt-escolher">{esc["frase"]}</p>' if esc and esc.get('frase') else ''
     gloss = ('<div class="tt-gloss"><p><b>Vocabulário</b></p><ul>'
              + ''.join(f'<li><b>{p}</b>: {s}</li>' for p, s in t['glossario']) + '</ul></div>') if t.get('glossario') else ''
     return (f'<section class="tt-texto{" tt-curto" if n <= CURTO else ""}" id="{t["id"]}" aria-labelledby="{t["id"]}-titulo">'
@@ -86,22 +91,25 @@ def bloco_texto(t):
 
 def onde_esta(o):
     """Texto protegido: não se copia; diz-se onde está e dá-se só o que as lições já publicam em citação curta.
-    À vista ficam só os nomes («nomes»); as descrições das lições («lista») ficam num desdobrável, aberto em papel."""
+    À vista ficam só os nomes («nomes»); as descrições das lições («lista») ficam num desdobrável, que não sai em papel."""
     return (f'<section class="tt-onde" id="{o["id"]}" aria-labelledby="{o["id"]}-titulo"><h3 id="{o["id"]}-titulo">{o["titulo"]}</h3>'
             + ''.join(f'<p class="tf-p">{p}</p>' for p in o['frases'])
             + f'<p class="tf-p"><b>{o["nomes_titulo"]}</b></p>' + lista(o['nomes'], 'ul', 'tt-nomes')
-            + f'<details class="tf-so-tema tf-mais"><summary>{o["lista_titulo"]}</summary><div>{lista(o["lista"], "ul")}</div></details>'
+            + f'<details class="tf-so-tema tf-mais tf-so-ecra"><summary>{o["lista_titulo"]}</summary><div>{lista(o["lista"], "ul")}</div></details>'
             + f'<p class="tt-fonte">{o["fonte"]}</p></section>\n')
 
 
-def exemplos(xs):
-    """Exemplos com outros casos. «contexto» diz de onde vem o caso; um parágrafo {"al": rótulo, "t": texto} diz a que
+def exemplos(xs, titulos):
+    """Exemplos com outros casos, num desdobrável fechado no ecrã («Ver um exemplo com outro caso»), que não sai em papel. «contexto» diz de onde vem o caso; um parágrafo {"al": rótulo, "t": texto} diz a que
     alínea ou passo corresponde (o rótulo fica fora do texto copiado)."""
     def par(p):
         return f'<p class="tf-p">{p}</p>' if isinstance(p, str) else f'<p class="tf-p"><span class="tf-al">{p["al"]}</span> {p["t"]}</p>'
-    return ''.join(f'<aside class="tf-exemplo"><h4>{x["titulo"]}</h4>'
+    if not xs:
+        return ''
+    return (f'<details class="tf-so-tema tf-exemplos tf-so-ecra"><summary>{titulos[min(len(xs), len(titulos)) - 1]}</summary><div>'
+            + ''.join(f'<aside class="tf-exemplo"><h4>{x["titulo"]}</h4>'
                    + (f'<p class="tf-contexto">{x["contexto"]}</p>' if x.get('contexto') else '')
-                   + (x.get('html') or ''.join(par(p) for p in x['paragrafos'])) + '</aside>\n' for x in xs)
+                   + (x.get('html') or ''.join(par(p) for p in x['paragrafos'])) + '</aside>\n' for x in xs) + '</div></details>\n')
 
 
 def figura(f, raiz):
@@ -150,9 +158,9 @@ def pagina(d, com_grelha, head, foot, raiz):
                f'<h2 class="task-part" id="aquecer-title">{f["aquecer"]["titulo"]}</h2>\n'
                f'<div class="task-relogio" data-relogio data-max="{a["minutos"]}" data-passo="1" data-rotulo="Aquecimento" data-chave="pt-relogio:tarefas/{slug}:aquecimento"></div>\n'
                f'</section>\n'
-               f'<h2 class="task-part">O que entregas</h2><p class="tf-p">{e["intro"]}</p>{lista(e["itens"], "ul")}\n'
+               f'<h2 class="task-part">O que entregas</h2><p class="tf-p">{e["intro"]}</p>{lista(e["itens"], "ul") if e.get("itens") else ""}\n'
                f'<h2 class="task-part">{f["quadro"]["titulo"]}</h2>{quadro(f["quadro"])}\n'
-               + (LIGACAO if com_grelha else '')
+               + ((LIGACAO + (f'<p class="tf-nota tf-grelha-nota">{f["grelha_nota"]}</p>\n' if f.get('grelha_nota') else '')) if com_grelha else '')
                + '<p class="tf-imprimir"><button type="button" data-task-print hidden>Imprimir o enunciado</button></p>\n'
                '</header>\n')
 
@@ -161,52 +169,52 @@ def pagina(d, com_grelha, head, foot, raiz):
     perguntas = ''
     for k, p in enumerate(f['perguntas'], 1):
         ident = 'produzir' if k == 1 else f'pergunta-{k}'
-        relogio = (f'<p class="tf-nota tf-relogio-nota">{p["relogio"]}</p><div class="task-relogio" data-relogio data-max="60" data-passo="5" '
+        relogio = (f'<p class="tf-nota tf-relogio-nota">{p["relogio"]}</p><div class="task-relogio" data-relogio data-max="{f.get("producao_minutos", 60)}" data-passo="5" '
                    f'data-rotulo="Produção em papel" data-chave="pt-relogio:tarefas/{slug}:producao"></div>\n') if k == 1 else ''
         exs = [x for x in p['exemplos']]
         for x in exs:
             if x.get('de') == 'exemplos':  # o exemplo resolvido que a página já tinha (chave antiga «exemplos»)
-                x['titulo'], x['html'] = d['exemplos'][x['n']]['titulo'], d['exemplos'][x['n']]['html'].replace('<p>', '<p class="tf-p">')
+                ps = re.findall(r'<p>.*?</p>', d['exemplos'][x['n']]['html'])  # «ate»: só os primeiros parágrafos (os casos resolvidos)
+                x['titulo'], x['html'] = d['exemplos'][x['n']]['titulo'], ''.join(ps[:x.get('ate')]).replace('<p>', '<p class="tf-p">')
         perguntas += (f'<section class="task-section tf-pergunta" id="{ident}" data-task-card="Pergunta {k}" aria-labelledby="pergunta-{k}-titulo">'
                       f'<h2 id="pergunta-{k}-titulo"><span class="tf-n">Pergunta\xa0{k}</span> {p["titulo"]}</h2>\n'
                       f'<p class="tf-meta">{p["meta"]}</p>\n{relogio}'
                       + f'<div class="tf-pedido"><h3>{p["pedido_titulo"]}</h3>'
                       + (f'<p class="tf-p">{p["antes"]}</p>' + lista(p['escolhas'], 'ul') if p.get('escolhas') else '')
+                      + (f'<p class="tf-p">{p["barra"]}</p>' if p.get('barra') else '')
                       + (f'<p class="tf-p">{p["para_cada"]}</p>' if p.get('para_cada') else '')
                       + lista(p['alineas'], 'ol', 'tf-alineas')
                       + ''.join(f'<p class="tf-ajuda">{x}</p>' for x in p.get('ajudas', []))
                       + f'<p class="tf-citar"><b>Como citar.</b> {p["citar"]}</p></div>\n'
-                      + exemplos(exs)
-                      + f'<p class="tf-p tf-ler">{p["ler"]}</p>\n'
+                      + exemplos(exs, f['exemplo_titulo'])
+                      + (f'<p class="tf-p tf-ler">{p["ler"]}</p>\n' if p.get('ler') else '')
                       + ''.join(bloco_texto(textos[i]) for i in p['textos'])
                       + (onde_esta(p['onde_esta']) if p.get('onde_esta') else '') + '</section>\n')
 
-    # Cartão «Tema A ou B»: a fotografia do tema (se houver), as remissões e os passos à vista; o resto do que é só de um
-    # tema fica num desdobrável (fechado no ecrã, aberto em papel).
+    # Cartão «Tema A ou B»: a fotografia do tema (se houver), as remissões e os passos à vista; logo a seguir, o exemplo
+    # (desdobrável que não sai em papel) e o material que é só de um tema (desdobrável fechado no ecrã, aberto em papel).
     temas = ''
     for t in f['temas']:
         m = t['material']
         dentro = ((dossie(d['dossie_titulo'], d['dossie']) if m.get('dossie') else '')
                   + ''.join(bloco_texto(textos[i]) for i in m.get('textos', []))
-                  + ''.join(f'<p class="tf-p">{x}</p>' for x in m.get('notas', []))
-                  + exemplos(m.get('exemplos', [])))
+                  + ''.join(f'<p class="tf-p">{x}</p>' for x in m.get('notas', [])))
         temas += (f'<article class="task-theme" data-task-theme="{t["letra"]}" aria-labelledby="tema-{t["letra"]}">'
                   f'<h3 id="tema-{t["letra"]}"><span><span class="sr-only">Tema </span>{t["letra"]}</span> {t["nome"]}</h3>'
-                  f'<p class="tf-resumo">{t["resumo"]}</p><p class="tf-p">{t["intro"]}</p>'
+                  + (f'<p class="tf-resumo">{t["resumo"]}</p>' if t.get('resumo') else '') + f'<p class="tf-p">{t["intro"]}</p>'
                   + (figura(t['figura'], raiz) if t.get('figura') else '')
                   + ''.join(f'<p class="tf-p tf-antes">{x}</p>' for x in t.get('antes', []))
                   + f'{lista(t["passos"], "ol", "tf-passos")}'
-                  f'<details class="tf-so-tema"><summary>{m["titulo"]}</summary><div>{dentro}</div></details></article>')
+                  + exemplos(m.get('exemplos', []), f['exemplo_titulo'])
+                  + (f'<details class="tf-so-tema"><summary>{m["titulo"]}</summary><div>{dentro}</div></details>' if dentro else '') + '</article>')
     tema = (f'<section class="task-section tf-tema" id="tema" data-task-card="Tema A ou B" aria-labelledby="tema-titulo">'
             f'<h2 id="tema-titulo">{f["temas_titulo"]}</h2><p class="tf-meta">{f["temas_nota"]}</p>\n'
             f'<div class="task-themes">{temas}</div></section>\n')
 
-    # Cartão «Fechar e entregar»: duas linhas finais, verificação em perguntas de sim ou não, entrega em passos.
-    fi, grupos = f['finais'], ''
-    for g in f['verificar']:
-        itens = ''.join(f'<label><input type="checkbox"> <span>{x}</span></label>' for x in g['itens'])
-        bloco = f'<fieldset class="task-checklist"><legend>{g["titulo"]}</legend>{itens}</fieldset>'
-        grupos += f'<details class="tf-so-tema"><summary>{g["so"]}</summary><div>{bloco}</div></details>' if g.get('so') else bloco
+    # Cartão «Fechar e entregar»: duas linhas finais, verificação (uma só lista de perguntas de sim ou não), entrega em passos.
+    fi = f['finais']
+    grupos = ('<fieldset class="task-checklist" aria-labelledby="entregar-title">'
+              + ''.join(f'<label><input type="checkbox"> <span>{x}</span></label>' for x in f['verificar']) + '</fieldset>')
     fechar = (f'<section class="task-section" id="entregar" data-task-card="Fechar e entregar" aria-labelledby="entregar-title">'
               f'<h2 id="finais-titulo">{fi["titulo"]}</h2><p class="tf-p">{fi["texto"]}</p>{lista(fi["passos"], "ol", "tf-passos")}\n'
               f'<h2 id="entregar-title">{f["verificar_titulo"]}</h2><p class="tf-p" id="criterios">{f["verificar_texto"]}</p>\n{grupos}\n'
