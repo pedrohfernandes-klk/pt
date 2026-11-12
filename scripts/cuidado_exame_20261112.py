@@ -13,7 +13,7 @@ aplica-se com scripts/aplicar_trocas.py e o manifesto fica em tests/fixtures/cui
 
   python3 scripts/cuidado_exame_20261112.py
   python3 scripts/aplicar_trocas.py scripts/cuidado_exame_20261112.json --manifesto tests/fixtures/cuidado-exame-edits-20261112.json \\
-      --base-commit e4b0e4c3fd8d2e970278ce326f0ac417c01d72ea --nota "…"
+      --base-commit e826be5a77fe57b9a1dde2b76bf8fea6b4ea6c35 --nota "…"
 
 Fica por cima da decisão 152 no M9 (cuidado_m9_20261112, no ramo do pedido #197, commit e4b0e4c3, com o main 89957690 já dentro),
 com a qual só partilha as sessões do Exame (assets/exame/sessoes.json).
@@ -70,6 +70,8 @@ tests/auditoria_20261028.py, scripts/desligar_sala.py e os geradores do desenho 
 (scripts/cartaz_indices_148_20261106.py), dos acertos dos índices (scripts/indices_acertos_20261107.py) e dos créditos atrás de
 um «i» (scripts/creditos_i_pt1_20261107.py). Esta camada não toca nas tarefas das unidades (a leitura histórica de
 scripts/tarefas_claras_historico.py fica como está).
+
+12/11/2026: o M9 foi publicado no main em e826be5a (#197), com a mesma árvore de e4b0e4c3; a base passa a ser esse commit do main, sem mudar resumos nem trocas.
 """
 import html
 import importlib.util

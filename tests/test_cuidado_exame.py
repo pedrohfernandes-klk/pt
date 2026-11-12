@@ -30,7 +30,8 @@ from provas_casos import provas  # noqa: E402
 from test_provas_cartoes import OFICIAL, sem_oficial, segmentos  # noqa: E402
 
 MANIFESTO_REL = 'tests/fixtures/cuidado-exame-edits-20261112.json'
-BASE_COMMIT = 'e4b0e4c3fd8d2e970278ce326f0ac417c01d72ea'
+# 12/11/2026: o M9 foi publicado no main em e826be5a (#197), com a mesma árvore de e4b0e4c3; a base passa a ser esse commit do main, sem mudar resumos nem trocas.
+BASE_COMMIT = 'e826be5a77fe57b9a1dde2b76bf8fea6b4ea6c35'
 N, WJ = '\xa0', '⁠'
 APP, SESSOES = 'assets/exame/app.js', 'assets/exame/sessoes.json'
 # Os achados confirmados (bordo/cidadania-v3/cuidado-152/exame-confirmados.json): 55, em 139 ficheiros lidos (1 A, 50 B e 4 C).
