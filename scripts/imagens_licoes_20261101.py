@@ -7,7 +7,8 @@ IMAGENS = {
   licenca='CC BY-SA 2.0', direitos='https://creativecommons.org/licenses/by-sa/2.0/',
   fonte='https://commons.wikimedia.org/wiki/File:Eug%C3%A9nio_de_Andrade.jpg',
   alt='Retrato pintado de Eugénio de Andrade, com pinceladas claras e escuras sobre o rosto.'),
- 'amaral': dict(autor='Mattias Blomgren', obra='Ana Luísa Amaral na Feira do Livro de Gotemburgo', data='27 de setembro de 2013',
+ # 12/11/2026: decisão 152 no M8 (achado 32, camada cuidado_m8_20261112): a data da fotografia não se parte (U+00A0; o espaço entre o mês e o «de» do ano fica), como na página.
+ 'amaral': dict(autor='Mattias Blomgren', obra='Ana Luísa Amaral na Feira do Livro de Gotemburgo', data='27\xa0de setembro de\xa02013',
   instituicao='Wikimedia Commons, publicação do fotógrafo.',
   licenca='CC BY-SA 3.0', direitos='https://creativecommons.org/licenses/by-sa/3.0/',
   fonte='https://commons.wikimedia.org/wiki/File:Ana_Lu%C3%ADsa_Amaral_at_G%C3%B6teborg_Book_Fair_2013_01.JPG',

@@ -1,0 +1,1086 @@
+{
+ "base_commit": "399a9ce37df64e2dc3d0b62856d85b1b3c00de99",
+ "_nota": "12/11/2026: decisão 152 do docente («cuidado em todas as lições»), módulo M8: dos 44 achados CONFIRMADOS da varredura do M8 (bordo/cidadania-v3/cuidado-152/m8-confirmados.json, refeita a 9/11 e conferida a 11/11 sobre o main 4bf4a053: 8 A, 30 B e 6 C), entram 36; ficam de fora, por decisão já tomada para todos os módulos, como do M1 ao M7, os 6 achados B dos diapositivos (20), das provas rápidas (43, 44 e 45), dos questionários (46) e da página «todos» (47), e os 2 achados B dos painéis da F03 e da F10 (38 e 39), que só tinham ocorrências no material do relâmpago (MATERIAL), que não muda; os 7 recusados (9, 10, 13, 16, 17, 19 e 29) não entram. São 8 achados A (tabelas onde há itens paralelos, como do M1 ao M7: class apoio-tabela, th scope, td data-label e os role; os pesos da avaliação no índice, no guia e no mapa do módulo, como no M5 e no M7, com a coluna do peso em 5,5 rem; as noções das caixas «Recorda» da F04, da F05 e da F08, com a frase final da F08 num parágrafo a seguir; os três termos do «O essencial» da F15; e os quatro valores aspetuais de «Fechou, fechava, foi fechando», em três colunas; cada página com tabela nova carrega assets/pt-lessons/apoios-tabelas.css antes da camada de aparência, na versão do M1), 22 de referências e números que não se partem entre linhas (B: U+00A0 nos espaços que a proposta final prende, com a palavra inteira e fora das cadeias maiores dos outros pares da página, e U+2060 logo a seguir ao traço de intervalo e ao hífen da sigla «M8-Fxx»; nas datas, o dia preso ao «de» e o ano ao «de», como no M5 e no M7) e 6 casos do mesmo tipo (C: as quatro peças e os três «o que não é» de «O texto de opinião, passo a passo» em duas listas; «Três antes de mim» em lista numerada no guia, como no M5 e no M7; os três passos da ajuda de «Apontar para trás, apontar para a frente» em lista numerada; o modelo de interpretação da F13 em lista numerada; as três formulações com letra da F15 em lista; e, no portefólio, os oito nomes de ficheiro que estavam em texto simples em <code>, com <wbr> a seguir a cada «_» e «td code{white-space:nowrap}» na página, como nos portefólios do M5 e do M7). Camada mais recente, por cima da decisão 152 no M7 (cuidado_m7_20261111, ramo do pedido #194, commit 399a9ce3, com o main a7a16f2d dentro), que não toca em nenhum ficheiro desta. Gerada por scripts/cuidado_m8_20261112.py e aplicada por scripts/aplicar_trocas.py: não se edita à mão. O texto visível fica igual, salvo a estrutura das tabelas e das listas, os espaços invisíveis e «Séc. XX», que passa a «século XX» no rótulo do guia (a proposta final, como o M5 fez na mesma linha do seu guia). A casca das lições (migalhas, «Estás em: Lição M8-Fxx», o título escondido e a sigla do rodapé) não muda aqui, ficheiro a ficheiro: muda no molde, como do M1 ao M7; nas outras páginas, as migalhas contam, como na proposta final, e o «3.º ano» fica preso nas migalhas e no cabeçalho. Ficam de fora os «alt» (e aria-label, href, title, content e data-titulo), o <title>, o título que o script do índice guarda (TIT), o texto dos desenhos (SVG), a «frase» dos cartões sublinhar, as «palavras» dos cartões frase e os «passos» dos cartões ordenar. As páginas geradas mudam também na origem e regeneram-se sem diferenças: as tarefas da M8-U1 e da M8-U2 (docs/pedagogia/tarefas-escolha/m8-u1.json e m8-u2.json, que estão nesta camada: «nao_partir», como do M1 ao M7, que também prende a meta descrição, e os achados B) e as lições geradas F13, F14, F15 e F16 (scripts/licoes_20261101.py e scripts/imagens_licoes_20261101.py, fora da camada, como no M5 e no M6; scripts/gerar_licoes_20261101.py liga a folha das tabelas na F15). O painel de projeção da F11 segue o enunciado do cartão que mudou (a lista e o seletor); o material do relâmpago segue a lição antes das camadas de cuidado, como do M1 ao M7. As cópias dos cartões no banco das provas rápidas do índice (var U) mudam como as lições de onde vêm.",
+ "files": {
+  "docs/pedagogia/tarefas-escolha/m8-u1.json": {
+   "base_sha256_lf": "56cb09c627a113d79a15f2ed94a00155287355cc53faeee3c50d70016d1a4162",
+   "after_sha256_lf": "0555f2720aa73d8dc86d06c2233f46e0223f50b51d2f9432ee34d5013c8df7e3",
+   "edits": [
+    {
+     "location": "Dados da tarefa: «nao_partir», os números do molde com espaço que não quebra",
+     "old": "\n \"unidade\": 1,\n ",
+     "new": "\n \"unidade\": 1,\n \"nao_partir\": true,\n ",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados tarefas-escolha/m8-u1.json: «60 minutos» que não se parte",
+     "old": "60 minutos",
+     "new": "60 minutos",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados tarefas-escolha/m8-u1.json: «10 minutos» que não se parte",
+     "old": "10 minutos",
+     "new": "10 minutos",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados tarefas-escolha/m8-u1.json: «n.º 0» que não se parte",
+     "old": "n.º 0",
+     "new": "n.º 0",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados tarefas-escolha/m8-u1.json: «pp. 14–15» que não se parte",
+     "old": "pp. 14–15",
+     "new": "pp. 14–⁠15",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados tarefas-escolha/m8-u1.json: «7 de agosto de 2023» que não se parte",
+     "old": "7 de agosto de 2023",
+     "new": "7 de agosto de 2023",
+     "occurrences": 1
+    }
+   ]
+  },
+  "docs/pedagogia/tarefas-escolha/m8-u2.json": {
+   "base_sha256_lf": "afb7fcc8eb12e27aefaaa76d4f1c859c3b24593038f66caa5104983907b2b6b3",
+   "after_sha256_lf": "a8386f24fb4d37e1c703192cf7935c6567b7e7118c6e8a2cc561d7196503fca5",
+   "edits": [
+    {
+     "location": "Dados da tarefa: «nao_partir», os números do molde com espaço que não quebra",
+     "old": "\n \"unidade\": 2,\n ",
+     "new": "\n \"unidade\": 2,\n \"nao_partir\": true,\n ",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados tarefas-escolha/m8-u2.json: «60 minutos» que não se parte",
+     "old": "60 minutos",
+     "new": "60 minutos",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados tarefas-escolha/m8-u2.json: «10 minutos» que não se parte",
+     "old": "10 minutos",
+     "new": "10 minutos",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m8/anafora-catafora/index.html": {
+   "base_sha256_lf": "f2e8f3839c7e85e894412a27aa42cb9e283fecde97f1cbcfa367eec45d3a2154",
+   "after_sha256_lf": "61e4d38a95ff1ce164fe4b6c1048cf8cffa141a80518d568d51606239d27345b",
+   "edits": [
+    {
+     "location": "m8/anafora-catafora, passo 1, «Ajuda: como confirmar a direção?»",
+     "old": "<p>1. Escolhe a expressão em análise. 2. Pergunta «a que se refere?». 3. Localiza a resposta: antes, retoma; depois, antecipação. Se houver dois referentes possíveis, explicita-os antes de decidir.</p>",
+     "new": "<ol><li>Escolhe a expressão em análise.</li><li>Pergunta «a que se refere?».</li><li>Localiza a resposta: antes, retoma; depois, antecipação.</li></ol><p>Se houver dois referentes possíveis, explicita-os antes de decidir.</p>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m8/gramatica-aspeto/index.html": {
+   "base_sha256_lf": "970b98a33a842d75e21d7cdb36066ccd617fb0c8c576c761ed6f3994e6625c19",
+   "after_sha256_lf": "ae2e0a8bc99a21d41cd32707dab0d09a9d5e451c9c4ac0119922aad3a6fdba46",
+   "edits": [
+    {
+     "location": "m8/gramatica-aspeto, passo 1, «A ideia»",
+     "old": "<p><b>Perfetivo:</b> «Ontem li o conto até ao fim» apresenta uma leitura concluída. <b>Imperfetivo:</b> «Eu lia o conto quando ouvi o carro» mostra a leitura em curso; não diz se parei ou se cheguei ao fim.</p><p><b>Habitual:</b> «Costumava reler o conto aos domingos» apresenta um costume. <b>Iterativo:</b> «Naquela revisão, reli o verso várias vezes» apresenta repetição num episódio, sem exigir contagem exata.</p>",
+     "new": "<table class=\\\"apoio-tabela\\\" role=\\\"table\\\"><thead role=\\\"rowgroup\\\"><tr role=\\\"row\\\"><th scope=\\\"col\\\" role=\\\"columnheader\\\">Valor</th><th scope=\\\"col\\\" role=\\\"columnheader\\\">Exemplo</th><th scope=\\\"col\\\" role=\\\"columnheader\\\">O que mostra</th></tr></thead><tbody role=\\\"rowgroup\\\"><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Perfetivo</th><td role=\\\"cell\\\" data-label=\\\"Exemplo\\\">«Ontem li o conto até ao fim»</td><td role=\\\"cell\\\" data-label=\\\"O que mostra\\\">apresenta uma leitura concluída</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Imperfetivo</th><td role=\\\"cell\\\" data-label=\\\"Exemplo\\\">«Eu lia o conto quando ouvi o carro»</td><td role=\\\"cell\\\" data-label=\\\"O que mostra\\\">mostra a leitura em curso; não diz se parei ou se cheguei ao fim</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Habitual</th><td role=\\\"cell\\\" data-label=\\\"Exemplo\\\">«Costumava reler o conto aos domingos»</td><td role=\\\"cell\\\" data-label=\\\"O que mostra\\\">apresenta um costume</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Iterativo</th><td role=\\\"cell\\\" data-label=\\\"Exemplo\\\">«Naquela revisão, reli o verso várias vezes»</td><td role=\\\"cell\\\" data-label=\\\"O que mostra\\\">apresenta repetição num episódio, sem exigir contagem exata</td></tr></tbody></table>",
+     "occurrences": 1
+    },
+    {
+     "location": "m8/gramatica-aspeto, cabeça: a folha das tabelas de apoio, antes da camada de aparência",
+     "old": "<link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-universal-1\">",
+     "new": "<link rel=\"stylesheet\" href=\"../../assets/pt-lessons/apoios-tabelas.css?v=20261106.1\"><link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-universal-1\">",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m8/guia-da-tarefa-m8/index.html": {
+   "base_sha256_lf": "96488a61c0bc6e567cb9811c08fd15d0b374ef1d07a93cb5fb0c34feec23f432",
+   "after_sha256_lf": "7058e80cac265b82b9a8e8d040227d1b3ad529a9ce1bf22b8346b142873e1ac8",
+   "edits": [
+    {
+     "location": "m8/guia-da-tarefa-m8, «Tarefas das unidades»: os pesos na avaliação",
+     "old": "<p class=\"avaliacao-tarefas\">Avaliação: tarefa da Unidade 1, 30 %; tarefa da Unidade 2, 30 %; provas rápidas, 10 %; prova escrita, 30 %. ",
+     "new": "<p>Avaliação:</p><table class=\"apoio-tabela\" role=\"table\"><thead role=\"rowgroup\"><tr role=\"row\"><th scope=\"col\" role=\"columnheader\" style=\"width:auto\">Elemento</th><th scope=\"col\" role=\"columnheader\" style=\"width:5.5rem\">Peso</th></tr></thead><tbody role=\"rowgroup\"><tr role=\"row\"><th scope=\"row\" role=\"rowheader\">Tarefa da Unidade 1</th><td role=\"cell\" data-label=\"Peso\">30 %</td></tr><tr role=\"row\"><th scope=\"row\" role=\"rowheader\">Tarefa da Unidade 2</th><td role=\"cell\" data-label=\"Peso\">30 %</td></tr><tr role=\"row\"><th scope=\"row\" role=\"rowheader\">Provas rápidas</th><td role=\"cell\" data-label=\"Peso\">10 %</td></tr><tr role=\"row\"><th scope=\"row\" role=\"rowheader\">Prova escrita</th><td role=\"cell\" data-label=\"Peso\">30 %</td></tr></tbody></table><p class=\"avaliacao-tarefas\">",
+     "occurrences": 1
+    },
+    {
+     "location": "m8/guia-da-tarefa-m8, «Três antes de mim» (div.regra)",
+     "old": "Antes de chamares o docente: 1) relê o enunciado; 2) vê a rubrica; 3) pergunta ao teu par de trabalho. Só depois levantas o braço.</div>",
+     "new": "Antes de chamares o docente:<ol><li>relê o enunciado;</li><li>vê a rubrica;</li><li>pergunta ao teu par de trabalho.</li></ol>Só depois levantas o braço.</div>",
+     "occurrences": 1
+    },
+    {
+     "location": "m8/guia-da-tarefa-m8, cabeça: a folha das tabelas de apoio, antes da camada de aparência",
+     "old": "<link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-universal-1\">",
+     "new": "<link rel=\"stylesheet\" href=\"../../assets/pt-lessons/apoios-tabelas.css?v=20261106.1\"><link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-universal-1\">",
+     "occurrences": 1
+    },
+    {
+     "location": "m8/guia-da-tarefa-m8: «Poesia e Conto do Séc. XX»",
+     "old": "Poesia e Conto do Séc. XX",
+     "new": "Poesia e Conto do século XX",
+     "occurrences": 1
+    },
+    {
+     "location": "m8/guia-da-tarefa-m8: «90 minutos» que não se parte",
+     "old": "90 minutos",
+     "new": "90 minutos",
+     "occurrences": 1
+    },
+    {
+     "location": "m8/guia-da-tarefa-m8: «30 %» que não se parte (com o contexto «30 %,»)",
+     "old": "30 %,",
+     "new": "30 %,",
+     "occurrences": 2
+    },
+    {
+     "location": "m8/guia-da-tarefa-m8: «10 minutos» que não se parte",
+     "old": "10 minutos",
+     "new": "10 minutos",
+     "occurrences": 1
+    },
+    {
+     "location": "m8/guia-da-tarefa-m8: «5 minutos» que não se parte",
+     "old": "5 minutos",
+     "new": "5 minutos",
+     "occurrences": 1
+    },
+    {
+     "location": "m8/guia-da-tarefa-m8: «10 min» que não se parte (com o contexto «10 min<»)",
+     "old": "10 min<",
+     "new": "10 min<",
+     "occurrences": 1
+    },
+    {
+     "location": "m8/guia-da-tarefa-m8: «5 min» que não se parte (com o contexto « 5 min<»)",
+     "old": " 5 min<",
+     "new": " 5 min<",
+     "occurrences": 1
+    },
+    {
+     "location": "m8/guia-da-tarefa-m8: «60 min» que não se parte",
+     "old": "60 min",
+     "new": "60 min",
+     "occurrences": 1
+    },
+    {
+     "location": "m8/guia-da-tarefa-m8: «15 min» que não se parte",
+     "old": "15 min",
+     "new": "15 min",
+     "occurrences": 1
+    },
+    {
+     "location": "m8/guia-da-tarefa-m8: «3.º ano» que não se parte",
+     "old": "3.º ano",
+     "new": "3.º ano",
+     "occurrences": 2
+    }
+   ]
+  },
+  "m8/index.html": {
+   "base_sha256_lf": "da65c157c5a21431f71b6fc85ee13d9a5b98ca455be225d072983b6b2e434736",
+   "after_sha256_lf": "f8dd4a98690ea3021fd69249d2439f302387cef64dd7d38d9d568ad53c5b5827",
+   "edits": [
+    {
+     "location": "m8, «Como se cumpre uma unidade»: os pesos na avaliação",
+     "old": "<p class=\"avaliacao-tarefas\">Pesos na avaliação: tarefa da Unidade 1, 30 %; tarefa da Unidade 2, 30 %; provas rápidas, 10 %; prova escrita, 30 %. ",
+     "new": "<p>Pesos na avaliação:</p><table class=\"apoio-tabela\" role=\"table\"><thead role=\"rowgroup\"><tr role=\"row\"><th scope=\"col\" role=\"columnheader\" style=\"width:auto\">Elemento</th><th scope=\"col\" role=\"columnheader\" style=\"width:5.5rem\">Peso</th></tr></thead><tbody role=\"rowgroup\"><tr role=\"row\"><th scope=\"row\" role=\"rowheader\">Tarefa da Unidade 1</th><td role=\"cell\" data-label=\"Peso\">30 %</td></tr><tr role=\"row\"><th scope=\"row\" role=\"rowheader\">Tarefa da Unidade 2</th><td role=\"cell\" data-label=\"Peso\">30 %</td></tr><tr role=\"row\"><th scope=\"row\" role=\"rowheader\">Provas rápidas</th><td role=\"cell\" data-label=\"Peso\">10 %</td></tr><tr role=\"row\"><th scope=\"row\" role=\"rowheader\">Prova escrita</th><td role=\"cell\" data-label=\"Peso\">30 %</td></tr></tbody></table><p class=\"avaliacao-tarefas\">",
+     "occurrences": 1
+    },
+    {
+     "location": "m8, cabeça: a folha das tabelas de apoio, antes da camada de aparência",
+     "old": "<link rel=\"stylesheet\" href=\"../assets/appearance.css?v=20261025-universal-1\">",
+     "new": "<link rel=\"stylesheet\" href=\"../assets/pt-lessons/apoios-tabelas.css?v=20261106.1\"><link rel=\"stylesheet\" href=\"../assets/appearance.css?v=20261025-universal-1\">",
+     "occurrences": 1
+    },
+    {
+     "location": "m8: «90 minutos» que não se parte",
+     "old": "90 minutos",
+     "new": "90 minutos",
+     "occurrences": 3
+    },
+    {
+     "location": "m8: «30 %» que não se parte (com o contexto «30 %.<»)",
+     "old": "30 %.<",
+     "new": "30 %.<",
+     "occurrences": 2
+    },
+    {
+     "location": "m8: «90 min» que não se parte (com o contexto «90 min<»)",
+     "old": "90 min<",
+     "new": "90 min<",
+     "occurrences": 4
+    },
+    {
+     "location": "m8: «25 min» que não se parte",
+     "old": "25 min",
+     "new": "25 min",
+     "occurrences": 2
+    },
+    {
+     "location": "m8: «10 min» que não se parte",
+     "old": "10 min",
+     "new": "10 min",
+     "occurrences": 2
+    },
+    {
+     "location": "m8: «30 segundos» que não se parte",
+     "old": "30 segundos",
+     "new": "30 segundos",
+     "occurrences": 4
+    },
+    {
+     "location": "m8: «5 a 7 minutos» que não se parte (com o contexto «7 minutos»)",
+     "old": "7 minutos",
+     "new": "7 minutos",
+     "occurrences": 3
+    },
+    {
+     "location": "m8: «90 segundos» que não se parte",
+     "old": "90 segundos",
+     "new": "90 segundos",
+     "occurrences": 4
+    },
+    {
+     "location": "m8: «3.º ano» que não se parte",
+     "old": "3.º ano",
+     "new": "3.º ano",
+     "occurrences": 2
+    },
+    {
+     "location": "m8: «século XX</span></h1>» que não se parte (com o contexto «século XX</sp»)",
+     "old": "século XX</sp",
+     "new": "século XX</sp",
+     "occurrences": 1
+    },
+    {
+     "location": "m8: «século XX</span></h1>» que não se parte (com o contexto «século XX pre»)",
+     "old": "século XX pre",
+     "new": "século XX pre",
+     "occurrences": 1
+    },
+    {
+     "location": "m8: «século XX</span></h1>» que não se parte (com o contexto «século XX. Os»)",
+     "old": "século XX. Os",
+     "new": "século XX. Os",
+     "occurrences": 1
+    },
+    {
+     "location": "m8: «número 1760» que não se parte",
+     "old": "número 1760",
+     "new": "número 1760",
+     "occurrences": 1
+    },
+    {
+     "location": "m8: «3 de Maio de 1808» que não se parte",
+     "old": "3 de Maio de 1808",
+     "new": "3 de Maio de 1808",
+     "occurrences": 2
+    },
+    {
+     "location": "m8: «3 de maio de 1808» que não se parte",
+     "old": "3 de maio de 1808",
+     "new": "3 de maio de 1808",
+     "occurrences": 1
+    },
+    {
+     "location": "m8: «3 de Maio» que não se parte (com o contexto «o 3 de»)",
+     "old": "o 3 de",
+     "new": "o 3 de",
+     "occurrences": 2
+    },
+    {
+     "location": "m8: «M8-F03» que não se parte",
+     "old": "M8-F03",
+     "new": "M8-⁠F03",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m8/licao-m8-f01/index.html": {
+   "base_sha256_lf": "a7c6bc657cf5546b46397a6d3130cb7a67095c8eff02261f7746f3f04751e4b3",
+   "after_sha256_lf": "402bd09a525d8b1660da744afb0bc24f0d719ed80e4c2dec59c66017f9c5077d",
+   "edits": [
+    {
+     "location": "M8-F01: «3 min» que não se parte (com o contexto «3 min)<»)",
+     "old": "3 min)<",
+     "new": "3 min)<",
+     "occurrences": 1
+    },
+    {
+     "location": "M8-F01: «século XIX» que não se parte",
+     "old": "século XIX",
+     "new": "século XIX",
+     "occurrences": 1
+    },
+    {
+     "location": "M8-F01: «3 de maio de 1808» que não se parte (com o contexto «><figcaption>Os fuzilamentos de 3 de maio de 1808 (Franci…»)",
+     "old": "><figcaption>Os fuzilamentos de 3 de maio de 1808 (Francisco de Goya, 1814, Museo",
+     "new": "><figcaption>Os fuzilamentos de 3 de maio de 1808 (Francisco de Goya, 1814, Museo",
+     "occurrences": 1
+    },
+    {
+     "location": "M8-F01: «1872–1921» que não se parte",
+     "old": "1872–1921",
+     "new": "1872–⁠1921",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m8/licao-m8-f03/index.html": {
+   "base_sha256_lf": "99177dbb360212a894bd763f39a9aec9170ed5dc268122f0eec82d0c6bdddb66",
+   "after_sha256_lf": "fb72de3a8e26d2c353e3da84cc69c1444ac12d83c0dea73fe0f559a446c4971b",
+   "edits": [
+    {
+     "location": "M8-F03: «2 min» que não se parte (com o contexto «2 min)<»)",
+     "old": "2 min)<",
+     "new": "2 min)<",
+     "occurrences": 1
+    },
+    {
+     "location": "M8-F03: «4 min» que não se parte (com o contexto «4 min)<»)",
+     "old": "4 min)<",
+     "new": "4 min)<",
+     "occurrences": 1
+    },
+    {
+     "location": "M8-F03: «p. 5» que não se parte (com o contexto «p. 5,»)",
+     "old": "p. 5,",
+     "new": "p. 5,",
+     "occurrences": 1
+    },
+    {
+     "location": "M8-F03: «pp. 52–53» que não se parte",
+     "old": "pp. 52–53",
+     "new": "pp. 52–⁠53",
+     "occurrences": 1
+    },
+    {
+     "location": "M8-F03: «3 de maio de 1808» que não se parte (com o contexto «><figcaption>Os fuzilamentos de 3 de maio de 1808 (Franci…»)",
+     "old": "><figcaption>Os fuzilamentos de 3 de maio de 1808 (Francisco de Goya, 1814, Museo",
+     "new": "><figcaption>Os fuzilamentos de 3 de maio de 1808 (Francisco de Goya, 1814, Museo",
+     "occurrences": 1
+    },
+    {
+     "location": "M8-F03: «3 de Maio de 1808» que não se parte",
+     "old": "3 de Maio de 1808",
+     "new": "3 de Maio de 1808",
+     "occurrences": 3
+    }
+   ]
+  },
+  "m8/licao-m8-f04/index.html": {
+   "base_sha256_lf": "b4e920894047e0a0b70ca847a8fb6f139a9d985bc3a60936116b8ba89e5abc85",
+   "after_sha256_lf": "47ddadf91501a575535b00bf7ce89642c952263b80ce2c7bfd006a323208ee95",
+   "edits": [
+    {
+     "location": "M8-F04, cartão 7, Para entender («Recorda»)",
+     "old": "<p><b>Arte poética</b>: o poema que fala da própria poesia. <b>Comparação</b>: aproxima elementos por uma relação explícita, como acontece com «como» nesta abertura. <b>Metáfora</b>: constrói uma identificação figurada; a ausência de «como» não basta para a reconhecer. <b>Interrogação retórica</b>: pergunta que não espera resposta.</p>",
+     "new": "<table class=\\\"apoio-tabela\\\" role=\\\"table\\\"><thead role=\\\"rowgroup\\\"><tr role=\\\"row\\\"><th scope=\\\"col\\\" role=\\\"columnheader\\\">Noção</th><th scope=\\\"col\\\" role=\\\"columnheader\\\">O que é</th></tr></thead><tbody role=\\\"rowgroup\\\"><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Arte poética</th><td role=\\\"cell\\\" data-label=\\\"O que é\\\">o poema que fala da própria poesia</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Comparação</th><td role=\\\"cell\\\" data-label=\\\"O que é\\\">aproxima elementos por uma relação explícita, como acontece com «como» nesta abertura</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Metáfora</th><td role=\\\"cell\\\" data-label=\\\"O que é\\\">constrói uma identificação figurada; a ausência de «como» não basta para a reconhecer</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Interrogação retórica</th><td role=\\\"cell\\\" data-label=\\\"O que é\\\">pergunta que não espera resposta</td></tr></tbody></table>",
+     "occurrences": 1
+    },
+    {
+     "location": "M8-F04, cabeça: a folha das tabelas de apoio, antes da camada de aparência",
+     "old": "<link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-reading1\">",
+     "new": "<link rel=\"stylesheet\" href=\"../../assets/pt-lessons/apoios-tabelas.css?v=20261106.1\"><link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-reading1\">",
+     "occurrences": 1
+    },
+    {
+     "location": "M8-F04: «3 min» que não se parte (com o contexto «3 min)<»)",
+     "old": "3 min)<",
+     "new": "3 min)<",
+     "occurrences": 1
+    },
+    {
+     "location": "M8-F04: «3 de maio de 1808» que não se parte (com o contexto «><figcaption>Os fuzilamentos de 3 de maio de 1808 (Franci…»)",
+     "old": "><figcaption>Os fuzilamentos de 3 de maio de 1808 (Francisco de Goya, 1814, Museo",
+     "new": "><figcaption>Os fuzilamentos de 3 de maio de 1808 (Francisco de Goya, 1814, Museo",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m8/licao-m8-f05/index.html": {
+   "base_sha256_lf": "d062b4ec5be2cf8694ddd4b53b2995a17dad1c330005252dd637a9cba7a6dbda",
+   "after_sha256_lf": "d61c972355ec86bd89ee4e8e664703ffc3b55247fbb4fe337dfed74fb6a4688b",
+   "edits": [
+    {
+     "location": "M8-F05, cartão 7, Para entender («Recorda»)",
+     "old": "<p><b>Tradição literária</b>: o que o poema vai buscar a textos antigos. Aqui, a forma da prece e a história dos pães e dos peixes, dos Evangelhos. <b>Apóstrofe</b>: chamar alguém («Senhor»). <b>Ironia</b>: o contexto leva a entender uma distância crítica em relação ao que se diz literalmente; nem todo o sentido indireto é irónico.</p>",
+     "new": "<table class=\\\"apoio-tabela\\\" role=\\\"table\\\"><thead role=\\\"rowgroup\\\"><tr role=\\\"row\\\"><th scope=\\\"col\\\" role=\\\"columnheader\\\">Noção</th><th scope=\\\"col\\\" role=\\\"columnheader\\\">O que é</th></tr></thead><tbody role=\\\"rowgroup\\\"><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Tradição literária</th><td role=\\\"cell\\\" data-label=\\\"O que é\\\">o que o poema vai buscar a textos antigos. Aqui, a forma da prece e a história dos pães e dos peixes, dos Evangelhos</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Apóstrofe</th><td role=\\\"cell\\\" data-label=\\\"O que é\\\">chamar alguém («Senhor»)</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Ironia</th><td role=\\\"cell\\\" data-label=\\\"O que é\\\">o contexto leva a entender uma distância crítica em relação ao que se diz literalmente; nem todo o sentido indireto é irónico</td></tr></tbody></table>",
+     "occurrences": 1
+    },
+    {
+     "location": "M8-F05, cabeça: a folha das tabelas de apoio, antes da camada de aparência",
+     "old": "<link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-reading1\">",
+     "new": "<link rel=\"stylesheet\" href=\"../../assets/pt-lessons/apoios-tabelas.css?v=20261106.1\"><link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-reading1\">",
+     "occurrences": 1
+    },
+    {
+     "location": "M8-F05: «n.º 1760» que não se parte",
+     "old": "n.º 1760",
+     "new": "n.º 1760",
+     "occurrences": 1
+    },
+    {
+     "location": "M8-F05: «n.º 0» que não se parte",
+     "old": "n.º 0",
+     "new": "n.º 0",
+     "occurrences": 1
+    },
+    {
+     "location": "M8-F05: «pp. 14–15» que não se parte",
+     "old": "pp. 14–15",
+     "new": "pp. 14–⁠15",
+     "occurrences": 1
+    },
+    {
+     "location": "M8-F05: «página 15» que não se parte",
+     "old": "página 15",
+     "new": "página 15",
+     "occurrences": 1
+    },
+    {
+     "location": "M8-F05: «3 de maio de 1808» que não se parte (com o contexto «><figcaption>Os fuzilamentos de 3 de maio de 1808 (Franci…»)",
+     "old": "><figcaption>Os fuzilamentos de 3 de maio de 1808 (Francisco de Goya, 1814, Museo",
+     "new": "><figcaption>Os fuzilamentos de 3 de maio de 1808 (Francisco de Goya, 1814, Museo",
+     "occurrences": 1
+    },
+    {
+     "location": "M8-F05: «7 de agosto de 2023» que não se parte",
+     "old": "7 de agosto de 2023",
+     "new": "7 de agosto de 2023",
+     "occurrences": 1
+    },
+    {
+     "location": "M8-F05: «1956–2022» que não se parte",
+     "old": "1956–2022",
+     "new": "1956–⁠2022",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m8/licao-m8-f06/index.html": {
+   "base_sha256_lf": "1e1ff019ee4d484beee38acbc3c89b8ff3c17afb18c563fa7da64b66176b8996",
+   "after_sha256_lf": "335a69fce8337568e0a9923a3070dd0a46723c8d1347468acf0fe094a15c7821",
+   "edits": [
+    {
+     "location": "M8-F06: «3 de maio de 1808» que não se parte (com o contexto «><figcaption>Os fuzilamentos de 3 de maio de 1808 (Franci…»)",
+     "old": "><figcaption>Os fuzilamentos de 3 de maio de 1808 (Francisco de Goya, 1814, Museo",
+     "new": "><figcaption>Os fuzilamentos de 3 de maio de 1808 (Francisco de Goya, 1814, Museo",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m8/licao-m8-f08/index.html": {
+   "base_sha256_lf": "a54ce300330c854a04c238cf4e770e9cbf210e0cb9b0399053b7d18afd618285",
+   "after_sha256_lf": "ab125106de8d1c7c369f800a9e64d06e533eb4467d60d14766b9bcfb808e25cb",
+   "edits": [
+    {
+     "location": "M8-F08, cartão 5, Para entender («Recorda»)",
+     "old": "<p><b>Unidade de ação</b>: uma só linha de acontecimentos. <b>Concentração de tempo e de espaço</b>: pouco tempo, poucos lugares. <b>Discurso direto</b>: as palavras da personagem, com travessão ou aspas. <b>Discurso indireto</b>: o narrador conta o que foi dito. No conto, a protagonista tem três nomes, um para cada idade: Gi, George, Georgina.</p>",
+     "new": "<table class=\\\"apoio-tabela\\\" role=\\\"table\\\"><thead role=\\\"rowgroup\\\"><tr role=\\\"row\\\"><th scope=\\\"col\\\" role=\\\"columnheader\\\">Noção</th><th scope=\\\"col\\\" role=\\\"columnheader\\\">O que é</th></tr></thead><tbody role=\\\"rowgroup\\\"><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Unidade de ação</th><td role=\\\"cell\\\" data-label=\\\"O que é\\\">uma só linha de acontecimentos</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Concentração de tempo e de espaço</th><td role=\\\"cell\\\" data-label=\\\"O que é\\\">pouco tempo, poucos lugares</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Discurso direto</th><td role=\\\"cell\\\" data-label=\\\"O que é\\\">as palavras da personagem, com travessão ou aspas</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Discurso indireto</th><td role=\\\"cell\\\" data-label=\\\"O que é\\\">o narrador conta o que foi dito</td></tr></tbody></table><p>No conto, a protagonista tem três nomes, um para cada idade: Gi, George, Georgina.</p>",
+     "occurrences": 1
+    },
+    {
+     "location": "M8-F08, cabeça: a folha das tabelas de apoio, antes da camada de aparência",
+     "old": "<link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-reading1\">",
+     "new": "<link rel=\"stylesheet\" href=\"../../assets/pt-lessons/apoios-tabelas.css?v=20261106.1\"><link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-reading1\">",
+     "occurrences": 1
+    },
+    {
+     "location": "M8-F08: «1921–1998» que não se parte",
+     "old": "1921–1998",
+     "new": "1921–⁠1998",
+     "occurrences": 2
+    }
+   ]
+  },
+  "m8/licao-m8-f10/index.html": {
+   "base_sha256_lf": "63c1a9736108ec27cc9079c5cfd9fdf7e655ef9539cbd09e003f3898e067daa9",
+   "after_sha256_lf": "ee6471c991decaf735fa12d653db268593490413501bf136dc10ad394a09a20b",
+   "edits": [
+    {
+     "location": "M8-F10: «5 a 7 minutos» que não se parte (com o contexto «7 minutos»)",
+     "old": "7 minutos",
+     "new": "7 minutos",
+     "occurrences": 4
+    },
+    {
+     "location": "M8-F10: «30 s» que não se parte (com o contexto «30 s,»)",
+     "old": "30 s,",
+     "new": "30 s,",
+     "occurrences": 1
+    },
+    {
+     "location": "M8-F10: «90 segundos» que não se parte",
+     "old": "90 segundos",
+     "new": "90 segundos",
+     "occurrences": 4
+    },
+    {
+     "location": "M8-F10: «30 segundos» que não se parte",
+     "old": "30 segundos",
+     "new": "30 segundos",
+     "occurrences": 3
+    },
+    {
+     "location": "M8-F10: «3 de maio de 1808» que não se parte (com o contexto «><figcaption>Os fuzilamentos de 3 de maio de 1808 (Franci…»)",
+     "old": "><figcaption>Os fuzilamentos de 3 de maio de 1808 (Francisco de Goya, 1814, Museo",
+     "new": "><figcaption>Os fuzilamentos de 3 de maio de 1808 (Francisco de Goya, 1814, Museo",
+     "occurrences": 1
+    },
+    {
+     "location": "M8-F10: «3 de Maio de 1808» que não se parte",
+     "old": "3 de Maio de 1808",
+     "new": "3 de Maio de 1808",
+     "occurrences": 1
+    },
+    {
+     "location": "M8-F10: «3 de Maio» que não se parte (com o contexto «o 3 de»)",
+     "old": "o 3 de",
+     "new": "o 3 de",
+     "occurrences": 2
+    },
+    {
+     "location": "M8-F10: «M8-F03» que não se parte",
+     "old": "M8-F03",
+     "new": "M8-⁠F03",
+     "occurrences": 2
+    }
+   ]
+  },
+  "m8/licao-m8-f11/index.html": {
+   "base_sha256_lf": "ea7841ac4523f037749b59dc2b87814a9946e34b319de5bb7b87e26554070a5d",
+   "after_sha256_lf": "0b06c04aa440871fe194ffa8ee44f6f3ab0b0db19b971d1522db43ec9a971186",
+   "edits": [
+    {
+     "location": "M8-F11: «século XX;» que não se parte",
+     "old": "século XX;",
+     "new": "século XX;",
+     "occurrences": 2
+    },
+    {
+     "location": "M8-F11: «século XX;» que não se parte (com o contexto «século XX.»)",
+     "old": "século XX.",
+     "new": "século XX.",
+     "occurrences": 2
+    },
+    {
+     "location": "M8-F11: «século XX;» que não se parte (com o contexto «século XX*»)",
+     "old": "século XX*",
+     "new": "século XX*",
+     "occurrences": 1
+    },
+    {
+     "location": "M8-F11: «século XX;» que não se parte (com o contexto «século XX,»)",
+     "old": "século XX,",
+     "new": "século XX,",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m8/licao-m8-f13/index.html": {
+   "base_sha256_lf": "276c17e351b207036e5c40c3c840c615cfb5079a4a3355e875bb94e2273ec350",
+   "after_sha256_lf": "71609bef85a293f8f38eaeb02c6f4944cee3debf23ce77e5e35040982521df48",
+   "edits": [
+    {
+     "location": "M8-F13, cartão 8, Para entender («Um modelo de interpretação»)",
+     "old": "<p><strong>Observação:<\\/strong> a abertura aproxima palavras e desgaste. <strong>Relação:<\\/strong> o que era partilhado já não chega para sustentar o vínculo. <strong>Limite:<\\/strong> isso não demonstra que a linguagem seja inútil em todas as relações.<\\/p>",
+     "new": "<ol><li><strong>Observação:<\\/strong> a abertura aproxima palavras e desgaste.<\\/li><li><strong>Relação:<\\/strong> o que era partilhado já não chega para sustentar o vínculo.<\\/li><li><strong>Limite:<\\/strong> isso não demonstra que a linguagem seja inútil em todas as relações.<\\/li><\\/ol>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m8/licao-m8-f14/index.html": {
+   "base_sha256_lf": "80bfd53977cabba252754c7d6ca2e635323557d2b673a5453dd0b8eee6b6bec1",
+   "after_sha256_lf": "19967e8cf1b5f0ad754b8962b5bd9e7b86526510f2eda91de53c75a03a1e805a",
+   "edits": [
+    {
+     "location": "M8-F14: «n.º 0» que não se parte",
+     "old": "n.º 0",
+     "new": "n.º 0",
+     "occurrences": 1
+    },
+    {
+     "location": "M8-F14: «pp. 14–15» que não se parte",
+     "old": "pp. 14–15",
+     "new": "pp. 14–⁠15",
+     "occurrences": 1
+    },
+    {
+     "location": "M8-F14: «27 de setembro de 2013» que não se parte",
+     "old": "27 de setembro de 2013",
+     "new": "27 de setembro de 2013",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m8/licao-m8-f15/index.html": {
+   "base_sha256_lf": "fc9abdb5cfa134bb82911b17780e3cd5608c6c527be8ec88f71268cbd25c12ae",
+   "after_sha256_lf": "71fdff4a2703134c7ae88b28f928faf6ae5df60a8259011bfb54c17679fe9383",
+   "edits": [
+    {
+     "location": "M8-F15, cartão 3, O essencial",
+     "old": "<p><strong>Autora:<\\/strong> pessoa real que escreve. <strong>Voz poética:<\\/strong> instância construída no poema. <strong>Reportagem:<\\/strong> seleção jornalística de informações, declarações e imagens.<\\/p>",
+     "new": "<table class=\\\"apoio-tabela\\\" role=\\\"table\\\"><thead role=\\\"rowgroup\\\"><tr role=\\\"row\\\"><th scope=\\\"col\\\" role=\\\"columnheader\\\">Termo<\\/th><th scope=\\\"col\\\" role=\\\"columnheader\\\">O que é<\\/th><\\/tr><\\/thead><tbody role=\\\"rowgroup\\\"><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Autora<\\/th><td role=\\\"cell\\\" data-label=\\\"O que é\\\">pessoa real que escreve<\\/td><\\/tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Voz poética<\\/th><td role=\\\"cell\\\" data-label=\\\"O que é\\\">instância construída no poema<\\/td><\\/tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Reportagem<\\/th><td role=\\\"cell\\\" data-label=\\\"O que é\\\">seleção jornalística de informações, declarações e imagens<\\/td><\\/tr><\\/tbody><\\/table>",
+     "occurrences": 1
+    },
+    {
+     "location": "M8-F15, cartão 13, Compara («Reconhecer uma atribuição»)",
+     "old": "<p>Formulações criadas para esta lição. A: A página apresenta o livro como atento a desigualdades. B: A autora afirmou esta frase. C: A voz deste poema é necessariamente a autora.<\\/p>",
+     "new": "<p>Formulações criadas para esta lição.<\\/p><ul><li>A: A página apresenta o livro como atento a desigualdades.<\\/li><li>B: A autora afirmou esta frase.<\\/li><li>C: A voz deste poema é necessariamente a autora.<\\/li><\\/ul>",
+     "occurrences": 1
+    },
+    {
+     "location": "M8-F15, cabeça: a folha das tabelas de apoio, antes da camada de aparência",
+     "old": "<link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-universal-1\">",
+     "new": "<link rel=\"stylesheet\" href=\"../../assets/pt-lessons/apoios-tabelas.css?v=20261106.1\"><link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-universal-1\">",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m8/licao-m8-f16/index.html": {
+   "base_sha256_lf": "453be6c1bcf5d53f29227a5ff69d1081e0a78c25d345e46499c0a81c3dcc748d",
+   "after_sha256_lf": "9921eb146f7eee6f57761b3068fc2a3aba6b8f017642a392b9075d10932f1919",
+   "edits": [
+    {
+     "location": "M8-F16: «12.º ano» que não se parte",
+     "old": "12.º ano",
+     "new": "12.º ano",
+     "occurrences": 1
+    },
+    {
+     "location": "M8-F16: «página 1» que não se parte",
+     "old": "página 1",
+     "new": "página 1",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m8/m8-george-tres-idades/index.html": {
+   "base_sha256_lf": "62a6a904c509deb98266fa49f6f2844cced46f288a82aabb4ba13114d7fe4897",
+   "after_sha256_lf": "dcc9c8f21410cc342b6df8d0351bf4c4a372491ce0343053f9f1a94df4f49b60",
+   "edits": [
+    {
+     "location": "m8/m8-george-tres-idades: «25 min» que não se parte",
+     "old": "25 min",
+     "new": "25 min",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m8/m8-poema-testemunha/index.html": {
+   "base_sha256_lf": "0d9a4e6cdd8ea78d9a782221a97b5967f231cd5a61051e75aa68494939a6b3ff",
+   "after_sha256_lf": "db2b393f2adcb7d82bf14c72de5f334ba9fe94fc0a6400e49b2d5a4eadddc628",
+   "edits": [
+    {
+     "location": "m8/m8-poema-testemunha: «25 min» que não se parte",
+     "old": "25 min",
+     "new": "25 min",
+     "occurrences": 1
+    },
+    {
+     "location": "m8/m8-poema-testemunha: «n.º 1760» que não se parte",
+     "old": "n.º 1760",
+     "new": "n.º 1760",
+     "occurrences": 2
+    },
+    {
+     "location": "m8/m8-poema-testemunha: «versos 1 e 2» que não se parte",
+     "old": "versos 1 e 2",
+     "new": "versos 1 e 2",
+     "occurrences": 2
+    },
+    {
+     "location": "m8/m8-poema-testemunha: «verso 1» que não se parte",
+     "old": "verso 1",
+     "new": "verso 1",
+     "occurrences": 1
+    },
+    {
+     "location": "m8/m8-poema-testemunha: «3 de maio de 1808» que não se parte",
+     "old": "3 de maio de 1808",
+     "new": "3 de maio de 1808",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m8/mapa-do-modulo-m8/index.html": {
+   "base_sha256_lf": "7c2014c0ea67693bb31329784e51ccf07d3b9fa1b76ad889c8df0b176c037864",
+   "after_sha256_lf": "522604fc0ec6fa2b74bb8ba3c4c4cfab6a9bc19b8a87ab3774851101e75c0526",
+   "edits": [
+    {
+     "location": "m8/mapa-do-modulo-m8, «As tarefas das unidades»: os pesos na avaliação",
+     "old": "<p class=\"avaliacao-tarefas\">Avaliação: tarefa da Unidade 1, 30 %; tarefa da Unidade 2, 30 %; provas rápidas, 10 %; prova escrita, 30 %. ",
+     "new": "<p>Avaliação:</p><table class=\"apoio-tabela\" role=\"table\"><thead role=\"rowgroup\"><tr role=\"row\"><th scope=\"col\" role=\"columnheader\" style=\"width:auto\">Elemento</th><th scope=\"col\" role=\"columnheader\" style=\"width:5.5rem\">Peso</th></tr></thead><tbody role=\"rowgroup\"><tr role=\"row\"><th scope=\"row\" role=\"rowheader\">Tarefa da Unidade 1</th><td role=\"cell\" data-label=\"Peso\">30 %</td></tr><tr role=\"row\"><th scope=\"row\" role=\"rowheader\">Tarefa da Unidade 2</th><td role=\"cell\" data-label=\"Peso\">30 %</td></tr><tr role=\"row\"><th scope=\"row\" role=\"rowheader\">Provas rápidas</th><td role=\"cell\" data-label=\"Peso\">10 %</td></tr><tr role=\"row\"><th scope=\"row\" role=\"rowheader\">Prova escrita</th><td role=\"cell\" data-label=\"Peso\">30 %</td></tr></tbody></table><p class=\"avaliacao-tarefas\">",
+     "occurrences": 1
+    },
+    {
+     "location": "m8/mapa-do-modulo-m8, cabeça: a folha das tabelas de apoio, antes da camada de aparência",
+     "old": "<link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-universal-1\">",
+     "new": "<link rel=\"stylesheet\" href=\"../../assets/pt-lessons/apoios-tabelas.css?v=20261106.1\"><link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-universal-1\">",
+     "occurrences": 1
+    },
+    {
+     "location": "m8/mapa-do-modulo-m8: «90 minutos» que não se parte",
+     "old": "90 minutos",
+     "new": "90 minutos",
+     "occurrences": 2
+    },
+    {
+     "location": "m8/mapa-do-modulo-m8: «30 %» que não se parte (com o contexto «30 %,»)",
+     "old": "30 %,",
+     "new": "30 %,",
+     "occurrences": 2
+    },
+    {
+     "location": "m8/mapa-do-modulo-m8: «3.º ano» que não se parte",
+     "old": "3.º ano",
+     "new": "3.º ano",
+     "occurrences": 2
+    },
+    {
+     "location": "m8/mapa-do-modulo-m8: «século XX» que não se parte (com o contexto «século XX</sp»)",
+     "old": "século XX</sp",
+     "new": "século XX</sp",
+     "occurrences": 1
+    },
+    {
+     "location": "m8/mapa-do-modulo-m8: «século XX» que não se parte (com o contexto «século XX</h1»)",
+     "old": "século XX</h1",
+     "new": "século XX</h1",
+     "occurrences": 1
+    },
+    {
+     "location": "m8/mapa-do-modulo-m8: «século XX» que não se parte (com o contexto «século XX. Tu»)",
+     "old": "século XX. Tu",
+     "new": "século XX. Tu",
+     "occurrences": 1
+    },
+    {
+     "location": "m8/mapa-do-modulo-m8: «verso 1» que não se parte",
+     "old": "verso 1",
+     "new": "verso 1",
+     "occurrences": 1
+    },
+    {
+     "location": "m8/mapa-do-modulo-m8: «3 de maio de 1808» que não se parte (com o contexto «3 de maio de 1808<»)",
+     "old": "3 de maio de 1808<",
+     "new": "3 de maio de 1808<",
+     "occurrences": 2
+    },
+    {
+     "location": "m8/mapa-do-modulo-m8: «1923–2005» que não se parte",
+     "old": "1923–2005",
+     "new": "1923–⁠2005",
+     "occurrences": 1
+    },
+    {
+     "location": "m8/mapa-do-modulo-m8: «1921–1998» que não se parte",
+     "old": "1921–1998",
+     "new": "1921–⁠1998",
+     "occurrences": 1
+    },
+    {
+     "location": "m8/mapa-do-modulo-m8: «M8-F01» que não se parte",
+     "old": "M8-F01",
+     "new": "M8-⁠F01",
+     "occurrences": 1
+    },
+    {
+     "location": "m8/mapa-do-modulo-m8: «M8-F08» que não se parte",
+     "old": "M8-F08",
+     "new": "M8-⁠F08",
+     "occurrences": 3
+    },
+    {
+     "location": "m8/mapa-do-modulo-m8: «M8-F03» que não se parte",
+     "old": "M8-F03",
+     "new": "M8-⁠F03",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m8/opiniao-ramos/index.html": {
+   "base_sha256_lf": "3e7100eba010a835239bef3e2d09418d1b1fcbc659346f4e44e19464c7f1d780",
+   "after_sha256_lf": "7615dda593ae3b210e009a4bf101b5b151191ad1d4ac9349808235d0d476b4ef",
+   "edits": [
+    {
+     "location": "m8/opiniao-ramos, passo 1, «Ler»",
+     "old": "<p>Um <b>texto de opinião</b> defende uma ideia. Tem quatro peças: a <b>tese</b> (o que defendes, numa frase); um <b>argumento</b> com um <b>exemplo</b> concreto; o <b>contra-argumento</b> (o que diz quem discorda) e a tua resposta; a <b>conclusão</b>, que volta à tese com uma palavra nova. O que não é texto de opinião: descrever os dois lados sem escolher; afirmar sem exemplo («toda a gente sabe que…»); fingir que ninguém discorda.</p>",
+     "new": "<p>Um <b>texto de opinião</b> defende uma ideia. Tem quatro peças:</p><ul><li>a <b>tese</b> (o que defendes, numa frase);</li><li>um <b>argumento</b> com um <b>exemplo</b> concreto;</li><li>o <b>contra-argumento</b> (o que diz quem discorda) e a tua resposta;</li><li>a <b>conclusão</b>, que volta à tese com uma palavra nova.</li></ul><p>O que não é texto de opinião:</p><ul><li>descrever os dois lados sem escolher;</li><li>afirmar sem exemplo («toda a gente sabe que…»);</li><li>fingir que ninguém discorda.</li></ul>",
+     "occurrences": 1
+    },
+    {
+     "location": "m8/opiniao-ramos: «século XVI» que não se parte",
+     "old": "século XVI",
+     "new": "século XVI",
+     "occurrences": 1
+    },
+    {
+     "location": "m8/opiniao-ramos: «ato III» que não se parte",
+     "old": "ato III",
+     "new": "ato III",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m8/painel-m8-f11/index.html": {
+   "base_sha256_lf": "800f94463c5c774694f1881159145a8022a0872f14b19f832e495d857ac15b9b",
+   "after_sha256_lf": "45115d1a4e2e0858b6a7cd865bcf14326d693acaf30917ee93851545833ae9aa",
+   "edits": [
+    {
+     "location": "M8-F11 (painel de projeção): o enunciado do cartão 13 igual ao da lição, em a lista do painel",
+     "old": "{\"k\":13,\"t\":\"vf\",\"p\":\"A visita é a um lugar ligado à poesia ou ao conto do século XX.\"}",
+     "new": "{\"k\":13,\"t\":\"vf\",\"p\":\"A visita é a um lugar ligado à poesia ou ao conto do século XX.\"}",
+     "occurrences": 1
+    },
+    {
+     "location": "M8-F11 (painel de projeção): o enunciado do cartão 13 igual ao da lição, em o seletor",
+     "old": "<option value=\"13\">A visita é a um lugar ligado à poesia ou ao conto do século XX.</option>",
+     "new": "<option value=\"13\">A visita é a um lugar ligado à poesia ou ao conto do século XX.</option>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m8/pastelaria/index.html": {
+   "base_sha256_lf": "8f4d98a3c4412679ca05b6fb827175c3c2533c57b3fbcc46162c573f3a36042e",
+   "after_sha256_lf": "7c4b77ff30741754be2786c5fb1e2ab18a391fbcc2d7fb18f1bc6a60afc60b2d",
+   "edits": [
+    {
+     "location": "m8/pastelaria: «1923–2006» que não se parte",
+     "old": "1923–2006",
+     "new": "1923–⁠2006",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m8/portefolio-do-modulo-m8/index.html": {
+   "base_sha256_lf": "0fc3cce93ce21abd3ec2f78570a9c2b1b94474449bf3a02a6bb9dccd5a56f109",
+   "after_sha256_lf": "03f161fa4fefe3eef66d3c538c907239433ba9ef93cdc57aebb496d0acc82dee",
+   "edits": [
+    {
+     "location": "m8/portefolio-do-modulo-m8, «A lista de verificação»: o nome M8_U1_registo_<dia-mês> em <code>",
+     "old": "<td>M8_U1_registo_&lt;dia-mês&gt;</td>",
+     "new": "<td><code>M8_<wbr>U1_<wbr>registo_<wbr>&lt;dia-mês&gt;</code></td>",
+     "occurrences": 1
+    },
+    {
+     "location": "m8/portefolio-do-modulo-m8, «A lista de verificação»: o nome M8_U1_retoma em <code>",
+     "old": "<td>M8_U1_retoma</td>",
+     "new": "<td><code>M8_<wbr>U1_<wbr>retoma</code></td>",
+     "occurrences": 1
+    },
+    {
+     "location": "m8/portefolio-do-modulo-m8, «A lista de verificação»: o nome M8_U1_o-que-aprendi em <code>",
+     "old": "<td>M8_U1_o-que-aprendi</td>",
+     "new": "<td><code>M8_<wbr>U1_<wbr>o-que-aprendi</code></td>",
+     "occurrences": 1
+    },
+    {
+     "location": "m8/portefolio-do-modulo-m8, «A lista de verificação»: o nome M8_U2_registo_<dia-mês> em <code>",
+     "old": "<td>M8_U2_registo_&lt;dia-mês&gt;</td>",
+     "new": "<td><code>M8_<wbr>U2_<wbr>registo_<wbr>&lt;dia-mês&gt;</code></td>",
+     "occurrences": 1
+    },
+    {
+     "location": "m8/portefolio-do-modulo-m8, «A lista de verificação»: o nome M8_U2_retoma em <code>",
+     "old": "<td>M8_U2_retoma</td>",
+     "new": "<td><code>M8_<wbr>U2_<wbr>retoma</code></td>",
+     "occurrences": 1
+    },
+    {
+     "location": "m8/portefolio-do-modulo-m8, «A lista de verificação»: o nome M8_U2_o-que-aprendi em <code>",
+     "old": "<td>M8_U2_o-que-aprendi</td>",
+     "new": "<td><code>M8_<wbr>U2_<wbr>o-que-aprendi</code></td>",
+     "occurrences": 1
+    },
+    {
+     "location": "m8/portefolio-do-modulo-m8, «A lista de verificação»: o nome M8_U1_Tarefa em <code>",
+     "old": "<td>M8_U1_Tarefa</td>",
+     "new": "<td><code>M8_<wbr>U1_<wbr>Tarefa</code></td>",
+     "occurrences": 1
+    },
+    {
+     "location": "m8/portefolio-do-modulo-m8, «A lista de verificação»: o nome M8_U2_Tarefa em <code>",
+     "old": "<td>M8_U2_Tarefa</td>",
+     "new": "<td><code>M8_<wbr>U2_<wbr>Tarefa</code></td>",
+     "occurrences": 1
+    },
+    {
+     "location": "m8/portefolio-do-modulo-m8, «A lista de verificação»: o nome M8_capa pode mudar de linha depois de «M8_»",
+     "old": "<td><code>M8_capa</code></td>",
+     "new": "<td><code>M8_<wbr>capa</code></td>",
+     "occurrences": 1
+    },
+    {
+     "location": "m8/portefolio-do-modulo-m8, «A lista de verificação»: o nome M8_cartao-do-percurso pode mudar de linha depois de «M8_»",
+     "old": "<td><code>M8_cartao-do-percurso</code></td>",
+     "new": "<td><code>M8_<wbr>cartao-do-percurso</code></td>",
+     "occurrences": 1
+    },
+    {
+     "location": "m8/portefolio-do-modulo-m8, «A lista de verificação»: o nome M8_Revisao1 pode mudar de linha depois de «M8_»",
+     "old": "<td><code>M8_Revisao1</code></td>",
+     "new": "<td><code>M8_<wbr>Revisao1</code></td>",
+     "occurrences": 1
+    },
+    {
+     "location": "m8/portefolio-do-modulo-m8, «A lista de verificação»: o nome M8_Revisao2 pode mudar de linha depois de «M8_»",
+     "old": "<td><code>M8_Revisao2</code></td>",
+     "new": "<td><code>M8_<wbr>Revisao2</code></td>",
+     "occurrences": 1
+    },
+    {
+     "location": "m8/portefolio-do-modulo-m8, «A lista de verificação»: o nome M8_Prova-escrita pode mudar de linha depois de «M8_»",
+     "old": "<td><code>M8_Prova-escrita</code></td>",
+     "new": "<td><code>M8_<wbr>Prova-escrita</code></td>",
+     "occurrences": 1
+    },
+    {
+     "location": "m8/portefolio-do-modulo-m8, «A lista de verificação»: o nome M8_balanco pode mudar de linha depois de «M8_»",
+     "old": "<td><code>M8_balanco</code></td>",
+     "new": "<td><code>M8_<wbr>balanco</code></td>",
+     "occurrences": 1
+    },
+    {
+     "location": "m8/portefolio-do-modulo-m8, a folha da página: os nomes só mudam de linha onde podem",
+     "old": "code{font:.85rem Consolas,\"Courier New\",monospace;border:1px solid var(--tinta);padding:1px 4px}\n",
+     "new": "code{font:.85rem Consolas,\"Courier New\",monospace;border:1px solid var(--tinta);padding:1px 4px}\ntd code{white-space:nowrap}\n",
+     "occurrences": 1
+    },
+    {
+     "location": "m8/portefolio-do-modulo-m8: «90 minutos» que não se parte",
+     "old": "90 minutos",
+     "new": "90 minutos",
+     "occurrences": 1
+    },
+    {
+     "location": "m8/portefolio-do-modulo-m8: «40 %» que não se parte",
+     "old": "40 %",
+     "new": "40 %",
+     "occurrences": 1
+    },
+    {
+     "location": "m8/portefolio-do-modulo-m8: «3.º ano» que não se parte",
+     "old": "3.º ano",
+     "new": "3.º ano",
+     "occurrences": 2
+    },
+    {
+     "location": "m8/portefolio-do-modulo-m8: «século XX» que não se parte",
+     "old": "século XX",
+     "new": "século XX",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m8/visita-caderno-de-campo/index.html": {
+   "base_sha256_lf": "953fe3a64cf95326a038892ca599a4da4f463183a93e99be79152c04c3f0d58b",
+   "after_sha256_lf": "6a8c5cbfadccd20173efe4c16ab1d2872ffc1d0f5db4bef3cb08950d312b06c0",
+   "edits": [
+    {
+     "location": "m8/visita-caderno-de-campo: «3.º ano» que não se parte",
+     "old": "3.º ano",
+     "new": "3.º ano",
+     "occurrences": 2
+    }
+   ]
+  },
+  "tarefas/m8-u1/index.html": {
+   "base_sha256_lf": "911ab248a29f91e81ed174a82e5977adca18a5caa102152709bceba317ef523e",
+   "after_sha256_lf": "e1a7d65760e8617fac975807f85c9a8912e30449c30200699420f263f80ba84e",
+   "edits": [
+    {
+     "location": "tarefas/m8-u1: «durante 90 minutos, com entrega»",
+     "old": "durante 90 minutos, com entrega",
+     "new": "durante 90 minutos, com entrega",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m8-u1: «10 min» que não se parte (com o contexto «10 min »)",
+     "old": "10 min ",
+     "new": "10 min ",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m8-u1: «60 minutos» que não se parte",
+     "old": "60 minutos",
+     "new": "60 minutos",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m8-u1: «90 min» que não se parte (com o contexto «90 min<»)",
+     "old": "90 min<",
+     "new": "90 min<",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m8-u1: «10 minutos» que não se parte",
+     "old": "10 minutos",
+     "new": "10 minutos",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m8-u1: «n.º 0» que não se parte",
+     "old": "n.º 0",
+     "new": "n.º 0",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m8-u1: «pp. 14–15» que não se parte",
+     "old": "pp. 14–15",
+     "new": "pp. 14–⁠15",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m8-u1: «7 de agosto de 2023» que não se parte",
+     "old": "7 de agosto de 2023",
+     "new": "7 de agosto de 2023",
+     "occurrences": 1
+    }
+   ]
+  },
+  "tarefas/m8-u2/index.html": {
+   "base_sha256_lf": "832cfd06964fa276a8573323a22284dce07e1a5a9f94b86ed640ec6426e6172a",
+   "after_sha256_lf": "636208e8fcfe0897e827bf58d64e04414972a998896a2baa5532d64c90f00dc1",
+   "edits": [
+    {
+     "location": "tarefas/m8-u2: «durante 90 minutos, com entrega»",
+     "old": "durante 90 minutos, com entrega",
+     "new": "durante 90 minutos, com entrega",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m8-u2: «10 min» que não se parte (com o contexto «10 min »)",
+     "old": "10 min ",
+     "new": "10 min ",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m8-u2: «60 minutos» que não se parte",
+     "old": "60 minutos",
+     "new": "60 minutos",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m8-u2: «90 min» que não se parte (com o contexto «90 min<»)",
+     "old": "90 min<",
+     "new": "90 min<",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m8-u2: «10 minutos» que não se parte",
+     "old": "10 minutos",
+     "new": "10 minutos",
+     "occurrences": 1
+    }
+   ]
+  }
+ }
+}
