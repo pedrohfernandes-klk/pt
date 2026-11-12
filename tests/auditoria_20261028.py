@@ -362,7 +362,21 @@ _CUIDADO_M9_1112 = json.loads((ROOT/'tests/fixtures/cuidado-m9-edits-20261112.js
 # estrita. Não toca nas tarefas das unidades: não precisa da exceção da revisão dos enunciados.
 _CUIDADO_EXAME_1112 = json.loads((ROOT/'tests/fixtures/cuidado-exame-edits-20261112.json').read_text('utf-8'))['files']
 
+# 12/11/2026: a ligação «Treinos» na navegação da página principal do Exame (exame/index.html), camada mais recente, por cima da
+# decisão 152 no Exame e nas páginas transversais: desfaz-se antes dela, com contagem estrita. Só toca em exame/index.html.
+_EXAME_LIGACAO_TREINOS_1112 = json.loads((ROOT/'tests/fixtures/exame-ligacao-treinos-edits-20261112.json').read_text('utf-8'))['files']
+
+def undo_exame_ligacao_treinos_1112(path, text):
+    for edit in reversed(_EXAME_LIGACAO_TREINOS_1112.get(_relative(path), {}).get('edits', [])):
+        if text.count(edit['new']) != edit['occurrences']:
+            raise AssertionError(f"Ligação «Treinos» na página principal do Exame não confere: {path}: {edit['location']}")
+        text = text.replace(edit['new'], edit['old'])
+    return text
+
+
 def undo_cuidado_exame_1112(path, text):
+    # 12/11/2026: primeiro a ligação «Treinos» na página principal do Exame, que está por cima.
+    text = undo_exame_ligacao_treinos_1112(path, text)
     for edit in reversed(_CUIDADO_EXAME_1112.get(_relative(path), {}).get('edits', [])):
         if text.count(edit['new']) != edit['occurrences']:
             raise AssertionError(f"Decisão 152 no Exame e nas páginas transversais não confere: {path}: {edit['location']}")

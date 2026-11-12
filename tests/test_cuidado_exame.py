@@ -340,7 +340,10 @@ class CuidadoExame(unittest.TestCase):
 
     def test_camada_fechada_reversivel_e_no_topo(self):
         r = subprocess.run([sys.executable, 'scripts/aplicar_trocas.py', 'scripts/cuidado_exame_20261112.json', '--manifesto', MANIFESTO_REL,
-                            '--verificar'], cwd=ROOT, capture_output=True, text=True, encoding='utf-8')
+                            # 12/11/2026: por cima desta camada fica agora a ligação «Treinos» na página principal do Exame
+                            # (exame_ligacao_treinos_20261112, que só muda exame/index.html, fora desta camada); desfaz-se primeiro, com
+                            # a mesma exigência, e as contagens são as mesmas.
+                            '--verificar', '--desfazer-antes', 'tests/fixtures/exame-ligacao-treinos-edits-20261112.json'], cwd=ROOT, capture_output=True, text=True, encoding='utf-8')
         self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
         self.assertIn(f'{len(TROCAS)} trocas em {len(MANIFESTO["files"])} ficheiros: {len(TROCAS)} aplicadas, 0 por aplicar; manifesto em dia.',
                       r.stdout)
@@ -379,10 +382,13 @@ class CuidadoExame(unittest.TestCase):
                     self.assertEqual(undo_cuidado_m9_1112(rel, atual), b)
         self.assertIn(SESSOES, m['files'])
         # No topo das camadas, por cima da decisão 152 no M9, e registada onde as outras estão.
-        self.assertEqual(verificar_camadas.LAYERS[0], ('cuidado_exame_20261112', 'cuidado-exame-edits-20261112'))
-        self.assertEqual(verificar_camadas.LAYERS[1], ('cuidado_m9_20261112', 'cuidado-m9-edits-20261112'))
-        self.assertEqual(len(verificar_camadas.LAYERS), 44)
-        self.assertEqual(len(set(verificar_camadas.LAYERS)), 44)
+        # 12/11/2026: por cima da decisão 152 no Exame e nas páginas transversais fica a ligação «Treinos» na página principal do Exame (exame_ligacao_treinos_20261112): a ordem ganha mais uma posição, com a mesma exigência.
+        self.assertEqual(verificar_camadas.LAYERS[0], ('exame_ligacao_treinos_20261112', 'exame-ligacao-treinos-edits-20261112'))
+        self.assertEqual(verificar_camadas.LAYERS[1], ('cuidado_exame_20261112', 'cuidado-exame-edits-20261112'))
+        self.assertEqual(verificar_camadas.LAYERS[2], ('cuidado_m9_20261112', 'cuidado-m9-edits-20261112'))
+        # 12/11/2026: com a ligação «Treinos» na página principal do Exame, as camadas passam a ser mais uma.
+        self.assertEqual(len(verificar_camadas.LAYERS), 45)
+        self.assertEqual(len(set(verificar_camadas.LAYERS)), 45)
         sala = ler('scripts/desligar_sala.py')
         self.assertLess(sala.index('cuidado-exame-edits-20261112.json'), sala.index('cuidado-m9-edits-20261112.json'))
         auditoria = ler('tests/auditoria_20261028.py')
@@ -393,6 +399,10 @@ class CuidadoExame(unittest.TestCase):
             self.assertLess(s.index("json.loads(CUIDADO_EXAME.read_text"), s.index("json.loads(CUIDADO_M9.read_text"), script)
         # Nos fluxos e nos outros testes, a cadeia de desfazer começa por esta camada, sem nada entre ela e a do M9.
         ex, m9_rel = MANIFESTO_REL, 'tests/fixtures/cuidado-m9-edits-20261112.json'
+        # 12/11/2026: o manifesto da camada que fica por cima desta (a ligação «Treinos» na página principal do Exame), que não toca
+        # em nenhum ficheiro desta.
+        lt = 'tests/fixtures/exame-ligacao-treinos-edits-20261112.json'
+        self.assertEqual(set(json.loads(ler(lt))['files']) & set(m['files']), set())
         cadeias = 0
         for p in sorted((ROOT / '.github/workflows').glob('*.yml')) + sorted((ROOT / 'tests').glob('test_*.py')):
             if p.name == 'test_cuidado_exame.py':
@@ -400,13 +410,18 @@ class CuidadoExame(unittest.TestCase):
             texto = '\n'.join(linha for linha in p.read_text('utf-8').split('\n') if not linha.lstrip().startswith('#'))
             plano = re.sub(r"['\"]\s*,\s*['\"]", ' ', texto)
             with self.subTest(ficheiro=p.name):
-                self.assertEqual(plano.count('--desfazer-antes ' + m9_rel), plano.count(f'--desfazer-antes {ex} --desfazer-antes {m9_rel}'))
-                self.assertEqual(plano.count('--desfazer-antes {m9}'), plano.count('--desfazer-antes {ex} --desfazer-antes {m9}'))
-                cadeias += plano.count(f'--desfazer-antes {ex} --desfazer-antes {m9_rel}') + plano.count('--desfazer-antes {ex} --desfazer-antes {m9}')
+                # 12/11/2026: a ligação «Treinos» na página principal do Exame (exame_ligacao_treinos_20261112: só a navegação de exame/index.html) passa a camada mais recente, por cima da decisão 152 no Exame e nas páginas transversais; desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
+                self.assertEqual(plano.count('--desfazer-antes ' + m9_rel), plano.count(f'--desfazer-antes {lt} --desfazer-antes {ex} --desfazer-antes {m9_rel}'))
+                # 12/11/2026: a ligação «Treinos» na página principal do Exame (exame_ligacao_treinos_20261112: só a navegação de exame/index.html) passa a camada mais recente, por cima da decisão 152 no Exame e nas páginas transversais; desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
+                self.assertEqual(plano.count('--desfazer-antes {m9}'), plano.count('--desfazer-antes {lt} --desfazer-antes {ex} --desfazer-antes {m9}'))
+                # 12/11/2026: a ligação «Treinos» na página principal do Exame (exame_ligacao_treinos_20261112: só a navegação de exame/index.html) passa a camada mais recente, por cima da decisão 152 no Exame e nas páginas transversais; desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
+                cadeias += plano.count(f'--desfazer-antes {lt} --desfazer-antes {ex} --desfazer-antes {m9_rel}') + plano.count('--desfazer-antes {lt} --desfazer-antes {ex} --desfazer-antes {m9}')
         self.assertGreater(cadeias, 80)
         tarefas = ler('.github/workflows/pt-tarefas-qa.yml')
-        self.assertIn(f'python scripts/aplicar_trocas.py scripts/cuidado_exame_20261112.json --manifesto {ex} --verificar\n', tarefas)
-        self.assertIn(f'python scripts/aplicar_trocas.py scripts/cuidado_m9_20261112.json --manifesto {m9_rel} --verificar --desfazer-antes {ex}\n', tarefas)
+        # 12/11/2026: a ligação «Treinos» na página principal do Exame (exame_ligacao_treinos_20261112) passa a camada mais recente, por cima desta; desfaz-se primeiro, com a mesma exigência.
+        self.assertIn(f'python scripts/aplicar_trocas.py scripts/cuidado_exame_20261112.json --manifesto {ex} --verificar --desfazer-antes {lt}\n', tarefas)
+        # 12/11/2026: a ligação «Treinos» na página principal do Exame (exame_ligacao_treinos_20261112: só a navegação de exame/index.html) passa a camada mais recente, por cima da decisão 152 no Exame e nas páginas transversais; desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
+        self.assertIn(f'python scripts/aplicar_trocas.py scripts/cuidado_m9_20261112.json --manifesto {m9_rel} --verificar --desfazer-antes {lt} --desfazer-antes {ex}\n', tarefas)
         apoios = ler('.github/workflows/pt-apoios-qa.yml')
         self.assertIn("run: python -m unittest discover -s tests -p 'test_cuidado_exame.py' -v", apoios)
         self.assertIn('run: python tests/browser_cuidado_exame.py', apoios)
