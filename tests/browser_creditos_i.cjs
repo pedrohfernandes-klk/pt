@@ -233,7 +233,9 @@ try{
   }
   if(caso.licoes){
    // P16: a ligação «Lição Mx-Fyy» fica à vista, na legenda, fora do «i».
-   const licoes=await p.locator(raiz+' figcaption a').evaluateAll(as=>as.filter(a=>/^Lição M\d-F\d+$/.test(a.textContent)&&a.checkVisibility()&&!a.closest('details.info-i')).length);
+   // 12/11/2026: decisão 152 no M8 (achado 36): no mapa do M8 (o único caso com esta contagem), a sigla leva a junção (U+2060) depois do
+   // hífen, para não se partir entre linhas; a mesma exigência, com a sigla como está agora na página.
+   const licoes=await p.locator(raiz+' figcaption a').evaluateAll(as=>as.filter(a=>/^Lição M\d-\u2060F\d+$/.test(a.textContent)&&a.checkVisibility()&&!a.closest('details.info-i')).length);
    assert.equal(licoes,caso.licoes,`${onde}: as ligações «Lição Mx-Fyy» à vista`);
    assert.equal(await p.locator(raiz+' figcaption').evaluateAll(fs=>fs.filter(f=>/Domínio público|CC BY|CC0/.test(f.textContent)).length),0,`${onde}: a licença já não está na legenda`);
   }
