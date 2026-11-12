@@ -1,0 +1,10 @@
+[
+ {
+  "ficheiro": "exame/index.html",
+  "local": "Página principal do Exame (exame/index.html), navegação do cabeçalho («Navegação da preparação»): a ligação «Treinos», entre «Provas em cartões» e «Programa e fontes»",
+  "antigo": "Provas em cartões</a><a href=\"#cobertura\">",
+  "novo": "Provas em cartões</a><a href=\"treinos/\">Treinos</a><a href=\"#cobertura\">",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: os treinos do Exame (exame/treinos/, de 11/11/2026) já estavam ligados nos cabeçalhos das provas em cartões e do laboratório; faltava a ligação na página principal do Exame, que é uma página congelada e só muda por camada literal. Entra a ligação «Treinos», com o mesmo rótulo e na mesma ordem (a seguir a «Provas em cartões»); nenhum outro texto muda."
+ }
+]

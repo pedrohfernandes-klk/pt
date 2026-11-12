@@ -1,0 +1,18 @@
+{
+ "base_commit": "927bab632a0aefb1d3cb090d655a0f4356e3f9f8",
+ "_nota": "12/11/2026: a ligação «Treinos» na navegação da página principal do Exame (exame/index.html), camada exame_ligacao_treinos_20261112: uma troca num ficheiro. Os treinos (exame/treinos/) já estavam ligados nos cabeçalhos das provas em cartões e do laboratório; a página principal do Exame é congelada e só muda por camada literal. Entra a ligação, com o mesmo rótulo e na mesma ordem (a seguir a «Provas em cartões»); nenhum outro texto muda, nem assets/exame/app.js nem a sua versão de cache. Gerado por scripts/aplicar_trocas.py a partir de scripts/exame_ligacao_treinos_20261112.json (de scripts/exame_ligacao_treinos_20261112.py): não se edita à mão. Fica por cima da decisão 152 no Exame e nas páginas transversais (cuidado_exame_20261112), com a qual não partilha ficheiros; desfaz-se antes de todas as outras.",
+ "files": {
+  "exame/index.html": {
+   "base_sha256_lf": "7d48a0f9625320abd5eeb4712c4fd7615d3b79a43c87c8f8602b593bded69c28",
+   "after_sha256_lf": "fffd4a013d5b2c0558a8775213a6d3da5be4bb26e72252a4d05930dcb91d5ad3",
+   "edits": [
+    {
+     "location": "Página principal do Exame (exame/index.html), navegação do cabeçalho («Navegação da preparação»): a ligação «Treinos», entre «Provas em cartões» e «Programa e fontes»",
+     "old": "Provas em cartões</a><a href=\"#cobertura\">",
+     "new": "Provas em cartões</a><a href=\"treinos/\">Treinos</a><a href=\"#cobertura\">",
+     "occurrences": 1
+    }
+   ]
+  }
+ }
+}

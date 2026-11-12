@@ -850,8 +850,15 @@ def main():
                 # (frase da sugestão «continua» incluída), a camada mais recente, por cima dos créditos atrás de um «i» do pedido pt-1.
                 # 08/11/2026: antes de tudo, a decisão 152 no M2 (tabelas e espaços que não quebram), a camada mais recente, por
                 # cima do cartaz «Ler a cidade» e do nome novo da secção.
-                # 12/11/2026: antes de tudo, a decisão 152 no Exame e nas páginas transversais (uma tabela e espaços que não quebram),
-                # a camada mais recente, por cima da decisão 152 no M9.
+                # 12/11/2026: antes de tudo, a ligação «Treinos» na navegação da página principal do Exame (exame/index.html), a
+                # camada mais recente, por cima da decisão 152 no Exame e nas páginas transversais.
+                exame_ligacao_treinos = ROOT / 'tests/fixtures/exame-ligacao-treinos-edits-20261112.json'
+                for edit in reversed(json.loads(exame_ligacao_treinos.read_text('utf-8'))['files'].get(rel, {}).get('edits', [])):
+                    if conferencia.count(edit['new']) != edit['occurrences']:
+                        raise ManifestoDesatualizado(f'{rel}: ligação «Treinos» na página principal do Exame não confere')
+                    conferencia = conferencia.replace(edit['new'], edit['old'])
+                # 12/11/2026: a seguir, a decisão 152 no Exame e nas páginas transversais (uma tabela e espaços que não quebram),
+                # por cima da decisão 152 no M9.
                 cuidado_exame = ROOT / 'tests/fixtures/cuidado-exame-edits-20261112.json'
                 for edit in reversed(json.loads(cuidado_exame.read_text('utf-8'))['files'].get(rel, {}).get('edits', [])):
                     if conferencia.count(edit['new']) != edit['occurrences']:
