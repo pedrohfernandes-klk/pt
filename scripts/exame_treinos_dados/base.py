@@ -1,11 +1,13 @@
 """11/11/2026: base comum dos treinos da preparação de exame (exame/treinos/).
 
 Os textos oficiais vêm das transcrições tests/fixtures/prova-639-2026-*.json; o que é nosso está num módulo por treino
-(interpretacao.py, gramatica.py, escrita.py, poesia_contemporanea.py) e em indice.py. As páginas escrevem-se com
+(interpretacao.py, gramatica.py, escrita.py, poesia_contemporanea.py, conto.py) e em indice.py. As páginas escrevem-se com
 scripts/exame_treinos.py.
 
 12/11/2026: os treinos passam a vir de uma só lista (TREINOS); a navegação, a contagem («Treino n de N») e o nome da
 entrada («Os quatro treinos») saem dela. Para juntar um treino, acrescenta-se uma linha aqui e o módulo em exame_treinos.py.
+12/11/2026: mais o treino da sessão 18 (conto.py); licao(), que lê os cartões de uma lição do M8 para conferir citações, passa
+de poesia_contemporanea.py para aqui, porque serve os dois treinos de textos com direitos de autor.
 """
 import json, re, html, os
 
@@ -55,8 +57,27 @@ def aquecimento(sid, exame='../../'):
     return '<a href="%saquecimentos/%s/">aquecimento</a>' % (exame, sid)
 
 
+def licao(fid):
+    """Texto dos cartões da lição m8/licao-m8-<fid>/, sem marcas, com os espaços normalizados, e o HTML da página."""
+    h = open('%s/m8/licao-m8-%s/index.html' % (ROOT, fid), encoding='utf-8').read()
+    cartoes = json.JSONDecoder().raw_decode(h[h.index('CARTOES=[') + len('CARTOES='):])[0]
+
+    def cadeias(o):
+        if isinstance(o, str):
+            yield o
+        elif isinstance(o, dict):
+            for v in o.values():
+                yield from cadeias(v)
+        elif isinstance(o, list):
+            for v in o:
+                yield from cadeias(v)
+    t = ' '.join(re.sub(r'<[^>]+>', ' ', re.sub(r'<img[^>]*>|<svg.*?</svg>', ' ', s, flags=re.S)) for c in cartoes for s in cadeias(c))
+    t = re.sub(r'\s+', ' ', html.unescape(t))
+    return re.sub(r' ([:,.;])', r'\1', t), h
+
+
 # (pasta em exame/treinos/, nome na navegação), pela ordem dos treinos
-TREINOS = [('interpretacao', 'Interpretação'), ('gramatica', 'Gramática'), ('escrita', 'Escrita'), ('poesia-contemporanea', 'Poesia contemporânea')]
+TREINOS = [('interpretacao', 'Interpretação'), ('gramatica', 'Gramática'), ('escrita', 'Escrita'), ('poesia-contemporanea', 'Poesia contemporânea'), ('conto', 'Conto')]
 N_TREINOS = len(TREINOS)
 POR_EXTENSO = {3: 'três', 4: 'quatro', 5: 'cinco', 6: 'seis'}[N_TREINOS]
 OS_TREINOS = 'Os %s treinos' % POR_EXTENSO

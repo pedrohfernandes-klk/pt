@@ -1,5 +1,6 @@
 """11/11/2026: a entrada dos treinos (exame/treinos/).
-12/11/2026: quatro cartões, com o treino da sessão 17; a contagem do título vem de base.TREINOS."""
+12/11/2026: quatro cartões, com o treino da sessão 17; a contagem do título vem de base.TREINOS.
+12/11/2026: cinco cartões, com o treino da sessão 18 (conto)."""
 from .base import *
 
 CARTOES = [
@@ -15,6 +16,9 @@ CARTOES = [
     ('poesia-contemporanea', 'Treino 4. Poesia contemporânea', 'Dois poemas, um eixo',
      'Jorge de Sena, «Uma pequenina luz», e Eugénio de Andrade, «As Palavras». Comparas o modo como cada poema apresenta uma coisa frágil, com uma transcrição de cada um.',
      'Liga-se à ' + sessao('s17', 'Poesia contemporânea: três modos de dizer', '../') + ' e ao item 2 do Grupo I da 2.ª fase de 2026 (13 pontos). Os poemas têm direitos de autor: a página traz duas citações curtas e manda ler os poemas inteiros no manual.', 6),
+    ('conto', 'Treino 5. Conto', 'Uma inferência, dois apoios, um limite',
+     'Maria Judite de Carvalho, «George». Inferes um traço de George a partir de um recorte de duas frases, com dois elementos textuais, e dizes o que o recorte não permite concluir.',
+     'Liga-se à ' + sessao('s18', 'Conto: o que o texto deixa por dizer', '../') + ' e ao item 4 do Grupo I da 2.ª fase de 2026 (13 pontos). O conto tem direitos de autor: a página traz um recorte curto e manda ler o conto inteiro no manual.', 7),
 ]
 assert [c[0] for c in CARTOES] == [p for p, _ in TREINOS]
 CAPITAL = POR_EXTENSO.capitalize()
@@ -46,7 +50,7 @@ CORPO = (
 def construir():
     lint('indice', CORPO)
     out = (cabeca('../../', CAPITAL + ' treinos de exame | Português',
-                  CAPITAL + ' treinos da preparação de exame de Português: interpretação literária, gramática, escrita e comparação de poemas, cada um a partir de um item oficial de 2026.', True) +
+                  CAPITAL + ' treinos da preparação de exame de Português: interpretação literária, gramática, escrita, comparação de poemas e inferência num conto, cada um a partir de um item oficial de 2026.', True) +
            topo('../', './', '', None) + CORPO +
            rodape('../', './', '../../', '<span>As respostas ficam só neste dispositivo. Nada é enviado.</span>') + '</body></html>\n')
     return 'exame/treinos/index.html', out

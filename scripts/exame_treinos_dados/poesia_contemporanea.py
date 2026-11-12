@@ -8,26 +8,7 @@ frases em que se apoia também se conferem. Nenhum verso é reconstituído de me
 from .base import *
 
 
-# ---------- as lições do M8 de onde vêm as citações ----------
-def licao(fid):
-    """Texto dos cartões da lição m8/licao-m8-<fid>/, sem marcas, com os espaços normalizados."""
-    h = open('%s/m8/licao-m8-%s/index.html' % (ROOT, fid), encoding='utf-8').read()
-    cartoes = json.JSONDecoder().raw_decode(h[h.index('CARTOES=[') + len('CARTOES='):])[0]
-
-    def cadeias(o):
-        if isinstance(o, str):
-            yield o
-        elif isinstance(o, dict):
-            for v in o.values():
-                yield from cadeias(v)
-        elif isinstance(o, list):
-            for v in o:
-                yield from cadeias(v)
-    t = ' '.join(re.sub(r'<[^>]+>', ' ', re.sub(r'<img[^>]*>|<svg.*?</svg>', ' ', s, flags=re.S)) for c in cartoes for s in cadeias(c))
-    t = re.sub(r'\s+', ' ', html.unescape(t))
-    return re.sub(r' ([:,.;])', r'\1', t), h
-
-
+# ---------- as lições do M8 de onde vêm as citações (licao() está em base.py desde 12/11/2026) ----------
 L3, H3 = licao('f03')
 L4, H4 = licao('f04')
 L5, H5 = licao('f05')

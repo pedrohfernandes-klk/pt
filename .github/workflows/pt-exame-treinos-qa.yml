@@ -18,6 +18,11 @@ on:
       - 'm8/licao-m8-f04/**'
       - 'm8/licao-m8-f05/**'
       - 'exame/provas/2026-2f/grupo-i/**'
+      # 12/11/2026: o treino da sessão 18 confere o recorte de «George» com a lição M8-F16 e o resumo com a M8-F08 e o exercício longo.
+      - 'docs/pedagogia/exame-aquecimentos/s18.json'
+      - 'm8/licao-m8-f08/**'
+      - 'm8/licao-m8-f16/**'
+      - 'm8/m8-george-tres-idades/**'
       - 'tests/test_exame_treinos.py'
       - 'tests/browser_exame_treinos.cjs'
       - 'tests/fixtures/prova-639-*'

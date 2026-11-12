@@ -1,7 +1,8 @@
 /* 11/11/2026: os três treinos da preparação de exame (exame/treinos/) no navegador, a 390x844 e a 1280x900, em claro e em escuro,
    e com o armazenamento bloqueado. O sítio serve-se em /pt/, como em produção, para os ficheiros partilhados (tema e projeção) correrem.
    PT_CAPTURAS=<pasta> guarda as capturas; sem a variável, não se escreve nada.
-   12/11/2026: quatro treinos, com o da sessão 17 (poesia contemporânea, exame/treinos/poesia-contemporanea/), com a mesma cobertura dos outros três. */
+   12/11/2026: quatro treinos, com o da sessão 17 (poesia contemporânea, exame/treinos/poesia-contemporanea/), com a mesma cobertura dos outros três.
+   12/11/2026: cinco treinos, com o da sessão 18 (conto, exame/treinos/conto/), com a mesma cobertura dos outros quatro. */
 const {chromium}=require('playwright');
 const http=require('node:http'),fs=require('node:fs'),path=require('node:path');
 const root=path.resolve(__dirname,'..');
@@ -72,7 +73,8 @@ for(const [w,h] of [[390,844],[1280,900]]) for(const cs of ['light','dark']){
 
   /* ===== página do sítio: cabeçalho, ligações, ficheiros partilhados e tema ===== */
   // 12/11/2026: mais a página do treino da sessão 17
-  for(const pg of ['','interpretacao/','gramatica/','escrita/','poesia-contemporanea/']){
+  // 12/11/2026: e a do treino da sessão 18
+  for(const pg of ['','interpretacao/','gramatica/','escrita/','poesia-contemporanea/','conto/']){
     const mortos=[];const ouve=r=>{if(r.status()>=400)mortos.push(r.status()+' '+r.url());};p.on('response',ouve);
     await p.goto(BASE+pg);await p.waitForLoadState('networkidle');p.off('response',ouve);
     ok(mortos.length===0,tag+' '+(pg||'entrada')+': todos os ficheiros carregam '+mortos.join(' | '));
@@ -102,7 +104,8 @@ for(const [w,h] of [[390,844],[1280,900]]) for(const cs of ['light','dark']){
     await p.click('.epi-appearance-toggle');ok(await p.evaluate(()=>document.documentElement.getAttribute('data-theme'))===cs,tag+' o tema volta ao do sistema'); }
   // ligações às sessões e aos aquecimentos, que continuam onde estavam
   // 12/11/2026: mais o treino da sessão 17
-  for(const [pg,s] of [['interpretacao/','s14'],['gramatica/','s21'],['escrita/','s24'],['poesia-contemporanea/','s17']]){
+  // 12/11/2026: e o da sessão 18
+  for(const [pg,s] of [['interpretacao/','s14'],['gramatica/','s21'],['escrita/','s24'],['poesia-contemporanea/','s17'],['conto/','s18']]){
     await p.goto(BASE+pg);
     const l=await p.evaluate(()=>Array.from(document.querySelectorAll('.lede a')).map(a=>new URL(a.href).pathname+new URL(a.href).hash));
     ok(l.join(' ')==='/pt/exame/#'+s+' /pt/exame/aquecimentos/'+s+'/'||l.join(' ')==='/pt/exame/aquecimentos/'+s+'/ /pt/exame/#'+s,tag+' '+pg+' liga à sessão e ao aquecimento '+l.join(' '));
@@ -114,9 +117,11 @@ for(const [w,h] of [[390,844],[1280,900]]) for(const cs of ['light','dark']){
   await p.goto(BASE);
   { const l=await p.evaluate(()=>Array.from(document.querySelectorAll('.cartao-p')).map(c=>Array.from(c.querySelectorAll('a')).map(a=>new URL(a.href).pathname+new URL(a.href).hash).join(' ')));
     // 12/11/2026: quatro cartões, o último para o treino da sessão 17
-    ok(l.join(' | ')==='/pt/exame/#s14 /pt/exame/treinos/interpretacao/ | /pt/exame/#s21 /pt/exame/treinos/gramatica/ | /pt/exame/#s24 /pt/exame/treinos/escrita/ | /pt/exame/#s17 /pt/exame/treinos/poesia-contemporanea/',tag+' entrada liga aos quatro treinos e às quatro sessões '+l.join(' | '));
+    // 12/11/2026: cinco cartões, o último para o treino da sessão 18
+    ok(l.join(' | ')==='/pt/exame/#s14 /pt/exame/treinos/interpretacao/ | /pt/exame/#s21 /pt/exame/treinos/gramatica/ | /pt/exame/#s24 /pt/exame/treinos/escrita/ | /pt/exame/#s17 /pt/exame/treinos/poesia-contemporanea/ | /pt/exame/#s18 /pt/exame/treinos/conto/',tag+' entrada liga aos cinco treinos e às cinco sessões '+l.join(' | '));
     const nv=await p.evaluate(()=>Array.from(document.querySelectorAll('.tr-nav a')).map(a=>a.textContent+'>'+new URL(a.href).pathname).join(' '));
-    ok(nv==='Os quatro treinos>/pt/exame/treinos/ Interpretação>/pt/exame/treinos/interpretacao/ Gramática>/pt/exame/treinos/gramatica/ Escrita>/pt/exame/treinos/escrita/ Poesia contemporânea>/pt/exame/treinos/poesia-contemporanea/'&&/Quatro treinos de exame/.test(await p.locator('h1').innerText())&&!/[Tt]rês treinos/.test(await p.locator('body').innerText()),tag+' navegação entre os quatro treinos '+nv); }
+    // 12/11/2026: a navegação e o título contam cinco treinos; nem «três» nem «quatro» ficam na entrada
+    ok(nv==='Os cinco treinos>/pt/exame/treinos/ Interpretação>/pt/exame/treinos/interpretacao/ Gramática>/pt/exame/treinos/gramatica/ Escrita>/pt/exame/treinos/escrita/ Poesia contemporânea>/pt/exame/treinos/poesia-contemporanea/ Conto>/pt/exame/treinos/conto/'&&/Cinco treinos de exame/.test(await p.locator('h1').innerText())&&!/[Tt]rês treinos|[Qq]uatro treinos/.test(await p.locator('body').innerText()),tag+' navegação entre os cinco treinos '+nv); }
   ok(erros.length===0,tag+' página do sítio: erros de JavaScript: '+erros.join(' | '));erros.length=0;
   await p.evaluate(()=>localStorage.clear());
 
@@ -380,7 +385,8 @@ for(const [w,h] of [[390,844],[1280,900]]) for(const cs of ['light','dark']){
 
   /* ===== TREINO 4 (12/11/2026): poesia contemporânea, sessão 17 ===== */
   await p.goto(BASE+'poesia-contemporanea/');await semDeslize('p4 inicio');await cap('5-poesia-01-inicio',true);
-  ok(/Treino 4 de 4/i.test(await p.locator('.sobre').innerText())&&/Comparar dois poemas a partir de um eixo/.test(await p.locator('dl.liga').innerText())&&/2\.ª fase, Grupo I, Parte A, item 2/.test(await p.locator('dl.liga').innerText()),tag+' p4 operação do exame e item oficial no cimo');
+  // 12/11/2026: com o treino da sessão 18, este passa a ser o 4 de 5
+  ok(/Treino 4 de 5/i.test(await p.locator('.sobre').innerText())&&/Comparar dois poemas a partir de um eixo/.test(await p.locator('dl.liga').innerText())&&/2\.ª fase, Grupo I, Parte A, item 2/.test(await p.locator('dl.liga').innerText()),tag+' p4 operação do exame e item oficial no cimo');
   // texto de apoio: só as duas citações curtas, a remissão para o manual e as ligações às lições do M8
   { const a=await p.evaluate(()=>{const d=document.querySelector('#apoio-corpo [data-apoio="cit"]');return {oculto:d.hidden||document.getElementById('apoio').hidden,rot:document.getElementById('apoio-rot').textContent,
       cit:Array.from(d.querySelectorAll('.cit')).map(e=>e.textContent),txt:d.innerText,lig:Array.from(d.querySelectorAll('a')).map(x=>new URL(x.href).pathname)};});
@@ -500,9 +506,149 @@ for(const [w,h] of [[390,844],[1280,900]]) for(const cs of ['light','dark']){
   await p.locator('details.dobra').scrollIntoViewIfNeeded();await cap('5-poesia-11-item-oficial',true);
   await p.click('#apoio-bt');ok(await p.locator('#apoio-corpo').isHidden()&&await p.getAttribute('#apoio-bt','aria-expanded')==='false',tag+' p4 texto de apoio recolhe');await p.click('#apoio-bt');
   ok(erros.length===0,tag+' p4 erros de JavaScript: '+erros.join(' | '));erros.length=0;
+  /* ===== TREINO 5 (12/11/2026): conto, sessão 18 ===== */
+  { const RECORTE='À sua frente uma senhora de idade, primeiro esboçada, finalmente completa, olha-a atentamente. De idade não, George detesta eufemismos, mesmo só pensados, uma mulher velha.';
+  const FRASE2='De idade não, George detesta eufemismos, mesmo só pensados, uma mulher velha.';
+  // as palavras tocam-se pelo número de ordem: «De», «de» e «idade» repetem-se no recorte
+  const tki=async(id,idxs)=>{for(const i of idxs){await Q(id).locator('.tk').nth(i).click();}};
+  await p.goto(BASE+'conto/');await semDeslize('p5 inicio');await cap('6-conto-01-inicio',true);
+  ok(/Treino 5 de 5/i.test(await p.locator('.sobre').innerText())&&/Fundamentar uma inferência sobre uma personagem/.test(await p.locator('dl.liga').innerText())&&/2\.ª fase, Grupo I, Parte B, item 4/.test(await p.locator('dl.liga').innerText()),tag+' p5 operação do exame e item oficial no cimo');
+  // texto de apoio: só o recorte de duas frases, a referência, a remissão para o manual e as ligações às lições do M8
+  { const a=await p.evaluate(()=>{const d=document.querySelector('#apoio-corpo [data-apoio="cit"]');return {oculto:d.hidden||document.getElementById('apoio').hidden,rot:document.getElementById('apoio-rot').textContent,
+      cit:Array.from(d.querySelectorAll('.cit')).map(e=>e.textContent),txt:d.innerText,lig:Array.from(d.querySelectorAll('a')).map(x=>new URL(x.href).pathname)};});
+    ok(!a.oculto&&a.rot==='O recorte e onde ler o conto',tag+' p5 texto de apoio à vista com o seu rótulo '+a.rot);
+    ok(a.cit.length===1&&a.cit[0]==='«'+RECORTE+'»',tag+' p5 o texto de apoio traz só o recorte de duas frases '+a.cit.join(' | '));
+    ok(/Abre o manual/.test(a.txt)&&/Novo Sentidos 12/.test(a.txt)&&/direitos de autor/.test(a.txt)&&/Ou abre a lição/.test(a.txt)&&/Seta Despedida, Mem Martins, Europa-América, 1995/.test(a.txt)&&/resumo, não são frases do conto/.test(a.txt),tag+' p5 o texto de apoio dá a referência e remete para o manual e para as lições');
+    ok(a.lig.join(' ')==='/pt/m8/licao-m8-f16/ /pt/m8/licao-m8-f08/',tag+' p5 ligações às lições do M8 '+a.lig.join(' '));
+    for(const u of a.lig){const rr=await p.request.get(new URL(u,BASE).href);ok(rr.status()===200,tag+' p5 a lição '+u+' responde');}
+    const l16=await (await p.request.get(new URL('/pt/m8/licao-m8-f16/',BASE).href)).text();
+    ok(l16.includes('«'+RECORTE+'»'),tag+' p5 o recorte é, letra a letra, o que a lição M8-F16 publica'); }
+  await juntos('p5-pedido','p5 passo 1');await cap('6-conto-02-texto-junto-da-pergunta');
+  ok(/Infira dois traços da personalidade de Manuel/.test(await p.locator('#passo').innerText())&&/Explicite o dilema com o qual Baltasar se debate/.test(await p.locator('#passo').innerText())&&await p.locator('#passo .etq.oficial').count()===2&&await p.locator('#passo .etq.treino').count()>=2,tag+' p5 passo 1: os dois itens oficiais e o pedido de treino, com etiqueta');
+  // 1.ª falha: pista do erro; repetir a opção não gasta tentativa; 2.ª falha: segunda pista sem a resposta; certo à terceira
+  await op('p5-pedido',0);r=await ret('p5-pedido');
+  ok(/pista/.test(r.cls)&&/^PISTA/i.test(r.txt)&&/Relê o primeiro verbo/.test(r.txt)&&/mais duas tentativas/.test(r.txt),tag+' p5 1.ª falha: pista da opção escolhida e duas tentativas '+r.txt);
+  ok(await Q('p5-pedido').locator('.op').nth(0).getAttribute('aria-disabled')==='true',tag+' p5 opção tentada fica indisponível');
+  await aVista(Q('p5-pedido').locator('.retorno'),'p5 pista depois de errar');
+  await cap('6-conto-03-pista');
+  await Q('p5-pedido').locator('.op').nth(0).focus();await p.keyboard.press('Enter');r=await ret('p5-pedido');ok(/^PISTA/i.test(r.txt)&&/mais duas tentativas/.test(r.txt),tag+' p5 repetir a opção tentada (teclado) não gasta tentativa');
+  await op('p5-pedido',2);r=await ret('p5-pedido');
+  ok(/pista/.test(r.cls)&&/^SEGUNDA PISTA/i.test(r.txt)&&/aos bocados/.test(r.txt)&&/mais uma tentativa/.test(r.txt)&&!/A opção adequada é/.test(r.txt),tag+' p5 2.ª falha: segunda pista sem a resposta '+r.txt);
+  await aVista(Q('p5-pedido').locator('.retorno'),'p5 segunda pista');
+  await cap('6-conto-04-segunda-pista');
+  await op('p5-pedido',1);r=await ret('p5-pedido');ok(/certo/.test(r.cls)&&/terceira/i.test(r.txt)&&/um verbo, uma condição e um limite/.test(r.txt)&&/Infere dois traços da personalidade de Manuel/.test(r.txt),tag+' p5 certo à terceira '+r.txt.slice(0,60));
+  await passo(2);
+  f=await ativo();ok(f.tag==='H2',tag+' p5 ao mudar de passo o foco vai para o título '+JSON.stringify(f));
+  await juntos('p5-recusa','p5 passo 2');
+  ok((await Q('p5-recusa').locator('.seg').innerText()).replace(/\s+/g,' ').trim()===RECORTE&&(await Q('p5-pensados').locator('.seg').innerText()).replace(/\s+/g,' ').trim()===FRASE2&&await Q('p5-recusa').locator('.tk').count()===25&&await Q('p5-pensados').locator('.tk').count()===12,tag+' p5 as palavras em que se toca são as do recorte');
+  await verif('p5-recusa');ok(/Ainda não escolheste/.test(await aviso('p5-recusa')),tag+' p5 verificar sem seleção avisa e não gasta tentativa');
+  // seleção por teclado
+  await Q('p5-recusa').locator('.tk').nth(18).focus();await p.keyboard.press('Space');
+  ok(await Q('p5-recusa').locator('.tk').nth(18).getAttribute('aria-pressed')==='true'&&(await Q('p5-recusa').locator('.tk').nth(18).innerText())==='eufemismos,',tag+' p5 seleção de palavra por teclado');
+  await verif('p5-recusa');r=await ret('p5-recusa');
+  ok(/pista/.test(r.cls)&&/dá a razão da troca/.test(r.txt)&&/mais duas tentativas/.test(r.txt),tag+' p5 «eufemismos»: pista do erro cometido '+r.txt.slice(0,80));
+  await aVista(Q('p5-recusa').locator('.retorno'),'p5 pista da seleção');
+  await verif('p5-recusa');r=await ret('p5-recusa');
+  ok(/^PISTA/i.test(r.txt)&&/mais duas tentativas/.test(r.txt)&&/não gastaste outra tentativa/.test(await aviso('p5-recusa')),tag+' p5 verificar duas vezes a mesma seleção errada não gasta tentativa');
+  if(estreito){await tki('p5-recusa',[18,14,15]);await verif('p5-recusa');r=await ret('p5-recusa');
+    ok(/certo/.test(r.cls)&&/segunda/i.test(r.txt)&&/Aceite com «De idade»/.test(r.txt)&&/primeiro elemento textual/.test(r.txt),tag+' p5 fronteira equivalente aceite, à segunda '+r.txt.slice(0,80));}
+  else{await tki('p5-recusa',[18,6]);await verif('p5-recusa');r=await ret('p5-recusa');
+    ok(/^SEGUNDA PISTA/i.test(r.txt)&&/advérbio de negação/.test(r.txt)&&/mais uma tentativa/.test(r.txt)&&!/«não»/.test(r.txt),tag+' p5 segunda pista dirigida ao recorte, sem a resposta '+r.txt);
+    await tki('p5-recusa',[6,15]);await verif('p5-recusa');r=await ret('p5-recusa');ok(/certo/.test(r.cls)&&/terceira/i.test(r.txt)&&/primeiro elemento textual/.test(r.txt),tag+' p5 certo à terceira');}
+  await cap('6-conto-05-localizar-recusa');
+  await juntos('p5-pensados','p5 passo 2, segunda busca');
+  await tki('p5-pensados',[2]);await verif('p5-pensados');r=await ret('p5-pensados');ok(/pista/.test(r.cls)&&/não diz se ela é falada ou pensada/.test(r.txt)&&/mais duas tentativas/.test(r.txt),tag+' p5 «não»: pista do erro cometido');
+  if(estreito){await tki('p5-pensados',[2,6,7]);await verif('p5-pensados');r=await ret('p5-pensados');
+    ok(/^SEGUNDA PISTA/i.test(r.txt)&&/particípio/.test(r.txt)&&!/pensados/.test(r.txt),tag+' p5 segunda pista sem a resposta '+r.txt);
+    await tki('p5-pensados',[8]);await verif('p5-pensados');r=await ret('p5-pensados');ok(/certo/.test(r.cls)&&/terceira/i.test(r.txt)&&/Aceite com «mesmo só»/.test(r.txt),tag+' p5 certo à terceira (segunda busca)');}
+  else{await tki('p5-pensados',[2,7,8]);await verif('p5-pensados');r=await ret('p5-pensados');
+    ok(/certo/.test(r.cls)&&/segunda/i.test(r.txt)&&/Aceite com «mesmo só»/.test(r.txt),tag+' p5 fronteira equivalente aceite (segunda busca) '+r.txt.slice(0,80));}
+  ok(/segundo elemento textual/.test(r.txt)&&/lê o conto inteiro no manual/.test(r.txt),tag+' p5 a explicação manda ler o conto inteiro no manual');
+  await cap('6-conto-06-fronteira-equivalente');
+  // passo 3: o que o recorte diz, o que sugere e o que se lhe acrescenta; a explicação só aparece à terceira falha
+  await passo(3);await juntos('p5-separar','p5 passo 3');
+  await op('p5-separar',0);r=await ret('p5-separar');ok(/pista/.test(r.cls)&&/não precisas de inferir/.test(r.txt)&&/mais duas tentativas/.test(r.txt),tag+' p5 separar pista 1 (o que o recorte já diz)');
+  await op('p5-separar',1);r=await ret('p5-separar');ok(/pista/.test(r.cls)&&/^SEGUNDA PISTA/i.test(r.txt)&&/duas perguntas a cada afirmação/.test(r.txt)&&!/frontal/.test(r.txt),tag+' p5 separar segunda pista, sem a resposta');
+  ok(!/certa/.test(await Q('p5-separar').locator('.op').nth(2).getAttribute('class')),tag+' p5 a resposta não aparece antes da terceira falha');
+  await op('p5-separar',3);r=await ret('p5-separar');
+  ok(/expl/.test(r.cls)&&/três tentativas/i.test(r.txt)&&/O recorte diz/.test(r.txt)&&/O recorte sugere/.test(r.txt)&&/Tu acrescentas/.test(r.txt)&&/O recorte contraria/.test(r.txt)&&/racionalidade, pois, apesar do intenso sofrimento/.test(r.txt),tag+' p5 explicação só à terceira falha: diz, sugere, acrescentas, contraria, com o tópico oficial '+r.txt.slice(0,60));
+  ok(/certa/.test(await Q('p5-separar').locator('.op').nth(2).getAttribute('class')),tag+' p5 opção adequada marcada');
+  await aVista(Q('p5-separar').locator('.retorno'),'p5 explicação');
+  await cap('6-conto-07-diz-sugere-acrescentas');
+  // passo 4: resposta insuficiente e resposta adequada; certo à segunda
+  await passo(4);await juntos('p5-distinguir','p5 passo 4');
+  ok(/Resposta A\./.test(await p.locator('#passo').innerText())&&/Resposta B\./.test(await p.locator('#passo').innerText()),tag+' p5 passo 4: as duas respostas à vista');
+  await op('p5-distinguir',0);r=await ret('p5-distinguir');ok(/pista/.test(r.cls)&&/evidenciado no recorte/.test(r.txt)&&/mais duas tentativas/.test(r.txt),tag+' p5 distinguir pista 1');
+  await op('p5-distinguir',1);r=await ret('p5-distinguir');
+  ok(/certo/.test(r.cls)&&/segunda/i.test(r.txt)&&/começa por copiar/.test(r.txt)&&/dois dos tópicos seguintes, ou outros igualmente relevantes/.test(r.txt)&&/Infere um traço da personalidade de Manuel/.test(r.txt)&&/leitura nossa/.test(r.txt),tag+' p5 distinguir certo à segunda, com os critérios oficiais '+r.txt.slice(0,60));
+  await aVista(Q('p5-distinguir').locator('.retorno'),'p5 explicação da resposta insuficiente');
+  await cap('6-conto-08-insuficiente-ou-adequada');
+  await passo(5);
+  ok(await p.locator('#passos li:nth-child(6) button').isDisabled()&&await p.locator('#passos li:nth-child(7) button').isDisabled(),tag+' p5 passos 6 e 7 trancados antes de guardar');
+  ok(await p.locator('.retorno:visible').count()===0&&/A tua resposta trata só do recorte/.test(await p.locator('#passo').innerText())&&!/Resposta B\./.test(await p.locator('#passo').innerText()),tag+' p5 sem pistas à vista no passo de escrita');
+  ok(/guarda-se automaticamente/.test(await p.locator('.antes-bt').innerText()),tag+' p5 aviso sobre o rascunho antes do botão de guardar');
+  await p.fill('#t-p5-resposta',V1);
+  await cap('6-conto-09-escrever');
+  await p.click('button:has-text("Guardar a primeira versão")');
+  ok(await p.locator('.estado.ok').count()===1&&/Feita sem pistas à vista/.test(await p.locator('.estado.ok').innerText())&&/alterá-la em qualquer altura/.test(await p.locator('.estado.ok').innerText()),tag+' p5 primeira versão guardada');
+  await aVista(p.locator('.estado.ok'),'p5 confirmação de guardar');
+  await p.fill('#t-p5-resposta',V1+' '+LONGA);await semDeslize('p5 passo 5 com palavra muito longa');
+  ok(await p.locator('.alt:visible').count()===0,tag+' p5 alterar antes de ver os critérios não deixa aviso');
+  await passo(6);
+  ok((await p.locator('#v1-p5-resposta').innerText()).includes('Primeira versão do aluno')&&await p.locator('.alt:visible').count()===0,tag+' p5 primeira versão à vista na conferência, sem aviso');
+  await semDeslize('p5 passo 6 com palavra muito longa');
+  { const t=await p.locator('#passo').innerText();
+    ok(/Tópicos de resposta/.test(t)&&/O limite\./.test(t)&&/se o texto te mostrar outra coisa, vale o texto/.test(t)&&/igualdade de circunstâncias/.test(t)&&/ou outros igualmente relevantes/.test(t),tag+' p5 tópicos nossos e regra oficial das outras formulações');
+    const l=await p.evaluate(()=>Array.from(document.querySelectorAll('#passo .caixa.nossa a')).map(x=>new URL(x.href).pathname).join(' '));
+    ok(/Um exemplo comentado/.test(t)&&/Uma maneira de organizar \(é nossa, não é exigência do exame\)/.test(t)&&await p.locator('#passo .anot').count()===4&&l==='/pt/m8/m8-george-tres-idades/',tag+' p5 exemplo comentado e «Uma maneira de organizar» '+l);
+    const rr=await p.request.get(new URL('/pt/m8/m8-george-tres-idades/',BASE).href);ok(rr.status()===200&&/Passagem, leitura, limite/.test(await rr.text()),tag+' p5 o exercício do M8 responde e tem o cartão citado');
+    ok(await p.locator('#passo input[type=number]').count()===0&&await p.locator('#passo input[type=radio]').count()===0&&await p.locator('#passo .marca-l input[type=checkbox]').count()===9&&!/a tua classificação|pontos obtidos/i.test(t)&&/Não há classificação automática/.test(t),tag+' p5 sem classificação automática: só marcação aspeto a aspeto (9 aspetos)'); }
+  await p.click('text=Alterar a primeira versão');
+  await p.fill('#e-p5-resposta',V1+' Acrescento.');
+  ok(/alterada depois de veres os critérios/.test(await p.locator('.alt:visible').innerText()),tag+' p5 aviso «alterada depois de veres os critérios» junto da versão');
+  await aVista(p.locator('.alt'),'p5 aviso de alteração');
+  await p.fill('#e-p5-resposta',V1+' '+LONGA);ok(await p.locator('.alt:visible').count()===0,tag+' p5 repor o texto retira o aviso');
+  await p.fill('#e-p5-resposta',V1F);
+  await p.click('text=Fechar a alteração');
+  await p.locator('.marca-l input').nth(4).check();
+  await cap('6-conto-10-conferir',true);
+  await passo(7);
+  ok(await p.inputValue('#r-p5-resposta')===V1F,tag+' p5 versão revista começa pela primeira');
+  await semDeslize('p5 passo 7');
+  await p.click('text=Guardar a versão revista');
+  ok(/Ainda não mudaste nada/.test(await p.locator('.duas .estado').last().innerText())&&/Versão revista da resposta\s+Por fazer/.test(await reg()),tag+' p5 versão revista igual à primeira não é aceite');
+  await p.fill('#r-p5-resposta','Versão revista do aluno: George é frontal, com «De idade não».');
+  await p.click('text=Guardar a versão revista');
+  ok(/Versão revista guardada neste dispositivo/.test(await p.locator('.duas .estado.ok').innerText()),tag+' p5 versão revista guardada');
+  await p.reload();await p.waitForTimeout(150);
+  ok(/Passo 7 de 7/i.test(await p.locator('.passo-n').innerText()),tag+' p5 volta ao passo onde ficou');
+  ok((await p.locator('#v1-p5-resposta').innerText()).includes(V1)&&await p.inputValue('#r-p5-resposta')==='Versão revista do aluno: George é frontal, com «De idade não».',tag+' p5 duas versões guardadas depois de recarregar');
+  { const g=await reg();
+    ok(/manda fazer\s+Com pista, à terceira/.test(g)&&(estreito?/dizer a idade\s+Com pista, à segunda/.test(g)&&/não é dita\s+Com pista, à terceira/.test(g):/dizer a idade\s+Com pista, à terceira/.test(g)&&/não é dita\s+Com pista, à segunda/.test(g))&&/inferência com apoio\s+Com explicação/.test(g)&&/e porquê\s+Com pista, à segunda/.test(g),tag+' p5 registo distingue à segunda, à terceira e com explicação: '+g.replace(/\s+/g,' '));
+    ok((estreito?/inferência sobre George\s+Alterada depois de veres os critérios/.test(g):/inferência sobre George\s+Por ti, sem pistas à vista/.test(g))&&/Versão revista da resposta\s+Depois de veres os critérios/.test(g)&&!/[Ss]ozinh/.test(await p.locator('body').innerText()),tag+' p5 registo das duas versões: '+g.replace(/\s+/g,' ').slice(-200)); }
+  ok((await p.locator('.alt:visible').count())===(estreito?1:0),tag+' p5 aviso de alteração mantém-se depois de recarregar (só quando há alteração)');
+  { const t=await p.locator('#passo').innerText();const l=await p.evaluate(()=>Array.from(document.querySelectorAll('#passo .caixa.nossa a')).map(x=>new URL(x.href).pathname).join(' '));
+    ok(/Outra passagem/.test(t)&&l==='/pt/m8/licao-m8-f08/ /pt/m8/m8-george-tres-idades/'&&/a confirmar na Informação-Prova de 2027/.test(t),tag+' p5 outra passagem (lição M8-F08 e exercício do M8) e referência a 2027 '+l); }
+  await semDeslize('p5 fim');await cap('6-conto-11-duas-versoes-e-registo',true);
+  ok(await p.locator('#passos li button .fe:visible').count()===6,tag+' p5 os seis passos com resposta feita trazem a palavra «feito»');
+  await passo(6);ok(await p.locator('.marca-l input').nth(4).isChecked(),tag+' p5 conferência guardada');
+  await passo(3);r=await ret('p5-separar');ok(/expl/.test(r.cls),tag+' p5 estado das perguntas reposto');
+  await p.goBack();await p.waitForTimeout(120);
+  ok(/Passo 6 de 7/i.test(await p.locator('.passo-n').innerText())&&/\/conto\//.test(p.url()),tag+' p5 voltar atrás no navegador volta ao passo anterior');
+  // item oficial: abre sem deslize, com o excerto da prova (36 linhas), o item, o critério e as duas tabelas
+  await p.click('summary:has-text("Ver o item oficial")');await semDeslize('p5 item oficial aberto');
+  { const t=await p.locator('details.dobra .dentro').innerText();
+    ok(/Infira dois traços da personalidade de Manuel/.test(t)&&/Oh minha filha, minha filha!/.test(t)&&/imperscrutáveis – insondáveis/.test(t)&&/profunda religiosidade/.test(t)&&/abnegação\/altruísmo/.test(t)&&/Descritor de desempenho/.test(t)&&/Erros do tipo B/.test(t),tag+' p5 item oficial com o excerto, o item, o critério e as duas tabelas');
+    ok(await p.locator('details.dobra .dentro ol.prosa li').count()===36&&await p.locator('details.dobra .dentro ol.prosa li b').count()===7,tag+' p5 o excerto da prova tem as 36 linhas, sete delas com o nome da personagem'); }
+  // as únicas palavras de «George» na página são as do recorte: o resto do que se diz do conto vem como resumo das lições
+  ok((await p.locator('#apoio-corpo').innerText()).split(RECORTE).length-1===1&&/resumo, não são frases do conto/.test(await p.locator('#apoio-corpo').innerText()),tag+' p5 o recorte e o resumo das lições, identificado como resumo');
+  await p.locator('details.dobra').scrollIntoViewIfNeeded();await cap('6-conto-12-item-oficial',true);
+  await p.click('#apoio-bt');ok(await p.locator('#apoio-corpo').isHidden()&&await p.getAttribute('#apoio-bt','aria-expanded')==='false',tag+' p5 texto de apoio recolhe');await p.click('#apoio-bt');
+  ok(erros.length===0,tag+' p5 erros de JavaScript: '+erros.join(' | '));erros.length=0; }
   // 11/11/2026: nenhuma pergunta de escolha tem menos de quatro opções (três tentativas e duas pistas em todas, como diz a entrada)
   // 12/11/2026: também no treino da sessão 17
-  for(const pg of ['interpretacao','gramatica','escrita','poesia-contemporanea']){
+  // 12/11/2026: e no da sessão 18
+  for(const pg of ['interpretacao','gramatica','escrita','poesia-contemporanea','conto']){
     await p.goto(BASE+pg+'/');
     const n=await p.evaluate(()=>{const d=JSON.parse(document.querySelector('script[type="application/json"]').textContent);const m=[];
       (function v(x){if(Array.isArray(x)){x.forEach(v);}else if(x&&typeof x==='object'){if(x.t==='escolha'){m.push([x.id,x.o.length,!!x.pista2]);}Object.keys(x).forEach(function(k){v(x[k]);});}})(d);return m;});
@@ -512,6 +658,8 @@ for(const [w,h] of [[390,844],[1280,900]]) for(const cs of ['light','dark']){
   await p.goto(BASE);ok(/primeira versão guardada; versão revista guardada/.test(await p.locator('[data-estado="escrita"]').innerText()),tag+' índice mostra o estado');
   // 12/11/2026: e o do treino da sessão 17
   ok(/primeira versão guardada; versão revista guardada/.test(await p.locator('[data-estado="poesia-contemporanea"]').innerText()),tag+' índice mostra o estado do treino 4: '+await p.locator('[data-estado="poesia-contemporanea"]').innerText());
+  // 12/11/2026: e o do treino da sessão 18
+  ok(/primeira versão guardada; versão revista guardada/.test(await p.locator('[data-estado="conto"]').innerText()),tag+' índice mostra o estado do treino 5: '+await p.locator('[data-estado="conto"]').innerText());
   await cap('0-indice-com-estado',true);
   // legenda coerente com as caixas
   ok(/os títulos e as frases de ligação são nossos/.test(await p.locator('.legenda').innerText())&&!/sem cortes/.test(await p.content()),tag+' legenda da etiqueta «Item oficial» ajustada');
@@ -531,7 +679,8 @@ for(const [w,h] of [[390,844],[1280,900]]) for(const cs of ['light','dark']){
   await c2.addInitScript(()=>{Object.defineProperty(window,'localStorage',{configurable:true,get(){throw new Error('armazenamento bloqueado');}});});
   p=await c2.newPage();escuta(p);
   // 12/11/2026: também no treino da sessão 17
-  for(const [pil,npasso,cx,nrev] of [['interpretacao',4,'#t-p1-resposta',6],['escrita',4,'#t-p3-texto',6],['poesia-contemporanea',4,'#t-p4-resposta',6]]){
+  // 12/11/2026: e no da sessão 18, que tem sete passos (escreve-se no 5.º e revê-se no 7.º)
+  for(const [pil,npasso,cx,nrev] of [['interpretacao',4,'#t-p1-resposta',6],['escrita',4,'#t-p3-texto',6],['poesia-contemporanea',4,'#t-p4-resposta',6],['conto',5,'#t-p5-resposta',7]]){
     await p.goto(BASE+pil+'/');
     ok(await p.locator('#aviso-guarda').isVisible()&&/não deixa guardar/.test(await p.locator('#pe-guarda').innerText())&&!/localStorage/.test(await p.locator('#pe-guarda').innerText()),tag+' sem armazenamento ('+pil+'): aviso no cimo e rodapé verdadeiro');
     await passo(npasso);
