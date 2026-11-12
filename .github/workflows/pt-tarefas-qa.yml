@@ -84,6 +84,24 @@ on:
       - 'tests/fixtures/cuidado-m9-edits-20261112.json'
       - 'tests/test_cuidado_m9.py'
       - 'tests/browser_cuidado_m9.py'
+      # 12/11/2026: a decisão 152 no Exame e nas páginas transversais (uma tabela e espaços que não quebram nas sessões, no
+      # laboratório, nas provas em cartões e nos aquecimentos do Exame, nas obras, nas páginas dos anos, no mapa e na entrada),
+      # a camada mais recente, o seu teste e os ficheiros que ela muda (as páginas exame/treinos/ ficam fora da camada).
+      - 'assets/exame/**'
+      - 'exame/laboratorio/**'
+      - 'exame/aquecimentos/**'
+      - 'exame/provas/**'
+      - 'docs/pedagogia/exame-aquecimentos/**'
+      - 'scripts/exame_aquecimentos.py'
+      - 'scripts/provas/**'
+      - 'obras/**'
+      - '[123]/index.html'
+      - 'mapa/index.html'
+      - 'index.html'
+      - 'scripts/cuidado_exame_20261112.*'
+      - 'tests/fixtures/cuidado-exame-edits-20261112.json'
+      - 'tests/test_cuidado_exame.py'
+      - 'tests/browser_cuidado_exame.py'
       - 'tests/test_autonomia_154.py'
       # 02/11/2026: não há tarefas de grupo (camada das tarefas individuais).
       - 'scripts/tarefas_individuais_20261102.*'

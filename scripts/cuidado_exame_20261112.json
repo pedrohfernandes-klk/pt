@@ -6761,22 +6761,6 @@
  },
  {
   "ficheiro": "assets/exame/sessoes.json",
-  "local": "assets/exame/sessoes.json: «27:18–28:23» que não se parte (com o contexto «18–28»)",
-  "antigo": "18–28",
-  "novo": "18–⁠28",
-  "ocorrencias": 1,
-  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do Exame e das páginas transversais, achado 73 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
- },
- {
-  "ficheiro": "assets/exame/sessoes.json",
-  "local": "assets/exame/sessoes.json: «29:04–30:12» que não se parte (com o contexto «04–30»)",
-  "antigo": "04–30",
-  "novo": "04–⁠30",
-  "ocorrencias": 1,
-  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do Exame e das páginas transversais, achado 73 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
- },
- {
-  "ficheiro": "assets/exame/sessoes.json",
   "local": "assets/exame/sessoes.json: «séc. XIII» que não se parte",
   "antigo": "séc. XIII",
   "novo": "séc. XIII",

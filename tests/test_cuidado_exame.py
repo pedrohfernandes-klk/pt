@@ -46,7 +46,8 @@ PROVAS = {66: '2026-1f/grupo-ii', 67: '2026-1f/grupo-iii', 69: '2026-2f/grupo-ii
           72: '2026-2f/grupo-i'}
 # Nas provas em cartões: (ocorrências que mudam, ocorrências que a conferência contou), por achado.
 PROVAS_CONTAS = {66: (124, 171), 67: (93, 160), 69: (216, 270), 70: (162, 231), 71: (282, 358), 72: (403, 477)}
-NUMEROS = (1753, 65)
+# 12/11/2026 (revisão): saem as duas trocas dos rótulos dos trechos de vídeo da s27, que também viram title (eram 1753).
+NUMEROS = (1751, 65)
 
 
 def ler(rel):
@@ -221,6 +222,25 @@ class CuidadoExame(unittest.TestCase):
                 self.assertEqual(q['options'], s['correction']['check']['options'])
                 self.assertEqual(sum(a != b for a, b in zip(q['options'], q0['options'])), 4)
         self.assertEqual(mudadas, ['s19'])
+        # 12/11/2026 (revisão): os rótulos dos trechos de vídeo (video.clips[].label) ficam como estavam, sem espaços invisíveis:
+        # assets/exame/app.js põe-nos no <h3> do trecho e também no title do vídeo, como o data-titulo dos vídeos das obras.
+        self.assertIn("f.title=c.label+' · '+session.video.author", ler(APP))
+        rotulos = [c['label'] for s in atual['sessions'] if s.get('video') for c in s['video']['clips']]
+        self.assertEqual(rotulos, [c['label'] for s in antes['sessions'] if s.get('video') for c in s['video']['clips']])
+        self.assertEqual(len(rotulos), 2)
+        self.assertFalse(any(N in x or WJ in x for x in rotulos))
+        self.assertEqual(C.RECUSADOS_TITLE, {73: ['27:18–28:23', '29:04–30:12']})
+        for seq in C.RECUSADOS_TITLE[73]:
+            self.assertEqual(sum(seq in x for x in rotulos), 1)
+            self.assertEqual(ler(SESSOES).count(seq), 1)
+            self.assertNotIn(seq, [p[0] for x in C.ACHADOS_B if x['i'] == 73 for p in x['pares']])
+        # Nenhum outro texto que a camada mudou nas sessões vai para um atributo: nos motores do Exame, os únicos title, alt e
+        # aria-label montados com dados são o title do vídeo (o rótulo do trecho e o autor) e o título do documento (o título
+        # da sessão), e nenhum desses campos mudou.
+        for s, s0 in zip(atual['sessions'], antes['sessions']):
+            self.assertEqual(s['title'], s0['title'])
+            if s.get('video'):
+                self.assertEqual({k: v for k, v in s['video'].items()}, s0['video'])
         # As chaves dos filtros («10.º ano»…) têm de ser iguais nas sessões e no app.js: ficam como estavam.
         self.assertEqual({s['group'] for s in atual['sessions']}, {s['group'] for s in antes['sessions']})
         self.assertFalse(any(N in s['group'] or N in s['id'] or N in s['source']['url'] for s in atual['sessions']))
@@ -390,6 +410,37 @@ class CuidadoExame(unittest.TestCase):
         self.assertIn("run: python -m unittest discover -s tests -p 'test_cuidado_exame.py' -v", apoios)
         self.assertIn('run: python tests/browser_cuidado_exame.py', apoios)
         self.assertLess(apoios.index('run: python tests/browser_cuidado_m9.py'), apoios.index('run: python tests/browser_cuidado_exame.py'))
+        # 12/11/2026 (revisão): os fluxos que conferem ou desfazem esta camada arrancam quando ela muda, como o teste do M9 exige
+        # para a sua: o script, o JSON e o manifesto nos caminhos dos quatro fluxos (no do cartaz, nos dois blocos e com a linha
+        # datada no cabeçalho).
+        for nome in ('pt-tarefas-qa.yml', 'pt-apoios-qa.yml', 'pt-exame-laboratorio-qa.yml', 'cartaz-qa.yml'):
+            texto = ler('.github/workflows/' + nome)
+            for caminho in ('scripts/cuidado_exame_20261112.*', MANIFESTO_REL):
+                self.assertIn(f"'{caminho}'", texto, nome)
+        cartaz = ler('.github/workflows/cartaz-qa.yml')
+        blocos = re.findall(r'^    paths: (\[.*\])$', cartaz, re.M)
+        self.assertEqual(len(blocos), 2)
+        self.assertEqual(blocos[0], blocos[1])
+        for caminho in ('scripts/cuidado_exame_20261112.*', MANIFESTO_REL, '[123]/index.html', 'index.html'):
+            self.assertIn(f"'{caminho}'", blocos[0])
+        self.assertRegex(cartaz.split('\non:')[0], r'\n# 12/11/2026: decisão 152 no Exame e nas páginas transversais, a camada cuidado_exame_20261112 ')
+        # Nos fluxos que correm o teste desta camada, todos os ficheiros que ela muda, o script, o manifesto e os testes estão
+        # nos caminhos do pedido (conferido com os padrões do fluxo, um a um); as páginas exame/treinos/ não estão na camada.
+        def padrao(glob):
+            partes = re.split(r'(\*\*|\*|\[[^\]]+\])', glob)
+            return re.compile(''.join('.*' if x == '**' else '[^/]*' if x == '*' else x if x.startswith('[') else re.escape(x)
+                                      for x in partes) + '$')
+        da_camada = list(MANIFESTO['files']) + ['scripts/cuidado_exame_20261112.py', 'scripts/cuidado_exame_20261112.json', MANIFESTO_REL,
+                                              'tests/test_cuidado_exame.py', 'tests/browser_cuidado_exame.py']
+        self.assertEqual(len(da_camada), 70)
+        for nome in ('pt-tarefas-qa.yml', 'pt-apoios-qa.yml'):
+            texto = ler('.github/workflows/' + nome)
+            self.assertIn("-p 'test_cuidado_exame.py' -v", texto)
+            cabeca = texto[texto.index('  pull_request:\n    paths:\n'):texto.index('\npermissions:')]
+            padroes = [padrao(g) for g in re.findall(r"^      - '([^']+)'$", cabeca, re.M)]
+            self.assertGreater(len(padroes), 50)
+            for rel in da_camada:
+                self.assertTrue(any(q.match(rel) for q in padroes), (nome, rel))
 
     def test_gerador_da_o_mesmo_json(self):
         todas, _, n = C.construir()

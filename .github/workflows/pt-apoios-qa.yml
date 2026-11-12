@@ -247,6 +247,7 @@ jobs:
       - name: Tabelas e referências do M9 no navegador
         run: python tests/browser_cuidado_m9.py
       # 12/11/2026: decisão 152 no Exame e nas páginas transversais: a tabela das fases da sessão a 360 e 900 px, nos dois temas,
-      # sem transbordar, e as referências sem se partirem.
+      # sem transbordar, as quatro listas novas das provas em cartões à vista, com os itens todos, dentro do cartão, e as
+      # referências sem se partirem (também nos cartões das provas e dos aquecimentos do Exame).
       - name: Tabela e referências do Exame e das páginas transversais no navegador
         run: python tests/browser_cuidado_exame.py

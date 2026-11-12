@@ -33,8 +33,8 @@ Segue o modelo da camada do M9 (scripts/cuidado_m9_20261112.py; o livro de regra
   «alt» (e aria-label, href, title, content e data-titulo), o <title>, o texto dos desenhos (SVG), a «frase» dos cartões
   sublinhar, as «palavras» dos cartões frase e os «passos» dos cartões ordenar, as notas internas dos dados, como do M1 ao M9; o
   texto de apoio dos aquecimentos (<p class="pr">: as obras e o resumo que as acompanha); e, nas sessões do Exame, o texto das
-  obras (a chave «text») e as perguntas antigas («warmup», que a página não mostra e que tests/test_exame_alignment.py compara com
-  as lições), salvo as quatro opções da pergunta da s19 copiada da M9-F01, que mudam nas duas cópias (AJUSTES).
+  obras (a chave «text»), os rótulos dos trechos de vídeo (que assets/exame/app.js também põe no title do vídeo) e as perguntas
+  antigas («warmup», que a página não mostra e que tests/test_exame_alignment.py compara com as lições), salvo as quatro opções da pergunta da s19 copiada da M9-F01, que mudam nas duas cópias (AJUSTES).
 - C: nas provas em cartões, quatro enumerações da nossa leitura dos critérios passam a lista: os níveis de cada parâmetro do
   Grupo III da 2.ª fase (achado 3: a conferência ficou com a sublista em vez da tabela), os níveis de pontuação do item 7 das duas
   fases (achados 4 e 5) e os tipos de erro do Quadro 1 no Grupo III da 1.ª fase (achado 6). As palavras ficam todas, pela mesma
@@ -629,8 +629,7 @@ ACHADOS_B = [
                 ('estrofes 1 e 5', 'estrofes{N}1 e{N}5', 1), ('ato II, cena I', 'ato{N}II, cena{N}I', 1),
                 ('1.ª publicação', '1.ª{N}publicação', 3), ('cantiga 1308', 'cantiga{N}1308', 1),
                 ('caps. I e II', 'caps.{N}I e{N}II', 2), ('cantiga 861', 'cantiga{N}861', 1),
-                ('soneto XIII', 'soneto{N}XIII', 1), ('27:18–28:23', '27:18–{J}28:23', 1),
-                ('29:04–30:12', '29:04–{J}30:12', 1), ('séc. XIII', 'séc.{N}XIII', 2), ('cap. CXVI', 'cap.{N}CXVI', 1),
+                ('soneto XIII', 'soneto{N}XIII', 1), ('séc. XIII', 'séc.{N}XIII', 2), ('cap. CXVI', 'cap.{N}CXVI', 1),
                 ('vv. 1 a 4', 'vv.{N}1 a{N}4', 1), ('12.º anos', '12.º{N}anos', 1), ('D. Dinis', 'D.{N}Dinis', 2),
                 ('cap. XII', 'cap.{N}XII', 1), ('cap. 115', 'cap.{N}115', 1), ('D. João', 'D.{N}João', 2),
                 ('cap. 11', 'cap.{N}11', 1), ('cap. V', 'cap.{N}V', 2), ('ato II', 'ato{N}II', 1), ('cap. I', 'cap.{N}I', 2),
@@ -731,6 +730,10 @@ ANALOGIA = {26: ['Prova 639'],
 #   na verificação «Depois da revisão»; e «v. 1» já estava preso (camada do M6). As outras quatro opções dessa pergunta mudam
 #   aqui nas duas cópias (as perguntas antigas, que a página não mostra, e a verificação), para a pergunta ficar igual nas
 #   duas: são as trocas literais abaixo, em vez dos pares «século XVI», «século XVII», «século XIX» e «século XX».
+# - no achado 73, os pares «27:18–28:23» e «29:04–30:12» ficam de fora (revisão de 12/11/2026): estão nos rótulos dos dois trechos
+#   de vídeo da sessão s27 (video.clips[].label), que assets/exame/app.js põe no <h3> do trecho e também no title do vídeo
+#   (f.title=c.label+…). É o caso do data-titulo dos vídeos das obras, que vira title: o rótulo fica como estava
+#   (fora_de_alcance recusa qualquer par que lá caia e RECUSADOS_TITLE guarda os dois, para o teste os conferir).
 # - no achado 67 (Prova 639 de 2026, 1.ª fase, Grupo III), o par «p. 13» fica de fora: as frases que o levam em texto nosso vêm de
 #   scripts/provas/dados/2026-1f/prova.json (a imagem com direitos, que o gerador põe nos cartões), que esta camada não muda.
 AJUSTES = {
@@ -740,6 +743,7 @@ AJUSTES = {
                       for o in ('No início do século XVI', 'No fim do século XX', 'No fim do século XVII', 'No início do século XIX')],
          'ja_presos': {'século XVIII': 2, 'D. João V': 1, 'século XX': 1, 'v. 1': 1}},
 }
+RECUSADOS_TITLE = {73: ['27:18–28:23', '29:04–30:12']}
 for _x in ACHADOS_B:
     _x.update({k: v for k, v in AJUSTES.get(_x['i'], {}).items() if k != 'ja_presos'})
 
@@ -1074,7 +1078,8 @@ def fora_de_alcance(texto, s):
     sublinhar, as «palavras» de um cartão frase, os «passos» de um ordenar, o texto dos desenhos (SVG, que não muda de linha), os
     comentários e as notas internas dos dados («_nota»), como do M1 ao M9; e, neste âmbito, o texto de apoio dos aquecimentos
     (<p class="pr">) e, nas sessões do Exame (assets/exame/sessoes.json), as perguntas antigas («warmup», que a página não
-    mostra e que tests/test_exame_alignment.py compara com as lições) e o texto das obras (a chave «text»); nas provas em
+    mostra e que tests/test_exame_alignment.py compara com as lições), o texto das obras (a chave «text») e os rótulos dos trechos
+    de vídeo (video.clips[].label, que assets/exame/app.js também põe no title do vídeo); nas provas em
     cartões, tudo o que não é texto nosso (fora_da_prova)."""
     if _nota_interna(texto, s):
         return 'nota interna dos dados'
@@ -1099,6 +1104,8 @@ def fora_de_alcance(texto, s):
             return 'perguntas antigas da sessão (warmup), que a página não mostra'
         if _em_valor_de(texto, s, 'text'):
             return 'texto da obra (chave «text»)'
+        if _em_valor_de(texto, s, 'clips') and _em_valor_de(texto, s, 'label'):
+            return 'rótulo de um trecho de vídeo, que vira title'
     return None
 
 
