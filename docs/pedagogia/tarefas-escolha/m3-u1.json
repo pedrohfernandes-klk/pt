@@ -121,5 +121,655 @@
   "produto": "Responde às duas perguntas e escolhe <strong>um tema</strong>: escrever versos (A) ou uma legenda de exposição (B).",
   "etapa": "1. Responde às duas perguntas",
   "entrega": "Escreve o tema escolhido (A ou B) no topo. Fotografa as respostas, o tema escolhido e as duas linhas finais. Confirma que as fotografias mostram o trabalho completo e entrega-as na tarefa do Teams."
+ },
+ "facil": {
+  "kicker": "Tarefa individual, 90 minutos",
+  "fazer": [
+   "Aquece com os cartões.",
+   "Responde a duas perguntas.",
+   "Escolhe um tema: escrever versos (A) ou uma legenda de exposição (B).",
+   "Escreve duas linhas finais.",
+   "Revê e entrega no Teams."
+  ],
+  "modo": "Trabalhas à mão, com consulta.",
+  "entregas": {
+   "intro": "Fotografias do teu trabalho em papel, na tarefa do Teams. As fotografias mostram:",
+   "itens": [
+    "a letra do teu tema (A ou B), no topo;",
+    "as respostas às perguntas 1 e 2;",
+    "o texto do teu tema;",
+    "as duas linhas finais."
+   ]
+  },
+  "quadro": {
+   "titulo": "Tempo e tamanho",
+   "colunas": [
+    "Tempo",
+    "O que fazes",
+    "Palavras"
+   ],
+   "linhas": [
+    [
+     "10 min",
+     "Aquecimento em cartões, com consulta",
+     ""
+    ],
+    [
+     "5 min",
+     "Leitura do enunciado",
+     ""
+    ],
+    [
+     {
+      "t": "60 min",
+      "linhas": 4
+     },
+     "Pergunta 1",
+     "cerca de 60"
+    ],
+    [
+     null,
+     "Pergunta 2",
+     "cerca de 60"
+    ],
+    [
+     null,
+     "Tema A ou B",
+     "80 a 120"
+    ],
+    [
+     null,
+     "Duas linhas finais",
+     "não contam"
+    ],
+    [
+     "15 min",
+     "Revisão e entrega",
+     ""
+    ],
+    [
+     "90 min",
+     "Total",
+     "200 a 240"
+    ]
+   ],
+   "notas": [
+    "As divisões em sílabas também não contam para as palavras."
+   ]
+  },
+  "aquecer": {
+   "titulo": "Aquecimento",
+   "texto": "Começa aqui: 10 minutos de cartões, com consulta."
+  },
+  "textos": [
+   {
+    "id": "texto-1",
+    "rotulo": "Texto 1",
+    "titulo": "<i>Os Lusíadas</i>, canto I, estâncias 1 a 3 (a Proposição), de Luís de Camões",
+    "numerar": 5,
+    "estrofes": [
+     {
+      "versos": [
+       "As armas e os barões assinalados,",
+       "Que da ocidental praia Lusitana,",
+       "Por mares nunca de antes navegados,",
+       "Passaram ainda além da Taprobana,",
+       "Em perigos e guerras esforçados,",
+       "Mais do que prometia a força humana,",
+       "E entre gente remota edificaram",
+       "Novo Reino, que tanto sublimaram;"
+      ],
+      "rotulo": "Canto I, estância 1"
+     },
+     {
+      "versos": [
+       "E também as memórias gloriosas",
+       "Daqueles Reis, que foram dilatando",
+       "A Fé, o Império, e as terras viciosas",
+       "De África e de Ásia andaram devastando;",
+       "E aqueles, que por obras valerosas",
+       "Se vão da lei da morte libertando;",
+       "Cantando espalharei por toda parte,",
+       "Se a tanto me ajudar o engenho e arte."
+      ],
+      "rotulo": "Canto I, estância 2"
+     },
+     {
+      "versos": [
+       "Cessem do sábio Grego e do Troiano",
+       "As navegações grandes que fizeram;",
+       "Cale-se de Alexandro e de Trajano",
+       "A fama das vitórias que tiveram;",
+       "Que eu canto o peito ilustre Lusitano,",
+       "A quem Neptuno e Marte obedeceram:",
+       "Cesse tudo o que a Musa antígua canta,",
+       "Que outro valor mais alto se alevanta."
+      ],
+      "rotulo": "Canto I, estância 3"
+     }
+    ],
+    "glossario": [
+     [
+      "barões assinalados",
+      "homens notáveis"
+     ],
+     [
+      "Taprobana",
+      "o Ceilão, hoje Sri Lanka"
+     ],
+     [
+      "sublimaram",
+      "engrandeceram"
+     ],
+     [
+      "dilatando",
+      "alargando"
+     ],
+     [
+      "viciosas",
+      "corrompidas (na visão do poeta)"
+     ],
+     [
+      "lei da morte",
+      "o esquecimento"
+     ],
+     [
+      "o sábio Grego",
+      "Ulisses"
+     ],
+     [
+      "o Troiano",
+      "Eneias"
+     ],
+     [
+      "Alexandro",
+      "Alexandre Magno"
+     ],
+     [
+      "antígua",
+      "antiga"
+     ],
+     [
+      "se alevanta",
+      "se levanta"
+     ]
+    ],
+    "fonte": "Luís de Camões, <i>Os Lusíadas</i> (1572), I, 1 a 3 (grafia modernizada).",
+    "origem": "m3/licao-m3-f02/index.html, linha 431, cartões 4, 7, 13 (copiado letra a letra)"
+   },
+   {
+    "id": "texto-2",
+    "rotulo": "Texto 2",
+    "titulo": "«Descalça vai para a fonte», de Luís de Camões",
+    "numerar": 5,
+    "estrofes": [
+     {
+      "rotulo": "Mote",
+      "versos": [
+       "Descalça vai para a fonte",
+       "Leonor pela verdura;",
+       "Vai formosa, e não segura."
+      ]
+     },
+     {
+      "rotulo": "Voltas",
+      "versos": [
+       "Leva na cabeça o pote,",
+       "O testo nas mãos de prata,",
+       "Cinta de fina escarlata,",
+       "Sainho de chamalote;",
+       "Traz a vasquinha de cote,",
+       "Mais branca que a neve pura;",
+       "Vai formosa, e não segura."
+      ]
+     },
+     {
+      "versos": [
+       "Descobre a touca a garganta,",
+       "Cabelos de ouro entrançado,",
+       "Fita de cor de encarnado,",
+       "Tão linda que o mundo espanta;",
+       "Chove nela graça tanta,",
+       "Que dá graça à formosura;",
+       "Vai formosa, e não segura."
+      ]
+     }
+    ],
+    "glossario": [
+     [
+      "verdura",
+      "campo verde"
+     ],
+     [
+      "testo",
+      "tampa"
+     ],
+     [
+      "escarlata",
+      "tecido vermelho"
+     ],
+     [
+      "sainho",
+      "casaco curto"
+     ],
+     [
+      "chamalote",
+      "tecido de lã e seda"
+     ],
+     [
+      "vasquinha de cote",
+      "saia de uso diário"
+     ],
+     [
+      "não segura",
+      "insegura, exposta (ao amor, aos olhares)"
+     ]
+    ],
+    "fonte": "Luís de Camões, redondilhas (<i>Obras Completas</i>, t. III) (grafia modernizada).",
+    "origem": "m3/licao-m3-f05/index.html, linha 431, cartões 3, 8 (copiado letra a letra)",
+    "escolher": {
+     "de": 4,
+     "ate": 17,
+     "frase": "Escolhe o teu verso na parte com a barra: as voltas (versos 4 a 17)."
+    }
+   },
+   {
+    "id": "texto-3",
+    "rotulo": "Texto 3",
+    "titulo": "«Alma minha gentil, que te partiste», de Luís de Camões",
+    "numerar": 5,
+    "estrofes": [
+     {
+      "versos": [
+       "Alma minha gentil, que te partiste",
+       "Tão cedo desta vida descontente,",
+       "Repousa lá no céu eternamente,",
+       "E viva eu cá na terra sempre triste."
+      ]
+     },
+     {
+      "versos": [
+       "Se lá no assento etéreo, onde subiste,",
+       "Memória desta vida se consente,",
+       "Não te esqueças daquele amor ardente",
+       "Que já nos olhos meus tão puro viste."
+      ]
+     },
+     {
+      "versos": [
+       "E se vires que pode merecer-te",
+       "Alguma cousa a dor que me ficou",
+       "Da mágoa, sem remédio, de perder-te,"
+      ]
+     },
+     {
+      "versos": [
+       "Roga a Deus, que teus anos encurtou,",
+       "Que tão cedo de cá me leve a ver-te,",
+       "Quão cedo de meus olhos te levou."
+      ]
+     }
+    ],
+    "glossario": [
+     [
+      "gentil",
+      "nobre"
+     ],
+     [
+      "assento etéreo",
+      "céu"
+     ],
+     [
+      "se consente",
+      "é permitida"
+     ],
+     [
+      "roga",
+      "pede"
+     ]
+    ],
+    "fonte": "Luís de Camões, <i>Rhythmas</i> (1595), soneto XIII (grafia modernizada).",
+    "origem": "m3/licao-m3-f09/index.html, linha 431, cartões 3, 9 (copiado letra a letra)",
+    "escolher": {
+     "de": 3,
+     "ate": 14,
+     "frase": "Escolhe o teu verso na parte com a barra: do verso 3 ao verso 14."
+    }
+   },
+   {
+    "id": "texto-4",
+    "rotulo": "Texto 4",
+    "titulo": "<i>Os Lusíadas</i>, canto IV, estâncias 94 e 95 (o Velho do Restelo), de Luís de Camões",
+    "numerar": 5,
+    "estrofes": [
+     {
+      "versos": [
+       "Mas um velho d'aspeito venerando,",
+       "Que ficava nas praias, entre a gente,",
+       "Postos em nós os olhos, meneando",
+       "Três vezes a cabeça, descontente,",
+       "A voz pesada um pouco alevantando,",
+       "Que nós no mar ouvimos claramente,",
+       "C'um saber só de experiências feito,",
+       "Tais palavras tirou do experto peito:"
+      ],
+      "rotulo": "Canto IV, estância 94"
+     },
+     {
+      "versos": [
+       "Ó glória de mandar! Ó vã cobiça",
+       "Desta vaidade, a quem chamamos Fama!",
+       "Ó fraudulento gosto, que se atiça",
+       "C'uma aura popular, que honra se chama!",
+       "Que castigo tamanho e que justiça",
+       "Fazes no peito vão que muito te ama!",
+       "Que mortes, que perigos, que tormentas,",
+       "Que crueldades neles experimentas!"
+      ],
+      "rotulo": "Canto IV, estância 95"
+     }
+    ],
+    "glossario": [
+     [
+      "aspeito venerando",
+      "aspeto respeitável"
+     ],
+     [
+      "meneando",
+      "abanando"
+     ],
+     [
+      "alevantando",
+      "levantando"
+     ],
+     [
+      "experto",
+      "experiente"
+     ],
+     [
+      "se atiça",
+      "se acende"
+     ],
+     [
+      "aura popular",
+      "o aplauso do povo"
+     ],
+     [
+      "peito vão",
+      "coração vaidoso"
+     ]
+    ],
+    "fonte": "Luís de Camões, <i>Os Lusíadas</i> (1572), IV, 94 e 95 (grafia modernizada).",
+    "origem": "m3/licao-m3-f03/index.html, linha 431, cartões 4, 8 (copiado letra a letra)"
+   }
+  ],
+  "perguntas": [
+   {
+    "titulo": "Quem é celebrado e quem fica de fora?",
+    "meta": "Cerca de 60 palavras.",
+    "relogio": "O relógio de produção começa depois da leitura.",
+    "ler": "Já leste este texto nas lições. Está aqui para consultares e citares.",
+    "textos": [
+     "texto-1"
+    ],
+    "onde_esta": {
+     "id": "kit",
+     "titulo": "Onde está o texto: o <i>Kit</i> de Patrícia Lino",
+     "frases": [
+      "O <i>Kit</i> tem direitos de autor. Por isso não está copiado aqui.",
+      "Lê os excertos no livro ou na cópia da aula.",
+      "Também podes rever os objetos na <a href=\"../../m3/licao-m3-f02/\">lição F02</a>, em «Para entender»."
+     ],
+     "lista_titulo": "Os seis objetos, como estão na lição F02:",
+     "lista": [
+      "<b>Frasquinho de Mar Português:</b> uma caravela num frasco de vidro, para inalar; ao exalar, pedem-se sons sibilantes «como os que se encontra na palavra imposição, sacrifício, massificação, cinismo, cobiça, execução ou zombaria».",
+      "<b>A Colónia:</b> a versão colonial portuguesa do Monopólio; avança-se quantas casas se quiser e, ao parar, grita-se «É MEU!».",
+      "<b>História Docinha:</b> um pacote de açúcar para adoçar a conversa sobre a colonização, recomendado para «situações de grande constrangimento, exaltação ou nervosismo».",
+      "<b>Disco Riscado Lusitanístico:</b> um disco com seis faixas que se repetem, como «QUANDO PORTUGAL DESCOBRIU O MUNDO...» e «O QUE FIZEMOS NÃO FOI ASSIM TÃO MAU!».",
+      "<b>Remendo Imperial Personalizado:</b> um remendo com a frase «O império dos homens», aplicado a ferro de engomar pela mulher, mãe ou irmã.",
+      "<b>Sebastiana:</b> «uma máquina de fazer nevoeiro que propicia as condições atmosféricas ideais para o reaparecimento de Dom Sebastião»."
+     ],
+     "fonte": "Patrícia Lino, <i>O Kit de Sobrevivência do Descobridor Português no Mundo Anticolonial</i> (excertos no manual ou fornecidos pelo docente).",
+     "origem": "m3/licao-m3-f02/index.html, linha 431, cartão «Para entender»"
+    },
+    "pedido_titulo": "O que fazes",
+    "alineas": [
+     "No Texto 1, cita uma expressão sobre quem partiu.",
+     "Cita outra expressão do Texto 1, sobre quem vivia nas terras aonde eles chegaram.",
+     "Escolhe um objeto do <i>Kit</i> de Patrícia Lino.",
+     "Explica o que esse objeto mostra e a Proposição cala.",
+     "Escreve um facto sobre a Proposição.",
+     "Escreve um juízo sobre a Proposição."
+    ],
+    "ajudas": [
+     "Um facto confirma-se. Um juízo discute-se."
+    ],
+    "citar": "Copia as palavras exatas do texto. Põe-nas entre aspas: «…».",
+    "exemplos": [
+     {
+      "titulo": "Exemplo com outro caso: a etiqueta da pimenta",
+      "paragrafos": [
+       "«A rota das especiarias» é a história que se conta, e «Quem apanhava a pimenta no Malabar» é a que ficou por contar.",
+       "Facto: a pimenta vinha pela rota das especiarias.",
+       "Juízo: uma etiqueta que só fala da rota esconde quem trabalhou."
+      ]
+     }
+    ]
+   },
+   {
+    "titulo": "Duas imagens da amada.",
+    "meta": "Cerca de 60 palavras. As divisões em sílabas não contam.",
+    "ler": "Já leste estes textos nas lições. Estão aqui para consultares e citares.",
+    "textos": [
+     "texto-2",
+     "texto-3"
+    ],
+    "pedido_titulo": "O que fazes",
+    "antes": "Escolhe dois versos:",
+    "escolhas": [
+     "um verso do Texto 2, nas voltas (versos 4 a 17);",
+     "outro verso do Texto 3, a partir do verso 3."
+    ],
+    "para_cada": "Para cada verso, faz isto:",
+    "alineas": [
+     "Cita o verso.",
+     "Identifica um recurso.",
+     "Explica o que esse recurso mostra da amada.",
+     "Divide o verso em sílabas métricas.",
+     "Indica a medida."
+    ],
+    "ajudas": [
+     "Um recurso pode mostrar como a amada é vista, onde está ou o que a voz lhe diz."
+    ],
+    "citar": "Copia o verso letra a letra. Põe-no entre aspas: «…».",
+    "exemplos": [
+     {
+      "titulo": "Exemplo com outro poema, «Perdigão perdeu a pena»: citar e explicar",
+      "paragrafos": [
+       "«Perde a pena do voar, / Ganha a pena do tormento» usa os dois sentidos de «pena», e o amante perde a esperança e ganha a dor."
+      ]
+     },
+     {
+      "de": "exemplos",
+      "n": 0
+     }
+    ]
+   }
+  ],
+  "temas_titulo": "Escolhe um tema: A ou B",
+  "temas_nota": "Faz só um tema. Escreve 80 a 120 palavras.",
+  "temas": [
+   {
+    "letra": "A",
+    "nome": "A medida velha, hoje",
+    "resumo": "Escreves versos.",
+    "intro": "Imagina uma Leonor de hoje a caminho da escola.",
+    "passos": [
+     "Escreve um mote de dois versos.",
+     "Escreve uma volta de cinco versos.",
+     "Usa a redondilha maior no mote e na volta.",
+     "Termina a volta com o último verso do mote.",
+     "Inclui cores.",
+     "Inclui uma hipérbole.",
+     "Divide dois dos teus versos em sílabas métricas.",
+     "Cita o verso de Camões que imitaste.",
+     "Explica a imitação.",
+     "Indica uma diferença entre as duas Leonores."
+    ],
+    "material": {
+     "titulo": "Só para o tema A: um exemplo com outro caso",
+     "exemplos": [
+      {
+       "titulo": "Exemplo com outra figura e outro modelo: um autocarro, à maneira de «Perdigão perdeu a pena»",
+       "paragrafos": [
+        "Vem o autocarro das sete, / e ninguém o vê chegar.",
+        "Traz o tejadilho cinza, / as portas cor de limão, / demora mais do que um século / a subir o quarteirão; / e ninguém o vê chegar.",
+        "Divisões: As / por / tas / cor / de / li / mão, sete; De / mo / ra / mais / do / que_um / sé(culo), sete.",
+        "Imitei a forma de «Perdigão perdeu a pena»: um mote de dois versos, e o último a fechar a volta.",
+        "A diferença: o perdigão cai por querer subir alto; o meu autocarro nem consegue subir a rua."
+       ]
+      }
+     ]
+    }
+   },
+   {
+    "letra": "B",
+    "nome": "Pedra e verso",
+    "resumo": "Escreves uma legenda de exposição.",
+    "intro": "Escreve uma legenda de exposição para a fotografia do túmulo de Camões. A fotografia está mais abaixo, no material do tema B.",
+    "passos": [
+     "Descreve a imagem em duas frases.",
+     "Inclui dois factos do dossiê.",
+     "Escolhe um verso da Proposição (<a href=\"#texto-1\">Texto 1</a>) ou do Velho do Restelo (Texto 4).",
+     "Indica o canto e a estância desse verso.",
+     "Explica a escolha.",
+     "Diz o que a legenda não pode afirmar."
+    ],
+    "material": {
+     "titulo": "Só para o tema B: a fotografia, o dossiê e o Texto 4",
+     "figura": {
+      "de": "m3/licao-m3-f04/index.html",
+      "alt": "Túmulo de Luís de Camões, Mosteiro dos Jerónimos (fotografia de ProtoplasmaKid, 2019)",
+      "largura": 640,
+      "altura": 427,
+      "legenda": "Túmulo de Luís de Camões, Mosteiro dos Jerónimos.",
+      "credito_rotulo": "Créditos da imagem: Túmulo de Luís de Camões, Mosteiro dos Jerónimos",
+      "credito": "Túmulo de Luís de Camões, Mosteiro dos Jerónimos (fotografia de ProtoplasmaKid, 2019). <a rel=\"license\" href=\"https://creativecommons.org/licenses/by-sa/4.0/deed.pt\">CC BY-SA 4.0</a>."
+     },
+     "dossie": true,
+     "textos": [
+      "texto-4"
+     ],
+     "notas": [
+      "O Texto 1 (a Proposição) está na <a href=\"#texto-1\">pergunta 1</a>."
+     ],
+     "exemplos": [
+      {
+       "titulo": "Exemplo com outra imagem: o frontispício da primeira edição de <i>Os Lusíadas</i>",
+       "paragrafos": [
+        "Uma página de rosto antiga, com o título ao centro, entre duas colunas torcidas, e uma ave de asas abertas no alto. Em baixo, a data, 1572.",
+        "Factos: é a epopeia tal como saiu em 1572; a imagem está em domínio público e vem da Academia Brasileira de Letras.",
+        "Ao lado, «Contra um bicho da terra tão pequeno?» (I, 106), porque um livro solene guarda um verso que faz o homem pequeno.",
+        "O que a legenda não pode afirmar: que este exemplar foi de Camões, porque nenhuma das fontes o diz."
+       ]
+      }
+     ]
+    }
+   }
+  ],
+  "finais": {
+   "titulo": "Duas linhas finais",
+   "texto": "Fecha com duas linhas. Não contam para as palavras.",
+   "passos": [
+    "Responde: o que passaste a perguntar quando um poema canta alguém?",
+    "Aponta o verso que te ajudou."
+   ]
+  },
+  "verificar_titulo": "Antes de entregar, verifica",
+  "verificar_texto": "Responde sim ou não a cada pergunta. Se for não, completa o teu trabalho.",
+  "verificar": [
+   {
+    "titulo": "Pergunta 1",
+    "itens": [
+     "Citei uma expressão sobre quem partiu e outra sobre quem lá vivia?",
+     "Expliquei o que um objeto do <i>Kit</i> mostra e a Proposição cala?",
+     "Escrevi um facto e um juízo sobre a Proposição?"
+    ]
+   },
+   {
+    "titulo": "Pergunta 2",
+    "itens": [
+     "Citei um verso das voltas do Texto 2 e um verso do Texto 3, a partir do verso 3?",
+     "Identifiquei um recurso em cada verso?",
+     "Expliquei o que cada recurso mostra da amada?",
+     "Dividi os dois versos em sílabas métricas e indiquei a medida?"
+    ]
+   },
+   {
+    "titulo": "Tema A",
+    "so": "Só se fizeste o tema A",
+    "itens": [
+     "Tenho um mote de dois versos e uma volta de cinco, em redondilha maior?",
+     "A volta termina com o último verso do mote?",
+     "Incluí cores e uma hipérbole?",
+     "Dividi dois dos meus versos em sílabas métricas?",
+     "Citei o verso de Camões que imitei e expliquei a imitação?",
+     "Indiquei uma diferença entre as duas Leonores?"
+    ]
+   },
+   {
+    "titulo": "Tema B",
+    "so": "Só se fizeste o tema B",
+    "itens": [
+     "Descrevi a imagem em duas frases?",
+     "Incluí dois factos do dossiê?",
+     "Escolhi um verso da Proposição ou do Velho do Restelo e indiquei canto e estância?",
+     "Expliquei a escolha?",
+     "Disse o que a legenda não pode afirmar?"
+    ]
+   },
+   {
+    "titulo": "O trabalho todo",
+    "itens": [
+     "As respostas estão articuladas?",
+     "Tenho 200 a 240 palavras?",
+     "Revi a escrita?",
+     "Escrevi as duas linhas finais?",
+     "Escrevi o tema escolhido (A ou B) no topo?"
+    ]
+   }
+  ],
+  "entrega_titulo": "Entrega no Teams",
+  "entrega": [
+   "Escreve o tema escolhido (A ou B) no topo.",
+   "Fotografa as respostas, o texto do teu tema e as duas linhas finais.",
+   "Confirma que as fotografias mostram o trabalho completo.",
+   "Entrega as fotografias na tarefa do Teams."
+  ],
+  "rever_titulo": "Se precisares de rever",
+  "rever_texto": "Os textos já estão nesta página. As lições servem para rever a matéria.",
+  "rever": [
+   {
+    "para": "Pergunta 1",
+    "texto": "Lição F02, <a href=\"../../m3/licao-m3-f02/\">Duas versões de 1498</a>. Relê «Para entender»: os seis objetos do <i>Kit</i>."
+   },
+   {
+    "para": "Pergunta 2",
+    "texto": "Lição F05, <a href=\"../../m3/licao-m3-f05/\">Leonor e o perdigão</a>. Relê «Para entender» (medida velha, mote e voltas) e «A calçada do verso» (como se contam as sílabas)."
+   },
+   {
+    "para": "Pergunta 2",
+    "texto": "Lição F09, <a href=\"../../m3/licao-m3-f09/\">Uma alma gentil, um «não sei quê»</a>. Relê «A calçada do verso»: o decassílabo."
+   },
+   {
+    "para": "Tema B",
+    "texto": "Lição F03, <a href=\"../../m3/licao-m3-f03/\">Jerónimos: ler um edifício</a>. Relê «Linha de vida»: o mosteiro. Não precisas de lá ter ido: chega o dossiê."
+   },
+   {
+    "para": "Tema B",
+    "texto": "Lição F04, <a href=\"../../m3/licao-m3-f04/\">Objetos com duas histórias</a>. Relê «O essencial» (a etiqueta, a fonte verificada e o que não se confirmou) e «Em paralelo» (duas histórias do mesmo objeto)."
+   }
+  ],
+  "opcional_titulo": "Experimentar uma pergunta"
  }
 }

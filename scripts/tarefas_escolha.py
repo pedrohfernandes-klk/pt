@@ -23,6 +23,9 @@ espaço que não quebra (U+00A0). As páginas sem estas chaves saem iguais, byte
 parágrafo vazio que sobra no fim («<p></p>») sai. As páginas sem listas no fim de um tema saem iguais, byte a byte.
 08/11/2026: decisão 152, M6: com «nao_partir_grelha», a ligação à grelha («Grelha /20: como é avaliado…») leva espaço que não
 quebra (U+00A0) entre «Grelha» e «/20». As páginas sem a chave saem iguais, byte a byte.
+12/11/2026: PILOTO por aprovar pelo docente (m3-u1): com a chave opcional «facil», a página sai do molde «mais fácil de fazer»
+(scripts/tarefa_facil.py: os textos para análise completos junto de cada pergunta, um pedido por alínea, o que se entrega à vista,
+verificação em perguntas de sim ou não). A tarefa é a mesma. As páginas sem a chave saem iguais, byte a byte.
 Uso: python3 scripts/tarefas_escolha.py [--saida PASTA] [slug ...]
 """
 import json
@@ -174,7 +177,15 @@ def tarefa(d, com_grelha, raiz=ROOT):
     titulo = escape(re.sub(r'<[^>]+>', '', d['titulo']), quote=False)
     # 06/11/2026: decisão 152. «nao_partir»: os números do molde com espaço que não quebra (só nas tarefas que o pedem).
     sep = '\xa0' if d.get('nao_partir') else ' '
-    html = (HEAD.format(title=titulo, unit=unit, V=V, mod=mod, MOD=mod.upper(), sep=sep)
+    if 'facil' in d:
+        # 12/11/2026: piloto do molde «mais fácil de fazer» (só as tarefas com a chave «facil»).
+        if str(Path(__file__).resolve().parent) not in sys.path:
+            sys.path.insert(0, str(Path(__file__).resolve().parent))
+        import tarefa_facil
+        assert tarefa_facil.LIGACAO == LIGACAO, slug
+        html = tarefa_facil.pagina(d, com_grelha, HEAD.format(title=titulo, unit=unit, V=V, mod=mod, MOD=mod.upper(), sep=sep), FOOT, ROOT)
+    else:
+      html = (HEAD.format(title=titulo, unit=unit, V=V, mod=mod, MOD=mod.upper(), sep=sep)
             + (warmup_cards(slug, a, sep) if cartoes else
                warmup(slug, a['instrucao'], [tuple(x) for x in a['anatomia']], a['afirmacao'], a['pergunta'], op(a['opcoes'])))
             + header(slug, unit, d['titulo'], d['lead'], d['nucleo'], [(t['letra'], t['nome'], t['texto']) for t in d['temas']],
