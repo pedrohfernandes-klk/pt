@@ -4,6 +4,8 @@ from pathlib import Path
 from html.parser import HTMLParser
 import json,re,unittest
 from auditoria_20261028 import undo_tabela_0511
+# 11/11/2026: decisão 152 no M7 (camada cuidado_m7_20261111): os espaços que não quebram da M7-F10 (achado 19) desfazem-se antes.
+from auditoria_20261028 import undo_cuidado_m7_1111
 ROOT=Path(__file__).resolve().parents[1]
 F10='m7/licao-m7-f10/index.html'
 def cards(source):return json.JSONDecoder().raw_decode(source.split('CARTOES=',1)[1].lstrip())[0]
@@ -37,7 +39,9 @@ class TabelaMovimentos(unittest.TestCase):
  def test_o_texto_da_tabela_e_o_dos_paragrafos(self):
   # Nada se inventa: cada movimento e cada citação já estavam nos seis parágrafos de antes.
   antes=cards(undo_tabela_0511(F10,(ROOT/F10).read_text('utf-8')))[2]['html']
-  html=cards((ROOT/F10).read_text('utf-8'))[2]['html']
+  # 11/11/2026: a decisão 152 no M7 prende «D. Sebastião» nos títulos citados na tabela (U+00A0, achado 19, camada mais recente);
+  # a tabela compara-se com os parágrafos sem essa camada (desfeita com contagem estrita), letra a letra, como antes.
+  html=cards(undo_cuidado_m7_1111(F10,(ROOT/F10).read_text('utf-8')))[2]['html']
   t=Tabela(html.split('<table',1)[1].split('</table>',1)[0])
   for r in t.rows[1:]:
    letra,mov,ex=r[0]['text'],r[1]['text'],r[2]['text']

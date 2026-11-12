@@ -223,7 +223,8 @@ class Aquecimentos(unittest.TestCase):
         # Os dois exemplos resolvidos e o dossiê do tema B.
         self.assertIn('<h3 id="exemplos">Ver como se faz</h3>', s)
         self.assertEqual(s.count('<article class="task-example">'), 2)
-        for marca in ('[S]', '[R]', '[M]', '[N]', 'Dossiê do tema B', '1578', '20 de fevereiro de 1933', 'sebastianismo', 'Madalena'):
+        # 11/11/2026: decisão 152 no M7 (achado 73): a data do dossiê leva espaço que não quebra (U+00A0) a seguir ao dia e antes do ano.
+        for marca in ('[S]', '[R]', '[M]', '[N]', 'Dossiê do tema B', '1578', '20\xa0de fevereiro de\xa01933', 'sebastianismo', 'Madalena'):
             self.assertIn(marca, s)
         # 29/10/2026 (revisão pedagógica, C4): a grelha tira pontos a um facto sem data, por isso cada facto do dossiê tem
         # data; o de Garrett é a outra voz.
@@ -354,14 +355,17 @@ class Aquecimentos(unittest.TestCase):
         blocos, _ = json.JSONDecoder().raw_decode(guia, i)
         self.assertEqual(sum(b[0] for b in blocos), 90)
         for n, (minutos, nome, texto) in enumerate(blocos):
-            self.assertIn(f'<div class="t"><b>{nome}, {minutos} min</b><span>{texto}</span></div>', guia)
+            # 11/11/2026: decisão 152 no M7 (achado 7): no guia, o tempo de cada bloco leva espaço que não quebra (U+00A0) entre o
+            # número e «min»; o nome, os minutos e o texto são os de BLOCOS, como antes.
+            self.assertIn(f'<div class="t"><b>{nome}, {minutos}\xa0min</b><span>{texto}</span></div>', guia)
         self.assertIn(f'<span class="relogio" id="relogio">{blocos[0][0]}:00</span>', guia)
         i = guia.index('T=[{') + 2
         T, _ = json.JSONDecoder().raw_decode(guia, i)
         # 30/10/2026 (decisão 3a do docente): o aquecimento da U2 fica fixo em 10 minutos, como o da U3, para a aula caber
         # nos 90 (10 de cartões e 5 de apresentação no bloco «Aquecer» de 15); camada lingua-pessoa-m7-edits-20261030.
-        self.assertEqual(T[0]['passos'][0], 'No início da aula, faz o aquecimento em cartões (10 minutos).')
-        self.assertEqual(T[1]['passos'][0], 'No início da aula, faz o aquecimento em cartões (10 minutos).')
+        # 11/11/2026: decisão 152 no M7 (achado 7): «10 minutos» leva espaço que não quebra (U+00A0) nos dois passos.
+        self.assertEqual(T[0]['passos'][0], 'No início da aula, faz o aquecimento em cartões (10\xa0minutos).')
+        self.assertEqual(T[1]['passos'][0], 'No início da aula, faz o aquecimento em cartões (10\xa0minutos).')
         ficheiros = re.findall(r'M7_[A-Za-z0-9]+_[A-Za-z]+', json.dumps(T, ensure_ascii=False))
         self.assertEqual(sorted(set(ficheiros)), ['M7_Extra_Mensagem', 'M7_Tarefa2_Heteronimo', 'M7_Tarefa3_Opiniao'])
         self.assertIn('_Mensagem_', T[1]['titulo'])

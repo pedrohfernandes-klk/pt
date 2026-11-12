@@ -850,6 +850,13 @@ def main():
                 # (frase da sugestão «continua» incluída), a camada mais recente, por cima dos créditos atrás de um «i» do pedido pt-1.
                 # 08/11/2026: antes de tudo, a decisão 152 no M2 (tabelas e espaços que não quebram), a camada mais recente, por
                 # cima do cartaz «Ler a cidade» e do nome novo da secção.
+                # 11/11/2026: antes de tudo, a decisão 152 no M7 (tabelas e espaços que não quebram), a camada mais recente, por
+                # cima da decisão 152 no M6.
+                cuidado_m7 = ROOT / 'tests/fixtures/cuidado-m7-edits-20261111.json'
+                for edit in reversed(json.loads(cuidado_m7.read_text('utf-8'))['files'].get(rel, {}).get('edits', [])):
+                    if conferencia.count(edit['new']) != edit['occurrences']:
+                        raise ManifestoDesatualizado(f'{rel}: decisão 152 no M7 não confere')
+                    conferencia = conferencia.replace(edit['new'], edit['old'])
                 # 08/11/2026: antes de tudo, a decisão 152 no M6 (tabelas e espaços que não quebram), a camada mais recente, por
                 # cima da decisão 152 no M5.
                 cuidado_m6 = ROOT / 'tests/fixtures/cuidado-m6-edits-20261108.json'

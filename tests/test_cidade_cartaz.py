@@ -158,7 +158,8 @@ class CidadeCartaz(unittest.TestCase):
                             # 08/11/2026: a decisão 152 no M5 (cuidado_m5_20261108: tabelas onde há itens paralelos e espaços que não quebram nas lições e páginas do M5, incluindo o índice, o guia, o mapa e o portefólio do módulo, e nas tarefas, nos aquecimentos e nas grelhas das suas unidades) passa a camada mais recente, por cima da decisão 152 no M4; desfaz-se primeiro, com a mesma exigência.
                             # 08/11/2026: a decisão 152 no M6 (cuidado_m6_20261108: tabelas onde há itens paralelos e espaços que não quebram nas lições e páginas do M6, incluindo o índice, o guia, o mapa e o portefólio do módulo, as páginas «Ler a fundo» e «Pensar devagar», e nas tarefas, nos aquecimentos e nas grelhas das suas unidades) passa a camada mais recente, por cima da decisão 152 no M5; desfaz-se primeiro, com a mesma exigência.
                             # 11/11/2026 (fusão do main 4bf4a053 no pedido #191): a revisão dos enunciados das tarefas (tarefas_claras_20261110, #192) fica entre a decisão 152 no M6, que continua a mais recente e se desfaz primeiro, e a decisão 152 no M5.
-                            '--verificar', '--desfazer-antes', 'tests/fixtures/cuidado-m6-edits-20261108.json', '--desfazer-antes', 'tests/fixtures/tarefas-claras-edits-20261110.json', '--desfazer-antes', 'tests/fixtures/cuidado-m5-edits-20261108.json', '--desfazer-antes', 'tests/fixtures/cuidado-m4-edits-20261108.json', '--desfazer-antes', 'tests/fixtures/cuidado-m3-edits-20261108.json', '--desfazer-antes', 'tests/fixtures/cuidado-m2-edits-20261108.json'], cwd=ROOT,
+                            # 11/11/2026: a decisão 152 no M7 (cuidado_m7_20261111: tabelas onde há itens paralelos e espaços que não quebram nas lições e páginas do M7, incluindo o índice, o guia, o mapa e o portefólio do módulo, as páginas «Ler a fundo», «Olhar» e «Pensar devagar», e nas tarefas, nos aquecimentos e na grelha das suas unidades) passa a camada mais recente, por cima da decisão 152 no M6; desfaz-se primeiro, com a mesma exigência.
+                            '--verificar', '--desfazer-antes', 'tests/fixtures/cuidado-m7-edits-20261111.json', '--desfazer-antes', 'tests/fixtures/cuidado-m6-edits-20261108.json', '--desfazer-antes', 'tests/fixtures/tarefas-claras-edits-20261110.json', '--desfazer-antes', 'tests/fixtures/cuidado-m5-edits-20261108.json', '--desfazer-antes', 'tests/fixtures/cuidado-m4-edits-20261108.json', '--desfazer-antes', 'tests/fixtures/cuidado-m3-edits-20261108.json', '--desfazer-antes', 'tests/fixtures/cuidado-m2-edits-20261108.json'], cwd=ROOT,
                            capture_output=True, text=True, encoding='utf-8')
         self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
         self.assertIn('246 trocas em 242 ficheiros: 246 aplicadas, 0 por aplicar; manifesto em dia.', r.stdout)
@@ -224,15 +225,17 @@ class CidadeCartaz(unittest.TestCase):
         # 08/11/2026: por cima da decisão 152 no M3 fica a decisão 152 no M4 (cuidado_m4_20261108): a ordem ganha mais uma posição, com a mesma exigência.
         # 08/11/2026: por cima da decisão 152 no M4 fica a decisão 152 no M5 (cuidado_m5_20261108): a ordem ganha mais uma posição, com a mesma exigência.
         # 08/11/2026: por cima da decisão 152 no M5 fica a decisão 152 no M6 (cuidado_m6_20261108): a ordem ganha mais uma posição, com a mesma exigência.
-        self.assertEqual(verificar_camadas.LAYERS[0], ('cuidado_m6_20261108', 'cuidado-m6-edits-20261108'))
+        # 11/11/2026: por cima da decisão 152 no M6 fica a decisão 152 no M7 (cuidado_m7_20261111): a ordem ganha mais uma posição, com a mesma exigência.
+        self.assertEqual(verificar_camadas.LAYERS[0], ('cuidado_m7_20261111', 'cuidado-m7-edits-20261111'))
+        self.assertEqual(verificar_camadas.LAYERS[1], ('cuidado_m6_20261108', 'cuidado-m6-edits-20261108'))
         # 11/11/2026 (fusão do main 4bf4a053 no pedido #191): logo abaixo da decisão 152 no M6 fica a revisão dos enunciados das tarefas (tarefas_claras_20261110, #192), por cima da decisão 152 no M5; as posições seguintes descem uma.
-        self.assertEqual(verificar_camadas.LAYERS[1], ('tarefas_claras_20261110', 'tarefas-claras-edits-20261110'))
-        self.assertEqual(verificar_camadas.LAYERS[2], ('cuidado_m5_20261108', 'cuidado-m5-edits-20261108'))
-        self.assertEqual(verificar_camadas.LAYERS[3], ('cuidado_m4_20261108', 'cuidado-m4-edits-20261108'))
-        self.assertEqual(verificar_camadas.LAYERS[4], ('cuidado_m3_20261108', 'cuidado-m3-edits-20261108'))
-        self.assertEqual(verificar_camadas.LAYERS[5], ('cuidado_m2_20261108', 'cuidado-m2-edits-20261108'))
-        self.assertEqual(verificar_camadas.LAYERS[6], ('cidade_cartaz_20261108', 'cidade-cartaz-edits-20261108'))
-        self.assertEqual(verificar_camadas.LAYERS[7], ('creditos_i_pt1_20261107', 'creditos-i-pt1-edits-20261107'))
+        self.assertEqual(verificar_camadas.LAYERS[2], ('tarefas_claras_20261110', 'tarefas-claras-edits-20261110'))
+        self.assertEqual(verificar_camadas.LAYERS[3], ('cuidado_m5_20261108', 'cuidado-m5-edits-20261108'))
+        self.assertEqual(verificar_camadas.LAYERS[4], ('cuidado_m4_20261108', 'cuidado-m4-edits-20261108'))
+        self.assertEqual(verificar_camadas.LAYERS[5], ('cuidado_m3_20261108', 'cuidado-m3-edits-20261108'))
+        self.assertEqual(verificar_camadas.LAYERS[6], ('cuidado_m2_20261108', 'cuidado-m2-edits-20261108'))
+        self.assertEqual(verificar_camadas.LAYERS[7], ('cidade_cartaz_20261108', 'cidade-cartaz-edits-20261108'))
+        self.assertEqual(verificar_camadas.LAYERS[8], ('creditos_i_pt1_20261107', 'creditos-i-pt1-edits-20261107'))
         auditoria = ler('tests/auditoria_20261028.py')
         corpo = auditoria[auditoria.index('def undo_creditos_i_pt1_0711'):]
         self.assertLess(corpo.index('undo_cidade_cartaz_0811(path, text)'), corpo.index('_CREDITOS_I_PT1_0711.get('))
@@ -256,6 +259,8 @@ class CidadeCartaz(unittest.TestCase):
         self.assertLess(sala.index('cuidado-m5-edits-20261108.json'), sala.index('cuidado-m4-edits-20261108.json'))
         # 08/11/2026: e, antes da do M5, a decisão 152 no M6, agora a mais recente.
         self.assertLess(sala.index('cuidado-m6-edits-20261108.json'), sala.index('cuidado-m5-edits-20261108.json'))
+        # 11/11/2026: e, antes da do M6, a decisão 152 no M7, agora a mais recente.
+        self.assertLess(sala.index('cuidado-m7-edits-20261111.json'), sala.index('cuidado-m6-edits-20261108.json'))
         # Em cada cadeia dos workflows, esta camada desfaz-se primeiro, logo a seguir a --verificar, e logo antes do pt-1.
         # 08/11/2026: logo a seguir à decisão 152 no M2, que se desfaz primeiro, logo a seguir a --verificar.
         meu, pt1 = MANIFESTO_REL, 'tests/fixtures/creditos-i-pt1-edits-20261107.json'
@@ -268,6 +273,8 @@ class CidadeCartaz(unittest.TestCase):
         m5 = 'tests/fixtures/cuidado-m5-edits-20261108.json'
         # 08/11/2026: e, antes da decisão 152 no M5, a do M6 (cuidado_m6_20261108), agora a primeira, logo a seguir a --verificar.
         m6 = 'tests/fixtures/cuidado-m6-edits-20261108.json'
+        # 11/11/2026: e, antes da decisão 152 no M6, a do M7 (cuidado_m7_20261111), agora a primeira, logo a seguir a --verificar.
+        m7 = 'tests/fixtures/cuidado-m7-edits-20261111.json'
         cadeias = 0
         for wf in sorted(glob.glob(str(ROOT / '.github/workflows/*.yml'))):
             for linha in Path(wf).read_text('utf-8').splitlines():
@@ -278,7 +285,8 @@ class CidadeCartaz(unittest.TestCase):
                 # 08/11/2026: e, antes da do M4, a do M5, sem nada pelo meio.
                 # 08/11/2026: e, antes da do M5, a decisão 152 no M6 (cuidado_m6_20261108), agora a mais recente, sem nada pelo meio.
                 # 11/11/2026 (fusão do main 4bf4a053 no pedido #191): a revisão dos enunciados das tarefas (tarefas_claras_20261110, #192) fica entre a decisão 152 no M6, que continua a mais recente e se desfaz primeiro, e a decisão 152 no M5.
-                self.assertIn(f'--verificar --desfazer-antes {m6} --desfazer-antes tests/fixtures/tarefas-claras-edits-20261110.json --desfazer-antes {m5} --desfazer-antes {m4} --desfazer-antes {m3} --desfazer-antes {m2} --desfazer-antes {meu} '
+                # 11/11/2026: e, antes da do M6, a decisão 152 no M7 (cuidado_m7_20261111), agora a mais recente, sem nada pelo meio.
+                self.assertIn(f'--verificar --desfazer-antes {m7} --desfazer-antes {m6} --desfazer-antes tests/fixtures/tarefas-claras-edits-20261110.json --desfazer-antes {m5} --desfazer-antes {m4} --desfazer-antes {m3} --desfazer-antes {m2} --desfazer-antes {meu} '
                               f'--desfazer-antes {pt1}', linha, wf)
         # As 13 cadeias de antes e a da decisão 152 no M1.
         self.assertEqual(cadeias, 14)
@@ -289,7 +297,8 @@ class CidadeCartaz(unittest.TestCase):
         # 08/11/2026: e, antes da do M4, a do M5, sem nada pelo meio.
         # 08/11/2026: e, antes da do M5, a decisão 152 no M6 (cuidado_m6_20261108), agora a mais recente, sem nada pelo meio.
         # 11/11/2026 (fusão do main 4bf4a053 no pedido #191): a revisão dos enunciados das tarefas (tarefas_claras_20261110, #192) fica entre a decisão 152 no M6, que continua a mais recente e se desfaz primeiro, e a decisão 152 no M5.
-        self.assertIn(f'scripts/creditos_i_pt1_20261107.json --manifesto {pt1} --verificar --desfazer-antes {m6} --desfazer-antes tests/fixtures/tarefas-claras-edits-20261110.json --desfazer-antes {m5} --desfazer-antes {m4} --desfazer-antes {m3} '
+        # 11/11/2026: e, antes da do M6, a decisão 152 no M7 (cuidado_m7_20261111), agora a mais recente, sem nada pelo meio.
+        self.assertIn(f'scripts/creditos_i_pt1_20261107.json --manifesto {pt1} --verificar --desfazer-antes {m7} --desfazer-antes {m6} --desfazer-antes tests/fixtures/tarefas-claras-edits-20261110.json --desfazer-antes {m5} --desfazer-antes {m4} --desfazer-antes {m3} '
                       f'--desfazer-antes {m2} --desfazer-antes {meu}\n', ler('.github/workflows/cartaz-qa.yml'))
         # Nas cadeias dos testes, esta camada vem logo antes da do pt-1, sem outra pelo meio.
         for p in sorted((ROOT / 'tests').glob('test_*.py')):
@@ -310,14 +319,16 @@ class CidadeCartaz(unittest.TestCase):
                                  # 08/11/2026: e, antes da do M3, a decisão 152 no M4, sem nada pelo meio.
                                  # 08/11/2026: e, antes da do M4, a do M5, sem nada pelo meio.
                                  # 08/11/2026: e, antes da do M5, a decisão 152 no M6 (cuidado_m6_20261108), agora a mais recente, sem nada pelo meio.
-                                 plano.count(f'--desfazer-antes {m6} --desfazer-antes {m5} --desfazer-antes {m4} --desfazer-antes {m3} --desfazer-antes {m2} --desfazer-antes {meu} '
+                                 # 11/11/2026: e, antes da do M6, a decisão 152 no M7 (cuidado_m7_20261111), agora a mais recente, sem nada pelo meio.
+                                 plano.count(f'--desfazer-antes {m7} --desfazer-antes {m6} --desfazer-antes {m5} --desfazer-antes {m4} --desfazer-antes {m3} --desfazer-antes {m2} --desfazer-antes {meu} '
                                              f'--desfazer-antes {pt1}'))
         # 08/11/2026: nas rotas, a decisão 152 no M2 vem primeiro, logo antes desta.
         # 08/11/2026: e, antes dela, a decisão 152 no M3.
         # 08/11/2026: e, antes da do M3, a decisão 152 no M4, sem nada pelo meio.
         # 08/11/2026: e, antes da do M4, a do M5, sem nada pelo meio.
         # 08/11/2026: e, antes da do M5, a decisão 152 no M6 (cuidado_m6_20261108), agora a mais recente, sem nada pelo meio.
-        self.assertIn(f"(ROOT/'{m6}',ROOT/'{m5}',ROOT/'{m4}',ROOT/'{m3}',ROOT/'{m2}',ROOT/'{meu}',ROOT/'{pt1}',", ler('tests/test_task_routes_closure.py'))
+        # 11/11/2026: e, antes da do M6, a decisão 152 no M7 (cuidado_m7_20261111), agora a mais recente, sem nada pelo meio.
+        self.assertIn(f"(ROOT/'{m7}',ROOT/'{m6}',ROOT/'{m5}',ROOT/'{m4}',ROOT/'{m3}',ROOT/'{m2}',ROOT/'{meu}',ROOT/'{pt1}',", ler('tests/test_task_routes_closure.py'))
         # Os testes de navegador que montam o «antes» da entrada e dos índices desfazem-na primeiro.
         for rel in ('tests/browser_cartaz_indices.cjs', 'tests/browser_cartaz_m4_piloto.cjs'):
             texto = ler(rel)
@@ -369,7 +380,8 @@ class CidadeCartaz(unittest.TestCase):
                       # 08/11/2026: e, antes da do M4, a do M5, sem nada pelo meio.
                       # 08/11/2026: e, antes da do M5, a decisão 152 no M6 (cuidado_m6_20261108), agora a mais recente, sem nada pelo meio.
                       # 11/11/2026 (fusão do main 4bf4a053 no pedido #191): a revisão dos enunciados das tarefas (tarefas_claras_20261110, #192) fica entre a decisão 152 no M6, que continua a mais recente e se desfaz primeiro, e a decisão 152 no M5.
-                      f'{meu} --verificar --desfazer-antes {m6} --desfazer-antes tests/fixtures/tarefas-claras-edits-20261110.json --desfazer-antes {m5} --desfazer-antes {m4} --desfazer-antes {m3} --desfazer-antes {m2}\n', cartaz)
+                      # 11/11/2026: e, antes da do M6, a decisão 152 no M7 (cuidado_m7_20261111), agora a mais recente, sem nada pelo meio.
+                      f'{meu} --verificar --desfazer-antes {m7} --desfazer-antes {m6} --desfazer-antes tests/fixtures/tarefas-claras-edits-20261110.json --desfazer-antes {m5} --desfazer-antes {m4} --desfazer-antes {m3} --desfazer-antes {m2}\n', cartaz)
         self.assertIn('      - run: node tests/browser_cidade_cartaz.cjs\n', cartaz)
         self.assertLess(cartaz.index('node tests/browser_creditos_i_pt1.cjs'), cartaz.index('node tests/browser_cidade_cartaz.cjs'))
         for caminho in ('scripts/cidade_cartaz_20261108.*', meu, 'tests/*cidade_cartaz*', 'assets/retro-portals.css', 'index.html'):
