@@ -12,6 +12,12 @@ on:
       - 'scripts/exame_treinos.py'
       - 'scripts/exame_treinos_dados/**'
       - 'docs/pedagogia/exame-aquecimentos/s14.json'
+      # 12/11/2026: o treino da sessão 17 confere as citações curtas com as lições do M8 e remete para as provas em cartões.
+      - 'docs/pedagogia/exame-aquecimentos/s17.json'
+      - 'm8/licao-m8-f03/**'
+      - 'm8/licao-m8-f04/**'
+      - 'm8/licao-m8-f05/**'
+      - 'exame/provas/2026-2f/grupo-i/**'
       - 'tests/test_exame_treinos.py'
       - 'tests/browser_exame_treinos.cjs'
       - 'tests/fixtures/prova-639-*'
@@ -43,5 +49,5 @@ jobs:
           # playwright fixado em 1.64.1, como no fluxo do laboratório de exame
           npm install --no-save --package-lock=false playwright@1.64.1
           npx playwright install --with-deps chromium
-      - name: Testar os três treinos no navegador
+      - name: Testar os treinos no navegador
         run: node tests/browser_exame_treinos.cjs

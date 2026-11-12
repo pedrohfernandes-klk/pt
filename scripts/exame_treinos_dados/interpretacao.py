@@ -260,7 +260,7 @@ TREINO = {
 }
 
 CAB = (
-    '<p class="sobre">Treino 1 de 3. Interpretação literária</p>'
+    sobre('interpretacao', 'Interpretação literária') +
     '<h1>Da imagem à proposta de vida</h1>'
     '<p class="lede">Uma ode de Ricardo Reis, seis passos e uma resposta escrita por ti. Trabalha a mesma ode que o ' + aquecimento('s14') + ' da ' + sessao('s14', 'Reis: a disciplina do instante') + '.</p>'
     '<dl class="liga">'

@@ -1,6 +1,7 @@
 /* 11/11/2026: os três treinos da preparação de exame (exame/treinos/) no navegador, a 390x844 e a 1280x900, em claro e em escuro,
    e com o armazenamento bloqueado. O sítio serve-se em /pt/, como em produção, para os ficheiros partilhados (tema e projeção) correrem.
-   PT_CAPTURAS=<pasta> guarda as capturas; sem a variável, não se escreve nada. */
+   PT_CAPTURAS=<pasta> guarda as capturas; sem a variável, não se escreve nada.
+   12/11/2026: quatro treinos, com o da sessão 17 (poesia contemporânea, exame/treinos/poesia-contemporanea/), com a mesma cobertura dos outros três. */
 const {chromium}=require('playwright');
 const http=require('node:http'),fs=require('node:fs'),path=require('node:path');
 const root=path.resolve(__dirname,'..');
@@ -70,7 +71,8 @@ for(const [w,h] of [[390,844],[1280,900]]) for(const cs of ['light','dark']){
   ok(/Três tentativas, duas pistas/.test(await p.locator('main').innerText())&&!/sozinh/i.test(await p.locator('body').innerText()),tag+' índice descreve as três tentativas e não usa formas com género');
 
   /* ===== página do sítio: cabeçalho, ligações, ficheiros partilhados e tema ===== */
-  for(const pg of ['','interpretacao/','gramatica/','escrita/']){
+  // 12/11/2026: mais a página do treino da sessão 17
+  for(const pg of ['','interpretacao/','gramatica/','escrita/','poesia-contemporanea/']){
     const mortos=[];const ouve=r=>{if(r.status()>=400)mortos.push(r.status()+' '+r.url());};p.on('response',ouve);
     await p.goto(BASE+pg);await p.waitForLoadState('networkidle');p.off('response',ouve);
     ok(mortos.length===0,tag+' '+(pg||'entrada')+': todos os ficheiros carregam '+mortos.join(' | '));
@@ -99,7 +101,8 @@ for(const [w,h] of [[390,844],[1280,900]]) for(const cs of ['light','dark']){
     await p.goto(BASE);ok(await p.evaluate(()=>document.documentElement.getAttribute('data-theme'))===outro,tag+' a escolha do tema passa para a entrada');
     await p.click('.epi-appearance-toggle');ok(await p.evaluate(()=>document.documentElement.getAttribute('data-theme'))===cs,tag+' o tema volta ao do sistema'); }
   // ligações às sessões e aos aquecimentos, que continuam onde estavam
-  for(const [pg,s] of [['interpretacao/','s14'],['gramatica/','s21'],['escrita/','s24']]){
+  // 12/11/2026: mais o treino da sessão 17
+  for(const [pg,s] of [['interpretacao/','s14'],['gramatica/','s21'],['escrita/','s24'],['poesia-contemporanea/','s17']]){
     await p.goto(BASE+pg);
     const l=await p.evaluate(()=>Array.from(document.querySelectorAll('.lede a')).map(a=>new URL(a.href).pathname+new URL(a.href).hash));
     ok(l.join(' ')==='/pt/exame/#'+s+' /pt/exame/aquecimentos/'+s+'/'||l.join(' ')==='/pt/exame/aquecimentos/'+s+'/ /pt/exame/#'+s,tag+' '+pg+' liga à sessão e ao aquecimento '+l.join(' '));
@@ -110,7 +113,10 @@ for(const [w,h] of [[390,844],[1280,900]]) for(const cs of ['light','dark']){
   ok(new URL(p.url()).pathname==='/pt/exame/',tag+' a marca volta à entrada da preparação de exame '+p.url());
   await p.goto(BASE);
   { const l=await p.evaluate(()=>Array.from(document.querySelectorAll('.cartao-p')).map(c=>Array.from(c.querySelectorAll('a')).map(a=>new URL(a.href).pathname+new URL(a.href).hash).join(' ')));
-    ok(l.join(' | ')==='/pt/exame/#s14 /pt/exame/treinos/interpretacao/ | /pt/exame/#s21 /pt/exame/treinos/gramatica/ | /pt/exame/#s24 /pt/exame/treinos/escrita/',tag+' entrada liga aos três treinos e às três sessões '+l.join(' | ')); }
+    // 12/11/2026: quatro cartões, o último para o treino da sessão 17
+    ok(l.join(' | ')==='/pt/exame/#s14 /pt/exame/treinos/interpretacao/ | /pt/exame/#s21 /pt/exame/treinos/gramatica/ | /pt/exame/#s24 /pt/exame/treinos/escrita/ | /pt/exame/#s17 /pt/exame/treinos/poesia-contemporanea/',tag+' entrada liga aos quatro treinos e às quatro sessões '+l.join(' | '));
+    const nv=await p.evaluate(()=>Array.from(document.querySelectorAll('.tr-nav a')).map(a=>a.textContent+'>'+new URL(a.href).pathname).join(' '));
+    ok(nv==='Os quatro treinos>/pt/exame/treinos/ Interpretação>/pt/exame/treinos/interpretacao/ Gramática>/pt/exame/treinos/gramatica/ Escrita>/pt/exame/treinos/escrita/ Poesia contemporânea>/pt/exame/treinos/poesia-contemporanea/'&&/Quatro treinos de exame/.test(await p.locator('h1').innerText())&&!/[Tt]rês treinos/.test(await p.locator('body').innerText()),tag+' navegação entre os quatro treinos '+nv); }
   ok(erros.length===0,tag+' página do sítio: erros de JavaScript: '+erros.join(' | '));erros.length=0;
   await p.evaluate(()=>localStorage.clear());
 
@@ -371,8 +377,132 @@ for(const [w,h] of [[390,844],[1280,900]]) for(const cs of ['light','dark']){
   // recolher o texto de apoio
   await p.click('#apoio-bt');ok(await p.locator('#apoio-corpo').isHidden()&&await p.getAttribute('#apoio-bt','aria-expanded')==='false',tag+' texto de apoio recolhe');await p.click('#apoio-bt');
   ok(erros.length===0,tag+' p3 erros de JavaScript: '+erros.join(' | '));erros.length=0;
+
+  /* ===== TREINO 4 (12/11/2026): poesia contemporânea, sessão 17 ===== */
+  await p.goto(BASE+'poesia-contemporanea/');await semDeslize('p4 inicio');await cap('5-poesia-01-inicio',true);
+  ok(/Treino 4 de 4/i.test(await p.locator('.sobre').innerText())&&/Comparar dois poemas a partir de um eixo/.test(await p.locator('dl.liga').innerText())&&/2\.ª fase, Grupo I, Parte A, item 2/.test(await p.locator('dl.liga').innerText()),tag+' p4 operação do exame e item oficial no cimo');
+  // texto de apoio: só as duas citações curtas, a remissão para o manual e as ligações às lições do M8
+  { const a=await p.evaluate(()=>{const d=document.querySelector('#apoio-corpo [data-apoio="cit"]');return {oculto:d.hidden||document.getElementById('apoio').hidden,rot:document.getElementById('apoio-rot').textContent,
+      cit:Array.from(d.querySelectorAll('.cit')).map(e=>e.textContent),txt:d.innerText,lig:Array.from(d.querySelectorAll('a')).map(x=>new URL(x.href).pathname)};});
+    ok(!a.oculto&&a.rot==='Citações e onde ler os poemas',tag+' p4 texto de apoio à vista com o seu rótulo '+a.rot);
+    ok(a.cit.join(' | ')==='«Apenas como elas. / Mas brilha.» | «São como um cristal, / as palavras.»',tag+' p4 o texto de apoio traz só as duas citações curtas '+a.cit.join(' | '));
+    ok(/Abre o manual/.test(a.txt)&&/Novo Sentidos 12/.test(a.txt)&&/direitos de autor/.test(a.txt)&&/Ou abre a lição/.test(a.txt),tag+' p4 o texto de apoio remete para o manual e para as lições');
+    ok(a.lig.join(' ')==='/pt/m8/licao-m8-f03/ /pt/m8/licao-m8-f04/',tag+' p4 ligações às lições do M8 '+a.lig.join(' '));
+    for(const u of a.lig){const r=await p.request.get(new URL(u,BASE).href);ok(r.status()===200,tag+' p4 a lição '+u+' responde');} }
+  await juntos('p4-pedido','p4 passo 1');await cap('5-poesia-02-texto-junto-da-pergunta');
+  ok(/perspetiva a escrita/.test(await p.locator('#passo').innerText())&&/Compare o ambiente do mercado do peixe/.test(await p.locator('#passo').innerText())&&await p.locator('#passo .etq.oficial').count()===2&&await p.locator('#passo .etq.treino').count()>=2,tag+' p4 passo 1: os dois itens oficiais e o pedido de treino, com etiqueta');
+  // 1.ª falha: pista do erro; repetir a opção não gasta tentativa; 2.ª falha: segunda pista sem a resposta; certo à terceira
+  await op('p4-pedido',0);r=await ret('p4-pedido');
+  ok(/pista/.test(r.cls)&&/^PISTA/i.test(r.txt)&&/Relê o primeiro verbo/.test(r.txt)&&/mais duas tentativas/.test(r.txt),tag+' p4 1.ª falha: pista da opção escolhida e duas tentativas '+r.txt);
+  ok(await Q('p4-pedido').locator('.op').nth(0).getAttribute('aria-disabled')==='true',tag+' p4 opção tentada fica indisponível');
+  await aVista(Q('p4-pedido').locator('.retorno'),'p4 pista depois de errar');
+  await cap('5-poesia-03-pista');
+  await Q('p4-pedido').locator('.op').nth(0).focus();await p.keyboard.press('Enter');r=await ret('p4-pedido');ok(/^PISTA/i.test(r.txt)&&/mais duas tentativas/.test(r.txt),tag+' p4 repetir a opção tentada (teclado) não gasta tentativa');
+  await op('p4-pedido',1);r=await ret('p4-pedido');
+  ok(/pista/.test(r.cls)&&/^SEGUNDA PISTA/i.test(r.txt)&&/aos bocados/.test(r.txt)&&/mais uma tentativa/.test(r.txt)&&!/A opção adequada é/.test(r.txt),tag+' p4 2.ª falha: segunda pista sem a resposta '+r.txt);
+  await aVista(Q('p4-pedido').locator('.retorno'),'p4 segunda pista');
+  await cap('5-poesia-04-segunda-pista');
+  await op('p4-pedido',2);r=await ret('p4-pedido');ok(/certo/.test(r.cls)&&/terceira/i.test(r.txt)&&/um verbo, um eixo e uma condição/.test(r.txt),tag+' p4 certo à terceira '+r.txt.slice(0,60));
+  await passo(2);
+  f=await ativo();ok(f.tag==='H2',tag+' p4 ao mudar de passo o foco vai para o título '+JSON.stringify(f));
+  await juntos('p4-sena','p4 passo 2');
+  ok((await Q('p4-sena').locator('.seg').innerText()).replace(/\s+/g,' ').trim()==='Apenas como elas. / Mas brilha.'&&(await Q('p4-eugenio').locator('.seg').innerText()).replace(/\s+/g,' ').trim()==='São como um cristal, / as palavras.',tag+' p4 as palavras em que se toca são as das duas citações');
+  await verif('p4-sena');ok(/Ainda não escolheste/.test(await aviso('p4-sena')),tag+' p4 verificar sem seleção avisa e não gasta tentativa');
+  // seleção por teclado
+  await Q('p4-sena').locator('.tk',{hasText:'brilha.'}).focus();await p.keyboard.press('Space');
+  ok(await Q('p4-sena').locator('.tk',{hasText:'brilha.'}).getAttribute('aria-pressed')==='true',tag+' p4 seleção de palavra por teclado');
+  await verif('p4-sena');r=await ret('p4-sena');
+  ok(/pista/.test(r.cls)&&/apesar de tudo/.test(r.txt)&&/mais duas tentativas/.test(r.txt),tag+' p4 «brilha» só: pista do erro cometido '+r.txt.slice(0,80));
+  await aVista(Q('p4-sena').locator('.retorno'),'p4 pista da seleção');
+  await verif('p4-sena');r=await ret('p4-sena');
+  ok(/^PISTA/i.test(r.txt)&&/mais duas tentativas/.test(r.txt)&&/não gastaste outra tentativa/.test(await aviso('p4-sena')),tag+' p4 verificar duas vezes a mesma seleção errada não gasta tentativa');
+  if(estreito){await tk('p4-sena',['Mas']);await verif('p4-sena');r=await ret('p4-sena');
+    ok(/certo/.test(r.cls)&&/segunda/i.test(r.txt)&&/Aceite com «brilha»/.test(r.txt)&&/adversativa/.test(r.txt),tag+' p4 fronteira equivalente aceite, à segunda '+r.txt.slice(0,80));}
+  else{await tk('p4-sena',['brilha.','Apenas']);await verif('p4-sena');r=await ret('p4-sena');
+    ok(/^SEGUNDA PISTA/i.test(r.txt)&&/é uma conjunção/.test(r.txt)&&/mais uma tentativa/.test(r.txt)&&!/«Mas»/.test(r.txt),tag+' p4 segunda pista dirigida à citação, sem a resposta '+r.txt);
+    await tk('p4-sena',['Apenas','Mas']);await verif('p4-sena');r=await ret('p4-sena');ok(/certo/.test(r.cls)&&/terceira/i.test(r.txt)&&/adversativa/.test(r.txt),tag+' p4 certo à terceira');}
+  await cap('5-poesia-05-localizar-sena');
+  await juntos('p4-eugenio','p4 passo 2, segunda citação');
+  await tk('p4-eugenio',['como']);await verif('p4-eugenio');r=await ret('p4-eugenio');ok(/pista/.test(r.cls)&&/faz a comparação/.test(r.txt)&&/mais duas tentativas/.test(r.txt),tag+' p4 «como»: pista do erro cometido');
+  if(estreito){await tk('p4-eugenio',['como','palavras.']);await verif('p4-eugenio');r=await ret('p4-eugenio');
+    ok(/^SEGUNDA PISTA/i.test(r.txt)&&/dois termos/.test(r.txt)&&!/cristal/.test(r.txt),tag+' p4 segunda pista sem a resposta '+r.txt);
+    await tk('p4-eugenio',['palavras.','cristal,']);await verif('p4-eugenio');r=await ret('p4-eugenio');ok(/certo/.test(r.cls)&&/terceira/i.test(r.txt),tag+' p4 certo à terceira (segunda citação)');}
+  else{await tk('p4-eugenio',['como','um','cristal,']);await verif('p4-eugenio');r=await ret('p4-eugenio');
+    ok(/certo/.test(r.cls)&&/segunda/i.test(r.txt)&&/Aceite com «um»/.test(r.txt),tag+' p4 fronteira equivalente aceite (segunda citação) '+r.txt.slice(0,80));}
+  ok(/lê os poemas inteiros no manual/.test(r.txt),tag+' p4 a explicação manda ler os poemas inteiros no manual');
+  await cap('5-poesia-06-fronteira-equivalente');
+  await passo(3);await juntos('p4-distinguir','p4 passo 3');
+  await op('p4-distinguir',0);r=await ret('p4-distinguir');ok(/pista/.test(r.cls)&&/faz parte da maneira/.test(r.txt),tag+' p4 distinguir pista 1');
+  await op('p4-distinguir',2);r=await ret('p4-distinguir');ok(/pista/.test(r.cls)&&/^SEGUNDA PISTA/i.test(r.txt)&&/mas só/.test(r.txt),tag+' p4 distinguir segunda pista');
+  ok(!/certa/.test(await Q('p4-distinguir').locator('.op').nth(1).getAttribute('class')),tag+' p4 a resposta não aparece antes da terceira falha');
+  await op('p4-distinguir',3);r=await ret('p4-distinguir');
+  ok(/expl/.test(r.cls)&&/três tentativas/i.test(r.txt)&&/duas descrições lado a lado/.test(r.txt)&&/em ambos os casos/.test(r.txt)&&/um dos sujeitos poéticos/.test(r.txt)&&/leitura nossa/.test(r.txt),tag+' p4 explicação só à terceira falha, com os critérios oficiais '+r.txt.slice(0,60));
+  ok(/certa/.test(await Q('p4-distinguir').locator('.op').nth(1).getAttribute('class')),tag+' p4 opção adequada marcada');
+  await aVista(Q('p4-distinguir').locator('.retorno'),'p4 explicação');
+  await cap('5-poesia-07-explicacao');
+  await passo(4);
+  ok(await p.locator('#passos li:nth-child(5) button').isDisabled(),tag+' p4 passo 5 trancado antes de guardar');
+  ok(await p.locator('.retorno:visible').count()===0&&/Abre o manual e lê os dois poemas inteiros/.test(await p.locator('#passo').innerText()),tag+' p4 sem pistas à vista no passo de escrita, com a remissão para o manual');
+  ok(/guarda-se automaticamente/.test(await p.locator('.antes-bt').innerText()),tag+' p4 aviso sobre o rascunho antes do botão de guardar');
+  await p.fill('#t-p4-resposta',V1);
+  await cap('5-poesia-08-escrever');
+  await p.click('button:has-text("Guardar a primeira versão")');
+  ok(await p.locator('.estado.ok').count()===1&&/Feita sem pistas à vista/.test(await p.locator('.estado.ok').innerText())&&/alterá-la em qualquer altura/.test(await p.locator('.estado.ok').innerText()),tag+' p4 primeira versão guardada');
+  await aVista(p.locator('.estado.ok'),'p4 confirmação de guardar');
+  await p.fill('#t-p4-resposta',V1+' '+LONGA);await semDeslize('p4 passo 4 com palavra muito longa');
+  ok(await p.locator('.alt:visible').count()===0,tag+' p4 alterar antes de ver os critérios não deixa aviso');
+  await passo(5);
+  ok((await p.locator('#v1-p4-resposta').innerText()).includes('Primeira versão do aluno')&&await p.locator('.alt:visible').count()===0,tag+' p4 primeira versão à vista na conferência, sem aviso');
+  await semDeslize('p4 passo 5 com palavra muito longa');
+  { const t=await p.locator('#passo').innerText();
+    ok(/Tópicos de resposta/.test(t)&&/O que se mantém e o que muda/.test(t)&&/se o texto te mostrar outra coisa, vale o texto/.test(t)&&/igualdade de circunstâncias/.test(t)&&/ou outros igualmente relevantes/.test(t),tag+' p4 tópicos nossos e regra oficial das outras formulações');
+    ok(/Um exemplo comentado/.test(t)&&/Uma maneira de organizar \(é nossa, não é exigência do exame\)/.test(t)&&await p.locator('#passo .anot').count()===4,tag+' p4 exemplo comentado e «Uma maneira de organizar»');
+    ok(await p.locator('#passo input[type=number]').count()===0&&await p.locator('#passo input[type=radio]').count()===0&&await p.locator('#passo .marca-l input[type=checkbox]').count()===9&&!/a tua classificação|pontos obtidos/i.test(t)&&/Não há classificação automática/.test(t),tag+' p4 sem classificação automática: só marcação aspeto a aspeto (9 aspetos)'); }
+  await p.click('text=Alterar a primeira versão');
+  await p.fill('#e-p4-resposta',V1+' Acrescento.');
+  ok(/alterada depois de veres os critérios/.test(await p.locator('.alt:visible').innerText()),tag+' p4 aviso «alterada depois de veres os critérios» junto da versão');
+  await aVista(p.locator('.alt'),'p4 aviso de alteração');
+  await p.fill('#e-p4-resposta',V1+' '+LONGA);ok(await p.locator('.alt:visible').count()===0,tag+' p4 repor o texto retira o aviso');
+  await p.fill('#e-p4-resposta',V1F);
+  await p.click('text=Fechar a alteração');
+  await p.locator('.marca-l input').nth(2).check();
+  await cap('5-poesia-09-conferir',true);
+  await passo(6);
+  ok(await p.inputValue('#r-p4-resposta')===V1F,tag+' p4 versão revista começa pela primeira');
+  await semDeslize('p4 passo 6');
+  await p.click('text=Guardar a versão revista');
+  ok(/Ainda não mudaste nada/.test(await p.locator('.duas .estado').last().innerText())&&/Versão revista da resposta\s+Por fazer/.test(await reg()),tag+' p4 versão revista igual à primeira não é aceite');
+  await p.fill('#r-p4-resposta','Versão revista do aluno: os dois poemas, com «Mas brilha.»');
+  await p.click('text=Guardar a versão revista');
+  ok(/Versão revista guardada neste dispositivo/.test(await p.locator('.duas .estado.ok').innerText()),tag+' p4 versão revista guardada');
+  await p.reload();await p.waitForTimeout(150);
+  ok(/Passo 6 de 6/i.test(await p.locator('.passo-n').innerText()),tag+' p4 volta ao passo onde ficou');
+  ok((await p.locator('#v1-p4-resposta').innerText()).includes(V1)&&await p.inputValue('#r-p4-resposta')==='Versão revista do aluno: os dois poemas, com «Mas brilha.»',tag+' p4 duas versões guardadas depois de recarregar');
+  { const g=await reg();
+    ok(/manda fazer\s+Com pista, à terceira/.test(g)&&(estreito?/a luz resiste\s+Com pista, à segunda/.test(g)&&/comparadas as palavras\s+Com pista, à terceira/.test(g):/a luz resiste\s+Com pista, à terceira/.test(g)&&/comparadas as palavras\s+Com pista, à segunda/.test(g))&&/e porquê\s+Com explicação/.test(g),tag+' p4 registo distingue à segunda, à terceira e com explicação: '+g.replace(/\s+/g,' '));
+    ok((estreito?/dos dois poemas\s+Alterada depois de veres os critérios/.test(g):/dos dois poemas\s+Por ti, sem pistas à vista/.test(g))&&/Versão revista da resposta\s+Depois de veres os critérios/.test(g)&&!/[Ss]ozinh/.test(await p.locator('body').innerText()),tag+' p4 registo das duas versões: '+g.replace(/\s+/g,' ').slice(-200)); }
+  ok((await p.locator('.alt:visible').count())===(estreito?1:0),tag+' p4 aviso de alteração mantém-se depois de recarregar (só quando há alteração)');
+  { const t=await p.locator('#passo').innerText();const l=await p.evaluate(()=>Array.from(document.querySelectorAll('#passo .caixa.nossa a')).map(x=>new URL(x.href).pathname).join(' '));
+    ok(/Outro par/.test(t)&&l==='/pt/m8/licao-m8-f05/'&&/a confirmar na Informação-Prova de 2027/.test(t),tag+' p4 outro par (lição M8-F05) e referência a 2027 '+l); }
+  await semDeslize('p4 fim');await cap('5-poesia-10-duas-versoes-e-registo',true);
+  ok(await p.locator('#passos li button .fe:visible').count()===5,tag+' p4 os cinco passos com resposta feita trazem a palavra «feito»');
+  await passo(5);ok(await p.locator('.marca-l input').nth(2).isChecked(),tag+' p4 conferência guardada');
+  await passo(3);r=await ret('p4-distinguir');ok(/expl/.test(r.cls),tag+' p4 estado das perguntas reposto');
+  await p.goBack();await p.waitForTimeout(120);
+  ok(/Passo 5 de 6/i.test(await p.locator('.passo-n').innerText())&&/poesia-contemporanea/.test(p.url()),tag+' p4 voltar atrás no navegador volta ao passo anterior');
+  // item oficial: abre sem deslize, com o critério, e sem repetir os dois poemas da prova (ficam nas provas em cartões)
+  await p.click('summary:has-text("Ver o item oficial")');await semDeslize('p4 item oficial aberto');
+  { const t=await p.locator('details.dobra .dentro').innerText();
+    ok(/perspetiva a escrita/.test(t)&&/mão rigorosa/.test(t)&&/Sou|fácil de definir/.test(t)&&/Descritor de desempenho/.test(t)&&/Erros do tipo B/.test(t),tag+' p4 item oficial com o item, o critério e as duas tabelas');
+    ok(!/Obedecem-me agora muito menos/.test(await p.content())&&!/Um dia deu-me o sono/.test(await p.content()),tag+' p4 os poemas da prova não se repetem na página');
+    const u=await p.evaluate(()=>new URL(document.querySelector('details.dobra .dentro a[href*="provas"]').href).href);const rr=await p.request.get(u);
+    ok(rr.status()===200&&/\/pt\/exame\/provas\/2026-2f\/grupo-i\/$/.test(u)&&/Obedecem-me agora muito menos/.test(await rr.text()),tag+' p4 os poemas da prova leem-se nas provas em cartões '+u); }
+  await p.locator('details.dobra').scrollIntoViewIfNeeded();await cap('5-poesia-11-item-oficial',true);
+  await p.click('#apoio-bt');ok(await p.locator('#apoio-corpo').isHidden()&&await p.getAttribute('#apoio-bt','aria-expanded')==='false',tag+' p4 texto de apoio recolhe');await p.click('#apoio-bt');
+  ok(erros.length===0,tag+' p4 erros de JavaScript: '+erros.join(' | '));erros.length=0;
   // 11/11/2026: nenhuma pergunta de escolha tem menos de quatro opções (três tentativas e duas pistas em todas, como diz a entrada)
-  for(const pg of ['interpretacao','gramatica','escrita']){
+  // 12/11/2026: também no treino da sessão 17
+  for(const pg of ['interpretacao','gramatica','escrita','poesia-contemporanea']){
     await p.goto(BASE+pg+'/');
     const n=await p.evaluate(()=>{const d=JSON.parse(document.querySelector('script[type="application/json"]').textContent);const m=[];
       (function v(x){if(Array.isArray(x)){x.forEach(v);}else if(x&&typeof x==='object'){if(x.t==='escolha'){m.push([x.id,x.o.length,!!x.pista2]);}Object.keys(x).forEach(function(k){v(x[k]);});}})(d);return m;});
@@ -380,6 +510,9 @@ for(const [w,h] of [[390,844],[1280,900]]) for(const cs of ['light','dark']){
   }
   // índice com estado
   await p.goto(BASE);ok(/primeira versão guardada; versão revista guardada/.test(await p.locator('[data-estado="escrita"]').innerText()),tag+' índice mostra o estado');
+  // 12/11/2026: e o do treino da sessão 17
+  ok(/primeira versão guardada; versão revista guardada/.test(await p.locator('[data-estado="poesia-contemporanea"]').innerText()),tag+' índice mostra o estado do treino 4: '+await p.locator('[data-estado="poesia-contemporanea"]').innerText());
+  await cap('0-indice-com-estado',true);
   // legenda coerente com as caixas
   ok(/os títulos e as frases de ligação são nossos/.test(await p.locator('.legenda').innerText())&&!/sem cortes/.test(await p.content()),tag+' legenda da etiqueta «Item oficial» ajustada');
   // 11/11/2026: depois de recomeçar, voltar atrás no navegador não deixa no endereço um passo que voltou a estar trancado
@@ -397,7 +530,8 @@ for(const [w,h] of [[390,844],[1280,900]]) for(const cs of ['light','dark']){
   const c2=await b.newContext({viewport:{width:w,height:h},deviceScaleFactor:1,colorScheme:cs});
   await c2.addInitScript(()=>{Object.defineProperty(window,'localStorage',{configurable:true,get(){throw new Error('armazenamento bloqueado');}});});
   p=await c2.newPage();escuta(p);
-  for(const [pil,npasso,cx,nrev] of [['interpretacao',4,'#t-p1-resposta',6],['escrita',4,'#t-p3-texto',6]]){
+  // 12/11/2026: também no treino da sessão 17
+  for(const [pil,npasso,cx,nrev] of [['interpretacao',4,'#t-p1-resposta',6],['escrita',4,'#t-p3-texto',6],['poesia-contemporanea',4,'#t-p4-resposta',6]]){
     await p.goto(BASE+pil+'/');
     ok(await p.locator('#aviso-guarda').isVisible()&&/não deixa guardar/.test(await p.locator('#pe-guarda').innerText())&&!/localStorage/.test(await p.locator('#pe-guarda').innerText()),tag+' sem armazenamento ('+pil+'): aviso no cimo e rodapé verdadeiro');
     await passo(npasso);

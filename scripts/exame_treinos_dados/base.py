@@ -1,7 +1,11 @@
-"""11/11/2026: base comum dos três treinos da preparação de exame (exame/treinos/).
+"""11/11/2026: base comum dos treinos da preparação de exame (exame/treinos/).
 
-Os textos oficiais vêm das transcrições tests/fixtures/prova-639-2026-*.json; o que é nosso está nos módulos
-interpretacao.py, gramatica.py, escrita.py e indice.py. As páginas escrevem-se com scripts/exame_treinos.py.
+Os textos oficiais vêm das transcrições tests/fixtures/prova-639-2026-*.json; o que é nosso está num módulo por treino
+(interpretacao.py, gramatica.py, escrita.py, poesia_contemporanea.py) e em indice.py. As páginas escrevem-se com
+scripts/exame_treinos.py.
+
+12/11/2026: os treinos passam a vir de uma só lista (TREINOS); a navegação, a contagem («Treino n de N») e o nome da
+entrada («Os quatro treinos») saem dela. Para juntar um treino, acrescenta-se uma linha aqui e o módulo em exame_treinos.py.
 """
 import json, re, html, os
 
@@ -51,7 +55,22 @@ def aquecimento(sid, exame='../../'):
     return '<a href="%saquecimentos/%s/">aquecimento</a>' % (exame, sid)
 
 
-NAV = [('', 'Os três treinos'), ('interpretacao/', 'Interpretação'), ('gramatica/', 'Gramática'), ('escrita/', 'Escrita')]
+# (pasta em exame/treinos/, nome na navegação), pela ordem dos treinos
+TREINOS = [('interpretacao', 'Interpretação'), ('gramatica', 'Gramática'), ('escrita', 'Escrita'), ('poesia-contemporanea', 'Poesia contemporânea')]
+N_TREINOS = len(TREINOS)
+POR_EXTENSO = {3: 'três', 4: 'quatro', 5: 'cinco', 6: 'seis'}[N_TREINOS]
+OS_TREINOS = 'Os %s treinos' % POR_EXTENSO
+NAV = [('', OS_TREINOS)] + [(p + '/', t) for p, t in TREINOS]
+
+
+def ordem(pid):
+    """Número do treino (1, 2, 3…), pela ordem de TREINOS."""
+    return [p for p, _ in TREINOS].index(pid) + 1
+
+
+def sobre(pid, nome):
+    """Linha por cima do título de cada treino: «Treino n de N. Nome»."""
+    return '<p class="sobre">Treino %d de %d. %s</p>' % (ordem(pid), N_TREINOS, nome)
 
 
 def cabeca(raiz, titulo, descr, com_motor):
@@ -84,14 +103,14 @@ def topo(exame, treinos, atual, migalha):
             '<div class="envolve"><header class="site-head"><a class="wordmark" href="%s">Português<span>.</span><small>Preparação de exame</small></a>'
             '<nav aria-label="Navegação da preparação"><a href="%s">Sessões</a><a href="%slaboratorio/">Laboratório de respostas</a>'
             '<a href="%sprovas/">Provas em cartões</a><a href="%s"%s>Treinos</a></nav></header>'
-            '<nav class="tr-nav" aria-label="Os três treinos">%s</nav>\n') % (
-        exame, exame, fim, exame, exame, exame, exame, treinos, '' if migalha else ' aria-current="page"', nav)
+            '<nav class="tr-nav" aria-label="%s">%s</nav>\n') % (
+        exame, exame, fim, exame, exame, exame, exame, treinos, '' if migalha else ' aria-current="page"', OS_TREINOS, nav)
 
 
 def rodape(exame, treinos, raiz, dentro):
     """dentro: o que vem antes das ligações (o estado da guarda e o botão de recomeçar, nos treinos)."""
-    return ('<footer class="site-foot pe">%s<a href="%s">Sessões de preparação</a><a href="%s">Os três treinos</a>%s</footer></div>\n') % (
-        dentro, exame, treinos, CREDITOS % (raiz, raiz))
+    return ('<footer class="site-foot pe">%s<a href="%s">Sessões de preparação</a><a href="%s">%s</a>%s</footer></div>\n') % (
+        dentro, exame, treinos, OS_TREINOS, CREDITOS % (raiz, raiz))
 
 
 CREDITOS = ('<p class="creditos">Itens e critérios: Exame Final Nacional de Português, Prova 639, 2026, 1.ª e 2.ª fases, citados com a página; os PDF estão em eduqa.pt. '
