@@ -536,7 +536,9 @@ class CreditosI(unittest.TestCase):
                                                                  # 11/11/2026: decisão 152 no M7 (achado 36): também no mapa do M7, com a mesma exigência.
                                                                  'm5/mapa-do-modulo-m5/index.html', 'm6/mapa-do-modulo-m6/index.html',
                                                                  # 12/11/2026: decisão 152 no M8 (achado 36): também no mapa do M8, com a mesma exigência.
-                                                                 'm7/mapa-do-modulo-m7/index.html', 'm8/mapa-do-modulo-m8/index.html')
+                                                                 'm7/mapa-do-modulo-m7/index.html', 'm8/mapa-do-modulo-m8/index.html',
+                                                                 # 12/11/2026: decisão 152 no M9 (achado 36): também no mapa do M9, com a mesma exigência.
+                                                                 'm9/mapa-do-modulo-m9/index.html')
                              else r'Lição M\d-F\d+')
                     self.assertTrue(all(re.fullmatch(sigla, a.texto()) for a in links), 'na legenda, só «Lição Mx-Fyy»')
                     visivel = re.sub(r'\s', ' ', legenda.texto(lambda x: x.tag == 'a')).strip()

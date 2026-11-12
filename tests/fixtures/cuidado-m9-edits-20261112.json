@@ -1,0 +1,1674 @@
+{
+ "base_commit": "899576905d085e9552a70fe82d050c13f78dda2f",
+ "_nota": "12/11/2026: decisão 152 do docente («cuidado em todas as lições»), módulo M9: dos 52 achados CONFIRMADOS da varredura do M9 (bordo/cidadania-v3/cuidado-152/m9-confirmados.json, refeita a 9/11 e conferida a 11/11 sobre o main 4bf4a053: 7 A, 41 B e 4 C), entram 44; ficam de fora, por decisão já tomada para todos os módulos, como do M1 ao M8, os 6 achados B dos diapositivos (20), das provas rápidas (48, 49 e 50), dos questionários (51) e da página «todos» (56), e os 2 achados B dos painéis da F04 e da F10 (41 e 44), que só tinham ocorrências no material do relâmpago (MATERIAL) e nas pistas do «Quem sou eu?» (ATL), que não mudam; os 8 recusados (7, 8, 12, 13, 14, 16, 17 e 18) não entram. São 7 achados A (tabelas onde há itens paralelos, como do M1 ao M8: class apoio-tabela, th scope, td data-label e os role; os pesos da avaliação no índice, no guia e no mapa do módulo, como no M5, no M7 e no M8, com a coluna do peso em 5,5 rem; as noções das caixas «Recorda» da F01, da F02 e da F03, com a frase final da F02 num parágrafo a seguir; e os quatro termos da caixa «Recorda» da F10, com a frase dos conectores num parágrafo a seguir; cada página com tabela nova carrega assets/pt-lessons/apoios-tabelas.css antes da camada de aparência, na versão do M1), 33 de referências e números que não se partem entre linhas (B: U+00A0 nos espaços que a proposta final prende, cada par contado no contexto da proposta, com a palavra inteira e fora das cadeias maiores dos outros pares da página, e U+2060 logo a seguir ao hífen da sigla «M9-Fxx»; nas datas, o dia preso ao «de» e o ano ao «de», como do M5 ao M8; «D. João V» com os dois espaços presos) e 4 casos do mesmo tipo (C: «Três antes de mim» em lista numerada no guia, como no M5, no M7 e no M8; as quatro linhas de ação do «O essencial» da F01 em lista; as quatro estações da oficina da F13 em lista numerada; e, no portefólio, os oito nomes de ficheiro que estavam em texto simples em <code>, com <wbr> a seguir a cada «_», um <wbr> nos dois nomes compridos que já estavam em <code> e «td code{white-space:nowrap}» na página, como nos portefólios do M5 e do M7). Camada mais recente, por cima da decisão 152 no M8 (cuidado_m8_20261112, ramo do pedido #195, commit 0c85d555, com o main 40f9505c dentro), que não toca em nenhum ficheiro desta. Gerada por scripts/cuidado_m9_20261112.py e aplicada por scripts/aplicar_trocas.py: não se edita à mão. O texto visível fica igual, letra a letra, salvo a estrutura das tabelas e das listas e os espaços invisíveis («séc. XVIII» fica abreviado, só com o espaço preso). A casca das lições (migalhas, «Estás em: Lição M9-Fxx», o título escondido e a sigla do rodapé) não muda aqui, ficheiro a ficheiro: muda no molde, como do M1 ao M8; nas outras páginas, as migalhas contam, como na proposta final, e o «3.º ano» fica preso nas migalhas e no cabeçalho. Ficam de fora os «alt» (e aria-label, href, title, content e data-titulo), o <title>, o texto dos desenhos (SVG), a «frase» dos cartões sublinhar, as «palavras» dos cartões frase e os «passos» dos cartões ordenar, e o que a conferência deixou com o contexto dos pares ou tirou com a razão (os excertos do romance, as citações, as «linhas» dos versos, «D.» com nome e sem numeral e o mês e o ano sem dia). As páginas geradas mudam também na origem e regeneram-se sem diferenças: as tarefas da M9-U1 e da M9-U2 (docs/pedagogia/tarefas-escolha/m9-u1.json e m9-u2.json, que estão nesta camada: «nao_partir», como do M1 ao M8, que também prende a meta descrição, e os achados B) e as lições geradas F14, F15 e F16 e as notas do docente da F14 (scripts/licoes_20261101.py e scripts/revisao_confirmacao_20261101.py, fora da camada, como no M5, no M6 e no M8). Os cartões das lições F11, F12 e F13 mudam nos ficheiros que as páginas carregam (m9/recursos/f11.js, f12.js e f13.js). Os painéis de projeção da F01, da F02, da F03, da F05 e da F07 seguem os enunciados dos cartões que mudaram (a lista e o seletor); o material do relâmpago segue a lição antes das camadas de cuidado, como do M1 ao M8. As cópias dos cartões no banco das provas rápidas do índice (var U) estão nos pares do achado do índice. A resposta certa e o retorno do cartão 11 da F01 mudam também na cópia das sessões do Exame (assets/exame/sessoes.json, sessão s19), que tests/test_exame_alignment.py compara com a lição, como a cópia da M6-F01 no M6. 12/11/2026: o M8 foi publicado no main em 89957690 (#195), com a mesma árvore de 0c85d555; a base passa a ser esse commit do main, sem mudar resumos nem trocas.",
+ "files": {
+  "docs/pedagogia/tarefas-escolha/m9-u1.json": {
+   "base_sha256_lf": "9b0e1e43e60870959ee653d380050e584d18901da1887aead40cd3e7ceec44a8",
+   "after_sha256_lf": "951d1f595f958cbf250f75cac56ee7c2e3f0c8a878b3b2490e7faf5409edc877",
+   "edits": [
+    {
+     "location": "Dados da tarefa: «nao_partir», os números do molde com espaço que não quebra",
+     "old": "\n \"unidade\": 1,\n ",
+     "new": "\n \"unidade\": 1,\n \"nao_partir\": true,\n ",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados tarefas-escolha/m9-u1.json: «60 minutos» que não se parte",
+     "old": "60 minutos",
+     "new": "60 minutos",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados tarefas-escolha/m9-u1.json: «10 minutos» que não se parte",
+     "old": "10 minutos",
+     "new": "10 minutos",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados tarefas-escolha/m9-u1.json: «capítulo I» que não se parte",
+     "old": "capítulo I",
+     "new": "capítulo I",
+     "occurrences": 2
+    },
+    {
+     "location": "Dados tarefas-escolha/m9-u1.json: «capítulo V» que não se parte",
+     "old": "capítulo V",
+     "new": "capítulo V",
+     "occurrences": 2
+    }
+   ]
+  },
+  "docs/pedagogia/tarefas-escolha/m9-u2.json": {
+   "base_sha256_lf": "5beb5e28234dd0fe6a7eaea76c6b9ea822ca55442bffd39b3913b5569640beab",
+   "after_sha256_lf": "d78a03c9988be137d109ed47e5597c2a25d68925fcccd3a9c23b6f371169b1c7",
+   "edits": [
+    {
+     "location": "Dados da tarefa: «nao_partir», os números do molde com espaço que não quebra",
+     "old": "\n \"unidade\": 2,\n ",
+     "new": "\n \"unidade\": 2,\n \"nao_partir\": true,\n ",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados tarefas-escolha/m9-u2.json: «60 minutos» que não se parte",
+     "old": "60 minutos",
+     "new": "60 minutos",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados tarefas-escolha/m9-u2.json: «10 minutos» que não se parte",
+     "old": "10 minutos",
+     "new": "10 minutos",
+     "occurrences": 1
+    }
+   ]
+  },
+  "assets/exame/sessoes.json": {
+   "base_sha256_lf": "6751f2d8f39137c69602b2dbe028c4609c7b74730ad13a97c737aa2f7e93743e",
+   "after_sha256_lf": "10d24bde20e321051f09a1fd77926c55826b809c91f8ced6dd0b3b3ce6d0003d",
+   "edits": [
+    {
+     "location": "assets/exame/sessoes.json: «No início do século XVIII\"» que não se parte (com o contexto «século XVIII»)",
+     "old": "século XVIII",
+     "new": "século XVIII",
+     "occurrences": 4
+    },
+    {
+     "location": "assets/exame/sessoes.json: «Reinado de D. João V e tempo» que não se parte (com o contexto «D. João V »)",
+     "old": "D. João V ",
+     "new": "D. João V ",
+     "occurrences": 2
+    },
+    {
+     "location": "assets/exame/sessoes.json: «início do século XVIII; o século XX é» que não se parte (com o contexto «século XX »)",
+     "old": "século XX ",
+     "new": "século XX ",
+     "occurrences": 2
+    }
+   ]
+  },
+  "m9/biblioteca-fogo/index.html": {
+   "base_sha256_lf": "b83f33761135f515bd5f02915590f8309f0cf828c07a715fa46034c88ef15cca",
+   "after_sha256_lf": "6067d7e688e142430850f102ef1026347f638467a4a881ce360d1307b8c98c3b",
+   "edits": [
+    {
+     "location": "m9/biblioteca-fogo: «30 segundos» que não se parte",
+     "old": "30 segundos",
+     "new": "30 segundos",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m9/gramatica-saramago/index.html": {
+   "base_sha256_lf": "1d5a61521575ff953e79546f87e37fc2205a767e5825f2f8dc242b69757d1408",
+   "after_sha256_lf": "bff646ef0073ec778fd9dfb1ddc556a8afa7394d869ceac9f78288aa2c536142",
+   "edits": [
+    {
+     "location": "m9/gramatica-saramago: «D. João V» que não se parte",
+     "old": "D. João V",
+     "new": "D. João V",
+     "occurrences": 2
+    }
+   ]
+  },
+  "m9/guia-da-tarefa-m9/index.html": {
+   "base_sha256_lf": "592b7f30cceabddc6b821352c8e43da7d85a129a536392f676d75977713a736d",
+   "after_sha256_lf": "5052d6a54d476540a01081570dc60642fcec314a4e0d4f3b43cfc5764feceede",
+   "edits": [
+    {
+     "location": "m9/guia-da-tarefa-m9, «Tarefas das unidades»: os pesos na avaliação",
+     "old": "<p class=\"avaliacao-tarefas\">Avaliação: tarefa da Unidade 1, 30 %; tarefa da Unidade 2, 30 %; provas rápidas, 10 %; prova escrita, 30 %. ",
+     "new": "<p>Avaliação:</p><table class=\"apoio-tabela\" role=\"table\"><thead role=\"rowgroup\"><tr role=\"row\"><th scope=\"col\" role=\"columnheader\" style=\"width:auto\">Elemento</th><th scope=\"col\" role=\"columnheader\" style=\"width:5.5rem\">Peso</th></tr></thead><tbody role=\"rowgroup\"><tr role=\"row\"><th scope=\"row\" role=\"rowheader\">Tarefa da Unidade 1</th><td role=\"cell\" data-label=\"Peso\">30 %</td></tr><tr role=\"row\"><th scope=\"row\" role=\"rowheader\">Tarefa da Unidade 2</th><td role=\"cell\" data-label=\"Peso\">30 %</td></tr><tr role=\"row\"><th scope=\"row\" role=\"rowheader\">Provas rápidas</th><td role=\"cell\" data-label=\"Peso\">10 %</td></tr><tr role=\"row\"><th scope=\"row\" role=\"rowheader\">Prova escrita</th><td role=\"cell\" data-label=\"Peso\">30 %</td></tr></tbody></table><p class=\"avaliacao-tarefas\">",
+     "occurrences": 1
+    },
+    {
+     "location": "m9/guia-da-tarefa-m9, «Três antes de mim» (div.regra)",
+     "old": "Antes de chamares o docente: 1) relê o enunciado; 2) vê a rubrica; 3) pergunta ao teu par de trabalho. Só depois levantas o braço.</div>",
+     "new": "Antes de chamares o docente:<ol><li>relê o enunciado;</li><li>vê a rubrica;</li><li>pergunta ao teu par de trabalho.</li></ol>Só depois levantas o braço.</div>",
+     "occurrences": 1
+    },
+    {
+     "location": "m9/guia-da-tarefa-m9, cabeça: a folha das tabelas de apoio, antes da camada de aparência",
+     "old": "<link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-universal-1\">",
+     "new": "<link rel=\"stylesheet\" href=\"../../assets/pt-lessons/apoios-tabelas.css?v=20261106.1\"><link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-universal-1\">",
+     "occurrences": 1
+    },
+    {
+     "location": "m9/guia-da-tarefa-m9: «3.º ano» que não se parte",
+     "old": "3.º ano",
+     "new": "3.º ano",
+     "occurrences": 2
+    },
+    {
+     "location": "m9/guia-da-tarefa-m9: «90 minutos» que não se parte",
+     "old": "90 minutos",
+     "new": "90 minutos",
+     "occurrences": 1
+    },
+    {
+     "location": "m9/guia-da-tarefa-m9: «30 %,» que não se parte",
+     "old": "30 %,",
+     "new": "30 %,",
+     "occurrences": 2
+    },
+    {
+     "location": "m9/guia-da-tarefa-m9: «10 minutos» que não se parte",
+     "old": "10 minutos",
+     "new": "10 minutos",
+     "occurrences": 1
+    },
+    {
+     "location": "m9/guia-da-tarefa-m9: «5 minutos» que não se parte",
+     "old": "5 minutos",
+     "new": "5 minutos",
+     "occurrences": 1
+    },
+    {
+     "location": "m9/guia-da-tarefa-m9: «capítulos I e V» que não se parte",
+     "old": "capítulos I e V",
+     "new": "capítulos I e V",
+     "occurrences": 1
+    },
+    {
+     "location": "m9/guia-da-tarefa-m9: «10 min<» que não se parte",
+     "old": "10 min<",
+     "new": "10 min<",
+     "occurrences": 1
+    },
+    {
+     "location": "m9/guia-da-tarefa-m9: « 5 min<» que não se parte",
+     "old": " 5 min<",
+     "new": " 5 min<",
+     "occurrences": 1
+    },
+    {
+     "location": "m9/guia-da-tarefa-m9: «60 min» que não se parte",
+     "old": "60 min",
+     "new": "60 min",
+     "occurrences": 1
+    },
+    {
+     "location": "m9/guia-da-tarefa-m9: «15 min» que não se parte",
+     "old": "15 min",
+     "new": "15 min",
+     "occurrences": 1
+    },
+    {
+     "location": "m9/guia-da-tarefa-m9: «7 minutos» que não se parte",
+     "old": "7 minutos",
+     "new": "7 minutos",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m9/index.html": {
+   "base_sha256_lf": "78f37e43f898930665cb8dabd502a3ef27a8c9af8ceeeb3e345c3625b626e0f1",
+   "after_sha256_lf": "a0429fba25ff50d623c17fb49ddb6b525f1d4429f0c7e020d34e993be3b2648d",
+   "edits": [
+    {
+     "location": "m9, «Como se cumpre uma unidade»: os pesos na avaliação",
+     "old": "<p class=\"avaliacao-tarefas\">Pesos na avaliação: tarefa da Unidade 1, 30 %; tarefa da Unidade 2, 30 %; provas rápidas, 10 %; prova escrita, 30 %. ",
+     "new": "<p>Pesos na avaliação:</p><table class=\"apoio-tabela\" role=\"table\"><thead role=\"rowgroup\"><tr role=\"row\"><th scope=\"col\" role=\"columnheader\" style=\"width:auto\">Elemento</th><th scope=\"col\" role=\"columnheader\" style=\"width:5.5rem\">Peso</th></tr></thead><tbody role=\"rowgroup\"><tr role=\"row\"><th scope=\"row\" role=\"rowheader\">Tarefa da Unidade 1</th><td role=\"cell\" data-label=\"Peso\">30 %</td></tr><tr role=\"row\"><th scope=\"row\" role=\"rowheader\">Tarefa da Unidade 2</th><td role=\"cell\" data-label=\"Peso\">30 %</td></tr><tr role=\"row\"><th scope=\"row\" role=\"rowheader\">Provas rápidas</th><td role=\"cell\" data-label=\"Peso\">10 %</td></tr><tr role=\"row\"><th scope=\"row\" role=\"rowheader\">Prova escrita</th><td role=\"cell\" data-label=\"Peso\">30 %</td></tr></tbody></table><p class=\"avaliacao-tarefas\">",
+     "occurrences": 1
+    },
+    {
+     "location": "m9, cabeça: a folha das tabelas de apoio, antes da camada de aparência",
+     "old": "<link rel=\"stylesheet\" href=\"../assets/appearance.css?v=20261025-universal-1\">",
+     "new": "<link rel=\"stylesheet\" href=\"../assets/pt-lessons/apoios-tabelas.css?v=20261106.1\"><link rel=\"stylesheet\" href=\"../assets/appearance.css?v=20261025-universal-1\">",
+     "occurrences": 1
+    },
+    {
+     "location": "m9: «3.º ano» que não se parte",
+     "old": "3.º ano",
+     "new": "3.º ano",
+     "occurrences": 2
+    },
+    {
+     "location": "m9: «90 minutos» que não se parte",
+     "old": "90 minutos",
+     "new": "90 minutos",
+     "occurrences": 3
+    },
+    {
+     "location": "m9: «90 min<» que não se parte",
+     "old": "90 min<",
+     "new": "90 min<",
+     "occurrences": 4
+    },
+    {
+     "location": "m9: «capítulo XXI» que não se parte",
+     "old": "capítulo XXI",
+     "new": "capítulo XXI",
+     "occurrences": 4
+    },
+    {
+     "location": "m9: «22 min» que não se parte",
+     "old": "22 min",
+     "new": "22 min",
+     "occurrences": 2
+    },
+    {
+     "location": "m9: «10 min» que não se parte",
+     "old": "10 min",
+     "new": "10 min",
+     "occurrences": 2
+    },
+    {
+     "location": "m9: «30 %.<» que não se parte",
+     "old": "30 %.<",
+     "new": "30 %.<",
+     "occurrences": 2
+    },
+    {
+     "location": "m9: «século XVIII (fac-símile, BNP).» que não se parte",
+     "old": "século XVIII (fac-símile, BNP).",
+     "new": "século XVIII (fac-símile, BNP).",
+     "occurrences": 1
+    },
+    {
+     "location": "m9: «século XVIII (fac-símile, BNP).» que não se parte (com o contexto «século XVIII\"»)",
+     "old": "século XVIII\"",
+     "new": "século XVIII\"",
+     "occurrences": 3
+    },
+    {
+     "location": "m9: «século XVIII (fac-símile, BNP).» que não se parte (com o contexto «século XVIII;»)",
+     "old": "século XVIII;",
+     "new": "século XVIII;",
+     "occurrences": 1
+    },
+    {
+     "location": "m9: «século XVIII (fac-símile, BNP).» que não se parte (com o contexto «século XVIII.»)",
+     "old": "século XVIII.",
+     "new": "século XVIII.",
+     "occurrences": 1
+    },
+    {
+     "location": "m9: «século XVIII (fac-símile, BNP).» que não se parte (com o contexto «século XVIII (l»)",
+     "old": "século XVIII (l",
+     "new": "século XVIII (l",
+     "occurrences": 1
+    },
+    {
+     "location": "m9: «século XVIII (fac-símile, BNP).» que não se parte (com o contexto «século XVIII c»)",
+     "old": "século XVIII c",
+     "new": "século XVIII c",
+     "occurrences": 2
+    },
+    {
+     "location": "m9: «século XVI\"» que não se parte",
+     "old": "século XVI\"",
+     "new": "século XVI\"",
+     "occurrences": 1
+    },
+    {
+     "location": "m9: «século XVI\"» que não se parte (com o contexto «século XVI »)",
+     "old": "século XVI ",
+     "new": "século XVI ",
+     "occurrences": 1
+    },
+    {
+     "location": "m9: «século XVI\"» que não se parte (com o contexto «século XVI,»)",
+     "old": "século XVI,",
+     "new": "século XVI,",
+     "occurrences": 3
+    },
+    {
+     "location": "m9: «século XX» que não se parte",
+     "old": "século XX",
+     "new": "século XX",
+     "occurrences": 9
+    },
+    {
+     "location": "m9: «século XVII\"» que não se parte",
+     "old": "século XVII\"",
+     "new": "século XVII\"",
+     "occurrences": 1
+    },
+    {
+     "location": "m9: «D. João V» que não se parte",
+     "old": "D. João V",
+     "new": "D. João V",
+     "occurrences": 15
+    },
+    {
+     "location": "m9: «22 de outubro de 1982» que não se parte",
+     "old": "22 de outubro de 1982",
+     "new": "22 de outubro de 1982",
+     "occurrences": 1
+    },
+    {
+     "location": "m9: «22 de outubro de 1730» que não se parte",
+     "old": "22 de outubro de 1730",
+     "new": "22 de outubro de 1730",
+     "occurrences": 1
+    },
+    {
+     "location": "m9: «22 de outubro de 1523» que não se parte",
+     "old": "22 de outubro de 1523",
+     "new": "22 de outubro de 1523",
+     "occurrences": 1
+    },
+    {
+     "location": "m9: «capítulo I» que não se parte",
+     "old": "capítulo I",
+     "new": "capítulo I",
+     "occurrences": 1
+    },
+    {
+     "location": "m9: «Século XVI» que não se parte",
+     "old": "Século XVI",
+     "new": "Século XVI",
+     "occurrences": 1
+    },
+    {
+     "location": "m9: «cap. XXI» que não se parte",
+     "old": "cap. XXI",
+     "new": "cap. XXI",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m9/licao-m9-f01/index.html": {
+   "base_sha256_lf": "4d3edfdc134792584e6b87a17c19e257ad76a67fb082b64800d80fa02b0daed2",
+   "after_sha256_lf": "d1840ab6b954fe3365167a976c2117e127d7d32ea88135317810aa61b2f645f3",
+   "edits": [
+    {
+     "location": "M9-F01, cartão 9, Para entender («Recorda»)",
+     "old": "<p><b>Tempo histórico</b>: a época em que a história se passa. <b>Organização temporal do relato</b>: a ordem em que o narrador apresenta os acontecimentos, com recuos e avanços. <b>Tempo da narração</b>: o momento de onde a voz conta, que pode distinguir-se da época narrada. <b>Prolepse</b>: o narrador adianta o que ainda vai acontecer. <b>Romance histórico</b>: ficção que se passa numa época real e usa figuras e factos dela.</p>",
+     "new": "<table class=\\\"apoio-tabela\\\" role=\\\"table\\\"><thead role=\\\"rowgroup\\\"><tr role=\\\"row\\\"><th scope=\\\"col\\\" role=\\\"columnheader\\\">Noção</th><th scope=\\\"col\\\" role=\\\"columnheader\\\">O que é</th></tr></thead><tbody role=\\\"rowgroup\\\"><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Tempo histórico</th><td role=\\\"cell\\\" data-label=\\\"O que é\\\">a época em que a história se passa</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Organização temporal do relato</th><td role=\\\"cell\\\" data-label=\\\"O que é\\\">a ordem em que o narrador apresenta os acontecimentos, com recuos e avanços</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Tempo da narração</th><td role=\\\"cell\\\" data-label=\\\"O que é\\\">o momento de onde a voz conta, que pode distinguir-se da época narrada</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Prolepse</th><td role=\\\"cell\\\" data-label=\\\"O que é\\\">o narrador adianta o que ainda vai acontecer</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Romance histórico</th><td role=\\\"cell\\\" data-label=\\\"O que é\\\">ficção que se passa numa época real e usa figuras e factos dela</td></tr></tbody></table>",
+     "occurrences": 1
+    },
+    {
+     "location": "M9-F01, cartão 3, O essencial («O título e as quatro linhas de ação»)",
+     "old": "<p>«Memorial» é texto de memória e monumento que lembra. O romance histórico cruza ficção e história em quatro linhas de ação: a construção do convento, a passarola, o amor de Baltasar e Blimunda, a corte e a Inquisição. Assim dá lugar a quem a história oficial esquece.</p>",
+     "new": "<p>«Memorial» é texto de memória e monumento que lembra. O romance histórico cruza ficção e história em quatro linhas de ação:</p><ul><li>a construção do convento,</li><li>a passarola,</li><li>o amor de Baltasar e Blimunda,</li><li>a corte e a Inquisição.</li></ul><p>Assim dá lugar a quem a história oficial esquece.</p>",
+     "occurrences": 1
+    },
+    {
+     "location": "M9-F01, cabeça: a folha das tabelas de apoio, antes da camada de aparência",
+     "old": "<link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-reading1\">",
+     "new": "<link rel=\"stylesheet\" href=\"../../assets/pt-lessons/apoios-tabelas.css?v=20261106.1\"><link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-reading1\">",
+     "occurrences": 1
+    },
+    {
+     "location": "M9-F01: «12.º ano» que não se parte",
+     "old": "12.º ano",
+     "new": "12.º ano",
+     "occurrences": 1
+    },
+    {
+     "location": "M9-F01: «D. João V p» que não se parte",
+     "old": "D. João V p",
+     "new": "D. João V p",
+     "occurrences": 1
+    },
+    {
+     "location": "M9-F01: «D. João V p» que não se parte (com o contexto «D. João V r»)",
+     "old": "D. João V r",
+     "new": "D. João V r",
+     "occurrences": 1
+    },
+    {
+     "location": "M9-F01: «D. João V p» que não se parte (com o contexto «D. João V, a»)",
+     "old": "D. João V, a",
+     "new": "D. João V, a",
+     "occurrences": 3
+    },
+    {
+     "location": "M9-F01: «D. João V p» que não se parte (com o contexto «D. João V e»)",
+     "old": "D. João V e",
+     "new": "D. João V e",
+     "occurrences": 6
+    },
+    {
+     "location": "M9-F01: «D. João V p» que não se parte (com o contexto «D. João V s»)",
+     "old": "D. João V s",
+     "new": "D. João V s",
+     "occurrences": 1
+    },
+    {
+     "location": "M9-F01: «D. João V p» que não se parte (com o contexto «D. João V fecha-se numa sala do torreão, »)",
+     "old": "D. João V fecha-se numa sala do torreão, ",
+     "new": "D. João V fecha-se numa sala do torreão, ",
+     "occurrences": 1
+    },
+    {
+     "location": "M9-F01: «D. João V p» que não se parte (com o contexto «D. João V.»)",
+     "old": "D. João V.",
+     "new": "D. João V.",
+     "occurrences": 2
+    },
+    {
+     "location": "M9-F01: «D. João V p» que não se parte (com o contexto «D. João V:»)",
+     "old": "D. João V:",
+     "new": "D. João V:",
+     "occurrences": 1
+    },
+    {
+     "location": "M9-F01: «D. João V p» que não se parte (com o contexto «D. João V\"»)",
+     "old": "D. João V\"",
+     "new": "D. João V\"",
+     "occurrences": 1
+    },
+    {
+     "location": "M9-F01: «D. João V p» que não se parte (com o contexto «D. João V a»)",
+     "old": "D. João V a",
+     "new": "D. João V a",
+     "occurrences": 1
+    },
+    {
+     "location": "M9-F01: «D. João V p» que não se parte (com o contexto «D. João V, e»)",
+     "old": "D. João V, e",
+     "new": "D. João V, e",
+     "occurrences": 1
+    },
+    {
+     "location": "M9-F01: «2 min)<» que não se parte",
+     "old": "2 min)<",
+     "new": "2 min)<",
+     "occurrences": 1
+    },
+    {
+     "location": "M9-F01: «séc. XVIII» que não se parte",
+     "old": "séc. XVIII",
+     "new": "séc. XVIII",
+     "occurrences": 2
+    },
+    {
+     "location": "M9-F01: «capítulo XXI, o» que não se parte (com o contexto «>No capítulo XXI, o »)",
+     "old": ">No capítulo XXI, o ",
+     "new": ">No capítulo XXI, o ",
+     "occurrences": 1
+    },
+    {
+     "location": "M9-F01: «capítulo XXI, o» que não se parte (com o contexto «ta (capítulo XXI)\",\"»)",
+     "old": "ta (capítulo XXI)\",\"",
+     "new": "ta (capítulo XXI)\",\"",
+     "occurrences": 1
+    },
+    {
+     "location": "M9-F01: «capítulo XXI, o» que não se parte (com o contexto «2), capítulo XXI; gr»)",
+     "old": "2), capítulo XXI; gr",
+     "new": "2), capítulo XXI; gr",
+     "occurrences": 1
+    },
+    {
+     "location": "M9-F01: «capítulo XXI, o» que não se parte (com o contexto «>No capítulo XXI, D.»)",
+     "old": ">No capítulo XXI, D.",
+     "new": ">No capítulo XXI, D.",
+     "occurrences": 1
+    },
+    {
+     "location": "M9-F01: «capítulo XXI, o» que não se parte (com o contexto «30 (capítulo XXI), n»)",
+     "old": "30 (capítulo XXI), n",
+     "new": "30 (capítulo XXI), n",
+     "occurrences": 1
+    },
+    {
+     "location": "M9-F01: «capítulo XXI, o» que não se parte (com o contexto « no capítulo XXI.\",\"»)",
+     "old": " no capítulo XXI.\",\"",
+     "new": " no capítulo XXI.\",\"",
+     "occurrences": 2
+    },
+    {
+     "location": "M9-F01: «capítulo XXI, o» que não se parte (com o contexto «ia (capítulo XXI); o»)",
+     "old": "ia (capítulo XXI); o",
+     "new": "ia (capítulo XXI); o",
+     "occurrences": 1
+    },
+    {
+     "location": "M9-F01: «capítulo XXI, o» que não se parte (com o contexto «\"No capítulo XXI, o »)",
+     "old": "\"No capítulo XXI, o ",
+     "new": "\"No capítulo XXI, o ",
+     "occurrences": 1
+    },
+    {
+     "location": "M9-F01: «22 de outubro,» que não se parte (com o contexto «a sagração para 22 de outubro, dia do»)",
+     "old": "a sagração para 22 de outubro, dia do",
+     "new": "a sagração para 22 de outubro, dia do",
+     "occurrences": 1
+    },
+    {
+     "location": "M9-F01: «século XVIII» que não se parte",
+     "old": "século XVIII",
+     "new": "século XVIII",
+     "occurrences": 7
+    },
+    {
+     "location": "M9-F01: «Século XVIII» que não se parte",
+     "old": "Século XVIII",
+     "new": "Século XVIII",
+     "occurrences": 1
+    },
+    {
+     "location": "M9-F01: « 22 de outubro de 1730,» que não se parte",
+     "old": " 22 de outubro de 1730,",
+     "new": " 22 de outubro de 1730,",
+     "occurrences": 2
+    },
+    {
+     "location": "M9-F01: « 22 de outubro de 1730,» que não se parte (com o contexto «*22 de outubro de 1730*»)",
+     "old": "*22 de outubro de 1730*",
+     "new": "*22 de outubro de 1730*",
+     "occurrences": 2
+    },
+    {
+     "location": "M9-F01: «pp. 291 a 293» que não se parte",
+     "old": "pp. 291 a 293",
+     "new": "pp. 291 a 293",
+     "occurrences": 1
+    },
+    {
+     "location": "M9-F01: «século XVI\"» que não se parte",
+     "old": "século XVI\"",
+     "new": "século XVI\"",
+     "occurrences": 1
+    },
+    {
+     "location": "M9-F01: «século XVI\"» que não se parte (com o contexto «século XVI »)",
+     "old": "século XVI ",
+     "new": "século XVI ",
+     "occurrences": 1
+    },
+    {
+     "location": "M9-F01: «século XX» que não se parte",
+     "old": "século XX",
+     "new": "século XX",
+     "occurrences": 4
+    },
+    {
+     "location": "M9-F01: «século XVII\"» que não se parte",
+     "old": "século XVII\"",
+     "new": "século XVII\"",
+     "occurrences": 1
+    },
+    {
+     "location": "M9-F01: «capítulo I» que não se parte",
+     "old": "capítulo I",
+     "new": "capítulo I",
+     "occurrences": 3
+    }
+   ]
+  },
+  "m9/licao-m9-f02/index.html": {
+   "base_sha256_lf": "3b80613342dc7a4fc009bad73dd6749f2298b01ae98381769d1e20e349c2f4cf",
+   "after_sha256_lf": "a3a4133c423227533d48b2872d393fd6512eb8b9ef5d36bd0ceae9e8f7cbe24a",
+   "edits": [
+    {
+     "location": "M9-F02, cartão 7, Para entender («Recorda»)",
+     "old": "<p><b>Símbolo</b>: uma coisa concreta que representa uma ideia (a passarola, o sonho). <b>Caracterização direta</b>: o narrador ou uma personagem diz como alguém é. <b>Caracterização indireta</b>: percebe-se pelo que a personagem faz e diz. Baltasar chama-se Sete-Sóis; Blimunda, Sete-Luas.</p>",
+     "new": "<table class=\\\"apoio-tabela\\\" role=\\\"table\\\"><thead role=\\\"rowgroup\\\"><tr role=\\\"row\\\"><th scope=\\\"col\\\" role=\\\"columnheader\\\" style=\\\"width:30%\\\">Noção</th><th scope=\\\"col\\\" role=\\\"columnheader\\\">O que é</th></tr></thead><tbody role=\\\"rowgroup\\\"><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Símbolo</th><td role=\\\"cell\\\" data-label=\\\"O que é\\\">uma coisa concreta que representa uma ideia (a passarola, o sonho)</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Caracterização direta</th><td role=\\\"cell\\\" data-label=\\\"O que é\\\">o narrador ou uma personagem diz como alguém é</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Caracterização indireta</th><td role=\\\"cell\\\" data-label=\\\"O que é\\\">percebe-se pelo que a personagem faz e diz</td></tr></tbody></table><p>Baltasar chama-se Sete-Sóis; Blimunda, Sete-Luas.</p>",
+     "occurrences": 1
+    },
+    {
+     "location": "M9-F02, cabeça: a folha das tabelas de apoio, antes da camada de aparência",
+     "old": "<link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-reading1\">",
+     "new": "<link rel=\"stylesheet\" href=\"../../assets/pt-lessons/apoios-tabelas.css?v=20261106.1\"><link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-reading1\">",
+     "occurrences": 1
+    },
+    {
+     "location": "M9-F02: «12.º ano» que não se parte",
+     "old": "12.º ano",
+     "new": "12.º ano",
+     "occurrences": 1
+    },
+    {
+     "location": "M9-F02: «capítulo XVI» que não se parte",
+     "old": "capítulo XVI",
+     "new": "capítulo XVI",
+     "occurrences": 3
+    },
+    {
+     "location": "M9-F02: «2 min)<» que não se parte",
+     "old": "2 min)<",
+     "new": "2 min)<",
+     "occurrences": 1
+    },
+    {
+     "location": "M9-F02: «pp. 196 e 197» que não se parte",
+     "old": "pp. 196 e 197",
+     "new": "pp. 196 e 197",
+     "occurrences": 1
+    },
+    {
+     "location": "M9-F02: «capítulo XXV» que não se parte",
+     "old": "capítulo XXV",
+     "new": "capítulo XXV",
+     "occurrences": 3
+    },
+    {
+     "location": "M9-F02: «D. João V» que não se parte",
+     "old": "D. João V",
+     "new": "D. João V",
+     "occurrences": 2
+    }
+   ]
+  },
+  "m9/licao-m9-f03/index.html": {
+   "base_sha256_lf": "ec32d4ebe09b5e24d325e2aee4dfac862ed109c7c4241c66e27b3d0708708eab",
+   "after_sha256_lf": "d48ea46a7d5b1652ba9cd20543a465ba5086587df5590d003041ede0c1f6295b",
+   "edits": [
+    {
+     "location": "M9-F03, cartão 5, Para entender («Recorda»)",
+     "old": "<p><b>Discurso direto</b>: as palavras da personagem, tal como as disse. <b>Discurso indireto</b>: o narrador conta o que foi dito, com «que» e mudança de tempos e de pessoas. <b>Discurso indireto livre</b>: a voz da personagem dentro da voz do narrador, sem verbo a anunciar. <b>Ironia</b>: dizer uma coisa para dar a entender outra. <b>Intertextualidade</b>: um texto que chama outros textos.</p>",
+     "new": "<table class=\\\"apoio-tabela\\\" role=\\\"table\\\"><thead role=\\\"rowgroup\\\"><tr role=\\\"row\\\"><th scope=\\\"col\\\" role=\\\"columnheader\\\" style=\\\"width:30%\\\">Noção</th><th scope=\\\"col\\\" role=\\\"columnheader\\\">O que é</th></tr></thead><tbody role=\\\"rowgroup\\\"><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Discurso direto</th><td role=\\\"cell\\\" data-label=\\\"O que é\\\">as palavras da personagem, tal como as disse</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Discurso indireto</th><td role=\\\"cell\\\" data-label=\\\"O que é\\\">o narrador conta o que foi dito, com «que» e mudança de tempos e de pessoas</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Discurso indireto livre</th><td role=\\\"cell\\\" data-label=\\\"O que é\\\">a voz da personagem dentro da voz do narrador, sem verbo a anunciar</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Ironia</th><td role=\\\"cell\\\" data-label=\\\"O que é\\\">dizer uma coisa para dar a entender outra</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Intertextualidade</th><td role=\\\"cell\\\" data-label=\\\"O que é\\\">um texto que chama outros textos</td></tr></tbody></table>",
+     "occurrences": 1
+    },
+    {
+     "location": "M9-F03, cabeça: a folha das tabelas de apoio, antes da camada de aparência",
+     "old": "<link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-reading1\">",
+     "new": "<link rel=\"stylesheet\" href=\"../../assets/pt-lessons/apoios-tabelas.css?v=20261106.1\"><link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-reading1\">",
+     "occurrences": 1
+    },
+    {
+     "location": "M9-F03: «>D. João V» que não se parte",
+     "old": ">D. João V",
+     "new": ">D. João V",
+     "occurrences": 1
+    },
+    {
+     "location": "M9-F03: «4 min)<» que não se parte",
+     "old": "4 min)<",
+     "new": "4 min)<",
+     "occurrences": 2
+    },
+    {
+     "location": "M9-F03: «capítulo I» que não se parte",
+     "old": "capítulo I",
+     "new": "capítulo I",
+     "occurrences": 2
+    },
+    {
+     "location": "M9-F03: «capítulo XXI» que não se parte",
+     "old": "capítulo XXI",
+     "new": "capítulo XXI",
+     "occurrences": 4
+    }
+   ]
+  },
+  "m9/licao-m9-f04/index.html": {
+   "base_sha256_lf": "6a235938a4543d2eca0651895e5966199f4d726373fd1f34a0c1774fff5ae255",
+   "after_sha256_lf": "7c9b596baba272084ed64f8e8d53cb348d0636564665650b6bc27dd300f8252e",
+   "edits": [
+    {
+     "location": "M9-F04: «século XX» que não se parte",
+     "old": "século XX",
+     "new": "século XX",
+     "occurrences": 10
+    },
+    {
+     "location": "M9-F04: «século XVI » que não se parte",
+     "old": "século XVI ",
+     "new": "século XVI ",
+     "occurrences": 2
+    },
+    {
+     "location": "M9-F04: «século XVI » que não se parte (com o contexto «século XVI;»)",
+     "old": "século XVI;",
+     "new": "século XVI;",
+     "occurrences": 1
+    },
+    {
+     "location": "M9-F04: «século XVI » que não se parte (com o contexto «século XVI,»)",
+     "old": "século XVI,",
+     "new": "século XVI,",
+     "occurrences": 2
+    },
+    {
+     "location": "M9-F04: «2 min)<» que não se parte",
+     "old": "2 min)<",
+     "new": "2 min)<",
+     "occurrences": 2
+    },
+    {
+     "location": "M9-F04: «século XVIII» que não se parte",
+     "old": "século XVIII",
+     "new": "século XVIII",
+     "occurrences": 4
+    },
+    {
+     "location": "M9-F04: «Século XVI» que não se parte",
+     "old": "Século XVI",
+     "new": "Século XVI",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m9/licao-m9-f05/index.html": {
+   "base_sha256_lf": "3f4a7ca743e1a83fe5350444ee19ed3a1f2f66936d35e1c2aeaba9c05c12a5cb",
+   "after_sha256_lf": "c67f1eaae956dbaa96fb1544ab22d11bb28aca50c5cab9f32f1612c770836396",
+   "edits": [
+    {
+     "location": "M9-F05: «12.º ano» que não se parte",
+     "old": "12.º ano",
+     "new": "12.º ano",
+     "occurrences": 1
+    },
+    {
+     "location": "M9-F05: «4 min)<» que não se parte",
+     "old": "4 min)<",
+     "new": "4 min)<",
+     "occurrences": 1
+    },
+    {
+     "location": "M9-F05: «30 segundos» que não se parte",
+     "old": "30 segundos",
+     "new": "30 segundos",
+     "occurrences": 1
+    },
+    {
+     "location": "M9-F05: «3 min,» que não se parte",
+     "old": "3 min,",
+     "new": "3 min,",
+     "occurrences": 1
+    },
+    {
+     "location": "M9-F05: «3 minutos» que não se parte",
+     "old": "3 minutos",
+     "new": "3 minutos",
+     "occurrences": 1
+    },
+    {
+     "location": "M9-F05: «capítulo XIX» que não se parte",
+     "old": "capítulo XIX",
+     "new": "capítulo XIX",
+     "occurrences": 2
+    },
+    {
+     "location": "M9-F05: «capítulo XXV» que não se parte",
+     "old": "capítulo XXV",
+     "new": "capítulo XXV",
+     "occurrences": 2
+    }
+   ]
+  },
+  "m9/licao-m9-f07/index.html": {
+   "base_sha256_lf": "4dffc34f15f7d99b94309eec90737b57b3db953aff0916fcf443f4c029013e12",
+   "after_sha256_lf": "4476ccfac3ed1d8ea55748a91144b65ee3bd4a352112975d541d297fd9398b62",
+   "edits": [
+    {
+     "location": "M9-F07: «D. João V» que não se parte",
+     "old": "D. João V",
+     "new": "D. João V",
+     "occurrences": 8
+    },
+    {
+     "location": "M9-F07: «capítulo XXI» que não se parte",
+     "old": "capítulo XXI",
+     "new": "capítulo XXI",
+     "occurrences": 2
+    },
+    {
+     "location": "M9-F07: «canto I» que não se parte",
+     "old": "canto I",
+     "new": "canto I",
+     "occurrences": 4
+    },
+    {
+     "location": "M9-F07: «capítulo XIX» que não se parte",
+     "old": "capítulo XIX",
+     "new": "capítulo XIX",
+     "occurrences": 2
+    }
+   ]
+  },
+  "m9/licao-m9-f10/index.html": {
+   "base_sha256_lf": "d4064d1c065453e316132a21082ca8ee8567b85463a7c90ac24f235fbc0fa296",
+   "after_sha256_lf": "3d4e11c273562037ff3306ee4e385b43aaee1d67e7625bc6f5a08ff3844e0a68",
+   "edits": [
+    {
+     "location": "M9-F10, cartão 5, Para entender («Recorda»)",
+     "old": "<p><b>Tese</b>: a posição que se defende. <b>Argumento</b>: uma razão, com prova. <b>Contra-argumento</b>: a razão de quem discorda. <b>Refutação</b>: a resposta a essa razão. Conectores que ajudam: «porque», «no entanto», «ainda que», «portanto».</p>",
+     "new": "<table class=\\\"apoio-tabela\\\" role=\\\"table\\\"><thead role=\\\"rowgroup\\\"><tr role=\\\"row\\\"><th scope=\\\"col\\\" role=\\\"columnheader\\\">Termo</th><th scope=\\\"col\\\" role=\\\"columnheader\\\">O que é</th></tr></thead><tbody role=\\\"rowgroup\\\"><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Tese</th><td role=\\\"cell\\\" data-label=\\\"O que é\\\">a posição que se defende</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Argumento</th><td role=\\\"cell\\\" data-label=\\\"O que é\\\">uma razão, com prova</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Contra-argumento</th><td role=\\\"cell\\\" data-label=\\\"O que é\\\">a razão de quem discorda</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Refutação</th><td role=\\\"cell\\\" data-label=\\\"O que é\\\">a resposta a essa razão</td></tr></tbody></table><p>Conectores que ajudam: «porque», «no entanto», «ainda que», «portanto».</p>",
+     "occurrences": 1
+    },
+    {
+     "location": "M9-F10, cabeça: a folha das tabelas de apoio, antes da camada de aparência",
+     "old": "<link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-reading1\">",
+     "new": "<link rel=\"stylesheet\" href=\"../../assets/pt-lessons/apoios-tabelas.css?v=20261106.1\"><link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-reading1\">",
+     "occurrences": 1
+    },
+    {
+     "location": "M9-F10: «3 min)<» que não se parte",
+     "old": "3 min)<",
+     "new": "3 min)<",
+     "occurrences": 1
+    },
+    {
+     "location": "M9-F10: «8 de outubro de 1998» que não se parte",
+     "old": "8 de outubro de 1998",
+     "new": "8 de outubro de 1998",
+     "occurrences": 1
+    },
+    {
+     "location": "M9-F10: «cap. XXI» que não se parte",
+     "old": "cap. XXI",
+     "new": "cap. XXI",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m9/licao-m9-f14/index.html": {
+   "base_sha256_lf": "d61f4a51afa2a4693ebc9c9c69b19580df9493e0dc8aac63f0a9c343ef1757d9",
+   "after_sha256_lf": "993f661df806ab85d0ed117f9dac52300bb8767ffc6f4c37ee6c43ae99dab54e",
+   "edits": [
+    {
+     "location": "M9-F14: «D. João V» que não se parte",
+     "old": "D. João V",
+     "new": "D. João V",
+     "occurrences": 3
+    },
+    {
+     "location": "M9-F14: «capítulo I» que não se parte",
+     "old": "capítulo I",
+     "new": "capítulo I",
+     "occurrences": 1
+    },
+    {
+     "location": "M9-F14: «p. 22» que não se parte",
+     "old": "p. 22",
+     "new": "p. 22",
+     "occurrences": 1
+    },
+    {
+     "location": "M9-F14: «n.º 2» que não se parte",
+     "old": "n.º 2",
+     "new": "n.º 2",
+     "occurrences": 1
+    },
+    {
+     "location": "M9-F14: «p. 33» que não se parte",
+     "old": "p. 33",
+     "new": "p. 33",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m9/licao-m9-f15/index.html": {
+   "base_sha256_lf": "4fd45fa644a211ad02951777907289f818327733805b32f554f015c59c673e6a",
+   "after_sha256_lf": "a51ddecb106214f606df5631df45dbdcbb2ad41a6d33aee54902e767f7ebf918",
+   "edits": [
+    {
+     "location": "M9-F15: «capítulo V» que não se parte",
+     "old": "capítulo V",
+     "new": "capítulo V",
+     "occurrences": 3
+    },
+    {
+     "location": "M9-F15: «página 78» que não se parte",
+     "old": "página 78",
+     "new": "página 78",
+     "occurrences": 1
+    },
+    {
+     "location": "M9-F15: «p. 49» que não se parte",
+     "old": "p. 49",
+     "new": "p. 49",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m9/licao-m9-f16/index.html": {
+   "base_sha256_lf": "32d42ddc1e241ccd6ef1d16b24f42de7be4f758c8bfcd7dd5d2a4665eb72dcfb",
+   "after_sha256_lf": "fa3127da6f83e09588abf320757be22eae117001b6cecf88de668699f86128ae",
+   "edits": [
+    {
+     "location": "M9-F16: «página 1» que não se parte",
+     "old": "página 1",
+     "new": "página 1",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m9/m9-de-quem-e-o-convento/index.html": {
+   "base_sha256_lf": "39786b2f5d7e18c6deab8854dfc2d9ca4f997e3639eb6c1ea6b6b8a48a54d015",
+   "after_sha256_lf": "870f3fbf8c6d4d2248059f79dd64ea63c137f1a447b5c000bbe844e9e4894622",
+   "edits": [
+    {
+     "location": "m9/m9-de-quem-e-o-convento: «22 min» que não se parte",
+     "old": "22 min",
+     "new": "22 min",
+     "occurrences": 1
+    },
+    {
+     "location": "m9/m9-de-quem-e-o-convento: «capítulo XXI» que não se parte",
+     "old": "capítulo XXI",
+     "new": "capítulo XXI",
+     "occurrences": 1
+    },
+    {
+     "location": "m9/m9-de-quem-e-o-convento: «D. João V f» que não se parte",
+     "old": "D. João V f",
+     "new": "D. João V f",
+     "occurrences": 1
+    },
+    {
+     "location": "m9/m9-de-quem-e-o-convento: «D. João V f» que não se parte (com o contexto «D. João V. »)",
+     "old": "D. João V. ",
+     "new": "D. João V. ",
+     "occurrences": 1
+    },
+    {
+     "location": "m9/m9-de-quem-e-o-convento: «D. João V f» que não se parte (com o contexto «D. João V m»)",
+     "old": "D. João V m",
+     "new": "D. João V m",
+     "occurrences": 1
+    },
+    {
+     "location": "m9/m9-de-quem-e-o-convento: «22 de outubro de 1730» que não se parte",
+     "old": "22 de outubro de 1730",
+     "new": "22 de outubro de 1730",
+     "occurrences": 1
+    },
+    {
+     "location": "m9/m9-de-quem-e-o-convento: «capítulo XIX» que não se parte",
+     "old": "capítulo XIX",
+     "new": "capítulo XIX",
+     "occurrences": 1
+    },
+    {
+     "location": "m9/m9-de-quem-e-o-convento: «canto III» que não se parte",
+     "old": "canto III",
+     "new": "canto III",
+     "occurrences": 5
+    },
+    {
+     "location": "m9/m9-de-quem-e-o-convento: «canto VIII» que não se parte",
+     "old": "canto VIII",
+     "new": "canto VIII",
+     "occurrences": 3
+    },
+    {
+     "location": "m9/m9-de-quem-e-o-convento: «estância 20» que não se parte",
+     "old": "estância 20",
+     "new": "estância 20",
+     "occurrences": 3
+    },
+    {
+     "location": "m9/m9-de-quem-e-o-convento: «estância 78» que não se parte",
+     "old": "estância 78",
+     "new": "estância 78",
+     "occurrences": 2
+    },
+    {
+     "location": "m9/m9-de-quem-e-o-convento: «século XX» que não se parte",
+     "old": "século XX",
+     "new": "século XX",
+     "occurrences": 1
+    },
+    {
+     "location": "m9/m9-de-quem-e-o-convento: «capítulos I, XIX e XXI» que não se parte (com o contexto «capítulos I»)",
+     "old": "capítulos I",
+     "new": "capítulos I",
+     "occurrences": 1
+    },
+    {
+     "location": "m9/m9-de-quem-e-o-convento: «capítulos I, XIX e XXI» que não se parte (com o contexto «e XXI»)",
+     "old": "e XXI",
+     "new": "e XXI",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m9/m9-ver-e-nao-ver/index.html": {
+   "base_sha256_lf": "ad38fe278c320acbaeb4b645143e7c0a0e2e93a1e98bdb5a08224b4e50904622",
+   "after_sha256_lf": "5fa3e6e8748388503e520279b843e351575580ff0a5f1842b71fd0be45d220f5",
+   "edits": [
+    {
+     "location": "m9/m9-ver-e-nao-ver: «22 min» que não se parte",
+     "old": "22 min",
+     "new": "22 min",
+     "occurrences": 1
+    },
+    {
+     "location": "m9/m9-ver-e-nao-ver: «capítulo XVI» que não se parte",
+     "old": "capítulo XVI",
+     "new": "capítulo XVI",
+     "occurrences": 1
+    },
+    {
+     "location": "m9/m9-ver-e-nao-ver: «D. João V» que não se parte",
+     "old": "D. João V",
+     "new": "D. João V",
+     "occurrences": 1
+    },
+    {
+     "location": "m9/m9-ver-e-nao-ver: «capítulo XXV» que não se parte",
+     "old": "capítulo XXV",
+     "new": "capítulo XXV",
+     "occurrences": 2
+    },
+    {
+     "location": "m9/m9-ver-e-nao-ver: «capítulo XXI» que não se parte",
+     "old": "capítulo XXI",
+     "new": "capítulo XXI",
+     "occurrences": 1
+    },
+    {
+     "location": "m9/m9-ver-e-nao-ver: «22 de outubro de 1730» que não se parte",
+     "old": "22 de outubro de 1730",
+     "new": "22 de outubro de 1730",
+     "occurrences": 1
+    },
+    {
+     "location": "m9/m9-ver-e-nao-ver: «século XVIII» que não se parte",
+     "old": "século XVIII",
+     "new": "século XVIII",
+     "occurrences": 1
+    },
+    {
+     "location": "m9/m9-ver-e-nao-ver: «século XX» que não se parte",
+     "old": "século XX",
+     "new": "século XX",
+     "occurrences": 4
+    },
+    {
+     "location": "m9/m9-ver-e-nao-ver: «capítulo XIX» que não se parte",
+     "old": "capítulo XIX",
+     "new": "capítulo XIX",
+     "occurrences": 2
+    },
+    {
+     "location": "m9/m9-ver-e-nao-ver: «cap. 1» que não se parte",
+     "old": "cap. 1",
+     "new": "cap. 1",
+     "occurrences": 1
+    },
+    {
+     "location": "m9/m9-ver-e-nao-ver: «capítulos XVI, XIX, XXI e XXV» que não se parte (com o contexto «capítulos XVI»)",
+     "old": "capítulos XVI",
+     "new": "capítulos XVI",
+     "occurrences": 1
+    },
+    {
+     "location": "m9/m9-ver-e-nao-ver: «capítulos XVI, XIX, XXI e XXV» que não se parte (com o contexto «e XXV»)",
+     "old": "e XXV",
+     "new": "e XXV",
+     "occurrences": 1
+    },
+    {
+     "location": "m9/m9-ver-e-nao-ver: «capítulo 1» que não se parte",
+     "old": "capítulo 1",
+     "new": "capítulo 1",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m9/mapa-do-modulo-m9/index.html": {
+   "base_sha256_lf": "47482c3fdea2653a8b1e89836ed613c5fd936e91eefdebf1d0f18a4b84aac094",
+   "after_sha256_lf": "1655591f25df07b2fc26d00a4a0c9d24067b5c0fdab0fccb802d1d4d5575428f",
+   "edits": [
+    {
+     "location": "m9/mapa-do-modulo-m9, «As tarefas das unidades»: os pesos na avaliação",
+     "old": "<p class=\"avaliacao-tarefas\">Avaliação: tarefa da Unidade 1, 30 %; tarefa da Unidade 2, 30 %; provas rápidas, 10 %; prova escrita, 30 %. ",
+     "new": "<p>Avaliação:</p><table class=\"apoio-tabela\" role=\"table\"><thead role=\"rowgroup\"><tr role=\"row\"><th scope=\"col\" role=\"columnheader\" style=\"width:auto\">Elemento</th><th scope=\"col\" role=\"columnheader\" style=\"width:5.5rem\">Peso</th></tr></thead><tbody role=\"rowgroup\"><tr role=\"row\"><th scope=\"row\" role=\"rowheader\">Tarefa da Unidade 1</th><td role=\"cell\" data-label=\"Peso\">30 %</td></tr><tr role=\"row\"><th scope=\"row\" role=\"rowheader\">Tarefa da Unidade 2</th><td role=\"cell\" data-label=\"Peso\">30 %</td></tr><tr role=\"row\"><th scope=\"row\" role=\"rowheader\">Provas rápidas</th><td role=\"cell\" data-label=\"Peso\">10 %</td></tr><tr role=\"row\"><th scope=\"row\" role=\"rowheader\">Prova escrita</th><td role=\"cell\" data-label=\"Peso\">30 %</td></tr></tbody></table><p class=\"avaliacao-tarefas\">",
+     "occurrences": 1
+    },
+    {
+     "location": "m9/mapa-do-modulo-m9, cabeça: a folha das tabelas de apoio, antes da camada de aparência",
+     "old": "<link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-universal-1\">",
+     "new": "<link rel=\"stylesheet\" href=\"../../assets/pt-lessons/apoios-tabelas.css?v=20261106.1\"><link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-universal-1\">",
+     "occurrences": 1
+    },
+    {
+     "location": "m9/mapa-do-modulo-m9: «3.º ano» que não se parte",
+     "old": "3.º ano",
+     "new": "3.º ano",
+     "occurrences": 2
+    },
+    {
+     "location": "m9/mapa-do-modulo-m9: «90 minutos» que não se parte",
+     "old": "90 minutos",
+     "new": "90 minutos",
+     "occurrences": 2
+    },
+    {
+     "location": "m9/mapa-do-modulo-m9: «>D. João V» que não se parte (com o contexto «>D. João V »)",
+     "old": ">D. João V ",
+     "new": ">D. João V ",
+     "occurrences": 3
+    },
+    {
+     "location": "m9/mapa-do-modulo-m9: «>D. João V» que não se parte (com o contexto « D. João V,»)",
+     "old": " D. João V,",
+     "new": " D. João V,",
+     "occurrences": 1
+    },
+    {
+     "location": "m9/mapa-do-modulo-m9: «>D. João V» que não se parte (com o contexto «>D. João V.»)",
+     "old": ">D. João V.",
+     "new": ">D. João V.",
+     "occurrences": 1
+    },
+    {
+     "location": "m9/mapa-do-modulo-m9: «>D. João V» que não se parte (com o contexto « D. João V »)",
+     "old": " D. João V ",
+     "new": " D. João V ",
+     "occurrences": 1
+    },
+    {
+     "location": "m9/mapa-do-modulo-m9: «22 de outubro de 1730» que não se parte",
+     "old": "22 de outubro de 1730",
+     "new": "22 de outubro de 1730",
+     "occurrences": 2
+    },
+    {
+     "location": "m9/mapa-do-modulo-m9: «século XVIII d» que não se parte (com o contexto «limunda.</dd><dt>tempo histórico e tempo da narrativa</dt…»)",
+     "old": "limunda.</dd><dt>tempo histórico e tempo da narrativa</dt><dd>o século XVIII",
+     "new": "limunda.</dd><dt>tempo histórico e tempo da narrativa</dt><dd>o século XVIII",
+     "occurrences": 1
+    },
+    {
+     "location": "m9/mapa-do-modulo-m9: «século XVIII d» que não se parte (com o contexto «=\"info-i-texto\">A Passarola de Bartolomeu de Gusmão, dese…»)",
+     "old": "=\"info-i-texto\">A Passarola de Bartolomeu de Gusmão, desenho do século XVIII",
+     "new": "=\"info-i-texto\">A Passarola de Bartolomeu de Gusmão, desenho do século XVIII",
+     "occurrences": 1
+    },
+    {
+     "location": "m9/mapa-do-modulo-m9: «século XVIII d» que não se parte (com o contexto «ils><figcaption>A Passarola de Bartolomeu de Gusmão, dese…»)",
+     "old": "ils><figcaption>A Passarola de Bartolomeu de Gusmão, desenho do século XVIII",
+     "new": "ils><figcaption>A Passarola de Bartolomeu de Gusmão, desenho do século XVIII",
+     "occurrences": 1
+    },
+    {
+     "location": "m9/mapa-do-modulo-m9: «século XX» que não se parte",
+     "old": "século XX",
+     "new": "século XX",
+     "occurrences": 1
+    },
+    {
+     "location": "m9/mapa-do-modulo-m9: «30 %,» que não se parte",
+     "old": "30 %,",
+     "new": "30 %,",
+     "occurrences": 2
+    },
+    {
+     "location": "m9/mapa-do-modulo-m9: «M9-F01» que não se parte",
+     "old": "M9-F01",
+     "new": "M9-⁠F01",
+     "occurrences": 4
+    },
+    {
+     "location": "m9/mapa-do-modulo-m9: «M9-F04» que não se parte",
+     "old": "M9-F04",
+     "new": "M9-⁠F04",
+     "occurrences": 4
+    },
+    {
+     "location": "m9/mapa-do-modulo-m9: «M9-F02» que não se parte",
+     "old": "M9-F02",
+     "new": "M9-⁠F02",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m9/memorial-promessa/index.html": {
+   "base_sha256_lf": "14bf75824c8ace6e0dd4bc6a1ff7799f5a4fd715f47b11fd52bea74c407c52fa",
+   "after_sha256_lf": "ed83774245a993e4253c5cffe8cc69fbfc9bf7c63bf04c9930e9118a0bfbf75f",
+   "edits": [
+    {
+     "location": "m9/memorial-promessa: «D. João V q» que não se parte",
+     "old": "D. João V q",
+     "new": "D. João V q",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m9/painel-m9-f01/index.html": {
+   "base_sha256_lf": "149165478988b765afdf8e15a7bf776db287be3e5ec882dfb17223b95c56be0d",
+   "after_sha256_lf": "1d39b9c9ee36eff2f7ca373c30af42a5875790a1aee4f8a881e75fe3d6bfce56",
+   "edits": [
+    {
+     "location": "M9-F01 (painel de projeção): o enunciado do cartão 12 igual ao da lição, em a lista do painel",
+     "old": "{\"k\":12,\"t\":\"versos\",\"p\":\"Põe pela ordem do texto o que o rei faz no capítulo XXI.\"}",
+     "new": "{\"k\":12,\"t\":\"versos\",\"p\":\"Põe pela ordem do texto o que o rei faz no capítulo XXI.\"}",
+     "occurrences": 1
+    },
+    {
+     "location": "M9-F01 (painel de projeção): o enunciado do cartão 12 igual ao da lição, em o seletor",
+     "old": "<option value=\"12\">Põe pela ordem do texto o que o rei faz no capítulo XXI.</option>",
+     "new": "<option value=\"12\">Põe pela ordem do texto o que o rei faz no capítulo XXI.</option>",
+     "occurrences": 1
+    },
+    {
+     "location": "M9-F01 (painel de projeção): o enunciado do cartão 14 igual ao da lição, em a lista do painel",
+     "old": "{\"k\":14,\"t\":\"ordenar\",\"p\":\"Põe pela ordem do excerto o que acontece no capítulo XXI.\"}",
+     "new": "{\"k\":14,\"t\":\"ordenar\",\"p\":\"Põe pela ordem do excerto o que acontece no capítulo XXI.\"}",
+     "occurrences": 1
+    },
+    {
+     "location": "M9-F01 (painel de projeção): o enunciado do cartão 14 igual ao da lição, em o seletor",
+     "old": "<option value=\"14\">Põe pela ordem do excerto o que acontece no capítulo XXI.</option>",
+     "new": "<option value=\"14\">Põe pela ordem do excerto o que acontece no capítulo XXI.</option>",
+     "occurrences": 1
+    },
+    {
+     "location": "M9-F01 (painel de projeção): o enunciado do cartão 20 igual ao da lição, em a lista do painel",
+     "old": "{\"k\":20,\"t\":\"vf\",\"p\":\"O _Memorial do Convento_ foi publicado em outubro de 1730, no reinado de D. João V.\"}",
+     "new": "{\"k\":20,\"t\":\"vf\",\"p\":\"O _Memorial do Convento_ foi publicado em outubro de 1730, no reinado de D. João V.\"}",
+     "occurrences": 1
+    },
+    {
+     "location": "M9-F01 (painel de projeção): o enunciado do cartão 23 igual ao da lição, em a lista do painel",
+     "old": "{\"k\":23,\"t\":\"vf\",\"p\":\"No capítulo XXI, o rei aceita adiar a sagração para 1740, quando a obra estiver mais adiantada.\"}",
+     "new": "{\"k\":23,\"t\":\"vf\",\"p\":\"No capítulo XXI, o rei aceita adiar a sagração para 1740, quando a obra estiver mais adiantada.\"}",
+     "occurrences": 1
+    },
+    {
+     "location": "M9-F01 (painel de projeção): o enunciado do cartão 23 igual ao da lição, em o seletor",
+     "old": "<option value=\"23\">No capítulo XXI, o rei aceita adiar a sagração para 1740, quando a obra estiver mais adiantada.</option>",
+     "new": "<option value=\"23\">No capítulo XXI, o rei aceita adiar a sagração para 1740, quando a obra estiver mais adiantada.</option>",
+     "occurrences": 1
+    },
+    {
+     "location": "M9-F01 (painel de projeção): o enunciado do cartão 24 igual ao da lição, em a lista do painel",
+     "old": "{\"k\":24,\"t\":\"escolha\",\"p\":\"Logo na primeira frase, o narrador apresenta a rainha: «D. Maria Ana Josefa, que chegou há mais de dois anos da Áustria para dar infantes à coroa portuguesa e até hoje ainda não emprenhou» (capítulo I). Que problema abre o romance?\"}",
+     "new": "{\"k\":24,\"t\":\"escolha\",\"p\":\"Logo na primeira frase, o narrador apresenta a rainha: «D. Maria Ana Josefa, que chegou há mais de dois anos da Áustria para dar infantes à coroa portuguesa e até hoje ainda não emprenhou» (capítulo I). Que problema abre o romance?\"}",
+     "occurrences": 1
+    },
+    {
+     "location": "M9-F01 (painel de projeção): o enunciado do cartão 25 igual ao da lição, em a lista do painel",
+     "old": "{\"k\":25,\"t\":\"vf\",\"p\":\"No romance histórico, figuras reais da época, como D. João V, entram na ficção.\"}",
+     "new": "{\"k\":25,\"t\":\"vf\",\"p\":\"No romance histórico, figuras reais da época, como D. João V, entram na ficção.\"}",
+     "occurrences": 1
+    },
+    {
+     "location": "M9-F01 (painel de projeção): o enunciado do cartão 25 igual ao da lição, em o seletor",
+     "old": "<option value=\"25\">No romance histórico, figuras reais da época, como D. João V, entram na ficção.</option>",
+     "new": "<option value=\"25\">No romance histórico, figuras reais da época, como D. João V, entram na ficção.</option>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m9/painel-m9-f02/index.html": {
+   "base_sha256_lf": "fcc3e1f081b76e8a3ffa668b60c5c715486a47b6b4329fac826e9769dd3e6168",
+   "after_sha256_lf": "3235454fbe9a330d37baabc10940d855fc6b0228176d0531ad060def36dc6d83",
+   "edits": [
+    {
+     "location": "M9-F02 (painel de projeção): o enunciado do cartão 22 igual ao da lição, em a lista do painel",
+     "old": "{\"k\":22,\"t\":\"escolha\",\"p\":\"«Deus ele próprio, Baltasar seu filho, Blimunda o Espírito Santo, e estavam os três no céu» (capítulo XVI). Em pleno voo, o padre lembra esta analogia do italiano. Em que imagem religiosa põe ela o trio da passarola?\"}",
+     "new": "{\"k\":22,\"t\":\"escolha\",\"p\":\"«Deus ele próprio, Baltasar seu filho, Blimunda o Espírito Santo, e estavam os três no céu» (capítulo XVI). Em pleno voo, o padre lembra esta analogia do italiano. Em que imagem religiosa põe ela o trio da passarola?\"}",
+     "occurrences": 1
+    },
+    {
+     "location": "M9-F02 (painel de projeção): o enunciado do cartão 23 igual ao da lição, em a lista do painel",
+     "old": "{\"k\":23,\"t\":\"escolha\",\"p\":\"«E uma nuvem fechada está no centro do seu corpo.» (capítulo XXV) Em jejum, Blimunda vê isto dentro de Baltasar, que arde no auto de fé. O que é a «nuvem fechada»?\"}",
+     "new": "{\"k\":23,\"t\":\"escolha\",\"p\":\"«E uma nuvem fechada está no centro do seu corpo.» (capítulo XXV) Em jejum, Blimunda vê isto dentro de Baltasar, que arde no auto de fé. O que é a «nuvem fechada»?\"}",
+     "occurrences": 1
+    },
+    {
+     "location": "M9-F02 (painel de projeção): o enunciado do cartão 23 igual ao da lição, em o seletor",
+     "old": "<option value=\"23\">«E uma nuvem fechada está no centro do seu corpo.» (capítulo XXV) Em j</option>",
+     "new": "<option value=\"23\">«E uma nuvem fechada está no centro do seu corpo.» (capítulo XXV) Em j</option>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m9/painel-m9-f03/index.html": {
+   "base_sha256_lf": "2b217e893ed29419a1631bd88fd97ed1657dc4127cc209f2db59eb2507e00d11",
+   "after_sha256_lf": "cc9d473ed60015c000c0e0deee99572a977f2c2b60b9d9b423b126d067cbb6a0",
+   "edits": [
+    {
+     "location": "M9-F03 (painel de projeção): o enunciado do cartão 20 igual ao da lição, em a lista do painel",
+     "old": "{\"k\":20,\"t\":\"escolha\",\"p\":\"«Perguntou el-rei, É verdade o que acaba de dizer-me sua eminência, que se eu prometer levantar um convento em Mafra terei filhos, e o frade respondeu, Verdade é, senhor» (capítulo I). Onde começa a fala do frade?\"}",
+     "new": "{\"k\":20,\"t\":\"escolha\",\"p\":\"«Perguntou el-rei, É verdade o que acaba de dizer-me sua eminência, que se eu prometer levantar um convento em Mafra terei filhos, e o frade respondeu, Verdade é, senhor» (capítulo I). Onde começa a fala do frade?\"}",
+     "occurrences": 1
+    },
+    {
+     "location": "M9-F03 (painel de projeção): o enunciado do cartão 21 igual ao da lição, em a lista do painel",
+     "old": "{\"k\":21,\"t\":\"escolha\",\"p\":\"O rei acaba de marcar a sagração para o dia dos seus anos. «Deitaram reverentemente alguma água na fervura João Frederico Ludovice e o doutor Leandro de Melo» (capítulo XXI). O que quer dizer aqui a expressão popular?\"}",
+     "new": "{\"k\":21,\"t\":\"escolha\",\"p\":\"O rei acaba de marcar a sagração para o dia dos seus anos. «Deitaram reverentemente alguma água na fervura João Frederico Ludovice e o doutor Leandro de Melo» (capítulo XXI). O que quer dizer aqui a expressão popular?\"}",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m9/painel-m9-f05/index.html": {
+   "base_sha256_lf": "371cc326859680f907e887e2a7bda0011f6c0b36fe8a751ba22b6bc7139e0050",
+   "after_sha256_lf": "81a8b2aa36b919cece9b255163d8be9f4a91537d7108f26e4c4f6090ad940a9d",
+   "edits": [
+    {
+     "location": "M9-F05 (painel de projeção): o enunciado do cartão 23 igual ao da lição, em a lista do painel",
+     "old": "{\"k\":23,\"t\":\"escolha\",\"p\":\"Os companheiros velam Francisco Marques, esmagado pelo carro da pedra: «aquela mulher ali é que é a viúva, não sabemos que nome tem, nem adiantaria nada à história ir lá perguntar-lhe» (capítulo XIX). O que confessa o narrador?\"}",
+     "new": "{\"k\":23,\"t\":\"escolha\",\"p\":\"Os companheiros velam Francisco Marques, esmagado pelo carro da pedra: «aquela mulher ali é que é a viúva, não sabemos que nome tem, nem adiantaria nada à história ir lá perguntar-lhe» (capítulo XIX). O que confessa o narrador?\"}",
+     "occurrences": 1
+    },
+    {
+     "location": "M9-F05 (painel de projeção): o enunciado do cartão 24 igual ao da lição, em a lista do painel",
+     "old": "{\"k\":24,\"t\":\"vf\",\"p\":\"«era meu marido, era meu pai, era meu irmão, era meu filho, era meu noivo, levaram-no forçado a trabalhar no convento, por ordem de el-rei, e nunca mais o vi» (capítulo XXV). Quem diz isto é Blimunda, a falar de Baltasar.\"}",
+     "new": "{\"k\":24,\"t\":\"vf\",\"p\":\"«era meu marido, era meu pai, era meu irmão, era meu filho, era meu noivo, levaram-no forçado a trabalhar no convento, por ordem de el-rei, e nunca mais o vi» (capítulo XXV). Quem diz isto é Blimunda, a falar de Baltasar.\"}",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m9/painel-m9-f07/index.html": {
+   "base_sha256_lf": "e2040bc6edd9af47c38498e024e93e0889ec046bc71b9ded7ad7c31c5d85fc3f",
+   "after_sha256_lf": "89bf6483ce378e9d4f0a5095190254b55d0384aaa9b41db19b1456e0c57d1723",
+   "edits": [
+    {
+     "location": "M9-F07 (painel de projeção): o enunciado do cartão 11 igual ao da lição, em a lista do painel",
+     "old": "{\"k\":11,\"t\":\"vf\",\"p\":\"No _Memorial_, quem «faz» a história são os trabalhadores; quem «fica com o nome» é D. João V.\"}",
+     "new": "{\"k\":11,\"t\":\"vf\",\"p\":\"No _Memorial_, quem «faz» a história são os trabalhadores; quem «fica com o nome» é D. João V.\"}",
+     "occurrences": 1
+    },
+    {
+     "location": "M9-F07 (painel de projeção): o enunciado do cartão 19 igual ao da lição, em a lista do painel",
+     "old": "{\"k\":19,\"t\":\"escolha\",\"p\":\"Os camaristas beijam a mão ao rei e o narrador comenta: «vós me direis qual é mais excelente, se ser do mundo rei, se desta gente» (capítulo XXI). Que obra de outro ano ecoa nesta frase?\"}",
+     "new": "{\"k\":19,\"t\":\"escolha\",\"p\":\"Os camaristas beijam a mão ao rei e o narrador comenta: «vós me direis qual é mais excelente, se ser do mundo rei, se desta gente» (capítulo XXI). Que obra de outro ano ecoa nesta frase?\"}",
+     "occurrences": 1
+    },
+    {
+     "location": "M9-F07 (painel de projeção): o enunciado do cartão 20 igual ao da lição, em a lista do painel",
+     "old": "{\"k\":20,\"t\":\"escolha\",\"p\":\"Contra o que dizem os compêndios, o narrador escreve: «vão aqui seiscentos homens que não fizeram filho nenhum à rainha, e eles é que pagam o voto» (capítulo XIX). Que afirmação do teste ajuda esta citação a provar?\"}",
+     "new": "{\"k\":20,\"t\":\"escolha\",\"p\":\"Contra o que dizem os compêndios, o narrador escreve: «vão aqui seiscentos homens que não fizeram filho nenhum à rainha, e eles é que pagam o voto» (capítulo XIX). Que afirmação do teste ajuda esta citação a provar?\"}",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m9/painel-m9-f14/index.html": {
+   "base_sha256_lf": "a8b909bc8ff962e5625337fa86539dea09b607dd3ec60172a02e6597b6816fd1",
+   "after_sha256_lf": "333f6710867648de1606e13763078a35a81c4edd222e053ed7a5c2ded5dffb7c",
+   "edits": [
+    {
+     "location": "M9-F14 (notas do docente): «D. João V» que não se parte",
+     "old": "D. João V",
+     "new": "D. João V",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m9/passarola-ramos/index.html": {
+   "base_sha256_lf": "e3df4691111c098ce36794ce864c5583d1b3efa5dae70c1828cb32688739f150",
+   "after_sha256_lf": "2aa7f9353038896964399cbf58a92175308b795de7116ec3cdd207181a486e2c",
+   "edits": [
+    {
+     "location": "m9/passarola-ramos: «ato III» que não se parte",
+     "old": "ato III",
+     "new": "ato III",
+     "occurrences": 1
+    },
+    {
+     "location": "m9/passarola-ramos: «século XVI» que não se parte",
+     "old": "século XVI",
+     "new": "século XVI",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m9/portefolio-do-modulo-m9/index.html": {
+   "base_sha256_lf": "83fa4dd6c4fd6bb38084ee3a701613e7860f46048093f2e0fc68dd4236290e1d",
+   "after_sha256_lf": "5b5cc0ee244c5c3a44a6d4ac791c6e27add62c9b7f94bc3d0a9faca7a243db15",
+   "edits": [
+    {
+     "location": "m9/portefolio-do-modulo-m9, «A lista de verificação»: o nome M9_U1_registo_<dia-mês> em <code>",
+     "old": "<td>M9_U1_registo_&lt;dia-mês&gt;</td>",
+     "new": "<td><code>M9_<wbr>U1_<wbr>registo_<wbr>&lt;dia-mês&gt;</code></td>",
+     "occurrences": 1
+    },
+    {
+     "location": "m9/portefolio-do-modulo-m9, «A lista de verificação»: o nome M9_U1_retoma em <code>",
+     "old": "<td>M9_U1_retoma</td>",
+     "new": "<td><code>M9_<wbr>U1_<wbr>retoma</code></td>",
+     "occurrences": 1
+    },
+    {
+     "location": "m9/portefolio-do-modulo-m9, «A lista de verificação»: o nome M9_U1_o-que-aprendi em <code>",
+     "old": "<td>M9_U1_o-que-aprendi</td>",
+     "new": "<td><code>M9_<wbr>U1_<wbr>o-que-aprendi</code></td>",
+     "occurrences": 1
+    },
+    {
+     "location": "m9/portefolio-do-modulo-m9, «A lista de verificação»: o nome M9_U2_registo_<dia-mês> em <code>",
+     "old": "<td>M9_U2_registo_&lt;dia-mês&gt;</td>",
+     "new": "<td><code>M9_<wbr>U2_<wbr>registo_<wbr>&lt;dia-mês&gt;</code></td>",
+     "occurrences": 1
+    },
+    {
+     "location": "m9/portefolio-do-modulo-m9, «A lista de verificação»: o nome M9_U2_retoma em <code>",
+     "old": "<td>M9_U2_retoma</td>",
+     "new": "<td><code>M9_<wbr>U2_<wbr>retoma</code></td>",
+     "occurrences": 1
+    },
+    {
+     "location": "m9/portefolio-do-modulo-m9, «A lista de verificação»: o nome M9_U2_o-que-aprendi em <code>",
+     "old": "<td>M9_U2_o-que-aprendi</td>",
+     "new": "<td><code>M9_<wbr>U2_<wbr>o-que-aprendi</code></td>",
+     "occurrences": 1
+    },
+    {
+     "location": "m9/portefolio-do-modulo-m9, «A lista de verificação»: o nome M9_U1_Tarefa em <code>",
+     "old": "<td>M9_U1_Tarefa</td>",
+     "new": "<td><code>M9_<wbr>U1_<wbr>Tarefa</code></td>",
+     "occurrences": 1
+    },
+    {
+     "location": "m9/portefolio-do-modulo-m9, «A lista de verificação»: o nome M9_U2_Tarefa em <code>",
+     "old": "<td>M9_U2_Tarefa</td>",
+     "new": "<td><code>M9_<wbr>U2_<wbr>Tarefa</code></td>",
+     "occurrences": 1
+    },
+    {
+     "location": "m9/portefolio-do-modulo-m9, «A lista de verificação»: o nome M9_cartao-do-percurso pode mudar de linha depois de «M9_»",
+     "old": "<td><code>M9_cartao-do-percurso</code></td>",
+     "new": "<td><code>M9_<wbr>cartao-do-percurso</code></td>",
+     "occurrences": 1
+    },
+    {
+     "location": "m9/portefolio-do-modulo-m9, «A lista de verificação»: o nome M9_Prova-escrita pode mudar de linha depois de «M9_»",
+     "old": "<td><code>M9_Prova-escrita</code></td>",
+     "new": "<td><code>M9_<wbr>Prova-escrita</code></td>",
+     "occurrences": 1
+    },
+    {
+     "location": "m9/portefolio-do-modulo-m9, a folha da página: os nomes só mudam de linha onde podem",
+     "old": "code{font:.85rem Consolas,\"Courier New\",monospace;border:1px solid var(--tinta);padding:1px 4px}\n",
+     "new": "code{font:.85rem Consolas,\"Courier New\",monospace;border:1px solid var(--tinta);padding:1px 4px}\ntd code{white-space:nowrap}\n",
+     "occurrences": 1
+    },
+    {
+     "location": "m9/portefolio-do-modulo-m9: «3.º ano» que não se parte",
+     "old": "3.º ano",
+     "new": "3.º ano",
+     "occurrences": 2
+    },
+    {
+     "location": "m9/portefolio-do-modulo-m9: «90 minutos» que não se parte",
+     "old": "90 minutos",
+     "new": "90 minutos",
+     "occurrences": 1
+    },
+    {
+     "location": "m9/portefolio-do-modulo-m9: «40 %» que não se parte",
+     "old": "40 %",
+     "new": "40 %",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m9/recursos/f11.js": {
+   "base_sha256_lf": "3f7f6163a6a73333e7f6e8e0d6c013971021ac2a8ef566440d87e57c4f49e8d6",
+   "after_sha256_lf": "bd821dc4341c78c3aa0ed03289ad0e0ffd01efb67b605df66a20a986b65a678f",
+   "edits": [
+    {
+     "location": "M9-F11 (cartões da lição, em m9/recursos/f11.js): «capítulo I» que não se parte",
+     "old": "capítulo I",
+     "new": "capítulo I",
+     "occurrences": 5
+    },
+    {
+     "location": "M9-F11 (cartões da lição, em m9/recursos/f11.js): «capítulo XXV» que não se parte",
+     "old": "capítulo XXV",
+     "new": "capítulo XXV",
+     "occurrences": 2
+    },
+    {
+     "location": "M9-F11 (cartões da lição, em m9/recursos/f11.js): «capítulo XVI» que não se parte",
+     "old": "capítulo XVI",
+     "new": "capítulo XVI",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m9/recursos/f12.js": {
+   "base_sha256_lf": "ec05fb44a8a069ec80e4a2a25e922e73e3774191ad49c78d1045f0f6ed3a8fe4",
+   "after_sha256_lf": "6340614f2283a2c61bb2a216e1da6b68f02fece8a817bd0005b4bc72721b454b",
+   "edits": [
+    {
+     "location": "M9-F12 (cartões da lição, em m9/recursos/f12.js): «século XVIII» que não se parte",
+     "old": "século XVIII",
+     "new": "século XVIII",
+     "occurrences": 1
+    },
+    {
+     "location": "M9-F12 (cartões da lição, em m9/recursos/f12.js): «4 min)<» que não se parte",
+     "old": "4 min)<",
+     "new": "4 min)<",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m9/recursos/f13.js": {
+   "base_sha256_lf": "4af6f7b32af56efc8418dbc5c5d2a47a3d2b8aca6ca0188fc141bf66768c8bff",
+   "after_sha256_lf": "8f481fd0fb00ca5f7037c6150f67486d1764a48c255e33701cf8dbf6165e63e5",
+   "edits": [
+    {
+     "location": "M9-F13 (cartões da lição, em m9/recursos/f13.js), cartão 2, Lê e confronta («Caderno de leitura: quatro estações»)",
+     "old": "<p>Oficina longa, com o livro aberto, em quatro estações: hipótese inicial; confronto de episódios; contraexemplo e revisão; síntese fundamentada. Entre estações, confronta a tua leitura com uma passagem do livro e anota a página da edição.</p>",
+     "new": "<p>Oficina longa, com o livro aberto, em quatro estações:</p><ol><li>hipótese inicial;</li><li>confronto de episódios;</li><li>contraexemplo e revisão;</li><li>síntese fundamentada.</li></ol><p>Entre estações, confronta a tua leitura com uma passagem do livro e anota a página da edição.</p>",
+     "occurrences": 1
+    },
+    {
+     "location": "M9-F13 (cartões da lição, em m9/recursos/f13.js): «capítulo XVI» que não se parte",
+     "old": "capítulo XVI",
+     "new": "capítulo XVI",
+     "occurrences": 1
+    },
+    {
+     "location": "M9-F13 (cartões da lição, em m9/recursos/f13.js): «capítulo XIX» que não se parte",
+     "old": "capítulo XIX",
+     "new": "capítulo XIX",
+     "occurrences": 1
+    },
+    {
+     "location": "M9-F13 (cartões da lição, em m9/recursos/f13.js): «capítulo XXV» que não se parte",
+     "old": "capítulo XXV",
+     "new": "capítulo XXV",
+     "occurrences": 1
+    },
+    {
+     "location": "M9-F13 (cartões da lição, em m9/recursos/f13.js): «M9-F03» que não se parte",
+     "old": "M9-F03",
+     "new": "M9-⁠F03",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m9/reis-regresso/index.html": {
+   "base_sha256_lf": "e864e8ed73c952f68c8899901fed6e2681a2bf63db3200851ac3ab587c5941b9",
+   "after_sha256_lf": "b28198b6d3ef2102c3d27628fbd92e13f4c905df4fe233f7a09f16dc74683d26",
+   "edits": [
+    {
+     "location": "m9/reis-regresso: «13 de janeiro de 1935» que não se parte",
+     "old": "13 de janeiro de 1935",
+     "new": "13 de janeiro de 1935",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m9/visita-fundacao-jose-saramago/index.html": {
+   "base_sha256_lf": "77ed7d250901ad5704e334af49eb1ace43d9365284b0f9220c83d8f6c7f0ba06",
+   "after_sha256_lf": "09ac7bec1c8a43a639c1235b438f6faf22fff8dca11cc3c0d02df94d9ed34981",
+   "edits": [
+    {
+     "location": "m9/visita-fundacao-jose-saramago: «3.º ano» que não se parte",
+     "old": "3.º ano",
+     "new": "3.º ano",
+     "occurrences": 2
+    }
+   ]
+  },
+  "tarefas/m9-u1/index.html": {
+   "base_sha256_lf": "1e476188bde458299e5b2fd8815c5e62fad316e8efd7e4b2d1d94b8deb8da5e7",
+   "after_sha256_lf": "abc6dd57a70abb32c1680a68c80360f44ed070cfd3023a363077ed534ea554f8",
+   "edits": [
+    {
+     "location": "tarefas/m9-u1: «durante 90 minutos, com entrega»",
+     "old": "durante 90 minutos, com entrega",
+     "new": "durante 90 minutos, com entrega",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m9-u1: «10 min» que não se parte (com o contexto «10 min »)",
+     "old": "10 min ",
+     "new": "10 min ",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m9-u1: «60 minutos» que não se parte",
+     "old": "60 minutos",
+     "new": "60 minutos",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m9-u1: «90 min» que não se parte (com o contexto «90 min<»)",
+     "old": "90 min<",
+     "new": "90 min<",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m9-u1: «10 minutos» que não se parte",
+     "old": "10 minutos",
+     "new": "10 minutos",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m9-u1: «capítulo I» que não se parte",
+     "old": "capítulo I",
+     "new": "capítulo I",
+     "occurrences": 2
+    },
+    {
+     "location": "tarefas/m9-u1: «capítulo V» que não se parte",
+     "old": "capítulo V",
+     "new": "capítulo V",
+     "occurrences": 2
+    }
+   ]
+  },
+  "tarefas/m9-u2/index.html": {
+   "base_sha256_lf": "a99afc0504dd0bc091a256c64efed497dbd9d311579821752c454950db6f9aa1",
+   "after_sha256_lf": "8402e945e552e4ad4d6ad16af3df7bbba5c03a49bc87f59a73d76cb2e0f51ed9",
+   "edits": [
+    {
+     "location": "tarefas/m9-u2: «durante 90 minutos, com entrega»",
+     "old": "durante 90 minutos, com entrega",
+     "new": "durante 90 minutos, com entrega",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m9-u2: «10 min» que não se parte (com o contexto «10 min »)",
+     "old": "10 min ",
+     "new": "10 min ",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m9-u2: «60 minutos» que não se parte",
+     "old": "60 minutos",
+     "new": "60 minutos",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m9-u2: «90 min» que não se parte (com o contexto «90 min<»)",
+     "old": "90 min<",
+     "new": "90 min<",
+     "occurrences": 1
+    },
+    {
+     "location": "tarefas/m9-u2: «10 minutos» que não se parte",
+     "old": "10 minutos",
+     "new": "10 minutos",
+     "occurrences": 1
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,1938 @@
+[
+ {
+  "ficheiro": "docs/pedagogia/tarefas-escolha/m9-u1.json",
+  "local": "Dados da tarefa: «nao_partir», os números do molde com espaço que não quebra",
+  "antigo": "\n \"unidade\": 1,\n ",
+  "novo": "\n \"unidade\": 1,\n \"nao_partir\": true,\n ",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 58 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla). Os números do molde da tarefa («90 minutos» na descrição, «10 min» e «90 min» nos cabeçalhos) levam o espaço que não quebra pelo gerador (scripts/tarefas_escolha.py), como do M1 ao M8."
+ },
+ {
+  "ficheiro": "docs/pedagogia/tarefas-escolha/m9-u1.json",
+  "local": "Dados tarefas-escolha/m9-u1.json: «60 minutos» que não se parte",
+  "antigo": "60 minutos",
+  "novo": "60 minutos",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 58 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla). Nos dados do gerador, que passam iguais para as páginas."
+ },
+ {
+  "ficheiro": "docs/pedagogia/tarefas-escolha/m9-u1.json",
+  "local": "Dados tarefas-escolha/m9-u1.json: «10 minutos» que não se parte",
+  "antigo": "10 minutos",
+  "novo": "10 minutos",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 58 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla). Nos dados do gerador, que passam iguais para as páginas."
+ },
+ {
+  "ficheiro": "docs/pedagogia/tarefas-escolha/m9-u1.json",
+  "local": "Dados tarefas-escolha/m9-u1.json: «capítulo I» que não se parte",
+  "antigo": "capítulo I",
+  "novo": "capítulo I",
+  "ocorrencias": 2,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 58 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla). Nos dados do gerador, que passam iguais para as páginas."
+ },
+ {
+  "ficheiro": "docs/pedagogia/tarefas-escolha/m9-u1.json",
+  "local": "Dados tarefas-escolha/m9-u1.json: «capítulo V» que não se parte",
+  "antigo": "capítulo V",
+  "novo": "capítulo V",
+  "ocorrencias": 2,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 58 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla). Nos dados do gerador, que passam iguais para as páginas."
+ },
+ {
+  "ficheiro": "docs/pedagogia/tarefas-escolha/m9-u2.json",
+  "local": "Dados da tarefa: «nao_partir», os números do molde com espaço que não quebra",
+  "antigo": "\n \"unidade\": 2,\n ",
+  "novo": "\n \"unidade\": 2,\n \"nao_partir\": true,\n ",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 59 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla). Os números do molde da tarefa («90 minutos» na descrição, «10 min» e «90 min» nos cabeçalhos) levam o espaço que não quebra pelo gerador (scripts/tarefas_escolha.py), como do M1 ao M8."
+ },
+ {
+  "ficheiro": "docs/pedagogia/tarefas-escolha/m9-u2.json",
+  "local": "Dados tarefas-escolha/m9-u2.json: «60 minutos» que não se parte",
+  "antigo": "60 minutos",
+  "novo": "60 minutos",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 59 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla). Nos dados do gerador, que passam iguais para as páginas."
+ },
+ {
+  "ficheiro": "docs/pedagogia/tarefas-escolha/m9-u2.json",
+  "local": "Dados tarefas-escolha/m9-u2.json: «10 minutos» que não se parte",
+  "antigo": "10 minutos",
+  "novo": "10 minutos",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 59 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla). Nos dados do gerador, que passam iguais para as páginas."
+ },
+ {
+  "ficheiro": "assets/exame/sessoes.json",
+  "local": "assets/exame/sessoes.json: «No início do século XVIII\"» que não se parte (com o contexto «século XVIII»)",
+  "antigo": "século XVIII",
+  "novo": "século XVIII",
+  "ocorrencias": 4,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 24 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla). Na cópia da resposta certa e do retorno do cartão 11 da F01 nas sessões do Exame (assets/exame/sessoes.json, sessão s19), que tests/test_exame_alignment.py compara com a lição."
+ },
+ {
+  "ficheiro": "assets/exame/sessoes.json",
+  "local": "assets/exame/sessoes.json: «Reinado de D. João V e tempo» que não se parte (com o contexto «D. João V »)",
+  "antigo": "D. João V ",
+  "novo": "D. João V ",
+  "ocorrencias": 2,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 24 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla). Na cópia da resposta certa e do retorno do cartão 11 da F01 nas sessões do Exame (assets/exame/sessoes.json, sessão s19), que tests/test_exame_alignment.py compara com a lição."
+ },
+ {
+  "ficheiro": "assets/exame/sessoes.json",
+  "local": "assets/exame/sessoes.json: «início do século XVIII; o século XX é» que não se parte (com o contexto «século XX »)",
+  "antigo": "século XX ",
+  "novo": "século XX ",
+  "ocorrencias": 2,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 24 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla). Na cópia da resposta certa e do retorno do cartão 11 da F01 nas sessões do Exame (assets/exame/sessoes.json, sessão s19), que tests/test_exame_alignment.py compara com a lição."
+ },
+ {
+  "ficheiro": "m9/biblioteca-fogo/index.html",
+  "local": "m9/biblioteca-fogo: «30 segundos» que não se parte",
+  "antigo": "30 segundos",
+  "novo": "30 segundos",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 19 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/gramatica-saramago/index.html",
+  "local": "m9/gramatica-saramago: «D. João V» que não se parte",
+  "antigo": "D. João V",
+  "novo": "D. João V",
+  "ocorrencias": 2,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 21 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/guia-da-tarefa-m9/index.html",
+  "local": "m9/guia-da-tarefa-m9, «Tarefas das unidades»: os pesos na avaliação",
+  "antigo": "<p class=\"avaliacao-tarefas\">Avaliação: tarefa da Unidade 1, 30 %; tarefa da Unidade 2, 30 %; provas rápidas, 10 %; prova escrita, 30 %. ",
+  "novo": "<p>Avaliação:</p><table class=\"apoio-tabela\" role=\"table\"><thead role=\"rowgroup\"><tr role=\"row\"><th scope=\"col\" role=\"columnheader\" style=\"width:auto\">Elemento</th><th scope=\"col\" role=\"columnheader\" style=\"width:5.5rem\">Peso</th></tr></thead><tbody role=\"rowgroup\"><tr role=\"row\"><th scope=\"row\" role=\"rowheader\">Tarefa da Unidade 1</th><td role=\"cell\" data-label=\"Peso\">30 %</td></tr><tr role=\"row\"><th scope=\"row\" role=\"rowheader\">Tarefa da Unidade 2</th><td role=\"cell\" data-label=\"Peso\">30 %</td></tr><tr role=\"row\"><th scope=\"row\" role=\"rowheader\">Provas rápidas</th><td role=\"cell\" data-label=\"Peso\">10 %</td></tr><tr role=\"row\"><th scope=\"row\" role=\"rowheader\">Prova escrita</th><td role=\"cell\" data-label=\"Peso\">30 %</td></tr></tbody></table><p class=\"avaliacao-tarefas\">",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 1 (A). Itens paralelos que pedem tabela passam a tabela (como do M1 ao M8). Como no M5, no M7 e no M8: o rótulo num parágrafo, a tabela Elemento/Peso (a coluna do peso com 5,5 rem) e o resto da frase no p.avaliacao-tarefas, como estava. Os pesos já levam o espaço que não quebra."
+ },
+ {
+  "ficheiro": "m9/guia-da-tarefa-m9/index.html",
+  "local": "m9/guia-da-tarefa-m9, «Três antes de mim» (div.regra)",
+  "antigo": "Antes de chamares o docente: 1) relê o enunciado; 2) vê a rubrica; 3) pergunta ao teu par de trabalho. Só depois levantas o braço.</div>",
+  "novo": "Antes de chamares o docente:<ol><li>relê o enunciado;</li><li>vê a rubrica;</li><li>pergunta ao teu par de trabalho.</li></ol>Só depois levantas o braço.</div>",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 9 (C). Caso do mesmo tipo. Os três passos numerados à mão passam a lista numerada, como nos guias do M5, do M7 e do M8; o texto fica igual."
+ },
+ {
+  "ficheiro": "m9/guia-da-tarefa-m9/index.html",
+  "local": "m9/guia-da-tarefa-m9, cabeça: a folha das tabelas de apoio, antes da camada de aparência",
+  "antigo": "<link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-universal-1\">",
+  "novo": "<link rel=\"stylesheet\" href=\"../../assets/pt-lessons/apoios-tabelas.css?v=20261106.1\"><link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-universal-1\">",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 1 (A). O guia da tarefa passa a carregar as tabelas de apoio, antes da camada de aparência."
+ },
+ {
+  "ficheiro": "m9/guia-da-tarefa-m9/index.html",
+  "local": "m9/guia-da-tarefa-m9: «3.º ano» que não se parte",
+  "antigo": "3.º ano",
+  "novo": "3.º ano",
+  "ocorrencias": 2,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 22 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/guia-da-tarefa-m9/index.html",
+  "local": "m9/guia-da-tarefa-m9: «90 minutos» que não se parte",
+  "antigo": "90 minutos",
+  "novo": "90 minutos",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 22 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/guia-da-tarefa-m9/index.html",
+  "local": "m9/guia-da-tarefa-m9: «30 %,» que não se parte",
+  "antigo": "30 %,",
+  "novo": "30 %,",
+  "ocorrencias": 2,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 22 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/guia-da-tarefa-m9/index.html",
+  "local": "m9/guia-da-tarefa-m9: «10 minutos» que não se parte",
+  "antigo": "10 minutos",
+  "novo": "10 minutos",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 22 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/guia-da-tarefa-m9/index.html",
+  "local": "m9/guia-da-tarefa-m9: «5 minutos» que não se parte",
+  "antigo": "5 minutos",
+  "novo": "5 minutos",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 22 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/guia-da-tarefa-m9/index.html",
+  "local": "m9/guia-da-tarefa-m9: «capítulos I e V» que não se parte",
+  "antigo": "capítulos I e V",
+  "novo": "capítulos I e V",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 22 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/guia-da-tarefa-m9/index.html",
+  "local": "m9/guia-da-tarefa-m9: «10 min<» que não se parte",
+  "antigo": "10 min<",
+  "novo": "10 min<",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 22 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/guia-da-tarefa-m9/index.html",
+  "local": "m9/guia-da-tarefa-m9: « 5 min<» que não se parte",
+  "antigo": " 5 min<",
+  "novo": " 5 min<",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 22 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/guia-da-tarefa-m9/index.html",
+  "local": "m9/guia-da-tarefa-m9: «60 min» que não se parte",
+  "antigo": "60 min",
+  "novo": "60 min",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 22 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/guia-da-tarefa-m9/index.html",
+  "local": "m9/guia-da-tarefa-m9: «15 min» que não se parte",
+  "antigo": "15 min",
+  "novo": "15 min",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 22 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/guia-da-tarefa-m9/index.html",
+  "local": "m9/guia-da-tarefa-m9: «7 minutos» que não se parte",
+  "antigo": "7 minutos",
+  "novo": "7 minutos",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 22 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/index.html",
+  "local": "m9, «Como se cumpre uma unidade»: os pesos na avaliação",
+  "antigo": "<p class=\"avaliacao-tarefas\">Pesos na avaliação: tarefa da Unidade 1, 30 %; tarefa da Unidade 2, 30 %; provas rápidas, 10 %; prova escrita, 30 %. ",
+  "novo": "<p>Pesos na avaliação:</p><table class=\"apoio-tabela\" role=\"table\"><thead role=\"rowgroup\"><tr role=\"row\"><th scope=\"col\" role=\"columnheader\" style=\"width:auto\">Elemento</th><th scope=\"col\" role=\"columnheader\" style=\"width:5.5rem\">Peso</th></tr></thead><tbody role=\"rowgroup\"><tr role=\"row\"><th scope=\"row\" role=\"rowheader\">Tarefa da Unidade 1</th><td role=\"cell\" data-label=\"Peso\">30 %</td></tr><tr role=\"row\"><th scope=\"row\" role=\"rowheader\">Tarefa da Unidade 2</th><td role=\"cell\" data-label=\"Peso\">30 %</td></tr><tr role=\"row\"><th scope=\"row\" role=\"rowheader\">Provas rápidas</th><td role=\"cell\" data-label=\"Peso\">10 %</td></tr><tr role=\"row\"><th scope=\"row\" role=\"rowheader\">Prova escrita</th><td role=\"cell\" data-label=\"Peso\">30 %</td></tr></tbody></table><p class=\"avaliacao-tarefas\">",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 0 (A). Itens paralelos que pedem tabela passam a tabela (como do M1 ao M8). Como no M5, no M7 e no M8: o rótulo num parágrafo, a tabela Elemento/Peso (a coluna do peso com 5,5 rem) e o resto da frase no p.avaliacao-tarefas, como estava. Os pesos já levam o espaço que não quebra."
+ },
+ {
+  "ficheiro": "m9/index.html",
+  "local": "m9, cabeça: a folha das tabelas de apoio, antes da camada de aparência",
+  "antigo": "<link rel=\"stylesheet\" href=\"../assets/appearance.css?v=20261025-universal-1\">",
+  "novo": "<link rel=\"stylesheet\" href=\"../assets/pt-lessons/apoios-tabelas.css?v=20261106.1\"><link rel=\"stylesheet\" href=\"../assets/appearance.css?v=20261025-universal-1\">",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 0 (A). O índice do módulo passa a carregar as tabelas de apoio, antes da camada de aparência."
+ },
+ {
+  "ficheiro": "m9/index.html",
+  "local": "m9: «3.º ano» que não se parte",
+  "antigo": "3.º ano",
+  "novo": "3.º ano",
+  "ocorrencias": 2,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 23 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/index.html",
+  "local": "m9: «90 minutos» que não se parte",
+  "antigo": "90 minutos",
+  "novo": "90 minutos",
+  "ocorrencias": 3,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 23 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/index.html",
+  "local": "m9: «90 min<» que não se parte",
+  "antigo": "90 min<",
+  "novo": "90 min<",
+  "ocorrencias": 4,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 23 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/index.html",
+  "local": "m9: «capítulo XXI» que não se parte",
+  "antigo": "capítulo XXI",
+  "novo": "capítulo XXI",
+  "ocorrencias": 4,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 23 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/index.html",
+  "local": "m9: «22 min» que não se parte",
+  "antigo": "22 min",
+  "novo": "22 min",
+  "ocorrencias": 2,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 23 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/index.html",
+  "local": "m9: «10 min» que não se parte",
+  "antigo": "10 min",
+  "novo": "10 min",
+  "ocorrencias": 2,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 23 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/index.html",
+  "local": "m9: «30 %.<» que não se parte",
+  "antigo": "30 %.<",
+  "novo": "30 %.<",
+  "ocorrencias": 2,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 23 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/index.html",
+  "local": "m9: «século XVIII (fac-símile, BNP).» que não se parte",
+  "antigo": "século XVIII (fac-símile, BNP).",
+  "novo": "século XVIII (fac-símile, BNP).",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 23 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/index.html",
+  "local": "m9: «século XVIII (fac-símile, BNP).» que não se parte (com o contexto «século XVIII\"»)",
+  "antigo": "século XVIII\"",
+  "novo": "século XVIII\"",
+  "ocorrencias": 3,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 23 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/index.html",
+  "local": "m9: «século XVIII (fac-símile, BNP).» que não se parte (com o contexto «século XVIII;»)",
+  "antigo": "século XVIII;",
+  "novo": "século XVIII;",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 23 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/index.html",
+  "local": "m9: «século XVIII (fac-símile, BNP).» que não se parte (com o contexto «século XVIII.»)",
+  "antigo": "século XVIII.",
+  "novo": "século XVIII.",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 23 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/index.html",
+  "local": "m9: «século XVIII (fac-símile, BNP).» que não se parte (com o contexto «século XVIII (l»)",
+  "antigo": "século XVIII (l",
+  "novo": "século XVIII (l",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 23 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/index.html",
+  "local": "m9: «século XVIII (fac-símile, BNP).» que não se parte (com o contexto «século XVIII c»)",
+  "antigo": "século XVIII c",
+  "novo": "século XVIII c",
+  "ocorrencias": 2,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 23 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/index.html",
+  "local": "m9: «século XVI\"» que não se parte",
+  "antigo": "século XVI\"",
+  "novo": "século XVI\"",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 23 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/index.html",
+  "local": "m9: «século XVI\"» que não se parte (com o contexto «século XVI »)",
+  "antigo": "século XVI ",
+  "novo": "século XVI ",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 23 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/index.html",
+  "local": "m9: «século XVI\"» que não se parte (com o contexto «século XVI,»)",
+  "antigo": "século XVI,",
+  "novo": "século XVI,",
+  "ocorrencias": 3,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 23 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/index.html",
+  "local": "m9: «século XX» que não se parte",
+  "antigo": "século XX",
+  "novo": "século XX",
+  "ocorrencias": 9,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 23 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/index.html",
+  "local": "m9: «século XVII\"» que não se parte",
+  "antigo": "século XVII\"",
+  "novo": "século XVII\"",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 23 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/index.html",
+  "local": "m9: «D. João V» que não se parte",
+  "antigo": "D. João V",
+  "novo": "D. João V",
+  "ocorrencias": 15,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 23 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/index.html",
+  "local": "m9: «22 de outubro de 1982» que não se parte",
+  "antigo": "22 de outubro de 1982",
+  "novo": "22 de outubro de 1982",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 23 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/index.html",
+  "local": "m9: «22 de outubro de 1730» que não se parte",
+  "antigo": "22 de outubro de 1730",
+  "novo": "22 de outubro de 1730",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 23 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/index.html",
+  "local": "m9: «22 de outubro de 1523» que não se parte",
+  "antigo": "22 de outubro de 1523",
+  "novo": "22 de outubro de 1523",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 23 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/index.html",
+  "local": "m9: «capítulo I» que não se parte",
+  "antigo": "capítulo I",
+  "novo": "capítulo I",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 23 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/index.html",
+  "local": "m9: «Século XVI» que não se parte",
+  "antigo": "Século XVI",
+  "novo": "Século XVI",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 23 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/index.html",
+  "local": "m9: «cap. XXI» que não se parte",
+  "antigo": "cap. XXI",
+  "novo": "cap. XXI",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 23 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/licao-m9-f01/index.html",
+  "local": "M9-F01, cartão 9, Para entender («Recorda»)",
+  "antigo": "<p><b>Tempo histórico</b>: a época em que a história se passa. <b>Organização temporal do relato</b>: a ordem em que o narrador apresenta os acontecimentos, com recuos e avanços. <b>Tempo da narração</b>: o momento de onde a voz conta, que pode distinguir-se da época narrada. <b>Prolepse</b>: o narrador adianta o que ainda vai acontecer. <b>Romance histórico</b>: ficção que se passa numa época real e usa figuras e factos dela.</p>",
+  "novo": "<table class=\\\"apoio-tabela\\\" role=\\\"table\\\"><thead role=\\\"rowgroup\\\"><tr role=\\\"row\\\"><th scope=\\\"col\\\" role=\\\"columnheader\\\">Noção</th><th scope=\\\"col\\\" role=\\\"columnheader\\\">O que é</th></tr></thead><tbody role=\\\"rowgroup\\\"><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Tempo histórico</th><td role=\\\"cell\\\" data-label=\\\"O que é\\\">a época em que a história se passa</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Organização temporal do relato</th><td role=\\\"cell\\\" data-label=\\\"O que é\\\">a ordem em que o narrador apresenta os acontecimentos, com recuos e avanços</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Tempo da narração</th><td role=\\\"cell\\\" data-label=\\\"O que é\\\">o momento de onde a voz conta, que pode distinguir-se da época narrada</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Prolepse</th><td role=\\\"cell\\\" data-label=\\\"O que é\\\">o narrador adianta o que ainda vai acontecer</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Romance histórico</th><td role=\\\"cell\\\" data-label=\\\"O que é\\\">ficção que se passa numa época real e usa figuras e factos dela</td></tr></tbody></table>",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 3 (A). Itens paralelos que pedem tabela passam a tabela (como do M1 ao M8). As noções no cabeçalho de linha, sem negrito; caem os dois pontos e o ponto final de cada definição, como na M5-F13; as palavras ficam todas."
+ },
+ {
+  "ficheiro": "m9/licao-m9-f01/index.html",
+  "local": "M9-F01, cartão 3, O essencial («O título e as quatro linhas de ação»)",
+  "antigo": "<p>«Memorial» é texto de memória e monumento que lembra. O romance histórico cruza ficção e história em quatro linhas de ação: a construção do convento, a passarola, o amor de Baltasar e Blimunda, a corte e a Inquisição. Assim dá lugar a quem a história oficial esquece.</p>",
+  "novo": "<p>«Memorial» é texto de memória e monumento que lembra. O romance histórico cruza ficção e história em quatro linhas de ação:</p><ul><li>a construção do convento,</li><li>a passarola,</li><li>o amor de Baltasar e Blimunda,</li><li>a corte e a Inquisição.</li></ul><p>Assim dá lugar a quem a história oficial esquece.</p>",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 11 (C). Caso do mesmo tipo. As quatro linhas de ação em lista, cada item com a vírgula ou o ponto final que tinha; a frase seguinte fica num parágrafo; o texto fica igual."
+ },
+ {
+  "ficheiro": "m9/licao-m9-f01/index.html",
+  "local": "M9-F01, cabeça: a folha das tabelas de apoio, antes da camada de aparência",
+  "antigo": "<link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-reading1\">",
+  "novo": "<link rel=\"stylesheet\" href=\"../../assets/pt-lessons/apoios-tabelas.css?v=20261106.1\"><link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-reading1\">",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 3 (A). A lição passa a carregar as tabelas de apoio, antes da camada de aparência."
+ },
+ {
+  "ficheiro": "m9/licao-m9-f01/index.html",
+  "local": "M9-F01: «12.º ano» que não se parte",
+  "antigo": "12.º ano",
+  "novo": "12.º ano",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 24 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/licao-m9-f01/index.html",
+  "local": "M9-F01: «D. João V p» que não se parte",
+  "antigo": "D. João V p",
+  "novo": "D. João V p",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 24 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/licao-m9-f01/index.html",
+  "local": "M9-F01: «D. João V p» que não se parte (com o contexto «D. João V r»)",
+  "antigo": "D. João V r",
+  "novo": "D. João V r",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 24 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/licao-m9-f01/index.html",
+  "local": "M9-F01: «D. João V p» que não se parte (com o contexto «D. João V, a»)",
+  "antigo": "D. João V, a",
+  "novo": "D. João V, a",
+  "ocorrencias": 3,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 24 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/licao-m9-f01/index.html",
+  "local": "M9-F01: «D. João V p» que não se parte (com o contexto «D. João V e»)",
+  "antigo": "D. João V e",
+  "novo": "D. João V e",
+  "ocorrencias": 6,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 24 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/licao-m9-f01/index.html",
+  "local": "M9-F01: «D. João V p» que não se parte (com o contexto «D. João V s»)",
+  "antigo": "D. João V s",
+  "novo": "D. João V s",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 24 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/licao-m9-f01/index.html",
+  "local": "M9-F01: «D. João V p» que não se parte (com o contexto «D. João V fecha-se numa sala do torreão, »)",
+  "antigo": "D. João V fecha-se numa sala do torreão, ",
+  "novo": "D. João V fecha-se numa sala do torreão, ",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 24 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/licao-m9-f01/index.html",
+  "local": "M9-F01: «D. João V p» que não se parte (com o contexto «D. João V.»)",
+  "antigo": "D. João V.",
+  "novo": "D. João V.",
+  "ocorrencias": 2,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 24 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/licao-m9-f01/index.html",
+  "local": "M9-F01: «D. João V p» que não se parte (com o contexto «D. João V:»)",
+  "antigo": "D. João V:",
+  "novo": "D. João V:",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 24 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/licao-m9-f01/index.html",
+  "local": "M9-F01: «D. João V p» que não se parte (com o contexto «D. João V\"»)",
+  "antigo": "D. João V\"",
+  "novo": "D. João V\"",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 24 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/licao-m9-f01/index.html",
+  "local": "M9-F01: «D. João V p» que não se parte (com o contexto «D. João V a»)",
+  "antigo": "D. João V a",
+  "novo": "D. João V a",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 24 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/licao-m9-f01/index.html",
+  "local": "M9-F01: «D. João V p» que não se parte (com o contexto «D. João V, e»)",
+  "antigo": "D. João V, e",
+  "novo": "D. João V, e",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 24 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/licao-m9-f01/index.html",
+  "local": "M9-F01: «2 min)<» que não se parte",
+  "antigo": "2 min)<",
+  "novo": "2 min)<",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 24 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/licao-m9-f01/index.html",
+  "local": "M9-F01: «séc. XVIII» que não se parte",
+  "antigo": "séc. XVIII",
+  "novo": "séc. XVIII",
+  "ocorrencias": 2,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 24 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/licao-m9-f01/index.html",
+  "local": "M9-F01: «capítulo XXI, o» que não se parte (com o contexto «>No capítulo XXI, o »)",
+  "antigo": ">No capítulo XXI, o ",
+  "novo": ">No capítulo XXI, o ",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 24 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/licao-m9-f01/index.html",
+  "local": "M9-F01: «capítulo XXI, o» que não se parte (com o contexto «ta (capítulo XXI)\",\"»)",
+  "antigo": "ta (capítulo XXI)\",\"",
+  "novo": "ta (capítulo XXI)\",\"",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 24 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/licao-m9-f01/index.html",
+  "local": "M9-F01: «capítulo XXI, o» que não se parte (com o contexto «2), capítulo XXI; gr»)",
+  "antigo": "2), capítulo XXI; gr",
+  "novo": "2), capítulo XXI; gr",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 24 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/licao-m9-f01/index.html",
+  "local": "M9-F01: «capítulo XXI, o» que não se parte (com o contexto «>No capítulo XXI, D.»)",
+  "antigo": ">No capítulo XXI, D.",
+  "novo": ">No capítulo XXI, D.",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 24 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/licao-m9-f01/index.html",
+  "local": "M9-F01: «capítulo XXI, o» que não se parte (com o contexto «30 (capítulo XXI), n»)",
+  "antigo": "30 (capítulo XXI), n",
+  "novo": "30 (capítulo XXI), n",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 24 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/licao-m9-f01/index.html",
+  "local": "M9-F01: «capítulo XXI, o» que não se parte (com o contexto « no capítulo XXI.\",\"»)",
+  "antigo": " no capítulo XXI.\",\"",
+  "novo": " no capítulo XXI.\",\"",
+  "ocorrencias": 2,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 24 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/licao-m9-f01/index.html",
+  "local": "M9-F01: «capítulo XXI, o» que não se parte (com o contexto «ia (capítulo XXI); o»)",
+  "antigo": "ia (capítulo XXI); o",
+  "novo": "ia (capítulo XXI); o",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 24 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/licao-m9-f01/index.html",
+  "local": "M9-F01: «capítulo XXI, o» que não se parte (com o contexto «\"No capítulo XXI, o »)",
+  "antigo": "\"No capítulo XXI, o ",
+  "novo": "\"No capítulo XXI, o ",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 24 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/licao-m9-f01/index.html",
+  "local": "M9-F01: «22 de outubro,» que não se parte (com o contexto «a sagração para 22 de outubro, dia do»)",
+  "antigo": "a sagração para 22 de outubro, dia do",
+  "novo": "a sagração para 22 de outubro, dia do",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 24 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/licao-m9-f01/index.html",
+  "local": "M9-F01: «século XVIII» que não se parte",
+  "antigo": "século XVIII",
+  "novo": "século XVIII",
+  "ocorrencias": 7,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 24 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/licao-m9-f01/index.html",
+  "local": "M9-F01: «Século XVIII» que não se parte",
+  "antigo": "Século XVIII",
+  "novo": "Século XVIII",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 24 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/licao-m9-f01/index.html",
+  "local": "M9-F01: « 22 de outubro de 1730,» que não se parte",
+  "antigo": " 22 de outubro de 1730,",
+  "novo": " 22 de outubro de 1730,",
+  "ocorrencias": 2,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 24 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/licao-m9-f01/index.html",
+  "local": "M9-F01: « 22 de outubro de 1730,» que não se parte (com o contexto «*22 de outubro de 1730*»)",
+  "antigo": "*22 de outubro de 1730*",
+  "novo": "*22 de outubro de 1730*",
+  "ocorrencias": 2,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 24 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/licao-m9-f01/index.html",
+  "local": "M9-F01: «pp. 291 a 293» que não se parte",
+  "antigo": "pp. 291 a 293",
+  "novo": "pp. 291 a 293",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 24 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/licao-m9-f01/index.html",
+  "local": "M9-F01: «século XVI\"» que não se parte",
+  "antigo": "século XVI\"",
+  "novo": "século XVI\"",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 24 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/licao-m9-f01/index.html",
+  "local": "M9-F01: «século XVI\"» que não se parte (com o contexto «século XVI »)",
+  "antigo": "século XVI ",
+  "novo": "século XVI ",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 24 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/licao-m9-f01/index.html",
+  "local": "M9-F01: «século XX» que não se parte",
+  "antigo": "século XX",
+  "novo": "século XX",
+  "ocorrencias": 4,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 24 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/licao-m9-f01/index.html",
+  "local": "M9-F01: «século XVII\"» que não se parte",
+  "antigo": "século XVII\"",
+  "novo": "século XVII\"",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 24 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/licao-m9-f01/index.html",
+  "local": "M9-F01: «capítulo I» que não se parte",
+  "antigo": "capítulo I",
+  "novo": "capítulo I",
+  "ocorrencias": 3,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 24 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/licao-m9-f02/index.html",
+  "local": "M9-F02, cartão 7, Para entender («Recorda»)",
+  "antigo": "<p><b>Símbolo</b>: uma coisa concreta que representa uma ideia (a passarola, o sonho). <b>Caracterização direta</b>: o narrador ou uma personagem diz como alguém é. <b>Caracterização indireta</b>: percebe-se pelo que a personagem faz e diz. Baltasar chama-se Sete-Sóis; Blimunda, Sete-Luas.</p>",
+  "novo": "<table class=\\\"apoio-tabela\\\" role=\\\"table\\\"><thead role=\\\"rowgroup\\\"><tr role=\\\"row\\\"><th scope=\\\"col\\\" role=\\\"columnheader\\\" style=\\\"width:30%\\\">Noção</th><th scope=\\\"col\\\" role=\\\"columnheader\\\">O que é</th></tr></thead><tbody role=\\\"rowgroup\\\"><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Símbolo</th><td role=\\\"cell\\\" data-label=\\\"O que é\\\">uma coisa concreta que representa uma ideia (a passarola, o sonho)</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Caracterização direta</th><td role=\\\"cell\\\" data-label=\\\"O que é\\\">o narrador ou uma personagem diz como alguém é</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Caracterização indireta</th><td role=\\\"cell\\\" data-label=\\\"O que é\\\">percebe-se pelo que a personagem faz e diz</td></tr></tbody></table><p>Baltasar chama-se Sete-Sóis; Blimunda, Sete-Luas.</p>",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 4 (A). Itens paralelos que pedem tabela passam a tabela (como do M1 ao M8). As noções no cabeçalho de linha, sem negrito; caem os dois pontos e o ponto final de cada definição, como na M5-F13; as palavras ficam todas. A frase dos dois nomes, que já não é definição, fica num parágrafo a seguir. A primeira coluna fica com 30 %, como as caixas de termos do M6, para «Caracterização» caber numa linha no ecrã largo."
+ },
+ {
+  "ficheiro": "m9/licao-m9-f02/index.html",
+  "local": "M9-F02, cabeça: a folha das tabelas de apoio, antes da camada de aparência",
+  "antigo": "<link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-reading1\">",
+  "novo": "<link rel=\"stylesheet\" href=\"../../assets/pt-lessons/apoios-tabelas.css?v=20261106.1\"><link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-reading1\">",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 4 (A). A lição passa a carregar as tabelas de apoio, antes da camada de aparência."
+ },
+ {
+  "ficheiro": "m9/licao-m9-f02/index.html",
+  "local": "M9-F02: «12.º ano» que não se parte",
+  "antigo": "12.º ano",
+  "novo": "12.º ano",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 25 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/licao-m9-f02/index.html",
+  "local": "M9-F02: «capítulo XVI» que não se parte",
+  "antigo": "capítulo XVI",
+  "novo": "capítulo XVI",
+  "ocorrencias": 3,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 25 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/licao-m9-f02/index.html",
+  "local": "M9-F02: «2 min)<» que não se parte",
+  "antigo": "2 min)<",
+  "novo": "2 min)<",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 25 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/licao-m9-f02/index.html",
+  "local": "M9-F02: «pp. 196 e 197» que não se parte",
+  "antigo": "pp. 196 e 197",
+  "novo": "pp. 196 e 197",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 25 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/licao-m9-f02/index.html",
+  "local": "M9-F02: «capítulo XXV» que não se parte",
+  "antigo": "capítulo XXV",
+  "novo": "capítulo XXV",
+  "ocorrencias": 3,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 25 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/licao-m9-f02/index.html",
+  "local": "M9-F02: «D. João V» que não se parte",
+  "antigo": "D. João V",
+  "novo": "D. João V",
+  "ocorrencias": 2,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 25 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/licao-m9-f03/index.html",
+  "local": "M9-F03, cartão 5, Para entender («Recorda»)",
+  "antigo": "<p><b>Discurso direto</b>: as palavras da personagem, tal como as disse. <b>Discurso indireto</b>: o narrador conta o que foi dito, com «que» e mudança de tempos e de pessoas. <b>Discurso indireto livre</b>: a voz da personagem dentro da voz do narrador, sem verbo a anunciar. <b>Ironia</b>: dizer uma coisa para dar a entender outra. <b>Intertextualidade</b>: um texto que chama outros textos.</p>",
+  "novo": "<table class=\\\"apoio-tabela\\\" role=\\\"table\\\"><thead role=\\\"rowgroup\\\"><tr role=\\\"row\\\"><th scope=\\\"col\\\" role=\\\"columnheader\\\" style=\\\"width:30%\\\">Noção</th><th scope=\\\"col\\\" role=\\\"columnheader\\\">O que é</th></tr></thead><tbody role=\\\"rowgroup\\\"><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Discurso direto</th><td role=\\\"cell\\\" data-label=\\\"O que é\\\">as palavras da personagem, tal como as disse</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Discurso indireto</th><td role=\\\"cell\\\" data-label=\\\"O que é\\\">o narrador conta o que foi dito, com «que» e mudança de tempos e de pessoas</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Discurso indireto livre</th><td role=\\\"cell\\\" data-label=\\\"O que é\\\">a voz da personagem dentro da voz do narrador, sem verbo a anunciar</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Ironia</th><td role=\\\"cell\\\" data-label=\\\"O que é\\\">dizer uma coisa para dar a entender outra</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Intertextualidade</th><td role=\\\"cell\\\" data-label=\\\"O que é\\\">um texto que chama outros textos</td></tr></tbody></table>",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 5 (A). Itens paralelos que pedem tabela passam a tabela (como do M1 ao M8). As noções no cabeçalho de linha, sem negrito; caem os dois pontos e o ponto final de cada definição, como na M5-F13; as palavras ficam todas. A primeira coluna fica com 30 %, como as caixas de termos do M6, para «Intertextualidade» caber numa linha no ecrã largo."
+ },
+ {
+  "ficheiro": "m9/licao-m9-f03/index.html",
+  "local": "M9-F03, cabeça: a folha das tabelas de apoio, antes da camada de aparência",
+  "antigo": "<link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-reading1\">",
+  "novo": "<link rel=\"stylesheet\" href=\"../../assets/pt-lessons/apoios-tabelas.css?v=20261106.1\"><link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-reading1\">",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 5 (A). A lição passa a carregar as tabelas de apoio, antes da camada de aparência."
+ },
+ {
+  "ficheiro": "m9/licao-m9-f03/index.html",
+  "local": "M9-F03: «>D. João V» que não se parte",
+  "antigo": ">D. João V",
+  "novo": ">D. João V",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 26 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/licao-m9-f03/index.html",
+  "local": "M9-F03: «4 min)<» que não se parte",
+  "antigo": "4 min)<",
+  "novo": "4 min)<",
+  "ocorrencias": 2,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 26 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/licao-m9-f03/index.html",
+  "local": "M9-F03: «capítulo I» que não se parte",
+  "antigo": "capítulo I",
+  "novo": "capítulo I",
+  "ocorrencias": 2,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 26 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/licao-m9-f03/index.html",
+  "local": "M9-F03: «capítulo XXI» que não se parte",
+  "antigo": "capítulo XXI",
+  "novo": "capítulo XXI",
+  "ocorrencias": 4,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 26 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/licao-m9-f04/index.html",
+  "local": "M9-F04: «século XX» que não se parte",
+  "antigo": "século XX",
+  "novo": "século XX",
+  "ocorrencias": 10,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 27 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/licao-m9-f04/index.html",
+  "local": "M9-F04: «século XVI » que não se parte",
+  "antigo": "século XVI ",
+  "novo": "século XVI ",
+  "ocorrencias": 2,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 27 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/licao-m9-f04/index.html",
+  "local": "M9-F04: «século XVI » que não se parte (com o contexto «século XVI;»)",
+  "antigo": "século XVI;",
+  "novo": "século XVI;",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 27 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/licao-m9-f04/index.html",
+  "local": "M9-F04: «século XVI » que não se parte (com o contexto «século XVI,»)",
+  "antigo": "século XVI,",
+  "novo": "século XVI,",
+  "ocorrencias": 2,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 27 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/licao-m9-f04/index.html",
+  "local": "M9-F04: «2 min)<» que não se parte",
+  "antigo": "2 min)<",
+  "novo": "2 min)<",
+  "ocorrencias": 2,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 27 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/licao-m9-f04/index.html",
+  "local": "M9-F04: «século XVIII» que não se parte",
+  "antigo": "século XVIII",
+  "novo": "século XVIII",
+  "ocorrencias": 4,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 27 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/licao-m9-f04/index.html",
+  "local": "M9-F04: «Século XVI» que não se parte",
+  "antigo": "Século XVI",
+  "novo": "Século XVI",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 27 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/licao-m9-f05/index.html",
+  "local": "M9-F05: «12.º ano» que não se parte",
+  "antigo": "12.º ano",
+  "novo": "12.º ano",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 28 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/licao-m9-f05/index.html",
+  "local": "M9-F05: «4 min)<» que não se parte",
+  "antigo": "4 min)<",
+  "novo": "4 min)<",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 28 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/licao-m9-f05/index.html",
+  "local": "M9-F05: «30 segundos» que não se parte",
+  "antigo": "30 segundos",
+  "novo": "30 segundos",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 28 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/licao-m9-f05/index.html",
+  "local": "M9-F05: «3 min,» que não se parte",
+  "antigo": "3 min,",
+  "novo": "3 min,",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 28 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/licao-m9-f05/index.html",
+  "local": "M9-F05: «3 minutos» que não se parte",
+  "antigo": "3 minutos",
+  "novo": "3 minutos",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 28 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/licao-m9-f05/index.html",
+  "local": "M9-F05: «capítulo XIX» que não se parte",
+  "antigo": "capítulo XIX",
+  "novo": "capítulo XIX",
+  "ocorrencias": 2,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 28 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/licao-m9-f05/index.html",
+  "local": "M9-F05: «capítulo XXV» que não se parte",
+  "antigo": "capítulo XXV",
+  "novo": "capítulo XXV",
+  "ocorrencias": 2,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 28 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/licao-m9-f07/index.html",
+  "local": "M9-F07: «D. João V» que não se parte",
+  "antigo": "D. João V",
+  "novo": "D. João V",
+  "ocorrencias": 8,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 29 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/licao-m9-f07/index.html",
+  "local": "M9-F07: «capítulo XXI» que não se parte",
+  "antigo": "capítulo XXI",
+  "novo": "capítulo XXI",
+  "ocorrencias": 2,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 29 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/licao-m9-f07/index.html",
+  "local": "M9-F07: «canto I» que não se parte",
+  "antigo": "canto I",
+  "novo": "canto I",
+  "ocorrencias": 4,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 29 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/licao-m9-f07/index.html",
+  "local": "M9-F07: «capítulo XIX» que não se parte",
+  "antigo": "capítulo XIX",
+  "novo": "capítulo XIX",
+  "ocorrencias": 2,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 29 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/licao-m9-f10/index.html",
+  "local": "M9-F10, cartão 5, Para entender («Recorda»)",
+  "antigo": "<p><b>Tese</b>: a posição que se defende. <b>Argumento</b>: uma razão, com prova. <b>Contra-argumento</b>: a razão de quem discorda. <b>Refutação</b>: a resposta a essa razão. Conectores que ajudam: «porque», «no entanto», «ainda que», «portanto».</p>",
+  "novo": "<table class=\\\"apoio-tabela\\\" role=\\\"table\\\"><thead role=\\\"rowgroup\\\"><tr role=\\\"row\\\"><th scope=\\\"col\\\" role=\\\"columnheader\\\">Termo</th><th scope=\\\"col\\\" role=\\\"columnheader\\\">O que é</th></tr></thead><tbody role=\\\"rowgroup\\\"><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Tese</th><td role=\\\"cell\\\" data-label=\\\"O que é\\\">a posição que se defende</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Argumento</th><td role=\\\"cell\\\" data-label=\\\"O que é\\\">uma razão, com prova</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Contra-argumento</th><td role=\\\"cell\\\" data-label=\\\"O que é\\\">a razão de quem discorda</td></tr><tr role=\\\"row\\\"><th scope=\\\"row\\\" role=\\\"rowheader\\\">Refutação</th><td role=\\\"cell\\\" data-label=\\\"O que é\\\">a resposta a essa razão</td></tr></tbody></table><p>Conectores que ajudam: «porque», «no entanto», «ainda que», «portanto».</p>",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 6 (A). Itens paralelos que pedem tabela passam a tabela (como do M1 ao M8). Os quatro termos no cabeçalho de linha, sem negrito; caem os dois pontos e o ponto final de cada definição, como na M5-F13; as palavras ficam todas. A frase dos conectores, que já não é definição, fica num parágrafo a seguir."
+ },
+ {
+  "ficheiro": "m9/licao-m9-f10/index.html",
+  "local": "M9-F10, cabeça: a folha das tabelas de apoio, antes da camada de aparência",
+  "antigo": "<link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-reading1\">",
+  "novo": "<link rel=\"stylesheet\" href=\"../../assets/pt-lessons/apoios-tabelas.css?v=20261106.1\"><link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-reading1\">",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 6 (A). A lição passa a carregar as tabelas de apoio, antes da camada de aparência."
+ },
+ {
+  "ficheiro": "m9/licao-m9-f10/index.html",
+  "local": "M9-F10: «3 min)<» que não se parte",
+  "antigo": "3 min)<",
+  "novo": "3 min)<",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 30 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/licao-m9-f10/index.html",
+  "local": "M9-F10: «8 de outubro de 1998» que não se parte",
+  "antigo": "8 de outubro de 1998",
+  "novo": "8 de outubro de 1998",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 30 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/licao-m9-f10/index.html",
+  "local": "M9-F10: «cap. XXI» que não se parte",
+  "antigo": "cap. XXI",
+  "novo": "cap. XXI",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 30 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/licao-m9-f14/index.html",
+  "local": "M9-F14: «D. João V» que não se parte",
+  "antigo": "D. João V",
+  "novo": "D. João V",
+  "ocorrencias": 3,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 31 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/licao-m9-f14/index.html",
+  "local": "M9-F14: «capítulo I» que não se parte",
+  "antigo": "capítulo I",
+  "novo": "capítulo I",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 31 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/licao-m9-f14/index.html",
+  "local": "M9-F14: «p. 22» que não se parte",
+  "antigo": "p. 22",
+  "novo": "p. 22",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 31 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/licao-m9-f14/index.html",
+  "local": "M9-F14: «n.º 2» que não se parte",
+  "antigo": "n.º 2",
+  "novo": "n.º 2",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 31 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/licao-m9-f14/index.html",
+  "local": "M9-F14: «p. 33» que não se parte",
+  "antigo": "p. 33",
+  "novo": "p. 33",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 31 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/licao-m9-f15/index.html",
+  "local": "M9-F15: «capítulo V» que não se parte",
+  "antigo": "capítulo V",
+  "novo": "capítulo V",
+  "ocorrencias": 3,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 32 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/licao-m9-f15/index.html",
+  "local": "M9-F15: «página 78» que não se parte",
+  "antigo": "página 78",
+  "novo": "página 78",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 32 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/licao-m9-f15/index.html",
+  "local": "M9-F15: «p. 49» que não se parte",
+  "antigo": "p. 49",
+  "novo": "p. 49",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 32 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/licao-m9-f16/index.html",
+  "local": "M9-F16: «página 1» que não se parte",
+  "antigo": "página 1",
+  "novo": "página 1",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 33 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/m9-de-quem-e-o-convento/index.html",
+  "local": "m9/m9-de-quem-e-o-convento: «22 min» que não se parte",
+  "antigo": "22 min",
+  "novo": "22 min",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 34 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/m9-de-quem-e-o-convento/index.html",
+  "local": "m9/m9-de-quem-e-o-convento: «capítulo XXI» que não se parte",
+  "antigo": "capítulo XXI",
+  "novo": "capítulo XXI",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 34 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/m9-de-quem-e-o-convento/index.html",
+  "local": "m9/m9-de-quem-e-o-convento: «D. João V f» que não se parte",
+  "antigo": "D. João V f",
+  "novo": "D. João V f",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 34 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/m9-de-quem-e-o-convento/index.html",
+  "local": "m9/m9-de-quem-e-o-convento: «D. João V f» que não se parte (com o contexto «D. João V. »)",
+  "antigo": "D. João V. ",
+  "novo": "D. João V. ",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 34 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/m9-de-quem-e-o-convento/index.html",
+  "local": "m9/m9-de-quem-e-o-convento: «D. João V f» que não se parte (com o contexto «D. João V m»)",
+  "antigo": "D. João V m",
+  "novo": "D. João V m",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 34 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/m9-de-quem-e-o-convento/index.html",
+  "local": "m9/m9-de-quem-e-o-convento: «22 de outubro de 1730» que não se parte",
+  "antigo": "22 de outubro de 1730",
+  "novo": "22 de outubro de 1730",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 34 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/m9-de-quem-e-o-convento/index.html",
+  "local": "m9/m9-de-quem-e-o-convento: «capítulo XIX» que não se parte",
+  "antigo": "capítulo XIX",
+  "novo": "capítulo XIX",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 34 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/m9-de-quem-e-o-convento/index.html",
+  "local": "m9/m9-de-quem-e-o-convento: «canto III» que não se parte",
+  "antigo": "canto III",
+  "novo": "canto III",
+  "ocorrencias": 5,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 34 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/m9-de-quem-e-o-convento/index.html",
+  "local": "m9/m9-de-quem-e-o-convento: «canto VIII» que não se parte",
+  "antigo": "canto VIII",
+  "novo": "canto VIII",
+  "ocorrencias": 3,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 34 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/m9-de-quem-e-o-convento/index.html",
+  "local": "m9/m9-de-quem-e-o-convento: «estância 20» que não se parte",
+  "antigo": "estância 20",
+  "novo": "estância 20",
+  "ocorrencias": 3,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 34 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/m9-de-quem-e-o-convento/index.html",
+  "local": "m9/m9-de-quem-e-o-convento: «estância 78» que não se parte",
+  "antigo": "estância 78",
+  "novo": "estância 78",
+  "ocorrencias": 2,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 34 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/m9-de-quem-e-o-convento/index.html",
+  "local": "m9/m9-de-quem-e-o-convento: «século XX» que não se parte",
+  "antigo": "século XX",
+  "novo": "século XX",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 34 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/m9-de-quem-e-o-convento/index.html",
+  "local": "m9/m9-de-quem-e-o-convento: «capítulos I, XIX e XXI» que não se parte (com o contexto «capítulos I»)",
+  "antigo": "capítulos I",
+  "novo": "capítulos I",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 34 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/m9-de-quem-e-o-convento/index.html",
+  "local": "m9/m9-de-quem-e-o-convento: «capítulos I, XIX e XXI» que não se parte (com o contexto «e XXI»)",
+  "antigo": "e XXI",
+  "novo": "e XXI",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 34 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/m9-ver-e-nao-ver/index.html",
+  "local": "m9/m9-ver-e-nao-ver: «22 min» que não se parte",
+  "antigo": "22 min",
+  "novo": "22 min",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 35 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/m9-ver-e-nao-ver/index.html",
+  "local": "m9/m9-ver-e-nao-ver: «capítulo XVI» que não se parte",
+  "antigo": "capítulo XVI",
+  "novo": "capítulo XVI",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 35 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/m9-ver-e-nao-ver/index.html",
+  "local": "m9/m9-ver-e-nao-ver: «D. João V» que não se parte",
+  "antigo": "D. João V",
+  "novo": "D. João V",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 35 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/m9-ver-e-nao-ver/index.html",
+  "local": "m9/m9-ver-e-nao-ver: «capítulo XXV» que não se parte",
+  "antigo": "capítulo XXV",
+  "novo": "capítulo XXV",
+  "ocorrencias": 2,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 35 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/m9-ver-e-nao-ver/index.html",
+  "local": "m9/m9-ver-e-nao-ver: «capítulo XXI» que não se parte",
+  "antigo": "capítulo XXI",
+  "novo": "capítulo XXI",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 35 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/m9-ver-e-nao-ver/index.html",
+  "local": "m9/m9-ver-e-nao-ver: «22 de outubro de 1730» que não se parte",
+  "antigo": "22 de outubro de 1730",
+  "novo": "22 de outubro de 1730",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 35 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/m9-ver-e-nao-ver/index.html",
+  "local": "m9/m9-ver-e-nao-ver: «século XVIII» que não se parte",
+  "antigo": "século XVIII",
+  "novo": "século XVIII",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 35 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/m9-ver-e-nao-ver/index.html",
+  "local": "m9/m9-ver-e-nao-ver: «século XX» que não se parte",
+  "antigo": "século XX",
+  "novo": "século XX",
+  "ocorrencias": 4,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 35 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/m9-ver-e-nao-ver/index.html",
+  "local": "m9/m9-ver-e-nao-ver: «capítulo XIX» que não se parte",
+  "antigo": "capítulo XIX",
+  "novo": "capítulo XIX",
+  "ocorrencias": 2,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 35 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/m9-ver-e-nao-ver/index.html",
+  "local": "m9/m9-ver-e-nao-ver: «cap. 1» que não se parte",
+  "antigo": "cap. 1",
+  "novo": "cap. 1",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 35 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/m9-ver-e-nao-ver/index.html",
+  "local": "m9/m9-ver-e-nao-ver: «capítulos XVI, XIX, XXI e XXV» que não se parte (com o contexto «capítulos XVI»)",
+  "antigo": "capítulos XVI",
+  "novo": "capítulos XVI",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 35 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/m9-ver-e-nao-ver/index.html",
+  "local": "m9/m9-ver-e-nao-ver: «capítulos XVI, XIX, XXI e XXV» que não se parte (com o contexto «e XXV»)",
+  "antigo": "e XXV",
+  "novo": "e XXV",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 35 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/m9-ver-e-nao-ver/index.html",
+  "local": "m9/m9-ver-e-nao-ver: «capítulo 1» que não se parte",
+  "antigo": "capítulo 1",
+  "novo": "capítulo 1",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 35 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/mapa-do-modulo-m9/index.html",
+  "local": "m9/mapa-do-modulo-m9, «As tarefas das unidades»: os pesos na avaliação",
+  "antigo": "<p class=\"avaliacao-tarefas\">Avaliação: tarefa da Unidade 1, 30 %; tarefa da Unidade 2, 30 %; provas rápidas, 10 %; prova escrita, 30 %. ",
+  "novo": "<p>Avaliação:</p><table class=\"apoio-tabela\" role=\"table\"><thead role=\"rowgroup\"><tr role=\"row\"><th scope=\"col\" role=\"columnheader\" style=\"width:auto\">Elemento</th><th scope=\"col\" role=\"columnheader\" style=\"width:5.5rem\">Peso</th></tr></thead><tbody role=\"rowgroup\"><tr role=\"row\"><th scope=\"row\" role=\"rowheader\">Tarefa da Unidade 1</th><td role=\"cell\" data-label=\"Peso\">30 %</td></tr><tr role=\"row\"><th scope=\"row\" role=\"rowheader\">Tarefa da Unidade 2</th><td role=\"cell\" data-label=\"Peso\">30 %</td></tr><tr role=\"row\"><th scope=\"row\" role=\"rowheader\">Provas rápidas</th><td role=\"cell\" data-label=\"Peso\">10 %</td></tr><tr role=\"row\"><th scope=\"row\" role=\"rowheader\">Prova escrita</th><td role=\"cell\" data-label=\"Peso\">30 %</td></tr></tbody></table><p class=\"avaliacao-tarefas\">",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 2 (A). Itens paralelos que pedem tabela passam a tabela (como do M1 ao M8). Como no M5, no M7 e no M8: o rótulo num parágrafo, a tabela Elemento/Peso (a coluna do peso com 5,5 rem) e o resto da frase no p.avaliacao-tarefas, como estava. Os pesos já levam o espaço que não quebra."
+ },
+ {
+  "ficheiro": "m9/mapa-do-modulo-m9/index.html",
+  "local": "m9/mapa-do-modulo-m9, cabeça: a folha das tabelas de apoio, antes da camada de aparência",
+  "antigo": "<link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-universal-1\">",
+  "novo": "<link rel=\"stylesheet\" href=\"../../assets/pt-lessons/apoios-tabelas.css?v=20261106.1\"><link rel=\"stylesheet\" href=\"../../assets/appearance.css?v=20261025-universal-1\">",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 2 (A). O mapa do módulo passa a carregar as tabelas de apoio, antes da camada de aparência."
+ },
+ {
+  "ficheiro": "m9/mapa-do-modulo-m9/index.html",
+  "local": "m9/mapa-do-modulo-m9: «3.º ano» que não se parte",
+  "antigo": "3.º ano",
+  "novo": "3.º ano",
+  "ocorrencias": 2,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 36 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/mapa-do-modulo-m9/index.html",
+  "local": "m9/mapa-do-modulo-m9: «90 minutos» que não se parte",
+  "antigo": "90 minutos",
+  "novo": "90 minutos",
+  "ocorrencias": 2,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 36 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/mapa-do-modulo-m9/index.html",
+  "local": "m9/mapa-do-modulo-m9: «>D. João V» que não se parte (com o contexto «>D. João V »)",
+  "antigo": ">D. João V ",
+  "novo": ">D. João V ",
+  "ocorrencias": 3,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 36 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/mapa-do-modulo-m9/index.html",
+  "local": "m9/mapa-do-modulo-m9: «>D. João V» que não se parte (com o contexto « D. João V,»)",
+  "antigo": " D. João V,",
+  "novo": " D. João V,",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 36 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/mapa-do-modulo-m9/index.html",
+  "local": "m9/mapa-do-modulo-m9: «>D. João V» que não se parte (com o contexto «>D. João V.»)",
+  "antigo": ">D. João V.",
+  "novo": ">D. João V.",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 36 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/mapa-do-modulo-m9/index.html",
+  "local": "m9/mapa-do-modulo-m9: «>D. João V» que não se parte (com o contexto « D. João V »)",
+  "antigo": " D. João V ",
+  "novo": " D. João V ",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 36 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/mapa-do-modulo-m9/index.html",
+  "local": "m9/mapa-do-modulo-m9: «22 de outubro de 1730» que não se parte",
+  "antigo": "22 de outubro de 1730",
+  "novo": "22 de outubro de 1730",
+  "ocorrencias": 2,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 36 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/mapa-do-modulo-m9/index.html",
+  "local": "m9/mapa-do-modulo-m9: «século XVIII d» que não se parte (com o contexto «limunda.</dd><dt>tempo histórico e tempo da narrativa</dt…»)",
+  "antigo": "limunda.</dd><dt>tempo histórico e tempo da narrativa</dt><dd>o século XVIII",
+  "novo": "limunda.</dd><dt>tempo histórico e tempo da narrativa</dt><dd>o século XVIII",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 36 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/mapa-do-modulo-m9/index.html",
+  "local": "m9/mapa-do-modulo-m9: «século XVIII d» que não se parte (com o contexto «=\"info-i-texto\">A Passarola de Bartolomeu de Gusmão, dese…»)",
+  "antigo": "=\"info-i-texto\">A Passarola de Bartolomeu de Gusmão, desenho do século XVIII",
+  "novo": "=\"info-i-texto\">A Passarola de Bartolomeu de Gusmão, desenho do século XVIII",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 36 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/mapa-do-modulo-m9/index.html",
+  "local": "m9/mapa-do-modulo-m9: «século XVIII d» que não se parte (com o contexto «ils><figcaption>A Passarola de Bartolomeu de Gusmão, dese…»)",
+  "antigo": "ils><figcaption>A Passarola de Bartolomeu de Gusmão, desenho do século XVIII",
+  "novo": "ils><figcaption>A Passarola de Bartolomeu de Gusmão, desenho do século XVIII",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 36 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/mapa-do-modulo-m9/index.html",
+  "local": "m9/mapa-do-modulo-m9: «século XX» que não se parte",
+  "antigo": "século XX",
+  "novo": "século XX",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 36 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/mapa-do-modulo-m9/index.html",
+  "local": "m9/mapa-do-modulo-m9: «30 %,» que não se parte",
+  "antigo": "30 %,",
+  "novo": "30 %,",
+  "ocorrencias": 2,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 36 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/mapa-do-modulo-m9/index.html",
+  "local": "m9/mapa-do-modulo-m9: «M9-F01» que não se parte",
+  "antigo": "M9-F01",
+  "novo": "M9-⁠F01",
+  "ocorrencias": 4,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 36 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/mapa-do-modulo-m9/index.html",
+  "local": "m9/mapa-do-modulo-m9: «M9-F04» que não se parte",
+  "antigo": "M9-F04",
+  "novo": "M9-⁠F04",
+  "ocorrencias": 4,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 36 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/mapa-do-modulo-m9/index.html",
+  "local": "m9/mapa-do-modulo-m9: «M9-F02» que não se parte",
+  "antigo": "M9-F02",
+  "novo": "M9-⁠F02",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 36 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/memorial-promessa/index.html",
+  "local": "m9/memorial-promessa: «D. João V q» que não se parte",
+  "antigo": "D. João V q",
+  "novo": "D. João V q",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 37 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/painel-m9-f01/index.html",
+  "local": "M9-F01 (painel de projeção): o enunciado do cartão 12 igual ao da lição, em a lista do painel",
+  "antigo": "{\"k\":12,\"t\":\"versos\",\"p\":\"Põe pela ordem do texto o que o rei faz no capítulo XXI.\"}",
+  "novo": "{\"k\":12,\"t\":\"versos\",\"p\":\"Põe pela ordem do texto o que o rei faz no capítulo XXI.\"}",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 38 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla). No painel do docente, que segue os enunciados dos cartões da lição."
+ },
+ {
+  "ficheiro": "m9/painel-m9-f01/index.html",
+  "local": "M9-F01 (painel de projeção): o enunciado do cartão 12 igual ao da lição, em o seletor",
+  "antigo": "<option value=\"12\">Põe pela ordem do texto o que o rei faz no capítulo XXI.</option>",
+  "novo": "<option value=\"12\">Põe pela ordem do texto o que o rei faz no capítulo XXI.</option>",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 38 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla). No painel do docente, que segue os enunciados dos cartões da lição."
+ },
+ {
+  "ficheiro": "m9/painel-m9-f01/index.html",
+  "local": "M9-F01 (painel de projeção): o enunciado do cartão 14 igual ao da lição, em a lista do painel",
+  "antigo": "{\"k\":14,\"t\":\"ordenar\",\"p\":\"Põe pela ordem do excerto o que acontece no capítulo XXI.\"}",
+  "novo": "{\"k\":14,\"t\":\"ordenar\",\"p\":\"Põe pela ordem do excerto o que acontece no capítulo XXI.\"}",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 38 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla). No painel do docente, que segue os enunciados dos cartões da lição."
+ },
+ {
+  "ficheiro": "m9/painel-m9-f01/index.html",
+  "local": "M9-F01 (painel de projeção): o enunciado do cartão 14 igual ao da lição, em o seletor",
+  "antigo": "<option value=\"14\">Põe pela ordem do excerto o que acontece no capítulo XXI.</option>",
+  "novo": "<option value=\"14\">Põe pela ordem do excerto o que acontece no capítulo XXI.</option>",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 38 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla). No painel do docente, que segue os enunciados dos cartões da lição."
+ },
+ {
+  "ficheiro": "m9/painel-m9-f01/index.html",
+  "local": "M9-F01 (painel de projeção): o enunciado do cartão 20 igual ao da lição, em a lista do painel",
+  "antigo": "{\"k\":20,\"t\":\"vf\",\"p\":\"O _Memorial do Convento_ foi publicado em outubro de 1730, no reinado de D. João V.\"}",
+  "novo": "{\"k\":20,\"t\":\"vf\",\"p\":\"O _Memorial do Convento_ foi publicado em outubro de 1730, no reinado de D. João V.\"}",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 38 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla). No painel do docente, que segue os enunciados dos cartões da lição."
+ },
+ {
+  "ficheiro": "m9/painel-m9-f01/index.html",
+  "local": "M9-F01 (painel de projeção): o enunciado do cartão 23 igual ao da lição, em a lista do painel",
+  "antigo": "{\"k\":23,\"t\":\"vf\",\"p\":\"No capítulo XXI, o rei aceita adiar a sagração para 1740, quando a obra estiver mais adiantada.\"}",
+  "novo": "{\"k\":23,\"t\":\"vf\",\"p\":\"No capítulo XXI, o rei aceita adiar a sagração para 1740, quando a obra estiver mais adiantada.\"}",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 38 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla). No painel do docente, que segue os enunciados dos cartões da lição."
+ },
+ {
+  "ficheiro": "m9/painel-m9-f01/index.html",
+  "local": "M9-F01 (painel de projeção): o enunciado do cartão 23 igual ao da lição, em o seletor",
+  "antigo": "<option value=\"23\">No capítulo XXI, o rei aceita adiar a sagração para 1740, quando a obra estiver mais adiantada.</option>",
+  "novo": "<option value=\"23\">No capítulo XXI, o rei aceita adiar a sagração para 1740, quando a obra estiver mais adiantada.</option>",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 38 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla). No painel do docente, que segue os enunciados dos cartões da lição."
+ },
+ {
+  "ficheiro": "m9/painel-m9-f01/index.html",
+  "local": "M9-F01 (painel de projeção): o enunciado do cartão 24 igual ao da lição, em a lista do painel",
+  "antigo": "{\"k\":24,\"t\":\"escolha\",\"p\":\"Logo na primeira frase, o narrador apresenta a rainha: «D. Maria Ana Josefa, que chegou há mais de dois anos da Áustria para dar infantes à coroa portuguesa e até hoje ainda não emprenhou» (capítulo I). Que problema abre o romance?\"}",
+  "novo": "{\"k\":24,\"t\":\"escolha\",\"p\":\"Logo na primeira frase, o narrador apresenta a rainha: «D. Maria Ana Josefa, que chegou há mais de dois anos da Áustria para dar infantes à coroa portuguesa e até hoje ainda não emprenhou» (capítulo I). Que problema abre o romance?\"}",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 38 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla). No painel do docente, que segue os enunciados dos cartões da lição."
+ },
+ {
+  "ficheiro": "m9/painel-m9-f01/index.html",
+  "local": "M9-F01 (painel de projeção): o enunciado do cartão 25 igual ao da lição, em a lista do painel",
+  "antigo": "{\"k\":25,\"t\":\"vf\",\"p\":\"No romance histórico, figuras reais da época, como D. João V, entram na ficção.\"}",
+  "novo": "{\"k\":25,\"t\":\"vf\",\"p\":\"No romance histórico, figuras reais da época, como D. João V, entram na ficção.\"}",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 38 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla). No painel do docente, que segue os enunciados dos cartões da lição."
+ },
+ {
+  "ficheiro": "m9/painel-m9-f01/index.html",
+  "local": "M9-F01 (painel de projeção): o enunciado do cartão 25 igual ao da lição, em o seletor",
+  "antigo": "<option value=\"25\">No romance histórico, figuras reais da época, como D. João V, entram na ficção.</option>",
+  "novo": "<option value=\"25\">No romance histórico, figuras reais da época, como D. João V, entram na ficção.</option>",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 38 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla). No painel do docente, que segue os enunciados dos cartões da lição."
+ },
+ {
+  "ficheiro": "m9/painel-m9-f02/index.html",
+  "local": "M9-F02 (painel de projeção): o enunciado do cartão 22 igual ao da lição, em a lista do painel",
+  "antigo": "{\"k\":22,\"t\":\"escolha\",\"p\":\"«Deus ele próprio, Baltasar seu filho, Blimunda o Espírito Santo, e estavam os três no céu» (capítulo XVI). Em pleno voo, o padre lembra esta analogia do italiano. Em que imagem religiosa põe ela o trio da passarola?\"}",
+  "novo": "{\"k\":22,\"t\":\"escolha\",\"p\":\"«Deus ele próprio, Baltasar seu filho, Blimunda o Espírito Santo, e estavam os três no céu» (capítulo XVI). Em pleno voo, o padre lembra esta analogia do italiano. Em que imagem religiosa põe ela o trio da passarola?\"}",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 39 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla). No painel do docente, que segue os enunciados dos cartões da lição."
+ },
+ {
+  "ficheiro": "m9/painel-m9-f02/index.html",
+  "local": "M9-F02 (painel de projeção): o enunciado do cartão 23 igual ao da lição, em a lista do painel",
+  "antigo": "{\"k\":23,\"t\":\"escolha\",\"p\":\"«E uma nuvem fechada está no centro do seu corpo.» (capítulo XXV) Em jejum, Blimunda vê isto dentro de Baltasar, que arde no auto de fé. O que é a «nuvem fechada»?\"}",
+  "novo": "{\"k\":23,\"t\":\"escolha\",\"p\":\"«E uma nuvem fechada está no centro do seu corpo.» (capítulo XXV) Em jejum, Blimunda vê isto dentro de Baltasar, que arde no auto de fé. O que é a «nuvem fechada»?\"}",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 39 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla). No painel do docente, que segue os enunciados dos cartões da lição."
+ },
+ {
+  "ficheiro": "m9/painel-m9-f02/index.html",
+  "local": "M9-F02 (painel de projeção): o enunciado do cartão 23 igual ao da lição, em o seletor",
+  "antigo": "<option value=\"23\">«E uma nuvem fechada está no centro do seu corpo.» (capítulo XXV) Em j</option>",
+  "novo": "<option value=\"23\">«E uma nuvem fechada está no centro do seu corpo.» (capítulo XXV) Em j</option>",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 39 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla). No painel do docente, que segue os enunciados dos cartões da lição."
+ },
+ {
+  "ficheiro": "m9/painel-m9-f03/index.html",
+  "local": "M9-F03 (painel de projeção): o enunciado do cartão 20 igual ao da lição, em a lista do painel",
+  "antigo": "{\"k\":20,\"t\":\"escolha\",\"p\":\"«Perguntou el-rei, É verdade o que acaba de dizer-me sua eminência, que se eu prometer levantar um convento em Mafra terei filhos, e o frade respondeu, Verdade é, senhor» (capítulo I). Onde começa a fala do frade?\"}",
+  "novo": "{\"k\":20,\"t\":\"escolha\",\"p\":\"«Perguntou el-rei, É verdade o que acaba de dizer-me sua eminência, que se eu prometer levantar um convento em Mafra terei filhos, e o frade respondeu, Verdade é, senhor» (capítulo I). Onde começa a fala do frade?\"}",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 40 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla). No painel do docente, que segue os enunciados dos cartões da lição."
+ },
+ {
+  "ficheiro": "m9/painel-m9-f03/index.html",
+  "local": "M9-F03 (painel de projeção): o enunciado do cartão 21 igual ao da lição, em a lista do painel",
+  "antigo": "{\"k\":21,\"t\":\"escolha\",\"p\":\"O rei acaba de marcar a sagração para o dia dos seus anos. «Deitaram reverentemente alguma água na fervura João Frederico Ludovice e o doutor Leandro de Melo» (capítulo XXI). O que quer dizer aqui a expressão popular?\"}",
+  "novo": "{\"k\":21,\"t\":\"escolha\",\"p\":\"O rei acaba de marcar a sagração para o dia dos seus anos. «Deitaram reverentemente alguma água na fervura João Frederico Ludovice e o doutor Leandro de Melo» (capítulo XXI). O que quer dizer aqui a expressão popular?\"}",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 40 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla). No painel do docente, que segue os enunciados dos cartões da lição."
+ },
+ {
+  "ficheiro": "m9/painel-m9-f05/index.html",
+  "local": "M9-F05 (painel de projeção): o enunciado do cartão 23 igual ao da lição, em a lista do painel",
+  "antigo": "{\"k\":23,\"t\":\"escolha\",\"p\":\"Os companheiros velam Francisco Marques, esmagado pelo carro da pedra: «aquela mulher ali é que é a viúva, não sabemos que nome tem, nem adiantaria nada à história ir lá perguntar-lhe» (capítulo XIX). O que confessa o narrador?\"}",
+  "novo": "{\"k\":23,\"t\":\"escolha\",\"p\":\"Os companheiros velam Francisco Marques, esmagado pelo carro da pedra: «aquela mulher ali é que é a viúva, não sabemos que nome tem, nem adiantaria nada à história ir lá perguntar-lhe» (capítulo XIX). O que confessa o narrador?\"}",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 42 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla). No painel do docente, que segue os enunciados dos cartões da lição."
+ },
+ {
+  "ficheiro": "m9/painel-m9-f05/index.html",
+  "local": "M9-F05 (painel de projeção): o enunciado do cartão 24 igual ao da lição, em a lista do painel",
+  "antigo": "{\"k\":24,\"t\":\"vf\",\"p\":\"«era meu marido, era meu pai, era meu irmão, era meu filho, era meu noivo, levaram-no forçado a trabalhar no convento, por ordem de el-rei, e nunca mais o vi» (capítulo XXV). Quem diz isto é Blimunda, a falar de Baltasar.\"}",
+  "novo": "{\"k\":24,\"t\":\"vf\",\"p\":\"«era meu marido, era meu pai, era meu irmão, era meu filho, era meu noivo, levaram-no forçado a trabalhar no convento, por ordem de el-rei, e nunca mais o vi» (capítulo XXV). Quem diz isto é Blimunda, a falar de Baltasar.\"}",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 42 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla). No painel do docente, que segue os enunciados dos cartões da lição."
+ },
+ {
+  "ficheiro": "m9/painel-m9-f07/index.html",
+  "local": "M9-F07 (painel de projeção): o enunciado do cartão 11 igual ao da lição, em a lista do painel",
+  "antigo": "{\"k\":11,\"t\":\"vf\",\"p\":\"No _Memorial_, quem «faz» a história são os trabalhadores; quem «fica com o nome» é D. João V.\"}",
+  "novo": "{\"k\":11,\"t\":\"vf\",\"p\":\"No _Memorial_, quem «faz» a história são os trabalhadores; quem «fica com o nome» é D. João V.\"}",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 43 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla). No painel do docente, que segue os enunciados dos cartões da lição."
+ },
+ {
+  "ficheiro": "m9/painel-m9-f07/index.html",
+  "local": "M9-F07 (painel de projeção): o enunciado do cartão 19 igual ao da lição, em a lista do painel",
+  "antigo": "{\"k\":19,\"t\":\"escolha\",\"p\":\"Os camaristas beijam a mão ao rei e o narrador comenta: «vós me direis qual é mais excelente, se ser do mundo rei, se desta gente» (capítulo XXI). Que obra de outro ano ecoa nesta frase?\"}",
+  "novo": "{\"k\":19,\"t\":\"escolha\",\"p\":\"Os camaristas beijam a mão ao rei e o narrador comenta: «vós me direis qual é mais excelente, se ser do mundo rei, se desta gente» (capítulo XXI). Que obra de outro ano ecoa nesta frase?\"}",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 43 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla). No painel do docente, que segue os enunciados dos cartões da lição."
+ },
+ {
+  "ficheiro": "m9/painel-m9-f07/index.html",
+  "local": "M9-F07 (painel de projeção): o enunciado do cartão 20 igual ao da lição, em a lista do painel",
+  "antigo": "{\"k\":20,\"t\":\"escolha\",\"p\":\"Contra o que dizem os compêndios, o narrador escreve: «vão aqui seiscentos homens que não fizeram filho nenhum à rainha, e eles é que pagam o voto» (capítulo XIX). Que afirmação do teste ajuda esta citação a provar?\"}",
+  "novo": "{\"k\":20,\"t\":\"escolha\",\"p\":\"Contra o que dizem os compêndios, o narrador escreve: «vão aqui seiscentos homens que não fizeram filho nenhum à rainha, e eles é que pagam o voto» (capítulo XIX). Que afirmação do teste ajuda esta citação a provar?\"}",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 43 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla). No painel do docente, que segue os enunciados dos cartões da lição."
+ },
+ {
+  "ficheiro": "m9/painel-m9-f14/index.html",
+  "local": "M9-F14 (notas do docente): «D. João V» que não se parte",
+  "antigo": "D. João V",
+  "novo": "D. João V",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 45 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla). Nas notas do docente, geradas a partir dos cartões da lição (scripts/gerar_licoes_20261101.py)."
+ },
+ {
+  "ficheiro": "m9/passarola-ramos/index.html",
+  "local": "m9/passarola-ramos: «ato III» que não se parte",
+  "antigo": "ato III",
+  "novo": "ato III",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 46 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/passarola-ramos/index.html",
+  "local": "m9/passarola-ramos: «século XVI» que não se parte",
+  "antigo": "século XVI",
+  "novo": "século XVI",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 46 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/portefolio-do-modulo-m9/index.html",
+  "local": "m9/portefolio-do-modulo-m9, «A lista de verificação»: o nome M9_U1_registo_<dia-mês> em <code>",
+  "antigo": "<td>M9_U1_registo_&lt;dia-mês&gt;</td>",
+  "novo": "<td><code>M9_<wbr>U1_<wbr>registo_<wbr>&lt;dia-mês&gt;</code></td>",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 10 (C). Caso do mesmo tipo. O nome do ficheiro, que se copia letra a letra, passa a <code>, como os outros seis da lista; pode mudar de linha a seguir a cada «_» (<wbr>), como nos portefólios do M5, do M7 e do M8."
+ },
+ {
+  "ficheiro": "m9/portefolio-do-modulo-m9/index.html",
+  "local": "m9/portefolio-do-modulo-m9, «A lista de verificação»: o nome M9_U1_retoma em <code>",
+  "antigo": "<td>M9_U1_retoma</td>",
+  "novo": "<td><code>M9_<wbr>U1_<wbr>retoma</code></td>",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 10 (C). Caso do mesmo tipo. O nome do ficheiro, que se copia letra a letra, passa a <code>, como os outros seis da lista; pode mudar de linha a seguir a cada «_» (<wbr>), como nos portefólios do M5, do M7 e do M8."
+ },
+ {
+  "ficheiro": "m9/portefolio-do-modulo-m9/index.html",
+  "local": "m9/portefolio-do-modulo-m9, «A lista de verificação»: o nome M9_U1_o-que-aprendi em <code>",
+  "antigo": "<td>M9_U1_o-que-aprendi</td>",
+  "novo": "<td><code>M9_<wbr>U1_<wbr>o-que-aprendi</code></td>",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 10 (C). Caso do mesmo tipo. O nome do ficheiro, que se copia letra a letra, passa a <code>, como os outros seis da lista; pode mudar de linha a seguir a cada «_» (<wbr>), como nos portefólios do M5, do M7 e do M8."
+ },
+ {
+  "ficheiro": "m9/portefolio-do-modulo-m9/index.html",
+  "local": "m9/portefolio-do-modulo-m9, «A lista de verificação»: o nome M9_U2_registo_<dia-mês> em <code>",
+  "antigo": "<td>M9_U2_registo_&lt;dia-mês&gt;</td>",
+  "novo": "<td><code>M9_<wbr>U2_<wbr>registo_<wbr>&lt;dia-mês&gt;</code></td>",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 10 (C). Caso do mesmo tipo. O nome do ficheiro, que se copia letra a letra, passa a <code>, como os outros seis da lista; pode mudar de linha a seguir a cada «_» (<wbr>), como nos portefólios do M5, do M7 e do M8."
+ },
+ {
+  "ficheiro": "m9/portefolio-do-modulo-m9/index.html",
+  "local": "m9/portefolio-do-modulo-m9, «A lista de verificação»: o nome M9_U2_retoma em <code>",
+  "antigo": "<td>M9_U2_retoma</td>",
+  "novo": "<td><code>M9_<wbr>U2_<wbr>retoma</code></td>",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 10 (C). Caso do mesmo tipo. O nome do ficheiro, que se copia letra a letra, passa a <code>, como os outros seis da lista; pode mudar de linha a seguir a cada «_» (<wbr>), como nos portefólios do M5, do M7 e do M8."
+ },
+ {
+  "ficheiro": "m9/portefolio-do-modulo-m9/index.html",
+  "local": "m9/portefolio-do-modulo-m9, «A lista de verificação»: o nome M9_U2_o-que-aprendi em <code>",
+  "antigo": "<td>M9_U2_o-que-aprendi</td>",
+  "novo": "<td><code>M9_<wbr>U2_<wbr>o-que-aprendi</code></td>",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 10 (C). Caso do mesmo tipo. O nome do ficheiro, que se copia letra a letra, passa a <code>, como os outros seis da lista; pode mudar de linha a seguir a cada «_» (<wbr>), como nos portefólios do M5, do M7 e do M8."
+ },
+ {
+  "ficheiro": "m9/portefolio-do-modulo-m9/index.html",
+  "local": "m9/portefolio-do-modulo-m9, «A lista de verificação»: o nome M9_U1_Tarefa em <code>",
+  "antigo": "<td>M9_U1_Tarefa</td>",
+  "novo": "<td><code>M9_<wbr>U1_<wbr>Tarefa</code></td>",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 10 (C). Caso do mesmo tipo. O nome do ficheiro, que se copia letra a letra, passa a <code>, como os outros seis da lista; pode mudar de linha a seguir a cada «_» (<wbr>), como nos portefólios do M5, do M7 e do M8."
+ },
+ {
+  "ficheiro": "m9/portefolio-do-modulo-m9/index.html",
+  "local": "m9/portefolio-do-modulo-m9, «A lista de verificação»: o nome M9_U2_Tarefa em <code>",
+  "antigo": "<td>M9_U2_Tarefa</td>",
+  "novo": "<td><code>M9_<wbr>U2_<wbr>Tarefa</code></td>",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 10 (C). Caso do mesmo tipo. O nome do ficheiro, que se copia letra a letra, passa a <code>, como os outros seis da lista; pode mudar de linha a seguir a cada «_» (<wbr>), como nos portefólios do M5, do M7 e do M8."
+ },
+ {
+  "ficheiro": "m9/portefolio-do-modulo-m9/index.html",
+  "local": "m9/portefolio-do-modulo-m9, «A lista de verificação»: o nome M9_cartao-do-percurso pode mudar de linha depois de «M9_»",
+  "antigo": "<td><code>M9_cartao-do-percurso</code></td>",
+  "novo": "<td><code>M9_<wbr>cartao-do-percurso</code></td>",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 10 (C). Caso do mesmo tipo. O nome já estava em <code>; por ser comprido, leva <wbr> depois de «M9_», como nos portefólios do M5 e do M7."
+ },
+ {
+  "ficheiro": "m9/portefolio-do-modulo-m9/index.html",
+  "local": "m9/portefolio-do-modulo-m9, «A lista de verificação»: o nome M9_Prova-escrita pode mudar de linha depois de «M9_»",
+  "antigo": "<td><code>M9_Prova-escrita</code></td>",
+  "novo": "<td><code>M9_<wbr>Prova-escrita</code></td>",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 10 (C). Caso do mesmo tipo. O nome já estava em <code>; por ser comprido, leva <wbr> depois de «M9_», como nos portefólios do M5 e do M7."
+ },
+ {
+  "ficheiro": "m9/portefolio-do-modulo-m9/index.html",
+  "local": "m9/portefolio-do-modulo-m9, a folha da página: os nomes só mudam de linha onde podem",
+  "antigo": "code{font:.85rem Consolas,\"Courier New\",monospace;border:1px solid var(--tinta);padding:1px 4px}\n",
+  "novo": "code{font:.85rem Consolas,\"Courier New\",monospace;border:1px solid var(--tinta);padding:1px 4px}\ntd code{white-space:nowrap}\n",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 10 (C). Caso do mesmo tipo. Como nos portefólios do M5, do M7 e do M8: «td code{white-space:nowrap}», a seguir à regra do <code>."
+ },
+ {
+  "ficheiro": "m9/portefolio-do-modulo-m9/index.html",
+  "local": "m9/portefolio-do-modulo-m9: «3.º ano» que não se parte",
+  "antigo": "3.º ano",
+  "novo": "3.º ano",
+  "ocorrencias": 2,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 47 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/portefolio-do-modulo-m9/index.html",
+  "local": "m9/portefolio-do-modulo-m9: «90 minutos» que não se parte",
+  "antigo": "90 minutos",
+  "novo": "90 minutos",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 47 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/portefolio-do-modulo-m9/index.html",
+  "local": "m9/portefolio-do-modulo-m9: «40 %» que não se parte",
+  "antigo": "40 %",
+  "novo": "40 %",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 47 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/recursos/f11.js",
+  "local": "M9-F11 (cartões da lição, em m9/recursos/f11.js): «capítulo I» que não se parte",
+  "antigo": "capítulo I",
+  "novo": "capítulo I",
+  "ocorrencias": 5,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 52 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/recursos/f11.js",
+  "local": "M9-F11 (cartões da lição, em m9/recursos/f11.js): «capítulo XXV» que não se parte",
+  "antigo": "capítulo XXV",
+  "novo": "capítulo XXV",
+  "ocorrencias": 2,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 52 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/recursos/f11.js",
+  "local": "M9-F11 (cartões da lição, em m9/recursos/f11.js): «capítulo XVI» que não se parte",
+  "antigo": "capítulo XVI",
+  "novo": "capítulo XVI",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 52 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/recursos/f12.js",
+  "local": "M9-F12 (cartões da lição, em m9/recursos/f12.js): «século XVIII» que não se parte",
+  "antigo": "século XVIII",
+  "novo": "século XVIII",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 53 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/recursos/f12.js",
+  "local": "M9-F12 (cartões da lição, em m9/recursos/f12.js): «4 min)<» que não se parte",
+  "antigo": "4 min)<",
+  "novo": "4 min)<",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 53 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/recursos/f13.js",
+  "local": "M9-F13 (cartões da lição, em m9/recursos/f13.js), cartão 2, Lê e confronta («Caderno de leitura: quatro estações»)",
+  "antigo": "<p>Oficina longa, com o livro aberto, em quatro estações: hipótese inicial; confronto de episódios; contraexemplo e revisão; síntese fundamentada. Entre estações, confronta a tua leitura com uma passagem do livro e anota a página da edição.</p>",
+  "novo": "<p>Oficina longa, com o livro aberto, em quatro estações:</p><ol><li>hipótese inicial;</li><li>confronto de episódios;</li><li>contraexemplo e revisão;</li><li>síntese fundamentada.</li></ol><p>Entre estações, confronta a tua leitura com uma passagem do livro e anota a página da edição.</p>",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 15 (C). Caso do mesmo tipo. As quatro estações, que têm ordem (os cartões seguintes chamam-se «Estação 1» a «Estação 4»), em lista numerada, cada item com o «;» ou o ponto final que tinha; a frase seguinte fica num parágrafo; o texto fica igual."
+ },
+ {
+  "ficheiro": "m9/recursos/f13.js",
+  "local": "M9-F13 (cartões da lição, em m9/recursos/f13.js): «capítulo XVI» que não se parte",
+  "antigo": "capítulo XVI",
+  "novo": "capítulo XVI",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 54 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/recursos/f13.js",
+  "local": "M9-F13 (cartões da lição, em m9/recursos/f13.js): «capítulo XIX» que não se parte",
+  "antigo": "capítulo XIX",
+  "novo": "capítulo XIX",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 54 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/recursos/f13.js",
+  "local": "M9-F13 (cartões da lição, em m9/recursos/f13.js): «capítulo XXV» que não se parte",
+  "antigo": "capítulo XXV",
+  "novo": "capítulo XXV",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 54 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/recursos/f13.js",
+  "local": "M9-F13 (cartões da lição, em m9/recursos/f13.js): «M9-F03» que não se parte",
+  "antigo": "M9-F03",
+  "novo": "M9-⁠F03",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 54 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/reis-regresso/index.html",
+  "local": "m9/reis-regresso: «13 de janeiro de 1935» que não se parte",
+  "antigo": "13 de janeiro de 1935",
+  "novo": "13 de janeiro de 1935",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 55 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "m9/visita-fundacao-jose-saramago/index.html",
+  "local": "m9/visita-fundacao-jose-saramago: «3.º ano» que não se parte",
+  "antigo": "3.º ano",
+  "novo": "3.º ano",
+  "ocorrencias": 2,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 57 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "tarefas/m9-u1/index.html",
+  "local": "tarefas/m9-u1: «durante 90 minutos, com entrega»",
+  "antigo": "durante 90 minutos, com entrega",
+  "novo": "durante 90 minutos, com entrega",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 58 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla). A meta descrição muda com «nao_partir» (o gerador prende os três números do molde, como do M1 ao M8); a proposta não a lista porque não se vê."
+ },
+ {
+  "ficheiro": "tarefas/m9-u1/index.html",
+  "local": "tarefas/m9-u1: «10 min» que não se parte (com o contexto «10 min »)",
+  "antigo": "10 min ",
+  "novo": "10 min ",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 58 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "tarefas/m9-u1/index.html",
+  "local": "tarefas/m9-u1: «60 minutos» que não se parte",
+  "antigo": "60 minutos",
+  "novo": "60 minutos",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 58 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "tarefas/m9-u1/index.html",
+  "local": "tarefas/m9-u1: «90 min» que não se parte (com o contexto «90 min<»)",
+  "antigo": "90 min<",
+  "novo": "90 min<",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 58 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "tarefas/m9-u1/index.html",
+  "local": "tarefas/m9-u1: «10 minutos» que não se parte",
+  "antigo": "10 minutos",
+  "novo": "10 minutos",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 58 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "tarefas/m9-u1/index.html",
+  "local": "tarefas/m9-u1: «capítulo I» que não se parte",
+  "antigo": "capítulo I",
+  "novo": "capítulo I",
+  "ocorrencias": 2,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 58 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "tarefas/m9-u1/index.html",
+  "local": "tarefas/m9-u1: «capítulo V» que não se parte",
+  "antigo": "capítulo V",
+  "novo": "capítulo V",
+  "ocorrencias": 2,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 58 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "tarefas/m9-u2/index.html",
+  "local": "tarefas/m9-u2: «durante 90 minutos, com entrega»",
+  "antigo": "durante 90 minutos, com entrega",
+  "novo": "durante 90 minutos, com entrega",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 59 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla). A meta descrição muda com «nao_partir» (o gerador prende os três números do molde, como do M1 ao M8); a proposta não a lista porque não se vê."
+ },
+ {
+  "ficheiro": "tarefas/m9-u2/index.html",
+  "local": "tarefas/m9-u2: «10 min» que não se parte (com o contexto «10 min »)",
+  "antigo": "10 min ",
+  "novo": "10 min ",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 59 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "tarefas/m9-u2/index.html",
+  "local": "tarefas/m9-u2: «60 minutos» que não se parte",
+  "antigo": "60 minutos",
+  "novo": "60 minutos",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 59 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "tarefas/m9-u2/index.html",
+  "local": "tarefas/m9-u2: «90 min» que não se parte (com o contexto «90 min<»)",
+  "antigo": "90 min<",
+  "novo": "90 min<",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 59 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "tarefas/m9-u2/index.html",
+  "local": "tarefas/m9-u2: «10 minutos» que não se parte",
+  "antigo": "10 minutos",
+  "novo": "10 minutos",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: decisão 152 (cuidado em todas as lições), varredura do M9, achado 59 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ }
+]

@@ -175,7 +175,8 @@ class CreditosIPt1(unittest.TestCase):
                             # 11/11/2026 (fusão do main 4bf4a053 no pedido #191): a revisão dos enunciados das tarefas (tarefas_claras_20261110, #192) fica entre a decisão 152 no M6, que continua a mais recente e se desfaz primeiro, e a decisão 152 no M5.
                             # 11/11/2026: a decisão 152 no M7 (cuidado_m7_20261111: tabelas onde há itens paralelos e espaços que não quebram nas lições e páginas do M7, incluindo o índice, o guia, o mapa e o portefólio do módulo, as páginas «Ler a fundo», «Olhar» e «Pensar devagar», e nas tarefas, nos aquecimentos e na grelha das suas unidades) passa a camada mais recente, por cima da decisão 152 no M6; desfaz-se primeiro, com a mesma exigência.
                             # 12/11/2026: a decisão 152 no M8 (cuidado_m8_20261112: tabelas onde há itens paralelos e espaços que não quebram nas lições e páginas do M8, incluindo o índice, o guia, o mapa e o portefólio do módulo, as atividades de gramática e de escrita e as tarefas das suas unidades) passa a camada mais recente, por cima da decisão 152 no M7; desfaz-se primeiro, com a mesma exigência.
-                            '--desfazer-antes', 'tests/fixtures/cuidado-m8-edits-20261112.json', '--desfazer-antes', 'tests/fixtures/cuidado-m7-edits-20261111.json', '--desfazer-antes', 'tests/fixtures/cuidado-m6-edits-20261108.json', '--desfazer-antes', 'tests/fixtures/tarefas-claras-edits-20261110.json', '--desfazer-antes', 'tests/fixtures/cuidado-m5-edits-20261108.json', '--desfazer-antes', 'tests/fixtures/cuidado-m4-edits-20261108.json', '--desfazer-antes', 'tests/fixtures/cuidado-m3-edits-20261108.json', '--desfazer-antes', 'tests/fixtures/cuidado-m2-edits-20261108.json', '--desfazer-antes', 'tests/fixtures/cidade-cartaz-edits-20261108.json'], cwd=ROOT, capture_output=True, text=True,
+                            # 12/11/2026: a decisão 152 no M9 (cuidado_m9_20261112: tabelas onde há itens paralelos e espaços que não quebram nas lições e páginas do M9, incluindo o índice, o guia, o mapa e o portefólio do módulo, as páginas «Ler a fundo» e «Pensar devagar», as atividades e as tarefas das suas unidades) passa a camada mais recente, por cima da decisão 152 no M8; desfaz-se primeiro, com a mesma exigência.
+                            '--desfazer-antes', 'tests/fixtures/cuidado-m9-edits-20261112.json', '--desfazer-antes', 'tests/fixtures/cuidado-m8-edits-20261112.json', '--desfazer-antes', 'tests/fixtures/cuidado-m7-edits-20261111.json', '--desfazer-antes', 'tests/fixtures/cuidado-m6-edits-20261108.json', '--desfazer-antes', 'tests/fixtures/tarefas-claras-edits-20261110.json', '--desfazer-antes', 'tests/fixtures/cuidado-m5-edits-20261108.json', '--desfazer-antes', 'tests/fixtures/cuidado-m4-edits-20261108.json', '--desfazer-antes', 'tests/fixtures/cuidado-m3-edits-20261108.json', '--desfazer-antes', 'tests/fixtures/cuidado-m2-edits-20261108.json', '--desfazer-antes', 'tests/fixtures/cidade-cartaz-edits-20261108.json'], cwd=ROOT, capture_output=True, text=True,
                            encoding='utf-8')
         self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
         # 08/11/2026: decisão 162 do docente (revisão do pt-1): mais uma troca (o rótulo da fotografia do portal), 26 em vez de 25.
@@ -225,18 +226,20 @@ class CreditosIPt1(unittest.TestCase):
         # 08/11/2026: por cima da decisão 152 no M5 fica a decisão 152 no M6 (cuidado_m6_20261108): a ordem ganha mais uma posição, com a mesma exigência.
         # 11/11/2026: por cima da decisão 152 no M6 fica a decisão 152 no M7 (cuidado_m7_20261111): a ordem ganha mais uma posição, com a mesma exigência.
         # 12/11/2026: por cima da decisão 152 no M7 fica a decisão 152 no M8 (cuidado_m8_20261112): a ordem ganha mais uma posição, com a mesma exigência.
-        self.assertEqual(verificar_camadas.LAYERS[0], ('cuidado_m8_20261112', 'cuidado-m8-edits-20261112'))
-        self.assertEqual(verificar_camadas.LAYERS[1], ('cuidado_m7_20261111', 'cuidado-m7-edits-20261111'))
-        self.assertEqual(verificar_camadas.LAYERS[2], ('cuidado_m6_20261108', 'cuidado-m6-edits-20261108'))
+        # 12/11/2026: por cima da decisão 152 no M8 fica a decisão 152 no M9 (cuidado_m9_20261112): a ordem ganha mais uma posição, com a mesma exigência.
+        self.assertEqual(verificar_camadas.LAYERS[0], ('cuidado_m9_20261112', 'cuidado-m9-edits-20261112'))
+        self.assertEqual(verificar_camadas.LAYERS[1], ('cuidado_m8_20261112', 'cuidado-m8-edits-20261112'))
+        self.assertEqual(verificar_camadas.LAYERS[2], ('cuidado_m7_20261111', 'cuidado-m7-edits-20261111'))
+        self.assertEqual(verificar_camadas.LAYERS[3], ('cuidado_m6_20261108', 'cuidado-m6-edits-20261108'))
         # 11/11/2026 (fusão do main 4bf4a053 no pedido #191): logo abaixo da decisão 152 no M6 fica a revisão dos enunciados das tarefas (tarefas_claras_20261110, #192), por cima da decisão 152 no M5; as posições seguintes descem uma.
-        self.assertEqual(verificar_camadas.LAYERS[3], ('tarefas_claras_20261110', 'tarefas-claras-edits-20261110'))
-        self.assertEqual(verificar_camadas.LAYERS[4], ('cuidado_m5_20261108', 'cuidado-m5-edits-20261108'))
-        self.assertEqual(verificar_camadas.LAYERS[5], ('cuidado_m4_20261108', 'cuidado-m4-edits-20261108'))
-        self.assertEqual(verificar_camadas.LAYERS[6], ('cuidado_m3_20261108', 'cuidado-m3-edits-20261108'))
-        self.assertEqual(verificar_camadas.LAYERS[7], ('cuidado_m2_20261108', 'cuidado-m2-edits-20261108'))
-        self.assertEqual(verificar_camadas.LAYERS[8], ('cidade_cartaz_20261108', 'cidade-cartaz-edits-20261108'))
-        self.assertEqual(verificar_camadas.LAYERS[9], ('creditos_i_pt1_20261107', 'creditos-i-pt1-edits-20261107'))
-        self.assertEqual(verificar_camadas.LAYERS[10], ('cuidado_m1_20261106', 'cuidado-m1-edits-20261106'))
+        self.assertEqual(verificar_camadas.LAYERS[4], ('tarefas_claras_20261110', 'tarefas-claras-edits-20261110'))
+        self.assertEqual(verificar_camadas.LAYERS[5], ('cuidado_m5_20261108', 'cuidado-m5-edits-20261108'))
+        self.assertEqual(verificar_camadas.LAYERS[6], ('cuidado_m4_20261108', 'cuidado-m4-edits-20261108'))
+        self.assertEqual(verificar_camadas.LAYERS[7], ('cuidado_m3_20261108', 'cuidado-m3-edits-20261108'))
+        self.assertEqual(verificar_camadas.LAYERS[8], ('cuidado_m2_20261108', 'cuidado-m2-edits-20261108'))
+        self.assertEqual(verificar_camadas.LAYERS[9], ('cidade_cartaz_20261108', 'cidade-cartaz-edits-20261108'))
+        self.assertEqual(verificar_camadas.LAYERS[10], ('creditos_i_pt1_20261107', 'creditos-i-pt1-edits-20261107'))
+        self.assertEqual(verificar_camadas.LAYERS[11], ('cuidado_m1_20261106', 'cuidado-m1-edits-20261106'))
         auditoria = ler('tests/auditoria_20261028.py')
         corpo = auditoria[auditoria.index('def undo_cuidado_m1_0611'):]
         self.assertLess(corpo.index('undo_creditos_i_pt1_0711(path, text)'), corpo.index('_CUIDADO_M1_0611.get('))
@@ -261,6 +264,8 @@ class CreditosIPt1(unittest.TestCase):
         self.assertLess(sala.index('cuidado-m7-edits-20261111.json'), sala.index('cuidado-m6-edits-20261108.json'))
         # 12/11/2026: e, antes da do M7, a decisão 152 no M8, agora a mais recente.
         self.assertLess(sala.index('cuidado-m8-edits-20261112.json'), sala.index('cuidado-m7-edits-20261111.json'))
+        # 12/11/2026: e, antes da do M8, a decisão 152 no M9, agora a mais recente.
+        self.assertLess(sala.index('cuidado-m9-edits-20261112.json'), sala.index('cuidado-m8-edits-20261112.json'))
         # Em cada cadeia dos workflows, esta camada desfaz-se primeiro, logo a seguir a --verificar.
         # 08/11/2026: logo a seguir à camada do cartaz «Ler a cidade», que se desfaz primeiro, logo a seguir a --verificar.
         cadeias = 0
@@ -277,7 +282,8 @@ class CreditosIPt1(unittest.TestCase):
                 # 11/11/2026 (fusão do main 4bf4a053 no pedido #191): a revisão dos enunciados das tarefas (tarefas_claras_20261110, #192) fica entre a decisão 152 no M6, que continua a mais recente e se desfaz primeiro, e a decisão 152 no M5.
                 # 11/11/2026: e, antes da do M6, a decisão 152 no M7 (cuidado_m7_20261111), agora a mais recente, sem nada pelo meio.
                 # 12/11/2026: e, antes da do M7, a decisão 152 no M8 (cuidado_m8_20261112), agora a mais recente, sem nada pelo meio.
-                self.assertIn('--verificar --desfazer-antes tests/fixtures/cuidado-m8-edits-20261112.json --desfazer-antes tests/fixtures/cuidado-m7-edits-20261111.json --desfazer-antes tests/fixtures/cuidado-m6-edits-20261108.json --desfazer-antes tests/fixtures/tarefas-claras-edits-20261110.json --desfazer-antes tests/fixtures/cuidado-m5-edits-20261108.json '
+                # 12/11/2026: e, antes da do M8, a decisão 152 no M9 (cuidado_m9_20261112), agora a mais recente, sem nada pelo meio.
+                self.assertIn('--verificar --desfazer-antes tests/fixtures/cuidado-m9-edits-20261112.json --desfazer-antes tests/fixtures/cuidado-m8-edits-20261112.json --desfazer-antes tests/fixtures/cuidado-m7-edits-20261111.json --desfazer-antes tests/fixtures/cuidado-m6-edits-20261108.json --desfazer-antes tests/fixtures/tarefas-claras-edits-20261110.json --desfazer-antes tests/fixtures/cuidado-m5-edits-20261108.json '
                               '--desfazer-antes tests/fixtures/cuidado-m4-edits-20261108.json '
                               '--desfazer-antes tests/fixtures/cuidado-m3-edits-20261108.json '
                               '--desfazer-antes tests/fixtures/cuidado-m2-edits-20261108.json '
@@ -296,7 +302,8 @@ class CreditosIPt1(unittest.TestCase):
                       # 11/11/2026 (fusão do main 4bf4a053 no pedido #191): a revisão dos enunciados das tarefas (tarefas_claras_20261110, #192) fica entre a decisão 152 no M6, que continua a mais recente e se desfaz primeiro, e a decisão 152 no M5.
                       # 11/11/2026: e, antes da do M6, a decisão 152 no M7 (cuidado_m7_20261111), agora a mais recente, sem nada pelo meio.
                       # 12/11/2026: e, antes da do M7, a decisão 152 no M8 (cuidado_m8_20261112), agora a mais recente, sem nada pelo meio.
-                      '--desfazer-antes tests/fixtures/cuidado-m8-edits-20261112.json --desfazer-antes tests/fixtures/cuidado-m7-edits-20261111.json --desfazer-antes tests/fixtures/cuidado-m6-edits-20261108.json --desfazer-antes tests/fixtures/tarefas-claras-edits-20261110.json '
+                      # 12/11/2026: e, antes da do M8, a decisão 152 no M9 (cuidado_m9_20261112), agora a mais recente, sem nada pelo meio.
+                      '--desfazer-antes tests/fixtures/cuidado-m9-edits-20261112.json --desfazer-antes tests/fixtures/cuidado-m8-edits-20261112.json --desfazer-antes tests/fixtures/cuidado-m7-edits-20261111.json --desfazer-antes tests/fixtures/cuidado-m6-edits-20261108.json --desfazer-antes tests/fixtures/tarefas-claras-edits-20261110.json '
                       '--desfazer-antes tests/fixtures/cuidado-m5-edits-20261108.json '
                       '--desfazer-antes tests/fixtures/cuidado-m4-edits-20261108.json '
                       '--desfazer-antes tests/fixtures/cuidado-m3-edits-20261108.json '
@@ -332,7 +339,8 @@ class CreditosIPt1(unittest.TestCase):
         # 08/11/2026: e, antes da do M5, a decisão 152 no M6 (cuidado_m6_20261108), agora a mais recente, sem nada pelo meio.
         # 11/11/2026: a decisão 152 no M7 (cuidado_m7_20261111: tabelas onde há itens paralelos e espaços que não quebram nas lições e páginas do M7, incluindo o índice, o guia, o mapa e o portefólio do módulo, as páginas «Ler a fundo», «Olhar» e «Pensar devagar», e nas tarefas, nos aquecimentos e na grelha das suas unidades) passa a camada mais recente, por cima da decisão 152 no M6; desfaz-se primeiro, com a mesma exigência.
         # 12/11/2026: a decisão 152 no M8 (cuidado_m8_20261112: tabelas onde há itens paralelos e espaços que não quebram nas lições e páginas do M8, incluindo o índice, o guia, o mapa e o portefólio do módulo, as atividades de gramática e de escrita e as tarefas das suas unidades) passa a camada mais recente, por cima da decisão 152 no M7; desfaz-se primeiro, com a mesma exigência.
-        self.assertIn("(ROOT/'tests/fixtures/cuidado-m8-edits-20261112.json',ROOT/'tests/fixtures/cuidado-m7-edits-20261111.json',ROOT/'tests/fixtures/cuidado-m6-edits-20261108.json',ROOT/'tests/fixtures/cuidado-m5-edits-20261108.json',ROOT/'tests/fixtures/cuidado-m4-edits-20261108.json',ROOT/'tests/fixtures/cuidado-m3-edits-20261108.json',ROOT/'tests/fixtures/cuidado-m2-edits-20261108.json',ROOT/'tests/fixtures/cidade-cartaz-edits-20261108.json',"
+        # 12/11/2026: e, antes da do M8, a decisão 152 no M9 (cuidado_m9_20261112), agora a mais recente, sem nada pelo meio.
+        self.assertIn("(ROOT/'tests/fixtures/cuidado-m9-edits-20261112.json',ROOT/'tests/fixtures/cuidado-m8-edits-20261112.json',ROOT/'tests/fixtures/cuidado-m7-edits-20261111.json',ROOT/'tests/fixtures/cuidado-m6-edits-20261108.json',ROOT/'tests/fixtures/cuidado-m5-edits-20261108.json',ROOT/'tests/fixtures/cuidado-m4-edits-20261108.json',ROOT/'tests/fixtures/cuidado-m3-edits-20261108.json',ROOT/'tests/fixtures/cuidado-m2-edits-20261108.json',ROOT/'tests/fixtures/cidade-cartaz-edits-20261108.json',"
                       "ROOT/'tests/fixtures/creditos-i-pt1-edits-20261107.json',"
                       "ROOT/'tests/fixtures/cuidado-m1-edits-20261106.json',", ler('tests/test_task_routes_closure.py'))
         # Os testes de navegador que montam o «antes» dos índices desfazem-na primeiro.
@@ -383,7 +391,8 @@ class CreditosIPt1(unittest.TestCase):
                       # 11/11/2026 (fusão do main 4bf4a053 no pedido #191): a revisão dos enunciados das tarefas (tarefas_claras_20261110, #192) fica entre a decisão 152 no M6, que continua a mais recente e se desfaz primeiro, e a decisão 152 no M5.
                       # 11/11/2026: e, antes da do M6, a decisão 152 no M7 (cuidado_m7_20261111), agora a mais recente, sem nada pelo meio.
                       # 12/11/2026: e, antes da do M7, a decisão 152 no M8 (cuidado_m8_20261112), agora a mais recente, sem nada pelo meio.
-                      '--desfazer-antes tests/fixtures/cuidado-m8-edits-20261112.json --desfazer-antes tests/fixtures/cuidado-m7-edits-20261111.json --desfazer-antes tests/fixtures/cuidado-m6-edits-20261108.json --desfazer-antes tests/fixtures/tarefas-claras-edits-20261110.json '
+                      # 12/11/2026: e, antes da do M8, a decisão 152 no M9 (cuidado_m9_20261112), agora a mais recente, sem nada pelo meio.
+                      '--desfazer-antes tests/fixtures/cuidado-m9-edits-20261112.json --desfazer-antes tests/fixtures/cuidado-m8-edits-20261112.json --desfazer-antes tests/fixtures/cuidado-m7-edits-20261111.json --desfazer-antes tests/fixtures/cuidado-m6-edits-20261108.json --desfazer-antes tests/fixtures/tarefas-claras-edits-20261110.json '
                       '--desfazer-antes tests/fixtures/cuidado-m5-edits-20261108.json '
                       '--desfazer-antes tests/fixtures/cuidado-m4-edits-20261108.json '
                       '--desfazer-antes tests/fixtures/cuidado-m3-edits-20261108.json '

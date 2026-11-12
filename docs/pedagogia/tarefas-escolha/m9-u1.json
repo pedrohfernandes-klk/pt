@@ -2,9 +2,9 @@
  "aquecer": {
   "cartoes": "aquecimento/",
   "minutos": 10,
-  "texto": "Dez minutos com casos inventados para treinar. Depois, lês o enunciado e começam os 60 minutos de produção.",
+  "texto": "Dez minutos com casos inventados para treinar. Depois, lês o enunciado e começam os 60 minutos de produção.",
   "ligacao": "Abrir o aquecimento em cartões",
-  "ligacao_enunciado": "Antes de começar: aquecer em cartões, 10 minutos"
+  "ligacao_enunciado": "Antes de começar: aquecer em cartões, 10 minutos"
  },
  "dossie_titulo": "Textos e condições de consulta",
  "opcional": {
@@ -34,6 +34,7 @@
  "slug": "m9-u1",
  "titulo": "O poder em cena",
  "unidade": 1,
+ "nao_partir": true,
  "lead": "Individual, à mão e com consulta. Texto: <strong>200 a 240 palavras</strong>; escreve o total no fim. O plano e as duas linhas finais ficam fora da contagem.",
  "nucleo": [
   "Regista a opção escolhida, a tua opinião inicial e dois pormenores do episódio. Indica onde se encontram.",
@@ -43,12 +44,12 @@
   {
    "letra": "A",
    "nome": "O rei e a miniatura",
-   "texto": "No capítulo I, como transforma a descrição da miniatura da basílica de São Pedro a imagem do rei? Aprecia o episódio, distinguindo os gestos do rei da forma como o narrador os conta."
+   "texto": "No capítulo I, como transforma a descrição da miniatura da basílica de São Pedro a imagem do rei? Aprecia o episódio, distinguindo os gestos do rei da forma como o narrador os conta."
   },
   {
    "letra": "B",
    "nome": "A cerimónia e o olhar",
-   "texto": "No capítulo V, como transforma o narrador a imagem do auto de fé? Aprecia o episódio, distinguindo o olhar da assistência da crítica construída pela narração."
+   "texto": "No capítulo V, como transforma o narrador a imagem do auto de fé? Aprecia o episódio, distinguindo o olhar da assistência da crítica construída pela narração."
   }
  ],
  "apoios": [
@@ -76,12 +77,12 @@
    "fonte": "Fundação José Saramago, referência editorial"
   },
   {
-   "facto": "Tema A: capítulo I, sequência em que o rei monta a miniatura da basílica de São Pedro. Lê o capítulo completo antes da aula e marca dois pormenores; esta referência não fornece a interpretação.",
+   "facto": "Tema A: capítulo I, sequência em que o rei monta a miniatura da basílica de São Pedro. Lê o capítulo completo antes da aula e marca dois pormenores; esta referência não fornece a interpretação.",
    "href": "../../m9/guia-da-tarefa-m9/",
    "fonte": "Guia, preparação da unidade 1"
   },
   {
-   "facto": "Tema B: capítulo V, primeiro auto de fé do romance. Lê o capítulo completo antes da aula e marca dois pormenores; não o confundas com o episódio final.",
+   "facto": "Tema B: capítulo V, primeiro auto de fé do romance. Lê o capítulo completo antes da aula e marca dois pormenores; não o confundas com o episódio final.",
    "href": "../../m9/guia-da-tarefa-m9/",
    "fonte": "Guia, preparação da unidade 1"
   },

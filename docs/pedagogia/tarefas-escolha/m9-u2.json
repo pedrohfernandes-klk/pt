@@ -2,9 +2,9 @@
  "aquecer": {
   "cartoes": "aquecimento/",
   "minutos": 10,
-  "texto": "Dez minutos com casos inventados para treinar. Depois, lês o enunciado e começam os 60 minutos de produção.",
+  "texto": "Dez minutos com casos inventados para treinar. Depois, lês o enunciado e começam os 60 minutos de produção.",
   "ligacao": "Abrir o aquecimento em cartões",
-  "ligacao_enunciado": "Antes de começar: aquecer em cartões, 10 minutos"
+  "ligacao_enunciado": "Antes de começar: aquecer em cartões, 10 minutos"
  },
  "dossie_titulo": "Textos e condições de consulta",
  "opcional": {
@@ -34,6 +34,7 @@
  "slug": "m9-u2",
  "titulo": "O que vale preservar",
  "unidade": 2,
+ "nao_partir": true,
  "lead": "Individual, à mão e com consulta. Texto: <strong>220 a 260 palavras</strong>; escreve o total no fim. O plano e as duas linhas finais ficam fora da contagem.",
  "nucleo": [
   "Regista a opção e a decisão concreta que propões. Indica duas situações de <i>Memorial do Convento</i> que a apoiem e onde se encontram.",

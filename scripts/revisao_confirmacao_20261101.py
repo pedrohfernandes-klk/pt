@@ -113,7 +113,8 @@ RELEITURAS = {
   10: 'Escolhes o efeito descrito em vez da palavra que o apresenta como hipótese. Relê a frase criada e procura o que impede de a ler como conclusão automática sobre o rei.',
   12: 'Exiges que a sátira documente os gestos reais da pessoa histórica. Relê, em «O essencial», a frase: «Um romance histórico não é uma transcrição neutra do passado».',
   14: 'Atribuis a mesma pergunta a usos diferentes do objeto. Relê as cenas A e B de «Muda o enquadramento»: estudar uma estrutura não é o mesmo que receber louvores por encaixar uma peça.',
-  16: 'Confundes a análise de uma representação literária com a comprovação documental de um facto. Relê, em «O essencial», que José Saramago constrói uma representação ficcional do reinado de D. João V.',
+  # 12/11/2026: decisão 152 no M9 (achados 31 e 45, camada cuidado_m9_20261112): o nome do rei com numeral não se parte (U+00A0), na lição e nas notas do docente, como nas páginas.
+  16: 'Confundes a análise de uma representação literária com a comprovação documental de um facto. Relê, em «O essencial», que José Saramago constrói uma representação ficcional do reinado de D.\xa0João\xa0V.',
   17: 'Pões o limite da analogia antes da hipótese que ele qualifica. Relê o modelo de «Comparar sem igualar»: a escala reduzida interroga a grandeza encenada e o confronto com a obra real vem depois.'},
  'm9-f15': {
   1: 'Tomas um gesto observado como acesso direto à intenção de quem o faz. Relê, em «Um rei em miniatura», o critério de «Muda o enquadramento»: o efeito depende do enquadramento e das relações, não apenas do objeto.',
