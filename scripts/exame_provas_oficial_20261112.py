@@ -32,7 +32,11 @@ O que muda (cada mudança está escrita em EDICOES, sobre os dados; as páginas 
 5. «conectores» (linha 8): onde lemos a grelha do parâmetro C do Grupo III, fica a formulação do critério, citada: «mecanismos de
    articulação interfrásica» (critérios, p. 15, nas duas fases), sem a estreitar.
 6. «os tópicos são exemplos de formulações possíveis» (linha 9): os critérios pedem que se abordem os tópicos, «ou outros
-   igualmente relevantes» (em cada item); exemplos de formulações são «as expressões separadas por barras oblíquas» (p. 4).
+   igualmente relevantes» (em cada item); exemplos de formulações são «as expressões separadas por barras oblíquas», «à exceção
+   das utilizadas no interior de cada uma das transcrições» (p. 4): a exceção fica na frase, porque em cinco dos dez cartões os
+   tópicos trazem versos transcritos, com a barra a marcar a mudança de verso (revisão de 12/11/2026).
+   Na secção, da mesma família (revisão de 12/11/2026): «as oito do programa atual» sai de «O que vem a seguir»; fica o plano
+   do sítio, sem a contagem das provas nem «do programa atual», que nenhum dos quatro PDF apoia.
 7. Referências e números que não se partem (achado 28 da varredura do cuidado, que a camada cuidado_exame_20261112 deixou para um
    pedido próprio, e a moldura das lições): U+00A0 no espaço que os prende e U+2060 a seguir ao hífen da sigla, na secção, no
    título <h1>, na cabeça, nas migalhas e nas ligações do menu, no crédito, no fim da lição, nas ligações da imagem com direitos
@@ -100,7 +104,10 @@ ACHADOS = {
     'articulacao': ('Camada oficial, secção 5, linha 8: «conectores» estreitava o critério; fica a formulação do parâmetro C, citada: '
                     '«mecanismos de articulação interfrásica» (critérios, p. 15).'),
     'topicos': ('Camada oficial, secção 5, linha 9: os tópicos devem ser abordados, «ou outros igualmente relevantes» (em cada item); '
-                'exemplos de formulações são «as expressões separadas por barras oblíquas» (critérios, p. 4).'),
+                'exemplos de formulações são «as expressões separadas por barras oblíquas», «à exceção das utilizadas no interior de '
+                'cada uma das transcrições» (critérios, p. 4).'),
+    'plano': ('Da família da linha 3 da secção 5 da camada oficial: «as oito do programa atual» não tem apoio no repositório nem nos '
+              'documentos oficiais (só há as duas provas de 2026); em «O que vem a seguir» fica o plano do sítio, sem a contagem.'),
     'presas': ('Achado 28 da varredura do cuidado (decisão 152) e moldura das provas em cartões: referências e números que não se '
                'partem entre linhas (U+00A0; U+2060 a seguir ao hífen da sigla). Fora de atributos e do <title>.'),
     'chaves': ('As chaves novas dos dados com que scripts/provas/gerar.py muda de comportamento (sem elas, as páginas saem como '
@@ -136,8 +143,10 @@ _AUTORIA_DEPOIS = j(' "autoria": {\n'
                     ' "nao_partir": true,\n')
 _TOPICOS_ANTES = 'Os critérios não trazem uma resposta modelo: os tópicos são exemplos de formulações possíveis.</p>'
 _TOPICOS_DEPOIS = ('Os critérios não trazem uma resposta modelo: indicam tópicos a abordar, «ou outros igualmente relevantes». Dentro '
-                   'dos tópicos, «as expressões separadas por barras oblíquas» são «exemplos de formulações possíveis, apresentadas em '
-                   'alternativa» (p. 4 dos critérios).</p>')
+                   'dos tópicos, «as expressões separadas por barras oblíquas», «à exceção das utilizadas no interior de cada uma das '
+                   'transcrições», são «exemplos de formulações possíveis, apresentadas em alternativa» (p. 4 dos critérios).</p>')
+_PLANO_ANTES = 'Primeiro as provas mais recentes, as oito do programa atual, sempre com os critérios de classificação. '
+_PLANO_DEPOIS = 'Primeiro as provas mais recentes, sempre com os critérios de classificação. '
 _GIII_COMUM = ('<p>Nas duas provas de 2026, o Grupo{N}III vale 44{N}pontos, conta sempre para a classificação e pede um texto «bem '
                'estruturado» de 200{N}a{N}350{N}palavras, classificado nos parâmetros{N}A, B e{N}C e na correção linguística. ')
 EDICOES = [
@@ -199,6 +208,8 @@ EDICOES = [
     ([_PROVA[0]], 'A imagem está no PDF da prova, p. 13: cada cartão', j('A imagem está no PDF da prova, p.{N}13: cada cartão'), 1, 'presas'),
     ([SECCAO_DADOS], ' "seguir": "', ' "_nao_partir": "12/11/2026: com true, as referências do que é da secção inteira («Prova 639, 12.º ano» e '
      '«O que vem a seguir») levam U+00A0, para não se partirem entre linhas.",\n "nao_partir": true,\n "seguir": "', 1, 'chaves'),
+    # da família da linha 3: o plano do sítio, sem a contagem das provas nem «do programa atual» (revisão de 12/11/2026)
+    ([SECCAO_DADOS], _PLANO_ANTES, _PLANO_DEPOIS, 1, 'plano'),
 ]
 
 # Títulos e rótulos nossos dos cartões, e o «aprendes» de cada grupo: a palavra e o número (ou a letra, ou o romano) que a segue.
@@ -433,6 +444,11 @@ def sementes(rel, a):
         if len(ms) != (2 if rel == SECCAO else 1):
             raise SystemExit(f'{rel}: o crédito não está onde se esperava')
         out += [(m.start(), m.end(), 'autoria ligacoes' + ('' if rel == SECCAO else ' marca')) for m in ms]
+        if rel == SECCAO:
+            # A frase do plano («O que vem a seguir») sai dos dados da secção para a página tal como está.
+            if a.count(_PLANO_ANTES) != 1:
+                raise SystemExit(f'{rel}: a frase do plano não está onde se esperava')
+            out.append((a.index(_PLANO_ANTES), a.index(_PLANO_ANTES) + len(_PLANO_ANTES), 'plano'))
     return out
 
 

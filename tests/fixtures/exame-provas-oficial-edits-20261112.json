@@ -1,10 +1,10 @@
 {
  "base_commit": "41c77a868c3291cfafb6ac754a50565f01fa78a1",
- "_nota": "12/11/2026: as «Provas em cartões» do Exame (exame/provas/: a secção e as seis lições das duas provas de 2026) e os dados de onde saem (scripts/provas/dados/). Ligações do enunciado, dos critérios e da página da imagem para eduqa.pt (decisão do utilizador de 12/11/2026); camada oficial, secção 5, linhas 1, 2, 3, 8 e 9 (sai «IAVE» da autoria, sai a nota da marca de água, as frases sobre «as oito provas» ficam reduzidas ao que as duas provas de 2026 mostram, «conectores» dá lugar à formulação do critério, «mecanismos de articulação interfrásica», e os tópicos deixam de ser «exemplos de formulações possíveis»); achado 28 da varredura do cuidado e moldura das lições (referências e números que não se partem: U+00A0 e, a seguir ao hífen da sigla, U+2060; nunca em atributos nem no <title>). Ficam como estavam, de propósito, os 20 rótulos «Item N da prova…» (pelos quais os testes, a medição das opções, a camada de baixo e o motor reconhecem o item oficial), as indicações de fonte e as referências dos textos como a prova as indica, o texto oficial e as citações entre «», versao_licao e as versões de cache. As transcrições (tests/fixtures/prova-639-2026-*.json) não mudam. Gerado por scripts/exame_provas_oficial_20261112.py (as mudanças escrevem-se nos dados; as páginas saem de scripts/provas/gerar.py, que só muda de comportamento com as chaves novas dos dados) e aplicado por scripts/aplicar_trocas.py: não se edita à mão. Camada mais recente, por cima da ligação «Treinos» na página principal do Exame (exame_ligacao_treinos_20261112) e da decisão 152 no Exame (cuidado_exame_20261112): desfaz-se antes delas.",
+ "_nota": "12/11/2026: as «Provas em cartões» do Exame (exame/provas/: a secção e as seis lições das duas provas de 2026) e os dados de onde saem (scripts/provas/dados/). Ligações do enunciado, dos critérios e da página da imagem para eduqa.pt (decisão do utilizador de 12/11/2026); camada oficial, secção 5, linhas 1, 2, 3, 8 e 9 (sai «IAVE» da autoria, sai a nota da marca de água, as frases sobre «as oito provas» ficam reduzidas ao que as duas provas de 2026 mostram, «conectores» dá lugar à formulação do critério, «mecanismos de articulação interfrásica», e os tópicos deixam de ser «exemplos de formulações possíveis»: são-no «as expressões separadas por barras oblíquas», «à exceção das utilizadas no interior de cada uma das transcrições»); da família da linha 3, em «O que vem a seguir» da secção sai «as oito do programa atual» e fica o plano do sítio; achado 28 da varredura do cuidado e moldura das lições (referências e números que não se partem: U+00A0 e, a seguir ao hífen da sigla, U+2060; nunca em atributos nem no <title>). Ficam como estavam, de propósito, os 20 rótulos «Item N da prova…» (pelos quais os testes, a medição das opções, a camada de baixo e o motor reconhecem o item oficial), as indicações de fonte e as referências dos textos como a prova as indica, o texto oficial e as citações entre «», versao_licao e as versões de cache. As transcrições (tests/fixtures/prova-639-2026-*.json) não mudam. Gerado por scripts/exame_provas_oficial_20261112.py (as mudanças escrevem-se nos dados; as páginas saem de scripts/provas/gerar.py, que só muda de comportamento com as chaves novas dos dados) e aplicado por scripts/aplicar_trocas.py: não se edita à mão. Camada mais recente, por cima da ligação «Treinos» na página principal do Exame (exame_ligacao_treinos_20261112) e da decisão 152 no Exame (cuidado_exame_20261112): desfaz-se antes delas.",
  "files": {
   "scripts/provas/dados/2026-1f/grupo-i.json": {
    "base_sha256_lf": "2c1e11560be88f43b1b3ef4254ba095d63c672d3193164384111b81d61596d32",
-   "after_sha256_lf": "d59bd4b7b3b8913340583656597cba0f7ba8d184dab099b54be901f6190f9ad8",
+   "after_sha256_lf": "8288c30f0f020c4713ed54b7a6b66e1f818e9b330708a4a83e2f061dfd2c93fe",
    "edits": [
     {
      "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo I (dados): «do Grupo I (explicitar»",
@@ -63,7 +63,7 @@
     {
      "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo I (dados): «1 (PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: indicam tó…»",
      "old": " 1 (IAVE; PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: os tópicos são exemplos de formulações possíveis.</p>\"",
-     "new": " 1 (PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: indicam tópicos a abordar, «ou outros igualmente relevantes». Dentro dos tópicos, «as expressões separadas por barras oblíquas» são «exemplos de formulações possíveis, apresentadas em alternativa» (p. 4 dos critérios).</p>\"",
+     "new": " 1 (PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: indicam tópicos a abordar, «ou outros igualmente relevantes». Dentro dos tópicos, «as expressões separadas por barras oblíquas», «à exceção das utilizadas no interior de cada uma das transcrições», são «exemplos de formulações possíveis, apresentadas em alternativa» (p. 4 dos critérios).</p>\"",
      "occurrences": 1
     },
     {
@@ -105,7 +105,7 @@
     {
      "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo I (dados): «2 (PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: indicam tó…»",
      "old": " 2 (IAVE; PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: os tópicos são exemplos de formulações possíveis.</p>\"",
-     "new": " 2 (PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: indicam tópicos a abordar, «ou outros igualmente relevantes». Dentro dos tópicos, «as expressões separadas por barras oblíquas» são «exemplos de formulações possíveis, apresentadas em alternativa» (p. 4 dos critérios).</p>\"",
+     "new": " 2 (PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: indicam tópicos a abordar, «ou outros igualmente relevantes». Dentro dos tópicos, «as expressões separadas por barras oblíquas», «à exceção das utilizadas no interior de cada uma das transcrições», são «exemplos de formulações possíveis, apresentadas em alternativa» (p. 4 dos critérios).</p>\"",
      "occurrences": 1
     },
     {
@@ -153,7 +153,7 @@
     {
      "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo I (dados): «4 (PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: indicam tó…»",
      "old": " 4 (IAVE; PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: os tópicos são exemplos de formulações possíveis.</p>\"",
-     "new": " 4 (PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: indicam tópicos a abordar, «ou outros igualmente relevantes». Dentro dos tópicos, «as expressões separadas por barras oblíquas» são «exemplos de formulações possíveis, apresentadas em alternativa» (p. 4 dos critérios).</p>\"",
+     "new": " 4 (PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: indicam tópicos a abordar, «ou outros igualmente relevantes». Dentro dos tópicos, «as expressões separadas por barras oblíquas», «à exceção das utilizadas no interior de cada uma das transcrições», são «exemplos de formulações possíveis, apresentadas em alternativa» (p. 4 dos critérios).</p>\"",
      "occurrences": 1
     },
     {
@@ -171,7 +171,7 @@
     {
      "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo I (dados): «5 (PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: indicam tó…»",
      "old": " 5 (IAVE; PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: os tópicos são exemplos de formulações possíveis.</p>\"",
-     "new": " 5 (PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: indicam tópicos a abordar, «ou outros igualmente relevantes». Dentro dos tópicos, «as expressões separadas por barras oblíquas» são «exemplos de formulações possíveis, apresentadas em alternativa» (p. 4 dos critérios).</p>\"",
+     "new": " 5 (PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: indicam tópicos a abordar, «ou outros igualmente relevantes». Dentro dos tópicos, «as expressões separadas por barras oblíquas», «à exceção das utilizadas no interior de cada uma das transcrições», são «exemplos de formulações possíveis, apresentadas em alternativa» (p. 4 dos critérios).</p>\"",
      "occurrences": 1
     },
     {
@@ -213,7 +213,7 @@
     {
      "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo I (dados): «7 (PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: indicam tó…»",
      "old": " 7 (IAVE; PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: os tópicos são exemplos de formulações possíveis.</p><",
-     "new": " 7 (PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: indicam tópicos a abordar, «ou outros igualmente relevantes». Dentro dos tópicos, «as expressões separadas por barras oblíquas» são «exemplos de formulações possíveis, apresentadas em alternativa» (p. 4 dos critérios).</p><",
+     "new": " 7 (PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: indicam tópicos a abordar, «ou outros igualmente relevantes». Dentro dos tópicos, «as expressões separadas por barras oblíquas», «à exceção das utilizadas no interior de cada uma das transcrições», são «exemplos de formulações possíveis, apresentadas em alternativa» (p. 4 dos critérios).</p><",
      "occurrences": 1
     },
     {
@@ -394,7 +394,7 @@
   },
   "scripts/provas/dados/2026-2f/grupo-i.json": {
    "base_sha256_lf": "a7b56a70c984dfb1c2df29d632b06901034ed700d5dcf5f57cd32bbde086a3bd",
-   "after_sha256_lf": "4d1c9b79fc6ea22cc0c154d798268230bbae750c22fe8432ba6f9ef737539b8d",
+   "after_sha256_lf": "b4d997c2569541cb0c79b58059d62f7f7aa0303cd32305de64c32fc57f838d85",
    "edits": [
     {
      "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo I (dados): «do Grupo I (referir»",
@@ -441,7 +441,7 @@
     {
      "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo I (dados): «1 (PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: indicam tó…»",
      "old": " 1 (IAVE; PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: os tópicos são exemplos de formulações possíveis.</p>\"",
-     "new": " 1 (PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: indicam tópicos a abordar, «ou outros igualmente relevantes». Dentro dos tópicos, «as expressões separadas por barras oblíquas» são «exemplos de formulações possíveis, apresentadas em alternativa» (p. 4 dos critérios).</p>\"",
+     "new": " 1 (PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: indicam tópicos a abordar, «ou outros igualmente relevantes». Dentro dos tópicos, «as expressões separadas por barras oblíquas», «à exceção das utilizadas no interior de cada uma das transcrições», são «exemplos de formulações possíveis, apresentadas em alternativa» (p. 4 dos critérios).</p>\"",
      "occurrences": 1
     },
     {
@@ -465,7 +465,7 @@
     {
      "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo I (dados): «2 (PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: indicam tó…»",
      "old": " 2 (IAVE; PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: os tópicos são exemplos de formulações possíveis.</p>\"",
-     "new": " 2 (PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: indicam tópicos a abordar, «ou outros igualmente relevantes». Dentro dos tópicos, «as expressões separadas por barras oblíquas» são «exemplos de formulações possíveis, apresentadas em alternativa» (p. 4 dos critérios).</p>\"",
+     "new": " 2 (PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: indicam tópicos a abordar, «ou outros igualmente relevantes». Dentro dos tópicos, «as expressões separadas por barras oblíquas», «à exceção das utilizadas no interior de cada uma das transcrições», são «exemplos de formulações possíveis, apresentadas em alternativa» (p. 4 dos critérios).</p>\"",
      "occurrences": 1
     },
     {
@@ -501,7 +501,7 @@
     {
      "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo I (dados): «4 (PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: indicam tó…»",
      "old": " 4 (IAVE; PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: os tópicos são exemplos de formulações possíveis.</p>\"",
-     "new": " 4 (PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: indicam tópicos a abordar, «ou outros igualmente relevantes». Dentro dos tópicos, «as expressões separadas por barras oblíquas» são «exemplos de formulações possíveis, apresentadas em alternativa» (p. 4 dos critérios).</p>\"",
+     "new": " 4 (PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: indicam tópicos a abordar, «ou outros igualmente relevantes». Dentro dos tópicos, «as expressões separadas por barras oblíquas», «à exceção das utilizadas no interior de cada uma das transcrições», são «exemplos de formulações possíveis, apresentadas em alternativa» (p. 4 dos critérios).</p>\"",
      "occurrences": 1
     },
     {
@@ -519,7 +519,7 @@
     {
      "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo I (dados): «5 (PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: indicam tó…»",
      "old": " 5 (IAVE; PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: os tópicos são exemplos de formulações possíveis.</p>\"",
-     "new": " 5 (PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: indicam tópicos a abordar, «ou outros igualmente relevantes». Dentro dos tópicos, «as expressões separadas por barras oblíquas» são «exemplos de formulações possíveis, apresentadas em alternativa» (p. 4 dos critérios).</p>\"",
+     "new": " 5 (PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: indicam tópicos a abordar, «ou outros igualmente relevantes». Dentro dos tópicos, «as expressões separadas por barras oblíquas», «à exceção das utilizadas no interior de cada uma das transcrições», são «exemplos de formulações possíveis, apresentadas em alternativa» (p. 4 dos critérios).</p>\"",
      "occurrences": 1
     },
     {
@@ -561,7 +561,7 @@
     {
      "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo I (dados): «7 (PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: indicam tó…»",
      "old": " 7 (IAVE; PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: os tópicos são exemplos de formulações possíveis.</p><",
-     "new": " 7 (PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: indicam tópicos a abordar, «ou outros igualmente relevantes». Dentro dos tópicos, «as expressões separadas por barras oblíquas» são «exemplos de formulações possíveis, apresentadas em alternativa» (p. 4 dos critérios).</p><",
+     "new": " 7 (PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: indicam tópicos a abordar, «ou outros igualmente relevantes». Dentro dos tópicos, «as expressões separadas por barras oblíquas», «à exceção das utilizadas no interior de cada uma das transcrições», são «exemplos de formulações possíveis, apresentadas em alternativa» (p. 4 dos critérios).</p><",
      "occurrences": 1
     },
     {
@@ -850,19 +850,19 @@
   },
   "scripts/provas/dados/seccao.json": {
    "base_sha256_lf": "5aca6ad36890d1af96181416f509d089342aa8568c272b1a0d79cb1af3fa01ef",
-   "after_sha256_lf": "ba04dc822af0e8443aeb0a016bb1e4853183b7ce904bdd53ed74a6302647251e",
+   "after_sha256_lf": "06993895ebdbee33d1ce2b51cb9eb72c773194a7fc3651d5514a9d2aaff836af",
    "edits": [
     {
      "location": "Provas em cartões, os dados da secção (seccao.json): «\"_nao_partir\": \"12/11/2026: com true, as referências do que é da secção inteira («Prova…»",
-     "old": " \"seguir\": \"",
-     "new": " \"_nao_partir\": \"12/11/2026: com true, as referências do que é da secção inteira («Prova 639, 12.º ano» e «O que vem a seguir») levam U+00A0, para não se partirem entre linhas.\",\n \"nao_partir\": true,\n \"seguir\": \"",
+     "old": " \"seguir\": \"Primeiro as provas mais recentes, as oito do programa atual, sempre com os critérios de classificação. ",
+     "new": " \"_nao_partir\": \"12/11/2026: com true, as referências do que é da secção inteira («Prova 639, 12.º ano» e «O que vem a seguir») levam U+00A0, para não se partirem entre linhas.\",\n \"nao_partir\": true,\n \"seguir\": \"Primeiro as provas mais recentes, sempre com os critérios de classificação. ",
      "occurrences": 1
     }
    ]
   },
   "exame/provas/2026-1f/grupo-i/index.html": {
    "base_sha256_lf": "c5b95b8aff911d2b8ec89603c7f10fe92bce0de24184f23369f68c2f76578b51",
-   "after_sha256_lf": "0fd3f3d3cf7a4c9a178778d2399a6cd5c79af5764e2cbf184a6dfeeff43c09a9",
+   "after_sha256_lf": "03d7153214d61356ddad5529591b241842aad70e5830ca8141513c0c32af01b2",
    "edits": [
     {
      "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo I (lição): «Prova 639, 1.ª fase, 2026, Grupo I: Baltasar,»",
@@ -975,7 +975,7 @@
     {
      "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo I (lição): «1 (PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: indicam tó…»",
      "old": " 1 (IAVE; PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: os tópicos são exemplos de formulações possíveis.<\\/p>\"",
-     "new": " 1 (PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: indicam tópicos a abordar, «ou outros igualmente relevantes». Dentro dos tópicos, «as expressões separadas por barras oblíquas» são «exemplos de formulações possíveis, apresentadas em alternativa» (p. 4 dos critérios).<\\/p>\"",
+     "new": " 1 (PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: indicam tópicos a abordar, «ou outros igualmente relevantes». Dentro dos tópicos, «as expressões separadas por barras oblíquas», «à exceção das utilizadas no interior de cada uma das transcrições», são «exemplos de formulações possíveis, apresentadas em alternativa» (p. 4 dos critérios).<\\/p>\"",
      "occurrences": 1
     },
     {
@@ -1017,7 +1017,7 @@
     {
      "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo I (lição): «2 (PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: indicam tó…»",
      "old": " 2 (IAVE; PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: os tópicos são exemplos de formulações possíveis.<\\/p>\"",
-     "new": " 2 (PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: indicam tópicos a abordar, «ou outros igualmente relevantes». Dentro dos tópicos, «as expressões separadas por barras oblíquas» são «exemplos de formulações possíveis, apresentadas em alternativa» (p. 4 dos critérios).<\\/p>\"",
+     "new": " 2 (PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: indicam tópicos a abordar, «ou outros igualmente relevantes». Dentro dos tópicos, «as expressões separadas por barras oblíquas», «à exceção das utilizadas no interior de cada uma das transcrições», são «exemplos de formulações possíveis, apresentadas em alternativa» (p. 4 dos critérios).<\\/p>\"",
      "occurrences": 1
     },
     {
@@ -1065,7 +1065,7 @@
     {
      "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo I (lição): «4 (PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: indicam tó…»",
      "old": " 4 (IAVE; PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: os tópicos são exemplos de formulações possíveis.<\\/p>\"",
-     "new": " 4 (PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: indicam tópicos a abordar, «ou outros igualmente relevantes». Dentro dos tópicos, «as expressões separadas por barras oblíquas» são «exemplos de formulações possíveis, apresentadas em alternativa» (p. 4 dos critérios).<\\/p>\"",
+     "new": " 4 (PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: indicam tópicos a abordar, «ou outros igualmente relevantes». Dentro dos tópicos, «as expressões separadas por barras oblíquas», «à exceção das utilizadas no interior de cada uma das transcrições», são «exemplos de formulações possíveis, apresentadas em alternativa» (p. 4 dos critérios).<\\/p>\"",
      "occurrences": 1
     },
     {
@@ -1083,7 +1083,7 @@
     {
      "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo I (lição): «5 (PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: indicam tó…»",
      "old": " 5 (IAVE; PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: os tópicos são exemplos de formulações possíveis.<\\/p>\"",
-     "new": " 5 (PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: indicam tópicos a abordar, «ou outros igualmente relevantes». Dentro dos tópicos, «as expressões separadas por barras oblíquas» são «exemplos de formulações possíveis, apresentadas em alternativa» (p. 4 dos critérios).<\\/p>\"",
+     "new": " 5 (PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: indicam tópicos a abordar, «ou outros igualmente relevantes». Dentro dos tópicos, «as expressões separadas por barras oblíquas», «à exceção das utilizadas no interior de cada uma das transcrições», são «exemplos de formulações possíveis, apresentadas em alternativa» (p. 4 dos critérios).<\\/p>\"",
      "occurrences": 1
     },
     {
@@ -1125,7 +1125,7 @@
     {
      "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo I (lição): «7 (PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: indicam tó…»",
      "old": " 7 (IAVE; PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: os tópicos são exemplos de formulações possíveis.<\\/p><",
-     "new": " 7 (PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: indicam tópicos a abordar, «ou outros igualmente relevantes». Dentro dos tópicos, «as expressões separadas por barras oblíquas» são «exemplos de formulações possíveis, apresentadas em alternativa» (p. 4 dos critérios).<\\/p><",
+     "new": " 7 (PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: indicam tópicos a abordar, «ou outros igualmente relevantes». Dentro dos tópicos, «as expressões separadas por barras oblíquas», «à exceção das utilizadas no interior de cada uma das transcrições», são «exemplos de formulações possíveis, apresentadas em alternativa» (p. 4 dos critérios).<\\/p><",
      "occurrences": 1
     },
     {
@@ -1690,7 +1690,7 @@
   },
   "exame/provas/2026-2f/grupo-i/index.html": {
    "base_sha256_lf": "371aa3822f092d5a90f0645b671ff8b904894c2d37bd0fad6b2603ba682c2d5e",
-   "after_sha256_lf": "9c2df41657ed4841a3cd24746b559a7409168316d4f3f945144a69671529c8fc",
+   "after_sha256_lf": "823b25f7551bba9d820cae58aa2722a0bc7b011e034e9d942598ca343df236e3",
    "edits": [
     {
      "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo I (lição): «Prova 639, 2.ª fase, 2026, Grupo I: Palavras»",
@@ -1791,7 +1791,7 @@
     {
      "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo I (lição): «1 (PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: indicam tó…»",
      "old": " 1 (IAVE; PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: os tópicos são exemplos de formulações possíveis.<\\/p>\"",
-     "new": " 1 (PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: indicam tópicos a abordar, «ou outros igualmente relevantes». Dentro dos tópicos, «as expressões separadas por barras oblíquas» são «exemplos de formulações possíveis, apresentadas em alternativa» (p. 4 dos critérios).<\\/p>\"",
+     "new": " 1 (PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: indicam tópicos a abordar, «ou outros igualmente relevantes». Dentro dos tópicos, «as expressões separadas por barras oblíquas», «à exceção das utilizadas no interior de cada uma das transcrições», são «exemplos de formulações possíveis, apresentadas em alternativa» (p. 4 dos critérios).<\\/p>\"",
      "occurrences": 1
     },
     {
@@ -1815,7 +1815,7 @@
     {
      "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo I (lição): «2 (PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: indicam tó…»",
      "old": " 2 (IAVE; PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: os tópicos são exemplos de formulações possíveis.<\\/p>\"",
-     "new": " 2 (PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: indicam tópicos a abordar, «ou outros igualmente relevantes». Dentro dos tópicos, «as expressões separadas por barras oblíquas» são «exemplos de formulações possíveis, apresentadas em alternativa» (p. 4 dos critérios).<\\/p>\"",
+     "new": " 2 (PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: indicam tópicos a abordar, «ou outros igualmente relevantes». Dentro dos tópicos, «as expressões separadas por barras oblíquas», «à exceção das utilizadas no interior de cada uma das transcrições», são «exemplos de formulações possíveis, apresentadas em alternativa» (p. 4 dos critérios).<\\/p>\"",
      "occurrences": 1
     },
     {
@@ -1851,7 +1851,7 @@
     {
      "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo I (lição): «4 (PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: indicam tó…»",
      "old": " 4 (IAVE; PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: os tópicos são exemplos de formulações possíveis.<\\/p>\"",
-     "new": " 4 (PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: indicam tópicos a abordar, «ou outros igualmente relevantes». Dentro dos tópicos, «as expressões separadas por barras oblíquas» são «exemplos de formulações possíveis, apresentadas em alternativa» (p. 4 dos critérios).<\\/p>\"",
+     "new": " 4 (PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: indicam tópicos a abordar, «ou outros igualmente relevantes». Dentro dos tópicos, «as expressões separadas por barras oblíquas», «à exceção das utilizadas no interior de cada uma das transcrições», são «exemplos de formulações possíveis, apresentadas em alternativa» (p. 4 dos critérios).<\\/p>\"",
      "occurrences": 1
     },
     {
@@ -1869,7 +1869,7 @@
     {
      "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo I (lição): «5 (PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: indicam tó…»",
      "old": " 5 (IAVE; PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: os tópicos são exemplos de formulações possíveis.<\\/p>\"",
-     "new": " 5 (PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: indicam tópicos a abordar, «ou outros igualmente relevantes». Dentro dos tópicos, «as expressões separadas por barras oblíquas» são «exemplos de formulações possíveis, apresentadas em alternativa» (p. 4 dos critérios).<\\/p>\"",
+     "new": " 5 (PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: indicam tópicos a abordar, «ou outros igualmente relevantes». Dentro dos tópicos, «as expressões separadas por barras oblíquas», «à exceção das utilizadas no interior de cada uma das transcrições», são «exemplos de formulações possíveis, apresentadas em alternativa» (p. 4 dos critérios).<\\/p>\"",
      "occurrences": 1
     },
     {
@@ -1911,7 +1911,7 @@
     {
      "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo I (lição): «7 (PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: indicam tó…»",
      "old": " 7 (IAVE; PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: os tópicos são exemplos de formulações possíveis.<\\/p><",
-     "new": " 7 (PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: indicam tópicos a abordar, «ou outros igualmente relevantes». Dentro dos tópicos, «as expressões separadas por barras oblíquas» são «exemplos de formulações possíveis, apresentadas em alternativa» (p. 4 dos critérios).<\\/p><",
+     "new": " 7 (PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: indicam tópicos a abordar, «ou outros igualmente relevantes». Dentro dos tópicos, «as expressões separadas por barras oblíquas», «à exceção das utilizadas no interior de cada uma das transcrições», são «exemplos de formulações possíveis, apresentadas em alternativa» (p. 4 dos critérios).<\\/p><",
      "occurrences": 1
     },
     {
@@ -2440,7 +2440,7 @@
   },
   "exame/provas/index.html": {
    "base_sha256_lf": "bc6b475acf65dd8f7c1a943cb2a3f34fdbb075858a1cd0704f16ba309554e8dc",
-   "after_sha256_lf": "d43554271879797d7ea2b7e7fe3935d88388f7fbb4365c704c744f634b4744ac",
+   "after_sha256_lf": "c796a627b786f9970ca0438a6700de3a391aa5272208f60e1c85fc81656adecd",
    "edits": [
     {
      "location": "Provas em cartões, a secção (exame/provas/index.html): «Prova 639, 12.º ano,»",
@@ -2596,6 +2596,12 @@
      "location": "Provas em cartões, a secção (exame/provas/index.html): «2023, 1.ª e 2.ª fases Em preparação.»",
      "old": ">2023, 1.ª e 2.ª fases</b>Em preparação.<",
      "new": ">2023, 1.ª e 2.ª fases</b>Em preparação.<",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, a secção (exame/provas/index.html): «Primeiro as provas mais recentes, sempre com os critérios de classificação.»",
+     "old": "Primeiro as provas mais recentes, as oito do programa atual, sempre com os critérios de classificação. ",
+     "new": "Primeiro as provas mais recentes, sempre com os critérios de classificação. ",
      "occurrences": 1
     }
    ]

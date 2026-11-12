@@ -6,7 +6,7 @@ A secção exame/provas/index.html, as seis lições das duas provas de 2026 e o
   de dados fala de examesnacionais.com.pt;
 - autoria: «IAVE» não aparece (os PDF de 2026 só trazem a EduQA), nem a nota da marca de água «VERSÃO DE TRABALHO»;
 - as frases sobre «as oito provas de 2023 a 2026» saíram e as que ficaram dizem o que as duas transcrições mostram;
-- as citações novas («mecanismos de articulação interfrásica», «ou outros igualmente relevantes», as duas da p. 4 dos critérios)
+- as citações novas («mecanismos de articulação interfrásica», «ou outros igualmente relevantes», as três da p. 4 dos critérios)
   estão, letra a letra, na transcrição da prova a que o cartão pertence;
 - as referências presas (U+00A0, e U+2060 a seguir ao hífen da sigla): na secção (achado 28 da varredura do cuidado), na moldura
   das lições e nos títulos e rótulos nossos dos cartões; os 20 rótulos «Item N da prova…» ficam com o espaço normal, de propósito;
@@ -77,6 +77,8 @@ CITACOES_NOVAS = {
     'mecanismos de articulação interfrásica': 15,
     'ou outros igualmente relevantes': 4,
     'as expressões separadas por barras oblíquas': 4,
+    # 12/11/2026 (revisão): a exceção que a p. 4 abre, citada também (as barras dentro das transcrições marcam a mudança de verso).
+    'à exceção das utilizadas no interior de cada uma das transcrições': 4,
     'exemplos de formulações possíveis, apresentadas em alternativa': 4,
 }
 # Uma referência por prender: a palavra e o número (ou o romano, ou a letra) com um espaço normal entre os dois.
@@ -295,6 +297,9 @@ class ExameProvasOficial(unittest.TestCase):
             self.assertIn('utiliza, adequadamente, mecanismos de articulação interfrásica;', json.dumps(g3['criterios'], ensure_ascii=False))
             nota = P.fx['grupos'][0]['nota_dos_criterios']
             self.assertIn('as expressões separadas por barras oblíquas', nota)
+            # 12/11/2026 (revisão): a frase da p. 4, inteira, com a exceção entre os dois traços.
+            self.assertIn('as expressões separadas por barras oblíquas ‒ à exceção das utilizadas no interior de cada uma das transcrições ‒ '
+                          'correspondem a exemplos de formulações possíveis, apresentadas em alternativa.', nota)
             self.assertIn('correspondem a exemplos de formulações possíveis, apresentadas em alternativa.', nota)
             restritas = [i for i in itens(P.fx, 1) if i['tipo'].startswith('construção')]
             self.assertEqual([i['n'] for i in restritas], [1, 2, 4, 5, 7])
@@ -309,10 +314,22 @@ class ExameProvasOficial(unittest.TestCase):
             for frase in velhas:
                 self.assertNotIn(frase, s, rel)
         topicos = ('Os critérios não trazem uma resposta modelo: indicam tópicos a abordar, «ou outros igualmente relevantes». Dentro dos '
-                   'tópicos, «as expressões separadas por barras oblíquas» são «exemplos de formulações possíveis, apresentadas em '
-                   'alternativa» (p. 4 dos critérios).</p>')
+                   'tópicos, «as expressões separadas por barras oblíquas», «à exceção das utilizadas no interior de cada uma das '
+                   'transcrições», são «exemplos de formulações possíveis, apresentadas em alternativa» (p. 4 dos critérios).</p>')
         for rel, n in zip(GRUPOS_DADOS, (5, 0, 0, 5, 0, 0)):
             self.assertEqual(ler(rel).count(topicos), n, rel)
+        # 12/11/2026 (revisão): a frase nunca aparece sem a exceção da p. 4. Em cinco dos dez cartões, os tópicos mostrados por cima
+        # dela trazem versos transcritos, com a barra a marcar a mudança de verso: sem a exceção, liam-se como alternativas.
+        com_versos = []
+        for rel in GRUPOS_DADOS:
+            for k, c in enumerate(json.loads(ler(rel))['cartoes']):
+                h = c.get('html', '')
+                self.assertEqual('barras oblíquas' in h, topicos in h, (rel, k))
+                self.assertEqual(h.count('«as expressões separadas por barras oblíquas»'),
+                                 h.count('«as expressões separadas por barras oblíquas», «à exceção das utilizadas no interior de cada uma das transcrições»,'))
+                if topicos in h and re.search(r'«[^«»]* / [^«»]*»', h):
+                    com_versos.append((re.search(r'\d{4}-\df', rel).group(0), k))
+        self.assertEqual(com_versos, [('2026-1f', 47), ('2026-1f', 56), ('2026-2f', 13), ('2026-2f', 24), ('2026-2f', 79)])
         for rel, n in zip(GRUPOS_DADOS, (0, 0, 2, 0, 0, 3)):
             with self.subTest(ficheiro=rel):
                 D = json.loads(ler(rel))
@@ -485,7 +502,18 @@ class ExameProvasOficial(unittest.TestCase):
                 self.assertEqual(re.findall(padrao, ler(rel)), re.findall(padrao, base(rel)), (rel, padrao))
         antes = json.loads(base('scripts/provas/dados/seccao.json'))
         agora = json.loads(ler('scripts/provas/dados/seccao.json'))
-        self.assertEqual({k: v for k, v in agora.items() if 'nao_partir' not in k}, antes)
+        # 12/11/2026 (revisão): em «seguir» sai «as oito do programa atual» (sem apoio nos documentos nem no repositório, que só tem
+        # as duas provas de 2026); fica o plano do sítio. O resto da secção é o de antes.
+        self.assertEqual({k: v for k, v in agora.items() if 'nao_partir' not in k and k != 'seguir'},
+                         {k: v for k, v in antes.items() if k != 'seguir'})
+        self.assertEqual(antes['seguir'].replace('as provas mais recentes, as oito do programa atual, sempre', 'as provas mais recentes, sempre'),
+                         agora['seguir'])
+        self.assertEqual(agora['seguir'], 'Primeiro as provas mais recentes, sempre com os critérios de classificação. Cada prova chega aqui '
+                         'em três lições, uma por grupo, quando estiver conferida com o enunciado e com os critérios.')
+        s = ler(SECCAO)
+        self.assertEqual(s.count(f'<p>{agora["seguir"]}</p></section>'), 1)
+        for frase in ('programa atual', 'as oito', 'oito provas'):
+            self.assertNotIn(frase, visivel(s))
 
     # ---------- a camada ----------
     def test_camada_fechada_reversivel_e_no_topo(self):
