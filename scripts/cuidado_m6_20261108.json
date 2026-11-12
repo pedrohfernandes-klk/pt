@@ -120,6 +120,86 @@
   "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M6, achado 48 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla). Nos dados do gerador, que passam iguais para as páginas."
  },
  {
+  "ficheiro": "docs/pedagogia/tarefas-escolha/m1-u2.json",
+  "local": "Dados da tarefa M1-U2: «capítulo XII» que não se parte",
+  "antigo": "capítulo XII",
+  "novo": "capítulo XII",
+  "ocorrencias": 2,
+  "achado": "11/11/2026: decisão 152 (cuidado em todas as lições), reposição depois do pedido #192 (R). O #192 (tarefas_claras_20261110) reescreveu o enunciado e deixou cair o espaço que não quebra (U+00A0) que a decisão 152 no M1 tinha posto. A abreviatura «cap.» passou a «capítulo» por extenso: a referência já não existe como estava, e a nova, do mesmo tipo, fica presa (como «capítulo» com o numeral no M4 e no M5); só mudam espaços."
+ },
+ {
+  "ficheiro": "docs/pedagogia/tarefas-escolha/m3-u1.json",
+  "local": "Dados da tarefa M3-U1: «(I, 1 a 3)» que não se parte",
+  "antigo": "(I, 1 a 3)",
+  "novo": "(I, 1 a 3)",
+  "ocorrencias": 1,
+  "achado": "11/11/2026: decisão 152 (cuidado em todas as lições), reposição depois do pedido #192 (R). O #192 (tarefas_claras_20261110) reescreveu o enunciado e deixou cair o espaço que não quebra (U+00A0) que a decisão 152 no M3 tinha posto. A mesma referência continua no texto novo e volta a não se partir; só mudam espaços."
+ },
+ {
+  "ficheiro": "docs/pedagogia/tarefas-escolha/m3-u2.json",
+  "local": "Dados da tarefa M3-U2: «(I, 4 e 5)» que não se parte",
+  "antigo": "(I, 4 e 5)",
+  "novo": "(I, 4 e 5)",
+  "ocorrencias": 1,
+  "achado": "11/11/2026: decisão 152 (cuidado em todas as lições), reposição depois do pedido #192 (R). O #192 (tarefas_claras_20261110) reescreveu o enunciado e deixou cair o espaço que não quebra (U+00A0) que a decisão 152 no M3 tinha posto. A mesma referência continua no texto novo e volta a não se partir; só mudam espaços."
+ },
+ {
+  "ficheiro": "docs/pedagogia/tarefas-escolha/m3-u2.json",
+  "local": "Dados da tarefa M3-U2: «(X, 145)» que não se parte",
+  "antigo": "(X, 145)",
+  "novo": "(X, 145)",
+  "ocorrencias": 2,
+  "achado": "11/11/2026: decisão 152 (cuidado em todas as lições), reposição depois do pedido #192 (R). O #192 (tarefas_claras_20261110) reescreveu o enunciado e deixou cair o espaço que não quebra (U+00A0) que a decisão 152 no M3 tinha posto. A mesma referência continua no texto novo e volta a não se partir; só mudam espaços."
+ },
+ {
+  "ficheiro": "docs/pedagogia/tarefas-escolha/m3-u2.json",
+  "local": "Dados da tarefa M3-U2: «curioso» (VIII, 96)» que não se parte",
+  "antigo": "curioso» (VIII, 96)",
+  "novo": "curioso» (VIII, 96)",
+  "ocorrencias": 1,
+  "achado": "11/11/2026: decisão 152 (cuidado em todas as lições), reposição depois do pedido #192 (R). O #192 (tarefas_claras_20261110) reescreveu o enunciado e deixou cair o espaço que não quebra (U+00A0) que a decisão 152 no M3 tinha posto. A mesma referência continua no texto novo e volta a não se partir; só mudam espaços."
+ },
+ {
+  "ficheiro": "docs/pedagogia/tarefas-escolha/m3-u2.json",
+  "local": "Dados da tarefa M3-U2: «VIII, 96 a 99» que não se parte",
+  "antigo": "VIII, 96 a 99",
+  "novo": "VIII, 96 a 99",
+  "ocorrencias": 1,
+  "achado": "11/11/2026: decisão 152 (cuidado em todas as lições), reposição depois do pedido #192 (R). O #192 (tarefas_claras_20261110) reescreveu o enunciado e deixou cair o espaço que não quebra (U+00A0) que a decisão 152 no M3 tinha posto. A mesma referência continua no texto novo e volta a não se partir; só mudam espaços."
+ },
+ {
+  "ficheiro": "docs/pedagogia/tarefas-escolha/m3-u2.json",
+  "local": "Dados da tarefa M3-U2: «VIII, 98 ou 99» que não se parte",
+  "antigo": "VIII, 98 ou 99",
+  "novo": "VIII, 98 ou 99",
+  "ocorrencias": 1,
+  "achado": "11/11/2026: decisão 152 (cuidado em todas as lições), reposição depois do pedido #192 (R). O #192 (tarefas_claras_20261110) reescreveu o enunciado e deixou cair o espaço que não quebra (U+00A0) que a decisão 152 no M3 tinha posto. A mesma referência continua no texto novo e volta a não se partir; só mudam espaços."
+ },
+ {
+  "ficheiro": "docs/pedagogia/tarefas-escolha/m5-u1.json",
+  "local": "Dados da tarefa M5-U1: «do capítulo IV em que» que não se parte",
+  "antigo": "do capítulo IV em que",
+  "novo": "do capítulo IV em que",
+  "ocorrencias": 1,
+  "achado": "11/11/2026: decisão 152 (cuidado em todas as lições), reposição depois do pedido #192 (R). O #192 (tarefas_claras_20261110) reescreveu o enunciado e deixou cair o espaço que não quebra (U+00A0) que a decisão 152 no M5 tinha posto. A abreviatura «cap.» passou a «capítulo» por extenso: a referência já não existe como estava, e a nova, do mesmo tipo, fica presa (como «capítulo» com o numeral no M4 e no M5); só mudam espaços."
+ },
+ {
+  "ficheiro": "docs/pedagogia/tarefas-escolha/m5-u2.json",
+  "local": "Dados da tarefa M5-U2: «do capítulo I e outra nova» que não se parte",
+  "antigo": "do capítulo I e outra nova",
+  "novo": "do capítulo I e outra nova",
+  "ocorrencias": 1,
+  "achado": "11/11/2026: decisão 152 (cuidado em todas as lições), reposição depois do pedido #192 (R). O #192 (tarefas_claras_20261110) reescreveu o enunciado e deixou cair o espaço que não quebra (U+00A0) que a decisão 152 no M5 tinha posto. A abreviatura «cap.» passou a «capítulo» por extenso: a referência já não existe como estava, e a nova, do mesmo tipo, fica presa (como «capítulo» com o numeral no M4 e no M5); só mudam espaços."
+ },
+ {
+  "ficheiro": "docs/pedagogia/tarefas-escolha/m5-u2.json",
+  "local": "Dados da tarefa M5-U2: «No capítulo VI,» que não se parte",
+  "antigo": "No capítulo VI,",
+  "novo": "No capítulo VI,",
+  "ocorrencias": 1,
+  "achado": "11/11/2026: decisão 152 (cuidado em todas as lições), reposição depois do pedido #192 (R). O #192 (tarefas_claras_20261110) reescreveu o enunciado e deixou cair o espaço que não quebra (U+00A0) que a decisão 152 no M5 tinha posto. A abreviatura «cap.» passou a «capítulo» por extenso: a referência já não existe como estava, e a nova, do mesmo tipo, fica presa (como «capítulo» com o numeral no M4 e no M5); só mudam espaços."
+ },
+ {
   "ficheiro": "docs/pedagogia/tarefas-escolha/m6-u1.json",
   "local": "Dados da tarefa: «nao_partir», «nao_partir_grelha», os números do molde com espaço que não quebra",
   "antigo": "\n \"unidade\": 1,\n ",
@@ -1830,6 +1910,110 @@
   "novo": "3 de julho de 2021",
   "ocorrencias": 3,
   "achado": "08/11/2026: decisão 152 (cuidado em todas as lições), varredura do M6, achado 43 (B). Referências e números que não se partem entre linhas (U+00A0; U+2060 a seguir ao traço de intervalo e ao hífen da sigla)."
+ },
+ {
+  "ficheiro": "tarefas/m1-u2/index.html",
+  "local": "Tarefa M1-U2: «capítulo XII» que não se parte",
+  "antigo": "capítulo XII",
+  "novo": "capítulo XII",
+  "ocorrencias": 2,
+  "achado": "11/11/2026: decisão 152 (cuidado em todas as lições), reposição depois do pedido #192 (R). O #192 (tarefas_claras_20261110) reescreveu o enunciado e deixou cair o espaço que não quebra (U+00A0) que a decisão 152 no M1 tinha posto. A abreviatura «cap.» passou a «capítulo» por extenso: a referência já não existe como estava, e a nova, do mesmo tipo, fica presa (como «capítulo» com o numeral no M4 e no M5); só mudam espaços."
+ },
+ {
+  "ficheiro": "tarefas/m3-u1/index.html",
+  "local": "Tarefa M3-U1: «(I, 1 a 3)» que não se parte",
+  "antigo": "(I, 1 a 3)",
+  "novo": "(I, 1 a 3)",
+  "ocorrencias": 1,
+  "achado": "11/11/2026: decisão 152 (cuidado em todas as lições), reposição depois do pedido #192 (R). O #192 (tarefas_claras_20261110) reescreveu o enunciado e deixou cair o espaço que não quebra (U+00A0) que a decisão 152 no M3 tinha posto. A mesma referência continua no texto novo e volta a não se partir; só mudam espaços."
+ },
+ {
+  "ficheiro": "tarefas/m3-u2/index.html",
+  "local": "Tarefa M3-U2: «(I, 4 e 5)» que não se parte",
+  "antigo": "(I, 4 e 5)",
+  "novo": "(I, 4 e 5)",
+  "ocorrencias": 1,
+  "achado": "11/11/2026: decisão 152 (cuidado em todas as lições), reposição depois do pedido #192 (R). O #192 (tarefas_claras_20261110) reescreveu o enunciado e deixou cair o espaço que não quebra (U+00A0) que a decisão 152 no M3 tinha posto. A mesma referência continua no texto novo e volta a não se partir; só mudam espaços."
+ },
+ {
+  "ficheiro": "tarefas/m3-u2/index.html",
+  "local": "Tarefa M3-U2: «(X, 145)» que não se parte",
+  "antigo": "(X, 145)",
+  "novo": "(X, 145)",
+  "ocorrencias": 2,
+  "achado": "11/11/2026: decisão 152 (cuidado em todas as lições), reposição depois do pedido #192 (R). O #192 (tarefas_claras_20261110) reescreveu o enunciado e deixou cair o espaço que não quebra (U+00A0) que a decisão 152 no M3 tinha posto. A mesma referência continua no texto novo e volta a não se partir; só mudam espaços."
+ },
+ {
+  "ficheiro": "tarefas/m3-u2/index.html",
+  "local": "Tarefa M3-U2: «curioso» (VIII, 96)» que não se parte",
+  "antigo": "curioso» (VIII, 96)",
+  "novo": "curioso» (VIII, 96)",
+  "ocorrencias": 1,
+  "achado": "11/11/2026: decisão 152 (cuidado em todas as lições), reposição depois do pedido #192 (R). O #192 (tarefas_claras_20261110) reescreveu o enunciado e deixou cair o espaço que não quebra (U+00A0) que a decisão 152 no M3 tinha posto. A mesma referência continua no texto novo e volta a não se partir; só mudam espaços."
+ },
+ {
+  "ficheiro": "tarefas/m3-u2/index.html",
+  "local": "Tarefa M3-U2: «VIII, 96 a 99» que não se parte",
+  "antigo": "VIII, 96 a 99",
+  "novo": "VIII, 96 a 99",
+  "ocorrencias": 1,
+  "achado": "11/11/2026: decisão 152 (cuidado em todas as lições), reposição depois do pedido #192 (R). O #192 (tarefas_claras_20261110) reescreveu o enunciado e deixou cair o espaço que não quebra (U+00A0) que a decisão 152 no M3 tinha posto. A mesma referência continua no texto novo e volta a não se partir; só mudam espaços."
+ },
+ {
+  "ficheiro": "tarefas/m3-u2/index.html",
+  "local": "Tarefa M3-U2: «VIII, 98 ou 99» que não se parte",
+  "antigo": "VIII, 98 ou 99",
+  "novo": "VIII, 98 ou 99",
+  "ocorrencias": 1,
+  "achado": "11/11/2026: decisão 152 (cuidado em todas as lições), reposição depois do pedido #192 (R). O #192 (tarefas_claras_20261110) reescreveu o enunciado e deixou cair o espaço que não quebra (U+00A0) que a decisão 152 no M3 tinha posto. A mesma referência continua no texto novo e volta a não se partir; só mudam espaços."
+ },
+ {
+  "ficheiro": "tarefas/m4-u1/index.html",
+  "local": "Tarefa M4-U1: «<strong>3 a 4 minutos</strong>» que não se parte",
+  "antigo": "<strong>3 a 4 minutos</strong>",
+  "novo": "<strong>3 a 4 minutos</strong>",
+  "ocorrencias": 1,
+  "achado": "11/11/2026: decisão 152 (cuidado em todas as lições), reposição depois do pedido #192 (R). O #192 (tarefas_claras_20261110) reescreveu o enunciado e deixou cair o espaço que não quebra (U+00A0) que a decisão 152 no M4 tinha posto. A mesma referência continua no texto novo e volta a não se partir; só mudam espaços."
+ },
+ {
+  "ficheiro": "tarefas/m4-u2/index.html",
+  "local": "Tarefa M4-U2: «<strong>180 a 240 palavras</strong>» que não se parte",
+  "antigo": "<strong>180 a 240 palavras</strong>",
+  "novo": "<strong>180 a 240 palavras</strong>",
+  "ocorrencias": 1,
+  "achado": "11/11/2026: decisão 152 (cuidado em todas as lições), reposição depois do pedido #192 (R). O #192 (tarefas_claras_20261110) reescreveu o enunciado e deixou cair o espaço que não quebra (U+00A0) que a decisão 152 no M4 tinha posto. A mesma referência continua no texto novo e volta a não se partir; só mudam espaços."
+ },
+ {
+  "ficheiro": "tarefas/m4-u3-discurso/index.html",
+  "local": "Tarefa M4-U3-DISCURSO: «<strong>2 minutos</strong>» que não se parte",
+  "antigo": "<strong>2 minutos</strong>",
+  "novo": "<strong>2 minutos</strong>",
+  "ocorrencias": 1,
+  "achado": "11/11/2026: decisão 152 (cuidado em todas as lições), reposição depois do pedido #192 (R). O #192 (tarefas_claras_20261110) reescreveu o enunciado e deixou cair o espaço que não quebra (U+00A0) que a decisão 152 no M4 tinha posto. A mesma referência continua no texto novo e volta a não se partir; só mudam espaços."
+ },
+ {
+  "ficheiro": "tarefas/m5-u1/index.html",
+  "local": "Tarefa M5-U1: «do capítulo IV em que» que não se parte",
+  "antigo": "do capítulo IV em que",
+  "novo": "do capítulo IV em que",
+  "ocorrencias": 1,
+  "achado": "11/11/2026: decisão 152 (cuidado em todas as lições), reposição depois do pedido #192 (R). O #192 (tarefas_claras_20261110) reescreveu o enunciado e deixou cair o espaço que não quebra (U+00A0) que a decisão 152 no M5 tinha posto. A abreviatura «cap.» passou a «capítulo» por extenso: a referência já não existe como estava, e a nova, do mesmo tipo, fica presa (como «capítulo» com o numeral no M4 e no M5); só mudam espaços."
+ },
+ {
+  "ficheiro": "tarefas/m5-u2/index.html",
+  "local": "Tarefa M5-U2: «do capítulo I e outra nova» que não se parte",
+  "antigo": "do capítulo I e outra nova",
+  "novo": "do capítulo I e outra nova",
+  "ocorrencias": 1,
+  "achado": "11/11/2026: decisão 152 (cuidado em todas as lições), reposição depois do pedido #192 (R). O #192 (tarefas_claras_20261110) reescreveu o enunciado e deixou cair o espaço que não quebra (U+00A0) que a decisão 152 no M5 tinha posto. A abreviatura «cap.» passou a «capítulo» por extenso: a referência já não existe como estava, e a nova, do mesmo tipo, fica presa (como «capítulo» com o numeral no M4 e no M5); só mudam espaços."
+ },
+ {
+  "ficheiro": "tarefas/m5-u2/index.html",
+  "local": "Tarefa M5-U2: «No capítulo VI,» que não se parte",
+  "antigo": "No capítulo VI,",
+  "novo": "No capítulo VI,",
+  "ocorrencias": 1,
+  "achado": "11/11/2026: decisão 152 (cuidado em todas as lições), reposição depois do pedido #192 (R). O #192 (tarefas_claras_20261110) reescreveu o enunciado e deixou cair o espaço que não quebra (U+00A0) que a decisão 152 no M5 tinha posto. A abreviatura «cap.» passou a «capítulo» por extenso: a referência já não existe como estava, e a nova, do mesmo tipo, fica presa (como «capítulo» com o numeral no M4 e no M5); só mudam espaços."
  },
  {
   "ficheiro": "tarefas/m6-u1/aquecimento/index.html",

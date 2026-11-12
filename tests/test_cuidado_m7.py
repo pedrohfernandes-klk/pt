@@ -45,7 +45,9 @@ MANIFESTO_REL = 'tests/fixtures/cuidado-m7-edits-20261111.json'
 TROCAS = json.loads(CAMADA.read_text('utf-8'))
 MANIFESTO = json.loads((ROOT / MANIFESTO_REL).read_text('utf-8'))
 # A camada assenta no ramo da decisão 152 no M6, já com o main 4bf4a053 dentro.
-BASE_COMMIT = '2900616656378e4fb39d93747a5c7c450a38179f'
+# 12/11/2026: junto o ramo do M6 como ficou em 49871e08 (as reposições depois do #192 e o main c1b165fe, #193); a base passa a esse
+# commit (era 29006166). Nenhum dos 59 ficheiros da camada mudou entre os dois: os resumos e as 450 trocas são os mesmos.
+BASE_COMMIT = '49871e0870c666e2b33d5ce01f0779e626e29bee'
 NBSP, WJ = '\xa0', '⁠'
 N = NBSP
 FOLHA = 'assets/pt-lessons/apoios-tabelas.css?v=20261106.1'
@@ -949,6 +951,54 @@ class CuidadoM7(unittest.TestCase):
             texto = ler('.github/workflows/' + nome)
             for caminho in ('scripts/cuidado_m7_20261111.*', MANIFESTO_REL):
                 self.assertIn(f"'{caminho}'", texto, nome)
+
+    def test_leitura_historica_das_tarefas_com_esta_camada_por_cima(self):
+        # 12/11/2026 (junção do ramo do M6 49871e08): os contratos históricos leem as tarefas como eram antes do pedido #192
+        # (scripts/tarefas_claras_historico.py). Com esta camada por cima, a leitura dá a base do manifesto do #192, letra a
+        # letra, em todas as páginas e dados que ele mudou: a partir da página inteira, com esta camada já desfeita, ou com esta e
+        # a do M6 já desfeitas; e a cadeia de desfazer não desfaz nada segunda vez sobre esse texto.
+        from auditoria_20261028 import undo_cuidado_m5_0811
+        sys.path.insert(0, str(ROOT / 'scripts'))
+        try:
+            import tarefas_claras_historico as historico
+        finally:
+            sys.path.pop(0)
+        claras = json.loads(ler('tests/fixtures/tarefas-claras-edits-20261110.json'))['files']
+        m6 = json.loads(ler('tests/fixtures/cuidado-m6-edits-20261108.json'))['files']
+        self.assertEqual(len(claras), 33)
+        # Nas três camadas não há nenhum ficheiro; nesta e na dos enunciados, as tarefas do M7; nesta e na do M6, só as grelhas.
+        self.assertEqual(set(MANIFESTO['files']) & set(claras), {'tarefas/m7-u1/index.html', 'tarefas/m7-u2/index.html',
+                                                                 'tarefas/m7-u3/index.html', 'docs/pedagogia/tarefas-escolha/m7-u3.json'})
+        self.assertEqual(set(MANIFESTO['files']) & set(m6), {'docs/pedagogia/grelhas-tarefas-20261027.json'})
+        self.assertEqual(set(MANIFESTO['files']) & set(m6) & set(claras), set())
+        self.assertEqual(len(set(m6) & set(claras)), 17)
+        for rel, registo in claras.items():
+            with self.subTest(ficheiro=rel):
+                atual = ler(rel)
+                antes_192 = historico.desfazer(rel, atual)
+                self.assertEqual(sha_lf(antes_192), registo['base_sha256_lf'])
+                sem_m7 = undo_cuidado_m7_1111(rel, atual)
+                self.assertEqual(historico.desfazer(rel, sem_m7), antes_192)
+                sem_m6 = undo_cuidado_m6_0811(rel, atual)
+                self.assertEqual(sha_lf(sem_m6), registo['after_sha256_lf'])
+                self.assertEqual(historico.desfazer(rel, sem_m6), antes_192)
+                self.assertEqual(historico.desfazer(rel, antes_192), antes_192)
+                self.assertEqual(undo_cuidado_m7_1111(rel, antes_192), antes_192)
+                self.assertEqual(undo_cuidado_m6_0811(rel, antes_192), antes_192)
+                self.assertEqual(undo_cuidado_m5_0811(rel, antes_192), undo_cuidado_m5_0811(rel, atual))
+                if rel in MANIFESTO['files']:
+                    self.assertNotEqual(sem_m7, atual)
+                    self.assertEqual(sha_lf(atual), MANIFESTO['files'][rel]['after_sha256_lf'])
+                    self.assertEqual(sha_lf(sem_m7), MANIFESTO['files'][rel]['base_sha256_lf'])
+                    # Fora da exceção (a base exata do #192), a contagem continua estrita: um texto a que falta uma troca falha.
+                    e = MANIFESTO['files'][rel]['edits'][0]
+                    with self.assertRaises(AssertionError):
+                        undo_cuidado_m7_1111(rel, atual.replace(e['new'], e['old'], 1))
+        # A ordem no leitor histórico: primeiro esta camada, depois a do M6, depois os enunciados.
+        fonte = ler('scripts/tarefas_claras_historico.py')
+        corpo = fonte[fonte.index('def desfazer'):]
+        self.assertLess(corpo.index('CUIDADO_M7.get(rel)'), corpo.index('CUIDADO_M6.get(rel)'))
+        self.assertLess(corpo.index('CUIDADO_M6.get(rel)'), corpo.index("entry['edits']"))
 
     def test_gerador_da_o_mesmo_json(self):
         self.assertEqual(C.construir()[0], TROCAS)

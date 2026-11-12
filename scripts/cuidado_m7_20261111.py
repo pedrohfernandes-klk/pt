@@ -11,7 +11,11 @@ tests/fixtures/cuidado-m7-edits-20261111.json:
 
   python3 scripts/cuidado_m7_20261111.py
   python3 scripts/aplicar_trocas.py scripts/cuidado_m7_20261111.json --manifesto tests/fixtures/cuidado-m7-edits-20261111.json \\
-      --base-commit 2900616656378e4fb39d93747a5c7c450a38179f --nota "…"
+      --base-commit 49871e0870c666e2b33d5ce01f0779e626e29bee --nota "…"
+
+12/11/2026: junto o ramo do M6 como ficou em 49871e08 (as reposições depois do #192 nas tarefas do M1, do M3, do M4 e do M5, e o
+main c1b165fe, #193); a base passa a esse commit (era 29006166). Nenhum dos 59 ficheiros desta camada mudou entre os dois: os
+resumos do manifesto e as 450 trocas são os mesmos.
 
 Fica por cima da decisão 152 no M6 (cuidado_m6_20261108, no ramo do pedido #191 com o main 4bf4a053 já dentro, commit 29006166),
 que não toca em nenhuma página do M7; as duas só partilham os dados das grelhas (o M6 nas entradas m6-u1 e m6-u2, esta na m7-u3).
