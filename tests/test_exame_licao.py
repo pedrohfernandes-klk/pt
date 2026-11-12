@@ -54,7 +54,10 @@ class ExameLicao(unittest.TestCase):
                     # A frase manda abrir a lição: a ligação da sessão é uma lição do Português.
                     self.assertRegex(s['source']['url'], r'^/pt/m\d/licao-m\d-f\d+/$')
         contexto = {s['id']: s['source'].get('context', '') for s in DADOS['sessions']}
-        self.assertIn('O excerto de D. Dinis serve a pergunta sobre «vos».', contexto['s01'])
+        # 12/11/2026: decisão 152 no Exame (camada cuidado_exame_20261112, achado 73): «D. Dinis» não se parte (U+00A0); a frase é a
+        # mesma, letra a letra, com esse espaço preso, e a forma com o espaço normal já não pode aparecer.
+        self.assertIn('O excerto de D.\xa0Dinis serve a pergunta sobre «vos».', contexto['s01'])
+        self.assertNotIn('O excerto de D. Dinis', contexto['s01'])
         self.assertIn('nas duas lições de apoio.', contexto['s03'])
         self.assertTrue(contexto['s11'].startswith('O excerto apresenta «Noite Fechada».'), contexto['s11'])
 
