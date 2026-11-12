@@ -82,10 +82,17 @@ class Prova:
         cfg = DADOS / self.pasta / 'prova.json'
         self.cfg = json.loads(cfg.read_text('utf-8')) if cfg.is_file() else None
         self.nome = f'Prova {self.codigo}, {self.fase}.ª fase, {self.ano}'
+        # 12/11/2026: o nome da prova como as páginas o escrevem no texto visível, com as referências presas (U+00A0); «nome», com
+        # espaços normais, é o do <title>.
+        self.nome_preso = f'Prova\xa0{self.codigo}, {self.fase}.ª\xa0fase, {self.ano}'
         self.grupos = {g: 'grupo-' + ROMANOS[g - 1].lower() for g in range(1, len(self.fx['grupos']) + 1)}
         self.paginas = {g: ROOT / 'exame/provas' / self.pasta / slug / 'index.html' for g, slug in self.grupos.items()}
         fontes = self.fx['prova']['fontes']
-        self.url_enunciado, self.url_criterios = fontes['enunciado_url'], fontes['criterios_url']
+        # 12/11/2026 (decisão do utilizador): as ligações das páginas levam aos documentos de quem os publica (em 2026, eduqa.pt), e
+        # não às cópias. Os endereços que os testes exigem nas páginas passam a ser os «…_original_url» da transcrição (antes,
+        # «enunciado_url» e «criterios_url», as cópias); uma prova sem eles falha aqui, à vista.
+        self.url_enunciado, self.url_criterios = fontes['enunciado_original_url'], fontes['criterios_original_url']
+        self.url_copias = (fontes['enunciado_url'], fontes['criterios_url'])
         self.corpus = ' \n '.join(plano(t) for t in textos({k: v for k, v in self.fx.items() if k != '_sobre'}))
         self.fontes_textos = [t['fonte'] for gfx in self.fx['grupos'] for t in textos_do_grupo(gfx)]
         self._cartoes = {}

@@ -25,6 +25,21 @@ Transformações gerais, para todas as provas (as duas primeiras são as do pilo
   costuma ser ignorado), e cada campo «ver» passa a essa ligação; o cartão «Abre» troca a frase indicada em
   «abre_sem_imagem». Com «reproduzir»: true (ou --com-imagem), a figura fica e o ficheiro tem de estar no repositório.
 
+12/11/2026 (camada exame_provas_oficial_20261112): três chaves novas nos dados; sem elas, as páginas saem iguais, byte a byte
+(a camada de baixo, cuidado_exame_20261112, volta a gerar as páginas a partir dos dados como ela os deixou):
+* prova.json, «autoria»: {«texto», «texto_curto», «ligacoes»: «originais»}. Com «ligacoes»: «originais», as ligações do
+  enunciado e dos critérios (menu, crédito, secção e a página da imagem com direitos) levam aos documentos de quem os publica
+  (enunciado_original_url e criterios_original_url da transcrição), e o crédito diz só «Documentos em …». «texto» e
+  «texto_curto» dizem quem os PDF dão como autor, no lugar da frase fixa «Autor …: IAVE …» (os PDF de 2026 só trazem a EduQA).
+* prova.json, «nao_partir»: true. As referências e os números da moldura que o gerador escreve nas lições dessa prova (o
+  título <h1>, a cabeça e as ligações do menu, as migalhas, o crédito, o fim da lição e as ligações da imagem com direitos) e
+  no bloco da prova na secção levam U+00A0 no espaço que os prende («Prova 639», «1.ª fase», «versão 2», «Grupo II»,
+  «p. 13», «Sessão 25», «120 minutos», «200 pontos») e U+2060 a seguir ao hífen da sigla («M2-F08»). Nunca em atributos nem
+  no <title>: a descrição (<meta name="description">) sai sempre com espaços normais, também quando o «aprendes» dos dados os
+  prende. Ficam como estão os rótulos «Item N da prova» (pelos quais os testes e o motor reconhecem os itens) e as referências
+  dos textos «como a prova os indica», que são da transcrição.
+* seccao.json, «nao_partir»: true. O mesmo no que é da secção inteira: a linha «Prova 639, 12.º ano…» e «O que vem a seguir».
+
 Antes de escrever, cada grupo passa em scripts/audit_cards.validate_cards (o tipo «item» valida-se como «escolha»), cada
 cartão de fazer tem o seu «g» e a página relida com audit_cards.lesson_cards dá os mesmos cartões.
 
@@ -61,11 +76,28 @@ V = {
 }
 ROMANOS = ['I', 'II', 'III', 'IV', 'V']
 EXTENSO = {3: 'três'}
+NBSP, WJ = '\xa0', '\u2060'
 PROIBIDO_NO_MOLDE = ('ntfy', 'EventSource', 'BroadcastChannel', 'EPISala', 'epi-sala', 'painel-sala')
 
 
 class Falha(Exception):
     pass
+
+
+def prender(s, sim=True):
+    """12/11/2026: as formas da moldura escrevem-se com «~» onde o espaço não se pode partir e «^» onde entra a junção de palavras
+    (a seguir ao hífen da sigla). Com sim, dão U+00A0 e U+2060; sem ele, um espaço normal e nada (as páginas de antes)."""
+    return s.replace('~', NBSP if sim else ' ').replace('^', WJ if sim else '')
+
+
+def solto(s):
+    """12/11/2026: o texto sem espaços que não quebram nem junções, para os atributos e o <title>."""
+    return s.replace(NBSP, ' ').replace(WJ, '')
+
+
+def sigla_presa(t, sim=True):
+    """12/11/2026: «M2-F08: …» com a junção de palavras a seguir ao hífen da sigla (como nas páginas dos módulos)."""
+    return re.sub(r'\b(M\d-)(F\d\d)\b', lambda m: m.group(1) + WJ + m.group(2), t) if sim else t
 
 
 def it_html(s):
@@ -106,10 +138,22 @@ class Prova:
             raise Falha(f'{self.pasta}: a transcrição diz prova {p["codigo"]}, {p["fase"]}, {p["ano"]}, versão {p["versao"]}')
         self.fase_rot = f'{self.fase}.ª fase'
         self.nome = f'Prova {self.codigo}, {self.fase_rot}, {self.ano}'
+        # 12/11/2026: com «nao_partir», as referências da moldura não se partem (nome_p é o nome da prova no texto visível;
+        # nome, com espaços normais, fica para o <title>).
+        self.liga = bool(c.get('nao_partir'))
+        self.nome_p = self.p(f'Prova~{self.codigo}, {self.fase}.ª~fase, {self.ano}')
         self.titulo_exame = p['titulo']
         f = p['fontes']
         self.url_enunciado, self.url_criterios = f['enunciado_url'], f['criterios_url']
         self.url_enunciado_orig, self.url_criterios_orig = f.get('enunciado_original_url'), f.get('criterios_original_url')
+        # 12/11/2026: com «ligacoes»: «originais», as ligações levam aos documentos de quem os publica.
+        self.so_originais = c.get('autoria', {}).get('ligacoes') == 'originais'
+        if self.so_originais:
+            if not (self.url_enunciado_orig and self.url_criterios_orig):
+                raise Falha(f'{self.pasta}: «ligacoes»: «originais» pede enunciado_original_url e criterios_original_url na transcrição')
+            self.url_enunciado, self.url_criterios = self.url_enunciado_orig, self.url_criterios_orig
+        elif 'ligacoes' in c.get('autoria', {}):
+            raise Falha(f'{self.pasta}: «ligacoes» só pode ser «originais»')
         self.n_grupos = len(self.fx['grupos'])
         if self.n_grupos != 3 or len(c['grupos']) != 3:
             raise Falha(f'{self.pasta}: a prova tem de ter três grupos, na transcrição e em prova.json')
@@ -124,8 +168,16 @@ class Prova:
                                 'chave': f'prova-{self.pasta}-g{g}', 'versao_licao': gc.get('versao_licao', c['versao_licao'])})
 
     # ---------- textos que se repetem ----------
+    def p(self, s):
+        """12/11/2026: uma forma da moldura («~» e «^»), presa ou não conforme «nao_partir» da prova."""
+        return prender(s, self.liga)
+
     def autor(self, curto=False):
-        nota = self.cfg.get('autoria', {}).get('nota')
+        aut = self.cfg.get('autoria', {})
+        if aut.get('texto'):
+            # 12/11/2026: o que os PDF dizem de quem os faz, escrito nos dados (2026: só o logótipo da EduQA, na p. 1).
+            return aut.get('texto_curto', aut['texto']) if curto else aut['texto']
+        nota = aut.get('nota')
         if curto:
             base = 'Autor: IAVE, como indica a página de onde vêm as cópias'
         else:
@@ -137,6 +189,10 @@ class Prova:
         a = '" target="_blank" rel="noopener">'
         aut = self.cfg.get('autoria', {})
         host = re.sub(r'^www\.', '', re.match(r'https?://([^/]+)', self.url_enunciado).group(1))
+        if self.so_originais:
+            # 12/11/2026: só os documentos de quem os publica (sem cópias, e por isso sem a nota sobre a cópia dos critérios).
+            return (f'Documentos em {host}: <a href="{self.url_enunciado}{a}' + self.p(f'enunciado da versão~{self.versao} (PDF)</a> e ')
+                    + f'<a href="{self.url_criterios}{a}critérios de classificação (PDF)</a>.')
         s = (f'Cópias públicas: <a href="{self.url_enunciado}{a}enunciado (PDF)</a> e '
              f'<a href="{self.url_criterios}{a}critérios (PDF)</a>' + ('' if curto else f', em {host}') + '.')
         if self.url_enunciado_orig and self.url_criterios_orig:
@@ -259,13 +315,14 @@ def preparar(P, G):
                 raise Falha(f'{P.pasta}: para reproduzir a imagem, {img["ficheiro"]} tem de estar no repositório')
         else:
             pag, tot, url = img['pagina_pdf'], img['paginas_pdf'], P.pdf_pagina()
-            ligacao = (f'<p class="prova-imagem">A imagem está na p. {pag} da prova: <a href="{url}" target="_blank" '
+            # 12/11/2026: «p. 13» e «p. 13 de 16» não se partem (P.p, com «nao_partir»).
+            ligacao = (P.p(f'<p class="prova-imagem">A imagem está na p.~{pag} da prova: ') + f'<a href="{url}" target="_blank" '
                        'rel="noopener">abre o enunciado (PDF) nessa página</a> e deixa-o aberto ao lado. Os cartões seguintes pedem-te '
                        'que olhes para ela.</p>')
             ligacao_caderno = (f'<p class="prova-imagem">A imagem: <a href="{url}" target="_blank" '
-                               f'rel="noopener">enunciado da prova (PDF), p. {pag}</a>.</p>')
+                               'rel="noopener">' + P.p(f'enunciado da prova (PDF), p.~{pag}</a>.</p>'))
             ver = (f'<a class="ver-pdf" href="{url}" target="_blank" rel="noopener">'
-                   f'Ver a imagem: enunciado da prova (PDF), p. {pag} de {tot}</a>')
+                   + P.p(f'Ver a imagem: enunciado da prova (PDF), p.~{pag} de~{tot}</a>'))
             if img.get('abre_sem_imagem'):
                 velho, novo = img['abre_sem_imagem']
                 if cartoes[0]['html'].count(velho) != 1:
@@ -307,16 +364,17 @@ AO_DEPOIS = ('function(el){Array.prototype.forEach.call(el.querySelectorAll("a[d
 def depois_html(P, G):
     g, n = G['g'], P.n_grupos
     gr = P.grupos
-    ant = f'<a href="../{gr[g - 2]["slug"]}/">← Grupo {gr[g - 2]["nome"]}</a>' if g > 1 else '<a href="../../">← Provas em cartões</a>'
-    seg = f'<a href="../{gr[g]["slug"]}/">Grupo {gr[g]["nome"]} →</a>' if g < n else '<a href="../../">Provas em cartões →</a>'
+    # 12/11/2026: «Grupo II», «M2-F08» e «Sessão 25» não se partem (P.p e sigla_presa, com «nao_partir»).
+    ant = f'<a href="../{gr[g - 2]["slug"]}/">' + P.p(f'← Grupo~{gr[g - 2]["nome"]}</a>') if g > 1 else '<a href="../../">← Provas em cartões</a>'
+    seg = f'<a href="../{gr[g]["slug"]}/">' + P.p(f'Grupo~{gr[g]["nome"]} →</a>') if g < n else '<a href="../../">Provas em cartões →</a>'
     links = []
     for rel in G['cfg']['licoes']:
         dado = f' data-licao="{rel.split("/")[-1].replace("licao-", "")}"' if '/licao-' in rel else ''
         estado = '<span class="estado" data-estado></span>' if dado else ''
-        links.append(f'<a class="pe-l" href="{R}{rel}/"{dado}><span class="pe-t">{html.escape(titulo_de(rel), quote=False)}</span>{estado}<span class="pe-s" aria-hidden="true">→</span></a>')
+        links.append(f'<a class="pe-l" href="{R}{rel}/"{dado}><span class="pe-t">{sigla_presa(html.escape(titulo_de(rel), quote=False), P.liga)}</span>{estado}<span class="pe-s" aria-hidden="true">→</span></a>')
     sess = []
     for sid in G['cfg']['sessoes']:
-        sess.append(f'<a class="pe-l" href="{R}exame/#{sid}"><span class="pe-t">Sessão {int(sid[1:])}: {html.escape(SESSOES[sid]["title"], quote=False)}</span><span class="pe-s" aria-hidden="true">→</span></a>')
+        sess.append(f'<a class="pe-l" href="{R}exame/#{sid}"><span class="pe-t">{P.p("Sessão~")}{int(sid[1:])}: {html.escape(SESSOES[sid]["title"], quote=False)}</span><span class="pe-s" aria-hidden="true">→</span></a>')
     return (f'<div class="prox">{ant}{seg}</div>'
             f'<nav class="portas-ext" aria-label="Onde se estuda"><p class="pe-rot">Onde se estuda nos módulos</p>{"".join(links)}</nav>'
             f'<nav class="portas-ext" aria-label="Na preparação de exame"><p class="pe-rot">Na preparação de exame</p>{"".join(sess)}</nav>')
@@ -328,31 +386,35 @@ def pagina(P, G, cartoes, blocos):
     gr, D = P.grupos, G['D']
     ancora = f'../../#prova-{P.pasta}'
     titulo = f'{P.nome}: Grupo {nome}'
-    h1 = f'{P.nome}, Grupo {nome}: {D["titulo"]}'
+    # 12/11/2026: o <h1> com as referências presas (o <title> fica com espaços normais).
+    h1 = P.p(f'{P.nome_p}, Grupo~{nome}: ') + D["titulo"]
     aprendes = D['aprendes'] if D['aprendes'].startswith('Aprendes') else 'Aprendes ' + D['aprendes'][0].lower() + D['aprendes'][1:]
-    desc = html.escape(re.sub(r'_([^_]+)_', r'\1', aprendes))
+    # 12/11/2026: a descrição é um atributo: sai sempre com espaços normais (solto), também quando os dados prendem referências.
+    desc = html.escape(solto(re.sub(r'_([^_]+)_', r'\1', aprendes)))
     vizinhos = []
     if g > 1:
-        vizinhos.append(f'<a href="../{gr[g - 2]["slug"]}/">Grupo anterior: Grupo {gr[g - 2]["nome"]}</a>')
+        vizinhos.append(f'<a href="../{gr[g - 2]["slug"]}/">' + P.p(f'Grupo anterior: Grupo~{gr[g - 2]["nome"]}</a>'))
     if g < n:
-        vizinhos.append(f'<a href="../{gr[g]["slug"]}/">Grupo seguinte: Grupo {gr[g]["nome"]}</a>')
+        vizinhos.append(f'<a href="../{gr[g]["slug"]}/">' + P.p(f'Grupo seguinte: Grupo~{gr[g]["nome"]}</a>'))
     img_menu = ''
     if P.img and P.img['grupo'] == g and not P.mostra_imagem:
-        img_menu = (f'<a href="{P.pdf_pagina()}" target="_blank" rel="noopener">A imagem do Grupo {nome} '
-                    f'(enunciado, p. {P.img["pagina_pdf"]}, PDF)</a>')
+        img_menu = (f'<a href="{P.pdf_pagina()}" target="_blank" rel="noopener">' + P.p(f'A imagem do Grupo~{nome} '
+                    f'(enunciado, p.~{P.img["pagina_pdf"]}, PDF)</a>'))
     menu_links = ''.join(vizinhos) + (
         f'<a href="{ancora}">Os {EXTENSO[n]} grupos desta prova</a>' + img_menu
         + f'<a href="{P.url_enunciado}" target="_blank" rel="noopener">Enunciado da prova (PDF)</a>'
         f'<a href="{P.url_criterios}" target="_blank" rel="noopener">Critérios de classificação (PDF)</a>'
         f'<a href="{R}como/">Como se faz (vídeos)</a>')
-    fonte_menu = (f'EPI, Escola Profissional de Imagem. Português {ANO_LETIVO}. Provas em cartões: Grupo {nome} do {P.titulo_exame}, '
-                  f'{P.nome}, versão {P.versao}. {P.autor()} {P.ligacoes_pdf()} {P.fontes_textos(G)} '
+    fonte_menu = (f'EPI, Escola Profissional de Imagem. Português {ANO_LETIVO}. ' + P.p(f'Provas em cartões: Grupo~{nome} do {P.titulo_exame}, '
+                  f'{P.nome_p}, versão~{P.versao}. ') + f'{P.autor()} {P.ligacoes_pdf()} {P.fontes_textos(G)} '
                   'São nossos os cartões de preparação, as explicações e os exemplos; o que é da prova e dos critérios está dito '
                   'em cada cartão. O que marcas fica só neste aparelho.')
     aprendes_html = html.escape(aprendes, quote=False)
     aprendes_html = re.sub(r'_([^_]+)_', r'<i>\1</i>', aprendes_html)
     aprendes_html = re.sub(r'(?<![>\w])cartoon(?!\w)', '<i>cartoon</i>', aprendes_html)
-    seguinte = (f',seguinte:"../{gr[g]["slug"]}/",seguinteRotulo:"Grupo {gr[g]["nome"]}"' if g < n
+    # 12/11/2026: o rótulo do botão «Grupo II» (texto do botão) também não se parte; «titulo», mais abaixo, fica com o espaço
+    # normal (só serve de nome acessível quando não há casca).
+    seguinte = (f',seguinte:"../{gr[g]["slug"]}/",seguinteRotulo:"' + P.p(f'Grupo~{gr[g]["nome"]}"') if g < n
                 else ',voltarRotulo:"Voltar às provas"')
     dados = json.dumps(cartoes, ensure_ascii=False).replace('</', '<\\/')
     if '</script' in dados.lower():
@@ -375,7 +437,7 @@ def pagina(P, G, cartoes, blocos):
 <h1 class="c-sr">{html.escape(h1, quote=False)}</h1><main class="casca-corpo" id="casca-corpo" tabindex="-1"><div id="baralho" class="jogo-alvo"></div></main>
 <footer class="casca-acoes" data-c-acoes></footer>
 <section class="casca-folha" data-c-folha role="status" aria-live="polite" hidden></section>
-<div class="casca-menu" data-c-painel hidden><div class="c-menu-in" role="dialog" aria-label="Menu"><div class="c-menu-cab"><p>{P.nome}<br>Grupo {nome} de {ROMANOS[n - 1]}</p><button type="button" class="c-ic" data-c-fecha-menu aria-label="Fechar o menu">✕</button></div><nav><ol class="c-migalhas" aria-label="Onde estás"><li style="--k:0"><a href="{R}">{MG_CASA}Página inicial</a></li><li style="--k:1"><a href="../../../">Preparação de exame</a></li><li style="--k:2"><a href="../../">Provas em cartões</a></li><li><span class="aqui" style="--k:3">Estás em: Grupo {nome}</span></li></ol>{menu_links}</nav><p class="c-menu-extra"><b>Aprendes:</b> {menu_aprendes}</p><p class="c-menu-extra">{fonte_menu}</p></div></div>
+<div class="casca-menu" data-c-painel hidden><div class="c-menu-in" role="dialog" aria-label="Menu"><div class="c-menu-cab"><p>{P.nome_p}<br>{P.p(f"Grupo~{nome} de~{ROMANOS[n - 1]}")}</p><button type="button" class="c-ic" data-c-fecha-menu aria-label="Fechar o menu">✕</button></div><nav><ol class="c-migalhas" aria-label="Onde estás"><li style="--k:0"><a href="{R}">{MG_CASA}Página inicial</a></li><li style="--k:1"><a href="../../../">Preparação de exame</a></li><li style="--k:2"><a href="../../">Provas em cartões</a></li><li><span class="aqui" style="--k:3">{P.p(f"Estás em: Grupo~{nome}")}</span></li></ol>{menu_links}</nav><p class="c-menu-extra"><b>Aprendes:</b> {menu_aprendes}</p><p class="c-menu-extra">{fonte_menu}</p></div></div>
 </div><div id="aviso" role="status"></div>
 <noscript>Esta página precisa de JavaScript. <a href="../../">Voltar às provas em cartões</a>.</noscript>
 <script>document.addEventListener("DOMContentLoaded",function(){{"use strict";var K="{G["chave"]}",CARTOES={dados};
@@ -392,23 +454,24 @@ def bloco_prova(P, contagens):
     m = re.search(r'(\d+) minutos.*?Tolerância: (\d+) minutos', P.fx['prova']['duracao'])
     if not m:
         raise Falha(f'{pv}: a duração da transcrição não diz «N minutos… Tolerância: N minutos» ({P.fx["prova"]["duracao"]})')
-    sobre = (f'Versão {P.versao} da prova. Na prova, {m.group(1)} minutos, mais {m.group(2)} de tolerância, para os '
-             f'{EXTENSO[P.n_grupos]} grupos; {P.fx["cotacoes"]["total"]} pontos. Começa por qualquer grupo: cada um é uma lição.')
+    # 12/11/2026: achado 28 da varredura do cuidado: as referências e os números do bloco não se partem (P.p, com «nao_partir»).
+    sobre = P.p(f'Versão~{P.versao} da prova. Na prova, {m.group(1)}~minutos, mais {m.group(2)} de tolerância, para os '
+                f'{EXTENSO[P.n_grupos]} grupos; {P.fx["cotacoes"]["total"]}~pontos. Começa por qualquer grupo: cada um é uma lição.')
     lis = []
     for G in P.grupos:
         g, gc = G['g'], G['cfg']
         total, fazer = contagens[G['slug']]
         i = f'pv-{pv}-g{g}'
         lis.append(f'<li class="pv-grupo"><a href="{pv}/{G["slug"]}/" data-chave="{G["chave"]}" data-versao="{G["versao_licao"]}" '
-                   f'aria-labelledby="{i}-n {i}-t {i}-e"><span class="pv-num" id="{i}-n">Grupo {G["nome"]}</span>'
+                   f'aria-labelledby="{i}-n {i}-t {i}-e"><span class="pv-num" id="{i}-n">{P.p("Grupo~")}{G["nome"]}</span>'
                    f'<h3 id="{i}-t">{html.escape(G["D"]["titulo"], quote=False)}</h3><p class="pv-o-que">{gc["o_que"]}</p>'
                    f'<p class="pv-aprendes">{gc["aprendes"]}</p><p class="pv-meta">{total} cartões, {fazer} para responder. {gc["meta"]}<br>'
-                   f'<span class="pv-estado" id="{i}-e" data-estado>Por fazer</span></p><span class="pv-abrir">Abrir o Grupo {G["nome"]} →</span></a></li>')
-    fonte = (f'{P.titulo_exame}, {P.nome}, versão {P.versao}, e Critérios de Classificação da mesma prova. {P.autor(curto=True)} '
+                   f'<span class="pv-estado" id="{i}-e" data-estado>Por fazer</span></p><span class="pv-abrir">{P.p("Abrir o Grupo~")}{G["nome"]} →</span></a></li>')
+    fonte = (f'{P.titulo_exame}, {P.nome_p}, ' + P.p(f'versão~{P.versao}') + f', e Critérios de Classificação da mesma prova. {P.autor(curto=True)} '
              f'{P.ligacoes_pdf(curto=True)} Textos da prova: {P.cfg["seccao"]["textos"]}. As referências completas estão em cada grupo.')
     # 30/10/2026: o ano e a fase dentro do título, para cada bloco (região e título) ter um nome diferente
     return (f'<section class="pv-prova" id="prova-{pv}" aria-labelledby="pv-{pv}"><div class="pv-cab">'
-            f'<h2 id="pv-{pv}"><span class="pv-quando">{P.ano}, {P.fase_rot}</span> {P.titulo_exame}, Prova {P.codigo}</h2>'
+            f'<h2 id="pv-{pv}"><span class="pv-quando">{P.ano}, {P.p(f"{P.fase}.ª~fase")}</span> {P.titulo_exame}, {P.p("Prova~")}{P.codigo}</h2>'
             f'<p class="pv-sobre">{sobre}</p></div>\n'
             '<ol class="pv-grupos">\n' + '\n'.join(lis) + '\n</ol>\n'
             f'<p class="pv-fonte">{fonte}</p>\n</section>\n\n')
@@ -423,7 +486,8 @@ def seguir_html(provas, sec):
     itens = []
     for ano in sorted(por_ano, reverse=True):
         fases = sorted(por_ano[ano])
-        rot = f'{ano}, {fases[0]}.ª fase' if len(fases) == 1 else f'{ano}, ' + ', '.join(f'{f}.ª' for f in fases[:-1]) + f' e {fases[-1]}.ª fases'
+        rot = f'{ano}, {fases[0]}.ª~fase' if len(fases) == 1 else f'{ano}, ' + ', '.join(f'{f}.ª' for f in fases[:-1]) + f' e {fases[-1]}.ª~fases'
+        rot = prender(rot, bool(sec.get('nao_partir')))  # 12/11/2026: «2.ª fases» não se parte, com «nao_partir» em seccao.json
         itens.append(f'<li><b>{rot}</b>Em preparação.</li>')
     lista = f'<ol>{"".join(itens)}</ol>' if itens else ''
     return (f'<section class="pv-seguir" aria-labelledby="pv-seguir-titulo"><h2 id="pv-seguir-titulo">O que vem a seguir</h2>'
@@ -438,7 +502,7 @@ def seccao(provas, contagens):
 <html lang="pt-PT" data-appearance-site="pt"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Provas em cartões: Preparação de exame de Português</title><meta name="description" content="Os exames nacionais de Português (Prova 639) em cartões, grupo a grupo: o texto da prova com a numeração da prova, cada item desmontado em exercícios no ecrã e a resposta completa no caderno, com a grelha oficial à vista."><link rel="preload" href="../../assets/exame/fontes/fraunces-latin-normal.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="../../assets/exame/fontes/ibm-plex-sans-latin-normal.woff2" as="font" type="font/woff2" crossorigin><link rel="stylesheet" href="../../assets/exame/exame.css?v={V["exame.css"]}"><link rel="stylesheet" href="../../assets/appearance.css?v={V["appearance.css"]}"><link rel="stylesheet" href="../../assets/exame/oficina.css?v={V["oficina.css"]}"><link rel="stylesheet" href="../../assets/exame/provas.css?v={V["provas.css"]}"><script src="../../assets/appearance.js?v={V["appearance.js"]}"></script><script defer src="../../assets/exame/provas.js?v={V["provas.js"]}"></script><script defer src="../../assets/projection-launcher.js?v={V["projection-launcher.js"]}" data-site="pt"></script></head>
 <body class="oficina"><a class="skip" href="#provas">Ir para as provas</a><nav class="migalhas" aria-label="Onde estás"><ol><li><a href="../../">Português</a></li><li><a href="../">Preparação de exame</a></li><li><span aria-current="page">Provas em cartões</span></li></ol></nav><header class="site-head of-cabeca"><a class="wordmark" href="../">Português<span>.</span><small>Preparação de exame</small></a><nav aria-label="Navegação da preparação"><a href="../">Sessões</a><a href="../laboratorio/">Laboratório de respostas</a><a href="./" aria-current="page">Provas em cartões</a><a href="../treinos/">Treinos</a></nav></header>
 <main id="provas" tabindex="-1">
-<section class="of-rosto" aria-labelledby="of-titulo"><h1 id="of-titulo">Provas em cartões</h1><p class="of-entrada">Os exames nacionais de Português, grupo a grupo. Lês o texto da prova com a numeração da prova e, a seguir a cada parte, fazes os cartões: o que pede o verbo, que linhas provam, o plano da resposta. A resposta completa escreve-se no caderno, com a grelha oficial à vista, e só depois a comparas com exemplos e com os critérios. Nos itens de escolha, tentas primeiro sozinho e depois vês porquê.</p><p class="of-estatuto-geral">Prova 639, 12.º ano, com os critérios de classificação</p></section>
+<section class="of-rosto" aria-labelledby="of-titulo"><h1 id="of-titulo">Provas em cartões</h1><p class="of-entrada">Os exames nacionais de Português, grupo a grupo. Lês o texto da prova com a numeração da prova e, a seguir a cada parte, fazes os cartões: o que pede o verbo, que linhas provam, o plano da resposta. A resposta completa escreve-se no caderno, com a grelha oficial à vista, e só depois a comparas com exemplos e com os critérios. Nos itens de escolha, tentas primeiro sozinho e depois vês porquê.</p><p class="of-estatuto-geral">{prender("Prova~639, 12.º~ano", bool(sec.get("nao_partir")))}, com os critérios de classificação</p></section>
 
 {blocos}{seguir_html(provas, sec)}<section id="fontes" class="source of-colofao" aria-labelledby="fontes-titulo"><h2 id="fontes-titulo">O que é oficial e o que é nosso</h2><div class="of-colofao-texto"><p><strong>Oficial</strong>: o texto da prova, com a numeração das linhas e as notas, os enunciados, as opções, as chaves da versão indicada e as grelhas dos critérios, tal como estão na prova e nos critérios de classificação. Os cartões que os mostram dizem «da prova» ou «dos critérios».</p><p><strong>Nosso</strong>: os cartões de preparação, as explicações e as respostas de exemplo. Quando damos uma resposta possível, dizemos que é um exemplo e de onde vem. O sítio não corrige o que escreves no caderno: essa correção faz-se com a grelha oficial, por ti ou pelo docente.</p><p>O progresso de cada grupo fica só neste aparelho e viaja com o resto quando guardas o progresso num ficheiro na página inicial.</p></div></section>
 </main>

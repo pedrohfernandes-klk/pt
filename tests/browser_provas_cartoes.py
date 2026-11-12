@@ -207,7 +207,10 @@ def percorrer(browser, host, P, g, width):
             assert fig.get_attribute('role') is None and fig.get_attribute('tabindex') is None, (onde, 'a figura da ligação continua um botão')
             href = page.locator('#baralho figure.ver-fig a.ver-pdf').get_attribute('href')
             assert href == f'{P.url_enunciado}#page={img["pagina_pdf"]}', (onde, href)
-            assert f'p. {img["pagina_pdf"]}' in page.locator('#baralho figure.ver-fig a.ver-pdf').inner_text()
+            # 12/11/2026: a ligação leva ao enunciado de quem o publica (P.url_enunciado é agora o endereço original, em eduqa.pt) e
+            # «p. 13 de 16» escreve-se com as referências presas (U+00A0); só esta forma serve.
+            assert href.startswith('https://eduqa.pt/'), (onde, href)
+            assert f'p.\xa0{img["pagina_pdf"]} de\xa0{img["paginas_pdf"]}' in page.locator('#baralho figure.ver-fig a.ver-pdf').text_content()
         responder(page, k, x, onde)
     page.locator('#baralho .cartao.fim').wait_for()
     sem_desvio(page, f'{P.pasta} {slug} {width}px fim')
@@ -217,7 +220,8 @@ def percorrer(browser, host, P, g, width):
     assert page.evaluate('localStorage.getItem("epi-ultima")') is None
     acoes = page.evaluate('[...document.querySelectorAll("[data-c-acoes] a,[data-c-acoes] button")].map(a=>a.textContent.trim()+"|"+(a.getAttribute("href")||""))')
     if g < len(P.grupos):
-        assert any(a.startswith(f'Grupo {ROMANOS[g]}|../{P.grupos[g + 1]}/') for a in acoes), acoes
+        # 12/11/2026: o rótulo do botão com a referência presa («Grupo II» com U+00A0); só esta forma serve.
+        assert any(a.startswith(f'Grupo\xa0{ROMANOS[g]}|../{P.grupos[g + 1]}/') for a in acoes), acoes
     assert any(a.startswith(f'Provas em cartões|../../#prova-{P.pasta}') or a.startswith('Voltar às provas') for a in acoes), acoes
     fim = page.locator('#baralho').text_content()
     assert 'Onde se estuda nos módulos' in fim and 'Na preparação de exame' in fim, fim[-400:]
@@ -229,11 +233,19 @@ def percorrer(browser, host, P, g, width):
     menu = page.locator('[data-c-painel]')
     menu.wait_for(state='visible')
     texto = menu.text_content()
-    marcas_menu = ['Provas em cartões', f'Estás em: Grupo {ROMANOS[g - 1]}', 'IAVE', f'versão {P.versao}', 'Aprendes:']
-    if P.autor_nao_iave():
-        marcas_menu.append(P.autor_nao_iave().split(',')[0])
+    # 12/11/2026: as migalhas e o crédito com as referências presas (U+00A0), nas formas exatas; a autoria é a instituição que a
+    # transcrição dá (antes, o teste pedia «IAVE» e, a mais, a primeira palavra da EduQA): o nome inteiro tem de lá estar e, quando
+    # não é o IAVE, «IAVE» não pode aparecer no menu. As ligações do enunciado e dos critérios levam a quem publica os documentos.
+    autor = P.fx['prova']['autor_instituicao']
+    marcas_menu = ['Provas em cartões', f'Estás em: Grupo\xa0{ROMANOS[g - 1]}', autor, f'{P.nome_preso}, versão\xa0{P.versao}.', 'Aprendes:']
     for marca in marcas_menu:
         assert marca in texto, (slug, marca)
+    if P.autor_nao_iave():
+        assert 'IAVE' not in texto, slug
+    hrefs_menu = menu.evaluate('m=>[...m.querySelectorAll("a[href]")].map(a=>a.getAttribute("href"))')
+    for url in (P.url_enunciado, P.url_criterios):
+        assert hrefs_menu.count(url) == 2, (slug, url, hrefs_menu)   # a ligação do menu e a do crédito
+    assert not [h for h in hrefs_menu if 'examesnacionais' in h], hrefs_menu
     page.locator('[data-c-fecha-menu]').click()
     # segunda visita: «Já feita»
     page.reload(wait_until='networkidle')
@@ -280,7 +292,8 @@ def rotulos_a_seguir():
     out = []
     for ano in sorted(faltam, reverse=True):
         fs = sorted(faltam[ano])
-        out.append(f'{ano}, {fs[0]}.ª fase' if len(fs) == 1 else f'{ano}, ' + ', '.join(f'{f}.ª' for f in fs[:-1]) + f' e {fs[-1]}.ª fases')
+        # 12/11/2026: «1.ª fase» e «2.ª fases» com a referência presa (U+00A0); só esta forma serve.
+        out.append(f'{ano}, {fs[0]}.ª\xa0fase' if len(fs) == 1 else f'{ano}, ' + ', '.join(f'{f}.ª' for f in fs[:-1]) + f' e {fs[-1]}.ª\xa0fases')
     return out
 
 
@@ -325,7 +338,8 @@ def seccao(browser, host):
     titulos = [json.loads((DADOS / P.pasta / f'{slug}.json').read_text('utf-8'))['titulo'] for P in PROVAS for slug in P.grupos.values()]
     grupos = [ROMANOS[g - 1] for P in PROVAS for g in P.grupos]
     for nome, titulo, rom in zip(nomes, titulos, grupos):
-        assert nome == f'Grupo {rom} {titulo} Por fazer', nome
+        # 12/11/2026: «Grupo II» com a referência presa (U+00A0) no texto do elemento que dá o nome; só esta forma serve.
+        assert nome == f'Grupo\xa0{rom} {titulo} Por fazer', nome
     # impressão: a secção sai no papel (exame.css esconde main nas páginas das sessões)
     page.emulate_media(media='print')
     assert page.evaluate('getComputedStyle(document.querySelector("main#provas")).display') != 'none'

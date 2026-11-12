@@ -6,16 +6,19 @@
  "versao": 2,
  "versao_licao": "2026-10-29",
  "autoria": {
-  "nota": "os PDF de 2026 trazem o logótipo da EduQA, Instituto de Educação, Qualidade e Avaliação, que os publica em eduqa.pt",
-  "originais_em": "eduqa.pt",
-  "nota_copias": "A cópia pública dos critérios tem a marca de água «VERSÃO DE TRABALHO»; o texto é igual ao dos critérios publicados em eduqa.pt (conferido a 29/10/2026)."
+  "_sobre": "12/11/2026: o que os PDF dizem de quem os faz e para onde levam as ligações. «texto» vai para o crédito do menu das lições e «texto_curto» para o bloco da prova na secção. «ligacoes»: «originais» faz as ligações do enunciado, dos critérios e da página da imagem levarem a quem publica os documentos (enunciado_original_url e criterios_original_url da transcrição).",
+  "texto": "O enunciado e os critérios de classificação trazem, na p. 1, o logótipo da EduQA, Instituto de Educação, Qualidade e Avaliação, que os publica em eduqa.pt.",
+  "texto_curto": "Enunciado e critérios de classificação com o logótipo da EduQA, Instituto de Educação, Qualidade e Avaliação (p. 1), publicados em eduqa.pt.",
+  "ligacoes": "originais"
  },
+ "_nao_partir": "12/11/2026: com true, as referências e os números da moldura que o gerador escreve (título, menu, migalhas, crédito, fim da lição, ligações da imagem e o bloco da prova na secção) levam U+00A0 e U+2060, para não se partirem entre linhas. Nunca em atributos nem no <title>.",
+ "nao_partir": true,
  "grupos": [
   {
    "licoes": ["m9/licao-m9-f01", "m9/licao-m9-f02", "m9/licao-m9-f03", "m9/licao-m9-f05", "obras/memorial", "m6/licao-m6-f06", "m6/licao-m6-f07", "obras/cesario"],
    "sessoes": ["s19", "s11", "s23"],
    "o_que": "Saramago e Cesário Verde: sete itens, cinco de resposta escrita e dois de seleção.",
-   "aprendes": "Aprendes a desmontar os itens de resposta escrita do Grupo I: o que pede o verbo, que linhas ou versos provam, como se ordena a resposta e o que a grelha oficial valoriza.",
+   "aprendes": "Aprendes a desmontar os itens de resposta escrita do Grupo I: o que pede o verbo, que linhas ou versos provam, como se ordena a resposta e o que a grelha oficial valoriza.",
    "meta": "Cinco respostas no caderno."
   },
   {
@@ -28,7 +31,7 @@
   {
    "licoes": ["m2/licao-m2-f08", "m4/licao-m4-f20", "m6/licao-m6-f11", "m4/licao-m4-f15", "m5/licao-m5-f07"],
    "sessoes": ["s25", "s24"],
-   "o_que": "Escrita: a apreciação crítica de um <i>cartoon</i>, de 200 a 350 palavras.",
+   "o_que": "Escrita: a apreciação crítica de um <i>cartoon</i>, de 200 a 350 palavras.",
    "aprendes": "Aprendes a escrever a apreciação crítica como na prova: ler o pedido, descrever o que conta, fundamentar o comentário em três aspetos, concluir, ligar as ideias e rever, com as contas das regras que tiram pontos.",
    "meta": "Um texto no caderno e a autoavaliação com a grelha."
   }
@@ -42,7 +45,7 @@
   "paginas_pdf": 16,
   "abre_sem_imagem": [
    "<li><b>O que é oficial:</b> o enunciado, a imagem e a grelha vêm da prova e dos critérios.",
-   "<li><b>O que é oficial:</b> o enunciado, a imagem e a grelha vêm da prova e dos critérios. A imagem está no PDF da prova, p. 13: cada cartão que te pede para olhar para ela tem a ligação."
+   "<li><b>O que é oficial:</b> o enunciado, a imagem e a grelha vêm da prova e dos critérios. A imagem está no PDF da prova, p. 13: cada cartão que te pede para olhar para ela tem a ligação."
   ]
  },
  "seccao": {

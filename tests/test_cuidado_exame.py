@@ -25,7 +25,8 @@ sys.path.insert(0, str(ROOT / 'tests'))
 import cuidado_exame_20261112 as C  # noqa: E402
 import exame_aquecimentos  # noqa: E402
 import verificar_camadas  # noqa: E402
-from auditoria_20261028 import undo_cuidado_exame_1112, undo_cuidado_m9_1112  # noqa: E402
+# 12/11/2026: também a camada que ficou por cima desta nas provas em cartões (exame_provas_oficial_20261112).
+from auditoria_20261028 import undo_cuidado_exame_1112, undo_cuidado_m9_1112, undo_exame_provas_oficial_1112  # noqa: E402
 from provas_casos import provas  # noqa: E402
 from test_provas_cartoes import OFICIAL, sem_oficial, segmentos  # noqa: E402
 
@@ -51,8 +52,17 @@ PROVAS_CONTAS = {66: (124, 171), 67: (93, 160), 69: (216, 270), 70: (162, 231), 
 NUMEROS = (1751, 65)
 
 
-def ler(rel):
+def cru(rel):
+    """O ficheiro tal como está na árvore."""
     return (ROOT / rel).read_bytes().decode('utf-8')
+
+
+def ler(rel):
+    # 12/11/2026: por cima desta camada ficam as provas em cartões com os documentos oficiais (exame_provas_oficial_20261112), que
+    # mudam as seis lições das provas e os seus dados. Os testes desta camada leem cada ficheiro como ela o deixou: com a camada de
+    # cima desfeita pelo manifesto, com contagem estrita (nos ficheiros que ela não muda, é o ficheiro da árvore). As exigências
+    # são as mesmas: os resumos «after» do manifesto desta camada continuam a ter de bater, letra a letra.
+    return undo_exame_provas_oficial_1112(rel, cru(rel))
 
 
 def sha_lf(texto):
@@ -61,7 +71,8 @@ def sha_lf(texto):
 
 def base(rel):
     """O ficheiro sem esta camada (desfeita pelo manifesto, com contagem estrita)."""
-    return undo_cuidado_exame_1112(rel, ler(rel))
+    # 12/11/2026: a partir do ficheiro da árvore (undo_cuidado_exame_1112 desfaz primeiro as camadas de cima).
+    return undo_cuidado_exame_1112(rel, cru(rel))
 
 
 def solto(texto):
@@ -343,7 +354,8 @@ class CuidadoExame(unittest.TestCase):
                             # 12/11/2026: por cima desta camada fica agora a ligação «Treinos» na página principal do Exame
                             # (exame_ligacao_treinos_20261112, que só muda exame/index.html, fora desta camada); desfaz-se primeiro, com
                             # a mesma exigência, e as contagens são as mesmas.
-                            '--verificar', '--desfazer-antes', 'tests/fixtures/exame-ligacao-treinos-edits-20261112.json'], cwd=ROOT, capture_output=True, text=True, encoding='utf-8')
+                            # 12/11/2026: as provas em cartões com os documentos oficiais (exame_provas_oficial_20261112: a secção exame/provas/, as seis lições das provas de 2026 e os seus dados) passam a camada mais recente, por cima da ligação «Treinos» na página principal do Exame; desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
+                            '--verificar', '--desfazer-antes', 'tests/fixtures/exame-provas-oficial-edits-20261112.json', '--desfazer-antes', 'tests/fixtures/exame-ligacao-treinos-edits-20261112.json'], cwd=ROOT, capture_output=True, text=True, encoding='utf-8')
         self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
         self.assertIn(f'{len(TROCAS)} trocas em {len(MANIFESTO["files"])} ficheiros: {len(TROCAS)} aplicadas, 0 por aplicar; manifesto em dia.',
                       r.stdout)
@@ -362,7 +374,9 @@ class CuidadoExame(unittest.TestCase):
                 self.assertEqual(set(registo), {'base_sha256_lf', 'after_sha256_lf', 'edits'})
                 atual = ler(rel)
                 self.assertEqual(sha_lf(atual), registo['after_sha256_lf'])
-                b = undo_cuidado_exame_1112(rel, atual)
+                # 12/11/2026: a base desfaz-se a partir do ficheiro da árvore (a função desfaz primeiro as camadas de cima, com
+                # contagem estrita); «atual» é o ficheiro como esta camada o deixou.
+                b = undo_cuidado_exame_1112(rel, cru(rel))
                 self.assertEqual(sha_lf(b), registo['base_sha256_lf'])
                 # Ida e volta: refazer as trocas sobre a base devolve o ficheiro, letra a letra.
                 refeito = b
@@ -377,18 +391,22 @@ class CuidadoExame(unittest.TestCase):
                 if rel in m9:
                     self.assertEqual(rel, SESSOES)
                     self.assertEqual(sha_lf(b), m9[rel]['after_sha256_lf'])
-                    self.assertEqual(sha_lf(undo_cuidado_m9_1112(rel, atual)), m9[rel]['base_sha256_lf'])
+                    # 12/11/2026: também a partir do ficheiro da árvore (a cadeia desfaz primeiro as camadas de cima).
+                    self.assertEqual(sha_lf(undo_cuidado_m9_1112(rel, cru(rel))), m9[rel]['base_sha256_lf'])
                 else:
-                    self.assertEqual(undo_cuidado_m9_1112(rel, atual), b)
+                    self.assertEqual(undo_cuidado_m9_1112(rel, cru(rel)), b)
         self.assertIn(SESSOES, m['files'])
         # No topo das camadas, por cima da decisão 152 no M9, e registada onde as outras estão.
         # 12/11/2026: por cima da decisão 152 no Exame e nas páginas transversais fica a ligação «Treinos» na página principal do Exame (exame_ligacao_treinos_20261112): a ordem ganha mais uma posição, com a mesma exigência.
-        self.assertEqual(verificar_camadas.LAYERS[0], ('exame_ligacao_treinos_20261112', 'exame-ligacao-treinos-edits-20261112'))
-        self.assertEqual(verificar_camadas.LAYERS[1], ('cuidado_exame_20261112', 'cuidado-exame-edits-20261112'))
-        self.assertEqual(verificar_camadas.LAYERS[2], ('cuidado_m9_20261112', 'cuidado-m9-edits-20261112'))
+        # 12/11/2026: por cima da ligação «Treinos» na página principal do Exame ficam as provas em cartões com os documentos oficiais (exame_provas_oficial_20261112): a ordem ganha mais uma posição, com a mesma exigência.
+        self.assertEqual(verificar_camadas.LAYERS[0], ('exame_provas_oficial_20261112', 'exame-provas-oficial-edits-20261112'))
+        self.assertEqual(verificar_camadas.LAYERS[1], ('exame_ligacao_treinos_20261112', 'exame-ligacao-treinos-edits-20261112'))
+        self.assertEqual(verificar_camadas.LAYERS[2], ('cuidado_exame_20261112', 'cuidado-exame-edits-20261112'))
+        self.assertEqual(verificar_camadas.LAYERS[3], ('cuidado_m9_20261112', 'cuidado-m9-edits-20261112'))
         # 12/11/2026: com a ligação «Treinos» na página principal do Exame, as camadas passam a ser mais uma.
-        self.assertEqual(len(verificar_camadas.LAYERS), 45)
-        self.assertEqual(len(set(verificar_camadas.LAYERS)), 45)
+        # 12/11/2026: com as provas em cartões com os documentos oficiais (exame_provas_oficial_20261112), as camadas passam a ser mais uma.
+        self.assertEqual(len(verificar_camadas.LAYERS), 46)
+        self.assertEqual(len(set(verificar_camadas.LAYERS)), 46)
         sala = ler('scripts/desligar_sala.py')
         self.assertLess(sala.index('cuidado-exame-edits-20261112.json'), sala.index('cuidado-m9-edits-20261112.json'))
         auditoria = ler('tests/auditoria_20261028.py')
@@ -402,6 +420,8 @@ class CuidadoExame(unittest.TestCase):
         # 12/11/2026: o manifesto da camada que fica por cima desta (a ligação «Treinos» na página principal do Exame), que não toca
         # em nenhum ficheiro desta.
         lt = 'tests/fixtures/exame-ligacao-treinos-edits-20261112.json'
+        # 12/11/2026: o manifesto da camada que fica por cima dela (as provas em cartões com os documentos oficiais).
+        po = 'tests/fixtures/exame-provas-oficial-edits-20261112.json'
         self.assertEqual(set(json.loads(ler(lt))['files']) & set(m['files']), set())
         cadeias = 0
         for p in sorted((ROOT / '.github/workflows').glob('*.yml')) + sorted((ROOT / 'tests').glob('test_*.py')):
@@ -411,17 +431,22 @@ class CuidadoExame(unittest.TestCase):
             plano = re.sub(r"['\"]\s*,\s*['\"]", ' ', texto)
             with self.subTest(ficheiro=p.name):
                 # 12/11/2026: a ligação «Treinos» na página principal do Exame (exame_ligacao_treinos_20261112: só a navegação de exame/index.html) passa a camada mais recente, por cima da decisão 152 no Exame e nas páginas transversais; desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
-                self.assertEqual(plano.count('--desfazer-antes ' + m9_rel), plano.count(f'--desfazer-antes {lt} --desfazer-antes {ex} --desfazer-antes {m9_rel}'))
+                # 12/11/2026: as provas em cartões com os documentos oficiais (exame_provas_oficial_20261112: a secção exame/provas/, as seis lições das provas de 2026 e os seus dados) passam a camada mais recente, por cima da ligação «Treinos» na página principal do Exame; desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
+                self.assertEqual(plano.count('--desfazer-antes ' + m9_rel), plano.count(f'--desfazer-antes {po} --desfazer-antes {lt} --desfazer-antes {ex} --desfazer-antes {m9_rel}'))
                 # 12/11/2026: a ligação «Treinos» na página principal do Exame (exame_ligacao_treinos_20261112: só a navegação de exame/index.html) passa a camada mais recente, por cima da decisão 152 no Exame e nas páginas transversais; desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
-                self.assertEqual(plano.count('--desfazer-antes {m9}'), plano.count('--desfazer-antes {lt} --desfazer-antes {ex} --desfazer-antes {m9}'))
+                # 12/11/2026: as provas em cartões com os documentos oficiais (exame_provas_oficial_20261112: a secção exame/provas/, as seis lições das provas de 2026 e os seus dados) passam a camada mais recente, por cima da ligação «Treinos» na página principal do Exame; desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
+                self.assertEqual(plano.count('--desfazer-antes {m9}'), plano.count('--desfazer-antes {po} --desfazer-antes {lt} --desfazer-antes {ex} --desfazer-antes {m9}'))
                 # 12/11/2026: a ligação «Treinos» na página principal do Exame (exame_ligacao_treinos_20261112: só a navegação de exame/index.html) passa a camada mais recente, por cima da decisão 152 no Exame e nas páginas transversais; desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
-                cadeias += plano.count(f'--desfazer-antes {lt} --desfazer-antes {ex} --desfazer-antes {m9_rel}') + plano.count('--desfazer-antes {lt} --desfazer-antes {ex} --desfazer-antes {m9}')
+                # 12/11/2026: as provas em cartões com os documentos oficiais (exame_provas_oficial_20261112: a secção exame/provas/, as seis lições das provas de 2026 e os seus dados) passam a camada mais recente, por cima da ligação «Treinos» na página principal do Exame; desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
+                cadeias += plano.count(f'--desfazer-antes {po} --desfazer-antes {lt} --desfazer-antes {ex} --desfazer-antes {m9_rel}') + plano.count('--desfazer-antes {po} --desfazer-antes {lt} --desfazer-antes {ex} --desfazer-antes {m9}')
         self.assertGreater(cadeias, 80)
         tarefas = ler('.github/workflows/pt-tarefas-qa.yml')
         # 12/11/2026: a ligação «Treinos» na página principal do Exame (exame_ligacao_treinos_20261112) passa a camada mais recente, por cima desta; desfaz-se primeiro, com a mesma exigência.
-        self.assertIn(f'python scripts/aplicar_trocas.py scripts/cuidado_exame_20261112.json --manifesto {ex} --verificar --desfazer-antes {lt}\n', tarefas)
+        # 12/11/2026: as provas em cartões com os documentos oficiais (exame_provas_oficial_20261112: a secção exame/provas/, as seis lições das provas de 2026 e os seus dados) passam a camada mais recente, por cima da ligação «Treinos» na página principal do Exame; desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
+        self.assertIn(f'python scripts/aplicar_trocas.py scripts/cuidado_exame_20261112.json --manifesto {ex} --verificar --desfazer-antes {po} --desfazer-antes {lt}\n', tarefas)
         # 12/11/2026: a ligação «Treinos» na página principal do Exame (exame_ligacao_treinos_20261112: só a navegação de exame/index.html) passa a camada mais recente, por cima da decisão 152 no Exame e nas páginas transversais; desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
-        self.assertIn(f'python scripts/aplicar_trocas.py scripts/cuidado_m9_20261112.json --manifesto {m9_rel} --verificar --desfazer-antes {lt} --desfazer-antes {ex}\n', tarefas)
+        # 12/11/2026: as provas em cartões com os documentos oficiais (exame_provas_oficial_20261112: a secção exame/provas/, as seis lições das provas de 2026 e os seus dados) passam a camada mais recente, por cima da ligação «Treinos» na página principal do Exame; desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
+        self.assertIn(f'python scripts/aplicar_trocas.py scripts/cuidado_m9_20261112.json --manifesto {m9_rel} --verificar --desfazer-antes {po} --desfazer-antes {lt} --desfazer-antes {ex}\n', tarefas)
         apoios = ler('.github/workflows/pt-apoios-qa.yml')
         self.assertIn("run: python -m unittest discover -s tests -p 'test_cuidado_exame.py' -v", apoios)
         self.assertIn('run: python tests/browser_cuidado_exame.py', apoios)
