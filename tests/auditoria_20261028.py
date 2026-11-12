@@ -54,6 +54,7 @@ scripts/aplicar_trocas.py a partir de scripts/lingua_pessoa_m7_20261030.json. É
 de todas as outras (antes da das opções denunciadoras).
 """
 from pathlib import Path
+import hashlib
 import json
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -345,6 +346,14 @@ _CUIDADO_M5_0811 = json.loads((ROOT/'tests/fixtures/cuidado-m5-edits-20261108.js
 _CUIDADO_M6_0811 = json.loads((ROOT/'tests/fixtures/cuidado-m6-edits-20261108.json').read_text('utf-8'))['files']
 
 def undo_cuidado_m6_0811(path, text):
+    # 11/11/2026: a decisão 152 no M6 repõe também, por cima da revisão dos enunciados das tarefas (#192), os espaços que ela tinha
+    # tirado às tarefas do M1, do M3, do M4 e do M5. Os contratos históricos do M1 ao M5 leem essas páginas já como eram antes da
+    # revisão (scripts/tarefas_claras_historico.py desfaz esta camada e a dos enunciados, por esta ordem): se o texto é exatamente a
+    # base da revisão (o hash do seu manifesto), esta camada já saiu e não há nada a desfazer. Em qualquer outro caso, a contagem
+    # continua estrita.
+    claras = _TAREFAS_CLARAS.get(_relative(path))
+    if claras and hashlib.sha256(text.replace('\r\n', '\n').encode('utf-8')).hexdigest() == claras['base_sha256_lf']:
+        return text
     for edit in reversed(_CUIDADO_M6_0811.get(_relative(path), {}).get('edits', [])):
         if text.count(edit['new']) != edit['occurrences']:
             raise AssertionError(f"Decisão 152 no M6 não confere: {path}: {edit['location']}")

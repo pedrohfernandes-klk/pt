@@ -22,7 +22,11 @@ Este teste confere, no modelo de tests/test_cuidado_m1.py a tests/test_cuidado_m
   passagens mudadas, nenhuma referência nem número que se parta;
 * que as tarefas, os aquecimentos, as grelhas e a correção da M6-U1 e da M6-U2 saem iguais dos dados e dos geradores (e as dos
   outros módulos não mudam), que a lição F14 sai igual do gerador das lições, que os painéis do docente seguem os enunciados das
-  lições e que as cópias do banco das provas rápidas seguem os cartões."""
+  lições e que as cópias do banco das provas rápidas seguem os cartões;
+* 11/11/2026: as 23 reposições «(R)» depois do pedido #192, que ao reescrever os enunciados tirou espaços que não quebram às tarefas
+  do M1, do M3, do M4 e do M5: cada troca só muda espaços, por cima do texto exato do #192; cada página volta a ter os U+00A0 que
+  tinha antes dele; nos enunciados dessas tarefas não fica nenhuma referência do mesmo tipo que se parta; as páginas geradas saem
+  iguais dos dados; e os contratos históricos continuam a ler estas páginas como eram antes do #192."""
 from html.parser import HTMLParser
 from pathlib import Path
 import glob
@@ -39,6 +43,8 @@ import unittest
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'tests'))
 from auditoria_20261028 import undo_cuidado_m6_0811, undo_cuidado_m5_0811  # noqa: E402
+sys.path.insert(0, str(ROOT / 'scripts'))
+from tarefas_claras_historico import desfazer as desfazer_enunciados  # noqa: E402
 
 CAMADA = ROOT / 'scripts/cuidado_m6_20261108.json'
 MANIFESTO_REL = 'tests/fixtures/cuidado-m6-edits-20261108.json'
@@ -53,6 +59,40 @@ A = {0, 1, 2, 3, 4, 5, 6, 7, 8, 10, 16}
 B = set(range(22, 50))
 C_ = {17, 18, 19, 20}
 CONFIRMADOS = A | B | C_
+# 11/11/2026: as reposições depois do pedido #192 (tarefas_claras_20261110), que ao reescrever os enunciados tirou espaços que não
+# quebram às tarefas do M1, do M3, do M4 e do M5. Não são achados da varredura do M6: levam «(R)» e conferem-se à parte
+# (test_reposicoes_depois_do_192), com exigência própria; os testes dos achados olham para as outras trocas (VARREDURA).
+REPOSICAO = '11/11/2026: decisão 152 (cuidado em todas as lições), reposição depois do pedido #192 (R). '
+REPOSTAS = [t for t in TROCAS if t['achado'].startswith(REPOSICAO)]
+VARREDURA = [t for t in TROCAS if t not in REPOSTAS]
+# Tarefa > (módulo, página gerada dos dados?, [(trecho do #192, trecho reposto, ocorrências, a forma que a decisão 152 tinha posto
+# antes do #192)]). Onde o #192 trocou «cap.» por «capítulo», a forma de antes já não existe e prende-se a nova.
+REPOR = {
+    'm1-u2': ('M1', True, [('capítulo XII', 'capítulo' + N + 'XII', 2, 'cap.' + N + 'XII')]),
+    'm3-u1': ('M3', True, [('(I, 1' + N + 'a' + N + '3)', '(I,' + N + '1' + N + 'a' + N + '3)', 1, '(I,' + N + '1' + N + 'a' + N + '3)')]),
+    'm3-u2': ('M3', True, [('(I, 4' + N + 'e' + N + '5)', '(I,' + N + '4' + N + 'e' + N + '5)', 1, '(I,' + N + '4' + N + 'e' + N + '5)'),
+                           ('(X, 145)', '(X,' + N + '145)', 2, '(X,' + N + '145)'),
+                           ('curioso» (VIII, 96)', 'curioso» (VIII,' + N + '96)', 1, 'curioso» (VIII,' + N + '96)'),
+                           ('VIII, 96' + N + 'a' + N + '99', 'VIII,' + N + '96' + N + 'a' + N + '99', 1, 'VIII,' + N + '96' + N + 'a' + N + '99'),
+                           ('VIII, 98 ou 99', 'VIII,' + N + '98 ou 99', 1, 'VIII,' + N + '98 ou 99')]),
+    'm4-u1': ('M4', False, [('<strong>3 a 4 minutos</strong>', '<strong>3' + N + 'a' + N + '4' + N + 'minutos</strong>', 1,
+                             '3' + N + 'a' + N + '4' + N + 'minutos')]),
+    'm4-u2': ('M4', False, [('<strong>180 a 240 palavras</strong>', '<strong>180' + N + 'a' + N + '240' + N + 'palavras</strong>', 1,
+                             '180' + N + 'a' + N + '240' + N + 'palavras')]),
+    'm4-u3-discurso': ('M4', False, [('<strong>2 minutos</strong>', '<strong>2' + N + 'minutos</strong>', 1, '2' + N + 'minutos')]),
+    'm5-u1': ('M5', True, [('do capítulo IV em que', 'do capítulo' + N + 'IV em que', 1, 'cap.' + N + 'IV')]),
+    'm5-u2': ('M5', True, [('do capítulo I e outra nova', 'do capítulo' + N + 'I e outra nova', 1, 'cap.' + N + 'I'),
+                           ('No capítulo VI,', 'No capítulo' + N + 'VI,', 1, 'cap.' + N + 'VI')]),
+}
+# O que se parte num enunciado (o <header> da tarefa), pelas regras da decisão 152 em cada módulo: em todos, «cap.», «capítulo»
+# e o numeral, canto e estância, número e «min», «minutos» ou «%», ordinal e nome; no M3 e no M4, também os intervalos «N a N» e
+# «N e N» e número e «palavras» (o M1 só prende o número a «palavras»; o M5 deixa os intervalos de palavras como estavam).
+PARTE_ENUNCIADO = (r'(?<![\w.])[Cc]aps?\. (?=[\dIVXLC])|\b[Cc]apítulos? (?=[\dIVXLC]+\b)|\b[IVXLC]+, (?=\d)'
+                   r'|\b\d+ (?=(?:min|minutos|%)(?!\w))|\d\.[ºª] (?=\w)')
+PARTE_REPOR = {'M1': re.compile(PARTE_ENUNCIADO + r'|\b\d+ (?=palavras(?!\w))'),
+               'M3': re.compile(PARTE_ENUNCIADO + r'|\b\d+ (?=palavras(?!\w))|\b\d+ (?=[ae] \d)|\b\d+\xa0[ae] (?=\d)'),
+               'M4': re.compile(PARTE_ENUNCIADO + r'|\b\d+ (?=palavras(?!\w))|\b\d+ (?=[ae] \d)|\b\d+\xa0[ae] (?=\d)'),
+               'M5': re.compile(PARTE_ENUNCIADO)}
 # O achado 29 (F09) é só a casca da lição, que fica para o molde: não tem troca.
 SO_CASCA = {29}
 RECUSADOS = {9, 11, 12, 13, 14, 15, 21}
@@ -595,7 +635,8 @@ class CuidadoM6(unittest.TestCase):
             self.assertIn('<p class="lead">20' + N + 'valores em cinco critérios.', ler(f'tarefas/{slug}/grelha/index.html'))
 
     def test_nenhum_recusado_aplicado(self):
-        achados = {int(n) for t in TROCAS for n in re.findall(r'\d+', t['achado'].split('achado ', 1)[1].split(' (')[0])}
+        # 11/11/2026: as reposições depois do #192 não são achados da varredura (test_reposicoes_depois_do_192).
+        achados = {int(n) for t in VARREDURA for n in re.findall(r'\d+', t['achado'].split('achado ', 1)[1].split(' (')[0])}
         self.assertFalse(RECUSADOS & achados)
         # 9: o cartão da F13 fica em frase.
         self.assertIn('a apóstrofe escolhe', ler('m6/licao-m6-f13/index.html'))
@@ -637,7 +678,8 @@ class CuidadoM6(unittest.TestCase):
         self.assertEqual(sorted(t['ficheiro'] for t in chaves), ['docs/pedagogia/grelhas-tarefas-20261027.json'] * 2
                          + ['docs/pedagogia/tarefas-escolha/m6-u1.json', 'docs/pedagogia/tarefas-escolha/m6-u2.json'])
         for t in TROCAS:
-            if t in css or t in estilo or t in chaves:
+            # 11/11/2026: as reposições depois do #192 só mudam espaços e não têm número de achado: test_reposicoes_depois_do_192.
+            if t in css or t in estilo or t in chaves or t in REPOSTAS:
                 continue
             i = int(re.search(r'achado (\d+)', t['achado']).group(1))
             with self.subTest(ficheiro=t['ficheiro'], local=t['local']):
@@ -716,7 +758,15 @@ class CuidadoM6(unittest.TestCase):
         self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
         self.assertIn(f'{len(TROCAS)} trocas em {len(MANIFESTO["files"])} ficheiros: {len(TROCAS)} aplicadas, 0 por aplicar; manifesto em dia.',
                       r.stdout)
-        self.assertEqual((len(TROCAS), len(MANIFESTO['files'])), (270, 38))
+        # 11/11/2026: às 270 trocas em 38 ficheiros da varredura juntam-se as 23 reposições depois do #192, em 13 ficheiros (os dados
+        # e as páginas das tarefas M1-U2, M3-U1, M3-U2, M5-U1 e M5-U2 e as páginas das três tarefas do M4).
+        self.assertEqual((len(VARREDURA), len({t['ficheiro'] for t in VARREDURA})), (270, 38))
+        self.assertEqual((len(REPOSTAS), len({t['ficheiro'] for t in REPOSTAS})), (23, 13))
+        self.assertFalse({t['ficheiro'] for t in VARREDURA} & {t['ficheiro'] for t in REPOSTAS})
+        self.assertEqual((len(TROCAS), len(MANIFESTO['files'])), (293, 51))
+        self.assertIn('11/11/2026 (reposição, no mesmo pedido #191): a camada repõe também os espaços que não quebram (U+00A0) que o #192 '
+                      'tirou às tarefas do M1, do M3, do M4 e do M5', m_nota := MANIFESTO['_nota'])
+        self.assertIn('23 trocas «(R)» em 13 ficheiros, só de espaços', m_nota)
         m = MANIFESTO
         self.assertEqual(set(m), {'base_commit', '_nota', 'files'})
         self.assertEqual(m['base_commit'], BASE_COMMIT)
@@ -750,7 +800,8 @@ class CuidadoM6(unittest.TestCase):
                 # A camada de baixo (a decisão 152 no M5) continua a desfazer-se por baixo desta.
                 undo_cuidado_m5_0811(rel, atual)
         # Os 43 achados confirmados estão todos na camada, salvo o 29 (só a casca, que fica para o molde); nenhum recusado.
-        achados = {int(n) for t in TROCAS for n in re.findall(r'\d+', t['achado'].split('achado ', 1)[1].split(' (')[0])}
+        # 11/11/2026: sem as reposições depois do #192, que não são achados da varredura.
+        achados = {int(n) for t in VARREDURA for n in re.findall(r'\d+', t['achado'].split('achado ', 1)[1].split(' (')[0])}
         self.assertEqual(achados, CONFIRMADOS - SO_CASCA)
         self.assertEqual((len(A), len(B), len(C_)), (11, 28, 4))
         self.assertEqual(next(x for x in C.ACHADOS_B if x['i'] == 29)['pares'], [])
@@ -837,6 +888,85 @@ class CuidadoM6(unittest.TestCase):
         # O teste de navegador das comparações conta agora os 53 cartões «Em paralelo» que ficam.
         self.assertIn('assert len(examples)>=53', ler('tests/browser_comparacao_layout.py'))
 
+    def test_reposicoes_depois_do_192(self):
+        # 11/11/2026: o pedido #192 (tarefas_claras_20261110) reescreveu os enunciados das tarefas e deixou cair espaços que não
+        # quebram que a decisão 152 tinha posto do M1 ao M5 (tests/browser_cuidado_m3.py falhava, também no main). Esta camada, por
+        # cima dele, repõe-os: as trocas são exatamente estas, nos dados (nas tarefas geradas) e na página.
+        claras = json.loads(ler('tests/fixtures/tarefas-claras-edits-20261110.json'))['files']
+        esperadas = []
+        for slug, (mod, gerada, pares) in REPOR.items():
+            for rel in ([f'docs/pedagogia/tarefas-escolha/{slug}.json'] if gerada else []) + [f'tarefas/{slug}/index.html']:
+                esperadas += [(rel, antigo, novo, n) for antigo, novo, n, _ in pares]
+        self.assertEqual(sorted((t['ficheiro'], t['antigo'], t['novo'], t['ocorrencias']) for t in REPOSTAS), sorted(esperadas))
+        self.assertEqual(len(REPOSTAS), 23)
+        for t in REPOSTAS:
+            with self.subTest(ficheiro=t['ficheiro'], local=t['local']):
+                # Só espaços: nenhuma outra letra do texto do #192 muda, e nenhum espaço preso se solta.
+                self.assertEqual(t['novo'].replace(N, ' '), t['antigo'].replace(N, ' '))
+                self.assertGreater(t['novo'].count(N), t['antigo'].count(N))
+                self.assertTrue(all(a == b or (a, b) == (' ', N) for a, b in zip(t['antigo'], t['novo'])))
+                self.assertNotIn(WJ, t['novo'])
+                self.assertNotIn('varredura do M6', t['achado'])
+                slug = re.search(r'(m\d-u\d(?:-discurso)?)', t['ficheiro']).group(1)
+                self.assertIn(f'a decisão 152 no {REPOR[slug][0]} tinha posto', t['achado'])
+        for slug, (mod, gerada, pares) in REPOR.items():
+            pagina = f'tarefas/{slug}/index.html'
+            for rel in ([f'docs/pedagogia/tarefas-escolha/{slug}.json'] if gerada else []) + [pagina]:
+                with self.subTest(ficheiro=rel):
+                    atual = ler(rel)
+                    # Por baixo desta camada está o texto do #192, letra a letra (o «after» do manifesto dele).
+                    do_192 = base(rel)
+                    self.assertEqual(sha_lf(do_192), claras[rel]['after_sha256_lf'])
+                    self.assertEqual(atual.replace(N, ' '), do_192.replace(N, ' '))
+                    # Os contratos históricos leem a página como era antes do #192 (a base do manifesto dele): a partir da página
+                    # inteira (desfaz esta camada e a dos enunciados), ou só da dos enunciados, se esta já saiu.
+                    antes_192 = desfazer_enunciados(rel, atual)
+                    self.assertEqual(sha_lf(antes_192), claras[rel]['base_sha256_lf'])
+                    self.assertEqual(desfazer_enunciados(rel, do_192), antes_192)
+                    self.assertEqual(undo_cuidado_m6_0811(rel, antes_192), antes_192)
+                    # A página volta a ter os espaços que não quebram que tinha antes do #192 (ele tinha-lhe tirado os desta conta).
+                    repostos = sum((novo.count(N) - antigo.count(N)) * n for antigo, novo, n, _ in pares)
+                    self.assertEqual(do_192.count(N), antes_192.count(N) - repostos)
+                    self.assertEqual(atual.count(N), antes_192.count(N))
+                    for antigo, novo, n, de_antes in pares:
+                        self.assertEqual(do_192.count(antigo), n, antigo)
+                        self.assertEqual(atual.count(novo), n, novo)
+                        self.assertNotIn(antigo, atual)
+                        # A forma que a decisão 152 tinha posto estava na página antes do #192; onde o #192 trocou «cap.» por
+                        # «capítulo», essas ocorrências da abreviatura já não existem (as outras, fora do que ele reescreveu,
+                        # continuam presas), e é a forma nova que fica presa.
+                        self.assertGreaterEqual(antes_192.count(de_antes), n)
+                        if de_antes.startswith('cap.'):
+                            self.assertEqual(atual.count(de_antes + ' ') + atual.count(de_antes + ',') + atual.count(de_antes + '.'),
+                                             antes_192.count(de_antes + ' ') + antes_192.count(de_antes + ',')
+                                             + antes_192.count(de_antes + '.') - n)
+                            self.assertNotIn(de_antes.replace(N, ' '), atual)
+                            self.assertNotIn(novo, antes_192)
+                        else:
+                            self.assertEqual(atual.count(de_antes), antes_192.count(de_antes))
+            # No enunciado (o <header> da tarefa), nenhuma referência do tipo que a decisão 152 prende nesse módulo se parte; antes
+            # desta reposição, o detetor apanhava cada uma delas.
+            with self.subTest(enunciado=slug):
+                enunciado = lambda texto: visivel(texto.split('<header>', 1)[1].split('</header>', 1)[0])
+                self.assertIsNone(PARTE_REPOR[mod].search(enunciado(ler(pagina))))
+                self.assertIsNotNone(PARTE_REPOR[mod].search(enunciado(base(pagina))))
+                for antigo, novo, _, _ in pares:
+                    self.assertIsNotNone(PARTE_REPOR[mod].search(visivel(antigo)), antigo)
+                    self.assertIsNone(PARTE_REPOR[mod].search(visivel(novo)), novo)
+        # As tarefas geradas saem iguais dos dados, byte a byte.
+        with tempfile.TemporaryDirectory() as tmp:
+            r = subprocess.run([sys.executable, 'scripts/tarefas_escolha.py', '--saida', tmp], cwd=ROOT, capture_output=True, text=True,
+                               encoding='utf-8')
+            self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
+            for slug, (_, gerada, _) in REPOR.items():
+                if gerada:
+                    self.assertEqual((Path(tmp) / f'tarefas/{slug}/index.html').read_bytes(), (ROOT / f'tarefas/{slug}/index.html').read_bytes(), slug)
+                else:
+                    self.assertFalse((ROOT / f'docs/pedagogia/tarefas-escolha/{slug}.json').exists(), slug)
+        # O gerador da camada tem as mesmas reposições.
+        self.assertEqual({x['slug']: (x['mod'], x['gerada'], [(C.j(a), C.j(b), n) for a, b, n, _ in x['pares']]) for x in C.REPOR},
+                         {slug: (mod, gerada, [(a, b, n) for a, b, n, _ in pares]) for slug, (mod, gerada, pares) in REPOR.items()})
+
     def test_cartoes_em_paralelo_que_ficam(self):
         # Os seis «Em paralelo» do M6 que passaram a tabela saem da conta de tests/browser_comparacao_layout.py: eram 59, ficam 53.
         sys.path.insert(0, str(ROOT / 'scripts'))
@@ -852,7 +982,10 @@ class CuidadoM6(unittest.TestCase):
 
     def test_paginas_geradas_saem_iguais_dos_dados(self):
         # As tarefas, os aquecimentos, as grelhas e a correção da M6-U1 e da M6-U2 mudam também nos dados, que estão nesta camada.
-        dados = {t['ficheiro'] for t in TROCAS if t['ficheiro'].startswith('docs/')}
+        # 11/11/2026: os dados das cinco tarefas geradas com reposições depois do #192 conferem-se em test_reposicoes_depois_do_192.
+        dados = {t['ficheiro'] for t in VARREDURA if t['ficheiro'].startswith('docs/')}
+        self.assertEqual({t['ficheiro'] for t in REPOSTAS if t['ficheiro'].startswith('docs/')},
+                         {f'docs/pedagogia/tarefas-escolha/{slug}.json' for slug, (_, gerada, _) in REPOR.items() if gerada})
         self.assertEqual(dados, {'docs/pedagogia/tarefas-escolha/m6-u1.json', 'docs/pedagogia/tarefas-escolha/m6-u2.json',
                                  'docs/pedagogia/aquecimentos/m6-u1.json', 'docs/pedagogia/aquecimentos/m6-u2.json',
                                  'docs/pedagogia/grelhas-tarefas-20261027.json'})
@@ -943,8 +1076,9 @@ class CuidadoM6(unittest.TestCase):
         sessoes = ler('assets/exame/sessoes.json')
         self.assertEqual(sessoes.count(json.dumps(f01['f'].replace('**', ''), ensure_ascii=False)), 2)
         self.assertIn('(v.' + N + '1): o sujeito', f01['f'])
+        # 11/11/2026: e as páginas das oito tarefas do M1, do M3, do M4 e do M5 a que a camada repõe os espaços que o #192 tirou.
         self.assertEqual(sorted(f for f in MANIFESTO['files'] if not f.startswith(('m6/', 'tarefas/m6-', 'docs/pedagogia/'))),
-                         ['assets/exame/sessoes.json'])
+                         ['assets/exame/sessoes.json'] + sorted(f'tarefas/{slug}/index.html' for slug in REPOR))
 
 
 if __name__ == '__main__':

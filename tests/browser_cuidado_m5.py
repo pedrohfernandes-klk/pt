@@ -50,9 +50,15 @@ PAGINAS = {
     'm5/mapa-do-modulo-m5/index.html': ['2.º' + N + 'ano', '1825–' + J + '1890', '1845–' + J + '1900', '90' + N + 'minutos', '30' + N + '%',
                                         'M5-' + J + 'F02', 'M5-' + J + 'F10', 'volume' + N + '1', 'século' + N + 'XIX'],
     'm5/portefolio-do-modulo-m5/index.html': ['2.º' + N + 'ano', '90' + N + 'minutos', '40' + N + '%', 'século' + N + 'XIX'],
-    'tarefas/m5-u1/index.html': ['90' + N + 'min', '10' + N + 'min', '10' + N + 'minutos', 'cap.' + N + 'IV', '17' + N + 'de', 'de' + N + '1807'],
-    'tarefas/m5-u2/index.html': ['90' + N + 'min', '3.ª' + N + 'pessoa', 'cap.' + N + 'VI', 'cap.' + N + 'I', '28' + N + 'de', 'de' + N + '2015',
-                                 'de' + N + '2025'],
+    # 11/11/2026: o pedido #192 reescreveu os enunciados e trocou «cap.» por «capítulo» nas perguntas (M5-U1: «capítulo IV»; M5-U2:
+    # «capítulo I» e «capítulo VI»); a camada do M6 prende a forma nova, e as agulhas passam a procurá-la também, com a mesma
+    # exigência (à vista e numa linha só). As abreviaturas que ficaram fora do que ele reescreveu («cap. IV» numa citação do dossiê
+    # da M5-U1 e «cap. VI» no dossiê da M5-U2) continuam a conferir-se; «cap. I» já não existe na M5-U2 (era só o da pergunta, que
+    # passou a «capítulo I») e a agulha passa a ser a forma nova.
+    'tarefas/m5-u1/index.html': ['90' + N + 'min', '10' + N + 'min', '10' + N + 'minutos', 'cap.' + N + 'IV', 'capítulo' + N + 'IV',
+                                 '17' + N + 'de', 'de' + N + '1807'],
+    'tarefas/m5-u2/index.html': ['90' + N + 'min', '3.ª' + N + 'pessoa', 'cap.' + N + 'VI', 'capítulo' + N + 'VI',
+                                 'capítulo' + N + 'I', '28' + N + 'de', 'de' + N + '2015', 'de' + N + '2025'],
     'tarefas/m5-u1/grelha/index.html': ['cap.' + N + 'IV'],
     'tarefas/m5-u2/grelha/index.html': ['cap.' + N + 'I', '3.ª' + N + 'pessoa'],
     'tarefas/m5-u2/correcao/index.html': ['cap.' + N + 'I', '3.ª' + N + 'pessoa'],
@@ -293,7 +299,9 @@ def main():
                     for slug, tema in (('m5-u1', 'A'), ('m5-u2', 'B')):
                         page.goto(host + f'/tarefas/{slug}/', wait_until='networkidle')
                         abrir(page)
-                        confere_lista(page, page.locator(f'article[data-task-theme="{tema}"] ol'), 5, f'{slug} tema {tema} {largura}')
+                        # 11/11/2026: o pedido #192 reescreveu estes dois temas em três passos (antes, cinco elementos): a lista
+                        # tem agora três itens, com a mesma exigência (à vista, com os itens todos, sem sair do contentor).
+                        confere_lista(page, page.locator(f'article[data-task-theme="{tema}"] ol'), 3, f'{slug} tema {tema} {largura}')
                         assert page.locator(f'article[data-task-theme="{tema}"] p:empty').count() == 0, slug
                         listas += 1
                     for slug, itens in (('m5-u1', (5, 4)), ('m5-u2', (5, 5))):

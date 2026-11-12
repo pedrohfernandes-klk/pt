@@ -1,6 +1,6 @@
 {
  "base_commit": "4bf4a0538cd5f883448d179973ef016023a58f86",
- "_nota": "08/11/2026: decisão 152 do docente («cuidado em todas as lições»), módulo M6: os 43 achados CONFIRMADOS da varredura de 6/11 (bordo/cidadania-v3/cuidado-152/m6-confirmados.json; os 7 recusados, 9, 11, 12, 13, 14, 15 e 21, não entram: os pesos da avaliação e os tempos da aula de tarefa ficam em frase e «Três antes de mim» fica como está): 11 achados A (tabelas onde há itens paralelos, como na M7-F10, na M7-F15 e do M1 ao M5: class apoio-tabela, th scope, td data-label e os role; os seis cartões «Em paralelo» das lições F02, F04, F05, F06, F07 e F09, as caixas de termos «Recorda» e «Para entender» da F02, da F04, da F06 e da F07, a primeira coluna das de termos da F02 e da F06 com 30 %, e os três testes de «Frases da rua», num div.nota, como no M3; cada página com tabela nova carrega assets/pt-lessons/apoios-tabelas.css antes da camada de aparência, na versão do M1), 28 de referências e números que não se partem entre linhas (B: U+00A0 nos espaços que a proposta final prende, no contexto que a proposta dá, e U+2060 logo a seguir ao traço de intervalo e ao hífen da sigla «M6-Fxx»; nas datas, todos os espaços, como na proposta do M6; os intervalos de versos «(v. 1 a 4)», «(v. 1 e 2)», «(v. 9 e 10)», «(v. 13 e 14)» e «(v. 16 e 17)» passam à forma da M7-F10, «(vv. 1–4)», como na proposta) e 4 casos do mesmo tipo (C: a lista das regras de produção da F08; no portefólio, os nomes dos ficheiros todos em <code> e sem partir, e a tabela com cabeçalho, os role e o rótulo da coluna em cada célula, empilhada no telemóvel pelo estilo da página; e os elementos de cada tema em listas no critério 4 das grelhas, pelo gerador, com «max_em_listas», como no M1 e no M5). Camada mais recente, por cima da revisão dos enunciados das tarefas (tarefas_claras_20261110, pedido #192), que fica por cima da decisão 152 no M5 (cuidado_m5_20261108). 11/11/2026: refeita sobre o main 4bf4a053, que trouxe essa revisão; as trocas das tarefas da M6-U1 e da M6-U2 (dados e páginas) são as mesmas, aplicadas aos enunciados novos, e nada do #192 se desfaz. Gerada por scripts/cuidado_m6_20261108.py e aplicada por scripts/aplicar_trocas.py: não se edita à mão. O texto visível fica igual, salvo a estrutura das tabelas e das listas, as correções da proposta final e os espaços invisíveis. A casca das lições (migalhas «2.º ano», «Estás em: Lição M6-Fxx», o título escondido e a sigla do rodapé) não muda aqui, ficheiro a ficheiro: muda no molde, como do M1 ao M5 (o achado 29, só da casca da F09, fica sem troca); nas outras páginas (índice, guia, mapa e portefólio), muda o «2.º ano» do cabeçalho e as migalhas ficam, como na proposta final. Ficam de fora os «alt» (e aria-label, href, title, content e data-titulo, que vira o title do leitor dos vídeos), o <title>, o texto dos desenhos (SVG), a «frase» dos cartões sublinhar, as «palavras» dos cartões frase, os «passos» dos cartões ordenar e o que outra camada já tinha posto com U+00A0 (as legendas e os créditos do «i» do mapa). As páginas geradas mudam também nos dados, que estão nesta camada, e regeneram-se sem diferenças: as tarefas da M6-U1 e da M6-U2 (docs/pedagogia/tarefas-escolha/m6-u1.json e m6-u2.json: «nao_partir», como do M1 ao M5, que também prende a meta descrição, «nao_partir_grelha», nova, para «Grelha /20» da ligação à grelha, e os achados B), os aquecimentos (docs/pedagogia/aquecimentos/m6-u1.json e m6-u2.json) e as grelhas (docs/pedagogia/grelhas-tarefas-20261027.json, entradas m6-u1 e m6-u2: «max_em_listas» no critério 4, «nao_partir_valores», nova, para «20 valores», e os achados B); a correção sai igual. Os geradores mudam fora da camada: scripts/tarefas_escolha.py lê «nao_partir_grelha» e scripts/grelhas_tarefas.py lê «nao_partir_valores» e aceita a ligação com «Grelha /20» preso. A lição gerada F14 muda na fonte, fora da camada (scripts/licoes_m1_m6_20261101.py), e a lição muda aqui e sai igual do gerador. Os painéis de projeção da F01, da F06, da F08 e da F11 seguem os enunciados dos cartões que mudaram (a lista e o seletor); o material do relâmpago segue a lição antes das camadas de cuidado, como do M1 ao M5. As cópias dos cartões no banco das provas rápidas do índice (var U) mudam como as lições de onde vêm, e também a cópia do retorno de um cartão da F01 nas sessões do Exame (assets/exame/sessoes.json, sessão s10), que tests/test_exame_alignment.py compara com a lição.",
+ "_nota": "08/11/2026: decisão 152 do docente («cuidado em todas as lições»), módulo M6: os 43 achados CONFIRMADOS da varredura de 6/11 (bordo/cidadania-v3/cuidado-152/m6-confirmados.json; os 7 recusados, 9, 11, 12, 13, 14, 15 e 21, não entram: os pesos da avaliação e os tempos da aula de tarefa ficam em frase e «Três antes de mim» fica como está): 11 achados A (tabelas onde há itens paralelos, como na M7-F10, na M7-F15 e do M1 ao M5: class apoio-tabela, th scope, td data-label e os role; os seis cartões «Em paralelo» das lições F02, F04, F05, F06, F07 e F09, as caixas de termos «Recorda» e «Para entender» da F02, da F04, da F06 e da F07, a primeira coluna das de termos da F02 e da F06 com 30 %, e os três testes de «Frases da rua», num div.nota, como no M3; cada página com tabela nova carrega assets/pt-lessons/apoios-tabelas.css antes da camada de aparência, na versão do M1), 28 de referências e números que não se partem entre linhas (B: U+00A0 nos espaços que a proposta final prende, no contexto que a proposta dá, e U+2060 logo a seguir ao traço de intervalo e ao hífen da sigla «M6-Fxx»; nas datas, todos os espaços, como na proposta do M6; os intervalos de versos «(v. 1 a 4)», «(v. 1 e 2)», «(v. 9 e 10)», «(v. 13 e 14)» e «(v. 16 e 17)» passam à forma da M7-F10, «(vv. 1–4)», como na proposta) e 4 casos do mesmo tipo (C: a lista das regras de produção da F08; no portefólio, os nomes dos ficheiros todos em <code> e sem partir, e a tabela com cabeçalho, os role e o rótulo da coluna em cada célula, empilhada no telemóvel pelo estilo da página; e os elementos de cada tema em listas no critério 4 das grelhas, pelo gerador, com «max_em_listas», como no M1 e no M5). Camada mais recente, por cima da revisão dos enunciados das tarefas (tarefas_claras_20261110, pedido #192), que fica por cima da decisão 152 no M5 (cuidado_m5_20261108). 11/11/2026: refeita sobre o main 4bf4a053, que trouxe essa revisão; as trocas das tarefas da M6-U1 e da M6-U2 (dados e páginas) são as mesmas, aplicadas aos enunciados novos, e nada do #192 se desfaz. Gerada por scripts/cuidado_m6_20261108.py e aplicada por scripts/aplicar_trocas.py: não se edita à mão. O texto visível fica igual, salvo a estrutura das tabelas e das listas, as correções da proposta final e os espaços invisíveis. A casca das lições (migalhas «2.º ano», «Estás em: Lição M6-Fxx», o título escondido e a sigla do rodapé) não muda aqui, ficheiro a ficheiro: muda no molde, como do M1 ao M5 (o achado 29, só da casca da F09, fica sem troca); nas outras páginas (índice, guia, mapa e portefólio), muda o «2.º ano» do cabeçalho e as migalhas ficam, como na proposta final. Ficam de fora os «alt» (e aria-label, href, title, content e data-titulo, que vira o title do leitor dos vídeos), o <title>, o texto dos desenhos (SVG), a «frase» dos cartões sublinhar, as «palavras» dos cartões frase, os «passos» dos cartões ordenar e o que outra camada já tinha posto com U+00A0 (as legendas e os créditos do «i» do mapa). As páginas geradas mudam também nos dados, que estão nesta camada, e regeneram-se sem diferenças: as tarefas da M6-U1 e da M6-U2 (docs/pedagogia/tarefas-escolha/m6-u1.json e m6-u2.json: «nao_partir», como do M1 ao M5, que também prende a meta descrição, «nao_partir_grelha», nova, para «Grelha /20» da ligação à grelha, e os achados B), os aquecimentos (docs/pedagogia/aquecimentos/m6-u1.json e m6-u2.json) e as grelhas (docs/pedagogia/grelhas-tarefas-20261027.json, entradas m6-u1 e m6-u2: «max_em_listas» no critério 4, «nao_partir_valores», nova, para «20 valores», e os achados B); a correção sai igual. Os geradores mudam fora da camada: scripts/tarefas_escolha.py lê «nao_partir_grelha» e scripts/grelhas_tarefas.py lê «nao_partir_valores» e aceita a ligação com «Grelha /20» preso. A lição gerada F14 muda na fonte, fora da camada (scripts/licoes_m1_m6_20261101.py), e a lição muda aqui e sai igual do gerador. Os painéis de projeção da F01, da F06, da F08 e da F11 seguem os enunciados dos cartões que mudaram (a lista e o seletor); o material do relâmpago segue a lição antes das camadas de cuidado, como do M1 ao M5. As cópias dos cartões no banco das provas rápidas do índice (var U) mudam como as lições de onde vêm, e também a cópia do retorno de um cartão da F01 nas sessões do Exame (assets/exame/sessoes.json, sessão s10), que tests/test_exame_alignment.py compara com a lição. 11/11/2026 (reposição, no mesmo pedido #191): a camada repõe também os espaços que não quebram (U+00A0) que o #192 tirou às tarefas do M1, do M3, do M4 e do M5 ao reescrever os enunciados (a verificação «tables» falhava em tests/browser_cuidado_m3.py, também no main). São 23 trocas «(R)» em 13 ficheiros, só de espaços, sem mudar mais nenhuma letra do texto do #192: onde a mesma referência continua, o espaço volta (M3-U1: «(I, 1 a 3)»; M3-U2: «(I, 4 e 5)», «(X, 145)» duas vezes, «(VIII, 96)», «VIII, 96 a 99» e «VIII, 98»; M4-U1: «3 a 4 minutos»; M4-U2: «180 a 240 palavras»; M4-U3, discurso: «2 minutos»); onde o #192 trocou «cap.» por «capítulo», a abreviatura já não existe e a referência nova, do mesmo tipo, fica presa como no M4 e no M5 (M1-U2: «capítulo XII» duas vezes; M5-U1: «capítulo IV»; M5-U2: «capítulo I» e «capítulo VI»). Nas tarefas geradas (M1-U2, M3-U1, M3-U2, M5-U1 e M5-U2) a troca faz-se nos dados (docs/pedagogia/tarefas-escolha/) e na página, que sai igual do gerador; as do M4 não têm gerador. Para os contratos históricos do M1 ao M5, que leem estas páginas como eram antes do #192, scripts/tarefas_claras_historico.py desfaz primeiro esta camada, quando o texto ainda a traz, e só depois a dos enunciados.",
  "files": {
   "docs/pedagogia/aquecimentos/m6-u1.json": {
    "base_sha256_lf": "2257e2bb301a065b3870dce457f53c77446c565999e8f616fa38e7fe65571af5",
@@ -106,6 +106,96 @@
      "location": "Dados pedagogia/grelhas-tarefas-20261027.json, m6-u1: «(c. 1577)» que não se parte (com o contexto «c. 1577»)",
      "old": "c. 1577",
      "new": "c. 1577",
+     "occurrences": 1
+    }
+   ]
+  },
+  "docs/pedagogia/tarefas-escolha/m1-u2.json": {
+   "base_sha256_lf": "f9d6f7379149bd68e4f62b56d7cfb456392c109c894f36eabeede31804d221a7",
+   "after_sha256_lf": "af7737ca3c743829955eca90f376bcaa8dc805e369085da39fad35631a352360",
+   "edits": [
+    {
+     "location": "Dados da tarefa M1-U2: «capítulo XII» que não se parte",
+     "old": "capítulo XII",
+     "new": "capítulo XII",
+     "occurrences": 2
+    }
+   ]
+  },
+  "docs/pedagogia/tarefas-escolha/m3-u1.json": {
+   "base_sha256_lf": "b760013558466760338ac596433ba60174a886fc60bb37c6c2a2dd8c50bfda88",
+   "after_sha256_lf": "d0d0f600adf161396066e95602417f354ae9bc6b4f4fbb39c7ce85353e7b1311",
+   "edits": [
+    {
+     "location": "Dados da tarefa M3-U1: «(I, 1 a 3)» que não se parte",
+     "old": "(I, 1 a 3)",
+     "new": "(I, 1 a 3)",
+     "occurrences": 1
+    }
+   ]
+  },
+  "docs/pedagogia/tarefas-escolha/m3-u2.json": {
+   "base_sha256_lf": "45df231e309b7a95a48b539a1b56a65db7c348644b32a5709ab71551837359d6",
+   "after_sha256_lf": "2a38ad6bf2babdda7f688ebba3d8c53dac2afdd7e98ffc9d1f55913bfd74409c",
+   "edits": [
+    {
+     "location": "Dados da tarefa M3-U2: «(I, 4 e 5)» que não se parte",
+     "old": "(I, 4 e 5)",
+     "new": "(I, 4 e 5)",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados da tarefa M3-U2: «(X, 145)» que não se parte",
+     "old": "(X, 145)",
+     "new": "(X, 145)",
+     "occurrences": 2
+    },
+    {
+     "location": "Dados da tarefa M3-U2: «curioso» (VIII, 96)» que não se parte",
+     "old": "curioso» (VIII, 96)",
+     "new": "curioso» (VIII, 96)",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados da tarefa M3-U2: «VIII, 96 a 99» que não se parte",
+     "old": "VIII, 96 a 99",
+     "new": "VIII, 96 a 99",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados da tarefa M3-U2: «VIII, 98 ou 99» que não se parte",
+     "old": "VIII, 98 ou 99",
+     "new": "VIII, 98 ou 99",
+     "occurrences": 1
+    }
+   ]
+  },
+  "docs/pedagogia/tarefas-escolha/m5-u1.json": {
+   "base_sha256_lf": "db2fa624a82ddc9bc4ef6a2fd5609bd93d9b655a517e6376ca0cf4ed9ec45c3f",
+   "after_sha256_lf": "672deed4e830b3b8626896ccec539596d79cb78ccf026b2777b0edbdb0004831",
+   "edits": [
+    {
+     "location": "Dados da tarefa M5-U1: «do capítulo IV em que» que não se parte",
+     "old": "do capítulo IV em que",
+     "new": "do capítulo IV em que",
+     "occurrences": 1
+    }
+   ]
+  },
+  "docs/pedagogia/tarefas-escolha/m5-u2.json": {
+   "base_sha256_lf": "4661174ff67f09f0e36ac33a250d2ad38ec606e7c9fef063833d378dac4b9045",
+   "after_sha256_lf": "60b7dd3c9f2a5c4131dc0f403a3185eecf6a281cfd28cec6f1e54e011843cc5c",
+   "edits": [
+    {
+     "location": "Dados da tarefa M5-U2: «do capítulo I e outra nova» que não se parte",
+     "old": "do capítulo I e outra nova",
+     "new": "do capítulo I e outra nova",
+     "occurrences": 1
+    },
+    {
+     "location": "Dados da tarefa M5-U2: «No capítulo VI,» que não se parte",
+     "old": "No capítulo VI,",
+     "new": "No capítulo VI,",
      "occurrences": 1
     }
    ]
@@ -1565,6 +1655,132 @@
      "old": "3 de julho de 2021",
      "new": "3 de julho de 2021",
      "occurrences": 3
+    }
+   ]
+  },
+  "tarefas/m1-u2/index.html": {
+   "base_sha256_lf": "74040889e21e54e531ece1389cccc6844498d5699071fd0d8001c908bc26ffb9",
+   "after_sha256_lf": "45d7e04b40d2b0cb663724cc55fe4e2f534613635761165276b610db4deff6d7",
+   "edits": [
+    {
+     "location": "Tarefa M1-U2: «capítulo XII» que não se parte",
+     "old": "capítulo XII",
+     "new": "capítulo XII",
+     "occurrences": 2
+    }
+   ]
+  },
+  "tarefas/m3-u1/index.html": {
+   "base_sha256_lf": "58b81521cb9cff393a6de675b7bbe848a784f357433f4e3a3f723fbca998c740",
+   "after_sha256_lf": "9bce0af4ff7ef8ea798e494a765aafb3d8e6665fbdc13ecc920e5f4359a87468",
+   "edits": [
+    {
+     "location": "Tarefa M3-U1: «(I, 1 a 3)» que não se parte",
+     "old": "(I, 1 a 3)",
+     "new": "(I, 1 a 3)",
+     "occurrences": 1
+    }
+   ]
+  },
+  "tarefas/m3-u2/index.html": {
+   "base_sha256_lf": "c62b000e177a737a4d0fbbe58272f55901414e4211b76e0ac76eb34608674061",
+   "after_sha256_lf": "3ea25defb7dade0daf671e5eed059ca0ea4dc2ec771d7f425d13fd8507dcdb60",
+   "edits": [
+    {
+     "location": "Tarefa M3-U2: «(I, 4 e 5)» que não se parte",
+     "old": "(I, 4 e 5)",
+     "new": "(I, 4 e 5)",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefa M3-U2: «(X, 145)» que não se parte",
+     "old": "(X, 145)",
+     "new": "(X, 145)",
+     "occurrences": 2
+    },
+    {
+     "location": "Tarefa M3-U2: «curioso» (VIII, 96)» que não se parte",
+     "old": "curioso» (VIII, 96)",
+     "new": "curioso» (VIII, 96)",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefa M3-U2: «VIII, 96 a 99» que não se parte",
+     "old": "VIII, 96 a 99",
+     "new": "VIII, 96 a 99",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefa M3-U2: «VIII, 98 ou 99» que não se parte",
+     "old": "VIII, 98 ou 99",
+     "new": "VIII, 98 ou 99",
+     "occurrences": 1
+    }
+   ]
+  },
+  "tarefas/m4-u1/index.html": {
+   "base_sha256_lf": "f2c82a37474b2158fac27a78d407418363bbcc12887f842806e49b9f77f38170",
+   "after_sha256_lf": "f08c74be6f9c8803e1e8affa40664a78367249152ceb348c0fe0d369723116ed",
+   "edits": [
+    {
+     "location": "Tarefa M4-U1: «<strong>3 a 4 minutos</strong>» que não se parte",
+     "old": "<strong>3 a 4 minutos</strong>",
+     "new": "<strong>3 a 4 minutos</strong>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "tarefas/m4-u2/index.html": {
+   "base_sha256_lf": "e107f1764bfae4dcb36665fdd4fec5d3d6f147b934b566a31643aa8ff8578e34",
+   "after_sha256_lf": "8411b5fa47fec884b518e8564d353a2879834d6df3d51ea9ffc773d714279314",
+   "edits": [
+    {
+     "location": "Tarefa M4-U2: «<strong>180 a 240 palavras</strong>» que não se parte",
+     "old": "<strong>180 a 240 palavras</strong>",
+     "new": "<strong>180 a 240 palavras</strong>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "tarefas/m4-u3-discurso/index.html": {
+   "base_sha256_lf": "f10583905c3319bbdc29c25761872ce61c8c586479119f4019f913268d13d790",
+   "after_sha256_lf": "95d203af7b3e7bb5e0f75b8f0fbc1718a802debfee3ac6d3b8a23cb6ba5c2bc1",
+   "edits": [
+    {
+     "location": "Tarefa M4-U3-DISCURSO: «<strong>2 minutos</strong>» que não se parte",
+     "old": "<strong>2 minutos</strong>",
+     "new": "<strong>2 minutos</strong>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "tarefas/m5-u1/index.html": {
+   "base_sha256_lf": "747862e737beeac138798126fd05c2dd21370ed83103455ce429b85c43e071af",
+   "after_sha256_lf": "813bb60dd4af55bd469ca0d36f4a84dcc4be9621ffaf2179a67395cddc58111b",
+   "edits": [
+    {
+     "location": "Tarefa M5-U1: «do capítulo IV em que» que não se parte",
+     "old": "do capítulo IV em que",
+     "new": "do capítulo IV em que",
+     "occurrences": 1
+    }
+   ]
+  },
+  "tarefas/m5-u2/index.html": {
+   "base_sha256_lf": "1a2c1ae1619439227e51d3dce827e650ed3f662c65f874aec5b262c7d5919bb3",
+   "after_sha256_lf": "434cf1b325ff16eddc7d2d72756171a6c62a53361711bc23c9d4adb4b40f09cf",
+   "edits": [
+    {
+     "location": "Tarefa M5-U2: «do capítulo I e outra nova» que não se parte",
+     "old": "do capítulo I e outra nova",
+     "new": "do capítulo I e outra nova",
+     "occurrences": 1
+    },
+    {
+     "location": "Tarefa M5-U2: «No capítulo VI,» que não se parte",
+     "old": "No capítulo VI,",
+     "new": "No capítulo VI,",
+     "occurrences": 1
     }
    ]
   },

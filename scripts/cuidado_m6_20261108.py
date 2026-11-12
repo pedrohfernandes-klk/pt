@@ -15,6 +15,17 @@ A camada aplica-se com scripts/aplicar_trocas.py e o manifesto fica em tests/fix
 (tarefas_claras_20261110, pedido #192), e fica por cima dela. As trocas das tarefas da M6-U1 e da M6-U2 (dados e páginas) são as
 mesmas, agora sobre os enunciados novos; o gerador das tarefas junta «clareza» (#192) e «nao_partir_grelha» (esta camada).
 
+11/11/2026 (reposição, no mesmo pedido #191): ao reescrever os enunciados, o #192 deixou cair espaços que não quebram (U+00A0) que a
+decisão 152 já tinha posto nas tarefas do M1, do M3, do M4 e do M5 (a verificação «tables» falhava em tests/browser_cuidado_m3.py,
+também no main: em «(I, 1 a 3)», o espaço a seguir à vírgula tinha voltado a ser normal). Esta camada, que fica por cima da dos enunciados, repõe-os (REPOR, abaixo;
+trocas «(R)», só de espaços, sem mudar mais nenhuma letra do texto do #192): onde a mesma referência continua no texto novo, o
+espaço volta («(I, 1 a 3)», «(I, 4 e 5)», «(X, 145)», «(VIII, 96)», «VIII, 96 a 99», «VIII, 98», «3 a 4 minutos», «180 a 240
+palavras», «2 minutos»); onde o #192 trocou «cap.» por «capítulo» (M1-U2, M5-U1 e M5-U2), a abreviatura já não existe e a
+referência nova, do mesmo tipo, fica presa como no M4 e no M5 («capítulo XII», com U+00A0). Nas tarefas geradas (M1-U2, M3-U1, M3-U2, M5-U1
+e M5-U2) a troca faz-se nos dados e na página, que sai igual do gerador; as do M4 não têm gerador. Para os contratos históricos
+(os testes e os geradores das camadas do M1 ao M5, que leem estas páginas como eram antes do #192), scripts/
+tarefas_claras_historico.py desfaz primeiro esta camada, quando o texto ainda a traz, e só depois a dos enunciados.
+
 Segue o modelo da camada do M5 (scripts/cuidado_m5_20261108.py), com as mesmas regras:
 - A: os itens paralelos que pedem tabela passam a tabela, como na M7-F10, na M7-F15 e do M1 ao M5: class apoio-tabela, th
   scope=col no cabeçalho, th scope=row na primeira coluna, td data-label, e os role (table, rowgroup, row, columnheader,
@@ -477,6 +488,59 @@ NOTAS = [
                      'tests/test_exame_alignment.py compara com a lição.'),
          pares=[('andante» (v. 1): o sujeito', 'andante» (v.{N}1): o sujeito', 2)]),
 ]
+
+# 11/11/2026: os espaços que o #192 (tarefas_claras_20261110) tirou às tarefas do M1, do M3, do M4 e do M5, e que esta camada repõe
+# por cima dele. Cada trecho é o texto do #192, letra a letra, com o mínimo de contexto que o distingue; só mudam espaços. «tipo»
+# diz se a referência é a mesma de antes (reposta) ou se o #192 a reescreveu por extenso (nova, do mesmo tipo: «cap. XII» passou
+# a «capítulo XII», e prende-se como no M4 e no M5). Nas tarefas geradas, o mesmo trecho muda nos dados e na página.
+REPOSICAO = ('11/11/2026: decisão 152 (cuidado em todas as lições), reposição depois do pedido #192 (R). O #192 '
+             '(tarefas_claras_20261110) reescreveu o enunciado e deixou cair o espaço que não quebra (U+00A0) que a decisão 152 no '
+             '{mod} tinha posto. {texto}')
+REPOR_TEXTO = {
+    'reposta': 'A mesma referência continua no texto novo e volta a não se partir; só mudam espaços.',
+    'nova': ('A abreviatura «cap.» passou a «capítulo» por extenso: a referência já não existe como estava, e a nova, do mesmo tipo, '
+             'fica presa (como «capítulo» com o numeral no M4 e no M5); só mudam espaços.'),
+}
+REPOR = [
+    dict(slug='m1-u2', mod='M1', gerada=True, pares=[('capítulo XII', 'capítulo{N}XII', 2, 'nova')]),
+    dict(slug='m3-u1', mod='M3', gerada=True, pares=[('(I, 1{N}a{N}3)', '(I,{N}1{N}a{N}3)', 1, 'reposta')]),
+    dict(slug='m3-u2', mod='M3', gerada=True,
+         pares=[('(I, 4{N}e{N}5)', '(I,{N}4{N}e{N}5)', 1, 'reposta'), ('(X, 145)', '(X,{N}145)', 2, 'reposta'),
+                ('curioso» (VIII, 96)', 'curioso» (VIII,{N}96)', 1, 'reposta'), ('VIII, 96{N}a{N}99', 'VIII,{N}96{N}a{N}99', 1, 'reposta'),
+                ('VIII, 98 ou 99', 'VIII,{N}98 ou 99', 1, 'reposta')]),
+    dict(slug='m4-u1', mod='M4', gerada=False, pares=[('<strong>3 a 4 minutos</strong>', '<strong>3{N}a{N}4{N}minutos</strong>', 1, 'reposta')]),
+    dict(slug='m4-u2', mod='M4', gerada=False,
+         pares=[('<strong>180 a 240 palavras</strong>', '<strong>180{N}a{N}240{N}palavras</strong>', 1, 'reposta')]),
+    dict(slug='m4-u3-discurso', mod='M4', gerada=False, pares=[('<strong>2 minutos</strong>', '<strong>2{N}minutos</strong>', 1, 'reposta')]),
+    dict(slug='m5-u1', mod='M5', gerada=True, pares=[('do capítulo IV em que', 'do capítulo{N}IV em que', 1, 'nova')]),
+    dict(slug='m5-u2', mod='M5', gerada=True,
+         pares=[('do capítulo I e outra nova', 'do capítulo{N}I e outra nova', 1, 'nova'), ('No capítulo VI,', 'No capítulo{N}VI,', 1, 'nova')]),
+]
+
+
+def trocas_repor():
+    """As trocas «(R)»: em cada tarefa, o mesmo trecho nos dados (se a página é gerada) e na página. Devolve {ficheiro: (base,
+    final, trocas)}."""
+    out = {}
+    for x in REPOR:
+        ficheiros = ([f'docs/pedagogia/tarefas-escolha/{x["slug"]}.json'] if x['gerada'] else []) + [f'tarefas/{x["slug"]}/index.html']
+        for rel in ficheiros:
+            base_txt = base(rel)
+            final, trocas = base_txt, []
+            onde = ('Dados da tarefa ' if rel.startswith('docs/') else 'Tarefa ') + x['slug'].upper()
+            for antigo, novo, n, tipo in x['pares']:
+                antigo, novo = j(antigo), j(novo)
+                if novo.replace(NBSP, ' ') != antigo.replace(NBSP, ' ') or novo.count(NBSP) <= antigo.count(NBSP):
+                    raise SystemExit(f'{rel}: a reposição «{antigo}» muda mais do que espaços')
+                if base_txt.count(antigo) != n or base_txt.count(novo) != 0:
+                    raise SystemExit(f'{rel}: «{antigo}» não aparece {n} vez(es) no texto do #192')
+                final = final.replace(antigo, novo)
+                trocas.append({'ficheiro': rel, 'local': f'{onde}: «{novo.replace(NBSP, " ")}» que não se parte',
+                               'antigo': antigo, 'novo': novo, 'ocorrencias': n,
+                               'achado': REPOSICAO.format(mod=x['mod'], texto=REPOR_TEXTO[tipo])})
+            out[rel] = (base_txt, final, trocas)
+    return out
+
 
 # A casca das lições fica para o molde, como do M1 ao M5: nenhuma troca. As lições onde a varredura a viu.
 CASCA_NO_MOLDE = sorted(x['ficheiro'] for x in ACHADOS_B if x.get('casca'))
@@ -1087,6 +1151,11 @@ def construir():
     for rel, specs in dados.items():
         finais[rel] = trocas_dados(specs)
     finais.update(trocas_paineis(finais))
+    # 11/11/2026: as reposições depois do #192, em ficheiros que a varredura do M6 não toca.
+    repor = trocas_repor()
+    if set(repor) & set(finais):
+        raise SystemExit(f'reposições em ficheiros da varredura: {sorted(set(repor) & set(finais))}')
+    finais.update(repor)
     # Confere cada ficheiro como o aplicar_trocas.py o vai conferir: a partir da base, e com tudo já aplicado.
     for rel, (base_txt, final, trocas) in finais.items():
         lista = list(enumerate(trocas, 1))
