@@ -67,7 +67,8 @@ PAGINAS = {
 }
 # No guia, os blocos de hoje («Aquecer, 15 min»…) e o produto estão na rota da tarefa, que se abre quando se escolhe uma.
 ROTA = r('15{N}min', '60{N}min', '10{N}minutos', '100{N}a{N}150{N}palavras')
-# Referências nos cartões das lições: (página, índice do cartão, referências que se veem nesse cartão).
+# Referências nos cartões das lições: (página, índice do cartão, referências que se veem nesse cartão). Só as que estão no
+# enunciado, no texto de leitura ou no título do cartão: as opções de resposta não aparecem todas de cada vez.
 L = 'm7/licao-m7-{}/index.html'
 CARTOES = [
     (L.format('f01'), 1, r('8{N}de')), (L.format('f01'), 2, r('13{N}de', 'de{N}1935')), (L.format('f01'), 15, r('8{N}de', 'de{N}1914')),
@@ -85,7 +86,7 @@ CARTOES = [
     (L.format('f09'), 20, r('4{N}de', 'de{N}1578')),
     (L.format('f10'), 0, r('século{N}XV', 'D.{N}Henrique')), (L.format('f10'), 1, r('25{N}%', '180{N}a{N}220{N}palavras')),
     (L.format('f10'), 18, r('1.º{N}verso')),
-    (L.format('f11'), 4, r('D.{N}Sebastião')), (L.format('f11'), 9, r('15{N}de', 'de{N}1890')),
+    (L.format('f11'), 9, r('15{N}de', 'de{N}1890')),
     (L.format('f13'), 0, r('n.º{N}2')), (L.format('f13'), 2, r('3.º{N}ano')), (L.format('f13'), 10, r('n.º{N}3')), (L.format('f13'), 14, r('5.ª{N}estrofe')),
     (L.format('f14'), 4, r('1.ª{N}estrofe')), (L.format('f14'), 15, r('6.º{N}verso')),
     (L.format('f15'), 6, r('2.ª{N}estrofe')),
