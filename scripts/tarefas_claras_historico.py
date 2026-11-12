@@ -19,6 +19,11 @@ CUIDADO_M7 = json.loads((ROOT / 'tests/fixtures/cuidado-m7-edits-20261111.json')
 # M8 a deixou (o hash «after» do seu manifesto), desfaz-se primeiro essa camada, com contagem estrita, e só depois as do M7 e do
 # M6 e a dos enunciados; quem já a desfez entrega outro texto e nada se desfaz duas vezes.
 CUIDADO_M8 = json.loads((ROOT / 'tests/fixtures/cuidado-m8-edits-20261112.json').read_text('utf-8'))['files']
+# 12/11/2026: a decisão 152 no M9 (cuidado_m9_20261112) fica por cima das quatro e muda as tarefas da M9-U1 e da M9-U2 (as páginas
+# e os dados), que a revisão dos enunciados também mudou. Pela mesma regra: quando o texto recebido é a página como a camada do
+# M9 a deixou (o hash «after» do seu manifesto), desfaz-se primeiro essa camada, com contagem estrita, e só depois as do M8, do
+# M7 e do M6 e a dos enunciados; quem já a desfez entrega outro texto e nada se desfaz duas vezes.
+CUIDADO_M9 = json.loads((ROOT / 'tests/fixtures/cuidado-m9-edits-20261112.json').read_text('utf-8'))['files']
 def _sha_lf(text):
     return hashlib.sha256(text.replace('\r\n', '\n').encode()).hexdigest()
 def desfazer(path, text):
@@ -27,6 +32,11 @@ def desfazer(path, text):
     entry = FILES.get(rel)
     if not entry:
         return text
+    mais_recente = CUIDADO_M9.get(rel)
+    if mais_recente and _sha_lf(text) == mais_recente['after_sha256_lf']:
+        for edit in reversed(mais_recente['edits']):
+            assert text.count(edit['new']) == edit['occurrences'], f'Decisão 152 no M9 não confere: {rel}'
+            text = text.replace(edit['new'], edit['old'])
     primeiro = CUIDADO_M8.get(rel)
     if primeiro and _sha_lf(text) == primeiro['after_sha256_lf']:
         for edit in reversed(primeiro['edits']):

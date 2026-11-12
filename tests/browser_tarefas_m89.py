@@ -52,7 +52,8 @@ def main():
                     page.locator('#rota').wait_for(state='visible')
                     # 12/11/2026: decisão 152 no M8 (achado 21): no guia do M8, o tempo de cada bloco leva espaço que não quebra
                     # (U+00A0) entre o número e «min»; no do M9, como estava. Os nomes e os minutos são os mesmos.
-                    espaco = '\xa0' if m == 8 else ' '
+                    # 12/11/2026: decisão 152 no M9 (achado 22): também no guia do M9, com a mesma exigência.
+                    espaco = '\xa0' if m in (8, 9) else ' '
                     assert page.locator('#blocos .bloco b').all_inner_texts() == [
                         f'Aquecer, 10{espaco}min', f'Ler o enunciado, 5{espaco}min', f'Produzir, 60{espaco}min', f'Rever e entregar, 15{espaco}min']
                     assert page.locator('#r-exemplo').is_hidden()
