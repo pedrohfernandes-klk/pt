@@ -263,7 +263,7 @@ TREINO = {
 }
 
 CAB = (
-    '<p class="sobre">Treino 2 de 3. Gramática</p>'
+    sobre('gramatica', 'Gramática') +
     '<h1>Que função tem, e como o sabes</h1>'
     '<p class="lede">Dois itens de gramática das provas de 2026, sete passos e uma justificação escrita por ti. Liga-se à ' + sessao('s21', 'Gramática: funções e relações entre orações') + ' e ao seu ' + aquecimento('s21') + '.</p>'
     '<dl class="liga">'
