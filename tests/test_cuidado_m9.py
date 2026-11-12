@@ -51,7 +51,8 @@ MANIFESTO = json.loads((ROOT / MANIFESTO_REL).read_text('utf-8'))
 M8 = json.loads((ROOT / 'tests/fixtures/cuidado-m8-edits-20261112.json').read_text('utf-8'))
 CLARAS = json.loads((ROOT / 'tests/fixtures/tarefas-claras-edits-20261110.json').read_text('utf-8'))['files']
 # A camada assenta no ramo da decisão 152 no M8 (pedido #195, ainda por publicar), já com o main 40f9505c dentro.
-BASE_COMMIT = '0c85d555341b31e41bf6f495598a92939836db28'
+# 12/11/2026: o M8 foi publicado no main em 89957690 (#195), com a mesma árvore de 0c85d555; a base passa a ser esse commit do main, sem mudar resumos nem trocas.
+BASE_COMMIT = '899576905d085e9552a70fe82d050c13f78dda2f'
 NBSP, WJ = '\xa0', '⁠'
 N = NBSP
 FOLHA = 'assets/pt-lessons/apoios-tabelas.css?v=20261106.1'

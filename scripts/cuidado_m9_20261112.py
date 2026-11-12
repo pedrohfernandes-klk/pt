@@ -12,7 +12,7 @@ entram. A camada aplica-se com scripts/aplicar_trocas.py e o manifesto fica em t
 
   python3 scripts/cuidado_m9_20261112.py
   python3 scripts/aplicar_trocas.py scripts/cuidado_m9_20261112.json --manifesto tests/fixtures/cuidado-m9-edits-20261112.json \\
-      --base-commit 0c85d555341b31e41bf6f495598a92939836db28 --nota "…"
+      --base-commit 899576905d085e9552a70fe82d050c13f78dda2f --nota "…"
 
 Fica por cima da decisão 152 no M8 (cuidado_m8_20261112, no ramo do pedido #195, commit 0c85d555, com o main 40f9505c já
 dentro), que não toca em nenhum ficheiro desta camada.
@@ -78,6 +78,8 @@ As camadas de baixo que mexem no mesmo texto desfazem primeiro esta: os geradore
 (scripts/cartaz_indices_148_20261106.py), dos acertos dos índices (scripts/indices_acertos_20261107.py) e dos créditos atrás de
 um «i» do pedido pt-1 (scripts/creditos_i_pt1_20261107.py: o crédito da imagem documental do índice do M9, onde esta camada
 prende «século XVIII»).
+
+12/11/2026: o M8 foi publicado no main em 89957690 (#195), com a mesma árvore de 0c85d555; a base passa a ser esse commit do main, sem mudar resumos nem trocas.
 """
 import html
 import json
