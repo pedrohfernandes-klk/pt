@@ -227,7 +227,7 @@ TREINO = {
 }
 
 CAB = (
-    '<p class="sobre">Treino 3 de 3. Escrita com correção</p>'
+    sobre('escrita', 'Escrita com correção') +
     '<h1>Um texto de opinião, da leitura do pedido à segunda versão</h1>'
     '<p class="lede">O item de resposta extensa da 2.ª fase de 2026, seis passos e duas versões do teu texto. Liga-se à ' + sessao('s24', 'Opinião: uma posição que resiste à revisão') + ' e ao seu ' + aquecimento('s24') + '.</p>'
     '<dl class="liga">'

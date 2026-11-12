@@ -1,5 +1,9 @@
 """11/11/2026: os três treinos da preparação de exame (exame/treinos/): páginas iguais ao gerador, textos oficiais iguais às
-transcrições, ligações aos documentos em eduqa.pt, regras de língua no texto nosso e convenções das páginas do exame."""
+transcrições, ligações aos documentos em eduqa.pt, regras de língua no texto nosso e convenções das páginas do exame.
+12/11/2026: quatro treinos, com o da sessão 17 (poesia contemporânea): as mesmas conferências, mais as citações curtas dos
+poemas com direitos de autor, letra a letra com as lições do M8 de onde vêm.
+12/11/2026: cinco treinos, com o da sessão 18 (conto): as mesmas conferências, mais o recorte de «George», letra a letra
+com a lição M8-F16 de onde vem."""
 import json
 from pathlib import Path
 import re
@@ -10,9 +14,12 @@ from html import unescape
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'scripts'))
 import exame_treinos as G
-from exame_treinos_dados import base as B, interpretacao as T1, gramatica as T2, escrita as T3, indice as T0
+from exame_treinos_dados import base as B, interpretacao as T1, gramatica as T2, escrita as T3, poesia_contemporanea as T4, conto as T5, indice as T0
 
-PAGINAS = ['exame/treinos/index.html', 'exame/treinos/interpretacao/index.html', 'exame/treinos/gramatica/index.html', 'exame/treinos/escrita/index.html']
+# 12/11/2026: mais uma página, a do treino da sessão 17
+# 12/11/2026: e mais outra, a do treino da sessão 18
+PAGINAS = ['exame/treinos/index.html', 'exame/treinos/interpretacao/index.html', 'exame/treinos/gramatica/index.html', 'exame/treinos/escrita/index.html',
+           'exame/treinos/poesia-contemporanea/index.html', 'exame/treinos/conto/index.html']
 EDUQA = {
     'https://eduqa.pt/wp-content/uploads/2026/06/portugues_prova_639_v2_enunciado.pdf',
     'https://eduqa.pt/wp-content/uploads/2026/07/portugues_prova_639_cc.pdf',
@@ -74,7 +81,8 @@ class TreinosExame(unittest.TestCase):
             with self.subTest(pagina=p):
                 self.assertEqual(self.html[p], geradas[p])
         self.assertEqual(0, G.main(['--check']))
-        # só existem estas quatro páginas em exame/treinos/
+        # 12/11/2026: só existem estas seis páginas em exame/treinos/ (a entrada e os cinco treinos), pela ordem de base.TREINOS
+        self.assertEqual(PAGINAS[1:], ['exame/treinos/%s/index.html' % t for t, _ in B.TREINOS])
         self.assertEqual(sorted(PAGINAS), sorted(p.relative_to(ROOT).as_posix() for p in (ROOT / 'exame/treinos').rglob('*') if p.is_file()))
 
     def test_interpretacao_item_oficial_igual_a_transcricao(self):
@@ -164,6 +172,262 @@ class TreinosExame(unittest.TestCase):
         # nada calcula descontos nem níveis: só as regras, à vista
         self.assertNotRegex(self.texto[p], r'Dentro dos limites|Onde situas o teu texto')
 
+    def test_poesia_item_oficial_igual_a_transcricao(self):
+        # 12/11/2026: treino da sessão 17, ligado ao item 2 do Grupo I da 2.ª fase (dois poemas, um eixo, transcrições)
+        p = PAGINAS[4]
+        h = self.html[p]
+        pa = self.f2['grupos'][0]['partes'][0]
+        it = pa['itens'][1]
+        self.assertEqual(('I.2', 13, 'Explique', True), (it['numero'], it['cotacao'], it['verbo_instrucional'], it['obrigatorio']))
+        cr = it['criterios']
+        oficiais = list(it['enunciado']) + [pa['instrucao'], cr['instrucao'], self.f2['grupos'][0]['nota_dos_criterios']] + [t['fonte'] for t in pa['textos']]
+        for t in cr['topicos']:
+            oficiais += [t['rotulo']] + list(t['pontos'])
+        ced, cl = cr['parametros']
+        oficiais += list(cadeias([n['descritores'] for n in ced['niveis']])) + [ced['nota_de_rodape'], cl['texto'], cl['nota_de_rodape']]
+        # o item de 2026 com o verbo «Compare» (1.ª fase, item 2) vem citado inteiro, e é o único do Grupo I com esse verbo
+        it1 = self.f1['grupos'][0]['partes'][0]['itens'][1]
+        self.assertEqual(('I.2', 13, 'Compare'), (it1['numero'], it1['cotacao'], it1['verbo_instrucional']))
+        oficiais += list(it1['enunciado'])
+        self.presentes(p, oficiais)
+        com = [(f, i['numero']) for f, d in (('1f', self.f1), ('2f', self.f2)) for pt in d['grupos'][0]['partes'] for i in pt['itens'] if re.search(r'\bCompar', ' '.join(i['enunciado']))]
+        self.assertEqual([('1f', 'I.2')], com)
+        for n in ced['niveis']:
+            self.assertIn('<td class="c">%s</td>' % n['nivel'], h)
+            self.assertIn('<td class="c">%s</td></tr>' % n['pontuacao'], h)
+        self.assertIn('Item 2 (13 pontos', h)
+        # as citações oficiais usadas nos passos estão nos critérios, tal e qual
+        self.assertTrue(it1['criterios']['topicos'][0]['pontos'][0].startswith(T4.T_AMBOS))
+        n3 = [n for n in ced['niveis'] if n['nivel'] == 3][0]
+        self.assertEqual(6, n3['pontuacao'])
+        self.assertIn(T4.D_UM, list(cadeias(n3['descritores'])))
+        for n in ced['niveis']:
+            if n['nivel'] > 3:
+                self.assertNotIn(T4.D_UM, list(cadeias(n['descritores'])))
+        g1, g2 = (json.dumps(f['criterios']['gerais'], ensure_ascii=False) for f in (self.f1, self.f2))
+        for regra in (T4.REGRA_P2.strip('«»'), T4.R_INTRO, T4.R_CONECT, T4.R_CITAR):
+            self.assertIn(regra, g1)
+            self.assertIn(regra, g2)
+            self.assertIn(regra, self.texto[p])
+        # os dois poemas da prova não se repetem na página: só aparecem os versos que os critérios transcrevem; o resto lê-se nas provas em cartões
+        crit = simples(json.dumps(cr, ensure_ascii=False))
+        fora = [simples(v['t']) for t in pa['textos'] for e in t['estrofes'] for v in e if simples(v['t']) not in crit]
+        self.assertGreaterEqual(len(fora), 15)
+        for v in fora:
+            with self.subTest(verso=v):
+                self.assertNotIn(v, self.texto[p])
+        self.assertIn('<a href="../../provas/2026-2f/grupo-i/">provas em cartões (2.ª fase, Grupo I)</a>', h)
+        self.assertIn(fora[0], (ROOT / 'exame/provas/2026-2f/grupo-i/index.html').read_text('utf-8'))
+
+    def test_poesia_citacoes_curtas_conferidas_com_as_licoes(self):
+        # 12/11/2026: os dois poemas do treino têm direitos de autor; a página só mostra as duas citações que as lições do M8 já publicam
+        p = PAGINAS[4]
+        h = self.html[p]
+        origem = {T4.C_SENA: 'm8/licao-m8-f03/index.html', T4.C_EUG: 'm8/licao-m8-f04/index.html'}
+        self.assertEqual({'Apenas como elas. / Mas brilha.': 'm8/licao-m8-f03/index.html', 'São como um cristal, / as palavras.': 'm8/licao-m8-f04/index.html'}, origem)
+        for cit, licao in origem.items():
+            with self.subTest(citacao=cit):
+                # letra a letra, no ficheiro publicado da lição (sem passar pelo leitor de cartões do gerador)
+                self.assertIn('«%s»' % cit, (ROOT / licao).read_text('utf-8'))
+                self.assertIn('«%s»' % cit, self.texto[p])
+        apoio = re.search(r'<div data-apoio="cit" hidden>(.*?)</div>', h, re.S).group(1)
+        self.assertEqual(['«%s»' % T4.C_SENA, '«%s»' % T4.C_EUG], [unescape(c) for c in re.findall(r'<p class="cit">(.*?)</p>', apoio)])
+        # as palavras em que se toca no passo 2 são as das citações, pela ordem
+        d = dados(h)
+        tocar = [b for ps in d['passos'] for b in ps['blocos'] if b['t'] == 'tocar']
+        self.assertEqual([T4.C_SENA, T4.C_EUG], [' '.join(t['x'] for t in b['tokens']) for b in tocar])
+        # tudo o que o texto nosso põe entre «» é bocado de uma das duas citações, citação oficial conferida ou título/palavra da lista
+        T4.cita_ok(T4.NOSSO)
+        for mau in ('«Um verso que nenhuma lição publica»', 'como em «Carta a meus filhos»', '«brilha apenas»'):
+            with self.subTest(recusa=mau):
+                with self.assertRaises(AssertionError):
+                    T4.cita_ok(mau)
+        vistos = 0
+        for c in re.findall(r'«([^«»]+)»', re.sub(r'<[^>]+>', '', T4.NOSSO)):
+            if c in T4.ENTRE_ASPAS or c in T4.OFICIAIS:
+                continue
+            with self.subTest(entre_aspas=c):
+                self.assertTrue(any(c.rstrip('.,') in cit for cit in origem), c)
+            vistos += 1
+        self.assertGreaterEqual(vistos, 20)
+        # nenhum título nem palavra da lista é verso: nenhuma entrada da lista tem barra de verso
+        self.assertEqual([], [x for x in T4.ENTRE_ASPAS if ' / ' in x])
+        # remete para o manual (sem página, que as lições não dão) e para as lições, com ligação
+        ta = re.sub(r'\s+', ' ', unescape(re.sub(r'<[^>]+>', '', apoio)))
+        self.assertIn('Abre o manual', ta)
+        self.assertIn('<i>Novo Sentidos 12</i> (ASA, 2023)', apoio)
+        self.assertNotRegex(ta, r'(?i)manual[^.]*\bp(p|ág)?\. ?\d')
+        self.assertIn('direitos de autor', ta)
+        for f in ('f03', 'f04'):
+            self.assertIn('<a href="../../../m8/licao-m8-%s/">' % f, apoio)
+            self.assertIn('<i>Novo Sentidos 12</i>, ASA, 2023', (ROOT / ('m8/licao-m8-%s/index.html' % f)).read_text('utf-8'))
+        self.assertIn('<a href="../../../m8/licao-m8-f05/">', json.dumps(d, ensure_ascii=False).replace('\\"', '"'))
+        # o texto de apoio está em todos os passos
+        self.assertEqual({'cit'}, {ps['apoio'] for ps in d['passos']})
+        self.assertEqual(6, len(d['passos']))
+
+    def test_conto_item_oficial_igual_a_transcricao(self):
+        # 12/11/2026: treino da sessão 18, ligado ao item 4 do Grupo I da 2.ª fase (inferir traços de uma personagem, com elementos textuais)
+        p = PAGINAS[5]
+        h = self.html[p]
+        pb = self.f2['grupos'][0]['partes'][1]
+        it = pb['itens'][0]
+        self.assertEqual(('I.4', 13, 'Infira', True), (it['numero'], it['cotacao'], it['verbo_instrucional'], it['obrigatorio']))
+        tx = pb['textos'][0]
+        self.assertEqual('texto dramático (excerto)', tx['genero'])
+        cr = it['criterios']
+        oficiais = list(it['enunciado']) + [pb['instrucao'], tx['fonte'], cr['instrucao'], self.f2['grupos'][0]['nota_dos_criterios']]
+        oficiais += [l['t'] for l in tx['linhas']] + [n['texto'] for n in pb['notas']]
+        self.assertEqual(5, len(cr['topicos']))
+        for t in cr['topicos']:
+            oficiais += list(t['pontos'])
+        ced, cl = cr['parametros']
+        oficiais += list(cadeias([n['descritores'] for n in ced['niveis']])) + [ced['nota_de_rodape'], cl['texto'], cl['nota_de_rodape']]
+        # o primeiro item de 2026 sobre texto narrativo (1.ª fase, item 1) vem citado inteiro
+        pa1 = self.f1['grupos'][0]['partes'][0]
+        it1 = pa1['itens'][0]
+        self.assertEqual(('I.1', 13, 'Explicite'), (it1['numero'], it1['cotacao'], it1['verbo_instrucional']))
+        oficiais += list(it1['enunciado'])
+        self.presentes(p, oficiais)
+        # o excerto da prova, linha a linha, com o número da prova
+        dobra = re.search(r'<details class="dobra">(.*?)</details>', h, re.S).group(1)
+        linhas = re.findall(r'<li><span class="n">(\d+)</span><span>(.*?)</span></li>', re.search(r'<ol class="prosa">(.*?)</ol>', dobra, re.S).group(1))
+        self.assertEqual([(str(l['n']), simples(l['t'])) for l in tx['linhas']],
+                         [(n, re.sub(r'\s+', ' ', unescape(re.sub(r'<[^>]+>', '', t))).strip()) for n, t in linhas])
+        self.assertEqual(36, len(linhas))
+        for n in ced['niveis']:
+            self.assertIn('<td class="c">%s</td>' % n['nivel'], h)
+            self.assertIn('<td class="c">%s</td></tr>' % n['pontuacao'], h)
+        self.assertIn('Item 4 (13 pontos', h)
+        # o que a página afirma sobre 2026: «Infira» só neste item do Grupo I; os textos narrativos são os dois excertos da Parte A da 1.ª fase,
+        # com os verbos «Explicite» e «Compare» nos dois itens de resposta restrita
+        inf = [(f, i['numero']) for f, d in (('1f', self.f1), ('2f', self.f2)) for pt in d['grupos'][0]['partes'] for i in pt['itens'] if re.search(r'\bInfir', ' '.join(i['enunciado']))]
+        self.assertEqual([('2f', 'I.4')], inf)
+        narr = [(f, pt['id']) for f, d in (('1f', self.f1), ('2f', self.f2)) for pt in d['grupos'][0]['partes'] if any(re.search(r'romance|conto|narrativ', t['genero']) for t in pt.get('textos', []))]
+        self.assertEqual([('1f', 'A')], narr)
+        self.assertEqual([('Explicite', 'construção: resposta restrita'), ('Compare', 'construção: resposta restrita')], [(i['verbo_instrucional'], i['tipo']) for i in pa1['itens'][:2]])
+        self.assertTrue(pa1['itens'][2]['tipo'].startswith('seleção'))
+        self.assertRegex(self.texto[p], r'No Grupo I das duas fases, o verbo «Infira» só aparece no item 4 da 2\.ª fase\. Nenhum item de 2026 manda inferir a partir de um conto\.')
+        # as citações oficiais usadas nos passos estão nos critérios, tal e qual
+        n5 = [n for n in ced['niveis'] if n['nivel'] == 5][0]
+        n3 = [n for n in ced['niveis'] if n['nivel'] == 3][0]
+        self.assertEqual((10, 6), (n5['pontuacao'], n3['pontuacao']))
+        self.assertEqual(T5.D_DOIS, n5['descritores'][0][0])
+        self.assertIn(T5.D_UM, list(cadeias(n3['descritores'])))
+        for n in ced['niveis']:
+            if n['nivel'] > 3:
+                self.assertNotIn(T5.D_UM, list(cadeias(n['descritores'])))
+        self.assertTrue(cr['topicos'][2]['pontos'][0].startswith(T5.T_RAC + ' («'))
+        self.assertIn(T5.I_DOIS, simples(cr['instrucao']))
+        for s in (T5.D_DOIS, T5.D_UM, T5.T_RAC, T5.I_DOIS):
+            self.assertIn('«%s»' % s, self.texto[p])
+        g1, g2 = (json.dumps(f['criterios']['gerais'], ensure_ascii=False) for f in (self.f1, self.f2))
+        for regra in (T5.REGRA_P2.strip('«»'), T5.R_INTRO, T5.R_CONECT, T5.R_CITAR):
+            self.assertIn(regra, g1)
+            self.assertIn(regra, g2)
+            self.assertIn(regra, self.texto[p])
+
+    def test_conto_recorte_conferido_com_a_licao(self):
+        # 12/11/2026: «George» tem direitos de autor; a página só mostra o recorte de duas frases que a lição M8-F16 já publica
+        p = PAGINAS[5]
+        h = self.html[p]
+        recorte = 'À sua frente uma senhora de idade, primeiro esboçada, finalmente completa, olha-a atentamente. De idade não, George detesta eufemismos, mesmo só pensados, uma mulher velha.'
+        self.assertEqual(recorte, T5.RECORTE)
+        self.assertEqual([recorte], list(T5.CITACOES))
+        # letra a letra, no ficheiro publicado da lição (sem passar pelo leitor de cartões do gerador)
+        licao = (ROOT / 'm8/licao-m8-f16/index.html').read_text('utf-8')
+        self.assertEqual(1, licao.count('«%s»' % recorte))
+        self.assertIn('<blockquote class=\\"prosa\\">«%s»<\\/blockquote>' % recorte, licao)
+        self.assertIn('«%s»' % recorte, self.texto[p])
+        apoio = re.search(r'<div data-apoio="cit" hidden>(.*?)</div>', h, re.S).group(1)
+        self.assertEqual(['«%s»' % recorte], [unescape(c) for c in re.findall(r'<p class="cit">(.*?)</p>', apoio)])
+        # as palavras em que se toca no passo 2 são as do recorte (as duas frases, e depois só a segunda), pela ordem
+        d = dados(h)
+        tocar = [b for ps in d['passos'] for b in ps['blocos'] if b['t'] == 'tocar']
+        self.assertEqual([recorte, recorte.split('. ')[1]], [' '.join(t['x'] for t in b['tokens']) for b in tocar])
+        self.assertEqual(['não,', 'pensados,'], [b['tokens'][b['nucleos'][0][0]]['x'] for b in tocar])
+        # tudo o que o texto nosso põe entre «» é bocado do recorte, citação oficial conferida ou título/palavra da lista
+        T5.cita_ok(T5.NOSSO)
+        for mau in ('«Uma frase que nenhuma lição publica»', 'como diz Georgina: «Sou eu»', '«uma velha senhora»', '«George detesta a velhice»'):
+            with self.subTest(recusa=mau):
+                with self.assertRaises(AssertionError):
+                    T5.cita_ok(mau)
+        vistos = 0
+        for c in re.findall(r'«([^«»]+)»', re.sub(r'<[^>]+>', '', T5.NOSSO)):
+            if c in T5.ENTRE_ASPAS or c in T5.OFICIAIS:
+                continue
+            with self.subTest(entre_aspas=c):
+                self.assertIn(c.rstrip('.,'), recorte)
+            vistos += 1
+        self.assertGreaterEqual(vistos, 20)
+        # nenhuma entrada da lista é frase do conto: são títulos, verbos dos enunciados e nomes de partes da página, todos curtos
+        self.assertEqual([], [x for x in T5.ENTRE_ASPAS if len(x.split()) > 8 or x.endswith('.')])
+        # o que a Resposta A (a insuficiente) inventa não vem entre aspas
+        self.assertEqual(['George detesta eufemismos'], re.findall(r'«([^«»]+)»', T5.RESP_A))
+        # dá a referência que a lição dá, remete para o manual (sem página, que as lições não dão) e para as lições, com ligação
+        ta = re.sub(r'\s+', ' ', unescape(re.sub(r'<[^>]+>', '', apoio)))
+        self.assertIn('Maria Judite de Carvalho, «George», em Seta Despedida, Mem Martins, Europa-América, 1995.', ta)
+        self.assertIn('Maria Judite de Carvalho, «George», em <i>Seta Despedida<\\/i>, Mem Martins, Europa-América, 1995.', licao)
+        self.assertIn('Abre o manual', ta)
+        self.assertIn('<i>Novo Sentidos 12</i> (ASA, 2023)', apoio)
+        self.assertNotRegex(ta, r'(?i)manual[^.]*\bp(p|ág)?\. ?\d')
+        self.assertIn('direitos de autor', ta)
+        self.assertEqual(['../../../m8/licao-m8-f16/', '../../../m8/licao-m8-f08/'], re.findall(r'<a href="([^"]+)"', apoio))
+        self.assertIn('<i>Novo Sentidos 12</i>, ASA, 2023', (ROOT / 'm8/licao-m8-f08/index.html').read_text('utf-8'))
+        self.assertIn('<a href="../../../m8/m8-george-tres-idades/">', json.dumps(d, ensure_ascii=False).replace('\\"', '"'))
+        self.assertIn('"titulo":"Passagem, leitura, limite"', (ROOT / 'm8/m8-george-tres-idades/index.html').read_text('utf-8'))
+        # a página não diz quem é a mulher do recorte, porque as lições não o dizem
+        self.assertNotRegex(self.texto[p], r'(?i)a mulher (velha )?é Georgina|Georgina é a mulher|é a própria George')
+        # o texto de apoio está em todos os passos
+        self.assertEqual({'cit'}, {ps['apoio'] for ps in d['passos']})
+        self.assertEqual(7, len(d['passos']))
+
+    def test_achados_da_revisao_de_12_11(self):
+        # 12/11/2026: teste novo, com o que a revisão independente dos treinos 4 e 5 apanhou
+        # a opção adequada não se reconhece pelo tamanho: nunca passa de 1,4 vezes a mais longa das outras
+        for T in (T1, T2, T3, T4, T5):
+            for ps in T.TREINO['passos']:
+                for b in ps['blocos']:
+                    if b['t'] != 'escolha':
+                        continue
+                    tam = [len(o['t']) for o in b['o']]
+                    outras = max(t for i, t in enumerate(tam) if i != b['c'])
+                    with self.subTest(pergunta=b['id']):
+                        self.assertLessEqual(tam[b['c']] / outras, 1.4, tam)
+        # no passo 3 do conto, as quatro afirmações têm a mesma forma: nenhuma traz a justificação depois de dois pontos
+        sep = [b for ps in T5.TREINO['passos'] for b in ps['blocos'] if b.get('id') == 'p5-separar'][0]
+        self.assertEqual(4, len(sep['o']))
+        for o in sep['o']:
+            self.assertNotIn(':', o['t'])
+            self.assertRegex(o['t'], r'^George [^;()«»]+\.$')
+        # nenhuma pista da primeira busca do conto entrega as palavras que a segunda busca pede
+        rec, pen = [b for ps in T5.TREINO['passos'] for b in ps['blocos'] if b.get('id') in ('p5-recusa', 'p5-pensados')]
+        self.assertEqual(('p5-recusa', 'p5-pensados'), (rec['id'], pen['id']))
+        pistas1 = ' '.join(x['x'] for x in rec['pistas']) + rec['falta'] + rec['pista2']
+        self.assertNotRegex(pistas1, r'pensad|pergunta seguinte|[Gg]uarda')
+        for T in (T1, T2, T3, T4, T5):
+            self.assertNotIn('pergunta seguinte', json.dumps(T.TREINO, ensure_ascii=False))
+        # a página da poesia não afirma por conta própria que a citação é o último verso de «Uma pequenina luz»
+        self.assertNotRegex(T4.NOSSO, r'(?i)\bfech(o|a)\b')
+        self.assertIn('Vem no fim do poema, segundo a <a href="../../../m8/licao-m8-f03/">', T4.APOIO)
+        # o número do verso ou da linha é hábito nosso, e as duas páginas dizem-no
+        for T in (T4, T5):
+            self.assertNotRegex(json.dumps(T.TREINO, ensure_ascii=False), r'na prova, ou a partir do manual|copiada do manual, com o número|copia-o do manual')
+        self.assertIn('Se copiei do manual, juntei o número do verso (hábito nosso, não é exigência dos critérios).', self.texto['exame/treinos/poesia-contemporanea/index.html'] + json.dumps(T4.TREINO, ensure_ascii=False))
+        self.assertIn('Juntá-lo é um hábito nosso', json.dumps(T4.TREINO, ensure_ascii=False))
+        self.assertIn('Juntá-lo é um hábito nosso', json.dumps(T5.TREINO, ensure_ascii=False))
+        # o descritor «um dos sujeitos poéticos» vem depois da ponte que diz que a Resposta A cumpria a estrutura do item oficial
+        t4 = json.dumps(T4.TREINO, ensure_ascii=False)
+        self.assertLess(t4.index('lá, uma resposta como a A cumpria a estrutura pedida'), t4.index(T4.D_UM))
+        # o conto: os itens 1 e 2 da 1.ª fase são os de excerto narrativo dado na prova (o item 7 é resposta restrita sem excerto)
+        h5 = self.html['exame/treinos/conto/index.html']
+        self.assertEqual(2, h5.count('os itens de resposta restrita sobre um excerto narrativo dado na prova são os itens 1 e 2 da 1.ª fase'))
+        self.assertNotIn('itens de resposta restrita sobre texto narrativo', h5)
+        # e uma inferência não é uma palavra nova para o que o recorte já escreve
+        t5 = json.dumps(T5.TREINO, ensure_ascii=False)
+        self.assertNotRegex(t5, r'com uma palavra que o recorte não usa|que não copiei do recorte')
+        self.assertIn('Trocar uma palavra por um sinónimo não chegava.', t5)
+
     def test_ligacoes_oficiais_em_eduqa(self):
         self.assertEqual(EDUQA, set(B.URL.values()))
         for p in PAGINAS[1:]:
@@ -176,6 +440,10 @@ class TreinosExame(unittest.TestCase):
         self.assertLessEqual({B.URL['e1'], B.URL['c1']}, set(re.findall(r'href="([^"]+)"', self.html[PAGINAS[1]])))
         self.assertEqual(EDUQA, set(re.findall(r'href="(https?://[^"]+)"', self.html[PAGINAS[2]])))
         self.assertLessEqual({B.URL['e2'], B.URL['c2']}, set(re.findall(r'href="([^"]+)"', self.html[PAGINAS[3]])))
+        # 12/11/2026: o treino da sessão 17 liga aos documentos das duas fases
+        self.assertEqual(EDUQA, set(re.findall(r'href="(https?://[^"]+)"', self.html[PAGINAS[4]])))
+        # 12/11/2026: o treino da sessão 18 também (item oficial da 2.ª fase; itens sobre texto narrativo da 1.ª)
+        self.assertEqual(EDUQA, set(re.findall(r'href="(https?://[^"]+)"', self.html[PAGINAS[5]])))
         self.assertEqual([], re.findall(r'href="(https?://[^"]+)"', self.html[PAGINAS[0]]))
 
     def test_regras_de_lingua_no_texto_nosso(self):
@@ -186,7 +454,10 @@ class TreinosExame(unittest.TestCase):
                 with self.assertRaises(SystemExit):
                     B.lint('teste', mau)
         self.assertEqual([], B.lint('teste', 'Que resposta fica aquém? Qual das duas? No <i>Dicionário Terminológico</i>, com o docente.'))
-        nossos = {'indice': T0.CORPO, 'interpretacao': T1.NOSSO, 'gramatica': T2.NOSSO, 'escrita': T3.NOSSO}
+        # 12/11/2026: mais o texto nosso do treino da sessão 17
+        # 12/11/2026: e o do treino da sessão 18
+        nossos = {'indice': T0.CORPO, 'interpretacao': T1.NOSSO, 'gramatica': T2.NOSSO, 'escrita': T3.NOSSO, 'poesia-contemporanea': T4.NOSSO, 'conto': T5.NOSSO}
+        self.assertEqual(len(PAGINAS), len(nossos))
         for nome, nosso in nossos.items():
             with self.subTest(treino=nome):
                 self.assertGreater(len(nosso), 3000)
@@ -238,7 +509,10 @@ class TreinosExame(unittest.TestCase):
                 self.assertIn('%sassets/exame/fontes/IBM-Plex-Sans-OFL.txt' % raiz, h)
         # cada treino liga à sua sessão e ao aquecimento dessa sessão, que continuam onde estavam
         sessoes = {s['id']: s for s in json.loads((ROOT / 'assets/exame/sessoes.json').read_text('utf-8'))['sessions']}
-        for p, sid in zip(PAGINAS[1:], ('s14', 's21', 's24')):
+        # 12/11/2026: mais a sessão 17; o zip não pode deixar nenhum treino de fora
+        # 12/11/2026: e a sessão 18
+        self.assertEqual(5, len(PAGINAS[1:]))
+        for p, sid in zip(PAGINAS[1:], ('s14', 's21', 's24', 's17', 's18')):
             h = self.html[p]
             self.assertIn('<a href="../../#%s">sessão %s («%s»)</a>' % (sid, sid[1:], sessoes[sid]['title']), h)
             self.assertIn('<a href="../../aquecimentos/%s/">aquecimento</a>' % sid, h)
