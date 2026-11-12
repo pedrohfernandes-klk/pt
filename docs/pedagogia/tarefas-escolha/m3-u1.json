@@ -125,7 +125,7 @@
  "facil": {
   "kicker": "Tarefa individual, 90 minutos",
   "fazer": [
-   "Aquece com os cartões.",
+   "Faz o aquecimento: 10 minutos, com consulta.",
    "Responde a duas perguntas.",
    "Escolhe um tema: escrever versos (A) ou uma legenda de exposição (B).",
    "Escreve duas linhas finais.",
@@ -162,25 +162,20 @@
     [
      {
       "t": "60 min",
-      "linhas": 4
+      "linhas": 3
      },
      "Pergunta 1",
-     "cerca de 60"
+     "orientação: cerca de 60"
     ],
     [
      null,
      "Pergunta 2",
-     "cerca de 60"
+     "orientação: cerca de 60"
     ],
     [
      null,
      "Tema A ou B",
-     "80 a 120"
-    ],
-    [
-     null,
-     "Duas linhas finais",
-     "não contam"
+     "orientação: 80 a 120"
     ],
     [
      "15 min",
@@ -194,12 +189,13 @@
     ]
    ],
    "notas": [
-    "As divisões em sílabas também não contam para as palavras."
+    "Nos 5 minutos de leitura, lê as duas perguntas e os passos dos dois temas. Os textos e os exemplos são para consultares enquanto escreves.",
+    "O total é 200 a 240 palavras. Os números de cada parte são uma orientação.",
+    "As duas linhas finais e as divisões em sílabas não contam para as palavras."
    ]
   },
   "aquecer": {
-   "titulo": "Aquecimento",
-   "texto": "Começa aqui: 10 minutos de cartões, com consulta."
+   "titulo": "Relógio do aquecimento"
   },
   "textos": [
    {
@@ -506,8 +502,8 @@
   "perguntas": [
    {
     "titulo": "Quem é celebrado e quem fica de fora?",
-    "meta": "Cerca de 60 palavras.",
-    "relogio": "O relógio de produção começa depois da leitura.",
+    "meta": "Orientação: cerca de 60 palavras.",
+    "relogio": "O relógio de produção começa depois da leitura. Vale para as duas perguntas e para o tema. Depois de começar, o tempo que falta aparece no cimo de todos os cartões.",
     "ler": "Já leste este texto nas lições. Está aqui para consultares e citares.",
     "textos": [
      "texto-1"
@@ -520,7 +516,16 @@
       "Lê os excertos no livro ou na cópia da aula.",
       "Também podes rever os objetos na <a href=\"../../m3/licao-m3-f02/\">lição F02</a>, em «Para entender»."
      ],
-     "lista_titulo": "Os seis objetos, como estão na lição F02:",
+     "nomes_titulo": "Os seis objetos:",
+     "nomes": [
+      "Frasquinho de Mar Português;",
+      "A Colónia;",
+      "História Docinha;",
+      "Disco Riscado Lusitanístico;",
+      "Remendo Imperial Personalizado;",
+      "Sebastiana."
+     ],
+     "lista_titulo": "Ver o que é cada objeto, como está na lição F02",
      "lista": [
       "<b>Frasquinho de Mar Português:</b> uma caravela num frasco de vidro, para inalar; ao exalar, pedem-se sons sibilantes «como os que se encontra na palavra imposição, sacrifício, massificação, cinismo, cobiça, execução ou zombaria».",
       "<b>A Colónia:</b> a versão colonial portuguesa do Monopólio; avança-se quantas casas se quiser e, ao parar, grita-se «É MEU!».",
@@ -535,30 +540,41 @@
     "pedido_titulo": "O que fazes",
     "alineas": [
      "No Texto 1, cita uma expressão sobre quem partiu.",
-     "Cita outra expressão do Texto 1, sobre quem vivia nas terras aonde eles chegaram.",
+     "Cita outra expressão do Texto 1, sobre quem lá vivia.",
      "Escolhe um objeto do <i>Kit</i> de Patrícia Lino.",
      "Explica o que esse objeto mostra e a Proposição cala.",
      "Escreve um facto sobre a Proposição.",
      "Escreve um juízo sobre a Proposição."
     ],
     "ajudas": [
-     "Um facto confirma-se. Um juízo discute-se."
+     "Um facto confirma-se. Um juízo discute-se.",
+     "O exemplo logo abaixo mostra as alíneas a), b), e) e f) com outro caso."
     ],
     "citar": "Copia as palavras exatas do texto. Põe-nas entre aspas: «…».",
     "exemplos": [
      {
       "titulo": "Exemplo com outro caso: a etiqueta da pimenta",
+      "contexto": "Na lição F04, em «Em paralelo», a pimenta tem duas histórias: a história oficial e a que ficou por contar. Aqui, quem responde faz com uma etiqueta da pimenta o que tu fazes com a Proposição.",
       "paragrafos": [
-       "«A rota das especiarias» é a história que se conta, e «Quem apanhava a pimenta no Malabar» é a que ficou por contar.",
-       "Facto: a pimenta vinha pela rota das especiarias.",
-       "Juízo: uma etiqueta que só fala da rota esconde quem trabalhou."
+       {
+        "al": "Alíneas a) e b), duas expressões citadas:",
+        "t": "«A rota das especiarias» é a história que se conta, e «Quem apanhava a pimenta no Malabar» é a que ficou por contar."
+       },
+       {
+        "al": "Alínea e):",
+        "t": "Facto: a pimenta vinha pela rota das especiarias."
+       },
+       {
+        "al": "Alínea f):",
+        "t": "Juízo: uma etiqueta que só fala da rota esconde quem trabalhou."
+       }
       ]
      }
     ]
    },
    {
     "titulo": "Duas imagens da amada.",
-    "meta": "Cerca de 60 palavras. As divisões em sílabas não contam.",
+    "meta": "Orientação: cerca de 60 palavras. As divisões em sílabas não contam.",
     "ler": "Já leste estes textos nas lições. Estão aqui para consultares e citares.",
     "textos": [
      "texto-2",
@@ -576,17 +592,21 @@
      "Identifica um recurso.",
      "Explica o que esse recurso mostra da amada.",
      "Divide o verso em sílabas métricas.",
-     "Indica a medida."
+     "Indica a medida (o número de sílabas e o nome do verso)."
     ],
     "ajudas": [
-     "Um recurso pode mostrar como a amada é vista, onde está ou o que a voz lhe diz."
+     "Um recurso pode mostrar como a amada é vista, onde está ou o que a voz lhe diz.",
+     "Há dois exemplos logo abaixo, com outros poemas. O primeiro mostra as alíneas a), b) e c). O segundo mostra as alíneas d) e e)."
     ],
     "citar": "Copia o verso letra a letra. Põe-no entre aspas: «…».",
     "exemplos": [
      {
-      "titulo": "Exemplo com outro poema, «Perdigão perdeu a pena»: citar e explicar",
+      "titulo": "Exemplo com outro poema, «Perdigão perdeu a pena»: citar, identificar e explicar",
       "paragrafos": [
-       "«Perde a pena do voar, / Ganha a pena do tormento» usa os dois sentidos de «pena», e o amante perde a esperança e ganha a dor."
+       {
+        "al": "Alíneas a), b) e c):",
+        "t": "«Perde a pena do voar, / Ganha a pena do tormento» usa os dois sentidos de «pena», e o amante perde a esperança e ganha a dor."
+       }
       ]
      },
      {
@@ -597,24 +617,34 @@
    }
   ],
   "temas_titulo": "Escolhe um tema: A ou B",
-  "temas_nota": "Faz só um tema. Escreve 80 a 120 palavras.",
+  "temas_nota": "Faz só um tema. Orientação: 80 a 120 palavras.",
   "temas": [
    {
     "letra": "A",
     "nome": "A medida velha, hoje",
     "resumo": "Escreves versos.",
     "intro": "Imagina uma Leonor de hoje a caminho da escola.",
+    "antes": [
+     "A Leonor de Camões está no <a href=\"#texto-2\">Texto 2</a>, na pergunta 2.",
+     "Lê os passos todos antes de escreveres."
+    ],
     "passos": [
-     "Escreve um mote de dois versos.",
-     "Escreve uma volta de cinco versos.",
-     "Usa a redondilha maior no mote e na volta.",
-     "Termina a volta com o último verso do mote.",
-     "Inclui cores.",
-     "Inclui uma hipérbole.",
+     "Escolhe um verso de Camões para imitar.",
+     {
+      "t": "Escreve um mote e uma volta. Os teus versos cumprem tudo isto:",
+      "sub": [
+       "o mote tem dois versos;",
+       "a volta tem cinco versos;",
+       "estão em redondilha maior (verso de sete sílabas);",
+       "a volta termina com o último verso do mote;",
+       "incluem cores;",
+       "incluem uma hipérbole."
+      ]
+     },
      "Divide dois dos teus versos em sílabas métricas.",
      "Cita o verso de Camões que imitaste.",
      "Explica a imitação.",
-     "Indica uma diferença entre as duas Leonores."
+     "Indica uma diferença entre as duas Leonores (a tua e a de Camões)."
     ],
     "material": {
      "titulo": "Só para o tema A: um exemplo com outro caso",
@@ -636,7 +666,19 @@
     "letra": "B",
     "nome": "Pedra e verso",
     "resumo": "Escreves uma legenda de exposição.",
-    "intro": "Escreve uma legenda de exposição para a fotografia do túmulo de Camões. A fotografia está mais abaixo, no material do tema B.",
+    "intro": "Escreve uma legenda de exposição para a fotografia do túmulo de Camões.",
+    "antes": [
+     "O dossiê e o Texto 4 estão logo a seguir aos passos."
+    ],
+    "figura": {
+     "de": "m3/licao-m3-f04/index.html",
+     "alt": "Túmulo de Luís de Camões, Mosteiro dos Jerónimos (fotografia de ProtoplasmaKid, 2019)",
+     "largura": 640,
+     "altura": 427,
+     "legenda": "Túmulo de Luís de Camões, Mosteiro dos Jerónimos.",
+     "credito_rotulo": "Créditos da imagem: Túmulo de Luís de Camões, Mosteiro dos Jerónimos",
+     "credito": "Túmulo de Luís de Camões, Mosteiro dos Jerónimos (fotografia de ProtoplasmaKid, 2019). <a rel=\"license\" href=\"https://creativecommons.org/licenses/by-sa/4.0/deed.pt\">CC BY-SA 4.0</a>."
+    },
     "passos": [
      "Descreve a imagem em duas frases.",
      "Inclui dois factos do dossiê.",
@@ -646,16 +688,7 @@
      "Diz o que a legenda não pode afirmar."
     ],
     "material": {
-     "titulo": "Só para o tema B: a fotografia, o dossiê e o Texto 4",
-     "figura": {
-      "de": "m3/licao-m3-f04/index.html",
-      "alt": "Túmulo de Luís de Camões, Mosteiro dos Jerónimos (fotografia de ProtoplasmaKid, 2019)",
-      "largura": 640,
-      "altura": 427,
-      "legenda": "Túmulo de Luís de Camões, Mosteiro dos Jerónimos.",
-      "credito_rotulo": "Créditos da imagem: Túmulo de Luís de Camões, Mosteiro dos Jerónimos",
-      "credito": "Túmulo de Luís de Camões, Mosteiro dos Jerónimos (fotografia de ProtoplasmaKid, 2019). <a rel=\"license\" href=\"https://creativecommons.org/licenses/by-sa/4.0/deed.pt\">CC BY-SA 4.0</a>."
-     },
+     "titulo": "Só para o tema B: o dossiê, o Texto 4 e um exemplo com outro caso",
      "dossie": true,
      "textos": [
       "texto-4"
@@ -731,17 +764,17 @@
    {
     "titulo": "O trabalho todo",
     "itens": [
-     "As respostas estão articuladas?",
+     "As respostas ligam-se (não estão soltas)?",
      "Tenho 200 a 240 palavras?",
      "Revi a escrita?",
      "Escrevi as duas linhas finais?",
-     "Escrevi o tema escolhido (A ou B) no topo?"
+     "Escrevi a letra do meu tema (A ou B) no topo?"
     ]
    }
   ],
   "entrega_titulo": "Entrega no Teams",
   "entrega": [
-   "Escreve o tema escolhido (A ou B) no topo.",
+   "Escreve a letra do teu tema (A ou B) no topo.",
    "Fotografa as respostas, o texto do teu tema e as duas linhas finais.",
    "Confirma que as fotografias mostram o trabalho completo.",
    "Entrega as fotografias na tarefa do Teams."
