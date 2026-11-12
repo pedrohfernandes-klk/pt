@@ -376,6 +376,9 @@ class CuidadoM5(unittest.TestCase):
             self.assertIn('Antes de chamares o docente: 1) relê o enunciado; 2) vê a rubrica; 3) pergunta', ler(f'm{m}/guia-da-tarefa-m{m}/index.html'))
         self.assertIn('<div class="regra"><b>Três antes de mim.</b> Antes de chamares o docente:<ol><li>relê o enunciado;</li><li>vê a '
                       'rubrica;</li><li>pergunta ao teu par de trabalho.</li></ol>Só depois levantas o braço.</div>', ler('m8/guia-da-tarefa-m8/index.html'))
+        # 12/11/2026: o M9 sai do ciclo de cima e entra aqui, como o M7 e o M8: a mesma lista ordenada, letra a letra, no guia do M9.
+        self.assertIn('<div class="regra"><b>Três antes de mim.</b> Antes de chamares o docente:<ol><li>relê o enunciado;</li><li>vê a '
+                      'rubrica;</li><li>pergunta ao teu par de trabalho.</li></ol>Só depois levantas o braço.</div>', ler('m9/guia-da-tarefa-m9/index.html'))
         self.assertIn('<div class="regra"><b>Três antes de mim.</b> Antes de chamares o docente:<ol><li>relê o enunciado;</li><li>vê a '
                       'rubrica;</li><li>pergunta ao teu par de trabalho.</li></ol>Só depois levantas o braço.</div>', ler('m7/guia-da-tarefa-m7/index.html'))
         # Achado 18: na F08, as perguntas e os factos em listas; as marcas da carta ficam em linha.

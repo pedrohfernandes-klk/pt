@@ -302,6 +302,8 @@ class CuidadoM3(unittest.TestCase):
         for m in (6,):
             self.assertNotIn('apoio-tabela', ler(f'm{m}/index.html'), m)
         self.assertEqual(ler('m8/index.html').count('<table class="apoio-tabela"'), 1)
+        # 12/11/2026: o M9 sai do ciclo de cima e entra aqui, como o M8: o índice do M9 tem exatamente uma tabela de apoio.
+        self.assertEqual(ler('m9/index.html').count('<table class="apoio-tabela"'), 1)
         self.assertEqual(ler('m5/index.html').count('<table class="apoio-tabela"'), 1)
 
     def test_folha_das_tabelas_antes_da_aparencia(self):
