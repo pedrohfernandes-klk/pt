@@ -10,7 +10,9 @@ navegador, que:
 - o texto da prova (linhas numeradas, versos, notas) é igual à transcrição, e cada item da prova tem o seu enunciado e
   cartões de preparação;
 - as chaves de escolha múltipla são as da versão da prova, iguais no quadro dos critérios, no resumo dos itens e nos cartões;
-- cada lição cita a fonte (prova, fase, ano, versão, IAVE, as cópias públicas e as fontes dos textos);
+- cada lição cita a fonte (prova, fase, ano, versão, a instituição que a transcrição dá como autora, os documentos de quem os
+  publica e as fontes dos textos); 12/11/2026: em 2026 a instituição é a EduQA e as ligações levam a eduqa.pt (antes, «IAVE» e as
+  cópias públicas), e as referências da moldura escrevem-se presas (U+00A0), na forma exata que os testes pedem;
 - não há código da Sala de aula nem chaves que choquem com as das lições;
 - o texto que escrevemos (fora do texto da prova e dos critérios) cumpre as regras de escrita;
 - a ordem dos cartões (revisão de 29/10): nos itens de resposta escrita, os exemplos completos e os tópicos dos critérios
@@ -192,10 +194,13 @@ class CasoDeProva:
                     self.assertNotIn(marca, s)
                 self.assertEqual(s.count('assets/pt-lessons/rever-frase.js'), 1 if any(c['t'] == 'rever' for c in P.cartoes(g)) else 0)
                 if g < len(P.grupos):
-                    self.assertIn(f'seguinte:"../{P.grupos[g + 1]}/",seguinteRotulo:"Grupo {ROMANOS[g]}"', s)
+                    # 12/11/2026: o rótulo do botão com a referência presa («Grupo II» com U+00A0); só esta forma serve.
+                    self.assertIn(f'seguinte:"../{P.grupos[g + 1]}/",seguinteRotulo:"Grupo\xa0{ROMANOS[g]}"', s)
                 else:
                     self.assertIn('voltarRotulo:"Voltar às provas"', s)
                 self.assertIn(f'<title>{P.nome}: Grupo {ROMANOS[g - 1]}</title>', s)
+                # 12/11/2026: o <title> fica com espaços normais (acima); o título da página (<h1>) leva as referências presas.
+                self.assertIn(f'<h1 class="c-sr">{P.nome_preso}, Grupo\xa0{ROMANOS[g - 1]}: ', s)
                 self.assertIn('<b>Aprendes:</b>', s)
         self.assertEqual(len(chaves), 3)
         for p in ROOT.glob('m[1-9]/licao-*/index.html'):
@@ -293,7 +298,9 @@ class CasoDeProva:
                         prep = [c for c in cards if c['t'] != 'ler' and str(c.get('g', '')).startswith(str(n))]
                         self.assertGreaterEqual(len(prep), 4)
                         caderno = [c for c in cards if c['t'] == 'ler' and c.get('rot') == 'Escreve no caderno'
-                                   and (c['titulo'].startswith(f'Item {n} ') or c['titulo'] == f'Item {n}')]
+                                   # 12/11/2026: os títulos dos cartões escrevem «Item n» com a referência presa (U+00A0); só esta
+                                   # forma serve.
+                                   and (c['titulo'].startswith(f'Item\xa0{n} ') or c['titulo'] == f'Item\xa0{n}')]
                         self.assertEqual(len(caderno), 1)
                         papel = plano(re.search(r'<p class="papel-q">(.*?)</p>', caderno[0]['html'], re.S).group(1))
                         for frase in item['enunciado']:
@@ -323,7 +330,8 @@ class CasoDeProva:
                 if eh_restrita(item):
                     n = item['n']
                     with self.subTest(grupo=g, item=n):
-                        titulo = f'Item {n} ✱' if item['obrigatorio'] else f'Item {n}'
+                        # 12/11/2026: «Item n» com a referência presa (U+00A0), aqui e no cartão «Confere com os critérios».
+                        titulo = f'Item\xa0{n} ✱' if item['obrigatorio'] else f'Item\xa0{n}'
                         k_cad = next(k for k, c in enumerate(cards) if c['t'] == 'ler' and c.get('titulo') == titulo)
                         cad = cards[k_cad]['html']
                         self.assertNotIn('Tópicos de resposta', cad)
@@ -335,7 +343,7 @@ class CasoDeProva:
                             k_cmp = [k for k, c in enumerate(cards) if c.get('rot') == 'Compara a tua resposta' and str(c.get('g', '')).startswith(str(n))]
                             self.assertEqual(k_cmp, [k_cad + 1], 'as respostas de exemplo logo depois do caderno')
                         k_conf = next(k for k, c in enumerate(cards) if c['t'] == 'ler' and c.get('rot') == 'Confere com os critérios'
-                                      and c['titulo'].startswith(f'Item {n}:'))
+                                      and c['titulo'].startswith(f'Item\xa0{n}:'))
                         self.assertGreater(k_conf, k_cad)
                         self.assertIn('Tópicos de resposta dos critérios', cards[k_conf]['html'])
                 elif eh_extensa(item):
@@ -434,9 +442,12 @@ class CasoDeProva:
 
     def test_cada_licao_cita_a_fonte(self):
         P = self.P
-        marcas = [f'Prova {P.codigo}', f'{P.fase}.ª fase, {P.ano}', f'versão {P.versao}', 'IAVE']
-        if P.autor_nao_iave():
-            marcas.append(P.autor_nao_iave())
+        # 12/11/2026: a autoria é a que a transcrição dá («autor_instituicao»; em 2026, a EduQA, e os PDF não trazem «IAVE»). Antes, o
+        # teste pedia sempre «IAVE» e, a mais, a EduQA; agora pede a instituição da transcrição e, quando ela não é o IAVE, que
+        # «IAVE» não apareça em parte nenhuma da página nem do bloco da secção.
+        autor = P.fx['prova']['autor_instituicao']
+        self.assertTrue(autor)
+        marcas = [f'Prova {P.codigo}', f'{P.fase}.ª fase, {P.ano}', f'versão {P.versao}', autor]
         for g, gfx in enumerate(P.fx['grupos'], 1):
             s = ler(P.paginas[g])
             menu = plano(re.search(r'<div class="casca-menu".*?</div></div>', s, re.S).group(0))
@@ -457,25 +468,41 @@ class CasoDeProva:
                     self.assertFalse(sem_texto, f'grupo {g}: tem texto ou imagem da prova, mas prova.json diz «sem_texto_da_prova»')
                 for marca in marcas:
                     self.assertIn(marca, menu)
+                # 12/11/2026: no crédito do menu, a referência da prova escreve-se presa (U+00A0), nesta forma exata.
+                self.assertIn(f'Grupo\xa0{ROMANOS[g - 1]} do {P.fx["prova"]["titulo"]}, {P.nome_preso}, versão\xa0{P.versao}. ', s)
+                if P.autor_nao_iave():
+                    self.assertNotIn('IAVE', s)
+                # 12/11/2026: as ligações levam aos documentos de quem os publica (P.url_enunciado e P.url_criterios são agora os
+                # endereços originais da transcrição), e nenhuma leva às cópias.
                 for url in (P.url_enunciado, P.url_criterios):
                     self.assertIn(f'href="{url}"', s)
+                for url in P.url_copias:
+                    self.assertNotIn(url, s)
                 for f in fontes:
                     self.assertIn(plano(f).rstrip('.'), menu)
                 abre = P.cartoes(g)[0]
                 self.assertEqual(abre.get('rot'), 'Abre')
-                self.assertIn('IAVE', abre['html'])
+                # 12/11/2026: o cartão «Abre» diz a instituição da transcrição (antes, o teste pedia «IAVE»).
+                self.assertIn(autor, abre['html'])
                 self.assertIn(f'versão {P.versao}', abre['html'])
         s = ler(SECCAO)
         bloco = re.search(rf'<section class="pv-prova" id="prova-{P.pasta}".*?</section>', s, re.S).group(0)
-        for marca in [f'{P.nome}, versão {P.versao}', 'IAVE', P.url_enunciado, P.url_criterios] + marcas[4:]:
+        # 12/11/2026: no bloco da secção, a referência presa (U+00A0) na forma exata, a instituição da transcrição e as ligações aos
+        # documentos de quem os publica; nem «IAVE» (quando a transcrição não o dá) nem as cópias.
+        for marca in [f'{P.nome_preso}, versão\xa0{P.versao}', autor, f'href="{P.url_enunciado}"', f'href="{P.url_criterios}"']:
             self.assertIn(marca, bloco)
+        if P.autor_nao_iave():
+            self.assertNotIn('IAVE', bloco)
+        for url in P.url_copias:
+            self.assertNotIn(url, bloco)
 
     def test_bloco_da_prova_na_seccao(self):
         P = self.P
         s = ler(SECCAO)
         self.assertEqual(s.count(f'id="prova-{P.pasta}"'), 1)
         bloco = re.search(rf'<section class="pv-prova" id="prova-{P.pasta}".*?</section>', s, re.S).group(0)
-        self.assertIn(f'<h2 id="pv-{P.pasta}"><span class="pv-quando">{P.ano}, {P.fase}.ª fase</span> ', bloco)
+        # 12/11/2026: «1.ª fase» com a referência presa (U+00A0); só esta forma serve.
+        self.assertIn(f'<h2 id="pv-{P.pasta}"><span class="pv-quando">{P.ano}, {P.fase}.ª\xa0fase</span> ', bloco)
         for g, slug in P.grupos.items():
             versao = re.search(r'versao:"([^"]+)"', ler(P.paginas[g])).group(1)
             self.assertEqual(versao, P.versao_licao(g))
@@ -552,7 +579,8 @@ class CasoDeProva:
         self.assertTrue(vers)
         for c in vers:
             self.assertIn(f'href="{url}"', c['ver'])
-            self.assertIn(f'p. {img["pagina_pdf"]} de {img["paginas_pdf"]}', c['ver'])
+            # 12/11/2026: «p. 13 de 16» com as referências presas (U+00A0); só esta forma serve.
+            self.assertIn(f'p.\xa0{img["pagina_pdf"]} de\xa0{img["paginas_pdf"]}', c['ver'])
         self.assertNotIn('<figure class="fig inteiro cor">', s)
 
     def test_regras_de_escrita_no_texto_nosso(self):
@@ -724,10 +752,13 @@ class SeccaoEGerador(unittest.TestCase):
         esperado = []
         for ano in sorted(faltam, reverse=True):
             fs = sorted(faltam[ano])
-            esperado.append(f'{ano}, {fs[0]}.ª fase' if len(fs) == 1 else f'{ano}, ' + ', '.join(f'{f}.ª' for f in fs[:-1]) + f' e {fs[-1]}.ª fases')
+            # 12/11/2026: «1.ª fase» e «2.ª fases» com a referência presa (U+00A0); só esta forma serve.
+            esperado.append(f'{ano}, {fs[0]}.ª\xa0fase' if len(fs) == 1 else f'{ano}, ' + ', '.join(f'{f}.ª' for f in fs[:-1]) + f' e {fs[-1]}.ª\xa0fases')
         self.assertEqual(rotulos, esperado)
         for P in PROVAS:
-            self.assertNotIn(f'<b>{P.ano}, {P.fase}.ª fase</b>', seguir, 'uma prova publicada não está «em preparação»')
+            # 12/11/2026: nem na forma presa nem na de antes.
+            for espaco in ('\xa0', ' '):
+                self.assertNotIn(f'<b>{P.ano}, {P.fase}.ª{espaco}fase</b>', seguir, 'uma prova publicada não está «em preparação»')
         self.assertIsNone(SEM_DATAS.search(seguir), 'sem datas prometidas')
 
     def test_chaves_diferentes_entre_provas(self):

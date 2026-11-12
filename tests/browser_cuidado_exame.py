@@ -97,6 +97,26 @@ def sem_etiquetas(h):
     return re.sub(r'<[^>]+>', '', h)
 
 
+# 12/11/2026: por cima desta camada ficam as provas em cartões com os documentos oficiais (exame_provas_oficial_20261112), que mudam
+# uma linha da lista do achado 3 (no parâmetro C do Grupo III da 2.ª fase, «conectores» dá lugar à formulação do critério,
+# «mecanismos de articulação interfrásica»). As listas conferem-se na página de hoje: o texto novo de cada achado com as trocas
+# da camada de cima que caem dentro dele (só essa), com a mesma exigência: os itens todos, pela ordem, com o texto exato.
+PROVAS_OFICIAL = json.loads((ROOT / 'tests/fixtures/exame-provas-oficial-edits-20261112.json').read_text('utf-8'))['files']
+MUDADOS_POR_CIMA = {3: 1, 4: 0, 5: 0, 6: 0}
+
+
+def como_esta_hoje(x):
+    novo, n = x['novo'], 0
+    for e in PROVAS_OFICIAL.get(x['pagina'], {}).get('edits', []):
+        if e['old'] in novo:
+            assert novo.count(e['old']) == e['occurrences'] == 1, (x['i'], e['location'])
+            novo, n = novo.replace(e['old'], e['new']), n + 1
+    assert n == MUDADOS_POR_CIMA[x['i']], (x['i'], n)
+    if n:
+        assert '«mecanismos de articulação interfrásica»' in novo and 'conectores' not in novo, x['i']
+    return dict(x, novo=novo)
+
+
 def agulhas_do_cartao(card):
     """As referências presas (com U+00A0 ou U+2060) no texto que o cartão mostra logo: o HTML de um cartão de leitura, ou o
     enunciado e as opções de um cartão de fazer; cada uma dentro de um só nó de texto, como a página a tem."""
@@ -232,6 +252,8 @@ def main():
                     page.route('**/fonts.googleapis.com/**', lambda r: r.abort())
                     page.route('**/fonts.gstatic.com/**', lambda r: r.abort())
                     for x in C.PROVAS_C:
+                        # 12/11/2026: o achado como a página o tem hoje (com a troca da camada de cima, no achado 3).
+                        x = como_esta_hoje(x)
                         novo = x['novo'].replace('<\\/', '</').replace('\\"', '"')
                         baralho = cartoes((ROOT / x['pagina']).read_text('utf-8'))
                         (card,) = [c for c in baralho if novo in c.get('html', '')]

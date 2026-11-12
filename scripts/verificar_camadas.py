@@ -7,6 +7,10 @@ import sys
 
 ROOT=Path(__file__).resolve().parents[1]
 LAYERS=[
+ # 12/11/2026: as provas em cartões com os documentos oficiais (a secção exame/provas/, as seis lições das provas de 2026 e os seus
+ # dados: ligações para eduqa.pt, autoria, frases só com o que as duas provas mostram e referências que não se partem), camada mais
+ # recente, por cima da ligação «Treinos» na página principal do Exame (que passa a ser a segunda) e da decisão 152 no Exame.
+ ('exame_provas_oficial_20261112','exame-provas-oficial-edits-20261112'),
  # 12/11/2026: a ligação «Treinos» na navegação da página principal do Exame (exame/index.html), camada mais recente, por cima da
  # decisão 152 no Exame e nas páginas transversais (que passa a ser a segunda).
  ('exame_ligacao_treinos_20261112','exame-ligacao-treinos-edits-20261112'),

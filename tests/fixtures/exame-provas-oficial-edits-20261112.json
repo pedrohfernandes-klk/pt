@@ -1,0 +1,2604 @@
+{
+ "base_commit": "41c77a868c3291cfafb6ac754a50565f01fa78a1",
+ "_nota": "12/11/2026: as «Provas em cartões» do Exame (exame/provas/: a secção e as seis lições das duas provas de 2026) e os dados de onde saem (scripts/provas/dados/). Ligações do enunciado, dos critérios e da página da imagem para eduqa.pt (decisão do utilizador de 12/11/2026); camada oficial, secção 5, linhas 1, 2, 3, 8 e 9 (sai «IAVE» da autoria, sai a nota da marca de água, as frases sobre «as oito provas» ficam reduzidas ao que as duas provas de 2026 mostram, «conectores» dá lugar à formulação do critério, «mecanismos de articulação interfrásica», e os tópicos deixam de ser «exemplos de formulações possíveis»); achado 28 da varredura do cuidado e moldura das lições (referências e números que não se partem: U+00A0 e, a seguir ao hífen da sigla, U+2060; nunca em atributos nem no <title>). Ficam como estavam, de propósito, os 20 rótulos «Item N da prova…» (pelos quais os testes, a medição das opções, a camada de baixo e o motor reconhecem o item oficial), as indicações de fonte e as referências dos textos como a prova as indica, o texto oficial e as citações entre «», versao_licao e as versões de cache. As transcrições (tests/fixtures/prova-639-2026-*.json) não mudam. Gerado por scripts/exame_provas_oficial_20261112.py (as mudanças escrevem-se nos dados; as páginas saem de scripts/provas/gerar.py, que só muda de comportamento com as chaves novas dos dados) e aplicado por scripts/aplicar_trocas.py: não se edita à mão. Camada mais recente, por cima da ligação «Treinos» na página principal do Exame (exame_ligacao_treinos_20261112) e da decisão 152 no Exame (cuidado_exame_20261112): desfaz-se antes delas.",
+ "files": {
+  "scripts/provas/dados/2026-1f/grupo-i.json": {
+   "base_sha256_lf": "2c1e11560be88f43b1b3ef4254ba095d63c672d3193164384111b81d61596d32",
+   "after_sha256_lf": "d59bd4b7b3b8913340583656597cba0f7ba8d184dab099b54be901f6190f9ad8",
+   "edits": [
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo I (dados): «do Grupo I (explicitar»",
+     "old": " do Grupo I (explicitar ",
+     "new": " do Grupo I (explicitar ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo I (dados): «os itens 3 e 6 da»",
+     "old": " os itens 3 e 6 da ",
+     "new": " os itens 3 e 6 da ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo I (dados): «\"Grupo I:»",
+     "old": "\"Grupo I: ",
+     "new": "\"Grupo I: ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo I (dados): «(os PDF trazem o logótipo da EduQA, Instituto de Educação, Qualidade e Avaliação)»",
+     "old": " (IAVE; os PDF de 2026 trazem o logótipo da EduQA, Instituto de Educação, Qualidade e Avaliação)",
+     "new": " (os PDF trazem o logótipo da EduQA, Instituto de Educação, Qualidade e Avaliação)",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo I (dados): «\"Parte A\"»",
+     "old": "\"Parte A\"",
+     "new": "\"Parte A\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo I (dados): «\"Texto 1, 1 de 2\",»",
+     "old": " \"Texto 1, 1 de 2\",\n",
+     "new": " \"Texto 1, 1 de 2\",\n",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo I (dados): «linhas 1 a 10\"»",
+     "old": " linhas 1 a 10\"",
+     "new": " linhas 1 a 10\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo I (dados): «\"Item 1»",
+     "old": "\"Item 1 ",
+     "new": "\"Item 1 ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo I (dados): «\"Item 1: a»",
+     "old": " \"Item 1: a ",
+     "new": " \"Item 1: a ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo I (dados): «1 (PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: indicam tó…»",
+     "old": " 1 (IAVE; PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: os tópicos são exemplos de formulações possíveis.</p>\"",
+     "new": " 1 (PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: indicam tópicos a abordar, «ou outros igualmente relevantes». Dentro dos tópicos, «as expressões separadas por barras oblíquas» são «exemplos de formulações possíveis, apresentadas em alternativa» (p. 4 dos critérios).</p>\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo I (dados): «\"Texto 1, 2 de 2\",»",
+     "old": " \"Texto 1, 2 de 2\",\n",
+     "new": " \"Texto 1, 2 de 2\",\n",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo I (dados): «linhas 11 a 19\"»",
+     "old": " linhas 11 a 19\"",
+     "new": " linhas 11 a 19\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo I (dados): «\"Texto 2, 1 de 2\",»",
+     "old": " \"Texto 2, 1 de 2\",\n",
+     "new": " \"Texto 2, 1 de 2\",\n",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo I (dados): «linhas 20 a 27\"»",
+     "old": " linhas 20 a 27\"",
+     "new": " linhas 20 a 27\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo I (dados): «\"Item 2»",
+     "old": "\"Item 2 ",
+     "new": "\"Item 2 ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo I (dados): «\"Item 2:»",
+     "old": "\"Item 2: ",
+     "new": "\"Item 2: ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo I (dados): «2 (PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: indicam tó…»",
+     "old": " 2 (IAVE; PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: os tópicos são exemplos de formulações possíveis.</p>\"",
+     "new": " 2 (PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: indicam tópicos a abordar, «ou outros igualmente relevantes». Dentro dos tópicos, «as expressões separadas por barras oblíquas» são «exemplos de formulações possíveis, apresentadas em alternativa» (p. 4 dos critérios).</p>\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo I (dados): «\"Texto 2, 2 de 2\",»",
+     "old": " \"Texto 2, 2 de 2\",\n",
+     "new": " \"Texto 2, 2 de 2\",\n",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo I (dados): «linhas 27 a 38\"»",
+     "old": " linhas 27 a 38\"",
+     "new": " linhas 27 a 38\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo I (dados): «\"ler\", \"rot\": \"Parte B\", \"titulo\": \"«O»",
+     "old": "\"ler\",\n   \"rot\": \"Parte B\",\n   \"titulo\": \"«O ",
+     "new": "\"ler\",\n   \"rot\": \"Parte B\",\n   \"titulo\": \"«O ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo I (dados): «versos 1 a 8\"»",
+     "old": " versos 1 a 8\"",
+     "new": " versos 1 a 8\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo I (dados): «\"rot\": \"Parte B\", \"titulo\": \"Versos 9 a 20\"»",
+     "old": "\n   \"rot\": \"Parte B\",\n   \"titulo\": \"Versos 9 a 20\"",
+     "new": "\n   \"rot\": \"Parte B\",\n   \"titulo\": \"Versos 9 a 20\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo I (dados): «\"Item 4»",
+     "old": "\"Item 4 ",
+     "new": "\"Item 4 ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo I (dados): «\"Item 4: a»",
+     "old": " \"Item 4: a ",
+     "new": " \"Item 4: a ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo I (dados): «4 (PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: indicam tó…»",
+     "old": " 4 (IAVE; PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: os tópicos são exemplos de formulações possíveis.</p>\"",
+     "new": " 4 (PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: indicam tópicos a abordar, «ou outros igualmente relevantes». Dentro dos tópicos, «as expressões separadas por barras oblíquas» são «exemplos de formulações possíveis, apresentadas em alternativa» (p. 4 dos critérios).</p>\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo I (dados): «\"Item 5»",
+     "old": "\"Item 5 ",
+     "new": "\"Item 5 ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo I (dados): «\"Item 5: a»",
+     "old": " \"Item 5: a ",
+     "new": " \"Item 5: a ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo I (dados): «5 (PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: indicam tó…»",
+     "old": " 5 (IAVE; PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: os tópicos são exemplos de formulações possíveis.</p>\"",
+     "new": " 5 (PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: indicam tópicos a abordar, «ou outros igualmente relevantes». Dentro dos tópicos, «as expressões separadas por barras oblíquas» são «exemplos de formulações possíveis, apresentadas em alternativa» (p. 4 dos critérios).</p>\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo I (dados): «item 6\"»",
+     "old": " item 6\"",
+     "new": " item 6\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo I (dados): «versos 1 a 20\"»",
+     "old": " versos 1 a 20\"",
+     "new": " versos 1 a 20\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo I (dados): «\"Parte C\"»",
+     "old": "\"Parte C\"",
+     "new": "\"Parte C\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo I (dados): «\"Item 7 ✱:»",
+     "old": " \"Item 7 ✱: ",
+     "new": " \"Item 7 ✱: ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo I (dados): «\"Item 7 ✱\"»",
+     "old": " \"Item 7 ✱\"",
+     "new": " \"Item 7 ✱\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo I (dados): «\"Item 7: a»",
+     "old": " \"Item 7: a ",
+     "new": " \"Item 7: a ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo I (dados): «7 (PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: indicam tó…»",
+     "old": " 7 (IAVE; PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: os tópicos são exemplos de formulações possíveis.</p><",
+     "new": " 7 (PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: indicam tópicos a abordar, «ou outros igualmente relevantes». Dentro dos tópicos, «as expressões separadas por barras oblíquas» são «exemplos de formulações possíveis, apresentadas em alternativa» (p. 4 dos critérios).</p><",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo I (dados): «Nas duas provas de 2026 (1.ª e 2.ª fases), o Grupo I acaba numa breve exposição, com int…»",
+     "old": "<p>Nas oito provas de 2023 a 2026 (1.ª e 2.ª fases), o Grupo I acaba sempre numa breve exposição, com introdução, desenvolvimento e conclusão, e tem sempre um item em que identificas afirmações.</p>",
+     "new": "<p>Nas duas provas de 2026 (1.ª e 2.ª fases), o Grupo I acaba numa breve exposição, com introdução, desenvolvimento e conclusão (item 7), e tem um item em que identificas afirmações (item 6).</p>",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo I (dados): «2026 (PDF com o logótipo da EduQA),»",
+     "old": " 2026 (IAVE; PDF com o logótipo da EduQA), ",
+     "new": " 2026 (PDF com o logótipo da EduQA), ",
+     "occurrences": 1
+    }
+   ]
+  },
+  "scripts/provas/dados/2026-1f/grupo-ii.json": {
+   "base_sha256_lf": "dde19868f80ed82f58fbc132384e342456e6f338f008ba58abc40abde60dfd0e",
+   "after_sha256_lf": "d9db736aeeb21760cd747b536f510bec05861e0d6e4a21178cc57f81073a1c81",
+   "edits": [
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo II (dados): «\"Grupo II:»",
+     "old": "\"Grupo II: ",
+     "new": "\"Grupo II: ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo II (dados): «(os PDF trazem o logótipo da EduQA, Instituto de Educação, Qualidade e Avaliação)»",
+     "old": " (IAVE; os PDF de 2026 trazem o logótipo da EduQA, Instituto de Educação, Qualidade e Avaliação)",
+     "new": " (os PDF trazem o logótipo da EduQA, Instituto de Educação, Qualidade e Avaliação)",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo II (dados): «1 de 4\",»",
+     "old": " 1 de 4\",\n",
+     "new": " 1 de 4\",\n",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo II (dados): «\"Linhas 1 a 9\"»",
+     "old": "\"Linhas 1 a 9\"",
+     "new": "\"Linhas 1 a 9\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo II (dados): «2 de 4\",»",
+     "old": " 2 de 4\",\n",
+     "new": " 2 de 4\",\n",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo II (dados): «\"Linhas 10 a 22\"»",
+     "old": "\"Linhas 10 a 22\"",
+     "new": "\"Linhas 10 a 22\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo II (dados): «3 de 4\",»",
+     "old": " 3 de 4\",\n",
+     "new": " 3 de 4\",\n",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo II (dados): «\"Linhas 23 a 34\"»",
+     "old": "\"Linhas 23 a 34\"",
+     "new": "\"Linhas 23 a 34\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo II (dados): «4 de 4\",»",
+     "old": " 4 de 4\",\n",
+     "new": " 4 de 4\",\n",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo II (dados): «\"Linhas 35 a 47\"»",
+     "old": "\"Linhas 35 a 47\"",
+     "new": "\"Linhas 35 a 47\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo II (dados): «\"Itens 5,»",
+     "old": "\"Itens 5, ",
+     "new": "\"Itens 5, ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo II (dados): «e 7\"»",
+     "old": " e 7\"",
+     "new": " e 7\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo II (dados): «item 6\"»",
+     "old": " item 6\"",
+     "new": " item 6\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo II (dados): «item 7\"»",
+     "old": " item 7\"",
+     "new": " item 7\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo II (dados): «Nas duas provas de 2026 (1.ª e 2.ª fases), o Grupo II tem sete itens de escolha múltipla…»",
+     "old": "<p>Nas oito provas de 2023 a 2026 (1.ª e 2.ª fases), o Grupo II tem sempre sete itens de escolha múltipla, com quatro opções: primeiro sobre o texto, no fim de gramática.</p>",
+     "new": "<p>Nas duas provas de 2026 (1.ª e 2.ª fases), o Grupo II tem sete itens de escolha múltipla, com quatro opções: os itens 1 a 4 sobre o texto e os itens 5 a 7 de gramática (leitura nossa).</p>",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo II (dados): «(PDF com o logótipo da EduQA)»",
+     "old": " (IAVE; PDF com o logótipo da EduQA)",
+     "new": " (PDF com o logótipo da EduQA)",
+     "occurrences": 1
+    }
+   ]
+  },
+  "scripts/provas/dados/2026-1f/grupo-iii.json": {
+   "base_sha256_lf": "c2edec81866b85fa9d959e1b2250aab9d469d70f6a4e995f5d4f6133f5dab207",
+   "after_sha256_lf": "012cb21f8a23e6886d45d603725bd90c9afe0fc925a19eb4bce85cd67db0ea8f",
+   "edits": [
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo III (dados): «\"Grupo III:»",
+     "old": "\"Grupo III: ",
+     "new": "\"Grupo III: ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo III (dados): «(os PDF trazem o logótipo da EduQA, Instituto de Educação, Qualidade e Avaliação)»",
+     "old": " (IAVE; os PDF de 2026 trazem o logótipo da EduQA, Instituto de Educação, Qualidade e Avaliação)",
+     "new": " (os PDF trazem o logótipo da EduQA, Instituto de Educação, Qualidade e Avaliação)",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo III (dados): «prova\", \"titulo\": \"Grupo III ✱\", \"html\": \"»",
+     "old": " prova\",\n   \"titulo\": \"Grupo III ✱\",\n   \"html\": \"",
+     "new": " prova\",\n   \"titulo\": \"Grupo III ✱\",\n   \"html\": \"",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo III (dados): «2026 (PDF com o logótipo da EduQA):»",
+     "old": " 2026 (IAVE; PDF com o logótipo da EduQA): ",
+     "new": " 2026 (PDF com o logótipo da EduQA): ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo III (dados): «caderno\", \"titulo\": \"Grupo III ✱\", \"html\": \"»",
+     "old": " caderno\",\n   \"titulo\": \"Grupo III ✱\",\n   \"html\": \"",
+     "new": " caderno\",\n   \"titulo\": \"Grupo III ✱\",\n   \"html\": \"",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo III (dados): «Marquei os parágrafos, com partes proporcionadas e articuladas entre si, e usei «mecanis…»",
+     "old": ">Marquei os parágrafos, com partes proporcionadas e ligadas por conectores?</td>",
+     "new": ">Marquei os parágrafos, com partes proporcionadas e articuladas entre si, e usei «mecanismos de articulação interfrásica»?</td>",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo III (dados): «A forma também conta. Partes proporcionadas, parágrafos marcados, «mecanismos de articul…»",
+     "old": "<li><b>A forma também conta.</b> Parágrafos proporcionados, conectores pela relação certa, retomas sem repetição, pessoa e tempo verbal coerentes.</li>",
+     "new": "<li><b>A forma também conta.</b> Partes proporcionadas, parágrafos marcados, «mecanismos de articulação interfrásica» usados com adequação, retomas sem repetição, pessoa e tempo verbal coerentes.</li>",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo III (dados): «Nas duas provas de 2026, o Grupo III vale 44 pontos, conta sempre para a classificação e…»",
+     "old": "<p>Nas oito provas de 2023 a 2026 (1.ª e 2.ª fases), o Grupo III vale sempre 44 pontos, conta sempre e pede sempre um texto «bem estruturado» de 200 a 350 palavras, classificado nos parâmetros A, B e C e na correção linguística. Em cinco provas, o género é o texto de opinião; em três (2.ª fase de 2023 e de 2025, 1.ª fase de 2026), a apreciação crítica de uma imagem, com descrição, comentário em pelo menos três aspetos e conclusão. Nos dois géneros, pede-se um discurso valorativo.</p>",
+     "new": "<p>Nas duas provas de 2026, o Grupo III vale 44 pontos, conta sempre para a classificação e pede um texto «bem estruturado» de 200 a 350 palavras, classificado nos parâmetros A, B e C e na correção linguística. Na 1.ª fase, o género é a apreciação crítica de uma imagem, com descrição, comentário em pelo menos três aspetos e conclusão; na 2.ª fase, o texto de opinião. Nos dois géneros, pede-se um discurso valorativo.</p>",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo III (dados): «2026 (PDF com o logótipo da EduQA),»",
+     "old": " 2026 (IAVE; PDF com o logótipo da EduQA), ",
+     "new": " 2026 (PDF com o logótipo da EduQA), ",
+     "occurrences": 1
+    }
+   ]
+  },
+  "scripts/provas/dados/2026-2f/grupo-i.json": {
+   "base_sha256_lf": "a7b56a70c984dfb1c2df29d632b06901034ed700d5dcf5f57cd32bbde086a3bd",
+   "after_sha256_lf": "4d1c9b79fc6ea22cc0c154d798268230bbae750c22fe8432ba6f9ef737539b8d",
+   "edits": [
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo I (dados): «do Grupo I (referir»",
+     "old": " do Grupo I (referir ",
+     "new": " do Grupo I (referir ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo I (dados): «os itens 3 e 6 da»",
+     "old": " os itens 3 e 6 da ",
+     "new": " os itens 3 e 6 da ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo I (dados): «\"Grupo I:»",
+     "old": "\"Grupo I: ",
+     "new": "\"Grupo I: ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo I (dados): «(os PDF trazem o logótipo da EduQA, Instituto de Educação, Qualidade e Avaliação)»",
+     "old": " (IAVE; os PDF de 2026 trazem o logótipo da EduQA, Instituto de Educação, Qualidade e Avaliação)",
+     "new": " (os PDF trazem o logótipo da EduQA, Instituto de Educação, Qualidade e Avaliação)",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo I (dados): «\"rot\": \"Parte A\", \"titulo\": \"Poema 1,»",
+     "old": "\n   \"rot\": \"Parte A\",\n   \"titulo\": \"Poema 1, ",
+     "new": "\n   \"rot\": \"Parte A\",\n   \"titulo\": \"Poema 1, ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo I (dados): «\"Item 1»",
+     "old": "\"Item 1 ",
+     "new": "\"Item 1 ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo I (dados): «\"Item 1: a»",
+     "old": " \"Item 1: a ",
+     "new": " \"Item 1: a ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo I (dados): «1 (PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: indicam tó…»",
+     "old": " 1 (IAVE; PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: os tópicos são exemplos de formulações possíveis.</p>\"",
+     "new": " 1 (PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: indicam tópicos a abordar, «ou outros igualmente relevantes». Dentro dos tópicos, «as expressões separadas por barras oblíquas» são «exemplos de formulações possíveis, apresentadas em alternativa» (p. 4 dos critérios).</p>\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo I (dados): «\"rot\": \"Parte A\", \"titulo\": \"Poema 2, de»",
+     "old": "\n   \"rot\": \"Parte A\",\n   \"titulo\": \"Poema 2, de ",
+     "new": "\n   \"rot\": \"Parte A\",\n   \"titulo\": \"Poema 2, de ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo I (dados): «\"Item 2»",
+     "old": "\"Item 2 ",
+     "new": "\"Item 2 ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo I (dados): «\"Item 2: a»",
+     "old": " \"Item 2: a ",
+     "new": " \"Item 2: a ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo I (dados): «2 (PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: indicam tó…»",
+     "old": " 2 (IAVE; PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: os tópicos são exemplos de formulações possíveis.</p>\"",
+     "new": " 2 (PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: indicam tópicos a abordar, «ou outros igualmente relevantes». Dentro dos tópicos, «as expressões separadas por barras oblíquas» são «exemplos de formulações possíveis, apresentadas em alternativa» (p. 4 dos critérios).</p>\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo I (dados): «item 3\"»",
+     "old": " item 3\"",
+     "new": " item 3\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo I (dados): «\"t\": \"ler\", \"rot\": \"Parte B\", \"titulo\": \"_Frei Luís de Sousa_, linhas 1 a 16\"»",
+     "old": "\"t\": \"ler\",\n   \"rot\": \"Parte B\",\n   \"titulo\": \"_Frei Luís de Sousa_, linhas 1 a 16\"",
+     "new": "\"t\": \"ler\",\n   \"rot\": \"Parte B\",\n   \"titulo\": \"_Frei Luís de Sousa_, linhas 1 a 16\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo I (dados): «\"t\": \"ler\", \"rot\": \"Parte B\", \"titulo\": \"_Frei Luís de Sousa_, linhas 17 a 36\"»",
+     "old": "\"t\": \"ler\",\n   \"rot\": \"Parte B\",\n   \"titulo\": \"_Frei Luís de Sousa_, linhas 17 a 36\"",
+     "new": "\"t\": \"ler\",\n   \"rot\": \"Parte B\",\n   \"titulo\": \"_Frei Luís de Sousa_, linhas 17 a 36\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo I (dados): «\"Item 4»",
+     "old": "\"Item 4 ",
+     "new": "\"Item 4 ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo I (dados): «\"Item 4: a»",
+     "old": " \"Item 4: a ",
+     "new": " \"Item 4: a ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo I (dados): «4 (PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: indicam tó…»",
+     "old": " 4 (IAVE; PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: os tópicos são exemplos de formulações possíveis.</p>\"",
+     "new": " 4 (PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: indicam tópicos a abordar, «ou outros igualmente relevantes». Dentro dos tópicos, «as expressões separadas por barras oblíquas» são «exemplos de formulações possíveis, apresentadas em alternativa» (p. 4 dos critérios).</p>\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo I (dados): «\"Item 5»",
+     "old": "\"Item 5 ",
+     "new": "\"Item 5 ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo I (dados): «\"Item 5: a»",
+     "old": " \"Item 5: a ",
+     "new": " \"Item 5: a ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo I (dados): «5 (PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: indicam tó…»",
+     "old": " 5 (IAVE; PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: os tópicos são exemplos de formulações possíveis.</p>\"",
+     "new": " 5 (PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: indicam tópicos a abordar, «ou outros igualmente relevantes». Dentro dos tópicos, «as expressões separadas por barras oblíquas» são «exemplos de formulações possíveis, apresentadas em alternativa» (p. 4 dos critérios).</p>\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo I (dados): «item 6\"»",
+     "old": " item 6\"",
+     "new": " item 6\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo I (dados): «linhas 1 a 36\"»",
+     "old": " linhas 1 a 36\"",
+     "new": " linhas 1 a 36\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo I (dados): «\"Parte C\"»",
+     "old": "\"Parte C\"",
+     "new": "\"Parte C\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo I (dados): «\"Item 7 ✱:»",
+     "old": " \"Item 7 ✱: ",
+     "new": " \"Item 7 ✱: ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo I (dados): «\"Item 7 ✱\"»",
+     "old": " \"Item 7 ✱\"",
+     "new": " \"Item 7 ✱\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo I (dados): «\"Item 7: a»",
+     "old": " \"Item 7: a ",
+     "new": " \"Item 7: a ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo I (dados): «7 (PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: indicam tó…»",
+     "old": " 7 (IAVE; PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: os tópicos são exemplos de formulações possíveis.</p><",
+     "new": " 7 (PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: indicam tópicos a abordar, «ou outros igualmente relevantes». Dentro dos tópicos, «as expressões separadas por barras oblíquas» são «exemplos de formulações possíveis, apresentadas em alternativa» (p. 4 dos critérios).</p><",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo I (dados): «Nas duas provas de 2026 (1.ª e 2.ª fases), o Grupo I acaba numa breve exposição, com int…»",
+     "old": "<p>Nas oito provas de 2023 a 2026 (1.ª e 2.ª fases), o Grupo I acaba sempre numa breve exposição, com introdução, desenvolvimento e conclusão, e tem sempre um item em que identificas afirmações.</p>",
+     "new": "<p>Nas duas provas de 2026 (1.ª e 2.ª fases), o Grupo I acaba numa breve exposição, com introdução, desenvolvimento e conclusão (item 7), e tem um item em que identificas afirmações (item 6).</p>",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo I (dados): «2026 (PDF com o logótipo da EduQA),»",
+     "old": " 2026 (IAVE; PDF com o logótipo da EduQA), ",
+     "new": " 2026 (PDF com o logótipo da EduQA), ",
+     "occurrences": 1
+    }
+   ]
+  },
+  "scripts/provas/dados/2026-2f/grupo-ii.json": {
+   "base_sha256_lf": "7f78ad64557181ab0bda83009d1adc4caf80b62336e6ec19d1d96216bea9cfba",
+   "after_sha256_lf": "3341a40140bc523f6b83f9e2ce9d2b5e09b7f33040449d32ccaa627a0a5724da",
+   "edits": [
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo II (dados): «\"Grupo II:»",
+     "old": "\"Grupo II: ",
+     "new": "\"Grupo II: ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo II (dados): «(os PDF trazem o logótipo da EduQA, Instituto de Educação, Qualidade e Avaliação)»",
+     "old": " (IAVE; os PDF de 2026 trazem o logótipo da EduQA, Instituto de Educação, Qualidade e Avaliação)",
+     "new": " (os PDF trazem o logótipo da EduQA, Instituto de Educação, Qualidade e Avaliação)",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo II (dados): «1 de 4\",»",
+     "old": " 1 de 4\",\n",
+     "new": " 1 de 4\",\n",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo II (dados): «\"Linhas 1 a 12\"»",
+     "old": "\"Linhas 1 a 12\"",
+     "new": "\"Linhas 1 a 12\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo II (dados): «2 de 4\",»",
+     "old": " 2 de 4\",\n",
+     "new": " 2 de 4\",\n",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo II (dados): «\"Linhas 13 a 22\"»",
+     "old": "\"Linhas 13 a 22\"",
+     "new": "\"Linhas 13 a 22\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo II (dados): «3 de 4\",»",
+     "old": " 3 de 4\",\n",
+     "new": " 3 de 4\",\n",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo II (dados): «\"Linhas 23 a 36\"»",
+     "old": "\"Linhas 23 a 36\"",
+     "new": "\"Linhas 23 a 36\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo II (dados): «item 3\"»",
+     "old": " item 3\"",
+     "new": " item 3\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo II (dados): «\"Linhas 23 a 27\"»",
+     "old": "\"Linhas 23 a 27\"",
+     "new": "\"Linhas 23 a 27\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo II (dados): «4 de 4\",»",
+     "old": " 4 de 4\",\n",
+     "new": " 4 de 4\",\n",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo II (dados): «\"Linhas 37 a 46\"»",
+     "old": "\"Linhas 37 a 46\"",
+     "new": "\"Linhas 37 a 46\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo II (dados): «item 4\"»",
+     "old": " item 4\"",
+     "new": " item 4\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo II (dados): «\"Linhas 1 a 46\"»",
+     "old": "\"Linhas 1 a 46\"",
+     "new": "\"Linhas 1 a 46\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo II (dados): «\"Itens 5,»",
+     "old": "\"Itens 5, ",
+     "new": "\"Itens 5, ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo II (dados): «e 7\"»",
+     "old": " e 7\"",
+     "new": " e 7\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo II (dados): «item 5\"»",
+     "old": " item 5\"",
+     "new": " item 5\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo II (dados): «item 6\"»",
+     "old": " item 6\"",
+     "new": " item 6\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo II (dados): «\"Linhas 13 a 18 e 44 a 46\"»",
+     "old": "\"Linhas 13 a 18 e 44 a 46\"",
+     "new": "\"Linhas 13 a 18 e 44 a 46\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo II (dados): «item 7\"»",
+     "old": " item 7\"",
+     "new": " item 7\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo II (dados): «\"Linhas 1 e 2\"»",
+     "old": "\"Linhas 1 e 2\"",
+     "new": "\"Linhas 1 e 2\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo II (dados): «Nas duas provas de 2026 (1.ª e 2.ª fases), o Grupo II tem sete itens de escolha múltipla…»",
+     "old": "<p>Nas oito provas de 2023 a 2026 (1.ª e 2.ª fases), o Grupo II tem sempre sete itens de escolha múltipla, com quatro opções: primeiro sobre o texto, no fim de gramática (leitura nossa).</p>",
+     "new": "<p>Nas duas provas de 2026 (1.ª e 2.ª fases), o Grupo II tem sete itens de escolha múltipla, com quatro opções: os itens 1 a 4 sobre o texto e os itens 5 a 7 de gramática (leitura nossa).</p>",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo II (dados): «(PDF com o logótipo da EduQA)»",
+     "old": " (IAVE; PDF com o logótipo da EduQA)",
+     "new": " (PDF com o logótipo da EduQA)",
+     "occurrences": 1
+    }
+   ]
+  },
+  "scripts/provas/dados/2026-2f/grupo-iii.json": {
+   "base_sha256_lf": "49e4de8ba4831aeedf22b168609d94e5beb9bb7166256be1afa562053842790f",
+   "after_sha256_lf": "94be241a93c988a75f647108d53d3eed57e4a190a6eaac06eda9452a7a076ff2",
+   "edits": [
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo III (dados): «\"Grupo III:»",
+     "old": "\"Grupo III: ",
+     "new": "\"Grupo III: ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo III (dados): «(os PDF trazem o logótipo da EduQA, Instituto de Educação, Qualidade e Avaliação)»",
+     "old": " (IAVE; os PDF de 2026 trazem o logótipo da EduQA, Instituto de Educação, Qualidade e Avaliação)",
+     "new": " (os PDF trazem o logótipo da EduQA, Instituto de Educação, Qualidade e Avaliação)",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo III (dados): «prova\", \"titulo\": \"Grupo III ✱\", \"html\": \"»",
+     "old": " prova\",\n   \"titulo\": \"Grupo III ✱\",\n   \"html\": \"",
+     "new": " prova\",\n   \"titulo\": \"Grupo III ✱\",\n   \"html\": \"",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo III (dados): «2026 (PDF com o logótipo da EduQA):»",
+     "old": " 2026 (IAVE; PDF com o logótipo da EduQA): ",
+     "new": " 2026 (PDF com o logótipo da EduQA): ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo III (dados): «caderno\", \"titulo\": \"Grupo III ✱\", \"html\": \"»",
+     "old": " caderno\",\n   \"titulo\": \"Grupo III ✱\",\n   \"html\": \"",
+     "new": " caderno\",\n   \"titulo\": \"Grupo III ✱\",\n   \"html\": \"",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo III (dados): «10: com partes proporcionadas, parágrafos marcados, «mecanismos de articulação interfrás…»",
+     "old": "<li><b>10:</b> com partes proporcionadas, parágrafos marcados, conectores, retomas sem repetições e pessoa e tempo coerentes.</li>",
+     "new": "<li><b>10:</b> com partes proporcionadas, parágrafos marcados, «mecanismos de articulação interfrásica», retomas sem repetições e pessoa e tempo coerentes.</li>",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo III (dados): «2.ª fase, 2026 (PDF com o logótipo da EduQA), critérios gerais,»",
+     "old": " 2.ª fase, 2026 (IAVE; PDF com o logótipo da EduQA), critérios gerais, ",
+     "new": " 2.ª fase, 2026 (PDF com o logótipo da EduQA), critérios gerais, ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo III (dados): «Marquei os parágrafos, com partes proporcionadas e articuladas entre si, e usei «mecanis…»",
+     "old": ">Marquei os parágrafos, com partes proporcionadas e ligadas por conectores?</td>",
+     "new": ">Marquei os parágrafos, com partes proporcionadas e articuladas entre si, e usei «mecanismos de articulação interfrásica»?</td>",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo III (dados): «A forma também conta. Partes proporcionadas, parágrafos marcados, «mecanismos de articul…»",
+     "old": "<li><b>A forma também conta.</b> Parágrafos proporcionados, conectores pela relação certa, retomas sem repetição, pessoa e tempo verbal coerentes.</li>",
+     "new": "<li><b>A forma também conta.</b> Partes proporcionadas, parágrafos marcados, «mecanismos de articulação interfrásica» usados com adequação, retomas sem repetição, pessoa e tempo verbal coerentes.</li>",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo III (dados): «Nas duas provas de 2026, o Grupo III vale 44 pontos, conta sempre para a classificação e…»",
+     "old": "<p>Nas oito provas de 2023 a 2026 (1.ª e 2.ª fases), o Grupo III vale sempre 44 pontos, conta sempre e pede sempre um texto «bem estruturado» de 200 a 350 palavras, classificado nos parâmetros A, B e C e na correção linguística. Em cinco provas, o género é o texto de opinião (1.ª fase de 2023, 2024 e 2025; 2.ª fase de 2024 e de 2026), sempre com o ponto de vista, dois argumentos, cada um com um exemplo significativo, e um discurso valorativo; em três, a apreciação crítica de uma imagem.</p>",
+     "new": "<p>Nas duas provas de 2026, o Grupo III vale 44 pontos, conta sempre para a classificação e pede um texto «bem estruturado» de 200 a 350 palavras, classificado nos parâmetros A, B e C e na correção linguística. Na 2.ª fase, o género é o texto de opinião, com o ponto de vista, dois argumentos, cada um com um exemplo significativo, e um discurso valorativo; na 1.ª fase, a apreciação crítica de uma imagem.</p>",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo III (dados): «2.ª fase, 2026 (PDF com o logótipo da EduQA), critérios gerais»",
+     "old": " 2.ª fase, 2026 (IAVE; PDF com o logótipo da EduQA), critérios gerais ",
+     "new": " 2.ª fase, 2026 (PDF com o logótipo da EduQA), critérios gerais ",
+     "occurrences": 1
+    }
+   ]
+  },
+  "scripts/provas/dados/2026-1f/prova.json": {
+   "base_sha256_lf": "efbd2262ccc87c197c6fbafa5c248bdb6930dc76267be3fab319025bfa2a2fe3",
+   "after_sha256_lf": "2794cc706b842dbb0c9beff256c7220956205fd8d165ee89548b97b85347f6cd",
+   "edits": [
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, os parâmetros (prova.json) (dados): «\"autoria\": { \"_sobre\": \"12/11/2026: o que os PDF dizem de quem os faz e para onde levam…»",
+     "old": " \"autoria\": {\n  \"nota\": \"os PDF de 2026 trazem o logótipo da EduQA, Instituto de Educação, Qualidade e Avaliação, que os publica em eduqa.pt\",\n  \"originais_em\": \"eduqa.pt\",\n  \"nota_copias\": \"A cópia pública dos critérios tem a marca de água «VERSÃO DE TRABALHO»; o texto é igual ao dos critérios publicados em eduqa.pt (conferido a 29/10/2026).\"\n },\n \"",
+     "new": " \"autoria\": {\n  \"_sobre\": \"12/11/2026: o que os PDF dizem de quem os faz e para onde levam as ligações. «texto» vai para o crédito do menu das lições e «texto_curto» para o bloco da prova na secção. «ligacoes»: «originais» faz as ligações do enunciado, dos critérios e da página da imagem levarem a quem publica os documentos (enunciado_original_url e criterios_original_url da transcrição).\",\n  \"texto\": \"O enunciado e os critérios de classificação trazem, na p. 1, o logótipo da EduQA, Instituto de Educação, Qualidade e Avaliação, que os publica em eduqa.pt.\",\n  \"texto_curto\": \"Enunciado e critérios de classificação com o logótipo da EduQA, Instituto de Educação, Qualidade e Avaliação (p. 1), publicados em eduqa.pt.\",\n  \"ligacoes\": \"originais\"\n },\n \"_nao_partir\": \"12/11/2026: com true, as referências e os números da moldura que o gerador escreve (título, menu, migalhas, crédito, fim da lição, ligações da imagem e o bloco da prova na secção) levam U+00A0 e U+2060, para não se partirem entre linhas. Nunca em atributos nem no <title>.\",\n \"nao_partir\": true,\n \"",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, os parâmetros (prova.json) (dados): «\"aprendes\": \"Aprendes a desmontar os itens de resposta escrita do Grupo I:»",
+     "old": "\"aprendes\": \"Aprendes a desmontar os itens de resposta escrita do Grupo I: ",
+     "new": "\"aprendes\": \"Aprendes a desmontar os itens de resposta escrita do Grupo I: ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, os parâmetros (prova.json) (dados): «, de 200 a 350 palavras.\"»",
+     "old": ", de 200 a 350 palavras.\"",
+     "new": ", de 200 a 350 palavras.\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, os parâmetros (prova.json) (dados): «A imagem está no PDF da prova, p. 13: cada cartão»",
+     "old": "A imagem está no PDF da prova, p. 13: cada cartão",
+     "new": "A imagem está no PDF da prova, p. 13: cada cartão",
+     "occurrences": 1
+    }
+   ]
+  },
+  "scripts/provas/dados/2026-2f/prova.json": {
+   "base_sha256_lf": "0fa8b0dfe9360207027e5d29650ab02b6d4e8d64255ce76825175abccc6f3fee",
+   "after_sha256_lf": "a328ca7d171d527f79da31686538e8b39051292902fe4c80cb094891d4882940",
+   "edits": [
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, os parâmetros (prova.json) (dados): «\"autoria\": { \"_sobre\": \"12/11/2026: o que os PDF dizem de quem os faz e para onde levam…»",
+     "old": " \"autoria\": {\n  \"nota\": \"os PDF de 2026 trazem o logótipo da EduQA, Instituto de Educação, Qualidade e Avaliação, que os publica em eduqa.pt\",\n  \"originais_em\": \"eduqa.pt\",\n  \"nota_copias\": \"A cópia pública dos critérios tem a marca de água «VERSÃO DE TRABALHO»; o texto é igual ao dos critérios publicados em eduqa.pt (conferido a 30/10/2026).\"\n },\n \"",
+     "new": " \"autoria\": {\n  \"_sobre\": \"12/11/2026: o que os PDF dizem de quem os faz e para onde levam as ligações. «texto» vai para o crédito do menu das lições e «texto_curto» para o bloco da prova na secção. «ligacoes»: «originais» faz as ligações do enunciado, dos critérios e da página da imagem levarem a quem publica os documentos (enunciado_original_url e criterios_original_url da transcrição).\",\n  \"texto\": \"O enunciado e os critérios de classificação trazem, na p. 1, o logótipo da EduQA, Instituto de Educação, Qualidade e Avaliação, que os publica em eduqa.pt.\",\n  \"texto_curto\": \"Enunciado e critérios de classificação com o logótipo da EduQA, Instituto de Educação, Qualidade e Avaliação (p. 1), publicados em eduqa.pt.\",\n  \"ligacoes\": \"originais\"\n },\n \"_nao_partir\": \"12/11/2026: com true, as referências e os números da moldura que o gerador escreve (título, menu, migalhas, crédito, fim da lição, ligações da imagem e o bloco da prova na secção) levam U+00A0 e U+2060, para não se partirem entre linhas. Nunca em atributos nem no <title>.\",\n \"nao_partir\": true,\n \"",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, os parâmetros (prova.json) (dados): «\"aprendes\": \"Aprendes a desmontar os itens de resposta escrita do Grupo I:»",
+     "old": "\"aprendes\": \"Aprendes a desmontar os itens de resposta escrita do Grupo I: ",
+     "new": "\"aprendes\": \"Aprendes a desmontar os itens de resposta escrita do Grupo I: ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, os parâmetros (prova.json) (dados): «, de 200 a 350 palavras,»",
+     "old": ", de 200 a 350 palavras, ",
+     "new": ", de 200 a 350 palavras, ",
+     "occurrences": 1
+    }
+   ]
+  },
+  "scripts/provas/dados/seccao.json": {
+   "base_sha256_lf": "5aca6ad36890d1af96181416f509d089342aa8568c272b1a0d79cb1af3fa01ef",
+   "after_sha256_lf": "ba04dc822af0e8443aeb0a016bb1e4853183b7ce904bdd53ed74a6302647251e",
+   "edits": [
+    {
+     "location": "Provas em cartões, os dados da secção (seccao.json): «\"_nao_partir\": \"12/11/2026: com true, as referências do que é da secção inteira («Prova…»",
+     "old": " \"seguir\": \"",
+     "new": " \"_nao_partir\": \"12/11/2026: com true, as referências do que é da secção inteira («Prova 639, 12.º ano» e «O que vem a seguir») levam U+00A0, para não se partirem entre linhas.\",\n \"nao_partir\": true,\n \"seguir\": \"",
+     "occurrences": 1
+    }
+   ]
+  },
+  "exame/provas/2026-1f/grupo-i/index.html": {
+   "base_sha256_lf": "c5b95b8aff911d2b8ec89603c7f10fe92bce0de24184f23369f68c2f76578b51",
+   "after_sha256_lf": "0fd3f3d3cf7a4c9a178778d2399a6cd5c79af5764e2cbf184a6dfeeff43c09a9",
+   "edits": [
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo I (lição): «Prova 639, 1.ª fase, 2026, Grupo I: Baltasar,»",
+     "old": "\">Prova 639, 1.ª fase, 2026, Grupo I: Baltasar, ",
+     "new": "\">Prova 639, 1.ª fase, 2026, Grupo I: Baltasar, ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo I (lição): «Prova 639, 1.ª fase, 2026»",
+     "old": "<p>Prova 639, 1.ª fase, 2026<",
+     "new": "<p>Prova 639, 1.ª fase, 2026<",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo I (lição): «Grupo I de III»",
+     "old": ">Grupo I de III<",
+     "new": ">Grupo I de III<",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo I (lição): «em: Grupo I»",
+     "old": " em: Grupo I</span>",
+     "new": " em: Grupo I</span>",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo I (lição): «Grupo II»",
+     "old": " Grupo II<",
+     "new": " Grupo II<",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo I (lição): «»",
+     "old": "><a href=\"https://www.examesnacionais.com.pt/exames-nacionais/12ano/2026-1fase/Portugues.pdf\" target=\"_blank\"",
+     "new": "><a href=\"https://eduqa.pt/wp-content/uploads/2026/06/portugues_prova_639_v2_enunciado.pdf\" target=\"_blank\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo I (lição): «»",
+     "old": "><a href=\"https://www.examesnacionais.com.pt/exames-nacionais/12ano/2026-1fase/Portugues_Criterios.pdf\" target=\"_blank\"",
+     "new": "><a href=\"https://eduqa.pt/wp-content/uploads/2026/07/portugues_prova_639_cc.pdf\" target=\"_blank\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo I (lição): «a desmontar os itens de resposta escrita do Grupo I (explicitar um dilema, comparar dois…»",
+     "old": "> a desmontar os itens de resposta escrita do Grupo I (explicitar um dilema, comparar dois ambientes, referir contrastes, fundamentar ",
+     "new": "> a desmontar os itens de resposta escrita do Grupo I (explicitar um dilema, comparar dois ambientes, referir contrastes, fundamentar ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo I (lição): «que linhas ou versos provam, como se ordena a resposta e o que a grelha oficial valoriza…»",
+     "old": " que linhas ou versos provam, como se ordena a resposta e o que a grelha oficial valoriza. Resolves os itens 3 e 6 da prova com a prova no texto e escreves as cinco respostas no caderno, com a grelha à vista.<",
+     "new": " que linhas ou versos provam, como se ordena a resposta e o que a grelha oficial valoriza. Resolves os itens 3 e 6 da prova com a prova no texto e escreves as cinco respostas no caderno, com a grelha à vista.<",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo I (lição): «cartões: Grupo I do»",
+     "old": " cartões: Grupo I do ",
+     "new": " cartões: Grupo I do ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo I (lição): «Português, Prova 639, 1.ª fase, 2026, versão 2. O enunciado e os critérios de classifica…»",
+     "old": " Português, Prova 639, 1.ª fase, 2026, versão 2. Autor da prova e dos critérios de classificação: IAVE, como indica a página de onde vêm as cópias («documentos oficiais do IAVE»); os PDF de 2026 trazem o logótipo da EduQA, Instituto de Educação, Qualidade e Avaliação, que os publica em eduqa.pt. Cópias públicas: <a href=\"https://www.examesnacionais.com.pt/exames-nacionais/12ano/2026-1fase/Portugues.pdf\" target=\"_blank\" rel=\"noopener\">enunciado (PDF)</a> e <a href=\"https://www.examesnacionais.com.pt/exames-nacionais/12ano/2026-1fase/Portugues_Criterios.pdf\" target=\"_blank\" rel=\"noopener\">critérios (PDF)</a>, em examesnacionais.com.pt. Originais em eduqa.pt: <a href=\"https://eduqa.pt/wp-content/uploads/2026/06/portugues_prova_639_v2_enunciado.pdf\" target=\"_blank\" rel=\"noopener\">enunciado da versão 2 (PDF)</a> e <a href=\"https://eduqa.pt/wp-content/uploads/2026/07/portugues_prova_639_cc.pdf\" target=\"_blank\" rel=\"noopener\">critérios (PDF)</a>. A cópia pública dos critérios tem a marca de água «VERSÃO DE TRABALHO»; o texto é igual ao dos critérios publicados em eduqa.pt (conferido a 29/10/2026). Textos, ",
+     "new": " Português, Prova 639, 1.ª fase, 2026, versão 2. O enunciado e os critérios de classificação trazem, na p. 1, o logótipo da EduQA, Instituto de Educação, Qualidade e Avaliação, que os publica em eduqa.pt. Documentos em eduqa.pt: <a href=\"https://eduqa.pt/wp-content/uploads/2026/06/portugues_prova_639_v2_enunciado.pdf\" target=\"_blank\" rel=\"noopener\">enunciado da versão 2 (PDF)</a> e <a href=\"https://eduqa.pt/wp-content/uploads/2026/07/portugues_prova_639_cc.pdf\" target=\"_blank\" rel=\"noopener\">critérios de classificação (PDF)</a>. Textos, ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo I (lição): «\"Grupo I:»",
+     "old": "\"Grupo I: ",
+     "new": "\"Grupo I: ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo I (lição): «(os PDF trazem o logótipo da EduQA, Instituto de Educação, Qualidade e Avaliação)»",
+     "old": " (IAVE; os PDF de 2026 trazem o logótipo da EduQA, Instituto de Educação, Qualidade e Avaliação)",
+     "new": " (os PDF trazem o logótipo da EduQA, Instituto de Educação, Qualidade e Avaliação)",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo I (lição): «\"Parte A\"»",
+     "old": "\"Parte A\"",
+     "new": "\"Parte A\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo I (lição): «\"Texto 1, 1 de 2\",»",
+     "old": " \"Texto 1, 1 de 2\", ",
+     "new": " \"Texto 1, 1 de 2\", ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo I (lição): «linhas 1 a 10\"»",
+     "old": " linhas 1 a 10\"",
+     "new": " linhas 1 a 10\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo I (lição): «\"Item 1»",
+     "old": "\"Item 1 ",
+     "new": "\"Item 1 ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo I (lição): «\"Item 1: a»",
+     "old": " \"Item 1: a ",
+     "new": " \"Item 1: a ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo I (lição): «1 (PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: indicam tó…»",
+     "old": " 1 (IAVE; PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: os tópicos são exemplos de formulações possíveis.<\\/p>\"",
+     "new": " 1 (PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: indicam tópicos a abordar, «ou outros igualmente relevantes». Dentro dos tópicos, «as expressões separadas por barras oblíquas» são «exemplos de formulações possíveis, apresentadas em alternativa» (p. 4 dos critérios).<\\/p>\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo I (lição): «\"Texto 1, 2 de 2\",»",
+     "old": " \"Texto 1, 2 de 2\", ",
+     "new": " \"Texto 1, 2 de 2\", ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo I (lição): «linhas 11 a 19\"»",
+     "old": " linhas 11 a 19\"",
+     "new": " linhas 11 a 19\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo I (lição): «\"Texto 2, 1 de 2\",»",
+     "old": " \"Texto 2, 1 de 2\", ",
+     "new": " \"Texto 2, 1 de 2\", ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo I (lição): «linhas 20 a 27\"»",
+     "old": " linhas 20 a 27\"",
+     "new": " linhas 20 a 27\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo I (lição): «\"Item 2»",
+     "old": "\"Item 2 ",
+     "new": "\"Item 2 ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo I (lição): «\"Item 2:»",
+     "old": "\"Item 2: ",
+     "new": "\"Item 2: ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo I (lição): «2 (PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: indicam tó…»",
+     "old": " 2 (IAVE; PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: os tópicos são exemplos de formulações possíveis.<\\/p>\"",
+     "new": " 2 (PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: indicam tópicos a abordar, «ou outros igualmente relevantes». Dentro dos tópicos, «as expressões separadas por barras oblíquas» são «exemplos de formulações possíveis, apresentadas em alternativa» (p. 4 dos critérios).<\\/p>\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo I (lição): «\"Texto 2, 2 de 2\",»",
+     "old": " \"Texto 2, 2 de 2\", ",
+     "new": " \"Texto 2, 2 de 2\", ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo I (lição): «linhas 27 a 38\"»",
+     "old": " linhas 27 a 38\"",
+     "new": " linhas 27 a 38\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo I (lição): «\"ler\", \"rot\": \"Parte B\", \"titulo\": \"«O»",
+     "old": "\"ler\", \"rot\": \"Parte B\", \"titulo\": \"«O ",
+     "new": "\"ler\", \"rot\": \"Parte B\", \"titulo\": \"«O ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo I (lição): «versos 1 a 8\"»",
+     "old": " versos 1 a 8\"",
+     "new": " versos 1 a 8\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo I (lição): «\"rot\": \"Parte B\", \"titulo\": \"Versos 9 a 20\"»",
+     "old": " \"rot\": \"Parte B\", \"titulo\": \"Versos 9 a 20\"",
+     "new": " \"rot\": \"Parte B\", \"titulo\": \"Versos 9 a 20\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo I (lição): «\"Item 4»",
+     "old": "\"Item 4 ",
+     "new": "\"Item 4 ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo I (lição): «\"Item 4: a»",
+     "old": " \"Item 4: a ",
+     "new": " \"Item 4: a ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo I (lição): «4 (PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: indicam tó…»",
+     "old": " 4 (IAVE; PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: os tópicos são exemplos de formulações possíveis.<\\/p>\"",
+     "new": " 4 (PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: indicam tópicos a abordar, «ou outros igualmente relevantes». Dentro dos tópicos, «as expressões separadas por barras oblíquas» são «exemplos de formulações possíveis, apresentadas em alternativa» (p. 4 dos critérios).<\\/p>\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo I (lição): «\"Item 5»",
+     "old": "\"Item 5 ",
+     "new": "\"Item 5 ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo I (lição): «\"Item 5: a»",
+     "old": " \"Item 5: a ",
+     "new": " \"Item 5: a ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo I (lição): «5 (PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: indicam tó…»",
+     "old": " 5 (IAVE; PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: os tópicos são exemplos de formulações possíveis.<\\/p>\"",
+     "new": " 5 (PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: indicam tópicos a abordar, «ou outros igualmente relevantes». Dentro dos tópicos, «as expressões separadas por barras oblíquas» são «exemplos de formulações possíveis, apresentadas em alternativa» (p. 4 dos critérios).<\\/p>\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo I (lição): «item 6\"»",
+     "old": " item 6\"",
+     "new": " item 6\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo I (lição): «versos 1 a 20\"»",
+     "old": " versos 1 a 20\"",
+     "new": " versos 1 a 20\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo I (lição): «\"Parte C\"»",
+     "old": "\"Parte C\"",
+     "new": "\"Parte C\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo I (lição): «\"Item 7 ✱:»",
+     "old": " \"Item 7 ✱: ",
+     "new": " \"Item 7 ✱: ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo I (lição): «\"Item 7 ✱\"»",
+     "old": " \"Item 7 ✱\"",
+     "new": " \"Item 7 ✱\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo I (lição): «\"Item 7: a»",
+     "old": " \"Item 7: a ",
+     "new": " \"Item 7: a ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo I (lição): «7 (PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: indicam tó…»",
+     "old": " 7 (IAVE; PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: os tópicos são exemplos de formulações possíveis.<\\/p><",
+     "new": " 7 (PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: indicam tópicos a abordar, «ou outros igualmente relevantes». Dentro dos tópicos, «as expressões separadas por barras oblíquas» são «exemplos de formulações possíveis, apresentadas em alternativa» (p. 4 dos critérios).<\\/p><",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo I (lição): «Nas duas provas de 2026 (1.ª e 2.ª fases), o Grupo I acaba numa breve exposição, com int…»",
+     "old": "<p>Nas oito provas de 2023 a 2026 (1.ª e 2.ª fases), o Grupo I acaba sempre numa breve exposição, com introdução, desenvolvimento e conclusão, e tem sempre um item em que identificas afirmações.<\\/p>",
+     "new": "<p>Nas duas provas de 2026 (1.ª e 2.ª fases), o Grupo I acaba numa breve exposição, com introdução, desenvolvimento e conclusão (item 7), e tem um item em que identificas afirmações (item 6).<\\/p>",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo I (lição): «2026 (PDF com o logótipo da EduQA),»",
+     "old": " 2026 (IAVE; PDF com o logótipo da EduQA), ",
+     "new": " 2026 (PDF com o logótipo da EduQA), ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo I (lição): «\"Grupo II\"»",
+     "old": "\"Grupo II\"",
+     "new": "\"Grupo II\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo I (lição): «Grupo II»",
+     "old": ">Grupo II ",
+     "new": ">Grupo II ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo I (lição): «M9-⁠F01:»",
+     "old": ">M9-F01: ",
+     "new": ">M9-⁠F01: ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo I (lição): «M9-⁠F02:»",
+     "old": ">M9-F02: ",
+     "new": ">M9-⁠F02: ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo I (lição): «M9-⁠F03:»",
+     "old": ">M9-F03: ",
+     "new": ">M9-⁠F03: ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo I (lição): «M9-⁠F05:»",
+     "old": ">M9-F05: ",
+     "new": ">M9-⁠F05: ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo I (lição): «M6-⁠F06:»",
+     "old": ">M6-F06: ",
+     "new": ">M6-⁠F06: ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo I (lição): «M6-⁠F07:»",
+     "old": ">M6-F07: ",
+     "new": ">M6-⁠F07: ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo I (lição): «Sessão 19:»",
+     "old": ">Sessão 19: ",
+     "new": ">Sessão 19: ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo I (lição): «Sessão 11:»",
+     "old": ">Sessão 11: ",
+     "new": ">Sessão 11: ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo I (lição): «Sessão 23:»",
+     "old": ">Sessão 23: ",
+     "new": ">Sessão 23: ",
+     "occurrences": 1
+    }
+   ]
+  },
+  "exame/provas/2026-1f/grupo-ii/index.html": {
+   "base_sha256_lf": "c55ab9daec94d1630ac7aeeeafd49cf3d557e9a8a8a5fac7a536f2f328c90cb3",
+   "after_sha256_lf": "6594c4be0510b75c710ab8be14c420bc83f9e5e7073cacee5a516f21df04a0c9",
+   "edits": [
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo II (lição): «Prova 639, 1.ª fase, 2026, Grupo II: «Paisagem»",
+     "old": "\">Prova 639, 1.ª fase, 2026, Grupo II: «Paisagem ",
+     "new": "\">Prova 639, 1.ª fase, 2026, Grupo II: «Paisagem ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo II (lição): «Prova 639, 1.ª fase, 2026»",
+     "old": "<p>Prova 639, 1.ª fase, 2026<",
+     "new": "<p>Prova 639, 1.ª fase, 2026<",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo II (lição): «Grupo II de III»",
+     "old": ">Grupo II de III<",
+     "new": ">Grupo II de III<",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo II (lição): «em: Grupo II»",
+     "old": " em: Grupo II</span>",
+     "new": " em: Grupo II</span>",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo II (lição): «anterior: Grupo I»",
+     "old": " anterior: Grupo I</a>",
+     "new": " anterior: Grupo I</a>",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo II (lição): «Grupo III»",
+     "old": " Grupo III<",
+     "new": " Grupo III<",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo II (lição): «»",
+     "old": "><a href=\"https://www.examesnacionais.com.pt/exames-nacionais/12ano/2026-1fase/Portugues.pdf\" target=\"_blank\"",
+     "new": "><a href=\"https://eduqa.pt/wp-content/uploads/2026/06/portugues_prova_639_v2_enunciado.pdf\" target=\"_blank\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo II (lição): «»",
+     "old": "><a href=\"https://www.examesnacionais.com.pt/exames-nacionais/12ano/2026-1fase/Portugues_Criterios.pdf\" target=\"_blank\"",
+     "new": "><a href=\"https://eduqa.pt/wp-content/uploads/2026/07/portugues_prova_639_cc.pdf\" target=\"_blank\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo II (lição): «cartões: Grupo II do»",
+     "old": " cartões: Grupo II do ",
+     "new": " cartões: Grupo II do ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo II (lição): «Português, Prova 639, 1.ª fase, 2026, versão 2. O enunciado e os critérios de classifica…»",
+     "old": " Português, Prova 639, 1.ª fase, 2026, versão 2. Autor da prova e dos critérios de classificação: IAVE, como indica a página de onde vêm as cópias («documentos oficiais do IAVE»); os PDF de 2026 trazem o logótipo da EduQA, Instituto de Educação, Qualidade e Avaliação, que os publica em eduqa.pt. Cópias públicas: <a href=\"https://www.examesnacionais.com.pt/exames-nacionais/12ano/2026-1fase/Portugues.pdf\" target=\"_blank\" rel=\"noopener\">enunciado (PDF)</a> e <a href=\"https://www.examesnacionais.com.pt/exames-nacionais/12ano/2026-1fase/Portugues_Criterios.pdf\" target=\"_blank\" rel=\"noopener\">critérios (PDF)</a>, em examesnacionais.com.pt. Originais em eduqa.pt: <a href=\"https://eduqa.pt/wp-content/uploads/2026/06/portugues_prova_639_v2_enunciado.pdf\" target=\"_blank\" rel=\"noopener\">enunciado da versão 2 (PDF)</a> e <a href=\"https://eduqa.pt/wp-content/uploads/2026/07/portugues_prova_639_cc.pdf\" target=\"_blank\" rel=\"noopener\">critérios (PDF)</a>. A cópia pública dos critérios tem a marca de água «VERSÃO DE TRABALHO»; o texto é igual ao dos critérios publicados em eduqa.pt (conferido a 29/10/2026). Texto, ",
+     "new": " Português, Prova 639, 1.ª fase, 2026, versão 2. O enunciado e os critérios de classificação trazem, na p. 1, o logótipo da EduQA, Instituto de Educação, Qualidade e Avaliação, que os publica em eduqa.pt. Documentos em eduqa.pt: <a href=\"https://eduqa.pt/wp-content/uploads/2026/06/portugues_prova_639_v2_enunciado.pdf\" target=\"_blank\" rel=\"noopener\">enunciado da versão 2 (PDF)</a> e <a href=\"https://eduqa.pt/wp-content/uploads/2026/07/portugues_prova_639_cc.pdf\" target=\"_blank\" rel=\"noopener\">critérios de classificação (PDF)</a>. Texto, ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo II (lição): «\"Grupo II:»",
+     "old": "\"Grupo II: ",
+     "new": "\"Grupo II: ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo II (lição): «(os PDF trazem o logótipo da EduQA, Instituto de Educação, Qualidade e Avaliação)»",
+     "old": " (IAVE; os PDF de 2026 trazem o logótipo da EduQA, Instituto de Educação, Qualidade e Avaliação)",
+     "new": " (os PDF trazem o logótipo da EduQA, Instituto de Educação, Qualidade e Avaliação)",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo II (lição): «1 de 4\",»",
+     "old": " 1 de 4\", ",
+     "new": " 1 de 4\", ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo II (lição): «\"Linhas 1 a 9\"»",
+     "old": "\"Linhas 1 a 9\"",
+     "new": "\"Linhas 1 a 9\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo II (lição): «2 de 4\",»",
+     "old": " 2 de 4\", ",
+     "new": " 2 de 4\", ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo II (lição): «\"Linhas 10 a 22\"»",
+     "old": "\"Linhas 10 a 22\"",
+     "new": "\"Linhas 10 a 22\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo II (lição): «3 de 4\",»",
+     "old": " 3 de 4\", ",
+     "new": " 3 de 4\", ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo II (lição): «\"Linhas 23 a 34\"»",
+     "old": "\"Linhas 23 a 34\"",
+     "new": "\"Linhas 23 a 34\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo II (lição): «4 de 4\",»",
+     "old": " 4 de 4\", ",
+     "new": " 4 de 4\", ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo II (lição): «\"Linhas 35 a 47\"»",
+     "old": "\"Linhas 35 a 47\"",
+     "new": "\"Linhas 35 a 47\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo II (lição): «\"Itens 5,»",
+     "old": "\"Itens 5, ",
+     "new": "\"Itens 5, ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo II (lição): «e 7\"»",
+     "old": " e 7\"",
+     "new": " e 7\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo II (lição): «item 6\"»",
+     "old": " item 6\"",
+     "new": " item 6\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo II (lição): «item 7\"»",
+     "old": " item 7\"",
+     "new": " item 7\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo II (lição): «Nas duas provas de 2026 (1.ª e 2.ª fases), o Grupo II tem sete itens de escolha múltipla…»",
+     "old": "<p>Nas oito provas de 2023 a 2026 (1.ª e 2.ª fases), o Grupo II tem sempre sete itens de escolha múltipla, com quatro opções: primeiro sobre o texto, no fim de gramática.<\\/p>",
+     "new": "<p>Nas duas provas de 2026 (1.ª e 2.ª fases), o Grupo II tem sete itens de escolha múltipla, com quatro opções: os itens 1 a 4 sobre o texto e os itens 5 a 7 de gramática (leitura nossa).<\\/p>",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo II (lição): «(PDF com o logótipo da EduQA)»",
+     "old": " (IAVE; PDF com o logótipo da EduQA)",
+     "new": " (PDF com o logótipo da EduQA)",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo II (lição): «\"Grupo III\"»",
+     "old": "\"Grupo III\"",
+     "new": "\"Grupo III\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo II (lição): «← Grupo I»",
+     "old": ">← Grupo I</a>",
+     "new": ">← Grupo I</a>",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo II (lição): «Grupo III»",
+     "old": ">Grupo III ",
+     "new": ">Grupo III ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo II (lição): «M4-⁠F15:»",
+     "old": ">M4-F15: ",
+     "new": ">M4-⁠F15: ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo II (lição): «M5-⁠F07:»",
+     "old": ">M5-F07: ",
+     "new": ">M5-⁠F07: ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo II (lição): «M6-⁠F09:»",
+     "old": ">M6-F09: ",
+     "new": ">M6-⁠F09: ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo II (lição): «M6-⁠F07:»",
+     "old": ">M6-F07: ",
+     "new": ">M6-⁠F07: ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo II (lição): «M4-⁠F25:»",
+     "old": ">M4-F25: ",
+     "new": ">M4-⁠F25: ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo II (lição): «Sessão 22:»",
+     "old": ">Sessão 22: ",
+     "new": ">Sessão 22: ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo II (lição): «Sessão 21:»",
+     "old": ">Sessão 21: ",
+     "new": ">Sessão 21: ",
+     "occurrences": 1
+    }
+   ]
+  },
+  "exame/provas/2026-1f/grupo-iii/index.html": {
+   "base_sha256_lf": "5b3b2fceca9f51d61d3b5a8ae852acdb0ef3f9275e92928207b65f5257598c83",
+   "after_sha256_lf": "57dfead2b860cc61fcaf90f8356d15a986fea8f370f5232b7caf045abb2db495",
+   "edits": [
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo III (lição): «Prova 639, 1.ª fase, 2026, Grupo III:»",
+     "old": "\">Prova 639, 1.ª fase, 2026, Grupo III: ",
+     "new": "\">Prova 639, 1.ª fase, 2026, Grupo III: ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo III (lição): «Prova 639, 1.ª fase, 2026»",
+     "old": "<p>Prova 639, 1.ª fase, 2026<",
+     "new": "<p>Prova 639, 1.ª fase, 2026<",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo III (lição): «Grupo III de III»",
+     "old": ">Grupo III de III<",
+     "new": ">Grupo III de III<",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo III (lição): «em: Grupo III»",
+     "old": " em: Grupo III</span>",
+     "new": " em: Grupo III</span>",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo III (lição): «anterior: Grupo II»",
+     "old": " anterior: Grupo II</a>",
+     "new": " anterior: Grupo II</a>",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo III (lição): «\"https://eduqa.pt/wp-content/uploads/2026/06/portugues_prova_639_v2_enunciado.pdf#page=13\"»",
+     "old": "\"https://www.examesnacionais.com.pt/exames-nacionais/12ano/2026-1fase/Portugues.pdf#page=13\"",
+     "new": "\"https://eduqa.pt/wp-content/uploads/2026/06/portugues_prova_639_v2_enunciado.pdf#page=13\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo III (lição): «do Grupo III (enunciado, p. 13,»",
+     "old": " do Grupo III (enunciado, p. 13, ",
+     "new": " do Grupo III (enunciado, p. 13, ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo III (lição): «»",
+     "old": "><a href=\"https://www.examesnacionais.com.pt/exames-nacionais/12ano/2026-1fase/Portugues.pdf\" target=\"_blank\"",
+     "new": "><a href=\"https://eduqa.pt/wp-content/uploads/2026/06/portugues_prova_639_v2_enunciado.pdf\" target=\"_blank\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo III (lição): «»",
+     "old": "><a href=\"https://www.examesnacionais.com.pt/exames-nacionais/12ano/2026-1fase/Portugues_Criterios.pdf\" target=\"_blank\"",
+     "new": "><a href=\"https://eduqa.pt/wp-content/uploads/2026/07/portugues_prova_639_cc.pdf\" target=\"_blank\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo III (lição): «cartões: Grupo III do»",
+     "old": " cartões: Grupo III do ",
+     "new": " cartões: Grupo III do ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo III (lição): «Português, Prova 639, 1.ª fase, 2026, versão 2. O enunciado e os critérios de classifica…»",
+     "old": " Português, Prova 639, 1.ª fase, 2026, versão 2. Autor da prova e dos critérios de classificação: IAVE, como indica a página de onde vêm as cópias («documentos oficiais do IAVE»); os PDF de 2026 trazem o logótipo da EduQA, Instituto de Educação, Qualidade e Avaliação, que os publica em eduqa.pt. Cópias públicas: <a href=\"https://www.examesnacionais.com.pt/exames-nacionais/12ano/2026-1fase/Portugues.pdf\" target=\"_blank\" rel=\"noopener\">enunciado (PDF)</a> e <a href=\"https://www.examesnacionais.com.pt/exames-nacionais/12ano/2026-1fase/Portugues_Criterios.pdf\" target=\"_blank\" rel=\"noopener\">critérios (PDF)</a>, em examesnacionais.com.pt. Originais em eduqa.pt: <a href=\"https://eduqa.pt/wp-content/uploads/2026/06/portugues_prova_639_v2_enunciado.pdf\" target=\"_blank\" rel=\"noopener\">enunciado da versão 2 (PDF)</a> e <a href=\"https://eduqa.pt/wp-content/uploads/2026/07/portugues_prova_639_cc.pdf\" target=\"_blank\" rel=\"noopener\">critérios (PDF)</a>. A cópia pública dos critérios tem a marca de água «VERSÃO DE TRABALHO»; o texto é igual ao dos critérios publicados em eduqa.pt (conferido a 29/10/2026). Imagem, ",
+     "new": " Português, Prova 639, 1.ª fase, 2026, versão 2. O enunciado e os critérios de classificação trazem, na p. 1, o logótipo da EduQA, Instituto de Educação, Qualidade e Avaliação, que os publica em eduqa.pt. Documentos em eduqa.pt: <a href=\"https://eduqa.pt/wp-content/uploads/2026/06/portugues_prova_639_v2_enunciado.pdf\" target=\"_blank\" rel=\"noopener\">enunciado da versão 2 (PDF)</a> e <a href=\"https://eduqa.pt/wp-content/uploads/2026/07/portugues_prova_639_cc.pdf\" target=\"_blank\" rel=\"noopener\">critérios de classificação (PDF)</a>. Imagem, ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo III (lição): «\"Grupo III:»",
+     "old": "\"Grupo III: ",
+     "new": "\"Grupo III: ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo III (lição): «p. 13:»",
+     "old": " p. 13: ",
+     "new": " p. 13: ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo III (lição): «(os PDF trazem o logótipo da EduQA, Instituto de Educação, Qualidade e Avaliação)»",
+     "old": " (IAVE; os PDF de 2026 trazem o logótipo da EduQA, Instituto de Educação, Qualidade e Avaliação)",
+     "new": " (os PDF trazem o logótipo da EduQA, Instituto de Educação, Qualidade e Avaliação)",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo III (lição): «prova\", \"titulo\": \"Grupo III ✱\", \"html\": \"»",
+     "old": " prova\", \"titulo\": \"Grupo III ✱\", \"html\": \"",
+     "new": " prova\", \"titulo\": \"Grupo III ✱\", \"html\": \"",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo III (lição): «na p. 13 da prova:»",
+     "old": " na p. 13 da prova: <a href=\\\"https://www.examesnacionais.com.pt/exames-nacionais/12ano/2026-1fase/Portugues.pdf#page=13\\\" target=\\\"_blank\\\" ",
+     "new": " na p. 13 da prova: <a href=\\\"https://eduqa.pt/wp-content/uploads/2026/06/portugues_prova_639_v2_enunciado.pdf#page=13\\\" target=\\\"_blank\\\" ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo III (lição): «\": \" Ver a imagem: enunciado da prova (PDF), p. 13 de 16 \", \"p\": \"Na»",
+     "old": "\": \"<a class=\\\"ver-pdf\\\" href=\\\"https://www.examesnacionais.com.pt/exames-nacionais/12ano/2026-1fase/Portugues.pdf#page=13\\\" target=\\\"_blank\\\" rel=\\\"noopener\\\">Ver a imagem: enunciado da prova (PDF), p. 13 de 16<\\/a>\", \"p\": \"Na ",
+     "new": "\": \"<a class=\\\"ver-pdf\\\" href=\\\"https://eduqa.pt/wp-content/uploads/2026/06/portugues_prova_639_v2_enunciado.pdf#page=13\\\" target=\\\"_blank\\\" rel=\\\"noopener\\\">Ver a imagem: enunciado da prova (PDF), p. 13 de 16<\\/a>\", \"p\": \"Na ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo III (lição): «\": \" Ver a imagem: enunciado da prova (PDF), p. 13 de 16 \", \"p\": \"Olha»",
+     "old": "\": \"<a class=\\\"ver-pdf\\\" href=\\\"https://www.examesnacionais.com.pt/exames-nacionais/12ano/2026-1fase/Portugues.pdf#page=13\\\" target=\\\"_blank\\\" rel=\\\"noopener\\\">Ver a imagem: enunciado da prova (PDF), p. 13 de 16<\\/a>\", \"p\": \"Olha ",
+     "new": "\": \"<a class=\\\"ver-pdf\\\" href=\\\"https://eduqa.pt/wp-content/uploads/2026/06/portugues_prova_639_v2_enunciado.pdf#page=13\\\" target=\\\"_blank\\\" rel=\\\"noopener\\\">Ver a imagem: enunciado da prova (PDF), p. 13 de 16<\\/a>\", \"p\": \"Olha ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo III (lição): «\": \" Ver a imagem: enunciado da prova (PDF), p. 13 de 16 \", \"p\": \"Esta»",
+     "old": "\": \"<a class=\\\"ver-pdf\\\" href=\\\"https://www.examesnacionais.com.pt/exames-nacionais/12ano/2026-1fase/Portugues.pdf#page=13\\\" target=\\\"_blank\\\" rel=\\\"noopener\\\">Ver a imagem: enunciado da prova (PDF), p. 13 de 16<\\/a>\", \"p\": \"Esta ",
+     "new": "\": \"<a class=\\\"ver-pdf\\\" href=\\\"https://eduqa.pt/wp-content/uploads/2026/06/portugues_prova_639_v2_enunciado.pdf#page=13\\\" target=\\\"_blank\\\" rel=\\\"noopener\\\">Ver a imagem: enunciado da prova (PDF), p. 13 de 16<\\/a>\", \"p\": \"Esta ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo III (lição): «\"ver\": \" Ver a imagem: enunciado da prova (PDF), p. 13 de 16 \", \"p\": \"Que descrição»",
+     "old": "\"ver\": \"<a class=\\\"ver-pdf\\\" href=\\\"https://www.examesnacionais.com.pt/exames-nacionais/12ano/2026-1fase/Portugues.pdf#page=13\\\" target=\\\"_blank\\\" rel=\\\"noopener\\\">Ver a imagem: enunciado da prova (PDF), p. 13 de 16<\\/a>\", \"p\": \"Que descrição ",
+     "new": "\"ver\": \"<a class=\\\"ver-pdf\\\" href=\\\"https://eduqa.pt/wp-content/uploads/2026/06/portugues_prova_639_v2_enunciado.pdf#page=13\\\" target=\\\"_blank\\\" rel=\\\"noopener\\\">Ver a imagem: enunciado da prova (PDF), p. 13 de 16<\\/a>\", \"p\": \"Que descrição ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo III (lição): «\": \" Ver a imagem: enunciado da prova (PDF), p. 13 de 16 \", \"p\": \"De»",
+     "old": "\": \"<a class=\\\"ver-pdf\\\" href=\\\"https://www.examesnacionais.com.pt/exames-nacionais/12ano/2026-1fase/Portugues.pdf#page=13\\\" target=\\\"_blank\\\" rel=\\\"noopener\\\">Ver a imagem: enunciado da prova (PDF), p. 13 de 16<\\/a>\", \"p\": \"De ",
+     "new": "\": \"<a class=\\\"ver-pdf\\\" href=\\\"https://eduqa.pt/wp-content/uploads/2026/06/portugues_prova_639_v2_enunciado.pdf#page=13\\\" target=\\\"_blank\\\" rel=\\\"noopener\\\">Ver a imagem: enunciado da prova (PDF), p. 13 de 16<\\/a>\", \"p\": \"De ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo III (lição): «\": \" Ver a imagem: enunciado da prova (PDF), p. 13 de 16 \", \"p\": \"Completa»",
+     "old": "\": \"<a class=\\\"ver-pdf\\\" href=\\\"https://www.examesnacionais.com.pt/exames-nacionais/12ano/2026-1fase/Portugues.pdf#page=13\\\" target=\\\"_blank\\\" rel=\\\"noopener\\\">Ver a imagem: enunciado da prova (PDF), p. 13 de 16<\\/a>\", \"p\": \"Completa ",
+     "new": "\": \"<a class=\\\"ver-pdf\\\" href=\\\"https://eduqa.pt/wp-content/uploads/2026/06/portugues_prova_639_v2_enunciado.pdf#page=13\\\" target=\\\"_blank\\\" rel=\\\"noopener\\\">Ver a imagem: enunciado da prova (PDF), p. 13 de 16<\\/a>\", \"p\": \"Completa ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo III (lição): «\": \" Ver a imagem: enunciado da prova (PDF), p. 13 de 16 \", \"p\": \"Qual»",
+     "old": "\": \"<a class=\\\"ver-pdf\\\" href=\\\"https://www.examesnacionais.com.pt/exames-nacionais/12ano/2026-1fase/Portugues.pdf#page=13\\\" target=\\\"_blank\\\" rel=\\\"noopener\\\">Ver a imagem: enunciado da prova (PDF), p. 13 de 16<\\/a>\", \"p\": \"Qual ",
+     "new": "\": \"<a class=\\\"ver-pdf\\\" href=\\\"https://eduqa.pt/wp-content/uploads/2026/06/portugues_prova_639_v2_enunciado.pdf#page=13\\\" target=\\\"_blank\\\" rel=\\\"noopener\\\">Ver a imagem: enunciado da prova (PDF), p. 13 de 16<\\/a>\", \"p\": \"Qual ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo III (lição): «\": \" Ver a imagem: enunciado da prova (PDF), p. 13 de 16 \", \"p\": \"Completa:»",
+     "old": "\": \"<a class=\\\"ver-pdf\\\" href=\\\"https://www.examesnacionais.com.pt/exames-nacionais/12ano/2026-1fase/Portugues.pdf#page=13\\\" target=\\\"_blank\\\" rel=\\\"noopener\\\">Ver a imagem: enunciado da prova (PDF), p. 13 de 16<\\/a>\", \"p\": \"Completa: ",
+     "new": "\": \"<a class=\\\"ver-pdf\\\" href=\\\"https://eduqa.pt/wp-content/uploads/2026/06/portugues_prova_639_v2_enunciado.pdf#page=13\\\" target=\\\"_blank\\\" rel=\\\"noopener\\\">Ver a imagem: enunciado da prova (PDF), p. 13 de 16<\\/a>\", \"p\": \"Completa: ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo III (lição): «\"ver\": \" Ver a imagem: enunciado da prova (PDF), p. 13 de 16 \", \"p\": \"Que frase»",
+     "old": "\"ver\": \"<a class=\\\"ver-pdf\\\" href=\\\"https://www.examesnacionais.com.pt/exames-nacionais/12ano/2026-1fase/Portugues.pdf#page=13\\\" target=\\\"_blank\\\" rel=\\\"noopener\\\">Ver a imagem: enunciado da prova (PDF), p. 13 de 16<\\/a>\", \"p\": \"Que frase ",
+     "new": "\"ver\": \"<a class=\\\"ver-pdf\\\" href=\\\"https://eduqa.pt/wp-content/uploads/2026/06/portugues_prova_639_v2_enunciado.pdf#page=13\\\" target=\\\"_blank\\\" rel=\\\"noopener\\\">Ver a imagem: enunciado da prova (PDF), p. 13 de 16<\\/a>\", \"p\": \"Que frase ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo III (lição): «\": \" Ver a imagem: enunciado da prova (PDF), p. 13 de 16 \", \"p\": \"Cada»",
+     "old": "\": \"<a class=\\\"ver-pdf\\\" href=\\\"https://www.examesnacionais.com.pt/exames-nacionais/12ano/2026-1fase/Portugues.pdf#page=13\\\" target=\\\"_blank\\\" rel=\\\"noopener\\\">Ver a imagem: enunciado da prova (PDF), p. 13 de 16<\\/a>\", \"p\": \"Cada ",
+     "new": "\": \"<a class=\\\"ver-pdf\\\" href=\\\"https://eduqa.pt/wp-content/uploads/2026/06/portugues_prova_639_v2_enunciado.pdf#page=13\\\" target=\\\"_blank\\\" rel=\\\"noopener\\\">Ver a imagem: enunciado da prova (PDF), p. 13 de 16<\\/a>\", \"p\": \"Cada ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo III (lição): «2026 (PDF com o logótipo da EduQA):»",
+     "old": " 2026 (IAVE; PDF com o logótipo da EduQA): ",
+     "new": " 2026 (PDF com o logótipo da EduQA): ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo III (lição): «caderno\", \"titulo\": \"Grupo III ✱\", \"html\": \"»",
+     "old": " caderno\", \"titulo\": \"Grupo III ✱\", \"html\": \"",
+     "new": " caderno\", \"titulo\": \"Grupo III ✱\", \"html\": \"",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo III (lição): «imagem:»",
+     "old": " imagem: <a href=\\\"https://www.examesnacionais.com.pt/exames-nacionais/12ano/2026-1fase/Portugues.pdf#page=13\\\" target=\\\"_blank\\\" ",
+     "new": " imagem: <a href=\\\"https://eduqa.pt/wp-content/uploads/2026/06/portugues_prova_639_v2_enunciado.pdf#page=13\\\" target=\\\"_blank\\\" ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo III (lição): «p. 13»",
+     "old": " p. 13<",
+     "new": " p. 13<",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo III (lição): «Marquei os parágrafos, com partes proporcionadas e articuladas entre si, e usei «mecanis…»",
+     "old": ">Marquei os parágrafos, com partes proporcionadas e ligadas por conectores?<\\/td>",
+     "new": ">Marquei os parágrafos, com partes proporcionadas e articuladas entre si, e usei «mecanismos de articulação interfrásica»?<\\/td>",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo III (lição): «A forma também conta. Partes proporcionadas, parágrafos marcados, «mecanismos de articul…»",
+     "old": "<li><b>A forma também conta.<\\/b> Parágrafos proporcionados, conectores pela relação certa, retomas sem repetição, pessoa e tempo verbal coerentes.<\\/li>",
+     "new": "<li><b>A forma também conta.<\\/b> Partes proporcionadas, parágrafos marcados, «mecanismos de articulação interfrásica» usados com adequação, retomas sem repetição, pessoa e tempo verbal coerentes.<\\/li>",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo III (lição): «Nas duas provas de 2026, o Grupo III vale 44 pontos, conta sempre para a classificação e…»",
+     "old": "<p>Nas oito provas de 2023 a 2026 (1.ª e 2.ª fases), o Grupo III vale sempre 44 pontos, conta sempre e pede sempre um texto «bem estruturado» de 200 a 350 palavras, classificado nos parâmetros A, B e C e na correção linguística. Em cinco provas, o género é o texto de opinião; em três (2.ª fase de 2023 e de 2025, 1.ª fase de 2026), a apreciação crítica de uma imagem, com descrição, comentário em pelo menos três aspetos e conclusão. Nos dois géneros, pede-se um discurso valorativo.<\\/p>",
+     "new": "<p>Nas duas provas de 2026, o Grupo III vale 44 pontos, conta sempre para a classificação e pede um texto «bem estruturado» de 200 a 350 palavras, classificado nos parâmetros A, B e C e na correção linguística. Na 1.ª fase, o género é a apreciação crítica de uma imagem, com descrição, comentário em pelo menos três aspetos e conclusão; na 2.ª fase, o texto de opinião. Nos dois géneros, pede-se um discurso valorativo.<\\/p>",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo III (lição): «2026 (PDF com o logótipo da EduQA),»",
+     "old": " 2026 (IAVE; PDF com o logótipo da EduQA), ",
+     "new": " 2026 (PDF com o logótipo da EduQA), ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo III (lição): «← Grupo II»",
+     "old": ">← Grupo II</a>",
+     "new": ">← Grupo II</a>",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo III (lição): «M2-⁠F08:»",
+     "old": ">M2-F08: ",
+     "new": ">M2-⁠F08: ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo III (lição): «M4-⁠F20:»",
+     "old": ">M4-F20: ",
+     "new": ">M4-⁠F20: ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo III (lição): «M6-⁠F11:»",
+     "old": ">M6-F11: ",
+     "new": ">M6-⁠F11: ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo III (lição): «M4-⁠F15:»",
+     "old": ">M4-F15: ",
+     "new": ">M4-⁠F15: ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo III (lição): «M5-⁠F07:»",
+     "old": ">M5-F07: ",
+     "new": ">M5-⁠F07: ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo III (lição): «Sessão 25:»",
+     "old": ">Sessão 25: ",
+     "new": ">Sessão 25: ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 1.ª fase, 2026, Grupo III (lição): «Sessão 24:»",
+     "old": ">Sessão 24: ",
+     "new": ">Sessão 24: ",
+     "occurrences": 1
+    }
+   ]
+  },
+  "exame/provas/2026-2f/grupo-i/index.html": {
+   "base_sha256_lf": "371aa3822f092d5a90f0645b671ff8b904894c2d37bd0fad6b2603ba682c2d5e",
+   "after_sha256_lf": "9c2df41657ed4841a3cd24746b559a7409168316d4f3f945144a69671529c8fc",
+   "edits": [
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo I (lição): «Prova 639, 2.ª fase, 2026, Grupo I: Palavras»",
+     "old": "\">Prova 639, 2.ª fase, 2026, Grupo I: Palavras ",
+     "new": "\">Prova 639, 2.ª fase, 2026, Grupo I: Palavras ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo I (lição): «Prova 639, 2.ª fase, 2026»",
+     "old": "<p>Prova 639, 2.ª fase, 2026<",
+     "new": "<p>Prova 639, 2.ª fase, 2026<",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo I (lição): «Grupo I de III»",
+     "old": ">Grupo I de III<",
+     "new": ">Grupo I de III<",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo I (lição): «em: Grupo I»",
+     "old": " em: Grupo I</span>",
+     "new": " em: Grupo I</span>",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo I (lição): «Grupo II»",
+     "old": " Grupo II<",
+     "new": " Grupo II<",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo I (lição): «»",
+     "old": "><a href=\"https://www.examesnacionais.com.pt/exames-nacionais/12ano/2026-2fase/Portugues.pdf\" target=\"_blank\"",
+     "new": "><a href=\"https://eduqa.pt/wp-content/uploads/2026/07/EX-Port639-F2-2026-V2_net.pdf\" target=\"_blank\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo I (lição): «»",
+     "old": "><a href=\"https://www.examesnacionais.com.pt/exames-nacionais/12ano/2026-2fase/Portugues_Criterios.pdf\" target=\"_blank\"",
+     "new": "><a href=\"https://eduqa.pt/wp-content/uploads/2026/07/EX-Port639-F2-2026-CC-VD_net.pdf\" target=\"_blank\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo I (lição): «a desmontar os itens de resposta escrita do Grupo I (referir alterações, explicar duas v…»",
+     "old": "> a desmontar os itens de resposta escrita do Grupo I (referir alterações, explicar duas visões da escrita, inferir traços ",
+     "new": "> a desmontar os itens de resposta escrita do Grupo I (referir alterações, explicar duas visões da escrita, inferir traços ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo I (lição): «que versos ou linhas provam, como se ordena a resposta e o que a grelha oficial valoriza…»",
+     "old": " que versos ou linhas provam, como se ordena a resposta e o que a grelha oficial valoriza. Resolves os itens 3 e 6 da prova com o texto à frente e escreves as cinco respostas no caderno, com a grelha à vista.<",
+     "new": " que versos ou linhas provam, como se ordena a resposta e o que a grelha oficial valoriza. Resolves os itens 3 e 6 da prova com o texto à frente e escreves as cinco respostas no caderno, com a grelha à vista.<",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo I (lição): «cartões: Grupo I do»",
+     "old": " cartões: Grupo I do ",
+     "new": " cartões: Grupo I do ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo I (lição): «Português, Prova 639, 2.ª fase, 2026, versão 2. O enunciado e os critérios de classifica…»",
+     "old": " Português, Prova 639, 2.ª fase, 2026, versão 2. Autor da prova e dos critérios de classificação: IAVE, como indica a página de onde vêm as cópias («documentos oficiais do IAVE»); os PDF de 2026 trazem o logótipo da EduQA, Instituto de Educação, Qualidade e Avaliação, que os publica em eduqa.pt. Cópias públicas: <a href=\"https://www.examesnacionais.com.pt/exames-nacionais/12ano/2026-2fase/Portugues.pdf\" target=\"_blank\" rel=\"noopener\">enunciado (PDF)</a> e <a href=\"https://www.examesnacionais.com.pt/exames-nacionais/12ano/2026-2fase/Portugues_Criterios.pdf\" target=\"_blank\" rel=\"noopener\">critérios (PDF)</a>, em examesnacionais.com.pt. Originais em eduqa.pt: <a href=\"https://eduqa.pt/wp-content/uploads/2026/07/EX-Port639-F2-2026-V2_net.pdf\" target=\"_blank\" rel=\"noopener\">enunciado da versão 2 (PDF)</a> e <a href=\"https://eduqa.pt/wp-content/uploads/2026/07/EX-Port639-F2-2026-CC-VD_net.pdf\" target=\"_blank\" rel=\"noopener\">critérios (PDF)</a>. A cópia pública dos critérios tem a marca de água «VERSÃO DE TRABALHO»; o texto é igual ao dos critérios publicados em eduqa.pt (conferido a 30/10/2026). Textos, ",
+     "new": " Português, Prova 639, 2.ª fase, 2026, versão 2. O enunciado e os critérios de classificação trazem, na p. 1, o logótipo da EduQA, Instituto de Educação, Qualidade e Avaliação, que os publica em eduqa.pt. Documentos em eduqa.pt: <a href=\"https://eduqa.pt/wp-content/uploads/2026/07/EX-Port639-F2-2026-V2_net.pdf\" target=\"_blank\" rel=\"noopener\">enunciado da versão 2 (PDF)</a> e <a href=\"https://eduqa.pt/wp-content/uploads/2026/07/EX-Port639-F2-2026-CC-VD_net.pdf\" target=\"_blank\" rel=\"noopener\">critérios de classificação (PDF)</a>. Textos, ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo I (lição): «\"Grupo I:»",
+     "old": "\"Grupo I: ",
+     "new": "\"Grupo I: ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo I (lição): «(os PDF trazem o logótipo da EduQA, Instituto de Educação, Qualidade e Avaliação)»",
+     "old": " (IAVE; os PDF de 2026 trazem o logótipo da EduQA, Instituto de Educação, Qualidade e Avaliação)",
+     "new": " (os PDF trazem o logótipo da EduQA, Instituto de Educação, Qualidade e Avaliação)",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo I (lição): «\"rot\": \"Parte A\", \"titulo\": \"Poema 1,»",
+     "old": " \"rot\": \"Parte A\", \"titulo\": \"Poema 1, ",
+     "new": " \"rot\": \"Parte A\", \"titulo\": \"Poema 1, ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo I (lição): «\"Item 1»",
+     "old": "\"Item 1 ",
+     "new": "\"Item 1 ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo I (lição): «\"Item 1: a»",
+     "old": " \"Item 1: a ",
+     "new": " \"Item 1: a ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo I (lição): «1 (PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: indicam tó…»",
+     "old": " 1 (IAVE; PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: os tópicos são exemplos de formulações possíveis.<\\/p>\"",
+     "new": " 1 (PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: indicam tópicos a abordar, «ou outros igualmente relevantes». Dentro dos tópicos, «as expressões separadas por barras oblíquas» são «exemplos de formulações possíveis, apresentadas em alternativa» (p. 4 dos critérios).<\\/p>\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo I (lição): «\"rot\": \"Parte A\", \"titulo\": \"Poema 2, de»",
+     "old": " \"rot\": \"Parte A\", \"titulo\": \"Poema 2, de ",
+     "new": " \"rot\": \"Parte A\", \"titulo\": \"Poema 2, de ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo I (lição): «\"Item 2»",
+     "old": "\"Item 2 ",
+     "new": "\"Item 2 ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo I (lição): «\"Item 2: a»",
+     "old": " \"Item 2: a ",
+     "new": " \"Item 2: a ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo I (lição): «2 (PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: indicam tó…»",
+     "old": " 2 (IAVE; PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: os tópicos são exemplos de formulações possíveis.<\\/p>\"",
+     "new": " 2 (PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: indicam tópicos a abordar, «ou outros igualmente relevantes». Dentro dos tópicos, «as expressões separadas por barras oblíquas» são «exemplos de formulações possíveis, apresentadas em alternativa» (p. 4 dos critérios).<\\/p>\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo I (lição): «item 3\"»",
+     "old": " item 3\"",
+     "new": " item 3\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo I (lição): «\"t\": \"ler\", \"rot\": \"Parte B\", \"titulo\": \"_Frei Luís de Sousa_, linhas 1 a 16\"»",
+     "old": "\"t\": \"ler\", \"rot\": \"Parte B\", \"titulo\": \"_Frei Luís de Sousa_, linhas 1 a 16\"",
+     "new": "\"t\": \"ler\", \"rot\": \"Parte B\", \"titulo\": \"_Frei Luís de Sousa_, linhas 1 a 16\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo I (lição): «\"t\": \"ler\", \"rot\": \"Parte B\", \"titulo\": \"_Frei Luís de Sousa_, linhas 17 a 36\"»",
+     "old": "\"t\": \"ler\", \"rot\": \"Parte B\", \"titulo\": \"_Frei Luís de Sousa_, linhas 17 a 36\"",
+     "new": "\"t\": \"ler\", \"rot\": \"Parte B\", \"titulo\": \"_Frei Luís de Sousa_, linhas 17 a 36\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo I (lição): «\"Item 4»",
+     "old": "\"Item 4 ",
+     "new": "\"Item 4 ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo I (lição): «\"Item 4: a»",
+     "old": " \"Item 4: a ",
+     "new": " \"Item 4: a ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo I (lição): «4 (PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: indicam tó…»",
+     "old": " 4 (IAVE; PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: os tópicos são exemplos de formulações possíveis.<\\/p>\"",
+     "new": " 4 (PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: indicam tópicos a abordar, «ou outros igualmente relevantes». Dentro dos tópicos, «as expressões separadas por barras oblíquas» são «exemplos de formulações possíveis, apresentadas em alternativa» (p. 4 dos critérios).<\\/p>\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo I (lição): «\"Item 5»",
+     "old": "\"Item 5 ",
+     "new": "\"Item 5 ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo I (lição): «\"Item 5: a»",
+     "old": " \"Item 5: a ",
+     "new": " \"Item 5: a ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo I (lição): «5 (PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: indicam tó…»",
+     "old": " 5 (IAVE; PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: os tópicos são exemplos de formulações possíveis.<\\/p>\"",
+     "new": " 5 (PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: indicam tópicos a abordar, «ou outros igualmente relevantes». Dentro dos tópicos, «as expressões separadas por barras oblíquas» são «exemplos de formulações possíveis, apresentadas em alternativa» (p. 4 dos critérios).<\\/p>\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo I (lição): «item 6\"»",
+     "old": " item 6\"",
+     "new": " item 6\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo I (lição): «linhas 1 a 36\"»",
+     "old": " linhas 1 a 36\"",
+     "new": " linhas 1 a 36\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo I (lição): «\"Parte C\"»",
+     "old": "\"Parte C\"",
+     "new": "\"Parte C\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo I (lição): «\"Item 7 ✱:»",
+     "old": " \"Item 7 ✱: ",
+     "new": " \"Item 7 ✱: ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo I (lição): «\"Item 7 ✱\"»",
+     "old": " \"Item 7 ✱\"",
+     "new": " \"Item 7 ✱\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo I (lição): «\"Item 7: a»",
+     "old": " \"Item 7: a ",
+     "new": " \"Item 7: a ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo I (lição): «7 (PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: indicam tó…»",
+     "old": " 7 (IAVE; PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: os tópicos são exemplos de formulações possíveis.<\\/p><",
+     "new": " 7 (PDF com o logótipo da EduQA). Os critérios não trazem uma resposta modelo: indicam tópicos a abordar, «ou outros igualmente relevantes». Dentro dos tópicos, «as expressões separadas por barras oblíquas» são «exemplos de formulações possíveis, apresentadas em alternativa» (p. 4 dos critérios).<\\/p><",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo I (lição): «Nas duas provas de 2026 (1.ª e 2.ª fases), o Grupo I acaba numa breve exposição, com int…»",
+     "old": "<p>Nas oito provas de 2023 a 2026 (1.ª e 2.ª fases), o Grupo I acaba sempre numa breve exposição, com introdução, desenvolvimento e conclusão, e tem sempre um item em que identificas afirmações.<\\/p>",
+     "new": "<p>Nas duas provas de 2026 (1.ª e 2.ª fases), o Grupo I acaba numa breve exposição, com introdução, desenvolvimento e conclusão (item 7), e tem um item em que identificas afirmações (item 6).<\\/p>",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo I (lição): «2026 (PDF com o logótipo da EduQA),»",
+     "old": " 2026 (IAVE; PDF com o logótipo da EduQA), ",
+     "new": " 2026 (PDF com o logótipo da EduQA), ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo I (lição): «\"Grupo II\"»",
+     "old": "\"Grupo II\"",
+     "new": "\"Grupo II\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo I (lição): «Grupo II»",
+     "old": ">Grupo II ",
+     "new": ">Grupo II ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo I (lição): «M8-⁠F04:»",
+     "old": ">M8-F04: ",
+     "new": ">M8-⁠F04: ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo I (lição): «M7-⁠F04:»",
+     "old": ">M7-F04: ",
+     "new": ">M7-⁠F04: ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo I (lição): «M4-⁠F09:»",
+     "old": ">M4-F09: ",
+     "new": ">M4-⁠F09: ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo I (lição): «M4-⁠F07:»",
+     "old": ">M4-F07: ",
+     "new": ">M4-⁠F07: ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo I (lição): «M4-⁠F08:»",
+     "old": ">M4-F08: ",
+     "new": ">M4-⁠F08: ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo I (lição): «M3-⁠F09:»",
+     "old": ">M3-F09: ",
+     "new": ">M3-⁠F09: ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo I (lição): «Sessão 17:»",
+     "old": ">Sessão 17: ",
+     "new": ">Sessão 17: ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo I (lição): «Sessão 13:»",
+     "old": ">Sessão 13: ",
+     "new": ">Sessão 13: ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo I (lição): «Sessão 7:»",
+     "old": ">Sessão 7: ",
+     "new": ">Sessão 7: ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo I (lição): «Sessão 4:»",
+     "old": ">Sessão 4: ",
+     "new": ">Sessão 4: ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo I (lição): «Sessão 23:»",
+     "old": ">Sessão 23: ",
+     "new": ">Sessão 23: ",
+     "occurrences": 1
+    }
+   ]
+  },
+  "exame/provas/2026-2f/grupo-ii/index.html": {
+   "base_sha256_lf": "4423f08f21c7509df55f820bca057a68716e5b5827918eb21746fad3595c82fe",
+   "after_sha256_lf": "c8dfb79e2f11183e37185021a9c655fe8f5bf4802ba2cb0a8688a07b1fda7791",
+   "edits": [
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo II (lição): «Prova 639, 2.ª fase, 2026, Grupo II: «As»",
+     "old": "\">Prova 639, 2.ª fase, 2026, Grupo II: «As ",
+     "new": "\">Prova 639, 2.ª fase, 2026, Grupo II: «As ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo II (lição): «Prova 639, 2.ª fase, 2026»",
+     "old": "<p>Prova 639, 2.ª fase, 2026<",
+     "new": "<p>Prova 639, 2.ª fase, 2026<",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo II (lição): «Grupo II de III»",
+     "old": ">Grupo II de III<",
+     "new": ">Grupo II de III<",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo II (lição): «em: Grupo II»",
+     "old": " em: Grupo II</span>",
+     "new": " em: Grupo II</span>",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo II (lição): «anterior: Grupo I»",
+     "old": " anterior: Grupo I</a>",
+     "new": " anterior: Grupo I</a>",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo II (lição): «Grupo III»",
+     "old": " Grupo III<",
+     "new": " Grupo III<",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo II (lição): «»",
+     "old": "><a href=\"https://www.examesnacionais.com.pt/exames-nacionais/12ano/2026-2fase/Portugues.pdf\" target=\"_blank\"",
+     "new": "><a href=\"https://eduqa.pt/wp-content/uploads/2026/07/EX-Port639-F2-2026-V2_net.pdf\" target=\"_blank\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo II (lição): «»",
+     "old": "><a href=\"https://www.examesnacionais.com.pt/exames-nacionais/12ano/2026-2fase/Portugues_Criterios.pdf\" target=\"_blank\"",
+     "new": "><a href=\"https://eduqa.pt/wp-content/uploads/2026/07/EX-Port639-F2-2026-CC-VD_net.pdf\" target=\"_blank\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo II (lição): «cartões: Grupo II do»",
+     "old": " cartões: Grupo II do ",
+     "new": " cartões: Grupo II do ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo II (lição): «Português, Prova 639, 2.ª fase, 2026, versão 2. O enunciado e os critérios de classifica…»",
+     "old": " Português, Prova 639, 2.ª fase, 2026, versão 2. Autor da prova e dos critérios de classificação: IAVE, como indica a página de onde vêm as cópias («documentos oficiais do IAVE»); os PDF de 2026 trazem o logótipo da EduQA, Instituto de Educação, Qualidade e Avaliação, que os publica em eduqa.pt. Cópias públicas: <a href=\"https://www.examesnacionais.com.pt/exames-nacionais/12ano/2026-2fase/Portugues.pdf\" target=\"_blank\" rel=\"noopener\">enunciado (PDF)</a> e <a href=\"https://www.examesnacionais.com.pt/exames-nacionais/12ano/2026-2fase/Portugues_Criterios.pdf\" target=\"_blank\" rel=\"noopener\">critérios (PDF)</a>, em examesnacionais.com.pt. Originais em eduqa.pt: <a href=\"https://eduqa.pt/wp-content/uploads/2026/07/EX-Port639-F2-2026-V2_net.pdf\" target=\"_blank\" rel=\"noopener\">enunciado da versão 2 (PDF)</a> e <a href=\"https://eduqa.pt/wp-content/uploads/2026/07/EX-Port639-F2-2026-CC-VD_net.pdf\" target=\"_blank\" rel=\"noopener\">critérios (PDF)</a>. A cópia pública dos critérios tem a marca de água «VERSÃO DE TRABALHO»; o texto é igual ao dos critérios publicados em eduqa.pt (conferido a 30/10/2026). Texto, ",
+     "new": " Português, Prova 639, 2.ª fase, 2026, versão 2. O enunciado e os critérios de classificação trazem, na p. 1, o logótipo da EduQA, Instituto de Educação, Qualidade e Avaliação, que os publica em eduqa.pt. Documentos em eduqa.pt: <a href=\"https://eduqa.pt/wp-content/uploads/2026/07/EX-Port639-F2-2026-V2_net.pdf\" target=\"_blank\" rel=\"noopener\">enunciado da versão 2 (PDF)</a> e <a href=\"https://eduqa.pt/wp-content/uploads/2026/07/EX-Port639-F2-2026-CC-VD_net.pdf\" target=\"_blank\" rel=\"noopener\">critérios de classificação (PDF)</a>. Texto, ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo II (lição): «\"Grupo II:»",
+     "old": "\"Grupo II: ",
+     "new": "\"Grupo II: ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo II (lição): «(os PDF trazem o logótipo da EduQA, Instituto de Educação, Qualidade e Avaliação)»",
+     "old": " (IAVE; os PDF de 2026 trazem o logótipo da EduQA, Instituto de Educação, Qualidade e Avaliação)",
+     "new": " (os PDF trazem o logótipo da EduQA, Instituto de Educação, Qualidade e Avaliação)",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo II (lição): «1 de 4\",»",
+     "old": " 1 de 4\", ",
+     "new": " 1 de 4\", ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo II (lição): «\"Linhas 1 a 12\"»",
+     "old": "\"Linhas 1 a 12\"",
+     "new": "\"Linhas 1 a 12\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo II (lição): «2 de 4\",»",
+     "old": " 2 de 4\", ",
+     "new": " 2 de 4\", ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo II (lição): «\"Linhas 13 a 22\"»",
+     "old": "\"Linhas 13 a 22\"",
+     "new": "\"Linhas 13 a 22\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo II (lição): «3 de 4\",»",
+     "old": " 3 de 4\", ",
+     "new": " 3 de 4\", ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo II (lição): «\"Linhas 23 a 36\"»",
+     "old": "\"Linhas 23 a 36\"",
+     "new": "\"Linhas 23 a 36\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo II (lição): «item 3\"»",
+     "old": " item 3\"",
+     "new": " item 3\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo II (lição): «\"Linhas 23 a 27\"»",
+     "old": "\"Linhas 23 a 27\"",
+     "new": "\"Linhas 23 a 27\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo II (lição): «4 de 4\",»",
+     "old": " 4 de 4\", ",
+     "new": " 4 de 4\", ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo II (lição): «\"Linhas 37 a 46\"»",
+     "old": "\"Linhas 37 a 46\"",
+     "new": "\"Linhas 37 a 46\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo II (lição): «item 4\"»",
+     "old": " item 4\"",
+     "new": " item 4\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo II (lição): «\"Linhas 1 a 46\"»",
+     "old": "\"Linhas 1 a 46\"",
+     "new": "\"Linhas 1 a 46\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo II (lição): «\"Itens 5,»",
+     "old": "\"Itens 5, ",
+     "new": "\"Itens 5, ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo II (lição): «e 7\"»",
+     "old": " e 7\"",
+     "new": " e 7\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo II (lição): «item 5\"»",
+     "old": " item 5\"",
+     "new": " item 5\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo II (lição): «item 6\"»",
+     "old": " item 6\"",
+     "new": " item 6\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo II (lição): «\"Linhas 13 a 18 e 44 a 46\"»",
+     "old": "\"Linhas 13 a 18 e 44 a 46\"",
+     "new": "\"Linhas 13 a 18 e 44 a 46\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo II (lição): «item 7\"»",
+     "old": " item 7\"",
+     "new": " item 7\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo II (lição): «\"Linhas 1 e 2\"»",
+     "old": "\"Linhas 1 e 2\"",
+     "new": "\"Linhas 1 e 2\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo II (lição): «Nas duas provas de 2026 (1.ª e 2.ª fases), o Grupo II tem sete itens de escolha múltipla…»",
+     "old": "<p>Nas oito provas de 2023 a 2026 (1.ª e 2.ª fases), o Grupo II tem sempre sete itens de escolha múltipla, com quatro opções: primeiro sobre o texto, no fim de gramática (leitura nossa).<\\/p>",
+     "new": "<p>Nas duas provas de 2026 (1.ª e 2.ª fases), o Grupo II tem sete itens de escolha múltipla, com quatro opções: os itens 1 a 4 sobre o texto e os itens 5 a 7 de gramática (leitura nossa).<\\/p>",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo II (lição): «(PDF com o logótipo da EduQA)»",
+     "old": " (IAVE; PDF com o logótipo da EduQA)",
+     "new": " (PDF com o logótipo da EduQA)",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo II (lição): «\"Grupo III\"»",
+     "old": "\"Grupo III\"",
+     "new": "\"Grupo III\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo II (lição): «← Grupo I»",
+     "old": ">← Grupo I</a>",
+     "new": ">← Grupo I</a>",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo II (lição): «Grupo III»",
+     "old": ">Grupo III ",
+     "new": ">Grupo III ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo II (lição): «M4-⁠F15:»",
+     "old": ">M4-F15: ",
+     "new": ">M4-⁠F15: ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo II (lição): «M3-⁠F15:»",
+     "old": ">M3-F15: ",
+     "new": ">M3-⁠F15: ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo II (lição): «M2-⁠F07:»",
+     "old": ">M2-F07: ",
+     "new": ">M2-⁠F07: ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo II (lição): «M6-⁠F04:»",
+     "old": ">M6-F04: ",
+     "new": ">M6-⁠F04: ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo II (lição): «Sessão 22:»",
+     "old": ">Sessão 22: ",
+     "new": ">Sessão 22: ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo II (lição): «Sessão 21:»",
+     "old": ">Sessão 21: ",
+     "new": ">Sessão 21: ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo II (lição): «Sessão 24:»",
+     "old": ">Sessão 24: ",
+     "new": ">Sessão 24: ",
+     "occurrences": 1
+    }
+   ]
+  },
+  "exame/provas/2026-2f/grupo-iii/index.html": {
+   "base_sha256_lf": "48cd4e108303dbf8c42abec26c711900593e5ca9b90ab6998c0ce9e0a065bbd1",
+   "after_sha256_lf": "35f8d4147bf2850562033fbae144bd009a3f4e89de53bf6ead026deb3bae7cc5",
+   "edits": [
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo III (lição): «Prova 639, 2.ª fase, 2026, Grupo III: A»",
+     "old": "\">Prova 639, 2.ª fase, 2026, Grupo III: A ",
+     "new": "\">Prova 639, 2.ª fase, 2026, Grupo III: A ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo III (lição): «Prova 639, 2.ª fase, 2026»",
+     "old": "<p>Prova 639, 2.ª fase, 2026<",
+     "new": "<p>Prova 639, 2.ª fase, 2026<",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo III (lição): «Grupo III de III»",
+     "old": ">Grupo III de III<",
+     "new": ">Grupo III de III<",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo III (lição): «em: Grupo III»",
+     "old": " em: Grupo III</span>",
+     "new": " em: Grupo III</span>",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo III (lição): «anterior: Grupo II»",
+     "old": " anterior: Grupo II</a>",
+     "new": " anterior: Grupo II</a>",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo III (lição): «»",
+     "old": "><a href=\"https://www.examesnacionais.com.pt/exames-nacionais/12ano/2026-2fase/Portugues.pdf\" target=\"_blank\"",
+     "new": "><a href=\"https://eduqa.pt/wp-content/uploads/2026/07/EX-Port639-F2-2026-V2_net.pdf\" target=\"_blank\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo III (lição): «»",
+     "old": "><a href=\"https://www.examesnacionais.com.pt/exames-nacionais/12ano/2026-2fase/Portugues_Criterios.pdf\" target=\"_blank\"",
+     "new": "><a href=\"https://eduqa.pt/wp-content/uploads/2026/07/EX-Port639-F2-2026-CC-VD_net.pdf\" target=\"_blank\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo III (lição): «cartões: Grupo III do»",
+     "old": " cartões: Grupo III do ",
+     "new": " cartões: Grupo III do ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo III (lição): «Português, Prova 639, 2.ª fase, 2026, versão 2. O enunciado e os critérios de classifica…»",
+     "old": " Português, Prova 639, 2.ª fase, 2026, versão 2. Autor da prova e dos critérios de classificação: IAVE, como indica a página de onde vêm as cópias («documentos oficiais do IAVE»); os PDF de 2026 trazem o logótipo da EduQA, Instituto de Educação, Qualidade e Avaliação, que os publica em eduqa.pt. Cópias públicas: <a href=\"https://www.examesnacionais.com.pt/exames-nacionais/12ano/2026-2fase/Portugues.pdf\" target=\"_blank\" rel=\"noopener\">enunciado (PDF)</a> e <a href=\"https://www.examesnacionais.com.pt/exames-nacionais/12ano/2026-2fase/Portugues_Criterios.pdf\" target=\"_blank\" rel=\"noopener\">critérios (PDF)</a>, em examesnacionais.com.pt. Originais em eduqa.pt: <a href=\"https://eduqa.pt/wp-content/uploads/2026/07/EX-Port639-F2-2026-V2_net.pdf\" target=\"_blank\" rel=\"noopener\">enunciado da versão 2 (PDF)</a> e <a href=\"https://eduqa.pt/wp-content/uploads/2026/07/EX-Port639-F2-2026-CC-VD_net.pdf\" target=\"_blank\" rel=\"noopener\">critérios (PDF)</a>. A cópia pública dos critérios tem a marca de água «VERSÃO DE TRABALHO»; o texto é igual ao dos critérios publicados em eduqa.pt (conferido a 30/10/2026).  ",
+     "new": " Português, Prova 639, 2.ª fase, 2026, versão 2. O enunciado e os critérios de classificação trazem, na p. 1, o logótipo da EduQA, Instituto de Educação, Qualidade e Avaliação, que os publica em eduqa.pt. Documentos em eduqa.pt: <a href=\"https://eduqa.pt/wp-content/uploads/2026/07/EX-Port639-F2-2026-V2_net.pdf\" target=\"_blank\" rel=\"noopener\">enunciado da versão 2 (PDF)</a> e <a href=\"https://eduqa.pt/wp-content/uploads/2026/07/EX-Port639-F2-2026-CC-VD_net.pdf\" target=\"_blank\" rel=\"noopener\">critérios de classificação (PDF)</a>.  ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo III (lição): «\"Grupo III:»",
+     "old": "\"Grupo III: ",
+     "new": "\"Grupo III: ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo III (lição): «(os PDF trazem o logótipo da EduQA, Instituto de Educação, Qualidade e Avaliação)»",
+     "old": " (IAVE; os PDF de 2026 trazem o logótipo da EduQA, Instituto de Educação, Qualidade e Avaliação)",
+     "new": " (os PDF trazem o logótipo da EduQA, Instituto de Educação, Qualidade e Avaliação)",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo III (lição): «prova\", \"titulo\": \"Grupo III ✱\", \"html\": \"»",
+     "old": " prova\", \"titulo\": \"Grupo III ✱\", \"html\": \"",
+     "new": " prova\", \"titulo\": \"Grupo III ✱\", \"html\": \"",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo III (lição): «2026 (PDF com o logótipo da EduQA):»",
+     "old": " 2026 (IAVE; PDF com o logótipo da EduQA): ",
+     "new": " 2026 (PDF com o logótipo da EduQA): ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo III (lição): «caderno\", \"titulo\": \"Grupo III ✱\", \"html\": \"»",
+     "old": " caderno\", \"titulo\": \"Grupo III ✱\", \"html\": \"",
+     "new": " caderno\", \"titulo\": \"Grupo III ✱\", \"html\": \"",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo III (lição): «10: com partes proporcionadas, parágrafos marcados, «mecanismos de articulação interfrás…»",
+     "old": "<li><b>10:<\\/b> com partes proporcionadas, parágrafos marcados, conectores, retomas sem repetições e pessoa e tempo coerentes.<\\/li>",
+     "new": "<li><b>10:<\\/b> com partes proporcionadas, parágrafos marcados, «mecanismos de articulação interfrásica», retomas sem repetições e pessoa e tempo coerentes.<\\/li>",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo III (lição): «2.ª fase, 2026 (PDF com o logótipo da EduQA), critérios gerais,»",
+     "old": " 2.ª fase, 2026 (IAVE; PDF com o logótipo da EduQA), critérios gerais, ",
+     "new": " 2.ª fase, 2026 (PDF com o logótipo da EduQA), critérios gerais, ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo III (lição): «Marquei os parágrafos, com partes proporcionadas e articuladas entre si, e usei «mecanis…»",
+     "old": ">Marquei os parágrafos, com partes proporcionadas e ligadas por conectores?<\\/td>",
+     "new": ">Marquei os parágrafos, com partes proporcionadas e articuladas entre si, e usei «mecanismos de articulação interfrásica»?<\\/td>",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo III (lição): «A forma também conta. Partes proporcionadas, parágrafos marcados, «mecanismos de articul…»",
+     "old": "<li><b>A forma também conta.<\\/b> Parágrafos proporcionados, conectores pela relação certa, retomas sem repetição, pessoa e tempo verbal coerentes.<\\/li>",
+     "new": "<li><b>A forma também conta.<\\/b> Partes proporcionadas, parágrafos marcados, «mecanismos de articulação interfrásica» usados com adequação, retomas sem repetição, pessoa e tempo verbal coerentes.<\\/li>",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo III (lição): «Nas duas provas de 2026, o Grupo III vale 44 pontos, conta sempre para a classificação e…»",
+     "old": "<p>Nas oito provas de 2023 a 2026 (1.ª e 2.ª fases), o Grupo III vale sempre 44 pontos, conta sempre e pede sempre um texto «bem estruturado» de 200 a 350 palavras, classificado nos parâmetros A, B e C e na correção linguística. Em cinco provas, o género é o texto de opinião (1.ª fase de 2023, 2024 e 2025; 2.ª fase de 2024 e de 2026), sempre com o ponto de vista, dois argumentos, cada um com um exemplo significativo, e um discurso valorativo; em três, a apreciação crítica de uma imagem.<\\/p>",
+     "new": "<p>Nas duas provas de 2026, o Grupo III vale 44 pontos, conta sempre para a classificação e pede um texto «bem estruturado» de 200 a 350 palavras, classificado nos parâmetros A, B e C e na correção linguística. Na 2.ª fase, o género é o texto de opinião, com o ponto de vista, dois argumentos, cada um com um exemplo significativo, e um discurso valorativo; na 1.ª fase, a apreciação crítica de uma imagem.<\\/p>",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo III (lição): «2.ª fase, 2026 (PDF com o logótipo da EduQA), critérios gerais»",
+     "old": " 2.ª fase, 2026 (IAVE; PDF com o logótipo da EduQA), critérios gerais ",
+     "new": " 2.ª fase, 2026 (PDF com o logótipo da EduQA), critérios gerais ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo III (lição): «← Grupo II»",
+     "old": ">← Grupo II</a>",
+     "new": ">← Grupo II</a>",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo III (lição): «M7-⁠F10:»",
+     "old": ">M7-F10: ",
+     "new": ">M7-⁠F10: ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo III (lição): «M5-⁠F13:»",
+     "old": ">M5-F13: ",
+     "new": ">M5-⁠F13: ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo III (lição): «M4-⁠F15:»",
+     "old": ">M4-F15: ",
+     "new": ">M4-⁠F15: ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo III (lição): «M5-⁠F07:»",
+     "old": ">M5-F07: ",
+     "new": ">M5-⁠F07: ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo III (lição): «Sessão 24:»",
+     "old": ">Sessão 24: ",
+     "new": ">Sessão 24: ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, Prova 639, 2.ª fase, 2026, Grupo III (lição): «Sessão 22:»",
+     "old": ">Sessão 22: ",
+     "new": ">Sessão 22: ",
+     "occurrences": 1
+    }
+   ]
+  },
+  "exame/provas/index.html": {
+   "base_sha256_lf": "bc6b475acf65dd8f7c1a943cb2a3f34fdbb075858a1cd0704f16ba309554e8dc",
+   "after_sha256_lf": "d43554271879797d7ea2b7e7fe3935d88388f7fbb4365c704c744f634b4744ac",
+   "edits": [
+    {
+     "location": "Provas em cartões, a secção (exame/provas/index.html): «Prova 639, 12.º ano,»",
+     "old": ">Prova 639, 12.º ano, ",
+     "new": ">Prova 639, 12.º ano, ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, a secção (exame/provas/index.html): «2.ª fase Exame Final Nacional de Português, Prova 639 Versão 2 da prova. Na prova, 120 m…»",
+     "old": " 2.ª fase</span> Exame Final Nacional de Português, Prova 639</h2><p class=\"pv-sobre\">Versão 2 da prova. Na prova, 120 minutos, mais 30 de tolerância, para os três grupos; 200 pontos. Começa por qualquer grupo: cada um é ",
+     "new": " 2.ª fase</span> Exame Final Nacional de Português, Prova 639</h2><p class=\"pv-sobre\">Versão 2 da prova. Na prova, 120 minutos, mais 30 de tolerância, para os três grupos; 200 pontos. Começa por qualquer grupo: cada um é ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, a secção (exame/provas/index.html): «Grupo I»",
+     "old": "\"pv-2026-2f-g1-n\">Grupo I</span><",
+     "new": "\"pv-2026-2f-g1-n\">Grupo I</span><",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, a secção (exame/provas/index.html): «desmontar os itens de resposta escrita do Grupo I: o que pede o verbo, que versos»",
+     "old": " desmontar os itens de resposta escrita do Grupo I: o que pede o verbo, que versos ",
+     "new": " desmontar os itens de resposta escrita do Grupo I: o que pede o verbo, que versos ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, a secção (exame/provas/index.html): «Por fazer Abrir o Grupo I →»",
+     "old": "\"pv-2026-2f-g1-e\" data-estado>Por fazer</span></p><span class=\"pv-abrir\">Abrir o Grupo I →</span></a></li>\n<li class=\"pv-grupo\"><a href=\"",
+     "new": "\"pv-2026-2f-g1-e\" data-estado>Por fazer</span></p><span class=\"pv-abrir\">Abrir o Grupo I →</span></a></li>\n<li class=\"pv-grupo\"><a href=\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, a secção (exame/provas/index.html): «Grupo II»",
+     "old": "\"pv-2026-2f-g2-n\">Grupo II</span><",
+     "new": "\"pv-2026-2f-g2-n\">Grupo II</span><",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, a secção (exame/provas/index.html): «Por fazer Abrir o Grupo II →»",
+     "old": "\"pv-2026-2f-g2-e\" data-estado>Por fazer</span></p><span class=\"pv-abrir\">Abrir o Grupo II →</span></a></li>\n<li class=\"pv-grupo\"><a href=\"",
+     "new": "\"pv-2026-2f-g2-e\" data-estado>Por fazer</span></p><span class=\"pv-abrir\">Abrir o Grupo II →</span></a></li>\n<li class=\"pv-grupo\"><a href=\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, a secção (exame/provas/index.html): «Grupo III»",
+     "old": "\"pv-2026-2f-g3-n\">Grupo III</span><",
+     "new": "\"pv-2026-2f-g3-n\">Grupo III</span><",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, a secção (exame/provas/index.html): «200 a 350 palavras,»",
+     "old": " 200 a 350 palavras, ",
+     "new": " 200 a 350 palavras, ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, a secção (exame/provas/index.html): «Por fazer Abrir o Grupo III →»",
+     "old": "\"pv-2026-2f-g3-e\" data-estado>Por fazer</span></p><span class=\"pv-abrir\">Abrir o Grupo III →</span></a></li>\n</ol>\n<p class=\"pv-fonte\">",
+     "new": "\"pv-2026-2f-g3-e\" data-estado>Por fazer</span></p><span class=\"pv-abrir\">Abrir o Grupo III →</span></a></li>\n</ol>\n<p class=\"pv-fonte\">",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, a secção (exame/provas/index.html): «Prova 639, 2.ª fase, 2026, versão 2, e»",
+     "old": " Prova 639, 2.ª fase, 2026, versão 2, e ",
+     "new": " Prova 639, 2.ª fase, 2026, versão 2, e ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, a secção (exame/provas/index.html): «Enunciado e critérios de classificação com o logótipo da EduQA, Instituto de Educação, Q…»",
+     "old": " Autor: IAVE, como indica a página de onde vêm as cópias; os PDF de 2026 trazem o logótipo da EduQA, Instituto de Educação, Qualidade e Avaliação, que os publica em eduqa.pt. Cópias públicas: <a href=\"https://www.examesnacionais.com.pt/exames-nacionais/12ano/2026-2fase/Portugues.pdf\" target=\"_blank\" rel=\"noopener\">enunciado (PDF)</a> e <a href=\"https://www.examesnacionais.com.pt/exames-nacionais/12ano/2026-2fase/Portugues_Criterios.pdf\" target=\"_blank\" rel=\"noopener\">critérios (PDF)</a>. Originais: <a href=\"https://eduqa.pt/wp-content/uploads/2026/07/EX-Port639-F2-2026-V2_net.pdf\" target=\"_blank\" rel=\"noopener\">enunciado da versão 2 (PDF)</a> e <a href=\"https://eduqa.pt/wp-content/uploads/2026/07/EX-Port639-F2-2026-CC-VD_net.pdf\" target=\"_blank\" rel=\"noopener\">critérios (PDF)</a>.",
+     "new": " Enunciado e critérios de classificação com o logótipo da EduQA, Instituto de Educação, Qualidade e Avaliação (p. 1), publicados em eduqa.pt. Documentos em eduqa.pt: <a href=\"https://eduqa.pt/wp-content/uploads/2026/07/EX-Port639-F2-2026-V2_net.pdf\" target=\"_blank\" rel=\"noopener\">enunciado da versão 2 (PDF)</a> e <a href=\"https://eduqa.pt/wp-content/uploads/2026/07/EX-Port639-F2-2026-CC-VD_net.pdf\" target=\"_blank\" rel=\"noopener\">critérios de classificação (PDF)</a>.",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, a secção (exame/provas/index.html): «1.ª fase Exame Final Nacional de Português, Prova 639 Versão 2 da prova. Na prova, 120 m…»",
+     "old": " 1.ª fase</span> Exame Final Nacional de Português, Prova 639</h2><p class=\"pv-sobre\">Versão 2 da prova. Na prova, 120 minutos, mais 30 de tolerância, para os três grupos; 200 pontos. Começa por qualquer grupo: cada um é ",
+     "new": " 1.ª fase</span> Exame Final Nacional de Português, Prova 639</h2><p class=\"pv-sobre\">Versão 2 da prova. Na prova, 120 minutos, mais 30 de tolerância, para os três grupos; 200 pontos. Começa por qualquer grupo: cada um é ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, a secção (exame/provas/index.html): «Grupo I»",
+     "old": "\"pv-2026-1f-g1-n\">Grupo I</span><",
+     "new": "\"pv-2026-1f-g1-n\">Grupo I</span><",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, a secção (exame/provas/index.html): «desmontar os itens de resposta escrita do Grupo I: o que pede o verbo, que linhas»",
+     "old": " desmontar os itens de resposta escrita do Grupo I: o que pede o verbo, que linhas ",
+     "new": " desmontar os itens de resposta escrita do Grupo I: o que pede o verbo, que linhas ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, a secção (exame/provas/index.html): «Por fazer Abrir o Grupo I →»",
+     "old": "\"pv-2026-1f-g1-e\" data-estado>Por fazer</span></p><span class=\"pv-abrir\">Abrir o Grupo I →</span></a></li>\n<li class=\"pv-grupo\"><a href=\"",
+     "new": "\"pv-2026-1f-g1-e\" data-estado>Por fazer</span></p><span class=\"pv-abrir\">Abrir o Grupo I →</span></a></li>\n<li class=\"pv-grupo\"><a href=\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, a secção (exame/provas/index.html): «Grupo II»",
+     "old": "\"pv-2026-1f-g2-n\">Grupo II</span><",
+     "new": "\"pv-2026-1f-g2-n\">Grupo II</span><",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, a secção (exame/provas/index.html): «Por fazer Abrir o Grupo II →»",
+     "old": "\"pv-2026-1f-g2-e\" data-estado>Por fazer</span></p><span class=\"pv-abrir\">Abrir o Grupo II →</span></a></li>\n<li class=\"pv-grupo\"><a href=\"",
+     "new": "\"pv-2026-1f-g2-e\" data-estado>Por fazer</span></p><span class=\"pv-abrir\">Abrir o Grupo II →</span></a></li>\n<li class=\"pv-grupo\"><a href=\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, a secção (exame/provas/index.html): «Grupo III»",
+     "old": "\"pv-2026-1f-g3-n\">Grupo III</span><",
+     "new": "\"pv-2026-1f-g3-n\">Grupo III</span><",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, a secção (exame/provas/index.html): «200 a 350 palavras.»",
+     "old": " 200 a 350 palavras.<",
+     "new": " 200 a 350 palavras.<",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, a secção (exame/provas/index.html): «Por fazer Abrir o Grupo III →»",
+     "old": "\"pv-2026-1f-g3-e\" data-estado>Por fazer</span></p><span class=\"pv-abrir\">Abrir o Grupo III →</span></a></li>\n</ol>\n<p class=\"pv-fonte\">",
+     "new": "\"pv-2026-1f-g3-e\" data-estado>Por fazer</span></p><span class=\"pv-abrir\">Abrir o Grupo III →</span></a></li>\n</ol>\n<p class=\"pv-fonte\">",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, a secção (exame/provas/index.html): «Prova 639, 1.ª fase, 2026, versão 2, e»",
+     "old": " Prova 639, 1.ª fase, 2026, versão 2, e ",
+     "new": " Prova 639, 1.ª fase, 2026, versão 2, e ",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, a secção (exame/provas/index.html): «Enunciado e critérios de classificação com o logótipo da EduQA, Instituto de Educação, Q…»",
+     "old": " Autor: IAVE, como indica a página de onde vêm as cópias; os PDF de 2026 trazem o logótipo da EduQA, Instituto de Educação, Qualidade e Avaliação, que os publica em eduqa.pt. Cópias públicas: <a href=\"https://www.examesnacionais.com.pt/exames-nacionais/12ano/2026-1fase/Portugues.pdf\" target=\"_blank\" rel=\"noopener\">enunciado (PDF)</a> e <a href=\"https://www.examesnacionais.com.pt/exames-nacionais/12ano/2026-1fase/Portugues_Criterios.pdf\" target=\"_blank\" rel=\"noopener\">critérios (PDF)</a>. Originais: <a href=\"https://eduqa.pt/wp-content/uploads/2026/06/portugues_prova_639_v2_enunciado.pdf\" target=\"_blank\" rel=\"noopener\">enunciado da versão 2 (PDF)</a> e <a href=\"https://eduqa.pt/wp-content/uploads/2026/07/portugues_prova_639_cc.pdf\" target=\"_blank\" rel=\"noopener\">critérios (PDF)</a>.",
+     "new": " Enunciado e critérios de classificação com o logótipo da EduQA, Instituto de Educação, Qualidade e Avaliação (p. 1), publicados em eduqa.pt. Documentos em eduqa.pt: <a href=\"https://eduqa.pt/wp-content/uploads/2026/06/portugues_prova_639_v2_enunciado.pdf\" target=\"_blank\" rel=\"noopener\">enunciado da versão 2 (PDF)</a> e <a href=\"https://eduqa.pt/wp-content/uploads/2026/07/portugues_prova_639_cc.pdf\" target=\"_blank\" rel=\"noopener\">critérios de classificação (PDF)</a>.",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, a secção (exame/provas/index.html): «2025, 1.ª e 2.ª fases Em preparação.»",
+     "old": ">2025, 1.ª e 2.ª fases</b>Em preparação.<",
+     "new": ">2025, 1.ª e 2.ª fases</b>Em preparação.<",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, a secção (exame/provas/index.html): «2024, 1.ª e 2.ª fases Em preparação.»",
+     "old": ">2024, 1.ª e 2.ª fases</b>Em preparação.<",
+     "new": ">2024, 1.ª e 2.ª fases</b>Em preparação.<",
+     "occurrences": 1
+    },
+    {
+     "location": "Provas em cartões, a secção (exame/provas/index.html): «2023, 1.ª e 2.ª fases Em preparação.»",
+     "old": ">2023, 1.ª e 2.ª fases</b>Em preparação.<",
+     "new": ">2023, 1.ª e 2.ª fases</b>Em preparação.<",
+     "occurrences": 1
+    }
+   ]
+  }
+ }
+}

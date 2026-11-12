@@ -754,9 +754,20 @@ def ler(rel):
     return (ROOT / rel).read_bytes().decode('utf-8')
 
 
+# 12/11/2026: por cima desta camada ficam as provas em cartões com os documentos oficiais (exame_provas_oficial_20261112), que muda
+# as seis lições das provas, os seus dados (os grupo-x.json que esta camada também muda, e prova.json e seccao.json, que esta
+# camada lê para gerar as páginas) e a secção exame/provas/index.html.
+PROVAS_OFICIAL = ROOT / 'tests/fixtures/exame-provas-oficial-edits-20261112.json'
+
+
 def base(rel):
     """O texto do ficheiro sem esta camada (desfeita pelo manifesto, da última troca para a primeira)."""
     texto = ler(rel)
+    # 12/11/2026: primeiro desfaz-se a camada de cima (as provas em cartões com os documentos oficiais), com contagem estrita.
+    for edit in reversed(json.loads(PROVAS_OFICIAL.read_text('utf-8'))['files'].get(rel, {}).get('edits', [])):
+        if texto.count(edit['new']) != edit['occurrences']:
+            raise SystemExit(f'{rel}: a camada das provas em cartões com os documentos oficiais já não confere ({edit["location"]})')
+        texto = texto.replace(edit['new'], edit['old'])
     if MANIFESTO.is_file():
         for edit in reversed(json.loads(MANIFESTO.read_text('utf-8'))['files'].get(rel, {}).get('edits', [])):
             if texto.count(edit['new']) != edit['occurrences']:

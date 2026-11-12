@@ -366,7 +366,22 @@ _CUIDADO_EXAME_1112 = json.loads((ROOT/'tests/fixtures/cuidado-exame-edits-20261
 # decisão 152 no Exame e nas páginas transversais: desfaz-se antes dela, com contagem estrita. Só toca em exame/index.html.
 _EXAME_LIGACAO_TREINOS_1112 = json.loads((ROOT/'tests/fixtures/exame-ligacao-treinos-edits-20261112.json').read_text('utf-8'))['files']
 
+# 12/11/2026: as provas em cartões com os documentos oficiais (a secção exame/provas/, as seis lições das provas de 2026 e os seus
+# dados), camada mais recente, por cima da ligação «Treinos» na página principal do Exame e da decisão 152 no Exame e nas páginas
+# transversais (com a qual partilha as seis lições e os seis grupo-x.json): desfaz-se antes delas, com contagem estrita.
+_EXAME_PROVAS_OFICIAL_1112 = json.loads((ROOT/'tests/fixtures/exame-provas-oficial-edits-20261112.json').read_text('utf-8'))['files']
+
+def undo_exame_provas_oficial_1112(path, text):
+    for edit in reversed(_EXAME_PROVAS_OFICIAL_1112.get(_relative(path), {}).get('edits', [])):
+        if text.count(edit['new']) != edit['occurrences']:
+            raise AssertionError(f"Provas em cartões com os documentos oficiais não confere: {path}: {edit['location']}")
+        text = text.replace(edit['new'], edit['old'])
+    return text
+
+
 def undo_exame_ligacao_treinos_1112(path, text):
+    # 12/11/2026: primeiro as provas em cartões com os documentos oficiais, que estão por cima.
+    text = undo_exame_provas_oficial_1112(path, text)
     for edit in reversed(_EXAME_LIGACAO_TREINOS_1112.get(_relative(path), {}).get('edits', [])):
         if text.count(edit['new']) != edit['occurrences']:
             raise AssertionError(f"Ligação «Treinos» na página principal do Exame não confere: {path}: {edit['location']}")
