@@ -227,6 +227,9 @@ jobs:
     timeout-minutes: 40
     steps:
       - uses: actions/checkout@v4
+        # 13/11/2026: o teste das tarefas do M7 compara a árvore com o main de partida (git show), por isso precisa do histórico.
+        with:
+          fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
