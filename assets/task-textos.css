@@ -263,3 +263,19 @@ main.task-page.task-choice-page[data-task-facil] :is(p,li,td,th,dd,figcaption,la
  [data-task-facil] .tt-texto.tt-longo>h3{break-after:avoid}
  [data-task-facil] .tt-texto.tt-longo .tt-fonte{break-before:avoid}
 }
+
+/* 13/11/2026: o M6 no mesmo molde (camada tarefas_faceis_m6_20261113; versão facil-10, pedida só pela m6-u1 e pela m6-u2). Só regras
+   para classes que as páginas do M3, do M1 e do M5 não têm: o que as lições não dão num texto em verso (.tt-falta: o verso que falta
+   em «A um poeta» e os cortes de «Ao Gás», marcados com «[…]») e uma parte longa de um poema (.tt-pagina: 44 versos de «O Sentimento
+   dum Ocidental»), que em papel sai inteira numa só página, com o vocabulário, em letra um pouco mais pequena. */
+[data-task-facil] .tt-falta .tt-l{color:var(--suave);font-family:Arial,Helvetica,sans-serif;font-size:.9em}
+@media print{
+ [data-task-facil] .tt-texto.tt-pagina{padding:4pt 10pt}
+ [data-task-facil] .tt-texto.tt-pagina>h3{margin-bottom:4pt;font-size:10.5pt}
+ [data-task-facil] .tt-texto.tt-pagina .tt-versos,[data-task-facil] .task-theme .tt-texto.tt-pagina .tt-versos{font-size:10pt;line-height:1.2}
+ [data-task-facil] .tt-texto.tt-pagina .tt-estrofe{margin-bottom:3pt}
+ [data-task-facil] .tt-texto.tt-pagina .tt-gloss{margin-top:2pt;padding-top:3pt;font-size:8.5pt;line-height:1.2}
+ [data-task-facil] .tt-texto.tt-pagina .tt-gloss ul{columns:4 8rem;column-gap:14pt}
+ [data-task-facil] .tt-texto.tt-pagina .tt-gloss li{margin-bottom:1pt}
+ [data-task-facil] .tt-texto.tt-pagina .tt-fonte{margin-top:2pt;font-size:8pt}
+}

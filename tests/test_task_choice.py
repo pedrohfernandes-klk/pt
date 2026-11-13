@@ -50,7 +50,9 @@ from auditoria_20261028 import undo_tarefas_faceis_m3_1112  # noqa: E402
 # 13/11/2026: as duas tarefas do M5 passam ao mesmo molde (camada tarefas_faceis_m5_20261113, por cima das do M1 e do M3; a
 # auditoria desfaz as três pela ordem): conferem-se aqui da mesma maneira, na página como estava por baixo, e a página nova tem o
 # seu contrato em tests/test_tarefas_faceis_m5.py.
-FACEIS = ('m1-u1', 'm1-u2', 'm3-u1', 'm3-u2', 'm5-u1', 'm5-u2')
+# 13/11/2026: o mesmo nas duas tarefas do M6 (camada tarefas_faceis_m6_20261113; o contrato do molde novo confere-se em
+# tests/test_tarefas_faceis_m6.py).
+FACEIS = ('m1-u1', 'm1-u2', 'm3-u1', 'm3-u2', 'm5-u1', 'm5-u2', 'm6-u1', 'm6-u2')
 
 
 def molde_de_2810(path):

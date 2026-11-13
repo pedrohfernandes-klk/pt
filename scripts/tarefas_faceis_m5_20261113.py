@@ -214,7 +214,17 @@ EDICOES += [(f, antes + sai + depois, antes + depois, 1, cs) for f, antes, sai, 
 
 
 def ler(rel):
-    return (ROOT / rel).read_bytes().decode('utf-8')
+    # 13/11/2026: por cima desta camada fica a das tarefas do M6 mais fáceis de fazer (tarefas_faceis_m6_20261113), que também muda
+    # os dados das grelhas: desfaz-se primeiro, com contagem estrita, quando o ficheiro a traz (a «árvore» desta camada é o
+    # ficheiro como ela o deixou).
+    texto = (ROOT / rel).read_bytes().decode('utf-8')
+    m6 = ROOT / 'tests/fixtures/tarefas-faceis-m6-edits-20261113.json'
+    if m6.is_file():
+        for e in reversed(json.loads(m6.read_text('utf-8'))['files'].get(rel, {}).get('edits', [])):
+            if texto.count(e['new']) != e['occurrences']:
+                raise SystemExit(f'{rel}: as tarefas do M6 mais fáceis de fazer já não conferem ({e["location"]})')
+            texto = texto.replace(e['new'], e['old'])
+    return texto
 
 
 DO_COMMIT = False  # com --base-do-commit: a base lê-se do commit de base (para refazer a camada depois de mudar as páginas)

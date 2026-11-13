@@ -83,7 +83,7 @@
    "t": "ler",
    "rot": "Abre",
    "titulo": "Para que serve um ideal?",
-   "html": "<p class=\"abre\"><b>Dois sonetos de Antero lado a lado, um verso de Cesário por dentro e um texto teu.</b> Este aquecimento não faz a tarefa: treina a forma do soneto, a voz, os recursos, as orações e a ligação entre imagem e verso com passagens que a tarefa não pede e com casos inventados.</p><div class=\"caixa\"><h3>A tarefa de hoje</h3><p>À mão, 200 a 240 palavras.</p><p><b>Núcleo.</b> «Ideal» e «A um poeta», de Antero, lado a lado; e um verso de «Ave-Marias», dividido em orações.</p><p><b>Tema A.</b> Um ideal de hoje: «O Palacio da Ventura» reescrito em prosa.</p><p><b>Tema B.</b> «O Palacio da Ventura» num vídeo de um minuto.</p></div><p>Dez minutos, com consulta. Não conta para a nota.</p>"
+   "html": "<p class=\"abre\"><b>Dois sonetos de Antero lado a lado, um verso de Cesário por dentro e um texto teu.</b> Este aquecimento não faz a tarefa: treina a forma do soneto, a voz, os recursos, as orações e a ligação entre imagem e verso com passagens que a tarefa não pede e com casos inventados.</p><div class=\"caixa\"><h3>A tarefa de hoje</h3><p>À mão, 200 a 240 palavras.</p><p><b>Perguntas 1 e 2.</b> «Ideal» e «A um poeta», de Antero, lado a lado; e um verso de «Ave-Marias», dividido em orações.</p><p><b>Tema A.</b> Um ideal de hoje: «O Palacio da Ventura» recontado em prosa.</p><p><b>Tema B.</b> «O Palacio da Ventura» num vídeo de um minuto.</p></div><p>Dez minutos, com consulta. Não conta para a nota.</p>"
   },
   {
    "t": "vf",
@@ -262,20 +262,20 @@
    "p": "Põe por ordem a produção e a entrega.",
    "p2": "Cada passo usa o anterior. Do primeiro ao último: ordena.",
    "passos": [
-    "Lês o enunciado e escreves no topo o tema que escolhes",
-    "Respondes ao núcleo: os dois sonetos e o verso de Cesário",
+    "Lês o enunciado e escreves no topo a letra do teu tema",
+    "Respondes às duas perguntas: os dois sonetos e o verso de Cesário",
     "Escreves o tema, com o verso citado e a explicação",
     "Relês, corriges e contas as palavras: 200 a 240",
     "Escreves as duas linhas finais e entregas as fotografias no Teams"
    ],
-   "f": "O tema fica escrito no topo; o núcleo vem primeiro, porque é para todos; a contagem faz-se no texto escrito; as duas linhas fecham, fora da contagem.",
+   "f": "A letra do tema fica escrita no topo; as duas perguntas vêm primeiro, porque são para todos; a contagem faz-se no texto escrito; as duas linhas fecham, fora da contagem.",
    "fe": "Não contas palavras de um texto que ainda não existe, e as duas linhas são as últimas, depois da revisão."
   },
   {
    "t": "ler",
    "rot": "Para levar",
    "escuro": true,
-   "html": "<p class=\"levar\">Antes de escrever, três perguntas a cada passagem: quem fala, a quem, e o que faz a forma.</p><p>Agora, na tarefa: a voz e o sonho de cada soneto, com um verso dos tercetos; uma semelhança e o que muda; as orações do verso de Cesário e o papel de «que»; e o teu tema, A ou B.</p>"
+   "html": "<p class=\"levar\">Antes de escrever, três perguntas a cada passagem: quem fala, a quem, e o que faz a forma.</p><p>Agora, na tarefa: a quem se dirige a voz e para que serve o sonho em cada soneto, com um verso dos tercetos; uma semelhança e uma diferença; as orações do verso de Cesário e a função de «que»; e o teu tema, A ou B.</p>"
   }
  ]
 }

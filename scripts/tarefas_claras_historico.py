@@ -39,6 +39,11 @@ TAREFAS_FACEIS_M1 = json.loads((ROOT / 'tests/fixtures/tarefas-faceis-m1-edits-2
 # os dados e o enunciado da M3-U2 (que a camada do M3 também muda). Pela mesma regra: quando o texto recebido é o ficheiro como essa
 # camada o deixou (o hash «after» do seu manifesto), desfaz-se primeiro, com contagem estrita, e só depois as do M1, do M3 e as outras.
 TAREFAS_FACEIS_M5 = json.loads((ROOT / 'tests/fixtures/tarefas-faceis-m5-edits-20261113.json').read_text('utf-8'))['files']
+# 13/11/2026: as duas tarefas do M6 «mais fáceis de fazer» (tarefas_faceis_m6_20261113) ficam por cima de todas, também das do M5, e
+# mudam os enunciados e os dados da M6-U1 e da M6-U2 e os dados das grelhas (que as camadas do M5, do M1 e do M3 também mudam). Pela
+# mesma regra: quando o texto recebido é o ficheiro como essa camada o deixou (o hash «after» do seu manifesto), desfaz-se primeiro,
+# com contagem estrita, e só depois as do M5, do M1, do M3 e as outras.
+TAREFAS_FACEIS_M6 = json.loads((ROOT / 'tests/fixtures/tarefas-faceis-m6-edits-20261113.json').read_text('utf-8'))['files']
 def _sha_lf(text):
     return hashlib.sha256(text.replace('\r\n', '\n').encode()).hexdigest()
 def desfazer_faceis(path, text):
@@ -47,7 +52,13 @@ def desfazer_faceis(path, text):
     página como ela a deixou."""
     p = Path(path)
     rel = p.relative_to(ROOT).as_posix() if p.is_absolute() else p.as_posix()
-    # 13/11/2026: primeiro a camada do M5, que está por cima das do M1 e do M3 (em qualquer dos seus 20 ficheiros).
+    # 13/11/2026: primeiro a camada do M6, que está por cima das do M5, do M1 e do M3 (em qualquer dos seus 17 ficheiros).
+    por_cima = TAREFAS_FACEIS_M6.get(rel)
+    if por_cima and _sha_lf(text) == por_cima['after_sha256_lf']:
+        for edit in reversed(por_cima['edits']):
+            assert text.count(edit['new']) == edit['occurrences'], f'Tarefas do M6 mais fáceis de fazer não confere: {rel}'
+            text = text.replace(edit['new'], edit['old'])
+    # 13/11/2026: depois a camada do M5, que está por cima das do M1 e do M3 (em qualquer dos seus 20 ficheiros).
     por_cima = TAREFAS_FACEIS_M5.get(rel)
     if por_cima and _sha_lf(text) == por_cima['after_sha256_lf']:
         for edit in reversed(por_cima['edits']):

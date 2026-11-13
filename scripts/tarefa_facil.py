@@ -53,6 +53,13 @@ opcionais; as páginas sem elas (as do M3 e as do M1) saem iguais, byte a byte:
     transcreve, as palavras estrangeiras de Eça); tirados os itálicos, é o texto de «t», letra a letra;
   * num texto em prosa, «longo»: o texto pode passar de uma página em papel (parte-se só entre parágrafos, nunca dentro de um);
   * «nao_partir_dossie»: nos factos do dossiê (que vêm da chave antiga, igual à de antes), «1803 a 1805» e «cap. VI» não se partem.
+
+M6 (13/11/2026, camada tarefas_faceis_m6_20261113: a m6-u1 e a m6-u2 no mesmo molde, com sonetos de Antero e as partes de «O Sentimento
+dum Ocidental», de Cesário). Duas chaves novas, opcionais; as páginas sem elas (as do M3, do M1 e do M5) saem iguais, byte a byte:
+  * num texto em verso, um verso pode ser {"falta": "[…]", "conta": n} em vez de uma linha: o que as lições não dão. Com «conta» 1,
+    é um verso que falta e entra na numeração (o v. 13 de «A um poeta»); com «conta» 0, é um corte sem número (as quadras que a lição
+    de «Ao Gás» salta). Nada se copia de fora: a linha de fonte do texto diz o que falta;
+  * num texto em verso, «pagina»: uma parte longa do poema (44 versos) que em papel sai inteira numa só página, em letra mais pequena.
 """
 import re
 from html import escape
@@ -122,6 +129,13 @@ def bloco_texto(t):
             partes.append(f'<p class="tt-rotulo">{e["rotulo"]}</p>')
         versos = []
         for v in e['versos']:
+            if isinstance(v, dict):
+                # 13/11/2026 (M6): o que as lições não dão. Um verso que falta conta para a numeração; um corte não conta.
+                assert set(v) == {'falta', 'conta'} and v['conta'] in (0, 1), (t['id'], v)
+                n += v['conta']
+                versos.append(f'<span class="tt-v tt-falta"><span class="tt-n">{n if v["conta"] and n % passo == 0 else ""}</span>'
+                              f'<span class="tt-l">{escape(v["falta"], quote=False)}</span></span>')
+                continue
             n += 1
             marca = ' tt-esc' if esc and esc['de'] <= n <= esc['ate'] else ''
             versos.append(f'<span class="tt-v{marca}"><span class="tt-n">{n if n % passo == 0 else ""}</span>'
@@ -130,7 +144,7 @@ def bloco_texto(t):
     frase = f'<p class="tt-escolher">{esc["frase"]}</p>' if esc and esc.get('frase') else ''
     gloss = ('<div class="tt-gloss"><p><b>Vocabulário</b></p><ul>'
              + ''.join(f'<li><b>{p}</b>: {s}</li>' for p, s in t['glossario']) + '</ul></div>') if t.get('glossario') else ''
-    return (f'<section class="tt-texto{" tt-curto" if n <= CURTO else ""}" id="{t["id"]}" aria-labelledby="{t["id"]}-titulo">'
+    return (f'<section class="tt-texto{" tt-curto" if n <= CURTO else ""}{" tt-pagina" if t.get("pagina") else ""}" id="{t["id"]}" aria-labelledby="{t["id"]}-titulo">'
             f'<h3 id="{t["id"]}-titulo"><span class="tt-num">{t["rotulo"]}</span> {t["titulo"]}</h3>\n'
             f'{frase}<div class="tt-versos">\n' + '\n'.join(partes) + f'\n</div>\n{gloss}'
             f'<p class="tt-fonte">{t["fonte"]}</p></section>\n')
@@ -207,10 +221,13 @@ def figura(f, raiz):
 
 
 def prender(texto):
-    """13/11/2026 (M5): as referências de um facto do dossiê que não se partem (U+00A0): «1803 a 1805», «cap. VI». Fora das etiquetas."""
+    """13/11/2026 (M5): as referências de um facto do dossiê que não se partem (U+00A0): «1803 a 1805», «cap. VI». Fora das etiquetas.
+    13/11/2026 (M6): também «verso 6» e «parte II» (os dossiês do M5 não têm nenhuma destas: as páginas do M5 saem iguais)."""
     partes = re.split(r'(<[^>]+>)', texto)
     for i in range(0, len(partes), 2):
         partes[i] = re.sub(r'\b(cap\.|capítulo) (?=[IVXLC]+\b)', '\\1\xa0', re.sub(r'(\d) (a|e|ou) (?=\d)', '\\1\xa0\\2\xa0', partes[i]))
+        # 13/11/2026 (M6): e «verso 6» e «parte II», nos factos dos dossiês da m6-u1 e da m6-u2.
+        partes[i] = re.sub(r'\b(versos?|parte) (?=\d|[IVXLC]+\b)', '\\1\xa0', partes[i])
     return ''.join(partes)
 
 
