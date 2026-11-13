@@ -7,7 +7,8 @@ exigem das do M3 e das do M1:
 
 * a tarefa pede o mesmo: os títulos, os nomes e as letras dos temas, os números de palavras, as passagens, as expressões e os
   capítulos que o enunciado de antes citava, cada pedido do enunciado de antes (com as mesmas palavras), o dossiê e a pergunta
-  opcional, e os critérios, níveis, exemplos e pontos da grelha, iguais aos de antes da camada (a base do manifesto, o main e2e73379).
+  opcional, e os critérios, níveis, exemplos e pontos da grelha, iguais aos de antes da camada (a base do manifesto, o main e2e73379),
+  salvo os exemplos que usavam passagens dos textos da tarefa (revisão de 13/11/2026: EXEMPLOS_TROCADOS, conferidos um a um).
   Uma só mudança, decidida pelo docente: o tema B da m5-u2 tem 100 a 150 palavras (o enunciado de antes dizia «100 a 150 no tema»
   em cima e «100 a 130» no tema B);
 * os textos para análise são os das lições do M5, letra a letra, na grafia das lições: cada parágrafo da página é um parágrafo de um
@@ -109,7 +110,9 @@ PROSA = {
               'texto-2': [(F04, 3, (1, 2, 3)), (F04, 7, (4, 5)), (F04, 11, (6, 7, 8)), (F04, 13, (9, 10, 11)), (F04, 17, (12, 13, 14)),
                           (F04, 19, (15, 16, 17)), (F04, 22, (18,))]},
     'm5-u2': {'texto-1': [(F10, 4, (1, 2))], 'texto-2': [(F10, 15, (1, 2, 3))], 'texto-3': [(F11, 3, (1,))],
-              'texto-4': [(F11, 3, (3,)), (F11, 8, (4, 5, 6)), (F11, 10, (7, 8, 9))],
+              # 13/11/2026 (revisão): o Texto 4 começa pela marca «[2] […]» da lição F11, para se ver que as lições saltam uma parte
+              # do capítulo entre o Texto 3 e o Texto 4 (a mesma exigência, com mais um parágrafo conferido contra a lição).
+              'texto-4': [(F11, 3, (2, 3)), (F11, 8, (4, 5, 6)), (F11, 10, (7, 8, 9))],
               'texto-5': [(F13, 3, (1, 2, 3)), (F13, 8, (4, 5, 6)), (F13, 11, (7, 8, 9)), (F13, 14, (10, 11, 12)), (F13, 16, (13,))]},
 }
 PALAVRAS_PROSA = {'m5-u1': {'texto-1': 357, 'texto-2': 685, 'texto-3': 23},
@@ -136,8 +139,68 @@ TITULOS = {
 # O que a página junta à linha de fonte da lição: diz o que as lições não dão (nada se copiou de fora).
 FONTE_MAIS = {
     ('m5-u1', 'texto-1'): ' São os sete parágrafos que as lições dão; a Introdução tem mais um, no fim.',
-    ('m5-u1', 'texto-2'): ' Em [3], as lições saltam uma parte do capítulo.',
-    ('m5-u2', 'texto-4'): ' Vem depois do Texto 3: entre os dois, as lições saltam o parágrafo [2].',
+    # 13/11/2026 (revisão): a lição F04 corta o capítulo IV a meio do parágrafo [2] da edição e em [3]; a lição F11 salta mais do
+    # que um parágrafo da edição em «[2] […]». As linhas de fonte dizem-no assim (antes diziam «Em [3]» e «o parágrafo [2]»).
+    ('m5-u1', 'texto-2'): ' No fim de [2] e em [3], as lições saltam uma parte do capítulo.',
+    ('m5-u2', 'texto-4'): ' Vem depois do Texto 3. Em [2], as lições saltam uma parte do capítulo.',
+}
+# 13/11/2026 (revisão): com os textos inteiros na página, estes exemplos da grelha usavam passagens dos textos da tarefa (o capítulo IV
+# de Amor de Perdição e o balanço final de Os Maias). A regra do docente é «exemplos sempre com outro caso, sem as passagens da
+# tarefa»: passam a usar frases que as lições dão e que não estão nos textos da tarefa. São as únicas diferenças nos textos das duas
+# grelhas, conferidas uma a uma (antes, depois); os critérios, os níveis e os pontos ficam iguais. Nos dados da grelha, «cap. IV»
+# leva espaço que não quebra.
+EXEMPLOS_TROCADOS = {
+    'm5-u1': [
+        ('Em «Teu primo é um composto de todas as virtudes», virtudes é o sujeito, porque é a palavra mais importante.',
+         'Em «Domingos Botelho era extremamente feio», feio é o sujeito, porque é a palavra mais importante.'),
+        ('Em «Teu primo é um composto de todas as virtudes», «Teu primo» é o sujeito e «um composto de todas as virtudes» é predicativo do sujeito.',
+         'Em «Domingos Botelho era extremamente feio», «Domingos Botelho» é o sujeito e «extremamente feio» é predicativo do sujeito.'),
+        ('Em «Teu primo é um composto de todas as virtudes» (cap.\xa0IV), «Teu primo» é o sujeito: responde à pergunta _quem é um composto de todas '
+         'as virtudes?_, e o verbo concorda com ele. A expressão «um composto de todas as virtudes» é predicativo do sujeito: com _ser_, diz como é '
+         'o sujeito, e a frase não se aguenta sem ele. O sujeito é Baltasar e o predicativo é só elogio: Tadeu vende o noivo à filha.',
+         'Em «Domingos Botelho era extremamente feio» (lição F07), «Domingos Botelho» é o sujeito: responde à pergunta _quem era extremamente '
+         'feio?_, e o verbo concorda com ele. A expressão «extremamente feio» é predicativo do sujeito: com _ser_, diz como é o sujeito, e a frase '
+         'não se aguenta sem ele. O predicativo é um juízo sobre a personagem: a frase apresenta-a pelo aspeto, sem a poupar.'),
+        ('A (uma carta inventada de Tadeu à filha, no convento): Teresa, espero que estejas bem.',
+         'A (uma carta inventada da mãe de Simão ao filho): Meu filho, espero que estejas bem.'),
+        ('A: Na casa de meus avós, dia de Natal. Teresa: o teu primo ainda espera por ti. Que Deus te guarde. Teu pai. (As marcas',
+         'A: Em casa, dia de Natal. Meu filho: aqui está tudo como deixaste. Deus te guarde. Tua mãe. (As marcas'),
+        ('A, noutra voz (uma carta inventada de Tadeu à filha, no convento): Na casa de meus avós, dia de Natal. Teresa: perguntas-me se ainda tens '
+         'pai. Tens, e és tu que o recusas. Lembras-te da manhã de domingo em que te chamei para a missa? Já então te disse que «a violencia de um '
+         'pae é sempre amor». A tua teimosia é um muro alto entre nós. Que Deus te dê juízo. Teu pai, Tadeu de Albuquerque. Respeitei o romance: '
+         'Teresa está no convento com que o pai a ameaçou, e ele não se desdiz. A metáfora do muro mostra que Tadeu põe a culpa na filha.',
+         'A, noutra voz (uma carta inventada da mãe de Simão ao filho): Em casa, dia de Natal. Meu filho: hás de perguntar se a tua mãe ainda pensa '
+         'em ti. Pensa, todos os dias. Lembras-te das cartas que te escrevi? Foram tantas, e eu «não recebia resposta». O teu silêncio é uma porta '
+         'fechada. Deus te guarde. Tua mãe. Respeitei o romance: a mãe escrevia a Simão e pensava que o filho não respondia. A metáfora da porta '
+         'fechada mostra que a mãe se sente posta de fora.'),
+        ('Num romance dele, uma filha ameaçada pelo pai responde assim: «Thereza ergueu-se sem lagrimas, e entrou serenamente no seu quarto.» '
+         'Escolhi a frase porque quem visita uma casa entra em quartos.',
+         'Num romance dele, uma rapariga despede-se assim de quem ama: «Simão, adeus até à eternidade!» Escolhi a frase porque quem sai de uma '
+         'casa também se despede.'),
+        # (o exemplo do nível 0 do rigor já não aponta para uma carta que a grelha deixou de mostrar)
+        ('Na carta inventada de Tadeu, Teresa já casou com o primo.', 'Numa carta inventada de Tadeu, Teresa já casou com o primo.'),
+    ],
+    'm5-u2': [
+        ("Em «Então Ega perguntou, do fundo do sofá onde se enterrára, se, n'esses ultimos annos, elle não tivera a idéa», há discurso direto.",
+         'Em «Simão disse que estava ali», há discurso direto.'),
+        ("Em «Então Ega perguntou, do fundo do sofá onde se enterrára, se, n'esses ultimos annos, elle não tivera a idéa», há discurso indireto, "
+         'porque está na terceira pessoa.', 'Em «Simão disse que estava ali», há discurso indireto, porque está na terceira pessoa.'),
+        ("Em «Então Ega perguntou, do fundo do sofá onde se enterrára, se, n'esses ultimos annos, elle não tivera a idéa» (último capítulo), o "
+         'relato é indireto: há um verbo declarativo, _perguntou_, e uma oração subordinada com _se_. Em discurso direto, Ega diria, depois de um '
+         'travessão: _Nestes últimos anos, não tiveste a ideia, o vago desejo de voltar para Portugal?_ Ega fala com Carlos: _elle_ passa a _tu_ e '
+         '_tivera_ passa a _tiveste_.',
+         'Em «Simão disse que estava ali» (um exemplo inventado da lição F12), o relato é indireto: há um verbo declarativo, _disse_, e uma oração '
+         'subordinada com _que_. Em discurso direto, Simão diria, depois de um travessão: _Estou aqui._ Quem fala é o próprio Simão, no momento e '
+         'no lugar da fala: _estava_ passa a _estou_ e _ali_ passa a _aqui_.'),
+        ('(uma cantiga de Mendinho, uma pergunta de Ega, uma cena noutro espaço', '(uma cantiga de Mendinho, uma fala relatada de Simão, uma cena noutro espaço'),
+    ],
+}
+# De onde vem cada citação nova dos exemplos: (lição, citação), letra a letra na lição e fora dos textos da tarefa.
+EXEMPLOS_DAS_LICOES = {
+    'm5-u1': [('m5/licao-m5-f07/index.html', 'Domingos Botelho era extremamente feio'), ('m5/licao-m5-f07/index.html', 'Simão, adeus até à eternidade!'),
+              ('m5/licao-m5-f17/index.html', 'Escrevia a mãe a Simão, e não recebia resposta. Pensava ela que o filho não respondia')],
+    'm5-u2': [('m5/licao-m5-f12/index.html', 'Simão disse que estava ali'), ('m5/licao-m5-f12/index.html', 'Simão diz «Estou aqui»'),
+              ('m1/licao-m1-f02/index.html', "Eu atendendo meu amig', eu a[tendendo]")],
 }
 TROCAS_COMUNS = [
     ['Núcleo comum (duas respostas) e um tema à escolha (A ou B)', 'Duas perguntas e um tema à escolha (A ou B)'],
@@ -367,7 +430,20 @@ class TarefasFaceisM5(unittest.TestCase):
             with self.subTest(grelha=slug):
                 novas = {'autoavaliacao_so_tua', 'trocas_aluno'} if slug in SLUGS else set()
                 self.assertEqual(set(t) - set(base[slug]), novas)
-                self.assertEqual({k: v for k, v in t.items() if k not in novas}, base[slug])
+                # 13/11/2026 (revisão): nas duas grelhas do M5, as únicas diferenças são os exemplos de EXEMPLOS_TROCADOS, cada um uma
+                # vez na base e uma vez agora (a exigência é a mesma: tudo o resto igual à base, letra a letra; as outras grelhas,
+                # iguais sem exceção).
+                esperado = json.dumps(base[slug], ensure_ascii=False)
+                agora_json = json.dumps({k: v for k, v in t.items() if k not in novas}, ensure_ascii=False)
+                for velho, novo in EXEMPLOS_TROCADOS.get(slug, []):
+                    self.assertEqual(esperado.count(json.dumps(velho, ensure_ascii=False)[1:-1]), 1, velho[:60])
+                    self.assertEqual(esperado.count(json.dumps(novo, ensure_ascii=False)[1:-1]), 0, novo[:60])
+                    esperado = esperado.replace(json.dumps(velho, ensure_ascii=False)[1:-1], json.dumps(novo, ensure_ascii=False)[1:-1])
+                    self.assertEqual(agora_json.count(json.dumps(novo, ensure_ascii=False)[1:-1]), 1, novo[:60])
+                self.assertEqual({k: v for k, v in t.items() if k not in novas}, json.loads(esperado))
+                # Os critérios, os pontos e os descritores de cada nível são os da base, sem exceção.
+                self.assertEqual([(c['nome'], c['max'], {k: v[0] for k, v in c['niveis'].items()}, c.get('custa')) for c in t['criterios']],
+                                 [(c['nome'], c['max'], {k: v[0] for k, v in c['niveis'].items()}, c.get('custa')) for c in base[slug]['criterios']])
                 self.assertEqual(sum(c['max'] for c in t['criterios']), 20)
         for slug in SLUGS:
             t = agora[slug]
@@ -424,9 +500,13 @@ class TarefasFaceisM5(unittest.TestCase):
                     junto = ' '.join(x['t'] for x in t['paragrafos'])
                     self.assertEqual(len(palavras(junto)), PALAVRAS_PROSA[slug][t['id']])
                     # Contínuo: nenhum corte, salvo o que a lição F04 tem no capítulo IV («[3] […]»), que a linha de fonte diz.
+                    # 13/11/2026 (revisão): e salvo a marca «[2] […]» da lição F11, com que o Texto 4 da m5-u2 começa.
                     if (slug, t['id']) == ('m5-u1', 'texto-2'):
                         self.assertEqual(junto.count('[…]'), 1)
                         self.assertEqual(t['paragrafos'][2], {'n': '[3]', 't': '[…]', 'partes': ['[…]']})
+                    elif (slug, t['id']) == ('m5-u2', 'texto-4'):
+                        self.assertEqual(junto.count('[…]'), 1)
+                        self.assertEqual(t['paragrafos'][0], {'n': '[2]', 't': '[…]', 'partes': ['[…]']})
                     else:
                         self.assertNotIn('[…]', junto)
                     # O vocabulário e a linha de fonte são os da lição (o cartão que os traz), sem uma palavra a mais.
@@ -460,10 +540,23 @@ class TarefasFaceisM5(unittest.TestCase):
             self.assertNotIn('class="tt-onde"', pagina)
             for fora in ('gutenberg', 'wikisource', 'archive.org', '<figure', '<img ', 'data:image'):
                 self.assertNotIn(fora, pagina)
-        # m5-u1: a Introdução na pergunta 1, o capítulo IV na pergunta 2 (a fala de Tadeu está no parágrafo [18]) e as perguntas de
-        # Teresa só no tema A.
+        # m5-u1: a Introdução e o capítulo IV na pergunta 1, e as perguntas de Teresa só no tema A.
+        # 13/11/2026 (revisão): a pergunta 1 pede uma passagem da Introdução e outra do capítulo IV, por isso os dois textos ficam no
+        # cartão da pergunta 1 (antes, o capítulo IV estava no cartão da pergunta 2 e a ligação levava a outro cartão, sem regresso);
+        # a pergunta 2 só usa a fala de Tadeu (parágrafo [18]), que o próprio pedido cita inteira, e diz onde está o Texto 2.
         f = json.loads(ler(DADOS_TAREFAS[0]))['facil']
-        self.assertEqual([p['textos'] for p in f['perguntas']], [['texto-1'], ['texto-2']])
+        self.assertEqual([p['textos'] for p in f['perguntas']], [['texto-1', 'texto-2'], []])
+        self.assertEqual(solto(f['perguntas'][1]['intro']), 'No <a href="#texto-2">Texto 2</a> (na pergunta 1, parágrafo [18]), Tadeu diz ao sobrinho: '
+                         '«Não te posso dar minha filha, porque já não tenho filha.»')
+        self.assertEqual(solto(f['perguntas'][0]['escolhas'][1]), 'outra do capítulo IV (<a href="#texto-2">Texto 2</a>).')
+        self.assertEqual([solto(x) for x in f['temas'][1]['antes']],
+                         ['A frase do romance pode vir do <a href="#texto-1">Texto 1</a> ou do <a href="#texto-2">Texto 2</a> (os dois na pergunta 1).'])
+        pagina_u1 = ler(ENUNCIADOS[0])
+        cartao_1 = pagina_u1[pagina_u1.index('<section class="task-section tf-pergunta" id="produzir" data-task-card-name="Pergunta 1"'):pagina_u1.index('<section class="task-section tf-pergunta" id="pergunta-2"')]
+        cartao_2 = pagina_u1[pagina_u1.index('<section class="task-section tf-pergunta" id="pergunta-2"'):pagina_u1.index('<section class="task-section tf-tema"')]
+        self.assertEqual(re.findall(r'<section class="tt-texto[^"]*" id="(texto-\d)"', cartao_1), ['texto-1', 'texto-2'])
+        self.assertNotIn('class="tt-texto', cartao_2)
+        self.assertNotIn('na pergunta 2', solto(visivel(pagina_u1)))
         self.assertEqual([t['material'].get('textos', []) for t in f['temas']], [['texto-3'], []])
         self.assertEqual(sorted(todos_os_textos(f)), ['texto-1', 'texto-2', 'texto-3'])
         capitulo = f['textos'][1]['paragrafos']
@@ -508,7 +601,12 @@ class TarefasFaceisM5(unittest.TestCase):
         self.assertLess(textos['texto-3'].index('supplicou que se não discutisse'), textos['texto-3'].index('Alli todos eram homens'))
         self.assertEqual(textos['texto-5'].count('Falhámos a vida, menino!'), 1)
         self.assertEqual(textos['texto-4'].count('Sole normande'), 1)
-        self.assertEqual([x['n'] for x in f['textos'][3]['paragrafos']], [f'[{k}]' for k in range(3, 10)])
+        # 13/11/2026 (revisão): com a marca «[2] […]» da lição no início.
+        self.assertEqual([x['n'] for x in f['textos'][3]['paragrafos']], [f'[{k}]' for k in range(2, 10)])
+        # 13/11/2026 (revisão): o Texto 5 é só o balanço final, e a página não diz que traz «o resto do último capítulo».
+        self.assertEqual([solto(x) for x in f['temas'][1]['antes']],
+                         ['A frase de Ega e o passo do último capítulo em que ela aparece estão no <a href="#texto-5">Texto 5</a>.'])
+        self.assertNotIn('o resto do último capítulo', solto(visivel(ler(ENUNCIADOS[1]))))
         self.assertTrue(textos['texto-1'].startswith('A casa que os Maias vieram habitar em Lisboa, no outono de 1875'))
         self.assertTrue(textos['texto-1'].endswith('E o Ramalhete continuou deshabitado.'))
         # O Texto 2 (o olhar final ao Ramalhete) faz parte do balanço final (Texto 5), como no romance.
@@ -545,13 +643,9 @@ class TarefasFaceisM5(unittest.TestCase):
                 for p in x['paragrafos']:
                     texto = p if isinstance(p, str) else p['t']
                     with self.subTest(tarefa=slug, exemplo=texto[:50]):
+                        # 13/11/2026 (revisão): sem exceções (antes, o exemplo das funções sintáticas usava outra frase do capítulo IV
+                        # e passava com uma exceção para «Baltasar»; agora usa uma frase da lição F07 que não está nos textos).
                         for r in reservadas:
-                            # (uma só exceção, que já estava na página de antes e na grelha: no exemplo das funções sintáticas,
-                            # com outra frase do capítulo IV, «O sujeito é Baltasar» diz quem é «Teu primo»; não é a frase da
-                            # tarefa nem as suas funções)
-                            if r == 'Baltasar' and texto == 'O sujeito é Baltasar e o predicativo é só elogio: Tadeu vende o noivo à filha.':
-                                self.assertIn('o sujeito é Baltasar e o predicativo é só elogio; Tadeu vende o noivo à filha.', d['exemplos'][0]['html'])
-                                continue
                             self.assertNotIn(r, solto(texto))
                         # «Passo» e «Alínea» ficam presos ao número ou à letra (U+00A0), como as outras referências.
                         if isinstance(p, dict):
@@ -567,6 +661,37 @@ class TarefasFaceisM5(unittest.TestCase):
             dentro = ' '.join(re.findall(r'<details class="tf-so-tema tf-exemplos tf-so-ecra">.*?</details>', pagina, re.S))
             for passagem in ('Não te posso dar', 'supplicou', 'Alli todos', 'mettida a minha vida', 'Falhámos a vida', 'Sole normande'):
                 self.assertNotIn(passagem, dentro)
+            # 13/11/2026 (revisão): nenhuma citação de um exemplo ocorre nos textos da página (os textos da tarefa), nem inteira nem
+            # nas suas frases; e nenhuma sequência de quatro palavras seguidas de um exemplo vem de um texto da tarefa. O mesmo vale
+            # para os exemplos da grelha do aluno, que são os mesmos.
+            blocos = re.findall(r'<section class="tt-texto[^"]*" id="texto-\d".*?</section>', pagina, re.S)
+            self.assertEqual(len(blocos), len(f['textos']))
+            textos_da_pagina = ' '.join(sem_marcas(x) for b in blocos for x in re.findall(r'<p class="tt-par">.*?</p>', b, re.S))
+            textos_da_pagina = re.sub(r'\s+', ' ', solto(textos_da_pagina))
+            self.assertGreater(len(textos_da_pagina), 3000)
+            grelha_aluno = solto(sem_marcas(ler(f'tarefas/{slug}/grelha/index.html')))
+            exemplos_da_grelha = ' '.join(solto(v[1]) for c in grelhas[slug]['criterios'][1:3] for v in c['niveis'].values())
+            # (uma só exceção, só na grelha, que já vinha do main: o exemplo do tema A da m5-u2 diz o nome do gesto que o próprio
+            # tema manda imitar, «Sole normande?»; o desdobrável do enunciado não o traz, como se confere acima)
+            da_grelha = [c for c in re.findall(r'«([^«»]+)»', exemplos_da_grelha) if (slug, c) != ('m5-u2', 'Sole normande?')]
+            citacoes = re.findall(r'«([^«»]+)»', solto(sem_marcas(dentro))) + da_grelha
+            self.assertGreaterEqual(len(citacoes), 6)
+            for citacao in citacoes:
+                with self.subTest(tarefa=slug, citacao=citacao[:50]):
+                    for pedaco in [citacao] + [x.strip() for x in re.split(r'[.;:!?…]', citacao)]:
+                        if len(pedaco.split()) >= 2:
+                            self.assertNotIn(pedaco.casefold(), textos_da_pagina.casefold())
+            palavras_ex = re.findall(r"[\w'’-]+", solto(sem_marcas(dentro)) + ' ' + exemplos_da_grelha)
+            juntas = ' ' + ' '.join(re.findall(r"[\w'’-]+", textos_da_pagina)).casefold() + ' '
+            for k in range(len(palavras_ex) - 3):
+                quatro = ' '.join(palavras_ex[k:k + 4]).casefold()
+                self.assertNotIn(' ' + quatro + ' ', juntas, quatro)
+            # As citações novas estão nas lições, letra a letra, e na grelha do aluno.
+            for rel_licao, citacao in EXEMPLOS_DAS_LICOES[slug]:
+                self.assertIn(citacao, re.sub(r'\s+', ' ', html.unescape(re.sub(r'<[^>]+>|\\n', ' ', ler(rel_licao)))), citacao)
+                self.assertNotIn(citacao.casefold(), textos_da_pagina.casefold())
+            for _, novo in EXEMPLOS_TROCADOS[slug][:-1]:
+                self.assertIn(re.sub(r'_', '', novo), re.sub(r'\s+', ' ', grelha_aluno).replace('“', '«').replace('”', '»'), novo[:50])
         css = ler('assets/task-textos.css')
         impressao = css[css.index('@media print{'):]
         self.assertIn('[data-task-facil] .tf-so-ecra{display:none!important}', impressao)

@@ -523,7 +523,7 @@
       "nomes de família"
      ]
     ],
-    "fonte": "Camilo Castelo Branco, <i>Amor de Perdição</i> (1862), cap. IV (grafia da edição). Em [3], as lições saltam uma parte do capítulo.",
+    "fonte": "Camilo Castelo Branco, <i>Amor de Perdição</i> (1862), cap. IV (grafia da edição). No fim de [2] e em [3], as lições saltam uma parte do capítulo.",
     "origem": "m5/licao-m5-f04/index.html, linha 431, cartões 3, 7, 11, 13, 17, 19, 22 (copiado letra a letra)"
    },
    {
@@ -563,13 +563,14 @@
     "meta": "Orientação: cerca de 50 palavras.",
     "relogio": "Começa este relógio depois da leitura.",
     "textos": [
-     "texto-1"
+     "texto-1",
+     "texto-2"
     ],
     "pedido_titulo": "O que fazes",
     "antes": "Escolhe duas passagens em que o narrador comenta o que conta:",
     "escolhas": [
      "uma passagem da Introdução (<a href=\"#texto-1\">Texto 1</a>);",
-     "outra do capítulo IV (<a href=\"#texto-2\">Texto 2</a>, na pergunta 2)."
+     "outra do capítulo IV (<a href=\"#texto-2\">Texto 2</a>)."
     ],
     "alineas": [
      "Cita a passagem da Introdução.",
@@ -601,11 +602,9 @@
    {
     "titulo": "A fala de Tadeu.",
     "meta": "Orientação: cerca de 50 palavras.",
-    "textos": [
-     "texto-2"
-    ],
+    "textos": [],
     "pedido_titulo": "O que fazes",
-    "intro": "No <a href=\"#texto-2\">Texto 2</a> (parágrafo [18]), Tadeu diz ao sobrinho: «Não te posso dar minha filha, porque já não tenho filha.»",
+    "intro": "No <a href=\"#texto-2\">Texto 2</a> (na pergunta 1, parágrafo [18]), Tadeu diz ao sobrinho: «Não te posso dar minha filha, porque já não tenho filha.»",
     "alineas": [
      "Identifica a função sintática de «te».",
      "Identifica a função sintática de «minha filha».",
@@ -617,19 +616,19 @@
     ],
     "exemplos": [
      {
-      "titulo": "Outra frase do capítulo IV: «Teu primo é um composto de todas as virtudes»",
+      "titulo": "Outra frase do romance, da lição F07: «Domingos Botelho era extremamente feio»",
       "paragrafos": [
        {
         "al": "Alíneas a) e c), uma função e o seu teste:",
-        "t": "Em «Teu primo é um composto de todas as virtudes» (cap. IV), «Teu primo» é o sujeito: responde à pergunta <i>quem é um composto de todas as virtudes?</i>, e o verbo concorda com ele."
+        "t": "Em «Domingos Botelho era extremamente feio» (lição F07), «Domingos Botelho» é o sujeito: responde à pergunta <i>quem era extremamente feio?</i>, e o verbo concorda com ele."
        },
        {
         "al": "Alíneas b) e c), a outra função e o seu teste:",
-        "t": "A expressão «um composto de todas as virtudes» é predicativo do sujeito: com <i>ser</i>, diz como é o sujeito, e a frase não se aguenta sem ele."
+        "t": "A expressão «extremamente feio» é predicativo do sujeito: com <i>ser</i>, diz como é o sujeito, e a frase não se aguenta sem ele."
        },
        {
         "al": "Alínea d), o que a frase mostra:",
-        "t": "O sujeito é Baltasar e o predicativo é só elogio: Tadeu vende o noivo à filha."
+        "t": "O predicativo é um juízo sobre a personagem: a frase apresenta-a pelo aspeto, sem a poupar."
        }
       ]
      }
@@ -672,15 +671,15 @@
      ],
      "exemplos": [
       {
-       "titulo": "Outra voz: uma carta inventada de Tadeu à filha, no convento",
+       "titulo": "Outra voz: uma carta inventada da mãe de Simão ao filho",
        "paragrafos": [
         {
          "al": "Passos 1 a 5, a carta:",
-         "t": "Na casa de meus avós, dia de Natal. Teresa: perguntas-me se ainda tens pai. Tens, e és tu que o recusas. Lembras-te da manhã de domingo em que te chamei para a missa? Já então te disse que «a violencia de um pae é sempre amor». A tua teimosia é um muro alto entre nós. Que Deus te dê juízo. Teu pai, Tadeu de Albuquerque."
+         "t": "Em casa, dia de Natal. Meu filho: hás de perguntar se a tua mãe ainda pensa em ti. Pensa, todos os dias. Lembras-te das cartas que te escrevi? Foram tantas, e eu «não recebia resposta». O teu silêncio é uma porta fechada. Deus te guarde. Tua mãe."
         },
         {
          "al": "Passo 6, as duas frases:",
-         "t": "Respeitei o romance: Teresa está no convento com que o pai a ameaçou, e ele não se desdiz. A metáfora do muro mostra que Tadeu põe a culpa na filha."
+         "t": "Respeitei o romance: a mãe escrevia a Simão e pensava que o filho não respondia. A metáfora da porta fechada mostra que a mãe se sente posta de fora."
         }
        ]
       }
@@ -692,7 +691,7 @@
     "nome": "Uma cadeia que virou museu",
     "intro": "Escreve o painel de entrada da antiga Cadeia da Relação, hoje Centro Português de Fotografia, para quem nunca leu o romance.",
     "antes": [
-     "A frase do romance pode vir do <a href=\"#texto-1\">Texto 1</a> (na pergunta 1) ou do <a href=\"#texto-2\">Texto 2</a> (na pergunta 2)."
+     "A frase do romance pode vir do <a href=\"#texto-1\">Texto 1</a> ou do <a href=\"#texto-2\">Texto 2</a> (os dois na pergunta 1)."
     ],
     "passos": [
      "Escreve o painel em 70 a 100 palavras.",
@@ -710,11 +709,11 @@
        "paragrafos": [
         {
          "al": "Passos 1 a 3, o painel:",
-         "t": "Esta é a casa de Camilo Castelo Branco, em São Miguel de Seide. Foi reconstituída, refeita como era no tempo do escritor. Num romance dele, uma filha ameaçada pelo pai responde assim: «Thereza ergueu-se sem lagrimas, e entrou serenamente no seu quarto.»"
+         "t": "Esta é a casa de Camilo Castelo Branco, em São Miguel de Seide. Foi reconstituída, refeita como era no tempo do escritor. Num romance dele, uma rapariga despede-se assim de quem ama: «Simão, adeus até à eternidade!»"
         },
         {
          "al": "Passo 4, a razão da frase:",
-         "t": "Escolhi a frase porque quem visita uma casa entra em quartos."
+         "t": "Escolhi a frase porque quem sai de uma casa também se despede."
         },
         {
          "al": "Passo 5, o que o painel não pode afirmar:",

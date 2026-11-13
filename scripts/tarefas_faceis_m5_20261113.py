@@ -24,8 +24,10 @@ portefólio: todas a desfazem primeiro.
 Ficheiros (20):
 - os dados: docs/pedagogia/tarefas-escolha/m5-u1.json e m5-u2.json (a chave nova «facil», de onde sai a página; as chaves antigas
   ficam como estavam, para a leitura histórica das camadas de baixo, e já não aparecem na página), docs/pedagogia/
-  grelhas-tarefas-20261027.json («autoavaliacao_so_tua» e «trocas_aluno» nas duas grelhas do M5) e docs/pedagogia/aquecimentos/
-  m5-u1.json e m5-u2.json («núcleo» passa a «as duas perguntas»; «o tema» no topo passa a «a letra do tema»);
+  grelhas-tarefas-20261027.json («autoavaliacao_so_tua» e «trocas_aluno» nas duas grelhas do M5, e os exemplos de dois critérios
+  de cada grelha, que deixam de usar passagens dos textos da tarefa: ver «Os exemplos», mais abaixo) e docs/pedagogia/aquecimentos/
+  m5-u1.json e m5-u2.json («núcleo» passa a «as duas perguntas»; «o tema» no topo passa a «a letra do tema»; «o que o narrador
+  quer» passa a «o efeito em quem lê»);
 - as páginas geradas: tarefas/m5-u1/ e tarefas/m5-u2/ (enunciado, grelha/, aquecimento/ e correcao/);
 - as páginas do módulo que falam da aula de tarefa: m5/guia-da-tarefa-m5/ (10 e 55 minutos em vez de 5 e 60; «as duas perguntas»
   em vez de «núcleo comum»; sem a «Autoavaliação» que se copiava para o Teams e sem «pergunta ao teu par de trabalho»: a regra passa
@@ -50,16 +52,29 @@ a lição tem) e F08 (as três perguntas de Teresa, os factos e as marcas de uma
 m5-u2, lições F10 (o Ramalhete no capítulo I, parágrafos [1] e [2], e no último capítulo, parágrafos [1] a [3]), F11 (o capítulo
 VI: o parágrafo [1], de Alencar, e os parágrafos [3] a [9], a discussão e a interrupção) e F13 (o balanço final, parágrafos [1] a
 [13]). Nenhum texto veio de fora das lições. O que as lições não dão não se copiou de fontes externas: o último parágrafo da
-Introdução, a parte do capítulo IV que a lição salta em [3] e o parágrafo [2] do capítulo VI. A página di-lo na linha de fonte de
-cada texto e não remete para o manual, porque os passos das lições chegam para o que a tarefa pede.
+Introdução, a parte do capítulo IV que a lição salta (o fim do parágrafo [2] e o que a lição marca com «[3] […]») e a parte do
+capítulo VI que a lição marca com «[2] […]» (o Texto 4 da m5-u2 começa por essa marca, como a lição). A página di-lo na linha de
+fonte de cada texto e não remete para o manual, porque os passos das lições chegam para o que a tarefa pede. Na m5-u1, a Introdução
+e o capítulo IV ficam os dois no cartão da pergunta 1, que pede uma passagem de cada um; a pergunta 2 só usa a fala de Tadeu, que
+o próprio pedido cita.
+
+Os exemplos (revisão de 13/11/2026): com os textos inteiros na página, quatro exemplos «com outro caso» usavam passagens dos textos
+da tarefa (três vinham da grelha do main: «Teu primo é um composto de todas as virtudes», a carta inventada de Tadeu com «a
+violencia de um pae é sempre amor», o painel com «Thereza ergueu-se sem lagrimas…», todos do capítulo IV, e a pergunta de Ega, do
+balanço final). A regra do docente é «exemplos sempre com outro caso, sem as passagens da tarefa»; por isso os exemplos da página e
+os da grelha (que são os mesmos) passam a usar frases que as lições dão e que não estão nos textos da tarefa: «Domingos Botelho era
+extremamente feio» e «Simão, adeus até à eternidade!» (lição F07), «não recebia resposta» (lição F17, numa carta inventada da mãe
+de Simão) e «Simão disse que estava ali» (o exemplo inventado da lição F12). Os critérios, os níveis e os pontos não mudam.
 
 O molde ganhou três chaves opcionais (scripts/tarefa_facil.py): «html» num parágrafo (os itálicos da lição), «longo» num texto em
-prosa (pode passar de uma página em papel, sem partir parágrafos) e «nao_partir_dossie». A folha assets/task-textos.css ganhou as
-regras de «.tt-longo» (versão facil-9, que só a m5-u1 e a m5-u2 pedem). As páginas do M3 e do M1 saem iguais, byte a byte, salvo a
+prosa (pode passar de uma página em papel, sem partir parágrafos) e «nao_partir_dossie». A folha assets/task-textos.css ganhou a
+regra dos itálicos na prosa (vale para todas as páginas do molde) e as regras de impressão de «.tt-longo» (versão facil-9, que só a
+m5-u1 e a m5-u2 pedem). As páginas do M3 e do M1 saem iguais, byte a byte, salvo a
 frase do tema B da m3-u2.
 
 O que NÃO muda: as outras tarefas, as suas grelhas, correções e aquecimentos (saem dos mesmos geradores, iguais byte a byte); os
-critérios, os níveis, os exemplos e os pontos das grelhas (as trocas de palavras fazem-se só ao escrever as páginas); as lições.
+critérios, os níveis e os pontos das grelhas (as trocas de palavras fazem-se só ao escrever as páginas; dos exemplos mudam só os
+de dois critérios de cada grelha do M5, como se diz acima); as lições.
 
 O script tira as trocas da diferença entre a base (cada ficheiro com esta camada desfeita pelo manifesto; antes de haver
 manifesto, o ficheiro no commit de base, lido com git) e a árvore: pode voltar a correr depois de a camada estar aplicada e dá o
@@ -125,6 +140,9 @@ ACHADOS = {
                'lugar.',
     'sem_equipa': 'Decisão do docente (13/11/2026): não há trabalho de grupo nem de pares; no portefólio do módulo, «trabalho de equipa» '
                   'sai da lista do que o portefólio serve para avaliar, sem nada no lugar.',
+    'exemplos': 'Regra do docente: os exemplos mostram sempre outro caso, sem as passagens da tarefa. Com os textos inteiros na página, '
+                'os exemplos da grelha que usavam frases desses textos passam a usar frases que as lições dão e que não estão nos '
+                'textos da tarefa (os mesmos exemplos do enunciado).',
     'velho': 'Decisão do docente (13/11/2026): no tema B da m3-u2, a página diz que os argumentos de IV, 94 e 95 chegam, em vez de '
              'remeter para o manual para IV, 96 a 104.',
 }
@@ -368,6 +386,10 @@ def nome(rel):
         rel.split('/')[2], f'Enunciado da {u}')
 
 
+EXEMPLOS_NOVOS = ('Domingos Botelho era extremamente feio', 'Simão disse que estava ali', 'mãe de Simão', 'adeus até à eternidade',
+                  'Numa carta inventada de Tadeu', 'fala relatada de Simão', 'aqui está tudo como deixaste')
+
+
 def categorias(rel, antigo, novo):
     cs = set()
     if M3U2 in rel:
@@ -381,6 +403,9 @@ def categorias(rel, antigo, novo):
             cs.add('auto')
         # o resto são as palavras do enunciado novo («trocas_aluno»: ligadas, a letra do tema, duas perguntas, duas linhas finais,
         # o efeito em quem lê, uma expressão do romance)
+        # os exemplos que deixaram de usar passagens dos textos da tarefa (revisão de 13/11/2026)
+        if any(m in novo for m in EXEMPLOS_NOVOS):
+            cs.add('exemplos')
         if 'trocas_aluno' in novo or not cs:
             cs.add('junto')
     else:

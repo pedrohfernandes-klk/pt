@@ -41,26 +41,29 @@ CARTOES = ['Começar', 'Pergunta 1', 'Pergunta 2', 'Tema A ou B', 'Fechar e entr
 SAIDA = os.environ.get('TAREFAS_FACEIS_M5_OUTPUT')
 # Ligações internas a conferir: (cartão de partida, seletor da ligação, alvo, cartão onde o alvo está).
 LIGACOES = {
-    'm5-u1': [(1, '.tf-pedido a[href="#texto-1"]', '#texto-1', 1), (1, '.tf-pedido a[href="#texto-2"]', '#texto-2', 2),
-              (2, '.tf-pedido a[href="#texto-2"]', '#texto-2', 2), (3, '[data-task-theme="A"] .tf-antes a[href="#texto-3"]', '#texto-3', 3),
+    # 13/11/2026 (revisão): na m5-u1, o Texto 2 (capítulo IV) passa para o cartão da pergunta 1, que pede uma passagem dele: a ligação
+    # da pergunta 1 já não leva a outro cartão (antes levava ao cartão 2, sem regresso). A mesma exigência: cada ligação mostra o alvo.
+    'm5-u1': [(1, '.tf-pedido a[href="#texto-1"]', '#texto-1', 1), (1, '.tf-pedido a[href="#texto-2"]', '#texto-2', 1),
+              (2, '.tf-pedido a[href="#texto-2"]', '#texto-2', 1), (3, '[data-task-theme="A"] .tf-antes a[href="#texto-3"]', '#texto-3', 3),
               (3, '[data-task-theme="A"] .tf-passos a[href="#texto-3"]', '#texto-3', 3), (3, '[data-task-theme="B"] a[href="#texto-1"]', '#texto-1', 1),
-              (3, '[data-task-theme="B"] a[href="#texto-2"]', '#texto-2', 2), (3, '[data-task-theme="B"] a[href="#dossie"]', '#dossie', 3)],
+              (3, '[data-task-theme="B"] a[href="#texto-2"]', '#texto-2', 1), (3, '[data-task-theme="B"] a[href="#dossie"]', '#dossie', 3)],
     'm5-u2': [(1, '.tf-pedido a[href="#texto-1"]', '#texto-1', 1), (1, '.tf-pedido a[href="#texto-2"]', '#texto-2', 1),
               (2, '.tf-pedido a[href="#texto-3"]', '#texto-3', 2), (3, '[data-task-theme="A"] a[href="#texto-4"]', '#texto-4', 3),
               (3, '[data-task-theme="B"] .tf-antes a[href="#texto-5"]', '#texto-5', 3),
               (3, '[data-task-theme="B"] .tf-passos a[href="#texto-5"]', '#texto-5', 3), (3, '[data-task-theme="B"] a[href="#dossie"]', '#dossie', 3)],
 }
+# 13/11/2026 (revisão): o Texto 4 da m5-u2 começa pela marca «[2] […]» da lição F11 (mais um parágrafo: 8 em vez de 7).
 # O que cada alvo tem de mostrar: os parágrafos do texto e as linhas do seu vocabulário (ou os cinco factos do dossiê).
 NO_ALVO = {('m5-u1', '#texto-1'): 7 + 13, ('m5-u1', '#texto-2'): 18 + 14, ('m5-u1', '#texto-3'): 3, ('m5-u1', '#dossie'): 5,
-           ('m5-u2', '#texto-1'): 2 + 13, ('m5-u2', '#texto-2'): 3, ('m5-u2', '#texto-3'): 1 + 4, ('m5-u2', '#texto-4'): 7 + 6,
+           ('m5-u2', '#texto-1'): 2 + 13, ('m5-u2', '#texto-2'): 3, ('m5-u2', '#texto-3'): 1 + 4, ('m5-u2', '#texto-4'): 8 + 6,
            ('m5-u2', '#texto-5'): 13 + 10, ('m5-u2', '#dossie'): 5}
 # Quantos desdobráveis tem cada enunciado: os exemplos (4), o material do tema A, o do tema B e a pergunta opcional.
 DESDOBRAVEIS = {'m5-u1': 7, 'm5-u2': 7}
 EXEMPLOS = {'m5-u1': 4, 'm5-u2': 4}
 # Os textos de cada enunciado, pela ordem da página: (parágrafos, comprido).
-TEXTOS = {'m5-u1': [(7, True), (18, True), (3, False)], 'm5-u2': [(2, True), (3, False), (1, False), (7, True), (13, True)]}
+TEXTOS = {'m5-u1': [(7, True), (18, True), (3, False)], 'm5-u2': [(2, True), (3, False), (1, False), (8, True), (13, True)]}
 # O que sai aberto em papel dentro de cada tema: os parágrafos e os factos do dossiê.
-SO_TEMA = {'m5-u1': [3, 5], 'm5-u2': [7, 5 + 13]}
+SO_TEMA = {'m5-u1': [3, 5], 'm5-u2': [8, 5 + 13]}
 MEDIR = '''() => { const c = document.querySelector('.casca-corpo'); const cartao = document.querySelector('.task-reader-card:not([hidden])');
   return { nome: cartao.getAttribute('aria-label'), pagina: document.documentElement.scrollWidth <= innerWidth + 1,
     corpo: c.scrollWidth <= c.clientWidth + 1,

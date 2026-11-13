@@ -372,6 +372,13 @@
     "longo": true,
     "paragrafos": [
      {
+      "n": "[2]",
+      "t": "[…]",
+      "partes": [
+       "[…]"
+      ]
+     },
+     {
       "n": "[3]",
       "t": "Mas n'essa noite teve o regosijo de encontrar alliados. Craft não admittia tambem o naturalismo, a realidade feia das cousas e da sociedade estatelada nua n'um livro. A arte era uma idealisação! Bem: então que mostrasse os typos superiores d'uma humanidade aperfeiçoada, as fórmas mais bellas do viver e do sentir... Ega horrorisado apertava as mãos na cabeça — quando do outro lado Carlos declarou que o mais intoleravel no realismo eram os seus grandes ares scientificos, a sua pretenciosa esthetica deduzida d'uma philosophia alheia, e a invocação de Claude Bernard, do experimentalismo, do positivismo, de Stuart Mill e de Darwin, a proposito d'uma lavadeira que dorme com um carpinteiro!",
       "partes": [
@@ -449,7 +456,7 @@
       "linguado à normanda (francês)"
      ]
     ],
-    "fonte": "Eça de Queirós, <i>Os Maias</i> (1888), cap. VI (grafia da edição). Vem depois do Texto 3: entre os dois, as lições saltam o parágrafo [2].",
+    "fonte": "Eça de Queirós, <i>Os Maias</i> (1888), cap. VI (grafia da edição). Vem depois do Texto 3. Em [2], as lições saltam uma parte do capítulo.",
     "origem": "m5/licao-m5-f11/index.html, linha 431, cartões 3, 8, 10, parágrafos [3] a [9], e cartão 21, vocabulário (copiado letra a letra)"
    },
    {
@@ -655,15 +662,15 @@
     ],
     "exemplos": [
      {
-      "titulo": "Outra passagem do romance: uma pergunta de Ega",
+      "titulo": "Outra obra: uma fala relatada de Simão, da lição F12",
       "paragrafos": [
        {
         "al": "Alíneas a) e c), o modo de relato e as marcas:",
-        "t": "Em «Então Ega perguntou, do fundo do sofá onde se enterrára, se, n'esses ultimos annos, elle não tivera a idéa» (último capítulo), o relato é indireto: há um verbo declarativo, <i>perguntou</i>, e uma oração subordinada com <i>se</i>."
+        "t": "Em «Simão disse que estava ali» (um exemplo inventado da lição F12), o relato é indireto: há um verbo declarativo, <i>disse</i>, e uma oração subordinada com <i>que</i>."
        },
        {
-        "al": "Alínea d), a pergunta em discurso direto:",
-        "t": "Em discurso direto, Ega diria, depois de um travessão: <i>Nestes últimos anos, não tiveste a ideia, o vago desejo de voltar para Portugal?</i> Ega fala com Carlos: <i>elle</i> passa a <i>tu</i> e <i>tivera</i> passa a <i>tiveste</i>."
+        "al": "Alínea d), a fala em discurso direto:",
+        "t": "Em discurso direto, Simão diria, depois de um travessão: <i>Estou aqui.</i> Quem fala é o próprio Simão, no momento e no lugar da fala: <i>estava</i> passa a <i>estou</i> e <i>ali</i> passa a <i>aqui</i>."
        }
       ]
      }
@@ -720,7 +727,7 @@
     "nome": "Falhámos a vida, hoje?",
     "intro": "«Falhámos a vida, menino!» ainda diz alguma coisa a alguém da tua idade?",
     "antes": [
-     "A frase de Ega e o resto do último capítulo estão no <a href=\"#texto-5\">Texto 5</a>."
+     "A frase de Ega e o passo do último capítulo em que ela aparece estão no <a href=\"#texto-5\">Texto 5</a>."
     ],
     "passos": [
      "Escreve um parágrafo de opinião de 100 a 150 palavras.",
