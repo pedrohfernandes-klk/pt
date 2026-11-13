@@ -697,7 +697,7 @@ for(const [w,h] of [[390,844],[1280,900],[360,740],[900,800]]) for(const cs of [
     const pistaPara=(bb,sel)=>{for(const q of bb.pistas){if(q.so){if(sel.length&&sel.every(x=>q.so.includes(x)))return q.x;}else if(q.se.some(x=>sel.includes(x)))return q.x;}return bb.falta;};
     const semLeitura2=async(onde)=>{const t=await p.locator('#passo').innerText();ok(!/desconta \d|Faltam \d|Passam \d|Dentro dos limites|célula realçada|a tabela indica|Onde situas|O teu nível/.test(t),tag+' sem leituras automáticas em '+onde);};
     const NOVOS=[
-      {pg:'coesao',n:7,ord:6,sid:'s22',viu:'a chave oficial',chave:3,grelhas:[],descr:0,cl:0,apoios:{of:/Linhas 1, 5 e 6, 16 a 23 e 29 a 32/,tr:/Linhas 11 a 20/,mod:/Linhas 13 a 18 e 44 a 46/}},
+      {pg:'coesao',n:7,ord:6,sid:'s22',viu:'a chave oficial',chave:3,grelhas:[],descr:0,cl:0,apoios:{of:/Linhas 1, 5 e 6, 16 a 19, 21, 23 e 29 a 32/,tr:/Linhas 11 a 19,/,mod:/Linhas 13 a 18 e 44 e 45\./}}, // 13/11/2026 (revisão): menos linhas do artigo (20 em vez de 23); as legendas dizem as que ficam
       {pg:'apreciacao-critica',n:6,ord:7,sid:'s25',viu:'os critérios',grelhas:[3,4,5],descr:3,cl:1,apoios:{img:/faz a apreciação crítica da gravura, da autoria de Giovanni Battista Piranesi/}},
       {pg:'exposicao',n:8,ord:8,sid:'s23',viu:'os critérios',grelhas:[4,5],descr:2,cl:1,apoios:{item:/Escreva uma breve exposição na qual comprove a afirmação anterior/,poemas:/Alma minha gentil, que te partiste[\s\S]*Sendo a si tão contrário o mesmo Amor\?/}},
     ];

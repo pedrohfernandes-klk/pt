@@ -84,7 +84,11 @@ for _a, _b, _s in [(1, 1, 'Hoje em dia'), (23, 23, 'um tipo de atenção'), (29,
                    (19, 19, 'privilegiam este tipo de mecanismos'), (44, 44, 'Mas esta revolução tem os seus riscos.'), (45, 45, 'pode implicar soluções'), (1, 1, 'as crianças')]:
     tem(L2, _a, _b, _s)
 assert '—' in L2[24] and all('—' not in L2[n] for n in L2 if n != 24)
-MOSTRADAS = [1, 5, 6] + list(range(11, 24)) + [29, 30, 31, 32, 44, 45, 46]
+# 13/11/2026 (revisão): o artigo tem direitos. Ficam só as linhas que as perguntas e os itens 5 e 6 usam: 20 das 46.
+# As linhas 20, 22 e 46 saíram porque nenhuma pergunta nem expressão dos itens as pede. Ainda é mais do que os treinos
+# publicados mostram (o de gramática mostra 11 de 47 e 5 de 46); a decisão final sobre esta medida é do docente.
+MOSTRADAS = [1, 5, 6] + list(range(11, 20)) + [21, 23, 29, 30, 31, 32, 44, 45]
+assert len(MOSTRADAS) == 20 and not {20, 22, 24, 46} & set(MOSTRADAS)
 
 FONTE = ('<p class="fonte">' + md(TX['fonte']) + ' Texto do Grupo II da Prova 639, 2026, 2.ª fase (enunciado, p. 6), com a numeração de linhas da prova. '
          'Aqui estão só as linhas de que precisas; o texto completo está no ' + lig('e2', 'PDF da prova (eduqa.pt)') + '.</p>')
@@ -96,17 +100,22 @@ def _uma(h, velho, novo):
     return h.replace(velho, novo)
 
 
-AP_OF = _uma(_uma(linhas(L2, [(1, 1), (5, 6), (16, 23), (29, 32)],
-                         ['Hoje em dia', 'um tipo de atenção', 'no livro', 'dos alunos', 'diante', 'este tipo', 'atrás', 'na obra <i>Sociedade do Cansaço</i>', 'dois tipos', 'estes', 'os primeiros']),
+def _cortes(h):
+    """Um corte de uma só linha diz «linha 20», não «linhas 20 a 20»."""
+    return re.sub(r'\[linhas (\d+) a \1: ver', r'[linha \1: ver', h)
+
+
+AP_OF = _uma(_uma(_cortes(linhas(L2, [(1, 1), (5, 6), (16, 19), (21, 21), (23, 23), (29, 32)],
+                         ['Hoje em dia', 'um tipo de atenção', 'no livro', 'dos alunos', 'diante', 'este tipo', 'atrás', 'na obra <i>Sociedade do Cansaço</i>', 'dois tipos', 'estes', 'os primeiros'])),
                   'enquanto os</span>', 'enquanto <mark>os</mark></span>'), '<span>segundos, de', '<span><mark>segundos</mark>, de')
 assert AP_OF.count('<mark>') == 13
-AP_OF = (TIT + '<p class="texto-a">Linhas 1, 5 e 6, 16 a 23 e 29 a 32. Os realces a amarelo são nossos: marcam as doze expressões do item 5.</p>' + AP_OF + FONTE)
-AP_TR = _uma(linhas(L2, [(11, 20)], ['na qual', 'esta questão', 'na atualidade']), 'sociedade que a criou?', 'sociedade que <mark>a</mark> criou?')
+AP_OF = (TIT + '<p class="texto-a">Linhas 1, 5 e 6, 16 a 19, 21, 23 e 29 a 32. Os realces a amarelo são nossos: marcam as doze expressões do item 5.</p>' + AP_OF + FONTE)
+AP_TR = _uma(linhas(L2, [(11, 19)], ['na qual', 'esta questão', 'na atualidade']), 'sociedade que a criou?', 'sociedade que <mark>a</mark> criou?')
 assert AP_TR.count('<mark>') == 4
-AP_TR = (TIT + '<p class="texto-a">Linhas 11 a 20, do mesmo texto da prova. Os realces a amarelo são nossos.</p>' + AP_TR + FONTE)
-AP_MOD = linhas(L2, [(13, 18), (44, 46)], ['podemos fazer', 'para que', ', pois', 'tem de estar', 'pode implicar']).replace('<mark>, pois</mark>', ', <mark>pois</mark>')
+AP_TR = (TIT + '<p class="texto-a">Linhas 11 a 19, do mesmo texto da prova. Os realces a amarelo são nossos.</p>' + AP_TR + FONTE)
+AP_MOD = linhas(L2, [(13, 18), (44, 45)], ['podemos fazer', 'para que', ', pois', 'tem de estar', 'pode implicar']).replace('<mark>, pois</mark>', ', <mark>pois</mark>')
 assert AP_MOD.count('<mark>') == 5
-AP_MOD = (TIT + '<p class="texto-a">Linhas 13 a 18 e 44 a 46. Os realces a amarelo são nossos.</p>' + AP_MOD + FONTE)
+AP_MOD = (TIT + '<p class="texto-a">Linhas 13 a 18 e 44 e 45. Os realces a amarelo são nossos.</p>' + AP_MOD + FONTE)
 LINHAS_HTML = [AP_OF, AP_TR, AP_MOD]
 
 
@@ -142,21 +151,25 @@ assert [TOK_A[i]['x'] for i in (2, 3, 8, 12, 14, 15)] == ['esta', 'visão', 'a',
 TOK_MODO = [{'x': w} for w in 'um animal tem de dividir a sua atenção por diversas atividades para que, enquanto come, não acabe por ser comido.'.split()]
 assert [TOK_MODO[i]['x'] for i in (2, 4, 14, 15, 16, 17, 18, 19)] == ['tem', 'dividir', 'come,', 'não', 'acabe', 'por', 'ser', 'comido.'] and len(TOK_MODO) == 20
 
+def _opcao(letra, expr, aponta, concl):
+    return ('<div class="caixa"><p><b>Opção (%s).</b> %s</p><p><b>Para onde apontam.</b> %s</p><p><b>Conclusão.</b> %s</p></div>' % (letra, expr, aponta, concl))
+
+
+# 13/11/2026 (revisão): quatro blocos, um por opção, em vez de uma tabela de quatro colunas, que a 360 px cortava a coluna da conclusão.
 ANALISE = (
-    '<div class="rolo" tabindex="0" role="region" aria-label="Análise das quatro opções"><table><thead><tr><th>Opção</th><th>Expressão</th><th>Para onde aponta</th><th>Conclusão</th></tr></thead><tbody>'
-    '<tr><td>(D)</td><td>«estes» (linha 6); «os primeiros» (linha 31); «os segundos» (linhas 31 e 32)</td>'
-    '<td>«estes» retoma «os desafios escolares» (linha 6), com que concorda no masculino plural. «os primeiros» e «os segundos» retomam, um de cada vez, os «dois tipos de mecanismos» da linha 30.</td>'
-    '<td>As três vão buscar o sentido a uma expressão dita antes: as três retomam.</td></tr>'
-    '<tr><td>(A)</td><td>«Hoje em dia» (linha 1); «um tipo de atenção» (linha 23); «no livro» (linha 29)</td>'
-    '<td>«Hoje em dia» aponta para o tempo de quem escreve. «um tipo de atenção» e «no livro» apresentam o que ainda não tinha sido dito; o texto explica-o a seguir.</td>'
-    '<td>Nenhuma vai buscar o sentido a uma expressão anterior.</td></tr>'
-    '<tr><td>(B)</td><td>«dos alunos» (linha 5); «diante» (linha 17); «este tipo» (linha 19)</td>'
-    '<td>«este tipo» retoma os mecanismos descritos nas linhas 14 a 18. «diante» diz um lugar em relação ao animal; quem retoma o animal é «si», em «diante de si». «dos alunos» dá outro nome a quem a linha 1 chamou «as crianças».</td>'
-    '<td>«diante» não retoma nenhuma expressão: uma que falhe chega para afastar a opção.</td></tr>'
-    '<tr><td>(C)</td><td>«atrás» (linha 18); «na obra <i>Sociedade do Cansaço</i>» (linha 21); «dois tipos» (linha 30)</td>'
-    '<td>«atrás» diz um lugar em relação ao animal («atrás de si»). «na obra <i>Sociedade do Cansaço</i>» e «dois tipos» apresentam o que ainda não tinha sido dito; «dois tipos» é o antecedente de «os primeiros» e de «os segundos».</td>'
-    '<td>Nenhuma vai buscar o sentido a uma expressão anterior.</td></tr>'
-    '</tbody></table></div>')
+    _opcao('D', '«estes» (linha 6); «os primeiros» (linha 31); «os segundos» (linhas 31 e 32).',
+           '«estes» retoma «os desafios escolares» (linha 6), com que concorda no masculino plural. «os primeiros» e «os segundos» retomam, um de cada vez, os «dois tipos de mecanismos» da linha 30.',
+           'As três vão buscar o sentido a uma expressão dita antes: as três retomam.') +
+    _opcao('A', '«Hoje em dia» (linha 1); «um tipo de atenção» (linha 23); «no livro» (linha 29).',
+           '«Hoje em dia» aponta para o tempo de quem escreve. «um tipo de atenção» e «no livro» apresentam o que ainda não tinha sido dito; o texto explica-o a seguir.',
+           'Nenhuma vai buscar o sentido a uma expressão anterior.') +
+    _opcao('B', '«dos alunos» (linha 5); «diante» (linha 17); «este tipo» (linha 19).',
+           '«este tipo» retoma os mecanismos descritos nas linhas 14 a 18. «diante» diz um lugar em relação ao animal; quem retoma o animal é «si», em «diante de si». «dos alunos» dá outro nome a quem a linha 1 chamou «as crianças».',
+           '«diante» não retoma nenhuma expressão: uma que falhe chega para afastar a opção.') +
+    _opcao('C', '«atrás» (linha 18); «na obra <i>Sociedade do Cansaço</i>» (linha 21); «dois tipos» (linha 30).',
+           '«atrás» diz um lugar em relação ao animal («atrás de si»). «na obra <i>Sociedade do Cansaço</i>» e «dois tipos» apresentam o que ainda não tinha sido dito; «dois tipos» é o antecedente de «os primeiros» e de «os segundos».',
+           'Nenhuma vai buscar o sentido a uma expressão anterior.'))
+assert ANALISE.count('<div class="caixa">') == 4 and '<table' not in ANALISE
 
 AP = {'apoioRot': 'Linhas da prova'}
 
@@ -344,7 +357,7 @@ TREINO = {
                      'Disse o que «estes» retoma, com a linha.',
                      'Disse o que «os primeiros» e «os segundos» retomam, com a linha.',
                      'Mostrei, numa das outras opções, uma expressão que não retoma nada e disse o que ela faz: situa ou apresenta.',
-                     'Usei os termos da gramática: coesão referencial, retomar, antecedente.',
+                     'Usei os termos da gramática: coesão referencial, antecedente (e anáfora, se a conheces).',
                      'Copiei as expressões do texto entre aspas, letra a letra.',
                  ]},
                 {'t': 'html', 'h': '<div class="caixa nossa"><p><b>Uma maneira de organizar</b> (é nossa, não é exigência do exame). Uma pergunta para cada operação, e o limite de cada uma.</p>'

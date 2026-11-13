@@ -432,10 +432,24 @@ class TreinosExame(unittest.TestCase):
                     self.assertEqual(linhas[int(n)], limpo)
                 vistos.add(int(n))
         self.assertEqual(set(T6.MOSTRADAS), vistos)
-        self.assertEqual(23, len(vistos))
-        self.assertNotIn(24, vistos)
+        # 13/11/2026 (revisão): o artigo tem direitos, por isso ficam só as linhas que as perguntas e os itens usam: 20 em vez de 23.
+        # As linhas 20, 22 e 46 saem (nenhuma pergunta as pede) e cada corte fica marcado com a remissão para o PDF (6 em vez de 4).
+        self.assertEqual(20, len(vistos))
+        self.assertEqual([1, 5, 6, 11, 12, 13, 14, 15, 16, 17, 18, 19, 21, 23, 29, 30, 31, 32, 44, 45], sorted(vistos))
+        for fora in (20, 22, 24, 46):
+            self.assertNotIn(fora, vistos)
         self.assertNotIn('—', self.texto[p])
-        self.assertEqual(4, h.count(': ver o PDF da prova]'))
+        self.assertEqual(6, h.count(': ver o PDF da prova]'))
+        self.assertEqual(2, h.count('[linha 20: ver o PDF da prova]') + h.count('[linha 22: ver o PDF da prova]'))
+        self.assertNotIn('linhas 20 a 20', h)
+        # 13/11/2026 (revisão): a análise comentada vem em quatro blocos, um por opção, sem tabela (a 360 px a tabela cortava a conclusão)
+        comp_h = json.dumps([ps for ps in dados(h)['passos'] if ps['id'] == 'comparar'][0], ensure_ascii=False)
+        self.assertNotIn('<table', comp_h)
+        self.assertEqual(['D', 'A', 'B', 'C'], re.findall(r'<b>Opção \(([A-D])\)\.</b>', comp_h))
+        self.assertEqual(4, comp_h.count('<b>Conclusão.</b>'))
+        # 13/11/2026 (revisão): a lista de conferência só chama termos da gramática aos que o são («retomar» é palavra do treino)
+        self.assertIn('Usei os termos da gramática: coesão referencial, antecedente (e anáfora, se a conheces).', comp_h)
+        self.assertNotIn('coesão referencial, retomar', h)
         # os realces são as doze expressões do item 5 (uma parte-se em duas linhas) e as expressões das perguntas de treino
         ap = {k: re.search(r'<div data-apoio="%s" hidden>(.*?)</div>' % k, h, re.S).group(1) for k in ('of', 'tr', 'mod')}
         marcas = [unescape(re.sub(r'<[^>]+>', '', m)) for m in re.findall(r'<mark>(.*?)</mark>', ap['of'])]
@@ -649,6 +663,14 @@ class TreinosExame(unittest.TestCase):
         self.assertEqual((T8.D_ED3, 3, 3), (ed['niveis'][0]['descritores'][0][0], ed['niveis'][0]['nivel'], ed['niveis'][0]['pontuacao']))
         self.assertEqual((T8.D_ED2, 2, 2), (ed['niveis'][1]['descritores'][0][0], ed['niveis'][1]['nivel'], ed['niveis'][1]['pontuacao']))
         self.assertIn(T8.ED_PARTES, T8.D_ED3)
+        # 13/11/2026 (revisão): a página só diz dos tópicos o que a p. 12 mostra (o verso vem entre parênteses em quatro dos sete,
+        # não em todos) e a primeira explicação já não anuncia um número de «coisas» que a enumeração não dá
+        tops = [t if isinstance(t, str) else json.dumps(t, ensure_ascii=False) for t in it['criterios']['topicos']]
+        self.assertEqual((7, 4), (len(tops), sum(1 for t in tops if re.search(r'\([^)]*«[^)]*\)', t))))
+        self.assertIn('juntam-lhe palavras dos poemas, várias vezes entre parênteses (p. 12)', h)
+        self.assertNotIn('entre parênteses, o verso', h)
+        self.assertNotIn('são cinco coisas', h)
+        self.assertIn('A lista tem três pontos, mas o segundo pede mais do que uma coisa: duas reflexões, e cada uma fundamentada com referência a poemas lidos.', h)
         self.assertIn(T8.ED_COES, T8.D_ED3)
         self.assertIn(T8.ED_DESEQ, T8.D_ED2)
         self.assertEqual(T8.I_DOIS, simples(cr['instrucao']))

@@ -232,7 +232,7 @@ TREINO = {
                       'pista': '<p>Conta no segundo ponto da lista: quantas reflexões? E sobre quê: sobre a forma dos poemas ou sobre a existência humana?</p>'},
                  ], 'c': 2,
                  'pista2': '<p>Lê a lista do enunciado, um ponto de cada vez, e conta o que cada um pede. O segundo ponto pede mais do que uma coisa: separa-as.</p>',
-                 'f': '<p>A lista tem três pontos, mas são cinco coisas: a introdução, duas reflexões, a fundamentação de cada uma e a conclusão. O nível mais alto dos aspetos de conteúdo repete o verbo do enunciado: «' + D_C4 + '» <span class="pag">(critérios, p. 12)</span>.</p>'
+                 'f': '<p>A lista tem três pontos, mas o segundo pede mais do que uma coisa: duas reflexões, e cada uma fundamentada com referência a poemas lidos. O nível mais alto dos aspetos de conteúdo repete o verbo do enunciado: «' + D_C4 + '» <span class="pag">(critérios, p. 12)</span>.</p>'
                       '<p>«Comprovar» não é opinar nem resumir: é mostrar, com poemas, que a afirmação é verdadeira. «Explicitar» é dizer por palavras tuas, com clareza, que reflexão lá está.</p>'
                       '<p class="pag">O sentido que damos aos dois verbos é leitura nossa.</p>'},
                 {'t': 'html', 'h': '<div class="caixa of">' + etq('oficial') + '<p><b>O que os critérios dizem sobre as partes e sobre o número de palavras</b> (' + lig('c2', 'PDF em eduqa.pt') + ').</p>'
@@ -313,7 +313,7 @@ TREINO = {
                  'pista2': '<p>Faz a mesma pergunta às quatro frases: diz o que os versos mostram sobre a vida de quem perde alguém? Só uma responde; as outras repetem, acrescentam ou elogiam.</p>',
                  'f': '<p>Três frases, três funções: a primeira diz a reflexão, a segunda refere o poema, a terceira diz o que os versos mostram. Sem a terceira, a citação fica solta, e o tamanho da citação não muda isso.</p>'
                       '<p>O item pede um desenvolvimento em que explicites as reflexões, «fundamentando cada uma delas com referência a poemas lidos» (enunciado, p. 5), e o descritor mede isso mesmo: «' + D_C4 + '» <span class="pag">(critérios, p. 12)</span>. '
-                      'Os tópicos dos critérios fazem o mesmo caminho: dizem a reflexão e, entre parênteses, o verso (p. 12).</p>'
+                      'Os tópicos dos critérios fazem o mesmo caminho: dizem a reflexão e juntam-lhe palavras dos poemas, várias vezes entre parênteses (p. 12).</p>'
                       '<p class="pag">Leitura nossa: o que o item pede é a referência a poemas; a transcrição de versos não é exigida. Se citares, cita letra a letra: entre os erros do tipo A está o «' + R_CITAR + '» (critérios, p. 2).</p>'},
             ],
         }),
