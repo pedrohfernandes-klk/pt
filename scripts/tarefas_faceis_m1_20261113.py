@@ -35,6 +35,11 @@ inteiro e ancora nos dois vizinhos.
 Revisão de 13/11/2026: a pergunta 2 da m1-u2 diz «o excerto do capítulo XII» (agora há um só, o Texto 1, contínuo), e a grelha e a
 versão de correção dizem o mesmo («no excerto», três pares mais em «trocas_aluno»).
 
+Segunda revisão de 13/11/2026: a linha de fonte do Texto 3 da m1-u1 (Guilhade) diz, como as dos Textos 1 e 2, a época do autor
+(«séc. XIII», do subtítulo da lição F04) e «a cantiga inteira, com a grafia da edição» (a frase da lição F19). Na m1-u2 fica por
+decidir pelo docente se a passagem copiada do tema A conta para as 160 a 200 palavras da crónica: a decisão fala em versos, e a
+página continua a dizer o que dizia antes desta camada (não contam as respostas, as fontes e as duas linhas finais).
+
 O que não foi preciso mudar: os dois aquecimentos do M1 (docs/pedagogia/aquecimentos/m1-u1.json e m1-u2.json e as suas páginas) já
 dizem «Dez minutos», «o som, o lugar e o nome» e «as passagens da tarefa», e não usam «núcleo», «fecho» nem «tema escolhido»; o
 mapa do M1 não descreve as partes da aula de tarefa; o guia da tarefa do M1 nunca teve a «Autoavaliação» que se copiava para o
