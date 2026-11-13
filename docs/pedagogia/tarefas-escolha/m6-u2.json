@@ -135,6 +135,7 @@
   "producao_minutos": 55,
   "folha_versao": "20261113-facil-10",
   "nao_partir_dossie": true,
+  "juntos_em_papel": true,
   "grelha_nota": "A autoavaliação da grelha é só para ti: não se entrega.",
   "entregas": {
    "intro": "Fotografias do teu trabalho em papel, na tarefa do Teams."
@@ -644,7 +645,7 @@
     "id": "texto-5",
     "rotulo": "Texto 5",
     "titulo": "«O Sentimento dum Ocidental», parte III, «Ao Gás» (excertos), de Cesário Verde",
-    "numerar": 5,
+    "numerar": 0,
     "estrofes": [
      {
       "versos": [
@@ -757,7 +758,7 @@
       "montras"
      ]
     ],
-    "fonte": "Cesário Verde, «O Sentimento dum Ocidental», <i>O Livro de Cesário Verde</i> (1887) (grafia da edição). As lições dão cinco estrofes da parte III; «[…]» marca o que as lições saltam. A parte inteira está no manual.",
+    "fonte": "Cesário Verde, «O Sentimento dum Ocidental», <i>O Livro de Cesário Verde</i> (1887) (grafia da edição). As lições dão cinco estrofes da parte III; «[…]» marca o que as lições saltam. Por isso estes versos não têm número. A parte inteira está no manual.",
     "origem": "m6/licao-m6-f07/index.html, linha 431, cartões 14, 16, 18 (copiado letra a letra, com os cortes «[…]» da lição)"
    },
    {
@@ -1023,7 +1024,7 @@
     ],
     "exemplos": [
      {
-      "titulo": "Outro étimo e outras grafias de 1887",
+      "titulo": "Outro étimo e outras grafias do século XIX",
       "paragrafos": [
        {
         "al": "Alíneas a) e b):",
@@ -1031,7 +1032,7 @@
        },
        {
         "al": "Alíneas c) e d):",
-        "t": "E de 1887: «occidental» passa a ocidental (perdeu um c); «lyrios» passa a lírios (o y passou a i, com acento gráfico)."
+        "t": "E do século XIX: «occidental» passa a ocidental (perdeu um c); «lyrios» passa a lírios (o y passou a i, com acento gráfico)."
        }
       ]
      }
@@ -1126,7 +1127,7 @@
   "temas_material": {
    "titulo": "Para os dois temas: os Textos 3 a 6 (as quatro partes de «O Sentimento dum Ocidental»)",
    "notas": [
-    "Os versos numeram-se a partir de 1 em cada parte."
+    "Nos Textos 3, 4 e 6, os versos numeram-se a partir de 1 em cada parte. O Texto 5 não tem números, porque lhe faltam estrofes."
    ],
    "textos": [
     "texto-3",

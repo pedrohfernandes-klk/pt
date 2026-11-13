@@ -135,6 +135,7 @@
   "producao_minutos": 55,
   "folha_versao": "20261113-facil-10",
   "nao_partir_dossie": true,
+  "juntos_em_papel": true,
   "grelha_nota": "A autoavaliação da grelha é só para ti: não se entrega.",
   "entregas": {
    "intro": "Fotografias do teu trabalho em papel, na tarefa do Teams."
@@ -452,7 +453,8 @@
     "ajudas": [
      "A voz do soneto não é o poeta.",
      "Explica cada verso que citares e diz de que soneto é.",
-     "Na diferença, usa os versos que citaste."
+     "Na diferença, usa os versos que citaste.",
+     "No Texto 2 falta o verso 13. Para a alínea b), relê na lição F13, <a href=\"../../m6/licao-m6-f13/\">O sonho pode pedir ação?</a>, o cartão «Uma espada feita de sonho»."
     ],
     "citar": "Copia as palavras exatas do texto. Põe-nas entre aspas: «…».",
     "exemplos": [

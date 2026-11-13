@@ -16,11 +16,13 @@ tests/browser_tarefas_faceis_m1.py e de tests/browser_tarefas_faceis_m5.py:
 * as ligações internas funcionam: «Texto N» noutro cartão abre esse cartão com o texto à vista; «dossiê» e os textos dos temas
   abrem o desdobrável que os guarda, e o alvo tem lá todos os versos e todo o vocabulário;
 * o que as lições não dão vê-se: o verso 13 de «A um poeta» sai como «[…]» e o verso seguinte é o 14; os dois cortes de «Ao Gás»
-  saem como «[…]», sem número;
+  saem como «[…]», sem número, e os excertos de «Ao Gás» (Texto 5 da m6-u2) não levam número nenhum (revisão de 13/11/2026: com
+  estrofes saltadas, o número contado por cima dos cortes não era o número do verso na parte);
 * em papel (A4, margens de 12 mm): os desdobráveis de apoio (.tf-so-ecra: exemplos) e o cartão «Rever a matéria» não saem; o
   material dos temas sai aberto; nenhum texto e nenhuma estrofe se parte entre duas páginas (cada soneto, cada estrofe e cada
   parte de 44 versos sai inteira numa página, com o vocabulário e a fonte); o cabeçalho do cartão dos temas sai na página onde
-  começa o tema A; a m6-u1 cabe em 8 páginas e a m6-u2, que leva as quatro partes do poema (152 versos), em 9; a versão de correção
+  começa o tema A; os passos de cada tema saem todos na mesma página, e os seis factos do dossiê também (revisão de 13/11/2026);
+  a m6-u1 cabe em 8 páginas e a m6-u2, que leva as quatro partes do poema (152 versos), em 9; a versão de correção
   cabe numa página.
 
 Uso: python3 tests/browser_tarefas_faceis_m6.py [--url http://127.0.0.1:PORTA]
@@ -69,7 +71,8 @@ SO_TEMA = {'m6-u1': [6, 14], 'm6-u2': [6, 44 + 44 + 22 + 44]}
 # para não se partir um poema, e por isso o enunciado pode ter 9 páginas.
 MAX_PAGINAS = {'m6-u1': 8, 'm6-u2': 9}
 # O que as lições não dão: (texto, linha da marca, número que a linha seguinte mostra ou None, linhas numeradas do texto).
-FALTA = {'m6-u1': [('#texto-2', 12, None, ['5', '10'])], 'm6-u2': [('#texto-5', 4, '5', None), ('#texto-5', 13, None, None)]}
+# 13/11/2026: revisão. Os excertos de «Ao Gás» não levam números (a linha a seguir ao primeiro corte já não mostra «5»).
+FALTA = {'m6-u1': [('#texto-2', 12, None, ['5', '10'])], 'm6-u2': [('#texto-5', 4, None, None), ('#texto-5', 13, None, None)]}
 MEDIR = '''() => { const c = document.querySelector('.casca-corpo'); const cartao = document.querySelector('.task-reader-card:not([hidden])');
   return { nome: cartao.getAttribute('aria-label'), pagina: document.documentElement.scrollWidth <= innerWidth + 1,
     corpo: c.scrollWidth <= c.clientWidth + 1,
@@ -121,10 +124,18 @@ def ecra(host, browser, slug):
                 assert len(numeros) == 14 and [n for n, _ in numeros if n] == ['5', '10'], (onde, numeros)
                 assert numeros[4][0] == '5' and numeros[9][0] == '10' and numeros[13][1] == 'Sonhador, faze espada de combate!', (onde, numeros)
             else:
-                # «Ao Gás»: os cortes não contam; o verso 5 é o primeiro da estrofe a seguir ao primeiro corte.
+                # 13/11/2026: revisão. «Ao Gás» (excertos): 22 linhas (20 versos e os dois cortes), nenhuma com número. Antes, os números
+                # 5, 10, 15 e 20 contavam-se por cima dos cortes e não eram os números dos versos na parte. As partes inteiras
+                # (Textos 3, 4 e 6) numeram-se de 5 em 5, de 5 a 40, e a nota por cima dos textos di-lo.
                 numeros = page.evaluate("""() => [...document.querySelectorAll('#texto-5 .tt-v')].map(v => [v.querySelector('.tt-n').textContent, v.querySelector('.tt-l').textContent])""")
-                assert [n for n, _ in numeros if n] == ['5', '10', '15', '20'], (onde, numeros)
-                assert numeros[5] == ['5', "N'um cutileiro, de avental, ao torno,"], (onde, numeros[5])
+                assert len(numeros) == 22 and not [n for n, _ in numeros if n], (onde, numeros)
+                assert numeros[5] == ['', "N'um cutileiro, de avental, ao torno,"], (onde, numeros[5])
+                for t in ('#texto-3', '#texto-4', '#texto-6'):
+                    ns = page.evaluate("""(t) => [...document.querySelectorAll(t + ' .tt-n')].map(e => e.textContent).filter(x => x)""", t)
+                    assert ns == [str(k) for k in range(5, 45, 5)], (onde, t, ns)
+                nota = page.evaluate("""() => document.querySelector('details.tf-dois-temas .tf-p').textContent""")
+                assert nota == ('Nos Textos\xa03, 4\xa0e\xa06, os versos numeram-se a partir de\xa01 em cada parte. '
+                                'O Texto\xa05 não tem números, porque lhe faltam estrofes.'), (onde, nota)
             for i in range(6):
                 ir(page, i)
                 m = page.evaluate(MEDIR)
@@ -347,6 +358,10 @@ def impressao(host, browser, slug):
     assert page.locator('.tt-par, .tt-prosa').count() == 0, slug
     assert page.locator('img, figure').count() == 0, slug
     assert page.evaluate('[...document.querySelectorAll(".task-checklist label")].filter(e => e.getClientRects().length).length') == 10, slug
+    # 13/11/2026: revisão. Os passos de cada tema e os factos do dossiê não se partem entre duas páginas (classe tf-juntos): a regra,
+    # tal como o navegador a aplica; mais abaixo, confere-se no PDF.
+    juntos = page.evaluate("""() => [...document.querySelectorAll('.task-theme > ol.tf-passos, .tf-dossie')].map(e => [e.classList.contains('tf-juntos'), getComputedStyle(e).breakInside])""")
+    assert juntos == [[True, 'avoid']] * 3, (slug, juntos)
     pdf = page.pdf(format='A4', print_background=False, margin={'top': '12mm', 'bottom': '12mm', 'left': '12mm', 'right': '12mm'})
     if SAIDA:
         (Path(SAIDA) / f'{slug}-impressao.pdf').write_bytes(pdf)
@@ -395,6 +410,18 @@ def impressao(host, browser, slug):
             pag = [kk for kk, f in enumerate(fs) if junto(topo['topo']) in f]
             assert len(pag) == 1 and junto(topo['titulo']) in fs[pag[0]], (slug, nome, pag)
             assert junto(topo['a_seguir'])[:40] in fs[pag[0]], (slug, nome, pag, 'o cabeçalho dos temas ficou sozinho no fundo da página')
+        # 13/11/2026: revisão. No PDF, com as margens de 12 mm e sem margens: os passos de cada tema estão todos na mesma página (com a
+        # frase que os apresenta), e os seis factos do dossiê também (com o título do dossiê).
+        grupos = page.evaluate("""() => [...document.querySelectorAll('.task-theme')].map(a => ({ nome: 'tema ' + a.dataset.taskTheme,
+            itens: [a.querySelector('.tf-p').textContent, ...[...a.querySelectorAll(':scope > ol.tf-passos > li')].map(e => e.textContent)] }))
+            .concat([{ nome: 'dossiê', itens: [document.querySelector('#dossie').textContent,
+                       ...[...document.querySelectorAll('.tf-dossie li')].map(e => e.textContent)] }])""")
+        assert [len(g['itens']) for g in grupos] == [len(page.query_selector_all(f'[data-task-theme="{x}"] > ol.tf-passos > li')) + 1 for x in 'AB'] + [7], (slug, grupos)
+        for nome, doc in (('12 mm', pdf), ('sem margens', page.pdf(format='A4', print_background=False))):
+            fs = [junto(p.extract_text() or '') for p in PdfReader(io.BytesIO(doc)).pages]
+            for g in grupos:
+                pags = [[kk for kk, f in enumerate(fs) if junto(x) in f] for x in g['itens']]
+                assert all(len(x) == 1 for x in pags) and len({x[0] for x in pags}) == 1, (slug, nome, g['nome'], pags, 'partido entre páginas')
         partido = 'conferido no PDF'
     except ImportError:
         # Sem pypdf (o fluxo só instala o Playwright): conferem-se as regras que o impedem, tal como o navegador as aplica, e que

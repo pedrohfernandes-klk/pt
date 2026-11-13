@@ -278,4 +278,9 @@ main.task-page.task-choice-page[data-task-facil] :is(p,li,td,th,dd,figcaption,la
  [data-task-facil] .tt-texto.tt-pagina .tt-gloss ul{columns:4 8rem;column-gap:14pt}
  [data-task-facil] .tt-texto.tt-pagina .tt-gloss li{margin-bottom:1pt}
  [data-task-facil] .tt-texto.tt-pagina .tt-fonte{margin-top:2pt;font-size:8pt}
+ /* 13/11/2026, revisão: os passos de um tema e os factos do dossiê saem juntos, sem se partirem entre duas páginas (.tf-juntos, que
+    só a m6-u1 e a m6-u2 têm, com a chave «juntos_em_papel»); as frases que apresentam os passos também não se partem, para irem
+    inteiras com eles. */
+ [data-task-facil] .tf-juntos{break-inside:avoid}
+ [data-task-facil] .task-theme:has(>.tf-juntos)>.tf-p{break-inside:avoid}
 }

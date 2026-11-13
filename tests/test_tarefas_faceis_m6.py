@@ -7,7 +7,8 @@ tests/test_tarefas_faceis_m1.py e tests/test_tarefas_faceis_m5.py exigem das do 
 * a tarefa pede o mesmo: os títulos, os nomes e as letras dos temas, os números de palavras, os versos e os títulos que o enunciado
   de antes citava, cada pedido do enunciado de antes (com as mesmas palavras), o dossiê e a pergunta opcional, e os critérios,
   níveis, exemplos e pontos da grelha, iguais aos de antes da camada (a base do manifesto, o main 02606259), salvo os cinco exemplos
-  da grelha da m6-u2 que usavam versos ou palavras dos textos da tarefa (EXEMPLOS_TROCADOS, conferidos um a um). Duas decisões do
+  da grelha da m6-u2 que usavam versos ou palavras dos textos da tarefa e a nota que os anuncia (EXEMPLOS_TROCADOS, conferidos um a
+  um). Duas decisões do
   docente: na m6-u2, o étimo de «cheio» e de «pleno» é dado no enunciado, e «algo que não podes fotografar» passa a «o que a imagem
   não mostra»; na m6-u1, «para que serve o sonho» diz-se no enunciado e na grelha;
 * os textos para análise são os das lições do M6, letra a letra, na grafia das lições: cada verso da página é um verso de um cartão
@@ -133,7 +134,10 @@ FONTE_MAIS = {
     ('m6-u2', 'texto-1'): ' É uma estrofe de «Ao Gás», a parte III do poema (está também no <a href="#texto-5">Texto 5</a>).',
     ('m6-u2', 'texto-2'): ' É uma estrofe de «Horas Mortas», a parte IV do poema (está também no <a href="#texto-6">Texto 6</a>).',
     ('m6-u2', 'texto-3'): ' A parte I, inteira.', ('m6-u2', 'texto-4'): ' A parte II, inteira.',
-    ('m6-u2', 'texto-5'): ' As lições dão cinco estrofes da parte III; «[…]» marca o que as lições saltam. A parte inteira está no manual.',
+    # 13/11/2026: revisão. Com estrofes saltadas, um número contado por cima dos cortes não era o número do verso na parte: o Texto 5
+    # deixa de ter números e a linha de fonte di-lo (a exigência fica mais forte: confere-se também que não há nenhum número).
+    ('m6-u2', 'texto-5'): ' As lições dão cinco estrofes da parte III; «[…]» marca o que as lições saltam. Por isso estes versos não têm '
+                          'número. A parte inteira está no manual.',
     ('m6-u2', 'texto-6'): ' A parte IV, inteira.',
 }
 # Com as quatro partes de «O Sentimento dum Ocidental» na página da m6-u2, estes exemplos da grelha usavam versos ou palavras desses
@@ -155,7 +159,12 @@ EXEMPLOS_TROCADOS = {
          'Chave veio pela via popular e clave pela erudita. «Occidental» hoje escreve-se ocidental.'),
         ('E de 1887: «Edade-média» passa a Idade Média (a vogal inicial fixou-se em i, o hífen caiu e Média leva maiúscula); «oxygenio» passa a '
          'oxigénio (o y passou a i, com acento gráfico).',
-         'E de 1887: «occidental» passa a ocidental (perdeu um c); «lyrios» passa a lírios (o y passou a i, com acento gráfico).'),
+         # 13/11/2026: revisão. «lyrios» não é uma grafia de 1887 (é de «Ideal», na edição de 1886): a lição F05 dá as duas como
+         # grafias «do século XIX», e o exemplo passa a dizer o que a lição diz.
+         'E do século XIX: «occidental» passa a ocidental (perdeu um c); «lyrios» passa a lírios (o y passou a i, com acento gráfico).'),
+        # 13/11/2026: revisão. A nota da grelha que anuncia os exemplos diz o mesmo.
+        ('(outra estrofe, outro verso, outras palavras de 1887, outro poema para fotografar)',
+         '(outra estrofe, outro verso, outras palavras do século XIX, outro poema para fotografar)'),
     ],
 }
 # De onde vem cada citação nova dos exemplos: (lição, citação), letra a letra na lição e fora dos textos da tarefa.
@@ -163,7 +172,9 @@ EXEMPLOS_DAS_LICOES = {
     'm6-u1': [('m6/licao-m6-f02/index.html', 'Dorme o teu somno, coração liberto,'), ('m6/licao-m6-f07/index.html', 'Triste cidade! Eu temo que me avives'),
               ('m3/licao-m3-f09/index.html', 'Roga a Deus, que teus anos encurtou,')],
     'm6-u2': [(F12, 'Nós levantámos todo aquelle peso'), (F12, 'Que ao chão de pedra resistia preso,'), (F12, 'E fere a vista, com brancuras quentes,'),
-              (F05, '«occidental», grafia de 1887, perdeu um'), (F05, 'passou a _i_ em «lyrios», «lírios»')],
+              (F05, '«occidental», grafia de 1887, perdeu um'), (F05, 'passou a _i_ em «lyrios», «lírios»'),
+              # 13/11/2026: revisão. A lição dá as duas grafias como «do século XIX».
+              (F05, '«Occidental», «melancholia», «lyrios», «sómente», «egrejas»: grafias do século XIX')],
 }
 TROCAS_COMUNS = [
     ['Núcleo comum (duas respostas) e um tema à escolha (A ou B)', 'Duas perguntas e um tema à escolha (A ou B)'],
@@ -173,7 +184,15 @@ TROCAS_COMUNS = [
     ['Fecho: ', 'Duas linhas finais: '], ['Fecho genérico, sem verso.', 'Duas linhas finais genéricas, sem verso.']]
 TROCAS_U1 = [
     ['nem o que é o sonho ou o ideal', 'nem para que serve o sonho'], ['e o que é o sonho ou o ideal', 'e para que serve o sonho'],
-    ['no papel do sonho', 'naquilo para que serve o sonho']]
+    ['no papel do sonho', 'naquilo para que serve o sonho'],
+    # 13/11/2026: revisão, «tudo junto». A grelha e a versão de correção passam a usar as palavras do enunciado: «a quem se dirige a
+    # voz», «uma diferença», «a função de «que»» e «recontar».
+    ['a quem fala a voz', 'a quem se dirige a voz'], ['uma semelhança e o que muda', 'uma semelhança e uma diferença'],
+    ['não explicas o que muda', 'não explicas a diferença'], ['ou o que muda não se apoia', 'ou a diferença não se apoia'],
+    ['o que muda de um soneto para o outro', 'uma diferença de um soneto para o outro'],
+    ['não dizer o que muda', 'não dizer a diferença'],
+    ['Dizer o que muda sem um verso que o mostre', 'Dizer a diferença sem um verso que a mostre'],
+    ['com o papel de «que»', 'com a função de «que»'], ['outro soneto para reescrever', 'outro soneto para recontar']]
 TROCAS_U2 = [
     ['o que não podes fotografar, e porquê', 'o que a imagem não mostra, e porquê'],
     ['Não posso fotografar a insegurança de que fala o verso', 'A imagem não mostra a insegurança de que fala o verso'],
@@ -432,7 +451,7 @@ class TarefasFaceisM6(unittest.TestCase):
                 self.assertEqual([(c['nome'], c['max'], {k: v[0] for k, v in c['niveis'].items()}, c.get('custa')) for c in t['criterios']],
                                  [(c['nome'], c['max'], {k: v[0] for k, v in c['niveis'].items()}, c.get('custa')) for c in base[slug]['criterios']])
                 self.assertEqual(sum(c['max'] for c in t['criterios']), 20)
-        self.assertEqual(len(EXEMPLOS_TROCADOS['m6-u2']), 5)
+        self.assertEqual(len(EXEMPLOS_TROCADOS['m6-u2']), 6)  # 13/11/2026: revisão, mais a nota que anuncia os exemplos
         for slug in SLUGS:
             t = agora[slug]
             self.assertIs(t['autoavaliacao_so_tua'], True)
@@ -450,7 +469,7 @@ class TarefasFaceisM6(unittest.TestCase):
             self.assertEqual(grelha.count('Duas linhas finais: '), 2)
             self.assertEqual(grelha.count('Duas linhas finais genéricas, sem verso.'), 1)
         # Nas duas, as sete trocas das palavras comuns (as cinco das grelhas do M3, do M1 e do M5 e «Duas linhas finais» onde a grelha
-        # dizia «Fecho»); na m6-u1, mais três: «para que serve o sonho»; na m6-u2, mais três: «o que a imagem não mostra» e o étimo.
+        # dizia «Fecho»); na m6-u1, mais três: «para que serve o sonho» (e, desde a revisão de 13/11/2026, mais nove: as palavras do enunciado); na m6-u2, mais três: «o que a imagem não mostra» e o étimo.
         self.assertEqual(agora['m6-u1']['trocas_aluno'], TROCAS_COMUNS + TROCAS_U1)
         self.assertEqual(agora['m6-u2']['trocas_aluno'], TROCAS_COMUNS + TROCAS_U2)
         self.assertEqual(agora['m6-u2']['trocas_aluno'][:5], agora['m3-u2']['trocas_aluno'][:5])
@@ -508,7 +527,11 @@ class TarefasFaceisM6(unittest.TestCase):
                     self.assertEqual(na_pagina, linhas)
                     numeros_pag = [n for n in re.findall(r'<span class="tt-n">(\d*)</span>', bloco) if n]
                     contam = versos + sum(m['conta'] for m in marcas)
-                    self.assertEqual(numeros_pag, [str(k) for k in range(5, contam + 1, 5)])
+                    # 13/11/2026: revisão. Os excertos de «Ao Gás» (Texto 5 da m6-u2) não levam números: com estrofes saltadas, o
+                    # número contado por cima dos cortes não era o número do verso na parte. Os outros textos numeram-se de 5 em 5.
+                    sem_numeros = (slug, t['id']) == ('m6-u2', 'texto-5')
+                    self.assertEqual(t['numerar'], 0 if sem_numeros else 5)
+                    self.assertEqual(numeros_pag, [] if sem_numeros else [str(k) for k in range(5, contam + 1, 5)])
                     self.assertEqual(bloco.count('class="tt-v tt-falta"'), len(marcas))
                     for palavra, sentido in t.get('glossario', []):
                         self.assertIn(f'<li><b>{palavra}</b>: {sentido}</li>', bloco)
@@ -541,6 +564,16 @@ class TarefasFaceisM6(unittest.TestCase):
         self.assertEqual(solto(f['textos'][1]['fonte']), 'Antero de Quental, «A um poeta», <i>Os Sonetos Completos</i>, 1886 (grafia da edição). As lições '
                          'dão 13 dos 14 versos: falta o verso 13, marcado com «[…]». Esse verso está no manual.')
         self.assertIn('Antero de Quental, «A um poeta», <i>Os Sonetos Completos</i>, 1886.', arr[13]['html'])
+        # 13/11/2026: revisão. O verso que falta é o único do soneto com a palavra «sonho», e a alínea b) pergunta para que serve o
+        # sonho: uma linha de ajuda da pergunta 1 diz que o verso falta e manda reler o cartão da lição F13 que lê o último verso
+        # (as lições são material de consulta). O título da lição e o do cartão são os da lição.
+        self.assertEqual(f['perguntas'][0]['ajudas'][-1], f'No Texto{N}2 falta o verso{N}13. Para a alínea{N}b), relê na lição{N}F13, '
+                         '<a href="../../m6/licao-m6-f13/">O sonho pode pedir ação?</a>, o cartão «Uma espada feita de sonho».')
+        self.assertEqual(len(f['perguntas'][0]['ajudas']), 4)
+        self.assertIn('<p class="tf-ajuda">' + f['perguntas'][0]['ajudas'][-1] + '</p>', ler(ENUNCIADOS[0]))
+        self.assertEqual(arr[7]['titulo'], 'Uma espada feita de sonho')
+        self.assertIn('<title>O sonho pode pedir ação? · M6-F13 · Português</title>', ler(F13))
+        self.assertTrue((ROOT / 'm6/licao-m6-f13/index.html').is_file())
         # O vocabulário de «A um poeta» é o que a lição diz no texto dos cartões (e «fragor», do vocabulário da lição F01).
         self.assertEqual(f['textos'][1]['glossario'], [['levita', 'aqui, uma figura ligada ao serviço religioso'], ['fragor', 'estrondo'],
                                                        ['larvas tumulares', 'expressão que lembra a morte'], ['rebate', 'sinal de alarme']])
@@ -566,6 +599,9 @@ class TarefasFaceisM6(unittest.TestCase):
         self.assertEqual([p['textos'] for p in f['perguntas']], [['texto-1', 'texto-2'], []])
         self.assertEqual([t['material'].get('textos', []) for t in f['temas']], [[], []])
         self.assertEqual(f['temas_material']['textos'], ['texto-3', 'texto-4', 'texto-5', 'texto-6'])
+        # 13/11/2026: revisão. A nota dos números diz que textos se numeram e porque o Texto 5 não tem números.
+        self.assertEqual(f['temas_material']['notas'], [f'Nos Textos{N}3, 4{N}e{N}6, os versos numeram-se a partir de{N}1 em cada parte. '
+                                                        f'O Texto{N}5 não tem números, porque lhe faltam estrofes.'])
         self.assertEqual(sorted(todos_os_textos(f)), [f'texto-{k}' for k in range(1, 7)])
         self.assertEqual(f['textos'][0]['estrofes'][0]['versos'][1], "Quizera que o real e a analyse m'o dessem;")
         self.assertEqual(f['textos'][1]['estrofes'][0]['versos'][3], 'Amarelladamente, os cães parecem lobos.')
@@ -643,8 +679,15 @@ class TarefasFaceisM6(unittest.TestCase):
             for k in range(len(palavras_ex) - 3):
                 quatro = ' '.join(palavras_ex[k:k + 4]).casefold()
                 self.assertNotIn(' ' + quatro + ' ', juntas, quatro)
-            # Na m6-u2, as palavras de 1887 dos exemplos também não estão nos textos da página.
+            # Na m6-u2, as grafias antigas dos exemplos também não estão nos textos da página.
             if slug == 'm6-u2':
+                # 13/11/2026: revisão. O exemplo diz «do século XIX», como a lição F05, e não «de 1887» («lyrios» é de 1886).
+                self.assertEqual(f['perguntas'][1]['exemplos'][0]['titulo'], f'Outro étimo e outras grafias do século{N}XIX')
+                self.assertIn(f'E do século{N}XIX: «occidental» passa a ocidental', f['perguntas'][1]['exemplos'][0]['paragrafos'][1]['t'])
+                for onde in (dentro, exemplos_da_grelha, solto(ler(f'tarefas/{slug}/grelha/index.html'))):
+                    self.assertNotIn('E de 1887', solto(onde))
+                    self.assertNotIn('grafias de 1887', solto(onde))
+                    self.assertNotIn('palavras de 1887', solto(onde))
                 for palavra in ('occidental', 'lyrios'):
                     self.assertNotIn(palavra, textos_da_pagina.casefold())
                 for palavra in ('Edade-média', 'oxygenio', 'mausoléos', 'arripia'):
@@ -667,6 +710,9 @@ class TarefasFaceisM6(unittest.TestCase):
         # Em papel, uma parte de 44 versos sai inteira numa página, em letra um pouco mais pequena; não há páginas novas forçadas.
         self.assertIn('[data-task-facil] .tt-texto.tt-pagina .tt-versos,[data-task-facil] .task-theme .tt-texto.tt-pagina .tt-versos{font-size:10pt;line-height:1.2}', impressao)
         self.assertNotRegex(css, r'break-(?:before|after):\s*page')
+        # 13/11/2026: revisão. Os passos de um tema e os factos do dossiê saem juntos em papel.
+        self.assertIn('[data-task-facil] .tf-juntos{break-inside:avoid}', impressao)
+        self.assertIn('[data-task-facil] .task-theme:has(>.tf-juntos)>.tf-p{break-inside:avoid}', impressao)
         self.assertNotIn('tt-pagina{break-inside:auto', css.replace(' ', ''))
 
     # ---------- as decisões do docente, em todos os sítios ----------
@@ -824,13 +870,24 @@ class TarefasFaceisM6(unittest.TestCase):
         self.assertIn(f'Na pergunta{N}1, indiquei a quem se dirige a voz e para que serve o sonho, nos dois sonetos?', enunciado)
         for parte in ('grelha/', 'correcao/'):
             p = solto(visivel(ler(f'tarefas/m6-u1/{parte}index.html'), so_main=False))
-            self.assertIn('Em cada soneto, dizes a quem fala a voz e para que serve o sonho, com um verso exato dos tercetos, explicado.', p)
-            self.assertIn('o que muda de um soneto para o outro naquilo para que serve o sonho.', p)
-            for velha in ('o que é o sonho ou o ideal', 'papel do sonho'):
+            # 13/11/2026: revisão, «tudo junto». A grelha e a versão de correção dizem «a quem se dirige a voz», «uma diferença» e «a
+            # função de «que»», como o enunciado; as palavras antigas («a quem fala a voz», «o que muda», «o papel de «que»») saem.
+            self.assertIn('Em cada soneto, dizes a quem se dirige a voz e para que serve o sonho, com um verso exato dos tercetos, explicado.', p)
+            self.assertIn('uma diferença de um soneto para o outro naquilo para que serve o sonho.', p)
+            self.assertIn('A comparação: uma semelhança e uma diferença', p)
+            self.assertIn('justificas com a função de «que» na sua oração', p)
+            for velha in ('o que é o sonho ou o ideal', 'papel do sonho', 'a quem fala a voz', 'o que muda', 'o papel de «que»', 'reescrever'):
                 self.assertNotIn(velha, p, parte)
         grelha = solto(visivel(ler('tarefas/m6-u1/grelha/index.html'), so_main=False))
-        self.assertIn('Não dizes a quem fala a voz nem para que serve o sonho, ou não citas nenhum verso.', grelha)
-        self.assertIn('mas não explicas o que muda naquilo para que serve o sonho', grelha)
+        self.assertIn('Não dizes a quem se dirige a voz nem para que serve o sonho, ou não citas nenhum verso.', grelha)
+        self.assertIn('mas não explicas a diferença naquilo para que serve o sonho, ou a diferença não se apoia nos versos.', grelha)
+        self.assertIn('Ficar na semelhança e não dizer a diferença.', grelha)
+        self.assertIn('Dizer a diferença sem um verso que a mostre.', grelha)
+        self.assertIn('outro soneto para recontar', grelha)
+        # As mesmas palavras no enunciado.
+        for frase in ('Indica a quem se dirige a voz.', 'Explica uma diferença.', 'Justifica com a função de «que» na sua oração.',
+                      'Reconta «O Palacio da Ventura» em prosa, numa situação atual.'):
+            self.assertIn(frase, enunciado)
         aquecimento = solto(ler(AQUECIMENTOS[0]))
         self.assertIn('a quem se dirige a voz e para que serve o sonho em cada soneto, com um verso dos tercetos; uma semelhança e uma diferença; '
                       'as orações do verso de Cesário e a função de «que»;', aquecimento)
@@ -1110,8 +1167,13 @@ class TarefasFaceisM6(unittest.TestCase):
                 for frase in ('<h2 id="finais-titulo">Duas linhas finais</h2>', '<h2>Entrega no Teams</h2>', '<h2 id="entregar-title">Antes de entregar, verifica</h2>'):
                     self.assertEqual(fonte.count(frase), 1, frase)
                 # Dossiê do tema B: cada facto com a sua fonte e a ligação, que existe; citações e números na página para onde aponta.
-                dossie = re.findall(r'<section class="task-dossier tf-dossie".*?</section>', fonte, re.S)
+                # 13/11/2026: revisão. Em papel, os factos do dossiê e os passos de cada tema não se partem entre duas páginas
+                # (classe tf-juntos, da chave «juntos_em_papel»; confere-se no PDF em tests/browser_tarefas_faceis_m6.py).
+                dossie = re.findall(r'<section class="task-dossier tf-dossie tf-juntos".*?</section>', fonte, re.S)
                 self.assertEqual(len(dossie), 1)
+                self.assertIs(d['facil']['juntos_em_papel'], True)
+                self.assertEqual(fonte.count('<ol class="tf-passos tf-juntos">'), 2)
+                self.assertEqual(fonte.count('tf-juntos'), 3)
                 self.assertIn(f'<h4 id="dossie">Dossiê do tema{N}B</h4>', dossie[0])
                 factos = re.findall(r'<li>(.*?)<span class="tf-origem">Fonte: <a href="([^"]+)">(.*?)</a></span></li>', dossie[0])
                 self.assertEqual(len(factos), dossie[0].count('<li>'))
@@ -1183,7 +1245,7 @@ class TarefasFaceisM6(unittest.TestCase):
                 if no_molde:
                     # As páginas do M3, do M1 e do M5 continuam a pedir a folha de antes e não usam nenhuma das marcas novas.
                     self.assertEqual(pagina.count(f'task-textos.css?v=2026111{"2" if slug.startswith("m3") else "3"}-{FOLHA[slug]}"'), 1)
-                    for marca in ('facil-10', 'tt-falta', 'tt-pagina'):
+                    for marca in ('facil-10', 'tt-falta', 'tt-pagina', 'tf-juntos'):  # 13/11/2026: revisão, mais «tf-juntos»
                         self.assertNotIn(marca, pagina)
                 else:
                     for marca in ('data-task-facil', 'task-textos.css', 'facil-', 'class="tf-', 'class="tt-'):

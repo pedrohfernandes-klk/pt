@@ -28,7 +28,9 @@ Ficheiros (17):
   m6-u2, que deixam de usar versos e palavras dos textos da tarefa: ver «Os exemplos», mais abaixo) e docs/pedagogia/aquecimentos/
   m6-u1.json e m6-u2.json («Núcleo» passa a «Perguntas 1 e 2» e «as duas perguntas»; «o tema» no topo passa a «a letra do teu tema»;
   «reescrito» passa a «recontado» e «uma hora certa» a «uma hora definida», como no enunciado; na m6-u1, «a quem se dirige a voz e
-  para que serve o sonho», «uma diferença» e «a função de «que»», como no enunciado);
+  para que serve o sonho», «uma diferença» e «a função de «que»», como no enunciado; e, na revisão de 13/11/2026, as mesmas palavras
+  na grelha e na versão de correção da m6-u1, com mais nove «trocas_aluno»: a grelha dizia «a quem fala a voz», «o que muda», «o
+  papel de «que»» e «outro soneto para reescrever»);
 - as páginas geradas: tarefas/m6-u1/ e tarefas/m6-u2/ (enunciado, grelha/, aquecimento/ e correcao/);
 - as páginas do módulo que falam da aula de tarefa: m6/guia-da-tarefa-m6/ (10 e 55 minutos em vez de 5 e 60; «as duas perguntas»
   em vez de «núcleo comum»; sem a «Autoavaliação» que se copiava para o Teams e sem «pergunta ao teu par de trabalho»: a regra passa
@@ -48,12 +50,15 @@ na lição») e «algo que não podes fotografar» passa a «o que a imagem não
 
 De onde vêm os textos (cada bloco de texto dos dados traz a «origem»): m6-u1, lições F02 («Ideal», os 14 versos), F13 («A um
 poeta»: os versos 1 a 12 e 14, que são os que a lição dá; o verso 13 não está em nenhuma lição do repositório e NÃO se copiou de
-fora: a página marca-o com «[…]», conta-o na numeração e a linha de fonte diz que falta e que está no manual; a epígrafe também
+fora: a página marca-o com «[…]», conta-o na numeração e a linha de fonte diz que falta e que está no manual; como é o único verso
+do soneto com a palavra «sonho» e a alínea b) pergunta para que serve o sonho, uma linha de ajuda da pergunta 1 diz que o verso
+falta e manda reler, na lição F13, o cartão «Uma espada feita de sonho», que lê o último verso; a epígrafe também
 não está na lição e não entra), F06 (a estrofe dos versos 21 a 24 de «Ave-Marias», que tem o verso da pergunta 2) e F01 («O
 Palacio da Ventura», os 14 versos, para os dois temas); m6-u2, lição F07 (a estrofe de «Ao Gás» com o verso da pergunta 1 e a
 estrofe de «Horas Mortas» que a pergunta 1 manda analisar) e, para os dois temas, as quatro partes de «O Sentimento dum Ocidental»
 como as lições as dão: a parte I inteira (F06), a parte II inteira (F07), cinco estrofes da parte III (F07, com os cortes «[…]» da
-lição; a linha de fonte diz que a parte inteira está no manual) e a parte IV inteira (F07). Nenhum texto veio de fora das lições.
+lição; a linha de fonte diz que a parte inteira está no manual; estes excertos não levam números de verso, porque um número
+contado por cima dos cortes não seria o número do verso na parte, e a nota por cima dos textos e a linha de fonte dizem-no) e a parte IV inteira (F07). Nenhum texto veio de fora das lições.
 Os versos da pergunta 2 da m6-u2 («Cheio de bellas proporções carnaes», «Pousára, ajoelhando, a sua giga.», de «Num Bairro
 Moderno», lição F12, e «O sol, já alto e pleno», de «A um poeta», lição F13) citam-se no pedido, com o poema e o autor de cada um.
 O étimo (plenu-) e as duas vias vêm da lição F05. Não há imagens.
@@ -65,12 +70,15 @@ Com as quatro partes do poema na página da m6-u2, cinco exemplos da grelha dess
 («Um sopro que arripia os hombros quasi nús.» e «Tornam-se mausoléos as armações fulgentes.», de «Ao Gás»; «Edade-média», de «Noite
 Fechada»; «oxygenio», de «Horas Mortas»): passam a usar versos de «Num Bairro Moderno» que a lição F12 dá («Nós levantámos todo
 aquelle peso / Que ao chão de pedra resistia preso,», «E fere a vista, com brancuras quentes,») e as grafias «occidental» e
-«lyrios», da lição F05. Os critérios, os níveis e os pontos não mudam.
+«lyrios», que a lição F05 dá como grafias do século XIX (o exemplo e a nota da grelha dizem «do século XIX», não «de 1887»: «lyrios»
+é de «Ideal», na edição de 1886). Os critérios, os níveis e os pontos não mudam.
 
 O molde ganhou duas chaves opcionais (scripts/tarefa_facil.py): num texto em verso, um verso {"falta": "[…]", "conta": n} (o que
 as lições não dão: um verso que falta e conta para a numeração, ou um corte, que não conta) e «pagina» (uma parte de 44 versos que
 em papel sai inteira numa só página). A folha assets/task-textos.css ganhou as regras dessas duas classes (versão facil-10, que só
-a m6-u1 e a m6-u2 pedem). As páginas do M3, do M1 e do M5 saem iguais, byte a byte.
+a m6-u1 e a m6-u2 pedem). As páginas do M3, do M1 e do M5 saem iguais, byte a byte. Na revisão de 13/11/2026, mais duas chaves
+opcionais: «numerar» 0 (um texto em verso sem números: os excertos de «Ao Gás») e «juntos_em_papel» (em papel, os passos de cada
+tema saem todos na mesma página, e os factos do dossiê também: classe tf-juntos, com a regra na mesma folha).
 
 O que NÃO muda: as outras tarefas, as suas grelhas, correções e aquecimentos (saem dos mesmos geradores, iguais byte a byte); os
 critérios, os níveis e os pontos das grelhas (as trocas de palavras fazem-se só ao escrever as páginas; dos exemplos mudam só os
@@ -123,7 +131,8 @@ ACHADOS = {
              'com o que se faz, o que se entrega e o quadro 10/10/55/15, e a verificação em perguntas de sim ou não.',
     'junto': '«Tudo junto» (decisão do docente): as mesmas palavras do enunciado novo («as duas perguntas» em vez de «núcleo»; «a letra '
              'do teu tema» em vez de «o tema escolhido»; «respostas ligadas» em vez de «articuladas»; «duas linhas finais» em vez de '
-             '«fecho»; «recontado», «uma hora definida», «uma diferença» e «a função de «que»», como no enunciado).',
+             '«fecho»; «recontado», «uma hora definida», «a quem se dirige a voz», «uma diferença» e «a função de «que»», como no '
+             'enunciado).',
     'tempos': 'Tempos decididos pelo docente: 10 minutos de aquecimento, 10 de leitura, 55 de produção e 15 de revisão e entrega (eram '
               '10, 5, 60 e 15), iguais em todos os sítios onde aparecem.',
     'auto': 'Decisão do docente: a autoavaliação da grelha é só para o aluno e não se entrega; a versão de correção fica com a nota e '
@@ -146,7 +155,7 @@ ACHADOS = {
                   'sai da lista do que o portefólio serve para avaliar, sem nada no lugar.',
     'exemplos': 'Regra do docente: os exemplos mostram sempre outro caso, sem as passagens da tarefa. Com as quatro partes de «O '
                 'Sentimento dum Ocidental» na página da m6-u2, os exemplos da grelha que usavam versos ou palavras desses textos passam '
-                'a usar versos de «Num Bairro Moderno» e grafias que as lições dão e que não estão nos textos da tarefa.',
+                'a usar versos de «Num Bairro Moderno» e grafias do século XIX que as lições dão e que não estão nos textos da tarefa.',
 }
 
 # As quatro páginas do módulo não são geradas: mudam só nestas trocas (página, antigo, novo, ocorrências, categorias).
@@ -380,7 +389,7 @@ def nome(rel):
 
 
 EXEMPLOS_NOVOS = ('Que ao chão de pedra resistia preso', 'levantar o peso é um gesto', 'o branco das paredes quando o sol lhes bate',
-                  'ccidental» hoje escreve-se ocidental', '«occidental» passa a ocidental', '«lyrios» passa a lírios')
+                  'ccidental» hoje escreve-se ocidental', '«occidental» passa a ocidental', '«lyrios» passa a lírios', 'outras palavras do século XIX')
 
 
 def categorias(rel, antigo, novo):

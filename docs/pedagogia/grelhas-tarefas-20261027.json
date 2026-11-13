@@ -964,7 +964,16 @@
     ["Fecho genérico, sem verso.", "Duas linhas finais genéricas, sem verso."],
     ["nem o que é o sonho ou o ideal", "nem para que serve o sonho"],
     ["e o que é o sonho ou o ideal", "e para que serve o sonho"],
-    ["no papel do sonho", "naquilo para que serve o sonho"]
+    ["no papel do sonho", "naquilo para que serve o sonho"],
+    ["a quem fala a voz", "a quem se dirige a voz"],
+    ["uma semelhança e o que muda", "uma semelhança e uma diferença"],
+    ["não explicas o que muda", "não explicas a diferença"],
+    ["ou o que muda não se apoia", "ou a diferença não se apoia"],
+    ["o que muda de um soneto para o outro", "uma diferença de um soneto para o outro"],
+    ["não dizer o que muda", "não dizer a diferença"],
+    ["Dizer o que muda sem um verso que o mostre", "Dizer a diferença sem um verso que a mostre"],
+    ["com o papel de «que»", "com a função de «que»"],
+    ["outro soneto para reescrever", "outro soneto para recontar"]
    ],
    "titulo": "Um ideal que não se alcança",
    "produto": "Núcleo comum (duas respostas) e um tema à escolha (A ou B), à mão, entre 200 e 240 palavras, mais duas linhas finais que não contam para as palavras. O aquecimento em cartões não conta para a nota.",
@@ -1108,7 +1117,7 @@
    ],
    "titulo": "A cidade vista e transfigurada",
    "produto": "Núcleo comum (duas respostas) e um tema à escolha (A ou B), à mão, entre 200 e 240 palavras, mais duas linhas finais que não contam para as palavras. O aquecimento em cartões não conta para a nota.",
-   "nota": "Os exemplos foram escritos para esta grelha com outros casos do mesmo tipo (outra estrofe, outro verso, outras palavras de 1887, outro poema para fotografar), nunca com a estrofe, os versos ou as palavras que a tarefa pede. As citações vêm das lições do M3 e do M6.",
+   "nota": "Os exemplos foram escritos para esta grelha com outros casos do mesmo tipo (outra estrofe, outro verso, outras palavras do século XIX, outro poema para fotografar), nunca com a estrofe, os versos ou as palavras que a tarefa pede. As citações vêm das lições do M3 e do M6.",
    "criterios": [
     {
      "nome": "A estrofe de «Horas Mortas»: o que se vê e em que se transforma",
@@ -1170,7 +1179,7 @@
       ],
       "max": [
        "Mostras a via de cada palavra comparando as suas letras com as do étimo, e passas as duas grafias para hoje, com o nome da mudança.",
-       "Noutro par, de _macula-_: mácula guarda quase todas as letras do latim (via erudita); mancha afasta-se dele (via popular). E de 1887: «occidental» passa a ocidental (perdeu um c); «lyrios» passa a lírios (o y passou a i, com acento gráfico)."
+       "Noutro par, de _macula-_: mácula guarda quase todas as letras do latim (via erudita); mancha afasta-se dele (via popular). E do século XIX: «occidental» passa a ocidental (perdeu um c); «lyrios» passa a lírios (o y passou a i, com acento gráfico)."
       ]
      },
      "custa": [
