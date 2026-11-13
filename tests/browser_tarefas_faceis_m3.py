@@ -10,8 +10,8 @@ reais (o leitor em cartões, os relógios, a peça «i»).
 * as ligações internas funcionam: «Texto N» noutro cartão abre esse cartão com o texto à vista; «dossiê» e o texto que é só do
   tema B abrem o desdobrável que os guarda;
 * em papel (A4, margens de 12 mm): os desdobráveis de apoio (.tf-so-ecra: exemplos, descrições, quadro) e o cartão «Rever a
-  matéria» não saem; o material de um só tema sai aberto; nenhum texto e nenhuma estrofe se parte entre duas páginas; cada
-  enunciado cabe em 8 páginas; a versão de correção cabe numa página.
+  matéria» não saem; o material de um só tema sai aberto; nenhum texto e nenhuma estrofe se parte entre duas páginas; o cabeçalho
+  do cartão dos temas sai na página onde começa o tema A; cada enunciado cabe em 8 páginas; a versão de correção cabe numa página.
 
 Uso: python3 tests/browser_tarefas_faceis_m3.py [--url http://127.0.0.1:PORTA]
 Sem --url, o teste abre o seu próprio servidor numa porta livre e fecha-o no fim. Com TAREFAS_FACEIS_M3_OUTPUT, guarda aí as
@@ -264,11 +264,23 @@ def impressao(host, browser, slug):
                 onde.add(primeira[0])
             assert len(onde) == 1, (slug, b['titulo'], sorted(onde), 'texto partido entre páginas')
             assert junto(b['fonte']) in folhas[onde.pop()], (slug, b['titulo'], 'a linha de fonte ficou noutra página')
+        # 13/11/2026: o cabeçalho do cartão dos temas («Escolhe um tema», a orientação e «Escreve a letra do teu tema») não fica
+        # sozinho no fundo de uma página: sai na página onde começa o tema A, com as margens de 12 mm e sem margens (achado de uma
+        # revisão: na m3-u2 ficava no fundo da página 3 e o tema A só começava na 4).
+        topo = page.evaluate('''() => ({ titulo: document.querySelector('#tema-titulo').textContent,
+            topo: document.querySelector('.tf-topo').textContent, passo: document.querySelector('.task-theme .tf-passos li').textContent })''')
+        for nome, doc in (('12 mm', pdf), ('sem margens', page.pdf(format='A4', print_background=False))):
+            fs = [re.sub(r'\s+', ' ', p.extract_text() or '') for p in PdfReader(io.BytesIO(doc)).pages]
+            pag = [k for k, f in enumerate(fs) if junto(topo['topo']) in f]
+            assert len(pag) == 1 and junto(topo['titulo']) in fs[pag[0]], (slug, nome, pag)
+            assert junto(topo['passo'])[:40] in fs[pag[0]], (slug, nome, pag, 'o cabeçalho dos temas ficou sozinho no fundo da página')
         partido = 'conferido no PDF'
     except ImportError:
         # Sem pypdf (o fluxo só instala o Playwright): confere-se a regra que o impede, tal como o navegador a aplica.
         regras = page.evaluate('''() => [...document.querySelectorAll('.tt-texto, .tt-estrofe')].map(e => getComputedStyle(e).breakInside)''')
         assert regras and all(r == 'avoid' for r in regras), (slug, regras)
+        # 13/11/2026: e a regra que prende o cabeçalho do cartão dos temas ao primeiro tema.
+        assert page.evaluate('''() => getComputedStyle(document.querySelector('.tf-topo')).breakAfter''') == 'avoid', slug
         partido = 'conferido nas regras de impressão'
     ctx.close()
     print(f'PASS impressão: {paginas} páginas A4, apoio fora do papel, nenhum poema partido ({partido})', slug, flush=True)

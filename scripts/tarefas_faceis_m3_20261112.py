@@ -41,6 +41,15 @@ De onde vêm os textos (cada bloco de texto dos dados traz a «origem»): m3-u1,
 F05 («Descalça vai para a fonte»), F09 («Alma minha gentil») e F03 (IV, 94 e 95); m3-u2, lições F10 (I, 4 e 5 e X, 145), F13
 (VIII, 96 a 99), F03 (IV, 94 e 95) e F15 (o quadro das três modalidades). Nenhum texto veio de fora das lições.
 
+Revisão de 13/11/2026 (achados de duas revisões independentes, tudo dentro desta camada): nas duas grelhas do aluno, «Duas linhas
+finais» em vez de «Fecho» (mais dois pares em «trocas_aluno»); nos exemplos, «Passo» e «Alínea» presos ao número ou à letra
+(U+00A0); em papel, o cabeçalho do cartão dos temas não fica sozinho no fundo de uma página (assets/task-textos.css, versão
+facil-7). O tema B da m3-u2 pede dois argumentos do Velho, que fala de IV, 95 a 104, e as lições só dão IV, 94 e 95: as estâncias
+96 a 104 não estão em nenhuma lição do repositório, e a edição modernizada em domínio público que se conferiu verso a verso
+(oslusiadas.org, igual à do Projeto Gutenberg n.º 3333) contra a transcrição da edição de 1572 (Projeto Gutenberg n.º 27236, a
+partir da Biblioteca Nacional Digital) tem gralhas («quantidades» em IV, 99; «velas» em IV, 102). Por isso não se copiaram: o
+tema B diz que o Texto 3 tem as estâncias IV, 94 e 95 e que o resto da fala do Velho está no manual, sem número de página.
+
 O que NÃO muda: as outras onze tarefas, as suas grelhas, correções e aquecimentos (saem dos mesmos geradores, iguais byte a byte);
 os critérios, os níveis, os exemplos e os pontos das grelhas (as trocas de palavras fazem-se só ao escrever as páginas); as lições.
 

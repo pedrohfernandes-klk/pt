@@ -40,7 +40,7 @@ import re
 from html import escape
 
 LIGACAO = '<p class="task-grelha"><a href="grelha/">Grelha /20: como é avaliado e autoavaliação</a></p>\n'
-V_FACIL = '20261112-facil-6'
+V_FACIL = '20261112-facil-7'
 FOLHAS = ('<link rel="stylesheet" href="../../assets/info-i.css?v=20261105">'
           f'<link rel="stylesheet" href="../../assets/task-textos.css?v={V_FACIL}">'
           '<script defer src="../../assets/info-i.js?v=20261105"></script>')

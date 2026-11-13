@@ -238,7 +238,16 @@ class TarefasFaceisM3(unittest.TestCase):
             self.assertEqual(antigos[:5], ['Núcleo comum (duas respostas) e um tema à escolha (A ou B)', 'Respostas articuladas', 'o tema no topo',
                                            'o tema escolhido está no topo', 'Não escrever no topo o tema escolhido (A ou B).'])
             self.assertEqual(antigos[5], 'mais duas linhas finais que não contam para as palavras.')
-            self.assertEqual(len(antigos), 6)
+            # 13/11/2026: o enunciado diz «Duas linhas finais» e já não diz «Fecho»; a grelha do aluno usa a mesma palavra nos exemplos e
+            # em «Custa pontos» (achado de uma revisão; «tudo junto»). Passam a ser oito trocas, e as duas novas são estas, exatas.
+            self.assertEqual(t['trocas_aluno'][6:], [['Fecho: ', 'Duas linhas finais: '],
+                                                     ['Fecho genérico, sem verso.', 'Duas linhas finais genéricas, sem verso.']])
+            self.assertEqual(len(antigos), 8)
+            grelha = visivel(ler(f'tarefas/{slug}/grelha/index.html'), so_main=False, sem_nav=False)
+            self.assertNotRegex(grelha, r'[Ff]echo')
+            self.assertEqual(grelha.count('Duas linhas finais: '), 2)
+            self.assertEqual(grelha.count('Duas linhas finais genéricas, sem verso.'), 1)
+            self.assertNotRegex(visivel(ler(f'tarefas/{slug}/index.html')), r'[Ff]echo')
             fonte = json.dumps({k: v for k, v in t.items() if k != 'trocas_aluno'}, ensure_ascii=False)
             for a in antigos:
                 self.assertIn(a, fonte)
@@ -291,6 +300,28 @@ class TarefasFaceisM3(unittest.TestCase):
         self.assertIn('direitos de autor', kit['frases'][0])
         bloco = re.search(r'<section class="tt-onde" id="kit".*?</section>', ler('tarefas/m3-u1/index.html'), re.S).group(0)
         self.assertNotRegex(visivel(bloco, so_main=False), r'\bp(?:ág)?\.\s*\d|página\s+\d')
+        # 13/11/2026: o tema B da m3-u2 pede dois argumentos do Velho, e o Velho fala de IV, 95 a 104 (dossiê). Das lições só vêm IV, 94
+        # e 95 (lição F03): nenhuma lição do M3 tem as estâncias 96 a 104, e a edição modernizada em domínio público que se conferiu
+        # contra a de 1572 tem gralhas. Por isso não se copiam: o tema diz o que o Texto 3 tem e que o resto da fala está no manual,
+        # sem número de página (achado de uma revisão).
+        f2 = json.loads(ler(DADOS_TAREFAS[1]))['facil']
+        tema_b = f2['temas'][1]
+        self.assertEqual(tema_b['antes'], [
+            f'O Velho do Restelo de Camões está no <a href="#texto-3">Texto{N}3</a>.',
+            f'O Texto{N}3 tem as estâncias{N}IV,{N}94{N}e{N}95, as mesmas das lições. O resto da fala do Velho (IV,{N}96{N}a{N}104) está no manual.'])
+        u2 = ler('tarefas/m3-u2/index.html')
+        for frase in tema_b['antes']:
+            self.assertEqual(u2.count(f'<p class="tf-p tf-antes">{frase}</p>'), 1)
+        self.assertEqual([e['rotulo'] for e in next(x for x in f2['textos'] if x['id'] == 'texto-3')['estrofes']],
+                         [f'Canto{N}IV, estância{N}94', f'Canto{N}IV, estância{N}95'])
+        for incipit in ('Dura inquietação', 'A que novos desastres', 'geração daquele insano', 'nesta gostosa', 'Ismaelita',
+                        'Deixas criar', 'maldito o primeiro', 'filho de Jápeto', 'moço miserando'):
+            self.assertNotIn(incipit, u2)
+            for licao in sorted((ROOT / 'm3').glob('licao-m3-f*/index.html')):
+                self.assertNotIn(incipit, licao.read_text('utf-8'), licao.parent.name)
+        self.assertNotRegex(visivel(u2), r'manual[^.]*\bp(?:ág)?\.\s*\d|manual[^.]*página\s+\d')
+        self.assertEqual(f2['rever_texto'], f'Os Textos{N}1, 2{N}e{N}3 já estão nesta página. As lições servem para rever a matéria.')
+        self.assertEqual(u2.count(f'<p class="tf-p">{f2["rever_texto"]}</p>'), 1)
         # O quadro das modalidades da m3-u2 é o da lição F15, letra a letra.
         f2 = json.loads(ler(DADOS_TAREFAS[1]))['facil']
         apoio = f2['perguntas'][1]['apoios'][0]
@@ -321,7 +352,11 @@ class TarefasFaceisM3(unittest.TestCase):
                     with self.subTest(tarefa=slug, exemplo=texto[:50]):
                         for r in reservadas:
                             self.assertNotIn(r, texto)
-                        if slug == 'm3-u1' and isinstance(p, dict) and p['al'].startswith('Passo 4'):
+                        # 13/11/2026: «Passo» e «Alínea» ficam presos ao número ou à letra (U+00A0), como as outras referências.
+                        if isinstance(p, dict):
+                            self.assertRegex(p['al'], rf'^(?:Passos?|Alíneas?){N}')
+                            self.assertNotRegex(p['al'], r'(?:Passos?|Alíneas?) |\d (?:a|e) \d|\) (?:a|e) [a-f]\)')
+                        if slug == 'm3-u1' and isinstance(p, dict) and p['al'].startswith(f'Passo{N}4'):
                             # A única linha que não vem da grelha: um verso das voltas de «Perdigão perdeu a pena», da lição F05.
                             self.assertIn('</span>Subiu a um alto lugar,</span>', ler('m3/licao-m3-f05/index.html'))
                             continue
@@ -340,6 +375,10 @@ class TarefasFaceisM3(unittest.TestCase):
         impressao = css[css.index('@media print{'):]
         self.assertIn('[data-task-facil] .tf-so-ecra{display:none!important}', impressao)
         self.assertIn('[data-task-facil] .tt-texto{break-inside:avoid}', impressao)
+        # 13/11/2026: em papel, o cabeçalho do cartão dos temas (título, orientação e «Escreve a letra do teu tema») não fica sozinho no
+        # fundo de uma página (achado de uma revisão; tests/browser_tarefas_faceis_m3.py confere-o na impressão).
+        self.assertIn('[data-task-facil] :is(h2,h3,h4,summary,.tt-rotulo,.tf-meta,.tf-antes,.tf-fig){break-after:avoid}', impressao)
+        self.assertIn('[data-task-facil] .tf-topo{break-after:avoid}', impressao)
         self.assertIn('[data-task-facil] .tt-estrofe{margin:0 0 14px;max-width:none;break-inside:avoid}', css)
 
     # ---------- as decisões do docente, em todos os sítios ----------
@@ -561,8 +600,9 @@ class TarefasFaceisM3(unittest.TestCase):
                 self.assertEqual(len(re.findall(r'<span class="task-letter">[ABC]<span class="sr-only">:</span></span> ', fonte)), 3)
                 # Os recursos: os mesmos do molde de 28/10, mais a folha e o leitor desta versão.
                 self.assertLess(fonte.index('assets/relogio.js'), fonte.index('pt-lessons/casca.js'))
-                for recurso in ('task-choice.css?v=20261028-escolha-2', 'task-90.js?v=20261027-compact-1', 'task-reader.js?v=20261112-facil-6',
-                                'task-textos.css?v=20261112-facil-6', 'info-i.css?v=20261105', 'info-i.js?v=20261105'):
+                # 13/11/2026: a folha mudou (o cabeçalho dos temas em papel), por isso a versão dos dois recursos passa de facil-6 a facil-7.
+                for recurso in ('task-choice.css?v=20261028-escolha-2', 'task-90.js?v=20261027-compact-1', 'task-reader.js?v=20261112-facil-7',
+                                'task-textos.css?v=20261112-facil-7', 'info-i.css?v=20261105', 'info-i.js?v=20261105'):
                     self.assertEqual(fonte.count(recurso), 1, recurso)
                 for fora in ('task-clock', 'rondas', '10/10/60/10'):
                     self.assertNotIn(fora, fonte)

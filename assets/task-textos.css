@@ -193,6 +193,8 @@ main.task-page.task-choice-page[data-task-facil] :is(p,li,td,th,dd,figcaption,la
  [data-task-facil] .tf-pedido{margin:6pt 0;padding:5pt 10pt 3pt}
  [data-task-facil] :is(.tf-pedido,.task-checklist,.tf-fig,.tt-gloss,.tf-quadro){break-inside:avoid}
  [data-task-facil] :is(h2,h3,h4,summary,.tt-rotulo,.tf-meta,.tf-antes,.tf-fig){break-after:avoid}
+ /* O cabeçalho do cartão dos temas (título, orientação e «Escreve a letra do teu tema») não fica sozinho no fundo de uma página. */
+ [data-task-facil] .tf-topo{break-after:avoid}
  [data-task-facil] .task-section>h2:not(:first-child){margin-top:12pt}
  [data-task-facil] .task-themes{grid-template-columns:1fr}
  [data-task-facil] .tt-versos,[data-task-facil] .task-theme .tt-versos{font-size:11pt;line-height:1.3}

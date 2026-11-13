@@ -386,7 +386,9 @@
     ["o tema no topo", "a letra do tema no topo"],
     ["o tema escolhido está no topo", "a letra do teu tema está no topo"],
     ["Não escrever no topo o tema escolhido (A ou B).", "Não escrever no topo a letra do teu tema (A ou B)."],
-    ["mais duas linhas finais que não contam para as palavras.", "mais duas linhas finais. Não contam para as palavras: os versos citados ou copiados, as divisões em sílabas e as duas linhas finais."]
+    ["mais duas linhas finais que não contam para as palavras.", "mais duas linhas finais. Não contam para as palavras: os versos citados ou copiados, as divisões em sílabas e as duas linhas finais."],
+    ["Fecho: ", "Duas linhas finais: "],
+    ["Fecho genérico, sem verso.", "Duas linhas finais genéricas, sem verso."]
    ],
    "titulo": "Quem canta, quem cala: as vozes de Camões",
    "produto": "Núcleo comum (duas respostas) e um tema à escolha (A ou B), à mão, entre 200 e 240 palavras, mais duas linhas finais que não contam para as palavras. O aquecimento em cartões não conta para a nota.",
@@ -520,7 +522,9 @@
     ["o tema no topo", "a letra do tema no topo"],
     ["o tema escolhido está no topo", "a letra do teu tema está no topo"],
     ["Não escrever no topo o tema escolhido (A ou B).", "Não escrever no topo a letra do teu tema (A ou B)."],
-    ["mais duas linhas finais que não contam para as palavras.", "mais duas linhas finais. Não contam para as palavras: os versos citados ou copiados e as duas linhas finais."]
+    ["mais duas linhas finais que não contam para as palavras.", "mais duas linhas finais. Não contam para as palavras: os versos citados ou copiados e as duas linhas finais."],
+    ["Fecho: ", "Duas linhas finais: "],
+    ["Fecho genérico, sem verso.", "Duas linhas finais genéricas, sem verso."]
    ],
    "titulo": "Nô mais: do canto alto ao silêncio",
    "produto": "Núcleo comum (duas respostas) e um tema à escolha (A ou B), à mão, entre 200 e 250 palavras, mais duas linhas finais que não contam para as palavras. O aquecimento em cartões não conta para a nota.",
