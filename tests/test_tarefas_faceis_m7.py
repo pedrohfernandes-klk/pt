@@ -459,8 +459,8 @@ class Camada(unittest.TestCase):
         for p in sorted((ROOT / '.github/workflows').glob('*.yml')):
             fluxo = p.read_text('utf-8')
             # em todas as cadeias, a camada do M7 desfaz-se logo antes da do M6, sem nada pelo meio
-            self.assertEqual(fluxo.count(f'--desfazer-antes {m6}'), fluxo.count(f'--desfazer-antes {m7} --desfazer-antes {m6}')
-                             + fluxo.count(f'tarefas_faceis_m5_20261113.json --manifesto tests/fixtures/tarefas-faceis-m5-edits-20261113.json --verificar --desfazer-antes {m7} --desfazer-antes {m6}') * 0, p.name)
+            self.assertEqual(fluxo.count(f'--desfazer-antes {m6}'), fluxo.count(f'--desfazer-antes {m7} --desfazer-antes {m6}'), p.name)
+            self.assertEqual(fluxo.count(f'--desfazer-antes {m7}'), fluxo.count(f'--verificar --desfazer-antes {m7}'), p.name)
             self.assertEqual(fluxo.count("'scripts/tarefas_faceis_m6_20261113.*'"), fluxo.count("'scripts/tarefas_faceis_m7_20261113.*'"), p.name)
         tarefas = ler('.github/workflows/pt-tarefas-qa.yml')
         self.assertIn(f'python scripts/aplicar_trocas.py scripts/tarefas_faceis_m6_20261113.json --manifesto {m6} --verificar --desfazer-antes {m7}\n', tarefas)

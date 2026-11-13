@@ -14,6 +14,7 @@ página»; no arquivo do guia, a tarefa da unidade 3 mostra _Mensagem_ em itáli
 from functools import partial
 from http.server import ThreadingHTTPServer
 import json
+import re
 import threading
 
 from playwright.sync_api import sync_playwright
@@ -115,7 +116,8 @@ def tarefas(browser, host):
             # 13/11/2026: o mesmo nas duas tarefas do M1 (camada tarefas_faceis_m1_20261113).
             # 13/11/2026: o mesmo nas duas tarefas do M5 (camada tarefas_faceis_m5_20261113).
             # 13/11/2026: o mesmo nas duas tarefas do M6 (camada tarefas_faceis_m6_20261113).
-            assert facil == (slug in ('m1-u1', 'm1-u2', 'm3-u1', 'm3-u2', 'm5-u1', 'm5-u2', 'm6-u1', 'm6-u2')), slug
+            # 13/11/2026: o mesmo nas três tarefas do M7 (camada tarefas_faceis_m7_20261113).
+            assert facil == (slug in ('m1-u1', 'm1-u2', 'm3-u1', 'm3-u2', 'm5-u1', 'm5-u2', 'm6-u1', 'm6-u2', 'm7-u1', 'm7-u2', 'm7-u3')), slug
             ligacao = page.locator(f'[data-task-card="{0 if facil else enunciado}"] header .task-aquecer a[href="aquecimento/"]')
             assert ligacao.count() == 1, slug
             if facil:
@@ -133,8 +135,16 @@ def tarefas(browser, host):
                 destaque = primeiro.locator('.task-aquecer a[href="aquecimento/"]')
                 assert destaque.is_visible()
                 assert page.locator('[data-task-question]').count() == 1
+                # 13/11/2026: na m7-u3 (molde «mais fácil de fazer», camada tarefas_faceis_m7_20261113), os exemplos resolvidos ficam junto
+                # do pedido, num desdobrável com três casos (o exemplo antigo com o verso 1 do Texto 2 saiu).
                 if slug == 'm7-u3':
-                    assert page.locator('#exemplos').count() == 1 and page.locator('.task-example').count() == 2
+                    assert page.locator('details.tf-exemplos').count() == 1 and page.locator('.tf-exemplo').count() == 3
+            elif facil:
+                # 13/11/2026: a m7-u1 e a m7-u2 (tarefas individuais no molde novo): o cartão «Começar» é o primeiro, com o relógio do
+                # aquecimento e a ligação; o pedido começa no segundo cartão.
+                assert enunciado == 1 and ligacao.is_visible()
+                assert page.locator('[data-task-card="0"] #aquecer[data-task-warm="cartoes"]').count() == 1
+                destaque = ligacao
             else:
                 assert enunciado == 0 and ligacao.is_visible()
                 destaque = ligacao
@@ -248,8 +258,11 @@ def guia(browser, host):
     assert page.locator('#r-criterios i').first.inner_text() == 'Mensagem'
     blocos = page.locator('#blocos .bloco b').all_inner_texts()
     # 11/11/2026: decisão 152 no M7 (achado 7): o tempo de cada bloco leva espaço que não quebra (U+00A0) entre o número e «min».
-    assert blocos == ['Aquecer, 15\xa0min', 'Produzir, 60\xa0min', 'Rever, apresentar e entregar, 15\xa0min'], blocos
-    assert page.locator('#relogio').inner_text() == '15:00'
+    # 13/11/2026: decisão do docente para as tarefas do M7 (camada tarefas_faceis_m7_20261113): quatro blocos, 10, 10, 55 e 15 minutos.
+    assert blocos == ['Aquecer, 10\xa0min', 'Ler o enunciado, 10\xa0min', 'Produzir, 55\xa0min', 'Rever, apresentar e entregar, 15\xa0min'], blocos
+    # 13/11/2026: o relógio do guia abre nos 10 minutos do primeiro bloco (era 15), e os quatro blocos somam 90.
+    assert page.locator('#relogio').inner_text() == '10:00'
+    assert sum(int(re.search(r', (\d+)\xa0min', b).group(1)) for b in blocos) == 90
     sem_deslizar(page, 'guia m7')
     assert not errors, errors
     ctx.close()
