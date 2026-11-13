@@ -137,8 +137,11 @@ def tarefas(browser, host):
                 assert page.locator('[data-task-question]').count() == 1
                 # 13/11/2026: na m7-u3 (molde «mais fácil de fazer», camada tarefas_faceis_m7_20261113), os exemplos resolvidos ficam junto
                 # do pedido, num desdobrável com três casos (o exemplo antigo com o verso 1 do Texto 2 saiu).
+                # 13/11/2026, revisão: o verso de «O Infante» explicado fica só na grelha, como no main (dava feito um verso que o texto
+                # pode usar); o desdobrável tem dois casos, e nenhum traz esse verso. A exigência é a mesma: os exemplos contam-se.
                 if slug == 'm7-u3':
-                    assert page.locator('details.tf-exemplos').count() == 1 and page.locator('.tf-exemplo').count() == 3
+                    assert page.locator('details.tf-exemplos').count() == 1 and page.locator('.tf-exemplo').count() == 2
+                    assert 'Deus quer, o homem sonha' not in page.locator('details.tf-exemplos').text_content()
             elif facil:
                 # 13/11/2026: a m7-u1 e a m7-u2 (tarefas individuais no molde novo): o cartão «Começar» é o primeiro, com o relógio do
                 # aquecimento e a ligação; o pedido começa no segundo cartão.

@@ -43,7 +43,10 @@ def r(*agulhas):
 # Referências nas páginas (tal como estão no HTML: só se procuram no texto que se vê). Nas datas, a proposta do M7 prende o dia ao
 # «de» e o ano ao «de»: cada metade fica inteira («13 de», «de 1888»); o mesmo nos pares «N e N» com nome antes («poemas II», «e IX»).
 PAGINAS = {
-    INDICE: r('3.º{N}ano', '90{N}minutos', '90{N}min', '22{N}min', '23{N}min', '10{N}a{N}15{N}min', '10{N}min', '35{N}%', '25{N}%', '10{N}%',
+    # 13/11/2026, revisão das tarefas do M7 (camada tarefas_faceis_m7_20261113): no índice, o aquecimento da unidade 1 passou de
+    # «10 a 15 min» a «10 min», como os das outras duas unidades e o enunciado (decisão do docente: tempos iguais em todos os sítios).
+    # A referência «10{N}a{N}15{N}min» já não existe na página; «10{N}min» continua a conferir-se, agora nos três aquecimentos.
+    INDICE: r('3.º{N}ano', '90{N}minutos', '90{N}min', '22{N}min', '23{N}min', '10{N}min', '35{N}%', '25{N}%', '10{N}%',
               '30{N}%', 'poemas{N}II', 'e{N}IX', 'poema{N}XX', 'D.{N}Sebastião', 'M7-{J}F10'),
     GUIA: r('3.º{N}ano', '90{N}minutos', '90{N}min'),
     'm7/mapa-do-modulo-m7/index.html': r('3.º{N}ano', '90{N}min', '35{N}%', '25{N}%', '10{N}%', '30{N}%', '45{N}minutos', '13{N}de', 'de{N}1888',
