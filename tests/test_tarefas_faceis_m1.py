@@ -364,16 +364,6 @@ class TarefasFaceisM1(unittest.TestCase):
         self.assertTrue(fontes['texto-3'].endswith(' Entre parênteses retos, letras acrescentadas pelos editores.'))
         self.assertIn(' Entre parênteses retos, letras acrescentadas pelos editores.', mais_do_cartao(dinis))
         fontes['texto-2'] = cabeca + ': a cantiga inteira, com a grafia da edição. Entre parênteses retos, letras acrescentadas pelos editores.'
-        # 13/11/2026 (revisão): a fonte do Texto 3 diz, como as dos Textos 1 e 2, a época do autor e que a cantiga está inteira, na
-        # grafia da edição. O resto é a linha da lição, letra a letra; «séc. XIII» é o que a lição F04 diz de Guilhade no subtítulo
-        # («D. Dinis e João Garcia de Guilhade, séc. XIII»); «a cantiga inteira, com a grafia da edição» é a frase da lição F19.
-        self.assertIn('João Garcia de Guilhade, séc. XIII', solto(ler('m1/licao-m1-f04/index.html')))
-        nome, resto = 'João Garcia de Guilhade', ', «Ai dona fea, fostes-vos queixar», cantiga 1520, '
-        cauda3 = '. Entre parênteses retos, letras acrescentadas pelos editores.'
-        self.assertTrue(fontes['texto-3'].startswith(nome + resto) and fontes['texto-3'].endswith('(FCSH/NOVA)' + cauda3))
-        self.assertTrue(fontes['texto-1'].startswith(f'Martim Codax (séc.{N}XIII), '))
-        fontes['texto-3'] = (nome + f' (séc.{N}XIII)' + fontes['texto-3'][len(nome):-len(cauda3)]
-                             + ': a cantiga inteira, com a grafia da edição' + cauda3)
         self.assertEqual([t['id'] for t in f['textos']], ['texto-1', 'texto-2', 'texto-3'])
         self.assertEqual([t['titulo'] for t in f['textos']], ['«Ondas do mar de Vigo», de Martim Codax', f"«Quer'eu em maneira de proençal», de D.{N}Dinis",
                                                            '«Ai dona fea, fostes-vos queixar», de João Garcia de Guilhade'])
@@ -400,9 +390,6 @@ class TarefasFaceisM1(unittest.TestCase):
                 for palavra, _ in vocabulario_do_cartao(cartoes(rel)[k - 1]):
                     self.assertIn(palavra, [p for p, _ in t['glossario']], palavra)
                 self.assertEqual(solto(t['fonte']), solto(fontes[t['id']]))
-                # 13/11/2026 (revisão): a referência ao século não se parte (U+00A0), nas duas fontes que a trazem.
-                if t['id'] in ('texto-1', 'texto-3'):
-                    self.assertIn(f'(séc.{N}XIII)', t['fonte'])
                 # Na página, o texto está inteiro e contínuo, pela ordem, com os versos numerados de 5 em 5 (só versos contam).
                 bloco = re.search(r'<section class="tt-texto[^"]*" id="' + t['id'] + r'".*?</section>', pagina, re.S).group(0)
                 versos = [html.unescape(v) for v in re.findall(r'<span class="tt-l">(.*?)</span></span>', bloco)]

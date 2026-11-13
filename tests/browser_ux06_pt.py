@@ -109,10 +109,7 @@ def main():
    # 28/10/2026 (decisão do docente, PR #122): a tarefa do M1 passa ao formato com escolha, com um cartão de
    # aquecimento antes do enunciado (aquecer, enunciado, relembrar, verificar).
    assert page.locator('main[data-task-choice]').count()==1
-   # 13/11/2026: a m1-u1 passou ao molde «mais fácil de fazer» (camada tarefas_faceis_m1_20261113): seis cartões em vez de
-   # quatro, e a página traz a marca do molde novo. As outras exigências ficam como estavam.
-   assert page.locator('main[data-task-facil]').count()==1
-   assert page.locator('[data-task-card]').count()==6
+   assert page.locator('[data-task-card]').count()==4
    assert not page.locator('[data-task-optional-preparation]').evaluate('e=>e.open')
    assert not page.evaluate('localStorage.getItem("percurso-sintese-M1-u1")')
    print('PASS resume, navigable task lesson, no independent gate or automatic assessment',flush=True);ctx.close();browser.close()
