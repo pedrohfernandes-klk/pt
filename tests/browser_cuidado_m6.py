@@ -42,22 +42,33 @@ RUA = 'm6/gram-oracoes-rua/index.html'
 PAGINAS = {
     'm6/index.html': ['2.º' + N + 'ano', '90' + N + 'minutos', '90' + N + 'min', '22' + N + 'min', '30' + N + '%', '10' + N + '%',
                       'grelha' + N + '/20', 'Grelha' + N + '/20'],
-    'm6/guia-da-tarefa-m6/index.html': ['2.º' + N + 'ano', '90' + N + 'minutos', '10' + N + 'minutos', '5' + N + 'minutos', '30' + N + '%',
+    # 13/11/2026: no guia, «Seguem-se 5 minutos de leitura» passou a «Seguem-se 10 minutos de leitura» (camada
+    # tarefas_faceis_m6_20261113): a agulha «5 minutos» sai, e «10 minutos» confere-se nas duas vezes em que aparece.
+    'm6/guia-da-tarefa-m6/index.html': ['2.º' + N + 'ano', '90' + N + 'minutos', '10' + N + 'minutos', '30' + N + '%',
                                         '10' + N + '%', 'grelha' + N + '/20'],
     'm6/mapa-do-modulo-m6/index.html': ['2.º' + N + 'ano', '1' + N + 'a' + N + '3', '1842–' + J + '1891', '1855–' + J + '1886',
                                         'século' + N + 'XX', '90' + N + 'minutos', '30' + N + '%', 'grelha' + N + '/20', 'Grelha' + N + '/20',
                                         'M6-' + J + 'F01', 'M6-' + J + 'F07'],
     'm6/portefolio-do-modulo-m6/index.html': ['2.º' + N + 'ano', '90' + N + 'minutos', '40' + N + '%', 'grelha' + N + '/20', 'Grelha' + N + '/20'],
     'tarefas/m6-u1/index.html': ['90' + N + 'min', '10' + N + 'min', '10' + N + 'minutos', '200' + N + 'a' + N + '240' + N + 'palavras',
-                                 '90' + N + 'a' + N + '130', 'Grelha' + N + '/20'],
-    'tarefas/m6-u2/index.html': ['90' + N + 'min', '15' + N + 'minutos', '200' + N + 'a' + N + '240' + N + 'palavras', 'século' + N + 'XIX',
-                                 'parte' + N + 'II', '200' + N + 'exemplares', '31' + N + 'anos', 'Grelha' + N + '/20'],
+                                 '90' + N + 'a' + N + '130', 'Grelha' + N + '/20',
+                                 # 13/11/2026: a m6-u1 no molde «mais fácil de fazer» (camada tarefas_faceis_m6_20261113): mais as
+                                 # referências novas aos textos e aos versos.
+                                 'Texto' + N + '4', 'versos' + N + '21' + N + 'a' + N + '24', 'verso' + N + '13', '55' + N + 'min'],
+    # 13/11/2026: a m6-u2 no molde «mais fácil de fazer» (camada tarefas_faceis_m6_20261113): «15 minutos de revisão e entrega» passou
+    # a «15 min» no quadro «Tempo e tamanho» (a agulha muda com o texto); as outras conferem-se como antes, e mais as referências novas
+    # aos textos e às partes do poema.
+    'tarefas/m6-u2/index.html': ['90' + N + 'min', '15' + N + 'min', '200' + N + 'a' + N + '240' + N + 'palavras', 'século' + N + 'XIX',
+                                 'parte' + N + 'II', '200' + N + 'exemplares', '31' + N + 'anos', 'Grelha' + N + '/20',
+                                 'Textos' + N + '3' + N + 'a' + N + '6', 'parte' + N + 'IV', '55' + N + 'min'],
     'tarefas/m6-u1/grelha/index.html': ['20' + N + 'valores', '200' + N + 'e' + N + '240' + N + 'palavras', '200' + N + 'a' + N + '240' + N
                                         + 'palavras', 'c.' + N + '1577'],
     'tarefas/m6-u2/grelha/index.html': ['20' + N + 'valores', '200' + N + 'e' + N + '240' + N + 'palavras'],
 }
 # No guia, os blocos de hoje («Aquecer, 10 min»…) estão na rota da tarefa, que se abre quando se escolhe uma (e esconde o resto).
-ROTA = ['10' + N + 'min', '5' + N + 'min', '60' + N + 'min', '15' + N + 'min', 'grelha' + N + '/20']
+# 13/11/2026: decisão do docente para as tarefas do M6 (camada tarefas_faceis_m6_20261113): 10 minutos de leitura e 55 de produção
+# no guia, como no enunciado («5 min» e «60 min» saíram). As referências continuam a conferir-se uma a uma, à vista e numa linha só.
+ROTA = ['10' + N + 'min', '55' + N + 'min', '15' + N + 'min', 'grelha' + N + '/20']
 # Referências nos cartões das lições: (página, referências); o cartão é o primeiro que as tem todas.
 CARTOES = [
     ('m6/licao-m6-f01/index.html', ['1842' + N + 'a' + N + '1891', 'v.' + N + '7', 'v.' + N + '14']),

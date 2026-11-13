@@ -53,6 +53,17 @@ opcionais; as páginas sem elas (as do M3 e as do M1) saem iguais, byte a byte:
     transcreve, as palavras estrangeiras de Eça); tirados os itálicos, é o texto de «t», letra a letra;
   * num texto em prosa, «longo»: o texto pode passar de uma página em papel (parte-se só entre parágrafos, nunca dentro de um);
   * «nao_partir_dossie»: nos factos do dossiê (que vêm da chave antiga, igual à de antes), «1803 a 1805» e «cap. VI» não se partem.
+
+M6 (13/11/2026, camada tarefas_faceis_m6_20261113: a m6-u1 e a m6-u2 no mesmo molde, com sonetos de Antero e as partes de «O Sentimento
+dum Ocidental», de Cesário). Duas chaves novas, opcionais; as páginas sem elas (as do M3, do M1 e do M5) saem iguais, byte a byte:
+  * num texto em verso, um verso pode ser {"falta": "[…]", "conta": n} em vez de uma linha: o que as lições não dão. Com «conta» 1,
+    é um verso que falta e entra na numeração (o v. 13 de «A um poeta»); com «conta» 0, é um corte sem número (as quadras que a lição
+    de «Ao Gás» salta). Nada se copia de fora: a linha de fonte do texto diz o que falta;
+  * num texto em verso, «pagina»: uma parte longa do poema (44 versos) que em papel sai inteira numa só página, em letra mais pequena.
+Revisão de 13/11/2026 (M6), mais duas, opcionais; as páginas sem elas saem iguais, byte a byte:
+  * num texto em verso, «numerar» 0: os versos não levam número (os excertos de «Ao Gás»: com estrofes saltadas, um número contado
+    por cima dos cortes não seria o número do verso na parte);
+  * «juntos_em_papel»: em papel, os passos de um tema não se partem entre duas páginas, nem os factos do dossiê (classe tf-juntos).
 """
 import re
 from html import escape
@@ -122,15 +133,22 @@ def bloco_texto(t):
             partes.append(f'<p class="tt-rotulo">{e["rotulo"]}</p>')
         versos = []
         for v in e['versos']:
+            if isinstance(v, dict):
+                # 13/11/2026 (M6): o que as lições não dão. Um verso que falta conta para a numeração; um corte não conta.
+                assert set(v) == {'falta', 'conta'} and v['conta'] in (0, 1), (t['id'], v)
+                n += v['conta']
+                versos.append(f'<span class="tt-v tt-falta"><span class="tt-n">{n if v["conta"] and passo and n % passo == 0 else ""}</span>'
+                              f'<span class="tt-l">{escape(v["falta"], quote=False)}</span></span>')
+                continue
             n += 1
             marca = ' tt-esc' if esc and esc['de'] <= n <= esc['ate'] else ''
-            versos.append(f'<span class="tt-v{marca}"><span class="tt-n">{n if n % passo == 0 else ""}</span>'
+            versos.append(f'<span class="tt-v{marca}"><span class="tt-n">{n if passo and n % passo == 0 else ""}</span>'
                           f'<span class="tt-l">{escape(v, quote=False)}</span></span>')
         partes.append('<p class="tt-estrofe">' + '\n'.join(versos) + '</p>')
     frase = f'<p class="tt-escolher">{esc["frase"]}</p>' if esc and esc.get('frase') else ''
     gloss = ('<div class="tt-gloss"><p><b>Vocabulário</b></p><ul>'
              + ''.join(f'<li><b>{p}</b>: {s}</li>' for p, s in t['glossario']) + '</ul></div>') if t.get('glossario') else ''
-    return (f'<section class="tt-texto{" tt-curto" if n <= CURTO else ""}" id="{t["id"]}" aria-labelledby="{t["id"]}-titulo">'
+    return (f'<section class="tt-texto{" tt-curto" if n <= CURTO else ""}{" tt-pagina" if t.get("pagina") else ""}" id="{t["id"]}" aria-labelledby="{t["id"]}-titulo">'
             f'<h3 id="{t["id"]}-titulo"><span class="tt-num">{t["rotulo"]}</span> {t["titulo"]}</h3>\n'
             f'{frase}<div class="tt-versos">\n' + '\n'.join(partes) + f'\n</div>\n{gloss}'
             f'<p class="tt-fonte">{t["fonte"]}</p></section>\n')
@@ -207,16 +225,19 @@ def figura(f, raiz):
 
 
 def prender(texto):
-    """13/11/2026 (M5): as referências de um facto do dossiê que não se partem (U+00A0): «1803 a 1805», «cap. VI». Fora das etiquetas."""
+    """13/11/2026 (M5): as referências de um facto do dossiê que não se partem (U+00A0): «1803 a 1805», «cap. VI». Fora das etiquetas.
+    13/11/2026 (M6): também «verso 6» e «parte II» (os dossiês do M5 não têm nenhuma destas: as páginas do M5 saem iguais)."""
     partes = re.split(r'(<[^>]+>)', texto)
     for i in range(0, len(partes), 2):
         partes[i] = re.sub(r'\b(cap\.|capítulo) (?=[IVXLC]+\b)', '\\1\xa0', re.sub(r'(\d) (a|e|ou) (?=\d)', '\\1\xa0\\2\xa0', partes[i]))
+        # 13/11/2026 (M6): e «verso 6» e «parte II», nos factos dos dossiês da m6-u1 e da m6-u2.
+        partes[i] = re.sub(r'\b(versos?|parte) (?=\d|[IVXLC]+\b)', '\\1\xa0', partes[i])
     return ''.join(partes)
 
 
-def dossie(titulo, factos, preso=False):
+def dossie(titulo, factos, preso=False, juntos=False):
     li = ''.join(f'<li>{prender(x["facto"]) if preso else x["facto"]}<span class="tf-origem">Fonte: <a href="{x["href"]}">{x["fonte"]}</a></span></li>' for x in factos)
-    return f'<section class="task-dossier tf-dossie" aria-labelledby="dossie"><h4 id="dossie">{titulo}</h4><ol>{li}</ol></section>\n'
+    return f'<section class="task-dossier tf-dossie{" tf-juntos" if juntos else ""}" aria-labelledby="dossie"><h4 id="dossie">{titulo}</h4><ol>{li}</ol></section>\n'
 
 
 def opcoes(items):
@@ -293,7 +314,7 @@ def pagina(d, com_grelha, head, foot, raiz):
     temas = ''
     for t in f['temas']:
         m = t['material']
-        dentro = ((dossie(d['dossie_titulo'].replace('tema B', 'tema\xa0B'), d['dossie'], bool(f.get('nao_partir_dossie'))) if m.get('dossie') else '')  # a referência não se parte
+        dentro = ((dossie(d['dossie_titulo'].replace('tema B', 'tema\xa0B'), d['dossie'], bool(f.get('nao_partir_dossie')), bool(f.get('juntos_em_papel'))) if m.get('dossie') else '')  # a referência não se parte
                   + ''.join(bloco_texto(textos[i]) for i in m.get('textos', []))
                   + ''.join(f'<p class="tf-p">{x}</p>' for x in m.get('notas', [])))
         temas += (f'<article class="task-theme" data-task-theme="{t["letra"]}" aria-labelledby="tema-{t["letra"]}">'
@@ -301,7 +322,7 @@ def pagina(d, com_grelha, head, foot, raiz):
                   + (f'<p class="tf-resumo">{t["resumo"]}</p>' if t.get('resumo') else '') + f'<p class="tf-p">{t["intro"]}</p>'
                   + (figura(t['figura'], raiz) if t.get('figura') else '')
                   + ''.join(f'<p class="tf-p tf-antes">{x}</p>' for x in t.get('antes', []))
-                  + f'{lista(t["passos"], "ol", "tf-passos")}'
+                  + f'{lista(t["passos"], "ol", "tf-passos tf-juntos" if f.get("juntos_em_papel") else "tf-passos")}'  # 13/11/2026 (M6)
                   + (f'<details class="tf-so-tema"><summary>{m["titulo"]}</summary><div>{dentro}</div></details>' if dentro else '')
                   + exemplos(m.get('exemplos', []), f['exemplo_titulo']) + '</article>')
     # 13/11/2026 (M1): o que serve aos dois temas. As imagens ficam à vista antes dos temas; depois dos temas, o que o texto leva nos

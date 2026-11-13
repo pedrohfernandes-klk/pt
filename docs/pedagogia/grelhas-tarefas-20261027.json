@@ -952,6 +952,29 @@
    "modulo": "M6",
    "unidade": 1,
    "nao_partir_valores": true,
+   "autoavaliacao_so_tua": true,
+   "correcao_estreita": true,
+   "trocas_aluno": [
+    ["Núcleo comum (duas respostas) e um tema à escolha (A ou B)", "Duas perguntas e um tema à escolha (A ou B)"],
+    ["Respostas articuladas", "Respostas ligadas"],
+    ["o tema no topo", "a letra do tema no topo"],
+    ["o tema escolhido está no topo", "a letra do teu tema está no topo"],
+    ["Não escrever no topo o tema escolhido (A ou B).", "Não escrever no topo a letra do teu tema (A ou B)."],
+    ["Fecho: ", "Duas linhas finais: "],
+    ["Fecho genérico, sem verso.", "Duas linhas finais genéricas, sem verso."],
+    ["nem o que é o sonho ou o ideal", "nem para que serve o sonho"],
+    ["e o que é o sonho ou o ideal", "e para que serve o sonho"],
+    ["no papel do sonho", "naquilo para que serve o sonho"],
+    ["a quem fala a voz", "a quem se dirige a voz"],
+    ["uma semelhança e o que muda", "uma semelhança e uma diferença"],
+    ["não explicas o que muda", "não explicas a diferença"],
+    ["ou o que muda não se apoia", "ou a diferença não se apoia"],
+    ["o que muda de um soneto para o outro", "uma diferença de um soneto para o outro"],
+    ["não dizer o que muda", "não dizer a diferença"],
+    ["Dizer o que muda sem um verso que o mostre", "Dizer a diferença sem um verso que a mostre"],
+    ["com o papel de «que»", "com a função de «que»"],
+    ["outro soneto para reescrever", "outro soneto para recontar"]
+   ],
    "titulo": "Um ideal que não se alcança",
    "produto": "Núcleo comum (duas respostas) e um tema à escolha (A ou B), à mão, entre 200 e 240 palavras, mais duas linhas finais que não contam para as palavras. O aquecimento em cartões não conta para a nota.",
    "nota": "Os exemplos foram escritos para esta grelha com outros casos do mesmo tipo (outro par de sonetos, outro verso, outro soneto para reescrever, outro poema para filmar), nunca com os sonetos, o verso ou o soneto da tarefa. As citações vêm das lições do M3 e do M6.",
@@ -1078,9 +1101,23 @@
    "modulo": "M6",
    "unidade": 2,
    "nao_partir_valores": true,
+   "autoavaliacao_so_tua": true,
+   "correcao_estreita": true,
+   "trocas_aluno": [
+    ["Núcleo comum (duas respostas) e um tema à escolha (A ou B)", "Duas perguntas e um tema à escolha (A ou B)"],
+    ["Respostas articuladas", "Respostas ligadas"],
+    ["o tema no topo", "a letra do tema no topo"],
+    ["o tema escolhido está no topo", "a letra do teu tema está no topo"],
+    ["Não escrever no topo o tema escolhido (A ou B).", "Não escrever no topo a letra do teu tema (A ou B)."],
+    ["Fecho: ", "Duas linhas finais: "],
+    ["Fecho genérico, sem verso.", "Duas linhas finais genéricas, sem verso."],
+    ["o que não podes fotografar, e porquê", "o que a imagem não mostra, e porquê"],
+    ["Não posso fotografar a insegurança de que fala o verso", "A imagem não mostra a insegurança de que fala o verso"],
+    ["Inventar um étimo, em vez de o procurar na lição.", "Usar outro étimo, em vez do que o enunciado dá."]
+   ],
    "titulo": "A cidade vista e transfigurada",
    "produto": "Núcleo comum (duas respostas) e um tema à escolha (A ou B), à mão, entre 200 e 240 palavras, mais duas linhas finais que não contam para as palavras. O aquecimento em cartões não conta para a nota.",
-   "nota": "Os exemplos foram escritos para esta grelha com outros casos do mesmo tipo (outra estrofe, outro verso, outras palavras de 1887, outro poema para fotografar), nunca com a estrofe, os versos ou as palavras que a tarefa pede. As citações vêm das lições do M3 e do M6.",
+   "nota": "Os exemplos foram escritos para esta grelha com outros casos do mesmo tipo (outra estrofe, outro verso, outras palavras do século XIX, outro poema para fotografar), nunca com a estrofe, os versos ou as palavras que a tarefa pede. As citações vêm das lições do M3 e do M6.",
    "criterios": [
     {
      "nome": "A estrofe de «Horas Mortas»: o que se vê e em que se transforma",
@@ -1115,11 +1152,11 @@
       ],
       "parcial": [
        "Classificas a oração sem mostrar porquê, ou dizes se a estrofe fica no real ou vai além dele sem te apoiares nas palavras.",
-       "Em «Um sopro que arripia os hombros quasi nús.», a oração com «que» é completiva, porque começa por «que»."
+       "Em «Nós levantámos todo aquelle peso / Que ao chão de pedra resistia preso,», a oração com «que» é completiva, porque começa por «que»."
       ],
       "max": [
        "Classificas a oração e mostras porquê, e dizes, com as palavras da estrofe, se ela fica no real ou vai além dele.",
-       "Noutro verso de «Ao Gás», em «Um sopro que arripia os hombros quasi nús.», a oração com «que» é subordinada adjetiva relativa restritiva: «que» retoma «sopro» e é sujeito de «arripia». E «Num Bairro Moderno» volta ao real: «Nós levantámos todo aquelle peso» é um gesto."
+       "Noutro poema, «Num Bairro Moderno», em «Nós levantámos todo aquelle peso / Que ao chão de pedra resistia preso,», a oração com «que» é subordinada adjetiva relativa restritiva: «que» retoma «peso» e é sujeito de «resistia». E o poema volta ao real: levantar o peso é um gesto."
       ]
      },
      "custa": [
@@ -1138,11 +1175,11 @@
       ],
       "parcial": [
        "Dizes a via de cada palavra sem a mostrar na forma, comparada com o étimo, ou passas as grafias para hoje sem dizer o que mudou.",
-       "Chave veio pela via popular e clave pela erudita. «Edade-média» hoje escreve-se Idade Média."
+       "Chave veio pela via popular e clave pela erudita. «Occidental» hoje escreve-se ocidental."
       ],
       "max": [
        "Mostras a via de cada palavra comparando as suas letras com as do étimo, e passas as duas grafias para hoje, com o nome da mudança.",
-       "Noutro par, de _macula-_: mácula guarda quase todas as letras do latim (via erudita); mancha afasta-se dele (via popular). E de 1887: «Edade-média» passa a Idade Média (a vogal inicial fixou-se em i, o hífen caiu e Média leva maiúscula); «oxygenio» passa a oxigénio (o y passou a i, com acento gráfico)."
+       "Noutro par, de _macula-_: mácula guarda quase todas as letras do latim (via erudita); mancha afasta-se dele (via popular). E do século XIX: «occidental» passa a ocidental (perdeu um c); «lyrios» passa a lírios (o y passou a i, com acento gráfico)."
       ]
      },
      "custa": [
@@ -1189,7 +1226,7 @@
       ],
       "max": [
        "As respostas ligam-se, estão dentro da extensão, o tema escolhido está no topo, a escrita foi revista e as duas linhas finais apontam um verso.",
-       "Fecho: Passei a ver as montras quando as luzes se apagam. Ensinou-me «Tornam-se mausoléos as armações fulgentes.»."
+       "Fecho: Passei a ver o branco das paredes quando o sol lhes bate. Ensinou-me «E fere a vista, com brancuras quentes,»."
       ]
      },
      "custa": [

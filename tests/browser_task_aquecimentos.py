@@ -114,7 +114,8 @@ def tarefas(browser, host):
             facil = page.locator('main[data-task-facil]').count() == 1
             # 13/11/2026: o mesmo nas duas tarefas do M1 (camada tarefas_faceis_m1_20261113).
             # 13/11/2026: o mesmo nas duas tarefas do M5 (camada tarefas_faceis_m5_20261113).
-            assert facil == (slug in ('m1-u1', 'm1-u2', 'm3-u1', 'm3-u2', 'm5-u1', 'm5-u2')), slug
+            # 13/11/2026: o mesmo nas duas tarefas do M6 (camada tarefas_faceis_m6_20261113).
+            assert facil == (slug in ('m1-u1', 'm1-u2', 'm3-u1', 'm3-u2', 'm5-u1', 'm5-u2', 'm6-u1', 'm6-u2')), slug
             ligacao = page.locator(f'[data-task-card="{0 if facil else enunciado}"] header .task-aquecer a[href="aquecimento/"]')
             assert ligacao.count() == 1, slug
             if facil:

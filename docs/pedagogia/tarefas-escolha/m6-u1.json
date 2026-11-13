@@ -120,5 +120,537 @@
   "produto": "Responde às duas perguntas e escolhe <strong>um tema</strong>: recontar um poema (A) ou planear um vídeo (B).",
   "etapa": "1. Responde às duas perguntas",
   "entrega": "Escreve o tema escolhido (A ou B) no topo. Fotografa as respostas, o tema escolhido e as duas linhas finais. Confirma que as fotografias mostram o trabalho completo e entrega-as na tarefa do Teams."
+ },
+ "facil": {
+  "_nota": "13/11/2026: a página da tarefa sai só desta chave (scripts/tarefa_facil.py) e de «titulo», «unidade», «aquecer» (ligação e minutos), «dossie», «dossie_titulo» e «opcional». As outras chaves antigas («aquecer.texto», «lead», «nucleo», «temas», «apoios», «criterios», «fecho», «clareza») já não aparecem na página: ficam como estavam para a leitura histórica das camadas de baixo.",
+  "kicker": "Tarefa individual, 90 minutos",
+  "fazer": [
+   "Faz o aquecimento (10 minutos).",
+   "Responde a duas perguntas.",
+   "Escolhe um tema: recontar um poema (A) ou planear um vídeo (B).",
+   "Escreve duas linhas finais.",
+   "Revê e entrega no Teams."
+  ],
+  "modo": "Trabalhas à mão. O aquecimento e a tarefa são com consulta: podes usar as lições do site, o caderno e o dicionário.",
+  "producao_minutos": 55,
+  "folha_versao": "20261113-facil-10",
+  "nao_partir_dossie": true,
+  "juntos_em_papel": true,
+  "grelha_nota": "A autoavaliação da grelha é só para ti: não se entrega.",
+  "entregas": {
+   "intro": "Fotografias do teu trabalho em papel, na tarefa do Teams."
+  },
+  "quadro": {
+   "titulo": "Tempo e tamanho",
+   "colunas": [
+    "Tempo",
+    "O que fazes",
+    "Palavras"
+   ],
+   "linhas": [
+    [
+     "10 min",
+     "Aquecimento em cartões",
+     ""
+    ],
+    [
+     "10 min",
+     "Leitura do enunciado",
+     ""
+    ],
+    [
+     {
+      "t": "55 min",
+      "linhas": 3
+     },
+     "Pergunta 1",
+     {
+      "t": "orientação: cerca de 110 nas duas perguntas",
+      "linhas": 2
+     }
+    ],
+    [
+     null,
+     "Pergunta 2",
+     null
+    ],
+    [
+     null,
+     "Tema A ou B",
+     "orientação: 90 a 130"
+    ],
+    [
+     "15 min",
+     "Revisão e entrega",
+     ""
+    ],
+    [
+     "90 min",
+     "Total",
+     "200 a 240"
+    ]
+   ],
+   "notas": [
+    "Nos 10 minutos de leitura, lê as duas perguntas e os passos dos dois temas. Os textos<span class=\"tf-so-ecra\"> e os exemplos</span> são para consultares enquanto escreves.",
+    "Não contam para as palavras: os versos citados ou copiados e as duas linhas finais."
+   ]
+  },
+  "aquecer": {
+   "titulo": "Relógio do aquecimento"
+  },
+  "textos": [
+   {
+    "id": "texto-1",
+    "rotulo": "Texto 1",
+    "titulo": "«Ideal», de Antero de Quental",
+    "numerar": 5,
+    "estrofes": [
+     {
+      "versos": [
+       "Aquella, que eu adoro, não é feita",
+       "De lyrios nem de rosas purpurinas,",
+       "Não tem as formas languidas, divinas",
+       "Da antiga Venus de cintura estreita..."
+      ]
+     },
+     {
+      "versos": [
+       "Não é a Circe, cuja mão suspeita",
+       "Compõe filtros mortaes entre ruinas,",
+       "Nem a Amazona, que se agarra ás crinas",
+       "D'um corcel e combate satisfeita..."
+      ]
+     },
+     {
+      "versos": [
+       "A mim mesmo pergunto, e não atino",
+       "Com o nome que dê a essa visão,",
+       "Que ora amostra ora esconde o meu destino..."
+      ]
+     },
+     {
+      "versos": [
+       "É como uma miragem, que entrevejo,",
+       "Ideal, que nasceu na solidão,",
+       "Nuvem, sonho impalpavel do Desejo..."
+      ]
+     }
+    ],
+    "glossario": [
+     [
+      "Circe",
+      "feiticeira da <i>Odisseia</i>"
+     ],
+     [
+      "Amazona",
+      "guerreira mítica"
+     ],
+     [
+      "atino",
+      "acerto"
+     ],
+     [
+      "impalpavel",
+      "que não se pode tocar"
+     ]
+    ],
+    "fonte": "Antero de Quental, <i>Os Sonetos Completos</i> (1886) (grafia da edição).",
+    "origem": "m6/licao-m6-f02/index.html, linha 431, cartões 3, 9 (copiado letra a letra)",
+    "escolher": {
+     "de": 9,
+     "ate": 14
+    }
+   },
+   {
+    "id": "texto-2",
+    "rotulo": "Texto 2",
+    "titulo": "«A um poeta», de Antero de Quental",
+    "numerar": 5,
+    "estrofes": [
+     {
+      "versos": [
+       "Tu, que dormes, espirito sereno,",
+       "Posto á sombra dos cedros seculares,",
+       "Como um levita á sombra dos altares,",
+       "Longe da lucta e do fragor terreno,"
+      ]
+     },
+     {
+      "versos": [
+       "Accorda! é tempo! O sol, já alto e pleno,",
+       "Afugentou as larvas tumulares…",
+       "Para surgir do seio d'esses mares,",
+       "Um mundo novo espera só um aceno…"
+      ]
+     },
+     {
+      "versos": [
+       "Escuta! é a grande voz das multidões!",
+       "São teus irmãos, que se erguem! são canções…",
+       "Mas de guerra… e são vozes de rebate!"
+      ]
+     },
+     {
+      "versos": [
+       "Ergue-te pois, soldado do Futuro,",
+       {
+        "falta": "[…]",
+        "conta": 1
+       },
+       "Sonhador, faze espada de combate!"
+      ]
+     }
+    ],
+    "glossario": [
+     [
+      "levita",
+      "aqui, uma figura ligada ao serviço religioso"
+     ],
+     [
+      "fragor",
+      "estrondo"
+     ],
+     [
+      "larvas tumulares",
+      "expressão que lembra a morte"
+     ],
+     [
+      "rebate",
+      "sinal de alarme"
+     ]
+    ],
+    "fonte": "Antero de Quental, «A um poeta», <i>Os Sonetos Completos</i>, 1886 (grafia da edição). As lições dão 13 dos 14 versos: falta o verso 13, marcado com «[…]». Esse verso está no manual.",
+    "origem": "m6/licao-m6-f13/index.html, linha 4, cartões 2, 5, 8 (copiado letra a letra; o vocabulário vem do texto dos cartões 2 e 5 e, para «fragor», do cartão 14 de m6/licao-m6-f01/index.html; a linha de fonte, do cartão 14; a lição não dá o verso 13 nem a epígrafe)",
+    "escolher": {
+     "de": 9,
+     "ate": 14
+    }
+   },
+   {
+    "id": "texto-3",
+    "rotulo": "Texto 3",
+    "titulo": "«Ave-Marias», uma estrofe, de Cesário Verde",
+    "numerar": 5,
+    "estrofes": [
+     {
+      "versos": [
+       "E evoco, então, as chronicas navaes:",
+       "Mouros, baixeis, heroes, tudo resuscitado!",
+       "Lucta Camões no Sul, salvando um livro a nado!",
+       "Singram soberbas naus que eu não verei jámais!"
+      ]
+     }
+    ],
+    "glossario": [
+     [
+      "baixeis",
+      "navios"
+     ],
+     [
+      "singram",
+      "navegam"
+     ]
+    ],
+    "fonte": "Cesário Verde, «O Sentimento dum Ocidental», <i>O Livro de Cesário Verde</i> (1887) (grafia da edição). É a estrofe dos versos 21 a 24 de «Ave-Marias», a primeira parte do poema.",
+    "origem": "m6/licao-m6-f06/index.html, linha 431, cartão 8 (copiado letra a letra; vocabulário e fonte do cartão 16)"
+   },
+   {
+    "id": "texto-4",
+    "rotulo": "Texto 4",
+    "titulo": "«O Palacio da Ventura», de Antero de Quental",
+    "numerar": 5,
+    "estrofes": [
+     {
+      "versos": [
+       "Sonho que sou um cavalleiro andante.",
+       "Por desertos, por sóes, por noite escura,",
+       "Paladino do amor, busco anhelante",
+       "O palacio encantado da Ventura!"
+      ]
+     },
+     {
+      "versos": [
+       "Mas já desmaio, exhausto e vacillante.",
+       "Quebrada a espada já, rota a armadura...",
+       "E eis que subito o avisto, fulgurante",
+       "Na sua pompa e aerea formosura!"
+      ]
+     },
+     {
+      "versos": [
+       "Com grandes golpes bato á porta e brado:",
+       "Eu sou o Vagabundo, o Desherdado...",
+       "Abri-vos, portas d'ouro, ante meus ais!"
+      ]
+     },
+     {
+      "versos": [
+       "Abrem-se as portas d'ouro, com fragor...",
+       "Mas dentro encontro só, cheio de dor,",
+       "Silencio e escuridão — e nada mais!"
+      ]
+     }
+    ],
+    "glossario": [
+     [
+      "cavalleiro andante",
+      "cavaleiro que vagueia em busca de aventuras"
+     ],
+     [
+      "paladino",
+      "defensor"
+     ],
+     [
+      "anhelante",
+      "ansioso"
+     ],
+     [
+      "Ventura",
+      "felicidade"
+     ],
+     [
+      "rota",
+      "partida, desfeita"
+     ],
+     [
+      "fragor",
+      "estrondo"
+     ]
+    ],
+    "fonte": "Antero de Quental, <i>Os Sonetos Completos</i> (1886) (grafia da edição; v. 6 corrigido: «rota», onde o <i>e-book</i> lê «roda»).",
+    "origem": "m6/licao-m6-f01/index.html, linha 431, cartões 4, 14 (copiado letra a letra)"
+   }
+  ],
+  "perguntas": [
+   {
+    "titulo": "O sonho em dois sonetos.",
+    "meta": "Orientação: cerca de 110 palavras nas duas perguntas.",
+    "relogio": "Começa este relógio depois da leitura.",
+    "textos": [
+     "texto-1",
+     "texto-2"
+    ],
+    "pedido_titulo": "O que fazes",
+    "barra": "Nos textos, uma barra ao lado marca os tercetos (as duas últimas estrofes).",
+    "grupos": [
+     {
+      "intro": "Em «Ideal» (<a href=\"#texto-1\">Texto 1</a>) e em «A um poeta» (<a href=\"#texto-2\">Texto 2</a>), faz isto para cada soneto:",
+      "alineas": [
+       "Indica a quem se dirige a voz.",
+       "Indica para que serve o sonho.",
+       "Cita um verso dos tercetos."
+      ]
+     },
+     {
+      "intro": "Depois, compara os dois sonetos:",
+      "alineas": [
+       "Aponta uma semelhança.",
+       "Explica uma diferença."
+      ]
+     }
+    ],
+    "ler": "Os textos têm a grafia da edição de 1886. Por isso lês «Aquella», «lyrios» e «Accorda».",
+    "ajudas": [
+     "A voz do soneto não é o poeta.",
+     "Explica cada verso que citares e diz de que soneto é.",
+     "Na diferença, usa os versos que citaste.",
+     "No Texto 2 falta o verso 13. Para a alínea b), relê na lição F13, <a href=\"../../m6/licao-m6-f13/\">O sonho pode pedir ação?</a>, o cartão «Uma espada feita de sonho»."
+    ],
+    "citar": "Copia as palavras exatas do texto. Põe-nas entre aspas: «…».",
+    "exemplos": [
+     {
+      "titulo": "Outro par de sonetos: «Alma minha gentil», de Camões, e «Na mão de Deus», de Antero",
+      "paragrafos": [
+       {
+        "al": "Alíneas a), b) e c), em cada soneto:",
+        "t": "Noutro par: em «Alma minha gentil», a voz fala com a amada morta, e o desejo é voltar a vê-la: «Roga a Deus, que teus anos encurtou,». Em «Na mão de Deus», fala com o próprio coração, já sem Ideal, e manda-o descansar: «Dorme o teu somno, coração liberto,»."
+       },
+       {
+        "al": "Alíneas d) e e):",
+        "t": "No mesmo par: nos dois, Deus aparece no último terceto. Muda o desejo: em Camões, continua; em «Na mão de Deus», foi posto de lado («Depuz do Ideal e da Paixão»), e o coração descansa."
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "titulo": "Uma oração no verso.",
+    "meta": "Orientação: cerca de 110 palavras nas duas perguntas.",
+    "textos": [
+     "texto-3"
+    ],
+    "pedido_titulo": "O que fazes",
+    "intro": "Trabalha o último verso do <a href=\"#texto-3\">Texto 3</a>: «Singram soberbas naus que eu não verei jámais!» («Ave-Marias»).",
+    "alineas": [
+     "Divide o verso em orações.",
+     "Classifica cada oração.",
+     "Justifica com a função de «que» na sua oração.",
+     "Explica o que essa oração acrescenta ao verso."
+    ],
+    "ler": "O texto tem a grafia da edição de 1887. Por isso lês «chronicas» e «jámais».",
+    "ajudas": [
+     "Um «que» pode completar um verbo ou retomar um nome."
+    ],
+    "exemplos": [
+     {
+      "titulo": "Outro verso de Cesário, com outro «que»",
+      "paragrafos": [
+       {
+        "al": "Alíneas a) a d):",
+        "t": "Noutro verso de Cesário, «Eu temo que me avives / Uma paixão defunta»: «Eu temo» é a subordinante; a oração com «que» é subordinada substantiva completiva, porque completa «temo» (Eu temo isso), e «que» não retoma nenhum nome. A oração diz o que a voz receia: reviver uma paixão morta."
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "temas_titulo": "Escolhe um tema: A ou B",
+  "temas_nota": "Orientação: 90 a 130 palavras.",
+  "temas_topo": "Escreve a letra do teu tema (A ou B) no topo.",
+  "temas": [
+   {
+    "letra": "A",
+    "nome": "Um ideal de hoje",
+    "intro": "Reconta «O Palacio da Ventura» em prosa, numa situação atual.",
+    "antes": [
+     "O soneto está no <a href=\"#texto-4\">Texto 4</a>, por baixo dos temas."
+    ],
+    "passos": [
+     "Escolhe um verso de Antero para imitar.",
+     "Escolhe um ideal e um lugar concretos.",
+     "Conta a procura, a chegada e a abertura da porta.",
+     "A última frase deve contrariar o que se esperava.",
+     "Cria uma anáfora ou uma antítese, sem copiar versos para a tua narrativa.",
+     "Depois, cita o verso de Antero que imitaste.",
+     "Explica esse verso.",
+     "Indica uma diferença entre o teu ideal e o do cavaleiro."
+    ],
+    "material": {
+     "exemplos": [
+      {
+       "titulo": "Outro soneto: «Na mão de Deus», recontado numa situação atual (texto inventado)",
+       "paragrafos": [
+        {
+         "al": "Passos 2 a 5, o texto:",
+         "t": "Às onze da noite, no último andar da residência, desliguei o telemóvel. Desci as escadas devagar, degrau a degrau. Deixei no corredor a lista dos festivais que nunca me escolheram, como quem deixa um casaco que já não serve. Contei os anos, contei as recusas, contei as noites; depois deixei de contar. Dorme, cabeça, que amanhã não há candidatura."
+        },
+        {
+         "al": "Passos 6 e 7, o verso citado e explicado:",
+         "t": "Imitei «Desci a passo e passo a escada estreita»: também começo por descer, devagar, de um lugar alto."
+        },
+        {
+         "al": "Passo 8:",
+         "t": "A diferença: no soneto, o coração descansa na mão de Deus; eu descanso porque larguei uma lista."
+        }
+       ]
+      }
+     ]
+    }
+   },
+   {
+    "letra": "B",
+    "nome": "O soneto num minuto",
+    "intro": "Planeia um vídeo de um minuto sobre «O Palacio da Ventura». Entregas a descrição escrita dos planos.",
+    "antes": [
+     "O soneto está no <a href=\"#texto-4\">Texto 4</a>, por baixo dos temas."
+    ],
+    "passos": [
+     "Descreve três planos.",
+     "Associa um verso exato a cada plano.",
+     "Explica se o último plano ilustra, contraria ou acrescenta algo ao verso.",
+     "Justifica uma escolha com dois factos do <a href=\"#dossie\">dossiê</a>.",
+     "Indica o que o vídeo não pode apresentar como facto."
+    ],
+    "material": {
+     "titulo": "Só para o tema B: o dossiê",
+     "dossie": true,
+     "exemplos": [
+      {
+       "titulo": "Outro poema: «Alma minha gentil», de Camões, em três planos",
+       "paragrafos": [
+        {
+         "al": "Passos 1 e 2, três planos com um verso exato:",
+         "t": "plano 1, um quarto vazio de manhã, com «Alma minha gentil, que te partiste»; plano 2, um lençol dobrado, com «Repousa lá no céu eternamente,»; plano 3, uma janela aberta para o céu e alguém de costas para ela, com «E viva eu cá na terra sempre triste.»."
+        },
+        {
+         "al": "Passo 3, o último plano:",
+         "t": "O último plano acrescenta algo ao verso: o verso diz só a terra «sempre triste»; a imagem junta-lhe o gesto de virar as costas ao céu, onde a amada repousa."
+        },
+        {
+         "al": "Passo 4, dois factos:",
+         "t": "Abro com o retrato de Camões por Fernão Gomes (c. 1577), que está em domínio público; o soneto vem nas <i>Rhythmas</i>, de 1595, e a legenda di-lo."
+        },
+        {
+         "al": "Passo 5:",
+         "t": "O vídeo não pode dizer quem era a amada: o soneto não o diz."
+        }
+       ]
+      }
+     ]
+    }
+   }
+  ],
+  "temas_material": {
+   "titulo": "Para os dois temas: o Texto 4 («O Palacio da Ventura»)",
+   "textos": [
+    "texto-4"
+   ]
+  },
+  "finais": {
+   "titulo": "Duas linhas finais",
+   "passos": [
+    "Responde: o que passaste a procurar quando um poema fala de um sonho?",
+    "Aponta o verso que te ajudou."
+   ]
+  },
+  "verificar": [
+   "Na pergunta 1, indiquei a quem se dirige a voz e para que serve o sonho, nos dois sonetos?",
+   "Citei um verso dos tercetos de cada soneto?",
+   "Apontei uma semelhança e expliquei uma diferença?",
+   "Respondi às quatro alíneas da pergunta 2?",
+   "Fiz todos os passos do meu tema?",
+   "As respostas ligam-se (não estão soltas)?",
+   "Tenho 200 a 240 palavras?",
+   "Revi a escrita?",
+   "As duas linhas finais apontam um verso?",
+   "A letra do meu tema (A ou B) está no topo?"
+  ],
+  "verificar_titulo": "Antes de entregar, verifica",
+  "verificar_texto": "Responde sim ou não. Se for não, completa o teu trabalho.",
+  "exemplo_titulo": [
+   "Ver um exemplo com outro caso",
+   "Ver dois exemplos com outros casos"
+  ],
+  "entrega_titulo": "Entrega no Teams",
+  "entrega": [
+   "Fotografa as respostas, o texto do teu tema e as duas linhas finais.",
+   "Confirma que as fotografias mostram o trabalho completo.",
+   "Entrega as fotografias na tarefa do Teams."
+  ],
+  "rever_titulo": "Se precisares de rever",
+  "rever_texto": "Os textos já estão nesta página. As lições servem para rever a matéria.",
+  "rever": [
+   {
+    "para": "Pergunta 1",
+    "texto": "Lição F02, <a href=\"../../m6/licao-m6-f02/\">Da procura ao descanso</a>. Relê «Para entender»: a apóstrofe, a metáfora, a comparação e a anáfora."
+   },
+   {
+    "para": "Pergunta 1",
+    "texto": "Lição F13, <a href=\"../../m6/licao-m6-f13/\">O sonho pode pedir ação?</a> Relê «A mudança de tom» e «Uma espada feita de sonho»."
+   },
+   {
+    "para": "Pergunta 2",
+    "texto": "Lição F04, <a href=\"../../m6/licao-m6-f04/\">Como se ligam as orações</a>. Relê «Para entender» (três relações a observar) e a «Árvore da frase»."
+   },
+   {
+    "para": "Temas A e B",
+    "texto": "Lição F01, <a href=\"../../m6/licao-m6-f01/\">O cavaleiro que encontra o nada</a>. Relê «Para entender»: forma e mudança de sentido."
+   },
+   {
+    "para": "Tema B",
+    "texto": "Lição F11, <a href=\"../../m6/licao-m6-f11/\">Quem conta a vida de um poeta</a>. Relê «Em paralelo»: o que se sabe e o que se conta."
+   }
+  ],
+  "opcional_titulo": "Experimentar uma pergunta"
  }
 }
