@@ -79,10 +79,25 @@ details.dobra>.dentro{padding:4px 14px 16px;border-top:1px solid var(--linha)}
 .apoio-cab button:hover{background:var(--realce)}
 .apoio-corpo{padding:12px 14px 14px;max-height:30vh;overflow:auto}
 .apoio.recolhido .apoio-corpo{display:none}
+/* 13/11/2026: imagem no texto de apoio (treino da apreciação crítica). Em ecrãs estreitos cabe inteira na parte fixa; a ligação abre-a em tamanho real. */
+.apoio-img{margin:0 0 10px}
+.apoio-img a{display:block}
+.apoio-img img{display:block;max-width:100%;width:auto;height:auto;max-height:22vh;border:1px solid var(--linha);background:#fff}
+.apoio-img figcaption{font-size:.8rem;color:var(--suave);margin-top:6px}
+.creditos-img{margin:0;font-size:.84rem}
+.creditos-img dt{font-weight:600;margin-top:6px}
+.creditos-img dd{margin:0;overflow-wrap:anywhere}
+.apoio-pedido .notas-t{margin-top:0}
+.apoio-pedido .enun{font-size:.96rem;margin-bottom:6px}
+.apoio-fim{clear:both}
+@media (min-width:600px) and (max-width:979.98px){
+ .apoio-img{float:left;max-width:46%;margin:0 16px 8px 0}
+}
 @media (min-width:980px){
  .area.com-apoio{grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:36px}
  .apoio{top:14px}
  .apoio-corpo{max-height:calc(100vh - 90px)}
+ .apoio-img img{max-height:none;width:100%}
 }
 .passo{min-width:0}
 .passo-n{font:500 .74rem/1.3 var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--suave);margin:0 0 4px}

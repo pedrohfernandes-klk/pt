@@ -129,7 +129,8 @@ def main():
                         page.keyboard.press('Enter')
                     assert page.url == f'{host}/exame/treinos/', (onde, page.url)
                     # 12/11/2026: com os treinos das sessões 17 e 18 a entrada passa a ter cinco treinos; a exigência é a mesma, com o título novo.
-                    assert page.locator('h1').inner_text() == 'Cinco treinos de exame', onde
+                    # 13/11/2026: com os treinos das sessões 22, 25 e 23 passa a ter oito; a exigência é a mesma, com o título novo.
+                    assert page.locator('h1').inner_text() == 'Oito treinos de exame', onde
                     aberturas += 1
                     if SAIDA:
                         page.screenshot(path=os.path.join(SAIDA, f'exame-ligacao-treinos-{largura}-{esquema}-aberta.png'),

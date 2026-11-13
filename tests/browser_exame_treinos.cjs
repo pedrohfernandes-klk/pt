@@ -2,7 +2,10 @@
    e com o armazenamento bloqueado. O sítio serve-se em /pt/, como em produção, para os ficheiros partilhados (tema e projeção) correrem.
    PT_CAPTURAS=<pasta> guarda as capturas; sem a variável, não se escreve nada.
    12/11/2026: quatro treinos, com o da sessão 17 (poesia contemporânea, exame/treinos/poesia-contemporanea/), com a mesma cobertura dos outros três.
-   12/11/2026: cinco treinos, com o da sessão 18 (conto, exame/treinos/conto/), com a mesma cobertura dos outros quatro. */
+   12/11/2026: cinco treinos, com o da sessão 18 (conto, exame/treinos/conto/), com a mesma cobertura dos outros quatro.
+   13/11/2026: oito treinos, com os das sessões 22 (coesao/), 25 (apreciacao-critica/) e 23 (exposicao/). Os três novos percorrem-se passo a passo a partir dos
+   dados da própria página (cada pergunta com respostas erradas e a certa, três tentativas, caixa de texto, duas versões, marcação aspeto a aspeto, teclado),
+   nas duas larguras de sempre e também a 360x740 e a 900x800, em claro e em escuro. O que já havia para os cinco primeiros corre como corria, a 390 e a 1280. */
 const {chromium}=require('playwright');
 const http=require('node:http'),fs=require('node:fs'),path=require('node:path');
 const root=path.resolve(__dirname,'..');
@@ -21,8 +24,10 @@ const V1L=V1+' '+LONGA,V1A=V1+' Acrescento.';
 await new Promise(r=>server.listen(0,'127.0.0.1',r));
 BASE='http://127.0.0.1:'+server.address().port+'/pt/exame/treinos/';
 const b=await chromium.launch();
-for(const [w,h] of [[390,844],[1280,900]]) for(const cs of ['light','dark']){
+// 13/11/2026: mais duas larguras (360 e 900), só para os três treinos novos e para a entrada; as duas antigas continuam a correr tudo
+for(const [w,h] of [[390,844],[1280,900],[360,740],[900,800]]) for(const cs of ['light','dark']){
   const tag=w+'-'+(cs==='light'?'claro':'escuro');
+  const antigos=w===390||w===1280;
   const estreito=w===390;const V1F=estreito?V1A:V1L;
   const c=await b.newContext({viewport:{width:w,height:h},deviceScaleFactor:1,colorScheme:cs});
   let p=await c.newPage();
@@ -67,6 +72,7 @@ for(const [w,h] of [[390,844],[1280,900]]) for(const cs of ['light','dark']){
   const ativo=()=>p.evaluate(()=>{const a=document.activeElement;const s=getComputedStyle(a);return {cls:a.className,tag:a.tagName,t:(a.textContent||'').slice(0,40),ow:s.outlineWidth,os:s.outlineStyle,fv:a.matches(':focus-visible')};});
   const reg=async()=>await p.locator('.reg').innerText();
 
+  if(antigos){ // 13/11/2026: o percurso dos cinco primeiros treinos, tal como estava, nas duas larguras antigas
   /* ===== índice ===== */
   await p.goto(BASE);await semDeslize('indice');await cap('0-indice',true);
   ok(/Três tentativas, duas pistas/.test(await p.locator('main').innerText())&&!/sozinh/i.test(await p.locator('body').innerText()),tag+' índice descreve as três tentativas e não usa formas com género');
@@ -74,7 +80,8 @@ for(const [w,h] of [[390,844],[1280,900]]) for(const cs of ['light','dark']){
   /* ===== página do sítio: cabeçalho, ligações, ficheiros partilhados e tema ===== */
   // 12/11/2026: mais a página do treino da sessão 17
   // 12/11/2026: e a do treino da sessão 18
-  for(const pg of ['','interpretacao/','gramatica/','escrita/','poesia-contemporanea/','conto/']){
+  // 13/11/2026: e as dos treinos das sessões 22, 25 e 23
+  for(const pg of ['','interpretacao/','gramatica/','escrita/','poesia-contemporanea/','conto/','coesao/','apreciacao-critica/','exposicao/']){
     const mortos=[];const ouve=r=>{if(r.status()>=400)mortos.push(r.status()+' '+r.url());};p.on('response',ouve);
     await p.goto(BASE+pg);await p.waitForLoadState('networkidle');p.off('response',ouve);
     ok(mortos.length===0,tag+' '+(pg||'entrada')+': todos os ficheiros carregam '+mortos.join(' | '));
@@ -105,7 +112,8 @@ for(const [w,h] of [[390,844],[1280,900]]) for(const cs of ['light','dark']){
   // ligações às sessões e aos aquecimentos, que continuam onde estavam
   // 12/11/2026: mais o treino da sessão 17
   // 12/11/2026: e o da sessão 18
-  for(const [pg,s] of [['interpretacao/','s14'],['gramatica/','s21'],['escrita/','s24'],['poesia-contemporanea/','s17'],['conto/','s18']]){
+  // 13/11/2026: e os das sessões 22, 25 e 23
+  for(const [pg,s] of [['interpretacao/','s14'],['gramatica/','s21'],['escrita/','s24'],['poesia-contemporanea/','s17'],['conto/','s18'],['coesao/','s22'],['apreciacao-critica/','s25'],['exposicao/','s23']]){
     await p.goto(BASE+pg);
     const l=await p.evaluate(()=>Array.from(document.querySelectorAll('.lede a')).map(a=>new URL(a.href).pathname+new URL(a.href).hash));
     ok(l.join(' ')==='/pt/exame/#'+s+' /pt/exame/aquecimentos/'+s+'/'||l.join(' ')==='/pt/exame/aquecimentos/'+s+'/ /pt/exame/#'+s,tag+' '+pg+' liga à sessão e ao aquecimento '+l.join(' '));
@@ -118,10 +126,12 @@ for(const [w,h] of [[390,844],[1280,900]]) for(const cs of ['light','dark']){
   { const l=await p.evaluate(()=>Array.from(document.querySelectorAll('.cartao-p')).map(c=>Array.from(c.querySelectorAll('a')).map(a=>new URL(a.href).pathname+new URL(a.href).hash).join(' ')));
     // 12/11/2026: quatro cartões, o último para o treino da sessão 17
     // 12/11/2026: cinco cartões, o último para o treino da sessão 18
-    ok(l.join(' | ')==='/pt/exame/#s14 /pt/exame/treinos/interpretacao/ | /pt/exame/#s21 /pt/exame/treinos/gramatica/ | /pt/exame/#s24 /pt/exame/treinos/escrita/ | /pt/exame/#s17 /pt/exame/treinos/poesia-contemporanea/ | /pt/exame/#s18 /pt/exame/treinos/conto/',tag+' entrada liga aos cinco treinos e às cinco sessões '+l.join(' | '));
+    // 13/11/2026: oito cartões, os três últimos para os treinos das sessões 22, 25 e 23
+    ok(l.join(' | ')==='/pt/exame/#s14 /pt/exame/treinos/interpretacao/ | /pt/exame/#s21 /pt/exame/treinos/gramatica/ | /pt/exame/#s24 /pt/exame/treinos/escrita/ | /pt/exame/#s17 /pt/exame/treinos/poesia-contemporanea/ | /pt/exame/#s18 /pt/exame/treinos/conto/ | /pt/exame/#s22 /pt/exame/treinos/coesao/ | /pt/exame/#s25 /pt/exame/treinos/apreciacao-critica/ | /pt/exame/#s23 /pt/exame/treinos/exposicao/',tag+' entrada liga aos oito treinos e às oito sessões '+l.join(' | '));
     const nv=await p.evaluate(()=>Array.from(document.querySelectorAll('.tr-nav a')).map(a=>a.textContent+'>'+new URL(a.href).pathname).join(' '));
     // 12/11/2026: a navegação e o título contam cinco treinos; nem «três» nem «quatro» ficam na entrada
-    ok(nv==='Os cinco treinos>/pt/exame/treinos/ Interpretação>/pt/exame/treinos/interpretacao/ Gramática>/pt/exame/treinos/gramatica/ Escrita>/pt/exame/treinos/escrita/ Poesia contemporânea>/pt/exame/treinos/poesia-contemporanea/ Conto>/pt/exame/treinos/conto/'&&/Cinco treinos de exame/.test(await p.locator('h1').innerText())&&!/[Tt]rês treinos|[Qq]uatro treinos/.test(await p.locator('body').innerText()),tag+' navegação entre os cinco treinos '+nv); }
+    // 13/11/2026: a navegação e o título contam oito treinos; nem «três», nem «quatro», nem «cinco» ficam na entrada
+    ok(nv==='Os oito treinos>/pt/exame/treinos/ Interpretação>/pt/exame/treinos/interpretacao/ Gramática>/pt/exame/treinos/gramatica/ Escrita>/pt/exame/treinos/escrita/ Poesia contemporânea>/pt/exame/treinos/poesia-contemporanea/ Conto>/pt/exame/treinos/conto/ Coesão e modalidade>/pt/exame/treinos/coesao/ Apreciação crítica>/pt/exame/treinos/apreciacao-critica/ Exposição>/pt/exame/treinos/exposicao/'&&/^Oito treinos de exame$/.test((await p.locator('h1').innerText()).trim())&&!/[Tt]rês treinos|[Qq]uatro treinos|[Cc]inco treinos/.test(await p.locator('body').innerText()),tag+' navegação entre os oito treinos '+nv); }
   ok(erros.length===0,tag+' página do sítio: erros de JavaScript: '+erros.join(' | '));erros.length=0;
   await p.evaluate(()=>localStorage.clear());
 
@@ -386,7 +396,7 @@ for(const [w,h] of [[390,844],[1280,900]]) for(const cs of ['light','dark']){
   /* ===== TREINO 4 (12/11/2026): poesia contemporânea, sessão 17 ===== */
   await p.goto(BASE+'poesia-contemporanea/');await semDeslize('p4 inicio');await cap('5-poesia-01-inicio',true);
   // 12/11/2026: com o treino da sessão 18, este passa a ser o 4 de 5
-  ok(/Treino 4 de 5/i.test(await p.locator('.sobre').innerText())&&/Comparar dois poemas a partir de um eixo/.test(await p.locator('dl.liga').innerText())&&/2\.ª fase, Grupo I, Parte A, item 2/.test(await p.locator('dl.liga').innerText()),tag+' p4 operação do exame e item oficial no cimo');
+  /* 13/11/2026: agora «de 8» */ok(/Treino 4 de 8/i.test(await p.locator('.sobre').innerText())&&/Comparar dois poemas a partir de um eixo/.test(await p.locator('dl.liga').innerText())&&/2\.ª fase, Grupo I, Parte A, item 2/.test(await p.locator('dl.liga').innerText()),tag+' p4 operação do exame e item oficial no cimo');
   // texto de apoio: só as duas citações curtas, a remissão para o manual e as ligações às lições do M8
   { const a=await p.evaluate(()=>{const d=document.querySelector('#apoio-corpo [data-apoio="cit"]');return {oculto:d.hidden||document.getElementById('apoio').hidden,rot:document.getElementById('apoio-rot').textContent,
       cit:Array.from(d.querySelectorAll('.cit')).map(e=>e.textContent),txt:d.innerText,lig:Array.from(d.querySelectorAll('a')).map(x=>new URL(x.href).pathname)};});
@@ -513,7 +523,7 @@ for(const [w,h] of [[390,844],[1280,900]]) for(const cs of ['light','dark']){
   // as palavras tocam-se pelo número de ordem: «De», «de» e «idade» repetem-se no recorte
   const tki=async(id,idxs)=>{for(const i of idxs){await Q(id).locator('.tk').nth(i).click();}};
   await p.goto(BASE+'conto/');await semDeslize('p5 inicio');await cap('6-conto-01-inicio',true);
-  ok(/Treino 5 de 5/i.test(await p.locator('.sobre').innerText())&&/Fundamentar uma inferência sobre uma personagem/.test(await p.locator('dl.liga').innerText())&&/2\.ª fase, Grupo I, Parte B, item 4/.test(await p.locator('dl.liga').innerText()),tag+' p5 operação do exame e item oficial no cimo');
+  /* 13/11/2026: agora «de 8» */ok(/Treino 5 de 8/i.test(await p.locator('.sobre').innerText())&&/Fundamentar uma inferência sobre uma personagem/.test(await p.locator('dl.liga').innerText())&&/2\.ª fase, Grupo I, Parte B, item 4/.test(await p.locator('dl.liga').innerText()),tag+' p5 operação do exame e item oficial no cimo');
   // texto de apoio: só o recorte de duas frases, a referência, a remissão para o manual e as ligações às lições do M8
   { const a=await p.evaluate(()=>{const d=document.querySelector('#apoio-corpo [data-apoio="cit"]');return {oculto:d.hidden||document.getElementById('apoio').hidden,rot:document.getElementById('apoio-rot').textContent,
       cit:Array.from(d.querySelectorAll('.cit')).map(e=>e.textContent),txt:d.innerText,lig:Array.from(d.querySelectorAll('a')).map(x=>new URL(x.href).pathname)};});
@@ -649,7 +659,8 @@ for(const [w,h] of [[390,844],[1280,900]]) for(const cs of ['light','dark']){
   // 11/11/2026: nenhuma pergunta de escolha tem menos de quatro opções (três tentativas e duas pistas em todas, como diz a entrada)
   // 12/11/2026: também no treino da sessão 17
   // 12/11/2026: e no da sessão 18
-  for(const pg of ['interpretacao','gramatica','escrita','poesia-contemporanea','conto']){
+  // 13/11/2026: e nos das sessões 22, 25 e 23
+  for(const pg of ['interpretacao','gramatica','escrita','poesia-contemporanea','conto','coesao','apreciacao-critica','exposicao']){
     await p.goto(BASE+pg+'/');
     const n=await p.evaluate(()=>{const d=JSON.parse(document.querySelector('script[type="application/json"]').textContent);const m=[];
       (function v(x){if(Array.isArray(x)){x.forEach(v);}else if(x&&typeof x==='object'){if(x.t==='escolha'){m.push([x.id,x.o.length,!!x.pista2]);}Object.keys(x).forEach(function(k){v(x[k]);});}})(d);return m;});
@@ -673,6 +684,283 @@ for(const [w,h] of [[390,844],[1280,900]]) for(const cs of ['light','dark']){
   ok(/escrita\/#passo-1$/.test(p.url())&&/Passo 1 de 6/i.test(await p.locator('.passo-n').innerText()),tag+' p3 voltar atrás depois de recomeçar: endereço e página no passo 1 ('+p.url()+')');
   ok(await p.evaluate(()=>!!(history.state&&history.state.passo===0)),tag+' p3 voltar atrás depois de recomeçar: estado do histórico no passo 1');
   ok(erros.length===0,tag+' p3 recomeçar: erros de JavaScript: '+erros.join(' | '));erros.length=0;
+  } // 13/11/2026: fim do percurso dos cinco primeiros treinos (larguras de 390 e 1280)
+
+  /* ===== TREINOS 6, 7 e 8 (13/11/2026): sessões 22, 25 e 23, nas quatro larguras =====
+     O percurso sai dos dados da própria página (window.TREINO): cada escolha e cada busca é respondida de três maneiras, à vez
+     (duas falhas e a certa; três falhas; a certa à primeira), e o que a página mostra confere-se com a pista, a segunda pista e a explicação dos dados. */
+  { const est2=w<980;
+    const limpo=(x)=>x.replace(/\s+/g,'').toLowerCase();
+    const txtDe=(hh)=>p.evaluate((x)=>{const d=document.createElement('div');d.innerHTML=x;return d.textContent;},hh);
+    const temTxt=async(rr,hh,n)=>{const t=limpo(await txtDe(hh));return t.length>0&&limpo(rr.txt).includes(t.slice(0,n||70));};
+    const reEsc=(x)=>x.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
+    const pistaPara=(bb,sel)=>{for(const q of bb.pistas){if(q.so){if(sel.length&&sel.every(x=>q.so.includes(x)))return q.x;}else if(q.se.some(x=>sel.includes(x)))return q.x;}return bb.falta;};
+    const semLeitura2=async(onde)=>{const t=await p.locator('#passo').innerText();ok(!/desconta \d|Faltam \d|Passam \d|Dentro dos limites|célula realçada|a tabela indica|Onde situas|O teu nível/.test(t),tag+' sem leituras automáticas em '+onde);};
+    const NOVOS=[
+      {pg:'coesao',n:7,ord:6,sid:'s22',viu:'a chave oficial',chave:3,grelhas:[],descr:0,cl:0,apoios:{of:/Linhas 1, 5 e 6, 16 a 19, 21, 23 e 29 a 32/,tr:/Linhas 11 a 19,/,mod:/Linhas 13 a 18 e 44 e 45\./}}, // 13/11/2026 (revisão): menos linhas do artigo (20 em vez de 23); as legendas dizem as que ficam
+      {pg:'apreciacao-critica',n:6,ord:7,sid:'s25',viu:'os critérios',grelhas:[3,4,5],descr:3,cl:1,apoios:{img:/faz a apreciação crítica da gravura, da autoria de Giovanni Battista Piranesi/}},
+      {pg:'exposicao',n:8,ord:8,sid:'s23',viu:'os critérios',grelhas:[4,5],descr:2,cl:1,apoios:{item:/Escreva uma breve exposição na qual comprove a afirmação anterior/,poemas:/Alma minha gentil, que te partiste[\s\S]*Sendo a si tão contrário o mesmo Amor\?/}},
+    ];
+    for(const N of NOVOS){
+      const t0='t'+N.ord, pasta=N.ord+'-'+N.pg;
+      await p.goto(BASE+N.pg+'/');await p.evaluate((id)=>localStorage.removeItem('exame-treino:'+id+':v2'),N.pg);await p.goto(BASE+N.pg+'/');await p.reload();await p.waitForLoadState('networkidle');
+      const D=await p.evaluate(()=>window.TREINO);
+      ok(D.id===N.pg&&D.passos.length===N.n&&new RegExp('Treino '+N.ord+' de 8','i').test(await p.locator('.sobre').innerText())&&await p.locator('#passos li').count()===N.n,tag+' '+t0+' é o treino '+N.ord+' de 8, com '+N.n+' passos');
+      await semDeslize(t0+' início');await cap(pasta+'-00-inicio',true);
+      { const l=await p.evaluate(()=>Array.from(document.querySelectorAll('.lede a')).map(a=>new URL(a.href).pathname+new URL(a.href).hash).join(' '));
+        ok(l==='/pt/exame/#'+N.sid+' /pt/exame/aquecimentos/'+N.sid+'/',tag+' '+t0+' liga à sessão e ao aquecimento '+l);
+        const nv=await p.evaluate(()=>[document.querySelectorAll('.tr-nav a').length,document.querySelector('.tr-nav a[aria-current="page"]').getAttribute('href'),document.querySelector('.tr-nav').scrollWidth<=document.querySelector('.tr-nav').clientWidth+1]);
+        ok(nv[0]===9&&nv[1]==='../'+N.pg+'/'&&nv[2],tag+' '+t0+' navegação dos oito treinos cabe e marca a página atual '+nv); }
+      // teclado: Tab chega à ligação de salto e o foco vê-se
+      await p.keyboard.press('Tab');
+      let f=await ativo(),r;
+      ok(f.cls==='skip'&&f.os!=='none'&&parseFloat(f.ow)>=2,tag+' '+t0+' foco visível na ligação de salto '+JSON.stringify(f));
+      if(N.pg==='apreciacao-critica'){
+        // a única imagem é a gravura, inteira e com as proporções certas; a da prova só aparece como ligação ao enunciado em eduqa.pt
+        const im=await p.evaluate(()=>{const i=document.querySelector('#apoio img'),q=i.getBoundingClientRect(),a=document.getElementById('apoio-corpo').getBoundingClientRect();
+          return {nw:i.naturalWidth,nh:i.naturalHeight,w:q.width,h:q.height,dentro:q.left>=a.left-1&&q.right<=a.right+1,inteira:q.top>=a.top-1&&q.bottom<=a.bottom+1,alt:i.alt,n:document.images.length,src:new URL(i.src).pathname,
+            p13:Array.from(document.querySelectorAll('a[href$="#page=13"]')).map(x=>x.href),takjoo:Array.from(document.querySelectorAll('a[href*="takjoo"],img[src*="takjoo"]')).length};});
+        ok(im.nw===800&&im.nh===551&&im.n===1&&im.src==='/pt/img/fontes/licoes-20261101/piranesi.jpg'&&/^Gravura do interior da Basílica de São Pedro/.test(im.alt),tag+' t7 a única imagem é a gravura do repositório, carregada '+JSON.stringify(im));
+        ok(im.w>120&&Math.abs(im.w/im.h-800/551)<0.03&&im.dentro&&(!est2||im.inteira),tag+' t7 a gravura cabe no texto de apoio, sem deformar '+JSON.stringify(im));
+        ok(im.p13.length>=3&&im.p13.every(x=>x==='https://eduqa.pt/wp-content/uploads/2026/06/portugues_prova_639_v2_enunciado.pdf#page=13')&&im.takjoo===0,tag+' t7 a imagem da prova só por ligação ao enunciado em eduqa.pt (p. 13) '+im.p13.length);
+        await p.click('#apoio summary:has-text("Créditos da imagem")');
+        { const t=await p.locator('#apoio details.dobra .dentro').innerText();
+          ok(/Giovanni Battista Piranesi/.test(t)&&/Vedute di Roma/.test(t)&&/Cerca de 1748/.test(t)&&/The Metropolitan Museum of Art, inventário 1972\.620\.1/.test(t)&&/Domínio público/.test(t)&&/sem recorte/.test(t),tag+' t7 créditos completos da imagem '+t.replace(/\s+/g,' ')); }
+        await semDeslize('t7 créditos abertos');await cap(pasta+'-00-creditos');
+        await p.click('#apoio summary:has-text("Créditos da imagem")');
+        await p.click('main > details.dobra > summary');await semDeslize('t7 item oficial aberto');
+        { const t=await p.locator('main > details.dobra .dentro').innerText();
+          ok(/faça a apreciação crítica do cartoon, da autoria de Javad Takjoo/.test(t)&&/https:\/\/takjoo\.com \(consultado em 23\/02\/2026\)\./.test(t)&&/um texto com extensão inferior a oitenta palavras é classificado com zero pontos/.test(t)&&/Cotação: 44 pontos/.test(t),tag+' t7 item oficial com o enunciado, as observações e a cotação'); }
+        await p.click('main > details.dobra > summary');
+      }
+      let k=0,kt=0;const esperado=[];
+      const Tx='Primeira versão do aluno no treino '+N.ord+'.',TxA=Tx+' Acrescento.',V1F2=est2?TxA:Tx,TxR='Versão revista do aluno no treino '+N.ord+'.';
+      let idEsc=null,nGrelha=0;
+      for(let i=0;i<D.passos.length;i++){
+        const P=D.passos[i],onde=t0+' passo '+(i+1);
+        await passo(i+1);
+        f=await ativo();ok(f.tag==='H2',tag+' '+onde+': ao mudar de passo o foco vai para o título '+JSON.stringify(f));
+        ok(new RegExp('Passo '+(i+1)+' de '+N.n,'i').test(await p.locator('.passo-n').innerText())&&await p.evaluate(()=>location.hash)==='#passo-'+(i+1),tag+' '+onde+': número do passo na página e no endereço');
+        { const ap=await p.evaluate(()=>{const a=document.getElementById('apoio');const d=[...a.querySelectorAll('[data-apoio]')].filter(x=>!x.hidden);return {oculto:a.hidden,ids:d.map(x=>x.getAttribute('data-apoio')).join(),txt:d.map(x=>x.textContent).join(' '),rot:document.getElementById('apoio-rot').textContent};});
+          ok(!ap.oculto&&ap.ids===P.apoio&&N.apoios[P.apoio].test(ap.txt)&&ap.rot===P.apoioRot,tag+' '+onde+': texto de apoio certo ao lado ('+ap.ids+', «'+ap.rot+'»)'); }
+        let primeira=true;
+        for(const b of P.blocos){
+          if(b.t==='escolha'){
+            const erradas=b.o.map((o,j)=>j).filter(j=>j!==b.c),L='ABCDEF',q=tag+' '+onde+' '+b.id;
+            ok(b.o.length===4&&await Q(b.id).locator('.op').count()===4&&!!b.pista2,q+': quatro opções e segunda pista');
+            if(primeira){await juntos(b.id,onde);primeira=false;if(i===0)await cap(pasta+'-01-texto-junto-da-pergunta');}
+            const modo=k%3;k++;
+            if(modo===0){
+              // 1.ª falha (teclado): pista da opção escolhida, restam duas tentativas; repetir a mesma opção não gasta tentativa
+              await Q(b.id).locator('.op').nth(erradas[0]).focus();await p.keyboard.press('Enter');r=await ret(b.id);
+              ok(/pista/.test(r.cls)&&/^PISTA/i.test(r.txt)&&await temTxt(r,b.o[erradas[0]].pista)&&/mais duas tentativas/.test(r.txt),q+' 1.ª falha: pista da opção escolhida e duas tentativas '+r.txt.slice(0,90));
+              ok(await Q(b.id).locator('.op').nth(erradas[0]).getAttribute('aria-disabled')==='true'&&await Q(b.id).locator('.retorno').getAttribute('role')==='status',q+' opção tentada indisponível e pista anunciada');
+              f=await ativo();ok(f.tag==='BUTTON'&&f.fv&&f.os!=='none'&&parseFloat(f.ow)>=2,q+' o foco do teclado vê-se e não se perde depois de errar '+JSON.stringify(f));
+              await aVista(Q(b.id).locator('.retorno'),onde+' '+b.id+' pista');
+              await p.keyboard.press('Enter');r=await ret(b.id);ok(/^PISTA/i.test(r.txt)&&/mais duas tentativas/.test(r.txt),q+' repetir a opção tentada não gasta tentativa');
+              // 2.ª falha: segunda pista, sem a resposta
+              await op(b.id,erradas[2]);r=await ret(b.id);
+              ok(/pista/.test(r.cls)&&/^SEGUNDA PISTA/i.test(r.txt)&&await temTxt(r,b.pista2)&&/mais uma tentativa/.test(r.txt)&&!/A opção adequada é/.test(r.txt),q+' 2.ª falha: segunda pista, sem a resposta '+r.txt.slice(0,90));
+              ok(!/certa/.test(await Q(b.id).locator('.op').nth(b.c).getAttribute('class')),q+' a resposta não aparece antes da terceira tentativa');
+              await aVista(Q(b.id).locator('.retorno'),onde+' '+b.id+' segunda pista');
+              await op(b.id,b.c);r=await ret(b.id);
+              ok(/certo/.test(r.cls)&&/terceira/i.test(r.txt)&&await temTxt(r,b.f,50),q+' certo à terceira, com a explicação '+r.txt.slice(0,60));
+              esperado.push([b.curto,'Com pista, à terceira']);
+            }else if(modo===1){
+              await op(b.id,erradas[1]);r=await ret(b.id);
+              ok(/pista/.test(r.cls)&&/^PISTA/i.test(r.txt)&&await temTxt(r,b.o[erradas[1]].pista)&&/mais duas tentativas/.test(r.txt),q+' 1.ª falha: pista da opção escolhida '+r.txt.slice(0,90));
+              await op(b.id,erradas[0]);r=await ret(b.id);
+              ok(/^SEGUNDA PISTA/i.test(r.txt)&&await temTxt(r,b.pista2)&&/mais uma tentativa/.test(r.txt)&&!/A opção adequada é/.test(r.txt),q+' 2.ª falha: segunda pista '+r.txt.slice(0,90));
+              await op(b.id,erradas[2]);r=await ret(b.id);
+              ok(/expl/.test(r.cls)&&/três tentativas/i.test(r.txt)&&r.txt.includes('A opção adequada é a '+L[b.c]+'.')&&await temTxt(r,b.f,50),q+' explicação só à terceira falha '+r.txt.slice(0,90));
+              ok(/certa/.test(await Q(b.id).locator('.op').nth(b.c).getAttribute('class'))&&await Q(b.id).locator('.op[aria-disabled="true"]').count()===4,q+' opção adequada marcada e pergunta fechada');
+              await aVista(Q(b.id).locator('.retorno'),onde+' '+b.id+' explicação');
+              esperado.push([b.curto,'Com explicação']);
+            }else{
+              await op(b.id,b.c);r=await ret(b.id);
+              ok(/certo/.test(r.cls)&&/primeira/i.test(r.txt)&&await temTxt(r,b.f,50)&&await Q(b.id).locator('.op[aria-disabled="true"]').count()===4,q+' certo à primeira '+r.txt.slice(0,60));
+              esperado.push([b.curto,'Por ti, à primeira']);
+            }
+          }
+          if(b.t==='tocar'){
+            const todos=[];b.tokens.forEach((t,j)=>{if(!t.nl&&!t.fixo)todos.push(j);});
+            const fora=todos.filter(j=>!b.permitidos.includes(j)),nuc=b.nucleos[0],extra=b.permitidos.filter(j=>!nuc.includes(j)),q=tag+' '+onde+' '+b.id;
+            const TK=(j)=>Q(b.id).locator('.tk').nth(todos.indexOf(j));
+            const muda=async(sel)=>{await Q(b.id).locator('button',{hasText:'Limpar a seleção'}).click();for(const j of sel)await TK(j).click();};
+            ok(await Q(b.id).locator('.tk').count()===todos.length&&fora.length>=2,q+': '+todos.length+' palavras ou versos para tocar');
+            if(primeira){await juntos(b.id,onde);primeira=false;}
+            const modo=kt%3;kt++;
+            if(modo===0){
+              await verif(b.id);ok(/Ainda não escolheste/.test(await aviso(b.id)),q+' verificar sem seleção avisa e não gasta tentativa');
+              // seleção por teclado
+              await TK(fora[0]).focus();await p.keyboard.press('Space');
+              ok(await TK(fora[0]).getAttribute('aria-pressed')==='true',q+' seleção por teclado');
+              await verif(b.id);r=await ret(b.id);
+              ok(/pista/.test(r.cls)&&/^PISTA/i.test(r.txt)&&await temTxt(r,pistaPara(b,[fora[0]]))&&/mais duas tentativas/.test(r.txt),q+' pista do erro cometido '+r.txt.slice(0,90));
+              await aVista(Q(b.id).locator('.retorno'),onde+' '+b.id+' pista da seleção');
+              await verif(b.id);r=await ret(b.id);
+              ok(/^PISTA/i.test(r.txt)&&/mais duas tentativas/.test(r.txt)&&/não gastaste outra tentativa/.test(await aviso(b.id)),q+' verificar duas vezes a mesma seleção errada não gasta tentativa');
+              const usa=extra.length&&est2,certa=usa?nuc.concat([extra[0]]):nuc;
+              await muda(certa);await verif(b.id);r=await ret(b.id);
+              ok(/certo/.test(r.cls)&&/segunda/i.test(r.txt)&&await temTxt(r,b.f,50)&&(!usa||!b.notas||!b.notas[extra[0]]||await temTxt(r,b.notas[extra[0]],40)),q+' certo à segunda'+(usa?', com a palavra vizinha aceite e a nota':'')+' '+r.txt.slice(0,80));
+              esperado.push([b.curto,'Com pista, à segunda']);
+            }else if(modo===1){
+              const s1=[fora[0]],s2=[fora[fora.length-1]],s3=[fora[0],fora[fora.length-1]];
+              await muda(s1);await verif(b.id);r=await ret(b.id);
+              ok(/pista/.test(r.cls)&&await temTxt(r,pistaPara(b,s1))&&/mais duas tentativas/.test(r.txt),q+' 1.ª falha: pista do erro cometido '+r.txt.slice(0,90));
+              await muda(s2);await verif(b.id);r=await ret(b.id);
+              ok(/^SEGUNDA PISTA/i.test(r.txt)&&await temTxt(r,b.pista2)&&/mais uma tentativa/.test(r.txt)&&await Q(b.id).locator('.tk.ok').count()===0,q+' 2.ª falha: segunda pista, sem a resposta '+r.txt.slice(0,90));
+              await muda(s3);await verif(b.id);r=await ret(b.id);
+              ok(/expl/.test(r.cls)&&/três tentativas/i.test(r.txt)&&/Fica marcada uma resposta adequada/.test(r.txt)&&await temTxt(r,b.f,50),q+' explicação só à terceira falha '+r.txt.slice(0,90));
+              ok(await Q(b.id).locator('.tk.ok').count()===b.mostra.length&&await Q(b.id).locator('.tk:disabled').count()===todos.length,q+' resposta adequada marcada e busca fechada');
+              esperado.push([b.curto,'Com explicação']);
+            }else{
+              await muda(nuc);await verif(b.id);r=await ret(b.id);
+              ok(/certo/.test(r.cls)&&/primeira/i.test(r.txt)&&await temTxt(r,b.f,50),q+' certo à primeira '+r.txt.slice(0,60));
+              esperado.push([b.curto,'Por ti, à primeira']);
+            }
+          }
+          if(b.t==='campos'){
+            ok(await p.locator('#passo textarea[id^="c-'+b.id+'-"]').count()===b.campos.length,tag+' '+onde+': o plano tem '+b.campos.length+' campos');
+            await p.fill('#c-'+b.id+'-'+b.campos[0].id,'Plano do treino '+N.ord+'. '+LONGA);await semDeslize(onde+' plano com palavra muito longa');
+          }
+          if(b.t==='vercampos'){
+            await p.click('#passo summary:has-text("'+b.titulo+'")');ok(new RegExp('Plano do treino '+N.ord).test(await p.locator('#passo details.dobra .dentro').innerText()),tag+' '+onde+': plano à vista');
+            await semDeslize(onde+' plano aberto');
+          }
+          if(b.t==='escrever'){
+            idEsc=b.id;const cx='#t-'+b.id,q=tag+' '+onde+' '+b.id;
+            ok(await p.locator('#passos li:nth-child('+(i+2)+') button').isDisabled()&&/guarda primeiro a tua primeira versão/.test(await p.locator('.tranca').innerText()),q+': passo seguinte trancado antes de guardar');
+            ok(await p.locator('.retorno:visible').count()===0,q+': sem pistas à vista no passo de escrita');
+            ok(/guarda-se automaticamente/.test(await p.locator('.antes-bt').innerText()),q+': aviso sobre o rascunho antes do botão de guardar');
+            await p.click('button:has-text("Guardar a primeira versão")');
+            if(b.opcoes){
+              ok(/Escolhe primeiro uma opção/.test(await p.locator('#passo').innerText())&&await p.locator('input[name="o-'+b.id+'"]').count()===4,q+': exige a opção');
+              ok(!/Versão 2, <b>\(D\)/.test(await p.locator('#passo').innerHTML()),q+': chave escondida antes da resposta');
+              await p.locator('input[name="o-'+b.id+'"]').nth(N.chave).focus();await p.keyboard.press('Space');
+              ok(await p.locator('input[name="o-'+b.id+'"]').nth(N.chave).isChecked(),q+': opção assinalada por teclado');
+              await p.click('button:has-text("Guardar a primeira versão")');
+            }
+            ok(/Escreve na caixa ou marca que escreveste no papel/.test(await p.locator('#passo').innerText()),q+': não guarda uma primeira versão vazia');
+            if(b.conta){
+              await p.fill(cx,'Uma');ok(/^1 palavra \(/.test(await p.locator('.conta').innerText()),q+': contagem no singular');
+              await p.fill(cx,TXT196);ok(/^196 palavras \(contagem/.test(await p.locator('.conta').innerText()),q+': contagem ao vivo (196)');await semLeitura2(onde+' (196 palavras)');
+            }else{ok(await p.locator('#passo .conta').count()===0,q+': sem contagem de palavras (o item só pede a letra e a justificação é nossa)');}
+            await p.locator(cx).focus();await p.keyboard.press('ControlOrMeta+a');await p.keyboard.type(Tx);
+            ok(await p.inputValue(cx)===Tx,q+': a caixa de texto escreve-se por teclado');
+            await cap(pasta+'-p'+(i+1)+'-escrever');
+            await p.click('button:has-text("Guardar a primeira versão")');
+            { const t=await p.locator('.estado.ok').innerText();
+              ok(/Primeira versão guardada neste dispositivo/.test(t)&&/Feita sem pistas à vista/.test(t)&&/alterá-la em qualquer altura/.test(t),q+': primeira versão guardada '+t); }
+            f=await ativo();ok(/estado ok/.test(f.cls),q+': foco na confirmação depois de guardar');
+            await aVista(p.locator('.estado.ok'),onde+' confirmação de guardar');
+            ok(!(await p.locator('#passos li:nth-child('+(i+2)+') button').isDisabled())&&await p.locator(cx).isEditable(),q+': o passo seguinte abre e a primeira versão continua editável');
+            // alterar antes de ver os critérios não deixa marca
+            await p.fill(cx,Tx+' '+LONGA);await semDeslize(onde+' com palavra muito longa');
+            ok(await p.locator('.alt:visible').count()===0,q+': alterar antes de ver '+N.viu+' não deixa aviso');
+            await p.fill(cx,Tx);
+          }
+          if(b.t==='ver1'){
+            const q=tag+' '+onde+' primeira versão';
+            ok((await p.locator('#v1-'+b.de).innerText()).trim()===Tx&&await p.locator('.alt:visible').count()===0,q+' à vista, sem aviso');
+            if(b.opcoes)ok(/Opção que escolheste: \(D\)/.test(await p.locator('#passo').innerText())&&/Chave do item 5: Versão 1, \(C\); Versão 2, \(D\)/.test(await p.locator('#passo .caixa.of').first().innerText()),q+': opção escolhida e chave oficial à vista');
+            if(b.conta)ok(/palavras\./.test(await p.locator('#passo .conta').first().innerText()),q+': com o número de palavras');
+            await p.click('text=Alterar a primeira versão');
+            f=await ativo();ok(f.tag==='TEXTAREA',q+': foco na caixa ao abrir a alteração');
+            await p.fill('#e-'+b.de,TxA);
+            ok(new RegExp('alterada depois de veres '+N.viu).test(await p.locator('.alt:visible').innerText()),q+': aviso «alterada depois de veres '+N.viu+'» junto dela');
+            // com opções, o aviso fica por cima delas e a caixa por baixo: escrever na caixa pode levá-lo para fora do ecrã, como no treino 2
+            if(!b.opcoes)await aVista(p.locator('.alt'),onde+' aviso de alteração');
+            if(b.opcoes){await p.locator('input[name="e-o-'+b.de+'"]').nth(0).check();await p.fill('#e-'+b.de,Tx);
+              ok(/alterada depois de veres a chave oficial/.test(await p.locator('.alt:visible').innerText()),q+': mudar a opção depois de ver a chave fica assinalado');
+              await p.locator('input[name="e-o-'+b.de+'"]').nth(N.chave).check();}
+            await p.fill('#e-'+b.de,Tx);ok(await p.locator('.alt:visible').count()===0,q+': repor o que estava retira o aviso');
+            await p.fill('#e-'+b.de,V1F2);
+            await p.click('text=Fechar a alteração');
+            ok((await p.locator('#v1-'+b.de).innerText()).trim()===V1F2&&(await p.locator('.alt:visible').count())===(est2?1:0),q+' fica à vista depois de fechar a alteração');
+          }
+          if(b.t==='lista'){
+            const cxs=p.locator('.bloco',{has:p.locator('h3',{hasText:b.titulo})}).locator('.marca-l input');
+            ok(await cxs.count()===b.itens.length,tag+' '+onde+': lista de conferência com '+b.itens.length+' linhas');
+            await cxs.nth(0).focus();await p.keyboard.press('Space');await cxs.nth(2).check();
+            ok(await cxs.nth(0).isChecked()&&await cxs.nth(2).isChecked()&&!(await cxs.nth(1).isChecked()),tag+' '+onde+': conferência marcada linha a linha, também por teclado');
+          }
+          if(b.t==='grelha'){
+            const q=tag+' '+onde+' '+b.id;
+            ok(b.aspetos.length===N.grelhas[nGrelha]&&b.opcoes.join('|')==='Está no meu texto|Está, com falhas|Não está',q+': '+b.aspetos.length+' aspetos, três marcas possíveis');nGrelha++;
+            for(let j=0;j<b.aspetos.length;j++){
+              const rd=p.locator('input[name="g-'+b.id+'-'+j+'"]');
+              ok(await rd.count()===3,q+': aspeto '+(j+1)+' com três marcas');
+              if(j===0){await rd.nth(0).focus();await p.keyboard.press('Space');if(est2){await p.evaluate(()=>document.activeElement.scrollIntoView());await p.waitForTimeout(60);
+                const v=await p.evaluate(()=>{const a=document.getElementById('apoio').getBoundingClientRect(),e=document.activeElement.getBoundingClientRect();return {ab:a.bottom,et:e.top};});
+                ok(v.et>=v.ab-1,q+': campo com foco não fica tapado pelo texto de apoio '+JSON.stringify(v));}}
+              else{await rd.nth(j%3).check();}
+            }
+            ok(await p.locator('input[name^="g-'+b.id+'-"]:checked').count()===b.aspetos.length&&await p.locator('input[name="g-'+b.id+'-0"]').nth(0).isChecked(),q+': marcação aspeto a aspeto, também por teclado');
+          }
+          if(b.t==='rever'){
+            const cx='#r-'+b.de,q=tag+' '+onde+' versão revista',rc=new RegExp(reEsc(b.curto)+'\\s+');
+            ok(await p.inputValue(cx)===V1F2,q+' começa pela primeira');
+            await p.click('text=Guardar a versão revista');
+            ok(/Ainda não mudaste nada/.test(await p.locator('.duas .estado').last().innerText())&&new RegExp(rc.source+'Por fazer').test(await reg()),q+' igual à primeira não é aceite');
+            await p.fill(cx,'');await p.click('text=Guardar a versão revista');
+            ok(/Ainda não mudaste nada/.test(await p.locator('.duas .estado').last().innerText()),q+' vazia não é aceite');
+            await p.locator('.duas .marca-l input').check();
+            ok(new RegExp(rc.source+'Depois de veres '+N.viu).test(await reg())&&/feito/.test(await p.locator('#passos li:nth-child('+(i+1)+') button').getAttribute('class')),q+': «Revi no papel» atualiza logo o registo e o passo');
+            await p.locator('.duas .marca-l input').uncheck();
+            ok(new RegExp(rc.source+'Por fazer').test(await reg()),q+': desmarcar volta a «Por fazer»');
+            await p.fill(cx,TxR+' '+LONGA);await semDeslize(onde+' com palavra muito longa na versão revista');
+            { const cw=await p.evaluate(()=>[...document.querySelectorAll('.duas>div')].map(d=>Math.round(d.getBoundingClientRect().width)));
+              ok(cw.length===2&&cw[0]>0&&cw[1]>0&&(est2&&w<700?true:Math.abs(cw[0]-cw[1])<=2),q+': as duas versões lado a lado (ou uma por cima da outra, em ecrãs estreitos) '+cw); }
+            await p.fill(cx,TxR);
+            await p.click('text=Guardar a versão revista');
+            ok(/Versão revista guardada neste dispositivo/.test(await p.locator('.duas .estado.ok').innerText()),q+' guardada');
+          }
+        }
+        if(i===0&&N.pg==='apreciacao-critica')await cap(pasta+'-p1-apoio-com-imagem');
+        if(P.blocos.some(b=>b.t==='grelha')){
+          const t=await p.locator('#passo').innerText();
+          await semLeitura2(onde);
+          ok(await p.locator('#passo fieldset.radios').count()===N.grelhas.reduce((a,x)=>a+x,0)&&await p.locator('#passo table',{hasText:'Descritor de desempenho'}).count()===N.descr&&await p.locator('#passo table.cl').count()===N.cl&&await p.locator('#passo input[type=number]').count()===0,
+            tag+' '+onde+': descritores oficiais consultáveis, tabela de correção linguística e marcação só aspeto a aspeto ('+await p.locator('#passo fieldset.radios').count()+')');
+          ok(/Caso o número total de erros seja superior ao número máximo apresentado na tabela/.test(t)&&/A página não faz esta leitura por ti/.test(t)&&/quem classifica é o docente/.test(t),tag+' '+onde+': a página não classifica nem lê a tabela');
+          await p.evaluate(()=>{const c=document.querySelector('table.cl');c.scrollIntoView({block:'center'});});await semDeslize(onde+' tabela de correção linguística');
+        }
+        await semDeslize(onde+' no fim');await cap(pasta+'-p'+(i+1)+'-'+P.id,true);
+        ok(erros.length===0,tag+' '+onde+': erros de JavaScript: '+erros.join(' | '));erros.length=0;
+      }
+      // registo: o que foi feito à primeira, com pista e com explicação; a primeira versão alterada depois de vistos os critérios
+      { const g=await reg();
+        for(const [curto,como] of esperado)ok(new RegExp(reEsc(curto)+'\\s+'+reEsc(como)).test(g),tag+' '+t0+' registo: «'+curto+'» '+como);
+        ok(new Set(esperado.map(x=>x[1])).size>=3&&new RegExp(est2?'Alterada depois de veres '+N.viu:'Por ti, sem pistas à vista').test(g)&&new RegExp('Depois de veres '+N.viu).test(g)&&!/Por fazer/.test(g)&&!/[Ss]ozinh/.test(await p.locator('body').innerText()),
+          tag+' '+t0+' registo distingue as maneiras de responder e diz se a primeira versão foi alterada: '+g.replace(/\s+/g,' ').slice(-260)); }
+      await p.reload();await p.waitForTimeout(150);
+      ok(new RegExp('Passo '+N.n+' de '+N.n,'i').test(await p.locator('.passo-n').innerText())&&(await p.locator('#v1-'+idEsc).innerText()).trim()===V1F2&&await p.inputValue('#r-'+idEsc)===TxR,tag+' '+t0+' depois de recarregar: o passo, a primeira versão e a versão revista');
+      ok((await p.locator('.alt:visible').count())===(est2?1:0),tag+' '+t0+' aviso de alteração mantém-se depois de recarregar');
+      { const feitos=D.passos.filter(P=>P.blocos.some(b=>['escolha','tocar','escrever','rever'].includes(b.t))).length;
+        ok(await p.locator('#passos li button .fe:visible').count()===feitos,tag+' '+t0+' os '+feitos+' passos com resposta trazem a palavra «feito»'); }
+      await semDeslize(t0+' fim');await cap(pasta+'-99-duas-versoes-e-registo',true);
+      // as marcas da conferência e as respostas ficam guardadas
+      { const ic=D.passos.findIndex(P=>P.blocos.some(b=>b.t==='lista'||b.t==='grelha'));await passo(ic+1);
+        const bl=D.passos[ic].blocos.find(b=>b.t==='grelha');
+        if(bl)ok(await p.locator('input[name="g-'+bl.id+'-0"]').nth(0).isChecked()&&await p.locator('input[name="g-'+bl.id+'-1"]').nth(1).isChecked(),tag+' '+t0+' marcação da grelha guardada');
+        else ok(await p.locator('#passo .marca-l input').nth(0).isChecked()&&await p.locator('#passo .marca-l input').nth(2).isChecked(),tag+' '+t0+' conferência guardada'); }
+      await passo(1);
+      { const b0=D.passos[0].blocos.find(b=>b.t==='escolha');r=await ret(b0.id);ok(/certo/.test(r.cls)&&/terceira/i.test(r.txt),tag+' '+t0+' estado das perguntas reposto'); }
+      await p.goBack();await p.waitForTimeout(120);
+      ok(!/Passo 1 de/i.test(await p.locator('.passo-n').innerText())&&p.url().includes('/'+N.pg+'/'),tag+' '+t0+' voltar atrás no navegador volta ao passo anterior');
+      await p.goForward();await p.waitForTimeout(120);ok(/Passo 1 de/i.test(await p.locator('.passo-n').innerText()),tag+' '+t0+' avançar no navegador');
+      await p.click('#apoio-bt');ok(await p.locator('#apoio-corpo').isHidden()&&await p.getAttribute('#apoio-bt','aria-expanded')==='false',tag+' '+t0+' texto de apoio recolhe');await p.click('#apoio-bt');
+      ok(await p.locator('#apoio-corpo').isVisible(),tag+' '+t0+' texto de apoio volta a mostrar-se');
+      ok(erros.length===0,tag+' '+t0+' erros de JavaScript: '+erros.join(' | '));erros.length=0;
+    }
+    // a entrada mostra o estado dos três treinos novos e os oito cartões cabem sem deslize
+    await p.goto(BASE);await semDeslize('entrada com oito treinos');
+    for(const N of NOVOS)ok(/primeira versão guardada; versão revista guardada/.test(await p.locator('[data-estado="'+N.pg+'"]').innerText()),tag+' índice mostra o estado do treino '+N.ord+': '+await p.locator('[data-estado="'+N.pg+'"]').innerText());
+    ok(await p.locator('.cartao-p').count()===8&&/^Oito treinos de exame$/.test((await p.locator('h1').innerText()).trim())&&/Os oito treinos/.test(await p.locator('.tr-nav').innerText()),tag+' a entrada tem oito cartões e o título «Oito treinos de exame»');
+    await cap('0-indice-oito-treinos',true);
+    ok(erros.length===0,tag+' entrada: erros de JavaScript: '+erros.join(' | '));erros.length=0;
+  }
   await c.close();
 
   /* ===== armazenamento indisponível ===== */
@@ -681,12 +969,15 @@ for(const [w,h] of [[390,844],[1280,900]]) for(const cs of ['light','dark']){
   p=await c2.newPage();escuta(p);
   // 12/11/2026: também no treino da sessão 17
   // 12/11/2026: e no da sessão 18, que tem sete passos (escreve-se no 5.º e revê-se no 7.º)
-  for(const [pil,npasso,cx,nrev] of [['interpretacao',4,'#t-p1-resposta',6],['escrita',4,'#t-p3-texto',6],['poesia-contemporanea',4,'#t-p4-resposta',6],['conto',5,'#t-p5-resposta',7]]){
+  // 13/11/2026: e nos das sessões 22 (pede também a opção), 25 e 23; nas larguras novas (360 e 900) correm só estes três
+  for(const [pil,npasso,cx,nrev] of [['interpretacao',4,'#t-p1-resposta',6],['escrita',4,'#t-p3-texto',6],['poesia-contemporanea',4,'#t-p4-resposta',6],['conto',5,'#t-p5-resposta',7],
+      ['coesao',5,'#t-p6-resposta',7],['apreciacao-critica',4,'#t-p7-texto',6],['exposicao',6,'#t-p8-resposta',8]].filter((x,i)=>antigos||i>=4)){
     await p.goto(BASE+pil+'/');
     ok(await p.locator('#aviso-guarda').isVisible()&&/não deixa guardar/.test(await p.locator('#pe-guarda').innerText())&&!/localStorage/.test(await p.locator('#pe-guarda').innerText()),tag+' sem armazenamento ('+pil+'): aviso no cimo e rodapé verdadeiro');
     await passo(npasso);
     ok(/não deixa guardar/.test(await p.locator('.antes-bt').innerText()),tag+' sem armazenamento ('+pil+'): aviso repetido junto do botão');
     await p.fill(cx,'Texto escrito sem armazenamento.');
+    if(await p.locator('input[name="o-'+cx.slice(3)+'"]').count())await p.locator('input[name="o-'+cx.slice(3)+'"]').nth(3).check();
     await p.click('button:has-text("Guardar a primeira versão")');
     { const t=await p.locator('.estado.ok').innerText();
       ok(/só enquanto esta página estiver aberta/.test(t)&&/caderno/.test(t)&&!/guardada neste dispositivo/.test(t),tag+' sem armazenamento ('+pil+'): mensagem verdadeira ao guardar a primeira versão: '+t); }
