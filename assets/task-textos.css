@@ -1,0 +1,209 @@
+/* 12/11/2026: molde «mais fácil de fazer» das tarefas de unidade (piloto na m3-u1, aprovado pelo docente; a seguir, o M3 inteiro).
+   Só as páginas com data-task-facil no <main> (scripts/tarefa_facil.py). Só composição: as cores vêm dos tokens da página
+   (--tinta, --papel, --fundo, --cinza, --suave, --task-accent, --task-secondary), nos dois temas.
+   Os textos para análise aparecem completos, com os versos numerados de 5 em 5; o que é só de um tema fica num
+   desdobrável, fechado no ecrã e aberto em papel (::details-content, como a peça «i»: não depende de JS). */
+
+/* As ordens leem-se à esquerda, sem palavras partidas (a regra geral do sítio justifica a prosa; aqui são listas de passos). */
+main.task-page.task-choice-page[data-task-facil] :is(p,li,td,th,dd,figcaption,label,summary,legend){text-align:start;text-align-last:auto;-webkit-hyphens:manual;hyphens:manual}
+[data-task-facil] .tf-p{max-width:60ch;margin:10px 0}
+[data-task-facil] :is(ol,ul){max-width:62ch;padding-left:1.5em;margin:10px 0}
+[data-task-facil] li{margin-bottom:8px}
+[data-task-facil] .task-part{margin:28px 0 8px}
+[data-task-facil] header h2.task-part:first-of-type{margin-top:8px}
+[data-task-facil] .tf-fazer>li::marker,[data-task-facil] .tf-passos>li::marker{font-weight:700}
+[data-task-facil] .tf-nota{font-size:.94rem;color:var(--suave);max-width:60ch;margin:8px 0}
+[data-task-facil] .tf-meta{display:inline-block;margin:0 0 12px;padding:4px 10px;border:1px solid var(--tinta);font:700 .94rem/1.4 Arial,Helvetica,sans-serif}
+
+/* Um só quadro de tempo e tamanho: continua a ser uma tabela no telemóvel (três colunas curtas). */
+[data-task-facil] .tf-quadro{width:100%;max-width:34rem;border-collapse:collapse;margin:8px 0 10px;font-size:1rem;line-height:1.35}
+[data-task-facil] .tf-quadro caption{position:absolute;width:1px;height:1px;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
+[data-task-facil] .tf-quadro :is(th,td){padding:8px 10px;border:1px solid var(--cinza);vertical-align:top;font-weight:400}
+[data-task-facil] .tf-quadro thead th{font:700 .82rem/1.3 Arial,Helvetica,sans-serif;letter-spacing:.06em;text-transform:uppercase;border-bottom:2px solid var(--tinta)}
+[data-task-facil] .tf-quadro tbody th{font-weight:700;white-space:nowrap;background:transparent;color:inherit;text-transform:none;letter-spacing:normal;font-size:1rem}
+[data-task-facil] .tf-quadro tbody tr:last-child :is(th,td){font-weight:700;border-top:2px solid var(--tinta)}
+/* 12/11/2026 (M3 inteiro): um quadro copiado de uma lição, dentro de um desdobrável de apoio (só no ecrã). */
+[data-task-facil] .tf-tabela{width:100%;max-width:40rem;border-collapse:collapse;margin:8px 0 10px;font-size:.96rem;line-height:1.35}
+[data-task-facil] .tf-tabela caption{text-align:start;font:700 1rem/1.4 Arial,Helvetica,sans-serif;padding:0 0 6px}
+[data-task-facil] .tf-tabela :is(th,td){padding:7px 8px;border:1px solid var(--cinza);vertical-align:top;font-weight:400;overflow-wrap:anywhere}
+[data-task-facil] .tf-tabela thead th{font:700 .8rem/1.3 Arial,Helvetica,sans-serif;letter-spacing:.04em;text-transform:uppercase;border-bottom:2px solid var(--tinta);background:transparent;color:inherit}
+[data-task-facil] .tf-tabela tbody th{font-weight:700;background:transparent;color:inherit;text-transform:none;letter-spacing:normal;font-size:.96rem}
+[data-task-facil] .tf-grupo{margin-top:12px}
+[data-task-facil] .tf-imprimir{margin:12px 0}
+[data-task-facil] .tf-imprimir button{font:700 1rem/1.3 Arial,Helvetica,sans-serif;min-height:48px;padding:10px 16px;border:2px solid var(--tinta);background:transparent;color:inherit;cursor:pointer}
+[data-task-facil] .tf-imprimir button:hover{background:var(--fundo)}
+/* O aquecimento é o passo 1: fica logo a seguir à lista «O que vais fazer», com a única ligação. */
+[data-task-facil] .tf-aquecer{margin:14px 0 6px;padding:2px 14px 10px;border:2px solid var(--tinta);border-left-width:8px}
+[data-task-facil] .tf-aquecer .task-part{margin-top:10px}
+[data-task-facil] .tf-abrir{display:block;margin:8px 0 4px}
+
+/* Perguntas */
+[data-task-facil] .tf-pergunta>h2,[data-task-facil] .tf-tema>h2{font-size:clamp(1.35rem,2.6vw,1.8rem);margin-bottom:10px}
+[data-task-facil] .tf-pergunta>h2 .tf-n{display:block;margin-bottom:4px;font:700 .9rem/1.4 Arial,Helvetica,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:var(--task-accent)}
+[data-task-facil] .tf-pedido{margin:20px 0 12px;padding:14px 16px 8px;border:2px solid var(--tinta);border-left-width:8px}
+[data-task-facil] .tf-pedido h3{margin:0 0 6px}
+[data-task-facil] .tf-alineas{list-style:lower-alpha;padding-left:1.7em}
+[data-task-facil] .tf-alineas>li::marker{font-weight:700}
+[data-task-facil] .tf-ajuda,[data-task-facil] .tf-citar{font-size:1rem;max-width:60ch;margin:8px 0;padding-top:8px;border-top:1px solid var(--cinza)}
+[data-task-facil] .tf-exemplo{margin:10px 0;padding:10px 16px;border-left:4px solid var(--cinza);background:var(--fundo)}
+[data-task-facil] details.tf-exemplos{border-width:1px}
+[data-task-facil] .tf-grelha-nota{margin-top:-4px}
+[data-task-facil] .tf-exemplo h4{margin:0 0 6px;font:700 1rem/1.4 Arial,Helvetica,sans-serif}
+[data-task-facil] .tf-exemplo p{font-size:1rem;margin:6px 0}
+[data-task-facil] .tf-exemplo .tf-contexto{font-size:.94rem;color:var(--suave);max-width:60ch}
+[data-task-facil] .tf-al{font:700 .9rem/1.4 Arial,Helvetica,sans-serif}
+/* As condições de um passo ficam por baixo dele, sem números: não são passos. */
+[data-task-facil] .tf-cond{list-style:disc;margin:6px 0 2px;padding-left:1.3em}
+[data-task-facil] .tf-cond>li{margin-bottom:4px}
+[data-task-facil] .tf-antes{margin:8px 0}
+[data-task-facil] .tf-relogio-nota{margin:0 0 6px}
+
+/* Textos para análise */
+[data-task-facil] .tt-texto,[data-task-facil] .tt-onde{margin:18px 0;padding:14px 16px 12px;border:1px solid var(--tinta);border-top-width:5px;min-width:0}
+[data-task-facil] .tt-texto>h3,[data-task-facil] .tt-onde>h3{margin:0 0 10px;font:400 1.02rem/1.4 Arial,Helvetica,sans-serif}
+[data-task-facil] .tt-num{display:inline-block;margin-right:6px;padding:2px 8px;background:var(--tinta);color:var(--papel);font-weight:700;white-space:nowrap}
+[data-task-facil] .tt-onde>h3{font-weight:700}
+[data-task-facil] .tt-versos{font:400 1.08rem/1.6 Georgia,"Times New Roman",serif}
+[data-task-facil] .tt-estrofe{margin:0 0 14px;max-width:none;break-inside:avoid}
+[data-task-facil] .tt-rotulo{margin:12px 0 4px 2.4rem;max-width:none;font:700 .8rem/1.4 Arial,Helvetica,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--suave)}
+[data-task-facil] .tt-rotulo:first-child{margin-top:0}
+[data-task-facil] .tt-v{display:grid;grid-template-columns:1.9rem minmax(0,1fr);column-gap:.5rem}
+[data-task-facil] .tt-n{align-self:center;font:400 .78rem/1 Arial,Helvetica,sans-serif;color:var(--suave);text-align:right;font-variant-numeric:tabular-nums}
+[data-task-facil] .tt-l{padding-left:1.6em;text-indent:-1em;border-left:5px solid transparent;overflow-wrap:break-word}
+[data-task-facil] .tt-esc .tt-l{border-left-color:var(--task-accent)}
+[data-task-facil] .tt-escolher{margin:0 0 10px;padding:6px 10px;border-left:5px solid var(--task-accent);font:700 .98rem/1.4 Arial,Helvetica,sans-serif;max-width:none}
+[data-task-facil] .tt-gloss{margin-top:6px;padding-top:8px;border-top:1px solid var(--tinta);font-size:.94rem;line-height:1.45}
+[data-task-facil] .tt-gloss p{margin:0 0 4px}
+[data-task-facil] .tt-gloss ul{list-style:none;padding:0;margin:0;max-width:none;columns:2 14rem;column-gap:24px}
+[data-task-facil] .tt-gloss li{margin:0 0 4px;break-inside:avoid}
+[data-task-facil] .tt-fonte{margin:10px 0 0;font-size:.86rem;line-height:1.4;color:var(--suave);max-width:none}
+[data-task-facil] .tt-onde li{font-size:1rem}
+[data-task-facil] .tt-nomes{columns:2 12rem;column-gap:24px;max-width:none}
+[data-task-facil] .tt-nomes li{break-inside:avoid;margin-bottom:4px}
+[data-task-facil] .tt-onde details.tf-mais{margin:8px 0 10px}
+
+/* Temas: os passos à vista; o material de um só tema num desdobrável. */
+/* Dentro de um tema, os blocos de texto e a peça «i» guardam o seu desenho (as regras dos temas e dos desdobráveis são mais largas). */
+[data-task-facil] .task-theme :is(.tt-texto,.tt-onde)>h3{display:block;margin:0 0 10px}
+[data-task-facil] .task-theme .tt-num{display:inline-block;width:auto;height:auto;border:0;padding:2px 8px;font:700 1.02rem/1.4 Arial,Helvetica,sans-serif}
+[data-task-facil] .task-theme .tt-estrofe{margin:0 0 14px;font-size:inherit}
+[data-task-facil] .task-theme .tt-rotulo{margin:12px 0 4px 2.4rem;font-size:.8rem}
+[data-task-facil] .task-theme .tt-fonte{margin:10px 0 0;font-size:.86rem}
+[data-task-facil] .task-theme .tt-gloss p{margin:0 0 4px;font-size:inherit}
+[data-task-facil] details.info-i{margin:0 0 0 auto;padding:0;border:0}
+[data-task-facil] details.info-i>summary{display:grid;padding:0;min-height:0}
+[data-task-facil] details.info-i .info-i-texto{font-size:.8125rem;margin:0}
+[data-task-facil] .task-theme{padding-bottom:12px}
+[data-task-facil] .task-theme .tf-resumo{margin:0 0 6px;font-weight:700}
+[data-task-facil] details.tf-so-tema{margin:14px 0 4px;padding:0;border:2px solid var(--tinta)}
+[data-task-facil] details.tf-so-tema>summary{display:flex;align-items:center;gap:10px;min-height:48px;padding:10px 14px;font:700 1rem/1.35 Arial,Helvetica,sans-serif;cursor:pointer;list-style:none}
+[data-task-facil] details.tf-so-tema>summary::-webkit-details-marker{display:none}
+[data-task-facil] details.tf-so-tema>summary::before{content:"+";display:inline-grid;place-items:center;flex:0 0 1.5em;width:1.5em;height:1.5em;border:2px solid currentColor;font:700 1.1rem/1 Arial,Helvetica,sans-serif}
+[data-task-facil] details.tf-so-tema[open]>summary::before{content:"\2212"}
+[data-task-facil] details.tf-so-tema>div{padding:4px 14px 12px;border-top:1px solid var(--cinza)}
+[data-task-facil] .tf-fig{margin:12px 0;max-width:640px}
+[data-task-facil] .tf-fig img{display:block;width:100%;height:auto}
+[data-task-facil] .tf-fig figcaption{font-size:.9rem;line-height:1.4;color:var(--suave);margin-top:6px}
+[data-task-facil] .tf-dossie{margin:16px 0;padding:10px 14px}
+[data-task-facil] .tf-dossie h4{margin:0 0 6px;font:700 1.05rem/1.4 Arial,Helvetica,sans-serif}
+[data-task-facil] .tf-dossie li::marker{font-weight:700}
+[data-task-facil] .tf-origem{display:block;font-size:.84rem;line-height:1.4;color:var(--suave)}
+/* Com material comprido dentro de cada tema, os dois temas ficam um por baixo do outro (o A primeiro). */
+[data-task-facil] .task-themes{grid-template-columns:1fr}
+
+/* Verificação em perguntas de sim ou não */
+[data-task-facil] .task-section>h2:not(:first-child){margin-top:30px}
+[data-task-facil] .task-checklist{margin:12px 0}
+[data-task-facil] .task-checklist label{margin:2px 0}
+[data-task-facil] .tf-rever-lista{list-style:none;padding:0}
+[data-task-facil] .tf-rever-lista li{padding:8px 0;border-top:1px solid var(--cinza)}
+
+@media(max-width:480px){
+ [data-task-facil] .tt-texto,[data-task-facil] .tt-onde{padding:12px 10px 10px}
+ [data-task-facil] .tt-versos{font-size:1rem}
+ [data-task-facil] .tt-v{grid-template-columns:1.5rem minmax(0,1fr);column-gap:.35rem}
+ [data-task-facil] .tt-rotulo{margin-left:1.85rem}
+ [data-task-facil] .tf-pedido{padding:12px 12px 6px}
+ [data-task-facil] details.tf-so-tema>div{padding:4px 10px 10px}
+ [data-task-facil] .tf-quadro :is(th,td){padding:6px 7px}
+ /* No telemóvel, o material de um tema não perde largura em caixas dentro de caixas. */
+ [data-task-facil] .task-theme{padding:12px 10px 10px}
+ [data-task-facil] details.tf-so-tema>div{padding:4px 8px 8px}
+ [data-task-facil] .task-theme :is(.tt-texto,.tt-onde){border-inline:0;border-bottom:0;padding-inline:0}
+ [data-task-facil] .tf-dossie{padding:8px 0 8px 8px}
+ [data-task-facil] .tf-dossie ol{padding-left:1.3em}
+ [data-task-facil] .tf-exemplo{padding:8px 10px}
+ [data-task-facil] .tt-l{padding-left:1.2em}
+ [data-task-facil] .task-theme .tt-versos{font-size:.94rem}
+ [data-task-facil] .task-theme .tt-v{grid-template-columns:1.2rem minmax(0,1fr);column-gap:.25rem}
+ [data-task-facil] .task-theme .tt-rotulo{margin-left:1.45rem}
+}
+
+/* Em papel sai só o que é preciso para fazer a tarefa: o primeiro cartão sem relógios, as perguntas com os seus textos, os dois
+   temas com o material, as duas linhas finais, a verificação e a entrega. Não saem os exemplos nem as descrições do Kit
+   (.tf-so-ecra). Não há páginas novas forçadas; nenhum poema se parte entre páginas. */
+@media print{
+ [data-task-facil] .task-relogio,[data-task-facil] .tf-relogio-nota,[data-task-facil] .tf-aquecer,[data-task-facil] .tf-imprimir,[data-task-facil] .task-grelha,[data-task-facil] .tf-grelha-nota,[data-task-facil] .tf-rever,[data-task-facil] [data-task-card-name="Rever a matéria"],[data-task-facil] .tf-so-ecra{display:none!important}
+ .task-reader [data-task-facil] .task-reader-card:has(>.tf-rever){display:none!important}
+ [data-task-facil] details.tf-so-tema::details-content{content-visibility:visible;display:block}
+ [data-task-facil] details.tf-so-tema>summary::before{display:none}
+ [data-task-facil] details.tf-so-tema{border:0;border-top:1px solid #000}
+ [data-task-facil] :is(h2,h3,h4){break-inside:avoid}
+ [data-task-facil] .tf-meta{display:table}
+ [data-task-facil] details.info-i>summary{display:none!important}
+ main[data-task-facil]{font-size:11pt;line-height:1.35}
+ .task-reader [data-task-facil] .task-reader-card,.task-reader [data-task-facil] .task-reader-card[hidden]{margin-bottom:8pt}
+ [data-task-facil] h1{font-size:18pt;margin:0 0 4pt}
+ [data-task-facil] .task-kicker{margin:0 0 2pt}
+ [data-task-facil] .tf-pergunta>h2,[data-task-facil] .tf-tema>h2,[data-task-facil] .task-section>h2{font-size:13pt;margin:6pt 0 4pt}
+ [data-task-facil] .tf-meta{margin:0 0 4pt;padding:1pt 6pt}
+ [data-task-facil] .tf-ajuda,[data-task-facil] .tf-citar{margin:3pt 0;padding-top:3pt}
+ [data-task-facil] .task-theme{padding:6pt 10pt}
+ [data-task-facil] .tf-dossie{margin:4pt 0;padding:4pt 10pt}
+ [data-task-facil] .tf-origem{font-size:8.5pt}
+ [data-task-facil] details.tf-so-tema{margin:6pt 0 2pt}
+ [data-task-facil] details.tf-so-tema>summary{min-height:0;padding:4pt 0}
+ [data-task-facil] details.tf-so-tema>div{padding:0;border-top:0}
+ [data-task-facil] .tt-gloss{font-size:9.5pt;line-height:1.3}
+ [data-task-facil] .tt-fonte{margin-top:4pt;font-size:8.5pt}
+ [data-task-facil] .tt-rotulo{margin:6pt 0 2pt 2.4rem}
+ [data-task-facil] li{margin-bottom:1pt}
+ [data-task-facil] :is(.tf-p,.tf-nota,.tf-ajuda,.tf-citar){max-width:80ch}
+ [data-task-facil] .task-theme>.tf-p,[data-task-facil] #criterios{break-after:avoid}
+ [data-task-facil] #entregar{break-inside:avoid}
+ [data-task-facil] :is(ol,ul){margin:4pt 0}
+ [data-task-facil] .tf-p{margin:4pt 0}
+ [data-task-facil] .task-checklist{margin:4pt 0}
+ [data-task-facil] .task-checklist label{min-height:0;margin:0;padding:2pt 0}
+ [data-task-facil] .tt-texto,[data-task-facil] .tt-onde{margin:6pt 0;padding:5pt 10pt}
+ [data-task-facil] .tt-estrofe,[data-task-facil] .task-theme .tt-estrofe{margin-bottom:5pt}
+ [data-task-facil] .task-section{break-inside:auto}
+ [data-task-facil] .task-themes{display:block}
+ [data-task-facil] .task-theme+.task-theme{margin-top:10pt}
+ /* Nenhum texto se parte: sai inteiro, com o vocabulário, na mesma página. */
+ [data-task-facil] .tt-texto{break-inside:avoid}
+ [data-task-facil] :is(p,li){orphans:2;widows:2}
+ [data-task-facil] .tt-onde,[data-task-facil] .tf-dossie li,[data-task-facil] .tf-passos>li,[data-task-facil] .tf-alineas>li{break-inside:avoid}
+ [data-task-facil] .tt-gloss ul{columns:3 11rem}
+ [data-task-facil] .task-part{margin:8pt 0 2pt}
+ [data-task-facil] .tf-quadro :is(th,td){padding:1pt 6pt}
+ [data-task-facil] .tf-quadro{margin:4pt 0;line-height:1.3}
+ [data-task-facil] .tf-quadro{max-width:none}
+ [data-task-facil] .tf-nota{margin:3pt 0}
+ [data-task-facil] .tf-pedido{margin:6pt 0;padding:5pt 10pt 3pt}
+ [data-task-facil] :is(.tf-pedido,.task-checklist,.tf-fig,.tt-gloss,.tf-quadro){break-inside:avoid}
+ [data-task-facil] :is(h2,h3,h4,summary,.tt-rotulo,.tf-meta,.tf-antes,.tf-fig){break-after:avoid}
+ /* O cabeçalho do cartão dos temas (título, orientação e «Escreve a letra do teu tema») não fica sozinho no fundo de uma página. */
+ [data-task-facil] .tf-topo{break-after:avoid}
+ [data-task-facil] .task-section>h2:not(:first-child){margin-top:12pt}
+ [data-task-facil] .task-themes{grid-template-columns:1fr}
+ [data-task-facil] .tt-versos,[data-task-facil] .task-theme .tt-versos{font-size:11pt;line-height:1.3}
+ [data-task-facil] .tt-num,[data-task-facil] .task-theme .tt-num{background:none;color:#000;border:1px solid #000}
+ /* A fotografia sai larga (é para descrever) e com uma só legenda: o crédito por extenso, que começa com as mesmas palavras. */
+ [data-task-facil] .tf-fig{max-width:13cm;margin:4pt 0}
+ [data-task-facil] .tf-fig figcaption{display:none}
+ /* O dossiê sai inteiro na página da fotografia e dos passos (linhas mais largas, sem partir a lista). */
+ [data-task-facil] .tf-dossie ol{max-width:80ch}
+ [data-task-facil] header{padding-top:0}
+ [data-task-facil] a{text-decoration:none}
+}

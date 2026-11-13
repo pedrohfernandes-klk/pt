@@ -25,6 +25,13 @@ M5-U2 fecha com a conclusão do parágrafo de opinião). As grelhas que já tinh
 08/11/2026: decisão 152, M6: com «nao_partir_valores» numa grelha, «20 valores em cinco critérios» leva espaço que não quebra
 (U+00A0) entre o número e «valores»; e a ligação à grelha pode estar já com «Grelha /20» preso (U+00A0, a tarefa com
 «nao_partir_grelha», scripts/tarefas_escolha.py), e então não se repete. As grelhas e as tarefas sem as chaves saem iguais, byte a byte.
+12/11/2026: tarefas «mais fáceis de fazer» (piloto na m3-u1, aprovado pelo docente; a seguir, o M3 inteiro). Duas chaves opcionais:
+«autoavaliacao_so_tua» (decisão do docente: a autoavaliação é só para o aluno e não se entrega; o texto da caixa muda) e
+«trocas_aluno», pares [antes, depois] com as palavras que o enunciado novo trocou por outras mais simples (na página do aluno,
+cada par tem de ocorrer). «Tudo junto» (decisão do docente): a versão de correção usa as mesmas palavras (as mesmas trocas, nos
+textos que mostra) e, com «autoavaliacao_so_tua», deixa de supor que a autoavaliação é entregue: sai a coluna «Aluno» da tabela
+de notas e sai a nota «Diferença entre a tua nota e a minha»; ficam a nota e o comentário do docente. As grelhas sem as chaves
+saem iguais, byte a byte.
 Idempotente. Uso: python3 scripts/grelhas_tarefas.py [--saida PASTA]
 """
 from html import escape as e
@@ -128,7 +135,26 @@ def intervalo(c, sep=' '):
     return '1' if c['max'] == 2 else f"1{sep}a{sep}{c['max'] - 1}"
 
 
+def trocado(x, pares, vistos):
+    """12/11/2026: aplica as trocas de vocabulário a todos os textos de uma grelha (só para a página do aluno)."""
+    if isinstance(x, str):
+        for a, b in pares:
+            if a in x:
+                vistos.add(a)
+                x = x.replace(a, b)
+        return x
+    if isinstance(x, list):
+        return [trocado(i, pares, vistos) for i in x]
+    if isinstance(x, dict):
+        return {k: (v if k in ('trocas_aluno', 'titulo') else trocado(v, pares, vistos)) for k, v in x.items()}
+    return x
+
+
 def pagina_aluno(slug, t):
+    if t.get('trocas_aluno'):
+        vistos = set()
+        t = trocado(t, t['trocas_aluno'], vistos)
+        assert vistos == {a for a, _ in t['trocas_aluno']}, (slug, vistos)
     m = t['modulo'].lower()
     # 08/11/2026: decisão 152, M6. «nao_partir_valores»: «20 valores» com espaço que não quebra.
     valores = '\xa0' if t.get('nao_partir_valores') else ' '
@@ -154,8 +180,9 @@ def pagina_aluno(slug, t):
             corpo += f'<div><dt>{rotulo}<small>{sub}</small></dt><dd>{texto}<p class="ex"><b>Exemplo</b>{ital(ex)}</p></dd></div>'
         corpo += '</dl><p class="custa"><b>Custa pontos</b></p><ul>' + ''.join(f'<li>{ital(x)}</li>' for x in c['custa']) + '</ul></section>'
     corpo += ('<section class="g-auto" id="autoavaliacao"><h2>Antes de entregar: dá-te pontos</h2>'
-              '<p>Em papel, critério a critério: escreve o número e a passagem do teu texto que o prova. Entrega esta autoavaliação com as fotografias. '
-              'O docente põe a nota dele ao lado da tua e comenta a diferença.</p>'
+              '<p>Em papel, critério a critério: escreve o número e a passagem do teu texto que o prova. '
+              + ('Esta autoavaliação é só para ti: não se entrega.</p>' if t.get('autoavaliacao_so_tua') else
+                 'Entrega esta autoavaliação com as fotografias. O docente põe a nota dele ao lado da tua e comenta a diferença.</p>') +
               f'<div class="g-tab" {REGIAO.format("Autoavaliação")}><table><thead><tr><th>Critério</th><th class="n">Máx.</th><th class="n">Eu</th><th>A passagem que o prova</th></tr></thead><tbody>')
     for c in t['criterios']:
         corpo += f'<tr><td>{ital(c["nome"])}</td><td class="n">{c["max"]}</td><td></td><td></td></tr>'
@@ -165,20 +192,27 @@ def pagina_aluno(slug, t):
 
 
 def pagina_correcao(slug, t):
+    # 12/11/2026: «tudo junto». As mesmas palavras do enunciado e da grelha do aluno; sem a nota do aluno, que não se entrega.
+    so_tua = bool(t.get('autoavaliacao_so_tua'))
+    if t.get('trocas_aluno'):
+        vistos = set()
+        t = trocado(t, t['trocas_aluno'], vistos)
+        assert vistos, slug
+    aluno_th, aluno_td = ('', '') if so_tua else ('<th class="n">Aluno</th>', '<td></td>')
     corpo = (f'<nav class="g-nav" aria-label="Navegação"><a href="../grelha/">← Grelha do aluno</a><a href="{VOLTAR}">Tarefa</a>'
              '<button type="button" data-print hidden>Imprimir</button></nav>'
              f'<header><p class="rot">{e(t["modulo"])} · Unidade {t["unidade"]} · Correção</p><h1>{ital(t["titulo"])}</h1>'
              '<p class="lead">Franqueza com cuidado: fala do texto, nunca da pessoa; aponta a passagem; diz o que fazer a seguir.</p>'
              '<p class="nome">Aluno <span></span> Turma <span></span> Data <span></span></p></header>'
-             f'<div class="g-tab" {REGIAO.format("Notas por critério")}><table><thead><tr><th>Critério</th><th class="n">Máx.</th><th class="n">Aluno</th><th class="n">Docente</th><th>Observações</th></tr></thead><tbody>')
+             f'<div class="g-tab" {REGIAO.format("Notas por critério")}><table><thead><tr><th>Critério</th><th class="n">Máx.</th>{aluno_th}<th class="n">Docente</th><th>Observações</th></tr></thead><tbody>')
     for c in t['criterios']:
-        corpo += f'<tr><td>{ital(c["nome"])}<br><small>{ital(c["niveis"]["max"][0])}</small></td><td class="n">{c["max"]}</td><td></td><td></td><td></td></tr>'
-    corpo += ('<tr class="total"><th>Total</th><td class="n">20</td><td></td><td></td><td></td></tr></tbody></table></div>'
+        corpo += f'<tr><td>{ital(c["nome"])}<br><small>{ital(c["niveis"]["max"][0])}</small></td><td class="n">{c["max"]}</td>{aluno_td}<td></td><td></td></tr>'
+    corpo += (f'<tr class="total"><th>Total</th><td class="n">20</td>{aluno_td}<td></td><td></td></tr></tbody></table></div>'
               '<h2 class="g-fb-t">Comentário ao aluno</h2><div class="g-fb">'
               '<div><h3>O que funciona</h3><p>Uma coisa concreta, com a passagem.</p></div>'
               '<div><h3>O que te custa pontos</h3><p>O critério e a passagem, sem rodeios.</p></div>'
               '<div><h3>Próximo passo</h3><p>Uma ação que podes fazer já.</p></div>'
-              '</div><p class="custa"><b>Diferença entre a tua nota e a minha</b></p><p>Onde nos afastámos mais de um ponto, a razão está nas observações.</p>'
+              '</div>' + ('' if so_tua else '<p class="custa"><b>Diferença entre a tua nota e a minha</b></p><p>Onde nos afastámos mais de um ponto, a razão está nas observações.</p>') +
               f'<footer><a href="../grelha/">Grelha do aluno</a><a href="{VOLTAR}">Tarefa</a></footer>')
     return casca(f'Correção: {t["titulo"]}', corpo)
 

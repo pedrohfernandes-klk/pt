@@ -24,11 +24,31 @@ CUIDADO_M8 = json.loads((ROOT / 'tests/fixtures/cuidado-m8-edits-20261112.json')
 # M9 a deixou (o hash «after» do seu manifesto), desfaz-se primeiro essa camada, com contagem estrita, e só depois as do M8, do
 # M7 e do M6 e a dos enunciados; quem já a desfez entrega outro texto e nada se desfaz duas vezes.
 CUIDADO_M9 = json.loads((ROOT / 'tests/fixtures/cuidado-m9-edits-20261112.json').read_text('utf-8'))['files']
+# 12/11/2026: as duas tarefas do M3 «mais fáceis de fazer» (tarefas_faceis_m3_20261112) ficam por cima de todas e mudam os
+# enunciados e os dados da M3-U1 e da M3-U2, que a revisão dos enunciados e a decisão 152 no M6 também mudaram. Pela mesma regra:
+# quando o texto recebido é a página como essa camada a deixou (o hash «after» do seu manifesto), desfaz-se primeiro essa camada,
+# com contagem estrita, e só depois as outras; quem já a desfez entrega outro texto e nada se desfaz duas vezes.
+TAREFAS_FACEIS_M3 = json.loads((ROOT / 'tests/fixtures/tarefas-faceis-m3-edits-20261112.json').read_text('utf-8'))['files']
 def _sha_lf(text):
     return hashlib.sha256(text.replace('\r\n', '\n').encode()).hexdigest()
+def desfazer_faceis(path, text):
+    """12/11/2026: desfaz só a camada das tarefas do M3 mais fáceis de fazer, em qualquer dos seus 16 ficheiros (também o guia, o
+    índice e o mapa do M3, as grelhas, as correções e os aquecimentos, que a revisão dos enunciados não mudou), quando o texto é a
+    página como ela a deixou."""
+    p = Path(path)
+    rel = p.relative_to(ROOT).as_posix() if p.is_absolute() else p.as_posix()
+    no_cimo = TAREFAS_FACEIS_M3.get(rel)
+    if no_cimo and _sha_lf(text) == no_cimo['after_sha256_lf']:
+        for edit in reversed(no_cimo['edits']):
+            assert text.count(edit['new']) == edit['occurrences'], f'Tarefas do M3 mais fáceis de fazer não confere: {rel}'
+            text = text.replace(edit['new'], edit['old'])
+    return text
 def desfazer(path, text):
     p = Path(path)
     rel = p.relative_to(ROOT).as_posix() if p.is_absolute() else p.as_posix()
+    # 12/11/2026: antes de tudo, a camada do topo (as tarefas do M3 mais fáceis de fazer), também nos ficheiros que a revisão dos
+    # enunciados não mudou.
+    text = desfazer_faceis(rel, text)
     entry = FILES.get(rel)
     if not entry:
         return text
