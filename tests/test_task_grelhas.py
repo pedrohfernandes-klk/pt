@@ -122,6 +122,28 @@ CITACOES.update({'m6-u1': [('licao-m3-f09', 'Roga a Deus, que teus anos encurtou
 
 # 31/10/2026: provas das citações dos exemplos públicos, conforme as notas revistas do M3 e M5.
 CITACOES.update({'m3-u1': [('licao-m3-f04', 'A rota das especiarias', 'A rota das especiarias'), ('licao-m3-f04', 'Quem apanhava a pimenta no Malabar', 'Quem apanhava a pimenta no Malabar'), ('licao-m3-f16', 'Olhos sossegados, / Pretos e cansados', 'Olhos sossegados, / Pretos e cansados'), ('licao-m3-f05', 'Perde a pena do voar', 'Perde a pena do voar'), ('licao-m3-f05', 'Perdigão perdeu a pena', 'Perdigão perdeu a pena'), ('licao-m3-f05', 'Perde a pena do voar, / Ganha a pena do tormento', 'Perde a pena do voar, / Ganha a pena do tormento'), ('licao-m3-f05', 'Não há mal que lhe não venha', 'Não há mal que lhe não venha'), ('licao-m3-f13', 'Contra um bicho da terra tão pequeno?', 'Contra um bicho da terra tão pequeno?'), ('licao-m3-f09', 'Vem não sei como, e dói não sei porquê', 'Vem não sei como, e dói não sei porquê'), ('licao-m3-f13', 'Contra um bicho da terra tão pequeno?', 'Contra um bicho da terra tão pequeno?')], 'm3-u2': [('licao-m3-f13', 'Contra um bicho da terra tão pequeno?', 'Contra um bicho da terra tão pequeno?'), ('licao-m3-f13', 'Contra um bicho da terra tão pequeno?', 'Contra um bicho da terra tão pequeno?'), ('licao-m3-f13', 'Onde terá segura a curta vida', 'Onde terá segura a curta vida'), ('licao-m3-f13', 'Na terra tanta guerra, tanto engano', 'Na terra tanta guerra, tanto engano')], 'm5-u1': [('licao-m5-f04', 'Teu primo é um composto de todas as virtudes', 'Teu primo é um composto de todas as virtudes'), ('licao-m5-f04', 'Teu primo', 'Teu primo'), ('licao-m5-f04', 'um composto de todas as virtudes', 'um composto de todas as virtudes'), ('licao-m5-f04', 'Thereza ergueu-se sem lagrimas, e entrou serenamente no seu quarto.', 'Thereza ergueu-se sem lagrimas, e entrou serenamente no seu quarto.'), ('licao-m5-f04', 'a violencia de um pae é sempre amor', 'a violencia de um pae é sempre amor'), ('licao-m2-f02', 'Mais quero asno que me leve que cavalo que me derrube', 'Mais quero asno que me leve que cavalo que me derrube')], 'm5-u2': [('licao-m5-f04', 'Thereza ergueu-se sem lagrimas, e entrou serenamente no seu quarto.', 'Thereza ergueu-se sem lagrimas, e entrou serenamente no seu quarto.'), ('licao-m5-f04', 'mate-me; mas não me force a casar com meu primo!', 'mate-me; mas não me force a casar com meu primo!'), ('licao-m5-f11', 'Sole normande?', 'Sole normande?'), ('licao-m5-f12', "Então Ega perguntou, do fundo do sofá onde se enterrára, se, n'esses ultimos annos, elle não tivera a idéa", "Então Ega perguntou, do fundo do sofá onde se enterrára, se, n'esses ultimos annos, elle não tivera a idéa"), ('licao-m1-f02', "Eu atendendo meu amig', eu a[tendendo]", "Eu atendendo meu amig', eu a[tendendo]")]})
+# 13/11/2026: revisão das tarefas do M5 mais fáceis de fazer (camada tarefas_faceis_m5_20261113). Com os textos inteiros no enunciado,
+# os exemplos das grelhas do M5 que usavam frases desses textos («Teu primo é um composto de todas as virtudes» e «Thereza ergueu-se
+# sem lagrimas…», do capítulo IV, na m5-u1; a pergunta de Ega, do balanço final, na m5-u2) passam a usar frases que as lições dão e que
+# não estão nos textos da tarefa. A exigência é a mesma: cada citação dos exemplos está, letra a letra, numa lição do sítio e nos
+# dados da grelha; as que não mudaram ficam como estavam.
+_SAEM_1113 = {'m5-u1': {'Teu primo é um composto de todas as virtudes', 'Teu primo', 'um composto de todas as virtudes',
+                        'Thereza ergueu-se sem lagrimas, e entrou serenamente no seu quarto.'},
+              'm5-u2': {"Então Ega perguntou, do fundo do sofá onde se enterrára, se, n'esses ultimos annos, elle não tivera a idéa"}}
+_ENTRAM_1113 = {
+    'm5-u1': [('licao-m5-f07', 'Domingos Botelho era extremamente feio', 'Em «Domingos Botelho era extremamente feio» (lição F07)'),
+              ('licao-m5-f07', 'Domingos Botelho era', '«Domingos Botelho» é o sujeito'),
+              ('licao-m5-f07', 'extremamente feio', '«extremamente feio» é predicativo do sujeito'),
+              ('licao-m5-f07', 'Simão, adeus até à eternidade!', '«Simão, adeus até à eternidade!»'),
+              ('licao-m5-f17', 'Escrevia a mãe a Simão, e não recebia resposta. Pensava ela que o filho não respondia', None),
+              ('licao-m5-f17', 'não recebia resposta', '«não recebia resposta»')],
+    'm5-u2': [('licao-m5-f12', 'Simão disse que estava ali', 'Em «Simão disse que estava ali» (um exemplo inventado da lição F12)'),
+              ('licao-m5-f12', 'Exemplos inventados: no cais, Simão diz «Estou aqui»', '_Estou aqui._')],
+}
+for _slug in _SAEM_1113:
+    _antes = len(CITACOES[_slug])
+    CITACOES[_slug] = [c for c in CITACOES[_slug] if c[1] not in _SAEM_1113[_slug]] + _ENTRAM_1113[_slug]
+    assert len(CITACOES[_slug]) == _antes - len(_SAEM_1113[_slug]) + len(_ENTRAM_1113[_slug]) > _antes, _slug
 
 def licao(nome):
     """Texto da lição sem marcas e, a seguir, a fonte inteira (para o que só está na descrição de uma imagem).
@@ -181,7 +203,8 @@ class Grelhas(unittest.TestCase):
                 # de correção fica sem a coluna «Aluno» e sem a nota da diferença. Nas outras onze, a frase e a coluna de sempre.
                 so_tua=bool(t.get('autoavaliacao_so_tua'))
                 # 13/11/2026: o mesmo nas duas grelhas do M1 (camada tarefas_faceis_m1_20261113); nas outras nove, a frase e a coluna de sempre.
-                self.assertEqual(so_tua,slug in ('m1-u1','m1-u2','m3-u1','m3-u2'))
+                # 13/11/2026: o mesmo nas duas grelhas do M5 (camada tarefas_faceis_m5_20261113); nas outras sete, a frase e a coluna de sempre.
+                self.assertEqual(so_tua,slug in ('m1-u1','m1-u2','m3-u1','m3-u2','m5-u1','m5-u2'))
                 self.assertEqual(aluno.count('Esta autoavaliação é só para ti: não se entrega.'),1 if so_tua else 0)
                 self.assertEqual(aluno.count('Entrega esta autoavaliação com as fotografias. O docente põe a nota dele ao lado da tua e comenta a diferença.'),0 if so_tua else 1)
                 self.assertEqual(correcao.count('<th class="n">Aluno</th>'),0 if so_tua else 1)

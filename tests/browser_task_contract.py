@@ -133,7 +133,9 @@ def assert_task_page(page, before):
     facil = page.locator('main[data-task-facil]').count() == 1
     # 13/11/2026: o mesmo nas duas tarefas do M1 (camada tarefas_faceis_m1_20261113; o que é só do molde novo confere-se em
     # tests/browser_tarefas_faceis_m1.py).
-    assert facil == (slug in ('m1-u1', 'm1-u2', 'm3-u1', 'm3-u2')) or not slug, slug
+    # 13/11/2026: o mesmo nas duas tarefas do M5 (camada tarefas_faceis_m5_20261113; o que é só do molde novo confere-se em
+    # tests/browser_tarefas_faceis_m5.py).
+    assert facil == (slug in ('m1-u1', 'm1-u2', 'm3-u1', 'm3-u2', 'm5-u1', 'm5-u2')) or not slug, slug
     if choice:
         assert page.locator('[data-task-card]').count() == (6 if facil else 4)
         assert page.locator('[data-task-card="0"] #aquecer').count() == 1

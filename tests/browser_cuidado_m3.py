@@ -44,7 +44,10 @@ PAGINAS = {
                                         '55' + N + 'min'],
     'm3/mapa-do-modulo-m3/index.html': ['1.º' + N + 'ano', 'c.' + N + '1524–' + J + '1580', '1497–' + J + '1499', '90' + N + 'minutos',
                                         '30' + N + '%', 'versos' + N + '1' + N + 'e' + N + '2', 'c.' + N + '1524'],
-    'm3/portefolio-do-modulo-m3/index.html': ['1.º' + N + 'ano', '90' + N + 'minutos', '0' + N + 'a' + N + '20', '40' + N + '%'],
+    # 13/11/2026: decisão do docente (camada tarefas_faceis_m5_20261113): no portefólio do M3 saiu a autoavaliação de 0 a 20 por
+    # parâmetro, e com ela a referência «0 a 20», que deixa de haver para conferir; as outras conferem-se como antes, e o teste exige
+    # agora também que a frase tenha mesmo saído (mais abaixo, onde se percorrem estas páginas).
+    'm3/portefolio-do-modulo-m3/index.html': ['1.º' + N + 'ano', '90' + N + 'minutos', '40' + N + '%'],
     'tarefas/m3-u1/index.html': ['90' + N + 'min', '10' + N + 'min', '200' + N + 'a' + N + '240' + N + 'palavras', '80' + N + 'a' + N + '120',
                                  'D.' + N + 'Manuel' + N + 'I', 'I,' + N + '1' + N + 'a' + N + '3', '90' + N + 'minutos', 'século' + N + 'XVI'],
     'tarefas/m3-u2/index.html': ['90' + N + 'min', '10' + N + 'min', '200' + N + 'a' + N + '250' + N + 'palavras', '90' + N + 'a' + N + '140',
@@ -242,6 +245,11 @@ def main():
                             assert page.locator('#rota').is_visible()
                         confere_referencias(page, 'body', agulhas, f'{rel} {largura}')
                         referencias += len(agulhas)
+                        if rel == 'm3/portefolio-do-modulo-m3/index.html':
+                            # 13/11/2026: a autoavaliação de 0 a 20 por parâmetro e «trabalho de equipa» saíram (ver PAGINAS, em cima).
+                            lido = page.locator('body').inner_text().replace('\xa0', ' ')
+                            assert 'autoavaliação' not in lido and '0 a 20' not in lido and 'trabalho de equipa' not in lido, (rel, largura)
+                            assert 'copiado do Percurso do módulo.' in lido, (rel, largura)
                         print('PASS referências:', rel, largura, esquema, flush=True)
                     for rel, indice, agulhas in CARTOES:
                         card = cartoes((ROOT / rel).read_text('utf-8'))[indice]

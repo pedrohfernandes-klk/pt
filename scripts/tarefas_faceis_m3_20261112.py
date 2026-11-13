@@ -184,7 +184,15 @@ def ler(rel):
     # 13/11/2026: por cima desta camada fica a das tarefas do M1 mais fáceis de fazer (tarefas_faceis_m1_20261113), que também muda
     # os dados das grelhas: desfaz-se primeiro, com contagem estrita, quando o ficheiro a traz (a «árvore» desta camada é o
     # ficheiro como ela o deixou).
+    # 13/11/2026: e por cima da do M1 fica a das tarefas do M5 (tarefas_faceis_m5_20261113), que muda os dados das grelhas e, nos dois
+    # acertos do M3, os dados e o enunciado da m3-u2: desfaz-se antes da do M1, com contagem estrita.
     texto = (ROOT / rel).read_bytes().decode('utf-8')
+    m5 = ROOT / 'tests/fixtures/tarefas-faceis-m5-edits-20261113.json'
+    if m5.is_file():
+        for e in reversed(json.loads(m5.read_text('utf-8'))['files'].get(rel, {}).get('edits', [])):
+            if texto.count(e['new']) != e['occurrences']:
+                raise SystemExit(f'{rel}: as tarefas do M5 mais fáceis de fazer já não conferem ({e["location"]})')
+            texto = texto.replace(e['new'], e['old'])
     m1 = ROOT / 'tests/fixtures/tarefas-faceis-m1-edits-20261113.json'
     if m1.is_file():
         for e in reversed(json.loads(m1.read_text('utf-8'))['files'].get(rel, {}).get('edits', [])):
