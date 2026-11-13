@@ -414,7 +414,9 @@ class TarefasFaceisM6(unittest.TestCase):
         self.assertEqual(list(agora), list(base))
         for slug, t in agora.items():
             with self.subTest(grelha=slug):
-                novas = {'autoavaliacao_so_tua', 'trocas_aluno'} if slug in SLUGS else set()
+                # («correcao_estreita»: na versão de correção, o cabeçalho «Observações» pode partir-se a 320 px, para a tabela de quatro
+                # colunas caber no ecrã; confere-se em tests/browser_revisao_tarefas_20261101.py)
+                novas = {'autoavaliacao_so_tua', 'trocas_aluno', 'correcao_estreita'} if slug in SLUGS else set()
                 self.assertEqual(set(t) - set(base[slug]), novas)
                 # Nas duas grelhas do M6, as únicas diferenças são os exemplos de EXEMPLOS_TROCADOS, cada um uma vez na base e uma vez
                 # agora (tudo o resto igual à base, letra a letra; as outras grelhas, iguais sem exceção).
@@ -434,8 +436,12 @@ class TarefasFaceisM6(unittest.TestCase):
         for slug in SLUGS:
             t = agora[slug]
             self.assertIs(t['autoavaliacao_so_tua'], True)
+            self.assertIs(t['correcao_estreita'], True)
             # As trocas são só as palavras que o enunciado novo trocou; cada uma ocorre nos textos da grelha.
             fonte = json.dumps({k: v for k, v in t.items() if k != 'trocas_aluno'}, ensure_ascii=False)
+            for outra in OUTRAS:
+                self.assertNotIn('correcao_estreita', agora[outra])
+                self.assertNotIn('overflow-wrap', ler(f'tarefas/{outra}/correcao/index.html'))
             for a, _ in t['trocas_aluno']:
                 self.assertIn(a, fonte)
             grelha = solto(visivel(ler(f'tarefas/{slug}/grelha/index.html'), so_main=False, sem_nav=False))
@@ -737,7 +743,7 @@ class TarefasFaceisM6(unittest.TestCase):
                 self.assertNotIn('Entrega esta autoavaliação', grelha)
                 self.assertNotIn('comenta a diferença', grelha)
                 correcao = ler(f'tarefas/{slug}/correcao/index.html')
-                self.assertIn('<thead><tr><th>Critério</th><th class="n">Máx.</th><th class="n">Docente</th><th>Observações</th></tr></thead>', correcao)
+                self.assertIn('<thead><tr><th>Critério</th><th class="n">Máx.</th><th class="n">Docente</th><th style="overflow-wrap:anywhere">Observações</th></tr></thead>', correcao)
                 self.assertNotIn('Aluno</th>', correcao)
                 self.assertNotIn('Diferença entre a tua nota e a minha', correcao)
                 self.assertNotIn('Onde nos afastámos', correcao)

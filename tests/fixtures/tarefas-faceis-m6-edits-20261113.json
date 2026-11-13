@@ -28,18 +28,18 @@
   },
   "docs/pedagogia/grelhas-tarefas-20261027.json": {
    "base_sha256_lf": "4bbe597c1bcdda082ba5fba4e05bdb4af76f266134df4f153306085f6b4edb06",
-   "after_sha256_lf": "c6f4ef3893a350774c39345650b022dcb9ea88b69d0a250bce2f8e7ad09a1569",
+   "after_sha256_lf": "cea773f8f82b9b1c685d993246211161f3c2b177cb87fddba4546f5620359e52",
    "edits": [
     {
-     "location": "Grelhas das tarefas do M6, os dados: «\"autoavaliacao_so_tua\": true, \"trocas_aluno\": [ [\"Núcleo comum (duas respostas) e um tem…»",
+     "location": "Grelhas das tarefas do M6, os dados: «\"autoavaliacao_so_tua\": true, \"correcao_estreita\": true, \"trocas_aluno\": [ [\"Núcleo comu…»",
      "old": "   \"titulo\": \"Um ",
-     "new": "   \"autoavaliacao_so_tua\": true,\n   \"trocas_aluno\": [\n    [\"Núcleo comum (duas respostas) e um tema à escolha (A ou B)\", \"Duas perguntas e um tema à escolha (A ou B)\"],\n    [\"Respostas articuladas\", \"Respostas ligadas\"],\n    [\"o tema no topo\", \"a letra do tema no topo\"],\n    [\"o tema escolhido está no topo\", \"a letra do teu tema está no topo\"],\n    [\"Não escrever no topo o tema escolhido (A ou B).\", \"Não escrever no topo a letra do teu tema (A ou B).\"],\n    [\"Fecho: \", \"Duas linhas finais: \"],\n    [\"Fecho genérico, sem verso.\", \"Duas linhas finais genéricas, sem verso.\"],\n    [\"nem o que é o sonho ou o ideal\", \"nem para que serve o sonho\"],\n    [\"e o que é o sonho ou o ideal\", \"e para que serve o sonho\"],\n    [\"no papel do sonho\", \"naquilo para que serve o sonho\"]\n   ],\n   \"titulo\": \"Um ",
+     "new": "   \"autoavaliacao_so_tua\": true,\n   \"correcao_estreita\": true,\n   \"trocas_aluno\": [\n    [\"Núcleo comum (duas respostas) e um tema à escolha (A ou B)\", \"Duas perguntas e um tema à escolha (A ou B)\"],\n    [\"Respostas articuladas\", \"Respostas ligadas\"],\n    [\"o tema no topo\", \"a letra do tema no topo\"],\n    [\"o tema escolhido está no topo\", \"a letra do teu tema está no topo\"],\n    [\"Não escrever no topo o tema escolhido (A ou B).\", \"Não escrever no topo a letra do teu tema (A ou B).\"],\n    [\"Fecho: \", \"Duas linhas finais: \"],\n    [\"Fecho genérico, sem verso.\", \"Duas linhas finais genéricas, sem verso.\"],\n    [\"nem o que é o sonho ou o ideal\", \"nem para que serve o sonho\"],\n    [\"e o que é o sonho ou o ideal\", \"e para que serve o sonho\"],\n    [\"no papel do sonho\", \"naquilo para que serve o sonho\"]\n   ],\n   \"titulo\": \"Um ",
      "occurrences": 1
     },
     {
-     "location": "Grelhas das tarefas do M6, os dados: «true, \"autoavaliacao_so_tua\": true, \"trocas_aluno\": [ [\"Núcleo comum (duas respostas) e…»",
+     "location": "Grelhas das tarefas do M6, os dados: «true, \"autoavaliacao_so_tua\": true, \"correcao_estreita\": true, \"trocas_aluno\": [ [\"Núcle…»",
      "old": " true,\n   \"titulo\": \"A ",
-     "new": " true,\n   \"autoavaliacao_so_tua\": true,\n   \"trocas_aluno\": [\n    [\"Núcleo comum (duas respostas) e um tema à escolha (A ou B)\", \"Duas perguntas e um tema à escolha (A ou B)\"],\n    [\"Respostas articuladas\", \"Respostas ligadas\"],\n    [\"o tema no topo\", \"a letra do tema no topo\"],\n    [\"o tema escolhido está no topo\", \"a letra do teu tema está no topo\"],\n    [\"Não escrever no topo o tema escolhido (A ou B).\", \"Não escrever no topo a letra do teu tema (A ou B).\"],\n    [\"Fecho: \", \"Duas linhas finais: \"],\n    [\"Fecho genérico, sem verso.\", \"Duas linhas finais genéricas, sem verso.\"],\n    [\"o que não podes fotografar, e porquê\", \"o que a imagem não mostra, e porquê\"],\n    [\"Não posso fotografar a insegurança de que fala o verso\", \"A imagem não mostra a insegurança de que fala o verso\"],\n    [\"Inventar um étimo, em vez de o procurar na lição.\", \"Usar outro étimo, em vez do que o enunciado dá.\"]\n   ],\n   \"titulo\": \"A ",
+     "new": " true,\n   \"autoavaliacao_so_tua\": true,\n   \"correcao_estreita\": true,\n   \"trocas_aluno\": [\n    [\"Núcleo comum (duas respostas) e um tema à escolha (A ou B)\", \"Duas perguntas e um tema à escolha (A ou B)\"],\n    [\"Respostas articuladas\", \"Respostas ligadas\"],\n    [\"o tema no topo\", \"a letra do tema no topo\"],\n    [\"o tema escolhido está no topo\", \"a letra do teu tema está no topo\"],\n    [\"Não escrever no topo o tema escolhido (A ou B).\", \"Não escrever no topo a letra do teu tema (A ou B).\"],\n    [\"Fecho: \", \"Duas linhas finais: \"],\n    [\"Fecho genérico, sem verso.\", \"Duas linhas finais genéricas, sem verso.\"],\n    [\"o que não podes fotografar, e porquê\", \"o que a imagem não mostra, e porquê\"],\n    [\"Não posso fotografar a insegurança de que fala o verso\", \"A imagem não mostra a insegurança de que fala o verso\"],\n    [\"Inventar um étimo, em vez de o procurar na lição.\", \"Usar outro étimo, em vez do que o enunciado dá.\"]\n   ],\n   \"titulo\": \"A ",
      "occurrences": 1
     },
     {
@@ -298,12 +298,12 @@
   },
   "tarefas/m6-u1/correcao/index.html": {
    "base_sha256_lf": "dbd0f51619dc6e47f8800c515d8dbb5df8a32641788459ba4e9f7ae6d240b1e5",
-   "after_sha256_lf": "32d5be85408e867659724bcdbc05cb8a6d3ef7b9260f7012d23de2a3c71a7fd4",
+   "after_sha256_lf": "e68c8ad20398e06c65b73f97f20390567ed91e20d409128bd09ca73d4484b6c4",
    "edits": [
     {
      "location": "Versão de correção da M6-U1: «Docente Observações Os dois sonetos: a voz, o sonho e os versos Em cada soneto, dizes a…»",
      "old": ">Aluno</th><th class=\"n\">Docente</th><th>Observações</th></tr></thead><tbody><tr><td>Os dois sonetos: a voz, o sonho e os versos<br><small>Em cada soneto, dizes a quem fala a voz e o que é o sonho ou o ideal, com um verso exato dos tercetos, explicado.</small></td><td class=\"n\">4</td><td><",
-     "new": ">Docente</th><th>Observações</th></tr></thead><tbody><tr><td>Os dois sonetos: a voz, o sonho e os versos<br><small>Em cada soneto, dizes a quem fala a voz e para que serve o sonho, com um verso exato dos tercetos, explicado.</small></td><td class=\"n\">4<",
+     "new": ">Docente</th><th style=\"overflow-wrap:anywhere\">Observações</th></tr></thead><tbody><tr><td>Os dois sonetos: a voz, o sonho e os versos<br><small>Em cada soneto, dizes a quem fala a voz e para que serve o sonho, com um verso exato dos tercetos, explicado.</small></td><td class=\"n\">4<",
      "occurrences": 1
     },
     {
@@ -496,12 +496,12 @@
   },
   "tarefas/m6-u2/correcao/index.html": {
    "base_sha256_lf": "f04f06c859ee6b182ff3822c1de4620be7b0e7976535b448112b31fb1b2401e3",
-   "after_sha256_lf": "22aac0887efef6cc245ac13c20fa11bebc39a18343b8c00a0c4595ebe4d5c6e3",
+   "after_sha256_lf": "06b65ee577f98d3898420334a48b279c73c3c6b42f58f1cf834a33b0ca9af673",
    "edits": [
     {
-     "location": "Versão de correção da M6-U2: «Máx. Docente Observações»",
-     "old": ">Máx.</th><th class=\"n\">Aluno</th><th class=\"n\">Docente</th><th>Observações</th></tr>",
-     "new": ">Máx.</th><th class=\"n\">Docente</th><th>Observações</th></tr>",
+     "location": "Versão de correção da M6-U2: «Docente»",
+     "old": ">Aluno</th><th class=\"n\">Docente</th><th>",
+     "new": ">Docente</th><th style=\"overflow-wrap:anywhere\">",
      "occurrences": 1
     },
     {

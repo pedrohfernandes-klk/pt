@@ -32,6 +32,11 @@ cada par tem de ocorrer). «Tudo junto» (decisão do docente): a versão de cor
 textos que mostra) e, com «autoavaliacao_so_tua», deixa de supor que a autoavaliação é entregue: sai a coluna «Aluno» da tabela
 de notas e sai a nota «Diferença entre a tua nota e a minha»; ficam a nota e o comentário do docente. As grelhas sem as chaves
 saem iguais, byte a byte.
+13/11/2026: tarefas do M6 «mais fáceis de fazer» (camada tarefas_faceis_m6_20261113). Uma chave opcional, «correcao_estreita»: na
+versão de correção, o cabeçalho «Observações» pode partir-se quando não há largura, para a tabela de quatro colunas (sem a coluna
+«Aluno») caber num ecrã de 320 px quando o nome de um critério tem uma palavra comprida («comparação:», na m6-u1); com mais
+largura, e em papel, nada muda. As
+grelhas sem a chave saem iguais, byte a byte.
 Idempotente. Uso: python3 scripts/grelhas_tarefas.py [--saida PASTA]
 """
 from html import escape as e
@@ -199,12 +204,14 @@ def pagina_correcao(slug, t):
         t = trocado(t, t['trocas_aluno'], vistos)
         assert vistos, slug
     aluno_th, aluno_td = ('', '') if so_tua else ('<th class="n">Aluno</th>', '<td></td>')
+    # 13/11/2026 (M6): com «correcao_estreita», o cabeçalho «Observações» pode partir-se quando não há largura (cabe a 320 px).
+    estreita = ' style="overflow-wrap:anywhere"' if t.get('correcao_estreita') else ''
     corpo = (f'<nav class="g-nav" aria-label="Navegação"><a href="../grelha/">← Grelha do aluno</a><a href="{VOLTAR}">Tarefa</a>'
              '<button type="button" data-print hidden>Imprimir</button></nav>'
              f'<header><p class="rot">{e(t["modulo"])} · Unidade {t["unidade"]} · Correção</p><h1>{ital(t["titulo"])}</h1>'
              '<p class="lead">Franqueza com cuidado: fala do texto, nunca da pessoa; aponta a passagem; diz o que fazer a seguir.</p>'
              '<p class="nome">Aluno <span></span> Turma <span></span> Data <span></span></p></header>'
-             f'<div class="g-tab" {REGIAO.format("Notas por critério")}><table><thead><tr><th>Critério</th><th class="n">Máx.</th>{aluno_th}<th class="n">Docente</th><th>Observações</th></tr></thead><tbody>')
+             f'<div class="g-tab" {REGIAO.format("Notas por critério")}><table><thead><tr><th>Critério</th><th class="n">Máx.</th>{aluno_th}<th class="n">Docente</th><th{estreita}>Observações</th></tr></thead><tbody>')
     for c in t['criterios']:
         corpo += f'<tr><td>{ital(c["nome"])}<br><small>{ital(c["niveis"]["max"][0])}</small></td><td class="n">{c["max"]}</td>{aluno_td}<td></td><td></td></tr>'
     corpo += (f'<tr class="total"><th>Total</th><td class="n">20</td>{aluno_td}<td></td><td></td></tr></tbody></table></div>'

@@ -953,6 +953,7 @@
    "unidade": 1,
    "nao_partir_valores": true,
    "autoavaliacao_so_tua": true,
+   "correcao_estreita": true,
    "trocas_aluno": [
     ["Núcleo comum (duas respostas) e um tema à escolha (A ou B)", "Duas perguntas e um tema à escolha (A ou B)"],
     ["Respostas articuladas", "Respostas ligadas"],
@@ -1092,6 +1093,7 @@
    "unidade": 2,
    "nao_partir_valores": true,
    "autoavaliacao_so_tua": true,
+   "correcao_estreita": true,
    "trocas_aluno": [
     ["Núcleo comum (duas respostas) e um tema à escolha (A ou B)", "Duas perguntas e um tema à escolha (A ou B)"],
     ["Respostas articuladas", "Respostas ligadas"],

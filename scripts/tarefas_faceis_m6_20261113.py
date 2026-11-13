@@ -23,7 +23,8 @@ do portefólio: todas a desfazem primeiro.
 Ficheiros (17):
 - os dados: docs/pedagogia/tarefas-escolha/m6-u1.json e m6-u2.json (a chave nova «facil», de onde sai a página; as chaves antigas
   ficam como estavam, para a leitura histórica das camadas de baixo, e já não aparecem na página), docs/pedagogia/
-  grelhas-tarefas-20261027.json («autoavaliacao_so_tua» e «trocas_aluno» nas duas grelhas do M6, e cinco exemplos da grelha da
+  grelhas-tarefas-20261027.json («autoavaliacao_so_tua», «trocas_aluno» e «correcao_estreita» (o cabeçalho «Observações» da versão
+  de correção pode partir-se a 320 px, para a tabela de quatro colunas caber) nas duas grelhas do M6, e cinco exemplos da grelha da
   m6-u2, que deixam de usar versos e palavras dos textos da tarefa: ver «Os exemplos», mais abaixo) e docs/pedagogia/aquecimentos/
   m6-u1.json e m6-u2.json («Núcleo» passa a «Perguntas 1 e 2» e «as duas perguntas»; «o tema» no topo passa a «a letra do teu tema»;
   «reescrito» passa a «recontado» e «uma hora certa» a «uma hora definida», como no enunciado; na m6-u1, «a quem se dirige a voz e
@@ -130,6 +131,9 @@ ACHADOS = {
     'sonho': 'Decisão do docente (13/11/2026): na m6-u1, «para que serve o sonho» diz-se no enunciado e na grelha.',
     'etimo': 'Decisão do docente (13/11/2026): na m6-u2, o étimo de «cheio» e de «pleno» é dado no enunciado.',
     'imagem': 'Decisão do docente (13/11/2026): na m6-u2, «algo que não podes fotografar» passa a dizer-se «o que a imagem não mostra».',
+    'estreita': 'Sem a coluna «Aluno», a tabela da versão de correção tem quatro colunas à vista no telemóvel: o cabeçalho «Observações» '
+                'pode partir-se quando não há largura, para a tabela caber a 320 px (chave «correcao_estreita»); com mais largura, e em '
+                'papel, nada muda.',
     'sem_auto': 'Decisão do docente (13/11/2026): no guia da tarefa, a «Autoavaliação» que se copiava para o Teams sai, porque a '
                 'autoavaliação é só para o aluno e não se entrega. Saem o bloco, o que só a ele se refere (o código que o '
                 'desenhava e guardava, a parte «AUTOAVALIAÇÃO» do texto copiado) e as duas frases que a anunciavam; o '
@@ -388,6 +392,8 @@ def categorias(rel, antigo, novo):
     elif rel == DADOS_GRELHAS or '/grelha/' in rel or '/correcao/' in rel:
         if 'autoavalia' in novo or 'Aluno</th>' in antigo or 'Diferença entre' in antigo or '<td></td><td></td><td></td>' in antigo:
             cs.add('auto')
+        if 'correcao_estreita' in novo or 'overflow-wrap:anywhere' in novo:
+            cs.add('estreita')
         if 'para que serve o sonho' in novo:
             cs.add('sonho')
         if 'do que o enunciado dá' in novo:
