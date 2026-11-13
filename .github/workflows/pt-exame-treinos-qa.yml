@@ -23,6 +23,25 @@ on:
       - 'm8/licao-m8-f08/**'
       - 'm8/licao-m8-f16/**'
       - 'm8/m8-george-tres-idades/**'
+      # 13/11/2026: o treino da sessão 22 usa frases do aquecimento e confere as definições com o Dicionário Terminológico;
+      # liga às provas em cartões do Grupo II das duas fases.
+      - 'docs/pedagogia/exame-aquecimentos/s22.json'
+      - 'tests/fixtures/dicionario-terminologico-20261113.json'
+      - 'exame/provas/2026-1f/grupo-ii/**'
+      - 'exame/provas/2026-2f/grupo-ii/**'
+      # 13/11/2026: o treino da sessão 25 usa uma gravura em domínio público que a lição M9-F14 já publica, com o crédito do registo;
+      # a imagem da prova não está no repositório (scripts/provas/dados/2026-1f/prova.json diz que não se reproduz).
+      - 'docs/pedagogia/exame-aquecimentos/s25.json'
+      - 'img/fontes/licoes-20261101/piranesi.jpg'
+      - 'scripts/imagens_licoes_20261101.py'
+      - 'm9/licao-m9-f14/**'
+      - 'scripts/provas/dados/2026-1f/prova.json'
+      - 'exame/provas/2026-1f/grupo-iii/**'
+      # 13/11/2026: o treino da sessão 23 confere os dois sonetos de Camões, verso a verso, com as páginas do módulo 3 de onde vêm.
+      - 'docs/pedagogia/exame-aquecimentos/s23.json'
+      - 'docs/pedagogia/exame-aquecimentos/s04.json'
+      - 'm3/licao-m3-f09/**'
+      - 'm3/m3-soneto-raciocinio/**'
       - 'tests/test_exame_treinos.py'
       - 'tests/browser_exame_treinos.cjs'
       - 'tests/fixtures/prova-639-*'
