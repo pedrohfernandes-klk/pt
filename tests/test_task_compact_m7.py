@@ -5,6 +5,7 @@ from urllib.parse import urlsplit,unquote
 import hashlib,json,re,subprocess,unittest
 from task_source_contract import without_timer, compact_task_source
 from auditoria_20261028 import undo as undo_audit_20261028
+from auditoria_20261028 import undo_tarefas_faceis_m7_1113
 ROOT=Path(__file__).resolve().parents[1]
 MANIFEST=ROOT/'tests/fixtures/task-compact-m7-before-after.json'
 class Compact(HTMLParser):
@@ -51,6 +52,10 @@ class CompactM7(unittest.TestCase):
    path=ROOT/record['path'];source=path.read_text('utf-8')
    # 29/10/2026: a U3 saiu do formato compacto; confere-se a forma do retrato compacto que continua autorizado.
    if record['path']=='tarefas/m7-u3/index.html':source=compact_task_source(record['path'])
+   # 13/11/2026: a m7-u1 e a m7-u2 saíram do formato compacto de três cartões (molde «mais fácil de fazer», camada tarefas_faceis_m7_20261113,
+   # com o seu contrato em tests/test_tarefas_faceis_m7.py); confere-se a forma do retrato compacto, com essa camada desfeita pela auditoria.
+   else:
+    self.assertIn('data-task-facil',source);source=undo_tarefas_faceis_m7_1113(record['path'],source)
    page=Compact(source)
    with self.subTest(page=path):
     self.assertIn('class="task-page" data-task-compact',source)

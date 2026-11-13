@@ -1,0 +1,306 @@
+{
+ "slug": "m7-u2",
+ "modulo": 7,
+ "unidade": 2,
+ "titulo": "Uma ideia de heterónimo",
+ "descricao": "Tarefa com consulta: recuperar as leituras de Caeiro, Reis e Campos e criar uma voz própria, numa aula de 90 minutos.",
+ "_nota": "13/11/2026: a página da tarefa (tarefas/m7-u2/index.html) sai destes dados, por scripts/tarefas_individuais_faceis.py e scripts/tarefa_facil.py (camada tarefas_faceis_m7_20261113). A tarefa é a de antes: as mesmas ordens, as mesmas 100 a 150 palavras, a apresentação de dois minutos e as mesmas duas perguntas opcionais. Não há texto para analisar: o texto é do aluno. Os exemplos vêm do guia da tarefa (o perfil de Augusto Pires) e do aquecimento.",
+ "aquecer": {
+  "cartoes": "aquecimento/",
+  "minutos": 10,
+  "ligacao": "Abrir o aquecimento em cartões"
+ },
+ "opcionais": [
+  {
+   "pergunta": "O que torna uma voz ficcional reconhecível?",
+   "opcoes": [
+    {
+     "certa": false,
+     "texto": "Trocar apenas o nome de quem escreve.",
+     "resposta": "Um nome novo não altera a voz. Relaciona a perspetiva com palavras, frases ou pontuação."
+    },
+    {
+     "certa": true,
+     "texto": "Uma maneira de ver ligada a escolhas de linguagem.",
+     "resposta": "A voz torna-se coerente quando o que pensa se reconhece na maneira como escreve."
+    },
+    {
+     "certa": false,
+     "texto": "Copiar um poema de um heterónimo.",
+     "resposta": "As leituras ajudam a comparar vozes; o texto que entregas é teu."
+    }
+   ]
+  },
+  {
+   "pergunta": "Que justificação apresenta uma prova?",
+   "opcoes": [
+    {
+     "certa": false,
+     "texto": "«A voz é diferente porque eu gostei dela.»",
+     "resposta": "O gosto não mostra uma diferença de escrita. Aponta uma palavra, frase ou sinal do texto."
+    },
+    {
+     "certa": false,
+     "texto": "«Usei frases curtas para todos os heterónimos.»",
+     "resposta": "Uma fórmula para todas as vozes não explica a perspetiva específica da tua criação."
+    },
+    {
+     "certa": true,
+     "texto": "«Repito “talvez” porque esta voz desconfia das certezas.»",
+     "resposta": "Relacionas uma escolha concreta com a maneira de ver. Confirma que essa relação existe no teu texto."
+    }
+   ]
+  }
+ ],
+ "facil": {
+  "kicker": "Tarefa individual, 90 minutos",
+  "producao_minutos": 55,
+  "folha_versao": "20261113-facil-11",
+  "entregas": {
+   "intro": "Fotografias do teu trabalho em papel, na tarefa do Teams."
+  },
+  "aquecer": {
+   "titulo": "Relógio do aquecimento"
+  },
+  "verificar_titulo": "Antes de entregar, verifica",
+  "verificar_texto": "Responde sim ou não. Se for não, completa o teu trabalho.",
+  "exemplo_titulo": [
+   "Ver um exemplo com outro caso",
+   "Ver dois exemplos com outros casos",
+   "Ver três exemplos com outros casos"
+  ],
+  "entrega_titulo": "Entrega no Teams",
+  "rever_titulo": "Se precisares de rever",
+  "fazer": [
+   "Faz o aquecimento (10 minutos).",
+   "Inventa uma voz e faz o perfil.",
+   "Escreve um texto nessa voz.",
+   "Justifica duas escolhas e lista três fontes.",
+   "Apresenta a voz em dois minutos.",
+   "Escreve duas linhas finais.",
+   "Revê e entrega no Teams."
+  ],
+  "modo": "Trabalhas à mão. O aquecimento e a tarefa são com consulta: podes usar as lições do site, o caderno e o dicionário. A apresentação é individual.",
+  "quadro": {
+   "titulo": "Tempo e tamanho",
+   "colunas": [
+    "Tempo",
+    "O que fazes",
+    "Palavras"
+   ],
+   "linhas": [
+    [
+     "10 min",
+     "Aquecimento em cartões",
+     ""
+    ],
+    [
+     "10 min",
+     "Leitura do enunciado",
+     ""
+    ],
+    [
+     {
+      "t": "55 min",
+      "linhas": 3
+     },
+     "Parte 1: o perfil",
+     ""
+    ],
+    [
+     null,
+     "Parte 2: o texto",
+     "100 a 150"
+    ],
+    [
+     null,
+     "Parte 3: as escolhas e as fontes",
+     ""
+    ],
+    [
+     "15 min",
+     "Parte 4 (a apresentação), revisão e entrega",
+     ""
+    ],
+    [
+     "90 min",
+     "Total",
+     "100 a 150"
+    ]
+   ],
+   "notas": [
+    "Nos 10 minutos de leitura, lê as quatro partes.<span class=\"tf-so-ecra\"> Os exemplos são para consultares enquanto escreves.</span>",
+    "As 100 a 150 palavras são as do texto da parte 2. Não contam: o perfil, as escolhas explicadas, as fontes e as duas linhas finais."
+   ]
+  },
+  "textos": [],
+  "partes": [
+   {
+    "id": "produzir",
+    "nome": "Parte 1: o perfil",
+    "titulo": "Inventa a voz.",
+    "meta": "Um perfil breve.",
+    "relogio": "Começa este relógio depois da leitura.",
+    "textos": [],
+    "pedido_titulo": "O que fazes",
+    "intro": "Faz o perfil da voz. Escreve:",
+    "alineas": [
+     "O nome.",
+     "As datas.",
+     "O ofício.",
+     "A maneira de ver.",
+     "A maneira de escrever."
+    ],
+    "ajudas": [
+     "A voz deve discordar de ti numa ideia.",
+     "A voz é inventada: não imites uma pessoa real."
+    ],
+    "exemplos": [
+     {
+      "titulo": "Outro perfil, o do guia da tarefa: Augusto Pires",
+      "contexto": "É um exemplo: não uses este ofício nem esta maneira de ver.",
+      "paragrafos": [
+       {
+        "al": "Alíneas a), b) e c):",
+        "t": "Nome: Augusto Pires. Nascido em Setúbal em 1902, operador de guindaste no porto, lê o jornal de trás para a frente."
+       },
+       {
+        "al": "Alínea d):",
+        "t": "Maneira de ver: tudo o que sobe desce, e só o que desce interessa."
+       },
+       {
+        "al": "Alínea e):",
+        "t": "Maneira de escrever: frases curtas, sem adjetivos, com um número em cada parágrafo."
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "parte-2",
+    "nome": "Parte 2: o texto",
+    "titulo": "Escreve nessa voz.",
+    "meta": "100 a 150 palavras.",
+    "textos": [],
+    "pedido_titulo": "O que fazes",
+    "alineas": [
+     "Escolhe a forma: poema, carta ou nota.",
+     "Escreve o texto na voz que inventaste."
+    ],
+    "ajudas": [
+     "O texto não se deve confundir com os teus: mudam as frases, as palavras ou a pontuação."
+    ],
+    "exemplos": [
+     {
+      "titulo": "O início de outro texto, o do guia da tarefa: a voz de Augusto Pires",
+      "paragrafos": [
+       {
+        "al": "Alínea b):",
+        "t": "«Hoje levantei catorze contentores. Nenhum sabia para onde ia. Eu também não, mas eu tenho o guindaste e eles não têm nada. À tarde choveu doze minutos. Não escrevo sobre a chuva, escrevo sobre o tempo que ela demora.»"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "parte-3",
+    "nome": "Parte 3: escolhas e fontes",
+    "titulo": "Justifica as escolhas e regista as fontes.",
+    "meta": "Fora das 100 a 150 palavras.",
+    "textos": [],
+    "pedido_titulo": "O que fazes",
+    "alineas": [
+     "Justifica duas escolhas de linguagem com exemplos teus.",
+     "Lista três fontes, com data.",
+     "Regista as diferenças entre elas."
+    ],
+    "ajudas": [
+     "Uma fonte pode ser a carta a Adolfo Casais Monteiro ou uma lição dos heterónimos.",
+     "Numa lição, a data é o dia em que a consultaste."
+    ],
+    "exemplos": [
+     {
+      "titulo": "Outra escolha de linguagem, num verso de Alberto Caeiro",
+      "paragrafos": [
+       {
+        "al": "Alínea a):",
+        "t": "Em «Quem está ao pé dele está só ao pé dele», Caeiro repete «ao pé dele». A escolha insiste na presença do rio: quem vê sem pensar não lhe põe nada em cima."
+       }
+      ]
+     },
+     {
+      "titulo": "Duas fontes sobre Álvaro de Campos, e a diferença entre elas",
+      "paragrafos": [
+       {
+        "al": "Alíneas b) e c):",
+        "t": "A carta a Adolfo Casais Monteiro é de 13 de janeiro de 1935: diz que Campos é engenheiro naval e nasceu em Tavira. A lição F01 diz: «a vida inventada prepara o estilo». A lição F11 diz: «Estes dados ajudam a caracterizar a figura, mas não explicam, por si sós, a presença de máquinas ou o verso livre». A diferença: a F01 liga a vida ao estilo; a F11 diz que a vida não chega para o explicar."
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "parte-4",
+    "nome": "Parte 4: a apresentação",
+    "titulo": "Apresenta em dois minutos.",
+    "meta": "Dois minutos. A apresentação é individual.",
+    "textos": [],
+    "relogio_html": "<div class=\"task-relogio\" data-relogio data-max=\"2\" data-passo=\"0.5\" data-rotulo=\"Apresentação da voz\" data-chave=\"pt-relogio:tarefas/m7-u2:apresentacao\"></div>\n",
+    "pedido_titulo": "O que fazes",
+    "alineas": [
+     "Lê uma frase do teu texto.",
+     "Responde a uma pergunta feita ou prevista.",
+     "Regista a pergunta e a resposta numa linha."
+    ],
+    "ajudas": [
+     "Apresentar não é ler o perfil do princípio ao fim."
+    ],
+    "exemplos": []
+   }
+  ],
+  "finais": {
+   "titulo": "Duas linhas finais",
+   "passos": [
+    "Responde: o que aprendeste?",
+    "Indica onde se vê essa aprendizagem no teu trabalho."
+   ]
+  },
+  "verificar": [
+   "O perfil tem nome, datas, ofício, maneira de ver e maneira de escrever?",
+   "A voz é inventada e discorda de mim numa ideia?",
+   "O texto tem 100 a 150 palavras?",
+   "O texto distingue-se da minha voz?",
+   "Justifiquei duas escolhas de linguagem com exemplos meus?",
+   "Listei três fontes, com data, e as diferenças entre elas?",
+   "Li uma frase e respondi a uma pergunta?",
+   "Registei a pergunta e a resposta numa linha?",
+   "Escrevi as duas linhas finais?"
+  ],
+  "entrega": [
+   "Fotografa o perfil, o texto, as duas escolhas explicadas, as três fontes, a pergunta com resposta e as duas linhas finais.",
+   "Confirma que as fotografias mostram o trabalho completo.",
+   "Entrega as fotografias na tarefa do Teams."
+  ],
+  "rever_texto": "Nesta tarefa não há texto para analisar: o texto é teu. As lições servem para rever as três vozes.",
+  "rever": [
+   {
+    "para": "Caeiro",
+    "texto": "Lição F04, <a href=\"../../m7/licao-m7-f04/\">Pensar é estar doente dos olhos</a>. Relê «Em paralelo»: ver e pensar."
+   },
+   {
+    "para": "Reis",
+    "texto": "Lição F05, <a href=\"../../m7/licao-m7-f05/\">À beira do rio</a>. Relê «Em paralelo»: imperativo e conjuntivo."
+   },
+   {
+    "para": "Campos",
+    "texto": "Lição F36, <a href=\"../../m7/licao-m7-f36/\">Nada, mas todos os sonhos</a>. Relê «Para entender»."
+   },
+   {
+    "para": "Fontes",
+    "texto": "Lição F01, <a href=\"../../m7/licao-m7-f01/\">Quantos somos?</a> Relê «O essencial»: as três vidas, segundo a carta."
+   }
+  ],
+  "opcional_titulo": "Se precisares, testa duas ideias",
+  "opcional_rotulo": "Duas perguntas opcionais"
+ }
+}

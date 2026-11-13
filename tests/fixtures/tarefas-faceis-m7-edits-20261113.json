@@ -1,0 +1,738 @@
+{
+ "base_commit": "fe614d6750b7c4b93fd58f739415f6a250310552",
+ "_nota": "13/11/2026: as três tarefas do M7 (m7-u1, m7-u2 e m7-u3) «mais fáceis de fazer», com os textos das lições, e «tudo junto» no M7 (grelha, correção, aquecimentos, guia da tarefa e portefólio). Reversível: cada troca desfaz-se pela ordem inversa.",
+ "files": {
+  "docs/pedagogia/tarefas-escolha/m7-u3.json": {
+   "base_sha256_lf": "8c9ba74d68a28018994c218ee667bb554629ee47faebd192fbefd52ec2d7690b",
+   "after_sha256_lf": "f9a7b7663d5ab6bed7708b4062b649e880852db9c09699472eeb55f54bcdff84",
+   "edits": [
+    {
+     "location": "Tarefa da M7-U3, os dados do enunciado: «}, \"facil\": { \"kicker\": \"Tarefa individual, 90 minutos\", \"producao_minutos\": 55, \"descri…»",
+     "old": "\n }\n}\n",
+     "new": "\n },\n \"facil\": {\n  \"kicker\": \"Tarefa individual, 90 minutos\",\n  \"producao_minutos\": 55,\n  \"descricao\": \"aquecimento e um texto de opinião sobre um tema à escolha\",\n  \"folha_versao\": \"20261113-facil-11\",\n  \"entregas\": {\n   \"intro\": \"Fotografias do teu trabalho em papel, na tarefa do Teams.\"\n  },\n  \"aquecer\": {\n   \"titulo\": \"Relógio do aquecimento\"\n  },\n  \"verificar_titulo\": \"Antes de entregar, verifica\",\n  \"verificar_texto\": \"Responde sim ou não. Se for não, completa o teu trabalho.\",\n  \"exemplo_titulo\": [\n   \"Ver um exemplo com outro caso\",\n   \"Ver dois exemplos com outros casos\",\n   \"Ver três exemplos com outros casos\"\n  ],\n  \"entrega_titulo\": \"Entrega no Teams\",\n  \"rever_titulo\": \"Se precisares de rever\",\n  \"_nota\": \"13/11/2026: a página da tarefa sai só desta chave (scripts/tarefa_facil.py) e de «titulo», «unidade», «aquecer» (ligação e minutos), «dossie» e «dossie_titulo». As outras chaves antigas («aquecer.texto», «lead», «nucleo», «temas», «apoios», «exemplos», «opcional», «criterios», «fecho», «clareza») já não aparecem na página: ficam como estavam para a leitura histórica das camadas de baixo. A pergunta opcional é a de antes, com «opinião» onde dizia «tese». O exemplo antigo «Descobre o movimento (resolvido)» usava o verso 1 do Texto 2 e não entra (regra do docente: os exemplos não usam os textos da tarefa).\",\n  \"fazer\": [\n   \"Faz o aquecimento (10 minutos).\",\n   \"Escolhe um tema: A ou B.\",\n   \"Escreve um texto de opinião sobre esse tema.\",\n   \"Escreve duas linhas finais.\",\n   \"Revê e entrega no Teams.\"\n  ],\n  \"modo\": \"Trabalhas à mão. O aquecimento e a tarefa são com consulta: podes usar as lições do site, o caderno e o dicionário.\",\n  \"nao_partir_dossie\": true,\n  \"juntos_em_papel\": true,\n  \"grelha_nota\": \"A autoavaliação da grelha é só para ti: não se entrega.\",\n  \"quadro\": {\n   \"titulo\": \"Tempo e tamanho\",\n   \"colunas\": [\n    \"Tempo\",\n    \"O que fazes\",\n    \"Palavras\"\n   ],\n   \"linhas\": [\n    [\n     \"10 min\",\n     \"Aquecimento em cartões\",\n     \"\"\n    ],\n    [\n     \"10 min\",\n     \"Leitura do enunciado\",\n     \"\"\n    ],\n    [\n     \"55 min\",\n     \"Texto de opinião (tema A ou B)\",\n     \"180 a 220\"\n    ],\n    [\n     \"15 min\",\n     \"Revisão e entrega\",\n     \"\"\n    ],\n    [\n     \"90 min\",\n     \"Total\",\n     \"180 a 220\"\n    ]\n   ],\n   \"notas\": [\n    \"Nos 10 minutos de leitura, lê os dois temas e o que o texto leva. Os textos<span class=\\\"tf-so-ecra\\\"> e os exemplos</span> são para consultares enquanto escreves.\",\n    \"Não contam para as palavras: os versos citados ou copiados e as duas linhas finais.\"\n   ]\n  },\n  \"textos\": [\n   {\n    \"id\": \"texto-1\",\n    \"rotulo\": \"Texto 1\",\n    \"titulo\": \"«Mar Português», de Fernando Pessoa\",\n    \"numerar\": 5,\n    \"estrofes\": [\n     {\n      \"versos\": [\n       \"Ó mar salgado, quanto do teu sal\",\n       \"São lágrimas de Portugal!\",\n       \"Por te cruzarmos, quantas mães choraram,\",\n       \"Quantos filhos em vão rezaram!\",\n       \"Quantas noivas ficaram por casar\",\n       \"Para que fosses nosso, ó mar!\"\n      ]\n     },\n     {\n      \"versos\": [\n       \"Valeu a pena? Tudo vale a pena\",\n       \"Se a alma não é pequena.\",\n       \"Quem quer passar além do Bojador\",\n       \"Tem que passar além da dor.\",\n       \"Deus ao mar o perigo e o abismo deu,\",\n       \"Mas nele é que espelhou o céu.\"\n      ]\n     }\n    ],\n    \"glossario\": [\n     [\n      \"Bojador\",\n      \"o cabo que durante anos ninguém passou\"\n     ]\n    ],\n    \"fonte\": \"<i>Mensagem</i>, II. «Mar Português», X; Arquivo Pessoa.\",\n    \"origem\": \"m7/licao-m7-f08/index.html, cartão 10 («O texto, 2 de 2»: copiado letra a letra, com o vocabulário e a linha de fonte)\"\n   },\n   {\n    \"id\": \"texto-2\",\n    \"rotulo\": \"Texto 2\",\n    \"titulo\": \"«D. Sebastião, Rei de Portugal», de Fernando Pessoa\",\n    \"numerar\": 5,\n    \"estrofes\": [\n     {\n      \"versos\": [\n       \"Louco, sim, louco, porque quis grandeza\",\n       \"Qual a Sorte a não dá.\",\n       \"Não coube em mim minha certeza;\",\n       \"Por isso onde o areal está\",\n       \"Ficou meu ser que houve, não o que há.\"\n      ]\n     },\n     {\n      \"versos\": [\n       \"Minha loucura, outros que me a tomem\",\n       \"Com o que nela ia.\",\n       \"Sem a loucura que é o homem\",\n       \"Mais que a besta sadia,\",\n       \"Cadáver adiado que procria?\"\n      ]\n     }\n    ],\n    \"glossario\": [\n     [\n      \"areal\",\n      \"o campo de batalha no Norte de África\"\n     ]\n    ],\n    \"fonte\": \"<i>Mensagem</i> (20-2-1933); Arquivo Pessoa.\",\n    \"origem\": \"m7/licao-m7-f09/index.html, cartão 3 («O texto, 1 de 3»: copiado letra a letra, com a linha de fonte; o vocabulário de «areal» vem do cartão 13)\"\n   }\n  ],\n  \"perguntas\": [],\n  \"temas_titulo\": \"Escolhe um tema: A ou B\",\n  \"temas_nota\": \"Um só texto de opinião: 180 a 220 palavras.\",\n  \"temas_topo\": \"Escreve a letra do teu tema (A ou B) no topo.\",\n  \"temas_relogio\": \"Começa este relógio depois da leitura.\",\n  \"temas\": [\n   {\n    \"letra\": \"A\",\n    \"nome\": \"Valeu a pena?\",\n    \"intro\": \"«Valeu a pena? Tudo vale a pena / Se a alma não é pequena.» Concordas quando são outras pessoas a pagar o preço do sonho?\",\n    \"antes\": [\n     \"Os versos são o 7 e o 8 do <a href=\\\"#texto-1\\\">Texto 1</a> («Mar Português»), por baixo dos temas.\"\n    ],\n    \"passos\": [\n     \"Considera as mães, os filhos e as noivas da primeira estrofe (versos 3 a 5).\"\n    ],\n    \"material\": {}\n   },\n   {\n    \"letra\": \"B\",\n    \"nome\": \"Por quem, ou pelo quê, ainda esperamos?\",\n    \"intro\": \"Esperar que alguém volte para resolver os problemas dá força a um país ou tira-lhe força?\",\n    \"antes\": [\n     \"O poema «D. Sebastião, Rei de Portugal» é o <a href=\\\"#texto-2\\\">Texto 2</a>, por baixo dos temas.\"\n    ],\n    \"passos\": [\n     \"Usa o <a href=\\\"#dossie\\\">dossiê</a> B.\",\n     \"Se usares um facto, indica a data: 1578, 1933 ou 1934.\"\n    ],\n    \"material\": {\n     \"titulo\": \"Só para o tema B: o dossiê\",\n     \"dossie\": true\n    }\n   }\n  ],\n  \"temas_material\": {\n   \"titulo\": \"Para os dois temas: os Textos 1 e 2 (dois poemas de <i>Mensagem</i>)\",\n   \"textos\": [\n    \"texto-1\",\n    \"texto-2\"\n   ]\n  },\n  \"depois\": [\n   {\n    \"id\": \"o-teu-texto\",\n    \"nome\": \"O teu texto\",\n    \"titulo\": \"Escreve o texto de opinião.\",\n    \"meta\": \"180 a 220 palavras, sobre o tema A ou o tema B.\",\n    \"textos\": [],\n    \"pedido_titulo\": \"O que o texto leva\",\n    \"grupos\": [\n     {\n      \"intro\": \"Defende a tua opinião:\",\n      \"alineas\": [\n       \"Começa por uma opinião com uma condição (S).\",\n       \"Responde a quem discorda: aceita uma acusação e muda-lhe o sentido (R), ou admite uma dificuldade com «embora» (C).\",\n       \"Acrescenta uma condição necessária (N), um contraste com «mas» (M) ou uma pergunta que leve a pensar (P).\",\n       \"Conclui retomando a opinião sem a copiar.\",\n       \"Marca as letras na margem; a conclusão não leva letra.\"\n      ]\n     },\n     {\n      \"intro\": \"Apoia a opinião nos textos:\",\n      \"alineas\": [\n       \"Cita um verso exato de <i>Mensagem</i>, entre «».\",\n       \"Indica o poema.\",\n       \"Explica o verso no seu contexto.\",\n       \"Acrescenta um facto datado das lições, distinguindo-o da interpretação do poema, ou compara com Garrett (<i>Frei Luís de Sousa</i>) ou Reis.\"\n      ]\n     },\n     {\n      \"intro\": \"No fim do texto:\",\n      \"alineas\": [\n       \"Escreve o total de palavras.\"\n      ]\n     }\n    ],\n    \"ajudas\": [\n     \"Nas lições, a opinião que defendes chama-se «tese».\",\n     \"O herói do poema é um símbolo: o poema não conta a vida dele.\",\n     \"Se comparares com Garrett ou com Reis, diz o que isso muda na tua opinião.\",\n     \"No tema B, o facto escolhido tem de ter data: 1578, 1933 ou 1934.\"\n    ],\n    \"citar\": \"Copia as palavras exatas do verso. Põe-nas entre aspas: «…».\",\n    \"apoios\": [\n     {\n      \"titulo\": \"Ver os seis movimentos e as suas letras\",\n      \"html\": \"<table class=\\\"tf-tabela\\\"><caption>Os seis movimentos, com outro tema («Ensaiar vale a pena?»)</caption><thead><tr><th scope=\\\"col\\\">Letra</th><th scope=\\\"col\\\">O que faz</th><th scope=\\\"col\\\">Exemplo com outro tema</th></tr></thead><tbody><tr><th scope=\\\"row\\\">S</th><td>opinião com uma condição</td><td>«Ensaiar só é perder tempo se o ensaio for sempre igual.»</td></tr><tr><th scope=\\\"row\\\">R</th><td>aceita uma acusação e muda-lhe o sentido, com «porque»</td><td>«Artificial, sim, artificial, porque escolheu cada pausa em vez de a deixar ao acaso.»</td></tr><tr><th scope=\\\"row\\\">C</th><td>admite uma dificuldade com «embora»</td><td>«Estou hoje vencido, embora não saiba a verdade.» (a frase da lição F07)</td></tr><tr><th scope=\\\"row\\\">N</th><td>condição necessária</td><td>«Quem quer falar três minutos sem ler tem de ouvir a própria voz antes da turma.»</td></tr><tr><th scope=\\\"row\\\">M</th><td>contraste com «mas»</td><td>«Ensaiar custa uma tarde; mas é no ensaio que se descobre o que ainda não se sabe dizer.»</td></tr><tr><th scope=\\\"row\\\">P</th><td>pergunta que leve a pensar</td><td>Não precisa de conector: é a pergunta.</td></tr></tbody></table>\",\n      \"notas\": [\n       \"R e C respondem a quem discorda. M pesa um custo contra um ganho: não serve para responder a quem discorda.\"\n      ]\n     }\n    ],\n    \"exemplos\": [\n     {\n      \"titulo\": \"Um texto com outro tema: «Ensaiar vale a pena?»\",\n      \"contexto\": \"As letras vão aqui entre parênteses retos; no teu texto, vão na margem. O verso e o facto não estão neste exemplo.\",\n      \"paragrafos\": [\n       {\n        \"al\": \"Alínea a), [S]:\",\n        \"t\": \"Ensaiar só é perder tempo se o ensaio for sempre igual.\"\n       },\n       {\n        \"al\": \"Alínea b), [R]:\",\n        \"t\": \"Dizem que quem ensaia muito fica artificial. Artificial, sim, artificial, porque escolheu cada pausa em vez de a deixar ao acaso.\"\n       },\n       {\n        \"al\": \"Alínea c), [M] e [N]:\",\n        \"t\": \"Ensaiar custa uma tarde; mas é no ensaio que se descobre o que ainda não se sabe dizer. Quem quer falar três minutos sem ler tem de ouvir a própria voz antes da turma.\"\n       },\n       {\n        \"al\": \"Alínea d), a conclusão, sem letra:\",\n        \"t\": \"Por isso, desde que cada ensaio mude alguma coisa, ensaiar é o caminho mais curto para falar sem ler.\"\n       }\n      ]\n     },\n     {\n      \"titulo\": \"Um verso de outro poema de <i>Mensagem</i>, «O Infante», no mesmo tema\",\n      \"paragrafos\": [\n       {\n        \"al\": \"Alíneas f), g) e h):\",\n        \"t\": \"«Deus quer, o homem sonha, a obra nasce.» O Infante é aqui o homem que sonha, um símbolo e não uma biografia; a obra só nasce depois do sonho, e por isso ensaiar é o sonho que vem antes da obra, e não tempo perdido.\"\n       }\n      ]\n     },\n     {\n      \"titulo\": \"Um facto e o sentido, com outro poema: a «Tabacaria», de Álvaro de Campos\",\n      \"paragrafos\": [\n       {\n        \"al\": \"Alínea i):\",\n        \"t\": \"A «Tabacaria» tem a data de 15-1-1928, e isso confirma-se fora do poema; «Não sou nada.» é o que a voz diz, e não um dado da vida de quem escreve.\"\n       }\n      ]\n     }\n    ]\n   }\n  ],\n  \"finais\": {\n   \"titulo\": \"Duas linhas finais\",\n   \"texto\": \"Ficam fora da contagem.\",\n   \"passos\": [\n    \"Responde: que movimento vais voltar a usar, e onde?\",\n    \"Aponta o verso ou a frase que te ensinou esse movimento.\"\n   ]\n  },\n  \"verificar\": [\n   \"A primeira frase tem a minha opinião com uma condição (S)?\",\n   \"Respondi a quem discorda, com R ou C?\",\n   \"Usei mais um movimento: N, M ou P?\",\n   \"A conclusão retoma a opinião sem a copiar?\",\n   \"As letras estão na margem?\",\n   \"Citei um verso exato de <i>Mensagem</i>, entre «», e indiquei o poema?\",\n   \"Expliquei o verso no seu contexto?\",\n   \"Tenho um facto datado, distinto da interpretação do poema, ou uma comparação com Garrett ou Reis?\",\n   \"Tenho 180 a 220 palavras, com o total no fim, e revi a escrita?\",\n   \"A letra do meu tema (A ou B) está no topo?\"\n  ],\n  \"entrega\": [\n   \"Fotografa o texto e as duas linhas finais.\",\n   \"Confirma que as fotografias mostram o trabalho completo.\",\n   \"Entrega as fotografias na tarefa do Teams.\"\n  ],\n  \"rever_texto\": \"Os dois poemas já estão nesta página. As lições servem para rever a matéria.\",\n  \"rever\": [\n   {\n    \"para\": \"O teu texto\",\n    \"texto\": \"Lição F10, <a href=\\\"../../m7/licao-m7-f10/\\\">Argumentar com versos</a>. Relê «Para entender» (os seis movimentos) e «O essencial» (o plano do texto, ponto a ponto).\"\n   },\n   {\n    \"para\": \"Tema A\",\n    \"texto\": \"Lição F08, <a href=\\\"../../m7/licao-m7-f08/\\\">Deus quer, o homem sonha, a obra nasce</a>. Relê «Em paralelo»: mito e história.\"\n   },\n   {\n    \"para\": \"Tema B\",\n    \"texto\": \"Lição F09, <a href=\\\"../../m7/licao-m7-f09/\\\">É a hora!</a> Relê «Em paralelo»: dois regressos.\"\n   },\n   {\n    \"para\": \"Movimento C\",\n    \"texto\": \"Lição F07, <a href=\\\"../../m7/licao-m7-f07/\\\">Como se soubesse a verdade</a>. Relê a versão com «embora» (a concessiva).\"\n   },\n   {\n    \"para\": \"Comparar com Reis\",\n    \"texto\": \"Lição F11, <a href=\\\"../../m7/licao-m7-f11/\\\">Quantas vozes cabem num homem</a>. Relê os versos de Reis em «O texto».\"\n   }\n  ],\n  \"opcional\": {\n   \"pergunta\": \"Qual destas frases tem uma opinião com condição (S)?\",\n   \"opcoes\": [\n    {\n     \"certa\": false,\n     \"letra\": \"A\",\n     \"texto\": \"Ler em voz alta ajuda sempre.\",\n     \"resposta\": \"Não há condição: «sempre» não diz em que caso a opinião é verdade. S pede um «se», um «desde que» ou um «só quando».\"\n    },\n    {\n     \"certa\": true,\n     \"letra\": \"B\",\n     \"texto\": \"Ler em voz alta só ajuda quando quem ouve pode interromper.\",\n     \"resposta\": \"«só quando» põe a condição: a opinião diz em que caso é verdade, e por isso é mais difícil de atacar.\"\n    },\n    {\n     \"certa\": false,\n     \"letra\": \"C\",\n     \"texto\": \"Há quem leia em voz alta e quem não leia.\",\n     \"resposta\": \"Descreve, não defende: não há opinião, e por isso também não há condição.\"\n    }\n   ]\n  },\n  \"opcional_titulo\": \"Experimentar uma pergunta\"\n }\n}\n",
+     "occurrences": 1
+    }
+   ]
+  },
+  "docs/pedagogia/grelhas-tarefas-20261027.json": {
+   "base_sha256_lf": "74765d34d958afd5fedb244e8fb2dad9a11a89cea8196c07a34691a576862802",
+   "after_sha256_lf": "9328d8a9de4fca0aedc5ca2767ac0ba10f9a68aa1b4f38f113318989593e7e73",
+   "edits": [
+    {
+     "location": "Grelha da tarefa da M7-U3, os dados: «\"autoavaliacao_so_tua\": true, \"correcao_estreita\": true, \"trocas_aluno\": [ [\"Tese\", \"Opi…»",
+     "old": "   \"titulo\": \"Louco, ",
+     "new": "   \"autoavaliacao_so_tua\": true,\n   \"correcao_estreita\": true,\n   \"trocas_aluno\": [\n    [\"Tese\", \"Opinião\"],\n    [\"tese\", \"opinião\"],\n    [\"Facto ou outra voz\", \"Facto ou comparação\"],\n    [\"nem outra voz\", \"nem comparação\"],\n    [\"facto datado ou outra voz\", \"facto datado ou uma comparação\"],\n    [\"ou a voz não se liga\", \"ou a comparação não se liga\"],\n    [\"o confronto com Garrett ou com Reis, ligado\", \"a comparação com Garrett ou com Reis, ligada\"],\n    [\"sem contagem nem fecho\", \"sem contagem nem duas linhas finais\"],\n    [\"Fecho: \", \"Duas linhas finais: \"],\n    [\"Fecho genérico, sem movimento nem verso.\", \"Duas linhas finais genéricas, sem movimento nem verso.\"],\n    [\"que to ensinou\", \"que te ensinou esse movimento\"]\n   ],\n   \"titulo\": \"Louco, ",
+     "occurrences": 1
+    }
+   ]
+  },
+  "docs/pedagogia/aquecimentos/m7-u1.json": {
+   "base_sha256_lf": "b92fd1dde217b659b4cbcde274f6a332ed1ffd788706e22519db722ee2aa7bf5",
+   "after_sha256_lf": "243f2e283f2d611be765ca42d06ccea4be2cb5f76db5c1517b459bcc78343fcd",
+   "edits": [
+    {
+     "location": "Aquecimento da M7-U1, os dados: «Dez minutos,»",
+     "old": ">Dez a quinze minutos, ",
+     "new": ">Dez minutos, ",
+     "occurrences": 1
+    },
+    {
+     "location": "Aquecimento da M7-U1, os dados: «o quadro «Tempo e tamanho» fixa»",
+     "old": " o terceiro critério fixa ",
+     "new": " o quadro «Tempo e tamanho» fixa ",
+     "occurrences": 1
+    },
+    {
+     "location": "Aquecimento da M7-U1, os dados: «80 a 120 palavras.»",
+     "old": " «Escreves 80 a 120 palavras». ",
+     "new": " 80 a 120 palavras. ",
+     "occurrences": 1
+    },
+    {
+     "location": "Aquecimento da M7-U1, os dados: «55 minutos»",
+     "old": " 60 minutos ",
+     "new": " 55 minutos ",
+     "occurrences": 1
+    },
+    {
+     "location": "Aquecimento da M7-U1, os dados: «as duas linhas finais e»",
+     "old": " a síntese de duas linhas e ",
+     "new": " as duas linhas finais e ",
+     "occurrences": 1
+    },
+    {
+     "location": "Aquecimento da M7-U1, os dados: «as duas linhas finais fecham.\", \"fe\": \"Não assinalas palavras sem passagens, não escreve…»",
+     "old": " a síntese são as duas linhas finais.\",\n   \"fe\": \"Não assinalas palavras sem passagens, não escreves sem as palavras, não contas um texto que ainda não existe; a síntese fecha, ",
+     "new": " as duas linhas finais fecham.\",\n   \"fe\": \"Não assinalas palavras sem passagens, não escreves sem as palavras, não contas um texto que ainda não existe; as duas linhas finais fecham, ",
+     "occurrences": 1
+    },
+    {
+     "location": "Aquecimento da M7-U1, os dados: «\"A tarefa pede «uma dúvida que os poemas deixam».»",
+     "old": "\"O terceiro critério pede «uma dúvida fundamentada». ",
+     "new": "\"A tarefa pede «uma dúvida que os poemas deixam». ",
+     "occurrences": 1
+    },
+    {
+     "location": "Aquecimento da M7-U1, os dados: «a tarefa pede que expliques como cada passagem apoia»",
+     "old": " o primeiro critério pede que expliques o que sustenta ",
+     "new": " a tarefa pede que expliques como cada passagem apoia ",
+     "occurrences": 1
+    }
+   ]
+  },
+  "docs/pedagogia/aquecimentos/m7-u3.json": {
+   "base_sha256_lf": "292fdb41f8187354381951c3f7018e1829645fb879b9842eb63c7d6dfb401318",
+   "after_sha256_lf": "5169759c72059d533094353bd109e9ec0a01f21ab49c19992bf9aaa403b60bfd",
+   "edits": [
+    {
+     "location": "Aquecimento da M7-U3, os dados: «\"pagar o preço do sonho\", \"dá força a um país\", \"as mães, os filhos e as noivas\", \"algué…»",
+     "old": "\"preço de um sonho grande\",\n  \"dá força a um país\",\n  \"pago por outros\",\n  \"as mães, os filhos e as noivas\",\n  \"alguém volte e resolva\"",
+     "new": "\"pagar o preço do sonho\",\n  \"dá força a um país\",\n  \"as mães, os filhos e as noivas\",\n  \"alguém volte para resolver\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Aquecimento da M7-U3, os dados: «Concordas quando são outras pessoas a pagar o preço do sonho? Considera as mães, os filh…»",
+     "old": " Concordas, quando o preço de um sonho grande é pago por outros, como as mães, os filhos e as noivas da primeira estrofe?</p><p><b>Tema B.</b> Por quem, ou pelo quê, ainda esperamos? Esperar que alguém volte e resolva dá força a um país ou tira-lha?<",
+     "new": " Concordas quando são outras pessoas a pagar o preço do sonho? Considera as mães, os filhos e as noivas da primeira estrofe.</p><p><b>Tema B.</b> Por quem, ou pelo quê, ainda esperamos? Esperar que alguém volte para resolver os problemas dá força a um país ou tira-lhe força?<",
+     "occurrences": 1
+    },
+    {
+     "location": "Aquecimento da M7-U3, os dados: «\"S, opinião com»",
+     "old": "\"S, tese com ",
+     "new": "\"S, opinião com ",
+     "occurrences": 1
+    },
+    {
+     "location": "Aquecimento da M7-U3, os dados: «opinião?\", \"p2\": \"Completa a opinião»",
+     "old": " tese?\",\n   \"p2\": \"Completa a tese ",
+     "new": " opinião?\",\n   \"p2\": \"Completa a opinião ",
+     "occurrences": 1
+    },
+    {
+     "location": "Aquecimento da M7-U3, os dados: «a opinião vale.»",
+     "old": " a tese vale. ",
+     "new": " a opinião vale. ",
+     "occurrences": 1
+    },
+    {
+     "location": "Aquecimento da M7-U3, os dados: «opinião.\"»",
+     "old": " tese.\"",
+     "new": " opinião.\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Aquecimento da M7-U3, os dados: «opinião com condição.\", \"Depois da conclusão, o texto acaba a dar razão ao outro lado; a…»",
+     "old": " tese com condição.\",\n    \"Depois da conclusão, o texto acaba a dar razão ao outro lado; a conclusão volta à tese, ",
+     "new": " opinião com condição.\",\n    \"Depois da conclusão, o texto acaba a dar razão ao outro lado; a conclusão volta à opinião, ",
+     "occurrences": 1
+    },
+    {
+     "location": "Aquecimento da M7-U3, os dados: «a comparação com Garrett ou com Reis começa por aqui: dizer de onde vem cada passagem.\"»",
+     "old": " o confronto com outra voz começa por aqui: dizer de onde vem cada uma.\"",
+     "new": " a comparação com Garrett ou com Reis começa por aqui: dizer de onde vem cada passagem.\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Aquecimento da M7-U3, os dados: «opinião com uma condição\", \"Escolhes o verso de _Mensagem_ e o facto, ou a comparação, q…»",
+     "old": " tese com uma condição\",\n    \"Escolhes o verso de _Mensagem_ e o facto, ou a outra voz, que servem essa tese\",\n    \"Escreves o texto, com os movimentos e a conclusão que volta à tese\"",
+     "new": " opinião com uma condição\",\n    \"Escolhes o verso de _Mensagem_ e o facto, ou a comparação, que servem essa opinião\",\n    \"Escreves o texto, com os movimentos e a conclusão que volta à opinião\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Aquecimento da M7-U3, os dados: «opinião, o texto junta tudo, as letras e a contagem fazem-se no texto escrito, e as duas…»",
+     "old": " tese, o texto junta tudo, as letras e a contagem fazem-se no texto escrito, e as duas linhas fecham.\",\n   \"fe\": \"Não escolhes o verso sem saber a tese ",
+     "new": " opinião, o texto junta tudo, as letras e a contagem fazem-se no texto escrito, e as duas linhas fecham.\",\n   \"fe\": \"Não escolhes o verso sem saber a opinião ",
+     "occurrences": 1
+    },
+    {
+     "location": "Aquecimento da M7-U3, os dados: «tema: a opinião com condição»",
+     "old": " tema: a tese com condição ",
+     "new": " tema: a opinião com condição ",
+     "occurrences": 1
+    },
+    {
+     "location": "Aquecimento da M7-U3, os dados: «uma comparação, a conclusão que volta à opinião,»",
+     "old": " outra voz, a conclusão que volta à tese, ",
+     "new": " uma comparação, a conclusão que volta à opinião, ",
+     "occurrences": 1
+    }
+   ]
+  },
+  "tarefas/m7-u1/index.html": {
+   "base_sha256_lf": "75f7e06bd0464f9493fc12d242c6480afe9a8a9242738c3f6497e422b94a0f95",
+   "after_sha256_lf": "0d2576cfb12862efe101a8bd4449d17199de708436def49b79d1a4baf59c114d",
+   "edits": [
+    {
+     "location": "Enunciado da M7-U1: «Aula de tarefa · Afirmar, desejar, continuar em dúvida · M7»",
+     "old": "><title>Aula de tarefa · Afirmar, desejar, continuar em dúvida · M7</title><meta name=\"description\" content=\"Aula de tarefa com consulta: preparação breve e produção em papel, durante 90 minutos, com entrega no Teams.\"><",
+     "new": ">\n<title>Aula de tarefa · Afirmar, desejar, continuar em dúvida · M7</title>\n<meta name=\"description\" content=\"Aula de tarefa com consulta: aquecimento, leitura de dois poemas e uma comparação em papel, durante 90 minutos, com entrega no Teams.\">\n<",
+     "occurrences": 1
+    },
+    {
+     "location": "Enunciado da M7-U1: «»",
+     "old": "><script defer src=\"../../assets/task-90.js?v=20261027-compact-1\"></script><",
+     "new": ">\n<script defer src=\"../../assets/task-90.js?v=20261027-compact-1\"></script>\n<",
+     "occurrences": 1
+    },
+    {
+     "location": "Enunciado da M7-U1: «»",
+     "old": "\"../../assets/task-reader.js?v=20261027-compact-1\"",
+     "new": "\"../../assets/task-reader.js?v=20261112-facil-7\"></script><link rel=\"stylesheet\" href=\"../../assets/info-i.css?v=20261105\"><link rel=\"stylesheet\" href=\"../../assets/task-textos.css?v=20261113-facil-11\"><script defer src=\"../../assets/info-i.js?v=20261105\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Enunciado da M7-U1: «»",
+     "old": "><body data-site=\"pt\" class=\"task-lesson\"><main class=\"task-page\" data-task-compact>",
+     "new": ">\n<body data-site=\"pt\" class=\"task-lesson\"><main class=\"task-page\" data-task-compact data-task-facil data-task-individual data-task-opening=\"Começar\" data-task-index=\"nomes\">",
+     "occurrences": 1
+    },
+    {
+     "location": "Enunciado da M7-U1: «individual, 90 minutos Afirmar, desejar, continuar em dúvida O que vais fazer Faz o aque…»",
+     "old": " individual · Unidade 1 · 90 min</p><h1>Afirmar, desejar, continuar em dúvida</h1><p class=\"task-lead\">Uma comparação de 80 a 120 palavras.</p><p class=\"task-aquecer\"><a href=\"aquecimento/\">Antes de começar: aquecer em cartões, 10 a 15 minutos</a></p><section id=\"produzir\" aria-label=\"Enunciado\"><h2>O que vais fazer</h2><p>Compara «É em nós que é tudo» e «Quem sou ao menos sinta».</p><h3>No texto</h3><ol><li>Explica o que os finais afirmam ou desejam.</li><li>Usa uma passagem de cada poema e explica como apoia a comparação.</li><li>Apresenta a tua leitura e uma dúvida que os poemas deixam. Distingue a voz poética do autor.</li></ol></section><div class=\"task-relogio\" data-relogio data-max=\"60\" data-passo=\"5\" data-rotulo=\"Produção em papel\" data-chave=\"pt-relogio:tarefas/m7-u1:producao\"></div><p class=\"task-consultation\"><strong>Com consulta.</strong> Podes consultar os textos e os teus apontamentos durante toda a tarefa.</p></header>\n<section class=\"task-section\" id=\"apoios\"><h2 id=\"preparacao\">Relembrar</h2><ul><li><a href=\"../../m7/licao-m7-f14/\" target=\"_blank\" rel=\"noopener\">F14 · «O texto», 1 de 2 e 2 de 2: da ilha para «em nós»</a></li><li><a href=\"../../m7/licao-m7-f15/\" target=\"_blank\" rel=\"noopener\">F15 · «O texto» e «Para levar»: «Quem sou ao menos sinta»</a><",
+     "new": " individual, 90 minutos</p><h1>Afirmar, desejar, continuar em dúvida</h1>\n<h2 class=\"task-part\">O que vais fazer</h2><ol class=\"tf-fazer\"><li>Faz o aquecimento (10 minutos).<span class=\"task-aquecer tf-abrir\"><a href=\"aquecimento/\">Abrir o aquecimento em cartões</a></span></li><li>Lê os dois poemas.</li><li>Escreve uma comparação dos dois finais.</li><li>Escreve duas linhas finais.</li><li>Revê e entrega no Teams.</li></ol><p class=\"tf-p\">Trabalhas à mão. O aquecimento e a tarefa são com consulta: podes usar as lições do site, o caderno e o dicionário.</p>\n<section class=\"task-warmup tf-aquecer\" id=\"aquecer\" aria-labelledby=\"aquecer-title\" data-task-warm=\"cartoes\"><h2 class=\"task-part\" id=\"aquecer-title\">Relógio do aquecimento</h2>\n<div class=\"task-relogio\" data-relogio data-max=\"10\" data-passo=\"1\" data-rotulo=\"Aquecimento\" data-chave=\"pt-relogio:tarefas/m7-u1:aquecimento\"></div>\n</section>\n<h2 class=\"task-part\">O que entregas</h2><p class=\"tf-p\">Fotografias do teu trabalho em papel, na tarefa do Teams.</p>\n<h2 class=\"task-part\">Tempo e tamanho</h2><table class=\"tf-quadro\"><caption>Tempo e tamanho</caption><thead><tr><th scope=\"col\">Tempo</th><th scope=\"col\">O que fazes</th><th scope=\"col\">Palavras</th></tr></thead><tbody><tr><th scope=\"row\">10 min</th><td>Aquecimento em cartões</td><td></td></tr><tr><th scope=\"row\">10 min</th><td>Leitura do enunciado e dos dois poemas</td><td></td></tr><tr><th scope=\"row\">55 min</th><td>Comparação</td><td>80 a 120</td></tr><tr><th scope=\"row\">15 min</th><td>Revisão e entrega</td><td></td></tr><tr><th scope=\"row\">90 min</th><td>Total</td><td>80 a 120</td></tr></tbody></table><p class=\"tf-nota\">Nos 10 minutos de leitura, lê o pedido e os dois poemas.<span class=\"tf-so-ecra\"> O exemplo é para consultares enquanto escreves.</span></p><p class=\"tf-nota\">Não contam para as palavras: os versos citados ou copiados e as duas linhas finais.</p>\n<p class=\"tf-imprimir\"><button type=\"button\" data-task-print hidden>Imprimir o enunciado</button></p>\n</header>\n<section class=\"task-section tf-pergunta\" id=\"produzir\" data-task-card-name=\"A comparação\" aria-labelledby=\"produzir-titulo\"><h2 id=\"produzir-titulo\">Compara os dois finais.</h2>\n<p class=\"tf-meta\">80 a 120 palavras.</p>\n<p class=\"tf-nota tf-relogio-nota\">Começa este relógio depois da leitura.</p><div class=\"task-relogio\" data-relogio data-max=\"55\" data-passo=\"5\" data-rotulo=\"Produção em papel\" data-chave=\"pt-relogio:tarefas/m7-u1:producao\"></div>\n<div class=\"tf-pedido\"><h3>O que fazes</h3><p class=\"tf-p tf-intro\">Compara «É em nós que é tudo» (<a href=\"#texto-1\">Texto 1</a>, verso 23) e «Quem sou ao menos sinta» (<a href=\"#texto-2\">Texto 2</a>, verso 11). No texto:</p><ol class=\"tf-alineas\"><li>Explica o que os finais afirmam ou desejam.</li><li>Usa uma passagem de cada poema.</li><li>Explica como cada passagem apoia a comparação.</li><li>Apresenta a tua leitura.</li><li>Apresenta uma dúvida que os poemas deixam.</li><li>Distingue a voz poética do autor.</li></ol><p class=\"tf-ajuda\">Diz de que poema é cada passagem.</p><p class=\"tf-ajuda\">Na dúvida, diz o que fica por saber e porquê.</p><p class=\"tf-citar\"><b>Como citar.</b> Copia as palavras exatas do texto. Põe-nas entre aspas: «…».</p></div>\n<details class=\"tf-so-tema tf-exemplos tf-so-ecra\"><summary>Ver um exemplo com outro caso</summary><div><aside class=\"tf-exemplo\"><h4>Outro par de poemas de Fernando Pessoa: «Autopsicografia» e «Ela canta, pobre ceifeira»</h4><p class=\"tf-p\"><span class=\"tf-al\">Alíneas a), b) e c), noutro par:</span> Em comum, sentir passa por pensar: «a entreter a razão», «O que em mim sente 'stá pensando». Mas só a «Ceifeira» deseja «poder ser tu, sendo eu».</p><p class=\"tf-p\"><span class=\"tf-al\">Alínea e), uma dúvida:</span> Fica por saber o que a ceifeira sente: ela nunca fala, e tudo o que lemos vem de quem a ouve, como «Ouvi-la alegra e entristece».</p><p class=\"tf-p\"><span class=\"tf-al\">Alínea f), a voz e o autor:</span> Quem diz «eu» é a voz do poema: «Ah, poder ser tu, sendo eu!» mostra o desejo dessa voz, não um facto da vida do autor.</p></aside>\n</div></details>\n<section class=\"tt-texto tt-curto\" id=\"texto-1\" aria-labelledby=\"texto-1-titulo\"><h3 id=\"texto-1-titulo\"><span class=\"tt-num\">Texto 1</span> «Não sei se é sonho, se realidade», de Fernando Pessoa</h3>\n<div class=\"tt-versos\">\n<p class=\"tt-estrofe\"><span class=\"tt-v\"><span class=\"tt-n\"></span><span class=\"tt-l\">Não sei se é sonho, se realidade,</span></span>\n<span class=\"tt-v\"><span class=\"tt-n\"></span><span class=\"tt-l\">Se uma mistura de sonho e vida,</span></span>\n<span class=\"tt-v\"><span class=\"tt-n\"></span><span class=\"tt-l\">Aquela terra de suavidade</span></span>\n<span class=\"tt-v\"><span class=\"tt-n\"></span><span class=\"tt-l\">Que na ilha extrema do sul se olvida.</span></span>\n<span class=\"tt-v\"><span class=\"tt-n\">5</span><span class=\"tt-l\">É a que ansiamos. Ali, ali</span></span>\n<span class=\"tt-v\"><span class=\"tt-n\"></span><span class=\"tt-l\">A vida é jovem e o amor sorri</span></span></p>\n<p class=\"tt-estrofe\"><span class=\"tt-v\"><span class=\"tt-n\"></span><span class=\"tt-l\">Talvez palmares inexistentes,</span></span>\n<span class=\"tt-v\"><span class=\"tt-n\"></span><span class=\"tt-l\">Áleas longínquas sem poder ser,</span></span>\n<span class=\"tt-v\"><span class=\"tt-n\"></span><span class=\"tt-l\">Sombra ou sossego dêem aos crentes</span></span>\n<span class=\"tt-v\"><span class=\"tt-n\">10</span><span class=\"tt-l\">De que essa terra se pode ter</span></span>\n<span class=\"tt-v\"><span class=\"tt-n\"></span><span class=\"tt-l\">Felizes, nós? Ali, talvez, talvez,</span></span>\n<span class=\"tt-v\"><span class=\"tt-n\"></span><span class=\"tt-l\">Naquela terra, daquela vez,</span></span></p>\n<p class=\"tt-estrofe\"><span class=\"tt-v\"><span class=\"tt-n\"></span><span class=\"tt-l\">Mas já sonhada se desvirtua,</span></span>\n<span class=\"tt-v\"><span class=\"tt-n\"></span><span class=\"tt-l\">Só de pensá-la cansou pensar;</span></span>\n<span class=\"tt-v\"><span class=\"tt-n\">15</span><span class=\"tt-l\">Sob os palmares, à luz da lua,</span></span>\n<span class=\"tt-v\"><span class=\"tt-n\"></span><span class=\"tt-l\">Sente-se o frio de haver luar</span></span>\n<span class=\"tt-v\"><span class=\"tt-n\"></span><span class=\"tt-l\">Ah, nesta terra também, também</span></span>\n<span class=\"tt-v\"><span class=\"tt-n\"></span><span class=\"tt-l\">O mal não cessa, não dura o bem.</span></span></p>\n<p class=\"tt-estrofe\"><span class=\"tt-v\"><span class=\"tt-n\"></span><span class=\"tt-l\">Não é com ilhas do fim do mundo,</span></span>\n<span class=\"tt-v\"><span class=\"tt-n\">20</span><span class=\"tt-l\">Nem com palmares de sonho ou não,</span></span>\n<span class=\"tt-v\"><span class=\"tt-n\"></span><span class=\"tt-l\">Que cura a alma seu mal profundo,</span></span>\n<span class=\"tt-v\"><span class=\"tt-n\"></span><span class=\"tt-l\">Que o bem nos entra no coração.</span></span>\n<span class=\"tt-v\"><span class=\"tt-n\"></span><span class=\"tt-l\">É em nós que é tudo. É ali, ali,</span></span>\n<span class=\"tt-v\"><span class=\"tt-n\"></span><span class=\"tt-l\">Que a vida é jovem e o amor sorri.</span></span></p>\n</div>\n<div class=\"tt-gloss\"><p><b>Vocabulário</b></p><ul><li><b>se olvida</b>: se esquece</li><li><b>áleas</b>: alamedas, caminhos com árvores</li><li><b>desvirtua</b>: perde o valor</li><li><b>«dêem»</b>: grafia da edição</li></ul></div><p class=\"tt-fonte\">Fernando Pessoa (20-8-1933), <i>Poesias</i>, Ática, 1942; Arquivo Pessoa.</p></section>\n<section class=\"tt-texto tt-curto\" id=\"texto-2\" aria-labelledby=\"texto-2-titulo\"><h3 id=\"texto-2-titulo\"><span class=\"tt-num\">Texto 2</span> «Quando as crianças brincam», de Fernando Pessoa</h3>\n<div class=\"tt-versos\">\n<p class=\"tt-estrofe\"><span class=\"tt-v\"><span class=\"tt-n\"></span><span class=\"tt-l\">Quando as crianças brincam</span></span>\n<span class=\"tt-v\"><span class=\"tt-n\"></span><span class=\"tt-l\">E eu as oiço brincar,</span></span>\n<span class=\"tt-v\"><span class=\"tt-n\"></span><span class=\"tt-l\">Qualquer coisa em minha alma</span></span>\n<span class=\"tt-v\"><span class=\"tt-n\"></span><span class=\"tt-l\">Começa a se alegrar.</span></span></p>\n<p class=\"tt-estrofe\"><span class=\"tt-v\"><span class=\"tt-n\">5</span><span class=\"tt-l\">E toda aquela infância</span></span>\n<span class=\"tt-v\"><span class=\"tt-n\"></span><span class=\"tt-l\">Que não tive me vem,</span></span>\n<span class=\"tt-v\"><span class=\"tt-n\"></span><span class=\"tt-l\">Numa onda de alegria</span></span>\n<span class=\"tt-v\"><span class=\"tt-n\"></span><span class=\"tt-l\">Que não foi de ninguém.</span></span></p>\n<p class=\"tt-estrofe\"><span class=\"tt-v\"><span class=\"tt-n\"></span><span class=\"tt-l\">Se quem fui é enigma,</span></span>\n<span class=\"tt-v\"><span class=\"tt-n\">10</span><span class=\"tt-l\">E quem serei visão,</span></span>\n<span class=\"tt-v\"><span class=\"tt-n\"></span><span class=\"tt-l\">Quem sou ao menos sinta</span></span>\n<span class=\"tt-v\"><span class=\"tt-n\"></span><span class=\"tt-l\">Isto no coração.</span></span></p>\n</div>\n<p class=\"tt-fonte\">Fernando Pessoa (5-9-1933), <i>Poesias</i>, Ática, 1942; Arquivo Pessoa.</p></section>\n</section>\n<section class=\"task-section\" id=\"entregar\" data-task-card-name=\"Fechar e entregar\" aria-labelledby=\"entregar-title\"><h2 id=\"finais-titulo\">Duas linhas finais</h2><ol class=\"tf-passos\"><li>Responde: o que aprendeste?</li><li>Indica onde se vê essa aprendizagem no teu trabalho.</li></ol>\n<h2 id=\"entregar-title\">Antes de entregar, verifica</h2><p class=\"tf-p\" id=\"criterios\">Responde sim ou não. Se for não, completa o teu trabalho.</p>\n<fieldset class=\"task-checklist\" aria-labelledby=\"entregar-title\"><label><input type=\"checkbox\"> <span>Expliquei o que os finais afirmam ou desejam?</span></label><label><input type=\"checkbox\"> <span>Usei uma passagem de cada poema, entre «»?</span></label><label><input type=\"checkbox\"> <span>Expliquei como cada passagem apoia a comparação?</span></label><label><input type=\"checkbox\"> <span>Apresentei a minha leitura?</span></label><label><input type=\"checkbox\"> <span>Apresentei uma dúvida que os poemas deixam?</span></label><label><input type=\"checkbox\"> <span>Distingui a voz poética do autor?</span></label><label><input type=\"checkbox\"> <span>Tenho 80 a 120 palavras?</span></label><label><input type=\"checkbox\"> <span>Revi a escrita?</span></label><label><input type=\"checkbox\"> <span>Escrevi as duas linhas finais?</span></label></fieldset>\n<h2>Entrega no Teams</h2><ol class=\"tf-passos\"><li>Fotografa a comparação e as duas linhas finais.</li><li>Confirma que as fotografias mostram o trabalho completo.</li><li>Entrega as fotografias na tarefa do Teams.</li></ol></section>\n<section class=\"task-section tf-rever\" id=\"apoios\" data-task-card-name=\"Rever a matéria\" aria-labelledby=\"preparacao\"><h2 id=\"preparacao\">Se precisares de rever</h2><p class=\"tf-p\">Os textos já estão nesta página. As lições servem para rever a matéria.</p><ul class=\"tf-rever-lista\"><li><b>Texto 1.</b> Lição F14, <a href=\"../../m7/licao-m7-f14/\">«Não sei se é sonho, se realidade»</a>. Relê «Em paralelo»: a ilha e nós.</li><li><b>Texto 2.</b> Lição F15, <a href=\"../../m7/licao-m7-f15/\">A infância que não tive</a>. Relê «O essencial» e «Para levar».</li><li><b>A comparação.</b> Lição F13, <a href=\"../../m7/licao-m7-f13/\">«Ela canta, pobre ceifeira»</a>. Relê «Em paralelo»: a ceifeira e o poeta.<",
+     "occurrences": 1
+    },
+    {
+     "location": "Enunciado da M7-U1: «»",
+     "old": "\"><article ",
+     "new": "\">\n<article ",
+     "occurrences": 1
+    },
+    {
+     "location": "Enunciado da M7-U1: «»",
+     "old": "</article><article ",
+     "new": "</article>\n<article ",
+     "occurrences": 1
+    },
+    {
+     "location": "Enunciado da M7-U1: «Respostas exploradas: 0 de 2. Podes rever qualquer escolha. document.querySelectorAll(\"[…»",
+     "old": "><p data-task-status role=\"status\">Respostas exploradas: 0 de 2. Podes rever qualquer escolha.</p></div></details></section>\n<section class=\"task-section\" id=\"entregar\"><h2>Revê e entrega</h2><h3 id=\"criterios\">Antes de entregar, verifica</h3><ul class=\"task-criteria\"><li>Citas uma passagem de cada poema e explicas o que sustenta a comparação.</li><li>Distingues afirmação e desejo sem confundir a voz poética com o autor.</li><li>Escreves 80 a 120 palavras, com leitura própria e uma dúvida fundamentada.</li></ul><h3>Fecha o trabalho</h3><p>Escreve duas linhas: o que aprendeste e onde se vê essa aprendizagem no teu trabalho.</p><h3>Entrega no Teams</h3><p>Fotografa a comparação e as duas linhas finais. Confirma que se lê o trabalho completo e entrega as fotografias na tarefa do Teams.</p></section></main><",
+     "new": ">\n<p data-task-status role=\"status\">Respostas exploradas: 0 de 2. Podes rever qualquer escolha.</p></div></details>\n</section>\n</main>\n<script>document.querySelectorAll(\"[data-task-print]\").forEach(function(b){b.hidden=false;b.onclick=function(){window.print()}})</script>\n<",
+     "occurrences": 1
+    },
+    {
+     "location": "Enunciado da M7-U1: «»",
+     "old": "</a><script ",
+     "new": "</a>\n<script ",
+     "occurrences": 1
+    }
+   ]
+  },
+  "tarefas/m7-u2/index.html": {
+   "base_sha256_lf": "884944d6adef753e39779c3655f53a0f3289011ace50405146c16901c0d3e171",
+   "after_sha256_lf": "668fdcdd1f341f42d33ab56f8acc3904d06553ce26fb875be153f0941ff79238",
+   "edits": [
+    {
+     "location": "Enunciado da M7-U2: «»",
+     "old": "\">\n<head>",
+     "new": "\"><head>",
+     "occurrences": 1
+    },
+    {
+     "location": "Enunciado da M7-U2: «90 minutos.\"»",
+     "old": " 90 minutos.\"",
+     "new": " 90 minutos.\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Enunciado da M7-U2: «»",
+     "old": "\"../../assets/task-reader.js?v=20261027-compact-1\"",
+     "new": "\"../../assets/task-reader.js?v=20261112-facil-7\"></script><link rel=\"stylesheet\" href=\"../../assets/info-i.css?v=20261105\"><link rel=\"stylesheet\" href=\"../../assets/task-textos.css?v=20261113-facil-11\"><script defer src=\"../../assets/info-i.js?v=20261105\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Enunciado da M7-U2: «»",
+     "old": " data-task-compact>",
+     "new": " data-task-compact data-task-facil data-task-individual data-task-opening=\"Começar\" data-task-index=\"nomes\">",
+     "occurrences": 1
+    },
+    {
+     "location": "Enunciado da M7-U2: «individual, 90 minutos Uma ideia de heterónimo O que vais fazer Faz o aquecimento (10 mi…»",
+     "old": " individual · Unidade 2 · 90 min</p><h1>Uma ideia de heterónimo</h1><p class=\"task-lead\">Um perfil breve e um texto de 100 a 150 palavras.</p><p class=\"task-aquecer\"><a href=\"aquecimento/\">No início da aula: aquecer em cartões, 10 minutos</a></p><section id=\"produzir\" aria-label=\"Enunciado\"><h2>O que vais fazer</h2><p>A apresentação é individual.</p><ol><li><strong>Inventa a voz:</strong> nome, datas, ofício, maneira de ver e escrever; deve discordar de ti numa ideia.</li><li><strong>Escreve nessa voz:</strong> poema, carta ou nota. Justifica duas escolhas de linguagem com exemplos teus. Lista três fontes, com data, e as diferenças entre elas.</li><li><strong>Apresenta em dois minutos:</strong> lê uma frase e responde a uma pergunta feita ou prevista. Regista a pergunta e a resposta numa linha.</li></ol></section><div class=\"task-relogio\" data-relogio data-max=\"60\" data-passo=\"5\" data-rotulo=\"Produção em papel\" data-chave=\"pt-relogio:tarefas/m7-u2:producao\"></div><p class=\"task-consultation\"><strong>Com consulta.</strong> Podes consultar os textos e os teus apontamentos durante toda a tarefa.</p></header>\n<section class=\"task-section\" id=\"apoios\"><h2 id=\"preparacao\">Relembrar</h2><ul><li><a href=\"../../m7/licao-m7-f04/\" target=\"_blank\" rel=\"noopener\">F04 · Caeiro: ver e pensar</a></li><li><a href=\"../../m7/licao-m7-f05/\" target=\"_blank\" rel=\"noopener\">F05 · Reis: aconselhar e conter</a></li><li><a href=\"../../m7/licao-m7-f36/\" target=\"_blank\" rel=\"noopener\">F36 · Campos: negar e desejar</a><",
+     "new": " individual, 90 minutos</p><h1>Uma ideia de heterónimo</h1>\n<h2 class=\"task-part\">O que vais fazer</h2><ol class=\"tf-fazer\"><li>Faz o aquecimento (10 minutos).<span class=\"task-aquecer tf-abrir\"><a href=\"aquecimento/\">Abrir o aquecimento em cartões</a></span></li><li>Inventa uma voz e faz o perfil.</li><li>Escreve um texto nessa voz.</li><li>Justifica duas escolhas e lista três fontes.</li><li>Apresenta a voz em dois minutos.</li><li>Escreve duas linhas finais.</li><li>Revê e entrega no Teams.</li></ol><p class=\"tf-p\">Trabalhas à mão. O aquecimento e a tarefa são com consulta: podes usar as lições do site, o caderno e o dicionário. A apresentação é individual.</p>\n<section class=\"task-warmup tf-aquecer\" id=\"aquecer\" aria-labelledby=\"aquecer-title\" data-task-warm=\"cartoes\"><h2 class=\"task-part\" id=\"aquecer-title\">Relógio do aquecimento</h2>\n<div class=\"task-relogio\" data-relogio data-max=\"10\" data-passo=\"1\" data-rotulo=\"Aquecimento\" data-chave=\"pt-relogio:tarefas/m7-u2:aquecimento\"></div>\n</section>\n<h2 class=\"task-part\">O que entregas</h2><p class=\"tf-p\">Fotografias do teu trabalho em papel, na tarefa do Teams.</p>\n<h2 class=\"task-part\">Tempo e tamanho</h2><table class=\"tf-quadro\"><caption>Tempo e tamanho</caption><thead><tr><th scope=\"col\">Tempo</th><th scope=\"col\">O que fazes</th><th scope=\"col\">Palavras</th></tr></thead><tbody><tr><th scope=\"row\">10 min</th><td>Aquecimento em cartões</td><td></td></tr><tr><th scope=\"row\">10 min</th><td>Leitura do enunciado</td><td></td></tr><tr><th scope=\"rowgroup\" rowspan=\"3\">55 min</th><td>Parte 1: o perfil</td><td></td></tr><tr><td>Parte 2: o texto</td><td>100 a 150</td></tr><tr><td>Parte 3: as escolhas e as fontes</td><td></td></tr><tr><th scope=\"row\">15 min</th><td>Parte 4 (a apresentação), revisão e entrega</td><td></td></tr><tr><th scope=\"row\">90 min</th><td>Total</td><td>100 a 150</td></tr></tbody></table><p class=\"tf-nota\">Nos 10 minutos de leitura, lê as quatro partes.<span class=\"tf-so-ecra\"> Os exemplos são para consultares enquanto escreves.</span></p><p class=\"tf-nota\">As 100 a 150 palavras são as do texto da parte 2. Não contam: o perfil, as escolhas explicadas, as fontes e as duas linhas finais.</p>\n<p class=\"tf-imprimir\"><button type=\"button\" data-task-print hidden>Imprimir o enunciado</button></p>\n</header>\n<section class=\"task-section tf-pergunta\" id=\"produzir\" data-task-card-name=\"Parte 1: o perfil\" aria-labelledby=\"produzir-titulo\"><h2 id=\"produzir-titulo\">Inventa a voz.</h2>\n<p class=\"tf-meta\">Um perfil breve.</p>\n<p class=\"tf-nota tf-relogio-nota\">Começa este relógio depois da leitura.</p><div class=\"task-relogio\" data-relogio data-max=\"55\" data-passo=\"5\" data-rotulo=\"Produção em papel\" data-chave=\"pt-relogio:tarefas/m7-u2:producao\"></div>\n<div class=\"tf-pedido\"><h3>O que fazes</h3><p class=\"tf-p tf-intro\">Faz o perfil da voz. Escreve:</p><ol class=\"tf-alineas\"><li>O nome.</li><li>As datas.</li><li>O ofício.</li><li>A maneira de ver.</li><li>A maneira de escrever.</li></ol><p class=\"tf-ajuda\">A voz deve discordar de ti numa ideia.</p><p class=\"tf-ajuda\">A voz é inventada: não imites uma pessoa real.</p></div>\n<details class=\"tf-so-tema tf-exemplos tf-so-ecra\"><summary>Ver um exemplo com outro caso</summary><div><aside class=\"tf-exemplo\"><h4>Outro perfil, o do guia da tarefa: Augusto Pires</h4><p class=\"tf-contexto\">É um exemplo: não uses este ofício nem esta maneira de ver.</p><p class=\"tf-p\"><span class=\"tf-al\">Alíneas a), b) e c):</span> Nome: Augusto Pires. Nascido em Setúbal em 1902, operador de guindaste no porto, lê o jornal de trás para a frente.</p><p class=\"tf-p\"><span class=\"tf-al\">Alínea d):</span> Maneira de ver: tudo o que sobe desce, e só o que desce interessa.</p><p class=\"tf-p\"><span class=\"tf-al\">Alínea e):</span> Maneira de escrever: frases curtas, sem adjetivos, com um número em cada parágrafo.</p></aside>\n</div></details>\n</section>\n<section class=\"task-section tf-pergunta\" id=\"parte-2\" data-task-card-name=\"Parte 2: o texto\" aria-labelledby=\"parte-2-titulo\"><h2 id=\"parte-2-titulo\">Escreve nessa voz.</h2>\n<p class=\"tf-meta\">100 a 150 palavras.</p>\n<div class=\"tf-pedido\"><h3>O que fazes</h3><ol class=\"tf-alineas\"><li>Escolhe a forma: poema, carta ou nota.</li><li>Escreve o texto na voz que inventaste.</li></ol><p class=\"tf-ajuda\">O texto não se deve confundir com os teus: mudam as frases, as palavras ou a pontuação.</p></div>\n<details class=\"tf-so-tema tf-exemplos tf-so-ecra\"><summary>Ver um exemplo com outro caso</summary><div><aside class=\"tf-exemplo\"><h4>O início de outro texto, o do guia da tarefa: a voz de Augusto Pires</h4><p class=\"tf-p\"><span class=\"tf-al\">Alínea b):</span> «Hoje levantei catorze contentores. Nenhum sabia para onde ia. Eu também não, mas eu tenho o guindaste e eles não têm nada. À tarde choveu doze minutos. Não escrevo sobre a chuva, escrevo sobre o tempo que ela demora.»</p></aside>\n</div></details>\n</section>\n<section class=\"task-section tf-pergunta\" id=\"parte-3\" data-task-card-name=\"Parte 3: escolhas e fontes\" aria-labelledby=\"parte-3-titulo\"><h2 id=\"parte-3-titulo\">Justifica as escolhas e regista as fontes.</h2>\n<p class=\"tf-meta\">Fora das 100 a 150 palavras.</p>\n<div class=\"tf-pedido\"><h3>O que fazes</h3><ol class=\"tf-alineas\"><li>Justifica duas escolhas de linguagem com exemplos teus.</li><li>Lista três fontes, com data.</li><li>Regista as diferenças entre elas.</li></ol><p class=\"tf-ajuda\">Uma fonte pode ser a carta a Adolfo Casais Monteiro ou uma lição dos heterónimos.</p><p class=\"tf-ajuda\">Numa lição, a data é o dia em que a consultaste.</p></div>\n<details class=\"tf-so-tema tf-exemplos tf-so-ecra\"><summary>Ver dois exemplos com outros casos</summary><div><aside class=\"tf-exemplo\"><h4>Outra escolha de linguagem, num verso de Alberto Caeiro</h4><p class=\"tf-p\"><span class=\"tf-al\">Alínea a):</span> Em «Quem está ao pé dele está só ao pé dele», Caeiro repete «ao pé dele». A escolha insiste na presença do rio: quem vê sem pensar não lhe põe nada em cima.</p></aside>\n<aside class=\"tf-exemplo\"><h4>Duas fontes sobre Álvaro de Campos, e a diferença entre elas</h4><p class=\"tf-p\"><span class=\"tf-al\">Alíneas b) e c):</span> A carta a Adolfo Casais Monteiro é de 13 de janeiro de 1935: diz que Campos é engenheiro naval e nasceu em Tavira. A lição F01 diz: «a vida inventada prepara o estilo». A lição F11 diz: «Estes dados ajudam a caracterizar a figura, mas não explicam, por si sós, a presença de máquinas ou o verso livre». A diferença: a F01 liga a vida ao estilo; a F11 diz que a vida não chega para o explicar.</p></aside>\n</div></details>\n</section>\n<section class=\"task-section tf-pergunta\" id=\"parte-4\" data-task-card-name=\"Parte 4: a apresentação\" aria-labelledby=\"parte-4-titulo\"><h2 id=\"parte-4-titulo\">Apresenta em dois minutos.</h2>\n<p class=\"tf-meta\">Dois minutos. A apresentação é individual.</p>\n<div class=\"task-relogio\" data-relogio data-max=\"2\" data-passo=\"0.5\" data-rotulo=\"Apresentação da voz\" data-chave=\"pt-relogio:tarefas/m7-u2:apresentacao\"></div>\n<div class=\"tf-pedido\"><h3>O que fazes</h3><ol class=\"tf-alineas\"><li>Lê uma frase do teu texto.</li><li>Responde a uma pergunta feita ou prevista.</li><li>Regista a pergunta e a resposta numa linha.</li></ol><p class=\"tf-ajuda\">Apresentar não é ler o perfil do princípio ao fim.</p></div>\n</section>\n<section class=\"task-section\" id=\"entregar\" data-task-card-name=\"Fechar e entregar\" aria-labelledby=\"entregar-title\"><h2 id=\"finais-titulo\">Duas linhas finais</h2><ol class=\"tf-passos\"><li>Responde: o que aprendeste?</li><li>Indica onde se vê essa aprendizagem no teu trabalho.</li></ol>\n<h2 id=\"entregar-title\">Antes de entregar, verifica</h2><p class=\"tf-p\" id=\"criterios\">Responde sim ou não. Se for não, completa o teu trabalho.</p>\n<fieldset class=\"task-checklist\" aria-labelledby=\"entregar-title\"><label><input type=\"checkbox\"> <span>O perfil tem nome, datas, ofício, maneira de ver e maneira de escrever?</span></label><label><input type=\"checkbox\"> <span>A voz é inventada e discorda de mim numa ideia?</span></label><label><input type=\"checkbox\"> <span>O texto tem 100 a 150 palavras?</span></label><label><input type=\"checkbox\"> <span>O texto distingue-se da minha voz?</span></label><label><input type=\"checkbox\"> <span>Justifiquei duas escolhas de linguagem com exemplos meus?</span></label><label><input type=\"checkbox\"> <span>Listei três fontes, com data, e as diferenças entre elas?</span></label><label><input type=\"checkbox\"> <span>Li uma frase e respondi a uma pergunta?</span></label><label><input type=\"checkbox\"> <span>Registei a pergunta e a resposta numa linha?</span></label><label><input type=\"checkbox\"> <span>Escrevi as duas linhas finais?</span></label></fieldset>\n<h2>Entrega no Teams</h2><ol class=\"tf-passos\"><li>Fotografa o perfil, o texto, as duas escolhas explicadas, as três fontes, a pergunta com resposta e as duas linhas finais.</li><li>Confirma que as fotografias mostram o trabalho completo.</li><li>Entrega as fotografias na tarefa do Teams.</li></ol></section>\n<section class=\"task-section tf-rever\" id=\"apoios\" data-task-card-name=\"Rever a matéria\" aria-labelledby=\"preparacao\"><h2 id=\"preparacao\">Se precisares de rever</h2><p class=\"tf-p\">Nesta tarefa não há texto para analisar: o texto é teu. As lições servem para rever as três vozes.</p><ul class=\"tf-rever-lista\"><li><b>Caeiro.</b> Lição F04, <a href=\"../../m7/licao-m7-f04/\">Pensar é estar doente dos olhos</a>. Relê «Em paralelo»: ver e pensar.</li><li><b>Reis.</b> Lição F05, <a href=\"../../m7/licao-m7-f05/\">À beira do rio</a>. Relê «Em paralelo»: imperativo e conjuntivo.</li><li><b>Campos.</b> Lição F36, <a href=\"../../m7/licao-m7-f36/\">Nada, mas todos os sonhos</a>. Relê «Para entender».</li><li><b>Fontes.</b> Lição F01, <a href=\"../../m7/licao-m7-f01/\">Quantos somos?</a> Relê «O essencial»: as três vidas, segundo a carta.<",
+     "occurrences": 1
+    },
+    {
+     "location": "Enunciado da M7-U2: «»",
+     "old": "\"><article ",
+     "new": "\">\n<article ",
+     "occurrences": 1
+    },
+    {
+     "location": "Enunciado da M7-U2: «»",
+     "old": "</article><article ",
+     "new": "</article>\n<article ",
+     "occurrences": 1
+    },
+    {
+     "location": "Enunciado da M7-U2: «Respostas exploradas: 0 de 2. Podes rever qualquer escolha. document.querySelectorAll(\"[…»",
+     "old": "><p data-task-status role=\"status\">Respostas exploradas: 0 de 2. Podes rever qualquer escolha.</p></div></details></section>\n<section class=\"task-section\" id=\"entregar\"><h2>Revê e entrega</h2><div class=\"task-relogio\" data-relogio data-max=\"2\" data-passo=\"0.5\" data-rotulo=\"Apresentação da voz\" data-chave=\"pt-relogio:tarefas/m7-u2:apresentacao\"></div><h3 id=\"criterios\">Antes de entregar, verifica</h3><ul class=\"task-criteria\"><li>O perfil é inventado e coerente com a maneira de ver e de escrever.</li><li>O texto tem 100 a 150 palavras e distingue-se da tua voz; justificas escolhas com provas.</li><li>Apresentas a voz e fundamentas a resposta; identificas as fontes e as suas diferenças.</li></ul><h3>Fecha o trabalho</h3><p>Escreve duas linhas: o que aprendeste e onde se vê essa aprendizagem no teu trabalho.</p><h3>Entrega no Teams</h3><p>Fotografa o perfil, o texto, as duas escolhas explicadas, as três fontes, a pergunta com resposta e as duas linhas finais. Entrega as fotografias na tarefa do Teams.</p></section></main><",
+     "new": ">\n<p data-task-status role=\"status\">Respostas exploradas: 0 de 2. Podes rever qualquer escolha.</p></div></details>\n</section>\n</main>\n<script>document.querySelectorAll(\"[data-task-print]\").forEach(function(b){b.hidden=false;b.onclick=function(){window.print()}})</script>\n<",
+     "occurrences": 1
+    }
+   ]
+  },
+  "tarefas/m7-u1/aquecimento/index.html": {
+   "base_sha256_lf": "df7fa4a0a7fed37989961c04c46a9b3badd20783dcd626ab3ed2855427c9ddcd",
+   "after_sha256_lf": "f7916658c9195bee7689ce48638aa97790e9b7a2e25b63640d69dd6186f15237",
+   "edits": [
+    {
+     "location": "Aquecimento da M7-U1: «Dez minutos,»",
+     "old": ">Dez a quinze minutos, ",
+     "new": ">Dez minutos, ",
+     "occurrences": 1
+    },
+    {
+     "location": "Aquecimento da M7-U1: «o quadro «Tempo e tamanho» fixa»",
+     "old": " o terceiro critério fixa ",
+     "new": " o quadro «Tempo e tamanho» fixa ",
+     "occurrences": 1
+    },
+    {
+     "location": "Aquecimento da M7-U1: «80 a 120 palavras.»",
+     "old": " «Escreves 80 a 120 palavras». ",
+     "new": " 80 a 120 palavras. ",
+     "occurrences": 1
+    },
+    {
+     "location": "Aquecimento da M7-U1: «55 minutos»",
+     "old": " 60 minutos ",
+     "new": " 55 minutos ",
+     "occurrences": 1
+    },
+    {
+     "location": "Aquecimento da M7-U1: «as duas linhas finais e»",
+     "old": " a síntese de duas linhas e ",
+     "new": " as duas linhas finais e ",
+     "occurrences": 1
+    },
+    {
+     "location": "Aquecimento da M7-U1: «as duas linhas finais fecham.\", \"fe\": \"Não assinalas palavras sem passagens, não escreve…»",
+     "old": " a síntese são as duas linhas finais.\", \"fe\": \"Não assinalas palavras sem passagens, não escreves sem as palavras, não contas um texto que ainda não existe; a síntese fecha, ",
+     "new": " as duas linhas finais fecham.\", \"fe\": \"Não assinalas palavras sem passagens, não escreves sem as palavras, não contas um texto que ainda não existe; as duas linhas finais fecham, ",
+     "occurrences": 1
+    },
+    {
+     "location": "Aquecimento da M7-U1: «\"A tarefa pede «uma dúvida que os poemas deixam».»",
+     "old": "\"O terceiro critério pede «uma dúvida fundamentada». ",
+     "new": "\"A tarefa pede «uma dúvida que os poemas deixam». ",
+     "occurrences": 1
+    },
+    {
+     "location": "Aquecimento da M7-U1: «a tarefa pede que expliques como cada passagem apoia»",
+     "old": " o primeiro critério pede que expliques o que sustenta ",
+     "new": " a tarefa pede que expliques como cada passagem apoia ",
+     "occurrences": 1
+    }
+   ]
+  },
+  "tarefas/m7-u3/index.html": {
+   "base_sha256_lf": "dee77903ed14887408abe8189d4921f141e7c74073f5f676db4dcdbdc2c0aaca",
+   "after_sha256_lf": "4c7b30d6c7b299f02ba49dd63863004ff40c1cb4027dc170fb7f560e942f8496",
+   "edits": [
+    {
+     "location": "Enunciado da M7-U3: «aquecimento e um texto de opinião sobre um»",
+     "old": " aquecimento, núcleo comum e um ",
+     "new": " aquecimento e um texto de opinião sobre um ",
+     "occurrences": 1
+    },
+    {
+     "location": "Enunciado da M7-U3: «»",
+     "old": "\"../../assets/task-reader.js?v=20261028-escolha-2\"",
+     "new": "\"../../assets/task-reader.js?v=20261112-facil-7\"></script><link rel=\"stylesheet\" href=\"../../assets/info-i.css?v=20261105\"><link rel=\"stylesheet\" href=\"../../assets/task-textos.css?v=20261113-facil-11\"><script defer src=\"../../assets/info-i.js?v=20261105\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Enunciado da M7-U3: «Português M7 · Unidade 3 Tarefa individual, 90 minutos Louco, sim: argumentar com os mov…»",
+     "old": " data-task-choice>\n<nav class=\"task-nav\" aria-label=\"Onde estás\"><a href=\"../../\">Português</a><a href=\"../../m7/#unidade-pedagogica-3\">M7 · Unidade 3</a></nav>\n<section class=\"task-section task-warmup\" id=\"aquecer\" aria-labelledby=\"aquecer-title\" data-task-warm=\"cartoes\">\n<p class=\"task-warmup-kicker\">Antes de escrever · 10 min · em cartões, com consulta</p>\n<h2 id=\"aquecer-title\">Aquecer em cartões</h2>\n<p>Dez minutos de cartões no início da aula: treinam os seis movimentos com outros exemplos e não escrevem a tua opinião. Depois, lês a tarefa e começam os 60 minutos de produção.</p>\n<p class=\"task-aquecer\"><a href=\"aquecimento/\">Abrir o aquecimento em cartões</a></p>\n<div class=\"task-relogio\" data-relogio data-max=\"10\" data-passo=\"1\" data-rotulo=\"Aquecimento\" data-chave=\"pt-relogio:tarefas/m7-u3:aquecimento\"></div>\n</section>\n<header><p class=\"task-kicker\">Tarefa individual · Unidade 3 · 90 min</p><h1>Louco, sim: argumentar com os movimentos de <i>Mensagem</i></h1>\n<h2 class=\"task-part\">O que vais fazer</h2><p>Escolhe <strong>um tema</strong> e escreve um texto de opinião. As instruções abaixo fazem parte desse único texto.</p>\n<p>Individual, à mão e com consulta: <strong>180 a 220 palavras</strong>. Escreve o total no fim. As duas linhas de reflexão final ficam fora da contagem.</p>\n<p class=\"task-aquecer\"><a href=\"aquecimento/\">Antes de começar: aquecer em cartões, 10 minutos</a></p>\n<section id=\"produzir\" aria-label=\"Enunciado\">\n<h2 class=\"task-part\">1. Escolhe A ou B <small>só um</small></h2><",
+     "new": " data-task-choice data-task-facil data-task-opening=\"Começar\" data-task-index=\"nomes\">\n<nav class=\"task-nav\" aria-label=\"Onde estás\"><a href=\"../../\">Português</a><a href=\"../../m7/#unidade-pedagogica-3\">M7 · Unidade 3</a></nav>\n<header><p class=\"task-kicker\">Tarefa individual, 90 minutos</p><h1>Louco, sim: argumentar com os movimentos de <i>Mensagem</i></h1>\n<h2 class=\"task-part\">O que vais fazer</h2><ol class=\"tf-fazer\"><li>Faz o aquecimento (10 minutos).<span class=\"task-aquecer tf-abrir\"><a href=\"aquecimento/\">Abrir o aquecimento em cartões</a></span></li><li>Escolhe um tema: A ou B.</li><li>Escreve um texto de opinião sobre esse tema.</li><li>Escreve duas linhas finais.</li><li>Revê e entrega no Teams.</li></ol><p class=\"tf-p\">Trabalhas à mão. O aquecimento e a tarefa são com consulta: podes usar as lições do site, o caderno e o dicionário.</p>\n<section class=\"task-warmup tf-aquecer\" id=\"aquecer\" aria-labelledby=\"aquecer-title\" data-task-warm=\"cartoes\"><h2 class=\"task-part\" id=\"aquecer-title\">Relógio do aquecimento</h2>\n<div class=\"task-relogio\" data-relogio data-max=\"10\" data-passo=\"1\" data-rotulo=\"Aquecimento\" data-chave=\"pt-relogio:tarefas/m7-u3:aquecimento\"></div>\n</section>\n<h2 class=\"task-part\">O que entregas</h2><p class=\"tf-p\">Fotografias do teu trabalho em papel, na tarefa do Teams.</p>\n<h2 class=\"task-part\">Tempo e tamanho</h2><table class=\"tf-quadro\"><caption>Tempo e tamanho</caption><thead><tr><th scope=\"col\">Tempo</th><th scope=\"col\">O que fazes</th><th scope=\"col\">Palavras</th></tr></thead><tbody><tr><th scope=\"row\">10 min</th><td>Aquecimento em cartões</td><td></td></tr><tr><th scope=\"row\">10 min</th><td>Leitura do enunciado</td><td></td></tr><tr><th scope=\"row\">55 min</th><td>Texto de opinião (tema A ou B)</td><td>180 a 220</td></tr><tr><th scope=\"row\">15 min</th><td>Revisão e entrega</td><td></td></tr><tr><th scope=\"row\">90 min</th><td>Total</td><td>180 a 220</td></tr></tbody></table><p class=\"tf-nota\">Nos 10 minutos de leitura, lê os dois temas e o que o texto leva. Os textos<span class=\"tf-so-ecra\"> e os exemplos</span> são para consultares enquanto escreves.</p><p class=\"tf-nota\">Não contam para as palavras: os versos citados ou copiados e as duas linhas finais.</p>\n<p class=\"task-grelha\"><a href=\"grelha/\">Grelha /20: como é avaliado e autoavaliação</a></p>\n<p class=\"tf-nota tf-grelha-nota\">A autoavaliação da grelha é só para ti: não se entrega.</p>\n<p class=\"tf-imprimir\"><button type=\"button\" data-task-print hidden>Imprimir o enunciado</button></p>\n</header>\n<section class=\"task-section tf-tema\" id=\"tema\" data-task-card-name=\"Tema A ou B\" aria-labelledby=\"tema-titulo\"><h2 id=\"tema-titulo\">Escolhe um tema: A ou B</h2><p class=\"tf-meta\">Um só texto de opinião: 180 a 220 palavras.</p><p class=\"tf-p tf-topo\">Escreve a letra do teu tema (A ou B) no topo.</p>\n<p class=\"tf-nota tf-relogio-nota\" id=\"produzir\">Começa este relógio depois da leitura.</p><div class=\"task-relogio\" data-relogio data-max=\"55\" data-passo=\"5\" data-rotulo=\"Produção em papel\" data-chave=\"pt-relogio:tarefas/m7-u3:producao\"></div>\n<",
+     "occurrences": 1
+    },
+    {
+     "location": "Enunciado da M7-U3: ««Valeu a pena? Tudo vale a pena / Se a alma não é pequena.» Concordas quando são outras…»",
+     "old": "<p>«Valeu a pena? Tudo vale a pena / Se a alma não é pequena.» Concordas quando são outras pessoas a pagar o preço do sonho? Considera as mães, os filhos e as noivas da primeira estrofe.</p>",
+     "new": "<p class=\"tf-p\">«Valeu a pena? Tudo vale a pena / Se a alma não é pequena.» Concordas quando são outras pessoas a pagar o preço do sonho?</p><p class=\"tf-p tf-antes\">Os versos são o 7 e o 8 do <a href=\"#texto-1\">Texto 1</a> («Mar Português»), por baixo dos temas.</p><ol class=\"tf-passos tf-juntos\"><li>Considera as mães, os filhos e as noivas da primeira estrofe (versos 3 a 5).</li></ol>",
+     "occurrences": 1
+    },
+    {
+     "location": "Enunciado da M7-U3: «Esperar que alguém volte para resolver os problemas dá força a um país ou tira-lhe força…»",
+     "old": "<p>Esperar que alguém volte para resolver os problemas dá força a um país ou tira-lha? Usa o dossiê B. Se usares um facto, indica a data: 1578, 1933 ou 1934.</p></article></div>\n<h2 class=\"task-part\">2. Organiza o teu texto <small>para todos</small></h2><ol><li><strong>Defende a tua posição.</strong><br/>Começa por uma opinião com uma condição (S). Responde a quem discorda: aceita uma acusação e muda-lhe o sentido (R), ou admite uma dificuldade com «embora» (C). Acrescenta uma condição necessária (N), um contraste com «mas» (M) ou uma pergunta que leve a pensar (P). Conclui retomando a posição sem a copiar. Marca as letras na margem; a conclusão não leva letra.</li><li><strong>Apoia a opinião nos textos.</strong><br/>Cita um verso exato de <i>Mensagem</i>, entre «», indica o poema e explica o verso no seu contexto. Acrescenta um facto datado das lições, distinguindo-o da interpretação do poema, ou compara com Garrett (<i>Frei Luís de Sousa</i>) ou Reis. No tema B, o facto escolhido tem de ter data: 1578, 1933 ou 1934.</li></ol>\n</section><div class=\"task-relogio\" data-relogio data-max=\"60\" data-passo=\"5\" data-rotulo=\"Produção em papel\" data-chave=\"pt-relogio:tarefas/m7-u3:producao\"></div></header>\n<section class=\"task-section\" id=\"apoios\" aria-labelledby=\"preparacao\"><h2 id=\"preparacao\">Relembrar</h2><ul><li><a href=\"../../m7/licao-m7-f10/\">Argumentar com versos (F10): relê «Para entender» (os seis movimentos: S, N, R, M e P, com o verso de cada um; C, com a frase da F07) e «O essencial» (o plano do texto, ponto a ponto).</a></li><li><a href=\"../../m7/licao-m7-f08/\">Deus quer, o homem sonha, a obra nasce (F08): relê «O texto, 2 de 2» e «Mito e história».</a></li><li><a href=\"../../m7/licao-m7-f09/\">É a hora! (F09): relê «O texto, 1 de 3» e «Dois regressos».</a></li><li><a href=\"../../m7/licao-m7-f07/\">Como se soubesse a verdade (F07): relê «“Como se” e “porque”» (a causal) e o cartão da versão com «embora» (a concessiva).</a></li><li><a href=\"../../m7/licao-m7-f11/\">Quantas vozes cabem num homem (F11): relê os versos de Reis em «O texto», a «Árvore da frase» (uma causal) e o cartão que ordena uma defesa escrita, até «Objeção e resposta».</a></li></ul>\n<section class=\"task-examples\" aria-labelledby=\"exemplos\"><h3 id=\"exemplos\">Ver como se faz</h3><article class=\"task-example\"><h4>Descobre o movimento (resolvido)</h4><p>Em «Louco, sim, louco, porque quis grandeza» («D. Sebastião, Rei de Portugal», v. 1), o rei aceita a palavra de quem o acusa e muda-lhe o valor numa oração subordinada adverbial causal: a loucura passa a ser o nome de ter querido grandeza. É o movimento R. Não é uma concessiva, que seria com «embora», como ensina a lição F07.</p></article><article class=\"task-example\"><h4>O texto inteiro, noutro tema (resolvido)</h4><p class=\"task-example-text\"><i>Ensaiar só é perder tempo se o ensaio for sempre igual.</i> [S] <i>Dizem que quem ensaia muito fica artificial. Artificial, sim, artificial, porque escolheu cada pausa em vez de a deixar ao acaso.</i> [R] <i>Ensaiar custa uma tarde; mas é no ensaio que se descobre o que ainda não se sabe dizer.</i> [M] <i>Quem quer falar três minutos sem ler tem de ouvir a própria voz antes da turma.</i> [N] <i>Por isso, desde que cada ensaio mude alguma coisa, ensaiar é o caminho mais curto para falar sem ler.</i></p><p>O verso de <i>Mensagem</i> e o facto datado faltam de propósito: no teu texto, entram depois de [S] ou de [M], e o tema é o A ou o B.</p><p>R e C respondem a quem discorda (uma acusação, uma objeção); M pesa um custo contra um ganho. Por isso, na tarefa, R ou C é o movimento que dá razão ao outro lado, e M conta no segundo grupo.</p></article></section>\n<section class=\"task-dossier\" aria-labelledby=\"dossie\"><h3 id=\"dossie\">Dossiê do tema B</h3><ul><li>A 4 de agosto de 1578, D. Sebastião desaparece em Alcácer Quibir. <a class=\"task-fonte\" href=\"../../m7/licao-m7-f08/\">Lição «Deus quer, o homem sonha, a obra nasce», «Linha de vida»</a></li><li>Em 1578, o corpo do rei não foi reconhecido por todos. <a class=\"task-fonte\" href=\"../../m7/licao-m7-f09/\">Lição «É a hora!», «Abre»</a></li><li>Em 1578, com o desaparecimento do rei, nasce o sebastianismo, a crença de que voltaria. <a class=\"task-fonte\" href=\"../../m7/licao-m7-f08/\">Lição «Deus quer, o homem sonha, a obra nasce», «Linha de vida»</a></li><li>Em <i>Frei Luís de Sousa</i>, de Garrett, regressa D. João de Portugal, desaparecido em Alcácer Quibir, e o regresso destrói a família de Madalena. <a class=\"task-fonte\" href=\"../../m7/licao-m7-f09/\">Lição «É a hora!», «Dois regressos»</a></li><li>«D. Sebastião, Rei de Portugal» é de 20 de fevereiro de 1933; <i>Mensagem</i> sai em 1934. <a class=\"task-fonte\" href=\"../../m7/licao-m7-f08/\">Lição «Deus quer, o homem sonha, a obra nasce», «Linha de vida»</a></li></ul></section>\n",
+     "new": "<p class=\"tf-p\">Esperar que alguém volte para resolver os problemas dá força a um país ou tira-lhe força?</p><p class=\"tf-p tf-antes\">O poema «D. Sebastião, Rei de Portugal» é o <a href=\"#texto-2\">Texto 2</a>, por baixo dos temas.</p><ol class=\"tf-passos tf-juntos\"><li>Usa o <a href=\"#dossie\">dossiê</a> B.</li><li>Se usares um facto, indica a data: 1578, 1933 ou 1934.</li></ol><details class=\"tf-so-tema\"><summary>Só para o tema B: o dossiê</summary><div><section class=\"task-dossier tf-dossie tf-juntos\" aria-labelledby=\"dossie\"><h4 id=\"dossie\">Dossiê do tema B</h4><ol><li>A 4 de agosto de 1578, D. Sebastião desaparece em Alcácer Quibir.<span class=\"tf-origem\">Fonte: <a href=\"../../m7/licao-m7-f08/\">Lição «Deus quer, o homem sonha, a obra nasce», «Linha de vida»</a></span></li><li>Em 1578, o corpo do rei não foi reconhecido por todos.<span class=\"tf-origem\">Fonte: <a href=\"../../m7/licao-m7-f09/\">Lição «É a hora!», «Abre»</a></span></li><li>Em 1578, com o desaparecimento do rei, nasce o sebastianismo, a crença de que voltaria.<span class=\"tf-origem\">Fonte: <a href=\"../../m7/licao-m7-f08/\">Lição «Deus quer, o homem sonha, a obra nasce», «Linha de vida»</a></span></li><li>Em <i>Frei Luís de Sousa</i>, de Garrett, regressa D. João de Portugal, desaparecido em Alcácer Quibir, e o regresso destrói a família de Madalena.<span class=\"tf-origem\">Fonte: <a href=\"../../m7/licao-m7-f09/\">Lição «É a hora!», «Dois regressos»</a></span></li><li>«D. Sebastião, Rei de Portugal» é de 20 de fevereiro de 1933; <i>Mensagem</i> sai em 1934.<span class=\"tf-origem\">Fonte: <a href=\"../../m7/licao-m7-f08/\">Lição «Deus quer, o homem sonha, a obra nasce», «Linha de vida»</a></span></li></ol></section>\n</div></details></article></div><details class=\"tf-so-tema tf-dois-temas\"><summary>Para os dois temas: os Textos 1 e 2 (dois poemas de <i>Mensagem</i>)</summary><div><section class=\"tt-texto tt-curto\" id=\"texto-1\" aria-labelledby=\"texto-1-titulo\"><h3 id=\"texto-1-titulo\"><span class=\"tt-num\">Texto 1</span> «Mar Português», de Fernando Pessoa</h3>\n<div class=\"tt-versos\">\n<p class=\"tt-estrofe\"><span class=\"tt-v\"><span class=\"tt-n\"></span><span class=\"tt-l\">Ó mar salgado, quanto do teu sal</span></span>\n<span class=\"tt-v\"><span class=\"tt-n\"></span><span class=\"tt-l\">São lágrimas de Portugal!</span></span>\n<span class=\"tt-v\"><span class=\"tt-n\"></span><span class=\"tt-l\">Por te cruzarmos, quantas mães choraram,</span></span>\n<span class=\"tt-v\"><span class=\"tt-n\"></span><span class=\"tt-l\">Quantos filhos em vão rezaram!</span></span>\n<span class=\"tt-v\"><span class=\"tt-n\">5</span><span class=\"tt-l\">Quantas noivas ficaram por casar</span></span>\n<span class=\"tt-v\"><span class=\"tt-n\"></span><span class=\"tt-l\">Para que fosses nosso, ó mar!</span></span></p>\n<p class=\"tt-estrofe\"><span class=\"tt-v\"><span class=\"tt-n\"></span><span class=\"tt-l\">Valeu a pena? Tudo vale a pena</span></span>\n<span class=\"tt-v\"><span class=\"tt-n\"></span><span class=\"tt-l\">Se a alma não é pequena.</span></span>\n<span class=\"tt-v\"><span class=\"tt-n\"></span><span class=\"tt-l\">Quem quer passar além do Bojador</span></span>\n<span class=\"tt-v\"><span class=\"tt-n\">10</span><span class=\"tt-l\">Tem que passar além da dor.</span></span>\n<span class=\"tt-v\"><span class=\"tt-n\"></span><span class=\"tt-l\">Deus ao mar o perigo e o abismo deu,</span></span>\n<span class=\"tt-v\"><span class=\"tt-n\"></span><span class=\"tt-l\">Mas nele é que espelhou o céu.</span></span></p>\n</div>\n<div class=\"tt-gloss\"><p><b>Vocabulário</b></p><ul><li><b>Bojador</b>: o cabo que durante anos ninguém passou</li></ul></div><p class=\"tt-fonte\"><i>Mensagem</i>, II. «Mar Português», X; Arquivo Pessoa.</p></section>\n<section class=\"tt-texto tt-curto\" id=\"texto-2\" aria-labelledby=\"texto-2-titulo\"><h3 id=\"texto-2-titulo\"><span class=\"tt-num\">Texto 2</span> «D. Sebastião, Rei de Portugal», de Fernando Pessoa</h3>\n<div class=\"tt-versos\">\n<p class=\"tt-estrofe\"><span class=\"tt-v\"><span class=\"tt-n\"></span><span class=\"tt-l\">Louco, sim, louco, porque quis grandeza</span></span>\n<span class=\"tt-v\"><span class=\"tt-n\"></span><span class=\"tt-l\">Qual a Sorte a não dá.</span></span>\n<span class=\"tt-v\"><span class=\"tt-n\"></span><span class=\"tt-l\">Não coube em mim minha certeza;</span></span>\n<span class=\"tt-v\"><span class=\"tt-n\"></span><span class=\"tt-l\">Por isso onde o areal está</span></span>\n<span class=\"tt-v\"><span class=\"tt-n\">5</span><span class=\"tt-l\">Ficou meu ser que houve, não o que há.</span></span></p>\n<p class=\"tt-estrofe\"><span class=\"tt-v\"><span class=\"tt-n\"></span><span class=\"tt-l\">Minha loucura, outros que me a tomem</span></span>\n<span class=\"tt-v\"><span class=\"tt-n\"></span><span class=\"tt-l\">Com o que nela ia.</span></span>\n<span class=\"tt-v\"><span class=\"tt-n\"></span><span class=\"tt-l\">Sem a loucura que é o homem</span></span>\n<span class=\"tt-v\"><span class=\"tt-n\"></span><span class=\"tt-l\">Mais que a besta sadia,</span></span>\n<span class=\"tt-v\"><span class=\"tt-n\">10</span><span class=\"tt-l\">Cadáver adiado que procria?</span></span></p>\n</div>\n<div class=\"tt-gloss\"><p><b>Vocabulário</b></p><ul><li><b>areal</b>: o campo de batalha no Norte de África</li></ul></div><p class=\"tt-fonte\"><i>Mensagem</i> (20-2-1933); Arquivo Pessoa.</p></section>\n</div></details>\n</section>\n<section class=\"task-section tf-pergunta\" id=\"o-teu-texto\" data-task-card-name=\"O teu texto\" aria-labelledby=\"o-teu-texto-titulo\"><h2 id=\"o-teu-texto-titulo\">Escreve o texto de opinião.</h2>\n<p class=\"tf-meta\">180 a 220 palavras, sobre o tema A ou o tema B.</p>\n<div class=\"tf-pedido\"><h3>O que o texto leva</h3><p class=\"tf-p tf-grupo\">Defende a tua opinião:</p><ol class=\"tf-alineas\"><li>Começa por uma opinião com uma condição (S).</li><li>Responde a quem discorda: aceita uma acusação e muda-lhe o sentido (R), ou admite uma dificuldade com «embora» (C).</li><li>Acrescenta uma condição necessária (N), um contraste com «mas» (M) ou uma pergunta que leve a pensar (P).</li><li>Conclui retomando a opinião sem a copiar.</li><li>Marca as letras na margem; a conclusão não leva letra.</li></ol><p class=\"tf-p tf-grupo\">Apoia a opinião nos textos:</p><ol class=\"tf-alineas\" start=\"6\"><li>Cita um verso exato de <i>Mensagem</i>, entre «».</li><li>Indica o poema.</li><li>Explica o verso no seu contexto.</li><li>Acrescenta um facto datado das lições, distinguindo-o da interpretação do poema, ou compara com Garrett (<i>Frei Luís de Sousa</i>) ou Reis.</li></ol><p class=\"tf-p tf-grupo\">No fim do texto:</p><ol class=\"tf-alineas\" start=\"10\"><li>Escreve o total de palavras.</li></ol><p class=\"tf-ajuda\">Nas lições, a opinião que defendes chama-se «tese».</p><p class=\"tf-ajuda\">O herói do poema é um símbolo: o poema não conta a vida dele.</p><p class=\"tf-ajuda\">Se comparares com Garrett ou com Reis, diz o que isso muda na tua opinião.</p><p class=\"tf-ajuda\">No tema B, o facto escolhido tem de ter data: 1578, 1933 ou 1934.</p><p class=\"tf-citar\"><b>Como citar.</b> Copia as palavras exatas do verso. Põe-nas entre aspas: «…».</p></div>\n<details class=\"tf-so-tema tf-exemplos tf-so-ecra\"><summary>Ver três exemplos com outros casos</summary><div><aside class=\"tf-exemplo\"><h4>Um texto com outro tema: «Ensaiar vale a pena?»</h4><p class=\"tf-contexto\">As letras vão aqui entre parênteses retos; no teu texto, vão na margem. O verso e o facto não estão neste exemplo.</p><p class=\"tf-p\"><span class=\"tf-al\">Alínea a), [S]:</span> Ensaiar só é perder tempo se o ensaio for sempre igual.</p><p class=\"tf-p\"><span class=\"tf-al\">Alínea b), [R]:</span> Dizem que quem ensaia muito fica artificial. Artificial, sim, artificial, porque escolheu cada pausa em vez de a deixar ao acaso.</p><p class=\"tf-p\"><span class=\"tf-al\">Alínea c), [M] e [N]:</span> Ensaiar custa uma tarde; mas é no ensaio que se descobre o que ainda não se sabe dizer. Quem quer falar três minutos sem ler tem de ouvir a própria voz antes da turma.</p><p class=\"tf-p\"><span class=\"tf-al\">Alínea d), a conclusão, sem letra:</span> Por isso, desde que cada ensaio mude alguma coisa, ensaiar é o caminho mais curto para falar sem ler.</p></aside>\n<aside class=\"tf-exemplo\"><h4>Um verso de outro poema de <i>Mensagem</i>, «O Infante», no mesmo tema</h4><p class=\"tf-p\"><span class=\"tf-al\">Alíneas f), g) e h):</span> «Deus quer, o homem sonha, a obra nasce.» O Infante é aqui o homem que sonha, um símbolo e não uma biografia; a obra só nasce depois do sonho, e por isso ensaiar é o sonho que vem antes da obra, e não tempo perdido.</p></aside>\n<aside class=\"tf-exemplo\"><h4>Um facto e o sentido, com outro poema: a «Tabacaria», de Álvaro de Campos</h4><p class=\"tf-p\"><span class=\"tf-al\">Alínea i):</span> A «Tabacaria» tem a data de 15-1-1928, e isso confirma-se fora do poema; «Não sou nada.» é o que a voz diz, e não um dado da vida de quem escreve.</p></aside>\n</div></details>\n<details class=\"tf-so-tema tf-mais tf-so-ecra\"><summary>Ver os seis movimentos e as suas letras</summary><div><table class=\"tf-tabela\"><caption>Os seis movimentos, com outro tema («Ensaiar vale a pena?»)</caption><thead><tr><th scope=\"col\">Letra</th><th scope=\"col\">O que faz</th><th scope=\"col\">Exemplo com outro tema</th></tr></thead><tbody><tr><th scope=\"row\">S</th><td>opinião com uma condição</td><td>«Ensaiar só é perder tempo se o ensaio for sempre igual.»</td></tr><tr><th scope=\"row\">R</th><td>aceita uma acusação e muda-lhe o sentido, com «porque»</td><td>«Artificial, sim, artificial, porque escolheu cada pausa em vez de a deixar ao acaso.»</td></tr><tr><th scope=\"row\">C</th><td>admite uma dificuldade com «embora»</td><td>«Estou hoje vencido, embora não saiba a verdade.» (a frase da lição F07)</td></tr><tr><th scope=\"row\">N</th><td>condição necessária</td><td>«Quem quer falar três minutos sem ler tem de ouvir a própria voz antes da turma.»</td></tr><tr><th scope=\"row\">M</th><td>contraste com «mas»</td><td>«Ensaiar custa uma tarde; mas é no ensaio que se descobre o que ainda não se sabe dizer.»</td></tr><tr><th scope=\"row\">P</th><td>pergunta que leve a pensar</td><td>Não precisa de conector: é a pergunta.</td></tr></tbody></table><p class=\"tf-p\">R e C respondem a quem discorda. M pesa um custo contra um ganho: não serve para responder a quem discorda.</p></div></details>\n</section>\n<section class=\"task-section\" id=\"entregar\" data-task-card-name=\"Fechar e entregar\" aria-labelledby=\"entregar-title\"><h2 id=\"finais-titulo\">Duas linhas finais</h2><p class=\"tf-p\">Ficam fora da contagem.</p><ol class=\"tf-passos\"><li>Responde: que movimento vais voltar a usar, e onde?</li><li>Aponta o verso ou a frase que te ensinou esse movimento.</li></ol>\n<h2 id=\"entregar-title\">Antes de entregar, verifica</h2><p class=\"tf-p\" id=\"criterios\">Responde sim ou não. Se for não, completa o teu trabalho.</p>\n<fieldset class=\"task-checklist\" aria-labelledby=\"entregar-title\"><label><input type=\"checkbox\"> <span>A primeira frase tem a minha opinião com uma condição (S)?</span></label><label><input type=\"checkbox\"> <span>Respondi a quem discorda, com R ou C?</span></label><label><input type=\"checkbox\"> <span>Usei mais um movimento: N, M ou P?</span></label><label><input type=\"checkbox\"> <span>A conclusão retoma a opinião sem a copiar?</span></label><label><input type=\"checkbox\"> <span>As letras estão na margem?</span></label><label><input type=\"checkbox\"> <span>Citei um verso exato de <i>Mensagem</i>, entre «», e indiquei o poema?</span></label><label><input type=\"checkbox\"> <span>Expliquei o verso no seu contexto?</span></label><label><input type=\"checkbox\"> <span>Tenho um facto datado, distinto da interpretação do poema, ou uma comparação com Garrett ou Reis?</span></label><label><input type=\"checkbox\"> <span>Tenho 180 a 220 palavras, com o total no fim, e revi a escrita?</span></label><label><input type=\"checkbox\"> <span>A letra do meu tema (A ou B) está no topo?</span></label></fieldset>\n<h2>Entrega no Teams</h2><ol class=\"tf-passos\"><li>Fotografa o texto e as duas linhas finais.</li><li>Confirma que as fotografias mostram o trabalho completo.</li><li>Entrega as fotografias na tarefa do Teams.</li></ol></section>\n<section class=\"task-section tf-rever\" id=\"apoios\" data-task-card-name=\"Rever a matéria\" aria-labelledby=\"preparacao\"><h2 id=\"preparacao\">Se precisares de rever</h2><p class=\"tf-p\">Os dois poemas já estão nesta página. As lições servem para rever a matéria.</p><ul class=\"tf-rever-lista\"><li><b>O teu texto.</b> Lição F10, <a href=\"../../m7/licao-m7-f10/\">Argumentar com versos</a>. Relê «Para entender» (os seis movimentos) e «O essencial» (o plano do texto, ponto a ponto).</li><li><b>Tema A.</b> Lição F08, <a href=\"../../m7/licao-m7-f08/\">Deus quer, o homem sonha, a obra nasce</a>. Relê «Em paralelo»: mito e história.</li><li><b>Tema B.</b> Lição F09, <a href=\"../../m7/licao-m7-f09/\">É a hora!</a> Relê «Em paralelo»: dois regressos.</li><li><b>Movimento C.</b> Lição F07, <a href=\"../../m7/licao-m7-f07/\">Como se soubesse a verdade</a>. Relê a versão com «embora» (a concessiva).</li><li><b>Comparar com Reis.</b> Lição F11, <a href=\"../../m7/licao-m7-f11/\">Quantas vozes cabem num homem</a>. Relê os versos de Reis em «O texto».</li></ul>\n",
+     "occurrences": 1
+    },
+    {
+     "location": "Enunciado da M7-U3: «tem uma opinião com condição»",
+     "old": " tem uma tese com condição ",
+     "new": " tem uma opinião com condição ",
+     "occurrences": 1
+    },
+    {
+     "location": "Enunciado da M7-U3: «a opinião é»",
+     "old": " a tese é ",
+     "new": " a opinião é ",
+     "occurrences": 1
+    },
+    {
+     "location": "Enunciado da M7-U3: «a opinião diz»",
+     "old": " a tese diz ",
+     "new": " a opinião diz ",
+     "occurrences": 1
+    },
+    {
+     "location": "Enunciado da M7-U3: «opinião,»",
+     "old": " tese, ",
+     "new": " opinião, ",
+     "occurrences": 1
+    },
+    {
+     "location": "Enunciado da M7-U3: «document.querySelectorAll(\"[data-task-print]\").forEach(function(b){b.hidden=false;b.oncl…»",
+     "old": "<section class=\"task-section\" id=\"entregar\" aria-labelledby=\"entregar-title\"><h2 id=\"entregar-title\">3. Revê e entrega</h2>\n<h3>Fecha o trabalho</h3><p>Fecha com duas linhas, fora da contagem: que movimento vais voltar a usar, e onde? Aponta o verso ou a frase que to ensinou.</p>\n<h3 id=\"criterios\">Antes de entregar, verifica</h3><ul class=\"task-criteria\"><li>Tese com condição na primeira frase e conclusão que volta a ela; movimentos marcados na margem, que fazem avançar o argumento.</li><li>Verso de <i>Mensagem</i> exato, com o poema indicado e explicado; facto datado separado do sentido, ou outra voz.</li><li>180 a 220 palavras, conectores certos, texto revisto e as duas linhas.</li></ul>\n<p class=\"task-grelha\"><a href=\"grelha/\">Grelha /20: como é avaliado e autoavaliação</a></p>\n<h3>Entrega no Teams</h3><p>Escreve o tema escolhido (A ou B) no topo. Fotografa o texto e as duas linhas finais. Confirma que as fotografias mostram o trabalho completo e entrega-as na tarefa do Teams.</p></section>\n</main>",
+     "new": "</main>\n<script>document.querySelectorAll(\"[data-task-print]\").forEach(function(b){b.hidden=false;b.onclick=function(){window.print()}})</script>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "tarefas/m7-u3/grelha/index.html": {
+   "base_sha256_lf": "53160c80861056fafd3b9d7df59741f9a7d2bdd0f9a86c518ae9fd3303bec607",
+   "after_sha256_lf": "916ba4aba05a3d8bca0f579d1e7467225fa9a7e63fd27189ee010ed5eb8fddbc",
+   "edits": [
+    {
+     "location": "Grelha do aluno da M7-U3: «Opinião e»",
+     "old": "\">Tese e ",
+     "new": "\">Opinião e ",
+     "occurrences": 1
+    },
+    {
+     "location": "Grelha do aluno da M7-U3: «ou comparação»",
+     "old": " ou outra voz</a>",
+     "new": " ou comparação</a>",
+     "occurrences": 1
+    },
+    {
+     "location": "Grelha do aluno da M7-U3: «Opinião e conclusão máx. 3 0 sem evidência Não há opinião,»",
+     "old": ">Tese e conclusão</span><span class=\"max\">máx. 3</span></h2><dl class=\"g-niveis\"><div><dt>0<small>sem evidência</small></dt><dd><p>Não há tese, ",
+     "new": ">Opinião e conclusão</span><span class=\"max\">máx. 3</span></h2><dl class=\"g-niveis\"><div><dt>0<small>sem evidência</small></dt><dd><p>Não há opinião, ",
+     "occurrences": 1
+    },
+    {
+     "location": "Grelha do aluno da M7-U3: «opinião, mas sem condição, ou a conclusão copia a opinião palavra a palavra. Exemplo Opi…»",
+     "old": " tese, mas sem condição, ou a conclusão copia a tese palavra a palavra.</p><p class=\"ex\"><b>Exemplo</b>Tese: ",
+     "new": " opinião, mas sem condição, ou a conclusão copia a opinião palavra a palavra.</p><p class=\"ex\"><b>Exemplo</b>Opinião: ",
+     "occurrences": 1
+    },
+    {
+     "location": "Grelha do aluno da M7-U3: «opinião com uma condição, e a conclusão volta a ela com outras palavras. Exemplo Opinião:»",
+     "old": " tese com uma condição, e a conclusão volta a ela com outras palavras.</p><p class=\"ex\"><b>Exemplo</b>Tese: ",
+     "new": " opinião com uma condição, e a conclusão volta a ela com outras palavras.</p><p class=\"ex\"><b>Exemplo</b>Opinião: ",
+     "occurrences": 1
+    },
+    {
+     "location": "Grelha do aluno da M7-U3: «Uma opinião com»",
+     "old": ">Uma tese com ",
+     "new": ">Uma opinião com ",
+     "occurrences": 1
+    },
+    {
+     "location": "Grelha do aluno da M7-U3: «à opinião, com»",
+     "old": " à tese, com ",
+     "new": " à opinião, com ",
+     "occurrences": 1
+    },
+    {
+     "location": "Grelha do aluno da M7-U3: «comparação máx. 4 0 sem evidência Não há facto datado nem comparação,»",
+     "old": " outra voz</span><span class=\"max\">máx. 4</span></h2><dl class=\"g-niveis\"><div><dt>0<small>sem evidência</small></dt><dd><p>Não há facto datado nem outra voz, ",
+     "new": " comparação</span><span class=\"max\">máx. 4</span></h2><dl class=\"g-niveis\"><div><dt>0<small>sem evidência</small></dt><dd><p>Não há facto datado nem comparação, ",
+     "occurrences": 1
+    },
+    {
+     "location": "Grelha do aluno da M7-U3: «uma comparação, mas o facto mistura-se com o sentido do poema, ou a comparação não se li…»",
+     "old": " outra voz, mas o facto mistura-se com o sentido do poema, ou a voz não se liga à tese.<",
+     "new": " uma comparação, mas o facto mistura-se com o sentido do poema, ou a comparação não se liga à opinião.<",
+     "occurrences": 1
+    },
+    {
+     "location": "Grelha do aluno da M7-U3: «a comparação com Garrett ou com Reis, ligada à opinião.»",
+     "old": " o confronto com Garrett ou com Reis, ligado à tese.<",
+     "new": " a comparação com Garrett ou com Reis, ligada à opinião.<",
+     "occurrences": 1
+    },
+    {
+     "location": "Grelha do aluno da M7-U3: «opinião:»",
+     "old": " tese: ",
+     "new": " opinião: ",
+     "occurrences": 1
+    },
+    {
+     "location": "Grelha do aluno da M7-U3: «tua opinião.»",
+     "old": " tua tese.</li>",
+     "new": " tua opinião.</li>",
+     "occurrences": 1
+    },
+    {
+     "location": "Grelha do aluno da M7-U3: «nem duas linhas finais.»",
+     "old": " nem fecho.</p>",
+     "new": " nem duas linhas finais.</p>",
+     "occurrences": 1
+    },
+    {
+     "location": "Grelha do aluno da M7-U3: «Duas linhas finais: «Aprendi»",
+     "old": "</b>Fecho: «Aprendi ",
+     "new": "</b>Duas linhas finais: «Aprendi ",
+     "occurrences": 1
+    },
+    {
+     "location": "Grelha do aluno da M7-U3: «te ensinou esse movimento. Exemplo Duas linhas finais:»",
+     "old": " to ensinou.</p><p class=\"ex\"><b>Exemplo</b>Fecho: ",
+     "new": " te ensinou esse movimento.</p><p class=\"ex\"><b>Exemplo</b>Duas linhas finais: ",
+     "occurrences": 1
+    },
+    {
+     "location": "Grelha do aluno da M7-U3: «Duas linhas finais genéricas,»",
+     "old": ">Fecho genérico, ",
+     "new": ">Duas linhas finais genéricas, ",
+     "occurrences": 1
+    },
+    {
+     "location": "Grelha do aluno da M7-U3: «Esta autoavaliação é só para ti: não se entrega.»",
+     "old": " Entrega esta autoavaliação com as fotografias. O docente põe a nota dele ao lado da tua e comenta a diferença.<",
+     "new": " Esta autoavaliação é só para ti: não se entrega.<",
+     "occurrences": 1
+    },
+    {
+     "location": "Grelha do aluno da M7-U3: «Opinião e»",
+     "old": "<td>Tese e ",
+     "new": "<td>Opinião e ",
+     "occurrences": 1
+    },
+    {
+     "location": "Grelha do aluno da M7-U3: «ou comparação»",
+     "old": " ou outra voz</td>",
+     "new": " ou comparação</td>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "tarefas/m7-u3/aquecimento/index.html": {
+   "base_sha256_lf": "b8e63900e2b1ee7b983386ba5ab3f0727e0a1a302c915efa4eca76d28a4cb1fe",
+   "after_sha256_lf": "88d923b24f320ed13e656d064250ab2235762acc7bb081a17624dd1049e6214a",
+   "edits": [
+    {
+     "location": "Aquecimento da M7-U3: «Concordas quando são outras pessoas a pagar o preço do sonho? Considera as mães, os filh…»",
+     "old": " Concordas, quando o preço de um sonho grande é pago por outros, como as mães, os filhos e as noivas da primeira estrofe?<\\/p><p><b>Tema B.<\\/b> Por quem, ou pelo quê, ainda esperamos? Esperar que alguém volte e resolva dá força a um país ou tira-lha?<",
+     "new": " Concordas quando são outras pessoas a pagar o preço do sonho? Considera as mães, os filhos e as noivas da primeira estrofe.<\\/p><p><b>Tema B.<\\/b> Por quem, ou pelo quê, ainda esperamos? Esperar que alguém volte para resolver os problemas dá força a um país ou tira-lhe força?<",
+     "occurrences": 1
+    },
+    {
+     "location": "Aquecimento da M7-U3: «\"S, opinião com»",
+     "old": "\"S, tese com ",
+     "new": "\"S, opinião com ",
+     "occurrences": 1
+    },
+    {
+     "location": "Aquecimento da M7-U3: «opinião?\", \"p2\": \"Completa a opinião»",
+     "old": " tese?\", \"p2\": \"Completa a tese ",
+     "new": " opinião?\", \"p2\": \"Completa a opinião ",
+     "occurrences": 1
+    },
+    {
+     "location": "Aquecimento da M7-U3: «a opinião vale.»",
+     "old": " a tese vale. ",
+     "new": " a opinião vale. ",
+     "occurrences": 1
+    },
+    {
+     "location": "Aquecimento da M7-U3: «opinião.\"»",
+     "old": " tese.\"",
+     "new": " opinião.\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Aquecimento da M7-U3: «opinião com condição.\", \"Depois da conclusão, o texto acaba a dar razão ao outro lado; a…»",
+     "old": " tese com condição.\", \"Depois da conclusão, o texto acaba a dar razão ao outro lado; a conclusão volta à tese, ",
+     "new": " opinião com condição.\", \"Depois da conclusão, o texto acaba a dar razão ao outro lado; a conclusão volta à opinião, ",
+     "occurrences": 1
+    },
+    {
+     "location": "Aquecimento da M7-U3: «a comparação com Garrett ou com Reis começa por aqui: dizer de onde vem cada passagem.\"»",
+     "old": " o confronto com outra voz começa por aqui: dizer de onde vem cada uma.\"",
+     "new": " a comparação com Garrett ou com Reis começa por aqui: dizer de onde vem cada passagem.\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Aquecimento da M7-U3: «opinião com uma condição\", \"Escolhes o verso de _Mensagem_ e o facto, ou a comparação, q…»",
+     "old": " tese com uma condição\", \"Escolhes o verso de _Mensagem_ e o facto, ou a outra voz, que servem essa tese\", \"Escreves o texto, com os movimentos e a conclusão que volta à tese\"",
+     "new": " opinião com uma condição\", \"Escolhes o verso de _Mensagem_ e o facto, ou a comparação, que servem essa opinião\", \"Escreves o texto, com os movimentos e a conclusão que volta à opinião\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Aquecimento da M7-U3: «opinião, o texto junta tudo, as letras e a contagem fazem-se no texto escrito, e as duas…»",
+     "old": " tese, o texto junta tudo, as letras e a contagem fazem-se no texto escrito, e as duas linhas fecham.\", \"fe\": \"Não escolhes o verso sem saber a tese ",
+     "new": " opinião, o texto junta tudo, as letras e a contagem fazem-se no texto escrito, e as duas linhas fecham.\", \"fe\": \"Não escolhes o verso sem saber a opinião ",
+     "occurrences": 1
+    },
+    {
+     "location": "Aquecimento da M7-U3: «tema: a opinião com condição»",
+     "old": " tema: a tese com condição ",
+     "new": " tema: a opinião com condição ",
+     "occurrences": 1
+    },
+    {
+     "location": "Aquecimento da M7-U3: «uma comparação, a conclusão que volta à opinião,»",
+     "old": " outra voz, a conclusão que volta à tese, ",
+     "new": " uma comparação, a conclusão que volta à opinião, ",
+     "occurrences": 1
+    }
+   ]
+  },
+  "tarefas/m7-u3/correcao/index.html": {
+   "base_sha256_lf": "ce305ae66723f87bee89a3cd34e1c4ea61eaf073308b4476c58a2e31bd8e825b",
+   "after_sha256_lf": "3c1e2b0409c91d099e415525c032edd509801a8db9bff47b37d99e2d1ef82fcc",
+   "edits": [
+    {
+     "location": "Versão de correção da M7-U3: «Docente Observações Opinião e conclusão A primeira frase tem a opinião com uma condição,…»",
+     "old": ">Aluno</th><th class=\"n\">Docente</th><th>Observações</th></tr></thead><tbody><tr><td>Tese e conclusão<br><small>A primeira frase tem a tese com uma condição, e a conclusão volta a ela com outras palavras.</small></td><td class=\"n\">3</td><td><",
+     "new": ">Docente</th><th style=\"overflow-wrap:anywhere\">Observações</th></tr></thead><tbody><tr><td>Opinião e conclusão<br><small>A primeira frase tem a opinião com uma condição, e a conclusão volta a ela com outras palavras.</small></td><td class=\"n\">3<",
+     "occurrences": 1
+    },
+    {
+     "location": "Versão de correção da M7-U3: «Verso de Mensagem Um verso exato, entre «», com o poema indicado, explicado no contexto…»",
+     "old": "><td></td></tr><tr><td>Verso de <i>Mensagem</i><br><small>Um verso exato, entre «», com o poema indicado, explicado no contexto e ligado à tese, com o herói lido como símbolo.</small></td><td class=\"n\">5</td><td></td><td></td><td></td></tr><tr><td>Facto ou outra voz<br><small>Um facto datado das lições, separado do sentido que o poema lhe dá, ou o confronto com Garrett ou com Reis, ligado à tese.</small></td><td class=\"n\">4</td><td><",
+     "new": "></tr><tr><td>Verso de <i>Mensagem</i><br><small>Um verso exato, entre «», com o poema indicado, explicado no contexto e ligado à opinião, com o herói lido como símbolo.</small></td><td class=\"n\">5</td><td></td><td></td></tr><tr><td>Facto ou comparação<br><small>Um facto datado das lições, separado do sentido que o poema lhe dá, ou a comparação com Garrett ou com Reis, ligada à opinião.</small></td><td class=\"n\">4<",
+     "occurrences": 1
+    },
+    {
+     "location": "Versão de correção da M7-U3: «te ensinou esse movimento. 3 Total 20»",
+     "old": " to ensinou.</small></td><td class=\"n\">3</td><td></td><td></td><td></td></tr><tr class=\"total\"><th>Total</th><td class=\"n\">20</td><td><",
+     "new": " te ensinou esse movimento.</small></td><td class=\"n\">3</td><td></td><td></td></tr><tr class=\"total\"><th>Total</th><td class=\"n\">20<",
+     "occurrences": 1
+    },
+    {
+     "location": "Versão de correção da M7-U3: «»",
+     "old": "></div></div><p class=\"custa\"><b>Diferença entre a tua nota e a minha</b></p><p>Onde nos afastámos mais de um ponto, a razão está nas observações.</p><footer>",
+     "new": "></div></div><footer>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m7/guia-da-tarefa-m7/index.html": {
+   "base_sha256_lf": "7350cfeb8eabc404b5d69d675516b7c4cbd357c7243cea44396e70587348d533",
+   "after_sha256_lf": "6789e4936a9e294c870443e0fe6cb67581c7b94efc2b5683e2c01a28c4fb89f6",
+   "edits": [
+    {
+     "location": "Guia da tarefa do M7: «10:00»",
+     "old": ">15:00<",
+     "new": ">10:00<",
+     "occurrences": 1
+    },
+    {
+     "location": "Guia da tarefa do M7: «Quatro blocos de tempo com relógio. No fim, verificas o trabalho com a lista da rubrica»",
+     "old": ">Três blocos de tempo com relógio. No fim, verificas o trabalho com a lista da rubrica, dás-te um nível em cada parâmetro ",
+     "new": ">Quatro blocos de tempo com relógio. No fim, verificas o trabalho com a lista da rubrica ",
+     "occurrences": 1
+    },
+    {
+     "location": "Guia da tarefa do M7: «Dois antes de mim. Antes de chamares o docente: relê o enunciado; vê a rubrica.»",
+     "old": ">Três antes de mim.</b> Antes de chamares o docente:<ol><li>relê o enunciado;</li><li>vê a rubrica;</li><li>pergunta ao teu par de trabalho.<",
+     "new": ">Dois antes de mim.</b> Antes de chamares o docente:<ol><li>relê o enunciado;</li><li>vê a rubrica.<",
+     "occurrences": 1
+    },
+    {
+     "location": "Guia da tarefa do M7: «10 min Os cartões do aquecimento;»",
+     "old": " 15 min</b><span>Os cartões do aquecimento e a leitura da tarefa; ",
+     "new": " 10 min</b><span>Os cartões do aquecimento; ",
+     "occurrences": 1
+    },
+    {
+     "location": "Guia da tarefa do M7: «Ler o enunciado, 10 min Lê a tarefa toda antes de escreveres. Começar 3 Produzir, 55 min…»",
+     "old": ">Produzir, 60 min</b><span>Trabalho a sério, com o relógio da tarefa. Se encravares, regra dos três antes de mim.</span></div><button class=\"btn sec\" data-ir=\"1\">Começar</button></div><div class=\"bloco\" data-i=\"2\"><div class=\"n\">3</div><div class=\"t\"><b>Rever, apresentar e entregar, 15 min</b><span>Lista da rubrica, regra do original, autoavaliação, duas linhas e fotografias no Teams; na unidade 2, a apresentação individual.</span></div><button class=\"btn sec\" data-ir=\"2\"",
+     "new": ">Ler o enunciado, 10 min</b><span>Lê a tarefa toda antes de escreveres.</span></div><button class=\"btn sec\" data-ir=\"1\">Começar</button></div><div class=\"bloco\" data-i=\"2\"><div class=\"n\">3</div><div class=\"t\"><b>Produzir, 55 min</b><span>Trabalho a sério, com o relógio da tarefa. Se encravares, regra dos dois antes de mim.</span></div><button class=\"btn sec\" data-ir=\"2\">Começar</button></div><div class=\"bloco\" data-i=\"3\"><div class=\"n\">4</div><div class=\"t\"><b>Rever, apresentar e entregar, 15 min</b><span>Lista da rubrica, regra do original, duas linhas e fotografias no Teams; na unidade 2, a apresentação individual.</span></div><button class=\"btn sec\" data-ir=\"3\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Guia da tarefa do M7: «»",
+     "old": "</ul>\n<h2>Autoavaliação</h2>\n<p class=\"pequeno\">Em cada parâmetro, toca no nível que achas que tens. O 4 é o melhor. Escreve uma linha a dizer porquê.</p>\n<div id=\"r-auto\"></div>\n<div class=\"",
+     "new": "</ul>\n<div class=\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Guia da tarefa do M7: «notas e a lista. (function(){ var M=\"M7\",BLOCOS=[[10,\"Aquecer\",\"Os cartões do aqueciment…»",
+     "old": " notas, a lista e a autoavaliação.</p>\n</section>\n</main>\n<div id=\"aviso\" role=\"status\"></div>\n<script>\n(function(){\nvar M=\"M7\",BLOCOS=[[15,\"Aquecer\",\"Os cartões do aquecimento e a leitura da tarefa; na tarefa extra, relê o poema de partida.\"],[60,\"Produzir\",\"Trabalho a sério, com o relógio da tarefa. Se encravares, regra dos três antes de mim.\"],[15,\"Rever, apresentar e entregar\",\"Lista da rubrica, regra do original, autoavaliação, duas ",
+     "new": " notas e a lista.</p>\n</section>\n</main>\n<div id=\"aviso\" role=\"status\"></div>\n<script>\n(function(){\nvar M=\"M7\",BLOCOS=[[10,\"Aquecer\",\"Os cartões do aquecimento; na tarefa extra, relê o poema de partida.\"],[10,\"Ler o enunciado\",\"Lê a tarefa toda antes de escreveres.\"],[55,\"Produzir\",\"Trabalho a sério, com o relógio da tarefa. Se encravares, regra dos dois antes de mim.\"],[15,\"Rever, apresentar e entregar\",\"Lista da rubrica, regra do original, duas ",
+     "occurrences": 1
+    },
+    {
+     "location": "Guia da tarefa do M7: «opinião com uma condição na primeira frase.\",\"Escreve o texto de opinião com os moviment…»",
+     "old": " tese com uma condição na primeira frase.\",\"Escreve o texto de opinião com os movimentos dos versos, um verso exato explicado e um facto datado ou outra voz; marca as letras na margem.\",\"Revê, conta as palavras e escreve as duas linhas finais.\"],\"entrega\":\"Fotografias legíveis do texto, com o ",
+     "new": " opinião com uma condição na primeira frase.\",\"Escreve o texto de opinião com os movimentos dos versos, um verso exato explicado e um facto datado ou uma comparação; marca as letras na margem.\",\"Revê, conta as palavras e escreve as duas linhas finais.\"],\"entrega\":\"Fotografias legíveis do texto, com a letra do ",
+     "occurrences": 1
+    },
+    {
+     "location": "Guia da tarefa do M7: «\":[\"Opinião com»",
+     "old": "\":[\"Tese com ",
+     "new": "\":[\"Opinião com ",
+     "occurrences": 1
+    },
+    {
+     "location": "Guia da tarefa do M7: «uma comparação.\"»",
+     "old": " outra voz.\"",
+     "new": " uma comparação.\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Guia da tarefa do M7: «\"Opinião com condição, um movimento que vira a acusação (R) e mais dois, conclusão que v…»",
+     "old": "\"Tese com condição, um movimento que vira a acusação (R) e mais dois, conclusão que volta à tese. ",
+     "new": "\"Opinião com condição, um movimento que vira a acusação (R) e mais dois, conclusão que volta à opinião. ",
+     "occurrences": 1
+    },
+    {
+     "location": "Guia da tarefa do M7: «opinião não tem condição, nenhum movimento vira o outro lado, não há verso nem facto, e…»",
+     "old": " tese não tem condição, nenhum movimento vira o outro lado, não há verso nem facto, e a conclusão copia a tese.\"},\"rubrica\":[{\"nome\":\"Tese e conclusão\",\"niveis\":[\"tese com condição na primeira frase; conclusão que volta à tese sem a copiar\",\"tese com condição; a conclusão copia-a\",\"tese sem condição\",\"sem tese\"",
+     "new": " opinião não tem condição, nenhum movimento vira o outro lado, não há verso nem facto, e a conclusão copia a opinião.\"},\"rubrica\":[{\"nome\":\"Opinião e conclusão\",\"niveis\":[\"opinião com condição na primeira frase; conclusão que volta à opinião sem a copiar\",\"opinião com condição; a conclusão copia-a\",\"opinião sem condição\",\"sem opinião\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Guia da tarefa do M7: «comparação\",\"niveis\":[\"facto datado das lições separado do sentido do poema, ou comparaç…»",
+     "old": " outra voz\",\"niveis\":[\"facto datado das lições separado do sentido do poema, ou confronto com Garrett ou Reis, ligado à tese\",\"facto ou voz sem ligação à tese\",\"facto misturado com o sentido do poema\",\"sem facto nem outra voz, ",
+     "new": " comparação\",\"niveis\":[\"facto datado das lições separado do sentido do poema, ou comparação com Garrett ou Reis, ligada à opinião\",\"facto ou comparação sem ligação à opinião\",\"facto misturado com o sentido do poema\",\"sem facto nem comparação, ",
+     "occurrences": 1
+    },
+    {
+     "location": "Guia da tarefa do M7: «'}).join(\"\"); $(\"#escolha\").hidden=true;$(\"#rota\").hidden=false;window.scrollTo(0,0)} fu…»",
+     "old": "</li>'}).join(\"\");\n  $(\"#r-auto\").innerHTML=atual.rubrica.map(function(p,i){var a=D.auto[i]||{};return '<p style=\"margin:10px 0 4px\"><b>'+it(p.nome)+'</b> <span class=\"pequeno\">('+p.pontos[0]+' pontos no nível 4)</span></p><div class=\"niveis\" data-p=\"'+i+'\">'+[4,3,2,1].map(function(n){return '<button aria-pressed=\"'+(a.n===n?\"true\":\"false\")+'\" data-n=\"'+n+'\">'+n+'</button>'}).join(\"\")+'</div><textarea data-auto=\"'+i+'\" placeholder=\"Porquê, numa linha.\" style=\"min-height:56px\">'+esc(a.j||\"\")+'</textarea>'}).join(\"\");\n  $(\"#escolha\").hidden=true;$(\"#rota\").hidden=false;window.scrollTo(0,0)}\nfunction esc(s){return ",
+     "new": "</li>'}).join(\"\");\n  $(\"#escolha\").hidden=true;$(\"#rota\").hidden=false;window.scrollTo(0,0)}\nfunction esc(s){return ",
+     "occurrences": 1
+    },
+    {
+     "location": "Guia da tarefa do M7: «t=ev.target;if(!atual)return;if(t.dataset.k){d().campos[t.dataset.k]=t.value;guardar()}});»",
+     "old": " t=ev.target;if(!atual)return;if(t.dataset.k){d().campos[t.dataset.k]=t.value;guardar()}if(t.dataset.auto!=null){var a=d().auto;a[t.dataset.auto]=a[t.dataset.auto]||{};a[t.dataset.auto].j=t.value;guardar()}});\n",
+     "new": " t=ev.target;if(!atual)return;if(t.dataset.k){d().campos[t.dataset.k]=t.value;guardar()}});\n",
+     "occurrences": 1
+    },
+    {
+     "location": "Guia da tarefa do M7: «=0});guardar()}}); function texto(){var»",
+     "old": ">=0});guardar()}});\ndocument.addEventListener(\"click\",function(ev){var b=ev.target.closest(\".niveis button\");if(!b||!atual)return;var p=b.parentNode.dataset.p;b.parentNode.querySelectorAll(\"button\").forEach(function(x){x.setAttribute(\"aria-pressed\",\"false\")});b.setAttribute(\"aria-pressed\",\"true\");var a=d().auto;a[p]=a[p]||{};a[p].n=Number(b.dataset.n);guardar()});\nfunction texto(){var ",
+     "new": ">=0});guardar()}});\nfunction texto(){var ",
+     "occurrences": 1
+    },
+    {
+     "location": "Guia da tarefa do M7: «\")+sem(p.nome))});return»",
+     "old": "\")+sem(p.nome))});l.push(\"\",\"AUTOAVALIAÇÃO\");\n  atual.rubrica.forEach(function(p,i){var a=D.auto[i]||{};l.push(sem(p.nome)+\": nível \"+(a.n||\"-\")+(a.j?\" · \"+a.j:\"\"))});return ",
+     "new": "\")+sem(p.nome))});return ",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m7/portefolio-do-modulo-m7/index.html": {
+   "base_sha256_lf": "3e5f6ab3ee25073bb0634838c5ac1a2e1aa1c55f1e51aa056173be3e6a947bc4",
+   "after_sha256_lf": "2066a17cb76f80d9b969625ca35957aedf6ac1b28bd57355c633943eaf8cd9e1",
+   "edits": [
+    {
+     "location": "Portefólio do módulo M7: «responsabilidade, pensamento crítico,»",
+     "old": " responsabilidade, trabalho de equipa, pensamento crítico, ",
+     "new": " responsabilidade, pensamento crítico, ",
+     "occurrences": 1
+    }
+   ]
+  }
+ }
+}

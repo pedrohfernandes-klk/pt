@@ -7,6 +7,10 @@ import sys
 
 ROOT=Path(__file__).resolve().parents[1]
 LAYERS=[
+ # 13/11/2026: as três tarefas do M7 «mais fáceis de fazer» e «tudo junto» no M7 (os enunciados da m7-u1, da m7-u2 e da m7-u3, a
+ # grelha, a correção e os aquecimentos, os seus dados, e o guia e o portefólio do M7), camada mais recente, por cima das tarefas do
+ # M6 mais fáceis de fazer (que passa a ser a segunda), com a qual partilha os dados das grelhas.
+ ('tarefas_faceis_m7_20261113','tarefas-faceis-m7-edits-20261113'),
  # 13/11/2026: as duas tarefas do M6 «mais fáceis de fazer» e «tudo junto» no M6 (os enunciados, as grelhas, as correções e os
  # aquecimentos da m6-u1 e da m6-u2, os seus dados, e o guia, o índice, o mapa e o portefólio do M6), camada mais recente, por cima
  # das tarefas do M5 mais fáceis de fazer (que passa a ser a segunda), com a qual partilha os dados das grelhas.

@@ -278,6 +278,21 @@
   "m7-u3": {
    "modulo": "M7",
    "unidade": 3,
+   "autoavaliacao_so_tua": true,
+   "correcao_estreita": true,
+   "trocas_aluno": [
+    ["Tese", "Opinião"],
+    ["tese", "opinião"],
+    ["Facto ou outra voz", "Facto ou comparação"],
+    ["nem outra voz", "nem comparação"],
+    ["facto datado ou outra voz", "facto datado ou uma comparação"],
+    ["ou a voz não se liga", "ou a comparação não se liga"],
+    ["o confronto com Garrett ou com Reis, ligado", "a comparação com Garrett ou com Reis, ligada"],
+    ["sem contagem nem fecho", "sem contagem nem duas linhas finais"],
+    ["Fecho: ", "Duas linhas finais: "],
+    ["Fecho genérico, sem movimento nem verso.", "Duas linhas finais genéricas, sem movimento nem verso."],
+    ["que to ensinou", "que te ensinou esse movimento"]
+   ],
    "titulo": "Louco, sim: argumentar com os movimentos de _Mensagem_",
    "produto": "Um texto de opinião à mão, sobre o tema A ou o tema B, com 180 a 220 palavras e o número escrito no fim, mais duas linhas finais fora da contagem. O aquecimento em cartões não conta para a nota.",
    "nota": "Os exemplos foram escritos para esta grelha com outro tema do mesmo tipo («Ensaiar vale a pena?») e com «O Infante» e a «Tabacaria», nunca com os temas A e B nem com os seus poemas. Os versos e as datas vêm das lições do módulo.",

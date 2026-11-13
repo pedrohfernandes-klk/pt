@@ -44,6 +44,11 @@ sys.path.insert(0, str(ROOT / 'tests'))
 sys.path.insert(0, str(ROOT / 'scripts'))
 from auditoria_20261028 import undo_tarefas_faceis_m3_1112, undo_exame_provas_oficial_1112, undo_tarefas_faceis_m1_1113, undo_tarefas_faceis_m5_1113, undo_tarefas_faceis_m6_1113  # noqa: E402
 import verificar_camadas  # noqa: E402
+# 13/11/2026: por cima de todas ficam as três tarefas do M7 mais fáceis de fazer (tarefas_faceis_m7_20261113, com o seu teste,
+# tests/test_tarefas_faceis_m7.py). Este teste lê os ficheiros que essa camada muda (os dados das grelhas, os dados e as páginas das
+# tarefas do M7) como estavam por baixo dela: desfeita pela auditoria, com contagem estrita. A exigência é a mesma.
+from auditoria_20261028 import undo_tarefas_faceis_m7_1113  # noqa: E402
+M7_DE_CIMA = json.loads((ROOT / 'tests/fixtures/tarefas-faceis-m7-edits-20261113.json').read_text('utf-8'))['files']
 
 CAMADA_REL = 'scripts/tarefas_faceis_m3_20261112.json'
 MANIFESTO_REL = 'tests/fixtures/tarefas-faceis-m3-edits-20261112.json'
@@ -57,6 +62,7 @@ M1 = 'tests/fixtures/tarefas-faceis-m1-edits-20261113.json'
 M5 = 'tests/fixtures/tarefas-faceis-m5-edits-20261113.json'
 # 13/11/2026: por cima das tarefas do M5 mais fáceis de fazer ficam as duas tarefas do M6 mais fáceis de fazer (tarefas_faceis_m6_20261113), a camada mais recente: desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
 M6 = 'tests/fixtures/tarefas-faceis-m6-edits-20261113.json'
+M7F = 'tests/fixtures/tarefas-faceis-m7-edits-20261113.json'  # 13/11/2026: a camada das tarefas do M7 mais fáceis de fazer, a mais recente
 M6_FICHEIROS = json.loads((ROOT / M6).read_text('utf-8'))['files']
 BASE_COMMIT = '1471a61ab0a539719943074153f9e9647ba48e35'
 MANIFESTO = json.loads((ROOT / MANIFESTO_REL).read_text('utf-8'))
@@ -93,6 +99,8 @@ CARTOES_NOMES = ['Começar', 'Pergunta 1', 'Pergunta 2', 'Tema A ou B', 'Fechar 
 
 def ler(rel):
     texto = (ROOT / rel).read_bytes().decode('utf-8')
+    if rel in M7_DE_CIMA:  # 13/11/2026: como estava por baixo da camada do M7
+        texto = undo_tarefas_faceis_m7_1113(rel, texto)
     # 13/11/2026: os dados das grelhas levam agora por cima a camada das tarefas do M1 (duas chaves novas nas grelhas do M1). Este
     # teste lê-os como a camada do M3 os deixou: com a do M1 desfeita pela auditoria, com contagem estrita. Nos outros quinze ficheiros
     # a árvore é o «after» desta camada, como antes.
@@ -847,14 +855,17 @@ class TarefasFaceisM3(unittest.TestCase):
         # 13/11/2026: e por cima da do M1 fica a das tarefas do M5 mais fáceis de fazer: mais uma posição (esta passa a terceira) e
         # as camadas são 49, com a mesma exigência.
         # 13/11/2026: por cima das tarefas do M5 mais fáceis de fazer ficam as duas tarefas do M6 mais fáceis de fazer (tarefas_faceis_m6_20261113): a ordem ganha mais uma posição, com a mesma exigência.
-        self.assertEqual(verificar_camadas.LAYERS[0], ('tarefas_faceis_m6_20261113', 'tarefas-faceis-m6-edits-20261113'))
-        self.assertEqual(verificar_camadas.LAYERS[1], ('tarefas_faceis_m5_20261113', 'tarefas-faceis-m5-edits-20261113'))
-        self.assertEqual(verificar_camadas.LAYERS[2], ('tarefas_faceis_m1_20261113', 'tarefas-faceis-m1-edits-20261113'))
-        self.assertEqual(verificar_camadas.LAYERS[3], ('tarefas_faceis_m3_20261112', 'tarefas-faceis-m3-edits-20261112'))
-        self.assertEqual(verificar_camadas.LAYERS[4], ('exame_provas_oficial_20261112', 'exame-provas-oficial-edits-20261112'))
+        # 13/11/2026: por cima das tarefas do M6 mais fáceis de fazer ficam as três tarefas do M7 mais fáceis de fazer (tarefas_faceis_m7_20261113): a ordem ganha mais uma posição, com a mesma exigência.
+        self.assertEqual(verificar_camadas.LAYERS[0], ('tarefas_faceis_m7_20261113', 'tarefas-faceis-m7-edits-20261113'))
+        self.assertEqual(verificar_camadas.LAYERS[1], ('tarefas_faceis_m6_20261113', 'tarefas-faceis-m6-edits-20261113'))
+        self.assertEqual(verificar_camadas.LAYERS[2], ('tarefas_faceis_m5_20261113', 'tarefas-faceis-m5-edits-20261113'))
+        self.assertEqual(verificar_camadas.LAYERS[3], ('tarefas_faceis_m1_20261113', 'tarefas-faceis-m1-edits-20261113'))
+        self.assertEqual(verificar_camadas.LAYERS[4], ('tarefas_faceis_m3_20261112', 'tarefas-faceis-m3-edits-20261112'))
+        self.assertEqual(verificar_camadas.LAYERS[5], ('exame_provas_oficial_20261112', 'exame-provas-oficial-edits-20261112'))
         # 13/11/2026: mais uma camada, a das tarefas do M6 mais fáceis de fazer (tarefas_faceis_m6_20261113): 50.
-        self.assertEqual(len(verificar_camadas.LAYERS), 50)
-        self.assertEqual(len(set(verificar_camadas.LAYERS)), 50)
+        # 13/11/2026: mais uma camada, a das tarefas do M7 mais fáceis de fazer (tarefas_faceis_m7_20261113): 51.
+        self.assertEqual(len(verificar_camadas.LAYERS), 51)
+        self.assertEqual(len(set(verificar_camadas.LAYERS)), 51)
         self.assertEqual(MANIFESTO['base_commit'], BASE_COMMIT)
         self.assertIn('não se edita à mão', MANIFESTO['_nota'])
         self.assertEqual(sorted({t['ficheiro'] for t in TROCAS}), sorted(FICHEIROS))
@@ -862,7 +873,8 @@ class TarefasFaceisM3(unittest.TestCase):
         self.assertEqual(len(MANIFESTO['files']), 16)
         # 13/11/2026: confere-se com as camadas do M5 e do M1, que estão por cima, desfeitas primeiro (a do M5 antes da do M1).
         r = subprocess.run([sys.executable, 'scripts/aplicar_trocas.py', CAMADA_REL, '--manifesto', MANIFESTO_REL, '--verificar',
-                            '--desfazer-antes', M6, '--desfazer-antes', M5, '--desfazer-antes', M1], cwd=ROOT, capture_output=True, text=True, encoding='utf-8')
+                            # 13/11/2026: e a camada do M7 (tarefas_faceis_m7_20261113), a mais recente, antes de todas.
+                            '--desfazer-antes', M7F, '--desfazer-antes', M6, '--desfazer-antes', M5, '--desfazer-antes', M1], cwd=ROOT, capture_output=True, text=True, encoding='utf-8')
         self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
         self.assertIn(f'{len(TROCAS)} trocas em 16 ficheiros: {len(TROCAS)} aplicadas, 0 por aplicar; manifesto em dia.', r.stdout)
         for t in TROCAS:
@@ -978,28 +990,36 @@ class TarefasFaceisM3(unittest.TestCase):
                 # 13/11/2026: e antes da do M1 vem a do M5: cada cadeia começa pela do M5, logo seguida da do M1 e desta, sem nada entre
                 # as três; a exigência é a mesma, com mais um elo à cabeça.
                 # 13/11/2026: por cima das tarefas do M5 mais fáceis de fazer ficam as duas tarefas do M6 mais fáceis de fazer (tarefas_faceis_m6_20261113), a camada mais recente: desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
-                self.assertEqual(plano.count('--desfazer-antes ' + meu), plano.count(f'--desfazer-antes {M6} --desfazer-antes {M5} --desfazer-antes {M1} --desfazer-antes {meu}'))
+                # 13/11/2026: por cima das tarefas do M6 mais fáceis de fazer ficam as três tarefas do M7 mais fáceis de fazer (tarefas_faceis_m7_20261113), a camada mais recente: desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
+                self.assertEqual(plano.count('--desfazer-antes ' + meu), plano.count(f'--desfazer-antes {M7F} --desfazer-antes {M6} --desfazer-antes {M5} --desfazer-antes {M1} --desfazer-antes {meu}'))
                 # 13/11/2026: por cima das tarefas do M5 mais fáceis de fazer ficam as duas tarefas do M6 mais fáceis de fazer (tarefas_faceis_m6_20261113), a camada mais recente: desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
-                self.assertEqual(plano.count('--desfazer-antes {po}'), plano.count('--desfazer-antes {t6} --desfazer-antes {t5} --desfazer-antes {t1} --desfazer-antes {tf} --desfazer-antes {po}'))
+                # 13/11/2026: por cima das tarefas do M6 mais fáceis de fazer ficam as três tarefas do M7 mais fáceis de fazer (tarefas_faceis_m7_20261113), a camada mais recente: desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
+                self.assertEqual(plano.count('--desfazer-antes {po}'), plano.count('--desfazer-antes {t7} --desfazer-antes {t6} --desfazer-antes {t5} --desfazer-antes {t1} --desfazer-antes {tf} --desfazer-antes {po}'))
                 # 13/11/2026: por cima das tarefas do M5 mais fáceis de fazer ficam as duas tarefas do M6 mais fáceis de fazer (tarefas_faceis_m6_20261113), a camada mais recente: desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
-                self.assertEqual(plano.count('--desfazer-antes {PO}'), plano.count('--desfazer-antes {T6} --desfazer-antes {T5} --desfazer-antes {T1} --desfazer-antes {TF} --desfazer-antes {PO}'))
+                # 13/11/2026: por cima das tarefas do M6 mais fáceis de fazer ficam as três tarefas do M7 mais fáceis de fazer (tarefas_faceis_m7_20261113), a camada mais recente: desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
+                self.assertEqual(plano.count('--desfazer-antes {PO}'), plano.count('--desfazer-antes {T7} --desfazer-antes {T6} --desfazer-antes {T5} --desfazer-antes {T1} --desfazer-antes {TF} --desfazer-antes {PO}'))
                 # 13/11/2026: por cima das tarefas do M5 mais fáceis de fazer ficam as duas tarefas do M6 mais fáceis de fazer (tarefas_faceis_m6_20261113), a camada mais recente: desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
-                self.assertEqual(plano.count(f"ROOT/'{PO}',"), plano.count(f"(ROOT/'{M6}',ROOT/'{M5}',ROOT/'{M1}',ROOT/'{meu}',ROOT/'{PO}',"))
+                # 13/11/2026: por cima das tarefas do M6 mais fáceis de fazer ficam as três tarefas do M7 mais fáceis de fazer (tarefas_faceis_m7_20261113), a camada mais recente: desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
+                self.assertEqual(plano.count(f"ROOT/'{PO}',"), plano.count(f"(ROOT/'{M7F}',ROOT/'{M6}',ROOT/'{M5}',ROOT/'{M1}',ROOT/'{meu}',ROOT/'{PO}',"))
                 # 13/11/2026: por cima das tarefas do M5 mais fáceis de fazer ficam as duas tarefas do M6 mais fáceis de fazer (tarefas_faceis_m6_20261113), a camada mais recente: desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
-                self.assertEqual(plano.count("ROOT/'{po}',"), plano.count("(ROOT/'{t6}',ROOT/'{t5}',ROOT/'{t1}',ROOT/'{tf}',ROOT/'{po}',"))
+                # 13/11/2026: por cima das tarefas do M6 mais fáceis de fazer ficam as três tarefas do M7 mais fáceis de fazer (tarefas_faceis_m7_20261113), a camada mais recente: desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
+                self.assertEqual(plano.count("ROOT/'{po}',"), plano.count("(ROOT/'{t7}',ROOT/'{t6}',ROOT/'{t5}',ROOT/'{t1}',ROOT/'{tf}',ROOT/'{po}',"))
                 # Nenhuma cadeia dos fluxos desfaz esta camada sem ser à cabeça (13/11/2026: logo a seguir às do M5 e do M1).
                 if p.suffix == '.yml':
                     # 13/11/2026: por cima das tarefas do M5 mais fáceis de fazer ficam as duas tarefas do M6 mais fáceis de fazer (tarefas_faceis_m6_20261113), a camada mais recente: desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
-                    self.assertEqual(plano.count('--desfazer-antes ' + meu), plano.count(f'--verificar --desfazer-antes {M6} --desfazer-antes {M5} --desfazer-antes {M1} --desfazer-antes {meu}'))
+                    # 13/11/2026: por cima das tarefas do M6 mais fáceis de fazer ficam as três tarefas do M7 mais fáceis de fazer (tarefas_faceis_m7_20261113), a camada mais recente: desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
+                    self.assertEqual(plano.count('--desfazer-antes ' + meu), plano.count(f'--verificar --desfazer-antes {M7F} --desfazer-antes {M6} --desfazer-antes {M5} --desfazer-antes {M1} --desfazer-antes {meu}'))
                 cadeias += plano.count(f'--desfazer-antes {meu} --desfazer-antes {PO}')
         self.assertGreater(cadeias, 40)
         tarefas = ler('.github/workflows/pt-tarefas-qa.yml')
         # 13/11/2026: no fluxo, esta camada confere-se com a do M1 desfeita primeiro, e as de baixo com as duas.
         # 13/11/2026: e com a do M5 antes da do M1.
         # 13/11/2026: por cima das tarefas do M5 mais fáceis de fazer ficam as duas tarefas do M6 mais fáceis de fazer (tarefas_faceis_m6_20261113), a camada mais recente: desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
-        self.assertIn(f'python scripts/aplicar_trocas.py scripts/tarefas_faceis_m3_20261112.json --manifesto {meu} --verificar --desfazer-antes {M6} --desfazer-antes {M5} --desfazer-antes {M1}\n', tarefas)
+        # 13/11/2026: por cima das tarefas do M6 mais fáceis de fazer ficam as três tarefas do M7 mais fáceis de fazer (tarefas_faceis_m7_20261113), a camada mais recente: desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
+        self.assertIn(f'python scripts/aplicar_trocas.py scripts/tarefas_faceis_m3_20261112.json --manifesto {meu} --verificar --desfazer-antes {M7F} --desfazer-antes {M6} --desfazer-antes {M5} --desfazer-antes {M1}\n', tarefas)
         # 13/11/2026: por cima das tarefas do M5 mais fáceis de fazer ficam as duas tarefas do M6 mais fáceis de fazer (tarefas_faceis_m6_20261113), a camada mais recente: desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
-        self.assertIn(f'python scripts/aplicar_trocas.py scripts/exame_provas_oficial_20261112.json --manifesto {PO} --verificar --desfazer-antes {M6} --desfazer-antes {M5} --desfazer-antes {M1} --desfazer-antes {meu}\n', tarefas)
+        # 13/11/2026: por cima das tarefas do M6 mais fáceis de fazer ficam as três tarefas do M7 mais fáceis de fazer (tarefas_faceis_m7_20261113), a camada mais recente: desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
+        self.assertIn(f'python scripts/aplicar_trocas.py scripts/exame_provas_oficial_20261112.json --manifesto {PO} --verificar --desfazer-antes {M7F} --desfazer-antes {M6} --desfazer-antes {M5} --desfazer-antes {M1} --desfazer-antes {meu}\n', tarefas)
         self.assertIn("python -m unittest discover -s tests -p 'test_tarefas_faceis_m3.py' -v", tarefas)
         self.assertIn('        run: python tests/browser_tarefas_faceis_m3.py\n', tarefas)
         self.assertTrue((ROOT / 'tests/browser_tarefas_faceis_m3.py').is_file())

@@ -64,6 +64,17 @@ Revisão de 13/11/2026 (M6), mais duas, opcionais; as páginas sem elas saem igu
   * num texto em verso, «numerar» 0: os versos não levam número (os excertos de «Ao Gás»: com estrofes saltadas, um número contado
     por cima dos cortes não seria o número do verso na parte);
   * «juntos_em_papel»: em papel, os passos de um tema não se partem entre duas páginas, nem os factos do dossiê (classe tf-juntos).
+
+M7 (13/11/2026, camada tarefas_faceis_m7_20261113: a m7-u3 no mesmo molde, e a m7-u1 e a m7-u2, que não têm temas A e B). Chaves novas,
+todas opcionais; as páginas sem elas (as do M3, do M1, do M5 e do M6) saem iguais, byte a byte:
+  * uma tarefa em que se escolhe primeiro o tema e se escreve um só texto (a m7-u3): «perguntas» pode ser uma lista vazia; «temas_relogio»
+    põe o relógio de produção no cimo do cartão dos temas; «depois» é a lista dos cartões que vêm a seguir aos temas (cada um como uma
+    pergunta, com «id» e «nome» próprios: «O teu texto»); «opcional» pode trazer a pergunta opcional com as palavras do enunciado novo
+    (a chave antiga fica como estava);
+  * num apoio, «html»: o quadro já escrito (uma tabela copiada de uma lição), em vez de «quadro»;
+  * pagina_individual(): a página de uma tarefa individual sem temas (a m7-u1 e a m7-u2), a partir de dados próprios
+    (docs/pedagogia/tarefas-individuais/<slug>.json, escritos por scripts/tarefas_individuais_faceis.py): o mesmo primeiro cartão, as
+    «partes» (cada uma como uma pergunta, com o seu nome de cartão), o cartão «Fechar e entregar» e o cartão «Rever a matéria».
 """
 import re
 from html import escape
@@ -180,6 +191,10 @@ def apoios(xs):
     """Apoio copiado de uma lição (um quadro), num desdobrável fechado no ecrã que não sai em papel."""
     out = ''
     for x in xs:
+        if x.get('html'):  # 13/11/2026 (M7): o quadro já escrito
+            out += (f'<details class="tf-so-tema tf-mais tf-so-ecra"><summary>{x["titulo"]}</summary><div>{x["html"]}'
+                    + ''.join(f'<p class="tf-p">{n}</p>' for n in x.get('notas', [])) + '</div></details>\n')
+            continue
         q = x['quadro']
         cab = ''.join(f'<th scope="col">{c}</th>' for c in q['colunas'])
         corpo = ''.join('<tr>' + ''.join(f'<th scope="row">{c}</th>' if k == 0 else f'<td>{c}</td>' for k, c in enumerate(l)) + '</tr>' for l in q['linhas'])
@@ -244,10 +259,127 @@ def opcoes(items):
     out = []
     for x in items:
         assert '"' not in x['resposta'] and '<' not in x['resposta'], x['resposta']
+        if 'letra' not in x:  # 13/11/2026 (M7): as perguntas opcionais das tarefas individuais não têm letras (como antes)
+            out.append(f'<button type="button" aria-pressed="false" data-correct="{"true" if x["certa"] else "false"}" '
+                       f'data-response="{x["resposta"]}">{x["texto"]}</button>')
+            continue
         out.append(f'<button type="button" aria-pressed="false" data-correct="{"true" if x["certa"] else "false"}" '
                    f'data-response="{x["resposta"]}"><span class="task-letter">{x["letra"]}<span class="sr-only">:</span></span> {x["texto"]}</button>')
     return ('<div class="task-options">' + ''.join(out)
             + '</div><p class="task-feedback" data-task-feedback role="status" aria-live="polite" hidden></p>')
+
+
+def corpo_pedido(p, exs, f, textos):
+    """13/11/2026 (M7): o corpo de um cartão de pedido (o de uma pergunta, o de «O teu texto» e o de cada parte de uma tarefa individual):
+    o pedido, um por alínea, e «Como citar»; os exemplos com outros casos e os apoios, em desdobráveis; os textos, completos."""
+    return (f'<div class="tf-pedido"><h3>{p["pedido_titulo"]}</h3>'
+        + (f'<p class="tf-p tf-intro">{p["intro"]}</p>' if p.get('intro') else '')
+        + (f'<p class="tf-p">{p["antes"]}</p>' + lista(p['escolhas'], 'ul') if p.get('escolhas') else '')
+        + (f'<p class="tf-p">{p["barra"]}</p>' if p.get('barra') else '')
+        + (f'<p class="tf-p">{p["para_cada"]}</p>' if p.get('para_cada') else '')
+        + alineas(p)
+        + ''.join(f'<p class="tf-ajuda">{x}</p>' for x in p.get('ajudas', []))
+        + (f'<p class="tf-citar"><b>Como citar.</b> {p["citar"]}</p>' if p.get('citar') else '') + '</div>\n'
+        + exemplos(exs, f['exemplo_titulo']) + apoios(p.get('apoios', []))
+        + (f'<p class="tf-p tf-ler">{p["ler"]}</p>\n' if p.get('ler') else '')
+        + ''.join(bloco_texto(textos[i]) for i in p['textos'])
+        + (onde_esta(p['onde_esta']) if p.get('onde_esta') else ''))
+
+
+def exemplos_de(p, d):
+    """Os exemplos de um cartão de pedido; {"de": "exemplos", "n": k} é o exemplo resolvido que a página já tinha (chave antiga)."""
+    exs = [x for x in p['exemplos']]
+    for x in exs:
+        if x.get('de') == 'exemplos':  # o exemplo resolvido que a página já tinha (chave antiga «exemplos»)
+            ps = re.findall(r'<p>.*?</p>', d['exemplos'][x['n']]['html'])  # «desde» e «ate»: só alguns parágrafos (os casos resolvidos)
+            x['titulo'], x['html'] = d['exemplos'][x['n']]['titulo'], ''.join(ps[x.get('desde', 0):x.get('ate')]).replace('<p>', '<p class="tf-p">')
+    return exs
+
+
+def relogio_producao(texto, minutos, slug, ident=''):
+    return (f'<p class="tf-nota tf-relogio-nota"{ident}>{texto}</p><div class="task-relogio" data-relogio data-max="{minutos}" data-passo="5" '
+            f'data-rotulo="Produção em papel" data-chave="pt-relogio:tarefas/{slug}:producao"></div>\n')
+
+
+def cartao_pedido(p, f, d, textos, relogio=''):
+    """13/11/2026 (M7): um cartão de pedido com nome próprio («O teu texto», na m7-u3; cada parte de uma tarefa individual)."""
+    return (f'<section class="task-section tf-pergunta" id="{p["id"]}" data-task-card-name="{p["nome"]}" aria-labelledby="{p["id"]}-titulo">'
+            f'<h2 id="{p["id"]}-titulo">{p["titulo"]}</h2>\n<p class="tf-meta">{p["meta"]}</p>\n{relogio}'
+            + (p.get('relogio_html') or '') + corpo_pedido(p, exemplos_de(p, d), f, textos) + '</section>\n')
+
+
+def cartao_comecar(f, titulo, slug, a, com_grelha):
+    """O primeiro cartão, «Começar»: o que se faz (o passo 1 é o aquecimento e leva a única ligação), o relógio do aquecimento, o que
+    se entrega e o quadro. (13/11/2026, M7: o mesmo texto de pagina(), para as tarefas individuais sem temas.)"""
+    e = f['entregas']
+    fazer = [f['fazer'][0] + f'<span class="task-aquecer tf-abrir"><a href="{a["cartoes"]}">{a["ligacao"]}</a></span>'] + f['fazer'][1:]
+    return (f'<header><p class="task-kicker">{f["kicker"]}</p><h1>{titulo}</h1>\n'
+            f'<h2 class="task-part">O que vais fazer</h2>{lista(fazer, "ol", "tf-fazer")}<p class="tf-p">{f["modo"]}</p>\n'
+            f'<section class="task-warmup tf-aquecer" id="aquecer" aria-labelledby="aquecer-title" data-task-warm="cartoes">'
+            f'<h2 class="task-part" id="aquecer-title">{f["aquecer"]["titulo"]}</h2>\n'
+            f'<div class="task-relogio" data-relogio data-max="{a["minutos"]}" data-passo="1" data-rotulo="Aquecimento" data-chave="pt-relogio:tarefas/{slug}:aquecimento"></div>\n'
+            f'</section>\n'
+            f'<h2 class="task-part">O que entregas</h2><p class="tf-p">{e["intro"]}</p>{lista(e["itens"], "ul") if e.get("itens") else ""}\n'
+            f'<h2 class="task-part">{f["quadro"]["titulo"]}</h2>{quadro(f["quadro"])}\n'
+            + ((LIGACAO + (f'<p class="tf-nota tf-grelha-nota">{f["grelha_nota"]}</p>\n' if f.get('grelha_nota') else '')) if com_grelha else '')
+            + '<p class="tf-imprimir"><button type="button" data-task-print hidden>Imprimir o enunciado</button></p>\n'
+            '</header>\n')
+
+
+def cartao_fechar(f):
+    """O cartão «Fechar e entregar»: duas linhas finais, verificação (uma só lista de perguntas de sim ou não), entrega em passos."""
+    fi = f['finais']
+    grupos = ('<fieldset class="task-checklist" aria-labelledby="entregar-title">'
+              + ''.join(f'<label><input type="checkbox"> <span>{x}</span></label>' for x in f['verificar']) + '</fieldset>')
+    return (f'<section class="task-section" id="entregar" data-task-card-name="Fechar e entregar" aria-labelledby="entregar-title">'
+            + (f.get('fechar_antes') or '')
+            + f'<h2 id="finais-titulo">{fi["titulo"]}</h2>' + (f'<p class="tf-p">{fi["texto"]}</p>' if fi.get('texto') else '') + f'{lista(fi["passos"], "ol", "tf-passos")}\n'
+            f'<h2 id="entregar-title">{f["verificar_titulo"]}</h2><p class="tf-p" id="criterios">{f["verificar_texto"]}</p>\n{grupos}\n'
+            f'<h2>{f["entrega_titulo"]}</h2>{lista(f["entrega"], "ol", "tf-passos")}</section>\n')
+
+
+CABECA_INDIVIDUAL = (
+    '<!doctype html>\n<html lang="pt-PT" data-appearance-site="pt"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">\n'
+    '<title>Aula de tarefa · {titulo_simples} · M{modulo}</title>\n<meta name="description" content="{descricao}">\n'
+    '<link rel="stylesheet" href="../../assets/pt-lessons/lesson.css?v=20261027-task-reader-1"><link rel="stylesheet" href="../../assets/task-90.css?v=20261027-tarefas-1">'
+    '<link rel="stylesheet" href="../../assets/docente-access.css?v=20261026.1">\n<script defer src="../../assets/task-90.js?v=20261027-compact-1"></script>\n'
+    '<link rel="stylesheet" href="../../assets/task-reader.css?v=20261027-task-reader-1"><link rel="stylesheet" href="../../assets/relogio.css?v=20261027-relogio-1">'
+    '<script defer src="../../assets/relogio.js?v=20261027-relogio-1"></script><script defer src="../../assets/pt-lessons/casca.js?v=20261027-task-reader-1"></script>'
+    '<script defer src="../../assets/task-reader.js?v={v_leitor}"></script><link rel="stylesheet" href="../../assets/info-i.css?v=20261105">'
+    '<link rel="stylesheet" href="../../assets/task-textos.css?v={folha}"><script defer src="../../assets/info-i.js?v=20261105"></script>'
+    '<link rel="stylesheet" href="../../assets/appearance.css?v=20261025-universal-1"><script src="../../assets/appearance.js?v=20261025-universal-1"></script></head>\n'
+    '<body data-site="pt" class="task-lesson"><main class="task-page" data-task-compact data-task-facil data-task-individual data-task-opening="Começar" data-task-index="nomes">\n'
+    '<nav class="task-nav" aria-label="Onde estás"><a href="../../">Português</a><a href="../../m{modulo}/#unidade-pedagogica-{unidade}">M{modulo} · Unidade {unidade}</a></nav>\n')
+PE_INDIVIDUAL = (
+    '</main>\n' + IMPRIMIR + '<a class="teacher-access" href="https://pedrohfernandes-klk.github.io/lente/docente/#portugues" aria-label="Guiões e materiais do docente" title="Para o docente">'
+    '<svg viewBox="0 0 40 40" width="30" height="30" aria-hidden="true"><circle cx="20" cy="20" r="15" fill="none" stroke="currentColor" stroke-width="2.5"/>'
+    '<circle cx="20" cy="20" r="8" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="m9.5 9.5 5 5m11 11 5 5m-21 0 5-5m11-11 5-5" fill="none" stroke="currentColor" stroke-width="5"/></svg></a>\n'
+    '<script defer src="../../assets/projection-launcher.js?v=20261019.4" data-site="pt"></script></body></html>\n')
+
+
+def pagina_individual(d):
+    """13/11/2026 (M7): a página de uma tarefa individual sem temas A e B (a m7-u1 e a m7-u2), no mesmo molde: «Começar», as partes
+    (cada uma como uma pergunta: o pedido, um por alínea; os exemplos com outro caso em desdobrável; os textos completos), «Fechar e
+    entregar» e «Rever a matéria» (com as perguntas opcionais de sempre). Os dados são só os de «facil» (não há chaves antigas)."""
+    f, slug, a = d['facil'], d['slug'], d['aquecer']
+    textos = {t['id']: t for t in f['textos']}
+    cabeca = CABECA_INDIVIDUAL.format(titulo_simples=re.sub(r'<[^>]+>', '', d['titulo']), modulo=d['modulo'], unidade=d['unidade'],
+                                      descricao=d['descricao'], v_leitor=V_FACIL, folha=f['folha_versao'])
+    partes = ''
+    for k, p in enumerate(f['partes']):
+        partes += cartao_pedido(p, f, d, textos, relogio_producao(p['relogio'], f['producao_minutos'], slug) if k == 0 else '')
+    ops = d['opcionais']
+    perguntas = ''.join(
+        f'<article class="task-question" data-task-question="{k}" aria-labelledby="q{k}"><h3 id="q{k}">{k}. {op["pergunta"]}</h3>{opcoes(op["opcoes"])}</article>\n'
+        for k, op in enumerate(ops, 1))
+    rever = (f'<section class="task-section tf-rever" id="apoios" data-task-card-name="Rever a matéria" aria-labelledby="preparacao">'
+             f'<h2 id="preparacao">{f["rever_titulo"]}</h2><p class="tf-p">{f["rever_texto"]}</p>'
+             + lista([f'<b>{x["para"]}.</b> {x["texto"]}' for x in f['rever']], 'ul', 'tf-rever-lista') + '\n'
+             f'<details data-task-optional-preparation><summary>{f["opcional_titulo"]}</summary><div class="task-quiz" aria-label="{f["opcional_rotulo"]}">\n'
+             + perguntas
+             + f'<p data-task-status role="status">Respostas exploradas: 0 de {len(ops)}. Podes rever qualquer escolha.</p></div></details>\n'
+             f'</section>\n')
+    return cabeca + cartao_comecar(f, d['titulo'], slug, a, False) + partes + cartao_fechar(f) + rever + PE_INDIVIDUAL
 
 
 def pagina(d, com_grelha, head, foot, raiz):
@@ -262,7 +394,8 @@ def pagina(d, com_grelha, head, foot, raiz):
     head = re.sub(r'assets/task-reader\.js\?v=[^"]+', 'assets/task-reader.js?v=' + V_FACIL, head)
     # A descrição da página usa as palavras do enunciado novo («duas perguntas», não «núcleo comum»).
     assert head.count(DESCRICAO[0]) == 1, slug
-    head = head.replace(*DESCRICAO)
+    # 13/11/2026 (M7): uma tarefa sem as duas perguntas diz na descrição o que tem («descricao»).
+    head = head.replace(DESCRICAO[0], f.get('descricao') or DESCRICAO[1])
 
     # Cartão 1, «Começar»: o que se faz (o passo 1 é o aquecimento e leva a única ligação), o relógio do aquecimento,
     # o que se entrega e o quadro.
@@ -287,26 +420,11 @@ def pagina(d, com_grelha, head, foot, raiz):
         ident = 'produzir' if k == 1 else f'pergunta-{k}'
         relogio = (f'<p class="tf-nota tf-relogio-nota">{p["relogio"]}</p><div class="task-relogio" data-relogio data-max="{f.get("producao_minutos", 60)}" data-passo="5" '
                    f'data-rotulo="Produção em papel" data-chave="pt-relogio:tarefas/{slug}:producao"></div>\n') if k == 1 else ''
-        exs = [x for x in p['exemplos']]
-        for x in exs:
-            if x.get('de') == 'exemplos':  # o exemplo resolvido que a página já tinha (chave antiga «exemplos»)
-                ps = re.findall(r'<p>.*?</p>', d['exemplos'][x['n']]['html'])  # «desde» e «ate»: só alguns parágrafos (os casos resolvidos)
-                x['titulo'], x['html'] = d['exemplos'][x['n']]['titulo'], ''.join(ps[x.get('desde', 0):x.get('ate')]).replace('<p>', '<p class="tf-p">')
+        exs = exemplos_de(p, d)
         perguntas += (f'<section class="task-section tf-pergunta" id="{ident}" data-task-card-name="Pergunta {k}" aria-labelledby="pergunta-{k}-titulo">'
                       f'<h2 id="pergunta-{k}-titulo"><span class="tf-n">Pergunta\xa0{k}</span> {p["titulo"]}</h2>\n'
                       f'<p class="tf-meta">{p["meta"]}</p>\n{relogio}'
-                      + f'<div class="tf-pedido"><h3>{p["pedido_titulo"]}</h3>'
-                      + (f'<p class="tf-p tf-intro">{p["intro"]}</p>' if p.get('intro') else '')
-                      + (f'<p class="tf-p">{p["antes"]}</p>' + lista(p['escolhas'], 'ul') if p.get('escolhas') else '')
-                      + (f'<p class="tf-p">{p["barra"]}</p>' if p.get('barra') else '')
-                      + (f'<p class="tf-p">{p["para_cada"]}</p>' if p.get('para_cada') else '')
-                      + alineas(p)
-                      + ''.join(f'<p class="tf-ajuda">{x}</p>' for x in p.get('ajudas', []))
-                      + (f'<p class="tf-citar"><b>Como citar.</b> {p["citar"]}</p>' if p.get('citar') else '') + '</div>\n'
-                      + exemplos(exs, f['exemplo_titulo']) + apoios(p.get('apoios', []))
-                      + (f'<p class="tf-p tf-ler">{p["ler"]}</p>\n' if p.get('ler') else '')
-                      + ''.join(bloco_texto(textos[i]) for i in p['textos'])
-                      + (onde_esta(p['onde_esta']) if p.get('onde_esta') else '') + '</section>\n')
+                      + corpo_pedido(p, exs, f, textos) + '</section>\n')
 
     # Cartão «Tema A ou B»: a fotografia do tema (se houver), as remissões e os passos à vista; logo a seguir, o material
     # que é só de um tema (desdobrável fechado no ecrã, aberto em papel; as ligações dos passos abrem-no) e o exemplo
@@ -342,7 +460,9 @@ def pagina(d, com_grelha, head, foot, raiz):
                 + ''.join(bloco_texto(textos[i]) for i in mat['textos']) + '</div></details>\n') if mat else ''
     tema = (f'<section class="task-section tf-tema" id="tema" data-task-card-name="Tema A ou B" aria-labelledby="tema-titulo">'
             f'<h2 id="tema-titulo">{f["temas_titulo"]}</h2><p class="tf-meta">{f["temas_nota"]}</p>'
-            + (f'<p class="tf-p tf-topo">{f["temas_topo"]}</p>' if f.get('temas_topo') else '') + '\n' + figuras
+            + (f'<p class="tf-p tf-topo">{f["temas_topo"]}</p>' if f.get('temas_topo') else '') + '\n'
+            # 13/11/2026 (M7): numa tarefa em que se escolhe primeiro (sem perguntas), o relógio de produção fica no cimo deste cartão.
+            + (relogio_producao(f['temas_relogio'], f.get('producao_minutos', 60), slug, ' id="produzir"') if f.get('temas_relogio') else '') + figuras
             + f'<div class="task-themes">{temas}</div>' + comum + material + '</section>\n')
 
     # Cartão «Fechar e entregar»: duas linhas finais, verificação (uma só lista de perguntas de sim ou não), entrega em passos.
@@ -355,7 +475,9 @@ def pagina(d, com_grelha, head, foot, raiz):
               f'<h2>{f["entrega_titulo"]}</h2>{lista(f["entrega"], "ol", "tf-passos")}</section>\n')
 
     # Cartão «Rever a matéria» (não sai em papel): uma linha por pergunta ou tema e a pergunta opcional de sempre.
-    op = d['opcional']
+    op = f.get('opcional') or d['opcional']  # 13/11/2026 (M7): a pergunta opcional com as palavras do enunciado novo
+    # 13/11/2026 (M7): os cartões que vêm depois dos temas («O teu texto»).
+    depois = ''.join(cartao_pedido(p, f, d, textos) for p in f.get('depois', []))
     rever = (f'<section class="task-section tf-rever" id="apoios" data-task-card-name="Rever a matéria" aria-labelledby="preparacao">'
              f'<h2 id="preparacao">{f["rever_titulo"]}</h2><p class="tf-p">{f["rever_texto"]}</p>'
              + lista([f'<b>{x["para"]}.</b> {x["texto"]}' for x in f['rever']], 'ul', 'tf-rever-lista') + '\n'
@@ -364,4 +486,4 @@ def pagina(d, com_grelha, head, foot, raiz):
              f'<p data-task-status role="status">Respostas exploradas: 0 de 1. Podes rever qualquer escolha.</p></div></details>\n'
              f'</section>\n')
     assert foot.count('</main>\n') == 1, slug
-    return head + comecar + perguntas + tema + fechar + rever + foot.replace('</main>\n', '</main>\n' + IMPRIMIR)
+    return head + comecar + perguntas + tema + depois + fechar + rever + foot.replace('</main>\n', '</main>\n' + IMPRIMIR)

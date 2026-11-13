@@ -27,11 +27,10 @@
   ]
  ],
  "reservadas": [
-  "preço de um sonho grande",
+  "pagar o preço do sonho",
   "dá força a um país",
-  "pago por outros",
   "as mães, os filhos e as noivas",
-  "alguém volte e resolva"
+  "alguém volte para resolver"
  ],
  "_nota": "29/10/2026: candidata 1 escolhida pelo docente. Esboço corrigido da proposta final (cartões 4, 8, 9 e 10). As frases de treino são inventadas e vão sem «» (a viagem, ler em papel, ser teimoso, repetir um plano).",
  "cartoes": [
@@ -39,7 +38,7 @@
    "t": "ler",
    "rot": "Abre",
    "titulo": "Louco, sim",
-   "html": "<p class=\"abre\"><b>Um rei aceita que lhe chamem louco e, no mesmo verso, vira a palavra a seu favor.</b> Este aquecimento não escreve a tua opinião nem toma partido nos temas: treina os seis movimentos com outros exemplos.</p><div class=\"caixa\"><h3>A tarefa de hoje</h3><p>Um texto de opinião, à mão, com 180 a 220 palavras, sobre um destes temas.</p><p><b>Tema A.</b> «Valeu a pena? Tudo vale a pena / Se a alma não é pequena.» Concordas, quando o preço de um sonho grande é pago por outros, como as mães, os filhos e as noivas da primeira estrofe?</p><p><b>Tema B.</b> Por quem, ou pelo quê, ainda esperamos? Esperar que alguém volte e resolva dá força a um país ou tira-lha?</p></div><p>Dez minutos, com consulta. Não conta para a nota.</p>"
+   "html": "<p class=\"abre\"><b>Um rei aceita que lhe chamem louco e, no mesmo verso, vira a palavra a seu favor.</b> Este aquecimento não escreve a tua opinião nem toma partido nos temas: treina os seis movimentos com outros exemplos.</p><div class=\"caixa\"><h3>A tarefa de hoje</h3><p>Um texto de opinião, à mão, com 180 a 220 palavras, sobre um destes temas.</p><p><b>Tema A.</b> «Valeu a pena? Tudo vale a pena / Se a alma não é pequena.» Concordas quando são outras pessoas a pagar o preço do sonho? Considera as mães, os filhos e as noivas da primeira estrofe.</p><p><b>Tema B.</b> Por quem, ou pelo quê, ainda esperamos? Esperar que alguém volte para resolver os problemas dá força a um país ou tira-lhe força?</p></div><p>Dez minutos, com consulta. Não conta para a nota.</p>"
   },
   {
    "t": "emparelhar",
@@ -49,7 +48,7 @@
    "pares": [
     [
      "«Valeu a pena? Tudo vale a pena / Se a alma não é pequena.»",
-     "S, tese com condição"
+     "S, opinião com condição"
     ],
     [
      "«Quem quer passar além do Bojador / Tem que passar além da dor.»",
@@ -117,8 +116,8 @@
   {
    "t": "completar",
    "g": "5",
-   "p": "Que palavra põe a condição na tese?",
-   "p2": "Completa a tese para ela dizer em que caso é verdade.",
+   "p": "Que palavra põe a condição na opinião?",
+   "p2": "Completa a opinião para ela dizer em que caso é verdade.",
    "frase": "Repetir um plano dez vezes só vale a pena [1] cada repetição mudar alguma coisa.",
    "lacunas": [
     {
@@ -130,7 +129,7 @@
      "c": 0
     }
    ],
-   "f": "**se**: a condição diz em que caso a tese vale. É o movimento S, o de «Se a alma não é pequena».",
+   "f": "**se**: a condição diz em que caso a opinião vale. É o movimento S, o de «Se a alma não é pequena».",
    "fe": "«porque» daria uma causa a uma coisa que ainda não aconteceu; «embora» oporia ideias que aqui não se opõem. Só uma condição completa esta frase."
   },
   {
@@ -179,15 +178,15 @@
    "p2": "Escreveste o que diria quem discorda de ti. Onde pões a tua resposta?",
    "o": [
     "Logo a seguir à objeção.",
-    "Na primeira frase, antes da tese.",
+    "Na primeira frase, antes da opinião.",
     "No fim, depois da conclusão."
    ],
    "c": 0,
    "f": "A resposta vem **logo a seguir** à objeção: é o par «Objeção e resposta» da lição F11, e a resposta nunca fica longe da objeção. Se a afastas, quem lê fica com a objeção sem resposta.",
    "fe": [
     null,
-    "Na primeira frase, quem lê ainda não sabe o que defendes e toma a objeção pela tua opinião; a primeira frase é a da tese com condição.",
-    "Depois da conclusão, o texto acaba a dar razão ao outro lado; a conclusão volta à tese, e a objeção já tem de ter resposta."
+    "Na primeira frase, quem lê ainda não sabe o que defendes e toma a objeção pela tua opinião; a primeira frase é a da opinião com condição.",
+    "Depois da conclusão, o texto acaba a dar razão ao outro lado; a conclusão volta à opinião, e a objeção já tem de ter resposta."
    ]
   },
   {
@@ -213,7 +212,7 @@
      "Garrett, _Frei Luís de Sousa_"
     ]
    ],
-   "f": "Cada passagem com a sua obra: Reis, «Segue o teu destino» (lição F11); «Nevoeiro» e «D. Sebastião, Rei de Portugal», em _Mensagem_ (lição F09); D. João de Portugal, em _Frei Luís de Sousa_. Na tarefa, o confronto com outra voz começa por aqui: dizer de onde vem cada uma.",
+   "f": "Cada passagem com a sua obra: Reis, «Segue o teu destino» (lição F11); «Nevoeiro» e «D. Sebastião, Rei de Portugal», em _Mensagem_ (lição F09); D. João de Portugal, em _Frei Luís de Sousa_. Na tarefa, a comparação com Garrett ou com Reis começa por aqui: dizer de onde vem cada passagem.",
    "fe": "Procura as marcas: os deuses do Olimpo são de uma voz que já leste a falar com Lídia; o regresso de alguém desaparecido em Alcácer Quibir é o que acontece numa peça que leste no 2.º ano."
   },
   {
@@ -222,20 +221,20 @@
    "p": "Põe por ordem a produção e a entrega.",
    "p2": "Cada passo usa o que o anterior produziu. Do primeiro ao último: ordena.",
    "passos": [
-    "Escolhes o tema e escreves a tese com uma condição",
-    "Escolhes o verso de _Mensagem_ e o facto, ou a outra voz, que servem essa tese",
-    "Escreves o texto, com os movimentos e a conclusão que volta à tese",
+    "Escolhes o tema e escreves a opinião com uma condição",
+    "Escolhes o verso de _Mensagem_ e o facto, ou a comparação, que servem essa opinião",
+    "Escreves o texto, com os movimentos e a conclusão que volta à opinião",
     "Relês o texto, marcas as letras na margem e contas as palavras: 180 a 220",
     "Escreves as duas linhas finais e entregas as fotografias no Teams"
    ],
-   "f": "Cada passo usa o anterior: o verso e o facto servem a tese, o texto junta tudo, as letras e a contagem fazem-se no texto escrito, e as duas linhas fecham.",
-   "fe": "Não escolhes o verso sem saber a tese que ele vai servir, nem contas palavras de um texto que ainda não existe; as duas linhas são as últimas."
+   "f": "Cada passo usa o anterior: o verso e o facto servem a opinião, o texto junta tudo, as letras e a contagem fazem-se no texto escrito, e as duas linhas fecham.",
+   "fe": "Não escolhes o verso sem saber a opinião que ele vai servir, nem contas palavras de um texto que ainda não existe; as duas linhas são as últimas."
   },
   {
    "t": "ler",
    "rot": "Para levar",
    "escuro": true,
-   "html": "<p class=\"levar\">Dar razão não é perder: «Louco, sim, louco, porque quis grandeza».</p><p>Agora, com o teu tema: a tese com condição na primeira frase, um movimento que dá razão ao outro lado e vira (R ou C), mais um (N, M ou P), um verso exato explicado, um facto datado separado do sentido ou outra voz, a conclusão que volta à tese, e as letras na margem.</p>"
+   "html": "<p class=\"levar\">Dar razão não é perder: «Louco, sim, louco, porque quis grandeza».</p><p>Agora, com o teu tema: a opinião com condição na primeira frase, um movimento que dá razão ao outro lado e vira (R ou C), mais um (N, M ou P), um verso exato explicado, um facto datado separado do sentido ou uma comparação, a conclusão que volta à opinião, e as letras na margem.</p>"
   }
  ]
 }
