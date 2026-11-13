@@ -1,13 +1,16 @@
 """11/11/2026: base comum dos treinos da preparação de exame (exame/treinos/).
 
 Os textos oficiais vêm das transcrições tests/fixtures/prova-639-2026-*.json; o que é nosso está num módulo por treino
-(interpretacao.py, gramatica.py, escrita.py, poesia_contemporanea.py, conto.py) e em indice.py. As páginas escrevem-se com
+(interpretacao.py, gramatica.py, escrita.py, poesia_contemporanea.py, conto.py, coesao.py, apreciacao_critica.py, exposicao.py)
+e em indice.py. As páginas escrevem-se com
 scripts/exame_treinos.py.
 
 12/11/2026: os treinos passam a vir de uma só lista (TREINOS); a navegação, a contagem («Treino n de N») e o nome da
 entrada («Os quatro treinos») saem dela. Para juntar um treino, acrescenta-se uma linha aqui e o módulo em exame_treinos.py.
 12/11/2026: mais o treino da sessão 18 (conto.py); licao(), que lê os cartões de uma lição do M8 para conferir citações, passa
 de poesia_contemporanea.py para aqui, porque serve os dois treinos de textos com direitos de autor.
+13/11/2026: oito treinos, com os das sessões 22 (coesao.py), 25 (apreciacao_critica.py) e 23 (exposicao.py), por esta ordem;
+POR_EXTENSO chega a oito; a versão dos ficheiros dos treinos sobe, porque treino.css ganha a regra da imagem de apoio.
 """
 import json, re, html, os
 
@@ -19,7 +22,7 @@ SESSOES = {s['id']: s for s in json.load(open(ROOT + '/assets/exame/sessoes.json
 # versões dos ficheiros partilhados (as mesmas das páginas vizinhas do exame) e dos dois ficheiros dos treinos
 V_APARENCIA = '20261025-universal-1'
 V_PROJETAR = '20261019.4'
-V_TREINO = '20261111-treinos-2'
+V_TREINO = '20261113-treinos-3'
 
 URL = {
     'e1': 'https://eduqa.pt/wp-content/uploads/2026/06/portugues_prova_639_v2_enunciado.pdf',
@@ -77,9 +80,10 @@ def licao(fid):
 
 
 # (pasta em exame/treinos/, nome na navegação), pela ordem dos treinos
-TREINOS = [('interpretacao', 'Interpretação'), ('gramatica', 'Gramática'), ('escrita', 'Escrita'), ('poesia-contemporanea', 'Poesia contemporânea'), ('conto', 'Conto')]
+TREINOS = [('interpretacao', 'Interpretação'), ('gramatica', 'Gramática'), ('escrita', 'Escrita'), ('poesia-contemporanea', 'Poesia contemporânea'), ('conto', 'Conto'),
+           ('coesao', 'Coesão e modalidade'), ('apreciacao-critica', 'Apreciação crítica'), ('exposicao', 'Exposição')]
 N_TREINOS = len(TREINOS)
-POR_EXTENSO = {3: 'três', 4: 'quatro', 5: 'cinco', 6: 'seis'}[N_TREINOS]
+POR_EXTENSO = {3: 'três', 4: 'quatro', 5: 'cinco', 6: 'seis', 7: 'sete', 8: 'oito'}[N_TREINOS]
 OS_TREINOS = 'Os %s treinos' % POR_EXTENSO
 NAV = [('', OS_TREINOS)] + [(p + '/', t) for p, t in TREINOS]
 

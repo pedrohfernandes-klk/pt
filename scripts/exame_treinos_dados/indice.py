@@ -1,6 +1,7 @@
 """11/11/2026: a entrada dos treinos (exame/treinos/).
 12/11/2026: quatro cartões, com o treino da sessão 17; a contagem do título vem de base.TREINOS.
-12/11/2026: cinco cartões, com o treino da sessão 18 (conto)."""
+12/11/2026: cinco cartões, com o treino da sessão 18 (conto).
+13/11/2026: oito cartões, com os treinos das sessões 22 (coesão e modalidade), 25 (apreciação crítica) e 23 (exposição)."""
 from .base import *
 
 CARTOES = [
@@ -19,6 +20,15 @@ CARTOES = [
     ('conto', 'Treino 5. Conto', 'Uma inferência, dois apoios, um limite',
      'Maria Judite de Carvalho, «George». Inferes um traço de George a partir de um recorte de duas frases, com dois elementos textuais, e dizes o que o recorte não permite concluir.',
      'Liga-se à ' + sessao('s18', 'Conto: o que o texto deixa por dizer', '../') + ' e ao item 4 do Grupo I da 2.ª fase de 2026 (13 pontos). O conto tem direitos de autor: a página traz um recorte curto e manda ler o conto inteiro no manual.', 7),
+    ('coesao', 'Treino 6. Gramática do texto', 'O que retoma, o que situa, o que liga',
+     'Dizes para onde aponta cada expressão de um texto de imprensa, o que um conector liga e que valor tem um verbo modal, com a prova nas linhas.',
+     'Liga-se à ' + sessao('s22', 'Gramática: ligar, retomar e situar', '../') + ' e aos itens 5 e 6 do Grupo II da 2.ª fase de 2026 (13 pontos cada; estão entre os cinco itens de que contam os três melhores).', 7),
+    ('apreciacao-critica', 'Treino 7. Apreciação crítica', 'Uma apreciação crítica, da imagem à segunda versão',
+     'Uma gravura de Giovanni Battista Piranesi, em domínio público. Descreves, comentas em três aspetos e concluis, num texto de 200 a 350 palavras, como no Grupo III, que revês com a grelha oficial, aspeto a aspeto.',
+     'Liga-se à ' + sessao('s25', 'Apreciação crítica: julgar mostrando', '../') + ' e ao Grupo III da 1.ª fase de 2026 (44 pontos). A imagem da prova tem direitos de autor: o treino usa outra imagem e indica onde ver a da prova, no enunciado, p. 13.', 6),
+    ('exposicao', 'Treino 8. Exposição', 'Uma afirmação, duas reflexões, três partes',
+     'Luís de Camões, «Alma minha gentil, que te partiste» e «Amor é fogo que arde sem se ver». Comprovas uma afirmação sobre a lírica de Camões com duas reflexões, cada uma fundamentada em poemas lidos, em introdução, desenvolvimento e conclusão.',
+     'Liga-se à ' + sessao('s23', 'Exposição: explicar com uma linha clara', '../') + ' e ao item 7 do Grupo I da 2.ª fase de 2026 (13 pontos). A prova não marca um número de palavras para este item.', 8),
 ]
 assert [c[0] for c in CARTOES] == [p for p, _ in TREINOS]
 CAPITAL = POR_EXTENSO.capitalize()
@@ -35,7 +45,7 @@ CORPO = (
     '<h2>Como funciona cada treino</h2>'
     '<ul class="top">'
     '<li><b>O pedido primeiro.</b> Começas por ver o que o item manda fazer, quantas coisas e com que condições.</li>'
-    '<li><b>O texto fica contigo.</b> O poema, as linhas da prova ou o enunciado estão sempre ao lado da pergunta (em ecrãs estreitos, por cima, e podem recolher-se). Quando o texto tem direitos de autor, ficam ao lado as citações curtas e a indicação de onde o ler inteiro.</li>'
+    '<li><b>O texto fica contigo.</b> O poema, as linhas da prova, a imagem ou o enunciado estão sempre ao lado da pergunta (em ecrãs estreitos, por cima, e podem recolher-se). Quando o texto tem direitos de autor, ficam ao lado as citações curtas e a indicação de onde o ler inteiro.</li>'
     '<li><b>Três tentativas, duas pistas.</b> Se erras, recebes uma pista feita para o erro que cometeste e tentas outra vez. Se voltas a errar, recebes uma segunda pista, que te leva ao sítio do texto onde está a resposta, sem a dizer. A explicação só aparece à terceira falha. Verificar duas vezes seguidas a mesma seleção errada não gasta tentativa.</li>'
     '<li><b>Uma resposta tua.</b> Escreves sem pistas à vista, na caixa ou no papel. A caixa não é enviada para lado nenhum e nada classifica o teu texto.</li>'
     '<li><b>Duas versões.</b> A primeira versão fica ao lado da versão revista. Podes alterá-la em qualquer altura; se a alterares depois de veres os critérios, a página diz isso junto dela, para a comparação continuar honesta.</li>'
@@ -50,7 +60,7 @@ CORPO = (
 def construir():
     lint('indice', CORPO)
     out = (cabeca('../../', CAPITAL + ' treinos de exame | Português',
-                  CAPITAL + ' treinos da preparação de exame de Português: interpretação literária, gramática, escrita, comparação de poemas e inferência num conto, cada um a partir de um item oficial de 2026.', True) +
+                  CAPITAL + ' treinos da preparação de exame de Português: interpretação, gramática, texto de opinião, poesia, conto, coesão, apreciação crítica e exposição, cada um a partir de um item oficial de 2026.', True) +
            topo('../', './', '', None) + CORPO +
            rodape('../', './', '../../', '<span>As respostas ficam só neste dispositivo. Nada é enviado.</span>') + '</body></html>\n')
     return 'exame/treinos/index.html', out
