@@ -44,7 +44,10 @@ WARM_LESSONS.update({m: tuple(p.name for p in sorted((ROOT/m).glob('licao-*'))) 
 # das secções tal como estão nas lições ligadas, uma só pergunta opcional com três opções e os dois relógios.
 sys.path.insert(0, str(ROOT / 'tests'))
 from auditoria_20261028 import undo_tarefas_faceis_m3_1112  # noqa: E402
-FACEIS = ('m3-u1', 'm3-u2')
+# 13/11/2026: as duas tarefas do M1 passam ao mesmo molde (camada tarefas_faceis_m1_20261113, por cima da do M3; a auditoria
+# desfaz as duas pela ordem): conferem-se aqui da mesma maneira, na página como estava por baixo, e a página nova tem o seu contrato
+# em tests/test_tarefas_faceis_m1.py.
+FACEIS = ('m1-u1', 'm1-u2', 'm3-u1', 'm3-u2')
 
 
 def molde_de_2810(path):

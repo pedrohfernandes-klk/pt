@@ -4,6 +4,17 @@
   "m1-u1": {
    "modulo": "M1",
    "unidade": 1,
+   "autoavaliacao_so_tua": true,
+   "trocas_aluno": [
+    ["Núcleo comum (duas respostas) e um tema à escolha (A ou B)", "Duas perguntas e um tema à escolha (A ou B)"],
+    ["Respostas articuladas", "Respostas ligadas"],
+    ["o tema no topo", "a letra do tema no topo"],
+    ["o tema escolhido está no topo", "a letra do teu tema está no topo"],
+    ["Não escrever no topo o tema escolhido (A ou B).", "Não escrever no topo a letra do teu tema (A ou B)."],
+    ["mais duas linhas finais que não contam para as palavras.", "mais duas linhas finais. Não contam para as palavras: os versos citados ou copiados e as duas linhas finais."],
+    ["Fecho: ", "Duas linhas finais: "],
+    ["Fecho genérico, sem verso.", "Duas linhas finais genéricas, sem verso."]
+   ],
    "titulo": "Vozes da lírica medieval",
    "produto": "Núcleo comum (duas respostas) e um tema à escolha (A ou B), à mão, entre 200 e 240 palavras, mais duas linhas finais que não contam para as palavras. O aquecimento não conta para a nota.",
    "nota": "Os exemplos foram escritos para esta grelha com outros casos do mesmo tipo (outras cantigas, outras palavras, outras frases), nunca com as respostas da tarefa. As citações de cantigas vêm das lições do módulo.",
@@ -129,6 +140,19 @@
   "m1-u2": {
    "modulo": "M1",
    "unidade": 2,
+   "autoavaliacao_so_tua": true,
+   "trocas_aluno": [
+    ["Núcleo comum (duas respostas de cerca de 40 palavras) e uma crónica à escolha", "Duas perguntas (duas respostas de cerca de 40 palavras) e uma crónica à escolha"],
+    ["O núcleo, as fontes e o fecho ficam fora da contagem", "As respostas, as fontes e as duas linhas finais ficam fora da contagem"],
+    ["Núcleo 1: ", "Pergunta 1: "],
+    ["Núcleo 2: ", "Pergunta 2: "],
+    ["não está nos excertos, não nomeias", "não está no excerto, não nomeias"],
+    ["nos excertos do cap.", "no excerto do cap."],
+    ["Dizer o que está nos excertos sem os confrontar com a fala.", "Dizer o que está no excerto sem o confrontar com a fala."],
+    ["Contar o núcleo, as fontes ou o fecho nas", "Contar as respostas, as fontes ou as duas linhas finais nas"],
+    ["e o fecho de duas linhas.", "e as duas linhas finais."],
+    ["Entregar sem o fecho de duas linhas.", "Entregar sem as duas linhas finais."]
+   ],
    "titulo": "Crónica «Estar lá»",
    "produto": "Núcleo comum (duas respostas de cerca de 40 palavras) e uma crónica à escolha, tema A ou B, de 160 a 200 palavras, com título e fontes no fim. À mão, com consulta. O núcleo, as fontes e o fecho ficam fora da contagem; o aquecimento não conta para a nota.",
    "nota": "Os exemplos foram escritos para esta grelha com outros casos do mesmo tipo (outra fala, outra imagem, uma manhã na escola), nunca com as respostas da tarefa: são inventados, menos a gravura de D. Dinis, que vem das lições do módulo.",

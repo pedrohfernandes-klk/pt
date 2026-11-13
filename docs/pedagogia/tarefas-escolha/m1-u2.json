@@ -144,5 +144,677 @@
    "Inclui uma fala identificada como «documentada» ou «imaginada». Assinala as tuas inferências e opiniões.",
    "Confronta duas fontes e lista-as no fim. Risca uma frase sem a apagar e escreve uma versão melhor."
   ]
+ },
+ "facil": {
+  "_nota": "13/11/2026: a página da tarefa sai só desta chave (scripts/tarefa_facil.py) e de «titulo», «unidade», «aquecer» (ligação e minutos), «dossie», «dossie_titulo» e «opcional». As outras chaves antigas («aquecer.texto», «lead», «nucleo», «temas», «apoios», «criterios», «fecho», «clareza») já não aparecem na página: ficam como estavam para a leitura histórica das camadas de baixo.",
+  "kicker": "Tarefa individual, 90 minutos",
+  "fazer": [
+   "Faz o aquecimento (10 minutos).",
+   "Responde a duas perguntas.",
+   "Escolhe um tema (A ou B) e escreve uma crónica.",
+   "Escreve duas linhas finais.",
+   "Revê e entrega no Teams."
+  ],
+  "modo": "Trabalhas à mão. O aquecimento e a tarefa são com consulta: podes usar as lições do site, o caderno e o dicionário.",
+  "producao_minutos": 55,
+  "folha_versao": "20261113-facil-8",
+  "grelha_nota": "A autoavaliação da grelha é só para ti: não se entrega.",
+  "entregas": {
+   "intro": "Fotografias do teu trabalho em papel, na tarefa do Teams."
+  },
+  "quadro": {
+   "titulo": "Tempo e tamanho",
+   "colunas": [
+    "Tempo",
+    "O que fazes",
+    "Palavras"
+   ],
+   "linhas": [
+    [
+     "10 min",
+     "Aquecimento em cartões",
+     ""
+    ],
+    [
+     "10 min",
+     "Leitura do enunciado",
+     ""
+    ],
+    [
+     {
+      "t": "55 min",
+      "linhas": 3
+     },
+     "Pergunta 1",
+     "cerca de 40"
+    ],
+    [
+     null,
+     "Pergunta 2",
+     "cerca de 40"
+    ],
+    [
+     null,
+     "Tema A ou B",
+     "crónica: título e 160 a 200"
+    ],
+    [
+     "15 min",
+     "Revisão e entrega",
+     ""
+    ],
+    [
+     "90 min",
+     "Total",
+     ""
+    ]
+   ],
+   "notas": [
+    "Nos 10 minutos de leitura, lê as duas perguntas e os passos dos dois temas. Os textos<span class=\"tf-so-ecra\"> e os exemplos</span> são para consultares enquanto escreves.",
+    "Não contam para as palavras da crónica: as respostas, as fontes e as duas linhas finais."
+   ]
+  },
+  "aquecer": {
+   "titulo": "Relógio do aquecimento"
+  },
+  "textos": [
+   {
+    "id": "texto-1",
+    "rotulo": "Texto 1",
+    "titulo": "<i>Crónica de D. João I</i>, capítulo XII (o grito do pajem), de Fernão Lopes",
+    "paragrafos": [
+     {
+      "n": "[1]",
+      "t": "O pajem do Mestre, que estava à porta, como lhe disseram que fosse pela vila, segundo já era percebido, começou d'ir rijamente e ao galope, em cima do cavalo em que estava, dizendo a altas vozes, bradando pela rua: «Matam o Mestre! Matam o Mestre nos paços da rainha! Acorrei ao Mestre, que o matam!» E assim chegou a casa de Álvaro Pais, que era d'ali um grande espaço. As gentes que esto ouviram, saíam à rua, ver que cousa era, e, começando de falar uns com os outros, alvoroçaram-se nas vontades e começavam de tomar armas, cada um como melhor e mais azinha podiam.",
+      "partes": [
+       "O pajem do Mestre, que estava à porta, como lhe disseram que fosse pela vila, segundo já era percebido, começou d'ir rijamente e ao galope, em cima do cavalo em que estava, dizendo a altas vozes, bradando pela rua: «Matam o Mestre! Matam o Mestre nos paços da rainha! Acorrei ao Mestre, que o matam!»",
+       "E assim chegou a casa de Álvaro Pais, que era d'ali um grande espaço. As gentes que esto ouviram, saíam à rua, ver que cousa era, e, começando de falar uns com os outros, alvoroçaram-se nas vontades e começavam de tomar armas, cada um como melhor e mais azinha podiam."
+      ]
+     },
+     {
+      "n": "[2]",
+      "t": "Álvaro Pais, que estava já prestes e armado, com uma coifa na cabeça, segundo usança daquele tempo, cavalgou logo à pressa, em cima de um cavalo que anos havia que não cavalgara, e todos os seus criados com ele, bradando a quaisquer que achava, dizendo: «Acorramos ao Mestre, amigos! Acorramos ao Mestre, ca filho é d'el-rei D. Pedro!» E assim bradavam ele e o pajem, indo pela rua.",
+      "partes": [
+       "Álvaro Pais, que estava já prestes e armado, com uma coifa na cabeça, segundo usança daquele tempo, cavalgou logo à pressa, em cima de um cavalo que anos havia que não cavalgara, e todos os seus criados com ele, bradando a quaisquer que achava, dizendo: «Acorramos ao Mestre, amigos! Acorramos ao Mestre, ca filho é d'el-rei D. Pedro!» E assim bradavam ele e o pajem, indo pela rua."
+      ]
+     },
+     {
+      "n": "[3]",
+      "t": "Soaram as vozes do arruído pela cidade, ouvindo todos bradar que matavam o Mestre, e, assim como viúva que rei não tinha, e como se lhe este ficasse em logo de marido, se moveram todos com mão armada, correndo à pressa para hu diziam que se esto fazia, pera lhe dar vida e escusar morte. Álvaro Pais não quedava de ir pera alá, bradando a todos: «Acorramos ao Mestre, amigos! Acorramos ao Mestre, que o matam sem porquê!»",
+      "partes": [
+       "Soaram as vozes do arruído pela cidade, ouvindo todos bradar que matavam o Mestre, e, assim como viúva que rei não tinha, e como se lhe este ficasse em logo de marido, se moveram todos com mão armada, correndo à pressa para hu diziam que se esto fazia, pera lhe dar vida e escusar morte.",
+       "Álvaro Pais não quedava de ir pera alá, bradando a todos: «Acorramos ao Mestre, amigos! Acorramos ao Mestre, que o matam sem porquê!»"
+      ]
+     },
+     {
+      "n": "[4]",
+      "t": "A gente começou de se ajuntar a ele, e era tanta que era estranha cousa de ver; não cabiam pelas ruas principais e atravessavam lugares escusos, desejando cada um de ser o primeiro […].",
+      "partes": [
+       "A gente começou de se ajuntar a ele, e era tanta que era estranha cousa de ver; não cabiam pelas ruas principais e atravessavam lugares escusos, desejando cada um de ser o primeiro […]."
+      ]
+     }
+    ],
+    "glossario": [
+     [
+      "percebido",
+      "combinado"
+     ],
+     [
+      "rijamente",
+      "com força, depressa"
+     ],
+     [
+      "bradando",
+      "gritando"
+     ],
+     [
+      "espaço",
+      "distância"
+     ],
+     [
+      "esto",
+      "isto"
+     ],
+     [
+      "cousa",
+      "coisa"
+     ],
+     [
+      "alvoroçaram-se nas vontades",
+      "agitaram-se"
+     ],
+     [
+      "azinha",
+      "depressa"
+     ],
+     [
+      "prestes",
+      "pronto"
+     ],
+     [
+      "coifa",
+      "touca de malha que se usava debaixo do elmo"
+     ],
+     [
+      "usança",
+      "costume"
+     ],
+     [
+      "ca",
+      "porque"
+     ],
+     [
+      "d'el-rei",
+      "do rei"
+     ],
+     [
+      "arruído",
+      "barulho, alvoroço"
+     ],
+     [
+      "em logo de",
+      "em lugar de"
+     ],
+     [
+      "hu",
+      "onde"
+     ],
+     [
+      "pera",
+      "para"
+     ],
+     [
+      "escusar",
+      "evitar"
+     ],
+     [
+      "quedava",
+      "parava"
+     ],
+     [
+      "alá",
+      "lá"
+     ],
+     [
+      "ajuntar",
+      "juntar"
+     ],
+     [
+      "escusos",
+      "afastados"
+     ]
+    ],
+    "fonte": "Fernão Lopes, <i>Crónica de D. João I</i> (edição de 1897), cap. XII (cap. 11 na numeração habitual), grafia atualizada. Depois de […], a frase continua no capítulo.",
+    "origem": "m1/licao-m1-f06/index.html, linha 431, cartões 4 e 8, com «Ler mais»; m1/licao-m1-f20/index.html, linha 431, cartão 2, «Ler mais» (copiado letra a letra)"
+   },
+   {
+    "id": "texto-2",
+    "rotulo": "Texto 2",
+    "titulo": "<i>Crónica de D. João I</i>, capítulo CXVI (as torres e o sino da quadrilha), de Fernão Lopes",
+    "paragrafos": [
+     {
+      "n": "[1]",
+      "t": "Havia mais nestas torres muitas lanças d'armas, e bacinetes, e d'outras armaduras, que reluziam tanto, que bem mostrava cada uma torre por si que abastaria pera se defender. Em muitas delas estavam tiros bem acompanhados de pedras, e bandeiras de S. Jorge, e armas da cidade e do reino, e d'outros alguns senhores e capitães que as punham nas torres, que lhe eram encomendadas.",
+      "partes": [
+       "Havia mais nestas torres muitas lanças d'armas, e bacinetes, e d'outras armaduras, que reluziam tanto, que bem mostrava cada uma torre por si que abastaria pera se defender.",
+       "Em muitas delas estavam tiros bem acompanhados de pedras, e bandeiras de S. Jorge, e armas da cidade e do reino, e d'outros alguns senhores e capitães que as punham nas torres, que lhe eram encomendadas."
+      ]
+     },
+     {
+      "n": "[2]",
+      "t": "Ordenou o Mestre com as gentes da cidade, que fosse repartida a guarda dos muros pelos fidalgos e cidadãos, aos quais dera certas quadrilhas d'homens d'armas e besteiros pera ajuda de cada um guardar bem a sua, e em cada uma quadrilha havia um sino pera repicar, quando tal cousa viesse, e como cada um ouvia o sino da sua quadrilha, logo todos direitamente corriam pera lá […].",
+      "partes": [
+       "Ordenou o Mestre com as gentes da cidade, que fosse repartida a guarda dos muros pelos fidalgos e cidadãos",
+       "aos quais dera certas quadrilhas d'homens d'armas e besteiros pera ajuda de cada um guardar bem a sua",
+       "e em cada uma quadrilha havia um sino pera repicar, quando tal cousa viesse, e como cada um ouvia o sino da sua quadrilha, logo todos direitamente corriam pera lá […]."
+      ]
+     }
+    ],
+    "glossario": [
+     [
+      "bacinetes",
+      "capacetes"
+     ],
+     [
+      "abastaria",
+      "bastaria"
+     ],
+     [
+      "pera",
+      "para"
+     ],
+     [
+      "tiros",
+      "aqui, armas de atirar, com as suas pedras"
+     ],
+     [
+      "encomendadas",
+      "confiadas"
+     ],
+     [
+      "quadrilha",
+      "grupo encarregado de um troço da muralha"
+     ],
+     [
+      "besteiros",
+      "soldados armados de besta"
+     ],
+     [
+      "repicar",
+      "tocar"
+     ],
+     [
+      "cousa",
+      "coisa"
+     ],
+     [
+      "direitamente",
+      "diretamente"
+     ]
+    ],
+    "fonte": "Fernão Lopes, <i>Crónica de D. João I</i> (edição de 1897), cap. CXVI (cap. 115 na numeração habitual), grafia atualizada. Depois de […], a frase continua no capítulo.",
+    "origem": "m1/licao-m1-f07/index.html, linha 431, cartão 2, com «Ler mais» (copiado letra a letra)"
+   },
+   {
+    "id": "texto-3",
+    "rotulo": "Texto 3",
+    "titulo": "<i>Crónica de D. João I</i>, capítulo CXLVIII (a fome do cerco), de Fernão Lopes",
+    "paragrafos": [
+     {
+      "n": "[1]",
+      "t": "Na cidade não havia trigo pera vender, e se o havia era mui pouco, e tão caro que as pobres gentes não podiam chegar a ele, que valia cada alqueire quatro libras, e o alqueire do melhor quarenta soldos, e a canada de vinho três e quatro libras, e padeciam mui apertadamente, e dia havia aí, que ainda que dessem por um pão uma dobra, o não achavam à venda, e começaram a comer pão de bagaço de azeitona, e dos queijos das malvas e raízes d'ervas, e outras desacostumadas cousas pouco amigas da natureza. E tais i haviam, que se mantinham em alféloas.",
+      "partes": [
+       "Na cidade não havia trigo pera vender, e se o havia era mui pouco, e tão caro que as pobres gentes não podiam chegar a ele, que valia cada alqueire quatro libras, e o alqueire do melhor quarenta soldos, e a canada de vinho três e quatro libras, e padeciam mui apertadamente, e dia havia aí, que ainda que dessem por um pão uma dobra, o não achavam à venda, e começaram a comer pão de bagaço de azeitona, e dos queijos das malvas e raízes d'ervas, e outras desacostumadas cousas pouco amigas da natureza.",
+       "E tais i haviam, que se mantinham em alféloas."
+      ]
+     },
+     {
+      "n": "[2]",
+      "t": "No lugar onde costumavam a vender o trigo, andavam homens e moços esgravatando a terra, e se achavam algum grão de trigo metiam-no na boca, sem tendo outro mantimento.",
+      "partes": [
+       "No lugar onde costumavam a vender o trigo, andavam homens e moços esgravatando a terra, e se achavam algum grão de trigo metiam-no na boca, sem tendo outro mantimento."
+      ]
+     },
+     {
+      "n": "[3]",
+      "t": "Outros se fartavam d'ervas e bebiam tanta água, que achavam homens e cachopos jazer mortos inchados nas praças, e em outros lugares.",
+      "partes": [
+       "Outros se fartavam d'ervas e bebiam tanta água, que achavam homens e cachopos jazer mortos inchados nas praças, e em outros lugares."
+      ]
+     }
+    ],
+    "glossario": [
+     [
+      "pera",
+      "para"
+     ],
+     [
+      "mui",
+      "muito"
+     ],
+     [
+      "alqueire",
+      "medida de cereais"
+     ],
+     [
+      "libras",
+      "moeda da época, como os soldos e a dobra"
+     ],
+     [
+      "canada",
+      "medida de vinho"
+     ],
+     [
+      "padeciam",
+      "sofriam"
+     ],
+     [
+      "bagaço",
+      "o que resta da azeitona depois de espremida"
+     ],
+     [
+      "malvas",
+      "plantas silvestres"
+     ],
+     [
+      "desacostumadas",
+      "fora do costume"
+     ],
+     [
+      "cousa",
+      "coisa"
+     ],
+     [
+      "i",
+      "aí"
+     ],
+     [
+      "alféloas",
+      "doces de açúcar ou mel"
+     ],
+     [
+      "moços",
+      "rapazes"
+     ],
+     [
+      "esgravatando",
+      "remexendo a terra"
+     ],
+     [
+      "mantimento",
+      "alimento"
+     ],
+     [
+      "fartavam",
+      "enchiam"
+     ],
+     [
+      "cachopos",
+      "rapazes"
+     ],
+     [
+      "jazer",
+      "estar deitado"
+     ]
+    ],
+    "fonte": "Fernão Lopes, <i>Crónica de D. João I</i> (edição de 1897), cap. CXLVIII, grafia atualizada.",
+    "origem": "m1/licao-m1-f07/index.html, linha 431, cartões 5 e 10, com «Ler mais» (copiado letra a letra); m1/licao-m1-f20/index.html, linha 431, cartão 7 (duas palavras do vocabulário)"
+   }
+  ],
+  "perguntas": [
+   {
+    "titulo": "A cidade como personagem.",
+    "meta": "Cerca de 40 palavras.",
+    "relogio": "Começa este relógio depois da leitura.",
+    "textos": [
+     "texto-1"
+    ],
+    "pedido_titulo": "O que fazes",
+    "intro": "Como mostra Fernão Lopes a cidade a agir em conjunto, depois do grito do pajem?",
+    "alineas": [
+     "Escolhe uma passagem do capítulo XII (<a href=\"#texto-1\">Texto 1</a>).",
+     "Cita essa passagem.",
+     "Explica o que ela faz ver."
+    ],
+    "ajudas": [
+     "A passagem mostra a cidade: a voz de uma só personagem não prova a multidão."
+    ],
+    "citar": "Copia as palavras exatas do texto. Põe-nas entre aspas: «…».",
+    "exemplos": [
+     {
+      "titulo": "Outra frase: uma escola, ao toque da campainha",
+      "paragrafos": [
+       {
+        "al": "Alíneas b) e c):",
+        "t": "Com uma frase inventada: em «Ao toque da campainha, a escola inteira levantou-se e correu para o portão.», o sujeito é um só, «a escola inteira», e os verbos vêm no singular: os alunos deixam de se ver um a um e passam a ser um corpo que se levanta e corre."
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "titulo": "O que pode ser apresentado como documentado?",
+    "meta": "Cerca de 40 palavras.",
+    "textos": [],
+    "pedido_titulo": "O que fazes",
+    "intro": "Um rascunho inventado atribui ao pajem esta fala documentada: «Matam o Mestre! Vamos pra rua!».",
+    "grupos": [
+     {
+      "intro": "Compara essa fala com o excerto do capítulo XII (<a href=\"#texto-1\">Texto 1</a>, na pergunta 1):",
+      "alineas": [
+       "Identifica o que não aparece no excerto."
+      ]
+     },
+     {
+      "intro": "Em «pra»:",
+      "alineas": [
+       "Indica o som que cai.",
+       "Indica onde cai: no início, no meio ou no fim da palavra.",
+       "Indica o nome do processo."
+      ]
+     },
+     {
+      "intro": "Essa forma («pra») pode ficar no relato, numa fala documentada ou numa fala imaginada?",
+      "alineas": [
+       "Decide onde pode ficar.",
+       "Justifica a tua decisão."
+      ]
+     }
+    ],
+    "exemplos": [
+     {
+      "titulo": "Outra fala: o jornal de uma escola",
+      "paragrafos": [
+       "Outra fala: o jornal da escola cita o diretor, «Bora lá, malta!», e um rascunho escreve, como fala documentada, «Bora lá, malta! Todos ao portão!».",
+       {
+        "al": "Alínea a):",
+        "t": "«Todos ao portão!» não está no jornal, que só regista «Bora lá, malta!»."
+       },
+       {
+        "al": "Alíneas b), c) e d):",
+        "t": "Em «bora», de «embora», cai o som do início, «em»: aférese."
+       },
+       {
+        "al": "Alíneas e) e f):",
+        "t": "Aqui, «bora» fica na fala documentada, porque é a palavra que o jornal regista; no relato, escrevo «vamos embora»; numa fala imaginada, teria de a marcar como imaginada."
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "temas_titulo": "Escolhe um tema: A ou B",
+  "temas_nota": "Crónica: título e 160 a 200 palavras.",
+  "temas_topo": "Escreve a letra do teu tema (A ou B) no topo.",
+  "temas_figuras": {
+   "titulo": "As duas imagens",
+   "notas": [
+    "Servem aos dois temas.<span class=\"tf-so-ecra\"> O crédito de cada imagem está atrás do «i».</span>"
+   ],
+   "itens": [
+    {
+     "id": "imagem-1",
+     "rotulo": "Imagem 1",
+     "nome": "O dia do grito, numa pintura de cerca de 1860",
+     "de": "m1/licao-m1-f06/index.html",
+     "src": "../../img/fontes/morte-conde-andeiro.jpg",
+     "alt": "Numa sala de arcos góticos, um homem de gibão claro jaz no chão, de braço estendido. À volta, homens armados de espada na mão, dois com plumas vermelhas no capacete; à direita, outros entram a correr, de braços no ar.",
+     "largura": 420,
+     "altura": 307,
+     "legenda": "José de Sousa Azevedo, <i>Morte do Conde Andeiro</i>, c. 1860.",
+     "credito_rotulo": "Créditos da imagem: Morte do Conde Andeiro",
+     "credito": "José de Sousa Azevedo, <i>Morte do Conde Andeiro</i> (c. 1860), Museu Nacional de Soares dos Reis, Porto. Domínio público. <a href=\"https://commons.wikimedia.org/w/index.php?curid=1539861\" rel=\"noopener\">Wikimedia Commons</a>."
+    },
+    {
+     "id": "imagem-2",
+     "rotulo": "Imagem 2",
+     "nome": "O cerco de Lisboa de 1384, numa iluminura do século XV",
+     "de": "m1/licao-m1-f07/index.html",
+     "src": "../../img/fontes/cerco-lisboa-froissart.jpg",
+     "alt": "Iluminura: à esquerda, o arraial, com tendas, soldados de armadura, canhões apontados à cidade e dois homens caídos no chão; ao fundo, a água com navios; à direita, Lisboa, com muralhas, torres e uma porta, e lá dentro gente reunida numa praça.",
+     "largura": 640,
+     "altura": 725,
+     "legenda": "O cerco de Lisboa de 1384, iluminura das <i>Crónicas</i> de Froissart, século XV.",
+     "credito_rotulo": "Créditos da imagem: o cerco de Lisboa de 1384",
+     "credito": "O cerco de Lisboa de 1384, iluminura das <i>Crónicas</i> de Froissart, século XV. Domínio público. <a href=\"https://commons.wikimedia.org/wiki/File:Siege_of_Lisbon_1384.JPG\" rel=\"noopener\">commons.wikimedia.org</a>"
+    }
+   ]
+  },
+  "temas": [
+   {
+    "letra": "A",
+    "nome": "A língua do cronista",
+    "intro": "Escreve uma crónica sobre um momento que Fernão Lopes conta.",
+    "passos": [
+     {
+      "t": "Conta um destes momentos:",
+      "sub": [
+       "o grito do pajem (cap. XII, <a href=\"#texto-1\">Texto 1</a>, na pergunta 1);",
+       "o sino da quadrilha (cap. CXVI, <a href=\"#texto-2\">Texto 2</a>);",
+       "a fome do cerco (cap. CXLVIII, <a href=\"#texto-3\">Texto 3</a>)."
+      ]
+     },
+     "Inclui uma gradação criada por ti.",
+     "Inclui uma passagem copiada exatamente do capítulo escolhido.",
+     {
+      "t": "Como segunda fonte, usa uma das duas <a href=\"#imagens\">imagens</a> ou a fonte do teu plano da aula 13.",
+      "sub": [
+       "A fonte do teu plano da aula 13 só serve se for do mesmo momento."
+      ]
+     }
+    ],
+    "material": {
+     "exemplos": [
+      {
+       "titulo": "Outro caso: uma gradação numa escola",
+       "paragrafos": [
+        {
+         "al": "Passo 2:",
+         "t": "Primeiro um aluno, depois uma turma, por fim a escola inteira."
+        }
+       ]
+      }
+     ]
+    }
+   },
+   {
+    "letra": "B",
+    "nome": "A crónica e a imagem",
+    "intro": "Escreve uma crónica e compara o que Fernão Lopes conta com uma imagem.",
+    "antes": [
+     "O dia do grito está no <a href=\"#texto-1\">Texto 1</a>, na pergunta 1, e na Imagem 1. O cerco está no <a href=\"#texto-2\">Texto 2</a>, no <a href=\"#texto-3\">Texto 3</a> e na Imagem 2."
+    ],
+    "passos": [
+     {
+      "t": "Conta o dia do grito ou o cerco.",
+      "sub": [
+       "Podes começar num lugar de hoje que tenhas observado."
+      ]
+     },
+     "Compara a crónica de Fernão Lopes com a <a href=\"#imagens\">imagem</a> desse momento: o que cada uma mostra ou deixa de fora.",
+     "Diz o que a imagem escolhe destacar.",
+     "Usa dois factos do <a href=\"#dossie\">dossiê</a>."
+    ],
+    "material": {
+     "titulo": "Só para o tema B: o dossiê",
+     "dossie": true,
+     "exemplos": [
+      {
+       "titulo": "Outra imagem: a gravura de D. Dinis",
+       "paragrafos": [
+        {
+         "al": "Passos 3 e 4:",
+         "t": "A gravura de 1594 põe um livro na mão de D. Dinis, rei de 1279 a 1325: foi feita quase três séculos depois dele, e o livro, suponho, é escolha de quem o quis mostrar poeta."
+        }
+       ]
+      }
+     ]
+    }
+   }
+  ],
+  "temas_comum": {
+   "titulo": "Nos dois temas, a tua crónica tem tudo isto",
+   "passos": [
+    "Dá um título à crónica.",
+    "Começa dentro da ação.",
+    "Mostra um pormenor.",
+    "Põe a população a agir.",
+    "Inclui uma fala identificada como «documentada» ou «imaginada».",
+    "Assinala as tuas inferências e opiniões.",
+    "Confronta duas fontes.",
+    "Lista as duas fontes no fim.",
+    "Risca uma frase sem a apagar e escreve uma versão melhor."
+   ],
+   "exemplos": [
+    {
+     "titulo": "Outro lugar e outra hora: uma manhã numa escola",
+     "paragrafos": [
+      {
+       "al": "Passos 2, 3 e 4:",
+       "t": "Sexta-feira, oito e um quarto, na rua de cima: ouve-se a campainha antes de se ver a escola, e as mochilas desatam a correr, uma, outra, a rua inteira para o portão."
+      },
+      {
+       "al": "Passos 5, 6 e 7:",
+       "t": "O jornal da escola conta a corrida para o portão; a fotografia da Rita mostra o portão, mas não quem corre. «Esperem por mim!» (fala imaginada). Que muitos chegaram tarde, concluo eu: o jornal conta gente a correr depois da campainha."
+      },
+      {
+       "al": "Passo 8:",
+       "t": "Fontes: jornal da escola; fotografia da Rita."
+      }
+     ]
+    }
+   ]
+  },
+  "temas_material": {
+   "titulo": "Para os dois temas: os Textos 2 e 3 (o cerco de Lisboa)",
+   "textos": [
+    "texto-2",
+    "texto-3"
+   ]
+  },
+  "finais": {
+   "titulo": "Duas linhas finais",
+   "passos": [
+    "Responde: que escolha de Fernão Lopes usaste na tua crónica (fazer ver, a multidão como uma só figura, a gradação, a fala em discurso direto)?",
+    "Aponta a tua frase que a mostra."
+   ]
+  },
+  "verificar_titulo": "Antes de entregar, verifica",
+  "verificar_texto": "Responde sim ou não. Se for não, completa o teu trabalho.",
+  "verificar": [
+   "Respondi a todas as alíneas das duas perguntas?",
+   "A crónica tem título e 160 a 200 palavras?",
+   "Fiz todos os passos do meu tema?",
+   "A crónica começa dentro da ação, mostra um pormenor e põe a população a agir?",
+   "A fala está identificada como «documentada» ou «imaginada»?",
+   "Assinalei as minhas inferências e opiniões?",
+   "Confrontei duas fontes e listei-as no fim?",
+   "Risquei uma frase sem a apagar e escrevi uma versão melhor?",
+   "As duas linhas finais apontam uma frase da minha crónica?",
+   "A letra do meu tema (A ou B) está no topo?"
+  ],
+  "exemplo_titulo": [
+   "Ver um exemplo com outro caso",
+   "Ver dois exemplos com outros casos"
+  ],
+  "entrega_titulo": "Entrega no Teams",
+  "entrega": [
+   "Fotografa as respostas, a crónica com a lista das fontes e as duas linhas finais.",
+   "Confirma que as fotografias mostram o trabalho completo.",
+   "Entrega as fotografias na tarefa do Teams."
+  ],
+  "rever_titulo": "Se precisares de rever",
+  "rever_texto": "Os Textos 1, 2 e 3 e as duas imagens já estão nesta página. As lições servem para rever a matéria.",
+  "rever": [
+   {
+    "para": "Pergunta 1",
+    "texto": "Lição F06, <a href=\"../../m1/licao-m1-f06/\">«Matam o Mestre!»</a>. Relê «O cronista diz que havia pressa?»."
+   },
+   {
+    "para": "Pergunta 2",
+    "texto": "Lição F05, <a href=\"../../m1/licao-m1-f05/\">Luna, lua: o que caiu pelo caminho</a>. Relê «Que som caiu, e onde?»."
+   },
+   {
+    "para": "Pergunta 2",
+    "texto": "Lição F10, <a href=\"../../m1/licao-m1-f10/\">Estar lá</a>. Relê «Que fala precisa de aviso?»."
+   },
+   {
+    "para": "Tema A",
+    "texto": "Lição F07, <a href=\"../../m1/licao-m1-f07/\">Lisboa cercada</a>. Relê «Podias trocar a ordem do que se comia?»."
+   },
+   {
+    "para": "Tema B",
+    "texto": "Lição F07, <a href=\"../../m1/licao-m1-f07/\">Lisboa cercada</a>. No fim da lição, abre «Para ir mais longe» e relê «O arraial de Castela»."
+   },
+   {
+    "para": "Temas A e B",
+    "texto": "Lição F10, <a href=\"../../m1/licao-m1-f10/\">Estar lá</a>. Relê «Um começo, por dentro: onde estás?» e «Dois números: qual escreves?»."
+   },
+   {
+    "para": "Temas A e B",
+    "texto": "Lição F20, <a href=\"../../m1/licao-m1-f20/\">Entrar na cena</a>. Relê «Sem a palavra, como sabes que é fome?» e «Marta ou Rui: quem prova o que diz?»."
+   }
+  ],
+  "opcional_titulo": "Experimentar uma pergunta"
  }
 }

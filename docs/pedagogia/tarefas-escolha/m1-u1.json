@@ -135,5 +135,615 @@
   "produto": "Responde às duas perguntas e faz <strong>apenas um</strong> dos temas: uma pequena cantiga (A) ou a proposta de um cartaz (B).",
   "etapa": "1. Responde às duas perguntas",
   "entrega": "Escreve o tema escolhido (A ou B) no topo. Fotografa as respostas, o tema escolhido e as duas linhas finais. Confirma que as fotografias mostram o trabalho completo e entrega-as na tarefa do Teams."
+ },
+ "facil": {
+  "_nota": "13/11/2026: a página da tarefa sai só desta chave (scripts/tarefa_facil.py) e de «titulo», «unidade», «aquecer» (ligação e minutos), «dossie», «dossie_titulo» e «opcional». As outras chaves antigas («aquecer.texto», «lead», «nucleo», «temas», «apoios», «criterios», «fecho», «clareza») já não aparecem na página: ficam como estavam para a leitura histórica das camadas de baixo.",
+  "kicker": "Tarefa individual, 90 minutos",
+  "fazer": [
+   "Faz o aquecimento (10 minutos).",
+   "Responde a duas perguntas.",
+   "Escolhe um tema: escrever uma pequena cantiga (A) ou a proposta de um cartaz (B).",
+   "Escreve duas linhas finais.",
+   "Revê e entrega no Teams."
+  ],
+  "modo": "Trabalhas à mão. O aquecimento e a tarefa são com consulta: podes usar as lições do site, o caderno e o dicionário.",
+  "producao_minutos": 55,
+  "folha_versao": "20261113-facil-8",
+  "grelha_nota": "A autoavaliação da grelha é só para ti: não se entrega.",
+  "entregas": {
+   "intro": "Fotografias do teu trabalho em papel, na tarefa do Teams."
+  },
+  "quadro": {
+   "titulo": "Tempo e tamanho",
+   "colunas": [
+    "Tempo",
+    "O que fazes",
+    "Palavras"
+   ],
+   "linhas": [
+    [
+     "10 min",
+     "Aquecimento em cartões",
+     ""
+    ],
+    [
+     "10 min",
+     "Leitura do enunciado",
+     ""
+    ],
+    [
+     {
+      "t": "55 min",
+      "linhas": 3
+     },
+     "Pergunta 1",
+     "orientação: cerca de 60"
+    ],
+    [
+     null,
+     "Pergunta 2",
+     "orientação: cerca de 60"
+    ],
+    [
+     null,
+     "Tema A ou B",
+     "orientação: 80 a 120"
+    ],
+    [
+     "15 min",
+     "Revisão e entrega",
+     ""
+    ],
+    [
+     "90 min",
+     "Total",
+     "200 a 240"
+    ]
+   ],
+   "notas": [
+    "Nos 10 minutos de leitura, lê as duas perguntas e os passos dos dois temas. Os textos<span class=\"tf-so-ecra\"> e os exemplos</span> são para consultares enquanto escreves.",
+    "Não contam para as palavras: os versos citados ou copiados e as duas linhas finais."
+   ]
+  },
+  "aquecer": {
+   "titulo": "Relógio do aquecimento"
+  },
+  "textos": [
+   {
+    "id": "texto-1",
+    "rotulo": "Texto 1",
+    "titulo": "«Ondas do mar de Vigo», de Martim Codax",
+    "numerar": 5,
+    "estrofes": [
+     {
+      "rotulo": "Estrofe 1",
+      "versos": [
+       "Ondas do mar de Vigo,",
+       "se vistes meu amigo?",
+       "e ai Deus, se verrá cedo?"
+      ]
+     },
+     {
+      "rotulo": "Estrofe 2",
+      "versos": [
+       "Ondas do mar levado,",
+       "se vistes meu amado?",
+       "e ai Deus, se verrá cedo?"
+      ]
+     },
+     {
+      "rotulo": "Estrofe 3",
+      "versos": [
+       "Se vistes meu amigo,",
+       "o por que eu sospiro?",
+       "e ai Deus, se verrá cedo?"
+      ]
+     },
+     {
+      "rotulo": "Estrofe 4",
+      "versos": [
+       "Se vistes meu amado,",
+       "o por que hei gram coidado?",
+       "e ai Deus, se verrá cedo?"
+      ]
+     }
+    ],
+    "glossario": [
+     [
+      "amigo",
+      "o namorado"
+     ],
+     [
+      "verrá",
+      "virá"
+     ],
+     [
+      "cedo",
+      "em breve"
+     ],
+     [
+      "levado",
+      "agitado"
+     ],
+     [
+      "o por que eu sospiro",
+      "aquele por quem eu suspiro"
+     ],
+     [
+      "hei gram coidado",
+      "tenho grande cuidado, preocupação"
+     ]
+    ],
+    "fonte": "Martim Codax (séc. XIII), «Ondas do mar de Vigo», cantiga 1308, <i>Cantigas Medievais Galego-Portuguesas</i> (FCSH/NOVA): a cantiga inteira, com a grafia da edição.",
+    "origem": "m1/licao-m1-f19/index.html, linha 431, cartão 2 (copiado letra a letra)"
+   },
+   {
+    "id": "texto-2",
+    "rotulo": "Texto 2",
+    "titulo": "«Quer'eu em maneira de proençal», de D. Dinis",
+    "numerar": 5,
+    "estrofes": [
+     {
+      "rotulo": "Estrofe 1",
+      "versos": [
+       "Quer'eu em maneira de proençal",
+       "fazer agora um cantar d'amor",
+       "e querrei muit'i loar mia senhor",
+       "a que prez nem fremosura nom fal,",
+       "nem bondade; e mais vos direi en:",
+       "tanto a fez Deus comprida de bem",
+       "que mais que todas las do mundo val."
+      ]
+     },
+     {
+      "rotulo": "Estrofe 2",
+      "versos": [
+       "Ca mia senhor quiso Deus fazer tal,",
+       "quando a fez, que a fez sabedor",
+       "de todo bem e de mui gram valor,",
+       "e com tod'est[o] é mui comunal",
+       "ali u deve; er deu-lhi bom sem",
+       "e des i nom lhi fez pouco de bem",
+       "quando nom quis que lh'outra foss'igual."
+      ]
+     },
+     {
+      "rotulo": "Estrofe 3",
+      "versos": [
+       "Ca em mia senhor nunca Deus pôs mal,",
+       "mais pôs i prez e beldad'e loor",
+       "e falar mui bem e riir melhor",
+       "que outra molher; des i é leal",
+       "muit'; e por esto nom sei hoj'eu quem",
+       "possa compridamente no seu bem",
+       "falar, ca nom há, tra'lo seu bem, al."
+      ]
+     }
+    ],
+    "glossario": [
+     [
+      "em maneira de proençal",
+      "à maneira dos trovadores da Provença"
+     ],
+     [
+      "querrei",
+      "quererei"
+     ],
+     [
+      "loar",
+      "louvar"
+     ],
+     [
+      "mia senhor",
+      "a minha senhora"
+     ],
+     [
+      "prez",
+      "valor, mérito"
+     ],
+     [
+      "fremosura",
+      "formosura, beleza"
+     ],
+     [
+      "nom fal",
+      "não falta"
+     ],
+     [
+      "direi en",
+      "direi disso"
+     ],
+     [
+      "comprida de bem",
+      "cheia de qualidades"
+     ],
+     [
+      "val",
+      "vale"
+     ],
+     [
+      "ca",
+      "pois"
+     ],
+     [
+      "quiso",
+      "quis"
+     ],
+     [
+      "sabedor",
+      "conhecedora"
+     ],
+     [
+      "comunal",
+      "simples, acessível"
+     ],
+     [
+      "ali u deve",
+      "onde convém"
+     ],
+     [
+      "er deu-lhi bom sem",
+      "e deu-lhe bom juízo"
+     ],
+     [
+      "des i",
+      "além disso"
+     ],
+     [
+      "beldade",
+      "beleza"
+     ],
+     [
+      "loor",
+      "louvor"
+     ],
+     [
+      "riir",
+      "rir"
+     ],
+     [
+      "compridamente",
+      "completamente"
+     ],
+     [
+      "tra'lo seu bem, al",
+      "outra coisa além do seu bem"
+     ]
+    ],
+    "fonte": "D. Dinis (rei de 1279 a 1325), «Quer'eu em maneira de proençal», cantiga 544, <i>Cantigas Medievais Galego-Portuguesas</i> (FCSH/NOVA): a cantiga inteira, com a grafia da edição. Entre parênteses retos, letras acrescentadas pelos editores.",
+    "origem": "m1/licao-m1-f04/index.html, linha 431, cartão 5, com a estrofe 2 de «Ler mais» (copiado letra a letra); m1/licao-m1-f19/index.html, linha 431, cartão 7 (duas palavras do vocabulário)",
+    "escolher": {
+     "de": 8,
+     "ate": 21
+    }
+   },
+   {
+    "id": "texto-3",
+    "rotulo": "Texto 3",
+    "titulo": "«Ai dona fea, fostes-vos queixar», de João Garcia de Guilhade",
+    "numerar": 5,
+    "estrofes": [
+     {
+      "rotulo": "Estrofe 1",
+      "versos": [
+       "Ai dona fea, fostes-vos queixar",
+       "que vos nunca louv'en[o] meu cantar;",
+       "mais ora quero fazer um cantar",
+       "em que vos loarei todavia;",
+       "e vedes como vos quero loar:",
+       "dona fea, velha e sandia!"
+      ]
+     },
+     {
+      "rotulo": "Estrofe 2",
+      "versos": [
+       "Dona fea, se Deus mi perdom,",
+       "pois havedes [a]tam gram coraçom",
+       "que vos eu loe, em esta razom",
+       "vos quero já loar todavia;",
+       "e vedes qual será a loaçom:",
+       "dona fea, velha e sandia!"
+      ]
+     },
+     {
+      "rotulo": "Estrofe 3",
+      "versos": [
+       "Dona fea, nunca vos eu loei",
+       "em meu trobar, pero muito trobei;",
+       "mais ora já um bom cantar farei",
+       "em que vos loarei todavia;",
+       "e direi-vos como vos loarei:",
+       "dona fea, velha e sandia!"
+      ]
+     }
+    ],
+    "glossario": [
+     [
+      "fea",
+      "feia"
+     ],
+     [
+      "louv'en[o]",
+      "louvei no"
+     ],
+     [
+      "mais ora",
+      "mas agora"
+     ],
+     [
+      "loarei",
+      "louvarei"
+     ],
+     [
+      "todavia",
+      "sempre, de qualquer modo"
+     ],
+     [
+      "vedes",
+      "vede, reparai"
+     ],
+     [
+      "sandia",
+      "louca"
+     ],
+     [
+      "coraçom",
+      "coração"
+     ],
+     [
+      "loaçom",
+      "louvor"
+     ],
+     [
+      "pero",
+      "embora"
+     ],
+     [
+      "trobei",
+      "trovei"
+     ]
+    ],
+    "fonte": "João Garcia de Guilhade (séc. XIII), «Ai dona fea, fostes-vos queixar», cantiga 1520, <i>Cantigas Medievais Galego-Portuguesas</i> (FCSH/NOVA): a cantiga inteira, com a grafia da edição. Entre parênteses retos, letras acrescentadas pelos editores.",
+    "origem": "m1/licao-m1-f04/index.html, linha 431, cartão 10 (copiado letra a letra); m1/licao-m1-f19/index.html, linha 431, cartão 7 (duas palavras do vocabulário)",
+    "escolher": {
+     "de": 7,
+     "ate": 18
+    }
+   }
+  ],
+  "perguntas": [
+   {
+    "titulo": "Codax: voz, repetição e sons.",
+    "meta": "Orientação: cerca de 60 palavras.",
+    "relogio": "Começa este relógio depois da leitura.",
+    "textos": [
+     "texto-1"
+    ],
+    "pedido_titulo": "O que fazes",
+    "grupos": [
+     {
+      "intro": "Em «Ondas do mar de Vigo» (<a href=\"#texto-1\">Texto 1</a>):",
+      "alineas": [
+       "Identifica quem fala.",
+       "Identifica a quem fala.",
+       "Cita uma repetição.",
+       "Classifica essa repetição: dá-lhe o nome.",
+       "Explica como essa repetição prolonga a espera."
+      ]
+     },
+     {
+      "intro": "Em <i>mare</i> &gt; mar e <i>malu</i> &gt; mau (o latim <i>mare</i> deu «mar»; o latim <i>malu</i> deu «mau»), para cada palavra:",
+      "alineas": [
+       "Indica o som que cai.",
+       "Indica o lugar desse som: início, meio ou fim da palavra.",
+       "Indica o nome do processo."
+      ]
+     }
+    ],
+    "ajudas": [
+     "Os nomes das repetições: refrão, paralelismo e leixa-pren."
+    ],
+    "citar": "Copia as palavras exatas do texto. Põe-nas entre aspas: «…».",
+    "exemplos": [
+     {
+      "titulo": "Outra cantiga: «Sedia-m'eu na ermida de Sam Simion», de Mendinho",
+      "paragrafos": [
+       {
+        "al": "Alíneas a) e b):",
+        "t": "Quem escreve é Mendinho; quem diz «eu» é a rapariga que espera, e não fala a ninguém: conta, sozinha na ermida, que o mar a cerca."
+       },
+       {
+        "al": "Alíneas c), d) e e):",
+        "t": "O refrão, «Eu atendendo meu amig', eu a[tendendo]», volta igual no fim de todas as estrofes: o perigo sobe, o verso fica, e a espera não cede."
+       }
+      ]
+     },
+     {
+      "titulo": "Outra palavra: <i>alevantada</i> &gt; levantada",
+      "paragrafos": [
+       {
+        "al": "Alíneas f), g) e h):",
+        "t": "Em alevantada > levantada cai o «a» do início: aférese."
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "titulo": "D. Dinis e Guilhade: louvor ou crítica?",
+    "meta": "Orientação: cerca de 60 palavras.",
+    "textos": [
+     "texto-2",
+     "texto-3"
+    ],
+    "pedido_titulo": "O que fazes",
+    "intro": "No Texto 2 (D. Dinis) e no Texto 3 (Guilhade), a voz promete louvar uma senhora.",
+    "barra": "Nos textos, uma barra ao lado marca os versos fora da primeira estrofe.",
+    "alineas": [
+     "Indica quem cumpre a promessa de louvar.",
+     "Cita uma passagem do Texto 2, fora da primeira estrofe (versos 8 a 21).",
+     "Cita uma passagem do Texto 3, fora da primeira estrofe (versos 7 a 18).",
+     "Na cantiga que não cumpre a promessa, identifica o recurso expressivo.",
+     "Explica como funciona esse recurso."
+    ],
+    "ajudas": [
+     "Para explicar, mostra na passagem o que se diz e o que o desmente."
+    ],
+    "citar": "Copia as palavras exatas do texto. Põe-nas entre aspas: «…».",
+    "exemplos": [
+     {
+      "titulo": "Outras frases: um elogio a uma sopa e um elogio a um autocarro",
+      "paragrafos": [
+       {
+        "al": "Alínea a), a promessa que se cumpre:",
+        "t": "Diante de uma sopa boa, «Que sopa boa!» cumpre o elogio: nada o desdiz."
+       },
+       {
+        "al": "Alíneas d) e e), a promessa que não se cumpre:",
+        "t": "Depois de uma hora à espera do autocarro, «Que rapidez!» diz um elogio e a hora de espera mostra o contrário."
+       },
+       "Dou o nome do recurso e aponto o que se diz, «rapidez», e o que o desmente, a hora à espera."
+      ]
+     }
+    ]
+   }
+  ],
+  "temas_titulo": "Escolhe um tema: A ou B",
+  "temas_nota": "Orientação: 80 a 120 palavras.",
+  "temas_topo": "Escreve a letra do teu tema (A ou B) no topo.",
+  "temas": [
+   {
+    "letra": "A",
+    "nome": "A forma de Codax, hoje",
+    "intro": "Uma aplicação promete «Chega já», mas adia a entrega.",
+    "antes": [
+     "A cantiga de Codax está no <a href=\"#texto-1\">Texto 1</a>, na pergunta 1."
+    ],
+    "passos": [
+     {
+      "t": "Escreve duas estrofes. As tuas estrofes cumprem tudo isto:",
+      "sub": [
+       "cada estrofe tem três versos;",
+       "têm paralelismo;",
+       "têm um refrão que repete a promessa;",
+       "num verso, mostram que a promessa não se cumpre."
+      ]
+     },
+     "Cita um verso de Codax.",
+     "Explica o que imitaste.",
+     "Indica uma diferença entre a espera que inventaste e a da cantiga."
+    ],
+    "material": {
+     "exemplos": [
+      {
+       "titulo": "Outra promessa e outra cantiga: o painel de uma paragem, à maneira de Mendinho",
+       "paragrafos": [
+        "Sentada na paragem do bairro, / já passou a chuva da manhã. / Dois minutos, diz o painel.",
+        "Sentada na paragem da escola, / já passou o vento da tarde. / Dois minutos, diz o painel.",
+        {
+         "al": "Passo 1, o verso que mostra que a promessa não se cumpre:",
+         "t": "O verso «já passou o vento da tarde» desmente o refrão: da manhã à tarde, o painel continua a prometer dois minutos."
+        },
+        {
+         "al": "Passos 2 e 3:",
+         "t": "Imitei «Sedia-m'eu na ermida de Sam Simion»: também começo sentada, à espera, num sítio que digo logo no primeiro verso."
+        },
+        {
+         "al": "Passo 4:",
+         "t": "A diferença: a rapariga de Mendinho não tem barqueiro e não sabe remar, e sair dali já não depende dela; eu posso desistir e ir a pé."
+        }
+       ]
+      }
+     ]
+    }
+   },
+   {
+    "letra": "B",
+    "nome": "A cantiga e o seu público",
+    "intro": "Imagina um cartaz para um concerto de «Ondas do mar de Vigo». Entregas a proposta escrita do cartaz.",
+    "antes": [
+     "A cantiga está no <a href=\"#texto-1\">Texto 1</a>, na pergunta 1."
+    ],
+    "passos": [
+     "Descreve a imagem em duas frases.",
+     "Justifica a imagem com dois factos do <a href=\"#dossie\">dossiê</a>.",
+     "Escolhe um verso para o cartaz.",
+     "Explica a escolha.",
+     "Indica o que o cartaz não pode prometer a quem vai ouvir."
+    ],
+    "material": {
+     "titulo": "Só para o tema B: o dossiê",
+     "dossie": true,
+     "exemplos": [
+      {
+       "titulo": "Outra cantiga: um concerto com a cantiga de Mendinho",
+       "paragrafos": [
+        "No cartaz, a ilha de San Simón com a água à volta e, ao centro, uma rapariga sentada, de costas.",
+        "Por baixo, o refrão «Eu atendendo meu amig', eu a[tendendo]» e o nome dos DOA.",
+        "A ilha, porque a ermida ficava numa ilha da ria de Vigo; os DOA, porque é este grupo galego que a canta hoje.",
+        "O refrão, porque é o verso que não muda quando o mar sobe.",
+        "O cartaz não pode prometer a melodia medieval: desta cantiga, a melodia não chegou até nós, e os DOA cantam uma interpretação de hoje."
+       ]
+      }
+     ]
+    }
+   }
+  ],
+  "finais": {
+   "titulo": "Duas linhas finais",
+   "passos": [
+    "Responde: o que passaste a verificar quando uma cantiga repete ou promete?",
+    "Aponta o verso que te ajudou."
+   ]
+  },
+  "verificar_titulo": "Antes de entregar, verifica",
+  "verificar_texto": "Responde sim ou não. Se for não, completa o teu trabalho.",
+  "verificar": [
+   "Respondi às oito alíneas da pergunta 1?",
+   "Para <i>mare</i> e para <i>malu</i>, indiquei o som, o lugar e o nome do processo?",
+   "Na pergunta 2, citei uma passagem de cada cantiga, fora da primeira estrofe?",
+   "Identifiquei o recurso expressivo e expliquei como funciona?",
+   "Fiz todos os passos do meu tema?",
+   "As respostas ligam-se (não estão soltas)?",
+   "Tenho 200 a 240 palavras?",
+   "Revi a escrita?",
+   "As duas linhas finais apontam um verso?",
+   "A letra do meu tema (A ou B) está no topo?"
+  ],
+  "exemplo_titulo": [
+   "Ver um exemplo com outro caso",
+   "Ver dois exemplos com outros casos"
+  ],
+  "entrega_titulo": "Entrega no Teams",
+  "entrega": [
+   "Fotografa as respostas, o texto do teu tema e as duas linhas finais.",
+   "Confirma que as fotografias mostram o trabalho completo.",
+   "Entrega as fotografias na tarefa do Teams."
+  ],
+  "rever_titulo": "Se precisares de rever",
+  "rever_texto": "Os Textos 1, 2 e 3 já estão nesta página. As lições servem para rever a matéria.",
+  "rever": [
+   {
+    "para": "Pergunta 1",
+    "texto": "Lição F02, <a href=\"../../m1/licao-m1-f02/\">Cercada pelas ondas</a>. Relê «O que fica igual quando o mar sobe?» (refrão), «Que muda da estrofe 1 para a 2?» (paralelismo) e «Que verso passa para a estrofe 3?» (leixa-pren)."
+   },
+   {
+    "para": "Pergunta 1",
+    "texto": "Lição F05, <a href=\"../../m1/licao-m1-f05/\">Luna, lua: o que caiu pelo caminho</a>. Relê «Que som caiu, e onde?»."
+   },
+   {
+    "para": "Pergunta 2",
+    "texto": "Lição F19, <a href=\"../../m1/licao-m1-f19/\">As cantigas lado a lado</a>. Relê «B. D. Dinis e C. Guilhade, lado a lado»: as duas promessas, uma ao lado da outra."
+   },
+   {
+    "para": "Tema A",
+    "texto": "Lição F19, <a href=\"../../m1/licao-m1-f19/\">As cantigas lado a lado</a>. No fim da lição, abre «Para ir mais longe»: lá está o desenho da forma da cantiga de Codax."
+   },
+   {
+    "para": "Tema B",
+    "texto": "Lição F01, <a href=\"../../m1/licao-m1-f01/\">A língua que se canta</a>. Relê «Chegaram as letras» e «Certeza ou hipótese»."
+   }
+  ],
+  "opcional_titulo": "Experimentar uma pergunta"
  }
 }

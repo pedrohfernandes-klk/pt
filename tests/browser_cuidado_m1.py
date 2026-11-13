@@ -124,6 +124,25 @@ def main():
                     for rel in FORA:
                         cabecalho, linhas = esperado(rel, 0)
                         page.goto(host + '/' + rel.replace('index.html', ''), wait_until='networkidle')
+                        if rel.startswith('tarefas/'):
+                            # 13/11/2026: as duas tarefas do M1 passaram ao molde «mais fácil de fazer» (camada tarefas_faceis_m1_20261113):
+                            # a tabela dos tempos (momento e tempo) deu lugar a um só quadro, «Tempo e tamanho», com os tempos que o
+                            # docente decidiu (10, 10, 55, 15). Exige-se dele o mesmo: é uma tabela com cabeçalhos de coluna e de
+                            # linha, todas as linhas se veem, a página não desliza para o lado, o quadro não sai do contentor, nenhuma
+                            # palavra se parte a meio e os números não se separam da unidade.
+                            assert page.locator('.apoio-tabela').count() == 0 and page.locator('main[data-task-facil]').count() == 1, rel
+                            quadro = page.locator('.tf-quadro')
+                            assert quadro.count() == 1, rel
+                            quadro.scroll_into_view_if_needed()
+                            assert quadro.locator('thead th[scope="col"]').all_text_contents() == ['Tempo', 'O que fazes', 'Palavras'], rel
+                            assert quadro.locator('tbody th').all_text_contents() == ['10\xa0min', '10\xa0min', '55\xa0min', '15\xa0min', '90\xa0min'], rel
+                            assert quadro.locator('tbody tr').count() == 7 and all(l.is_visible() for l in quadro.locator('tbody tr').all()), rel
+                            assert not page.evaluate('()=>document.documentElement.scrollWidth>innerWidth+3'), (rel, largura, 'desliza para o lado')
+                            assert quadro.evaluate('t=>t.getBoundingClientRect().right<=t.parentElement.getBoundingClientRect().right+1'), (rel, largura)
+                            assert quadro.evaluate(MEIO_DA_PALAVRA) == [], (rel, largura, quadro.evaluate(MEIO_DA_PALAVRA))
+                            assert quadro.locator('thead').is_visible(), rel
+                            print('PASS fora das lições (quadro «Tempo e tamanho»):', rel, largura, esquema, flush=True)
+                            continue
                         if rel == 'm1/gram-fonologia/index.html':
                             page.get_by_role('button', name='Começar').click()
                         tabela = page.locator('.apoio-tabela')

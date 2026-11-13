@@ -182,7 +182,8 @@ class Aquecimentos(unittest.TestCase):
                 # 12/11/2026: nas duas tarefas do M3 (molde «mais fácil de fazer», camada tarefas_faceis_m3_20261112), o aquecimento é o
                 # passo 1 de «O que vais fazer» e leva a única ligação da página (decisão do docente): está no primeiro cartão, antes
                 # da primeira pergunta, e não se repete. Nas outras tarefas, a ligação do enunciado, como estava.
-                if slug in ('m3-u1', 'm3-u2'):
+                # 13/11/2026: o mesmo nas duas tarefas do M1 (camada tarefas_faceis_m1_20261113).
+                if slug in ('m1-u1', 'm1-u2', 'm3-u1', 'm3-u2'):
                     self.assertIn('<ol class="tf-fazer"><li>Faz o aquecimento (10\xa0minutos).<span class="task-aquecer tf-abrir"><a href="aquecimento/">', header)
                     self.assertEqual(tarefa.count('<a href="aquecimento/">'), 1)
                     self.assertNotIn('id="produzir"', header)

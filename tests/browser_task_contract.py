@@ -131,7 +131,9 @@ def assert_task_page(page, before):
     # aquecimento é o passo 1 do primeiro cartão e leva a única ligação da página; os temas têm o seu cartão. O resto do contrato é o
     # mesmo, e o que é só do molde novo confere-se em tests/browser_tarefas_faceis_m3.py.
     facil = page.locator('main[data-task-facil]').count() == 1
-    assert facil == (slug in ('m3-u1', 'm3-u2')) or not slug, slug
+    # 13/11/2026: o mesmo nas duas tarefas do M1 (camada tarefas_faceis_m1_20261113; o que é só do molde novo confere-se em
+    # tests/browser_tarefas_faceis_m1.py).
+    assert facil == (slug in ('m1-u1', 'm1-u2', 'm3-u1', 'm3-u2')) or not slug, slug
     if choice:
         assert page.locator('[data-task-card]').count() == (6 if facil else 4)
         assert page.locator('[data-task-card="0"] #aquecer').count() == 1
