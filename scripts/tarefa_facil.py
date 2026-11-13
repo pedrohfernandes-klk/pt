@@ -35,6 +35,17 @@ não sai em papel (como as descrições do Kit); a verificação é uma só list
 Textos: «estrofes» é uma lista de {"rotulo": opcional, "versos": [...]}; os versos numeram-se de «numerar» em «numerar»,
 contando só versos (nunca rótulos como «Mote» e «Voltas»); «escolher» {"de", "ate", "frase"} marca com uma barra os versos
 de onde se pode escolher. A fotografia («figura») lê-se da lição que a publica (chave «de»), para ser a mesma imagem.
+
+M1 (13/11/2026, camada tarefas_faceis_m1_20261113: a m1-u1 e a m1-u2 no mesmo molde). Chaves novas, todas opcionais; as páginas
+sem elas (a m3-u1 e a m3-u2) saem iguais, byte a byte:
+  * um texto em prosa: «paragrafos», uma lista de {"n": "[1]", "t": texto, "partes": [...]} em vez de «estrofes» (os parágrafos
+    numerados como nas lições; «partes» diz os pedaços das lições de que o parágrafo é feito, e junta-os só com espaço ou vírgula);
+  * «folha_versao»: a versão da folha assets/task-textos.css que a página pede (a folha ganhou regras para a prosa e para as imagens;
+    as páginas do M3 continuam a pedir a versão de antes);
+  * numa pergunta, «intro»: uma frase antes das alíneas;
+  * no cartão dos temas: «temas_figuras» (imagens que servem aos dois temas, numeradas, lidas pelo caminho que a lição usa, com o
+    crédito completo atrás do «i»), «temas_comum» (o que o texto leva nos dois temas, um pedido por linha, com exemplos) e
+    «temas_material» (textos que servem aos dois temas, num desdobrável fechado no ecrã e aberto em papel).
 """
 import re
 from html import escape
@@ -82,6 +93,21 @@ def quadro(q):
 def bloco_texto(t):
     """O texto para análise, completo e contínuo: título, versos numerados, vocabulário das lições e linha de fonte."""
     passo, esc, n, partes = t.get('numerar', 5), t.get('escolher'), 0, []
+    if 'paragrafos' in t:
+        # 13/11/2026 (M1): prosa. Os parágrafos numerados como nas lições ([1], [2]…), inteiros e seguidos.
+        for x in t['paragrafos']:
+            resto = x['t']
+            for parte in x['partes']:  # o parágrafo é feito destes pedaços das lições, pela ordem, juntos só com espaço ou vírgula
+                assert resto.lstrip(' ,').startswith(parte), (t['id'], x['n'], parte[:40])
+                resto = resto.lstrip(' ,')[len(parte):]
+            assert not resto.strip(), (t['id'], x['n'], resto)
+        corpo = '\n'.join(f'<p class="tt-par"><span class="tt-pn">{x["n"]}</span> {escape(x["t"], quote=False)}</p>' for x in t['paragrafos'])
+        gloss = ('<div class="tt-gloss"><p><b>Vocabulário</b></p><ul>'
+                 + ''.join(f'<li><b>{p}</b>: {s}</li>' for p, s in t['glossario']) + '</ul></div>') if t.get('glossario') else ''
+        return (f'<section class="tt-texto tt-curto" id="{t["id"]}" aria-labelledby="{t["id"]}-titulo">'
+                f'<h3 id="{t["id"]}-titulo"><span class="tt-num">{t["rotulo"]}</span> {t["titulo"]}</h3>\n'
+                f'<div class="tt-prosa">\n{corpo}\n</div>\n{gloss}'
+                f'<p class="tt-fonte">{t["fonte"]}</p></section>\n')
     for e in t['estrofes']:
         if e.get('rotulo'):
             partes.append(f'<p class="tt-rotulo">{e["rotulo"]}</p>')
@@ -153,6 +179,16 @@ def figura(f, raiz):
     """A fotografia é a que a lição publica (lê-se do ficheiro da lição, pelo texto alternativo), com o crédito completo
     atrás do «i» (peça assets/info-i.*, como no mapa do módulo) e a legenda à vista."""
     fonte = (raiz / f['de']).read_text('utf-8')
+    if f.get('src'):
+        # 13/11/2026 (M1): a imagem que a lição publica como ficheiro (img/fontes/…), pelo mesmo caminho e com o mesmo texto
+        # alternativo; numerada («Imagem 1»), porque os passos dos temas se referem a ela, também em papel.
+        assert f'<img src=\\"{f["src"]}\\" alt=\\"{f["alt"]}\\"' in fonte, (f['de'], f['src'])
+        assert (raiz / 'tarefas' / 'x' / f['src']).resolve().is_file(), f['src']
+        return (f'<figure class="tf-fig tf-fig-n" id="{f["id"]}"><p class="tf-fig-rotulo"><span class="tt-num">{f["rotulo"]}</span> {f["nome"]}</p>'
+                f'<img src="{f["src"]}" alt="{f["alt"]}" width="{f["largura"]}" height="{f["altura"]}" loading="lazy">'
+                f'<details class="info-i info-i--linha" name="info-i"><summary aria-label="{f["credito_rotulo"]}">'
+                f'<span aria-hidden="true">i</span></summary><p class="info-i-texto">{f["credito"]}</p></details>'
+                f'<figcaption>{f["legenda"]}</figcaption></figure>\n')
     m = re.search(r'<img src=\\"(data:image/[a-z]+;base64,[A-Za-z0-9+/=]+)\\" alt=\\"' + re.escape(f['alt']) + r'\\"', fonte)
     assert m, f['de']
     return (f'<figure class="tf-fig"><img src="{m.group(1)}" alt="{f["alt"]}" width="{f["largura"]}" height="{f["altura"]}">'
@@ -181,7 +217,9 @@ def pagina(d, com_grelha, head, foot, raiz):
     f, slug, a = d['facil'], d['slug'], d['aquecer']
     textos = {t['id']: t for t in f['textos']}
     assert head.count(MAIN) == 1 and head.count('<link rel="stylesheet" href="../../assets/appearance.css') == 1, slug
-    head = head.replace(MAIN, MAIN_FACIL).replace('<link rel="stylesheet" href="../../assets/appearance.css', FOLHAS + '<link rel="stylesheet" href="../../assets/appearance.css')
+    folhas = FOLHAS if not f.get('folha_versao') else FOLHAS.replace(f'task-textos.css?v={V_FACIL}', f'task-textos.css?v={f["folha_versao"]}')
+    assert folhas.count('task-textos.css?v=') == 1, slug
+    head = head.replace(MAIN, MAIN_FACIL).replace('<link rel="stylesheet" href="../../assets/appearance.css', folhas + '<link rel="stylesheet" href="../../assets/appearance.css')
     assert head.count('assets/task-reader.js?v=') == 1, slug
     head = re.sub(r'assets/task-reader\.js\?v=[^"]+', 'assets/task-reader.js?v=' + V_FACIL, head)
     # A descrição da página usa as palavras do enunciado novo («duas perguntas», não «núcleo comum»).
@@ -220,6 +258,7 @@ def pagina(d, com_grelha, head, foot, raiz):
                       f'<h2 id="pergunta-{k}-titulo"><span class="tf-n">Pergunta\xa0{k}</span> {p["titulo"]}</h2>\n'
                       f'<p class="tf-meta">{p["meta"]}</p>\n{relogio}'
                       + f'<div class="tf-pedido"><h3>{p["pedido_titulo"]}</h3>'
+                      + (f'<p class="tf-p tf-intro">{p["intro"]}</p>' if p.get('intro') else '')
                       + (f'<p class="tf-p">{p["antes"]}</p>' + lista(p['escolhas'], 'ul') if p.get('escolhas') else '')
                       + (f'<p class="tf-p">{p["barra"]}</p>' if p.get('barra') else '')
                       + (f'<p class="tf-p">{p["para_cada"]}</p>' if p.get('para_cada') else '')
@@ -248,10 +287,25 @@ def pagina(d, com_grelha, head, foot, raiz):
                   + f'{lista(t["passos"], "ol", "tf-passos")}'
                   + (f'<details class="tf-so-tema"><summary>{m["titulo"]}</summary><div>{dentro}</div></details>' if dentro else '')
                   + exemplos(m.get('exemplos', []), f['exemplo_titulo']) + '</article>')
+    # 13/11/2026 (M1): o que serve aos dois temas. As imagens ficam à vista antes dos temas; depois dos temas, o que o texto leva nos
+    # dois (um pedido por linha, com exemplos em desdobrável que não sai em papel) e os textos que servem aos dois (desdobrável
+    # fechado no ecrã e aberto em papel; as ligações dos passos abrem-no).
+    figs = f.get('temas_figuras')
+    figuras = (f'<div class="tf-figs" id="imagens" role="group" aria-labelledby="imagens-titulo"><h3 id="imagens-titulo">{figs["titulo"]}</h3>'
+               + ''.join(f'<p class="tf-p">{x}</p>' for x in figs.get('notas', []))
+               + ''.join(figura(x, raiz) for x in figs['itens']) + '</div>\n') if figs else ''
+    com = f.get('temas_comum')
+    comum = (f'<div class="tf-comum" id="comum" role="group" aria-labelledby="comum-titulo"><h3 id="comum-titulo">{com["titulo"]}</h3>'
+             + (f'<p class="tf-p">{com["intro"]}</p>' if com.get('intro') else '') + lista(com['passos'], 'ol', 'tf-passos')
+             + exemplos(com.get('exemplos', []), f['exemplo_titulo']) + '</div>\n') if com else ''
+    mat = f.get('temas_material')
+    material = (f'<details class="tf-so-tema tf-dois-temas"><summary>{mat["titulo"]}</summary><div>'
+                + ''.join(f'<p class="tf-p">{x}</p>' for x in mat.get('notas', []))
+                + ''.join(bloco_texto(textos[i]) for i in mat['textos']) + '</div></details>\n') if mat else ''
     tema = (f'<section class="task-section tf-tema" id="tema" data-task-card-name="Tema A ou B" aria-labelledby="tema-titulo">'
             f'<h2 id="tema-titulo">{f["temas_titulo"]}</h2><p class="tf-meta">{f["temas_nota"]}</p>'
-            + (f'<p class="tf-p tf-topo">{f["temas_topo"]}</p>' if f.get('temas_topo') else '') + '\n'
-            f'<div class="task-themes">{temas}</div></section>\n')
+            + (f'<p class="tf-p tf-topo">{f["temas_topo"]}</p>' if f.get('temas_topo') else '') + '\n' + figuras
+            + f'<div class="task-themes">{temas}</div>' + comum + material + '</section>\n')
 
     # Cartão «Fechar e entregar»: duas linhas finais, verificação (uma só lista de perguntas de sim ou não), entrega em passos.
     fi = f['finais']

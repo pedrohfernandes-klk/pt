@@ -180,7 +180,8 @@ class Grelhas(unittest.TestCase):
                 # 12/11/2026: decisão do docente, nas duas grelhas do M3: a autoavaliação é só para o aluno e não se entrega; a versão
                 # de correção fica sem a coluna «Aluno» e sem a nota da diferença. Nas outras onze, a frase e a coluna de sempre.
                 so_tua=bool(t.get('autoavaliacao_so_tua'))
-                self.assertEqual(so_tua,slug in ('m3-u1','m3-u2'))
+                # 13/11/2026: o mesmo nas duas grelhas do M1 (camada tarefas_faceis_m1_20261113); nas outras nove, a frase e a coluna de sempre.
+                self.assertEqual(so_tua,slug in ('m1-u1','m1-u2','m3-u1','m3-u2'))
                 self.assertEqual(aluno.count('Esta autoavaliação é só para ti: não se entrega.'),1 if so_tua else 0)
                 self.assertEqual(aluno.count('Entrega esta autoavaliação com as fotografias. O docente põe a nota dele ao lado da tua e comenta a diferença.'),0 if so_tua else 1)
                 self.assertEqual(correcao.count('<th class="n">Aluno</th>'),0 if so_tua else 1)
@@ -237,8 +238,17 @@ class Grelhas(unittest.TestCase):
         # e o guia do módulo também não dizem a resposta, nem mandam para os cartões que a trazem escrita.
         for slug,guardadas in NA_TAREFA.items():
             fonte=(ROOT/'tarefas'/slug/'index.html').read_text('utf-8')
+            # 13/11/2026: decisão do docente (camada tarefas_faceis_m1_20261113): os textos que a tarefa manda analisar aparecem
+            # completos na página, copiados letra a letra das lições (tests/test_tarefas_faceis_m1.py confere-o). As passagens
+            # guardadas são passagens desses textos: por isso os blocos dos textos (os versos e os parágrafos, só eles) ficam fora
+            # desta leitura. Tudo o resto da página (as perguntas, os passos, os exemplos, o vocabulário, as fontes, o dossiê, as
+            # linhas de «Se precisares de rever» e as explicações das opções) continua a não dizer a resposta, com a mesma lista.
+            self.assertEqual(len(re.findall(r'<div class="tt-(?:versos|prosa)">',fonte)),3)
+            fonte=re.sub(r'<div class="tt-(?:versos|prosa)">.*?</div>','',fonte,flags=re.S)
             texto=str(Texto(fonte))+' '+' '.join(html.unescape(x) for x in re.findall(r'data-response="([^"]*)"',fonte))
-            self.assertIn(h('Escolhe A ou B'),grupos(texto))
+            # (o título do cartão dos temas diz agora «Escolhe um tema: A ou B»: a frase de controlo acompanha-o)
+            self.assertIn(h('Escolhe um tema A ou B'),grupos(texto))
+            self.assertIn(h('Responde a duas perguntas'),grupos(texto))
             with self.subTest(tarefa=slug):
                 self.assertEqual(grupos(texto)&guardadas,set())
                 self.assertEqual(self.pares(slug,texto),[])

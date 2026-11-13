@@ -169,15 +169,24 @@ class AquecimentoAtualM1(unittest.TestCase):
                 self.assertNotIn('data-task-machine', s)
                 self.assertNotIn('data-task-question="aquecer"', s)
                 self.assertIn('data-max="10"', s)
-                self.assertIn('data-max="60"', s)
+                # 13/11/2026: decisão do docente (camada tarefas_faceis_m1_20261113, o molde «mais fácil de fazer» aprovado no M3): a
+                # leitura passa a 10 minutos e a produção a 55; o relógio de produção é de 55 minutos e já não há nenhum de 60.
+                self.assertIn('data-max="55"', s)
+                self.assertNotIn('data-max="60"', s)
+                self.assertEqual(s.count('data-relogio'), 2)
                 # 06/11/2026: decisão 152 no M1: os tempos da aula de tarefa passaram a uma tabela (momento e tempo, com espaço
                 # que não quebra). Confere-se a linha do total e que as quatro linhas antes dela somam 90 minutos.
-                tabela = re.search(r'<table class="apoio-tabela" role="table">(.*?)</table>', s, re.S)[1]
-                linhas = re.findall(r'<th scope="row" role="rowheader">([^<]+)</th><td role="cell" data-label="Tempo">(\d+)\xa0minutos</td>', tabela)
-                self.assertEqual([m for m, _ in linhas], ['cartões com consulta', 'lês o enunciado', 'produção', 'revisão e entrega', 'Total'])
-                self.assertEqual([int(t) for _, t in linhas], [10, 5, 60, 15, 90])
-                self.assertEqual(sum(int(t) for _, t in linhas[:-1]), int(linhas[-1][1]))
-                self.assertEqual(10 + 5 + 60 + 15, 90)
+                # 13/11/2026: no molde «mais fácil de fazer», os tempos estão num só quadro, «Tempo e tamanho» (tempo, o que fazes,
+                # palavras), com os tempos que o docente decidiu: 10, 10, 55 e 15. Confere-se cada linha, a do total e a soma, como
+                # antes; a produção ocupa três linhas (as duas perguntas e o tema).
+                tabela = re.search(r'<table class="tf-quadro">(.*?)</table>', s, re.S)[1]
+                linhas = re.findall(r'<tr><th scope="row(?:group)?"(?: rowspan="3")?>(\d+)\xa0min</th><td(?: rowspan="\d")?>([^<]+)</td>', tabela)
+                self.assertEqual([m.replace('\xa0', ' ') for _, m in linhas], ['Aquecimento em cartões', 'Leitura do enunciado', 'Pergunta 1', 'Revisão e entrega', 'Total'])
+                self.assertEqual([int(t) for t, _ in linhas], [10, 10, 55, 15, 90])
+                self.assertEqual(sum(int(t) for t, _ in linhas[:-1]), int(linhas[-1][0]))
+                self.assertEqual(10 + 10 + 55 + 15, 90)
+                self.assertIn('<th scope="rowgroup" rowspan="3">55\xa0min</th>', tabela)
+                self.assertNotRegex(s, r'(?<![\d,.])(?:5|60)[ \xa0]min')
 
 if __name__ == '__main__':
     unittest.main()
