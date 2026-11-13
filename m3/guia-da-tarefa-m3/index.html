@@ -41,7 +41,7 @@ figure img[tabindex]:focus-visible{outline:3px solid var(--tinta,#000);outline-o
 <button class="tarefa" data-n="1"><b>1. Ensaio sobre a Musa</b><span>individual; uma aula</span></button>
 <button class="tarefa" data-n="2"><b>2. Objeto crítico das Descobertas</b><span>individual; duas aulas</span></button>
 <button class="tarefa" data-n="3"><b>3. O Velho do Restelo em 2026</b><span>individual; duas aulas</span></button>
-<div class="cx"><p><b>Como funciona</b></p><p>Extras sem nota. Os critérios abaixo pertencem às produções anteriores. Quatro blocos de tempo com relógio. No fim, verificas o trabalho com a lista da rubrica, dás-te um nível em cada parâmetro e copias tudo para a tarefa do Teams. O que escreves fica só neste telemóvel.</p></div>
+<div class="cx"><p><b>Como funciona</b></p><p>Extras sem nota. Os critérios abaixo pertencem às produções anteriores. Quatro blocos de tempo com relógio. No fim, verificas o trabalho com a lista da rubrica e copias tudo para a tarefa do Teams. O que escreves fica só neste telemóvel.</p></div>
 </details></section>
 <section id="rota" hidden>
 <p class="rot" id="r-quem"></p><h2 id="r-titulo"></h2>
@@ -50,18 +50,15 @@ figure img[tabindex]:focus-visible{outline:3px solid var(--tinta,#000);outline-o
 <div class="cx"><p><b>O que conta para a nota (três linhas)</b></p><ul class="lista" id="r-criterios"></ul></div>
 <details id="r-exemplo"><summary><b>Um exemplo acabado, e um fraco</b></summary><div id="r-exemplo-c"></div></details>
 <div class="regra"><b>Original.</b> O que entregas é teu: feito por ti, com indicação das fontes que abriste. Copiar de uma página ou de um colega, ou mandar fazer a uma máquina, não conta como tarefa.</div>
-<div class="regra"><b>Três antes de mim.</b> Antes de chamares o docente: 1) relê o enunciado; 2) vê a rubrica; 3) pergunta ao teu par de trabalho. Só depois levantas o braço.</div>
+<div class="regra"><b>Dois antes de mim.</b> Antes de chamares o docente: 1) relê o enunciado; 2) vê a rubrica. Só depois levantas o braço.</div>
 <h2>Os blocos de hoje</h2>
 <div id="blocos"><div class="bloco" data-i="0"><div class="n">1</div><div class="t"><b>Aquecer, 10 min</b><span>Faz os cartões com consulta.</span></div><button class="btn sec" data-ir="0">Começar</button></div><div class="bloco" data-i="1"><div class="n">2</div><div class="t"><b>Ler o enunciado, 10 min</b><span>Lê as duas perguntas e os temas A e B.</span></div><button class="btn sec" data-ir="1">Começar</button></div><div class="bloco" data-i="2"><div class="n">3</div><div class="t"><b>Produzir, 55 min</b><span>Escreve individualmente, em papel, com consulta.</span></div><button class="btn sec" data-ir="2">Começar</button></div><div class="bloco" data-i="3"><div class="n">4</div><div class="t"><b>Rever e entregar, 15 min</b><span>Confere a grelha /20 e entrega fotografias legíveis no Teams.</span></div><button class="btn sec" data-ir="3">Começar</button></div></div>
 <label class="c" for="plano">As três coisas que vou fazer hoje</label><textarea id="plano" data-k="plano" placeholder="1. … 2. … 3. …"></textarea>
 <label class="c" for="notas">Notas de trabalho</label><textarea id="notas" data-k="notas" placeholder="O que decidi, o que ficou por fazer, a dúvida que tive."></textarea>
 <h2>Verificar antes de entregar</h2>
 <ul class="lista" id="r-verificar"></ul>
-<h2>Autoavaliação</h2>
-<p class="pequeno">Em cada parâmetro, toca no nível que achas que tens. O 4 é o melhor. Escreve uma linha a dizer porquê.</p>
-<div id="r-auto"></div>
 <div class="fila"><button class="btn" id="copiar">Copiar para o Teams</button><button class="btn sec" id="partilhar" hidden>Partilhar</button><button class="btn sec" id="voltar">Outra tarefa</button></div>
-<p class="pequeno" style="margin-top:14px">Cola na tarefa do Teams, juntamente com o trabalho. O docente vê o teu plano, as notas, a lista e a autoavaliação.</p>
+<p class="pequeno" style="margin-top:14px">Cola na tarefa do Teams, juntamente com o trabalho. O docente vê o teu plano, as notas e a lista.</p>
 </section>
 </main>
 <div id="aviso" role="status"></div>
@@ -82,18 +79,15 @@ function abrir(n){atual=T.filter(function(t){return t.n===n})[0];var D=d();
   var ex=atual.exemplo,fr=atual.fraco;$("#r-exemplo").hidden=!ex;$("#r-exemplo-c").innerHTML=(ex?'<p class="pequeno"><b>'+esc(ex.titulo||"Exemplo")+'</b></p><p style="white-space:pre-line">'+esc(ex.texto)+'</p>'+(ex.nota?'<p class="pequeno">Porque está bem: '+esc(ex.nota)+'</p>':''):'')+(fr?'<p class="pequeno" style="margin-top:12px"><b>Um exemplo fraco</b></p><p style="white-space:pre-line">'+esc(fr.texto)+'</p><p class="pequeno">Porque é fraco: '+esc(fr.porque)+'</p>':'');
   $$("[data-k]").forEach(function(t){t.value=D.campos[t.dataset.k]||""});
   $("#r-verificar").innerHTML=atual.rubrica.map(function(p,i){return '<li><input type="checkbox" id="v'+i+'"'+(D.feito.indexOf(i)>=0?" checked":"")+'><label for="v'+i+'" style="margin:0;font-weight:400"><b>'+esc(p.nome)+':</b> '+esc(p.niveis[0])+'.</label></li>'}).join("");
-  $("#r-auto").innerHTML=atual.rubrica.map(function(p,i){var a=D.auto[i]||{};return '<p style="margin:10px 0 4px"><b>'+esc(p.nome)+'</b> <span class="pequeno">(extra sem nota)</span></p><div class="niveis" data-p="'+i+'">'+[4,3,2,1].map(function(n){return '<button aria-pressed="'+(a.n===n?"true":"false")+'" data-n="'+n+'">'+n+'</button>'}).join("")+'</div><textarea data-auto="'+i+'" placeholder="Porquê, numa linha." style="min-height:56px">'+esc(a.j||"")+'</textarea>'}).join("");
   $("#escolha").hidden=true;$("#rota").hidden=false;window.scrollTo(0,0)}
 function esc(s){return String(s).replace(/[&<>]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;"}[c]})}
 $$(".tarefa").forEach(function(b){b.onclick=function(){abrir(Number(b.dataset.n))}});
 $$("[data-ir]").forEach(function(b){b.onclick=function(){comecar(Number(b.dataset.ir))}});
-document.addEventListener("input",function(ev){var t=ev.target;if(!atual)return;if(t.dataset.k){d().campos[t.dataset.k]=t.value;guardar()}if(t.dataset.auto!=null){var a=d().auto;a[t.dataset.auto]=a[t.dataset.auto]||{};a[t.dataset.auto].j=t.value;guardar()}});
+document.addEventListener("input",function(ev){var t=ev.target;if(!atual)return;if(t.dataset.k){d().campos[t.dataset.k]=t.value;guardar()}});
 document.addEventListener("change",function(ev){if(ev.target.closest("#r-verificar")){d().feito=$$("#r-verificar input").map(function(x,j){return x.checked?j:-1}).filter(function(j){return j>=0});guardar()}});
-document.addEventListener("click",function(ev){var b=ev.target.closest(".niveis button");if(!b||!atual)return;var p=b.parentNode.dataset.p;b.parentNode.querySelectorAll("button").forEach(function(x){x.setAttribute("aria-pressed","false")});b.setAttribute("aria-pressed","true");var a=d().auto;a[p]=a[p]||{};a[p].n=Number(b.dataset.n);guardar()});
 function texto(){var D=d(),l=["ROTA DA TAREFA · Módulo "+M.slice(1)+" · Tarefa "+atual.n+": "+atual.titulo,"",
   "PLANO",D.campos.plano||"(sem plano)","","NOTAS DE TRABALHO",D.campos.notas||"(sem notas)","","VERIFICAÇÃO"];
-  atual.rubrica.forEach(function(p,i){l.push((D.feito.indexOf(i)>=0?"[x] ":"[ ] ")+p.nome)});l.push("","AUTOAVALIAÇÃO");
-  atual.rubrica.forEach(function(p,i){var a=D.auto[i]||{};l.push(p.nome+": nível "+(a.n||"-")+(a.j?" · "+a.j:""))});return l.join("\n")}
+  atual.rubrica.forEach(function(p,i){l.push((D.feito.indexOf(i)>=0?"[x] ":"[ ] ")+p.nome)});return l.join("\n")}
 $("#copiar").onclick=function(){var t=texto();if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(t).then(function(){avisar("Copiado. Cola na tarefa do Teams.")},function(){prompt("Copia:",t)});else prompt("Copia:",t)};
 if(navigator.share){$("#partilhar").hidden=false;$("#partilhar").onclick=function(){navigator.share({title:"Guia da tarefa",text:texto()}).catch(function(){})}}
 $("#voltar").onclick=function(){$("#rota").hidden=true;$("#escolha").hidden=false;if(tm){clearInterval(tm);tm=null}$("#relogio").textContent=fmt(BLOCOS[0][0]*60)};

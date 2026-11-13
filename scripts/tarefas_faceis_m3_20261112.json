@@ -456,6 +456,70 @@
   "achado": "12/11/2026: «Tudo junto» (decisão do docente): as mesmas palavras do enunciado novo («as duas perguntas» em vez de «núcleo»; «a letra do teu tema» em vez de «o tema escolhido»; «respostas ligadas» em vez de «articuladas»). Tempos decididos pelo docente: 10 minutos de aquecimento, 10 de leitura, 55 de produção e 15 de revisão e entrega (eram 10, 5, 60 e 15), iguais em todos os sítios onde aparecem."
  },
  {
+  "ficheiro": "m3/guia-da-tarefa-m3/index.html",
+  "local": "Guia da tarefa do M3: «verificas o trabalho com a lista da rubrica e copias tudo para a tarefa do Teams.»",
+  "antigo": "verificas o trabalho com a lista da rubrica, dás-te um nível em cada parâmetro e copias tudo para a tarefa do Teams.",
+  "novo": "verificas o trabalho com a lista da rubrica e copias tudo para a tarefa do Teams.",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: Decisão do docente (13/11/2026): no guia da tarefa, a «Autoavaliação» que se copiava para o Teams sai, porque a autoavaliação é só para o aluno e não se entrega. Saem o bloco, o que só a ele se refere (o código que o desenhava e guardava, a parte «AUTOAVALIAÇÃO» do texto copiado) e as duas frases que a anunciavam; o plano, as notas e a lista de verificação continuam a copiar-se."
+ },
+ {
+  "ficheiro": "m3/guia-da-tarefa-m3/index.html",
+  "local": "Guia da tarefa do M3: «Dois antes de mim. Antes de chamares o docente: 1) relê o enunciado; 2) vê a rubrica. Só»",
+  "antigo": "<b>Três antes de mim.</b> Antes de chamares o docente: 1) relê o enunciado; 2) vê a rubrica; 3) pergunta ao teu par de trabalho. Só depois levantas o braço.",
+  "novo": "<b>Dois antes de mim.</b> Antes de chamares o docente: 1) relê o enunciado; 2) vê a rubrica. Só depois levantas o braço.",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: Decisão do docente (13/11/2026): não há trabalho de grupo nem de pares; a regra fica com os dois primeiros passos («Dois antes de mim»)."
+ },
+ {
+  "ficheiro": "m3/guia-da-tarefa-m3/index.html",
+  "local": "Guia da tarefa do M3: «O docente vê o teu plano, as notas e a lista.»",
+  "antigo": "O docente vê o teu plano, as notas, a lista e a autoavaliação.",
+  "novo": "O docente vê o teu plano, as notas e a lista.",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: Decisão do docente (13/11/2026): no guia da tarefa, a «Autoavaliação» que se copiava para o Teams sai, porque a autoavaliação é só para o aluno e não se entrega. Saem o bloco, o que só a ele se refere (o código que o desenhava e guardava, a parte «AUTOAVALIAÇÃO» do texto copiado) e as duas frases que a anunciavam; o plano, as notas e a lista de verificação continuam a copiar-se."
+ },
+ {
+  "ficheiro": "m3/guia-da-tarefa-m3/index.html",
+  "local": "Guia da tarefa do M3: «»",
+  "antigo": "<ul class=\"lista\" id=\"r-verificar\"></ul>\n<h2>Autoavaliação</h2>\n<p class=\"pequeno\">Em cada parâmetro, toca no nível que achas que tens. O 4 é o melhor. Escreve uma linha a dizer porquê.</p>\n<div id=\"r-auto\"></div>\n<div class=\"fila\"><button class=\"btn\" id=\"copiar\">",
+  "novo": "<ul class=\"lista\" id=\"r-verificar\"></ul>\n<div class=\"fila\"><button class=\"btn\" id=\"copiar\">",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: Decisão do docente (13/11/2026): no guia da tarefa, a «Autoavaliação» que se copiava para o Teams sai, porque a autoavaliação é só para o aluno e não se entrega. Saem o bloco, o que só a ele se refere (o código que o desenhava e guardava, a parte «AUTOAVALIAÇÃO» do texto copiado) e as duas frases que a anunciavam; o plano, as notas e a lista de verificação continuam a copiar-se."
+ },
+ {
+  "ficheiro": "m3/guia-da-tarefa-m3/index.html",
+  "local": "Guia da tarefa do M3: «+esc(p.niveis[0])+'. '}).join(\"\"); $(\"#escolha\").hidden=true;»",
+  "antigo": "+esc(p.niveis[0])+'.</label></li>'}).join(\"\");\n  $(\"#r-auto\").innerHTML=atual.rubrica.map(function(p,i){var a=D.auto[i]||{};return '<p style=\"margin:10px 0 4px\"><b>'+esc(p.nome)+'</b> <span class=\"pequeno\">(extra sem nota)</span></p><div class=\"niveis\" data-p=\"'+i+'\">'+[4,3,2,1].map(function(n){return '<button aria-pressed=\"'+(a.n===n?\"true\":\"false\")+'\" data-n=\"'+n+'\">'+n+'</button>'}).join(\"\")+'</div><textarea data-auto=\"'+i+'\" placeholder=\"Porquê, numa linha.\" style=\"min-height:56px\">'+esc(a.j||\"\")+'</textarea>'}).join(\"\");\n  $(\"#escolha\").hidden=true;",
+  "novo": "+esc(p.niveis[0])+'.</label></li>'}).join(\"\");\n  $(\"#escolha\").hidden=true;",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: Decisão do docente (13/11/2026): no guia da tarefa, a «Autoavaliação» que se copiava para o Teams sai, porque a autoavaliação é só para o aluno e não se entrega. Saem o bloco, o que só a ele se refere (o código que o desenhava e guardava, a parte «AUTOAVALIAÇÃO» do texto copiado) e as duas frases que a anunciavam; o plano, as notas e a lista de verificação continuam a copiar-se."
+ },
+ {
+  "ficheiro": "m3/guia-da-tarefa-m3/index.html",
+  "local": "Guia da tarefa do M3: «if(t.dataset.k){d().campos[t.dataset.k]=t.value;guardar()}}); document.addEventListener(»",
+  "antigo": "if(t.dataset.k){d().campos[t.dataset.k]=t.value;guardar()}if(t.dataset.auto!=null){var a=d().auto;a[t.dataset.auto]=a[t.dataset.auto]||{};a[t.dataset.auto].j=t.value;guardar()}});\ndocument.addEventListener(\"change\"",
+  "novo": "if(t.dataset.k){d().campos[t.dataset.k]=t.value;guardar()}});\ndocument.addEventListener(\"change\"",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: Decisão do docente (13/11/2026): no guia da tarefa, a «Autoavaliação» que se copiava para o Teams sai, porque a autoavaliação é só para o aluno e não se entrega. Saem o bloco, o que só a ele se refere (o código que o desenhava e guardava, a parte «AUTOAVALIAÇÃO» do texto copiado) e as duas frases que a anunciavam; o plano, as notas e a lista de verificação continuam a copiar-se."
+ },
+ {
+  "ficheiro": "m3/guia-da-tarefa-m3/index.html",
+  "local": "Guia da tarefa do M3: «=0});guardar()}}); function texto(){»",
+  "antigo": "filter(function(j){return j>=0});guardar()}});\ndocument.addEventListener(\"click\",function(ev){var b=ev.target.closest(\".niveis button\");if(!b||!atual)return;var p=b.parentNode.dataset.p;b.parentNode.querySelectorAll(\"button\").forEach(function(x){x.setAttribute(\"aria-pressed\",\"false\")});b.setAttribute(\"aria-pressed\",\"true\");var a=d().auto;a[p]=a[p]||{};a[p].n=Number(b.dataset.n);guardar()});\nfunction texto(){",
+  "novo": "filter(function(j){return j>=0});guardar()}});\nfunction texto(){",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: Decisão do docente (13/11/2026): no guia da tarefa, a «Autoavaliação» que se copiava para o Teams sai, porque a autoavaliação é só para o aluno e não se entrega. Saem o bloco, o que só a ele se refere (o código que o desenhava e guardava, a parte «AUTOAVALIAÇÃO» do texto copiado) e as duas frases que a anunciavam; o plano, as notas e a lista de verificação continuam a copiar-se."
+ },
+ {
+  "ficheiro": "m3/guia-da-tarefa-m3/index.html",
+  "local": "Guia da tarefa do M3: «=0?\"[x] \":\"[ ] \")+p.nome)});return l.join(\" \")}»",
+  "antigo": "l.push((D.feito.indexOf(i)>=0?\"[x] \":\"[ ] \")+p.nome)});l.push(\"\",\"AUTOAVALIAÇÃO\");\n  atual.rubrica.forEach(function(p,i){var a=D.auto[i]||{};l.push(p.nome+\": nível \"+(a.n||\"-\")+(a.j?\" · \"+a.j:\"\"))});return l.join(\"\\n\")}",
+  "novo": "l.push((D.feito.indexOf(i)>=0?\"[x] \":\"[ ] \")+p.nome)});return l.join(\"\\n\")}",
+  "ocorrencias": 1,
+  "achado": "12/11/2026: Decisão do docente (13/11/2026): no guia da tarefa, a «Autoavaliação» que se copiava para o Teams sai, porque a autoavaliação é só para o aluno e não se entrega. Saem o bloco, o que só a ele se refere (o código que o desenhava e guardava, a parte «AUTOAVALIAÇÃO» do texto copiado) e as duas frases que a anunciavam; o plano, as notas e a lista de verificação continuam a copiar-se."
+ },
+ {
   "ficheiro": "m3/index.html",
   "local": "Índice do M3: «aquecimento em cartões, duas perguntas, tema A ou B, revisão e fotografias no Teams.»",
   "antigo": "aquecimento em cartões, núcleo comum, tema A ou B, revisão e fotografias no Teams.",

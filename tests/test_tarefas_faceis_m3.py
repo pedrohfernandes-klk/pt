@@ -13,6 +13,8 @@ para análise». O piloto na m3-u1 foi aprovado a 12/11/2026. O que este ficheir
   a autoavaliação da grelha não se entrega (enunciado, grelha e correção); o aquecimento com uma só ligação; no máximo 10 perguntas
   de sim ou não na verificação; as mesmas palavras no enunciado, na grelha, na correção, no aquecimento, no guia, no índice e no
   mapa;
+* a decisão do docente de 13/11/2026, no guia da tarefa do M3: a «Autoavaliação» que se copiava para o Teams e «pergunta ao teu
+  par de trabalho» saíram, e o resto do guia é o do main de partida, letra a letra, salvo as trocas da camada;
 * as regras do texto: sem as palavras proibidas, sem «·» nem «—» nas nossas frases, «Que + nome» ou «Qual das…», referências que
   não se partem, exemplos com outro caso (nunca as passagens reservadas da tarefa);
 * o contrato da página, que substitui o de tests/test_task_choice.py nestas duas tarefas: seis cartões com nome, dois temas, uma
@@ -534,6 +536,99 @@ class TarefasFaceisM3(unittest.TestCase):
                 self.assertIn(frase, fonte, rel)
         self.assertEqual(ler(INDICE).count('com consulta: aquecimento, duas perguntas, tema A ou B, revisão e fotografias no Teams.'), 2)
 
+    # ---------- 13/11/2026: a autoavaliação colada no Teams e o par de trabalho saem do guia ----------
+
+    def test_guia_sem_autoavaliacao_para_o_teams_nem_par_de_trabalho(self):
+        # 13/11/2026 (decisão do docente): no guia da tarefa do M3, a «Autoavaliação» que se copiava para o Teams sai (a autoavaliação
+        # é só para o aluno e não se entrega) e «pergunta ao teu par de trabalho» sai (não há trabalho de grupo nem de pares).
+        guia, base = ler(GUIA), antes(GUIA)
+        lido = visivel(guia, so_main=False, sem_nav=False)
+        # As frases de antes estavam na base (o main de partida) e já não estão na página, nem no código.
+        saem = ['<h2>Autoavaliação</h2>',
+                'Em cada parâmetro, toca no nível que achas que tens. O 4 é o melhor. Escreve uma linha a dizer porquê.',
+                '<div id="r-auto"></div>',
+                'dás-te um nível em cada parâmetro',
+                'O docente vê o teu plano, as notas, a lista e a autoavaliação.',
+                'l.push("","AUTOAVALIAÇÃO");',
+                '$("#r-auto").innerHTML=',
+                '(extra sem nota)',
+                'placeholder="Porquê, numa linha."',
+                'if(t.dataset.auto!=null)',
+                'ev.target.closest(".niveis button")',
+                '3) pergunta ao teu par de trabalho',
+                '<b>Três antes de mim.</b>']
+        for frase in saem:
+            with self.subTest(sai=frase):
+                self.assertEqual(base.count(frase), 1)
+                self.assertNotIn(frase, guia)
+        # Nenhuma autoavaliação, nenhum nível para tocar e nenhum par, grupo ou equipa em todo o guia (texto e código). Ficam
+        # só a regra «Original» (copiar de um colega não conta) e a chave «grupo» dos dados das produções antigas, sempre falsa.
+        self.assertNotRegex(guia, r'(?i)auto-?avalia')
+        self.assertNotRegex(guia, r'r-auto|data-auto|dataset\.auto|D\.auto|\.niveis button"|class="niveis"|aria-pressed="')
+        # O estilo dos níveis fica na folha de estilo, sem uso e igual ao do main: os nove guias da tarefa têm o mesmo estilo, letra a
+        # letra (tests/test_tasks_m356.py), e a decisão é só para o M3. Nada na página nem no código o usa.
+        estilo = guia[guia.index('<style>'):guia.index('</style>')]
+        self.assertEqual(estilo, base[base.index('<style>'):base.index('</style>')])
+        self.assertEqual(guia.count('niveis button'), estilo.count('niveis button'))
+        self.assertEqual(guia.count('aria-pressed'), estilo.count('aria-pressed'))
+        self.assertNotRegex(lido, r'(?i)\bpar(?:es)?\b|\bgrupos?\b|\bequipas?\b|\bduplas?\b|em conjunto')
+        self.assertEqual(re.findall(r'(?i)colegas?', guia), ['colega'])
+        self.assertIn('Copiar de uma página ou de um colega, ou mandar fazer a uma máquina, não conta como tarefa.', guia)
+        self.assertEqual(set(re.findall(r'"grupo":(\w+)', guia)), {'false'})
+        self.assertEqual(len(re.findall(r'(?i)\bgrupo', guia)), guia.count('"grupo":false'))
+        # O que fica, com a frase certa: a regra com dois passos numerados (1 e 2, sem 3) e o nome a dizer dois.
+        self.assertEqual(guia.count('<div class="regra"><b>Dois antes de mim.</b> Antes de chamares o docente: 1) relê o enunciado; '
+                                    '2) vê a rubrica. Só depois levantas o braço.</div>'), 1)
+        regra = guia[guia.index('<b>Dois antes de mim.</b>'):]
+        regra = regra[:regra.index('</div>')]
+        self.assertEqual(re.findall(r'(\d)\)', regra), ['1', '2'])
+        self.assertEqual(guia.count('No fim, verificas o trabalho com a lista da rubrica e copias tudo para a tarefa do Teams. '
+                                    'O que escreves fica só neste telemóvel.</p>'), 1)
+        self.assertEqual(guia.count('Cola na tarefa do Teams, juntamente com o trabalho. O docente vê o teu plano, as notas e a lista.</p>'), 1)
+        # O resto do modelo que se copia fica: o plano, as notas e a lista de verificação; a seguir à lista vêm logo os botões.
+        self.assertIn('<h2>Verificar antes de entregar</h2>\n<ul class="lista" id="r-verificar"></ul>\n<div class="fila">'
+                      '<button class="btn" id="copiar">Copiar para o Teams</button>', guia)
+        copiado = guia[guia.index('function texto(){'):guia.index('$("#copiar").onclick')]
+        self.assertEqual(re.findall(r'"([A-ZÇÃÕÁÉÍÓÚ ]{5,})"', copiado), ['PLANO', 'NOTAS DE TRABALHO', 'VERIFICAÇÃO'])
+        self.assertTrue(copiado.endswith('+p.nome)});return l.join("\\n")}\n'), copiado[-80:])
+        self.assertEqual(re.findall(r'<h2[^>]*>([^<]*)</h2>', guia[guia.index('<section id="rota"'):]),
+                         ['', 'Os blocos de hoje', 'Verificar antes de entregar'])
+        # Cada identificador que o código procura existe na página (nada fica a apontar para o bloco que saiu).
+        codigo = guia[guia.index('var M="M3"'):]
+        for ident in sorted(set(re.findall(r'\$\("#([\w-]+)"\)', codigo))):
+            with self.subTest(identificador=ident):
+                self.assertEqual(guia.count(f' id="{ident}"'), 1)
+        # O resto da página é o main de partida, letra a letra, salvo as trocas da camada: as quatro de 12/11/2026 (tempos e «as duas
+        # perguntas») e as oito de 13/11/2026. Cada troca que tira um pedaço inteiro só tira: o que fica é a base sem esse pedaço.
+        edits = MANIFESTO['files'][GUIA]['edits']
+        self.assertEqual(len(edits), 12)
+        r = subprocess.run(['git', 'show', f'{BASE_COMMIT}:{GUIA}'], cwd=ROOT, capture_output=True)
+        if r.returncode == 0:
+            self.assertEqual(r.stdout.decode('utf-8'), base)
+        self.assertEqual(sha_lf(base), MANIFESTO['files'][GUIA]['base_sha256_lf'])
+        de_novo = base
+        for e in edits:
+            self.assertEqual(de_novo.count(e['old']), 1, e['location'])
+            de_novo = de_novo.replace(e['old'], e['new'])
+        self.assertEqual(de_novo, guia)
+        so_tiram = 0
+        for e in edits[7:]:
+            i = 0
+            while i < len(e['new']) and e['old'][i] == e['new'][i]:
+                i += 1
+            resto = e['new'][i:]
+            if resto and e['old'].endswith(resto):
+                so_tiram += 1
+        self.assertEqual(so_tiram, 5)
+        self.assertEqual(len(base) - len(guia), sum(len(e['old']) - len(e['new']) for e in edits))
+        # As páginas das duas tarefas dizem o mesmo: a autoavaliação da grelha é só do aluno e não se entrega.
+        for slug in SLUGS:
+            self.assertIn('A autoavaliação da grelha é só para ti: não se entrega.', ler(f'tarefas/{slug}/index.html'))
+            self.assertIn('Esta autoavaliação é só para ti: não se entrega.', ler(f'tarefas/{slug}/grelha/index.html'))
+            for parte in ('', 'grelha/', 'correcao/'):
+                self.assertNotRegex(visivel(ler(f'tarefas/{slug}/{parte}index.html'), so_main=False, sem_nav=False),
+                                    r'(?i)par de trabalho|trabalho de (?:grupo|pares)|em pares|com (?:o|a) (?:teu|tua) colega')
+
     # ---------- as regras do texto ----------
 
     def test_regras_do_texto(self):
@@ -750,10 +845,16 @@ class TarefasFaceisM3(unittest.TestCase):
         self.assertEqual(sorted(finais), sorted(FICHEIROS))
         self.assertEqual(C.FICHEIROS, FICHEIROS)
         self.assertEqual(C.BASE_COMMIT, BASE_COMMIT)
-        # As três páginas do módulo mudam só nas sete trocas escritas à mão.
+        # As três páginas do módulo mudam só nas trocas escritas à mão.
+        # 13/11/2026: eram sete; a decisão do docente de 13/11/2026 (a «Autoavaliação» colada no Teams e o par de trabalho saem do guia)
+        # junta oito no guia, e o teste passa a exigir as quinze, com as oito novas todas no guia.
         self.assertEqual(sorted((f, a, b, n) for f, a, b, n, _ in C.EDICOES),
                          sorted((t['ficheiro'], t['antigo'], t['novo'], t['ocorrencias']) for t in TROCAS if t['ficheiro'] in (GUIA, INDICE, MAPA)))
-        self.assertEqual(len(C.EDICOES), 7)
+        self.assertEqual(len(C.EDICOES), 15)
+        self.assertEqual([f for f, *_ in C.EDICOES[7:]], [GUIA] * 8)
+        self.assertEqual(len(C.SAI), 5)
+        for f, fica_antes, sai, fica_depois, _ in C.SAI:
+            self.assertIn((f, fica_antes + sai + fica_depois, fica_antes + fica_depois, 1), [e[:4] for e in C.EDICOES])
 
     def test_leitura_historica_dos_enunciados(self):
         # Os contratos históricos leem as tarefas como eram antes do pedido #192 (scripts/tarefas_claras_historico.py). Com esta camada

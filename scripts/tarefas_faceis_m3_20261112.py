@@ -25,7 +25,8 @@ Ficheiros (16):
   m3-u1.json e m3-u2.json («núcleo» passa a «as duas perguntas»);
 - as páginas geradas: tarefas/m3-u1/ e tarefas/m3-u2/ (enunciado, grelha/, aquecimento/ e correcao/);
 - as páginas do módulo que falam da aula de tarefa: m3/guia-da-tarefa-m3/ (10 e 55 minutos em vez de 5 e 60; «as duas perguntas»
-  em vez de «núcleo comum»), m3/index.html e m3/mapa-do-modulo-m3/ («duas perguntas» em vez de «núcleo comum»).
+  em vez de «núcleo comum»; desde 13/11/2026, sem a «Autoavaliação» que se copiava para o Teams e sem «pergunta ao teu par de
+  trabalho»), m3/index.html e m3/mapa-do-modulo-m3/ («duas perguntas» em vez de «núcleo comum»).
 
 Decisões do docente (12/11/2026), iguais nas duas tarefas: «com consulta» quer dizer lições do site, caderno e dicionário, e
 diz-se uma vez, no primeiro cartão; tempos 10 (aquecimento), 10 (leitura), 55 (produção) e 15 (revisão e entrega), 90 no total;
@@ -50,6 +51,15 @@ facil-7). O tema B da m3-u2 pede dois argumentos do Velho, que fala de IV, 95 a 
 partir da Biblioteca Nacional Digital) tem gralhas («quantidades» em IV, 99; «velas» em IV, 102). Por isso não se copiaram: o
 tema B diz que o Texto 3 tem as estâncias IV, 94 e 95 e que o resto da fala do Velho está no manual, sem número de página.
 
+Decisão do docente de 13/11/2026, só no guia da tarefa do M3 (nas produções antigas sem nota): a «Autoavaliação» que se copiava para
+o Teams sai, porque a autoavaliação é só para o aluno e não se entrega; e «pergunta ao teu par de trabalho» sai, porque não há
+trabalho de grupo nem de pares. Sai o bloco «Autoavaliação» inteiro e o que só a ele se refere (o código que o desenhava e
+guardava, a parte «AUTOAVALIAÇÃO» do texto copiado, e as duas frases que o anunciavam); a regra «Três antes de mim» fica
+com os dois primeiros passos e chama-se «Dois antes de mim». Nada entra no lugar do que sai: o plano, as notas e a lista de
+verificação continuam a copiar-se para o Teams. São oito trocas no guia (três em EDICOES e cinco em SAI, que tira um pedaço inteiro e
+ancora nos dois vizinhos). O estilo dos níveis (.niveis) fica na folha de estilo do guia, sem uso: os nove guias da tarefa têm o
+mesmo estilo, letra a letra (tests/test_tasks_m356.py), e a decisão é só para o M3.
+
 O que NÃO muda: as outras onze tarefas, as suas grelhas, correções e aquecimentos (saem dos mesmos geradores, iguais byte a byte);
 os critérios, os níveis, os exemplos e os pontos das grelhas (as trocas de palavras fazem-se só ao escrever as páginas); as lições.
 
@@ -63,7 +73,7 @@ manifesto, o ficheiro no commit de base, lido com git) e a árvore: pode voltar 
 mesmo JSON. Para mudar uma página ou os dados por baixo desta camada (uma correção ao enunciado, por exemplo): muda-se a árvore,
 voltam a gerar-se as páginas e corre-se «python3 scripts/tarefas_faceis_m3_20261112.py --base-do-commit» (a base lê-se do commit de
 base, porque o manifesto antigo já não confere), e depois scripts/aplicar_trocas.py, que reescreve o manifesto. Confere, antes de
-escrever: que as três páginas do módulo só mudam nas trocas de EDICOES; que os geradores, com os
+escrever: que as três páginas do módulo só mudam nas trocas de EDICOES (com as de SAI); que os geradores, com os
 dados da árvore, dão as oito páginas da árvore; que, com os dados da base, dão as oito páginas da base; e cada ficheiro como
 scripts/aplicar_trocas.py o vai conferir (da base para o resultado e de volta, letra a letra).
 
@@ -109,6 +119,12 @@ ACHADOS = {
     'auto': 'Decisão do docente: a autoavaliação da grelha é só para o aluno e não se entrega; a versão de correção fica com a nota e '
             'o comentário do docente.',
     'conta': 'Decisão do docente: os versos citados ou copiados não contam para as palavras.',
+    'sem_auto': 'Decisão do docente (13/11/2026): no guia da tarefa, a «Autoavaliação» que se copiava para o Teams sai, porque a '
+                'autoavaliação é só para o aluno e não se entrega. Saem o bloco, o que só a ele se refere (o código que o '
+                'desenhava e guardava, a parte «AUTOAVALIAÇÃO» do texto copiado) e as duas frases que a anunciavam; o '
+                'plano, as notas e a lista de verificação continuam a copiar-se.',
+    'sem_par': 'Decisão do docente (13/11/2026): não há trabalho de grupo nem de pares; a regra fica com os dois primeiros passos '
+               '(«Dois antes de mim»).',
 }
 
 # As três páginas do módulo não são geradas: mudam só nestas trocas (página, antigo, novo, ocorrências, categorias).
@@ -126,7 +142,42 @@ EDICOES = [
      'com consulta: aquecimento, duas perguntas, tema A ou B, revisão e fotografias no Teams.', 2, 'junto'),
     (MAPA, 'com aquecimento, núcleo comum, tema A ou B e grelha /20;', 'com aquecimento, duas perguntas, tema A ou B e grelha /20;', 1,
      'junto'),
+    # 13/11/2026 (decisão do docente): a «Autoavaliação» colada no Teams e «pergunta ao teu par de trabalho» saem do guia.
+    (GUIA, 'verificas o trabalho com a lista da rubrica, dás-te um nível em cada parâmetro e copias tudo para a tarefa do Teams.',
+     'verificas o trabalho com a lista da rubrica e copias tudo para a tarefa do Teams.', 1, 'sem_auto'),
+    (GUIA, '<b>Três antes de mim.</b> Antes de chamares o docente: 1) relê o enunciado; 2) vê a rubrica; 3) pergunta ao teu par de '
+           'trabalho. Só depois levantas o braço.',
+     '<b>Dois antes de mim.</b> Antes de chamares o docente: 1) relê o enunciado; 2) vê a rubrica. Só depois levantas o braço.', 1,
+     'sem_par'),
+    (GUIA, 'O docente vê o teu plano, as notas, a lista e a autoavaliação.', 'O docente vê o teu plano, as notas e a lista.', 1,
+     'sem_auto'),
 ]
+
+# 13/11/2026: o que sai inteiro do guia, sem nada no lugar (página, o que fica antes, o que sai, o que fica depois, categorias). A
+# troca leva os dois vizinhos, porque scripts/aplicar_trocas.py não aceita um «novo» vazio.
+SAI = [
+    # o bloco «Autoavaliação»
+    (GUIA, '<ul class="lista" id="r-verificar"></ul>\n',
+     '<h2>Autoavaliação</h2>\n<p class="pequeno">Em cada parâmetro, toca no nível que achas que tens. O 4 é o melhor. Escreve uma '
+     'linha a dizer porquê.</p>\n<div id="r-auto"></div>\n',
+     '<div class="fila"><button class="btn" id="copiar">', 'sem_auto'),
+    # o código que desenhava o bloco
+    (GUIA, r'''+esc(p.niveis[0])+'.</label></li>'}).join("");''' + '\n',
+     r'''  $("#r-auto").innerHTML=atual.rubrica.map(function(p,i){var a=D.auto[i]||{};return '<p style="margin:10px 0 4px"><b>'+esc(p.nome)+'</b> <span class="pequeno">(extra sem nota)</span></p><div class="niveis" data-p="'+i+'">'+[4,3,2,1].map(function(n){return '<button aria-pressed="'+(a.n===n?"true":"false")+'" data-n="'+n+'">'+n+'</button>'}).join("")+'</div><textarea data-auto="'+i+'" placeholder="Porquê, numa linha." style="min-height:56px">'+esc(a.j||"")+'</textarea>'}).join("");''' + '\n',
+     '  $("#escolha").hidden=true;', 'sem_auto'),
+    # o código que guardava a linha «porquê» e o nível tocado
+    (GUIA, 'if(t.dataset.k){d().campos[t.dataset.k]=t.value;guardar()}',
+     'if(t.dataset.auto!=null){var a=d().auto;a[t.dataset.auto]=a[t.dataset.auto]||{};a[t.dataset.auto].j=t.value;guardar()}',
+     '});\ndocument.addEventListener("change"', 'sem_auto'),
+    (GUIA, 'filter(function(j){return j>=0});guardar()}});\n',
+     r'''document.addEventListener("click",function(ev){var b=ev.target.closest(".niveis button");if(!b||!atual)return;var p=b.parentNode.dataset.p;b.parentNode.querySelectorAll("button").forEach(function(x){x.setAttribute("aria-pressed","false")});b.setAttribute("aria-pressed","true");var a=d().auto;a[p]=a[p]||{};a[p].n=Number(b.dataset.n);guardar()});''' + '\n',
+     'function texto(){', 'sem_auto'),
+    # a parte «AUTOAVALIAÇÃO» do texto que se copia para o Teams
+    (GUIA, 'l.push((D.feito.indexOf(i)>=0?"[x] ":"[ ] ")+p.nome)});',
+     r'''l.push("","AUTOAVALIAÇÃO");''' + '\n' + r'''  atual.rubrica.forEach(function(p,i){var a=D.auto[i]||{};l.push(p.nome+": nível "+(a.n||"-")+(a.j?" · "+a.j:""))});''',
+     r'''return l.join("\n")}''', 'sem_auto'),
+]
+EDICOES += [(f, antes + sai + depois, antes + depois, 1, cs) for f, antes, sai, depois, cs in SAI]
 
 
 def ler(rel):

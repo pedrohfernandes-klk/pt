@@ -1,6 +1,6 @@
 {
  "base_commit": "1471a61ab0a539719943074153f9e9647ba48e35",
- "_nota": "12/11/2026: as duas tarefas do M3 (m3-u1 e m3-u2) «mais fáceis de fazer» (pedido do docente; piloto na m3-u1 aprovado a 12/11/2026) e «tudo junto» no M3. Cada tarefa é a mesma (perguntas, temas A e B, total de palavras, critérios da grelha); muda só a forma: os textos completos junto da pergunta ou do tema que os usa, copiados letra a letra das lições do M3 (F02, F03, F05, F09, F10, F13 e, para o quadro das modalidades, F15), um pedido por alínea, exemplos com outro caso em desdobrável, o primeiro cartão com o que se faz, o que se entrega e o quadro 10/10/55/15, verificação com 10 perguntas de sim ou não no máximo. Decisões do docente: «com consulta» dito uma vez; os versos citados ou copiados não contam; a autoavaliação da grelha não se entrega (a versão de correção perde a coluna «Aluno» e a nota «Diferença entre a tua nota e a minha»); as mesmas palavras no enunciado, na grelha, na correção, no aquecimento, no guia, no índice e no mapa («as duas perguntas», «a letra do teu tema», «respostas ligadas»); no guia, 10 e 55 minutos em vez de 5 e 60. As chaves antigas dos dados das duas tarefas ficam como estavam, para a leitura histórica das camadas de baixo, e já não aparecem na página. Revisão de 13/11/2026, depois de duas revisões independentes: nas grelhas do aluno, «Duas linhas finais» em vez de «Fecho», como no enunciado; nos exemplos, «Passo» e «Alínea» presos ao número ou à letra; em papel, o cabeçalho do cartão dos temas não fica sozinho no fundo de uma página; na m3-u2, o tema B diz que o Texto 3 tem as estâncias IV, 94 e 95 (as das lições) e que o resto da fala do Velho (IV, 96 a 104) está no manual: essas estâncias não estão em nenhuma lição e a única edição modernizada em domínio público que se conseguiu conferir tem gralhas, por isso não se copiaram. Gerado por scripts/tarefas_faceis_m3_20261112.py (da diferença entre a base e a árvore) e por scripts/aplicar_trocas.py: não se edita à mão. Camada mais recente: desfaz-se antes de todas as outras.",
+ "_nota": "12/11/2026: as duas tarefas do M3 (m3-u1 e m3-u2) «mais fáceis de fazer» (pedido do docente; piloto na m3-u1 aprovado a 12/11/2026) e «tudo junto» no M3. Cada tarefa é a mesma (perguntas, temas A e B, total de palavras, critérios da grelha); muda só a forma: os textos completos junto da pergunta ou do tema que os usa, copiados letra a letra das lições do M3 (F02, F03, F05, F09, F10, F13 e, para o quadro das modalidades, F15), um pedido por alínea, exemplos com outro caso em desdobrável, o primeiro cartão com o que se faz, o que se entrega e o quadro 10/10/55/15, verificação com 10 perguntas de sim ou não no máximo. Decisões do docente: «com consulta» dito uma vez; os versos citados ou copiados não contam; a autoavaliação da grelha não se entrega (a versão de correção perde a coluna «Aluno» e a nota «Diferença entre a tua nota e a minha»); as mesmas palavras no enunciado, na grelha, na correção, no aquecimento, no guia, no índice e no mapa («as duas perguntas», «a letra do teu tema», «respostas ligadas»); no guia, 10 e 55 minutos em vez de 5 e 60. As chaves antigas dos dados das duas tarefas ficam como estavam, para a leitura histórica das camadas de baixo, e já não aparecem na página. Revisão de 13/11/2026, depois de duas revisões independentes: nas grelhas do aluno, «Duas linhas finais» em vez de «Fecho», como no enunciado; nos exemplos, «Passo» e «Alínea» presos ao número ou à letra; em papel, o cabeçalho do cartão dos temas não fica sozinho no fundo de uma página; na m3-u2, o tema B diz que o Texto 3 tem as estâncias IV, 94 e 95 (as das lições) e que o resto da fala do Velho (IV, 96 a 104) está no manual: essas estâncias não estão em nenhuma lição e a única edição modernizada em domínio público que se conseguiu conferir tem gralhas, por isso não se copiaram. Decisão do docente de 13/11/2026, só no guia da tarefa do M3 (produções antigas sem nota): sai a «Autoavaliação» que se copiava para o Teams (a autoavaliação é só para o aluno e não se entrega), com o que só a ela se refere, e sai «pergunta ao teu par de trabalho» (não há trabalho de grupo nem de pares); a regra fica com os dois primeiros passos («Dois antes de mim») e nada entra no lugar do que sai. Gerado por scripts/tarefas_faceis_m3_20261112.py (da diferença entre a base e a árvore) e por scripts/aplicar_trocas.py: não se edita à mão. Camada mais recente: desfaz-se antes de todas as outras.",
  "files": {
   "docs/pedagogia/tarefas-escolha/m3-u1.json": {
    "base_sha256_lf": "d0d0f600adf161396066e95602417f354ae9bc6b4f4fbb39c7ce85353e7b1311",
@@ -400,7 +400,7 @@
   },
   "m3/guia-da-tarefa-m3/index.html": {
    "base_sha256_lf": "8a1be4a9508cc6f4a95865f7c16ea606532c732cad8f7c06d5fcc6dc94f2e276",
-   "after_sha256_lf": "e3fe3a801e748633a2909eedf0f87012c053f415aa0a24e70ea810c1c335db67",
+   "after_sha256_lf": "d0f350d4ac4d769a72f1d33fbf13f0fb2b93a968d0d6e724fb93ddf4f74a775f",
    "edits": [
     {
      "location": "Guia da tarefa do M3: «Seguem-se 10 minutos de leitura, 55 de produção e 15 de revisão e entrega.»",
@@ -424,6 +424,54 @@
      "location": "Guia da tarefa do M3: «[10, \"Ler o enunciado\", \"Lê as duas perguntas e os temas A e B.\"], [55, \"Produzir\",»",
      "old": "[5, \"Ler o enunciado\", \"Lê o núcleo comum e os temas A e B.\"], [60, \"Produzir\",",
      "new": "[10, \"Ler o enunciado\", \"Lê as duas perguntas e os temas A e B.\"], [55, \"Produzir\",",
+     "occurrences": 1
+    },
+    {
+     "location": "Guia da tarefa do M3: «verificas o trabalho com a lista da rubrica e copias tudo para a tarefa do Teams.»",
+     "old": "verificas o trabalho com a lista da rubrica, dás-te um nível em cada parâmetro e copias tudo para a tarefa do Teams.",
+     "new": "verificas o trabalho com a lista da rubrica e copias tudo para a tarefa do Teams.",
+     "occurrences": 1
+    },
+    {
+     "location": "Guia da tarefa do M3: «Dois antes de mim. Antes de chamares o docente: 1) relê o enunciado; 2) vê a rubrica. Só»",
+     "old": "<b>Três antes de mim.</b> Antes de chamares o docente: 1) relê o enunciado; 2) vê a rubrica; 3) pergunta ao teu par de trabalho. Só depois levantas o braço.",
+     "new": "<b>Dois antes de mim.</b> Antes de chamares o docente: 1) relê o enunciado; 2) vê a rubrica. Só depois levantas o braço.",
+     "occurrences": 1
+    },
+    {
+     "location": "Guia da tarefa do M3: «O docente vê o teu plano, as notas e a lista.»",
+     "old": "O docente vê o teu plano, as notas, a lista e a autoavaliação.",
+     "new": "O docente vê o teu plano, as notas e a lista.",
+     "occurrences": 1
+    },
+    {
+     "location": "Guia da tarefa do M3: «»",
+     "old": "<ul class=\"lista\" id=\"r-verificar\"></ul>\n<h2>Autoavaliação</h2>\n<p class=\"pequeno\">Em cada parâmetro, toca no nível que achas que tens. O 4 é o melhor. Escreve uma linha a dizer porquê.</p>\n<div id=\"r-auto\"></div>\n<div class=\"fila\"><button class=\"btn\" id=\"copiar\">",
+     "new": "<ul class=\"lista\" id=\"r-verificar\"></ul>\n<div class=\"fila\"><button class=\"btn\" id=\"copiar\">",
+     "occurrences": 1
+    },
+    {
+     "location": "Guia da tarefa do M3: «+esc(p.niveis[0])+'. '}).join(\"\"); $(\"#escolha\").hidden=true;»",
+     "old": "+esc(p.niveis[0])+'.</label></li>'}).join(\"\");\n  $(\"#r-auto\").innerHTML=atual.rubrica.map(function(p,i){var a=D.auto[i]||{};return '<p style=\"margin:10px 0 4px\"><b>'+esc(p.nome)+'</b> <span class=\"pequeno\">(extra sem nota)</span></p><div class=\"niveis\" data-p=\"'+i+'\">'+[4,3,2,1].map(function(n){return '<button aria-pressed=\"'+(a.n===n?\"true\":\"false\")+'\" data-n=\"'+n+'\">'+n+'</button>'}).join(\"\")+'</div><textarea data-auto=\"'+i+'\" placeholder=\"Porquê, numa linha.\" style=\"min-height:56px\">'+esc(a.j||\"\")+'</textarea>'}).join(\"\");\n  $(\"#escolha\").hidden=true;",
+     "new": "+esc(p.niveis[0])+'.</label></li>'}).join(\"\");\n  $(\"#escolha\").hidden=true;",
+     "occurrences": 1
+    },
+    {
+     "location": "Guia da tarefa do M3: «if(t.dataset.k){d().campos[t.dataset.k]=t.value;guardar()}}); document.addEventListener(»",
+     "old": "if(t.dataset.k){d().campos[t.dataset.k]=t.value;guardar()}if(t.dataset.auto!=null){var a=d().auto;a[t.dataset.auto]=a[t.dataset.auto]||{};a[t.dataset.auto].j=t.value;guardar()}});\ndocument.addEventListener(\"change\"",
+     "new": "if(t.dataset.k){d().campos[t.dataset.k]=t.value;guardar()}});\ndocument.addEventListener(\"change\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Guia da tarefa do M3: «=0});guardar()}}); function texto(){»",
+     "old": "filter(function(j){return j>=0});guardar()}});\ndocument.addEventListener(\"click\",function(ev){var b=ev.target.closest(\".niveis button\");if(!b||!atual)return;var p=b.parentNode.dataset.p;b.parentNode.querySelectorAll(\"button\").forEach(function(x){x.setAttribute(\"aria-pressed\",\"false\")});b.setAttribute(\"aria-pressed\",\"true\");var a=d().auto;a[p]=a[p]||{};a[p].n=Number(b.dataset.n);guardar()});\nfunction texto(){",
+     "new": "filter(function(j){return j>=0});guardar()}});\nfunction texto(){",
+     "occurrences": 1
+    },
+    {
+     "location": "Guia da tarefa do M3: «=0?\"[x] \":\"[ ] \")+p.nome)});return l.join(\" \")}»",
+     "old": "l.push((D.feito.indexOf(i)>=0?\"[x] \":\"[ ] \")+p.nome)});l.push(\"\",\"AUTOAVALIAÇÃO\");\n  atual.rubrica.forEach(function(p,i){var a=D.auto[i]||{};l.push(p.nome+\": nível \"+(a.n||\"-\")+(a.j?\" · \"+a.j:\"\"))});return l.join(\"\\n\")}",
+     "new": "l.push((D.feito.indexOf(i)>=0?\"[x] \":\"[ ] \")+p.nome)});return l.join(\"\\n\")}",
      "occurrences": 1
     }
    ]

@@ -4,6 +4,9 @@ reais (o leitor em cartões, os relógios, a peça «i»).
 * a 390 e a 1280 px, em tema claro e em escuro, nos seis cartões de cada enunciado: a página não desliza para o lado, o cartão não
   transborda e nenhum elemento sai do ecrã (também com todos os desdobráveis abertos); o índice mostra os seis nomes; não há erros
   de página; a grelha, a versão de correção, o aquecimento e o guia da tarefa do M3 também não deslizam;
+* 13/11/2026 (decisão do docente): no guia da tarefa do M3, nas três produções antigas, não há «Autoavaliação» nem botões de nível,
+  a regra antes de chamar o docente tem dois passos (sem «par de trabalho») e o que se copia para o Teams traz só o plano, as notas
+  e a lista de verificação;
 * os desdobráveis abrem com o teclado (Enter e Espaço no <summary>) e mostram o que guardam: os exemplos com outro caso, o material
   que é só de um tema, as descrições do Kit (m3-u1), o quadro das modalidades (m3-u2) e a pergunta opcional;
 * o relógio de produção é de 55 minutos («até 55 min», 55:00) e o do aquecimento de 10; os blocos do guia somam 10, 10, 55 e 15;
@@ -210,9 +213,45 @@ def outras_paginas(host, browser):
             page.wait_for_timeout(200)
             assert re.match(r'5[45]:\d\d', page.locator('#relogio').inner_text()), page.locator('#relogio').inner_text()
             assert page.evaluate('document.documentElement.scrollWidth <= innerWidth + 1'), ('guia', largura)
+            # 13/11/2026 (decisão do docente): no guia, a «Autoavaliação» que se copiava para o Teams e «pergunta ao teu par de
+            # trabalho» saíram. Em cada uma das três produções antigas: a página abre sem erros, não tem o título nem os botões dos
+            # níveis, a regra tem dois passos, e o que se copia para o Teams traz o plano, as notas e a lista, sem autoavaliação.
+            page.evaluate('''() => { window.__copiado = null;
+                Object.defineProperty(navigator, 'clipboard', { configurable: true,
+                    value: { writeText: t => { window.__copiado = t; return Promise.resolve(); } } }); }''')
+            for k in range(3):
+                page.locator('#voltar').click()
+                page.locator('button.tarefa').nth(k).click()
+                page.locator('#rota').wait_for(state='visible')
+                rota = page.locator('#rota').inner_text()
+                assert page.locator('#rota h2').all_inner_texts()[1:] == ['Os blocos de hoje', 'Verificar antes de entregar'], (k, largura)
+                assert not re.search(r'(?i)autoavalia|nível que achas|par de trabalho|Três antes de mim', rota), (k, largura)
+                assert 'Dois antes de mim. Antes de chamares o docente: 1) relê o enunciado; 2) vê a rubrica. Só depois levantas o braço.' in rota, (k, rota)
+                assert 'O docente vê o teu plano, as notas e a lista.' in rota, (k, largura)
+                assert page.locator('#rota .niveis, #rota [aria-pressed], #rota [data-auto], #r-auto').count() == 0, (k, largura)
+                assert page.locator('#r-verificar input[type=checkbox]').count() >= 3, (k, largura)
+                assert page.locator('#rota textarea').count() == 2, (k, largura)
+                page.locator('#plano').fill('1. Ler. 2. Escrever. 3. Rever.')
+                page.locator('#r-verificar input').first.check()
+                page.locator('#copiar').click()
+                page.wait_for_function('window.__copiado !== null')
+                copiado = page.evaluate('window.__copiado')
+                page.evaluate('window.__copiado = null')
+                linhas = copiado.split('\n')
+                assert [x for x in linhas if x.isupper() and not x.startswith('ROTA')] == ['PLANO', 'NOTAS DE TRABALHO', 'VERIFICAÇÃO'], (k, copiado)
+                assert '1. Ler. 2. Escrever. 3. Rever.' in linhas and linhas[linhas.index('VERIFICAÇÃO') + 1].startswith('[x] '), (k, copiado)
+                assert not re.search(r'(?i)autoavalia|nível', copiado), (k, copiado)
+                assert len(linhas) - linhas.index('VERIFICAÇÃO') - 1 == page.locator('#r-verificar input').count(), (k, copiado)
+                assert page.evaluate('document.documentElement.scrollWidth <= innerWidth + 1'), ('guia, produção antiga', k, largura)
+            page.locator('#voltar').click()
+            assert 'verificas o trabalho com a lista da rubrica e copias tudo para a tarefa do Teams.' in page.locator('#escolha').inner_text()
+            if SAIDA and esquema == 'light':
+                page.locator('button.tarefa').first.click()
+                page.locator('#rota').wait_for(state='visible')
+                page.screenshot(path=str(Path(SAIDA) / f'guia-m3-producao-antiga-{largura}.png'), full_page=True)
             assert not erros, erros
             ctx.close()
-            print('PASS grelha, correção, aquecimento e guia', largura, esquema, flush=True)
+            print('PASS grelha, correção, aquecimento e guia (sem autoavaliação para o Teams nem par de trabalho)', largura, esquema, flush=True)
 
 
 def impressao(host, browser, slug):
