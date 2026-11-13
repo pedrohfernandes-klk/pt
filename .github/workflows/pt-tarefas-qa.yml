@@ -206,7 +206,11 @@ permissions:
 jobs:
   lessons:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    # 13/11/2026: o limite passa de 20 para 40 minutos. Cada módulo no molde
+    # «mais fácil de fazer» junta um passo de navegador de cerca de minuto e meio;
+    # com M3, M1 e M5 o trabalho chega aos 20 minutos e era cortado no último passo.
+    # Nenhum passo sai nem muda.
+    timeout-minutes: 40
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
