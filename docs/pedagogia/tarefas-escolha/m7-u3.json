@@ -142,7 +142,7 @@
   ],
   "entrega_titulo": "Entrega no Teams",
   "rever_titulo": "Se precisares de rever",
-  "_nota": "13/11/2026: a página da tarefa sai só desta chave (scripts/tarefa_facil.py) e de «titulo», «unidade», «aquecer» (ligação e minutos), «dossie» e «dossie_titulo». As outras chaves antigas («aquecer.texto», «lead», «nucleo», «temas», «apoios», «exemplos», «opcional», «criterios», «fecho», «clareza») já não aparecem na página: ficam como estavam para a leitura histórica das camadas de baixo. A pergunta opcional é a de antes, com «opinião» onde dizia «tese». O exemplo antigo «Descobre o movimento (resolvido)» usava o verso 1 do Texto 2 e não entra (regra do docente: os exemplos não usam os textos da tarefa).",
+  "_nota": "13/11/2026: a página da tarefa sai só desta chave (scripts/tarefa_facil.py) e de «titulo», «unidade», «aquecer» (ligação e minutos), «dossie» e «dossie_titulo». As outras chaves antigas («aquecer.texto», «lead», «nucleo», «temas», «apoios», «exemplos», «opcional», «criterios», «fecho», «clareza») já não aparecem na página: ficam como estavam para a leitura histórica das camadas de baixo. A pergunta opcional é a de antes, com «opinião» onde dizia «tese». Revisão de 13/11/2026: o verso de «O Infante» explicado fica só na grelha, como no main (no enunciado, o verso e o facto faltam de propósito no exemplo); a lista de verificação pergunta pelos conectores e pelas duas linhas finais; a tabela do apoio tem a classe tf-tabela-apoio. O exemplo antigo «Descobre o movimento (resolvido)» usava o verso 1 do Texto 2 e não entra (regra do docente: os exemplos não usam os textos da tarefa).",
   "fazer": [
    "Faz o aquecimento (10 minutos).",
    "Escolhe um tema: A ou B.",
@@ -352,7 +352,7 @@
     "apoios": [
      {
       "titulo": "Ver os seis movimentos e as suas letras",
-      "html": "<table class=\"tf-tabela\"><caption>Os seis movimentos, com outro tema («Ensaiar vale a pena?»)</caption><thead><tr><th scope=\"col\">Letra</th><th scope=\"col\">O que faz</th><th scope=\"col\">Exemplo com outro tema</th></tr></thead><tbody><tr><th scope=\"row\">S</th><td>opinião com uma condição</td><td>«Ensaiar só é perder tempo se o ensaio for sempre igual.»</td></tr><tr><th scope=\"row\">R</th><td>aceita uma acusação e muda-lhe o sentido, com «porque»</td><td>«Artificial, sim, artificial, porque escolheu cada pausa em vez de a deixar ao acaso.»</td></tr><tr><th scope=\"row\">C</th><td>admite uma dificuldade com «embora»</td><td>«Estou hoje vencido, embora não saiba a verdade.» (a frase da lição F07)</td></tr><tr><th scope=\"row\">N</th><td>condição necessária</td><td>«Quem quer falar três minutos sem ler tem de ouvir a própria voz antes da turma.»</td></tr><tr><th scope=\"row\">M</th><td>contraste com «mas»</td><td>«Ensaiar custa uma tarde; mas é no ensaio que se descobre o que ainda não se sabe dizer.»</td></tr><tr><th scope=\"row\">P</th><td>pergunta que leve a pensar</td><td>Não precisa de conector: é a pergunta.</td></tr></tbody></table>",
+      "html": "<table class=\"tf-tabela tf-tabela-apoio\"><caption>Os seis movimentos, com outro tema («Ensaiar vale a pena?»)</caption><thead><tr><th scope=\"col\">Letra</th><th scope=\"col\">O que faz</th><th scope=\"col\">Exemplo com outro tema</th></tr></thead><tbody><tr><th scope=\"row\">S</th><td>opinião com uma condição</td><td>«Ensaiar só é perder tempo se o ensaio for sempre igual.»</td></tr><tr><th scope=\"row\">R</th><td>aceita uma acusação e muda-lhe o sentido, com «porque»</td><td>«Artificial, sim, artificial, porque escolheu cada pausa em vez de a deixar ao acaso.»</td></tr><tr><th scope=\"row\">C</th><td>admite uma dificuldade com «embora»</td><td>«Estou hoje vencido, embora não saiba a verdade.» (a frase da lição F07)</td></tr><tr><th scope=\"row\">N</th><td>condição necessária</td><td>«Quem quer falar três minutos sem ler tem de ouvir a própria voz antes da turma.»</td></tr><tr><th scope=\"row\">M</th><td>contraste com «mas»</td><td>«Ensaiar custa uma tarde; mas é no ensaio que se descobre o que ainda não se sabe dizer.»</td></tr><tr><th scope=\"row\">P</th><td>pergunta que leve a pensar</td><td>Não precisa de conector: é a pergunta.</td></tr></tbody></table>",
       "notas": [
        "R e C respondem a quem discorda. M pesa um custo contra um ganho: não serve para responder a quem discorda."
       ]
@@ -361,7 +361,7 @@
     "exemplos": [
      {
       "titulo": "Um texto com outro tema: «Ensaiar vale a pena?»",
-      "contexto": "As letras vão aqui entre parênteses retos; no teu texto, vão na margem. O verso e o facto não estão neste exemplo.",
+      "contexto": "As letras vão aqui entre parênteses retos; no teu texto, vão na margem. O verso de <i>Mensagem</i> e o facto datado faltam de propósito: no teu texto, entram depois de [S] ou de [M].",
       "paragrafos": [
        {
         "al": "Alínea a), [S]:",
@@ -378,15 +378,6 @@
        {
         "al": "Alínea d), a conclusão, sem letra:",
         "t": "Por isso, desde que cada ensaio mude alguma coisa, ensaiar é o caminho mais curto para falar sem ler."
-       }
-      ]
-     },
-     {
-      "titulo": "Um verso de outro poema de <i>Mensagem</i>, «O Infante», no mesmo tema",
-      "paragrafos": [
-       {
-        "al": "Alíneas f), g) e h):",
-        "t": "«Deus quer, o homem sonha, a obra nasce.» O Infante é aqui o homem que sonha, um símbolo e não uma biografia; a obra só nasce depois do sonho, e por isso ensaiar é o sonho que vem antes da obra, e não tempo perdido."
        }
       ]
      },
@@ -416,10 +407,10 @@
    "Usei mais um movimento: N, M ou P?",
    "A conclusão retoma a opinião sem a copiar?",
    "As letras estão na margem?",
-   "Citei um verso exato de <i>Mensagem</i>, entre «», e indiquei o poema?",
-   "Expliquei o verso no seu contexto?",
+   "Citei um verso exato de <i>Mensagem</i>, entre «», indiquei o poema e expliquei-o no seu contexto?",
    "Tenho um facto datado, distinto da interpretação do poema, ou uma comparação com Garrett ou Reis?",
-   "Tenho 180 a 220 palavras, com o total no fim, e revi a escrita?",
+   "Tenho 180 a 220 palavras, com o total no fim, e revi a escrita e os conectores?",
+   "Escrevi as duas linhas finais?",
    "A letra do meu tema (A ou B) está no topo?"
   ],
   "entrega": [

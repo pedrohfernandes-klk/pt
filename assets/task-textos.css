@@ -287,12 +287,13 @@ main.task-page.task-choice-page[data-task-facil] :is(p,li,td,th,dd,figcaption,la
 
 /* 13/11/2026: o M7 no mesmo molde (camada tarefas_faceis_m7_20261113; versão facil-11, pedida só pela m7-u1, pela m7-u2 e pela
    m7-u3). Só regras para o que as páginas do M3, do M1, do M5 e do M6 não têm: as tarefas individuais sem temas A e B (a m7-u1 e a
-   m7-u2, main[data-task-individual], que não carregam a folha das tarefas de escolha) e a tabela de um apoio copiado (.tf-tabela)
-   num ecrã estreito. */
+   m7-u2, main[data-task-individual], que não carregam a folha das tarefas de escolha) e a tabela de um apoio copiado num ecrã
+   estreito (.tf-tabela-apoio, que só a m7-u3 tem; revisão de 13/11/2026: a regra dizia «.tf-tabela» e mudava também o quadro das
+   modalidades da m3-u2, que fica como estava). */
 main.task-page[data-task-individual] :is(p,li,td,th,dd,figcaption,label,summary,legend){text-align:start;text-align-last:auto;-webkit-hyphens:manual;hyphens:manual}
 [data-task-individual] .task-warmup{border-bottom:0}
 [data-task-individual] .task-part{display:flex;align-items:baseline;gap:12px;margin:28px 0 8px;font-size:clamp(1.2rem,2.2vw,1.5rem)}
 [data-task-individual] .tf-pergunta .task-relogio{margin:10px 0 14px}
 @media(max-width:480px){
- [data-task-facil] details.tf-mais .tf-tabela :is(th,td){padding:6px 6px;overflow-wrap:anywhere}
+ [data-task-facil] details.tf-mais .tf-tabela.tf-tabela-apoio :is(th,td){padding:6px 6px;overflow-wrap:anywhere}
 }

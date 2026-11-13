@@ -416,9 +416,10 @@ def fallback_task_pages(browser, host):
                 assert page.locator('[data-task-question]:visible').count() == (1 if choice and not cards_warm else 0)
                 optional=page.locator('[data-task-optional-preparation] > summary')
                 optional.focus();optional.press('Enter')
-                # 13/11/2026: a m7-u1 e a m7-u2 (tarefas individuais no molde novo) têm o cartão do aquecimento e as duas perguntas opcionais.
-                individuais = 2 if page.locator('main[data-task-individual]').count() else None
-                assert page.locator('[data-task-question]:visible').count() == (individuais or ((1 if cards_warm else 2) if compact else 4))
+            # 13/11/2026: a m7-u1 e a m7-u2 (tarefas individuais no molde novo) têm o cartão do aquecimento e as duas perguntas opcionais.
+            # 13/11/2026, revisão: a asserção volta a correr para todas as páginas (fora do «if compact:»), como no main.
+            individuais = 2 if page.locator('main[data-task-individual]').count() else None
+            assert page.locator('[data-task-question]:visible').count() == (individuais or ((1 if cards_warm else 2) if compact else 4))
             button=page.locator('[data-task-question="1"] button[data-response]').first
             button.focus();button.press('Enter')
             assert page.locator('[data-task-question="1"] [data-task-feedback]').inner_text()==button.get_attribute('data-response')

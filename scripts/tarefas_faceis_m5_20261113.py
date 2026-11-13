@@ -218,7 +218,8 @@ def ler(rel):
     # os dados das grelhas: desfaz-se primeiro, com contagem estrita, quando o ficheiro a traz (a «árvore» desta camada é o
     # ficheiro como ela o deixou).
     texto = (ROOT / rel).read_bytes().decode('utf-8')
-    # 13/11/2026: e por cima de todas fica a das tarefas do M7 (tarefas_faceis_m7_20261113), que também muda os dados das grelhas:
+    # 13/11/2026: e por cima de todas fica a das tarefas do M7 (tarefas_faceis_m7_20261113), que também muda os dados das grelhas
+    # e, nos acertos de 13/11/2026, os dados, o enunciado e a grelha da m5-u1 e a grelha da m5-u2:
     # desfaz-se antes da do M6, com contagem estrita.
     m7 = ROOT / 'tests/fixtures/tarefas-faceis-m7-edits-20261113.json'
     if m7.is_file():

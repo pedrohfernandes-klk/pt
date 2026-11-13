@@ -303,7 +303,10 @@ def relogio_producao(texto, minutos, slug, ident=''):
 
 def cartao_pedido(p, f, d, textos, relogio=''):
     """13/11/2026 (M7): um cartão de pedido com nome próprio («O teu texto», na m7-u3; cada parte de uma tarefa individual)."""
-    return (f'<section class="task-section tf-pergunta" id="{p["id"]}" data-task-card-name="{p["nome"]}" aria-labelledby="{p["id"]}-titulo">'
+    # 13/11/2026, revisão: no atributo, o nome do cartão leva espaço normal, como nos outros cartões («Pergunta 1», «Tema A ou B»); o
+    # espaço que não parte (U+00A0) é para o texto que se vê.
+    nome = p["nome"].replace('\xa0', ' ').replace('\u2060', '')
+    return (f'<section class="task-section tf-pergunta" id="{p["id"]}" data-task-card-name="{nome}" aria-labelledby="{p["id"]}-titulo">'
             f'<h2 id="{p["id"]}-titulo">{p["titulo"]}</h2>\n<p class="tf-meta">{p["meta"]}</p>\n{relogio}'
             + (p.get('relogio_html') or '') + corpo_pedido(p, exemplos_de(p, d), f, textos) + '</section>\n')
 

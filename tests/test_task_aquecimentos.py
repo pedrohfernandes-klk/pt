@@ -241,8 +241,12 @@ class Aquecimentos(unittest.TestCase):
         # Os dois exemplos resolvidos e o dossiê do tema B.
         # 13/11/2026: os exemplos resolvidos ficam junto do pedido, num desdobrável com outros casos (três, no molde novo: o texto do
         # ensaio, o verso de «O Infante» e a data da «Tabacaria»); o exemplo antigo com o verso 1 do Texto 2 saiu (regra do docente).
-        self.assertIn('<summary>Ver três exemplos com outros casos</summary>', s)
-        self.assertEqual(s.count('<aside class="tf-exemplo">'), 3)
+        # 13/11/2026, revisão: o verso de «O Infante» explicado dava feito um verso que o texto pode usar; fica só na grelha, como no
+        # main, e o desdobrável tem dois exemplos (o texto do ensaio e a data da «Tabacaria»). A exigência é a mesma: os exemplos estão
+        # num desdobrável com outros casos, e contam-se.
+        self.assertIn('<summary>Ver dois exemplos com outros casos</summary>', s)
+        self.assertEqual(s.count('<aside class="tf-exemplo">'), 2)
+        self.assertNotIn('Deus quer, o homem sonha, a obra nasce.', s.split('<summary>Ver dois exemplos com outros casos</summary>', 1)[1].split('</details>', 1)[0])
         # 11/11/2026: decisão 152 no M7 (achado 73): a data do dossiê leva espaço que não quebra (U+00A0) a seguir ao dia e antes do ano.
         # 13/11/2026: no molde novo, «tema B» do título do dossiê não se parte (U+00A0).
         for marca in ('[S]', '[R]', '[M]', '[N]', 'Dossiê do tema\xa0B', '1578', '20\xa0de fevereiro de\xa01933', 'sebastianismo', 'Madalena'):

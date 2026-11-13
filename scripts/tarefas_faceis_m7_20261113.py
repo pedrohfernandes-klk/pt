@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-"""13/11/2026: as três tarefas do M7 (m7-u1, m7-u2 e m7-u3) «mais fáceis de fazer», com tudo o que fala delas a usar as mesmas palavras.
+"""13/11/2026: as três tarefas do M7 (m7-u1, m7-u2 e m7-u3) «mais fáceis de fazer», com tudo o que fala delas a usar as mesmas palavras, e
+três acertos do M1 e do M5 decididos pelo docente no mesmo dia.
 
 O docente aprovou o molde das tarefas «mais fáceis de fazer», publicado no M3 (pedido #201, camada tarefas_faceis_m3_20261112) e
 levado ao M1 (#203), ao M5 (#204) e ao M6 (#205, camada tarefas_faceis_m6_20261113). Esta camada leva o mesmo molde ao M7. Cada
@@ -20,7 +21,7 @@ que também partilha com as camadas das tarefas do M5, do M1 e do M3. Partilha f
 (tarefas_claras_20261110), com a decisão 152 no M7 (cuidado_m7_20261111) e com as camadas mais antigas do guia e do portefólio:
 todas a desfazem primeiro.
 
-Ficheiros (13):
+Ficheiros (22):
 - os dados: docs/pedagogia/tarefas-escolha/m7-u3.json (a chave nova «facil», de onde sai a página; as chaves antigas ficam como
   estavam, para a leitura histórica das camadas de baixo), docs/pedagogia/grelhas-tarefas-20261027.json («autoavaliacao_so_tua»,
   «correcao_estreita» e «trocas_aluno» na grelha da m7-u3: «opinião» onde dizia «tese», «comparação» onde dizia «outra voz» e
@@ -31,8 +32,26 @@ Ficheiros (13):
 - as páginas do módulo que falam da aula de tarefa: m7/guia-da-tarefa-m7/ (quatro blocos de 10, 10, 55 e 15 minutos em vez de três
   de 15, 60 e 15; «opinião» e «comparação» na tarefa da unidade 3; sem a «Autoavaliação» que se copiava para o Teams e sem «pergunta
   ao teu par de trabalho»: a regra passa a chamar-se «Dois antes de mim») e m7/portefolio-do-modulo-m7/ (sai «trabalho de equipa»,
-  sem nada no lugar; este portefólio não tinha a autoavaliação de 0 a 20 por parâmetro). O índice e o mapa do M7 não dizem «núcleo
-  comum» nem os tempos da aula de tarefa: ficam como estavam.
+  sem nada no lugar; este portefólio não tinha a autoavaliação de 0 a 20 por parâmetro), m7/index.html (o aquecimento da unidade 1
+  passa de «10 a 15 min» a «10 min», como nas outras duas unidades e no enunciado) e m7/mapa-do-modulo-m7/ (os critérios da tarefa da
+  unidade 3 com os nomes da grelha: «Opinião e conclusão» e «Facto ou comparação»);
+- os três acertos do M1 e do M5 (decisão do docente de 13/11/2026; as camadas do M1 e do M5, já publicadas, não se reescrevem: esta
+  camada fica por cima delas, como a do M5 ficou por cima da do M3 nos dois acertos do M3): (a) m1-u2, tema A: a passagem copiada não
+  conta para as 160 a 200 palavras da crónica (docs/pedagogia/tarefas-escolha/m1-u2.json, tarefas/m1-u2/ e tarefas/m1-u2/grelha/, com
+  as mesmas palavras; a versão de correção não diz o que conta e fica igual); (b) m5-u1, tema A: a carta de exemplo (a mãe de Simão ao
+  filho) só com o que a lição F17 dá (a mãe escrevia e «não recebia resposta»; pensava que o filho não respondia), sem o «dia de
+  Natal», o «todos os dias» e o «Foram tantas» de antes; as lições não dão a data dessas cartas e por isso a data fica entre
+  parênteses retos (docs/pedagogia/tarefas-escolha/m5-u1.json, tarefas/m5-u1/ e, na grelha, os mesmos exemplos); (c) grelha do M5:
+  o exemplo do rigor da m5-u1 deixa de citar o capítulo IV («a violencia de um pae é sempre amor») e passa a usar «O latim era um
+  luxo d’erudito» (_Os Maias_, capítulo III, lição F16); o exemplo do tema A da m5-u2 deixa de citar «Sole normande?» e diz «a
+  interrupção do jantar do Hotel Central», com as palavras do enunciado (tarefas/m5-u1/grelha/ e tarefas/m5-u2/grelha/).
+
+Revisão de 13/11/2026 (dois revisores): além dos acertos, do índice e do mapa, a grelha da m7-u3 e o guia dizem o que não conta para as
+palavras com a frase do enunciado; o guia diz «duas linhas finais» onde dizia «síntese»; a lista de verificação da m7-u3 volta a
+perguntar pelos conectores e pelas duas linhas finais (dez perguntas); saem dois exemplos que davam parte da resposta (as três fontes
+da parte 3 da m7-u2; o verso de «O Infante» explicado, na m7-u3, que fica só na grelha, como no main); os nomes dos cartões da m7-u2
+levam espaço normal no atributo data-task-card-name; a regra da tabela estreita vale só para a tabela do apoio da m7-u3
+(.tf-tabela-apoio) e deixa de mudar o quadro das modalidades da m3-u2.
 
 A m7-u1 e a m7-u2 não são tarefas de escolha (não têm temas A e B nem grelha /20: a rubrica está no guia da tarefa) e as suas páginas
 eram escritas à mão. Passam a sair de dados novos (docs/pedagogia/tarefas-individuais/m7-u1.json e m7-u2.json, que não são da camada:
@@ -76,8 +95,8 @@ o ficheiro no commit de base, lido com git) e a árvore: pode voltar a correr de
 Para mudar uma página ou os dados por baixo desta camada: muda-se a árvore, voltam a gerar-se as páginas e corre-se «python3
 scripts/tarefas_faceis_m7_20261113.py --base-do-commit» (a base lê-se do commit de base, porque o manifesto antigo já não confere), e
 depois scripts/aplicar_trocas.py, que reescreve o manifesto. Confere, antes de escrever: que os geradores, com os dados da árvore,
-dão as páginas da árvore (as sete geradas das tarefas de escolha e dos aquecimentos, e as duas individuais); que, com os dados da
-base, dão as páginas da base (as quatro da m7-u3; o aquecimento da m7-u1 cita o enunciado antigo da m7-u1, que era escrito à mão, e por isso só se confere com os dados da árvore); e cada ficheiro como scripts/aplicar_trocas.py o vai conferir (da base
+dão as páginas da árvore (as sete geradas das tarefas de escolha e dos aquecimentos, as duas individuais e as cinco dos acertos do M1
+e do M5); que, com os dados da base, dão as páginas da base (as quatro da m7-u3 e as cinco dos acertos; o aquecimento da m7-u1 cita o enunciado antigo da m7-u1, que era escrito à mão, e por isso só se confere com os dados da árvore); e cada ficheiro como scripts/aplicar_trocas.py o vai conferir (da base
 para o resultado e de volta, letra a letra).
 
 As camadas de baixo desfazem primeiro esta: scripts/verificar_camadas.py (LAYERS[0]), tests/auditoria_20261028.py,
@@ -100,16 +119,21 @@ MANIFESTO = ROOT / 'tests/fixtures/tarefas-faceis-m7-edits-20261113.json'
 BASE_COMMIT = 'fe614d6750b7c4b93fd58f739415f6a250310552'
 NBSP = '\xa0'
 
-DADOS_TAREFAS = ['docs/pedagogia/tarefas-escolha/m7-u3.json']
+# Os dados das tarefas de escolha: a m7-u3 e, pelos acertos do M1 e do M5, a m1-u2 e a m5-u1.
+DADOS_TAREFAS = ['docs/pedagogia/tarefas-escolha/m7-u3.json', 'docs/pedagogia/tarefas-escolha/m1-u2.json', 'docs/pedagogia/tarefas-escolha/m5-u1.json']
 DADOS_GRELHAS = 'docs/pedagogia/grelhas-tarefas-20261027.json'
 DADOS_AQUECIMENTOS = ['docs/pedagogia/aquecimentos/m7-u1.json', 'docs/pedagogia/aquecimentos/m7-u3.json']
 FICHEIROS_DADOS = DADOS_TAREFAS + [DADOS_GRELHAS] + DADOS_AQUECIMENTOS
 # As páginas que já saíam dos geradores (com os dados da base dão a página da base) e as duas que eram escritas à mão.
 PAGINAS = ['tarefas/m7-u1/aquecimento/index.html'] + [f'tarefas/m7-u3/{p}index.html' for p in ('', 'grelha/', 'aquecimento/', 'correcao/')]
 INDIVIDUAIS = ['tarefas/m7-u1/index.html', 'tarefas/m7-u2/index.html']
+# Os acertos do M1 e do M5 (13/11/2026): as páginas que saem dos mesmos geradores, com os dados da base e com os da árvore.
+ACERTOS = ['tarefas/m1-u2/index.html', 'tarefas/m1-u2/grelha/index.html', 'tarefas/m5-u1/index.html', 'tarefas/m5-u1/grelha/index.html',
+           'tarefas/m5-u2/grelha/index.html']
 GUIA, PORTEFOLIO = 'm7/guia-da-tarefa-m7/index.html', 'm7/portefolio-do-modulo-m7/index.html'
-MODULO = [GUIA, PORTEFOLIO]
-FICHEIROS = FICHEIROS_DADOS + INDIVIDUAIS + PAGINAS + MODULO
+INDICE, MAPA = 'm7/index.html', 'm7/mapa-do-modulo-m7/index.html'
+MODULO = [GUIA, PORTEFOLIO, INDICE, MAPA]
+FICHEIROS = FICHEIROS_DADOS + INDIVIDUAIS + PAGINAS + ACERTOS + MODULO
 
 ACHADOS = {
     'facil': 'O molde «mais fácil de fazer», aprovado pelo docente no M3, chega ao M7: a mesma tarefa, com os textos das lições junto '
@@ -128,6 +152,13 @@ ACHADOS = {
                '(«Dois antes de mim»).',
     'sem_equipa': 'Decisão do docente (13/11/2026): não há trabalho de grupo nem de pares; no portefólio do módulo, «trabalho de equipa» '
                   'sai da lista do que o portefólio serve para avaliar, sem nada no lugar.',
+    'acerto_m1': 'Acerto do M1 (decisão do docente de 13/11/2026): na m1-u2, a passagem copiada do tema A não conta para as 160 a 200 '
+                 'palavras da crónica; o enunciado e a grelha dizem-no com as mesmas palavras.',
+    'acerto_carta': 'Acerto do M5 (decisão do docente de 13/11/2026): a carta de exemplo do tema A da m5-u1 refaz-se só com matéria do '
+                    'romance que as lições do M5 dão (lição F17: a mãe escrevia a Simão e não recebia resposta); a data, que as lições '
+                    'não dão, fica entre parênteses retos; o enunciado e a grelha usam o mesmo exemplo.',
+    'acerto_grelha': 'Acerto do M5 (decisão do docente de 13/11/2026): os exemplos da grelha deixam de citar os textos da própria tarefa '
+                     '(«a violencia de um pae é sempre amor», na m5-u1; «Sole normande?», na m5-u2) e usam outro caso das lições.',
 }
 
 
@@ -172,19 +203,21 @@ def gerar_com(textos, individuais=False):
             'te.DADOS = tmp / "docs/pedagogia/tarefas-escolha"; te.GRELHAS = tmp / "docs/pedagogia/grelhas-tarefas-20261027.json"\n'
             'gt.DADOS = tmp / "docs/pedagogia/grelhas-tarefas-20261027.json"\n'
             'grelhas = json.loads(te.GRELHAS.read_text("utf-8"))["tarefas"]\n'
-            's = "m7-u3"\n'
-            'd = json.loads((te.DADOS / (s + ".json")).read_text("utf-8")); te.tarefa(d, s in grelhas, tmp / "saida")\n'
-            't = grelhas[s]\n'
-            'for pasta, html in (("grelha", gt.pagina_aluno(s, t)), ("correcao", gt.pagina_correcao(s, t))):\n'
-            '    p = tmp / "saida/tarefas" / s / pasta / "index.html"; p.parent.mkdir(parents=True, exist_ok=True)\n'
-            '    p.write_text(html, "utf-8", newline="\\n")\n'
+            'for s in ("m7-u3", "m1-u2", "m5-u1"):\n'
+            '    d = json.loads((te.DADOS / (s + ".json")).read_text("utf-8")); te.tarefa(d, s in grelhas, tmp / "saida")\n'
+            'for s, pastas in (("m7-u3", ("grelha", "correcao")), ("m1-u2", ("grelha",)), ("m5-u1", ("grelha",)), ("m5-u2", ("grelha",))):\n'
+            '    t = grelhas[s]\n'
+            '    for pasta in pastas:\n'
+            '        html = gt.pagina_aluno(s, t) if pasta == "grelha" else gt.pagina_correcao(s, t)\n'
+            '        p = tmp / "saida/tarefas" / s / pasta / "index.html"; p.parent.mkdir(parents=True, exist_ok=True)\n'
+            '        p.write_text(html, "utf-8", newline="\\n")\n'
             'ti.main(["--saida", str(tmp / "saida")])\n'
             'sys.exit(aq.main(["--saida", str(tmp / "saida"), "--dados", str(tmp / "docs/pedagogia/aquecimentos")] + sys.argv[2:]) or 0)\n')
         r = subprocess.run([sys.executable, '-c', codigo, str(tmp)] + (['m7-u1', 'm7-u3'] if individuais else ['m7-u3']), cwd=ROOT, capture_output=True, text=True, encoding='utf-8')
         if r.returncode:
             raise SystemExit('os geradores falharam: ' + r.stdout + r.stderr)
         # O aquecimento da m7-u1 cita o enunciado da m7-u1, que na base era outra página, escrita à mão: com os dados da base não se gera.
-        return {rel: (tmp / 'saida' / rel).read_bytes().decode('utf-8') for rel in (PAGINAS + INDIVIDUAIS if individuais else PAGINAS[1:])}
+        return {rel: (tmp / 'saida' / rel).read_bytes().decode('utf-8') for rel in (PAGINAS + INDIVIDUAIS if individuais else PAGINAS[1:]) + ACERTOS}
 
 # ---------- da diferença às trocas ----------
 
@@ -285,12 +318,16 @@ def _visivel(s):
 
 
 def nome(rel):
-    m = re.search(r'm7-u(\d)', rel)
-    u = f'M7-U{m.group(1)}' if m else 'M7'
+    m = re.search(r'm(\d)-u(\d)', rel)
+    u = f'M{m.group(1)}-U{m.group(2)}' if m else 'M7'
     if rel in DADOS_TAREFAS:
         return f'Tarefa da {u}, os dados do enunciado'
     if rel == DADOS_GRELHAS:
-        return 'Grelha da tarefa da M7-U3, os dados'
+        return 'Grelhas das tarefas (M7-U3, M1-U2, M5-U1 e M5-U2), os dados'
+    if rel == INDICE:
+        return 'Índice do M7'
+    if rel == MAPA:
+        return 'Mapa do módulo M7'
     if rel in DADOS_AQUECIMENTOS:
         return f'Aquecimento da {u}, os dados'
     if rel == GUIA:
@@ -303,6 +340,20 @@ def nome(rel):
 
 def categorias(rel, antigo, novo):
     cs = set()
+    # Os acertos do M1 e do M5: pelos ficheiros e, nos dados das grelhas (que são de todas as tarefas), pelo que a troca diz.
+    if 'm1-u2' in rel or (rel == DADOS_GRELHAS and 'a passagem copiada,' in novo):
+        return ['acerto_m1']
+    if rel in (DADOS_TAREFAS[2], 'tarefas/m5-u1/index.html'):
+        return ['acerto_carta']
+    if rel == DADOS_GRELHAS or '/m5-u' in rel:
+        acertos = (['acerto_carta'] if re.search(r'\[dia, mês e ano\]|outras cartas|parênteses retos porque', novo) else []) + (['acerto_grelha'] if re.search(r'erudito|Hotel Central|sobre o latim', novo) else [])
+        if acertos or '/m5-u' in rel:
+            assert acertos, (rel, novo[:80])
+            return acertos
+    if rel == INDICE:
+        return ['tempos']
+    if rel == MAPA:
+        return ['junto']
     if rel in DADOS_TAREFAS or rel in INDIVIDUAIS or rel == 'tarefas/m7-u3/index.html':
         cs |= {'facil', 'tempos', 'junto'} | ({'auto'} if 'm7-u3' in rel else set())
     elif rel == DADOS_GRELHAS or '/grelha/' in rel or '/correcao/' in rel:

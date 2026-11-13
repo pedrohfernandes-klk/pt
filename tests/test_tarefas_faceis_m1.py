@@ -1042,6 +1042,25 @@ class TarefasFaceisM1(unittest.TestCase):
 
     # ---------- as tarefas dos outros módulos não mudam ----------
 
+    def test_acerto_de_13_11_a_passagem_copiada_nao_conta(self):
+        # 13/11/2026: acerto decidido pelo docente no pedido das tarefas do M7. Na m1-u2, tema A, a passagem copiada não conta para as
+        # 160 a 200 palavras da crónica. A frase muda na camada de cima (tarefas_faceis_m7_20261113), que não reescreve esta: os outros
+        # testes deste ficheiro leem os ficheiros como esta camada os deixou (ler() desfaz a de cima), e aqui confere-se o que a árvore
+        # tem agora: só essa frase muda, nos dados e no enunciado, e a grelha diz o mesmo com as mesmas palavras.
+        velha = 'Não contam para as palavras da crónica: as respostas, as fontes e as duas linhas finais.'
+        nova = 'Não contam para as palavras da crónica: as respostas, a passagem copiada, as fontes e as duas linhas finais.'
+        for rel in ('docs/pedagogia/tarefas-escolha/m1-u2.json', 'tarefas/m1-u2/index.html'):
+            arvore = (ROOT / rel).read_bytes().decode('utf-8')
+            self.assertEqual(ler(rel).count(velha), 1, rel)
+            self.assertEqual(arvore, ler(rel).replace(velha, nova), rel)
+        grelha = (ROOT / 'tarefas/m1-u2/grelha/index.html').read_bytes().decode('utf-8')
+        self.assertEqual(grelha.count(nova + ' O aquecimento não conta para a nota.'), 1)
+        self.assertEqual(grelha.count('Contar as respostas, a passagem copiada, as fontes ou as duas linhas finais nas'), 1)
+        self.assertEqual(grelha, ler('tarefas/m1-u2/grelha/index.html')
+                         .replace('As respostas, as fontes e as duas linhas finais ficam fora da contagem; o aquecimento não conta para a nota.', nova + ' O aquecimento não conta para a nota.')
+                         .replace('Contar as respostas, as fontes ou as duas linhas finais nas', 'Contar as respostas, a passagem copiada, as fontes ou as duas linhas finais nas'))
+        self.assertEqual((ROOT / 'tarefas/m1-u2/correcao/index.html').read_bytes().decode('utf-8'), ler('tarefas/m1-u2/correcao/index.html'))
+
     def test_as_outras_tarefas_nao_mudam(self):
         self.assertEqual(sorted(MANIFESTO['files']), sorted(FICHEIROS))
         self.assertEqual(sorted(OUTRAS + SLUGS), sorted(p.stem for p in (ROOT / 'docs/pedagogia/tarefas-escolha').glob('*.json')))
@@ -1109,7 +1128,9 @@ class TarefasFaceisM1(unittest.TestCase):
                         conteudo = undo_tarefas_faceis_m5_1113(rel, conteudo.decode('utf-8')).encode('utf-8')
                     self.assertEqual(conteudo, r.stdout)
         # 13/11/2026: 14 da camada do M5, 12 da do M6 e 10 da do M7.
-        self.assertIn(de_cima, (0, 36))
+        # 13/11/2026, revisão: a camada do M7 passou a levar os acertos do M1 e do M5; fora dos ficheiros desta camada, muda mais
+        # quatro (os dados, o enunciado e a grelha da m5-u1 e a grelha da m5-u2): 14 da do M7, 40 ao todo, com a mesma exigência.
+        self.assertIn(de_cima, (0, 40))
         # Os três geradores, com os dados da árvore, dão todas as páginas da árvore, byte a byte (as treze tarefas, as grelhas, as
         # correções e os aquecimentos).
         with tempfile.TemporaryDirectory() as tmp:

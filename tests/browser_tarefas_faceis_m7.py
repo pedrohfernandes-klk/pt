@@ -32,7 +32,8 @@ from browser_m1_and_inventory import ROOT, QuietHandler
 N = '\xa0'
 LARGURAS = ((390, 844), (1280, 800))
 CARTOES = {'m7-u1': ['Começar', 'A comparação', 'Fechar e entregar', 'Rever a matéria'],
-           'm7-u2': ['Começar', 'Parte' + N + '1: o perfil', 'Parte' + N + '2: o texto', 'Parte' + N + '3: escolhas e fontes', 'Parte' + N + '4: a apresentação',
+           # 13/11/2026, revisão: os nomes dos cartões levam espaço normal (como «Pergunta 1» nas outras páginas do molde).
+           'm7-u2': ['Começar', 'Parte 1: o perfil', 'Parte 2: o texto', 'Parte 3: escolhas e fontes', 'Parte 4: a apresentação',
                      'Fechar e entregar', 'Rever a matéria'],
            'm7-u3': ['Começar', 'Tema A ou B', 'O teu texto', 'Fechar e entregar', 'Rever a matéria']}
 SAIDA = os.environ.get('TAREFAS_FACEIS_M7_OUTPUT')
@@ -188,7 +189,9 @@ def outras_paginas(host, browser):
     for largura in (320, 390, 1280):
         ctx, page, erros = contexto(browser, largura, 844, 'light')
         for rel in ('tarefas/m7-u3/grelha/', 'tarefas/m7-u3/correcao/', 'tarefas/m7-u1/aquecimento/', 'tarefas/m7-u2/aquecimento/', 'tarefas/m7-u3/aquecimento/',
-                    'm7/guia-da-tarefa-m7/', 'm7/portefolio-do-modulo-m7/'):
+                    'm7/guia-da-tarefa-m7/', 'm7/portefolio-do-modulo-m7/', 'm7/mapa-do-modulo-m7/',
+                    # 13/11/2026, revisão: e as páginas dos acertos do M1 e do M5
+                    'tarefas/m1-u2/grelha/', 'tarefas/m5-u1/grelha/', 'tarefas/m5-u2/grelha/'):
             page.goto(f'{host}/{rel}', wait_until='networkidle')
             assert page.evaluate('document.documentElement.scrollWidth <= innerWidth + 1'), (rel, largura)
         assert not erros, erros
@@ -199,6 +202,47 @@ def outras_paginas(host, browser):
     texto = page.locator('body').text_content()
     assert 'Opinião e conclusão' in texto and 'Facto ou comparação' in texto and 'Esta autoavaliação é só para ti: não se entrega.' in texto
     assert not re.search(r'[Tt]ese\b', texto) and 'outra voz' not in texto
+    # 13/11/2026, revisão: a grelha diz o que não conta para as palavras com a frase do enunciado.
+    nao_contam = 'Não contam para as palavras: os versos citados ou copiados e as duas linhas finais.'
+    assert nao_contam in texto and 'fora da contagem' not in texto
+    page.goto(f'{host}/tarefas/m7-u3/', wait_until='networkidle')
+    assert nao_contam in page.locator('main').text_content()
+    assert page.locator('.task-checklist label').count() == 10
+    rotulos = page.evaluate('[...document.querySelectorAll(".task-checklist label")].map(e => e.textContent.trim())')
+    assert 'Escrevi as duas linhas finais?' in rotulos and any('conectores' in r for r in rotulos), rotulos
+    assert page.locator('.tf-exemplos .tf-exemplo').count() == 2
+    assert 'Deus quer, o homem sonha' not in page.evaluate('[...document.querySelectorAll(".tf-exemplos")].map(e => e.textContent).join(" ")')
+    # a tabela do apoio da m7-u3 é a única com a regra do ecrã estreito; o quadro das modalidades da m3-u2 fica como estava (7px 8px)
+    assert page.evaluate('getComputedStyle(document.querySelector("details.tf-mais .tf-tabela td")).padding') == '6px'
+    page.goto(f'{host}/tarefas/m3-u2/', wait_until='networkidle')
+    assert page.evaluate('getComputedStyle(document.querySelector("details.tf-mais .tf-tabela td")).padding') == '7px 8px'
+    # m7-u2: a parte 3 tem um só exemplo, sem fontes; os nomes dos cartões no atributo não levam U+00A0
+    page.goto(f'{host}/tarefas/m7-u2/', wait_until='networkidle')
+    assert page.locator('#parte-3 .tf-exemplo').count() == 1 and 'Casais Monteiro' not in page.locator('#parte-3 .tf-exemplos').text_content()
+    assert page.evaluate('[...document.querySelectorAll("[data-task-card-name]")].every(e => !/[\u00a0\u2060]/.test(e.dataset.taskCardName))')
+    # o índice e o mapa do módulo: 10 minutos nos três aquecimentos e os critérios com os nomes da grelha
+    page.goto(f'{host}/m7/mapa-do-modulo-m7/', wait_until='networkidle')
+    texto = page.locator('body').text_content()
+    assert 'Opinião e conclusão; Movimentos; Verso de Mensagem; Facto ou comparação; Forma' in texto and 'outra voz' not in texto
+    page.goto(f'{host}/m7/', wait_until='domcontentloaded')
+    chips = page.evaluate('[...document.querySelectorAll(".chip")].map(e => e.textContent).filter(t => /^10/.test(t))')
+    assert chips == ['10' + N + 'min'] * 3, chips
+    # os acertos do M1 e do M5: a passagem copiada não conta (m1-u2); a carta de exemplo sem matéria inventada (m5-u1); a grelha do M5
+    # sem citações dos textos da tarefa
+    page.goto(f'{host}/tarefas/m1-u2/', wait_until='networkidle')
+    frase = 'Não contam para as palavras da crónica: as respostas, a passagem copiada, as fontes e as duas linhas finais.'
+    assert frase in page.locator('main').text_content()
+    page.goto(f'{host}/tarefas/m1-u2/grelha/', wait_until='networkidle')
+    assert frase in page.locator('body').text_content()
+    page.goto(f'{host}/tarefas/m5-u1/', wait_until='networkidle')
+    exemplos = page.evaluate('[...document.querySelectorAll(".tf-exemplos")].map(e => e.textContent).join(" ")')
+    assert 'Em casa, [dia, mês e ano]. Meu filho:' in exemplos and 'Natal' not in exemplos and 'Foram tantas' not in exemplos and 'todos os dias' not in exemplos
+    page.goto(f'{host}/tarefas/m5-u1/grelha/', wait_until='networkidle')
+    texto = page.locator('body').text_content()
+    assert 'O latim era um luxo d’erudito' in texto and 'a violencia de um pae' not in texto and 'Natal' not in texto
+    page.goto(f'{host}/tarefas/m5-u2/grelha/', wait_until='networkidle')
+    texto = page.locator('body').text_content()
+    assert 'Imitei a interrupção do jantar do Hotel Central' in texto and 'Sole normande' not in texto
     page.goto(f'{host}/tarefas/m7-u3/correcao/', wait_until='networkidle')
     cab = page.evaluate('[...document.querySelectorAll("table")[0].querySelectorAll("thead th")].map(e => e.textContent.trim())')
     assert 'Aluno' not in cab and 'Docente' in cab, cab

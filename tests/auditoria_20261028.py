@@ -382,7 +382,8 @@ _TAREFAS_FACEIS_M3_1112 = json.loads((ROOT/'tests/fixtures/tarefas-faceis-m3-edi
 _TAREFAS_FACEIS_M1_1113 = json.loads((ROOT/'tests/fixtures/tarefas-faceis-m1-edits-20261113.json').read_text('utf-8'))['files']
 
 # 13/11/2026: as três tarefas do M7 «mais fáceis de fazer» e «tudo junto» no M7 (os enunciados da m7-u1, da m7-u2 e da m7-u3, a grelha,
-# a correção e os aquecimentos, os seus dados, e o guia e o portefólio do M7), camada mais recente, por cima das tarefas do M6 mais
+# a correção e os aquecimentos, os seus dados, e o guia, o portefólio, o índice e o mapa do M7), com três acertos do M1 e do M5 (os
+# dados, o enunciado e a grelha da m1-u2 e da m5-u1 e a grelha da m5-u2), camada mais recente, por cima das tarefas do M6 mais
 # fáceis de fazer (com a qual partilha os dados das grelhas): desfaz-se antes de todas, com contagem estrita.
 _TAREFAS_FACEIS_M7_1113 = json.loads((ROOT/'tests/fixtures/tarefas-faceis-m7-edits-20261113.json').read_text('utf-8'))['files']
 

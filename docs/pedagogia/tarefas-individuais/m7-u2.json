@@ -4,7 +4,7 @@
  "unidade": 2,
  "titulo": "Uma ideia de heterónimo",
  "descricao": "Tarefa com consulta: recuperar as leituras de Caeiro, Reis e Campos e criar uma voz própria, numa aula de 90 minutos.",
- "_nota": "13/11/2026: a página da tarefa (tarefas/m7-u2/index.html) sai destes dados, por scripts/tarefas_individuais_faceis.py e scripts/tarefa_facil.py (camada tarefas_faceis_m7_20261113). A tarefa é a de antes: as mesmas ordens, as mesmas 100 a 150 palavras, a apresentação de dois minutos e as mesmas duas perguntas opcionais. Não há texto para analisar: o texto é do aluno. Os exemplos vêm do guia da tarefa (o perfil de Augusto Pires) e do aquecimento.",
+ "_nota": "13/11/2026: a página da tarefa (tarefas/m7-u2/index.html) sai destes dados, por scripts/tarefas_individuais_faceis.py e scripts/tarefa_facil.py (camada tarefas_faceis_m7_20261113). A tarefa é a de antes: as mesmas ordens, as mesmas 100 a 150 palavras, a apresentação de dois minutos e as mesmas duas perguntas opcionais. Não há texto para analisar: o texto é do aluno. Os exemplos vêm do guia da tarefa (o perfil de Augusto Pires) e do aquecimento (o verso de Caeiro). Revisão de 13/11/2026: a parte 3 não tem exemplo de fontes, porque o que havia dava três fontes que servem para a tarefa e a diferença entre elas.",
  "aquecer": {
   "cartoes": "aquecimento/",
   "minutos": 10,
@@ -225,15 +225,6 @@
        {
         "al": "Alínea a):",
         "t": "Em «Quem está ao pé dele está só ao pé dele», Caeiro repete «ao pé dele». A escolha insiste na presença do rio: quem vê sem pensar não lhe põe nada em cima."
-       }
-      ]
-     },
-     {
-      "titulo": "Duas fontes sobre Álvaro de Campos, e a diferença entre elas",
-      "paragrafos": [
-       {
-        "al": "Alíneas b) e c):",
-        "t": "A carta a Adolfo Casais Monteiro é de 13 de janeiro de 1935: diz que Campos é engenheiro naval e nasceu em Tavira. A lição F01 diz: «a vida inventada prepara o estilo». A lição F11 diz: «Estes dados ajudam a caracterizar a figura, mas não explicam, por si sós, a presença de máquinas ou o verso livre». A diferença: a F01 liga a vida ao estilo; a F11 diz que a vida não chega para o explicar."
        }
       ]
      }

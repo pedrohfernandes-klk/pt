@@ -1282,7 +1282,9 @@ class TarefasFaceisM6(unittest.TestCase):
                         de_cima += 1
                         conteudo = undo_tarefas_faceis_m7_1113(rel, conteudo.decode('utf-8')).encode('utf-8')
                     self.assertEqual(conteudo, r.stdout)
-        self.assertIn(de_cima, (0, 10))
+        # 13/11/2026, revisão: a camada do M7 passou a levar os acertos do M1 e do M5 (os dados, o enunciado e a grelha da m1-u2 e da
+        # m5-u1 e a grelha da m5-u2): mais sete ficheiros, 17 ao todo, com a mesma exigência.
+        self.assertIn(de_cima, (0, 17))
         if do_main(GUIA) is not None:
             self.assertGreater(iguais, 60)
         # Os três geradores, com os dados da árvore, dão todas as páginas da árvore, byte a byte (as treze tarefas, as grelhas, as

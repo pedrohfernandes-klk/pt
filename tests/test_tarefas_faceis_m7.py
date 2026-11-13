@@ -24,6 +24,12 @@ exigem das do M3 e do M6:
 * a camada: no topo da pilha, com manifesto, reversível letra a letra até à base, gerador que dá o mesmo JSON, registada na
   auditoria (desfazer), em scripts/desligar_sala.py, na leitura histórica dos enunciados e nas cadeias e caminhos dos fluxos.
 
+Revisão de 13/11/2026 (dois revisores) e os três acertos do M1 e do M5 que o docente mandou ir no mesmo pedido (classe Acertos, no
+fim): a camada passa a ter 22 ficheiros (mais o índice e o mapa do M7 e os sete dos acertos); a m1-u2 diz, no enunciado e na grelha,
+com as mesmas palavras, que a passagem copiada não conta; a carta de exemplo da m5-u1 usa só o que a lição F17 dá; os dois exemplos
+da grelha do M5 já não citam os textos da própria tarefa. As camadas do M1 e do M5 não se reescrevem: os seus testes leem os seus
+ficheiros com esta camada desfeita.
+
 O navegador (390 e 1280 px, claro e escuro, teclado, relógio, ligações internas e impressão) está em
 tests/browser_tarefas_faceis_m7.py."""
 from pathlib import Path
@@ -50,11 +56,18 @@ SLUGS = ('m7-u1', 'm7-u2', 'm7-u3')
 ENUNCIADOS = [f'tarefas/{s}/index.html' for s in SLUGS]
 GRELHAS = 'docs/pedagogia/grelhas-tarefas-20261027.json'
 GUIA, PORTEFOLIO = 'm7/guia-da-tarefa-m7/index.html', 'm7/portefolio-do-modulo-m7/index.html'
+INDICE, MAPA = 'm7/index.html', 'm7/mapa-do-modulo-m7/index.html'
+# 13/11/2026, revisão: os ficheiros dos três acertos do M1 e do M5 (os dados e as páginas que mudam; as versões de correção não mudam).
+ACERTOS = ['docs/pedagogia/tarefas-escolha/m1-u2.json', 'tarefas/m1-u2/index.html', 'tarefas/m1-u2/grelha/index.html',
+           'docs/pedagogia/tarefas-escolha/m5-u1.json', 'tarefas/m5-u1/index.html', 'tarefas/m5-u1/grelha/index.html', 'tarefas/m5-u2/grelha/index.html']
 FICHEIROS = ['docs/pedagogia/tarefas-escolha/m7-u3.json', GRELHAS, 'docs/pedagogia/aquecimentos/m7-u1.json', 'docs/pedagogia/aquecimentos/m7-u3.json',
              'tarefas/m7-u1/index.html', 'tarefas/m7-u2/index.html', 'tarefas/m7-u1/aquecimento/index.html', 'tarefas/m7-u3/index.html',
-             'tarefas/m7-u3/grelha/index.html', 'tarefas/m7-u3/aquecimento/index.html', 'tarefas/m7-u3/correcao/index.html', GUIA, PORTEFOLIO]
+             'tarefas/m7-u3/grelha/index.html', 'tarefas/m7-u3/aquecimento/index.html', 'tarefas/m7-u3/correcao/index.html', GUIA, PORTEFOLIO,
+             INDICE, MAPA] + ACERTOS
+NAO_CONTAM = 'Não contam para as palavras: os versos citados ou copiados e as duas linhas finais.'
+# 13/11/2026, revisão: no atributo, o nome do cartão leva espaço normal, como «Pergunta 1» e «Tema A ou B» nas outras páginas do molde.
 CARTOES = {'m7-u1': ['A comparação', 'Fechar e entregar', 'Rever a matéria'],
-           'm7-u2': ['Parte' + N + '1: o perfil', 'Parte' + N + '2: o texto', 'Parte' + N + '3: escolhas e fontes', 'Parte' + N + '4: a apresentação', 'Fechar e entregar', 'Rever a matéria'],
+           'm7-u2': ['Parte 1: o perfil', 'Parte 2: o texto', 'Parte 3: escolhas e fontes', 'Parte 4: a apresentação', 'Fechar e entregar', 'Rever a matéria'],
            'm7-u3': ['Tema A ou B', 'O teu texto', 'Fechar e entregar', 'Rever a matéria']}
 PALAVRAS = {'m7-u1': '80' + N + 'a' + N + '120', 'm7-u2': '100' + N + 'a' + N + '150', 'm7-u3': '180' + N + 'a' + N + '220'}
 # O que cada enunciado de antes pedia, com as suas palavras: cada pedaço está no enunciado de antes e continua no de agora.
@@ -173,9 +186,27 @@ class MesmaTarefa(unittest.TestCase):
         novas = {'autoavaliacao_so_tua', 'correcao_estreita', 'trocas_aluno'}
         self.assertEqual({k: v for k, v in agora['m7-u3'].items() if k not in novas}, antes['m7-u3'])
         self.assertEqual(set(agora['m7-u3']) - set(antes['m7-u3']), novas)
+        # 13/11/2026, revisão: as outras grelhas são as de antes, salvo o que os três acertos do M1 e do M5 mudam (as trocas de
+        # palavras da m1-u2 e os exemplos de dois critérios da m5-u1 e de um da m5-u2; ver a classe Acertos). Os critérios, os níveis
+        # (a frase de cada nível) e os pontos de todas ficam iguais.
         for slug in antes:
-            if slug != 'm7-u3':
-                self.assertEqual(agora[slug], antes[slug], slug)
+            if slug == 'm7-u3':
+                continue
+            a, b = json.loads(json.dumps(antes[slug])), json.loads(json.dumps(agora[slug]))
+            self.assertEqual([(c['nome'], c['max'], [v[0] for v in c['niveis'].values()], c['custa']) for c in b['criterios']],
+                             [(c['nome'], c['max'], [v[0] for v in c['niveis'].values()], c['custa']) for c in a['criterios']], slug)
+            if slug == 'm1-u2':
+                self.assertEqual([x[0] for x in a['trocas_aluno']][2:7] + [x[0] for x in a['trocas_aluno']][8:], [x[0] for x in b['trocas_aluno']][2:7] + [x[0] for x in b['trocas_aluno']][8:])
+                a['trocas_aluno'] = b['trocas_aluno'] = None
+            elif slug == 'm5-u1':
+                for k, niveis in ((2, ('parcial', 'max')), (3, ('parcial', 'max'))):
+                    for n in niveis:
+                        self.assertNotEqual(a['criterios'][k]['niveis'][n][1], b['criterios'][k]['niveis'][n][1])
+                        a['criterios'][k]['niveis'][n][1] = b['criterios'][k]['niveis'][n][1] = None
+            elif slug == 'm5-u2':
+                self.assertNotEqual(a['criterios'][2]['niveis']['max'][1], b['criterios'][2]['niveis']['max'][1])
+                a['criterios'][2]['niveis']['max'][1] = b['criterios'][2]['niveis']['max'][1] = None
+            self.assertEqual(b, a, slug)
         self.assertEqual([c['max'] for c in agora['m7-u3']['criterios']], [3, 5, 5, 4, 3])
 
 
@@ -230,11 +261,38 @@ class TextosDasLicoes(unittest.TestCase):
         fontes = ' '.join(ler(str(p.relative_to(ROOT))) for p in sorted((ROOT / 'm7').glob('licao-m7-f*/index.html'))).replace('\\"', '"')
         fontes += ler(GUIA) + ler('docs/pedagogia/aquecimentos/m7-u2.json') + ler(GRELHAS)
         for trecho in ("O que em mim sente 'stá pensando", 'a entreter a razão', 'Ouvi-la alegra e entristece', 'Ah, poder ser tu, sendo eu!',
-                       'Quem está ao pé dele está só ao pé dele', 'a vida inventada prepara o estilo',
-                       'Estes dados ajudam a caracterizar a figura, mas não explicam, por si sós, a presença de máquinas ou o verso livre',
-                       'Hoje levantei catorze contentores.', 'Deus quer, o homem sonha, a obra nasce.', 'Estou hoje vencido, embora não saiba a verdade',
+                       'Quem está ao pé dele está só ao pé dele',
+                       'Hoje levantei catorze contentores.', 'Estou hoje vencido, embora não saiba a verdade',
                        'Artificial, sim, artificial, porque escolheu cada pausa em vez de a deixar ao acaso.'):
             self.assertIn(trecho, fontes, trecho)
+            self.assertTrue(any(trecho in ler(e) for e in ENUNCIADOS), trecho)
+
+    def test_os_exemplos_nao_dao_parte_da_resposta(self):
+        """13/11/2026, revisão: dois exemplos davam feito o que a tarefa pede e saíram do enunciado."""
+        # m7-u2, parte 3: a tarefa pede três fontes com data e as diferenças entre elas, e a ajuda diz que as fontes são a carta a Adolfo
+        # Casais Monteiro ou uma lição dos heterónimos. O exemplo que dava a carta, a lição F01, a lição F11 e a diferença já escrita
+        # saiu; a parte fica com um só exemplo, o da escolha de linguagem (um verso de Caeiro), e nenhum exemplo fala de fontes.
+        f2 = dados('m7-u2')['facil']
+        self.assertEqual([len(p.get('exemplos', [])) for p in f2['partes']], [1, 1, 1, 0])
+        u2 = ler('tarefas/m7-u2/index.html')
+        exemplos = ' '.join(re.findall(r'<details class="tf-so-tema tf-exemplos tf-so-ecra">.*?</details>', u2, re.S))
+        self.assertEqual(exemplos.count('<aside class="tf-exemplo">'), 3)
+        for fora in ('Casais Monteiro', '1935', 'F01', 'F11', 'a vida inventada prepara o estilo', 'Estes dados ajudam', 'A diferença', 'fonte'):
+            self.assertNotIn(fora, visivel('<main>' + exemplos + '</main>'), fora)
+        self.assertIn('Uma fonte pode ser a carta a Adolfo Casais Monteiro ou uma lição dos heterónimos.', u2)
+        # m7-u3: a tarefa aceita qualquer verso de Mensagem. O verso de «O Infante» com a explicação feita fica só na grelha, como no
+        # main (onde o enunciado dizia que o verso e o facto faltavam de propósito); o enunciado volta a dizê-lo.
+        f3 = dados('m7-u3')['facil']
+        self.assertEqual(len(f3['depois'][0]['exemplos']), 2)
+        u3 = ler('tarefas/m7-u3/index.html')
+        exemplos = ' '.join(re.findall(r'<details class="tf-so-tema tf-(?:exemplos|mais) tf-so-ecra">.*?</details>', u3, re.S))
+        for fora in ('Deus quer, o homem sonha, a obra nasce', 'O Infante', 'O verso e o facto não estão neste exemplo'):
+            self.assertNotIn(fora, exemplos, fora)
+        self.assertNotIn('Deus quer, o homem sonha, a obra nasce.»', visivel(u3))
+        self.assertIn('O verso de <i>Mensagem</i> e o facto datado faltam de propósito: no teu texto, entram depois de [S] ou de [M].', u3)
+        self.assertIn('faltam de propósito: no teu texto, entram depois de [S] ou de [M].', base(GUIA))
+        self.assertIn('«Deus quer, o homem sonha, a obra nasce.»', ler('tarefas/m7-u3/grelha/index.html'))
+        self.assertEqual(u3.count('<summary>Ver dois exemplos com outros casos</summary>'), 1)
 
 
 class DecisoesDoDocente(unittest.TestCase):
@@ -248,8 +306,17 @@ class DecisoesDoDocente(unittest.TestCase):
                 self.assertEqual(sum(tempos[:4]), 90)
                 self.assertEqual(pagina.count('data-max="10" data-passo="1" data-rotulo="Aquecimento"'), 1)
                 self.assertEqual(pagina.count('data-max="55" data-passo="5" data-rotulo="Produção em papel"'), 1)
-                self.assertNotRegex(visivel(pagina), r'\b60[ ' + N + r']min|\b5[ ' + N + r']min|10 a 15')
+                self.assertNotRegex(visivel(pagina), r'\b60[ ' + N + r']min|\b5[ ' + N + r']min|10[ ' + N + r']a[ ' + N + r']15')
         self.assertEqual(ler('tarefas/m7-u2/index.html').count('data-max="2" data-passo="0.5" data-rotulo="Apresentação da voz"'), 1)
+        # 13/11/2026, revisão: no índice do módulo, o aquecimento das três unidades tem 10 minutos (o da unidade 1 dizia «10 a 15 min»),
+        # e nem o índice nem o mapa nem o guia dizem «10 a 15».
+        indice = ler(INDICE)
+        for rel in (INDICE, MAPA, GUIA):
+            self.assertNotRegex(ler(rel), r'10[ ' + N + r']a[ ' + N + r']15', rel)
+        chips = re.findall(r'<span class="t">(Aquecer para a aula de tarefa da Unidade' + N + r'?[ ]?\d)[^<]*</span>.*?<span class="chip">([^<]*)</span>', indice, re.S)
+        self.assertEqual([c[1] for c in chips], ['10' + N + 'min'] * 3, chips)
+        self.assertEqual(indice, base(INDICE).replace('<span class="chip">10' + N + 'a' + N + '15' + N + 'min</span>', '<span class="chip">10' + N + 'min</span>'))
+        self.assertEqual(base(INDICE).count('<span class="chip">10' + N + 'a' + N + '15' + N + 'min</span>'), 1)
         for rel in ('tarefas/m7-u1/aquecimento/index.html', 'docs/pedagogia/aquecimentos/m7-u1.json'):
             self.assertNotIn('quinze', ler(rel))
             self.assertNotRegex(ler(rel), '60[ ' + N + ']minutos')
@@ -266,8 +333,24 @@ class DecisoesDoDocente(unittest.TestCase):
                 self.assertLessEqual(len(f['verificar']), 10)
                 self.assertTrue(all(x.endswith('?') for x in f['verificar']))
                 self.assertEqual(pagina.count('<label><input type="checkbox">'), len(f['verificar']))
-                self.assertIn('Não conta' if slug == 'm7-u2' else 'Não contam para as palavras: os versos citados ou copiados e as duas linhas finais.', texto)
+                self.assertIn('Não conta' if slug == 'm7-u2' else NAO_CONTAM, texto)
                 self.assertEqual(pagina.count('data-task-print'), 2)
+                # 13/11/2026, revisão: a lista de cada tarefa pergunta pelas duas linhas finais, que o enunciado pede e a rubrica conta.
+                self.assertIn('Escrevi as duas linhas finais?', f['verificar'])
+        # 13/11/2026, revisão: a lista da m7-u3 tem dez perguntas e cobre o que o critério «Forma» da grelha exige (palavras, total,
+        # conectores, escrita revista e as duas linhas), como a lista do main.
+        v3 = dados('m7-u3')['facil']['verificar']
+        self.assertEqual(len(v3), 10)
+        self.assertIn('Citei um verso exato de <i>Mensagem</i>, entre «», indiquei o poema e expliquei-o no seu contexto?', v3)
+        self.assertIn('Tenho 180' + N + 'a' + N + '220' + N + 'palavras, com o total no fim, e revi a escrita e os conectores?', v3)
+        self.assertIn('180' + N + 'a' + N + '220' + N + 'palavras, conectores certos, texto revisto e as duas linhas.', base('tarefas/m7-u3/index.html'))
+        # 13/11/2026, revisão: a regra da contagem diz-se com a mesma frase no enunciado, na grelha e no guia (como na m3-u2).
+        self.assertEqual(visivel(ler('tarefas/m7-u3/index.html')).count(NAO_CONTAM), 1)
+        self.assertIn('mais duas linhas finais. ' + NAO_CONTAM + ' O aquecimento em cartões não conta para a nota.</p>', ler('tarefas/m7-u3/grelha/index.html'))
+        self.assertIn('mais duas linhas finais. ' + NAO_CONTAM + ' Ficheiro: M7_Tarefa3_Opiniao (fotografias).', ler(GUIA))
+        self.assertIn(NAO_CONTAM, ler('tarefas/m3-u2/grelha/index.html'))
+        for rel in ('tarefas/m7-u3/grelha/index.html', GUIA):
+            self.assertNotIn('fora da contagem', ler(rel), rel)
         u3 = ler('tarefas/m7-u3/index.html')
         self.assertIn('A autoavaliação da grelha é só para ti: não se entrega.', u3)
         self.assertIn('Esta autoavaliação é só para ti: não se entrega.', ler('tarefas/m7-u3/grelha/index.html'))
@@ -304,6 +387,21 @@ class DecisoesDoDocente(unittest.TestCase):
         grelha = ler('tarefas/m7-u3/grelha/index.html')
         for palavra in ('Opinião e conclusão', 'Facto ou comparação', 'Duas linhas finais: ', 'que te ensinou esse movimento'):
             self.assertIn(palavra, grelha)
+        # 13/11/2026, revisão: o mapa do módulo lista os critérios da tarefa da unidade 3 com os nomes da grelha, pela ordem da grelha.
+        mapa = ler(MAPA)
+        nomes = [c['nome'] for c in json.loads(ler(GRELHAS))['tarefas']['m7-u3']['criterios']]
+        for a, b in json.loads(ler(GRELHAS))['tarefas']['m7-u3']['trocas_aluno']:
+            nomes = [n.replace(a, b) for n in nomes]
+        self.assertEqual(nomes, ['Opinião e conclusão', 'Movimentos', 'Verso de _Mensagem_', 'Facto ou comparação', 'Forma'])
+        self.assertIn('<span class="crit">' + '; '.join(nomes).replace('_Mensagem_', '<i>Mensagem</i>') + '</span>', mapa)
+        self.assertNotRegex(mapa, r'\bTese\b|outra voz')
+        self.assertEqual(mapa, base(MAPA).replace('Tese e conclusão; Movimentos; Verso de <i>Mensagem</i>; Facto ou outra voz; Forma',
+                                                  'Opinião e conclusão; Movimentos; Verso de <i>Mensagem</i>; Facto ou comparação; Forma'))
+        # 13/11/2026, revisão: o guia diz «duas linhas finais», como os enunciados, e já não diz «síntese» (os guias do M3 e do M6 também não).
+        self.assertNotIn('síntese', guia)
+        for frase in ('com duas linhas finais; as retomas', 'escreves duas linhas finais no trabalho e entregas fotografias', 'das fontes e das duas linhas finais."'):
+            self.assertEqual(guia.count(frase), 1, frase)
+        self.assertEqual(base(GUIA).count('síntese'), 3)
 
     def test_guia_sem_autoavaliacao_nem_par_e_com_os_quatro_tempos(self):
         guia, antes = ler(GUIA), base(GUIA)
@@ -319,7 +417,10 @@ class DecisoesDoDocente(unittest.TestCase):
         # a rubrica das três produções é a de antes, com as palavras do enunciado novo na da unidade 3
         pontos = lambda t: re.findall(r'"pontos":\[[\d,]+\]', t)
         self.assertEqual(pontos(guia), pontos(antes))
-        self.assertEqual(guia[guia.index('{"n":1,'):guia.index('{"n":2,')], antes[antes.index('{"n":1,'):antes.index('{"n":2,')])
+        # 13/11/2026, revisão: na unidade 2 (a produção 1 do guia), a entrega diz «das duas linhas finais» onde dizia «da síntese»; o
+        # resto é igual, letra a letra.
+        self.assertEqual(guia[guia.index('{"n":1,'):guia.index('{"n":2,')],
+                         antes[antes.index('{"n":1,'):antes.index('{"n":2,')].replace('das fontes e da síntese."', 'das fontes e das duas linhas finais."'))
         self.assertEqual(guia[guia.index('{"n":3,'):guia.index('var ESTADO')], antes[antes.index('{"n":3,'):antes.index('var ESTADO')])
         portefolio, p_antes = ler(PORTEFOLIO), base(PORTEFOLIO)
         self.assertNotIn('trabalho de equipa', portefolio)
@@ -359,6 +460,9 @@ class RegrasDoTexto(unittest.TestCase):
             pagina = ler(f'tarefas/{slug}/index.html')
             with self.subTest(slug=slug):
                 self.assertEqual(re.findall(r'data-task-card-name="([^"]+)"', pagina), CARTOES[slug])
+                # 13/11/2026, revisão: nenhum nome de cartão leva, no atributo, espaço que não parte nem o sinal que junta palavras.
+                for nome in re.findall(r'data-task-card-name="([^"]*)"', pagina):
+                    self.assertNotRegex(nome, '[\xa0\u2060]')
                 self.assertIn('data-task-opening="Começar" data-task-index="nomes"', pagina)
                 self.assertEqual(pagina.count('task-textos.css?v=20261113-facil-11'), 1)
                 self.assertEqual(pagina.count('task-reader.js?v=20261112-facil-7'), 1)
@@ -383,6 +487,16 @@ class RegrasDoTexto(unittest.TestCase):
         css = ler('assets/task-textos.css')
         for marca in ('facil-11', 'data-task-individual'):
             self.assertIn(marca, css)
+        # 13/11/2026, revisão: a regra da tabela num ecrã estreito vale só para a tabela do apoio da m7-u3 (.tf-tabela-apoio); o quadro
+        # das modalidades da m3-u2, que também é uma .tf-tabela num desdobrável, fica como o main o tinha.
+        self.assertIn('[data-task-facil] details.tf-mais .tf-tabela.tf-tabela-apoio :is(th,td){padding:6px 6px;overflow-wrap:anywhere}', css)
+        self.assertNotIn('details.tf-mais .tf-tabela :is(th,td)', css)
+        com_tabela = sorted(p.parent.name for p in (ROOT / 'tarefas').glob('*/index.html') if 'class="tf-tabela' in p.read_text('utf-8'))
+        self.assertEqual(com_tabela, ['m3-u2', 'm7-u3'])
+        self.assertEqual(ler('tarefas/m7-u3/index.html').count('<table class="tf-tabela tf-tabela-apoio">'), 1)
+        self.assertNotIn('tf-tabela-apoio', ler('tarefas/m3-u2/index.html'))
+        css_base = base('assets/task-textos.css')
+        self.assertTrue(css.startswith(css_base[:css_base.index('@media print{')]))
 
 
 class GeradoresEOutrosModulos(unittest.TestCase):
@@ -410,9 +524,15 @@ class GeradoresEOutrosModulos(unittest.TestCase):
                 continue
             self.assertEqual((ROOT / rel).read_bytes(), subprocess.run(['git', 'show', f'{BASE_COMMIT}:{rel}'], cwd=ROOT, capture_output=True).stdout, rel)
             iguais += 1
-        self.assertEqual(iguais, len(nomes) - 10)
-        for rel in ('m7/index.html', 'm7/mapa-do-modulo-m7/index.html'):
-            self.assertEqual(ler(rel), base(rel))
+        # 13/11/2026, revisão: eram 10 os ficheiros da camada nestas pastas; com os acertos do M1 e do M5 são 17 (mais os dados, o
+        # enunciado e a grelha da m1-u2 e da m5-u1 e a grelha da m5-u2). Todos os outros continuam iguais ao main, byte a byte, e
+        # também as versões de correção e os aquecimentos da m1-u2, da m5-u1 e da m5-u2.
+        self.assertEqual(iguais, len(nomes) - 17)
+        self.assertEqual(len([f for f in FICHEIROS if f in nomes]), 17)
+        for rel in ('tarefas/m1-u2/correcao/index.html', 'tarefas/m5-u1/correcao/index.html', 'tarefas/m5-u2/correcao/index.html', 'tarefas/m5-u2/index.html',
+                    'tarefas/m1-u1/index.html', 'tarefas/m5-u1/aquecimento/index.html', 'tarefas/m3-u2/index.html', 'docs/pedagogia/tarefas-escolha/m5-u2.json'):
+            self.assertIn(rel, nomes)
+            self.assertNotIn(rel, FICHEIROS)
 
 
 class Camada(unittest.TestCase):
@@ -422,6 +542,8 @@ class Camada(unittest.TestCase):
         self.assertEqual(len(verificar_camadas.LAYERS), 51)
         self.assertEqual(MANIFESTO['base_commit'], BASE_COMMIT)
         self.assertEqual(sorted(MANIFESTO['files']), sorted(FICHEIROS))
+        self.assertEqual(len(FICHEIROS), 22)
+        self.assertEqual(len(set(FICHEIROS)), 22)
         for rel in FICHEIROS:
             with self.subTest(rel=rel):
                 texto = ler(rel)
@@ -462,6 +584,22 @@ class Camada(unittest.TestCase):
             self.assertEqual(fluxo.count(f'--desfazer-antes {m6}'), fluxo.count(f'--desfazer-antes {m7} --desfazer-antes {m6}'), p.name)
             self.assertEqual(fluxo.count(f'--desfazer-antes {m7}'), fluxo.count(f'--verificar --desfazer-antes {m7}'), p.name)
             self.assertEqual(fluxo.count("'scripts/tarefas_faceis_m6_20261113.*'"), fluxo.count("'scripts/tarefas_faceis_m7_20261113.*'"), p.name)
+        # 13/11/2026, revisão: a camada passou a mudar o índice do M7, e o gerador da decisão 148 e os três testes de navegador que leem
+        # os índices como eram desfazem-na primeiro, antes da do M6.
+        cartaz = ler('scripts/cartaz_indices_148_20261106.py')
+        self.assertLess(cartaz.index('if TAREFAS_FACEIS_M7.is_file():'), cartaz.index('if TAREFAS_FACEIS_M6.is_file():'))
+        for nome in ('browser_cartaz_indices.cjs', 'browser_cartaz_m4_piloto.cjs', 'browser_creditos_i_pt1.cjs'):
+            cjs = ler('tests/' + nome)
+            self.assertEqual(cjs.count('for(const e of [...((tarefasFaceisM7['), 1, nome)
+            self.assertLess(cjs.index('for(const e of [...((tarefasFaceisM7['), cjs.index('for(const e of [...((tarefasFaceisM6['), nome)
+        # e as camadas do M1 e do M5, cujos ficheiros os acertos mudam, continuam fechadas: conferem com esta desfeita primeiro
+        for nome, fixo in (('tarefas_faceis_m1_20261113', 'tarefas-faceis-m1-edits-20261113'), ('tarefas_faceis_m5_20261113', 'tarefas-faceis-m5-edits-20261113')):
+            outro = json.loads(ler(f'tests/fixtures/{fixo}.json'))['files']
+            self.assertTrue(set(ACERTOS) & set(outro), nome)
+            self.assertEqual(base(f'scripts/{nome}.json'), ler(f'scripts/{nome}.json'), nome)
+            self.assertEqual(base(f'tests/fixtures/{fixo}.json'), ler(f'tests/fixtures/{fixo}.json'), nome)
+        self.assertEqual(set(ACERTOS) - set(json.loads(ler('tests/fixtures/tarefas-faceis-m1-edits-20261113.json'))['files'])
+                         - set(json.loads(ler('tests/fixtures/tarefas-faceis-m5-edits-20261113.json'))['files']), set())
         tarefas = ler('.github/workflows/pt-tarefas-qa.yml')
         self.assertIn(f'python scripts/aplicar_trocas.py scripts/tarefas_faceis_m6_20261113.json --manifesto {m6} --verificar --desfazer-antes {m7}\n', tarefas)
         self.assertIn(f'python scripts/aplicar_trocas.py scripts/tarefas_faceis_m7_20261113.json --manifesto {m7} --verificar\n', tarefas)
@@ -469,6 +607,132 @@ class Camada(unittest.TestCase):
         self.assertIn('run: python tests/browser_tarefas_faceis_m7.py\n', tarefas)
         self.assertEqual(tarefas.count('timeout-minutes: 40'), 1)
         self.assertEqual(tarefas.count('timeout-minutes: 40'), base('.github/workflows/pt-tarefas-qa.yml').count('timeout-minutes: 40'))
+
+
+class Acertos(unittest.TestCase):
+    """13/11/2026: os três acertos do M1 e do M5 que o docente mandou ir neste pedido. As camadas do M1 e do M5 não se reescrevem: os
+    acertos ficam nesta camada, por cima delas (como os dois acertos do M3 ficaram na camada do M5)."""
+
+    def mudou(self, rel):
+        """As linhas que mudam entre a base e a árvore: [(antes, agora)]."""
+        import difflib
+        a, b = base(rel).split('\n'), ler(rel).split('\n')
+        return [('\n'.join(a[i1:i2]), '\n'.join(b[j1:j2])) for op, i1, i2, j1, j2 in difflib.SequenceMatcher(None, a, b, autojunk=False).get_opcodes() if op != 'equal']
+
+    def test_a_m1_u2_a_passagem_copiada_nao_conta(self):
+        frase = 'Não contam para as palavras da crónica: as respostas, a passagem copiada, as fontes e as duas linhas finais.'
+        d = json.loads(ler('docs/pedagogia/tarefas-escolha/m1-u2.json'))
+        self.assertEqual(d['facil']['quadro']['notas'][1], frase)
+        # nos dados, só essa frase muda
+        self.assertEqual(self.mudou('docs/pedagogia/tarefas-escolha/m1-u2.json'),
+                         [('    "Não contam para as palavras da crónica: as respostas, as fontes e as duas linhas finais."', f'    "{frase}"')])
+        enunciado, grelha = ler('tarefas/m1-u2/index.html'), ler('tarefas/m1-u2/grelha/index.html')
+        self.assertEqual(enunciado, base('tarefas/m1-u2/index.html').replace('as respostas, as fontes e as duas linhas finais.', 'as respostas, a passagem copiada, as fontes e as duas linhas finais.'))
+        self.assertEqual(visivel(enunciado).count(frase), 1)
+        # a grelha diz o mesmo, com as mesmas palavras, e o que mais custa também
+        self.assertEqual(grelha.count(frase + ' O aquecimento não conta para a nota.</p>'), 1)
+        self.assertEqual(grelha.count('Contar as respostas, a passagem copiada, as fontes ou as duas linhas finais nas 160 a 200' + N + 'palavras da crónica.'), 1)
+        self.assertNotIn('ficam fora da contagem', grelha)
+        self.assertEqual(len(self.mudou('tarefas/m1-u2/grelha/index.html')), 1)
+        # o tema A continua a pedir a passagem copiada, e os números são os de antes
+        self.assertIn('Inclui uma passagem copiada exatamente do capítulo escolhido.', enunciado)
+        self.assertIn('160' + N + 'a' + N + '200', enunciado)
+        # a versão de correção não diz o que conta para as palavras: fica igual ao main
+        correcao = ler('tarefas/m1-u2/correcao/index.html')
+        self.assertEqual(correcao, base('tarefas/m1-u2/correcao/index.html'))
+        self.assertNotRegex(correcao, r'contagem|[Nn]ão contam')
+
+    def test_b_m5_u1_a_carta_de_exemplo_so_com_materia_das_licoes(self):
+        d = json.loads(ler('docs/pedagogia/tarefas-escolha/m5-u1.json'))
+        antes = json.loads(base('docs/pedagogia/tarefas-escolha/m5-u1.json'))
+        x, xa = d['facil']['temas'][0]['material']['exemplos'][0], antes['facil']['temas'][0]['material']['exemplos'][0]
+        carta = x['paragrafos'][0]['t']
+        self.assertEqual(carta, 'Em casa, [dia, mês e ano]. Meu filho: hás de perguntar porque te escrevo outra vez. Escrevo porque espero a tua resposta. '
+                                'Lembras-te das outras cartas? Escrevi-as, e «não recebia resposta». O teu silêncio é uma porta fechada. Deus te guarde. Tua mãe.')
+        # nos dados, só muda este exemplo: a carta e mais uma linha sobre a data
+        self.assertEqual(x['paragrafos'][1], xa['paragrafos'][1])
+        self.assertEqual(x['paragrafos'][2:], ['A data fica entre parênteses retos porque as lições não a dão.'])
+        self.assertEqual((x['titulo'], len(xa['paragrafos'])), (xa['titulo'], 2))
+        x['paragrafos'] = xa['paragrafos']
+        self.assertEqual(d, antes)
+        # o que a carta de antes inventava já não está, nem no enunciado nem na grelha
+        enunciado, grelha = ler('tarefas/m5-u1/index.html'), ler('tarefas/m5-u1/grelha/index.html')
+        for fora in ('dia de Natal', 'todos os dias', 'Foram tantas', 'ainda pensa em ti', 'aqui está tudo como deixaste'):
+            self.assertIn(fora, base('tarefas/m5-u1/grelha/index.html'), fora)
+            for pagina in (enunciado, grelha, ler(GRELHAS)):
+                self.assertNotIn(fora, pagina, fora)
+        # a matéria é a da lição F17, letra a letra: a mãe escrevia, não recebia resposta e pensava que o filho não respondia
+        f17 = html.unescape(re.sub(r'<[^>]+>|\\n', ' ', ler('m5/licao-m5-f17/index.html')))
+        self.assertIn('«Escrevia a mãe a Simão, e não recebia resposta. Pensava ela que o filho não respondia: anos depois, vimos entre os papéis de meu pai todas as cartas que ela escrevera.', re.sub(r'\s+', ' ', f17))
+        self.assertEqual(re.findall(r'«([^«»]+)»', carta), ['não recebia resposta'])
+        self.assertIn('Respeitei o romance: a mãe escrevia a Simão e pensava que o filho não respondia.', x['paragrafos'][1]['t'])
+        # a carta não tem números nem nomes de lugares ou de dias que as lições não deem para estas cartas
+        self.assertNotRegex(carta, r'\d|Natal|Viseu|Porto|Coimbra|janeiro|março|domingo')
+        # o exemplo não usa os textos da tarefa (nenhuma sequência de quatro palavras) nem as passagens reservadas do aquecimento
+        blocos = re.findall(r'<section class="tt-texto[^"]*" id="texto-\d".*?</section>', enunciado, re.S)
+        self.assertEqual(len(blocos), 3)
+        textos = ' ' + ' '.join(re.findall(r"[\w'’-]+", html.unescape(re.sub(r'<[^>]+>', ' ', ' '.join(blocos))))).casefold() + ' '
+        palavras = re.findall(r"[\w'’-]+", carta + ' ' + x['paragrafos'][1]['t'])
+        for k in range(len(palavras) - 3):
+            self.assertNotIn(' ' + ' '.join(palavras[k:k + 4]).casefold() + ' ', textos)
+        for r in json.loads(ler('docs/pedagogia/aquecimentos/m5-u1.json'))['reservadas']:
+            self.assertNotIn(r, carta, r)
+        # o enunciado e a grelha usam o mesmo exemplo, e o exemplo parcial da grelha é a mesma carta, sem o que falta
+        self.assertEqual(enunciado.count(carta), 1)
+        self.assertEqual(grelha.count(carta), 1)
+        self.assertEqual(grelha.count('A: Em casa, [dia, mês e ano]. Meu filho: escrevo-te outra vez. Deus te guarde. Tua mãe. (As marcas estão todas;'), 1)
+        self.assertEqual(grelha.count('A data fica entre parênteses retos porque as lições não a dão.'), 1)
+        self.assertEqual(enunciado.count('<p class="tf-p">A data fica entre parênteses retos porque as lições não a dão.</p>'), 1)
+        # no enunciado, só o desdobrável do exemplo muda
+        self.assertEqual(len(self.mudou('tarefas/m5-u1/index.html')), 1)
+        self.assertIn('Outra voz: uma carta inventada da mãe de Simão ao filho', self.mudou('tarefas/m5-u1/index.html')[0][1])
+        self.assertEqual(ler('tarefas/m5-u1/correcao/index.html'), base('tarefas/m5-u1/correcao/index.html'))
+
+    def test_c_grelha_do_m5_os_exemplos_ja_nao_citam_os_textos_da_tarefa(self):
+        g, ga = json.loads(ler(GRELHAS))['tarefas'], json.loads(base(GRELHAS))['tarefas']
+        u1, u2 = ler('tarefas/m5-u1/grelha/index.html'), ler('tarefas/m5-u2/grelha/index.html')
+        # m5-u1, rigor: saiu a frase do capítulo IV (um texto da tarefa) e entrou uma frase de outra obra, que a lição F16 dá
+        self.assertIn('«a violencia de um pae é sempre amor» (cap.' + N + 'IV)', ga['m5-u1']['criterios'][3]['niveis']['max'][1])
+        self.assertIn('a violencia de um pae é sempre amor', ler('tarefas/m5-u1/index.html'))  # o texto da tarefa continua na página
+        self.assertNotIn('a violencia de um pae', u1)
+        self.assertNotIn('a violência e o amor', u1)
+        self.assertNotIn('a violencia de um pae', json.dumps(g['m5-u1'], ensure_ascii=False))
+        rigor = g['m5-u1']['criterios'][3]['niveis']
+        self.assertEqual(rigor['max'][1], 'Noutra obra: «O latim era um luxo d’erudito» (_Os Maias_, cap.' + N + 'III, lição F16): copio d’erudito como está na edição, sem o corrigir.')
+        self.assertEqual(rigor['parcial'][1], 'Noutra obra: cito a frase de _Os Maias_ sobre o latim com a grafia de hoje, e sem dizer de que capítulo é.')
+        self.assertEqual(rigor['0'], ga['m5-u1']['criterios'][3]['niveis']['0'])
+        f16 = re.sub(r'\s+', ' ', html.unescape(re.sub(r'<[^>]+>|\\n', ' ', ler('m5/licao-m5-f16/index.html'))))
+        self.assertIn('No capítulo III, Brown adia o latim', f16)
+        self.assertIn('«O latim era um luxo d’erudito»', f16)
+        for rel in ('tarefas/m5-u1/index.html', 'tarefas/m5-u2/index.html', 'docs/pedagogia/aquecimentos/m5-u1.json', 'docs/pedagogia/aquecimentos/m5-u2.json'):
+            self.assertNotIn('luxo d', ler(rel), rel)
+        self.assertEqual(u1.count('Noutra obra: «O latim era um luxo d’erudito» (<i>Os Maias</i>, cap.' + N + 'III, lição F16): copio d’erudito como está na edição, sem o corrigir.'), 1)
+        # m5-u2, tema A: o exemplo é o mesmo (a paragem de autocarro) e já não cita «Sole normande?»; diz o gesto com as palavras do enunciado
+        self.assertIn('Imitei o «Sole normande?»: uma coisa banal', ga['m5-u2']['criterios'][2]['niveis']['max'][1])
+        self.assertEqual(g['m5-u2']['criterios'][2]['niveis']['max'][1],
+                         ga['m5-u2']['criterios'][2]['niveis']['max'][1].replace('Imitei o «Sole normande?»:', 'Imitei a interrupção do jantar do Hotel Central:'))
+        self.assertNotIn('Sole normande', u2)
+        self.assertNotIn('Sole normande', json.dumps(g['m5-u2'], ensure_ascii=False))
+        self.assertEqual(u2.count('Imitei a interrupção do jantar do Hotel Central: uma coisa banal, o autocarro, corta a conversa séria e ninguém volta a ela.'), 1)
+        enunciado = ler('tarefas/m5-u2/index.html')
+        self.assertIn('interrompida por algo banal, como no Hotel Central', enunciado)
+        self.assertIn('A interrupção está nos parágrafos', enunciado)
+        self.assertEqual(enunciado, base('tarefas/m5-u2/index.html'))
+        self.assertEqual(len(self.mudou('tarefas/m5-u2/grelha/index.html')), 1)
+        # nenhuma citação «…» dos exemplos de qualquer das duas grelhas ocorre nos textos da sua tarefa
+        for slug in ('m5-u1', 'm5-u2'):
+            pagina = ler(f'tarefas/{slug}/index.html')
+            textos = re.sub(r'\s+', ' ', html.unescape(re.sub(r'<[^>]+>', ' ', ' '.join(re.findall(r'<section class="tt-texto[^"]*" id="texto-\d".*?</section>', pagina, re.S))))).casefold()
+            self.assertGreater(len(textos), 3000)
+            exemplos = ' '.join(v[1] for c in g[slug]['criterios'] for v in c['niveis'].values())
+            citacoes = re.findall(r'«([^«»]+)»', exemplos.replace('“', '«').replace('”', '»'))
+            self.assertGreaterEqual(len(citacoes), 5, slug)
+            for c in citacoes:
+                if len(c.split()) >= 2:
+                    self.assertNotIn(c.casefold().rstrip('.!?'), textos, (slug, c))
+        # as versões de correção não mostram exemplos: ficam iguais ao main
+        for rel in ('tarefas/m5-u1/correcao/index.html', 'tarefas/m5-u2/correcao/index.html'):
+            self.assertEqual(ler(rel), base(rel))
 
 
 if __name__ == '__main__':

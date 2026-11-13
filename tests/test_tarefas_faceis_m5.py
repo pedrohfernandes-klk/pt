@@ -1254,6 +1254,39 @@ class TarefasFaceisM5(unittest.TestCase):
 
     # ---------- as tarefas dos outros módulos não mudam ----------
 
+    def test_acertos_de_13_11_a_carta_de_exemplo_e_dois_exemplos_da_grelha(self):
+        # 13/11/2026: acertos decididos pelo docente no pedido das tarefas do M7. A carta de exemplo do tema A da m5-u1 refaz-se só com
+        # matéria que as lições dão (sem «dia de Natal», «todos os dias» e «Foram tantas»), e os dois exemplos da grelha que ainda citavam
+        # os textos da própria tarefa («a violencia de um pae é sempre amor», na m5-u1; «Sole normande?», na m5-u2, a exceção que
+        # test_exemplos_com_outro_caso ainda admite no texto desta camada) deixam de os citar. Mudam na camada de cima
+        # (tarefas_faceis_m7_20261113), que não reescreve esta: os outros testes deste ficheiro leem os ficheiros como esta camada os
+        # deixou (ler() desfaz a de cima), e aqui confere-se o que a árvore tem agora, com a mesma exigência e sem a exceção.
+        arvore = lambda rel: (ROOT / rel).read_bytes().decode('utf-8')
+        grelhas = json.loads(arvore(GRELHAS))['tarefas']
+        for slug in SLUGS:
+            pagina, grelha = arvore(f'tarefas/{slug}/index.html'), arvore(f'tarefas/{slug}/grelha/index.html')
+            for fora in ('dia de Natal', 'todos os dias', 'Foram tantas', 'a violencia de um pae é sempre amor»', 'Sole normande?»'):
+                self.assertNotIn(fora, grelha, (slug, fora))
+            dentro = ' '.join(re.findall(r'<details class="tf-so-tema tf-exemplos tf-so-ecra">.*?</details>', pagina, re.S))
+            for fora in ('dia de Natal', 'todos os dias', 'Foram tantas', 'Sole normande'):
+                self.assertNotIn(fora, dentro, (slug, fora))
+            blocos = re.findall(r'<section class="tt-texto[^"]*" id="texto-\d".*?</section>', pagina, re.S)
+            textos_da_pagina = re.sub(r'\s+', ' ', html.unescape(re.sub(r'<[^>]+>', ' ', ' '.join(blocos)))).casefold()
+            self.assertGreater(len(textos_da_pagina), 3000)
+            # nenhuma citação dos exemplos da grelha (todos os critérios, sem exceções) ocorre nos textos da tarefa
+            exemplos_da_grelha = ' '.join(v[1] for c in grelhas[slug]['criterios'] for v in c['niveis'].values()).replace('“', '«').replace('”', '»')
+            for citacao in re.findall(r'«([^«»]+)»', exemplos_da_grelha):
+                if len(citacao.split()) >= 2:
+                    self.assertNotIn(citacao.casefold().rstrip('.!?'), textos_da_pagina, (slug, citacao))
+        # o exemplo do enunciado continua a vir da grelha pública, letra a letra
+        carta = json.loads(arvore('docs/pedagogia/tarefas-escolha/m5-u1.json'))['facil']['temas'][0]['material']['exemplos'][0]['paragrafos']
+        self.assertEqual(re.findall(r'«([^«»]+)»', carta[0]['t']), ['não recebia resposta'])
+        for p in carta:
+            self.assertIn(p if isinstance(p, str) else p['t'], json.dumps(grelhas['m5-u1'], ensure_ascii=False))
+        self.assertIn('«O latim era um luxo d’erudito»', re.sub(r'\s+', ' ', html.unescape(re.sub(r'<[^>]+>|\\n', ' ', arvore('m5/licao-m5-f16/index.html')))))
+        self.assertIn('«O latim era um luxo d’erudito»', grelhas['m5-u1']['criterios'][3]['niveis']['max'][1])
+        self.assertIn('Imitei a interrupção do jantar do Hotel Central:', grelhas['m5-u2']['criterios'][2]['niveis']['max'][1])
+
     def test_as_outras_tarefas_nao_mudam(self):
         self.assertEqual(sorted(MANIFESTO['files']), sorted(FICHEIROS))
         self.assertEqual(len(FICHEIROS), 20)
@@ -1314,7 +1347,9 @@ class TarefasFaceisM5(unittest.TestCase):
                         conteudo = undo_tarefas_faceis_m6_1113(rel, conteudo.decode('utf-8')).encode('utf-8')
                     self.assertEqual(conteudo, r.stdout)
         # 13/11/2026: 12 da camada do M6 e 10 da do M7.
-        self.assertIn(de_cima, (0, 22))
+        # 13/11/2026, revisão: a camada do M7 passou a levar os acertos do M1 e do M5; fora dos ficheiros desta camada, muda mais
+        # três (os dados, o enunciado e a grelha da m1-u2): 13 da do M7, 25 ao todo, com a mesma exigência.
+        self.assertIn(de_cima, (0, 25))
         if do_main(GUIA) is not None:
             self.assertGreater(iguais, 60)
         # Os três geradores, com os dados da árvore, dão todas as páginas da árvore, byte a byte (as treze tarefas, as grelhas, as

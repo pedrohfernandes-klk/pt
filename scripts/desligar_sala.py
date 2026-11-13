@@ -861,7 +861,7 @@ def main():
                 # grelhas, as correções e os aquecimentos, os seus dados, e o guia, o índice, o mapa e o portefólio do M6), a camada
                 # mais recente, por cima das do M5.
                 # 13/11/2026: e, antes dessas, as três tarefas do M7 «mais fáceis de fazer» e «tudo junto» no M7 (tarefas_faceis_m7_20261113),
-                # a camada mais recente, por cima das do M6.
+                # com três acertos do M1 e do M5, a camada mais recente, por cima das do M6.
                 tarefas_faceis_m7 = ROOT / 'tests/fixtures/tarefas-faceis-m7-edits-20261113.json'
                 for edit in reversed(json.loads(tarefas_faceis_m7.read_text('utf-8'))['files'].get(rel, {}).get('edits', [])):
                     if conferencia.count(edit['new']) != edit['occurrences']:

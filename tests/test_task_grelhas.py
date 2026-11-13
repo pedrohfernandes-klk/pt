@@ -148,6 +148,18 @@ for _slug in _SAEM_1113:
     _antes = len(CITACOES[_slug])
     CITACOES[_slug] = [c for c in CITACOES[_slug] if c[1] not in _SAEM_1113[_slug]] + _ENTRAM_1113[_slug]
     assert len(CITACOES[_slug]) == _antes - len(_SAEM_1113[_slug]) + len(_ENTRAM_1113[_slug]) > _antes, _slug
+# 13/11/2026: acertos do M5 decididos pelo docente (camada tarefas_faceis_m7_20261113): os dois exemplos que ainda citavam os textos da
+# própria tarefa («a violencia de um pae é sempre amor», do capítulo IV, na m5-u1; «Sole normande?», do capítulo VI, na m5-u2) saem
+# da grelha. O da m5-u1 passa a citar outra obra, com a lição que a dá («O latim era um luxo d’erudito», lição F16); o da m5-u2 deixa
+# de citar e diz «a interrupção do jantar do Hotel Central». A exigência é a mesma: cada citação dos exemplos está, letra a letra,
+# numa lição do sítio e nos dados da grelha; e mais uma: as duas que saíram já não estão nos dados da grelha.
+_SAEM_ACERTOS_1113 = {'m5-u1': 'a violencia de um pae é sempre amor', 'm5-u2': 'Sole normande?'}
+_ENTRAM_ACERTOS_1113 = {'m5-u1': [('licao-m5-f16', 'O latim era um luxo d’erudito', '«O latim era um luxo d’erudito» (_Os Maias_, cap.\xa0III, lição F16)')], 'm5-u2': []}
+for _slug in _SAEM_ACERTOS_1113:
+    _antes = len(CITACOES[_slug])
+    CITACOES[_slug] = [c for c in CITACOES[_slug] if c[1] != _SAEM_ACERTOS_1113[_slug]] + _ENTRAM_ACERTOS_1113[_slug]
+    assert len(CITACOES[_slug]) == _antes - 1 + len(_ENTRAM_ACERTOS_1113[_slug]), _slug
+    assert _SAEM_ACERTOS_1113[_slug] not in json.dumps(DADOS['tarefas'][_slug], ensure_ascii=False), _slug
 
 def licao(nome):
     """Texto da lição sem marcas e, a seguir, a fonte inteira (para o que só está na descrição de uma imagem).
