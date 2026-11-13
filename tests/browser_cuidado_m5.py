@@ -45,7 +45,9 @@ ROTULOS = {'m5/index.html': 'Pesos na avaliação:', 'm5/guia-da-tarefa-m5/index
 PAGINAS = {
     'm5/index.html': ['2.º' + N + 'ano', '90' + N + 'minutos', '90' + N + 'min', '10' + N + 'min', '25' + N + 'min', '30' + N + '%',
                       'século' + N + 'XIX', 'capítulo' + N + 'IV'],
-    'm5/guia-da-tarefa-m5/index.html': ['2.º' + N + 'ano', '90' + N + 'minutos', '10' + N + 'minutos', '5' + N + 'minutos', '30' + N + '%',
+    # 13/11/2026: no guia, «Seguem-se 5 minutos de leitura» passou a «Seguem-se 10 minutos de leitura» (camada
+    # tarefas_faceis_m5_20261113): a agulha «5 minutos» sai, e «10 minutos» confere-se nas duas vezes em que aparece.
+    'm5/guia-da-tarefa-m5/index.html': ['2.º' + N + 'ano', '90' + N + 'minutos', '10' + N + 'minutos', '30' + N + '%',
                                         'século' + N + 'XIX'],
     'm5/mapa-do-modulo-m5/index.html': ['2.º' + N + 'ano', '1825–' + J + '1890', '1845–' + J + '1900', '90' + N + 'minutos', '30' + N + '%',
                                         'M5-' + J + 'F02', 'M5-' + J + 'F10', 'volume' + N + '1', 'século' + N + 'XIX'],
@@ -68,7 +70,9 @@ PAGINAS = {
     'm5/eca-hotel/index.html': ['cap.' + N + 'VI'],
 }
 # No guia, os blocos de hoje («Aquecer, 10 min»…) estão na rota da tarefa, que se abre quando se escolhe uma (e esconde o resto).
-ROTA = ['10' + N + 'min', '5' + N + 'min', '60' + N + 'min', '15' + N + 'min']
+# 13/11/2026: decisão do docente para as tarefas do M5 (camada tarefas_faceis_m5_20261113): 10 minutos de leitura e 55 de produção
+# no guia, como no enunciado («5 min» e «60 min» saíram). As referências continuam a conferir-se uma a uma, à vista e numa linha só.
+ROTA = ['10' + N + 'min', '55' + N + 'min', '15' + N + 'min']
 # Referências nos cartões das lições: (página, cartão, referências).
 CARTOES = [
     ('m5/licao-m5-f02/index.html', 3, ['folhas' + N + '232', '5' + N + 'min']),
@@ -271,6 +275,28 @@ def main():
                         # Só os cartões das tarefas (task-reader.js mostra um de cada vez); os «details» onde está a tabela abrem-se em
                         # confere (os outros, como os menus, ficam fechados e não tapam a captura).
                         page.evaluate('()=>document.querySelectorAll("[id^=task-card-][hidden]").forEach(e=>e.hidden=false)')
+                        if rel.startswith('tarefas/'):
+                            # 13/11/2026: as duas tarefas do M5 passaram ao molde «mais fácil de fazer» (camada tarefas_faceis_m5_20261113):
+                            # a tabela dos tempos (momento e tempo) deu lugar a um só quadro, «Tempo e tamanho», com os tempos que o
+                            # docente decidiu (10, 10, 55, 15). Exige-se dele o mesmo: é uma tabela com cabeçalhos de coluna e de
+                            # linha, todas as linhas se veem, a página não desliza para o lado, o quadro não sai do contentor, nenhuma
+                            # palavra se parte a meio e os números não se separam da unidade.
+                            assert page.locator('.apoio-tabela').count() == 0 and page.locator('main[data-task-facil]').count() == 1, rel
+                            quadro = page.locator('.tf-quadro')
+                            assert quadro.count() == 1, rel
+                            quadro.scroll_into_view_if_needed()
+                            assert quadro.locator('thead th[scope="col"]').all_text_contents() == ['Tempo', 'O que fazes', 'Palavras'], rel
+                            assert quadro.locator('tbody th').all_text_contents() == ['10\xa0min', '10\xa0min', '55\xa0min', '15\xa0min', '90\xa0min'], rel
+                            assert quadro.locator('tbody tr').count() == 7 and all(l.is_visible() for l in quadro.locator('tbody tr').all()), rel
+                            sem_deslizar(page, f'{rel} {largura}')
+                            assert quadro.evaluate('t=>t.getBoundingClientRect().right<=t.parentElement.getBoundingClientRect().right+1'), (rel, largura)
+                            assert quadro.evaluate(MEIO_DA_PALAVRA) == [], (rel, largura, quadro.evaluate(MEIO_DA_PALAVRA))
+                            assert quadro.locator('thead').is_visible(), rel
+                            tabelas += 1
+                            if esquema == 'light' and rel in CAPTURAS:
+                                captura(quadro, CAPTURAS[rel], largura)
+                            print('PASS fora das lições (quadro «Tempo e tamanho»):', rel, largura, esquema, flush=True)
+                            continue
                         tabela = page.locator('.apoio-tabela')
                         tabela.wait_for(state='attached')
                         confere(page, tabela, rel, largura, rel)
@@ -294,14 +320,20 @@ def main():
                     page.locator('#arquivo-producoes summary').click()
                     page.locator('button[data-n="1"]').first.click()
                     assert page.locator('#rota').is_visible()
-                    confere_lista(page, page.locator('#rota .regra ol'), 3, f'guia, «Três antes de mim» {largura}')
+                    # 13/11/2026: decisão do docente (camada tarefas_faceis_m5_20261113): «pergunta ao teu par de trabalho» saiu; a regra
+                    # chama-se «Dois antes de mim» e a lista tem dois itens, com a mesma exigência.
+                    confere_lista(page, page.locator('#rota .regra ol'), 2, f'guia, «Dois antes de mim» {largura}')
+                    assert page.locator('#rota .regra b', has_text='Dois antes de mim.').count() == 1, largura
                     listas += 1
-                    for slug, tema in (('m5-u1', 'A'), ('m5-u2', 'B')):
+                    for slug, tema, passos in (('m5-u1', 'A', 6), ('m5-u2', 'B', 7)):
                         page.goto(host + f'/tarefas/{slug}/', wait_until='networkidle')
                         abrir(page)
                         # 11/11/2026: o pedido #192 reescreveu estes dois temas em três passos (antes, cinco elementos): a lista
                         # tem agora três itens, com a mesma exigência (à vista, com os itens todos, sem sair do contentor).
-                        confere_lista(page, page.locator(f'article[data-task-theme="{tema}"] ol'), 3, f'{slug} tema {tema} {largura}')
+                        # 13/11/2026: no molde «mais fácil de fazer» (camada tarefas_faceis_m5_20261113), cada tema tem um pedido por
+                        # passo: seis passos no tema A da M5-U1 e sete no tema B da M5-U2 (a lista dos passos é «ol.tf-passos»; o tema B
+                        # leva também a lista do dossiê). A mesma exigência.
+                        confere_lista(page, page.locator(f'article[data-task-theme="{tema}"] ol.tf-passos'), passos, f'{slug} tema {tema} {largura}')
                         assert page.locator(f'article[data-task-theme="{tema}"] p:empty').count() == 0, slug
                         listas += 1
                     for slug, itens in (('m5-u1', (5, 4)), ('m5-u2', (5, 5))):

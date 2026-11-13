@@ -76,7 +76,7 @@
    "t": "ler",
    "rot": "Abre",
    "titulo": "Quem decide por quem",
-   "html": "<p class=\"abre\"><b>Um registo de prisão, um pai, uma carta escrita no mar: em <i>Amor de Perdição</i>, quem decide por quem?</b> Este aquecimento não faz a tarefa: treina com frases inventadas e outros casos.</p><div class=\"caixa\"><h3>A tarefa de hoje</h3><p><b>Núcleo, para todos.</b> O narrador na Introdução e no cap. IV; as funções sintáticas numa fala de Tadeu.</p><p><b>Tema A.</b> A carta de Simão a Teresa, escrita na nau.</p><p><b>Tema B.</b> O painel da entrada da antiga Cadeia da Relação, hoje Centro Português de Fotografia.</p></div><p>Dez minutos, com consulta. Não conta para a nota.</p>"
+   "html": "<p class=\"abre\"><b>Um registo de prisão, um pai, uma carta escrita no mar: em <i>Amor de Perdição</i>, quem decide por quem?</b> Este aquecimento não faz a tarefa: treina com frases inventadas e outros casos.</p><div class=\"caixa\"><h3>A tarefa de hoje</h3><p><b>Perguntas 1 e 2.</b> O narrador na Introdução e no cap. IV; as funções sintáticas numa fala de Tadeu.</p><p><b>Tema A.</b> A carta de Simão a Teresa, escrita na nau.</p><p><b>Tema B.</b> O painel da entrada da antiga Cadeia da Relação, hoje Centro Português de Fotografia.</p></div><p>Dez minutos, com consulta. Não conta para a nota.</p>"
   },
   {
    "t": "emparelhar",
@@ -255,20 +255,20 @@
    "p": "Põe por ordem a produção e a entrega.",
    "p2": "Cada passo usa o que o anterior produziu. Do primeiro ao último: ordena.",
    "passos": [
-    "Escreves no topo o tema que escolheste, A ou B",
-    "Respondes ao núcleo: o narrador, depois as funções",
+    "Escreves no topo a letra do teu tema, A ou B",
+    "Respondes às duas perguntas: o narrador, depois as funções",
     "Escreves a carta ou o painel do teu tema",
     "Relês as citações letra a letra e contas as palavras",
     "Escreves as duas linhas finais e entregas as fotografias no Teams"
    ],
-   "f": "O tema fica no topo, o núcleo vem primeiro e o tema a seguir; as citações e a contagem conferem-se no texto já escrito, e as duas linhas fecham.",
-   "fe": "Não contas palavras de um texto que ainda não existe, nem entregas antes das duas linhas; o tema escreve-se no topo, antes de tudo."
+   "f": "A letra do tema fica no topo, as duas perguntas vêm primeiro e o tema a seguir; as citações e a contagem conferem-se no texto já escrito, e as duas linhas fecham.",
+   "fe": "Não contas palavras de um texto que ainda não existe, nem entregas antes das duas linhas; a letra do tema escreve-se no topo, antes de tudo."
   },
   {
    "t": "ler",
    "rot": "Para levar",
    "escuro": true,
-   "html": "<p class=\"levar\">Quem fala, a quem, e o que quer de quem ouve: pergunta-o a cada frase que citares.</p><p>Agora, na tarefa: duas passagens do narrador e o que ele quer de quem lê; as funções na fala de Tadeu, com testes; e a carta ou o painel. Abre a aula de tarefa.</p>"
+   "html": "<p class=\"levar\">Quem fala, a quem, e o que quer de quem ouve: pergunta-o a cada frase que citares.</p><p>Agora, na tarefa: duas passagens do narrador e o efeito de cada uma em quem lê; as funções na fala de Tadeu, com testes; e a carta ou o painel. Abre a aula de tarefa.</p>"
   }
  ]
 }

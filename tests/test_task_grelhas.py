@@ -181,7 +181,8 @@ class Grelhas(unittest.TestCase):
                 # de correção fica sem a coluna «Aluno» e sem a nota da diferença. Nas outras onze, a frase e a coluna de sempre.
                 so_tua=bool(t.get('autoavaliacao_so_tua'))
                 # 13/11/2026: o mesmo nas duas grelhas do M1 (camada tarefas_faceis_m1_20261113); nas outras nove, a frase e a coluna de sempre.
-                self.assertEqual(so_tua,slug in ('m1-u1','m1-u2','m3-u1','m3-u2'))
+                # 13/11/2026: o mesmo nas duas grelhas do M5 (camada tarefas_faceis_m5_20261113); nas outras sete, a frase e a coluna de sempre.
+                self.assertEqual(so_tua,slug in ('m1-u1','m1-u2','m3-u1','m3-u2','m5-u1','m5-u2'))
                 self.assertEqual(aluno.count('Esta autoavaliação é só para ti: não se entrega.'),1 if so_tua else 0)
                 self.assertEqual(aluno.count('Entrega esta autoavaliação com as fotografias. O docente põe a nota dele ao lado da tua e comenta a diferença.'),0 if so_tua else 1)
                 self.assertEqual(correcao.count('<th class="n">Aluno</th>'),0 if so_tua else 1)

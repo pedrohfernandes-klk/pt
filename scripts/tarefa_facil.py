@@ -46,6 +46,13 @@ sem elas (a m3-u1 e a m3-u2) saem iguais, byte a byte:
   * no cartão dos temas: «temas_figuras» (imagens que servem aos dois temas, numeradas, lidas pelo caminho que a lição usa, com o
     crédito completo atrás do «i»), «temas_comum» (o que o texto leva nos dois temas, um pedido por linha, com exemplos) e
     «temas_material» (textos que servem aos dois temas, num desdobrável fechado no ecrã e aberto em papel).
+
+M5 (13/11/2026, camada tarefas_faceis_m5_20261113: a m5-u1 e a m5-u2 no mesmo molde, com passos de romances). Duas chaves novas,
+opcionais; as páginas sem elas (as do M3 e as do M1) saem iguais, byte a byte:
+  * num parágrafo de um texto em prosa, «html»: o mesmo parágrafo com os itálicos da lição (só <i>…</i>: o assento que Camilo
+    transcreve, as palavras estrangeiras de Eça); tirados os itálicos, é o texto de «t», letra a letra;
+  * num texto em prosa, «longo»: o texto pode passar de uma página em papel (parte-se só entre parágrafos, nunca dentro de um);
+  * «nao_partir_dossie»: nos factos do dossiê (que vêm da chave antiga, igual à de antes), «1803 a 1805» e «cap. VI» não se partem.
 """
 import re
 from html import escape
@@ -101,10 +108,12 @@ def bloco_texto(t):
                 assert resto.lstrip(' ,').startswith(parte), (t['id'], x['n'], parte[:40])
                 resto = resto.lstrip(' ,')[len(parte):]
             assert not resto.strip(), (t['id'], x['n'], resto)
-        corpo = '\n'.join(f'<p class="tt-par"><span class="tt-pn">{x["n"]}</span> {escape(x["t"], quote=False)}</p>' for x in t['paragrafos'])
+            # 13/11/2026 (M5): com «html», o parágrafo sai com os itálicos da lição; sem os itálicos, é o texto de «t».
+            assert 'html' not in x or re.sub(r'</?i>', '', x['html']) == escape(x['t'], quote=False), (t['id'], x['n'])
+        corpo = '\n'.join(f'<p class="tt-par"><span class="tt-pn">{x["n"]}</span> {x.get("html") or escape(x["t"], quote=False)}</p>' for x in t['paragrafos'])
         gloss = ('<div class="tt-gloss"><p><b>Vocabulário</b></p><ul>'
                  + ''.join(f'<li><b>{p}</b>: {s}</li>' for p, s in t['glossario']) + '</ul></div>') if t.get('glossario') else ''
-        return (f'<section class="tt-texto tt-curto" id="{t["id"]}" aria-labelledby="{t["id"]}-titulo">'
+        return (f'<section class="tt-texto {"tt-longo" if t.get("longo") else "tt-curto"}" id="{t["id"]}" aria-labelledby="{t["id"]}-titulo">'
                 f'<h3 id="{t["id"]}-titulo"><span class="tt-num">{t["rotulo"]}</span> {t["titulo"]}</h3>\n'
                 f'<div class="tt-prosa">\n{corpo}\n</div>\n{gloss}'
                 f'<p class="tt-fonte">{t["fonte"]}</p></section>\n')
@@ -197,8 +206,16 @@ def figura(f, raiz):
             f'<figcaption>{f["legenda"]}</figcaption></figure>\n')
 
 
-def dossie(titulo, factos):
-    li = ''.join(f'<li>{x["facto"]}<span class="tf-origem">Fonte: <a href="{x["href"]}">{x["fonte"]}</a></span></li>' for x in factos)
+def prender(texto):
+    """13/11/2026 (M5): as referências de um facto do dossiê que não se partem (U+00A0): «1803 a 1805», «cap. VI». Fora das etiquetas."""
+    partes = re.split(r'(<[^>]+>)', texto)
+    for i in range(0, len(partes), 2):
+        partes[i] = re.sub(r'\b(cap\.|capítulo) (?=[IVXLC]+\b)', '\\1\xa0', re.sub(r'(\d) (a|e|ou) (?=\d)', '\\1\xa0\\2\xa0', partes[i]))
+    return ''.join(partes)
+
+
+def dossie(titulo, factos, preso=False):
+    li = ''.join(f'<li>{prender(x["facto"]) if preso else x["facto"]}<span class="tf-origem">Fonte: <a href="{x["href"]}">{x["fonte"]}</a></span></li>' for x in factos)
     return f'<section class="task-dossier tf-dossie" aria-labelledby="dossie"><h4 id="dossie">{titulo}</h4><ol>{li}</ol></section>\n'
 
 
@@ -276,7 +293,7 @@ def pagina(d, com_grelha, head, foot, raiz):
     temas = ''
     for t in f['temas']:
         m = t['material']
-        dentro = ((dossie(d['dossie_titulo'].replace('tema B', 'tema\xa0B'), d['dossie']) if m.get('dossie') else '')  # a referência não se parte
+        dentro = ((dossie(d['dossie_titulo'].replace('tema B', 'tema\xa0B'), d['dossie'], bool(f.get('nao_partir_dossie'))) if m.get('dossie') else '')  # a referência não se parte
                   + ''.join(bloco_texto(textos[i]) for i in m.get('textos', []))
                   + ''.join(f'<p class="tf-p">{x}</p>' for x in m.get('notas', [])))
         temas += (f'<article class="task-theme" data-task-theme="{t["letra"]}" aria-labelledby="tema-{t["letra"]}">'

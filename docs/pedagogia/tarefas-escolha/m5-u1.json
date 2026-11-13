@@ -141,5 +141,646 @@
   "produto": "Responde às duas perguntas e escolhe <strong>um tema</strong>: uma carta de Simão (A) ou um painel de museu (B).",
   "etapa": "1. Responde às duas perguntas",
   "entrega": "Escreve o tema escolhido (A ou B) no topo. Fotografa as respostas, o tema escolhido e as duas linhas finais. Confirma que as fotografias mostram o trabalho completo e entrega-as na tarefa do Teams."
+ },
+ "facil": {
+  "_nota": "13/11/2026: a página da tarefa sai só desta chave (scripts/tarefa_facil.py) e de «titulo», «unidade», «aquecer» (ligação e minutos), «dossie», «dossie_titulo» e «opcional». As outras chaves antigas («aquecer.texto», «lead», «nucleo», «temas», «apoios», «exemplos», «criterios», «fecho», «clareza») já não aparecem na página: ficam como estavam para a leitura histórica das camadas de baixo.",
+  "kicker": "Tarefa individual, 90 minutos",
+  "fazer": [
+   "Faz o aquecimento (10 minutos).",
+   "Responde a duas perguntas.",
+   "Escolhe um tema: uma carta de Simão (A) ou um painel de museu (B).",
+   "Escreve duas linhas finais.",
+   "Revê e entrega no Teams."
+  ],
+  "modo": "Trabalhas à mão. O aquecimento e a tarefa são com consulta: podes usar as lições do site, o caderno e o dicionário.",
+  "producao_minutos": 55,
+  "folha_versao": "20261113-facil-9",
+  "nao_partir_dossie": true,
+  "grelha_nota": "A autoavaliação da grelha é só para ti: não se entrega.",
+  "entregas": {
+   "intro": "Fotografias do teu trabalho em papel, na tarefa do Teams."
+  },
+  "quadro": {
+   "titulo": "Tempo e tamanho",
+   "colunas": [
+    "Tempo",
+    "O que fazes",
+    "Palavras"
+   ],
+   "linhas": [
+    [
+     "10 min",
+     "Aquecimento em cartões",
+     ""
+    ],
+    [
+     "10 min",
+     "Leitura do enunciado",
+     ""
+    ],
+    [
+     {
+      "t": "55 min",
+      "linhas": 3
+     },
+     "Pergunta 1",
+     "orientação: cerca de 50"
+    ],
+    [
+     null,
+     "Pergunta 2",
+     "orientação: cerca de 50"
+    ],
+    [
+     null,
+     "Tema A ou B",
+     "orientação: 100 a 150, com a explicação final"
+    ],
+    [
+     "15 min",
+     "Revisão e entrega",
+     ""
+    ],
+    [
+     "90 min",
+     "Total",
+     "200 a 250"
+    ]
+   ],
+   "notas": [
+    "Nos 10 minutos de leitura, lê as duas perguntas e os passos dos dois temas. Os textos<span class=\"tf-so-ecra\"> e os exemplos</span> são para consultares enquanto escreves.",
+    "As duas linhas finais não contam para as palavras."
+   ]
+  },
+  "aquecer": {
+   "titulo": "Relógio do aquecimento"
+  },
+  "textos": [
+   {
+    "id": "texto-1",
+    "rotulo": "Texto 1",
+    "titulo": "<i>Amor de Perdição</i>, Introdução, de Camilo Castelo Branco",
+    "longo": true,
+    "paragrafos": [
+     {
+      "n": "[1]",
+      "t": "Folheando os livros de antigos assentamentos, no cartorio das cadêas da Relação do Porto, li, no das entradas dos presos desde 1803 a 1805, a folhas 232, o seguinte:",
+      "partes": [
+       "Folheando os livros de antigos assentamentos, no cartorio das cadêas da Relação do Porto, li, no das entradas dos presos desde 1803 a 1805, a folhas 232, o seguinte:"
+      ]
+     },
+     {
+      "n": "[2]",
+      "t": "Simão Antonio Botelho, que assim disse chamar-se, ser solteiro, e estudante na Universidade de Coimbra, natural da cidade de Lisboa, e assistente na occasião de sua prisão na cidade de Vizeu, idade de dezoito annos, filho de Domingos José Correia Botelho e de D. Rita Preciosa Caldeirão Castello-Branco, estatura ordinaria, cara redonda, olhos castanhos, cabello e barba preta, vestido com jaqueta de baetão azul, collête de fustão pintado e calça de panno pedrez. E fiz este assento, que assignei.",
+      "html": "<i>Simão Antonio Botelho, que assim disse chamar-se, ser solteiro, e estudante na Universidade de Coimbra, natural da cidade de Lisboa, e assistente na occasião de sua prisão na cidade de Vizeu, idade de dezoito annos, filho de Domingos José Correia Botelho e de D. Rita Preciosa Caldeirão Castello-Branco, estatura ordinaria, cara redonda, olhos castanhos, cabello e barba preta, vestido com jaqueta de baetão azul, collête de fustão pintado e calça de panno pedrez. E fiz este assento, que assignei.</i>",
+      "partes": [
+       "Simão Antonio Botelho, que assim disse chamar-se, ser solteiro, e estudante na Universidade de Coimbra, natural da cidade de Lisboa, e assistente na occasião de sua prisão na cidade de Vizeu, idade de dezoito annos, filho de Domingos José Correia Botelho e de D. Rita Preciosa Caldeirão Castello-Branco, estatura ordinaria, cara redonda, olhos castanhos, cabello e barba preta, vestido com jaqueta de baetão azul, collête de fustão pintado e calça de panno pedrez. E fiz este assento, que assignei."
+      ]
+     },
+     {
+      "n": "[3]",
+      "t": "Filippe Moreira Dias.",
+      "html": "<i>Filippe Moreira Dias</i>.",
+      "partes": [
+       "Filippe Moreira Dias."
+      ]
+     },
+     {
+      "n": "[4]",
+      "t": "Á margem esquerda d'este assento está escripto: Foi para a India em 17 de Março de 1807.",
+      "html": "Á margem esquerda d'este assento está escripto: <i>Foi para a India em 17 de Março de 1807</i>.",
+      "partes": [
+       "Á margem esquerda d'este assento está escripto: Foi para a India em 17 de Março de 1807."
+      ]
+     },
+     {
+      "n": "[5]",
+      "t": "Não será fiar demasiadamente na sensibilidade do leitor, se cuido que o degredo de um moço de dezoito annos lhe havia de fazer dó.",
+      "partes": [
+       "Não será fiar demasiadamente na sensibilidade do leitor, se cuido que o degredo de um moço de dezoito annos lhe havia de fazer dó."
+      ]
+     },
+     {
+      "n": "[6]",
+      "t": "Dezoito annos! O arrebol dourado e escarlate da manhã da vida! As louçanias do coração que ainda não sonha em fructos, e todo se embalsama no perfume das flôres! Dezoito annos! O amor d'aquella idade! A passagem do seio da familia, dos braços de mãe, dos beijos das irmãs para as caricias mais dôces da virgem, que se lhe abre ao lado como flôr da mesma sazão e dos mesmos aromas, e á mesma hora da vida! Dezoito annos!... E degradado da patria, do amor, e da familia! Nunca mais o ceo de Portugal, nem liberdade, nem irmãos, nem mãe, nem rehabilitação, nem dignidade, nem um amigo!... É triste!",
+      "partes": [
+       "Dezoito annos! O arrebol dourado e escarlate da manhã da vida! As louçanias do coração que ainda não sonha em fructos, e todo se embalsama no perfume das flôres! Dezoito annos! O amor d'aquella idade! A passagem do seio da familia, dos braços de mãe, dos beijos das irmãs para as caricias mais dôces da virgem, que se lhe abre ao lado como flôr da mesma sazão e dos mesmos aromas, e á mesma hora da vida! Dezoito annos!... E degradado da patria, do amor, e da familia! Nunca mais o ceo de Portugal, nem liberdade, nem irmãos, nem mãe, nem rehabilitação, nem dignidade, nem um amigo!... É triste!"
+      ]
+     },
+     {
+      "n": "[7]",
+      "t": "O leitor de certo se compungia; e a leitora se lhe dissessem, em menos de uma linha, a historia d'aquelles dezoito annos, choraria! Pois não? A olhos enchutos poderia ouvil-a a mulher, a creatura mais bem formada das branduras da piedade, a que por vezes traz comsigo do ceo um reflexo da divina misericordia, essa, a minha leitora, a carinhosa amiga de todos os infelizes não choraria se lhe dissessem que o pobre moço perdêra honra, rehabilitação, patria, liberdade, irmãs, mãe, tudo, por amor da primeira mulher que o despertou do seu dormir de innocentes desejos?!",
+      "partes": [
+       "O leitor de certo se compungia; e a leitora se lhe dissessem, em menos de uma linha, a historia d'aquelles dezoito annos, choraria! Pois não? A olhos enchutos poderia ouvil-a a mulher, a creatura mais bem formada das branduras da piedade, a que por vezes traz comsigo do ceo um reflexo da divina misericordia, essa, a minha leitora, a carinhosa amiga de todos os infelizes não choraria se lhe dissessem que o pobre moço perdêra honra, rehabilitação, patria, liberdade, irmãs, mãe, tudo, por amor da primeira mulher que o despertou do seu dormir de innocentes desejos?!"
+      ]
+     }
+    ],
+    "glossario": [
+     [
+      "assentamentos",
+      "registos"
+     ],
+     [
+      "a folhas 232",
+      "na página 232"
+     ],
+     [
+      "assistente",
+      "residente"
+     ],
+     [
+      "baetão",
+      "pano grosso de lã"
+     ],
+     [
+      "fustão",
+      "tecido de algodão"
+     ],
+     [
+      "pedrez",
+      "com pintas"
+     ],
+     [
+      "arrebol",
+      "cor do nascer do sol"
+     ],
+     [
+      "louçanias",
+      "viço"
+     ],
+     [
+      "sazão",
+      "estação do ano"
+     ],
+     [
+      "degradado",
+      "condenado ao degredo (exílio)"
+     ],
+     [
+      "se compungia",
+      "se comovia"
+     ],
+     [
+      "enchutos",
+      "enxutos, secos"
+     ],
+     [
+      "branduras",
+      "ternuras"
+     ]
+    ],
+    "fonte": "Camilo Castelo Branco, <i>Amor de Perdição</i> (1862), Introdução (grafia da edição). São os sete parágrafos que as lições dão; a Introdução tem mais um, no fim.",
+    "origem": "m5/licao-m5-f02/index.html, linha 431, cartões 4, 8, 14 (copiado letra a letra)"
+   },
+   {
+    "id": "texto-2",
+    "rotulo": "Texto 2",
+    "titulo": "<i>Amor de Perdição</i>, capítulo IV (do início à fala de Tadeu ao sobrinho), de Camilo Castelo Branco",
+    "longo": true,
+    "paragrafos": [
+     {
+      "n": "[1]",
+      "t": "O coração de Thereza estava mentindo. Vão lá pedir sinceridade ao coração!",
+      "partes": [
+       "O coração de Thereza estava mentindo. Vão lá pedir sinceridade ao coração!"
+      ]
+     },
+     {
+      "n": "[2]",
+      "t": "Para finos entendedores, o dialogo do anterior capitulo definiu a filha de Thadeu de Albuquerque. É mulher varonil, tem força de caracter, orgulho fortalecido pelo amor, despêgo das vulgares apprehensões, se são apprehensões a renuncia que uma filha faz de sua vontade ás imprevidentes e caprichosas vontades de seu pae. Diz boa gente que não, e eu abundo sempre no voto da gente boa. Não será aleive attribuir-lhe uma pouca de astucia, ou hypocrisia, se quizerem; perspicacia seria mais correcto dizer. Thereza adivinha que a lealdade tropeça a cada passo na estrada real da vida, e que os melhores fins se attingem por atalhos onde não cabem a franqueza e a sinceridade.",
+      "partes": [
+       "Para finos entendedores, o dialogo do anterior capitulo definiu a filha de Thadeu de Albuquerque. É mulher varonil, tem força de caracter, orgulho fortalecido pelo amor, despêgo das vulgares apprehensões, se são apprehensões a renuncia que uma filha faz de sua vontade ás imprevidentes e caprichosas vontades de seu pae. Diz boa gente que não, e eu abundo sempre no voto da gente boa. Não será aleive attribuir-lhe uma pouca de astucia, ou hypocrisia, se quizerem; perspicacia seria mais correcto dizer. Thereza adivinha que a lealdade tropeça a cada passo na estrada real da vida, e que os melhores fins se attingem por atalhos onde não cabem a franqueza e a sinceridade."
+      ]
+     },
+     {
+      "n": "[3]",
+      "t": "[…]",
+      "partes": [
+       "[…]"
+      ]
+     },
+     {
+      "n": "[4]",
+      "t": "Ao romper d'alva, d'um domingo de Junho de 1803, foi Thereza chamada para ir com seu pae á primeira missa da igreja parochial. Vestiu-se a menina assustada, e encontrou o velho na ante-camara a recebêl-a com muito agrado, perguntando-lhe se ella se erguia de bons humores para dar ao author de seus dias um resto de velhice feliz. O silencio de Thereza era interrogador.",
+      "partes": [
+       "Ao romper d'alva, d'um domingo de Junho de 1803, foi Thereza chamada para ir com seu pae á primeira missa da igreja parochial. Vestiu-se a menina assustada, e encontrou o velho na ante-camara a recebêl-a com muito agrado, perguntando-lhe se ella se erguia de bons humores para dar ao author de seus dias um resto de velhice feliz. O silencio de Thereza era interrogador."
+      ]
+     },
+     {
+      "n": "[5]",
+      "t": "— Vais hoje dar a mão de esposa a teu primo Balthazar, minha filha. É preciso que te deixes cegamente levar pela mão de teu pae. Logo que déres este passo difficil, conhecerás que a tua felicidade é d'aquellas que precisam ser impostas pela violencia. Mas repara, minha querida filha, que a violencia de um pae é sempre amor. Amor tem sido a minha condescendencia e brandura para comtigo. Outro teria subjugado a tua desobediencia com maus tractos, com os rigores do convento, e talvez com o desfalque do teu grande patrimonio. Eu, não. Esperei que o tempo te aclarasse a razão, e felicito-me de te julgar desassombrada do diabolico prestigio do maldito, que acordou o teu innocente coração. Não te consultei outra vez sobre este casamento, por temer que a reflexão fizesse mal ao fervor de boa filha com que tu vais abraçar teu pae, e agradecer-lhe a sisudez com que elle respeitou o teu genio, velando sempre a hora de te encontrar digna do seu amor.",
+      "partes": [
+       "— Vais hoje dar a mão de esposa a teu primo Balthazar, minha filha. É preciso que te deixes cegamente levar pela mão de teu pae. Logo que déres este passo difficil, conhecerás que a tua felicidade é d'aquellas que precisam ser impostas pela violencia. Mas repara, minha querida filha, que a violencia de um pae é sempre amor. Amor tem sido a minha condescendencia e brandura para comtigo. Outro teria subjugado a tua desobediencia com maus tractos, com os rigores do convento, e talvez com o desfalque do teu grande patrimonio. Eu, não. Esperei que o tempo te aclarasse a razão, e felicito-me de te julgar desassombrada do diabolico prestigio do maldito, que acordou o teu innocente coração. Não te consultei outra vez sobre este casamento, por temer que a reflexão fizesse mal ao fervor de boa filha com que tu vais abraçar teu pae, e agradecer-lhe a sisudez com que elle respeitou o teu genio, velando sempre a hora de te encontrar digna do seu amor."
+      ]
+     },
+     {
+      "n": "[6]",
+      "t": "Thereza não desfitou os olhos do pae; mas tão abstrahida estava, que escassamente lhe ouviu as primeiras palavras, e nada das ultimas.",
+      "partes": [
+       "Thereza não desfitou os olhos do pae; mas tão abstrahida estava, que escassamente lhe ouviu as primeiras palavras, e nada das ultimas."
+      ]
+     },
+     {
+      "n": "[7]",
+      "t": "— Não me respondes, Thereza?! — tornou Thadeu, tomando-lhe caridosamente as mãos.",
+      "partes": [
+       "— Não me respondes, Thereza?! — tornou Thadeu, tomando-lhe caridosamente as mãos."
+      ]
+     },
+     {
+      "n": "[8]",
+      "t": "— Que hei-de eu responder-lhe, meu pae? — balbuciou ella.",
+      "partes": [
+       "— Que hei-de eu responder-lhe, meu pae? — balbuciou ella."
+      ]
+     },
+     {
+      "n": "[9]",
+      "t": "— Dás-me o que te peço? enches de contentamento os poucos dias que me restam?",
+      "partes": [
+       "— Dás-me o que te peço? enches de contentamento os poucos dias que me restam?"
+      ]
+     },
+     {
+      "n": "[10]",
+      "t": "— E será o pae feliz com o meu sacrificio?",
+      "partes": [
+       "— E será o pae feliz com o meu sacrificio?"
+      ]
+     },
+     {
+      "n": "[11]",
+      "t": "— Não digas sacrificio, Thereza... A'manhã a estas horas verás que transfiguração se fez na tua alma. Teu primo é um composto de todas as virtudes; nem a qualidade de ser um gentil moço lhe falta, como se a riqueza, a sciencia e as virtudes não bastassem a formar um marido excellente.",
+      "partes": [
+       "— Não digas sacrificio, Thereza... A'manhã a estas horas verás que transfiguração se fez na tua alma. Teu primo é um composto de todas as virtudes; nem a qualidade de ser um gentil moço lhe falta, como se a riqueza, a sciencia e as virtudes não bastassem a formar um marido excellente."
+      ]
+     },
+     {
+      "n": "[12]",
+      "t": "— E elle quer-me, depois de eu me ter negado? — disse ella com amargura ironica.",
+      "partes": [
+       "— E elle quer-me, depois de eu me ter negado? — disse ella com amargura ironica."
+      ]
+     },
+     {
+      "n": "[13]",
+      "t": "— Se elle está apaixonado, filha!... e tem bastante confiança em si para crêr que tu has de amal-o muito!...",
+      "partes": [
+       "— Se elle está apaixonado, filha!... e tem bastante confiança em si para crêr que tu has de amal-o muito!..."
+      ]
+     },
+     {
+      "n": "[14]",
+      "t": "— E não será mais certo odial-o eu sempre!? Eu agora mesmo o abomino como nunca pensei que se podesse abominar! Meu pae... — continuou ella, chorando, com as mãos erguidas — mate-me; mas não me force a casar com meu primo! E' escusada a violencia, porque eu não caso!..",
+      "partes": [
+       "— E não será mais certo odial-o eu sempre!? Eu agora mesmo o abomino como nunca pensei que se podesse abominar! Meu pae... — continuou ella, chorando, com as mãos erguidas — mate-me; mas não me force a casar com meu primo! E' escusada a violencia, porque eu não caso!.."
+      ]
+     },
+     {
+      "n": "[15]",
+      "t": "Thadeu mudou de aspecto, e disse irado:",
+      "partes": [
+       "Thadeu mudou de aspecto, e disse irado:"
+      ]
+     },
+     {
+      "n": "[16]",
+      "t": "— Hás de casar! Quero que cases! Quero!... Quando não, amaldiçoada serás para sempre, Thereza! Morrerás n'um convento! Esta casa irá para teu primo! Nenhum infame ha de aqui pôr um pé nas alcatifas de meus avós. Se és uma alma vil, não me pertences, não és minha filha, não podes herdar appellidos honrosos, que foram pela primeira vez insultados pelo pae d'esse miseravel que tu amas! Maldita sejas! Entra n'esse quarto, e espera que d'ahi te arranquem para outro, onde não verás um raio de sol.",
+      "partes": [
+       "— Hás de casar! Quero que cases! Quero!... Quando não, amaldiçoada serás para sempre, Thereza! Morrerás n'um convento! Esta casa irá para teu primo! Nenhum infame ha de aqui pôr um pé nas alcatifas de meus avós. Se és uma alma vil, não me pertences, não és minha filha, não podes herdar appellidos honrosos, que foram pela primeira vez insultados pelo pae d'esse miseravel que tu amas! Maldita sejas! Entra n'esse quarto, e espera que d'ahi te arranquem para outro, onde não verás um raio de sol."
+      ]
+     },
+     {
+      "n": "[17]",
+      "t": "Thereza ergueu-se sem lagrimas, e entrou serenamente no seu quarto. Thadeu de Albuquerque foi encontrar seu sobrinho, e disse-lhe:",
+      "partes": [
+       "Thereza ergueu-se sem lagrimas, e entrou serenamente no seu quarto. Thadeu de Albuquerque foi encontrar seu sobrinho, e disse-lhe:"
+      ]
+     },
+     {
+      "n": "[18]",
+      "t": "— Não te posso dar minha filha, porque já não tenho filha. A miseravel, a quem dei este nome, perdeu-se para nós e para ella.",
+      "partes": [
+       "— Não te posso dar minha filha, porque já não tenho filha. A miseravel, a quem dei este nome, perdeu-se para nós e para ella."
+      ]
+     }
+    ],
+    "glossario": [
+     [
+      "varonil",
+      "forte como um homem"
+     ],
+     [
+      "despêgo",
+      "desapego"
+     ],
+     [
+      "apprehensões",
+      "receios"
+     ],
+     [
+      "aleive",
+      "calúnia"
+     ],
+     [
+      "dar a mão de esposa",
+      "casar"
+     ],
+     [
+      "condescendencia",
+      "tolerância"
+     ],
+     [
+      "desfalque",
+      "corte"
+     ],
+     [
+      "desassombrada",
+      "livre"
+     ],
+     [
+      "sisudez",
+      "juízo"
+     ],
+     [
+      "genio",
+      "feitio"
+     ],
+     [
+      "escusada",
+      "inútil"
+     ],
+     [
+      "amaldiçoada",
+      "condenada, rejeitada"
+     ],
+     [
+      "alcatifas",
+      "tapetes"
+     ],
+     [
+      "appellidos",
+      "nomes de família"
+     ]
+    ],
+    "fonte": "Camilo Castelo Branco, <i>Amor de Perdição</i> (1862), cap. IV (grafia da edição). Em [3], as lições saltam uma parte do capítulo.",
+    "origem": "m5/licao-m5-f04/index.html, linha 431, cartões 3, 7, 11, 13, 17, 19, 22 (copiado letra a letra)"
+   },
+   {
+    "id": "texto-3",
+    "rotulo": "Texto 3",
+    "titulo": "As perguntas de Teresa a Simão, como estão na lição F08",
+    "paragrafos": [
+     {
+      "n": "[1]",
+      "t": "Podias tu com a desesperança e com a vida?",
+      "partes": [
+       "Podias tu com a desesperança e com a vida?"
+      ]
+     },
+     {
+      "n": "[2]",
+      "t": "Que farias da vida sem a tua companheira?",
+      "partes": [
+       "Que farias da vida sem a tua companheira?"
+      ]
+     },
+     {
+      "n": "[3]",
+      "t": "Nunca hás de amar outra vez?",
+      "partes": [
+       "Nunca hás de amar outra vez?"
+      ]
+     }
+    ],
+    "fonte": "Lição F08, «Para entender». As perguntas são da última carta de Teresa (<i>Amor de Perdição</i>, Conclusão). A lição dá-as em português atual, e não na grafia da edição.",
+    "origem": "m5/licao-m5-f08/index.html, linha 431, cartão 3, «Recorda: o que Simão sabe nesta noite» (copiado letra a letra)"
+   }
+  ],
+  "perguntas": [
+   {
+    "titulo": "A intervenção do narrador.",
+    "meta": "Orientação: cerca de 50 palavras.",
+    "relogio": "Começa este relógio depois da leitura.",
+    "textos": [
+     "texto-1"
+    ],
+    "pedido_titulo": "O que fazes",
+    "antes": "Escolhe duas passagens em que o narrador comenta o que conta:",
+    "escolhas": [
+     "uma passagem da Introdução (<a href=\"#texto-1\">Texto 1</a>);",
+     "outra do capítulo IV (<a href=\"#texto-2\">Texto 2</a>, na pergunta 2)."
+    ],
+    "alineas": [
+     "Cita a passagem da Introdução.",
+     "Cita a passagem do capítulo IV.",
+     "Identifica um recurso numa delas.",
+     "Explica o efeito de cada passagem em quem lê."
+    ],
+    "ajudas": [
+     "Serve uma passagem em que o narrador comenta, julga ou fala com quem lê. Uma fala de Tadeu ou de Teresa não é do narrador."
+    ],
+    "citar": "Copia as palavras exatas do texto, com a grafia do texto. Põe-nas entre aspas: «…». A seguir, escreve de onde é: (Introdução) ou (cap. IV).",
+    "ler": "Os Textos 1 e 2 têm os parágrafos que as lições dão, com a grafia da edição de 1862. Chegam para as duas perguntas.",
+    "exemplos": [
+     {
+      "titulo": "Uma história inventada, com outras passagens",
+      "paragrafos": [
+       {
+        "al": "Alíneas a) e d), uma passagem e o efeito:",
+        "t": "Ainda não sabia que nunca mais voltaria àquela casa. O narrador antecipa o fim e quer que quem lê siga a cena já com medo."
+       },
+       {
+        "al": "Alíneas b), c) e d), outra passagem, o recurso e o efeito:",
+        "t": "O senhor, homem de muita honra, contou o dinheiro duas vezes antes de dar a esmola. A ironia (homem de muita honra) julga a personagem e quer que quem lê se ria dela."
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "titulo": "A fala de Tadeu.",
+    "meta": "Orientação: cerca de 50 palavras.",
+    "textos": [
+     "texto-2"
+    ],
+    "pedido_titulo": "O que fazes",
+    "intro": "No <a href=\"#texto-2\">Texto 2</a> (parágrafo [18]), Tadeu diz ao sobrinho: «Não te posso dar minha filha, porque já não tenho filha.»",
+    "alineas": [
+     "Identifica a função sintática de «te».",
+     "Identifica a função sintática de «minha filha».",
+     "Apresenta um teste para cada função.",
+     "Explica o que a frase mostra do lugar de Teresa na visão do pai."
+    ],
+    "ajudas": [
+     "Os testes da lição: trocar por um pronome, perguntar, cortar, passar à passiva."
+    ],
+    "exemplos": [
+     {
+      "titulo": "Outra frase do capítulo IV: «Teu primo é um composto de todas as virtudes»",
+      "paragrafos": [
+       {
+        "al": "Alíneas a) e c), uma função e o seu teste:",
+        "t": "Em «Teu primo é um composto de todas as virtudes» (cap. IV), «Teu primo» é o sujeito: responde à pergunta <i>quem é um composto de todas as virtudes?</i>, e o verbo concorda com ele."
+       },
+       {
+        "al": "Alíneas b) e c), a outra função e o seu teste:",
+        "t": "A expressão «um composto de todas as virtudes» é predicativo do sujeito: com <i>ser</i>, diz como é o sujeito, e a frase não se aguenta sem ele."
+       },
+       {
+        "al": "Alínea d), o que a frase mostra:",
+        "t": "O sujeito é Baltasar e o predicativo é só elogio: Tadeu vende o noivo à filha."
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "temas_titulo": "Escolhe um tema: A ou B",
+  "temas_nota": "Orientação: 100 a 150 palavras, com a explicação final.",
+  "temas_topo": "Escreve a letra do teu tema (A ou B) no topo.",
+  "temas": [
+   {
+    "letra": "A",
+    "nome": "A voz de Simão",
+    "intro": "Imagina a carta que Simão escreveria a Teresa, na nau, depois da morte dela.",
+    "antes": [
+     "As perguntas de Teresa estão no <a href=\"#texto-3\">Texto 3</a>, com os factos que Simão sabe nessa noite."
+    ],
+    "passos": [
+     "Escreve 90 a 120 palavras, com local, data, vocativo, despedida e assinatura.",
+     "Responde a uma pergunta de Teresa (<a href=\"#texto-3\">Texto 3</a>).",
+     "Inclui uma memória dos dois.",
+     "Inclui um recurso expressivo teu.",
+     "Inclui uma expressão do romance entre «».",
+     {
+      "t": "Depois da carta, escreve duas frases:",
+      "sub": [
+       "que facto do romance respeitaste;",
+       "que efeito produz o teu recurso expressivo."
+      ]
+     }
+    ],
+    "material": {
+     "titulo": "Só para o tema A: o Texto 3 e os factos",
+     "textos": [
+      "texto-3"
+     ],
+     "notas": [
+      "<b>Os factos, como estão na lição F08:</b> Simão matou Baltasar e vai degredado para a Índia; a nau saiu do Porto a 17 de março de 1807; Teresa morreu no convento de Monchique; Mariana, a filha do ferrador, vai a bordo com ele.",
+      "<b>As marcas de uma carta, como estão na lição F08:</b> local e data, vocativo, despedida, assinatura."
+     ],
+     "exemplos": [
+      {
+       "titulo": "Outra voz: uma carta inventada de Tadeu à filha, no convento",
+       "paragrafos": [
+        {
+         "al": "Passos 1 a 5, a carta:",
+         "t": "Na casa de meus avós, dia de Natal. Teresa: perguntas-me se ainda tens pai. Tens, e és tu que o recusas. Lembras-te da manhã de domingo em que te chamei para a missa? Já então te disse que «a violencia de um pae é sempre amor». A tua teimosia é um muro alto entre nós. Que Deus te dê juízo. Teu pai, Tadeu de Albuquerque."
+        },
+        {
+         "al": "Passo 6, as duas frases:",
+         "t": "Respeitei o romance: Teresa está no convento com que o pai a ameaçou, e ele não se desdiz. A metáfora do muro mostra que Tadeu põe a culpa na filha."
+        }
+       ]
+      }
+     ]
+    }
+   },
+   {
+    "letra": "B",
+    "nome": "Uma cadeia que virou museu",
+    "intro": "Escreve o painel de entrada da antiga Cadeia da Relação, hoje Centro Português de Fotografia, para quem nunca leu o romance.",
+    "antes": [
+     "A frase do romance pode vir do <a href=\"#texto-1\">Texto 1</a> (na pergunta 1) ou do <a href=\"#texto-2\">Texto 2</a> (na pergunta 2)."
+    ],
+    "passos": [
+     "Escreve o painel em 70 a 100 palavras.",
+     "Inclui dois factos do <a href=\"#dossie\">dossiê</a>.",
+     "Inclui uma frase curta do romance entre «».",
+     "Depois do painel, explica por que escolheste essa frase.",
+     "Indica o que o painel não pode afirmar sobre Camilo e Simão."
+    ],
+    "material": {
+     "titulo": "Só para o tema B: o dossiê",
+     "dossie": true,
+     "exemplos": [
+      {
+       "titulo": "Outro lugar: um painel para a Casa de Camilo",
+       "paragrafos": [
+        {
+         "al": "Passos 1 a 3, o painel:",
+         "t": "Esta é a casa de Camilo Castelo Branco, em São Miguel de Seide. Foi reconstituída, refeita como era no tempo do escritor. Num romance dele, uma filha ameaçada pelo pai responde assim: «Thereza ergueu-se sem lagrimas, e entrou serenamente no seu quarto.»"
+        },
+        {
+         "al": "Passo 4, a razão da frase:",
+         "t": "Escolhi a frase porque quem visita uma casa entra em quartos."
+        },
+        {
+         "al": "Passo 5, o que o painel não pode afirmar:",
+         "t": "Este painel não pode afirmar que tudo o que se vê é o que Camilo usou: a casa foi refeita."
+        }
+       ]
+      }
+     ]
+    }
+   }
+  ],
+  "finais": {
+   "titulo": "Duas linhas finais",
+   "passos": [
+    "Responde: quem decide por quem, neste romance?",
+    "Aponta a passagem que te fez pensar nisso."
+   ]
+  },
+  "verificar_titulo": "Antes de entregar, verifica",
+  "verificar_texto": "Responde sim ou não. Se for não, completa o teu trabalho.",
+  "verificar": [
+   "Respondi a todas as alíneas das duas perguntas?",
+   "Fiz todos os passos do meu tema?",
+   "As citações estão letra a letra, entre «», com a grafia do texto?",
+   "Disse de onde é cada citação (Introdução ou capítulo)?",
+   "Nada do que escrevi contradiz o romance?",
+   "As respostas ligam-se (não estão soltas)?",
+   "Tenho 200 a 250 palavras?",
+   "Revi a escrita?",
+   "As duas linhas finais apontam uma passagem?",
+   "A letra do meu tema (A ou B) está no topo?"
+  ],
+  "exemplo_titulo": [
+   "Ver um exemplo com outro caso",
+   "Ver dois exemplos com outros casos"
+  ],
+  "entrega_titulo": "Entrega no Teams",
+  "entrega": [
+   "Fotografa as respostas, o texto do teu tema e as duas linhas finais.",
+   "Confirma que as fotografias mostram o trabalho completo.",
+   "Entrega as fotografias na tarefa do Teams."
+  ],
+  "rever_titulo": "Se precisares de rever",
+  "rever_texto": "Os Textos 1, 2 e 3 já estão nesta página. As lições servem para rever a matéria.",
+  "rever": [
+   {
+    "para": "Pergunta 1",
+    "texto": "Lição F02, <a href=\"../../m5/licao-m5-f02/\">Folheando os livros da cadeia</a>. Relê «Em paralelo»: duas vozes na mesma página."
+   },
+   {
+    "para": "Pergunta 1",
+    "texto": "Lição F04, <a href=\"../../m5/licao-m5-f04/\">A violência de um pai é sempre amor</a>. Relê «Para entender»: a história até aqui."
+   },
+   {
+    "para": "Pergunta 2",
+    "texto": "Lição F07, <a href=\"../../m5/licao-m5-f07/\">Quem faz o quê a quem</a>. Relê «O essencial» (os testes) e a «Árvore da frase»."
+   },
+   {
+    "para": "Tema A",
+    "texto": "Lição F08, <a href=\"../../m5/licao-m5-f08/\">Responder no alto mar</a>. Relê «Para entender». A carta da lição tinha 220 a 300 palavras e respondia a duas perguntas; esta tem 90 a 120 e responde a uma."
+   },
+   {
+    "para": "Tema B",
+    "texto": "Lição F02, <a href=\"../../m5/licao-m5-f02/\">Folheando os livros da cadeia</a>. Relê a «Linha de vida»."
+   }
+  ],
+  "opcional_titulo": "Experimentar uma pergunta"
  }
 }

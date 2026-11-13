@@ -145,5 +145,680 @@
   "produto": "Responde às duas perguntas e escolhe <strong>um tema</strong>: uma cena atual à maneira de Eça (A) ou um parágrafo de opinião (B).",
   "etapa": "1. Responde às duas perguntas",
   "entrega": "Escreve o tema escolhido (A ou B) no topo. Fotografa as respostas, o tema escolhido e as duas linhas finais. Confirma que as fotografias mostram o trabalho completo e entrega-as na tarefa do Teams."
+ },
+ "facil": {
+  "_nota": "13/11/2026: a página da tarefa sai só desta chave (scripts/tarefa_facil.py) e de «titulo», «unidade», «aquecer» (ligação e minutos), «dossie», «dossie_titulo» e «opcional». As outras chaves antigas («aquecer.texto», «lead», «nucleo», «temas», «apoios», «exemplos», «criterios», «fecho», «clareza») já não aparecem na página: ficam como estavam para a leitura histórica das camadas de baixo.",
+  "kicker": "Tarefa individual, 90 minutos",
+  "fazer": [
+   "Faz o aquecimento (10 minutos).",
+   "Responde a duas perguntas.",
+   "Escolhe um tema: uma cena de hoje à maneira de Eça (A) ou um parágrafo de opinião (B).",
+   "Escreve duas linhas finais.",
+   "Revê e entrega no Teams."
+  ],
+  "modo": "Trabalhas à mão. O aquecimento e a tarefa são com consulta: podes usar as lições do site, o caderno e o dicionário.",
+  "producao_minutos": 55,
+  "folha_versao": "20261113-facil-9",
+  "nao_partir_dossie": true,
+  "grelha_nota": "A autoavaliação da grelha é só para ti: não se entrega.",
+  "entregas": {
+   "intro": "Fotografias do teu trabalho em papel, na tarefa do Teams."
+  },
+  "quadro": {
+   "titulo": "Tempo e tamanho",
+   "colunas": [
+    "Tempo",
+    "O que fazes",
+    "Palavras"
+   ],
+   "linhas": [
+    [
+     "10 min",
+     "Aquecimento em cartões",
+     ""
+    ],
+    [
+     "10 min",
+     "Leitura do enunciado",
+     ""
+    ],
+    [
+     {
+      "t": "55 min",
+      "linhas": 3
+     },
+     "Pergunta 1",
+     "orientação: cerca de 50"
+    ],
+    [
+     null,
+     "Pergunta 2",
+     "orientação: cerca de 50"
+    ],
+    [
+     null,
+     "Tema A ou B",
+     "orientação: 100 a 150"
+    ],
+    [
+     "15 min",
+     "Revisão e entrega",
+     ""
+    ],
+    [
+     "90 min",
+     "Total",
+     "200 a 250"
+    ]
+   ],
+   "notas": [
+    "Nos 10 minutos de leitura, lê as duas perguntas e os passos dos dois temas. Os textos<span class=\"tf-so-ecra\"> e os exemplos</span> são para consultares enquanto escreves.",
+    "As duas linhas finais não contam para as palavras."
+   ]
+  },
+  "aquecer": {
+   "titulo": "Relógio do aquecimento"
+  },
+  "textos": [
+   {
+    "id": "texto-1",
+    "rotulo": "Texto 1",
+    "titulo": "<i>Os Maias</i>, capítulo I (o Ramalhete, no início), de Eça de Queirós",
+    "longo": true,
+    "paragrafos": [
+     {
+      "n": "[1]",
+      "t": "A casa que os Maias vieram habitar em Lisboa, no outono de 1875, era conhecida na visinhança da rua de S. Francisco de Paula, e em todo o bairro das Janellas Verdes, pela casa do Ramalhete ou simplesmente o Ramalhete. Apesar d'este fresco nome de vivenda campestre, o Ramalhete, sombrio casarão de paredes severas, com um renque de estreitas varandas de ferro no primeiro andar, e por cima uma timida fila de janellinhas abrigadas á beira do telhado, tinha o aspecto tristonho de Residencia Ecclesiastica que competia a uma edificação do reinado da sr.ª D. Maria I: com uma sineta e com uma cruz no topo assimilhar-se-hia a um Collegio de Jesuitas. O nome de Ramalhete provinha de certo d'um revestimento quadrado de azulejos fazendo painel no logar heraldico do Escudo d'Armas, que nunca chegara a ser collocado, e representando um grande ramo de girasoes atado por uma fita onde se distinguiam letras e numeros d'uma data.",
+      "html": "A casa que os Maias vieram habitar em Lisboa, no outono de 1875, era conhecida na visinhança da rua de S. Francisco de Paula, e em todo o bairro das Janellas Verdes, pela <i>casa do Ramalhete</i> ou simplesmente o <i>Ramalhete</i>. Apesar d'este fresco nome de vivenda campestre, o <i>Ramalhete</i>, sombrio casarão de paredes severas, com um renque de estreitas varandas de ferro no primeiro andar, e por cima uma timida fila de janellinhas abrigadas á beira do telhado, tinha o aspecto tristonho de Residencia Ecclesiastica que competia a uma edificação do reinado da sr.ª D. Maria I: com uma sineta e com uma cruz no topo assimilhar-se-hia a um Collegio de Jesuitas. O nome de Ramalhete provinha de certo d'um revestimento quadrado de azulejos fazendo painel no logar heraldico do Escudo d'Armas, que nunca chegara a ser collocado, e representando um grande ramo de girasoes atado por uma fita onde se distinguiam letras e numeros d'uma data.",
+      "partes": [
+       "A casa que os Maias vieram habitar em Lisboa, no outono de 1875, era conhecida na visinhança da rua de S. Francisco de Paula, e em todo o bairro das Janellas Verdes, pela casa do Ramalhete ou simplesmente o Ramalhete. Apesar d'este fresco nome de vivenda campestre, o Ramalhete, sombrio casarão de paredes severas, com um renque de estreitas varandas de ferro no primeiro andar, e por cima uma timida fila de janellinhas abrigadas á beira do telhado, tinha o aspecto tristonho de Residencia Ecclesiastica que competia a uma edificação do reinado da sr.ª D. Maria I: com uma sineta e com uma cruz no topo assimilhar-se-hia a um Collegio de Jesuitas. O nome de Ramalhete provinha de certo d'um revestimento quadrado de azulejos fazendo painel no logar heraldico do Escudo d'Armas, que nunca chegara a ser collocado, e representando um grande ramo de girasoes atado por uma fita onde se distinguiam letras e numeros d'uma data."
+      ]
+     },
+     {
+      "n": "[2]",
+      "t": "Longos annos o Ramalhete permanecera deshabitado, com teias d'aranha pelas grades dos postigos terreos, e cobrindo-se de tons de ruina. Em 1858 Monsenhor Buccarini, Nuncio de S. Santidade, visitara-o com idéa d'installar lá a Nunciatura, seduzido pela gravidade clerical do edificio e pela paz dormente do bairro: e o interior do casarão agradara-lhe tambem, com a sua disposição apalaçada, os tectos apainelados, as paredes cobertas de frescos onde já desmaiavam as rosas das grinaldas e as faces dos Cupidinhos. Mas Monsenhor, com os seus habitos de rico prelado romano, necessitava na sua vivenda os arvoredos e as agoas d'um jardim de luxo: e o Ramalhete possuia apenas, ao fundo d'um terraço de tijolo, um pobre quintal inculto, abandonado ás hervas bravas, com um cypreste, um cedro, uma cascatasinha secca, um tanque entulhado, e uma estatua de marmore (onde Monsenhor reconheceu logo Venus Citherêa) ennegrecendo a um canto na lenta humidade das ramagens silvestres. Além d'isso, a renda que pedio o velho Villaça, procurador dos Maias, pareceu tão exagerada a Monsenhor, que lhe perguntou sorrindo se ainda julgava a Egreja nos tempos de Leão X. Villaça respondeu — que tambem a nobreza não estava nos tempos do sr. D. João V. E o Ramalhete continuou deshabitado.",
+      "html": "Longos annos o Ramalhete permanecera deshabitado, com teias d'aranha pelas grades dos postigos terreos, e cobrindo-se de tons de ruina. Em 1858 Monsenhor Buccarini, Nuncio de S. Santidade, visitara-o com idéa d'installar lá a Nunciatura, seduzido pela gravidade clerical do edificio e pela paz dormente do bairro: e o interior do casarão agradara-lhe tambem, com a sua disposição apalaçada, os tectos apainelados, as paredes cobertas de <i>frescos</i> onde já desmaiavam as rosas das grinaldas e as faces dos Cupidinhos. Mas Monsenhor, com os seus habitos de rico prelado romano, necessitava na sua vivenda os arvoredos e as agoas d'um jardim de luxo: e o Ramalhete possuia apenas, ao fundo d'um terraço de tijolo, um pobre quintal inculto, abandonado ás hervas bravas, com um cypreste, um cedro, uma cascatasinha secca, um tanque entulhado, e uma estatua de marmore (onde Monsenhor reconheceu logo Venus Citherêa) ennegrecendo a um canto na lenta humidade das ramagens silvestres. Além d'isso, a renda que pedio o velho Villaça, procurador dos Maias, pareceu tão exagerada a Monsenhor, que lhe perguntou sorrindo se ainda julgava a Egreja nos tempos de Leão X. Villaça respondeu — que tambem a nobreza não estava nos tempos do sr. D. João V. E o Ramalhete continuou deshabitado.",
+      "partes": [
+       "Longos annos o Ramalhete permanecera deshabitado, com teias d'aranha pelas grades dos postigos terreos, e cobrindo-se de tons de ruina. Em 1858 Monsenhor Buccarini, Nuncio de S. Santidade, visitara-o com idéa d'installar lá a Nunciatura, seduzido pela gravidade clerical do edificio e pela paz dormente do bairro: e o interior do casarão agradara-lhe tambem, com a sua disposição apalaçada, os tectos apainelados, as paredes cobertas de frescos onde já desmaiavam as rosas das grinaldas e as faces dos Cupidinhos. Mas Monsenhor, com os seus habitos de rico prelado romano, necessitava na sua vivenda os arvoredos e as agoas d'um jardim de luxo: e o Ramalhete possuia apenas, ao fundo d'um terraço de tijolo, um pobre quintal inculto, abandonado ás hervas bravas, com um cypreste, um cedro, uma cascatasinha secca, um tanque entulhado, e uma estatua de marmore (onde Monsenhor reconheceu logo Venus Citherêa) ennegrecendo a um canto na lenta humidade das ramagens silvestres. Além d'isso, a renda que pedio o velho Villaça, procurador dos Maias, pareceu tão exagerada a Monsenhor, que lhe perguntou sorrindo se ainda julgava a Egreja nos tempos de Leão X. Villaça respondeu — que tambem a nobreza não estava nos tempos do sr. D. João V. E o Ramalhete continuou deshabitado."
+      ]
+     }
+    ],
+    "glossario": [
+     [
+      "renque",
+      "fila"
+     ],
+     [
+      "sr.ª",
+      "senhora (abreviatura da edição)"
+     ],
+     [
+      "Escudo d'Armas",
+      "brasão"
+     ],
+     [
+      "postigos terreos",
+      "pequenas janelas ao nível da rua"
+     ],
+     [
+      "Residencia Ecclesiastica",
+      "casa de padres"
+     ],
+     [
+      "Nuncio",
+      "embaixador do Papa"
+     ],
+     [
+      "apalaçada",
+      "de palácio"
+     ],
+     [
+      "apainelados",
+      "com painéis"
+     ],
+     [
+      "frescos",
+      "pinturas na parede"
+     ],
+     [
+      "prelado",
+      "alto dignitário da Igreja"
+     ],
+     [
+      "Venus Citherêa",
+      "estátua da deusa Vénus"
+     ],
+     [
+      "procurador",
+      "administrador"
+     ],
+     [
+      "Leão X",
+      "papa rico do século XVI"
+     ]
+    ],
+    "fonte": "Eça de Queirós, <i>Os Maias</i> (1888), cap. I (grafia da edição).",
+    "origem": "m5/licao-m5-f10/index.html, linha 431, cartão 4 (copiado letra a letra)"
+   },
+   {
+    "id": "texto-2",
+    "rotulo": "Texto 2",
+    "titulo": "<i>Os Maias</i>, último capítulo (o Ramalhete, no fim), de Eça de Queirós",
+    "paragrafos": [
+     {
+      "n": "[1]",
+      "t": "Depois na rua Carlos parou, deu um longo olhar ao sombrio casarão, que n'aquella primeira penumbra tomava um aspecto mais carregado de residencia ecclesiastica, com as suas paredes severas, a sua fila de janellinhas fechadas, as grades dos postigos terreos cheias de treva, mudo, para sempre deshabitado, cobrindo-se já de tons de ruina.",
+      "partes": [
+       "Depois na rua Carlos parou, deu um longo olhar ao sombrio casarão, que n'aquella primeira penumbra tomava um aspecto mais carregado de residencia ecclesiastica, com as suas paredes severas, a sua fila de janellinhas fechadas, as grades dos postigos terreos cheias de treva, mudo, para sempre deshabitado, cobrindo-se já de tons de ruina."
+      ]
+     },
+     {
+      "n": "[2]",
+      "t": "Uma commoção passou-lhe n'alma, murmurou, travando do braço do Ega:",
+      "partes": [
+       "Uma commoção passou-lhe n'alma, murmurou, travando do braço do Ega:"
+      ]
+     },
+     {
+      "n": "[3]",
+      "t": "— É curioso! Só vivi dois annos n'esta casa, e é n'ella que me parece estar mettida a minha vida inteira!",
+      "partes": [
+       "— É curioso! Só vivi dois annos n'esta casa, e é n'ella que me parece estar mettida a minha vida inteira!"
+      ]
+     }
+    ],
+    "fonte": "Eça de Queirós, <i>Os Maias</i> (1888), último capítulo (grafia da edição).",
+    "origem": "m5/licao-m5-f10/index.html, linha 431, cartão 15 (copiado letra a letra)"
+   },
+   {
+    "id": "texto-3",
+    "rotulo": "Texto 3",
+    "titulo": "<i>Os Maias</i>, capítulo VI (Alencar e o realismo, ao jantar), de Eça de Queirós",
+    "paragrafos": [
+     {
+      "n": "[1]",
+      "t": "Esse mundo de fadistas, de faias, parecia a Carlos merecer um estudo, um romance... Isto levou logo a fallar-se do Assommoir, de Zola e do realismo: — e o Alencar immediatmente, limpando os bigodes dos pingos de sôpa, supplicou que se não discutisse, á hora aceada do jantar, essa litteratura latrinaria. Alli todos eram homens d'aceio, de sala, hein? Então, que se não mencionasse o excremento!",
+      "html": "Esse mundo de fadistas, de faias, parecia a Carlos merecer um estudo, um romance... Isto levou logo a fallar-se do <i>Assommoir</i>, de Zola e do realismo: — e o Alencar immediatmente, limpando os bigodes dos pingos de sôpa, supplicou que se não discutisse, á hora aceada do jantar, essa litteratura <i>latrinaria</i>. Alli todos eram homens d'aceio, de sala, hein? Então, que se não mencionasse o <i>excremento</i>!",
+      "partes": [
+       "Esse mundo de fadistas, de faias, parecia a Carlos merecer um estudo, um romance... Isto levou logo a fallar-se do Assommoir, de Zola e do realismo: — e o Alencar immediatmente, limpando os bigodes dos pingos de sôpa, supplicou que se não discutisse, á hora aceada do jantar, essa litteratura latrinaria. Alli todos eram homens d'aceio, de sala, hein? Então, que se não mencionasse o excremento!"
+      ]
+     }
+    ],
+    "glossario": [
+     [
+      "faias",
+      "valentões dos bairros populares"
+     ],
+     [
+      "<i>Assommoir</i>",
+      "romance de Zola sobre o álcool (1877)"
+     ],
+     [
+      "latrinaria",
+      "de latrina, de esgoto"
+     ],
+     [
+      "aceado",
+      "asseado, limpo"
+     ]
+    ],
+    "fonte": "Eça de Queirós, <i>Os Maias</i> (1888), cap. VI (grafia da edição).",
+    "origem": "m5/licao-m5-f11/index.html, linha 431, cartão 3, parágrafo [1], e cartão 21, vocabulário (copiado letra a letra)"
+   },
+   {
+    "id": "texto-4",
+    "rotulo": "Texto 4",
+    "titulo": "<i>Os Maias</i>, capítulo VI (a discussão à mesa e a interrupção), de Eça de Queirós",
+    "longo": true,
+    "paragrafos": [
+     {
+      "n": "[3]",
+      "t": "Mas n'essa noite teve o regosijo de encontrar alliados. Craft não admittia tambem o naturalismo, a realidade feia das cousas e da sociedade estatelada nua n'um livro. A arte era uma idealisação! Bem: então que mostrasse os typos superiores d'uma humanidade aperfeiçoada, as fórmas mais bellas do viver e do sentir... Ega horrorisado apertava as mãos na cabeça — quando do outro lado Carlos declarou que o mais intoleravel no realismo eram os seus grandes ares scientificos, a sua pretenciosa esthetica deduzida d'uma philosophia alheia, e a invocação de Claude Bernard, do experimentalismo, do positivismo, de Stuart Mill e de Darwin, a proposito d'uma lavadeira que dorme com um carpinteiro!",
+      "partes": [
+       "Mas n'essa noite teve o regosijo de encontrar alliados. Craft não admittia tambem o naturalismo, a realidade feia das cousas e da sociedade estatelada nua n'um livro. A arte era uma idealisação! Bem: então que mostrasse os typos superiores d'uma humanidade aperfeiçoada, as fórmas mais bellas do viver e do sentir... Ega horrorisado apertava as mãos na cabeça — quando do outro lado Carlos declarou que o mais intoleravel no realismo eram os seus grandes ares scientificos, a sua pretenciosa esthetica deduzida d'uma philosophia alheia, e a invocação de Claude Bernard, do experimentalismo, do positivismo, de Stuart Mill e de Darwin, a proposito d'uma lavadeira que dorme com um carpinteiro!"
+      ]
+     },
+     {
+      "n": "[4]",
+      "t": "Assim atacado, entre dois fogos, Ega trovejou: justamente o fraco do realismo estava em ser ainda pouco scientifico, inventar enredos, crear dramas, abandonar-se á phantasia litteraria! a fórma pura da arte naturalista devia ser a monographia, o estudo secco d'um typo, d'um vicio, d'uma paixão, tal qual como se se tratasse d'um caso pathologico, sem pittoresco e sem estylo!...",
+      "partes": [
+       "Assim atacado, entre dois fogos, Ega trovejou: justamente o fraco do realismo estava em ser ainda pouco scientifico, inventar enredos, crear dramas, abandonar-se á phantasia litteraria! a fórma pura da arte naturalista devia ser a monographia, o estudo secco d'um typo, d'um vicio, d'uma paixão, tal qual como se se tratasse d'um caso pathologico, sem pittoresco e sem estylo!..."
+      ]
+     },
+     {
+      "n": "[5]",
+      "t": "— Isso é absurdo, dizia Carlos, os caracteres só se podem manifestar pela acção...",
+      "partes": [
+       "— Isso é absurdo, dizia Carlos, os caracteres só se podem manifestar pela acção..."
+      ]
+     },
+     {
+      "n": "[6]",
+      "t": "— E a obra d'arte, accrescentou Craft, vive apenas pela fórma...",
+      "partes": [
+       "— E a obra d'arte, accrescentou Craft, vive apenas pela fórma..."
+      ]
+     },
+     {
+      "n": "[7]",
+      "t": "Alencar interrompeu-os, exclamando que não eram necessarias tantas philosophias.",
+      "partes": [
+       "Alencar interrompeu-os, exclamando que não eram necessarias tantas philosophias."
+      ]
+     },
+     {
+      "n": "[8]",
+      "t": "— Vocês estão gastando cêra com ruins defuntos, filhos. O realismo critica-se d'este modo: mão no nariz! Eu quando vejo um d'esses livros, enfrasco-me logo em agua de colonia. Não discutamos o excremento.",
+      "html": "— Vocês estão gastando cêra com ruins defuntos, filhos. O realismo critica-se d'este modo: mão no nariz! Eu quando vejo um d'esses livros, enfrasco-me logo em agua de colonia. Não discutamos o <i>excremento</i>.",
+      "partes": [
+       "— Vocês estão gastando cêra com ruins defuntos, filhos. O realismo critica-se d'este modo: mão no nariz! Eu quando vejo um d'esses livros, enfrasco-me logo em agua de colonia. Não discutamos o excremento."
+      ]
+     },
+     {
+      "n": "[9]",
+      "t": "— Sole normande? perguntou-lhe o creado, adiantando a travessa.",
+      "html": "— <i>Sole normande</i>? perguntou-lhe o creado, adiantando a travessa.",
+      "partes": [
+       "— Sole normande? perguntou-lhe o creado, adiantando a travessa."
+      ]
+     }
+    ],
+    "glossario": [
+     [
+      "idealisação",
+      "representação embelezada"
+     ],
+     [
+      "Claude Bernard</b>, <b>Stuart Mill</b> e <b>Darwin",
+      "cientistas e filósofos citados pelo naturalismo"
+     ],
+     [
+      "monographia",
+      "estudo de um só caso"
+     ],
+     [
+      "gastando cêra com ruins defuntos",
+      "perder tempo com o que não merece"
+     ],
+     [
+      "enfrasco-me",
+      "mergulho"
+     ],
+     [
+      "<i>sole normande</i>",
+      "linguado à normanda (francês)"
+     ]
+    ],
+    "fonte": "Eça de Queirós, <i>Os Maias</i> (1888), cap. VI (grafia da edição). Vem depois do Texto 3: entre os dois, as lições saltam o parágrafo [2].",
+    "origem": "m5/licao-m5-f11/index.html, linha 431, cartões 3, 8, 10, parágrafos [3] a [9], e cartão 21, vocabulário (copiado letra a letra)"
+   },
+   {
+    "id": "texto-5",
+    "rotulo": "Texto 5",
+    "titulo": "<i>Os Maias</i>, último capítulo (o balanço final), de Eça de Queirós",
+    "longo": true,
+    "paragrafos": [
+     {
+      "n": "[1]",
+      "t": "Então Ega perguntou, do fundo do sofá onde se enterrára, se, n'esses ultimos annos, elle não tivera a idéa, o vago desejo de voltar para Portugal...",
+      "partes": [
+       "Então Ega perguntou, do fundo do sofá onde se enterrára, se, n'esses ultimos annos, elle não tivera a idéa, o vago desejo de voltar para Portugal..."
+      ]
+     },
+     {
+      "n": "[2]",
+      "t": "Carlos considerou Ega com espanto. Para que? Para arrastar os passos tristes desde o Gremio até á Casa Havaneza? Não! Paris era o unico logar da terra congenere com o typo definitivo em que elle se fixára: — «o homem rico que vive bem». Passeio a cavallo no Bois; almóço no Bignon; uma volta pelo boulevard; uma hora no club com os jornaes; um bocado de florete na sala d'armas; á noite a Comédie Française ou uma soirée; Trouville no verão, alguns tiros ás lebres no inverno; e através do anno as mulheres, as corridas, certo interesse pela sciencia, o bric-à-brac, e uma pouca de blague. Nada mais inoffensivo, mais nullo, e mais agradavel.",
+      "html": "Carlos considerou Ega com espanto. Para que? Para arrastar os passos tristes desde o Gremio até á Casa Havaneza? Não! Paris era o unico logar da terra congenere com o typo definitivo em que elle se fixára: — «o homem rico que vive bem». Passeio a cavallo no Bois; almóço no Bignon; uma volta pelo <i>boulevard</i>; uma hora no club com os jornaes; um bocado de florete na sala d'armas; á noite a <i>Comédie Française</i> ou uma <i>soirée</i>; Trouville no verão, alguns tiros ás lebres no inverno; e através do anno as mulheres, as corridas, certo interesse pela sciencia, o <i>bric-à-brac</i>, e uma pouca de <i>blague</i>. Nada mais inoffensivo, mais nullo, e mais agradavel.",
+      "partes": [
+       "Carlos considerou Ega com espanto. Para que? Para arrastar os passos tristes desde o Gremio até á Casa Havaneza? Não! Paris era o unico logar da terra congenere com o typo definitivo em que elle se fixára: — «o homem rico que vive bem». Passeio a cavallo no Bois; almóço no Bignon; uma volta pelo boulevard; uma hora no club com os jornaes; um bocado de florete na sala d'armas; á noite a Comédie Française ou uma soirée; Trouville no verão, alguns tiros ás lebres no inverno; e através do anno as mulheres, as corridas, certo interesse pela sciencia, o bric-à-brac, e uma pouca de blague. Nada mais inoffensivo, mais nullo, e mais agradavel."
+      ]
+     },
+     {
+      "n": "[3]",
+      "t": "— E aqui tens tu uma existencia d'homem! Em dez annos não me tem succedido nada, a não ser quando se me quebrou o phaeton na estrada de Saint-Cloud... Vim no Figaro.",
+      "html": "— E aqui tens tu uma existencia d'homem! Em dez annos não me tem succedido nada, a não ser quando se me quebrou o phaeton na estrada de Saint-Cloud... Vim no <i>Figaro</i>.",
+      "partes": [
+       "— E aqui tens tu uma existencia d'homem! Em dez annos não me tem succedido nada, a não ser quando se me quebrou o phaeton na estrada de Saint-Cloud... Vim no Figaro."
+      ]
+     },
+     {
+      "n": "[4]",
+      "t": "Ega ergueu-se, atirou um gesto desolado:",
+      "partes": [
+       "Ega ergueu-se, atirou um gesto desolado:"
+      ]
+     },
+     {
+      "n": "[5]",
+      "t": "— Falhámos a vida, menino!",
+      "partes": [
+       "— Falhámos a vida, menino!"
+      ]
+     },
+     {
+      "n": "[6]",
+      "t": "— Creio que sim... Mas todo o mundo mais ou menos a falha. Isto é, falha-se sempre na realidade aquella vida que se planeou com a imaginação. Diz-se: «vou ser assim, porque a belleza está em ser assim». E nunca se é assim, é-se invariavelmente assado, como dizia o pobre marquez. Ás vezes melhor, mas sempre differente.",
+      "html": "— Creio que sim... Mas todo o mundo mais ou menos a falha. Isto é, falha-se sempre na realidade aquella vida que se planeou com a imaginação. Diz-se: «vou ser assim, porque a belleza está em ser assim». E nunca se é assim, é-se invariavelmente <i>assado</i>, como dizia o pobre marquez. Ás vezes melhor, mas sempre differente.",
+      "partes": [
+       "— Creio que sim... Mas todo o mundo mais ou menos a falha. Isto é, falha-se sempre na realidade aquella vida que se planeou com a imaginação. Diz-se: «vou ser assim, porque a belleza está em ser assim». E nunca se é assim, é-se invariavelmente assado, como dizia o pobre marquez. Ás vezes melhor, mas sempre differente."
+      ]
+     },
+     {
+      "n": "[7]",
+      "t": "Ega concordou, com um suspiro mudo, começando a calçar as luvas.",
+      "partes": [
+       "Ega concordou, com um suspiro mudo, começando a calçar as luvas."
+      ]
+     },
+     {
+      "n": "[8]",
+      "t": "O quarto escurecia no crepusculo frio e melancolico d'inverno. Carlos pôz tambem o chapéo: e desceram pelas escadas forradas de velludo côr de cereja, onde ainda pendia, com um ar baço de ferrugem, a panoplia de velhas armas. Depois na rua Carlos parou, deu um longo olhar ao sombrio casarão, que n'aquella primeira penumbra tomava um aspecto mais carregado de residencia ecclesiastica, com as suas paredes severas, a sua fila de janellinhas fechadas, as grades dos postigos terreos cheias de treva, mudo, para sempre deshabitado, cobrindo-se já de tons de ruina.",
+      "partes": [
+       "O quarto escurecia no crepusculo frio e melancolico d'inverno. Carlos pôz tambem o chapéo: e desceram pelas escadas forradas de velludo côr de cereja, onde ainda pendia, com um ar baço de ferrugem, a panoplia de velhas armas. Depois na rua Carlos parou, deu um longo olhar ao sombrio casarão, que n'aquella primeira penumbra tomava um aspecto mais carregado de residencia ecclesiastica, com as suas paredes severas, a sua fila de janellinhas fechadas, as grades dos postigos terreos cheias de treva, mudo, para sempre deshabitado, cobrindo-se já de tons de ruina."
+      ]
+     },
+     {
+      "n": "[9]",
+      "t": "Uma commoção passou-lhe n'alma, murmurou, travando do braço do Ega:",
+      "partes": [
+       "Uma commoção passou-lhe n'alma, murmurou, travando do braço do Ega:"
+      ]
+     },
+     {
+      "n": "[10]",
+      "t": "— É curioso! Só vivi dois annos n'esta casa, e é n'ella que me parece estar mettida a minha vida inteira!",
+      "partes": [
+       "— É curioso! Só vivi dois annos n'esta casa, e é n'ella que me parece estar mettida a minha vida inteira!"
+      ]
+     },
+     {
+      "n": "[11]",
+      "t": "Ega não se admirava. Só alli no Ramalhete elle vivera realmente d'aquillo que dá sabôr e relevo á vida — a paixão.",
+      "partes": [
+       "Ega não se admirava. Só alli no Ramalhete elle vivera realmente d'aquillo que dá sabôr e relevo á vida — a paixão."
+      ]
+     },
+     {
+      "n": "[12]",
+      "t": "— Muitas outras coisas dão valor á vida... Isso é uma velha idéa de romantico, meu Ega!",
+      "partes": [
+       "— Muitas outras coisas dão valor á vida... Isso é uma velha idéa de romantico, meu Ega!"
+      ]
+     },
+     {
+      "n": "[13]",
+      "t": "— E que somos nós? exclamou Ega. Que temos nós sido desde o collegio, desde o exame de latim? Romanticos: isto é, individuos inferiores que se governam na vida pelo sentimento e não pela razão...",
+      "partes": [
+       "— E que somos nós? exclamou Ega. Que temos nós sido desde o collegio, desde o exame de latim? Romanticos: isto é, individuos inferiores que se governam na vida pelo sentimento e não pela razão..."
+      ]
+     }
+    ],
+    "glossario": [
+     [
+      "Gremio</b> e <b>Casa Havaneza",
+      "clube e tabacaria do Chiado"
+     ],
+     [
+      "congenere",
+      "adequado"
+     ],
+     [
+      "Bois</b>, <b>Bignon</b>, <b>Trouville</b> e <b>Saint-Cloud",
+      "lugares elegantes de Paris e arredores"
+     ],
+     [
+      "florete",
+      "esgrima"
+     ],
+     [
+      "<i>soirée</i>",
+      "serão, festa (francês)"
+     ],
+     [
+      "<i>bric-à-brac</i>",
+      "antiguidades"
+     ],
+     [
+      "<i>blague</i>",
+      "piada (francês)"
+     ],
+     [
+      "<i>phaeton</i>",
+      "carruagem ligeira"
+     ],
+     [
+      "<i>Figaro</i>",
+      "jornal de Paris"
+     ],
+     [
+      "panoplia",
+      "conjunto de armas na parede"
+     ]
+    ],
+    "fonte": "Eça de Queirós, <i>Os Maias</i> (1888), último capítulo (grafia da edição).",
+    "origem": "m5/licao-m5-f13/index.html, linha 431, cartões 3, 8, 11, 14, 16 (copiado letra a letra)"
+   }
+  ],
+  "perguntas": [
+   {
+    "titulo": "O Ramalhete no início e no fim.",
+    "meta": "Orientação: cerca de 50 palavras.",
+    "relogio": "Começa este relógio depois da leitura.",
+    "textos": [
+     "texto-1",
+     "texto-2"
+    ],
+    "pedido_titulo": "O que fazes",
+    "intro": "No último capítulo (<a href=\"#texto-2\">Texto 2</a>), lê a descrição do Ramalhete, antes de Carlos dizer «é n'ella que me parece estar mettida a minha vida inteira!».",
+    "alineas": [
+     "Encontra aí uma expressão repetida do capítulo I (<a href=\"#texto-1\">Texto 1</a>).",
+     "Encontra outra nova: uma expressão que não está no Texto 1.",
+     "Cita as duas expressões.",
+     "Identifica a estrutura do romance que esta repetição revela.",
+     "Explica o que as duas expressões mostram sobre a vida de Carlos."
+    ],
+    "citar": "Copia as palavras exatas do texto, com a grafia do texto. Põe-nas entre aspas: «…». A seguir, escreve de onde é: (cap. I) ou (último capítulo).",
+    "ler": "Os Textos 1 e 2 têm a grafia da edição de 1888. O vocabulário do Texto 1 serve também para o Texto 2.",
+    "exemplos": [
+     {
+      "titulo": "Outra obra e outra repetição: uma cantiga de Mendinho",
+      "paragrafos": [
+       {
+        "al": "Alíneas a) a e):",
+        "t": "Noutra obra, com outra repetição: em Mendinho, «Eu atendendo meu amig', eu a[tendendo]» volta igual no fim de todas as estrofes, enquanto o mar sobe à volta da rapariga. O que volta é a espera; o que muda é o perigo. É o refrão, e diz que a espera não cede, mesmo quando já não há saída."
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "titulo": "Quem fala na narração?",
+    "meta": "Orientação: cerca de 50 palavras.",
+    "textos": [
+     "texto-3"
+    ],
+    "pedido_titulo": "O que fazes",
+    "antes": "No capítulo VI (<a href=\"#texto-3\">Texto 3</a>), há duas passagens seguidas:",
+    "escolhas": [
+     "passagem 1: Alencar «supplicou que se não discutisse» o realismo;",
+     "passagem 2: depois lê-se «Alli todos eram homens d'aceio, de sala, hein?»."
+    ],
+    "alineas": [
+     "Identifica o modo de relato da passagem 1.",
+     "Identifica o modo de relato da passagem 2.",
+     "Justifica o modo de relato da passagem 2 com duas marcas.",
+     "Reescreve a pergunta da passagem 2 em discurso direto."
+    ],
+    "ajudas": [
+     "Os modos de relato: discurso direto, discurso indireto e discurso indireto livre.",
+     "Na alínea d), usa travessão e muda o que o novo contexto pede."
+    ],
+    "exemplos": [
+     {
+      "titulo": "Outra passagem do romance: uma pergunta de Ega",
+      "paragrafos": [
+       {
+        "al": "Alíneas a) e c), o modo de relato e as marcas:",
+        "t": "Em «Então Ega perguntou, do fundo do sofá onde se enterrára, se, n'esses ultimos annos, elle não tivera a idéa» (último capítulo), o relato é indireto: há um verbo declarativo, <i>perguntou</i>, e uma oração subordinada com <i>se</i>."
+       },
+       {
+        "al": "Alínea d), a pergunta em discurso direto:",
+        "t": "Em discurso direto, Ega diria, depois de um travessão: <i>Nestes últimos anos, não tiveste a ideia, o vago desejo de voltar para Portugal?</i> Ega fala com Carlos: <i>elle</i> passa a <i>tu</i> e <i>tivera</i> passa a <i>tiveste</i>."
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "temas_titulo": "Escolhe um tema: A ou B",
+  "temas_nota": "Orientação: 100 a 150 palavras. No tema A, incluem a explicação final.",
+  "temas_topo": "Escreve a letra do teu tema (A ou B) no topo.",
+  "temas": [
+   {
+    "letra": "A",
+    "nome": "À mesa, à maneira de Eça",
+    "intro": "Imagina uma conversa séria à mesa, nos dias de hoje, interrompida por algo banal, como no Hotel Central.",
+    "antes": [
+     "O jantar do Hotel Central está no <a href=\"#texto-4\">Texto 4</a>. A interrupção está nos parágrafos [7] a [9]."
+    ],
+    "passos": [
+     "Narra a cena na 3.ª pessoa, em 70 a 100 palavras.",
+     "Inclui uma fala em discurso direto.",
+     "Inclui um pensamento em discurso indireto livre.",
+     {
+      "t": "Depois, escreve duas frases:",
+      "sub": [
+       "o que imitaste de Eça;",
+       "o que criticas."
+      ]
+     }
+    ],
+    "material": {
+     "titulo": "Só para o tema A: o Texto 4",
+     "textos": [
+      "texto-4"
+     ],
+     "exemplos": [
+      {
+       "titulo": "Outro espaço: uma paragem de autocarro",
+       "paragrafos": [
+        {
+         "al": "Passos 1 a 3, a cena:",
+         "t": "Na paragem, a Inês contava à mãe que o estágio tinha acabado sem contrato. A mãe perguntou: «E agora?» O autocarro apareceu ao fundo da rua e as duas correram para ele. A Inês sentou-se à janela. Contrato? Isso ficava para amanhã."
+        },
+        {
+         "al": "Passo 4, a segunda frase:",
+         "t": "Critico as duas, que adiam o problema à primeira desculpa."
+        }
+       ]
+      }
+     ]
+    }
+   },
+   {
+    "letra": "B",
+    "nome": "Falhámos a vida, hoje?",
+    "intro": "«Falhámos a vida, menino!» ainda diz alguma coisa a alguém da tua idade?",
+    "antes": [
+     "A frase de Ega e o resto do último capítulo estão no <a href=\"#texto-5\">Texto 5</a>."
+    ],
+    "passos": [
+     "Escreve um parágrafo de opinião de 100 a 150 palavras.",
+     "Começa pela tua posição (a tese).",
+     "Usa outra citação do último capítulo (<a href=\"#texto-5\">Texto 5</a>), explicada.",
+     "Usa um facto datado do <a href=\"#dossie\">dossiê</a>, ligado à tua posição.",
+     "Apresenta uma ideia contrária à tua (o contra-argumento).",
+     "Responde-lhe (a refutação).",
+     "Termina com uma conclusão."
+    ],
+    "material": {
+     "titulo": "Só para o tema B: o dossiê e o Texto 5",
+     "dossie": true,
+     "textos": [
+      "texto-5"
+     ],
+     "exemplos": [
+      {
+       "titulo": "Outro tema: fotografar tudo",
+       "paragrafos": [
+        {
+         "al": "Passo 2, a tese:",
+         "t": "Fotografar tudo ajuda a lembrar, desde que se volte a olhar para as fotografias."
+        },
+        {
+         "al": "Passo 5, o contra-argumento:",
+         "t": "Dir-me-ão que quem fotografa não vê o que tem à frente."
+        },
+        {
+         "al": "Passo 6, a refutação:",
+         "t": "Respondo que o problema não é a câmara, é guardar sem escolher."
+        },
+        {
+         "al": "Passo 7, a conclusão:",
+         "t": "Por isso, a fotografia só ajuda a memória de quem a escolhe e a revê."
+        },
+        "A citação e o facto faltam de propósito: no teu texto, a citação do último capítulo entra depois da tese e o facto do dossiê antes do contra-argumento."
+       ]
+      }
+     ]
+    }
+   }
+  ],
+  "finais": {
+   "titulo": "Duas linhas finais",
+   "passos": [
+    "Responde: falha-se a vida, ou deixa-se falhar?",
+    "Aponta a passagem de <i>Os Maias</i> que te fez pensar nisso."
+   ]
+  },
+  "verificar_titulo": "Antes de entregar, verifica",
+  "verificar_texto": "Responde sim ou não. Se for não, completa o teu trabalho.",
+  "verificar": [
+   "Respondi a todas as alíneas das duas perguntas?",
+   "Fiz todos os passos do meu tema?",
+   "As citações estão letra a letra, entre «», com a grafia do texto?",
+   "Disse de onde é cada citação (o capítulo)?",
+   "No tema B, o facto do dossiê tem a data?",
+   "As respostas ligam-se (não estão soltas)?",
+   "Tenho 200 a 250 palavras?",
+   "Revi a escrita?",
+   "As duas linhas finais apontam uma passagem?",
+   "A letra do meu tema (A ou B) está no topo?"
+  ],
+  "exemplo_titulo": [
+   "Ver um exemplo com outro caso",
+   "Ver dois exemplos com outros casos"
+  ],
+  "entrega_titulo": "Entrega no Teams",
+  "entrega": [
+   "Fotografa as respostas, o texto do teu tema e as duas linhas finais.",
+   "Confirma que as fotografias mostram o trabalho completo.",
+   "Entrega as fotografias na tarefa do Teams."
+  ],
+  "rever_titulo": "Se precisares de rever",
+  "rever_texto": "Os Textos 1 a 5 já estão nesta página. As lições servem para rever a matéria.",
+  "rever": [
+   {
+    "para": "Pergunta 1",
+    "texto": "Lição F10, <a href=\"../../m5/licao-m5-f10/\">Sombrio casarão</a>. Relê a «Linha de vida»: o Ramalhete, de 1858 a 1888."
+   },
+   {
+    "para": "Pergunta 2",
+    "texto": "Lição F12, <a href=\"../../m5/licao-m5-f12/\">A voz que se infiltra</a>. Relê «O essencial», «Em paralelo» e «Quem relata, quando e onde?»."
+   },
+   {
+    "para": "Tema A",
+    "texto": "Lição F11, <a href=\"../../m5/licao-m5-f11/\">Jantar no Hotel Central</a>. Relê «Para entender»: quem está à mesa."
+   },
+   {
+    "para": "Tema B",
+    "texto": "Lição F13, <a href=\"../../m5/licao-m5-f13/\">Falhámos a vida, menino!</a> Relê «Para entender»: as peças de um texto de opinião."
+   },
+   {
+    "para": "Tema B",
+    "texto": "Lição F14, <a href=\"../../m5/licao-m5-f14/\">Do livro ao ecrã</a>. Relê «O essencial»: o filme e a minissérie."
+   }
+  ],
+  "opcional_titulo": "Experimentar uma pergunta"
  }
 }

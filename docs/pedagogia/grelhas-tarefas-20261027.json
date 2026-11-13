@@ -674,6 +674,22 @@
   "m5-u1": {
    "modulo": "M5",
    "unidade": 1,
+   "autoavaliacao_so_tua": true,
+   "trocas_aluno": [
+    ["Núcleo comum (duas respostas) e um tema à escolha (A ou B)", "Duas perguntas e um tema à escolha (A ou B)"],
+    ["Respostas articuladas", "Respostas ligadas"],
+    ["o tema no topo", "a letra do tema no topo"],
+    ["o tema escolhido está no topo", "a letra do teu tema está no topo"],
+    ["Não escrever no topo o tema escolhido (A ou B).", "Não escrever no topo a letra do teu tema (A ou B)."],
+    ["Fecho: ", "Duas linhas finais: "],
+    ["Fecho, noutra obra: ", "Duas linhas finais, noutra obra: "],
+    ["Fecho genérico, sem passagem.", "Duas linhas finais genéricas, sem passagem."],
+    ["e o que quer de quem lê", "e o efeito em quem lê"],
+    ["só explicas o que o narrador quer numa delas", "só explicas o efeito numa delas"],
+    ["explicas, para cada passagem, o que o narrador quer provocar em quem lê", "explicas o efeito de cada passagem em quem lê"],
+    ["o recurso e o eco.)", "o recurso e a expressão do romance.)"],
+    ["um eco do romance, entre «»", "uma expressão do romance, entre «»"]
+   ],
    "titulo": "Quem decide por quem: vozes de _Amor de Perdição_",
    "produto": "Núcleo comum (duas respostas) e um tema à escolha (A ou B), à mão, entre 200 e 250 palavras, mais duas linhas finais que não contam para as palavras. O aquecimento em cartões não conta para a nota.",
    "nota": "Os exemplos foram escritos para esta grelha com outros casos do mesmo tipo (histórias e cartas inventadas, outra frase do romance, a Casa de Camilo, Gil Vicente), nunca com as respostas da tarefa. As citações vêm das lições do sítio.",
@@ -799,6 +815,17 @@
   "m5-u2": {
    "modulo": "M5",
    "unidade": 2,
+   "autoavaliacao_so_tua": true,
+   "trocas_aluno": [
+    ["Núcleo comum (duas respostas) e um tema à escolha (A ou B)", "Duas perguntas e um tema à escolha (A ou B)"],
+    ["Respostas articuladas", "Respostas ligadas"],
+    ["o tema no topo", "a letra do tema no topo"],
+    ["o tema escolhido está no topo", "a letra do teu tema está no topo"],
+    ["Não escrever no topo o tema escolhido (A ou B).", "Não escrever no topo a letra do teu tema (A ou B)."],
+    ["Fecho: ", "Duas linhas finais: "],
+    ["Fecho, noutra obra: ", "Duas linhas finais, noutra obra: "],
+    ["Fecho genérico, sem passagem.", "Duas linhas finais genéricas, sem passagem."]
+   ],
    "titulo": "Uma casa, um jantar, uma frase: _Os Maias_",
    "produto": "Núcleo comum (duas respostas) e um tema à escolha (A ou B), à mão, entre 200 e 250 palavras, mais duas linhas finais que não contam para as palavras. O aquecimento em cartões não conta para a nota.",
    "nota": "Os exemplos foram escritos para esta grelha com outros casos do mesmo tipo (uma cantiga de Mendinho, uma pergunta de Ega, uma cena noutro espaço, um parágrafo noutro tema, o romance de Camilo), nunca com as respostas da tarefa. As citações vêm das lições do sítio.",

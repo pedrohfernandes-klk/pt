@@ -246,3 +246,17 @@ main.task-page.task-choice-page[data-task-facil] :is(p,li,td,th,dd,figcaption,la
  [data-task-facil] details.tf-dois-temas{margin-top:8pt}
  [data-task-facil] .tf-intro{max-width:none}
 }
+
+/* 13/11/2026: o M5 no mesmo molde (camada tarefas_faceis_m5_20261113; versão facil-9, pedida só pela m5-u1 e pela m5-u2). Só regras
+   novas, para uma classe que as páginas do M3 e do M1 não têm: o passo de um romance que pode passar de uma página em papel
+   (.tt-longo). Parte-se só entre parágrafos, nunca dentro de um; o título não fica sozinho no fundo da página e o vocabulário e a
+   linha de fonte saem juntos. */
+[data-task-facil] .tt-prosa i{font-style:italic}
+/* No título de um texto dentro de um tema, só o número («Texto 4») é uma caixa: a regra dos temas (a letra A ou B numa caixa) não
+   apanha mais nada que lá esteja. */
+[data-task-facil] .task-theme .tt-texto>h3>span:not(.tt-num){display:inline;width:auto;height:auto;border:0;font:inherit}
+@media print{
+ [data-task-facil] .tt-texto.tt-longo{break-inside:auto}
+ [data-task-facil] .tt-texto.tt-longo>h3{break-after:avoid}
+ [data-task-facil] .tt-texto.tt-longo .tt-fonte{break-before:avoid}
+}
