@@ -64,6 +64,13 @@ EXEMPLOS = {'m5-u1': 4, 'm5-u2': 4}
 TEXTOS = {'m5-u1': [(7, True), (18, True), (3, False)], 'm5-u2': [(2, True), (3, False), (1, False), (8, True), (13, True)]}
 # O que sai aberto em papel dentro de cada tema: os parágrafos e os factos do dossiê.
 SO_TEMA = {'m5-u1': [3, 5], 'm5-u2': [8, 5 + 13]}
+# 13/11/2026 (revisão): os títulos de textos dentro de um tema (m5-u1: o Texto 3, no tema A; m5-u2: o Texto 4 e o Texto 5), e a sonda
+# que confere que um <span> novo nesses títulos não fica com a caixa da letra do tema.
+TITULOS_EM_TEMA = {'m5-u1': 1, 'm5-u2': 2}
+SONDA_TITULO = '''() => [...document.querySelectorAll('.task-theme .tt-texto > h3')].map(h => { const s = document.createElement('span');
+  s.textContent = 'x'; h.appendChild(s); const c = getComputedStyle(s); const out = [c.display, c.borderTopWidth, s.style.width || 'auto'];
+  s.remove(); const l = getComputedStyle(h.closest('.task-theme').querySelector(':scope > h3 > span'));
+  return { span: out, letra: [l.display, l.borderTopWidth] }; })'''
 MEDIR = '''() => { const c = document.querySelector('.casca-corpo'); const cartao = document.querySelector('.task-reader-card:not([hidden])');
   return { nome: cartao.getAttribute('aria-label'), pagina: document.documentElement.scrollWidth <= innerWidth + 1,
     corpo: c.scrollWidth <= c.clientWidth + 1,
@@ -103,6 +110,15 @@ def ecra(host, browser, slug):
             # O índice mostra os seis nomes, sem números.
             nomes = page.evaluate('[...document.querySelectorAll("[data-task-reader-jump]")].map(b => b.textContent.trim())')
             assert nomes == CARTOES, (onde, nomes)
+            # 13/11/2026 (revisão): no título de um texto dentro de um tema, só o número («Texto 4») é uma caixa. A regra dos temas
+            # (task-choice.css: a letra A ou B numa caixa) não apanha outro <span> que lá esteja: é o que a regra
+            # «.task-theme .tt-texto>h3>span:not(.tt-num)» de assets/task-textos.css garante (e é o que deixa a sonda de
+            # tests/browser_cuidado_m5.py medir as referências que não se partem dentro desses títulos).
+            sondas = page.evaluate(SONDA_TITULO)
+            assert len(sondas) == TITULOS_EM_TEMA[slug], (onde, sondas)
+            for s in sondas:
+                assert s['span'] == ['inline', '0px', 'auto'], (onde, s)
+                assert s['letra'][1] == '2px', (onde, s)
             for i in range(6):
                 ir(page, i)
                 m = page.evaluate(MEDIR)
@@ -327,7 +343,8 @@ def impressao(host, browser, slug):
     # Todos os textos e todas as perguntas saem.
     textos = page.evaluate('[...document.querySelectorAll(".tt-texto")].filter(e => e.getClientRects().length).length')
     assert textos == len(TEXTOS[slug]), (slug, textos)
-    # Todos os parágrafos de todos os textos saem (m5-u1: 28; m5-u2: 26), e os textos compridos são os que a página marca.
+    # 13/11/2026 (revisão): com a marca «[2] […]» no início do Texto 4, a m5-u2 tem 27 parágrafos (antes, 26).
+    # Todos os parágrafos de todos os textos saem (m5-u1: 28; m5-u2: 27), e os textos compridos são os que a página marca.
     versos = page.evaluate('[...document.querySelectorAll(".tt-l")].filter(e => e.getClientRects().length).length')
     paragrafos = page.evaluate('[...document.querySelectorAll(".tt-texto")].map(t => [[...t.querySelectorAll(".tt-par")].filter(e => e.getClientRects().length).length, t.classList.contains("tt-longo")])')
     assert versos == 0 and [tuple(x) for x in paragrafos] == TEXTOS[slug], (slug, versos, paragrafos)

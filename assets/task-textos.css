@@ -249,10 +249,15 @@ main.task-page.task-choice-page[data-task-facil] :is(p,li,td,th,dd,figcaption,la
 
 /* 13/11/2026: o M5 no mesmo molde (camada tarefas_faceis_m5_20261113; versão facil-9, pedida só pela m5-u1 e pela m5-u2). A regra
    dos itálicos vale para todas as páginas do molde (M3, M1 e M5 carregam esta folha): um <i> dentro de um texto em prosa fica em
-   itálico, como na lição. As regras de impressão são só para uma classe que as páginas do M3 e do M1 não têm: o passo de um
+   itálico, como na lição; a regra dos títulos dos textos dentro de um tema também vale para todas. As regras de impressão são só para uma classe que as páginas do M3 e do M1 não têm: o passo de um
    romance que pode passar de uma página em papel (.tt-longo). Parte-se só entre parágrafos, nunca dentro de um; o título não fica
    sozinho no fundo da página e a linha de fonte não se separa do que vem antes. */
 [data-task-facil] .tt-prosa i{font-style:italic}
+/* No título de um texto dentro de um tema, só o número («Texto 4») é uma caixa. A regra dos temas em task-choice.css (a letra A ou B
+   numa caixa: «.task-theme h3>span») apanharia qualquer outro <span> que lá estivesse. Hoje as páginas não têm nenhum; a regra
+   protege os que vierem e a sonda de medida que tests/browser_cuidado_m5.py põe dentro do título para conferir as referências que
+   não se partem («capítulo VI»). Confere-se em tests/browser_tarefas_faceis_m5.py. Vale para todas as páginas do molde. */
+[data-task-facil] .task-theme .tt-texto>h3>span:not(.tt-num){display:inline;width:auto;height:auto;border:0;font:inherit}
 @media print{
  [data-task-facil] .tt-texto.tt-longo{break-inside:auto}
  [data-task-facil] .tt-texto.tt-longo>h3{break-after:avoid}
