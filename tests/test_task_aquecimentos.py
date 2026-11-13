@@ -138,11 +138,13 @@ class Aquecimentos(unittest.TestCase):
         estragado['cartoes'][5]['p'] = 'Que palavra dá força a um país?'                      # passagem reservada
         estragado['cartoes'][8]['f'] += ' Fim — e pronto.'                                    # travessão
         # 29/10/2026 (revisão técnica, P4): passagem reservada com maiúscula, e palavra proibida fora dos cartões.
-        estragado['cartoes'][3]['p2'] = 'Alguém volte e resolva: liga cada oração.'
+        # 13/11/2026: a passagem reservada diz-se agora como no enunciado novo da m7-u3 («alguém volte para resolver», camada
+        # tarefas_faceis_m7_20261113); o validador continua a recusá-la, também com maiúscula.
+        estragado['cartoes'][3]['p2'] = 'Alguém volte para resolver: liga cada oração.'
         estragado['descricao'] += ' Vamos jogar.'
         erros = ' '.join(A.validar(ROOT, estragado))
         for marca in ('não está letra a letra', 'não diz porquê', "'\\\\bjog'", 'reservada', "'—'",
-                      '«alguém volte e resolva»', 'título, descrição ou menu'):
+                      '«alguém volte para resolver»', 'título, descrição ou menu'):
             self.assertIn(marca, erros)
 
     # 30/10/2026: aquecimento em cartões (decisão do docente)
@@ -185,7 +187,8 @@ class Aquecimentos(unittest.TestCase):
                 # 13/11/2026: o mesmo nas duas tarefas do M1 (camada tarefas_faceis_m1_20261113).
                 # 13/11/2026: o mesmo nas duas tarefas do M5 (camada tarefas_faceis_m5_20261113).
                 # 13/11/2026: o mesmo nas duas tarefas do M6 (camada tarefas_faceis_m6_20261113).
-                if slug in ('m1-u1', 'm1-u2', 'm3-u1', 'm3-u2', 'm5-u1', 'm5-u2', 'm6-u1', 'm6-u2'):
+                # 13/11/2026: o mesmo nas três tarefas do M7 (camada tarefas_faceis_m7_20261113).
+                if slug in ('m1-u1', 'm1-u2', 'm3-u1', 'm3-u2', 'm5-u1', 'm5-u2', 'm6-u1', 'm6-u2', 'm7-u1', 'm7-u2', 'm7-u3'):
                     self.assertIn('<ol class="tf-fazer"><li>Faz o aquecimento (10\xa0minutos).<span class="task-aquecer tf-abrir"><a href="aquecimento/">', header)
                     self.assertEqual(tarefa.count('<a href="aquecimento/">'), 1)
                     self.assertNotIn('id="produzir"', header)
@@ -229,14 +232,24 @@ class Aquecimentos(unittest.TestCase):
         self.assertIn('data-task-warm="cartoes"', s)
         self.assertNotIn('data-task-machine', s)
         self.assertNotIn('data-task-question="aquecer"', s)
-        self.assertIn('<a href="aquecimento/">Abrir o aquecimento em cartões</a>', aquecer)
+        # 13/11/2026: no molde «mais fácil de fazer» (camada tarefas_faceis_m7_20261113), a ligação aos cartões é o passo 1 de «O que vais
+        # fazer», no mesmo primeiro cartão, e é a única da página; o cartão do aquecimento fica com o relógio de 10 minutos.
+        self.assertIn('<a href="aquecimento/">Abrir o aquecimento em cartões</a>', s.split('<header>', 1)[1].split('id="aquecer"', 1)[0])
+        self.assertEqual(s.count('<a href="aquecimento/">'), 1)
         self.assertIn('data-max="10"', aquecer)
         self.assertIn('Respostas exploradas: 0 de 1.', s)
         # Os dois exemplos resolvidos e o dossiê do tema B.
-        self.assertIn('<h3 id="exemplos">Ver como se faz</h3>', s)
-        self.assertEqual(s.count('<article class="task-example">'), 2)
+        # 13/11/2026: os exemplos resolvidos ficam junto do pedido, num desdobrável com outros casos (três, no molde novo: o texto do
+        # ensaio, o verso de «O Infante» e a data da «Tabacaria»); o exemplo antigo com o verso 1 do Texto 2 saiu (regra do docente).
+        # 13/11/2026, revisão: o verso de «O Infante» explicado dava feito um verso que o texto pode usar; fica só na grelha, como no
+        # main, e o desdobrável tem dois exemplos (o texto do ensaio e a data da «Tabacaria»). A exigência é a mesma: os exemplos estão
+        # num desdobrável com outros casos, e contam-se.
+        self.assertIn('<summary>Ver dois exemplos com outros casos</summary>', s)
+        self.assertEqual(s.count('<aside class="tf-exemplo">'), 2)
+        self.assertNotIn('Deus quer, o homem sonha, a obra nasce.', s.split('<summary>Ver dois exemplos com outros casos</summary>', 1)[1].split('</details>', 1)[0])
         # 11/11/2026: decisão 152 no M7 (achado 73): a data do dossiê leva espaço que não quebra (U+00A0) a seguir ao dia e antes do ano.
-        for marca in ('[S]', '[R]', '[M]', '[N]', 'Dossiê do tema B', '1578', '20\xa0de fevereiro de\xa01933', 'sebastianismo', 'Madalena'):
+        # 13/11/2026: no molde novo, «tema B» do título do dossiê não se parte (U+00A0).
+        for marca in ('[S]', '[R]', '[M]', '[N]', 'Dossiê do tema\xa0B', '1578', '20\xa0de fevereiro de\xa01933', 'sebastianismo', 'Madalena'):
             self.assertIn(marca, s)
         # 29/10/2026 (revisão pedagógica, C4): a grelha tira pontos a um facto sem data, por isso cada facto do dossiê tem
         # data; o de Garrett é a outra voz.
@@ -258,8 +271,10 @@ class Aquecimentos(unittest.TestCase):
         self.assertIn('A apresentação é individual.', tarefa)
         # 05/11/2026: decisão 154 (os exercícios fazem-se sozinho): a pergunta pode ser feita ou prevista; a frase exata
         # mantém o mesmo requisito na redação mais clara do enunciado.
-        self.assertIn('Apresenta em dois minutos:', tarefa)
-        self.assertIn('lê uma frase e responde a uma pergunta feita ou prevista.', tarefa)
+        # 13/11/2026: no molde «mais fácil de fazer» (camada tarefas_faceis_m7_20261113), um pedido por alínea: as mesmas ordens, cada uma
+        # na sua linha.
+        self.assertIn('Apresenta em dois minutos.', tarefa)
+        self.assertIn('<li>Lê uma frase do teu texto.</li><li>Responde a uma pergunta feita ou prevista.</li>', tarefa)
         self.assertNotIn('responde a uma pergunta.</p>', tarefa)
         self.assertIn('apresentação individual</li>', guia)
         self.assertIn('Apresenta-o em dois minutos e lê uma frase dele.', guia)

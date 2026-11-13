@@ -2,6 +2,7 @@
 from pathlib import Path
 import re, unittest
 from test_task_compact_m7 import Compact
+from auditoria_20261028 import undo_tarefas_faceis_m7_1113
 ROOT=Path(__file__).resolve().parents[1]
 # 27/10/2026 (passagem do GPT, tarefas por unidade): o M2 passa ao mesmo modelo, com duas aulas de tarefa.
 # 28/10/2026 (decisão do docente): o M2 é o piloto do formato com aquecimento e tema à escolha; as suas
@@ -19,7 +20,13 @@ class CompactTasks(unittest.TestCase):
  def test_live_concision_optional_recall_and_individual_production(self):
   for slug in SLUGS:
    with self.subTest(task=slug):
-    text=(ROOT/'tarefas'/slug/'index.html').read_text('utf-8');p=Compact(text)
+    text=(ROOT/'tarefas'/slug/'index.html').read_text('utf-8')
+    # 13/11/2026: a m7-u1 e a m7-u2 saíram do formato compacto de três cartões (molde «mais fácil de fazer», camada tarefas_faceis_m7_20261113,
+    # com o seu contrato em tests/test_tarefas_faceis_m7.py); confere-se aqui a forma do retrato compacto, com essa camada desfeita pela
+    # auditoria, com contagem estrita. A exigência é a mesma.
+    if slug in ('m7-u1','m7-u2'):
+     self.assertIn('data-task-facil',text);text=undo_tarefas_faceis_m7_1113(f'tarefas/{slug}/index.html',text)
+    p=Compact(text)
     self.assertEqual(p.root,['nav','header','section','section'])
     self.assertTrue(p.production_in_header)
     self.assertEqual(p.questions,['1','2']);self.assertEqual(p.optional,[True,True])

@@ -238,8 +238,11 @@ CASOS = [
      ['ol.disc p.p', 'p.meta']),
     ('índice dos guiões', 'm4/aulas/', lambda p: None, ['header.cab + p.nota', 'header.cab > p.meta'], ['ol.lista-u p.d']),
     ('tarefa', 'tarefas/m4-u3/', lambda p: None, ['.task-page .task-consultation', '.task-texts blockquote'], []),
-    ('tarefa com exemplos', 'tarefas/m7-u3/', lambda p: ate(p, '.task-example > p:not([class])'),
-     ['.task-example > p:not([class])', '.task-example > p.task-example-text'], []),
+    # 13/11/2026: a m7-u3 passou ao molde «mais fácil de fazer» (camada tarefas_faceis_m7_20261113) e já não tem os exemplos em prosa
+    # justificada («.task-example», que nenhuma outra tarefa tem): no molde novo, as ordens e as ajudas leem-se à esquerda, sem palavras
+    # partidas (regra da folha assets/task-textos.css, aprovada no M3). Confere-se isso, no cartão «O teu texto», à vista.
+    ('tarefa no molde mais fácil de fazer', 'tarefas/m7-u3/', lambda p: ate(p, '.tf-alineas > li'),
+     [], ['.tf-alineas > li', '.tf-ajuda']),
     ('grelha', 'tarefas/m7-u3/grelha/', lambda p: None, ['main.grelha > header > p:not([class])'], ['dd > p']),
     ('obras', 'obras/memorial/', lambda p: None, ['main.ob > p:not([class])', '.ob-aviso'], []),
     ('entrada do sítio', 'index.html', lambda p: None, ['.pt-entry-lead'], []),

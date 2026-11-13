@@ -1,0 +1,313 @@
+{
+ "slug": "m7-u1",
+ "modulo": 7,
+ "unidade": 1,
+ "titulo": "Afirmar, desejar, continuar em dúvida",
+ "descricao": "Aula de tarefa com consulta: aquecimento, leitura de dois poemas e uma comparação em papel, durante 90 minutos, com entrega no Teams.",
+ "_nota": "13/11/2026: a página da tarefa (tarefas/m7-u1/index.html) sai destes dados, por scripts/tarefas_individuais_faceis.py e scripts/tarefa_facil.py (camada tarefas_faceis_m7_20261113). A tarefa é a de antes: as mesmas ordens, as mesmas 80 a 120 palavras, as mesmas duas perguntas opcionais.",
+ "aquecer": {
+  "cartoes": "aquecimento/",
+  "minutos": 10,
+  "ligacao": "Abrir o aquecimento em cartões"
+ },
+ "opcionais": [
+  {
+   "pergunta": "Que diferença existe entre «é» e «sinta»?",
+   "opcoes": [
+    {
+     "certa": true,
+     "texto": "Um enuncia uma conclusão; o outro formula um desejo.",
+     "resposta": "«É» afirma; «sinta» exprime um desejo. Lê também as dúvidas anteriores de cada poema."
+    },
+    {
+     "certa": false,
+     "texto": "Ambos garantem uma felicidade já alcançada.",
+     "resposta": "«Sinta» deseja sentir; não garante que esse desejo se cumpra."
+    },
+    {
+     "certa": false,
+     "texto": "Ambos identificam uma ilha real.",
+     "resposta": "«Em nós» desloca a procura para o interior; o outro poema não localiza uma ilha."
+    }
+   ]
+  },
+  {
+   "pergunta": "Que comparação podes sustentar nos poemas?",
+   "opcoes": [
+    {
+     "certa": false,
+     "texto": "Pessoa viveu exatamente as duas situações.",
+     "resposta": "Os versos constroem vozes poéticas; não comprovam acontecimentos da vida do autor."
+    },
+    {
+     "certa": true,
+     "texto": "Ambos se voltam para o interior, por caminhos diferentes.",
+     "resposta": "Podes defender essa relação explicando uma passagem de cada poema e as diferenças entre os finais."
+    },
+    {
+     "certa": false,
+     "texto": "São iguais porque acabam com uma ideia feliz.",
+     "resposta": "Uma semelhança vaga apaga a diferença entre afirmar e desejar. Escolhe passagens e explica-as."
+    }
+   ]
+  }
+ ],
+ "facil": {
+  "kicker": "Tarefa individual, 90 minutos",
+  "producao_minutos": 55,
+  "folha_versao": "20261113-facil-11",
+  "entregas": {
+   "intro": "Fotografias do teu trabalho em papel, na tarefa do Teams."
+  },
+  "aquecer": {
+   "titulo": "Relógio do aquecimento"
+  },
+  "verificar_titulo": "Antes de entregar, verifica",
+  "verificar_texto": "Responde sim ou não. Se for não, completa o teu trabalho.",
+  "exemplo_titulo": [
+   "Ver um exemplo com outro caso",
+   "Ver dois exemplos com outros casos",
+   "Ver três exemplos com outros casos"
+  ],
+  "entrega_titulo": "Entrega no Teams",
+  "rever_titulo": "Se precisares de rever",
+  "fazer": [
+   "Faz o aquecimento (10 minutos).",
+   "Lê os dois poemas.",
+   "Escreve uma comparação dos dois finais.",
+   "Escreve duas linhas finais.",
+   "Revê e entrega no Teams."
+  ],
+  "modo": "Trabalhas à mão. O aquecimento e a tarefa são com consulta: podes usar as lições do site, o caderno e o dicionário.",
+  "quadro": {
+   "titulo": "Tempo e tamanho",
+   "colunas": [
+    "Tempo",
+    "O que fazes",
+    "Palavras"
+   ],
+   "linhas": [
+    [
+     "10 min",
+     "Aquecimento em cartões",
+     ""
+    ],
+    [
+     "10 min",
+     "Leitura do enunciado e dos dois poemas",
+     ""
+    ],
+    [
+     "55 min",
+     "Comparação",
+     "80 a 120"
+    ],
+    [
+     "15 min",
+     "Revisão e entrega",
+     ""
+    ],
+    [
+     "90 min",
+     "Total",
+     "80 a 120"
+    ]
+   ],
+   "notas": [
+    "Nos 10 minutos de leitura, lê o pedido e os dois poemas.<span class=\"tf-so-ecra\"> O exemplo é para consultares enquanto escreves.</span>",
+    "Não contam para as palavras: os versos citados ou copiados e as duas linhas finais."
+   ]
+  },
+  "textos": [
+   {
+    "id": "texto-1",
+    "rotulo": "Texto 1",
+    "titulo": "«Não sei se é sonho, se realidade», de Fernando Pessoa",
+    "numerar": 5,
+    "estrofes": [
+     {
+      "versos": [
+       "Não sei se é sonho, se realidade,",
+       "Se uma mistura de sonho e vida,",
+       "Aquela terra de suavidade",
+       "Que na ilha extrema do sul se olvida.",
+       "É a que ansiamos. Ali, ali",
+       "A vida é jovem e o amor sorri"
+      ]
+     },
+     {
+      "versos": [
+       "Talvez palmares inexistentes,",
+       "Áleas longínquas sem poder ser,",
+       "Sombra ou sossego dêem aos crentes",
+       "De que essa terra se pode ter",
+       "Felizes, nós? Ali, talvez, talvez,",
+       "Naquela terra, daquela vez,"
+      ]
+     },
+     {
+      "versos": [
+       "Mas já sonhada se desvirtua,",
+       "Só de pensá-la cansou pensar;",
+       "Sob os palmares, à luz da lua,",
+       "Sente-se o frio de haver luar",
+       "Ah, nesta terra também, também",
+       "O mal não cessa, não dura o bem."
+      ]
+     },
+     {
+      "versos": [
+       "Não é com ilhas do fim do mundo,",
+       "Nem com palmares de sonho ou não,",
+       "Que cura a alma seu mal profundo,",
+       "Que o bem nos entra no coração.",
+       "É em nós que é tudo. É ali, ali,",
+       "Que a vida é jovem e o amor sorri."
+      ]
+     }
+    ],
+    "glossario": [
+     [
+      "se olvida",
+      "se esquece"
+     ],
+     [
+      "áleas",
+      "alamedas, caminhos com árvores"
+     ],
+     [
+      "desvirtua",
+      "perde o valor"
+     ],
+     [
+      "«dêem»",
+      "grafia da edição"
+     ]
+    ],
+    "fonte": "Fernando Pessoa (20-8-1933), <i>Poesias</i>, Ática, 1942; Arquivo Pessoa.",
+    "origem": "m7/licao-m7-f14/index.html, cartões 3 e 9 («O texto, 1 de 2» e «O texto, 2 de 2»: copiado letra a letra, com o vocabulário e a linha de fonte do cartão 9)"
+   },
+   {
+    "id": "texto-2",
+    "rotulo": "Texto 2",
+    "titulo": "«Quando as crianças brincam», de Fernando Pessoa",
+    "numerar": 5,
+    "estrofes": [
+     {
+      "versos": [
+       "Quando as crianças brincam",
+       "E eu as oiço brincar,",
+       "Qualquer coisa em minha alma",
+       "Começa a se alegrar."
+      ]
+     },
+     {
+      "versos": [
+       "E toda aquela infância",
+       "Que não tive me vem,",
+       "Numa onda de alegria",
+       "Que não foi de ninguém."
+      ]
+     },
+     {
+      "versos": [
+       "Se quem fui é enigma,",
+       "E quem serei visão,",
+       "Quem sou ao menos sinta",
+       "Isto no coração."
+      ]
+     }
+    ],
+    "fonte": "Fernando Pessoa (5-9-1933), <i>Poesias</i>, Ática, 1942; Arquivo Pessoa.",
+    "origem": "m7/licao-m7-f15/index.html, cartão 3 («O texto»: copiado letra a letra, com a linha de fonte; a lição não dá vocabulário)"
+   }
+  ],
+  "partes": [
+   {
+    "id": "produzir",
+    "nome": "A comparação",
+    "titulo": "Compara os dois finais.",
+    "meta": "80 a 120 palavras.",
+    "relogio": "Começa este relógio depois da leitura.",
+    "textos": [
+     "texto-1",
+     "texto-2"
+    ],
+    "pedido_titulo": "O que fazes",
+    "intro": "Compara «É em nós que é tudo» (<a href=\"#texto-1\">Texto 1</a>, verso 23) e «Quem sou ao menos sinta» (<a href=\"#texto-2\">Texto 2</a>, verso 11). No texto:",
+    "alineas": [
+     "Explica o que os finais afirmam ou desejam.",
+     "Usa uma passagem de cada poema.",
+     "Explica como cada passagem apoia a comparação.",
+     "Apresenta a tua leitura.",
+     "Apresenta uma dúvida que os poemas deixam.",
+     "Distingue a voz poética do autor."
+    ],
+    "ajudas": [
+     "Diz de que poema é cada passagem.",
+     "Na dúvida, diz o que fica por saber e porquê."
+    ],
+    "citar": "Copia as palavras exatas do texto. Põe-nas entre aspas: «…».",
+    "exemplos": [
+     {
+      "titulo": "Outro par de poemas de Fernando Pessoa: «Autopsicografia» e «Ela canta, pobre ceifeira»",
+      "paragrafos": [
+       {
+        "al": "Alíneas a), b) e c), noutro par:",
+        "t": "Em comum, sentir passa por pensar: «a entreter a razão», «O que em mim sente 'stá pensando». Mas só a «Ceifeira» deseja «poder ser tu, sendo eu»."
+       },
+       {
+        "al": "Alínea e), uma dúvida:",
+        "t": "Fica por saber o que a ceifeira sente: ela nunca fala, e tudo o que lemos vem de quem a ouve, como «Ouvi-la alegra e entristece»."
+       },
+       {
+        "al": "Alínea f), a voz e o autor:",
+        "t": "Quem diz «eu» é a voz do poema: «Ah, poder ser tu, sendo eu!» mostra o desejo dessa voz, não um facto da vida do autor."
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "finais": {
+   "titulo": "Duas linhas finais",
+   "passos": [
+    "Responde: o que aprendeste?",
+    "Indica onde se vê essa aprendizagem no teu trabalho."
+   ]
+  },
+  "verificar": [
+   "Expliquei o que os finais afirmam ou desejam?",
+   "Usei uma passagem de cada poema, entre «»?",
+   "Expliquei como cada passagem apoia a comparação?",
+   "Apresentei a minha leitura?",
+   "Apresentei uma dúvida que os poemas deixam?",
+   "Distingui a voz poética do autor?",
+   "Tenho 80 a 120 palavras?",
+   "Revi a escrita?",
+   "Escrevi as duas linhas finais?"
+  ],
+  "entrega": [
+   "Fotografa a comparação e as duas linhas finais.",
+   "Confirma que as fotografias mostram o trabalho completo.",
+   "Entrega as fotografias na tarefa do Teams."
+  ],
+  "rever_texto": "Os textos já estão nesta página. As lições servem para rever a matéria.",
+  "rever": [
+   {
+    "para": "Texto 1",
+    "texto": "Lição F14, <a href=\"../../m7/licao-m7-f14/\">«Não sei se é sonho, se realidade»</a>. Relê «Em paralelo»: a ilha e nós."
+   },
+   {
+    "para": "Texto 2",
+    "texto": "Lição F15, <a href=\"../../m7/licao-m7-f15/\">A infância que não tive</a>. Relê «O essencial» e «Para levar»."
+   },
+   {
+    "para": "A comparação",
+    "texto": "Lição F13, <a href=\"../../m7/licao-m7-f13/\">«Ela canta, pobre ceifeira»</a>. Relê «Em paralelo»: a ceifeira e o poeta."
+   }
+  ],
+  "opcional_titulo": "Se precisares, testa duas ideias",
+  "opcional_rotulo": "Duas perguntas opcionais"
+ }
+}

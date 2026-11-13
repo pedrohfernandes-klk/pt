@@ -143,13 +143,13 @@
    "autoavaliacao_so_tua": true,
    "trocas_aluno": [
     ["Núcleo comum (duas respostas de cerca de 40 palavras) e uma crónica à escolha", "Duas perguntas (duas respostas de cerca de 40 palavras) e uma crónica à escolha"],
-    ["O núcleo, as fontes e o fecho ficam fora da contagem", "As respostas, as fontes e as duas linhas finais ficam fora da contagem"],
+    ["O núcleo, as fontes e o fecho ficam fora da contagem; o aquecimento não conta para a nota.", "Não contam para as palavras da crónica: as respostas, a passagem copiada, as fontes e as duas linhas finais. O aquecimento não conta para a nota."],
     ["Núcleo 1: ", "Pergunta 1: "],
     ["Núcleo 2: ", "Pergunta 2: "],
     ["não está nos excertos, não nomeias", "não está no excerto, não nomeias"],
     ["nos excertos do cap.", "no excerto do cap."],
     ["Dizer o que está nos excertos sem os confrontar com a fala.", "Dizer o que está no excerto sem o confrontar com a fala."],
-    ["Contar o núcleo, as fontes ou o fecho nas", "Contar as respostas, as fontes ou as duas linhas finais nas"],
+    ["Contar o núcleo, as fontes ou o fecho nas", "Contar as respostas, a passagem copiada, as fontes ou as duas linhas finais nas"],
     ["e o fecho de duas linhas.", "e as duas linhas finais."],
     ["Entregar sem o fecho de duas linhas.", "Entregar sem as duas linhas finais."]
    ],
@@ -278,6 +278,22 @@
   "m7-u3": {
    "modulo": "M7",
    "unidade": 3,
+   "autoavaliacao_so_tua": true,
+   "correcao_estreita": true,
+   "trocas_aluno": [
+    ["Tese", "Opinião"],
+    ["tese", "opinião"],
+    ["Facto ou outra voz", "Facto ou comparação"],
+    ["nem outra voz", "nem comparação"],
+    ["facto datado ou outra voz", "facto datado ou uma comparação"],
+    ["ou a voz não se liga", "ou a comparação não se liga"],
+    ["o confronto com Garrett ou com Reis, ligado", "a comparação com Garrett ou com Reis, ligada"],
+    ["sem contagem nem fecho", "sem contagem nem duas linhas finais"],
+    ["Fecho: ", "Duas linhas finais: "],
+    ["Fecho genérico, sem movimento nem verso.", "Duas linhas finais genéricas, sem movimento nem verso."],
+    ["que to ensinou", "que te ensinou esse movimento"],
+    ["mais duas linhas finais fora da contagem.", "mais duas linhas finais. Não contam para as palavras: os versos citados ou copiados e as duas linhas finais."]
+   ],
    "titulo": "Louco, sim: argumentar com os movimentos de _Mensagem_",
    "produto": "Um texto de opinião à mão, sobre o tema A ou o tema B, com 180 a 220 palavras e o número escrito no fim, mais duas linhas finais fora da contagem. O aquecimento em cartões não conta para a nota.",
    "nota": "Os exemplos foram escritos para esta grelha com outro tema do mesmo tipo («Ensaiar vale a pena?») e com «O Infante» e a «Tabacaria», nunca com os temas A e B nem com os seus poemas. Os versos e as datas vêm das lições do módulo.",
@@ -751,11 +767,11 @@
       ],
       "parcial": [
        "Cumpres um a quatro dos cinco elementos, ou cumpres os cinco sem a explicação que o tema pede.",
-       "A: Em casa, dia de Natal. Meu filho: aqui está tudo como deixaste. Deus te guarde. Tua mãe. (As marcas estão todas; faltam a resposta, a memória, o recurso e o eco.) B: Esta é a casa de Camilo, em São Miguel de Seide. (Um facto, sem frase do romance nem o que o painel não pode afirmar.)"
+       "A: Em casa, [dia, mês e ano]. Meu filho: escrevo-te outra vez. Deus te guarde. Tua mãe. (As marcas estão todas; faltam a resposta, a memória, o recurso e o eco.) B: Esta é a casa de Camilo, em São Miguel de Seide. (Um facto, sem frase do romance nem o que o painel não pode afirmar.)"
       ],
       "max": [
        "Cumpres os cinco elementos do teu tema (um ponto cada) e a explicação (mais um ponto). Tema A: as marcas da carta (local e data, vocativo, despedida e assinatura); a resposta a uma pergunta de Teresa; uma memória dos dois; um recurso expressivo teu; um eco do romance, entre «». Explicação: o facto do romance que a carta respeita e o que faz o recurso. Tema B: um painel para quem nunca leu o romance; dois factos do dossiê (contam como dois); uma frase curta do romance, entre «»; o que o painel não pode afirmar. Explicação: porque escolheste a frase.",
-       "A, noutra voz (uma carta inventada da mãe de Simão ao filho): Em casa, dia de Natal. Meu filho: hás de perguntar se a tua mãe ainda pensa em ti. Pensa, todos os dias. Lembras-te das cartas que te escrevi? Foram tantas, e eu «não recebia resposta». O teu silêncio é uma porta fechada. Deus te guarde. Tua mãe. Respeitei o romance: a mãe escrevia a Simão e pensava que o filho não respondia. A metáfora da porta fechada mostra que a mãe se sente posta de fora. B, noutro lugar (um painel para a Casa de Camilo): Esta é a casa de Camilo Castelo Branco, em São Miguel de Seide. Foi reconstituída, refeita como era no tempo do escritor. Num romance dele, uma rapariga despede-se assim de quem ama: «Simão, adeus até à eternidade!» Escolhi a frase porque quem sai de uma casa também se despede. Este painel não pode afirmar que tudo o que se vê é o que Camilo usou: a casa foi refeita."
+       "A, noutra voz (uma carta inventada da mãe de Simão ao filho): Em casa, [dia, mês e ano]. Meu filho: hás de perguntar porque te escrevo outra vez. Escrevo porque espero a tua resposta. Lembras-te das outras cartas? Escrevi-as, e «não recebia resposta». O teu silêncio é uma porta fechada. Deus te guarde. Tua mãe. Respeitei o romance: a mãe escrevia a Simão e pensava que o filho não respondia. A metáfora da porta fechada mostra que a mãe se sente posta de fora. A data fica entre parênteses retos porque as lições não a dão. B, noutro lugar (um painel para a Casa de Camilo): Esta é a casa de Camilo Castelo Branco, em São Miguel de Seide. Foi reconstituída, refeita como era no tempo do escritor. Num romance dele, uma rapariga despede-se assim de quem ama: «Simão, adeus até à eternidade!» Escolhi a frase porque quem sai de uma casa também se despede. Este painel não pode afirmar que tudo o que se vê é o que Camilo usou: a casa foi refeita."
       ]
      },
      "custa": [
@@ -774,11 +790,11 @@
       ],
       "parcial": [
        "As citações estão entre «», mas uma tem uma palavra mudada ou a grafia corrigida, ou há uma contradição pontual com o romance.",
-       "Cito a frase de Tadeu sobre a violência e o amor com a grafia de hoje, e sem dizer de que capítulo é."
+       "Noutra obra: cito a frase de _Os Maias_ sobre o latim com a grafia de hoje, e sem dizer de que capítulo é."
       ],
       "max": [
        "Todas as citações estão letra a letra, com a grafia da edição, entre «» e com o lugar (Introdução ou capítulo); nada contradiz o romance; o que é ficção fica separado do que é história.",
-       "«a violencia de um pae é sempre amor» (cap. IV): copio violencia e pae como estão na edição, sem os corrigir."
+       "Noutra obra: «O latim era um luxo d’erudito» (_Os Maias_, cap. III, lição F16): copio d’erudito como está na edição, sem o corrigir."
       ]
      },
      "custa": [
@@ -891,7 +907,7 @@
       ],
       "max": [
        "Cumpres os cinco elementos do teu tema (um ponto cada) e a explicação ou a conclusão (mais um ponto). Tema A: uma mesa de hoje narrada na 3.ª pessoa; uma conversa séria; uma coisa banal que a corta ou desmonta; uma fala em discurso direto; um pensamento em indireto livre. Explicação: o que imitaste de Eça e o que critica a tua interrupção. Tema B: a tese na primeira frase; outra citação do último capítulo, explicada; um facto datado do dossiê, ligado à tese; um contra-argumento; a tua refutação. Conclusão: volta à tese com outras palavras.",
-       "A, noutro espaço (uma paragem de autocarro): Na paragem, a Inês contava à mãe que o estágio tinha acabado sem contrato. A mãe perguntou: «E agora?» O autocarro apareceu ao fundo da rua e as duas correram para ele. A Inês sentou-se à janela. Contrato? Isso ficava para amanhã. Imitei o «Sole normande?»: uma coisa banal, o autocarro, corta a conversa séria e ninguém volta a ela. Critico as duas, que adiam o problema à primeira desculpa. B, noutro tema: Fotografar tudo ajuda a lembrar, desde que se volte a olhar para as fotografias. [tese] Dir-me-ão que quem fotografa não vê o que tem à frente. [contra-argumento] Respondo que o problema não é a câmara, é guardar sem escolher. [refutação] Por isso, a fotografia só ajuda a memória de quem a escolhe e a revê. [conclusão] A citação e o facto faltam de propósito: no teu texto, a citação do último capítulo entra depois da tese e o facto do dossiê antes do contra-argumento. As marcas entre parênteses retos não se escrevem."
+       "A, noutro espaço (uma paragem de autocarro): Na paragem, a Inês contava à mãe que o estágio tinha acabado sem contrato. A mãe perguntou: «E agora?» O autocarro apareceu ao fundo da rua e as duas correram para ele. A Inês sentou-se à janela. Contrato? Isso ficava para amanhã. Imitei a interrupção do jantar do Hotel Central: uma coisa banal, o autocarro, corta a conversa séria e ninguém volta a ela. Critico as duas, que adiam o problema à primeira desculpa. B, noutro tema: Fotografar tudo ajuda a lembrar, desde que se volte a olhar para as fotografias. [tese] Dir-me-ão que quem fotografa não vê o que tem à frente. [contra-argumento] Respondo que o problema não é a câmara, é guardar sem escolher. [refutação] Por isso, a fotografia só ajuda a memória de quem a escolhe e a revê. [conclusão] A citação e o facto faltam de propósito: no teu texto, a citação do último capítulo entra depois da tese e o facto do dossiê antes do contra-argumento. As marcas entre parênteses retos não se escrevem."
       ]
      },
      "custa": [

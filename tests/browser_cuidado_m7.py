@@ -43,7 +43,10 @@ def r(*agulhas):
 # Referências nas páginas (tal como estão no HTML: só se procuram no texto que se vê). Nas datas, a proposta do M7 prende o dia ao
 # «de» e o ano ao «de»: cada metade fica inteira («13 de», «de 1888»); o mesmo nos pares «N e N» com nome antes («poemas II», «e IX»).
 PAGINAS = {
-    INDICE: r('3.º{N}ano', '90{N}minutos', '90{N}min', '22{N}min', '23{N}min', '10{N}a{N}15{N}min', '10{N}min', '35{N}%', '25{N}%', '10{N}%',
+    # 13/11/2026, revisão das tarefas do M7 (camada tarefas_faceis_m7_20261113): no índice, o aquecimento da unidade 1 passou de
+    # «10 a 15 min» a «10 min», como os das outras duas unidades e o enunciado (decisão do docente: tempos iguais em todos os sítios).
+    # A referência «10{N}a{N}15{N}min» já não existe na página; «10{N}min» continua a conferir-se, agora nos três aquecimentos.
+    INDICE: r('3.º{N}ano', '90{N}minutos', '90{N}min', '22{N}min', '23{N}min', '10{N}min', '35{N}%', '25{N}%', '10{N}%',
               '30{N}%', 'poemas{N}II', 'e{N}IX', 'poema{N}XX', 'D.{N}Sebastião', 'M7-{J}F10'),
     GUIA: r('3.º{N}ano', '90{N}minutos', '90{N}min'),
     'm7/mapa-do-modulo-m7/index.html': r('3.º{N}ano', '90{N}min', '35{N}%', '25{N}%', '10{N}%', '30{N}%', '45{N}minutos', '13{N}de', 'de{N}1888',
@@ -57,16 +60,21 @@ PAGINAS = {
     'm7/m7-fingidor-maquina/index.html': r('22{N}min'),
     'm7/m7-quatro-vozes-um-problema/index.html': r('23{N}min', 'n.º{N}2'),
     'm7/visita-casa-fernando-pessoa/index.html': r('3.º{N}ano'),
-    'tarefas/m7-u1/index.html': r('90{N}min', '80{N}a{N}120{N}palavras', '10{N}a{N}15{N}minutos'),
-    'tarefas/m7-u2/index.html': r('90{N}min', '100{N}a{N}150{N}palavras', '10{N}minutos'),
-    'tarefas/m7-u3/index.html': r('10{N}min', '90{N}min', '60{N}minutos', '10{N}minutos', '180{N}a{N}220{N}palavras', '4{N}de', 'de{N}1578',
-                                  '20{N}de', 'de{N}1933', 'v.{N}1', 'D.{N}Sebastião', 'D.{N}João'),
+    # 13/11/2026: as três tarefas do M7 no molde «mais fácil de fazer» (camada tarefas_faceis_m7_20261113): os tempos são 10, 10, 55 e 15
+    # («10 a 15 minutos» e «60 minutos» saíram, com o texto), o exemplo antigo com «v. 1» saiu, e há referências novas aos textos e aos
+    # versos. As outras conferem-se como antes, uma a uma, à vista e numa linha só.
+    'tarefas/m7-u1/index.html': r('90{N}min', '80{N}a{N}120{N}palavras', '10{N}minutos', '55{N}min', 'Texto{N}1', 'verso{N}23'),
+    'tarefas/m7-u2/index.html': r('90{N}min', '100{N}a{N}150{N}palavras', '10{N}minutos', '55{N}min'),
+    'tarefas/m7-u3/index.html': r('10{N}min', '90{N}min', '55{N}min', '10{N}minutos', '180{N}a{N}220{N}palavras', '4{N}de', 'de{N}1578',
+                                  '20{N}de', 'de{N}1933', 'D.{N}Sebastião', 'D.{N}João', 'Texto{N}2', 'versos{N}3{N}a{N}5'),
     'tarefas/m7-u3/aquecimento/index.html': r('180{N}a{N}220{N}palavras'),
     'tarefas/m7-u3/grelha/index.html': r('180{N}a{N}220{N}palavras', '90{N}palavras'),
     'tarefas/m7-u3/correcao/index.html': r('180{N}a{N}220{N}palavras'),
 }
 # No guia, os blocos de hoje («Aquecer, 15 min»…) e o produto estão na rota da tarefa, que se abre quando se escolhe uma.
-ROTA = r('15{N}min', '60{N}min', '10{N}minutos', '100{N}a{N}150{N}palavras')
+# 13/11/2026: decisão do docente para as tarefas do M7 (camada tarefas_faceis_m7_20261113): quatro blocos de 10, 10, 55 e 15 minutos no
+# guia («60 min» saiu). As referências continuam a conferir-se uma a uma, à vista e numa linha só.
+ROTA = r('15{N}min', '55{N}min', '10{N}min', '10{N}minutos', '100{N}a{N}150{N}palavras')
 # Referências nos cartões das lições: (página, índice do cartão, referências que se veem nesse cartão). Só as que estão no
 # enunciado, no texto de leitura ou no título do cartão: as opções de resposta não aparecem todas de cada vez.
 L = 'm7/licao-m7-{}/index.html'
@@ -294,7 +302,9 @@ def main():
                     page.locator('#arquivo-producoes summary').click()
                     page.locator('button[data-n="1"]').first.click()
                     assert page.locator('#rota').is_visible()
-                    confere_lista(page, page.locator('#rota .regra ol'), 3, f'guia, «Três antes de mim» {largura}')
+                    # 13/11/2026: a regra passou a «Dois antes de mim», com dois passos (decisão do docente: sai «pergunta ao teu par de
+                    # trabalho»; camada tarefas_faceis_m7_20261113). A lista confere-se como antes: à vista, com os itens todos.
+                    confere_lista(page, page.locator('#rota .regra ol'), 2, f'guia, «Dois antes de mim» {largura}')
                     listas += 1
                     confere_referencias(page, '#rota', ROTA, f'{GUIA} (rota) {largura}')
                     referencias += len(ROTA)

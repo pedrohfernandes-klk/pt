@@ -9,6 +9,9 @@ jobs:
     timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
+        # 13/11/2026: a bateria completa inclui o teste das tarefas do M7, que compara a árvore com o main de partida (git show).
+        with:
+          fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'

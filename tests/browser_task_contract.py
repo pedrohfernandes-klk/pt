@@ -124,6 +124,10 @@ def assert_task_page(page, before):
     # 29/10/2026: com o aquecimento em cartões não há pergunta «aquecer».
     cards_warm = page.locator(WARM_CARDS).count() == 1
     count = (1 if cards_warm else 2) if compact else 4
+    # 13/11/2026: a m7-u1 e a m7-u2 (tarefas individuais no molde «mais fácil de fazer», camada tarefas_faceis_m7_20261113) têm o cartão do
+    # aquecimento e continuam com as duas perguntas opcionais de sempre.
+    if page.locator('main[data-task-individual]').count():
+        count = 2
     question_ids = (['1'] if cards_warm else ['aquecer', '1']) if choice else [str(i) for i in range(1, count + 1)]
     assert page.locator('[data-task-question]').count() == count
     # 12/11/2026: as duas tarefas do M3 saem do molde «mais fácil de fazer» (camada tarefas_faceis_m3_20261112, main[data-task-facil]):
@@ -137,9 +141,16 @@ def assert_task_page(page, before):
     # tests/browser_tarefas_faceis_m5.py).
     # 13/11/2026: o mesmo nas duas tarefas do M6 (camada tarefas_faceis_m6_20261113; o que é só do molde novo confere-se em
     # tests/browser_tarefas_faceis_m6.py).
-    assert facil == (slug in ('m1-u1', 'm1-u2', 'm3-u1', 'm3-u2', 'm5-u1', 'm5-u2', 'm6-u1', 'm6-u2')) or not slug, slug
+    # 13/11/2026: o mesmo nas três tarefas do M7 (camada tarefas_faceis_m7_20261113; o que é só do molde novo confere-se em
+    # tests/browser_tarefas_faceis_m7.py). A m7-u3 escolhe primeiro o tema e escreve um só texto: cinco cartões com nome (Começar, Tema A
+    # ou B, O teu texto, Fechar e entregar, Rever a matéria). A m7-u1 e a m7-u2 não têm temas: quatro e sete cartões com nome, e as duas
+    # perguntas opcionais de sempre.
+    assert facil == (slug in ('m1-u1', 'm1-u2', 'm3-u1', 'm3-u2', 'm5-u1', 'm5-u2', 'm6-u1', 'm6-u2', 'm7-u1', 'm7-u2', 'm7-u3')) or not slug, slug
+    individual = {'m7-u1': 4, 'm7-u2': 7}.get(slug)
+    if individual:
+        assert page.locator('[data-task-question]').count() == 2 and page.locator('[data-task-card]').count() == individual, slug
     if choice:
-        assert page.locator('[data-task-card]').count() == (6 if facil else 4)
+        assert page.locator('[data-task-card]').count() == (5 if slug == 'm7-u3' else 6 if facil else 4)  # 13/11/2026: a m7-u3, ver abaixo
         assert page.locator('[data-task-card="0"] #aquecer').count() == 1
         assert page.locator('[data-task-card="1"] #produzir').count() == 1
         assert page.locator('[data-task-theme]').count() == 2
@@ -160,7 +171,7 @@ def assert_task_page(page, before):
             assert page.get_by_role('heading', name=re.compile('^Tema ' + letter + ' ')).count() == 1, letter
         open_task_card(page, '[data-task-card="0"]')
     if compact:
-        assert page.locator('[data-task-card]').count() == (6 if facil else 4 if choice else 3)
+        assert page.locator('[data-task-card]').count() == (individual or (5 if slug == 'm7-u3' else 6 if facil else 4 if choice else 3))  # 13/11/2026
         assert page.locator('.task-clock').count() == 0
         assert 'Tarefa individual' in page.locator('.task-kicker').first.text_content()
         assert not page.locator('[data-task-optional-preparation]').evaluate('e=>e.open')
@@ -274,7 +285,10 @@ def assert_reader_navigation(page):
     # 12/11/2026: no molde «mais fácil de fazer» (as duas tarefas do M3, camada tarefas_faceis_m3_20261112), em papel sai só o que é
     # preciso para fazer a tarefa: saem todos os cartões menos o último, «Rever a matéria» (o que tem #apoios). Nos outros, todos.
     if page.locator('main[data-task-facil]').count():
-        assert page.locator('[data-task-card]:visible').count() == page.locator('[data-task-card]').count() - 1 == 5
+        # 13/11/2026: nas três tarefas do M7 (camada tarefas_faceis_m7_20261113) a regra é a mesma, com os cartões de cada uma: a m7-u3
+        # tem cinco (saem quatro), a m7-u1 quatro (saem três) e a m7-u2 sete (saem seis).
+        em_papel = {'m7-u1': 3, 'm7-u2': 6, 'm7-u3': 4}.get(page.url.split('/tarefas/', 1)[1].split('/', 1)[0] if '/tarefas/' in page.url else '', 5)
+        assert page.locator('[data-task-card]:visible').count() == page.locator('[data-task-card]').count() - 1 == em_papel
         assert not page.locator('#apoios').is_visible()
         assert page.locator('[data-task-card]:not(:visible) #apoios').count() == 1
     else:
@@ -360,6 +374,9 @@ def responsive_task_matrix(browser, host):
                     frame.locator('[data-task-reader].task-reader-ready').wait_for()
                     # 29/10/2026: a M7-U3 (aquecimento em cartões) tem só a pergunta opcional.
                     expected = (1 if frame.locator(WARM_CARDS).count() else 2) if frame.locator('[data-task-compact]').count() else 4
+                    # 13/11/2026: a m7-u1 e a m7-u2 (tarefas individuais no molde novo) têm o cartão do aquecimento e as duas perguntas opcionais.
+                    if frame.locator('main[data-task-individual]').count():
+                        expected = 2
                     assert frame.locator('[data-task-question]').count() == expected
                     assert not errors, (slug, width, scheme, errors)
                     print('PASS responsive task:', slug, 'actual width', width, scheme,
@@ -399,7 +416,10 @@ def fallback_task_pages(browser, host):
                 assert page.locator('[data-task-question]:visible').count() == (1 if choice and not cards_warm else 0)
                 optional=page.locator('[data-task-optional-preparation] > summary')
                 optional.focus();optional.press('Enter')
-            assert page.locator('[data-task-question]:visible').count() == ((1 if cards_warm else 2) if compact else 4)
+            # 13/11/2026: a m7-u1 e a m7-u2 (tarefas individuais no molde novo) têm o cartão do aquecimento e as duas perguntas opcionais.
+            # 13/11/2026, revisão: a asserção volta a correr para todas as páginas (fora do «if compact:»), como no main.
+            individuais = 2 if page.locator('main[data-task-individual]').count() else None
+            assert page.locator('[data-task-question]:visible').count() == (individuais or ((1 if cards_warm else 2) if compact else 4))
             button=page.locator('[data-task-question="1"] button[data-response]').first
             button.focus();button.press('Enter')
             assert page.locator('[data-task-question="1"] [data-task-feedback]').inner_text()==button.get_attribute('data-response')

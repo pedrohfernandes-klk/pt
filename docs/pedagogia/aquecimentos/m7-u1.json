@@ -40,7 +40,7 @@
    "t": "ler",
    "rot": "Abre",
    "titulo": "Dois finais para comparar",
-   "html": "<p class=\"abre\"><b>Dois poemas de 1933, dois finais para comparar na aula de tarefa.</b> Este aquecimento não faz a comparação por ti: recorda os dois poemas e treina, com outros versos da unidade, o que a tarefa te vai pedir.</p><div class=\"caixa\"><h3>A instrução da tarefa</h3><p>Compara «É em nós que é tudo» («Não sei se é sonho, se realidade») e «Quem sou ao menos sinta» («Quando as crianças brincam»). Explica o que os finais afirmam ou desejam e o que continua em dúvida. Usa uma passagem de cada poema e apresenta a tua leitura.</p></div><p>Dez a quinze minutos, com consulta. Não conta para a nota.</p>"
+   "html": "<p class=\"abre\"><b>Dois poemas de 1933, dois finais para comparar na aula de tarefa.</b> Este aquecimento não faz a comparação por ti: recorda os dois poemas e treina, com outros versos da unidade, o que a tarefa te vai pedir.</p><div class=\"caixa\"><h3>A instrução da tarefa</h3><p>Compara «É em nós que é tudo» («Não sei se é sonho, se realidade») e «Quem sou ao menos sinta» («Quando as crianças brincam»). Explica o que os finais afirmam ou desejam e o que continua em dúvida. Usa uma passagem de cada poema e apresenta a tua leitura.</p></div><p>Dez minutos, com consulta. Não conta para a nota.</p>"
   },
   {
    "t": "emparelhar",
@@ -100,23 +100,23 @@
      "c": 0
     }
    ],
-   "f": "A instrução abre com **«Compara»** e pede **uma passagem de cada poema**; o terceiro critério fixa **80 a 120 palavras**. E o «o que» de «o que os finais afirmam ou desejam» pede conteúdo: as palavras do verso, não só um rótulo.",
-   "fe": "Volta à instrução: «Compara», «uma passagem de cada poema», «Escreves 80 a 120 palavras». Resumir ou ilustrar não é comparar; um poema inteiro não é uma passagem, e uma só deixa um poema de fora; 40 a 60 fica abaixo do limite e 150 a 200 passa dele."
+   "f": "A instrução abre com **«Compara»** e pede **uma passagem de cada poema**; o quadro «Tempo e tamanho» fixa **80 a 120 palavras**. E o «o que» de «o que os finais afirmam ou desejam» pede conteúdo: as palavras do verso, não só um rótulo.",
+   "fe": "Volta à instrução: «Compara», «uma passagem de cada poema», 80 a 120 palavras. Resumir ou ilustrar não é comparar; um poema inteiro não é uma passagem, e uma só deixa um poema de fora; 40 a 60 fica abaixo do limite e 150 a 200 passa dele."
   },
   {
    "t": "ordenar",
    "g": 3,
-   "p": "Põe por ordem o plano dos 60 minutos de produção em papel.",
+   "p": "Põe por ordem o plano dos 55 minutos de produção em papel.",
    "p2": "Cada passo usa o que o anterior produziu. Do primeiro ao último: ordena.",
    "passos": [
     "Relês os dois poemas e escolhes uma passagem de cada",
     "Assinalas, nas passagens escolhidas, as palavras que vais explicar",
     "Escreves a comparação a partir dessas palavras, com a tua leitura e uma dúvida fundamentada",
     "Relês o texto escrito, corriges e contas as palavras: entre 80 e 120",
-    "Escreves a síntese de duas linhas e entregas as fotografias no Teams"
+    "Escreves as duas linhas finais e entregas as fotografias no Teams"
    ],
-   "f": "Cada passo usa o anterior: as palavras saem das passagens, a comparação sai das palavras, conta-se o texto já escrito e a síntese são as duas linhas finais.",
-   "fe": "Não assinalas palavras sem passagens, não escreves sem as palavras, não contas um texto que ainda não existe; a síntese fecha, antes das fotografias."
+   "f": "Cada passo usa o anterior: as palavras saem das passagens, a comparação sai das palavras, conta-se o texto já escrito e as duas linhas finais fecham.",
+   "fe": "Não assinalas palavras sem passagens, não escreves sem as palavras, não contas um texto que ainda não existe; as duas linhas finais fecham, antes das fotografias."
   },
   {
    "t": "emparelhar",
@@ -195,7 +195,7 @@
   {
    "t": "escolha",
    "g": 8,
-   "p": "O terceiro critério pede «uma dúvida fundamentada». Qual destas frases sobre «Ela canta, pobre ceifeira» é uma dúvida fundamentada?",
+   "p": "A tarefa pede «uma dúvida que os poemas deixam». Qual destas frases sobre «Ela canta, pobre ceifeira» é uma dúvida fundamentada?",
    "p2": "Que frase diz o que fica por saber na «Ceifeira» e mostra no texto porquê?",
    "o": [
     "Fica por saber o que a ceifeira sente: ela nunca fala, e tudo o que lemos vem de quem a ouve, como «Ouvi-la alegra e entristece».",
@@ -243,7 +243,7 @@
    "fe": [
     null,
     "A instrução pede uma passagem de cada poema; o problema não está no número de citações, está no que se diz delas.",
-    "As passagens estão lá, mas a explicação muda-lhes o sentido; o primeiro critério pede que expliques o que sustenta a comparação."
+    "As passagens estão lá, mas a explicação muda-lhes o sentido; a tarefa pede que expliques como cada passagem apoia a comparação."
    ]
   },
   {
