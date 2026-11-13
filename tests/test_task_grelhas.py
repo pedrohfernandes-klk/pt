@@ -172,7 +172,20 @@ class Grelhas(unittest.TestCase):
                 for c in t['criterios']:
                     # 29/10/2026 (M7-U3): os títulos de obras escrevem-se nos dados entre _…_ e saem em itálico.
                     nome=re.sub(r'(?<![\w/])_([^_<>]{1,100}?)_(?!\w)',r'<i>\1</i>',c['nome'])
+                    # 12/11/2026: nas duas grelhas do M3 (camada tarefas_faceis_m3_20261112), o nome do critério sai com as palavras do
+                    # enunciado novo («trocas_aluno» nos dados): confere-se o nome exato que a página mostra, na grelha e na correção.
+                    for antes,depois in t.get('trocas_aluno',[]):nome=nome.replace(antes,depois)
                     self.assertIn(nome.replace('«','&laquo;') if '&laquo;' in aluno else nome,aluno)
+                    self.assertIn(nome.replace('«','&laquo;') if '&laquo;' in correcao else nome,correcao)
+                # 12/11/2026: decisão do docente, nas duas grelhas do M3: a autoavaliação é só para o aluno e não se entrega; a versão
+                # de correção fica sem a coluna «Aluno» e sem a nota da diferença. Nas outras onze, a frase e a coluna de sempre.
+                so_tua=bool(t.get('autoavaliacao_so_tua'))
+                self.assertEqual(so_tua,slug in ('m3-u1','m3-u2'))
+                self.assertEqual(aluno.count('Esta autoavaliação é só para ti: não se entrega.'),1 if so_tua else 0)
+                self.assertEqual(aluno.count('Entrega esta autoavaliação com as fotografias. O docente põe a nota dele ao lado da tua e comenta a diferença.'),0 if so_tua else 1)
+                self.assertEqual(correcao.count('<th class="n">Aluno</th>'),0 if so_tua else 1)
+                self.assertEqual(correcao.count('Diferença entre a tua nota e a minha'),0 if so_tua else 1)
+                self.assertEqual(correcao.count('<th class="n">Docente</th>'),1)
                 self.assertEqual(aluno.count('class="g-crit"'),5);self.assertIn('id="autoavaliacao"',aluno)
                 for parte in ('O que funciona','O que te custa pontos','Próximo passo'):self.assertIn(parte,correcao)
                 # 28/10/2026: cada tabela num contentor que desliza sozinho, para a página não deslizar na horizontal no telemóvel.

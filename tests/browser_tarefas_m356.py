@@ -41,8 +41,11 @@ def main():
                     # 08/11/2026: decisão 152 no M5 (achado 42): também no guia do M5, com a mesma exigência.
                     # 08/11/2026: decisão 152 no M6 (achado 33): também no guia do M6, com a mesma exigência.
                     sep = '\xa0' if m in (3, 5, 6) else ' '
+                    # 12/11/2026: decisão do docente para as tarefas do M3 (camada tarefas_faceis_m3_20261112): no guia do M3, 10 minutos
+                    # de leitura e 55 de produção, como no enunciado; no M5 e no M6, como estava. Os mesmos quatro blocos, pela mesma ordem.
+                    ler_min, produzir_min = (10, 55) if m == 3 else (5, 60)
                     assert page.locator('#blocos .bloco b').all_inner_texts() == [
-                        f'Aquecer, 10{sep}min', f'Ler o enunciado, 5{sep}min', f'Produzir, 60{sep}min', f'Rever e entregar, 15{sep}min']
+                        f'Aquecer, 10{sep}min', f'Ler o enunciado, {ler_min}{sep}min', f'Produzir, {produzir_min}{sep}min', f'Rever e entregar, 15{sep}min']
                     assert page.locator('#r-exemplo').is_hidden()
                     sem_deslizar(page, f'm{m} guia {width}')
                     assert not errors, errors

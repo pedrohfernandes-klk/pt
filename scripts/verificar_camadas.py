@@ -7,6 +7,10 @@ import sys
 
 ROOT=Path(__file__).resolve().parents[1]
 LAYERS=[
+ # 12/11/2026: as duas tarefas do M3 «mais fáceis de fazer» e «tudo junto» no M3 (os enunciados, as grelhas, as correções e os
+ # aquecimentos da m3-u1 e da m3-u2, os seus dados, e o guia, o índice e o mapa do M3), camada mais recente, por cima das provas em
+ # cartões com os documentos oficiais (que passa a ser a segunda), com a qual não partilha nenhum ficheiro.
+ ('tarefas_faceis_m3_20261112','tarefas-faceis-m3-edits-20261112'),
  # 12/11/2026: as provas em cartões com os documentos oficiais (a secção exame/provas/, as seis lições das provas de 2026 e os seus
  # dados: ligações para eduqa.pt, autoria, frases só com o que as duas provas mostram e referências que não se partem), camada mais
  # recente, por cima da ligação «Treinos» na página principal do Exame (que passa a ser a segunda) e da decisão 152 no Exame.

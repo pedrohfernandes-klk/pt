@@ -852,6 +852,14 @@ def main():
                 # cima do cartaz «Ler a cidade» e do nome novo da secção.
                 # 12/11/2026: antes de tudo, as provas em cartões com os documentos oficiais (a secção exame/provas/, as seis lições das
                 # provas de 2026 e os seus dados), a camada mais recente, por cima da ligação «Treinos» na página principal do Exame.
+                # 12/11/2026: antes de tudo, as duas tarefas do M3 «mais fáceis de fazer» e «tudo junto» no M3 (os enunciados, as
+                # grelhas, as correções e os aquecimentos, os seus dados, e o guia, o índice e o mapa do M3), a camada mais recente,
+                # por cima das provas em cartões com os documentos oficiais.
+                tarefas_faceis_m3 = ROOT / 'tests/fixtures/tarefas-faceis-m3-edits-20261112.json'
+                for edit in reversed(json.loads(tarefas_faceis_m3.read_text('utf-8'))['files'].get(rel, {}).get('edits', [])):
+                    if conferencia.count(edit['new']) != edit['occurrences']:
+                        raise ManifestoDesatualizado(f'{rel}: tarefas do M3 mais fáceis de fazer não confere')
+                    conferencia = conferencia.replace(edit['new'], edit['old'])
                 exame_provas_oficial = ROOT / 'tests/fixtures/exame-provas-oficial-edits-20261112.json'
                 for edit in reversed(json.loads(exame_provas_oficial.read_text('utf-8'))['files'].get(rel, {}).get('edits', [])):
                     if conferencia.count(edit['new']) != edit['occurrences']:

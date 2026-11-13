@@ -579,7 +579,10 @@ DADOS = [
 
 
 def ler(rel):
-    return (ROOT / rel).read_bytes().decode('utf-8')
+    # 12/11/2026: por cima de todas fica a camada das tarefas do M3 mais fáceis de fazer (tarefas_faceis_m3_20261112), que muda os
+    # enunciados, as grelhas e os dados da M3-U1 e da M3-U2: desfaz-se primeiro, com contagem estrita, quando o ficheiro a traz.
+    from tarefas_claras_historico import desfazer_faceis
+    return desfazer_faceis(rel, (ROOT / rel).read_bytes().decode('utf-8'))
 
 
 def base(rel):
