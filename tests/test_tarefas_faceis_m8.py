@@ -161,7 +161,9 @@ TROCAS_MODULO = {
         (f'Seguem-se 5{N}minutos de leitura, 60 de produção individual em papel e 15 de revisão e entrega no Teams. O núcleo integra a planificação; não é uma resposta pronta.</p>',
          f'Seguem-se 10{N}minutos de leitura, 55 de produção individual em papel e 15 de revisão e entrega no Teams. O plano prepara o texto; não é uma resposta pronta. {NAO_CONTAM}</p>', 1),
         ('<p>Unidade 1: lê os dois poemas de cada tema nas lições F04 e F05 antes da aula. Os cartões «Outra leitura» são um primeiro contacto; as leituras completas continuam disponíveis nas fontes indicadas. Unidade 2: traz o conto «George» completo.</p>',
-         '<p>Unidade 1: lê os dois poemas de cada tema antes da aula, no manual. As lições F04 e F05 citam só alguns versos; os cartões «Outra leitura» são um primeiro contacto e dizem onde ler cada poema. Unidade 2: traz o conto «George» completo, no manual.</p>', 1),
+         # 14/11/2026: «O texto» e «Outra leitura», como no enunciado da m8-u1 (o poema 1 de cada lição está no cartão «O texto», o
+         # poema 2 no cartão «Outra leitura»); a troca continua a conferir-se inteira, letra a letra.
+         '<p>Unidade 1: lê os dois poemas de cada tema antes da aula, no manual. As lições F04 e F05 citam só alguns versos; os cartões «O texto» e «Outra leitura» dizem onde ler cada poema. Unidade 2: traz o conto «George» completo, no manual.</p>', 1),
         ('<div class="regra"><b>Três antes de mim.</b> Antes de chamares o docente:<ol><li>relê o enunciado;</li><li>vê a rubrica;</li><li>pergunta ao teu par de trabalho.</li></ol>',
          '<div class="regra"><b>Dois antes de mim.</b> Antes de chamares o docente:<ol><li>relê o enunciado;</li><li>vê a rubrica.</li></ol>', 1),
         (f'<b>Ler o enunciado, 5{N}min</b><span>Lê o núcleo comum e os temas A e B.</span>',
