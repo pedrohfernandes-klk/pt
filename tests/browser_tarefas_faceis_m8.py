@@ -7,8 +7,8 @@ tests/browser_tarefas_faceis_m6.py e de tests/browser_tarefas_faceis_m7.py:
   números; não há erros de página; não há imagens; a grelha, a versão de correção (também a 320 px), os aquecimentos, o guia da
   tarefa, o portefólio, o mapa e o índice do M8 também não deslizam;
 * os textos do M8 ainda têm direitos de autor e não se copiam: cada bloco «Onde está o texto» mostra só as linhas que as lições
-  citam (2, 2, 2 e 4 versos na m8-u1; um recorte de prosa na m8-u2) e a linha de fonte, que remete para o manual sem número de
-  página; não há nenhum verso numerado nem texto em prosa copiado (.tt-versos, .tt-prosa);
+  citam (2, 2, 2 e 4 versos na m8-u1; um recorte de prosa na m8-u2) e a linha de fonte, sem número de página, que diz onde ler o
+  texto completo (14/11/2026: o manual só onde uma lição o confirma; nos outros poemas, o cartão da lição que dá a publicação); não há nenhum verso numerado nem texto em prosa copiado (.tt-versos, .tt-prosa);
 * no guia da tarefa do M8: os quatro blocos somam 90 minutos (10, 10, 55, 15) e, nas três produções antigas, não há «Autoavaliação»
   para copiar para o Teams nem «par de trabalho»: a regra chama-se «Dois antes de mim» e tem dois passos, e o que se copia para o
   Teams traz o plano, as notas e a lista;
@@ -59,6 +59,15 @@ VISIVEL = '''(sel) => { const e = document.querySelector(sel); if (!e) return fa
   const c = e.closest('.task-reader-card'); return !!(r.width && r.height) && !(c && c.hidden) && r.top < innerHeight && r.bottom > 0; }'''
 
 
+# 14/11/2026: o fim da linha de fonte de cada bloco «Onde está o texto».
+FIM_FONTE = {('m8-u1', '#texto-1'): 'O poema completo lê-se no manual. A lição' + N + 'F04 também diz onde o ler: cartão «O texto».',
+             ('m8-u1', '#texto-2'): 'A lição' + N + 'F04 diz onde ler o poema completo: cartão «Outra leitura».',
+             ('m8-u1', '#texto-3'): 'A lição' + N + 'F05 diz onde ler o poema completo: cartão «O texto».',
+             ('m8-u1', '#texto-4'): 'A lição' + N + 'F05 diz onde ler o poema completo: cartão «Outra leitura».',
+             ('m8-u2', '#texto-1'): 'O conto completo lê-se no manual.'}
+ANTES_DA_AULA = 'Antes da aula, lê os dois poemas de cada tema.'
+
+
 def contexto(browser, largura, altura, esquema):
     ctx = browser.new_context(viewport={'width': largura, 'height': altura}, color_scheme=esquema, reduced_motion='reduce')
     page = ctx.new_page()
@@ -98,7 +107,10 @@ def ecra(host, browser, slug):
                     linhas: q.length ? q[0].innerHTML.split('<br>') : [], fonte: document.querySelector(t + ' .tt-fonte').textContent,
                     num: document.querySelector(t + ' .tt-num').textContent }; }""", alvo)
                 assert t['n'] == 1 and len(t['linhas']) == linhas and t['linhas'][0] == primeira, (onde, alvo, t)
-                assert t['fonte'].endswith('lê-se no manual.') and not re.search(r'p(ág)?\. ?\d|página \d', t['fonte']), (onde, alvo, t)
+                # 14/11/2026: «lê-se no manual» só onde uma lição o confirma («As Palavras», «George»); nos outros três poemas, a linha
+                # diz que cartão da lição dá a publicação. Sem número de página, como antes.
+                assert t['fonte'].endswith(FIM_FONTE[(slug, alvo)]) and not re.search(r'p(ág)?\. ?\d|página \d', t['fonte']), (onde, alvo, t)
+                assert ('manual' in t['fonte']) == ((slug, alvo) in (('m8-u1', '#texto-1'), ('m8-u2', '#texto-1'))), (onde, alvo, t)
                 assert t['num'] == 'Texto' + N + alvo[-1], (onde, alvo, t)
             for i in range(len(CARTOES[slug])):
                 ir(page, i)
@@ -174,6 +186,9 @@ def papel(host, browser, slug):
                  passos: [...document.querySelectorAll('.task-theme .tf-passos > li')].filter(vis).length,
                  partir: [...document.querySelectorAll('.tt-onde, .tt-cit')].map(e => getComputedStyle(e).breakInside) }; }""")
     assert m['ecra'] == 0 and not m['rever'] and m['relogios'] == 0 and m['botao'] == 0 and m['grelha'] == 0, (slug, m)
+    # 14/11/2026: na m8-u1, a ordem de ler os poemas antes da aula sai em papel, no primeiro cartão.
+    if slug == 'm8-u1':
+        assert page.locator('header .tf-p', has_text=ANTES_DA_AULA).count() == 1 and page.locator('header .tf-p', has_text=ANTES_DA_AULA).is_visible(), slug
     assert m['onde'] == m['citacoes'] == m['fontes'] == len(ONDE[slug]), (slug, m)
     assert m['pedidos'] == (10 if slug == 'm8-u1' else 11) and m['verificar'] == 10 and m['passos'] == (3 if slug == 'm8-u1' else 4), (slug, m)
     # Nenhum bloco e nenhuma citação se parte entre duas páginas.
@@ -237,7 +252,9 @@ def outras_paginas(host, browser):
     page.goto(f'{host}/m8/guia-da-tarefa-m8/', wait_until='networkidle')
     texto = page.locator('#tarefas-das-unidades').text_content()
     assert NAO_CONTAM in texto and re.search(r'10\sminutos de leitura, 55 de produção individual em papel e 15 de revisão', texto), texto
-    assert 'núcleo' not in texto and 'nas lições F04 e F05 antes da aula' not in texto and 'antes da aula, no manual' in texto
+    # 14/11/2026: sem «, no manual» (as lições não dizem que os quatro poemas estão no manual); a ordem de ler antes da aula fica.
+    assert 'núcleo' not in texto and 'nas lições F04 e F05 antes da aula' not in texto and 'antes da aula, no manual' not in texto
+    assert 'lê os dois poemas de cada tema antes da aula. As lições F04 e F05 citam só alguns versos' in texto
     page.evaluate('document.querySelector("#arquivo-producoes").open = true')
     for n in (1, 2, 3):
         page.locator(f'button.tarefa[data-n="{n}"]').click()

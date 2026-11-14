@@ -127,7 +127,7 @@
   ],
   "entrega_titulo": "Entrega no Teams",
   "rever_titulo": "Se precisares de rever",
-  "_nota": "13/11/2026: a página da tarefa sai só desta chave (scripts/tarefa_facil.py) e de «titulo», «unidade», «aquecer» (ligação e minutos) e «opcional». As outras chaves antigas («aquecer.texto», «lead», «nucleo», «temas», «apoios», «dossie», «dossie_titulo», «criterios», «fecho», «clareza») já não aparecem na página: ficam como estavam para a leitura histórica das camadas de baixo. Os quatro poemas ainda têm direitos de autor (Eugénio de Andrade faleceu em 2005, lição F04; Ana Luísa Amaral, em 2022, lição F05): não se copiam. Cada um tem um bloco «Onde está o texto», só com os versos que as lições F04 e F05 já citam, letra a letra, e a remissão para o manual, sem número de página. O dossiê antigo (as ligações para as publicações e as condições de consulta) não aparece: as condições passaram a alíneas do plano e do texto, e as publicações continuam nas lições F04 e F05, para onde a linha de fonte e o cartão «Rever a matéria» remetem.",
+  "_nota": "13/11/2026: a página da tarefa sai só desta chave (scripts/tarefa_facil.py) e de «titulo», «unidade», «aquecer» (ligação e minutos) e «opcional». As outras chaves antigas («aquecer.texto», «lead», «nucleo», «temas», «apoios», «dossie», «dossie_titulo», «criterios», «fecho», «clareza») já não aparecem na página: ficam como estavam para a leitura histórica das camadas de baixo. Os quatro poemas ainda têm direitos de autor (Eugénio de Andrade faleceu em 2005, lição F04; Ana Luísa Amaral, em 2022, lição F05): não se copiam. Cada um tem um bloco «Onde está o texto», só com os versos que as lições F04 e F05 já citam, letra a letra, e a linha de fonte, que diz onde ler o poema completo, sem número de página: o manual, só para «As Palavras» (a lição F04 manda usar «a edição do manual»), e, para os quatro, o cartão da lição que dá a publicação. O dossiê antigo (as ligações para as publicações e as condições de consulta) não aparece: as condições passaram a alíneas do plano e do texto, e as publicações continuam nas lições F04 e F05, para onde a linha de fonte e o cartão «Rever a matéria» remetem.",
   "fazer": [
    "Faz o aquecimento (10 minutos).",
    "Escolhe um tema: A ou B. Cada tema tem dois poemas.",
@@ -136,7 +136,7 @@
    "Escreve duas linhas finais.",
    "Revê e entrega no Teams."
   ],
-  "modo": "Trabalhas à mão. O aquecimento e a tarefa são com consulta: podes usar as lições do site, o caderno e o dicionário.",
+  "modo": "Antes da aula, lê os dois poemas de cada tema. Trabalhas à mão. O aquecimento e a tarefa são com consulta: podes usar as lições do site, o caderno e o dicionário.",
   "juntos_em_papel": true,
   "grelha_nota": "A autoavaliação da grelha é só para ti: não se entrega. Na grelha, a tua apreciação chama-se «juízo crítico».",
   "quadro": {
@@ -190,7 +190,7 @@
     "nome": "Eugénio de Andrade",
     "intro": "Compara «As Palavras» e «Adeus», de Eugénio de Andrade.",
     "antes": [
-     "Os dois poemas têm direitos de autor. Por isso não estão copiados nesta página: lê-os no teu manual. Vê <a href=\"#texto-1\">onde está cada poema</a>, por baixo dos passos."
+     "Os dois poemas têm direitos de autor. Por isso não estão copiados nesta página. Vê <a href=\"#texto-1\">onde ler cada poema</a>, por baixo dos passos."
     ],
     "passos": [
      "Explica como a linguagem ganha ou perde força em cada poema.",
@@ -212,8 +212,8 @@
          ]
         }
        ],
-       "fonte": "Eugénio de Andrade, «As Palavras». O poema completo lê-se no manual.",
-       "origem": "m8/licao-m8-f04/index.html, cartão 7 («Para entender»: «São como um cristal, / as palavras.», copiado letra a letra); a linha de fonte, do cartão 4 («O texto»), que manda usar a edição do manual; o ano da morte do autor (2005), do cartão 2"
+       "fonte": "Eugénio de Andrade, «As Palavras», de <i>Até Amanhã</i>. O poema completo lê-se no manual. A lição F04 também diz onde o ler: cartão «O texto».",
+       "origem": "m8/licao-m8-f04/index.html, cartão 7 («Para entender»: «São como um cristal, / as palavras.», copiado letra a letra); a linha de fonte, do cartão 4 («O texto»), que manda usar a edição do manual; o ano da morte do autor (2005), do cartão 2; o livro (<i>Até Amanhã</i>), do colofão da lição («Fontes: Eugénio de Andrade, «As Palavras», Até Amanhã»)"
       },
       {
        "id": "texto-2",
@@ -228,13 +228,11 @@
          ]
         }
        ],
-       "fonte": "Eugénio de Andrade, «Adeus», de <i>Os Amantes sem Dinheiro</i> (1950). O poema completo lê-se no manual.",
+       "fonte": "Eugénio de Andrade, «Adeus», de <i>Os Amantes sem Dinheiro</i> (1950). A lição F04 diz onde ler o poema completo: cartão «Outra leitura».",
        "origem": "m8/licao-m8-f04/index.html, cartão 25 («Outra leitura»: os dois versos e a linha de fonte, copiados letra a letra)"
       }
      ],
-     "notas": [
-      "Se não encontrares um poema no manual, a lição F04 diz onde o ler: cartões «O texto» e «Outra leitura»."
-     ]
+     "notas": []
     }
    },
    {
@@ -242,7 +240,7 @@
     "nome": "Ana Luísa Amaral",
     "intro": "Compara «Prece no Mediterrâneo» e «A verdade histórica», de Ana Luísa Amaral.",
     "antes": [
-     "Os dois poemas têm direitos de autor. Por isso não estão copiados nesta página: lê-os no teu manual. Vê <a href=\"#texto-3\">onde está cada poema</a>, por baixo dos passos.",
+     "Os dois poemas têm direitos de autor. Por isso não estão copiados nesta página. Vê <a href=\"#texto-3\">onde ler cada poema</a>, por baixo dos passos.",
      "Uma prece é uma oração: um pedido. Um relato doméstico conta um caso passado em casa."
     ],
     "passos": [
@@ -264,7 +262,7 @@
          ]
         }
        ],
-       "fonte": "Ana Luísa Amaral, «Prece no Mediterrâneo», <i>Ágora</i>, Assírio &amp; Alvim, 2019. O poema completo lê-se no manual.",
+       "fonte": "Ana Luísa Amaral, «Prece no Mediterrâneo», <i>Ágora</i>, Assírio &amp; Alvim, 2019. A lição F05 diz onde ler o poema completo: cartão «O texto».",
        "origem": "m8/licao-m8-f05/index.html, cartão 3 («O essencial»: «Em vez de peixes, Senhor, / dai-nos a paz», copiado letra a letra); a linha de fonte, do cartão 4 («O texto»); o ano da morte da autora (2022), do cartão 2"
       },
       {
@@ -282,13 +280,11 @@
          ]
         }
        ],
-       "fonte": "Ana Luísa Amaral, «A verdade histórica», em <i>PÁ: Poesia &amp; Outras Artes</i>, n.º 0, Casa Comum/U.Porto Press, setembro de 2023. O poema completo lê-se no manual.",
+       "fonte": "Ana Luísa Amaral, «A verdade histórica», em <i>PÁ: Poesia &amp; Outras Artes</i>, n.º 0, Casa Comum/U.Porto Press, setembro de 2023. A lição F05 diz onde ler o poema completo: cartão «Outra leitura».",
        "origem": "m8/licao-m8-f05/index.html, cartão 24 («Outra leitura»: os quatro versos e a linha de fonte, copiados letra a letra; a linha de fonte sem as páginas da revista)"
       }
      ],
-     "notas": [
-      "Se não encontrares um poema no manual, a lição F05 diz onde o ler: cartões «O texto» e «Outra leitura»."
-     ]
+     "notas": []
     }
    }
   ],
@@ -356,11 +352,11 @@
       "paragrafos": [
        {
         "al": "Alínea b):",
-        "t": "Em A, «bebe» faz a janela parecer absorver a manhã. Em B, «mede» faz a janela parecer delimitar a sua passagem."
+        "t": "Em A, «bebe» faz a janela receber a manhã como quem tem sede. Em B, «mede» faz a janela olhar a manhã de fora, como uma régua."
        },
        {
         "al": "Alínea c):",
-        "t": "Os dois textos têm a mesma janela e a mesma manhã, mas a manhã passa de experiência a medida."
+        "t": "Nos dois textos, a janela e a manhã são as mesmas. Só o verbo muda, e com ele a distância: A junta a janela à manhã, B separa-as."
        }
       ]
      }
@@ -392,7 +388,7 @@
    "Confirma que as fotografias mostram o trabalho completo.",
    "Entrega as fotografias na tarefa do Teams."
   ],
-  "rever_texto": "Os poemas não estão nesta página: lê-os no manual. As lições servem para rever a matéria.",
+  "rever_texto": "Os poemas não estão nesta página: o cartão do tema diz onde ler cada um. As lições servem para rever a matéria.",
   "rever": [
    {
     "para": "Tema A",

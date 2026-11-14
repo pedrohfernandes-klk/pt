@@ -115,7 +115,7 @@ PASSOS = {'m8-u1': [['Explica como a linguagem ganha ou perde força em cada poe
 ONDE = {
     'm8-u1': [
         ('texto-1', '«As Palavras», de Eugénio de Andrade', F04, 7, 'barra', ['São como um cristal,', 'as palavras.'],
-         F04, 4, 'Eugénio de Andrade, «As Palavras».', (F04, 2, '<b>2005</b><span class="tx">Morre no Porto.</span>', 2005)),
+         F04, 4, 'Eugénio de Andrade, «As Palavras»', (F04, 2, '<b>2005</b><span class="tx">Morre no Porto.</span>', 2005)),
         ('texto-2', '«Adeus», de Eugénio de Andrade', F04, 25, 'br', ['Já gastámos as palavras pela rua, meu amor,', 'e o que nos ficou não chega'],
          F04, 25, 'Eugénio de Andrade, «Adeus», de <i>Os Amantes sem Dinheiro</i> (1950).', (F04, 2, '<b>2005</b><span class="tx">Morre no Porto.</span>', 2005)),
         ('texto-3', '«Prece no Mediterrâneo», de Ana Luísa Amaral', F05, 3, 'barra', ['Em vez de peixes, Senhor,', 'dai-nos a paz'],
@@ -133,16 +133,60 @@ ONDE = {
          (F08, 2, 'Maria Judite de Carvalho (1921–⁠1998)', 1998)),
     ],
 }
-REMISSAO = {'m8-u1': ' O poema completo lê-se no manual.', 'm8-u2': ' O conto completo lê-se no manual.'}
-# De onde vem cada frase dos exemplos: os dados do aquecimento da mesma tarefa, letra a letra (fora as marcas de itálico _…_).
-EXEMPLOS_DO_AQUECIMENTO = {
-    'm8-u1': ['Dois textos inventados: A. A janela bebe a manhã. B. A janela mede a manhã.', 'a janela parece [1] a manhã', 'absorver', 'delimitar',
-              'a sua passagem', 'a manhã passa de experiência a medida'],
-    'm8-u2': ['Caso inventado: Inês recebe um convite para cantar. Guarda-o no bolso e continua a ensaiar em voz baixa. O narrador não diz se ela '
-              'aceita o convite.', 'Inês pode estar a preparar-se para aceitar', 'ela já podia ensaiar antes de receber o convite',
-              'a leitura de que Inês ensaia para aceitar', 'O ensaio [1] a hipótese de aceitação, mas o silêncio do narrador [2] a certeza.',
-              'sustenta', 'limita'],
+# 14/11/2026: a linha de fonte de cada bloco, inteira. Só diz «lê-se no manual» onde uma lição o confirma (a lição F04 manda usar «a
+# edição do manual» para «As Palavras»; a lição F12, «a passagem do manual» para «George»); para os outros três poemas diz que cartão
+# da lição dá a publicação onde se lê o poema completo (as lições não dizem que estão no manual). Fica igual ou mais exigente: confere-se
+# a linha inteira, letra a letra, e o que diz confere-se na lição.
+FONTE_PAGINA = {
+    ('m8-u1', 'texto-1'): f'Eugénio de Andrade, «As Palavras», de <i>Até Amanhã</i>. O poema completo lê-se no manual. A lição{N}F04 também diz onde o ler: cartão «O texto».',
+    ('m8-u1', 'texto-2'): f'Eugénio de Andrade, «Adeus», de <i>Os Amantes sem Dinheiro</i> (1950). A lição{N}F04 diz onde ler o poema completo: cartão «Outra leitura».',
+    ('m8-u1', 'texto-3'): f'Ana Luísa Amaral, «Prece no Mediterrâneo», <i>Ágora</i>, Assírio &amp; Alvim, 2019. A lição{N}F05 diz onde ler o poema completo: cartão «O texto».',
+    ('m8-u1', 'texto-4'): f'Ana Luísa Amaral, «A verdade histórica», em <i>PÁ: Poesia &amp; Outras Artes</i>, n.º{N}0, Casa Comum/U.Porto Press, setembro de 2023. A lição{N}F05 diz onde ler o poema completo: cartão «Outra leitura».',
+    ('m8-u2', 'texto-1'): 'Maria Judite de Carvalho, «George», em <i>Seta Despedida</i>, Mem Martins, Europa-América, 1995. O conto completo lê-se no manual.',
 }
+# Onde uma lição diz que o texto se lê no manual: (lição, cartão, frase letra a letra).
+NO_MANUAL = {('m8-u1', 'texto-1'): (F04, 4, 'Usa o texto publicado nessa página ou a edição do manual.'),
+             ('m8-u2', 'texto-1'): (F12, 11, 'Para «George», usa a passagem do manual.')}
+# 14/11/2026: a ordem de ler os poemas antes da aula (a do enunciado de antes, «Lê os poemas completos antes da aula», e a do guia),
+# no primeiro cartão da m8-u1, à vista no ecrã e em papel.
+ANTES_DA_AULA = 'Antes da aula, lê os dois poemas de cada tema.'
+# 14/11/2026: na m8-u1, «manual» fica duas vezes à vista: a linha de fonte de «As Palavras» e a alínea de onde se leu (eram 10).
+MANUAL_U1 = 2
+# De onde vem o caso dos exemplos: os dados do aquecimento da mesma tarefa, letra a letra (fora as marcas de itálico _…_).
+# 14/11/2026: só o caso vem do aquecimento. As frases dos exemplos já não copiam respostas do aquecimento (a objeção do ensaio
+# habitual, que é a resposta certa da pergunta opcional; a frase de completar já preenchida; os passos de ordenar; a frase
+# «a manhã passa de experiência a medida», quase a opção certa A): test_exemplos_com_outro_caso confere que nenhuma resposta do
+# aquecimento aparece nos exemplos, o que é mais exigente do que conferir só a resposta certa da pergunta opcional.
+EXEMPLOS_DO_AQUECIMENTO = {
+    'm8-u1': ['Dois textos inventados: A. A janela bebe a manhã. B. A janela mede a manhã.'],
+    'm8-u2': ['Caso inventado: Inês recebe um convite para cantar. Guarda-o no bolso e continua a ensaiar em voz baixa. O narrador não diz se ela '
+              'aceita o convite.'],
+}
+
+
+def respostas_do_aquecimento(aq):
+    """14/11/2026: as respostas que o aquecimento dá (sem as marcas _…_, em minúsculas): a opção certa de cada escolha, as palavras
+    certas e a frase preenchida de cada cartão de completar, a frase revista de cada cartão de rever, cada passo de ordenar (sem o verbo
+    de ordem do princípio) e cada par de emparelhar."""
+    tira = lambda s: solto(re.sub(r'_([^_]+)_', r'\1', s)).strip().rstrip('.').lower()
+    out = []
+    for c in aq['cartoes']:
+        if c['t'] == 'escolha':
+            out.append(tira(c['o'][c['c']]))
+        elif c['t'] == 'completar':
+            frase = c['frase']
+            for i, l in enumerate(c['lacunas'], 1):
+                out.append(tira(l['o'][l['c']]))
+                frase = frase.replace(f'[{i}]', l['o'][l['c']])
+            out.append(tira(frase))
+        elif c['t'] == 'rever':
+            out.append(tira(c['o'][c['c']]))
+            out.append(tira(c['frase'].replace(c['trecho'], c['o'][c['c']])))
+        elif c['t'] == 'ordenar':
+            out += [tira(x.split(' ', 1)[1]) for x in c['passos']]
+        elif c['t'] == 'emparelhar':
+            out += [tira(b) for a, b in c['pares']]
+    return [x for x in out if x]
 # As trocas de palavras das duas grelhas (página do aluno e versão de correção): as palavras do enunciado novo.
 TROCAS_COMUNS = [
     ['com núcleo de planificação e síntese de duas linhas fora da contagem.', 'com plano e duas linhas finais. ' + NAO_CONTAM],
@@ -163,7 +207,9 @@ TROCAS_MODULO = {
         ('<p>Unidade 1: lê os dois poemas de cada tema nas lições F04 e F05 antes da aula. Os cartões «Outra leitura» são um primeiro contacto; as leituras completas continuam disponíveis nas fontes indicadas. Unidade 2: traz o conto «George» completo.</p>',
          # 14/11/2026: «O texto» e «Outra leitura», como no enunciado da m8-u1 (o poema 1 de cada lição está no cartão «O texto», o
          # poema 2 no cartão «Outra leitura»); a troca continua a conferir-se inteira, letra a letra.
-         '<p>Unidade 1: lê os dois poemas de cada tema antes da aula, no manual. As lições F04 e F05 citam só alguns versos; os cartões «O texto» e «Outra leitura» dizem onde ler cada poema. Unidade 2: traz o conto «George» completo, no manual.</p>', 1),
+         # 14/11/2026: sem «, no manual» depois de «antes da aula» (as lições só dizem que «As Palavras» está no manual; os cartões
+         # dizem onde ler cada poema); a troca continua a conferir-se inteira, letra a letra.
+         '<p>Unidade 1: lê os dois poemas de cada tema antes da aula. As lições F04 e F05 citam só alguns versos; os cartões «O texto» e «Outra leitura» dizem onde ler cada poema. Unidade 2: traz o conto «George» completo, no manual.</p>', 1),
         ('<div class="regra"><b>Três antes de mim.</b> Antes de chamares o docente:<ol><li>relê o enunciado;</li><li>vê a rubrica;</li><li>pergunta ao teu par de trabalho.</li></ol>',
          '<div class="regra"><b>Dois antes de mim.</b> Antes de chamares o docente:<ol><li>relê o enunciado;</li><li>vê a rubrica.</li></ol>', 1),
         (f'<b>Ler o enunciado, 5{N}min</b><span>Lê o núcleo comum e os temas A e B.</span>',
@@ -375,7 +421,10 @@ class TarefasFaceisM8(unittest.TestCase):
         self.assertIn('indica título e verso ou estrofe de cada indício. Cita no máximo quatro versos de cada poema. Se usares outro exemplar, regista a edição.',
                       a1['dossie'][4]['facto'])
         self.assertIn('Lê os poemas completos antes da aula.', a1['dossie'][4]['facto'])
-        self.assertIn('lê os dois poemas de cada tema antes da aula, no manual', ler(GUIA))
+        # 14/11/2026: no guia, sem «no manual» (as lições não dizem que os quatro poemas estão no manual); no enunciado, a mesma ordem.
+        self.assertIn('lê os dois poemas de cada tema antes da aula. As lições F04 e F05 citam só alguns versos', ler(GUIA))
+        self.assertNotIn('antes da aula, no manual', ler(GUIA))
+        self.assertTrue(u1['modo'].startswith(ANTES_DA_AULA))
         # m8-u2: as condições do dossiê de antes são agora alíneas e linhas de ajuda.
         self.assertIn('Usa dois momentos distintos. A localização pode ser a página do teu exemplar e o início da passagem, sem copiar o conto. '
                       'Não é pedido qualquer relato da tua vida.', a2['dossie'][2]['facto'])
@@ -478,7 +527,26 @@ class TarefasFaceisM8(unittest.TestCase):
                     # A linha de fonte é a da lição (o seu princípio, letra a letra) e diz que o texto completo se lê no manual, sem
                     # número de página.
                     self.assertIn(fonte, cartoes(licao_fonte)[k_fonte - 1]['html'])
-                    self.assertEqual(o['fonte'], fonte + ('.' if not fonte.endswith('.') else '') + REMISSAO[slug])
+                    # 14/11/2026: a linha inteira, letra a letra (antes: o princípio da lição e «lê-se no manual» em todas).
+                    self.assertTrue(o['fonte'].startswith(fonte), (o['fonte'], fonte))
+                    self.assertEqual(o['fonte'], FONTE_PAGINA[(slug, ident)])
+                    if (slug, ident) in NO_MANUAL:
+                        # Diz que o texto se lê no manual só porque uma lição o diz.
+                        l_m, k_m, frase_m = NO_MANUAL[(slug, ident)]
+                        self.assertIn(frase_m, cartoes(l_m)[k_m - 1]['html'])
+                        self.assertIn(' completo lê-se no manual.', o['fonte'])
+                    else:
+                        # Não diz que está no manual (nenhuma lição o diz); diz que cartão da lição dá a publicação, e esse cartão
+                        # tem o nome, o título do poema e a ligação para a publicação.
+                        self.assertNotIn('manual', o['fonte'])
+                        rot = re.search(r'cartão «([^»]+)»\.$', o['fonte']).group(1)
+                        self.assertIn(f'A lição{N}F{licao_fonte[13:15]} ', o['fonte'])
+                        c_pub = cartoes(licao_fonte)[k_fonte - 1]
+                        self.assertEqual(c_pub.get('rot'), rot)
+                        self.assertIn(titulo.split('»')[0] + '»', c_pub['html'])
+                        self.assertRegex(c_pub['html'], r'<a href="https://[^"]+" target="_blank" rel="noopener">Ler ')
+                        manual_na_licao = [c for c in cartoes(licao_fonte) if titulo.split('»')[0][1:] in json.dumps(c, ensure_ascii=False) and 'manual' in json.dumps(c, ensure_ascii=False)]
+                        self.assertEqual(manual_na_licao, [], ident)
                     self.assertNotRegex(solto(sem_marcas(o['fonte'])), r'(?i)\bpp?\. ?\d|\bpágina \d|\bpág')
                     self.assertIn(licao, o['origem'])
                     self.assertIn(f'cartão {k} ', o['origem'])
@@ -498,7 +566,8 @@ class TarefasFaceisM8(unittest.TestCase):
             # Fora das citações, a página não tem nenhum verso nem frase dos textos: tudo o que está entre «» na página é um título, uma
             # palavra do enunciado ou uma frase dos exemplos (caso inventado).
             lido = solto(visivel(pagina))
-            self.assertEqual(len(re.findall(r'\bmanual\b', lido)), {'m8-u1': 10, 'm8-u2': 6}[slug], slug)
+            # 14/11/2026: na m8-u1, «manual» só fica onde uma lição o confirma («As Palavras») e na alínea e na pergunta de onde se leu.
+            self.assertEqual(len(re.findall(r'\bmanual\b', lido)), {'m8-u1': MANUAL_U1, 'm8-u2': 6}[slug], slug)
             self.assertNotRegex(lido, r'(?i)\bpp?\. ?\d|\bpágina \d')
             self.assertIn('direitos de autor', lido)
         u1, u2 = (json.loads(ler(rel))['facil'] for rel in DADOS_TAREFAS)
@@ -506,9 +575,10 @@ class TarefasFaceisM8(unittest.TestCase):
         self.assertEqual([[o['id'] for o in t['material']['onde']] for t in u1['temas']], [['texto-1', 'texto-2'], ['texto-3', 'texto-4']])
         self.assertNotIn('temas_material', u1)
         for t, k, licao in zip(u1['temas'], (1, 3), ('F04', 'F05')):
-            self.assertEqual(t['antes'][0], 'Os dois poemas têm direitos de autor. Por isso não estão copiados nesta página: lê-os no teu manual. '
-                             f'Vê <a href="#texto-{k}">onde está cada poema</a>, por baixo dos passos.')
-            self.assertEqual(t['material']['notas'], [f'Se não encontrares um poema no manual, a lição{N}{licao} diz onde o ler: cartões «O texto» e «Outra leitura».'])
+            # 14/11/2026: sem «lê-os no teu manual» (as lições só o dizem de «As Palavras»); a linha de fonte de cada bloco diz onde ler.
+            self.assertEqual(t['antes'][0], 'Os dois poemas têm direitos de autor. Por isso não estão copiados nesta página. '
+                             f'Vê <a href="#texto-{k}">onde ler cada poema</a>, por baixo dos passos.')
+            self.assertEqual(t['material']['notas'], [])
             self.assertEqual([o['frases'] for o in t['material']['onde']], [[], []])
         for licao in (F04, F05):
             arr = cartoes(licao)
@@ -568,6 +638,14 @@ class TarefasFaceisM8(unittest.TestCase):
                     letras = set(re.findall(r'([a-g])\)', ' '.join(rotulos)))
                     self.assertLessEqual(len(letras), len(x['alineas']))
                     self.assertTrue(letras <= set('abcdefg'[:len(x['alineas'])]))
+                # 14/11/2026: nenhuma resposta do aquecimento está nos exemplos (fora o caso, que é o mesmo), nem uma frase do aquecimento
+                # já preenchida; e nenhuma frase dos exemplos (fora o contexto) está nos dados do aquecimento.
+                juntos_min = juntos.lower()
+                for r in respostas_do_aquecimento(aq):
+                    self.assertNotIn(r, juntos_min.replace(EXEMPLOS_DO_AQUECIMENTO[slug][0].lower().rstrip('.'), ''), (slug, r))
+                for x in f['depois']:
+                    for par in x['exemplos'][0]['paragrafos']:
+                        self.assertNotIn(solto(par['t']).rstrip('.'), fonte_aq, par['t'])
                 # A resposta certa da pergunta opcional (que é também um cartão do aquecimento) não está nos exemplos.
                 certa = [o['texto'] for o in d['opcional']['opcoes'] if o['certa']]
                 self.assertEqual(len(certa), 1)
@@ -575,12 +653,17 @@ class TarefasFaceisM8(unittest.TestCase):
                 self.assertNotIn(certa[0].rstrip('.').split(' ', 2)[-1], juntos)
         u1, u2 = (json.loads(ler(rel))['facil'] for rel in DADOS_TAREFAS)
         self.assertEqual([p['t'] for p in u1['depois'][1]['exemplos'][0]['paragrafos']],
-                         ['Em A, «bebe» faz a janela parecer absorver a manhã. Em B, «mede» faz a janela parecer delimitar a sua passagem.',
-                          'Os dois textos têm a mesma janela e a mesma manhã, mas a manhã passa de experiência a medida.'])
+                         # 14/11/2026: frases novas, que não repetem a frase de completar do aquecimento já preenchida nem a opção certa A.
+                         ['Em A, «bebe» faz a janela receber a manhã como quem tem sede. Em B, «mede» faz a janela olhar a manhã de fora, como uma régua.',
+                          'Nos dois textos, a janela e a manhã são as mesmas. Só o verbo muda, e com ele a distância: A junta a janela à manhã, B separa-as.'])
         self.assertEqual([p['t'] for p in u2['depois'][1]['exemplos'][0]['paragrafos']],
-                         ['Há quem possa dizer que Inês já podia ensaiar antes de receber o convite.',
-                          'O ensaio sustenta a hipótese de aceitação, mas o silêncio do narrador limita a certeza.',
+                         # 14/11/2026: outra objeção (a voz baixa como receio), que não é a resposta certa da pergunta opcional, e uma
+                         # resposta que não é a frase de completar do aquecimento já preenchida.
+                         ['Há quem possa dizer que ensaiar em voz baixa mostra receio de cantar em público.',
+                          'Mesmo com receio, Inês não para de ensaiar depois de guardar o convite: o receio não apaga a preparação.',
                           'O caso diz que Inês continua a ensaiar. Eu concluo que talvez se prepare para aceitar: o narrador não diz se ela aceita o convite.'])
+        self.assertEqual([p['t'] for p in u2['depois'][0]['exemplos'][0]['paragrafos']][0::2],
+                         ['Penso que Inês talvez se prepare para aceitar o convite.', 'Ensaiar em voz baixa pode mostrar receio de cantar em público.'])
         # As notas das grelhas continuam verdadeiras: os exemplos das grelhas são inventados e usam outros casos.
         for slug in SLUGS:
             self.assertIn('Os exemplos são inventados e usam outros casos. Não são respostas à tarefa.', json.loads(ler(GRELHAS))['tarefas'][slug]['nota'])
@@ -630,11 +713,21 @@ class TarefasFaceisM8(unittest.TestCase):
             lido = solto(visivel(pagina))
             with self.subTest(tarefa=slug):
                 # «Com consulta» diz-se uma vez, no primeiro cartão, com o que quer dizer.
-                self.assertEqual(f['modo'], CONSULTA)
+                # 14/11/2026: na m8-u1, a frase do «com consulta» vem depois da ordem de ler os poemas antes da aula; a frase fica igual.
+                self.assertEqual(f['modo'], (ANTES_DA_AULA + ' ' if slug == 'm8-u1' else '') + CONSULTA)
                 self.assertEqual(lido.count('com consulta'), 1)
                 self.assertEqual(len(re.findall(r'\bconsultas?\b', lido.lower())), 1)
                 cabeca = pagina[pagina.index('<header>'):pagina.index('</header>')]
-                self.assertIn(f'<p class="tf-p">{CONSULTA}</p>', cabeca)
+                self.assertIn(f'<p class="tf-p">{f["modo"]}</p>', cabeca)
+                # 14/11/2026: a ordem de ler os poemas antes da aula está no primeiro cartão (à vista e em papel: fora de .tf-so-ecra e
+                # de qualquer desdobrável), uma só vez, e o guia diz o mesmo; na m8-u2 não há poemas.
+                if slug == 'm8-u1':
+                    self.assertEqual(lido.count(ANTES_DA_AULA), 1)
+                    self.assertNotIn('<details', cabeca)
+                    self.assertNotIn('tf-so-ecra', cabeca[:cabeca.index(ANTES_DA_AULA)].rsplit('<p', 1)[-1])
+                    self.assertIn('lê os dois poemas de cada tema antes da aula.', ler(GUIA))
+                else:
+                    self.assertNotIn('antes da aula', lido)
                 # O que não conta para as palavras: a mesma frase no enunciado, na grelha e no guia.
                 self.assertEqual(f['quadro']['notas'][1], NAO_CONTAM)
                 self.assertEqual(lido.count(NAO_CONTAM), 1)

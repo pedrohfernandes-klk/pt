@@ -28,8 +28,8 @@ Ficheiros (13):
   dizia «a edição consultada», «posição» onde a grelha da m8-u2 dizia «tese», e a frase do que não conta para as palavras);
 - as páginas: tarefas/m8-u1/ e tarefas/m8-u2/ (enunciado, grelha/ e correcao/);
 - as páginas do módulo que falam da aula de tarefa: m8/guia-da-tarefa-m8/ (10 minutos de leitura e 55 de produção em vez de 5 e 60,
-  no texto e nos quatro blocos; «plano» em vez de «núcleo»; a frase do que não conta para as palavras; os poemas leem-se no manual,
-  e não «nas lições F04 e F05», que só citam alguns versos; sem a «Autoavaliação» que se copiava para o Teams e sem «pergunta ao teu
+  no texto e nos quatro blocos; «plano» em vez de «núcleo»; a frase do que não conta para as palavras; os poemas leem-se antes da aula,
+  onde os cartões «O texto» e «Outra leitura» das lições F04 e F05 dizem, e não «nas lições F04 e F05», que só citam alguns versos; sem a «Autoavaliação» que se copiava para o Teams e sem «pergunta ao teu
   par de trabalho»: a regra passa a chamar-se «Dois antes de mim»), m8/portefolio-do-modulo-m8/ (saem «autoavaliação /20» e
   «trabalho de equipa», sem nada no lugar; «plano» e «duas linhas finais» onde dizia «núcleo» e «duas linhas de síntese»),
   m8/index.html («tema A ou B, plano, texto» onde dizia «planificação, tema A ou B», três vezes) e m8/mapa-do-modulo-m8/ («As duas
@@ -41,8 +41,11 @@ os seus casos inventados (a janela que bebe ou mede a manhã; Inês e o convite)
 DIREITOS DE AUTOR (decisão do docente para todo o M8): os textos destas duas tarefas ainda têm direitos de autor e não se copiam para
 a página. As datas vêm das lições: Eugénio de Andrade morre em 2005 (lição F04, «Linha de vida»), Ana Luísa Amaral em 2022 (lição
 F05, «Linha de vida») e Maria Judite de Carvalho em 1998 (lição F08, «O essencial»: 1921–1998). Cada texto tem um bloco «Onde está o
-texto» com as citações curtas que as lições do M8 já publicam, letra a letra, e a linha de fonte, que remete para o manual sem
-número de página:
+texto» com as citações curtas que as lições do M8 já publicam, letra a letra, e a linha de fonte, sem número de página. 14/11/2026:
+a linha de fonte só diz «lê-se no manual» onde uma lição o confirma («As Palavras»: a lição F04 manda usar «a edição do manual»;
+«George»: a lição F12 manda usar «a passagem do manual»); para «Adeus», «Prece no Mediterrâneo» e «A verdade histórica» diz que
+cartão da lição F04 ou F05 indica onde ler o poema completo. O primeiro cartão da m8-u1 manda ler os poemas antes da aula, como
+o enunciado de antes e o guia:
 - m8-u1, Texto 1, «As Palavras»: «São como um cristal, / as palavras.» (lição F04, «Para entender»);
 - m8-u1, Texto 2, «Adeus»: os dois versos do cartão «Outra leitura» da lição F04;
 - m8-u1, Texto 3, «Prece no Mediterrâneo»: «Em vez de peixes, Senhor, / dai-nos a paz» (lição F05, «O essencial»);
@@ -61,7 +64,9 @@ caso) fica em desdobrável fechado no ecrã e não sai em papel; a verificação
 
 Os exemplos (regra do docente: sempre com outro caso, sem frases dos textos da tarefa, sem dar feita nenhuma alínea): na m8-u1, os
 dois textos inventados do aquecimento («A janela bebe a manhã.» e «A janela mede a manhã.»); na m8-u2, o caso inventado do
-aquecimento (Inês e o convite para cantar). As frases são as do aquecimento; nenhuma repete a resposta certa da pergunta opcional.
+aquecimento (Inês e o convite para cantar). 14/11/2026: as frases dos exemplos não
+repetem nenhuma resposta do aquecimento (nem a resposta certa da pergunta opcional, que é também um cartão do aquecimento): a
+objeção do exemplo da m8-u2 é outra («ensaiar em voz baixa» como receio), e nenhuma frase do aquecimento aparece já preenchida.
 
 O molde ganhou chaves opcionais (scripts/tarefa_facil.py): num bloco «onde_esta», «citacoes» (e «nomes» e «lista» opcionais); no
 material de um tema e no material dos dois temas, «onde» (uma lista de blocos). A folha assets/task-textos.css ganhou as regras das
@@ -129,7 +134,8 @@ ACHADOS = {
                 'autoavaliação é só para o aluno e não se entrega; o plano, as notas e a lista de verificação continuam a copiar-se.',
     'sem_par': 'Decisão do docente (13/11/2026): não há trabalho de grupo nem de pares; a regra fica com os dois primeiros passos '
                '(«Dois antes de mim»).',
-    'manual': 'Os poemas da unidade 1 não estão nas lições F04 e F05, que só citam alguns versos: leem-se no manual, antes da aula.',
+    'manual': 'Os poemas da unidade 1 não estão nas lições F04 e F05, que só citam alguns versos: leem-se antes da aula, onde os '
+              'cartões «O texto» e «Outra leitura» dessas lições dizem.',
     'sem_equipa': 'Decisão do docente (13/11/2026): não há trabalho de grupo nem de pares, e a autoavaliação não se entrega; no '
                   'portefólio do módulo saem «trabalho de equipa» e «autoavaliação /20», sem nada no lugar.',
 }
