@@ -145,7 +145,10 @@ def assert_task_page(page, before):
     # tests/browser_tarefas_faceis_m7.py). A m7-u3 escolhe primeiro o tema e escreve um só texto: cinco cartões com nome (Começar, Tema A
     # ou B, O teu texto, Fechar e entregar, Rever a matéria). A m7-u1 e a m7-u2 não têm temas: quatro e sete cartões com nome, e as duas
     # perguntas opcionais de sempre.
-    assert facil == (slug in ('m1-u1', 'm1-u2', 'm3-u1', 'm3-u2', 'm5-u1', 'm5-u2', 'm6-u1', 'm6-u2', 'm7-u1', 'm7-u2', 'm7-u3')) or not slug, slug
+    # 13/11/2026: e as duas tarefas do M8 (camada tarefas_faceis_m8_20261113; o contrato do molde novo confere-se em
+    # tests/test_tarefas_faceis_m8.py e em tests/browser_tarefas_faceis_m8.py): seis cartões com nome (Começar, Tema A ou B, O teu
+    # plano, O teu texto, Fechar e entregar, Rever a matéria), como as outras tarefas de escolha do molde; em papel saem cinco.
+    assert facil == (slug in ('m1-u1', 'm1-u2', 'm3-u1', 'm3-u2', 'm5-u1', 'm5-u2', 'm6-u1', 'm6-u2', 'm7-u1', 'm7-u2', 'm7-u3', 'm8-u1', 'm8-u2')) or not slug, slug
     individual = {'m7-u1': 4, 'm7-u2': 7}.get(slug)
     if individual:
         assert page.locator('[data-task-question]').count() == 2 and page.locator('[data-task-card]').count() == individual, slug

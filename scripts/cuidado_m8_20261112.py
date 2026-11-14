@@ -425,7 +425,12 @@ def bloco(rel, inicio, fim, inclui_fim=False):
 
 
 def ler(rel):
-    return (ROOT / rel).read_bytes().decode('utf-8')
+    # 13/11/2026: por cima desta camada fica a das tarefas do M8 mais fáceis de fazer (tarefas_faceis_m8_20261113), que muda os
+    # enunciados, as grelhas, as correções e os dados da m8-u1 e da m8-u2, os dados das grelhas e o guia, o portefólio, o índice e o
+    # mapa do M8: a «árvore» desta camada é cada ficheiro como ela o deixou, com as camadas das tarefas mais fáceis de fazer desfeitas
+    # (scripts/tarefas_claras_historico.py, com contagem estrita), como nas camadas do M6 e do M7.
+    from tarefas_claras_historico import desfazer_faceis
+    return desfazer_faceis(rel, (ROOT / rel).read_bytes().decode('utf-8'))
 
 
 def base(rel):

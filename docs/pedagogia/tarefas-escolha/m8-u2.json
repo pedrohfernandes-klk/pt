@@ -97,5 +97,254 @@
   "etapa": "2. Faz um plano breve",
   "entrega": "Escreve o tema escolhido (A ou B) no topo. Fotografa o plano, o texto e as duas linhas finais. Confirma que as fotografias mostram o trabalho completo e entrega-as na tarefa do Teams.",
   "escolha_primeiro": true
+ },
+ "facil": {
+  "kicker": "Tarefa individual, 90 minutos",
+  "producao_minutos": 55,
+  "descricao": "aquecimento, um plano e um texto de opinião sobre o conto «George», sobre um tema à escolha",
+  "folha_versao": "20261113-facil-12",
+  "entregas": {
+   "intro": "Fotografias do teu trabalho em papel, na tarefa do Teams: o plano, o texto e as duas linhas finais."
+  },
+  "aquecer": {
+   "titulo": "Relógio do aquecimento"
+  },
+  "verificar_titulo": "Antes de entregar, verifica",
+  "verificar_texto": "Responde sim ou não. Se for não, completa o teu trabalho.",
+  "exemplo_titulo": [
+   "Ver um exemplo com outro caso",
+   "Ver dois exemplos com outros casos"
+  ],
+  "entrega_titulo": "Entrega no Teams",
+  "rever_titulo": "Se precisares de rever",
+  "_nota": "13/11/2026: a página da tarefa sai só desta chave (scripts/tarefa_facil.py) e de «titulo», «unidade», «aquecer» (ligação e minutos) e «opcional». As outras chaves antigas («aquecer.texto», «lead», «nucleo», «temas», «apoios», «dossie», «dossie_titulo», «criterios», «fecho», «clareza») já não aparecem na página: ficam como estavam para a leitura histórica das camadas de baixo. O conto «George» ainda tem direitos de autor (Maria Judite de Carvalho faleceu em 1998, lição F08): não se copia. Tem um bloco «Onde está o texto», só com o recorte de 25 palavras que a lição F16 já publica, letra a letra, e a remissão para o manual, sem número de página. O dossiê antigo (a referência do conto, a ligação da DGE e as condições de consulta) não aparece: as condições passaram a alíneas e a linhas de ajuda do plano e do texto, e a ligação da DGE continua na lição F16, para onde o cartão «Rever a matéria» remete.",
+  "fazer": [
+   "Faz o aquecimento (10 minutos).",
+   "Escolhe um tema: A ou B. Os dois são sobre o conto «George».",
+   "Faz o plano.",
+   "Escreve um texto de opinião.",
+   "Escreve duas linhas finais.",
+   "Revê e entrega no Teams."
+  ],
+  "modo": "Trabalhas à mão. O aquecimento e a tarefa são com consulta: podes usar as lições do site, o caderno e o dicionário.",
+  "juntos_em_papel": true,
+  "grelha_nota": "A autoavaliação da grelha é só para ti: não se entrega.",
+  "quadro": {
+   "titulo": "Tempo e tamanho",
+   "colunas": [
+    "Tempo",
+    "O que fazes",
+    "Palavras"
+   ],
+   "linhas": [
+    [
+     "10 min",
+     "Aquecimento em cartões",
+     ""
+    ],
+    [
+     "10 min",
+     "Leitura do enunciado",
+     ""
+    ],
+    [
+     "55 min",
+     "Plano e texto de opinião (tema A ou B)",
+     "200 a 240"
+    ],
+    [
+     "15 min",
+     "Revisão e entrega",
+     ""
+    ],
+    [
+     "90 min",
+     "Total",
+     "200 a 240"
+    ]
+   ],
+   "notas": [
+    "Nos 10 minutos de leitura, lê os dois temas, o que o plano leva e o que o texto leva.<span class=\"tf-so-ecra\"> Os exemplos são para consultares enquanto escreves.</span>",
+    "Não contam para as palavras: os versos e as passagens citados ou copiados, o plano e as duas linhas finais."
+   ]
+  },
+  "textos": [],
+  "perguntas": [],
+  "temas_titulo": "Escolhe um tema: A ou B",
+  "temas_nota": "Um só texto de opinião: 200 a 240 palavras.",
+  "temas_topo": "Escreve a letra do teu tema (A ou B) no topo. O conto não está copiado nesta página: lê-o completo no teu manual. Vê <a href=\"#texto-1\">onde está o conto</a>, por baixo dos temas.",
+  "temas_relogio": "Começa este relógio depois da leitura.",
+  "temas": [
+   {
+    "letra": "A",
+    "nome": "Partir",
+    "intro": "Partir é, para George, libertação, perda ou ambas?",
+    "passos": [
+     "Defende a tua leitura.",
+     "Considera uma passagem que a ponha em causa."
+    ],
+    "material": {}
+   },
+   {
+    "letra": "B",
+    "nome": "Encontrar o futuro",
+    "intro": "O encontro com a mulher mais velha abre uma possibilidade ou parece fechar o futuro?",
+    "passos": [
+     "Defende a tua leitura.",
+     "Distingue o que o conto diz do que tu concluis."
+    ],
+    "material": {}
+   }
+  ],
+  "temas_material": {
+   "titulo": "Para os dois temas: onde está o Texto 1 (o conto «George»)",
+   "onde": [
+    {
+     "id": "texto-1",
+     "titulo": "<span class=\"tt-num\">Texto 1</span> «George», de Maria Judite de Carvalho",
+     "frases": [
+      "Este conto tem direitos de autor. Por isso não está copiado aqui."
+     ],
+     "citacoes": [
+      {
+       "intro": "Recorte que a lição F16 cita:",
+       "linhas": [
+        "«À sua frente uma senhora de idade, primeiro esboçada, finalmente completa, olha-a atentamente. De idade não, George detesta eufemismos, mesmo só pensados, uma mulher velha.»"
+       ]
+      }
+     ],
+     "fonte": "Maria Judite de Carvalho, «George», em <i>Seta Despedida</i>, Mem Martins, Europa-América, 1995. O conto completo lê-se no manual.",
+     "origem": "m8/licao-m8-f16/index.html, cartão 4 («Lê de perto»: o recorte de 25 palavras e a linha de fonte, copiados letra a letra); o ano da morte da autora (1998), do cartão 2 de m8/licao-m8-f08/index.html; a lição F12 manda usar a passagem do manual"
+    }
+   ]
+  },
+  "depois": [
+   {
+    "id": "o-teu-plano",
+    "nome": "O teu plano",
+    "titulo": "Faz o plano.",
+    "meta": "Não conta para as palavras.",
+    "textos": [],
+    "pedido_titulo": "O que o plano leva",
+    "alineas": [
+     "Escreve a tua posição: a tua resposta à pergunta do tema.",
+     "Indica dois momentos do conto que a apoiem.",
+     "Indica onde se encontram: a página do teu manual e o início de cada passagem.",
+     "Anota uma dificuldade para a tua posição."
+    ],
+    "ajudas": [
+     "Usa dois momentos distintos.",
+     "Basta o início de cada passagem: não copies o conto para o plano."
+    ],
+    "exemplos": [
+     {
+      "titulo": "Um plano com outro caso: o caso inventado do aquecimento",
+      "contexto": "Caso inventado: Inês recebe um convite para cantar. Guarda-o no bolso e continua a ensaiar em voz baixa. O narrador não diz se ela aceita o convite. A pergunta: Inês ensaia para aceitar?",
+      "paragrafos": [
+       {
+        "al": "Alínea a):",
+        "t": "Penso que Inês talvez se prepare para aceitar o convite."
+       },
+       {
+        "al": "Alíneas b) e c):",
+        "t": "«continua a ensaiar em voz baixa», na segunda frase do caso. O caso é curto e só dá este momento; no teu plano, são dois."
+       },
+       {
+        "al": "Alínea d):",
+        "t": "Ensaiar em voz baixa pode mostrar receio de cantar em público."
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "o-teu-texto",
+    "nome": "O teu texto",
+    "titulo": "Escreve o texto de opinião.",
+    "meta": "200 a 240 palavras, sobre o tema A ou o tema B.",
+    "textos": [],
+    "pedido_titulo": "O que o texto leva",
+    "alineas": [
+     "Apresenta a tua posição.",
+     "Desenvolve os argumentos com os dois momentos do conto.",
+     "Apresenta uma objeção.",
+     "Responde à objeção com apoio no conto.",
+     "Distingue a tua interpretação do que o conto permite afirmar sobre a personagem.",
+     "Indica onde leste o conto: o manual ou outra edição.",
+     "Escreve o total de palavras no fim."
+    ],
+    "ajudas": [
+     "Uma objeção é o que diria quem não concorda contigo. A dificuldade do teu plano pode dar a objeção.",
+     "Para distinguires, podes começar frases por «O conto diz» e por «Eu concluo».",
+     "Não é pedido qualquer relato da tua vida."
+    ],
+    "citar": "Se citares, copia as palavras exatas do conto. Põe-nas entre aspas: «…». Indica a página do teu manual.",
+    "exemplos": [
+     {
+      "titulo": "Objeção e resposta com outro caso: o caso inventado do aquecimento",
+      "contexto": "Caso inventado: Inês recebe um convite para cantar. Guarda-o no bolso e continua a ensaiar em voz baixa. O narrador não diz se ela aceita o convite. A pergunta: Inês ensaia para aceitar?",
+      "paragrafos": [
+       {
+        "al": "Alínea c):",
+        "t": "Há quem possa dizer que ensaiar em voz baixa mostra receio de cantar em público."
+       },
+       {
+        "al": "Alínea d):",
+        "t": "Mesmo com receio, Inês não para de ensaiar depois de guardar o convite: o receio não apaga a preparação."
+       },
+       {
+        "al": "Alínea e):",
+        "t": "O caso diz que Inês continua a ensaiar. Eu concluo que talvez se prepare para aceitar: o narrador não diz se ela aceita o convite."
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "finais": {
+   "titulo": "Duas linhas finais",
+   "texto": "Ficam fora da contagem. «Precisar a tua posição» quer dizer torná-la mais exata.",
+   "passos": [
+    "Responde: que objeção te obrigou a precisar a tua posição?",
+    "Mostra o momento do conto a que voltaste."
+   ]
+  },
+  "verificar": [
+   "A letra do meu tema (A ou B) está no topo?",
+   "O plano tem a minha posição, dois momentos do conto e onde se encontram?",
+   "Anotei uma dificuldade para a minha posição?",
+   "O texto apresenta a minha posição?",
+   "Desenvolvi os argumentos com dois momentos distintos do conto?",
+   "Apresentei uma objeção e respondi-lhe com apoio no conto?",
+   "Distingui a minha interpretação do que o conto permite afirmar sobre a personagem?",
+   "Indiquei onde li o conto?",
+   "Tenho 200 a 240 palavras, com o total no fim, e revi a escrita?",
+   "Escrevi as duas linhas finais?"
+  ],
+  "entrega": [
+   "Fotografa o plano, o texto e as duas linhas finais.",
+   "Confirma que as fotografias mostram o trabalho completo.",
+   "Entrega as fotografias na tarefa do Teams."
+  ],
+  "rever_texto": "O conto não está nesta página: lê-o no manual. As lições servem para rever a matéria.",
+  "rever": [
+   {
+    "para": "O conto",
+    "texto": "Lição F08, <a href=\"../../m8/licao-m8-f08/\">«George», uma mulher em três idades</a>. Relê «O essencial»: facto, inferência, interpretação e opinião."
+   },
+   {
+    "para": "Texto 1",
+    "texto": "Lição F16, <a href=\"../../m8/licao-m8-f16/\">Recorte de «George»</a>. Relê «Lê de perto» e «Para entender»."
+   },
+   {
+    "para": "O teu texto",
+    "texto": "Lição F12, <a href=\"../../m8/licao-m8-f12/\">Sugerir em vez de explicar</a>. Relê «Compara»: distinguir o que o texto afirma do que inferes."
+   },
+   {
+    "para": "A escrita",
+    "texto": "Lição F06, <a href=\"../../m8/licao-m8-f06/\">Verbos que duram, palavras que apontam</a>. Relê «Em paralelo»: a que se refere cada palavra que retoma outra."
+   }
+  ],
+  "opcional_titulo": "Experimentar uma pergunta"
  }
 }

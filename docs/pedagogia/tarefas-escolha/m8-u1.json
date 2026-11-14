@@ -107,5 +107,306 @@
   "etapa": "2. Faz um plano breve",
   "entrega": "Escreve o tema escolhido (A ou B) no topo. Fotografa o plano, o texto e as duas linhas finais. Confirma que as fotografias mostram o trabalho completo e entrega-as na tarefa do Teams.",
   "escolha_primeiro": true
+ },
+ "facil": {
+  "kicker": "Tarefa individual, 90 minutos",
+  "producao_minutos": 55,
+  "descricao": "aquecimento, um plano e um texto que compara dois poemas, sobre um tema à escolha",
+  "folha_versao": "20261113-facil-12",
+  "entregas": {
+   "intro": "Fotografias do teu trabalho em papel, na tarefa do Teams: o plano, o texto e as duas linhas finais."
+  },
+  "aquecer": {
+   "titulo": "Relógio do aquecimento"
+  },
+  "verificar_titulo": "Antes de entregar, verifica",
+  "verificar_texto": "Responde sim ou não. Se for não, completa o teu trabalho.",
+  "exemplo_titulo": [
+   "Ver um exemplo com outro caso",
+   "Ver dois exemplos com outros casos"
+  ],
+  "entrega_titulo": "Entrega no Teams",
+  "rever_titulo": "Se precisares de rever",
+  "_nota": "13/11/2026: a página da tarefa sai só desta chave (scripts/tarefa_facil.py) e de «titulo», «unidade», «aquecer» (ligação e minutos) e «opcional». As outras chaves antigas («aquecer.texto», «lead», «nucleo», «temas», «apoios», «dossie», «dossie_titulo», «criterios», «fecho», «clareza») já não aparecem na página: ficam como estavam para a leitura histórica das camadas de baixo. Os quatro poemas ainda têm direitos de autor (Eugénio de Andrade faleceu em 2005, lição F04; Ana Luísa Amaral, em 2022, lição F05): não se copiam. Cada um tem um bloco «Onde está o texto», só com os versos que as lições F04 e F05 já citam, letra a letra, e a linha de fonte, que diz onde ler o poema completo, sem número de página: o manual, só para «As Palavras» (a lição F04 manda usar «a edição do manual»), e, para os quatro, o cartão da lição que dá a publicação. O dossiê antigo (as ligações para as publicações e as condições de consulta) não aparece: as condições passaram a alíneas do plano e do texto, e as publicações continuam nas lições F04 e F05, para onde a linha de fonte e o cartão «Rever a matéria» remetem.",
+  "fazer": [
+   "Faz o aquecimento (10 minutos).",
+   "Escolhe um tema: A ou B. Cada tema tem dois poemas.",
+   "Faz o plano.",
+   "Escreve um texto que compara os dois poemas.",
+   "Escreve duas linhas finais.",
+   "Revê e entrega no Teams."
+  ],
+  "modo": "Antes da aula, lê os dois poemas de cada tema. Trabalhas à mão. O aquecimento e a tarefa são com consulta: podes usar as lições do site, o caderno e o dicionário.",
+  "juntos_em_papel": true,
+  "grelha_nota": "A autoavaliação da grelha é só para ti: não se entrega. Na grelha, a tua apreciação chama-se «juízo crítico».",
+  "quadro": {
+   "titulo": "Tempo e tamanho",
+   "colunas": [
+    "Tempo",
+    "O que fazes",
+    "Palavras"
+   ],
+   "linhas": [
+    [
+     "10 min",
+     "Aquecimento em cartões",
+     ""
+    ],
+    [
+     "10 min",
+     "Leitura do enunciado",
+     ""
+    ],
+    [
+     "55 min",
+     "Plano e texto (tema A ou B)",
+     "200 a 240"
+    ],
+    [
+     "15 min",
+     "Revisão e entrega",
+     ""
+    ],
+    [
+     "90 min",
+     "Total",
+     "200 a 240"
+    ]
+   ],
+   "notas": [
+    "Nos 10 minutos de leitura, lê os dois temas, o que o plano leva e o que o texto leva.<span class=\"tf-so-ecra\"> Os exemplos são para consultares enquanto escreves.</span>",
+    "Não contam para as palavras: os versos e as passagens citados ou copiados, o plano e as duas linhas finais."
+   ]
+  },
+  "textos": [],
+  "perguntas": [],
+  "temas_titulo": "Escolhe um tema: A ou B",
+  "temas_nota": "Um só texto: 200 a 240 palavras.",
+  "temas_topo": "Escreve a letra do teu tema (A ou B) no topo.",
+  "temas_relogio": "Começa este relógio depois da leitura.",
+  "temas": [
+   {
+    "letra": "A",
+    "nome": "Eugénio de Andrade",
+    "intro": "Compara «As Palavras» e «Adeus», de Eugénio de Andrade.",
+    "antes": [
+     "Os dois poemas têm direitos de autor. Por isso não estão copiados nesta página. Vê <a href=\"#texto-1\">onde ler cada poema</a>, por baixo dos passos."
+    ],
+    "passos": [
+     "Explica como a linguagem ganha ou perde força em cada poema.",
+     "Apoia a tua apreciação numa diferença entre eles."
+    ],
+    "material": {
+     "titulo": "Só para o tema A: onde estão os Textos 1 e 2",
+     "onde": [
+      {
+       "id": "texto-1",
+       "titulo": "<span class=\"tt-num\">Texto 1</span> «As Palavras», de Eugénio de Andrade",
+       "frases": [],
+       "citacoes": [
+        {
+         "intro": "Versos que a lição F04 cita:",
+         "linhas": [
+          "São como um cristal,",
+          "as palavras."
+         ]
+        }
+       ],
+       "fonte": "Eugénio de Andrade, «As Palavras», de <i>Até Amanhã</i>. O poema completo lê-se no manual. A lição F04 também diz onde o ler: cartão «O texto».",
+       "origem": "m8/licao-m8-f04/index.html, cartão 7 («Para entender»: «São como um cristal, / as palavras.», copiado letra a letra); a linha de fonte, do cartão 4 («O texto»), que manda usar a edição do manual; o ano da morte do autor (2005), do cartão 2; o livro (<i>Até Amanhã</i>), do colofão da lição («Fontes: Eugénio de Andrade, «As Palavras», Até Amanhã»)"
+      },
+      {
+       "id": "texto-2",
+       "titulo": "<span class=\"tt-num\">Texto 2</span> «Adeus», de Eugénio de Andrade",
+       "frases": [],
+       "citacoes": [
+        {
+         "intro": "Versos que a lição F04 cita:",
+         "linhas": [
+          "Já gastámos as palavras pela rua, meu amor,",
+          "e o que nos ficou não chega"
+         ]
+        }
+       ],
+       "fonte": "Eugénio de Andrade, «Adeus», de <i>Os Amantes sem Dinheiro</i> (1950). A lição F04 diz onde ler o poema completo: cartão «Outra leitura».",
+       "origem": "m8/licao-m8-f04/index.html, cartão 25 («Outra leitura»: os dois versos e a linha de fonte, copiados letra a letra)"
+      }
+     ],
+     "notas": []
+    }
+   },
+   {
+    "letra": "B",
+    "nome": "Ana Luísa Amaral",
+    "intro": "Compara «Prece no Mediterrâneo» e «A verdade histórica», de Ana Luísa Amaral.",
+    "antes": [
+     "Os dois poemas têm direitos de autor. Por isso não estão copiados nesta página. Vê <a href=\"#texto-3\">onde ler cada poema</a>, por baixo dos passos.",
+     "Uma prece é uma oração: um pedido. Um relato doméstico conta um caso passado em casa."
+    ],
+    "passos": [
+     "Explica como a forma de prece ou de relato doméstico nos faz prestar atenção à experiência apresentada."
+    ],
+    "material": {
+     "titulo": "Só para o tema B: onde estão os Textos 3 e 4",
+     "onde": [
+      {
+       "id": "texto-3",
+       "titulo": "<span class=\"tt-num\">Texto 3</span> «Prece no Mediterrâneo», de Ana Luísa Amaral",
+       "frases": [],
+       "citacoes": [
+        {
+         "intro": "Versos que a lição F05 cita:",
+         "linhas": [
+          "Em vez de peixes, Senhor,",
+          "dai-nos a paz"
+         ]
+        }
+       ],
+       "fonte": "Ana Luísa Amaral, «Prece no Mediterrâneo», <i>Ágora</i>, Assírio &amp; Alvim, 2019. A lição F05 diz onde ler o poema completo: cartão «O texto».",
+       "origem": "m8/licao-m8-f05/index.html, cartão 3 («O essencial»: «Em vez de peixes, Senhor, / dai-nos a paz», copiado letra a letra); a linha de fonte, do cartão 4 («O texto»); o ano da morte da autora (2022), do cartão 2"
+      },
+      {
+       "id": "texto-4",
+       "titulo": "<span class=\"tt-num\">Texto 4</span> «A verdade histórica», de Ana Luísa Amaral",
+       "frases": [],
+       "citacoes": [
+        {
+         "intro": "Versos que a lição F05 cita:",
+         "linhas": [
+          "A minha filha partiu uma tigela",
+          "na cozinha.",
+          "E eu que me apetecia escrever",
+          "sobre o evento,"
+         ]
+        }
+       ],
+       "fonte": "Ana Luísa Amaral, «A verdade histórica», em <i>PÁ: Poesia &amp; Outras Artes</i>, n.º 0, Casa Comum/U.Porto Press, setembro de 2023. A lição F05 diz onde ler o poema completo: cartão «Outra leitura».",
+       "origem": "m8/licao-m8-f05/index.html, cartão 24 («Outra leitura»: os quatro versos e a linha de fonte, copiados letra a letra; a linha de fonte sem as páginas da revista)"
+      }
+     ],
+     "notas": []
+    }
+   }
+  ],
+  "depois": [
+   {
+    "id": "o-teu-plano",
+    "nome": "O teu plano",
+    "titulo": "Faz o plano.",
+    "meta": "Não conta para as palavras.",
+    "textos": [],
+    "pedido_titulo": "O que o plano leva",
+    "alineas": [
+     "Escreve a tua opinião inicial sobre os dois poemas.",
+     "Escreve uma dificuldade que a comparação terá de resolver.",
+     "Escolhe um indício de cada poema.",
+     "Indica onde está cada indício: o título do poema e o verso ou a estrofe."
+    ],
+    "ajudas": [
+     "Um indício é uma palavra ou um verso do poema que apoia o que dizes."
+    ],
+    "exemplos": [
+     {
+      "titulo": "Um plano com outro caso: os dois textos inventados do aquecimento",
+      "contexto": "Dois textos inventados: A. A janela bebe a manhã. B. A janela mede a manhã.",
+      "paragrafos": [
+       {
+        "al": "Alínea a):",
+        "t": "Para já, penso que os dois textos tratam a manhã de maneiras diferentes."
+       },
+       {
+        "al": "Alínea b):",
+        "t": "Os dois textos têm a mesma janela e a mesma manhã. Tenho de explicar uma diferença que está só no verbo."
+       },
+       {
+        "al": "Alíneas c) e d):",
+        "t": "«bebe», no texto inventado A; «mede», no texto inventado B."
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "o-teu-texto",
+    "nome": "O teu texto",
+    "titulo": "Escreve o texto.",
+    "meta": "200 a 240 palavras, sobre o tema A ou o tema B.",
+    "textos": [],
+    "pedido_titulo": "O que o texto leva",
+    "alineas": [
+     "Apresenta a tua apreciação: o que pensas dos dois poemas, e porquê.",
+     "Explica o efeito de cada indício.",
+     "Relaciona-os: compara os poemas, em vez de escrever dois resumos.",
+     "Cita no máximo quatro versos de cada poema.",
+     "Indica onde leste os poemas: o manual ou outra edição.",
+     "Escreve o total de palavras no fim."
+    ],
+    "ajudas": [
+     "O efeito é o que o indício faz sentir ou pensar a quem lê."
+    ],
+    "citar": "Copia as palavras exatas do verso. Põe-nas entre aspas: «…».",
+    "exemplos": [
+     {
+      "titulo": "Comparar com outro caso: os dois textos inventados do aquecimento",
+      "contexto": "Dois textos inventados: A. A janela bebe a manhã. B. A janela mede a manhã.",
+      "paragrafos": [
+       {
+        "al": "Alínea b):",
+        "t": "Em A, «bebe» faz a janela receber a manhã como quem tem sede. Em B, «mede» faz a janela olhar a manhã de fora, como uma régua."
+       },
+       {
+        "al": "Alínea c):",
+        "t": "Nos dois textos, a janela e a manhã são as mesmas. Só o verbo muda, e com ele a distância: A junta a janela à manhã, B separa-as."
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "finais": {
+   "titulo": "Duas linhas finais",
+   "texto": "Ficam fora da contagem.",
+   "passos": [
+    "Responde: que diferença entre os poemas mais alterou a tua leitura?",
+    "Indica o indício que a sustenta."
+   ]
+  },
+  "verificar": [
+   "A letra do meu tema (A ou B) está no topo?",
+   "O plano tem a minha opinião inicial e uma dificuldade da comparação?",
+   "Tenho um indício de cada poema, com o título e o verso ou a estrofe?",
+   "O texto diz o que penso dos dois poemas, e porquê?",
+   "Expliquei o efeito de cada indício?",
+   "Comparei os poemas, em vez de escrever dois resumos?",
+   "Citei no máximo quatro versos de cada poema, entre «»?",
+   "Indiquei onde li os poemas?",
+   "Tenho 200 a 240 palavras, com o total no fim, e revi a escrita?",
+   "Escrevi as duas linhas finais?"
+  ],
+  "entrega": [
+   "Fotografa o plano, o texto e as duas linhas finais.",
+   "Confirma que as fotografias mostram o trabalho completo.",
+   "Entrega as fotografias na tarefa do Teams."
+  ],
+  "rever_texto": "Os poemas não estão nesta página: o cartão do tema diz onde ler cada um. As lições servem para rever a matéria.",
+  "rever": [
+   {
+    "para": "Tema A",
+    "texto": "Lição F04, <a href=\"../../m8/licao-m8-f04/\">Eugénio de Andrade: a palavra essencial</a>. Relê «Para entender» («As Palavras») e «Outra leitura» («Adeus»)."
+   },
+   {
+    "para": "Tema B",
+    "texto": "Lição F05, <a href=\"../../m8/licao-m8-f05/\">Ana Luísa Amaral: reescrever a tradição</a>. Relê «Para entender» («Prece no Mediterrâneo») e «Outra leitura» («A verdade histórica»)."
+   },
+   {
+    "para": "O teu plano",
+    "texto": "Lição F03, <a href=\"../../m8/licao-m8-f03/\">Jorge de Sena, poeta testemunha</a>. Relê «Para entender»: citar pouco e sempre com o número do verso."
+   },
+   {
+    "para": "O teu texto",
+    "texto": "Lição F10, <a href=\"../../m8/licao-m8-f10/\">Poema com pintura ou álbum</a>. Relê «Em paralelo»: uma observação de cada lado e a ligação entre as duas."
+   }
+  ],
+  "opcional_titulo": "Experimentar uma pergunta"
  }
 }

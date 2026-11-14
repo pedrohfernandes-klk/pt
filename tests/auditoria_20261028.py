@@ -381,6 +381,26 @@ _TAREFAS_FACEIS_M3_1112 = json.loads((ROOT/'tests/fixtures/tarefas-faceis-m3-edi
 # qual partilha os dados das grelhas): desfaz-se antes de todas, com contagem estrita.
 _TAREFAS_FACEIS_M1_1113 = json.loads((ROOT/'tests/fixtures/tarefas-faceis-m1-edits-20261113.json').read_text('utf-8'))['files']
 
+# 13/11/2026: as duas tarefas do M8 «mais fáceis de fazer» e «tudo junto» no M8 (os enunciados, as grelhas e as versões de correção da
+# m8-u1 e da m8-u2, os seus dados, e o guia, o portefólio, o índice e o mapa do M8), camada mais recente, por cima das tarefas do M7
+# mais fáceis de fazer (com a qual partilha os dados das grelhas): desfaz-se antes de todas, com contagem estrita.
+_TAREFAS_FACEIS_M8_1113 = json.loads((ROOT/'tests/fixtures/tarefas-faceis-m8-edits-20261113.json').read_text('utf-8'))['files']
+
+def undo_tarefas_faceis_m8_1113(path, text):
+    # Pela mesma regra das camadas do M3, do M1, do M5, do M6 e do M7: esta camada está no topo, por isso o ficheiro da árvore é
+    # exatamente a página como ela a deixou (o hash «after» do manifesto, que scripts/verificar_camadas.py e
+    # tests/test_tarefas_faceis_m8.py conferem). Só esse texto se desfaz, com contagem estrita; quem já a desfez (ou entrega um texto
+    # histórico) recebe o texto como o deu.
+    entrada = _TAREFAS_FACEIS_M8_1113.get(_relative(path))
+    if not entrada or hashlib.sha256(text.replace('\r\n', '\n').encode('utf-8')).hexdigest() != entrada['after_sha256_lf']:
+        return text
+    for edit in reversed(entrada['edits']):
+        if text.count(edit['new']) != edit['occurrences']:
+            raise AssertionError(f"Tarefas do M8 mais fáceis de fazer não confere: {path}: {edit['location']}")
+        text = text.replace(edit['new'], edit['old'])
+    return text
+
+
 # 13/11/2026: as três tarefas do M7 «mais fáceis de fazer» e «tudo junto» no M7 (os enunciados da m7-u1, da m7-u2 e da m7-u3, a grelha,
 # a correção e os aquecimentos, os seus dados, e o guia, o portefólio, o índice e o mapa do M7), com três acertos do M1 e do M5 (os
 # dados, o enunciado e a grelha da m1-u2 e da m5-u1 e a grelha da m5-u2), camada mais recente, por cima das tarefas do M6 mais
@@ -388,6 +408,8 @@ _TAREFAS_FACEIS_M1_1113 = json.loads((ROOT/'tests/fixtures/tarefas-faceis-m1-edi
 _TAREFAS_FACEIS_M7_1113 = json.loads((ROOT/'tests/fixtures/tarefas-faceis-m7-edits-20261113.json').read_text('utf-8'))['files']
 
 def undo_tarefas_faceis_m7_1113(path, text):
+    # 13/11/2026: primeiro as tarefas do M8 mais fáceis de fazer, que estão por cima de todas (partilham os dados das grelhas).
+    text = undo_tarefas_faceis_m8_1113(path, text)
     # Pela mesma regra das camadas do M3, do M1, do M5 e do M6: esta camada está no topo, por isso o ficheiro da árvore é exatamente a
     # página como ela a deixou (o hash «after» do manifesto, que scripts/verificar_camadas.py e tests/test_tarefas_faceis_m7.py
     # conferem). Só esse texto se desfaz, com contagem estrita; quem já a desfez (ou entrega um texto histórico) recebe o texto como o deu.

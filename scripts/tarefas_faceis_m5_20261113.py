@@ -221,6 +221,14 @@ def ler(rel):
     # 13/11/2026: e por cima de todas fica a das tarefas do M7 (tarefas_faceis_m7_20261113), que também muda os dados das grelhas
     # e, nos acertos de 13/11/2026, os dados, o enunciado e a grelha da m5-u1 e a grelha da m5-u2:
     # desfaz-se antes da do M6, com contagem estrita.
+    # 13/11/2026: e por cima da do M7 fica a das tarefas do M8 (tarefas_faceis_m8_20261113), que também muda os dados das grelhas:
+    # desfaz-se antes da do M7, com contagem estrita.
+    m8 = ROOT / 'tests/fixtures/tarefas-faceis-m8-edits-20261113.json'
+    if m8.is_file():
+        for e in reversed(json.loads(m8.read_text('utf-8'))['files'].get(rel, {}).get('edits', [])):
+            if texto.count(e['new']) != e['occurrences']:
+                raise SystemExit(f'{rel}: as tarefas do M8 mais fáceis de fazer já não conferem ({e["location"]})')
+            texto = texto.replace(e['new'], e['old'])
     m7 = ROOT / 'tests/fixtures/tarefas-faceis-m7-edits-20261113.json'
     if m7.is_file():
         for e in reversed(json.loads(m7.read_text('utf-8'))['files'].get(rel, {}).get('edits', [])):

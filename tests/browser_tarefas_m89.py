@@ -54,8 +54,12 @@ def main():
                     # (U+00A0) entre o número e «min»; no do M9, como estava. Os nomes e os minutos são os mesmos.
                     # 12/11/2026: decisão 152 no M9 (achado 22): também no guia do M9, com a mesma exigência.
                     espaco = '\xa0' if m in (8, 9) else ' '
+                    # 13/11/2026: no guia do M8, os tempos decididos pelo docente (camada tarefas_faceis_m8_20261113): 10 de leitura e 55
+                    # de produção; no do M9, os de sempre. Nos dois, os quatro blocos têm os mesmos nomes e somam 90 minutos.
+                    ler, produzir = (10, 55) if m == 8 else (5, 60)
+                    assert 10 + ler + produzir + 15 == 90
                     assert page.locator('#blocos .bloco b').all_inner_texts() == [
-                        f'Aquecer, 10{espaco}min', f'Ler o enunciado, 5{espaco}min', f'Produzir, 60{espaco}min', f'Rever e entregar, 15{espaco}min']
+                        f'Aquecer, 10{espaco}min', f'Ler o enunciado, {ler}{espaco}min', f'Produzir, {produzir}{espaco}min', f'Rever e entregar, 15{espaco}min']
                     assert page.locator('#r-exemplo').is_hidden()
                     sem_deslizar(page, f'm{m} guia {width}')
                     assert not errors, errors
