@@ -75,6 +75,15 @@ todas opcionais; as páginas sem elas (as do M3, do M1, do M5 e do M6) saem igua
   * pagina_individual(): a página de uma tarefa individual sem temas (a m7-u1 e a m7-u2), a partir de dados próprios
     (docs/pedagogia/tarefas-individuais/<slug>.json, escritos por scripts/tarefas_individuais_faceis.py): o mesmo primeiro cartão, as
     «partes» (cada uma como uma pergunta, com o seu nome de cartão), o cartão «Fechar e entregar» e o cartão «Rever a matéria».
+
+M8 (13/11/2026, camada tarefas_faceis_m8_20261113: a m8-u1 e a m8-u2 no mesmo molde, com poemas e um conto que ainda têm direitos de autor:
+Eugénio de Andrade, falecido em 2005; Ana Luísa Amaral, em 2022; Maria Judite de Carvalho, em 1998). Nenhum texto se copia: cada um tem um
+bloco «Onde está o texto». Chaves novas, todas opcionais; as páginas sem elas (as do M3, do M1, do M5, do M6 e do M7) saem iguais, byte a byte:
+  * num bloco «onde_esta»: «citacoes», uma lista de {"intro": frase, "linhas": [...]} com as citações curtas que as lições do módulo já
+    publicam, letra a letra (os versos, um por linha; um recorte de prosa, numa só linha); «nomes» e «lista» passam a ser opcionais (o Kit
+    da m3-u1 continua a tê-las);
+  * no material de um tema e no material dos dois temas («temas_material»): «onde», uma lista de blocos «onde_esta» (os dois poemas de
+    cada tema da m8-u1; o conto da m8-u2); em «temas_material», «textos» passa a ser opcional.
 """
 import re
 from html import escape
@@ -168,11 +177,14 @@ def bloco_texto(t):
 def onde_esta(o):
     """Texto protegido: não se copia; diz-se onde está e dá-se só o que as lições já publicam em citação curta.
     À vista ficam só os nomes («nomes»); as descrições das lições («lista») ficam num desdobrável, que não sai em papel."""
+    # 13/11/2026 (M8): as citações curtas que as lições já publicam (os versos, um por linha), logo a seguir à remissão para o manual.
+    citacoes = ''.join(f'<p class="tf-p tt-cit-intro">{c["intro"]}</p><blockquote class="tt-cit">' + '<br>'.join(escape(x, quote=False) for x in c['linhas'])
+                       + '</blockquote>' for c in o.get('citacoes', []))
     return (f'<section class="tt-onde" id="{o["id"]}" aria-labelledby="{o["id"]}-titulo"><h3 id="{o["id"]}-titulo">{o["titulo"]}</h3>'
             + ''.join(f'<p class="tf-p">{p}</p>' for p in o['frases'])
-            + (f'<p class="tf-p tf-ordem">{o["ordem"]}</p>' if o.get('ordem') else '')
-            + f'<p class="tf-p"><b>{o["nomes_titulo"]}</b></p>' + lista(o['nomes'], 'ul', 'tt-nomes')
-            + f'<details class="tf-so-tema tf-mais tf-so-ecra"><summary>{o["lista_titulo"]}</summary><div>{lista(o["lista"], "ul")}</div></details>'
+            + (f'<p class="tf-p tf-ordem">{o["ordem"]}</p>' if o.get('ordem') else '') + citacoes
+            + (f'<p class="tf-p"><b>{o["nomes_titulo"]}</b></p>' + lista(o['nomes'], 'ul', 'tt-nomes') if o.get('nomes') else '')
+            + (f'<details class="tf-so-tema tf-mais tf-so-ecra"><summary>{o["lista_titulo"]}</summary><div>{lista(o["lista"], "ul")}</div></details>' if o.get('lista') else '')
             + f'<p class="tt-fonte">{o["fonte"]}</p></section>\n')
 
 
@@ -437,6 +449,7 @@ def pagina(d, com_grelha, head, foot, raiz):
         m = t['material']
         dentro = ((dossie(d['dossie_titulo'].replace('tema B', 'tema\xa0B'), d['dossie'], bool(f.get('nao_partir_dossie')), bool(f.get('juntos_em_papel'))) if m.get('dossie') else '')  # a referência não se parte
                   + ''.join(bloco_texto(textos[i]) for i in m.get('textos', []))
+                  + ''.join(onde_esta(x) for x in m.get('onde', []))  # 13/11/2026 (M8): os textos com direitos, que não se copiam
                   + ''.join(f'<p class="tf-p">{x}</p>' for x in m.get('notas', [])))
         temas += (f'<article class="task-theme" data-task-theme="{t["letra"]}" aria-labelledby="tema-{t["letra"]}">'
                   f'<h3 id="tema-{t["letra"]}"><span><span class="sr-only">Tema </span>{t["letra"]}</span> {t["nome"]}</h3>'
@@ -460,7 +473,8 @@ def pagina(d, com_grelha, head, foot, raiz):
     mat = f.get('temas_material')
     material = (f'<details class="tf-so-tema tf-dois-temas"><summary>{mat["titulo"]}</summary><div>'
                 + ''.join(f'<p class="tf-p">{x}</p>' for x in mat.get('notas', []))
-                + ''.join(bloco_texto(textos[i]) for i in mat['textos']) + '</div></details>\n') if mat else ''
+                + ''.join(bloco_texto(textos[i]) for i in mat.get('textos', []))
+                + ''.join(onde_esta(x) for x in mat.get('onde', [])) + '</div></details>\n') if mat else ''
     tema = (f'<section class="task-section tf-tema" id="tema" data-task-card-name="Tema A ou B" aria-labelledby="tema-titulo">'
             f'<h2 id="tema-titulo">{f["temas_titulo"]}</h2><p class="tf-meta">{f["temas_nota"]}</p>'
             + (f'<p class="tf-p tf-topo">{f["temas_topo"]}</p>' if f.get('temas_topo') else '') + '\n'

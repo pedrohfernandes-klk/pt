@@ -78,6 +78,8 @@ TAREFAS_FACEIS_M5 = ROOT / 'tests/fixtures/tarefas-faceis-m5-edits-20261113.json
 TAREFAS_FACEIS_M6 = ROOT / 'tests/fixtures/tarefas-faceis-m6-edits-20261113.json'
 # 13/11/2026: por cima de todas, as tarefas do M7 mais fáceis de fazer (muda o índice do M7: «10 min» no aquecimento da unidade 1).
 TAREFAS_FACEIS_M7 = ROOT / 'tests/fixtures/tarefas-faceis-m7-edits-20261113.json'
+# 13/11/2026: por cima de todas, as tarefas do M8 mais fáceis de fazer (muda o índice do M8: «tema A ou B, plano, texto»).
+TAREFAS_FACEIS_M8 = ROOT / 'tests/fixtures/tarefas-faceis-m8-edits-20261113.json'
 VERSAO = '20261106'
 ACHADO = ('06/11/2026: decisão 148 (o desenho do índice do M4 passa aos nove, com a palavra do módulo, a imagem documental '
           'mais pequena a seguir às unidades e os botões flutuantes de sempre). {o}')
@@ -102,6 +104,13 @@ def base(rel):
     # índice do M5), com contagem estrita.
     # 13/11/2026: antes dessa, as tarefas do M7 mais fáceis de fazer (camada tarefas_faceis_m7_20261113, a mais recente, que muda o
     # índice do M7), com contagem estrita.
+    # 13/11/2026: antes dessa, as tarefas do M8 mais fáceis de fazer (camada tarefas_faceis_m8_20261113, a mais recente, que muda o
+    # índice do M8), com contagem estrita.
+    if TAREFAS_FACEIS_M8.is_file():
+        for edit in reversed(json.loads(TAREFAS_FACEIS_M8.read_text('utf-8'))['files'].get(rel, {}).get('edits', [])):
+            if texto.count(edit['new']) != edit['occurrences']:
+                raise SystemExit(f'{rel}: as tarefas do M8 mais fáceis de fazer já não conferem ({edit["location"]})')
+            texto = texto.replace(edit['new'], edit['old'])
     if TAREFAS_FACEIS_M7.is_file():
         for edit in reversed(json.loads(TAREFAS_FACEIS_M7.read_text('utf-8'))['files'].get(rel, {}).get('edits', [])):
             if texto.count(edit['new']) != edit['occurrences']:

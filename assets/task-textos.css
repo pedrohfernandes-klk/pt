@@ -297,3 +297,24 @@ main.task-page[data-task-individual] :is(p,li,td,th,dd,figcaption,label,summary,
 @media(max-width:480px){
  [data-task-facil] details.tf-mais .tf-tabela.tf-tabela-apoio :is(th,td){padding:6px 6px;overflow-wrap:anywhere}
 }
+
+/* 13/11/2026: o M8 no mesmo molde (camada tarefas_faceis_m8_20261113; versão facil-12, pedida só pela m8-u1 e pela m8-u2). Os poemas e
+   o conto do M8 ainda têm direitos de autor e não se copiam: cada um tem um bloco «Onde está o texto» (.tt-onde, que já existia na
+   m3-u1) com as citações curtas que as lições já publicam (.tt-cit, classe que as outras páginas não têm). Em papel, a citação não
+   se parte. */
+[data-task-facil] .tt-cit-intro{margin-bottom:2px}
+[data-task-facil] .tt-cit{margin:4px 0 12px;padding:2px 0 2px 14px;border:0;border-left:5px solid var(--cinza);background:transparent;color:inherit;font:400 1.08rem/1.6 Georgia,"Times New Roman",serif;font-style:normal;max-width:60ch;overflow-wrap:break-word}
+[data-task-facil] .task-theme .tt-onde .tf-p{font-size:1rem}
+@media(max-width:480px){
+ [data-task-facil] .tt-cit{font-size:1rem;padding-left:10px}
+}
+@media print{
+ [data-task-facil] .tt-cit{margin:3pt 0 4pt;font-size:11pt;line-height:1.3;break-inside:avoid;max-width:none}
+ [data-task-facil] .tt-cit-intro{break-after:avoid}
+ /* Os dois blocos «Onde está o texto» de um tema saem lado a lado (só a m8-u1 tem dois blocos seguidos num desdobrável). */
+ [data-task-facil] details.tf-so-tema>div:has(>.tt-onde+.tt-onde){display:grid;grid-template-columns:1fr 1fr;gap:0 8pt;align-items:start}
+ [data-task-facil] details.tf-so-tema>div:has(>.tt-onde+.tt-onde)>.tf-p{grid-column:1/-1}
+ /* A lista de verificação sai mais junta, para o cartão «Fechar e entregar» caber inteiro (só nas páginas com citações: as do M8). */
+ [data-task-facil]:has(.tt-cit) .task-checklist label{padding:0;gap:6pt}
+ [data-task-facil]:has(.tt-cit) .task-checklist input{width:10pt;height:10pt;min-width:0;min-height:0;margin:1pt 0 0}
+}

@@ -45,6 +45,11 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'tests'))
 sys.path.insert(0, str(ROOT / 'scripts'))
 from auditoria_20261028 import undo_tarefas_faceis_m7_1113  # noqa: E402
+# 13/11/2026: por cima desta camada ficam as duas tarefas do M8 mais fáceis de fazer (tarefas_faceis_m8_20261113, com o seu teste,
+# tests/test_tarefas_faceis_m8.py). Este teste lê os ficheiros que essa camada muda (os dados das grelhas, que as duas partilham, e os
+# dados e as páginas das tarefas do M8) como estavam por baixo dela: desfeita pela auditoria, com contagem estrita. A exigência é a mesma.
+from auditoria_20261028 import undo_tarefas_faceis_m8_1113  # noqa: E402
+M8_DE_CIMA = json.loads((Path(__file__).resolve().parents[1] / 'tests/fixtures/tarefas-faceis-m8-edits-20261113.json').read_text('utf-8'))['files']
 import verificar_camadas  # noqa: E402
 
 CAMADA_REL = 'scripts/tarefas_faceis_m7_20261113.json'
@@ -99,7 +104,10 @@ PROIBIDAS = re.compile(r'\b(professor\w*|jog(o|os|ar|a|as|am|ou)|fichas?|folhas?
 
 
 def ler(rel):
-    return (ROOT / rel).read_bytes().decode('utf-8')
+    texto = (ROOT / rel).read_bytes().decode('utf-8')
+    if rel in M8_DE_CIMA:  # 13/11/2026: como estava por baixo da camada do M8
+        texto = undo_tarefas_faceis_m8_1113(rel, texto)
+    return texto
 
 
 def base(rel):
@@ -518,16 +526,24 @@ class GeradoresEOutrosModulos(unittest.TestCase):
                            cwd=ROOT, capture_output=True, text=True, encoding='utf-8')
         nomes = r.stdout.split()
         self.assertGreater(len(nomes), 80)
-        iguais = 0
+        iguais = de_cima = 0
         for rel in nomes:
             if rel in FICHEIROS:
                 continue
-            self.assertEqual((ROOT / rel).read_bytes(), subprocess.run(['git', 'show', f'{BASE_COMMIT}:{rel}'], cwd=ROOT, capture_output=True).stdout, rel)
+            # 13/11/2026: os oito ficheiros que a camada do M8 muda nestas pastas (os dados, o enunciado, a grelha e a versão de correção
+            # da m8-u1 e da m8-u2) leem-se com essa camada desfeita pela auditoria, com contagem estrita: por baixo dela, são os do main.
+            conteudo = (ROOT / rel).read_bytes()
+            if rel in M8_DE_CIMA:
+                de_cima += 1
+                conteudo = undo_tarefas_faceis_m8_1113(rel, conteudo.decode('utf-8')).encode('utf-8')
+                self.assertNotEqual(conteudo, (ROOT / rel).read_bytes(), rel)
+            self.assertEqual(conteudo, subprocess.run(['git', 'show', f'{BASE_COMMIT}:{rel}'], cwd=ROOT, capture_output=True).stdout, rel)
             iguais += 1
         # 13/11/2026, revisão: eram 10 os ficheiros da camada nestas pastas; com os acertos do M1 e do M5 são 17 (mais os dados, o
         # enunciado e a grelha da m1-u2 e da m5-u1 e a grelha da m5-u2). Todos os outros continuam iguais ao main, byte a byte, e
         # também as versões de correção e os aquecimentos da m1-u2, da m5-u1 e da m5-u2.
         self.assertEqual(iguais, len(nomes) - 17)
+        self.assertEqual(de_cima, 8)  # 13/11/2026: os oito da camada do M8
         self.assertEqual(len([f for f in FICHEIROS if f in nomes]), 17)
         for rel in ('tarefas/m1-u2/correcao/index.html', 'tarefas/m5-u1/correcao/index.html', 'tarefas/m5-u2/correcao/index.html', 'tarefas/m5-u2/index.html',
                     'tarefas/m1-u1/index.html', 'tarefas/m5-u1/aquecimento/index.html', 'tarefas/m3-u2/index.html', 'docs/pedagogia/tarefas-escolha/m5-u2.json'):
@@ -537,9 +553,12 @@ class GeradoresEOutrosModulos(unittest.TestCase):
 
 class Camada(unittest.TestCase):
     def test_no_topo_com_manifesto_e_reversivel_ate_a_base(self):
-        self.assertEqual(verificar_camadas.LAYERS[0], ('tarefas_faceis_m7_20261113', 'tarefas-faceis-m7-edits-20261113'))
-        self.assertEqual(verificar_camadas.LAYERS[1], ('tarefas_faceis_m6_20261113', 'tarefas-faceis-m6-edits-20261113'))
-        self.assertEqual(len(verificar_camadas.LAYERS), 51)
+        # 13/11/2026: por cima desta camada ficam as duas tarefas do M8 mais fáceis de fazer (tarefas_faceis_m8_20261113): a ordem ganha
+        # mais uma posição e esta camada passa a ser a segunda, logo antes da do M6, com a mesma exigência.
+        self.assertEqual(verificar_camadas.LAYERS[0], ('tarefas_faceis_m8_20261113', 'tarefas-faceis-m8-edits-20261113'))
+        self.assertEqual(verificar_camadas.LAYERS[1], ('tarefas_faceis_m7_20261113', 'tarefas-faceis-m7-edits-20261113'))
+        self.assertEqual(verificar_camadas.LAYERS[2], ('tarefas_faceis_m6_20261113', 'tarefas-faceis-m6-edits-20261113'))
+        self.assertEqual(len(verificar_camadas.LAYERS), 52)
         self.assertEqual(MANIFESTO['base_commit'], BASE_COMMIT)
         self.assertEqual(sorted(MANIFESTO['files']), sorted(FICHEIROS))
         self.assertEqual(len(FICHEIROS), 22)
@@ -555,7 +574,9 @@ class Camada(unittest.TestCase):
                     self.assertEqual(desfeito.count(e['old']), e['occurrences'])
                     desfeito = desfeito.replace(e['old'], e['new'])
                 self.assertEqual(desfeito, texto)
-        r = subprocess.run([sys.executable, 'scripts/aplicar_trocas.py', CAMADA_REL, '--manifesto', MANIFESTO_REL, '--verificar'],
+        # 13/11/2026: com a camada do M8 desfeita primeiro (partilham os dados das grelhas).
+        r = subprocess.run([sys.executable, 'scripts/aplicar_trocas.py', CAMADA_REL, '--manifesto', MANIFESTO_REL, '--verificar',
+                            '--desfazer-antes', 'tests/fixtures/tarefas-faceis-m8-edits-20261113.json'],
                            cwd=ROOT, capture_output=True, text=True, encoding='utf-8')
         self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
         self.assertIn('0 por aplicar; manifesto em dia', r.stdout)
@@ -582,7 +603,12 @@ class Camada(unittest.TestCase):
             fluxo = p.read_text('utf-8')
             # em todas as cadeias, a camada do M7 desfaz-se logo antes da do M6, sem nada pelo meio
             self.assertEqual(fluxo.count(f'--desfazer-antes {m6}'), fluxo.count(f'--desfazer-antes {m7} --desfazer-antes {m6}'), p.name)
-            self.assertEqual(fluxo.count(f'--desfazer-antes {m7}'), fluxo.count(f'--verificar --desfazer-antes {m7}'), p.name)
+            # 13/11/2026: por cima da camada do M7 fica a das tarefas do M8 (tarefas_faceis_m8_20261113): em todas as cadeias, a do M8
+            # vem à cabeça e a do M7 logo a seguir, sem nada pelo meio; e a verificação da própria camada do M7 desfaz primeiro a do M8.
+            m8 = 'tests/fixtures/tarefas-faceis-m8-edits-20261113.json'
+            self.assertEqual(fluxo.count(f'--desfazer-antes {m7}'), fluxo.count(f'--verificar --desfazer-antes {m8} --desfazer-antes {m7}'), p.name)
+            self.assertEqual(fluxo.count(f'--desfazer-antes {m8}'), fluxo.count(f'--verificar --desfazer-antes {m8}'), p.name)
+            self.assertEqual(fluxo.count(f'--manifesto {m7} --verificar'), fluxo.count(f'--manifesto {m7} --verificar --desfazer-antes {m8}\n'), p.name)
             self.assertEqual(fluxo.count("'scripts/tarefas_faceis_m6_20261113.*'"), fluxo.count("'scripts/tarefas_faceis_m7_20261113.*'"), p.name)
         # 13/11/2026, revisão: a camada passou a mudar o índice do M7, e o gerador da decisão 148 e os três testes de navegador que leem
         # os índices como eram desfazem-na primeiro, antes da do M6.
@@ -601,8 +627,11 @@ class Camada(unittest.TestCase):
         self.assertEqual(set(ACERTOS) - set(json.loads(ler('tests/fixtures/tarefas-faceis-m1-edits-20261113.json'))['files'])
                          - set(json.loads(ler('tests/fixtures/tarefas-faceis-m5-edits-20261113.json'))['files']), set())
         tarefas = ler('.github/workflows/pt-tarefas-qa.yml')
-        self.assertIn(f'python scripts/aplicar_trocas.py scripts/tarefas_faceis_m6_20261113.json --manifesto {m6} --verificar --desfazer-antes {m7}\n', tarefas)
-        self.assertIn(f'python scripts/aplicar_trocas.py scripts/tarefas_faceis_m7_20261113.json --manifesto {m7} --verificar\n', tarefas)
+        # 13/11/2026: por cima desta camada fica a das tarefas do M8 (tarefas_faceis_m8_20261113): nas duas verificações, a do M8 desfaz-se
+        # primeiro, com a mesma exigência, sem nada pelo meio.
+        m8 = 'tests/fixtures/tarefas-faceis-m8-edits-20261113.json'
+        self.assertIn(f'python scripts/aplicar_trocas.py scripts/tarefas_faceis_m6_20261113.json --manifesto {m6} --verificar --desfazer-antes {m8} --desfazer-antes {m7}\n', tarefas)
+        self.assertIn(f'python scripts/aplicar_trocas.py scripts/tarefas_faceis_m7_20261113.json --manifesto {m7} --verificar --desfazer-antes {m8}\n', tarefas)
         self.assertIn("python -m unittest discover -s tests -p 'test_tarefas_faceis_m7.py' -v\n", tarefas)
         self.assertIn('run: python tests/browser_tarefas_faceis_m7.py\n', tarefas)
         self.assertEqual(tarefas.count('timeout-minutes: 40'), 1)
