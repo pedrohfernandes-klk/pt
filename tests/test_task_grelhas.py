@@ -223,7 +223,8 @@ class Grelhas(unittest.TestCase):
                 # 13/11/2026: o mesmo nas duas grelhas do M6 (camada tarefas_faceis_m6_20261113); nas outras cinco, a frase e a coluna de sempre.
                 # 13/11/2026: o mesmo na grelha da m7-u3 (camada tarefas_faceis_m7_20261113); nas outras quatro, a frase e a coluna de sempre.
                 # 13/11/2026: o mesmo nas duas grelhas do M8 (camada tarefas_faceis_m8_20261113); nas outras duas, a frase e a coluna de sempre.
-                self.assertEqual(so_tua,slug in ('m1-u1','m1-u2','m3-u1','m3-u2','m5-u1','m5-u2','m6-u1','m6-u2','m7-u3','m8-u1','m8-u2'))
+                # 14/11/2026: o mesmo nas duas grelhas do M9 (camada tarefas_faceis_m9_20261114): todas as grelhas das tarefas de escolha.
+                self.assertEqual(so_tua,slug in ('m1-u1','m1-u2','m3-u1','m3-u2','m5-u1','m5-u2','m6-u1','m6-u2','m7-u3','m8-u1','m8-u2','m9-u1','m9-u2'))
                 self.assertEqual(aluno.count('Esta autoavaliação é só para ti: não se entrega.'),1 if so_tua else 0)
                 self.assertEqual(aluno.count('Entrega esta autoavaliação com as fotografias. O docente põe a nota dele ao lado da tua e comenta a diferença.'),0 if so_tua else 1)
                 self.assertEqual(correcao.count('<th class="n">Aluno</th>'),0 if so_tua else 1)

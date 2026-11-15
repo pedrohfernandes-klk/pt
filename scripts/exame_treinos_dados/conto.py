@@ -23,8 +23,9 @@ assert '<blockquote class=\\"prosa\\">«%s»<\\/blockquote>' % RECORTE in H16
 assert '"titulo":"As palavras confirmadas","rot":"Lê de perto"' in H16
 
 # o que se diz do conto e do recorte além das duas frases é resumo das lições: as frases de apoio têm de lá estar
+# 15/11/2026: a edição da turma não existe (decisão do docente); lê-se no livro: a lição M8-F16 diz «O resto do conto lê-se no livro».
 for _s in ('Maria Judite de Carvalho, «George», em Seta Despedida, Mem Martins, Europa-América, 1995', 'A fonte não indica a página da edição',
-           'O resto do conto lê-se na edição da turma', 'No conto, a narração cruza perceção e vida interior', 'A palavra «não» marca a recusa',
+           'O resto do conto lê-se no livro', 'No conto, a narração cruza perceção e vida interior', 'A palavra «não» marca a recusa',
            'Um eufemismo atenua uma expressão potencialmente dura', 'a designação mais atenuada da idade é recusada e substituída por uma nomeação direta',
            'A narração atribui a recusa a George e acrescenta que as palavras podem ser apenas pensadas',
            'Não concluas que já conheces todos os sentimentos de George sobre o envelhecimento',

@@ -54,7 +54,8 @@ from auditoria_20261028 import undo_tarefas_faceis_m3_1112  # noqa: E402
 # tests/test_tarefas_faceis_m6.py).
 # 13/11/2026: o mesmo na m7-u3 (camada tarefas_faceis_m7_20261113; o contrato do molde novo confere-se em tests/test_tarefas_faceis_m7.py).
 # 13/11/2026: e as duas tarefas do M8 (camada tarefas_faceis_m8_20261113), com a mesma exigência.
-FACEIS = ('m1-u1', 'm1-u2', 'm3-u1', 'm3-u2', 'm5-u1', 'm5-u2', 'm6-u1', 'm6-u2', 'm7-u3', 'm8-u1', 'm8-u2')
+# 14/11/2026: e as duas tarefas do M9 (camada tarefas_faceis_m9_20261114), com a mesma exigência.
+FACEIS = ('m1-u1', 'm1-u2', 'm3-u1', 'm3-u2', 'm5-u1', 'm5-u2', 'm6-u1', 'm6-u2', 'm7-u3', 'm8-u1', 'm8-u2', 'm9-u1', 'm9-u2')
 
 
 def molde_de_2810(path):

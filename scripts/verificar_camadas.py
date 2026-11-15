@@ -7,6 +7,13 @@ import sys
 
 ROOT=Path(__file__).resolve().parents[1]
 LAYERS=[
+ # 14/11/2026: as duas tarefas do M9 «mais fáceis de fazer» e «tudo junto» no M9 (os enunciados, as grelhas e as versões de correção
+ # da m9-u1 e da m9-u2, os seus dados, e o guia, o portefólio, o índice e o mapa do M9; Memorial do Convento ainda tem direitos de
+ # autor e não se copia), com dois acertos (o guia da tarefa do M2 e o índice do M7), camada mais recente, por cima das tarefas do M8
+ # mais fáceis de fazer (que passa a ser a segunda), com a qual partilha os dados das grelhas.
+ # 15/11/2026: a edição da turma não existe (decisão do docente); lê-se no livro. A camada muda também as lições F14, F15 e F16 do
+ # M9, a página da obra Memorial do Convento e a lição e o painel da F16 do M8.
+ ('tarefas_faceis_m9_20261114','tarefas-faceis-m9-edits-20261114'),
  # 13/11/2026: as duas tarefas do M8 «mais fáceis de fazer» e «tudo junto» no M8 (os enunciados, as grelhas e as versões de correção
  # da m8-u1 e da m8-u2, os seus dados, e o guia, o portefólio, o índice e o mapa do M8; os poemas e o conto ainda têm direitos de
  # autor e não se copiam), camada mais recente, por cima das tarefas do M7 mais fáceis de fazer (que passa a ser a segunda), com a

@@ -8,7 +8,7 @@ que não se partem, no navegador, com o CSS e os motores reais, no modelo de tes
   no mapa (abrindo «As tarefas das unidades»), com o rótulo à vista no parágrafo de cima e, no ecrã largo, a coluna do peso
   estreita (5,5 rem);
 * as listas novas (as quatro linhas de ação do «O essencial» da F01, dentro da dobra que se abre, as quatro estações da oficina da
-  F13, cujos cartões estão em m9/recursos/f13.js, e «Três antes de mim», no guia): à vista, com os itens todos e sem deslizar
+  F13, cujos cartões estão em m9/recursos/f13.js, e «Dois antes de mim», no guia, que até 14/11/2026 era «Três antes de mim»): à vista, com os itens todos e sem deslizar
   para o lado;
 * no portefólio, os catorze nomes dos ficheiros (todos em <code>) só mudam de linha nos pontos marcados (<wbr>, a seguir a «_»),
   nunca num hífen; os quatro curtos, sem ponto marcado, ficam numa linha; nada desliza;
@@ -47,16 +47,28 @@ def r(*agulhas):
 # o ano ao «de»: cada metade fica inteira («22 de», «de 1730»); nas listas de capítulos, o nome fica preso ao primeiro e o «e» ao último.
 PAGINAS = {
     INDICE: r('3.º{N}ano', '90{N}minutos', '90{N}min', '22{N}min', '10{N}min', '30{N}%', '10{N}%', 'capítulo{N}XXI'),
-    GUIA: r('3.º{N}ano', '90{N}minutos', '30{N}%', '10{N}%', '10{N}minutos', '5{N}minutos', 'capítulos{N}I', 'e{N}V'),
+    # 14/11/2026: as duas tarefas do M9 no molde «mais fácil de fazer» (camada tarefas_faceis_m9_20261114): no guia, a leitura passou de
+    # 5 a 10 minutos (decisão do docente: 10, 10, 55 e 15). «5{N}minutos» já não existe na página; «10{N}minutos» continua a
+    # conferir-se, agora no aquecimento e na leitura.
+    GUIA: r('3.º{N}ano', '90{N}minutos', '30{N}%', '10{N}%', '10{N}minutos', 'capítulos{N}I', 'e{N}V'),
     MAPA: r('3.º{N}ano', '90{N}minutos', '30{N}%', '10{N}%', 'D.{N}João{N}V', '22{N}de', 'de{N}1730', 'século{N}XVIII', 'século{N}XX',
             'M9-{J}F01', 'M9-{J}F04', 'M9-{J}F02'),
     PORTEFOLIO: r('3.º{N}ano', '90{N}minutos', '40{N}%'),
     'm9/visita-fundacao-jose-saramago/index.html': r('3.º{N}ano'),
-    'tarefas/m9-u1/index.html': r('10{N}min', '90{N}min', '60{N}minutos', '10{N}minutos', 'capítulo{N}I', 'capítulo{N}V'),
-    'tarefas/m9-u2/index.html': r('10{N}min', '90{N}min', '60{N}minutos', '10{N}minutos'),
+    # 14/11/2026: as duas tarefas do M9 no molde «mais fácil de fazer» (camada tarefas_faceis_m9_20261114): os tempos são 10, 10, 55 e 15
+    # («60 minutos» saiu, com o texto antigo); há referências novas aos blocos «Onde está o texto», às lições e ao tamanho do texto.
+    # Conferem-se como antes, uma a uma, à vista e numa linha só.
+    # (14/11/2026: «capítulo I», «capítulo V» e «capítulo XIX» conferem-se nos pedidos dos temas e nas linhas de fonte; no título do bloco, o detetor de controlo, com espaços
+    # normais, não parte numa caixa de largura zero, por isso esse lugar não serve para a conferência.)
+    'tarefas/m9-u1/index.html': r('10{N}min', '90{N}min', '55{N}min', '15{N}min', '10{N}minutos', '90{N}minutos', 'capítulo{N}I,', 'capítulo{N}I.', 'capítulo{N}V,', 'capítulo{N}V.',
+                                  'capítulos{N}I{N}e{N}V', '200{N}a{N}240{N}palavras', 'Texto{N}1', 'lição{N}F14', 'lição{N}F15', 'A{N}ou{N}B'),
+    'tarefas/m9-u2/index.html': r('10{N}min', '90{N}min', '55{N}min', '15{N}min', '10{N}minutos', '90{N}minutos', '220{N}a{N}260{N}palavras',
+                                  'Texto{N}1', 'capítulo{N}XIX.', 'capítulo{N}XVI', 'capítulo{N}XXV', 'lição{N}F05', 'lição{N}F16', 'A{N}ou{N}B'),
 }
 # No guia, os blocos de hoje («Aquecer, 10 min»…) estão na rota da tarefa, que se abre quando se escolhe uma.
-ROTA = r('10{N}min', '5{N}min', '60{N}min', '15{N}min')
+# 14/11/2026: decisão do docente para as tarefas do M9 (camada tarefas_faceis_m9_20261114): quatro blocos de 10, 10, 55 e 15 minutos no
+# guia («5 min» e «60 min» saíram). As referências continuam a conferir-se uma a uma, à vista e numa linha só.
+ROTA = r('10{N}min', '55{N}min', '15{N}min')
 # Referências nos cartões das lições: (página da lição, de onde vêm os cartões, índice do cartão, referências que se veem nesse
 # cartão). Só as que estão no enunciado, no texto de leitura ou no título do cartão: as opções de resposta não aparecem todas de
 # cada vez. Os cartões da F11, da F12 e da F13 vêm de m9/recursos e montam-se na página da sua lição.
@@ -298,11 +310,13 @@ def main():
                     page.locator('#arquivo-producoes summary').click()
                     page.locator('button[data-n="1"]').first.click()
                     assert page.locator('#rota').is_visible()
-                    confere_lista(page, page.locator('#rota .regra ol'), 3, f'guia, «Três antes de mim» {largura}')
+                    # 14/11/2026: a regra passou a «Dois antes de mim», com dois passos (decisão do docente: sai «pergunta ao teu par de
+                    # trabalho»; camada tarefas_faceis_m9_20261114). A lista confere-se como antes: à vista, com os itens todos.
+                    confere_lista(page, page.locator('#rota .regra ol'), 2, f'guia, «Dois antes de mim» {largura}')
                     listas += 1
                     confere_referencias(page, '#rota', ROTA, f'{GUIA} (rota) {largura}')
                     referencias += len(ROTA)
-                    captura(page.locator('#rota .regra').filter(has_text='Três antes de mim'), f'guia-tres-antes-de-mim-{esquema}', largura)
+                    captura(page.locator('#rota .regra').filter(has_text='Dois antes de mim'), f'guia-dois-antes-de-mim-{esquema}', largura)
                     print('PASS listas:', largura, esquema, flush=True)
                     # O portefólio: os nomes dos ficheiros só mudam de linha nos pontos marcados.
                     page.goto(host + '/' + PORTEFOLIO.replace('index.html', ''), wait_until='networkidle')

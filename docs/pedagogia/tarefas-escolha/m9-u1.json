@@ -102,5 +102,273 @@
   "etapa": "2. Faz um plano breve",
   "entrega": "Escreve o tema escolhido (A ou B) no topo. Fotografa o plano, o texto e as duas linhas finais. Confirma que as fotografias mostram o trabalho completo e entrega-as na tarefa do Teams.",
   "escolha_primeiro": true
+ },
+ "facil": {
+  "kicker": "Tarefa individual, 90 minutos",
+  "producao_minutos": 55,
+  "folha_versao": "20261113-facil-12",
+  "entregas": {
+   "intro": "Fotografias do teu trabalho em papel, na tarefa do Teams: o plano, o texto e as duas linhas finais."
+  },
+  "aquecer": {
+   "titulo": "Relógio do aquecimento"
+  },
+  "verificar_titulo": "Antes de entregar, verifica",
+  "verificar_texto": "Responde sim ou não. Se for não, completa o teu trabalho.",
+  "exemplo_titulo": [
+   "Ver um exemplo com outro caso",
+   "Ver dois exemplos com outros casos"
+  ],
+  "entrega_titulo": "Entrega no Teams",
+  "rever_titulo": "Se precisares de rever",
+  "descricao": "aquecimento, um plano e uma apreciação crítica de um episódio do romance, sobre um tema à escolha",
+  "_nota": "14/11/2026: a página da tarefa sai só desta chave (scripts/tarefa_facil.py) e de «titulo», «unidade», «aquecer» (ligação e minutos) e «opcional». As outras chaves antigas («aquecer.texto», «lead», «nucleo», «temas», «apoios», «dossie», «dossie_titulo», «criterios», «fecho», «clareza») já não aparecem na página: ficam como estavam para a leitura histórica das camadas de baixo. <i>Memorial do Convento</i> ainda tem direitos de autor (José Saramago morre em 2010: mapa do módulo M9, «Azinhaga, 1922–Lanzarote, 2010»): não se copia. Cada passagem tem um bloco «Onde está o texto», só com as citações curtas que as lições do M9 já publicam, letra a letra, e a linha de fonte, que diz onde a ler, sem número de página: as lições dizem «no livro», nunca «no manual» (15/11/2026: a edição da turma não existe, decisão do docente; lê-se no livro). Os excertos longos das lições F01, F02 e F05 ficam nas lições e não se copiam. O dossiê antigo não aparece: as condições de consulta passaram a alíneas e a linhas de ajuda do plano e do texto; as ligações continuam nas lições, para onde a página remete.",
+  "fazer": [
+   "Faz o aquecimento (10 minutos).",
+   "Escolhe um tema: A ou B. Cada tema é um episódio de <i>Memorial do Convento</i>.",
+   "Faz o plano.",
+   "Escreve uma apreciação crítica do episódio.",
+   "Escreve duas linhas finais.",
+   "Revê e entrega no Teams."
+  ],
+  "modo": "Antes da aula, lê os capítulos I e V de <i>Memorial do Convento</i>, no livro. Trabalhas à mão. O aquecimento e a tarefa são com consulta: podes usar as lições do site, o caderno e o dicionário.",
+  "juntos_em_papel": true,
+  "grelha_nota": "A autoavaliação da grelha é só para ti: não se entrega. Na grelha, a tua apreciação chama-se «juízo crítico» e os pormenores chamam-se «indícios».",
+  "quadro": {
+   "titulo": "Tempo e tamanho",
+   "colunas": [
+    "Tempo",
+    "O que fazes",
+    "Palavras"
+   ],
+   "linhas": [
+    [
+     "10 min",
+     "Aquecimento em cartões",
+     ""
+    ],
+    [
+     "10 min",
+     "Leitura do enunciado",
+     ""
+    ],
+    [
+     "55 min",
+     "Plano e apreciação crítica (tema A ou B)",
+     "200 a 240"
+    ],
+    [
+     "15 min",
+     "Revisão e entrega",
+     ""
+    ],
+    [
+     "90 min",
+     "Total",
+     "200 a 240"
+    ]
+   ],
+   "notas": [
+    "Nos 10 minutos de leitura, lê os dois temas, o que o plano leva e o que o texto leva.<span class=\"tf-so-ecra\"> Os exemplos são para consultares enquanto escreves.</span>",
+    "Não contam para as palavras: as passagens citadas ou copiadas, o plano e as duas linhas finais."
+   ]
+  },
+  "textos": [],
+  "perguntas": [],
+  "temas_titulo": "Escolhe um tema: A ou B",
+  "temas_nota": "Uma só apreciação crítica: 200 a 240 palavras.",
+  "temas_topo": "Escreve a letra do teu tema (A ou B) no topo.",
+  "temas_relogio": "Começa este relógio depois da leitura.",
+  "temas": [
+   {
+    "letra": "A",
+    "nome": "O rei e a miniatura",
+    "intro": "No capítulo I, como transforma a descrição da miniatura da basílica de São Pedro a imagem do rei?",
+    "antes": [
+     "O romance tem direitos de autor. Por isso não está copiado nesta página. Vê <a href=\"#texto-1\">onde ler o episódio</a>, por baixo dos passos."
+    ],
+    "passos": [
+     "Aprecia o episódio.",
+     "Distingue os gestos do rei da forma como o narrador os conta."
+    ],
+    "material": {
+     "titulo": "Só para o tema A: onde está o Texto 1",
+     "onde": [
+      {
+       "id": "texto-1",
+       "titulo": "<span class=\"tt-num\">Texto 1</span> <i>Memorial do Convento</i>, capítulo I: a miniatura da basílica",
+       "frases": [
+        "As lições não citam esta passagem: a lição F14 resume o episódio, sem o citar."
+       ],
+       "citacoes": [],
+       "fonte": "José Saramago, <i>Memorial do Convento</i>, capítulo I. Lê o episódio no livro, como diz a lição F14 (cartão «Lê de perto»).",
+       "origem": "m9/licao-m9-f14/index.html, cartão 4 («Lê de perto»: «Resumo didático do capítulo I», «Lê o episódio no livro» e «Este resumo não é uma citação do romance», letra a letra); o ano da morte do autor (2010), do mapa do módulo M9"
+      }
+     ],
+     "notas": []
+    }
+   },
+   {
+    "letra": "B",
+    "nome": "A cerimónia e o olhar",
+    "intro": "No capítulo V, como transforma o narrador a imagem do auto de fé?",
+    "antes": [
+     "O romance tem direitos de autor. Por isso não está copiado nesta página. Vê <a href=\"#texto-2\">onde ler o episódio</a>, por baixo dos passos.",
+     "É o primeiro auto de fé do romance: não o confundas com o do último capítulo.",
+     "A assistência é quem assiste à cerimónia."
+    ],
+    "passos": [
+     "Aprecia o episódio.",
+     "Distingue o olhar da assistência da crítica construída pela narração."
+    ],
+    "material": {
+     "titulo": "Só para o tema B: onde está o Texto 2",
+     "onde": [
+      {
+       "id": "texto-2",
+       "titulo": "<span class=\"tt-num\">Texto 2</span> <i>Memorial do Convento</i>, capítulo V: o primeiro auto de fé",
+       "frases": [],
+       "citacoes": [
+        {
+         "intro": "Palavras que a lição F15 cita:",
+         "linhas": [
+          "«a descansada leitura das sentenças»"
+         ]
+        }
+       ],
+       "fonte": "José Saramago, <i>Memorial do Convento</i>, capítulo V. Lê o capítulo no livro, como diz a lição F15 (cartão «Lê de perto»).",
+       "origem": "m9/licao-m9-f15/index.html, cartão 4 («Lê de perto»: a citação, «José Saramago, Memorial do Convento, capítulo V» e «Lê o capítulo no livro», letra a letra); «quem assiste», do cartão 1 da mesma lição"
+      }
+     ],
+     "notas": []
+    }
+   }
+  ],
+  "depois": [
+   {
+    "id": "o-teu-plano",
+    "nome": "O teu plano",
+    "titulo": "Faz o plano.",
+    "meta": "Não conta para as palavras.",
+    "textos": [],
+    "pedido_titulo": "O que o plano leva",
+    "alineas": [
+     "Escreve a tua opinião inicial sobre o episódio.",
+     "Regista dois pormenores do episódio.",
+     "Indica onde se encontram: a página da tua edição e o início de cada passagem.",
+     "Escolhe um procedimento de escrita.",
+     "Anota uma dificuldade da tua leitura."
+    ],
+    "ajudas": [
+     "Um pormenor é uma palavra, um gesto ou um objeto do episódio que apoia o que dizes.",
+     "Um procedimento de escrita é uma maneira de contar que o narrador escolhe.",
+     "Basta o início de cada passagem: não copies o romance para o plano."
+    ],
+    "exemplos": [
+     {
+      "titulo": "Um plano com outro caso: o caso inventado do aquecimento",
+      "contexto": "Caso inventado: o diretor inaugura a biblioteca, corta uma fita e elogia o silêncio. Atrás dele, uma máquina de obras impede que se ouça o discurso. O narrador descreve ambos os sons.",
+      "paragrafos": [
+       {
+        "al": "Alínea a):",
+        "t": "Para já, acho a cena divertida: a biblioteca abre com uma máquina de obras logo atrás do diretor."
+       },
+       {
+        "al": "Alíneas b) e c):",
+        "t": "«inaugura a biblioteca», na primeira frase do caso; «uma máquina de obras», na segunda frase."
+       },
+       {
+        "al": "Alínea d):",
+        "t": "A ordem das frases: primeiro a inauguração, só depois o que está atrás do diretor."
+       },
+       {
+        "al": "Alínea e):",
+        "t": "Tive de voltar à segunda frase para perceber onde fica a máquina."
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "o-teu-texto",
+    "nome": "O teu texto",
+    "titulo": "Escreve a apreciação crítica.",
+    "meta": "200 a 240 palavras, sobre o tema A ou o tema B.",
+    "textos": [],
+    "pedido_titulo": "O que o texto leva",
+    "alineas": [
+     "Apresenta a tua apreciação: o que pensas do episódio, e porquê.",
+     "Desenvolve a apreciação com os dois pormenores do teu plano.",
+     "Explica o efeito do procedimento de escrita com exemplos.",
+     "Indica a edição que usaste: a editora e o ano.",
+     "Escreve o total de palavras no fim."
+    ],
+    "ajudas": [
+     "O efeito é o que o procedimento faz sentir ou pensar a quem lê.",
+     "Identificá-lo não chega: mostra como funciona nos dois pormenores."
+    ],
+    "citar": "Se citares, copia as palavras exatas do romance. Põe-nas entre aspas: «…». Indica a página da tua edição.",
+    "exemplos": [
+     {
+      "titulo": "Uma apreciação com outro caso: o caso inventado do aquecimento",
+      "contexto": "Caso inventado: o diretor inaugura a biblioteca, corta uma fita e elogia o silêncio. Atrás dele, uma máquina de obras impede que se ouça o discurso. O narrador descreve ambos os sons.",
+      "paragrafos": [
+       {
+        "al": "Alínea a):",
+        "t": "Acho a cena divertida, porque uma biblioteca nova abre as portas com uma máquina de obras atrás do diretor."
+       },
+       {
+        "al": "Alínea c):",
+        "t": "O narrador só fala da máquina na segunda frase. Quem lê imagina primeiro uma inauguração como as outras e só depois tem a surpresa: a ordem das frases guarda esse pormenor para o fim."
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "finais": {
+   "titulo": "Duas linhas finais",
+   "texto": "Ficam fora da contagem.",
+   "passos": [
+    "Responde: como muda a tua leitura do episódio quando distingues o que acontece da maneira como é contado?",
+    "Localiza o pormenor decisivo."
+   ]
+  },
+  "verificar": [
+   "A letra do meu tema (A ou B) está no topo?",
+   "O plano tem a minha opinião inicial e dois pormenores do episódio, com o lugar de cada um?",
+   "Escolhi um procedimento de escrita e anotei uma dificuldade da minha leitura?",
+   "O texto diz o que penso do episódio, e porquê?",
+   "Fiz a distinção que o passo 2 do meu tema pede?",
+   "Expliquei o efeito do procedimento com exemplos, e não só o nome?",
+   "Indiquei a edição que usei?",
+   "Tenho 200 a 240 palavras, com o total no fim, e revi a escrita?",
+   "Escrevi as duas linhas finais?"
+  ],
+  "entrega": [
+   "Fotografa o plano, o texto e as duas linhas finais.",
+   "Confirma que as fotografias mostram o trabalho completo.",
+   "Entrega as fotografias na tarefa do Teams."
+  ],
+  "rever_texto": "O romance não está nesta página: lê-o no livro. As lições servem para rever a matéria.",
+  "rever": [
+   {
+    "para": "Tema A",
+    "texto": "Lição F14, <a href=\"../../m9/licao-m9-f14/\">Um rei em miniatura</a>. Relê «Lê de perto» e «Para entender»: o objeto, a escala e o limite da comparação."
+   },
+   {
+    "para": "Tema B",
+    "texto": "Lição F15, <a href=\"../../m9/licao-m9-f15/\">A festa vista do outro lado</a>. Relê «Lê de perto» e «Para entender»: dois planos em confronto."
+   },
+   {
+    "para": "O teu plano",
+    "texto": "Lição F11, <a href=\"../../m9/licao-m9-f11/\">O cuidado também é ação</a>. Relê «Lê e confronta»: uma ação concreta, o seu efeito e o seu limite."
+   },
+   {
+    "para": "O teu texto",
+    "texto": "Lição F03, <a href=\"../../m9/licao-m9-f03/\">A voz que conta</a>. Relê «O essencial»: um narrador que comenta, e a voz das personagens."
+   }
+  ],
+  "opcional_titulo": "Experimentar uma pergunta"
  }
 }

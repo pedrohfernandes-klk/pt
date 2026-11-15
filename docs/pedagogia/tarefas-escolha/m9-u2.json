@@ -106,5 +106,316 @@
   "etapa": "2. Faz um plano breve",
   "entrega": "Escreve o tema escolhido (A ou B) no topo. Fotografa o plano, o texto e as duas linhas finais. Confirma que as fotografias mostram o trabalho completo e entrega-as na tarefa do Teams.",
   "escolha_primeiro": true
+ },
+ "facil": {
+  "kicker": "Tarefa individual, 90 minutos",
+  "producao_minutos": 55,
+  "folha_versao": "20261113-facil-12",
+  "entregas": {
+   "intro": "Fotografias do teu trabalho em papel, na tarefa do Teams: o plano, o texto e as duas linhas finais."
+  },
+  "aquecer": {
+   "titulo": "Relógio do aquecimento"
+  },
+  "verificar_titulo": "Antes de entregar, verifica",
+  "verificar_texto": "Responde sim ou não. Se for não, completa o teu trabalho.",
+  "exemplo_titulo": [
+   "Ver um exemplo com outro caso",
+   "Ver dois exemplos com outros casos"
+  ],
+  "entrega_titulo": "Entrega no Teams",
+  "rever_titulo": "Se precisares de rever",
+  "descricao": "aquecimento, um plano e um texto de opinião que parte do romance, com um tema à escolha",
+  "_nota": "14/11/2026: a página da tarefa sai só desta chave (scripts/tarefa_facil.py) e de «titulo», «unidade», «aquecer» (ligação e minutos) e «opcional». As outras chaves antigas («aquecer.texto», «lead», «nucleo», «temas», «apoios», «dossie», «dossie_titulo», «criterios», «fecho», «clareza») já não aparecem na página: ficam como estavam para a leitura histórica das camadas de baixo. <i>Memorial do Convento</i> ainda tem direitos de autor (José Saramago morre em 2010: mapa do módulo M9, «Azinhaga, 1922–Lanzarote, 2010»): não se copia. Cada passagem tem um bloco «Onde está o texto», só com as citações curtas que as lições do M9 já publicam, letra a letra, e a linha de fonte, que diz onde a ler, sem número de página: as lições dizem «no livro», nunca «no manual» (15/11/2026: a edição da turma não existe, decisão do docente; lê-se no livro). Os excertos longos das lições F01, F02 e F05 ficam nas lições e não se copiam. O dossiê antigo não aparece: as condições de consulta passaram a alíneas e a linhas de ajuda do plano e do texto; as ligações continuam nas lições, para onde a página remete.",
+  "fazer": [
+   "Faz o aquecimento (10 minutos).",
+   "Escolhe um tema: A ou B. Os dois partem de <i>Memorial do Convento</i>.",
+   "Faz o plano.",
+   "Escreve um texto de opinião.",
+   "Escreve duas linhas finais.",
+   "Revê e entrega no Teams."
+  ],
+  "modo": "Trabalhas à mão. O aquecimento e a tarefa são com consulta: podes usar as lições do site, o caderno e o dicionário.",
+  "juntos_em_papel": true,
+  "grelha_nota": "A autoavaliação da grelha é só para ti: não se entrega. Na grelha, as situações do romance também se chamam «indícios».",
+  "quadro": {
+   "titulo": "Tempo e tamanho",
+   "colunas": [
+    "Tempo",
+    "O que fazes",
+    "Palavras"
+   ],
+   "linhas": [
+    [
+     "10 min",
+     "Aquecimento em cartões",
+     ""
+    ],
+    [
+     "10 min",
+     "Leitura do enunciado",
+     ""
+    ],
+    [
+     "55 min",
+     "Plano e texto de opinião (tema A ou B)",
+     "220 a 260"
+    ],
+    [
+     "15 min",
+     "Revisão e entrega",
+     ""
+    ],
+    [
+     "90 min",
+     "Total",
+     "220 a 260"
+    ]
+   ],
+   "notas": [
+    "Nos 10 minutos de leitura, lê os dois temas, o que o plano leva e o que o texto leva.<span class=\"tf-so-ecra\"> Os exemplos são para consultares enquanto escreves.</span>",
+    "Não contam para as palavras: as passagens citadas ou copiadas, o plano e as duas linhas finais."
+   ]
+  },
+  "textos": [],
+  "perguntas": [],
+  "temas_titulo": "Escolhe um tema: A ou B",
+  "temas_nota": "Um só texto de opinião: 220 a 260 palavras.",
+  "temas_topo": "Escreve a letra do teu tema (A ou B) no topo.",
+  "temas_relogio": "Começa este relógio depois da leitura.",
+  "temas": [
+   {
+    "letra": "A",
+    "nome": "Apresentar um monumento",
+    "intro": "Como devem aparecer as vidas dos construtores na apresentação pública de um monumento?",
+    "antes": [
+     "O romance tem direitos de autor. Por isso não está copiado nesta página. Vê <a href=\"#texto-1\">onde ler as passagens</a>, por baixo dos passos.",
+     "A nomeação dos trabalhadores é a passagem em que o narrador diz os nomes dos homens, um a um."
+    ],
+    "passos": [
+     "Propõe uma decisão.",
+     "Relaciona a nomeação dos trabalhadores com o episódio de Francisco Marques."
+    ],
+    "material": {
+     "titulo": "Só para o tema A: onde estão os Textos 1 e 2",
+     "onde": [
+      {
+       "id": "texto-1",
+       "titulo": "<span class=\"tt-num\">Texto 1</span> <i>Memorial do Convento</i>: os nomes dos trabalhadores",
+       "frases": [],
+       "citacoes": [
+        {
+         "intro": "Palavras que a lição F05 cita:",
+         "linhas": [
+          "«já não podemos falar-lhes das vidas, por tantas serem, ao menos deixemos os nomes escritos»"
+         ]
+        }
+       ],
+       "fonte": "José Saramago, <i>Memorial do Convento</i> (1982), a viagem da pedra para Mafra. Lê a passagem no livro. A lição F05 tem um excerto: cartão «O texto, 1 de 3».",
+       "origem": "m9/licao-m9-f05/index.html, cartão 16 (a citação, letra a letra); a linha de fonte, do cartão 5 («O texto, 1 de 3»: «José Saramago, Memorial do Convento (1982), a viagem da pedra para Mafra (excerto)»); «Com o livro aberto: a pedra e os nomes», do cartão 8 («Para entender»); «um a um», do mesmo cartão"
+      },
+      {
+       "id": "texto-2",
+       "titulo": "<span class=\"tt-num\">Texto 2</span> <i>Memorial do Convento</i>, capítulo XIX: o episódio de Francisco Marques",
+       "frases": [
+        "Se abrires o excerto da Porto Editora que a lição F16 liga, lê só o texto do romance, não o questionário."
+       ],
+       "citacoes": [
+        {
+         "intro": "Palavras que a lição F16 cita:",
+         "linhas": [
+          "«está a fazer bem o trabalho»"
+         ]
+        },
+        {
+         "intro": "Palavras que a lição F05 cita:",
+         "linhas": [
+          "«aquela mulher ali é que é a viúva, não sabemos que nome tem, nem adiantaria nada à história ir lá perguntar-lhe»"
+         ]
+        }
+       ],
+       "fonte": "José Saramago, <i>Memorial do Convento</i>, capítulo XIX. A lição F16 diz onde ler a passagem: cartão «Lê de perto» (o excerto da Porto Editora ou o livro).",
+       "origem": "m9/licao-m9-f16/index.html, cartão 4 («Lê de perto»: «está a fazer bem o trabalho», a ligação para o excerto da Porto Editora e «Se o acesso não estiver disponível, lê a passagem no livro», letra a letra); m9/licao-m9-f05/index.html, cartão 24 (a citação da viúva, letra a letra, «(capítulo XIX)»); o capítulo XIX, também de m9/recursos/f13.js, cartão 9 («Estação 2: a pedra e a viúva»)"
+      }
+     ],
+     "notas": []
+    }
+   },
+   {
+    "letra": "B",
+    "nome": "Apresentar uma invenção",
+    "intro": "Como devem aparecer o cuidado e a arte na apresentação pública de uma invenção?",
+    "antes": [
+     "O romance tem direitos de autor. Por isso não está copiado nesta página. Vê <a href=\"#texto-3\">onde ler as passagens</a>, por baixo dos passos.",
+     "As duas situações do teu plano são uma de Blimunda e outra de Scarlatti."
+    ],
+    "passos": [
+     "Propõe uma decisão.",
+     "Relaciona o papel de Blimunda com a intervenção de Scarlatti."
+    ],
+    "material": {
+     "titulo": "Só para o tema B: onde estão os Textos 3 e 4",
+     "onde": [
+      {
+       "id": "texto-3",
+       "titulo": "<span class=\"tt-num\">Texto 3</span> <i>Memorial do Convento</i>: o papel de Blimunda",
+       "frases": [
+        "A lição F11 aponta duas passagens: o voo da passarola, no capítulo XVI, e a procura de Baltasar, no capítulo XXV."
+       ],
+       "citacoes": [
+        {
+         "intro": "Palavras do voo que a lição F02 cita:",
+         "linhas": [
+          "«por obra também dos olhos de Blimunda»"
+         ]
+        }
+       ],
+       "fonte": "José Saramago, <i>Memorial do Convento</i>. As passagens leem-se no livro, como diz a lição F11 (cartão «Para levar»). A lição F02 tem um excerto do voo e um do reencontro: cartões «O texto».",
+       "origem": "m9/recursos/f11.js, cartões 2 e 5 («Lê e confronta»: «no capítulo XXV, a procura de Baltasar» e «No voo da passarola, capítulo XVI») e 13 («Para levar»: «As passagens literárias leem-se no livro»); a citação, de m9/licao-m9-f02/index.html, cartão 22, letra a letra; os cartões 5 e 6 da F02 («O texto, 1 de 2» e «2 de 2»)"
+      },
+      {
+       "id": "texto-4",
+       "titulo": "<span class=\"tt-num\">Texto 4</span> <i>Memorial do Convento</i>: a intervenção de Scarlatti",
+       "frases": [
+        "As lições não citam esta passagem."
+       ],
+       "citacoes": [],
+       "fonte": "José Saramago, <i>Memorial do Convento</i>. A lição F12 diz como a procurar no livro: cartão «O que Scarlatti acrescenta».",
+       "origem": "m9/recursos/f12.js, cartão 2 («Lê e confronta», «O que Scarlatti acrescenta»: «No livro, localiza as passagens em que Scarlatti toca e se relaciona com os protagonistas.») e 13 («As passagens literárias leem-se no livro»); nenhuma lição do M9 cita a passagem nem diz o capítulo"
+      }
+     ],
+     "notas": []
+    }
+   }
+  ],
+  "depois": [
+   {
+    "id": "o-teu-plano",
+    "nome": "O teu plano",
+    "titulo": "Faz o plano.",
+    "meta": "Não conta para as palavras.",
+    "textos": [],
+    "pedido_titulo": "O que o plano leva",
+    "alineas": [
+     "Escreve a decisão concreta que propões.",
+     "Indica duas situações de <i>Memorial do Convento</i> que a apoiem.",
+     "Indica onde se encontram: a página da tua edição e o início de cada passagem.",
+     "Anota uma objeção à tua decisão.",
+     "Anota uma diferença entre a época do romance e o presente."
+    ],
+    "ajudas": [
+     "A decisão pode ser uma escolha de conteúdo ou de apresentação.",
+     "Não construas uma campanha, um cartaz ou outro produto: a entrega é só o texto.",
+     "Basta o início de cada passagem: não copies o romance para o plano."
+    ],
+    "exemplos": [
+     {
+      "titulo": "Um plano com outro caso: o caso inventado do aquecimento",
+      "contexto": "Caso inventado: numa exposição escolar, as legendas só dão os títulos das fotografias. A turma discute se deve acrescentar as datas. Algumas imagens mostram o mesmo lugar em anos diferentes.",
+      "paragrafos": [
+       {
+        "al": "Alínea a):",
+        "t": "Pôr lado a lado as fotografias do mesmo lugar, da mais antiga para a mais recente."
+       },
+       {
+        "al": "Alínea d):",
+        "t": "Lado a lado, as fotografias ocupam o dobro da parede."
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "o-teu-texto",
+    "nome": "O teu texto",
+    "titulo": "Escreve o texto de opinião.",
+    "meta": "220 a 260 palavras, sobre o tema A ou o tema B.",
+    "textos": [],
+    "pedido_titulo": "O que o texto leva",
+    "alineas": [
+     "Apresenta a tua decisão.",
+     "Justifica a decisão com as duas situações do romance.",
+     "Apresenta a objeção do teu plano.",
+     "Responde à objeção.",
+     "Explica até onde a comparação entre as épocas funciona.",
+     "Indica a edição que usaste: a editora e o ano.",
+     "Escreve o total de palavras no fim."
+    ],
+    "ajudas": [
+     "Uma objeção é a razão de quem discorda de ti. Podes começar por «Há quem diga que…».",
+     "A diferença entre as épocas que anotaste no plano mostra onde a comparação deixa de funcionar."
+    ],
+    "citar": "Se citares, copia as palavras exatas do romance. Põe-nas entre aspas: «…». Indica a página da tua edição.",
+    "exemplos": [
+     {
+      "titulo": "Objeção e resposta com outro caso: o caso inventado do aquecimento",
+      "contexto": "Caso inventado: numa exposição escolar, as legendas só dão os títulos das fotografias. A turma discute se deve acrescentar as datas. Algumas imagens mostram o mesmo lugar em anos diferentes.",
+      "paragrafos": [
+       {
+        "al": "Alínea c):",
+        "t": "Há quem diga que, lado a lado, as fotografias ocupam o dobro da parede."
+       },
+       {
+        "al": "Alínea d):",
+        "t": "Basta escolher duas fotografias de cada lugar: a parede chega, e a comparação continua à vista."
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "finais": {
+   "titulo": "Duas linhas finais",
+   "texto": "Ficam fora da contagem.",
+   "passos": [
+    "Responde: que diferença entre a época do romance e o presente te levou a ajustar a decisão?",
+    "Indica a passagem do romance que manténs como apoio."
+   ]
+  },
+  "verificar": [
+   "A letra do meu tema (A ou B) está no topo?",
+   "O plano tem a minha decisão e duas situações do romance, com o lugar de cada uma?",
+   "Anotei uma objeção e uma diferença entre a época do romance e o presente?",
+   "O texto apresenta a minha decisão e justifica-a com as duas situações?",
+   "Relacionei as duas situações que o meu tema pede?",
+   "Apresentei a objeção e respondi-lhe?",
+   "Expliquei até onde a comparação entre as épocas funciona?",
+   "Indiquei a edição que usei?",
+   "Tenho 220 a 260 palavras, com o total no fim, e revi a escrita?",
+   "Escrevi as duas linhas finais?"
+  ],
+  "entrega": [
+   "Fotografa o plano, o texto e as duas linhas finais.",
+   "Confirma que as fotografias mostram o trabalho completo.",
+   "Entrega as fotografias na tarefa do Teams."
+  ],
+  "rever_texto": "O romance não está nesta página: lê-o no livro. As lições servem para rever a matéria.",
+  "rever": [
+   {
+    "para": "Texto 1",
+    "texto": "Lição F05, <a href=\"../../m9/licao-m9-f05/\">Os que carregaram a pedra</a>. Relê «Para entender»: a pedra e os nomes."
+   },
+   {
+    "para": "Texto 2",
+    "texto": "Lição F16, <a href=\"../../m9/licao-m9-f16/\">O instante dentro da duração</a>. Relê «Lê de perto»: o trabalho de Francisco Marques e o acidente que o interrompe."
+   },
+   {
+    "para": "Texto 3",
+    "texto": "Lição F11, <a href=\"../../m9/licao-m9-f11/\">O cuidado também é ação</a>. Relê «Lê e confronta»: as ações de Blimunda e os seus limites."
+   },
+   {
+    "para": "Texto 4",
+    "texto": "Lição F12, <a href=\"../../m9/licao-m9-f12/\">Quando a música entra no projeto</a>. Relê «Lê e confronta»: o que Scarlatti acrescenta."
+   },
+   {
+    "para": "O teu plano",
+    "texto": "Lição F13, <a href=\"../../m9/licao-m9-f13/\">Da pista à interpretação</a>. Relê «Lê e confronta»: o que a passagem mostra e o que propões que isso signifique."
+   },
+   {
+    "para": "O teu texto",
+    "texto": "Lição F10, <a href=\"../../m9/licao-m9-f10/\">De quem é uma obra?</a> Relê «Para entender»: a objeção (na lição, «contra-argumento») e a resposta (na lição, «refutação»)."
+   }
+  ],
+  "opcional_titulo": "Experimentar uma pergunta"
  }
 }
