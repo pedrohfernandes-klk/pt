@@ -163,7 +163,16 @@ class FilaFinal(unittest.TestCase):
         self.assertIn('já fotografadas; não escreves outras.', m4)
         self.assertNotIn('já fotografada; não escreves outra', m4)
         m8 = ler('m8/portefolio-do-modulo-m8/index.html')
-        self.assertEqual(m8.count('sem linhas a mais obrigatórias.'), 2)
+        # 15/11/2026: revisão geral antes de publicar: «sem linhas a mais obrigatórias» lia-se mal; fica «sem outra escrita obrigatória».
+        self.assertEqual(m8.count('sem outra escrita obrigatória.'), 2)
+        self.assertNotIn('sem linhas a mais obrigatórias', m8)
+        # 15/11/2026: revisão geral antes de publicar: «sozinho» marca o género de quem lê e sai dos planos das aulas 06 do M1 e 15
+        # do M4; a última «síntese» da lição M1-F11 passa a «duas linhas finais», como no resto da lição.
+        for rel in ('m1/aulas/aula-06/index.html', 'm4/aulas/aula-15/index.html'):
+            self.assertIn('refazer o exercício no telemóvel, sem ajuda, ao teu ritmo', ler(rel), rel)
+            self.assertNotIn('sozinho', ler(rel), rel)
+        self.assertIn('Serve às duas linhas finais da unidade 2, não a este plano.', ler('m1/licao-m1-f11/index.html'))
+        self.assertNotIn('Serve à síntese da unidade 2', ler('m1/licao-m1-f11/index.html'))
         self.assertNotIn('sem síntese adicional obrigatória', m8)
 
     def test_os_outros_usos_de_sintese_ficam(self):
@@ -186,7 +195,8 @@ class FilaFinal(unittest.TestCase):
     def test_camada_fechada(self):
         self.assertEqual(sorted({t['ficheiro'] for t in TROCAS}), sorted(FICHEIROS))
         self.assertEqual(sorted(MANIFESTO['files']), sorted(FICHEIROS))
-        self.assertEqual(len(TROCAS), 35)
+        # 15/11/2026: revisão geral antes de publicar: mais 3 trocas («sozinho» nas aulas 06 do M1 e 15 do M4 e a «síntese» da M1-F11).
+        self.assertEqual(len(TROCAS), 38)
         self.assertEqual(sum(1 for t in TROCAS if t['ficheiro'] in EXAME), 10)
         self.assertEqual(MANIFESTO['base_commit'], MAIN)
         for t in TROCAS:

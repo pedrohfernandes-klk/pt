@@ -265,18 +265,42 @@
  },
  {
   "ficheiro": "m8/portefolio-do-modulo-m8/index.html",
-  "local": "Portefólio do módulo M8: «sem linhas a mais obrigatórias» (U1)",
+  "local": "Portefólio do módulo M8: «sem outra escrita obrigatória» (U1)",
   "antigo": "U1_<wbr>retoma</code></td><td>Retomas formativas da leitura, sem síntese adicional obrigatória",
-  "novo": "U1_<wbr>retoma</code></td><td>Retomas formativas da leitura, sem linhas a mais obrigatórias",
+  "novo": "U1_<wbr>retoma</code></td><td>Retomas formativas da leitura, sem outra escrita obrigatória",
   "ocorrencias": 1,
   "achado": "15/11/2026: Decisão do docente: «síntese integrada» e «síntese simples integrada» passam a «duas linhas finais», como no M1; o mesmo vocabulário nas peças soltas (todos, lição M1-F11, planos das aulas de tarefa e portefólios do M4 e do M8). Só a peça da aula de tarefa: as perguntas de escolha das lições, «síntese oral ou no caderno» e a chave «synthesis» ficam."
  },
  {
   "ficheiro": "m8/portefolio-do-modulo-m8/index.html",
-  "local": "Portefólio do módulo M8: «sem linhas a mais obrigatórias» (U2)",
+  "local": "Portefólio do módulo M8: «sem outra escrita obrigatória» (U2)",
   "antigo": "U2_<wbr>retoma</code></td><td>Retomas formativas da leitura, sem síntese adicional obrigatória",
-  "novo": "U2_<wbr>retoma</code></td><td>Retomas formativas da leitura, sem linhas a mais obrigatórias",
+  "novo": "U2_<wbr>retoma</code></td><td>Retomas formativas da leitura, sem outra escrita obrigatória",
   "ocorrencias": 1,
   "achado": "15/11/2026: Decisão do docente: «síntese integrada» e «síntese simples integrada» passam a «duas linhas finais», como no M1; o mesmo vocabulário nas peças soltas (todos, lição M1-F11, planos das aulas de tarefa e portefólios do M4 e do M8). Só a peça da aula de tarefa: as perguntas de escolha das lições, «síntese oral ou no caderno» e a chave «synthesis» ficam."
+ },
+ {
+  "ficheiro": "m1/aulas/aula-06/index.html",
+  "local": "Plano da aula 06 do M1, «Para casa»: «refazer o exercício no telemóvel, sem ajuda», sem marca de género",
+  "antigo": "refazer o exercício sozinho, no telemóvel, ao teu ritmo",
+  "novo": "refazer o exercício no telemóvel, sem ajuda, ao teu ritmo",
+  "ocorrencias": 1,
+  "achado": "15/11/2026: fila final: revisão geral antes de publicar: «sozinho» marca o género de quem lê e sai do texto dirigido ao aluno; a última «síntese» da lição M1-F11 passa a «duas linhas finais», como no resto da lição; no portefólio do M8, «sem linhas a mais obrigatórias» lia-se mal e passa a «sem outra escrita obrigatória»."
+ },
+ {
+  "ficheiro": "m4/aulas/aula-15/index.html",
+  "local": "Plano da aula 15 do M4, «Para casa»: «refazer o exercício no telemóvel, sem ajuda», sem marca de género",
+  "antigo": "refazer o exercício sozinho, no telemóvel, ao teu ritmo",
+  "novo": "refazer o exercício no telemóvel, sem ajuda, ao teu ritmo",
+  "ocorrencias": 1,
+  "achado": "15/11/2026: fila final: revisão geral antes de publicar: «sozinho» marca o género de quem lê e sai do texto dirigido ao aluno; a última «síntese» da lição M1-F11 passa a «duas linhas finais», como no resto da lição; no portefólio do M8, «sem linhas a mais obrigatórias» lia-se mal e passa a «sem outra escrita obrigatória»."
+ },
+ {
+  "ficheiro": "m1/licao-m1-f11/index.html",
+  "local": "M1-F11, retorno de um cartão: «Serve às duas linhas finais da unidade 2»",
+  "antigo": "Serve à síntese da unidade 2, não a este plano.",
+  "novo": "Serve às duas linhas finais da unidade 2, não a este plano.",
+  "ocorrencias": 1,
+  "achado": "15/11/2026: fila final: revisão geral antes de publicar: «sozinho» marca o género de quem lê e sai do texto dirigido ao aluno; a última «síntese» da lição M1-F11 passa a «duas linhas finais», como no resto da lição; no portefólio do M8, «sem linhas a mais obrigatórias» lia-se mal e passa a «sem outra escrita obrigatória»."
  }
 ]

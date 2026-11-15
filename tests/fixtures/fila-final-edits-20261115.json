@@ -1,6 +1,6 @@
 {
  "base_commit": "4f4135bf679176c6c8e4abda543837632aad7325",
- "_nota": "15/11/2026: fila final: o alvo das sessões do Exame é meta da sessão e não limite do exame, a síntese e a exposição ficam ditas como treino, a Informação-Prova de 2027 ainda não está disponível (assets/exame/app.js e sessoes.json), e os números 5 e 10 dos versos de «Descalça vai para a fonte» (m3/licao-m3-f05) passam para o quinto e o décimo verso. Gerado por scripts/aplicar_trocas.py a partir de scripts/fila_final_20261115.json (que scripts/fila_final_20261115.py escreve): não se edita à mão. Também o resto da decisão do docente de 15/11/2026, «síntese integrada» → «duas linhas finais» (índice, portefólio, mapa e guia da tarefa do M2; todos do M1 e do M7; lição M1-F11; planos das aulas 06 e 14 do M1 e 08, 15 e 18 do M4; portefólios do M4 e do M8). Camada no topo da pilha, por cima de sintese_duas_linhas_20261115: desfaz-se antes de todas. Os 20 rótulos «Item N da prova», «Onipotente» e as perguntas de Teresa (M5-F08) ficam de fora.",
+ "_nota": "15/11/2026: fila final: o alvo das sessões do Exame é meta da sessão e não limite do exame, a síntese e a exposição ficam ditas como treino, a Informação-Prova de 2027 ainda não está disponível (assets/exame/app.js e sessoes.json), e os números 5 e 10 dos versos de «Descalça vai para a fonte» (m3/licao-m3-f05) passam para o quinto e o décimo verso. Gerado por scripts/aplicar_trocas.py a partir de scripts/fila_final_20261115.json (que scripts/fila_final_20261115.py escreve): não se edita à mão. Também o resto da decisão do docente de 15/11/2026, «síntese integrada» → «duas linhas finais» (índice, portefólio, mapa e guia da tarefa do M2; todos do M1 e do M7; lição M1-F11; planos das aulas 06 e 14 do M1 e 08, 15 e 18 do M4; portefólios do M4 e do M8). Camada no topo da pilha, por cima de sintese_duas_linhas_20261115: desfaz-se antes de todas. Os 20 rótulos «Item N da prova», «Onipotente» e as perguntas de Teresa (M5-F08) ficam de fora. Revisão geral antes de publicar (15/11/2026): «sozinho» sai dos planos das aulas 06 do M1 e 15 do M4, a última «síntese» da lição M1-F11 passa a «duas linhas finais» e, no portefólio do M8, fica «sem outra escrita obrigatória».",
  "files": {
   "assets/exame/app.js": {
    "base_sha256_lf": "281f2ba99b4e7326ab4252830997eb2375c8c57d17eb5ace806d7ab7838df53f",
@@ -214,24 +214,36 @@
   },
   "m1/licao-m1-f11/index.html": {
    "base_sha256_lf": "9c01407fdc96f661812ab262567497fb7cfd73abe925c06d846fb230f04901c8",
-   "after_sha256_lf": "4025f2ff59e03dc647013b07060676410c4e8fc95d414307b5256ef6fa9422c6",
+   "after_sha256_lf": "6681e860da364c712035ca24204bf755fc73fb8a2f9aa3b49eeb2f098cf8a898",
    "edits": [
     {
      "location": "M1-F11: «As duas linhas finais ficam na Tarefa da Unidade 2.»",
      "old": "A síntese integra a Tarefa da Unidade 2.",
      "new": "As duas linhas finais ficam na Tarefa da Unidade 2.",
      "occurrences": 1
+    },
+    {
+     "location": "M1-F11, retorno de um cartão: «Serve às duas linhas finais da unidade 2»",
+     "old": "Serve à síntese da unidade 2, não a este plano.",
+     "new": "Serve às duas linhas finais da unidade 2, não a este plano.",
+     "occurrences": 1
     }
    ]
   },
   "m1/aulas/aula-06/index.html": {
    "base_sha256_lf": "3b153cbcfca757f7690e4895e8071ed73851ca8906ca025ef9b21e3bfff5df5a",
-   "after_sha256_lf": "658ea5f08fe7bd5cc7ae4c024935e25c25fe642b828074b887ec6e38e00b3055",
+   "after_sha256_lf": "4017935888bc1d611f9ec8ab2fd152dfe0d3450d013443f36003f5e60030a741",
    "edits": [
     {
      "location": "Plano da aula 06 do M1: «O fecho e as duas linhas finais fazem parte da aula de tarefa.»",
      "old": "O fecho e a síntese integram a aula de tarefa.",
      "new": "O fecho e as duas linhas finais fazem parte da aula de tarefa.",
+     "occurrences": 1
+    },
+    {
+     "location": "Plano da aula 06 do M1, «Para casa»: «refazer o exercício no telemóvel, sem ajuda», sem marca de género",
+     "old": "refazer o exercício sozinho, no telemóvel, ao teu ritmo",
+     "new": "refazer o exercício no telemóvel, sem ajuda, ao teu ritmo",
      "occurrences": 1
     }
    ]
@@ -262,12 +274,18 @@
   },
   "m4/aulas/aula-15/index.html": {
    "base_sha256_lf": "9adb3327d29fbd1f31e81697d998faa4561295ed9e393367c591e178d897c2a8",
-   "after_sha256_lf": "80996c97e59f08846013e8a97f4b4415e7bea576b7316fa421cd0847688458ce",
+   "after_sha256_lf": "458f322bec2be076ea03b03c1d75e2229cf375cf0670c08764c440a5f26de545",
    "edits": [
     {
      "location": "Plano da aula 15 do M4: «O fecho e as duas linhas finais fazem parte da aula de tarefa.»",
      "old": "O fecho e a síntese integram a aula de tarefa.",
      "new": "O fecho e as duas linhas finais fazem parte da aula de tarefa.",
+     "occurrences": 1
+    },
+    {
+     "location": "Plano da aula 15 do M4, «Para casa»: «refazer o exercício no telemóvel, sem ajuda», sem marca de género",
+     "old": "refazer o exercício sozinho, no telemóvel, ao teu ritmo",
+     "new": "refazer o exercício no telemóvel, sem ajuda, ao teu ritmo",
      "occurrences": 1
     }
    ]
@@ -298,18 +316,18 @@
   },
   "m8/portefolio-do-modulo-m8/index.html": {
    "base_sha256_lf": "b9580299838c72ed4d9dc99e06f55af5c1e269094326597b7a44ef6ae8075b14",
-   "after_sha256_lf": "50771af071c801b719e1e9d34303c7e4b18a6c1172e924fce80e81b787c7767d",
+   "after_sha256_lf": "10fdb366ec49fe108c2e7069c38e3107db15bb8c38824dcd74b99d0c7d70b244",
    "edits": [
     {
-     "location": "Portefólio do módulo M8: «sem linhas a mais obrigatórias» (U1)",
+     "location": "Portefólio do módulo M8: «sem outra escrita obrigatória» (U1)",
      "old": "U1_<wbr>retoma</code></td><td>Retomas formativas da leitura, sem síntese adicional obrigatória",
-     "new": "U1_<wbr>retoma</code></td><td>Retomas formativas da leitura, sem linhas a mais obrigatórias",
+     "new": "U1_<wbr>retoma</code></td><td>Retomas formativas da leitura, sem outra escrita obrigatória",
      "occurrences": 1
     },
     {
-     "location": "Portefólio do módulo M8: «sem linhas a mais obrigatórias» (U2)",
+     "location": "Portefólio do módulo M8: «sem outra escrita obrigatória» (U2)",
      "old": "U2_<wbr>retoma</code></td><td>Retomas formativas da leitura, sem síntese adicional obrigatória",
-     "new": "U2_<wbr>retoma</code></td><td>Retomas formativas da leitura, sem linhas a mais obrigatórias",
+     "new": "U2_<wbr>retoma</code></td><td>Retomas formativas da leitura, sem outra escrita obrigatória",
      "occurrences": 1
     }
    ]

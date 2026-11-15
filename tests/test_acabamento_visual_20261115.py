@@ -65,6 +65,15 @@ class AcabamentoVisual(unittest.TestCase):
     def test_sem_movimento_reduzido(self):
         self.assertNotIn('prefers-reduced-motion:reduce', BLOCO)
 
+    def test_dobras_sempre_abertas_nunca_ficam_transparentes(self):
+        # 15/11/2026: revisão geral antes de publicar: as dobras que o ecrã mostra sempre abertas sem o atributo open (.cz-fold dos
+        # índices, .info-i, .tf-so-tema) não podem ganhar opacity:0 no ::details-content.
+        linhas = [l for l in BLOCO.splitlines() if '::details-content{opacity:0' in l]
+        self.assertTrue(linhas)
+        for l in linhas:
+            for c in ('.cz-fold', '.info-i', '.tf-so-tema'):
+                self.assertIn(c, l)
+
 
 if __name__ == '__main__':
     unittest.main()

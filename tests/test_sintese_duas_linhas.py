@@ -108,9 +108,10 @@ class SinteseDuasLinhas(unittest.TestCase):
             self.assertIn('a síntese oral ou no caderno pede duas passagens', ler(f'm{m}/mapa-do-modulo-m{m}/index.html'))
         for rel in INDICES:
             self.assertIn('"synthesis":"integrated"', ler(rel), rel)
-        # 15/11/2026: «sem síntese adicional obrigatória» (portefólio do M8) passou a «sem linhas a mais obrigatórias» na fila final, que está por cima.
+        # 15/11/2026: «sem síntese adicional obrigatória» (portefólio do M8) passou a «sem outra escrita obrigatória» na fila final, que está por
+        # cima (revisão geral antes de publicar, 15/11/2026: «sem linhas a mais obrigatórias» lia-se mal).
         self.assertEqual(ler_sem_fila('m8/portefolio-do-modulo-m8/index.html').count('sem síntese adicional obrigatória.'), 2)
-        self.assertEqual(ler('m8/portefolio-do-modulo-m8/index.html').count('sem linhas a mais obrigatórias.'), 2)
+        self.assertEqual(ler('m8/portefolio-do-modulo-m8/index.html').count('sem outra escrita obrigatória.'), 2)
 
     def test_camada_fechada(self):
         self.assertEqual(sorted({t['ficheiro'] for t in TROCAS}), sorted(FICHEIROS))

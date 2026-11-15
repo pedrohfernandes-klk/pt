@@ -31,7 +31,7 @@ Duas linhas finais (15/11/2026, decisão do docente), o que a camada sintese_dua
 - m1/todos e m7/todos («com consulta e duas linhas finais»), m1/licao-m1-f11 («As duas linhas finais ficam na Tarefa da Unidade 2.»);
 - os planos m1/aulas/aula-06 e aula-14 e m4/aulas/aula-08, aula-15 e aula-18 («O fecho e as duas linhas finais fazem parte da aula de
   tarefa.»);
-- o portefólio do M4 («já fotografadas; não escreves outras») e o do M8 («sem linhas a mais obrigatórias», nas duas retomas).
+- o portefólio do M4 («já fotografadas; não escreves outras») e o do M8 («sem outra escrita obrigatória», nas duas retomas).
 Ficam as perguntas de escolha das lições, «síntese oral ou no caderno» e a chave «synthesis». O portefólio do M8 e o do M4 partilham
 ficheiro com sintese_duas_linhas_20261115 e com tarefa_m4u2_tema_b_20261115: estas desfazem esta camada primeiro.
 
@@ -179,12 +179,23 @@ for _rel in ('m1/aulas/aula-06', 'm1/aulas/aula-14', 'm4/aulas/aula-08', 'm4/aul
 TROCAS += [
     (M4P, 'Portefólio do módulo M4: «já fotografadas; não escreves outras»', 'já fotografada; não escreves outra.',
      'já fotografadas; não escreves outras.', ACHADO_SINTESE),
-    (M8P, 'Portefólio do módulo M8: «sem linhas a mais obrigatórias» (U1)',
+    (M8P, 'Portefólio do módulo M8: «sem outra escrita obrigatória» (U1)',
      'U1_<wbr>retoma</code></td><td>Retomas formativas da leitura, sem síntese adicional obrigatória',
-     'U1_<wbr>retoma</code></td><td>Retomas formativas da leitura, sem linhas a mais obrigatórias', ACHADO_SINTESE),
-    (M8P, 'Portefólio do módulo M8: «sem linhas a mais obrigatórias» (U2)',
+     'U1_<wbr>retoma</code></td><td>Retomas formativas da leitura, sem outra escrita obrigatória', ACHADO_SINTESE),
+    (M8P, 'Portefólio do módulo M8: «sem outra escrita obrigatória» (U2)',
      'U2_<wbr>retoma</code></td><td>Retomas formativas da leitura, sem síntese adicional obrigatória',
-     'U2_<wbr>retoma</code></td><td>Retomas formativas da leitura, sem linhas a mais obrigatórias', ACHADO_SINTESE),
+     'U2_<wbr>retoma</code></td><td>Retomas formativas da leitura, sem outra escrita obrigatória', ACHADO_SINTESE),
+]
+ACHADO_REVISAO = ('15/11/2026: fila final: revisão geral antes de publicar: «sozinho» marca o género de quem lê e sai do texto dirigido ao aluno; '
+                  'a última «síntese» da lição M1-F11 passa a «duas linhas finais», como no resto da lição; no portefólio do M8, '
+                  '«sem linhas a mais obrigatórias» lia-se mal e passa a «sem outra escrita obrigatória».')
+TROCAS += [
+    ('m1/aulas/aula-06/index.html', 'Plano da aula 06 do M1, «Para casa»: «refazer o exercício no telemóvel, sem ajuda», sem marca de género',
+     'refazer o exercício sozinho, no telemóvel, ao teu ritmo', 'refazer o exercício no telemóvel, sem ajuda, ao teu ritmo', ACHADO_REVISAO),
+    ('m4/aulas/aula-15/index.html', 'Plano da aula 15 do M4, «Para casa»: «refazer o exercício no telemóvel, sem ajuda», sem marca de género',
+     'refazer o exercício sozinho, no telemóvel, ao teu ritmo', 'refazer o exercício no telemóvel, sem ajuda, ao teu ritmo', ACHADO_REVISAO),
+    ('m1/licao-m1-f11/index.html', 'M1-F11, retorno de um cartão: «Serve às duas linhas finais da unidade 2»',
+     'Serve à síntese da unidade 2, não a este plano.', 'Serve às duas linhas finais da unidade 2, não a este plano.', ACHADO_REVISAO),
 ]
 FICHEIROS = [APP, SESSOES, F05]
 for _t in TROCAS:
