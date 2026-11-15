@@ -1,0 +1,258 @@
+[
+ {
+  "ficheiro": "assets/atlas-editorial.js",
+  "local": "Atlas, José Carlos Schwarz («Ouvir»): «Faz um pequeno registo de escuta com três campos»",
+  "antigo": "Faz uma pequena ficha de escuta com três campos",
+  "novo": "Faz um pequeno registo de escuta com três campos",
+  "ocorrencias": 1,
+  "achado": "15/11/2026: revisão geral: «ficha» é palavra proibida no texto dirigido ao aluno (decisão f do utilizador): passa a «registo» e a «informação técnica», com o mesmo sentido."
+ },
+ {
+  "ficheiro": "assets/atlas-explorar.js",
+  "local": "Atlas, explorar Almada e Amadeo («Material»): «Consulta a informação técnica.»",
+  "antigo": "Consulta a ficha técnica.",
+  "novo": "Consulta a informação técnica.",
+  "ocorrencias": 1,
+  "achado": "15/11/2026: revisão geral: «ficha» é palavra proibida no texto dirigido ao aluno (decisão f do utilizador): passa a «registo» e a «informação técnica», com o mesmo sentido."
+ },
+ {
+  "ficheiro": "assets/atlas-explorar.js",
+  "local": "Atlas, explorar Almada e Amadeo («Rever»): «a informação técnica descreve os materiais»",
+  "antigo": "a ficha técnica informa sobre os materiais",
+  "novo": "a informação técnica descreve os materiais",
+  "ocorrencias": 1,
+  "achado": "15/11/2026: revisão geral: «ficha» é palavra proibida no texto dirigido ao aluno (decisão f do utilizador): passa a «registo» e a «informação técnica», com o mesmo sentido."
+ },
+ {
+  "ficheiro": "atlas/index.html",
+  "local": "Versão do atlas-editorial.js, para os navegadores não usarem a cópia antiga",
+  "antigo": "atlas-editorial.js?v=20261105-autonomia-1",
+  "novo": "atlas-editorial.js?v=20261115-revisao-geral-1",
+  "ocorrencias": 1,
+  "achado": "15/11/2026: revisão geral: as versões do atlas-editorial.js e do atlas-explorar.js mudam com o texto, para os navegadores não usarem a cópia antiga (como fez a decisão 154)."
+ },
+ {
+  "ficheiro": "atlas/index.html",
+  "local": "Versão do atlas-explorar.js, para os navegadores não usarem a cópia antiga",
+  "antigo": "atlas-explorar.js?v=20261105-autonomia-1",
+  "novo": "atlas-explorar.js?v=20261115-revisao-geral-1",
+  "ocorrencias": 1,
+  "achado": "15/11/2026: revisão geral: as versões do atlas-editorial.js e do atlas-explorar.js mudam com o texto, para os navegadores não usarem a cópia antiga (como fez a decisão 154)."
+ },
+ {
+  "ficheiro": "m9/recursos/f12.js",
+  "local": "M9-F12, «Uma defesa com limites»: «Prepara por escrito duas frases», sem colega",
+  "antigo": "<p>Com um colega, prepara duas frases:",
+  "novo": "<p>Prepara por escrito duas frases:",
+  "ocorrencias": 1,
+  "achado": "15/11/2026: revisão geral: não há tarefas de pares (decisão e do utilizador): o que se fazia com um colega passa a trabalho individual, por escrito, com o mesmo objetivo."
+ },
+ {
+  "ficheiro": "m9/painel-m9-f11/index.html",
+  "local": "Notas para a aula da M9-F11: «explica por escrito, em duas frases, uma escolha e o seu limite»",
+  "antigo": "explica a um colega uma escolha e o seu limite.",
+  "novo": "explica por escrito, em duas frases, uma escolha e o seu limite.",
+  "ocorrencias": 1,
+  "achado": "15/11/2026: revisão geral: não há tarefas de pares (decisão e do utilizador): o que se fazia com um colega passa a trabalho individual, por escrito, com o mesmo objetivo."
+ },
+ {
+  "ficheiro": "m9/painel-m9-f12/index.html",
+  "local": "Notas para a aula da M9-F12: «explica por escrito, em duas frases, uma escolha e o seu limite»",
+  "antigo": "explica a um colega uma escolha e o seu limite.",
+  "novo": "explica por escrito, em duas frases, uma escolha e o seu limite.",
+  "ocorrencias": 1,
+  "achado": "15/11/2026: revisão geral: não há tarefas de pares (decisão e do utilizador): o que se fazia com um colega passa a trabalho individual, por escrito, com o mesmo objetivo."
+ },
+ {
+  "ficheiro": "scripts/provas/dados/seccao.json",
+  "local": "Secção das provas em cartões: a frase de entrada passa aos dados («entrada»), com «tentas primeiro por ti»",
+  "antigo": " \"nao_partir\": true,\n \"seguir\":",
+  "novo": " \"nao_partir\": true,\n \"_entrada\": \"15/11/2026: a frase de entrada da secção (o parágrafo of-entrada), sem marca de género para quem lê («tentas primeiro por ti»). Sem esta chave, scripts/provas/gerar.py escreve a frase de antes.\",\n \"entrada\": \"Os exames nacionais de Português, grupo a grupo. Lês o texto da prova com a numeração da prova e, a seguir a cada parte, fazes os cartões: o que pede o verbo, que linhas provam, o plano da resposta. A resposta completa escreve-se no caderno, com a grelha oficial à vista, e só depois a comparas com exemplos e com os critérios. Nos itens de escolha, tentas primeiro por ti e depois vês porquê.\",\n \"seguir\":",
+  "ocorrencias": 1,
+  "achado": "15/11/2026: revisão geral: «sozinho» marca o género de quem lê (decisão f do utilizador): «tentas primeiro sozinho» passa a «tentas primeiro por ti»."
+ },
+ {
+  "ficheiro": "exame/provas/index.html",
+  "local": "Secção das provas em cartões: «Nos itens de escolha, tentas primeiro por ti e depois vês porquê.»",
+  "antigo": "tentas primeiro sozinho e depois vês porquê.",
+  "novo": "tentas primeiro por ti e depois vês porquê.",
+  "ocorrencias": 1,
+  "achado": "15/11/2026: revisão geral: «sozinho» marca o género de quem lê (decisão f do utilizador): «tentas primeiro sozinho» passa a «tentas primeiro por ti»."
+ },
+ {
+  "ficheiro": "scripts/provas/dados/2026-1f/grupo-i.json",
+  "local": "Dados da prova da 1.ª fase de 2026, Grupo I, cartão «Abre»: «tentas primeiro por ti»",
+  "antigo": "tentas primeiro sozinho",
+  "novo": "tentas primeiro por ti",
+  "ocorrencias": 1,
+  "achado": "15/11/2026: revisão geral: «sozinho» marca o género de quem lê (decisão f do utilizador): «tentas primeiro sozinho» passa a «tentas primeiro por ti»."
+ },
+ {
+  "ficheiro": "exame/provas/2026-1f/grupo-i/index.html",
+  "local": "Lição da prova da 1.ª fase de 2026, Grupo I, cartão «Abre»: «tentas primeiro por ti»",
+  "antigo": "tentas primeiro sozinho",
+  "novo": "tentas primeiro por ti",
+  "ocorrencias": 1,
+  "achado": "15/11/2026: revisão geral: «sozinho» marca o género de quem lê (decisão f do utilizador): «tentas primeiro sozinho» passa a «tentas primeiro por ti»."
+ },
+ {
+  "ficheiro": "scripts/provas/dados/2026-1f/grupo-ii.json",
+  "local": "Dados da prova da 1.ª fase de 2026, Grupo II, cartão «Abre»: «tentas primeiro por ti»",
+  "antigo": "tentas primeiro sozinho",
+  "novo": "tentas primeiro por ti",
+  "ocorrencias": 1,
+  "achado": "15/11/2026: revisão geral: «sozinho» marca o género de quem lê (decisão f do utilizador): «tentas primeiro sozinho» passa a «tentas primeiro por ti»."
+ },
+ {
+  "ficheiro": "exame/provas/2026-1f/grupo-ii/index.html",
+  "local": "Lição da prova da 1.ª fase de 2026, Grupo II, cartão «Abre»: «tentas primeiro por ti»",
+  "antigo": "tentas primeiro sozinho",
+  "novo": "tentas primeiro por ti",
+  "ocorrencias": 1,
+  "achado": "15/11/2026: revisão geral: «sozinho» marca o género de quem lê (decisão f do utilizador): «tentas primeiro sozinho» passa a «tentas primeiro por ti»."
+ },
+ {
+  "ficheiro": "scripts/provas/dados/2026-2f/grupo-i.json",
+  "local": "Dados da prova da 2.ª fase de 2026, Grupo I, cartão «Abre»: «tentas primeiro por ti»",
+  "antigo": "tentas primeiro sozinho",
+  "novo": "tentas primeiro por ti",
+  "ocorrencias": 1,
+  "achado": "15/11/2026: revisão geral: «sozinho» marca o género de quem lê (decisão f do utilizador): «tentas primeiro sozinho» passa a «tentas primeiro por ti»."
+ },
+ {
+  "ficheiro": "exame/provas/2026-2f/grupo-i/index.html",
+  "local": "Lição da prova da 2.ª fase de 2026, Grupo I, cartão «Abre»: «tentas primeiro por ti»",
+  "antigo": "tentas primeiro sozinho",
+  "novo": "tentas primeiro por ti",
+  "ocorrencias": 1,
+  "achado": "15/11/2026: revisão geral: «sozinho» marca o género de quem lê (decisão f do utilizador): «tentas primeiro sozinho» passa a «tentas primeiro por ti»."
+ },
+ {
+  "ficheiro": "scripts/provas/dados/2026-2f/grupo-ii.json",
+  "local": "Dados da prova da 2.ª fase de 2026, Grupo II, cartão «Abre»: «tentas primeiro por ti»",
+  "antigo": "tentas primeiro sozinho",
+  "novo": "tentas primeiro por ti",
+  "ocorrencias": 1,
+  "achado": "15/11/2026: revisão geral: «sozinho» marca o género de quem lê (decisão f do utilizador): «tentas primeiro sozinho» passa a «tentas primeiro por ti»."
+ },
+ {
+  "ficheiro": "exame/provas/2026-2f/grupo-ii/index.html",
+  "local": "Lição da prova da 2.ª fase de 2026, Grupo II, cartão «Abre»: «tentas primeiro por ti»",
+  "antigo": "tentas primeiro sozinho",
+  "novo": "tentas primeiro por ti",
+  "ocorrencias": 1,
+  "achado": "15/11/2026: revisão geral: «sozinho» marca o género de quem lê (decisão f do utilizador): «tentas primeiro sozinho» passa a «tentas primeiro por ti»."
+ },
+ {
+  "ficheiro": "m9/recursos/f11.js",
+  "local": "M9-F11, «O cuidado também é ação»: sai o retrato de José Saramago, com o crédito e a legenda",
+  "antigo": "\"html\":\"<figure class=\\\"fig\\\"><img src=\\\"../../img/fontes/saramago-2005.jpg\\\" alt=\\\"José Saramago em 2005.\\\" width=\\\"480\\\" loading=\\\"lazy\\\" decoding=\\\"async\\\"><figcaption>José Saramago em 2005 (fotografia de Mario Antonio Pena). CC BY-SA 2.0. O autor do <i>Memorial do Convento</i>, cujas personagens esta lição lê pelo que fazem.</figcaption></figure><p class=\\\"abre\\\">Construir, ver, procurar",
+  "novo": "\"html\":\"<p class=\\\"abre\\\">Construir, ver, procurar",
+  "ocorrencias": 1,
+  "achado": "15/11/2026: revisão geral: nas imagens, nenhuma pessoa identificável (decisão a do utilizador): sai o retrato, com o crédito e a legenda; o texto do cartão fica."
+ },
+ {
+  "ficheiro": "m8/licao-m8-f13/index.html",
+  "local": "M8-F13, «Quando as palavras se gastam»: sai o retrato de Eugénio de Andrade (a figura, o «i» dos créditos e a legenda)",
+  "antigo": "\"html\":\"<figure class=\\\"fig documento\\\"><a href=\\\"../../img/fontes/licoes-20261101/eugenio.jpg\\\" aria-label=\\\"Abrir a imagem inteira\\\"><img src=\\\"../../img/fontes/licoes-20261101/eugenio.jpg\\\" alt=\\\"Retrato pintado de Eugénio de Andrade, com pinceladas claras e escuras sobre o rosto.\\\"><\\/a><details class=\\\"info-i info-i--linha\\\" name=\\\"info-i\\\"><summary aria-label=\\\"Créditos da imagem\\\"><span aria-hidden=\\\"true\\\">i<\\/span><\\/summary><div class=\\\"info-i-texto\\\"><p>CC BY-SA 2.0; <a href=\\\"https://commons.wikimedia.org/wiki/File:Eug%C3%A9nio_de_Andrade.jpg\\\">Fonte ↗<\\/a><\\/p><table><caption>Identificação do documento visual<\\/caption><tr><th scope=\\\"row\\\">Autor<\\/th><td>Bottelho<\\/td><\\/tr><tr><th scope=\\\"row\\\">Obra<\\/th><td>Eugénio de Andrade<\\/td><\\/tr><tr><th scope=\\\"row\\\">Data<\\/th><td>2010<\\/td><\\/tr><tr><th scope=\\\"row\\\">Instituição ou acervo<\\/th><td>Publicação do autor no Flickr; reprodução no Wikimedia Commons. Coleção não indicada.<\\/td><\\/tr><tr><th scope=\\\"row\\\">Licença<\\/th><td><a rel=\\\"license\\\" href=\\\"https://creativecommons.org/licenses/by-sa/2.0/\\\">CC BY-SA 2.0<\\/a><\\/td><\\/tr><\\/table><p><a href=\\\"https://commons.wikimedia.org/wiki/File:Eug%C3%A9nio_de_Andrade.jpg\\\">Consultar a fonte e os direitos ↗<\\/a>. Reprodução redimensionada, sem recorte.<\\/p><\\/div><\\/details><figcaption><p>Eugénio de Andrade, num retrato de Bottelho (2010).<\\/p><\\/figcaption><\\/figure><p class=\\\"abre\\\"><strong>Como pode um poema",
+  "novo": "\"html\":\"<p class=\\\"abre\\\"><strong>Como pode um poema",
+  "ocorrencias": 1,
+  "achado": "15/11/2026: revisão geral: nas imagens, nenhuma pessoa identificável (decisão a do utilizador): sai o retrato, com o crédito e a legenda; o texto do cartão fica."
+ },
+ {
+  "ficheiro": "m8/licao-m8-f14/index.html",
+  "local": "M8-F14, «A história de uma tigela»: sai o retrato de Ana Luísa Amaral (a figura, o «i» dos créditos e a legenda)",
+  "antigo": "\"html\":\"<figure class=\\\"fig documento\\\"><a href=\\\"../../img/fontes/licoes-20261101/amaral.jpg\\\" aria-label=\\\"Abrir a imagem inteira\\\"><img src=\\\"../../img/fontes/licoes-20261101/amaral.jpg\\\" alt=\\\"Ana Luísa Amaral fotografada na Feira do Livro de Gotemburgo, com um lenço coral.\\\"><\\/a><details class=\\\"info-i info-i--linha\\\" name=\\\"info-i\\\"><summary aria-label=\\\"Créditos da imagem\\\"><span aria-hidden=\\\"true\\\">i<\\/span><\\/summary><div class=\\\"info-i-texto\\\"><p>CC BY-SA 3.0; <a href=\\\"https://commons.wikimedia.org/wiki/File:Ana_Lu%C3%ADsa_Amaral_at_G%C3%B6teborg_Book_Fair_2013_01.JPG\\\">Fonte ↗<\\/a><\\/p><table><caption>Identificação do documento visual<\\/caption><tr><th scope=\\\"row\\\">Autor<\\/th><td>Mattias Blomgren<\\/td><\\/tr><tr><th scope=\\\"row\\\">Obra<\\/th><td>Ana Luísa Amaral na Feira do Livro de Gotemburgo<\\/td><\\/tr><tr><th scope=\\\"row\\\">Data<\\/th><td>27 de setembro de 2013<\\/td><\\/tr><tr><th scope=\\\"row\\\">Instituição ou acervo<\\/th><td>Wikimedia Commons, publicação do fotógrafo.<\\/td><\\/tr><tr><th scope=\\\"row\\\">Licença<\\/th><td><a rel=\\\"license\\\" href=\\\"https://creativecommons.org/licenses/by-sa/3.0/\\\">CC BY-SA 3.0<\\/a><\\/td><\\/tr><\\/table><p><a href=\\\"https://commons.wikimedia.org/wiki/File:Ana_Lu%C3%ADsa_Amaral_at_G%C3%B6teborg_Book_Fair_2013_01.JPG\\\">Consultar a fonte e os direitos ↗<\\/a>. Reprodução redimensionada, sem recorte.<\\/p><\\/div><\\/details><figcaption><p>Ana Luísa Amaral na Feira do Livro de Gotemburgo, em 2013.<\\/p><\\/figcaption><\\/figure><p class=\\\"abre\\\"><strong>Quem decide o que merece",
+  "novo": "\"html\":\"<p class=\\\"abre\\\"><strong>Quem decide o que merece",
+  "ocorrencias": 1,
+  "achado": "15/11/2026: revisão geral: nas imagens, nenhuma pessoa identificável (decisão a do utilizador): sai o retrato, com o crédito e a legenda; o texto do cartão fica."
+ },
+ {
+  "ficheiro": "m5/licao-m5-f14/index.html",
+  "local": "M5-F14, «O essencial»: sai o trailer do filme do canal «Alexandre Oliveira» (o botão, o «No caderno» e o crédito)",
+  "antigo": "e o que a escolha ganha e perde.</span></li></ol><div class=\\\"yt\\\" data-yt=\\\"S_hGdGKAkv8\\\" data-titulo=\\\"o trailer do filme «Os Maias» (2 min)\\\"><button type=\\\"button\\\" class=\\\"yt-abrir\\\" data-yt-abrir>Ver: o trailer do filme «Os Maias» (2 min)</button><p class=\\\"yt-cred\\\"><b>No caderno:</b> Antes de veres o filme, ouve se há uma voz que conta sobre as imagens (a voz off da lição) ou só diálogo e música, e regista um plano e a luz que o acompanha.</p><p class=\\\"yt-cred\\\">Trailer do filme Os Maias (2014), de João Botelho, publicado pela Ar de Filmes, canal Alexandre Oliveira. <a href=\\\"https://www.youtube.com/watch?v=S_hGdGKAkv8\\\" target=\\\"_blank\\\" rel=\\\"noopener\\\">Ver no YouTube</a>.</p></div>\"},{\"t\":\"ler\",\"rot\":\"Em paralelo\",\"titulo\":\"O livro e o filme\"",
+  "novo": "e o que a escolha ganha e perde.</span></li></ol>\"},{\"t\":\"ler\",\"rot\":\"Em paralelo\",\"titulo\":\"O livro e o filme\"",
+  "ocorrencias": 1,
+  "achado": "15/11/2026: revisão geral: só vídeos oficiais (decisão b do utilizador): sai o vídeo que não é do canal do titular, com o crédito e o que dependia só dele; o cartão fica com o que já estava na página, sem nada inventado."
+ },
+ {
+  "ficheiro": "m5/licao-m5-f14/index.html",
+  "local": "M5-F14, «Para levar»: sai o bailado do canal «Teatro Micaelense» (o botão, o «No caderno» e o crédito)",
+  "antigo": "Não uses o exemplo inventado como prova sobre o filme.</p></details><div class=\\\"yt\\\" data-yt=\\\"UVrhS1QOQyw\\\" data-titulo=\\\"Os Maias pela Companhia Nacional de Bailado (2 min)\\\"><button type=\\\"button\\\" class=\\\"yt-abrir\\\" data-yt-abrir>Ver: Os Maias pela Companhia Nacional de Bailado (2 min)</button><p class=\\\"yt-cred\\\"><b>No caderno:</b> Num bailado não há voz off: regista um gesto, uma luz ou um momento da música que ocupe o lugar das palavras e diz o que essa escolha ganha e perde.</p><p class=\\\"yt-cred\\\">Companhia Nacional de Bailado, coreografia de Fernando Duarte, canal Teatro Micaelense. <a href=\\\"https://www.youtube.com/watch?v=UVrhS1QOQyw\\\" target=\\\"_blank\\\" rel=\\\"noopener\\\">Ver no YouTube</a>.</p></div>\"}],A2ID=null;",
+  "novo": "Não uses o exemplo inventado como prova sobre o filme.</p></details>\"}],A2ID=null;",
+  "ocorrencias": 1,
+  "achado": "15/11/2026: revisão geral: só vídeos oficiais (decisão b do utilizador): sai o vídeo que não é do canal do titular, com o crédito e o que dependia só dele; o cartão fica com o que já estava na página, sem nada inventado."
+ },
+ {
+  "ficheiro": "m5/licao-m5-f15/index.html",
+  "local": "M5-F15, «O essencial»: sai o vídeo da RTP1 do canal «Instituto de História Contemporânea» (o botão, o «No caderno» e o crédito)",
+  "antigo": "revês também o indireto livre e a estrutura circular.</span></li></ol><div class=\\\"yt\\\" data-yt=\\\"VjSVmIj8CbI\\\" data-ini=\\\"0\\\" data-fim=\\\"240\\\" data-titulo=\\\"Teresa Pinto Coelho sobre Eça (primeiros 4 min)\\\"><button type=\\\"button\\\" class=\\\"yt-abrir\\\" data-yt-abrir>Ver: Teresa Pinto Coelho sobre Eça (primeiros 4 min)</button><p class=\\\"yt-cred\\\"><b>No caderno:</b> Regista um traço de Eça que Teresa Pinto Coelho destaque e procura-o num dos excertos de Os Maias que leste.</p><p class=\\\"yt-cred\\\">Teresa Pinto Coelho, na RTP1, nas honras de Panteão a Eça (8 de janeiro de 2025), canal Instituto de História Contemporânea. <a href=\\\"https://www.youtube.com/watch?v=VjSVmIj8CbI\\\" target=\\\"_blank\\\" rel=\\\"noopener\\\">Ver no YouTube</a>.</p></div>\"},{\"t\":\"ler\",\"rot\":\"Em paralelo\",\"titulo\":\"Romantismo e Realismo\"",
+  "novo": "revês também o indireto livre e a estrutura circular.</span></li></ol>\"},{\"t\":\"ler\",\"rot\":\"Em paralelo\",\"titulo\":\"Romantismo e Realismo\"",
+  "ocorrencias": 1,
+  "achado": "15/11/2026: revisão geral: só vídeos oficiais (decisão b do utilizador): sai o vídeo que não é do canal do titular, com o crédito e o que dependia só dele; o cartão fica com o que já estava na página, sem nada inventado."
+ },
+ {
+  "ficheiro": "docs/pedagogia/tarefas-escolha/m5-u2.json",
+  "local": "Dados da tarefa M5-U2, dossiê do tema B: sai o facto de 2025, cuja única fonte era o vídeo que sai da M5-F15",
+  "antigo": "«Linha de vida»\"\n  },\n  {\n   \"facto\": \"A 8 de janeiro de 2025, Eça recebe honras de Panteão.\",\n   \"href\": \"../../m5/licao-m5-f15/\",\n   \"fonte\": \"Lição «Dois modos de perder a vida», «O essencial» (o vídeo de Teresa Pinto Coelho)\"\n  }\n ],\n \"opcional\"",
+  "novo": "«Linha de vida»\"\n  }\n ],\n \"opcional\"",
+  "ocorrencias": 1,
+  "achado": "15/11/2026: revisão geral: só vídeos oficiais (decisão b do utilizador): sai o vídeo que não é do canal do titular, com o crédito e o que dependia só dele; o cartão fica com o que já estava na página, sem nada inventado."
+ },
+ {
+  "ficheiro": "tarefas/m5-u2/index.html",
+  "local": "Tarefa M5-U2, dossiê do tema B: sai o facto de 2025, cuja única fonte era o vídeo que sai da M5-F15",
+  "antigo": "«Linha de vida»</a></span></li><li>A 8 de janeiro de 2025, Eça recebe honras de Panteão.<span class=\"tf-origem\">Fonte: <a href=\"../../m5/licao-m5-f15/\">Lição «Dois modos de perder a vida», «O essencial» (o vídeo de Teresa Pinto Coelho)</a></span></li></ol></section>",
+  "novo": "«Linha de vida»</a></span></li></ol></section>",
+  "ocorrencias": 1,
+  "achado": "15/11/2026: revisão geral: só vídeos oficiais (decisão b do utilizador): sai o vídeo que não é do canal do titular, com o crédito e o que dependia só dele; o cartão fica com o que já estava na página, sem nada inventado."
+ },
+ {
+  "ficheiro": "assets/exame/sessoes.json",
+  "local": "Sessão 27, etiquetas: saem «vídeo» e «compreensão oral»",
+  "antigo": "\"tags\": [\n        \"vídeo\",\n        \"compreensão oral\",\n        \"método de estudo\",",
+  "novo": "\"tags\": [\n        \"método de estudo\",",
+  "ocorrencias": 1,
+  "achado": "15/11/2026: revisão geral: só vídeos oficiais (decisão b do utilizador): a sessão 27 perde a masterclass da «Academia X» (canal privado), com os trechos e as perguntas que dependiam só dela, e fica com a alternativa em texto."
+ },
+ {
+  "ficheiro": "assets/exame/sessoes.json",
+  "local": "Sessão 27, contexto do texto: a alternativa em texto (o antigo video.fallback, palavra por palavra) antes dos dois casos",
+  "antigo": "\"context\": \"Lê os dois casos. O que permite verificar a aprendizagem de cada aluno?\"",
+  "novo": "\"context\": \"Uma explicação pode ser seguida de exercícios sobre o conteúdo revisto e, depois, de exercícios que combinem conteúdos. Explicar uma escolha e experimentar um exemplo diferente ajuda a perceber o que já sabes aplicar. Num ensaio com tempo, regista onde hesitaste e o que ficou por fundamentar. Usa esses dados para ajustar a ordem do trabalho e escolher a revisão seguinte. Lê os dois casos. O que permite verificar a aprendizagem de cada aluno?\"",
+  "ocorrencias": 1,
+  "achado": "15/11/2026: revisão geral: só vídeos oficiais (decisão b do utilizador): a sessão 27 perde a masterclass da «Academia X» (canal privado), com os trechos e as perguntas que dependiam só dela, e fica com a alternativa em texto."
+ },
+ {
+  "ficheiro": "assets/exame/sessoes.json",
+  "local": "Sessão 27, nota do texto: sem o vídeo, com a indicação da Informação-Prova que estava em video.note",
+  "antigo": "\"note\": \"Casos fictícios. O vídeo é uma fonte de propostas de estudo, não uma previsão do exame.\"",
+  "novo": "\"note\": \"Casos fictícios. A proposta de estudo não é uma previsão do exame. Para a estrutura, a duração e as regras da prova, consulta a Informação-Prova da tua época em «Programa e fontes».\"",
+  "ocorrencias": 1,
+  "achado": "15/11/2026: revisão geral: só vídeos oficiais (decisão b do utilizador): a sessão 27 perde a masterclass da «Academia X» (canal privado), com os trechos e as perguntas que dependiam só dela, e fica com a alternativa em texto."
+ },
+ {
+  "ficheiro": "assets/exame/sessoes.json",
+  "local": "Sessão 27: sai o objeto «video» (a masterclass da «Academia X», os dois trechos e as perguntas s27-video1 a s27-video4)",
+  "antigo": "do resultado do ensaio.\"\n        }\n      ],\n      \"video\": {\n        \"title\": \"Masterclass Exame Nacional de Português\",\n        \"author\": \"Academia X\",\n        \"url\": \"https://www.youtube.com/watch?v=Xzst0nmqtFE\",\n        \"published\": \"2026-02-01\",\n        \"duration\": \"48:52\",\n        \"intro\": \"Trabalha individualmente ou acompanha a projeção. Abre os dois trechos, para nos tempos indicados e responde às perguntas. Podes voltar atrás. Não precisas de ver a masterclass inteira.\",\n        \"clips\": [\n          {\n            \"id\": \"Xzst0nmqtFE\",\n            \"start\": 1638,\n            \"end\": 1703,\n            \"label\": \"Da explicação à aplicação · 27:18–28:23\",\n            \"observe\": \"Identifica as três etapas propostas para estudar um conteúdo.\"\n          },\n          {\n            \"id\": \"Xzst0nmqtFE\",\n            \"start\": 1744,\n            \"end\": 1812,\n            \"label\": \"Treinar e ajustar a estratégia · 29:04–30:12\",\n            \"observe\": \"Explica o que um ensaio com tempo permite descobrir sobre a tua forma de trabalhar.\"\n          }\n        ],\n        \"fallback\": \"Uma explicação pode ser seguida de exercícios sobre o conteúdo revisto e, depois, de exercícios que combinem conteúdos. Explicar uma escolha e experimentar um exemplo diferente ajuda a perceber o que já sabes aplicar. Num ensaio com tempo, regista onde hesitaste e o que ficou por fundamentar. Usa esses dados para ajustar a ordem do trabalho e escolher a revisão seguinte.\",\n        \"note\": \"Os trechos selecionados tratam de métodos de estudo. Para a estrutura, a duração e as regras da prova, consulta a Informação-Prova da tua época em «Programa e fontes».\",\n        \"questions\": [\n          {\n            \"id\": \"s27-video1\",\n            \"q\": \"Que sequência de estudo é proposta no primeiro trecho?\",\n            \"options\": [\n              \"Consultar uma explicação, resolver exercícios específicos e depois combinar conteúdos.\",\n              \"Reler os resumos até os reconhecer, sem resolver exercícios.\",\n              \"Começar e terminar pela memorização de respostas.\"\n            ],\n            \"answer\": 0,\n            \"feedback\": \"A explicação é posta à prova: primeiro num conteúdo delimitado e depois em exercícios que combinam conhecimentos. Reconhecer uma explicação não demonstra, por si só, que a sabes aplicar.\"\n          },\n          {\n            \"id\": \"s27-video2\",\n            \"q\": \"Depois de rever as funções sintáticas, que ação aplica melhor essa proposta?\",\n            \"options\": [\n              \"Copiar novamente todas as definições.\",\n              \"Identificar funções em frases novas e justificar as escolhas; depois resolver um exercício misto.\",\n              \"Resolver sempre a mesma frase, olhando para a solução.\"\n            ],\n            \"answer\": 1,\n            \"feedback\": \"O exemplo diferente permite verificar a transferência. A justificação mostra o raciocínio; o exercício misto ajuda a escolher o conhecimento pertinente sem a pista do título.\"\n          },\n          {\n            \"id\": \"s27-video3\",\n            \"q\": \"Para que serve resolver um exercício com tempo contado?\",\n            \"options\": [\n              \"Para provar que todos devem começar pela mesma parte.\",\n              \"Para garantir uma classificação.\",\n              \"Para observar o tempo usado, localizar dificuldades e ajustar a estratégia.\"\n            ],\n            \"answer\": 2,\n            \"feedback\": \"O segundo trecho relaciona o treino com a gestão do tempo e a escolha de uma ordem adequada. O resultado do ensaio fornece informação: não garante uma classificação.\"\n          },\n          {\n            \"id\": \"s27-video4\",\n            \"q\": \"Um colega termina depressa, mas não justifica as interpretações. O que deve mudar no próximo ensaio?\",\n            \"options\": [\n              \"Reservar tempo para selecionar uma prova textual e explicar a relação com a resposta.\",\n              \"Tentar escrever ainda mais depressa.\",\n              \"Substituir as justificações por palavras mais difíceis.\"\n            ],\n            \"answer\": 0,\n            \"feedback\": \"Ajustar o método exige atender à dificuldade observada. Neste caso, a prioridade é fundamentar a interpretação, e não apenas reduzir o tempo.\"\n          }\n        ],\n        \"embeddable\": false,\n        \"playbackNote\": \"O autor não permite a reprodução deste vídeo noutros sites. Abre cada trecho no YouTube e regressa às perguntas; a alternativa em texto permite fazer a sessão sem sair desta página.\"\n      },\n      \"writing\": {",
+  "novo": "do resultado do ensaio.\"\n        }\n      ],\n      \"writing\": {",
+  "ocorrencias": 1,
+  "achado": "15/11/2026: revisão geral: só vídeos oficiais (decisão b do utilizador): a sessão 27 perde a masterclass da «Academia X» (canal privado), com os trechos e as perguntas que dependiam só dela, e fica com a alternativa em texto."
+ },
+ {
+  "ficheiro": "assets/exame/sessoes.json",
+  "local": "Sessão 27, instrução da escrita: «volta à proposta de estudo»",
+  "antigo": "\"Consulta os casos e volta aos trechos ou à alternativa em texto quando precisares.\"",
+  "novo": "\"Consulta os casos e volta à proposta de estudo quando precisares.\"",
+  "ocorrencias": 1,
+  "achado": "15/11/2026: revisão geral: só vídeos oficiais (decisão b do utilizador): a sessão 27 perde a masterclass da «Academia X» (canal privado), com os trechos e as perguntas que dependiam só dela, e fica com a alternativa em texto."
+ },
+ {
+  "ficheiro": "assets/exame/sessoes.json",
+  "local": "Sessão 27, critério da escrita: «Usei uma ideia da proposta de estudo»",
+  "antigo": "\"Usei uma ideia dos trechos ou da alternativa em texto, sem a tomar como garantia de resultado.\"",
+  "novo": "\"Usei uma ideia da proposta de estudo, sem a tomar como garantia de resultado.\"",
+  "ocorrencias": 1,
+  "achado": "15/11/2026: revisão geral: só vídeos oficiais (decisão b do utilizador): a sessão 27 perde a masterclass da «Academia X» (canal privado), com os trechos e as perguntas que dependiam só dela, e fica com a alternativa em texto."
+ }
+]

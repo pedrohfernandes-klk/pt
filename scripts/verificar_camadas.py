@@ -7,6 +7,10 @@ import sys
 
 ROOT=Path(__file__).resolve().parents[1]
 LAYERS=[
+ # 15/11/2026: a revisão geral antes de publicar («ficha» e «sozinho» fora do texto do aluno, as tarefas de pares individuais, os retratos
+ # de pessoas identificáveis e os vídeos que não são dos canais dos titulares que saem, e a sessão 27 do Exame sem a masterclass), camada
+ # mais recente, por cima da fila final (que passa a ser a segunda), com a qual partilha assets/exame/sessoes.json.
+ ('revisao_geral_20261115','revisao-geral-edits-20261115'),
  # 15/11/2026: a fila final (o alvo das sessões do Exame é meta da sessão e não limite do exame, a síntese e a exposição ditas como
  # treino, a Informação-Prova de 2027 ainda não está disponível, e a numeração dos versos de «Descalça vai para a fonte» na M3-F05),
  # camada mais recente, por cima de «duas linhas finais» (que passa a ser a segunda), com a qual não partilha ficheiros.

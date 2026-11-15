@@ -65,6 +65,8 @@ M4U2_DE_CIMA = json.loads((Path(__file__).resolve().parents[1] / 'tests/fixtures
 SINTESE_DE_CIMA = json.loads((ROOT / 'tests/fixtures/sintese-duas-linhas-edits-20261115.json').read_text('utf-8'))['files']
 # 15/11/2026: e a fila final (fila_final_20261115), por cima de todas (muda, entre outras, o guia da tarefa do M2 e os portefólios do M4 e do M8): também se leem os ficheiros dela como estavam por baixo, com contagem estrita.
 FILA_DE_CIMA = json.loads((ROOT / 'tests/fixtures/fila-final-edits-20261115.json').read_text('utf-8'))['files']
+# 15/11/2026: e a revisão geral (revisao_geral_20261115), por cima de todas, também da fila final: também se leem os ficheiros dela como estavam por baixo, com contagem estrita.
+REVISAO_DE_CIMA = json.loads((ROOT / 'tests/fixtures/revisao-geral-edits-20261115.json').read_text('utf-8'))['files']
 M9_DE_CIMA = json.loads((Path(__file__).resolve().parents[1] / 'tests/fixtures/tarefas-faceis-m9-edits-20261114.json').read_text('utf-8'))['files']
 import verificar_camadas  # noqa: E402
 
@@ -124,7 +126,8 @@ def ler(rel):
     # 14/11/2026: e os da camada do M9, que fica por cima de todas (undo_tarefas_faceis_m8_1113 desfá-la primeiro).
     # 15/11/2026: e os da camada da tarefa m4-u2, a mais recente (undo_tarefas_faceis_m8_1113 desfá-la primeiro).
     # 15/11/2026: e os ficheiros da camada das duas linhas finais (sintese_duas_linhas_20261115), por cima de todas, com a mesma exigência.
-    if rel in M8_DE_CIMA or rel in M9_DE_CIMA or rel in M4U2_DE_CIMA or rel in SINTESE_DE_CIMA or rel in FILA_DE_CIMA:  # 13/11/2026: como estava por baixo da camada do M8
+    # 15/11/2026: por cima da fila final fica a revisão geral (revisao_geral_20261115), a camada mais recente: desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
+    if rel in M8_DE_CIMA or rel in M9_DE_CIMA or rel in M4U2_DE_CIMA or rel in SINTESE_DE_CIMA or rel in FILA_DE_CIMA or rel in REVISAO_DE_CIMA:  # 13/11/2026: como estava por baixo da camada do M8
         texto = undo_tarefas_faceis_m8_1113(rel, texto)
     return texto
 
@@ -555,7 +558,8 @@ class GeradoresEOutrosModulos(unittest.TestCase):
             # 14/11/2026: e os da camada do M9, que fica por cima de todas (undo_tarefas_faceis_m8_1113 desfá-la primeiro).
             # 15/11/2026: e os da camada da tarefa m4-u2, a mais recente (o aquecimento da m4-u2, os dados e as páginas da m8-u1).
             # 15/11/2026: e os ficheiros da camada das duas linhas finais (sintese_duas_linhas_20261115), por cima de todas, com a mesma exigência.
-            if rel in M8_DE_CIMA or rel in M9_DE_CIMA or rel in M4U2_DE_CIMA or rel in SINTESE_DE_CIMA or rel in FILA_DE_CIMA:
+            # 15/11/2026: por cima da fila final fica a revisão geral (revisao_geral_20261115), a camada mais recente: desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
+            if rel in M8_DE_CIMA or rel in M9_DE_CIMA or rel in M4U2_DE_CIMA or rel in SINTESE_DE_CIMA or rel in FILA_DE_CIMA or rel in REVISAO_DE_CIMA:
                 de_cima += 1
                 conteudo = undo_tarefas_faceis_m8_1113(rel, conteudo.decode('utf-8')).encode('utf-8')
                 self.assertNotEqual(conteudo, (ROOT / rel).read_bytes(), rel)
@@ -567,7 +571,9 @@ class GeradoresEOutrosModulos(unittest.TestCase):
         self.assertEqual(iguais, len(nomes) - 17)
         # 14/11/2026: mais os oito da camada do M9 (os dados, o enunciado, a grelha e a versão de correção da m9-u1 e da m9-u2).
         # 15/11/2026: mais os três da camada da tarefa m4-u2 fora destes (os dados do aquecimento, o enunciado e o aquecimento da m4-u2).
-        self.assertEqual(de_cima, 19)  # 13/11/2026: os oito da camada do M8
+        # 15/11/2026: mais os dois da revisão geral (revisao_geral_20261115: a página e os dados da m5-u2, sem o facto de 2025 do dossiê),
+        # lidos com ela desfeita pela auditoria, com a mesma exigência.
+        self.assertEqual(de_cima, 21)  # 13/11/2026: os oito da camada do M8
         self.assertEqual(len([f for f in FICHEIROS if f in nomes]), 17)
         for rel in ('tarefas/m1-u2/correcao/index.html', 'tarefas/m5-u1/correcao/index.html', 'tarefas/m5-u2/correcao/index.html', 'tarefas/m5-u2/index.html',
                     'tarefas/m1-u1/index.html', 'tarefas/m5-u1/aquecimento/index.html', 'tarefas/m3-u2/index.html', 'docs/pedagogia/tarefas-escolha/m5-u2.json'):
@@ -583,17 +589,20 @@ class Camada(unittest.TestCase):
         # 15/11/2026: por cima das tarefas do M9 mais fáceis de fazer fica a tarefa m4-u2 com «Tema A ou B» e o acerto do M8 (tarefa_m4u2_tema_b_20261115): a ordem ganha mais uma posição, com a mesma exigência.
         # 15/11/2026: por cima da tarefa m4-u2 fica «duas linhas finais» em vez de «síntese integrada» (sintese_duas_linhas_20261115): a ordem ganha mais uma posição, com a mesma exigência.
         # 15/11/2026: por cima de «duas linhas finais» fica a fila final (fila_final_20261115), a camada mais recente: desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
-        self.assertEqual(verificar_camadas.LAYERS[0], ('fila_final_20261115', 'fila-final-edits-20261115'))
-        self.assertEqual(verificar_camadas.LAYERS[1], ('sintese_duas_linhas_20261115', 'sintese-duas-linhas-edits-20261115'))
-        self.assertEqual(verificar_camadas.LAYERS[2], ('tarefa_m4u2_tema_b_20261115', 'tarefa-m4u2-tema-b-edits-20261115'))
-        self.assertEqual(verificar_camadas.LAYERS[3], ('tarefas_faceis_m9_20261114', 'tarefas-faceis-m9-edits-20261114'))
-        self.assertEqual(verificar_camadas.LAYERS[4], ('tarefas_faceis_m8_20261113', 'tarefas-faceis-m8-edits-20261113'))
-        self.assertEqual(verificar_camadas.LAYERS[5], ('tarefas_faceis_m7_20261113', 'tarefas-faceis-m7-edits-20261113'))
-        self.assertEqual(verificar_camadas.LAYERS[6], ('tarefas_faceis_m6_20261113', 'tarefas-faceis-m6-edits-20261113'))
+        # 15/11/2026: por cima da fila final fica a revisão geral (revisao_geral_20261115), a camada mais recente: a ordem ganha mais uma posição, com a mesma exigência.
+        self.assertEqual(verificar_camadas.LAYERS[0], ('revisao_geral_20261115', 'revisao-geral-edits-20261115'))
+        self.assertEqual(verificar_camadas.LAYERS[1], ('fila_final_20261115', 'fila-final-edits-20261115'))
+        self.assertEqual(verificar_camadas.LAYERS[2], ('sintese_duas_linhas_20261115', 'sintese-duas-linhas-edits-20261115'))
+        self.assertEqual(verificar_camadas.LAYERS[3], ('tarefa_m4u2_tema_b_20261115', 'tarefa-m4u2-tema-b-edits-20261115'))
+        self.assertEqual(verificar_camadas.LAYERS[4], ('tarefas_faceis_m9_20261114', 'tarefas-faceis-m9-edits-20261114'))
+        self.assertEqual(verificar_camadas.LAYERS[5], ('tarefas_faceis_m8_20261113', 'tarefas-faceis-m8-edits-20261113'))
+        self.assertEqual(verificar_camadas.LAYERS[6], ('tarefas_faceis_m7_20261113', 'tarefas-faceis-m7-edits-20261113'))
+        self.assertEqual(verificar_camadas.LAYERS[7], ('tarefas_faceis_m6_20261113', 'tarefas-faceis-m6-edits-20261113'))
         # 14/11/2026: por cima das tarefas do M8 mais fáceis de fazer ficam as duas tarefas do M9 mais fáceis de fazer (tarefas_faceis_m9_20261114): a ordem ganha mais uma posição, com a mesma exigência.
         # 15/11/2026: mais uma camada, sintese_duas_linhas_20261115, no topo.
         # 15/11/2026: mais uma camada, fila_final_20261115, no topo.
-        self.assertEqual(len(verificar_camadas.LAYERS), 56)
+        # 15/11/2026: mais uma camada, revisao_geral_20261115, no topo.
+        self.assertEqual(len(verificar_camadas.LAYERS), 57)
         self.assertEqual(MANIFESTO['base_commit'], BASE_COMMIT)
         self.assertEqual(sorted(MANIFESTO['files']), sorted(FICHEIROS))
         self.assertEqual(len(FICHEIROS), 22)
@@ -615,7 +624,8 @@ class Camada(unittest.TestCase):
                             # 15/11/2026: por cima das tarefas do M9 mais fáceis de fazer fica a tarefa m4-u2 com «Tema A ou B» e o acerto do M8 (tarefa_m4u2_tema_b_20261115), a camada mais recente: desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
                             # 15/11/2026: por cima da tarefa m4-u2 fica «duas linhas finais» em vez de «síntese integrada» (sintese_duas_linhas_20261115), a camada mais recente: desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
                             # 15/11/2026: por cima de «duas linhas finais» fica a fila final (fila_final_20261115), a camada mais recente: desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
-                            '--desfazer-antes', 'tests/fixtures/fila-final-edits-20261115.json', '--desfazer-antes', 'tests/fixtures/sintese-duas-linhas-edits-20261115.json', '--desfazer-antes', 'tests/fixtures/tarefa-m4u2-tema-b-edits-20261115.json', '--desfazer-antes', 'tests/fixtures/tarefas-faceis-m9-edits-20261114.json', '--desfazer-antes', 'tests/fixtures/tarefas-faceis-m8-edits-20261113.json'],
+                            # 15/11/2026: por cima da fila final fica a revisão geral (revisao_geral_20261115), a camada mais recente: desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
+                            '--desfazer-antes', 'tests/fixtures/revisao-geral-edits-20261115.json', '--desfazer-antes', 'tests/fixtures/fila-final-edits-20261115.json', '--desfazer-antes', 'tests/fixtures/sintese-duas-linhas-edits-20261115.json', '--desfazer-antes', 'tests/fixtures/tarefa-m4u2-tema-b-edits-20261115.json', '--desfazer-antes', 'tests/fixtures/tarefas-faceis-m9-edits-20261114.json', '--desfazer-antes', 'tests/fixtures/tarefas-faceis-m8-edits-20261113.json'],
                            cwd=ROOT, capture_output=True, text=True, encoding='utf-8')
         self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
         self.assertIn('0 por aplicar; manifesto em dia', r.stdout)
@@ -646,6 +656,7 @@ class Camada(unittest.TestCase):
             # vem à cabeça e a do M7 logo a seguir, sem nada pelo meio; e a verificação da própria camada do M7 desfaz primeiro a do M8.
             m9f = 'tests/fixtures/tarefas-faceis-m9-edits-20261114.json'  # 14/11/2026: a camada das tarefas do M9 mais fáceis de fazer, a mais recente
             m9f_m4u2 = 'tests/fixtures/tarefa-m4u2-tema-b-edits-20261115.json'  # 15/11/2026: a camada da tarefa m4-u2 com «Tema A ou B», a mais recente
+            m9f_revisao = 'tests/fixtures/revisao-geral-edits-20261115.json'  # 15/11/2026: por cima da fila final fica a revisão geral (revisao_geral_20261115), a camada mais recente: desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
             m9f_fila = 'tests/fixtures/fila-final-edits-20261115.json'  # 15/11/2026: por cima de «duas linhas finais» fica a fila final (fila_final_20261115), a camada mais recente: desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
             m9f_sintese = 'tests/fixtures/sintese-duas-linhas-edits-20261115.json'  # 15/11/2026: por cima da tarefa m4-u2 fica «duas linhas finais» em vez de «síntese integrada» (sintese_duas_linhas_20261115), a camada mais recente: desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
             m8 = 'tests/fixtures/tarefas-faceis-m8-edits-20261113.json'
@@ -653,17 +664,20 @@ class Camada(unittest.TestCase):
             # 15/11/2026: por cima das tarefas do M9 mais fáceis de fazer fica a tarefa m4-u2 com «Tema A ou B» e o acerto do M8 (tarefa_m4u2_tema_b_20261115), a camada mais recente: desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
             # 15/11/2026: por cima da tarefa m4-u2 fica «duas linhas finais» em vez de «síntese integrada» (sintese_duas_linhas_20261115), a camada mais recente: desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
             # 15/11/2026: por cima de «duas linhas finais» fica a fila final (fila_final_20261115), a camada mais recente: desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
-            self.assertEqual(fluxo.count(f'--desfazer-antes {m7}'), fluxo.count(f'--verificar --desfazer-antes {m9f_fila} --desfazer-antes {m9f_sintese} --desfazer-antes {m9f_m4u2} --desfazer-antes {m9f} --desfazer-antes {m8} --desfazer-antes {m7}'), p.name)
+            # 15/11/2026: por cima da fila final fica a revisão geral (revisao_geral_20261115), a camada mais recente: desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
+            self.assertEqual(fluxo.count(f'--desfazer-antes {m7}'), fluxo.count(f'--verificar --desfazer-antes {m9f_revisao} --desfazer-antes {m9f_fila} --desfazer-antes {m9f_sintese} --desfazer-antes {m9f_m4u2} --desfazer-antes {m9f} --desfazer-antes {m8} --desfazer-antes {m7}'), p.name)
             # 14/11/2026: por cima das tarefas do M8 mais fáceis de fazer ficam as duas tarefas do M9 mais fáceis de fazer (tarefas_faceis_m9_20261114), a camada mais recente: desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
             # 15/11/2026: por cima das tarefas do M9 mais fáceis de fazer fica a tarefa m4-u2 com «Tema A ou B» e o acerto do M8 (tarefa_m4u2_tema_b_20261115), a camada mais recente: desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
             # 15/11/2026: por cima da tarefa m4-u2 fica «duas linhas finais» em vez de «síntese integrada» (sintese_duas_linhas_20261115), a camada mais recente: desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
             # 15/11/2026: por cima de «duas linhas finais» fica a fila final (fila_final_20261115), a camada mais recente: desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
-            self.assertEqual(fluxo.count(f'--desfazer-antes {m9f_fila} --desfazer-antes {m9f_sintese} --desfazer-antes {m9f_m4u2} --desfazer-antes {m9f} --desfazer-antes {m8}'), fluxo.count(f'--verificar --desfazer-antes {m9f_fila} --desfazer-antes {m9f_sintese} --desfazer-antes {m9f_m4u2} --desfazer-antes {m9f} --desfazer-antes {m8}'), p.name)
+            # 15/11/2026: por cima da fila final fica a revisão geral (revisao_geral_20261115), a camada mais recente: desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
+            self.assertEqual(fluxo.count(f'--desfazer-antes {m9f_revisao} --desfazer-antes {m9f_fila} --desfazer-antes {m9f_sintese} --desfazer-antes {m9f_m4u2} --desfazer-antes {m9f} --desfazer-antes {m8}'), fluxo.count(f'--verificar --desfazer-antes {m9f_revisao} --desfazer-antes {m9f_fila} --desfazer-antes {m9f_sintese} --desfazer-antes {m9f_m4u2} --desfazer-antes {m9f} --desfazer-antes {m8}'), p.name)
             # 14/11/2026: por cima das tarefas do M8 mais fáceis de fazer ficam as duas tarefas do M9 mais fáceis de fazer (tarefas_faceis_m9_20261114), a camada mais recente: desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
             # 15/11/2026: por cima das tarefas do M9 mais fáceis de fazer fica a tarefa m4-u2 com «Tema A ou B» e o acerto do M8 (tarefa_m4u2_tema_b_20261115), a camada mais recente: desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
             # 15/11/2026: por cima da tarefa m4-u2 fica «duas linhas finais» em vez de «síntese integrada» (sintese_duas_linhas_20261115), a camada mais recente: desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
             # 15/11/2026: por cima de «duas linhas finais» fica a fila final (fila_final_20261115), a camada mais recente: desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
-            self.assertEqual(fluxo.count(f'--manifesto {m7} --verificar'), fluxo.count(f'--manifesto {m7} --verificar --desfazer-antes {m9f_fila} --desfazer-antes {m9f_sintese} --desfazer-antes {m9f_m4u2} --desfazer-antes {m9f} --desfazer-antes {m8}\n'), p.name)
+            # 15/11/2026: por cima da fila final fica a revisão geral (revisao_geral_20261115), a camada mais recente: desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
+            self.assertEqual(fluxo.count(f'--manifesto {m7} --verificar'), fluxo.count(f'--manifesto {m7} --verificar --desfazer-antes {m9f_revisao} --desfazer-antes {m9f_fila} --desfazer-antes {m9f_sintese} --desfazer-antes {m9f_m4u2} --desfazer-antes {m9f} --desfazer-antes {m8}\n'), p.name)
             self.assertEqual(fluxo.count("'scripts/tarefas_faceis_m6_20261113.*'"), fluxo.count("'scripts/tarefas_faceis_m7_20261113.*'"), p.name)
         # 13/11/2026, revisão: a camada passou a mudar o índice do M7, e o gerador da decisão 148 e os três testes de navegador que leem
         # os índices como eram desfazem-na primeiro, antes da do M6.
@@ -686,6 +700,7 @@ class Camada(unittest.TestCase):
         # primeiro, com a mesma exigência, sem nada pelo meio.
         m9f = 'tests/fixtures/tarefas-faceis-m9-edits-20261114.json'  # 14/11/2026: a camada das tarefas do M9 mais fáceis de fazer, a mais recente
         m9f_m4u2 = 'tests/fixtures/tarefa-m4u2-tema-b-edits-20261115.json'  # 15/11/2026: a camada da tarefa m4-u2 com «Tema A ou B», a mais recente
+        m9f_revisao = 'tests/fixtures/revisao-geral-edits-20261115.json'  # 15/11/2026: por cima da fila final fica a revisão geral (revisao_geral_20261115), a camada mais recente: desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
         m9f_fila = 'tests/fixtures/fila-final-edits-20261115.json'  # 15/11/2026: por cima de «duas linhas finais» fica a fila final (fila_final_20261115), a camada mais recente: desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
         m9f_sintese = 'tests/fixtures/sintese-duas-linhas-edits-20261115.json'  # 15/11/2026: por cima da tarefa m4-u2 fica «duas linhas finais» em vez de «síntese integrada» (sintese_duas_linhas_20261115), a camada mais recente: desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
         m8 = 'tests/fixtures/tarefas-faceis-m8-edits-20261113.json'
@@ -693,12 +708,14 @@ class Camada(unittest.TestCase):
         # 15/11/2026: por cima das tarefas do M9 mais fáceis de fazer fica a tarefa m4-u2 com «Tema A ou B» e o acerto do M8 (tarefa_m4u2_tema_b_20261115), a camada mais recente: desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
         # 15/11/2026: por cima da tarefa m4-u2 fica «duas linhas finais» em vez de «síntese integrada» (sintese_duas_linhas_20261115), a camada mais recente: desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
         # 15/11/2026: por cima de «duas linhas finais» fica a fila final (fila_final_20261115), a camada mais recente: desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
-        self.assertIn(f'python scripts/aplicar_trocas.py scripts/tarefas_faceis_m6_20261113.json --manifesto {m6} --verificar --desfazer-antes {m9f_fila} --desfazer-antes {m9f_sintese} --desfazer-antes {m9f_m4u2} --desfazer-antes {m9f} --desfazer-antes {m8} --desfazer-antes {m7}\n', tarefas)
+        # 15/11/2026: por cima da fila final fica a revisão geral (revisao_geral_20261115), a camada mais recente: desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
+        self.assertIn(f'python scripts/aplicar_trocas.py scripts/tarefas_faceis_m6_20261113.json --manifesto {m6} --verificar --desfazer-antes {m9f_revisao} --desfazer-antes {m9f_fila} --desfazer-antes {m9f_sintese} --desfazer-antes {m9f_m4u2} --desfazer-antes {m9f} --desfazer-antes {m8} --desfazer-antes {m7}\n', tarefas)
         # 14/11/2026: por cima das tarefas do M8 mais fáceis de fazer ficam as duas tarefas do M9 mais fáceis de fazer (tarefas_faceis_m9_20261114), a camada mais recente: desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
         # 15/11/2026: por cima das tarefas do M9 mais fáceis de fazer fica a tarefa m4-u2 com «Tema A ou B» e o acerto do M8 (tarefa_m4u2_tema_b_20261115), a camada mais recente: desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
         # 15/11/2026: por cima da tarefa m4-u2 fica «duas linhas finais» em vez de «síntese integrada» (sintese_duas_linhas_20261115), a camada mais recente: desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
         # 15/11/2026: por cima de «duas linhas finais» fica a fila final (fila_final_20261115), a camada mais recente: desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
-        self.assertIn(f'python scripts/aplicar_trocas.py scripts/tarefas_faceis_m7_20261113.json --manifesto {m7} --verificar --desfazer-antes {m9f_fila} --desfazer-antes {m9f_sintese} --desfazer-antes {m9f_m4u2} --desfazer-antes {m9f} --desfazer-antes {m8}\n', tarefas)
+        # 15/11/2026: por cima da fila final fica a revisão geral (revisao_geral_20261115), a camada mais recente: desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
+        self.assertIn(f'python scripts/aplicar_trocas.py scripts/tarefas_faceis_m7_20261113.json --manifesto {m7} --verificar --desfazer-antes {m9f_revisao} --desfazer-antes {m9f_fila} --desfazer-antes {m9f_sintese} --desfazer-antes {m9f_m4u2} --desfazer-antes {m9f} --desfazer-antes {m8}\n', tarefas)
         self.assertIn("python -m unittest discover -s tests -p 'test_tarefas_faceis_m7.py' -v\n", tarefas)
         self.assertIn('run: python tests/browser_tarefas_faceis_m7.py\n', tarefas)
         self.assertEqual(tarefas.count('timeout-minutes: 40'), 1)

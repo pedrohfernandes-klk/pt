@@ -30,6 +30,7 @@ from auditoria_20261028 import undo_fila_final_1115, undo_sintese_duas_linhas_11
 CAMADA_REL = 'scripts/sintese_duas_linhas_20261115.json'
 MANIFESTO_REL = 'tests/fixtures/sintese-duas-linhas-edits-20261115.json'
 FILA_REL = 'tests/fixtures/fila-final-edits-20261115.json'
+REVISAO_REL = 'tests/fixtures/revisao-geral-edits-20261115.json'  # 15/11/2026: a revisão geral, a camada mais recente, por cima da fila final
 M4U2_REL = 'tests/fixtures/tarefa-m4u2-tema-b-edits-20261115.json'
 MAIN = '4f4135bf679176c6c8e4abda543837632aad7325'
 
@@ -157,18 +158,23 @@ class SinteseDuasLinhas(unittest.TestCase):
 
     def test_aplicar_trocas_verifica_esta_e_a_anterior(self):
         # 15/11/2026: a fila final fica por cima (partilha o portefólio do M8 e o do M4): desfaz-se primeiro, nas duas verificações.
+        # 15/11/2026: por cima da fila final fica a revisão geral (revisao_geral_20261115), a camada mais recente: desfaz-se primeiro, com a
+        # mesma exigência, sem nada pelo meio.
         r = subprocess.run([sys.executable, 'scripts/aplicar_trocas.py', CAMADA_REL, '--manifesto', MANIFESTO_REL, '--verificar',
-                            '--desfazer-antes', FILA_REL], cwd=ROOT, capture_output=True, text=True)
+                            '--desfazer-antes', REVISAO_REL, '--desfazer-antes', FILA_REL], cwd=ROOT, capture_output=True, text=True)
         self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
         r = subprocess.run([sys.executable, 'scripts/aplicar_trocas.py', 'scripts/tarefa_m4u2_tema_b_20261115.json', '--manifesto', M4U2_REL,
-                            '--verificar', '--desfazer-antes', FILA_REL, '--desfazer-antes', MANIFESTO_REL], cwd=ROOT, capture_output=True, text=True)
+                            '--verificar', '--desfazer-antes', REVISAO_REL, '--desfazer-antes', FILA_REL, '--desfazer-antes', MANIFESTO_REL],
+                           cwd=ROOT, capture_output=True, text=True)
         self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
 
     def test_no_topo_da_pilha(self):
         # 15/11/2026: por cima de «duas linhas finais» fica a fila final (fila_final_20261115), a camada mais recente: desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
-        self.assertEqual(verificar_camadas.LAYERS[0], ('fila_final_20261115', 'fila-final-edits-20261115'))
-        self.assertEqual(verificar_camadas.LAYERS[1], ('sintese_duas_linhas_20261115', 'sintese-duas-linhas-edits-20261115'))
-        self.assertEqual(verificar_camadas.LAYERS[2], ('tarefa_m4u2_tema_b_20261115', 'tarefa-m4u2-tema-b-edits-20261115'))
+        # 15/11/2026: por cima da fila final fica a revisão geral (revisao_geral_20261115), a camada mais recente: a ordem ganha mais uma posição, com a mesma exigência.
+        self.assertEqual(verificar_camadas.LAYERS[0], ('revisao_geral_20261115', 'revisao-geral-edits-20261115'))
+        self.assertEqual(verificar_camadas.LAYERS[1], ('fila_final_20261115', 'fila-final-edits-20261115'))
+        self.assertEqual(verificar_camadas.LAYERS[2], ('sintese_duas_linhas_20261115', 'sintese-duas-linhas-edits-20261115'))
+        self.assertEqual(verificar_camadas.LAYERS[3], ('tarefa_m4u2_tema_b_20261115', 'tarefa-m4u2-tema-b-edits-20261115'))
         self.assertEqual(len(set(verificar_camadas.LAYERS)), len(verificar_camadas.LAYERS))
 
     def test_as_camadas_de_baixo_a_desfazem_primeiro(self):

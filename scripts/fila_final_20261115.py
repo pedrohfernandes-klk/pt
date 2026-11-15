@@ -49,6 +49,8 @@ tests/fixtures/fila-final-edits-20261115.json:
 Fica no topo da pilha (scripts/verificar_camadas.py, LAYERS[0]), por cima de «duas linhas finais» (sintese_duas_linhas_20261115), com a
 qual não partilha ficheiros. Partilha ficheiros com camadas mais antigas (as do Exame, as do cuidado do M3, do M6 e do M9, as lições
 do M1 ao M6 e a cidade do cartaz): todas a desfazem primeiro.
+15/11/2026: passa à segunda posição da pilha, por baixo da revisão geral (revisao_geral_20261115), que partilha com ela
+assets/exame/sessoes.json e a desfaz primeiro (base(), abaixo, desfaz a revisão geral antes desta camada).
 
 Sem argumentos, o script confere que as trocas dão da base (a árvore com esta camada desfeita pelo manifesto, se o houver) o estado
 da árvore, e escreve o JSON. Pode voltar a correr depois de a camada estar aplicada e dá o mesmo JSON.
@@ -210,6 +212,14 @@ def trocas():
 def base(rel):
     """O ficheiro sem esta camada (desfeita pelo manifesto, se o houver e a camada estiver aplicada)."""
     texto = (ROOT / rel).read_bytes().decode('utf-8')
+    # 15/11/2026: por cima desta camada fica a revisão geral (revisao_geral_20261115), que muda assets/exame/sessoes.json (a sessão 27):
+    # desfaz-se primeiro, com contagem estrita, quando o ficheiro a traz.
+    revisao = ROOT / 'tests/fixtures/revisao-geral-edits-20261115.json'
+    if revisao.is_file():
+        for e in reversed(json.loads(revisao.read_text('utf-8'))['files'].get(rel, {}).get('edits', [])):
+            if texto.count(e['new']) != e['occurrences']:
+                raise SystemExit(f'{rel}: a revisão geral já não confere ({e["location"]})')
+            texto = texto.replace(e['new'], e['old'])
     if MANIFESTO.is_file():
         edits = json.loads(MANIFESTO.read_text('utf-8'))['files'].get(rel, {}).get('edits', [])
         if edits and all(texto.count(e['new']) == e['occurrences'] for e in edits):

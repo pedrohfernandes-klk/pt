@@ -3,5 +3,7 @@
  "previstas": [[2026, 1], [2026, 2], [2025, 1], [2025, 2], [2024, 1], [2024, 2], [2023, 1], [2023, 2]],
  "_nao_partir": "12/11/2026: com true, as referências do que é da secção inteira («Prova 639, 12.º ano» e «O que vem a seguir») levam U+00A0, para não se partirem entre linhas.",
  "nao_partir": true,
+ "_entrada": "15/11/2026: a frase de entrada da secção (o parágrafo of-entrada), sem marca de género para quem lê («tentas primeiro por ti»). Sem esta chave, scripts/provas/gerar.py escreve a frase de antes.",
+ "entrada": "Os exames nacionais de Português, grupo a grupo. Lês o texto da prova com a numeração da prova e, a seguir a cada parte, fazes os cartões: o que pede o verbo, que linhas provam, o plano da resposta. A resposta completa escreve-se no caderno, com a grelha oficial à vista, e só depois a comparas com exemplos e com os critérios. Nos itens de escolha, tentas primeiro por ti e depois vês porquê.",
  "seguir": "Primeiro as provas mais recentes, sempre com os critérios de classificação. Cada prova chega aqui em três lições, uma por grupo, quando estiver conferida com o enunciado e com os critérios."
 }

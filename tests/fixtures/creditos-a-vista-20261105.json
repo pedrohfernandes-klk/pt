@@ -1,5 +1,5 @@
 {
- "_nota": "05/11/2026: decisões 153 e 162. Lista fechada dos créditos longos que ainda estão à vista fora de um «i» (tests/test_creditos_i.py, test_nenhum_credito_longo_a_vista). Cada entrada tem a página, a classe do elemento, a contagem exata e a razão (a família do plano plano-creditos-i-20261105.md e o pedido que a vai pôr a zero). A contagem só pode descer: cada pedido põe a sua família a zero e tira as entradas dela daqui; um crédito longo novo, fora do «i», faz falhar o teste. Pedido pt-2, fatia 1: P7 (lições M1 e M4) e P9 (documentos visuais) já estão a zero. Fatia 2: P10 (Pessoa, cerca de 1914), P11 (dupla exposição), P12 (retratos do «Em paralelo») e P13 (crédito colado à explicação, que o varrimento não vê e tests/test_creditos_i.py confere à parte) também. Fatia 3: P14 («Pensar devagar»), P15 (exercícios «Olhar», crédito montado pelo motor, que o varrimento não vê e tests/test_creditos_i.py confere à parte) e P16 (galerias «Para ver» dos mapas do módulo) também. 07/11/2026: pedido pt-1 (decisões 153, 176 e 177): P1 (fundo da calçada na entrada), P2 (imagem documental dos nove índices) e P3 (fotografia de Muybridge no portal do Lente) também ficam a zero e saem da lista; o crédito do mapa do Atlas (P4, p.credito) não tinha marca que o varrimento visse e confere-se em tests/test_creditos_i_pt1.py.",
+ "_nota": "05/11/2026: decisões 153 e 162. Lista fechada dos créditos longos que ainda estão à vista fora de um «i» (tests/test_creditos_i.py, test_nenhum_credito_longo_a_vista). Cada entrada tem a página, a classe do elemento, a contagem exata e a razão (a família do plano plano-creditos-i-20261105.md e o pedido que a vai pôr a zero). A contagem só pode descer: cada pedido põe a sua família a zero e tira as entradas dela daqui; um crédito longo novo, fora do «i», faz falhar o teste. Pedido pt-2, fatia 1: P7 (lições M1 e M4) e P9 (documentos visuais) já estão a zero. Fatia 2: P10 (Pessoa, cerca de 1914), P11 (dupla exposição), P12 (retratos do «Em paralelo») e P13 (crédito colado à explicação, que o varrimento não vê e tests/test_creditos_i.py confere à parte) também. Fatia 3: P14 («Pensar devagar»), P15 (exercícios «Olhar», crédito montado pelo motor, que o varrimento não vê e tests/test_creditos_i.py confere à parte) e P16 (galerias «Para ver» dos mapas do módulo) também. 07/11/2026: pedido pt-1 (decisões 153, 176 e 177): P1 (fundo da calçada na entrada), P2 (imagem documental dos nove índices) e P3 (fotografia de Muybridge no portal do Lente) também ficam a zero e saem da lista; o crédito do mapa do Atlas (P4, p.credito) não tinha marca que o varrimento visse e confere-se em tests/test_creditos_i_pt1.py. 15/11/2026: revisão geral (camada revisao_geral_20261115; decisão do utilizador: nas imagens, nenhuma pessoa identificável): sai o retrato de José Saramago do primeiro cartão da M9-F11 (m9/recursos/f11.js), com o crédito e a legenda; a contagem dessa página fica a zero e a entrada sai da lista.",
  "creditos": [
   {
    "pagina": "assets/pt-lessons/m3-f18.js",
@@ -514,13 +514,6 @@
   },
   {
    "pagina": "m9/licao-m9-f10/index.html",
-   "classe": "figcaption",
-   "contagem": 1,
-   "familia": "P8",
-   "razao": "Legenda mista no «Abre» (identificação, licença, «Fonte» e frase de contexto); pedido pt-3 (legendas mistas: divisão à mão, com a tabela «fica à vista» e «vai para o «i»» revista pelo revisor de pt-PT; montante licao.mjs figura())"
-  },
-  {
-   "pagina": "m9/recursos/f11.js",
    "classe": "figcaption",
    "contagem": 1,
    "familia": "P8",

@@ -69,6 +69,15 @@ def flat(path):
     return re.sub(r'\s+', ' ', html.unescape(re.sub(r'<[^>]+>|\\n', ' ', source)))
 
 
+def flat_como_a_tarefa(path):
+    """15/11/2026: o texto da lição para onde a tarefa aponta, lida do mesmo lado das camadas de cima que a página da tarefa
+    (molde_de_2810: a auditoria desfaz-as, com contagem estrita). A revisão geral (revisao_geral_20261115) tira da M5-F15 o vídeo cujo
+    crédito era a única fonte do facto de 2025 do dossiê da M5-U2 e tira esse facto da tarefa: a tarefa e a lição leem-se, as duas, como
+    estavam por baixo dela. Nas lições que nenhuma camada de cima muda, é a página da árvore, como em flat()."""
+    source = undo_tarefas_faceis_m3_1112(path, Path(path).read_text('utf-8'))
+    return re.sub(r'\s+', ' ', html.unescape(re.sub(r'<[^>]+>|\\n', ' ', source)))
+
+
 class Page(HTMLParser):
     def __init__(self, source):
         super().__init__()
@@ -219,7 +228,8 @@ class ChoiceTasks(unittest.TestCase):
                     citados = re.findall(r'«([^»]+)»', html.unescape(re.sub(r'<[^>]+>', '', fact)))
                     self.assertTrue(set(citados) <= titulos, citados)
                     continue
-                target = flat((path.parent / href / 'index.html').resolve())
+                # 15/11/2026: a lição lê-se como a página da tarefa, do mesmo lado das camadas de cima (ver flat_como_a_tarefa).
+                target = flat_como_a_tarefa((path.parent / href / 'index.html').resolve())
                 text = html.unescape(re.sub(r'<[^>]+>', '', fact))
                 # 11/11/2026: decisão 152 no M7 (achado 73): os factos do dossiê da M7-U3 levam espaço que não quebra (U+00A0) em
                 # «D. Sebastião»; a página ligada lê-se com os espaços juntos (flat junta-os, U+00A0 incluído), e cada citação do
@@ -250,7 +260,8 @@ class ChoiceTasks(unittest.TestCase):
                     citados = re.findall(r'«([^»]+)»', html.unescape(re.sub(r'<[^>]+>', '', fact)))
                     self.assertTrue(set(citados) <= titulos, citados)
                     continue
-                target = flat((path.parent / href / 'index.html').resolve())
+                # 15/11/2026: a lição lê-se como a página da tarefa, do mesmo lado das camadas de cima (ver flat_como_a_tarefa).
+                target = flat_como_a_tarefa((path.parent / href / 'index.html').resolve())
                 for name in re.findall(r'«([^»]+)»', text):
                     name = html.unescape(re.sub(r'<[^>]+>', '', name)).replace('“', '«').replace('”', '»')
                     # 06/11/2026: decisão 152 no M1: o nome pode trazer espaços que não quebram (U+00A0); junta-se como flat() junta

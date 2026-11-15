@@ -61,6 +61,14 @@ def base(rel):
     """O texto da página sem esta camada (desfeita pelo manifesto, da última troca para a primeira)."""
     if rel not in _BASES:
         texto = (ROOT / rel).read_bytes().decode('utf-8')
+        # 15/11/2026: e, por cima da fila final, a revisão geral (revisao_geral_20261115), que muda a M5-F14 e a M5-F15 (os vídeos que
+        # saem): desfaz-se antes de todas, com contagem estrita, quando o ficheiro a traz.
+        revisao = ROOT / 'tests/fixtures/revisao-geral-edits-20261115.json'
+        if revisao.is_file():
+            for edit in reversed(json.loads(revisao.read_text('utf-8'))['files'].get(rel, {}).get('edits', [])):
+                if texto.count(edit['new']) != edit['occurrences']:
+                    raise SystemExit(f'{rel}: a revisão geral já não confere ({edit["location"]})')
+                texto = texto.replace(edit['new'], edit['old'])
         # 15/11/2026: por cima desta camada fica a fila final (fila_final_20261115), que muda a lição M3-F05: desfaz-se primeiro, com
         # contagem estrita, quando o ficheiro a traz.
         fila = ROOT / 'tests/fixtures/fila-final-edits-20261115.json'
