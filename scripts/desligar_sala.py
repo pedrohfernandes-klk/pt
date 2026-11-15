@@ -868,6 +868,13 @@ def main():
                 # com dois acertos (o guia da tarefa do M2 e o índice do M7), a camada mais recente, por cima das do M8.
                 # 15/11/2026: e, antes de todas, a tarefa m4-u2 com «Tema A ou B», «tudo junto» no M4 e o acerto do M8
                 # (tarefa_m4u2_tema_b_20261115), a camada mais recente, por cima das do M9.
+                # 15/11/2026: e, antes de todas, a fila final (fila_final_20261115: o alvo das sessões do Exame, as sessões 20 e 23 e a
+                # numeração dos versos da M3-F05), a camada mais recente, por cima de «duas linhas finais».
+                fila_final = ROOT / 'tests/fixtures/fila-final-edits-20261115.json'
+                for edit in reversed(json.loads(fila_final.read_text('utf-8'))['files'].get(rel, {}).get('edits', [])):
+                    if conferencia.count(edit['new']) != edit['occurrences']:
+                        raise ManifestoDesatualizado(f'{rel}: a fila final não confere')
+                    conferencia = conferencia.replace(edit['new'], edit['old'])
                 # 15/11/2026: e, antes de todas, «duas linhas finais» em vez de «síntese integrada» nos índices, nos portefólios, nos
                 # mapas e no guia da tarefa do M1, do M3, do M5, do M6, do M7 e do M8 (sintese_duas_linhas_20261115), a camada mais
                 # recente, por cima da tarefa m4-u2.

@@ -751,7 +751,16 @@ for _x in ACHADOS_B:
 
 
 def ler(rel):
-    return (ROOT / rel).read_bytes().decode('utf-8')
+    # 15/11/2026: por cima desta camada fica a fila final (fila_final_20261115), que muda assets/exame/app.js e assets/exame/sessoes.json
+    # (as sessões do Exame que esta camada também muda): desfaz-se primeiro, com contagem estrita, quando o ficheiro a traz.
+    texto = (ROOT / rel).read_bytes().decode('utf-8')
+    fila = ROOT / 'tests/fixtures/fila-final-edits-20261115.json'
+    if fila.is_file():
+        for e in reversed(json.loads(fila.read_text('utf-8'))['files'].get(rel, {}).get('edits', [])):
+            if texto.count(e['new']) != e['occurrences']:
+                raise SystemExit(f'{rel}: a fila final já não confere ({e["location"]})')
+            texto = texto.replace(e['new'], e['old'])
+    return texto
 
 
 # 12/11/2026: por cima desta camada ficam as provas em cartões com os documentos oficiais (exame_provas_oficial_20261112), que muda

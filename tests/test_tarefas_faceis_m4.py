@@ -48,6 +48,7 @@ MANIFESTO_REL = 'tests/fixtures/tarefa-m4u2-tema-b-edits-20261115.json'
 M9F = 'tests/fixtures/tarefas-faceis-m9-edits-20261114.json'
 M8F = 'tests/fixtures/tarefas-faceis-m8-edits-20261113.json'
 # 15/11/2026: por cima desta camada fica «duas linhas finais» em vez de «síntese integrada» (sintese_duas_linhas_20261115), a camada mais recente: desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
+FILAF = 'tests/fixtures/fila-final-edits-20261115.json'  # 15/11/2026: por cima de «duas linhas finais» fica a fila final (fila_final_20261115), a camada mais recente: desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
 SINTESEF = 'tests/fixtures/sintese-duas-linhas-edits-20261115.json'
 BASE_COMMIT = '015ee060613875e1b1377a905a8d5f4c2dbc0ad0'
 MANIFESTO = json.loads((ROOT / MANIFESTO_REL).read_text('utf-8'))
@@ -739,14 +740,17 @@ class TarefaM4u2TemaB(unittest.TestCase):
 
     def test_camada_fechada_reversivel_e_no_topo(self):
         # 15/11/2026: por cima da tarefa m4-u2 fica «duas linhas finais» em vez de «síntese integrada» (sintese_duas_linhas_20261115): a ordem ganha mais uma posição, com a mesma exigência.
-        self.assertEqual(verificar_camadas.LAYERS[0], ('sintese_duas_linhas_20261115', 'sintese-duas-linhas-edits-20261115'))
-        self.assertEqual(verificar_camadas.LAYERS[1], ('tarefa_m4u2_tema_b_20261115', 'tarefa-m4u2-tema-b-edits-20261115'))
-        self.assertEqual(verificar_camadas.LAYERS[2], ('tarefas_faceis_m9_20261114', 'tarefas-faceis-m9-edits-20261114'))
-        self.assertEqual(verificar_camadas.LAYERS[3], ('tarefas_faceis_m8_20261113', 'tarefas-faceis-m8-edits-20261113'))
+        # 15/11/2026: por cima de «duas linhas finais» fica a fila final (fila_final_20261115), a camada mais recente: desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
+        self.assertEqual(verificar_camadas.LAYERS[0], ('fila_final_20261115', 'fila-final-edits-20261115'))
+        self.assertEqual(verificar_camadas.LAYERS[1], ('sintese_duas_linhas_20261115', 'sintese-duas-linhas-edits-20261115'))
+        self.assertEqual(verificar_camadas.LAYERS[2], ('tarefa_m4u2_tema_b_20261115', 'tarefa-m4u2-tema-b-edits-20261115'))
+        self.assertEqual(verificar_camadas.LAYERS[3], ('tarefas_faceis_m9_20261114', 'tarefas-faceis-m9-edits-20261114'))
+        self.assertEqual(verificar_camadas.LAYERS[4], ('tarefas_faceis_m8_20261113', 'tarefas-faceis-m8-edits-20261113'))
         # 15/11/2026: mais uma camada, sintese_duas_linhas_20261115, no topo.
-        self.assertEqual(len(verificar_camadas.LAYERS), 55)
+        # 15/11/2026: mais uma camada, fila_final_20261115, no topo.
+        self.assertEqual(len(verificar_camadas.LAYERS), 56)
         # 15/11/2026: mais uma camada, sintese_duas_linhas_20261115, no topo.
-        self.assertEqual(len(set(verificar_camadas.LAYERS)), 55)
+        self.assertEqual(len(set(verificar_camadas.LAYERS)), 56)
         self.assertEqual(MANIFESTO['base_commit'], BASE_COMMIT)
         self.assertIn('não se edita à mão', MANIFESTO['_nota'])
         self.assertEqual(sorted({t['ficheiro'] for t in TROCAS}), sorted(FICHEIROS))
@@ -786,7 +790,8 @@ class TarefaM4u2TemaB(unittest.TestCase):
         self.assertEqual(sha_lf(undo_tarefas_faceis_m9_1114(GRELHAS, ler(GRELHAS))), m9[GRELHAS]['base_sha256_lf'])
         # Confere-se também a camada do M9 e a do M8 com esta desfeita primeiro.
         # 15/11/2026: por cima desta camada fica «duas linhas finais» em vez de «síntese integrada» (sintese_duas_linhas_20261115), a camada mais recente: desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
-        for camada, manifesto, cadeia in (('tarefas_faceis_m9_20261114', M9F, [SINTESEF, MANIFESTO_REL]), ('tarefas_faceis_m8_20261113', M8F, [SINTESEF, MANIFESTO_REL, M9F])):
+        # 15/11/2026: por cima de «duas linhas finais» fica a fila final (fila_final_20261115), a camada mais recente: desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
+        for camada, manifesto, cadeia in (('tarefas_faceis_m9_20261114', M9F, [FILAF, SINTESEF, MANIFESTO_REL]), ('tarefas_faceis_m8_20261113', M8F, [FILAF, SINTESEF, MANIFESTO_REL, M9F])):
             r = subprocess.run([sys.executable, 'scripts/aplicar_trocas.py', f'scripts/{camada}.json', '--manifesto', manifesto, '--verificar']
                                + [x for c in cadeia for x in ('--desfazer-antes', c)], cwd=ROOT, capture_output=True, text=True, encoding='utf-8')
             self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
@@ -858,7 +863,8 @@ class TarefaM4u2TemaB(unittest.TestCase):
             fluxo = p.read_text('utf-8')
             self.assertEqual(fluxo.count(f'--desfazer-antes {M9F}'), fluxo.count(f'--desfazer-antes {meu} --desfazer-antes {M9F}'), p.name)
             # 15/11/2026: por cima desta camada fica «duas linhas finais» em vez de «síntese integrada» (sintese_duas_linhas_20261115), a camada mais recente: desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
-            self.assertEqual(fluxo.count(f'--desfazer-antes {meu}'), fluxo.count(f'--verificar --desfazer-antes {SINTESEF} --desfazer-antes {meu}'), p.name)
+            # 15/11/2026: por cima de «duas linhas finais» fica a fila final (fila_final_20261115), a camada mais recente: desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
+            self.assertEqual(fluxo.count(f'--desfazer-antes {meu}'), fluxo.count(f'--verificar --desfazer-antes {FILAF} --desfazer-antes {SINTESEF} --desfazer-antes {meu}'), p.name)
             self.assertEqual(fluxo.count("'scripts/tarefas_faceis_m9_20261114.*'"), fluxo.count("'scripts/tarefa_m4u2_tema_b_20261115.*'"), p.name)
             self.assertEqual(fluxo.count("- 'tests/test_tarefas_faceis_m9.py'"), fluxo.count("- 'tests/test_tarefas_faceis_m4.py'"), p.name)
             self.assertEqual(fluxo.count("- 'tests/browser_tarefas_faceis_m9.py'"), fluxo.count("- 'tests/browser_tarefas_faceis_m4.py'"), p.name)
@@ -873,9 +879,11 @@ class TarefaM4u2TemaB(unittest.TestCase):
                 self.assertEqual(texto.count(f'--desfazer-antes {M9F}'), texto.count(f'--desfazer-antes {meu} --desfazer-antes {M9F}'))
         tarefas = ler('.github/workflows/pt-tarefas-qa.yml')
         # 15/11/2026: por cima desta camada fica «duas linhas finais» em vez de «síntese integrada» (sintese_duas_linhas_20261115), a camada mais recente: desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
-        self.assertIn(f'python scripts/aplicar_trocas.py scripts/tarefas_faceis_m9_20261114.json --manifesto {M9F} --verificar --desfazer-antes {SINTESEF} --desfazer-antes {meu}\n', tarefas)
+        # 15/11/2026: por cima de «duas linhas finais» fica a fila final (fila_final_20261115), a camada mais recente: desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
+        self.assertIn(f'python scripts/aplicar_trocas.py scripts/tarefas_faceis_m9_20261114.json --manifesto {M9F} --verificar --desfazer-antes {FILAF} --desfazer-antes {SINTESEF} --desfazer-antes {meu}\n', tarefas)
         # 15/11/2026: por cima desta camada fica «duas linhas finais» em vez de «síntese integrada» (sintese_duas_linhas_20261115), a camada mais recente: desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
-        self.assertIn(f'python scripts/aplicar_trocas.py {CAMADA_REL} --manifesto {meu} --verificar --desfazer-antes {SINTESEF}\n', tarefas)
+        # 15/11/2026: por cima de «duas linhas finais» fica a fila final (fila_final_20261115), a camada mais recente: desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
+        self.assertIn(f'python scripts/aplicar_trocas.py {CAMADA_REL} --manifesto {meu} --verificar --desfazer-antes {FILAF} --desfazer-antes {SINTESEF}\n', tarefas)
         self.assertIn("python -m unittest discover -s tests -p 'test_tarefas_faceis_m4.py' -v\n", tarefas)
         self.assertIn('      - name: Tarefa m4-u2 mais fácil de fazer\n        run: python tests/browser_tarefas_faceis_m4.py\n', tarefas)
         self.assertLess(tarefas.index("-p 'test_tarefas_faceis_m9.py'"), tarefas.index("-p 'test_tarefas_faceis_m4.py'"))
