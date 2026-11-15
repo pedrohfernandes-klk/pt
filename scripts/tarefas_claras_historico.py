@@ -60,6 +60,10 @@ TAREFAS_FACEIS_M9 = json.loads((ROOT / 'tests/fixtures/tarefas-faceis-m9-edits-2
 # todas, também da do M9, e muda os dados das grelhas (que as camadas do M9, do M8, do M7, do M6, do M5, do M1 e do M3 também mudam).
 # Pela mesma regra: desfaz-se primeiro, com contagem estrita, quando o texto é o ficheiro como ela o deixou.
 TAREFA_M4U2 = json.loads((ROOT / 'tests/fixtures/tarefa-m4u2-tema-b-edits-20261115.json').read_text('utf-8'))['files']
+# 15/11/2026: «duas linhas finais» em vez de «síntese integrada» nos índices, nos portefólios, nos mapas e no guia da tarefa do M1, do
+# M3, do M5, do M6, do M7 e do M8 (sintese_duas_linhas_20261115) fica por cima de todas, também da tarefa m4-u2. Pela mesma regra:
+# desfaz-se primeiro, com contagem estrita, quando o texto é o ficheiro como ela o deixou.
+SINTESE_DUAS_LINHAS = json.loads((ROOT / 'tests/fixtures/sintese-duas-linhas-edits-20261115.json').read_text('utf-8'))['files']
 def _sha_lf(text):
     return hashlib.sha256(text.replace('\r\n', '\n').encode()).hexdigest()
 def desfazer_faceis(path, text):
@@ -68,6 +72,12 @@ def desfazer_faceis(path, text):
     página como ela a deixou."""
     p = Path(path)
     rel = p.relative_to(ROOT).as_posix() if p.is_absolute() else p.as_posix()
+    # 15/11/2026: antes de tudo, as duas linhas finais em vez da síntese integrada, por cima de todas (em qualquer dos seus 18 ficheiros).
+    por_cima = SINTESE_DUAS_LINHAS.get(rel)
+    if por_cima and _sha_lf(text) == por_cima['after_sha256_lf']:
+        for edit in reversed(por_cima['edits']):
+            assert text.count(edit['new']) == edit['occurrences'], f'Duas linhas finais em vez de síntese integrada não confere: {rel}'
+            text = text.replace(edit['new'], edit['old'])
     # 15/11/2026: primeiro a camada da tarefa m4-u2, que está por cima de todas, também da do M9 (em qualquer dos seus 12 ficheiros).
     por_cima = TAREFA_M4U2.get(rel)
     if por_cima and _sha_lf(text) == por_cima['after_sha256_lf']:

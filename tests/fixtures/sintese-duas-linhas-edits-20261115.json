@@ -1,0 +1,414 @@
+{
+ "base_commit": "4f4135bf679176c6c8e4abda543837632aad7325",
+ "_nota": "15/11/2026: decisão do docente: nos índices e nos portefólios do M1, do M3, do M5, do M6, do M7 e do M8, «síntese integrada» e «síntese simples integrada» passam a «duas linhas finais», como no M4 (camada tarefa_m4u2_tema_b_20261115); o vocabulário muda junto nos mapas do módulo (M1, M3, M5, M6 e M7) e no guia da tarefa do M1. Só a peça da aula de tarefa: ficam as perguntas de escolha das lições, «a síntese oral ou no caderno» do desafio, as lições, os painéis, as aulas e a chave interna «synthesis» do JSON das unidades. Gerado por scripts/aplicar_trocas.py a partir de scripts/sintese_duas_linhas_20261115.json (que scripts/sintese_duas_linhas_20261115.py tira da diferença entre a base e a árvore): não se edita à mão. Camada no topo da pilha, por cima de tarefa_m4u2_tema_b_20261115: desfaz-se antes de todas.",
+ "files": {
+  "m1/index.html": {
+   "base_sha256_lf": "00a06d599375d46f006229e4af1b100358956594cd3d991a47d401732dc56fb7",
+   "after_sha256_lf": "f6be4cf57ada850e1a9f1f7e43ed2f6c4f988ed56f753b77e1367ef424625e0d",
+   "edits": [
+    {
+     "location": "Índice do M1: «produção em papel, duas linhas finais e fotografias no»",
+     "old": " produção em papel, uma síntese simples integrada e fotografias no ",
+     "new": " produção em papel, duas linhas finais e fotografias no ",
+     "occurrences": 1
+    },
+    {
+     "location": "Índice do M1: «as duas linhas finais.»",
+     "old": " a síntese integrada.<",
+     "new": " as duas linhas finais.<",
+     "occurrences": 1
+    },
+    {
+     "location": "Índice do M1: «medieval Aula de 90 minutos com consulta, trabalho em papel, duas linhas finais e fotogr…»",
+     "old": " medieval</span><span class=\"f\">Aula de 90 minutos com consulta, síntese integrada, trabalho em papel e fotografias no Teams.</span></span><span class=\"chip\">",
+     "new": " medieval</span><span class=\"f\">Aula de 90 minutos com consulta, trabalho em papel, duas linhas finais e fotografias no Teams.</span></span><span class=\"chip\">",
+     "occurrences": 1
+    },
+    {
+     "location": "Índice do M1: «lá» Aula de 90 minutos com consulta, trabalho em papel, duas linhas finais e fotografias…»",
+     "old": " lá»</span><span class=\"f\">Aula de 90 minutos com consulta, síntese integrada, trabalho em papel e fotografias no Teams.</span></span><span class=\"chip\">",
+     "new": " lá»</span><span class=\"f\">Aula de 90 minutos com consulta, trabalho em papel, duas linhas finais e fotografias no Teams.</span></span><span class=\"chip\">",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m3/index.html": {
+   "base_sha256_lf": "9ad8fff46f9f82f5e2933403310548414c54392ff53959887c14dde1d046ea9c",
+   "after_sha256_lf": "6fe091753deb6c7048f8b0da142f7e9b1a557750838a53c698bc022aa3c73098",
+   "edits": [
+    {
+     "location": "Índice do M3: «As duas linhas finais fazem parte da»",
+     "old": " A síntese integra a ",
+     "new": " As duas linhas finais fazem parte da ",
+     "occurrences": 1
+    },
+    {
+     "location": "Índice do M3: «as duas linhas finais.»",
+     "old": " a síntese integrada.<",
+     "new": " as duas linhas finais.<",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m5/index.html": {
+   "base_sha256_lf": "c011039601977c56cb17667073e56a0184f2daa75e093dd1764e6757c7034285",
+   "after_sha256_lf": "207da1dbb0da20f38eb58e3ac3956cd1c6dff089da7402ad850cc11bbf059565",
+   "edits": [
+    {
+     "location": "Índice do M5: «As duas linhas finais fazem parte da»",
+     "old": " A síntese integra a ",
+     "new": " As duas linhas finais fazem parte da ",
+     "occurrences": 1
+    },
+    {
+     "location": "Índice do M5: «as duas linhas finais.»",
+     "old": " a síntese integrada.<",
+     "new": " as duas linhas finais.<",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m6/index.html": {
+   "base_sha256_lf": "58a50c400d94f3b84f1086e165b0847724c40f7925906fb3fbd3e9490b3d9038",
+   "after_sha256_lf": "642a97d7f9a3a4069207eed67f25ba9ce0562ddeabc5e8ae4cab26a91b5b0fda",
+   "edits": [
+    {
+     "location": "Índice do M6: «As duas linhas finais fazem parte da»",
+     "old": " A síntese integra a ",
+     "new": " As duas linhas finais fazem parte da ",
+     "occurrences": 1
+    },
+    {
+     "location": "Índice do M6: «as duas linhas finais.»",
+     "old": " a síntese integrada.<",
+     "new": " as duas linhas finais.<",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m7/index.html": {
+   "base_sha256_lf": "8307da267acd0c1708a677ac4e01b18c30f4c78a69e3c3aefa9a1fe3ef78aafb",
+   "after_sha256_lf": "26ffad595ac3cc285582ae8b9ba22d89cf0fb8c2654a9b7f3c49e60923da23ea",
+   "edits": [
+    {
+     "location": "Índice do M7: «produção em papel, duas linhas finais e fotografias no»",
+     "old": " produção em papel, uma síntese simples integrada e fotografias no ",
+     "new": " produção em papel, duas linhas finais e fotografias no ",
+     "occurrences": 1
+    },
+    {
+     "location": "Índice do M7: «as duas linhas finais.»",
+     "old": " a síntese integrada.<",
+     "new": " as duas linhas finais.<",
+     "occurrences": 1
+    },
+    {
+     "location": "Índice do M7: «trabalho em papel, duas linhas finais»",
+     "old": " síntese integrada, trabalho em papel ",
+     "new": " trabalho em papel, duas linhas finais ",
+     "occurrences": 1
+    },
+    {
+     "location": "Índice do M7: «papel, duas linhas finais, apresentação»",
+     "old": " papel, síntese integrada, apresentação ",
+     "new": " papel, duas linhas finais, apresentação ",
+     "occurrences": 1
+    },
+    {
+     "location": "Índice do M7: «opinião em papel, duas linhas finais e fotografias no»",
+     "old": " opinião em papel, síntese integrada e fotografias no ",
+     "new": " opinião em papel, duas linhas finais e fotografias no ",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m8/index.html": {
+   "base_sha256_lf": "c62bd945df182255e21c2ba5389b29180f7e7a8491ce99265796e3e2601fac58",
+   "after_sha256_lf": "52f683d7a3f45adee5d2da0f7975ee1e0b684aaed2833d8236be145ec35f66cd",
+   "edits": [
+    {
+     "location": "Índice do M8: «As duas linhas finais fazem parte da»",
+     "old": " A síntese integra a ",
+     "new": " As duas linhas finais fazem parte da ",
+     "occurrences": 1
+    },
+    {
+     "location": "Índice do M8: «as duas linhas finais.»",
+     "old": " a síntese integrada.<",
+     "new": " as duas linhas finais.<",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m1/portefolio-do-modulo-m1/index.html": {
+   "base_sha256_lf": "d635ae46b924b3b98dd9386527464a55189521f3db6f8e84d9581419557af5be",
+   "after_sha256_lf": "553d7d8c79b7a6fa43499dd35947e948ae211a8f0014e64c14e87f80efd96001",
+   "edits": [
+    {
+     "location": "Portefólio do módulo M1: «as duas linhas finais;»",
+     "old": " a síntese; ",
+     "new": " as duas linhas finais; ",
+     "occurrences": 1
+    },
+    {
+     "location": "Portefólio do módulo M1: «as duas linhas finais já»",
+     "old": " as sínteses já ",
+     "new": " as duas linhas finais já ",
+     "occurrences": 1
+    },
+    {
+     "location": "Portefólio do módulo M1: «As duas linhas finais, no papel da aula de tarefa, fotografadas com o trabalho. Recupera…»",
+     "old": " Síntese de duas linhas no papel da aula de tarefa, fotografada com o trabalho. Recupera essa entrega, sem fazer outra síntese.</td></tr><tr><td>M1_U1_o-que-aprendi</td><td>Recupera a síntese ",
+     "new": " As duas linhas finais, no papel da aula de tarefa, fotografadas com o trabalho. Recupera essa entrega, sem escrever outras.</td></tr><tr><td>M1_U1_o-que-aprendi</td><td>Recupera as duas linhas finais ",
+     "occurrences": 1
+    },
+    {
+     "location": "Portefólio do módulo M1: «As duas linhas finais, no papel da aula de tarefa, fotografadas com o trabalho. Recupera…»",
+     "old": " Síntese de duas linhas no papel da aula de tarefa, fotografada com o trabalho. Recupera essa entrega, sem fazer outra síntese.</td></tr><tr><td>M1_U2_o-que-aprendi</td><td>Recupera a síntese ",
+     "new": " As duas linhas finais, no papel da aula de tarefa, fotografadas com o trabalho. Recupera essa entrega, sem escrever outras.</td></tr><tr><td>M1_U2_o-que-aprendi</td><td>Recupera as duas linhas finais ",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m3/portefolio-do-modulo-m3/index.html": {
+   "base_sha256_lf": "6cb587a0d43520eb13d954c5a4fdd03e83a3ba14f5db28e0b9a7494ab963b44e",
+   "after_sha256_lf": "2b00a60b1731f5ab3646a82628a559044ff8b6e4fdfe6f15807e59798d2f3c17",
+   "edits": [
+    {
+     "location": "Portefólio do módulo M3: «duas linhas finais.»",
+     "old": " síntese integrada.<",
+     "new": " duas linhas finais.<",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m5/portefolio-do-modulo-m5/index.html": {
+   "base_sha256_lf": "fec9968c1e0c1fa0afe6e399e0d52faf490b35e066cceb307047209676fc793d",
+   "after_sha256_lf": "d46419b874444f812d7ac725fb4ec613f3c1d53b8d5c75595fcc1fd9e3b5885e",
+   "edits": [
+    {
+     "location": "Portefólio do módulo M5: «duas linhas finais.»",
+     "old": " síntese integrada.<",
+     "new": " duas linhas finais.<",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m6/portefolio-do-modulo-m6/index.html": {
+   "base_sha256_lf": "8e7ee451fa82e0573863dbba1c6fdee94e272619510f80b2335f1556c7dedd89",
+   "after_sha256_lf": "3ebc9ea8ac794b20560090ff1ec188acd466c08962bc8453ab9d321d2bf02383",
+   "edits": [
+    {
+     "location": "Portefólio do módulo M6: «duas linhas finais.»",
+     "old": " síntese integrada.<",
+     "new": " duas linhas finais.<",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m7/portefolio-do-modulo-m7/index.html": {
+   "base_sha256_lf": "2066a17cb76f80d9b969625ca35957aedf6ac1b28bd57355c633943eaf8cd9e1",
+   "after_sha256_lf": "596fea8dfcabee2f7ef6535c7e835a1d7a0d01e769447c4b5d5a1c72156a270d",
+   "edits": [
+    {
+     "location": "Portefólio do módulo M7: «as duas linhas finais;»",
+     "old": " a síntese; ",
+     "new": " as duas linhas finais; ",
+     "occurrences": 1
+    },
+    {
+     "location": "Portefólio do módulo M7: «as duas linhas finais da aula de tarefa, já fotografadas; não escreves outras. Depois de…»",
+     "old": " a síntese de duas linhas da aula de tarefa, já fotografada; não escreves outra.</div>\n<div><b>Depois de cada tarefa</b>As fotografias do trabalho e da síntese, ",
+     "new": " as duas linhas finais da aula de tarefa, já fotografadas; não escreves outras.</div>\n<div><b>Depois de cada tarefa</b>As fotografias do trabalho e das duas linhas finais, ",
+     "occurrences": 1
+    },
+    {
+     "location": "Portefólio do módulo M7: «as duas linhas finais já»",
+     "old": " as sínteses já ",
+     "new": " as duas linhas finais já ",
+     "occurrences": 1
+    },
+    {
+     "location": "Portefólio do módulo M7: «As duas linhas finais, no papel da aula de tarefa, fotografadas com o trabalho. Recupera…»",
+     "old": " Síntese de duas linhas no papel da aula de tarefa, fotografada com o trabalho. Recupera essa entrega, sem fazer outra síntese.</td></tr><tr><td><code>M7_<wbr>U1_<wbr>o-que-aprendi</code></td><td>Recupera a síntese ",
+     "new": " As duas linhas finais, no papel da aula de tarefa, fotografadas com o trabalho. Recupera essa entrega, sem escrever outras.</td></tr><tr><td><code>M7_<wbr>U1_<wbr>o-que-aprendi</code></td><td>Recupera as duas linhas finais ",
+     "occurrences": 1
+    },
+    {
+     "location": "Portefólio do módulo M7: «As duas linhas finais, no papel da aula de tarefa, fotografadas com o trabalho. Recupera…»",
+     "old": " Síntese de duas linhas no papel da aula de tarefa, fotografada com o trabalho. Recupera essa entrega, sem fazer outra síntese.</td></tr><tr><td><code>M7_<wbr>U2_<wbr>o-que-aprendi</code></td><td>Recupera a síntese ",
+     "new": " As duas linhas finais, no papel da aula de tarefa, fotografadas com o trabalho. Recupera essa entrega, sem escrever outras.</td></tr><tr><td><code>M7_<wbr>U2_<wbr>o-que-aprendi</code></td><td>Recupera as duas linhas finais ",
+     "occurrences": 1
+    },
+    {
+     "location": "Portefólio do módulo M7: «escrever outras. M7_ U3_ o-que-aprendi Recupera as duas linhas finais»",
+     "old": " fazer outra síntese.</td></tr><tr><td><code>M7_<wbr>U3_<wbr>o-que-aprendi</code></td><td>Recupera a síntese ",
+     "new": " escrever outras.</td></tr><tr><td><code>M7_<wbr>U3_<wbr>o-que-aprendi</code></td><td>Recupera as duas linhas finais ",
+     "occurrences": 1
+    },
+    {
+     "location": "Portefólio do módulo M7: «das duas linhas finais. M7_Tarefa2 Tarefa da unidade 2, «Uma ideia de heterónimo»: perfi…»",
+     "old": " da síntese.</td></tr><tr><td><code>M7_Tarefa2</code></td><td>Tarefa da unidade 2, «Uma ideia de heterónimo»: perfil, texto, escolhas justificadas, fontes e síntese.<",
+     "new": " das duas linhas finais.</td></tr><tr><td><code>M7_Tarefa2</code></td><td>Tarefa da unidade 2, «Uma ideia de heterónimo»: perfil, texto, escolhas justificadas, fontes e duas linhas finais.<",
+     "occurrences": 1
+    },
+    {
+     "location": "Portefólio do módulo M7: «margem, e das duas linhas finais.»",
+     "old": " margem, e da síntese.</td><",
+     "new": " margem, e das duas linhas finais.</td><",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m8/portefolio-do-modulo-m8/index.html": {
+   "base_sha256_lf": "15ef42acc8c5a33562203d6139dd7f20bba8388199ed5a17333d5d39dfda7673",
+   "after_sha256_lf": "b9580299838c72ed4d9dc99e06f55af5c1e269094326597b7a44ef6ae8075b14",
+   "edits": [
+    {
+     "location": "Portefólio do módulo M8: «retoma Retomas formativas da leitura, sem síntese adicional obrigatória. As duas linhas…»",
+     "old": "<wbr>retoma</code></td><td>Retomas formativas da leitura, sem síntese adicional obrigatória. A síntese integra a tarefa da unidade.</td></tr><tr><td><code>M8_<wbr>U1_<",
+     "new": "<wbr>retoma</code></td><td>Retomas formativas da leitura, sem síntese adicional obrigatória. As duas linhas finais ficam na tarefa da unidade.</td></tr><tr><td><code>M8_<wbr>U1_<",
+     "occurrences": 1
+    },
+    {
+     "location": "Portefólio do módulo M8: «retoma Retomas formativas da leitura, sem síntese adicional obrigatória. As duas linhas…»",
+     "old": "<wbr>retoma</code></td><td>Retomas formativas da leitura, sem síntese adicional obrigatória. A síntese integra a tarefa da unidade.</td></tr><tr><td><code>M8_<wbr>U2_<",
+     "new": "<wbr>retoma</code></td><td>Retomas formativas da leitura, sem síntese adicional obrigatória. As duas linhas finais ficam na tarefa da unidade.</td></tr><tr><td><code>M8_<wbr>U2_<",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m1/mapa-do-modulo-m1/index.html": {
+   "base_sha256_lf": "3e7a94c8e6a2b6a5d7cc336175680fb71da37c261682bba60430215b836cbfc5",
+   "after_sha256_lf": "df7716a9c8329983de71c48e184ec0766de84158a8ed54f13f4f2490d9f37032",
+   "edits": [
+    {
+     "location": "Mapa do módulo M1: «as duas linhas finais;»",
+     "old": " a síntese; ",
+     "new": " as duas linhas finais; ",
+     "occurrences": 1
+    },
+    {
+     "location": "Mapa do módulo M1: «Aula de tarefa · 90 min · duas linhas finais»",
+     "old": "\">Aula de tarefa · 90 min · síntese integrada</a></p></section><section ",
+     "new": "\">Aula de tarefa · 90 min · duas linhas finais</a></p></section><section ",
+     "occurrences": 1
+    },
+    {
+     "location": "Mapa do módulo M1: «Aula de tarefa · 90 min · duas linhas finais»",
+     "old": "\">Aula de tarefa · 90 min · síntese integrada</a></p></section></section>",
+     "new": "\">Aula de tarefa · 90 min · duas linhas finais</a></p></section></section>",
+     "occurrences": 1
+    },
+    {
+     "location": "Mapa do módulo M1: «As duas linhas finais ficam no papel do trabalho: uma aprendizagem e uma escolha do trab…»",
+     "old": " A síntese tem duas linhas, no papel do trabalho: uma aprendizagem e uma escolha do trabalho que a mostra. Entrega-a ",
+     "new": " As duas linhas finais ficam no papel do trabalho: uma aprendizagem e uma escolha do trabalho que a mostra. Entrega-as ",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m3/mapa-do-modulo-m3/index.html": {
+   "base_sha256_lf": "a1741ed90a230578978d057091b6b6d0b191e0bcfc20c239e6887b8d084779d5",
+   "after_sha256_lf": "41ef3f826dff44237a51397a33339df663073d63934a7f0a090580360b7bd1cd",
+   "edits": [
+    {
+     "location": "Mapa do módulo M3: «1, com duas linhas finais»",
+     "old": " 1, com síntese integrada</a><",
+     "new": " 1, com duas linhas finais</a><",
+     "occurrences": 1
+    },
+    {
+     "location": "Mapa do módulo M3: «2, com duas linhas finais»",
+     "old": " 2, com síntese integrada</a><",
+     "new": " 2, com duas linhas finais</a><",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m5/mapa-do-modulo-m5/index.html": {
+   "base_sha256_lf": "23f2ab7a04c53f4501a4bdd4eadc19f8847755b7de156681e8fc0d3da28c2182",
+   "after_sha256_lf": "7eb3d94cd9eb3553bbc4d432d31db03e7778190276e3878fe1b0a735ea56c1d1",
+   "edits": [
+    {
+     "location": "Mapa do módulo M5: «1, com duas linhas finais»",
+     "old": " 1, com síntese integrada</a><",
+     "new": " 1, com duas linhas finais</a><",
+     "occurrences": 1
+    },
+    {
+     "location": "Mapa do módulo M5: «2, com duas linhas finais»",
+     "old": " 2, com síntese integrada</a><",
+     "new": " 2, com duas linhas finais</a><",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m6/mapa-do-modulo-m6/index.html": {
+   "base_sha256_lf": "5255c09449a6b06a13e4a6cf389c006071e064e43fa3cb5ede2ed3c27d1a03f9",
+   "after_sha256_lf": "d939dafd0aecb3e37ec2f89f8e1e29d18b37b000f0c1707b00a238ac7b1cddf8",
+   "edits": [
+    {
+     "location": "Mapa do módulo M6: «1, com duas linhas finais»",
+     "old": " 1, com síntese integrada</a><",
+     "new": " 1, com duas linhas finais</a><",
+     "occurrences": 1
+    },
+    {
+     "location": "Mapa do módulo M6: «2, com duas linhas finais»",
+     "old": " 2, com síntese integrada</a><",
+     "new": " 2, com duas linhas finais</a><",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m7/mapa-do-modulo-m7/index.html": {
+   "base_sha256_lf": "4ab62e93f9f16de8668a69fed59ff4deefca0ff28e488ff346d3cc57bf9d5f43",
+   "after_sha256_lf": "ab7ffdbdfa5fe06bc31cf7e6e637e8f04006f057742ef2845a341a87578c364a",
+   "edits": [
+    {
+     "location": "Mapa do módulo M7: «as duas linhas finais;»",
+     "old": " a síntese; ",
+     "new": " as duas linhas finais; ",
+     "occurrences": 1
+    },
+    {
+     "location": "Mapa do módulo M7: «Aula de tarefa · 90 min · duas linhas finais»",
+     "old": "\"../../tarefas/m7-u1/\">Aula de tarefa · 90 min · síntese integrada</a></p></section><section class=\"",
+     "new": "\"../../tarefas/m7-u1/\">Aula de tarefa · 90 min · duas linhas finais</a></p></section><section class=\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Mapa do módulo M7: «Aula de tarefa · 90 min · duas linhas finais»",
+     "old": "\"../../tarefas/m7-u2/\">Aula de tarefa · 90 min · síntese integrada</a></p></section><section class=\"",
+     "new": "\"../../tarefas/m7-u2/\">Aula de tarefa · 90 min · duas linhas finais</a></p></section><section class=\"",
+     "occurrences": 1
+    },
+    {
+     "location": "Mapa do módulo M7: «Aula de tarefa · 90 min · duas linhas finais»",
+     "old": "\">Aula de tarefa · 90 min · síntese integrada</a></p></section></section>",
+     "new": "\">Aula de tarefa · 90 min · duas linhas finais</a></p></section></section>",
+     "occurrences": 1
+    },
+    {
+     "location": "Mapa do módulo M7: «As duas linhas finais ficam no papel do trabalho: uma aprendizagem e uma escolha do trab…»",
+     "old": " A síntese tem duas linhas, no papel do trabalho: uma aprendizagem e uma escolha do trabalho que a mostra. Entrega-a ",
+     "new": " As duas linhas finais ficam no papel do trabalho: uma aprendizagem e uma escolha do trabalho que a mostra. Entrega-as ",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m1/guia-da-tarefa-m1/index.html": {
+   "base_sha256_lf": "776baf77c60b1b2d70d24133ce24927365e698d6f8bc90dc0ca7d8eaa6769b77",
+   "after_sha256_lf": "91a9faf7106fd1ab17c0f09a700d78f800645bdfd64190375bb6e4ad5b15b60b",
+   "edits": [
+    {
+     "location": "Guia da tarefa do M1: «escreves duas linhas finais»",
+     "old": " fazes uma síntese de duas linhas ",
+     "new": " escreves duas linhas finais ",
+     "occurrences": 1
+    }
+   ]
+  }
+ }
+}

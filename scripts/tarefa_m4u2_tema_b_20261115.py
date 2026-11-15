@@ -131,7 +131,17 @@ ACHADOS = {
 
 
 def ler(rel):
-    return (ROOT / rel).read_bytes().decode('utf-8')
+    # 15/11/2026: por cima desta camada fica a das duas linhas finais em vez da síntese integrada (sintese_duas_linhas_20261115), que
+    # não partilha ficheiros com esta: desfaz-se primeiro, com contagem estrita, quando o ficheiro a traz (a «árvore» desta camada é o
+    # ficheiro como ela o deixou).
+    texto = (ROOT / rel).read_bytes().decode('utf-8')
+    sintese = ROOT / 'tests/fixtures/sintese-duas-linhas-edits-20261115.json'
+    if sintese.is_file():
+        for e in reversed(json.loads(sintese.read_text('utf-8'))['files'].get(rel, {}).get('edits', [])):
+            if texto.count(e['new']) != e['occurrences']:
+                raise SystemExit(f'{rel}: as duas linhas finais em vez da síntese integrada já não conferem ({e["location"]})')
+            texto = texto.replace(e['new'], e['old'])
+    return texto
 
 
 DO_COMMIT = False  # com --base-do-commit: a base lê-se do commit de base (para refazer a camada depois de mudar as páginas)

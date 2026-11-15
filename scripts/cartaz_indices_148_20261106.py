@@ -85,6 +85,9 @@ TAREFAS_FACEIS_M8 = ROOT / 'tests/fixtures/tarefas-faceis-m8-edits-20261113.json
 TAREFAS_FACEIS_M9 = ROOT / 'tests/fixtures/tarefas-faceis-m9-edits-20261114.json'
 # 15/11/2026: por cima de todas, a tarefa m4-u2 com «Tema A ou B» (muda o índice do M4: o título novo e «duas linhas finais»).
 TAREFA_M4U2 = ROOT / 'tests/fixtures/tarefa-m4u2-tema-b-edits-20261115.json'
+# 15/11/2026: por cima de todas, as duas linhas finais em vez da síntese integrada (muda os índices do M1, do M3, do M5, do M6, do M7
+# e do M8).
+SINTESE_DUAS_LINHAS = ROOT / 'tests/fixtures/sintese-duas-linhas-edits-20261115.json'
 VERSAO = '20261106'
 ACHADO = ('06/11/2026: decisão 148 (o desenho do índice do M4 passa aos nove, com a palavra do módulo, a imagem documental '
           'mais pequena a seguir às unidades e os botões flutuantes de sempre). {o}')
@@ -115,6 +118,13 @@ def base(rel):
     # índices do M9 e do M7), com contagem estrita.
     # 15/11/2026: antes dessa, a tarefa m4-u2 com «Tema A ou B» (camada tarefa_m4u2_tema_b_20261115, a mais recente, que muda o
     # índice do M4), com contagem estrita.
+    # 15/11/2026: antes dessa, as duas linhas finais em vez da síntese integrada (camada sintese_duas_linhas_20261115, a mais recente,
+    # que muda os índices do M1, do M3, do M5, do M6, do M7 e do M8), com contagem estrita.
+    if SINTESE_DUAS_LINHAS.is_file():
+        for edit in reversed(json.loads(SINTESE_DUAS_LINHAS.read_text('utf-8'))['files'].get(rel, {}).get('edits', [])):
+            if texto.count(edit['new']) != edit['occurrences']:
+                raise SystemExit(f'{rel}: as duas linhas finais em vez da síntese integrada já não conferem ({edit["location"]})')
+            texto = texto.replace(edit['new'], edit['old'])
     if TAREFA_M4U2.is_file():
         for edit in reversed(json.loads(TAREFA_M4U2.read_text('utf-8'))['files'].get(rel, {}).get('edits', [])):
             if texto.count(edit['new']) != edit['occurrences']:
