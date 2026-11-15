@@ -63,6 +63,10 @@ TAREFA_M4U2 = json.loads((ROOT / 'tests/fixtures/tarefa-m4u2-tema-b-edits-202611
 # 15/11/2026: a fila final (fila_final_20261115: assets/exame/app.js, assets/exame/sessoes.json e a lição M3-F05) fica por cima de todas,
 # também das duas linhas finais. Pela mesma regra: desfaz-se primeiro, com contagem estrita, quando o texto é o ficheiro como ela o deixou.
 FILA_FINAL = json.loads((ROOT / 'tests/fixtures/fila-final-edits-20261115.json').read_text('utf-8'))['files']
+# 15/11/2026: a revisão geral antes de publicar (revisao_geral_20261115: o Atlas, a M9-F11 e a M9-F12, as provas em cartões, as lições
+# M8-F13, M8-F14, M5-F14 e M5-F15, a tarefa M5-U2 e assets/exame/sessoes.json) fica por cima de todas, também da fila final. Pela mesma
+# regra: desfaz-se primeiro, com contagem estrita, quando o texto é o ficheiro como ela o deixou.
+REVISAO_GERAL = json.loads((ROOT / 'tests/fixtures/revisao-geral-edits-20261115.json').read_text('utf-8'))['files']
 # 15/11/2026: «duas linhas finais» em vez de «síntese integrada» nos índices, nos portefólios, nos mapas e no guia da tarefa do M1, do
 # M3, do M5, do M6, do M7 e do M8 (sintese_duas_linhas_20261115) fica por cima de todas, também da tarefa m4-u2. Pela mesma regra:
 # desfaz-se primeiro, com contagem estrita, quando o texto é o ficheiro como ela o deixou.
@@ -75,6 +79,12 @@ def desfazer_faceis(path, text):
     página como ela a deixou."""
     p = Path(path)
     rel = p.relative_to(ROOT).as_posix() if p.is_absolute() else p.as_posix()
+    # 15/11/2026: antes de tudo, a revisão geral, por cima de todas, também da fila final (nos seus 24 ficheiros).
+    por_cima = REVISAO_GERAL.get(rel)
+    if por_cima and _sha_lf(text) == por_cima['after_sha256_lf']:
+        for edit in reversed(por_cima['edits']):
+            assert text.count(edit['new']) == edit['occurrences'], f'A revisão geral não confere: {rel}'
+            text = text.replace(edit['new'], edit['old'])
     # 15/11/2026: antes de tudo, a fila final, por cima de todas (nos seus 3 ficheiros).
     por_cima = FILA_FINAL.get(rel)
     if por_cima and _sha_lf(text) == por_cima['after_sha256_lf']:

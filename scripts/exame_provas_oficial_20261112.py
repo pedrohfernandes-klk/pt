@@ -247,7 +247,17 @@ def prender_cartoes(texto):
 # ---------- a base, os dados finais e as páginas ----------
 
 def ler(rel):
-    return (ROOT / rel).read_bytes().decode('utf-8')
+    # 15/11/2026: por cima desta camada fica a revisão geral (revisao_geral_20261115), que muda a secção, as lições dos Grupos I e II das
+    # duas provas de 2026 e os seus dados («tentas primeiro por ti»), e seccao.json («entrada»): a «árvore» desta camada é cada ficheiro
+    # como ela o deixou, com a revisão geral desfeita primeiro, com contagem estrita, quando o ficheiro a traz.
+    texto = (ROOT / rel).read_bytes().decode('utf-8')
+    revisao = ROOT / 'tests/fixtures/revisao-geral-edits-20261115.json'
+    if revisao.is_file():
+        for e in reversed(json.loads(revisao.read_text('utf-8'))['files'].get(rel, {}).get('edits', [])):
+            if texto.count(e['new']) != e['occurrences']:
+                raise SystemExit(f'{rel}: a revisão geral já não confere ({e["location"]})')
+            texto = texto.replace(e['new'], e['old'])
+    return texto
 
 
 def base(rel):

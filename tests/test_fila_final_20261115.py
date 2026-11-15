@@ -35,10 +35,14 @@ sys.path.insert(0, str(ROOT / 'scripts'))
 sys.path.insert(0, str(ROOT / 'tests'))
 import verificar_camadas  # noqa: E402
 from auditoria_20261028 import undo_fila_final_1115  # noqa: E402
+# 15/11/2026: por cima desta camada fica a revisão geral (revisao_geral_20261115), que partilha com ela assets/exame/sessoes.json (a
+# sessão 27): os testes desta camada leem cada ficheiro como ela o deixou, com a revisão geral desfeita primeiro, com contagem estrita.
+from auditoria_20261028 import undo_revisao_geral_1115  # noqa: E402
 
 CAMADA_REL = 'scripts/fila_final_20261115.json'
 MANIFESTO_REL = 'tests/fixtures/fila-final-edits-20261115.json'
 SINTESE_REL = 'tests/fixtures/sintese-duas-linhas-edits-20261115.json'
+REVISAO_REL = 'tests/fixtures/revisao-geral-edits-20261115.json'  # 15/11/2026: a revisão geral, a camada mais recente, por cima desta
 MAIN = '4f4135bf679176c6c8e4abda543837632aad7325'
 APP = 'assets/exame/app.js'
 SESSOES = 'assets/exame/sessoes.json'
@@ -210,13 +214,15 @@ class FilaFinal(unittest.TestCase):
             mine = [(t['antigo'], t['novo']) for t in TROCAS if t['ficheiro'] == rel]
             self.assertEqual([(e['old'], e['new']) for e in MANIFESTO['files'][rel]['edits']], mine, rel)
             self.assertTrue(all(e['occurrences'] == 1 for e in MANIFESTO['files'][rel]['edits']))
-            self.assertEqual(sha_lf(ler(rel)), MANIFESTO['files'][rel]['after_sha256_lf'], rel)
+            # 15/11/2026: com a revisão geral (revisao_geral_20261115) desfeita primeiro: é o ficheiro como esta camada o deixou.
+            self.assertEqual(sha_lf(undo_revisao_geral_1115(rel, ler(rel))), MANIFESTO['files'][rel]['after_sha256_lf'], rel)
 
     def test_reversivel_ate_ao_main_letra_a_letra(self):
         # 15/11/2026: os 3 ficheiros do Exame e da M3-F05 voltam ao main; os 14 da decisão «duas linhas finais» voltam à base do manifesto
         # (as páginas como as deixou o commit anterior, que já trazia as camadas de baixo).
         for rel in FICHEIROS:
-            texto = ler(rel)
+            # 15/11/2026: a partir do ficheiro como esta camada o deixou (com a revisão geral, por cima, desfeita primeiro).
+            texto = undo_revisao_geral_1115(rel, ler(rel))
             for e in reversed(MANIFESTO['files'][rel]['edits']):
                 self.assertEqual(texto.count(e['new']), e['occurrences'], rel)
                 texto = texto.replace(e['new'], e['old'])
@@ -239,16 +245,21 @@ class FilaFinal(unittest.TestCase):
         self.assertEqual(modulo.trocas(), TROCAS)
 
     def test_aplicar_trocas_verifica_esta_e_a_anterior(self):
-        r = subprocess.run([sys.executable, 'scripts/aplicar_trocas.py', CAMADA_REL, '--manifesto', MANIFESTO_REL, '--verificar'],
-                           cwd=ROOT, capture_output=True, text=True)
+        # 15/11/2026: por cima desta camada fica a revisão geral (revisao_geral_20261115), a camada mais recente: desfaz-se primeiro, com a
+        # mesma exigência, sem nada pelo meio.
+        r = subprocess.run([sys.executable, 'scripts/aplicar_trocas.py', CAMADA_REL, '--manifesto', MANIFESTO_REL, '--verificar',
+                            '--desfazer-antes', REVISAO_REL], cwd=ROOT, capture_output=True, text=True)
         self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
         r = subprocess.run([sys.executable, 'scripts/aplicar_trocas.py', 'scripts/sintese_duas_linhas_20261115.json', '--manifesto', SINTESE_REL,
-                            '--verificar', '--desfazer-antes', MANIFESTO_REL], cwd=ROOT, capture_output=True, text=True)
+                            '--verificar', '--desfazer-antes', REVISAO_REL, '--desfazer-antes', MANIFESTO_REL], cwd=ROOT, capture_output=True, text=True)
         self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
 
     def test_no_topo_da_pilha(self):
-        self.assertEqual(verificar_camadas.LAYERS[0], ('fila_final_20261115', 'fila-final-edits-20261115'))
-        self.assertEqual(verificar_camadas.LAYERS[1], ('sintese_duas_linhas_20261115', 'sintese-duas-linhas-edits-20261115'))
+        # 15/11/2026: por cima desta camada fica a revisão geral (revisao_geral_20261115), a camada mais recente: esta passa à segunda
+        # posição, logo por baixo dela, com a mesma exigência.
+        self.assertEqual(verificar_camadas.LAYERS[0], ('revisao_geral_20261115', 'revisao-geral-edits-20261115'))
+        self.assertEqual(verificar_camadas.LAYERS[1], ('fila_final_20261115', 'fila-final-edits-20261115'))
+        self.assertEqual(verificar_camadas.LAYERS[2], ('sintese_duas_linhas_20261115', 'sintese-duas-linhas-edits-20261115'))
         self.assertEqual(len(set(verificar_camadas.LAYERS)), len(verificar_camadas.LAYERS))
 
     def test_as_camadas_de_baixo_a_desfazem_primeiro(self):

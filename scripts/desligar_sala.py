@@ -868,6 +868,14 @@ def main():
                 # com dois acertos (o guia da tarefa do M2 e o índice do M7), a camada mais recente, por cima das do M8.
                 # 15/11/2026: e, antes de todas, a tarefa m4-u2 com «Tema A ou B», «tudo junto» no M4 e o acerto do M8
                 # (tarefa_m4u2_tema_b_20261115), a camada mais recente, por cima das do M9.
+                # 15/11/2026: e, antes de todas, a revisão geral (revisao_geral_20261115: «ficha» e «sozinho» fora do texto do aluno, as
+                # tarefas de pares individuais, os retratos e os vídeos que saem e a sessão 27 do Exame), a camada mais recente, por cima
+                # da fila final.
+                revisao_geral = ROOT / 'tests/fixtures/revisao-geral-edits-20261115.json'
+                for edit in reversed(json.loads(revisao_geral.read_text('utf-8'))['files'].get(rel, {}).get('edits', [])):
+                    if conferencia.count(edit['new']) != edit['occurrences']:
+                        raise ManifestoDesatualizado(f'{rel}: a revisão geral não confere')
+                    conferencia = conferencia.replace(edit['new'], edit['old'])
                 # 15/11/2026: e, antes de todas, a fila final (fila_final_20261115: o alvo das sessões do Exame, as sessões 20 e 23 e a
                 # numeração dos versos da M3-F05), a camada mais recente, por cima de «duas linhas finais».
                 fila_final = ROOT / 'tests/fixtures/fila-final-edits-20261115.json'

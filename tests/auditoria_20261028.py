@@ -401,7 +401,28 @@ _SINTESE_DUAS_LINHAS_1115 = json.loads((ROOT/'tests/fixtures/sintese-duas-linhas
 # finais: desfaz-se antes de todas, com contagem estrita.
 _FILA_FINAL_1115 = json.loads((ROOT/'tests/fixtures/fila-final-edits-20261115.json').read_text('utf-8'))['files']
 
+# 15/11/2026: a revisão geral antes de publicar (revisao_geral_20261115: «ficha» e «sozinho» fora do texto do aluno, as tarefas de pares
+# individuais, os retratos e os vídeos que saem, a sessão 27 do Exame sem a masterclass), camada mais recente, por cima da fila final, com a
+# qual partilha assets/exame/sessoes.json: desfaz-se antes de todas, com contagem estrita.
+_REVISAO_GERAL_1115 = json.loads((ROOT/'tests/fixtures/revisao-geral-edits-20261115.json').read_text('utf-8'))['files']
+
+def undo_revisao_geral_1115(path, text):
+    # Pela mesma regra das outras camadas: esta camada está no topo, por isso o ficheiro da árvore é exatamente a página como ela a deixou
+    # (o hash «after» do manifesto, que scripts/verificar_camadas.py e tests/test_revisao_geral_20261115.py conferem). Só esse texto se
+    # desfaz, com contagem estrita; quem já a desfez (ou entrega um texto histórico) recebe o texto como o deu.
+    entrada = _REVISAO_GERAL_1115.get(_relative(path))
+    if not entrada or hashlib.sha256(text.replace('\r\n', '\n').encode('utf-8')).hexdigest() != entrada['after_sha256_lf']:
+        return text
+    for edit in reversed(entrada['edits']):
+        if text.count(edit['new']) != edit['occurrences']:
+            raise AssertionError(f"A revisão geral não confere: {path}: {edit['location']}")
+        text = text.replace(edit['new'], edit['old'])
+    return text
+
+
 def undo_fila_final_1115(path, text):
+    # 15/11/2026: primeiro a revisão geral, que está por cima de todas.
+    text = undo_revisao_geral_1115(path, text)
     # Pela mesma regra das outras camadas: esta camada está no topo, por isso o ficheiro da árvore é exatamente a página como ela a deixou
     # (o hash «after» do manifesto, que scripts/verificar_camadas.py e tests/test_fila_final_20261115.py conferem). Só esse texto se
     # desfaz, com contagem estrita; quem já a desfez (ou entrega um texto histórico) recebe o texto como o deu.

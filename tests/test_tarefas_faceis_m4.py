@@ -41,6 +41,10 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'tests'))
 sys.path.insert(0, str(ROOT / 'scripts'))
 from auditoria_20261028 import undo_tarefa_m4u2_1115, undo_tarefas_faceis_m9_1114  # noqa: E402
+# 15/11/2026: a revisão geral (revisao_geral_20261115), por cima de todas, muda a página e os dados da m5-u2 (sai o facto de 2025 do
+# dossiê, cuja única fonte era o vídeo que sai da M5-F15): esses dois ficheiros leem-se com ela desfeita, com contagem estrita.
+from auditoria_20261028 import undo_revisao_geral_1115  # noqa: E402
+REVISAO_DE_CIMA = json.loads((ROOT / 'tests/fixtures/revisao-geral-edits-20261115.json').read_text('utf-8'))['files']
 import verificar_camadas  # noqa: E402
 
 CAMADA_REL = 'scripts/tarefa_m4u2_tema_b_20261115.json'
@@ -48,6 +52,7 @@ MANIFESTO_REL = 'tests/fixtures/tarefa-m4u2-tema-b-edits-20261115.json'
 M9F = 'tests/fixtures/tarefas-faceis-m9-edits-20261114.json'
 M8F = 'tests/fixtures/tarefas-faceis-m8-edits-20261113.json'
 # 15/11/2026: por cima desta camada fica «duas linhas finais» em vez de «síntese integrada» (sintese_duas_linhas_20261115), a camada mais recente: desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
+REVISAOF = 'tests/fixtures/revisao-geral-edits-20261115.json'  # 15/11/2026: por cima da fila final fica a revisão geral (revisao_geral_20261115), a camada mais recente: desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
 FILAF = 'tests/fixtures/fila-final-edits-20261115.json'  # 15/11/2026: por cima de «duas linhas finais» fica a fila final (fila_final_20261115), a camada mais recente: desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
 SINTESEF = 'tests/fixtures/sintese-duas-linhas-edits-20261115.json'
 BASE_COMMIT = '015ee060613875e1b1377a905a8d5f4c2dbc0ad0'
@@ -746,7 +751,13 @@ class TarefaM4u2TemaB(unittest.TestCase):
             if rel in FICHEIROS:
                 continue
             with self.subTest(igual_ao_main=rel):
-                self.assertEqual((ROOT / rel).read_bytes(), subprocess.run(['git', 'show', f'{BASE_COMMIT}:{rel}'], cwd=ROOT, capture_output=True).stdout)
+                conteudo = (ROOT / rel).read_bytes()
+                # 15/11/2026: os ficheiros que a revisão geral (revisao_geral_20261115) muda nestas pastas (a página e os dados da m5-u2)
+                # comparam-se com ela desfeita pela auditoria, com contagem estrita: por baixo dela, são os do main de partida, byte a byte.
+                if rel in REVISAO_DE_CIMA:
+                    conteudo = undo_revisao_geral_1115(rel, conteudo.decode('utf-8')).encode('utf-8')
+                    self.assertNotEqual(conteudo, (ROOT / rel).read_bytes(), rel)
+                self.assertEqual(conteudo, subprocess.run(['git', 'show', f'{BASE_COMMIT}:{rel}'], cwd=ROOT, capture_output=True).stdout)
                 iguais += 1
         self.assertEqual(iguais, len(nomes) - len([x for x in FICHEIROS if x in nomes]))
         self.assertEqual([x for x in FICHEIROS if x not in nomes and x.startswith(('tarefas/', 'docs/'))], [])
@@ -756,16 +767,20 @@ class TarefaM4u2TemaB(unittest.TestCase):
     def test_camada_fechada_reversivel_e_no_topo(self):
         # 15/11/2026: por cima da tarefa m4-u2 fica «duas linhas finais» em vez de «síntese integrada» (sintese_duas_linhas_20261115): a ordem ganha mais uma posição, com a mesma exigência.
         # 15/11/2026: por cima de «duas linhas finais» fica a fila final (fila_final_20261115), a camada mais recente: desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
-        self.assertEqual(verificar_camadas.LAYERS[0], ('fila_final_20261115', 'fila-final-edits-20261115'))
-        self.assertEqual(verificar_camadas.LAYERS[1], ('sintese_duas_linhas_20261115', 'sintese-duas-linhas-edits-20261115'))
-        self.assertEqual(verificar_camadas.LAYERS[2], ('tarefa_m4u2_tema_b_20261115', 'tarefa-m4u2-tema-b-edits-20261115'))
-        self.assertEqual(verificar_camadas.LAYERS[3], ('tarefas_faceis_m9_20261114', 'tarefas-faceis-m9-edits-20261114'))
-        self.assertEqual(verificar_camadas.LAYERS[4], ('tarefas_faceis_m8_20261113', 'tarefas-faceis-m8-edits-20261113'))
+        # 15/11/2026: por cima da fila final fica a revisão geral (revisao_geral_20261115), a camada mais recente: a ordem ganha mais uma posição, com a mesma exigência.
+        self.assertEqual(verificar_camadas.LAYERS[0], ('revisao_geral_20261115', 'revisao-geral-edits-20261115'))
+        self.assertEqual(verificar_camadas.LAYERS[1], ('fila_final_20261115', 'fila-final-edits-20261115'))
+        self.assertEqual(verificar_camadas.LAYERS[2], ('sintese_duas_linhas_20261115', 'sintese-duas-linhas-edits-20261115'))
+        self.assertEqual(verificar_camadas.LAYERS[3], ('tarefa_m4u2_tema_b_20261115', 'tarefa-m4u2-tema-b-edits-20261115'))
+        self.assertEqual(verificar_camadas.LAYERS[4], ('tarefas_faceis_m9_20261114', 'tarefas-faceis-m9-edits-20261114'))
+        self.assertEqual(verificar_camadas.LAYERS[5], ('tarefas_faceis_m8_20261113', 'tarefas-faceis-m8-edits-20261113'))
         # 15/11/2026: mais uma camada, sintese_duas_linhas_20261115, no topo.
         # 15/11/2026: mais uma camada, fila_final_20261115, no topo.
-        self.assertEqual(len(verificar_camadas.LAYERS), 56)
+        # 15/11/2026: mais uma camada, revisao_geral_20261115, no topo.
+        self.assertEqual(len(verificar_camadas.LAYERS), 57)
         # 15/11/2026: mais uma camada, sintese_duas_linhas_20261115, no topo.
-        self.assertEqual(len(set(verificar_camadas.LAYERS)), 56)
+        # 15/11/2026: mais uma camada, revisao_geral_20261115, no topo.
+        self.assertEqual(len(set(verificar_camadas.LAYERS)), 57)
         self.assertEqual(MANIFESTO['base_commit'], BASE_COMMIT)
         self.assertIn('não se edita à mão', MANIFESTO['_nota'])
         self.assertEqual(sorted({t['ficheiro'] for t in TROCAS}), sorted(FICHEIROS))
@@ -776,7 +791,8 @@ class TarefaM4u2TemaB(unittest.TestCase):
         self.assertEqual(len(TROCAS), sum(len(v['edits']) for v in MANIFESTO['files'].values()))
         # 15/11/2026: a fila final desfaz-se primeiro (partilha o portefólio do M4).
         r = subprocess.run([sys.executable, 'scripts/aplicar_trocas.py', CAMADA_REL, '--manifesto', MANIFESTO_REL, '--verificar',
-                            '--desfazer-antes', FILAF], cwd=ROOT, capture_output=True, text=True, encoding='utf-8')
+                            # 15/11/2026: por cima da fila final fica a revisão geral (revisao_geral_20261115), a camada mais recente: desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
+                            '--desfazer-antes', REVISAOF, '--desfazer-antes', FILAF], cwd=ROOT, capture_output=True, text=True, encoding='utf-8')
         self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
         self.assertIn(f'{len(TROCAS)} trocas em 14 ficheiros: {len(TROCAS)} aplicadas, 0 por aplicar; manifesto em dia.', r.stdout)
         for t in TROCAS:
@@ -807,7 +823,8 @@ class TarefaM4u2TemaB(unittest.TestCase):
         # Confere-se também a camada do M9 e a do M8 com esta desfeita primeiro.
         # 15/11/2026: por cima desta camada fica «duas linhas finais» em vez de «síntese integrada» (sintese_duas_linhas_20261115), a camada mais recente: desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
         # 15/11/2026: por cima de «duas linhas finais» fica a fila final (fila_final_20261115), a camada mais recente: desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
-        for camada, manifesto, cadeia in (('tarefas_faceis_m9_20261114', M9F, [FILAF, SINTESEF, MANIFESTO_REL]), ('tarefas_faceis_m8_20261113', M8F, [FILAF, SINTESEF, MANIFESTO_REL, M9F])):
+        # 15/11/2026: por cima da fila final fica a revisão geral (revisao_geral_20261115), a camada mais recente: desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
+        for camada, manifesto, cadeia in (('tarefas_faceis_m9_20261114', M9F, [REVISAOF, FILAF, SINTESEF, MANIFESTO_REL]), ('tarefas_faceis_m8_20261113', M8F, [REVISAOF, FILAF, SINTESEF, MANIFESTO_REL, M9F])):
             r = subprocess.run([sys.executable, 'scripts/aplicar_trocas.py', f'scripts/{camada}.json', '--manifesto', manifesto, '--verificar']
                                + [x for c in cadeia for x in ('--desfazer-antes', c)], cwd=ROOT, capture_output=True, text=True, encoding='utf-8')
             self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
@@ -880,7 +897,8 @@ class TarefaM4u2TemaB(unittest.TestCase):
             self.assertEqual(fluxo.count(f'--desfazer-antes {M9F}'), fluxo.count(f'--desfazer-antes {meu} --desfazer-antes {M9F}'), p.name)
             # 15/11/2026: por cima desta camada fica «duas linhas finais» em vez de «síntese integrada» (sintese_duas_linhas_20261115), a camada mais recente: desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
             # 15/11/2026: por cima de «duas linhas finais» fica a fila final (fila_final_20261115), a camada mais recente: desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
-            self.assertEqual(fluxo.count(f'--desfazer-antes {meu}'), fluxo.count(f'--verificar --desfazer-antes {FILAF} --desfazer-antes {SINTESEF} --desfazer-antes {meu}'), p.name)
+            # 15/11/2026: por cima da fila final fica a revisão geral (revisao_geral_20261115), a camada mais recente: desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
+            self.assertEqual(fluxo.count(f'--desfazer-antes {meu}'), fluxo.count(f'--verificar --desfazer-antes {REVISAOF} --desfazer-antes {FILAF} --desfazer-antes {SINTESEF} --desfazer-antes {meu}'), p.name)
             self.assertEqual(fluxo.count("'scripts/tarefas_faceis_m9_20261114.*'"), fluxo.count("'scripts/tarefa_m4u2_tema_b_20261115.*'"), p.name)
             self.assertEqual(fluxo.count("- 'tests/test_tarefas_faceis_m9.py'"), fluxo.count("- 'tests/test_tarefas_faceis_m4.py'"), p.name)
             self.assertEqual(fluxo.count("- 'tests/browser_tarefas_faceis_m9.py'"), fluxo.count("- 'tests/browser_tarefas_faceis_m4.py'"), p.name)
@@ -896,10 +914,12 @@ class TarefaM4u2TemaB(unittest.TestCase):
         tarefas = ler('.github/workflows/pt-tarefas-qa.yml')
         # 15/11/2026: por cima desta camada fica «duas linhas finais» em vez de «síntese integrada» (sintese_duas_linhas_20261115), a camada mais recente: desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
         # 15/11/2026: por cima de «duas linhas finais» fica a fila final (fila_final_20261115), a camada mais recente: desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
-        self.assertIn(f'python scripts/aplicar_trocas.py scripts/tarefas_faceis_m9_20261114.json --manifesto {M9F} --verificar --desfazer-antes {FILAF} --desfazer-antes {SINTESEF} --desfazer-antes {meu}\n', tarefas)
+        # 15/11/2026: por cima da fila final fica a revisão geral (revisao_geral_20261115), a camada mais recente: desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
+        self.assertIn(f'python scripts/aplicar_trocas.py scripts/tarefas_faceis_m9_20261114.json --manifesto {M9F} --verificar --desfazer-antes {REVISAOF} --desfazer-antes {FILAF} --desfazer-antes {SINTESEF} --desfazer-antes {meu}\n', tarefas)
         # 15/11/2026: por cima desta camada fica «duas linhas finais» em vez de «síntese integrada» (sintese_duas_linhas_20261115), a camada mais recente: desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
         # 15/11/2026: por cima de «duas linhas finais» fica a fila final (fila_final_20261115), a camada mais recente: desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
-        self.assertIn(f'python scripts/aplicar_trocas.py {CAMADA_REL} --manifesto {meu} --verificar --desfazer-antes {FILAF} --desfazer-antes {SINTESEF}\n', tarefas)
+        # 15/11/2026: por cima da fila final fica a revisão geral (revisao_geral_20261115), a camada mais recente: desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
+        self.assertIn(f'python scripts/aplicar_trocas.py {CAMADA_REL} --manifesto {meu} --verificar --desfazer-antes {REVISAOF} --desfazer-antes {FILAF} --desfazer-antes {SINTESEF}\n', tarefas)
         self.assertIn("python -m unittest discover -s tests -p 'test_tarefas_faceis_m4.py' -v\n", tarefas)
         self.assertIn('      - name: Tarefa m4-u2 mais fácil de fazer\n        run: python tests/browser_tarefas_faceis_m4.py\n', tarefas)
         self.assertLess(tarefas.index("-p 'test_tarefas_faceis_m9.py'"), tarefas.index("-p 'test_tarefas_faceis_m4.py'"))

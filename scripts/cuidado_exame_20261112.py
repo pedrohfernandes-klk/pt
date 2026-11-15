@@ -754,6 +754,15 @@ def ler(rel):
     # 15/11/2026: por cima desta camada fica a fila final (fila_final_20261115), que muda assets/exame/app.js e assets/exame/sessoes.json
     # (as sessões do Exame que esta camada também muda): desfaz-se primeiro, com contagem estrita, quando o ficheiro a traz.
     texto = (ROOT / rel).read_bytes().decode('utf-8')
+    # 15/11/2026: e, por cima da fila final, a revisão geral (revisao_geral_20261115), que muda assets/exame/sessoes.json (a sessão 27) e
+    # as provas em cartões (a secção, as lições dos Grupos I e II e os seus dados, seccao.json incluído): desfaz-se antes de todas, com
+    # contagem estrita, quando o ficheiro a traz.
+    revisao = ROOT / 'tests/fixtures/revisao-geral-edits-20261115.json'
+    if revisao.is_file():
+        for e in reversed(json.loads(revisao.read_text('utf-8'))['files'].get(rel, {}).get('edits', [])):
+            if texto.count(e['new']) != e['occurrences']:
+                raise SystemExit(f'{rel}: a revisão geral já não confere ({e["location"]})')
+            texto = texto.replace(e['new'], e['old'])
     fila = ROOT / 'tests/fixtures/fila-final-edits-20261115.json'
     if fila.is_file():
         for e in reversed(json.loads(fila.read_text('utf-8'))['files'].get(rel, {}).get('edits', [])):

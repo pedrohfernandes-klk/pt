@@ -2,17 +2,8 @@
 from html import escape
 
 IMAGENS = {
- 'eugenio': dict(autor='Bottelho', obra='Eugénio de Andrade', data='2010',
-  instituicao='Publicação do autor no Flickr; reprodução no Wikimedia Commons. Coleção não indicada.',
-  licenca='CC BY-SA 2.0', direitos='https://creativecommons.org/licenses/by-sa/2.0/',
-  fonte='https://commons.wikimedia.org/wiki/File:Eug%C3%A9nio_de_Andrade.jpg',
-  alt='Retrato pintado de Eugénio de Andrade, com pinceladas claras e escuras sobre o rosto.'),
- # 12/11/2026: decisão 152 no M8 (achado 32, camada cuidado_m8_20261112): a data da fotografia não se parte (U+00A0; o espaço entre o mês e o «de» do ano fica), como na página.
- 'amaral': dict(autor='Mattias Blomgren', obra='Ana Luísa Amaral na Feira do Livro de Gotemburgo', data='27\xa0de setembro de\xa02013',
-  instituicao='Wikimedia Commons, publicação do fotógrafo.',
-  licenca='CC BY-SA 3.0', direitos='https://creativecommons.org/licenses/by-sa/3.0/',
-  fonte='https://commons.wikimedia.org/wiki/File:Ana_Lu%C3%ADsa_Amaral_at_G%C3%B6teborg_Book_Fair_2013_01.JPG',
-  alt='Ana Luísa Amaral fotografada na Feira do Livro de Gotemburgo, com um lenço coral.'),
+ # 15/11/2026: revisão geral (camada revisao_geral_20261115; decisão do utilizador: nas imagens, nenhuma pessoa identificável):
+ # saem os retratos de Eugénio de Andrade (M8-F13) e de Ana Luísa Amaral (M8-F14), com os seus dados.
  'piranesi': dict(autor='Giovanni Battista Piranesi', obra='Vista interior da Basílica de São Pedro, da série Vedute di Roma', data='Cerca de 1748',
   instituicao='The Metropolitan Museum of Art, inventário 1972.620.1. Oferta de Mrs. Otto F. Langmann, 1972.',
   licenca='Domínio público', direitos='https://www.metmuseum.org/art/collection/search/353966',
@@ -21,8 +12,7 @@ IMAGENS = {
 }
 
 USOS = {
- 'm8-f13': ('eugenio', 'Eugénio de Andrade, num retrato de Bottelho (2010).'),
- 'm8-f14': ('amaral', 'Ana Luísa Amaral na Feira do Livro de Gotemburgo, em 2013.'),
+ # 15/11/2026: revisão geral: o primeiro cartão da M8-F13 e o da M8-F14 ficam sem retrato (o texto do cartão fica).
  'm9-f14': ('piranesi', 'A escala das figuras humanas permite comparar dimensão e grandeza. A gravura representa a basílica, não a miniatura do rei nem a cena do romance.'),
 }
 

@@ -218,6 +218,14 @@ def ler(rel):
     # os dados das grelhas: desfaz-se primeiro, com contagem estrita, quando o ficheiro a traz (a «árvore» desta camada é o
     # ficheiro como ela o deixou).
     texto = (ROOT / rel).read_bytes().decode('utf-8')
+    # 15/11/2026: e, antes de todas, a revisão geral (revisao_geral_20261115), que muda a tarefa M5-U2 e os seus dados (sai o facto de
+    # 2025 do dossiê do tema B, cuja única fonte era o vídeo que sai da M5-F15): desfaz-se primeiro, com contagem estrita.
+    revisao = ROOT / 'tests/fixtures/revisao-geral-edits-20261115.json'
+    if revisao.is_file():
+        for e in reversed(json.loads(revisao.read_text('utf-8'))['files'].get(rel, {}).get('edits', [])):
+            if texto.count(e['new']) != e['occurrences']:
+                raise SystemExit(f'{rel}: a revisão geral já não confere ({e["location"]})')
+            texto = texto.replace(e['new'], e['old'])
     # 15/11/2026: e, antes de todas, a fila final (fila_final_20261115), que muda o portefólio do M4 e do M8, o guia da tarefa do M2 e
     # outras páginas que estas camadas também mudam: desfaz-se primeiro, com contagem estrita.
     fila_final = ROOT / 'tests/fixtures/fila-final-edits-20261115.json'

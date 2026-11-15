@@ -59,8 +59,10 @@ PAGINAS = {
     # passou a «capítulo I») e a agulha passa a ser a forma nova.
     'tarefas/m5-u1/index.html': ['90' + N + 'min', '10' + N + 'min', '10' + N + 'minutos', 'cap.' + N + 'IV', 'capítulo' + N + 'IV',
                                  '17' + N + 'de', 'de' + N + '1807'],
+    # 15/11/2026: revisão geral (camada revisao_geral_20261115): sai do dossiê do tema B o facto de 2025 («A 8 de janeiro de 2025, Eça
+    # recebe honras de Panteão»), cuja única fonte era o vídeo que sai da M5-F15; a agulha «de 2025» sai com ele, e as outras ficam.
     'tarefas/m5-u2/index.html': ['90' + N + 'min', '3.ª' + N + 'pessoa', 'cap.' + N + 'VI', 'capítulo' + N + 'VI',
-                                 'capítulo' + N + 'I', '28' + N + 'de', 'de' + N + '2015', 'de' + N + '2025'],
+                                 'capítulo' + N + 'I', '28' + N + 'de', 'de' + N + '2015'],
     'tarefas/m5-u1/grelha/index.html': ['cap.' + N + 'IV'],
     'tarefas/m5-u2/grelha/index.html': ['cap.' + N + 'I', '3.ª' + N + 'pessoa'],
     'tarefas/m5-u2/correcao/index.html': ['cap.' + N + 'I', '3.ª' + N + 'pessoa'],
@@ -89,7 +91,10 @@ CARTOES = [
     ('m5/licao-m5-f12/index.html', 18, ['3.ª' + N + 'pessoa']),
     ('m5/licao-m5-f13/index.html', 0, ['c.' + N + '1895']),
     ('m5/licao-m5-f14/index.html', 2, ['M5-' + J + 'F10', 'capítulo' + N + 'I']),
-    ('m5/licao-m5-f15/index.html', 1, ['8' + N + 'de', 'de' + N + '2025', '4' + N + 'min']),
+    # 15/11/2026: revisão geral (camada revisao_geral_20261115; decisão do utilizador: só vídeos oficiais): sai do «O essencial» da
+    # M5-F15 o vídeo da RTP1 do canal «Instituto de História Contemporânea», com o botão («4 min») e o crédito («8 de janeiro de 2025»);
+    # o cartão fica sem referências presas e sai desta lista (tests/test_revisao_geral_20261115.py confere que o vídeo saiu e que o
+    # resto do cartão ficou letra a letra).
     ('m5/licao-m5-f16/index.html', 3, ['capítulo' + N + 'I', 'capítulo' + N + 'III', 'vol.' + N + 'I', 'pp.' + N + '18–' + J + '19']),
     # A data da fotografia está na tabela dos créditos, atrás do «i» (abre-se para medir).
     ('m5/licao-m5-f17/index.html', 0, ['7' + N + 'de', 'de' + N + '1882']),

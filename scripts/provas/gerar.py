@@ -40,6 +40,10 @@ Transformações gerais, para todas as provas (as duas primeiras são as do pilo
   dos textos «como a prova os indica», que são da transcrição.
 * seccao.json, «nao_partir»: true. O mesmo no que é da secção inteira: a linha «Prova 639, 12.º ano…» e «O que vem a seguir».
 
+15/11/2026 (camada revisao_geral_20261115): mais uma chave, com a mesma regra (sem ela, as páginas saem iguais, byte a byte):
+* seccao.json, «entrada»: a frase de entrada da secção (o parágrafo of-entrada, texto nosso). Sem ela, sai a frase de antes
+  (ENTRADA_ANTES), que as camadas de baixo voltam a gerar.
+
 Antes de escrever, cada grupo passa em scripts/audit_cards.validate_cards (o tipo «item» valida-se como «escolha»), cada
 cartão de fazer tem o seu «g» e a página relida com audit_cards.lesson_cards dá os mesmos cartões.
 
@@ -494,6 +498,15 @@ def seguir_html(provas, sec):
             f'{lista}<p>{sec["seguir"]}</p></section>\n\n')
 
 
+# 15/11/2026 (camada revisao_geral_20261115): a frase de entrada da secção (o parágrafo of-entrada) passa a vir de seccao.json
+# («entrada»), sem marca de género para quem lê («tentas primeiro por ti»). Sem a chave, sai a frase de antes, byte a byte: é a que
+# as camadas de baixo (cuidado_exame_20261112 e exame_provas_oficial_20261112) voltam a gerar a partir dos dados como as deixaram.
+ENTRADA_ANTES = ('Os exames nacionais de Português, grupo a grupo. Lês o texto da prova com a numeração da prova e, a seguir a cada '
+                 'parte, fazes os cartões: o que pede o verbo, que linhas provam, o plano da resposta. A resposta completa escreve-se '
+                 'no caderno, com a grelha oficial à vista, e só depois a comparas com exemplos e com os critérios. Nos itens de '
+                 'escolha, tentas primeiro sozinho e depois vês porquê.')
+
+
 def seccao(provas, contagens):
     sec = json.loads((DADOS / 'seccao.json').read_text('utf-8'))
     ordem = sorted(provas, key=lambda P: (P.ano, P.fase), reverse=True)
@@ -502,7 +515,7 @@ def seccao(provas, contagens):
 <html lang="pt-PT" data-appearance-site="pt"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Provas em cartões: Preparação de exame de Português</title><meta name="description" content="Os exames nacionais de Português (Prova 639) em cartões, grupo a grupo: o texto da prova com a numeração da prova, cada item desmontado em exercícios no ecrã e a resposta completa no caderno, com a grelha oficial à vista."><link rel="preload" href="../../assets/exame/fontes/fraunces-latin-normal.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="../../assets/exame/fontes/ibm-plex-sans-latin-normal.woff2" as="font" type="font/woff2" crossorigin><link rel="stylesheet" href="../../assets/exame/exame.css?v={V["exame.css"]}"><link rel="stylesheet" href="../../assets/appearance.css?v={V["appearance.css"]}"><link rel="stylesheet" href="../../assets/exame/oficina.css?v={V["oficina.css"]}"><link rel="stylesheet" href="../../assets/exame/provas.css?v={V["provas.css"]}"><script src="../../assets/appearance.js?v={V["appearance.js"]}"></script><script defer src="../../assets/exame/provas.js?v={V["provas.js"]}"></script><script defer src="../../assets/projection-launcher.js?v={V["projection-launcher.js"]}" data-site="pt"></script></head>
 <body class="oficina"><a class="skip" href="#provas">Ir para as provas</a><nav class="migalhas" aria-label="Onde estás"><ol><li><a href="../../">Português</a></li><li><a href="../">Preparação de exame</a></li><li><span aria-current="page">Provas em cartões</span></li></ol></nav><header class="site-head of-cabeca"><a class="wordmark" href="../">Português<span>.</span><small>Preparação de exame</small></a><nav aria-label="Navegação da preparação"><a href="../">Sessões</a><a href="../laboratorio/">Laboratório de respostas</a><a href="./" aria-current="page">Provas em cartões</a><a href="../treinos/">Treinos</a></nav></header>
 <main id="provas" tabindex="-1">
-<section class="of-rosto" aria-labelledby="of-titulo"><h1 id="of-titulo">Provas em cartões</h1><p class="of-entrada">Os exames nacionais de Português, grupo a grupo. Lês o texto da prova com a numeração da prova e, a seguir a cada parte, fazes os cartões: o que pede o verbo, que linhas provam, o plano da resposta. A resposta completa escreve-se no caderno, com a grelha oficial à vista, e só depois a comparas com exemplos e com os critérios. Nos itens de escolha, tentas primeiro sozinho e depois vês porquê.</p><p class="of-estatuto-geral">{prender("Prova~639, 12.º~ano", bool(sec.get("nao_partir")))}, com os critérios de classificação</p></section>
+<section class="of-rosto" aria-labelledby="of-titulo"><h1 id="of-titulo">Provas em cartões</h1><p class="of-entrada">{sec.get("entrada", ENTRADA_ANTES)}</p><p class="of-estatuto-geral">{prender("Prova~639, 12.º~ano", bool(sec.get("nao_partir")))}, com os critérios de classificação</p></section>
 
 {blocos}{seguir_html(provas, sec)}<section id="fontes" class="source of-colofao" aria-labelledby="fontes-titulo"><h2 id="fontes-titulo">O que é oficial e o que é nosso</h2><div class="of-colofao-texto"><p><strong>Oficial</strong>: o texto da prova, com a numeração das linhas e as notas, os enunciados, as opções, as chaves da versão indicada e as grelhas dos critérios, tal como estão na prova e nos critérios de classificação. Os cartões que os mostram dizem «da prova» ou «dos critérios».</p><p><strong>Nosso</strong>: os cartões de preparação, as explicações e as respostas de exemplo. Quando damos uma resposta possível, dizemos que é um exemplo e de onde vem. O sítio não corrige o que escreves no caderno: essa correção faz-se com a grelha oficial, por ti ou pelo docente.</p><p>O progresso de cada grupo fica só neste aparelho e viaja com o resto quando guardas o progresso num ficheiro na página inicial.</p></div></section>
 </main>

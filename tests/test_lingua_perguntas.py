@@ -53,10 +53,18 @@ class LinguaDasPerguntas(unittest.TestCase):
   # «antigo» voltou. As provas em cartões mudam pelos dados (scripts/provas/dados/2026-*/grupo-iii.json).
   trocas=[t for t in json.loads(TROCAS.read_text('utf-8')) if t['achado'].startswith('«Qual + nome»')]
   self.assertGreaterEqual(len(trocas),40)
+  # 15/11/2026: a revisão geral (revisao_geral_20261115), por cima de todas, tira da sessão 27 do Exame o vídeo da «Academia X» com as
+  # suas perguntas, uma delas com uma troca desta camada («que ação aplica melhor»): cada «novo» conta-se no ficheiro com ela desfeita
+  # (tests/auditoria_20261028.py, com contagem estrita; nos ficheiros que ela não muda, é o ficheiro da árvore); nenhum «antigo» pode
+  # voltar ao ficheiro da árvore.
+  import sys;sys.path.insert(0,str(ROOT/'tests'))
+  from auditoria_20261028 import undo_revisao_geral_1115
   for t in trocas:
-   s=(ROOT/t['ficheiro']).read_text('utf-8')
+   arvore=(ROOT/t['ficheiro']).read_text('utf-8')
+   s=undo_revisao_geral_1115(t['ficheiro'],arvore)
    self.assertEqual(s.count(t['novo']),t['ocorrencias'],t['ficheiro']+': '+t['novo'])
    self.assertNotIn(t['antigo'],s,t['ficheiro'])
+   self.assertNotIn(t['antigo'],arvore,t['ficheiro'])
   for prova in ('2026-1f','2026-2f'):
    dados=(ROOT/f'scripts/provas/dados/{prova}/grupo-iii.json').read_text('utf-8')
    self.assertIn('Qual das conclusões é «adequada',dados);self.assertNotIn('Qual conclusão',dados)

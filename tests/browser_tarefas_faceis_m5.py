@@ -53,17 +53,22 @@ LIGACOES = {
               (3, '[data-task-theme="B"] .tf-passos a[href="#texto-5"]', '#texto-5', 3), (3, '[data-task-theme="B"] a[href="#dossie"]', '#dossie', 3)],
 }
 # 13/11/2026 (revisão): o Texto 4 da m5-u2 começa pela marca «[2] […]» da lição F11 (mais um parágrafo: 8 em vez de 7).
-# O que cada alvo tem de mostrar: os parágrafos do texto e as linhas do seu vocabulário (ou os cinco factos do dossiê).
+# O que cada alvo tem de mostrar: os parágrafos do texto e as linhas do seu vocabulário (ou os factos do dossiê: cinco na m5-u1 e, desde
+# 15/11/2026, quatro na m5-u2).
 NO_ALVO = {('m5-u1', '#texto-1'): 7 + 13, ('m5-u1', '#texto-2'): 18 + 14, ('m5-u1', '#texto-3'): 3, ('m5-u1', '#dossie'): 5,
            ('m5-u2', '#texto-1'): 2 + 13, ('m5-u2', '#texto-2'): 3, ('m5-u2', '#texto-3'): 1 + 4, ('m5-u2', '#texto-4'): 8 + 6,
-           ('m5-u2', '#texto-5'): 13 + 10, ('m5-u2', '#dossie'): 5}
+           # 15/11/2026: revisão geral (camada revisao_geral_20261115): o dossiê do tema B da m5-u2 fica com quatro factos (sai o de 2025,
+           # cuja única fonte era o vídeo que sai da M5-F15).
+           ('m5-u2', '#texto-5'): 13 + 10, ('m5-u2', '#dossie'): 4}
 # Quantos desdobráveis tem cada enunciado: os exemplos (4), o material do tema A, o do tema B e a pergunta opcional.
 DESDOBRAVEIS = {'m5-u1': 7, 'm5-u2': 7}
 EXEMPLOS = {'m5-u1': 4, 'm5-u2': 4}
 # Os textos de cada enunciado, pela ordem da página: (parágrafos, comprido).
 TEXTOS = {'m5-u1': [(7, True), (18, True), (3, False)], 'm5-u2': [(2, True), (3, False), (1, False), (8, True), (13, True)]}
 # O que sai aberto em papel dentro de cada tema: os parágrafos e os factos do dossiê.
-SO_TEMA = {'m5-u1': [3, 5], 'm5-u2': [8, 5 + 13]}
+# 15/11/2026: revisão geral (camada revisao_geral_20261115): no tema B da m5-u2, o dossiê fica com quatro factos (sai o de 2025, cuja
+# única fonte era o vídeo que sai da M5-F15): 4 + 13 em vez de 5 + 13.
+SO_TEMA = {'m5-u1': [3, 5], 'm5-u2': [8, 4 + 13]}
 # 13/11/2026 (revisão): os títulos de textos dentro de um tema (m5-u1: o Texto 3, no tema A; m5-u2: o Texto 4 e o Texto 5), e a sonda
 # que confere que um <span> novo nesses títulos não fica com a caixa da letra do tema.
 TITULOS_EM_TEMA = {'m5-u1': 1, 'm5-u2': 2}

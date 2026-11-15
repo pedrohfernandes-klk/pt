@@ -57,6 +57,14 @@ INDICES = tuple(f'm{n}/index.html' for n in range(1, 10))
 def base(rel):
     """O texto da página sem esta camada (desfeita pelo manifesto, da última troca para a primeira)."""
     texto = (ROOT / rel).read_bytes().decode('utf-8')
+    # 15/11/2026: antes de tudo, a revisão geral (camada revisao_geral_20261115, a mais recente), que muda no Atlas as versões do
+    # atlas-editorial.js e do atlas-explorar.js, com contagem estrita.
+    revisao = ROOT / 'tests/fixtures/revisao-geral-edits-20261115.json'
+    if revisao.is_file():
+        for edit in reversed(json.loads(revisao.read_text('utf-8'))['files'].get(rel, {}).get('edits', [])):
+            if texto.count(edit['new']) != edit['occurrences']:
+                raise SystemExit(f'{rel}: a revisão geral já não confere ({edit["location"]})')
+            texto = texto.replace(edit['new'], edit['old'])
     # 12/11/2026: antes de tudo, a decisão 152 no Exame e nas páginas transversais (camada cuidado_exame_20261112), a mais recente,
     # com contagem estrita.
     if CUIDADO_EXAME.is_file():
