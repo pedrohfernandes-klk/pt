@@ -402,7 +402,8 @@ jobs:
           # 15/11/2026: «duas linhas finais» em vez de «síntese integrada» (sintese_duas_linhas_20261115) é a camada mais recente:
           # confere-se aqui sem nada por cima, com o seu teste (que lê o main de partida com git: este trabalho tem fetch-depth: 0).
           python -m unittest discover -s tests -p 'test_sintese_duas_linhas.py' -v
-          python scripts/aplicar_trocas.py scripts/sintese_duas_linhas_20261115.json --manifesto tests/fixtures/sintese-duas-linhas-edits-20261115.json --verificar
+          # 15/11/2026 (revisão geral): a fila final passou a partilhar o portefólio do M8 com esta camada; desfaz-se antes, com a mesma exigência.
+          python scripts/aplicar_trocas.py scripts/sintese_duas_linhas_20261115.json --manifesto tests/fixtures/sintese-duas-linhas-edits-20261115.json --verificar --desfazer-antes tests/fixtures/fila-final-edits-20261115.json
           # 15/11/2026: a fila final (fila_final_20261115) é a camada mais recente: confere-se aqui sem nada por cima, com o seu teste (que
           # lê o main de partida com git: este trabalho tem fetch-depth: 0).
           python -m unittest discover -s tests -p 'test_fila_final_20261115.py' -v

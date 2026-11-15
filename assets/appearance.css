@@ -168,10 +168,9 @@ body:has(>[data-appearance-floating])::after{content:"";display:block;height:68p
  /* Entrada suave por opacidade e translate. */
  @keyframes epi-entrada{from{opacity:0;translate:0 6px}to{opacity:1;translate:0 0}}
  :is(.missoes>.missao,.cz-row):not([data-cz-motion-region] *,.epi-ampliar *){animation:epi-entrada .24s ease-out backwards}
- /* Abrir e fechar dos desdobráveis sem saltos. As dobras que o ecrã mostra sempre abertas, mesmo sem o atributo open (.cz-fold dos
-    índices, .info-i, .tf-so-tema), ficam de fora: nunca ficam transparentes (revisão geral, 15/11/2026). */
- details:not([data-cz-motion-region] *,.epi-ampliar *,.cz-fold,.info-i,.tf-so-tema)::details-content{opacity:0;transition:opacity .2s ease-out,content-visibility .2s ease-out allow-discrete}
- details[open]:not([data-cz-motion-region] *,.epi-ampliar *,.cz-fold,.info-i,.tf-so-tema)::details-content{opacity:1}
+ /* Desdobráveis: o resumo ganha um realce curto; o conteúdo abre logo, sem transição. Revisão geral, 15/11/2026: a opacidade e o
+    content-visibility em transição no ::details-content escondiam texto a meio da abertura e deixavam em branco as dobras que o ecrã
+    mostra sempre abertas. */
  details:not([data-cz-motion-region] *,.epi-ampliar *)>summary{transition:background-color .15s ease-out}
 }
 @media print{
