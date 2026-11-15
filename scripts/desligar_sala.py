@@ -868,6 +868,14 @@ def main():
                 # com dois acertos (o guia da tarefa do M2 e o índice do M7), a camada mais recente, por cima das do M8.
                 # 15/11/2026: e, antes de todas, a tarefa m4-u2 com «Tema A ou B», «tudo junto» no M4 e o acerto do M8
                 # (tarefa_m4u2_tema_b_20261115), a camada mais recente, por cima das do M9.
+                # 15/11/2026: e, antes de todas, «duas linhas finais» em vez de «síntese integrada» nos índices, nos portefólios, nos
+                # mapas e no guia da tarefa do M1, do M3, do M5, do M6, do M7 e do M8 (sintese_duas_linhas_20261115), a camada mais
+                # recente, por cima da tarefa m4-u2.
+                sintese_duas_linhas = ROOT / 'tests/fixtures/sintese-duas-linhas-edits-20261115.json'
+                for edit in reversed(json.loads(sintese_duas_linhas.read_text('utf-8'))['files'].get(rel, {}).get('edits', [])):
+                    if conferencia.count(edit['new']) != edit['occurrences']:
+                        raise ManifestoDesatualizado(f'{rel}: duas linhas finais em vez de síntese integrada não confere')
+                    conferencia = conferencia.replace(edit['new'], edit['old'])
                 tarefa_m4u2 = ROOT / 'tests/fixtures/tarefa-m4u2-tema-b-edits-20261115.json'
                 for edit in reversed(json.loads(tarefa_m4u2.read_text('utf-8'))['files'].get(rel, {}).get('edits', [])):
                     if conferencia.count(edit['new']) != edit['occurrences']:

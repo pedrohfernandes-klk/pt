@@ -146,6 +146,15 @@ def ler(rel):
     # os dados das grelhas: desfaz-se primeiro, com contagem estrita, quando o ficheiro a traz (a «árvore» desta camada é o
     # ficheiro como ela o deixou).
     texto = (ROOT / rel).read_bytes().decode('utf-8')
+    # 15/11/2026: e por cima de todas fica a das duas linhas finais em vez da síntese integrada (sintese_duas_linhas_20261115), que muda
+    # os índices, os portefólios, os mapas e o guia da tarefa do M1, do M3, do M5, do M6, do M7 e do M8: desfaz-se antes de todas, com
+    # contagem estrita.
+    sintese = ROOT / 'tests/fixtures/sintese-duas-linhas-edits-20261115.json'
+    if sintese.is_file():
+        for e in reversed(json.loads(sintese.read_text('utf-8'))['files'].get(rel, {}).get('edits', [])):
+            if texto.count(e['new']) != e['occurrences']:
+                raise SystemExit(f'{rel}: as duas linhas finais em vez da síntese integrada já não conferem ({e["location"]})')
+            texto = texto.replace(e['new'], e['old'])
     # 15/11/2026: e por cima da do M9 fica a da tarefa m4-u2 com «Tema A ou B» e o acerto do M8 (tarefa_m4u2_tema_b_20261115), que também
     # muda os dados das grelhas: desfaz-se antes da do M9, com contagem estrita.
     m4u2 = ROOT / 'tests/fixtures/tarefa-m4u2-tema-b-edits-20261115.json'

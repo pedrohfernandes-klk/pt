@@ -7,6 +7,10 @@ import sys
 
 ROOT=Path(__file__).resolve().parents[1]
 LAYERS=[
+ # 15/11/2026: «duas linhas finais» em vez de «síntese integrada» (decisão do docente) nos índices e nos portefólios do M1, do M3, do
+ # M5, do M6, do M7 e do M8, com os mapas do módulo e o guia da tarefa do M1, camada mais recente, por cima da tarefa m4-u2 com «Tema A
+ # ou B» (que passa a ser a segunda), com a qual não partilha ficheiros.
+ ('sintese_duas_linhas_20261115','sintese-duas-linhas-edits-20261115'),
  # 15/11/2026: a tarefa m4-u2 no molde «mais fácil de fazer», com «Tema A ou B» (decisão do docente), e «tudo junto» no M4 (o
  # aquecimento, o guia da tarefa, o índice, o mapa e o portefólio do M4), com o acerto do M8 (os quatro poemas da m8-u1 estão no
  # manual: o enunciado, a grelha e o guia), camada mais recente, por cima das tarefas do M9 mais fáceis de fazer (que passa a ser a
