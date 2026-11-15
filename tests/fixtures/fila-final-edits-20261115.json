@@ -1,0 +1,84 @@
+{
+ "base_commit": "4f4135bf679176c6c8e4abda543837632aad7325",
+ "_nota": "15/11/2026: fila final: o alvo das sessões do Exame é meta da sessão e não limite do exame, a síntese e a exposição ficam ditas como treino, a Informação-Prova de 2027 ainda não está disponível (assets/exame/app.js e sessoes.json), e os números 5 e 10 dos versos de «Descalça vai para a fonte» (m3/licao-m3-f05) passam para o quinto e o décimo verso. Gerado por scripts/aplicar_trocas.py a partir de scripts/fila_final_20261115.json (que scripts/fila_final_20261115.py escreve): não se edita à mão. Camada no topo da pilha, por cima de sintese_duas_linhas_20261115: desfaz-se antes de todas. Os 20 rótulos «Item N da prova», «Onipotente» e as perguntas de Teresa (M5-F08) ficam de fora.",
+ "files": {
+  "assets/exame/app.js": {
+   "base_sha256_lf": "281f2ba99b4e7326ab4252830997eb2375c8c57d17eb5ace806d7ab7838df53f",
+   "after_sha256_lf": "be4c758bf7030aba43ff3b50e27590b3792ee2673a62e7240598afc377ff0386",
+   "edits": [
+    {
+     "location": "Alvo da sessão («Meta da sessão», não limite do exame)",
+     "old": "minutos · '+e(session.writing.target)+'</p>",
+     "new": "minutos. Meta da sessão: '+e(session.writing.target)+'. Não é um limite do exame.</p>",
+     "occurrences": 1
+    },
+    {
+     "location": "Alvo da sessão na versão para imprimir («Meta da sessão»)",
+     "old": "<p>'+e(s.writing.target)+'</p>",
+     "new": "<p>Meta da sessão: '+e(s.writing.target)+'.</p>",
+     "occurrences": 1
+    },
+    {
+     "location": "Programa e fontes: a Informação-Prova de 2027 ainda não está disponível",
+     "old": "indicadas pela DGE.",
+     "new": "indicadas pela DGE. A Informação-Prova de 2027 ainda não está disponível.",
+     "occurrences": 1
+    }
+   ]
+  },
+  "assets/exame/sessoes.json": {
+   "base_sha256_lf": "558eaead4ee11d4ae4331203a3dc3696c0036abb712598f21d551c50895eaf27",
+   "after_sha256_lf": "11e3da88d7811cf8a76bcca9d1b0fa03d2acf9ae548319968a78bc9839b6fd30",
+   "edits": [
+    {
+     "location": "Sessão 20, critério da síntese: meta de treino",
+     "old": "Respeitei as 80",
+     "new": "Cheguei à meta de treino de 80",
+     "occurrences": 1
+    },
+    {
+     "location": "Sessão 20, prompt: a síntese é um treino",
+     "old": "Não acrescentes opiniões nem exemplos teus.",
+     "new": "Não acrescentes opiniões nem exemplos teus. Isto é um treino de síntese, não um item do exame.",
+     "occurrences": 1
+    },
+    {
+     "location": "Sessão 23, prompt: a extensão é meta da sessão, não regra do exame",
+     "old": "Define um eixo, explica-o e apoia-o em exemplos pertinentes.",
+     "new": "Define um eixo, explica-o e apoia-o em exemplos pertinentes. A extensão é a meta desta sessão, não uma regra do exame: no exame, a breve exposição do item I.7 não tem limite de palavras e pede uma só obra.",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m3/licao-m3-f05/index.html": {
+   "base_sha256_lf": "95d2839ba5d29a4616bb598965bd9c254f4612d68c96bb397d48532de4a9d3ec",
+   "after_sha256_lf": "0b45cc4fb016a6383dfea6e009c2c66c9ef6fd01f0b4c31caedb0a2a02a2076b",
+   "edits": [
+    {
+     "location": "M3-F05, «Descalça vai para a fonte»: o 5 sai do rótulo «Voltas»",
+     "old": "data-l=\\\"0-5\\\"><span class=\\\"n\\\">5</span>Voltas</span>",
+     "new": "data-l=\\\"0-5\\\"><span class=\\\"n\\\"></span>Voltas</span>",
+     "occurrences": 1
+    },
+    {
+     "location": "M3-F05, «Descalça vai para a fonte»: o 5 está no quinto verso, «O testo nas mãos de prata»",
+     "old": "data-l=\\\"0-7\\\"><span class=\\\"n\\\"></span>O <b",
+     "new": "data-l=\\\"0-7\\\"><span class=\\\"n\\\">5</span>O <b",
+     "occurrences": 1
+    },
+    {
+     "location": "M3-F05, «Descalça vai para a fonte»: o 10 sai do oitavo verso, «Traz a vasquinha de cote»",
+     "old": "data-l=\\\"0-10\\\"><span class=\\\"n\\\">10</span>Traz a",
+     "new": "data-l=\\\"0-10\\\"><span class=\\\"n\\\"></span>Traz a",
+     "occurrences": 1
+    },
+    {
+     "location": "M3-F05, «Descalça vai para a fonte»: o 10 está no décimo e último verso, «Vai formosa, e não segura»",
+     "old": "data-l=\\\"0-12\\\"><span class=\\\"n\\\"></span>Vai formosa, e não segura.</span>",
+     "new": "data-l=\\\"0-12\\\"><span class=\\\"n\\\">10</span>Vai formosa, e não segura.</span>",
+     "occurrences": 1
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,82 @@
+[
+ {
+  "ficheiro": "assets/exame/app.js",
+  "local": "Alvo da sessão («Meta da sessão», não limite do exame)",
+  "antigo": "minutos · '+e(session.writing.target)+'</p>",
+  "novo": "minutos. Meta da sessão: '+e(session.writing.target)+'. Não é um limite do exame.</p>",
+  "ocorrencias": 1,
+  "achado": "15/11/2026: fila final: o alvo de cada sessão do Exame é a meta da sessão e não um limite do exame; a Informação-Prova de 2026 é a referência e a de 2027 ainda não está disponível."
+ },
+ {
+  "ficheiro": "assets/exame/app.js",
+  "local": "Alvo da sessão na versão para imprimir («Meta da sessão»)",
+  "antigo": "<p>'+e(s.writing.target)+'</p>",
+  "novo": "<p>Meta da sessão: '+e(s.writing.target)+'.</p>",
+  "ocorrencias": 1,
+  "achado": "15/11/2026: fila final: o alvo de cada sessão do Exame é a meta da sessão e não um limite do exame; a Informação-Prova de 2026 é a referência e a de 2027 ainda não está disponível."
+ },
+ {
+  "ficheiro": "assets/exame/app.js",
+  "local": "Programa e fontes: a Informação-Prova de 2027 ainda não está disponível",
+  "antigo": "indicadas pela DGE.",
+  "novo": "indicadas pela DGE. A Informação-Prova de 2027 ainda não está disponível.",
+  "ocorrencias": 1,
+  "achado": "15/11/2026: fila final: o alvo de cada sessão do Exame é a meta da sessão e não um limite do exame; a Informação-Prova de 2026 é a referência e a de 2027 ainda não está disponível."
+ },
+ {
+  "ficheiro": "assets/exame/sessoes.json",
+  "local": "Sessão 20, critério da síntese: meta de treino",
+  "antigo": "Respeitei as 80",
+  "novo": "Cheguei à meta de treino de 80",
+  "ocorrencias": 1,
+  "achado": "15/11/2026: fila final: a síntese de 80 a 100 palavras e a exposição de 200 a 350 palavras são metas de treino da sessão, não regras nem itens do exame (nenhuma das provas de 2026 tem item de síntese; o item I.7 não tem limite de palavras e pede uma só obra)."
+ },
+ {
+  "ficheiro": "assets/exame/sessoes.json",
+  "local": "Sessão 20, prompt: a síntese é um treino",
+  "antigo": "Não acrescentes opiniões nem exemplos teus.",
+  "novo": "Não acrescentes opiniões nem exemplos teus. Isto é um treino de síntese, não um item do exame.",
+  "ocorrencias": 1,
+  "achado": "15/11/2026: fila final: a síntese de 80 a 100 palavras e a exposição de 200 a 350 palavras são metas de treino da sessão, não regras nem itens do exame (nenhuma das provas de 2026 tem item de síntese; o item I.7 não tem limite de palavras e pede uma só obra)."
+ },
+ {
+  "ficheiro": "assets/exame/sessoes.json",
+  "local": "Sessão 23, prompt: a extensão é meta da sessão, não regra do exame",
+  "antigo": "Define um eixo, explica-o e apoia-o em exemplos pertinentes.",
+  "novo": "Define um eixo, explica-o e apoia-o em exemplos pertinentes. A extensão é a meta desta sessão, não uma regra do exame: no exame, a breve exposição do item I.7 não tem limite de palavras e pede uma só obra.",
+  "ocorrencias": 1,
+  "achado": "15/11/2026: fila final: a síntese de 80 a 100 palavras e a exposição de 200 a 350 palavras são metas de treino da sessão, não regras nem itens do exame (nenhuma das provas de 2026 tem item de síntese; o item I.7 não tem limite de palavras e pede uma só obra)."
+ },
+ {
+  "ficheiro": "m3/licao-m3-f05/index.html",
+  "local": "M3-F05, «Descalça vai para a fonte»: o 5 sai do rótulo «Voltas»",
+  "antigo": "data-l=\\\"0-5\\\"><span class=\\\"n\\\">5</span>Voltas</span>",
+  "novo": "data-l=\\\"0-5\\\"><span class=\\\"n\\\"></span>Voltas</span>",
+  "ocorrencias": 1,
+  "achado": "15/11/2026: fila final: os versos de «Descalça vai para a fonte» contam-se de 5 em 5 sem contar os rótulos «Mote» e «Voltas» (3 versos de mote e 2 voltas de 7, 10 versos); os números 5 e 10 estavam duas linhas fora do sítio."
+ },
+ {
+  "ficheiro": "m3/licao-m3-f05/index.html",
+  "local": "M3-F05, «Descalça vai para a fonte»: o 5 está no quinto verso, «O testo nas mãos de prata»",
+  "antigo": "data-l=\\\"0-7\\\"><span class=\\\"n\\\"></span>O <b",
+  "novo": "data-l=\\\"0-7\\\"><span class=\\\"n\\\">5</span>O <b",
+  "ocorrencias": 1,
+  "achado": "15/11/2026: fila final: os versos de «Descalça vai para a fonte» contam-se de 5 em 5 sem contar os rótulos «Mote» e «Voltas» (3 versos de mote e 2 voltas de 7, 10 versos); os números 5 e 10 estavam duas linhas fora do sítio."
+ },
+ {
+  "ficheiro": "m3/licao-m3-f05/index.html",
+  "local": "M3-F05, «Descalça vai para a fonte»: o 10 sai do oitavo verso, «Traz a vasquinha de cote»",
+  "antigo": "data-l=\\\"0-10\\\"><span class=\\\"n\\\">10</span>Traz a",
+  "novo": "data-l=\\\"0-10\\\"><span class=\\\"n\\\"></span>Traz a",
+  "ocorrencias": 1,
+  "achado": "15/11/2026: fila final: os versos de «Descalça vai para a fonte» contam-se de 5 em 5 sem contar os rótulos «Mote» e «Voltas» (3 versos de mote e 2 voltas de 7, 10 versos); os números 5 e 10 estavam duas linhas fora do sítio."
+ },
+ {
+  "ficheiro": "m3/licao-m3-f05/index.html",
+  "local": "M3-F05, «Descalça vai para a fonte»: o 10 está no décimo e último verso, «Vai formosa, e não segura»",
+  "antigo": "data-l=\\\"0-12\\\"><span class=\\\"n\\\"></span>Vai formosa, e não segura.</span>",
+  "novo": "data-l=\\\"0-12\\\"><span class=\\\"n\\\">10</span>Vai formosa, e não segura.</span>",
+  "ocorrencias": 1,
+  "achado": "15/11/2026: fila final: os versos de «Descalça vai para a fonte» contam-se de 5 em 5 sem contar os rótulos «Mote» e «Voltas» (3 versos de mote e 2 voltas de 7, 10 versos); os números 5 e 10 estavam duas linhas fora do sítio."
+ }
+]

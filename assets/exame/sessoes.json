@@ -3910,7 +3910,7 @@
       "writing": {
         "minutes": 15,
         "title": "Construir uma resposta fundamentada",
-        "prompt": "Escreve uma síntese de 80 a 100 palavras do texto de apoio, preservando as ideias centrais e a relação entre elas. Não acrescentes opiniões nem exemplos teus.",
+        "prompt": "Escreve uma síntese de 80 a 100 palavras do texto de apoio, preservando as ideias centrais e a relação entre elas. Não acrescentes opiniões nem exemplos teus. Isto é um treino de síntese, não um item do exame.",
         "instructions": [
           "Identifica o tema, as ideias centrais e a relação entre elas.",
           "Reformula sem copiar sequências extensas e sem acrescentar opiniões ou exemplos.",
@@ -3920,7 +3920,7 @@
         "criteria": [
           "Preservei as ideias centrais e a relação entre elas.",
           "Reformulei sem acrescentar comentários pessoais.",
-          "Respeitei as 80–⁠100 palavras.",
+          "Cheguei à meta de treino de 80–⁠100 palavras.",
           "Revi coesão, construção frásica, pontuação e ortografia."
         ]
       },
@@ -4247,7 +4247,7 @@
       "writing": {
         "minutes": 20,
         "title": "Escrever, reler, melhorar",
-        "prompt": "Escreve um texto expositivo de 200 a 350 palavras sobre a relação entre escolhas individuais e condicionamentos sociais em duas obras estudadas. Define um eixo, explica-o e apoia-o em exemplos pertinentes.",
+        "prompt": "Escreve um texto expositivo de 200 a 350 palavras sobre a relação entre escolhas individuais e condicionamentos sociais em duas obras estudadas. Define um eixo, explica-o e apoia-o em exemplos pertinentes. A extensão é a meta desta sessão, não uma regra do exame: no exame, a breve exposição do item I.7 não tem limite de palavras e pede uma só obra.",
         "instructions": [
           "Lê o pedido e define o eixo da resposta antes de escrever.",
           "Seleciona duas referências ou exemplos e explica o que demonstram.",

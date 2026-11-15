@@ -7,6 +7,10 @@ import sys
 
 ROOT=Path(__file__).resolve().parents[1]
 LAYERS=[
+ # 15/11/2026: a fila final (o alvo das sessões do Exame é meta da sessão e não limite do exame, a síntese e a exposição ditas como
+ # treino, a Informação-Prova de 2027 ainda não está disponível, e a numeração dos versos de «Descalça vai para a fonte» na M3-F05),
+ # camada mais recente, por cima de «duas linhas finais» (que passa a ser a segunda), com a qual não partilha ficheiros.
+ ('fila_final_20261115','fila-final-edits-20261115'),
  # 15/11/2026: «duas linhas finais» em vez de «síntese integrada» (decisão do docente) nos índices e nos portefólios do M1, do M3, do
  # M5, do M6, do M7 e do M8, com os mapas do módulo e o guia da tarefa do M1, camada mais recente, por cima da tarefa m4-u2 com «Tema A
  # ou B» (que passa a ser a segunda), com a qual não partilha ficheiros.

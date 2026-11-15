@@ -397,7 +397,27 @@ _TAREFA_M4U2_1115 = json.loads((ROOT/'tests/fixtures/tarefa-m4u2-tema-b-edits-20
 # antes de todas, com contagem estrita.
 _SINTESE_DUAS_LINHAS_1115 = json.loads((ROOT/'tests/fixtures/sintese-duas-linhas-edits-20261115.json').read_text('utf-8'))['files']
 
+# 15/11/2026: a fila final (assets/exame/app.js, assets/exame/sessoes.json e a lição M3-F05), camada mais recente, por cima das duas linhas
+# finais: desfaz-se antes de todas, com contagem estrita.
+_FILA_FINAL_1115 = json.loads((ROOT/'tests/fixtures/fila-final-edits-20261115.json').read_text('utf-8'))['files']
+
+def undo_fila_final_1115(path, text):
+    # Pela mesma regra das outras camadas: esta camada está no topo, por isso o ficheiro da árvore é exatamente a página como ela a deixou
+    # (o hash «after» do manifesto, que scripts/verificar_camadas.py e tests/test_fila_final_20261115.py conferem). Só esse texto se
+    # desfaz, com contagem estrita; quem já a desfez (ou entrega um texto histórico) recebe o texto como o deu.
+    entrada = _FILA_FINAL_1115.get(_relative(path))
+    if not entrada or hashlib.sha256(text.replace('\r\n', '\n').encode('utf-8')).hexdigest() != entrada['after_sha256_lf']:
+        return text
+    for edit in reversed(entrada['edits']):
+        if text.count(edit['new']) != edit['occurrences']:
+            raise AssertionError(f"A fila final não confere: {path}: {edit['location']}")
+        text = text.replace(edit['new'], edit['old'])
+    return text
+
+
 def undo_sintese_duas_linhas_1115(path, text):
+    # 15/11/2026: primeiro a fila final, que está por cima de todas.
+    text = undo_fila_final_1115(path, text)
     # Pela mesma regra das camadas das tarefas mais fáceis de fazer: esta camada está no topo, por isso o ficheiro da árvore é
     # exatamente a página como ela a deixou (o hash «after» do manifesto, que scripts/verificar_camadas.py e
     # tests/test_sintese_duas_linhas.py conferem). Só esse texto se desfaz, com contagem estrita; quem já a desfez (ou entrega um texto
