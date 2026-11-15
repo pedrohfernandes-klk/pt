@@ -25,10 +25,11 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'scripts'))
 sys.path.insert(0, str(ROOT / 'tests'))
 import verificar_camadas  # noqa: E402
-from auditoria_20261028 import undo_sintese_duas_linhas_1115  # noqa: E402
+from auditoria_20261028 import undo_fila_final_1115, undo_sintese_duas_linhas_1115  # noqa: E402
 
 CAMADA_REL = 'scripts/sintese_duas_linhas_20261115.json'
 MANIFESTO_REL = 'tests/fixtures/sintese-duas-linhas-edits-20261115.json'
+FILA_REL = 'tests/fixtures/fila-final-edits-20261115.json'
 M4U2_REL = 'tests/fixtures/tarefa-m4u2-tema-b-edits-20261115.json'
 MAIN = '4f4135bf679176c6c8e4abda543837632aad7325'
 
@@ -38,7 +39,9 @@ MAPAS = [f'm{m}/mapa-do-modulo-m{m}/index.html' for m in (1, 3, 5, 6, 7)]
 GUIAS = ['m1/guia-da-tarefa-m1/index.html']
 FICHEIROS = INDICES + PORTEFOLIOS + MAPAS + GUIAS
 # As páginas do âmbito: as quatro de cada módulo da decisão, e as do M4, que a camada anterior já mudou.
-AMBITO = [f'm{m}/{p}' for m in (1, 3, 4, 5, 6, 7, 8)
+# 15/11/2026: o M2 também (a fila final, fila_final_20261115, fez o resto da decisão do docente: o M2 passa a dizer «duas linhas finais»
+# nos quatro ficheiros do âmbito); nenhuma página do M2 diz «síntese integrada».
+AMBITO = [f'm{m}/{p}' for m in (1, 2, 3, 4, 5, 6, 7, 8)
           for p in ('index.html', f'portefolio-do-modulo-m{m}/index.html', f'mapa-do-modulo-m{m}/index.html',
                     f'guia-da-tarefa-m{m}/index.html')]
 ANTIGAS = ('síntese integrada', 'síntese simples integrada', 'integra a síntese', 'síntese integra', 'Síntese integra')
@@ -46,6 +49,11 @@ ANTIGAS = ('síntese integrada', 'síntese simples integrada', 'integra a sínte
 
 def ler(rel):
     return (ROOT / rel).read_bytes().decode('utf-8')
+
+
+def ler_sem_fila(rel):
+    # 15/11/2026: a fila final fica por cima desta camada (partilham o portefólio do M8): a página desta camada é a da árvore com ela desfeita.
+    return undo_fila_final_1115(rel, ler(rel))
 
 
 def sha_lf(texto):
@@ -100,7 +108,10 @@ class SinteseDuasLinhas(unittest.TestCase):
             self.assertIn('a síntese oral ou no caderno pede duas passagens', ler(f'm{m}/mapa-do-modulo-m{m}/index.html'))
         for rel in INDICES:
             self.assertIn('"synthesis":"integrated"', ler(rel), rel)
-        self.assertEqual(ler('m8/portefolio-do-modulo-m8/index.html').count('sem síntese adicional obrigatória.'), 2)
+        # 15/11/2026: «sem síntese adicional obrigatória» (portefólio do M8) passou a «sem outra escrita obrigatória» na fila final, que está por
+        # cima (revisão geral antes de publicar, 15/11/2026: «sem linhas a mais obrigatórias» lia-se mal).
+        self.assertEqual(ler_sem_fila('m8/portefolio-do-modulo-m8/index.html').count('sem síntese adicional obrigatória.'), 2)
+        self.assertEqual(ler('m8/portefolio-do-modulo-m8/index.html').count('sem outra escrita obrigatória.'), 2)
 
     def test_camada_fechada(self):
         self.assertEqual(sorted({t['ficheiro'] for t in TROCAS}), sorted(FICHEIROS))
@@ -117,18 +128,18 @@ class SinteseDuasLinhas(unittest.TestCase):
             mine = [(t['antigo'], t['novo']) for t in TROCAS if t['ficheiro'] == rel]
             self.assertEqual([(e['old'], e['new']) for e in MANIFESTO['files'][rel]['edits']], mine, rel)
             self.assertTrue(all(e['occurrences'] == 1 for e in MANIFESTO['files'][rel]['edits']))
-            self.assertEqual(sha_lf(ler(rel)), MANIFESTO['files'][rel]['after_sha256_lf'], rel)
+            self.assertEqual(sha_lf(ler_sem_fila(rel)), MANIFESTO['files'][rel]['after_sha256_lf'], rel)
 
     def test_reversivel_ate_ao_main_letra_a_letra(self):
         for rel in FICHEIROS:
-            texto = ler(rel)
+            texto = ler_sem_fila(rel)
             for e in reversed(MANIFESTO['files'][rel]['edits']):
                 self.assertEqual(texto.count(e['new']), e['occurrences'], rel)
                 texto = texto.replace(e['new'], e['old'])
             main = subprocess.run(['git', 'show', f'{MAIN}:{rel}'], cwd=ROOT, capture_output=True, check=True).stdout.decode('utf-8')
             self.assertEqual(texto, main, rel)
             self.assertEqual(sha_lf(main), MANIFESTO['files'][rel]['base_sha256_lf'], rel)
-            self.assertEqual(undo_sintese_duas_linhas_1115(rel, ler(rel)), main, rel)
+            self.assertEqual(undo_sintese_duas_linhas_1115(rel, ler(rel)), main, rel)  # desfaz a fila final primeiro
             self.assertEqual(undo_sintese_duas_linhas_1115(rel, main), main, rel)
             for velho in ('síntese integrada', 'integra a síntese', 'síntese integra', 'Síntese de duas linhas', 'Recupera a síntese',
                           'síntese de duas linhas', 'as sínteses já'):
@@ -145,11 +156,12 @@ class SinteseDuasLinhas(unittest.TestCase):
         self.assertEqual(todas, TROCAS)
 
     def test_aplicar_trocas_verifica_esta_e_a_anterior(self):
-        r = subprocess.run([sys.executable, 'scripts/aplicar_trocas.py', CAMADA_REL, '--manifesto', MANIFESTO_REL, '--verificar'],
-                           cwd=ROOT, capture_output=True, text=True)
+        # 15/11/2026: a fila final fica por cima (partilha o portefólio do M8 e o do M4): desfaz-se primeiro, nas duas verificações.
+        r = subprocess.run([sys.executable, 'scripts/aplicar_trocas.py', CAMADA_REL, '--manifesto', MANIFESTO_REL, '--verificar',
+                            '--desfazer-antes', FILA_REL], cwd=ROOT, capture_output=True, text=True)
         self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
         r = subprocess.run([sys.executable, 'scripts/aplicar_trocas.py', 'scripts/tarefa_m4u2_tema_b_20261115.json', '--manifesto', M4U2_REL,
-                            '--verificar', '--desfazer-antes', MANIFESTO_REL], cwd=ROOT, capture_output=True, text=True)
+                            '--verificar', '--desfazer-antes', FILA_REL, '--desfazer-antes', MANIFESTO_REL], cwd=ROOT, capture_output=True, text=True)
         self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
 
     def test_no_topo_da_pilha(self):

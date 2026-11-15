@@ -72,6 +72,8 @@ M4U2_DE_CIMA = json.loads((ROOT / 'tests/fixtures/tarefa-m4u2-tema-b-edits-20261
 # e do M8: os ficheiros que ela muda leem-se como estavam por baixo dela (a auditoria desfá-la primeiro, com contagem estrita). A
 # exigência é a mesma.
 SINTESE_DE_CIMA = json.loads((ROOT / 'tests/fixtures/sintese-duas-linhas-edits-20261115.json').read_text('utf-8'))['files']
+# 15/11/2026: e a fila final (fila_final_20261115), por cima de todas (muda, entre outras, o guia da tarefa do M2 e os portefólios do M4 e do M8): também se leem os ficheiros dela como estavam por baixo, com contagem estrita.
+FILA_DE_CIMA = json.loads((ROOT / 'tests/fixtures/fila-final-edits-20261115.json').read_text('utf-8'))['files']
 
 CAMADA_REL = 'scripts/tarefas_faceis_m1_20261113.json'
 MANIFESTO_REL = 'tests/fixtures/tarefas-faceis-m1-edits-20261113.json'
@@ -145,7 +147,7 @@ def ler(rel):
     # 14/11/2026: e os da camada do M9, que fica por cima de todas (desfeita primeiro pela auditoria).
     # 15/11/2026: por cima das tarefas do M9 mais fáceis de fazer fica a tarefa m4-u2 com «Tema A ou B» e o acerto do M8 (tarefa_m4u2_tema_b_20261115), a camada mais recente: desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
     # 15/11/2026: e os ficheiros da camada das duas linhas finais (sintese_duas_linhas_20261115), por cima de todas, com a mesma exigência.
-    if rel in M7_DE_CIMA or rel in M8_DE_CIMA or rel in M9_DE_CIMA or rel in M4U2_DE_CIMA or rel in SINTESE_DE_CIMA:  # 13/11/2026: como estava por baixo da camada do M7
+    if rel in M7_DE_CIMA or rel in M8_DE_CIMA or rel in M9_DE_CIMA or rel in M4U2_DE_CIMA or rel in SINTESE_DE_CIMA or rel in FILA_DE_CIMA:  # 13/11/2026: como estava por baixo da camada do M7
         texto = undo_tarefas_faceis_m7_1113(rel, texto)
     # 13/11/2026: os dados das grelhas levam agora por cima a camada das tarefas do M5 (duas chaves novas nas grelhas do M5). Este
     # teste lê-os como a camada do M1 os deixou: com a do M5 desfeita pela auditoria, com contagem estrita. Nos outros onze ficheiros
@@ -1147,7 +1149,7 @@ class TarefasFaceisM1(unittest.TestCase):
                     # 14/11/2026: e os da camada do M9, que fica por cima de todas (desfeita primeiro pela auditoria).
                     # 15/11/2026: por cima das tarefas do M9 mais fáceis de fazer fica a tarefa m4-u2 com «Tema A ou B» e o acerto do M8 (tarefa_m4u2_tema_b_20261115), a camada mais recente: desfaz-se primeiro, com a mesma exigência, sem nada pelo meio.
                     # 15/11/2026: e os ficheiros da camada das duas linhas finais (sintese_duas_linhas_20261115), por cima de todas, com a mesma exigência.
-                    if rel in M7_DE_CIMA or rel in M8_DE_CIMA or rel in M9_DE_CIMA or rel in M4U2_DE_CIMA or rel in SINTESE_DE_CIMA:
+                    if rel in M7_DE_CIMA or rel in M8_DE_CIMA or rel in M9_DE_CIMA or rel in M4U2_DE_CIMA or rel in SINTESE_DE_CIMA or rel in FILA_DE_CIMA:
                         de_cima += 1
                         conteudo = undo_tarefas_faceis_m7_1113(rel, conteudo.decode('utf-8')).encode('utf-8')
                     # 13/11/2026: e os ficheiros que a camada do M6 muda (as páginas e os dados da m6-u1 e da m6-u2), com essa camada

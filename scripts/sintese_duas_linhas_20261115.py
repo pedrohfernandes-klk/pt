@@ -28,7 +28,7 @@ tests/fixtures/sintese-duas-linhas-edits-20261115.json:
       --manifesto tests/fixtures/sintese-duas-linhas-edits-20261115.json \\
       --base-commit 4f4135bf679176c6c8e4abda543837632aad7325 --nota "…"
 
-Fica no topo da pilha (scripts/verificar_camadas.py, LAYERS[0]), por cima da tarefa m4-u2 com «Tema A ou B»
+Fica na segunda posição da pilha (scripts/verificar_camadas.py), por baixo da fila final (fila_final_20261115, que partilha com ela o portefólio do M8 e a desfaz primeiro), por cima da tarefa m4-u2 com «Tema A ou B»
 (tarefa_m4u2_tema_b_20261115), com a qual não partilha ficheiros. Partilha ficheiros com camadas mais antigas (as tarefas mais fáceis
 de fazer do M1, do M3, do M5, do M6, do M7 e do M8, a decisão 152, a autonomia 154, o índice da decisão 148, as camadas do cuidado e
 as do índice, do mapa, do guia e do portefólio): todas a desfazem primeiro.
@@ -64,7 +64,16 @@ ACHADO = ('15/11/2026: Decisão do docente: nos índices e nos portefólios do M
 
 
 def ler(rel):
-    return (ROOT / rel).read_bytes().decode('utf-8')
+    texto = (ROOT / rel).read_bytes().decode('utf-8')
+    # 15/11/2026: por cima desta camada fica a fila final (fila_final_20261115), que muda o portefólio do M8 (partilha-o com esta camada):
+    # desfaz-se primeiro, com contagem estrita, quando o ficheiro a traz.
+    fila_final = ROOT / 'tests/fixtures/fila-final-edits-20261115.json'
+    if fila_final.is_file():
+        for e in reversed(json.loads(fila_final.read_text('utf-8'))['files'].get(rel, {}).get('edits', [])):
+            if texto.count(e['new']) != e['occurrences']:
+                raise SystemExit(f'{rel}: a fila final já não confere ({e["location"]})')
+            texto = texto.replace(e['new'], e['old'])
+    return texto
 
 
 DO_COMMIT = False  # com --base-do-commit: a base lê-se do commit de base

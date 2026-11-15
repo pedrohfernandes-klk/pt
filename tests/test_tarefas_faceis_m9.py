@@ -271,12 +271,14 @@ M4U2_DE_CIMA = json.loads((ROOT / M4U2F).read_text('utf-8'))['files']
 # e do M8: os ficheiros que ela muda leem-se como estavam por baixo dela (a auditoria desfá-la primeiro, com contagem estrita). A
 # exigência é a mesma.
 SINTESE_DE_CIMA = json.loads((ROOT / 'tests/fixtures/sintese-duas-linhas-edits-20261115.json').read_text('utf-8'))['files']
+# 15/11/2026: e a fila final (fila_final_20261115), por cima de todas (muda, entre outras, o guia da tarefa do M2 e os portefólios do M4 e do M8): também se leem os ficheiros dela como estavam por baixo, com contagem estrita.
+FILA_DE_CIMA = json.loads((ROOT / 'tests/fixtures/fila-final-edits-20261115.json').read_text('utf-8'))['files']
 DADOS_M4U2 = 'docs/pedagogia/tarefas-escolha/m4-u2.json'  # 15/11/2026: os dados novos da m4-u2 (não são de nenhuma camada)
 
 
 def ler(rel):
     texto = (ROOT / rel).read_bytes().decode('utf-8')
-    if rel in M4U2_DE_CIMA or rel in SINTESE_DE_CIMA:  # 15/11/2026: e os da camada das duas linhas finais, por cima de todas
+    if rel in M4U2_DE_CIMA or rel in SINTESE_DE_CIMA or rel in FILA_DE_CIMA:  # 15/11/2026: e os da camada das duas linhas finais, por cima de todas
         texto = undo_tarefa_m4u2_1115(rel, texto)
     return texto
 
@@ -1036,7 +1038,7 @@ class TarefasFaceisM9(unittest.TestCase):
             with self.subTest(igual_ao_main=rel):
                 # 15/11/2026: os ficheiros que a camada da tarefa m4-u2 muda comparam-se com ela desfeita (ler), com contagem estrita.
                 # 15/11/2026: e os ficheiros da camada das duas linhas finais (sintese_duas_linhas_20261115), por cima de todas, com a mesma exigência.
-                self.assertEqual(ler(rel).encode('utf-8') if rel in M4U2_DE_CIMA or rel in SINTESE_DE_CIMA else (ROOT / rel).read_bytes(), subprocess.run(['git', 'show', f'{BASE_COMMIT}:{rel}'], cwd=ROOT, capture_output=True).stdout)
+                self.assertEqual(ler(rel).encode('utf-8') if rel in M4U2_DE_CIMA or rel in SINTESE_DE_CIMA or rel in FILA_DE_CIMA else (ROOT / rel).read_bytes(), subprocess.run(['git', 'show', f'{BASE_COMMIT}:{rel}'], cwd=ROOT, capture_output=True).stdout)
                 iguais += 1
         # Nestas pastas, a camada muda nove ficheiros; todos os outros são os do main, byte a byte (as outras onze tarefas de escolha,
         # as duas individuais do M7, as suas grelhas, correções e aquecimentos, e os aquecimentos do M9).

@@ -1,6 +1,6 @@
 {
  "base_commit": "4f4135bf679176c6c8e4abda543837632aad7325",
- "_nota": "15/11/2026: fila final: o alvo das sessões do Exame é meta da sessão e não limite do exame, a síntese e a exposição ficam ditas como treino, a Informação-Prova de 2027 ainda não está disponível (assets/exame/app.js e sessoes.json), e os números 5 e 10 dos versos de «Descalça vai para a fonte» (m3/licao-m3-f05) passam para o quinto e o décimo verso. Gerado por scripts/aplicar_trocas.py a partir de scripts/fila_final_20261115.json (que scripts/fila_final_20261115.py escreve): não se edita à mão. Camada no topo da pilha, por cima de sintese_duas_linhas_20261115: desfaz-se antes de todas. Os 20 rótulos «Item N da prova», «Onipotente» e as perguntas de Teresa (M5-F08) ficam de fora.",
+ "_nota": "15/11/2026: fila final: o alvo das sessões do Exame é meta da sessão e não limite do exame, a síntese e a exposição ficam ditas como treino, a Informação-Prova de 2027 ainda não está disponível (assets/exame/app.js e sessoes.json), e os números 5 e 10 dos versos de «Descalça vai para a fonte» (m3/licao-m3-f05) passam para o quinto e o décimo verso. Gerado por scripts/aplicar_trocas.py a partir de scripts/fila_final_20261115.json (que scripts/fila_final_20261115.py escreve): não se edita à mão. Também o resto da decisão do docente de 15/11/2026, «síntese integrada» → «duas linhas finais» (índice, portefólio, mapa e guia da tarefa do M2; todos do M1 e do M7; lição M1-F11; planos das aulas 06 e 14 do M1 e 08, 15 e 18 do M4; portefólios do M4 e do M8). Camada no topo da pilha, por cima de sintese_duas_linhas_20261115: desfaz-se antes de todas. Os 20 rótulos «Item N da prova», «Onipotente» e as perguntas de Teresa (M5-F08) ficam de fora. Revisão geral antes de publicar (15/11/2026): «sozinho» sai dos planos das aulas 06 do M1 e 15 do M4, a última «síntese» da lição M1-F11 passa a «duas linhas finais» e, no portefólio do M8, fica «sem outra escrita obrigatória».",
  "files": {
   "assets/exame/app.js": {
    "base_sha256_lf": "281f2ba99b4e7326ab4252830997eb2375c8c57d17eb5ace806d7ab7838df53f",
@@ -76,6 +76,258 @@
      "location": "M3-F05, «Descalça vai para a fonte»: o 10 está no décimo e último verso, «Vai formosa, e não segura»",
      "old": "data-l=\\\"0-12\\\"><span class=\\\"n\\\"></span>Vai formosa, e não segura.</span>",
      "new": "data-l=\\\"0-12\\\"><span class=\\\"n\\\">10</span>Vai formosa, e não segura.</span>",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m2/index.html": {
+   "base_sha256_lf": "b51d86ab27432a507493fbd11e58d796f96a443c3c8c8cec6270518ad776244c",
+   "after_sha256_lf": "96e93c405303ead5b3ee5f36bd5d016183378057116f6436b6b045da8650e892",
+   "edits": [
+    {
+     "location": "Índice do M2: «produção em papel, duas linhas finais e fotografias no»",
+     "old": " produção em papel, uma síntese simples integrada e fotografias no",
+     "new": " produção em papel, duas linhas finais e fotografias no",
+     "occurrences": 1
+    },
+    {
+     "location": "Índice do M2: «as duas linhas finais.»",
+     "old": " a síntese integrada.</span></nav>",
+     "new": " as duas linhas finais.</span></nav>",
+     "occurrences": 1
+    },
+    {
+     "location": "Índice do M2: «Tarefa da Unidade 1: aula de 90 minutos com consulta, trabalho em papel, duas linhas finais»",
+     "old": "Duas escolhas, que liberdade?</span><span class=\"f\">Aula de 90 minutos com consulta: aquecimento em cartões no início, trabalho em papel, síntese integrada e fotografias",
+     "new": "Duas escolhas, que liberdade?</span><span class=\"f\">Aula de 90 minutos com consulta: aquecimento em cartões no início, trabalho em papel, duas linhas finais e fotografias",
+     "occurrences": 1
+    },
+    {
+     "location": "Índice do M2: «Tarefa da Unidade 2: aula de 90 minutos com consulta, trabalho em papel, duas linhas finais»",
+     "old": "Dois anúncios de casamento</span><span class=\"f\">Aula de 90 minutos com consulta: aquecimento em cartões no início, trabalho em papel, síntese integrada e fotografias",
+     "new": "Dois anúncios de casamento</span><span class=\"f\">Aula de 90 minutos com consulta: aquecimento em cartões no início, trabalho em papel, duas linhas finais e fotografias",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m2/portefolio-do-modulo-m2/index.html": {
+   "base_sha256_lf": "0a0b34cab62119c385fb4b08997eeab41b907294f60220ddf8ee4e6c5e890da1",
+   "after_sha256_lf": "b72013cbb3e618b1776554b1c5bbbb8cf91b1092e82ca905b6c175baaea66016",
+   "edits": [
+    {
+     "location": "Portefólio do módulo M2: «que integra as duas linhas finais;»",
+     "old": "que integra a síntese; as retomas",
+     "new": "que integra as duas linhas finais; as retomas",
+     "occurrences": 1
+    },
+    {
+     "location": "Portefólio do módulo M2: «as duas linhas finais já entregues»",
+     "old": "trabalhos e as sínteses já entregues",
+     "new": "trabalhos e as duas linhas finais já entregues",
+     "occurrences": 1
+    },
+    {
+     "location": "Portefólio do módulo M2: «As duas linhas finais, no papel da aula de tarefa» (U1)",
+     "old": "liberdade? Síntese de duas linhas no papel da aula de tarefa, fotografada com o trabalho. Recupera essa entrega, sem fazer outra síntese.</td></tr><tr><td data-th=\"Nome do ficheiro\"><code>M2_U1_o-que-aprendi</code></td><td data-th=\"O que é\">Recupera a síntese ",
+     "new": "liberdade? As duas linhas finais, no papel da aula de tarefa, fotografadas com o trabalho. Recupera essa entrega, sem escrever outras.</td></tr><tr><td data-th=\"Nome do ficheiro\"><code>M2_U1_o-que-aprendi</code></td><td data-th=\"O que é\">Recupera as duas linhas finais ",
+     "occurrences": 1
+    },
+    {
+     "location": "Portefólio do módulo M2: «As duas linhas finais, no papel da aula de tarefa» (U2)",
+     "old": "representação? Síntese de duas linhas no papel da aula de tarefa, fotografada com o trabalho. Recupera essa entrega, sem fazer outra síntese.</td></tr><tr><td data-th=\"Nome do ficheiro\"><code>M2_U2_o-que-aprendi</code></td><td data-th=\"O que é\">Recupera a síntese ",
+     "new": "representação? As duas linhas finais, no papel da aula de tarefa, fotografadas com o trabalho. Recupera essa entrega, sem escrever outras.</td></tr><tr><td data-th=\"Nome do ficheiro\"><code>M2_U2_o-que-aprendi</code></td><td data-th=\"O que é\">Recupera as duas linhas finais ",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m2/mapa-do-modulo-m2/index.html": {
+   "base_sha256_lf": "7932f08188f699f8a06432ff6c90803d8561d6a4dfb8e6fae8f4465e18e4ced5",
+   "after_sha256_lf": "79119f4a886515efe732a9c3460997e7d1a09551d5fd304e935f91e81f7da96e",
+   "edits": [
+    {
+     "location": "Mapa do módulo M2: «que integra as duas linhas finais;»",
+     "old": "que integra a síntese; as retomas",
+     "new": "que integra as duas linhas finais; as retomas",
+     "occurrences": 1
+    },
+    {
+     "location": "Mapa do módulo M2: «Aula de tarefa · 90 min · duas linhas finais» (unidade 1)",
+     "old": "#tarefa-unidade-1\">Aula de tarefa · 90 min · síntese integrada<",
+     "new": "#tarefa-unidade-1\">Aula de tarefa · 90 min · duas linhas finais<",
+     "occurrences": 1
+    },
+    {
+     "location": "Mapa do módulo M2: «Aula de tarefa · 90 min · duas linhas finais» (unidade 2)",
+     "old": "#tarefa-unidade-2\">Aula de tarefa · 90 min · síntese integrada<",
+     "new": "#tarefa-unidade-2\">Aula de tarefa · 90 min · duas linhas finais<",
+     "occurrences": 1
+    },
+    {
+     "location": "Mapa do módulo M2: «As duas linhas finais ficam no papel do trabalho»",
+     "old": " A síntese tem duas linhas, no papel do trabalho: uma aprendizagem e uma escolha do trabalho que a mostra. Entrega-a ",
+     "new": " As duas linhas finais ficam no papel do trabalho: uma aprendizagem e uma escolha do trabalho que a mostra. Entrega-as ",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m2/guia-da-tarefa-m2/index.html": {
+   "base_sha256_lf": "c5a5fb9edc3c8d95c3c04a592fa63abca667dcb1464908f06102bbec421db12a",
+   "after_sha256_lf": "2c6cc6419b0e8207484b8f42a7d4380e3fd448a2b2411e9b03e4e7db43703890",
+   "edits": [
+    {
+     "location": "Guia da tarefa do M2: «com duas linhas finais;»",
+     "old": "de 90 minutos, com síntese integrada; as retomas",
+     "new": "de 90 minutos, com duas linhas finais; as retomas",
+     "occurrences": 1
+    },
+    {
+     "location": "Guia da tarefa do M2: «escreves duas linhas finais»",
+     "old": "fazes uma síntese simples no trabalho",
+     "new": "escreves duas linhas finais no trabalho",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m1/todos/index.html": {
+   "base_sha256_lf": "3d026219d3e77ee4728f246ee05c14b9d382871a4821da8bcc411af0de4bec06",
+   "after_sha256_lf": "f695ea3afcf267cb28847737669f0a0f671ce567f4a5bd3e9dad9e12507e3e52",
+   "edits": [
+    {
+     "location": "Todos do M1: «com consulta e duas linhas finais»",
+     "old": "com consulta e síntese simples integrada.",
+     "new": "com consulta e duas linhas finais.",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m7/todos/index.html": {
+   "base_sha256_lf": "669309856fc02b72d4301bb4b0222b720aa8836a82b8ed6e7451078427add4d4",
+   "after_sha256_lf": "a70888f8fe41ea22561c4f41a4fd2768cef5e916a0a87c446f019aa3916e8c1d",
+   "edits": [
+    {
+     "location": "Todos do M7: «com consulta e duas linhas finais»",
+     "old": "com consulta e síntese simples integrada.",
+     "new": "com consulta e duas linhas finais.",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m1/licao-m1-f11/index.html": {
+   "base_sha256_lf": "9c01407fdc96f661812ab262567497fb7cfd73abe925c06d846fb230f04901c8",
+   "after_sha256_lf": "6681e860da364c712035ca24204bf755fc73fb8a2f9aa3b49eeb2f098cf8a898",
+   "edits": [
+    {
+     "location": "M1-F11: «As duas linhas finais ficam na Tarefa da Unidade 2.»",
+     "old": "A síntese integra a Tarefa da Unidade 2.",
+     "new": "As duas linhas finais ficam na Tarefa da Unidade 2.",
+     "occurrences": 1
+    },
+    {
+     "location": "M1-F11, retorno de um cartão: «Serve às duas linhas finais da unidade 2»",
+     "old": "Serve à síntese da unidade 2, não a este plano.",
+     "new": "Serve às duas linhas finais da unidade 2, não a este plano.",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m1/aulas/aula-06/index.html": {
+   "base_sha256_lf": "3b153cbcfca757f7690e4895e8071ed73851ca8906ca025ef9b21e3bfff5df5a",
+   "after_sha256_lf": "4017935888bc1d611f9ec8ab2fd152dfe0d3450d013443f36003f5e60030a741",
+   "edits": [
+    {
+     "location": "Plano da aula 06 do M1: «O fecho e as duas linhas finais fazem parte da aula de tarefa.»",
+     "old": "O fecho e a síntese integram a aula de tarefa.",
+     "new": "O fecho e as duas linhas finais fazem parte da aula de tarefa.",
+     "occurrences": 1
+    },
+    {
+     "location": "Plano da aula 06 do M1, «Para casa»: «refazer o exercício no telemóvel, sem ajuda», sem marca de género",
+     "old": "refazer o exercício sozinho, no telemóvel, ao teu ritmo",
+     "new": "refazer o exercício no telemóvel, sem ajuda, ao teu ritmo",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m1/aulas/aula-14/index.html": {
+   "base_sha256_lf": "70f3f96069437cf8e6b42e8a6ded6a6f33441c2b133726e06975eeb565be32d4",
+   "after_sha256_lf": "3254635c76f45b5d704bb9f6b24f71eccb05232049b641baae980d5b421aea19",
+   "edits": [
+    {
+     "location": "Plano da aula 14 do M1: «O fecho e as duas linhas finais fazem parte da aula de tarefa.»",
+     "old": "O fecho e a síntese integram a aula de tarefa.",
+     "new": "O fecho e as duas linhas finais fazem parte da aula de tarefa.",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/aulas/aula-08/index.html": {
+   "base_sha256_lf": "7bfb61a1e6e1ff8fbc49e1179f0cb14befd8b2ca1d80e2717ac3f9a5808336ae",
+   "after_sha256_lf": "0b8a8c5cca0dc63a23c603bb7f5c6891edd56c27914b21ff063cd5e355ac8657",
+   "edits": [
+    {
+     "location": "Plano da aula 08 do M4: «O fecho e as duas linhas finais fazem parte da aula de tarefa.»",
+     "old": "O fecho e a síntese integram a aula de tarefa.",
+     "new": "O fecho e as duas linhas finais fazem parte da aula de tarefa.",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/aulas/aula-15/index.html": {
+   "base_sha256_lf": "9adb3327d29fbd1f31e81697d998faa4561295ed9e393367c591e178d897c2a8",
+   "after_sha256_lf": "458f322bec2be076ea03b03c1d75e2229cf375cf0670c08764c440a5f26de545",
+   "edits": [
+    {
+     "location": "Plano da aula 15 do M4: «O fecho e as duas linhas finais fazem parte da aula de tarefa.»",
+     "old": "O fecho e a síntese integram a aula de tarefa.",
+     "new": "O fecho e as duas linhas finais fazem parte da aula de tarefa.",
+     "occurrences": 1
+    },
+    {
+     "location": "Plano da aula 15 do M4, «Para casa»: «refazer o exercício no telemóvel, sem ajuda», sem marca de género",
+     "old": "refazer o exercício sozinho, no telemóvel, ao teu ritmo",
+     "new": "refazer o exercício no telemóvel, sem ajuda, ao teu ritmo",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/aulas/aula-18/index.html": {
+   "base_sha256_lf": "751a99ae23784b50305c48ed7ee767855fd946f4a3353d54918cb924de7844cb",
+   "after_sha256_lf": "0d31652686c1aa9a05eb3dbc7ecab153e27663f16d39640b865df02bfdcc789e",
+   "edits": [
+    {
+     "location": "Plano da aula 18 do M4: «O fecho e as duas linhas finais fazem parte da aula de tarefa.»",
+     "old": "O fecho e a síntese integram a aula de tarefa.",
+     "new": "O fecho e as duas linhas finais fazem parte da aula de tarefa.",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m4/portefolio-do-modulo-m4/index.html": {
+   "base_sha256_lf": "8df20f3ec11d29260c7981fa203d1569ff5067b9c600dae85cabbbef61b545ae",
+   "after_sha256_lf": "5a9e9412c55ec7bb3912634e078c0547d146e340801f0819fc5be618f039ee93",
+   "edits": [
+    {
+     "location": "Portefólio do módulo M4: «já fotografadas; não escreves outras»",
+     "old": "já fotografada; não escreves outra.",
+     "new": "já fotografadas; não escreves outras.",
+     "occurrences": 1
+    }
+   ]
+  },
+  "m8/portefolio-do-modulo-m8/index.html": {
+   "base_sha256_lf": "b9580299838c72ed4d9dc99e06f55af5c1e269094326597b7a44ef6ae8075b14",
+   "after_sha256_lf": "10fdb366ec49fe108c2e7069c38e3107db15bb8c38824dcd74b99d0c7d70b244",
+   "edits": [
+    {
+     "location": "Portefólio do módulo M8: «sem outra escrita obrigatória» (U1)",
+     "old": "U1_<wbr>retoma</code></td><td>Retomas formativas da leitura, sem síntese adicional obrigatória",
+     "new": "U1_<wbr>retoma</code></td><td>Retomas formativas da leitura, sem outra escrita obrigatória",
+     "occurrences": 1
+    },
+    {
+     "location": "Portefólio do módulo M8: «sem outra escrita obrigatória» (U2)",
+     "old": "U2_<wbr>retoma</code></td><td>Retomas formativas da leitura, sem síntese adicional obrigatória",
+     "new": "U2_<wbr>retoma</code></td><td>Retomas formativas da leitura, sem outra escrita obrigatória",
      "occurrences": 1
     }
    ]

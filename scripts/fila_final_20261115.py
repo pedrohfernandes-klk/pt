@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 """15/11/2026: a fila final do pedido: o exame diz que o alvo das sessões é meta da sessão e não limite do exame, a síntese e a
 exposição ficam ditas como treino, a referência de 2026 diz que a de 2027 ainda não está disponível, e a lição M3-F05 conta os versos
-do poema (de 5 em 5) sem contar os rótulos «Mote» e «Voltas». O «Item N da prova» não muda (ver abaixo).
+do poema (de 5 em 5) sem contar os rótulos «Mote» e «Voltas». O «Item N da prova» não muda (ver abaixo). Acrescenta o resto da decisão do docente de 15/11/2026,
+«síntese integrada» → «duas linhas finais» (ver o fim desta nota).
 
-Ficheiros (3):
+Ficheiros (3 do Exame e da M3-F05, mais os 14 da decisão «duas linhas finais», no fim desta nota):
 - assets/exame/app.js: a linha de alvo da sessão («Meta da sessão: ….», sem a frase «Não é um limite do exame.», que é falsa nas sessões 24 e 25, cujo alvo de 200 a 350 palavras é o limite do Grupo III; nas sessões 20 e 23 a ressalva está no prompt), a versão para imprimir («Meta da
   sessão: …») e a página «Programa e fontes» («A Informação-Prova de 2027 ainda não está disponível.»; os dados, com
   referenceYear 2026, já diziam a verdade e não mudam);
@@ -25,7 +26,16 @@ Fica de fora (e porquê):
   duas.
 - O exame/provas/, o scripts/provas/dados/, os aquecimentos do exame e os textos das sessões 24 e 25 (já verdadeiros).
 
-Nenhum destes três ficheiros sai de um gerador nem de dados que o reescrevam: assets/exame/sessoes.json e app.js são os ficheiros
+Duas linhas finais (15/11/2026, decisão do docente), o que a camada sintese_duas_linhas_20261115 deixou por fazer, com as mesmas frases:
+- o M2: o índice, o portefólio, o mapa e o guia da tarefa (16 trocas, iguais às do M1);
+- m1/todos e m7/todos («com consulta e duas linhas finais»), m1/licao-m1-f11 («As duas linhas finais ficam na Tarefa da Unidade 2.»);
+- os planos m1/aulas/aula-06 e aula-14 e m4/aulas/aula-08, aula-15 e aula-18 («O fecho e as duas linhas finais fazem parte da aula de
+  tarefa.»);
+- o portefólio do M4 («já fotografadas; não escreves outras») e o do M8 («sem outra escrita obrigatória», nas duas retomas).
+Ficam as perguntas de escolha das lições, «síntese oral ou no caderno» e a chave «synthesis». O portefólio do M8 e o do M4 partilham
+ficheiro com sintese_duas_linhas_20261115 e com tarefa_m4u2_tema_b_20261115: estas desfazem esta camada primeiro.
+
+Nenhum destes ficheiros sai de um gerador nem de dados que o reescrevam: assets/exame/sessoes.json e app.js são os ficheiros
 editados pelas camadas do Exame, e a lição M3-F05 é página escrita. A camada é literal e fica no topo.
 
 Constrói scripts/fila_final_20261115.json, a camada literal, que se aplica com scripts/aplicar_trocas.py; o manifesto fica em
@@ -99,7 +109,98 @@ TROCAS = [
      'data-l=\\"0-12\\"><span class=\\"n\\"></span>Vai formosa, e não segura.</span>',
      'data-l=\\"0-12\\"><span class=\\"n\\">10</span>Vai formosa, e não segura.</span>', ACHADO_F05),
 ]
+# 15/11/2026: o resto da decisão do docente «síntese integrada» → «duas linhas finais» (a camada sintese_duas_linhas_20261115 fez o M1, o
+# M3, o M5, o M6, o M7 e o M8; o M2 e as peças soltas ficaram por fazer). As frases seguem as dessa camada.
+ACHADO_SINTESE = ('15/11/2026: Decisão do docente: «síntese integrada» e «síntese simples integrada» passam a «duas linhas finais», como no '
+                  'M1; o mesmo vocabulário nas peças soltas (todos, lição M1-F11, planos das aulas de tarefa e portefólios do M4 e do M8). '
+                  'Só a peça da aula de tarefa: as perguntas de escolha das lições, «síntese oral ou no caderno» e a chave «synthesis» ficam.')
+M2I, M2P, M2M, M2G = ('m2/index.html', 'm2/portefolio-do-modulo-m2/index.html', 'm2/mapa-do-modulo-m2/index.html',
+                      'm2/guia-da-tarefa-m2/index.html')
+M4P, M8P = 'm4/portefolio-do-modulo-m4/index.html', 'm8/portefolio-do-modulo-m8/index.html'
+_FECHO_V = 'O fecho e a síntese integram a aula de tarefa.'
+_FECHO_N = 'O fecho e as duas linhas finais fazem parte da aula de tarefa.'
+_POR_PERGUNTA = ('Síntese de duas linhas no papel da aula de tarefa, fotografada com o trabalho. Recupera essa entrega, sem fazer outra '
+                 'síntese.</td></tr><tr><td data-th="Nome do ficheiro"><code>M2_U{n}_o-que-aprendi</code></td><td data-th="O que é">'
+                 'Recupera a síntese ')
+_POR_PERGUNTA_N = ('As duas linhas finais, no papel da aula de tarefa, fotografadas com o trabalho. Recupera essa entrega, sem escrever '
+                   'outras.</td></tr><tr><td data-th="Nome do ficheiro"><code>M2_U{n}_o-que-aprendi</code></td><td data-th="O que é">'
+                   'Recupera as duas linhas finais ')
+TROCAS += [
+    (M2I, 'Índice do M2: «produção em papel, duas linhas finais e fotografias no»',
+     ' produção em papel, uma síntese simples integrada e fotografias no', ' produção em papel, duas linhas finais e fotografias no',
+     ACHADO_SINTESE),
+    (M2I, 'Índice do M2: «as duas linhas finais.»', ' a síntese integrada.</span></nav>', ' as duas linhas finais.</span></nav>',
+     ACHADO_SINTESE),
+    (M2I, 'Índice do M2: «Tarefa da Unidade 1: aula de 90 minutos com consulta, trabalho em papel, duas linhas finais»',
+     'Duas escolhas, que liberdade?</span><span class="f">Aula de 90\u00a0minutos com consulta: aquecimento em cartões no início, '
+     'trabalho em papel, síntese integrada e fotografias',
+     'Duas escolhas, que liberdade?</span><span class="f">Aula de 90\u00a0minutos com consulta: aquecimento em cartões no início, '
+     'trabalho em papel, duas linhas finais e fotografias', ACHADO_SINTESE),
+    (M2I, 'Índice do M2: «Tarefa da Unidade 2: aula de 90 minutos com consulta, trabalho em papel, duas linhas finais»',
+     'Dois anúncios de casamento</span><span class="f">Aula de 90\u00a0minutos com consulta: aquecimento em cartões no início, '
+     'trabalho em papel, síntese integrada e fotografias',
+     'Dois anúncios de casamento</span><span class="f">Aula de 90\u00a0minutos com consulta: aquecimento em cartões no início, '
+     'trabalho em papel, duas linhas finais e fotografias', ACHADO_SINTESE),
+    (M2P, 'Portefólio do módulo M2: «que integra as duas linhas finais;»', 'que integra a síntese; as retomas',
+     'que integra as duas linhas finais; as retomas', ACHADO_SINTESE),
+    (M2P, 'Portefólio do módulo M2: «as duas linhas finais já entregues»', 'trabalhos e as sínteses já entregues',
+     'trabalhos e as duas linhas finais já entregues', ACHADO_SINTESE),
+    (M2P, 'Portefólio do módulo M2: «As duas linhas finais, no papel da aula de tarefa» (U1)',
+     'liberdade? ' + _POR_PERGUNTA.format(n=1), 'liberdade? ' + _POR_PERGUNTA_N.format(n=1), ACHADO_SINTESE),
+    (M2P, 'Portefólio do módulo M2: «As duas linhas finais, no papel da aula de tarefa» (U2)',
+     'representação? ' + _POR_PERGUNTA.format(n=2), 'representação? ' + _POR_PERGUNTA_N.format(n=2), ACHADO_SINTESE),
+    (M2M, 'Mapa do módulo M2: «que integra as duas linhas finais;»', 'que integra a síntese; as retomas',
+     'que integra as duas linhas finais; as retomas', ACHADO_SINTESE),
+    (M2M, 'Mapa do módulo M2: «Aula de tarefa · 90 min · duas linhas finais» (unidade 1)',
+     '#tarefa-unidade-1">Aula de tarefa · 90\u00a0min · síntese integrada<', '#tarefa-unidade-1">Aula de tarefa · 90\u00a0min · duas linhas finais<',
+     ACHADO_SINTESE),
+    (M2M, 'Mapa do módulo M2: «Aula de tarefa · 90 min · duas linhas finais» (unidade 2)',
+     '#tarefa-unidade-2">Aula de tarefa · 90\u00a0min · síntese integrada<', '#tarefa-unidade-2">Aula de tarefa · 90\u00a0min · duas linhas finais<',
+     ACHADO_SINTESE),
+    (M2M, 'Mapa do módulo M2: «As duas linhas finais ficam no papel do trabalho»',
+     ' A síntese tem duas linhas, no papel do trabalho: uma aprendizagem e uma escolha do trabalho que a mostra. Entrega-a ',
+     ' As duas linhas finais ficam no papel do trabalho: uma aprendizagem e uma escolha do trabalho que a mostra. Entrega-as ',
+     ACHADO_SINTESE),
+    (M2G, 'Guia da tarefa do M2: «com duas linhas finais;»', 'de 90\u00a0minutos, com síntese integrada; as retomas',
+     'de 90\u00a0minutos, com duas linhas finais; as retomas', ACHADO_SINTESE),
+    (M2G, 'Guia da tarefa do M2: «escreves duas linhas finais»', 'fazes uma síntese simples no trabalho',
+     'escreves duas linhas finais no trabalho', ACHADO_SINTESE),
+]
+for _rel in ('m1/todos/index.html', 'm7/todos/index.html'):
+    TROCAS.append((_rel, f'Todos do M{_rel[1]}: «com consulta e duas linhas finais»', 'com consulta e síntese simples integrada.',
+                   'com consulta e duas linhas finais.', ACHADO_SINTESE))
+TROCAS += [
+    ('m1/licao-m1-f11/index.html', 'M1-F11: «As duas linhas finais ficam na Tarefa da Unidade 2.»',
+     'A síntese integra a Tarefa da Unidade 2.', 'As duas linhas finais ficam na Tarefa da Unidade 2.', ACHADO_SINTESE),
+]
+for _rel in ('m1/aulas/aula-06', 'm1/aulas/aula-14', 'm4/aulas/aula-08', 'm4/aulas/aula-15', 'm4/aulas/aula-18'):
+    TROCAS.append((f'{_rel}/index.html', f'Plano da aula {_rel[-2:]} do M{_rel[1]}: «O fecho e as duas linhas finais fazem parte da aula de tarefa.»',
+                   _FECHO_V, _FECHO_N, ACHADO_SINTESE))
+TROCAS += [
+    (M4P, 'Portefólio do módulo M4: «já fotografadas; não escreves outras»', 'já fotografada; não escreves outra.',
+     'já fotografadas; não escreves outras.', ACHADO_SINTESE),
+    (M8P, 'Portefólio do módulo M8: «sem outra escrita obrigatória» (U1)',
+     'U1_<wbr>retoma</code></td><td>Retomas formativas da leitura, sem síntese adicional obrigatória',
+     'U1_<wbr>retoma</code></td><td>Retomas formativas da leitura, sem outra escrita obrigatória', ACHADO_SINTESE),
+    (M8P, 'Portefólio do módulo M8: «sem outra escrita obrigatória» (U2)',
+     'U2_<wbr>retoma</code></td><td>Retomas formativas da leitura, sem síntese adicional obrigatória',
+     'U2_<wbr>retoma</code></td><td>Retomas formativas da leitura, sem outra escrita obrigatória', ACHADO_SINTESE),
+]
+ACHADO_REVISAO = ('15/11/2026: fila final: revisão geral antes de publicar: «sozinho» marca o género de quem lê e sai do texto dirigido ao aluno; '
+                  'a última «síntese» da lição M1-F11 passa a «duas linhas finais», como no resto da lição; no portefólio do M8, '
+                  '«sem linhas a mais obrigatórias» lia-se mal e passa a «sem outra escrita obrigatória».')
+TROCAS += [
+    ('m1/aulas/aula-06/index.html', 'Plano da aula 06 do M1, «Para casa»: «refazer o exercício no telemóvel, sem ajuda», sem marca de género',
+     'refazer o exercício sozinho, no telemóvel, ao teu ritmo', 'refazer o exercício no telemóvel, sem ajuda, ao teu ritmo', ACHADO_REVISAO),
+    ('m4/aulas/aula-15/index.html', 'Plano da aula 15 do M4, «Para casa»: «refazer o exercício no telemóvel, sem ajuda», sem marca de género',
+     'refazer o exercício sozinho, no telemóvel, ao teu ritmo', 'refazer o exercício no telemóvel, sem ajuda, ao teu ritmo', ACHADO_REVISAO),
+    ('m1/licao-m1-f11/index.html', 'M1-F11, retorno de um cartão: «Serve às duas linhas finais da unidade 2»',
+     'Serve à síntese da unidade 2, não a este plano.', 'Serve às duas linhas finais da unidade 2, não a este plano.', ACHADO_REVISAO),
+]
 FICHEIROS = [APP, SESSOES, F05]
+for _t in TROCAS:
+    if _t[0] not in FICHEIROS:
+        FICHEIROS.append(_t[0])
 
 
 def trocas():
