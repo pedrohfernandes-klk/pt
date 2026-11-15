@@ -171,6 +171,9 @@ on:
       - 'm4/guia-da-tarefa-m4/**'
       - 'm4/mapa-do-modulo-m4/**'
       - 'm4/portefolio-do-modulo-m4/**'
+      # 15/11/2026 (revisão): a lição F20 e o plano da aula 11 deixam de ligar a cena do incêndio à opção «Se não foste ao teatro».
+      - 'm4/licao-m4-f20/**'
+      - 'm4/aulas/aula-11/**'
       - 'tarefas/m8-u1/**'
       - 'docs/pedagogia/tarefas-escolha/m8-u1.json'
       - 'm8/guia-da-tarefa-m8/**'

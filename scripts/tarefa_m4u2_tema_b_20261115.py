@@ -37,7 +37,7 @@ partilha com as camadas das tarefas do M8, do M7, do M6, do M5, do M1 e do M3. P
 decisão 152 no M4 e no M8, os aquecimentos do M4, a autonomia 154, o índice da decisão 148 e as camadas do índice, do mapa, do guia e
 do portefólio): todas a desfazem primeiro.
 
-Ficheiros (12):
+Ficheiros (14):
 - os dados: docs/pedagogia/aquecimentos/m4-u2.json (no aquecimento, «no teu texto» onde dizia «na tua apreciação», duas vezes; o
   cartão «Para levar» serve os dois temas e perde a frase da alternativa de leitura; as falas novas da tarefa entram nas
   «reservadas», que nenhum cartão pode usar), docs/pedagogia/tarefas-escolha/m8-u1.json e docs/pedagogia/grelhas-tarefas-20261027.json
@@ -47,7 +47,13 @@ Ficheiros (12):
 - as páginas do M4 que falam da aula de tarefa: m4/guia-da-tarefa-m4/ (a unidade 2 com o novo título, o tema A ou B, os tempos
   10/10/55/15 e a frase do que não conta para as palavras; «escreves duas linhas finais» onde dizia «fazes uma síntese simples
   integrada»; sai «Se faltaste à ida ao teatro»), m4/index.html, m4/mapa-do-modulo-m4/ e m4/portefolio-do-modulo-m4/ (o novo título;
-  «duas linhas finais» onde dizia «síntese»; no portefólio sai «trabalho de equipa», sem nada no lugar);
+  «duas linhas finais» onde dizia «síntese»; no portefólio sai «trabalho de equipa», sem nada no lugar; no índice, o cartão da
+  apreciação crítica diz «180 a 240 palavras», como a tarefa; no mapa, o segundo critério da tarefa 2 é «Relação com Garrett», que
+  serve os dois temas, onde dizia «Do texto ao palco»);
+- a lição F20 (cartão «O fogo de Manuel», «Ler mais») e o plano da aula 11 deixam de dizer que a cena do incêndio é a da tarefa
+  para quem faltou ao teatro (sai a opção «Se não foste ao teatro»); a frase que fica pede só a comparação da leitura em voz alta
+  com a leitura em silêncio. O cartão «Agora, em papel» da F20 (e a sua cópia no plano da aula 11) é o exercício da própria lição e
+  não muda: fica como dúvida para o docente;
 - ACERTO DO M8: m8/guia-da-tarefa-m8/ («lê os dois poemas de cada tema antes da aula, no manual» e «dizem também onde ler»).
 
 ACERTO DO M8 (decisão do docente, 15/11/2026): «Adeus», «Prece no Mediterrâneo» e «A verdade histórica» estão no manual. Na m8-u1,
@@ -57,7 +63,8 @@ que os poemas se leem no manual. As camadas já publicadas não mudam.
 
 Os exemplos (regra do docente: outro caso, sem frases da peça nem do espetáculo, sem dar feita nenhuma alínea, sem repetir o
 aquecimento e sem inventar factos): dois casos inventados, ditos como inventados (uma récita da escola, com o figurino, que o
-aquecimento não usa; o porteiro e o livro de registos).
+aquecimento não usa; a bibliotecária da escola, um juízo com um só lado, um critério e um pormenor, que não tem a forma da pergunta do
+tema B).
 
 O script tira as trocas da diferença entre a base (cada ficheiro com esta camada desfeita pelo manifesto; antes de haver manifesto,
 ou com --base-do-commit, o ficheiro no commit de base, lido com git) e a árvore: pode voltar a correr depois de a camada estar
@@ -100,8 +107,10 @@ PAGINAS_M8 = ['tarefas/m8-u1/index.html', 'tarefas/m8-u1/grelha/index.html']
 PAGINAS = [AQUECIMENTO] + PAGINAS_M8
 GUIA, INDICE, MAPA = 'm4/guia-da-tarefa-m4/index.html', 'm4/index.html', 'm4/mapa-do-modulo-m4/index.html'
 PORTEFOLIO = 'm4/portefolio-do-modulo-m4/index.html'
+# 15/11/2026 (revisão): a lição F20 e o plano da aula 11 ligavam a cena do incêndio à opção «Se não foste ao teatro» da tarefa.
+LICAO_F20, AULA_11 = 'm4/licao-m4-f20/index.html', 'm4/aulas/aula-11/index.html'
 GUIA_M8 = 'm8/guia-da-tarefa-m8/index.html'
-MODULO = [GUIA, INDICE, MAPA, PORTEFOLIO]
+MODULO = [GUIA, INDICE, MAPA, PORTEFOLIO, LICAO_F20, AULA_11]
 FICHEIROS = FICHEIROS_DADOS + [ENUNCIADO] + PAGINAS + MODULO + [GUIA_M8]
 
 ACHADOS = {
@@ -278,7 +287,7 @@ def nome(rel):
             DADOS_GRELHAS: 'Grelhas das tarefas (M8-U1), os dados', ENUNCIADO: 'Enunciado da M4-U2', AQUECIMENTO: 'Aquecimento da M4-U2',
             'tarefas/m8-u1/index.html': 'Enunciado da M8-U1', 'tarefas/m8-u1/grelha/index.html': 'Grelha do aluno da M8-U1',
             GUIA: 'Guia da tarefa do M4', INDICE: 'Índice do M4', MAPA: 'Mapa do módulo M4', PORTEFOLIO: 'Portefólio do módulo M4',
-            GUIA_M8: 'Guia da tarefa do M8'}[rel]
+            GUIA_M8: 'Guia da tarefa do M8', LICAO_F20: 'Lição F20 do M4', AULA_11: 'Plano da aula 11 do M4'}[rel]
 
 
 def categorias(rel, antigo, novo):
@@ -291,10 +300,12 @@ def categorias(rel, antigo, novo):
         cs.add('aquecimento')
         if 'alternativa de leitura' in antigo:
             cs.add('teatro')
-    if 'faltaste' in antigo or 'não foste' in antigo:
+    if 'faltaste' in antigo or 'não foste' in antigo or 'faltou ao teatro' in antigo:
         cs.add('teatro')
     if 'trabalho de equipa' in antigo:
         cs.add('sem_equipa')
+    if rel in (LICAO_F20, AULA_11):
+        return [c for c in ACHADOS if c in cs]
     if not cs or 'síntese' in antigo or 'Apreciação crítica do espetáculo' in antigo:
         cs.add('junto')
     return [c for c in ACHADOS if c in cs]

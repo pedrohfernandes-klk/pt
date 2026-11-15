@@ -60,7 +60,9 @@ M8_PAGINAS = ['tarefas/m8-u1/index.html', 'tarefas/m8-u1/grelha/index.html']
 GUIA, INDICE, MAPA = 'm4/guia-da-tarefa-m4/index.html', 'm4/index.html', 'm4/mapa-do-modulo-m4/index.html'
 PORTEFOLIO, GUIA_M8 = 'm4/portefolio-do-modulo-m4/index.html', 'm8/guia-da-tarefa-m8/index.html'
 MODULO = [GUIA, INDICE, MAPA, PORTEFOLIO]
-FICHEIROS = [DADOS_AQ, DADOS_M8, GRELHAS, ENUNCIADO, AQUECIMENTO] + M8_PAGINAS + MODULO + [GUIA_M8]
+# 15/11/2026 (revisão): a lição F20 e o plano da aula 11 deixam de ligar a cena do incêndio à opção «Se não foste ao teatro».
+LICAO_F20, AULA_11 = 'm4/licao-m4-f20/index.html', 'm4/aulas/aula-11/index.html'
+FICHEIROS = [DADOS_AQ, DADOS_M8, GRELHAS, ENUNCIADO, AQUECIMENTO] + M8_PAGINAS + MODULO + [LICAO_F20, AULA_11, GUIA_M8]
 FLS = '<i>Frei Luís de Sousa</i>'
 TITULO = f'O espetáculo ou Telmo, em {FLS}'
 PERGUNTA = f'Que juízo merece Telmo, quando cala o nome do retrato no ato II de {FLS}: cumpre a palavra dada ou engana Maria?'
@@ -110,6 +112,50 @@ FONTES_M8 = [
     f'Ana Luísa Amaral, «A verdade histórica», em <i>PÁ: Poesia &amp; Outras Artes</i>, n.º{N}0, Casa Comum/U.Porto Press, setembro de 2023. O poema completo lê-se no manual. A lição{N}F05 também diz onde o ler: cartão «Outra leitura».',
 ]
 EDICAO_M8 = 'o manual, a publicação que a lição indica ou outra edição'
+# 15/11/2026 (revisão): o que esta camada muda no molde (scripts/tarefa_facil.py), troca a troca, letra a letra. Desfeitas estas
+# trocas, o molde tem de ser o do main, byte a byte: qualquer outra mudança no molde falha.
+MOLDE_TROCAS = [
+    ('''    cada tema da m8-u1; o conto da m8-u2); em «temas_material», «textos» passa a ser opcional.
+
+M4 (15/11/2026, camada tarefa_m4u2_tema_b_20261115: a m4-u2, que era escrita à mão, passa às tarefas de escolha, com «Tema A ou B»).
+Uma chave nova, opcional; as páginas sem ela saem iguais, byte a byte:
+  * «opcionais»: uma lista de perguntas opcionais ({"pergunta", "opcoes"}), como nas tarefas individuais, com «opcional_rotulo»;
+    a m4-u2 guarda assim as duas perguntas opcionais que já tinha, letra a letra.
+"""''',
+     '''    cada tema da m8-u1; o conto da m8-u2); em «temas_material», «textos» passa a ser opcional.
+"""'''),
+    ('''    # 15/11/2026 (m4-u2, camada tarefa_m4u2_tema_b_20261115): a pergunta opcional sai num bloco à parte («quiz»), para a chave «opcionais»;
+    # sem ela, o bloco é o de antes, letra a letra.
+    op = f.get('opcional') or d.get('opcional') or f['opcionais'][0]  # 13/11/2026 (M7)''',
+     '''    op = f.get('opcional') or d['opcional']  # 13/11/2026 (M7)'''),
+    ('''    quiz = (f'<details data-task-optional-preparation><summary>{f["opcional_titulo"]}</summary><div class="task-quiz" aria-label="Uma pergunta opcional">\\n'
+            f'<article class="task-question" data-task-question="1" aria-labelledby="q1"><h3 id="q1">{op["pergunta"]}</h3>{opcoes(op["opcoes"])}</article>\\n'
+            f'<p data-task-status role="status">Respostas exploradas: 0 de 1. Podes rever qualquer escolha.</p></div></details>\\n')
+    if f.get('opcionais'):
+        # 15/11/2026 (m4-u2, camada tarefa_m4u2_tema_b_20261115): uma tarefa de escolha que já tinha duas perguntas opcionais
+        # guarda as duas, como as tarefas individuais (pagina_individual). As páginas sem a chave saem iguais, byte a byte.
+        ops = f['opcionais']
+        quiz = (f'<details data-task-optional-preparation><summary>{f["opcional_titulo"]}</summary><div class="task-quiz" aria-label="{f["opcional_rotulo"]}">\\n'
+                + ''.join(f'<article class="task-question" data-task-question="{k}" aria-labelledby="q{k}"><h3 id="q{k}">{k}. {o["pergunta"]}</h3>{opcoes(o["opcoes"])}</article>\\n'
+                          for k, o in enumerate(ops, 1))
+                + f'<p data-task-status role="status">Respostas exploradas: 0 de {len(ops)}. Podes rever qualquer escolha.</p></div></details>\\n')
+''', ''),
+    ('''             + lista([f'<b>{x["para"]}.</b> {x["texto"]}' for x in f['rever']], 'ul', 'tf-rever-lista') + '\\n'
+             + quiz + f'</section>\\n')''',
+     '''             + lista([f'<b>{x["para"]}.</b> {x["texto"]}' for x in f['rever']], 'ul', 'tf-rever-lista') + '\\n'
+             f'<details data-task-optional-preparation><summary>{f["opcional_titulo"]}</summary><div class="task-quiz" aria-label="Uma pergunta opcional">\\n'
+             f'<article class="task-question" data-task-question="1" aria-labelledby="q1"><h3 id="q1">{op["pergunta"]}</h3>{opcoes(op["opcoes"])}</article>\\n'
+             f'<p data-task-status role="status">Respostas exploradas: 0 de 1. Podes rever qualquer escolha.</p></div></details>\\n'
+             f'</section>\\n')'''),
+]
+
+
+def molde_sem_a_camada(texto):
+    """15/11/2026 (revisão): o molde com as trocas desta camada desfeitas, cada uma com contagem estrita (uma vez)."""
+    for novo, velho in MOLDE_TROCAS:
+        assert texto.count(novo) == 1, novo[:80]
+        texto = texto.replace(novo, velho)
+    return texto
 
 
 def ler(rel):
@@ -495,6 +541,58 @@ class TarefaM4u2TemaB(unittest.TestCase):
             self.assertIn(palavra, lido)
         self.assertNotRegex(lido, r'(?i)\bsíntese\b|Relembrar|Fecha o trabalho')
 
+    def test_achados_da_revisao_15_11(self):
+        # 15/11/2026 (revisão): os achados confirmados, cada um com a prova na árvore.
+        # (1) Nenhuma página do M4 liga a cena do incêndio à opção «Se não foste ao teatro» da tarefa.
+        f20 = sem_marcas(json.dumps(cartoes('20'), ensure_ascii=False))
+        self.assertNotIn('cena da tarefa da unidade', f20)
+        fogo = [c for c in cartoes('20') if c.get('titulo') == 'O fogo de Manuel']
+        self.assertEqual(len(fogo), 1)
+        self.assertIn('<p>Compara o que ouviste na leitura em voz alta com o que leste em silêncio.</p></div></details>', fogo[0]['html'])
+        self.assertNotIn('faltou ao teatro', fogo[0]['html'])
+        aula = ler(AULA_11)
+        self.assertNotIn('É a cena de quem faltou ao teatro', aula)
+        self.assertEqual(aula.count('Cada aluno compara o que ouviu com o que leu em silêncio.'), 1)
+        for rel in [ENUNCIADO, AQUECIMENTO, DADOS, DADOS_AQ] + MODULO:
+            corpo = ler(rel).replace('sai a opção «Se não foste ao teatro»', '')
+            self.assertNotRegex(corpo, r'(?i)não foste ao teatro|faltaste ao teatro|faltou ao teatro|cena da tarefa da unidade', rel)
+        for rel in (LICAO_F20, AULA_11):
+            self.assertEqual(len(MANIFESTO['files'][rel]['edits']), 1, rel)
+        # (2) A F27 é da unidade 3, que vem depois da aula de tarefa: o «Rever a matéria» não manda «reler» uma lição que ainda não se deu.
+        unidades = re.findall(r'"lessons":\[([^\]]*)\],"steps":\[([^\]]*)\]', ler(INDICE))
+        self.assertEqual(len(unidades), 3)
+        dadas = set(re.findall(r'"(m4-[a-z0-9-]+)"', unidades[0][1] + unidades[1][1]))
+        self.assertIn('m4-f27', unidades[2][1])
+        self.assertNotIn('m4-f27', dadas)
+        f = json.loads(ler(DADOS))['facil']
+        fora_da_unidade = 0
+        for x in f['rever']:
+            alvo = re.search(r'\.\./\.\./m4/(?:licao-)?(m4-[a-z0-9-]+)/', x['texto']).group(1)
+            if alvo not in dadas:
+                fora_da_unidade += 1
+                self.assertNotIn('Relê', x['texto'])
+                self.assertIn(f'da unidade{N}3', x['texto'])
+        self.assertEqual(fora_da_unidade, 1)
+        promessa = [x for x in f['rever'] if x['para'] == 'A promessa de Telmo']
+        self.assertEqual(len(promessa), 1)
+        self.assertIn(f'da unidade{N}3. Se quiseres, lê «Recusar, contar ou fugir?»', promessa[0]['texto'])
+        # (3) No mapa, os critérios da tarefa 2 servem os dois temas: nada de palco nem de espetáculo; três critérios, como antes.
+        crit = re.search(r'<span class="tn">2</span><div><b>O espetáculo ou Telmo, em <i>Frei Luís de Sousa</i></b><span class="peso">25.%, individual</span><span class="crit">([^<]*)</span>', ler(MAPA)).group(1)
+        self.assertEqual(crit, 'Descrição e juízo; Relação com Garrett; Língua e género')
+        self.assertEqual(len(crit.split('; ')), len(re.search(r'<span class="tn">2</span>.*?<span class="crit">([^<]*)</span>', do_main(MAPA)).group(1).split('; ')))
+        self.assertNotRegex(crit, r'(?i)palco|espetáculo')
+        # (4) No índice, a apreciação crítica tem as palavras da tarefa (180 a 240).
+        self.assertIn(f'"p":"Como se chama o texto de 180{N}a{N}240{N}palavras que nasce das notas?"', ler(INDICE))
+        self.assertNotIn(f'150{N}a{N}200{N}palavras que nasce', ler(INDICE))
+        self.assertIn('180 a 240 palavras', solto(visivel(ler(ENUNCIADO))))
+        # (5) O exemplo do tema B não tem a forma da pergunta (um compromisso cumprido contra alguém enganado) nem a fórmula
+        # «juízo dividido: …, mas …»: um juízo com um só lado, um critério e um pormenor.
+        ex_b = f['temas'][1]['material']['exemplos'][0]
+        texto_b = ' '.join(solto(p['t']) for p in ex_b['paragrafos']).lower()
+        self.assertNotRegex(texto_b, r'dividid|, mas |\bcumpr|engan|palavra|promet|compromiss|aceitou|regra que|mentir|menti\b|verdade|cala|esconde|vira|olhar')
+        self.assertEqual([p['al'] for p in ex_b['paragrafos']], ['Um juízo, com o critério:', 'Um pormenor que o apoia:'])
+        # (6) Ver o fim de test_contrato_da_pagina: o molde, desfeitas as trocas desta camada, é o do main.
+
     def test_acerto_do_m8_os_poemas_estao_no_manual(self):
         f = json.loads(ler(DADOS_M8))['facil']
         blocos = [o for t in f['temas'] for o in t['material']['onde']]
@@ -609,6 +707,9 @@ class TarefaM4u2TemaB(unittest.TestCase):
         molde, molde_main = ler('scripts/tarefa_facil.py'), do_main('scripts/tarefa_facil.py')
         self.assertNotIn("f.get('opcionais')", molde_main)
         self.assertEqual(molde.count("if f.get('opcionais'):"), 1)
+        # 15/11/2026 (revisão): mais forte. Desfeitas, letra a letra, as quatro trocas desta camada no molde (MOLDE_TROCAS), o molde é
+        # o do main, byte a byte: qualquer outra mudança no molde, dentro ou fora do bloco «opcionais», falha aqui.
+        self.assertEqual(molde_sem_a_camada(molde), molde_main)
         self.assertEqual(ler('assets/task-textos.css'), do_main('assets/task-textos.css'))
 
     # ---------- as outras tarefas não mudam ----------
@@ -644,12 +745,14 @@ class TarefaM4u2TemaB(unittest.TestCase):
         self.assertIn('não se edita à mão', MANIFESTO['_nota'])
         self.assertEqual(sorted({t['ficheiro'] for t in TROCAS}), sorted(FICHEIROS))
         self.assertEqual(sorted(MANIFESTO['files']), sorted(FICHEIROS))
-        self.assertEqual(len(FICHEIROS), 12)
+        # 15/11/2026 (revisão): mais dois ficheiros, a lição F20 e o plano da aula 11 (sai a ligação à opção «Se não foste ao teatro»).
+        self.assertEqual(len(FICHEIROS), 14)
+        self.assertEqual(len(set(FICHEIROS)), 14)
         self.assertEqual(len(TROCAS), sum(len(v['edits']) for v in MANIFESTO['files'].values()))
         r = subprocess.run([sys.executable, 'scripts/aplicar_trocas.py', CAMADA_REL, '--manifesto', MANIFESTO_REL, '--verificar'],
                            cwd=ROOT, capture_output=True, text=True, encoding='utf-8')
         self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
-        self.assertIn(f'{len(TROCAS)} trocas em 12 ficheiros: {len(TROCAS)} aplicadas, 0 por aplicar; manifesto em dia.', r.stdout)
+        self.assertIn(f'{len(TROCAS)} trocas em 14 ficheiros: {len(TROCAS)} aplicadas, 0 por aplicar; manifesto em dia.', r.stdout)
         for t in TROCAS:
             self.assertTrue(t['achado'].startswith('15/11/2026: '), t['local'])
             self.assertEqual(t['ocorrencias'], 1)
@@ -768,7 +871,9 @@ class TarefaM4u2TemaB(unittest.TestCase):
         self.assertLess(tarefas.index("-p 'test_tarefas_faceis_m9.py'"), tarefas.index("-p 'test_tarefas_faceis_m4.py'"))
         for caminho in ("'tarefas/m4-u2/**'", "'m4/index.html'", "'m4/guia-da-tarefa-m4/**'", "'m4/mapa-do-modulo-m4/**'",
                         "'m4/portefolio-do-modulo-m4/**'", "'tarefas/m8-u1/**'", "'m8/guia-da-tarefa-m8/**'", "'docs/pedagogia/tarefas-escolha/m4-u2.json'",
-                        "'docs/pedagogia/aquecimentos/m4-u2.json'", "'scripts/tarefa_facil.py'"):
+                        "'docs/pedagogia/aquecimentos/m4-u2.json'", "'scripts/tarefa_facil.py'",
+                        # 15/11/2026 (revisão): os dois ficheiros novos da camada.
+                        "'m4/licao-m4-f20/**'", "'m4/aulas/aula-11/**'"):
             self.assertIn(f'      - {caminho}\n', tarefas, caminho)
         self.assertEqual(tarefas.count('timeout-minutes: 40'), 1)
         self.assertEqual(re.findall(r'timeout-minutes: \d+', tarefas), re.findall(r'timeout-minutes: \d+', do_main('.github/workflows/pt-tarefas-qa.yml')))

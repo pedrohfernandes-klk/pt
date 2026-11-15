@@ -643,6 +643,10 @@ class TarefasFaceisM9(unittest.TestCase):
         sem = molde.replace(bloco, '')
         self.assertEqual(sem.count("if f.get('opcionais')"), 0)
         self.assertNotIn("opcionais", do_main('scripts/tarefa_facil.py').split('def pagina(d, com_grelha')[1])
+        # 15/11/2026 (revisão): a exigência do main volta inteira. Desfeitas, letra a letra, as quatro trocas que a camada da tarefa m4-u2
+        # faz no molde (tests/test_tarefas_faceis_m4.py, MOLDE_TROCAS, cada uma com contagem estrita), o molde é o do main, byte a byte.
+        from test_tarefas_faceis_m4 import molde_sem_a_camada  # noqa: E402
+        self.assertEqual(molde_sem_a_camada(molde), do_main('scripts/tarefa_facil.py'))
         self.assertEqual(ler('assets/task-textos.css'), do_main('assets/task-textos.css'))
 
     def test_exemplos_com_outro_caso(self):
